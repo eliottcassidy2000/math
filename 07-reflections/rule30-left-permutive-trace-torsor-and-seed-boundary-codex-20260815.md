@@ -4,7 +4,9 @@
 prospective [THM-3456](../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md)
 package and its exact companion.  THM-3456 is still `RESERVED` while the
 package is assembled and audited; this reflection is not an established
-dependency.  The Rule 30 prize problems remain open here.
+dependency.  The current official page was checked on 2026-08-15: it still
+lists all three prizes and accepts submissions until a satisfactory solution
+is achieved, so the problems are treated here as open.
 
 External anchors are Stephen Wolfram's 2019
 [Rule 30 prize announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/),
@@ -300,13 +302,13 @@ finite-size phenomenon described in the prize announcement.  It is
 The official prize page asks about the infinite center sequence generated from
 one nonzero cell.
 
-### Problem 1: eventual nonperiodicity
+### Problem 1: absence of eventual periodicity
 
 The adjacent-column theorem cannot be applied because the prize supplies one
 column, and the width-seven alias proves that one column is not a faithful
 finite-cylinder observable.  Finite cylinders are necessarily eventually
-periodic and agree with the infinite seed only through (8).  No eventual
-nonperiodicity result follows.
+periodic and agree with the infinite seed only through (8).  No result
+excluding eventual periodicity follows.
 
 ### Problem 2: limiting frequency one half
 

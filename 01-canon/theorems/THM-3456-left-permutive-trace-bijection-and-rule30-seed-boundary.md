@@ -19,7 +19,8 @@ related:
   - THM-3453-global-literal-half-twist-cap-seven-support-classification
 external:
   - Artem Chernikov, "SOP2 = SOP3", arXiv:2608.13291v1, https://arxiv.org/abs/2608.13291 (CITED VERY RECENT PREPRINT; model-theoretic corollary/context only)
-  - Stephen Wolfram, "Announcing the Rule 30 Prizes", https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/ (2019), and https://rule30prize.org/ (problem statements and Rule 30 local law only)
+  - Stephen Wolfram, "Announcing the Rule 30 Prizes", https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/ (2019; CITED for the problem statements, Boolean local law, sideways two-column discussion, and reported finite-size observations only)
+  - Wolfram Rule 30 Prizes, https://rule30prize.org/ (CURRENT OFFICIAL LISTING checked 2026-08-15; problem and prize status only)
 script: 04-computation/left_permutive_trace_torsor_rule30_thm3456.py
 output: 05-knowledge/results/left_permutive_trace_torsor_rule30_thm3456.out
 ---
@@ -122,7 +123,7 @@ is the mandatory sidecar.
 ## 2. Inheritance and connection contract
 
 Wolfram's Rule 30 page isolates three questions about the center column from
-one nonzero seed: eventual nonperiodicity, limiting balance, and a linear
+one nonzero seed: absence of eventual periodicity, limiting balance, and a linear
 computational lower bound.  It also records the sideways identity behind
 Rule 30's two-column arguments.  Chernikov's very recent preprint proves
 `SOP_2=SOP_3` while retaining witness--parameter pairs through a mixed partial
@@ -273,8 +274,10 @@ free Bernoulli balance    -/->  single-seed limiting balance,
 trace-cylinder SOP        -/->  single-seed time lower bound.          (17)
 ```
 
-The official Rule 30 prize questions remain open on the cited current prize
-page.  The theorem neither answers nor conditionally reduces any of them.
+As checked on 2026-08-15, the current official page still lists all three
+prizes and states that submissions are accepted until a satisfactory solution
+is achieved.  On that evidence all three questions are treated here as open.
+The theorem neither answers nor conditionally reduces any of them.
 
 ## 7. Rule 30 finite rings: two columns are faithful, one is not
 

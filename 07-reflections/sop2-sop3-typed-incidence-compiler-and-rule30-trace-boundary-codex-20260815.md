@@ -429,8 +429,8 @@ the branch incident to delta_0 witnesses SOP2;         FALSE/TYPED NO-GO.  (31)
 Naming `delta_0` does not erase the tree elsewhere in the structure, but it
 also does not make the one named trace branch into a tree.  Its incident
 finite words form a single chain.  Consequently neither `SOP2`, `SOP3`, nor
-uniform Bernoulli balance of free inputs implies eventual nonperiodicity,
-limiting balance, or a computational lower bound for that branch.
+uniform Bernoulli balance of free inputs implies absence of eventual
+periodicity, limiting balance, or a computational lower bound for that branch.
 
 A finite scalar universe has the same obstruction even earlier.  An infinite
 forward sequence in a finite three-cycle-free target cannot repeat, because a

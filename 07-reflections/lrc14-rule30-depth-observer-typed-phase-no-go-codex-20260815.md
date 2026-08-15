@@ -18,12 +18,14 @@ The two external inputs have deliberately narrow roles.
   one compatible star gap.  No first-order interpretation is imported here.
 - Stephen Wolfram's
   [2019 Rule 30 prize announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/)
-  asks whether the single-seed centre trace is eventually nonperiodic,
+  asks whether the single-seed centre trace fails to be eventually periodic,
   asymptotically balanced, and requires at least linear effort to compute at a
   requested index.  The [current official prize page](https://rule30prize.org/)
-  continues to present all three as prize problems.  They are **OPEN PUBLIC
-  PROBLEMS**, not dependencies.  This reflection uses only the literal local
-  rule and finite exact prefixes.
+  was checked on 2026-08-15: it still lists all three prizes and says that
+  submissions are accepted until a satisfactory solution is achieved.  On
+  that evidence the questions are treated here as **OPEN PUBLIC PROBLEMS**,
+  not dependencies.  This reflection uses only the literal local rule and
+  finite exact prefixes.
 
 ## Inheritance pass
 

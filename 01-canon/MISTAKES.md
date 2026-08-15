@@ -32,7 +32,30 @@ Format per entry:
   absolute recurrence.  Difference invariants survive affine shifts;
   homogeneous recurrences generally do not.  State the exact normalization
   basis for every byte-equality claim.
+## MISTAKE-403 (2026-08-15, THM-3456 Rule 30 source scope) -- a citation was scoped below its actual use and an active prize listing was paraphrased as a literal openness statement
 
+- **What failed:** the provisional THM-3456 frontmatter said Wolfram's 2019
+  announcement was used only for the prize statements and local rule, while
+  the proof text also cited its sideways two-column discussion and reported
+  finite-size observations.  The theorem then said the official page itself
+  stated that the problems remained open, although its literal evidence is an
+  active prize listing and an ongoing submission rule.
+- **Minimal witness / first failed implication:** Sections 2 and 7 explicitly
+  attribute the sideways mechanism to the announcement, outside the old
+  frontmatter scope.  On 2026-08-15 the official page listed all three prizes
+  and accepted submissions until a satisfactory solution is achieved, but
+  did not contain the literal sentence “these problems are open.”
+- **Repair / strongest survivor:** the two sources now have separate entries.
+  The 2019 announcement is cited for the questions, Boolean rule, sideways
+  discussion, and historical finite observations; the current page is cited
+  for dated prize status only.  The repository treats the questions as open
+  on that evidence and says explicitly that this is an inference.  No
+  mathematical claim, exact artifact, or no-go implication changed.
+- **Reusable rule:** a citation's declared import scope must cover every
+  mechanism later attributed to it.  When a current web page supplies status
+  by an active listing rather than a declarative sentence, record the check
+  date and distinguish the page's literal content from the repository's
+  inference.
 ## MISTAKE-400 (2026-08-15, provisional theorem status routing) -- an unrecognized provisional token exposed an audit-pending theorem as established canon
 
 - **What failed:** the packaged THM-3452 frontmatter began `PROVISIONAL /

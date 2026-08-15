@@ -1,23 +1,28 @@
 # Core papers: imported results, consumers, and guardrails
 
-> **Freshness:** primary records checked **2026-07-21**.  An arXiv version in
-> this file is the version visible on that date; recheck entries marked
-> **PREPRINT**, **RADAR**, or **SEMINAR ONLY** before making a priority or
-> state-of-the-art claim.
+> **Freshness:** sources were checked **2026-07-21** unless dated later.
+> Recheck **PREPRINT**, **RADAR**, and **SEMINAR ONLY** before priority claims.
 
-This is a role map, not a general bibliography.  Read an entry to learn exactly
-what this repository imports from a source, where that input is consumed, and
-what the source does **not** establish.  Repository theorem numbers collide in
-places, so the links below, not a bare `THM-N`, are the canonical addresses.
+This maps imported claims, consumers, and exclusions.  Because IDs can
+collide, links—not bare IDs—are canonical.
 
 ## Fast frontier snapshot
 
-- **LRC:** fourteen runners (thirteen nonzero speeds) remains open; the April 2026 computation reaches twelve nonzero speeds.
-- **Gaussian/Image moments:** [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md) gives GMC `true through 2 / false from 3`; [THM-2801](../../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md) gives SIC `true at 1 / false from 2`, without settling its JC-bearing restrictions.
-- **Tournament attribution:** arXiv:2412.10572 is Irving--Omar, arXiv:2307.05569 Grinberg--Stanley, and arXiv:2406.09697 Klanderman--Montee--Piotrowski--Rice--Shader.
-- **Unsplittable flows:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture; the cost-free `d_max` and planar cost-preserving `2d_max` theorems remain intact.
-- **Reciprocal sequences:** separate support from indexed multiplicity; external figurate formulas do not supply the repo's Abel--Dini/support-Dirichlet extensions.
-- **Jacobian/Dixmier/Poisson:** THM-1300 refutes `JC(n)` for `n>=3`; `JC(2)`, `DC(1)`, and `DC(2)` remain open. THM-2071 closes quadratic-fiber pencil cells only; THM-2044 separately refutes the two-pair Poisson conjecture.
+- **LRC:** fourteen runners remains open; April 2026 reaches twelve nonzero speeds.
+- **Moments:** [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md) gives GMC exactly through 2; [THM-2801](../../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md) gives SIC only at 1; JC-bearing restrictions remain.
+- **Tournament citations:** 2412.10572 Irving--Omar; 2307.05569 Grinberg--Stanley; 2406.09697 Klanderman et al.
+- **Flows:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes the exact-cost conjecture; cost-free `d_max` and planar `2d_max` survive.
+- **Reciprocals:** support differs from indexed multiplicity; figurate formulas omit repo extensions.
+- **JC/DC:** THM-1300 refutes `JC(n>=3)`; `JC(2),DC(1),DC(2)` are open.  THM-2071 is local; THM-2044 refutes the two-pair Poisson claim.
+
+## Rule 30
+
+- **Sources (checked 2026-08-15):** Wolfram's [2019 announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/)
+  gives the questions, rule, sideways argument, and finite observations.  The
+  active [prize page](https://rule30prize.org/) supports treating them as open.
+- **Boundary:** the `RESERVED` [THM-3456 candidate](../../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md)
+  isolates the seed sidecar; the [LRC probe](../results/lrc14_rule30_depth_observer_no_go_20260815.out)
+  is finite-exact.  Neither source proves a prize claim or LRC(14).
 
 ## Lonely Runner Conjecture
 

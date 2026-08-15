@@ -43,11 +43,16 @@
 - **Imported role:** proves a first-order model-theoretic equivalence by a
   mixed-partial-type dichotomy; the witness construction retains
   witness--parameter pairs rather than quotienting to bare vertices.
-- **Repo consumer:** [THM-3395](../../01-canon/theorems/THM-3395-small-sheet-typed-cover-star-cochain.md)
-  cites that typing move as motivation only.  Its theorem is instead an
-  elementary coset/cochain/CRT/Helly argument.
+- **Repo consumers:** [THM-3395](../../01-canon/theorems/THM-3395-small-sheet-typed-cover-star-cochain.md)
+  cites that typing move as motivation only; its theorem is instead an
+  elementary coset/cochain/CRT/Helly argument.  The `RESERVED`
+  [THM-3456 candidate](../../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md)
+  gives a self-contained enriched trace-incidence special case, while the
+  [typed-incidence reflection](../../07-reflections/sop2-sop3-typed-incidence-compiler-and-rule30-trace-boundary-codex-20260815.md)
+  conditionally repackages the paper's compiler as a set-system lemma.
 - **Does not prove:** that an LRC sheet clutter has SOP, that speeds are
-  faithful vertices, or any LRC(14) decrement.
+  faithful vertices, any named-seed Rule 30 property, or any LRC(14)
+  decrement.  It is context rather than a dependency of THM-3456.
 
 ## Lorist--Schwenninger — a claimed proof of Crouzeix's conjecture
 
