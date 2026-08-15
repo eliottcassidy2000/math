@@ -1,8 +1,9 @@
 ---
 id: THM-3417
 title: "Exchangeable Krawtchouk shell inversion and radial high-minor converse"
-status: PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED
+status: PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF/REPLAY-AUDITED
 source: hadamard-krawtchouk-shell-2026-08-15
+audit: independent Krawtchouk-normalization, radial-inverse, exchangeable-detector, convolution, Hermite, hostile, replay, hash, dependency, routing, and scope audit clean
 depends_on:
   - THM-3413-strength-k-orthogonal-array-toggle-filtration-and-high-minor-converse
 related:
@@ -473,5 +474,6 @@ d8753c02e75d4987cc74dc7cb28f0838d0d1715760a6da30f88d9342e0c4f2d5
 
 and the semantic digest is
 `d2471a54b365e186d605bdc5640434219013efe1cff787a18fbf66989c4e355b`.
-The theorem remains a proof candidate until an independent immutable-file
-proof/replay audit promotes its status.
+An independent immutable-file proof/replay audit rederived every transform,
+checked the detector, convolution, Hermite, and hostile boundaries, and
+reproduced the frozen artifact under normal and optimized Python.
