@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `rough_composite_odd_interval_collision_thm3426.py` -> matching `.out`
+  [THM-3426 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For an odd
+  modulus `n` with `spf(n)>h`, the exact complement of the unit-multiplier
+  collision set of the maximal symmetric odd interval is the reduced
+  opposite-parity packet `D_h`; interval entries themselves may be nonunits.
+  Beyond `n>2(h-1)^3`, pairwise-disjoint unit dilates have sharp clique number
+  `1+floor(log2(h-1))`.  The exact companion checks 9,160 rational cells,
+  22,201 parity-lift cells, 1,032,666 unit-action cells, 42,184 normalized
+  graph pairs, and 30 rough composite controls through `h=16`.  The hostile
+  `(h,n,L)=(9,969,107)` has exactly four extra multipliers
+  `{161,325,644,808}`, exposing the noncancellable factor-three arm.  No mixed
+  quotient-order cover, physical-time, or LRC(14) conclusion follows.
+  Script/output/semantic LF-normalized SHA-256:
+  `b96eeca089ac86e2d82f0d52fef37ca8b509d5ffd76615ed08524748791d3ced` /
+  `97fb799cf97d6485ef48aac93caa486c223d147207a4d5a72bc5f52ff2becb2c` /
+  `f03aded979fb19d75378b50614b6df1dc100ed6e25d08cd482501810ae72a691`.
+
 - `jc_nonlinear_multiroot_unit_rigidity_thm3424.py` -> matching `.out`
   [THM-3424 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
   `P=ax+b+g(x)z^d` in characteristic zero with `d>=2` and nonconstant `g`,

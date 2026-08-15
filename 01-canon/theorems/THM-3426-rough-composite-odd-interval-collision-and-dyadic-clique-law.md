@@ -2,14 +2,18 @@
 id: THM-3426
 title: "Rough-composite odd-interval collision and dyadic clique law"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  For an odd modulus n whose least prime factor exceeds the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For an odd modulus n
+  whose least prime factor exceeds the
   short-relation height h, the complement of the unit-multiplier collision
   set of the maximal odd interval is exactly the opposite-parity rational
   packet D_h.  Beyond the same cubic threshold as THM-3423, pairwise-disjoint
   unit dilates have sharp dyadic clique number 1+floor(log_2(h-1)).  This is a
   rough-modulus incidence theorem, not a mixed quotient-order cover theorem.
 source: root-rough-composite-odd-interval-2026-08-15
+audit: >
+  Independent proof reconstruction; rough controls at h=2,7,10,16; exact
+  n=969 short-gcd hostile; normal/optimized/isolated/stored replay; LF hash,
+  AST safety, scope, and documentation audit clean.
 depends_on:
   - THM-3423-odd-interval-ratio-complement-and-dyadic-clique-law
 related:
@@ -25,8 +29,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3426 -- rough-composite odd-interval collision and dyadic clique law
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Candidate statement
 
