@@ -406,8 +406,11 @@ The sequence is therefore
 The original draft compared `(21)` with the owner-14 mobile common-mode-centre
 sequence.  MISTAKE-389 withdraws that comparison: the two ranks optimize
 different predicates.  Since every zero-mode-cochain cover is half-grid,
-`(21)` supplies lower bounds for the genuine all-owner mobile ranks, but no
-equality follows without imposing THM-3405's gcd gauge on every candidate.
+`(21)` supplies lower bounds for the genuine all-owner ranks, but no equality
+follows without imposing THM-3405's gcd gauge on every candidate.  That
+separate computation is now complete in
+[the divisor-ancestry reflection](lrc-zero-mode-cochain-divisor-ancestry-and-boolean-realization-codex-20260815.md):
+the genuine sequence is `(6,4,8,4,9,5,8,6,6,4,6,7,4,7)`.
 
 ## 5. The periodic harmonic support of the infinite theorem
 
@@ -555,8 +558,8 @@ The cheapest decisive continuations are:
    function, beginning with the hostile contrast `q=23,29,31`;
 2. prove a composition law for general `E(q,g)` and `O(q,g)` chart ranks, not
    only the residue partitions of orders two, three, and five;
-3. intersect every chart with THM-3405's active-family gcd gauge and compute
-   the genuine unrestricted zero-mode-cochain ranks;
+3. extend the now-complete THM-3405 divisor-ancestry computation beyond
+   `Q=28` and prove or refute its apparent primitive rank-four floor;
 4. classify the full nonzero cochain spectra over the ternary and five-colour
    half-grid minima; the even branch is now the exact ladder `(16a)--(16d)`;
 5. transport a chart certificate into an actual refined LRC row.  Until that

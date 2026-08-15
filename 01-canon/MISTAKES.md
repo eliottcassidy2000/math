@@ -44,7 +44,12 @@ Format per entry:
   even/odd rank-two partition at `c=a/q^2`, for odd `1<=a<q/7`, has unique
   containing-mode cochain `P=-a q^2/2` and THM-3405 scalar/gauge
   `(a,q/2)`.  Thus the quotient can hide a whole quadratic positive-drift
-  ladder, not merely the isolated q15 hostile.
+  ladder, not merely the isolated q15 hostile.  Applying the corrected gauge
+  and retaining the primitive owner-gcd sidecar gives the genuine
+  unrestricted positive-transverse zero-cochain ranks
+  `(6,4,8,4,9,5,8,6,6,4,6,7,4,7)` for q15--28.  Their proof is the divisor
+  minimum over primitive fixed/half-twist covers, not a reinterpretation of
+  the physical chart minima.
 - **Reusable rule:** an interval containing a physical time is not centred at
   that time.  After deriving a half-grid integrality condition, separately
   verify the mode-residue divisibility (or the full centre-lattice formula)

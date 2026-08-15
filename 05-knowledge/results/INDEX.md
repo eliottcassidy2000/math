@@ -1,5 +1,28 @@
 # Script Results Index
 
+- `lrc_unrestricted_zero_mode_cochain_rank_probe_20260815.py` -> matching
+  `.out` [PROVED-ANALYTIC THM-3405 DIVISOR-ANCESTRY REDUCTION +
+  FINITE-EXACT UNRESTRICTED POSITIVE-TRANSVERSE q15--28 ZERO-MODE-COCHAIN
+  RANKS; INDEPENDENTLY BFS/COMBINATION-AUDITED; UNNUMBERED].  Writing an
+  active family as `U=dV`, with `gcd(V)=1`, and setting
+  `g=gcd(q,d),Q=q/g`, every zero-cochain certificate is exactly the `g`-fold
+  pullback of a primitive `Q`-sheet cover at twist zero or one-half.
+  Primitive positive lifts exist iff
+  `gcd(M_epsilon,r_1,...,r_s)=1`, converted to finite set cover by adjoining
+  one breaker bit for every prime dividing `M_0=Q` or `M_1=2Q`.  Thus
+  `rho_ZMC(q)=min_(Q|q,Q>=2,epsilon) rho_epsilon^prim(Q)`.  Exact ranks for
+  q15--28 are `(6,4,8,4,9,5,8,6,6,4,6,7,4,7)`; ancestors
+  `8,9,10,11,13,14` explain every nonprimitive drop, and literal half-centre
+  witnesses are replayed.  q25 rank six and q27 rank four also have
+  elementary capacity lower bounds.  Union-state BFS visits 36,580 states
+  and 565,480 transitions; an independent exhaustive route checks 394,418
+  subsets.  Script/output/semantic LF-normalized SHA-256:
+  `de48a50522223bf9c40a1a8cbe8c5483b9b1f185410298f36b7d976d576d476c` /
+  `5de03cb659105ed24d118130647215228ee6a0e42cb29f1ede298a14103b7ea9` /
+  `43234a259014d6bd771506718b8f595b919244de523aaef31564b25eb32db84d`.
+  codex-2026-08-15 THM-3405 divisor ancestry, Boolean prime-breaker
+  realization, and literal pullback audit.
+
 - hadamard_twelve_order_bank_thm3394.py plus immutable signword data ->
   matching output [THM-3394 PROVED + VERIFIED-EXACT + INERT RECONSTRUCTION +
   HOSTILE-AUDITED + INDEPENDENTLY AUDITED].  One frozen 23,828-sign word and
