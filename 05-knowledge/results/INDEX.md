@@ -1,22 +1,23 @@
 # Script Results Index
 
 - `lrc_prime_quarter_half_twist_cap7_classification_thm3451.py` -> matching
-  `.out` [THM-3451 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  INDEPENDENT FULL-PACKAGE AUDIT REQUIRED].  For post-THM-3445 target-free
+  `.out` [THM-3451 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  post-THM-3445 target-free
   prime-quarter rows `Q=4p`, the four-type central-fibre invoice reduces
   `1,312` raw mass profiles to `959` admissible profiles, the fully typed
   line/coset compiler gives positive pair weight at least `15>Omega_max=12`
   from prime `449`, and all `96` unit classes modulo `420` have rooted zero
   clique number six.  The no-cap exact stitch through prime `443` finds
-  candidate support exactly `p=17,37`, with all four `p=17` profiles and the
+  exact support `p=17,37`, with all four `p=17` profiles and the
   unique `p=37` profile frozen.  Legacy THM-3435-`A_0` target-free scope also
   contains the proper-period pullbacks `p=7,19`.  Script/output/semantic
   LF-normalized SHA-256:
   `edda04033f24aa4275e19b05b56857db9570d9e78e02912c8a167445591b0422` /
   `00af2309eb53f3e8937d2604a3db6ea1a7a57c2a7f39f7873915655a2d511aa6` /
   `b455ca48ce8454d754b1a7d4f816ecd76bb431a5b9202757152badd5e0993482`.
-  This reserved candidate is not a proved dependency and gives no
-  composite-even, arbitrary-time, decrement, or LRC(14) conclusion.
+  An independent immutable full-package audit reconstructed every analytic,
+  exact-search, graph, witness, hash, security, and scope gate.  No
+  composite-even, arbitrary-time, decrement, or LRC(14) conclusion follows.
 - `unequal_depth_noncommuting_hensel_heisenberg_orbits_thm3452.py` ->
   matching `.out` [THM-3452 PROVISIONAL / AUDIT REQUIRED + VERIFIED-EXACT
   COMPANION].  For depths `c1,c2`, the candidate gives the weighted abelian

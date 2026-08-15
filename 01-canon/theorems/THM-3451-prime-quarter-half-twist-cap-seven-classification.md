@@ -2,18 +2,20 @@
 id: THM-3451
 title: "Target-free prime-quarter literal half-twist cap-seven classification"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT.  After excluding
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  After excluding
   every previously proved lower supported divisor, strict literal half-twist
   covers on Q=4p, p an odd prime, by at most seven distinct transverse owners
-  have candidate exact support p=17,37.  Independent full-package audit is
-  required before promotion.  No composite-even, arbitrary-time, decrement,
+  have exact support p=17,37.  No composite-even, arbitrary-time, decrement,
   or LRC(14) consequence is claimed.
 source: root-prime-quarter-half-twist-rank-seven typed four-sheet closure, 2026-08-15
 audit: >
-  pending independent full-package audit; internal exact type-size, profile,
-  central-fibre, line/coset, positive-weight, raw-zero, 96-class graph,
-  finite-DFS, witness, dependency-hash, AST/security, normal/optimized/stored,
-  routing, scope, and documentation gates frozen in the companion
+  independent immutable full-package audit reconstructed the type-size,
+  central-fibre, profile, joint-period, line/coset, large-a plateau,
+  positive-weight, raw-zero, rational-descent, 96-class graph, finite-DFS,
+  witness, multiplicity, legacy-scope, and boundary-stitch gates; clean-room
+  direct-mask and graph controls, dependency/hash, AST/security,
+  normal/optimized/stored, ID/routing, scope, diff, and documentation gates
+  clean
 depends_on:
   - THM-3434-seventeen-fibre-two-sided-mass-closure
   - THM-3435-dyadic-fibre-grid-decomposition-for-literal-half-twists
@@ -31,9 +33,9 @@ hash_basis: LF-normalized bytes
 
 # THM-3451 -- target-free prime-quarter literal half-twist cap-seven classification
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT.**  The proof and
-exact companion are frozen below, but this file is not a proved dependency
-until a separate full-package audit promotes it.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**  The analytic proof,
+exact companion, predecessor interfaces, direct-mask controls, finite search,
+and boundary stitch passed a separate immutable full-package audit.
 
 ## 1. Exact scoped statement
 
@@ -522,7 +524,7 @@ The pair observable is symmetric and has ties, so no intrinsic tournament is
 present.  The faithful finite object is the labelled weighted fibre-grid
 clutter together with its affine coset sidecars.
 
-## 9. Reproduction and provisional status boundary
+## 9. Reproduction and audited status boundary
 
 Run from the repository root:
 
@@ -538,8 +540,6 @@ LF-normalized SHA-256, checks its own AST against `assert`, dynamic execution,
 and unexpected imports, and freezes the semantic payload independently of the
 rendered transcript.
 
-The package has internal exact verification and an independent reconstruction
-of the rooted graph, but it has not yet received the required separate audit
-of every analytic and finite gate.  It therefore remains **RESERVED /
-PROVISIONAL** and must not be imported as a proved theorem.  LRC(14) remains
-open.
+The package passed a separate immutable audit of every analytic and finite
+gate, including clean-room direct-mask and graph reconstructions.  It is a
+proved dependency in exactly the scope stated above.  LRC(14) remains open.
