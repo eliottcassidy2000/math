@@ -12,8 +12,9 @@ The closest proved mechanisms were:
 
 - THM-3418: every nonlinear monomial fiber has exact character-sector
   colimits, with a special quotient tower in the wrap sector;
-- THM-3412: the linear-`z` principal-part tower has a complete free/torsion
-  response and one Prüfer arm per repeated root;
+- THM-3412: in its gradient-unimodular range, the linear-`z`
+  principal-part tower has a complete free/torsion response and one Prüfer
+  arm per repeated root;
 - THM-3422: a one-root nonlinear sector is a weighted bilateral chain, and
   its wrap character always selects the repeated-root arm;
 - THM-3427: generic ranks forget multiplicity, while the canonical wrap
@@ -78,7 +79,40 @@ Put
 S=rad(g),       c=g/S,       N=deg(S),       E=deg(c).
 ```
 
-THM-3412 transfers without approximation:
+The tempting direct appeal to THM-3412 does **not** work for arbitrary `g`.
+For `P_1=ax+b+gw`, the gradient pair is `(a+g'w,g)`, and `a+g'w` is a unit
+modulo `g` exactly when `g'` is nilpotent modulo `g`, equivalently when all
+geometric roots of `g` are repeated.  The examples `g=x` and
+`g=x^2(x-1)` expose the false shortcut.  They do not refute the wrap theorem;
+they force a different proof.
+
+The exact CRT diagram and the proved one-root theorem THM-3422 instead give,
+after faithful splitting,
+
+```text
+W_d tensor K' ~= direct_sum_i
+  (K'[P] direct-sum (Pr_(P-beta_i) if e_i>1)).
+```
+
+Descent is visible rather than implicit.  The global stage-zero classes
+
+```text
+[c x^j z^(d-1)],                 0<=j<N,
+```
+
+restrict to nonzero scalar multiples of
+`alpha_i^j y_i^(e_i-1)` at the `i`th root.  Their coefficient matrix is a
+diagonal matrix times a Vandermonde matrix, so they descend and split the
+free rank `N`.  The stage-`k` torsion window splits as
+
+```text
+direct_sum_(i:e_i>1)
+  K'[P]/(P-beta_i)^((k+1)(e_i-1)),
+```
+
+which descends by the PID elementary-divisor theorem to `K[x]/c^(k+1)`.
+Choosing its cyclic generators compatibly and taking the colimit gives
+`K[x,c^(-1)]/K[x]`.  Therefore
 
 ```text
 W_d ~= K[P]^N direct-sum K[x,c^(-1)]/K[x].
@@ -135,7 +169,8 @@ There is only a limited survivor.  If `g=gamma y^e u` and
 u^(sigma/d+k)K[y] subset K[x]
 ```
 
-is an injected one-root subdiagram.  When `d|sigma(e-1)`, its endpoint is
+is an injected one-root subdiagram.  When `e>1` and `d|sigma(e-1)`, its
+endpoint is
 
 ```text
 tau=[u^(sigma/d)y^(sigma(e-1)/d-1)z^(sigma-1)].
