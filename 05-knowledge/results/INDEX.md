@@ -20,6 +20,25 @@
   clean-room strict-mask classification through `Q=200`, all atom ranks, and
   hostile closures at `Q=366,578`.  No arbitrary-time, decrement,
   runner-current, or LRC(14) consequence follows.
+- `fibonacci_u_spine_farey_lorentz_one_tie_thm3454.py` -> matching `.out`
+  [THM-3454 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  On the fixed-cusp leaf chain, `P_t=U^(t-1)(3,4,5)` identifies rooted
+  Berggren distance, Farey cross-determinant magnitude, and
+  `sqrt(<P_s,P_t>_L/2)` with `|t-s|`.  Four consecutive Fibonacci depths have
+  six costs
+  `(F_(k-2),F_(k-1),F_k,F_k,F_(k+1),2F_k)`, hence a five-level total preorder
+  and strict `K6` orientation with only the adjacent edge `02/23` missing.
+  One marked origin seam plus gap recurrence gives an all-length additive
+  converse; the Cassini/Pell unit selects exactly the Fibonacci windows.
+  The branch labels `q_(F_n)` have minimal order-six recurrence and first
+  `6 x 6` Hankel determinant `393216`.  Exact controls cover `780` fan pairs,
+  `3060` four-point and `3003` five-point windows, all `24` `S4` relabelings,
+  and Pell pairs through `500`.  Script/output/semantic LF SHA-256:
+  `bdfef5c00d3330026b70ebdd977e90a34865bc1640d5c61b65154dde29572b9a` /
+  `35c964e0635e07f16146b3c439d0eee32a0d465009ceea17e1d71729d3f68b07` /
+  `ff0262595d3dea442d874294e5166c95c47c5b7514375d8b13ab604cdbd6b4f9`.
+  Cross-determinant is not full Farey graph distance, pairwise costs forget
+  common translation, and no full-tree, LRC, or Jacobian consequence follows.
 - `lrc_prime_quarter_half_twist_cap7_classification_thm3451.py` -> matching
   `.out` [THM-3451 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
   post-THM-3445 target-free

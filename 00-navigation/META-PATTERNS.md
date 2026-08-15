@@ -135,8 +135,7 @@ seams are diagonal.  Separate off-diagonal seams; the finite minimum is their
 conflict chromatic number.  For an action
 `rho`, retain `ker(q)/(ker(q) intersect ker(rho))`. **Caution:** “minimal”
 depends on the law/path/category; kernels are gauge only when every consumer
-kills them. **Evidence:** exact-six divisor lift, THM-3450, THM-3449,
-MISTAKE-310/400.
+kills them. **Evidence:** exact-six, THM-3450/3452/3454, MISTAKE-310/401.
 
 ## Test whether a central extension changes the base signature
 

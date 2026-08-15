@@ -32,7 +32,7 @@ THM-3349/3350/3352/3355 close all `561` reflected six-level `k=1` bodies;
 THM-3360 proves the physical edge floor. THM-3381 bounds phase/tree drift and
 refutes residue-blind transfer. Arbitrary `k<=1`, projected `k=2,3`, rung, physical entry and LRC
 remain open; projected screens are not physical covers.
-THM-3356/3366 leave k2/k3 `4056/1897` rows; exact-six: k3's 20 half-ruler edges form a `Phi`-DAG; k2's `C3` is divisor-spliced, not recursive. THM-3385/3387--3395/3398 give q2--7 and all-q mode/cochain laws.
+THM-3356/3366 leave k2/k3 `4056/1897`; exact-six k3 is a 20-edge `Phi`-DAG and k2's `C3` is divisor-spliced. THM-3385/3387--3395/3398 give q2--7 and all-q mode/cochain laws.
 THM-3414--3416 give ZMC rank-4/5/6 bases `8,9` / `10,12` / `11,15,23,25`.
 THM-3425 gives primitive half cap-six support and its joint-period/parity breaker.
 [THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md) proves the all-modulus transverse literal cap-seven classification (15 divisor atoms); LRC(14) remains open.
@@ -63,8 +63,9 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
 - THM-3333/3334/3336/3339/3341/3345--3347 type the Gaussian/Farey/Pell
   U-spine, root cube, signed Gram, and ancestry. THM-3353/3358 compile exact
   lanes; THM-3356 gives affine shells, THM-3357 the gate Horn rule, and
-  THM-3359 periodic index mass. Content, normal unit, order, owner/phase, and
-  mass remain sidecars; no global transduction, LRC row, or JC flux.
+  THM-3359 periodic index mass. THM-3454 adds a same-`U`-ray metric that needs
+  an origin. Content, normal unit, order, owner/phase, and mass remain
+  sidecars; no global transduction, LRC row, or JC flux.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
