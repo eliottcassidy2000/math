@@ -392,7 +392,7 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
   THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response (collisions persist; `gr` overcounts); THM-3354 blocks direct D5 transport.
   THM-3431 proves the secondary typed cospan: LRC deck `H^1`, selected one-root JC local `H^1`, zero additive cross-maps, and a lossy DeathBar only.
-  THM-3418/19 close sparse Keller/rank; THM-3422/24/27 give integral character laws; THM-3430/33 classify wrap/all-sector Prüfer arms; audited THM-3436 gives repeated-root jets. No multiroot nonwrap split or `JC(2)`/`DC(2)` follows.
+  THM-3418/19 close sparse Keller/rank; THM-3422/24/27 give integral character laws; THM-3430/33 classify wrap/all-sector Prüfer arms; THM-3436/37 give repeated-root Artin jets and their derived Euler/Prüfer channel. No multiroot nonwrap split or `JC(2)`/`DC(2)` follows.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
   `2201<=d<=2400` and all `35` residuals in `2401<=d<=2500` close by matching

@@ -2,12 +2,13 @@
 id: THM-3437
 title: "Derived boundary-jet Euler conservation and Prüfer recovery"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / INDEPENDENT AUDIT REQUIRED.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.
   At a repeated geometric boundary root, derived reduction modulo every
   Artin jet has free Tor_0/Tor_1 ranks (N-1+epsilon,epsilon), where epsilon
   is the THM-3433 selected-root bit.  Their Euler rank is always N-1, and
   inverse limits recover the otherwise invisible divisible Prüfer channel.
 source: root boundary-jet derived-response session, 2026-08-15
+audit: independent two-term-resolution, primary-support, Pruefer-kernel, Tor-rank, chain-map, Mittag-Leffler, simple/foreign/Galois boundary, filtration-loss, higher-Tor, normal/-O/stored replay, pinned-hash, semantic/count, AST/security, documentation, and routing audit CLEAN after the exact-evidence scope-label repair at edf8876af2
 depends_on:
   - THM-3433-all-sector-multiroot-primary-torsion-classification
   - THM-3436-repeated-root-boundary-artin-jet-freeness
@@ -23,7 +24,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3437 -- derived boundary-jet Euler conservation and Prüfer recovery
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / INDEPENDENT AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Exact statement
 
@@ -150,9 +151,10 @@ f mod lambda^q |-> f lambda^(-q),                       (13)
 ```
 
 this is exactly coefficient truncation `R_(q+1)->R_q`.  All transition maps
-in `(4)` are therefore surjective.  Their inverse limits are the power-series
-modules `(6)`; no derived-limit correction remains.  **QED, conditional only
-on the two listed proved dependencies retaining their current statements.**
+in `(4)` are therefore surjective.  Both towers satisfy the Mittag--Leffler
+condition, so their first derived inverse limits vanish.  Their inverse limits
+are the power-series modules `(6)`; no derived-limit correction remains.
+**QED.**
 
 ## 3. Connection and loss ledger
 
