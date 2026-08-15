@@ -2,19 +2,20 @@
 id: THM-3387
 title: "Exact cyclic sheet-cover atlas and q=2 gcd graph"
 status: >
-  PROVED analytic Boolean-fibre iff and q=2 gcd graph + FINITE-EXACT
-  literal-body atlas; independent hostile audit pending.  For a degree-q
-  split F=qC union U, let B_q(U) be the base points where the transverse
-  speeds cover all q sheets.  The safe image is exactly
-  (T minus union_c D_c) minus B_q(U), so the divided core is a complement
-  tuple iff B_q(U) lies inside its danger union.  On the canonical aligned
-  grid this classifies 15,393 of 23,569 body/degree rows, exactly the entire
-  THM-3366/S172 body-descended census.  Of these, 15,381 have no global
-  transverse full cover and twelve are genuinely rescued by the core.  At
-  q=2 two odd speeds form a cover edge iff u+v>7 gcd(u,v); the relation is an
-  undirected graph, not a tournament.  These are raw support-row terminals,
-  not an additive refined-ledger decrement or a proof of LRC(14).
+  PROVED analytic pointwise and aligned-grid criteria + PROVED q=2 gcd graph
+  + FINITE-EXACT literal-body atlas + INDEPENDENTLY HOSTILE-AUDITED after the
+  MISTAKE-382 endpoint repair.  Pointwise safe-image equality is equivalent
+  to B_q(U) lying in the core danger union A_C.  Universally, core coverage of
+  the unsupported open cells is equivalent to B_q(U) minus A_C lying on the
+  removed D-grid; these criteria can differ at strict endpoint handoffs.  No
+  such exception occurs for F subset {1,...,14}, where the theorem classifies
+  15,393 of 23,569 body/degree rows, exactly the THM-3366/S172 body-descended
+  census.  At q=2 two odd speeds form a cover edge iff
+  u+v>7 gcd(u,v); the relation is an undirected graph, not a tournament.
+  These are raw support-row terminals, not an additive refined-ledger
+  decrement or a proof of LRC(14).
 source: codex-2026-08-14-exact-sheet-cover-atlas
+audit: independent pointwise proof, event-bitset and interval atlas, endpoint hostile, exact S172 key replay, q2 graph, and harmonic-lattice audit
 depends_on:
   - THM-3385-odd-fibre-doubling-projection-and-half-even-complement-clocks
   - THM-3366-all-sector-complement-clock-completion
@@ -24,16 +25,17 @@ related:
   - THM-3382-fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses
 script: 04-computation/lrc14_exact_cyclic_sheet_cover_atlas_thm3387.py
 output: 05-knowledge/results/lrc14_exact_cyclic_sheet_cover_atlas_thm3387.out
-script_sha256: 0a59f4baea4e8220a0ddec6f12fd9077618b51303dfa1a2e8460ddabc54f49bf
-output_sha256: 95feb57ebc1c2a47a86f39dd05b702c27df2aa86c00fcda00482488231661e77
-semantic_sha256: 9b47c25d39a6f1b356476ca8df317b6b03baf9738d6424ed4e4efebd9cf29c2f
+script_sha256: 9b0b46874a569d674b937b37cf74a8985fca2b77e3e480a75fb4924ea602f25a
+output_sha256: b4d9ce439bab4501bfd5e2cf13eb0b0e3685b7364f30e43b7d5ca9138d25cb5c
+semantic_sha256: de40f9da0f3b335d0de52bad0c75f586c15508cdf4d94b082d2f69c1098e5bc8
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3387 -- exact sheet cover is a Boolean hypergraph, not a capacity sum
 
-**PROVED analytic Boolean-fibre iff and `q=2` gcd graph + FINITE-EXACT
-literal-body atlas; independent hostile audit pending.**
+**PROVED analytic pointwise and aligned-grid criteria + PROVED `q=2` gcd
+graph + FINITE-EXACT literal-body atlas + INDEPENDENTLY HOSTILE-AUDITED after
+the MISTAKE-382 endpoint repair.**
 
 ## 1. From a sufficient bound to the true object
 
@@ -119,10 +121,30 @@ U_D(S_D)
  =[union_(c in C)D_c union B_q(U)] minus (D^(-1)Z/Z).  (10)
 ```
 
-Both danger unions are open.  Therefore the divided core tuple `C` covers
-all unsupported open cells if and only if `(6)` holds; a failure cannot hide
-only on the removed finite grid.  The grid still needs THM-3366's aligned
-owner clock, or its extra clock `D` when `k=0`.
+Put `A_C=union_(c in C)D_c` and `Gamma_D=D^(-1)Z/Z`.  Equation `(10)` gives
+the universal, grid-correct criterion
+
+```text
+C covers U_D(S_D) iff B_q(U) minus A_C subset Gamma_D.  (10a)
+```
+
+This is weaker than pointwise image equality `(6)`: a transverse full cover
+can be core-safe only at removed grid points.  MISTAKE-382 freezes the clean
+six-speed witness
+
+```text
+F=(4,5,8,9,10,18), q=2, C=(2,4,5,9), U=(5,9),
+(L,D)=(5040,2520),    B_2(U) minus A_C={3/14,11/14}.     (10b)
+```
+
+For the literal atlas `F subset {1,...,14}`, no endpoint-only exception can
+occur.  Every core clock satisfies `c<=7`.  If an open core union covered both
+punctured sides of a core-safe point, distinct clocks `c,d` would meet there
+on opposite strict boundaries.  Eliminating the point from
+`cy=+1/14 (mod 1)` and `dy=-1/14 (mod 1)` forces `14 | c+d`, impossible for
+distinct `c,d<=7`.  Hence `(6)` and `(10a)` agree throughout that atlas.  The
+grid still needs THM-3366's aligned owner clock, or its extra clock `D` when
+`k=0`.
 
 ## 4. The exact `q=2` gcd graph
 
@@ -240,7 +262,14 @@ has no triangles.  Only single vertices and single edges survive globally.
 
 Enumerate every six-subset `F` of `{1,...,14}` and every `2<=q<=14` having
 nonempty core and transverse parts.  This gives `23,569` body/degree rows.
-Exact interval equality `(10)` holds in `15,393` and fails in `8,176`.
+The core-only cell equality
+
+```text
+U_D(S_D)=A_C minus Gamma_D
+```
+
+holds in `15,393` and fails in `8,176`.  By the preceding no-handoff lemma,
+the same `15,393` rows satisfy the pointwise criterion `(6)`.
 
 | `q` | candidate-exact rows |
 |---:|---:|
@@ -287,15 +316,17 @@ THM-3366's first body-descended scout S172 uses, for a row `(F,L,D)`,
 q=L/D,                    C={v/q:q divides v in F}.      (18)
 ```
 
-Core danger is always contained in the unsupported target: if `y in D_c`,
-all `q` sheets are blocked by speed `qc`.  If any subset of `C` covers the
-target, then
+Core danger cells are always contained in the unsupported target: if
+`y in D_c`, all `q` sheets are blocked by speed `qc`.  If any subset `C'` of
+`C` covers the target, then the grid-correct chain is
 
 ```text
-core union subset target subset subset-union subset core union, (19)
+A_C minus Gamma_D subset U_D(S_D)
+ subset A_(C') minus Gamma_D subset A_C minus Gamma_D.   (19)
 ```
 
-so equality `(10)` follows.  Conversely `(10)` makes `C` a completion.
+Thus core-only cell equality follows.  Conversely that equality makes `C` a
+completion.  This argument needs no reconstruction of deleted endpoints.
 
 Every atlas row has `|C|<=5`, hence injects into S172's closed row set.  The
 atlas has `15,393` rows, exactly S172's independently audited total; therefore
@@ -340,16 +371,19 @@ occurrences transfer to the current refined `k=3` ledger.
    beyond the `6,420` strict sum-capacity subclass.
 2. **Global transverse survival is not necessary.**  The twelve rows in
    `(16)` require the core-restriction sidecar.
-3. **Strictness changes the hyperedges.**  At `q=7,u=1,y=1/2`, the strict
+3. **Deleted endpoints are a genuine sidecar.**  The witness `(10b)` has
+   exact cell completion but not pointwise image equality.  It lies outside
+   the literal atlas; the no-handoff argument above is load-bearing there.
+4. **Strictness changes the hyperedges.**  At `q=7,u=1,y=1/2`, the strict
    comb blocks zero sheets, while replacing `<1/14` by `<=1/14` blocks the
    two boundary sheets.
-4. **The gcd graph is not a tournament.**  `{1,3}` is a nonedge and survives;
+5. **The gcd graph is not a tournament.**  `{1,3}` is a nonedge and survives;
    `{1,9}` is an edge and covers at `y=1/9`.  There is neither an orientation
    nor a lawful rule forcing missing/bidirectional relations into one.
-5. **The grid and row key remain typed.**  The theorem uses `D=L/q` and the
+6. **The grid and row key remain typed.**  The theorem uses `D=L/q` and the
    exact `(body,D)` key.  Body-only, divisor-only, and nearby quotient keys do
    not inherit `(10)`.
-6. **S172 is not the universal pool census.**  S173/S174 allow clocks not
+7. **S172 is not the universal pool census.**  S173/S174 allow clocks not
    descended from the body and close more raw rows; the present theorem
    classifies exactly the body-descended subengine.
 
@@ -365,9 +399,11 @@ THM-3366 artifacts, then:
   event sweep;
 - checks `4,445` finite `(3,5)`-component edges and exact rectangular
   harmonic factorizations;
-- checks all `23,569` literal body/degree rows by exact cell-interval equality;
+- checks all `23,569` literal body/degree rows by exact cell-interval equality
+  and verifies there is no pointwise/grid discrepancy;
 - independently separates `15,381` global transverse survivors from the
   twelve core rescues;
+- freezes `(10b)` as a positive endpoint-only hostile outside the atlas;
 - reproduces every degree, sector, occurrence, and S172 size profile using a
   downward divisor recurrence rather than Mobius summation; and
 - checks strict versus closed endpoints and the capacity-equality hostiles.

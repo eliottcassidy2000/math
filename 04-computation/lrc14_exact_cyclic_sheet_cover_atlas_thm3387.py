@@ -2,10 +2,12 @@
 """Exact Boolean sheet-cover atlas for THM-3387.
 
 THM-3385 gives a sufficient sum-capacity criterion.  Here the true finite
-object is used: at base y, each transverse speed blocks a subset of Z/q, and
-the core quotient is exact iff every full transverse sheet cover occurs
-inside the descended core danger set.  The literal six-body universe is
-classified by two independent routes:
+object is used: at base y, each transverse speed blocks a subset of Z/q.
+Pointwise quotient equality requires every full transverse sheet cover to
+occur inside the descended core danger set.  Open-cell completion only
+requires any residual covers to lie on the removed quotient grid.  These
+criteria coincide in the literal six-body universe but not globally.  The
+literal universe is classified by two independent routes:
 
 * exact aligned-cell interval projection from the pinned THM-3385 companion;
 * an integer event sweep of the Boolean sheet hypergraph.
@@ -106,6 +108,15 @@ EXPECTED_Q2_INDEPENDENT_SETS = (
     (1, 5),
     (3, 9),
 )
+EXPECTED_ENDPOINT_HOSTILE = (
+    (4, 5, 8, 9, 10, 18),
+    2,
+    (2, 4, 5, 9),
+    (5, 9),
+    5040,
+    2520,
+    (Q(3, 14), Q(11, 14)),
+)
 EXPECTED_CORE_RESCUES = (
     ((1, 3, 6, 8, 11, 13), 48048, 8008, 6, (1,), (1, 3, 8, 11, 13)),
     ((3, 5, 6, 8, 11, 13), 240240, 40040, 6, (1,), (3, 5, 8, 11, 13)),
@@ -120,7 +131,7 @@ EXPECTED_CORE_RESCUES = (
     ((6, 8, 9, 11, 12, 13), 144144, 48048, 3, (2, 3, 4), (8, 11, 13)),
     ((7, 9, 10, 11, 12, 13), 2522520, 504504, 5, (2,), (7, 9, 11, 12, 13)),
 )
-EXPECTED_SEMANTIC_DIGEST = "9b47c25d39a6f1b356476ca8df317b6b03baf9738d6424ed4e4efebd9cf29c2f"
+EXPECTED_SEMANTIC_DIGEST = "de40f9da0f3b335d0de52bad0c75f586c15508cdf4d94b082d2f69c1098e5bc8"
 
 
 def require(condition, detail):
@@ -201,7 +212,7 @@ def global_transverse_survives(degree, transverse):
     return True
 
 
-def full_cover_is_core_contained(degree, core, transverse):
+def full_cover_core_audit(degree, core, transverse):
     source_speeds = tuple(degree * clock for clock in core) + transverse
     scale = 14 * lcm(*source_speeds)
     multiplier = scale // 14
@@ -215,6 +226,7 @@ def full_cover_is_core_contained(degree, core, transverse):
                     events.add(point)
 
     full_samples = 0
+    leaks = []
     for sample in event_samples(tuple(sorted(events))):
         if not transverse_full_cover(degree, transverse, sample, scale):
             continue
@@ -224,8 +236,8 @@ def full_cover_is_core_contained(degree, core, transverse):
             for clock in core
         )
         if core_safe:
-            return False, full_samples
-    return True, full_samples
+            leaks.append(Q(sample, 2 * scale))
+    return not leaks, full_samples, tuple(leaks)
 
 
 def q2_edge(left, right):
@@ -399,7 +411,17 @@ def main():
 
             globally_safe = global_transverse_survives(degree, transverse)
             if globally_safe:
-                require(cell_exact, ("global survival must descend", body, degree))
+                pointwise_exact = True
+                full_samples = 0
+                leaks = ()
+            else:
+                pointwise_exact, full_samples, leaks = full_cover_core_audit(
+                    degree, core, transverse
+                )
+            require(
+                pointwise_exact == cell_exact,
+                ("literal endpoint-only exception", body, degree, leaks),
+            )
             if not cell_exact:
                 continue
 
@@ -424,10 +446,7 @@ def main():
             if globally_safe:
                 global_records += 1
             else:
-                contained, full_samples = full_cover_is_core_contained(
-                    degree, core, transverse
-                )
-                require(contained and full_samples > 0, ("core rescue", record, full_samples))
+                require(pointwise_exact and full_samples > 0, ("core rescue", record, full_samples))
                 rescued.append((body, modulus, quotient, degree, core, transverse))
 
     require(candidates == EXPECTED_CANDIDATES, candidates)
@@ -512,14 +531,37 @@ def main():
     require(not global_transverse_survives(2, (1, 9)), "q2 edge hostile")
     require(not global_transverse_survives(3, (8, 11, 13)), "core rescue setup")
 
+    # MISTAKE-382: outside the literal pool, open-cell completion can differ
+    # from pointwise equality only on the deleted quotient grid.
+    hostile_body, hostile_degree, hostile_core, hostile_transverse, hostile_L, hostile_D, expected_leaks = EXPECTED_ENDPOINT_HOSTILE
+    hostile_modulus, hostile_safe = base.safe_cell_ranges(hostile_body)
+    require((hostile_modulus, hostile_modulus // hostile_degree) == (hostile_L, hostile_D), "endpoint hostile scale")
+    hostile_unsupported = base.complementary_ranges(
+        hostile_D, base.projected_support_ranges(hostile_D, hostile_safe)
+    )
+    hostile_descended = base.danger_cell_ranges(hostile_D, hostile_core)
+    hostile_contained, hostile_full_samples, hostile_leaks = full_cover_core_audit(
+        hostile_degree, hostile_core, hostile_transverse
+    )
+    require(hostile_unsupported == hostile_descended, "endpoint hostile cell equality")
+    require(not hostile_contained and hostile_full_samples > 0, "endpoint hostile pointwise failure")
+    require(hostile_leaks == expected_leaks, ("endpoint hostile leaks", hostile_leaks))
+    require(
+        all((point * hostile_D).denominator == 1 for point in hostile_leaks),
+        ("endpoint hostile off grid", hostile_leaks),
+    )
+    semantic.add(("endpoint_scope_hostile", EXPECTED_ENDPOINT_HOSTILE))
+
     digest = semantic.hexdigest()
     require(digest == EXPECTED_SEMANTIC_DIGEST, ("semantic digest", digest))
 
     print("THM-3387 EXACT CYCLIC SHEET-COVER ATLAS")
     print(f"source_sha256_lf={lf_hash(source)}")
     print(f"dependency_sha256_lf={tuple((name, expected) for name, _, expected in PINNED)}")
-    print("status=FINITE-EXACT Boolean-fibre iff atlas plus PROVED q2 gcd graph")
-    print("exact_iff=every_full_transverse_sheet_cover_lies_inside_descended_core_danger")
+    print("status=FINITE-EXACT literal atlas plus PROVED pointwise/grid criteria and q2 gcd graph;independently_hostile_audited_after_MISTAKE-382")
+    print("pointwise_iff=every_full_transverse_sheet_cover_lies_inside_descended_core_danger")
+    print("universal_grid_iff=B_q(U)\\A_C_is_subset_of_Gamma_D")
+    print(f"literal_endpoint_only_exceptions=0;endpoint_hostile={EXPECTED_ENDPOINT_HOSTILE}")
     print(f"candidate_body_degree_rows={candidates};exact_rows={len(exact_records)};failed_rows={candidates-len(exact_records)}")
     print(f"global_transverse_rows={global_records};core_rescued_rows={len(rescued)};capacity_subclass={capacity_records}")
     print(f"q_histogram={tuple(sorted(q_histogram.items()))}")

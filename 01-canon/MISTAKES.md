@@ -9,6 +9,34 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-382 (2026-08-14, THM-3387 canonical grid iff) -- openness does not remove endpoint-only sheet covers
+
+- **What failed:** THM-3387 correctly proved the pointwise image identity
+  and the universal aligned-grid identity, but then claimed that the core
+  clocks cover the unsupported open cells iff every transverse full cover is
+  pointwise core-dangerous.  The inference used only that the two danger
+  unions are open and silently discarded the removed grid.
+- **Minimal witness / first failed implication:** for
+  `F=(4,5,8,9,10,18)`, `q=2`, `C=(2,4,5,9)`, `U=(5,9)`, and
+  `(L,D)=(5040,2520)`, the only core-safe transverse full covers are
+  `{3/14,11/14}`, both on the removed `D`-grid.  The core therefore covers
+  every unsupported open cell although the pointwise safe image omits those
+  two base points.  Open sets can differ at a point when another open union
+  covers both punctured sides by an endpoint handoff.
+- **Repair / strongest survivor:** universally, core-cell completion is
+  equivalent to `B_q(U) minus A_C` being contained in the `D`-grid, whereas
+  pointwise image equality is equivalent to `B_q(U) subset A_C`.  The literal
+  `F subset {1,...,14}` atlas has no endpoint-only exceptions: its core clocks
+  are at most seven, and an opposite strict-boundary handoff by distinct
+  clocks `c,d` would force `14 | c+d`, impossible when `c+d<=13`.  All
+  `15,393` atlas rows, the twelve core rescues, every sector/occurrence count,
+  the S172 key identification, the q=2 gcd graph, and the harmonic lattice
+  formulas survive unchanged and were independently replayed.
+- **Reusable rule:** after deleting a finite boundary grid, distinguish
+  equality of open-cell words from equality of the underlying point sets.
+  The exact sidecar is the residual set on the deleted grid; openness alone
+  does not reconstruct it.
+
 ## MISTAKE-381 (2026-08-14, THM-3366 artifact pins) -- escaped text was normalized instead of line endings
 
 - **What failed:** four THM-3366 companion-script hashes were advertised as
