@@ -61,8 +61,10 @@
   input.  The constant observer in character `sigma` dies generically exactly
   for one-root `g=c(x-alpha)^e` with `d|sigma(e-1)`; its integral annihilator
   is the corresponding power `(P-(a alpha+b))^(sigma(e-1)/d)`.  The canonical
-  resonant wrap defect recovers every multiplicity excess `e_i-1` when the
-  radical is taken monic.  The companion checks `585` nonwrap profiles,
+  resonant reducer is the normalized horizontal truncation, with exact
+  root-interpolated low defect; in the wrap sector it recovers every
+  multiplicity excess `e_i-1` when the radical is taken monic.  The companion
+  checks `585` nonwrap profiles,
   `1,554` wrap residue profiles, `74` exact defect completions, closed
   primitives, integral arrows, and multiroot hostiles.  Normal, optimized, and
   stored outputs agree.  Script/output LF-normalized SHA-256:

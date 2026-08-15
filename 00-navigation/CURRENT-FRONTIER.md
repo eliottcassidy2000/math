@@ -35,7 +35,7 @@ remain open; projected screens are not physical covers.
 THM-3356/3366 leave k2/k3 `4,056/200,069,517,203` and `1,897/2,548,893,834`; THM-3385/3387--3395/3398 give q2--7 and all-q mode/cochain laws.
 THM-3414--3416 give ZMC rank-4/5/6 bases `8,9` / `10,12` / `11,15,23,25`.
 THM-3425 gives primitive half cap-six support and its joint-period/parity breaker.
-THM-3420/3421/3423: prime zero cap7 iff `p=29`; prime half cap7 iff `p in {11,13,23,29}`. THM-3426 extends the odd-interval collision/clique law to rough moduli. THM-3428 proves the full-order rough half-twist classification: cap-seven support is exactly `Q in {11,13,23,29}`. THM-3429 reduces every target-free primitive mixed-order odd composite to a prime factor in `{3,5,7,17,29}`, with Boolean defect budgets and a fibrewise exact-partition law at `p=7`; the five lanes stay open. THM-3368 has no clock seed; composite rank seven/LRC remain open.
+THM-3420/3421/3423 close prime cap7 (zero `{29}`, half `{11,13,23,29}`); THM-3426/3428 extend the half law to rough full-order moduli. THM-3429 reduces target-free primitive mixed orders to five open prime lanes `{3,5,7,17,29}` with exact defect/fibre budgets. THM-3368 has no clock seed; composite rank seven/LRC remain open.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
 
@@ -390,9 +390,7 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   [subresultant sidecar](../07-reflections/jc-critical-inverse-cover-cofactor-jacobian-probe-agent-20260803.md)
   gives a two-pivot inverse graph and mate-integrability class on two controls.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
-  THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response; collisions persist and `ker` after `gr` overcounts. This refines THM-2063, not `JC(2)`; THM-3354 blocks D5 transport.
-  THM-3418/3419 close sparse Keller/generic rank; THM-3422 gives the one-root integral response/first window; THM-3424 classifies unit localization and annihilator. THM-3427 gives every generic character-sector presentation, classifies all constant observers and annihilators, and recovers root multiplicities from the canonical wrap defect. Full multiroot integral fibers remain open.
-  No base root choice follows; residual degree 119, Keller mate/inverse cover, `JC(2)` and `DC(2)` remain OPEN.
+  THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response (collisions persist; `gr` overcounts); THM-3354 blocks D5 transport. THM-3418/3419 close sparse Keller/generic rank; THM-3422/3424/3427 give one-root integral and all-character observer laws. THM-3427's wrap defect recovers multiplicities generically, not a multiroot integral module. Base roots, degree 119, mates/covers, `JC(2)`/`DC(2)` remain open.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
   `2201<=d<=2400` and all `35` residuals in `2401<=d<=2500` close by matching

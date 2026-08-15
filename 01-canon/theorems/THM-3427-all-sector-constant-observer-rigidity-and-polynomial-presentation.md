@@ -16,7 +16,13 @@ status: >
   THM-3424 is the sigma=1 specialization.  No full multiroot integral module,
   polynomial mate, new Keller case, or JC(2) conclusion is claimed.
 source: root-2608-jc-all-sector-observer-packet-2026-08-15
-audit: independent operator, pole-intersection, wrap-seam, resonant-basis, one-root iff, and THM-3422 annihilator reconstruction; monic-radical normalization hostile repaired explicitly; normal/optimized/stored exact replay and hashes clean
+audit: >
+  Independent operator, pole-intersection, wrap-seam, resonant-basis,
+  one-root iff, and THM-3422 annihilator reconstruction; monic-radical
+  normalization, horizontal-truncation/high-row uniqueness, split/nonsplit
+  interpolation, wrap multiplicity inversion, and typed THM-3412 bridge
+  audited; normal/optimized/stored replay, LF hashes, AST safety, scope, and
+  documentation audit clean.
 depends_on:
   - THM-3419-generic-kummer-response-regular-sector-rank
   - THM-3422-one-root-nonlinear-integral-hamiltonian-response
