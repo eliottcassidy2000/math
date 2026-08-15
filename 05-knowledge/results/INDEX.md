@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `lrc_order2_fixed_half_parity_transplant_thm3432.py` -> matching `.out`
+  [THM-3432 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For every
+  `R>=2` and strict `0<delta<=1/2`, restricting fixed-zero blocks on `2R` to
+  odd sheets is exactly the half-twist block on `R`; adjoining the unique
+  order-two residue therefore raises the conditional minimum rank by one.
+  Full joint period is preserved, while for odd `R` the half augmented gate
+  additionally needs an odd residue.  The companion checks 5,990,700 sheet
+  cells, 94,760 affine-unit rows, ten direct rank controls, multiplicities,
+  and the sharp all-even `R=15` hostile.  Script/output/semantic LF-normalized
+  SHA-256: `5be8316df17232cb797c830207190b793faf2088a9d9c172a509f6ef986207e9` /
+  `f4f4ccfccc0ff82a7920abb9d69245539c0eb498a383fe4895a5c08f01088ca9` /
+  `509ab5d7e01e3ffad5ba93bbfdd9081c84697db9457213658d750bbf40c681a9`.
+  No unconstrained fixed-rank, mixed rank-seven, or LRC(14) claim follows.
+
 - `lrc_prime_fibre_activity_descent_thm3429.py` -> matching `.out`
   [THM-3429 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
   INDEPENDENT AUDIT REQUIRED].  For an odd joint-period half-twist cover by

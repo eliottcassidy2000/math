@@ -2,13 +2,14 @@
 id: THM-3432
 title: "Order-two fixed/half parity transplant"
 status: >
-  PROVISIONAL PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT PROOF AUDIT
-  REQUIRED.  An elementary all-modulus parity decomposition identifies a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  An elementary all-modulus
+  parity decomposition identifies a
   fixed-zero cover on 2R containing the order-two block with a half-twist
   cover on R.  Joint quotient period is preserved, but augmented
   primitiveness needs one parity breaker when R is odd.  No mixed rank-seven
   classification or LRC(14) consequence is claimed.
 source: root-lrc-order-two-parity-transplant-2026-08-15
+audit: independent strict-endpoint, parity-chart, rank, period/gcd, normalized-order, affine-unit, multiplicity-loss, R15, Q474, solver, hash, normal/-O, security, and documentation audit CLEAN
 depends_on: []
 related:
   - THM-3405-common-centre-gcd-gauge-and-boolean-half-twist
@@ -24,7 +25,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3432 -- order-two fixed/half parity transplant
 
-**PROVISIONAL PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Statement
 
