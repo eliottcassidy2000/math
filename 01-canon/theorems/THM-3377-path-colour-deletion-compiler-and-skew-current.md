@@ -183,6 +183,20 @@ K_(X triangleright Y)=[[K_X,+J],[-J,K_Y]]              (16)
 give the first two terms of `(15)`.  Summing each all-ones cross block and
 using `(6)` gives the exterior pair in the last line. ∎
 
+For the repeated ordered join `T^r=T triangleright ... triangleright T`, the
+two cross terms cancel because their factor derivatives are proportional.
+Induction in `(3)` and `(15)` therefore gives the compact all-`r` law
+
+```text
+F_(T^r)(alpha)=F_T(alpha)^r,
+Psi_(T^r)(alpha,beta)
+ =r F_T(alpha)^(r-1)F_T(beta)^(r-1)Psi_T(alpha,beta).   (15a)
+```
+
+Thus the deletion compiler and its order current retain the same exact
+polynomial--exponential repeated-join structure as the undeleted THM-3166
+response.
+
 The scalar slice
 
 ```text
