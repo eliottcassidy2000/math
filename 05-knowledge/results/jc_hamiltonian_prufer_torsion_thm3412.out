@@ -1,0 +1,17 @@
+THM-3412 HAMILTONIAN PRINCIPAL-PART / PRUFER AUDIT
+arithmetic: exact Fraction row reduction; assertion-independent
+operator: nabla_q = g(f' partial_t-partial_x)+qg'
+one-root finite exact cells: 16
+graded four-term cells: 16
+localized primitive/cyclic-generator cells: 16
+persistent kernel-transition cells: 12
+zero finite-cokernel-transition cells: 12
+sharp e=3,q=2 hostile: kernel [4], graded kernel/coker [3,1], lift deficit 2
+distinct values: blocks [q] at 0 and [2q] at 1
+equal collision: two [q] arms at 1; diagonal eta exponent 2
+unequal collision: [q,2q] arms at 1; diagonal eta exponent 3
+nonsplit Q control: one (T^2+1)^q arm
+nonsplit collided Q control: two (T+1)^q arms
+scope: linear-z response only; no JC(2) implication
+semantic_sha256=88110e08603773bebcfd88e2fe224badfa014bf3950d12800e5f5fd65007c3ae
+ALL EXACT CHECKS PASSED
