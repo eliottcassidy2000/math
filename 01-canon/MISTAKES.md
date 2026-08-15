@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-399 (2026-08-15, concurrent theorem reservation race) -- filename merges did not protect a shared semantic ID
+
+- **What failed:** THM-3448 was absent when the weighted-Keller boundary
+  theorem was first checked and locally reserved, but another clean session
+  reserved the same YAML ID for the noncommuting Hensel theorem before the
+  next fetch.  Because the filenames differed, rebase had no textual conflict
+  and the duplicate IDs were briefly pushed together.
+- **Minimal witness / first failed implication:** after commit `8504e472e`,
+  both `THM-3448-noncommuting-smooth-hensel-heisenberg-orbit-law.md` and
+  `THM-3448-weighted-keller-cyclic-jelonek-inertia-family.md` declared
+  `id: THM-3448`.  “Free before local editing” did not imply “free at push.”
+- **Repair / strongest survivor:** after both sessions' corrective commits
+  were inspected together, the already-pushed Keller reservation keeps
+  THM-3448 and the Hensel reservation takes THM-3449.  The mathematical
+  content is unaffected, and Git history preserves the collision lineage.
+- **Reusable rule:** immediately before pushing a reservation, fetch and
+  recheck the intended YAML ID against the fetched remote tree—not merely the
+  working tree—and explicitly audit duplicate IDs after every conflict-free
+  rebase, since filename-level merging cannot detect semantic ID collisions.
+  Once a collision is shared, inspect the other session's corrective commit
+  before choosing a successor; two independent “move to the next ID” repairs
+  can collide again.
+
 ## MISTAKE-398 (2026-08-15, THM-3446 group and alignment typing) -- a direct product was called a free product, and a sharp universal bound was called every packet's exact level
 
 - **What failed:** the provisional THM-3446 truth surfaces called the finite
