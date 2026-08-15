@@ -25,7 +25,7 @@ related:
   - THM-3418-one-monomial-nonlinear-fiber-keller-classification
 script: 04-computation/jc_all_sector_constant_observer_thm3427.py
 output: 05-knowledge/results/jc_all_sector_constant_observer_thm3427.out
-script_sha256: 9358e4a63d51fbbb0cc074a905b2d5bae7e3a78608599b4b08999413f31cf194
+script_sha256: 8563d6ee1c071abdff3d0961409737017bc336667f59c10c40f3b849c83a0a72
 output_sha256: 4055ad0afbcca0f8a0eb3a52700ffbc47a3326650364338e557839d39dfccd34
 hash_basis: LF-normalized bytes
 ---
@@ -319,6 +319,40 @@ Combining `(30)` and `(32)` gives `j=N` and the sharper exact defect law
 deg(R_sigma)=N-1.                                        (33)
 ```
 
+The same triangular argument gives the leading coefficient vector, not only
+its degree.  Put
+
+```text
+k=m_sigma-N,
+c_(d,sigma,k)=product_(h=1)^k [d(h-1)+sigma]/(dh),
+H_sigma=sigma S(g'/g)-dS'.                               (33a)
+```
+
+The empty product is one.  Comparing successively the degree-`j` rows for
+`j=m_sigma-1,...,N` gives
+
+```text
+q_res=c_(d,sigma,k)t^k S+lower t-orders,
+R_sigma=c_(d,sigma,k)t^(k+1)H_sigma+lower t-orders.       (33b)
+```
+
+Indeed, the leading coefficients satisfy
+
+```text
+c_j=[d(m_sigma-j-1)+sigma]/[d(m_sigma-j)] c_(j+1),
+c_(m_sigma)=1,                                           (33c)
+```
+
+whose product is `(33a)`.  At a root `alpha_i` of multiplicity `e_i`,
+
+```text
+H_sigma(alpha_i)=(sigma e_i-d)S'(alpha_i).               (33d)
+```
+
+Thus the first asymptotic defect vector records multiplicity and character,
+even though THM-3419's sector rank forgets both.  Its leading coefficient is
+`sigma r-dN`, nonzero in the accessible cases by `(31)--(32)`.
+
 Consequently the resonant basis swap is not merely existential.  If `(25)`
 is accessible, a basis is
 
@@ -420,7 +454,8 @@ not assert that the full multiroot module is torsion-free.
 
 The exact companion checks the operator coefficients, closed one-root
 solutions `(37)`, the wrap evaluation splitting `(19)`, wrap residue vectors,
-the two incompatible infinity degrees, `74` exact resonant defect reductions,
+the two incompatible infinity degrees, `74` exact resonant defect reductions
+including the asymptotic formula `(33b)`,
 minimal integral arrow counts, and exact `Q(t)` linear systems on a declared
 low grid.  Its sharp multiroot hostiles include
 

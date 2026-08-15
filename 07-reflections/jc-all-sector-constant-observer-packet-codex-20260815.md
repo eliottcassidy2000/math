@@ -98,7 +98,17 @@ monomial.  The basis is exactly
 Thus one high vector replaces the top low vector without changing
 THM-3419's rank.
 
-For a one-root divisor, that low vector is exactly the constant.  The
+More is visible at `t=infinity`.  If `k=m_sigma-N`, the highest `t`-part of
+the defect is a nonzero scalar multiple of
+
+```text
+H_sigma=sigma rad(g) g'/g-d rad(g)',
+H_sigma(alpha_i)=(sigma e_i-d)rad(g)'(alpha_i).
+```
+
+This polynomial is a multiplicity/character response vector that the generic
+rank cancels completely.  For a one-root divisor, the low vector is exactly
+the constant.  The
 replacement records the Prüfer endpoint, and the constant observer has exact
 annihilator exponent
 
@@ -124,11 +134,10 @@ Together with THM-3422, this gives its exact integral annihilator.  Therefore
 all `d` constant-character observers are nontorsion for every multiroot `g`,
 even though THM-3419 gives `N>1` response channels in each sector.
 
-The next underexplored object is the full coefficient vector of the reduced
-resonant defect polynomial `R_sigma`.  Its degree is now fixed at `N-1`, but
-its lower coefficients form a concrete period coordinate describing how
-`x^(N-1)` is expressed through the other low vectors and the high resonant
-monomial.  A root-interpolation or determinant formula for that vector may be
-the right bridge toward local primary structure.  Nothing here yet proves
-that a multiroot sector is torsion-free or decomposes into independent root
-arms.
+The next underexplored object is the lower-`t` completion of the resonant
+defect polynomial `R_sigma`.  Its degree and highest `t`-coefficient are now
+explicit, but its remaining coefficients form a period coordinate describing
+how `x^(N-1)` is expressed through the other low vectors and the high
+resonant monomial.  A determinant formula for that completion may be the
+right bridge toward local primary structure.  Nothing here yet proves that a
+multiroot sector is torsion-free or decomposes into independent root arms.

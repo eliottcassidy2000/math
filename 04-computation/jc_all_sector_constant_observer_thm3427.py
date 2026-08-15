@@ -302,6 +302,20 @@ def resonant_defect_degree(d: int, sigma: int, exponents: tuple[int, ...]) -> in
     require(solution is not None, ("defect solution", d, sigma, exponents))
     defect = sp.Poly(sp.expand(image.as_expr().subs(dict(zip(p_coefficients, solution)))), x)
     require(not defect.is_zero, ("zero resonant defect", d, sigma, exponents))
+
+    excess = degree - root_count
+    asymptotic_scalar = sp.prod(
+        sp.Rational(d * (h - 1) + sigma, d * h) for h in range(1, excess + 1)
+    )
+    logarithmic_rad = sp.expand(
+        sum(e * sp.cancel(rad / (x - alpha)) for alpha, e in zip(roots, exponents))
+    )
+    response_polynomial = sp.expand(sigma * logarithmic_rad - d * sp.diff(rad, x))
+    top_t_coefficient = sp.Poly(defect.as_expr(), t).coeff_monomial(t ** (excess + 1))
+    require(
+        sp.expand(top_t_coefficient - asymptotic_scalar * response_polynomial) == 0,
+        ("defect asymptotic", d, sigma, exponents, defect.as_expr()),
+    )
     return defect.degree()
 
 
