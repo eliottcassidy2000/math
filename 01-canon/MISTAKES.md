@@ -35,6 +35,29 @@ Format per entry:
   verify that the induced translation acts on the retained labelled fibre;
   here it is a common cyclic sheet relabelling only when `qc` is integral.
 
+## MISTAKE-388 (2026-08-15, THM-451 skew-tower Smith status) -- a theorem for the ambient matrix class was left labelled as a tower conjecture
+
+- **What failed:** THM-451 correctly computed the flat Smith form of the
+  skew-doubling tower at orders 16 and 32, but labelled its continuation
+  conjectural beyond order 32.  The classification step searched the tower
+  internally and missed a theorem for every skew-Hadamard matrix.
+- **First failed implication:** THM-447 already proves that every tower level
+  is skew-Hadamard.  Michael--Wallis (1998), reproved as Theorem 2.4 of
+  Hacioglu--Keman (2014), proves that every skew-Hadamard matrix of order
+  `4m` has Smith form
+  `(1,2^(2m-1),(2m)^(2m-1),4m)`.  Thus the displayed THM-451 formula was
+  true, but its `CONJECTURED` status was false immediately after its own
+  ambient-class identification.
+- **Repair / strongest survivor:** THM-451 now marks the Smith law
+  **CITED/PROVED** at every tower order.  Its binary rank law is likewise
+  all-level through THM-482's `d^+` code theorem.  The finite Hadamard
+  equivalence, chirality, Hall-class, density, and transform computations are
+  unchanged.  The HYP-2361 half-life question must seek a different invariant;
+  neither Smith form nor binary rank can be the order-128 failure.
+- **Reusable rule:** after recognizing an object as a standard ambient class,
+  search the class theorem before promoting a few computed instances to a
+  conjecture.  A correct formula can still carry a false epistemic status.
+
 ## MISTAKE-383 (2026-08-15, q=8--15 finite-mode probes) -- a rank-bounded edge list was used to print a global-looking profile
 
 - **What failed:** the q=8 and q=8--14 probes enumerated minimal physical
