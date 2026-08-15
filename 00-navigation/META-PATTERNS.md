@@ -39,7 +39,7 @@ see THM-2617/2636 and the latter's `q`/`T` typing repair.
 
 ## Separate descent, ambient scale, and regularity debt
 
-**Trigger/action:** after descent/localization, compute the integral intersection or annihilator; before naming ramification, normalize the generated value group. Finite index and killed torsion do not prove regularity. **Evidence:** THM-2158/2174, THM-3080/3383/3386.
+**Trigger/action:** after descent, compute the integral intersection and normalize scale. Choose `max`, `sum`, or `product` from the target; finite index, torsion, and capacity bounds prove no regularity or iff. **Evidence:** THM-2158/2174, THM-3080/3383/3385/3386.
 
 ## Localize a metric by common contexts before hunting catalysts
 
