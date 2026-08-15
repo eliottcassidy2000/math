@@ -3,7 +3,7 @@
 Status: **PROVED scoped transfer + FINITE-EXACT + VERIFIED-EXACT**.
 [THM-3360](../01-canon/theorems/THM-3360-uniform-reflected-high-pair-floor-by-admissible-affine-tails.md)
 supplies the reflected high-pair floor for the `k=2` composition;
-[THM-3376](../01-canon/theorems/THM-3376-independent-superunit-affine-tail-and-reflected-residue-closure.md)
+[THM-3382](../01-canon/theorems/THM-3382-independent-superunit-affine-tail-and-reflected-residue-closure.md)
 is an independent weaker-floor route. Direct transfer to the projected wall
 is **REFUTED** before projection. This sidecar changes no live ledger and is
 not an arbitrary projected-sector closure.

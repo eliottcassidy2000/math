@@ -43,7 +43,9 @@ Format per entry:
   `(z,w)=(492,836)` has overlap `6/209`, but `z -> z-1=491` gives overlap
   zero. The centered phase defect is `Delta=78`, a macroscopic jump
   `13/28`, although `|h|=1`.
-- **Repair / strongest survivor:** with centered `Delta=hj-mL`, exact affine
+- **Repair / strongest survivor:**
+  [THM-3381](theorems/THM-3381-reflected-residue-affine-phase-transport-and-frozen-tree-stability.md)
+  proves that with centered `Delta=hj-mL`, exact affine
   conjugacy gives
   `sigma<=min(1,4(|Delta|+|h|)(1+L/z)/L)`. A fixed Hunter tree survives when
   its old margin exceeds `sum_i(deg_T(i)+1)sigma_i`. Exact shifts
@@ -121,7 +123,7 @@ Format per entry:
   global `1/p`, finite `T<1` bounds its coefficient by
   `d^2/(1344 omega)`, below the retained conservative term.
 - **Superseding theorem:**
-  [THM-3376](theorems/THM-3376-independent-superunit-affine-tail-and-reflected-residue-closure.md)
+  [THM-3382](theorems/THM-3382-independent-superunit-affine-tail-and-reflected-residue-closure.md)
   uses the centered compiler, the full superunit chamber, both drift factors,
   and the exact finite bridge.  It independently closes the canonical
   reflected-residue level branch, not arbitrary six-drift `k=1` or LRC(14).

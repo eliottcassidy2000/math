@@ -1,6 +1,6 @@
 # Disconnected-low affine tail and canonical reflected-residue branch closure
 
-**Status.** PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Canonical theorem: [THM-3376](../01-canon/theorems/THM-3376-independent-superunit-affine-tail-and-reflected-residue-closure.md).  This is an independent alternative to THM-3355's weighted-horn proof; THM-3360 later sharpens its pair floor to `1/294`.  LRC(14) remains OPEN.  This note records the centered superunit repair, the exact finite dovetail, and the redundant canonical reflected-residue branch closure.
+**Status.** PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Canonical theorem: [THM-3382](../01-canon/theorems/THM-3382-independent-superunit-affine-tail-and-reflected-residue-closure.md).  This is an independent alternative to THM-3355's weighted-horn proof; THM-3360 later sharpens its pair floor to `1/294`.  LRC(14) remains OPEN.  This note records the centered superunit repair, the exact finite dovetail, and the redundant canonical reflected-residue branch closure.
 
 ## 1. Scope and the missed chamber
 
@@ -241,7 +241,7 @@ For the small-ruler, moderate-ratio, non-`3:5`, raw-gcd-`<=3` bank:
 4. (11)--(12) close every `A=0,T<1` witness; and
 5. `c=0` cannot occur there.
 
-All three bridge segments have now received all-argmin reference audits and full-context hostile controls.  Therefore no affine-tail chamber remains.  This proves the strict high-pair floor used by THM-3376.
+All three bridge segments have now received all-argmin reference audits and full-context hostile controls.  Therefore no affine-tail chamber remains.  This proves the strict high-pair floor used by THM-3382.
 
 ## 7. Reproduction
 
@@ -279,7 +279,7 @@ Frozen artifact hashes (LF-normalized bytes where relevant):
 
 The closest inherited objects are THM-2941's upper-median body bank and debt, THM-3350's all-channel tree transport, and THM-3352's exact arbitrary-ratio mass engine.  The disconnected low graph has a complete-multipartite high complement.  Choosing one vertex in each of two components gives an explicit five-edge cross-component spanning tree.  Since every high edge now has physical overlap strictly greater than `Dmax/5`, its credit strictly exceeds the whole singleton debt and Hunter closes the disconnected-low case.
 
-Six distinct levels have connected or disconnected low graph.  THM-3352 closes the connected case and THM-3376 independently closes the disconnected case.  Repetitions are handled separately: THM-2941's same-level graph is complete on every one of the active 649 bodies.  Its only two chromatic exceptions have all fifteen robust edges and are disjoint from the robust-edge-`<=10` active bank.  Hence every positive canonical reflected-residue level assignment closes on those 649 bodies.  Together with the complementary bodies already closed by THM-2941, this exhausts all 3,003 bodies.  THM-3355 and THM-3360 give independent canonical proofs of the same branch conclusion.
+Six distinct levels have connected or disconnected low graph.  THM-3352 closes the connected case and THM-3382 independently closes the disconnected case.  Repetitions are handled separately: THM-2941's same-level graph is complete on every one of the active 649 bodies.  Its only two chromatic exceptions have all fifteen robust edges and are disjoint from the robust-edge-`<=10` active bank.  Hence every positive canonical reflected-residue level assignment closes on those 649 bodies.  Together with the complementary bodies already closed by THM-2941, this exhausts all 3,003 bodies.  THM-3355 and THM-3360 give independent canonical proofs of the same branch conclusion.
 
 ## 9. Exact bridge provenance
 

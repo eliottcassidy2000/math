@@ -22,7 +22,7 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`.
    THM-3378 leaves ledger/wall/families `372913/109/12` at `z1=216`.
-   THM-3352/3355/3360 close matched residues on all `3,003` bodies; THM-3376
+   THM-3352/3355/3360 close matched residues on all `3,003` bodies; THM-3382
    gives an independent affine proof. THM-3366 leaves
    `4,056/200,069,517,203` (`k=2`) and `1,897/2,548,893,834` (`k=3`).
    `k=0`, other `k=1` residues, projected `k=2,3`, rung, entry, and LRC

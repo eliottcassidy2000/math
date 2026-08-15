@@ -1,5 +1,5 @@
 ---
-id: THM-3376
+id: THM-3382
 title: "Independent superunit affine-tail proof of canonical reflected-residue closure"
 status: >
   PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  This is an
@@ -66,14 +66,14 @@ synthesis_output_sha256: ced9ee2e128290939fce706968631b20dc15e6cda966e327b22c1bd
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3376 -- independent superunit affine tail and canonical reflected-residue closure
+# THM-3382 -- independent superunit affine tail and canonical reflected-residue closure
 
 **PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 The computation filenames and the frozen synthesis transcript retain the
 provisional token `thm3355`: this proof and the independently developed
 weighted-horn theorem were assigned that ID concurrently.  The weighted-horn
-theorem keeps canonical ID THM-3355; this independent proof is THM-3376.
+theorem keeps canonical ID THM-3355; this independent proof is THM-3382.
 
 ## 1. Statement
 
