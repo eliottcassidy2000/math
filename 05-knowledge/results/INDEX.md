@@ -52,6 +52,26 @@
   `c643d6ddd1c3fe03daa06850cf8aae91287eab90229bcf2c95ffa0469a8dee79` /
   `4ac644546e4f81631b5c12a404779397c5c63da67f3e4dd5c1b88da1fa8beda1`.
   No LRC(14) ledger decrement.
+
+- `rough_maximal_order_half_twist_rank7_finite_boundary_20260815.py` ->
+  matching `.out` [FINITE-EXACT INDEPENDENT THM-3428 BOUNDARY].  The complete
+  universe is all 116 odd `11<=Q<512` with `spf(Q)>7`, including 23
+  composites, every full-quotient-order coefficient modulo sign, and every
+  scalar-feasible exact owner count through seven.  Distinct coefficients
+  with accidentally equal masks remain distinct owner choices.  Across 249
+  profiles, 26,333 states and 646,035 branches, cap-seven support is exactly
+  `Q={11,13,23,29}`, with full-order minimum ranks `6,7,6,7`; no composite is
+  positive.  Nine accidental mask coincidences are retained, literal masks
+  are independently reconstructed from coefficient coordinates, and selected
+  hostiles include `121,169,323,493`.  This is the finite boundary requested
+  by the provisional analytic THM-3428 package, not a mixed-order theorem.
+  Normal and optimized transcripts agree.  Script/output/semantic
+  LF-normalized SHA-256:
+  `ca3ea3d64703a88987c20d1ad148695543db6f64bb6abcd9619905ee79969fe7` /
+  `d1268dc5ec58ffba6c1c32f2bd4e59790996cb07eba1593b64c66cb6b4528961` /
+  `b61db8412c1a45419cb4be595f75c802461472f24525b017b3d50d01af9f35ef`.
+  Composite mixed-order rank seven and LRC(14) remain open.
+
 - `lrc_prime_half_twist_rank7_classification_thm3421.py` -> matching `.out`
   [THM-3421 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  A literal
   half-twist cover by at most seven blocks on prime `p` sheets exists exactly
