@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `jc_one_monomial_nonlinear_fiber_thm3418.py` -> matching `.out`
+  [THM-3418 PROVED + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED].  Over any
+  characteristic-zero field, a planar Keller equation with
+  `P=f(x)+g(x)z^d`, `d>=2`, forces `f=ax+b`, constant `g=c`, and
+  `Q=(kappa/a)z+H(P)`; conversely these are explicit tame automorphisms.
+  Gradient unimodularity first forces `f' in K*` and `g|(g')^2`, but every
+  nonconstant `g` then creates an unavoidable residue-one recurrence whose
+  degree is `k(deg(g)-1)` and whose leading multiplier never vanishes.  The
+  exact referee checks six gradient controls, 35 nonconstant recurrence
+  cells with 245 degree/leading/telescoping coefficients, and 21 constant-`g`
+  normal forms/inverses, plus 525 Hamiltonian sector/wrap checks.  This closes
+  only the sparse top-plus-constant fiber stratum, not a general
+  intermediate-coefficient fiber or JC(2).
+  Script/output/semantic LF-normalized SHA-256:
+  `8ae459feb969e00cbb92acd718cdeb49b0d20d86323cdb98e6c31a8fd6a4fe2f` /
+  `4bce9383f966c05468d4c61de5e7bdd3ce77f4a0ce9a8e997e0fed4cfc5dfe05` /
+  `90d08019ad87638fecc375d76258e282bc6a4de17f53e01ca87802c8f05c5c92`.
+
 - `lrc_zero_mode_cochain_rank5_support_probe_20260815.py` -> matching
   `.out` [THM-3415 PROVED ALL-q GLOBAL RANK-FIVE SUPPORT DOWNSTREAM OF
   THM-3408's COMPUTER-ASSISTED PROVED CUTOFF + VERIFIED-EXACT INDEPENDENT
