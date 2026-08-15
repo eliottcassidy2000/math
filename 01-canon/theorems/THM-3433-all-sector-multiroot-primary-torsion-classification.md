@@ -22,6 +22,7 @@ depends_on:
   - THM-3419-generic-kummer-response-regular-sector-rank
 related:
   - THM-3430-nonlinear-wrap-linearization-and-canonical-vertical-torsion
+  - THM-3431-d5-secondary-h1-descent-defects-and-valuation-persistence
   - THM-3427-all-sector-constant-observer-rigidity-and-polynomial-presentation
   - THM-3424-nonlinear-multiroot-unit-observer-rigidity
 script: 04-computation/jc_all_sector_multiroot_primary_torsion_thm3433.py
@@ -506,6 +507,26 @@ with a character-shifted torsion distribution.  Multiplicity is visible in
 the integral boundary filtration even when the generic Kummer packet is the
 regular `N`-packet of THM-3419.
 
+This filtration has an exact related-only reading through THM-3431's
+`DeathBar` forgetting.  At the first visible stage, selected root `i` has
+
+```text
+q_i=sigma(e_i-1)/d,             Bar_(i,sigma,0)=[0,q_i), (49)
+```
+
+and every further depth extends the death time by the persistence slope
+`e_i-1`:
+
+```text
+Bar_(i,sigma,k)=[0,q_i+k(e_i-1)).                        (50)
+```
+
+For wrap, `sigma=d`, so the denominator level is `q=k+1` and the length is
+`q(e_i-1)` with no indexing ambiguity.  The selected arms therefore define a
+multiset of exact valuation bars.  THM-3431's two-way additive no-go remains
+in force: forgetting to these bars destroys the coefficient object, site,
+class, and target predicate.  No LRC-to-JC or JC-to-LRC map is constructed.
+
 The hypotheses and hostiles are sharp:
 
 - `(d,sigma;e_1,e_2)=(4,2;3,1)` has local resonance at root `1`, but
@@ -541,7 +562,7 @@ The companion checks the congruence classification on every
 2<=d<=12,
 1<=sigma<d,
 one to four roots,
-1<=e_i<=6,                                                (49)
+1<=e_i<=6,                                                (51)
 ```
 
 for `102564` nonwrap sector profiles.  It separately checks the gcd

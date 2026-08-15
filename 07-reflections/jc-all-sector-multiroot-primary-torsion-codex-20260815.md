@@ -210,6 +210,20 @@ different intercept.  This answers the original regular-packet puzzle:
 generic rank is uniformly `N` in every character, while integral torsion is
 character-shifted and controlled by the whole multiplicity vector.
 
+THM-3431 supplies a lawful but deliberately lossy comparison language.  The
+first visible endpoint at root `i` has DeathBar
+
+```text
+[0,q_i),                    q_i=sigma(e_i-1)/d,
+```
+
+and depth `k` extends its right endpoint to `q_i+k(e_i-1)`.  Wrap uses
+denominator level `q=k+1`, hence length `q(e_i-1)`.  The arms therefore give
+a multiset of valuation bars.  This is related-only: THM-3431 proves that all
+additive maps between the LRC and JC secondary coefficient objects vanish in
+both directions, even when bar lengths agree.  The barcode forgets the site,
+class, coefficients, and target predicate; it is not an LRC-to-JC map.
+
 Nonwrap descent is unusually rigid.  The selected set is Galois-stable and
 has at most one point, so a selected root must be rational.  A nonsplit orbit
 cannot carry a hidden nonwrap packet.  For example, over `Q`,
