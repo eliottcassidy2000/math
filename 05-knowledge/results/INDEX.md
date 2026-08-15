@@ -20,6 +20,20 @@
   `c643d6ddd1c3fe03daa06850cf8aae91287eab90229bcf2c95ffa0469a8dee79` /
   `4ac644546e4f81631b5c12a404779397c5c63da67f3e4dd5c1b88da1fa8beda1`.
   No LRC(14) ledger decrement.
+- `lrc_prime_half_twist_rank7_classification_thm3421.py` -> matching `.out`
+  [THM-3421 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  A literal
+  half-twist cover by at most seven blocks on prime `p` sheets exists exactly
+  for `p in {11,13,23,29}`, with exact minimum ranks `6,7,6,7`.  Above
+  `p=511`, the residue-class capacity invoice and THM-3423's sharp odd-dilate
+  clique law force a contradiction; below it, an exact normalized-mask DFS
+  checks 197 scalar-feasible parity profiles and replays all four witnesses.
+  Independent literal-bank conjugacy and direct optimization recover the
+  same support and ranks.  Composite sheet numbers, arbitrary physical common
+  times, and LRC(14) remain open.  Script/output/semantic LF-normalized
+  SHA-256:
+  `693db87db8664f76fdc7bc6d520c8d3d36c51376aa6c9a67beef1aad6d84aae9` /
+  `77ad7cf9566f5aa02f9bfa7d9abbbce21b4a37db7137616b2771f1b8169775dc` /
+  `f0c7ceb122e90fd3792d72e80a205a6c4bd823cfb5b04064764b95ddc9d9471d`.
 
 - `odd_interval_ratio_complement_thm3423.py` -> matching `.out`
   [THM-3423 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  If `L` is the
@@ -48,7 +62,7 @@
   monodromy vector and explicitly does not claim a global multiple-root
   decomposition.  The exact companion checks 34,504 direct relations,
   30,576 orbit transitions, 30,576 lambda breaks, 2,268 torsion windows,
-  50 unit primitives, and 126,360 split-fiber character dimensions.  This
+  50 unit primitives, and 126,360 split-fiber character dimensions.
   Script/output LF-normalized SHA-256:
   `1c862dd5dfaee00a3ee5827a9d004c160a574deb103cd3b878a6615aeac7a766` /
   `1e0abbff4bbd2ab601cbf2aee4c840789f4ebf36a1444bf2aa8c8506579e485d`.

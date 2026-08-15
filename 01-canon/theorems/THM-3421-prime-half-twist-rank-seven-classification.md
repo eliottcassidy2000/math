@@ -2,13 +2,14 @@
 id: THM-3421
 title: "Prime half-twist rank-seven classification"
 status: >
-  RESERVED / UNPROVED PROOF CANDIDATE UNDER INDEPENDENT AUDIT.  The candidate
-  classifies literal half-twist covers by at most seven blocks on a prime
-  number of sheets.  Its proposed proof is elementary above p=511 and uses a
-  standard-library exact normalized-mask census below that threshold.  It
-  must not be used as a proved dependency until the audit and status promotion
-  land.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Literal half-twist covers
+  by at most seven blocks on a prime number of sheets exist exactly for
+  p in {11,13,23,29}, with exact minimum ranks 6,7,6,7 respectively.  The
+  proof is elementary above p=511 and uses a standard-library exact
+  normalized-mask census below that threshold.  Composite sheet numbers,
+  arbitrary physical common times, and LRC(14) remain outside the scope.
 source: root-prime-half-complete-2026-08-15
+audit: independent proof reconstruction; literal-mask bank conjugacy and direct optimization census; normal/optimized/stored-output replay; hash and documentation audit clean
 depends_on:
   - THM-3416-zero-mode-cochain-global-rank-six-support
   - THM-3420-prime-rank-seven-zero-and-half-twist-splitter-closures
@@ -25,9 +26,9 @@ hash_basis: LF-normalized bytes
 
 # THM-3421 -- prime half-twist rank-seven classification
 
-**RESERVED / UNPROVED PROOF CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-## 1. Candidate statement and scope
+## 1. Statement and scope
 
 For a prime `p` and a transverse residue `r` modulo `2p` (`p` does not divide
 `r`), retain the literal half-twist mask from THM-3420,
@@ -36,7 +37,7 @@ For a prime `p` and a transverse residue `r` modulo `2p` (`p` does not divide
 H_(p,r)={ell in Z/pZ: ||r(2ell+1)/(2p)||<1/14}.        (1)
 ```
 
-The candidate theorem is
+The theorem is
 
 ```text
 some at-most-seven masks H_(p,r) cover Z/pZ
@@ -269,7 +270,7 @@ Together with THM-3416's all-prime rank-at-most-six classification, `(16)`
 also covers a hypothetical shorter finite-boundary cover: away from `11,23`
 it would have to be an essential seven-block cover and hence appears in the
 normalized census.  This proves the finite half of `(2)` and completes the
-candidate proof.
+proof.
 
 ## 7. Equality boundary, losses, and non-consequences
 
