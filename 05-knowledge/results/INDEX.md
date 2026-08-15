@@ -1,5 +1,24 @@
 # Script Results Index
 
+- `noncommuting_smooth_hensel_heisenberg_orbits_thm3449.py` -> matching
+  `.out` [THM-3449 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
+  INDEPENDENT AUDIT REQUIRED].  For two equal-depth smooth Hensel
+  automorphisms, the first commutator carry is their vector-field Lie bracket
+  at depth `2c`.  The naive abelian exponent action is universally valid
+  through level `2c` and fails on a fibre at `2c+1` when that bracket is
+  nonzero there.  Through `3c`, the replacement is the exact class-two group
+  with normal forms `x^i y^j z^r` of orders
+  `p^(a-c),p^(a-c),p^(a-2c)`; triple carry independence gives free orbit size
+  `p^(2(a-c)+(a-2c))`.  At `p=2,c=1`, the deepest test instead uses
+  `sigma=delta+delta^[2]`.  Controls freeze the abstract presentation, seven
+  affine-Heisenberg rows, a denominator-free all-prime `3c+1` higher-bracket
+  hostile, and an integral dyadic square-collapse hostile.  Script/output/
+  semantic LF SHA-256:
+  `b1ab908fc42dbd95824b0535ef3cbbaf5d55d68faf77a959a38ab6a348df790f` /
+  `dfe2528430981840feac984a47a45ca726ae3ec05a52966ba263230ae6356005` /
+  `fa4dbd16a9f56fb350388fde53c8b3ef39cdfbc6f3092cd31aed83c506bc8154`.
+  No unequal-depth noncommuting theorem, LRC, `JC(2)`, or physical transport
+  is claimed before audit.
 - `weighted_depth_commuting_hensel_lattice_thm3446.py` -> matching `.out`
   [THM-3446 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For commuting
   generators at depths `c_i`,
