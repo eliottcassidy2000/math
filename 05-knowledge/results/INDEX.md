@@ -42,14 +42,17 @@
   Simple roots, integral splitting, and `JC(2)` remain outside scope.
 
 - `fibonacci_berggren_17adic_hensel_torsor_probe_20260815.py` -> matching
-  `.out` [PROVED UNNUMBERED HENSEL-FIBRE LEMMA + FINITE-EXACT `a=1..4`].
+  `.out` [PROVED UNNUMBERED HENSEL-FIBRE LEMMA + FINITE-EXACT `a=1..4` +
+  INDEPENDENTLY AUDITED].
   For `G=[[0,1],[1,1]]`, the two projective 9-cycles modulo `17` are exactly
   the two Legendre classes of `D(m,n)=n^2-mn-m^2`.  With `K=G^18`, the
   nonsplit first layer of `-K=I-17B` makes `K` freely transitive on every
   Hensel fibre of `P^1(Z/17^a)->P^1(F_17)` for every `a`; the companion checks
-  all `88,434` level-four points.  The calibrated exponent retains the affine
-  lift and realizes fibre subsets as periodic XOR/harmonic supports, while
-  the labelled `T4/T6` shadows freeze and forget that exponent.  This is no
+  all `88,434` level-four points.  On the canonical Fibonacci base lifts
+  `n_0=3,...,11`, the calibrated exponent retains the affine lift and realizes
+  fibre subsets as periodic XOR/harmonic supports, while the labelled
+  `T4/T6` shadows freeze and forget that exponent.  MISTAKE-394 repairs only
+  the `T4` observable's name and the tied `n=2` support boundary.  This is no
   LRC current transport.  Script/output/semantic LF-normalized SHA-256:
   `e87a2efa71f0dca430dd86fdb6d8d72d0ece4687be730ddc70c8674c4d70b496` /
   `0f46375097b6dc6a4f801f98fa0609bd7858e05941d66a9efd4fcc2c0c0b3d90` /

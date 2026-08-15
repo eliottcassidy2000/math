@@ -2,9 +2,10 @@
 
 **Status.**  This is an **unnumbered research reflection**.  The general
 Hensel-fibre lemma and its specialization to `K=G^18` are proved below.  The
-finite universes `a=1,2,3,4` are **VERIFIED-EXACT** by the companion.  Nothing
-here is a theorem reservation or canon promotion, and there is no LRC(14)
-decrement.
+finite universes `a=1,2,3,4` are **VERIFIED-EXACT**, and the proof, companion,
+and loss ledger are **INDEPENDENTLY AUDITED** after the two scope-only repairs
+in MISTAKE-394.  Nothing here is a theorem reservation or canon promotion,
+and there is no LRC(14) decrement.
 
 The inherited mechanisms are
 [THM-3339, Fibonacci three-ray Berggren transplant](../01-canon/theorems/THM-3339-fibonacci-three-ray-berggren-transplant-and-moving-owner-obstruction.md),
@@ -255,7 +256,7 @@ called a tournament.
 | gate field | exact declaration |
 |---|---|
 | vertices | one normalized Euclid parameter `P=(m,n)` and its labelled Berggren children `A P`, `B P`, `C P` (`A=L`, `B=M`, `C=R` in THM-3364) |
-| observable | the hypotenuse squared `m^2+n^2` at each of the four parameter vertices |
+| observable | the parameter norm-square `m^2+n^2`, equivalently the Euclid-triple hypotenuse, at each of the four parameter vertices |
 | orientation gauge | fixed ancestry labels; orient each pair from smaller to larger observable |
 | ties | none for positive primitive parameters; the moving `A/C` equality would require `n/m=1+sqrt(2)` |
 | preserved target | the labelled order `P<A<C<B` or `P<C<A<B`, equivalently the Boolean bit `epsilon` |
@@ -308,8 +309,11 @@ breaking it introduces a gauge.
 
 ## XOR and harmonic-series preservation
 
-Fix a Fibonacci base index `n_0`, an exponent `a`, and
-`N=17^(a-1)`.  A calibration in (J) identifies any subset
+Fix an exponent `a`, put `N=17^(a-1)`, and choose the canonical Fibonacci
+base representative `n_0` in `{3,...,11}`.  These nine indices represent the
+nine lines in the square base cycle, start inside one period, and avoid the
+tied `n=2` `T6` boundary.  Take `lambda_a=[u_(n_0)]`.  A calibration in (J)
+identifies any subset
 `J subset Z/NZ` with a subset of Hensel states.  Embed the same Boolean data in
 the natural numbers by
 
@@ -327,7 +331,8 @@ S_(J union J') = S_J union S_J',                        (P)
 
 and complements relative to the carrier `S_(Z/NZ)`.  Thus the power set of
 one Hensel fibre is literally a Boolean/XOR algebra of periodic subsets of
-the natural numbers.
+the natural numbers.  An arbitrary compatible base lift is recovered by
+translating the calibrated exponent, as below.
 
 Each selected residue class in (O) has modulus `18N`.  Consequently
 
@@ -378,6 +383,37 @@ Nothing here proves that a `K` state is an LRC current, transports a
 half-twist mask without the affine character, excludes either `17`-adic tower
 in THM-3429, supplies an arbitrary-time cover, or changes the live LRC(14)
 ledger.
+
+## Independent referee audit
+
+The all-exponent argument was rederived without the companion.  Induction on
+`s` gives, for odd `p`,
+
+```text
+(I+pE)^(p^s)=I+p^(s+1)E mod p^(s+2).
+```
+
+Raising this congruence to a `p`-adic unit `q` gives (E).  A projective fixed
+point then gives an eigenline of `E mod p` in the first nonzero layer, while
+the exponent `p^(a-1)` is scalar modulo `p^a`.  This independently confirms
+the freeness, exact order, and transitivity directions, including the
+one-point `a=1` boundary.
+
+A separately written exact enumerator, importing none of the companion,
+checked every irreducible companion first layer at `p=3,5,7` (respectively
+`3,10,21` trace/determinant pairs), every base fibre, and every level
+`a=1,...,4`.  It then reconstructed all `18` fibres of the displayed `K` at
+`p=17`, obtaining sizes `1,17,289,4913` and total projective sizes
+`18,306,5202,88434`.  An independent comparison bank checked `1,201`
+primitive local-`T4` parameters, every Fibonacci `T6` for `3<=n<=500`, both
+Legendre cycles, and the four literal `Q=289` hostile sections.  All matched.
+
+Fresh normal and optimized runs are byte-identical to each other and to the
+stored output.  The source parses without `assert`, dynamic execution, or
+non-standard imports, the three recorded hashes match, and the documentation
+checker passes.  MISTAKE-394 records the only findings: two scope-only prose
+repairs, with no change to the companion, output, proof mechanism, or stopping
+boundary.
 
 ## Reproduction and hashes
 

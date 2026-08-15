@@ -9,6 +9,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-394 (2026-08-15, Fibonacci--Berggren 17-adic torsor scope) -- a parameter norm-square was misnamed and the tied root entered a `T6` support claim
+
+- **What failed:** the local-`T4` gate called `m^2+n^2` the “hypotenuse
+  squared,” although it is the squared Euclidean norm of the parameter and
+  the hypotenuse itself of its Euclid triple.  Separately, the periodic-support
+  paragraph allowed an unspecified Fibonacci base index and then said that a
+  labelled `T6` was frozen along every resulting support.
+- **Minimal witnesses / first failed implications:** for `(m,n)=(1,2)`, the
+  Euclid triple is `(3,4,5)`, so `m^2+n^2=5`, not the squared hypotenuse `25`.
+  For the support claim, take `n_0=2`, `a=1`, and `J={0}`.  The support
+  contains the root window `W_2=(1,1,2,3)`, whose edge products tie at `2`
+  and `3`; the reflection itself correctly declares that no `T6` exists
+  there.
+- **Repair / strongest survivor:** call the `T4` observable the parameter
+  norm-square, equivalently the Euclid-triple hypotenuse.  For the pure
+  periodic realization choose `n_0` in `{3,...,11}`; these nine indices
+  represent every line of the square base cycle, lie in the first period,
+  and are all in the tie-free `T6` domain.  Changing to any other compatible
+  base lift is exactly the already-recorded translation gauge.  The general
+  Hensel lemma, both Legendre cycles, all finite rows, affine hostile, Boolean
+  identities, harmonic density, tournament loss, hashes, and no-LRC boundary
+  are unchanged.
+- **Reusable rule:** distinguish a parameter's norm-square from the square
+  of the derived object's norm, and intersect a periodic carrier with the
+  declared tie-free domain before claiming that its tournament state is
+  constant.
+
 ## MISTAKE-393 (2026-08-15, THM-3435 covering degree/sign scope) -- a componentwise bijection was assigned to the grid union
 
 - **What failed:** the proof said that the degree-`d` circle map sends all `d`
