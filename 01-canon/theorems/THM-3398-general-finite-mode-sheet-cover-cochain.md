@@ -10,8 +10,9 @@ status: >
   sheet cover iff some mode blocks cover and their affine centre lattices
   carry one complete closed cochain.  This resolves wraparound and duplicate
   unwrapping, includes the m=1 core mode, recovers the q<=7 one-coset theorem
-  without an owner-count restriction, and gives an exact q=9 triple-domino
-  zero-cochain control.  No refined-ledger decrement or LRC(14) follows.
+  without an owner-count restriction, gives an exact certificate-preserving
+  dilation law, and gives an exact q=9 triple-domino zero-cochain control.  No
+  refined-ledger decrement or LRC(14) follows.
 source: root-2608-q8-multiblocker-2026-08-14
 audit: self-contained grid-arc and generalized-CRT/Helly proof; 42328 modes and 47200 exact phase cells through q=29, including block lengths three through five; 40187 independent pair-lattice comparisons through q=11; 1669 bounded global subsets and 569 exact event sweeps through q=11; q7/q8 strict boundary, q8 zero-tie and nonclosure hostiles, q9 zero-tie, m=1 control; independent audit re-derived every direction and checked 3520 fixed-mode event/cochain cases through q=12, 892914 grid memberships through first length-11 regimes, 35748 sheet modes through q=25, and 50625 generalized-CRT instances
 depends_on:
@@ -20,6 +21,11 @@ related:
   - THM-3387-exact-cyclic-sheet-cover-atlas-and-q2-gcd-graph
   - THM-3388-three-sheet-phase-triangle-cover-clutter
   - THM-3389-four-sheet-typed-cover-clutter
+artifacts:
+  - 04-computation/lrc14_q8_q14_finite_mode_clutter_probe_20260814.py
+  - 05-knowledge/results/lrc14_q8_q14_finite_mode_clutter_probe_20260814.out
+  - 04-computation/lrc15_first_effective_triphase_mode_probe_20260814.py
+  - 05-knowledge/results/lrc15_first_effective_triphase_mode_probe_20260814.out
 script: 04-computation/lrc_general_finite_mode_sheet_cover_cochain_thm3398.py
 output: 05-knowledge/results/lrc_general_finite_mode_sheet_cover_cochain_thm3398.out
 script_sha256: e175cf790f4311bd97194c98cdf85214585d167e6fea5ee451377b49daaa1fd7
@@ -343,7 +349,65 @@ This is the first exact mode beyond the `q=8` domino census: a triple kernel
 coset and three dominoes glue through the same centre.  It illustrates why
 the general carrier needs both gcd-type and block-length coordinates.
 
-## 7. Verification and scope
+## 7. Pure dilation is an exact certificate-preserving action
+
+Let `d>=1` be an integer and transform one sheet problem by
+
+```text
+(q,u,t) |-> (dq,du,t/d).                              (29)
+```
+
+For a sheet `k in Z/dqZ`,
+
+```text
+(du)(t/d+k/(dq))=u(t+k/q).                            (30)
+```
+
+Thus a degree-`dq` block is exactly the inverse image of the old block under
+`Z/dqZ -> Z/qZ`.  The phase count `m` and phase step `a` are unchanged, while
+
+```text
+g' = dg,       h'=dh mod 2dq,       w'=dw,
+centre lattice and radius are divided by d.           (31)
+```
+
+For corresponding centre lifts `x_i'=x_i/d`, the cochain scales as
+
+```text
+p_ij'=2dq(du_i)(du_j)(x_i'-x_j')=d^2 p_ij.            (32)
+```
+
+The congruence modulus and both sides of the overlap inequality `(15)` also
+scale by `d^2`; closure `(16)` scales by `d^3`.  Hence block cover, complete
+cochain, and physical realization correspond in both directions on the pure
+`d`-multiple stratum.  This is an exact certificate-preserving dilation law
+with its mode sidecar retained, not a similarity inferred from matching
+counts.
+
+The independent finite-mode artifact in the frontmatter verifies the first
+three nontrivial controls:
+
+```text
+q=4 -> 8:    (1,3,5,7)   -> (2,6,10,14),
+q=5 -> 10:   (1,2,3,4,7) -> (2,4,6,8,14),
+q=6 -> 12:   (2,3,5,7)   -> (4,6,10,14).              (33)
+```
+
+Mixed gcd strata need not descend: forgetting the mode destroys the
+sidecar that distinguishes them.
+
+## 8. Verification and scope
+
+Two independently developed finite artifacts now supply convergence controls
+without entering the proof dependencies.  The `q=8,...,14` compiler
+reconstructs the literal THM-3387 slices by independent event and mode routes,
+with minimal-edge counts `(32,22,18,0,8,0,0)`, exact row vector
+`(1152,1205,1269,1287,1271,1287,1287)`, and no new core rescue.  The `q=15`
+boundary model finds no cover through rank five, exactly `157` minimal
+rank-six edges, and `155` that genuinely require a three-phase mode.  Its
+canonical edge `{1,2,3,4,5,7}` has coincident centres and zero cochain; private
+unit sheets prove that domino submodes cannot replace its trimodes.  Both
+artifacts are **FINITE-EXACT** and outside any new LRC(14) ledger decrement.
 
 The standard-library theorem companion performs the following exact checks.
 
