@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-393 (2026-08-15, THM-3435 covering degree/sign scope) -- a componentwise bijection was assigned to the grid union
+
+- **What failed:** the proof said that the degree-`d` circle map sends all `d`
+  small arcs *bijectively* to the widened arc.  It also quantified the partner
+  law modulo `4R` while excluding only `r=R` from its empty sign class.
+- **Minimal witnesses / first failed implications:** already at `d=2`, both
+  inverse-image arcs map bijectively onto the target, so the map on their
+  union is two-to-one rather than one-to-one.  For `Q=2R`, the residue
+  `r=3R` is sign-equivalent to the excluded residue `R`; it is empty and
+  satisfies `2R-r=r modulo 4R`, so it is not a complementary pair of two
+  owners.  The fibre criterion and partner identities themselves remain
+  true.
+- **Repair / strongest survivor:** each inverse-image component maps
+  bijectively and the whole union maps with degree `d`; a fixed grid orbit
+  therefore has a unique selected point exactly under the stated widened-arc
+  condition.  In the two-sheet paragraph, choose the canonical odd sign
+  representative `0<r<2R` and exclude `r=R`.  Equations `(4)--(11)`, every
+  endpoint/carry/Boolean consequence, both companions, and the census survive.
+- **Reusable rule:** record the degree when passing from several inverse-image
+  components to one target arc, and state whether coefficient quantifiers are
+  on residues or on sign orbits before calling a partner pair distinct.
+
 ## MISTAKE-392 (2026-08-15, refined dyadic auxiliary capacity) -- a full-order half-block bound was applied to arbitrary transverse pullbacks
 
 - **What failed:** the first exact-six mutation reflection called

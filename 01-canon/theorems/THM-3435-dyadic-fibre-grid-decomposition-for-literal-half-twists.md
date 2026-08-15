@@ -11,7 +11,7 @@ status: >
   awaits an independent census audit; Q=366 and the all-Q classification are
   open.  No LRC(14) consequence is claimed.
 source: root even-half-rank7 and codex2 dyadic-fibre sessions, 2026-08-15
-audit: independent pullback, cyclic-interval, residual-mask, strict/weak endpoint, central-fibre, target-free cap-seven, positive-hostile, normal/-O/stored-output, hash, AST/security, and exact-grid audit CLEAN; bounded census independently unaudited
+audit: independent pullback, cyclic-interval, residual-mask, strict/weak endpoint, central-fibre, target-free cap-seven, positive-hostile, normal/-O/stored-output, hash, AST/security, and exact-grid audit CLEAN; MISTAKE-393 repairs the covering degree and two-sheet sign-representative scope; bounded census independently unaudited
 depends_on:
   - THM-3416-zero-mode-cochain-global-rank-six-support
   - THM-3434-seventeen-fibre-two-sided-mass-closure
@@ -182,8 +182,9 @@ The rank-seven novelty lies only at `a=1,2`:
   over a radius-`1/7` support, or one oriented sheet over a radius-`2/7`
   support.
 
-For `Q=2R` and odd `r` other than the empty coefficient `R`, let
-`tau(ell)=ell+R`.  Equations `(4)--(6)` sharpen to
+For `Q=2R`, choose the representative `0<r<2R` of an odd coefficient under
+the sign symmetry `r -> 4R-r`, and exclude `r=R`, whose sign class is empty.
+Let `tau(ell)=ell+R`.  Equations `(4)--(6)` sharpen to
 
 ```text
 tau B_(2R,r)=B_(2R,2R-r),
@@ -246,9 +247,12 @@ This is exactly `(4)--(5)`.  If `b<a`, then `s` is odd, so multiplication by
 `s` permutes `Z/dZ`; if `b=a`, then `d=1`.  Hence the fibre is a complete
 `d`-grid with every point repeated `2^b` times.
 
-For `d<7`, the radius-`1/14` arcs around consecutive grid points are
-disjoint.  Multiplication by `d` maps their union bijectively onto the strict
-arc of radius `d/14`, proving `(6)` and the one-coset statement.
+For `d<7`, the inverse image under `x -> dx` of the strict radius-`d/14`
+arc is the disjoint union of the `d` radius-`1/14` arcs centred at the grid
+points.  Each component maps bijectively to the target arc (the whole union
+maps with degree `d`).  Therefore a fixed grid orbit meets the central arc
+in exactly one point if and only if its image lies in the target arc.  This
+proves `(6)` and the one-coset statement.
 
 For the exact active-depth count, change coordinates to `n=st modulo d` and
 put `u=s(2j+1)/(2R)`.  The selected integers modulo `d` are exactly the
