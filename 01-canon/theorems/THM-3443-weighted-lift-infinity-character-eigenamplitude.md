@@ -1,5 +1,5 @@
 ---
-id: THM-3442
+id: THM-3443
 title: "The weighted-lift infinity torsor carries a nonzero fundamental character amplitude"
 status: >
   RESERVED / PROVISIONAL PROOF CANDIDATE / INDEPENDENT AUDIT REQUIRED.
@@ -17,11 +17,11 @@ depends_on:
 related:
   - THM-2512
   - THM-3431-valuative-persistence-multiset-and-lrc-jc-boundary
-script: 04-computation/jc_weighted_lift_infinity_character_thm3442.py
-output: 05-knowledge/results/jc_weighted_lift_infinity_character_thm3442.out
+script: 04-computation/jc_weighted_lift_infinity_character_thm3443.py
+output: 05-knowledge/results/jc_weighted_lift_infinity_character_thm3443.out
 ---
 
-# THM-3442 -- the weighted-lift infinity torsor carries a nonzero fundamental character amplitude
+# THM-3443 -- the weighted-lift infinity torsor carries a nonzero fundamental character amplitude
 
 **RESERVED / PROVISIONAL PROOF CANDIDATE / INDEPENDENT AUDIT REQUIRED.**
 

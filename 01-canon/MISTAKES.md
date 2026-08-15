@@ -9,6 +9,54 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-397 (2026-08-15, THM-3437 Prüfer-limit semantics) -- the Tate module was called the Prüfer arm
+
+- **What failed:** the promoted synthesis described the inverse limit of the
+  selected `Tor_1` packets as recovering the divisible Prüfer channel.  Under
+  the chain maps induced by `R_(q+1)->R_q`, however, the transition on kernels
+  is multiplication by `lambda`, not the canonical inclusion.
+- **Minimal witness / first failed implication:** for
+  `Pr_lambda=A[lambda^(-1)]/A`, the inverse system
+  `Pr_lambda[lambda^(q+1)] --lambda--> Pr_lambda[lambda^q]` has limit
+  `K'[[lambda]]`, a torsion-free complete Tate module.  It cannot be the
+  divisible torsion module `Pr_lambda`.  The first failed implication was
+  identifying two different transition systems merely because their finite
+  stages are the same kernels.
+- **Repair / strongest survivor:** the inverse limit recovers the selected
+  arm's Tate module and hence its presence bit.  The canonical inclusions
+  `Pr_lambda[lambda^q] -> Pr_lambda[lambda^(q+1)]` instead have direct limit
+  `Pr_lambda`.  The finite Tor formulas, Euler cancellation, Mittag--Leffler
+  statement, and filtration-loss boundary are unchanged; THM-3437 now records
+  both limits explicitly.
+- **Reusable rule:** a tower is its objects plus its arrows.  Before naming a
+  limit, write the induced transition map and compare algebraic type (torsion,
+  divisibility, completeness), not just finite-stage ranks.
+
+## MISTAKE-396 (2026-08-15, Keller degree-spectrum inheritance) -- a public all-degree family was ignored by later open verdicts
+
+- **What failed:** THM-1330, THM-2465, HYP-9027, and HYP-9030 continued to say
+  that degrees `4` through `7`, global G1, and even-degree Keller maps were
+  open or conjecturally impossible.  Yet THM-1300's maintained attribution
+  amendment already named the public weighted-lift family and its explicit
+  quartic witness.
+- **Minimal witness / first failed implication:** the polynomial 2-jet map
+  `G` in THM-3438 has `det JG=-6`, generic degree four, and
+  `G(1,0,0)=G(-1,0,2)`.  Thus `4 in KDeg(3)` immediately refutes
+  `KDeg(3)={3^k}`, the claimed global-open G1 verdict, and the proposed
+  all-shape odd-degree lens.  The failure was inheritance/search discipline,
+  not a subtle implication inside the older local exclusions.
+- **Repair / strongest survivor:** the weighted-lift inverse equation proves
+  `KDeg(m)={1,3,4,5,...}` for every `m>=3`; this classifies degree values only.
+  Its two-root incidence proves `S_n` monodromy and an explicit atom in every
+  grade, while compositions populate exactly grades `ab` with `a,b>=3`.
+  The monoid law, no-degree-two theorem, ternary `F` subfamily, local G1
+  exclusions, and z-affine order-`{1,3}` problem survive.  Classification of
+  arbitrary maps in mixed grades still requires monodromy/intermediate fields.
+- **Reusable rule:** before declaring a realization gap, search maintained
+  theorem amendments as well as filenames and hypotheses.  Separate
+  classification of numerical degree values from classification of maps in a
+  degree grade.
+
 ## MISTAKE-395 (2026-08-15, exact-six truncated minimum) -- a depth-six sentinel was labelled as pool-14 infeasibility
 
 - **What failed:** the first exact-six mutation reflection said that the
