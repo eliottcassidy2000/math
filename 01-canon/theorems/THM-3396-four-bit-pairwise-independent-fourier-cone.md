@@ -304,9 +304,10 @@ or projection of cell-count tables need not preserve strength two.
 
 ## 7. Complete convolution dynamics
 
-Write mu=(a_1,a_2,a_3,a_4,d), and let the superscript star r denote the
-r-fold law obtained by independent coordinatewise multiplication. Equation
-(11) gives
+Identify a law with its moment packet
+`mu=(a_1,a_2,a_3,a_4,d)`, and let the superscript star `r` denote the
+`r`-fold law obtained by independent coordinatewise multiplication. Equation
+`(11)` gives
 
 ~~~text
 mu^(star r)=(a_1^r,a_2^r,a_3^r,a_4^r,d^r).                    (12a)
@@ -330,7 +331,8 @@ TV(mu^(star r),u)
 rho=max{|a_1|,...,|a_4|,|d|}.
 ~~~
 
-The first bound is sharp on every one-coordinate segment mu=rho e_i.
+The first bound is sharp on every signed one-coordinate segment
+`mu=t e_i`, `|t|<=1` (where `rho=|t|`).
 The vertex description makes the convergence dichotomy complete. Every
 coordinate of P has absolute value at most one. If one has absolute value
 one, any convex decomposition into (4e) can use only vertices attaining
