@@ -2,6 +2,7 @@
 
 - `lrc_unrestricted_zero_mode_cochain_rank_probe_20260815.py` -> matching
   `.out` [PROVED-ANALYTIC THM-3405 DIVISOR-ANCESTRY REDUCTION +
+  PROVED-ELEMENTARY COMPLETE PRIMITIVE/GLOBAL RANK-FOUR CLASSIFICATION +
   FINITE-EXACT UNRESTRICTED POSITIVE-TRANSVERSE q15--28 ZERO-MODE-COCHAIN
   RANKS; INDEPENDENTLY BFS/COMBINATION-AUDITED; UNNUMBERED].  Writing an
   active family as `U=dV`, with `gcd(V)=1`, and setting
@@ -14,12 +15,18 @@
   q15--28 are `(6,4,8,4,9,5,8,6,6,4,6,7,4,7)`; ancestors
   `8,9,10,11,13,14` explain every nonprimitive drop, and literal half-centre
   witnesses are replayed.  q25 rank six and q27 rank four also have
-  elementary capacity lower bounds.  Union-state BFS visits 36,580 states
+  elementary capacity lower bounds.  Quotient-order capacity and the forced
+  common zero sheet prove that three owners never suffice.  Exact analysis of
+  19 quotient-order profiles and 979 augmented realizations shows that the
+  only primitive rank-four atoms are half-twist `Q=8,9`; hence global rank
+  four holds iff `8|q` or `9|q`.  This full support has density and harmonic
+  residue `2/9`; it pulls back to Berggren-spine
+  indices `n=1,5 mod 9` and Fibonacci indices `6|n`.  Union-state BFS visits 36,580 states
   and 565,480 transitions; an independent exhaustive route checks 394,418
   subsets.  Script/output/semantic LF-normalized SHA-256:
-  `de48a50522223bf9c40a1a8cbe8c5483b9b1f185410298f36b7d976d576d476c` /
-  `5de03cb659105ed24d118130647215228ee6a0e42cb29f1ede298a14103b7ea9` /
-  `43234a259014d6bd771506718b8f595b919244de523aaef31564b25eb32db84d`.
+  `70c176e1a056d285471a07d1d011a26070ff288c3cee5ec39971d349d416de31` /
+  `582b901b61675baa0ea309150158d991284494ddd7aac3b72ea9e4288c4085e6` /
+  `233c092a9b73dcf8a40b9c21b52b99e322b059f003554bd79721bae317c30c7e`.
   codex-2026-08-15 THM-3405 divisor ancestry, Boolean prime-breaker
   realization, and literal pullback audit.
 

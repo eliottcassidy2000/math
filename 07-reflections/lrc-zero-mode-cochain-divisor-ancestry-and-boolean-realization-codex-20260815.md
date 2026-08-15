@@ -3,6 +3,9 @@
 **Date:** 2026-08-15  
 **Status:** PROVED-ANALYTIC reduction, conditional only on proved
 [THM-3405](../01-canon/theorems/THM-3405-common-centre-gcd-gauge-and-boolean-half-twist.md);
+PROVED-ELEMENTARY universal rank floor four, primitive rank four exactly at
+half-twist quotients eight and nine, and global rank four iff the sheet degree
+is divisible by eight or nine;
 FINITE-EXACT unrestricted positive-transverse rank table for `15<=q<=28`,
 with independent union-state and exhaustive-combination solvers and literal
 witness replay.  No LRC(14) ledger decrement.
@@ -122,6 +125,156 @@ This is an exact min-convolution on the divisibility poset.  A primitive
 quotient `Q` is an ancestry node; multiplying the fibre degree `g=q/Q` moves
 within its dilation ray without changing owner count.
 
+### Universal atom floor: three owners never suffice
+
+The rank-four phenomenon is not merely the first value found in the table.
+It is universal.
+
+For a primitive family let
+
+```text
+m_i=Q/gcd(Q,v_i)                                      (7a)
+```
+
+be the quotient order of owner `v_i`.  Primitive gcd one is equivalent to
+
+```text
+lcm(m_1,...,m_s)=Q.                                   (7b)
+```
+
+At zero twist an order-`m` owner sees the complete grid `j/m`, so its exact
+block size is
+
+```text
+(Q/m) z(m),       z(m)=1+2 floor((m-1)/14).           (7c)
+```
+
+Every such block contains sheet zero.  For `m>=3`,
+`z(m)/m<=1/3`.  If no owner has order two, three block masses sum to at most
+`Q`, and their forced common sheet makes their union at most `Q-2`.
+
+All order-two zero blocks are the same half-sized subgroup.  If at least two
+owners have order two, duplicates leave at most that subgroup plus one block
+of relative size `1/3`, still short of a cover.  It remains to consider
+exactly one order-two owner.  If both remaining orders are at least four,
+`z(m)/m<=1/4`, with equality only at four.  If one order is three, the other
+must satisfy `z(n)/n>=1/6`.  Writing `z(n)=2k+1` on
+`14k+1<=n<=14k+14`, this inequality gives `n<=12k+6`, hence `k<=2`.
+The complete critical list is therefore finite:
+
+| remaining orders `(m,n)` | `Q=lcm(2,m,n)` | excess of summed capacities over `Q` |
+|---|---:|---:|
+| `(3,3)` | 6 | 1 |
+| `(3,4)` | 12 | 1 |
+| `(3,5)` | 30 | 1 |
+| `(3,6)` | 6 | 0 |
+| `(3,15)` | 30 | 1 |
+| `(3,16)` | 48 | 1 |
+| `(3,17)` | 102 | 1 |
+| `(3,18)` | 18 | 0 |
+| `(3,29)` | 174 | 1 |
+| `(3,30)` | 30 | 0 |
+| `(4,4)` | 4 | 0 |
+
+All three blocks contain zero, so inclusion--exclusion removes at least two
+from these summed capacities.  Even the excess-one cases cover at most
+`Q-1` sheets.
+
+At half twist an order-two block is empty.  An order-`m>=3` block has at most
+`ceil(m/7)` quotient phases, and
+
+```text
+ceil(m/7)/m<=1/3,                                     (7d)
+```
+
+with equality only at `m=3`.  Thus three owners could meet the mass bound
+only if all have order three.  Equation `(7b)` then gives `Q=3`, where every
+nonempty half-twist order-three block is the same singleton.  It cannot
+cover.  We have proved
+
+```text
+rho_ZMC(q)>=4             for every q>=2.              (7e)
+```
+
+This is the exact strong-atom floor suggested by the degree-spectrum grammar:
+the first zero-cochain cover is a four-owner object.  Its mechanism is forced
+overlap plus quotient order, not tournament orientation.
+
+### Complete classification of the rank-four atoms
+
+The same order calculus closes the equality case.  First consider zero twist.
+In a minimum cover duplicate blocks are useless.  The order-three and
+order-four zero blocks are each unique.  If there is no order-two owner and
+no order-three owner, all four densities are at most `1/4`; their common zero
+prevents equality.  If there is one order-three owner, the other three must
+contribute at least `2/3`.  But apart from the unique order-four block every
+order `m>=5` has `z(m)/m<=1/5`, and
+
+```text
+1/4+1/5+1/5 < 2/3.
+```
+
+Thus two order-four blocks would be required, but they are duplicates.
+
+If there is one order-two owner, its block is exactly the even sheets.  On
+the odd-sheet coset an order-`m` zero block occupies the relative fraction
+
+```text
+o_0(m)=z(m)/m,                                  m odd;
+o_0(m)=4 ceil(floor((m-1)/14)/2)/m,             m even. (7f)
+```
+
+One has `o_0(m)<=1/3`, with equality only at `m=3`.  Three remaining blocks
+could cover all odd sheets only if all have order three; those blocks are the
+same kernel coset.  Hence zero twist has no primitive rank-four atom.
+
+At half twist put
+
+```text
+a(m)=2 ceil(floor((m-1)/7)/2),
+h(m)=a(m),                         m even;
+h(m)=max(a(m),z(m)),               m odd.             (7g)
+```
+
+This is the exact maximum number of dangerous phases on an order-`m`
+quotient.  Apart from order three,
+
+```text
+h(m)/m<=1/4, equality only at m=8;
+h(m)/m<=2/9 away from m=8, equality only at m=9.      (7h)
+```
+
+The nonempty order-three half block is unique.  With no order-three owner,
+four-cover mass forces four order-eight blocks, and they give the primitive
+`Q=8` partition.  With one order-three owner, the other three need total
+density `2/3`.  Two order-eight blocks force the third order into
+
+```text
+{5,8,9,10,11,12,15,17,22,23,24,29,36};
+```
+
+one order-eight block leaves only the pairs
+
+```text
+(5,9), (9,9), (9,10), (9,15);
+```
+
+and no order-eight block forces `(9,9,9)`.  These are exactly eighteen order
+profiles.  An exact augmented-mask check of all `978` realizations in them,
+including every prime-breaker bit, leaves one positive profile:
+
+```text
+(3,9,9,9) at Q=9, with residues (1,5,6,7).            (7i)
+```
+
+Together with the separately checked all-order-eight partition `(1,3,5,7)`,
+for `979` tests in total, this proves
+
+```text
+rho_epsilon^prim(Q)=4
+ iff (Q,epsilon)=(8,1) or (9,1).                      (7j)
+```
+
 ## 4. Primitive and global classifications
 
 The exact primitive pairs `(zero,half)` are
@@ -158,6 +311,47 @@ At `q=22,26,28`, the displayed ancestor ties the primitive half layer; it is
 not the unique minimizer.  This is precisely the degree-graded monoid view:
 the family is not a list of isolated witnesses, but primitive Boolean atoms
 plus multiplicative fibre degrees.
+
+### Exact rank-four classification and harmonic pullbacks
+
+Equations `(7)`, `(7e)`, and `(7j)` give the complete global classification:
+
+```text
+rho_ZMC(q)=4                iff 8|q or 9|q.             (9a)
+```
+
+Its full support is the union of sixteen residue classes modulo 72, so
+
+```text
+#{q<=N:8|q or 9|q}=(2/9)N+O(1),
+sum_(q<=N, 8|q or 9|q) 1/q=(2/9)log N+O(1).           (9b)
+```
+
+Restoring ancestry turns two primitive four-owner atoms into a positive
+density subset of the harmonic series.
+
+For the Berggren `U`-spine denominator
+
+```text
+Q_n=4n^2+12n+11,
+```
+
+direct reduction modulo nine gives `9|Q_n` exactly for
+`n==1,5 mod 9`.  Hence those two ninths of the spine have exact zero-cochain
+rank four.  They simultaneously lie in the previously proved half-grid
+rank-three branch, making the one-unit sidecar tariff explicit.
+
+The Fibonacci sequence modulo eight has period twelve with zeros at indices
+`0,6`; modulo nine it has period twenty-four with zeros at `0,12`.  Therefore
+
+```text
+rho_ZMC(F_n)=4              whenever 6|n, n>=6.        (9c)
+```
+
+Here the order-nine pullback is already contained in the order-eight index
+support.  The recurrence tree and divisor ancestry agree because Fibonacci
+divisibility transports a primitive Boolean cover along a multiplicative
+fibre grade.
 
 One literal half-centre witness in each grade is:
 
@@ -261,16 +455,19 @@ half-grid artifact; checks all 54 primitive twist banks for `2<=Q<=28`; and
 uses two distinct solvers.  The union-state route visits `36,580` states and
 `565,480` transitions.  The exhaustive route checks `394,418` subsets.  All
 fourteen displayed witnesses are reconstructed as literal strict covers and
-as exact divisor pullbacks.  There is no floating point or `assert`-dependent
-truth gate.
+as exact divisor pullbacks.  The floor audit checks the zero-layer order
+formula through order 500, freezes all eleven capacity-critical order pairs,
+checks all 979 primitive rank-four profile realizations, replays 111 exact
+rank-four degrees through `q=500`, and independently recovers the
+mod-eight/mod-nine Pisano zeros.  There is no floating point or
+`assert`-dependent truth gate.
 
 The highest-value continuations are:
 
-1. prove or refute the apparent universal primitive rank-four floor, then
-   turn the `Q=8,9` ancestors into exact infinite rank-four families rather
-   than upper bounds;
-2. compute the primitive spectrum beyond `Q=28` and classify which new
+1. compute the primitive spectrum beyond `Q=28` and classify which new
    ancestors beat all proper divisors;
+2. classify the primitive and global rank-five support, beginning with
+   ancestors `Q=10,12,16,18,24,27,32,36,40`;
 3. intersect the q23 rank-six primitive half-twist with the reserved
    exceptional-edge leakage problem, keeping cover rank distinct from LRC
    row exclusion;

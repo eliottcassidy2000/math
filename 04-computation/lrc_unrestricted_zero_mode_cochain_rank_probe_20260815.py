@@ -10,7 +10,11 @@ The primitive gcd-one condition is encoded exactly by adjoining one breaker
 bit for every prime dividing the finite owner modulus.  A union-state BFS and
 an independent exhaustive-combination solver classify Q=2..28.  Divisor
 minimization then gives the unrestricted ranks for q=15..28.  Literal
-positive-owner witnesses are replayed at c=1/(2q).
+positive-owner witnesses are replayed at c=1/(2q).  Exact quotient-order
+capacity proves the universal rank floor four; the primitive Q=8,9 covers
+are the only primitive rank-four covers.  Hence global rank four occurs
+exactly when q is divisible by 8 or 9, with harmonic, Berggren-spine, and
+Fibonacci pullbacks.
 
 This is a zero-mode-cochain classification, not the larger synchronized
 half-grid physical rank.  It gives no LRC(14) ledger decrement.
@@ -22,7 +26,7 @@ from __future__ import annotations
 import ast
 from fractions import Fraction
 from hashlib import sha256
-from itertools import combinations
+from itertools import combinations, product
 from math import gcd
 from pathlib import Path
 
@@ -112,7 +116,42 @@ EXPLICIT_HALF_WITNESSES = (
 
 EXPECTED_FIXED_ZERO = (6, 5, 8, 5, 9, 6, 8, 7, 11, 6, 11, 8, 10, 8)
 EXPECTED_HALFGRID = (3, 2, 8, 2, 9, 2, 3, 2, 6, 2, 5, 2, 3, 2)
-EXPECTED_SEMANTIC_DIGEST = "43234a259014d6bd771506718b8f595b919244de523aaef31564b25eb32db84d"
+EXPECTED_ZERO_CRITICAL_ORDERS = (3, 4, 5, 6, 15, 16, 17, 18, 29, 30)
+EXPECTED_ZERO_CRITICAL_PAIRS = (
+    (3, 3, 6, 1),
+    (3, 4, 12, 1),
+    (3, 5, 30, 1),
+    (3, 6, 6, 0),
+    (3, 15, 30, 1),
+    (3, 16, 48, 1),
+    (3, 17, 102, 1),
+    (3, 18, 18, 0),
+    (3, 29, 174, 1),
+    (3, 30, 30, 0),
+    (4, 4, 4, 0),
+)
+EXPECTED_HALF_CRITICAL_ORDERS = (5, 8, 9, 10, 11, 12, 15, 17, 22, 23, 24, 29, 36)
+EXPECTED_HALF_RANK4_TAILS = (
+    (5, 8, 8),
+    (5, 8, 9),
+    (8, 8, 8),
+    (8, 8, 9),
+    (8, 8, 10),
+    (8, 8, 11),
+    (8, 8, 12),
+    (8, 8, 15),
+    (8, 8, 17),
+    (8, 8, 22),
+    (8, 8, 23),
+    (8, 8, 24),
+    (8, 8, 29),
+    (8, 8, 36),
+    (8, 9, 9),
+    (8, 9, 10),
+    (8, 9, 15),
+    (9, 9, 9),
+)
+EXPECTED_SEMANTIC_DIGEST = "233c092a9b73dcf8a40b9c21b52b99e322b059f003554bd79721bae317c30c7e"
 
 
 def require(condition, detail):
@@ -369,6 +408,392 @@ def capacity_profile(q, prime):
     return q, prime, tuple(records)
 
 
+def zero_layer_order_count(order):
+    return 1 + 2 * ((order - 1) // 14)
+
+
+def half_odd_residue_count(order):
+    largest = (order - 1) // 7
+    return 2 * ((largest + 1) // 2)
+
+
+def half_layer_order_count(order):
+    odd_count = half_odd_residue_count(order)
+    if order % 2 == 0:
+        return odd_count
+    return max(odd_count, zero_layer_order_count(order))
+
+
+def lcm(left, right):
+    return left // gcd(left, right) * right
+
+
+def pisano_period(modulus):
+    values = [0]
+    previous, current = 0, 1
+    while True:
+        previous, current = current, (previous + current) % modulus
+        if (previous, current) == (0, 1):
+            return tuple(values)
+        values.append(previous)
+
+
+def rank_four_floor_audit(primitive_by_key):
+    # At zero twist, a quotient-order-m owner sees every point j/m and hence
+    # exactly z(m)=1+2 floor((m-1)/14) dangerous phases.
+    zero_formula = tuple(
+        (
+            order,
+            zero_layer_order_count(order),
+            type_danger_mask(order, 1, 0).bit_count(),
+        )
+        for order in range(2, 501)
+    )
+    require(all(expected == actual for _, expected, actual in zero_formula), zero_formula)
+    require(
+        all(3 * zero_layer_order_count(order) <= order for order in range(3, 501)),
+        "zero density exceeds one third",
+    )
+    require(
+        tuple(
+            order
+            for order in range(3, 501)
+            if 3 * zero_layer_order_count(order) == order
+        )
+        == (3,),
+        "zero one-third equality",
+    )
+
+    # If one zero-layer owner has order two, the other two can meet its
+    # remaining half-mass only in this finite list.  The interval formula
+    # z(m)=2k+1 on 14k+1<=m<=14k+14 makes k<=2 exact.
+    critical_orders = tuple(
+        order
+        for order in range(3, 501)
+        if 6 * zero_layer_order_count(order) >= order
+    )
+    require(critical_orders == EXPECTED_ZERO_CRITICAL_ORDERS, critical_orders)
+    require(14 * 3 + 1 > 12 * 3 + 6 and 14 > 12, "critical interval tail")
+
+    critical_pairs = []
+    for left in critical_orders:
+        for right in critical_orders:
+            if right < left:
+                continue
+            if (
+                2 * zero_layer_order_count(left) * right
+                + 2 * zero_layer_order_count(right) * left
+                < left * right
+            ):
+                continue
+            quotient = 2 * left // gcd(2, left)
+            quotient = quotient * right // gcd(quotient, right)
+            capacity = (
+                quotient // 2
+                + (quotient // left) * zero_layer_order_count(left)
+                + (quotient // right) * zero_layer_order_count(right)
+            )
+            critical_pairs.append((left, right, quotient, capacity - quotient))
+    critical_pairs = tuple(critical_pairs)
+    require(critical_pairs == EXPECTED_ZERO_CRITICAL_PAIRS, critical_pairs)
+    require(all(excess <= 1 for _, _, _, excess in critical_pairs), critical_pairs)
+    require(
+        all(
+            quotient + excess - 2 < quotient
+            for _, _, quotient, excess in critical_pairs
+        ),
+        critical_pairs,
+    )
+
+    # At half twist an order-two block is empty.  Every order m>=3 has at
+    # most ceil(m/7) dangerous quotient phases, at most one third of m with
+    # equality only at m=3.  All nonempty order-three types are the same
+    # singleton, so the equality case cannot cover.
+    require(type_danger_mask(2, 1, 1) == 0, "half order-two block")
+    half_caps = tuple((order, (order + 6) // 7) for order in range(3, 501))
+    require(all(3 * cap <= order for order, cap in half_caps), half_caps)
+    require(tuple(order for order, cap in half_caps if 3 * cap == order) == (3,), half_caps)
+    zero_order_three = {
+        type_danger_mask(3, residue, 0)
+        for residue in range(1, 3)
+        if type_danger_mask(3, residue, 0)
+    }
+    half_order_three = {
+        type_danger_mask(3, residue, 1)
+        for residue in range(1, 6)
+        if residue % 3 and type_danger_mask(3, residue, 1)
+    }
+    require(zero_order_three == {1 << 0}, zero_order_three)
+    require(half_order_three == {1 << 1}, half_order_three)
+
+    # Primitive Q=8 and Q=9 half-twist covers attain the universal floor.
+    ray_records = []
+    support = []
+    for q in range(2, 501):
+        ancestors = tuple(base for base in (8, 9) if q % base == 0)
+        if not ancestors:
+            continue
+        support.append(q)
+        pulls = []
+        for quotient in ancestors:
+            primitive = primitive_by_key[(quotient, 1)]
+            require(primitive[7] == 4, (q, quotient, primitive[7]))
+            pulls.append(verify_zero_mode_pullback(q, quotient, 1, primitive[10]))
+        ray_records.append((q, ancestors, tuple(pulls)))
+    ray_records = tuple(ray_records)
+    require(len(ray_records) == 111, len(ray_records))
+    require(sum(len(record[1]) for record in ray_records) == 117, ray_records)
+
+    support_residues = tuple(
+        residue for residue in range(72) if residue % 8 == 0 or residue % 9 == 0
+    )
+    require(len(support_residues) == 16, support_residues)
+
+    berggren_residues = tuple(
+        residue
+        for residue in range(9)
+        if (4 * residue * residue + 12 * residue + 11) % 9 == 0
+    )
+    require(berggren_residues == (1, 5), berggren_residues)
+
+    period_eight = pisano_period(8)
+    period_nine = pisano_period(9)
+    require(len(period_eight) == 12, len(period_eight))
+    require(len(period_nine) == 24, len(period_nine))
+    require(
+        tuple(index for index, value in enumerate(period_eight) if value == 0)
+        == (0, 6),
+        period_eight,
+    )
+    require(
+        tuple(index for index, value in enumerate(period_nine) if value == 0)
+        == (0, 12),
+        period_nine,
+    )
+
+    return (
+        sha256(repr(zero_formula).encode("ascii")).hexdigest(),
+        critical_orders,
+        critical_pairs,
+        zero_order_three,
+        half_order_three,
+        len(ray_records),
+        sha256(repr(ray_records).encode("ascii")).hexdigest(),
+        support_residues,
+        berggren_residues,
+        period_eight,
+        period_nine,
+    )
+
+
+def exact_order_augmented_bank(q, order):
+    modulus = 2 * q
+    primes = prime_factors(modulus)
+    grouped = {}
+    for residue in range(1, modulus):
+        if q // gcd(q, residue) != order:
+            continue
+        sheet_mask = type_danger_mask(q, residue, 1)
+        if not sheet_mask:
+            continue
+        augmented = sheet_mask
+        for offset, prime in enumerate(primes):
+            if residue % prime:
+                augmented |= 1 << (q + offset)
+        if augmented not in grouped or residue < grouped[augmented]:
+            grouped[augmented] = residue
+    return tuple(sorted(((mask, residue) for mask, residue in grouped.items()), key=lambda item: item[1]))
+
+
+def rank_four_profile_record(orders):
+    q = 1
+    for order in orders:
+        q = lcm(q, order)
+    primes = prime_factors(2 * q)
+    full = (1 << (q + len(primes))) - 1
+    banks = {order: exact_order_augmented_bank(q, order) for order in set(orders)}
+    grouped_choices = []
+    for order in sorted(banks):
+        multiplicity = orders.count(order)
+        grouped_choices.append(tuple(combinations(banks[order], multiplicity)))
+
+    tests = 0
+    witnesses = []
+    for choice_groups in product(*grouped_choices):
+        selected = tuple(item for group in choice_groups for item in group)
+        tests += 1
+        union = 0
+        for mask, _ in selected:
+            union |= mask
+        if union == full:
+            witnesses.append(tuple(sorted(residue for _, residue in selected)))
+    return (
+        orders,
+        q,
+        tuple((order, len(banks[order])) for order in sorted(banks)),
+        tests,
+        tuple(witnesses),
+    )
+
+
+def primitive_rank_four_classification_audit():
+    # Zero twist: without order two, useful order-three and order-four blocks
+    # are each unique.  The density hierarchy forces either duplicated
+    # order-three/four blocks or total mass below one.  With one order-two
+    # block, restrict the other owners to the odd sheet coset.
+    require(
+        all(4 * zero_layer_order_count(order) <= order for order in range(4, 501)),
+        "zero quarter density",
+    )
+    require(
+        tuple(
+            order
+            for order in range(4, 501)
+            if 4 * zero_layer_order_count(order) == order
+        )
+        == (4,),
+        "zero quarter equality",
+    )
+    require(
+        all(5 * zero_layer_order_count(order) <= order for order in range(5, 501)),
+        "zero fifth density",
+    )
+    zero_order_four = {
+        type_danger_mask(4, residue, 0)
+        for residue in range(1, 4)
+        if gcd(4, residue) == 1 and type_danger_mask(4, residue, 0)
+    }
+    require(zero_order_four == {1 << 0}, zero_order_four)
+
+    odd_coset_density = []
+    for order in range(3, 501):
+        if order % 2:
+            numerator = zero_layer_order_count(order)
+            denominator = order
+        else:
+            local_odd = 2 * ((((order - 1) // 14) + 1) // 2)
+            numerator = 2 * local_odd
+            denominator = order
+        odd_coset_density.append((order, numerator, denominator))
+    require(
+        all(3 * numerator <= denominator for _, numerator, denominator in odd_coset_density),
+        odd_coset_density,
+    )
+    require(
+        tuple(
+            order
+            for order, numerator, denominator in odd_coset_density
+            if 3 * numerator == denominator
+        )
+        == (3,),
+        odd_coset_density,
+    )
+
+    # Half twist: h(m) is the exact maximum block count on the order-m
+    # quotient.  Odd owner words permute odd residues modulo 2m; for odd m,
+    # even owner words additionally realize the zero-grid count z(m).
+    half_formula = []
+    for order in range(2, 501):
+        direct_counts = [type_danger_mask(order, 1, 1).bit_count()]
+        if order % 2:
+            direct_counts.append(type_danger_mask(order, 2, 1).bit_count())
+        actual = max(direct_counts)
+        expected = half_layer_order_count(order)
+        require(actual == expected, (order, expected, actual))
+        half_formula.append((order, expected))
+    half_formula = tuple(half_formula)
+    require(
+        all(
+            4 * count <= order
+            for order, count in half_formula
+            if order != 3
+        ),
+        "half quarter density",
+    )
+    require(
+        tuple(
+            order
+            for order, count in half_formula
+            if order != 3 and 4 * count == order
+        )
+        == (8,),
+        half_formula,
+    )
+    require(
+        all(
+            9 * count <= 2 * order
+            for order, count in half_formula
+            if order not in (3, 8)
+        ),
+        "half two-ninth density",
+    )
+    require(
+        tuple(
+            order
+            for order, count in half_formula
+            if order not in (3, 8) and 9 * count == 2 * order
+        )
+        == (9,),
+        half_formula,
+    )
+
+    critical_orders = tuple(
+        order
+        for order in range(4, 501)
+        if 6 * half_layer_order_count(order) >= order
+    )
+    require(critical_orders == EXPECTED_HALF_CRITICAL_ORDERS, critical_orders)
+    one_eight_pairs = tuple(
+        (left, right)
+        for left in critical_orders
+        for right in critical_orders
+        if left <= right and left != 8 and right != 8
+        and 12
+        * (
+            half_layer_order_count(left) * right
+            + half_layer_order_count(right) * left
+        )
+        >= 5 * left * right
+    )
+    require(one_eight_pairs == ((5, 9), (9, 9), (9, 10), (9, 15)), one_eight_pairs)
+
+    tails = []
+    for third in critical_orders:
+        tails.append(tuple(sorted((8, 8, third))))
+    for left, right in one_eight_pairs:
+        tails.append(tuple(sorted((8, left, right))))
+    tails.append((9, 9, 9))
+    tails = tuple(sorted(set(tails)))
+    require(tails == EXPECTED_HALF_RANK4_TAILS, tails)
+
+    profiles = ((8, 8, 8, 8),) + tuple((3,) + tail for tail in tails)
+    profile_records = tuple(rank_four_profile_record(profile) for profile in profiles)
+    positive_profiles = tuple(
+        (orders, q, witnesses)
+        for orders, q, _, _, witnesses in profile_records
+        if witnesses
+    )
+    require(
+        positive_profiles
+        == (
+            ((8, 8, 8, 8), 8, ((1, 3, 5, 7),)),
+            ((3, 9, 9, 9), 9, ((1, 5, 6, 7),)),
+        ),
+        positive_profiles,
+    )
+
+    return (
+        sha256(repr(odd_coset_density).encode("ascii")).hexdigest(),
+        sha256(repr(half_formula).encode("ascii")).hexdigest(),
+        critical_orders,
+        one_eight_pairs,
+        tails,
+        profile_records,
+        positive_profiles,
+        sum(record[3] for record in profile_records),
+    )
+
+
 def main():
     for name, path, expected in PINNED:
         require(lf_hash(path) == expected, ("dependency changed", name, path))
@@ -451,6 +876,8 @@ def main():
         capacity_profile(9, 3),
         capacity_profile(27, 3),
     )
+    rank_four_floor = rank_four_floor_audit(primitive_by_key)
+    primitive_rank_four_classification = primitive_rank_four_classification_audit()
 
     solver_audit = (
         sum(record[11] for record in primitive_records),
@@ -468,6 +895,8 @@ def main():
                 fixed_gap,
                 halfgrid_gap,
                 capacity_controls,
+                rank_four_floor,
+                primitive_rank_four_classification,
                 solver_audit,
             )
         ).encode("ascii")
@@ -478,7 +907,7 @@ def main():
     print("LRC UNRESTRICTED ZERO-MODE-COCHAIN DIVISOR-RANK PROBE")
     print(f"source_sha256_lf={lf_hash(source)}")
     print(f"dependency_sha256_lf={tuple((name, expected) for name, _, expected in PINNED)}")
-    print("status=PROVED-ANALYTIC divisor_pullback_reduction;FINITE-EXACT q15..28 unrestricted_positive_transverse_zero_mode_cochain_ranks;INDEPENDENT_BFS_AND_COMBINATION_SOLVERS;NOT_halfgrid_physical_rank;no_LRC14_decrement")
+    print("status=PROVED-ANALYTIC divisor_pullback_reduction_and_universal_rank_floor_4_and_primitive_rank4_iff_Q=8_or_9_and_global_rank4_iff_8|q_or_9|q;FINITE-EXACT q15..28 unrestricted_positive_transverse_zero_mode_cochain_ranks;INDEPENDENT_BFS_AND_COMBINATION_SOLVERS;NOT_halfgrid_physical_rank;no_LRC14_decrement")
     print("reduction=U=dV;g=gcd(q,d);Q=q/g;epsilon_in_{0,1};every_certificate_is_g_fold_pullback_of_primitive_gcd_one_Q_cover_at_0_or_1/(2Q)")
     print("primitive_gcd_gate=gcd(M_epsilon,r_1,...,r_s)=1;implemented_as_one_prime_breaker_bit_per_prime_dividing_M_epsilon")
     print(f"primitive_rank_table_Q2_Q28=(Q,zero,half)={primitive_table}")
@@ -487,6 +916,10 @@ def main():
     print(f"three_layer_sequences=(fixed_zero,genuine_zero_mode,halfgrid_physical)={(EXPECTED_FIXED_ZERO, zero_mode_sequence, EXPECTED_HALFGRID)}")
     print(f"fixed_minus_zero_mode={fixed_gap};zero_mode_minus_halfgrid={halfgrid_gap}")
     print(f"capacity_controls_(Q,p,((epsilon,max_breaker,max_divisible),...))={capacity_controls}")
+    print("universal_floor=every_positive_transverse_zero_mode_cochain_cover_has_at_least_4_owners;zero_twist_forced_common_sheet_and_finite_order_capacity;half_twist_order2_empty_and_order3_equality_collapses_to_one_block")
+    print(f"rank4_floor_audit=(zero_formula_sha256,critical_orders,critical_pairs,zero_m3_masks,half_m3_masks,ray_count,ray_sha256,residues_mod72,berggren_n_mod9,pisano8,pisano9)={rank_four_floor}")
+    print(f"primitive_rank4_classification=(zero_odd_coset_sha256,half_order_formula_sha256,critical_orders,one8_pairs,critical_tails,profile_records,positive_profiles,total_profile_tests)={primitive_rank_four_classification}")
+    print("exact_rank4_classification=rho_ZMC(q)=4_iff_8|q_or_9|q;full_support_density=2/9;reciprocal_mass=(2/9)log_N+O(1);Berggren_Q_n_rank4_for_n=1,5_mod9;Fibonacci_F_n_rank4_for_6|n")
     print(f"solver_audit=(BFS_states,BFS_transitions,combination_tests,event_sha256)={solver_audit}")
     print("scope=distinct_positive_transverse_owners_of_unrestricted_size;allowing_q_divisible_owners_would_trivialize_fixed_zero_to_rank_one")
     print(f"semantic_sha256={semantic}")
