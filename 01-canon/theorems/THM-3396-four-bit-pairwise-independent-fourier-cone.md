@@ -15,7 +15,10 @@ status: >
   the sixteen even sign vectors divided by three, and f-vector
   (26,120,160,80,16).  Its sharp absolute functional norm is
   max(l-infinity,l-one/3), and its vertices are exactly ten uniform eight-run
-  and sixteen twelve-run OA packets.  Three exact Hadamard-puzzle packets of
+  and sixteen twelve-run OA packets.  Repeated independent coordinatewise
+  multiplication either converges exponentially to the uniform law, with an
+  exact five-mode chi-square formula, or starts at one of the ten signed
+  half-cubes and is fixed or period two.  Three exact Hadamard-puzzle packets of
   sizes 48, 120, and 896 are verified; the 896 packet omits exactly two atoms,
   lies in the relative interior of their triangular-bipyramid ridge, and has
   two different exact H8/H12 vertex decompositions.  This is a
@@ -28,9 +31,9 @@ related:
   - THM-3392-bipartite-sign-lift-and-synchronization-loss
 script: 04-computation/four_bit_pairwise_independent_fourier_cone_thm3396.py
 output: 05-knowledge/results/four_bit_pairwise_independent_fourier_cone_thm3396.out
-script_sha256: f2ecd485092354a2d06516b8ce207205a70b4f1693f40b709f9259c313b4b2c7
-output_sha256: 013a58e77a05c0cfd052f5a0a7759003c0157e37cff5e186ab1a24dab416e6fd
-semantic_sha256: 0ea662a8f16071882c507a342204df03d04998a50f86cf64fe21776acc4d2c6c
+script_sha256: 43bc4e9bdc99bf0723ace6d124128a00fd8f89bd43e8738cf7b4bb8ce2139bcc
+output_sha256: 47bc7bda869b6b5ce799fee770e8ca56dc1fbbcb1c9a33145678d411f3edfa0b
+semantic_sha256: 3b23fb3d84c1d191c975384b3a789779311e19f5136e346743786679d97acc8e
 hash_basis: LF-normalized bytes
 ---
 
@@ -299,7 +302,54 @@ This operation preserves the whitened quadratic shadow while multiplying
 the higher-chaos sidecar.  It is the lawful transfer; arbitrary multiplication
 or projection of cell-count tables need not preserve strength two.
 
-## 7. Exact packets exposed by the sign-word certificate
+## 7. Complete convolution dynamics
+
+Write mu=(a_1,a_2,a_3,a_4,d), and let the superscript star r denote the
+r-fold law obtained by independent coordinatewise multiplication. Equation
+(11) gives
+
+~~~text
+mu^(star r)=(a_1^r,a_2^r,a_3^r,a_4^r,d^r).                    (12a)
+~~~
+
+Let u be the uniform law on the four-cube. Parseval applied to the density
+relative to u gives the exact identity
+
+~~~text
+chi^2(mu^(star r) || u)
+ = sum_i a_i^(2r)+d^(2r).                                    (12b)
+~~~
+
+Consequently
+
+~~~text
+TV(mu^(star r),u)
+ <= (1/2)sqrt(sum_i a_i^(2r)+d^(2r))
+ <= (sqrt(5)/2) rho^r,                                      (12c)
+
+rho=max{|a_1|,...,|a_4|,|d|}.
+~~~
+
+The first bound is sharp on every one-coordinate segment mu=rho e_i.
+The vertex description makes the convergence dichotomy complete. Every
+coordinate of P has absolute value at most one. If one has absolute value
+one, any convex decomposition into (4e) can use only vertices attaining
+that same coordinate equality; the unique such vertex is +e_i or -e_i.
+Therefore
+
+~~~text
+rho<1:       mu^(star r) converges exponentially to u;
+mu=+e_i:    every power is +e_i;
+mu=-e_i:    odd powers are -e_i and even powers are +e_i.     (12d)
+~~~
+
+These ten exceptional packets are exactly the signed eight-run half-cubes.
+All sixteen H12 vertices have rho=1/3 and hence mix. For an integer packet,
+the r-fold Cartesian compiler has N^r runs and unnormalized high moments
+(A_1^r,A_2^r,A_3^r,A_4^r,D^r); no limiting or probabilistic construction is
+needed.
+
+## 8. Exact packets exposed by the sign-word certificate
 
 Three equal-four-row sidecars inside the reconstruction underlying THM-3394
 have the following exact packets.  The two margins are the right side minus
@@ -346,7 +396,7 @@ The familiar parity laws give the extremal controls `(a,d)=(0,+1)` and
 `(0,-1)`, supported on only the even or odd half-cube.  At the other end, the
 uniform law has `(a,d)=0` and full support.
 
-## 8. Hostiles and transfer boundary
+## 9. Hostiles and transfer boundary
 
 Both parity inequalities in (4) are load-bearing.  For
 
@@ -370,7 +420,7 @@ beside cubic-Hermite arguments and sign synchronization, but it does not by
 itself transfer Gaussian positivity, improve the Grothendieck constant,
 complete a Hadamard matrix, or solve any LRC/FC/JC frontier.
 
-## 9. Exact companion
+## 10. Exact companion
 
 Run
 
@@ -390,10 +440,12 @@ The standard-library companion:
 5. verifies the sharp norm (4g) on a complete five-dimensional integer grid
    and reconstructs the ten H8 and sixteen H12 vertex packets;
 6. verifies (12) on all `11^2=121` pairs of the binary laws;
-7. reconstructs the three displayed integer packets and their margins;
-8. identifies the exact five-vertex, nine-edge, six-facet face containing the
+7. checks the Parseval mixing identity and sharp total-variation bound for
+   six convolution powers of all 61 feasible half-grid laws;
+8. reconstructs the three displayed integer packets and their margins;
+9. identifies the exact five-vertex, nine-edge, six-facet face containing the
    `N=896` packet; and
-9. verifies both row-level decompositions in (4i) and checks the one-parity
+10. verifies both row-level decompositions in (4i) and checks the one-parity
    and missing-quadratic hostiles.
 
 Normal and optimized runs are byte-identical.  The computation is an exact

@@ -199,6 +199,7 @@ def main() -> None:
     grid = tuple(Fraction(value, 2) for value in range(-2, 3))
     grid_cells = 0
     feasible_cells = 0
+    feasible_grid_packets: list[tuple[Fraction, ...]] = []
     for packet in product(grid, repeat=5):
         cubic = packet[:4]
         quartic = packet[4]
@@ -208,6 +209,8 @@ def main() -> None:
         require(pointwise == facets, ("facet iff failed", packet))
         grid_cells += 1
         feasible_cells += int(pointwise)
+        if pointwise:
+            feasible_grid_packets.append(packet)
 
     # Exhaust every subset of the sixteen atoms.  Exactly eleven nonempty
     # subsets give unbiased pairwise-independent laws: ten half-cubes and the
@@ -364,6 +367,44 @@ def main() -> None:
             require(quartic == left_quartic * right_quartic,
                     "quartic convolution law failed")
             convolution_pairs += 1
+
+    # Repeated coordinatewise multiplication is group convolution.  Its exact
+    # chi-square distance from uniform is the Parseval sum of the five
+    # surviving Fourier coefficients.  Check six powers on every feasible
+    # half-grid packet, together with the sharp total-variation bound.
+    mixing_checks = 0
+    sharp_tv_checks = 0
+    for packet in feasible_grid_packets:
+        for power_index in range(1, 7):
+            powered = tuple(value**power_index for value in packet)
+            probabilities = reconstruct_counts(
+                Fraction(1), powered[:4], powered[4]
+            )
+            chi_square = sum(
+                (16 * probability - 1) ** 2 for probability in probabilities
+            ) / 16
+            expected_chi_square = sum(
+                value ** (2 * power_index) for value in packet
+            )
+            require(chi_square == expected_chi_square,
+                    ("convolution Parseval", packet, power_index))
+            total_variation = sum(
+                abs(probability - Fraction(1, 16))
+                for probability in probabilities
+            ) / 2
+            require(4 * total_variation**2 <= expected_chi_square,
+                    ("convolution TV bound", packet, power_index))
+            if sum(value != 0 for value in packet) == 1:
+                require(4 * total_variation**2 == expected_chi_square,
+                        ("one-coordinate TV sharpness", packet, power_index))
+                sharp_tv_checks += 1
+            mixing_checks += 1
+
+    nonmixing_vertices = {
+        vertex for vertex in vertices if max(abs(value) for value in vertex) == 1
+    }
+    require(nonmixing_vertices == coordinate_vertices,
+            ("nonmixing vertex classification", nonmixing_vertices))
 
     # Three exact OA(N,4,2,2) sidecars occurring inside the Hadamard bank.
     # Coordinates are A_i=sum product_(j!=i) x_j and D=sum product_j x_j.
@@ -544,6 +585,9 @@ def main() -> None:
         "polar_support_grid": len(support_grid),
         "vertex_OA_orbits": sorted(vertex_packet_histogram.items()),
         "convolution_pairs": convolution_pairs,
+        "convolution_mixing_checks": mixing_checks,
+        "convolution_TV_sharp_checks": sharp_tv_checks,
+        "convolution_nonmixing_vertices": len(nonmixing_vertices),
         "puzzle_packets": packet_rows,
         "puzzle_896_active_normals": sorted(active_normals),
         "puzzle_896_face_f_vector": [
@@ -564,6 +608,10 @@ def main() -> None:
     print("polar_absolute_support=max(linf,l1/3) grid=3125 PASS")
     print("polar_vertex_OA_orbits=H8:10,H12:16")
     print(f"coordinatewise_convolution_pairs={convolution_pairs} moment_product=PASS")
+    print(
+        f"convolution_mixing_checks={mixing_checks} "
+        + f"tv_sharp_checks={sharp_tv_checks} nonmixing_signed_halfcubes=10"
+    )
     for row in packet_rows:
         print(
             "puzzle_OA=" + str(row["mass"])
