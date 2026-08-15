@@ -389,9 +389,14 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   [subresultant sidecar](../07-reflections/jc-critical-inverse-cover-cofactor-jacobian-probe-agent-20260803.md)
   gives a two-pivot inverse graph and mate-integrability class on two controls.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
-  THM-3318/3326/3348/3386/3406 classify linear-`z` response through the exact
-  max-multiplicity annihilator and affine-modification `I^q` transgression with
-  `psi/chi` support-thickness split. They refine THM-2063, not `JC(2)`; THM-3354 blocks direct D5 transport.
+  THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response through the
+  exact max-multiplicity annihilator, affine-modification `I^q` transgression,
+  `psi/chi` support-thickness split, and full filtered Hamiltonian cycle tower.
+  Its finite root blocks grow with slope `e_alpha-1`, persist as one Pruefer
+  arm per root even under value collisions, and comprise the entire torsion of
+  `C_P`; taking the kernel after the associated graded sharply overcounts
+  liftable symbols. They refine THM-2063, not `JC(2)`; THM-3354 blocks direct
+  D5 transport.
   No base root choice follows; residual degree 119, Keller mate/inverse cover, `JC(2)` and `DC(2)` remain OPEN.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
