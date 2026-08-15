@@ -1,0 +1,18 @@
+THM-3445 prime-even literal half-twist cap-seven classification companion
+status=VERIFIED-EXACT companion for RESERVED/PROVISIONAL theorem; audit required
+dependency_hashes=('ed54b01f9bf155643b6407c6af8ee6f15c7a099f8ac3b60399dd49b496fb1d12', '9751da7e0464f16f92b675ca9c95b118fd3fe95fc11cc99c9a7015d8425adb65', '4bb0c853fa3bebabf1414d75aa2b43d4b00c22a2b49cbaaac5e06bde5986c4ba', 'a9012981cef620a0eeac6883f6e6cb080272c3d99cb73703a0b45212f9cb9b80')
+cross_finite_certificate=(('AB', 834, 14, ()), ('AE', 834, 13, ()), ('BA', 834, 14, ()), ('BB', 834, 12, ()), ('BE', 834, 8, ((8, 3, 10), (8, 5, 6))), ('EA', 834, 14, ()), ('EB', 834, 8, ((8, 6, 5), (8, 10, 3))))
+aa_orientation_finite_certificate=(('opposite', 544, 16, ()), ('kappa0', 290, 13, ()), ('kappa2', 290, 10, ((10, 3, 5), (10, 5, 3))))
+large_a_plateau_certificate=((('AB', 52), ('AE', 55), ('BA', 40), ('BB', 48), ('BE', 54), ('EA', 28), ('EB', 44)), (('opposite', 48), ('kappa0', 52), ('kappa2', 48)))
+height8_tangent_certificate=((605, 601, 609), ((521, 8, 8, 12), (593, 12, 12, 8), (601, 12, 8, 12), (607, 12, 12, 12), (1009, 18, 20, 20)))
+EE_successive_minima_floor: p0=607 h=43 h_squared=1849
+EE_literal_intersection_lower_bound=10 for every prime p>=607
+profile_overlap_budgets=((1, 8), (3, None), (5, 4), (9, 4), (11, 4), (13, 0))
+mod240_zero_graph: classes=64 degrees=(19,31,23) clique=6 rooted_presentations=(2,1,1) equality=three_complementary_pairs types=A4BE
+mod240_first_prime_range=(607,1553)
+direct_graph_controls=((607, ((1, 19, 12), (2, 31, 12), (4, 23, 12))), (1009, ((1, 19, 18), (2, 31, 20), (4, 23, 20))))
+p601_exact_negative_profiles_nodes_branches=(15, 65, 50)
+positive_controls=((7, (1, 3, 4, 5, 9, 11, 13), (('A', 6), ('E', 1)), (2, 2, 2, 2, 2, 2, 2), ((1, 14),)), (19, (1, 9, 17, 20, 21, 29, 37), (('A', 6), ('E', 1)), (6, 6, 6, 6, 6, 6, 6), ((1, 34), (2, 4))))
+finite_stitch=p<=599 pinned FINITE-EXACT atlas; p=601 direct negative; tail p>=607
+semantic_sha256=45e7e843b1767ef7254be729add71ea6ef501160503b46a03cbb43e3e53517c3
+script_lf_sha256=ca061487acdf56f3d0507ad55d9b33c5e9724ddb9d7fdba815d46a1b7deb4382
