@@ -2,16 +2,15 @@
 id: THM-3424
 title: "Nonlinear monomial-fiber unit-observer rigidity"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  Let K have characteristic zero, d>=2, a!=0, and
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Let K have characteristic
+  zero, d>=2, a!=0, and
   P=ax+b+g(x)z^d with nonconstant g.  The generic Hamiltonian unit class
   vanishes exactly when g=c(x-alpha)^(1+qd) for some q>=1.  Its exact
   integral K[P]-annihilator is then ((P-(a alpha+b))^q), and is zero for
   every other nonconstant g.  No full multiroot module decomposition,
-  polynomial mate, new Keller case, or JC(2) conclusion is claimed.  This
-  candidate is not a proved dependency until independent audit and explicit
-  status promotion here.
+  polynomial mate, new Keller case, or JC(2) conclusion is claimed.
 source: root-2608-jc-unit-observer-rigidity-2026-08-15
+audit: independent weight-sector/valuation/two-infinity proof reconstruction; THM-3422 annihilator transport and boundary audit; normal/optimized/stored-output replay; hash and documentation audit clean
 depends_on:
   - THM-3418-one-monomial-nonlinear-fiber-keller-classification
   - THM-3419-generic-kummer-response-regular-sector-rank
@@ -28,11 +27,10 @@ hash_basis: LF-normalized bytes
 
 # THM-3424 -- nonlinear monomial-fiber unit-observer rigidity
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**  The generic rigidity proof below is self-contained.  The
-exact positive integral annihilator imports the proved and independently
-audited one-root module calculation in THM-3422.  Nothing here is a proved
-dependency before explicit status promotion.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**  The generic rigidity
+proof below is self-contained.  The exact positive integral annihilator
+imports the proved and independently audited one-root module calculation in
+THM-3422.
 
 ## 1. Statement and inheritance
 
@@ -60,7 +58,7 @@ iff g(x)=c(x-alpha)^(1+qd)
 
 Combining `(3)` with the proved one-root integral classification in
 [THM-3422](THM-3422-one-root-nonlinear-integral-hamiltonian-response.md)
-gives the candidate exact annihilator
+gives the exact annihilator
 
 ```text
 Ann_(K[P])(theta)=
@@ -336,9 +334,10 @@ degree/root-count screen and still fail include multiplicity profiles
 The exact companion checks `775` ordered profiles, solves `107` exact linear
 systems over `Q(t)`, verifies `144` translated one-root primitives, and
 performs `367692` local/infinity coefficient checks.  Its declared finite
-universe is `2<=d<=6`, one to three distinct roots, and multiplicities one
-through five, supplemented by `(31)--(32)`.  It is evidence for the proof,
-not a replacement for its unbounded quantifiers.
+universe is `2<=d<=6`, one to three distinct roots at the canonical positions
+`-1,1,3`, and multiplicities one through five, supplemented by
+`(31)--(32)`.  It is evidence for the proof, not a replacement for its
+unbounded quantifiers.
 
 The boundaries are sharp:
 
@@ -353,5 +352,4 @@ The boundaries are sharp:
   requires retention of the nonzero vertical torsion in `(4)`.
 
 No full multiroot `K[P]`-module decomposition, polynomial mate, new Keller
-stratum, or conclusion about the remaining cases of `JC(2)` follows.  QED
-for the provisional candidate.
+stratum, or conclusion about the remaining cases of `JC(2)` follows.  QED.

@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `jc_nonlinear_multiroot_unit_rigidity_thm3424.py` -> matching `.out`
+  [THM-3424 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `P=ax+b+g(x)z^d` in characteristic zero with `d>=2` and nonconstant `g`,
+  the generic Hamiltonian unit class vanishes exactly for
+  `g=c(x-alpha)^(1+qd)`, `q>=1`.  Its exact integral annihilator is then
+  `((P-(a alpha+b))^q)` and is zero otherwise.  Root valuations and two
+  independent infinity locks force the one-root form; THM-3422 supplies the
+  integral exponent.  The exact companion checks 775 canonical-root
+  multiplicity profiles, 107 exact `Q(t)` systems, 144 closed primitives,
+  and 367,692 local/infinity coefficients.  Constant and zero `g` have zero
+  response; no full multiroot module, mate, new Keller case, or `JC(2)`
+  conclusion is claimed.  Script/output LF-normalized SHA-256:
+  `22c29c3e0086dbe1a592d39027b41e1626484d032e3f7ddc9499629d4f294e38` /
+  `2d14bebf31cc736d158a74ce135d36f57c42663668630799e5d89d163f545921`.
+
 - `lrc_half_twist_rank6_joint_period_probe_20260815.py` -> matching `.out`
   [THM-3425 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  If
   `8,9,10,12` do not divide `Q`, a half-twist cover by at most six blocks has
