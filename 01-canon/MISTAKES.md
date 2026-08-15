@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-395 (2026-08-15, exact-six truncated minimum) -- a depth-six sentinel was labelled as pool-14 infeasibility
+
+- **What failed:** the first exact-six mutation reflection said that the
+  companion computed the unrestricted minimum over all subsets of
+  `{1,...,14}` and labelled the `None` histogram bucket “no pool-14 cover.”
+  The solver deliberately searches only depths zero through six.
+- **Minimal witness / first failed implication:** for
+  `F=(1,2,4,6,9,10)` and `D=1260`, the strict target has no cover by at most
+  six pool clocks, but `(1,2,3,5,8,9,10)` covers it with seven.  Thus this row
+  lies in the old `None` bucket although its exact pool-14 minimum is seven.
+- **Repair / strongest survivor:** read `None` as “no cover by at most six
+  (`>6` or uncovered).”  The companion now prints that scope and checks the
+  seven-clock hostile exactly.  The depth-one through depth-six counts, every
+  exact-six completion, the full mutation relation, both SCCs, and the typed
+  `7+6=13` stopping boundary are unchanged.
+- **Reusable rule:** a capped-search sentinel records failure within its
+  searched budget, not global infeasibility.  Freeze a first-outside-budget
+  positive control whenever a finite depth cap is load-bearing.
+
 ## MISTAKE-394 (2026-08-15, Fibonacci--Berggren 17-adic torsor scope) -- a parameter norm-square was misnamed and the tied root entered a `T6` support claim
 
 - **What failed:** the local-`T4` gate called `m^2+n^2` the “hypotenuse

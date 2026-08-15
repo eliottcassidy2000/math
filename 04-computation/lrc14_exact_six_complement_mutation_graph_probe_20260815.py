@@ -5,6 +5,8 @@ For k=2,3, enumerate every literal body F in C([14],6), every inherited
 divisor row passing the exact support cutoff, and every six-subset C of the
 pool [14] that covers the unsupported open-cell target U_D(F).  Rows with a
 cover of size at most five are kept out: they are already THM-3366 terminals.
+The reported minimum histogram is deliberately truncated at depth six:
+``None`` means no cover by at most six pool clocks, not no pool-14 cover.
 
 The resulting full relation F -> C is a finite-exact boundary atlas.  It does
 not prove LRC(14): six complement clocks plus the seven inherited clocks give
@@ -55,6 +57,13 @@ EXPECTED = {
     },
 }
 EXPECTED_SEMANTIC_SHA256 = "ce82dbe6054cea1a250d6632da5b0e2d9c695445564a026b4851b3c7e5bb1fc0"
+EXPECTED_SENTINEL_HOSTILE = (
+    (1, 2, 4, 6, 9, 10),
+    2_520,
+    1_260,
+    646,
+    (1, 2, 3, 5, 8, 9, 10),
+)
 
 
 def require(condition: bool, payload: object) -> None:
@@ -188,6 +197,7 @@ def main() -> None:
     cutoffs = {2: Q(887, 990), 3: Q(125, 143)}
     reports = []
     semantic = sha256()
+    sentinel_hostile = None
     for sector in (2, 3):
         input_rows = 0
         minimum_histogram = Counter()
@@ -208,6 +218,24 @@ def main() -> None:
                 arcs = base.residue_arcs(divisor, ranges)
                 gaps = base.unsupported_gaps(divisor, arcs)
                 target = target_mask(divisor, gaps)
+                if (
+                    sector == 2
+                    and body == EXPECTED_SENTINEL_HOSTILE[0]
+                    and divisor == EXPECTED_SENTINEL_HOSTILE[2]
+                ):
+                    witness = EXPECTED_SENTINEL_HOSTILE[-1]
+                    witness_mask = 0
+                    for clock in witness:
+                        witness_mask |= masks[clock - 1]
+                    require(
+                        solve_exact(target, 6) is None,
+                        ("sentinel unexpectedly has a six-cover", body, divisor),
+                    )
+                    require(
+                        target & ~witness_mask == 0,
+                        ("sentinel seven-cover failed", body, divisor, witness),
+                    )
+                    sentinel_hostile = (body, ruler, divisor, count, witness)
                 if target & ~union_mask:
                     minimum_histogram[None] += 1
                     continue
@@ -279,6 +307,11 @@ def main() -> None:
         require(sinks == expected["sinks"], (sector, sinks))
         require(tuple(map(len, cycles)) == (3, 3), (sector, cycles))
 
+    require(
+        sentinel_hostile == EXPECTED_SENTINEL_HOSTILE,
+        ("truncated-minimum sentinel", sentinel_hostile),
+    )
+
     semantic_digest = semantic.hexdigest()
     if EXPECTED_SEMANTIC_SHA256 is not None:
         require(semantic_digest == EXPECTED_SEMANTIC_SHA256,
@@ -291,11 +324,18 @@ def main() -> None:
         (sector, input_rows, minimum_histogram, exact_rows, incidences,
          completion_histogram, full_period_unique, lower_self_rows, edges,
          outdegree, sinks, cycles) = report
-        print(f"k{sector}_input_rows={input_rows};minimum_histogram={minimum_histogram}")
+        print(
+            f"k{sector}_input_rows={input_rows};"
+            f"minimum_through_6_histogram={minimum_histogram}"
+        )
         print(f"k{sector}_exact6_rows={exact_rows};completion_incidences={incidences};completion_count_histogram={completion_histogram}")
         print(f"k{sector}_full_period_unique={full_period_unique};lower_self_rows={lower_self_rows}")
         print(f"k{sector}_body_relation_edges={edges};nonself_outdegree={outdegree};mutation_sinks={sinks}")
         print(f"k{sector}_nontrivial_sccs={cycles}")
+    print(
+        "truncated_minimum_sentinel="
+        f"{sentinel_hostile};no_cover_by_at_most_6=True;seven_cover_verified=True"
+    )
     print("typed_stopping_boundary=six_complements_plus_seven_inherited_clocks_equals_13_open_clocks;mutation_forgets_next_sector_divisor_tail_and_distinctness")
     print(f"semantic_sha256={semantic_digest}")
     print(f"script_sha256_lf={lf_sha256(source)}")

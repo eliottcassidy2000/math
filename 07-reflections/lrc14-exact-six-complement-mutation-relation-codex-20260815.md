@@ -7,6 +7,7 @@ not a proved dependency and not an LRC(14) proof.  Its exact companion freezes
 the full pool-14 six-completion relation on the raw THM-3366 `k=2,3` support
 rows.  It explains precisely why extending the complement-clock search from
 five clocks to six stops at the conjecture itself.
+The capped-minimum terminology is repaired under `MISTAKE-395`.
 
 ## 1. Inheritance and live concepts
 
@@ -40,10 +41,12 @@ U_D(F)=the THM-3366 unsupported open-cell target.          (1)
 ```
 
 For `k=2,3`, retain exactly the support rows passing the inherited THM-2928
-cutoff.  For every retained row, the companion computes the minimum size of a
-subset of `{1,...,14}` covering `(1)`, with all strict endpoints and open atoms
-checked.  Rows of minimum at most five are already THM-3366 terminals.  On a
-minimum-six row define the full relation
+cutoff.  For every retained row, the companion computes the minimum size
+**through depth six** of a subset of `{1,...,14}` covering `(1)`, with all
+strict endpoints and open atoms checked.  Rows of minimum at most five are
+already THM-3366 terminals.  The sentinel `None` means no cover by at most six
+pool clocks; it does not distinguish minimum at least seven from a target that
+the full pool cannot cover.  On a minimum-six row define the full relation
 
 ```text
 F -> C  iff C in C({1,...,14},6) covers U_D(F)
@@ -54,11 +57,11 @@ This is not a first-witness graph.  Every six-subset `C` is tested.
 
 ## 3. Exact boundary atlas
 
-For `k=2`, the minimum-size histogram is
+For `k=2`, the minimum-through-six histogram is
 
 ```text
 1:12662, 2:2764, 3:998, 4:1106, 5:1668,
-6:4814, no pool-14 cover:3151.                              (3)
+6:4814, no cover by at most six (>6 or uncovered):3151.     (3)
 ```
 
 The `4814` exact-six rows have `4918` completion incidences: `4727` rows have
@@ -73,7 +76,7 @@ For `k=3`, the corresponding data are
 
 ```text
 1:12659, 2:2764, 3:976, 4:1052, 5:1602,
-6:4778, no pool-14 cover:3139;                              (5)
+6:4778, no cover by at most six (>6 or uncovered):3139;     (5)
 
 4881 completion incidences with row multiplicities
 1:4692, 2:69, 3:17; 4872 body edges; nonself outdegrees
@@ -90,6 +93,16 @@ two nontrivial strongly connected components, both three-cycles:
 
 {(1,3,7,8,9,10), (2,4,5,7,9,12), (4,5,7,8,9,10)}.        (7)
 ```
+
+The truncated sentinel is active, not cosmetic.  At
+
+```text
+F=(1,2,4,6,9,10), D=1260,
+```
+
+no subset of at most six pool clocks covers the target, while
+`(1,2,3,5,8,9,10)` is an exact seven-clock cover.  Thus the row has pool-14
+minimum seven and must not be called pool-14-uncoverable.
 
 Thus the finite relation is strikingly rigid and almost acyclic.  That fact
 is an exact structural signal, but it is not by itself an iteration theorem.
@@ -159,7 +172,7 @@ the current row keys, so it cannot be silently inferred.  See MISTAKE-392.
 | preserved | present body, present divisor witness, and pointwise unsupported-cell coverage |
 | destroyed | next sector/divisor, inherited-clock labels, collisions, endpoint owners, and physical time |
 | needed sidecar | a chart-to-chart transport of the seven inherited clocks and their distinctness |
-| cheapest decisive tests | the unique full-period self completion, witness `(9)`, and either three-cycle `(7)` |
+| cheapest decisive tests | the unique full-period self completion, the seven-cover depth sentinel, witness `(9)`, and either three-cycle `(7)` |
 
 No tournament is intrinsic: `(2)` is a directed existence relation without a
 pairwise orientation gauge, and its SCCs do not encode runner dominance.
@@ -179,8 +192,8 @@ sampling or retaining a single solver witness.  Its LF-normalized source and
 stored-output hashes are respectively
 
 ```text
-d9cc6114172e9dec05a24f8bc57832f3ee6948fe6b8a28fcc927d646d18f0d19
-c02516e09fc22addf352b167699ee82370a84aadee9390d5342929f7fafce4c2
+a799d77af7d930e6a46ab7f22544d78feda327a2a9221025a2c28cf9ed5c85ea
+3627ec4fc55ecbca4a571d76dac1e87c9c9f20c4ff6ba9d1346642ccae5117c4
 ```
 
 and both ordinary and optimized runs reproduce the same stored transcript.
