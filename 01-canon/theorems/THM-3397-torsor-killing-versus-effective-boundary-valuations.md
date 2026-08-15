@@ -2,7 +2,9 @@
 id: THM-3397
 title: "Torsor killing versus effective boundary valuations"
 status: >
-  PROVED + VERIFIED-EXACT.  For the cyclic terminal initial ring
+  PROVED + VERIFIED-EXACT.  A divisorial pole of a rational function on a
+  normal affine variety survives every finite dominant normal pullback: each
+  valuation is multiplied by a positive ramification index.  For the cyclic terminal initial ring
   R_e=k[v,X,Y]/(XY-(1+cv)^e), the missing rational coordinate
   w=X^(-1)v^(-m) has the exact coefficient-denominator filtration
   {h in k[v]: h w^q is polynomial}=
@@ -56,7 +58,41 @@ The terminal model computes the entire denominator filtration, while the
 `V4` model shows that even simultaneous three-view compatibility and a
 polynomial total space do not remove separated poles.
 
-## 2. The cyclic terminal quotient
+## 2. Universal finite-pullback pole persistence
+
+Let `A subset B` be a finite inclusion of normal domains, with fraction
+fields `K subset L`.  Let `P` be a height-one prime of `A`, and let `Q` be
+a height-one prime of `B` above it.  The local rings at these primes are
+discrete valuation rings, and the restricted valuation satisfies
+
+```text
+ord_Q(f)=e(Q/P) ord_P(f)       for every f in K^*,       (0)
+```
+
+where the ramification index `e(Q/P)` is a positive integer.  Therefore
+
+```text
+ord_P(f)<0  implies  ord_Q(f)<0.                         (0a)
+```
+
+Every prime downstairs has a prime above it because the morphism is finite
+and dominant.  Thus a rational function with a divisorial pole cannot become
+regular after any finite dominant normal pullback.  In ring language,
+
+```text
+B intersect K=A.                                        (0b)
+```
+
+Indeed an element of the intersection is integral over `A` and lies in `K`,
+so normality of `A` puts it back in `A`.
+
+This lemma concerns the pullback of the **same** rational function.  A new
+function assembled upstairs can cancel principal parts, but that cancellation
+is additional algebraic data; finite monodromy killing alone does not provide
+it.  The next two models compute exactly what such a cancellation would have
+to pay.
+
+## 3. The cyclic terminal quotient
 
 Let `k` be an algebraically closed field of characteristic zero, let
 `e>=2`, and let `c in k^*`.  In `S=k[x,y]` put
@@ -97,7 +133,7 @@ pi: A^2\{(0,0)} -> U                                    (5)
 is a finite etale `mu_e` torsor: the action `(2)` is free away from the
 origin.
 
-## 3. Divisor class killing and what it forgets
+## 4. Divisor class killing and what it forgets
 
 There are two height-one primes over `L=0`:
 
@@ -143,7 +179,7 @@ so `x=(rx)/r` would lie in `Frac(R_e)`.  This contradicts the nontrivial
 `Frac(S)/Frac(R_e)`.  Conductors are effective for birational orders inside
 one fraction field; a nontrivial quotient cover is a different use case.
 
-## 4. Exact two-boundary denominator filtration
+## 5. Exact two-boundary denominator filtration
 
 Let
 
@@ -200,7 +236,7 @@ section cannot change `(11)`: `w_m` is a rational function from the base,
 so pulling it through a section returns the same function.  Local section
 existence and boundary effectivity are logically independent gates.
 
-### 4.1 Exact specialization to THM-3383
+### 5.1 Exact specialization to THM-3383
 
 On THM-3383's rational-decoding locus, put `n=g-ae=+/-1`.  Its unique
 missing decoded target is precisely
@@ -222,7 +258,7 @@ field decoder.  The class group sees only linear equivalence; a rational
 function's divisor is already principal, so it cannot record whether the
 principal divisor has a negative part.
 
-## 5. A simultaneous three-view `V4` hostile
+## 6. A simultaneous three-view `V4` hostile
 
 Now use THM-2655's sharp quotient.  Let
 
@@ -309,7 +345,7 @@ This is a divisor-side three-view hostile.  It is compatible with
 but does not identify its flag quotient tables with these divisors.  The
 common object here is the explicit `V4` polynomial cover in `(18)`.
 
-## 6. Effectivity gate and transfer boundary
+## 7. Effectivity gate and transfer boundary
 
 For a normal affine domain, a rational function is regular exactly when all
 height-one orders are nonnegative.  Passing to `Cl` quotients the divisor
@@ -342,7 +378,7 @@ Nothing here realizes a physical quartic resolvent, proves that every
 terminal module is monomial, imposes the Keller equation on `(18)`, or
 excludes any `A4`, `S4`, `JC(2)`, or `DC(2)` branch.
 
-## 7. Exact controls
+## 8. Exact controls
 
 The standard-library companion uses exact integer and rational arithmetic.
 It checks `896` terminal parameter cells, both one-step boundary hostiles,
