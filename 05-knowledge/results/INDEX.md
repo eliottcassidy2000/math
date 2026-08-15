@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `d5_marked_carrier_full_germ_obstruction_thm3450.py` -> matching `.out`
+  [THM-3450 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Under linked
+  degree-91 root, inertia, branch, action, and amplitude markings, one LRC
+  primitive Fourier coefficient and its Galois orbit determine the full
+  rational doubly-centred `7 x 13` interaction; multiplication by the Keller
+  mode-one unit is an explicit strict filtered `C91`-equivariant isomorphism.
+  The map is characteristic-zero, not a map from the exponent-13 `H^1` class,
+  and independent gauge reversal kills it.  Exact recurrence coefficients at
+  orders eight `(0,6)` and fourteen `(1,0)` occupy the two missing ANOVA margin
+  sectors, so the full Keller germ cannot factor through centred interaction
+  alone.  Script/output/semantic LF SHA-256:
+  `17ef1da1413d011c788d1ff000158fa163b5c08ed284c4aa34acc2630b1642f4` /
+  `6398cf8c57667618de68bad0667abc1b1ebdabafda93c3da4d52fd9bf2d68b68` /
+  `ac9cdaf18e641572ccac24731d0959177038a7aa95a0559872a7a500708a2f2a`.
+  No physical current, LRC(14), or `JC(2)` consequence follows.
 - `noncommuting_smooth_hensel_heisenberg_orbits_thm3449.py` -> matching
   `.out` [THM-3449 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
   two equal-depth smooth Hensel

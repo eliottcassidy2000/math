@@ -8,8 +8,10 @@ status: >
   Fourier component is a formal unit descending to the unramified parameter.
   At n=91, CRT identifies the leading residue with a nonzero (1,1) line after
   linked branch/root markings.  The full normalized Puiseux germ is mode-mixed,
-  beginning with a nonzero (-1,-1) correction.  No LRC amplitude intertwiner,
-  bispectrum identity, physical current, or LRC(14) consequence follows.
+  beginning with a nonzero (-1,-1) correction.  THM-3450 subsequently gives
+  an explicit carrier isomorphism after all character and amplitude gauges are
+  marked; it does not give an unmarked H1 map, bispectrum identity, physical
+  current, full-germ factorization, or LRC(14) consequence.
 source: codex2 Puiseux reconstruction-current derivation, 2026-08-15
 audit: independent exact Puiseux/Fourier/CRT referee plus normal/-O/stored replay; full-germ purity corrected to leading-residue/mode-one scope
 depends_on:
@@ -18,6 +20,7 @@ depends_on:
 related:
   - THM-2512
   - THM-3431-valuative-persistence-multiset-and-lrc-jc-boundary
+  - THM-3450-marked-d5-carrier-isomorphism-and-full-germ-margin-obstruction
 script: 04-computation/jc_weighted_lift_infinity_character_thm3443.py
 output: 05-knowledge/results/jc_weighted_lift_infinity_character_thm3443.out
 script_sha256: 912b264ad66011f96c3b895825cae528abff54367e0fab261e34a47b3655a042
@@ -196,9 +199,17 @@ the inertia/root markings incoherently rescales or readdresses the JC basis,
 while the LRC coefficient has its own ancestry, centering, and response
 normalization.  Moreover `(17)` shows that a map of full response germs must
 respect deck semivariance and mode mixing, not merely one residue line.  A
-theorem-level D5 map still needs an intertwiner proving those normalizations
-and actions compatible.  Dimension matching and separate nonvanishing do not
-provide it.
+marked identification therefore still needs an amplitude calibration;
+dimension matching and separate nonvanishing do not provide one by themselves.
+
+THM-3450 supplies exactly that calibration on the marked mode-one line: it
+multiplies the LRC primitive coefficient by the Keller mode-one unit.  The map
+is explicit but belongs to an `R^times` torsor and changes under independent
+gauge reversal.  THM-3450 also proves that the full Keller germ cannot factor
+through the doubly-centred interaction alone: its first two nonprimitive terms
+occur in the two ANOVA margin sectors.  Thus the remaining D5 object is a
+gauge-linked Rees connection carrying both margins and ancestry semantics, not
+another bare one-dimensional intertwiner.
 
 | field | exact content |
 |---|---|
@@ -207,7 +218,7 @@ provide it.
 | map | ramification normalization `(2),(8)` followed by branch Fourier transform `(9)` |
 | preserved | leading cyclic character, CRT address under linked gauges, valuation, and formal nonvanishing |
 | destroyed | higher-mode data under residue projection, finite-target values, LRC ancestry/centering, positivity, physical time, and response normalization |
-| needed sidecar | a gauge- and deck-compatible amplitude intertwiner between the LRC response and the full `X` profile |
+| successor / needed sidecar | THM-3450 gives the marked mode-one amplitude isomorphism; a gauge-linked Rees connection with both ANOVA margins is still missing |
 | cheapest hostile | reverse `tau` while fixing roots: `(1,1)` becomes `(6,12)`; coherent root reversal restores the label |
 
 ## 5. Boundaries
@@ -223,6 +234,8 @@ provide it.
   leading character has exact label `(6,2)`, not `(1,1)`.  This is root-gauge
   readdressing, not scalar rescaling inside one fixed labelled line.
 - No additive map to THM-3437's characteristic-zero Tor tower is asserted.
+- THM-3450's successor map is characteristic-zero and marked; it is not a map
+  from the mod-13 `H^1` class and does not extend to the full germ.
 - Nothing here proves LRC(14), `JC(2)`, or a physical D5 current.
 
 ## 6. Exact companion and audit
