@@ -27,7 +27,7 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 Direct frontier: `<=6`; projected caps `1579/216`. At `z1=216`, THM-3361
 closes the three `L720720` rows; THM-3378 closes row 94 of the next family and
-leaves ledger/wall/families `372913/109/12` (the other 12 rows remain live).
+leaves ledger/wall/families `372913/109/12`; 12 rows remain.
 THM-3349/3350/3352/3355 close all `561` reflected six-level `k=1` bodies;
 THM-3360 proves the physical edge floor. THM-3381 bounds phase/tree drift and
 refutes residue-blind transfer. Arbitrary `k<=1`, projected `k=2,3`, rung, physical entry and LRC
@@ -36,8 +36,15 @@ THM-3356/3366 leave k2/k3 `4056/1897`; exact-six k3 is a 20-edge `Phi`-DAG and k
 THM-3414--3416 give ZMC rank-4/5/6 bases `8,9` / `10,12` / `11,15,23,25`.
 THM-3425 gives primitive half cap-six support and its joint-period/parity breaker.
 [THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md) proves the all-modulus transverse literal cap-seven classification (15 divisor atoms); LRC(14) remains open.
-The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
-Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
+THM-3135/3150/3156/3171 give the cap-two/gain CSP; THM-3200/3211/3224/3246
+give ray/carry laws; THM-3234--3285 give phase structures. THM-3285 has `169`
+middle origins and two normal-atlas completions but empty outer co-support; the
+common atom, current and exit remain open. Separate HYP-8871 leaves `165` rows.
+THM-2363/THM-2368 are sidecars; THM-2417--2894 recover valuation/root/quotient
+data, not semantic roots (`28,393`) or physical gluing
+(MISTAKE-281/300/310/313). THM-3190/3208 need
+positive orbit-mass
+transport and `e9=(-9,+9,QB)`.
 
 ### Independent routes that remain live
 
@@ -66,6 +73,8 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
   THM-3359/3454/3455 give periodic mass and `U`-ray metric/ranks; origin/time
   remain. Content, normal unit, order, owner/phase, and mass remain
   sidecars; no global transduction, LRC row, or JC flux.
+- THM-3456 detects mask overlap, but the `q=6` control pair has identical
+  masks; the star cochain remains.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
@@ -258,7 +267,9 @@ makes every modular **index** support of a C-finite sequence ultimately
 periodic; its harmonic coefficient is accepted cycle density. Unary
 regular lengths and ternary level counts enter; base-three address values and
 the value support of `n^2` do not. THM-2352 gives the separate q-adic plateau
-boundary. At `z=1`, density zero alone does not decide harmonic mass.
+boundary. THM-3457: fixed Rule 30 edge offsets are rational on a 2-adic
+odometer; the center moves (width-six collision). Density zero alone does not
+decide harmonic mass at `z=1`.
 
 ### Established landmarks
 
@@ -310,7 +321,7 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   determinant. MISTAKE-223 blocks NC2, hyper-Bessel, or Euler-characteristic
   transfers; THM-2023 proves the `Phi_(p,q)` zero theorem independently.
 
-### Live work: classify support/collision profiles; study analytic continuation and automatic/Mahler structure; feed typed identities into tournament and LRC laws.
+### Live work: support/collision profiles; analytic/automatic structure; typed tournament/LRC identities.
 
 ## Other active portfolio
 
@@ -399,6 +410,8 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   and `L(J^(2m))=((2m)!)^2(3m)!/m!`. Both detect at power two; bare
   bouquets lose the observer. THM-3362 detects real odd-profile pairs in three
   moments; complex phases can fail. HFC(3)/FC(3) remain OPEN; `p>4m+2` is mandatory.
+  THM-3456 gives a Rule 30 truth lift with `L(g)=0,L(g^2)=6` and a derangement
+  compiler; Boolean/factorial carriers conflict, so no FC transfer.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

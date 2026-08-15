@@ -1,10 +1,12 @@
-# Core-paper intake: Grothendieck, Banach, SOP, and Crouzeix
+# Core-paper intake: Grothendieck, Banach, SOP, Crouzeix, and Rule 30
 
-> **Status / freshness:** primary arXiv records checked 2026-08-14.  Every
-> headline result below is a **CITED VERY RECENT PREPRINT**.  It enters proved
-> canon only where a separate self-contained repository theorem is named.
+> **Status / freshness:** primary arXiv records checked 2026-08-14;
+> Rule 30 primary pages rechecked 2026-08-15.  Every research-paper headline
+> below is a **CITED VERY RECENT PREPRINT**.  It enters proved canon only where
+> a separate self-contained repository theorem is named.  The Rule 30 prize
+> questions remain external open benchmarks.
 
-## Saha--Li--Xue et al. — *New Lower and Upper Bounds for the Grothendieck Constant*
+## Saha--Li--Xue et al. -- *New Lower and Upper Bounds for the Grothendieck Constant*
 
 - **Primary:** [arXiv:2608.11158v2](https://arxiv.org/abs/2608.11158), revised
   2026-08-12.
@@ -21,7 +23,7 @@
   any LRC/FC/JC statement.  A stronger number advertised in a public code
   README without a populated proof folder is not imported.
 
-## Lu--Yang — *A solution to Banach's isometric conjecture*
+## Lu--Yang -- *A solution to Banach's isometric conjecture*
 
 - **Primary:** [arXiv:2608.13536v1](https://arxiv.org/abs/2608.13536).
   **CLAIMED SOLUTION, v1.**
@@ -36,7 +38,7 @@
   fails two boundary divisibilities.  No canonical theorem depends on the
   preprint.
 
-## Chernikov — *SOP2 = SOP3*
+## Chernikov -- *SOP2 = SOP3*
 
 - **Primary:** [arXiv:2608.13291v1](https://arxiv.org/abs/2608.13291), submitted
   2026-08-13.
@@ -54,7 +56,7 @@
   faithful vertices, any named-seed Rule 30 property, or any LRC(14)
   decrement.  It is context rather than a dependency of THM-3456.
 
-## Lorist--Schwenninger — a claimed proof of Crouzeix's conjecture
+## Lorist--Schwenninger -- a claimed proof of Crouzeix's conjecture
 
 - **Primary:** [arXiv:2608.03841v1](https://arxiv.org/abs/2608.03841).
   **CLAIMED SOLUTION, v1.**
@@ -67,18 +69,41 @@
   hostile shows ordinary compression collapses the gate to normality; the
   external headline remains cited, not canonized.
 
+## Wolfram -- Rule 30 prizes and current benchmark page
+
+- **Primary announcement:** [Announcing the Rule 30 Prizes](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/),
+  2019-10-01.
+- **Current official page:** [Wolfram Rule 30 Prizes](https://rule30prize.org/),
+  rechecked 2026-08-15.  It continues to solicit solutions to three
+  distinguished-single-seed center-column questions: non-eventual
+  periodicity, limiting density `1/2`, and a computation lower-bound problem.
+- **Wording boundary:** the announcement's prose and displayed formal
+  predicate for the third prize should not be silently identified.  Any repo
+  claim must first fix the machine and bit-cost model.  A packed recurrence is
+  an upper-bound compiler, not a lower-bound proof.
+- **Repo consumers:** [THM-3456](../../01-canon/theorems/THM-3456-left-permutive-trace-torsor-and-rule30-seed-boundary.md)
+  proves the free-input trace torsor and its exact seed boundary;
+  [THM-3457](../../01-canon/theorems/THM-3457-rule30-right-edge-2-adic-odometer-and-moving-observer-boundary.md)
+  proves the packed edge odometer, fixed-offset rational sequences, and the
+  moving-observer typing with an exact width-six state collision.
+- **Does not prove:** any of the three prizes.  Free-input fair traces are not
+  the fixed-seed trace; fixed edge offsets are not the moving center; finite
+  rings and de Bruijn matrices compile prefixes or spatial inverse counts,
+  not the infinite forward center sequence.
+
 ## Shared transfer boundary
 
-The papers expose different forms of one three-gate mechanism:
+The sources expose variants of one three-gate mechanism:
 
 ```text
 local compatibility  ->  global closure  ->  target-category effectivity.
 ```
 
-Gaussian correlations, bundle sections, partial types, and commuting
-all-iterate defects solve different first or second gates.  None permits an
-untyped transfer to positive LRC covers, polynomial JC coordinates, or
-Hadamard completion.  The corresponding exact repo sidecars are respectively
-ternary support/higher chaos (THM-3392/3396), boundary divisibility
-(THM-3383), typed coset stars (THM-3395), and a distinct positive completion
-layer rather than raw compression (THM-3390).
+Gaussian correlations, bundle sections, partial types, commuting all-iterate
+defects, and CA trace coordinates solve different first or second gates.  None
+permits an untyped transfer to positive LRC covers, polynomial JC coordinates,
+factorial moments, or a distinguished deterministic orbit.  The corresponding
+exact repo sidecars are respectively ternary support/higher chaos
+(THM-3392/3396), boundary divisibility (THM-3383), typed coset stars (THM-3395),
+a distinct positive completion layer rather than raw compression (THM-3390),
+and fixed seed/observer/boundary data (THM-3456/3457).
