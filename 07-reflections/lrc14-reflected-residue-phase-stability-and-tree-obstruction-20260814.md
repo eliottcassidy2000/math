@@ -1,17 +1,18 @@
 # Reflected-residue perturbations: the missing phase and the fixed-tree survivor
 
-**Status.** The residue-blind extension of the THM-3360/3372 high-pair floors
+**Status.** The residue-blind extension of the THM-3360/3376 high-pair floors
 is **REFUTED** by a one-coordinate, one-unit exact witness. A phase-aware
 frozen-tree perturbation lemma is **PROVED**; noncanonical repeated-level
-packets and a cross-tree obstruction at coherent shift `c=84` are
-**FINITE-EXACT + VERIFIED**.
+packets are **FINITE-EXACT + VERIFIED**. Two independent complete censuses
+locate the first restricted cross-tree failure at coherent shift `c=67`, and
+an unrestricted physical tree closes every tested packet through `c=84`.
 This is not a closure of arbitrary `k=1`, other residue packets, or LRC(14).
 
 ## 1. Inheritance and connection contract
 
 [THM-3360](../01-canon/theorems/THM-3360-uniform-reflected-high-pair-floor-by-admissible-affine-tails.md)
 proves, and
-[THM-3372](../01-canon/theorems/THM-3372-independent-superunit-affine-tail-and-reflected-residue-closure.md)
+[THM-3376](../01-canon/theorems/THM-3376-independent-superunit-affine-tail-and-reflected-residue-closure.md)
 independently weakens, the matched-residue pair floor: on each of the `649`
 upper-median bodies, every canonical reflected high pair
 
@@ -239,13 +240,42 @@ residue-blind pair claim: the companion uses the *actual perturbed singleton
 debt* together with the whole five-edge tree, rather than demanding the old
 canonical floor edge by edge.
 
-### A cross-tree obstruction at coherent shift `c=84`
+### The exact all-`649` boundary through `c=84`
 
-Pushing the same `3+3` packet to the coherent shift `e -> e+84` tests all
-`12,980` assignments on the `649` bodies. Exactly one maximum cross-`K_(3,3)`
-tree fails, while the unrestricted `K6` maximum tree has zero failures and
-the literal union remains below `6/7`. Thus all `12,980` packets still close;
-the unique obstruction is only to the restricted cross-tree certificate:
+Two complete exact censuses independently test every coherent shift
+`1<=c<=84`, every one of the `649` upper-median bodies, and all twenty
+three-versus-three assignments: `1,090,320` packets.  The primary path uses
+Kruskal and direct two-pointer intersections; the independent path uses Prim
+and the identity `|A intersect B|=|A|+|B|-|A union B|`.  They agree exactly:
+
+```text
+c=1,...,66: 856,680 packets, zero restricted failures,
+first restricted failure: c=67,
+failure shifts through 84: (67,69,80,82,84), one packet at each shift.
+```
+
+The weakest positive restricted margin in the safe prefix is
+
+```text
+6721694301305/502164203501961
+```
+
+at `c=56`.  The unique first failure is
+
+```text
+E=(1,2,3,4,6,12), (L,j)=(168,90),
+left residues=(68,70,79), right residues=(69,71,73),
+cross margin=-3689469617499/1523807086440275,
+full-tree margin=876026208/3635859955,
+union-6/7=-4849929096/18179299775.
+```
+
+At all five restricted failures, exhaustive enumeration of all `81`
+cross-`K_(3,3)` and all `1,296` full-`K6` spanning trees independently
+confirms that a full tree succeeds and a separate endpoint sweep gives literal
+union below `6/7`.  Hence every one of the `1,090,320` packets closes; only
+the restricted cross-only certificate fails.  The earlier `c=84` control is
+the last of these five obstructions:
 
 ```text
 E=(1,2,3,4,6,12), (L,j)=(168,90),
@@ -263,6 +293,38 @@ cross-only graph is a useful canonical certificate, not an invariant optimum
 after large residue perturbations: within-class physical overlaps can become
 the edges that pay the shifted singleton debt.
 
+There is a sharper structural explanation.  On the minimum-ruler body,
+`j/L=15/28`, and coherent `c` translates all six phases without changing the
+two base-label clusters
+
+```text
+A={1,3,12}: phase numerators {11,13,16}, diameter 5/28,
+B={2,4,6}:  phase numerators {22,24,26}, diameter 4/28.
+```
+
+Every restricted failure assigns one complete cluster to level `3` and the
+other to level `5`.  The cross-only tree is then forced to spend all five
+edges between separated clusters.  Every rescuing full tree uses four
+within-level cluster edges and one cross bridge.  The destroyed information
+is therefore not merely phase: quotienting to the cross graph deletes the
+dominant phase-cluster corridors.
+
+### The complete positive no-wrap chamber on the minimum body
+
+On `E=(1,2,3,4,6,12)`, `(L,j)=(168,90)`, the full positive no-wrap range is
+`1<=c<=155`.  Its `3,100` packets have exactly 26 restricted failures, at
+
+```text
+67,69,80,82,84,91,93,97,104,106,110,112,115,
+117,119,123,125,128,130,136,138,141,143,149,151,154.
+```
+
+Every failure is one of the two orientations of `A|B`; every one is rescued
+by a four-within-plus-one-cross full tree, and every literal union is below
+`6/7`.  The most negative restricted margin is
+`-108866770095/1732306885232` at `c=130`.  This is a complete one-body
+chamber, not an all-`649` statement beyond `c=84`.
+
 ## 6. Boundary and next extension
 
 The right next compiler is phase-budgeted, not radius-budgeted.  For each
@@ -274,8 +336,11 @@ canonical packet/tree it should retain
 
 and accept the perturbation whenever `(3)` is positive, first with exact
 `sigma_i`, then with `(2)` as an analytic tail.  Hostile search should rank
-`|Delta_i|/L` before `|h_i|`; the one-unit witness proves the reverse ranking
-is unsound.
+the joint budget `4(|Delta_i|+|h_i|)(1+L/z_i)/L`, together with clipping and
+tree type.  The unit witness refutes `|h|` alone; the `c=84` failure at
+`Delta=0` refutes centered phase alone.  The new discrete invariant is the
+phase-cluster partition, and the natural operation is to re-optimize the tree
+in the full physical overlap graph instead of freezing the cross quotient.
 
 Nothing here claims all noncanonical packets enter the perturbative chamber.
 Packets with large centered phase, cell reselection, changes of the low graph,
@@ -290,6 +355,14 @@ python3 04-computation/lrc14_uniform_residue_shift_probe_20260814.py
 python3 -O 04-computation/lrc14_uniform_residue_shift_probe_20260814.py
 python3 04-computation/lrc14_shift84_tree_obstruction_20260814.py
 python3 -O 04-computation/lrc14_shift84_tree_obstruction_20260814.py
+python3 04-computation/lrc14_coherent_residue_shift_boundary_census_20260814.py
+python3 -O 04-computation/lrc14_coherent_residue_shift_boundary_census_20260814.py
+python3 04-computation/lrc14_coherent_residue_shift_boundary_independent_prim_scan_20260814.py
+python3 -O 04-computation/lrc14_coherent_residue_shift_boundary_independent_prim_scan_20260814.py
+python3 04-computation/lrc14_coherent_residue_shift_failure_independent_audit_20260814.py
+python3 -O 04-computation/lrc14_coherent_residue_shift_failure_independent_audit_20260814.py
+python3 04-computation/lrc14_minimum_body_no_wrap_coherent_shift_atlas_20260814.py
+python3 -O 04-computation/lrc14_minimum_body_no_wrap_coherent_shift_atlas_20260814.py
 ```
 
 The normal and optimized outputs are byte-identical. Hash basis:
@@ -302,4 +375,12 @@ efdb49aeffd8cf14907d7ab9f651d6c040bfa0969c070007c456f773087a7af2  shifts `-2,-1,
 73303803fb884f5c69e8c9ddaf3d2284e0e1b540021bc6d9948f4fd28d48961f  shift output
 be6a82621ab280861e820bbac4452197860dc1c6e6a02b2a86b19d6d8139339c  cross/full-tree obstruction
 4a09c266825d663e672e6ce033a18691daa2414790393fc4ccfac5958604e996  obstruction output
+5c69fbd209c332d76cc51814bc1ef126d8cc3dea0e9c9d16f00ccf095d6b9a7e  all-649 boundary census
+9d41eaa9b37c36a6a261be428f2ed98fb11f2a74f4852ce7ce52381c3d1027ff  boundary output
+2e8b59b06c6dba860721da6d0636ce6faaae543f8f4d2058ec52f06815a02f3f  independent full Prim census
+841d0bba0b98f361dab328d000e78f4fb701e06a2bfbade7fe92a66748e06993  independent census output
+a7a1f62d4555e704989e7dbb4ee7b44a661aef5688840f5ceeae9945ff84c28f  independent failure diagnostics
+94d3fefee2dd5c7566852e73e24118bf261655d79d59ffa538c37b83232879cb  failure-audit output
+868701bc76abfc199f1b5ad23497b50a4ca88840cd197c794c1242a4621b6a03  minimum-body no-wrap atlas
+6be10b5ab80b7b610c05ae1ccb08273072cdee9a0ee6ae3c578037e4d72af664  no-wrap output
 ```

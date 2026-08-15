@@ -59,9 +59,19 @@ other faces have the same A₂-membership pattern.
 
 ## Related Results
 
-- **Surplus = ker(∂₃)**: dim(Ω₃) - dim(Z₂) = dim(ker ∂₃|Ω₃). Verified exactly at n=5.
-  At surplus=0: ∂₃ is injective on Ω₃, β₃=0, and Ω₃ = DT paths only.
-  At surplus=k: ker(∂₃) has dimension k, which becomes β₃ = k.
+- **Surplus and the next boundary (corrected):** for
+  `s=dim(Ω₃)-dim(Z₂)`, every chain complex satisfies
+
+  ```text
+  s = rk(∂₄)+β₃-β₂.                                  (R1)
+  ```
+
+  In this theorem's verified `β₂=0` range, `s=dim(ker ∂₃)` and hence
+  `s=rk(∂₄)+β₃`.  Thus at `s=0`, `∂₃` is injective and `β₃=0`; at `s=k`,
+  only `dim(ker ∂₃)=k` follows, while
+  `β₃=k-rk(∂₄)`.  The former text omitted `im(∂₄)` and incorrectly identified
+  every surplus kernel class with homology.  At `n=5`, the transitive
+  tournament already has `s=1`, `rk(∂₄)=1`, and `β₂=β₃=0`.
 
 - **rk(∂₂) + rk(∂₃) = dim(Ω₂)**: Equivalent to β₂=0. Verified n=5 exhaustive.
 

@@ -3,7 +3,7 @@
 
 It reconstructs the historical 113-row/13-family wall left by THM-3351,
 which contains the current post-THM-3361 110-row wall, and tests the literal
-source typing of the THM-3360/3372 reflected-pair theorems.
+source typing of the THM-3360/3376 reflected-pair theorems.
 It also tests the cheapest plausible surrogate: call the raw drift pair
 (z1,H) high by its reduced ratio and measure it on the upper-median body-safe
 cell.  Finally it freezes a same-denominator/same-unit height witness showing
@@ -336,7 +336,7 @@ def main():
     print("scope=historical_THM3351_113_row_superset;post_THM3361_current_rows", len(current_indices))
     print("universe_families_rows", len(families), len(indices), "family_sha256", digest(family_packet))
     print("ruler_range", ruler_range)
-    print("THM3360_3372_body_domain_intersection", len(body_intersection), "robust_edge_hist", tuple(sorted(robust_hist.items())))
+    print("THM3360_3376_body_domain_intersection", len(body_intersection), "robust_edge_hist", tuple(sorted(robust_hist.items())))
     print("reflected_first_drift_representations", len(reflected_first))
     print("raw_high_pair_rows", len(records), "upper_median_overlap_hist", tuple(sorted(overlap_hist.items())))
     print("upper_median_mass_type_hist", tuple(sorted(mass_type_hist.items())))

@@ -9,7 +9,7 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-381 (2026-08-14, projected transfer) -- raw high ratios and denominator passports do not retain a located reflected-pair overlap
+## MISTAKE-384 (2026-08-14, projected transfer) -- raw high ratios and denominator passports do not retain a located reflected-pair overlap
 
 - **What failed:** the first post-reflected transfer tried to apply the
   matched-residue high-pair floor to arbitrary projected drifts, first by
@@ -33,7 +33,7 @@ Format per entry:
   observable. A denominator is not a located phase, and a raw drift ratio is
   not the reduced level ratio of a reflected affine ray.
 
-## MISTAKE-380 (2026-08-14, arbitrary residue extension) -- a unit residue change can annihilate a canonical high-pair overlap
+## MISTAKE-383 (2026-08-14, arbitrary residue extension) -- a unit residue change can annihilate a canonical high-pair overlap
 
 - **What failed:** a residue-blind extension treated changing `Lq-e` by a
   small integer `h` as a small geometric perturbation without retaining the
@@ -47,17 +47,22 @@ Format per entry:
   conjugacy gives
   `sigma<=min(1,4(|Delta|+|h|)(1+L/z)/L)`. A fixed Hunter tree survives when
   its old margin exceeds `sum_i(deg_T(i)+1)sigma_i`. Exact shifts
-  `c in {-2,-1,1,2}` pass all `32,840` tested packets. At `c=84` one
-  cross-`K_(3,3)` tree fails, but the unrestricted `K6` tree and literal union
-  still close on every one of the `12,980` packets. The equal-level partition
-  is unchanged; what fails is the sufficiency of restricting Hunter to its
-  cross edges, because within-class physical overlaps can become useful.
+  `c in {-2,-1,1,2}` pass all `32,840` tested packets. Two independent exact
+  censuses of all `1,090,320` packets with `1<=c<=84` show that the restricted
+  cross-`K_(3,3)` certificate is safe through `c=66` and fails at exactly
+  `c=(67,69,80,82,84)`, once at each shift. Every failed packet closes by an
+  unrestricted `K6` tree and has literal union below `6/7`. All five live on
+  the minimum-ruler body and split its invariant phase clusters
+  `{1,3,12}|{2,4,6}` between the two equal-level classes; the rescuing tree
+  uses four within-class edges and one cross bridge.
 - **Reusable rule:** perturb located periodic events in the centered phase
-  coordinate, and transport the whole certificate with its vertex degrees.
-  Edgewise canonical floors and cross-only Hunter certificates are not stable
-  or sufficient objects.
+  coordinate, but rank the joint analytic budget in `|Delta|+|h|` and retain
+  phase-cluster/tree type. The unit witness refutes `|h|` alone, while the
+  `c=84`, `Delta=0` failure refutes phase alone. Edgewise canonical floors and
+  cross-only Hunter certificates are not stable or sufficient objects; when
+  the quotient fails, re-optimize in the full physical overlap graph.
 
-## MISTAKE-379 (2026-08-14, live-canon integration) -- five theorem records retained pre-freeze source hashes after their scripts changed
+## MISTAKE-382 (2026-08-14, live-canon integration) -- five theorem records retained pre-freeze source hashes after their scripts changed
 
 - **What failed:** THM-3360 and THM-3366, together with their results-index
   rows, pinned pre-freeze SHA-256 values for five Python sources.  The stored
@@ -76,7 +81,7 @@ Format per entry:
   hash every declared source from the resulting repository blob.  Matching
   output bytes do not prove that the source/output provenance pair is current.
 
-## MISTAKE-378 (2026-08-14, independent superunit affine tail) -- an uncentered continuum and a collapsed finite/limit turn coordinate hid the superunit chamber
+## MISTAKE-381 (2026-08-14, independent superunit affine tail) -- an uncentered continuum and a collapsed finite/limit turn coordinate hid the superunit chamber
 
 - **What failed:** the first affine-tail continuum compiler integrated the
   second tooth over `[x,x+lambda]`, although the physical convolution is
@@ -113,7 +118,7 @@ Format per entry:
   global `1/p`, finite `T<1` bounds its coefficient by
   `d^2/(1344 omega)`, below the retained conservative term.
 - **Superseding theorem:**
-  [THM-3372](theorems/THM-3372-independent-superunit-affine-tail-and-reflected-residue-closure.md)
+  [THM-3376](theorems/THM-3376-independent-superunit-affine-tail-and-reflected-residue-closure.md)
   uses the centered compiler, the full superunit chamber, both drift factors,
   and the exact finite bridge.  It independently closes the canonical
   reflected-residue level branch, not arbitrary six-drift `k=1` or LRC(14).
@@ -122,6 +127,70 @@ Format per entry:
   translated convolutions, freeze the center before compiling breakpoints;
   then audit every coefficient that depends on the missing coordinate, not
   merely the first one encountered.
+## MISTAKE-380 (2026-08-14, THM-101 surplus interpretation) -- a cycle kernel was identified with homology after omitting the next boundary
+
+- **What failed:** THM-101 and three exploratory `beta2_*` companions said
+  that `s=dim(Omega_3)-dim(Z_2)` becomes `beta_3` when `beta_2=0`.
+  They silently replaced `dim ker(d_3)` by `beta_3` and omitted
+  `im(d_4)`.
+- **Minimal witness / first failed implication:** at `n=5`, tournament
+  `bits=0` has `dim Omega_3=5`, `dim Z_2=4`, `rk(d_4)=1`, and
+  `beta_2=beta_3=0`.  Hence `s=1`, not `beta_3=0`; the surplus kernel is
+  filled from dimension four.
+- **Repair / strongest survivor:** every chain complex satisfies
+  `s=rk(d_4)+beta_3-beta_2`.  Under THM-101's verified `beta_2=0`
+  conclusion, `s=dim ker(d_3)=rk(d_4)+beta_3`; thus `s=0` still implies
+  injectivity and `beta_3=0`, while `s=k` gives only
+  `beta_3=k-rk(d_4)`.  The DT+cancellation filling computation and the
+  `beta_2=0` conclusion are unchanged.
+- **Reusable rule:** a kernel is homology only after quotienting the next
+  boundary.  In dimension `p`, retain `rk(d_(p+1))` whenever a chain-rank
+  statistic is translated into `beta_p`.
+
+## MISTAKE-379 (2026-08-14, THM-300 quadratic signature) -- the first untested staircase layer contributes two negative directions
+
+- **What failed:** finite evidence through `n=8` was extrapolated to the
+  conjecture that the quadratic coefficient matrix has exactly `n-2`
+  negative eigenvalues for every `n>=5`.  The same statement also called
+  the matrix full-rank at `n=5` despite its displayed nullity one.
+- **Minimal witness / first failed implication:** exact one-/two-flip
+  Hamiltonian-path DPs and rational symmetric congruence give inertia
+  `(20+,8-,0)` at `n=9`, versus the claimed seven negative directions.
+  In the THM-299 old/new block split, the seven-tile hypotenuse Schur
+  complement has inertia `(5+,2-)`; the preceding `n=7,8` layers each
+  contributed only one negative direction.
+- **Repair / strongest survivor:** mark THM-300 `REFUTED`.  Exact finite
+  evidence retains full rank for `6<=n<=12`, the old negative count for
+  `5<=n<=8`, and the new pattern `negative=n-1` only for `9<=n<=12`.
+  The latter remains OPEN beyond the audited range.
+- **Reusable rule:** when a nested matrix family suggests constant inertia
+  increment, audit the exact new-layer Schur complement at the first
+  untested size; boundary concentration of eigenvectors does not fix its
+  inertia.
+
+## MISTAKE-378 (2026-08-14, THM-309 Paley cycle design) -- ordered 2-transitivity and trace moments were both overclaimed
+
+- **What failed:** THM-309's proof called the full affine group an
+  automorphism group and invoked 2-transitivity.  Nonsquare multipliers
+  reverse the Paley orientation.  A nearby S24e artifact also used
+  `tr(A^k)/k` as the simple-cycle count beyond its valid short-length range,
+  thereby counting repeated-vertex closed walks as cycles (for example it
+  reported `318` instead of `24` simple 7-cycles in `P_7`).
+- **First failed implication:** the theorem asks for equal incidence of
+  **unordered** vertex pairs, so ordered-pair 2-transitivity was unnecessary.
+  Separately, a closed walk ceases to be forced simple once its length permits
+  repeated directed subcycles; trace data cannot be inserted as `c_k` there.
+- **Repair / strongest survivor:** the square-affine subgroup
+  `{x -> ax+b : a square}` has order `p(p-1)/2` and acts sharply
+  transitively on unordered pairs because exactly one of slopes `a,-a` is a
+  square for `p=3 mod 4`.  It preserves every simple directed cycle, so the
+  cycle multiset is a `2-(p,k,lambda_k)` design for **all** `3<=k<=p`, even
+  as well as odd, with `lambda_k=c_k C(k,2)/C(p,2)`.  The old 5-cycle counts
+  and 3-incidence analysis survive; the S24e long trace-count conservation
+  table is quarantined.
+- **Reusable rule:** match the group action to the incidence being balanced,
+  and distinguish closed walks, primitive necklaces, and simple cycles before
+  transferring a trace formula.
 
 ## MISTAKE-377 (2026-08-12, disconnected affine-ray workload) -- a many-turn skip omitted its short-rotation hypothesis
 

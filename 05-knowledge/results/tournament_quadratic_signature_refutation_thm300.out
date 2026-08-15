@@ -1,0 +1,21 @@
+THM-300 QUADRATIC SIGNATURE EXACT REFUTATION
+n=5;m=6;inertia=(2,3,1);target_negative=3;congruence_pivots=(3,1)
+n=6;m=10;inertia=(6,4,0);target_negative=4;congruence_pivots=(8,1)
+n=7;m=15;inertia=(10,5,0);target_negative=5;congruence_pivots=(13,1)
+n=8;m=21;inertia=(15,6,0);target_negative=6;congruence_pivots=(19,1)
+n=9;m=28;inertia=(20,8,0);target_negative=7;congruence_pivots=(26,1)
+n=10;m=36;inertia=(27,9,0);target_negative=8;congruence_pivots=(34,1)
+n=11;m=45;inertia=(35,10,0);target_negative=9;congruence_pivots=(43,1)
+n=12;m=55;inertia=(44,11,0);target_negative=10;congruence_pivots=(53,1)
+n=7;new_hypotenuse_layer=5;schur_inertia=(4,1,0)
+n=8;new_hypotenuse_layer=6;schur_inertia=(5,1,0)
+n=9;new_hypotenuse_layer=7;schur_inertia=(5,2,0)
+n=10;new_hypotenuse_layer=8;schur_inertia=(7,1,0)
+n=11;new_hypotenuse_layer=9;schur_inertia=(8,1,0)
+n=12;new_hypotenuse_layer=10;schur_inertia=(9,1,0)
+first_negative_count_failure=n9;actual_negative=8;claimed=7
+full_rank_exact_range=n6..12;n5_nullity=1
+surviving_pattern_probe=n9..12_have_negative_n_minus_1;OPEN_beyond_12
+semantic_sha256=60fc4bca9300e5fd220aec78c59e0381f549019ad622b735c0fa235bd15ced7b
+truth_gates=integer_HP_DP+rational_symmetric_congruence;float_literals=0
+all_exact_controls=PASS

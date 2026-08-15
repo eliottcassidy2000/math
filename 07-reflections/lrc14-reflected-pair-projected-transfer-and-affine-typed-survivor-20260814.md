@@ -3,7 +3,7 @@
 Status: **PROVED scoped transfer + FINITE-EXACT + VERIFIED-EXACT**.
 [THM-3360](../01-canon/theorems/THM-3360-uniform-reflected-high-pair-floor-by-admissible-affine-tails.md)
 supplies the reflected high-pair floor for the `k=2` composition;
-[THM-3372](../01-canon/theorems/THM-3372-independent-superunit-affine-tail-and-reflected-residue-closure.md)
+[THM-3376](../01-canon/theorems/THM-3376-independent-superunit-affine-tail-and-reflected-residue-closure.md)
 is an independent weaker-floor route. Direct transfer to the projected wall
 is **REFUTED** before projection. This sidecar changes no live ledger and is
 not an arbitrary projected-sector closure.
@@ -32,7 +32,7 @@ k=2: mu(P_(E,Z))<25/91,
 k=3: mu(P_(E,Z))<36/91.                                  (2)
 ```
 
-The matched-residue source of THM-3360/3372 is much narrower. Its vertices are
+The matched-residue source of THM-3360/3376 is much narrower. Its vertices are
 six pairs
 `(e_i,q_i)` with distinct body labels `e_i in E` and positive levels `q_i`,
 mapped to the reflected drifts
@@ -85,7 +85,7 @@ On that superset:
 
 ```text
 ruler range                                      129360..5045040,
-intersection with the THM-3360/3372 649 bodies                  0,
+intersection with the THM-3360/3376 649 bodies                  0,
 reflected robust-edge count                            15 on 113/113,
 representations 216=qL-e, q>=1, e in E                          0. (8)
 ```
@@ -298,8 +298,8 @@ python3 -O 04-computation/lrc14_reflected_k2_five_residue_heads_scan_20260814.py
 Current SHA-256 values (LF-normalized bytes):
 
 ```text
-0f5d42923fc9bcd48917985d7a709588b1f1ae8beac98cb25d4fbdab453b87b8  transfer audit
-16fb9f59e2e7cc846dfbb95fbca533df45ab53efc292a4c8f33f9f617945b959  transfer output
+3e2ab5103b211608b4d962fda3edccd75406c8907d139654ff762699051fcc91  transfer audit
+17417e80deb5bdb9819a8071068f70f8595f2ebce100690ef6dd1369b53cda62  transfer output
 f92234d91026e93111d81e4514b876c87cb09ce34f88c06b24a6a7fb74cf853c  five-head scan
 6bb99f478e247814bf93aa3557e2df5e91176d067452494aef8bc876324eb2af  five-head output
 ```

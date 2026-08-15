@@ -2,7 +2,7 @@ LRC14 REFLECTED-PAIR PROJECTED TRANSFER EXACT AUDIT
 scope=historical_THM3351_113_row_superset;post_THM3361_current_rows 110
 universe_families_rows 13 113 family_sha256 4207877022697a356026726c37f1650f7d863f38a0981592003e4875d31f21e0
 ruler_range (129360, 5045040)
-THM3360_3372_body_domain_intersection 0 robust_edge_hist ((15, 113),)
+THM3360_3376_body_domain_intersection 0 robust_edge_hist ((15, 113),)
 reflected_first_drift_representations 0
 raw_high_pair_rows 113 upper_median_overlap_hist ((Fraction(0, 1), 108), (Fraction(1, 1), 5))
 upper_median_mass_type_hist ((('empty', 'empty', 'zero'), 69), (('empty', 'partial', 'zero'), 13), (('full', 'empty', 'zero'), 26), (('full', 'full', 'positive'), 5))

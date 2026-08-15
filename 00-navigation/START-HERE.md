@@ -22,7 +22,7 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`.
    THM-3361 leaves ledger/wall/families `372914/110/12` at `z1=216`.
-   THM-3352/3355/3360 close matched residues on all `3,003` bodies; THM-3372
+   THM-3352/3355/3360 close matched residues on all `3,003` bodies; THM-3376
    is independent. THM-3366 leaves `4,056/200,069,517,203` (`k=2`) and
    `1,897/2,548,893,834` (`k=3`). `k=0`, other `k=1` residues, projected
    `k=2,3`, rung, entry, and LRC remain open; THM-3368 is only a Horn tariff.
@@ -56,7 +56,7 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
    atom, current and LRC(14) remain OPEN.
 10. **Tournament structure is operational.** THM-3315 compiles switched walks;
     THM-3359 makes modular supports periodic but loses apex/orientation.
-    THM-3369's skew deletion current detects the sharp `K1/C3` join reversal,
+    THM-3369/3372 add skew/deletion currents and a transitivity variance,
     not full SCC order or time. Static sections/rank-two updates are not tournaments.
 11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352
     separate support, collision tax and q-adic thresholds; THM-2438/2500 give

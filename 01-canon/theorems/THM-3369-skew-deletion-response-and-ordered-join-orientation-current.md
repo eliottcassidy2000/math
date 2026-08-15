@@ -128,7 +128,14 @@ F(t,u)=det(tI-zC_T-uJ)
 ```
 
 The mixed coefficient which chooses one `J` entry and one remaining scalar
-diagonal entry is exactly the sum of the deleted coronal numerators.  Hence
+diagonal entry has the cofactor sign
+
+```text
+partial_t partial_u F(1,0)=-sum_v N_(T-v)(z)
+  =-((n-1)N_T(z)-zN_T'(z)).                            (11a)
+```
+
+The two minus signs therefore cancel, giving
 
 ```text
 sum_v N_(T-v)(z)=(n-1)N_T(z)-zN_T'(z).                  (12)
@@ -271,7 +278,7 @@ source: marked deletion responses plus intrinsic arc signs
 map:    R K R^T
 target: ordered-join composition and one SCC-order hostile
 kept:   the antisymmetric response channel
-lost:   the kernel of the two-coordinate response map, vertex ownership,
+lost:   the kernel of B -> R_T(z) B R_T(w)^T, vertex ownership,
         individual arcs, and full component order
 sidecar:s_T, which supplies H_T and q_T=n*s_T-z*s_T'
 test:   K1 triangleright C3 versus its reverse.            (27)
