@@ -141,10 +141,13 @@ not terminals: the six-completion still makes thirteen clocks.
 The same composition tests the midpoint and quarter-pair dyadic auxiliary
 charts.  It finds no unconditional or parity-conditional support
 contradiction.  The sharp `k=2` hostile has `D=3822`: its two surviving rows
-have unsupported sizes `1530` and `1560`, far above the one-half-clock capacity
-`ceil(3822/7)=546`.  For `k=3`, no post row even enters a base-free rank-five,
-rank-six, or odd rank-seven chart.  Aligned parity is absent from the current
-row keys, so it cannot be silently inferred.
+have unsupported sizes `1530` and `1560`.  The full-order scalar
+`ceil(3822/7)=546` is **not** the arbitrary transverse capacity: the exact
+maximum over every residue modulo `2D` is `1274`, attained by residue `2548`
+of quotient order three.  Both targets still exceed that repaired
+order-sensitive maximum.  For `k=3`, no post row even enters a base-free
+rank-five, rank-six, or odd rank-seven chart.  Aligned parity is absent from
+the current row keys, so it cannot be silently inferred.  See MISTAKE-392.
 
 ## 6. Connection ledger
 

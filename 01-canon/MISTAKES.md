@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-392 (2026-08-15, refined dyadic auxiliary capacity) -- a full-order half-block bound was applied to arbitrary transverse pullbacks
+
+- **What failed:** the first exact-six mutation reflection called
+  `ceil(3822/7)=546` the one-half-clock capacity on the two residual k=2
+  dyadic rows.  That scalar bounds a full-order interval block; it does not
+  bound a lower-order mask pulled back to `3822` sheets.
+- **Minimal witness / first failed implication:** at `Q=3822`, residue
+  `r=2548` has quotient order `Q/gcd(Q,r)=3`.  Its strict half-twist block is
+  the pullback of the nonempty order-three block and has `1274` sheets, so
+  `1274>546`.  The first failed implication was “the ambient modulus controls
+  every block size” instead of descending to the owner's quotient order.
+- **Repair / strongest survivor:** exact enumeration of every transverse
+  residue modulo `2Q` gives maximum block size `1274`, attained by the stated
+  order-three residue.  The two unsupported targets have sizes `1530` and
+  `1560`, so neither can be covered by one auxiliary block even under the
+  repaired sharp capacity.  The refined six-pool counts, zero dyadic-hit
+  verdict, and absence of any LRC(14) terminal are unchanged.  The exact
+  repair is reproduced by
+  `lrc14_refined_six_pool_dyadic_stopping_audit_20260815.py`.
+- **Reusable rule:** for a half-twist residue of quotient order `m`, charge
+  the order-`m` block and its `Q/m` pullback multiplicity.  Never substitute
+  `ceil(Q/7)` for an arbitrary transverse capacity without proving full
+  order.
+
 ## MISTAKE-391 (2026-08-15, zero-cochain rank artifact) -- the indexed output hash did not name the committed transcript
 
 - **What failed:** the results index recorded LF-normalized output SHA-256
