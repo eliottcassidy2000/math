@@ -73,6 +73,22 @@
   `4ac644546e4f81631b5c12a404779397c5c63da67f3e4dd5c1b88da1fa8beda1`.
   No LRC(14) ledger decrement.
 
+- `d5_secondary_h1_descent_defects_thm3431.py` -> matching `.out`
+  [THM-3431 PROVISIONAL / VERIFIED-EXACT].  The degree-13 cyclic cover sends
+  the LRC chart class to the deck defect of its primitive, explicitly
+  `h(j+7)-h(j)=7a`, while a selected JC observer embeds into
+  `H^1_(lambda)(K[lambda])` as `[lambda^(-q_sigma)]`.  The companion checks
+  all twelve nonzero chart steps, `1,092` primitive edges, `14,196` deck
+  cells, `2,028` group-cocycle identities, and `562` selected JC profiles
+  with `7,058` annihilator states.  It also freezes the two-way additive
+  no-go and the lossy bars `[0,1)` versus `[0,q_sigma)`.  Normal and
+  optimized transcripts agree.  Script/output/semantic LF-normalized SHA-256:
+  `9bcd3f10c1741b7328905b31d8401a205a6916b2a0767c3860a8f5a2b45e0ee7` /
+  `41375ee1c22b2ed1c39adf5a6a985896f7fbd976980cb1753d93b69fa39f5b52` /
+  `79f37de16658ac1e755e0acb5640507dba716756d9b3136f378004a4d29bcc21`.
+  No cross-coefficient map, current, LRC(14), or JC(2) follows; independent
+  theorem audit is required before promotion.
+
 - `jc_all_sector_constant_observer_thm3427.py` -> matching `.out`
   [THM-3427 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
   `P=ax+b+g(x)z^d`, the generic sector operator
