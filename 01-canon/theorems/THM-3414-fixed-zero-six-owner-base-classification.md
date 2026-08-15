@@ -3,7 +3,7 @@ id: THM-3414
 title: "Fixed-zero six-owner base classification"
 status: >
   PROVED structural theorem + COMPUTER-ASSISTED PROVED global finite-profile
-  atlas; independent audit requested.  For every q>=2, a fixed-source-centre
+  atlas + INDEPENDENTLY AUDITED.  For every q>=2, a fixed-source-centre
   zero cover of all cyclic sheets by at most six transverse owners exists if
   and only if q is divisible by one of 15,16,18,20,24.  The reverse direction
   is all-q: it uses THM-3408's exhaustive quotient-order cutoff, a globally
@@ -12,7 +12,7 @@ status: >
   arbitrary common-centre, mobile-centre, physical-time, or LRC(14) conclusion
   is claimed.
 source: root-2608-crouzeix-puzzle-2026-08-15
-audit: exact standard-library Fraction simplex with direct post-verification; 368 admissible exceptional pairs, 64 pair-pruning lcm groups, 172 anchor lcm groups, 9 exceptional-family lcm groups, 14940 residual six-exceptional-owner multisets, positive dilation controls, and q21/q22/q102 hostiles; independent audit pending
+audit: exact standard-library Fraction simplex with direct post-verification; 368 admissible exceptional pairs, 64 pair-pruning lcm groups, 172 anchor lcm groups, 9 exceptional-family lcm groups, 14940 residual six-exceptional-owner multisets, positive dilation controls, and q21/q22/q102 hostiles; independent all-m/stratum/multiset/padding/dilation/scope audit and normal/-O replay clean
 depends_on:
   - THM-3408-fixed-zero-additive-order-duality-and-six-core-corridor
   - THM-3401-centered-transverse-sheet-cover-rank-fifteen-through-twenty-eight
@@ -32,7 +32,7 @@ hash_basis: LF-normalized bytes
 # THM-3414 -- fixed-zero six-owner base classification
 
 **PROVED structural theorem + COMPUTER-ASSISTED PROVED global finite-profile
-atlas; independent audit requested.**
+atlas + INDEPENDENTLY AUDITED.**
 
 ## 1. Statement
 
