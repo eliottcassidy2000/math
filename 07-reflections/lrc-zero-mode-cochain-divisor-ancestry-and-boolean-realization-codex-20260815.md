@@ -462,9 +462,24 @@ exact zero-cochain ancestry classification and an exact nonzero-cochain
 tariff without identifying their owner edges.
 
 [THM-3410](../01-canon/theorems/THM-3410-projective-cochain-wedge-ray-tree-tariff-and-residue-scalar-hubs.md)
-is only a `RESERVED / UNPROVED EMPTY STUB`.  The scalar fibres and quadratic
-leakage ladder here are possible inputs to that projective-wedge program, not
-proved dependencies or a promotion of its claims.
+is now **PROVED analytic + PROVED-ELEMENTARY + VERIFIED-EXACT, with independent
+audit requested**.  It writes every realized affine cochain as the integral
+wedge `P=A wedge u`, contracts equal primitive rays to an exact tariff MST, and
+extends the parity ladder to scalar fibres over the ternary and five-colour
+half-grid partitions.  Combining its `a=1` hubs with `(9a)` prices the exact
+rank loss on the entire zero-cochain rank-four support:
+
+```text
+8|q or 9|q, q even:  zero-cochain rank 4 -> half-grid rank 2,
+                      (tau_1,tau_infinity)=(q^2/2,q^2/2);
+9|q, q odd:           zero-cochain rank 4 -> half-grid rank 3,
+                      (tau_1,tau_infinity)=(4q^2/9,2q^2/9).          (12)
+```
+
+These are comparisons of two nested cover predicates, not claims that one
+owner edge realizes both minima.  The projective lift identifies the exact
+integer sidecar erased by the half-grid quotient; it still gives no LRC row
+embedding or ledger decrement.
 
 ## 8. Verification and new frontiers
 
