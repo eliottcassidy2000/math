@@ -1,5 +1,5 @@
 ---
-id: THM-3448
+id: THM-3449
 title: "Noncommuting smooth Hensel pairs: abelian cutoff and Heisenberg orbit law"
 status: RESERVED / UNPROVED EMPTY STUB
 source: root-noncommuting-hensel-heisenberg-2026-08-15
@@ -9,7 +9,7 @@ related:
   - THM-3444-commuting-smooth-hensel-vector-field-lattice-action
 ---
 
-# THM-3448 -- noncommuting smooth Hensel pairs
+# THM-3449 -- noncommuting smooth Hensel pairs
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
