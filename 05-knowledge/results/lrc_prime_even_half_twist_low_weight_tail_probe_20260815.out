@@ -1,0 +1,14 @@
+prime-even half-twist low-weight tail probe
+status=FINITE-EXACT controls; uniform height<=7 lemma OPEN
+H8 formulas:
+  w_AA=2*#{odd x: 4p/21<x<2p/7, 3x=2p (mod 5)}
+  w_BE_3_5=4*#{x: 2p/21<x<p/7, 3x=p (mod 10)}
+  w_BE_5_3=4*#{odd x: 4p/35<x<p/7, 5x=p (mod 6)}
+H8 thresholds: last_AA_w<=8_odd=521 last_BE_3_5_w<=8_odd=601 last_BE_5_3_w<=8_odd=609 last_BE_5_3_w<=8_prime=593
+formula_controls=((401, 8, 8, 8, 2, 2, 2), (521, 8, 8, 12, 2, 2, 2), (547, 10, 8, 12, 2, 2, 2), (571, 12, 12, 8, 2, 2, 2), (593, 12, 12, 8, 2, 2, 2), (601, 12, 8, 12, 2, 2, 2), (607, 12, 12, 12, 2, 2, 2), (1009, 18, 20, 20, 2, 2, 2))
+p601_exact_negative profiles_nodes_branches=(15, 65, 50)
+full_root_scan primes=58 range=(607,997) global_min_positive=12 zero_degrees=(19,31,23) low_edges=0 height_misses=0
+full_root_scan_minimum_histogram=(((12, 12, 12), 14), ((14, 12, 12), 10), ((14, 16, 16), 2), ((16, 12, 12), 4), ((16, 16, 16), 13), ((18, 16, 16), 11), ((18, 20, 20), 2), ((20, 16, 16), 2))
+mod420_height7_candidate_atlas: classes=96 first_prime_range=(607,3319) degrees=(19,31,23) clique=6 equality_cliques_per_class=4 all_equalities=three_complementary_pairs types=A4BE
+semantic_sha256=17411c3f578f369ca6ab424db0db6730b547db5deb598e87fa341da49dd6473b
+script_lf_sha256=4bb0c853fa3bebabf1414d75aa2b43d4b00c22a2b49cbaaac5e06bde5986c4ba

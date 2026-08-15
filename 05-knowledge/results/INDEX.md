@@ -15,6 +15,18 @@
   `834d376ebd73d36329b8ac4853c1d42a07bc84fefe64a7cc5abd73791e694a50` /
   `a446d26482fdcc5ac913ca882efea17fc2cd0603c27223532884d87d6b4cc51a`.
   No LRC transport is claimed, and this candidate is not yet a dependency.
+- `lrc_prime_even_half_twist_low_weight_tail_probe_20260815.py` -> matching
+  `.out` [UNNUMBERED FINITE-EXACT CONTROLS; UNIFORM TAIL LEMMA OPEN].  Exact
+  `A/A,B/E` tangent counts have last prime weight-at-most-eight boundaries
+  `521,601,593`, so all displayed tangents weigh at least `12` for prime
+  `p>=607`.  The `p=601` DFS is negative; full root scans at all `58` primes
+  `607<=p<=997` find no `0<w<=8` edge and no zero ratio above height seven.
+  Controls in all `96` invertible classes modulo `420` give candidate clique
+  number `6`, always the complementary-pair `A^4BE` orbit.  Uniform atlas
+  exhaustion remains OPEN.  Script/output/semantic LF-normalized SHA-256:
+  `4bb0c853fa3bebabf1414d75aa2b43d4b00c22a2b49cbaaac5e06bde5986c4ba` /
+  `a9012981cef620a0eeac6883f6e6cb080272c3d99cb73703a0b45212f9cb9b80` /
+  `17411c3f578f369ca6ab424db0db6730b547db5deb598e87fa341da49dd6473b`.
 
 - `jc_derived_boundary_jet_euler_thm3437.py` -> matching `.out`
   [THM-3437 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  At a repeated
