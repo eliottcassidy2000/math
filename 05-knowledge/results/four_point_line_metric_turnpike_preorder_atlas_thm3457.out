@@ -1,5 +1,5 @@
 THM-3457 EXACT DETERMINISTIC COMPANION
-status=FINITE-EXACT companion; THM-3457 is RESERVED / PROVISIONAL PROOF CANDIDATE
+status=PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
 arithmetic=stdlib Fraction/integer only; every gate uses explicit exceptions
 dependency=01-canon/theorems/THM-3454-fibonacci-selected-u-spine-farey-lorentz-isometry-and-one-tie-edge-order.md
 dependency_lf_sha256=2f55187055b8158f5a99fd154df14beec5c2b6e7a0a4f65bc5995d495be7d058
@@ -60,5 +60,5 @@ arxiv_2505_09814_boundary=XX^T_typing_only;not_an_atlas_dependency_or_proof
 fibonacci_wall=k>=4:gaps=(F[k-2],F[k-1],F[k]),c=a+b,a<b,row=T1
 fibonacci_boundary=k=3:gaps=(1,1,2),row=D1
 non_fibonacci_hostile=gaps=(1,3,4),row=T1,cassini_pell=5
-semantic_sha256=af17508e05e77ff4a81e833f4839f15c0576d3648ba73fac6dd1f8f5ffb86181
+semantic_sha256=a04174188df0edc25bef47c3f67dd5309f28e835519e4efbfa26e3df03c2cb0a
 VERDICT=PASS: exact 25-row atlas, 14 reversal/S4 classes, and 300 labelled signatures certified

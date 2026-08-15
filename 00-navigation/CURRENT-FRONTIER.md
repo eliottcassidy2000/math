@@ -68,11 +68,10 @@ transport and `e9=(-9,+9,QB)`.
 - THM-2058 preserves every fixed lift depth but escapes at `47/113`;
   finite jets/Farey rays fail.
 - THM-3333/3334/3336/3339/3341/3345--3347 type the Gaussian/Farey/Pell
-  U-spine, root cube, signed Gram, and ancestry. THM-3353/3358 compile exact
-  lanes; THM-3356 gives affine shells, THM-3357 the gate Horn rule, and
-  THM-3359/3454/3455 give periodic mass and `U`-ray metric/ranks; origin/time
-  remain. Content, normal unit, order, owner/phase, and mass remain
-  sidecars; no global transduction, LRC row, or JC flux.
+  U-spine, root cube, Gram, and ancestry. THM-3353/3358 compile lanes;
+  THM-3356/3357 give shells/Horn. THM-3359/3454/3455/3457 give periodic mass
+  and static `U`-ray metric/rank/preorder. Origin, content, unit, owner/phase,
+  and time remain sidecars; no global transduction, LRC row, or JC flux.
 - THM-3459 detects mask overlap, but the `q=6` control pair has identical
   masks; the star cochain remains.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;

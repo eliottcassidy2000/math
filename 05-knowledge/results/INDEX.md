@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `four_point_line_metric_turnpike_preorder_atlas_thm3457.py` -> matching
+  `.out` [THM-3457 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Exact rational sign-stratum feasibility classifies the six
+  labelled distances of four ordered line points into `25` positional total
+  preorders: `10/10/4/1` strict/one-tie/two-tie/maximal.  Reversal and abstract
+  `S4` each give `14` classes with three fixed signatures; arbitrary vertex
+  labellings give `300`.  XOR on the weight-two layer of `F_2^4` detects
+  adjacent/opposite edge incidence and proves an opposite tie is necessarily
+  paired.  Rank-one centred Gram controls, the Fibonacci wall, its `k=3`
+  boundary, and the hostile gaps `(1,3,4)` are frozen.
+  Script/output/semantic LF-normalized SHA-256:
+  `1c0f33c69bc3cde0ef9be284b662e7d74e40cc9fbd82d5c35046eb1472e3ed21` /
+  `52e0a0000677b81a6a3a63078b36d3419f994a69d543f7219ffc48100b457008` /
+  `a04174188df0edc25bef47c3f67dd5309f28e835519e4efbfa26e3df03c2cb0a`.
+  No general turnpike reconstruction, RXTX speedup, LRC, Rule 30, or Jacobian
+  consequence follows.
 - `left_permutive_trace_torsor_rule30_thm3456.py` -> matching `.out`
   [THM-3456 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a
   radius-one CA permutive in its left input, the center

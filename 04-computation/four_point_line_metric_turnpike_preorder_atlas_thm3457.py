@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact deterministic companion for reserved THM-3457.
+"""Exact deterministic companion for THM-3457.
 
 The normalized positive gap simplex is cut by five and only five possible
 distance-equality forms.  Completeness is certified without a bounded grid:
@@ -32,7 +32,7 @@ DEPENDENCY_RELATIVE_PATH = (
 EXPECTED_THM3454_LF_SHA256 = (
     "2f55187055b8158f5a99fd154df14beec5c2b6e7a0a4f65bc5995d495be7d058"
 )
-EXPECTED_SEMANTIC_SHA256 = "af17508e05e77ff4a81e833f4839f15c0576d3648ba73fac6dd1f8f5ffb86181"
+EXPECTED_SEMANTIC_SHA256 = "a04174188df0edc25bef47c3f67dd5309f28e835519e4efbfa26e3df03c2cb0a"
 
 EDGE_LABELS = ("01", "12", "23", "02", "13", "03")
 EDGE_INDEX = {label: index for index, label in enumerate(EDGE_LABELS)}
@@ -740,7 +740,7 @@ def main():
 
     semantic_payload = {
         "theorem_id": THEOREM_ID,
-        "scope": "FINITE-EXACT companion; theorem is RESERVED / PROVISIONAL PROOF CANDIDATE",
+        "scope": "FINITE-EXACT companion; theorem is PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED",
         "dependency": {
             "path": DEPENDENCY_RELATIVE_PATH,
             "lf_sha256": dependency_hash,
@@ -841,7 +841,7 @@ def main():
         )
 
     print("THM-3457 EXACT DETERMINISTIC COMPANION")
-    print("status=FINITE-EXACT companion; THM-3457 is RESERVED / PROVISIONAL PROOF CANDIDATE")
+    print("status=PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED")
     print("arithmetic=stdlib Fraction/integer only; every gate uses explicit exceptions")
     print(f"dependency={DEPENDENCY_RELATIVE_PATH}")
     print(f"dependency_lf_sha256={dependency_hash}")
