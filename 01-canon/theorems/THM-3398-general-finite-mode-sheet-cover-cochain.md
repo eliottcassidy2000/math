@@ -26,10 +26,12 @@ artifacts:
   - 05-knowledge/results/lrc14_q8_q14_finite_mode_clutter_probe_20260814.out
   - 04-computation/lrc15_first_effective_triphase_mode_probe_20260814.py
   - 05-knowledge/results/lrc15_first_effective_triphase_mode_probe_20260814.out
+  - 04-computation/lrc_q8_q15_full_physical_clutter_audit_20260815.py
+  - 05-knowledge/results/lrc_q8_q15_full_physical_clutter_audit_20260815.out
 script: 04-computation/lrc_general_finite_mode_sheet_cover_cochain_thm3398.py
 output: 05-knowledge/results/lrc_general_finite_mode_sheet_cover_cochain_thm3398.out
-script_sha256: e175cf790f4311bd97194c98cdf85214585d167e6fea5ee451377b49daaa1fd7
-output_sha256: 13c476b83b56db4afda9ea25c85827129d7d30bed3c844eb2583003199c1192a
+script_sha256: 82929cbf6903701533c1b1f6ebed143e5c8f9edc570dfe2895cf8db70e478da9
+output_sha256: ab25331039813f8c83626a66d0d0d8157e8b3826a76fccc690452a2cdad3169b
 semantic_sha256: b6d3663a25b45b732d4acc597dc2772a5adfd9860934dab7a26c4174f268f6ff
 hash_basis: LF-normalized bytes
 ---
@@ -398,16 +400,20 @@ sidecar that distinguishes them.
 
 ## 8. Verification and scope
 
-Two independently developed finite artifacts now supply convergence controls
-without entering the proof dependencies.  The `q=8,...,14` compiler
+Three independently developed finite artifacts now supply convergence
+controls without entering the proof dependencies.  The `q=8,...,14` compiler
 reconstructs the literal THM-3387 slices by independent event and mode routes,
-with minimal-edge counts `(32,22,18,0,8,0,0)`, exact row vector
-`(1152,1205,1269,1287,1271,1287,1287)`, and no new core rescue.  The `q=15`
-boundary model finds no cover through rank five, exactly `157` minimal
-rank-six edges, and `155` that genuinely require a three-phase mode.  Its
-canonical edge `{1,2,3,4,5,7}` has coincident centres and zero cochain; private
-unit sheets prove that domino submodes cannot replace its trimodes.  Both
-artifacts are **FINITE-EXACT** and outside any new LRC(14) ledger decrement.
+with **rank-at-most-five** minimal-edge counts `(32,22,18,0,8,0,0)`, exact row
+vector `(1152,1205,1269,1287,1271,1287,1287)`, and no new core rescue.  The
+`q=15` boundary model finds no cover through rank five, exactly `157` minimal
+rank-six edges, and `155` that require at least one three-phase mode.  For its
+fixed canonical edge `{1,2,3,4,5,7}`, independent all-witness minimization
+confirms that all four unit owners need trimodes; two other rank-six edges are
+domino-sufficient.  A mode-independent full-subset audit finds higher-rank
+physical edges at every `q=8,...,15`, correcting the former global-looking
+profile labels while leaving all low-rank counts and row consequences intact.
+All three artifacts are **FINITE-EXACT** and outside any new LRC(14) ledger
+decrement.
 
 The standard-library theorem companion performs the following exact checks.
 

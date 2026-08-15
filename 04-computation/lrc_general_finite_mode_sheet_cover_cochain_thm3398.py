@@ -34,9 +34,9 @@ DEPENDENCY_PINS = {
     "05-knowledge/results/lrc14_small_sheet_typed_cover_star_cochain_thm3395.out":
         "f7ed05e16fdd3660741aa8a79600cf9920bbebd8087c8d25a252ecca0dbc1ce5",
     "04-computation/lrc14_q8_domino_mode_clutter_probe_20260814.py":
-        "cc0fd75c57d177dd2da396ff0ac2f6cb5777abcc33a1e1aa911248385812529e",
+        "3e523a2ff8cbd6329782347c56fae2d8519a161c3d127697ca452f3891890b9c",
     "05-knowledge/results/lrc14_q8_domino_mode_clutter_probe_20260814.out":
-        "346458020b5568708eb0198966285157401f0ea862cbd6009ea011cec10f420d",
+        "0f5a421205bc559c8f12dce8462b4d570fcffba0e602740d1ea66c52cd84d045",
 }
 
 EXPECTED_LOCAL_SUMMARY = (
