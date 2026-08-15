@@ -10,7 +10,9 @@ an abstract zero-centre cover for every q>=15 from prime-kernel modes and one
 unit trimode per sign class.
 
 This is an unnumbered PROVED-ELEMENTARY / FINITE-EXACT complement to THM-3401,
-not an alternate reading of its fixed-zero rank.
+not an alternate reading of its fixed-zero rank.  MISTAKE-384 records the
+former prose-level identification of fixed zero with the whole zero-cochain
+locus; the theorem's precise ranks and proof are unchanged.
 Runtime gates survive python -O.
 """
 
@@ -45,6 +47,21 @@ PINNED = (
         "ab25331039813f8c83626a66d0d0d8157e8b3826a76fccc690452a2cdad3169b",
     ),
     (
+        "THM-3401",
+        ROOT / "01-canon/theorems/THM-3401-centered-transverse-sheet-cover-rank-fifteen-through-twenty-eight.md",
+        "dae088cbda12fb64d24f84ab26a6879e94939e04cb03601d8fb996a48c077716",
+    ),
+    (
+        "THM-3401-script",
+        ROOT / "04-computation/lrc_centered_transverse_sheet_cover_rank_thm3401.py",
+        "fff146868de4b1ec5993ed404fca4200e8e3eac47a7cb902ff51d559eef228e0",
+    ),
+    (
+        "THM-3401-output",
+        ROOT / "05-knowledge/results/lrc_centered_transverse_sheet_cover_rank_thm3401.out",
+        "12f2cf337c982068c8cfa0cb351a2772f05e55c1be18df4d0414f9a7251327dd",
+    ),
+    (
         "full-q8-q15-script",
         ROOT / "04-computation/lrc_q8_q15_full_physical_clutter_audit_20260815.py",
         "e54b77eeae05484cbbfacd904e850815f7e78a5e3306f21ad87a68ffbfae9e2e",
@@ -72,7 +89,23 @@ EXPECTED_MOBILE_COMMON_CENTRE_RANKS = (
     (27, 9),
     (28, 8),
 )
-EXPECTED_SEMANTIC_DIGEST = "f28b89e374359f1ddca92bf46b975c46fe0003520e2b76256b5ac10dd4f4a38d"
+EXPECTED_FIXED_ZERO_RANKS = (
+    (15, 6),
+    (16, 5),
+    (17, 8),
+    (18, 5),
+    (19, 9),
+    (20, 6),
+    (21, 8),
+    (22, 7),
+    (23, 11),
+    (24, 6),
+    (25, 11),
+    (26, 8),
+    (27, 10),
+    (28, 8),
+)
+EXPECTED_SEMANTIC_DIGEST = "a9a06cdc130ec2eb1d8292166fd1e4ca27f16b4b0a3210821b7c976d2464a467"
 
 
 def require(condition, detail):
@@ -231,7 +264,8 @@ def mobile_common_centre_rank(module, q):
     full = (1 << q) - 1
     atlas = mobile_common_centre_atlas(module, q, owners)
     best = len(owners) + 1
-    certificates = []
+    maximalized_certificates = []
+    cover_capable_centres = []
 
     for centre in sorted(atlas):
         owner_modes = atlas[centre]
@@ -244,6 +278,7 @@ def mobile_common_centre_rank(module, q):
             all_available |= mask
         if all_available != full:
             continue
+        cover_capable_centres.append(centre)
         available = tuple(sorted(masks))
         for size in range(1, min(best, len(available)) + 1):
             found_at_size = []
@@ -256,10 +291,10 @@ def mobile_common_centre_rank(module, q):
             if found_at_size:
                 if size < best:
                     best = size
-                    certificates = []
+                    maximalized_certificates = []
                 if size == best:
                     for speeds in found_at_size:
-                        certificates.append(
+                        maximalized_certificates.append(
                             (
                                 centre,
                                 speeds,
@@ -278,10 +313,49 @@ def mobile_common_centre_rank(module, q):
                 break
 
     require(best <= len(owners), (q, "no mobile common-centre cover"))
-    certificates = tuple(sorted(set(certificates), key=repr))
-    require(all(len(item[1]) == best for item in certificates), (q, "certificate rank"))
-    canonical = certificates[0]
-    return q, best, len(certificates), canonical, tuple(sorted({item[1] for item in certificates}))
+    maximalized_certificates = tuple(sorted(set(maximalized_certificates), key=repr))
+    require(
+        all(len(item[1]) == best for item in maximalized_certificates),
+        (q, "certificate rank"),
+    )
+    canonical = maximalized_certificates[0]
+    cover_capable_twists = tuple(
+        sorted({Fraction(q) * centre % 1 for centre in cover_capable_centres})
+    )
+    minimum_twists = tuple(
+        sorted({Fraction(q) * item[0] % 1 for item in maximalized_certificates})
+    )
+    return (
+        q,
+        best,
+        len(maximalized_certificates),
+        canonical,
+        tuple(sorted({item[1] for item in maximalized_certificates})),
+        cover_capable_twists,
+        minimum_twists,
+    )
+
+
+def common_centre_witness(module, q, centre, speeds):
+    atlas = mobile_common_centre_atlas(module, q, speeds)
+    require(centre in atlas, (q, centre, "missing centre"))
+    require(all(speed in atlas[centre] for speed in speeds), (q, centre, speeds))
+    modes = tuple(atlas[centre][speed] for speed in speeds)
+    require(set().union(*(set(mode[0]) for mode in modes)) == set(range(q)), (q, "cover"))
+    require(
+        all(
+            0 in module.gap_values(q, speeds[left], speeds[right], modes[left], modes[right])
+            for left, right in combinations(range(len(speeds)), 2)
+        ),
+        (q, "nonzero cochain"),
+    )
+    return (
+        q,
+        centre,
+        speeds,
+        tuple(tuple(sorted(mode[0])) for mode in modes),
+        tuple((int(mode[1]), int(mode[2]), int(mode[3]), int(mode[4])) for mode in modes),
+    )
 
 
 def physical_edges_at_rank(module, q, owners, rank):
@@ -336,34 +410,56 @@ def main():
     require(crt_records[3][1] == (1, 5, 6, 7, 9), crt_records[3])
 
     common_centre_records = tuple(mobile_common_centre_rank(module, q) for q in range(15, 29))
-    common_centre_ranks = tuple((q, rank) for q, rank, _, _, _ in common_centre_records)
+    common_centre_ranks = tuple((q, rank) for q, rank, _, _, _, _, _ in common_centre_records)
     require(
         common_centre_ranks == EXPECTED_MOBILE_COMMON_CENTRE_RANKS,
         ("mobile common-centre ranks", common_centre_ranks),
     )
 
-    speed_sets = {q: sets for q, _, _, _, sets in common_centre_records}
+    speed_sets = {q: sets for q, _, _, _, sets, _, _ in common_centre_records}
     require((1, 2, 3, 4, 5, 7) in speed_sets[15], speed_sets[15])
     require((2, 6, 10, 14) in speed_sets[16], speed_sets[16])
     require((2, 10, 12, 14) in speed_sets[18], speed_sets[18])
 
     crt_q15_q28 = tuple((record[0], record[3]) for record in crt_records[:14])
+    require(
+        crt_q15_q28 == EXPECTED_FIXED_ZERO_RANKS,
+        ("THM-3401 fixed-zero ranks", crt_q15_q28),
+    )
     savings = tuple(
         (q, crt_rank - common_centre_rank_value)
         for (q, crt_rank), (_, common_centre_rank_value) in zip(crt_q15_q28, common_centre_ranks)
     )
     compression_support = tuple(q for q, saving in savings if saving)
+    twist_profiles = tuple(
+        (q, cover_twists, minimum_twists)
+        for q, _, _, _, _, cover_twists, minimum_twists in common_centre_records
+    )
+    require(
+        all(cover_twists == (Fraction(0), Fraction(1, 2)) for _, cover_twists, _ in twist_profiles),
+        ("cover-capable twists", twist_profiles),
+    )
+    require(
+        all(minimum_twists == (Fraction(1, 2),) for q, _, minimum_twists in twist_profiles if q in compression_support),
+        ("strict-gap minimum twists", twist_profiles),
+    )
     harmonic_support_mass = sum((Fraction(1, q) for q in compression_support), Fraction(0))
     harmonic_savings_mass = sum(
         (Fraction(saving, q) for q, saving in savings), Fraction(0)
     )
     canonical_excesses = tuple(
         (q, sum(map(len, canonical[2])) - q)
-        for q, _, _, canonical, _ in common_centre_records
+        for q, _, _, canonical, _, _, _ in common_centre_records
     )
     perfect_partition_support = tuple(q for q, excess in canonical_excesses if excess == 0)
     rank_four_support = tuple(q for q, rank in common_centre_ranks if rank == 4)
     rank_six_support = tuple(q for q, rank in common_centre_ranks if rank == 6)
+
+    outside_pool_controls = (
+        common_centre_witness(module, 25, Fraction(1, 50), (1, 9, 10, 11, 19, 21)),
+        common_centre_witness(module, 27, Fraction(1, 54), (3, 15, 18, 21)),
+    )
+    require(all(any(speed > 14 for speed in row[2]) for row in outside_pool_controls), outside_pool_controls)
 
     q15_physical_rank6 = physical_edges_at_rank(module, 15, tuple(range(1, 15)), 6)
     q15_physical_digest = sha256(repr(q15_physical_rank6).encode("ascii")).hexdigest()
@@ -412,7 +508,10 @@ def main():
 
     semantic = ExactDigest()
     semantic.add(("crt", crt_records))
+    semantic.add(("fixed_zero", EXPECTED_FIXED_ZERO_RANKS))
     semantic.add(("mobile_common_centre", common_centre_records))
+    semantic.add(("twist_profiles", twist_profiles))
+    semantic.add(("outside_pool_controls", outside_pool_controls))
     semantic.add(("savings", savings))
     semantic.add(("harmonic", compression_support, harmonic_support_mass, harmonic_savings_mass))
     semantic.add(("partition", canonical_excesses, perfect_partition_support, rank_four_support, rank_six_support))
@@ -430,21 +529,23 @@ def main():
     print("LRC ZERO-CENTRE CRT AND MOBILE COMMON-CENTRE RANK EXACT PROBE")
     print(f"source_sha256_lf={lf_hash(source)}")
     print(f"dependency_sha256_lf={tuple((name, expected) for name, _, expected in PINNED)}")
-    print("status=PROVED-ELEMENTARY zero-centre CRT upper cover for every q>=15;FINITE-EXACT mobile_common_centre_rank_q15..28;unnumbered_complement_to_THM3401")
+    print("status=PROVED-ELEMENTARY zero-centre CRT upper cover for every q>=15;FINITE-EXACT mobile_common_centre_rank_owner_pool_1..14_q15..28;MISTAKE384_fixed_zero_scope_repair;unnumbered_complement_to_THM3401")
     print("mobile_common_centre_definition=one_selected_mode_per_owner;mode_centre_lattices_share_arbitrary_c;blocks_cover_Zmodq;not_fixed_source_time_zero")
     print("crt=one_kernel_owner_q/p_per_prime_divisor_plus_one_unit_triphase_per_unit_sign_class;all_h=0;all_pij=0")
     print("crt_rank=omega(q)+phi(q)/2_for_composite_q;phi(q)/2_for_prime_q;verified_q15..100")
-    print(f"crt_ranks_q15_q28={crt_q15_q28}")
-    print(f"mobile_common_centre_ranks_q15_q28={common_centre_ranks}")
-    print(f"rank_savings_from_zero_centre_CRT_upper={savings}")
+    print(f"fixed_zero_ranks_q15_q28={crt_q15_q28}")
+    print(f"mobile_common_centre_ranks_owner_pool_1..14_q15_q28={common_centre_ranks}")
+    print(f"fixed_zero_minus_mobile_rank_gap={savings}")
+    print(f"twist_profiles_qc_mod1=(q,cover_capable_twists,minimum_twists)={twist_profiles}")
+    print(f"outside_owner_pool_hostiles={outside_pool_controls}")
     print(f"compression_support={compression_support};harmonic_support_mass={harmonic_support_mass};harmonic_savings_mass={harmonic_savings_mass}")
     print(f"canonical_block_excesses={canonical_excesses};perfect_partition_support={perfect_partition_support};rank4_support={rank_four_support};rank6_support={rank_six_support}")
     print(f"q15_rank6_physical_vs_mobile_common_centre=157_vs_{len(q15_common_centre_sets)};common_centre_gcd_profile={q15_common_centre_gcd_profile};unique_positive_cochain_edge={exceptional_profile}")
-    for q, rank, count, canonical, speed_sets_at_q in common_centre_records:
+    for q, rank, count, canonical, speed_sets_at_q, cover_twists, minimum_twists in common_centre_records:
         speed_set_digest = sha256(repr(speed_sets_at_q).encode("ascii")).hexdigest()
-        print(f"q={q};mobile_common_centre_rank={rank};certificate_count={count};speed_set_count={len(speed_sets_at_q)};speed_set_sha256={speed_set_digest};canonical={canonical}")
+        print(f"q={q};mobile_common_centre_rank_owner_pool_1..14={rank};maximalized_certificate_count={count};speed_set_count={len(speed_sets_at_q)};cover_capable_twists={cover_twists};minimum_twists={minimum_twists};speed_set_sha256={speed_set_digest};canonical={canonical}")
     print("dilation_controls=q8_to_q16_(1,3,5,7)->(2,6,10,14);q9_to_q18_(1,5,6,7)->(2,10,12,14)")
-    print("scope=literal_owner_pool_1..14_for_mobile_common_centre_minima;abstract_positive_owners_for_general_CRT;THM3401_is_distinct_fixed_zero_slice;no_core_rescue_or_LRC14_ledger_consequence")
+    print("scope=literal_owner_pool_1..14_for_mobile_common_centre_minima;abstract_positive_owners_for_general_CRT;THM3401_is_distinct_fixed_zero_subslice_of_zero_cochains;no_core_rescue_or_LRC14_ledger_consequence")
     print(f"semantic_sha256={digest}")
     print("verdict=PASS")
 

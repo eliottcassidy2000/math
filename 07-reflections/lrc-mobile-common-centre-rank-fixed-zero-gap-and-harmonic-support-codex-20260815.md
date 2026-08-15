@@ -43,12 +43,13 @@ c belongs to every L_i for some rational c,
 the selected sheet blocks cover Z/qZ.                 (4)
 ```
 
-Taking every `x_i=c` makes every `p_ij=0`.  Let `r_c(q)` be the minimum
-number of owners in `(4)`, with owners restricted to `{1,...,14}` in the
-finite experiment.  Fixed zero is one allowed centre, so
+Taking every `x_i=c` makes every `p_ij=0`.  Let
+`r_mob^[14](q)` be the minimum number of owners in `(4)` with owners
+restricted to `{1,...,14}`.  The superscript is load-bearing.  Fixed zero is
+one allowed centre, so
 
 ```text
-r_c(q)<=r_0(q).                                      (5)
+r_mob^[14](q)<=r_0(q).                               (5)
 ```
 
 The converse identification is false.  Translating a physical time `c` to
@@ -78,7 +79,7 @@ The live concept board is:
 4. prime kernels versus longer symmetric blocks;
 5. dilation as a degree-graded branch transplant;
 6. all-tie block clutters of owner size four and six;
-7. harmonic support of the strict gap `r_0-r_c`.
+7. harmonic support of the strict gap `r_0-r_mob^[14]`.
 
 ## 2. The zero-centre CRT construction
 
@@ -122,7 +123,7 @@ largest block at each owner-centre pair (the blocks form an inclusion chain),
 and exhausts owner subsets in increasing size at every common centre.  It
 therefore computes `(4)` exactly, rather than sampling source times.
 
-| `q` | fixed-zero `r_0` | mobile `r_c` | gap | canonical mobile owners |
+| `q` | fixed-zero `r_0` | capped mobile `r_mob^[14]` | gap | canonical mobile owners |
 |---:|---:|---:|---:|---|
 | 15 | 6 | 6 | 0 | `(1,2,3,4,5,7)` |
 | 16 | 5 | 4 | 1 | `(2,6,10,14)` |
@@ -152,6 +153,24 @@ C={16,18,22,23,25,27}.                               (12)
 ```
 
 This is the decisive separation between fixed-zero and zero-cochain rank.
+An independent formula-level atlas also classifies the surviving sheet-gauge
+twist
+
+```text
+theta=qc mod 1.                                      (12a)
+```
+
+For every cover-capable exact centre in the capped `q=15,...,28` atlas,
+`theta` is either zero or `1/2`; every strict improvement in `(12)` occurs
+only at `theta=1/2`.  Thus this range has an exact Boolean twist carrier, but
+the block/mode sidecar is still needed to recover rank.
+
+The owner cap cannot be dropped.  At `q=25,c=1/50`, owners
+`(1,9,10,11,19,21)` give a six-owner partition, below the capped value seven;
+at `q=27,c=1/54`, owners `(3,15,18,21)` give a four-owner partition, below
+the capped value nine.  Both are exact hostile controls.  At fixed zero,
+speed types reduce modulo `q`; at half twist they reduce only modulo `2q`, so
+the representatives `1,...,14` cease to be exhaustive.
 
 ### 3.1 Dilation branch transplants
 
@@ -185,7 +204,7 @@ carry disjoint blocks of sizes `(4,3,4,4,4,4)`.  They partition all 23
 sheets.  Thus, independently of the exhaustive search,
 
 ```text
-r_c(23)=6.                                           (16)
+r_mob(23)=6.                                         (16)
 ```
 
 This is five below `r_0(23)=11`.  The canonical mobile certificates are
@@ -238,7 +257,7 @@ the strict-gap support `(12)` has exact masses
 
 ```text
 sum_(q in C) 1/q                 = 776071/2732400,
-sum_(15<=q<=28) (r_0(q)-r_c(q))/q
+sum_(15<=q<=28) (r_0(q)-r_mob^[14](q))/q
                                     = 1579159/2732400. (20)
 ```
 
@@ -284,7 +303,7 @@ in the results index and stored output after replay.
 The cheapest next decisive tests are:
 
 1. an independent implementation of the mobile centre atlas;
-2. physical rank versus `r_c` for all `q=16,...,28`;
+2. physical rank versus `r_mob^[14]` for all `q=16,...,28`;
 3. classification of perfect mobile partitions beyond `q=23`;
 4. exact optimization of `(21)` on the exceptional `q=15` edge;
 5. an all-owner continuation beyond 28, separated from the literal cap.

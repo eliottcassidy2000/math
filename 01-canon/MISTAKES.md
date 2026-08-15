@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-384 (2026-08-15, THM-3401 scope prose) -- fixed source centre zero was identified with the entire zero-cochain locus
+
+- **What failed:** THM-3401's precise statement and proof correctly compute
+  the cover rank at physical source time `t=0`, but its status and final scope
+  sentence called this “equivalently the zero-cochain slice.”  In THM-3398,
+  `p_ij=0` says that the selected centre lifts are equal to one common
+  rational `c`; it does not force the surviving additive gauge `c` to vanish.
+- **Minimal witness / first failed implication:** at `q=16`, owners
+  `(2,6,10,14)` have selected blocks
+  `(0,7,8,15)`, `(2,5,10,13)`, `(1,6,9,14)`, and `(3,4,11,12)` at common
+  centre `c=1/32`.  They partition all sheets and every affine cochain value
+  is zero, so the mobile zero-cochain rank is four.  THM-3401 proves the
+  fixed-zero rank is five.  Translating `c` to zero would shift a common
+  sheet label by `qc=1/2`, which is not a permutation of `Z/16Z`.
+- **Repair / strongest survivor:** THM-3401 is now consistently labelled a
+  **fixed-source-centre-zero** theorem, a proper sub-slice of the zero-cochain
+  locus.  Its statement, classification, ranks, boundary theorems, script,
+  output, and semantic digest are unchanged.  The independent mobile
+  common-centre atlas on owners `1,...,14` gives ranks
+  `(6,4,8,4,9,6,8,6,6,6,7,8,9,8)` for `q=15,...,28`, strictly below the
+  fixed-zero ranks exactly at `{16,18,22,23,25,27}`.
+- **Reusable rule:** a vanishing difference cochain kills relative
+  coordinates, not a common additive gauge.  Before normalizing that gauge,
+  verify that the induced translation acts on the retained labelled fibre;
+  here it is a common cyclic sheet relabelling only when `qc` is integral.
+
 ## MISTAKE-383 (2026-08-15, q=8--15 finite-mode probes) -- a rank-bounded edge list was used to print a global-looking profile
 
 - **What failed:** the q=8 and q=8--14 probes enumerated minimal physical

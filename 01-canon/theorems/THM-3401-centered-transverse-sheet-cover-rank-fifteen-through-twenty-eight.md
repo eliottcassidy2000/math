@@ -5,8 +5,9 @@ status: >
   PROVED exact rank formula for every q=15,...,28 plus sharp q=14 and q=29
   boundary theorems; VERIFIED-EXACT by a self-contained literal classifier,
   construction audit, and independent finite set-cover search;
-  INDEPENDENTLY AUDITED.  This is a common-centre/zero-cochain theorem only
-  and gives no LRC(14) decrement.
+  INDEPENDENTLY AUDITED.  This is a fixed-source-centre-zero theorem, a
+  proper sub-slice of the zero-cochain locus after MISTAKE-384, and gives no
+  LRC(14) decrement.
 source: root-2608-centered-sheet-rank-2026-08-15
 audit: self-contained arithmetic proof; 328 general quotient-block checks for q=14,...,29; all 287 transverse residue owners for q=15,...,28; 122 construction/irredundancy checks; 9828 literal set-cover subsets; q14 strict noncover, 24 q28 endpoint incidences, and q29 C14 edge-cover boundary; independent proof/type/strict-endpoint/cycle/replay/hash-seed audit complete
 depends_on:
@@ -60,6 +61,14 @@ The exact values are
 q:       15 16 17 18 19 20 21 22 23 24 25 26 27 28
 r_0(q):   6  5  8  5  9  6  8  7 11  6 11  8 10  8. (4)
 ```
+
+**Gauge correction (MISTAKE-384).**  Fixed source centre zero implies that
+all THM-3398 affine gaps vanish, but the converse only puts all centre lifts
+at one arbitrary common rational `c`.  It does not force `c=0`.  Translating
+that centre to zero induces a common cyclic sheet relabelling only when `qc`
+is integral.  Thus this theorem computes the fixed-zero rank `r_0`, not the
+rank on the entire zero-cochain locus.  Its statement and proof below were
+always fixed at zero and are unchanged by this typing repair.
 
 The interval is sharp in both directions.  At `q=14` no transverse
 common-centre cover exists.  At `q=29` a transverse common-centre cover does
@@ -352,7 +361,8 @@ depends on that census.  Proving or refuting the reverse implication requires
 the full short-block quotient model `(6b)`, because the unit/nonunit collapse
 used in `(8)`--`(10)` ends at 28.
 
-This theorem concerns only common centre zero, equivalently the zero-cochain
-slice of THM-3398.  It destroys all nonzero affine centre information.  It
-does not classify the full finite-mode clutter, decide any nonzero-cochain
-cover, decrement the refined ledger, or prove LRC(14).
+This theorem concerns only common source centre zero, a fixed-gauge
+sub-slice of THM-3398's zero-cochain locus.  It does not classify covers at a
+mobile nonzero common centre, the full finite-mode clutter, or any
+nonzero-cochain cover; it does not decrement the refined ledger or prove
+LRC(14).
