@@ -123,7 +123,7 @@ Format per entry:
   global `1/p`, finite `T<1` bounds its coefficient by
   `d^2/(1344 omega)`, below the retained conservative term.
 - **Superseding theorem:**
-  [THM-3382](theorems/THM-3382-independent-superunit-affine-tail-and-reflected-residue-closure.md)
+  [THM-3384](theorems/THM-3384-independent-superunit-affine-tail-and-reflected-residue-closure.md)
   uses the centered compiler, the full superunit chamber, both drift factors,
   and the exact finite bridge.  It independently closes the canonical
   reflected-residue level branch, not arbitrary six-drift `k=1` or LRC(14).

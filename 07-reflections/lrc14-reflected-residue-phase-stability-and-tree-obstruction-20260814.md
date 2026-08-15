@@ -13,7 +13,7 @@ This is not a closure of arbitrary `k=1`, other residue packets, or LRC(14).
 
 [THM-3360](../01-canon/theorems/THM-3360-uniform-reflected-high-pair-floor-by-admissible-affine-tails.md)
 proves, and
-[THM-3382](../01-canon/theorems/THM-3382-independent-superunit-affine-tail-and-reflected-residue-closure.md)
+[THM-3384](../01-canon/theorems/THM-3384-independent-superunit-affine-tail-and-reflected-residue-closure.md)
 independently weakens, the matched-residue pair floor: on each of the `649`
 upper-median bodies, every canonical reflected high pair
 

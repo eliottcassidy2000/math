@@ -3,7 +3,7 @@
 Status: PROVED structural/analytic reductions + VERIFIED-EXACT finite
 residual. **HISTORICAL FRONTIER:** THM-3355 subsequently completed the branch
 by weighted horn trees, THM-3360 proved the stronger uniform `1/294` pair
-floor, and THM-3382 supplied an independent centered-superunit affine-tail
+floor, and THM-3384 supplied an independent centered-superunit affine-tail
 proof. This file preserves the route into those closures; statements below
 that call the disconnected or affine branch open are superseded.
 
@@ -146,4 +146,4 @@ closes them. Hence the disconnected-low branch is now closed. MISTAKE-377
 also records that the old many-turn routing omitted `9|c|<=p`; after repair
 the honest affine residual is `8,079,264` occurrences. At that checkpoint the
 affine carrier inequalities remained an optional open sidecar. THM-3360 and
-THM-3382 subsequently closed them by independent exact tail certificates.
+THM-3384 subsequently closed them by independent exact tail certificates.

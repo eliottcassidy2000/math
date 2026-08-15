@@ -18,7 +18,7 @@ depends_on: []
 related:
   - THM-3355-disconnected-low-affine-tail-and-reflected-branch-closure
   - THM-3360-uniform-reflected-high-pair-floor-by-admissible-affine-tails
-  - THM-3382-independent-superunit-affine-tail-and-reflected-residue-closure
+  - THM-3384-independent-superunit-affine-tail-and-reflected-residue-closure
 script: 04-computation/lrc14_reflected_residue_phase_stability_20260814.py
 output: 05-knowledge/results/lrc14_reflected_residue_phase_stability_20260814.out
 script_sha256: fedaa46451ef1582e9d6a472e4996380ad08060810c1cf2642c4b9121ce3f383

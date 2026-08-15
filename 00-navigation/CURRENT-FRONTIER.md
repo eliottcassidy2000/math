@@ -28,7 +28,7 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 Direct frontier: `<=6`; projected caps `1579/216`. At `z1=216`, THM-3378,
 after THM-3361's three `L720720` rows, leaves ledger/wall/families
 `372913/109/12`. THM-3352/3355 close matched residues; THM-3360 gives the
-`1/294` edge floor and THM-3382 an independent `>Dmax/5` proof. With
+`1/294` edge floor and THM-3384 an independent `>Dmax/5` proof. With
 same-level edges, `z_e=q_eL-e` closes on all `3,003` bodies. Open: `k=0`,
 other `k=1` residues, projected `k=2,3`, rung, entry, and LRC; screens are not
 covers. THM-3356 gives determinant shells. THM-3366 leaves
