@@ -5,7 +5,9 @@
 [THM-3405](../01-canon/theorems/THM-3405-common-centre-gcd-gauge-and-boolean-half-twist.md);
 PROVED-ELEMENTARY universal rank floor four, primitive rank four exactly at
 half-twist quotients eight and nine, and global rank four iff the sheet degree
-is divisible by eight or nine;
+is divisible by eight or nine; [THM-3415](../01-canon/theorems/THM-3415-zero-mode-cochain-global-rank-five-support.md)
+proves, downstream of THM-3408's COMPUTER-ASSISTED PROVED cutoff, global rank
+five iff `(10|q or 12|q)` while `8` and `9` do not divide `q`;
 FINITE-EXACT unrestricted positive-transverse rank table for `15<=q<=28`,
 with independent union-state and exhaustive-combination solvers and literal
 witness replay.  No LRC(14) ledger decrement.
@@ -29,6 +31,7 @@ The live concept board is:
 | primitive cover | sheet bitmask plus prime breakers | gcd-one realizability | set union | literal positive lifts |
 | physical half-grid cover | divisor chart | block rank | affine normalization | selected-mode centre/cochain |
 | rank-four witness | four-block clutter | full union plus gcd gate | dilation | no intrinsic pair orientation |
+| rank-five atom | anchor plus four disjoint petals | OR=XOR on sheets | divisor pullback | prime-breaker sidecar |
 
 The exact connection contract is:
 
@@ -481,6 +484,22 @@ owner edge realizes both minima.  The projective lift identifies the exact
 integer sidecar erased by the half-grid quotient; it still gives no LRC row
 embedding or ledger decrement.
 
+[THM-3415](../01-canon/theorems/THM-3415-zero-mode-cochain-global-rank-five-support.md)
+closes the next global grade:
+
+```text
+rho_ZMC(q)=5 iff (10|q or 12|q) and 8 not|q and 9 not|q.
+```
+
+Its atoms at `Q=10,12` are disjoint pointed partitions, so OR and XOR agree
+on sheet masks after retaining one anchor plus four petals; no augmented
+prime-breaker XOR statement is made.  The support is
+32 classes modulo 360, with natural and harmonic density `4/45`; among Farey
+vertices its denominator density is `43/864`.  Fibonacci indices are exactly
+`15 mod 30`, while the odd Berggren `2c+1` labels never have rank five.  This
+is the precise ancestry/Boolean/recurrence transport sought here; it remains
+a cover-clutter theorem, not a tournament or an LRC exit.
+
 ## 8. Verification and new frontiers
 
 Run
@@ -518,12 +537,15 @@ endpoint controls `Q=7` half twist and `Q=14` zero twist fail, while adjacent
 scope repairs in MISTAKE-390; neither repair changes the cover theorem or its
 rank consequences.
 
-The highest-value continuations are:
+After THM-3415 the highest-value continuations are:
 
-1. compute the primitive spectrum beyond `Q=28` and classify which new
-   ancestors beat all proper divisors;
-2. classify the primitive and global rank-five support, beginning with
-   ancestors `Q=10,12,16,18,24,27,32,36,40`;
+1. classify the primitive rank-five pattern beyond the finite `Q<=500`
+   audit, where the only observed families are `Q=16,18` at zero twist and
+   the `8/9` breaker lifts plus atoms `10,12` at half twist;
+2. combine the PROVED THM-3414 fixed-zero six-owner bases
+   `{15,16,18,20,24}` with a half-twist six-owner classification to decide
+   global rank six; THM-3414 inherits THM-3408's computer-assisted cutoff and
+   is not an independent proof of that arithmetic gate;
 3. intersect the q23 rank-six primitive half-twist with the reserved
    exceptional-edge leakage problem, keeping cover rank distinct from LRC
    row exclusion;

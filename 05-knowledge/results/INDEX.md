@@ -1,5 +1,36 @@
 # Script Results Index
 
+- `lrc_zero_mode_cochain_rank5_support_probe_20260815.py` -> matching
+  `.out` [THM-3415 PROVED ALL-q GLOBAL RANK-FIVE SUPPORT DOWNSTREAM OF
+  THM-3408's COMPUTER-ASSISTED PROVED CUTOFF + VERIFIED-EXACT INDEPENDENT
+  PRIMITIVE Q2--500 HOSTILE CENSUS + INDEPENDENT PROOF/ARITHMETIC AUDITS
+  PASS].  For
+  unrestricted distinct positive transverse owners with zero complete mode
+  cochain,
+  `rho_ZMC(q)=5` iff `(10|q or 12|q)` and neither `8` nor `9` divides `q`.
+  Half-twist block density and the unique order-three complement force every
+  primitive rank-at-most-five quotient into bases `{8,9,10,12}`; at zero
+  twist, THM-3408's additive-order dual excludes base-free five-covers and an
+  exact complement bound kills the sole odd `15|Q,v_3(Q)=1` residual.  The
+  `Q=10,12` atoms are disjoint anchor-plus-four-petal partitions, so OR
+  equals XOR for sheet masks only; no augmented prime-breaker XOR claim is
+  made, and the carrier remains a cover clutter rather than a tournament.
+  The rank-five support is 32 classes modulo 360, with natural
+  and harmonic density `4/45`; its Farey/Stern--Brocot denominator density is
+  `43/864`, Fibonacci support is `n=15 mod 30`, and every odd Berggren
+  `2c+1` label is excluded.  A rare-coordinate solver checks both twists for
+  every `2<=Q<=500` using 371,760 raw types, 381,717 memoized states, and
+  386,458 branches.  It sees zero-twist primitive rank five only at `16,18`
+  and half-twist rank five only at `10,12` and the `8/9` breaker lifts; this
+  last primitive converse is FINITE-EXACT only.  A selective independent
+  hostile at `Q=555` has no rank-at-most-five primitive cover in either
+  twist.  Normal and optimized outputs are byte-identical.
+  Script/output/semantic LF-normalized SHA-256:
+  `b753d8a1f8fd2e8c636ab81815b1561db2a3c451feda5b7dacfef8b57c060306` /
+  `7528c4b508cd4a762f22642192c0209f6ba97d9987ad6d7c3157bd7ccfc01832` /
+  `8c4a9bc6fee718a2c6f6ec282b14bb7f7968aec40ec37b9c8d12a3e13e8528dc`.
+  No LRC(14) ledger decrement.
+
 - `lrc_projective_cochain_wedge_scalar_hub_thm3410.py` -> matching `.out`
   [THM-3410 PROVED ANALYTIC + PROVED-ELEMENTARY + VERIFIED-EXACT;
   INDEPENDENT AUDIT REQUESTED].  For every realized THM-3398 packet,
