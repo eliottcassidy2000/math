@@ -54,7 +54,10 @@ Format per entry:
   unrestricted `K6` tree and has literal union below `6/7`. All five live on
   the minimum-ruler body and split its invariant phase clusters
   `{1,3,12}|{2,4,6}` between the two equal-level classes; the rescuing tree
-  uses four within-class edges and one cross bridge.
+  can be chosen as four within-class edges and one cross bridge. A further
+  exact census closes the entire all-`649` common no-wrap chamber
+  `1<=c<=155`: among `2,011,900` packets, its `31` cross-only failures all
+  have a positive full-graph Hunter tree and literal union below `6/7`.
 - **Reusable rule:** perturb located periodic events in the centered phase
   coordinate, but rank the joint analytic budget in `|Delta|+|h|` and retain
   phase-cluster/tree type. The unit witness refutes `|h|` alone, while the

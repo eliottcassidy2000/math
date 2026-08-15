@@ -5,7 +5,8 @@ is **REFUTED** by a one-coordinate, one-unit exact witness. A phase-aware
 frozen-tree perturbation lemma is **PROVED**; noncanonical repeated-level
 packets are **FINITE-EXACT + VERIFIED**. Two independent complete censuses
 locate the first restricted cross-tree failure at coherent shift `c=67`, and
-an unrestricted physical tree closes every tested packet through `c=84`.
+an unrestricted physical tree closes the full all-`649` common no-wrap chamber
+through `c=155`.
 This is not a closure of arbitrary `k=1`, other residue packets, or LRC(14).
 
 ## 1. Inheritance and connection contract
@@ -304,10 +305,10 @@ B={2,4,6}:  phase numerators {22,24,26}, diameter 4/28.
 
 Every restricted failure assigns one complete cluster to level `3` and the
 other to level `5`.  The cross-only tree is then forced to spend all five
-edges between separated clusters.  Every rescuing full tree uses four
-within-level cluster edges and one cross bridge.  The destroyed information
-is therefore not merely phase: quotienting to the cross graph deletes the
-dominant phase-cluster corridors.
+edges between separated clusters.  A maximum rescuing full tree uses four
+within-level cluster edges and one cross bridge.  The destroyed information is
+therefore not merely phase: quotienting to the cross graph deletes the dominant
+phase-cluster corridors.
 
 ### The complete positive no-wrap chamber on the minimum body
 
@@ -322,8 +323,46 @@ On `E=(1,2,3,4,6,12)`, `(L,j)=(168,90)`, the full positive no-wrap range is
 Every failure is one of the two orientations of `A|B`; every one is rescued
 by a four-within-plus-one-cross full tree, and every literal union is below
 `6/7`.  The most negative restricted margin is
-`-108866770095/1732306885232` at `c=130`.  This is a complete one-body
-chamber, not an all-`649` statement beyond `c=84`.
+`-108866770095/1732306885232` at `c=130`.  This is the minimum-body slice of
+the common all-`649` chamber below.
+
+### The all-`649` common no-wrap chamber
+
+The exact body/ruler bank gives
+
+```text
+min_(E,L) [L-max(E)-1] = 155,
+```
+
+uniquely at `E=(1,2,3,4,6,12), L=168`.  Thus `1<=c<=155` is exactly the
+largest common range keeping every shifted residue strictly between `0` and
+`L` on all `649` bodies.  An exact census of this entire chamber covers
+
+```text
+649 bodies * 20 assignments * 155 shifts = 2,011,900 packets.
+```
+
+There are only `31` restricted cross-tree failures.  Twenty-six occur on
+`(1,2,3,4,6,12)`; the remaining five occur on exactly three `L=336` bodies:
+
+```text
+(1,2,3,4,6,8):   2,
+(1,2,4,6,8,12):  2,
+(1,3,4,6,8,12):  1.
+```
+
+Every one closes by a full physical tree and has literal union below `6/7`.
+The weakest full-tree rescue margin is
+
+```text
+398054084217/2297451249856
+```
+
+at `c=140` on `E=(1,2,4,6,8,12)`.  The selected maximum trees have
+within-class-edge histogram `3:5, 4:26`: the original four-within-plus-one
+cross pattern remains dominant, but the three new body types require two
+cross bridges.  This sharpens the lesson: the stable object is the optimized
+full overlap graph, not a fixed phase partition or a fixed cross quotient.
 
 ## 6. Boundary and next extension
 
@@ -363,6 +402,8 @@ python3 04-computation/lrc14_coherent_residue_shift_failure_independent_audit_20
 python3 -O 04-computation/lrc14_coherent_residue_shift_failure_independent_audit_20260814.py
 python3 04-computation/lrc14_minimum_body_no_wrap_coherent_shift_atlas_20260814.py
 python3 -O 04-computation/lrc14_minimum_body_no_wrap_coherent_shift_atlas_20260814.py
+python3 04-computation/lrc14_coherent_residue_shift_uniform_no_wrap_census_20260814.py
+python3 -O 04-computation/lrc14_coherent_residue_shift_uniform_no_wrap_census_20260814.py
 ```
 
 The normal and optimized outputs are byte-identical. Hash basis:
@@ -383,4 +424,6 @@ a7a1f62d4555e704989e7dbb4ee7b44a661aef5688840f5ceeae9945ff84c28f  independent fa
 94d3fefee2dd5c7566852e73e24118bf261655d79d59ffa538c37b83232879cb  failure-audit output
 868701bc76abfc199f1b5ad23497b50a4ca88840cd197c794c1242a4621b6a03  minimum-body no-wrap atlas
 6be10b5ab80b7b610c05ae1ccb08273072cdee9a0ee6ae3c578037e4d72af664  no-wrap output
+d5244095b2e0b5120985d42c3ddf92423e81107dc9bcd5bae089302881b14c99  all-649 common no-wrap census
+9c34eb6d592ff6c05119ada4e1d3dc4f544f4d8c9413efd4438ffb755f660a12  common no-wrap output
 ```

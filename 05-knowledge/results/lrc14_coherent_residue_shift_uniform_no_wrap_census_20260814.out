@@ -1,0 +1,13 @@
+LRC14 ALL-649 COMMON NO-WRAP COHERENT-SHIFT CENSUS
+dependency 04-computation/lrc14_coherent_residue_shift_boundary_census_20260814.py 5c69fbd209c332d76cc51814bc1ef126d8cc3dea0e9c9d16f00ccf095d6b9a7e
+bodies 649 assignments 20 shifts (1, 155) packets 2011900
+common_no_wrap_last 155 attainers (((1, 2, 3, 4, 6, 12), 168),)
+restricted_failure_count 31 shift_counts ((67, 1), (69, 1), (80, 1), (82, 1), (84, 1), (91, 1), (93, 1), (97, 1), (104, 1), (106, 1), (110, 1), (112, 1), (115, 1), (117, 1), (119, 1), (123, 1), (125, 1), (128, 1), (130, 1), (136, 1), (137, 1), (138, 2), (140, 1), (141, 1), (143, 1), (149, 1), (151, 2), (153, 1), (154, 1))
+restricted_failure_body_histogram (((1, 2, 3, 4, 6, 8), 2), ((1, 2, 3, 4, 6, 12), 26), ((1, 2, 4, 6, 8, 12), 2), ((1, 3, 4, 6, 8, 12), 1))
+selected_full_tree_within_edge_histogram ((3, 5), (4, 26))
+weakest_restricted_margin (Fraction(-108866770095, 1732306885232), 130, (1, 2, 3, 4, 6, 12), (131, 133, 142), (132, 134, 136))
+weakest_full_rescue_margin (Fraction(398054084217, 2297451249856), 140, (1, 2, 4, 6, 8, 12), (141, 142, 152), (144, 146, 148))
+full_tree_failures 0 literal_union_failures 0
+semantic_sha256 16c6a68ae4f5aaba4d18416d07c20fc69b7776b14df27fb06c9e15d976bc8257
+conclusion=every common-no-wrap packet closes by restricted cross-K3,3 or unrestricted full-K6 Hunter
+status=FINITE-EXACT all-649 common no-wrap chamber; not an arbitrary-shift theorem
