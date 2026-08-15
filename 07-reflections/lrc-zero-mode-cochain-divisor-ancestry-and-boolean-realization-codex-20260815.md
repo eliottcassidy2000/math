@@ -762,6 +762,111 @@ not a claimed limiting tree density.  Equations `(18)--(19)` are the concrete
 branch transplant: Fibonacci selects the prime atom 13, while the U-spine
 selects the composite nested-order atom 51.
 
+The support automaton has a precise missing coordinate.  For a seven-block
+certificate `C`, put
+
+```text
+P_C(t)=sum_x t^m(x),          L_C=lcm_r Q/gcd(Q,r),
+Delta_C=Q/L_C,                eta_C=1 iff some half residue is odd.
+```
+
+Then
+
+```text
+Omega=P_C'(1)-Q,
+|E|=(Q+P_C(-1))/2,
+G=(Omega-|E|)/2.                                      (19a)
+```
+
+A faithful certificate state retains the twist, quotient-order multiset,
+`P_C`, collision hypergraph, `(L,Delta,eta)`, and unused owner slack.  The
+local collision control has only three states -- uncovered `Z`, positive odd
+`O`, and positive even `E` -- and crossing it with the half-twist parity bit
+does produce six finite states.  It is an automaton, not a tournament:
+
+```text
+Z -> O,       O -> E,       E -> O with G increased by one.       (19b)
+```
+
+The global period coordinate cannot be finite.  Pull an atom on `b` sheets
+through a fibre of degree `k` by `Q'=kb`, `R'=kR`.  Exactly
+
+```text
+P_(C')(t)=k P_C(t),             (Omega',|E'|,G')=k(Omega,|E|,G),
+O(C')=O(C),                     L_(C')=b,
+Delta_(C')=k,                   eta_(C')=(k mod 2) eta_C.          (19c)
+```
+
+Fibre maps compose by `T_l T_k=T_(lk)`.  Thus the minimal recurrence carrier
+is a finite atom/collision shape plus one integer multiplicative cocycle.
+Normalized collision densities are grade-invariant, while `L/Q=1/k` detects
+the grade.  No purely finite automaton can retain exact joint period on the
+whole monoid because `k` is unbounded.
+
+Two exact hostiles show that collision anatomy and primitive period are
+independent.  At `Q=26`, the scaled 13-atom and the primitive witness
+`(1,4,6,7,10,19,25)` are both partitions, but their `(L,Delta,eta)` values are
+`(13,2,0)` and `(26,1,1)`.  At `Q=58`, the scaled 29-half atom has
+
+```text
+P=56t+2t^3,       (|E|,G,L,Delta,eta)=(0,2,29,2,0),
+```
+
+whereas the primitive witness `(4,21,25,33,37,48,54)` has
+
+```text
+P=56t+2t^2,       (|E|,G,L,Delta,eta)=(2,0,58,1,1).      (19d)
+```
+
+At `Q=76`, atom ancestry proves global rank seven, but the primitive finite
+census has no cap-seven quotient witness.  Since every rank-seven atom is
+owner-saturated, the rank-four/five repair “scale, then add residue one” would
+use an eighth owner.  Period promotion at grade seven must change the seven
+owners themselves, as `(19d)` does.
+
+The atom-generated density admits a new exact split.  Bases
+`13,14,29,68` offer at least one OR=XOR certificate and contribute
+`67404/737035` after lower bases are removed.  Degrees supported only by the
+even-defect atoms `38,51,148`, after excluding the first packet and all lower
+bases, contribute `4717312/310881363`.  Their sum is `(16c)`.  Collision genus
+is certificate-valued rather than degree-valued: a degree divisible by both
+13 and 29 can carry several incompatible certificates.
+
+For Fibonacci indices the complete atom-label clock has period `239400`.
+Within one period the accepted certificate states are
+
+| active atoms | fibre parity | count | index coefficient |
+|---|---|---:|---:|
+| `{13}` | odd | 10944 | `8/175` |
+| `{13}` | even | 4560 | `2/105` |
+| `{13,29}` | odd | 9120 | `4/105` |
+
+At `F_14=377=13*29`, the 13 partition has `Delta=29,G=0`; the 29-zero
+certificate has `Delta=13,G=39`; and the 29-half certificate has
+`Delta=13,G=13`.  Only `F_7=13` is a direct full-period transported atom.
+
+For the full ternary Berggren tree, oddness of `q=2c+1` reduces the relevant
+state modulus to
+
+```text
+lcm(9,11,15,23,25,13,29,51)=364832325.                 (19e)
+```
+
+All three Berggren matrices have determinant `+-1`, hence act as permutations
+on the finite root orbit.  Let `T` be the average of those three permutation
+operators.  The finite semigroup they generate is a group (each permutation's
+inverse is a positive power), so the Markov chain on the root orbit is
+irreducible and doubly stochastic.  Therefore the Cesaro mean of the level
+acceptance proportions exists and equals
+
+```text
+|accepting states in the root orbit| / |root orbit|.     (19f)
+```
+
+This is a rational theorem, not an orbit census or an ordinary limiting-level
+density.  Ordinary convergence requires aperiodicity; computing the orbit and
+its Markov period remains open.
+
 ## 8. Verification and new frontiers
 
 Run
@@ -805,15 +910,13 @@ After THM-3425 the highest-value continuations are:
    density cutoff with an overlap/reflection recurrence; the first decisive
    target is to show that every target-free seven-cover has a divisor among
    `13,14,29,38,51,68,148`;
-   on primes it is enough to close half-twist classes `1,9,11 mod 14`, while
-   the fixed-zero and `13 mod 14` branches are THM-3420; THM-3423 supplies the
-   proved odd-interval ratio/clique sidecar, while THM-3421 remains under audit;
+   THM-3421 now closes all prime half-twist classes; THM-3426 is the reserved
+   rough-composite ratio extension and THM-3428 the reserved full-order lane,
+   while mixed nested quotient orders remain the composite obstruction;
 2. intersect the q23 rank-six primitive half-twist with the reserved
    exceptional-edge leakage problem, keeping cover rank distinct from LRC
    row exclusion;
-3. transport the collision parity defect `(16)` through Fibonacci and
-   Berggren recurrences, then analyze the modulo-56925 ternary automaton
-   spectrally, without
-   inferring a limiting tree density from the finite depth-ten prefix;
+3. compute the finite orbit in `(19e)` and its Markov period; only the Cesaro
+   limit `(19f)`, not ordinary level convergence, is currently proved;
 4. transport one zero-cochain certificate through the actual LRC body/core
    sidecars.  Formula `(7)` alone closes no row and leaves LRC(14) open.

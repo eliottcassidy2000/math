@@ -151,6 +151,29 @@
   `ee528fc41630c7a9146fe62c5976fbf5421c3c4f427de07d2d7a6e8b9e777959`.
   No LRC(14) ledger decrement.
 
+- `lrc_rank7_collision_breaker_recurrence_state_20260815.py` -> matching
+  `.out` [PROVED-EXACT REFINEMENT OF THE RANK-SEVEN ATOM-GENERATED
+  SUBFAMILY].  The eight literal witnesses over seven base degrees are
+  classified by quotient-order profile, multiplicity polynomial, total
+  overlap `Omega`, even-multiplicity defect, collision genus `G`, joint
+  period `L`, period defect `Delta`, and the half-twist odd-residue bit.
+  Under a fibre of degree `k`, the multiplicity polynomial and
+  `(Omega,|E|,G)` scale by `k`, while `L` stays at the atom base and
+  `Delta=k`; thus finite collision control requires an unbounded
+  multiplicative fibre cocycle.  The collision-free `Q=26` scaled/primitive
+  pair and the `Q=58` genus/defect swap prove that collision anatomy does not
+  determine period promotion.  The atom-generated density splits exactly as
+  `67404/737035` with an OR=XOR certificate available and
+  `4717312/310881363` with only even-defect atoms available.  Fibonacci's
+  refined label clock has period `239400` and state densities
+  `8/175,2/105,4/105`; the odd Berggren carrier reduces to modulus
+  `364832325`, with unimodular child determinants `(1,-1,1)`.  Normal and
+  optimized transcripts match.  This is not antichain completeness and gives
+  no LRC cut.  Script/output/semantic LF-normalized SHA-256:
+  `9990b2b619ff0c6bfd3a98a5cf80c3bc3ff2b5aebfa5d7d1ca97865270110376` /
+  `8439f36af9cef10c021f1f2fa7f843d7ff7573942aecf9e4e2e3a5b606bbf97a` /
+  `2dc0c1826a03b19b797ddd702c9c877cd77d0a8ec9e0883a5ca13bee22936d0d`.
+
 - `lrc_rank7_atom_monoid_recurrence_transport_20260815.py` -> matching
   `.out` [PROVED-EXACT RANK-SEVEN INCLUSION + EXACT PERIODIC TRANSPORTS;
   FINITE-EXACT BERGGREN DEPTH-TEN PREFIX].  Each replayed base in
