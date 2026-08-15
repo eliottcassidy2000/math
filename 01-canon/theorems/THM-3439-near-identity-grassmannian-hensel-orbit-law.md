@@ -2,12 +2,16 @@
 id: THM-3439
 title: "Near-identity Grassmannian Hensel orbit law"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  For odd p, the first-carry invariant-plane obstruction is
-  exactly the obstruction to free cyclic action on every depth-c
-  Grassmannian fibre.  Orbit lengths and counts are explicit; transitivity is
-  unique to P^1.  This file is not a proved dependency before audit.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For odd p, the first-carry
+  invariant-plane obstruction is exactly the obstruction to free cyclic
+  action on every depth-c Grassmannian fibre.  Orbit lengths and counts are
+  explicit; transitivity is unique to P^1.
 source: root-near-identity-grassmannian-hensel-orbits-2026-08-15
+audit: >
+  independent proof/type audit, reducible selected-dimension control over all
+  130 Gr_2(F_3) base planes, invariant-plane and scalar boundaries, p=2
+  hostile/positive-depth check, normal/-O/stored replay, hash, semantic, AST,
+  security, and documentation audit CLEAN
 depends_on: []
 related:
   - THM-3339-fibonacci-three-ray-berggren-transplant-and-moving-owner-obstruction
@@ -23,12 +27,10 @@ hash_basis: LF-normalized bytes
 
 # THM-3439 -- near-identity Grassmannian Hensel orbit law
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-The proof below is complete, but this theorem remains outside the proved
-dependency graph until an independent derivation and replay audit promotes
-its status.
+The proof below is complete and has passed an independent derivation and
+replay audit.
 
 ## 1. Exact statement
 
@@ -244,5 +246,7 @@ python3 -B 04-computation/near_identity_grassmannian_hensel_orbits_thm3439.py
 python3 -B -O 04-computation/near_identity_grassmannian_hensel_orbits_thm3439.py
 ```
 
-The theorem remains `RESERVED / ... / INDEPENDENT AUDIT REQUIRED` until a
-separate agent rederives the statement and replays the frozen artifact.
+The independent audit rederived the statement, checked a reducible carry with
+an invariant line but no invariant `2`-plane on all `130` base planes of
+`Gr_2(F_3^4)`, and replayed the frozen artifact.  The recorded proof, script,
+output, and semantic hashes are unchanged.
