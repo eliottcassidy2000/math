@@ -420,7 +420,7 @@ is a proof dependency.
 
 THM-451 now follows precisely this separate repair route.  THM-447 proves
 that every level of the skew tower is skew-Hadamard, while the cited
-skew-Hadamard Smith theorem applies at every level; MISTAKE-384 records why
+skew-Hadamard Smith theorem applies at every level; MISTAKE-388 records why
 its formerly conjectural status was wrong.  That cited all-level repair,
 including nonsquarefree tower orders, is logically separate from the
 self-contained squarefree theorem (12) here and does not become one of its
