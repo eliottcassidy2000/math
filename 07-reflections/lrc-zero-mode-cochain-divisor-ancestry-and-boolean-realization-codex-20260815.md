@@ -441,6 +441,26 @@ four is often the first realizable owner count, but the predicate-preserving
 carrier is a four-edge augmented clutter.  Any tournament is at most a
 scheduling or visualization layer over that clutter.
 
+Concurrent [THM-3408](../01-canon/theorems/THM-3408-fixed-zero-additive-order-duality-and-six-core-corridor.md)
+independently proves lcm descent for fixed-zero quotient modes and adds an
+additive-order fractional dual.  Its result and `(7)` meet exactly on the
+zero-twist layer.  Neither subsumes the other: THM-3408 retains stratum
+density and a six-core obstruction through `q=20000`, while the present
+reduction retains both Boolean twists and the primitive gcd breaker needed
+for exact mobile ranks.
+
+Concurrent [THM-3409](../01-canon/theorems/THM-3409-q15-exceptional-edge-positive-cochain-rigidity-and-leakage-tariff.md)
+closes the orthogonal positive-drift control.  The exceptional capped q15
+edge has exact complete-pair tariffs `(L1,Linf,L2^2)=(50,6,206)` and faithful
+tree tariffs `(10,3)`; no realization has zero cochain.  Thus q15 now has an
+exact zero-cochain ancestry classification and an exact nonzero-cochain
+tariff without identifying their owner edges.
+
+[THM-3410](../01-canon/theorems/THM-3410-projective-cochain-wedge-ray-tree-tariff-and-residue-scalar-hubs.md)
+is only a `RESERVED / UNPROVED EMPTY STUB`.  The scalar fibres and quadratic
+leakage ladder here are possible inputs to that projective-wedge program, not
+proved dependencies or a promotion of its claims.
+
 ## 8. Verification and new frontiers
 
 Run
