@@ -1,7 +1,7 @@
 # Script Results Index
 
 - `jc_multiroot_boundary_jet_packet_probe_20260815.py` -> matching `.out`
-  [THM-3436 PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVATION-AUDITED].
+  [THM-3436 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].
   At every repeated geometric root, the target-character quotient modulo
   `(P-beta)^q` is free over `K'[lambda]/lambda^q`, of rank `N` exactly in a
   THM-3433-selected character and `N-1` otherwise.  CRT, `28` vertical

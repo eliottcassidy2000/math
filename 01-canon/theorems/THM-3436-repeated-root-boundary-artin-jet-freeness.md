@@ -2,7 +2,7 @@
 id: THM-3436
 title: "Repeated-root boundary Artin-jet freeness"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVATION-AUDITED.  For
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For
   P=ax+b+g(x)z^d in characteristic zero, base-change to a finite normal
   splitting field and fix a repeated root alpha_i.  In target character
   sigma-1, every boundary quotient modulo (P-beta_i)^q is free over the
@@ -11,7 +11,7 @@ status: >
   completion is free of the same rank.  This is a local completion packet,
   not a direct-sum description of the integral sector or a new JC(2) case.
 source: root boundary-jet session, 2026-08-15
-audit: independent CRT, Neumann contraction, horizontal unit conjugacy, local-system rank, Artin freeness, wrap/nonsplit/base-change type, exact replay, hash, AST/security, and documentation audit CLEAN after explicit C tensor K' repair
+audit: two-pass independent immutable-package and promotion-delta audit CLEAN at 7e44c5141b after the explicit C tensor K' repair; CRT, Neumann contraction, horizontal unit conjugacy, local-system rank, Artin freeness, formal-completion compatibility, wrap/nonsplit type, derived-evidence relabel, normal/-O/stored replay, pinned hashes, AST/security, documentation, and routing all checked
 depends_on:
   - THM-3418-one-monomial-nonlinear-fiber-keller-classification
   - THM-3419-generic-kummer-response-regular-sector-rank
@@ -28,7 +28,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3436 -- repeated-root boundary Artin-jet freeness
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVATION-AUDITED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Statement
 
@@ -284,3 +284,5 @@ python3 -O 04-computation/jc_multiroot_boundary_jet_packet_probe_20260815.py
 ```
 
 Both modes reproduce the stored transcript byte-for-byte.
+
+**QED.**
