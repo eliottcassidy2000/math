@@ -83,6 +83,106 @@ def first_rough_composites(residue_class: int, count: int) -> list[int]:
     return out
 
 
+def minimal_full_order_rank(modulus: int, cap: int) -> tuple[int | None, int]:
+    # Every cover contains an even block, because only even coefficients cover
+    # the reflection-fixed sheet.  Multiplication by an odd unit modulo 2Q
+    # permutes the sheet coordinates and normalizes any such block to B_2.
+    # Fixing B_2 is therefore lossless and makes the exact finite bank small.
+    base = half_mask(modulus, 2)
+    candidates = sorted({
+        block
+        for residue in range(1, modulus + 1)
+        if gcd(residue, modulus) == 1
+        for block in (half_mask(modulus, residue),)
+        if block != base
+    })
+    full = (1 << modulus) - 1
+    by_sheet: list[list[int]] = [[] for _ in range(modulus)]
+    for mask in candidates:
+        for sheet in range(modulus):
+            if mask >> sheet & 1:
+                by_sheet[sheet].append(mask)
+
+    total_nodes = 0
+    for depth in range(1, cap + 1):
+        if depth == 1:
+            if base == full:
+                return 1, total_nodes
+            continue
+        seen: set[tuple[int, int]] = set()
+
+        def search(covered: int, remaining: int) -> bool:
+            nonlocal total_nodes
+            total_nodes += 1
+            if covered == full:
+                return True
+            if remaining == 0:
+                return False
+            key = (covered, remaining)
+            if key in seen:
+                return False
+            seen.add(key)
+            uncovered = full ^ covered
+            gains = sorted(((mask & uncovered).bit_count() for mask in candidates), reverse=True)
+            if sum(gains[:remaining]) < uncovered.bit_count():
+                return False
+
+            options: list[int] | None = None
+            rest = uncovered
+            while rest:
+                low = rest & -rest
+                sheet = low.bit_length() - 1
+                rest -= low
+                sheet_options = [mask for mask in by_sheet[sheet] if mask & uncovered]
+                if not sheet_options:
+                    return False
+                if options is None or len(sheet_options) < len(options):
+                    options = sheet_options
+            require(options is not None, ("missing branch options", modulus))
+            options.sort(key=lambda mask: (mask & uncovered).bit_count(), reverse=True)
+            return any(search(covered | mask, remaining - 1) for mask in options)
+
+        if search(base, depth - 1):
+            return depth, total_nodes
+    return None, total_nodes
+
+
+def check_finite_boundary() -> tuple[int, int, tuple[tuple[int, int], ...], int]:
+    tested = 0
+    total_nodes = 0
+    positives: list[tuple[int, int]] = []
+    negatives = 0
+    for modulus in range(3, 512, 2):
+        if least_prime_factor(modulus) <= 7:
+            continue
+        tested += 1
+        rank, nodes = minimal_full_order_rank(modulus, 7)
+        total_nodes += nodes
+        if rank is None:
+            negatives += 1
+        else:
+            positives.append((modulus, rank))
+    require(tested == 116, ("finite rough universe", tested))
+    require(negatives == 112, ("finite negative count", negatives))
+    require(tuple(positives) == ((11, 6), (13, 7), (23, 6), (29, 7)),
+            ("finite positive support", positives))
+    require(total_nodes == 4735, ("finite search nodes", total_nodes))
+
+    witnesses = {
+        11: (1, 2, 3, 5, 7, 9),
+        13: (1, 2, 3, 5, 7, 9, 11),
+        23: (1, 4, 5, 7, 9, 11),
+        29: (1, 5, 7, 8, 12, 13, 22),
+    }
+    for modulus, residues in witnesses.items():
+        covered = 0
+        for residue in residues:
+            require(gcd(residue, modulus) == 1, ("finite witness order", modulus, residue))
+            covered |= half_mask(modulus, residue)
+        require(covered == (1 << modulus) - 1, ("finite witness cover", modulus))
+    return tested, negatives, tuple(positives), total_nodes
+
+
 def check_control(modulus: int) -> tuple[int, int, int, int, tuple[int, ...], int, int]:
     require(modulus >= 512 and modulus % 2 == 1, ("control range", modulus))
     factor = least_prime_factor(modulus)
@@ -172,8 +272,9 @@ def main() -> None:
         for modulus in first_rough_composites(residue_class, 2):
             records.append(check_control(modulus))
     even_gap_cells = check_even_gap_arithmetic()
+    finite_boundary = check_finite_boundary()
     prime_boundary, lower_scope = check_positive_and_scope_controls()
-    semantic_payload = (tuple(records), even_gap_cells, prime_boundary, lower_scope)
+    semantic_payload = (tuple(records), even_gap_cells, finite_boundary, prime_boundary, lower_scope)
     semantic = sha256(repr(semantic_payload).encode("ascii")).hexdigest()
     print(f"rough_composite_controls={len(records)}")
     print("control_records=" + ";".join(
@@ -181,6 +282,7 @@ def main() -> None:
         for q, factor, residue, k, odd, even_count, odd_count in records
     ))
     print(f"even_shortest_gap_cells={even_gap_cells}")
+    print(f"finite_rough_boundary={finite_boundary}")
     print(f"small_positive_boundary={prime_boundary}")
     print(f"lower_quotient_order_scope_hostile={lower_scope}")
     print(f"semantic_sha256={semantic}")

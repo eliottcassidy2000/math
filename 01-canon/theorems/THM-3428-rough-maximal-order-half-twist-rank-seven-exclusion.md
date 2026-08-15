@@ -1,13 +1,15 @@
 ---
 id: THM-3428
-title: "Rough maximal-order half-twist rank-seven exclusion"
+title: "Rough full-order half-twist rank-seven classification"
 status: >
   RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  For every odd Q>=512 with spf(Q)>7, no at-most-seven
-  literal half-twist blocks all having quotient order Q can cover the Q
-  sheets.  Reflection accounting and the THM-3426 odd-block clique close five
-  residue classes; an un-cancelled shortest-gap relation closes Q=1 mod 14.
-  Mixed lower quotient orders, arbitrary common time, and LRC(14) remain open.
+  FINITE-BANK AUDIT REQUIRED.  For every odd Q>=3 with spf(Q)>7, at most
+  seven literal half-twist blocks all having quotient order Q cover the Q
+  sheets iff Q is 11,13,23,or29; the exact ranks are 6,7,6,7.  Reflection
+  accounting, the THM-3426 odd-block clique, and an un-cancelled shortest-gap
+  relation prove the Q>=512 half; an exact normalized bank closes all 116
+  smaller rough moduli.  Mixed lower quotient orders, arbitrary common time,
+  and LRC(14) remain open.
 source: root-rough-maximal-order-rank-seven-2026-08-15
 depends_on:
   - THM-3426-rough-composite-odd-interval-collision-and-dyadic-clique-law
@@ -16,16 +18,16 @@ related:
   - THM-3425-half-twist-rank-six-primitive-breaker-profile-closure
 script: 04-computation/rough_maximal_order_half_twist_rank7_thm3428.py
 output: 05-knowledge/results/rough_maximal_order_half_twist_rank7_thm3428.out
-script_sha256: f9878c298550c6e9acf78fececb2e528f84b080851932d1f0a3eb0b0725a7ce9
-output_sha256: 5124184a327aa5b6420be6c06f42a151b60f9547b1a5ef72286cc8d69e765a47
-semantic_sha256: b33f063ba773517d1d2984ef1d78554c44eebd20ab1081b21c71e2e984e77671
+script_sha256: db668302a1a99eec477531b5684e1a892f15f5897fd883a2b961d034e35720cf
+output_sha256: c27a498e4ee5cd41c15e10e335638e3649dfdc02af655c8098c526fa1fad6c5d
+semantic_sha256: 4e81e4be4ef811b910a12537432dae02202d8e3913ea8b28633a1bc71615d3f9
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3428 -- rough maximal-order half-twist rank-seven exclusion
+# THM-3428 -- rough full-order half-twist rank-seven classification
 
 **RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**
+FINITE-BANK AUDIT REQUIRED.**
 
 ## 1. Candidate statement
 
@@ -38,10 +40,10 @@ B_(Q,r)={ell in Z/QZ: ||r(2ell+1)/(2Q)||<1/14}.          (1)
 The quotient order of `(1)` is `Q/gcd(Q,r)`.  Assume
 
 ```text
-Q>=512,             spf(Q)>7.                            (2)
+Q>=3 is odd,        spf(Q)>7.                            (2)
 ```
 
-Then there is no family `R` such that
+Then a family `R` satisfying
 
 ```text
 |R|<=7,
@@ -49,10 +51,20 @@ gcd(Q,r)=1 for every r in R,
 union_(r in R) B_(Q,r)=Z/QZ.                             (3)
 ```
 
-Thus every block in `(3)` is required to have the full quotient order `Q`.
-No primitivity hypothesis is needed beyond that pointwise condition.  The
-result includes primes, where it is compatible with THM-3421, but its new
-content is the rough-composite lane.
+exists if and only if
+
+```text
+Q in {11,13,23,29}.                                    (3a)
+```
+
+At those four moduli the exact minimum cardinalities are respectively
+`6,7,6,7`.
+
+Every block in `(3)` is required to have the full quotient order `Q`.  No
+primitivity hypothesis is needed beyond that pointwise condition.  The four
+positive cases regress THM-3421.  The analytic exclusion below closes every
+`Q>=512`; the finite-exact boundary closes all smaller rough moduli and finds
+no composite positive.
 
 ## 2. Inheritance and connection ledger
 
@@ -71,7 +83,7 @@ exhibits an intersection.
 | preserved | literal union, every overlap multiplicity, strict endpoints, and full quotient order |
 | destroyed | owner identity inside a parity bank and all lower quotient-order arms |
 | required sidecar | THM-3426 for odd blocks; the un-cancelled centered-interval gap for even blocks |
-| cheapest tests | positive small boundary `Q=29`; rough controls `Q=517,533`; lower-order scope hostile `Q=513` |
+| cheapest tests | exact small bank through `Q<512`; rough controls `Q=517,533`; lower-order scope hostile `Q=513` |
 
 The corrected near miss is scalar capacity: at seven blocks it leaves four
 residue classes exactly at nonnegative mass.  The least-used coordinate is
@@ -80,7 +92,8 @@ before taking any density quotient.
 
 ## 3. Block sizes and the reflection invoice
 
-It is enough to exclude a seven-block multiset: any shorter cover can be
+Assume first that `Q>=512`.  It is enough to exclude a seven-block multiset:
+any shorter cover can be
 padded by full-order blocks without losing its union.  Write
 
 ```text
@@ -190,16 +203,54 @@ But `B=0` in `(10)`, so two even blocks are impossible.  Hence `e=1`, and
 the six odd blocks are pairwise disjoint.  Here the THM-3426 parameters are
 `h=7,c=8`; condition `(2)` is exactly large enough for its first threshold
 and exceeds its cubic threshold.  Clique number three again gives a
-contradiction.  This closes the last residue class and proves `(3)`.
+contradiction.  This closes the last residue class and proves that `(3)` is
+impossible for every `Q>=512` satisfying `(2)`.
 
-## 6. Exact companion
+## 6. Exact finite boundary and companion
+
+For `Q<512`, the companion makes the finite universe literal:
+
+```text
+Q odd, 3<=Q<512, spf(Q)>7, gcd(Q,r)=1.                 (15)
+```
+
+There are exactly `116` such moduli.  The reflection-fixed sheet belongs only
+to blocks with even `r`, so every cover contains an even block `B_(Q,2a)`.
+Because `a` is a unit modulo `Q`, it has an odd unit lift modulo `2Q`;
+multiplying the odd sheet coordinates by that lift permutes the full block
+family and sends `B_(Q,2a)` to `B_(Q,2)`.  The search therefore fixes
+`B_(Q,2)` without loss.
+
+For each modulus the companion collapses only literally equal masks, branches
+on an uncovered sheet with the fewest available masks, uses the sum of the
+largest remaining gains as a rigorous pruning bound, and memoizes the exact
+pair `(covered mask, remaining depth)`.  Iterative depths through seven prove
+the minimum, not merely existence.  Across `4,735` visited states it finds
+
+```text
+112 negative moduli;
+(Q,minimum rank)=(11,6),(13,7),(23,6),(29,7).           (16)
+```
+
+It directly replays witnesses
+
+```text
+Q=11: (1,2,3,5,7,9);
+Q=13: (1,2,3,5,7,9,11);
+Q=23: (1,4,5,7,9,11);
+Q=29: (1,5,7,8,12,13,22).                              (17)
+```
+
+Mask collapse is harmless here: two coefficients defining the same literal
+set are interchangeable in a union cover, and repeating either cannot reduce
+the minimum rank.
 
 The standard-library companion directly reconstructs the literal masks on
 the first two rough composite controls in every possible residue class:
 
 ```text
 s=1:  533,589;       s=3: 689,703;       s=5: 551,649;
-s=9:  527,583;       s=11:529,697;       s=13:517,559.  (15)
+s=9:  527,583;       s=11:529,697;       s=13:517,559.  (18)
 ```
 
 For all twelve moduli it checks the sizes `(6)--(7)`, fixed-sheet ownership,
@@ -210,21 +261,19 @@ base block away from the fixed sheet.  It verifies `(14)` for `1,988` values
 
 Two scope controls are frozen separately:
 
-- the maximal-order order-29 family `(1,5,7,8,12,13,22)` covers below the
-  threshold in `(2)`;
+- the order-29 family in `(17)` is the largest positive finite boundary;
 - at `Q=513`, the five-block family `(1,57,285,342,399)` covers with quotient
   orders `(513,9,9,3,9)`, showing why a theorem that simply drops the
   maximal-order and roughness gates would be false.
 
-Normal and optimized transcripts are byte-identical.  The companion checks
-the consequence objects of the proof; it is not a bounded search standing in
-for arbitrary `Q`.
+Normal and optimized transcripts are byte-identical.  The bounded bank proves
+exactly the finite side `(15)`; the arbitrary large range is supplied by
+Sections 3--5, not inferred from the bank.
 
 ## 7. Boundaries and non-consequences
 
-- The threshold is sufficient and sharp against the displayed order-29
-  positive boundary only in the coarse sense that some lower cutoff is
-  necessary; minimality of `512` is not claimed.
+- `512` is only the seam between the analytic proof and the exact finite bank;
+  it is not asserted to be a natural sharp constant.
 - The even collision `(14)` is stronger than a field ratio-set statement and
   deliberately retains nonunit endpoints.
 - THM-3426's least-prime-factor gate is used only for the odd block.  Small
