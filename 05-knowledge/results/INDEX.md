@@ -11,6 +11,21 @@
   `3dcfc4f3f36ed658a64f3d45b7e055eb6bab10fa536522368a1aa3e32eab6332` /
   `0d9908f5695a64895fd1d78cace03340b35bf9831e3ebd1eb53747eb563fc01c`.
   Simple roots, integral splitting, and `JC(2)` remain outside scope.
+
+- `fibonacci_berggren_17adic_hensel_torsor_probe_20260815.py` -> matching
+  `.out` [PROVED UNNUMBERED HENSEL-FIBRE LEMMA + FINITE-EXACT `a=1..4`].
+  For `G=[[0,1],[1,1]]`, the two projective 9-cycles modulo `17` are exactly
+  the two Legendre classes of `D(m,n)=n^2-mn-m^2`.  With `K=G^18`, the
+  nonsplit first layer of `-K=I-17B` makes `K` freely transitive on every
+  Hensel fibre of `P^1(Z/17^a)->P^1(F_17)` for every `a`; the companion checks
+  all `88,434` level-four points.  The calibrated exponent retains the affine
+  lift and realizes fibre subsets as periodic XOR/harmonic supports, while
+  the labelled `T4/T6` shadows freeze and forget that exponent.  This is no
+  LRC current transport.  Script/output/semantic LF-normalized SHA-256:
+  `e87a2efa71f0dca430dd86fdb6d8d72d0ece4687be730ddc70c8674c4d70b496` /
+  `0f46375097b6dc6a4f801f98fa0609bd7858e05941d66a9efd4fcc2c0c0b3d90` /
+  `bc6795aa3a4647b44cfa0b15f5112503cace4c9228dbdf18afb9e5aa8217fff0`.
+
 - `lrc_dyadic_fibre_grid_decomposition_thm3435.py` and
   `lrc_dyadic_fibre_grid_census_thm3435.py` -> matching `.out` files
   [THM-3435 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED for the

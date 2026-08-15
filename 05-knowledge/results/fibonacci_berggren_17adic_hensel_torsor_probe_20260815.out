@@ -1,0 +1,17 @@
+UNNUMBERED fibonacci/Berggren 17-adic Hensel torsor exact companion
+script_sha256_lf=e87a2efa71f0dca430dd86fdb6d8d72d0ece4687be730ddc70c8674c4d70b496
+matrices=G:((0, 1), (1, 1));G9:((21, 34), (34, 55));K=G18:((1597, 2584), (2584, 4181))
+first_layers=G9=4I+17C:C=((1, 2), (2, 3)):disc(C)=3;K=-I+17B:B=((94, 152), (152, 246)):disc(B)=5
+P1_F17_cycles_by_Legendre_D=((1, ((0, 1), (1, 1), (9, 1), (12, 1), (4, 1), (7, 1), (15, 1), (16, 1), (1, 0))), (-1, ((2, 1), (6, 1), (5, 1), (3, 1), (13, 1), (11, 1), (10, 1), (14, 1), (8, 1))))
+hensel_exact_rows=(a,|P1|,#G,Glen,#K,Klen,#fibres,fibre_size)=((1, 18, 2, 9, 18, 1, 18, 1), (2, 306, 2, 153, 18, 17, 18, 17), (3, 5202, 2, 2601, 18, 289, 18, 289), (4, 88434, 2, 44217, 18, 4913, 18, 4913))
+all_a_proof_certificate=U=-K=I-17B;disc(B)=5_nonsquare;binomial_layers_and_split_hostile=(((0, 289, '4/4'), (1, 4913, '4/4'), (2, 83521, '4/4'), (3, 1419857, '4/4')), (17, 1, 1))
+berggren_farey_tournaments=((2, 200, 'all_three_exact_rays', 'shift_18_appends_six_branch_pairs'), ('bca', 'bac', 'abc', 'acb', 'cab', 'cba'), ((1, 1, 2, 3), (2, 3)), ((3, (97, 1)), (21, (63, 1)), (12, 1)))
+affine_lift_transducer=(a,order,distinct,state0,state1)=((1, 1, 1, (12, 1), (12, 1)), (2, 17, 17, (97, 1), (63, 1)), (3, 289, 289, (3276, 1), (1508, 1)), (4, 4913, 4913, (27841, 1), (75203, 1)))
+xor_harmonic=(a,N,period,|J2|,|J3|,|xor|,pole_J2,pole_xor)=((1, 1, 18, 1, 1, 0, Fraction(1, 18), Fraction(0, 1)), (2, 17, 306, 9, 6, 9, Fraction(1, 34), Fraction(1, 34)), (3, 289, 5202, 145, 97, 144, Fraction(145, 5202), Fraction(8, 289)), (4, 4913, 88434, 2457, 1638, 2457, Fraction(273, 9826), Fraction(273, 9826)))
+Q289_same_mod34_affine_lift_hostile=(289, (1, 35), (0, 1), 8, ((0, 16), (0, 16)), 1, ((0, 1, 16), (13, 14, 15)))
+tournament_gate=T4/T6_are_labelled_transitive_comparison_tournaments_on_the_stated_tie-free_domains;no_missing_or_bidirected_edges
+preserved=Legendre_D_orbit,three_ray_class,labelled_T4_bit,labelled_T6_order,Cassini_sign,oriented_mod2_Farey_frame,XOR_after_calibration,harmonic_pole
+lost=exact_fraction,weights,triple,word_depth,17adic_lift,subset_phase,affine_owner,current;sidecar=base_lift_plus_K_exponent_and_exact_weights/current
+semantic_sha256=bc6795aa3a4647b44cfa0b15f5112503cace4c9228dbdf18afb9e5aa8217fff0
+status=FINITE-EXACT_a=1..4_PLUS_COEFFICIENT-INDEPENDENT_ALL-a_PROOF_PACKET;unnumbered;indexed_as_result_only;no_theorem_or_LRC14_decrement
+ALL CHECKS PASSED
