@@ -26,7 +26,8 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 ### Exact live obligation
 
 Direct frontier: `<=6`; projected caps `1579/216`. At `z1=216`, THM-3361
-closes the three `L720720` rows and leaves ledger/wall/families `372914/110/12`.
+closes the three `L720720` rows; THM-3378 closes row 94 of the next family and
+leaves ledger/wall/families `372913/109/12` (the other 12 rows remain live).
 THM-3349/3350/3352/3355 close all `561` reflected six-level `k=1` bodies;
 THM-3360 proves the uniform physical edge floor, including four analytic horn
 lanes. Arbitrary `k<=1`, projected `k=2,3`, the rung, physical entry and LRC

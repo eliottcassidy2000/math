@@ -21,7 +21,7 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 ## Sixteen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`.
-   THM-3361 leaves ledger/wall/families `372914/110/12` at `z1=216`.
+   THM-3378 leaves ledger/wall/families `372913/109/12` at `z1=216`.
    THM-3349--3360 close the 561-body lane; THM-3366 leaves projected rows/counts `4,056/200,069,517,203` (`k=2`) and `1,897/2,548,893,834` (`k=3`).
    THM-3368 adds a Horn tariff, not an LRC proof; the rung, physical entry and LRC remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
