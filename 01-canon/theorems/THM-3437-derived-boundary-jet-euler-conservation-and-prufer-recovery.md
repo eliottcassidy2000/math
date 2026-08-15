@@ -186,11 +186,13 @@ a related persistence analogy only.
 ## 5. Exact companion
 
 The companion checks the resolution and transition conventions, principal
-part kernels and divisibility, foreign-support invertibility, every selected
-congruence packet in a frozen finite profile bank, the Euler identity, and
-the simple-root/no-slope boundaries using integer and rational arithmetic.
-It is verification of the algebraic compiler, not a substitute for the two
-dependency proofs.
+part kernels and divisibility, foreign-support invertibility, every candidate
+repeated-root sector-profile row in a frozen finite profile bank, the Euler
+identity, the simple-root scope exclusion in the selection predicate, and
+explicit no-slope blindness controls using integer and rational arithmetic.
+It does not independently
+model the simple-root CRT intersection.  It is verification of the algebraic
+compiler, not a substitute for the two dependency proofs.
 
 Run
 
