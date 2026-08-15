@@ -2,7 +2,7 @@
 id: THM-3441
 title: "The weighted quartic has one identity and one transposition Jelonek component"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / INDEPENDENT AUDIT REQUIRED.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.
   For THM-3438's quartic Keller map G, the exact Jelonek set is V(C) union
   V(L), with L an explicit irreducible surface.  Generically C=0 loses one
   sheet with identity inertia and even primitive clearing exponent 12, while
@@ -19,11 +19,15 @@ related:
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
 script: 04-computation/jc_weighted_quartic_jelonek_inertia_thm3441.py
 output: 05-knowledge/results/jc_weighted_quartic_jelonek_inertia_thm3441.out
+script_sha256: adace19f41b7816d273a47556013253e5d05014f517c0212743e9d74dcc5093f
+output_sha256: 8e9629df938785d0c25b0a2ba35c29698c992bb8c785351055c01f58bad73a04
+semantic_sha256: 84d29019ac0b6cc51caf6f87f75de74c5b655f1d8a0254c259e44d9b224290cf
+transcript_payload_sha256: 6e88ebd254430d90958b954d17308527b7860fe6c5fa04602bb5d83040e68cb9
 ---
 
 # THM-3441 -- the weighted quartic has one identity and one transposition Jelonek component
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / INDEPENDENT AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. The discriminant and the chart-index trap
 
@@ -179,15 +183,17 @@ S_G=V(C) union V(L)=V(C L).                            (18)
 
 ## 3. Raw and generic-primitive discriminant ledgers
 
-The special primitive `w` does not separate the escaping coordinate along
-`C=0`.  Its raw discriminant orders are
+Along `C=0`, the special primitive `w` remains bounded on the escaping sheet
+and separately fails to distinguish two finite residual sheets at `w=0`.
+Its raw discriminant orders are
 
 ```text
 v_C(Disc_w f)=2,                 v_L(Disc_w f)=1.       (19)
 ```
 
-The first is the order-index square from `(5)`; the second is the true
-transposition factor.
+The first satisfies `2=inertia_defect+2i=0+2*1`: it is the monogenic order's
+index square from `(5)`, not a critical or inertia factor.  The second has
+`i=0` and is the true transposition factor.
 
 For the intrinsic infinity ledger take a Zariski-generic affine source
 primitive
@@ -210,6 +216,9 @@ quartic `N_T`,
 v_C(Disc N_T)=6rho_C+v_C(Disc q_T)=0,
 E_C=6rho_C-v_C(Disc N_T)=12.                           (22)
 ```
+
+Thus `E_C=12` belongs to the **generic infinity-separating primitive** `(20)`,
+not to the bounded raw primitive `w`.
 
 Along `L=0`, two roots have valuation `-1/2` and two are finite.  Five root
 pairs involve an escaping root, so
@@ -254,10 +263,19 @@ Keller map can have a genuine `C_3` infinity component, identify all special
 strata inside `V(CL)`, or settle `JC(2)`/`DC(2)`.  It describes exactly the
 boundary of the explicit weighted quartic `G`.
 
-## 5. Exact companion
+## 5. Exact companion and audit
 
-The companion must verify `(2)--(5)`, irreducibility controls for `L`, the
-reconstruction identities, both asymptotic deformations, the finite-fibre
-control `(13)`, the valuation/clearing table, normal/optimized equality, and
-hostiles separating chart index from finite and infinity ramification.  Until
-that replay and an independent audit are merged, this remains provisional.
+The deterministic companion verifies `(2)--(5)`, irreducibility controls for
+`L`, the reconstruction identities, both asymptotic deformations, the
+finite-fibre control `(13)`, the valuation/clearing table, and hostiles
+separating chart index from finite and infinity ramification.  Normal and
+optimized runs reproduce the stored transcript byte-for-byte after LF
+normalization:
+
+```text
+python -B 04-computation/jc_weighted_quartic_jelonek_inertia_thm3441.py
+python -B -O 04-computation/jc_weighted_quartic_jelonek_inertia_thm3441.py
+```
+
+The script, transcript, semantic, and transcript-payload hashes are recorded
+in the frontmatter.

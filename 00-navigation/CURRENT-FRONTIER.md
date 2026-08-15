@@ -320,24 +320,10 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   remain open.  THM-2646 classifies `B3` conjugacy by modular and exponent
   classes, but exponent is not Markov-invariant.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
-- **Jacobian/Dixmier:** `JC(2)` and `DC(2)` remain open; THM-3367 identifies the Berggren pencil with Hessians and tames line images only.
-  THM-1300/1315 provenance is unsettled (MISTAKE-205). THM-2473--2576 settle
-  only the fixed sporadic map. For the `A4/S4` route, THM-2681 excludes the proposed cubic
-  identification and THM-2685/2686/2695 locate the surviving standard plane in
-  units, `Cl[2]`, and `Pic[2]/2Pic[4]`; the spin/reflection and saturation
-  coordinates remain missing.  THM-2690/2696/2700 exclude the toric,
-  reflection-quotient, and Danielewski models in their stated scopes.
-  THM-2703/2708 identify the general boundary object as the saturated
-  `H^1(U,mu_2)` gain-holonomy kernel, not a scalar Gram rank.  THM-2743--2780
-  refine the `V4`, opposition, and inertia typing but still supply no
-  equivariant Kummer realization.  THM-3057 gives the exact tame height-one
-  quartic invoice, and THM-3059 shows after reciprocal reversal that the
-  cleared discriminant exponent is odd exactly when infinity inertia is an
-  odd permutation.  Its generic-`S4` two-jet and planar families have exact
-  Jelonek loci with `C3` escape and even exponent, refuting HYP-9027 only in
-  its former general-dominant scope.  On the `S4` Keller lane at least one odd
-  component is forced, but excluding every Keller `C3` component remains
-  OPEN and needs branchwise cofactor units.  THM-3066 retains only their
+- **Jacobian/Dixmier:** `JC(2)`/`DC(2)` remain open.  THM-3438 proves `KDeg(m)={1,3,4,...}` (`m>=3`), an `S_n` atom in every grade, first mixed grade `9`, global G1, and a non-radical `S_5` inverse; arbitrary-map, planar/z-affine, and `A_4/A_5` classification remains open.
+  THM-1300/1315 provenance is unsettled (MISTAKE-205); THM-2473--2576 concern only the fixed map.  On the `A4/S4` route, THM-2681 blocks the cubic identification, THM-2685--2695 locate the gain plane, THM-2690--2700 exclude three model carriers, and THM-2703/2708 identify saturated `H^1(U,mu_2)` holonomy.  Spin/saturation/equivariant realization remain open.
+  THM-3057/3059 give the tame quartic invoice and `cleared parity = infinity-inertia sign`.  THM-3441 computes `S_G=V(C) union V(L)`: `C` has one escaping sheet, identity inertia, exponent `12`; `L` has two, transposition, exponent `5`.  Thus both odd-every-component forms of HYP-9027 are refuted; genuine Keller `C3` inertia remains OPEN and needs branchwise cofactor units.
+  THM-3440 gives weighted `F_n` a local infinity `n`-cycle; at `n=91` the exact `C7 x C13` carrier and mod-13 `H^1` pullback still lack an LRC amplitude intertwiner/current.  THM-3066 retains only their
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
   THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;
   polynomial `A2` regularity and constant units are the missing gate.
@@ -392,7 +378,7 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
   THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response (collisions persist; `gr` overcounts); THM-3354 blocks direct D5 transport.
   THM-3431 proves the secondary typed cospan: LRC deck `H^1`, selected one-root JC local `H^1`, zero additive cross-maps, and a lossy DeathBar only.
-  THM-3418/19 close sparse Keller/rank; THM-3422/24/27 give integral character laws; THM-3430/33 classify wrap/all-sector Prüfer arms; THM-3436/37 give repeated-root Artin jets and their derived Euler/Prüfer channel. No multiroot nonwrap split or `JC(2)`/`DC(2)` follows.
+  THM-3418/19 close sparse Keller/rank; THM-3422/24/27 give integral character laws; THM-3430/33 classify wrap/all-sector Prüfer arms; THM-3436/37 give repeated-root Artin jets and their derived Euler channel.  THM-3437's inverse Tor tower recovers the Tate-module/presence bit, while its inclusion direct limit recovers the Prüfer arm; neither is LRC `H^1`. No multiroot nonwrap split or `JC(2)`/`DC(2)` follows.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
   `2201<=d<=2400` and all `35` residuals in `2401<=d<=2500` close by matching

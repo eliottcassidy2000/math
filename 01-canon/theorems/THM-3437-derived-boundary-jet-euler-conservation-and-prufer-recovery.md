@@ -1,14 +1,16 @@
 ---
 id: THM-3437
-title: "Derived boundary-jet Euler conservation and Prüfer recovery"
+title: "Derived boundary-jet Euler conservation and Prüfer-presence/Tate-module recovery"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.
   At a repeated geometric boundary root, derived reduction modulo every
   Artin jet has free Tor_0/Tor_1 ranks (N-1+epsilon,epsilon), where epsilon
-  is the THM-3433 selected-root bit.  Their Euler rank is always N-1, and
-  inverse limits recover the otherwise invisible divisible Prüfer channel.
+  is the THM-3433 selected-root bit.  Their Euler rank is always N-1.  Inverse
+  limits recover the selected arm's Tate module/presence bit; the actual
+  Prüfer arm is recovered by the canonical direct limit of the same kernels.
 source: root boundary-jet derived-response session, 2026-08-15
 audit: independent two-term-resolution, primary-support, Pruefer-kernel, Tor-rank, chain-map, Mittag-Leffler, simple/foreign/Galois boundary, filtration-loss, higher-Tor, normal/-O/stored replay, pinned-hash, semantic/count, AST/security, documentation, and routing audit CLEAN after the exact-evidence scope-label repair at edf8876af2
+audit_addendum: independent transition-system referee repaired inverse-limit versus direct-limit semantics (MISTAKE-397), 2026-08-15
 depends_on:
   - THM-3433-all-sector-multiroot-primary-torsion-classification
   - THM-3436-repeated-root-boundary-artin-jet-freeness
@@ -22,7 +24,7 @@ semantic_sha256: 20bd151f40a3991b0fc85108f85339ebf9b48b24bc3113d8d480468b3ecef3f
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3437 -- derived boundary-jet Euler conservation and Prüfer recovery
+# THM-3437 -- derived boundary-jet Euler conservation and Prüfer-presence/Tate-module recovery
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
@@ -86,10 +88,23 @@ lim_q Tor_1^A(R_q,M) ~= K'[[lambda]]^epsilon.            (6)
 ```
 
 Thus ordinary completion is the first line of `(6)` and still discards every
-`lambda`-divisible Prüfer arm.  The first derived channel recovers exactly
-the presence of that arm.  It does **not** recover the THM-3433 filtration
-slope `e_i-1` or its DeathBar intercept; those require the original stage
-filtration as an additional sidecar.
+`lambda`-divisible Prüfer arm.  The second line is the `lambda`-adic Tate
+module of the selected arm and therefore recovers exactly its presence, not
+the Prüfer module itself.  Under the different, canonical kernel inclusions
+
+```text
+M[lambda^q] -> M[lambda^(q+1)],
+```
+
+one instead has
+
+```text
+colim_q Tor_1^A(R_q,M) ~= Pr_lambda^epsilon.             (6a)
+```
+
+It does **not** recover the THM-3433 filtration slope `e_i-1` or its DeathBar
+intercept; those require the original stage filtration as an additional
+sidecar.
 
 ## 2. Proof
 
@@ -154,6 +169,10 @@ this is exactly coefficient truncation `R_(q+1)->R_q`.  All transition maps
 in `(4)` are therefore surjective.  Both towers satisfy the Mittag--Leffler
 condition, so their first derived inverse limits vanish.  Their inverse limits
 are the power-series modules `(6)`; no derived-limit correction remains.
+Separately, the inclusions of the principal-part kernels in `(10)` exhaust
+`Pr_lambda`, proving `(6a)`.  These are different transition systems: replacing
+the inverse-limit map by inclusion would change the object rather than refine
+the same limit.
 **QED.**
 
 ## 3. Connection and loss ledger
@@ -165,7 +184,7 @@ are the power-series modules `(6)`; no derived-limit correction remains.
 | map | the two-term resolution `(7)` |
 | preserved | boundary support, character, selected-root bit, jet order, and Euler rank |
 | destroyed by Tor_0 alone | the divisible Prüfer channel |
-| restored sidecar | `Tor_1`, equivalently the `lambda^q`-kernel packet `(10)` |
+| restored sidecar | `Tor_1`; its inverse tower is the Tate module/presence bit, while its inclusion direct limit is the Prüfer arm `(6a)` |
 | still lost | multiplicity slope, filtration intercept, unsplit primary coordinates, and the global torsion-free complement |
 | cheapest hostile | a selected one-root arm: its ordinary quotient sees only the free packet while `Tor_1` is nonzero at every `q` |
 
@@ -182,8 +201,8 @@ a related persistence analogy only.
   supports, but no canonical split coordinate over `K` is asserted.
 - Formula `(10)` detects one Prüfer arm, not its inherited stage filtration.
   All multiplicities `e_i>1` give the same unfiltered `Tor_1` packet.
-- Replacing the entire all-iterate family by a finite prefix loses the inverse
-  limit statement, even though each individual formula `(4)` remains valid.
+- Replacing the entire all-iterate family by a finite prefix loses both limit
+  statements, even though each individual formula `(4)` remains valid.
 
 ## 5. Exact companion
 

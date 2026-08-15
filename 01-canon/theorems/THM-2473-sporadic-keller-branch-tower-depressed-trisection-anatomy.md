@@ -132,8 +132,10 @@ as unadjudicated numerology, in klein-S324's spirit; not used anywhere.)
   matches the independent-uniform wreath model in all 13 cells (ratios
   0.92-1.02), with no off-model cell ever observed.
 - **HYP-9030 test (i) verdict: the explicit degree-9 member F o F is
-  maximally NON-atomic** (imprimitive with full kernel). The atom
-  conjecture `KDeg(3)-atoms = {1,3}` survives its cheapest test.
+  maximally NON-atomic** (imprimitive with full kernel).  This remains an
+  exact statement about the `F`-submonoid, but THM-3438 later refutes the
+  global atom-spectrum conjecture: degrees `4` through `8` are realized and
+  automatically atomic, while degree one is the unit rather than an atom.
 
 ## (6) The depth-2 ternary tree over v* [FINITE-EXACT]
 
