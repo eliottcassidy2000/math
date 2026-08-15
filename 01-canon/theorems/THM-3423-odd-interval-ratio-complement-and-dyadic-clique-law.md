@@ -2,15 +2,15 @@
 id: THM-3423
 title: "Odd-interval ratio complement and dyadic clique law"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT AUDIT
-  REQUIRED.  A symmetric odd interval O_L in F_p has, beyond an explicit
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  A symmetric odd interval
+  O_L in F_p has, beyond an explicit
   cubic threshold, an exact ratio-set complement consisting of the reduced
   opposite-parity fractions of height at most h.  The Cayley graph of
   pairwise-disjoint multiplicative dilates of O_L then has exact clique number
   1+floor(log_2(h-1)); its sharp coloring is the 2-adic valuation modulo that
-  number.  The proof is elementary, but this candidate is not a proved
-  dependency until independently audited.
+  number.  The thresholds are sufficient rather than asserted minimal.
 source: root-2608-odd-interval-ratio-law-2026-08-15
+audit: independent proof reconstruction; multi-prime finite-field controls for every 2<=h<=13; normal/optimized/stored-output replay; hash and documentation audit clean
 related:
   - THM-3420-prime-rank-seven-zero-and-half-twist-splitter-closures
   - THM-3405-common-centre-gcd-gauge-and-boolean-half-twist
@@ -25,8 +25,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3423 -- odd-interval ratio complement and dyadic clique law
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Exact statement
 

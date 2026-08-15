@@ -1,8 +1,8 @@
 # Script Results Index
 
 - `odd_interval_ratio_complement_thm3423.py` -> matching `.out`
-  [THM-3423 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT /
-  INDEPENDENT AUDIT REQUIRED].  If `L` is the largest odd integer with
+  [THM-3423 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  If `L` is the
+  largest odd integer with
   `hL<p`, then beyond explicit cubic thresholds the exact complement of
   `O_L/O_L` consists of the reduced opposite-parity fractions `+-a/b` with
   `a+b<=h`.  The pairwise-disjoint-dilate Cayley graph has sharp clique
