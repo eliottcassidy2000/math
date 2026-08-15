@@ -1,0 +1,7 @@
+THM-3383 TERMINAL MONOMIAL-CONE INITIAL-RING AUDIT
+normalized_parameter_grid=PASS checked=34987 rational_decode_cells=363
+initial_ring=PASS cyclic_invariant_hypersurface; positive_and_negative_target_polynomial_slices
+fork=PASS n>0 gives polynomial u / reciprocal t; n<0 gives reciprocal u / polynomial t
+normalized_C3_atlas=PASS g1:a0/n1/u;g2:a1/n-1/t;g3:excluded_nonprimitive;g4:a1/n1/u;g5:a2/n-1/t;g6:excluded_nonprimitive;g7:a2/n1/u;g8:a3/n-1/t;g9:excluded_nonprimitive;g10:a3/n1/u;g11:a4/n-1/t;g12:excluded_nonprimitive;g13:a4/n1/u;g14:a5/n-1/t;g15:excluded_nonprimitive;g16:a5/n1/u;g17:a6/n-1/t;g18:excluded_nonprimitive;g19:a6/n1/u;g20:a7/n-1/t;g21:excluded_nonprimitive;g22:a7/n1/u;g23:a8/n-1/t;g24:excluded_nonprimitive
+multistage_controls=PASS {"4+3": {"polynomial_target": "t", "terminal": [2, 1]}, "4+4+3": {"polynomial_target": "u", "terminal": [4, 1]}}
+semantic_sha256=883e0b685f2cac9c329b3181e5af86009cd5425d3ebe5d3252f065ac92254dd0
