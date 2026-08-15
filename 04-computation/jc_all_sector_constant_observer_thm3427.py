@@ -278,6 +278,61 @@ def check_integral_arrow_exponents() -> int:
     return checks
 
 
+def resonant_defect_degree(d: int, sigma: int, exponents: tuple[int, ...]) -> int:
+    """Reduce the unique resonant column and return its exact low degree."""
+    root_count = len(exponents)
+    degree = candidate_degree(d, sigma, exponents)
+    require(degree is not None, ("missing resonance", d, sigma, exponents))
+    roots = tuple(range(root_count))
+    rad = sp.prod(x - alpha for alpha in roots)
+    p_coefficients = sp.symbols(f"u0:{degree - root_count + 1}")
+    p = sum(p_coefficients[j] * x**j for j in range(degree - root_count + 1))
+    q = sp.expand(rad * p)
+    logarithmic_q = sp.expand(
+        sum(e * sp.cancel(q / (x - alpha)) for alpha, e in zip(roots, exponents))
+    )
+    image = sp.Poly(
+        sp.expand(sigma * q + (t - x) * (sigma * logarithmic_q - d * sp.diff(q, x))),
+        x,
+    )
+    equations = [image.coeff_monomial(x**j) for j in range(root_count, degree)]
+    equations.append(p_coefficients[-1] - 1)
+    solution_set = sp.linsolve(equations, p_coefficients)
+    solution = next(iter(solution_set), None)
+    require(solution is not None, ("defect solution", d, sigma, exponents))
+    defect = sp.Poly(sp.expand(image.as_expr().subs(dict(zip(p_coefficients, solution)))), x)
+    require(not defect.is_zero, ("zero resonant defect", d, sigma, exponents))
+    return defect.degree()
+
+
+def check_resonant_defect_degrees() -> int:
+    checks = 0
+    for d in range(2, 7):
+        for sigma in range(1, d + 1):
+            for root_count in range(1, 3):
+                for exponents in product(range(1, 4), repeat=root_count):
+                    if candidate_degree(d, sigma, exponents) is None:
+                        continue
+                    require(
+                        resonant_defect_degree(d, sigma, exponents) == root_count - 1,
+                        ("defect top low row", d, sigma, exponents),
+                    )
+                    checks += 1
+
+    for d, sigma, exponents in (
+        (2, 1, (3, 2, 2)),
+        (3, 1, (4, 3, 3)),
+        (4, 2, (3, 2, 2)),
+        (5, 5, (2, 1, 1)),
+    ):
+        require(
+            resonant_defect_degree(d, sigma, exponents) == len(exponents) - 1,
+            ("three-root defect", d, sigma, exponents),
+        )
+        checks += 1
+    return checks
+
+
 def check_sharp_nonwrap_hostiles() -> int:
     checks = 0
     for d, sigma, exponents in (
@@ -300,6 +355,7 @@ def main() -> None:
     wrap_primitives, wrap_evaluations = check_wrap_primitives_and_evaluation()
     local_checks, diagonal_checks, infinity_checks = check_structural_coefficients()
     arrow_checks = check_integral_arrow_exponents()
+    defect_checks = check_resonant_defect_degrees()
     hostile_checks = check_sharp_nonwrap_hostiles()
 
     print("ALL-SECTOR CONSTANT OBSERVER PACKET -- EXACT HOSTILE REFEREE")
@@ -315,6 +371,7 @@ def main() -> None:
     print(f"polynomial leading-diagonal identities: {diagonal_checks}")
     print(f"two-infinity incompatibility checks: {infinity_checks}")
     print(f"minimal integral arrow checks: {arrow_checks}")
+    print(f"exact resonant defect-degree reductions: {defect_checks}")
     print(f"sharp multiroot nonwrap hostiles: {hostile_checks}")
     print("surviving nonwrap direct profiles and q(x,t):")
     for d, sigma, exponents, q_solution in solutions:

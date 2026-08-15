@@ -25,8 +25,8 @@ related:
   - THM-3418-one-monomial-nonlinear-fiber-keller-classification
 script: 04-computation/jc_all_sector_constant_observer_thm3427.py
 output: 05-knowledge/results/jc_all_sector_constant_observer_thm3427.out
-script_sha256: 849756abbcab179974864ca7338f53a5f510e8744f4667a6827939cd70857e0f
-output_sha256: ebfeb771585beda8ab24af0b90e6909fc1f5f1405d78311527b51043f54d5eea
+script_sha256: 9358e4a63d51fbbb0cc074a905b2d5bae7e3a78608599b4b08999413f31cf194
+output_sha256: 4055ad0afbcca0f8a0eb3a52700ffbc47a3326650364338e557839d39dfccd34
 hash_basis: LF-normalized bytes
 ---
 
@@ -241,7 +241,7 @@ form an `F`-basis of the wrap sector, up to nonzero scalars.  Equations
 `(19)--(21)` are the load-bearing wrap sidecar; omitting them is the generic
 analogue of omitting the integral wrap quotient in THM-3422.
 
-## 5. One resonance and one basis swap
+## 5. The resonant defect always removes the top low row
 
 Put `r=deg(g)`.  If `q` is a polynomial of degree `m` with leading
 coefficient `c`, then
@@ -268,127 +268,128 @@ The domain `SF[x]` begins in degree `N`.  If `m_sigma` is not an integer or
 is a basis of the sector.
 
 Suppose `m_sigma` is an integer at least `N`.  Use the nonzero diagonal
-columns below `m_sigma` to reduce
+columns below `m_sigma` to choose a monic polynomial `q_res in SF[x]` of
+degree `m_sigma` such that
 
 ```text
-L_sigma(Sx^(m_sigma-N))                                  (27)
-```
-
-to a polynomial `R_sigma` of degree less than `N`.  It is nonzero: otherwise
-the triangular matrix would have cokernel dimension `N+1`, contradicting
-`(8)`.  If `rho_sigma=deg(R_sigma)`, a basis is obtained from `(26)` by
-replacing `[x^rho_sigma]` with `[x^m_sigma]`.  The scalar normalization of
-`R_sigma` depends on choices, but the one-hole basis-swap mechanism does not.
-
-The constant observer vanishes precisely when this resonant defect removes
-the constant row.  Sections 6--7 prove that this happens only for a one-root
-`g`.  For a multiroot `g`, an accessible degree resonance can still occur,
-but it replaces a different low-degree combination; equal generic rank does
-not mean equal observer position.
-
-## 6. Nonwrap constant-observer rigidity
-
-Fix `1<=sigma<d`.  By `(7)`, generic vanishing of `theta_sigma` is equivalent
-to
-
-```text
-L_sigma(q)=1                    for q in SF[x].            (28)
-```
-
-The local calculation in Section 3 sharpens: at every root `alpha_i` of
-multiplicity `e_i`, `q` must have a simple zero.  Its leading coefficient is
-nonzero only if `sigma e_i!=d`; higher zero order cannot supply the constant
-right side.  Thus, with `N=deg(rad(g))`,
-
-```text
-m=deg(q)>=N.                                              (29)
-```
-
-The infinity coefficient `(24)` forces
-
-```text
-dm=sigma(r-1).                                            (30)
+R_sigma=L_sigma(q_res),                  deg(R_sigma)<N. (27)
 ```
 
 Define
 
 ```text
-B_sigma(q)=sigma(g'/g)q-dq'.                             (31)
+B_sigma(q)=sigma(g'/g)q-dq'.                             (28)
 ```
 
-Under `(30)`, `B_sigma` has no nonzero polynomial kernel.  Indeed,
-`B_sigma(h)=0` gives `h^d=Cg^sigma`, hence `d|sigma r`; but `(30)` gives
-`sigma r=sigma mod d`, impossible for `1<=sigma<d`.
-
-Expand `q` at `t=infinity` and write its leading term `t^Lq_0(x)`.  In
+Normalize `q_res` to have leading `x`-coefficient one.  Expand its
+coefficients at `t=infinity`, and let its maximal `t`-order be `kappa`:
 
 ```text
-sigma q+(t-x)B_sigma(q)=1,                               (32)
+q_res=t^kappa q_0(x)+lower t-orders.                     (29)
 ```
 
-kernel-freeness forces
+The monic top coefficient has `t`-order zero, so `kappa>=0`.  Every Laurent
+coefficient remains divisible by `S`.  In the coefficient of
+`t^(kappa+1)` in `(27)`, only the `tB_sigma(q_res)` term occurs.  Hence
 
 ```text
-L=-1,                         B_sigma(q_0)=1.             (33)
+leading_t(R_sigma)=B_sigma(q_0),               deg(B_sigma(q_0))<N. (30)
 ```
 
-Every coefficient remains divisible by `S`; put `n=deg(q_0)>=N`.  After
-multiplication by `g`, `(33)` is
+Put `j=deg(q_0)`, so `N<=j<=m_sigma`.  Its leading `x`-coefficient under
+`B_sigma` is
 
 ```text
-sigma g'q_0-dgq_0'=g.                                    (34)
+[sigma r-dj] lc(q_0) x^(j-1).                            (31)
 ```
 
-If `n>1`, its top coefficient forces `dn=sigma r`, contradicting the same
-congruence.  Therefore `n=1`, so
+This coefficient never vanishes.  For `sigma<d`, equality `dj=sigma r`
+together with `dm_sigma=sigma(r-1)` would give
+`d(j-m_sigma)=sigma`, impossible.  For `sigma=d`, one has
+`m_sigma=r-1`, while a zero in `(31)` would require `j=r>m_sigma`.
+Therefore
 
 ```text
-N=1.                                                      (35)
+deg(B_sigma(q_0))=j-1.                                   (32)
 ```
 
-The unique root descends to `K`; write `g=c(x-alpha)^e`.  Equation `(30)`
-is exactly
+Combining `(30)` and `(32)` gives `j=N` and the sharper exact defect law
 
 ```text
-e>1,                   d divides sigma(e-1),
-m=q_sigma=sigma(e-1)/d.                                  (36)
+deg(R_sigma)=N-1.                                        (33)
 ```
 
-Conversely, assume `(36)`.  Put `u=(x-alpha)/(t-alpha)` and `m=q_sigma`.
-Then an explicit solution of `(28)` is
+Consequently the resonant basis swap is not merely existential.  If `(25)`
+is accessible, a basis is
+
+```text
+[1],[x],...,[x^(N-2)],[x^m_sigma].                       (34)
+```
+
+For `N=1`, the low list is empty and the constant row is removed.  For
+`N>1`, the constant remains in `(34)`.  Together with `(26)`, this proves
+
+```text
+[1]=0 in F[x]/L_sigma(SF[x])
+iff N=1 and m_sigma is an integer at least one.           (35)
+```
+
+The unique geometric root in `N=1` is Galois fixed and descends to `K`.
+Writing `g=c(x-alpha)^e`, condition `(35)` is exactly `(3)`.  Thus the
+all-character observer theorem follows directly from the one-hole normal
+form, including the wrap character.  An accessible multiroot resonance
+always replaces `[x^(N-1)]`, never the constant.
+
+## 6. Closed selected primitives and the independent wrap audit
+
+The basis argument already proves generic exactness.  There are useful
+closed witnesses.  For `1<=sigma<d`, assume `(3)`, put
+
+```text
+u=(x-alpha)/(t-alpha),                m=q_sigma.
+```
+
+Then `L_sigma(q)=1` for
 
 ```text
 q=sum_(n=1)^m A_n u^n,
 
 A_n=
  d^(n-1)(m-1)! /
- [(m-n)! product_(j=m-n)^(m-1)(dj+sigma)].               (37)
+ [(m-n)! product_(j=m-n)^(m-1)(dj+sigma)].               (36)
 ```
 
 The coefficient recurrence is
 
 ```text
 A_(n+1)[sigma e-d(n+1)]
- +A_n[dn-sigma(e-1)]=0,                                  (38)
+ +A_n[dn-sigma(e-1)]=0,                                  (37)
 ```
 
 with `A_1(sigma e-d)=1`; it terminates exactly at `n=m`.
-This proves `(3)` for every nonwrap character.  Setting `sigma=1` recovers
-the generic theorem in THM-3424.
-
-## 7. Wrap residues and the exact integral annihilator
-
-Under `(22)`, the wrap constant observer is the differential class of
-`dx/g`, up to a nonzero scalar.  THM-3348 proves
+For `sigma=d`, write the normalized one-root coefficient as
+`g=gamma(x-alpha)^e`.  The actual weight-zero input
 
 ```text
-[dx/g]=0 in H^1_dR(Spec B/F)
-iff g=c(x-alpha)^e with e>1.                              (39)
+p=(x-alpha)^(1-e)/[d gamma(e-1)]                          (38)
 ```
 
-This is precisely `(3)` for `sigma=d`.  The separate residue argument is
-essential: in `(31)`, `B_d` can have the polynomial kernel generated by `g`,
-so the nonwrap two-infinity proof must not be copied across the wrap seam.
+satisfies `D(p)=z^(d-1)`.  Independently, under `(22)` the wrap observer is
+the differential class of `dx/g`, up to a nonzero scalar.  THM-3348's
+residue theorem gives
+
+```text
+[dx/g]=0
+iff g=c(x-alpha)^e with e>1,                              (39)
+```
+
+which audits `(35)` at the wrap seam.  The separate wrap construction is
+essential: `B_d` can have the polynomial kernel generated by `g`, even
+though the degree bound `j<=m_d=r-1` keeps that kernel out of `(31)`.
+Setting `sigma=1` in `(35)--(37)` recovers THM-3424 as the first-character
+specialization, without copying its proof.
+
+## 7. Exact integral annihilator
 
 It remains to restore integral depth.  In the one-root case THM-3422 gives a
 weighted bilateral chain in sector `sigma-1`.  Its unique zero arrow occurs
@@ -419,9 +420,9 @@ not assert that the full multiroot module is torsion-free.
 
 The exact companion checks the operator coefficients, closed one-root
 solutions `(37)`, the wrap evaluation splitting `(19)`, wrap residue vectors,
-the two incompatible infinity degrees, minimal integral arrow counts, and
-exact `Q(t)` linear systems on a declared low grid.  Its sharp multiroot
-hostiles include
+the two incompatible infinity degrees, `74` exact resonant defect reductions,
+minimal integral arrow counts, and exact `Q(t)` linear systems on a declared
+low grid.  Its sharp multiroot hostiles include
 
 ```text
 (d,sigma;e_1,e_2)

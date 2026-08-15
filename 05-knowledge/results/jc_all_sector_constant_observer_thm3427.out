@@ -11,6 +11,7 @@ local pole/intersection coefficients: 11700
 polynomial leading-diagonal identities: 49590
 two-infinity incompatibility checks: 6318
 minimal integral arrow checks: 2896
+exact resonant defect-degree reductions: 74
 sharp multiroot nonwrap hostiles: 4
 surviving nonwrap direct profiles and q(x,t):
   d=2, sigma=1, exponents=(3,): q=(x + 1)/(t + 1)

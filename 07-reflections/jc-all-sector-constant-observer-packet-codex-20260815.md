@@ -87,8 +87,15 @@ high monomial at degree
 m_sigma=sigma(deg(g)-1)/d
 ```
 
-survives, while the resonant column creates one relation among the `N` low
-monomials.  Thus one high vector replaces one low vector without changing
+survives.  The `t=infinity` leading coefficient of the reduced resonant
+column has degree exactly `N-1`, so the relation always removes the top low
+monomial.  The basis is exactly
+
+```text
+1,x,...,x^(N-2),x^m_sigma.
+```
+
+Thus one high vector replaces the top low vector without changing
 THM-3419's rank.
 
 For a one-root divisor, that low vector is exactly the constant.  The
@@ -99,8 +106,8 @@ annihilator exponent
 q_sigma=sigma(e-1)/d.
 ```
 
-For a multiroot divisor, an accessible degree hole may still exist, but the
-relation removes another low combination.  The constant survives.  This is
+For a multiroot divisor, an accessible degree hole may still exist, but
+`N>1`, so the swap removes `x^(N-1)` and the constant survives.  This is
 the abstract regular-packet theme made concrete: equal sector ranks coexist
 with character-dependent integral position.
 
@@ -117,10 +124,11 @@ Together with THM-3422, this gives its exact integral annihilator.  Therefore
 all `d` constant-character observers are nontorsion for every multiroot `g`,
 even though THM-3419 gives `N>1` response channels in each sector.
 
-The next underexplored object is the reduced resonant defect polynomial
-`R_sigma` for multiroot `g`.  It is a low-degree period coordinate that says
-which low vector, rather than the constant, is traded for the high resonant
-monomial.  Computing its root-interpolation or determinant formula may be the
-right bridge toward local primary structure.  Nothing here yet proves that a
-multiroot sector is torsion-free or decomposes into independent root arms.
-
+The next underexplored object is the full coefficient vector of the reduced
+resonant defect polynomial `R_sigma`.  Its degree is now fixed at `N-1`, but
+its lower coefficients form a concrete period coordinate describing how
+`x^(N-1)` is expressed through the other low vectors and the high resonant
+monomial.  A root-interpolation or determinant formula for that vector may be
+the right bridge toward local primary structure.  Nothing here yet proves
+that a multiroot sector is torsion-free or decomposes into independent root
+arms.
