@@ -25,16 +25,11 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; projected caps `1579/216`. THM-3378 leaves the
-`z1=216` ledger/wall/families at `372913/109/12`. THM-3352/3355 close matched
-residues; THM-3360/3384 give pair floors, and same-level edges close
-`z_e=q_eL-e` on all `3,003` bodies. THM-3381 gives phase-aware transport and
-refutes residue-blind transfer. Open: `k=0`, other `k=1` residues, projected
-`k=2,3`, rung, entry and LRC; screens are not covers. THM-3356 gives determinant
-shells. THM-3366 leaves `4,056/200,069,517,203` (`k=2`) and
-`1,897/2,548,893,834` (`k=3`), with seven rigid hits at `D=L/2`. THM-3385/
-3387--3389/3391 classify q=2--4 fibre geometry; the q=6 CRT probe matches its
-atlas slice without a refined decrement. THM-3368 adds a tariff, not a clock seed.
+Direct frontier: `<=6`; projected caps `1579/216`. At `z1=216`, THM-3361 closes the three `L720720` rows; THM-3378 closes row 94 of the next family, leaving ledger/wall/families `372913/109/12`.
+THM-2941/3349/3350/3352/3355 close the positive matched-residue branch `z_e=q_eL-e` on all `3,003` bodies; THM-3360/3384 give independent pair floors. THM-3381 bounds phase/tree drift and refutes residue-blind transfer.
+Open: `k=0`, other `k=1` residues, projected `k=2,3`, rung, physical entry and LRC; screens are not covers. THM-3356 gives determinant shells; THM-3366 leaves refined `(rows,count)` `k=2:4,056/200,069,517,203`, `k=3:1,897/2,548,893,834`.
+THM-3385/3387--3389/3391/3395 classify q=2--7 fibres. FINITE-EXACT q=8--14 edge counts are `(32,22,18,0,8,0,0)`; q=15 needs a rank-six trimode. No decrement follows.
+THM-3368 adds a weighted Horn tariff but no clock seed. LRC remains open.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
 
@@ -340,7 +335,7 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
   THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;
   polynomial `A2` regularity and constant units are the missing gate.
-  THM-3074/3080/3081 give the finite Laurent tower; THM-3383's initial ring separates polynomiality from gauge. Nonmonomial/physical embeddings remain OPEN.
+  THM-3074/3080/3081 give the Laurent tower. THM-3383 and an exact cyclic/V4 hostile leave boundary effectivity and physical embedding OPEN.
   THM-3067/3141's `A4` shadow loses `V4` origin; THM-3072 recovers it
   from three `C2` tables; edge/cycle loses a 3D character sector.  THM-3076
   extends this to prime affine-plane tomography, with the characteristic-`p`
