@@ -8,11 +8,13 @@ status: >
   gives an explicit quartic Keller map whose genuine Jelonek component C=0
   has identity inertia and generic-primitive cleared exponent 12.  The exact
   survivor is parity = infinity-inertia sign after reciprocal reversal.
-  Whether a Keller Jelonek component can have genuine C3 inertia remains open.
+  THM-3448 realizes genuine Keller C_ell inertia for every ell>=2, first C3
+  in degree five; only the arbitrary quartic/two-jet C3 lane remains open.
 source: kind-pasteur-2026-07-26-S132
 related:
   - THM-3438-weighted-lift-keller-degree-spectrum
   - THM-3441-weighted-quartic-jelonek-components-and-inertia-parity
+  - THM-3448-weighted-keller-cyclic-jelonek-inertia-family
   - THM-2455-quartic-swallowtail-scaffold-and-endpoint-corrections
   - THM-2446-twojet-zgraded-jacobian-decomposition-and-cone-system
   - THM-1310-conic-pair-fibers-and-design-equations
@@ -33,13 +35,15 @@ controls_output_sha256: b4facd9293a31765f220b6903d5e74a1d9fef4e5acb8764f65417991
 > clause below, and THM-3441 refutes its Keller-restricted
 > every-component-odd successor.  Retain this file for the evidence and
 > correction lineage.  The live structural survivor is parity equals
-> infinity-inertia sign; the live existence question asks specifically for
-> genuine `C_3` inertia on a Keller Jelonek component.
+> infinity-inertia sign.  THM-3448 closes the general Keller existence
+> question with genuine `C_ell` components for every `ell>=2`; arbitrary
+> quartic/two-jet `C_3` remains open.
 >
 > **KELLER DECISION (THM-3438, THM-3441 / MISTAKE-396).**  The weighted
 > quartic supplies the missing Keller witness, and its exact boundary audit
 > separates finite branch discriminant, monogenic index, and nonproperness.
 > Its `C=0` component is genuinely nonproper but has identity inertia.
+> THM-3448 then realizes the first weighted `C_3` component in degree five.
 
 Corrected successor to THM-2446 (P1), with THM-2455 supplying the
 proved classical layer. Let `F = A z^2 + B z + C : C^3 -> C^3` be
@@ -108,10 +112,11 @@ obey `E mod 2 = sign(infinity inertia)`.
 - G5 is repaired by THM-3059: after reciprocal reversal, the exact formula is
   `N=6v(ell)-(d_sigma+2i)`, hence `N mod 2` is the sign of infinity inertia.
   THM-3441 verifies this repaired parity law on both components of an exact
-  Keller boundary and refutes the stronger odd-everywhere successor.  The
-  remaining Keller task is narrower: realize or exclude genuine `C_3`
-  infinity inertia.  The missing local sidecar is still the branchwise unit
-  residue of the primitive-element Jacobian cofactor.
+  Keller boundary and refutes the stronger odd-everywhere successor.
+  THM-3448 realizes genuine `C_ell` inertia for every `ell>=2` and identifies
+  the branchwise primitive-residue gate explicitly.  The remaining narrow
+  task is arbitrary quartic/two-jet Keller `C_3`, excluded only inside the
+  weighted quartic family.
 - G6 (decoupling search): a proper 2-jet map with
   Galois not contained in A_4 would decouple "square disc" from
   "proper".  The other requested decoupling now exists: THM-3059 is a

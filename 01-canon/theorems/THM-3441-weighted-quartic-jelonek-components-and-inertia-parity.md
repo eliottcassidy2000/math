@@ -9,11 +9,14 @@ status: >
   L=0 loses two sheets with transposition inertia and odd exponent 5.  This
   refutes HYP-9027's Keller successor claiming odd inertia on every Jelonek
   component, while verifying parity=inertia-sign for both components.  It
-  does not classify quartic Keller boundaries or decide the C3-inertia lane.
+  does not classify quartic Keller boundaries.  THM-3448 subsequently
+  realizes genuine Keller C3 inertia in degree five and excludes it only
+  inside the weighted quartic family.
 source: Socrates independent quartic boundary audit, integrated by codex2, 2026-08-15
 depends_on:
   - THM-3438-weighted-lift-keller-degree-spectrum
 related:
+  - THM-3448-weighted-keller-cyclic-jelonek-inertia-family
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
   - THM-3059-quartic-twojet-even-jelonek-c3-escape-counterexample
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
@@ -258,10 +261,11 @@ inertia are three different objects.  Saturating away `C` because the
 `(P,Q,C)` chart degenerates would wrongly delete a genuine Jelonek component;
 treating `C^2` as ramification would wrongly assign it a transposition.
 
-This theorem does not classify other quartic Keller maps, decide whether a
-Keller map can have a genuine `C_3` infinity component, identify all special
-strata inside `V(CL)`, or settle `JC(2)`/`DC(2)`.  It describes exactly the
-boundary of the explicit weighted quartic `G`.
+This theorem does not classify other quartic Keller maps, identify all special
+strata inside `V(CL)`, or settle `JC(2)`/`DC(2)`.  THM-3448 subsequently gives
+a degree-five Keller `C_3` component and proves that no weighted quartic has
+one; the arbitrary quartic/two-jet lane remains open.  The present theorem
+describes exactly the boundary of the explicit weighted quartic `G`.
 
 ## 5. Exact companion and audit
 
