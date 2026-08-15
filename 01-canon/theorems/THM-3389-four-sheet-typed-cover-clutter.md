@@ -2,36 +2,38 @@
 id: THM-3389
 title: "Four-sheet typed cover clutter"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT AUDIT.  On a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On a
   four-sheet fibre, odd transverse speeds block singleton sheets and speeds
   congruent to two modulo four block antipodal pairs.  Inclusion-minimal full
   covers therefore have block partitions 2+2, 2+1+1, or 1+1+1+1.  An exact
   complete affine gap cochain with zero triangle circulation decides common
   phase.  The literal clutter has 36 edges of ranks (2:4,3:15,4:17),
   independence profile (1,11,51,118,123,44,3,0,...), and classifies all 619
-  q=4 rows of THM-3387, with no core rescue.  This candidate is not yet in the
-  proved dependency graph and gives no refined-ledger decrement or LRC(14).
+  q=4 rows of THM-3387, with no core rescue.  It gives no refined-ledger
+  decrement or LRC(14).
 source: codex-2026-08-14-q4-typed-cover-clutter
-related:
+audit: independent blocker-typing, affine-coboundary, generalized-CRT, circular-Helly, endpoint, census, and replay audit
+depends_on:
   - THM-3387-exact-cyclic-sheet-cover-atlas-and-q2-gcd-graph
+related:
   - THM-3388-three-sheet-phase-triangle-cover-clutter
   - THM-3366-all-sector-complement-clock-completion
 script: 04-computation/lrc14_q4_typed_cover_clutter_thm3389.py
 output: 05-knowledge/results/lrc14_q4_typed_cover_clutter_thm3389.out
-script_sha256: 87dbb36dcfe0ab6207a84eeb07ecd2a744833908a96ce4be3d48ca716c753fc7
-output_sha256: c75227671de08bfa9e6fa30dd3ee1b8ed8ab59069a47c008b6cf02b47f51edc3
+script_sha256: bc96b1c511732f31101cfa67a954670d4799f85d9a35a1135ac686cf37b9e528
+output_sha256: 2b4192cd2fad63a8da356d3303f550ad5f3a43ba62ecd6fa6457318e2959dc03
 semantic_sha256: 5e19b6e083e8b1faf6c1a082c6e321f148b2e5ff85bf93aa1d15c92542bf87b2
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3389 -- four-sheet cover is a typed clutter, not a tournament
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and connection contract
 
 THM-3387 identifies full sheet cover as the exact transverse obstruction.
-THM-3388's provisional `q=3` analysis shows why pairwise compatibility needs
+THM-3388's `q=3` analysis shows why pairwise compatibility needs
 an integral phase cochain.  At `q=4`, the new feature is not a larger
 tournament: blocker vertices themselves have two different sheet capacities.
 
@@ -255,7 +257,7 @@ The full orbit is a structured subset of the harmonic series with mass
 =109109/64800.                                          (21)
 ```
 
-As in THM-3388's provisional ternary orbit, ancestry words, exponent-lattice
+As in THM-3388's ternary orbit, ancestry words, exponent-lattice
 support, collision multiplicity, and harmonic weight remain four distinct
 representations.
 
@@ -284,6 +286,6 @@ python -O 04-computation/lrc14_q4_typed_cover_clutter_thm3389.py
 
 Ordinary and optimized runs LF-normalized-byte-match the stored output.
 
-This candidate classifies the q=4 slice of THM-3387.  It does not transport
+This theorem classifies the q=4 slice of THM-3387.  It does not transport
 arbitrary reflected phase, close a new refined-ledger row, physically realize
-a drift tail, or prove LRC(14).  Promotion awaits independent hostile audit.
+a drift tail, or prove LRC(14).

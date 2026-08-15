@@ -1,7 +1,7 @@
 THM-3389 Q4 TYPED COVER CLUTTER
-source_sha256_lf=87dbb36dcfe0ab6207a84eeb07ecd2a744833908a96ce4be3d48ca716c753fc7
+source_sha256_lf=bc96b1c511732f31101cfa67a954670d4799f85d9a35a1135ac686cf37b9e528
 dependency_sha256_lf=(('THM-3387', 'c540255a185efb54c67035d69f3fbd94f4c1ad3e30c4e31738a8800e81198613'), ('THM-3387-script', '9b0b46874a569d674b937b37cf74a8985fca2b77e3e480a75fb4924ea602f25a'), ('THM-3387-output', 'b4d9ce439bab4501bfd5e2cf13eb0b0e3685b7364f30e43b7d5ca9138d25cb5c'))
-status=PROVISIONAL analytic complete-cochain criterion plus FINITE-EXACT literal q4 clutter and atlas;independent_audit_pending
+status=PROVED analytic complete-cochain criterion plus VERIFIED-EXACT literal q4 clutter and atlas;independently_hostile_audited
 blocker_species=odd:singleton;2mod4:antipodal_pair;minimal_partitions=2+2,2+1+1,1+1+1+1
 gap_cochain=p_ij=4u_i u_j(x_i-x_j);affine_congruence_and_pair_overlap_plus_zero_triangle_circulation
 audit_checks=rank2:1225,rank3:1900,rank4:715

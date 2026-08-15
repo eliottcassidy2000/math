@@ -459,7 +459,7 @@ def main():
     print("THM-3389 Q4 TYPED COVER CLUTTER")
     print(f"source_sha256_lf={lf_hash(source)}")
     print(f"dependency_sha256_lf={tuple((name, expected) for name, _, expected in PINNED)}")
-    print("status=PROVISIONAL analytic complete-cochain criterion plus FINITE-EXACT literal q4 clutter and atlas;independent_audit_pending")
+    print("status=PROVED analytic complete-cochain criterion plus VERIFIED-EXACT literal q4 clutter and atlas;independently_hostile_audited")
     print("blocker_species=odd:singleton;2mod4:antipodal_pair;minimal_partitions=2+2,2+1+1,1+1+1+1")
     print("gap_cochain=p_ij=4u_i u_j(x_i-x_j);affine_congruence_and_pair_overlap_plus_zero_triangle_circulation")
     print(f"audit_checks=rank2:{pair_checks},rank3:{rank3_checks},rank4:{rank4_checks}")
