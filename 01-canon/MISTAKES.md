@@ -9,6 +9,40 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-387 (2026-08-14, projected `z1=216` wall) -- a prefix-only positive two-high gap was extrapolated to the whole live wall
+
+- **What failed:** THM-3351 established a positive duplicate-permitting
+  two-high gap on selected prefix bodies.  The first THM-3394 verifier silently
+  promoted that prefix fact to every post-THM-3378 live row and required
+  `two_gap>0`, thereby strengthening the lawful “at least one high” gate to
+  the false statement “exactly one high everywhere.”
+- **Minimal witness / first failed implication:** live row `195` has
+  `E=(1,5,8,9,13,14)`, `L=458640`, high floor `45170`, residual passport
+  `(3920,6370,32760,57330)`, and mask `6`.  Its low clause is denominator
+  `3920`, label `351`, value `4639/1203930`; the two high clauses are
+  `(32760,46634,21013/594117160)` and
+  `(57330,51176,236059/10268720280)`.  The exact gap is
+  `-17651221657/66699959142726`.  Thus universality of the positive gap is the
+  first invalid step; the inherited high gate, ray maxima, and the existing
+  support-capacity lemmas remain valid.
+- **Repair / strongest survivor:** enumerate the finite two-/three-high
+  residuals instead of discarding them.  Row `195` has `137` two-high cases
+  and no three-high mask.  For the displayed hostile pair, the common source
+  has `100,776` actual fixed-safe cells.  On the common modulus `229320`, its
+  support has size `88,746`, while the two lifted danger capacities are only
+  `32,760` each, leaving `23,226`.  Independently, the exact THM-3391 weighted
+  maxima are `19,849` and `19,867`, leaving a common-source lower bound
+  `61,060`.  The exact packet therefore closes once the source and both
+  quotient maps are restored.  The whole row and wall remain open until every
+  residual is partitioned through the inherited common-modulus, weighted
+  actual-cell, or denominator-two measure terminals and replayed normally and
+  with `-O`.
+- **Reusable rule:** a scalar extremal gap proved on a selected prefix is not
+  a universal arity reduction.  When several blockers survive, retain one
+  actual source, maximize each pullback window over every unit and translation,
+  and use strict summed capacity or its equality/correlation sidecar.  Raw cell
+  multiplicity cannot be inserted into an ambient unweighted quotient bound.
+
 ## MISTAKE-384 (2026-08-14, projected transfer) -- raw high ratios and denominator passports do not retain a located reflected-pair overlap
 
 - **What failed:** the first post-reflected transfer tried to apply the

@@ -16,9 +16,9 @@ strict duplicate-two-high gap before applying located torsion and
 restricted-support terminals.  That simplification is false: live row `195`,
 `E=(1,5,8,9,13,14)`, `L=458640`, has exact gap
 `-17651221657/66699959142726` for the passport
-`(3920,6370,32760,57330)`.  Any repaired candidate must therefore retain the
-actual common-cell source and treat its two-/multi-high blockers jointly,
-for example through THM-3391 weighted capacities and their equality/correlated
+`(3920,6370,32760,57330)` (MISTAKE-387).  Any repaired candidate must
+therefore retain the actual common-cell source and treat its two-/multi-high
+blockers jointly, for example through THM-3391 weighted capacities and their equality/correlated
 cover-locus sidecar, or leave the packet open.  The theorem will not be
 promoted until every such residual is classified and a full frozen census,
 ordinary/optimized replay, dependency audit, and live-ledger composition are
