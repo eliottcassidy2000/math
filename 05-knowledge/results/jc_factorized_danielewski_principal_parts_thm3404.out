@@ -1,0 +1,22 @@
+THM-3404 exact factorized-Danielewski controls
+arithmetic=integer+rational polynomial only
+factor_packets=372
+crt_idempotents=900
+exact_clearings=372
+factor_one_step_hostiles=900
+cancellation_hostiles=124
+cover_packets=164
+cover_kernel_classes=225
+max_principal_part_length=36
+filtration_cells=400
+positive_power_exact=320
+filtration_one_step_hostiles=636
+principal_part=(R_X/R)_(-q)=X^-q*k[v]/(F^q)
+crt_packet=k[v]/(F^q)=direct_sum_i k[v]/(f_i^(q*e_i))
+general_filtration=I_n(X^-a*b)=J(a,b)^n
+cancellation_hostile=X^-1+X^-1*(F-1)=Y
+duplicate_hostile=v^2 is one e=2 arm, not two e=1 arms
+mixed_cover_control=F=v^2*(v-1)^2,N=2: Cl Z+Z/2 -> Z, old packets unchanged
+factorial_cover_boundary=r<=1 iff a finite normal factorial cover exists
+semantic_sha256=6459529a71a434aa0856d38d3d21bd11314a05dec449773331aac907543690c9
+result=PASS
