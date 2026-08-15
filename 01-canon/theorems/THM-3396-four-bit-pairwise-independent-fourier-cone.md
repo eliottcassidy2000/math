@@ -13,21 +13,24 @@ status: >
   is a complete minimal sidecar.  The moment polytope is the polar of the odd
   5-demicube: it has 26 vertices, namely the ten signed coordinate vectors and
   the sixteen even sign vectors divided by three, and f-vector
-  (26,120,160,80,16).  Three exact Hadamard-puzzle packets of sizes 48, 120,
-  and 896 are verified; the 896 packet omits exactly two atoms and lies in the
-  relative interior of their triangular-bipyramid ridge.  This is a
+  (26,120,160,80,16).  Its sharp absolute functional norm is
+  max(l-infinity,l-one/3), and its vertices are exactly ten uniform eight-run
+  and sixteen twelve-run OA packets.  Three exact Hadamard-puzzle packets of
+  sizes 48, 120, and 896 are verified; the 896 packet omits exactly two atoms,
+  lies in the relative interior of their triangular-bipyramid ridge, and has
+  two different exact H8/H12 vertex decompositions.  This is a
   four-column/local realizability theorem, not a Hadamard completion theorem
   or a Grothendieck bound.
 source: root-2608-sign-puzzle-2026-08-14
-audit: prior independent Fourier/OA/convolution derivation, raw-signword packet extraction, and facet/hostile reconstruction; exact rational polar face-lattice reconstruction and normal/optimized replay added here, with independent geometry replay pending
+audit: independent Fourier/OA/convolution and raw-signword reconstruction; exact rational polar face lattice; separate support-function, edge-incidence, and 896-face replay; normal/optimized agreement
 related:
   - THM-3394-twelve-formerly-missing-hadamard-orders-through-2000
   - THM-3392-bipartite-sign-lift-and-synchronization-loss
 script: 04-computation/four_bit_pairwise_independent_fourier_cone_thm3396.py
 output: 05-knowledge/results/four_bit_pairwise_independent_fourier_cone_thm3396.out
-script_sha256: e2af4f9720301633a4cc55595d20558c537d7a655c64a38b6441b916390cef10
-output_sha256: ba88f5cd23bfb147bfaf869dceae84c97d113e28a44ef882845977d12224731a
-semantic_sha256: 3683606fd021325504c0513cd1e72270d90299eebb0ebdb6f934cf04dc5af6b1
+script_sha256: f2ecd485092354a2d06516b8ce207205a70b4f1693f40b709f9259c313b4b2c7
+output_sha256: 013a58e77a05c0cfd052f5a0a7759003c0157e37cff5e186ab1a24dab416e6fd
+semantic_sha256: 0ea662a8f16071882c507a342204df03d04998a50f86cf64fe21776acc4d2c6c
 hash_basis: LF-normalized bytes
 ---
 
@@ -176,7 +179,60 @@ therefore yields
 This geometry identifies the full boundary stratification hidden by the two
 compressed maxima in (4); it adds no realizability claim beyond (3).
 
-## 4. Exact integer and orthogonal-array form
+## 4. Sharp functional norm and the H8/H12 atoms
+
+The vertex classification gives a useful exact norm. For every real
+five-vector c,
+
+~~~text
+sup_(y in P) |c dot y| = max{||c||_infinity, ||c||_1/3}.       (4g)
+~~~
+
+The signed coordinate vertices realize the first term. For the second,
+choose signs matching c. Since the ambient dimension five is odd, exactly
+one of that sign vector and its negative has even sign product; its
+one-third vertex realizes ||c||_1/3 in absolute value. No interpolation
+argument is needed because a linear functional attains its extrema at a
+vertex.
+
+The vertices also have literal orthogonal-array meanings. At each of the
+ten vertices +-e_i, formula (3) is uniform on one eight-atom half-cube. At
+each even-sign vertex s/3, the sixteen atom masses have multiplicities
+
+~~~text
+{0^5, (1/12)^10, (1/6)^1}.                                  (4h)
+~~~
+
+Thus it is the empirical law of a twelve-run strength-two array, with ten
+atoms occurring once and one atom twice. Consequently every law in P is a
+convex mixture of ten H8-type and sixteen H12-type four-column packets.
+This is a local mixture statement; it does not supply a compatible square
+Hadamard completion.
+
+For the 896-row point y=(-1/4,0,0,-1/4,1/2), put
+
+~~~text
+s_- = (-1,-1,-1,-1,+1),       s_+ = (-1,+1,+1,-1,+1).
+~~~
+
+The triangular-bipyramid face exposes two different exact decompositions:
+
+~~~text
+y = (1/2)e_5+(1/4)(-e_1)+(1/4)(-e_4)
+  = (1/4)e_5+(3/8)(s_-/3)+(3/8)(s_+/3).                      (4i)
+~~~
+
+At the row-count level these are respectively block sizes
+
+~~~text
+448+224+224 = 224+336+336 = 896.
+~~~
+
+Fourier inversion verifies that both sums give exactly the same sixteen
+cell counts. Hence even the complete local moment law forgets which
+extremal OA compiler produced it.
+
+## 5. Exact integer and orthogonal-array form
 
 Let a multiset of `N` four-bit rows have cell counts `n_x`, and define the
 unnormalized moments
@@ -211,7 +267,7 @@ expectation on every law in the cone.
 Equation (8) is only four-column data.  It neither completes `R` to a square
 Hadamard matrix nor asserts that an arbitrary local packet occurs in one.
 
-## 5. An operation law
+## 6. An operation law
 
 Let `X,Y` be independent laws satisfying (1), and multiply them
 coordinatewise:
@@ -243,7 +299,7 @@ This operation preserves the whitened quadratic shadow while multiplying
 the higher-chaos sidecar.  It is the lawful transfer; arbitrary multiplication
 or projection of cell-count tables need not preserve strength two.
 
-## 6. Exact packets exposed by the sign-word certificate
+## 7. Exact packets exposed by the sign-word certificate
 
 Three equal-four-row sidecars inside the reconstruction underlying THM-3394
 have the following exact packets.  The two margins are the right side minus
@@ -290,7 +346,7 @@ The familiar parity laws give the extremal controls `(a,d)=(0,+1)` and
 `(0,-1)`, supported on only the even or odd half-cube.  At the other end, the
 uniform law has `(a,d)=0` and full support.
 
-## 7. Hostiles and transfer boundary
+## 8. Hostiles and transfer boundary
 
 Both parity inequalities in (4) are load-bearing.  For
 
@@ -314,7 +370,7 @@ beside cubic-Hermite arguments and sign synchronization, but it does not by
 itself transfer Gaussian positivity, improve the Grothendieck constant,
 complete a Hadamard matrix, or solve any LRC/FC/JC frontier.
 
-## 8. Exact companion
+## 9. Exact companion
 
 Run
 
@@ -331,11 +387,14 @@ The standard-library companion:
    pairwise-independent half-cubes and the full cube;
 4. reconstructs all `26` polar vertices from rank-five rational intersections
    and all faces from the `2^16` facet subsets, obtaining (4f);
-5. verifies (12) on all `11^2=121` pairs of the binary laws;
-6. reconstructs the three displayed integer packets and their margins;
-7. identifies the exact five-vertex, nine-edge, six-facet face containing the
+5. verifies the sharp norm (4g) on a complete five-dimensional integer grid
+   and reconstructs the ten H8 and sixteen H12 vertex packets;
+6. verifies (12) on all `11^2=121` pairs of the binary laws;
+7. reconstructs the three displayed integer packets and their margins;
+8. identifies the exact five-vertex, nine-edge, six-facet face containing the
    `N=896` packet; and
-8. checks the one-parity and missing-quadratic hostiles.
+9. verifies both row-level decompositions in (4i) and checks the one-parity
+   and missing-quadratic hostiles.
 
 Normal and optimized runs are byte-identical.  The computation is an exact
 referee for the proof and frozen packets; the theorem itself follows from

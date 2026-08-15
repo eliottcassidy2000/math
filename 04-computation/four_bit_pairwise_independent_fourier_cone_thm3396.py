@@ -307,6 +307,44 @@ def main() -> None:
     require(face_histogram == Counter({0: 26, 1: 120, 2: 160, 3: 80, 4: 16, 5: 1}),
             ("unexpected face lattice", face_histogram))
 
+    # Absolute support on the moment polytope is the maximum of the coordinate
+    # and one-third l1 norms.  The ten coordinate vertices realize the first
+    # term; in odd dimension one of sign(c), -sign(c) is an even sign vector
+    # and realizes the second term in absolute value.
+    support_grid = tuple(product(range(-2, 3), repeat=5))
+    for functional in support_grid:
+        vertex_maximum = max(abs(dot5(functional, vertex)) for vertex in vertices)
+        predicted = max(
+            Fraction(max(abs(value) for value in functional)),
+            Fraction(sum(abs(value) for value in functional), 3),
+        )
+        require(vertex_maximum == predicted,
+                ("absolute support norm", functional, vertex_maximum, predicted))
+
+    # The two vertex orbits have literal OA compilers.  Coordinate vertices
+    # are uniform eight-run half-cubes.  One-third even-sign vertices are
+    # twelve-run arrays with atom multiplicities 0^5,1^10,2^1.
+    vertex_packet_histogram: Counter[tuple[int, tuple[tuple[int, int], ...]]] = Counter()
+    for vertex in vertices:
+        mass = 8 if vertex in coordinate_vertices else 12
+        cubic = tuple(mass * value for value in vertex[:4])
+        quartic = mass * vertex[4]
+        counts = integer_tuple(
+            reconstruct_counts(mass, cubic, quartic), "vertex OA compiler"
+        )
+        require(not any(low_moments(counts)), ("vertex OA low moments", vertex))
+        vertex_packet_histogram[
+            (mass, tuple(sorted(Counter(counts).items())))
+        ] += 1
+    require(
+        vertex_packet_histogram
+        == Counter({
+            (8, ((0, 8), (1, 8))): 10,
+            (12, ((0, 5), (1, 10), (2, 1))): 16,
+        }),
+        ("vertex OA orbit census", vertex_packet_histogram),
+    )
+
     # Coordinatewise multiplication of independent rows multiplies every
     # Fourier coefficient.  Check all 11^2 exact subset-law pairs.
     convolution_pairs = 0
@@ -418,6 +456,59 @@ def main() -> None:
         "896 ridge has a nontriangular facet",
     )
 
+    # The same 896-row law has two exact vertex decompositions, one entirely
+    # in the H8 orbit and one mixing H8 with the two H12 apices.  This freezes
+    # the nonuniqueness that a Gram or moment packet cannot remember.
+    e5 = (Fraction(0), Fraction(0), Fraction(0), Fraction(0), Fraction(1))
+    minus_e1 = (Fraction(-1), Fraction(0), Fraction(0), Fraction(0), Fraction(0))
+    minus_e4 = (Fraction(0), Fraction(0), Fraction(0), Fraction(-1), Fraction(0))
+    simplex_minus = tuple(Fraction(value, 3) for value in (-1, -1, -1, -1, 1))
+    simplex_plus = tuple(Fraction(value, 3) for value in (-1, 1, 1, -1, 1))
+
+    def weighted_sum(
+        terms: tuple[tuple[Fraction, Vector5], ...]
+    ) -> Vector5:
+        return tuple(
+            sum((weight * vertex[index] for weight, vertex in terms), Fraction(0))
+            for index in range(5)
+        )  # type: ignore[return-value]
+
+    coordinate_decomposition = (
+        (Fraction(1, 2), e5),
+        (Fraction(1, 4), minus_e1),
+        (Fraction(1, 4), minus_e4),
+    )
+    mixed_decomposition = (
+        (Fraction(1, 4), e5),
+        (Fraction(3, 8), simplex_minus),
+        (Fraction(3, 8), simplex_plus),
+    )
+    require(weighted_sum(coordinate_decomposition) == packet_896,
+            "896 coordinate-vertex decomposition")
+    require(weighted_sum(mixed_decomposition) == packet_896,
+            "896 mixed-vertex decomposition")
+
+    packet_896_counts = integer_tuple(
+        reconstruct_counts(896, (-224, 0, 0, -224), 448), "896 packet"
+    )
+    for label, blocks in (
+        ("coordinate", ((448, e5), (224, minus_e1), (224, minus_e4))),
+        ("mixed", ((224, e5), (336, simplex_minus), (336, simplex_plus))),
+    ):
+        combined = [0] * len(ATOMS)
+        for mass, vertex in blocks:
+            block = integer_tuple(
+                reconstruct_counts(
+                    mass,
+                    tuple(mass * value for value in vertex[:4]),
+                    mass * vertex[4],
+                ),
+                f"896 {label} block",
+            )
+            combined = [left + right for left, right in zip(combined, block)]
+        require(tuple(combined) == packet_896_counts,
+                ("896 row-level decomposition", label))
+
     # Hostiles: one parity family of inequalities cannot replace both, and
     # vanishing degree-one moments alone cannot replace pairwise independence.
     one_sided_plus = (Fraction(1), Fraction(0), Fraction(0), Fraction(0))
@@ -449,12 +540,16 @@ def main() -> None:
         "subset_support_histogram": sorted(support_histogram.items()),
         "polar_vertices": len(vertices),
         "polar_f_vector": [face_histogram[dimension] for dimension in range(5)],
+        "polar_absolute_support": "max(linf,l1/3)",
+        "polar_support_grid": len(support_grid),
+        "vertex_OA_orbits": sorted(vertex_packet_histogram.items()),
         "convolution_pairs": convolution_pairs,
         "puzzle_packets": packet_rows,
         "puzzle_896_active_normals": sorted(active_normals),
         "puzzle_896_face_f_vector": [
             ridge_face_histogram[dimension] for dimension in range(3)
         ],
+        "puzzle_896_vertex_decompositions": ["H8:448,224,224", "H8/H12:224,336,336"],
         "one_sided_hostile": "plus_passes_odd_fails",
         "quadratic_hostile": "x0_equals_x1",
     }
@@ -466,6 +561,8 @@ def main() -> None:
     print(f"rational_half_grid={grid_cells} feasible={feasible_cells} facet_iff=PASS")
     print("binary_atom_subsets=65535 pairwise_laws=11 support_histogram=8:10,16:1")
     print("odd_5_demicube_polar_vertices=26 f_vector=26,120,160,80,16")
+    print("polar_absolute_support=max(linf,l1/3) grid=3125 PASS")
+    print("polar_vertex_OA_orbits=H8:10,H12:16")
     print(f"coordinatewise_convolution_pairs={convolution_pairs} moment_product=PASS")
     for row in packet_rows:
         print(
@@ -476,6 +573,7 @@ def main() -> None:
             + " odd_margin=" + row["odd_margin"]
         )
     print("puzzle_896_face=triangular_bipyramid vertices=5 edges=9 facets=6 active_atoms=2")
+    print("puzzle_896_vertex_decompositions=H8(448,224,224)=H8/H12(224,336,336)")
     print("one_parity_only_hostile=PASS")
     print("quadratic_hypothesis_hostile=PASS")
     print(f"semantic_sha256={digest}")
