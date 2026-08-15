@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `smooth_hensel_vector_field_orbits_thm3442.py` -> matching `.out`
+  [THM-3442 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
+  INDEPENDENT AUDIT COMPLETE, STATUS PROMOTION PENDING].  For a smooth
+  finite-type `Z_p`-scheme of pure relative dimension `d`, a
+  congruence-to-identity automorphism at depth `c` has first-carry vector
+  field `delta_g`.  When `p` is odd or `c>=2`, every depth-`c` Hensel fibre
+  above a nonzero value of `delta_g` has orbit length `p^(a-c)` and exactly
+  `p^((d-1)(a-c))` cycles; a zero fixes the whole first lifting fibre.  The
+  exact controls cover affine dimensions one through three, nonlinear shear,
+  multiplicative and excluded-zero fibres, and the sharp `p=2,c=1` failure
+  versus `c=2` survival.  Script/output/semantic LF SHA-256:
+  `26edd280a13f8a9e9cff84d0b1d480fc839dfc2134d0223b49ab4db5902a455c` /
+  `2e95fc184e1c2ec732f67d190a4333fd5f7e8d315e5dbc7b2f3e0e52e9be9abc` /
+  `c72801a6c4fcb534b9e71ab0bb23da9163fc1051c45895b9bcd65241fd0a1c49`.
+  No LRC, `JC(2)`, or boundary-response transport is claimed; the theorem
+  remains outside the proved dependency graph until status promotion.
+
 - `near_identity_grassmannian_hensel_orbits_thm3439.py` -> matching `.out`
   [THM-3439 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For odd `p`,
   no invariant first-carry `k`-plane gives orbit length `p^(a-c)` and exactly
