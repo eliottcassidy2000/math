@@ -66,7 +66,7 @@ LARGER_CONTROLS = (
     (11, ((0, 0), (1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 1))),
 )
 
-EXPECTED_SEMANTIC_SHA256 = "73bf03f89f526a56e4a30240d232ad998b7528ffa11ff3fad432a2b69af155d3"
+EXPECTED_SEMANTIC_SHA256 = "0db6229ea8922fb2f9c570103dd8aff7e30da424bcc196f29de19b54e2cab329"
 
 
 def require(condition: bool, detail: object) -> None:
@@ -410,6 +410,94 @@ def thm3411_regression():
     return tuple(records)
 
 
+def convolution_audit():
+    sign_core, binary_core = paley_core(7)
+    events = LARGER_CONTROLS[2][1]
+    packet = interactions(sign_core, events)
+    coefficients, values, _ = packet_audit(
+        2, packet, direct_values(binary_core, events)
+    )
+    size = len(events)
+    length = 1 << size
+    moments = {
+        0b00111: Fraction(1, 5),
+        0b11001: Fraction(-1, 7),
+        0b11110: Fraction(1, 11),
+        0b11111: Fraction(-1, 13),
+    }
+    require(all(mask.bit_count() > 2 for mask in moments), moments)
+    require(sum(abs(value) for value in moments.values()) < 1, moments)
+
+    deltas = []
+    law_digests = []
+    for power in range(1, 13):
+        powered = {mask: value**power for mask, value in moments.items()}
+        weights = tuple(
+            Fraction(1, length)
+            * (
+                1
+                + sum(
+                    moment
+                    * (-1) ** (toggle_mask & mask).bit_count()
+                    for mask, moment in powered.items()
+                )
+            )
+            for toggle_mask in range(length)
+        )
+        require(all(weight >= 0 for weight in weights), (power, weights))
+        require(sum(weights) == 1, (power, weights))
+        recovered_moments = tuple(
+            sum(
+                weight * (-1) ** (toggle_mask & mask).bit_count()
+                for toggle_mask, weight in enumerate(weights)
+            )
+            for mask in range(length)
+        )
+        expected_moments = tuple(
+            1 if mask == 0 else powered.get(mask, 0) for mask in range(length)
+        )
+        require(recovered_moments == expected_moments, (power, recovered_moments))
+        expectation = sum(weight * value for weight, value in zip(weights, values))
+        delta = expectation - coefficients[0]
+        predicted = sum(
+            coefficients[mask] * moment for mask, moment in powered.items()
+        )
+        require(delta == predicted, ("convolution response", power, delta, predicted))
+        deltas.append(delta)
+        law_digests.append(digest(weights))
+
+    roots = tuple(moments.values())
+    characteristic = [Fraction(1)]
+    for root in roots:
+        updated = [Fraction(0)] * (len(characteristic) + 1)
+        for index, coefficient in enumerate(characteristic):
+            updated[index] -= root * coefficient
+            updated[index + 1] += coefficient
+        characteristic = updated
+    for start in range(len(deltas) - len(roots)):
+        recurrence = sum(
+            characteristic[index] * deltas[start + index]
+            for index in range(len(characteristic))
+        )
+        require(recurrence == 0, ("C-finite recurrence", start, recurrence))
+
+    parity_mask = 0b00111
+    parity_coefficient = coefficients[parity_mask]
+    parity_words = tuple(
+        sign**power * parity_coefficient
+        for sign in (-1, 1)
+        for power in range(1, 7)
+    )
+    return (
+        events,
+        tuple(sorted(moments.items())),
+        tuple(characteristic),
+        tuple(deltas),
+        tuple(law_digests),
+        parity_words,
+    )
+
+
 def main() -> None:
     for name, path, expected in PINS:
         require(sha256_lf(path) == expected, ("dependency changed", name, path))
@@ -429,6 +517,7 @@ def main() -> None:
     paley4 = paley_four_exhaustion()
     larger = larger_paley_controls()
     regression = thm3411_regression()
+    convolution = convolution_audit()
     semantic_record = (
         tuple((name, expected) for name, _, expected in PINS),
         abstract,
@@ -436,6 +525,7 @@ def main() -> None:
         paley4,
         larger,
         regression,
+        convolution,
     )
     semantic = digest(semantic_record)
     if EXPECTED_SEMANTIC_SHA256:
@@ -450,6 +540,7 @@ def main() -> None:
     print(f"paley_order4_exhaustion=(position_sets,parity_tests,blind_table_digest,response_digest)={(paley4[0], paley4[1], digest(paley4[2]), paley4[3])}")
     print(f"larger_paley_controls=(packets,parity_tests,records_digest)={(larger[0], larger[1], digest(larger[2]))}")
     print(f"thm3411_regression=(packets,digest)={(len(regression), digest(regression))}")
+    print(f"convolution_spectrum=(powers,recurrence_degree,digest)={(len(convolution[3]), len(convolution[2]) - 1, digest(convolution))}")
     print("scope=distinct_toggle_positions;rows_or_columns_may_repeat;strength_k_Rademacher_laws;normalized_determinant_average;no_completion_or_existence_claim")
     print(f"semantic_sha256={semantic}")
     print("verdict=PASS")
