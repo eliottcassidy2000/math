@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-390 (2026-08-15, zero-cochain divisor ancestry) -- two lift lemmas were stated beyond their used cover scope
+
+- **What failed:** the first divisor-ancestry reflection said without a
+  cardinality qualifier that residues `r_1,...,r_s mod M` have positive
+  gcd-one lifts iff `gcd(M,r_1,...,r_s)=1`, and called
+  `gcd(V)=1` equivalent to `lcm_i(Q/gcd(Q,v_i))=Q` for fixed literal owners.
+- **Minimal witnesses / first failed implications:** for the singleton
+  `(M,r)=(5,2)`, the augmented gcd is one but every positive lift is
+  `2 mod 5` and no one-element family has gcd one.  For fixed
+  `Q=5,V=(2,4)`, both quotient orders are five and their lcm is five, while
+  `gcd(V)=2`.  Thus both reverse implications fail as literally written.
+- **Repair / strongest survivor:** every transverse strict full cover uses at
+  least two nonfull blocks.  In that `s>=2` scope, the CRT avoidance proof
+  gives gcd-one positive lifts exactly when the augmented gcd is one.
+  Primitive literal gcd one always **implies** the quotient-order lcm is `Q`;
+  that is the only direction used by the rank floor and rank-four
+  classification.  The finite Boolean gate, q15--28 ranks, universal floor
+  four, and `rho_ZMC(q)=4 iff 8|q or 9|q` are unchanged.  An independent
+  rare-coordinate branch-and-bound census through `Q=500` found no rank at
+  most three and only the primitive half-twist positives `Q=8,9` at rank
+  four.
+- **Reusable rule:** distinguish literal integer gcd, gcd modulo the finite
+  owner modulus, and existence of a gcd-one lift.  State the number of
+  selected types before promoting a modular gcd condition to an iff.
+
 ## MISTAKE-389 (2026-08-15, all-owner divisor-chart probe) -- a synchronized half-grid physical time was mistaken for a common mode centre
 
 - **What failed:** the first all-owner divisor-chart draft correctly derived

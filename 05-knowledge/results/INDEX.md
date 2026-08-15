@@ -8,7 +8,8 @@
   active family as `U=dV`, with `gcd(V)=1`, and setting
   `g=gcd(q,d),Q=q/g`, every zero-cochain certificate is exactly the `g`-fold
   pullback of a primitive `Q`-sheet cover at twist zero or one-half.
-  Primitive positive lifts exist iff
+  For every possible full cover (necessarily using at least two types),
+  primitive positive lifts exist iff
   `gcd(M_epsilon,r_1,...,r_s)=1`, converted to finite set cover by adjoining
   one breaker bit for every prime dividing `M_0=Q` or `M_1=2Q`.  Thus
   `rho_ZMC(q)=min_(Q|q,Q>=2,epsilon) rho_epsilon^prim(Q)`.  Exact ranks for
@@ -23,12 +24,22 @@
   residue `2/9`; it pulls back to Berggren-spine
   indices `n=1,5 mod 9` and Fibonacci indices `6|n`.  Union-state BFS visits 36,580 states
   and 565,480 transitions; an independent exhaustive route checks 394,418
-  subsets.  Script/output/semantic LF-normalized SHA-256:
+  subsets.  A third, independently written rare-coordinate branch-and-bound
+  audit checks both twists for every `2<=Q<=500`: no rank-at-most-three cover
+  occurs, and its only primitive rank-four positives are the displayed
+  half-twist atoms at `Q=8,9`.  Its rank-three/rank-four audit digests are
+  `e5b660100f95d7c41c9a6460a42b2283435c1020d8b74e0e0a36a48e0d79f82b` /
+  `c55882988ee546925d84844b55980a93e676541257077c48ac2af8083d92fd08`.
+  MISTAKE-390 records the harmless scope repairs: the lift iff requires at
+  least two selected types, and quotient-order lcm `Q` is only a necessary
+  condition for fixed literal owners.  Script/output/semantic LF-normalized
+  SHA-256:
   `70c176e1a056d285471a07d1d011a26070ff288c3cee5ec39971d349d416de31` /
   `582b901b61675baa0ea309150158d991284494ddd7aac3b72ea9e4288c4085e6` /
   `233c092a9b73dcf8a40b9c21b52b99e322b059f003554bd79721bae317c30c7e`.
   codex-2026-08-15 THM-3405 divisor ancestry, Boolean prime-breaker
-  realization, and literal pullback audit.
+  realization, literal pullback audit, and independent rare-coordinate
+  hostile audit.
 
 - hadamard_twelve_order_bank_thm3394.py plus immutable signword data ->
   matching output [THM-3394 PROVED + VERIFIED-EXACT + INERT RECONSTRUCTION +

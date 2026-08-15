@@ -81,7 +81,8 @@ primitive full cover pulls back along `Z/qZ -> Z/QZ`.
 
 ## 3. The gcd-one condition is a finite Boolean realization gate
 
-For selected residue types `r_1,...,r_s`, positive lifts
+For at least two selected residue types `r_1,...,r_s`--in particular, for
+every possible full transverse cover--positive lifts
 `v_i == r_i mod M_epsilon` with `gcd(v_1,...,v_s)=1` exist exactly when
 
 ```text
@@ -136,11 +137,15 @@ For a primitive family let
 m_i=Q/gcd(Q,v_i)                                      (7a)
 ```
 
-be the quotient order of owner `v_i`.  Primitive gcd one is equivalent to
+be the quotient order of owner `v_i`.  Primitive gcd one implies
 
 ```text
 lcm(m_1,...,m_s)=Q.                                   (7b)
 ```
+
+The converse for fixed literal lifts is false and is not used; for example,
+`Q=5,V=(2,4)` has lcm five but owner gcd two.  Exact residue-class
+liftability is supplied instead by the augmented gate `(5)`.
 
 At zero twist an order-`m` owner sees the complete grid `j/m`, so its exact
 block size is
@@ -481,6 +486,22 @@ checks all 979 primitive rank-four profile realizations, replays 111 exact
 rank-four degrees through `q=500`, and independently recovers the
 mod-eight/mod-nine Pisano zeros.  There is no floating point or
 `assert`-dependent truth gate.
+
+An independently written rare-coordinate branch-and-bound verifier then
+checked both twists for every `2<=Q<=500`, tracking literal gcd transitions
+instead of using the union-state BFS or subset enumeration above.  It examined
+`374,250` raw types (`371,760` nonempty; `184,338` distinct mask/gcd-transition
+types), found no cover of rank at most three, and found exactly the two
+primitive rank-four half-twist positives `Q=8` with residues `(1,3,5,7)` and
+`Q=9` with residues `(1,5,6,7)`.  The frozen rank-three and rank-four digests
+are respectively
+`e5b660100f95d7c41c9a6460a42b2283435c1020d8b74e0e0a36a48e0d79f82b`
+and
+`c55882988ee546925d84844b55980a93e676541257077c48ac2af8083d92fd08`;
+endpoint controls `Q=7` half twist and `Q=14` zero twist fail, while adjacent
+`Q=8` half twist succeeds.  The audit also exposed and motivated the two
+scope repairs in MISTAKE-390; neither repair changes the cover theorem or its
+rank consequences.
 
 The highest-value continuations are:
 
