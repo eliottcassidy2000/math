@@ -1,0 +1,26 @@
+UNNUMBERED Rule30/LRC14 depth-observer and additive-phase no-go
+script_sha256_lf=1ce6dea8eaefc267690c82de0feb56b50e3348cef88fe20541ce77cdaa3d9006
+rule30_prefix20=11011100110001011001
+independent_rule30_implementations_match_through=256
+first_depth_one_profile_count=165
+repeated_profile_count=15
+depth_bit_signature_summary=(((1, 0, 0), 36, 0, 36), ((1, 0, 1), 36, 0, 36), ((1, 1, 0), 51, 8, 43), ((1, 1, 1), 42, 7, 35))
+mixed_repeated_strict_signature_fibres=2
+coarse_rule30_depth_signature_preserves_owner_multiplicity=NO
+full_profile_plus_signature_count=165
+full_profile_plus_signature_adds_information=NO-DETERMINISTIC-GRAPH
+xor_phase_width_rows=((1, 1, 1), (2, 1, 1), (3, 1, 1), (4, 1, 1), (5, 1, 1), (6, 1, 1), (7, 1, 1), (8, 1, 1), (9, 1, 1), (10, 1, 1), (11, 1, 1), (12, 1, 1), (13, 1, 1), (14, 1, 1), (15, 1, 1), (16, 1, 1))
+xor_candidate_images_tested=131070
+additive_hom_F13sq_to_F2m=ZERO_FOR_EVERY_FINITE_m
+nonlinear_boundary=4_bits_encode_13_labels_and_explicit_order_13_permutation
+nonlinear_encoding_excluded_by_additive_no_go=NO
+nonlinear_encoding_requires_explicit_phase_labels=YES
+same_axis_phase_identity_checks=28561
+same_axis_rule30_word_supplies_cross_axis_phase=NO
+thm2344_script_sha256_lf=ce2513ecd6e8290677d69bb5a00b8cb64216035331ebd10887353a34463271fd
+thm2344_output_sha256_lf=c5e17223240b8a383c8a17a6869bb500e363e4010c2a286f62fb4310e11a4bed
+semantic_sha256=6e7c45392e5894ff13e12a413aee9196cd1a2ac2a378f5df3a4f90a0e355d60a
+status=FINITE-EXACT-OBSERVER-PROBE+ELEMENTARY-TYPED-NO-GO;UNNUMBERED
+scalar_rows_excluded=0
+lrc14_status=OPEN
+ALL CHECKS PASSED

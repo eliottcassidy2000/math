@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `lrc14_rule30_depth_observer_no_go_20260815.py` -> matching `.out`
+  [UNNUMBERED FINITE-EXACT OBSERVER PROBE + ELEMENTARY TYPED NO-GO].
+  Sampling the literal single-seed Rule 30 centre trace at the three depths
+  of every first-depth-one profile `(1,b,c)` sends the `165` rows to four
+  fibres of sizes `36,36,51,42`; the last two mix repeated/strict owner types
+  as `8+43` and `7+35`.  Retaining the full profile makes those bits
+  deterministic and adds no information.  Every additive/XOR homomorphism
+  `F_13^2 -> F_2^m` is zero, while an explicit nonlinear four-bit labelling
+  can carry a 13-cycle and is outside that no-go.  An independent residue
+  check pins THM-2344's same-axis obstruction on all `13^4=28,561` phase
+  rows.  Script/output/semantic LF-normalized SHA-256:
+  `1ce6dea8eaefc267690c82de0feb56b50e3348cef88fe20541ce77cdaa3d9006` /
+  `fe8414e95241ff242b1ea32238402dfea7085af43923ac004ca46bc36ed5062b` /
+  `6e7c45392e5894ff13e12a413aee9196cd1a2ac2a378f5df3a4f90a0e355d60a`.
+  No scalar row, grouped-current cancellation, or LRC(14) consequence follows.
 - `lrc_global_literal_half_twist_cap7_support_thm3453.py` -> matching `.out`
   [THM-3453 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The theorem
   uses strong-induction period
