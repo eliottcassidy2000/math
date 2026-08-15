@@ -53,6 +53,21 @@
   `4ac644546e4f81631b5c12a404779397c5c63da67f3e4dd5c1b88da1fa8beda1`.
   No LRC(14) ledger decrement.
 
+- `lrc_rank7_prime_fibre_activity_descent_thm3429.py` -> matching `.out`
+  [THM-3429 VERIFIED-EXACT].  For a prime `p|Q`, the script directly checks
+  that `p`-divisible half-twist blocks are full pullbacks to `Q/p` and every
+  active block hits at most `ceil(p/7)` points per fibre.  Its exact universe
+  is every residue on every prime fibre of all `93` odd composite `Q<=315`:
+  `2,142,888` pullback cells and `11,819,480` active cells.  It verifies the
+  activity floors for every odd prime through `997`, the Boolean defect
+  budgets `(4,2,0,1,1)` on primes `(3,5,7,17,29)`, the sharp target-free
+  `Q=51` atom, and the nonprimitive scaled-13 hostile at `Q=39`.  Normal and
+  optimized transcripts agree.  Script/output/semantic LF-normalized SHA-256:
+  `5ea4a9830f77a984aa7db83124ada94a498ed8f7687164533919545cd207f23f` /
+  `2ad7b43fd9afb14539438f2a17d4f458a7af6dbf3bd3deb947f8740099d7c316` /
+  `d65463e762b3ba39e6cbbf13daeba73f9b689f9051ec460ac7d6ec27eaeece85`.
+  Mixed small-prime rank seven and LRC(14) remain open.
+
 - `rough_maximal_order_half_twist_rank7_finite_boundary_20260815.py` ->
   matching `.out` [FINITE-EXACT INDEPENDENT THM-3428 BOUNDARY].  The complete
   universe is all 116 odd `11<=Q<512` with `spf(Q)>7`, including 23
