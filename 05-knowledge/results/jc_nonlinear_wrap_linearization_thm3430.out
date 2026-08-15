@@ -1,0 +1,18 @@
+NONLINEAR WRAP LINEARIZATION -- EXACT HOSTILE REFEREE
+wrap coefficient collapses: 780
+finite transition-matrix entries: 2640
+Hamiltonian action-square identities: 5280
+exact relation-ideal inductions: 336
+split CRT stage packets: 1700
+split CRT local components: 6260
+rootwise transition/action intertwiners: 468
+finite torsion-thickness windows: 5460
+split primary blocks: 16408
+squarefree zero-torsion controls: 4
+nonwrap algebraized-gauge intertwiners: 30
+nonwrap exact endpoint identities: 5
+local resonances blocked by other-root monodromy: 11130
+nonwrap at-most-one-arm checks: 34875
+named hostile: (d,sigma;e1,e2)=(4,2;3,1)
+named positive gauge: (d,sigma;e1,e2)=(2,1;3,2)
+WRAP=d=1 FILTERED RESPONSE IDENTIFICATION VERIFIED
