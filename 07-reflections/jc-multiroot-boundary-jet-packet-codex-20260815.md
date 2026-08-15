@@ -9,13 +9,13 @@ first-window law; the extension itself still requires an independent audit.
 
 ## 1. Candidate statement
 
-Let `K` have characteristic zero and
+Let `K` have characteristic zero, let `g` be nonconstant, and
 
 ```text
 P=ax+b+g(x)z^d,                    a!=0, d>=2.
 ```
 
-After a faithful splitting extension, write
+After a finite normal splitting extension `K'/K`, write
 
 ```text
 g=gamma product_j(x-alpha_j)^e_j,
@@ -224,6 +224,18 @@ g=x^3(x^2+1)^2:
   the rational multiplicity-three root is selected at (2,1),
   while the conjugate multiplicity-two roots are not.                   (19)
 ```
+
+There is no separate collision case for the boundary parameters in this
+family: if `alpha_i!=alpha_j`, then
+
+```text
+beta_i-beta_j=a(alpha_i-alpha_j)!=0
+```
+
+because `a!=0`.  Thus distinct geometric roots always give distinct
+`P`-fibres, even after passing to a splitting field.  Any apparent collision
+after descent is a Galois orbit of distinct parameters, not two local packets
+supported at one geometric maximal ideal.
 
 No claim is made for a simple root `e_i=1`.  Then `H mod y` is no longer the
 constant `a`; the special-fibre components meet and the CRT/Neumann proof
