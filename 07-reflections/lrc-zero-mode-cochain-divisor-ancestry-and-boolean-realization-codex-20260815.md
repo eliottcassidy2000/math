@@ -11,6 +11,9 @@ five iff `(10|q or 12|q)` while `8` and `9` do not divide `q`;
 [THM-3416](../01-canon/theorems/THM-3416-zero-mode-cochain-global-rank-six-support.md)
 proves and independently audits global rank six on bases `11,15,23,25` after
 excluding lower bases `8,9,10,12`;
+[THM-3425](../01-canon/theorems/THM-3425-half-twist-rank-six-primitive-breaker-profile-closure.md)
+proves the primitive half-twist cap-six boundary and identifies joint quotient
+period plus parity as the exact breaker;
 [THM-3420](../01-canon/theorems/THM-3420-prime-rank-seven-zero-and-half-twist-splitter-closures.md)
 proves the rank-seven fixed-zero prime branch (`p=29` only) and the critical
 half-twist prime class `p=13 mod 14` (`p=13` only);
@@ -41,6 +44,7 @@ The live concept board is:
 | rank-four witness | four-block clutter | full union plus gcd gate | dilation | no intrinsic pair orientation |
 | rank-five atom | anchor plus four disjoint petals | OR=XOR on sheets | divisor pullback | prime-breaker sidecar |
 | rank-six atom | anchor plus five petals | OR=XOR at 11/23/25 | divisor pullback | Q15 fixed-sheet collision |
+| primitive rank-six family | quotient-order profile | joint period plus parity | scale and add one breaker | scaled masks alone retain old period |
 | exceptional orders | four-vertex directed graph | complement quota | anchor elimination | missing/bidirected edges |
 | rank-seven candidate atom | sheet collision hypergraph | parity defect of multiplicity | divisor pullback | pair shadow loses higher intersections |
 | prime rank-seven tail | multiplicative short-interval splitter | power sums and ratio set | global dilation | capacity forgets multiplier ratios |
@@ -560,6 +564,46 @@ cumulative coefficient through rank six is `149/345`.  Fibonacci indices are
 on the full ternary tree, tracking triples modulo 56925 gives an exact finite
 automaton rather than a forced tournament.
 
+[THM-3425](../01-canon/theorems/THM-3425-half-twist-rank-six-primitive-breaker-profile-closure.md)
+closes the primitive boundary that global divisor support alone did not
+settle.  For a half-twist family `R`, let
+
+```text
+m(r)=Q/gcd(Q,r),              L(R)=lcm_(r in R)m(r).
+```
+
+Then `L(R)=Q/gcd(Q,R)`.  The augmented breaker is exactly `L(R)=Q` plus an
+odd selected residue; when `Q` is even, joint period already forces parity.
+Outside multiples of `8,9,10,12`, a cap-six cover has joint period `Q` iff
+
+```text
+Q in {11,15,22,23,25}.                                  (14a)
+```
+
+Consequently
+
+```text
+r^prim_(1/2)(Q)<=6
+iff 8|Q or 9|Q or 10|Q or 12|Q
+    or Q in {11,15,22,23,25}.                           (14b)
+```
+
+The positive direction on a multiple of a lower base is not raw pullback:
+scale the four- or five-owner atom, then adjoin residue one to restore the
+new prime-power breaker.  This uses at most six owners.  In particular,
+`Q=27` has the primitive five-cover `(1,3,15,18,21)`; its absence from the
+*exact-rank-six* list was not a cap-six obstruction.  The correct hostiles are
+`Q=33` and `46`, whose displayed scaled covers retain joint periods 11 and 23.
+
+The negative proof uses two weighted reflection cores.  The normalized
+11-core scores at orders `11,22,33,44,55,66` are
+`1,1,1,3/4,4/5,5/6`; the 23-core scores at `23,46,69` are `1,3/4,5/6`.
+Exact `Q=33,66` candidate-subset gates leave no full joint period, and a mixed
+11/23 core misses at least `269/10879`.  This is a new reusable proof pattern:
+weight the fixed reflection orbit so a sharp atom has unit score, then use
+joint period to turn equality into a finite lcm gate.  In the lower-base-free
+fixed-zero sector the same theorem and THM-3414 leave exactly `Q=15`.
+
 The next finite scout deliberately stays below theorem status.  It searches
 both twists, with the primitive prime-breaker gate retained, for every
 target-free `2<=Q<=200`.  The exact rank-seven positives have minimal divisor
@@ -755,23 +799,21 @@ endpoint controls `Q=7` half twist and `Q=14` zero twist fail, while adjacent
 scope repairs in MISTAKE-390; neither repair changes the cover theorem or its
 rank consequences.
 
-After the rank-seven scout the highest-value continuations are:
+After THM-3425 the highest-value continuations are:
 
-1. prove or refute the observed primitive rank-at-most-six boundary: divisors
-   `8,9,10,12` plus isolated `Q=11,15,22,23,25`; literal pullback alone cannot
-   settle its prime-breaker converse;
-2. prove or refute the rank-seven antichain `(15)` by replacing the failed
+1. prove or refute the rank-seven antichain `(15)` by replacing the failed
    density cutoff with an overlap/reflection recurrence; the first decisive
    target is to show that every target-free seven-cover has a divisor among
    `13,14,29,38,51,68,148`;
    on primes it is enough to close half-twist classes `1,9,11 mod 14`, while
-   the fixed-zero and `13 mod 14` branches are THM-3420;
-3. intersect the q23 rank-six primitive half-twist with the reserved
+   the fixed-zero and `13 mod 14` branches are THM-3420; THM-3423 supplies the
+   proved odd-interval ratio/clique sidecar, while THM-3421 remains under audit;
+2. intersect the q23 rank-six primitive half-twist with the reserved
    exceptional-edge leakage problem, keeping cover rank distinct from LRC
    row exclusion;
-4. transport the collision parity defect `(16)` through Fibonacci and
+3. transport the collision parity defect `(16)` through Fibonacci and
    Berggren recurrences, then analyze the modulo-56925 ternary automaton
    spectrally, without
    inferring a limiting tree density from the finite depth-ten prefix;
-5. transport one zero-cochain certificate through the actual LRC body/core
+4. transport one zero-cochain certificate through the actual LRC body/core
    sidecars.  Formula `(7)` alone closes no row and leaves LRC(14) open.

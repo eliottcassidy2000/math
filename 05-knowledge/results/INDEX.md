@@ -1,5 +1,26 @@
 # Script Results Index
 
+- `lrc_half_twist_rank6_joint_period_probe_20260815.py` -> matching `.out`
+  [THM-3425 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  If
+  `8,9,10,12` do not divide `Q`, a half-twist cover by at most six blocks has
+  quotient-order joint period `Q` iff `Q` is one of `11,15,22,23,25`.
+  Consequently primitive augmented half-twist cap-six support is exactly the
+  multiples of `{8,9,10,12}` together with those five isolated degrees.  The
+  proof reduces orders `3,5,15,17,29` by exact complement quotas, isolates
+  the `11/22` and `23` reflection cores with normalized weights, and kills
+  their mixture by a CRT missed-cylinder gap at least `269/10879`.  Candidate
+  supersets at `Q=33,66` require 2,178,022 exact six-subset checks; all covers
+  have smaller joint period.  The companion also checks 160 lower-base
+  breaker repairs, the primitive `Q=27` five-cover, `Q=33,46` period-loss
+  hostiles, and an odd-`Q` all-even parity hostile.  In the lower-base-free
+  fixed-zero sector, cap-six support is exactly `Q=15`; no standalone all-`Q`
+  fixed-zero formula is claimed.  Normal and optimized transcripts agree.
+  Script/output/semantic LF-normalized SHA-256:
+  `df87baa9e752b3bda4f55fe29f7bda0219b2fc7978ffc47c3cd37c0f4319cf75` /
+  `c643d6ddd1c3fe03daa06850cf8aae91287eab90229bcf2c95ffa0469a8dee79` /
+  `4ac644546e4f81631b5c12a404779397c5c63da67f3e4dd5c1b88da1fa8beda1`.
+  No LRC(14) ledger decrement.
+
 - `odd_interval_ratio_complement_thm3423.py` -> matching `.out`
   [THM-3423 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  If `L` is the
   largest odd integer with

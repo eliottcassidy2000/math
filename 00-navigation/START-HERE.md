@@ -52,14 +52,13 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
    phase; THM-3285 gives a literal `R-M-R` horn. Its FINITE-EXACT `13`-label
    normal atlas has two middle completions but no outer co-support. A two-axis
    atom, current and LRC(14) remain OPEN.
-10. **Tournament structure is operational and typed.** THM-3315 compiles
-    switched walks; THM-3364/3379 give local `T4`/Fibonacci median `b`;
-    THM-3369/3372 add skew/deletion currents. None supplies nonlocal arcs,
-    full SCC order or time.
-11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352
-    separate support and collision tax. THM-3359 gives residue/scar; THM-3364
-    restores phase; THM-3382 shows time/address can cross harmonic summability;
-    THM-3362 detects odd-profile pairs. General subsets and FC(3) remain open.
+10. **Pair structure must be typed.** THM-3315/3364/3369/3372 give local
+    tournament/walk currents; THM-3423 gives a Cayley disjointness graph, not
+    a tournament. None supplies nonlocal LRC arcs or physical time.
+11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
+    separate collision, phase and harmonic address. THM-3425 makes joint
+    period plus parity the primitive half cap-six breaker. Composite rank
+    seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.
     THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
     THM-3212/3225 leave critical points; THM-3237--3265 give the infinity
