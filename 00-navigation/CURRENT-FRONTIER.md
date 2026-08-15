@@ -205,7 +205,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-3173 separates `C2*C3`, regular `S3`, and regular `C6`; their joint
   quotient has order 18, while pointed oriented quartic frames form `Q3`.
   These are semantic action data, not a physical current or Keller bridge.
-- THM-1880/1885 give the Pell frame; THM-3335 blocks square-arc/skew-EW attainment. THM-3339's `T6` loses owner; THM-3357's sibling `T3` and THM-3364's parent-extended labelled `T4` are local, with one reset/XOR bit.
+- THM-1880/1885 give the Pell frame; THM-3335 blocks square-arc/skew-EW. THM-3339's `T6` loses owner; THM-3357/3364 give local `T3/T4`, and THM-3379 identifies the `T4` bit with median `b` only on the Fibonacci rays.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
 - THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.
@@ -217,7 +217,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - [THM-1950](../01-canon/theorems/THM-1950-h-ge-disc-reduced-to-strongly-connected.md) reduces `H >= disc` to strongly connected tournaments and verifies finite
   cases; the global inequality is open.
 - THM-3315/3322/3324 compile switched walks, moments, joins and response Gram.
-  THM-3359 is periodic; THM-3364 restores cyclotomic phase/local labelled `T4`;
+  THM-3359/3364 give periodic/cyclotomic `T4`; THM-3379 its Fibonacci median quotient;
   THM-3369/3372 add skew/deletion currents and transitivity variance. Startup,
   global arcs, apex/SCC order and time remain. Next: higher responses/substitution.
 - A literal Paley bridge exists only in THM-640's prime quadratic-residue scope.

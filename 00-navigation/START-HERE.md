@@ -53,7 +53,7 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
    normal atlas has two middle completions but no outer co-support. A two-axis
    atom, current and LRC(14) remain OPEN.
 10. **Tournament structure is operational and typed.** THM-3315 compiles
-    switched walks; THM-3364 gives local labelled `T4` reset/XOR chambers;
+    switched walks; THM-3364/3379 give local `T4`/Fibonacci median `b`;
     THM-3369/3372 add skew/deletion currents. None supplies nonlocal arcs,
     full SCC order or time.
 11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352

@@ -2,9 +2,10 @@
 id: THM-3366
 title: All-sector pointwise complement-clock completion
 status: >
-  PROVED + FINITE-EXACT, with CITED input; the specialized k=1 census and
-  refined k=2 composition are INDEPENDENTLY AUDITED, while the unified all-k
-  census and refined k=3 composition remain under independent audit.
+  PROVED + FINITE-EXACT, with CITED input; the specialized k=1 census, unified
+  all-k pool-14 census, and refined k=2 composition are INDEPENDENTLY
+  HOSTILE-AUDITED, while the refined k=3 composition remains under independent
+  audit.
   On every THM-2928 body-address quotient, a pointwise cover of the
   unsupported open cells by r integer danger combs compiles any hypothetical
   k-aligned, (7-k)-drift cover into a global cover by at most 7+r nonzero
@@ -31,19 +32,23 @@ related:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
 script: 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py
 output: 05-knowledge/results/lrc14_allk_universal_complement_clock_scan_kps_s174.out
-script_sha256: bd283577083c900c1001a2ed760bf3ac4c319f19840a07060b2a54611b9b88a8
+script_sha256: 372f1b0d2bd8c1cc453080e9ab55880480352c5277a9a216739a7262d198efba
 output_sha256: 1104900cd805a2af05e3c7252b7d7bacd417b36b0f015a90d1976b6913fc91c5
+allk_audit_script: 04-computation/lrc14_allk_complement_clock_independent_audit_20260814.py
+allk_audit_output: 05-knowledge/results/lrc14_allk_complement_clock_independent_audit_20260814.out
+allk_audit_script_sha256: a43610abcb1d591f4b606677e3e6a9a32897b38fa2fd591a281ee8c4dc07d823
+allk_audit_output_sha256: 31c096e528a148cd717f4d9c7485c93cdec6175b33b83bae9d2be627249d743c
 k1_companion_script: 04-computation/lrc14_k1_universal_complement_clock_scan_kps_s173.py
 k1_companion_output: 05-knowledge/results/lrc14_k1_universal_complement_clock_scan_kps_s173.out
-k1_companion_script_sha256: 9c24a124ab3d527f9bdf352a4553a0f2592eb0afe9dd580cad6d3489df468b8d
+k1_companion_script_sha256: 65f1e5983b6d9ee4faf0d74f276c20821f85031f33a100d61c03942da3a8971b
 k1_companion_output_sha256: 80d37ede35c05d7b95779be31a4bef487066869af3c40c1f5f923707df3fa5cf
 composition_script: 04-computation/lrc14_k2_refined_complement_clock_composition_kps_s175.py
 composition_output: 05-knowledge/results/lrc14_k2_refined_complement_clock_composition_kps_s175.out
-composition_script_sha256: 3b1ba7576172574faea6c3c8bcc118ad50728e1a3c380b4a308f89c83cff14f9
+composition_script_sha256: 414b3777cc44f2e059d5bc4258ab555fc055de8c0f8b3ebfd99ce0c90c7da14c
 composition_output_sha256: 5fe0c922cf89754a9d557f3d535ab65e71995fef17fd91f123cf5673dcfa6dfd
 k3_composition_script: 04-computation/lrc14_k3_refined_complement_clock_composition_kps_s176.py
 k3_composition_output: 05-knowledge/results/lrc14_k3_refined_complement_clock_composition_kps_s176.out
-k3_composition_script_sha256: 127ef53b27f10a5c61ac273a49b13a5ae56ea4fa98809df8f6fd9accdce89d97
+k3_composition_script_sha256: 27e4bff52705189bf8ff73db42d76d4e2fc94c44330d295f166f8d4217cb1804
 k3_composition_output_sha256: 4cb8f95113123007af9fb5a1f58b3b5373dd4637615b50be7168c6bf578b696b
 hash_basis: LF-normalized bytes
 ---
@@ -370,11 +375,30 @@ Later screens overlap this one.  Their sharper residual must be obtained by
 intersecting exact row or occurrence keys.  Sections 6 and 7 perform that
 operation for the current `k=2` and `k=3` ledgers.
 
-## 9. Reproduction
+## 9. Independent unified-census audit
+
+The independent companion rebuilds all `11,180` distinct pool-14 targets by
+exhaustively enumerating clock subsets, rather than calling the primary
+recursive solver.  It separately reconstructs all `251,536` body/divisor rows,
+the strict endpoint and open-atom target bits, and the occurrence weights by a
+divisor--Mobius formula checked on `280` brute-force cases.  Every input count,
+terminal count, occurrence count, and least-cover-size histogram in all seven
+sectors agrees exactly.
+
+Three hostile witnesses show that the conventions are active: midpoint-only
+coverage misses `16` strict endpoint bits at `(F,D)=({1,2,3,5,9,10},315)`;
+omitting grid ownership changes `20` target bits at
+`({1,2,3,4,5,13},3640)`; and that same row needs five added clocks, while the
+`k=0` row `({1,2,3,4,5,6},420)` needs four.  This audit certifies the unified
+pool-14 census, not the separate refined-`k=3` key intersection.
+
+## 10. Reproduction
 
 ```bash
 python 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py
 python -O 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py
+python 04-computation/lrc14_allk_complement_clock_independent_audit_20260814.py
+python -O 04-computation/lrc14_allk_complement_clock_independent_audit_20260814.py
 python 04-computation/lrc14_k1_universal_complement_clock_scan_kps_s173.py
 python -O 04-computation/lrc14_k1_universal_complement_clock_scan_kps_s173.py
 python 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py --pool-max 28
