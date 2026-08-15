@@ -265,37 +265,19 @@ an explicit reduction connects them.
 [`CONCURRENT-SESSIONS.md`](CONCURRENT-SESSIONS.md).
 
 ## Turn certificate failure into an address, then change sidecars
-
-**Trigger:** a sufficient gate leaves a finite or structured bad set that is
-still too large, or a control family fails the gate while the theorem remains
-true.
-**Action:** preserve the failed gate as an address (deck, owner cone, ray, or
-cell), then attach an orthogonal consequence-bearing sidecar such as a clock
-orbit, divisibility tax, phase interval, endpoint owner, or rank increment.
-**Mechanism:** failure of a sufficient certificate localizes uncertainty but
-does not describe danger. THM-2057 closes two one-tail planes containing many
-THM-2053 determinant failures because scaled clocks and binding rays see the
-missing phase coordinate.
-**Counterindication:** do not multiply sidecars indiscriminately; each must
-preserve the target predicate and eliminate a named failure family or state.
-**Evidence:** the THM-2053 transverse deck, THM-2055/2056 normal-fan and
-Kelvin/Farey address, THM-2057 missing-clock closure, and MISTAKE-224's repair
-of the side-blind toric-complement quotient.
+**Trigger/action:** when a sufficient gate leaves a structured residual, keep
+its deck, cone, ray, or cell as an address and add one target-preserving
+orthogonal sidecar (clock, divisibility, phase, owner, or rank).
+**Mechanism/counterindication:** failure localizes uncertainty but not danger;
+add a sidecar only when it eliminates a named family or state.
+**Evidence:** THM-2053/2055--2057 and MISTAKE-224.
 
 ## Join compatibility fibers before comparing marginal sizes
-
-**Trigger:** two nonempty packets, fibers, or local certificate sets must meet,
-but their separate cardinalities do not decide whether a common witness exists.
-**Action:** identify the common quotient, retain histograms over its fibers, and
-compute the compatibility pairing before collapsing either side to one scalar.
-**Mechanism:** generalized CRT turns a core packet and tail packet into the
-exact dot product of their reduction histograms; disjoint supports explain a
-failed join even when both marginals are large.
-**Counterindication:** use a simpler scalar only after proving uniform fibers,
-independence, or another theorem making the pairing a function of the totals.
-**Evidence:** THM-2059's CRT packet theorem repairs the marginal-size loss; the
-same error genus is exposed by MISTAKE-231's observable-relative fiber counts
-and by observer/cut-payload quotients in the tournament atlas.
+**Trigger/action:** when nonempty local packets must share a witness, retain
+histograms on their common quotient and compute compatibility before totals.
+**Mechanism/counterindication:** CRT pairings can vanish despite large
+marginals; scalarize only after uniform fibres, independence, or factorization.
+**Evidence:** THM-2059, MISTAKE-231, and tournament cut-payload quotients.
 ## Rank local extrema, then pass closure and effectivity
 **Trigger/action:** when sharp local caps share labels, rank the spectrum, force a finite bank, retain common fibres, and then test cycle/Čech closure plus membership in the target positive, integral, polynomial, or completed category.
 **Mechanism/counterindication:** compatible marginals may still have bad triangle products or glue only in an ambient field/signed space; skip the extra gates only after proving independence or target factorization.
@@ -391,3 +373,9 @@ A positive left inverse, order-reflecting quotient, or target factorization disc
 
 **Trigger/action:** when multiplicative `F_T` forgets join order and marked deletions factor, contract `r(z)(A-A^T)r(w)^T`; close `q=sum r_v`. Rank-one `+J/-J` cross blocks exteriorize first responses.
 **Counterindication/evidence:** stop for nonconstant cross blocks, bad deletion laws, target-bearing ties or contraction kernels; currents need not be injective or chronological. THM-3369/3372 derive `q`, THM-3377 carries it, and THM-3380's self-converse `ABBA/BAAB` kills both first currents, prompting iteration.
+
+## Test filtration--observer commutation before scalarizing
+**Trigger/action:** when a tower or filtration meets a kernel, average, or quotient, compare `gr(ker)` with `ker(gr)` and retain transition maps plus eigenvalue fibres before collapsing.
+**Mechanism:** marginal observers delete extension equations and scale; persistent classes can split even when one annihilator merges them, while a discarded scalar fibre can carry growing cost.
+**Counterindication:** scalarization is safe after a proved split/semisimple square, distinct observable eigenvalues, or a target-preserving section makes both orders commute.
+**Evidence:** THM-3412's sharp `(q-1)m` kernel deficit and separated Prüfer arms; THM-3413's grouped moment-eigenvalue collisions; THM-3410's Boolean-rank/projective-tariff split.
