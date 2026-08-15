@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-400 (2026-08-15, provisional theorem status routing) -- an unrecognized provisional token exposed an audit-pending theorem as established canon
+
+- **What failed:** the packaged THM-3452 frontmatter began `PROVISIONAL /
+  AUDIT REQUIRED + VERIFIED-EXACT COMPANION`.  The bounded-startup router does
+  not recognize `PROVISIONAL` as a status token, so it skipped that word,
+  selected the later recognized token `VERIFIED`, and placed the unpromoted
+  theorem under `Established canon`.
+- **Minimal witness / first failed implication:** an exact
+  `agents/start_session.py --topic "THM-3452 unequal-depth noncommuting Hensel"`
+  replay printed `[VERIFIED]` in the established-canon group even though the
+  theorem body and results index both said that independent audit and explicit
+  promotion were still required.  Provisional prose did not itself keep the
+  file outside the proof graph.
+- **Repair / strongest survivor:** the independent immutable-file audit found
+  the mathematics, controls, replays, dependencies, hashes, and scope clean,
+  so THM-3452 was explicitly promoted and now begins with the recognized token
+  `PROVED`.  Its proof body, script, output, and frozen hashes did not change.
+  Had promotion not been authorized, the correct audit-pending status would
+  have begun `RESERVED / PROVISIONAL ...`.
+- **Reusable rule:** every audit-pending theorem status must begin with the
+  recognized token `RESERVED`; never place an unrecognized provisional label
+  before `VERIFIED-EXACT`.  Before and after promotion, run a topic-specific
+  bounded-startup replay and inspect the actual canon/candidate group, not
+  only the human-readable status sentence.
+
 ## MISTAKE-399 (2026-08-15, concurrent theorem reservation race) -- filename merges did not protect a shared semantic ID
 
 - **What failed:** THM-3448 was absent when the weighted-Keller boundary

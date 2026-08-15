@@ -2,18 +2,20 @@
 id: THM-3452
 title: "Unequal-depth noncommuting smooth Hensel Heisenberg orbit law"
 status: >
-  PROVISIONAL / AUDIT REQUIRED + VERIFIED-EXACT COMPANION.  For two
-  congruence-to-identity automorphisms at depths c1,c2, the candidate proves
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For two
+  congruence-to-identity automorphisms at depths c1,c2, the theorem proves
   the weighted abelian range through c1+c2 and the mixed-modulus class-two
   range through c1+c2+min(c1,c2), with exact orbit-bank tariffs and a sharp
   higher-bracket boundary.  The depth-one dyadic channel has a separate
   square-carry iff criterion.
 source: root-unequal-depth-noncommuting-hensel-2026-08-15
 audit: >
-  the mathematical blueprint received an independent pre-package CLEAN
-  verdict; this immutable theorem/script/output package still requires a
-  separate line, replay, dependency, hash, and documentation audit before
-  status promotion
+  independent pullback/right-action sign, filtration, mixed-cocycle,
+  normal-form, freeness, dependence, bank, dyadic across-range iff, A3/A4,
+  and G_m hostile derivations; independent exact-control reconstruction;
+  normal/optimized/stored replay; dependency, hash, semantic, AST/security,
+  ID, scope, routing, diff, and documentation gates clean after the
+  MISTAKE-400 provisional-status repair
 depends_on:
   - THM-3442-smooth-hensel-fibre-vector-field-orbit-law
 related:
@@ -29,10 +31,10 @@ hash_basis: LF-normalized bytes
 
 # THM-3452 -- unequal-depth noncommuting smooth Hensel Heisenberg orbit law
 
-**PROVISIONAL / AUDIT REQUIRED + VERIFIED-EXACT COMPANION.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-This is a complete proof candidate with frozen exact controls.  It is not
-proved canon until a separate immutable-file audit promotes it.
+The proof and exact companion passed an independent immutable-file derivation,
+hostile, replay, dependency, security, and routing audit.
 
 ## 1. Setup, convention, and universal filtration
 
@@ -576,5 +578,4 @@ python3 -B 04-computation/unequal_depth_noncommuting_hensel_heisenberg_orbits_th
 python3 -B -O 04-computation/unequal_depth_noncommuting_hensel_heisenberg_orbits_thm3452.py
 ```
 
-End of provisional proof candidate; independent immutable-file audit is
-required before promotion.
+QED.
