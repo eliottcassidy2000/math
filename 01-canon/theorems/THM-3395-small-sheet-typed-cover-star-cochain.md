@@ -3,7 +3,8 @@ id: THM-3395
 title: "Small-sheet typed covers are exact star cochains"
 status: >
   PROVED analytic q<=7 typed-coset cover criterion + FINITE-EXACT literal
-  body-relevant q=2,...,7 audit + INDEPENDENTLY EVENT-AUDITED.  Below eight sheets, every
+  body-relevant q=2,...,7 audit + INDEPENDENTLY EVENT- AND PROOF-AUDITED.
+  Below eight sheets, every
   firing transverse speed blocks one kernel coset.  A selected family covers
   iff those typed cosets cover Z/qZ and its affine integer gap fibres contain
   one complete closed cochain, equivalently one compatible star.  In the
@@ -36,7 +37,7 @@ hash_basis: LF-normalized bytes
 # THM-3395 -- small-sheet typed covers are exact star cochains
 
 **PROVED analytic `q<=7` typed-coset cover criterion + FINITE-EXACT literal
-`q=2,...,7` audit + INDEPENDENTLY EVENT-AUDITED.**
+`q=2,...,7` audit + INDEPENDENTLY EVENT- AND PROOF-AUDITED.**
 
 ## 1. Inheritance and connection contract
 

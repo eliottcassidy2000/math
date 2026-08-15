@@ -2,7 +2,7 @@
 id: THM-3396
 title: "Four-bit pairwise-independent Fourier cone"
 status: >
-  PROVED + VERIFIED-EXACT + HOSTILE-AUDITED.  An unbiased pairwise-independent
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  An unbiased pairwise-independent
   law on four Rademacher bits is uniquely determined by its four cubic Walsh
   moments a_i and quartic moment d.  Its sixteen atom masses are
   2^-4(1+q(x)(d+a dot x)); nonnegativity is equivalent to one sharp absolute
@@ -15,6 +15,7 @@ status: >
   facet and omits exactly two atoms.  This is a four-column/local realizability
   theorem, not a Hadamard completion theorem or a Grothendieck bound.
 source: root-2608-sign-puzzle-2026-08-14
+audit: independent Fourier/OA/convolution derivation, raw-signword packet extraction, facet/hostile reconstruction, and normal/optimized replay
 related:
   - THM-3394-twelve-formerly-missing-hadamard-orders-through-2000
   - THM-3392-bipartite-sign-lift-and-synchronization-loss
@@ -28,7 +29,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3396 -- the exact higher-chaos sidecar after four-bit whitening
 
-**PROVED + VERIFIED-EXACT + HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The cone
 
