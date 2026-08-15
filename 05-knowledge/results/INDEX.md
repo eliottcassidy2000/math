@@ -1,7 +1,8 @@
 # Script Results Index
 
 - `jc_one_monomial_nonlinear_fiber_thm3418.py` -> matching `.out`
-  [THM-3418 PROVED + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED].  Over any
+  [THM-3418 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  DERIVATION/TYPE/REPLAY-AUDITED].  Over any
   characteristic-zero field, a planar Keller equation with
   `P=f(x)+g(x)z^d`, `d>=2`, forces `f=ax+b`, constant `g=c`, and
   `Q=(kappa/a)z+H(P)`; conversely these are explicit tame automorphisms.

@@ -2,7 +2,8 @@
 id: THM-3418
 title: "One-monomial nonlinear-fiber Keller classification"
 status: >
-  PROVED + VERIFIED-EXACT.  Let K be a characteristic-zero field, d>=2,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVATION/TYPE/REPLAY-AUDITED.
+  Let K be a characteristic-zero field, d>=2,
   P=f(x)+g(x)z^d, and Jac(P,Q)=kappa in K*.  Then necessarily
   f=ax+b and g=c are constant/affine in x, with a!=0, and every mate is
   Q=(kappa/a)z+H(P).  Conversely all such pairs have Jacobian kappa,
@@ -16,7 +17,7 @@ status: >
   fiber polynomial with an intermediate z-coefficient and does not prove
   JC(2).
 source: root-2608-jc-nonlinear-monomial-fiber-2026-08-15
-audit: exact coefficient derivation; algebraic-closure gradient gate; Fraction polynomial recurrence/telescoping/sector/inverse replay; normal and optimized outputs byte-identical; independent mechanism audit clean, final statement audit requested
+audit: exact coefficient derivation; algebraic-closure gradient gate; Fraction polynomial recurrence/telescoping/sector/inverse replay; normal and optimized outputs byte-identical; independent gradient/recurrence/nontermination/kernel/inverse/tameness/sector-colimit/module-type/hash/routing/scope audit clean
 depends_on: []
 related:
   - THM-2063-one-fiber-linear-planar-keller-pairs
@@ -300,6 +301,25 @@ C_(s-1)
  ~= colim (K[x] --L_s--> K[x] --L_(s+d)--> K[x] --> ...). (27)
 ```
 
+Here and below the displayed colimit is first taken in `K`-vector spaces.
+Its `K[P]`-module structure is induced rather than stagewise: writing
+`u=ax+b`, multiplication by `P` is
+
+```text
+P [q]_k=[u q]_k+[g q]_(k+1).                            (27a)
+```
+
+This is compatible with every transition.  Indeed, for `n=s+kd`,
+
+```text
+L_n(uq)+gq-uL_n(q)=((n+d)/n)gq,
+L_(n+d)(((n+d)/n)gq)=gL_n(q).                           (27b)
+```
+
+Thus `(27a)` gives exactly the action inherited from multiplication by
+`P=u+gz^d` on the cokernel, and `(27)` is an isomorphism of `K[P]`-modules
+with this action.
+
 The wrap sector has one additional boundary relation.  Since
 
 ```text
@@ -320,6 +340,13 @@ The maps are well-defined because
 ```text
 L_((k+1)d)(g^(k+1)h)=g^(k+2)h'/(a(k+1)).                 (30)
 ```
+
+Since differentiation is onto `K[x]`, `(30)` also shows inductively that
+the relation ideal at the next stage is exactly `(g^(k+2))`, not merely a
+subideal.  The action `(27a)` applies to `(29)` as well.  It is independent
+of representatives because changing `q` at stage `k` by `g^(k+1)h` changes
+its two terms by multiples of `g^(k+1)` and `g^(k+2)`, respectively; its
+compatibility with the transition maps is again `(27b)`.
 
 Equations `(24)--(30)` are a Hamiltonian-response presentation, not a new
 Keller argument: the classification already follows from the single chain
