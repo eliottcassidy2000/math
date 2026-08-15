@@ -2,11 +2,22 @@
 id: THM-3453
 title: "Global transverse literal half-twist cap-seven support classification"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  The candidate classifies every modulus supporting a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The theorem classifies
+  every modulus supporting a
   transverse strict literal half-twist cover by at most seven owners.  It is
-  not proved canon and must not be used as a dependency before promotion.
+  an exact Boolean-mask result and has no arbitrary-time, physical-current,
+  decrement, or LRC(14) consequence.
 source: root-global-literal-half-rank-seven-2026-08-15
+audit: >
+  two independent immutable-package audits CLEAN: line-by-line theorem
+  derivation checked period descent, transversality and deduplication, the
+  mixed-prime and fixed-fibre dichotomies, predecessor directions, the
+  17-adic invoice, exact universe, and scope; a separate clean-room strict-mask
+  solver matched the divisor support for every 2<=Q<=200, independently
+  recovered all atom ranks, and closed Q=366 and Q=578 by fibre, capacity,
+  and invoice controls; normal/-O/stored replay, dependency pins,
+  semantic/hash, AST/security, ID, routing, documentation, and diff gates
+  passed
 depends_on:
   - THM-3416-zero-mode-cochain-global-rank-six-support
   - THM-3434-seventeen-fibre-two-sided-mass-closure
@@ -25,10 +36,10 @@ hash_basis: LF-normalized bytes
 
 # THM-3453 -- global transverse literal half-twist cap-seven support classification
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**  This file contains a complete proof candidate and a frozen
-exact companion, but it remains outside the proved dependency graph until a
-separate immutable-package audit promotes it.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**  The proof and frozen
+exact companion passed two independent immutable-package audits, including a
+separate clean-room strict-mask reconstruction through `Q=200` and hostile
+closures at `Q=366,578`.
 
 ## 1. Candidate statement
 
@@ -340,8 +351,8 @@ in THM-3451 is automatic: the excluded primes
 
 would respectively force one of `12,10,14,11,13,38,23,29` into `Q`.
 THM-3451 therefore gives `p=17` or `37`, which forces `68|Q` or `148|Q`.
-This final contradiction closes `(10)` and completes the proof candidate for
-`(4)`. **QED, pending independent audit and status promotion.**
+This final contradiction closes `(10)` and completes the proof of `(4)`.
+**QED.**
 
 ## 9. Connection, loss, and hostile ledger
 
@@ -362,7 +373,7 @@ The faithful carrier is an activity-labelled fibre clutter.  There is no
 intrinsic pairwise orientation and hence no reason to manufacture a
 tournament.
 
-## 10. Exact companion and reserved status
+## 10. Exact companion and audited status
 
 Run from the repository root:
 
@@ -388,8 +399,8 @@ and freezes:
   states and `10,412` branches.
 
 These computations verify the stated interfaces and hostile boundaries; they
-do not replace the strong-induction proof.  This theorem remains
-**RESERVED / PROVISIONAL** until an independent immutable-file audit checks
-the proof, scripts, output, hashes, routing, and correction lineage and then
-explicitly promotes the status.  Neither this package nor a future promotion
-would by itself provide a common physical time or settle LRC(14).
+do not replace the strong-induction proof.  Two independent immutable-file
+audits checked the proof, scripts, output, hashes, routing, correction
+lineage, and a separate clean-room bounded/hostile path.  The theorem is
+therefore **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED**.  It does not
+provide a common physical time or settle LRC(14).
