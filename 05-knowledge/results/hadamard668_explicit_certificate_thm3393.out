@@ -1,0 +1,17 @@
+THM-3393 explicit Hadamard order-668 certificate
+order=668
+encoding=rowwise_little_endian_minus_bits row_bytes=84
+raw_bitset_bytes=56112 sha256=47e5b8b061401c8cf18c2dee97f581a0c31b3ca7ad76e2930e43f1e4f18b50ca
+zlib_bytes=10862 sha256=6847f4d26b3e9ad284e57b9284f4297856a38d74065ba2b9c972f6fed70738d8
+normalized_text_sha256=73f1de1539849e1dc7e6085cc69c563fd2965c44970263e8203384bd1a46aa63
+unnormalized_text_sha256=bdeb5059d77e2703211082627b60441b8c888c928a55cc6f295e011941a387b0
+normalization=first_row_positive first_column_positive PASS
+rows_checked=668
+off_diagonal_pairs_checked=222778
+hamming_distance_min=334 max=334
+gram_identity=H*H^T=668*I PASS
+sds_parameters=4-(166;82,83,83,83;164)
+sds_nonzero_shifts_checked=165 PAF_sum=-4 PASS
+construction=4-row-bordered_Goethals-Seidel_core_order_166
+construction_rebuild_matches_explicit_certificate=PASS
+ALL CHECKS PASSED

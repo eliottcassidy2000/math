@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `hadamard668_explicit_certificate_thm3393.py` -> matching `.out`
+  [THM-3393 PROVED + VERIFIED-EXACT + GENERATOR-INDEPENDENT CERTIFICATE].
+  An embedded normalized `668 x 668` sign matrix has frozen text SHA-256
+  `73f1de1539849e1dc7e6085cc69c563fd2965c44970263e8203384bd1a46aa63`.
+  The standard-library verifier checks all `222,778` distinct row pairs at
+  Hamming distance `334`, hence `H H^T=668I`, and independently rebuilds the
+  same matrix from a `4-(166;82,83,83,83;164)` supplementary difference
+  family in a four-row-bordered Goethals--Seidel array.  Ordinary and
+  optimized runs are byte-identical. Source/output SHA-256:
+  `f637f2017954ee949e83871470179d529c69bd7add404c0924b0b4dcf2be030f` /
+  `83870dbcbe81ded0c718be1fa3696fb0016dd0fcba3eba1a27d1300e06e148de`.
+
 - `switching_bipartite_synchronization_thm3392.py` -> matching `.out`
   [THM-3392 PROVED + VERIFIED-EXACT + HOSTILE-AUDITED]. For every real
   symmetric zero-diagonal matrix, the bipartite and synchronized sign norms
