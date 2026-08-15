@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact referee for the one-root nonlinear Hamiltonian response.
+"""Exact referee for provisional THM-3422.
 
 For
 
@@ -12,10 +12,11 @@ colimit of monomial chains
     n E[k,m] + gamma*(n*e-d*m) E[k+1,m+e-1] = 0,
     n=s+k*d.
 
-The script checks the orbit-label proof, every predicted lambda-arrow break,
-the finite torsion-thickness formula, and direct bivariate primitives for the
-unit observer.  It uses only integer/Fraction arithmetic and has no
-assertion-dependent truth gate.
+The script checks the one-root orbit-label proof, every predicted
+lambda-arrow break, the finite torsion-thickness formula, direct bivariate
+primitives for the unit observer, and the separately typed repeated-root
+split-fiber character window.  It uses only integer/Fraction arithmetic and
+has no assertion-dependent truth gate.
 """
 
 from __future__ import annotations

@@ -390,7 +390,7 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   gives a two-pivot inverse graph and mate-integrability class on two controls.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
   THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response; collisions persist and `ker` after `gr` overcounts. This refines THM-2063, not `JC(2)`; THM-3354 blocks D5 transport.
-  THM-3418 closes sparse `P=f(x)+g(x)z^d`, `d>=2`, by a residue-one recurrence; THM-3419 gives every generic Hamiltonian sector rank `deg(rad(g))`; intermediate coefficients remain open.
+  THM-3418 closes sparse `P=f(x)+g(x)z^d`; THM-3419 gives generic sector rank `deg(rad(g))`.  THM-3422 one-root integral response is **RESERVED / PROVISIONAL**; broader fibers remain open.
   No base root choice follows; residual degree 119, Keller mate/inverse cover, `JC(2)` and `DC(2)` remain OPEN.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in

@@ -1,5 +1,24 @@
 # Script Results Index
 
+- `jc_one_root_nonlinear_integral_response_thm3422.py` -> matching `.out`
+  [THM-3422 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT /
+  INDEPENDENT AUDIT REQUIRED].  For
+  `P=ax+b+c(x-alpha)^e z^d`, every simple-root sector is `K[lambda]`.
+  For `e>1`, target sector `s-1` is a free line plus one lambda-Pruefer arm
+  when `d|s(e-1)`, and is the Laurent line otherwise.  Exactly
+  `gcd(d,e-1)` characters carry torsion, with depth-`k` length
+  `k(e-1)+s(e-1)/d`.  The unit class has annihilator
+  `(lambda^((e-1)/d))` exactly when `d|(e-1)`.  A separately typed
+  repeated split-root first-window formula records the full puncture-
+  monodromy vector and explicitly does not claim a global multiple-root
+  decomposition.  The exact companion checks 34,504 direct relations,
+  30,576 orbit transitions, 30,576 lambda breaks, 2,268 torsion windows,
+  50 unit primitives, and 126,360 split-fiber character dimensions.  This
+  candidate is not a proved dependency until independent audit and status
+  promotion.  Script/output LF-normalized SHA-256:
+  `1c862dd5dfaee00a3ee5827a9d004c160a574deb103cd3b878a6615aeac7a766` /
+  `1e0abbff4bbd2ab601cbf2aee4c840789f4ebf36a1444bf2aa8c8506579e485d`.
+
 - `jc_generic_kummer_response_thm3419.py` -> matching `.out`
   [THM-3419 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
   `P=ax+b+g(x)z^d`, `a!=0`, every one of the `d` generic Hamiltonian

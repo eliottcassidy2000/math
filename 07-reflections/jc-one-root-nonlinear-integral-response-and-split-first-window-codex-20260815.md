@@ -1,9 +1,12 @@
 # Nonlinear integral Hamiltonian response: one-root classification and the split-root first window
 
-**Status:** PROVED-ELEMENTARY CANDIDATE + VERIFIED-EXACT, unnumbered and not
-yet canon.  The one-root module classification and the repeated split-root
-first-window theorem below have complete proofs.  The proposed full
-multiple-root module decomposition is deliberately **not** claimed.
+**Status:** derivation companion for
+[THM-3422](../01-canon/theorems/THM-3422-one-root-nonlinear-integral-hamiltonian-response.md),
+which remains **RESERVED / PROVISIONAL + AUDIT REQUIRED**.  The one-root
+module classification and the repeated split-root first-window formula below
+have complete candidate proofs and exact replays, but are not proved canon
+until independent audit and explicit promotion.  A full multiple-root module
+decomposition is deliberately **not** claimed.
 
 ## 1. Inheritance, portfolio, and connection contract
 
@@ -286,7 +289,8 @@ This independently proves `(12)`.  QED.
 The one-root answer does **not** tensor together root by root.  There is,
 however, a complete first boundary window.
 
-Extend scalars faithfully so that
+Let `K'/K` be a faithful splitting extension containing the `d`th roots of
+unity, put `C'=C_P tensor_K K'`, and write
 
 ```text
 g(x)=c product_(j=1)^N (x-alpha_j)^e_j                  (23)
@@ -303,7 +307,7 @@ c_i=gcd(d,v_1,...,v_N).                                  (24)
 Then the first `lambda_i=P-beta_i` window of target sector `s-1` is
 
 ```text
-dim_K C_(s-1)/(P-beta_i)C_(s-1)
+dim_(K') C'_(s-1)/(P-beta_i)C'_(s-1)
  = N       if d divides s v_j for every j,
  = N-1     otherwise.                                    (25)
 ```
@@ -413,13 +417,13 @@ The normal and optimized outputs are byte-identical.
 Reproduce with
 
 ```text
-python3 04-computation/jc_one_root_nonlinear_integral_response_probe_20260815.py
-python3 -O 04-computation/jc_one_root_nonlinear_integral_response_probe_20260815.py
+python3 04-computation/jc_one_root_nonlinear_integral_response_thm3422.py
+python3 -O 04-computation/jc_one_root_nonlinear_integral_response_thm3422.py
 ```
 
 Artifacts:
 
-- `04-computation/jc_one_root_nonlinear_integral_response_probe_20260815.py`
-  (`sha256 c0f60e41f424b401e1c36536c03f81c83237faa7781e3c60adbd1f651efdb1b1`)
-- `05-knowledge/results/jc_one_root_nonlinear_integral_response_probe_20260815.out`
+- `04-computation/jc_one_root_nonlinear_integral_response_thm3422.py`
+  (`sha256 1c862dd5dfaee00a3ee5827a9d004c160a574deb103cd3b878a6615aeac7a766`)
+- `05-knowledge/results/jc_one_root_nonlinear_integral_response_thm3422.out`
   (`sha256 1e0abbff4bbd2ab601cbf2aee4c840789f4ebf36a1444bf2aa8c8506579e485d`)
