@@ -3,9 +3,8 @@ id: THM-3366
 title: All-sector pointwise complement-clock completion
 status: >
   PROVED + FINITE-EXACT, with CITED input; the specialized k=1 census, unified
-  all-k pool-14 census, and refined k=2 composition are INDEPENDENTLY
-  HOSTILE-AUDITED, while the refined k=3 composition remains under independent
-  audit.
+  all-k pool-14 census, and refined k=2 and k=3 compositions are INDEPENDENTLY
+  HOSTILE-AUDITED.
   On every THM-2928 body-address quotient, a pointwise cover of the
   unsupported open cells by r integer danger combs compiles any hypothetical
   k-aligned, (7-k)-drift cover into a global cover by at most 7+r nonzero
@@ -50,6 +49,10 @@ k3_composition_script: 04-computation/lrc14_k3_refined_complement_clock_composit
 k3_composition_output: 05-knowledge/results/lrc14_k3_refined_complement_clock_composition_kps_s176.out
 k3_composition_script_sha256: 27e4bff52705189bf8ff73db42d76d4e2fc94c44330d295f166f8d4217cb1804
 k3_composition_output_sha256: 4cb8f95113123007af9fb5a1f58b3b5373dd4637615b50be7168c6bf578b696b
+k3_audit_script: 04-computation/lrc14_k3_refined_complement_clock_independent_audit_20260814.py
+k3_audit_output: 05-knowledge/results/lrc14_k3_refined_complement_clock_independent_audit_20260814.out
+k3_audit_script_sha256: 1204bff675273efb73241cbc511e84dd2cbc11bae4ce5dcc5caa258928f1064f
+k3_audit_output_sha256: 0bf0d3b3c6b530ed3b37b3cf3d6c9dd38edebf331e2f6c7fcbcca1741a5e15c0
 hash_basis: LF-normalized bytes
 ---
 
@@ -361,6 +364,16 @@ after the one-spike screens, enlarging an unstructured integer-clock pool is
 unlikely to be the main route through the remaining `k=3` ledger.  The
 reusable positive signal is instead the rigid core and `D=L/2` law in `(22)`.
 
+An independent hostile audit reconstructs both inputs without the primary
+composition engine: exhaustive subset enumeration recovers all `19,053`
+pool-14 terminals, while a literal current-lcm dynamic program and primal
+Boolean-coupling vertices recover the `1,904` one-spike rows.  Their exact
+`(body,D)` intersection is again the seven rows and `7,648` occurrences in
+`(22)`.  Body-only, divisor-only, and `(L,D)` keys delete respectively `1,904`,
+`1,880`, and `33` rows, while raw or double subtraction gives wrong occurrence
+counts.  These hostiles make the keywise, non-subtractive composition
+load-bearing rather than cosmetic.
+
 ## 8. Scope and non-subtraction guard
 
 The theorem closes the listed **support rows**.  It does not claim:
@@ -407,6 +420,8 @@ python 04-computation/lrc14_k2_refined_complement_clock_composition_kps_s175.py
 python -O 04-computation/lrc14_k2_refined_complement_clock_composition_kps_s175.py
 python 04-computation/lrc14_k3_refined_complement_clock_composition_kps_s176.py
 python -O 04-computation/lrc14_k3_refined_complement_clock_composition_kps_s176.py
+python 04-computation/lrc14_k3_refined_complement_clock_independent_audit_20260814.py
+python -O 04-computation/lrc14_k3_refined_complement_clock_independent_audit_20260814.py
 ```
 
 All decisions use integer arithmetic or `Fraction`.  Runtime checks remain

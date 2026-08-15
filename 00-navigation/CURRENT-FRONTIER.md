@@ -266,8 +266,8 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
 - [THM-3359](../01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md)
   gives periodic modular C-finite supports, harmonic residue `delta=h/p`, and
   scar `delta-delta^2/2`; [THM-3364](../01-canon/theorems/THM-3364-cyclotomic-boolean-clocks-berggren-t4-xor-and-crt-phase.md)
-  upgrades this to full cyclotomic phase, least period and harmonic finite part.
-  Neither restores ancestry; squares and `ceil(k log(k+1))` block all subsets.
+  gives full phase; THM-3382 gives a time/address harmonic bifurcation. None
+  restores ancestry; squares and `ceil(k log(k+1))` block all subsets.
 - Hostile-audited [THM-2500](../01-canon/theorems/THM-2500-finite-hole-relative-atoms-prime-rays-and-cover-bounds.md) classifies finite multiplicative hole modules. Prime-free holes have finitely
   many artificial atoms at most `max h*spf(h)`; a prime hole creates
   disjoint cage rays `m*q` with sharp `M^3/M^4` finite remainders. Additive

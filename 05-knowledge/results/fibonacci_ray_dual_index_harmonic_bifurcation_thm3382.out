@@ -1,0 +1,40 @@
+THM-3382 FIBONACCI-RAY DUAL-INDEX HARMONIC BIFURCATION
+source_sha256_lf 1049d46e642e6d7f4640e625ba5fe1eb6330c34dc0a5ee34e8a96885fb1429ae
+theorem_source_sha256_lf (('THM-3359', '0ff08a37801c5f3b96fa3ee74b0d7a897b3f87c5db4397b4abdadbe99f38562a'), ('THM-3379', 'd1c9cb25ca02ef77d5e1ff681972554856247ad9326fa2b9d0a480586e3d499b'))
+assertion_nodes 0 floating_literals 0
+heap_definition h(empty)=0; h(wA)=3h(w)+1; h(wB)=3h(w)+2; h(wC)=3h(w)+3
+heap_bijection_depths (0, 11) checks 265720
+heap_level_boundary (11, 88573, 265719, 177147)
+ray_address_formulas ('R2=7(9^r-1)/8', 'R0=(15*9^r-7)/8', 'R1=(33*9^r-9)/8')
+ray_affine_recursions ('R2(r+1)=9R2(r)+7', 'R0(r+1)=9R0(r)+7', 'R1(r+1)=9R1(r)+9')
+common_C_finite_recurrence x(r+2)=10x(r+1)-9x(r)
+strict_interlacing R2(r)<R0(r)<R1(r)<R2(r+1)
+ray_rational_OGFs ('R2:7t/((1-t)(1-9t))', 'R0:(1+6t)/((1-t)(1-9t))', 'R1:(3+6t)/((1-t)(1-9t))')
+ray_sparse_Mahler_equations ('G2(z)=z^7+z^7G2(z^9) (root excluded)', 'G0(z)=z+z^7G0(z^9)', 'G1(z)=z^3+z^9G1(z^9)')
+ray_formula_range (0, 800) checks 2403
+flipped_base_three_language {10} union 11(01)*00 checks 801
+ray_initial_records ((('R2', 2, 0, 0), ('R0', 3, 1, 0), ('R1', 4, 3, 1)), (('R2', 5, 7, 0), ('R0', 6, 16, 0), ('R1', 7, 36, 1)), (('R2', 8, 70, 0), ('R0', 9, 151, 0), ('R1', 10, 333, 1)), (('R2', 11, 637, 0), ('R0', 12, 1366, 0), ('R1', 13, 3006, 1)), (('R2', 14, 5740, 0), ('R0', 15, 12301, 0), ('R1', 16, 27063, 1)))
+flipped_dual_index_first20 ((4, 3), (7, 36), (10, 333), (13, 3006), (16, 27063), (19, 243576), (22, 2192193), (25, 19729746), (28, 177567723), (31, 1598109516), (34, 14382985653), (37, 129446870886), (40, 1165021837983), (43, 10485196541856), (46, 94366768876713), (49, 849300919890426), (52, 7643708279013843), (55, 68793374511124596), (58, 619140370600121373), (61, 5572263335401092366))
+time_support {3r+4:r>=0} density=1/3 harmonic=DIVERGENT
+heap_support {(33*9^r-9)/8:r>=0} density=0 harmonic=CONVERGENT
+heap_harmonic_Lambert (8/33) sum_(r>=0) q^r/(1-aq^r) q=1/9 a=3/11
+heap_harmonic_terms 12
+heap_harmonic_partial (119813141570527454881669135413139128744014382187417539139, 328715968677192587233437516709624374348224277371476034568)
+heap_harmonic_tail_bounds (1, 1035574967097) (1, 1035574967096)
+heap_harmonic_bracket ((13786165571112876440299651057903936474141729460419769473182456749339, 37823336494126910682066595402752738796543507428815877349342292734344), (7754718133743504676320395754140859945741401625939619429778418325307, 21275626777925842510620135377346325728261371405312166991669322410908))
+heap_Dirichlet_profile (8/33)^s sum_(m>=0) (s)_m/m! (3/11)^m/(1-9^(-(s+m))) for Re(s)>0
+heap_Dirichlet_factored_term_checks 80
+full_tree_automatic_rules ('e(3n+1)=0', 'e(3n+2)=1-e(n)', 'e(3n+3)=1')
+full_tree_level_counts_epsilon0_epsilon1 ((0, 1, 0), (1, 1, 2), (2, 5, 4), (3, 13, 14), (4, 41, 40), (5, 121, 122), (6, 365, 364), (7, 1093, 1094), (8, 3281, 3280), (9, 9841, 9842), (10, 29525, 29524), (11, 88573, 88574))
+full_tree_prefix_discrepancy_extrema (140240, -6) (46746, 6)
+full_tree_prefix_recurrence_checks 265718
+full_tree_natural_density 1/2
+full_tree_harmonic_profile (1/2)log(x)+C_tree+O(log(x)/x)
+full_tree_Mahler_equation E(z)=z^2(1+z)/(1-z^3)-z^2E(z^3)
+full_tree_3_kernel (('E', ('U', 'Z', 'C')), ('C', ('D', 'O', 'E')), ('U', ('U', 'O', 'O')), ('D', ('D', 'Z', 'Z')), ('Z', ('Z', 'Z', 'Z')), ('O', ('O', 'O', 'O'))) states=6
+depth_carrier_hostile R0 and R1 both map to {2r+1}; depth loses the tournament bit
+automatic_checks 265719 Mahler_checks 265720 kernel_checks 1594320
+hostile_conclusion heap indexing does not make the full tree sparse; the bifurcation is ray-and-encoding specific
+typing_conclusion C-finite address values are not modular index support; harmonic class needs the index map sidecar
+semantic_sha256 67e8bf54060f0269d1d47e9b22c0928da7d0c1377ee0deba55f95d98be7a0b6a
+status=ALL EXACT CHECKS PASSED; no encoding-invariant density claim

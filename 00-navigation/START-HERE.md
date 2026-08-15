@@ -58,8 +58,8 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     full SCC order or time.
 11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352
     separate support and collision tax. THM-3359 gives residue/scar; THM-3364
-    restores full eventual-periodic phase and harmonic finite part; THM-3362
-    detects real odd-profile pairs in three moments. General subsets and FC(3) remain open.
+    restores phase; THM-3382 shows time/address can cross harmonic summability;
+    THM-3362 detects odd-profile pairs. General subsets and FC(3) remain open.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.
     THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
     THM-3212/3225 leave critical points; THM-3237--3265 give the infinity
