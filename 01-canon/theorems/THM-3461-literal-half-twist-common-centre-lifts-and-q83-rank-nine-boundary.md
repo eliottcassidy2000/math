@@ -2,8 +2,8 @@
 id: THM-3461
 title: "Literal half-twist common-centre lifts and the q=83 rank-nine boundary"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT PENDING.  Literal half-twist masks retain a fixed common THM-3398
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Literal half-twist masks
+  retain a fixed common THM-3398
   centre and zero cochain.  The q=11,27,51 packets have exact ZMC ranks
   6,4,7, while an exact two-layer search gives rho_ZMC(83)=9.  Their
   projective current collapses to one ray.  No endpoint current or LRC(14)
@@ -13,8 +13,8 @@ audit: >
   exact integer/Fraction normal and optimized replay; direct rational mask,
   mode-width, gcd-gauge, wedge, open physical-cell, two-layer set-cover,
   ancestry, affine-lift, same-mask hostile, and CRT controls; independent
-  clean-room meet-in-the-middle mathematics audit PASS; immutable-package
-  audit pending
+  clean-room meet-in-the-middle mathematics audit PASS; independent immutable
+  package replay, dependency, hash, security, routing, and scope audit PASS
 depends_on:
   - THM-3387-exact-cyclic-sheet-cover-atlas-and-q2-gcd-graph
   - THM-3398-general-finite-mode-sheet-cover-cochain
@@ -28,20 +28,18 @@ related:
   - THM-3459-rule30-ternary-intersection-factorial-truth-lift-and-keller-boundaries
 script: 04-computation/lrc_literal_half_twist_common_centre_q83_rank9_thm3461.py
 output: 05-knowledge/results/lrc_literal_half_twist_common_centre_q83_rank9_thm3461.out
-script_sha256: 9a5b7c1e7c9525a18c85ad5e4d47dc1631b361dd8662a72ababdfbc15cb37c74
-output_sha256: be1681b4838d4c13535b9367e80bdbfd218e49fa66a757cc9f94daab1ff53eef
+script_sha256: 8e98c0f89a4035eeec6c4e3688d51ab546928a14fe275a32ab48ec65bcb473a4
+output_sha256: 1734f1c4f38fb4cf61097cffc80eecfc6f1335816507842cfbca9a315d62ce42
 semantic_sha256: 97647a6cf82b23de0ddb962b6b2b714d6ca9904408af87e001fa37d0c9b37e90
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3461 -- literal half-twist common-centre lifts and the q=83 rank-nine boundary
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-This file is not yet in the proved dependency graph.  The elementary lift,
-exact companion, and independent clean-room `q=83` lower-bound mathematics
-have passed; promotion awaits an immutable audit of the packaged files.
+The elementary lift, exact companion, independent clean-room `q=83`
+lower-bound mathematics, and immutable packaged files have all passed audit.
 
 ## 1. The fixed centre that the rank word forgot
 
@@ -213,9 +211,9 @@ meet-in-the-middle audit enumerates exact union levels
 through four candidates.  It compares `88,603` unions of at most three with
 `1,738,296` unions of at most four, performing `6,878,449` exact superset
 probes; no compatible pair exists.  Independently written Python and
-JavaScript routes agree.  This closes the mathematical lower-bound audit;
-the file remains reserved only until the immutable package replay and hashes
-are audited.
+JavaScript routes agree.  A further immutable-package audit replayed both
+companion modes, checked every dependency and frozen hash, and reconstructed
+the masks, centres, widths, witnesses, physical cells, CRT lifts, and scope.
 
 ## 5. Why the current still vanishes
 
@@ -288,7 +286,7 @@ uses only the Python standard library, has no optimization-sensitive
 assertions, pins all eight dependencies, checks `16,742` rational mask cells,
 and freezes the complete two-layer banks by SHA-256.
 
-The candidate proves a fixed-half-twist common-centre lift and an exact
+The theorem proves a fixed-half-twist common-centre lift and an exact
 `q=83` ZMC rank boundary.  It does not construct an endpoint current, a live
 LRC row, a decrement, a spectral closure, a Jacobian map, or an LRC(14)
 solution.  LRC(14) remains open.

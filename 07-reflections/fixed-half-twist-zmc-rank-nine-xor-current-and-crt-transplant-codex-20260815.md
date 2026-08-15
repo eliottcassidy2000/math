@@ -1,7 +1,7 @@
 # Fixed-half-twist ZMC rank nine, XOR loss, and the CRT current transplant
 
 **Research reflection / provenance, not a truth source.**  The exact claims
-below are routed to THM-3453/3455 and the audit-pending THM-3461 package.
+below are routed to THM-3453/3455 and the independently audited THM-3461.
 
 ## Inheritance pass
 
@@ -46,8 +46,8 @@ q_t=(2t+1)^2+2,
 (q_1,q_2,q_3,q_4)=(11,27,51,83),
 ```
 
-with cap-seven word `(6,4,7,>7)`.  The THM-3461 exact companion sharpens the
-fourth entry to `9`, subject to independent promotion audit.  This does not
+with cap-seven word `(6,4,7,>7)`.  THM-3461 sharpens the fourth entry to `9`
+with an independent meet-in-the-middle audit.  This does not
 alter THM-3455's period-`1683` cap-seven density or its Fibonacci harmonic
 coefficient: replacing one `>7` label by an exact larger rank changes no
 membership in the cap-seven subset of the natural numbers.

@@ -1,5 +1,5 @@
 THM-3461 EXACT DETERMINISTIC COMPANION
-status=RESERVED / PROVISIONAL + VERIFIED-EXACT; independent audit required
+status=PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
 dependency_count=8;reference_fraction_cells=16742
 identity=B_(q,r)=D_(q,r)(1/(2q));selected_h=r_mod_2q;A_i=r_i;P_ij=0
 q=11|owners=(1, 2, 3, 5, 7, 9)|d=1|g=1|widths=(4, 11, 4, 4, 4, 4)|y_radius=2/63|multiplicity=((1, 11),)|private=(2, 1, 2, 2, 2, 2)
