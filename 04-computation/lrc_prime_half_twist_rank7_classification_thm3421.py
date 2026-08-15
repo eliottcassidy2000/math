@@ -15,7 +15,7 @@ from hashlib import sha256
 from math import gcd, isqrt
 
 
-EXPECTED_SEMANTIC_DIGEST = "9e27f37172631c8bf1133d58b769ffcbddb76e9cdbb5765865b96225db219c8c"
+EXPECTED_SEMANTIC_DIGEST = "f0c7ceb122e90fd3792d72e80a205a6c4bd823cfb5b04064764b95ddc9d9471d"
 
 
 def require(condition: bool, detail: object) -> None:
@@ -315,12 +315,19 @@ def positive_atoms():
     return rows
 
 
+def even_prime_control():
+    masks = tuple(danger_mask(2, residue) for residue in range(1, 4))
+    require(masks == (0, 0, 0), masks)
+    return 2, masks
+
+
 def main() -> None:
     graph = ratio_graph_audit()
     hostiles = ratio_hostile_controls(graph[0])
     bank = finite_bank()
     atoms = positive_atoms()
-    semantic_payload = (graph, hostiles, bank, atoms)
+    even_prime = even_prime_control()
+    semantic_payload = (graph, hostiles, bank, atoms, even_prime)
     semantic = sha256(repr(semantic_payload).encode("ascii")).hexdigest()
     if EXPECTED_SEMANTIC_DIGEST is not None:
         require(semantic == EXPECTED_SEMANTIC_DIGEST, (semantic, EXPECTED_SEMANTIC_DIGEST))
@@ -340,6 +347,7 @@ def main() -> None:
     )
     print(f"positive_scalar_profiles={bank[2]}")
     print(f"literal_positive_atoms={atoms}")
+    print(f"even_prime_control={even_prime}")
     print(
         "scope=literal prime half-twist cap7 iff p in {11,13,23,29}; "
         "exact half ranks 6,7,6,7 respectively; composite rank7 and LRC14 remain open"

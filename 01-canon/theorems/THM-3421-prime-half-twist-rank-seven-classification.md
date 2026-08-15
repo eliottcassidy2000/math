@@ -12,14 +12,14 @@ source: root-prime-half-complete-2026-08-15
 depends_on:
   - THM-3416-zero-mode-cochain-global-rank-six-support
   - THM-3420-prime-rank-seven-zero-and-half-twist-splitter-closures
+  - THM-3423-odd-interval-ratio-complement-and-dyadic-clique-law
 related:
   - THM-3405-common-centre-gcd-gauge-and-boolean-half-twist
-  - THM-3423-odd-interval-ratio-complement-and-dyadic-clique-law
 script: 04-computation/lrc_prime_half_twist_rank7_classification_thm3421.py
 output: 05-knowledge/results/lrc_prime_half_twist_rank7_classification_thm3421.out
-script_sha256: c4193e53bb3199667681f1d9ac91fa1495d7013248988d41683922d989ee6a82
-output_sha256: bf9de38f72c3e85aa6a27ecc434afbb81b9f29a878baa3ec0fd6b0e6734b0972
-semantic_sha256: 9e27f37172631c8bf1133d58b769ffcbddb76e9cdbb5765865b96225db219c8c
+script_sha256: 693db87db8664f76fdc7bc6d520c8d3d36c51376aa6c9a67beef1aad6d84aae9
+output_sha256: 77ad7cf9566f5aa02f9bfa7d9abbbce21b4a37db7137616b2771f1b8169775dc
+semantic_sha256: f0c7ceb122e90fd3792d72e80a205a6c4bd823cfb5b04064764b95ddc9d9471d
 hash_basis: LF-normalized bytes
 ---
 
@@ -68,6 +68,8 @@ the rank-six claims at `11,23`, while THM-3420 proves the rank-seven claims at
 This is a theorem about literal Boolean half-twist masks and hence about the
 corresponding prime primitive zero-mode-cochain layer.  It does **not**
 classify composite rank seven, arbitrary physical common times, or LRC(14).
+For the even prime `p=2`, every literal half mask is empty; the companion
+checks this boundary separately.
 
 ## 2. Inheritance and connection ledger
 
@@ -134,7 +136,7 @@ If `e=7`, the odd-word change of sheet identifies the seven even half blocks
 with seven fixed-zero blocks.  THM-3420 therefore forces `p=29`.  Hence the
 remaining argument may assume at least one odd block.
 
-## 4. The exact odd-interval ratio complement
+## 4. THM-3423 gives the exact ratio complement and clique bound
 
 Represent sheets by odd words `x=2ell+1 mod 2p`, remove the fixed word `p`,
 and reduce modulo `p`.  An even block has off-fixed part a dilate of
@@ -164,122 +166,31 @@ D={+-a/b: gcd(a,b)=1, a,b have opposite parity,
              and a+b<=7}.                             (12)
 ```
 
-We claim that for `p>=448+8c`, reduction modulo `p` gives the exact identity
+THM-3423, specialized at `h=7`, gives the exact identity
 
 ```text
-F_p^* minus (O_L/O_L) = D.                            (13)
+F_p^* minus (O_L/O_L) = D                             (13)
 ```
 
-### 4.1 Every missing ratio is short
-
-Fix `lambda in F_p^*`.  Among the eight circular points
+and the exact packing bound
 
 ```text
-0,lambda,2lambda,...,7lambda
+maximum number of pairwise-disjoint dilates of O_L =3. (14)
 ```
 
-two consecutive points have gap at most `floor(p/8)`.  Hence
+Indeed, the theorem's ratio threshold is
 
 ```text
-d lambda=+-a mod p,       1<=d<=7, 1<=a<=p/8.         (14)
+p>=8(56+c),
 ```
 
-Divide `a,d` by their gcd and rename the coprime pair `A,b`.  If `A,b` are
-both odd, then `A,b<=L` and `(14)` already puts `lambda` in `O_L/O_L`.
-Otherwise they have opposite parity.
+whose worst case in `(11)` is `p>=512`, and its modular clique threshold is
+`p>2*6^3=432`.  Its proof colours the rational Cayley graph by `nu_2 mod 3`;
+the sharp clique is `{1,2,4}`.  The present companion independently replays
+the `h=7` graph (`25` vertices, `84` edges, `60` triangles), its exact modular
+stability bound `217`, and the first large prime in each residue class.
 
-Suppose `A+b>=8`.  The line
-
-```text
-b x-A y=p                                               (15)
-```
-
-has odd/odd integral solutions: because `A,b` have opposite parity, one
-coordinate is automatically odd and shifting once changes the parity of the
-other.  The odd/odd solutions are spaced by `(2A,2b)`.  Choose the solution
-nearest the real point
-
-```text
-(x_0,y_0)=(p/(A+b),-p/(A+b)).                          (16)
-```
-
-Then
-
-```text
-max(|x|,|y|)<=p/(A+b)+max(A,b)<=p/8+8.                (17)
-```
-
-For completeness, the last inequality is not a rounding heuristic.  If
-`A<=b`, it is immediate.  If `A>=b`, the function
-`p/(A+b)+A` is convex on
-
-```text
-max(b,8-b)<=A<=p/8;
-```
-
-at both endpoints it is at most `p/8+8`.  Since
-
-```text
-p/8+8<=L=(p-c)/7  iff  p>=448+8c,                     (18)
-```
-
-equation `(15)` gives `lambda=x/y in O_L/O_L`.  Therefore a missing ratio
-must have `A+b<=7`, so it lies in `D`.
-
-### 4.2 Every short opposite-parity ratio is missing
-
-Conversely, take `+-A/b in D` and suppose it equals `x/y` modulo `p` for
-odd `x,y` with absolute values at most `L`.  Then one of
-
-```text
-b x-A y,       b x+A y
-```
-
-is an odd, hence nonzero, multiple of `p`, but
-
-```text
-|b x +/- A y|<=(A+b)L<=7L=p-c<p,                      (19)
-```
-
-a contradiction.  This proves `(13)`.
-
-For the relevant classes, `c<=8`, so the uniform analytic threshold is
-
-```text
-p>=512.                                                (20)
-```
-
-## 5. The dyadic clique obstruction
-
-Two odd-block dilates are disjoint exactly when the ratio of their scalars
-lies in `D`.  Normalize one scalar to one.  Pairwise-disjoint odd blocks
-therefore form a clique in the Cayley graph on `{1} union D` with adjacency
-
-```text
-u~v  iff  u/v in D.                                   (21)
-```
-
-This graph has clique number exactly three.  Indeed, every element of `D` has
-two-adic valuation in `{+-1,+-2}`.  The colouring
-
-```text
-colour(u)=nu_2(u) mod 3                                (22)
-```
-
-is proper, while `{1,2,4}` is a triangle.
-
-This rational graph is exactly the modular graph for every `p>217`.  The
-exact companion checks all `25*25*24` comparisons and finds
-
-```text
-max |numerator(u/v-d)|=217
-```
-
-over unequal rational pairs `u/v,d`.  Thus a false modular equality would
-force `p` to divide a nonzero integer of absolute value at most 217.  No
-asymptotic or probabilistic graph statement is being used.
-
-## 6. Spending overlap produces too many disjoint odd blocks
+## 5. Spending overlap produces too many disjoint odd blocks
 
 At any reflection orbit, if `t` odd blocks meet there, deleting `t-1` of
 them removes every odd/odd collision on that orbit.  Doing this over all
@@ -288,14 +199,14 @@ even blocks only consume more of that same budget.  Therefore the
 `7-e` odd blocks contain a pairwise-disjoint subfamily of size at least
 
 ```text
-7-e-B.                                                (23)
+7-e-B.                                                (15)
 ```
 
 For `s=9`, `(8)` makes this lower bound `4` for every `e=1,2,3`.  For
 `s=11` it is `5`, and for `s=13` it is `6`.  Each contradicts the clique
 bound three.
 
-For `s=1`, the budget is zero but `(23)` alone would weaken when `e` grows.
+For `s=1`, the budget is zero but `(15)` alone would weaken when `e` grows.
 Here any two even blocks already collide off the fixed sheet.  Indeed, for
 `k>=13` one has `p<(k+1)^2`; the circular-gap argument on
 
@@ -307,10 +218,10 @@ gives `d lambda=+-a` with `1<=a,d<=k`, so `E/E=F_p^*`.  Because `B=0`, this
 forces `e=1`.  The remaining six odd blocks are pairwise disjoint, again
 contradicting clique number three.
 
-Equations `(20)--(23)` exclude every prime `p>=512` outside the already
+Equations `(13)--(15)` exclude every prime `p>=512` outside the already
 positive all-even `p=29` case.
 
-## 7. Exact finite boundary and positive atoms
+## 6. Exact finite boundary and positive atoms
 
 The companion performs an independent normalized-mask census for every one
 of the `96` primes below `512`.  For each scalar-feasible value of `e`, common
@@ -322,13 +233,13 @@ explicit universe is
 3<=p<512, p prime;
 1<=e<=7;
 197 scalar-feasible (p,e) profiles;
-seven distinct normalized block dilates.              (24)
+seven distinct normalized block dilates.              (16)
 ```
 
 The positive support is exactly
 
 ```text
-{11,13,23,29}.                                        (25)
+{11,13,23,29}.                                        (17)
 ```
 
 There are twelve positive seven-block parity profiles: one at `11`, one at
@@ -337,16 +248,17 @@ There are twelve positive seven-block parity profiles: one at `11`, one at
 and optimized runs are byte-identical.  The four literal witnesses in `(4)`
 are replayed separately, including their full multiplicity profiles.
 
-Together with THM-3416's all-prime rank-at-most-six classification, `(24)`
+Together with THM-3416's all-prime rank-at-most-six classification, `(16)`
 also covers a hypothetical shorter finite-boundary cover: away from `11,23`
 it would have to be an essential seven-block cover and hence appears in the
 normalized census.  This proves the finite half of `(2)` and completes the
 candidate proof.
 
-## 8. Equality boundary, losses, and non-consequences
+## 7. Equality boundary, losses, and non-consequences
 
 - The analytic threshold is explicit: the worst odd-interval offset is
-  `c=8`, giving `p>=512`; every smaller prime is in `(24)`.
+  `c=8`, giving `p>=512`; every smaller odd prime is in `(16)`, and `p=2`
+  is checked separately.
 - The clique bound is sharp at three, but the cover budget forces at least
   four disjoint odd blocks in every surviving large-prime class.
 - The `s=1` lane is the only one that needs the even-block ratio sidecar;
