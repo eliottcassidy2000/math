@@ -1,0 +1,16 @@
+JC TORSOR KILLING VERSUS BOUNDARY EFFECTIVITY EXACT PROBE
+source_sha256_lf=37ccdce40a0483f520e47f5bb8c95fcc7e33a4efc439ab2de077c5035a8ac559
+dependency_sha256_lf=(('THM-3383-script', 'b72a196e7fda4a2de33df26e1f26f06f654908a9eb42f453e210728559ad4b10'), ('THM-3383-output', '514af913271c9fa283bf7c969f9166730a3a187e93880b65d9a480c8966f2abc'), ('THM-2655-script', 'f2f72df60e5443cfe35177cbb561c7e473b63006b2f7254d080a14a3be949c8f'), ('THM-2655-output', '01748e08163b3ff45c971ea7597a2a1fe1d7791fef99ef17bf98baee0893a97e'))
+status=VERIFIED-EXACT terminal filtration and V4 three-view hostile plus elementary analytic proofs;unnumbered_and_not_canon
+terminal_normal_form=s=x^e*v^(d+1);m=x^(-e)*v^(-d);s*m=v;d=min(g,ae);orientation_selects_s
+terminal_filtration=m^q*f(v)_is_polynomial_iff_v^(dq)*(1+cv)^(eq)_divides_f(v)
+terminal_cells=135;powers_per_cell=5;filtration_gates=675;e_range=1..8;a_range=0..8
+cyclic_hostile=mu_e_invariant_torsor_dies_on_C[x,y]_but_missing_target_retains_v=0_and_xy=0_boundary_orders
+v4_ratio_valuation_matrix=((-1, 1, 1), (1, -1, 1), (1, 1, -1));det=4;smith=(1, 2, 2);class_lattice_index=4
+v4_ratios=(d/a,d/b,d/c)=(yz/x,xz/y,xy/z);each_has_one_distinct_pole_after_polynomial_pullback
+pair_products=(c,b,a)_valuations=((0, 0, 2), (0, 2, 0), (2, 0, 0));triple_product=d_valuation=(1, 1, 1)
+effectivity_hostile=all_three_Kummer_squareclasses_and_divisor_classes_die_on_A3;all_pair_and_triple_products_are_polynomial;no_single_ratio_is_polynomial
+typing=class_or_H1_trivialization_is_not_effective_boundary_regularization;valuation_cone_is_required_sidecar
+scope=sharp_nonKeller_V4_and_terminal_monomial_hostiles_only;no_A4_or_S4_exclusion;no_JC2_or_LRC_consequence
+semantic_sha256=90e478b47b925203d81978048dcc25d76b97258bbc413982016db7a13d594a18
+verdict=PASS
