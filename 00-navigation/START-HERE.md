@@ -68,8 +68,7 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     persists it over the two-clutch etale germ. THM-3303/3328 split the
     constant-J boundary residual into open overlap, anti-tangent collision, or
     vertex-cone incidence. THM-3326/3348/3386/3406/3412 give the linear-`z`
-    ladder through the affine-modification `I^q` transgression/support-thickness
-    split and the complete filtered Hamiltonian/Pruefer torsion-arm response.
+    ladder: affine-modification `I^q`, support/thickness, and full torsion arms.
     THM-3367 tames line images only; `JC(2)`/`DC(2)` remain OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
