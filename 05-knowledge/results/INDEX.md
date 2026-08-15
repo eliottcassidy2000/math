@@ -13,6 +13,21 @@
   `e6e25bac54d1f55eb29f04912f80fb04f3578f6ea2606dc39b03c8e2ce13ee08` /
   `20bd151f40a3991b0fc85108f85339ebf9b48b24bc3113d8d480468b3ecef3f7`.
   No JC/LRC transfer follows.
+- `lrc_prime_even_half_twist_cap7_finite_atlas_20260815.py` -> matching `.out`
+  [UNNUMBERED FINITE-EXACT; ALL-PRIME TAIL OPEN].  Direct strict-mask search
+  over all `103` target-free odd primes `p<=599` on `Q=2p` finds cap-seven
+  support only at `p=7,19`, reproducing the `Q=14,38` witnesses; every prime
+  from `191` through `599` is a new exact negative.  The profile DFS uses
+  odd-unit type normalization and the iff total-overlap budget, with no node
+  cap.  Six large residue controls give normalized zero-degrees `(19,31,23)`,
+  mixed/A-only disjoint clique numbers `6/4`, complementary-pair equality
+  witnesses, and a height-`7` rational atlas for all zero neighbors.  These
+  are OPEN tail signals, not an all-prime classification.  Script/output/
+  semantic LF-normalized SHA-256:
+  `037473fe5b7627a5bf30c3ff5a23f8593802f02372b7f8577a0c135c357819c2` /
+  `06c35b808e311f593cb335969ff4a74acede90b7d280e25a4c531ffa3ee03db4` /
+  `13107c0c62d38c8545c2951d80007c9bc7382d4007ac3935708d5ec14a272409`.
+
 - `jc_multiroot_boundary_jet_packet_probe_20260815.py` -> matching `.out`
   [THM-3436 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].
   At every repeated geometric root, the target-character quotient modulo
