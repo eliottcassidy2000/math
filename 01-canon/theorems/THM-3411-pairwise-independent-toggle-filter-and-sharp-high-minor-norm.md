@@ -1,8 +1,9 @@
 ---
 id: THM-3411
 title: "Pairwise-independent toggle filter and sharp high-minor norm"
-status: PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED
+status: PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF/REPLAY-AUDITED
 source: root-2608-crouzeix-puzzle-2026-08-15
+audit: combined independent Walsh-sign, demicube-norm, blindness, hostile, normal/-O/stored, hash, dependency, and scope audit clean
 depends_on:
   - THM-3396-four-bit-pairwise-independent-fourier-cone
   - THM-3407-hadamard-core-multitoggle-response-plaquette-shells-and-trade-distance
@@ -242,5 +243,7 @@ the frozen output.  The LF-normalized script/output hashes are respectively
 
 and the semantic digest is
 `e702bae75e08cb5bba1e103a5eeb20f21ba540b3300edea9010f9f9c3bad9e02`.
-An independent immutable-file proof audit is still required before status
-promotion.
+The combined independent immutable-file proof/replay audit reconstructed the
+Walsh signs, demicube norm, blindness converse, and sharp high-sidecar hostile,
+and found no defect.  Normal, optimized, and stored outputs and every pinned
+hash agree.

@@ -1,8 +1,9 @@
 ---
 id: THM-3413
 title: "Strength-k orthogonal-array toggle filtration and high-minor converse"
-status: PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED
+status: PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF/REPLAY-AUDITED
 source: root-2608-crouzeix-puzzle-2026-08-15
+audit: combined independent Walsh-sign, Boolean-inverse, parity-converse, repetition, envelope, convolution-spectrum, regression, normal/-O/stored, hash, dependency, and scope audit clean
 depends_on:
   - THM-3407-hadamard-core-multitoggle-response-plaquette-shells-and-trade-distance
 related:
@@ -297,5 +298,7 @@ dbdf97d32e4114abfd71393791ac8b956d4f1e46eef9a98ec14532107dd0a1a6
 
 and the semantic digest is
 `0db6229ea8922fb2f9c570103dd8aff7e30da424bcc196f29de19b54e2cab329`.
-An independent immutable-file proof audit is still required before status
-promotion.
+The combined independent immutable-file proof/replay audit reconstructed the
+Walsh signs, Boolean inverse, parity converse, repeated-index boundary,
+envelope, convolution spectrum, and THM-3411 regression, and found no defect.
+Normal, optimized, and stored outputs and every pinned hash agree.
