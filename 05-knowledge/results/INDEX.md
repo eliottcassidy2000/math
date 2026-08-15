@@ -17,6 +17,26 @@
   `b455ca48ce8454d754b1a7d4f816ecd76bb431a5b9202757152badd5e0993482`.
   This reserved candidate is not a proved dependency and gives no
   composite-even, arbitrary-time, decrement, or LRC(14) conclusion.
+- `unequal_depth_noncommuting_hensel_heisenberg_orbits_thm3452.py` ->
+  matching `.out` [THM-3452 PROVISIONAL / AUDIT REQUIRED + VERIFIED-EXACT
+  COMPANION].  For depths `c1,c2`, the candidate gives the weighted abelian
+  range through `T=c1+c2` and the mixed-modulus class-two range through
+  `T+min(c1,c2)`.  Under the safe ordinary-carry hypothesis, orbit exponents
+  are `2a-T` and `3a-2T`, with bank exponents
+  `(d-2)(a-C)+M-C` and `(d-3)(a-C)+2M-C`.  When `p=2,C=1<M`, the across-level
+  iff instead uses nonzero shallow carry and the repaired square carry
+  `sigma=delta+delta^[2]`; a global positive model and an involution hostile
+  distinguish repaired from ordinary triple rank.  Exact controls freeze
+  three presentations, seven affine equality rows, `65,536` right-action
+  checks, four sharp higher-bracket defects, every depth-one fibre of the
+  dyadic positive rows, and the hostile kernels.  Script/output/semantic LF
+  SHA-256:
+  `9918d0edff5f16eccd64a3b81cf9685bccbc3917aefb3fe9f1ba8d3c0c0bfb50` /
+  `020803b42eee75331f70a5fe02be5251d85533e3a1c4dd6343a513ff285d9e70` /
+  `c0c00380198dca87af2940d7986199885633b9a042aeae25b557656abadb6d4b`.
+  The blueprint had an independent pre-package CLEAN verdict, but this
+  immutable package still needs independent audit and is not proved canon.
+  No LRC, `JC(2)`, or physical consequence is claimed.
 - `d5_marked_carrier_full_germ_obstruction_thm3450.py` -> matching `.out`
   [THM-3450 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Under linked
   degree-91 root, inertia, branch, action, and amplitude markings, one LRC
