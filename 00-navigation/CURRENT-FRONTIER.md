@@ -217,6 +217,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   quotient has order 18, while pointed oriented quartic frames form `Q3`.
   These are semantic action data, not a physical current or Keller bridge.
 - THM-1880/1885 give Pell; THM-3335 blocks square-arc/skew-EW. THM-3339's `T6` loses owner; THM-3357/3364/3379 give `T3/T4`/Fibonacci quotients. An exact mod3/q15 bridge gives 4-state `S4` and 24-state frame-line packets, no owner.
+- THM-3457/3462: `25/477`.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
 - THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.

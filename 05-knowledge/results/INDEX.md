@@ -31,6 +31,23 @@
   `97647a6cf82b23de0ddb962b6b2b714d6ca9904408af87e001fa37d0c9b37e90`.
   CRT valuation decoration is compatible with the masks, but no endpoint
   current, LRC row, spectral closure, or LRC(14) consequence follows.
+- `five_point_line_metric_interval_sum_preorder_atlas_thm3462.py` -> matching
+  `.out` [THM-3462 PROVED + VERIFIED-EXACT].  Ten contiguous interval
+  indicators give `25` forced and `20` mixed comparisons, deduplicating to
+  `15` disjoint-block walls.  Exact Cramer enumeration over `211,876` affine
+  four-equation systems and an algorithmically independent `7,053`-decision
+  Fourier--Motzkin insertion both certify exactly `477` positional preorders.
+  Tie census and projective f-vector are frozen; reversal gives five fixed
+  signatures and `241` classes, `S5` gives no further positional collapse,
+  and arbitrary labellings give `28,620`.  Primitive total `<=23` and
+  coordinate height `<=10` are sharp at `(6,5,4,8)` and `(2,3,4,10)`.
+  Script/output/covector/semantic LF-normalized SHA-256:
+  `97d9b94e1ee24e2f3c2922b17135953eb1e11d8c5fb850529f9500d2fac588bf` /
+  `73a5636500c670a8699c0f579181f4482020ed8bf888d723c320f7402cf0e2e2` /
+  `38c1e9f857ebfe1ab5473bcab15695500fa5de7293cba436924199b4f0024eff` /
+  `bf2b7a8e61dabfea2884c3e6bd232cdd29a5c3b2a6b43b85a9fb7d0b101002be`.
+  This is not yet an independent external implementation audit, a general
+  turnpike theorem, a tournament equivalence, or an LRC/Jacobian result.
 - `four_point_line_metric_turnpike_preorder_atlas_thm3457.py` -> matching
   `.out` [THM-3457 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  Exact rational sign-stratum feasibility classifies the six
