@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `lrc_global_literal_half_twist_cap7_support_thm3453.py` -> matching `.out`
+  [THM-3453 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT /
+  INDEPENDENT AUDIT REQUIRED].  The candidate uses strong-induction period
+  descent, a direct mixed-prime fibre invoice, and the exact fixed fibre with
+  odd cofactor to compose the proved odd, prime-even, and prime-quarter
+  classifications.  Its only residual lane `Q=2*17^b` is excluded by an
+  order-sensitive two-sided mass invoice.  The proposed all-modulus support
+  antichain is
+  `{8,9,10,11,12,13,14,15,23,25,29,38,51,68,148}`.  Exact controls freeze
+  all atom witnesses/ranks; `Q=6,34,578`; period descent; the mixed-prime
+  list; and `103,488` fixed-fibre owner rows comprising `11,582,552` sheet
+  cells.  Normal, optimized, and stored transcripts are byte-identical.
+  Script/output/semantic LF-normalized SHA-256:
+  `67753b9cbd3bba0241b8902b49ee7b8bdf82462e61d5833a2a17b4eac8177ddb` /
+  `3ab64ce8ead3b915b1bf0e045451df650eab01c1f61b02a6c7d08d10a1c21d8d` /
+  `72eae924f73511e221b4a36c9eee4e1fb1dbb6b1082e57115924bc4e06d7515f`.
+  This is not proved canon; no arbitrary-time, decrement, runner-current, or
+  LRC(14) consequence follows before or after audit.
 - `lrc_prime_quarter_half_twist_cap7_classification_thm3451.py` -> matching
   `.out` [THM-3451 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
   post-THM-3445 target-free
