@@ -2,9 +2,10 @@
 id: THM-3388
 title: "Three-sheet phase triangles and the q=3 cover clutter"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT AUDIT.  For three
-  sheets, full transverse cover is a 3-uniform clutter.  For speeds u,v,w
-  coprime to three, define the finite affine gap set
+  PROVED analytic phase-triangle criterion + FINITE-EXACT literal q=3
+  clutter/atlas + INDEPENDENTLY HOSTILE-AUDITED.  For three sheets, full
+  transverse cover is a 3-uniform clutter.  For speeds u,v,w coprime to
+  three, define the finite affine gap set
   P(u,v)={p congruent uv mod 3 gcd(u,v):14|p|<3(u+v)}.  The triple covers iff
   some p,q,r in the three cyclic gap sets satisfy w p+u q+v r=0.  This is the
   vanishing of the normalized phase-gap H^1 class; pairwise overlap alone is
@@ -13,24 +14,28 @@ status: >
   (1,10,45,72,38,6,0,...), and exactly 585 globally safe plus three
   core-rescued q=3 body rows, reproducing the THM-3387 total 588.  A ternary
   dilation orbit gives exact word/support/multiplicity/harmonic recurrences.
-  This candidate is not yet in the proved dependency graph and proves no new
+  The result classifies the q=3 slice of THM-3387 but proves no new
   refined-ledger decrement or LRC(14).
 source: codex-2026-08-14-q3-phase-triangle
-related:
+audit: independent CRT valuation proof, 506598 gluing instances, 47905 triples through speed 100, exact atlas replay, dilation sign hostile, and harmonic audit
+depends_on:
   - THM-3387-exact-cyclic-sheet-cover-atlas-and-q2-gcd-graph
+  - THM-3385-odd-fibre-doubling-projection-and-half-even-complement-clocks
+related:
   - THM-3382-fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses
   - THM-3366-all-sector-complement-clock-completion
 script: 04-computation/lrc14_q3_phase_triangle_clutter_thm3388.py
 output: 05-knowledge/results/lrc14_q3_phase_triangle_clutter_thm3388.out
-script_sha256: 96907b64d16a0e3b6587236da872a9cdf17097fc85d947af7d5995be76713f85
-output_sha256: 8f747a05f52dd62fdd91f0ac081e3d696a9b615c9c9ba10a64481268a000738e
-semantic_sha256: 2727b4bed6fc72f3d063bbbbb991e46c1b0d56334f08cf47cd7dd743bbc89853
+script_sha256: 5323346310a9a6b188caa0131b177b2ae8e23c7113808cda8955f89828e62154
+output_sha256: 5a32319fb8a91b476d292da292ae3cc9933f5f94aad7eb0e834f49e52252c535
+semantic_sha256: 082e97aa25d8019ba7de49c0a76333c7a3a221dd19cb4bc3e8d5b43ef9a42216
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3388 -- three-sheet cover is phase closure, not a triangle of pair tests
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED analytic phase-triangle criterion + FINITE-EXACT literal `q=3`
+clutter/atlas + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and the missing coordinate
 
@@ -150,11 +155,11 @@ equations give `a,c`, and `wA+uB+vC=0` forces the third.  Thus `(9)` really
 glues one triple of centres; it is not three independently chosen pair
 witnesses.
 
-The bounds in `(6)` make their three open arcs pairwise intersect.  Three
-pairwise-intersecting circular arcs with no common point must cover the
-circle, but these arcs have total length at most `3/7<1`.  Hence they have a
-common source time `t`, proving a three-sheet cover.  The reverse implication
-was derived in `(2)`--`(8)`.  Therefore
+The bounds in `(6)` make the three selected single-tooth arcs pairwise
+intersect.  Three pairwise-intersecting circular arcs with no common point
+must cover the circle, but these arcs have total length at most `3/7<1`.
+Hence they have a common source time `t`, proving a three-sheet cover.  The
+reverse implication was derived in `(2)`--`(8)`.  Therefore
 
 ```text
 {u,v,w} covers all three sheets somewhere
@@ -235,10 +240,10 @@ classification rather than a black-box interval total.
 
 ## 5. Ternary ancestry, subsets, and harmonic weight
 
-Common dilation by any `s` coprime to three preserves `(13)`.  If `s==1
-(mod 3)`, send every gap `p` to `sp`; if `s==-1 (mod 3)`, send it to `-sp`.
-The affine congruences and strict bounds scale correctly, and `(8)` is
-multiplied by `+s^2` or `-s^2`.
+Common dilation by any positive integer `s` coprime to three preserves `(13)`.
+If `s==1 (mod 3)`, send every gap `p` to `sp`; if `s==-1 (mod 3)`, send it
+to `-sp`.  The affine congruences and strict bounds scale correctly, and
+`(8)` is multiplied by `+s^2` or `-s^2`.
 
 Start with the edge `E={1,4,5}` and the three multipliers `7,11,13`.  At word
 depth `d` there are `3^d` ancestry words, but commutation leaves only
@@ -259,8 +264,8 @@ sum_(e in E)1/e=29/20,
 the complete-homogeneous recurrence and multinomial theorem give
 
 ```text
-1001 H_d=311 H_(d-1)-31 H_(d-2)+H_(d-3),
-1001 W_(d+1)=311 W_d.                          (22)
+1001 H_d=311 H_(d-1)-31 H_(d-2)+H_(d-3),       d>=3,
+1001 W_(d+1)=311 W_d,                           d>=0.    (22)
 ```
 
 The whole integer orbit is a convergent subseries of the harmonic series:
@@ -278,8 +283,9 @@ indexed by `A`:
 S_A=union_((i,j,k) in A){7^i11^j13^k,4*7^i11^j13^k,5*7^i11^j13^k}.
 ```
 
-Then `A -> S_A` is an injective Boolean-algebra map into the subsets of this
-integer orbit (complements are relative to the orbit), and
+Then `A -> S_A` is a Boolean-algebra embedding onto the block-saturated
+subalgebra of the subsets of this integer orbit (complements are relative to
+the orbit), and
 
 ```text
 sum_(n in S_A)1/n=(29/20)sum_((i,j,k) in A)7^(-i)11^(-j)13^(-k). (24)
@@ -313,6 +319,18 @@ The standard-library companion:
 - checks `21` ternary lattice shells, both recurrences, collision counts, and
   the exact total harmonic mass.
 
+The independent hostile audit additionally checked `506,598` admissible
+integer gluing instances and every one of `47,905` triples through speed
+`100`, including all six orderings.  It found no discrepancy.  Three controls
+from that audit are now frozen in the companion:
+
+```text
+(1,4,41): every pair gap set is nonempty, but no phase triangle closes;
+2*(1,4,5): the lawful scaled gaps are (-2,2,2), not (2,-2,-2);
+C=(1,3,4), U=(8,11,13), t=389/2464:
+  all sheets fire and only the omitted core clock 2 is dangerous.          (25)
+```
+
 It contains no floating literal or optimization-dependent `assert`.  Reproduce
 with
 
@@ -323,7 +341,8 @@ python -O 04-computation/lrc14_q3_phase_triangle_clutter_thm3388.py
 
 Ordinary and optimized runs LF-normalized-byte-match the stored output.
 
-This candidate classifies the q=3 slice inside THM-3387.  It gives no new
+This theorem classifies the q=3 slice inside THM-3387.  It gives no new
 refined-ledger subtraction, physical drift realization, arbitrary-phase
-transport, or proof of LRC(14).  Promotion awaits an independent hostile
-audit.
+transport, or proof of LRC(14).
+
+**QED.**

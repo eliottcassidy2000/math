@@ -62,7 +62,7 @@ EXPECTED_CORE_RESCUES = (
     ((1, 2, 4), (8, 11, 13)),
     ((2, 3, 4), (8, 11, 13)),
 )
-EXPECTED_SEMANTIC_DIGEST = "2727b4bed6fc72f3d063bbbbb991e46c1b0d56334f08cf47cd7dd743bbc89853"
+EXPECTED_SEMANTIC_DIGEST = "082e97aa25d8019ba7de49c0a76333c7a3a221dd19cb4bc3e8d5b43ef9a42216"
 
 
 def require(condition, detail):
@@ -323,6 +323,22 @@ def main():
     require(len(pairwise_triangles) == EXPECTED_PAIRWISE_TRIANGLES, len(pairwise_triangles))
     require((1, 4, 7) in pairwise_triangles and (1, 4, 7) not in literal_edges, "pairwise hostile")
     require(phase_triangle((1, 4, 5)) == (1, -1, -1), "positive phase triangle")
+    require(
+        (
+            phase_gap_values(1, 4),
+            phase_gap_values(4, 41),
+            phase_gap_values(41, 1),
+            phase_triangle((1, 4, 41)),
+        )
+        == (
+            (1,),
+            (-7, -4, -1, 2, 5, 8),
+            (-7, -4, -1, 2, 5, 8),
+            None,
+        ),
+        "extended pairwise hostile",
+    )
+    require(phase_triangle((2, 8, 10)) == (-2, 2, 2), "dilation sign hostile")
 
     independence_profile = tuple(
         sum(
@@ -365,6 +381,14 @@ def main():
     require(global_rows == EXPECTED_Q3_GLOBAL, global_rows)
     require(exact_rows == EXPECTED_Q3_EXACT, exact_rows)
     require(tuple(rescues) == EXPECTED_CORE_RESCUES, rescues)
+    hostile_sample = 389
+    hostile_scale = 1232
+    require(
+        full_transverse_cover((8, 11, 13), hostile_sample, hostile_scale)
+        and tuple(core_danger(clock, hostile_sample, hostile_scale) for clock in (1, 2, 3, 4))
+        == (False, True, False, False),
+        "missing-core nonrescue hostile",
+    )
 
     # A genuine ternary word ancestry whose integer support abelianizes to a
     # three-dimensional exponent lattice.  Every scaled (1,4,5) remains an
@@ -419,6 +443,16 @@ def main():
     semantic.add(("literal_edges", literal_edges, edge_degrees))
     semantic.add(("independence", independence_profile, maximal_five_sets))
     semantic.add(("q3_atlas", candidates, global_rows, exact_rows, tuple(rescues)))
+    semantic.add(
+        (
+            "hostile_audit_controls",
+            (1, 4, 41),
+            (-7, -4, -1, 2, 5, 8),
+            (2, 8, 10),
+            (-2, 2, 2),
+            Q(hostile_sample, 2 * hostile_scale),
+        )
+    )
     semantic.add(("ternary_lattice", roots, multipliers, tuple(support_shells), tuple(word_shells), infinite_harmonic_mass))
     digest = semantic.hexdigest()
     require(digest == EXPECTED_SEMANTIC_DIGEST, ("semantic digest", digest))
@@ -426,7 +460,7 @@ def main():
     print("THM-3388 Q3 PHASE-TRIANGLE COVER CLUTTER")
     print(f"source_sha256_lf={lf_hash(source)}")
     print(f"dependency_sha256_lf={tuple((name, expected) for name, _, expected in PINNED)}")
-    print("status=PROVISIONAL analytic phase-triangle criterion plus FINITE-EXACT literal q3 clutter and atlas;independent_audit_pending")
+    print("status=PROVED analytic phase-triangle criterion plus FINITE-EXACT literal q3 clutter and atlas;independently_hostile_audited")
     print("gap_set=P(u,v)={p:p=uv_mod_3gcd(u,v),14|p|<3(u+v)}")
     print("cover_iff=exists_pqr_in_pair_gap_sets_with_w*p+u*q+v*r=0")
     print(f"pair_checks={pair_checks};triple_event_checks={triple_checks};positive_reconstructions={positive_checks};permutation_checks={permutation_checks}")
@@ -435,8 +469,11 @@ def main():
     print(f"edge_degrees={edge_degrees}")
     print(f"independence_profile={independence_profile};maximal_five_sets={maximal_five_sets}")
     print("pairwise_hostile=(1,4,7):all_gap_sets_nonempty_but_no_closed_phase_triangle")
+    print("extended_pairwise_hostile=(1,4,41);gap_tail=(-7,-4,-1,2,5,8);no_closed_phase_triangle")
     print("positive_control=(1,4,5):phase_triangle=(1,-1,-1)")
+    print("dilation_sign_hostile=2*(1,4,5):(p,q,r)=(-2,2,2),not_naive_(2,-2,-2)")
     print(f"q3_body_candidates={candidates};global_transverse_rows={global_rows};exact_rows={exact_rows};core_rescues={tuple(rescues)}")
+    print("core_nonrescue_hostile=C:(1,3,4),U:(8,11,13),t:389/2464;only_omitted_clock_2_is_dangerous")
     print(f"ternary_dilation=roots:{roots},multipliers:{multipliers};word_nodes=3^d;distinct_scales=C(d+2,2);checks={dilation_checks}")
     print("harmonic_support_recurrence=1001H_d=311H_(d-1)-31H_(d-2)+H_(d-3)")
     print("harmonic_word_recurrence=1001W_(d+1)=311W_d")
