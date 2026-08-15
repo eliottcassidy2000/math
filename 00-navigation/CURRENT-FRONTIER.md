@@ -337,6 +337,7 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
   THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;
   polynomial `A2` regularity and constant units are the missing gate.
+  THM-3074/3080/3081 give the finite Laurent tower; THM-3383's initial ring separates polynomiality from gauge. Nonmonomial/physical embeddings remain OPEN.
   THM-3067/3141's `A4` shadow loses `V4` origin; THM-3072 recovers it
   from three `C2` tables; edge/cycle loses a 3D character sector.  THM-3076
   extends this to prime affine-plane tomography, with the characteristic-`p`
@@ -385,10 +386,9 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   [subresultant sidecar](../07-reflections/jc-critical-inverse-cover-cofactor-jacobian-probe-agent-20260803.md)
   gives a two-pivot inverse graph and mate-integrability class on two controls.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
-  THM-3318/3326/3348 classify the linear-`z` response: exact constant,
-  one-root torsion, and generic punctured-line de Rham `H^1`, including the
-  one-root valuation annihilator without gradient-unimodularity.  This refines
-  THM-2063, not `JC(2)`. THM-3354 blocks direct D5 transport.
+  THM-3318/3326/3348 and THM-3386 classify generic and integral linear-`z`
+  responses, including the max-multiplicity minimal-polynomial annihilator.
+  This refines THM-2063, not `JC(2)`. THM-3354 blocks direct D5 transport.
   No base root choice follows; residual degree 119, Keller mate/inverse cover, `JC(2)` and `DC(2)` remain OPEN.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in

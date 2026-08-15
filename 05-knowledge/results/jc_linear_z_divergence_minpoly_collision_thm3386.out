@@ -1,0 +1,11 @@
+THM-3386 LINEAR-Z CANONICAL DIVERGENCE AUDIT
+cases=PASS count=6
+case=constant degree_g=0 chi=["1"] char=["1"] lower_hostiles=0
+case=one_root degree_g=2 chi=["0","0","1"] char=["0","0","1"] lower_hostiles=1
+case=equal_collision degree_g=4 chi=["1","-2","1"] char=["1","-4","6","-4","1"] lower_hostiles=1
+case=unequal_collision degree_g=5 chi=["-1","3","-3","1"] char=["-1","5","-10","10","-5","1"] lower_hostiles=2
+case=nonsplit_Q degree_g=4 chi=["1","0","2","0","1"] char=["1","0","2","0","1"] lower_hostiles=1
+case=distinct_values degree_g=5 chi=["0","0","-1","3","-3","1"] char=["0","0","-1","3","-3","1"] lower_hostiles=1
+annihilator=PASS evaluation_kernel=minpoly_of_f_mod_g
+collision_law=PASS coincident_values_use_max_not_sum
+semantic_sha256=ed688bbc5be56e9e10e43f3ae80d37d4c83d62ef6e547622ef47e23b71b3504f

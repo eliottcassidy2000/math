@@ -24,7 +24,7 @@ related:
   - THM-3070-polynomial-c3-one-face-escape-leading-cancellation-gate
   - THM-3074-c3-two-pole-binomial-cancellation-and-first-key-form-depth-lattice
   - THM-3080-c3-finite-toric-key-tower-depth-partition-and-gcd-descent
-  - THM-2690-normal-crossing-cyclic-cubic-resolvent-exclusion-and-the-c2-reflection-completion-boundary
+  - THM-2690-normal-crossing-cyclic-cubic-resolvent-exclusion-and-reflection-completion-boundary
 script: 04-computation/jc_terminal_monomial_cone_polynomiality_fork_thm3383.py
 output: 05-knowledge/results/jc_terminal_monomial_cone_polynomiality_fork_thm3383.out
 script_sha256: b72a196e7fda4a2de33df26e1f26f06f654908a9eb42f453e210728559ad4b10
