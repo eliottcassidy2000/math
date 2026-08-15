@@ -1,5 +1,20 @@
 # Script Results Index
 
+- hadamard_twelve_order_bank_thm3394.py plus immutable signword data ->
+  matching output [THM-3394 PROVED + VERIFIED-EXACT + INERT RECONSTRUCTION +
+  HOSTILE-AUDITED].  One frozen 23,828-sign word and 192-bit schedule render
+  explicit matrices at orders
+  668,716,892,1132,1244,1388,1436,1676,1772,1916,1948,1964.
+  The standard-library verifier checks exact consumption, shapes, signs,
+  raw and normalized hashes, periodic/SDS or OA construction sidecars, and
+  all 12,913,704 unordered distinct row pairs at half-order Hamming
+  distance.  A one-entry hostile is rejected; ordinary and optimized runs
+  are byte-identical.  This closes only those twelve finite orders, not the
+  Hadamard conjecture.  Source/data/output SHA-256:
+  7ae931b3cf268550287bd0621b9b85b8ea167126fadfb90d57b5106d0f82fb2d /
+  68f7ceebb67005bf1b968171f7e6897cc33bde68adbd63f14bd45edfeb7b3f06 /
+  d8efee90947015a7e6fc28a1685cc3d378357a85e1d4814953b32b17c5cd76a9.
+
 - `hadamard668_explicit_certificate_thm3393.py` -> matching `.out`
   [THM-3393 PROVED + VERIFIED-EXACT + GENERATOR-INDEPENDENT CERTIFICATE +
   INDEPENDENTLY AUDITED].

@@ -1,0 +1,44 @@
+THM-3394 INERT TWELVE-ORDER HADAMARD BANK
+signword length=23828 plus=12188 minus=11640 sha256=5b5fe8fa42f0d6a8b4e4c9926726d82a6aab8e1070c1ae4d1b430c1277e58db4
+signword_zlib length=3488 sha256=1756297611d2bb403e9c4152ea91146428482983716aad165a3cc21396d5a61c
+schedule bits=192 records=12 sha256=c18071311a78311819a20a1ba7823de6581bb907fd9b4b44a3a9b17860a370ff
+01 kind=h primary=[0,664) sides=- consumed=664 shape=668x668
+   contract period=166 rowsums=2,0,0,0 offpeak_PAF_sum=-4
+   raw_sha256=bdeb5059d77e2703211082627b60441b8c888c928a55cc6f295e011941a387b0 normalized_sha256=73f1de1539849e1dc7e6085cc69c563fd2965c44970263e8203384bd1a46aa63 pairs=222778 hamming_min=334 hamming_max=334
+02 kind=h primary=[664,1376) sides=- consumed=1376 shape=716x716
+   contract period=178 rowsums=2,0,0,0 offpeak_PAF_sum=-4
+   raw_sha256=3adcb1bb2884467d9e34069a3b32950728adabcdb8b35a4503d20c3312664ee6 normalized_sha256=79ebae74dbadae11059aeabf77b61144ccf6fd9905c2bf8167ac98854651366c pairs=255970 hamming_min=358 hamming_max=358
+03 kind=g primary=[1376,2268) sides=- consumed=2268 shape=892x892
+   contract period=223 rowsums=11,11,11,23 offpeak_PAF_sum=0
+   raw_sha256=e77fc79ab287f5f5ba5bbdc10191bdc7593839052fe1015c1fb6a2e974ab54de normalized_sha256=73d28c9e58d4c3bac1e2bc0cc0d6f0b504eb7719fa2370e9403692e4dfba7f6c pairs=397386 hamming_min=446 hamming_max=446
+04 kind=g primary=[2268,3400) sides=- consumed=3400 shape=1132x1132
+   contract period=283 rowsums=19,19,19,7 offpeak_PAF_sum=0
+   raw_sha256=7d1c1e892149e90330d58bb0cf9ef2c888078df1b35fb55f8724d580ebf7b743 normalized_sha256=f0499c89d761d57d330471a1446a0f099723f663b5602285aa9dcc1070b0216b pairs=640146 hamming_min=566 hamming_max=566
+05 kind=g primary=[3400,4644) sides=- consumed=4644 shape=1244x1244
+   contract period=311 rowsums=21,19,21,1 offpeak_PAF_sum=0
+   raw_sha256=4cb747cf511eba1f203582b5121bdf6ab02671133e45579c1d023add8b2da143 normalized_sha256=cffd1c77f09646b9b17e4c46ed9f6bf091bd56b2c2cc06c83c64054b44d74d33 pairs=773146 hamming_min=622 hamming_max=622
+06 kind=v primary=[4644,6012) sides=[(6012, 6892), (6892, 7012), (7012, 7132), (7132, 7252), (7252, 7372)] consumed=7372 shape=1388x1388
+   contract OA=120 d1=d2=0 d3=8,-8,0,0 d4=24
+   raw_sha256=a6b92584eb803b87026709d64fe892dec8f7182a120e13de9edd3065cf05bf0b normalized_sha256=5ebac7a33165a39cb9e86e5b99eb42cc46e3c7006956b2c97885f8f6b4655db1 pairs=962578 hamming_min=694 hamming_max=694
+07 kind=u primary=[7372,8780) sides=[(8780, 10460), (10460, 11356), (11356, 12252), (12252, 13148), (13148, 14044)] consumed=14044 shape=1436x1436
+   contract OA=896 d1=d2=0 d3=-224,0,0,-224 d4=448
+   raw_sha256=e4d745a4d44f39a5671f9cd86f5c1d0aef93504dcfb2e253451cadc9e4086728 normalized_sha256=99984bf728bcf37a360ba0af57076a729653070b026271085f96dce35703a00e pairs=1030330 hamming_min=718 hamming_max=718
+08 kind=h primary=[14044,15716) sides=- consumed=15716 shape=1676x1676
+   contract period=418 rowsums=2,0,0,0 offpeak_PAF_sum=-4
+   raw_sha256=8e919c2bdb4d30c34817eb5650d2dd3d82d7c6504feccd96c5ca22a2191cdb99 normalized_sha256=787f9ec132cfa6900090e78bbebd8c1132af583793b4c65494ca52f7000a1e68 pairs=1403650 hamming_min=838 hamming_max=838
+09 kind=h primary=[15716,17484) sides=- consumed=17484 shape=1772x1772
+   contract period=442 rowsums=2,0,0,0 offpeak_PAF_sum=-4
+   raw_sha256=1852e951db69c44eb95b37ed741c3ff2e29691267eaf872d6a9da3a977236ba2 normalized_sha256=020f15819f78aab232da7ec9183caf172cc6ab1cdad191f4fabb9c63ec308af1 pairs=1569106 hamming_min=886 hamming_max=886
+10 kind=w primary=[17484,19388) sides=[(19388, 19724), (19724, 19772), (19772, 19820), (19820, 19868), (19868, 19916)] consumed=19916 shape=1916x1916
+   contract OA=48 d1=d2=0 d3=0,0,-8,-16 d4=-8
+   raw_sha256=be2073eeaa5399cfe104023829d2c6770b49dd2f07bf6347203f1cbd75577ae9 normalized_sha256=081197bb0c94e9e1aa628fa3170db50d7df45e2889494bf12ee5abcdfd4266da pairs=1834570 hamming_min=958 hamming_max=958
+11 kind=g primary=[19916,21864) sides=- consumed=21864 shape=1948x1948
+   contract period=487 rowsums=17,1,17,37 offpeak_PAF_sum=0
+   raw_sha256=fddc841ebf951f6e17e939551d058ea5df046251ea065b5f6e7ee2fd8d0f62ce normalized_sha256=ee885b2ade31910d36fd7bc11321388c20aa64eaef081fecacf05f3b53d5d792 pairs=1896378 hamming_min=974 hamming_max=974
+12 kind=g primary=[21864,23828) sides=- consumed=23828 shape=1964x1964
+   contract period=491 rowsums=29,27,15,13 offpeak_PAF_sum=0
+   raw_sha256=740b907cd442f1b7fd40dcc31f2b3aae9794842da6dc579f98dac1d0d9e1493d normalized_sha256=4a3e301084d016f6b11e32d425b9f8f54e79cd2b52ec8c6e64420635c13aaa53 pairs=1927666 hamming_min=982 hamming_max=982
+hostile single_entry_flip=REJECTED pair=0,1 hamming=333 expected=334
+consumption exact=23828/23828
+verdict all_twelve_HH_transpose_equals_order_I=YES
+scope finite_orders_through_2000_only; full_Hadamard_conjecture=NOT_CLAIMED
