@@ -18,8 +18,8 @@ related:
   - THM-3395-small-sheet-typed-cover-star-cochain
   - THM-3453-global-literal-half-twist-cap-seven-support-classification
 external:
-  - Artem Chernikov, "SOP2 = SOP3", arXiv:2608.13291v1 (CITED VERY RECENT PREPRINT; model-theoretic corollary/context only)
-  - Stephen Wolfram, "Announcing the Rule 30 Prizes" (2019), and the current Wolfram Foundation Rule 30 prize page (problem statements and Rule 30 local law only)
+  - Artem Chernikov, "SOP2 = SOP3", arXiv:2608.13291v1, https://arxiv.org/abs/2608.13291 (CITED VERY RECENT PREPRINT; model-theoretic corollary/context only)
+  - Stephen Wolfram, "Announcing the Rule 30 Prizes", https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/ (2019), and https://rule30prize.org/ (problem statements and Rule 30 local law only)
 script: 04-computation/left_permutive_trace_torsor_rule30_thm3456.py
 output: 05-knowledge/results/left_permutive_trace_torsor_rule30_thm3456.out
 ---
@@ -162,9 +162,10 @@ For `t=1` this is exactly (2).  Suppose the claim holds at time `t-1`.  Then
      (F^(t-1)(x))_1).                                 (10)
 ```
 
-The last two arguments in (10) do not depend on `x_-t`.  By the induction
-hypothesis, the first argument is a permutation of `x_-t`; applying the
-permutation (2) once more preserves that property.  This proves the claim.
+The last two arguments in (10) do not depend on `x_-t`.  By shift
+equivariance, the induction hypothesis applied at site `-1` says that the
+first argument is a permutation of `x_-t`; applying the permutation (2) once
+more preserves that property.  This proves the claim.
 
 Now fix `x_0,...,x_n` and a target trace suffix `y_1,...,y_n`.  At stage `t`,
 the already selected coordinates `x_-1,...,x_(-(t-1))` determine every input
@@ -302,7 +303,8 @@ three width-seven periodic states
 
 all have center trace `(1100)^omega`, but their adjacent traces begin with
 the distinct period-four words `1011`, `1001`, and `0100`.  Direct exhaustive
-audit finds no nonconstant periodic one-column alias in widths `3,...,6`.
+audit of all temporally periodic ring states finds no nonconstant
+one-column alias in widths `3,...,6`.
 
 Finally, the width-`n` cyclic single seed lifts to the infinite periodic seed
 set `nZ`.  Its center trace agrees with the isolated infinite seed for every
