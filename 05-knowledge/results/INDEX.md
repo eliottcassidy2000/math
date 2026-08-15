@@ -35,6 +35,64 @@
   Script/output LF-normalized SHA-256:
   `e60107df6d609d210c61ded6437f9a7e5323f029e271c094695d587989aafcd0` /
   `1b194ef30b97810b1890dbd6d5f3bde8f7ba9d5228bc3f44d03b97cfd5049310`.
+
+- `lrc_prime_rank7_splitter_closures_thm3420.py` -> matching `.out`
+  [THM-3420 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For prime
+  sheet degree `p`, a fixed-zero cover by at most seven strict danger blocks
+  exists iff `p=29`; in the half-twist prime class `p=13 mod 14`, one exists
+  iff `p=13`.  Both atoms have exact zero-mode-cochain rank seven.  Exact
+  order-mod-14 defect and reflection invoices expose the critical infinite
+  tails.  Equality reduces the fixed-zero case to a multiplicative splitter;
+  power sums leave `p=29,211`, a circular-gap ratio-set argument kills 211,
+  and the 29 atom is the Paley quadratic-residue splitter.  A six-variable
+  Newton obstruction closes the critical half-twist class, with a Lucas
+  certificate for its large numerator factor.  The remaining half-twist
+  prime classes `p=1,9,11 mod 14` and composite rank seven stay open.
+  Normal and optimized outputs are byte-identical.  Script/output/semantic
+  LF-normalized SHA-256:
+  `f95aaf081ccd5c92cb7474104f242623bba9246bdc19eb04ce8da81f3c4e2af6` /
+  `22740907984a9e64e75208c0a01ce0222fd844dfe65826685ff11e64274ef959` /
+  `4dffcebc010848fc022824c46a916208d8b46c70ac3306168463b613ce58a7ed`.
+  No arbitrary-time or LRC(14) consequence.
+
+- `lrc_prime_rank7_remaining_half_classes_scout_20260815.py` -> matching
+  `.out` [FINITE-EXACT PRIME p29--500, LIVE HALF-TWIST CLASSES ONLY].  After
+  THM-3420 closes fixed-zero primes and half-twist classes `3,5,13 mod 14`,
+  the canonical augmented solver checks all 43 primes through 500 in the
+  remaining classes `1,9,11`.  The sole cap-seven positive is `p=29`, with
+  three even and four odd blocks; the fixed sheet has multiplicity three and
+  every other sheet multiplicity one, so sheet OR and XOR still agree.
+  Controls `p=37,43,53` represent all three live classes, and `p=211,499`
+  test the long tail.  The search visits 137,209 memoized states and 138,587
+  branches.  Normal and optimized transcripts agree exactly.  This is no
+  all-prime closure.  Script/output/semantic LF-normalized SHA-256:
+  `6266189ff6043c055b51a79df83bfce841bfca5fd30b0b36eef5fede94c29975` /
+  `fd975b519dfaeef0180cd4428c1e1b9ceee708030ea794eccf7a774f6ba99dcc` /
+  `ee528fc41630c7a9146fe62c5976fbf5421c3c4f427de07d2d7a6e8b9e777959`.
+  No LRC(14) ledger decrement.
+
+- `lrc_rank7_atom_monoid_recurrence_transport_20260815.py` -> matching
+  `.out` [PROVED-EXACT RANK-SEVEN INCLUSION + EXACT PERIODIC TRANSPORTS;
+  FINITE-EXACT BERGGREN DEPTH-TEN PREFIX].  Each replayed base in
+  `{13,14,29,38,51,68,148}` has rank seven by its literal seven-cover and
+  THM-3416's lower bound.  Hence every multiple of one of those bases that
+  avoids `{8,9,10,11,12,15,23,25}` also has rank exactly seven.  This proved
+  atom-generated monoid has period `14362718970600` and exact natural and
+  harmonic coefficient `165741596/1554406815`; the same number is only a
+  lower bound for the full rank-seven stratum.  Fibonacci indices in the
+  subfamily are exactly `7|n` with `6,10,15,25` all not dividing `n`, 108
+  classes modulo 1050 and coefficient `18/175`.  On the Berggren U-spine,
+  the exact law is `n mod 51 in {2,19,29,46}`, `n mod 9 not in {1,5}`, and
+  `n mod 11 not in {0,8}`, giving 72 classes modulo 1683 and coefficient
+  `8/187`.  The full ternary prefix has accepting counts
+  `0,0,1,3,9,17,48,176,500,1506,4587` through depth ten; no limiting tree
+  density is inferred.  Normal and optimized transcripts agree exactly.
+  Script/output/semantic LF-normalized SHA-256:
+  `5248721148ca18bd82cae9bda3f8fa86b3bf2fc35fbce88369c5d3c1c0d3c36a` /
+  `572c001aaa647774d19b53a1309ad10f7c8044426db15d145fbcfbd7a81e5cc6` /
+  `64e9032fc79cf2c5014497baddbbccbc3439650903b25447505f93bc66fb1c26`.
+  This is not a complete rank-seven classification and gives no LRC cut.
+
 - `lrc_zero_mode_cochain_rank7_ancestor_scout_20260815.py` -> matching `.out`
   [FINITE-EXACT TARGET-FREE Q2--200 BOTH-TWIST CAP-SEVEN CENSUS;
   ALL-q DIVISOR ANTICHAIN HYPOTHESIS ONLY].  Outside the proved rank-at-most-six
@@ -46,9 +104,10 @@
   `Q=29,68` have only odd multiplicities and hence still satisfy sheet
   `OR=XOR`; `Q=38,51,148` have respectively 4, 6, and 8 even-multiplicity
   sheets, which are exactly the XOR defects.  This parity carrier is a
-  hypergraph, not a tournament.  The conditional rank-seven harmonic
-  coefficient `165741596/1554406815` and cumulative coefficient
-  `837065119/1554406815` are reported only under the unproved all-q antichain
+  hypergraph, not a tournament.  The candidate-generated subset has proved
+  harmonic coefficient `165741596/1554406815`; identifying it with the full
+  rank-seven support, and identifying `837065119/1554406815` as the exact
+  cumulative coefficient, remain conditional on the unproved all-q antichain
   hypothesis.  The solver examines 33,508 raw types and 1,885,285 states;
   normal, optimized, and stored outputs are byte-identical after newline
   normalization.  Script/output/semantic LF-normalized SHA-256:
