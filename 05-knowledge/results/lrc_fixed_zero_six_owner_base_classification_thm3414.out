@@ -1,0 +1,21 @@
+THM-3414 FIXED-ZERO SIX-OWNER BASE CLASSIFICATION EXACT COMPANION
+source_sha256_lf=57147225890f0d99fd9c0f13d70992dca2ef6113e34554bdff0b6df68f9e63e4
+status=COMPUTER-ASSISTED PROVED global finite-profile atlas; exact rational certificate verification
+scope=fixed source centre zero and transverse cyclic-sheet owners only; no arbitrary common centre, mobile centre, physical-time, or LRC14 conclusion
+positive_bases_and_witnesses=((15, (1, 2, 3, 4, 5, 7)), (16, (1, 3, 5, 7, 8)), (18, (1, 5, 6, 7, 9)), (20, (1, 3, 4, 7, 9, 10)), (24, (1, 5, 7, 8, 11, 12)))
+positive_dilation_checks=50;classification=rank_at_most_six_iff_one_base_divides_q
+unit_stratum_b_at_most_one_upper=219/220;therefore_B_owner_count_at_least_2
+pair_pruning=admissible_368,excluded_155,residual_213,lcm_groups_64;worst=7903/7920@L814
+pair_certificate_support_total=448;finite_candidate_rows_total=11396
+residual_maximal_cliques=((21, 26, 39, 42, 46, 57, 74, 78, 91, 102, 114, 186), (21, 33, 39, 46, 57, 91, 102), (21, 33, 39, 57, 63, 77, 91, 99, 117, 143), (22, 46, 102), (26, 28, 46, 52, 56, 74, 76, 91, 104), (26, 35, 46, 50, 65, 70, 74, 91, 130, 190), (26, 46, 57, 74, 76, 91, 102, 114, 186), (44, 46, 102), (84,), (156,));repeatable_vertices=(21, 26, 28, 33, 35, 39, 42, 46, 50, 52, 56, 57, 63, 65, 70, 74, 76, 77, 78, 91, 99, 102, 104, 114, 117, 130, 143, 186, 190)
+anchor_rows=((2, 60, 45, (Fraction(1179, 1232), 102)), (3, 60, 45, (Fraction(6147, 6160), 102)), (4, 57, 42, (Fraction(121741, 122760), 1702)), (5, 55, 40, (Fraction(173249, 174240), 1748)))
+anchor_certificate_support_total=967;ordinary_candidate_rows_total=20456;neighbour_rows_total=2589
+exception_rows=((4, 5, 3, (Fraction(591, 616), 102)), (5, 20, 6, (Fraction(47, 57), 2346)))
+exception_certificate_support_total=41;ordinary_candidate_rows_total=1445
+six_B_owner_families=14940;worst_min_profile=(Fraction(1, 2), ((21, 33, 39, 77, 91, 143), 3003, 3));distinct_direct_divisor_witnesses=243
+q21_shared_prime_hostile_rank=8;witness=(1, 2, 3, 4, 5, 7, 8, 10);q22_H_corridor_hostile_rank=7;witness=(1, 2, 3, 5, 7, 9, 11)
+q102_sharp_fractional_hostile=4/25;active_owner_orders=(2,3,17,102);tight_sheet_orders=(6,34,51,102)
+global_certificate_margin_at_least=13/6160
+certificate_sha256=bc080056351c09c2a68eb27ac7574db3d273fe8de85e7509c1bcc3497e34fe25
+semantic_sha256=681e1b1f8066b54970ed791f14867df708e9808c8a66dce034002f0404e66b3f
+verdict=PASS
