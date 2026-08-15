@@ -120,7 +120,7 @@ EXPECTED_CORE_RESCUES = (
     ((6, 8, 9, 11, 12, 13), 144144, 48048, 3, (2, 3, 4), (8, 11, 13)),
     ((7, 9, 10, 11, 12, 13), 2522520, 504504, 5, (2,), (7, 9, 11, 12, 13)),
 )
-EXPECTED_SEMANTIC_DIGEST = "0a38ff30719647e20b6eecd9e2ea13e700426989ee209791ef62bdeeedacd496"
+EXPECTED_SEMANTIC_DIGEST = "9b47c25d39a6f1b356476ca8df317b6b03baf9738d6424ed4e4efebd9cf29c2f"
 
 
 def require(condition, detail):
@@ -279,6 +279,11 @@ def main():
         predicted_survival = not q2_edge(left, right)
         exact_survival = global_transverse_survives(2, (left, right))
         require(predicted_survival == exact_survival, ("q2 edge", left, right))
+        smaller, larger = sorted((left, right))
+        require(
+            predicted_survival == (larger in (3 * smaller, 5 * smaller)),
+            ("q2 ratio graph", left, right),
+        )
         pair_checks += 1
 
     literal_odds = tuple(range(1, 15, 2))
@@ -290,7 +295,86 @@ def main():
     )
     require(independent_sets == EXPECTED_Q2_INDEPENDENT_SETS, independent_sets)
 
+    # The noncover graph has components r*3^i*5^j.  Rectangular harmonic
+    # sums factor exactly and converge to 15/(8r).
+    component_checks = 0
+    for root in tuple(number for number in range(1, 50, 2) if gcd(number, 15) == 1):
+        coordinates = {
+            root * 3**i * 5**j: (i, j)
+            for i in range(5)
+            for j in range(5)
+        }
+        require(len(coordinates) == 25, ("component collision", root))
+        for left, right in combinations(coordinates, 2):
+            i, j = coordinates[left]
+            ii, jj = coordinates[right]
+            lattice_edge = abs(i - ii) + abs(j - jj) == 1
+            require((not q2_edge(left, right)) == lattice_edge, ("component edge", root, left, right))
+            component_checks += 1
+    for root in (1, 7, 11, 13, 17):
+        for i_max in range(7):
+            for j_max in range(7):
+                literal = sum(
+                    (Q(1, root * 3**i * 5**j) for i in range(i_max + 1) for j in range(j_max + 1)),
+                    Q(0),
+                )
+                factored = (
+                    Q(1, root)
+                    * (1 - Q(1, 3 ** (i_max + 1))) / (1 - Q(1, 3))
+                    * (1 - Q(1, 5 ** (j_max + 1))) / (1 - Q(1, 5))
+                )
+                require(literal == factored, ("component harmonic", root, i_max, j_max))
+                component_checks += 1
+
+    shell_checks = 0
+    for root in (1, 7, 11, 13, 17):
+        support_shells = []
+        weighted_shells = []
+        for depth in range(31):
+            support = sum(
+                (Q(1, root * 3**i * 5 ** (depth - i)) for i in range(depth + 1)),
+                Q(0),
+            )
+            support_formula = Q(1, 2 * root) * (
+                Q(5, 3**depth) - Q(3, 5**depth)
+            )
+            weighted = sum(
+                (
+                    Q(comb(depth, i), root * 3**i * 5 ** (depth - i))
+                    for i in range(depth + 1)
+                ),
+                Q(0),
+            )
+            weighted_formula = Q(1, root) * Q(8, 15) ** depth
+            require(support == support_formula, ("support shell", root, depth))
+            require(weighted == weighted_formula, ("weighted shell", root, depth))
+            support_shells.append(support)
+            weighted_shells.append(weighted)
+            shell_checks += 2
+        for depth in range(29):
+            require(
+                15 * support_shells[depth + 2]
+                == 8 * support_shells[depth + 1] - support_shells[depth],
+                ("support recurrence", root, depth),
+            )
+            require(
+                15 * weighted_shells[depth + 1] == 8 * weighted_shells[depth],
+                ("weighted recurrence", root, depth),
+            )
+            shell_checks += 2
+
     semantic = ExactDigest()
+    semantic.add(
+        (
+            "q2_noncover_components",
+            "r*3^i*5^j",
+            Q(15, 8),
+            "15H[d+2]=8H[d+1]-H[d]",
+            "15W[d+1]=8W[d]",
+            component_checks,
+            shell_checks,
+        )
+    )
     candidates = 0
     exact_records = []
     global_records = 0
@@ -444,6 +528,8 @@ def main():
     print(f"s172_exact_identification=size_histogram:{tuple(sorted(s172_size_histogram.items()))};occurrence_histogram:{tuple(sorted(s172_occurrence_histogram.items()))}")
     print("q2_pair_edge=left+right>7*gcd(left,right);relation=symmetric_not_tournament")
     print(f"q2_pair_checks={pair_checks};literal_independent_sets={independent_sets}")
+    print(f"q2_noncover_components=r*3^i*5^j,gcd(r,15)=1;harmonic_mass=15/(8r);checks={component_checks}")
+    print(f"q2_depth_profiles=vertices:d+1,words:2^d,multiplicity:C(d,i),H_d=(5/3^d-3/5^d)/(2r),W_d=(8/15)^d/r;shell_checks={shell_checks}")
     print("q2_exact_rows=252=147_single_transverse+105_two_transverse;new_beyond_capacity=105")
     print(f"core_rescue_records={tuple(rescued)}")
     print("strictness_hostile=q7,u1,y1/2:strict_blocks_0,closed_blocks_2")

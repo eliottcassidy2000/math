@@ -21,11 +21,12 @@ depends_on:
 related:
   - THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff
   - THM-3381-reflected-residue-affine-phase-transport-and-frozen-tree-stability
+  - THM-3382-fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses
 script: 04-computation/lrc14_exact_cyclic_sheet_cover_atlas_thm3387.py
 output: 05-knowledge/results/lrc14_exact_cyclic_sheet_cover_atlas_thm3387.out
-script_sha256: 9eb77f5293fa41b298b96fbaa29ecaf4899c9dd86054f2f804737297b806e0fb
-output_sha256: 455133f5e6c7eaa480875f854142b56aa5315d1fa8055c49da0c8bc0fdc15acd
-semantic_sha256: 0a38ff30719647e20b6eecd9e2ea13e700426989ee209791ef62bdeeedacd496
+script_sha256: 0a59f4baea4e8220a0ddec6f12fd9077618b51303dfa1a2e8460ddabc54f49bf
+output_sha256: 95feb57ebc1c2a47a86f39dd05b702c27df2aa86c00fcda00482488231661e77
+semantic_sha256: 9b47c25d39a6f1b356476ca8df317b6b03baf9738d6424ed4e4efebd9cf29c2f
 hash_basis: LF-normalized bytes
 ---
 
@@ -176,7 +177,66 @@ objects are the hyperedges `(2)`, including singleton, antipodal-pair and
 parity-triple edges at `q=4,6`; missing and simultaneous edges must remain
 literal.
 
-## 5. Complete literal-body atlas
+## 5. The hidden ancestry is a `(3,5)` lattice, not a tree
+
+There is an all-speed simplification of the nonedge relation.  Divide distinct
+odd `u,v` by their gcd.  The reduced values are coprime, odd, and a nonedge
+exactly when their sum is at most seven.  The only possibilities are
+`{1,3}` and `{1,5}`.  Therefore the undirected **noncover graph** on all odd
+positive speeds has precisely the edges
+
+```text
+{a,3a} and {a,5a},                         a odd.        (15a)
+```
+
+Strip all factors of three and five from an odd speed.  Every connected
+component has a unique root `r` with `gcd(r,15)=1` and vertex set
+
+```text
+V_r={r 3^i 5^j:i,j>=0}.                                (15b)
+```
+
+It is the quadrant lattice with horizontal `x3` and vertical `x5` edges.
+The square `r,3r,15r,5r` shows why the ancestry object is not a tree.
+
+The natural speed labels give each component exact harmonic mass
+
+```text
+sum_(n in V_r) 1/n
+ =(1/r)(sum_i 3^(-i))(sum_j 5^(-j))=15/(8r).           (15c)
+```
+
+More generally, for any subset `R` of odd roots coprime to fifteen, positivity
+and disjointness give, with infinity allowed,
+
+```text
+sum_(n in union_(r in R)V_r) 1/n=(15/8)sum_(r in R)1/r. (15d)
+```
+
+At lattice depth `d=i+j`, the free binary ancestry has `2^d` words but only
+`d+1` distinct integer values.  The value `r3^i5^(d-i)` has collision
+multiplicity `binom(d,i)`.  The distinct-support and multiplicity-weighted
+harmonic shell masses are respectively
+
+```text
+H_d=(1/(2r))(5/3^d-3/5^d),        15H_(d+2)=8H_(d+1)-H_d,
+W_d=(1/r)(8/15)^d,                15W_(d+1)=8W_d.       (15e)
+```
+
+Thus commutation changes the recurrence as well as the count: ancestry words,
+integer support, collision multiplicity, and harmonic weight are four
+different profiles.  This is not the Berggren/Fibonacci tree: its branch
+words retain order, whereas multiplication by three and five has already
+abelianized order.  Any transport between them needs that lost word-order
+sidecar.
+
+Thus every root subset has an exact harmonic-series realization under this
+ancestry decomposition.  The integer embedding is load-bearing, as in
+THM-3382.  This does **not** mean that an entire component is one safe
+transverse set: safe sets are cliques of the noncover graph, and the lattice
+has no triangles.  Only single vertices and single edges survive globally.
+
+## 6. Complete literal-body atlas
 
 Enumerate every six-subset `F` of `{1,...,14}` and every `2<=q<=14` having
 nonempty core and transverse parts.  This gives `23,569` body/degree rows.
@@ -219,7 +279,7 @@ every such event lies in `D_1`; the core deletes the apparent obstruction.
 This is the minimal reason the global-transverse count is twelve below the
 body-relative atlas.
 
-## 6. Exact identification of the S172 census
+## 7. Exact identification of the S172 census
 
 THM-3366's first body-descended scout S172 uses, for a row `(F,L,D)`,
 
@@ -253,7 +313,7 @@ core tuple irredundant and reproduces S172's least-completion profiles:
 Thus the former black-box `15,393 / 3,659,255,462,265` S172 result is exactly
 the cyclic Boolean-sheet atlas, not an accidental set-cover census.
 
-## 7. All-sector structural subcensus
+## 8. All-sector structural subcensus
 
 Applying THM-2928's inherited support cutoffs and THM-3366's clock budgets to
 the same atlas gives:
@@ -274,7 +334,7 @@ THM-3366's existing pool-14 terminal census and is not additive.  In
 particular, only THM-3366's already intersected seven rows and `7,648`
 occurrences transfer to the current refined `k=3` ledger.
 
-## 8. Boundaries and controls
+## 9. Boundaries and controls
 
 1. **Capacity is far from necessary.**  The exact atlas has `8,973` rows
    beyond the `6,420` strict sum-capacity subclass.
@@ -296,13 +356,15 @@ occurrences transfer to the current refined `k=3` ledger.
 No physical tail realization, arbitrary reflected-phase transport, new
 refined-ledger subtraction, tournament reconstruction, or LRC(14) follows.
 
-## 9. Exact verification
+## 10. Exact verification
 
 The standard-library companion pins THM-3385 and the independently audited
 THM-3366 artifacts, then:
 
 - checks `(13)` on all `4,950` odd pairs below `200` by an independent integer
   event sweep;
+- checks `4,445` finite `(3,5)`-component edges and exact rectangular
+  harmonic factorizations;
 - checks all `23,569` literal body/degree rows by exact cell-interval equality;
 - independently separates `15,381` global transverse survivors from the
   twelve core rescues;
