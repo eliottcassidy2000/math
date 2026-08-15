@@ -2,7 +2,8 @@
 id: THM-3393
 title: "Hadamard order 668: explicit normalized certificate and bordered Goethals--Seidel construction"
 status: >
-  PROVED + VERIFIED-EXACT + GENERATOR-INDEPENDENT CERTIFICATE.  An explicit
+  PROVED + VERIFIED-EXACT + GENERATOR-INDEPENDENT CERTIFICATE + INDEPENDENTLY
+  AUDITED.  An explicit
   normalized 668-by-668 sign matrix is embedded as compressed row bitsets.
   A standard-library verifier checks its byte hashes, shape, normalization,
   and all 222,778 off-diagonal row distances, each exactly 334, hence
@@ -12,6 +13,7 @@ status: >
   bypasses, but does not solve, the length-333 Legendre-pair route of
   THM-2833.  It does not prove the full Hadamard conjecture.
 source: codex-2026-08-14 independent inert audit of the sign-puzzle certificate
+audit: independent normalized-text reconstruction, all-pairs bitset Gram check, SDS/PAF audit, and block-construction line audit by root-2608-crouzeix-puzzle
 depends_on: []
 related:
   - THM-2833-legendre-333-asymmetric-multiplier-exclusion
@@ -25,7 +27,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-3393 -- an explicit Hadamard matrix of order 668
 
-**PROVED + VERIFIED-EXACT + GENERATOR-INDEPENDENT CERTIFICATE.**
+**PROVED + VERIFIED-EXACT + GENERATOR-INDEPENDENT CERTIFICATE + INDEPENDENTLY AUDITED.**
 
 There exists a matrix
 
