@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `jc_generic_kummer_response_thm3419.py` -> matching `.out`
+  [THM-3419 PROVED + VERIFIED-EXACT].  For
+  `P=ax+b+g(x)z^d`, `a!=0`, every one of the `d` generic Hamiltonian
+  response sectors has `K[P]`-rank `N=deg(rad(g))`; after adjoining the
+  `d`th roots of unity, the response is `N` copies of the regular `mu_d`
+  representation.  The proof identifies the localized cokernel with de Rham
+  `H^1`, then uses the unique affine ramification point and compact-support
+  Lefschetz traces.  An independent Riemann--Hurwitz calculation shows exact
+  cancellation between multiplicity-dependent genus and deleted points.
+  The exact referee checks `3,751` valuation packets, `26,257` character
+  traces and sector ranks, `108,779` grading shifts, and `341` linear-`z`
+  regressions.  Constant and zero `g` have zero integral response; this is a
+  Hamiltonian-response theorem, not a new Keller case or JC(2) result.
+  Script/output LF-normalized SHA-256:
+  `e60107df6d609d210c61ded6437f9a7e5323f029e271c094695d587989aafcd0` /
+  `1b194ef30b97810b1890dbd6d5f3bde8f7ba9d5228bc3f44d03b97cfd5049310`.
+
 - `lrc_zero_mode_cochain_rank6_support_thm3416.py` -> matching `.out`
   [THM-3416 PROVED ALL-q GLOBAL RANK-SIX SUPPORT + VERIFIED-EXACT
   PRIMITIVE Q2--200 HOSTILE CENSUS + INDEPENDENT AUDIT CLEAN].  For distinct
