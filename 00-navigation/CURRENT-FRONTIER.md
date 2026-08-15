@@ -323,7 +323,7 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
 - **Jacobian/Dixmier:** `JC(2)`/`DC(2)` remain open.  THM-3438 proves `KDeg(m)={1,3,4,...}` (`m>=3`), an `S_n` atom in every grade, first mixed grade `9`, global G1, and a non-radical `S_5` inverse; arbitrary-map, planar/z-affine, and `A_4/A_5` classification remains open.
   THM-1300/1315 provenance is unsettled (MISTAKE-205); THM-2473--2576 concern only the fixed map.  On the `A4/S4` route, THM-2681 blocks the cubic identification, THM-2685--2695 locate the gain plane, THM-2690--2700 exclude three model carriers, and THM-2703/2708 identify saturated `H^1(U,mu_2)` holonomy.  Spin/saturation/equivariant realization remain open.
   THM-3057/3059 give the tame quartic invoice and `cleared parity = infinity-inertia sign`.  THM-3441 computes `S_G=V(C) union V(L)`: `C` has one escaping sheet, identity inertia, exponent `12`; `L` has two, transposition, exponent `5`.  Thus both odd-every-component forms of HYP-9027 are refuted; genuine Keller `C3` inertia remains OPEN and needs branchwise cofactor units.
-  THM-3440 gives weighted `F_n` a local infinity `n`-cycle; at `n=91` the exact `C7 x C13` carrier and mod-13 `H^1` pullback still lack an LRC amplitude intertwiner/current.  THM-3066 retains only their
+  THM-3440/3443 give a degree-91 local `C7 x C13` carrier, mod-13 `H^1`, and nonzero marked leading `(1,1)` amplitude; its mixed germ has no LRC intertwiner/current.  THM-3066 retains only their
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
   THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;
   polynomial `A2` regularity and constant units are the missing gate.

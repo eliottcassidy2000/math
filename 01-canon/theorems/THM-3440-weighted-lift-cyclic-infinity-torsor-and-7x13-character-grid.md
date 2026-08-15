@@ -14,6 +14,7 @@ source: codex2 weighted-lift reciprocal-Eisenstein derivation, 2026-08-15
 depends_on:
   - THM-3438-weighted-lift-keller-degree-spectrum
 related:
+  - THM-3443-weighted-lift-infinity-character-eigenamplitude
   - THM-3431-valuative-persistence-multiset-and-lrc-jc-boundary
   - THM-3437-derived-boundary-jet-euler-conservation-and-prufer-recovery
 script: 04-computation/jc_weighted_lift_infinity_inertia_thm3440.py
