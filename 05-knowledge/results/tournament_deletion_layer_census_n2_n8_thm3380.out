@@ -1,0 +1,17 @@
+THM-3380 GENERATOR-FREE WITNESS AUDIT
+n8_symmetric_fibre=PASS four_classes two_M_converse_pairs
+common_s=((1, 8, 56, 224, 704, 1472, 2176, 1920, 768), (0, 8, 56, 352, 1200, 3200, 5248, 5248, 2304))
+common_Dham=(52, 110, 80, 108, 0, 32, 0, 0, 1)
+M_differing_deletion_sizes=(1, 2) sums=(762,752)
+n8_palindrome=PASS ABBA_vs_BAAB common_M_s_Gamma xi=Omega=0
+palindrome_SCC_words=((1, 3, 3, 1), (3, 1, 1, 3))
+n9_fugacity=PASS common_Dham=(394, 656, 664, 304, 262, 0, 50, 0, 0, 1) full=((161, 9), (157, 10))
+C3_of_C3=PASS full=(207, 37) Dham=(710, 648, 972, 444, 324, 0, 60, 0, 0, 1)
+semantic_sha256=f1e12cae71100526b0311e178306348dd4aeed3e356e595415d6cabe703087de
+n2_census=PASS classes=1 input_sha256=4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865 distinct_M_GammaD_Mxi_sOmega=(1, 1, 1, 1) GammaD_split_fibres=() Mxi_fibres=()
+n3_census=PASS classes=2 input_sha256=b8bd9f18dbaa6e48bf08aea7368585a4e3e001c4914a4012b138c7aa8b1bb6a0 distinct_M_GammaD_Mxi_sOmega=(2, 2, 2, 2) GammaD_split_fibres=() Mxi_fibres=()
+n4_census=PASS classes=4 input_sha256=91dde84a6b6286a5e0b7b6295ccb1d16955dc4d74b8b93163d50d8a9cd7c7921 distinct_M_GammaD_Mxi_sOmega=(3, 3, 4, 4) GammaD_split_fibres=() Mxi_fibres=()
+n5_census=PASS classes=12 input_sha256=5d16cab0f65c58f402ef49c3442e3e8fedbb5498a8cb09f58a5d8d733784f6e4 distinct_M_GammaD_Mxi_sOmega=(9, 9, 12, 12) GammaD_split_fibres=() Mxi_fibres=()
+n6_census=PASS classes=56 input_sha256=814e0ed10e5d3aaae92d809b9eb915f1eb5542a65a33fe4d47463d22159a525b distinct_M_GammaD_Mxi_sOmega=(32, 32, 56, 56) GammaD_split_fibres=() Mxi_fibres=()
+n7_census=PASS classes=456 input_sha256=164260b94960af0cc63faf3f178ceb95f4dd23bbca376ec23872c33b30d94261 distinct_M_GammaD_Mxi_sOmega=(247, 247, 456, 456) GammaD_split_fibres=() Mxi_fibres=()
+n8_census=PASS classes=6880 input_sha256=fc96c6997724e54ccea3bd166f4117d9e27925d85f568e31b0623527e5139dad distinct_M_GammaD_Mxi_sOmega=(3328, 3325, 6879, 6859) GammaD_split_fibres=((1049, 1133, 2620, 5234), (3667, 3673, 4339, 4563), (5468, 6021, 6691, 6718)) Mxi_fibres=((5314, 5791),)

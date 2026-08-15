@@ -370,8 +370,8 @@ THM-3231/3233/3237/3257/3263/3265.
 
 ## Refine vertices and lifetimes before quotienting
 
-**Trigger / action:** if labels are disconnected or faces use different lifts, components, phases, or times, split physical components and retain transitions, lifetime filtrations, and a baseline before quotienting. Witnesses vary by face; translated bands cannot be recentered; late negative derivative need not cross baseline.
-Quotient only after a good-cover, compatible-section, monotonicity, or factorization theorem. **Evidence:** THM-2658/2672, THM-2983/2985, THM-2984/MISTAKE-334, repaired THM-2991/MISTAKE-335.
+**Trigger/action:** if labels disconnect or faces use different lifts, components, phases, or times, split components and retain transitions, lifetimes, and a baseline before quotienting. Facewise witnesses need not recenter or cross baseline.
+Quotient only after good-cover, section, monotonicity, or factorization control. **Evidence:** THM-2658/2672, THM-2983/2985, THM-2984/MISTAKE-334, repaired THM-2991/MISTAKE-335; THM-3381 retains `Delta=hj-mL`, slope and tree degree, refuting `|h|`-only transfer.
 
 ## Pay algebraic rank, then audit the physical action
 
@@ -392,5 +392,5 @@ A positive left inverse, order-reflecting quotient, or target factorization disc
 
 ## Exteriorize a commutative response against the lost relation
 
-**Trigger/action:** if multiplicative `F_T` loses ordered-join order but `r_v=F_(T-v)` transforms factorwise, contract `r(z)(A-A^T)r(w)^T` and close `q=sum r_v`; rank-one `+J/-J` cross blocks exteriorize the first responses.
-**Counterindication/evidence:** stop for nonconstant cross blocks, unlawful deletion response, target-bearing ties or contraction-kernel loss; the current need not be injective or chronological. THM-3369 has `q=ns-zs'`, THM-3372 has `q=D'`, while the THM-3166 probe needs an independent `q` sidecar.
+**Trigger/action:** when multiplicative `F_T` forgets join order and marked deletions factor, contract `r(z)(A-A^T)r(w)^T`; close `q=sum r_v`. Rank-one `+J/-J` cross blocks exteriorize first responses.
+**Counterindication/evidence:** stop for nonconstant cross blocks, bad deletion laws, target-bearing ties or contraction kernels; currents need not be injective or chronological. THM-3369/3372 derive `q`, THM-3377 carries it, and THM-3380's self-converse `ABBA/BAAB` kills both first currents, prompting iteration.

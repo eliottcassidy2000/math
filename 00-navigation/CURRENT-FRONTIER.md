@@ -29,8 +29,8 @@ Direct frontier: `<=6`; projected caps `1579/216`. At `z1=216`, THM-3361
 closes the three `L720720` rows; THM-3378 closes row 94 of the next family and
 leaves ledger/wall/families `372913/109/12` (the other 12 rows remain live).
 THM-3349/3350/3352/3355 close all `561` reflected six-level `k=1` bodies;
-THM-3360 proves the uniform physical edge floor, including four analytic horn
-lanes. Arbitrary `k<=1`, projected `k=2,3`, the rung, physical entry and LRC
+THM-3360 proves the physical edge floor. THM-3381 bounds phase/tree drift and
+refutes residue-blind transfer. Arbitrary `k<=1`, projected `k=2,3`, rung, physical entry and LRC
 remain open; projected screens are not physical covers.
 THM-3356 sends primitive carriers to determinant shells. THM-3366 leaves refined rows/counts `4,056/200,069,517,203` (`k=2`) and `1,897/2,548,893,834` (`k=3`); its seven `k=3` hits are `{2,6,8,10,14} union {u}`, odd `u<=13`, at `D=L/2`.
 THM-3368 adds a weighted Horn tariff but no clock seed. LRC remains open.
@@ -217,9 +217,9 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - [THM-1950](../01-canon/theorems/THM-1950-h-ge-disc-reduced-to-strongly-connected.md) reduces `H >= disc` to strongly connected tournaments and verifies finite
   cases; the global inequality is open.
 - THM-3315/3322/3324 compile switched walks, moments, joins and response Gram.
-  THM-3359/3364 give periodic/cyclotomic `T4`; THM-3379 its Fibonacci median quotient;
-  THM-3369/3372 add skew/deletion currents and transitivity variance. Startup,
-  global arcs, apex/SCC order and time remain. Next: higher responses/substitution.
+  THM-3359/3364 give periodic/cyclotomic `T4`; THM-3379 its Fibonacci median
+  quotient. THM-3369/3372/3377 give skew/deletion currents; THM-3380 locates
+  their first card/fugacity/palindrome losses. Startup, arcs, SCC order/time remain.
 - A literal Paley bridge exists only in THM-640's prime quadratic-residue scope.
   Composite modulus 14 and repeated score/node heuristics do not inherit it.
 - MISTAKE-227–229 correct the newest false syntheses: the AP chain frame is
