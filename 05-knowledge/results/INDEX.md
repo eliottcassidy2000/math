@@ -1,8 +1,7 @@
 # Script Results Index
 
 - `smooth_hensel_vector_field_orbits_thm3442.py` -> matching `.out`
-  [THM-3442 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  INDEPENDENT AUDIT COMPLETE, STATUS PROMOTION PENDING].  For a smooth
+  [THM-3442 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a smooth
   finite-type `Z_p`-scheme of pure relative dimension `d`, a
   congruence-to-identity automorphism at depth `c` has first-carry vector
   field `delta_g`.  When `p` is odd or `c>=2`, every depth-`c` Hensel fibre
@@ -14,8 +13,7 @@
   `26edd280a13f8a9e9cff84d0b1d480fc839dfc2134d0223b49ab4db5902a455c` /
   `2e95fc184e1c2ec732f67d190a4333fd5f7e8d315e5dbc7b2f3e0e52e9be9abc` /
   `c72801a6c4fcb534b9e71ab0bb23da9163fc1051c45895b9bcd65241fd0a1c49`.
-  No LRC, `JC(2)`, or boundary-response transport is claimed; the theorem
-  remains outside the proved dependency graph until status promotion.
+  No LRC, `JC(2)`, or boundary-response transport is claimed.
 
 - `near_identity_grassmannian_hensel_orbits_thm3439.py` -> matching `.out`
   [THM-3439 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For odd `p`,
@@ -27,7 +25,7 @@
   `bc8c27860aa62b9816f55243fc24c1fa72b4b0e1c83767a12c3a04166b14d492` /
   `834d376ebd73d36329b8ac4853c1d42a07bc84fefe64a7cc5abd73791e694a50` /
   `a446d26482fdcc5ac913ca882efea17fc2cd0603c27223532884d87d6b4cc51a`.
-  No LRC transport is claimed, and this candidate is not yet a dependency.
+  No LRC transport is claimed.
 - `lrc_prime_even_half_twist_low_weight_tail_probe_20260815.py` -> matching
   `.out` [UNNUMBERED FINITE-EXACT CONTROLS; UNIFORM TAIL LEMMA OPEN].  Exact
   `A/A,B/E` tangent counts have last prime weight-at-most-eight boundaries

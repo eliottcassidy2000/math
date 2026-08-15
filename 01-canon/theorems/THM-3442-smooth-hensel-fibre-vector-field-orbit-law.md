@@ -2,12 +2,14 @@
 id: THM-3442
 title: "Smooth Hensel-fibre vector-field orbit law"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  A congruence-to-identity automorphism of a smooth
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  A
+  congruence-to-identity automorphism of a smooth
   p-adic scheme has free equal-length orbits on every Hensel fibre exactly
   when its first-carry vector field has no zero on the relevant special-fibre
-  points.  This candidate is not a proved dependency before audit.
+  points.  The first-carry criterion is sharp, including the p=2 depth
+  boundary.
 source: root-smooth-hensel-vector-field-orbits-2026-08-15
+audit: independent global construction and proof reconstruction; nonlinear conjugate-translation control; normal/optimized/stored replay; hash, AST, ID, and documentation gates clean
 depends_on: []
 related:
   - THM-3439-near-identity-grassmannian-hensel-orbit-law
@@ -22,11 +24,10 @@ hash_basis: LF-normalized bytes
 
 # THM-3442 -- smooth Hensel-fibre vector-field orbit law
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-This file contains a complete proof candidate.  It remains outside the
-proved dependency graph until an independent derivation and replay audit.
+The proof and exact companion have passed an independent derivation and
+replay audit.
 
 ## 1. Exact statement
 
@@ -87,8 +88,9 @@ g is free on every nonempty depth-c fibre at every level a>c.              (6)
 ```
 
 The statement is local on the smooth formal completion.  It therefore also
-applies verbatim to a smooth `p`-adic formal scheme with finite residue-point
-set and a congruence-to-identity formal automorphism.
+applies verbatim to a smooth `p`-adic formal scheme, locally topologically of
+finite presentation and of pure relative dimension `d`, with finite
+residue-point set and a congruence-to-identity formal automorphism.
 
 ## 2. Inheritance and connection ledger
 
@@ -261,4 +263,4 @@ python3 -B 04-computation/smooth_hensel_vector_field_orbits_thm3442.py
 python3 -B -O 04-computation/smooth_hensel_vector_field_orbits_thm3442.py
 ```
 
-No result in this candidate is a proved dependency before independent audit.
+QED.
