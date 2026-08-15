@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `odd_interval_ratio_complement_thm3423.py` -> matching `.out`
+  [THM-3423 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT /
+  INDEPENDENT AUDIT REQUIRED].  If `L` is the largest odd integer with
+  `hL<p`, then beyond explicit cubic thresholds the exact complement of
+  `O_L/O_L` consists of the reduced opposite-parity fractions `+-a/b` with
+  `a+b<=h`.  The pairwise-disjoint-dilate Cayley graph has sharp clique
+  number `1+floor(log2(h-1))`, colored by `v_2 mod` that number and attained
+  by `{1,2,4,...}`.  Exact controls check 9,160 rational connections, 60,049
+  parity-constrained rounding cells, 616,848 finite-field ratio pairs, and
+  the four `h=7` prime residue classes.  No composite-modulus, cover, or LRC
+  conclusion is claimed.  Script/output/semantic LF-normalized SHA-256:
+  `230b9c90f341dc272b50392c6537c3fe0363ccf8e5f055a52c33c20df9b61a3f` /
+  `9227e53fe70e01793ff56f0f074f48d8da439f0f7138b539d462cd455a72aade` /
+  `05f52e47dd904880524b09744efd98c90e6e53b4b37976dbe805ff0d8199a6c2`.
+
 - `jc_one_root_nonlinear_integral_response_thm3422.py` -> matching `.out`
   [THM-3422 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT /
   INDEPENDENT AUDIT REQUIRED].  For
