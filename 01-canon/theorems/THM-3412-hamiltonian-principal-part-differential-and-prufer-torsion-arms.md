@@ -2,7 +2,8 @@
 id: THM-3412
 title: "Hamiltonian principal-part differential and Prüfer torsion arms"
 status: >
-  PROVED + VERIFIED-EXACT.  Let K have characteristic zero and let
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVATION-AUDITED.  Let K have
+  characteristic zero and let
   P=f(x)+g(x)z with 0!=g and (P_x,g)=K[x,z].  On the exact
   affine-modification tower Q_q=B/(g,t)^q of THM-3406, the Hamiltonian
   differential is nabla_q=g(f' partial_t-partial_x)+qg', its q-th graded
@@ -19,7 +20,7 @@ status: >
   response calculation on the already-tame linear-z stratum and proves no
   new JC(2) case.
 source: root-2608-jc-principal-part-persistence-2026-08-15
-audit: local homogeneous recurrence; localized primitive; PID descent; exact Fraction finite-complex/Jordan/persistence replay; independent audit pending
+audit: local homogeneous recurrence; localized primitive; PID descent; exact Fraction finite-complex/Jordan/persistence replay; independent adversarial derivation, collided-value descent, response-split, invariant, scope, and normal/-O/hash audit clean
 depends_on:
   - THM-3406-affine-modification-power-jets-and-principal-part-transgression
   - THM-3386-linear-z-canonical-divergence-minimal-polynomial-collision-law
@@ -38,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3412 -- Hamiltonian principal-part differential and Prüfer torsion arms
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVATION-AUDITED.**
 
 ## 1. Inheritance and connection contract
 
