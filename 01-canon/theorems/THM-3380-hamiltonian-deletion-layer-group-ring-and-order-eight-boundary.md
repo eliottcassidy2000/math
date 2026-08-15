@@ -1,11 +1,11 @@
 ---
-id: THM-3379
+id: THM-3380
 title: "Hamiltonian deletion-layer group ring and the order-eight boundary"
 status: RESERVED / UNPROVED EMPTY STUB
 source: root/repository-archaeology-second-pass-2026-08-14
 ---
 
-# THM-3379 -- reserved deletion-layer compiler and order-eight boundary
+# THM-3380 -- reserved deletion-layer compiler and order-eight boundary
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
