@@ -1,0 +1,23 @@
+Fixed-zero Q=474 primitive-augmented cap-seven exact decision
+status=FINITE_EXACT literal_cap7_NEGATIVE;primitive_augmented_cap7_NEGATIVE
+universe=fixed_zero_residues_1_to_Q-1;strict_1_over_14_sheet_predicate;literal_sheet_union;augmented_prime_breakers_2,3,79
+augmented_gate=all_three_breaker_bits_covered_iff_gcd(474,r_1,...,r_k)=1;literal_NEGATIVE_is_the_stronger_result
+distinct_owner_semantics=residues_are_distinct;identical_literal_or_augmented_masks_are_collapsed_because_duplicates_never_enlarge_an_at_most_cap_union
+solver_normalization=reflection_orbits;least_order_owner;unit_multiplier_to_canonical_Q_over_m;order6_dominated_by_order2;order2_odd_coset_transplant_to_half_Q237
+target_banks=(literal,augmented)=((473, 237, 236, ((2, 1), (3, 1), (79, 39), (158, 39), (237, 78), (474, 78))), (473, 237, 237, ((2, 1), (3, 1), (6, 1), (79, 39), (158, 39), (237, 78), (474, 78))))
+target_literal_order_size_hist=(((2, 237), 1), ((3, 158), 1), ((6, 79), 1), ((79, 66), 39), ((158, 69), 39), ((237, 66), 78), ((474, 67), 78))
+fixed_reflection_orbits=238
+fixed_fresh_gain_rows=(least_order,canonical_residue,first_orbits,missing_orbits,top_six_fresh,sum,deficit)=((3, 158, 80, 158, (23, 23, 23, 23, 23, 23), 138, 20), (79, 6, 34, 204, (33, 33, 31, 31, 30, 30), 188, 16), (158, 3, 35, 203, (33, 33, 31, 31, 31, 31), 190, 13), (237, 2, 34, 204, (31, 30, 30, 30, 30, 30), 181, 23), (474, 1, 34, 204, (31, 31, 30, 30, 30, 30), 182, 22))
+fixed_unit_normalizer_checks=473
+order2_transplant_cells=(even_sheet_cells,odd_restriction_cells)=(474, 111864)
+half_Q237_bank_and_orders=((470, 235, 235), ((3, 1), (79, 39), (158, 39), (237, 78), (474, 78)), 119)
+half_Q237_fresh_gain_rows=(least_additive_order,canonical_residue,first_orbits,missing_orbits,top_five_fresh,sum,deficit)=((3, 158, 40, 79, (12, 12, 12, 12, 12), 60, 19), (79, 6, 17, 102, (18, 18, 18, 18, 18), 90, 12), (158, 3, 18, 101, (18, 18, 18, 18, 18), 90, 11), (237, 2, 17, 102, (17, 17, 17, 17, 17), 85, 17), (474, 1, 17, 102, (17, 17, 17, 17, 17), 85, 17))
+half_Q237_unit_normalizer_checks=470
+structural_obstruction=every_non_order2_least_order_has_positive_reflection_fresh_gain_deficit;order2_would_force_the_independently_excluded_half_Q237_cap6_cover
+hostile_controls=((29, 'augmented', 6, None, 3, 2, 0, 28, 14, 14), (29, 'augmented', 7, (1, 4, 5, 6, 7, 9, 13), 8, 7, 0, 28, 14, 14), (21, 'literal', 7, None, 2, 1, 0, 20, 8, 8), (58, 'literal', 6, None, 256, 256, 1, 57, 29, 29), (58, 'literal', 7, (2, 8, 10, 12, 14, 18, 26), 8, 7, 0, 57, 29, 29), (58, 'augmented', 7, None, 1742, 1924, 183, 57, 29, 29))
+control_meaning=Q29_primitive_rank7_positive;Q21_literal_cap7_negative;Q58_literal_rank7_pullback_positive_but_augmented_cap7_negative
+semantic_sha256=c1f1ace0f12e3e74396997c62e0ab0aa18a7d4bf1ad24f60ec3dbfdd74368ecd
+script_sha256_lf=965d6d4901a7c76657f9c40ada9136aed9d8bf214ce6a34ca3ea5184988e8494
+reproducibility=standard_library_only;no_elapsed_fields;truth_gates_survive_python_O
+commands=python -B 04-computation/fixed_zero_q474_primitive_cap7_exact.py;python -B -O 04-computation/fixed_zero_q474_primitive_cap7_exact.py
+scope=Q474_fixed_zero_literal_and_primitive_augmented_only;no_all_q_antichain_completeness;no_LRC14_consequence
