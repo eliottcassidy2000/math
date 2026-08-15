@@ -10,7 +10,9 @@ For sigma<d this is the direct weight-sigma input.  For sigma=d the actual
 input is weight zero; evaluation at x=t splits off its constant kernel and
 shows that the same L_d image is valid.  The candidate theorem classifies
 the constant target observer [z**(sigma-1)] and gives a polynomial sector
-presentation.
+presentation.  At an accessible leading-degree resonance it also verifies
+the normalized horizontal-section truncation and the complete root-value
+interpolation formula for the low defect.
 
 This companion uses SymPy only for exact Q(t)-linear systems and rational
 identities.  Wrap residues and orbit-arrow checks use Fraction arithmetic.
@@ -278,8 +280,8 @@ def check_integral_arrow_exponents() -> int:
     return checks
 
 
-def resonant_defect_degree(d: int, sigma: int, exponents: tuple[int, ...]) -> int:
-    """Reduce the unique resonant column and return its exact low degree."""
+def resonant_defect_completion(d: int, sigma: int, exponents: tuple[int, ...]) -> int:
+    """Verify the infinity truncation and complete low-defect interpolation."""
     root_count = len(exponents)
     degree = candidate_degree(d, sigma, exponents)
     require(degree is not None, ("missing resonance", d, sigma, exponents))
@@ -300,10 +302,64 @@ def resonant_defect_degree(d: int, sigma: int, exponents: tuple[int, ...]) -> in
     solution_set = sp.linsolve(equations, p_coefficients)
     solution = next(iter(solution_set), None)
     require(solution is not None, ("defect solution", d, sigma, exponents))
-    defect = sp.Poly(sp.expand(image.as_expr().subs(dict(zip(p_coefficients, solution)))), x)
+    solution_map = dict(zip(p_coefficients, solution))
+    p_solution = sp.expand(p.subs(solution_map))
+    defect = sp.Poly(sp.expand(image.as_expr().subs(solution_map)), x)
     require(not defect.is_zero, ("zero resonant defect", d, sigma, exponents))
 
     excess = degree - root_count
+    horizontal_coefficients: list[sp.Expr] = [sp.Integer(1)] + [
+        sp.Integer(0) for _ in range(excess)
+    ]
+    horizontal_factors = [
+        [
+            sp.binomial(sp.Rational(sigma * e, d) - 1, n) * (-alpha) ** n
+            for n in range(excess + 1)
+        ]
+        for alpha, e in zip(roots, exponents)
+    ]
+    horizontal_factors.append(
+        [
+            sp.binomial(-sp.Rational(sigma, d), n) * (-t) ** n
+            for n in range(excess + 1)
+        ]
+    )
+    for factor in horizontal_factors:
+        horizontal_coefficients = [
+            sp.expand(
+                sum(
+                    horizontal_coefficients[j] * factor[n - j]
+                    for j in range(n + 1)
+                )
+            )
+            for n in range(excess + 1)
+        ]
+
+    horizontal_truncation = sp.expand(
+        sum(
+            horizontal_coefficients[n] * x ** (excess - n)
+            for n in range(excess + 1)
+        )
+    )
+    require(
+        sp.expand(p_solution - horizontal_truncation) == 0,
+        ("horizontal truncation", d, sigma, exponents, p_solution),
+    )
+
+    interpolated_defect = sp.expand(
+        sum(
+            (t - alpha)
+            * (sigma * e - d)
+            * horizontal_truncation.subs(x, alpha)
+            * sp.cancel(rad / (x - alpha))
+            for alpha, e in zip(roots, exponents)
+        )
+    )
+    require(
+        sp.expand(defect.as_expr() - interpolated_defect) == 0,
+        ("full defect interpolation", d, sigma, exponents, defect.as_expr()),
+    )
+
     asymptotic_scalar = sp.prod(
         sp.Rational(d * (h - 1) + sigma, d * h) for h in range(1, excess + 1)
     )
@@ -319,7 +375,7 @@ def resonant_defect_degree(d: int, sigma: int, exponents: tuple[int, ...]) -> in
     return defect.degree()
 
 
-def check_resonant_defect_degrees() -> int:
+def check_resonant_defect_completions() -> int:
     checks = 0
     for d in range(2, 7):
         for sigma in range(1, d + 1):
@@ -328,7 +384,7 @@ def check_resonant_defect_degrees() -> int:
                     if candidate_degree(d, sigma, exponents) is None:
                         continue
                     require(
-                        resonant_defect_degree(d, sigma, exponents) == root_count - 1,
+                        resonant_defect_completion(d, sigma, exponents) == root_count - 1,
                         ("defect top low row", d, sigma, exponents),
                     )
                     checks += 1
@@ -340,7 +396,7 @@ def check_resonant_defect_degrees() -> int:
         (5, 5, (2, 1, 1)),
     ):
         require(
-            resonant_defect_degree(d, sigma, exponents) == len(exponents) - 1,
+            resonant_defect_completion(d, sigma, exponents) == len(exponents) - 1,
             ("three-root defect", d, sigma, exponents),
         )
         checks += 1
@@ -369,7 +425,7 @@ def main() -> None:
     wrap_primitives, wrap_evaluations = check_wrap_primitives_and_evaluation()
     local_checks, diagonal_checks, infinity_checks = check_structural_coefficients()
     arrow_checks = check_integral_arrow_exponents()
-    defect_checks = check_resonant_defect_degrees()
+    defect_checks = check_resonant_defect_completions()
     hostile_checks = check_sharp_nonwrap_hostiles()
 
     print("ALL-SECTOR CONSTANT OBSERVER PACKET -- EXACT HOSTILE REFEREE")
@@ -385,7 +441,7 @@ def main() -> None:
     print(f"polynomial leading-diagonal identities: {diagonal_checks}")
     print(f"two-infinity incompatibility checks: {infinity_checks}")
     print(f"minimal integral arrow checks: {arrow_checks}")
-    print(f"exact resonant defect-degree reductions: {defect_checks}")
+    print(f"exact resonant defect completions: {defect_checks}")
     print(f"sharp multiroot nonwrap hostiles: {hostile_checks}")
     print("surviving nonwrap direct profiles and q(x,t):")
     for d, sigma, exponents, q_solution in solutions:

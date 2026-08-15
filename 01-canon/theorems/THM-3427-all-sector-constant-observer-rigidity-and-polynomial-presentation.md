@@ -7,7 +7,9 @@ status: >
   P=ax+b+g(x)z^d with nonconstant g.  Every generic fiber-character sector
   has an explicit polynomial differential presentation of dimension
   deg(rad(g)); the wrap sector requires a separate evaluation-at-t splitting
-  and punctured-line model.  For 1<=sigma<=d, the constant observer
+  and punctured-line model.  Its canonical resonant defect exists exactly
+  when g is not squarefree and recovers every root multiplicity.  For
+  1<=sigma<=d, the constant observer
   [z^(sigma-1)] is generically zero exactly when
   g=c(x-alpha)^e with e>1 and d divides sigma(e-1).  Its exact integral
   annihilator is then ((P-(a alpha+b))^(sigma(e-1)/d)), and is zero otherwise.
@@ -23,10 +25,11 @@ depends_on:
 related:
   - THM-3424-nonlinear-monomial-fiber-unit-observer-rigidity
   - THM-3418-one-monomial-nonlinear-fiber-keller-classification
+  - THM-3412-hamiltonian-principal-part-differential-and-prufer-torsion-arms
 script: 04-computation/jc_all_sector_constant_observer_thm3427.py
 output: 05-knowledge/results/jc_all_sector_constant_observer_thm3427.out
-script_sha256: 8563d6ee1c071abdff3d0961409737017bc336667f59c10c40f3b849c83a0a72
-output_sha256: 4055ad0afbcca0f8a0eb3a52700ffbc47a3326650364338e557839d39dfccd34
+script_sha256: cffd6e8d2bf92ce6e793769320e9c2f1798337a8ccb221a6ef5d324774818895
+output_sha256: be694f75fccc2398b7072ac59c8529a27ceb2c34ba3db6e667dbf002ad495654
 hash_basis: LF-normalized bytes
 ---
 
@@ -105,6 +108,17 @@ B/L_d(B) ~= B/(g partial_x B) ~= H^1_dR(Spec B/F),        (9)
 ```
 
 up to nonzero scalar factors.
+
+It also has a sharp multiplicity-recovery law.  Its unique high-row defect
+exists exactly when `g` is not squarefree.  If `g` has split multiplicities
+`e_i`, then its leading response `H_d` satisfies
+
+```text
+H_d(alpha_i)/[dS'(alpha_i)]=e_i-1.                       (9a)
+```
+
+Thus the wrap presentation together with its canonical defect recovers the
+entire multiplicity vector erased by the generic rank `N`.
 
 | item | exact content |
 |---|---|
@@ -319,39 +333,144 @@ Combining `(30)` and `(32)` gives `j=N` and the sharper exact defect law
 deg(R_sigma)=N-1.                                        (33)
 ```
 
-The same triangular argument gives the leading coefficient vector, not only
-its degree.  Put
+There is an exact closed form for the entire defect, not only its degree.
+Put `k=m_sigma-N`, let `c_g` be the leading coefficient of `g`, and use the
+coordinate `u=1/x` at infinity.  Define the unit polynomials
 
 ```text
-k=m_sigma-N,
-c_(d,sigma,k)=product_(h=1)^k [d(h-1)+sigma]/(dh),
-H_sigma=sigma S(g'/g)-dS'.                               (33a)
+g_bar(u)=c_g^(-1)u^r g(u^(-1)),
+S_bar(u)=u^N S(u^(-1)),                                  (33a)
 ```
 
-The empty product is one.  Comparing successively the degree-`j` rows for
-`j=m_sigma-1,...,N` gives
+and the formal horizontal section
 
 ```text
-q_res=c_(d,sigma,k)t^k S+lower t-orders,
-R_sigma=c_(d,sigma,k)t^(k+1)H_sigma+lower t-orders.       (33b)
+A_sigma(u,t)
+ =g_bar(u)^(sigma/d) S_bar(u)^(-1)(1-tu)^(-sigma/d)
+ =sum_(n>=0) A_(sigma,n)(t)u^n.                          (33b)
 ```
 
-Indeed, the leading coefficients satisfy
+The fractional powers in `(33b)` are the unique characteristic-zero formal
+powers with constant coefficient one, so every `A_(sigma,n)` lies in
+`K[t]`.  Truncate at the resonance excess:
 
 ```text
-c_j=[d(m_sigma-j-1)+sigma]/[d(m_sigma-j)] c_(j+1),
-c_(m_sigma)=1,                                           (33c)
+p_res(x,t)=sum_(n=0)^k A_(sigma,n)(t)x^(k-n),
+q_res=S p_res.                                           (33c)
 ```
 
-whose product is `(33a)`.  At a root `alpha_i` of multiplicity `e_i`,
+This is exactly the monic reducer in `(27)`.  Indeed,
 
 ```text
-H_sigma(alpha_i)=(sigma e_i-d)S'(alpha_i).               (33d)
+p_hat=x^k A_sigma(x^(-1),t)
 ```
 
-Thus the first asymptotic defect vector records multiplicity and character,
-even though THM-3419's sector rank forgets both.  Its leading coefficient is
-`sigma r-dN`, nonzero in the accessible cases by `(31)--(32)`.
+is, up to a nonzero constant, the formal Laurent solution
+
+```text
+g^(sigma/d) S^(-1)(t-x)^(-sigma/d)
+```
+
+of `L_sigma(S p_hat)=0`.  The difference `p_hat-p_res` is `O(x^(-1))`.
+Since
+
+```text
+L_sigma(Sp)=sigma Sp+(t-x)[H_sigma p-dS p'],
+H_sigma=sigma S(g'/g)-dS',                               (33d)
+```
+
+applying this operator to an `O(x^(-1))` tail gives `O(x^(N-1))`.
+But `L_sigma(Sp_res)` is a polynomial, so it has degree below `N`, as
+required in `(27)`.  Uniqueness in the triangular reduction identifies it
+with `q_res`.
+
+After a faithful splitting extension, write
+
+```text
+g=c_g product_(i=1)^N (x-alpha_i)^e_i.
+```
+
+Evaluation at the roots and Lagrange interpolation now give the complete
+response polynomial
+
+```text
+R_sigma(x,t)
+ =sum_(i=1)^N (t-alpha_i)(sigma e_i-d)p_res(alpha_i,t)
+                 S(x)/(x-alpha_i).                       (33e)
+```
+
+To see this directly, `(33d)` gives
+
+```text
+R_sigma(alpha_i,t)
+ =(t-alpha_i)(sigma e_i-d)S'(alpha_i)p_res(alpha_i,t),    (33f)
+```
+
+and the `S'(alpha_i)` cancels in the Lagrange basis.  Formula `(33e)` is
+Galois invariant and therefore descends to the original field.  It is the
+promised exact lower-row completion.
+
+Finally put
+
+```text
+c_(d,sigma,k)=product_(h=1)^k [d(h-1)+sigma]/(dh).        (33g)
+```
+
+The empty product is one.  The highest `t`-coefficient of `p_res` is the
+constant `c_(d,sigma,k)`, so `(33e)` specializes to
+
+```text
+R_sigma=c_(d,sigma,k)t^(k+1)H_sigma+lower t-orders,
+H_sigma(alpha_i)=(sigma e_i-d)S'(alpha_i).               (33h)
+```
+
+The leading coefficient of `H_sigma` is `sigma r-dN`, nonzero in the
+accessible cases by `(31)--(32)`.  Thus `(33e)` both reproves
+`deg(R_sigma)=N-1` and exposes the full multiplicity/character response that
+THM-3419's equal generic sector ranks forget.
+
+The wrap character gives a particularly clean corollary.  For `sigma=d`,
+
+```text
+m_d=r-1,
+m_d>=N  iff  r>N  iff  g is not squarefree.              (33i)
+```
+
+Put `E=r-N=sum_i(e_i-1)`.  In the nonsquarefree case `k=E-1`, while
+`c_(d,d,k)=1`; hence
+
+```text
+R_d=t^E H_d+lower t-orders,
+H_d=d[S(g'/g)-S'],
+H_d(alpha_i)/[dS'(alpha_i)]=e_i-1.                       (33j)
+```
+
+Therefore `S` locates the distinct roots and the canonical leading wrap
+defect recovers their multiplicities.  In the squarefree case there is no
+accessible defect and all multiplicities are already one.  This is an exact
+inverse to the multiplicity cancellation in THM-3419, not an integral module
+decomposition.
+
+There is also a typed bridge to the linear-`z` principal-part theorem
+THM-3412.  Write
+
+```text
+c=g/S,                         E=deg(c).
+```
+
+Up to a scalar, `c=gcd(g,g')` is exactly the repeated-root carrier whose
+localization quotient supports the full Prüfer arms in THM-3412.  Here
+
+```text
+H_d=dS c'/c=d sum_i(e_i-1)S/(x-alpha_i).                 (33k)
+```
+
+Thus the map from the linear carrier to the nonlinear wrap sidecar is the
+logarithmic-divisor transform `c |-> dS dlog(c)`.  It preserves repeated-root
+support and every multiplicity excess, but destroys denominator depth,
+primary divisibility, and the arms themselves.  Equation `(33k)` is only a
+generic defect fingerprint; it is not a module identification with
+THM-3412.
 
 Consequently the resonant basis swap is not merely existential.  If `(25)`
 is accessible, a basis is
@@ -455,7 +574,7 @@ not assert that the full multiroot module is torsion-free.
 The exact companion checks the operator coefficients, closed one-root
 solutions `(37)`, the wrap evaluation splitting `(19)`, wrap residue vectors,
 the two incompatible infinity degrees, `74` exact resonant defect reductions
-including the asymptotic formula `(33b)`,
+including the horizontal truncation `(33c)` and full interpolation `(33e)`,
 minimal integral arrow counts, and exact `Q(t)` linear systems on a declared
 low grid.  Its sharp multiroot hostiles include
 

@@ -98,8 +98,25 @@ monomial.  The basis is exactly
 Thus one high vector replaces the top low vector without changing
 THM-3419's rank.
 
-More is visible at `t=infinity`.  If `k=m_sigma-N`, the highest `t`-part of
-the defect is a nonzero scalar multiple of
+The whole defect, not only its leading term, is visible at `x=infinity`.
+The normalized horizontal solution of the sector ODE is
+
+```text
+g^(sigma/d) rad(g)^(-1)(t-x)^(-sigma/d).
+```
+
+If `k=m_sigma-N`, truncate its normalized Laurent expansion after the
+nonnegative powers of `x`; call the resulting degree-`k` polynomial
+`p_res`.  Then `q_res=rad(g)p_res` is exactly the unique monic resonant
+reducer.  After splitting the roots, its complete low defect is
+
+```text
+R_sigma(x,t)=sum_i (t-alpha_i)(sigma e_i-d)p_res(alpha_i,t)
+                         rad(g)(x)/(x-alpha_i).
+```
+
+This is a root-interpolation formula rather than an unspecified period
+coordinate.  Its highest `t`-part is a nonzero scalar multiple of
 
 ```text
 H_sigma=sigma rad(g) g'/g-d rad(g)',
@@ -108,8 +125,7 @@ H_sigma(alpha_i)=(sigma e_i-d)rad(g)'(alpha_i).
 
 This polynomial is a multiplicity/character response vector that the generic
 rank cancels completely.  For a one-root divisor, the low vector is exactly
-the constant.  The
-replacement records the Prüfer endpoint, and the constant observer has exact
+the constant.  The replacement records the Prüfer endpoint, and the constant observer has exact
 annihilator exponent
 
 ```text
@@ -134,10 +150,36 @@ Together with THM-3422, this gives its exact integral annihilator.  Therefore
 all `d` constant-character observers are nontorsion for every multiroot `g`,
 even though THM-3419 gives `N>1` response channels in each sector.
 
-The next underexplored object is the lower-`t` completion of the resonant
-defect polynomial `R_sigma`.  Its degree and highest `t`-coefficient are now
-explicit, but its remaining coefficients form a period coordinate describing
-how `x^(N-1)` is expressed through the other low vectors and the high
-resonant monomial.  A determinant formula for that completion may be the
-right bridge toward local primary structure.  Nothing here yet proves that a
-multiroot sector is torsion-free or decomposes into independent root arms.
+The wrap character is the cleanest inverse statement.  Its resonance is
+accessible exactly when `g` is not squarefree.  Writing
+`E=deg(g)-deg(rad(g))`, the defect has `t`-degree `E`, leading coefficient
+
+```text
+H_d=d[rad(g)g'/g-rad(g)'],
+H_d(alpha_i)/(d rad(g)'(alpha_i))=e_i-1.
+```
+
+So the equal-rank packet forgets multiplicity, but the canonical wrap defect
+recovers the complete multiplicity divisor.  Squarefree polynomials are
+exactly the no-defect boundary, where there is nothing left to recover.
+
+This unexpectedly reuses the linear-`z` carrier from THM-3412.  If
+`c=g/rad(g)`, then `c` is `gcd(g,g')` up to a scalar and
+
+```text
+H_d=d rad(g)c'/c.
+```
+
+In the linear family, localizing by `c` retains one full Prüfer arm per
+repeated root.  In the nonlinear wrap sector, applying the logarithmic
+divisor transform `c -> d rad(g)dlog(c)` compresses those arms to one
+generic polynomial fingerprint.  Root support and multiplicity survive;
+denominator depth and integral divisibility do not.  This is a source/target
+bridge, not a module isomorphism.
+
+The next underexplored object is now integral rather than generic: use the
+exact interpolation values as boundary data for the `(P-beta_i)`-primary
+filtration.  They show precisely how the local root responses are glued into
+one global low row, but they do not yet prove that a multiroot sector is
+torsion-free or decomposes into independent root arms.  Any such claim still
+has to survive the split first-window local-system hostile in THM-3422.
