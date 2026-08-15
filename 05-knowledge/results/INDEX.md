@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `lrc_projective_cochain_wedge_scalar_hub_thm3410.py` -> matching `.out`
+  [THM-3410 PROVED ANALYTIC + PROVED-ELEMENTARY + VERIFIED-EXACT;
+  INDEPENDENT AUDIT REQUESTED].  For every realized THM-3398 packet,
+  `A_i=2qu_i x_i` is integral and `P_ij=A_i u_j-u_i A_j`.  Factoring column
+  contents and contracting equal primitive rays turns the exact faithful-tree
+  tariffs into a weighted projective MST and connectivity threshold, with
+  content lower bounds.  The canonical `p=2,3,5` half-grid residue partitions
+  carry scalar fibres `gcd(a,p)=1`, `7a Delta<q`, with exact tariffs
+  `(tau_1,tau_infinity)=(2a(p-1)d^2,2ad^2)` for `q=pd`.  Fixed-scalar pure
+  dilation has degree two, while the full hidden scalar fibre has sharp
+  degree-three diameter.  The companion checks 92,400 lattice systems, all 44
+  admissible direct physical hubs through q40, two boundary hostiles, and both
+  q15 packets; normal/optimized outputs are byte-identical.  No LRC decrement.
+  Script/output/semantic LF-normalized SHA-256:
+  `5d4ee3abad66c8052a0d78406aa633f29b0bbb110c76438ea2f417774800d7f7` /
+  `ec8451b180e96287d9dfecd3bfa484d7b4a8e1ac82108694c4656c83968e0179` /
+  `bc6cc2bd14fb566ee7e57adc27291e3dea1085cf542891128cc4feea93d44c51`.
+
 - `lrc_unrestricted_zero_mode_cochain_rank_probe_20260815.py` -> matching
   `.out` [PROVED-ANALYTIC THM-3405 DIVISOR-ANCESTRY REDUCTION +
   PROVED-ELEMENTARY COMPLETE PRIMITIVE/GLOBAL RANK-FOUR CLASSIFICATION +
