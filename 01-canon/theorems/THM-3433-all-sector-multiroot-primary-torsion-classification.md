@@ -2,20 +2,19 @@
 id: THM-3433
 title: "All-sector multiroot primary-torsion classification"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  Let K have characteristic zero, d>=2, a!=0, and
-  P=ax+b+g(x)z^d with nonconstant g.  Over a splitting field, root alpha_i
-  of multiplicity e_i>1 contributes a Pruefer arm to target sector sigma-1
-  exactly when d divides sigma(e_i-1) and d divides sigma e_j at every other
-  root.  Its exact stage-k thickness is
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Let K have characteristic
+  zero, d>=2, a!=0, and P=ax+b+g(x)z^d with nonconstant g.  Over a splitting
+  field, root alpha_i of multiplicity e_i>1 contributes a Pruefer arm to
+  target sector sigma-1 exactly when d divides sigma(e_i-1) and d divides
+  sigma e_j at every other root.  Its exact stage-k thickness is
   k(e_i-1)+sigma(e_i-1)/d.  Every primary torsion element lies in one of
   these arms.  A nonwrap sector has at most one arm; the wrap sector has one
   per repeated root.  Generic sector rank remains deg(rad(g)).  Split
   coordinates are noncanonical, no general torsion-free complement is
   claimed, and this gives no polynomial mate, new Keller case, or open
-  JC(2) conclusion.  This candidate is not a proved dependency before
-  independent audit and explicit status promotion.
+  JC(2) conclusion.
 source: root-jc-all-sector-primary-torsion-2026-08-15
+audit: independent selected-root congruence, global-power dying quotient, injective alternative, T-action intertwining, algebraic-closure primary exhaustion and norm/flat descent, nonwrap uniqueness, strict filtration, thickness/gcd character count, wrap regression, exact-artifact, normal/-O, hash, AST/security, and documentation audit CLEAN
 depends_on:
   - THM-3418-one-monomial-nonlinear-fiber-keller-classification
   - THM-3422-one-root-nonlinear-integral-hamiltonian-response
@@ -34,9 +33,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3433 -- all-sector multiroot primary-torsion classification
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**  Nothing in this file is a proved dependency before a
-different agent audits it and the status is explicitly promoted.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Statement and connection contract
 
@@ -581,4 +578,4 @@ python3 04-computation/jc_all_sector_multiroot_primary_torsion_thm3433.py
 ```
 
 The finite universe is evidence for the coefficient-independent proof, not
-an extrapolated cutoff.  QED for the provisional candidate.
+an extrapolated cutoff.  **QED.**
