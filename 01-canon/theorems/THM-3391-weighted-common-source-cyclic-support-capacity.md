@@ -297,11 +297,11 @@ The exact twenty-one-case boundary is:
 Thus the weighted common-source theorem is already a proved projected
 mechanism, not merely a proposed extension.
 
-### 5.3 Prospective THM-3399 one-high terminal
+### 5.3 THM-3399: the proved complete projected-wall application
 
-The current projected complete-wall verifier remains under exact replay and
-THM-3399 remains `RESERVED / UNPROVED`.  For one high denominator `d`, it
-forms the **deduplicated** support
+THM-3399 applies the common-source theorem at three distinct levels.  On its
+positive-gap rows, one high denominator `d` remains.  It forms the
+**deduplicated** support
 
 ```text
 S={c mod d:c is a fixed-clean actual cell}.             (28)
@@ -309,21 +309,75 @@ S={c mod d:c is a fixed-clean actual cell}.             (28)
 
 Deduplication is necessary before comparing support cardinality with the
 unweighted ambient capacity `ceil(d/7)`: one residue may have arbitrarily
-many actual-cell representatives.  The exact weighted predicate
-`lambda_C(a)<|C|` is equivalent to `lambda_(1_S)(a)<|S|` for one blocker,
-but their numerical margins differ.
+many actual-cell representatives.  Its translated-cardinality terminal
+`|S|>ceil(d/7)` and its located-pair terminal of exact effective order
+`2..7` are both sufficient corollaries of `(12)`.  The final census closes
+`113727` one-high cases by located torsion and one by translated cardinality.
 
-The intended terminal's two certificates are corollaries of `(12)`:
+The exceptional row `195` first uses a weighted three-block specialization.
+Let `C_216` be the actual complete-cell source fixed-safe for the first label,
+so
 
-1. `|S|>ceil(d/7)` bounds every unit window by the ambient capacity.
-2. A located pair of image order `2..7` cannot lie in one strict band under
-   any unit numerator.
+```text
+|C_216|=119368.
+```
 
-Exact evaluation of `(12)` strictly dominates both.  It can settle scattered
-supports at ambient equality and locate a maximizing hostile unit/window.
-No change to the running verifier is needed to state this analytic
-strengthening; its existing certificates already imply `(12)` in every case
-they close.
+For each suffix denominator `d`, put
+
+```text
+w_d(r)=#{c in C_216:c=r mod d},
+h_d=ceil(d/7),
+K_d=sum of the h_d largest fibre multiplicities w_d(r).
+```
+
+Every lawful unit/translated strict band meets at most `h_d` residue atoms,
+so `lambda_d<=K_d`.  Hence the three-block inequality
+
+```text
+K_(d_1)+K_(d_2)+K_(d_3)<|C_216|=119368
+```
+
+is a direct instance of `(5)`.  Of the `1565` residual divisor states,
+`1408` satisfy this strict inequality and `157` are retained as hostile.
+The weakest strict margin is `4`, at passport
+`(1872,6370,57330,458640)`, with suffix denominators
+`(1872,57330,458640)` and majorants `(18182,35662,65520)`.  The closest
+hostile is exact top-`h` equality for suffix triple
+`(10192,65520,458640)`, with majorants `(22696,31152,65520)`.
+The bounded hostile-state terminal then enumerates only `599` one-high cases
+on `156` passports, all closed by located torsion.  Its unique passport with
+no one-high case routes to the two-high terminal below.
+
+For that row's two-high branch, retain the actual common source `C` fixed-safe
+for labels `216,351`, with `|C|=100776`.  The exact `137`-case partition is
+
+```text
+76  common-modulus support-capacity cases,
+60  actual-cell top-h atom-majorant cases,
+ 1  denominator-two projected-measure case.
+```
+
+The weakest actual-cell top-`h` survivor has denominators
+`(32760,458640)` and
+
+```text
+100776-24800-65520=10456>0.
+```
+
+The final denominator-two case is not a strict capacity certificate; it is
+closed by the separate exact projected-measure surplus `3/91`.
+
+The equality typing is load-bearing.  Equality
+`W=sum_i K_i` only says that the top-`h` majorant is silent.  If any exact
+capacity satisfies `lambda_i<K_i`, then `sum_i lambda_i<W` and `(5)` still
+closes the packet.  Only when every exact capacity saturates, so
+`sum_i lambda_i=W=sum_i K_i`, does the maximum-edge partition criterion
+`(15)--(16)` apply; correlated physical phases must then be checked through
+the cover locus of Section 4.
+
+These applications are proved by THM-3399.  The ledger consequence belongs
+to THM-3399 alone: this abstract THM-3391 specialization changes no ledger,
+wall count, family count, projected cap, or LRC(14) status.
 
 ### 5.4 THM-3388: the correlated q=3 equality stratum
 
@@ -333,8 +387,8 @@ says that an independent-phase cover must partition the three sheets into
 three singleton maximum edges, but it does not decide whether those three
 owners occur at one physical base phase.
 
-The provisional THM-3388 candidate retains precisely the coordinate erased by
-that product-hypergraph quotient.  After assigning speeds `u,v,w` to the
+The proved THM-3388 theorem retains precisely the coordinate erased by that
+product-hypergraph quotient.  After assigning speeds `u,v,w` to the
 three sheets, it records signed affine gaps
 
 ```text
@@ -348,11 +402,12 @@ w*p+u*q+v*r=0.                                         (28a)
 ```
 
 The hostile `(1,4,7)` has every pair shadow but no closing circulation;
-`(1,4,5)` closes.  Thus THM-3391 supplies the equality partition, while the
-q=3 program supplies the correlated phase sidecar.  THM-3388 remains related,
-not a dependency, until its independent audit promotes it.
+`(1,4,5)` closes.  Thus THM-3391 supplies the equality partition, while
+THM-3388 supplies the independently audited correlated phase sidecar.  It is
+related rather than a dependency because the present theorem does not invoke
+that correlated classification.
 
-### 5.5 THM-3389: the next typed equality stratum
+### 5.5 THM-3389: the proved typed q=4 equality stratum
 
 For `X_4`, unit blockers have singleton capacity, whereas a multiplier with
 gcd two collapses to an antipodal two-sheet image and has capacity two.  Thus
@@ -365,13 +420,12 @@ the nonzero-multiplier scalar equality has only the capacity partitions
 The Boolean equality criterion sharpens `(28b)`: four singleton edges must
 use all four sheets; a pair edge and two singleton edges must use its
 complementary sheets; two pair edges must choose the two complementary
-antipodal fibres.  Correlated physical phases may still delete some of these
-product-hypergraph covers.
-This is the exact transverse type signature reserved by THM-3389's four-sheet
-clutter stub.  The abstract `X_4` hypergraph additionally permits the zero
+antipodal fibres.  This is the exact transverse type signature classified by
+THM-3389, whose proved complete-cochain criterion decides which product covers
+share one physical phase.  The abstract `X_4` hypergraph additionally permits the zero
 multiplier, whose one maximum edge is all four sheets, but that trivial
 capacity-four species is not transverse and is not assigned to THM-3389.
-No correlated q=4 classification is claimed here.
+No additional correlated q=4 classification is claimed here.
 
 ### 5.6 Prime-sheet equality beyond triangles
 
@@ -568,9 +622,10 @@ The meta-pattern **Keep the common source under cyclic blocker quotients** is
 now routed in `00-navigation/META-PATTERNS.md`.  Its trigger is several
 cyclic blockers acting on one weighted source; its counterindications are
 lost source identity, erased numerator gcd type, changed endpoint convention,
-or a deleted target grid.  The next concrete extensions are the q=3
-circulation sidecar, the q=4 typed equality clutter, and exact
-`lambda_S(a)` replacement of the two coarse one-high terminals in THM-3399.
+or a deleted target grid.  The q=3/q=4 extensions are proved in
+THM-3388/3389.  Further transfers include q=5/q=7 correlated clutters, the
+packet-indexed common-source lift of Section 8, and exact `lambda_S(a)`
+replacement of THM-3399's two coarse one-high terminals.
 
 This theorem changes no refined ledger.  It proves no physical entry, rung,
 arbitrary projected sector, arbitrary-residue sector, or LRC(14).

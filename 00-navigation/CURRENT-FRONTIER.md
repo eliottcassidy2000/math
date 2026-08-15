@@ -25,14 +25,9 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; projected caps `1579/216`. At `z1=216`, THM-3361
-closes the three `L720720` rows; THM-3378 closes row 94 of the next family and
-leaves ledger/wall/families `372913/109/12` (109 rows in 12 families remain).
-THM-2941/3349/3350/3352/3355 close the positive matched-residue branch
-`z_e=q_eL-e` on all `3,003` bodies, including all `561` reflected six-level
-residual bodies; THM-3360 proves the physical edge floor and THM-3384 gives an independent canonical-residue closure. THM-3381 bounds
-phase/tree drift and refutes residue-blind transfer. Open: `k=0`, other `k=1`
-residues, projected `k=2,3`, rung, physical entry and LRC; screens are not covers.
+Direct frontier: `<=6`; caps `1579/215`. THM-3399's `110`-row audit closes all `109` live after THM-3378. Sixty-six use one-high terminals; row `195` uses the `1408+157` state accelerator and independent `76/60/1` two-high audit. Thus `372913/109/12 ->372804/0/0` and cap `216->215`.
+THM-2941/3349/3350/3352/3355 close the positive matched-residue branch `z_e=q_eL-e` on all `3,003` bodies, including all `561` reflected six-level residual bodies; THM-3360 proves the physical edge floor and THM-3384 gives an independent canonical-residue closure.
+THM-3381 bounds phase/tree drift and refutes residue-blind transfer. Open: `k=0`, other `k=1` residues, remaining projected `k=2,3` sectors, rung, physical entry and LRC; screens are not covers.
 THM-3356/3366 leave k2/k3 `4,056/200,069,517,203` and `1,897/2,548,893,834`; THM-3385/3387--3395/3398/3402 give q2--7 and all-q mode/cochain laws.
 THM-3405/3415: ZMC 4 iff `8|q or 9|q`; 5 iff `(10|q or 12|q)` with `8,9 not|q`. THM-3414: fixed-zero rank <=6 iff one of `15,16,18,20,24` divides q. MISTAKE-389 splits HG; THM-3409 gives the q15 tariff `(50,6)/(10,3)`; THM-3410 gives wedge/MST. THM-3368 has no clock seed; LRC remains open.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.

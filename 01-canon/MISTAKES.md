@@ -217,18 +217,24 @@ Format per entry:
   `-17651221657/66699959142726`.  Thus universality of the positive gap is the
   first invalid step; the inherited high gate, ray maxima, and the existing
   support-capacity lemmas remain valid.
-- **Repair / strongest survivor:** enumerate the finite two-/three-high
-  residuals instead of discarding them.  Row `195` has `137` two-high cases
-  and no three-high mask.  For the displayed hostile pair, the common source
-  has `100,776` actual fixed-safe cells.  On the common modulus `229320`, its
-  support has size `88,746`, while the two lifted danger capacities are only
-  `32,760` each, leaving `23,226`.  Independently, the exact THM-3391 weighted
-  maxima are `19,849` and `19,867`, leaving a common-source lower bound
-  `61,060`.  The exact packet therefore closes once the source and both
-  quotient maps are restored.  The whole row and wall remain open until every
-  residual is partitioned through the inherited common-modulus, weighted
-  actual-cell, or denominator-two measure terminals and replayed normally and
-  with `-O`.
+- **Repair / strongest survivor:** THM-3399 partitions the whole historical
+  wall rather than extrapolating the gap.  Forty-three rows close at the
+  screen and the `66` positive-gap residual rows use the high gate and
+  one-high terminals.  Row `195` first splits its `1,565` residual states as
+  `1,408` strict common-source top-`h` states plus `157` hostile states; only
+  the hostile bank is expanded, yielding `599` one-high cases on `156`
+  passports, all closed by located torsion.  The sole passport with no
+  one-high case has one denominator-two case inside the full independent
+  audit of `137=76+60+1` two-high cases; no three-high mask occurs, and the
+  equality case closes only by exact measure surplus `3/91`.  For the
+  displayed hostile pair, the common source has `100,776` actual fixed-safe
+  cells.  On the common modulus `229320`, support `88,746` minus lifted danger
+  capacities `32,760+32,760` leaves `23,226`; the stronger exact THM-3391
+  window maxima `19,849` and `19,867` leave `61,060`.  No `314,615` one-high
+  expansion is load-bearing.  Byte-identical normal/`-O` final replays close
+  row `195`, the historical `110`-row superset, and all `109` rows still live
+  after THM-3378.  This is projected-only: physical entry, other projected
+  sectors, the rung, and LRC(14) remain open.
 - **Reusable rule:** a scalar extremal gap proved on a selected prefix is not
   a universal arity reduction.  When several blockers survive, retain one
   actual source, maximize each pullback window over every unit and translation,

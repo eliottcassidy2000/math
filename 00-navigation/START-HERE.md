@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-14; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-08-15; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -20,13 +20,14 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`.
-   THM-3378 leaves ledger/wall/families `372913/109/12` at `z1=216`.
+1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/215`.
+   THM-3399 closes all `109` post-THM3378 `z1=216` rows, leaving
+   ledger/wall/families `372804/0/0`.
    THM-3352/3355/3360 close matched residues on all `3,003` bodies; THM-3384
    gives an independent affine proof. THM-3366 leaves
    `4,056/200,069,517,203` (`k=2`) and `1,897/2,548,893,834` (`k=3`).
-   `k=0`, other `k=1` residues, projected `k=2,3`, rung, entry, and LRC
-   remain open; THM-3368 is only a Horn tariff.
+   `k=0`, other `k=1` residues, remaining projected sectors, rung, physical
+   entry, and LRC remain open; THM-3368 is only a Horn tariff.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
