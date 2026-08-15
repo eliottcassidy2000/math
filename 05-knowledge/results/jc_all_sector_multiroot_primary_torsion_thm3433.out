@@ -1,0 +1,22 @@
+ALL-SECTOR MULTIROOT PRIMARY TORSION -- EXACT HOSTILE REFEREE
+nonwrap sector profiles: 102564
+global-power dying profiles: 1032
+injective-transition profiles: 101532
+selected nonwrap root occurrences: 2236
+blocked local resonances: 31254
+gcd character-count checks: 54175
+exact global-power transition kernels: 24
+exact dying-derivative identities: 24
+exact global quotient gauges: 52
+exact selected-root gauges: 24
+horizontal endpoint/persistence identities: 48
+strict filtration valuation checks: 158
+exact low-grid (P-rho)-kernel checks: 45
+finite torsion-thickness checks: 282055
+separate wrap primary blocks: 270875
+finite primary-model checks: 820
+nonsplit/support-collision controls: 17
+named blocked hostile: (d,sigma;e1,e2)=(4,2;3,1)
+named double-local hostile: (d,sigma;e1,e2)=(2,1;3,3)
+named positive arm: (d,sigma;e1,e2)=(2,1;3,2)
+GEOMETRIC PRIMARY-TORSION CLASSIFICATION VERIFIED

@@ -8,6 +8,17 @@ half-twist quotients eight and nine, and global rank four iff the sheet degree
 is divisible by eight or nine; [THM-3415](../01-canon/theorems/THM-3415-zero-mode-cochain-global-rank-five-support.md)
 proves, downstream of THM-3408's COMPUTER-ASSISTED PROVED cutoff, global rank
 five iff `(10|q or 12|q)` while `8` and `9` do not divide `q`;
+[THM-3416](../01-canon/theorems/THM-3416-zero-mode-cochain-global-rank-six-support.md)
+proves and independently audits global rank six on bases `11,15,23,25` after
+excluding lower bases `8,9,10,12`;
+[THM-3425](../01-canon/theorems/THM-3425-half-twist-rank-six-primitive-breaker-profile-closure.md)
+proves the primitive half-twist cap-six boundary and identifies joint quotient
+period plus parity as the exact breaker;
+[THM-3420](../01-canon/theorems/THM-3420-prime-rank-seven-zero-and-half-twist-splitter-closures.md)
+proves the rank-seven fixed-zero prime branch (`p=29` only) and the critical
+half-twist prime class `p=13 mod 14` (`p=13` only);
+FINITE-EXACT target-free rank-seven scout through `Q=200`, with candidate
+divisor antichain `{13,14,29,38,51,68,148}` and no all-q promotion;
 FINITE-EXACT unrestricted positive-transverse rank table for `15<=q<=28`,
 with independent union-state and exhaustive-combination solvers and literal
 witness replay.  No LRC(14) ledger decrement.
@@ -32,6 +43,11 @@ The live concept board is:
 | physical half-grid cover | divisor chart | block rank | affine normalization | selected-mode centre/cochain |
 | rank-four witness | four-block clutter | full union plus gcd gate | dilation | no intrinsic pair orientation |
 | rank-five atom | anchor plus four disjoint petals | OR=XOR on sheets | divisor pullback | prime-breaker sidecar |
+| rank-six atom | anchor plus five petals | OR=XOR at 11/23/25 | divisor pullback | Q15 fixed-sheet collision |
+| primitive rank-six family | quotient-order profile | joint period plus parity | scale and add one breaker | scaled masks alone retain old period |
+| exceptional orders | four-vertex directed graph | complement quota | anchor elimination | missing/bidirected edges |
+| rank-seven candidate atom | sheet collision hypergraph | parity defect of multiplicity | divisor pullback | pair shadow loses higher intersections |
+| prime rank-seven tail | multiplicative short-interval splitter | power sums and ratio set | global dilation | capacity forgets multiplier ratios |
 
 The exact connection contract is:
 
@@ -500,6 +516,357 @@ vertices its denominator density is `43/864`.  Fibonacci indices are exactly
 is the precise ancestry/Boolean/recurrence transport sought here; it remains
 a cover-clutter theorem, not a tournament or an LRC exit.
 
+[THM-3416](../01-canon/theorems/THM-3416-zero-mode-cochain-global-rank-six-support.md)
+closes the next grade:
+
+```text
+rho_ZMC(q)=6
+iff (11|q or 15|q or 23|q or 25|q)
+and 8,9,10,12 all do not divide q.
+```
+
+This is the first grade where the generalized-tournament grammar appears
+intrinsically rather than metaphorically.  Capacity reduces every target-free
+half-twist six-cover to exceptional quotient orders `{3,5,17,29}`.  If
+`c(a,b)` is the largest fraction of an order-`b` block inside the complement
+of a maximal order-`a` anchor, the strict arcs are
+
+```text
+3 -> 17,29;        5 -> 17,29;        17 <-> 29.
+```
+
+The `{3,5}` edge is missing at equality but is killed by forbidden lcm 15;
+the `17/29` edge is genuinely both-way.  This four-vertex generalized
+tournament schedules the proof, while the positive objects themselves are
+six-block pointed clutters.  The mixed exact number `70/493<14/85` is the one
+pairwise load raw density cannot decide.
+
+Concurrent work supplied an orthogonal closure of that same bidirected edge.
+The involution `ell -> -1-ell` makes the order-17 and order-29 missed sets
+unions of reflection orbits; CRT turns a mixed missed set into a product
+cylinder.  Its worst mixed margin is `644/21199>0`, while the pure margins are
+`7/731` and `17/1247`.  The generalized tournament exposes the pairwise proof
+scheduler; the reflection/CRT sidecar proves that arbitrary mixtures cannot
+escape it.  This is a genuine two-representation agreement, not duplicate
+finite search.
+
+The three odd atoms `Q=11,23,25` are literal partitions with one anchor and
+five petals, so sheet OR equals XOR.  The `Q=15` zero atom instead has one
+sixfold fixed-sheet collision and fourteen singleton sheets.  Literal
+half-twist support pulls back to every multiple of
+`{8,9,10,11,12,15,23,25}`, but primitive augmented support does not: the
+scaled `Q=33` cover has gcd three.  Global divisor ancestry is precisely what
+separates those statements.
+
+The rank-six subset of the harmonic series has coefficient `25/207`, and the
+cumulative coefficient through rank six is `149/345`.  Fibonacci indices are
+12 classes modulo 150.  On the Berggren U-spine they are 14 classes modulo 99;
+on the full ternary tree, tracking triples modulo 56925 gives an exact finite
+automaton rather than a forced tournament.
+
+[THM-3425](../01-canon/theorems/THM-3425-half-twist-rank-six-primitive-breaker-profile-closure.md)
+closes the primitive boundary that global divisor support alone did not
+settle.  For a half-twist family `R`, let
+
+```text
+m(r)=Q/gcd(Q,r),              L(R)=lcm_(r in R)m(r).
+```
+
+Then `L(R)=Q/gcd(Q,R)`.  The augmented breaker is exactly `L(R)=Q` plus an
+odd selected residue; when `Q` is even, joint period already forces parity.
+Outside multiples of `8,9,10,12`, a cap-six cover has joint period `Q` iff
+
+```text
+Q in {11,15,22,23,25}.                                  (14a)
+```
+
+Consequently
+
+```text
+r^prim_(1/2)(Q)<=6
+iff 8|Q or 9|Q or 10|Q or 12|Q
+    or Q in {11,15,22,23,25}.                           (14b)
+```
+
+The positive direction on a multiple of a lower base is not raw pullback:
+scale the four- or five-owner atom, then adjoin residue one to restore the
+new prime-power breaker.  This uses at most six owners.  In particular,
+`Q=27` has the primitive five-cover `(1,3,15,18,21)`; its absence from the
+*exact-rank-six* list was not a cap-six obstruction.  The correct hostiles are
+`Q=33` and `46`, whose displayed scaled covers retain joint periods 11 and 23.
+
+The negative proof uses two weighted reflection cores.  The normalized
+11-core scores at orders `11,22,33,44,55,66` are
+`1,1,1,3/4,4/5,5/6`; the 23-core scores at `23,46,69` are `1,3/4,5/6`.
+Exact `Q=33,66` candidate-subset gates leave no full joint period, and a mixed
+11/23 core misses at least `269/10879`.  This is a new reusable proof pattern:
+weight the fixed reflection orbit so a sharp atom has unit score, then use
+joint period to turn equality into a finite lcm gate.  In the lower-base-free
+fixed-zero sector the same theorem and THM-3414 leave exactly `Q=15`.
+
+The next finite scout deliberately stays below theorem status.  It searches
+both twists, with the primitive prime-breaker gate retained, for every
+target-free `2<=Q<=200`.  The exact rank-seven positives have minimal divisor
+antichain
+
+```text
+{13,14,29,38,51,68,148}.                                (15)
+```
+
+Within the scanned window, every global rank-seven degree is exactly a
+target-free multiple of one of these seven candidates.  This is a finite
+observation and an all-`q` hypothesis, not a converse theorem.  The hostile
+controls `17,19,31,37,43,67,74,95,127,149,199` have no primitive cover of rank
+at most seven.
+
+The atom anatomy identifies a better carrier than a tournament.  Given block
+masks `B_i`, put `m(x)=#{i:x in B_i}` and define the parity-defect set
+
+```text
+E={x : m(x) is even}.                                    (16)
+```
+
+For a full OR-cover, `xor_i B_i` is exactly the complement of `E`.  Thus OR
+equals XOR if and only if every sheet has odd multiplicity.  The `Q=13,14`
+atoms are disjoint partitions.  Both `Q=29` atoms retain OR=XOR despite a
+single sevenfold or threefold collision, and `Q=68` retains it despite four
+copies of the same triple collision.  By contrast, `Q=38,51,148` have parity
+defects of sizes `4,6,8`.  Their multiply-covered sheets form a collision
+hypergraph on the seven owner blocks.  Its weighted pair graph is merely the
+two-section: it forgets whether a triangle came from one triple sheet or three
+pair sheets, precisely the information XOR needs.  This is the rigorous
+survivor of the tournament-of-four/six analogy: the rank-six exceptional-order
+graph schedules a proof, while the rank-seven positive carrier is genuinely
+higher arity.
+
+There is an exact refinement.  If
+
+```text
+Omega=sum_i |B_i|-Q=sum_x (m(x)-1),
+G=sum_x floor((m(x)-1)/2),
+```
+
+then sheet by sheet
+
+```text
+Omega=|E|+2G.                                           (16a)
+```
+
+Thus `|E|` is the parity-visible overlap and `G` is the odd-collision genus
+that XOR cannot see.  The finite atoms split as follows:
+
+| atom | `Omega` | `|E|` | `G` | collision type |
+|---|---:|---:|---:|---|
+| `13` half | 0 | 0 | 0 | partition |
+| `14` half | 0 | 0 | 0 | partition |
+| `29` zero | 6 | 0 | 3 | one sevenfold sheet |
+| `29` half | 2 | 0 | 1 | one triple sheet |
+| `38` half | 4 | 4 | 0 | four pair sheets |
+| `51` half | 16 | 6 | 5 | mixed pairs, triples, quadruples |
+| `68` half | 8 | 0 | 4 | four copies of one triple |
+| `148` half | 8 | 8 | 0 | eight pair sheets |
+
+Formula `(16a)` is the smallest sidecar that separates an XOR-preserving
+triple collision from an XOR-destroying pair collision at the same order of
+overlap.  A pairwise tournament sees neither `E` nor `G` without weights and
+higher-intersection labels.
+
+Rank seven also breaks the rank-six capacity shortcut for a structural reason.
+The exact half-twist maximum `h(m)` obeys `h(m)<=(m+6)/7`, so its density tends
+to the critical value `1/7`; the inequality `7h(m)>=m` does not yield a finite
+exceptional-order cutoff analogous to `(9)`.  Any all-`q` proof of `(15)` must
+therefore control overlap, not only block mass.  The cheapest promising
+invariants are the parity defect `(16)`, reflection-orbit missed sets, and a
+bounded breaker-state recurrence indexed by prime-order and lcm interactions.
+There is an important unconditional half of the antichain statement.  Let
+
+```text
+S_atom={q : some b in {13,14,29,38,51,68,148} divides q,
+            and no b in {8,9,10,11,12,15,23,25} divides q}.       (16b)
+```
+
+Every `q in S_atom` has rank exactly seven: pull back the displayed atom for
+the upper bound, and apply THM-3416 for the lower bound.  Thus the same
+inclusion-exclusion number
+
+```text
+165741596/1554406815                                      (16c)
+```
+
+is unconditionally the natural density and harmonic coefficient of a proved
+rank-seven subfamily.  It is only conditional as the coefficient of the
+*entire* rank-seven stratum.  Likewise `837065119/1554406815` is a proved
+lower bound for the cumulative rank-at-most-seven density and becomes an
+equality only under the antichain hypothesis.  This is exactly the
+degree-graded monoid distinction: atom generation is a theorem; completeness
+of the atom list is not.
+
+[THM-3420](../01-canon/theorems/THM-3420-prime-rank-seven-zero-and-half-twist-splitter-closures.md)
+now resolves two infinite prime branches by restoring exactly the coordinate
+that mass and reflection discard.  At fixed zero, a prime `p=14k+1` cover
+would force a unique multiplicative factorization
+
+```text
+F_p^*={1,...,k} C,                  |C|=14.             (17)
+```
+
+Power sums reduce `(17)` to `p in {29,211}`.  A circular-gap argument proves
+that the short symmetric interval has full ratio set at 211, so no two blocks
+can be disjoint there; at 29 the factor is the Paley quadratic-residue set.
+Thus the sevenfold collision at the fixed sheet of the `Q=29` atom is not an
+accident of search: it is the common anchor of a multiplicative splitter.
+
+For half twist in the critical prime class `p=13 mod 14`, capacity forces one
+even and six odd blocks to partition.  Seven exact power sums and the Newton
+identity for the six squared dilations exclude every `p>13`, leaving precisely
+the `Q=13` partition.  The same defect invoice rules out the prime classes
+`3,5 mod 14` immediately.  The live prime classes are therefore only
+`1,9,11 mod 14`.  A separate FINITE-EXACT census checks all 43 such primes
+through 500 with the canonical augmented solver and sees just `p=29`; it
+visits 137,209 memoized states, with `37,43,53` as the first hostile in each
+live class and `211,499` as long-tail controls.  The `p=29` half atom splits
+as three even blocks and four odd blocks; its fixed sheet has multiplicity
+three and every nonfixed sheet multiplicity one.
+Composite candidates `14,38,51,68,148` use nested quotient orders and are not
+covered by the prime splitter theorem.  This cleanly splits the all-`q`
+problem into a mixed-prime splitter lane and a nested-order composite lane.
+
+The atom monoid also gives exact recurrence transports without waiting for
+completeness.  Fibonacci ranks of apparition for the seven atoms are
+`7,24,14,18,36,18,114`; after removing the rank-at-most-six apparition
+classes, one obtains the proved implication
+
+```text
+7|n and 6,10,15,25 do not divide n  ==>  rho_ZMC(F_n)=7. (18)
+```
+
+These are 108 classes modulo 1050.  As a subset of the natural-number index
+line, and hence as a subseries of the harmonic series, its coefficient is
+`18/175`.  This coefficient concerns `sum 1/n` over indices; the distinct
+series `sum 1/F_n` converges and should not be conflated with it.
+
+On the Berggren U-spine the odd degree is
+`q_n=4n^2+12n+11=(2n+3)^2+2`.  It has no roots modulo 13 or 29, while its
+roots modulo 51 are `{2,19,29,46}`.  Therefore the exact atom-generated law is
+
+```text
+n mod 51 in {2,19,29,46},
+n mod 9 not in {1,5},
+n mod 11 not in {0,8}.                                  (19)
+```
+
+This gives 72 classes modulo 1683 and harmonic coefficient `8/187`.  On the
+full Berggren ternary tree, the exact atom-generated counts through depth ten
+are `0,0,1,3,9,17,48,176,500,1506,4587`; this is a finite automaton prefix,
+not a claimed limiting tree density.  Equations `(18)--(19)` are the concrete
+branch transplant: Fibonacci selects the prime atom 13, while the U-spine
+selects the composite nested-order atom 51.
+
+The support automaton has a precise missing coordinate.  For a seven-block
+certificate `C`, put
+
+```text
+P_C(t)=sum_x t^m(x),          L_C=lcm_r Q/gcd(Q,r),
+Delta_C=Q/L_C,                eta_C=1 iff some half residue is odd.
+```
+
+Then
+
+```text
+Omega=P_C'(1)-Q,
+|E|=(Q+P_C(-1))/2,
+G=(Omega-|E|)/2.                                      (19a)
+```
+
+A faithful certificate state retains the twist, quotient-order multiset,
+`P_C`, collision hypergraph, `(L,Delta,eta)`, and unused owner slack.  The
+local collision control has only three states -- uncovered `Z`, positive odd
+`O`, and positive even `E` -- and crossing it with the half-twist parity bit
+does produce six finite states.  It is an automaton, not a tournament:
+
+```text
+Z -> O,       O -> E,       E -> O with G increased by one.       (19b)
+```
+
+The global period coordinate cannot be finite.  Pull an atom on `b` sheets
+through a fibre of degree `k` by `Q'=kb`, `R'=kR`.  Exactly
+
+```text
+P_(C')(t)=k P_C(t),             (Omega',|E'|,G')=k(Omega,|E|,G),
+O(C')=O(C),                     L_(C')=b,
+Delta_(C')=k,                   eta_(C')=(k mod 2) eta_C.          (19c)
+```
+
+Fibre maps compose by `T_l T_k=T_(lk)`.  Thus the minimal recurrence carrier
+is a finite atom/collision shape plus one integer multiplicative cocycle.
+Normalized collision densities are grade-invariant, while `L/Q=1/k` detects
+the grade.  No purely finite automaton can retain exact joint period on the
+whole monoid because `k` is unbounded.
+
+Two exact hostiles show that collision anatomy and primitive period are
+independent.  At `Q=26`, the scaled 13-atom and the primitive witness
+`(1,4,6,7,10,19,25)` are both partitions, but their `(L,Delta,eta)` values are
+`(13,2,0)` and `(26,1,1)`.  At `Q=58`, the scaled 29-half atom has
+
+```text
+P=56t+2t^3,       (|E|,G,L,Delta,eta)=(0,2,29,2,0),
+```
+
+whereas the primitive witness `(4,21,25,33,37,48,54)` has
+
+```text
+P=56t+2t^2,       (|E|,G,L,Delta,eta)=(2,0,58,1,1).      (19d)
+```
+
+At `Q=76`, atom ancestry proves global rank seven, but the primitive finite
+census has no cap-seven quotient witness.  Since every rank-seven atom is
+owner-saturated, the rank-four/five repair “scale, then add residue one” would
+use an eighth owner.  Period promotion at grade seven must change the seven
+owners themselves, as `(19d)` does.
+
+The atom-generated density admits a new exact split.  Bases
+`13,14,29,68` offer at least one OR=XOR certificate and contribute
+`67404/737035` after lower bases are removed.  Degrees supported only by the
+even-defect atoms `38,51,148`, after excluding the first packet and all lower
+bases, contribute `4717312/310881363`.  Their sum is `(16c)`.  Collision genus
+is certificate-valued rather than degree-valued: a degree divisible by both
+13 and 29 can carry several incompatible certificates.
+
+For Fibonacci indices the complete atom-label clock has period `239400`.
+Within one period the accepted certificate states are
+
+| active atoms | fibre parity | count | index coefficient |
+|---|---|---:|---:|
+| `{13}` | odd | 10944 | `8/175` |
+| `{13}` | even | 4560 | `2/105` |
+| `{13,29}` | odd | 9120 | `4/105` |
+
+At `F_14=377=13*29`, the 13 partition has `Delta=29,G=0`; the 29-zero
+certificate has `Delta=13,G=39`; and the 29-half certificate has
+`Delta=13,G=13`.  Only `F_7=13` is a direct full-period transported atom.
+
+For the full ternary Berggren tree, oddness of `q=2c+1` reduces the relevant
+state modulus to
+
+```text
+lcm(9,11,15,23,25,13,29,51)=364832325.                 (19e)
+```
+
+All three Berggren matrices have determinant `+-1`, hence act as permutations
+on the finite root orbit.  Let `T` be the average of those three permutation
+operators.  The finite semigroup they generate is a group (each permutation's
+inverse is a positive power), so the Markov chain on the root orbit is
+irreducible and doubly stochastic.  Therefore the Cesaro mean of the level
+acceptance proportions exists and equals
+
+```text
+|accepting states in the root orbit| / |root orbit|.     (19f)
+```
+
+This is a rational theorem, not an orbit census or an ordinary limiting-level
+density.  Ordinary convergence requires aperiodicity; computing the orbit and
+its Markov period remains open.
+
 ## 8. Verification and new frontiers
 
 Run
@@ -537,17 +904,19 @@ endpoint controls `Q=7` half twist and `Q=14` zero twist fail, while adjacent
 scope repairs in MISTAKE-390; neither repair changes the cover theorem or its
 rank consequences.
 
-After THM-3415 the highest-value continuations are:
+After THM-3425 the highest-value continuations are:
 
-1. classify the primitive rank-five pattern beyond the finite `Q<=500`
-   audit, where the only observed families are `Q=16,18` at zero twist and
-   the `8/9` breaker lifts plus atoms `10,12` at half twist;
-2. combine the PROVED THM-3414 fixed-zero six-owner bases
-   `{15,16,18,20,24}` with a half-twist six-owner classification to decide
-   global rank six; THM-3414 inherits THM-3408's computer-assisted cutoff and
-   is not an independent proof of that arithmetic gate;
-3. intersect the q23 rank-six primitive half-twist with the reserved
+1. prove or refute the rank-seven antichain `(15)` by replacing the failed
+   density cutoff with an overlap/reflection recurrence; the first decisive
+   target is to show that every target-free seven-cover has a divisor among
+   `13,14,29,38,51,68,148`;
+   THM-3421 now closes all prime half-twist classes; THM-3426 is the reserved
+   rough-composite ratio extension and THM-3428 the reserved full-order lane,
+   while mixed nested quotient orders remain the composite obstruction;
+2. intersect the q23 rank-six primitive half-twist with the reserved
    exceptional-edge leakage problem, keeping cover rank distinct from LRC
    row exclusion;
+3. compute the finite orbit in `(19e)` and its Markov period; only the Cesaro
+   limit `(19f)`, not ordinary level convergence, is currently proved;
 4. transport one zero-cochain certificate through the actual LRC body/core
    sidecars.  Formula `(7)` alone closes no row and leaves LRC(14) open.

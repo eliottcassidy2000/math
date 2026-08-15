@@ -1,0 +1,11 @@
+THM-3429 prime-fibre activity descent -- exact referee
+status=VERIFIED_EXACT_SUPPORT_FOR_PROVED_UNBOUNDED_ELEMENTARY_PROOF;odd_half_twist;cap7;joint_period_typed;no_LRC14_decrement
+typed_universe=Q_does_not_divide_each_selected_residue;r=0_universal_and_r=Q_empty_are_excluded
+fibre_universe=(composite_moduli,prime_fibres,pullback_cells,active_cells,max_active_hit)=(93, 184, 2078480, 11819480, 15)
+threshold_arithmetic=(selected_rows,activity_floor_lt7,equality_primes)=(((3, 1, 3), (5, 1, 5), (7, 1, 7), (11, 2, 6), (13, 2, 7), (17, 3, 6), (19, 3, 7), (23, 4, 6), (29, 5, 6), (31, 5, 7), (37, 6, 7), (41, 6, 7), (43, 7, 7)), (3, 5, 11, 17, 23, 29), (3, 5, 7))
+boolean_defect_budget=(single_prime,pair_full_order_floors)=(((3, 4), (5, 2), (7, 0), (17, 1), (29, 1)), ((3, 17, 2), (3, 29, 2), (5, 17, 4), (5, 29, 4), (17, 29, 5)))
+Q51_sharp_positive=(orders,activities,defects,full_order_indices,p3,p17)=((51, 51, 17, 17, 51, 3, 51), ((3, 5), (17, 6)), ((3, (2, 3)), (17, (5,))), (0, 1, 4, 6), (3, 17, (0, 1, 4, 5, 6), (2, 3), (0, 1, 2, 3, 6, 7, 9, 10, 13, 14, 15, 16), ((0, (1, 0, 0, 1, 1), 0), (1, (1, 1, 1, 1, 1), 2), (2, (1, 0, 0, 1, 1), 0), (3, (1, 0, 0, 1, 1), 0), (6, (0, 1, 1, 1, 0), 0), (7, (0, 1, 1, 1, 0), 0), (9, (0, 1, 1, 1, 0), 0), (10, (0, 1, 1, 1, 0), 0), (13, (1, 0, 0, 1, 1), 0), (14, (1, 0, 0, 1, 1), 0), (15, (1, 1, 1, 1, 1), 2), (16, (1, 0, 0, 1, 1), 0))), (17, 3, (0, 1, 2, 3, 4, 6), (5,), (0, 2), ((0, (3, 3, 3, 3, 3, 3), 1), (2, (3, 3, 3, 3, 3, 3), 1))))
+Q39_joint_period_hostile=(residues,orders,joint_period,a3)=((3, 6, 9, 15, 21, 27, 33), (13, 13, 13, 13, 13, 13, 13), 13, 0)
+transverse_boundary_controls=(Q,r0_size,rQ_size)=((13, 13, 0), (31, 31, 0), (51, 51, 0))
+semantic_sha256=c3b8596233d20f55e5c0bf0419c5f3f627cbf371e3004a5f40ab8a582a09b9f8
+scope=prime_fibre_descent_and_five_lane_reduction_only;mixed_small_prime_lanes_open;fixed_zero_open;arbitrary_time_open;LRC14_open

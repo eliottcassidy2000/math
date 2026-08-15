@@ -217,19 +217,10 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
 
 ### July 2026 explicit dimension-three Jacobian certificate — public announcement, no paper
 
-- **Primary / freshness:** [original public announcement](https://x.com/__alpoge__/status/2079028340955197566),
-  2026-07-19, and [exact displayed map and certificate](https://jacobianfun.org/jacobian-explained).
-  **ANNOUNCEMENT ONLY:** no stable paper or peer review was located by 2026-07-21;
-  do not infer discovery credit beyond the primary wording.
-- **Imported role:** the displayed map has constant Jacobian determinant `-2`
-  and an explicit triple collision, so it refutes `JC(3)` and, by padding,
-  `JC(n)` for all `n>=3`.
-- **Repo consumer:** [THM-1300](../../01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md)
-  independently checks both identities exactly and records the downstream Weyl
-  and equivariant anatomy.
-- **Does not prove:** `JC(2)`, `DC(1)`, or `DC(2)`.  Verification, provenance,
-  publication, and priority are separate claims; use THM-1300's byte-zero
-  correction before repeating any historical attribution in its body.
+- **Primary / freshness:** [announcement](https://x.com/__alpoge__/status/2079028340955197566), [displayed map](https://jacobianfun.org/jacobian-explained), and [weighted lift](https://github.com/algal/jacobianfun/blob/main/RESEARCH.md).  These are web sources, not paper or peer review.
+- **Imported role:** the displayed determinant-`-2` triple collision refutes `JC(n)` for `n>=3`.  The weighted construction realizes every generic degree `d>=3` (including a quartic 2-jet); the repo independently proves its `S_d` monodromy, atom status, and non-radical `S_5` inverse.
+- **Repo consumers:** [THM-1300](../../01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md) verifies the sporadic map; [THM-3438](../../01-canon/theorems/THM-3438-weighted-lift-keller-degree-spectrum.md) derives the weighted family and exact degree spectrum.
+- **Boundary:** no `JC(2)`, `DC(1/2)`, arbitrary-map classification, or priority claim follows; use THM-1300's byte-zero correction for attribution.
 
 ### Belov--Kanel--Kontsevich — *The Jacobian Conjecture is stably equivalent to the Dixmier Conjecture*
 

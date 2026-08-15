@@ -13,13 +13,15 @@ status: >
   (x+z^2, y, z)). This opens the 2-jet d=4 door of THM-1335 SS5 /
   backlog HYP-8130(a): the identities exist and the design staircase
   is one quadratic layer deeper than THM-1310 SS7. The theorem does
-  not exhibit or exclude a wild 2-jet Keller map, does not prove the
+  not itself exhibit or exclude a wild 2-jet Keller map; THM-3438 later
+  supplies an explicit wild degree-four member.  It does not prove the
   order-{1,3} conjecture or any box emptiness, and system-consistency
   in the 2-jet box is explicitly NOT a wildness certificate.
 source: kind-pasteur-2026-07-26-S131
 depends_on:
   - THM-1310-conic-pair-fibers-and-design-equations
 related:
+  - THM-3438-weighted-lift-keller-degree-spectrum
   - THM-1335-trisection-modulus-master-identities-trace-polynomiality
   - THM-1340-engine-trichotomy-zaffine-keller
   - THM-2451-twojet-plane-map-cone-prediction-hostile
@@ -33,6 +35,11 @@ hash_basis: working-tree bytes (LF)
 # THM-2446 -- the 2-jet Jacobian is six brackets; its cone is Euler's
 
 **PROVED + VERIFIED-EXACT** as itemized in the status.
+
+> **EXISTENCE UPDATE (THM-3438 / MISTAKE-396).**  The graded identities here
+> were never an existence obstruction.  The weighted quartic now gives a
+> wild `S_4` 2-jet Keller map in the high-degree line-cap tail.  All identities,
+> tame controls, and scoped negative statements below remain unchanged.
 
 The dormant "2-jet architecture" door (THM-1335 SS5, backlog item
 HYP-8130(a): "derive the z-graded det J identities; one hard
@@ -186,10 +193,10 @@ unit 1; ideal-exact swallowtail strata), which also RETIRES the
 the cuspidal edge; endpoints A1 and Z/2-symmetric A1A1) and the
 naive `unit x square x Jelonek` disc shape (`mu` is a non-unit on
 explicit degree-4 2-jet maps). The corrected hunt target is
-HYP-9027's odd-exponent Jelonek law, with blocking hypothesis G1:
-no field-degree-4 2-jet KELLER map is known (known 2-jet Keller
-examples have field degree 1), so the Keller-restricted (P1) has an
-empty verified domain until G1 is settled.
+HYP-9027's odd-exponent Jelonek law.  THM-3438 removes the former blocking
+hypothesis G1 by supplying a field-degree-four 2-jet Keller map; its full
+finite Jelonek/infinity-inertia audit is now the cheapest nonempty test of the
+Keller-restricted successor.
 
 The former prediction (P2), that `D5=D4=0` plus the alpha-part of
 `D3` forces `[w_x,w_y,w]=0`, is **REFUTED twice over, concurrently**
@@ -231,7 +238,8 @@ and removes a false constraint from any seed hunt.
 
 ## 6. Scope
 
-Nothing here exhibits or excludes a wild 2-jet Keller map, proves
+Nothing proved in this theorem itself exhibits or excludes a wild 2-jet
+Keller map; THM-3438 supplies one by a different construction.  Nothing here proves
 the order-{1,3} conjecture, or decides any box emptiness. Groebner
 box probes run during derivation were inconclusive within their
 watchdogs and are deliberately not cited as negatives.

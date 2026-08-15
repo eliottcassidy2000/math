@@ -56,14 +56,13 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
    phase; THM-3285 gives a literal `R-M-R` horn. Its FINITE-EXACT `13`-label
    normal atlas has two middle completions but no outer co-support. A two-axis
    atom, current and LRC(14) remain OPEN.
-10. **Tournament structure is operational and typed.** THM-3315 compiles
-    switched walks; THM-3364/3379 give local `T4`/Fibonacci median `b`;
-    THM-3369/3372 add skew/deletion currents. None supplies nonlocal arcs,
-    full SCC order or time.
-11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352
-    separate support and collision tax. THM-3359 gives residue/scar; THM-3364
-    restores phase; THM-3382 shows time/address can cross harmonic summability;
-    THM-3362 detects odd-profile pairs. General subsets and FC(3) remain open.
+10. **Pair structure must be typed.** THM-3315/3364/3369/3372 give local
+    tournament/walk currents; THM-3423 gives a Cayley disjointness graph, not
+    a tournament. None supplies nonlocal LRC arcs or physical time.
+11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
+    separate collision, phase and harmonic address. THM-3425 makes joint
+    period plus parity the primitive half cap-six breaker. Composite rank
+    seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.
     THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
     THM-3212/3225 leave critical points; THM-3237--3265 give the infinity
@@ -72,7 +71,9 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     persists it over the two-clutch etale germ. THM-3303/3328 split the
     constant-J boundary residual into open overlap, anti-tangent collision, or
     vertex-cone incidence. THM-3326/3348/3386/3406/3412 give the linear-`z`
-    ladder: affine-modification `I^q`, support/thickness, and full torsion arms.
+    ladder: affine-modification `I^q`, support/thickness, and full torsion arms;
+    THM-3418 closes sparse `f(x)+g(x)z^d`, `d>=2`, Keller components; THM-3419
+    gives generic response `deg(rad(g))` copies of regular `mu_d`, not general fibers.
     THM-3367 tames line images only; `JC(2)`/`DC(2)` remain OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
@@ -112,7 +113,7 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 | Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2202/3279/3289/3367 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3288/3359; distinguish index, level-count, and value supports |
-| Pythagorean / Pell / square and cube sums | [THM-3357](../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md) | THM-3333--3336/3339/3341/3345--3347/3353/3356/3358 and THM-3370/3375/3376; retain content, normal unit, branch order, ancestry, positivity chamber, and consumer labels |
+| Pythagorean/Pell/power sums | [THM-3357](../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md) | THM-3333--3336/3339/3341/3345--3347/3353/3356/3358/3370/3375/3376; retain content/unit, branch order, ancestry, positivity chamber, and consumer labels |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177/2191; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
 | Formalization | relevant theorem's `formalization` field | `00-navigation/*FORMALIZATION*`, then a clean build/axiom audit |
 | Research method | [`RESEARCH-PROTOCOL.md`](RESEARCH-PROTOCOL.md) | [`META-PATTERNS.md`](META-PATTERNS.md), relevant reflections |

@@ -1,15 +1,20 @@
 ---
 id: HYP-9027
-title: "Odd-exponent Jelonek law: general form refuted, Keller successor open"
+title: "Odd-exponent Jelonek law: general and Keller-every-component forms refuted"
 status: >
-  REFUTED IN THE STATED GENERAL-DOMINANT SCOPE + KELLER-RESTRICTED SUCCESSOR
-  OPEN.  THM-3059 gives an explicit dominant field-degree-four two-jet map
-  with generic S4, exact Jelonek plane, C3 infinity inertia, and even cleared
-  exponent 8.  The exact survivor is parity = inertia sign after reciprocal
-  reversal.  No field-degree-four two-jet Keller map is known; whether every
-  Jelonek component of such a Keller map must have odd inertia remains open.
+  REFUTED IN BOTH THE STATED GENERAL-DOMINANT SCOPE AND THE
+  KELLER-EVERY-COMPONENT-ODD SUCCESSOR.  THM-3059 gives a dominant quartic
+  two-jet map with C3 infinity inertia and even cleared exponent 8.  THM-3441
+  gives an explicit quartic Keller map whose genuine Jelonek component C=0
+  has identity inertia and generic-primitive cleared exponent 12.  The exact
+  survivor is parity = infinity-inertia sign after reciprocal reversal.
+  THM-3448 realizes genuine Keller C_ell inertia for every ell>=2, first C3
+  in degree five; only the arbitrary quartic/two-jet C3 lane remains open.
 source: kind-pasteur-2026-07-26-S132
 related:
+  - THM-3438-weighted-lift-keller-degree-spectrum
+  - THM-3441-weighted-quartic-jelonek-components-and-inertia-parity
+  - THM-3448-weighted-keller-cyclic-jelonek-inertia-family
   - THM-2455-quartic-swallowtail-scaffold-and-endpoint-corrections
   - THM-2446-twojet-zgraded-jacobian-decomposition-and-cone-system
   - THM-1310-conic-pair-fibers-and-design-equations
@@ -26,10 +31,19 @@ controls_output_sha256: b4facd9293a31765f220b6903d5e74a1d9fef4e5acb8764f65417991
 
 # HYP-9027 -- P1-prime: Jelonek components enter the fiber discriminant to odd order
 
-> **SUPERSEDED SCOPE.**  THM-3059 refutes the general-dominant odd-exponent
-> clause below.  Retain this file for the evidence and correction lineage.
-> The live successor asks whether the Keller condition forces odd infinity
-> inertia at every Jelonek component; it does not assume that conclusion.
+> **REFUTED SCOPE.**  THM-3059 refutes the general-dominant odd-exponent
+> clause below, and THM-3441 refutes its Keller-restricted
+> every-component-odd successor.  Retain this file for the evidence and
+> correction lineage.  The live structural survivor is parity equals
+> infinity-inertia sign.  THM-3448 closes the general Keller existence
+> question with genuine `C_ell` components for every `ell>=2`; arbitrary
+> quartic/two-jet `C_3` remains open.
+>
+> **KELLER DECISION (THM-3438, THM-3441 / MISTAKE-396).**  The weighted
+> quartic supplies the missing Keller witness, and its exact boundary audit
+> separates finite branch discriminant, monogenic index, and nonproperness.
+> Its `C=0` component is genuinely nonproper but has identity inertia.
+> THM-3448 then realizes the first weighted `C_3` component in degree five.
 
 Corrected successor to THM-2446 (P1), with THM-2455 supplying the
 proved classical layer. Let `F = A z^2 + B z + C : C^3 -> C^3` be
@@ -78,25 +92,31 @@ are real (the witness's `v^2` covers two distinct unramified
 points) and must be certified away per map (controls file, exact
 unramified-fiber checks).
 
+THM-3441 gives the decisive Keller ledger for the weighted quartic `G`:
+
+| component | genuine nonproperness | infinity inertia | raw `w` order | generic-primitive `E` |
+|---|---|---|---:|---:|
+| `C=0` | yes; one sheet escapes | identity `1^4` | 2 (index square, `i=1`) | 12 |
+| `L=0` | yes; two sheets escape | transposition `2 1^2` | 1 (`i=0`) | 5 |
+
+Thus the Keller-every-component-odd successor fails on `C=0`, while both rows
+obey `E mod 2 = sign(infinity inertia)`.
+
 ## Open obligations (from the program's validity gate)
 
-- G1 (blocking): exhibit a field-degree-4 2-jet Keller map or prove
-  none exists. STATUS UPDATE (THM-2465, S134): no witness found;
-  G1 pinned by a proved package (total degree >= 3 forced; universal
-  z-rationality; conic-cap emptied in four QQ-exact boxes; degrees
-  {1,3} realized on point/line caps, so unconditional degree-4
-  exclusion there implies the order-{1,3} degree-4 case -- a
-  hardness floor); any witness must satisfy the (N1)-(N5) resolvent
-  dossier.  Purity and the sign character force an odd Jelonek component
-  somewhere on an S4 branch; they do **not** force every Jelonek component
-  to be odd.  Decisive pending: the (1,2,2)+fiber4 GB box.
+- G1 is globally resolved positively by THM-3438: its weighted quartic has
+  field degree four and constant nonzero Jacobian.  THM-2465's point/line-cap,
+  conic-cap, and fixed z-affine exclusions survive only in their stated
+  restricted charts.  The old `(1,2,2)+fiber4` box is no longer an existence
+  blocker, though the z-affine order-`{1,3}` classification remains open.
 - G5 is repaired by THM-3059: after reciprocal reversal, the exact formula is
   `N=6v(ell)-(d_sigma+2i)`, hence `N mod 2` is the sign of infinity inertia.
-  The remaining Keller task is geometric: exclude C3 infinity inertia at a
-  Jelonek component, or prove that it forces a forbidden finite critical
-  divisor.  THM-3059's family shows that all Jacobian valuations can remain
-  zero; the missing local sidecar is the branchwise unit residue of the
-  primitive-element Jacobian cofactor.
+  THM-3441 verifies this repaired parity law on both components of an exact
+  Keller boundary and refutes the stronger odd-everywhere successor.
+  THM-3448 realizes genuine `C_ell` inertia for every `ell>=2` and identifies
+  the branchwise primitive-residue gate explicitly.  The remaining narrow
+  task is arbitrary quartic/two-jet Keller `C_3`, excluded only inside the
+  weighted quartic family.
 - G6 (decoupling search): a proper 2-jet map with
   Galois not contained in A_4 would decouple "square disc" from
   "proper".  The other requested decoupling now exists: THM-3059 is a

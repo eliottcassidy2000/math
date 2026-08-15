@@ -111,7 +111,7 @@ See [THE-ZOO.md](THE-ZOO.md): §4 recovers dormant threads (metagraph 183=|PG(2,
 
 ## Lead kind-pasteur-2026-07-20-S128c101: after THM-1345 (HYP-8150)
 - **(i) Prove the trace module:** conjecture = trace-polynomial monomials are exactly those outside the pure-x cone; suspected proof from z-affinity (z enters fibers linearly), depression (no x^2 term), and the master identity (x^3 reduces with 1/L). Would upgrade THM-1335(4)/1345(3) from computed to explained and settle all towers F^m at once (module closed under Tr => induction).
-- **(ii) The Abel-Ruffini rung:** formalize 'radical-invertible' as a realization-program invariant; the A_5 hunt (2-jet architecture, backlog c99(a)) now carries a second flag: the first non-radical Keller map = the polynomial Abel-Ruffini theorem.
+- **(ii) The Abel-Ruffini rung (SUPERSEDED/REFRAMED by THM-3438):** the weighted degree-five `S_5` atom is already an explicit non-radical Keller map.  Replace the old “first non-radical `A_5`” hunt by: classify the `S_5` weighted member's boundary/Jelonek geometry, and separately ask whether an alternating `A_5` Keller cover is realizable.
 - **(iii) Sections atlas:** sigma over {g=0} exists because the fiber cubic factors there; classify all divisors D with polynomial sections of F over D (candidates: images of monodromy-degeneration loci; the {E=0} u-fold wall).
 - **(iv) Lean: the section identity F(0,b,a-4b^2) = (a,b,0) is a 3-line polynomial identity; add to the certification package (with the master identities + 108a^2L identity + Tr(y) = 3b/2 + Tr(xy) = -3).
 - **Status:** OPEN; (i) is the explanatory prize; (iv) extends the headline Lean package.

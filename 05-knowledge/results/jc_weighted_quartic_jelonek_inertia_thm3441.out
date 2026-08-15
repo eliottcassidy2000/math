@@ -1,0 +1,26 @@
+theorem=THM-3441
+status=EXACT_DETERMINISTIC_COMPANION;THEOREM_STATUS_NOT_PROMOTED_HERE
+map=G_weighted_quartic;det_JG=-6;generic_degree=4
+inverse_quartic=f(w)=w^4-w^2+2*P*w-Q;P=B*C;Q=A*C^2;gamma=f'(w)/2
+disc_PQ=-16*(27*P^4-36*P^2*Q-P^2+16*Q^3+8*Q^2+Q)
+L=16*A^3*C^4+8*A^2*C^2-36*A*B^2*C^2+A+27*B^4*C^2-B^2
+disc_ABC=-16*C^2*L;target_chart_jacobian=-C^3
+L_irreducible_control=resultant_normalization+birational_linear_subresultant+QQ_factor+reduced
+reconstruction=PASS;off_C_times_L_the_quartic_algebra_is_finite_and_all_source_coordinates_are_regular
+jelonek_reduced=V(C) union V(L);components=2;intersection=C=0,A=B^2
+C_component=one_sheet_escapes_with_z~2/C^2;generic_inertia=identity_1^4
+L_component=two_sheets_escape_with_x~C/sqrt(L);generic_inertia=transposition_2_1_1
+finite_C_fibre_control=target_(0,1,0);three_finite_points;w_values=(1,0,0);fourth_sheet_escapes_at_w=-1
+proper_open_control=target_(1,0,1);disc=-400;L=25
+true_L_control=target_(-2,-1,1);f=(w-1)^2*(w^2+2*w+2)
+raw_w_order=C:vDisc=2,inertia_defect=0,index=1;L:vDisc=1,inertia_defect=1,index=0
+generic_primitive_C=rho=2;vDisc_monic=-12;vDisc_primitive=0;clearing_E=12;parity=even
+generic_primitive_L=rho=1;vDisc_monic=-5;vDisc_primitive=1;clearing_E=5;parity=odd
+parity_sign=C:even=identity;L:odd=transposition
+hostile_finite_branch=EMPTY because det_JG=-6
+hostile_chart_factor=C^2 is a w-order index square from two distinct finite points with common w=0
+hostile_true_infinity=L has index_zero transposition ramification;C is genuine nonproper despite chart artifact
+hyp9027_verdict=Keller_every_component_odd_REFUTED;parity_equals_inertia_sign_SURVIVES;Keller_C3_OPEN
+semantic_sha256=84d29019ac0b6cc51caf6f87f75de74c5b655f1d8a0254c259e44d9b224290cf
+script_lf_sha256=adace19f41b7816d273a47556013253e5d05014f517c0212743e9d74dcc5093f
+transcript_payload_sha256=6e88ebd254430d90958b954d17308527b7860fe6c5fa04602bb5d83040e68cb9

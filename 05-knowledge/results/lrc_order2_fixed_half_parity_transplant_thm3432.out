@@ -1,0 +1,10 @@
+THM-3432 order-two fixed/half parity transplant -- exact controls
+status=VERIFIED_EXACT_CONTROLS_FOR_ELEMENTARY_ALL_MODULUS_PROOF;no_LRC14_cut
+thresholds=((1, 14), (1, 7), (2, 7), (1, 3), (1, 2))
+identity_universe=(max_R,chart_rows,sheet_cells,order_rows,unit_rows)=(96, 46550, 5990700, 46550, 94760)
+direct_minimum_rows=(R,half_rank,fixed_with_order2_rank,half_witness,fixed_extra_witness)=((8, 4, 5, (1, 3, 5, 7), (1, 3, 5, 7)), (9, 4, 5, (1, 5, 6, 7), (1, 5, 6, 7)), (10, 5, 6, (1, 3, 4, 7, 9), (1, 3, 4, 7, 9)), (11, 6, 7, (1, 2, 3, 5, 7, 9), (1, 2, 3, 5, 7, 9)), (12, 5, 6, (1, 5, 7, 8, 11), (1, 5, 7, 8, 11)), (13, 7, 8, (1, 2, 3, 5, 7, 9, 11), (1, 2, 3, 5, 7, 9, 11)), (15, 6, 7, (1, 4, 6, 7, 8, 10), (1, 4, 6, 7, 8, 10)), (23, 6, 7, (1, 4, 5, 7, 9, 11), (1, 4, 5, 7, 9, 11)), (25, 6, 7, (1, 9, 10, 11, 19, 21), (1, 9, 10, 11, 19, 21)), (29, 7, 8, (2, 5, 6, 7, 8, 11, 18), (2, 5, 6, 7, 8, 11, 18)))
+primitive_parity_hostile=(R,all_even_half,upstairs_fixed,gcd_half,gcd_upstairs)=(15, (2, 4, 6, 8, 10, 14), (15, 2, 4, 6, 8, 10, 14), 2, 1)
+multiplicity_rows=155
+semantic_sha256=509ab5d7e01e3ffad5ba93bbfdd9081c84697db9457213658d750bbf40c681a9
+script_sha256_lf=5be8316df17232cb797c830207190b793faf2088a9d9c172a509f6ef986207e9
+scope=literal_fixed_zero_with_named_order2_owner_iff_literal_half_twist;joint_period_preserved;augmented_parity_sidecar_required;not_all_fixed_covers;not_mixed_rank7;not_LRC14

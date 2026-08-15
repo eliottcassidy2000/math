@@ -9,7 +9,7 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-393 (2026-08-14, projected transfer) -- raw high ratios and denominator passports do not retain a located reflected-pair overlap
+## MISTAKE-401 (2026-08-14, projected transfer) -- raw high ratios and denominator passports do not retain a located reflected-pair overlap
 
 - **What failed:** the first post-reflected transfer tried to apply the
   matched-residue high-pair floor to arbitrary projected drifts, first by
@@ -33,7 +33,7 @@ Format per entry:
   observable. A denominator is not a located phase, and a raw drift ratio is
   not the reduced level ratio of a reflected affine ray.
 
-## MISTAKE-392 (2026-08-14, arbitrary residue extension) -- a unit residue change can annihilate a canonical high-pair overlap
+## MISTAKE-400 (2026-08-14, arbitrary residue extension) -- a unit residue change can annihilate a canonical high-pair overlap
 
 - **What failed:** a residue-blind extension treated changing `Lq-e` by a
   small integer `h` as a small geometric perturbation without retaining the
@@ -87,6 +87,190 @@ Format per entry:
   survivor; if every single cell fails, only then pass to the fixed-safe
   multi-cell residue support.
 
+## MISTAKE-399 (2026-08-15, concurrent theorem reservation race) -- filename merges did not protect a shared semantic ID
+
+- **What failed:** THM-3448 was absent when the weighted-Keller boundary
+  theorem was first checked and locally reserved, but another clean session
+  reserved the same YAML ID for the noncommuting Hensel theorem before the
+  next fetch.  Because the filenames differed, rebase had no textual conflict
+  and the duplicate IDs were briefly pushed together.
+- **Minimal witness / first failed implication:** after commit `8504e472e`,
+  both `THM-3448-noncommuting-smooth-hensel-heisenberg-orbit-law.md` and
+  `THM-3448-weighted-keller-cyclic-jelonek-inertia-family.md` declared
+  `id: THM-3448`.  “Free before local editing” did not imply “free at push.”
+- **Repair / strongest survivor:** after both sessions' corrective commits
+  were inspected together, the already-pushed Keller reservation keeps
+  THM-3448 and the Hensel reservation takes THM-3449.  The mathematical
+  content is unaffected, and Git history preserves the collision lineage.
+- **Reusable rule:** immediately before pushing a reservation, fetch and
+  recheck the intended YAML ID against the fetched remote tree—not merely the
+  working tree—and explicitly audit duplicate IDs after every conflict-free
+  rebase, since filename-level merging cannot detect semantic ID collisions.
+  Once a collision is shared, inspect the other session's corrective commit
+  before choosing a successor; two independent “move to the next ID” repairs
+  can collide again.
+
+## MISTAKE-398 (2026-08-15, THM-3446 group and alignment typing) -- a direct product was called a free product, and a sharp universal bound was called every packet's exact level
+
+- **What failed:** the provisional THM-3446 truth surfaces called the finite
+  abelian exponent group a "free product," imposed `r<=d` even though the
+  displayed dependent hostile used two generators on `A^1`, and called
+  `M+1` the unqualified exact detection level.
+- **Minimal witnesses / first failed implications:** `C_3*C_3` is infinite,
+  whereas the equal-depth two-generator fibre uses `C_3 x C_3` of order
+  nine.  The `A^1` hostile has `r=2>d=1`.  Conversely, at depths `(1,1,3)`
+  two identical shallow translations already give a stabilizer at level
+  three, before the universal alignment level `M+1=4`.
+- **Repair / strongest survivor:** the group is the direct product
+  `prod_i Z/p^(a-c_i)Z`, acting freely under pointwise independence.  The
+  ambient statement allows arbitrary `r>=1`; independence itself forces
+  `r<=d`.  Every dependence produces a stabilizer by `M+1`, and the
+  `(1,2)` delayed hostile shows that bound is sharp, but some relations appear
+  earlier.  The mixed-depth carry proof, orbit invoice, transitivity test,
+  and exact artifacts are unchanged.
+- **Reusable rule:** distinguish algebraic coproducts from freely acting
+  groups, and distinguish a sharp universal detection bound from the first
+  failure time of each individual packet.
+
+## MISTAKE-397 (2026-08-15, THM-3437 Prüfer-limit semantics) -- the Tate module was called the Prüfer arm
+
+- **What failed:** the promoted synthesis described the inverse limit of the
+  selected `Tor_1` packets as recovering the divisible Prüfer channel.  Under
+  the chain maps induced by `R_(q+1)->R_q`, however, the transition on kernels
+  is multiplication by `lambda`, not the canonical inclusion.
+- **Minimal witness / first failed implication:** for
+  `Pr_lambda=A[lambda^(-1)]/A`, the inverse system
+  `Pr_lambda[lambda^(q+1)] --lambda--> Pr_lambda[lambda^q]` has limit
+  `K'[[lambda]]`, a torsion-free complete Tate module.  It cannot be the
+  divisible torsion module `Pr_lambda`.  The first failed implication was
+  identifying two different transition systems merely because their finite
+  stages are the same kernels.
+- **Repair / strongest survivor:** the inverse limit recovers the selected
+  arm's Tate module and hence its presence bit.  The canonical inclusions
+  `Pr_lambda[lambda^q] -> Pr_lambda[lambda^(q+1)]` instead have direct limit
+  `Pr_lambda`.  The finite Tor formulas, Euler cancellation, Mittag--Leffler
+  statement, and filtration-loss boundary are unchanged; THM-3437 now records
+  both limits explicitly.
+- **Reusable rule:** a tower is its objects plus its arrows.  Before naming a
+  limit, write the induced transition map and compare algebraic type (torsion,
+  divisibility, completeness), not just finite-stage ranks.
+
+## MISTAKE-396 (2026-08-15, Keller degree-spectrum inheritance) -- a public all-degree family was ignored by later open verdicts
+
+- **What failed:** THM-1330, THM-2465, HYP-9027, and HYP-9030 continued to say
+  that degrees `4` through `7`, global G1, and even-degree Keller maps were
+  open or conjecturally impossible.  Yet THM-1300's maintained attribution
+  amendment already named the public weighted-lift family and its explicit
+  quartic witness.
+- **Minimal witness / first failed implication:** the polynomial 2-jet map
+  `G` in THM-3438 has `det JG=-6`, generic degree four, and
+  `G(1,0,0)=G(-1,0,2)`.  Thus `4 in KDeg(3)` immediately refutes
+  `KDeg(3)={3^k}`, the claimed global-open G1 verdict, and the proposed
+  all-shape odd-degree lens.  The failure was inheritance/search discipline,
+  not a subtle implication inside the older local exclusions.
+- **Repair / strongest survivor:** the weighted-lift inverse equation proves
+  `KDeg(m)={1,3,4,5,...}` for every `m>=3`; this classifies degree values only.
+  Its two-root incidence proves `S_n` monodromy and an explicit atom in every
+  grade, while compositions populate exactly grades `ab` with `a,b>=3`.
+  The monoid law, no-degree-two theorem, ternary `F` subfamily, local G1
+  exclusions, and z-affine order-`{1,3}` problem survive.  Classification of
+  arbitrary maps in mixed grades still requires monodromy/intermediate fields.
+- **Reusable rule:** before declaring a realization gap, search maintained
+  theorem amendments as well as filenames and hypotheses.  Separate
+  classification of numerical degree values from classification of maps in a
+  degree grade.
+
+## MISTAKE-395 (2026-08-15, exact-six truncated minimum) -- a depth-six sentinel was labelled as pool-14 infeasibility
+
+- **What failed:** the first exact-six mutation reflection said that the
+  companion computed the unrestricted minimum over all subsets of
+  `{1,...,14}` and labelled the `None` histogram bucket “no pool-14 cover.”
+  The solver deliberately searches only depths zero through six.
+- **Minimal witness / first failed implication:** for
+  `F=(1,2,4,6,9,10)` and `D=1260`, the strict target has no cover by at most
+  six pool clocks, but `(1,2,3,5,8,9,10)` covers it with seven.  Thus this row
+  lies in the old `None` bucket although its exact pool-14 minimum is seven.
+- **Repair / strongest survivor:** read `None` as “no cover by at most six
+  (`>6` or uncovered).”  The companion now prints that scope and checks the
+  seven-clock hostile exactly.  The depth-one through depth-six counts, every
+  exact-six completion, the full mutation relation, both SCCs, and the typed
+  `7+6=13` stopping boundary are unchanged.
+- **Reusable rule:** a capped-search sentinel records failure within its
+  searched budget, not global infeasibility.  Freeze a first-outside-budget
+  positive control whenever a finite depth cap is load-bearing.
+
+## MISTAKE-394 (2026-08-15, Fibonacci--Berggren 17-adic torsor scope) -- a parameter norm-square was misnamed and the tied root entered a `T6` support claim
+
+- **What failed:** the local-`T4` gate called `m^2+n^2` the “hypotenuse
+  squared,” although it is the squared Euclidean norm of the parameter and
+  the hypotenuse itself of its Euclid triple.  Separately, the periodic-support
+  paragraph allowed an unspecified Fibonacci base index and then said that a
+  labelled `T6` was frozen along every resulting support.
+- **Minimal witnesses / first failed implications:** for `(m,n)=(1,2)`, the
+  Euclid triple is `(3,4,5)`, so `m^2+n^2=5`, not the squared hypotenuse `25`.
+  For the support claim, take `n_0=2`, `a=1`, and `J={0}`.  The support
+  contains the root window `W_2=(1,1,2,3)`, whose edge products tie at `2`
+  and `3`; the reflection itself correctly declares that no `T6` exists
+  there.
+- **Repair / strongest survivor:** call the `T4` observable the parameter
+  norm-square, equivalently the Euclid-triple hypotenuse.  For the pure
+  periodic realization choose `n_0` in `{3,...,11}`; these nine indices
+  represent every line of the square base cycle, lie in the first period,
+  and are all in the tie-free `T6` domain.  Changing to any other compatible
+  base lift is exactly the already-recorded translation gauge.  The general
+  Hensel lemma, both Legendre cycles, all finite rows, affine hostile, Boolean
+  identities, harmonic density, tournament loss, hashes, and no-LRC boundary
+  are unchanged.
+- **Reusable rule:** distinguish a parameter's norm-square from the square
+  of the derived object's norm, and intersect a periodic carrier with the
+  declared tie-free domain before claiming that its tournament state is
+  constant.
+
+## MISTAKE-393 (2026-08-15, THM-3435 covering degree/sign scope) -- a componentwise bijection was assigned to the grid union
+
+- **What failed:** the proof said that the degree-`d` circle map sends all `d`
+  small arcs *bijectively* to the widened arc.  It also quantified the partner
+  law modulo `4R` while excluding only `r=R` from its empty sign class.
+- **Minimal witnesses / first failed implications:** already at `d=2`, both
+  inverse-image arcs map bijectively onto the target, so the map on their
+  union is two-to-one rather than one-to-one.  For `Q=2R`, the residue
+  `r=3R` is sign-equivalent to the excluded residue `R`; it is empty and
+  satisfies `2R-r=r modulo 4R`, so it is not a complementary pair of two
+  owners.  The fibre criterion and partner identities themselves remain
+  true.
+- **Repair / strongest survivor:** each inverse-image component maps
+  bijectively and the whole union maps with degree `d`; a fixed grid orbit
+  therefore has a unique selected point exactly under the stated widened-arc
+  condition.  In the two-sheet paragraph, choose the canonical odd sign
+  representative `0<r<2R` and exclude `r=R`.  Equations `(4)--(11)`, every
+  endpoint/carry/Boolean consequence, both companions, and the census survive.
+- **Reusable rule:** record the degree when passing from several inverse-image
+  components to one target arc, and state whether coefficient quantifiers are
+  on residues or on sign orbits before calling a partner pair distinct.
+
+## MISTAKE-392 (2026-08-15, refined dyadic auxiliary capacity) -- a full-order half-block bound was applied to arbitrary transverse pullbacks
+
+- **What failed:** the first exact-six mutation reflection called
+  `ceil(3822/7)=546` the one-half-clock capacity on the two residual k=2
+  dyadic rows.  That scalar bounds a full-order interval block; it does not
+  bound a lower-order mask pulled back to `3822` sheets.
+- **Minimal witness / first failed implication:** at `Q=3822`, residue
+  `r=2548` has quotient order `Q/gcd(Q,r)=3`.  Its strict half-twist block is
+  the pullback of the nonempty order-three block and has `1274` sheets, so
+  `1274>546`.  The first failed implication was “the ambient modulus controls
+  every block size” instead of descending to the owner's quotient order.
+- **Repair / strongest survivor:** exact enumeration of every transverse
+  residue modulo `2Q` gives maximum block size `1274`, attained by the stated
+  order-three residue.  The two unsupported targets have sizes `1530` and
+  `1560`, so neither can be covered by one auxiliary block even under the
+  repaired sharp capacity.  The refined six-pool counts, zero dyadic-hit
+  verdict, and absence of any LRC(14) terminal are unchanged.  The exact
+  repair is reproduced by
+  `lrc14_refined_six_pool_dyadic_stopping_audit_20260815.py`.
+- **Reusable rule:** for a half-twist residue of quotient order `m`, charge
+  the order-`m` block and its `Q/m` pullback multiplicity.  Never substitute
+  `ceil(Q/7)` for an arbitrary transverse capacity without proving full
+  order.
 
 ## MISTAKE-391 (2026-08-15, zero-cochain rank artifact) -- the indexed output hash did not name the committed transcript
 

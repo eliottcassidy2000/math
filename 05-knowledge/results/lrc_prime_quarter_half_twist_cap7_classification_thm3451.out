@@ -1,0 +1,23 @@
+THM-3451 prime-quarter literal half-twist cap-seven classification companion
+status=VERIFIED-EXACT companion for RESERVED/PROVISIONAL theorem; independent audit required
+dependency_hashes=('52a5a5caed75ad48ab35ce287c15f6cece074c88dddda2b87329792a3df70af7', 'e2d202f97b1f39af032597767633c55f1abc4da261662824058b05b70724bb52', '06b28dd920ab525da087a6eba7bc3ecd25b51a878ce7e81f07725fb00e40b6bc')
+security_certificate=(('__future__', 'ast', 'collections', 'dataclasses', 'functools', 'hashlib', 'itertools', 'math', 'pathlib'), ('__import__', 'compile', 'eval', 'exec'))
+target_free_universes=legacy_A0_excludes=(3, 5, 11, 13, 23, 29); post_THM3445_excludes=(3, 5, 7, 11, 13, 19, 23, 29)
+type_size_offsets=((1, (0, 0, 0, 4)), (3, (2, 0, 0, 4)), (5, (2, 4, 0, 4)), (9, (6, 4, 8, 4)), (11, (6, 8, 8, 4)), (13, (8, 8, 8, 4)))
+profile_budgets=(pmod14,raw_mass,central_admissible,Omega_max)=((1, 26, 26, 12), (3, 19, 10, 8), (5, 13, 5, 4), (9, 19, 13, 8), (11, 13, 10, 4), (13, 13, 13, 0))
+finite_stitch=(prime_count,raw_profiles,central_DFS_profiles,DFS_tally,root_bank_range,support,last_prime,tail_prime)=(77, 1312, 959, (14839, 13966, 0, 12054, 1220), (36, 433), ((17, (((4, 0, 2, 1), 0), ((4, 2, 0, 1), 0), ((4, 0, 1, 2), 4), ((4, 0, 0, 3), 8))), (37, (((4, 0, 2, 1), 8),))), 443, 449)
+line_compiler_small=(('AA', 2030, 2023, 7, 17668, 45040, 16), ('AB', 1020, 1015, 5, 7148, 17276, 16), ('AE_o', 515, 514, 1, 3694, 7388, 16), ('AE_e', 515, 512, 3, 3683, 7366, 16), ('BB', 1020, 1011, 9, 4646, 11228, 16), ('BE_o', 515, 510, 5, 2170, 4340, 16), ('BE_e', 515, 507, 8, 2165, 4330, 16), ('E_oE_o', 515, 499, 16, 1368, 2736, 16), ('E_oE_e', 515, 500, 15, 1415, 2830, 16))
+line_compiler_middle=(('AA', 9768, 16), ('AB', 4909, 20), ('AE_o', 2479, 22), ('AE_e', 2479, 22), ('BB', 4909, 16), ('BE_o', 2479, 20), ('BE_e', 2479, 20), ('E_oE_o', 2479, 16), ('E_oE_e', 2479, 16))
+line_compiler_table=AA:(8b,1),AB:(4b,1),AE:(2b,1),BB:(4b,2),BE:(2b,2),EoE:(2b,4); entries=(J modulus,literal factor)
+raw_zero_atlas=rows=69 sector_counts=(('AA', 7), ('AB', 5), ('AE_o', 1), ('AE_e', 3), ('BB', 9), ('BE_o', 5), ('BE_e', 8), ('E_oE_o', 16), ('E_oE_e', 15)) maximum_raw_height=7
+large_a_plateau=(('AA', 8, 15, 15), ('AB', 4, 32, 32), ('AE_o', 2, 66, 66), ('AE_e', 2, 67, 67), ('BB', 4, 15, 30), ('BE_o', 2, 32, 64), ('BE_e', 2, 32, 64), ('E_oE_o', 2, 15, 60), ('E_oE_e', 2, 15, 60))
+EeEe_successive_minima=(409, 29, 841, 20)
+mod420_zero_graph=(96, 16, (6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6), (449, 3319), (877, 3739), 15, (7, 4, 1, 3), 6)
+direct_root_A_controls=((449, 1, 15, (7, 4, 1, 3), 16), (1009, 1, 15, (7, 4, 1, 3), 36))
+direct_root_Ee_controls=((409, 8, 35, (12, 12, 11, 0), 16, 109, 6, ((8, 405, 413, 1223, 1231, 1628), (8, 802, 810, 826, 834, 1628))), (449, 8, 35, (12, 12, 11, 0), 16, 109, 6, ((8, 445, 453, 1343, 1351, 1788), (8, 882, 890, 906, 914, 1788))), (1009, 8, 35, (12, 12, 11, 0), 36, 109, 6, ((8, 1005, 1013, 3023, 3031, 4028), (8, 2002, 2010, 2026, 2034, 4028))))
+positive_profile_controls=((17, (8, 11, 23, 24, 45, 56, 57), (4, 0, 0, 3), (12, 10, 10, 12, 10, 12, 10), 8, ((1, 64), (3, 4)), ((8, 24, 4, (8, 25, 42, 59)), (8, 56, 4, (8, 25, 42, 59)), (24, 56, 4, (8, 25, 42, 59)))), (17, (1, 24, 32, 33, 35, 36, 67), (4, 0, 1, 2), (10, 12, 12, 10, 10, 8, 10), 4, ((1, 64), (2, 4)), ((24, 32, 4, (8, 25, 42, 59)),)), (17, (8, 11, 12, 23, 28, 45, 57), (4, 0, 2, 1), (12, 10, 8, 10, 8, 10, 10), 0, ((1, 68),), ()), (17, (8, 13, 21, 30, 38, 47, 55), (4, 2, 0, 1), (12, 10, 10, 8, 8, 10, 10), 0, ((1, 68),), ()), (37, (8, 33, 41, 100, 107, 115, 140), (4, 0, 2, 1), (20, 22, 22, 24, 22, 22, 24), 8, ((1, 140), (2, 8)), ((33, 100, 2, (4, 143)), (41, 100, 2, (32, 115)), (100, 107, 2, (41, 106)), (100, 115, 2, (69, 78)))))
+tiny_proper_period_controls=((1, (), 0), (2, (0,), 0), (4, (0, 0, 0), 0))
+tail=p>=449 every pair is zero or has literal weight >=15; rooted zero clique number=6
+classification=post-THM3445 target-free support iff p in (17,37)
+semantic_sha256=b455ca48ce8454d754b1a7d4f816ecd76bb431a5b9202757152badd5e0993482
+script_lf_sha256=edda04033f24aa4275e19b05b56857db9570d9e78e02912c8a167445591b0422

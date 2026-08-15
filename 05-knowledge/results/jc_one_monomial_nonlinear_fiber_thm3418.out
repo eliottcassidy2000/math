@@ -11,8 +11,9 @@ nonconstant recurrence cases: 35
 nonzero degree/leading/telescoping coefficients checked: 245
 sharp hostile: P=x+x^2*z^2 has unimodular gradient and an infinite residue-one tail
 nonsplit hostile: g=(x^2+1)^2 has the same nonterminating tail over Q
+Hamiltonian sector transition/wrap checks: 525
 constant-g tame normal forms and inverses checked: 21
 classification: f=a*x+b, g=c, Q=(kappa/a)*z+H(P)
 scope: d>=2 one-monomial fiber stratum only; JC(2) remains open
-semantic_sha256=e82627c891c8c141bc80e5bf0271eca784eb4929a0cbc384baeaefcd3d768025
+semantic_sha256=90d08019ad87638fecc375d76258e282bc6a4de17f53e01ca87802c8f05c5c92
 ALL EXACT CHECKS PASSED

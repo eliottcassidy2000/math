@@ -168,8 +168,7 @@
 58. **Restricted kernels are not full JC(2).** MISTAKE-237/THM-2801: full
     `SIC(n>=2)` is false, but Zhao's cubic/Hessian sectors remain open.  Do not
     reverse SIC-to-JC, confuse operator `E_n` with scalar `F_n`, or erase `SIC(1)`.
-59. **THM-1330 is a necessary atlas, not a classification.** MISTAKE-236;
-    inverse realization and irreducible Keller seeds remain open.
+59. **THM-1330 is an atlas, not a classification.** MISTAKE-236.  THM-3438 gives an irreducible `S_n` weighted seed in every degree `n>=3`; inverse realization and arbitrary-map classification remain open.
 60. **THM-2071 closes the quadratic-fiber locus, not JC(2).** It makes the
     reduced complement fiber-linear; THM-2084's cubic floor is also a source-
     fiber statement, not generic degree, Jelonek geometry, VC(4), or JC(2).

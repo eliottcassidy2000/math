@@ -24,6 +24,718 @@
 
 | `lrc14_weighted_common_source_cyclic_support_capacity_thm3391.out` + `lrc14_weighted_common_source_cyclic_support_capacity_independent_audit_thm3391.out` | [PROVED ANALYTIC + FINITE-EXACT + INDEPENDENTLY VERIFIED-EXACT; THM-3391] | Several cyclic blockers may use different quotients provided they retain one weighted source: if the exact pullback-window capacities sum below total weight, one common source point survives.  The exact window is a pushforward sum over `ceil(n/7)` consecutive residues; at equality, maximum edges cover iff they partition the positive support.  Correlated phases require the exact cover locus and its deleted-grid sidecar.  A complete order-`r` coset defeats `m` native-unit blockers when `m ceil(r/7)<r`, so order three handles two highs and order seven handles six.  Primary audits `22,230` windows, `819` fibres, `4,574` image-order pairs, `400` q=2 pairs and `54` coset thresholds; the independent phase-arrangement implementation audits `18,677/5,724/216/32,751/6,238/400` cases and reproduces endpoint residual `{3/14,11/14}` with no residual open cell.  No ledger decrement.  Primary source/output/semantic SHA-256: `22c2ea187e3d43ca55dd61611a0f6d8a70cf7b1111b1f01cb7338bc1aef7e195` / `9cc8b652ae3552f970fae1b8f46f3b6c1d4316a5170d2f9a37eb5e59495e3062` / `8b8ba2d55374ce28698b685bde04f8e16e8cf4dafeb5436b419e0b9fcd642ef7`; independent source/output/audit SHA-256: `c95c8463a21890b9ad55e89a3d4ebcbbc69fc3635e5ff8317fc7646686b8d9a7` / `6e968c9d2b50f66c2a0b28f7c986923eae95aa90b2f9a225691f419ec6da4b96` / `78e1da67f5662a7f756e221ed18590486600e361cc327bf33187ffb8f4391cca`. | root/lrc14-weighted-common-source/2026-08-14 |
 
+- `lrc_prime_quarter_half_twist_cap7_classification_thm3451.py` -> matching
+  `.out` [THM-3451 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
+  INDEPENDENT FULL-PACKAGE AUDIT REQUIRED].  For post-THM-3445 target-free
+  prime-quarter rows `Q=4p`, the four-type central-fibre invoice reduces
+  `1,312` raw mass profiles to `959` admissible profiles, the fully typed
+  line/coset compiler gives positive pair weight at least `15>Omega_max=12`
+  from prime `449`, and all `96` unit classes modulo `420` have rooted zero
+  clique number six.  The no-cap exact stitch through prime `443` finds
+  candidate support exactly `p=17,37`, with all four `p=17` profiles and the
+  unique `p=37` profile frozen.  Legacy THM-3435-`A_0` target-free scope also
+  contains the proper-period pullbacks `p=7,19`.  Script/output/semantic
+  LF-normalized SHA-256:
+  `edda04033f24aa4275e19b05b56857db9570d9e78e02912c8a167445591b0422` /
+  `00af2309eb53f3e8937d2604a3db6ea1a7a57c2a7f39f7873915655a2d511aa6` /
+  `b455ca48ce8454d754b1a7d4f816ecd76bb431a5b9202757152badd5e0993482`.
+  This reserved candidate is not a proved dependency and gives no
+  composite-even, arbitrary-time, decrement, or LRC(14) conclusion.
+- `d5_marked_carrier_full_germ_obstruction_thm3450.py` -> matching `.out`
+  [THM-3450 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Under linked
+  degree-91 root, inertia, branch, action, and amplitude markings, one LRC
+  primitive Fourier coefficient and its Galois orbit determine the full
+  rational doubly-centred `7 x 13` interaction; multiplication by the Keller
+  mode-one unit is an explicit strict filtered `C91`-equivariant isomorphism.
+  The map is characteristic-zero, not a map from the exponent-13 `H^1` class,
+  and independent gauge reversal kills it.  Exact recurrence coefficients at
+  orders eight `(0,6)` and fourteen `(1,0)` occupy the two missing ANOVA margin
+  sectors, so the full Keller germ cannot factor through centred interaction
+  alone.  Script/output/semantic LF SHA-256:
+  `17ef1da1413d011c788d1ff000158fa163b5c08ed284c4aa34acc2630b1642f4` /
+  `6398cf8c57667618de68bad0667abc1b1ebdabafda93c3da4d52fd9bf2d68b68` /
+  `ac9cdaf18e641572ccac24731d0959177038a7aa95a0559872a7a500708a2f2a`.
+  No physical current, LRC(14), or `JC(2)` consequence follows.
+- `noncommuting_smooth_hensel_heisenberg_orbits_thm3449.py` -> matching
+  `.out` [THM-3449 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  two equal-depth smooth Hensel
+  automorphisms, the first commutator carry is their vector-field Lie bracket
+  at depth `2c`.  The naive abelian exponent action is universally valid
+  through level `2c` and fails on a fibre at `2c+1` when that bracket is
+  nonzero there.  Through `3c`, the replacement is the exact class-two group
+  with normal forms `x^i y^j z^r` of orders
+  `p^(a-c),p^(a-c),p^(a-2c)`; triple carry independence gives free orbit size
+  `p^(2(a-c)+(a-2c))`.  At `p=2,c=1`, the deepest test instead uses
+  `sigma=delta+delta^[2]`.  Controls freeze the abstract presentation, seven
+  affine-Heisenberg rows, a denominator-free all-prime `3c+1` higher-bracket
+  hostile, and an integral dyadic square-collapse hostile.  Script/output/
+  semantic LF SHA-256:
+  `b1ab908fc42dbd95824b0535ef3cbbaf5d55d68faf77a959a38ab6a348df790f` /
+  `dfe2528430981840feac984a47a45ca726ae3ec05a52966ba263230ae6356005` /
+  `fa4dbd16a9f56fb350388fde53c8b3ef39cdfbc6f3092cd31aed83c506bc8154`.
+  No unequal-depth noncommuting theorem, LRC, `JC(2)`, or physical transport
+  is claimed.
+- `jc_weighted_cyclic_jelonek_inertia_thm3448.py` -> matching `.out`
+  [THM-3448 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a
+  weighted seed with `n=deg R` and `mu=ord_0 R`, the generic `C=0` inertia
+  is one `(mu-1)`-cycle, its raw `w`-discriminant order satisfies
+  `mu=(mu-2)+2*1`, and the exact Jelonek set is `V(C) union V(L_p)` except
+  for the finite cubic `(n,mu)=(3,2)`.  The explicit degree-five map has
+  determinant one and a genuine three-sheet `C3` component; the seeds
+  `R_ell=w^(ell+1)(1-w)` realize `C_ell` for every `ell>=2`, while weighted
+  quartics cannot realize `C3`.  A frozen quartic hostile shows that clean
+  primitive-clearing formulas require nonzero separated pole residues.
+  Script/output/semantic LF SHA-256:
+  `a0410cf3d921fce6ddaa801c332c2cad10fae2a279efbada2aadb35bc498ebff` /
+  `768b2b1a75b937daa161bcad9f39310829bccbc843799425309ea2d0fe087fbe` /
+  `dbb99005e17dc8e2d69d514244640530476b74f01a723d5e5bd418bf42b27a80`.
+
+- `weighted_depth_commuting_hensel_lattice_thm3446.py` -> matching `.out`
+  [THM-3446 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For commuting
+  generators at depths `c_i`,
+  pointwise-independent first carries give a freely acting direct product of
+  cyclic exponent channels on every depth-`C` fibre.  The orbit-bank exponent is
+  `(d-r)(a-C)+sum(c_i-C)`, so full rank is transitive only at equal depths;
+  dependence creates a stabilizer by the sharp universal alignment level
+  `M+1` (not necessarily its earliest failure level).
+  Controls include a three-depth affine packet, all nine nonlinear weighted
+  fibres, the delayed dependence hostile, and `p=2` depths `(2,3)`.
+  Script/output/semantic LF SHA-256:
+  `117f9a3a27aacdbc7f3576fb8edd53b35c12e39c35fe5b1d46577b8a708280b2` /
+  `cec4e30c279d284fc657ca72b781c7163f911947dfef0c9188307d644bb2d2f3` /
+  `317fbb4d6c074e76a3886a8653f4b6bb6423f97c135cff44c2df212722e85bb2`.
+  No LRC, `JC(2)`, or boundary-response transport is claimed.
+- `lrc_prime_even_half_twist_cap7_classification_thm3445.py` -> matching
+  `.out` [THM-3445 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For the
+  target-free literal `Q=2p`
+  cap-seven lane, the typed parity-constrained interval formula reduces every
+  cross pair to exact line sections; the phase-free `a<100` table and
+  `a>=100` plateau leave only four mixed height-eight tangencies, whose exact
+  AP counts exceed eight from prime `p=607`.  The A/A lift bit, E/E
+  successive-minima floor `10`, and all `64` typed zero graphs modulo `240`
+  then give clique number `6`.  The theorem stitches the pinned FINITE-EXACT
+  `p<=599` atlas to a direct negative `p=601` row and proves exact support
+  `p=7,19`; an independent full-package audit reconstructed every gate.
+  Script/output/semantic LF-normalized SHA-256:
+  `ca061487acdf56f3d0507ad55d9b33c5e9724ddb9d7fdba815d46a1b7deb4382` /
+  `bcdef4ca8e5ba5a786be31aa6757f704f4aae0e7ae0953e504701acc7a4290f2` /
+  `45e7e843b1767ef7254be729add71ea6ef501160503b46a03cbb43e3e53517c3`.
+  No composite-even, arbitrary-time, decrement, or LRC(14) claim follows.
+- `regular_group_orbit_tournament_parity_thm3447.py` -> matching `.out`
+  [THM-3447 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  A regular
+  finite-group orbit has an invariant tournament iff its group order is odd.
+  If `t` is the number of nonidentity involutions and
+  `q=(|G|-1-t)/2`, each involution forces a disjoint perfect matching of
+  missing/bidirected pairs; generalized, partial, semicomplete, symmetric,
+  maximal-partial, and tournament counts are respectively
+  `4^q 2^t`, `3^q`, `3^q`, `2^(q+t)`, `2^q`, and (when `t=0`) `2^q`.
+  This exactly separates odd Hensel half-set gauges from two-adic XOR ties,
+  but supplies no canonical orientation or LRC current.  Script/output/
+  semantic LF SHA-256:
+  `8868aa940cbde11b7b79b5a5c4f805622dca3b1486c4d82e87a0566917330099` /
+  `d772b7947f59c071d22035ff20c19075a3093fab6b708b8caf5f62339086fae5` /
+  `0672eab70672e58ff4f44298e7547bb44b9843f0f8f47987374fd03895b142c9`.
+
+- `commuting_smooth_hensel_lattice_action_thm3444.py` -> matching `.out`
+  [THM-3444 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For `r`
+  commuting automorphisms of a smooth
+  `d`-dimensional `Z_p`-scheme, pointwise independence of their first-carry
+  fields gives a free `(Z/p^(a-c)Z)^r` action on every depth-`c` fibre, orbit
+  size `p^(r(a-c))`, and `p^((d-r)(a-c))` orbit banks; first-lift freeness is
+  equivalent to independence.  Controls cover affine equality with `r<d`
+  and `r=d`, nine nonlinear conjugate-translation fibres, a dependent
+  hostile, and the sharp `p=2,c=1` failure versus `c=2` survival.
+  Script/output/semantic LF SHA-256:
+  `7bf18fd6329ce80801f0712d3df37636dfec53154520b04824ecd2342407491c` /
+  `7f8587e4bf37ba932ecf6b5f0748284088cb58a7ccac07df8d1feaea3ae197b7` /
+  `a3393fafed345ae96bea50a5dcc4dfb7dadb56320e1d7cefd57a800d3ed615c1`.
+  No LRC, `JC(2)`, or boundary-response transport is claimed.
+
+- `smooth_hensel_vector_field_orbits_thm3442.py` -> matching `.out`
+  [THM-3442 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a smooth
+  finite-type `Z_p`-scheme of pure relative dimension `d`, a
+  congruence-to-identity automorphism at depth `c` has first-carry vector
+  field `delta_g`.  When `p` is odd or `c>=2`, every depth-`c` Hensel fibre
+  above a nonzero value of `delta_g` has orbit length `p^(a-c)` and exactly
+  `p^((d-1)(a-c))` cycles; a zero fixes the whole first lifting fibre.  The
+  exact controls cover affine dimensions one through three, nonlinear shear,
+  multiplicative and excluded-zero fibres, and the sharp `p=2,c=1` failure
+  versus `c=2` survival.  Script/output/semantic LF SHA-256:
+  `26edd280a13f8a9e9cff84d0b1d480fc839dfc2134d0223b49ab4db5902a455c` /
+  `2e95fc184e1c2ec732f67d190a4333fd5f7e8d315e5dbc7b2f3e0e52e9be9abc` /
+  `c72801a6c4fcb534b9e71ab0bb23da9163fc1051c45895b9bcd65241fd0a1c49`.
+  No LRC, `JC(2)`, or boundary-response transport is claimed.
+
+- `near_identity_grassmannian_hensel_orbits_thm3439.py` -> matching `.out`
+  [THM-3439 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For odd `p`,
+  no invariant first-carry `k`-plane gives orbit length `p^(a-c)` and exactly
+  `p^((k(n-k)-1)(a-c))` cycles in every depth-`c` Grassmann fibre; an
+  invariant plane fixes a whole first lift, and transitivity is unique to
+  `P^1`.  Controls cover dimensions `2..4`, `Gr_1/Gr_2`, depths `1,2`, the
+  `p=2` hostile, and a `6,561`-point fibre.  Script/output/semantic LF SHA-256:
+  `bc8c27860aa62b9816f55243fc24c1fa72b4b0e1c83767a12c3a04166b14d492` /
+  `834d376ebd73d36329b8ac4853c1d42a07bc84fefe64a7cc5abd73791e694a50` /
+  `a446d26482fdcc5ac913ca882efea17fc2cd0603c27223532884d87d6b4cc51a`.
+  No LRC transport is claimed.
+- `lrc_prime_even_half_twist_low_weight_tail_probe_20260815.py` -> matching
+  `.out` [UNNUMBERED FINITE-EXACT CONTROLS; UNIFORM TAIL LEMMA OPEN].  Exact
+  `A/A,B/E` tangent counts have last prime weight-at-most-eight boundaries
+  `521,601,593`, so all displayed tangents weigh at least `12` for prime
+  `p>=607`.  The `p=601` DFS is negative; full root scans at all `58` primes
+  `607<=p<=997` find no `0<w<=8` edge and no zero ratio above height seven.
+  Controls in all `96` invertible classes modulo `420` give candidate clique
+  number `6`, always the complementary-pair `A^4BE` orbit.  Uniform atlas
+  exhaustion remains OPEN.  Script/output/semantic LF-normalized SHA-256:
+  `4bb0c853fa3bebabf1414d75aa2b43d4b00c22a2b49cbaaac5e06bde5986c4ba` /
+  `a9012981cef620a0eeac6883f6e6cb080272c3d99cb73703a0b45212f9cb9b80` /
+  `17411c3f578f369ca6ab424db0db6730b547db5deb598e87fa341da49dd6473b`.
+  No LRC transport is claimed.
+
+- `jc_derived_boundary_jet_euler_thm3437.py` -> matching `.out`
+  [THM-3437 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  At a repeated
+  geometric boundary root, derived Artin reduction
+  has free `(Tor_0,Tor_1)` ranks `(N-1+epsilon,epsilon)`, so the Euler rank is
+  always `N-1`; inverse limits recover the selected arm's Tate module/presence
+  bit, while canonical kernel inclusions have direct limit equal to the actual
+  Pruefer arm.  Neither limit recovers its DeathBar slope/intercept.
+  Exact checks cover `379,225` repeated-root sector-profile rows (`56,411`
+  selected and `322,814` unselected), `2,275,350` derived jet-rank identities,
+  principal-part kernels/transitions, and foreign-support invertibility.
+  Script/output/semantic LF SHA-256:
+  `1326ce34ad7aa32f56ff8b79a87335a93a688bd9a4bd6ddb962d8988a2271a5c` /
+  `e6e25bac54d1f55eb29f04912f80fb04f3578f6ea2606dc39b03c8e2ce13ee08` /
+  `20bd151f40a3991b0fc85108f85339ebf9b48b24bc3113d8d480468b3ecef3f7`.
+  No JC/LRC transfer follows.
+- `lrc_prime_even_half_twist_cap7_finite_atlas_20260815.py` -> matching `.out`
+  [UNNUMBERED FINITE-EXACT; ALL-PRIME TAIL OPEN].  Direct strict-mask search
+  over all `103` target-free odd primes `p<=599` on `Q=2p` finds cap-seven
+  support only at `p=7,19`, reproducing the `Q=14,38` witnesses; every prime
+  from `191` through `599` is a new exact negative.  The profile DFS uses
+  odd-unit type normalization and the iff total-overlap budget, with no node
+  cap.  Six large residue controls give normalized zero-degrees `(19,31,23)`,
+  mixed/A-only disjoint clique numbers `6/4`, complementary-pair equality
+  witnesses, and a height-`7` rational atlas for all zero neighbors.  These
+  are OPEN tail signals, not an all-prime classification.  Script/output/
+  semantic LF-normalized SHA-256:
+  `ed54b01f9bf155643b6407c6af8ee6f15c7a099f8ac3b60399dd49b496fb1d12` /
+  `9751da7e0464f16f92b675ca9c95b118fd3fe95fc11cc99c9a7015d8425adb65` /
+  `19f846db72803c683f608149aac8c7da2015eaca6e1e3524d9954eaeef0fa826`.
+
+- `jc_multiroot_boundary_jet_packet_probe_20260815.py` -> matching `.out`
+  [THM-3436 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].
+  At every repeated geometric root, the target-character quotient modulo
+  `(P-beta)^q` is free over `K'[lambda]/lambda^q`, of rank `N` exactly in a
+  THM-3433-selected character and `N-1` otherwise.  CRT, `28` vertical
+  Neumann inverses, `35` horizontal gauges, `126,576` graph ranks, and
+  `506,304` derived packet instances are checked.  The last count is
+  bookkeeping; the unit conjugacy proves freeness.  Script/output LF SHA-256:
+  `3dcfc4f3f36ed658a64f3d45b7e055eb6bab10fa536522368a1aa3e32eab6332` /
+  `0d9908f5695a64895fd1d78cace03340b35bf9831e3ebd1eb53747eb563fc01c`.
+  Simple roots, integral splitting, and `JC(2)` remain outside scope.
+
+- `fibonacci_berggren_17adic_hensel_torsor_probe_20260815.py` -> matching
+  `.out` [PROVED UNNUMBERED HENSEL-FIBRE LEMMA + FINITE-EXACT `a=1..4` +
+  INDEPENDENTLY AUDITED].
+  For `G=[[0,1],[1,1]]`, the two projective 9-cycles modulo `17` are exactly
+  the two Legendre classes of `D(m,n)=n^2-mn-m^2`.  With `K=G^18`, the
+  nonsplit first layer of `-K=I-17B` makes `K` freely transitive on every
+  Hensel fibre of `P^1(Z/17^a)->P^1(F_17)` for every `a`; the companion checks
+  all `88,434` level-four points.  On the canonical Fibonacci base lifts
+  `n_0=3,...,11`, the calibrated exponent retains the affine lift and realizes
+  fibre subsets as periodic XOR/harmonic supports, while the labelled
+  `T4/T6` shadows freeze and forget that exponent.  MISTAKE-394 repairs only
+  the `T4` observable's name and the tied `n=2` support boundary.  This is no
+  LRC current transport.  Script/output/semantic LF-normalized SHA-256:
+  `e87a2efa71f0dca430dd86fdb6d8d72d0ece4687be730ddc70c8674c4d70b496` /
+  `0f46375097b6dc6a4f801f98fa0609bd7858e05941d66a9efd4fcc2c0c0b3d90` /
+  `bc6795aa3a4647b44cfa0b15f5112503cace4c9228dbdf18afb9e5aa8217fff0`.
+
+- `lrc_dyadic_fibre_grid_decomposition_thm3435.py` and
+  `lrc_dyadic_fibre_grid_census_thm3435.py` -> matching `.out` files
+  [THM-3435 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; bounded census
+  FINITE-EXACT only].  For every `Q=2^aR`, a literal half block splits into a
+  repeated `d=2^(a-b)=7q+c` grid over each odd-base fibre, with exact count
+  `2^b(q+epsilon_j)` and an affine cyclic-interval sidecar.  The remainder
+  `c` cycles through `2,4,1`; two and four coefficient branches are disjoint
+  (OR=XOR), while eight cover with multiplicity one or two and only a
+  sheet-local cyclic order.  The primary companion reconstructs `4,755,520`
+  sheet cells and `449,888` active fibre rows through `Q=192`, including all `24,580`
+  inactive endpoint laws.  The all-`Q` even cap-seven lane is reduced to
+  two- and four-colour affine sections, not classified.  The separate census
+  finds primitive support `{14,38,68,148}` through `Q=362`; an independent
+  no-dominance search of the same `60` rows agrees in `1,835,142` states.
+  `Q=366` is the first unclassified boundary.  Decomposition script/output/semantic
+  LF-normalized SHA-256:
+  `a79a7757c93bb903c10a157a9bce4b942c74548a25dd395157f273d8f8c67cb9` /
+  `5c7dff656d867a81d75dafb504ca6adc21b41dfd936a0bef0491bf658b1e1428` /
+  `bb9fce50f5ee51048eb02a79aef83151a1593b8b16ef73992243b88d8726545e`.
+  Census script/output/semantic hashes:
+  `d301f0cc802b311e578109a571e85e1ecf1e81a20efdd688bc4c91b8dc6c530d` /
+  `df94ab3b8b085fb9ddaf668438d6b07af92c0095a3dfee5774c2c85e13fe5b0d` /
+  `35dfbba192b4b17b72cda5a019692a9af5ee1ce406f3ca4a7d7ff551fe349096`.
+  No all-`Q` rank-seven classification or LRC(14) consequence follows.
+
+- `lrc_seventeen_fibre_two_sided_mass_closure_thm3434.py` -> matching `.out`
+  [THM-3434 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The two-sided
+  fibre invoice closes both residual towers `17^a` and `5*17^a`, including
+  the exceptional `Q=85` boundary, and proves that odd transverse literal
+  half-twist rank is at most seven exactly on multiples of
+  `{9,11,13,15,23,25,29,51}`.  The primary companion checks density and
+  fibre laws, nine levels of each tower, `176,850` period-descent cells, the
+  `760`-state `Q=85` negative search, positive atoms/pullbacks, and all odd
+  `Q<=101`.  Normal, optimized, and stored outputs agree.  Primary
+  script/output/semantic LF-normalized SHA-256:
+  `910349a5c5c4178b068cfe5427d01d7b7efadc54875b01bac87b162d0eccf996` /
+  `3adbdc6c6937b13a8c6e7dfc1ab8b27ba001af6860341fb082e2a01a65dcf0dc` /
+  `13984be8cee76a72b5d1ff98011538e56eb9c5f86ff3db41ed80f7c536189f2d`.
+  Arbitrary common time and LRC(14) remain open.
+
+- `lrc_rank7_residual_17adic_tower_probe_20260815.py` -> matching `.out`
+  [THM-3434 VERIFIED-EXACT INDEPENDENT COMPANION].  A separate third-point
+  derivation checks `Q=51,85,289`, `1,006,880` forced `Q=85` profiles, and
+  the affine-lift hostile.  Audit repaired an uncommitted near miss: even
+  full-order owners also spend a third point on the covered fixed fibre, so
+  no coarse `Q=85` profile survives.  The pair-overlap bank is only a hostile
+  sidecar.  Normal, optimized, and stored outputs agree.
+  Script/output/semantic LF-normalized SHA-256:
+  `b70570b1baecb719399e7819fce772d2aad7d145e8e44811164046d623cff1fa` /
+  `6b10dec50965d932b73d4c6f16d79c1aa00a4b733b425dd33b1a64595a5ce8f1` /
+  `2939e6278cc64659599ec030d620cd52b12574cbfb2f531a3e34d8ebf8df1fcd`.
+
+- `lrc_order2_fixed_half_parity_transplant_thm3432.py` -> matching `.out`
+  [THM-3432 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For every
+  `R>=2` and strict `0<delta<=1/2`, restricting fixed-zero blocks on `2R` to
+  odd sheets is exactly the half-twist block on `R`; adjoining the unique
+  order-two residue therefore raises the conditional minimum rank by one.
+  Full joint period is preserved, while for odd `R` the half augmented gate
+  additionally needs an odd residue.  The companion checks 5,990,700 sheet
+  cells, 94,760 affine-unit rows, ten direct rank controls, multiplicities,
+  and the sharp all-even `R=15` hostile.  Script/output/semantic LF-normalized
+  SHA-256: `5be8316df17232cb797c830207190b793faf2088a9d9c172a509f6ef986207e9` /
+  `f4f4ccfccc0ff82a7920abb9d69245539c0eb498a383fe4895a5c08f01088ca9` /
+  `509ab5d7e01e3ffad5ba93bbfdd9081c84697db9457213658d750bbf40c681a9`.
+  No unconstrained fixed-rank, mixed rank-seven, or LRC(14) claim follows.
+
+- `lrc_prime_fibre_activity_descent_thm3429.py` -> matching `.out`
+  [THM-3429 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  In the
+  transverse universe `Q not divide r_i` (so the universal `r=0` and empty
+  `r=Q` representatives are excluded), an odd joint-period half-twist cover
+  by at most seven blocks outside the proved rank-at-most-six bases has every
+  prime coordinate in `{3,5,13,17,29}`.  A coordinate omitted by some owner
+  is one of `3,5,17,29`, while an all-active coordinate is `13` or `29`.
+  Every quotient coindex is `{3,5,17,29}`-smooth; after removing divisor atoms
+  `13,29,51`, THM-3429 reduces the frontier to `17^a` and `5*17^a`, which
+  downstream THM-3434 now excludes.
+  Exact dual companions check inactive projection, strict fibre capacity,
+  prime powers, the transverse boundary, and the full `Q=51,p=17` affine
+  lift-cocycle table.  That atom proves the reduction is not yet a recursive
+  classifier: congruent coefficients modulo `2p` can separate on nonfixed
+  fibres.  Normal and optimized transcripts agree.  Primary
+  script/output/semantic LF-normalized SHA-256:
+  `2de78875810a95eaa1ccdddfd4a91cac4db5ea32bcbe384a635f1045d5a692c7` /
+  `75b6d84866f38c826b4e26e1374f7d45aa233704de47e37dc3499bf5b0689f99` /
+  `c46b24a98d32f83e1933276372e8bc1688ac9d3c3efa54c154ec19fcd1094c2d`.
+  The second companion also verifies the general activity floor and Boolean
+  defect budgets, while the standalone parity proof closes `p=7`.  No
+  rank-seven antichain completeness,
+  arbitrary-time, or LRC(14) conclusion is claimed.
+
+- `odd_target_free_p7_half_twist_parity_obstruction.py` -> matching `.out`
+  [PROVED COROLLARY + VERIFIED-EXACT, independent of THM-3429].  Directly
+  from THM-3416, a target-free odd joint-period cap-seven cover with `7|Q`
+  would have seven active owners and exactly one hit per owner on every
+  seven-fibre.  Exact block sizes force all seven residues even, so they
+  collide at the reflection-fixed sheet; the augmented gcd also remains
+  even.  The all-`Q` proof is checked against repeated-seven hostiles and
+  exact small-cover controls.  Normal, optimized, and stored outputs agree.
+  Script/output/semantic LF-normalized SHA-256:
+  `397b5678e0c8a1600a1bf34c9e8ba4408e155264d2af6c6302fcb53a202f5a89` /
+  `dbc55b66973a3a06c00cec8ef0b446e32679d946944b5c97167738e4904f567c` /
+  `8599e1b8ced3588d68d4cdd176de5932b72cb1ac4bc434b2dab14114f3914d89`.
+  This closes only the `p=7` lane; fixed zero, arbitrary time, and LRC(14)
+  remain open.
+
+- `rough_composite_odd_interval_collision_thm3426.py` -> matching `.out`
+  [THM-3426 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For an odd
+  modulus `n` with `spf(n)>h`, the exact complement of the unit-multiplier
+  collision set of the maximal symmetric odd interval is the reduced
+  opposite-parity packet `D_h`; interval entries themselves may be nonunits.
+  Beyond `n>2(h-1)^3`, pairwise-disjoint unit dilates have sharp clique number
+  `1+floor(log2(h-1))`.  The exact companion checks 9,160 rational cells,
+  22,201 parity-lift cells, 1,032,666 unit-action cells, 42,184 normalized
+  graph pairs, and 30 rough composite controls through `h=16`.  The hostile
+  `(h,n,L)=(9,969,107)` has exactly four extra multipliers
+  `{161,325,644,808}`, exposing the noncancellable factor-three arm.  No mixed
+  quotient-order cover, physical-time, or LRC(14) conclusion follows.
+  Script/output/semantic LF-normalized SHA-256:
+  `b96eeca089ac86e2d82f0d52fef37ca8b509d5ffd76615ed08524748791d3ced` /
+  `97fb799cf97d6485ef48aac93caa486c223d147207a4d5a72bc5f52ff2becb2c` /
+  `f03aded979fb19d75378b50614b6df1dc100ed6e25d08cd482501810ae72a691`.
+
+- `jc_nonlinear_multiroot_unit_rigidity_thm3424.py` -> matching `.out`
+  [THM-3424 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `P=ax+b+g(x)z^d` in characteristic zero with `d>=2` and nonconstant `g`,
+  the generic Hamiltonian unit class vanishes exactly for
+  `g=c(x-alpha)^(1+qd)`, `q>=1`.  Its exact integral annihilator is then
+  `((P-(a alpha+b))^q)` and is zero otherwise.  Root valuations and two
+  independent infinity locks force the one-root form; THM-3422 supplies the
+  integral exponent.  The exact companion checks 775 canonical-root
+  multiplicity profiles, 107 exact `Q(t)` systems, 144 closed primitives,
+  and 367,692 local/infinity coefficients.  Constant and zero `g` have zero
+  response; no full multiroot module, mate, new Keller case, or `JC(2)`
+  conclusion is claimed.  Script/output LF-normalized SHA-256:
+  `22c29c3e0086dbe1a592d39027b41e1626484d032e3f7ddc9499629d4f294e38` /
+  `2d14bebf31cc736d158a74ce135d36f57c42663668630799e5d89d163f545921`.
+
+- `lrc_half_twist_rank6_joint_period_probe_20260815.py` -> matching `.out`
+  [THM-3425 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  If
+  `8,9,10,12` do not divide `Q`, a half-twist cover by at most six blocks has
+  quotient-order joint period `Q` iff `Q` is one of `11,15,22,23,25`.
+  Consequently primitive augmented half-twist cap-six support is exactly the
+  multiples of `{8,9,10,12}` together with those five isolated degrees.  The
+  proof reduces orders `3,5,15,17,29` by exact complement quotas, isolates
+  the `11/22` and `23` reflection cores with normalized weights, and kills
+  their mixture by a CRT missed-cylinder gap at least `269/10879`.  Candidate
+  supersets at `Q=33,66` require 2,178,022 exact six-subset checks; all covers
+  have smaller joint period.  The companion also checks 160 lower-base
+  breaker repairs, the primitive `Q=27` five-cover, `Q=33,46` period-loss
+  hostiles, and an odd-`Q` all-even parity hostile.  In the lower-base-free
+  fixed-zero sector, cap-six support is exactly `Q=15`; no standalone all-`Q`
+  fixed-zero formula is claimed.  Normal and optimized transcripts agree.
+  Script/output/semantic LF-normalized SHA-256:
+  `df87baa9e752b3bda4f55fe29f7bda0219b2fc7978ffc47c3cd37c0f4319cf75` /
+  `c643d6ddd1c3fe03daa06850cf8aae91287eab90229bcf2c95ffa0469a8dee79` /
+  `4ac644546e4f81631b5c12a404779397c5c63da67f3e4dd5c1b88da1fa8beda1`.
+  No LRC(14) ledger decrement.
+
+- `d5_secondary_h1_descent_defects_thm3431.py` -> matching `.out`
+  [THM-3431 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The degree-13 cyclic cover sends
+  the LRC chart class to the deck defect of its primitive, explicitly
+  `h(j+7)-h(j)=7a`, while a selected JC observer embeds into
+  `H^1_(lambda)(K[lambda])` as `[lambda^(-q_sigma)]`.  The companion checks
+  all twelve nonzero chart steps, `1,092` primitive edges, `14,196` deck
+  cells, `2,028` group-cocycle identities, and `562` selected JC profiles
+  with `7,058` annihilator states.  It also freezes the two-way additive
+  no-go and the lossy bars `[0,1)` versus `[0,q_sigma)`.  Normal and
+  optimized transcripts agree.  Script/output/semantic LF-normalized SHA-256:
+  `9bcd3f10c1741b7328905b31d8401a205a6916b2a0767c3860a8f5a2b45e0ee7` /
+  `41375ee1c22b2ed1c39adf5a6a985896f7fbd976980cb1753d93b69fa39f5b52` /
+  `79f37de16658ac1e755e0acb5640507dba716756d9b3136f378004a4d29bcc21`.
+  No cross-coefficient map, universal common-image property, current,
+  LRC(14), or JC(2) follows.
+
+- `jc_all_sector_constant_observer_thm3427.py` -> matching `.out`
+  [THM-3427 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `P=ax+b+g(x)z^d`, the generic sector operator
+  `L_sigma(q)=sigma q+(t-x)(sigma(g'/g)q-dq')` has an exact polynomial
+  presentation of rank `deg(rad(g))`, including the separately repaired wrap
+  input.  The constant observer in character `sigma` dies generically exactly
+  for one-root `g=c(x-alpha)^e` with `d|sigma(e-1)`; its integral annihilator
+  is the corresponding power `(P-(a alpha+b))^(sigma(e-1)/d)`.  The canonical
+  resonant reducer is the normalized horizontal truncation, with exact
+  root-interpolated low defect; in the wrap sector it recovers every
+  multiplicity excess `e_i-1` when the radical is taken monic.  The companion
+  checks `585` nonwrap profiles,
+  `1,554` wrap residue profiles, `74` exact defect completions, closed
+  primitives, integral arrows, and multiroot hostiles.  Normal, optimized, and
+  stored outputs agree.  Script/output LF-normalized SHA-256:
+  `cffd6e8d2bf92ce6e793769320e9c2f1798337a8ccb221a6ef5d324774818895` /
+  `be694f75fccc2398b7072ac59c8529a27ceb2c34ba3db6e667dbf002ad495654`.
+  No polynomial mate or JC(2) conclusion follows.
+
+- `jc_nonlinear_wrap_linearization_thm3430.py` -> matching `.out`
+  [THM-3430 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `P_d=ax+b+g(x)z^d`, the nonlinear weight-`d-1` wrap sector and the full
+  response of `P_1=ax+b+g(x)w` have identical filtered stages
+  `K[x]/g^(k+1)`, transitions, and `K[P]`-actions.  If `S=rad(g)` and
+  `c=g/S`, the resulting module is noncanonically
+  `K[P]^deg(S) direct-sum K[x,c^-1]/K[x]`; its canonical torsion has one
+  geometric Prüfer arm per repeated root and stage-`k` thickness
+  `(k+1)deg(c)`.  Split CRT plus THM-3422, faithful finite-normal descent, a
+  Vandermonde free section, and PID window maps `[r]->[cr]` give the integral
+  identification for arbitrary `g`.  The companion checks 2,640 transition
+  entries, 5,280 action identities, 1,700 CRT packets, 5,460 torsion windows,
+  468 root intertwiners, and the scoped nonwrap hostiles/endpoints.  Normal,
+  optimized, and stored outputs agree.  No full nonwrap decomposition,
+  polynomial mate, Keller case, or `JC(2)` conclusion follows.  Script/output
+  LF-normalized SHA-256:
+  `a0cb78d5d8e63722701088596df5c84f749719c8a1fc2027180f6e5fa905a9e8` /
+  `7f57f4d6acd4566699acaa1424945fb7b0b29c4740663043873d2778de4a36dd`.
+
+- `lrc_rank7_prime_fibre_activity_descent_thm3429.py` -> matching `.out`
+  [THM-3429 VERIFIED-EXACT INDEPENDENT COMPANION].  For a prime `p|Q`, the
+  script directly checks
+  that `p`-divisible half-twist blocks are full pullbacks to `Q/p` and every
+  active block hits at most `ceil(p/7)` points per fibre.  Its exact universe
+  is every transverse residue on every prime fibre of all `93` odd composite
+  `Q<=315`: `2,078,480` pullback cells and `11,819,480` active cells.  It
+  verifies the activity floors for every odd prime through `997`, the Boolean
+  defect budgets `(4,2,0,1,1)` on primes `(3,5,7,17,29)`, the sharp
+  target-free `Q=51` atom, and the nonprimitive scaled-13 hostile at `Q=39`.
+  Normal and optimized transcripts agree.  Script/output/semantic
+  LF-normalized SHA-256:
+  `f89f31256715615babe7ffec792363f9149134a5d02cf20db906ed45c210f1a8` /
+  `ba5196cfa2f8ec82c2cd4fb0320181375334c85525fdb8a5b9e891f2f613c2cf` /
+  `c3b8596233d20f55e5c0bf0419c5f3f627cbf371e3004a5f40ab8a582a09b9f8`.
+  This independently verifies the base activity inequality; its `p=7`
+  equality row is superseded as a cover lane by THM-3429's fixed-fibre gate.
+  THM-3434 closes the residual towers; arbitrary time and LRC(14) remain open.
+
+- `rough_maximal_order_half_twist_rank7_finite_boundary_20260815.py` ->
+  matching `.out` [FINITE-EXACT INDEPENDENT THM-3428 BOUNDARY].  The complete
+  universe is all 116 odd `11<=Q<512` with `spf(Q)>7`, including 23
+  composites, every full-quotient-order coefficient modulo sign, and every
+  scalar-feasible exact owner count through seven.  Distinct coefficients
+  with accidentally equal masks remain distinct owner choices.  Across 249
+  profiles, 26,333 states and 646,035 branches, cap-seven support is exactly
+  `Q={11,13,23,29}`, with full-order minimum ranks `6,7,6,7`; no composite is
+  positive.  Nine accidental mask coincidences are retained, literal masks
+  are independently reconstructed from coefficient coordinates, and selected
+  hostiles include `121,169,323,493`.  Together with the independently audited
+  analytic `Q>=512` proof, this supplies THM-3428's computer-assisted all-rough
+  full-order classification; it is not a mixed-order theorem.
+  Normal and optimized transcripts agree.  Script/output/semantic
+  LF-normalized SHA-256:
+  `ca3ea3d64703a88987c20d1ad148695543db6f64bb6abcd9619905ee79969fe7` /
+  `d1268dc5ec58ffba6c1c32f2bd4e59790996cb07eba1593b64c66cb6b4528961` /
+  `b61db8412c1a45419cb4be595f75c802461472f24525b017b3d50d01af9f35ef`.
+  Composite mixed-order rank seven and LRC(14) remain open.
+
+- `lrc_prime_half_twist_rank7_classification_thm3421.py` -> matching `.out`
+  [THM-3421 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  A literal
+  half-twist cover by at most seven blocks on prime `p` sheets exists exactly
+  for `p in {11,13,23,29}`, with exact minimum ranks `6,7,6,7`.  Above
+  `p=511`, the residue-class capacity invoice and THM-3423's sharp odd-dilate
+  clique law force a contradiction; below it, an exact normalized-mask DFS
+  checks 197 scalar-feasible parity profiles and replays all four witnesses.
+  Independent literal-bank conjugacy and direct optimization recover the
+  same support and ranks.  Composite sheet numbers, arbitrary physical common
+  times, and LRC(14) remain open.  Script/output/semantic LF-normalized
+  SHA-256:
+  `693db87db8664f76fdc7bc6d520c8d3d36c51376aa6c9a67beef1aad6d84aae9` /
+  `77ad7cf9566f5aa02f9bfa7d9abbbce21b4a37db7137616b2771f1b8169775dc` /
+  `f0c7ceb122e90fd3792d72e80a205a6c4bd823cfb5b04064764b95ddc9d9471d`.
+
+- `odd_interval_ratio_complement_thm3423.py` -> matching `.out`
+  [THM-3423 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  If `L` is the
+  largest odd integer with
+  `hL<p`, then beyond explicit cubic thresholds the exact complement of
+  `O_L/O_L` consists of the reduced opposite-parity fractions `+-a/b` with
+  `a+b<=h`.  The pairwise-disjoint-dilate Cayley graph has sharp clique
+  number `1+floor(log2(h-1))`, colored by `v_2 mod` that number and attained
+  by `{1,2,4,...}`.  Exact controls check 9,160 rational connections, 60,049
+  parity-constrained rounding cells, 616,848 finite-field ratio pairs, and
+  the four `h=7` prime residue classes.  No composite-modulus, cover, or LRC
+  conclusion is claimed.  Script/output/semantic LF-normalized SHA-256:
+  `230b9c90f341dc272b50392c6537c3fe0363ccf8e5f055a52c33c20df9b61a3f` /
+  `9227e53fe70e01793ff56f0f074f48d8da439f0f7138b539d462cd455a72aade` /
+  `05f52e47dd904880524b09744efd98c90e6e53b4b37976dbe805ff0d8199a6c2`.
+
+- `jc_one_root_nonlinear_integral_response_thm3422.py` -> matching `.out`
+  [THM-3422 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `P=ax+b+c(x-alpha)^e z^d`, every simple-root sector is `K[lambda]`.
+  For `e>1`, target sector `s-1` is a free line plus one lambda-Pruefer arm
+  when `d|s(e-1)`, and is the Laurent line otherwise.  Exactly
+  `gcd(d,e-1)` characters carry torsion, with depth-`k` length
+  `k(e-1)+s(e-1)/d`.  The unit class has annihilator
+  `(lambda^((e-1)/d))` exactly when `d|(e-1)`.  A separately typed
+  repeated split-root first-window formula records the full puncture-
+  monodromy vector and explicitly does not claim a global multiple-root
+  decomposition.  The exact companion checks 34,504 direct relations,
+  30,576 orbit transitions, 30,576 lambda breaks, 2,268 torsion windows,
+  50 unit primitives, and 126,360 split-fiber character dimensions.
+  Script/output LF-normalized SHA-256:
+  `1c862dd5dfaee00a3ee5827a9d004c160a574deb103cd3b878a6615aeac7a766` /
+  `1e0abbff4bbd2ab601cbf2aee4c840789f4ebf36a1444bf2aa8c8506579e485d`.
+
+- `jc_generic_kummer_response_thm3419.py` -> matching `.out`
+  [THM-3419 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `P=ax+b+g(x)z^d`, `a!=0`, every one of the `d` generic Hamiltonian
+  response sectors has `K[P]`-rank `N=deg(rad(g))`; after adjoining the
+  `d`th roots of unity, the response is `N` copies of the regular `mu_d`
+  representation.  The proof identifies the localized cokernel with de Rham
+  `H^1`, then uses the unique affine ramification point and compact-support
+  Lefschetz traces.  An independent Riemann--Hurwitz calculation shows exact
+  cancellation between multiplicity-dependent genus and deleted points.
+  The exact referee checks `3,751` valuation packets, `26,257` character
+  traces and sector ranks, `108,779` grading shifts, and `341` linear-`z`
+  regressions.  Constant and zero `g` have zero integral response; this is a
+  Hamiltonian-response theorem, not a new Keller case or JC(2) result.
+  Script/output LF-normalized SHA-256:
+  `e60107df6d609d210c61ded6437f9a7e5323f029e271c094695d587989aafcd0` /
+  `1b194ef30b97810b1890dbd6d5f3bde8f7ba9d5228bc3f44d03b97cfd5049310`.
+
+- `lrc_prime_rank7_splitter_closures_thm3420.py` -> matching `.out`
+  [THM-3420 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For prime
+  sheet degree `p`, a fixed-zero cover by at most seven strict danger blocks
+  exists iff `p=29`; in the half-twist prime class `p=13 mod 14`, one exists
+  iff `p=13`.  Both atoms have exact zero-mode-cochain rank seven.  Exact
+  order-mod-14 defect and reflection invoices expose the critical infinite
+  tails.  Equality reduces the fixed-zero case to a multiplicative splitter;
+  power sums leave `p=29,211`, a circular-gap ratio-set argument kills 211,
+  and the 29 atom is the Paley quadratic-residue splitter.  A six-variable
+  Newton obstruction closes the critical half-twist class, with a Lucas
+  certificate for its large numerator factor.  The remaining half-twist
+  prime classes `p=1,9,11 mod 14` and composite rank seven stay open.
+  Normal and optimized outputs are byte-identical.  Script/output/semantic
+  LF-normalized SHA-256:
+  `f95aaf081ccd5c92cb7474104f242623bba9246bdc19eb04ce8da81f3c4e2af6` /
+  `22740907984a9e64e75208c0a01ce0222fd844dfe65826685ff11e64274ef959` /
+  `4dffcebc010848fc022824c46a916208d8b46c70ac3306168463b613ce58a7ed`.
+  No arbitrary-time or LRC(14) consequence.
+
+- `lrc_prime_rank7_remaining_half_classes_scout_20260815.py` -> matching
+  `.out` [FINITE-EXACT PRIME p29--500, LIVE HALF-TWIST CLASSES ONLY].  After
+  THM-3420 closes fixed-zero primes and half-twist classes `3,5,13 mod 14`,
+  the canonical augmented solver checks all 43 primes through 500 in the
+  remaining classes `1,9,11`.  The sole cap-seven positive is `p=29`, with
+  three even and four odd blocks; the fixed sheet has multiplicity three and
+  every other sheet multiplicity one, so sheet OR and XOR still agree.
+  Controls `p=37,43,53` represent all three live classes, and `p=211,499`
+  test the long tail.  The search visits 137,209 memoized states and 138,587
+  branches.  Normal and optimized transcripts agree exactly.  This is no
+  all-prime closure.  Script/output/semantic LF-normalized SHA-256:
+  `6266189ff6043c055b51a79df83bfce841bfca5fd30b0b36eef5fede94c29975` /
+  `fd975b519dfaeef0180cd4428c1e1b9ceee708030ea794eccf7a774f6ba99dcc` /
+  `ee528fc41630c7a9146fe62c5976fbf5421c3c4f427de07d2d7a6e8b9e777959`.
+  No LRC(14) ledger decrement.
+
+- `lrc_rank7_collision_breaker_recurrence_state_20260815.py` -> matching
+  `.out` [PROVED-EXACT REFINEMENT OF THE RANK-SEVEN ATOM-GENERATED
+  SUBFAMILY].  The eight literal witnesses over seven base degrees are
+  classified by quotient-order profile, multiplicity polynomial, total
+  overlap `Omega`, even-multiplicity defect, collision genus `G`, joint
+  period `L`, period defect `Delta`, and the half-twist odd-residue bit.
+  Under a fibre of degree `k`, the multiplicity polynomial and
+  `(Omega,|E|,G)` scale by `k`, while `L` stays at the atom base and
+  `Delta=k`; thus finite collision control requires an unbounded
+  multiplicative fibre cocycle.  The collision-free `Q=26` scaled/primitive
+  pair and the `Q=58` genus/defect swap prove that collision anatomy does not
+  determine period promotion.  The atom-generated density splits exactly as
+  `67404/737035` with an OR=XOR certificate available and
+  `4717312/310881363` with only even-defect atoms available.  Fibonacci's
+  refined label clock has period `239400` and state densities
+  `8/175,2/105,4/105`; the odd Berggren carrier reduces to modulus
+  `364832325`, with unimodular child determinants `(1,-1,1)`.  Normal and
+  optimized transcripts match.  This is not antichain completeness and gives
+  no LRC cut.  Script/output/semantic LF-normalized SHA-256:
+  `9990b2b619ff0c6bfd3a98a5cf80c3bc3ff2b5aebfa5d7d1ca97865270110376` /
+  `8439f36af9cef10c021f1f2fa7f843d7ff7573942aecf9e4e2e3a5b606bbf97a` /
+  `2dc0c1826a03b19b797ddd702c9c877cd77d0a8ec9e0883a5ca13bee22936d0d`.
+
+- `lrc_rank7_atom_monoid_recurrence_transport_20260815.py` -> matching
+  `.out` [PROVED-EXACT RANK-SEVEN INCLUSION + EXACT PERIODIC TRANSPORTS;
+  FINITE-EXACT BERGGREN DEPTH-TEN PREFIX].  Each replayed base in
+  `{13,14,29,38,51,68,148}` has rank seven by its literal seven-cover and
+  THM-3416's lower bound.  Hence every multiple of one of those bases that
+  avoids `{8,9,10,11,12,15,23,25}` also has rank exactly seven.  This proved
+  atom-generated monoid has period `14362718970600` and exact natural and
+  harmonic coefficient `165741596/1554406815`; the same number is only a
+  lower bound for the full rank-seven stratum.  Fibonacci indices in the
+  subfamily are exactly `7|n` with `6,10,15,25` all not dividing `n`, 108
+  classes modulo 1050 and coefficient `18/175`.  On the Berggren U-spine,
+  the exact law is `n mod 51 in {2,19,29,46}`, `n mod 9 not in {1,5}`, and
+  `n mod 11 not in {0,8}`, giving 72 classes modulo 1683 and coefficient
+  `8/187`.  The full ternary prefix has accepting counts
+  `0,0,1,3,9,17,48,176,500,1506,4587` through depth ten; no limiting tree
+  density is inferred.  Normal and optimized transcripts agree exactly.
+  Script/output/semantic LF-normalized SHA-256:
+  `5248721148ca18bd82cae9bda3f8fa86b3bf2fc35fbce88369c5d3c1c0d3c36a` /
+  `572c001aaa647774d19b53a1309ad10f7c8044426db15d145fbcfbd7a81e5cc6` /
+  `64e9032fc79cf2c5014497baddbbccbc3439650903b25447505f93bc66fb1c26`.
+  This is not a complete rank-seven classification and gives no LRC cut.
+
+- `lrc_zero_mode_cochain_rank7_ancestor_scout_20260815.py` -> matching `.out`
+  [FINITE-EXACT TARGET-FREE Q2--200 BOTH-TWIST CAP-SEVEN CENSUS;
+  ALL-q DIVISOR ANTICHAIN HYPOTHESIS ONLY].  Outside the proved rank-at-most-six
+  bases `{8,9,10,11,12,15,23,25}`, the exact primitive positives through
+  `Q=200` have minimal divisor antichain `{13,14,29,38,51,68,148}`.  Within
+  this finite window, the global rank-seven degrees are exactly the target-free
+  multiples of those seven candidates.  The atom atlas records every sheet
+  multiplicity and its collision hypergraph: `Q=13,14` are partitions;
+  `Q=29,68` have only odd multiplicities and hence still satisfy sheet
+  `OR=XOR`; `Q=38,51,148` have respectively 4, 6, and 8 even-multiplicity
+  sheets, which are exactly the XOR defects.  This parity carrier is a
+  hypergraph, not a tournament.  The candidate-generated subset has proved
+  harmonic coefficient `165741596/1554406815`; identifying it with the full
+  rank-seven support, and identifying `837065119/1554406815` as the exact
+  cumulative coefficient, remain conditional on the unproved all-q antichain
+  hypothesis.  The solver examines 33,508 raw types and 1,885,285 states;
+  normal, optimized, and stored outputs are byte-identical after newline
+  normalization.  Script/output/semantic LF-normalized SHA-256:
+  `bcf80194bd5697b121b08b239f096d67d7e0214bbc81abf4a9fb1f6d939fa560` /
+  `95012438ffa2e36183ef3e56a9881c3daa52ddfe118abebfd02106b1b28f65a2` /
+  `dec1ecff2442edb765582647ba529b338a99aa0e04fb7f27313fe97ac92c406a`.
+  No all-q theorem and no LRC(14) ledger decrement.
+
+- `lrc_zero_mode_cochain_rank6_support_thm3416.py` -> matching `.out`
+  [THM-3416 PROVED ALL-q GLOBAL RANK-SIX SUPPORT + VERIFIED-EXACT
+  PRIMITIVE Q2--200 HOSTILE CENSUS + INDEPENDENT AUDIT CLEAN].  For distinct
+  positive transverse owners with zero complete mode cochain,
+  `rho_ZMC(q)<=6` iff one of `{8,9,10,11,12,15,23,25}` divides `q`, and its
+  rank is exactly six iff one of `{11,15,23,25}` divides `q` while none of
+  `{8,9,10,12}` does.  Exact order-three and order-five complement
+  classifiers, followed by reflection-orbit bounds on orders 17 and 29 and
+  an equal-fibre CRT missed-core product, prove the half-twist converse;
+  THM-3414 supplies the fixed-zero converse.  Five positive controls cover
+  the four new bases, and the independent finite census checks both twists
+  only through `Q=200`.  The rank-six support has period `455400` and density
+  `25/207`; Fibonacci and Berggren transports have densities `2/25` and
+  `14/99`.  Normal and optimized outputs are byte-identical.  No arbitrary
+  physical-time or LRC(14) consequence is claimed.
+  Script/output/semantic LF-normalized SHA-256:
+  `c946cf9a66daa13da790cc9b1129993f9b5c1a8a2bdc6dec1bcc07b644989122` /
+  `733a3ed02910348b87b561df7f1c79eef2dc431a8d702f2c0f807db33c1298cc` /
+  `99892baf39b3d2b1b6a802bf21e0fe4164f155030d8ad051bc7ae26513b01ca3`.
+
+- `jc_one_monomial_nonlinear_fiber_thm3418.py` -> matching `.out`
+  [THM-3418 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  DERIVATION/TYPE/REPLAY-AUDITED].  Over any
+  characteristic-zero field, a planar Keller equation with
+  `P=f(x)+g(x)z^d`, `d>=2`, forces `f=ax+b`, constant `g=c`, and
+  `Q=(kappa/a)z+H(P)`; conversely these are explicit tame automorphisms.
+  Gradient unimodularity first forces `f' in K*` and `g|(g')^2`, but every
+  nonconstant `g` then creates an unavoidable residue-one recurrence whose
+  degree is `k(deg(g)-1)` and whose leading multiplier never vanishes.  The
+  exact referee checks six gradient controls, 35 nonconstant recurrence
+  cells with 245 degree/leading/telescoping coefficients, and 21 constant-`g`
+  normal forms/inverses, plus 525 Hamiltonian sector/wrap checks.  This closes
+  only the sparse top-plus-constant fiber stratum, not a general
+  intermediate-coefficient fiber or JC(2).
+  Script/output/semantic LF-normalized SHA-256:
+  `8ae459feb969e00cbb92acd718cdeb49b0d20d86323cdb98e6c31a8fd6a4fe2f` /
+  `4bce9383f966c05468d4c61de5e7bdd3ce77f4a0ce9a8e997e0fed4cfc5dfe05` /
+  `90d08019ad87638fecc375d76258e282bc6a4de17f53e01ca87802c8f05c5c92`.
+- `lrc_zero_mode_cochain_rank6_support_probe_20260815.py` -> matching
+  `.out` [THM-3416 PROVED ALL-q GLOBAL RANK-SIX SUPPORT DOWNSTREAM OF
+  THM-3414's COMPUTER-ASSISTED PROVED FIXED-ZERO ATLAS + ELEMENTARY HALF-TWIST
+  ANCHORED-COMPLEMENT PROOF + VERIFIED-EXACT Q2--300 HOSTILE CENSUS +
+  INDEPENDENT PROOF/ARITHMETIC AUDIT PASS].  For unrestricted positive
+  transverse owners with zero complete mode cochain, `rho_ZMC(q)=6` iff one
+  of `11,15,23,25` divides `q` and none of `8,9,10,12` does.  Literal
+  half-twist rank at most six occurs exactly on multiples of
+  `{8,9,10,11,12,15,23,25}`; this is not a primitive iff, since pullback can
+  lose the breaker coordinate (`Q=33` is the canonical hostile).  Capacity
+  leaves target-free orders `{3,5,17,29}`.  Four successive complement quotas
+  `2/15,4/25,14/85,24/145` eliminate them; the mixed load
+  `70/493<14/85` closes the formerly live 17/29 gap.  Their exact pairwise
+  loads form a four-vertex generalized tournament with missing equality edge
+  `{3,5}` (killed by base 15) and bidirected edge `17<->29`; this is a proof
+  sidecar, not the six-block cover carrier.  The `Q=11,23,25` atoms are exact
+  sheet partitions, while `Q=15` has one multiply covered fixed sheet.  The
+  rank-six support has natural/harmonic coefficient `25/207`; cumulative
+  rank-at-most-six coefficient is `149/345`; Farey density is
+  `157981/1244160`; Fibonacci indices are 12 classes modulo 150; the Berggren
+  U-spine has 14 classes modulo 99, and the full ternary tree is a finite
+  automaton modulo 56925.  The canonical solver scans both twists through
+  `Q=300` with 133,058 raw types, 734,163 states, and 751,364 branches; normal
+  and optimized outputs are byte-identical.  A clean-room audit additionally
+  checks every target-free `Q<=1000` and hostiles
+  `1479,1972,2465,3451,4913`.  Script/output/semantic LF-normalized SHA-256:
+  `ed7672fd75b7c5ede23c0b7752e06849faa9c693d18e0639eee5b39f17d03a21` /
+  `3eb932643e76f2ac7836d8d435bf259183e2c3778216b0458bf4487b5894102a` /
+  `18abbdc82a40b0299d9dc59cd745d52a09e9706d3cf0cb0379ab5ed2f064df22`.
+  No LRC(14) ledger decrement.
 
 - `lrc_zero_mode_cochain_rank5_support_probe_20260815.py` -> matching
   `.out` [THM-3415 PROVED ALL-q GLOBAL RANK-FIVE SUPPORT DOWNSTREAM OF
@@ -2564,8 +3276,12 @@
 - `lrc14_endpoint_tournament_holonomy_no_go_thm2504.py` -> matching `.out` [THM-2504 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The abstract untyped affine seven-cube admits no invariant tournament because a translation swaps every pair; after retaining polarity but forgetting all role types/names, exactly `1,652` same-weight ties are forced. Hamming parity is an exact cut with zero cycle part, and THM-2502 lex order is a chosen transitive gauge. On `C_13`, the cyclic tournament has nonzero holonomy but inversion gives its global converse; fixed-path and transported-path audits separate coordinate support from gauge invariance. Quadratic residues and guard overlaps are symmetric. THM-2457's uniform common-chart packet model ties all `8,128` asymmetry comparisons. Hashes `a13e2994...077cd66` / `e0cdfb47...860a6d`.
 - `jc2_degree22_cd_plane_ramification_thm2469.py` -> matching `.out` [THM-2469 PROVED + VERIFIED-EXACT]. On the degree-22 `C,D` plane, the root-free invariants `lambda=D^3/C^4`, `r=D/(Cy)` give a 19-term bidegree `(8,5)` eliminant. Its Newton polygon reduces every factorization to a linear/quadratic `v`-factor, and both exact ideals force `lambda=0`, proving uniform absolute irreducibility. The discriminant is `constant*lambda^4*W_4^2*K_30`, with `W_4` exactly the excluded wall. The collision divisor has degree 36, with separate degree-drop and wall-only factors; the Sylvester-valuation bound leaves at least twenty simple finite branch values off the wall in every fibre, so the degree-five normalization has genus at least six. This closes the fifth of ten support-two planes. Hashes `8d38b9f4...4298` / `1bc5eb1e...2721`.
 - `lrc14_active_dipole_sweep_thm2503.py` -> matching `.out` [THM-2503 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The sharp opposite-shift duplicate-probe atlas has ordinary profile census `9:20,10:35,11:14` and guard census `7:32,8:69,9:52,10:8`; total service lies in `[9rho,11rho]` or `[7rho,10rho]`, with sharp maximum floors `4rho/5`, `2rho/3` and sharp Fourier energies `T^2/2028`, `T^2/1690`. Rational packets have all twelve nonzero shift colours. THM-2384's primal/dual obstruction remains decisive: these are auxiliary probe colours, not canonical THM-2350 targets or relation currents. Hashes `d7fd2921...745195f` / `ed66e4aa...65c8957`.
-- `keller_degree_semigroup_kps_S135.py` -> matching `.out` [HYP-9030 verified base]. The JC>=3 counterexample family reframed as a degree-graded monoid: det J_F = -2 + real triple collision re-verified; branch anatomy 4T^3-3T-+1 = (T-+1)(2T+-1)^2 (the 1+2 motif = mu_3 fixed point + folded pair; -1/4 = -e_3 of the collision fiber, klein-S324's mechanism independently confirmed); det J_(FoF) = 4 => {3^k} subset KDeg(n) for n>=3; conjecture KDeg(3) = <3> puts G1's degree 4 as the Keller world's '7' (first non-atom-non-product), the HYP-9029 grammar one universe over. Plus the BM rank-lock sharpening of the first-untested-point law (fib locks at 4, tri at 6; weak form confirmed, strong form released).
-- `lrc14_delayed_word_joint_retention_thm2466.py` -> matching `.out` [THM-2466 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. Disintegrating the endpoint H-drift and semantic service onto one supplied oriented root base makes the same endpoint clock act as `Q(13^(k-1)y)` on both fixed densities. Boolean discrepancy and Fourier BV give the common error constant `C_Q=min(mu(Q)(1-mu(Q)),Var(Q)/12)`. Thus any fixed positive owner word sufficiently far out retains a THM-2459 four-atom union with drift at least `mu(Q)^2D_0/252004`, service at least `mu(Q)M_0/32768`, and root coefficient at least `mu(Q)M_0/66453504`. Owner support, the common root section, and positive service are hypotheses; no prescribed first clock, old address, or scalar row follows. Hashes `0940c48f...e1b0` / `3e1ad096...1f65`.
+- `keller_degree_semigroup_kps_S135.py` -> matching `.out` [HYP-9030 VERIFIED BASE; COMPLETENESS/ATOM CONJECTURES REFUTED BY THM-3438]. The exact surviving content is the monoid law, `{3^k}` subfamily, cubic collision anatomy, and BM rank-lock calculation.  The former claims `KDeg(3)=<3>`, global G1 open, and atom degrees `{1,3}` are superseded: degree one is the unit, weighted lifts realize every degree `>=3`, and each grade contains an `S_n` atom.
+- `jc_weighted_lift_degree_spectrum_thm3438.py` -> matching `.out` [THM-3438 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The weighted-lift identities cancel both apparent poles, give `det JF_p=bc`, and reduce inversion to the irreducible pencil `R(w)-Pw+cQ`; the explicit seeds realize every generic degree `n>=3`, so `KDeg(m)={1,3,4,...}` for every `m>=3`.  The quartic 2-jet has degrees `(12,11,4)`, `z`-degrees `(2,2,1)`, determinant `-6`, and collision `G(1,0,0)=G(-1,0,2)`.  A separate ordered-two-root incidence proof gives monodromy `S_n`, hence a weighted atom in every grade; compositions occupy exactly grades `ab`, `a,b>=3`, so degree `9` is first mixed and the degree-five `S_5` inverse is non-radical.  Exact finite banks cover degrees `3..100` and expanded lifts `3..18`; normal/optimized/stored outputs agree.  Script/output/semantic SHA-256: `f31dc1ac...3982` / `110a3ed0...c57` / `fb0f262a...a721`.  This classifies degree and atom/composite **existence spectra**, not arbitrary maps, Jelonek sets, z-affine order-`{1,3}`, or `JC(2)`.
+ - `jc_weighted_lift_infinity_inertia_thm3440.py` -> matching `.out` [THM-3440 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Reciprocal Eisenstein gives one tame place of index `n` over `Q=infinity` and local `n`-cycle inertia.  At `n=91`, point CRT exponents `78,14`, dual exponents `13,7`, all `91` character addresses, and the trivial-action pullback `H^1(<tau^14>;F13)->H^1(C13;F13)` are exact.  Source valuations `(90,-90,-270)` locate a source-infinity center, and a finite simple transposition excludes global cyclicity.  This is a local branch carrier/mod-13 class bridge, not an LRC amplitude, Tor/de Rham class, current, or bispectrum theorem.  Normal/optimized/stored outputs agree; script/output/semantic SHA-256: `33046ebf...69e` / `f46f52ab...998` / `d2284337...dc7`.
+ - `jc_weighted_lift_infinity_character_thm3443.py` -> matching `.out` [THM-3443 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  On the degree-91 infinity torsor, `s^-90 x_j` has leading profile `(rho/91)zeta^j`, so its marked normalized `(1,1)` coefficient is nonzero and the mode-one component is a unit in `K[[t]]`.  Exact deck semivariance forces order `m` into mode `1-m`; the nonzero `s^2` term lies in normalized mode `(6,12)`, refuting purity of the full germ.  Conventional roots relabel the leading mode as `(6,2)`.  This is a Keller leading amplitude, not an LRC intertwiner, bispectrum, or current.  Normal/optimized/stored outputs agree; script/output/semantic SHA-256: `912b264a...042` / `812a719c...404` / `2cba8839...ee8`.
+ - `jc_weighted_quartic_jelonek_inertia_thm3441.py` -> matching `.out` [THM-3441 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For the weighted quartic, `S_G=V(C) union V(L)` exactly and `Disc_w(f)=-16C^2L`.  The `C` component loses one sheet with identity inertia; its raw order two is monogenic index `i=1`, while a generic infinity-separating primitive has cleared exponent `12`.  The `L` component loses two sheets with transposition inertia, index zero, and exponent `5`.  Hence HYP-9027's Keller-every-component-odd successor is refuted, while parity equals inertia sign survives on both components.  THM-3448 subsequently realizes genuine `C3` in degree five and excludes it only for weighted quartics.  Normal/optimized/stored outputs agree; script/output/semantic SHA-256: `adace19f...993f` / `8e9629df...a04` / `84d29019...0cf`.
+ - `lrc14_delayed_word_joint_retention_thm2466.py` -> matching `.out` [THM-2466 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. Disintegrating the endpoint H-drift and semantic service onto one supplied oriented root base makes the same endpoint clock act as `Q(13^(k-1)y)` on both fixed densities. Boolean discrepancy and Fourier BV give the common error constant `C_Q=min(mu(Q)(1-mu(Q)),Var(Q)/12)`. Thus any fixed positive owner word sufficiently far out retains a THM-2459 four-atom union with drift at least `mu(Q)^2D_0/252004`, service at least `mu(Q)M_0/32768`, and root coefficient at least `mu(Q)M_0/66453504`. Owner support, the common root section, and positive service are hypotheses; no prescribed first clock, old address, or scalar row follows. Hashes `0940c48f...e1b0` / `3e1ad096...1f65`.
 - `lrc14_delayed_word_simultaneous_drift_service_thm2466.py` -> matching `.out` [THM-2466 INDEPENDENT EXACT REFEREE]. A separate exact interval-intersection implementation checks `60` circular-BV word/function/frequency covariances, simultaneous drift/service retention, the `252004`, `32768`, and `66453504` invoices, and the small-clock/zero-mean hostiles. Hashes `4f68d2be...b4d6497` / `3527b4c2...e2cf6`.
 - `jc2_degree22_bw_plane_square_lift_thm2468.py` -> matching `.out` [THM-2468 PROVED + VERIFIED-EXACT]. On the degree-22 `B,W` support-two plane, `lambda=W/B^3` gives the exact quintic pencil `R_lambda=R_0-82458112 lambda p^3(616p-1089v+63)^2`. Every factorization would contain a line or conic: the line ideal is unit, and the three conic top types are unit or force the forbidden cubic-root boundary `h=0`, proving uniform absolute irreducibility. Restoring `p=B/y^2` as `Y^2=1/p` exposes the fixed squarefree section `R(0,v)=-567L_5(v)`; five smooth simple zeros force at least six quadratic branch places and genus at least two. This closes the fourth of ten support-two planes. Hashes `00cf5ce1...45b6` / `cf087693...c156`.
 - `metagraph_pureblue_n13_threaded_kps_S134.cpp` -> matching `.out` [THM-2454 n=13 CONFIRMATION, third consecutive pre-registered hit]. The 2^36 threaded pruned census (21 raw survivors, 15 classes; n=11/12 controls exact): pure-blue(13) = 13 with the locked inventory confirmed class-for-class -- 10 rigid [1,3,9,9,9,9,27,27,27,81] = pal13(13) + (15,5,3) + 2x(135,45,3) (T5-centered palindromes). The alphabet law {1,C3,T5} now stands at ELEVEN exhaustive census points; no new pure-blue atom through size 13. Hashes `149e60b8...` / `94fcdfe4...`.
@@ -2578,7 +3294,8 @@
   varying-projective branches are automorphisms, rank-one constant-direction
   scale is empty, and rank-zero constant direction is an automorphism or an
   exact planar-Keller suspension with field degree preserved.
-- `jacobian_g1_*_kps_S134.py` family (8 scripts) -> matching `.out`s [HISTORICAL THM-2465 row; see the corrected row immediately above]. The old unconditional “no intermediate fields at degree 4” wording was repaired by MISTAKE-297, and THM-2633 later excludes the restored D4 lane by a different point-stabilizer gate. The exact script hashes and stratum computations in this row are unchanged; use the preceding row for current mathematical scope. sha16: jacobian_g1_conic_cap_hunt_kps_S134.py d2f67b62de6fd8bc; jacobian_g1_conic_kernel_structure_kps_S134.py dcf520d385d9c243; jacobian_g1_degree_arithmetic_kps_S134.py 9580577631a41611; jacobian_g1_gb_wildcert_kps_S134.py d4fc6a2fc9d889aa; jacobian_g1_line_strata_kps_S134.py f9bb6356c74fe79c; jacobian_g1_staircase_replication_kps_S134.py 6bfa818f65ed3ac7; jacobian_g1_strata_kps_S134.py 8e2152b85e91db3d; jacobian_g1_stratum_exclusions_kps_S134.py 5394a5dacfd49234; jacobian_g1_conic_cap_hunt_kps_S134.out 6e37cc25aa91cf8a; jacobian_g1_degree_arithmetic_kps_S134.out 3c1fdf8880fcc894; jacobian_g1_line_strata_kps_S134.out ca3f11532704c6dd; jacobian_g1_staircase_replication_kps_S134.out d376d8208d5d3e18; jacobian_g1_strata_kps_S134.out 19628afa0c3d10fd; jacobian_g1_stratum_exclusions_kps_S134.out d8d9a962ef3948e8
+ - **THM-2465 global-status correction (THM-3438 / MISTAKE-396):** the S134 computations remain proved restricted exclusions, but their global G1-open verdict is superseded.  THM-3438's weighted quartic is a field-degree-four z-quadratic Keller witness; only the fixed point/line/conic caps and z-affine order-`{1,3}` lane remain open or excluded as stated.
+ - `jacobian_g1_*_kps_S134.py` family (8 scripts) -> matching `.out`s [HISTORICAL THM-2465 row; see the corrected row immediately above]. The old unconditional “no intermediate fields at degree 4” wording was repaired by MISTAKE-297, and THM-2633 later excludes the restored D4 lane by a different point-stabilizer gate. The exact script hashes and stratum computations in this row are unchanged; use the preceding row for current mathematical scope. sha16: jacobian_g1_conic_cap_hunt_kps_S134.py d2f67b62de6fd8bc; jacobian_g1_conic_kernel_structure_kps_S134.py dcf520d385d9c243; jacobian_g1_degree_arithmetic_kps_S134.py 9580577631a41611; jacobian_g1_gb_wildcert_kps_S134.py d4fc6a2fc9d889aa; jacobian_g1_line_strata_kps_S134.py f9bb6356c74fe79c; jacobian_g1_staircase_replication_kps_S134.py 6bfa818f65ed3ac7; jacobian_g1_strata_kps_S134.py 8e2152b85e91db3d; jacobian_g1_stratum_exclusions_kps_S134.py 5394a5dacfd49234; jacobian_g1_conic_cap_hunt_kps_S134.out 6e37cc25aa91cf8a; jacobian_g1_degree_arithmetic_kps_S134.out 3c1fdf8880fcc894; jacobian_g1_line_strata_kps_S134.out ca3f11532704c6dd; jacobian_g1_staircase_replication_kps_S134.out d376d8208d5d3e18; jacobian_g1_strata_kps_S134.out 19628afa0c3d10fd; jacobian_g1_stratum_exclusions_kps_S134.out d8d9a962ef3948e8
 - `lrc14_linked_blocker_clock_cell_thm2464.py` -> matching `.out` [THM-2464 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. On a common root parent, ordinary two-root and guard four-root charts force their exact `lambda=1` linked blocker safe; `lambda=2` is the sharp phase-before-speed threshold for freely rebuilt linked bits. For a fixed tuple, arbitrarily delayed packets exist iff the full same-clock joint cell has interior. The THM-2462 tuple realizes two linked test words at common `lambda=10` and then a fixed positive delayed word. The conditional `128->64` invoice requires a still-missing canonical blocker/root identification. Hashes `e4c66419...f5a3e` / `8612b1dd...174b5`.
 - `ham_excess_spectra_kps_S134.py` + `ham_excess_ext_kps_S134.cpp` -> matching `.out`s [HYP-9028 evidence]. The Hamiltonian excess H/(n!/2^(n-1)) of both circulant families climbs monotonically to 2.598 (rotational, n=23) / 2.557 (Paley, p=23) with geometrically shrinking differences extrapolating to e; the e(1-alpha/n) fit drifts alpha 1.23 -> 1.02, targeting exc = e(1 - 1/n). Free-rotation lemma n|H verified on every row. Numerology control: tc(QR_11)=1729 is Chernick-Carmichael but tc(QR_19) fails Korselt -- coincidence recorded and killed. Origin: THM-2454's tc(T_11)=1729 mined per owner dispatch (reflection mining-1729-...-kps-S134).
 - `metagraph_pureblue_n12_pruned_kps_S133.cpp` -> matching `.out` [THM-2454 n=12 CONFIRMATION + THM-2453 prediction CONFIRMED]. Pruned survivor engine (impurity witnessed by sampled alternative Hamiltonian paths; only false survivors possible, killed by exhaustive enumeration; n=9/10/11 controls exact): pure-blue(12) = 6, all rigid, H-multiset [1,9,9,9,9,81] with the first 3^4 class (palindrome C3^4), zero nonrigid -- the center law's even-n exclusion and the Narayana closed form both confirmed as pre-registered. 2^30 cube -> 163 raw survivors in 89 classes. Also metagraph_rotational_bluemult_kps_S133.cpp: bm(T_p) = 1,3,3,37 vs tc = 1,3,9,1729 (taxicab!) -- purity ratio collapses; T5 pure because p=5 is the last small point. Hashes `22a96e45...` / `d0b2e6d1...`.
@@ -2591,7 +3308,8 @@
 - `lrc14_endpoint_newton_carry_boundary_thm2502.py` -> matching `.out` [THM-2502 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The `128` complete endpoint masks give `24` cells with per-blocker extension counts `1,16,8,4,2,1`, and six aggregate first-failure layers of sizes `4,64,32,16,8,4`. Their first-difference orientation is only the transitive lex tournament, with colour counts `4096,...,64`; its successor-chain colours are the exact 2-adic ruler. The all-safe ghost is the unique seventh Boolean Gregory--Newton coefficient, invisible to every lower mixed difference at zero. THM-2350 supplies only two-role/four-role target dipoles, so splitting the two roles of one active dipole leaves a rank-three four-cell ambiguity; arbitrary cross-pairs are not asserted zero-sum. Safe/danger complements also have identical jump nodes and opposite nontrivial Fourier coefficients. The verifier checks all `8,128` mask pairs, `341,376` triples, `127` carries, all `24` cells, `168` nonzero dipole characters, Newton layers, and cospan recurrences. THM-2452 bypasses these losses by copying a complete atom and releasing the old exact frequency; no row is removed. Hashes `7f6bea32...a71bf1` / `e5901d57...f243a2`.
 - `jacobian_d4_swallowtail_scaffold_kps_S132.py` -> matching `.out` [THM-2455 PROVED + REFUTED + VERIFIED-EXACT]. The d=4 classical layer: 27 Delta_4 = 4I^3 - J^2 (I = p^2+12r, J = 2p^3+27q^2-72pr) fills THM-1335's master-identity slot; all three resolvent cubics have disc IDENTICALLY equal to Delta_4 (unit 1, square class convention-invariant -- zero-locus 'resolvent conductor' arguments are dead); swallowtail strata ideal-exact (A2 edge = {I=J=0}); the quadrisection pencil disc = 2^17 (1-m)(1+m)^2 provably avoids the cuspidal edge, RETIRING 'A_3 at both ends'; 2-jet frame identities sign-pinned. Hashes `ec546ed6...693b` / `305ce12f...27fd`.
 - `jacobian_twojet_disc_jelonek_maps_kps_S132.py` + `..._controls_...` -> matching `.out`s [HYP-9027 evidence base]. Three explicit degree-4 2-jet maps + d=3 control: disc = (unit)(Jelonek)^odd (odd branch)(square) holds in every case with N = 9, 5, 3 all odd and the Jelonek factor always leading-coefficient-driven; mu is a NON-unit at d=4 (Maps II/III), refuting the naive d=3 transfer; V4/D4/S4 monodromies realized with certificates; coordinate-artifact squares certified (unramified-fiber checks); tame Keller control collapses to a monic linear eliminant (P1 vacuous at field degree 1). Hashes `d1175b2c...1ba4` / `615a94e4...2be5`, `fd778bd0...e218` / `b4facd92...5854`.
-- `metagraph_pureblue_n11_kps_S132.cpp` + `metagraph_pureblue_alphabet_kps_S132.py` -> matching `.out`s [THM-2454 FINITE-EXACT + PROVED + CONFIRMED + REFUTED]. The 2^25 blue-cube census gives pure-blue(11) = 9: seven rigid classes exactly as THM-2453's pre-registered Narayana prediction ([1,3,9,9,9,27,27] CONFIRMED), plus TWO nonrigid classes (15,5,3) and (135,45,3) = palindromic stacks (1,1,1,T5,1,1,1) and (C3,T5,C3), refuting THM-2444's '+1 per odd n'. Center law PROVED: pure-blue <=> rigid {1,C3} halves + pure-blue center; decisive witness stack(T5,T5) has blue-mult 3 vs tc 9 (mixed). Complete closed form c(n/2) / c((n-1)/2)+c((n-3)/2)+c((n-5)/2) matches all nine censuses; predicts 6,13,9,19,13 for n=12..16. Touched classes 279,968 extends the A002785 line. Hashes `e4041a9a.../79846933...`, `07b6398f.../17e32bfb...`.
+ - **HYP-9027 status correction (THM-3441/3448):** the preceding S132 files remain the historical evidence base, but both the general odd-exponent conjecture and its Keller-every-component-odd successor are refuted.  The exact survivor is cleared-discriminant parity equals infinity-inertia sign.  THM-3448 realizes genuine Keller `C_ell` inertia for every `ell>=2`; only arbitrary quartic/two-jet `C3` remains open.
+ - `metagraph_pureblue_n11_kps_S132.cpp` + `metagraph_pureblue_alphabet_kps_S132.py` -> matching `.out`s [THM-2454 FINITE-EXACT + PROVED + CONFIRMED + REFUTED]. The 2^25 blue-cube census gives pure-blue(11) = 9: seven rigid classes exactly as THM-2453's pre-registered Narayana prediction ([1,3,9,9,9,27,27] CONFIRMED), plus TWO nonrigid classes (15,5,3) and (135,45,3) = palindromic stacks (1,1,1,T5,1,1,1) and (C3,T5,C3), refuting THM-2444's '+1 per odd n'. Center law PROVED: pure-blue <=> rigid {1,C3} halves + pure-blue center; decisive witness stack(T5,T5) has blue-mult 3 vs tc 9 (mixed). Complete closed form c(n/2) / c((n-1)/2)+c((n-3)/2)+c((n-5)/2) matches all nine censuses; predicts 6,13,9,19,13 for n=12..16. Touched classes 279,968 extends the A002785 line. Hashes `e4041a9a.../79846933...`, `07b6398f.../17e32bfb...`.
 - `lrc14_aggregate_endpoint_restoration_thm2452.py` -> matching `.out` [THM-2452 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. Complete co-shifted Boolean endpoint masks diagonalize before smoothing: the `128` local atoms give bare drift at least `D_0/16384`, eligible energy at least `D_0/212992`, and one coefficient of squared modulus at least `D_0/429391872`; adaptively, a THM-2445 cell has only `(1,16,8,4,2,1)` complete extensions and preserves a preselected finite colour with the reciprocal amplitude loss. Full-`X` recombination kills every off-diagonal THM-2448 transition, after which THM-2365 reselects a fresh exact `X` and `91`-unit `m`. The old address and semantic owner/repair/root gauge are not preserved. Hashes `680f68e0...8cbf4e` / `2f96dcf3...d55295`.
 - `metagraph_palindromic_narayana_kps_S132.py` -> matching `.out` [THM-2453 PROVED + FINITE-EXACT]. The rigid stratum has a closed form: palindromic stacks over {single, C3} are always rigid-SC with H = |Aut| = 3^t (stack multiplicativity + canonical strong decomposition), counted by Narayana's cows palindromes pal13(n) = c(n/2) / c((n-1)/2)+c((n-3)/2) (A000930, the d=3 rung of HYP-3003's carry family; d=2 Fibonacci is the summand-graph spine). Census identification exact for n=3..10 in count AND H-multiset; strong towers C3[C3,1,1] (tc=5) and C3[C3,C3,C3] nonrigid. Locked predictions: rigid-SC(11)=7 [1,3,9,9,9,27,27] => pure-blue(11)=8; rigid-SC(12)=6 [1,9,9,9,9,81]. Hashes `d8a239cf...53f6` / `1e034fac...5c8b`.
 - `twin_ancestral_geometries_kps_S132.py` -> matching `.out` [HYP-9026 census layer FINITE-EXACT]. Two canonical ancestral geometries on the twin ranks from the THM-2422 parent fibre: the min-partner STAIRCASE has depth a constant-order fraction of rank index (max 118,503; fraction 0.59->0.29) and its partner histogram is the first-hit transform of the THM-2447 harmonics (top partners 5,7,30,70 with 70=2*5*7 boosted at both primes); the balanced MEDIANT tree (Stern-Brocot analog) exists at every rank, has max depth 28 vs log2(k_max)=24, window means log2 k + ~3.4 with monotone-decreasing ratio. Every balanced split is a windowed Seymour certificate. Hard checks all pass. 
@@ -5121,4 +5839,4 @@ optimized runs byte-match the stored transcript.
 | `jc_hamiltonian_prufer_torsion_thm3412.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVATION-AUDITED; THM-3412] | For characteristic-zero gradient-unimodular `P=f(x)+g(x)z`, the full differential on the affine-modification level `Q_q=B/(g,t)^q` is `nabla_q=g(f' partial_t-partial_x)+qg'`.  Its graded map is multiplication by `qg'`, while the actual finite cycle module is noncanonically `K[x]/gcd(g,g')^q`; over an algebraic closure it has one block of length `q(e_alpha-1)` per root, retaining collided roots separately.  Transitions give one Pruefer arm per root and zero maps on finite cokernels, so these arms are exactly the `K[P]`-torsion of `C_P`, with noncanonical split `C_P~=K[P]^(deg rad(g)) direct-sum K[x,gcd(g,g')^-1]/K[x]`.  Taking the kernel after the associated graded overcounts by `(q-1)deg(gcd(g,g'))`.  One-root, distinct, equal/unequal collision, and nonsplit controls pass; no JC(2) conclusion follows. Script/output/semantic SHA-256: `53954576637df1baf77bcd04308ca580a6b68e34800ce35a1d65d733aca08738` / `ea87ad0e7265499cfe9e38f50822415af61a3672e810d41db4c46c07d18511fe` / `88110e08603773bebcfd88e2fe224badfa014bf3950d12800e5f5fd65007c3ae`. | root-2608-jc-principal-part-persistence-2026-08-15; independent recurrence/descent/response/invariant/replay/hash audit clean |
 | `hadamard_strength_k_toggle_filtration_thm3413.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF/REPLAY-AUDITED; THM-3413] | For any `t` distinct Hadamard-core toggle positions and any strength-`k` Rademacher law, the normalized determinant bias is exactly its high-character moment packet paired with the upper Boolean-zeta transform of the signed event minors of orders greater than `k`.  One finite parity halfcube for each high character detects its coefficient, and Boolean inversion recovers every high minor; hence universal blindness is equivalent to vanishing of all signed minors above order `k`, even when selected rows or columns repeat.  Coordinatewise convolution raises every surviving moment to a power, so the response is an exact C-finite exponential sum; equal moment eigenvalues merge minor responses, while parity halfcubes are the sharp fixed/period-two boundary.  The companion checks abstract transform/inversion through `t=8`, all 697,004 parity-halfcube character moments through `t=9`, every one of the 511 nonempty position sets in the Paley order-four core by direct determinants, five larger Paley controls, the THM-3411 regression, and a four-eigenvalue order-four recurrence.  This is an exact OA interaction filtration, not OA/Hadamard completion or an existence/bound transfer. Script/output/semantic SHA-256: `dbdf97d32e4114abfd71393791ac8b956d4f1e46eef9a98ec14532107dd0a1a6` / `55bbcec2736c72dbcadac16450fe326317971990693ab47e91676b3e51ec4172` / `0db6229ea8922fb2f9c570103dd8aff7e30da424bcc196f29de19b54e2cab329`. | root-2608-crouzeix-puzzle-2026-08-15; combined independent zeta/converse/repetition/convolution/replay/hash audit clean |
 | `lrc_fixed_zero_six_owner_base_classification_thm3414.out` | [PROVED STRUCTURAL + COMPUTER-ASSISTED PROVED GLOBAL FINITE-PROFILE ATLAS + INDEPENDENTLY AUDITED; THM-3414] | For every `q>=2`, a fixed-source-centre-zero transverse cover by at most six cyclic-sheet owners exists iff one of `15,16,18,20,24` divides `q`.  The reverse implication is genuinely all-q: THM-3408's exhaustive exceptional order set feeds a finite-companion lemma `m=e gcd(m,d)|ed`, so exact profiles on strata `S_(q/d)` reduce arbitrary companion orders to finite rows plus the generic `7/44` bound.  Exact Fraction certificates prune 155 of 368 exceptional pairs, close 172 H-anchor groups and 9 exceptional-family groups, and a direct proper-divisor witness closes all 14,940 residual six-exceptional-owner multisets with worst minimum `1/2`; the smallest rational atlas margin is `13/6160`.  The five positive base covers pull back under dilation.  This is fixed-zero only, not an arbitrary common-centre, mobile-centre, physical-time, or LRC(14) theorem. Script/output/semantic/certificate SHA-256: `57147225890f0d99fd9c0f13d70992dca2ef6113e34554bdff0b6df68f9e63e4` / `48d2c34af30912f0d09cf34aad0a2e1e9d67fa6f781dc4383f06b2cab8369d91` / `681e1b1f8066b54970ed791f14867df708e9808c8a66dce034002f0404e66b3f` / `bc080056351c09c2a68eb27ac7574db3d273fe8de85e7509c1bcc3497e34fe25`. | root-2608-crouzeix-puzzle-2026-08-15; independent all-m/stratum/pair-loop/H-anchor/multiset/padding/dilation/scope audit plus normal/-O replay clean |
-| `hadamard_exchangeable_krawtchouk_shell_thm3417.out` | [PROVED CANDIDATE + VERIFIED-EXACT; THM-3417; INDEPENDENT AUDIT REQUESTED] | For `t` distinct Hadamard-core toggle positions, averaging the determinant response on every fixed Hamming-weight shell is exactly the normalized binary Krawtchouk transform of the cardinality sums `A_s=sum_(|T|=s)C_T`.  Orthogonality recovers every `A_s`; a second triangular finite-difference inverse recovers every aggregate signed-minor shell `P_j=sum_(|S|=j)M_S`.  Symmetrized parity halfcubes give finite exchangeable strength-`k` detectors, so radial universal blindness is equivalent to `A_s=0` above `k`, equivalently `P_j=0` above `k`, but is strictly weaker than labelled blindness: an H8 packet has cancelling high responses `+/-1/128`.  Internal fixed shells converge under coordinatewise convolution to the alternating total-parity halfcube, and central Krawtchouk moments converge degreewise to probabilists' Hermite polynomials; this is only a chaos-basis parallel to arXiv:2608.11158v2, not a Grothendieck bound.  Exact controls check 819 orthogonality identities, both inverses through `t=9`, 90 symmetrized parity laws, all 511 H4 position sets, H4/H8 loss hostiles, H8 convolution, H12, duplicate-position XOR failure, and low Hermite formulas. Script/output/semantic SHA-256: `f5c2a4f4c3917d25bbcca078ccbb28348c8e512d7724a626d8c61099db90ba4c` / `d8753c02e75d4987cc74dc7cb28f0838d0d1715760a6da30f88d9342e0c4f2d5` / `d2471a54b365e186d605bdc5640434219013efe1cff787a18fbf66989c4e355b`. | hadamard-krawtchouk-shell-2026-08-15; independent audit requested |
+| `hadamard_exchangeable_krawtchouk_shell_thm3417.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF/REPLAY-AUDITED; THM-3417] | For `t` distinct Hadamard-core toggle positions, averaging the determinant response on every fixed Hamming-weight shell is exactly the normalized binary Krawtchouk transform of the cardinality sums `A_s=sum_(|T|=s)C_T`.  Orthogonality recovers every `A_s`; a second triangular finite-difference inverse recovers every aggregate signed-minor shell `P_j=sum_(|S|=j)M_S`.  Symmetrized parity halfcubes give finite exchangeable strength-`k` detectors, so radial universal blindness is equivalent to `A_s=0` above `k`, equivalently `P_j=0` above `k`, but is strictly weaker than labelled blindness: an H8 packet has cancelling high responses `+/-1/128`.  Internal fixed shells converge under coordinatewise convolution to the alternating total-parity halfcube, and central Krawtchouk moments converge degreewise to probabilists' Hermite polynomials; this is only a chaos-basis parallel to arXiv:2608.11158v2, not a Grothendieck bound.  Exact controls check 819 orthogonality identities, both inverses through `t=9`, 90 symmetrized parity laws, all 511 H4 position sets, H4/H8 loss hostiles, H8 convolution, H12, duplicate-position XOR failure, and low Hermite formulas. Script/output/semantic SHA-256: `f5c2a4f4c3917d25bbcca078ccbb28348c8e512d7724a626d8c61099db90ba4c` / `d8753c02e75d4987cc74dc7cb28f0838d0d1715760a6da30f88d9342e0c4f2d5` / `d2471a54b365e186d605bdc5640434219013efe1cff787a18fbf66989c4e355b`. | hadamard-krawtchouk-shell-2026-08-15; independent immutable-file audit clean |

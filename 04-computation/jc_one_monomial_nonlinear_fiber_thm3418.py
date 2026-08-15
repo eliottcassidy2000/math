@@ -18,7 +18,7 @@ from hashlib import sha256
 import json
 
 
-EXPECTED_SEMANTIC_SHA256 = "e82627c891c8c141bc80e5bf0271eca784eb4929a0cbc384baeaefcd3d768025"
+EXPECTED_SEMANTIC_SHA256 = "90d08019ad87638fecc375d76258e282bc6a4de17f53e01ca87802c8f05c5c92"
 
 
 def require(condition, payload):
@@ -209,6 +209,15 @@ def residue_one_tower(slope, d, g, kappa, steps):
     return tower
 
 
+def response_operator(slope, d, g, n, q):
+    """The sector transition L_n from the cokernel presentation."""
+    slope = Fraction(slope)
+    require(slope and d >= 2 and n >= 1, ("bad response inputs", slope, d, n))
+    numerator = poly_sub(poly_scale(poly_mul(g, poly_deriv(q)), d),
+                          poly_scale(poly_mul(poly_deriv(g), q), n))
+    return poly_scale(numerator, Fraction(1, slope * n))
+
+
 def expected_tower_lc(slope, d, g, kappa, index):
     slope = Fraction(slope)
     value = Fraction(kappa, 1) / slope
@@ -274,6 +283,49 @@ def check_constant_normal_form(slope, intercept, g_constant, d, kappa, h, label)
     require(x_back == x_poly, (label, "x inverse", x_back))
 
 
+def check_response_sectors(polynomial_bank):
+    checks = 0
+    test_q = trim([2, -3, 1, 2])
+    test_h = trim([-1, 2, 0, 1])
+    for d in range(2, 9):
+        for bank_index, g in enumerate(polynomial_bank):
+            slope = (Fraction(1), Fraction(-2), Fraction(3, 2))[bank_index % 3]
+            p = {0: trim([2, slope]), d: g}
+            derivative_g = poly_deriv(g)
+            for s in range(1, d):
+                for level in range(3):
+                    n = s + level * d
+                    actual = jacobian(p, {n: test_q})
+                    tail = poly_sub(poly_scale(poly_mul(derivative_g, test_q), n),
+                                    poly_scale(poly_mul(g, poly_deriv(test_q)), d))
+                    expected = {
+                        n - 1: poly_scale(test_q, slope * n),
+                        n + d - 1: tail,
+                    }
+                    require(actual == z_clean(expected),
+                            ("response sector differential", d, bank_index,
+                             s, level, actual, z_clean(expected)))
+                    transition = response_operator(slope, d, g, n, test_q)
+                    require(tail == poly_scale(transition, -slope * n),
+                            ("response sector relation", d, bank_index,
+                             s, level, tail, transition))
+                    checks += 1
+
+            for level in range(3):
+                exponent = level + 1
+                n = exponent * d
+                source = poly_mul(poly_pow(g, exponent), test_h)
+                actual = response_operator(slope, d, g, n, source)
+                expected = poly_scale(
+                    poly_mul(poly_pow(g, exponent + 1), poly_deriv(test_h)),
+                    Fraction(1, slope * exponent),
+                )
+                require(actual == expected,
+                        ("wrap quotient", d, bank_index, level, actual, expected))
+                checks += 1
+    return checks
+
+
 def main():
     x2 = poly_pow(X, 2)
     nonsplit_repeated = poly_pow(poly_add(x2, ONE), 2)
@@ -311,6 +363,8 @@ def main():
             )
             recurrence_cases += 1
 
+    response_sector_checks = check_response_sectors(polynomial_bank)
+
     normal_form_cases = 0
     h_bank = [trim([2, -3, 1]), trim([-1, 0, 2, 1])]
     for d in range(2, 9):
@@ -336,6 +390,7 @@ def main():
         "residue_one_initial": "q[1]=kappa/a",
         "recurrence_cases": recurrence_cases,
         "coefficient_checks": coefficient_checks,
+        "response_sector_checks": response_sector_checks,
         "constant_normal_form_cases": normal_form_cases,
         "classification": "g constant and Q=(kappa/a)z+H(P)",
         "scope": "one top fiber monomial only; JC(2) remains open",
@@ -356,6 +411,7 @@ def main():
     print(f"nonzero degree/leading/telescoping coefficients checked: {coefficient_checks}")
     print("sharp hostile: P=x+x^2*z^2 has unimodular gradient and an infinite residue-one tail")
     print("nonsplit hostile: g=(x^2+1)^2 has the same nonterminating tail over Q")
+    print(f"Hamiltonian sector transition/wrap checks: {response_sector_checks}")
     print(f"constant-g tame normal forms and inverses checked: {normal_form_cases}")
     print("classification: f=a*x+b, g=c, Q=(kappa/a)*z+H(P)")
     print("scope: d>=2 one-monomial fiber stratum only; JC(2) remains open")

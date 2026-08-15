@@ -14,7 +14,8 @@ source: opus-2026-07-28 (from the uniform disc law found by the
   THM-2546 referee run: disc = -4 (square)^2 L for all three
   coordinate cubics of the sporadic Keller map)
 related:
-  - HYP-9030-keller-degree-semigroup (the monoid; atoms {1,3} conjectured)
+  - THM-3438-weighted-lift-keller-degree-spectrum (S_n atoms in every grade)
+  - HYP-9030-keller-degree-semigroup (old atom spectrum refuted)
   - THM-2473 / THM-2546 (branch tower; integral-coordinate dichotomy)
   - THM-1330 (necessary monoid atlas -- gains an invariant here)
   - HYP-9031 (the D5 dictionary -- gains the genus axis)
@@ -117,13 +118,15 @@ atom-level leads.
 At higher grades the exact set law gives the image tower, but distinctness and
 irreducibility of its successive closures remain open.
 
-## 3. Two crevasse invariants for atomhood
+## 3. Two crevasse invariants for atomhood (spectrum repaired)
 
-The atom-degree floor program (HYP-9030's Busch-crevasse analogue)
-gains a second invariant:
+THM-3438 supersedes the old atom-degree floor: weighted lifts give a primitive
+`S_n` atom in every grade `n>=3`, and numerical product grades also contain
+composites.  The two invariants below now distinguish maps *within* a mixed
+grade rather than predict which atom degrees exist:
 
 1. **Monodromy primitivity** (THM-2473: `F o F` is maximally
-   imprimitive; a primitive composite-degree monodromy = new atom).
+   imprimitive; THM-3438 realizes primitive `S_n` monodromy at every grade).
 2. **Jelonek irreducibility**: `F`'s `L` is irreducible (atom-
    consistent); a `k`-fold composite generically has `>= k` Jelonek
    components. Prediction P4: grade-`3^k` members have Jelonek sets
@@ -181,8 +184,8 @@ place to HUNT for a JC(2) counterexample instead.
 - P2 (VERIFIED-EXACT for the two fixed tame members): W1 and W2 obey
   `disc=-(det J)^2(square)^2L_W`, with `L_W=L o T^(-1)`.  A general
   gauge-covariance theorem remains open.
-- P3: any new atom candidate must simultaneously break monodromy
-  imprimitivity AND Jelonek reducibility expectations.
+- P3 (reframed): within a mixed grade, primitivity proves atomness; Jelonek
+  reducibility is a second one-way classifier, not an atom-degree floor.
 - P4: component count of the Jelonek divisor = the grade exponent `k`,
   generically.
 - P5: the genus axis governs the remaining JC(2) strata.
@@ -208,5 +211,5 @@ grade-two components and their fixed-map square class are proved.  Exact
 discriminant multiplicities, the `-(det J)^2` law, and higher component count
 remain outside proved general canon.  "Generic component count" needs a
 precise genericity notion before any classification claim; none of this closes
-JC(2), classifies the monoid, or excludes G1 -- it supplies invariants and a
-hunting map.
+JC(2), classifies maps within the monoid, or controls the weighted G1 witness
+-- it supplies invariants and a hunting map.
