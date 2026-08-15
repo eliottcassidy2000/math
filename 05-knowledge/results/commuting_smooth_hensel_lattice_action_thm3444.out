@@ -1,0 +1,7 @@
+commuting smooth Hensel lattice-action controls
+affine_rows=((3, 2, 2, 1, 3, 81, 81, 1), (3, 3, 2, 1, 3, 729, 81, 9), (5, 4, 3, 2, 3, 625, 125, 5), (2, 3, 2, 2, 4, 64, 16, 4))
+nonlinear_rows=((0, 0, 81, 81), (0, 1, 81, 81), (0, 2, 81, 81), (1, 0, 81, 81), (1, 1, 81, 81), (1, 2, 81, 81), (2, 0, 81, 81), (2, 1, 81, 81), (2, 2, 81, 81))
+dependent_hostile=(25, (5, 5, 5, 5, 5), (3, 1))
+two_adic_product=((1, 3, 16, 8, 2), (2, 4, 16, 16, 1))
+semantic_sha256=a3393fafed345ae96bea50a5dcc4dfb7dadb56320e1d7cefd57a800d3ed615c1
+script_lf_sha256=7bf18fd6329ce80801f0712d3df37636dfec53154520b04824ecd2342407491c

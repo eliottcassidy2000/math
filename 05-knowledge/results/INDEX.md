@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `commuting_smooth_hensel_lattice_action_thm3444.py` -> matching `.out`
+  [THM-3444 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
+  INDEPENDENT AUDIT REQUIRED].  For `r` commuting automorphisms of a smooth
+  `d`-dimensional `Z_p`-scheme, pointwise independence of their first-carry
+  fields gives a free `(Z/p^(a-c)Z)^r` action on every depth-`c` fibre, orbit
+  size `p^(r(a-c))`, and `p^((d-r)(a-c))` orbit banks; first-lift freeness is
+  equivalent to independence.  Controls cover affine equality with `r<d`
+  and `r=d`, nine nonlinear conjugate-translation fibres, a dependent
+  hostile, and the sharp `p=2,c=1` failure versus `c=2` survival.
+  Script/output/semantic LF SHA-256:
+  `7bf18fd6329ce80801f0712d3df37636dfec53154520b04824ecd2342407491c` /
+  `7f8587e4bf37ba932ecf6b5f0748284088cb58a7ccac07df8d1feaea3ae197b7` /
+  `a3393fafed345ae96bea50a5dcc4dfb7dadb56320e1d7cefd57a800d3ed615c1`.
+  No LRC, `JC(2)`, or boundary-response transport is claimed.
+
 - `smooth_hensel_vector_field_orbits_thm3442.py` -> matching `.out`
   [THM-3442 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a smooth
   finite-type `Z_p`-scheme of pure relative dimension `d`, a
