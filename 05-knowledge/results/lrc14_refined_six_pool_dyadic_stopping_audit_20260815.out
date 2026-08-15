@@ -1,0 +1,26 @@
+LRC14 REFINED SIX-POOL AND DYADIC SAMPLE STOPPING AUDIT
+status=FINITE-EXACT unnumbered stopping package;exact current refined key composition;no new LRC14 row terminal
+compiler=U_D six-pool cover plus hypothetical quotient cover gives at most 13 clocks;the cited theorem stops at 12;no forced clock collision is retained by (body,D)
+k2_post=(rows,occurrences)=(4056, 200069517203);categories={'body-only': (2968, 199075988191), 'nontrivial-only': (382, 133049669), 'none': (706, 860479343), 'body+nontrivial': (0, 0)}
+k2_category_coindex=((('body-only', 1), 2966), (('body-only', 3), 2), (('none', 2), 644), (('none', 3), 48), (('none', 4), 14), (('nontrivial-only', 2), 270), (('nontrivial-only', 3), 73), (('nontrivial-only', 4), 38), (('nontrivial-only', 6), 1))
+k2_examples={'body-only': (((1, 2, 3, 4, 8, 12), 336), (336, 160), None, 2095), 'nontrivial-only': (((1, 2, 3, 4, 7, 12), 588), (1176, 358), (1, 2, 6, 7, 8, 10), 181), 'none': (((1, 2, 4, 6, 9, 10), 1260), (2520, 646), None, 918)};k2_none_first_seven=(1, 2, 3, 5, 8, 9, 10)
+k2_semantic_sha256=4325e0a02db45ca1c8e89383317141eb820dabcf35415a7cd532c50baa4ccdb5
+k3_post=(rows,occurrences)=(1897, 2548893834);categories={'body-only': (1823, 2547058578), 'nontrivial-only': (20, 313120), 'none': (54, 1522136), 'body+nontrivial': (0, 0)}
+k3_category_coindex=((('body-only', 1), 1823), (('none', 2), 54), (('nontrivial-only', 2), 20))
+k3_examples={'body-only': (((1, 3, 4, 5, 6, 10), 840), (840, 366), None, 388), 'nontrivial-only': (((1, 2, 5, 7, 8, 10), 1960), (3920, 1110), (1, 4, 5, 7, 8, 12), 184), 'none': (((2, 3, 5, 7, 10, 12), 2940), (5880, 1574), None, 863)};k3_none_first_seven=(1, 5, 6, 7, 8, 10, 12)
+k3_semantic_sha256=9420bb276b8652f19550ba8c18f1db1b63b59b5246dd3a8312d120a99c66d415
+dyadic_map=half u=1/2 maps supported r to sheet r of B_D;quarter u=1/4,3/4 maps supported r to both sheets 2r,2r+1 of B_(2D)
+k2_half_rank6_basefree=[(((1, 2, 3, 6, 7, 13), 3822), 2292, 1530, (1274, 2548, 3), 641), (((2, 3, 6, 7, 13, 14), 3822), 2262, 1560, (1274, 2548, 3), 641)]
+k2_dyadic_result=no one-aux hit because every arbitrary transverse D=3822 half block has size at most 1274;k2_quarter_rank6_basefree_rows=0
+k3_dyadic_result=half_rank5_basefree_rows=0;half_rank6_basefree_rows=0;quarter_rank5_basefree_rows=0;quarter_rank6_basefree_rows=0;odd_half_rank7_basefree_rows=0
+k2_half_rank6_support_hist=(((8, 3011), (9, 516), (10, 436), (11, 57), (12, 34), (None, 2)), ((8, 178231436976), (9, 18542307649), (10, 3265554157), (11, 30006363), (12, 210776), (None, 1282)))
+k2_quarter_rank6_support_hist=(((8, 3888), (9, 96), (10, 65), (11, 5), (12, 2)), ((8, 199645531880), (9, 385883695), (10, 37957206), (11, 143140), (12, 1282)))
+k3_half_rank5_support_hist=(((8, 1570), (9, 187), (10, 129), (12, 11)), ((8, 2201265532), (9, 283857850), (10, 63077188), (12, 693264)))
+k3_half_rank6_support_hist=(((8, 1570), (9, 187), (10, 129), (11, 11)), ((8, 2201265532), (9, 283857850), (10, 63077188), (11, 693264)))
+k3_quarter_rank5_support_hist=(((8, 1885), (9, 10), (10, 2)), ((8, 2540172205), (9, 7654991), (10, 1066638)))
+k3_quarter_rank6_support_hist=(((8, 1885), (9, 10), (10, 2)), ((8, 2540172205), (9, 7654991), (10, 1066638)))
+parity_loss=current keys omit aligned multiplier parities;half chart needs all odd;quarter chart needs none divisible by 4;minimal missed shapes k2=(1,4),k3=(1,2,4)
+typed_boundary=the quarter compiler retains both oriented child sheets;a base-support projection alone would lose the dyadic coset
+k2_engine_output_sha256=49cbf8fb160a78125d426cf7348c3c35e4859f110f493bb4b03acfc2f0c92125;solver_cache=CacheInfo(hits=16943, misses=82358, maxsize=None, currsize=82358)
+dependency_lf_sha256=(('04-computation/lrc14_k2_refined_complement_clock_composition_kps_s175.py', '414b3777cc44f2e059d5bc4258ab555fc055de8c0f8b3ebfd99ce0c90c7da14c'), ('04-computation/lrc14_k3_refined_complement_clock_composition_kps_s176.py', '27e4bff52705189bf8ff73db42d76d4e2fc94c44330d295f166f8d4217cb1804'), ('04-computation/lrc14_k1_body_complement_clock_scan_kps_s172.py', 'bdb2001cf22f7e92884e895b0095021e42e8f1febd9adbf779b250a2f6c53507'), ('01-canon/theorems/THM-3366-all-sector-complement-clock-completion.md', '9d6a356cf7440f0eae271ec8163b53895df9ac70332be27a1b0fe62da5172e43'), ('01-canon/theorems/THM-3415-zero-mode-cochain-global-rank-five-support.md', 'de8d2f615695070dc75cad38ad4a9c22308d8bf900cd6f9a69cd2003f815a14d'), ('01-canon/theorems/THM-3416-zero-mode-cochain-global-rank-six-support.md', '42a9309145de51d1bb6fca0b7c1945302ff37a63a3183e1dfed838c07118e8bf'), ('01-canon/theorems/THM-3434-seventeen-fibre-two-sided-mass-closure.md', '52a5a5caed75ad48ab35ce287c15f6cece074c88dddda2b87329792a3df70af7'))
+verdict=PASS;new_unconditional_terminals=0;new_parity_conditional_terminals=0
