@@ -2,7 +2,7 @@
 id: THM-3400
 title: "Discounted norming-orbit commutator-flux tariff"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT IMMUTABLE-FILE AUDIT PENDING.  Let
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Let
   c>=2 and let uniformly bounded all-iterate defects
   E_n=cV^*Q^{*n}V-T^{*n} come from an isometry V and a contraction Q.  If
   kappa=||T||>c, every norming vector pays discounted commutator leakage at
@@ -15,7 +15,7 @@ status: >
   hostile shows why an infinite uniform tail remains necessary.  This
   strictly strengthens THM-3390 but supplies no Crouzeix completion.
 source: root-2608-crouzeix-puzzle-2026-08-15
-audit: algebraic recurrence, discounted-tail, tariff, equality-family, noncommuting, periodic, and finite-prefix exact controls; independent mathematical sign/constant audit complete; immutable-file audit pending
+audit: algebraic recurrence, discounted-tail, tariff, equality-family, noncommuting, periodic, and finite-prefix exact controls; independent immutable-file proof, replay, hash, semantic-digest, AST, routing, dependency, and hostile audit complete
 depends_on:
   - THM-3390-all-iterate-commuting-completion-norm-bound
 related:
@@ -31,7 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3400 -- discounted norming-orbit commutator-flux tariff
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT IMMUTABLE-FILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Inheritance and the changed coordinate
 

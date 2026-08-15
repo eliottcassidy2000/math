@@ -4,10 +4,11 @@ title: "Centered transverse sheet-cover rank from fifteen through twenty-eight"
 status: >
   PROVED exact rank formula for every q=15,...,28 plus sharp q=14 and q=29
   boundary theorems; VERIFIED-EXACT by a self-contained literal classifier,
-  construction audit, and independent finite set-cover search.  This is a
-  common-centre/zero-cochain theorem only and gives no LRC(14) decrement.
+  construction audit, and independent finite set-cover search;
+  INDEPENDENTLY AUDITED.  This is a common-centre/zero-cochain theorem only
+  and gives no LRC(14) decrement.
 source: root-2608-centered-sheet-rank-2026-08-15
-audit: self-contained arithmetic proof; 328 general quotient-block checks for q=14,...,29; all 287 transverse residue owners for q=15,...,28; 122 construction/irredundancy checks; 9828 literal set-cover subsets; q14 strict noncover, 24 q28 endpoint incidences, and q29 C14 edge-cover boundary
+audit: self-contained arithmetic proof; 328 general quotient-block checks for q=14,...,29; all 287 transverse residue owners for q=15,...,28; 122 construction/irredundancy checks; 9828 literal set-cover subsets; q14 strict noncover, 24 q28 endpoint incidences, and q29 C14 edge-cover boundary; independent proof/type/strict-endpoint/cycle/replay/hash-seed audit complete
 depends_on:
   - THM-3398-general-finite-mode-sheet-cover-cochain
 related:
@@ -27,8 +28,8 @@ hash_basis: LF-normalized bytes
 # THM-3401 -- centered transverse sheet-cover rank from fifteen through twenty-eight
 
 **PROVED exact rank formula for every `q=15,...,28`, with sharp lower and
-upper boundary theorems + VERIFIED-EXACT independent literal set-cover
-search.**
+upper boundary theorems, VERIFIED-EXACT independent literal set-cover search,
+and an independent audit.**
 
 ## 1. Statement
 
