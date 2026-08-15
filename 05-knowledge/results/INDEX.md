@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `all_ref_concept_archaeology_20260815.py` -> matching `.out` plus frozen
+  `.refs` [REPRODUCIBLE PROVENANCE INVENTORY; NOT A MATHEMATICAL VERIFIER].
+  At `origin/main=5f038660851946647afee993fb3fea850cc80b7d`, the manifest freezes
+  `193` nonsymbolic branch/remote refs, `175` with outside-main commits,
+  `4,697` unique outside-main commits, and `2,362` historically touched paths
+  absent from main.  The broader all-ref comparison adds exactly seven stash
+  commits and `128` absent paths.  Positive branch-only motif controls and the
+  current THM-2355 hostile pass.  Filename hits prove only reachability and
+  absence; truth and novelty are audited in the companion
+  [all-ref archaeology reflection](../../07-reflections/all-ref-archaeology-chain-enriched-context-and-operation-defects-root-20260815.md).
+  Script/output/manifest SHA-256:
+  `a5906fed1e139ad172fb215d45d956f879d60b1287378c9c80eb89837734b9bc` /
+  `d194b6392342d461f263e2847c053257a581755493acfe50c1b4f2a5da10d691` /
+  `5247a018b94671c952d569bfc0600c13acbc17191974267b2329e149c33b11b9`.
+  No historical claim is promoted by the census alone, and no open problem
+  follows.
 - `lrc_literal_half_twist_common_centre_q83_rank9_thm3461.py` -> matching
   `.out` [THM-3461 RESERVED / PROVISIONAL + VERIFIED-EXACT; independent
   mathematics audit PASS, immutable-package audit pending].  Reattaching

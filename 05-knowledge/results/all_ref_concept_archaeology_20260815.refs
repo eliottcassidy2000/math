@@ -1,8 +1,8 @@
 # all_ref_concept_archaeology_ref_manifest_v1
 # main_ref=origin/main
-# main_sha=2e4622d100aa87f63b3ad359a9cec0b09364064d
-# head_sha=2e4622d100aa87f63b3ad359a9cec0b09364064d
-# captured_at=2026-08-15T17:12:00-06:00
+# main_sha=5f038660851946647afee993fb3fea850cc80b7d
+# head_sha=5f038660851946647afee993fb3fea850cc80b7d
+# captured_at=2026-08-15T17:31:47-06:00
 # columns=scope<TAB>ref<TAB>object_name<TAB>symref_or_dash
 branch	refs/heads/backup/codex-hyp3439-critical-bank	c5214e7eeb44c0e61ae07fd389bad27d3890166d	-
 branch	refs/heads/backup/pre-sync-20260615	a7b01633f45f11e5547e5b5462360a159ea0fcce	-
@@ -90,7 +90,7 @@ branch	refs/heads/codex/session-cross-domain-reframes-agent	c83af852380809d572a7
 branch	refs/heads/codex/session-delta2-degree4	bc047bdc3d2728085325f765bb3911cb2152574b	-
 branch	refs/heads/codex/session-fc-archimedes-port	216c27e60a9c06f235d42797c29cd44c1c797019	-
 branch	refs/heads/codex/session-gvc3-counterexample	f9ac6d1da81b0db6c6cae78b2f336144bcb70bee	-
-branch	refs/heads/codex/session-history-reframes-0815	2e4622d100aa87f63b3ad359a9cec0b09364064d	-
+branch	refs/heads/codex/session-history-reframes-0815	5f038660851946647afee993fb3fea850cc80b7d	-
 branch	refs/heads/codex/session-imw-pi-n-s2	6084ad48d36fbf8e4f9aeefc979ec612f0c88f59	-
 branch	refs/heads/codex/session-pyth-squares-frontier-0812	bf65e6e73e384ad11f3da7c826857fa12b445d91	-
 branch	refs/heads/codex/session-reserve-3365-0814	3c96512b9ac39d02e76fe5b10dd1f33bb039ae97	-
@@ -196,6 +196,6 @@ branch	refs/remotes/fork/claudebox-s521-lrc-arc-menu-a000016	ace635894ed97dc4753
 branch	refs/remotes/fork/codex-s95-recursive-results	31475ea560b15d48c452a7c988f0869574a242a8	-
 branch	refs/remotes/fork/helly-entropy-s620	f9cd6f914996b2476dc433016cd11a2538047e49	-
 branch	refs/remotes/fork/main	6a063168a670fd64d7d3cb7f6690de52e0f25474	-
-branch	refs/remotes/origin/HEAD	2e4622d100aa87f63b3ad359a9cec0b09364064d	refs/remotes/origin/main
-branch	refs/remotes/origin/main	2e4622d100aa87f63b3ad359a9cec0b09364064d	-
+branch	refs/remotes/origin/HEAD	5f038660851946647afee993fb3fea850cc80b7d	refs/remotes/origin/main
+branch	refs/remotes/origin/main	5f038660851946647afee993fb3fea850cc80b7d	-
 other	refs/stash	01cbe71d857ca5a34b9d66e2edd6b25ed8d5b81b	-

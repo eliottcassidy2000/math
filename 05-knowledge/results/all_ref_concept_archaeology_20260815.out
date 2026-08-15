@@ -3,8 +3,8 @@ ALL-REF CONCEPT ARCHAEOLOGY INVENTORY
 inventory_mode=frozen_manifest
 ref_manifest=all_ref_concept_archaeology_20260815.refs
 main_ref=origin/main
-main_sha=2e4622d100aa87f63b3ad359a9cec0b09364064d
-head_sha_at_capture=2e4622d100aa87f63b3ad359a9cec0b09364064d
+main_sha=5f038660851946647afee993fb3fea850cc80b7d
+head_sha_at_capture=5f038660851946647afee993fb3fea850cc80b7d
 
 BRANCH / REMOTE-TRACKING UNIVERSE
 raw_ref_entries=194

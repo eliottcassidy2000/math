@@ -52,7 +52,7 @@ scalar, mask, or quotient approaches provably lose.
 ## Search universe and reproduction
 
 The frozen truth snapshot is
-`origin/main=2e4622d100aa87f63b3ad359a9cec0b09364064d`.  After fetching all
+`origin/main=5f038660851946647afee993fb3fea850cc80b7d`.  After fetching all
 configured remotes, the audit enumerated every nonsymbolic local head and
 remote-tracking ref and compared its complete reachable history with that
 snapshot.
@@ -510,6 +510,21 @@ Connection contract:
 For frontier management this changes the question from “why is the matrix
 singular?” to “did topology, allowed syntax, or a special coefficient do it?”
 The three answers require different next moves.
+
+The incoming current synthesis
+[three-coordinate cubics, one discriminant line](three-coordinate-cubics-one-discriminant-line-and-the-weighted-keller-monoid-codex-20260815.md)
+supplies a fresh JC control.  The fixed-map theorems
+[THM-2473](../01-canon/theorems/THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy.md),
+[THM-2546](../01-canon/theorems/THM-2546-integral-coordinate-dichotomy-and-parity-lens-scope.md),
+and
+[THM-2582](../01-canon/theorems/THM-2582-odd-block-discriminant-tower-and-composite-jelonek-square-class.md)
+separate a common reduced branch divisor, coordinate-dependent index squares,
+and boundary valuation effectivity; composition changes the odd square class.
+This is the same audit principle in a setting where a common printed
+discriminant factor is especially tempting to overinterpret.  The proposed
+next test—weighted seeds in degrees `3,4,5`, with branch divisor, index square,
+Jelonek divisor, valuation cone, and monodromy blocks recorded separately—is
+a concrete JC instance of the defect invoice, not a new theorem here.
 
 ## 5. Two-axis response tower
 
