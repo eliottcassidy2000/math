@@ -296,12 +296,10 @@ independence, or another theorem making the pairing a function of the totals.
 **Evidence:** THM-2059's CRT packet theorem repairs the marginal-size loss; the
 same error genus is exposed by MISTAKE-231's observable-relative fiber counts
 and by observer/cut-payload quotients in the tournament atlas.
-## Rank the extremal spectrum, then restore simultaneous geometry
-
-**Trigger / action:** when a close bound sums sharp local caps with shared arithmetic labels, rank the exact spectrum, use a tail to force a finite high-capacity bank, then impose the literal union, ratio cocycle, affine anchor, or cut functional and price its compatibility debt.
-**Mechanism:** independently sharp marginals may force higher intersections or incompatible triangle products that no marginal reoptimization sees.
-**Counterindication:** skip this when labels are independent, the target factors through their totals, or no tail makes the bank finite; never erase an anchor needed by the simultaneous predicate.
-**Evidence:** THM-2258's `13`-ratio/`15`-subset atlas recovers overlap rebate `29/220`; THM-2263 replaces three independent pair maxima by the compatible ladder `(1,169,28561)`. The affine-chord companion records the anchor sidecar; canonical THM-2145 and its simultaneous THM-2270 strengthening record the cut sidecar. The later THM-2265 derivation is a valid but superseded duplicate.
+## Rank local extrema, then pass closure and effectivity
+**Trigger/action:** when sharp local caps share labels, rank the spectrum, force a finite bank, retain common fibres, and then test cycle/Čech closure plus membership in the target positive, integral, polynomial, or completed category.
+**Mechanism/counterindication:** compatible marginals may still have bad triangle products or glue only in an ambient field/signed space; skip the extra gates only after proving independence or target factorization.
+**Evidence:** THM-2258/2263/2270 restore simultaneous arithmetic; THM-3388/3389 separate gaps, triangle closure, and coverage; THM-3080/3081 glue Laurent keys while THM-3383 exposes polynomial debt; THM-3396 restores cubic/quartic positivity after the Gram shadow.
 
 ## “One item left” requires a typed residual
 
