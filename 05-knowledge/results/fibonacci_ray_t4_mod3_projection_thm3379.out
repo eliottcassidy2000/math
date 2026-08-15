@@ -1,0 +1,23 @@
+THM-3379 FIBONACCI-RAY LOCAL T4 MOD-THREE PROJECTION
+source_sha256_lf 803065a6ce419554b04403b13537889547da53bd1e30aa35edc5e5caca549ae8
+theorem_source_sha256_lf (('THM-3339', '1e4aa8cd9d6cc9bf342328a4af0e5db8cd7eefb51eea08460d03f2c6410cee51'), ('THM-3364', '4d8e97c83d54a878c3f628d1944be0d5d391e1c0a2e96a5cf877f5edef875cbe'))
+assertion_nodes 0 floating_literals 0
+branch_identity_checks 6120
+ray_index_range (2, 604) ray_counts (('R0', 201), ('R1', 201), ('R2', 201))
+ray_boundary_records ((2, 2, '', 'R2', (1, 2), 'bca', 0), (3, 3, 'A', 'R0', (2, 3), 'bac', 0), (4, 4, 'C', 'R1', (1, 4), 'abc', 1), (5, 5, 'BA', 'R2', (5, 8), 'acb', 0), (6, 0, 'ABA', 'R0', (8, 13), 'cab', 0), (7, 1, 'CBC', 'R1', (4, 17), 'cba', 1), (8, 2, 'BABA', 'R2', (21, 34), 'bca', 0), (9, 3, 'ABABA', 'R0', (34, 55), 'bac', 0), (10, 4, 'CBCBC', 'R1', (17, 72), 'abc', 1), (11, 5, 'BABABA', 'R2', (89, 144), 'acb', 0), (12, 0, 'ABABABA', 'R0', (144, 233), 'cab', 0), (13, 1, 'CBCBCBC', 'R1', (72, 305), 'cba', 1))
+ray_terminal_summaries ((599, 5, 398, 'R2', 'acb', 0), (600, 0, 399, 'R0', 'cab', 0), (601, 1, 399, 'R1', 'cba', 1), (602, 2, 400, 'R2', 'bca', 0), (603, 3, 401, 'R0', 'bac', 0), (604, 4, 401, 'R1', 'abc', 1))
+six_state_table_residue_order_median_epsilon_sign ((0, 'cab', 'a', 0, 1), (1, 'cba', 'b', 1, -1), (2, 'bca', 'c', 0, 1), (3, 'bac', 'a', 0, -1), (4, 'abc', 'b', 1, 1), (5, 'acb', 'c', 0, -1))
+ancestry_median_dictionary (('R0', 'a'), ('R1', 'b'), ('R2', 'c'))
+epsilon_formula epsilon(k)=1 iff k=1 mod 3 iff median(channel order)=b
+period_three_spectrum_Qomega (((1, 3), (0, 1)), ((-1, 3), (-1, 3)), ((0, 1), (1, 3)))
+period_six_spectrum_Qomega (((1, 3), (0, 1)), ((0, 1), (0, 1)), ((-1, 3), (-1, 3)), ((0, 1), (0, 1)), ((0, 1), (1, 3)), ((0, 1), (0, 1)))
+Cassini_split H_epsilon=S_1 disjoint_union S_4; odd modes cancel
+harmonic_density (1, 3) periodic_scar (5, 18)
+actual_support {4,7,10,...}=({n>=1:n=1 mod 3})\{1}
+harmonic_constant_profile (('gamma', (1, 3)), ('pi_over_sqrt3', (1, 6)), ('log_3', (1, 6)), ('finite_startup', (-1, 1)))
+full_tree_depths (0, 10) bit_counts ((1, 0), (1, 2), (5, 4), (13, 14), (41, 40), (121, 122), (365, 364), (1093, 1094), (3281, 3280), (9841, 9842), (29525, 29524)) checks 88573
+hostile_records (('A', (2, 3), 0, 0), ('B', (2, 5), 1, 1), ('AB', (3, 8), 1, 1), ('BA', (5, 8), 0, 0), ('CB', (4, 9), 0, 0))
+hostile_conclusion depth, branch counts, and terminal letter do not determine epsilon on the full tree
+semantic_sha256 981a5759c78a3aadb928d78f451c5070b2eb4965f54c0066e5004dfa4ef13e2d
+replay_contract ordinary_and_python_O_outputs_byte_identical
+status=ALL EXACT CHECKS PASSED; collapse is restricted to the three Fibonacci rays

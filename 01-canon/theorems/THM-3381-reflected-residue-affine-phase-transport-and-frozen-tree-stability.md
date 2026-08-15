@@ -2,207 +2,239 @@
 id: THM-3381
 title: "Reflected-residue affine phase transport and frozen-tree stability"
 status: >
-  PROVED analytic theorem + VERIFIED-EXACT controls. Exact affine conjugacy
-  retains the centered phase defect under an arbitrary integer drift change;
-  a quantitative symmetric-difference bound yields a sufficient frozen-tree
-  Hunter stability gate. A unit residue change exactly refutes the
-  residue-blind pair-floor transfer, while a strict noncanonical packet
-  verifies that the repaired gate is nonvacuous. No arbitrary-residue,
-  projected-wall, physical-entry, or LRC(14) closure follows.
-source: root/lrc-math-2026-08-14
-audit: >
-  independent line audit of the conjugacy, boundary-neighbourhood pullback,
-  and tree coefficients; exact-rational hostile and positive controls;
-  byte-identical ordinary/optimized replay
-depends_on: []
-related:
+  PROVED analytic lemma + VERIFIED-EXACT controls + independently audited.
+  Changing a reflected LRC drift z to z+h transports its untruncated danger
+  comb by an exact affine map carrying the centered phase defect
+  Delta=hj-mL.  The clipped clauses satisfy an explicit L1 bound, and every
+  frozen Hunter tree has a degree-weighted stability inequality.  A one-unit
+  residue perturbation makes a canonical positive pair overlap vanish,
+  refuting residue-blind extension of THM-3360; a distinct noncanonical packet
+  has a strictly positive coarse stability margin, so the repaired chamber is
+  nonvacuous.  Arbitrary residues, changing trees/cells, arbitrary k=1, entry,
+  the rung, and LRC(14) remain open.
+source: root/repository-archaeology-second-pass-2026-08-14 selective recovery
+recovered_from: origin/codex/lrc-math-20260812@73860320139774bca3313c986794d1a4ebf2db37
+depends_on:
   - THM-3355-disconnected-low-affine-tail-and-reflected-branch-closure
   - THM-3360-uniform-reflected-high-pair-floor-by-admissible-affine-tails
-  - THM-3384-independent-superunit-affine-tail-and-reflected-residue-closure
-script: 04-computation/lrc14_reflected_residue_phase_stability_20260814.py
-output: 05-knowledge/results/lrc14_reflected_residue_phase_stability_20260814.out
+related:
+  - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
+  - THM-3378-projected-k3-z216-gcd24-L129360-row94-one-high-torsion-closure
+script: 04-computation/lrc14_reflected_residue_phase_stability_thm3381.py
+output: 05-knowledge/results/lrc14_reflected_residue_phase_stability_thm3381.out
 script_sha256: fedaa46451ef1582e9d6a472e4996380ad08060810c1cf2642c4b9121ce3f383
 output_sha256: b41ef513589888543c3899ab0e11b684bbd0f3075f802c88adbdab09d223e4ef
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3381 -- affine phase transport and frozen-tree stability
+# THM-3381 -- reflected residues need a located phase budget
 
-**PROVED analytic theorem + VERIFIED-EXACT controls.**
+**PROVED analytic lemma + VERIFIED-EXACT controls + independently audited.**
 
-This theorem isolates the coordinate lost when the matched-residue floor of
-THM-3360/3376 is transported to another residue.  The stable object is a
-located phase together with a tree margin, not a reduced level ratio.
+## 1. Exact affine transport
 
-## 1. Exact affine conjugacy
-
-Let `L>0`, `0<=j<L`, `z>0`, and let the integer `h` satisfy `z+h>0`.  On the
-real line define
+Let `L>0`, `0<=j<L`, `z>0`, and let `h` be an integer with `z+h>0`.  On the
+real line define the open periodic danger comb and its clipped cell clause by
 
 ```text
-B_z(j)={u in R: ||z(j+u)/L||<1/14},
-A_z(j)=B_z(j) intersect [0,1].                         (1)
+B_z(j)={u in R : ||z(j+u)/L||<1/14},
+A_z(j)=B_z(j) intersect [0,1].                           (1)
 ```
 
 For any integer `m`, put
 
 ```text
-Delta=hj-mL,                 phi_h(u)=(zu-Delta)/(z+h). (2)
+Delta=hj-mL,
+phi_h(u)=(zu-Delta)/(z+h).                              (2)
 ```
 
 Then
 
 ```text
-(z+h)(j+phi_h(u))/L=z(j+u)/L+m,
-B_(z+h)(j)=phi_h(B_z(j)).                              (3)
+(z+h)(j+phi_h(u))/L=z(j+u)/L+m.                         (3)
 ```
 
-Thus `(3)` is an exact orientation-preserving affine conjugacy of the
-untruncated periodic combs.  Intersecting with `[0,1]` remains literal; the
-endpoint clipping is not silently identified under `phi_h`.
-
-## 2. Symmetric-difference transport
-
-Choose `m` so that `Delta` is a centered residue modulo `L`, and set
+Since `z+h>0`, `phi_h` is an affine bijection.  Equation `(3)` proves the
+exact untruncated transport law
 
 ```text
-eta=(|Delta|+|h|)/L,             alpha=z/L.             (4)
+B_(z+h)(j)=phi_h(B_z(j)).                               (4)
 ```
 
-At the same `u in [0,1]`, the circular displacement of the old and new
-phases is at most `eta`.  Their danger indicators can differ only when the
-old phase lies within circular distance `eta` of one of the two boundary
-points of the radius-`1/14` arc.  This boundary neighbourhood has circle
-measure at most `min(1,4eta)`.
+The intersection with `[0,1]` is not preserved by `(4)` and must still be
+computed or bounded literally.  This is the first scope boundary.
 
-The old phase traverses an interval of length `alpha`.  For a periodic set of
-circle measure `s`, its intersection with that interval has length at most
-`(floor(alpha)+1)s`; pulling back by slope `alpha` and clipping at one gives
+## 2. Phase-aware symmetric-difference bound
+
+Choose `m` in `(2)` so that `Delta` is a centered residue modulo `L`, and set
 
 ```text
-sigma(z,h):=mu(A_z(j) triangle A_(z+h)(j))
- <= min(1,4eta(1+1/alpha))
- =  min(1,4eta(1+L/z)).                               (5)
+eta=(|Delta|+|h|)/L.                                    (5)
 ```
 
-No reflected-residue or high-pair hypothesis is used in `(3)--(5)`.
+At the same cell coordinate `u in [0,1]`, the new and old circle phases differ
+modulo an integer by
 
-## 3. Frozen-tree Hunter stability
+```text
+(Delta+hu)/L,
+```
 
-Let `A_1,...,A_6` be measurable clauses, let `T` be a spanning tree on their
-six vertices, and define its Hunter margin
+whose absolute value is at most `eta`.  If the two radius-`1/14` indicators
+differ, the old phase lies in the `eta`-neighbourhood of one of the two danger-
+arc boundary points.  This boundary neighbourhood has circle measure at most
+`min(1,4eta)`.
+
+The old phase traverses an interval of length `alpha=z/L` as `u` traverses
+the cell.  Every complete turn contributes the circle measure of the boundary
+set and the final partial turn contributes at most one more copy.  Therefore
+
+```text
+sigma(z,h):=mu(A_z(j) symmetric_difference A_(z+h)(j))
+ <=min(1,4eta(1+1/alpha))
+ = min(1,4eta(1+L/z)).                                  (6)
+```
+
+This proof uses neither a canonical residue nor a small value of `|h|` by
+itself.  The located centered phase `Delta` is load-bearing.
+
+## 3. Frozen-tree stability
+
+Freeze a spanning tree `T` on six clauses and define its Hunter margin
 
 ```text
 M_T(A)=sum_(ij in T) mu(A_i intersect A_j)
-       -[sum_i mu(A_i)-6/7].                           (6)
+       -[sum_i mu(A_i)-6/7].                            (7)
 ```
 
-Suppose `mu(A_i triangle A_i')<=sigma_i`.  For every edge,
+Let `A_i'` be perturbed clauses and
+`sigma_i=mu(A_i symmetric_difference A_i')`.  The elementary inequalities
 
 ```text
 mu(A_i' intersect A_j')
- >=mu(A_i intersect A_j)-sigma_i-sigma_j,              (7)
+ >=mu(A_i intersect A_j)-sigma_i-sigma_j,
+mu(A_i')<=mu(A_i)+sigma_i                               (8)
 ```
 
-and `mu(A_i')<=mu(A_i)+sigma_i`.  Summing `(7)` over the tree and the
-singleton debt gives the exact gate
+sum to
 
 ```text
-M_T(A') >= M_T(A)-sum_i (deg_T(i)+1)sigma_i.           (8)
+M_T(A')
+ >=M_T(A)-sum_i (deg_T(i)+1)sigma_i.                    (9)
 ```
 
-Consequently a previously certified tree survives any simultaneous integer
-drift perturbation for which its old margin strictly exceeds the right-hand
-loss budget obtained from `(5)`.  The degree term records edge loss; the
-additional `+1` is the changed singleton debt.
+Combining `(6)` and `(9)` gives a rigorous phase-aware perturbation chamber
+for any already-certified fixed packet and fixed tree.  Several coordinates
+may move simultaneously.  The theorem does not say that the old tree remains
+optimal, only that its displayed lower bound remains valid.
 
-## 4. The residue-blind pair floor is false
+## 4. Minimal residue-blind hostile
 
-On the upper-median cell
+Use the current `649`-body bank member
 
 ```text
-E=(1,2,3,4,6,12),             (L,j)=(168,90),
+E=(1,2,3,4,6,12),        (L,j)=(168,90),               (10)
 ```
 
-the canonical high `3:5` pair on labels `(12,4)` is
+and its canonical high `3:5` pair on labels `(12,4)`:
 
 ```text
-z=3L-12=492,                  w=5L-4=836.
+z=3L-12=492,              w=5L-4=836.                  (11)
 ```
 
-Exact interval arithmetic gives
+Exact open-interval arithmetic gives
 
 ```text
-mu(A_z intersect A_w)=6/209>Dmax/5.                   (9)
+mu(A_z intersect A_w)=6/209>Dmax/5.                    (12)
 ```
 
-Changing only `z` to `z-1=491` gives
+Move only the first drift by the smallest nonzero integer displacement,
+`z'=491`.  Then
 
 ```text
-mu(A_(z-1) intersect A_w)=0.                          (10)
+mu(A_z' intersect A_w)=0.                               (13)
 ```
 
-For `h=-1,m=-1`, the centered defect is `Delta=78`, hence the cell-phase
-jump is `13/28`.  This is a minimal one-coordinate, unit-displacement
-counterexample.  It refutes any transfer that retains only the old high
-ratio, `|h|`, or canonical edge floor while discarding `Delta`.  It is not an
-LRC packet counterexample.
+For `h=-1,m=-1`, equation `(2)` gives `Delta=78`, a phase jump
+`78/168=13/28`.  Thus `(13)` is not a continuity paradox.  A one-unit drift
+can be a near-half-turn in the selected cell.  This witness is minimal in
+changed-coordinate support and absolute nonzero integer displacement.
 
-## 5. The repaired gate is nonvacuous
+It refutes every proposed extension of THM-3360's canonical pair floor which
+retains only a level ratio, denominator/unit passport, or `|h|` and forgets
+the located phase.  It is a counterexample to a sufficient pair certificate,
+not to LRC(14), and it does not alter THM-3360's canonical statement.
 
-For
+## 5. A strict positive noncanonical chamber
+
+Take the distinct-drift repeated-level packet
 
 ```text
-E=(1,2,3,8,9,14),  (L,j)=(7056,3780),
-q=(3,3,3,5,5,5),
+E=(1,2,3,8,9,14),       (L,j)=(7056,3780),
+q=(3,3,3,5,5,5).                                       (14)
 ```
 
-the displayed cross-`K_(3,3)` tree in the companion has margin
+The exact maximum cross-`K_(3,3)` tree is
 
 ```text
-M=71440713312252560278/527394888495258135905.          (11)
+T=((1,4),(1,5),(0,5),(2,3),(0,3))                      (15)
 ```
 
-Perturb the first drift by `h=28`.  Since `28j=15L`, `Delta=0` and
-`eta=1/252`.  The exact symmetric difference and the bound `(5)` are
+with canonical margin
 
 ```text
-sigma=67424/16616095
- <=28223/1333521.                                     (12)
+71440713312252560278 / 527394888495258135905 > 0.       (16)
 ```
 
-That vertex has tree degree two, and even the coarse gate is strict:
+Move only `z_0=3L-1` by `h=28`.  Here `28j=15L`, so `Delta=0` and
+`eta=1/252`.  The literal and analytic bounds are
 
 ```text
-M-3(28223/1333521)
- =113864784228062404699/1582184665485774407715>0.      (13)
+sigma_0       =67424/16616095,
+sigma_0 bound =28223/1333521.                           (17)
 ```
 
-The literal perturbed margin is also positive.  Hence `(8)` certifies a
-genuinely noncanonical, distinct-drift packet; it is not merely a formal
-repair of `(10)`.
+Vertex zero has tree degree two.  Even substituting the coarser value from
+`(17)` into `(9)` leaves
 
-## 6. Audit and scope
+```text
+113864784228062404699 / 1582184665485774407715 > 0.     (18)
+```
 
-The exact-rational companion reconstructs every interval in `(9)--(13)`,
-checks the canonical target `Dmax/5`, the hostile phase defect, the selected
-tree and its degree, the exact/coarse stability floors, and the literal
-perturbed margin.  It contains no floating-point arithmetic or
-assert-dependent gate.  Ordinary and optimized outputs are byte-identical.
+The actual perturbed margin is also positive.  Thus the theorem certifies a
+genuinely noncanonical packet; the repaired chamber is not vacuous.
+
+## 6. Typed contract, boundary, and audit
+
+```text
+source:    a reflected periodic danger comb at one selected LRC cell
+target:    the perturbed comb and a lower bound for one frozen Hunter tree
+map:       phi_h with centered defect Delta=hj-mL
+preserved: comb order, exact untruncated endpoints, fixed tree and labels
+destroyed: clipping under the affine map, tree optimality, cell selection,
+           canonical singleton formulas and physical owner/entry data
+sidecars:  Delta, h, z, literal singleton masses and tree degrees
+tests:     the one-unit hostile (10)--(13) and positive packet (14)--(18).
+                                                                    (19)
+```
+
+The recovered standard-library companion uses exact `Fraction` interval
+arithmetic, checks both controls and every displayed rational identity, and
+contains no optimization-dependent `assert` gate.  Normal and optimized runs
+byte-match the stored output.  An independent line audit rederived `(3)`,
+`(6)`, and `(9)` and found no type or inequality-direction defect.
+
 Reproduce with
 
-```bash
-python3 04-computation/lrc14_reflected_residue_phase_stability_20260814.py
-python3 -O 04-computation/lrc14_reflected_residue_phase_stability_20260814.py
+```text
+python3 04-computation/lrc14_reflected_residue_phase_stability_thm3381.py
+python3 -O 04-computation/lrc14_reflected_residue_phase_stability_thm3381.py
 ```
 
-The source and output hashes are pinned in the frontmatter.  The larger
-coherent-shift censuses in the related reflection are finite applications and
-boundary diagnostics, not part of the universal analytic statement here.
-
-This theorem supplies a sufficient perturbation chamber.  It does not prove
-that every noncanonical packet lies in that chamber, does not preserve a
-cross-only tree under large shifts, and does not close arbitrary `k=1`, a
-projected wall, the physical entry, or LRC(14).
+The all-body coherent-shift banks on the stale source branch remain
+`FINITE-EXACT` sidecars, not consequences of this analytic lemma.  Large
+shifts can invalidate a restricted cross-tree even when another full-tree
+certificate survives.  Arbitrary residue packets, changing cells and trees,
+arbitrary `k=1`, projected-to-physical transport, entry, the rung, and LRC(14)
+remain **OPEN**.
 
 **QED.**

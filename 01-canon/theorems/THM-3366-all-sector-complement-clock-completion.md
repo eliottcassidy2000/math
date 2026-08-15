@@ -2,9 +2,10 @@
 id: THM-3366
 title: All-sector pointwise complement-clock completion
 status: >
-  PROVED + FINITE-EXACT, with CITED input; the specialized k=1 census and
-  refined k=2 composition are INDEPENDENTLY AUDITED, while the unified all-k
-  census and refined k=3 composition remain under independent audit.
+  PROVED + FINITE-EXACT, with CITED input; the specialized k=1 census, unified
+  all-k pool-14 census, and refined k=2 composition are INDEPENDENTLY
+  HOSTILE-AUDITED, while the refined k=3 composition remains under independent
+  audit.
   On every THM-2928 body-address quotient, a pointwise cover of the
   unsupported open cells by r integer danger combs compiles any hypothetical
   k-aligned, (7-k)-drift cover into a global cover by at most 7+r nonzero
@@ -33,6 +34,10 @@ script: 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py
 output: 05-knowledge/results/lrc14_allk_universal_complement_clock_scan_kps_s174.out
 script_sha256: 372f1b0d2bd8c1cc453080e9ab55880480352c5277a9a216739a7262d198efba
 output_sha256: 1104900cd805a2af05e3c7252b7d7bacd417b36b0f015a90d1976b6913fc91c5
+allk_audit_script: 04-computation/lrc14_allk_complement_clock_independent_audit_20260814.py
+allk_audit_output: 05-knowledge/results/lrc14_allk_complement_clock_independent_audit_20260814.out
+allk_audit_script_sha256: a43610abcb1d591f4b606677e3e6a9a32897b38fa2fd591a281ee8c4dc07d823
+allk_audit_output_sha256: 31c096e528a148cd717f4d9c7485c93cdec6175b33b83bae9d2be627249d743c
 k1_companion_script: 04-computation/lrc14_k1_universal_complement_clock_scan_kps_s173.py
 k1_companion_output: 05-knowledge/results/lrc14_k1_universal_complement_clock_scan_kps_s173.out
 k1_companion_script_sha256: 65f1e5983b6d9ee4faf0d74f276c20821f85031f33a100d61c03942da3a8971b
@@ -370,11 +375,30 @@ Later screens overlap this one.  Their sharper residual must be obtained by
 intersecting exact row or occurrence keys.  Sections 6 and 7 perform that
 operation for the current `k=2` and `k=3` ledgers.
 
-## 9. Reproduction
+## 9. Independent unified-census audit
+
+The independent companion rebuilds all `11,180` distinct pool-14 targets by
+exhaustively enumerating clock subsets, rather than calling the primary
+recursive solver.  It separately reconstructs all `251,536` body/divisor rows,
+the strict endpoint and open-atom target bits, and the occurrence weights by a
+divisor--Mobius formula checked on `280` brute-force cases.  Every input count,
+terminal count, occurrence count, and least-cover-size histogram in all seven
+sectors agrees exactly.
+
+Three hostile witnesses show that the conventions are active: midpoint-only
+coverage misses `16` strict endpoint bits at `(F,D)=({1,2,3,5,9,10},315)`;
+omitting grid ownership changes `20` target bits at
+`({1,2,3,4,5,13},3640)`; and that same row needs five added clocks, while the
+`k=0` row `({1,2,3,4,5,6},420)` needs four.  This audit certifies the unified
+pool-14 census, not the separate refined-`k=3` key intersection.
+
+## 10. Reproduction
 
 ```bash
 python 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py
 python -O 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py
+python 04-computation/lrc14_allk_complement_clock_independent_audit_20260814.py
+python -O 04-computation/lrc14_allk_complement_clock_independent_audit_20260814.py
 python 04-computation/lrc14_k1_universal_complement_clock_scan_kps_s173.py
 python -O 04-computation/lrc14_k1_universal_complement_clock_scan_kps_s173.py
 python 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py --pool-max 28
