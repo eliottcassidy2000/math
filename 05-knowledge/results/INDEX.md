@@ -24,9 +24,9 @@
   witnesses, and a height-`7` rational atlas for all zero neighbors.  These
   are OPEN tail signals, not an all-prime classification.  Script/output/
   semantic LF-normalized SHA-256:
-  `037473fe5b7627a5bf30c3ff5a23f8593802f02372b7f8577a0c135c357819c2` /
-  `06c35b808e311f593cb335969ff4a74acede90b7d280e25a4c531ffa3ee03db4` /
-  `13107c0c62d38c8545c2951d80007c9bc7382d4007ac3935708d5ec14a272409`.
+  `ed54b01f9bf155643b6407c6af8ee6f15c7a099f8ac3b60399dd49b496fb1d12` /
+  `9751da7e0464f16f92b675ca9c95b118fd3fe95fc11cc99c9a7015d8425adb65` /
+  `19f846db72803c683f608149aac8c7da2015eaca6e1e3524d9954eaeef0fa826`.
 
 - `jc_multiroot_boundary_jet_packet_probe_20260815.py` -> matching `.out`
   [THM-3436 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].

@@ -30,7 +30,7 @@ POSITIVE_CONTROLS = {
     19: (1, 9, 17, 20, 21, 29, 37),
 }
 TAIL_CONTROLS = (547, 521, 593, 541, 599, 587)
-EXPECTED_SEMANTIC_SHA256 = "13107c0c62d38c8545c2951d80007c9bc7382d4007ac3935708d5ec14a272409"
+EXPECTED_SEMANTIC_SHA256 = "19f846db72803c683f608149aac8c7da2015eaca6e1e3524d9954eaeef0fa826"
 
 
 def require(condition: bool, payload: object) -> None:
@@ -390,20 +390,23 @@ def tail_telemetry(prime: int):
             ("unpaired equality witness", prime, clique))
 
     # Profile budgets are reported independently of the DFS.  The raw maximum
-    # includes all-even pullbacks.  Removing those already-classified rows and
-    # the impossible six-E/one-A equality profile leaves the <=8 mixed budget
-    # that motivates the weighted tail graph.
+    # includes profiles forbidden by THM-3435's proved target-free gates.  On
+    # Q=2p those gates require exactly seven owners, at least two A owners, and
+    # at least one E owner.  The common E fixed fibre also spends 2(a-1) sheets
+    # before any other overlap.  The literal DFS above does not use these gates.
     raw_omegas = []
-    reduced_omegas = []
+    gated_omegas = []
     for counts, omega in profiles_at_most_seven(groups, masks, modulus):
         if sum(counts.values()) != 7:
             continue
         raw_omegas.append(omega)
-        all_even = counts["A"] == 0
-        six_e_one_a = counts == {"A": 1, "B": 0, "E": 6}
-        if not all_even and not six_e_one_a:
-            reduced_omegas.append(omega)
-    require(max(reduced_omegas) <= 8, ("reduced budget", prime, reduced_omegas))
+        fixed_fibre_cost = 2 * (counts["E"] - 1)
+        if (counts["A"] >= 2 and counts["E"] >= 1
+                and omega >= fixed_fibre_cost):
+            gated_omegas.append(omega)
+    gated_maximum = max(gated_omegas) if gated_omegas else None
+    require(gated_maximum is None or gated_maximum <= 8,
+            ("gated budget", prime, gated_omegas))
 
     return (
         prime,
@@ -418,7 +421,7 @@ def tail_telemetry(prime: int):
         partner_pairs,
         len(odd_clique),
         max(raw_omegas),
-        max(reduced_omegas),
+        gated_maximum,
         len(atlas_heights),
         max(atlas_heights),
     )
@@ -466,8 +469,10 @@ def main() -> None:
             "tail residue controls")
     require(all(row[3] == (("A", 19), ("B", 31), ("E", 23)) for row in telemetry),
             "zero-degree atlas")
-    require(all(row[11] <= 12 and row[12] <= 8 for row in telemetry),
-            "tail overlap budgets")
+    require(tuple(row[11] for row in telemetry) == (12, 8, 4, 10, 6, 2),
+            "raw tail overlap budgets")
+    require(tuple(row[12] for row in telemetry) == (8, None, 4, 4, 4, 0),
+            "gated tail overlap budgets")
     require(all(row[13] == 73 and row[14] <= 7 for row in telemetry),
             "height-seven atlas")
 

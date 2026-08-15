@@ -106,12 +106,14 @@ classes.
 
 There is also a useful proof-facing reduction of the remaining raw budgets.
 The target-free necessary gates in THM-3435 require exactly seven owners and
-at least two `A` owners.  In this specialization, the latter also has a direct
-explanation: an all-even row is the pullback of an ordinary cover on `p`, while
-a row with one `A` owner would force at most six even pullbacks to cover the
-opposite sheet of every base fibre.  Thus all-even rows route to the proved
-odd-modulus classification THM-3434, and one-`A` rows route to the rank-six
-gate.  In class `s=1`, the only raw mixed profile above overlap `8` is `E^6 A`.
+at least two `A` owners, and at least one `E` owner (`v_2(r)>=2`).  The last
+condition is visible directly on the central two-sheet fibre, which every
+`A` and `B` mask misses.  The odd-owner gate also has a direct explanation: an
+all-even row is the pullback of an ordinary cover on `p`, while a row with one
+`A` owner would force at most six even pullbacks to cover the opposite sheet of
+every base fibre.  Thus all-even rows route to the proved odd-modulus
+classification THM-3434, and one-`A` rows route to the rank-six gate.  In class
+`s=1`, the only raw mixed profile above overlap `8` is `E^6 A`.
 More explicitly, its entire overlap budget is already spent by the six `E`
 blocks on the fixed fibre; away from that fibre the even union is
 deck-invariant, but one nonempty `A` mask is not.  After these honest exits,
@@ -189,17 +191,18 @@ respectively
 
 on all six controls.  The following table records the minimum positive root
 weight, the complete root-weight histogram through weight `8`, and clique
-data.  `raw/reduced` is the maximum seven-owner profile excess before/after
-the two structural exits above.
+data.  `raw/gated` is the maximum seven-owner profile excess before/after the
+proved `A>=2`, `E>=1`, and fixed-fibre gates.  An empty gated entry means the
+whole residue class is structurally impossible.
 
-| `p mod 14` (control) | min positive `(A,B,E)` | weights `<=8` beyond zero | mixed / A-only clique | raw/reduced `Omega` |
+| `p mod 14` (control) | min positive `(A,B,E)` | weights `<=8` beyond zero | mixed / A-only clique | raw/gated `Omega` |
 |---|---|---|---|---|
 | `1` (`547`) | `(10,8,8)` | `B: 8^1; E: 8^1` | `6 / 4` | `12 / 8` |
-| `3` (`521`) | `(8,8,8)` | `A: 8^2; B: 8^1; E: 8^1` | `6 / 4` | `8 / 4` |
+| `3` (`521`) | `(8,8,8)` | `A: 8^2; B: 8^1; E: 8^1` | `6 / 4` | `8 / impossible` |
 | `5` (`593`) | `(12,8,8)` | `B: 8^1; E: 8^1` | `6 / 4` | `4 / 4` |
-| `9` (`541`) | `(10,12,10)` | none | `6 / 4` | `10 / 8` |
-| `11` (`599`) | `(12,12,12)` | none | `6 / 4` | `6 / 6` |
-| `13` (`587`) | `(12,8,8)` | `B: 8^1; E: 8^1` | `6 / 4` | `2 / 2` |
+| `9` (`541`) | `(10,12,10)` | none | `6 / 4` | `10 / 4` |
+| `11` (`599`) | `(12,12,12)` | none | `6 / 4` | `6 / 4` |
+| `13` (`587`) | `(12,8,8)` | `B: 8^1; E: 8^1` | `6 / 4` | `2 / 0` |
 
 Each displayed mixed clique of size six is exactly three complementary
 branch pairs, with type profile `A^4BE`.  For example at `p=547`, `Q=1094`,
@@ -267,9 +270,9 @@ The normal and optimized outputs are byte-identical and match
 [the frozen output](../05-knowledge/results/lrc_prime_even_half_twist_cap7_finite_atlas_20260815.out).
 
 ```text
-script LF SHA-256   037473fe5b7627a5bf30c3ff5a23f8593802f02372b7f8577a0c135c357819c2
-output LF SHA-256   06c35b808e311f593cb335969ff4a74acede90b7d280e25a4c531ffa3ee03db4
-semantic SHA-256    13107c0c62d38c8545c2951d80007c9bc7382d4007ac3935708d5ec14a272409
+script LF SHA-256   ed54b01f9bf155643b6407c6af8ee6f15c7a099f8ac3b60399dd49b496fb1d12
+output LF SHA-256   9751da7e0464f16f92b675ca9c95b118fd3fe95fc11cc99c9a7015d8425adb65
+semantic SHA-256    19f846db72803c683f608149aac8c7da2015eaca6e1e3524d9954eaeef0fa826
 ```
 
 No arbitrary common-centre row, physical time, decrement, all-prime
