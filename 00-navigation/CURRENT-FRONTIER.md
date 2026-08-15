@@ -34,7 +34,7 @@ residue-blind transfer. Open: `k=0`, other `k=1` residues, projected `k=2,3`,
 rung, entry and LRC; screens are not covers. THM-3356 gives determinant
 shells. THM-3366 leaves `4,056/200,069,517,203` (`k=2`) and
 `1,897/2,548,893,834` (`k=3`), with seven rigid `k=3` hits at `D=L/2`;
-THM-3385/3387 explain their fibre geometry without a refined decrement.
+THM-3385/3387/3391 explain fibre geometry without a refined decrement.
 THM-3368 adds a weighted Horn tariff but no clock seed. LRC remains open.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.

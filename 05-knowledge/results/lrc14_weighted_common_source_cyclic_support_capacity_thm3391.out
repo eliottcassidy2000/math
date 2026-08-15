@@ -1,0 +1,12 @@
+WEIGHTED COMMON-SOURCE CYCLIC COVER EXACT PROBE
+status=FINITE-EXACT;theorem=THM-3391;rho=1/14
+universe=lambda_formula:22230;full_fibre:819;image_order_pairs:4574;q2_ordered_pairs:400;coset_thresholds:54
+formula=sort_double_strict_span_equals_pushforward_bitmap_window;formula_sha256=248cab1f615cc8d86e521023be84ffcd02b9e0c5601928e7114ed78b8ae47b92
+weighted_controls=single_residue_load:100;antipodal_load:3
+one_blocker_hostiles=X14_adjacent_cover;X14_antipodal_survive;X8_fixed_unit_survive_but_unit3_covers;X4_nonunit_collapse
+equality_partition=support:(0, 1, 4, 5);lambdas:(2, 2);edges:(3, 12);cover:true
+common_source_loss=two_individual_survivors_but_union_covers_source
+q2_boundary=nonedge_1_3:0;edge_1_9:4/63;all_cover_measures_le_4/7_lt_55/91
+unit_coset_rule=for_2_le_r_le_7_m_blockers_survive_iff_m_lt_r
+semantic_sha256=8b8ba2d55374ce28698b685bde04f8e16e8cf4dafeb5436b419e0b9fcd642ef7
+all_exact_controls=PASS

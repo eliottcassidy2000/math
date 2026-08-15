@@ -1,0 +1,7 @@
+INDEPENDENT WEIGHTED SUPPORT AUDIT
+method=exact_phase_arrangement_plus_common_grid_cell_count
+cases=window:18677;equality:5724;mixed_maps:216;unit_support:32751;coset:6238;q2:400
+q2_1_9=4/63;q2_max=4/63
+endpoint_residual=(Fraction(3, 14), Fraction(11, 14));open_cell_residual=0
+audit_sha256=78e1da67f5662a7f756e221ed18590486600e361cc327bf33187ffb8f4391cca
+all_independent_controls=PASS
