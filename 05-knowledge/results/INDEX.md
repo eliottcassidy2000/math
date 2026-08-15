@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `lrc_literal_half_twist_common_centre_q83_rank9_thm3461.py` -> matching
+  `.out` [THM-3461 RESERVED / PROVISIONAL + VERIFIED-EXACT; independent
+  mathematics audit PASS, immutable-package audit pending].  Reattaching
+  THM-3398 modes proves the literal identity
+  `B_(q,r)=D_(q,r)(1/(2q))`, the fixed zero-cochain lifts at `q=11,27,51`,
+  widths `(4,11,4,4,4,4)/(6,6,27,6)/(2,2,9,9,2,51,2)`, three open
+  non-grid physical cells, and the one-ray current collapse.  Complete zero
+  and half-layer searches give exact ranks `6,4,7,9` at `q=11,27,51,83`;
+  the `q=83` cap-eight searches visit `6` and `27,992` states, while
+  `(1,13,14,27,41,42,55,69,70)` covers at rank nine.  Script/output/semantic
+  LF SHA-256: `9a5b7c1e7c9525a18c85ad5e4d47dc1631b361dd8662a72ababdfbc15cb37c74` /
+  `be1681b4838d4c13535b9367e80bdbfd218e49fa66a757cc9f94daab1ff53eef` /
+  `97647a6cf82b23de0ddb962b6b2b714d6ca9904408af87e001fa37d0c9b37e90`.
+  CRT valuation decoration is compatible with the masks, but no endpoint
+  current, LRC row, spectral closure, or LRC(14) consequence follows.
 - `four_point_line_metric_turnpike_preorder_atlas_thm3457.py` -> matching
   `.out` [THM-3457 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  Exact rational sign-stratum feasibility classifies the six
