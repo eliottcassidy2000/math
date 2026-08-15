@@ -289,7 +289,7 @@ The combined ledger SHA-256 is `932057abf10f674e4bb31f334c1ea94f39e4e17627c6a950
 
 ## 10. Corrected near-miss lineage
 
-Three discarded compressions shaped the final theorem.  The first continuum compiler used a left endpoint instead of the centered convolution.  The second inferred `T_infinity<=1` from finite `T<1`; the explicit primitive witness in Section 1 refutes that implication.  The first superunit repair then put `97/96` on only one of the two phase-drift terms.  Both require it, moving the rigorous tail start from the provisional 695 to 699.  The exact bridge was extended through 698 before promotion.  See MISTAKE-381.
+Three discarded compressions shaped the final theorem.  The first continuum compiler used a left endpoint instead of the centered convolution.  The second inferred `T_infinity<=1` from finite `T<1`; the explicit primitive witness in Section 1 refutes that implication.  The first superunit repair then put `97/96` on only one of the two phase-drift terms.  Both require it, moving the rigorous tail start from the provisional 695 to 699.  The exact bridge was extended through 698 before promotion.  See MISTAKE-385.
 
 ## 11. Scope and next concept board
 

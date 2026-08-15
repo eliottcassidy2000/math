@@ -106,7 +106,7 @@ Format per entry:
   hash every declared source from the resulting repository blob.  Matching
   output bytes do not prove that the source/output provenance pair is current.
 
-## MISTAKE-381 (2026-08-14, independent superunit affine tail) -- an uncentered continuum and a collapsed finite/limit turn coordinate hid the superunit chamber
+## MISTAKE-385 (2026-08-14, independent superunit affine tail) -- an uncentered continuum and a collapsed finite/limit turn coordinate hid the superunit chamber
 
 - **What failed:** the first affine-tail continuum compiler integrated the
   second tooth over `[x,x+lambda]`, although the physical convolution is
@@ -152,6 +152,28 @@ Format per entry:
   translated convolutions, freeze the center before compiling breakpoints;
   then audit every coefficient that depends on the missing coordinate, not
   merely the first one encountered.
+## MISTAKE-381 (2026-08-14, THM-3366 artifact pins) -- escaped text was normalized instead of line endings
+
+- **What failed:** four THM-3366 companion-script hashes were advertised as
+  LF-normalized, but the shell recipe replaced the literal four-byte source
+  text `\r\n` by `\n` instead of replacing byte pair `13,10` by byte
+  `10`.  The resulting values therefore described modified Python source,
+  not an end-of-line normalization.
+- **Minimal witness / first failed implication:** the refined `k=3` source
+  has LF line endings already, so true LF normalization leaves its hash
+  `27e4bff5...` unchanged; the advertised `127ef53b...` appears exactly when
+  literal backslash-`r`-backslash-`n` inside the source is rewritten.  The
+  same mechanism produced the stale primary, `k=1`, and `k=2` pins.
+- **Repair / strongest survivor:** the four true LF hashes are now pinned by
+  prefixes `372f1b0d`, `65f1e598`, `414b3777`, and `27e4bff5`.  The scripts,
+  stored outputs, semantic decisions, and THM-3366 mathematics were
+  unchanged; independent all-sector and refined-`k=3` audits replayed the
+  exact claims and diagnosed the metadata-only failure.
+- **Reusable rule:** normalize actual bytes (`0d 0a -> 0a`) or use a checked
+  in-script byte hash.  A quoting-sensitive shell literal is not a valid
+  artifact pin unless a hostile file containing both CRLF and literal
+  `\r\n` has distinguished the two operations.
+
 ## MISTAKE-380 (2026-08-14, THM-101 surplus interpretation) -- a cycle kernel was identified with homology after omitting the next boundary
 
 - **What failed:** THM-101 and three exploratory `beta2_*` companions said

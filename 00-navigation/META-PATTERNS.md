@@ -37,10 +37,9 @@ see THM-2617/2636 and the latter's `q`/`T` typing repair.
 **Trigger/action:** for a finite unitary grading, demodulate the target character and average Hermitian differences over the complete subgroup. **Mechanism/caution:** orthogonality recovers isotypic norms, but labels, alias range, and cross-phase selectors are load-bearing.
 **Evidence:** THM-2369, THM-2374/2383, THM-2375, and the audited GMC2 complete-orbit reflection.
 
-## Separate symmetry descent from regularity debt
+## Separate descent, ambient scale, and regularity debt
 
-**Trigger/action:** when descent/repetition is proved but the target needs integrality or positivity, retain the label and add a transforming defect with an exact vanishing gate. **Mechanism/caution:** invariance identifies a fibre, not target constancy; omit the sidecar only after factorization.
-**Evidence:** THM-2158/2174/2176, audited THM-2612/2615/2573.
+**Trigger/action:** after descent/localization, compute the integral intersection or annihilator; before naming ramification, normalize the generated value group. Finite index and killed torsion do not prove regularity. **Evidence:** THM-2158/2174, THM-3080/3383/3386.
 
 ## Localize a metric by common contexts before hunting catalysts
 

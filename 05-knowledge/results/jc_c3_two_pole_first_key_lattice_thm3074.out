@@ -1,0 +1,14 @@
+theorem=THM-3074
+status=PROVED_VERIFIED_EXACT_CANDIDATE
+two_pole_lead=(p*A*B_prime-q*A_prime*B)*s^(-p-q-1);must_cancel
+two_pole_binomial=Y^(p/h)-c*X^(q/h);h=gcd(p,q)
+one_pole_binomial=X^(r/h)*Y^(p/h)-c;inherited_from_THM3070
+toric_chart=det(M,R)=1;val(M)=0;val(R)=h;Z=M/c-1;ell=val(Z)
+depth_bound=1<=ell<=D;D=p+q+3_two_pole_or_p+3-r_one_pole
+ell_eq_D:AB*(h*m_prime-ell*m*R0_prime/R0)=3*kappa^-1*tau
+ell_lt_D:first_coefficient=0;m^h/R0^ell=constant;second_key_required
+first_lattice=h*Z+ell*Z=gcd(h,ell)*Z
+detected_target_value_3_implies=gcd(h,ell)_divides_3
+off_lattice_hostile=h=2;ell=4;polynomial_x(y-x)-1_has_value_3_after_cancellation
+equality_hostile=p=q=1;ell=D=5;P_polynomial;Q_Laurent;Jacobian=1
+scope=coordinate_line_only;no_value_semigroup_or_full_C3_A4_S4_JC2_claim
