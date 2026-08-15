@@ -2,13 +2,16 @@
 id: THM-3435
 title: "Dyadic fibre-grid decomposition for literal half twists"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  Literal half-twist masks on Q=2^a R split exactly into
-  repeated dyadic grids over the odd base R.  Base projection preserves the
-  support and fibre count but loses a selected coset/orientation sidecar.
-  The even cap-seven census through Q=362 is FINITE-EXACT only; Q=366 and the
-  all-Q even classification remain open.  No LRC(14) consequence is claimed.
-source: root even-half-rank7 dyadic-fibre session, 2026-08-15
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED for the all-modulus fibre
+  identity, endpoint law, Boolean branch boundary, and target-free necessary
+  conditions.  Literal half-twist masks on Q=2^a R split into repeated dyadic
+  grids over the odd base R; their exact counts have a period-three mod-7
+  carry, while literal coverage additionally needs an affine coset sidecar.
+  The separate even cap-seven census through Q=362 is FINITE-EXACT and still
+  awaits an independent census audit; Q=366 and the all-Q classification are
+  open.  No LRC(14) consequence is claimed.
+source: root even-half-rank7 and codex2 dyadic-fibre sessions, 2026-08-15
+audit: independent pullback, cyclic-interval, residual-mask, strict/weak endpoint, central-fibre, target-free cap-seven, positive-hostile, normal/-O/stored-output, hash, AST/security, and exact-grid audit CLEAN; bounded census independently unaudited
 depends_on:
   - THM-3416-zero-mode-cochain-global-rank-six-support
   - THM-3434-seventeen-fibre-two-sided-mass-closure
@@ -17,9 +20,9 @@ related:
   - THM-3420-prime-rank-seven-zero-and-half-twist-splitter-closures
 script: 04-computation/lrc_dyadic_fibre_grid_decomposition_thm3435.py
 output: 05-knowledge/results/lrc_dyadic_fibre_grid_decomposition_thm3435.out
-script_sha256: f4f613e95fea20a7cba98c5c13dd99c7eae2140256cd43e392a7e8f1d829c804
-output_sha256: b713d888b3832e80b54b5b0389f53b06d41f9ed0f6c3fdcd17c54809f35fa114
-semantic_sha256: c8033efed04555c46a3414c9dd99121a4ffc066b7e1c6489597c69d57922220c
+script_sha256: a79a7757c93bb903c10a157a9bce4b942c74548a25dd395157f273d8f8c67cb9
+output_sha256: 5c7dff656d867a81d75dafb504ca6adc21b41dfd936a0bef0491bf658b1e1428
+semantic_sha256: bb9fce50f5ee51048eb02a79aef83151a1593b8b16ef73992243b88d8726545e
 finite_script: 04-computation/lrc_dyadic_fibre_grid_census_thm3435.py
 finite_output: 05-knowledge/results/lrc_dyadic_fibre_grid_census_thm3435.out
 finite_script_sha256: d301f0cc802b311e578109a571e85e1ecf1e81a20efdd688bc4c91b8dc6c530d
@@ -30,8 +33,9 @@ hash_basis: LF-normalized bytes
 
 # THM-3435 -- dyadic fibre-grid decomposition for literal half twists
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED** for the all-modulus
+identity and its proved deductions below.  The bounded census is separately
+**FINITE-EXACT / INDEPENDENT CENSUS AUDIT REQUIRED**.
 
 ## 1. Exact all-modulus statement
 
@@ -114,6 +118,25 @@ every base fibre is nonempty and its reduced count is `floor(d/7)` or
 endpoint.  Inactive pullbacks `b=a` can meet one, so their strict exclusion
 must still be retained.
 
+The count law carries an exact three-state recurrence.  If the active depth
+is `k=a-b>=1`, write
+
+```text
+2^k=7q_k+c_k.                                           (7c)
+```
+
+Then
+
+```text
+c_k: 2,4,1,2,4,1,...,
+q_(k+1)=2q_k+floor(2c_k/7),                             (7d)
+```
+
+so the carry word is `0,1,0` and `q_k` is odd exactly when `3|k`.  Hence the
+extra mask in `(7a)` uses coefficient `s+R` precisely every third active
+level and coefficient `s` at the other two levels.  This is the order-three
+orbit of `2` in `(Z/7Z)^*`, not a ternary branching tree.
+
 When `b=a`, so `d=1`, `(5)--(6)` reduce to the literal pullback
 
 ```text
@@ -125,6 +148,22 @@ In this deepest branch, transversality is preserved exactly:
 ```text
 Q does not divide 2^a s  iff  R does not divide s.       (9)
 ```
+
+The inactive endpoint loss is itself exact.  Put
+
+```text
+g=gcd(R,s),             m=R/g,             s_0=s/g.      (9a)
+```
+
+The strict and weak masks differ if and only if
+
+```text
+7|m and s_0 is odd.                                      (9b)
+```
+
+When `(9b)` holds, exactly `2^(a+1)g` upstairs sheets lie on the two
+endpoints.  The smallest even example is `(Q,r)=(14,2)`, where sheets
+`0,6,7,13` are excluded by strictness.
 
 ## 2. The two live low-depth charts
 
@@ -239,7 +278,17 @@ An active strict endpoint would give, for some integer `m`,
 Its two sides have respective 2-adic valuations `b+1` and `a+1`, impossible
 when `b<a`.  This proves the active endpoint claim; the inactive hostile in
 the exact companion shows why it cannot be extended to `b=a`.  Equations
-`(8)--(9)` are the `d=1` specialization.
+`(8)--(9)` are the `d=1` specialization.  For the exact inactive criterion,
+cancel `g=gcd(R,s)` in the endpoint equation.  The remaining coprime equation
+is
+
+```text
+7s_0(2j+1)=m(odd integer).                              (13b)
+```
+
+It has solutions exactly when `7|m` and `s_0` is odd.  Coprimality then gives
+two endpoint sheets modulo `m`; the `2^a g`-fold pullback proves `(9b)` and
+the count `2^(a+1)g`.
 
 For `(11)`, translation by `R` adds `r/2=1/2 modulo 1` to the phase.  On the
 other hand, replacing `r` by `2R-r` changes the phase to `1/2` minus the old
@@ -294,7 +343,58 @@ radius-`1/14` covers on odd moduli.  It therefore controls the deepest
 pullback branch `(8)` and the odd proper joint periods used below, but it does
 not classify the active widened-radius branches.
 
-## 5. FINITE-EXACT even cap-seven census
+## 5. Proved target-free necessary conditions
+
+Let
+
+```text
+A_6={8,9,10,11,12,15,23,25}.                           (15a)
+```
+
+Suppose `Q=2^aR` is even, no member of `A_6` divides `Q`, and a transverse
+joint-period literal half-twist family of at most seven owners covers `Q`.
+Then
+
+```text
+a is 1 or 2;                                             (15b)
+the family has exactly seven owners;                     (15c)
+at least two selected coefficients are odd;              (15d)
+some selected r satisfies v_2(r)>=a+1.                  (15e)
+```
+
+If `a=2` and `n_j` counts owners with full valuation `v_2(r)=j`, then also
+
+```text
+n_0+2n_1>=4.                                            (15f)
+```
+
+Indeed, `8` is forbidden, proving `(15b)`, and THM-3416 proves `(15c)`.
+Joint period forces at least one odd owner.  If it were the only one, then on
+every two-sheet fibre over `Q/2` the even owners would have to cover the sheet
+missed by it.  Since an even owner is a full two-sheet pullback, those at most
+six owners would cover `Q/2`, contradicting the same target-free rank-six
+theorem.  This proves `(15d)`.
+
+Now take the central `2^a`-fibre over `j=(R-1)/2`.  An owner with
+`v_2(r)<=a` has there an odd multiple of `1/2`, `1/4`, or `1/8`; all miss the
+strict radius-`1/14` arc.  Coverage therefore forces `(15e)`.  If `a=2`, the
+owners divisible by four are at most five by `(15d)` and cannot cover the odd
+base `R` by THM-3416.  Over a base sheet they miss, a valuation-zero owner
+supplies at most one of the four fibre points and a valuation-one owner at
+most two, which proves `(15f)`.
+
+These are necessary gates, not exclusions.  Sharp exact partitions include
+
+```text
+Q=14: (1,3,4,5,9,11,13),
+Q=28: (1,5,6,8,11,13,27).                              (15g)
+```
+
+Thus the remaining all-`Q` problem is a two-colour affine-section problem at
+`a=1` and a four-colour affine-section problem at `a=2`; fibre masses alone
+cannot decide it.
+
+## 6. FINITE-EXACT even cap-seven census
 
 This section is deliberately not an all-`Q` theorem.  Let
 
@@ -367,7 +467,7 @@ Q=366.                                                   (22)
 It is the explicit stopping boundary: this theorem neither searches nor
 classifies it.  No inference beyond `Q=362` is licensed.
 
-## 6. Connection and loss ledger
+## 7. Connection and loss ledger
 
 | field | exact content |
 |---|---|
@@ -384,7 +484,7 @@ classifies it.  No inference beyond `Q=362` is licensed.
 There is no intrinsic pairwise orientation between owners, so a tournament
 would be cosmetic.  The faithful object is a labelled fibre-grid clutter.
 
-## 7. Exact companion and scope
+## 8. Exact companion and scope
 
 Run
 
@@ -397,16 +497,17 @@ PYTHONHASHSEED=1 python3 -B -O 04-computation/lrc_dyadic_fibre_grid_census_thm34
 
 The first standard-library companion compares `(4)--(7b)` directly with
 literal masks for every residue through `Q=192`: `4,755,520` sheet cells and
-`449,888` active fibre rows.  It audits the active endpoint obstruction, the
-inactive `Q=14,r=2` endpoint hostile, all three Boolean branch depths, and
-the `Q=8` affine-loss hostile.  The second companion checks the earlier
+`449,888` fibre rows.  It audits zero active endpoint hits, all `24,580`
+inactive endpoint laws, the `Q=14,r=2` hostile, all three Boolean branch
+depths, and the `Q=8` affine-loss hostile.  The second companion checks the earlier
 fibre formulation through `Q=160` (`1,812,487` fibre rows), checks `5,700`
 complementary two-sheet rows, replays `(14)` and `(19)`, and performs exactly
 the bounded inductive census `(17)`.  Normal and optimized outputs are
 byte-identical for both companions.
 
-The all-modulus content is only the elementary fibre identity and its stated
-corollaries.  The census is **FINITE-EXACT**, not evidence promoted to an
+The all-modulus content is the elementary fibre identity and its proved
+endpoint, carry, Boolean, and target-free consequences.  The census is
+**FINITE-EXACT**, not evidence promoted to an
 all-`Q` even rank-seven classification.  Nothing here supplies a physical
 time, arbitrary common centre, LRC row, or decrement.  `LRC(14)` remains
 open.

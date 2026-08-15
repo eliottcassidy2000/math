@@ -13,24 +13,28 @@
   Simple roots, integral splitting, and `JC(2)` remain outside scope.
 - `lrc_dyadic_fibre_grid_decomposition_thm3435.py` and
   `lrc_dyadic_fibre_grid_census_thm3435.py` -> matching `.out` files
-  [THM-3435 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  INDEPENDENT AUDIT REQUIRED].  For every `Q=2^a R`, a literal half block
-  splits into a repeated `d=2^(a-b)=7q+c` grid over each odd-base fibre,
-  with exact count `2^b(q+epsilon_j)` and a cyclic-interval location sidecar.
-  At `d=1,2,4`, the projected radii are exactly `1/14,1/7,2/7`, but literal
-  coverage additionally needs the selected dyadic coset/orientation.  The
-  all-modulus identity is elementary; the target-free even cap-seven support
-  `{14,38,68,148}` is only FINITE-EXACT through `Q=362`, with `Q=366` the
+  [THM-3435 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED for the
+  all-modulus identity; bounded census FINITE-EXACT / INDEPENDENT CENSUS
+  AUDIT REQUIRED].  For every `Q=2^aR`, a literal half block splits into a
+  repeated `d=2^(a-b)=7q+c` grid over each odd-base fibre, with exact count
+  `2^b(q+epsilon_j)` and an affine cyclic-interval sidecar.  The remainder
+  `c` cycles through `2,4,1`; two and four coefficient branches are disjoint
+  (OR=XOR), while eight cover with multiplicity one or two and only a
+  sheet-local cyclic order.  The primary companion reconstructs `4,755,520`
+  sheet cells and `449,888` fibre rows through `Q=192`, including all `24,580`
+  inactive endpoint laws.  The all-`Q` even cap-seven lane is reduced to
+  two- and four-colour affine sections, not classified.  The separate census
+  finds primitive support `{14,38,68,148}` through `Q=362`; `Q=366` is the
   first unclassified boundary.  Decomposition script/output/semantic
   LF-normalized SHA-256:
-  `f4f613e95fea20a7cba98c5c13dd99c7eae2140256cd43e392a7e8f1d829c804` /
-  `b713d888b3832e80b54b5b0389f53b06d41f9ed0f6c3fdcd17c54809f35fa114` /
-  `c8033efed04555c46a3414c9dd99121a4ffc066b7e1c6489597c69d57922220c`.
+  `a79a7757c93bb903c10a157a9bce4b942c74548a25dd395157f273d8f8c67cb9` /
+  `5c7dff656d867a81d75dafb504ca6adc21b41dfd936a0bef0491bf658b1e1428` /
+  `bb9fce50f5ee51048eb02a79aef83151a1593b8b16ef73992243b88d8726545e`.
   Census script/output/semantic hashes:
   `d301f0cc802b311e578109a571e85e1ecf1e81a20efdd688bc4c91b8dc6c530d` /
   `df94ab3b8b085fb9ddaf668438d6b07af92c0095a3dfee5774c2c85e13fe5b0d` /
   `35dfbba192b4b17b72cda5a019692a9af5ee1ce406f3ca4a7d7ff551fe349096`.
-  No all-`Q` even rank-seven classification or LRC(14) consequence follows.
+  No all-`Q` rank-seven classification or LRC(14) consequence follows.
 
 - `lrc_seventeen_fibre_two_sided_mass_closure_thm3434.py` -> matching `.out`
   [THM-3434 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The two-sided

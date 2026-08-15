@@ -35,7 +35,7 @@ remain open; projected screens are not physical covers.
 THM-3356/3366 leave k2/k3 `4,056/200,069,517,203` and `1,897/2,548,893,834`; THM-3385/3387--3395/3398 give q2--7 and all-q mode/cochain laws.
 THM-3414--3416 give ZMC rank-4/5/6 bases `8,9` / `10,12` / `11,15,23,25`.
 THM-3425 gives primitive half cap-six support and its joint-period/parity breaker.
-THM-3434 closes odd transverse literal cap7; THM-3432 transfers its conditional fixed chart. Provisional THM-3435 gives exact dyadic grids and a FINITE-EXACT even `Q<=362` census only. All-`Q` even rank7 and LRC remain open.
+THM-3434 closes odd literal cap7. THM-3435 proves dyadic grid/carry laws and reduces all-`Q` even work to 2/4-colour affine sections; its `Q<=362` census is FINITE-EXACT. THM-3432 transfers the fixed chart. Even rank7 and LRC remain open.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
 

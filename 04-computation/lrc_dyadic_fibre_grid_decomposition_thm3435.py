@@ -19,10 +19,11 @@ from __future__ import annotations
 import ast
 from collections import Counter
 from hashlib import sha256
+from math import gcd
 from pathlib import Path
 
 
-EXPECTED_SEMANTIC_SHA256 = "c8033efed04555c46a3414c9dd99121a4ffc066b7e1c6489597c69d57922220c"
+EXPECTED_SEMANTIC_SHA256 = "bb9fce50f5ee51048eb02a79aef83151a1593b8b16ef73992243b88d8726545e"
 
 
 def require(condition: bool, payload) -> None:
@@ -147,6 +148,7 @@ def formula_audit(limit: int = 192):
     fibre_rows = 0
     active_rows = 0
     inactive_rows = 0
+    inactive_endpoint_checks = 0
     remainder_histogram = Counter()
     parity_cycle = Counter()
     active_endpoint_hits = 0
@@ -173,6 +175,15 @@ def formula_audit(limit: int = 192):
 
             if data["inactive"]:
                 inactive_rows += 1
+                divisor = gcd(odd_base, data["s"])
+                quotient_order = odd_base // divisor
+                normalized = data["s"] // divisor
+                endpoint_expected = quotient_order % 7 == 0 and normalized % 2 == 1
+                expected_endpoint_count = (1 << (exponent + 1)) * divisor if endpoint_expected else 0
+                require(len(endpoint_sheets) == expected_endpoint_count,
+                        ("inactive_endpoint_law", modulus, residue, endpoint_sheets, data,
+                         divisor, quotient_order, normalized, expected_endpoint_count))
+                inactive_endpoint_checks += 1
                 if modulus % 2 == 0 and endpoint_sheets and inactive_endpoint_example is None:
                     inactive_endpoint_example = (modulus, residue, endpoint_sheets[0])
                 continue
@@ -208,6 +219,7 @@ def formula_audit(limit: int = 192):
         fibre_rows,
         active_rows,
         inactive_rows,
+        inactive_endpoint_checks,
         tuple(sorted(remainder_histogram.items())),
         tuple(sorted(parity_cycle)),
         active_endpoint_hits,
@@ -359,7 +371,7 @@ def main() -> None:
                 (semantic_digest, EXPECTED_SEMANTIC_SHA256))
 
     print("THM-3435 dyadic fibre-grid decomposition exact companion")
-    print("status=PROVISIONAL_EXACT_COMPANION_FOR_RESERVED_THM3435;all_modulus_literal_half_twist_identity;no_rank7_or_LRC14_conclusion")
+    print("status=VERIFIED_EXACT_COMPANION_FOR_PROVED_THM3435;all_modulus_literal_half_twist_identity;no_rank7_or_LRC14_conclusion")
     print("decomposition=Q=2^a*N_Nodd;r=2^b*s_with_b=min(v2(r),a);b=a_gives_full_2^a_pullback;"
           "b<a_gives_M=2^(a-b)=7q+c_and_each_N_fibre_has_2^b*(q+extra_y)_points")
     print("extra_mask=extra_y_is_H_N^(c/14)(s+qN);c_cycles_1,2,4_with_active_depth_mod3;"
@@ -368,7 +380,7 @@ def main() -> None:
           "inactive_pullbacks_can_hit_and_retain_strict_exclusion")
     print("boolean_branch=depth1_and_depth2_preimage_masks_are_pairwise_disjoint_and_fuse_to_radius_2^k/14;"
           "depth3_eight_branch_family_covers_every_sheet_with_multiplicity_1_or_2;each_sheet_has_a_local_C8_order_but_global_overlap_is_only_across_the_4plus4_parity_bipartition")
-    print(f"formula_audit=(limit,sheet_cells,fibre_rows,active_rows,inactive_rows,remainder_histogram,parity_cycle,active_endpoint_hits,inactive_endpoint_example)={formula}")
+    print(f"formula_audit=(limit,sheet_cells,fibre_rows,active_rows,inactive_rows,inactive_endpoint_checks,remainder_histogram,parity_cycle,active_endpoint_hits,inactive_endpoint_example)={formula}")
     print(f"branch_audit=(limit,multiplicity_histogram,first_depth2,first_depth3,first_seven_fail,first_seven_cover)={branches}")
     print(f"hostiles=(first_not_a_section,first_equal_count_different_affine_lift,inactive_strict_endpoint)={hostiles}")
     print("information_loss=fibre_counts_and_extra_mask_do_not_locate_the_affine_cyclic_interval;"

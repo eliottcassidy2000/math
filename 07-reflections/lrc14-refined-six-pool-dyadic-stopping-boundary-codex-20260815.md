@@ -59,7 +59,7 @@ The paired quarter sample is exact when no aligned multiplier is divisible by fo
 (r+3/4)/D=(4r+3)/(4D).
 ```
 
-These are sheets `2r` and `2r+1` of the literal half-twist modulus `2D`.  The compiler retains both child bits.  Projecting them to one base-support bit would forget the selected dyadic coset, precisely the loss exposed by the provisional THM-3435 companion.
+These are sheets `2r` and `2r+1` of the literal half-twist modulus `2D`.  The compiler retains both child bits.  Projecting them to one base-support bit would forget the selected dyadic coset, precisely the loss proved by THM-3435.
 
 The proved rank-support gates leave no hit:
 
