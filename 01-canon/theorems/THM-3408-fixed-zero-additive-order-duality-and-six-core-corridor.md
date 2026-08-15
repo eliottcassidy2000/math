@@ -3,7 +3,7 @@ id: THM-3408
 title: "Fixed-zero additive-order duality and the six-core corridor"
 status: >
   PROVED structural theorem + COMPUTER-ASSISTED PROVED finite arithmetic
-  lemma + FINITE-EXACT q<=20000 census, pending independent audit.  At fixed
+  lemma + FINITE-EXACT q<=20000 census + INDEPENDENTLY AUDITED.  At fixed
   source centre zero, an owner of quotient order m covers the exact fraction
   alpha(m/gcd(m,q/n)) of the additive-order-n sheet stratum.  This gives an
   exact fractional-cover dual, and every family descends without loss to the
@@ -14,7 +14,7 @@ status: >
   classification.  No mobile-centre, arbitrary-cochain, physical-time, or
   LRC(14) conclusion is claimed.
 source: root-2608-crouzeix-puzzle-2026-08-15
-audit: self-contained stratum/fibre, lcm, weak-dual, arithmetic-cutoff, and prime-loss proofs; exact q21/q22/q102 hostiles; 15985 exact rational primal/dual games pending independent line audit
+audit: self-contained stratum/fibre, lcm, weak-dual, arithmetic-cutoff, and prime-loss proofs; exact q21/q22/q102 hostiles; 15985 exact rational primal/dual games; independent fibre/cutoff/DFS/prime-loss/LP-type audit clean; normal and optimized outputs byte-identical
 depends_on:
   - THM-3398-general-finite-mode-sheet-cover-cochain
   - THM-3401-centered-transverse-sheet-cover-rank-fifteen-through-twenty-eight
@@ -32,7 +32,7 @@ hash_basis: LF-normalized bytes
 # THM-3408 -- fixed-zero additive-order duality and the six-core corridor
 
 **PROVED structural theorem + COMPUTER-ASSISTED PROVED finite arithmetic
-lemma + FINITE-EXACT `q<=20000` census, pending independent audit.**
+lemma + FINITE-EXACT `q<=20000` census + INDEPENDENTLY AUDITED.**
 
 ## 1. Statement
 
