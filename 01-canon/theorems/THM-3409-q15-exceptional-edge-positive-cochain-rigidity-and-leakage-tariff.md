@@ -131,10 +131,12 @@ The coordinates of `p_+` and `p_-` use lexicographic pairs
 01,02,03,04,05,12,13,14,15,23,24,25,34,35,45.          (11)
 ```
 
-Each orbit has time measure `5/1232`.  Time reversal, followed by the sheet
-reflection `ell -> 1-ell`, exchanges `(9)` and `(10)` and negates the
-cochain.  This is an order-sensitive two-state residue invisible to the
-zero/nonzero question alone.
+Each orbit has time measure `5/1232`.  Physical time reversal acts by
+`t -> -t`, `ell -> -ell`, and `p -> -p` on every one of the thirty packets.
+After canonicalizing the reversed blocks by the common sheet translation
+`ell -> ell+1`, the displayed representatives `(9)` and `(10)` are related
+by `ell -> 1-ell`.  This is an order-sensitive two-state residue invisible
+to the zero/nonzero question alone.
 
 ## 4. Exact leakage tariffs
 
@@ -244,8 +246,8 @@ uniqueness inputs.
 Artifact hashes after LF normalization:
 
 ```text
-script   45701b97943171ae3de8a6648071bf4cb37ccaab38a729bae2d485bce099ac3b
-output   c72fd0a0463c3196214e17c24479d8ff52bd0715acf89dc05b70a804f68a8d7d
+script   f696cc6cd6e880be11966eaea80e17e0204040722700f2c3851146b56eeca445
+output   b948b61bb665e28a09b564210abaa0a1c3ba0fbe8e0953c41aec6bdf68e24cad
 semantic 80ecee351d7648a6a4c00f879a649d8fd4dbe87119929e5a5ded72d693c9859d
 ```
 

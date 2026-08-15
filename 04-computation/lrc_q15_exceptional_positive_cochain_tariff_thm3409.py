@@ -209,6 +209,13 @@ def reflected_blocks(blocks: tuple[tuple[int, ...], ...]):
     )
 
 
+def negated_blocks(blocks: tuple[tuple[int, ...], ...]):
+    return tuple(
+        tuple(sorted((-sheet) % Q for sheet in block))
+        for block in blocks
+    )
+
+
 def connected_tree(indices: tuple[int, ...], edges) -> bool:
     parents = list(range(len(SPEEDS)))
 
@@ -381,8 +388,22 @@ def packet_census(module):
     require(orbit_records == expected_orbits, (orbit_records, expected_orbits))
     require(
         reflected_blocks(EXPECTED_POSITIVE_BLOCKS) == EXPECTED_NEGATIVE_BLOCKS,
-        "time-reversal block action",
+        "canonical time-reversal block action",
     )
+
+    packet_by_time = {
+        occurrences[0][0]: key for key, occurrences in packets.items()
+    }
+    require(len(packet_by_time) == len(packets), "packet time collision")
+    for time, key in packet_by_time.items():
+        reversed_key = packet_by_time.get((-time) % 1)
+        require(reversed_key is not None, ("missing reversed packet", time))
+        require(reversed_key[0] == negated_blocks(key[0]), (
+            "physical time-reversal block action", time, key[0], reversed_key[0],
+        ))
+        require(reversed_key[3] == tuple(-value for value in key[3]), (
+            "physical time-reversal cochain action", time, key[3], reversed_key[3],
+        ))
 
     for blocks, values, _, _ in orbit_records:
         orbit_blocks = {
@@ -485,7 +506,7 @@ def main() -> None:
     print(f"cover_locus=(open_cells,boundary_covers,width_histogram,total_measure)=({cover_samples},{boundary_covers},{widths},{total_measure})")
     print(f"selected_packets={packet_count};all_maximal_exact_partitions=YES;packet_sha256={packet_digest};cell_sha256={cell_digest}")
     print(f"translation_orbits=(canonical_blocks,lex_pair_cochain,count,measure)={orbits}")
-    print(f"time_reversal=sheet_reflection_ell_to_1_minus_ell;cochain_sign_flip=YES")
+    print("time_reversal=t_to_minus_t_and_ell_to_minus_ell;canonical_representative_map=ell_to_1_minus_ell;cochain_sign_flip=YES")
     print(f"complete_tariff=(L1,Linf,L2_squared)_histogram={norms}")
     print(f"spanning_tree_tariff=(tree_count,minL1,minL1_count,minLinf,minLinf_count,owner7_star_edges,owner7_star_values)={tariff}")
     print("scope=fixed_edge_and_owner_order;one_selected_mode_per_distinct_owner;strict_open_physical_cover;no_LRC14_decrement;not_a_uniform_all_edges_tariff")
