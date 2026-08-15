@@ -39,7 +39,12 @@ Format per entry:
   half-grid families of ranks two/three/five survive.  The claimed
   zero-cochain ranks, comparison with the owner-14 mobile ranks, finite
   “saving” support, and corresponding harmonic weights are withdrawn.  No
-  LRC row or ledger count ever followed.
+  LRC row or ledger count ever followed.  A subsequent exact reconstruction
+  strengthens the surviving separation: on every even `q>=8`, the same
+  even/odd rank-two partition at `c=a/q^2`, for odd `1<=a<q/7`, has unique
+  containing-mode cochain `P=-a q^2/2` and THM-3405 scalar/gauge
+  `(a,q/2)`.  Thus the quotient can hide a whole quadratic positive-drift
+  ladder, not merely the isolated q15 hostile.
 - **Reusable rule:** an interval containing a physical time is not centred at
   that time.  After deriving a half-grid integrality condition, separately
   verify the mode-residue divisibility (or the full centre-lattice formula)

@@ -6,7 +6,8 @@ half-grid physical times; PROVED-ELEMENTARY exact half-grid rank
 families on every even `q>=8`, every odd multiple of three `q>=9`, and every
 odd multiple of five not divisible by three `q>=25`; PROVED-ELEMENTARY exact
 rank table for `15<=q<=28`, with VERIFIED-EXACT independent set-cover and
-normalization audits.  MISTAKE-389 retracts the original zero-mode-cochain
+normalization audits; PROVED-ELEMENTARY exact even-rank-two leakage ladder
+`P=-a q^2/2` for odd `1<=a<q/7`.  MISTAKE-389 retracts the original zero-mode-cochain
 interpretation: proved [THM-3405](../01-canon/theorems/THM-3405-common-centre-gcd-gauge-and-boolean-half-twist.md)
 supplies an additional mode-divisibility condition.  The exact half-grid
 results survive and have no LRC(14) ledger consequence.
@@ -248,6 +249,74 @@ so
 r_hg^+(q)=2                     (q even, q>=8).        (16)
 ```
 
+### The same parity partition carries a quadratic leakage ladder
+
+The chart quotient in `(16)` retains the even/odd blocks but forgets an
+unbounded exact mode sidecar.  Let `q=2d>=8` and choose any odd integer `a`
+with `1<=a<q/7`.  At
+
+```text
+c_a=a/q^2,             U_q=(q/2,q(q-1)/2),            (16a)
+```
+
+the first owner has phase `a/(2q)+ell/2`, while the second has phase
+`(q-1)(a/q+ell)/2`.  The strict inequality `7a<q` therefore makes their
+danger sets exactly the even and odd sheets.  Thus every `a` in `(16a)`
+realizes the **same** rank-two Boolean partition.
+
+Their unique containing THM-3398 single-atom modes have centres
+
+```text
+x_0=0,                 x_1=a/[q(q-1)].                (16b)
+```
+
+Indeed `c_a` lies within the first source radius precisely when `7a<q`, and
+
+```text
+|c_a-x_1|=a/[q^2(q-1)] < 1/[7q(q-1)]
+```
+
+is the corresponding strict inequality for the second owner.  Substitution
+in the exact pair cochain gives the closed formula
+
+```text
+P_01=2q u_0 u_1(x_0-x_1)=-a q^2/2.                  (16c)
+```
+
+This is a genuine leakage tariff, not a zero-cochain representative.  The
+active owner gcd and THM-3405 gauge are
+
+```text
+d_U=gcd(U_q)=q/2,      g_U=gcd(q,d_U)=q/2,
+a_U=2q d_U c_a=a.                                      (16d)
+```
+
+Since `0<a<q/7<q/2`, the necessary divisibility `g_U|a_U` fails for every
+member of the ladder.  Hence one fixed two-block clutter supports linearly
+many inequivalent physical scalars and cochain magnitudes.  XOR, an
+unweighted two-vertex tournament, or the normalized divisor chart sees only
+the parity split and erases exactly the integer `a` recovered by `(16c)`.
+
+The tariff is quadratically homogeneous in sheet degree: replacing `q` by
+`kq` at fixed `a` multiplies `|P_01|` by `k^2`.  This agrees with the
+degree-two cochain homogeneity in THM-3398.  It is an agreement of the exact
+sidecar law; the canonical witnesses `(16a)` themselves are not being
+identified with literal pure dilates.
+
+There are `q/14+O(1)` admissible odd scalars at each even `q`.  Consequently,
+if `A(N)` counts these positive leakage witnesses through `q<=N`, then
+
+```text
+A(N)=N^2/56+O(N),
+sum_(q<=N,q even) #{a:1<=a<q/7,a odd}/q
+    =N/28+O(log N).                                   (16e)
+```
+
+This is the harmonic-series distinction made concrete.  The support set of
+sheet degrees in `(16)` has logarithmic reciprocal mass, but restoring the
+discarded scalar fibre turns it into a two-dimensional lattice whose
+reciprocal-degree mass is linear.
+
 ### Odd multiples of three
 
 For `p=3`, the boundary `q=9` uses `V_3(3)={1,5,7}`.  For odd `d>=5`, take
@@ -474,7 +543,10 @@ The companion:
    anatomy, plus the q15 mode-divisibility hostile from MISTAKE-389;
 5. checks every explicit divisor partition through `q=500` (`247` even,
    `82` ternary, and `32` five-colour instances);
-6. contains no floating literals or `assert`, and pins a semantic digest that
+6. reconstructs all `4,482` strict even-parity leakage instances through
+   `q=500`, including their centres, gauge failure, quadratic cochain, and
+   first excluded odd scalar;
+7. contains no floating literals or `assert`, and pins a semantic digest that
    survives optimized execution.
 
 The cheapest decisive continuations are:
@@ -485,8 +557,8 @@ The cheapest decisive continuations are:
    only the residue partitions of orders two, three, and five;
 3. intersect every chart with THM-3405's active-family gcd gauge and compute
    the genuine unrestricted zero-mode-cochain ranks;
-4. reconstruct and optimize the nonzero mode cochains on the half-grid
-   minima, beginning with `(11a)`;
+4. classify the full nonzero cochain spectra over the ternary and five-colour
+   half-grid minima; the even branch is now the exact ladder `(16a)--(16d)`;
 5. transport a chart certificate into an actual refined LRC row.  Until that
    final typed map exists, none of these rank collapses decrements the live
    LRC(14) ledger.

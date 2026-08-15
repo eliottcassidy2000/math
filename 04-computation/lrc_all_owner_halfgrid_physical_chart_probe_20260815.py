@@ -20,7 +20,9 @@ missing mode divisibility.  This artifact therefore computes half-grid
 physical ranks, not zero-mode-cochain ranks.  It has no LRC(14) ledger
 consequence.  It also checks divisor-pullback families proving half-grid rank
 two for even q>=8, rank three for odd 3|q, and rank five for odd 5|q with
-3 not dividing q (q>=25).
+3 not dividing q (q>=25).  On the even rank-two branch it reconstructs the
+unique containing modes and proves the exact quadratic leakage ladder
+P=-a*q^2/2 for every odd 1<=a<q/7.
 Runtime gates survive python -O.
 """
 
@@ -69,7 +71,7 @@ EXPECTED_GLOBAL_MINIMA = (
     (27, 3),
     (28, 2),
 )
-EXPECTED_SEMANTIC_DIGEST = "36e7223a3d2359c93066e5c0097d95e77fde386591a0a8d19c09e7c1d04720f6"
+EXPECTED_SEMANTIC_DIGEST = "97d17ab3b16bb595b4cf765e30365b0afe37d916a1eaf3291dd635212471e578"
 
 
 def require(condition, detail):
@@ -376,6 +378,61 @@ def divisor_pullback_record(q, prime):
     return q, prime, centre, owners, residue_classes
 
 
+def even_parity_leakage_record(q, scalar):
+    """Recover the exact mode sidecar on one rank-two parity partition."""
+    require(q >= 8 and q % 2 == 0, (q, scalar))
+    require(scalar >= 1 and scalar % 2 == 1 and 7 * scalar < q, (q, scalar))
+    half = q // 2
+    physical_time = Fraction(scalar, q * q)
+    owners = (half, half * (q - 1))
+    masks = tuple(direct_mask(q, owner, physical_time) for owner in owners)
+    full = (1 << q) - 1
+    require(tuple(mask.bit_count() for mask in masks) == (half, half), (q, scalar, masks))
+    require(not masks[0] & masks[1] and masks[0] | masks[1] == full, (q, scalar, masks))
+    blocks = tuple(
+        tuple(sheet for sheet in range(q) if mask & (1 << sheet))
+        for mask in masks
+    )
+    require(
+        tuple(tuple(sorted({sheet % 2 for sheet in block})) for block in blocks)
+        == ((0,), (1,)),
+        (q, scalar, blocks),
+    )
+    mode_centres = tuple(
+        containing_single_atom_mode_centre(q, owner, block, physical_time)
+        for owner, block in zip(owners, blocks)
+    )
+    expected_centres = (Fraction(0), Fraction(scalar, q * (q - 1)))
+    require(mode_centres == expected_centres, (q, scalar, mode_centres))
+    cochain = 2 * q * owners[0] * owners[1] * (mode_centres[0] - mode_centres[1])
+    require(cochain == Fraction(-scalar * q * q, 2), (q, scalar, cochain))
+    require(cochain.denominator == 1, (q, scalar, cochain))
+
+    owner_gcd = gcd(*owners)
+    gauge_gcd = gcd(q, owner_gcd)
+    gauge_scalar = Fraction(2 * q * owner_gcd) * physical_time
+    require(gauge_scalar == scalar, (q, scalar, gauge_scalar))
+    require(gauge_scalar.numerator % gauge_gcd, (q, scalar, gauge_gcd))
+
+    # The next odd scalar crosses the strict source-radius wall for owner q/2.
+    boundary_scalar = scalar + 2
+    if 7 * boundary_scalar >= q:
+        boundary_mask = direct_mask(q, owners[0], Fraction(boundary_scalar, q * q))
+        require(boundary_mask == 0, (q, scalar, boundary_scalar, boundary_mask))
+
+    return (
+        q,
+        scalar,
+        physical_time,
+        owners,
+        mode_centres,
+        cochain.numerator,
+        owner_gcd,
+        gauge_gcd,
+        gauge_scalar.numerator,
+    )
+
+
 def chart_record(q, kind, g):
     mask_items = chart_masks(q, kind, g)
     rank, witness, nodes, states = minimum_cover(q, mask_items)
@@ -590,6 +647,30 @@ def main():
         for prime, family in zip((2, 3, 5), divisor_pullback_records)
     )
 
+    even_parity_leakage_records = tuple(
+        even_parity_leakage_record(q, scalar)
+        for q in range(8, 501, 2)
+        for scalar in range(1, q, 2)
+        if 7 * scalar < q
+    )
+    require(len(even_parity_leakage_records) == 4482, len(even_parity_leakage_records))
+    canonical_even_leakage = tuple(
+        record for record in even_parity_leakage_records if record[1] == 1
+    )
+    require(len(canonical_even_leakage) == 247, len(canonical_even_leakage))
+    require(
+        tuple((record[0], record[2], record[3]) for record in canonical_even_leakage)
+        == tuple((record[0], record[2], record[3]) for record in divisor_pullback_records[0]),
+        "canonical even leakage/pullback mismatch",
+    )
+    even_parity_leakage_audit = (
+        len(even_parity_leakage_records),
+        even_parity_leakage_records[0],
+        even_parity_leakage_records[-1],
+        max(abs(record[5]) for record in even_parity_leakage_records),
+        sha256(repr(even_parity_leakage_records).encode("ascii")).hexdigest(),
+    )
+
     semantic = sha256(
         repr(
             (
@@ -602,6 +683,7 @@ def main():
                 mode_centre_divisibility_hostile,
                 mode_centre_drift_hostile,
                 divisor_pullback_records,
+                even_parity_leakage_records,
             )
         ).encode("ascii")
     ).hexdigest()
@@ -611,7 +693,7 @@ def main():
     print("LRC ALL-OWNER SYNCHRONIZED HALF-GRID PHYSICAL AFFINE-CHART PROBE")
     print(f"source_sha256_lf={lf_hash(source)}")
     print(f"dependency_sha256_lf={tuple((name, expected) for name, _, expected in PINNED)}")
-    print("status=PROVED-ELEMENTARY all_q_half_grid_physical_affine_chart_reduction;exact_all_positive_owner_half_grid_ranks_q15..28;all_q_half_grid_rank_families_even=2_odd3multiple=3_odd5multiple_not3=5;INDEPENDENT_COMBINATION_AND_NORMALIZATION_AUDITS;MISTAKE389_zero_mode_cochain_interpretation_retracted")
+    print("status=PROVED-ELEMENTARY all_q_half_grid_physical_affine_chart_reduction;exact_all_positive_owner_half_grid_ranks_q15..28;all_q_half_grid_rank_families_even=2_odd3multiple=3_odd5multiple_not3=5;exact_even_rank2_mode_leakage_P=-a*q^2/2;INDEPENDENT_COMBINATION_AND_NORMALIZATION_AUDITS;MISTAKE389_zero_mode_cochain_interpretation_retracted")
     print("odd_chart=theta=a/b,b_odd,u=bv;normalize_to_v(1+g*ell)_mod_q,g=gcd(b,q)_odd")
     print("even_chart=theta=a/(2d),u=dv;normalize_to_v(1+2g*ell)_mod_2q,g=gcd(d,q)")
     print("gauge=sheet_affine_permutation_plus_unit_owner_reindex;transverse_v_not_divisible_by_q/g")
@@ -621,6 +703,8 @@ def main():
     print(f"mode_centre_divisibility_hostile=(q,chart,c,owners,d,g,a)={mode_centre_divisibility_hostile}")
     print(f"mode_centre_drift_hostile=(centres,pairs,L1,Linf)={mode_centre_drift_hostile}")
     print(f"divisor_pullback_family_audit_q_through_500=(prime,count,first_q,last_q,sha256)={divisor_pullback_audit}")
+    print("even_rank2_mode_leakage_formula=q_even>=8,a_odd,1<=a<q/7;c=a/q^2;owners=(q/2,q(q-1)/2);centres=(0,a/(q(q-1)));P=-a*q^2/2;THM3405_g=q/2_not_dividing_a")
+    print(f"even_rank2_mode_leakage_audit_q_through_500=(count,first,last,max_abs_P,sha256)={even_parity_leakage_audit}")
     print(f"normalization_audit=(q,odd_charts,odd_owner_rows,even_charts,even_owner_rows)={normalization}")
     for q, charts in records:
         print(f"q={q};charts={charts}")
