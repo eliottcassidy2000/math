@@ -30,6 +30,20 @@
   `bcdef4ca8e5ba5a786be31aa6757f704f4aae0e7ae0953e504701acc7a4290f2` /
   `45e7e843b1767ef7254be729add71ea6ef501160503b46a03cbb43e3e53517c3`.
   No composite-even, arbitrary-time, decrement, or LRC(14) claim follows.
+- `regular_group_orbit_tournament_parity_thm3447.py` -> matching `.out`
+  [THM-3447 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  A regular
+  finite-group orbit has an invariant tournament iff its group order is odd.
+  If `t` is the number of nonidentity involutions and
+  `q=(|G|-1-t)/2`, each involution forces a disjoint perfect matching of
+  missing/bidirected pairs; generalized, partial, semicomplete, symmetric,
+  maximal-partial, and tournament counts are respectively
+  `4^q 2^t`, `3^q`, `3^q`, `2^(q+t)`, `2^q`, and (when `t=0`) `2^q`.
+  This exactly separates odd Hensel half-set gauges from two-adic XOR ties,
+  but supplies no canonical orientation or LRC current.  Script/output/
+  semantic LF SHA-256:
+  `8868aa940cbde11b7b79b5a5c4f805622dca3b1486c4d82e87a0566917330099` /
+  `d772b7947f59c071d22035ff20c19075a3093fab6b708b8caf5f62339086fae5` /
+  `0672eab70672e58ff4f44298e7547bb44b9843f0f8f47987374fd03895b142c9`.
 
 - `commuting_smooth_hensel_lattice_action_thm3444.py` -> matching `.out`
   [THM-3444 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For `r`
