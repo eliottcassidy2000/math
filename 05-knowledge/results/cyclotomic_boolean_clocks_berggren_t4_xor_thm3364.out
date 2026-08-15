@@ -1,0 +1,38 @@
+THM-3364 CYCLOTOMIC BOOLEAN CLOCKS + BERGGREN T4 XOR EXACT COMPANION
+source_sha256_lf 0bf40f7736ca65da2704f0f932b223a5946ca75275bc260b4aa8ee84718ad293
+theorem_source_sha256_lf (('THM-3339', '1e4aa8cd9d6cc9bf342328a4af0e5db8cd7eefb51eea08460d03f2c6410cee51'), ('THM-3357', 'ba24accf81d123d76ceee2ea7332d394d9ff23d6c9a0d47c7c76ab5b3ad9d446'), ('THM-3359', '0ff08a37801c5f3b96fa3ee74b0d7a897b3f87c5db4397b4abdadbe99f38562a'))
+assertion_nodes 0 floating_literals 0
+GENERIC EXACT FINITE-CYCLIC DFT IN Q[x]/Phi_p
+periods (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+cyclotomic_polynomials_ascending ((1, (-1, 1)), (2, (1, 1)), (3, (1, 1, 1)), (4, (1, 0, 1)), (5, (1, 1, 1, 1, 1)), (6, (1, -1, 1)), (7, (1, 1, 1, 1, 1, 1, 1)), (8, (1, 0, 0, 0, 1)), (9, (1, 0, 0, 1, 0, 0, 1)), (10, (1, -1, 1, -1, 1)))
+period_degree_words_pairs_primitive_words ((1, 1, 2, 4, 2), (2, 1, 4, 16, 2), (3, 2, 8, 64, 6), (4, 2, 16, 256, 12), (5, 4, 32, 1024, 30), (6, 2, 64, 4096, 54), (7, 6, 128, 16384, 126), (8, 4, 256, 65536, 240), (9, 6, 512, 262144, 504), (10, 4, 1024, 1048576, 990))
+boolean_words 2046 ordered_boolean_pairs 1398100
+DFT_inversion_values 18434 basis_convolution_intersection_checks 385
+word_convolution_idempotence_consequences 2046 zero_mode_density_checks 2046 minimal_period_recovery_checks 2046
+universal_Boolean_truth_checks 16 XOR_union_spectral_coordinate_consequences 117912392
+termwise_Dirichlet_basis_checks 5280 all_word_consequences 196416 indices (1, 24) exponents (1, 2, 3, 4)
+APPLICATION A: THM-3339 TERNARY ANCESTRY x CASSINI PARITY
+ancestry_cosets ((2, '(BA)^*'), (0, 'A(BA)^*'), (1, 'C(BC)^*'))
+ancestry_phase_formula Phi_R_a(1/3)=zeta_3^(-a)/3 exact_power_basis_values (((1, 3), (0, 1)), ((-1, 3), (-1, 3)), ((0, 1), (1, 3)))
+cassini_phase_formula Phi_P_b(1/2)=(-1)^b/2 exact_power_basis_values (((1, 2),), ((-1, 2),))
+CRT_checks 6 formula Phi_S_t=Phi_R_(t mod 3)*Phi_P_(t mod 2)
+six_state_dictionary ((0, 'cab'), (1, 'cba'), (2, 'bca'), (3, 'bac'), (4, 'abc'), (5, 'acb'))
+six_state_phase_formula Phi_S_t(1/6)=zeta_6^(-t)/6 exact_power_basis_values (((1, 6), (0, 1)), ((1, 6), (-1, 6)), ((0, 1), (-1, 6)), ((-1, 6), (0, 1)), ((-1, 6), (1, 6)), ((0, 1), (1, 6)))
+APPLICATION B: THM-3357 LABELLED LOCAL T4 + MOD-FIVE XOR
+labelled_T4_orders ((0, 'P<L<R<M'), (1, 'P<R<L<M')) unlabelled_score_sequence (0, 1, 2, 3)
+reset_XOR_transitions ('L->0', 'M->b xor 1', 'R->1')
+BFS_parent_depths (0, 10) local_T4_checks 88573 transition_checks 265719
+A_d_B_d_depth_0_to_11 ((1, 0), (1, 2), (5, 4), (13, 14), (41, 40), (121, 122), (365, 364), (1093, 1094), (3281, 3280), (9841, 9842), (29525, 29524), (88573, 88574))
+closed_forms A_d=(3^d+(-1)^d)/2 B_d=(3^d-(-1)^d)/2
+positive_index_mod5_zero_supports (('A', 'n=3 mod 4'), ('B', 'n=1 mod 4')) checks 128
+frequency_1_over_4_phases ('A', '+i/4', ((0, 1), (1, 4))) ('B', '-i/4', ((0, 1), (-1, 4)))
+XOR_support odd positive indices spectrum_in_Q(i) (((1, 2), (0, 1)), ((0, 1), (0, 1)), ((-1, 2), (0, 1)), ((0, 1), (0, 1)))
+harmonic_residues ((1, 4), (1, 4), (1, 2)) periodic_scars ((7, 32), (7, 32), (3, 8))
+HOSTILE CONTROLS
+singleton_coset_density_checks 55 singleton_coset_magnitude_checks 385 conclusion density and Fourier magnitudes lose cyclic phase
+global_hypotenuse_tie_c65 (((1, 8), (3, 'RRR')), ((4, 7), (2, 'RL'))) conclusion no global strict tree tournament
+local_label_erasure the two T4s are isomorphic by L<->R
+arbitrary_subset_hostile squares are infinite with gap 2k+1 exact_gap_checks 64 conclusion no canonical finite periodic spectrum for arbitrary subsets
+semantic_sha256 fb837908e92dd524a5d03462456ff57719f4616b8da3a0c4fa95fb2ef0fe5f17
+replay_contract ordinary_and_python_O_outputs_byte_identical
+status=ALL EXACT CHECKS PASSED; phase sidecars and nonperiodic boundary remain typed

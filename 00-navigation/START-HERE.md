@@ -21,11 +21,12 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 ## Sixteen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`.
-   THM-3361 leaves ledger/wall/families `372914/110/12` at `z1=216`.
+   THM-3378 leaves ledger/wall/families `372913/109/12` at `z1=216`.
    THM-3352/3355/3360 close matched residues on all `3,003` bodies; THM-3376
-   is independent. THM-3366 leaves `4,056/200,069,517,203` (`k=2`) and
-   `1,897/2,548,893,834` (`k=3`). `k=0`, other `k=1` residues, projected
-   `k=2,3`, rung, entry, and LRC remain open; THM-3368 is only a Horn tariff.
+   gives an independent affine proof. THM-3366 leaves
+   `4,056/200,069,517,203` (`k=2`) and `1,897/2,548,893,834` (`k=3`).
+   `k=0`, other `k=1` residues, projected `k=2,3`, rung, entry, and LRC
+   remain open; THM-3368 is only a Horn tariff.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -54,14 +55,14 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
    phase; THM-3285 gives a literal `R-M-R` horn. Its FINITE-EXACT `13`-label
    normal atlas has two middle completions but no outer co-support. A two-axis
    atom, current and LRC(14) remain OPEN.
-10. **Tournament structure is operational.** THM-3315 compiles switched walks;
-    THM-3359 makes modular supports periodic but loses apex/orientation.
-    THM-3369/3372 add skew/deletion currents and a transitivity variance,
-    not full SCC order or time. Static sections/rank-two updates are not tournaments.
+10. **Tournament structure is operational and typed.** THM-3315 compiles
+    switched walks; THM-3364 gives local labelled `T4` reset/XOR chambers;
+    THM-3369/3372 add skew/deletion currents. None supplies nonlocal arcs,
+    full SCC order or time.
 11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352
-    separate support, collision tax and q-adic thresholds; THM-2438/2500 give
-    Poisson--Newton/finite-hole laws. THM-3359 gives residue `delta` and scar
-    `delta-delta^2/2`; THM-3362 detects real odd-profile pairs in three moments; FC(3) remains open.
+    separate support and collision tax. THM-3359 gives residue/scar; THM-3364
+    restores full eventual-periodic phase and harmonic finite part; THM-3362
+    detects real odd-profile pairs in three moments. General subsets and FC(3) remain open.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.
     THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
     THM-3212/3225 leave critical points; THM-3237--3265 give the infinity
@@ -110,7 +111,7 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 | Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2202/3279/3289/3367 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3288/3359; distinguish index, level-count, and value supports |
-| Pythagorean / Pell / square sums | [THM-3357](../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md) | THM-3333--3336/3339/3341/3345--3347/3353/3356/3358; retain content, normal unit, branch order, ancestry, and consumer labels |
+| Pythagorean / Pell / square and cube sums | [THM-3357](../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md) | THM-3333--3336/3339/3341/3345--3347/3353/3356/3358 and THM-3370/3375/3376; retain content, normal unit, branch order, ancestry, positivity chamber, and consumer labels |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177/2191; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
 | Formalization | relevant theorem's `formalization` field | `00-navigation/*FORMALIZATION*`, then a clean build/axiom audit |
 | Research method | [`RESEARCH-PROTOCOL.md`](RESEARCH-PROTOCOL.md) | [`META-PATTERNS.md`](META-PATTERNS.md), relevant reflections |

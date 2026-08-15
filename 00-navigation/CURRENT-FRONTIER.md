@@ -25,15 +25,15 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; projected caps `1579/216`. THM-3361 leaves
-ledger/wall/families `372914/110/12` at `z1=216`. THM-3352/3355 close the
-connected/disconnected matched-residue branch; THM-3360 gives its uniform
-`1/294` edge floor and THM-3376 an independent `>Dmax/5` affine proof.
-With same-level edges this closes `z_e=q_eL-e` on all `3,003` bodies.
-Open: `k=0`, other/arbitrary six-drift `k=1` residues, projected `k=2,3`,
-rung, entry, and LRC. Screens are not covers. THM-3356 gives determinant
-shells; THM-3366 leaves `4,056/200,069,517,203` (`k=2`) and
-`1,897/2,548,893,834` (`k=3`), with seven rigid `k=3` hits at `D=L/2`.
+Direct frontier: `<=6`; projected caps `1579/216`. At `z1=216`, THM-3378,
+after THM-3361's three `L720720` rows, leaves ledger/wall/families
+`372913/109/12`. THM-3352/3355 close matched residues; THM-3360 gives the
+`1/294` edge floor and THM-3376 an independent `>Dmax/5` proof. With
+same-level edges, `z_e=q_eL-e` closes on all `3,003` bodies. Open: `k=0`,
+other `k=1` residues, projected `k=2,3`, rung, entry, and LRC; screens are not
+covers. THM-3356 gives determinant shells. THM-3366 leaves
+`4,056/200,069,517,203` (`k=2`) and `1,897/2,548,893,834` (`k=3`), with seven
+rigid `k=3` hits at `D=L/2`.
 THM-3368 adds a weighted Horn tariff but no clock seed. LRC remains open.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
@@ -206,7 +206,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-3173 separates `C2*C3`, regular `S3`, and regular `C6`; their joint
   quotient has order 18, while pointed oriented quartic frames form `Q3`.
   These are semantic action data, not a physical current or Keller bridge.
-- THM-1880/1885 give the Pell frame; THM-3335 excludes nontrivial square-arc/skew-EW attainment; THM-3339's `T6` loses owner; THM-3357 gives a local sibling `T3`, not a level tournament.
+- THM-1880/1885 give the Pell frame; THM-3335 blocks square-arc/skew-EW attainment. THM-3339's `T6` loses owner; THM-3357's sibling `T3` and THM-3364's parent-extended labelled `T4` are local, with one reset/XOR bit.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
 - THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.
@@ -217,10 +217,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 
 - [THM-1950](../01-canon/theorems/THM-1950-h-ge-disc-reduced-to-strongly-connected.md) reduces `H >= disc` to strongly connected tournaments and verifies finite
   cases; the global inequality is open.
-- THM-3315/3322/3324 compile switched walks, moments, split joins and response
-  Gram. THM-3359 is periodic but loses apex/orientation/SCC order. THM-3369/3372
-  add skew currents, a multiplicative deletion transform and sharp transitivity
-  variance, not full order/time. Next: higher responses and nontransitive substitution.
+- THM-3315/3322/3324 compile switched walks, moments, joins and response Gram.
+  THM-3359 is periodic; THM-3364 restores cyclotomic phase/local labelled `T4`;
+  THM-3369/3372 add skew/deletion currents and transitivity variance. Startup,
+  global arcs, apex/SCC order and time remain. Next: higher responses/substitution.
 - A literal Paley bridge exists only in THM-640's prime quadratic-residue scope.
   Composite modulus 14 and repeated score/node heuristics do not inherit it.
 - MISTAKE-227–229 correct the newest false syntheses: the AP chain frame is
@@ -266,9 +266,9 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   Abel--Dini/Bertrand is the boundary; Cauchy and Dirichlet convolution differ.
 - [THM-3359](../01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md)
   gives periodic modular C-finite supports, harmonic residue `delta=h/p`, and
-  multiplicative scar `delta-delta^2/2`. Exact `T4`, Fibonacci, Berggren and
-  ternary-DFA controls show that the common matrix calculus loses orientation
-  and ancestry; squares and `ceil(k log(k+1))` block extension to all subsets.
+  scar `delta-delta^2/2`; [THM-3364](../01-canon/theorems/THM-3364-cyclotomic-boolean-clocks-berggren-t4-xor-and-crt-phase.md)
+  upgrades this to full cyclotomic phase, least period and harmonic finite part.
+  Neither restores ancestry; squares and `ceil(k log(k+1))` block all subsets.
 - Hostile-audited [THM-2500](../01-canon/theorems/THM-2500-finite-hole-relative-atoms-prime-rays-and-cover-bounds.md) classifies finite multiplicative hole modules. Prime-free holes have finitely
   many artificial atoms at most `max h*spf(h)`; a prime hole creates
   disjoint cage rays `m*q` with sharp `M^3/M^4` finite remainders. Additive

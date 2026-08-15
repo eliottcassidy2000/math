@@ -12,7 +12,8 @@ status: >
   intersections occur in the exact box 1<=x<y<=5000.  Separately, the
   norm-one unit 23+4sqrt(33) gives an infinite fixed-sum Pell family with
   distinct signed integer cubes, starting at Q_31=16^3+(-5)^3.  Positive
-  infinitude, density, LRC, FC and JC remain open.
+  infinitude is not proved here and is subsequently closed by THM-3375;
+  density, LRC, FC and JC remain open.
 source: kps-s177-berggren-two-cube-2026-08-14
 depends_on:
   - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
@@ -20,6 +21,7 @@ depends_on:
 related:
   - THM-3346-u-spine-prime-toggle-root-atlas-and-conjugation-monodromy
   - THM-3368-weighted-berggren-horn-defect-tariff-and-complement-clock-separation
+  - THM-3375-berggren-positive-two-cube-pell-ray
 script: 04-computation/berggren_two_cube_norm_collision_kps_s177.py
 output: 05-knowledge/results/berggren_two_cube_norm_collision_kps_s177.out
 script_sha256: e0321576b71764fb65aa15cfd843869a9846b7bea1310d7cd6de8faed0cfc665
@@ -344,7 +346,9 @@ family `(26)--(29)` are proved.  The five-row positive box census is
 FINITE-EXACT and the algebra/minimum were independently audited.  The theorem
 does not classify the positive integral points of `(31)`, prove infinitely
 many positive intersections, or show that the five displayed rows are the
-only ones below a scalar bound larger than `(24)`.  It supplies
+only ones below a scalar bound larger than `(24)`.  The first of these
+residuals is subsequently closed by THM-3375's moving-sum Pell ray; it is not
+a consequence of the fixed-sum orbit proved here.  This theorem supplies
 no physical runner row, owner, phase, factorial-moment tower, Keller mate, or
 AMM integer flow.  LRC(14), FC(3), the planar Jacobian conjecture and AMM
 12592 remain open.
