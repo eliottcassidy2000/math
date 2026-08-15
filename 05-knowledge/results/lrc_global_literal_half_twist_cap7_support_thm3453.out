@@ -1,7 +1,7 @@
 THM-3453 global literal half-twist cap-seven support companion
-status=RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT AUDIT REQUIRED
+status=PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
 support_atoms=(8, 9, 10, 11, 12, 13, 14, 15, 23, 25, 29, 38, 51, 68, 148)
-dependency_hashes=(('THM-3416', '42a9309145de51d1bb6fca0b7c1945302ff37a63a3183e1dfed838c07118e8bf'), ('THM-3434', '52a5a5caed75ad48ab35ce287c15f6cece074c88dddda2b87329792a3df70af7'), ('THM-3435', 'e2d202f97b1f39af032597767633c55f1abc4da261662824058b05b70724bb52'), ('THM-3445', '06b28dd920ab525da087a6eba7bc3ecd25b51a878ce7e81f07725fb00e40b6bc'), ('THM-3451', '87b7c2cf42c63f80d7be8e9f64ba8aff2dc72039026682ad912163d8d171c2a1'))
+dependency_hashes=(('THM-3405', 'd3e7dbeeb85c6f897bd9e31270bd0b6602ae4feac3b46a45eb5ce23ae5d24fe0'), ('THM-3416', '42a9309145de51d1bb6fca0b7c1945302ff37a63a3183e1dfed838c07118e8bf'), ('THM-3434', '52a5a5caed75ad48ab35ce287c15f6cece074c88dddda2b87329792a3df70af7'), ('THM-3435', 'e2d202f97b1f39af032597767633c55f1abc4da261662824058b05b70724bb52'), ('THM-3445', '06b28dd920ab525da087a6eba7bc3ecd25b51a878ce7e81f07725fb00e40b6bc'), ('THM-3451', '87b7c2cf42c63f80d7be8e9f64ba8aff2dc72039026682ad912163d8d171c2a1'))
 security_certificate=(('__future__', 'ast', 'fractions', 'functools', 'hashlib', 'math', 'pathlib'), ('__import__', 'compile', 'eval', 'exec'))
 strict_fraction_reference=(limit,rows,cells,endpoints)=(32, 1023, 22351, 144)
 period_descent=(limit,rows,cells)=(96, 14759, 960475)
@@ -13,6 +13,6 @@ tower_invoice=(b,N,274N,17_active_upper,contradiction)=((1, 2, 548, 612, False),
 tower_uniform=(left_coefficient,right_constant,N_min)=(184, 1224, 34)
 negative_boundaries=(searches,Q6_support,Q2_Q4)=(((6, (1, 1, 1, 0, 0), 2, 4), (34, (32, 24, 154, 164, 11), 34, 0), (578, (576, 568, 10413, 10412, 0), 578, 0)), (1, 4), ((2, 0), (4, 0)))
 classification_candidate=rho_H(Q)<=7 iff some support atom divides Q
-scope=no arbitrary centre/time; no decrement; no runner-current or LRC(14) consequence
-semantic_sha256=72eae924f73511e221b4a36c9eee4e1fb1dbb6b1082e57115924bc4e06d7515f
-script_lf_sha256=67753b9cbd3bba0241b8902b49ee7b8bdf82462e61d5833a2a17b4eac8177ddb
+scope=fixed half-twist common centre and zero cochain; no arbitrary-centre classification, nonzero current, decrement, or LRC(14) consequence
+semantic_sha256=5f5d2c29d47a15abc8cf74d2b0f40769c220c3a646b4ba4c6bb21ca5d49cc1fa
+script_lf_sha256=fb0147ba4f5ee6e918ba8509667daa149e2a1ee835b51fe7a1ff7b35bae5f146

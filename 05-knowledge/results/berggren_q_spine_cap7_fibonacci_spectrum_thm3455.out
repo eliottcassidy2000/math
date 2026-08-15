@@ -23,7 +23,7 @@ controls=(t,q_t,rank)=(1,11,6),(2,27,4),(3,51,7),(4,83,>7);t=20 gives q=1683 ran
 dependency_sha256[01-canon/theorems/THM-3334-berggren-parabolic-spine-gaussian-collision-torsor.md]=dc0cae3442970b7e5acd768be7ce3c1ba5f3faae0a603815cad47e8e3b1c41f5
 dependency_sha256[01-canon/theorems/THM-3415-zero-mode-cochain-global-rank-five-support.md]=de8d2f615695070dc75cad38ad4a9c22308d8bf900cd6f9a69cd2003f815a14d
 dependency_sha256[01-canon/theorems/THM-3416-zero-mode-cochain-global-rank-six-support.md]=42a9309145de51d1bb6fca0b7c1945302ff37a63a3183e1dfed838c07118e8bf
-dependency_sha256[01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md]=38c52246b53bf7ad92dd8da8d0a5645e082d7cbc5cadcf08579493c8fa435cd1
+dependency_sha256[01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md]=a4444813a2b24aa55613eef5f4cc0538ca0148f16297dff46f80d723f1beb247
 dependency_sha256[01-canon/theorems/THM-3454-fibonacci-selected-u-spine-farey-lorentz-isometry-and-one-tie-edge-order.md]=2f55187055b8158f5a99fd154df14beec5c2b6e7a0a4f65bc5995d495be7d058
-semantic_sha256=e3b0a0d48656bfbf81275f271cbe95f7bacea261404f28b933db305b3d06f6f6
-scope=literal_transverse_half_twist_only;no_common_time,current,decrement,LRC14,or_JC_consequence
+semantic_sha256=330499ea2bcbf3d2a0da6d3512870ebfae83c9e8268c78e7291ed00f0d95e652
+scope=literal_half_twist_has_fixed_common_zero-cochain_centre;no_other-centre,nonzero-current,decrement,LRC14,or_JC_consequence

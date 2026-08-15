@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for the reserved global literal half-twist cap-seven theorem.
+"""Exact companion for the proved global literal half-twist cap-seven theorem.
 
 The global classification is an analytic strong-induction argument built from
 proved predecessor theorems.  This standard-library companion freezes its
@@ -12,8 +12,8 @@ elementary interfaces and sharp boundary controls:
 * the residual ``2*17^b`` quotient-density and two-sided-mass arithmetic;
 * direct no-cap negative searches at ``Q=6,34,578``.
 
-The theorem remains RESERVED / PROVISIONAL until a separate immutable audit
-checks the proof and promotes its status.
+The literal masks are evaluated at the fixed common centre ``1/(2Q)``.  The
+companion does not classify arbitrary centres or construct a nonzero current.
 """
 
 from __future__ import annotations
@@ -28,6 +28,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEPENDENCIES = (
+    (
+        "THM-3405",
+        ROOT / "01-canon/theorems/THM-3405-common-centre-gcd-gauge-and-boolean-half-twist.md",
+        "d3e7dbeeb85c6f897bd9e31270bd0b6602ae4feac3b46a45eb5ce23ae5d24fe0",
+    ),
     (
         "THM-3416",
         ROOT / "01-canon/theorems/THM-3416-zero-mode-cochain-global-rank-six-support.md",
@@ -79,7 +84,7 @@ WITNESSES = {
     148: (8, 33, 41, 100, 107, 115, 140),
 }
 MIXED_PRIMES = (3, 5, 11, 17, 23, 29)
-EXPECTED_SEMANTIC_SHA256 = "72eae924f73511e221b4a36c9eee4e1fb1dbb6b1082e57115924bc4e06d7515f"
+EXPECTED_SEMANTIC_SHA256 = "5f5d2c29d47a15abc8cf74d2b0f40769c220c3a646b4ba4c6bb21ca5d49cc1fa"
 
 
 def require(condition: bool, payload: object) -> None:
@@ -514,7 +519,7 @@ def main() -> None:
                 ("semantic digest", semantic_sha256))
 
     print("THM-3453 global literal half-twist cap-seven support companion")
-    print("status=RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT AUDIT REQUIRED")
+    print("status=PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED")
     print(f"support_atoms={SUPPORT_ATOMS}")
     print(f"dependency_hashes={dependency_hashes}")
     print(f"security_certificate={security}")
@@ -533,7 +538,7 @@ def main() -> None:
     print(f"tower_uniform=(left_coefficient,right_constant,N_min)={tower[2]}")
     print(f"negative_boundaries=(searches,Q6_support,Q2_Q4)={negatives}")
     print("classification_candidate=rho_H(Q)<=7 iff some support atom divides Q")
-    print("scope=no arbitrary centre/time; no decrement; no runner-current or LRC(14) consequence")
+    print("scope=fixed half-twist common centre and zero cochain; no arbitrary-centre classification, nonzero current, decrement, or LRC(14) consequence")
     print(f"semantic_sha256={semantic_sha256}")
     print(f"script_lf_sha256={lf_sha256(source)}")
 

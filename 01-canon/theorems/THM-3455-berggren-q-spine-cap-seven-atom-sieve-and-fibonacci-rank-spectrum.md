@@ -24,9 +24,9 @@ depends_on:
   - THM-3454-fibonacci-selected-u-spine-farey-lorentz-isometry-and-one-tie-edge-order
 script: 04-computation/berggren_q_spine_cap7_fibonacci_spectrum_thm3455.py
 output: 05-knowledge/results/berggren_q_spine_cap7_fibonacci_spectrum_thm3455.out
-script_sha256: 8fc2f1b50f270f91e16b98a7834df642009ed460d592ad60be706105f1788d65
-output_sha256: c91aa6749e07b19ecbaba61912bf9dded21e5381ab41c6f9e47f8f43d05e815e
-semantic_sha256: e3b0a0d48656bfbf81275f271cbe95f7bacea261404f28b933db305b3d06f6f6
+script_sha256: 1b2c01462bf31844b90deb87f4552ae260a6abeade0f01eb8baad612fbc77306
+output_sha256: bb092c7185d7f369ec77154c361c645c44388f027e1b62d657cd1880b7a81344
+semantic_sha256: 330499ea2bcbf3d2a0da6d3512870ebfae83c9e8268c78e7291ed00f0d95e652
 hash_basis: LF-normalized bytes
 ---
 
@@ -357,12 +357,15 @@ exceptions rather than optimization-sensitive assertions.
 | source | parabolic Berggren `q_t` labels and their Fibonacci spine-index sample (at rooted depths `F_n-1`) |
 | predicate | THM-3453's transverse strict literal half-twist cover rank |
 | preserved | atom divisibility, rank priority, periodic index, harmonic coefficient |
-| lost | owner masks, arbitrary centre/time, current, phase, and LRC exit |
+| retained existence | every finite-rank grade has a labelled witness at `c=1/(2q_t)` with zero complete mode cochain |
+| lost | the compressed word forgets owner masks and widths; other centres, nonzero current, phase transport, and the LRC exit remain absent |
 | positive controls | `q_1=11`, `q_2=27`, `q_3=51` |
 | hostile | `q_20=1683` forces lower-rank priority |
 
 This theorem classifies only literal transverse half-twist masks on the named
-spine labels.  It does not realize a common physical time, a zero-mode
-cochain, an LRC current, a decrement certificate, a spectral closure, or a
-Jacobian map.  Neither the density `76/187` nor `43/90` is an LRC success
-probability.  LRC(14) remains open.
+spine labels.  Every finite-rank positive does realize the fixed common time
+`c=1/(2q_t)` and a zero complete mode cochain after one labelled witness is
+reattached; the periodic rank word alone forgets that witness.  It does not
+classify other centres or construct a nonzero LRC current, decrement
+certificate, spectral closure, or Jacobian map.  Neither the density `76/187`
+nor `43/90` is an LRC success probability.  LRC(14) remains open.

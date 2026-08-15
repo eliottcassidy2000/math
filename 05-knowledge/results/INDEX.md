@@ -60,11 +60,12 @@
   both full periods and every proper-period hostile, with `q_1..q_4` realizing
   ranks `6,4,7,>7` and `q_20=1683` enforcing lower-rank priority.
   Script/output/semantic LF SHA-256:
-  `8fc2f1b50f270f91e16b98a7834df642009ed460d592ad60be706105f1788d65` /
-  `c91aa6749e07b19ecbaba61912bf9dded21e5381ab41c6f9e47f8f43d05e815e` /
-  `e3b0a0d48656bfbf81275f271cbe95f7bacea261404f28b933db305b3d06f6f6`.
-  This is literal transverse half-twist support only; no common physical time,
-  current, decrement, LRC(14), or Jacobian consequence follows.
+  `1b2c01462bf31844b90deb87f4552ae260a6abeade0f01eb8baad612fbc77306` /
+  `bb092c7185d7f369ec77154c361c645c44388f027e1b62d657cd1880b7a81344` /
+  `330499ea2bcbf3d2a0da6d3512870ebfae83c9e8268c78e7291ed00f0d95e652`.
+  Every finite rank has a labelled fixed-half-twist common centre and zero
+  cochain; no other-centre classification, nonzero current, decrement,
+  LRC(14), or Jacobian consequence follows.
 - `lrc_global_literal_half_twist_cap7_support_thm3453.py` -> matching `.out`
   [THM-3453 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The theorem
   uses strong-induction period
@@ -78,13 +79,15 @@
   list; and `103,488` fixed-fibre owner rows comprising `11,582,552` sheet
   cells.  Normal, optimized, and stored transcripts are byte-identical.
   Script/output/semantic LF-normalized SHA-256:
-  `67753b9cbd3bba0241b8902b49ee7b8bdf82462e61d5833a2a17b4eac8177ddb` /
-  `3ab64ce8ead3b915b1bf0e045451df650eab01c1f61b02a6c7d08d10a1c21d8d` /
-  `72eae924f73511e221b4a36c9eee4e1fb1dbb6b1082e57115924bc4e06d7515f`.
+  `fb0147ba4f5ee6e918ba8509667daa149e2a1ee835b51fe7a1ff7b35bae5f146` /
+  `4c22fe1f62507d40e3fb6b8bdb8e7bc14ad9c52cd3f228e8c823f803f06c84a1` /
+  `5f5d2c29d47a15abc8cf74d2b0f40769c220c3a646b4ba4c6bb21ca5d49cc1fa`.
   Two independent immutable-package audits passed, including a separate
   clean-room strict-mask classification through `Q=200`, all atom ranks, and
-  hostile closures at `Q=366,578`.  No arbitrary-time, decrement,
-  runner-current, or LRC(14) consequence follows.
+  hostile closures at `Q=366,578`.  MISTAKE-404 records that the labelled
+  masks do realize `c=1/(2Q)` with zero cochain.  No arbitrary-centre
+  classification, nonzero runner-current, decrement, or LRC(14) consequence
+  follows.
 - `fibonacci_u_spine_farey_lorentz_one_tie_thm3454.py` -> matching `.out`
   [THM-3454 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   On the fixed-cusp leaf chain, `P_t=U^(t-1)(3,4,5)` identifies rooted

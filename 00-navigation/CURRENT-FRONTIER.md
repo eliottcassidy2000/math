@@ -35,7 +35,7 @@ remain open; projected screens are not physical covers.
 THM-3356/3366 leave k2/k3 `4056/1897`; exact-six k3 is a 20-edge `Phi`-DAG and k2's `C3` is divisor-spliced. THM-3385/3387--3395/3398 give q2--7 and all-q mode/cochain laws.
 THM-3414--3416 give ZMC rank-4/5/6 bases `8,9` / `10,12` / `11,15,23,25`.
 THM-3425 gives primitive half cap-six support and its joint-period/parity breaker.
-[THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md) proves the all-modulus transverse literal cap-seven classification (15 divisor atoms); LRC(14) remains open.
+[THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md) proves 15-atom literal cap-seven support; each witness has fixed zero-cochain centre `1/(2Q)`, no nonzero current; LRC(14) stays open.
 THM-3135/3150/3156/3171 give the cap-two/gain CSP; THM-3200/3211/3224/3246
 give ray/carry laws; THM-3234--3285 give phase structures. THM-3285 has `169`
 middle origins and two normal-atlas completions but empty outer co-support; the

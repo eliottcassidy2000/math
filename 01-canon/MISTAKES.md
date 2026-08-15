@@ -9,6 +9,39 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-404 (2026-08-15, THM-3453/3455 half-twist scope) -- a fixed common mode centre was discarded with the arbitrary-centre problem
+
+- **What failed:** THM-3453 correctly classified the literal half-twist masks
+  `B_(q,r)`, but its status, statement, companion transcript, and closing scope
+  said that the witnesses provided no common physical time.  THM-3455
+  inherited that wording and said its positive spine labels realized neither a
+  common time nor a zero-mode cochain.  Those sentences conflated failure to
+  classify arbitrary centres with failure of the centre already built into
+  the literal half twist.
+- **Minimal witness / first failed implication:** directly from the two
+  definitions,
+  `B_(q,r)=D_(q,r)(1/(2q))`.  At this source centre the containing THM-3398
+  mode has `h=r mod 2q`; taking `n=0` in its centre lattice gives
+  `x=(n+h/(2q))/r=1/(2q)`.  Thus every labelled literal cover has one common
+  physical centre and identically zero complete mode cochain.  The `q=11`
+  witness `(1,2,3,5,7,9)` is already an exact six-owner partition at that
+  centre.  The first failed implication was “the bare rank word forgets the
+  owner/mode sidecar, therefore no common time exists.”
+- **Repair / strongest survivor:** THM-3453 now states the fixed-half-twist
+  realization explicitly and distinguishes it from the still-unclassified
+  arbitrary-centre problem.  THM-3455 says that each positive rank grade has
+  such a realization after a witness is reattached, while its compressed
+  periodic word still forgets the owners and widths.  The projective wedge at
+  this centre collapses: `A_i=r_i` and `P_ij=0`.  Hence no nonzero current,
+  endpoint relation, decrement, spectral closure, or LRC(14) conclusion is
+  gained.  All cap-seven support, rank, density, and Fibonacci calculations
+  remain unchanged.
+- **Reusable rule:** when a quotient object is defined by evaluation at a
+  named phase, separate “the phase is not retained by the compressed
+  invariant” from “no realizing phase exists.”  Before denying a physical
+  lift, substitute the defining phase and then check the selected-mode centre
+  lattice; only after that ask which current or endpoint data were lost.
+
 ## MISTAKE-402 (2026-08-15, THM-3454 spine-index/depth and replay typing) -- a shifted branch index was called rooted depth and raw newline bytes were overclaimed
 
 - **What failed:** THM-3454 repeatedly called the parameter `t` in

@@ -5,8 +5,9 @@ status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The theorem classifies
   every modulus supporting a
   transverse strict literal half-twist cover by at most seven owners.  It is
-  an exact Boolean-mask result and has no arbitrary-time, physical-current,
-  decrement, or LRC(14) consequence.
+  an exact Boolean-mask result whose labelled witnesses realize the fixed
+  common centre c=1/(2Q) with zero mode cochain.  It has no arbitrary-centre
+  classification, nonzero current, decrement, or LRC(14) consequence.
 source: root-global-literal-half-rank-seven-2026-08-15
 audit: >
   two independent immutable-package audits CLEAN: line-by-line theorem
@@ -19,6 +20,7 @@ audit: >
   semantic/hash, AST/security, ID, routing, documentation, and diff gates
   passed
 depends_on:
+  - THM-3405-common-centre-gcd-gauge-and-boolean-half-twist
   - THM-3416-zero-mode-cochain-global-rank-six-support
   - THM-3434-seventeen-fibre-two-sided-mass-closure
   - THM-3435-dyadic-fibre-grid-decomposition-for-literal-half-twists
@@ -28,9 +30,9 @@ related:
   - THM-3429-prime-fibre-activity-descent-for-mixed-order-half-twist-seven-covers
 script: 04-computation/lrc_global_literal_half_twist_cap7_support_thm3453.py
 output: 05-knowledge/results/lrc_global_literal_half_twist_cap7_support_thm3453.out
-script_sha256: 67753b9cbd3bba0241b8902b49ee7b8bdf82462e61d5833a2a17b4eac8177ddb
-output_sha256: 3ab64ce8ead3b915b1bf0e045451df650eab01c1f61b02a6c7d08d10a1c21d8d
-semantic_sha256: 72eae924f73511e221b4a36c9eee4e1fb1dbb6b1082e57115924bc4e06d7515f
+script_sha256: fb0147ba4f5ee6e918ba8509667daa149e2a1ee835b51fe7a1ff7b35bae5f146
+output_sha256: 4c22fe1f62507d40e3fb6b8bdb8e7bc14ad9c52cd3f228e8c823f803f06c84a1
+semantic_sha256: 5f5d2c29d47a15abc8cf74d2b0f40769c220c3a646b4ba4c6bb21ca5d49cc1fa
 hash_basis: LF-normalized bytes
 ---
 
@@ -81,9 +83,18 @@ rank 6:  11,15,23,25;
 rank 7:  13,14,29,38,51,68,148.                         (5)
 ```
 
-This is a Boolean strict-mask statement.  It makes no claim about an
-arbitrary centre or common physical time, supplies no runner-current or
-decrement certificate, and does not prove LRC(14).
+This is a Boolean strict-mask statement at a specified phase.  Directly from
+the definitions,
+
+```text
+B_(Q,r)=D_(Q,r)(1/(2Q)).                                (5a)
+```
+
+After retaining the owner label, the containing THM-3398 mode has
+`h=r mod 2Q`; its centre lift with `n=0` is `x=1/(2Q)`.  Thus every displayed
+cover has a fixed common physical time and zero complete mode cochain.  The
+theorem does not classify any other centre, supplies no nonzero
+runner-current or decrement certificate, and does not prove LRC(14).
 
 ## 2. Inheritance and the positive direction
 
@@ -403,4 +414,4 @@ do not replace the strong-induction proof.  Two independent immutable-file
 audits checked the proof, scripts, output, hashes, routing, correction
 lineage, and a separate clean-room bounded/hostile path.  The theorem is
 therefore **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED**.  It does not
-provide a common physical time or settle LRC(14).
+classify arbitrary centres, provide a nonzero current, or settle LRC(14).

@@ -20,7 +20,7 @@ from math import lcm
 from pathlib import Path
 
 
-EXPECTED_SEMANTIC_SHA256 = "e3b0a0d48656bfbf81275f271cbe95f7bacea261404f28b933db305b3d06f6f6"
+EXPECTED_SEMANTIC_SHA256 = "330499ea2bcbf3d2a0da6d3512870ebfae83c9e8268c78e7291ed00f0d95e652"
 NO_CAP7 = 99
 T_PERIOD = 1683
 FIBONACCI_PERIOD = 360
@@ -254,4 +254,4 @@ print("controls=(t,q_t,rank)=(1,11,6),(2,27,4),(3,51,7),(4,83,>7);t=20 gives q=1
 for path, value in dependency_hashes:
     print(f"dependency_sha256[{path}]={value}")
 print(f"semantic_sha256={semantic_sha256}")
-print("scope=literal_transverse_half_twist_only;no_common_time,current,decrement,LRC14,or_JC_consequence")
+print("scope=literal_half_twist_has_fixed_common_zero-cochain_centre;no_other-centre,nonzero-current,decrement,LRC14,or_JC_consequence")

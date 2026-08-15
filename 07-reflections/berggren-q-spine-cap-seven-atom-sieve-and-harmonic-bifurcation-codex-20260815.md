@@ -88,7 +88,7 @@ counts `n=1,2` separately.  The unlabelled value sets identify
 | THM-3453 atoms | `q_t` branch | solve `d|x^2+2` | divisor support | owner masks/time | exact atom rank | `q_20=1683` |
 | spine-index residues | Fibonacci indices | `t=F_n` | Boolean membership | uniform residue distribution | Pisano state `(F_n,F_(n+1))` | period `360` |
 | index subset | branch labels | `n -> q_(F_n)` | labels if retained | density and divergence | index coordinate | duplicate `n=1,2` |
-| literal cover | physical LRC event | none yet | only mask OR | time/current/exit | phase-current witness | `q_4=83` negative mask control |
+| literal cover | fixed physical mode | `c=1/(2q)` | mask OR and zero cochain | nonzero current/endpoint/exit | relation-current sidecar | `q_4=83` negative cap-seven control |
 
 The second row explains why looking only at `F_n mod m` one value at a time is
 safe for membership but not for proving the period: the faithful recurrence
@@ -105,8 +105,9 @@ which q_t can admit a transverse literal cover by at most seven masks?
 They do not answer:
 
 ```text
-do those masks arise at one lawful physical time with the required current,
-owner distinctness in the live row, endpoint typing, and decrement exit?
+can the lawful fixed physical time be transported to the required nonzero
+current, owner distinctness in the live row, endpoint typing, and decrement
+exit?
 ```
 
 The first four branch labels give a compact hostile battery:
@@ -118,9 +119,9 @@ The first four branch labels give a compact hostile battery:
 83 -> no cap-seven literal cover.
 ```
 
-A physical bridge should succeed on the first three in their stated ranks and
-fail honestly at the fourth.  A method that predicts the same behavior for
-all four has forgotten atom support; a method that succeeds at `83` is not
+A fixed-centre bridge succeeds on the first three in their stated ranks and
+fails through rank seven at the fourth.  A method that predicts the same
+behavior for all four has forgotten atom support; a cap-seven method that succeeds at `83` is not
 computing THM-3453's literal predicate.
 
 ## New frontiers
@@ -136,7 +137,7 @@ move belongs in `META-PATTERNS.md`.
 ### 2. Physical-time lift on the three positive atoms
 
 Pull the explicit THM-3453 witnesses at `9,11,51` through the exact branch
-residue classes and test the earliest lawful common-time/current gate.  The
+residue classes and test the earliest lawful endpoint-current gate.  The
 source must retain the owner residues, not only rank.  The hostile `q_20`
 tests whether competing atom witnesses are incorrectly mixed.
 
@@ -159,5 +160,6 @@ current transport.
 ## Boundary
 
 The exact densities are structural census results, not probabilities of LRC
-success.  No common time, physical current, decrement, spectral nonvanishing,
-or Jacobian map follows.  LRC(14) remains open.
+success.  The fixed common half-twist time and zero cochain do follow after a
+labelled witness is restored; no nonzero physical current, decrement, spectral
+nonvanishing, or Jacobian map follows.  LRC(14) remains open.
