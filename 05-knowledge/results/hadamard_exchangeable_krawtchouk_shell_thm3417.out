@@ -1,0 +1,14 @@
+THM-3417 exchangeable Krawtchouk shell exact controls
+dependency_pins=3
+krawtchouk_orthogonality_checks=819
+abstract_radial_audit=(max_t,digest)=(9, '16add5e7d2e5c371e2502016f12a152f91ee8e37903ae5bd4a72af5e6ec66432')
+symmetrized_parity=(laws,moment_checks,digest)=(90, 16298, '048be104ad765ef189c5a8f4619f4b06721d71c5ff9bd7dd53aa3525ab65b297')
+paley_order4=(position_sets,repeated_row_or_column,shell_checks,digest)=(511, 478, 2815, 'c823908f3871f70f2df726e43304e6fb8d5870bd0e9c4eebd34ecb17f07e18a6')
+h4_radial_fibre_collision=(((0, 0), (0, 1), (0, 2), (2, 0)), ((0, 0), (0, 1), (1, 0), (1, 1)), (Fraction(1, 1), Fraction(1, 2), Fraction(1, 6), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 8), Fraction(1, 8), Fraction(1, 4)), (Fraction(1, 8), Fraction(1, 8), Fraction(1, 8), Fraction(1, 8)))
+h8_exchangeable_strength2_strict_loss=(((0, 0), (1, 2), (2, 1), (3, 4)), (Fraction(1, 1), Fraction(3, 4), Fraction(13, 24), Fraction(3, 8), Fraction(1, 4)), (Fraction(9, 16), Fraction(3, 8), Fraction(1, 16), Fraction(0, 1), Fraction(0, 1)), (1, 4, 4, 0, 0), ((7, Fraction(1, 128)), (11, Fraction(0, 1)), (13, Fraction(-1, 128)), (14, Fraction(0, 1)), (15, Fraction(0, 1))))
+fixed_shell_convolution=(events,walsh_shells,boundary_checks,digest)=(((0, 1), (1, 0), (2, 3), (3, 2)), (Fraction(289, 512), Fraction(47, 128), Fraction(19, 256), Fraction(-1, 128), Fraction(1, 512)), 506, 'f30c9ee872bfbfa76a0afea57921447a8b843e848ee917e5fca4a879fb5d326f')
+paley_order12_seven_toggle_digest=e8204c6145c83561ef692668bd20661fa094079dd62909666fb88d0828e23e56
+duplicate_position_boundary=(((0, 0), (0, 0)), (1, 1, 1, 0), (Fraction(1, 1), Fraction(1, 2), Fraction(1, 2), Fraction(0, 1)), (Fraction(1, 1), Fraction(1, 2), Fraction(1, 2), Fraction(1, 1)))
+hermite_low_degree_checks_and_limit_digest=(2565, '63c9e1b88e4c923810a8c587ac63880e8b92a3dfd87df0de816f683ed7c326a0')
+semantic_sha256=d2471a54b365e186d605bdc5640434219013efe1cff787a18fbf66989c4e355b
+status=PASS
