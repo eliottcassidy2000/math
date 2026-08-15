@@ -1,19 +1,31 @@
 # Script Results Index
 
 - `lrc_seventeen_fibre_two_sided_mass_closure_thm3434.py` -> matching `.out`
-  [THM-3434 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Transverse
-  literal half-twist covers by at most seven blocks on odd `Q` exist exactly
-  when one of `9,11,13,15,23,25,29,51` divides `Q`.  A two-sided prime-fibre
-  invoice closes the residual `17^a` and `5*17^a` towers, with a separate
-  five-coordinate mass closure at `Q=85`; THM-3432 transfers the result to
-  conditional fixed-zero covers required to contain the order-two residue.
-  The companion checks exact fibre and quotient-order bounds, replays `Q=85`
-  by complete search, and reproduces the divisor support for every odd
-  `Q<=101`.  Script/output/semantic LF-normalized SHA-256:
-  `c885efc06c62743e5fe823d6e943dc1352e786425e48c4df3429b0161016cac8` /
-  `119a7bac30d89ea4b8553331c9411632cab95c10d8361e5b23b7ec892f7f29d4` /
+  [THM-3434 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The two-sided
+  fibre invoice closes both residual towers `17^a` and `5*17^a`, including
+  the exceptional `Q=85` boundary, and proves that odd transverse literal
+  half-twist rank is at most seven exactly on multiples of
+  `{9,11,13,15,23,25,29,51}`.  The primary companion checks density and
+  fibre laws, nine levels of each tower, `176,850` period-descent cells, the
+  `760`-state `Q=85` negative search, positive atoms/pullbacks, and all odd
+  `Q<=101`.  Normal, optimized, and stored outputs agree.  Primary
+  script/output/semantic LF-normalized SHA-256:
+  `910349a5c5c4178b068cfe5427d01d7b7efadc54875b01bac87b162d0eccf996` /
+  `3adbdc6c6937b13a8c6e7dfc1ab8b27ba001af6860341fb082e2a01a65dcf0dc` /
   `13984be8cee76a72b5d1ff98011538e56eb9c5f86ff3db41ed80f7c536189f2d`.
-  No arbitrary-time, physical common-centre, or LRC(14) conclusion follows.
+  Arbitrary common time and LRC(14) remain open.
+
+- `lrc_rank7_residual_17adic_tower_probe_20260815.py` -> matching `.out`
+  [THM-3434 VERIFIED-EXACT INDEPENDENT COMPANION].  A separate third-point
+  derivation checks `Q=51,85,289`, `1,006,880` forced `Q=85` profiles, and
+  the affine-lift hostile.  Audit repaired an uncommitted near miss: even
+  full-order owners also spend a third point on the covered fixed fibre, so
+  no coarse `Q=85` profile survives.  The pair-overlap bank is only a hostile
+  sidecar.  Normal, optimized, and stored outputs agree.
+  Script/output/semantic LF-normalized SHA-256:
+  `b70570b1baecb719399e7819fce772d2aad7d145e8e44811164046d623cff1fa` /
+  `6b10dec50965d932b73d4c6f16d79c1aa00a4b733b425dd33b1a64595a5ce8f1` /
+  `2939e6278cc64659599ec030d620cd52b12574cbfb2f531a3e34d8ebf8df1fcd`.
 
 - `lrc_order2_fixed_half_parity_transplant_thm3432.py` -> matching `.out`
   [THM-3432 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For every
@@ -37,7 +49,8 @@
   prime coordinate in `{3,5,13,17,29}`.  A coordinate omitted by some owner
   is one of `3,5,17,29`, while an all-active coordinate is `13` or `29`.
   Every quotient coindex is `{3,5,17,29}`-smooth; after removing divisor atoms
-  `13,29,51`, the odd composite frontier reduces to `17^a` and `5*17^a`.
+  `13,29,51`, THM-3429 reduces the frontier to `17^a` and `5*17^a`, which
+  downstream THM-3434 now excludes.
   Exact dual companions check inactive projection, strict fibre capacity,
   prime powers, the transverse boundary, and the full `Q=51,p=17` affine
   lift-cocycle table.  That atom proves the reduction is not yet a recursive
@@ -189,19 +202,9 @@
   `f89f31256715615babe7ffec792363f9149134a5d02cf20db906ed45c210f1a8` /
   `ba5196cfa2f8ec82c2cd4fb0320181375334c85525fdb8a5b9e891f2f613c2cf` /
   `c3b8596233d20f55e5c0bf0419c5f3f627cbf371e3004a5f40ab8a582a09b9f8`.
-  is every residue on every prime fibre of all `93` odd composite `Q<=315`:
-  `2,142,888` pullback cells and `11,819,480` active cells.  It verifies the
-  activity floors for every odd prime through `997`, the Boolean defect
-  budgets `(4,2,0,1,1)` on primes `(3,5,7,17,29)` (with the same zero
-  defect at the surviving all-active prime `13`), the sharp target-free
-  `Q=51` atom, and the nonprimitive scaled-13 hostile at `Q=39`.  Normal and
-  optimized transcripts agree.  Script/output/semantic LF-normalized SHA-256:
-  `5ea4a9830f77a984aa7db83124ada94a498ed8f7687164533919545cd207f23f` /
-  `2ad7b43fd9afb14539438f2a17d4f458a7af6dbf3bd3deb947f8740099d7c316` /
-  `d65463e762b3ba39e6cbbf13daeba73f9b689f9051ec460ac7d6ec27eaeece85`.
   This independently verifies the base activity inequality; its `p=7`
   equality row is superseded as a cover lane by THM-3429's fixed-fibre gate.
-  The two residual 17-adic towers and LRC(14) remain open.
+  THM-3434 closes the residual towers; arbitrary time and LRC(14) remain open.
 
 - `rough_maximal_order_half_twist_rank7_finite_boundary_20260815.py` ->
   matching `.out` [FINITE-EXACT INDEPENDENT THM-3428 BOUNDARY].  The complete

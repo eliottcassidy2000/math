@@ -8,7 +8,7 @@ status: >
   most seven exactly on odd multiples of 9,11,13,15,23,25,29,or51.  This is
   not an arbitrary-time or physical LRC(14) result.
 source: root seventeen-adic fibre session, 2026-08-15
-audit: independent period-descent, dependency and live-main THM-3429 repin delta, strict-endpoint, quotient-density, owner-count, two-sided-invoice, tower-inequality, Q85 two-prime, fixed-order-two, clean-room solver, normal/-O/stored-output, hash, AST/security, and documentation audit CLEAN
+audit: independent period descent, dependency and live-main THM-3429 repin delta, transverse universe, strict endpoints, quotient-density maxima, 2/3 fibre law, owner count, two-sided invoice, tower arithmetic, Q85 p17/p5 fixed-fibre budget, divisor support, conditional fixed-chart corollary, positive Q51 hostile, dual clean-room exact companions, normal/-O/stored replay, hashes, AST/security, documentation, and scope CLEAN; corrected an uncommitted sidecar that had failed to charge even full-order owners on the covered Q85 fibre
 depends_on:
   - THM-3416-zero-mode-cochain-global-rank-six-support
   - THM-3421-prime-half-twist-rank-seven-classification
@@ -19,9 +19,14 @@ related:
   - THM-3428-rough-maximal-order-half-twist-rank-seven-exclusion
 script: 04-computation/lrc_seventeen_fibre_two_sided_mass_closure_thm3434.py
 output: 05-knowledge/results/lrc_seventeen_fibre_two_sided_mass_closure_thm3434.out
-script_sha256: c885efc06c62743e5fe823d6e943dc1352e786425e48c4df3429b0161016cac8
-output_sha256: 119a7bac30d89ea4b8553331c9411632cab95c10d8361e5b23b7ec892f7f29d4
+script_sha256: 910349a5c5c4178b068cfe5427d01d7b7efadc54875b01bac87b162d0eccf996
+output_sha256: 3adbdc6c6937b13a8c6e7dfc1ab8b27ba001af6860341fb082e2a01a65dcf0dc
 semantic_sha256: 13984be8cee76a72b5d1ff98011538e56eb9c5f86ff3db41ed80f7c536189f2d
+independent_script: 04-computation/lrc_rank7_residual_17adic_tower_probe_20260815.py
+independent_output: 05-knowledge/results/lrc_rank7_residual_17adic_tower_probe_20260815.out
+independent_script_sha256: b70570b1baecb719399e7819fce772d2aad7d145e8e44811164046d623cff1fa
+independent_output_sha256: 6b10dec50965d932b73d4c6f16d79c1aa00a4b733b425dd33b1a64595a5ce8f1
+independent_semantic_sha256: 2939e6278cc64659599ec030d620cd52b12574cbfb2f531a3e34d8ebf8df1fcd
 hash_basis: LF-normalized bytes
 ---
 
@@ -346,6 +351,15 @@ seven-cover in `760` memoized states and `844` branches.  It also reconstructs
 the three positive atoms and twelve pullbacks, and independently reproduces
 the divisor support `(3)` at every odd `Q<=101`.  Normal and optimized outputs
 are intended to be byte-identical.
+
+The independently written
+`lrc_rank7_residual_17adic_tower_probe_20260815.py` rederives the argument in
+third-point-event coordinates, checks `Q=51,85,289` with a joint-period
+solver, and exhausts `1,006,880` forced-profile combinations at `Q=85`.  Its
+audit caught and repaired a provisional bookkeeping error: every even active
+owner, not only an order-seventeen owner, spends a third point on the covered
+reflection-fixed fibre.  After that charge no coarse `Q=85` mass profile
+survives; the pair-overlap bank is retained only as a hostile sidecar.
 
 The strict transverse condition `(2)` is load-bearing.  Admitting residue
 zero makes `(1)` the full set and destroys every rank statement.  Allowing a

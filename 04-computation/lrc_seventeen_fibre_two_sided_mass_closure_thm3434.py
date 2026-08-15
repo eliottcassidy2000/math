@@ -406,7 +406,7 @@ def main():
         f"{(len(finite_rows), finite_support, finite_states, finite_branches)}"
     )
     print(f"semantic_sha256={semantic_digest}")
-    print("status=PROVISIONAL_EXACT_COMPANION;ordinary_transverse_literal_half_rank7_only;no_LRC14_decrement")
+    print("status=VERIFIED_EXACT_COMPANION_FOR_PROVED_THM3434;ordinary_transverse_literal_half_rank7_only;no_LRC14_decrement")
 
 
 if __name__ == "__main__":
