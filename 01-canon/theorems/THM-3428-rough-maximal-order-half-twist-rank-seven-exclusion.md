@@ -2,15 +2,16 @@
 id: THM-3428
 title: "Rough full-order half-twist rank-seven classification"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  FINITE-BANK AUDIT REQUIRED.  For every odd Q>=3 with spf(Q)>7, at most
-  seven literal half-twist blocks all having quotient order Q cover the Q
-  sheets iff Q is 11,13,23,or29; the exact ranks are 6,7,6,7.  Reflection
-  accounting, the THM-3426 odd-block clique, and an un-cancelled shortest-gap
-  relation prove the Q>=512 half; an exact normalized bank closes all 116
-  smaller rough moduli.  Mixed lower quotient orders, arbitrary common time,
-  and LRC(14) remain open.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For every odd Q>=3 with
+  spf(Q)>7, at most seven literal half-twist blocks all having quotient order
+  Q cover the Q sheets iff Q is 11,13,23,or29; the exact ranks are 6,7,6,7.
+  Reflection accounting, the THM-3426 odd-block clique, and an un-cancelled
+  shortest-gap relation prove the Q>=512 half; an exact normalized bank closes
+  all 116 smaller rough moduli, independently reproduced by a coefficient-level
+  exhaustive bank.
+  Mixed lower quotient orders, arbitrary common time, and LRC(14) remain open.
 source: root-rough-maximal-order-rank-seven-2026-08-15
+audit: independent reflection-invoice, odd-deletion, shortest-gap, threshold, and scope reconstruction; normal/optimized/stored analytic replay; independent exhaustive finite-boundary replay with coefficient multiplicities retained
 depends_on:
   - THM-3426-rough-composite-odd-interval-collision-and-dyadic-clique-law
 related:
@@ -21,15 +22,19 @@ output: 05-knowledge/results/rough_maximal_order_half_twist_rank7_thm3428.out
 script_sha256: db668302a1a99eec477531b5684e1a892f15f5897fd883a2b961d034e35720cf
 output_sha256: c27a498e4ee5cd41c15e10e335638e3649dfdc02af655c8098c526fa1fad6c5d
 semantic_sha256: 4e81e4be4ef811b910a12537432dae02202d8e3913ea8b28633a1bc71615d3f9
+independent_finite_boundary_script: 04-computation/rough_maximal_order_half_twist_rank7_finite_boundary_20260815.py
+independent_finite_boundary_output: 05-knowledge/results/rough_maximal_order_half_twist_rank7_finite_boundary_20260815.out
+independent_finite_boundary_script_sha256: ca3ea3d64703a88987c20d1ad148695543db6f64bb6abcd9619905ee79969fe7
+independent_finite_boundary_output_sha256: d1268dc5ec58ffba6c1c32f2bd4e59790996cb07eba1593b64c66cb6b4528961
+independent_finite_boundary_semantic_sha256: b61db8412c1a45419cb4be595f75c802461472f24525b017b3d50d01af9f35ef
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3428 -- rough full-order half-twist rank-seven classification
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-FINITE-BANK AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-## 1. Candidate statement
+## 1. Statement
 
 For odd `Q` and a residue `r` modulo `2Q`, put
 
@@ -245,6 +250,12 @@ Mask collapse is harmless here: two coefficients defining the same literal
 set are interchangeable in a union cover, and repeating either cannot reduce
 the minimum rank.
 
+The independent coefficient-level boundary bank retains distinct coefficient
+choices even when their masks coincide.  It checks the same `116` moduli and
+all feasible owner counts through seven via `249` scalar profiles, `26,333`
+states, and `646,035` branches.  Its support and minimum ranks agree exactly
+with `(16)`, and no one of the `23` composite moduli is positive.
+
 The standard-library companion directly reconstructs the literal masks on
 the first two rough composite controls in every possible residue class:
 
@@ -266,9 +277,9 @@ Two scope controls are frozen separately:
   orders `(513,9,9,3,9)`, showing why a theorem that simply drops the
   maximal-order and roughness gates would be false.
 
-Normal and optimized transcripts are byte-identical.  The bounded bank proves
-exactly the finite side `(15)`; the arbitrary large range is supplied by
-Sections 3--5, not inferred from the bank.
+Normal and optimized transcripts are byte-identical for both companions.  The
+bounded banks prove exactly the finite side `(15)`; the arbitrary large range
+is supplied by Sections 3--5, not inferred from either bank.
 
 ## 7. Boundaries and non-consequences
 

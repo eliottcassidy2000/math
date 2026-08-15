@@ -63,8 +63,9 @@
   `Q={11,13,23,29}`, with full-order minimum ranks `6,7,6,7`; no composite is
   positive.  Nine accidental mask coincidences are retained, literal masks
   are independently reconstructed from coefficient coordinates, and selected
-  hostiles include `121,169,323,493`.  This is the finite boundary requested
-  by the provisional analytic THM-3428 package, not a mixed-order theorem.
+  hostiles include `121,169,323,493`.  Together with the independently audited
+  analytic `Q>=512` proof, this supplies THM-3428's computer-assisted all-rough
+  full-order classification; it is not a mixed-order theorem.
   Normal and optimized transcripts agree.  Script/output/semantic
   LF-normalized SHA-256:
   `ca3ea3d64703a88987c20d1ad148695543db6f64bb6abcd9619905ee79969fe7` /
