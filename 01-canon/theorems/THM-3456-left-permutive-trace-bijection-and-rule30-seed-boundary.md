@@ -344,3 +344,15 @@ current needed at the present LRC(14) frontier.  THM-3395 remains the nearest
 typed-witness analogy: its affine star cochain restores a common phase, while
 `beta_F` restores the missing initial boundary here.  There is no map between
 their target predicates.
+
+The independent unnumbered
+[Rule 30/LRC depth-observer probe](../../07-reflections/lrc14-rule30-depth-observer-typed-phase-no-go-codex-20260815.md)
+makes that boundary finite-exact on the current `165` first-depth-one profile
+bank.  Sampling the single-seed Rule 30 trace at the three profile depths has
+only four fibres, of sizes `36,36,51,42`, and two fibres mix repeated-owner
+with strict profiles.  Reattaching the full profile makes the bit field a
+deterministic redundant graph.  Separately,
+`Hom(F_13^2,F_2^m)=0` for every finite `m`, so an additive/XOR observer cannot
+carry the required odd phase; a nonlinear four-bit encoding can carry a
+13-cycle only by explicitly restoring thirteen labelled states.  The probe
+excludes zero scalar rows and records `LRC(14)` as open.
