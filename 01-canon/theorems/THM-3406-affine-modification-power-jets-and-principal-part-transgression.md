@@ -12,7 +12,7 @@ status: >
   localized Bezout class eta lies in ker(Dbar); it does not map to the
   divergence class mu by Dbar.  The connecting homomorphism of the
   two-term localization sequence is injective and sends eta to mu, giving
-  K[P]eta = K[P]mu = K[T]/(chi).  For nonconstant g, eta has exact
+  K[P]eta ~= K[P]mu ~= K[T]/(chi).  For nonconstant g, eta has exact
   filtration depth two.  If psi is the minimal polynomial of f modulo
   rad(g), then K[P]eta intersect Q_1=psi K[P]eta and there is an exact,
   generally nonsplit support/thickness sequence
@@ -169,6 +169,13 @@ dim_K Q_q=d q(q+1)/2,
 dim_K(Q_q/Q_(q-1))=dq.                                                (14)
 ```
 
+Equivalently, the filtration and its associated graded have Hilbert series
+
+```text
+sum_(q>=1) dim_K(Q_q)y^q=d y/(1-y)^3,
+sum_(q>=1) dim_K(Q_q/Q_(q-1))y^q=d y/(1-y)^2.                         (14a)
+```
+
 The formulas include a constant unit `g`: then `I=B`, `S=R`, and every
 module in `(8)--(14)` is zero.
 
@@ -320,8 +327,8 @@ For constant `g`, set `chi=1`.  Equations `(31)--(33)` give canonical
 isomorphisms
 
 ```text
-K[P]eta  --delta--> K[P]mu,
-K[P]eta = K[P]mu = K[T]/(chi).                                       (34)
+K[P]eta  --delta (isomorphism)--> K[P]mu,
+K[P]eta ~= K[P]mu ~= K[T]/(chi).                                    (34)
 ```
 
 This recovers THM-3386's annihilator while locating its rational primitive
@@ -418,8 +425,13 @@ and the exact sequence
 ```
 
 The injection in `(46)` follows from cancellation in the PID `K[T]`.
-It is generally not split as a `K[T]`-module; for `f=x,g=x^2` it is the
-standard nonsplit sequence with middle term `K[T]/(T^2)`.
+In fact `(46)` never splits for nonconstant `g` under `(20)`.  Indeed
+`rad(chi)=psi`, and every irreducible factor `rho` of `psi` occurs in `chi`
+with exponent `M>=2`.  Localizing a hypothetical splitting at `(rho)` would
+split the uniserial module `K[T]_(rho)/(rho^M)` into its length `M-1` and
+length-one pieces, impossible because its `rho`-socle has dimension one while
+the proposed direct sum has socle dimension two.  For `f=x,g=x^2`, this is
+the standard nonsplit sequence with middle term `K[T]/(T^2)`.
 
 Over an algebraic closure, if `alpha` runs through roots of `g`, put
 
