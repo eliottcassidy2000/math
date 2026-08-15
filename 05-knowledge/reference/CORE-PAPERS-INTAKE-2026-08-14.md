@@ -81,11 +81,13 @@
   predicate for the third prize should not be silently identified.  Any repo
   claim must first fix the machine and bit-cost model.  A packed recurrence is
   an upper-bound compiler, not a lower-bound proof.
-- **Repo consumers:** [THM-3456](../../01-canon/theorems/THM-3456-left-permutive-trace-torsor-and-rule30-seed-boundary.md)
-  proves the free-input trace torsor and its exact seed boundary;
-  [THM-3457](../../01-canon/theorems/THM-3457-rule30-right-edge-2-adic-odometer-and-moving-observer-boundary.md)
+- **Repo consumers:** [THM-3456](../../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md)
+  proves the free-input trace homeomorphism and exact seed boundary;
+  [THM-3458](../../01-canon/theorems/THM-3458-rule30-right-edge-2-adic-odometer-and-moving-observer-boundary.md)
   proves the packed edge odometer, fixed-offset rational sequences, and the
-  moving-observer typing with an exact width-six state collision.
+  moving-observer typing with an exact width-six state collision;
+  [THM-3459](../../01-canon/theorems/THM-3459-rule30-ternary-intersection-factorial-truth-lift-and-keller-boundaries.md)
+  proves the mask, factorial-sequence, and polynomial-lift boundaries.
 - **Does not prove:** any of the three prizes.  Free-input fair traces are not
   the fixed-seed trace; fixed edge offsets are not the moving center; finite
   rings and de Bruijn matrices compile prefixes or spatial inverse counts,
@@ -106,4 +108,4 @@ factorial moments, or a distinguished deterministic orbit.  The corresponding
 exact repo sidecars are respectively ternary support/higher chaos
 (THM-3392/3396), boundary divisibility (THM-3383), typed coset stars (THM-3395),
 a distinct positive completion layer rather than raw compression (THM-3390),
-and fixed seed/observer/boundary data (THM-3456/3457).
+and fixed seed/observer/boundary data (THM-3456/3458/3459).

@@ -594,9 +594,8 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
 
 ## August 2026 preprint intake
 
-The [August 14 intake](CORE-PAPERS-INTAKE-2026-08-14.md) covers Grothendieck,
-Banach, `SOP2=SOP3`, and Crouzeix: headlines **CITED**; proved consumers
-THM-3390/3392/3395/3396/3456 only.
+[August 14 intake](CORE-PAPERS-INTAKE-2026-08-14.md): four preprints + Rule 30;
+headlines **CITED**; proved consumers THM-3390/3392/3395/3396/3456/3458/3459.
 
 ## Maintenance rule
 

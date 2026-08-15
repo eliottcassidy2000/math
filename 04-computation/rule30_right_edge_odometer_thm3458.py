@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact audit for THM-3457's Rule-30 edge/odometer compiler.
+"""Exact audit for THM-3458's Rule-30 edge/odometer compiler.
 
 Finite computations audit two independent row implementations, every state of
 the first twelve triangular quotients, seed periods through width thirty,
@@ -262,7 +262,7 @@ def main() -> None:
     a0, a1 = audit_debruijn()
     dets = audit_jacobian_boundary()
 
-    print("THM-3457 EXACT AUDIT")
+    print("THM-3458 EXACT AUDIT")
     print("packed_rows_0..8=", rows[:9], sep="")
     print("direct_vs_packed_rows=0..512")
     print("triangular_inverse_all_states_width=1..12")

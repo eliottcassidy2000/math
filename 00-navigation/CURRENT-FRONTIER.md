@@ -73,7 +73,7 @@ transport and `e9=(-9,+9,QB)`.
   THM-3359/3454/3455 give periodic mass and `U`-ray metric/ranks; origin/time
   remain. Content, normal unit, order, owner/phase, and mass remain
   sidecars; no global transduction, LRC row, or JC flux.
-- THM-3456 detects mask overlap, but the `q=6` control pair has identical
+- THM-3459 detects mask overlap, but the `q=6` control pair has identical
   masks; the star cochain remains.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
@@ -267,7 +267,7 @@ makes every modular **index** support of a C-finite sequence ultimately
 periodic; its harmonic coefficient is accepted cycle density. Unary
 regular lengths and ternary level counts enter; base-three address values and
 the value support of `n^2` do not. THM-2352 gives the separate q-adic plateau
-boundary. THM-3457: fixed Rule 30 edge offsets are rational on a 2-adic
+boundary. THM-3458: fixed Rule 30 edge offsets are rational on a 2-adic
 odometer; the center moves (width-six collision). Density zero alone does not
 decide harmonic mass at `z=1`.
 
@@ -328,8 +328,11 @@ decide harmonic mass at `z=1`.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383 give translated localization and atomic/owner/ANOVA/rectangle/labelled-reference inversion; physical references, positive catalysis, realization, and stable diagonal stay open. THM-2646 gives modular/exponent `B3` conjugacy; exponent is not Markov-invariant.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes exact `d_max` with planar `58<60`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks and dyadic repair.
-- **Rule 30:** [THM-3456](../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md) gives the free-trace/seed-sidecar split; prizes/LRC open.
-- **Jacobian/Dixmier:** `JC(2)`/`DC(2)` remain open.  THM-3438 proves `KDeg(m)={1,3,4,...}` (`m>=3`), an `S_n` atom in every grade, first mixed grade `9`, global G1, and a non-radical `S_5` inverse; arbitrary-map, planar/z-affine, and `A_4/A_5` classification remains open.
+- **Rule 30:** [THM-3456](../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md) gives the trace/seed split; THM-3458 the edge odometer; THM-3459 the mask/FC/lift boundaries. Prizes and all frontiers remain open.
+- **Jacobian/Dixmier:** `JC(2)`/`DC(2)` remain open. THM-3459 separates four
+  Rule 30 lifts; no JC map. THM-3438 proves `KDeg(m)={1,3,4,...}` (`m>=3`),
+  all-grade `S_n`, first mixed grade `9`, global G1, and a non-radical `S_5`
+  inverse; arbitrary-map, planar/z-affine, and `A_4/A_5` classification stays open.
   THM-1300/1315 provenance is unsettled (MISTAKE-205); THM-2473--2576 concern only the fixed map.  On the `A4/S4` route, THM-2681 blocks the cubic identification, THM-2685--2695 locate the gain plane, THM-2690--2700 exclude three model carriers, and THM-2703/2708 identify saturated `H^1(U,mu_2)` holonomy.  Spin/saturation/equivariant realization remain open.
   THM-3057/3059 and THM-3441 establish the boundary ledger and refute both odd-every-component forms of HYP-9027.  THM-3448 proves the weighted `C=0` law `mu=(mu-2)+2*1`, realizes genuine Keller `C_ell` inertia for every `ell>=2` (first `C3` in degree five), and excludes `C3` only for weighted quartics; arbitrary quartic/two-jet `C3` remains OPEN.
   THM-3440/3443/3450: marked mode-one LRC/Keller isomorphism on 91 sheets.  Mod-13 `H^1` has no amplitude map; order 8/14 margins block the full germ.  No current.  THM-3066 retains only their
@@ -410,7 +413,7 @@ decide harmonic mass at `z=1`.
   and `L(J^(2m))=((2m)!)^2(3m)!/m!`. Both detect at power two; bare
   bouquets lose the observer. THM-3362 detects real odd-profile pairs in three
   moments; complex phases can fail. HFC(3)/FC(3) remain OPEN; `p>4m+2` is mandatory.
-  THM-3456 gives a Rule 30 truth lift with `L(g)=0,L(g^2)=6` and a derangement
+  THM-3459 gives a Rule 30 truth lift with `L(g)=0,L(g^2)=6` and a derangement
   compiler; Boolean/factorial carriers conflict, so no FC transfer.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”

@@ -1,5 +1,5 @@
 ---
-id: THM-3457
+id: THM-3458
 title: "Rule 30 right-edge 2-adic odometer and the moving-observer boundary"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Right-edge packing
@@ -21,15 +21,16 @@ related:
   - THM-2050-period14-top-germs-do-not-determine-global-loneliness
   - THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar
   - THM-3364-cyclotomic-boolean-clocks-berggren-t4-xor-and-crt-phase
-  - THM-3456-left-permutive-trace-torsor-and-rule30-seed-boundary
-script: 04-computation/rule30_right_edge_odometer_thm3457.py
-output: 05-knowledge/results/rule30_right_edge_odometer_thm3457.out
-script_sha256: e0dfc1daaa7816233286247ccb2ada03311f989e1efde11c1403f95e28d2c70a
-output_sha256: d633a2b1f8bb6a0e5618e76ffb16f29e3d2949034fd553df244a8a6b0a5e3119
+  - THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary
+  - THM-3459-rule30-ternary-intersection-factorial-truth-lift-and-keller-boundaries
+script: 04-computation/rule30_right_edge_odometer_thm3458.py
+output: 05-knowledge/results/rule30_right_edge_odometer_thm3458.out
+script_sha256: 8b9a6d029419079f5507d3b153fc43af760e846ddbc93d199392ff4da81640ec
+output_sha256: ae7f2f6dd2c21bb3e4fc6d9d2779080477563d74b169d1a2b7123f062f0ac3d3
 hash_basis: raw bytes
 ---
 
-# THM-3457 -- Rule 30 right-edge 2-adic odometer and the moving-observer boundary
+# THM-3458 -- Rule 30 right-edge 2-adic odometer and the moving-observer boundary
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
@@ -325,7 +326,7 @@ unit triangular and hence a tame Keller automorphism.  Closing the boundary
 turns a triangular dependency order into a cycle and destroys that property.
 The faithful real multilinear lift and the characteristic-two Frobenius
 representative have the further incompatible behaviours recorded in
-THM-3456.  Boundary condition, characteristic, and polynomial representative
+THM-3459.  Boundary condition, characteristic, and polynomial representative
 are all load-bearing sidecars.  No planar Jacobian-conjecture reduction
 follows.
 
@@ -374,8 +375,8 @@ formula on every binary output word through length eight, and evaluates the
 periodic Jacobian controls through `N=14`.
 
 ```bash
-python3 04-computation/rule30_right_edge_odometer_thm3457.py
-python3 -O 04-computation/rule30_right_edge_odometer_thm3457.py
+python3 04-computation/rule30_right_edge_odometer_thm3458.py
+python3 -O 04-computation/rule30_right_edge_odometer_thm3458.py
 ```
 
 Both runs reproduce the stored output byte for byte.  The finite period prefix

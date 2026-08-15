@@ -1,7 +1,7 @@
 # SOP trace torsors, the Rule 30 odometer, and the moving-observer boundary
 
-**Research reflection -- 2026-08-15.**  Exact statements promoted separately
-in THM-3456/3457; the external model-theory theorem and Rule 30 prizes remain
+**Research reflection -- 2026-08-15.**  Exact statements are in
+THM-3456/3458/3459; the external model-theory theorem and Rule 30 prizes remain
 cited/open as marked below.
 
 ## Outcome first
@@ -22,18 +22,20 @@ layer: it is a 2-adic odometer on the seed-orbit closure.  The prize sequence
 evades both closures because the seed removes the free trace coordinates and
 the center reads a coordinate whose address grows with time.
 
-This generated two proved repository objects:
+This session now routes through three proved repository objects:
 
-- [THM-3456](../01-canon/theorems/THM-3456-left-permutive-trace-torsor-and-rule30-seed-boundary.md):
-  the left-permutive trace/right-half bijection, uniform fibres, explicit
-  prefix-cylinder SOP2 expansion, Rule 30 mask-intersection compiler, and
-  factorial/Jacobian lift boundaries;
-- [THM-3457](../01-canon/theorems/THM-3457-rule30-right-edge-2-adic-odometer-and-moving-observer-boundary.md):
+- [THM-3456](../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md):
+  the finite-alphabet trace/right-half homeomorphism, direct enriched
+  `SOP`/`SOP2`/`SOP3` witnesses, and exact single-seed boundary word;
+- [THM-3458](../01-canon/theorems/THM-3458-rule30-right-edge-2-adic-odometer-and-moving-observer-boundary.md):
   the packed right-edge recurrence, compatible seed periods, 2-adic odometer,
   fixed-offset rational sequences, a width-six moving-observer hostile, and de Bruijn
-  C-finite inverse-count compiler.
+  C-finite inverse-count compiler;
+- [THM-3459](../01-canon/theorems/THM-3459-rule30-ternary-intersection-factorial-truth-lift-and-keller-boundaries.md):
+  the mask-intersection compiler, factorial moment formulas, and the
+  characteristic/representative Keller boundary.
 
-Neither theorem settles any Rule 30 prize, LRC(14), FC(3), or JC(2).
+None settles any Rule 30 prize, LRC(14), FC(3), or JC(2).
 
 ## External inputs, accurately typed
 
@@ -46,8 +48,9 @@ tree vertex is not the proof object.
 
 The [2019 Rule 30 announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/)
 asks about the isolated-single-seed center column.  The
-[current official page](https://rule30prize.org/) still lists the three open
-questions.  The third question has to be handled with special care: its prose,
+[current official page](https://rule30prize.org/) still actively lists all
+three prizes and accepts submissions; on that dated evidence the repo treats
+the questions as open.  The third question has to be handled with special care: its prose,
 big-O wording, and displayed predicate should not be blended without fixing a
 machine and bit-cost model.  Nothing in this session is a lower-bound proof.
 
@@ -189,7 +192,8 @@ tr(M_w^k)
 
 for an explicit `4x4` de Bruijn matrix `M_w`.  It is therefore C-finite of
 order at most four and has an eigenvalue closed form.  Arbitrary one-step
-inverse counts take linear time in the spatial word length.
+inverse counts take `O(N)` fixed-dimension matrix multiplications in the
+arithmetic-operation model; no linear bit-complexity claim is made.
 
 This genuinely answers the user's efficient-closed-form theme, but for the
 right sequence: repeated-block spatial inverse counts.  It is not an `n`th

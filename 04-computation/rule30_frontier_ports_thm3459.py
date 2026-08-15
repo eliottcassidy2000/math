@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact audit for THM-3456.
+"""Exact audit for THM-3459's Rule 30 frontier ports.
 
 Universe:
 * every Boolean local input;
@@ -314,7 +314,7 @@ def main() -> None:
     truth, anf_mu, anf_u = audit_factorial_ports()
     ring_counts = audit_periodic_gluing()
 
-    print("THM-3456 EXACT AUDIT")
+    print("THM-3459 EXACT AUDIT")
     print("truth_table=00011110")
     print("trace_horizons=0..8 uniform_fibre=2^T codec_roundtrip=0..6")
     print("open_blocks=width1..10 fibre4; iterates=width1..5 depth1..3 fibre4^depth")

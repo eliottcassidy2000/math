@@ -1,4 +1,4 @@
-THM-3456 EXACT AUDIT
+THM-3459 EXACT AUDIT
 truth_table=00011110
 trace_horizons=0..8 uniform_fibre=2^T codec_roundtrip=0..6
 open_blocks=width1..10 fibre4; iterates=width1..5 depth1..3 fibre4^depth
