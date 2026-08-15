@@ -12,12 +12,12 @@ status: >
   8 is a prospective selector composition only.  No refined-ledger decrement, physical entry,
   rung, arbitrary-k statement, or LRC(14) conclusion is claimed.
 source: root/lrc14-weighted-common-source/2026-08-14
-depends_on: []
+depends_on:
+  - THM-3351-projected-k3-z216-sixteen-family-translated-two-high-closure
+  - THM-3387-exact-cyclic-sheet-cover-atlas-and-q2-gcd-graph
 related:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
-  - THM-3351-projected-k3-z216-sixteen-family-translated-two-high-closure
   - THM-3385-odd-fibre-doubling-projection-and-half-even-complement-clocks
-  - THM-3387-exact-cyclic-sheet-cover-atlas-and-q2-gcd-graph
   - THM-3388-three-sheet-phase-triangle-cover-clutter
   - THM-3389-four-sheet-typed-cover-clutter
   - THM-3390-complete-z216-projected-wall-by-hybrid-torsion-support-terminal
@@ -355,22 +355,23 @@ not a dependency, until its independent audit promotes it.
 ### 5.5 THM-3389: the next typed equality stratum
 
 For `X_4`, unit blockers have singleton capacity, whereas a multiplier with
-gcd two collapses to an antipodal two-sheet image and has capacity two.  A
-zero multiplier has capacity four.  Thus scalar equality has only the
-capacity partitions
+gcd two collapses to an antipodal two-sheet image and has capacity two.  Thus
+the nonzero-multiplier scalar equality has only the capacity partitions
 
 ```text
-1+1+1+1,                 2+1+1,                 2+2,
-4.                                                        (28b)
+1+1+1+1,                 2+1+1,                 2+2.      (28b)
 ```
 
 The Boolean equality criterion sharpens `(28b)`: four singleton edges must
 use all four sheets; a pair edge and two singleton edges must use its
 complementary sheets; two pair edges must choose the two complementary
-antipodal fibres; and the four-edge is already the whole source.  Correlated
-physical phases may still delete some of these product-hypergraph covers.
-This is the exact type signature reserved by THM-3389's four-sheet clutter
-stub; no correlated q=4 classification is claimed here.
+antipodal fibres.  Correlated physical phases may still delete some of these
+product-hypergraph covers.
+This is the exact transverse type signature reserved by THM-3389's four-sheet
+clutter stub.  The abstract `X_4` hypergraph additionally permits the zero
+multiplier, whose one maximum edge is all four sheets, but that trivial
+capacity-four species is not transverse and is not assigned to THM-3389.
+No correlated q=4 classification is claimed here.
 
 ### 5.6 Prime-sheet equality beyond triangles
 
