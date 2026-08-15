@@ -122,6 +122,25 @@
   `be694f75fccc2398b7072ac59c8529a27ceb2c34ba3db6e667dbf002ad495654`.
   No polynomial mate or JC(2) conclusion follows.
 
+- `jc_nonlinear_wrap_linearization_thm3430.py` -> matching `.out`
+  [THM-3430 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `P_d=ax+b+g(x)z^d`, the nonlinear weight-`d-1` wrap sector and the full
+  response of `P_1=ax+b+g(x)w` have identical filtered stages
+  `K[x]/g^(k+1)`, transitions, and `K[P]`-actions.  If `S=rad(g)` and
+  `c=g/S`, the resulting module is noncanonically
+  `K[P]^deg(S) direct-sum K[x,c^-1]/K[x]`; its canonical torsion has one
+  geometric Prüfer arm per repeated root and stage-`k` thickness
+  `(k+1)deg(c)`.  Split CRT plus THM-3422, faithful finite-normal descent, a
+  Vandermonde free section, and PID window maps `[r]->[cr]` give the integral
+  identification for arbitrary `g`.  The companion checks 2,640 transition
+  entries, 5,280 action identities, 1,700 CRT packets, 5,460 torsion windows,
+  468 root intertwiners, and the scoped nonwrap hostiles/endpoints.  Normal,
+  optimized, and stored outputs agree.  No full nonwrap decomposition,
+  polynomial mate, Keller case, or `JC(2)` conclusion follows.  Script/output
+  LF-normalized SHA-256:
+  `a0cb78d5d8e63722701088596df5c84f749719c8a1fc2027180f6e5fa905a9e8` /
+  `7f57f4d6acd4566699acaa1424945fb7b0b29c4740663043873d2778de4a36dd`.
+
 - `lrc_rank7_prime_fibre_activity_descent_thm3429.py` -> matching `.out`
   [THM-3429 VERIFIED-EXACT].  For a prime `p|Q`, the script directly checks
   that `p`-divisible half-twist blocks are full pullbacks to `Q/p` and every

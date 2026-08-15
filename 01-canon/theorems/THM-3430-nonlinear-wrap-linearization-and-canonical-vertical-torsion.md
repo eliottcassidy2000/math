@@ -2,8 +2,8 @@
 id: THM-3430
 title: "Nonlinear wrap linearization and canonical vertical torsion"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  Let K have characteristic zero, d>=2, a!=0, and
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Let K have characteristic
+  zero, d>=2, a!=0, and
   P_d=ax+b+g(x)z^d with 0!=g.  The weight-(d-1) wrap sector of the
   Hamiltonian cokernel is exactly the full response module of the linear
   model P_1=ax+b+g(x)w: their filtered directed systems and K[P]-actions
@@ -12,9 +12,13 @@ status: >
   canonical torsion has one geometric Pruefer arm per repeated root and
   exact stage-k thickness (k+1)deg(c).  No analogous nonwrap decomposition,
   polynomial mate, new Keller case, or open JC(2) conclusion is claimed.
-  This candidate is not a proved dependency before independent audit and
-  explicit status promotion.
 source: root-jc-nonlinear-wrap-linearization-2026-08-15
+audit: >
+  Independent stage-diagram and K[T]-action reconstruction; arbitrary-g
+  split CRT/THM-3422 and faithful finite-normal/PID descent; Vandermonde free
+  section, nonsplit window, constant/squarefree/repeated-root, and nonwrap
+  scope controls; normal/optimized/stored replay, LF hashes, AST safety, and
+  documentation audit clean.
 depends_on:
   - THM-3418-one-monomial-nonlinear-fiber-keller-classification
   - THM-3422-one-root-nonlinear-integral-hamiltonian-response
@@ -31,9 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3430 -- nonlinear wrap linearization and canonical vertical torsion
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**  Nothing in this file is a proved dependency before a
-different agent audits it and the status is explicitly promoted.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Statement and connection contract
 
@@ -446,4 +448,4 @@ The boundaries are sharp:
 
 THM-3418 already classifies Keller maps in this sparse family.  The present
 degree-collapse proves no new Keller stratum and no remaining case of
-`JC(2)` or `DC(2)`.  QED for the provisional candidate.
+`JC(2)` or `DC(2)`.  **QED.**

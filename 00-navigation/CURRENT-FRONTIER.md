@@ -391,7 +391,7 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   [subresultant sidecar](../07-reflections/jc-critical-inverse-cover-cofactor-jacobian-probe-agent-20260803.md)
   gives a two-pivot inverse graph and mate-integrability class on two controls.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
-  THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response (collisions persist; `gr` overcounts); THM-3354 blocks D5 transport. THM-3418/3419 close sparse Keller/generic rank; THM-3422/3424/3427 give one-root integral and all-character observer laws. THM-3427's wrap defect recovers multiplicities generically, not a multiroot integral module. Base roots, degree 119, mates/covers, `JC(2)`/`DC(2)` remain open.
+  THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response (collisions persist; `gr` overcounts); THM-3354 blocks D5. THM-3418/3419 close sparse Keller/rank; THM-3422/3424/3427 give integral/all-character observer laws. THM-3427 recovers multiplicities generically; THM-3430 lifts this to the full wrap `d=1` response and its Prüfer arms, not a multiroot nonwrap split. Base roots, degree 119, mates/covers, `JC(2)`/`DC(2)` remain open.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
   `2201<=d<=2400` and all `35` residuals in `2401<=d<=2500` close by matching
