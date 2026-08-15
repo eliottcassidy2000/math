@@ -35,7 +35,7 @@ Let `p` be prime.  Let `X` be a smooth finite-type `Z_p`-scheme of pure
 relative dimension `d>=1`, with `X(F_p)` nonempty.  Let
 
 ```text
-g_1,...,g_r in Aut_(Z_p)(X),       1<=r<=d,              (1)
+g_1,...,g_r in Aut_(Z_p)(X),       r>=1,                  (1)
 ```
 
 be pairwise commuting.  Give generator `g_i` an integer carry depth
@@ -67,6 +67,10 @@ delta_1(xbar),...,delta_r(xbar)                         (5)
 ```
 
 are linearly independent over `F_p`.
+
+This independence hypothesis itself forces `r<=d`; no separate rank bound is
+needed in the ambient statement.  Keeping arbitrary `r` also types the
+dependent converse and its cheapest hostile inside the same universe.
 
 For every `a>=M`, the commuting action on each depth-`C` fibre factors
 through the weighted exponent group
@@ -141,7 +145,7 @@ retained and aligned.  The least-used sidecar is the depth vector
 | field | exact content |
 |---|---|
 | source | commuting smooth automorphisms at unequal carry depths |
-| target | a free product of cyclic exponent channels |
+| target | a direct product of cyclic exponent channels acting freely |
 | map | `(m_i)` to `product_i g_i^(m_i)` |
 | preserved | each generator's individual exponent depth |
 | destroyed by flattening depths | the persistent tariff `sum(c_i-C)` |
@@ -198,7 +202,7 @@ to vanish.  Thus no nonzero element has a fixed point.  This proves freeness,
 then `(8)--(9)`.  Both summands in the last form of `(9)` are nonnegative, so
 its equality condition is exactly `(10)`.
 
-## 5. Delayed dependence is exact
+## 5. Universal delayed-dependence bound and sharpness
 
 Suppose `(5)` fails at `xbar` and choose `q` as above.  The exponent vector
 in `(11)` is nonzero because each component with `q_i!=0` has valuation
@@ -213,7 +217,9 @@ Thus its product is the identity modulo `p^M`, and its first carry at depth
 `M` is `sum_i q_i delta_i`, which vanishes at `xbar`.  The first-lift
 translation law of THM-3442 says that it fixes the entire tangent torsor over
 every lift `x_M`.  Smoothness supplies those lifts.  This proves the reverse
-direction of `(12)` and the exact detection level.
+direction of `(12)` and the universal alignment bound `M+1`.  This bound is
+sharp, but it need not be the first failure level for every dependent packet:
+a relation supported on shallower equal-depth generators can appear earlier.
 
 ## 6. Equality and failure boundaries
 
@@ -226,6 +232,9 @@ direction of `(12)` and the exact detection level.
 3. **Delayed hostile.**  On `A^1`, translations by `p` and `p^2` are
    dependent.  The shallow action is free at level two, where the second
    factor is trivial.  At level three, `g_1^p g_2^(-1)` fixes every point.
+   This attains the universal `M+1` bound.  Here `r=2>d=1`, which is allowed
+   in the ambient dependent-converse universe; the positive independence
+   hypothesis automatically rules it out.
 4. **Nonlinear equality.**  Conjugating unequal-depth coordinate
    translations on `A^2` by `(x,y)->(x,y+x^2)` preserves commutation and
    independence; the exact weighted bank remains.

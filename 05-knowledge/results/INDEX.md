@@ -3,10 +3,11 @@
 - `weighted_depth_commuting_hensel_lattice_thm3446.py` -> matching `.out`
   [THM-3446 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
   INDEPENDENT AUDIT REQUIRED].  For commuting generators at depths `c_i`,
-  pointwise-independent first carries give a free product of cyclic exponent
-  channels on every depth-`C` fibre.  The orbit-bank exponent is
+  pointwise-independent first carries give a freely acting direct product of
+  cyclic exponent channels on every depth-`C` fibre.  The orbit-bank exponent is
   `(d-r)(a-C)+sum(c_i-C)`, so full rank is transitive only at equal depths;
-  dependence creates a stabilizer at the exact alignment level `M+1`.
+  dependence creates a stabilizer by the sharp universal alignment level
+  `M+1` (not necessarily its earliest failure level).
   Controls include a three-depth affine packet, all nine nonlinear weighted
   fibres, the delayed dependence hostile, and `p=2` depths `(2,3)`.
   Script/output/semantic LF SHA-256:

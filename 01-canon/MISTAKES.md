@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-398 (2026-08-15, THM-3446 group and alignment typing) -- a direct product was called free, and a sharp universal bound was called every packet's exact level
+
+- **What failed:** the provisional THM-3446 truth surfaces called the finite
+  abelian exponent group a "free product," imposed `r<=d` even though the
+  displayed dependent hostile used two generators on `A^1`, and called
+  `M+1` the unqualified exact detection level.
+- **Minimal witnesses / first failed implications:** `C_3*C_3` is infinite,
+  whereas the equal-depth two-generator fibre uses `C_3 x C_3` of order
+  nine.  The `A^1` hostile has `r=2>d=1`.  Conversely, at depths `(1,1,3)`
+  two identical shallow translations already give a stabilizer at level
+  three, before the universal alignment level `M+1=4`.
+- **Repair / strongest survivor:** the group is the direct product
+  `prod_i Z/p^(a-c_i)Z`, acting freely under pointwise independence.  The
+  ambient statement allows arbitrary `r>=1`; independence itself forces
+  `r<=d`.  Every dependence produces a stabilizer by `M+1`, and the
+  `(1,2)` delayed hostile shows that bound is sharp, but some relations appear
+  earlier.  The mixed-depth carry proof, orbit invoice, transitivity test,
+  and exact artifacts are unchanged.
+- **Reusable rule:** distinguish algebraic coproducts from freely acting
+  groups, and distinguish a sharp universal detection bound from the first
+  failure time of each individual packet.
+
 ## MISTAKE-397 (2026-08-15, THM-3437 Prüfer-limit semantics) -- the Tate module was called the Prüfer arm
 
 - **What failed:** the promoted synthesis described the inverse limit of the
