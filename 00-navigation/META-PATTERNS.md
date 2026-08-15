@@ -8,16 +8,12 @@
 THM-3288's degree-14 tail with prefix/Hankel order 15 is a sharp head tax.
 **Evidence:** THM-3172/3186/3210, THM-3200/3211, THM-3202/3213/3288.
 
-## Peel the distinguished prime, then force a small torsion collision
+## Keep the common source under cyclic blocker quotients
 
-**Trigger/action:** for density-`1/p` combs on `D`, prove the quotient-index dichotomy after `D=pq`, split transverse sections from vertical spikes, and
-Möbius-count only base loads/status bits.  After a wall forces one unbounded
-primitive-unit label of denominator `d`, let `S` be the distinct residues of
-the fixed-clean cells mod `d`.  If `r|d`, `2<=r<=7`, and `|S|>d/r`, two
-residues share a coset of the order-`r` subgroup; their effective order is at
-most `r`, so every unit phase separates them by at least `1/7`. **Caution:**
-prove the high wall and finite low-pair reduction first; zero-high relaxations often pass,
-and several movers defeat the finish. **Evidence:** THM-2928/2941 (`M=7`, `z=324/312`) and THM-2072's antipodal dyadic seam.
+**Trigger/action:** when clauses use cyclic quotients of one weighted cell/fibre set `C`, retain `C` and maps `phi_i:C->Z/d_i`. If `lambda_i` is the largest pullback-band weight, `sum lambda_i<w(C)` leaves one common source point; separately optimized quotient supports do not.
+**Mechanism:** this unifies weighted two-high windows, full-fibre gcd capacity and located cosets; `m` unit blockers miss a full order-`r` coset if `m ceil(r/7)<r`.
+**Counterindications:** equality needs the Boolean cover/measure locus; nonunits collapse torsion, while phase, endpoints, owner and height remain sidecars. At denominator two, forgetting height identifies graph edge `(1,9)` with nonedge `(1,3)`.
+**Evidence:** THM-3351 §4, THM-3385 §2, THM-3387 §§2,4; THM-2941/3378.
 
 ## Inventory retained power classes before classifying base-curve genus
 
