@@ -1,8 +1,8 @@
 # Script Results Index
 
 - `weighted_depth_commuting_hensel_lattice_thm3446.py` -> matching `.out`
-  [THM-3446 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  INDEPENDENT AUDIT REQUIRED].  For commuting generators at depths `c_i`,
+  [THM-3446 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For commuting
+  generators at depths `c_i`,
   pointwise-independent first carries give a freely acting direct product of
   cyclic exponent channels on every depth-`C` fibre.  The orbit-bank exponent is
   `(d-r)(a-C)+sum(c_i-C)`, so full rank is transitive only at equal depths;

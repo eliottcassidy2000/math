@@ -2,13 +2,18 @@
 id: THM-3446
 title: "Weighted-depth commuting Hensel lattice action"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  Commuting generators with unequal carry depths and
-  pointwise-independent first carries act freely through their weighted
-  exponent product; the exact orbit-bank exponent includes the persistent
-  depth spread, and dependence creates a stabilizer one level beyond the
-  deepest carry.  This candidate is not a proved dependency before audit.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Commuting generators with
+  unequal carry depths and pointwise-independent first carries act freely
+  through their weighted direct product; the exact orbit-bank exponent
+  includes the persistent depth spread, and dependence creates a stabilizer
+  by the sharp universal level M+1, though possibly earlier.
 source: root-weighted-depth-hensel-lattice-2026-08-15
+audit: >
+  independent minimum-effective-depth proof reconstruction; exact-depth,
+  a=M, tied-carry, orbit-bank, transitivity, delayed-bound, p=2, and
+  scheme/formal typing audits; MISTAKE-398 correction-lineage audit;
+  normal/optimized/stored and clean-room semantic replay; dependency, hash,
+  AST/security, ID, routing, and documentation gates clean
 depends_on:
   - THM-3444-commuting-smooth-hensel-vector-field-lattice-action
 related:
@@ -23,11 +28,10 @@ hash_basis: LF-normalized bytes
 
 # THM-3446 -- weighted-depth commuting Hensel lattice action
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-This file contains a complete proof candidate.  It remains outside the
-proved dependency graph until an independent derivation and replay audit.
+The proof and exact companion passed an independent derivation, hostile, and
+replay audit after MISTAKE-398 repaired the group and alignment typing.
 
 ## 1. Exact statement
 
@@ -263,4 +267,4 @@ python3 -B 04-computation/weighted_depth_commuting_hensel_lattice_thm3446.py
 python3 -B -O 04-computation/weighted_depth_commuting_hensel_lattice_thm3446.py
 ```
 
-No result in this candidate is a proved dependency before independent audit.
+QED.

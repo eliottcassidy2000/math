@@ -313,13 +313,9 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
 
 ## Other active portfolio
 
-- **Knots / operation-ready relations:** THM-2176/2191/2281 localize finite
-  metric packets in translated slices; THM-2242/2330--2383 give the atomic,
-  owner, ANOVA, rectangle, and labelled-reference inversion layers.  Physical
-  references, positive catalysis, knot realization, and the stable diagonal
-  remain open.  THM-2646 classifies `B3` conjugacy by modular and exponent
-  classes, but exponent is not Markov-invariant.
-- **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
+- **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383 give translated localization and atomic/owner/ANOVA/rectangle/labelled-reference inversion; physical references, positive catalysis, realization, and stable diagonal stay open. THM-2646 gives modular/exponent `B3` conjugacy; exponent is not Markov-invariant.
+- **Unsplittable flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) has planar acyclic costs `58<60`, refuting Goemans' exact `d_max` conjecture via the `K_3` stable-set facet; planar `2d_max` survives.
+- [THM-3446](../01-canon/theorems/THM-3446-weighted-depth-commuting-hensel-lattice-action.md) proves a free weighted direct product, bank `(d-r)(a-C)+sum(c_i-C)`, and sharp uniform dependence bound `M+1` (possibly earlier).
 - **Jacobian/Dixmier:** `JC(2)`/`DC(2)` remain open.  THM-3438 proves `KDeg(m)={1,3,4,...}` (`m>=3`), an `S_n` atom in every grade, first mixed grade `9`, global G1, and a non-radical `S_5` inverse; arbitrary-map, planar/z-affine, and `A_4/A_5` classification remains open.
   THM-1300/1315 provenance is unsettled (MISTAKE-205); THM-2473--2576 concern only the fixed map.  On the `A4/S4` route, THM-2681 blocks the cubic identification, THM-2685--2695 locate the gain plane, THM-2690--2700 exclude three model carriers, and THM-2703/2708 identify saturated `H^1(U,mu_2)` holonomy.  Spin/saturation/equivariant realization remain open.
   THM-3057/3059 give the tame quartic invoice and `cleared parity = infinity-inertia sign`.  THM-3441 computes `S_G=V(C) union V(L)`: `C` has one escaping sheet, identity inertia, exponent `12`; `L` has two, transposition, exponent `5`.  Thus both odd-every-component forms of HYP-9027 are refuted; genuine Keller `C3` inertia remains OPEN and needs branchwise cofactor units.
