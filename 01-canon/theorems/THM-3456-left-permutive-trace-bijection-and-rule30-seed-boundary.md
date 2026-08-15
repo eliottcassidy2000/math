@@ -2,7 +2,7 @@
 id: THM-3456
 title: "Left-permutive trace bijections and the Rule 30 seed boundary"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + exact companion in preparation /
+  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT COMPANION /
   INDEPENDENT AUDIT REQUIRED.  For every finite-alphabet radius-one cellular
   automaton permutive in its left input, the center trace together with the
   positive initial half-line is a homeomorphic coordinate system: every fixed
@@ -296,13 +296,13 @@ One column is sharply insufficient.  In coordinate order `0,...,6`, the
 three width-seven periodic states
 
 ```text
-(1,1,1,0,0,0,0),
-(1,1,0,0,1,0,0),
-(1,0,0,1,1,0,0)                                      (19)
+(0,1,0,0,0,0,0),
+(0,1,1,1,0,0,0),
+(0,0,0,0,1,1,1)                                      (19)
 ```
 
-all have center trace `(1100)^omega`, but their adjacent traces begin with
-the distinct period-four words `1011`, `1001`, and `0100`.  Direct exhaustive
+all have center trace `(0110)^omega`, but their adjacent columns have the
+distinct period-four traces `1101`, `1100`, and `0010`.  Direct exhaustive
 audit of all temporally periodic ring states finds no nonconstant
 one-column alias in widths `3,...,6`.
 
@@ -326,6 +326,20 @@ The companion is designed to verify independently of the proof:
    adjacent traces, and the first nonconstant one-column alias boundary;
 6. the cyclic/infinite single-seed prefix equality and the sharp `n=3`
    boundary.
+
+The frozen universe contains all `16` binary left-permutive elementary rules
+and all fixed right blocks through depth `6`, with Rules 30 and 60 extended
+through depth `8`: `5,568` fixed-right maps, `502,400` forward traces, and
+`5,568` constructive inverse replays.  It exhausts periodic states in widths
+`3,...,7`, compares seed prefixes through width `64`, and records exact seed
+cycles through width `24`.  Normal, optimized, and stored transcripts are
+byte-identical.  LF-normalized SHA-256 pins are
+
+```text
+script   e7ac9717c2f5618d18cae2225c4fd68391d2e07d98f0e9b1bcb188e5ef7ad993
+output   a04fc7d1c6124888b772f10f0ee5ab22d62c43b669b56f15a440de4e51bce9fd
+semantic 1fda893b46126cb9653f758a88a9f0266fe93c6e12bee6d4de527fa09f5b42ca
+```
 
 The proof requires genuine left permutivity.  If (2) fails, a target trace
 symbol can have zero or multiple choices of `x_-t`, and (5) fails already at
