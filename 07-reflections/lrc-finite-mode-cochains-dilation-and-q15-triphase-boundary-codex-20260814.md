@@ -1,8 +1,9 @@
 # LRC sheet covers: finite modes, dilation, and the first effective triphase
 
 **Date:** 2026-08-14  
-**Status:** FINITE-EXACT literal `q=8,...,14` reconstruction and exact `q=15`
-rank-at-most-six boundary model; PROVISIONAL ANALYTIC finite-mode theorem
+**Status:** FINITE-EXACT literal `q=8,...,14` rank-at-most-five reconstruction,
+exact `q=15` rank-at-most-six boundary model, and independent full physical
+clutter audit through `q=15`; PROVISIONAL ANALYTIC finite-mode theorem
 candidate.  No theorem is promoted here.  The `q=15` model is outside the
 literal THM-3387 body/divisor atlas, gives no refined decrement, and does not
 prove LRC(14).
@@ -126,9 +127,10 @@ independent full analytic audit before canon promotion.
 ## 3. Exact `q=8,...,14` reconstruction
 
 The exact event route and the mode-cochain route agree on every minimal
-obstruction needed by the literal body atlas.  The frozen census is:
+obstruction through rank five, the complete rank range needed by the literal
+body atlas.  The frozen low-rank census is:
 
-| `q` | minimal edges | ranks | independent five-sets `I_5` |
+| `q` | minimal edges through rank 5 | ranks through 5 | independent five-sets `I_5` |
 |---:|---:|---:|---:|
 | 8 | 32 | `15` of rank 4, `17` of rank 5 | 1,152 |
 | 9 | 22 | `9` of rank 4, `13` of rank 5 | 1,205 |
@@ -147,6 +149,22 @@ there are no new core rescues: the exact row vector is
 
 This reconstructs the corresponding THM-3387 slices structurally but does
 not add or subtract any ledger row.
+
+It does **not** classify the full physical clutters.  An independent route
+using every rational boundary and intervening open-cell midpoint, with no
+mode/cochain import, gives the true full rank profiles
+
+```text
+q=8:  (4:15,5:17,6:6)       q=12: (4:1,5:7,6:17,7:14)
+q=9:  (4:9,5:13,6:54,7:2)   q=13: (7:22,8:29,9:2)
+q=10: (5:18,6:70,7:4)       q=14: (7:3,8:60,9:9)
+q=11: (6:23,7:91,8:9)       q=15: (6:157,7:16,8:6).   (10a)
+```
+
+The first omitted q=8 edge is `(1,3,5,11,13,14)`.  In particular, the zeros
+at q=11,13,14 in the first table mean “no edge through rank five,” not “empty
+physical clutter.”  The full audit leaves every `I_5` and no-rescue statement
+in `(10)` unchanged.
 
 The sharp local boundary is now exact:
 
@@ -231,9 +249,12 @@ zero from the last four gives the unit sign-pairs
 {+-1}, {+-7}, {+-4}, {+-2}.                             (19)
 ```
 
-Each pair consists of private sheets, so replacing its three-phase block by
-either adjacent domino loses one private sheet.  This proves directly—not
-only by search—that `(17)` genuinely needs all four trimodes.
+Each pair consists of private sheets, so replacing its displayed three-phase
+block by either adjacent domino loses one private sheet.  An independent
+minimization over **all** legal mode witnesses for the fixed edge `(17)`
+confirms that its minimum triphase count is four.  This is edge-specific: the
+two rank-six edges in `(16)` need zero trimodes, while the other 155 need at
+least one.  It is not a statement that every q=15 cover needs four.
 
 The four unit modes are indexed by
 
@@ -308,10 +329,19 @@ python 04-computation/lrc15_first_effective_triphase_mode_probe_20260814.py
 python -O 04-computation/lrc15_first_effective_triphase_mode_probe_20260814.py
 ```
 
+Reproduce the independent full physical clutter audit with
+
+```text
+python 04-computation/lrc_q8_q15_full_physical_clutter_audit_20260815.py
+python -O 04-computation/lrc_q8_q15_full_physical_clutter_audit_20260815.py
+```
+
 Their semantic digests are respectively
 `66a69a30c49b72ff8ecbf7de94f495025518e04b73969f2d970debeb6f113023`
 and
 `bae0a83a2ca7f19906309b1bab951bd9e4dac241e3a3103726da3bb8099e1eb8`.
+The full-clutter audit semantic digest is
+`2baecf15b57ac7adcfaf41342d74cf12eba363a6d0726566e67eabfcf78b0d22`.
 
 The `q=15` census is a sharp hostile/positive boundary for the proposed
 general theorem.  Because no speed in `{1,...,14}` is divisible by `15`, it

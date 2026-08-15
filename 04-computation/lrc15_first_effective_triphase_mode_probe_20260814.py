@@ -3,7 +3,9 @@
 
 This is outside the literal LRC(14) body/divisor atlas: no speed in 1..14 is
 q-divisible when q=15.  It tests the first local mode size not present at
-q<=14 and separates local availability from global effectivity.
+q<=14 and separates local availability from global effectivity through rank
+six.  Higher-rank physical edges are deliberately outside this probe and are
+not inferred from its truncated edge-generated profile.
 
 Runtime gates survive python -O.
 """
@@ -25,17 +27,18 @@ PINNED = (
     (
         "q8-q14-script",
         MODE_PATH,
-        "daa9904266aed8acf6eac44d6e262d45e1540287b60be0659f7e71a35f312727",
+        "e4afeeef7ea6dc2b9b64d3085390b0b6cc53a461dd9bde817c473688dca136f3",
     ),
     (
         "q8-q14-output",
         ROOT / "05-knowledge/results/lrc14_q8_q14_finite_mode_clutter_probe_20260814.out",
-        "92c0e4fda7df5831787ef0d6b2e03f23e9dceae35eef493b0f6806630ca24817",
+        "2fdede2a04ad2b9ccdfbae8b597ecbf82ad71274fe6ba0c221abd7635aed140f",
     ),
 )
 
 Q = 15
 VERTICES = tuple(range(1, 15))
+SEARCH_MAX_RANK = 6
 CANONICAL_EDGE = (1, 2, 3, 4, 5, 7)
 DOMINO_SUFFICIENT_EDGES = (
     (1, 6, 7, 10, 11, 13),
@@ -140,7 +143,7 @@ def main():
 
     minimal_edges = []
     lower_cover_counts = []
-    for size in range(1, 7):
+    for size in range(1, SEARCH_MAX_RANK + 1):
         cover_count = 0
         for subset in combinations(VERTICES, size):
             if any(set(edge) <= set(subset) for edge in minimal_edges):
@@ -258,9 +261,9 @@ def main():
     print(f"dependency_sha256_lf={tuple((name, expected) for name, _, expected in PINNED)}")
     print("status=FINITE-EXACT q15 rank<=6 boundary model plus analytic private-sheet hostile;unnumbered_and_not_canon")
     print(f"vertices={VERTICES};cover_counts_rank1_to_6={tuple(lower_cover_counts)}")
-    print(f"minimal_edges={len(minimal_edges)};rank_profile=((6,157),);edge_sha256={sha256(repr(minimal_edges).encode('ascii')).hexdigest()}")
+    print(f"minimal_edges_through_rank6={len(minimal_edges)};rank_le6_profile=((6,157),);edge_sha256={sha256(repr(minimal_edges).encode('ascii')).hexdigest()}")
     print(f"gcd_profile={gcd_profile}")
-    print(f"independence_profile={independence_profile}")
+    print(f"profile_generated_by_rank_le6_edges={independence_profile}")
     print(f"triphase_required={len(triphase_required)};domino_sufficient={domino_sufficient}")
     print(f"canonical_edge={CANONICAL_EDGE};ordered={canonical_witness[0]};blocks={expected_blocks}")
     print("canonical_mode_profile=(1,1,3,3,3,3);all_centres_h=0;all_15_cochain_gaps=0")
@@ -268,7 +271,7 @@ def main():
     print("unit_sign_quotient=(Z/15Z)^x/{+-1}=(1,2,4,7);times2_cycle=(1,2,4,7,1)")
     print("hostile=each_coprime_triphase_has_two_private_unit_sheets;every_domino_subblock_loses_one;no_size<=2_mode_cover")
     print("boundary=q<=14_has_only_singleton_or_domino_witness_modes;q15_first_local_and_rank6_effective_triphase")
-    print("scope=q15_has_no_rank<=5_cover_and_no_q_divisible_literal_speed;not_a_T3387_body_row;no_LRC14_consequence")
+    print("scope=q15_rank_le6_boundary;q15_has_no_rank<=5_cover_and_no_q_divisible_literal_speed;higher_rank_physical_clutter_not_enumerated;not_a_T3387_body_row;no_LRC14_consequence")
     print(f"semantic_sha256={digest}")
     print("verdict=PASS")
 
