@@ -33,7 +33,7 @@ THM-3360 proves the physical edge floor. THM-3381 bounds phase/tree drift and
 refutes residue-blind transfer. Arbitrary `k<=1`, projected `k=2,3`, rung, physical entry and LRC
 remain open; projected screens are not physical covers.
 THM-3356/3366 leave k2/k3 `4,056/200,069,517,203` and `1,897/2,548,893,834`; THM-3385/3387--3395/3398 give q2--7 and all-q mode/cochain laws.
-THM-3405/3415: ZMC 4 iff `8|q or 9|q`; 5 iff `(10|q or 12|q)` with `8,9 not|q`. THM-3414: fixed-zero rank <=6 iff one of `15,16,18,20,24` divides q. M389 splits HG; 3409 q15 tariff `(50,6)/(10,3)`; 3410 wedge/MST.
+THM-3405/3415/3416: ZMC rank 4 iff `8|q or 9|q`; rank 5 iff `(10|q or 12|q)` with `8,9 not|q`; rank 6 iff `(11|q or 15|q or 23|q or 25|q)` with `8,9,10,12 not|q`. THM-3414: fixed-zero rank <=6 iff one of `15,16,18,20,24` divides q. M389 splits HG; 3409 q15 tariff `(50,6)/(10,3)`; 3410 wedge/MST.
 THM-3368 has no clock seed; LRC remains open.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.

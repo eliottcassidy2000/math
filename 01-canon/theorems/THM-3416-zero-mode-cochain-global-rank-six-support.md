@@ -2,8 +2,8 @@
 id: THM-3416
 title: "Zero-mode-cochain global rank-six support"
 status: >
-  PROVISIONAL PROOF CANDIDATE / AUDIT REQUIRED + VERIFIED-EXACT companion.
-  The proposed all-q theorem says that the global zero-mode-cochain rank is
+  PROVED all-q global rank-six support theorem + VERIFIED-EXACT companion +
+  INDEPENDENTLY AUDITED.  The global zero-mode-cochain rank is
   six exactly when one of 11,15,23,25 divides q and none of 8,9,10,12 does.
   The converse is analytic: two exact complement classifiers remove orders
   three and five, and a reflection-orbit/CRT argument removes every mixture
@@ -11,7 +11,7 @@ status: >
   primitive cap-six census is FINITE-EXACT only through Q=200.  No arbitrary
   physical-time or LRC(14) conclusion is claimed.
 source: q8-multiblocker-2026-08-15
-audit: pending independent proof/type/replay audit
+audit: independent formula, complement-colour, reflection/CRT, divisor-ancestry, atom, arithmetic, hash, routing, scope, and normal/-O replay audit CLEAN
 depends_on:
   - THM-3405-common-centre-gcd-gauge-and-boolean-half-twist
   - THM-3414-fixed-zero-six-owner-base-classification
@@ -30,7 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3416 -- zero-mode-cochain global rank-six support
 
-**PROVISIONAL PROOF CANDIDATE / AUDIT REQUIRED + VERIFIED-EXACT companion.**
+**PROVED all-q + VERIFIED-EXACT companion + INDEPENDENTLY AUDITED.**
 
 ## 1. Exact statement
 

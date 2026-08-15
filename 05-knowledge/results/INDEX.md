@@ -1,5 +1,25 @@
 # Script Results Index
 
+- `lrc_zero_mode_cochain_rank6_support_thm3416.py` -> matching `.out`
+  [THM-3416 PROVED ALL-q GLOBAL RANK-SIX SUPPORT + VERIFIED-EXACT
+  PRIMITIVE Q2--200 HOSTILE CENSUS + INDEPENDENT AUDIT CLEAN].  For distinct
+  positive transverse owners with zero complete mode cochain,
+  `rho_ZMC(q)<=6` iff one of `{8,9,10,11,12,15,23,25}` divides `q`, and its
+  rank is exactly six iff one of `{11,15,23,25}` divides `q` while none of
+  `{8,9,10,12}` does.  Exact order-three and order-five complement
+  classifiers, followed by reflection-orbit bounds on orders 17 and 29 and
+  an equal-fibre CRT missed-core product, prove the half-twist converse;
+  THM-3414 supplies the fixed-zero converse.  Five positive controls cover
+  the four new bases, and the independent finite census checks both twists
+  only through `Q=200`.  The rank-six support has period `455400` and density
+  `25/207`; Fibonacci and Berggren transports have densities `2/25` and
+  `14/99`.  Normal and optimized outputs are byte-identical.  No arbitrary
+  physical-time or LRC(14) consequence is claimed.
+  Script/output/semantic LF-normalized SHA-256:
+  `c946cf9a66daa13da790cc9b1129993f9b5c1a8a2bdc6dec1bcc07b644989122` /
+  `733a3ed02910348b87b561df7f1c79eef2dc431a8d702f2c0f807db33c1298cc` /
+  `99892baf39b3d2b1b6a802bf21e0fe4164f155030d8ad051bc7ae26513b01ca3`.
+
 - `jc_one_monomial_nonlinear_fiber_thm3418.py` -> matching `.out`
   [THM-3418 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   DERIVATION/TYPE/REPLAY-AUDITED].  Over any
