@@ -2,7 +2,8 @@
 id: THM-3394
 title: "Twelve formerly missing Hadamard orders through 2000"
 status: >
-  PROVED + VERIFIED-EXACT + INERT RECONSTRUCTION + HOSTILE-AUDITED.
+  PROVED + VERIFIED-EXACT + INERT RECONSTRUCTION + HOSTILE-AUDITED
+  + INDEPENDENTLY AUDITED.
   Explicit sign matrices of orders
   668,716,892,1132,1244,1388,1436,1676,1772,1916,1948,1964
   are reconstructed from one checked-in 23,828-sign word and one frozen
@@ -12,7 +13,7 @@ status: >
   This proves only these twelve finite existence statements and does not
   prove the Hadamard conjecture.
 source: codex-2026-08-14 inert reconstruction of the supplied sign-puzzle bank
-audit: literal fixed-template renderer, exact periodic/OA sidecars, normal/-O agreement, and one-entry hostile
+audit: literal fixed-template renderer, exact periodic/OA sidecars, normal/-O agreement, one-entry hostile, and an independent reconstruction/contract/Gram audit
 depends_on: []
 related:
   - THM-3393-hadamard-order-668-explicit-certificate
@@ -29,7 +30,8 @@ hash_basis: working-tree bytes (LF)
 
 # THM-3394 -- twelve explicit Hadamard matrices
 
-**PROVED + VERIFIED-EXACT + INERT RECONSTRUCTION + HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + INERT RECONSTRUCTION + HOSTILE-AUDITED
++ INDEPENDENTLY AUDITED.**
 
 For every
 

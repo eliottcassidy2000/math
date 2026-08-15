@@ -2,7 +2,8 @@
 
 - hadamard_twelve_order_bank_thm3394.py plus immutable signword data ->
   matching output [THM-3394 PROVED + VERIFIED-EXACT + INERT RECONSTRUCTION +
-  HOSTILE-AUDITED].  One frozen 23,828-sign word and 192-bit schedule render
+  HOSTILE-AUDITED + INDEPENDENTLY AUDITED].  One frozen 23,828-sign word and
+  192-bit schedule render
   explicit matrices at orders
   668,716,892,1132,1244,1388,1436,1676,1772,1916,1948,1964.
   The standard-library verifier checks exact consumption, shapes, signs,
