@@ -33,6 +33,31 @@
   address contraction, not a one-integral temporal current, `H^1` class,
   grouped coefficient, row exclusion, or LRC(14) result.  Script/semantic
   LF SHA-256: `886ef5ae...1c51` / `1cf457b2...6d02`.
+- `lrc_r5_source_aligned_guard_atom_branch_sidecar_probe_20260816.py` and
+  `lrc_r5_source_aligned_actual_endpoint_simple_kernel_probe_20260816.py` ->
+  matching `.out` files [FINITE-EXACT SOURCE-TIME ONE-BASE SIMPLE-KERNEL
+  TRANSPLANT; INDEPENDENT AUDIT PENDING].  THM-2471's source refinement
+  `f_omega^src=1_Q P^K(eP_omega)` puts both 39-atom labels at endpoint time
+  before their packets meet on one first-collision base.  The raw 39-atom
+  `T^2` transition has full `1521/1521` support but exact rank three and
+  identical source-sheet rows, erasing every nonzero `F_13` source
+  character; the retained 169-branch sidecar restores the sheet exactly as
+  `floor(branch/13)`.  The source-aligned common gauge has `362/1521` atom
+  pairs and exactly the 48 owner-active nonzero-drift types, rank four at
+  every owner mode, and full `(13,13,13,13)` nonzero-owner Walsh--drift
+  support.  All 362 pairs carry nonzero actual THM-3514 endpoint weight; the
+  resulting one-base finite simple kernel is nonzero at all 13 owner modes,
+  and so is its doubly centred endpoint interaction.  This closes the finite
+  temporal atom-label mismatch, but `AX/BY` remain preintegrated scalars: no
+  physical relation current, grouped coefficient, row exclusion, or LRC(14).
+  Source script/output/semantic SHA-256:
+  `22c5c748392817ccc36889a007c65bd5f44b26c10638df6f6aac48e917547f41` /
+  `3165df77792959f2825511b8b7e7c6d112f212573d8c876d08eb18089ee9ec0f` /
+  `31e9e90c63053944b590195555be07ccbf84fd4c7abc2101de6a2a3562202de6`;
+  endpoint script/output/semantic SHA-256:
+  `811f7dfeec5f2269bac66de98c12951201beb4353c9b0f661a717e306264ee1b` /
+  `29903ea06317bdf5abe9f7fd71c9e44ceb929fc465236c01ac69cc5ca330d1f8` /
+  `430aa2201ee8f624de66f034bdf5e31b11ec6ecbe1f3f0b9cef1342b2b1bc2ff`.
 
 - `keller_R6_finite_sheet_recursive_norm_probe_20260816.py` and
   `keller_R6_finite_sheet_split_branch_audit_20260816.py` -> matching `.out`
