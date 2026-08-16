@@ -15,9 +15,9 @@ related:
   - THM-3528-fixed-keller-all-level-cleared-norm-polynomiality-and-finite-sheet-defect
 script: 04-computation/keller_finite_branch_beta_homogeneous_unit_obstruction_20260816.py
 output: 05-knowledge/results/keller_finite_branch_beta_homogeneous_unit_obstruction_20260816.out
-script_sha256: 0e2e7ba0ee5aa45ca83aa050255cdb2f8ffda8d05c0495b7fc1c513ad1c289dc
-output_sha256: 15b026a541afc09d6be0784f00e2c05e3c3b3b148625a1b30dec7c62875d89e6
-semantic_sha256: 7c19ce6a3dc08f36fdb19487a7e26411077e1db880afb0201ddf8a67c3df25d1
+script_sha256: c3b096d9f9b29c97eb1540dc85cb3f2e6739f2aeb5d903b5f3f36672e0592694
+output_sha256: f2bbb53b498c9df4ff79d96191a5e873572f745e98c35ee148728f963d58b950
+semantic_sha256: 8e14d28a41500a2f28a37b181089e66c668806382ea1011814b35076ebdc23fd
 hash_basis: LF-normalized bytes
 ---
 
@@ -246,5 +246,7 @@ python -B -O 04-computation/keller_finite_branch_beta_homogeneous_unit_obstructi
 ```
 
 Normal and optimized transcripts match the stored output exactly.  The
-companion verifies `(1)`, `(8)`--`(12)`, `(15)`, all 7,700 admissible packet
-exponent rows with `e<=300`, and both hostile boundaries.
+companion verifies `(1)`, `(8)`--`(12)`, `(15)`, all 15,250 positive-`e`
+complete-packet exponent rows with `e<=300` and `0<=m<=e`, `3|m`, including
+the `A(3,3)` boundary outside the raw-orbit subcone `2m<=e`, and all three
+hostile boundaries.
