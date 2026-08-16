@@ -42,8 +42,8 @@ owner `52/117`, rank4/full Walsh-drift; THM-3515 gives five rank5 rows and
 THM-3524 blocks folded `C7/K4` (`3<4`); 48 ancestry buckets are audited.
 Source-cell `91/91`,`72/72` scalar AX/BY; common-owner cell-0
 rank1 (MISTAKE-417); square/root/pointed are audited at
-`4/36`,`(3,12,12)/432`,`(5,12,12)`. Source/current inverse digits reach
-rank6/`432`; current audit/joint ancestry/address/U_clock/LRC open.
+`4/36`,`(3,12,12)/432`,`(5,12,12)`. Source/current inverse digits hit
+rank6/432; source audited; current/joint/address/U_clock/LRC open.
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;
 HYP-8871 leaves `165` rows.  THM-2363/THM-2368 are sidecars; THM-2417--2894

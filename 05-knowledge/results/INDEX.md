@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `lrc_r5_ufull_owner_node_boolean_square_source_branch_sheet_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  SOURCE-TIME P169 HIGH-BRANCH SIDECAR].  Without importing the candidate, it
+  reconstructs each `b=floor(n/13)` profile from exact inverse images of `E`,
+  then applies `Q`, `P_(13^5)`, and the common-owner endpoint coupling.  The
+  `15379`-cell source-sheet certificate, all rootwise restorations, branches
+  `1..11`, flat `11 x 4` support geometry, three guards, same-root zero, and
+  exact square gamma/table marginals pass.  Response ranks jump `4 -> 6`, the
+  branch marginal has rank `3`, and the pure three-way interaction has rank
+  `6` with `432/432` modes; all eight submitted digests and normal/`-O` replay
+  agree.  This is source-time high digit, not current-leg `r_owner`, arrival
+  atom, exact address, chronology, row exclusion, or LRC(14).
+  Script/output/semantic LF SHA-256:
+  `5d53792e0f3251459a412e8f729d2ff2945c66de2e75d343655af1e18db2a5cd` /
+  `fda9ce600878a69e1904fd2f1501834905f9e6f52d72ed07842e796857be7f5b` /
+  `6cac7c90f3ebe3f33a27c1979b74006c545260bb6d41a68f4f76442456114fe6`.
+
 - `lrc_r5_ufull_owner_node_pointed_six_state_root_difference_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
   SIX-POINTED SOURCE-TAIL REFINEMENT].  Without importing the candidate, it
@@ -36,7 +53,8 @@
   `cfb53edd90174d2362bae7235f2f85af3109a2754003afc48b94a82466b449cf` /
   `25bbbd871fe072915b07662c76661bf72be8d46258a6ce825ab1635ef7fe5c56`.
 - `lrc_r5_ufull_owner_node_boolean_square_branch_sheet_sidecar_probe_20260816.py`
-  -> matching `.out` [FINITE-EXACT NONREDUNDANT SOURCE-ANCESTRY SIDECAR].
+  -> matching `.out` [FINITE-EXACT NONREDUNDANT SOURCE-ANCESTRY SIDECAR;
+  INDEPENDENTLY AUDITED AT THE SCOPED SURVIVOR].
   Retains the high digit `b=floor(n/13)` of the left `P_169` inverse branch.
   A `15379`-cell certificate identifies `b` with the source guard sheet, with
   `1183` cells each.  After `Q`, only branches `1..11` survive and each
