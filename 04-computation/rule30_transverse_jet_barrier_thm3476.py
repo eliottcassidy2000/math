@@ -324,6 +324,15 @@ def audit_pascal_atlas() -> tuple[int, ...]:
                     == binomial_mod_two(exponent % modulus, order),
                     f"Lucas residue modulus={modulus} exponent={exponent} order={order}",
                 )
+            for order in range(4 * modulus):
+                check(
+                    binomial_mod_two(exponent, order)
+                    == (
+                        binomial_mod_two(exponent % modulus, order % modulus)
+                        & binomial_mod_two(exponent // modulus, order // modulus)
+                    ),
+                    f"Lucas tensor modulus={modulus} exponent={exponent} order={order}",
+                )
     return tuple(moduli)
 
 
@@ -379,7 +388,10 @@ def main() -> None:
     print(f"depth_four_source_period={source_period} support_residues=[1,5,6,7]_mod_8")
     print(f"power_family_m_M_t_low_slack={list(power_rows)}")
     print(f"first_live_jet_orders={[row[1] for row in power_rows]}")
-    print(f"pascal_lucas_moduli={list(pascal_moduli)} matrix_inverse=exact")
+    print(
+        f"pascal_lucas_moduli={list(pascal_moduli)} "
+        "matrix_inverse=exact tensor_factorization=exact"
+    )
     print(
         "symbolic_kernel=P=X^2+(1+U)X+U^2; "
         "P(U,W_(1+epsilon))=epsilon*U*W+epsilon^2*W^2"

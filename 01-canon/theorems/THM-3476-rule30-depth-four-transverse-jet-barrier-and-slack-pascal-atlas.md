@@ -2,13 +2,19 @@
 id: THM-3476
 title: "Rule 30 source P-adic reconstruction, depth-four transverse-jet barrier, and slack Pascal atlas"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT IN
-  PROGRESS.  The full transverse Hasse-jet tower is a faithful P-adic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The full transverse
+  Hasse-jet tower is a faithful P-adic
   reconstruction of the radial Rule 30 source, but no fixed jet depth is
   uniformly sufficient: one physical depth-four strip has target
   coefficients whose first live jet grows linearly with target time.  No
   Rule 30 prize or unrestricted complexity lower bound is claimed.
 source: root-rule30-next-targets-20260815
+audit: >
+  An independent hostile audit rederived the complete evaluation kernel,
+  exact P-adic/transverse order equality, Pascal/Lucas tensor atlas, and the
+  physical depth-four family; it also extended the Green-kernel checks beyond
+  the companion universe.  Ordinary and optimized companion runs match the
+  stored output byte-for-byte: ACCEPT.
 depends_on:
   - THM-3468-rule30-radial-green-fold-innovation-discrepancy-and-fixed-seed-carrier-boundaries
   - THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum
@@ -19,15 +25,14 @@ related:
   - THM-3458-rule30-right-edge-2-adic-odometer-and-moving-observer-boundary
 script: 04-computation/rule30_transverse_jet_barrier_thm3476.py
 output: 05-knowledge/results/rule30_transverse_jet_barrier_thm3476.out
-script_sha256: c6c507afbd7fcc8581ae022a53350faceeda9526d13dc506b63ddddf17e2b54e
-output_sha256: dfebfbeb84d15276c009ad81ddf3c877da15e146740ca49f66efce4f7103eee5
+script_sha256: 7a5b036a14a8c1aae50761ed66759af29ad60021d21475cea9247e423627fa4e
+output_sha256: 3b09aab4b92cfeb72f3be5a584d42327f9a4f9f8e34e5beceabf2c871fdd8fe6
 hash_basis: raw bytes
 ---
 
 # THM-3476 -- Rule 30 source P-adic reconstruction, depth-four transverse-jet barrier, and slack Pascal atlas
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT IN
-PROGRESS.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 The transverse slack marker introduced in THM-3471 is not merely a way to
 repair one three-strip cancellation.  Its complete Hasse-jet tower is an
