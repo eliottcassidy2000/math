@@ -167,6 +167,20 @@ instead the map from boundary components to conjugacy classes in `S5`.
    cycle length with the seed.  Comparing these requires a divisor-orbit
    ledger, not multiplication of sign classes.
 
+## Incoming fixed-tower corroboration
+
+During this integration, the independent exact artifact
+`keller_level_three_three_coordinate_primitive_independent_audit_20260816`
+arrived.  Over `F_101` it gives a lawful degree-27 fixed-third-iterate fibre
+where the `x,y,z` power-basis matrices all have rank 27, while retaining a
+separate target where the `y` rank drops to 26.  This is strong FINITE-EXACT
+evidence that the same primitive-coordinate/trace-square mechanism reaches
+the fixed composition tower and would give the common class `[-2J]` there.
+Its THM-3519 file is still a `RESERVED / UNPROVED EMPTY STUB`, so it is not a
+dependency or a promoted theorem here.  It also supplies no weighted-family
+Jelonek data: primitivity corroborates (2), not the invalid implication from
+(2) to complete effectivity.
+
 The central lesson is compact: the three-cubic `-4*square^2*L` pattern does
 extend to a three-quintic common square class, but its apparent boundary
 completeness was a cubic accident.  At degree five the lost even monodromy is
