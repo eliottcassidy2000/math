@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `lrc_three_p_private_sheet_boolean_atlas_thm3473.py` -> matching `.out`
+  [THM-3473 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
+  independent audit pending].  For `p=14k-1`, the THM-3469 eight-owner
+  presentation has exactly eleven Boolean sheet supports: eight positive
+  singleton atoms, packets `(1,4,5,6)` and `(2,3,5,8)`, and repair pair
+  `(5,7)`.  Exact private counts
+  `(4k,4k-2e1,4k-2e0,4k,8k-2e2,4k,4k-2e2,4k)` prove presentation-relative
+  irredundancy even when the global rank is four.  Multiplicity counts are
+  `36k-2-2e2`, `2k+2e2`, `4k-1` at weights `1,2,4`; the bidirected
+  two-section is two `K4`s plus one edge glued at owner `2p`.  The ternary
+  deficit state pulls back to a minimal period-63 U-spine word with each
+  colour having ambient/conditioned harmonic coefficients `4/63` and `1/3`.
+  Script/output/semantic LF SHA-256:
+  `ef604ee758d5abf0f239e9b1f1bf0d058c4a8741c4d2cee0a2e46c267bb157b5` /
+  `ff573b6df8e49be7280a932a29aee6b8551599a88ad3cacc32a85720ab9f40f3` /
+  `1a269572f813dcfafa4d99b9dda39e6fd36514005ff671ef7eec3f6416467fcc`.
+  No global-minimum, endpoint-current, bispectrum, or LRC(14) conclusion
+  follows.
 - `lrc_odd_zero_half_conjugacy_global_rank_thm3472.py` -> matching `.out`
   [THM-3472 RESERVED / REPAIRED PROVISIONAL PROOF CANDIDATE +
   VERIFIED-EXACT; independent re-audit pending].  MISTAKE-407 repairs the
