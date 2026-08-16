@@ -1,12 +1,12 @@
 ---
-id: THM-3516
+id: THM-3517
 title: "Weighted odd family: the m=3 three-coordinate quintic and sign-blind Jelonek component"
 status: RESERVED / UNPROVED EMPTY STUB
 author: codex-2026-08-16
 depends_on: []
 ---
 
-# THM-3516 -- weighted odd family m=3
+# THM-3517 -- weighted odd family m=3
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
