@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `lrc_r5_ufull_owner_node_boolean_square_inverse_owner_branch_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  CURRENT-LEG INVERSE-OWNER-DIGIT SIDECAR].  Without importing the candidate,
+  it factors `13^5=13*13^4`, retains `r_owner=a mod 13`, and reconstructs all
+  digit/root profiles over the independently audited Boolean square.  The
+  rootwise marginal, reflection `(u,r,state)->(12-u,12-r,state XOR 2)`, split
+  field, three literal guards, same-root zero, and exact square gamma/table
+  marginals pass.  Actual/flat ranks are `(4,4,6)/(4,1,4)`, centered ranks are
+  `(3,4,6)/zero`, all `432/432` pure triple modes fire, and fixed `t=6` has
+  rank `4` with `52/52` nonzero entries.  All candidate digests and normal/
+  `-O` replay agree.  This is current-leg last digit, not source-time sheet,
+  root difference, full inverse ancestry, exact address, chronology, physical
+  current, row exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
+  `4b0bd05ffa6195ff484433329e334d771bc27e7cd380136b50b45e7248bb98ba` /
+  `d1b7aef51b58c28afc40ec0d08319bdaf0fae7a3f5e681dddab3d0f1d2f1a543` /
+  `7063720d0e0e4847ce752102de83274ea47d7740fc435a64bae425dbd7100121`.
+
 - `lrc_r5_ufull_owner_node_boolean_square_source_branch_sheet_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
   SOURCE-TIME P169 HIGH-BRANCH SIDECAR].  Without importing the candidate, it
@@ -109,7 +126,8 @@
 
 - `lrc_r5_ufull_owner_node_boolean_square_inverse_owner_branch_probe_20260816.py`
   -> matching `.out` [FINITE-EXACT POSITIVE LAST-INVERSE-OWNER-DIGIT
-  CANDIDATE; AUDIT PENDING].  Retaining THM-2471's `r_owner=a mod 13`
+  SIDECAR; INDEPENDENTLY AUDITED AT THE SCOPED SURVIVOR].  Retaining
+  THM-2471's `r_owner=a mod 13`
   recovers the audited square.  Actual/flat ranks are `(4,4,6)`/`(4,1,4)`;
   pure three-way ranks are `(3,4,6)`/zero, with all `432` actual triple modes.
   All 13 branches survive, and reflection sends `(u,r,state)` to

@@ -1,0 +1,21 @@
+== independent hostile audit: current-leg r_owner x Boolean square x relation ==
+parent=(square_sha256=a75300a81efebef83683c41ac073ffa4d3268da83e96071d7b1b576b36e5bbc7,square_semantic=af0d543232869e82ee8d0191478ba7a833954cb19b387dedb6fb6f44a6fa272c)
+radix=(depth=371293,upper_fold=28561,digit_census=(28561, 28561, 28561, 28561, 28561, 28561, 28561, 28561, 28561, 28561, 28561, 28561, 28561)): PASS
+typing=r_owner=a mod13 in T^4 X_(u,a)=(w_u+r_owner)/13 mod1;current leg only
+source_decomposition=(upper_fold_pieces=72,digit_window_pieces=(12, 5, 5, 6, 5, 5, 7, 5, 5, 6, 5, 5, 12),joint_boundaries=34,branch_masses=(44560361824598469720, 40510923881424796800, 40504424654832678540, 40515633830289749040, 40509264504422553840, 40513136384094454080, 40479588474296582520, 40513136384094454080, 40509264504422553840, 40515633830289749040, 40504424654832678540, 40510923881424796800, 44560361824598469720),sha256=9e2a61ea8ec00830aa93ec4daa42574a9179f5aa80a09e3388dd9af0964f4cb1)
+reflection=(u,r,state)->(12-u,12-r,state_XOR2);interval_record=(33, 30, (44560361824598469720, 40510923881424796800, 40504424654832678540, 40515633830289749040, 40509264504422553840, 40513136384094454080, 40479588474296582520, 40513136384094454080, 40509264504422553840, 40515633830289749040, 40504424654832678540, 40510923881424796800, 44560361824598469720)): PASS
+field=(prime=755373809845391722745761,root=148035889,zeta13=266737884585332483769981)
+work_counts=(7107008, 7108460, 1200462, 186244, 186244);state_counts=(300115, 300116, 300115, 300116);branch_counts=(186244, 186244, 186244, 186244, 186244, 186244, 186244, 186244, 186244, 186244, 186244, 186244, 186244)
+literal_controls=((0, 0, 0), (1, 0, 6), (6, 6, 12)): PASS
+marginals=(digit_sum->independently_audited_square gamma and table): PASS;same_root=0
+flattening_ranks_(state,digit,relation)=(actual,flat)=((4, 4, 6), (4, 1, 4))
+three_way_ANOVA_flattening_ranks=((3, 4, 6), (0, 0, 0))
+support_census_order=(total,empty,relation,digit,digit_relation,state,state_relation,state_digit,triple)
+spectral_censuses=(actual,flat)=((676, 1, 12, 12, 144, 3, 36, 36, 432), (52, 1, 12, 0, 0, 3, 36, 0, 0))
+three_way_ANOVA_spectral_censuses=((432, 0, 0, 0, 0, 0, 0, 0, 432), (0, 0, 0, 0, 0, 0, 0, 0, 0))
+fixed_(1,0,6)_records_(rank,threeway_slice_rank,row_support,digest)=((4, 3, (13, 13, 13, 13), '7652ac0fbca27c3a41181d04e9bea962f4159b04ccc43befe3d2783af89be4a4'), (1, 0, (13, 13, 13, 13), 'be782cc3ee60d8d4bc008f21a9f308731a29e180bc83d7041ff87c47eb532729'))
+digests=(gamma,tensor,flat,spectra,ANOVA,ANOVA_spectra)=('344fc6f451922bfdd071cfa800444929e34e575a71344b17624cc0e73d7d9e72', '2a195fac7fbd60a4bbd2597bf34baf87302ead16c7c0e8c67c0667b0d320dfba', '8959d6734c5049dc58a6bc1ef702d20b839bed45e5d80321161a232ed367a228', ('d6d261c661a622ae315f3b713db02c23250eafbf20a38237f479f74ff99f61b0', '5209d2df83b48c3da26ed542054680bf39496125c2fe01aeb57617c451bcb907'), ('0dca6acb11ce79478f690b509223db0ddd521aed95d8ddca7fc3cfca9e28c387', '197447345f85eb9bcafa5ca23a56870cb07d8ba0635314ff498abf7f9ab9d5bc'), ('f2a19b58b81112fc6ec56571ebf36658731dcc026c27bfd1311ed8422742330d', '197447345f85eb9bcafa5ca23a56870cb07d8ba0635314ff498abf7f9ab9d5bc'))
+semantic_sha256=7063720d0e0e4847ce752102de83274ea47d7740fc435a64bae425dbd7100121
+verdict=ACCEPT scoped nonredundant current-leg inverse-owner-digit sidecar
+scope=not source-time P169 digit,not root difference,not deep label,not full inverse ancestry,not exact address,not U_clock chronology,not physical current,no row exclusion,no LRC(14)
+all exact hostile checks passed

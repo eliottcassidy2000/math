@@ -1,7 +1,11 @@
 # The last inverse-owner digit survives the owner-node Boolean square
 
-**Status: FINITE-EXACT POSITIVE CANDIDATE ON ONE `r=5` OWNER BASE;
-INDEPENDENT AUDIT PENDING; LRC(14) remains OPEN.**  Retaining the canonical
+**Status: FINITE-EXACT POSITIVE SIDECAR ON ONE `r=5` OWNER BASE;
+INDEPENDENTLY AUDITED AT THE SCOPED SURVIVOR; LRC(14) remains OPEN.**
+The disjoint audit
+`lrc-r5-current-leg-inverse-owner-digit-independent-hostile-audit-codex-20260816.md`
+reconstructs the object without importing this implementation and agrees on
+the source, response, rank, spectrum, and fixed-slice digests.  Retaining the canonical
 last digit `r_owner = a mod 13` of the THM-2471 current sheet produces a
 genuine `V_4 x F_13 x F_13` interaction.  Its pure three-way component has
 flattening ranks `(3,4,6)` and all `432=3*12*12` allowable triple Fourier
