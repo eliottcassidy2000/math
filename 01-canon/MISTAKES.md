@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-406 (2026-08-15, THM-3469 rank typing) -- literal half-twist rank was silently used as full zero-cochain rank
+
+- **What failed:** the provisional THM-3469 proof used THM-3455's cap-seven
+  literal half-twist rank `rho_H` as a lower bound for the full zero-mode-
+  cochain rank `rho_ZMC`, which also ranges over the fixed-zero layer and
+  proper-divisor ancestry.  The numerical rank word was correct, but the type
+  conversion needed a proof.
+- **First unsupported implication:** “THM-3455's cap-seven atom sieve makes
+  the eight-owner upper bound exact” does not follow until a hypothetical
+  fixed-zero cover on every odd divisor is transported into the classified
+  half layer.
+- **Repair / strongest survivor:** for odd `Q`, the sheet map
+  `phi(ell)=2ell+1 mod Q` is bijective and
+  `B_Q(2s)(ell)=Z_Q(s)(phi(ell))`, because
+  `dist_(2Q)(2a,0)=2 dist_Q(a,0)`.  After canonical sign representatives are
+  chosen, every fixed-zero `k`-cover becomes a half-twist `k`-cover.  Every
+  divisor of the odd family `42k-3` is odd, so THM-3405 divisor descent plus
+  THM-3455's atom sieve gives the required full `rho_ZMC` lower bound.  The
+  exact rank-4/6/7/8 law survives.
+- **Reusable rule:** never identify a layer-specific rank with a global rank
+  merely because all displayed witnesses use that layer.  Give an explicit
+  conjugacy or audit every omitted layer and every divisor.  The oddness of
+  `Q` is load-bearing here; multiplication by two is not a sheet permutation
+  at even modulus.
+
 ## MISTAKE-405 (2026-08-15, THM-3464 q=123 ancestry) -- a primitive mixed-order witness was mistaken for noninheritance
 
 - **What failed:** the provisional THM-3464 package correctly found a

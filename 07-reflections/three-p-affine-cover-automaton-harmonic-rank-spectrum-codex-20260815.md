@@ -26,6 +26,13 @@ is written as `x=mp+y`, six affine channels erase the nearest multiple, owner
 septimal gap.  The only failure has `p=7s`, `|y|=3s`, `s` odd, and `3` not
 dividing `s`; equivalently `p mod 42` is `7` or `35`.
 
+The lower bound needs a separate type bridge.  On every odd divisor `Q`, the
+sheet permutation `phi(ell)=2ell+1` conjugates a fixed-zero mask of owner `s`
+to the half-twist mask of canonical owner `2s`.  This is what licenses the
+passage from THM-3455's literal half-layer atom sieve to the full
+zero-cochain/divisor rank.  Without this coordinate, the eight-owner upper
+bound would not by itself exclude a seven-owner fixed-zero escape.
+
 ## The finite-state object is not a tournament
 
 The useful state has coordinates
@@ -92,9 +99,23 @@ delta_8=57344/147407,
 sum_(k<=N, rank(k)=8) 1/k = delta_8 log N+O(1).
 ```
 
+Because the affine labels `q=42k-3` are linear, the same subset also has
+
+```text
+sum_(k<=N, rank(k)=8) 1/(42k-3)
+  =(4096/442221) log N+O(1).
+```
+
 This separates three notions that are easy to blur: arbitrary subsets of
 natural numbers, periodic subsets with logarithmic density, and reciprocal
 sums over the quadratic labels `q_t`, which converge.
+
+On the U-spine intersection, the lane indicator and the inherited rank word
+combine to a minimal annotated period `11781`.  Its rank-4/6/7/8 counts are
+`748,272,144,1080`; the ambient `t`-harmonic coefficients are respectively
+`4/63,16/693,16/1309,120/1309`.  This is stronger than the bare lane
+coefficient `4/21`: it records how the recurrence branch redistributes the
+four exact grades.
 
 ## New frontiers opened by the template
 

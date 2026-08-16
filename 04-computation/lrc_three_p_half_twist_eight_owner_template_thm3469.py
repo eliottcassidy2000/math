@@ -5,7 +5,9 @@ The universal proof in the theorem reduces every odd phase to its signed
 remainder from the nearest multiple of p.  This companion checks the symbolic
 owner table and strict gap inequalities, audits the exact cover/failure
 boundary for a large finite range, reattaches the common half-twist modes, and
-computes the exact periodic rank and harmonic-density census on p=14k-1.
+checks the odd-modulus zero/half-layer conjugacy needed for the lower bound.
+It then computes the exact periodic rank and harmonic-density census on
+p=14k-1 and the annotated U-spine intersection.
 """
 
 from __future__ import annotations
@@ -43,7 +45,9 @@ RANK7_K = ((13, 1), (17, 11), (29, 27))
 PERIOD_PRIMES = (3, 5, 11, 13, 17, 23, 29)
 EXPECTED_PERIOD = 24_322_155
 EXPECTED_COUNTS = {4: 8_107_385, 5: 0, 6: 4_934_930, 7: 1_818_080, 8: 9_461_760}
-EXPECTED_SEMANTIC_SHA256 = "42c2ecaa420914e22e57a9415efd5dce73ec6de026dfec5bd06e19d24a2582dc"
+EXPECTED_U_SPINE_PERIOD = 11_781
+EXPECTED_U_SPINE_COUNTS = {4: 748, 6: 272, 7: 144, 8: 1_080}
+EXPECTED_SEMANTIC_SHA256 = "d8c6b1c2baf1df178ca09793b3f69bc5e537a12c77e9397d83fd3ce8c3e3e530"
 
 
 def require(condition: bool, detail: object) -> None:
@@ -70,6 +74,17 @@ def direct_mask(q: int, owner: int) -> int:
     for sheet in range(q):
         word = owner * (2 * sheet + 1)
         if 14 * cyclic_distance(word, 2 * q) < 2 * q:
+            result |= 1 << sheet
+    return result
+
+
+def zero_mask(q: int, owner: int) -> int:
+    """Literal fixed-zero danger mask on Z/qZ."""
+
+    require(q >= 2 and 0 < owner < q, ("zero-mask domain", q, owner))
+    result = 0
+    for sheet in range(q):
+        if 14 * cyclic_distance(owner * sheet, q) < q:
             result |= 1 << sheet
     return result
 
@@ -230,6 +245,40 @@ def direct_boundary_audit() -> dict[str, object]:
     }
 
 
+def odd_layer_conjugacy_audit() -> dict[str, int]:
+    """Check B_Q(2s)=phi^*Z_Q(s) for every odd Q<=301.
+
+    The canonical half owner is the sign representative of 2s modulo 2Q.
+    The sheet permutation is phi(ell)=2ell+1 modulo Q.
+    """
+
+    checked_rows = 0
+    checked_cells = 0
+    for q in range(3, 302, 2):
+        for owner in range(1, q):
+            half_owner = 2 * owner
+            if half_owner > q:
+                half_owner = 2 * q - half_owner
+            require(0 < half_owner < q, ("half owner", q, owner, half_owner))
+            fixed = zero_mask(q, owner)
+            half = direct_mask(q, half_owner)
+            transported = 0
+            for sheet in range(q):
+                target = (2 * sheet + 1) % q
+                if fixed >> target & 1:
+                    transported |= 1 << sheet
+                require(
+                    ((half >> sheet) & 1) == ((fixed >> target) & 1),
+                    ("odd zero/half conjugacy", q, owner, sheet),
+                )
+                checked_cells += 1
+            require(half == transported, ("transported mask", q, owner))
+            checked_rows += 1
+    require(checked_rows == 22_650, checked_rows)
+    require(checked_cells == 4_567_750, checked_cells)
+    return {"rows": checked_rows, "cells": checked_cells}
+
+
 def cap_seven_rank(q: int) -> int:
     if any(q % atom == 0 for atom in RANK4_ATOMS):
         return 4
@@ -306,12 +355,15 @@ def rank_census() -> dict[str, object]:
     require(densities[6] == Fraction(14, 69), densities)
     require(densities[7] == Fraction(33056, 442221), densities)
     require(densities[8] == Fraction(57344, 147407), densities)
+    label_harmonic_rank8 = densities[8] / 42
+    require(label_harmonic_rank8 == Fraction(4096, 442221), label_harmonic_rank8)
 
     return {
         "period": period,
         "counts": counts,
         "densities": densities,
         "minimality": tuple(minimality),
+        "label_harmonic_rank8": label_harmonic_rank8,
     }
 
 
@@ -323,6 +375,7 @@ def u_spine_report() -> dict[str, object]:
     )
     require(residues == (5, 8, 12, 15), residues)
     examples = []
+    polynomial_lanes = []
     for t in residues:
         q = (2 * t + 1) ** 2 + 2
         p = q // 3
@@ -330,11 +383,75 @@ def u_spine_report() -> dict[str, object]:
         require(q == 3 * (14 * k - 1), ("U-spine parametrization", t, q, k))
         require(union_mask(q, template(p)) == (1 << q) - 1, ("U-spine cover", t))
         examples.append((t, k, q, family_rank(k)))
+        polynomial_lanes.append((t, 42, 4 * t + 2, k))
     require(examples[:2] == [(5, 3, 123, 8), (8, 7, 291, 8)], examples)
+
+    def annotated_symbol(t: int) -> int:
+        if t % 21 not in residues:
+            return 0
+        q = (2 * t + 1) ** 2 + 2
+        k = (q + 3) // 42
+        require(q == 42 * k - 3, ("annotated lane", t, q, k))
+        rank = cap_seven_rank(q)
+        require(rank == family_rank(k), ("annotated rank", t, k, rank))
+        return rank
+
+    period = EXPECTED_U_SPINE_PERIOD
+    require(period == 3 * 3 * 7 * 11 * 17, period)
+    word = tuple(annotated_symbol(t) for t in range(period))
+    require(
+        all(word[t] == annotated_symbol(t + period) for t in range(period)),
+        "U-spine period",
+    )
+    counts = {
+        rank: sum(symbol == rank for symbol in word)
+        for rank in (4, 6, 7, 8)
+    }
+    require(counts == EXPECTED_U_SPINE_COUNTS, counts)
+    require(sum(counts.values()) == period * 4 // 21, counts)
+
+    period_witnesses = []
+    for prime in (3, 7, 11, 17):
+        shift = period // prime
+        witness = next(
+            t
+            for t in range(1, period + 1)
+            if annotated_symbol(t) != annotated_symbol(t + shift)
+        )
+        period_witnesses.append(
+            (prime, witness, annotated_symbol(witness), witness + shift, annotated_symbol(witness + shift))
+        )
+
+    ambient_densities = {
+        rank: Fraction(count, period)
+        for rank, count in counts.items()
+    }
+    conditioned = {
+        rank: Fraction(count, sum(counts.values()))
+        for rank, count in counts.items()
+    }
+    require(ambient_densities == {
+        4: Fraction(4, 63),
+        6: Fraction(16, 693),
+        7: Fraction(16, 1309),
+        8: Fraction(120, 1309),
+    }, ambient_densities)
+    require(conditioned == {
+        4: Fraction(1, 3),
+        6: Fraction(4, 33),
+        7: Fraction(12, 187),
+        8: Fraction(90, 187),
+    }, conditioned)
     return {
         "residues_mod21": residues,
         "density": Fraction(4, 21),
         "examples": tuple(examples),
+        "polynomial_lanes": tuple(polynomial_lanes),
+        "annotated_period": period,
+        "annotated_counts": counts,
+        "ambient_densities": ambient_densities,
+        "conditioned": conditioned,
+        "period_witnesses": tuple(period_witnesses),
     }
 
 
@@ -383,6 +500,7 @@ def main() -> None:
     security = security_report(Path(__file__))
     symbolic = symbolic_owner_table()
     boundary = direct_boundary_audit()
+    layer_conjugacy = odd_layer_conjugacy_audit()
     ranks = rank_census()
     spine = u_spine_report()
 
@@ -391,16 +509,30 @@ def main() -> None:
         "dependencies": dependency_hashes,
         "symbolic": symbolic,
         "boundary": boundary,
+        "odd_layer_conjugacy": layer_conjugacy,
         "ranks": {
             "period": ranks["period"],
             "counts": ranks["counts"],
             "densities": {rank: fraction_text(value) for rank, value in ranks["densities"].items()},
             "minimality": ranks["minimality"],
+            "label_harmonic_rank8": fraction_text(ranks["label_harmonic_rank8"]),
         },
         "spine": {
             "residues": spine["residues_mod21"],
             "density": fraction_text(spine["density"]),
             "examples": spine["examples"],
+            "polynomial_lanes": spine["polynomial_lanes"],
+            "annotated_period": spine["annotated_period"],
+            "annotated_counts": spine["annotated_counts"],
+            "ambient_densities": {
+                rank: fraction_text(value)
+                for rank, value in spine["ambient_densities"].items()
+            },
+            "conditioned": {
+                rank: fraction_text(value)
+                for rank, value in spine["conditioned"].items()
+            },
+            "period_witnesses": spine["period_witnesses"],
         },
         "security": security,
     }
@@ -421,6 +553,10 @@ def main() -> None:
     print("COVER_BOUNDARY_P_GE_13: cover iff p mod 42 not in {7,35}")
     print(f"DIRECT_SHEET_CHECKS_P13_TO600: {boundary['checked_sheets']}")
     print(f"FRACTION_REFERENCE_SHEETS_P13_TO60: {boundary['reference_sheets']}")
+    print(
+        "ODD_ZERO_HALF_CONJUGACY_Q3_TO301: "
+        f"rows={layer_conjugacy['rows']} cells={layer_conjugacy['cells']}"
+    )
     print(f"FAILURES_P13_TO600: {boundary['failures']}")
     print(f"SHARP_HOSTILE_P_X_SHEET: {boundary['hostile']}")
     print("SEPTIMAL_REPAIRS: p=14 parity removes tie; p=21 ternary backbone absorbs tie")
@@ -432,9 +568,31 @@ def main() -> None:
         + str(tuple((rank, fraction_text(value)) for rank, value in sorted(ranks["densities"].items())))
     )
     print(f"MINIMAL_PERIOD_CRT_WITNESSES: {ranks['minimality']}")
+    print(
+        "RANK8_LINEAR_LABEL_HARMONIC_COEFFICIENT: "
+        f"{fraction_text(ranks['label_harmonic_rank8'])}"
+    )
     print(f"U_SPINE_TEMPLATE_RESIDUES_MOD21: {spine['residues_mod21']}")
     print(f"U_SPINE_TEMPLATE_DENSITY_AND_HARMONIC_COEFFICIENT: {fraction_text(spine['density'])}")
     print(f"U_SPINE_FIRST_RESIDUE_EXAMPLES: {spine['examples']}")
+    print(f"U_SPINE_LANE_K_POLYNOMIALS: {spine['polynomial_lanes']}")
+    print(f"U_SPINE_ANNOTATED_MINIMAL_PERIOD: {spine['annotated_period']}")
+    print(f"U_SPINE_ANNOTATED_COUNTS: {tuple(sorted(spine['annotated_counts'].items()))}")
+    print(
+        "U_SPINE_AMBIENT_DENSITIES: "
+        + str(tuple(
+            (rank, fraction_text(value))
+            for rank, value in sorted(spine["ambient_densities"].items())
+        ))
+    )
+    print(
+        "U_SPINE_CONDITIONED_DENSITIES: "
+        + str(tuple(
+            (rank, fraction_text(value))
+            for rank, value in sorted(spine["conditioned"].items())
+        ))
+    )
+    print(f"U_SPINE_MINIMAL_PERIOD_WITNESSES: {spine['period_witnesses']}")
     print(f"SEMANTIC_SHA256: {semantic_hash}")
     print("VERDICT: universal eight-owner cover boundary and exact periodic rank-4/6/7/8 family; no endpoint current or LRC(14) conclusion")
 

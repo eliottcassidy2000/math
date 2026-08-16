@@ -7,14 +7,15 @@ status: >
   template covers exactly when p is not 7 or 35 modulo 42.  On p=14k-1 it
   gives rank at most eight, and THM-3455 sharpens this to an exact periodic
   rank-4/6/7/8 word with minimal period 24322155 and exact natural/harmonic
-  densities.  No endpoint current or LRC(14) consequence follows.
+  densities.  Its U-spine intersection has exact annotated rank period 11781.
+  No endpoint current or LRC(14) consequence follows.
 source: codex-2026-08-15-q123-q291-affine-template
 audit: >
   self-contained nearest-multiple and strict septimal-gap proof; exact
-  symbolic channel, threshold, 4325328-sheet boundary, rational-mask,
-  mode-centre, hostile/repair, CRT-period, rank-count, U-spine, dependency,
-  semantic, security, and normal/optimized replay gates; independent audit
-  pending
+  symbolic channel, threshold, 4325328-sheet boundary, 4567750-cell odd-layer
+  conjugacy, rational-mask, mode-centre, hostile/repair, CRT-period,
+  rank-count, annotated U-spine, dependency, semantic, security, and
+  normal/optimized replay gates; independent audit pending
 depends_on:
   - THM-3405-common-centre-gcd-gauge-and-boolean-half-twist
   - THM-3455-berggren-q-spine-cap-seven-atom-sieve-and-fibonacci-rank-spectrum
@@ -23,9 +24,9 @@ related:
   - THM-3464-u-spine-q123-rank-eight-break-and-divisor-layer-certificate
 script: 04-computation/lrc_three_p_half_twist_eight_owner_template_thm3469.py
 output: 05-knowledge/results/lrc_three_p_half_twist_eight_owner_template_thm3469.out
-script_sha256: 436a9a97d275ad250cca333afb187fd4c2bd8ef2bd2b6e9641b938acdc6d6c17
-output_sha256: 64c968ec6e1694f4dd45ad47420036eb949c63759d8c5c9de0e26fd3586e3dc4
-semantic_sha256: 42c2ecaa420914e22e57a9415efd5dce73ec6de026dfec5bd06e19d24a2582dc
+script_sha256: 6bbecec3a9775d7807a43031e287681230f4365e90aa0bcc9874b5b42e6520a1
+output_sha256: 008c424f52d0140e58c8eabbee2e812c80b89419283c6b59f7cf6250a9446e8b
+semantic_sha256: d8c6b1c2baf1df178ca09793b3f69bc5e537a12c77e9397d83fd3ce8c3e3e530
 hash_basis: LF-normalized bytes
 ---
 
@@ -168,8 +169,28 @@ Then `p mod 42` is one of `13,27,41`, so `(11)` always gives
 rho_ZMC(42k-3)<=8.                                    (13)
 ```
 
-THM-3455's complete cap-seven atom sieve makes `(13)` exact.  After rank
-priority is applied,
+THM-3455's complete cap-seven atom sieve makes `(13)` exact, but one layer
+conversion must first be explicit.  For odd `Q`, let the fixed-zero mask be
+
+```text
+Z_Q(s)={j in Z/QZ:14 dist_Q(sj,0)<Q}.                (13a)
+```
+
+The map `phi(ell)=2ell+1 mod Q` is a sheet permutation, and for a canonical
+owner `1<=s<=(Q-1)/2`,
+
+```text
+B_Q(2s)(ell)=Z_Q(s)(phi(ell)).                        (13b)
+```
+
+Indeed `dist_(2Q)(2a,0)=2 dist_Q(a,0)`.  Thus every fixed-zero cover on an
+odd modulus conjugates to a half-twist cover of the same cardinality.  Every
+divisor of `42k-3` is odd, so THM-3405's divisor minimum has no unclassified
+zero-layer escape: a zero- or half-layer cover through seven on a divisor
+would give a literal half-twist atom dividing `42k-3`.  Conversely the atom
+witnesses are zero-cochain witnesses.  Hence the full rank `rho_ZMC`, not
+only the half-layer rank, obeys the following law after rank priority is
+applied:
 
 ```text
 rho_ZMC(42k-3)=4
@@ -228,7 +249,17 @@ sum_(k<=N,rho_ZMC(42k-3)=r) 1/k=delta_r log N+O(1).   (17)
 ```
 
 This is an honest subset-of-the-harmonic-series theorem in the family index
-`k`; it is not the convergent reciprocal sum over the quadratic labels.
+`k`.  The labels in this affine family are linear, so exact rank eight also
+has the ambient label-harmonic law
+
+```text
+sum_(k<=N,rho_ZMC(42k-3)=8) 1/(42k-3)
+  =(4096/442221) log N+O(1).                           (17a)
+```
+
+This follows from `(17)` and
+`1/(42k-3)=1/(42k)+O(1/k^2)`.  It is distinct from reciprocal sums over the
+quadratic U-spine labels, which converge.
 
 ## 4. Intersection with the parabolic Berggren U-spine
 
@@ -260,6 +291,49 @@ affine owner template, and the next unresolved U-spine label `q=291` also has
 exact rank eight.  The periodic membership `(19)` does not say that every one
 of its labels has rank eight; the lower-rank clauses in `(14)` remain active.
 
+Writing `t=21n+a` on the four lanes gives
+
+| `a` | corresponding `k` |
+|---:|---:|
+| 5 | `42n^2+22n+3` |
+| 8 | `42n^2+34n+7` |
+| 12 | `42n^2+50n+15` |
+| 15 | `42n^2+62n+23` |
+
+Annotate every U-spine index by `0` off these lanes and by its exact rank on
+them.  The resulting word has minimal period
+
+```text
+lcm(21,1683)=11781.                                  (21)
+```
+
+In one period its nonzero census is
+
+| lane rank | count | ambient `t` density / harmonic coefficient | conditioned on the lane |
+|---:|---:|---:|---:|
+| 4 | `748` | `4/63` | `1/3` |
+| 6 | `272` | `16/693` | `4/33` |
+| 7 | `144` | `16/1309` | `12/187` |
+| 8 | `1080` | `120/1309` | `90/187` |
+
+The companion verifies the full `11781`-letter word and gives a changing
+shift witness for every prime factor `3,7,11,17`, proving minimality.  In the
+format `(prime,t,value,t+11781/prime,value)`, they are
+
+```text
+(3,8,8,3935,4), (7,2,0,1685,4),
+(11,5,8,1076,6), (17,54,7,747,8).
+```
+
+In particular,
+
+```text
+sum_(t<=T, lane-rank(t)=8) 1/t
+  =(120/1309) log T+O(1).                             (22)
+```
+
+The corresponding sum of `1/q_t` still converges because `q_t` is quadratic.
+
 ## 5. Representation boundary
 
 The proof is not a tournament argument.  Its exact carrier is a labelled
@@ -284,9 +358,10 @@ python -O 04-computation/lrc_three_p_half_twist_eight_owner_template_thm3469.py
 
 The standard-library companion checks the symbolic twelve-channel table and
 all `42` strict residue classes, `4,325,328` direct sheet incidences for
-`13<=p<=600`, `42,048` independent rational-mask cells, all mode centres and
-widths for a complete residue window, the sharp hostile and both repairs,
-`100,000` rank-classifier values, exact CRT counts/minimality witnesses, and
-the U-spine intersection.  It uses explicit exceptions under `-O`, pins both
-dependencies, freezes a semantic digest, and performs no file write, dynamic
-evaluation, subprocess, or network action.
+`13<=p<=600`, `42,048` independent rational-mask cells, all `22,650`
+zero/half mask rows and `4,567,750` cells for odd `3<=Q<=301`, all mode
+centres and widths for a complete residue window, the sharp hostile and both
+repairs, `100,000` rank-classifier values, exact CRT counts/minimality
+witnesses, and the full annotated U-spine period.  It uses explicit
+exceptions under `-O`, pins both dependencies, freezes a semantic digest, and
+performs no file write, dynamic evaluation, subprocess, or network action.

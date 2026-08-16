@@ -6,12 +6,15 @@
   half-twist template at `q=3p` covers exactly when
   `p mod 42 not in {7,35}`.  On `p=14k-1`, THM-3455 makes the resulting
   rank-4/6/7/8 word exact with minimal period `24,322,155`; the exact rank-eight
-  density and harmonic coefficient are `57344/147407`.  The template meets
-  the parabolic U-spine exactly at `t mod 21 in {5,8,12,15}`, proving in
-  particular `rho_ZMC(291)=8`.  Script/output/semantic LF SHA-256:
-  `436a9a97d275ad250cca333afb187fd4c2bd8ef2bd2b6e9641b938acdc6d6c17` /
-  `64c968ec6e1694f4dd45ad47420036eb949c63759d8c5c9de0e26fd3586e3dc4` /
-  `42c2ecaa420914e22e57a9415efd5dce73ec6de026dfec5bd06e19d24a2582dc`.
+  index-harmonic coefficient is `57344/147407`, and its linear-label
+  coefficient is `4096/442221`.  An exact odd-modulus sheet conjugacy closes
+  the fixed-zero/half-layer lower-bound gap.  The template meets the parabolic
+  U-spine exactly at `t mod 21 in {5,8,12,15}`; its annotated lane has minimal
+  period `11,781`, counts `(748,272,144,1080)` in ranks `(4,6,7,8)`, and proves
+  in particular `rho_ZMC(291)=8`.  Script/output/semantic LF SHA-256:
+  `6bbecec3a9775d7807a43031e287681230f4365e90aa0bcc9874b5b42e6520a1` /
+  `008c424f52d0140e58c8eabbee2e812c80b89419283c6b59f7cf6250a9446e8b` /
+  `d8c6b1c2baf1df178ca09793b3f69bc5e537a12c77e9397d83fd3ce8c3e3e530`.
   No endpoint current, bispectrum, physical row, or LRC(14) consequence
   follows.
 - `all_ref_concept_archaeology_20260815.py` -> matching `.out` plus frozen
