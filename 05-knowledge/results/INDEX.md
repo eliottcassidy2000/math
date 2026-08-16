@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `lrc_odd_zero_half_conjugacy_global_rank_thm3472.py` -> matching `.out`
+  [THM-3472 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
+  independent audit pending].  The odd sheet permutation
+  `ell -> 2ell+1` transports every primitive fixed-zero mask family to a
+  half-twist family, and divisor dilation proves
+  `rho_ZMC(q)=rho_H(q)` for every odd `q>=3`, including infinity.  The full
+  odd cap-seven atlas has atoms `9`; `11,15,23,25`; `13,29,51` in ranks
+  `4,6,7`, with no rank five.  Its all-integer annotated word has minimal
+  period `729,664,650`; ambient natural/harmonic coefficients for ranks
+  `4,6,7,>7` are `1/18`, `4/45`, `283376/6633315`, and
+  `691712/2211105`.  Script/output/semantic LF SHA-256:
+  `039bf8871f04be15ead6ac8725033c81ff9782371adeffe9a01f3926ba126ab0` /
+  `b52a1d1d6767db9110991f40c0d4beadd3d49d870c449ceb5a48cae75d5f4269` /
+  `d8bc9ad4a49f954ec1c76db01a7506a5965f0dc5f58881bb7315de402d151221`.
+  The `Q=8` hostile blocks the conjugacy but proves no even-rank inequality;
+  no endpoint current or LRC(14) consequence follows.
 - `lrc_three_p_half_twist_eight_owner_template_thm3469.py` -> matching `.out`
   [THM-3469 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
   independent audit pending].  For every `p>=13`, the explicit eight-owner
