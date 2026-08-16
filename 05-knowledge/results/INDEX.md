@@ -18,6 +18,20 @@
   `ff03f0ac71922f5881bf112ae2c8cbb7f5cd49198500c19d62b5eaf5b286002e` /
   `6d64acd12b3b546e8820a683f38ada905f0a52af96ab3661319eb111c45699e0` /
   `ed6845e743f8554327653521f243817264b08d1ca864c8513c0b2af7ce17ac81`.
+- `lrc_ufull_all_role_modewise_spectral_independent_audit_20260816.py` ->
+  matching `.out` [THM-3518 PROVED FINITE-EXACT CERTIFICATE + SECOND
+  INDEPENDENT AUDIT OF THM-3515].  Reconstructs all five class/address
+  tensors both from direct tau slices and from canonical guard kernels, with
+  all `3042` translation-phase identities and explicit wrong-sign/
+  wrong-normalizer hostiles.  The `5x52` rank-five claim has a nonzero minor;
+  all drift/Fourier rank-four slices have minor certificates.  Sixteen-tree,
+  reduced-Laplacian and full-graph determinants agree in every bank/chart,
+  while all `56,592` cycle pairings vanish: endpoint `B^1`, no absolute
+  `H^1`.  No ancestry, current, bispectrum, scalar exclusion, or LRC(14).
+  Script/output/semantic LF SHA-256:
+  `975b48c148b88a04b9fea07dcb6352cfaa98591f14eace1a38cd581a5e5876dc` /
+  `6eb3f28c07e99c352f1d88615d6beddeb82c264892a9f4735a420b75bf932c19` /
+  `b745ab5d95936b9a134cfe8b6ffde032e72020d950670ab8b1a4643dd58c8be6`.
 - `shortlex_bary_equal_count_harmonic_boundary_probe_20260816.py` -> matching
   `.out` [ELEMENTARY ALL-BASE THEOREM CANDIDATE + VERIFIED-EXACT SIDECAR;
   INDEPENDENT AUDIT PENDING].  In every base `b>=2`, the first and last
@@ -36,8 +50,8 @@
   `b4b755ac519f488987d8cc801bc56470c5788a32af1a6e645bde835b257369f1` /
   `8889cd4d5d3da976a099824e6242fef1a9b9f80fe83e8ae1a4c6fba5dbdf517f`.
 - `lrc_ufull_guard_bucket_all_role_spectral_probe_20260816.py` -> matching
-  `.out` [FINITE-EXACT ENDPOINT-RESPONSE THEOREM CANDIDATE; INDEPENDENT AUDIT
-  PENDING].  Extends the audited U_full guard-bucket factorization from the
+  `.out` [PROMOTED AS THM-3515; SECOND INDEPENDENT CERTIFICATE THM-3518].
+  Extends the audited U_full guard-bucket factorization from the
   `H,q5` bridge to all five distinct refined role classes.  Every class is
   nonzero on all `52=4*13` active chamber-pair/drift buckets and the resulting
   `5x52` tensor has rank five.  For every one of the 72 lawful role charts,
@@ -50,6 +64,9 @@
   `98a4cf5c82ca10027302baf2c7fb59acb0f305143e22453d0a8660fef8d90cf0` /
   `fe1d240a7e2d71ba04e50f53bc5833b45b5c6fa5cc3d576f8443f5428edfa7c0` /
   `2c9495fb8bcb731361ba331d9ca4b84a60f21551dc49b16e6519c1fc4f2e9f97`.
+  The submitted output's pointwise zero-census tuple writes only 71 zeros;
+  THM-3518 independently reconstructs the actual 72-entry tuple and leaves
+  the submitted package untouched.
 - `keller_level_three_three_coordinate_primitive_finite_field_probe_20260816.py`
   -> matching `.out` [VERIFIED-EXACT FIXED-MAP LEVEL-THREE THEOREM CANDIDATE;
   INDEPENDENT AUDIT PENDING].  In nine exact cubic quotient algebras over
