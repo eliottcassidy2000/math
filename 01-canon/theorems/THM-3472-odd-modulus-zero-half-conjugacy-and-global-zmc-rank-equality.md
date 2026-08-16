@@ -2,14 +2,16 @@
 id: THM-3472
 title: "All-modulus fixed-zero-to-half transport and global ZMC-rank equality"
 status: >
-  RESERVED / REPAIRED PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT /
-  INDEPENDENT RE-AUDIT PENDING.  For every q>=2, the full zero-mode-cochain
-  rank equals the literal half-twist cover rank, including infinity.  The
-  corrected proof uses one-way cover transport at even primitive divisors,
-  not augmented primitivity or an even sheet bijection.  Consequently all
-  cap-seven rank strata have an exact period 14362718970600 and exact
-  natural/harmonic coefficients.  No endpoint-current or LRC(14) conclusion
-  follows.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For every q>=2, the full
+  zero-mode-cochain rank rho_ZMC(q) equals the literal half-twist cover rank
+  rho_H(q), including infinity.  The proof uses the active-gcd divisor
+  interface, all-modulus one-way fixed-zero-to-half cover transport with even
+  self-opposite deletion, and divisor dilation; it does not assert augmented-
+  primitivity preservation or even-modulus sheet conjugacy.  Consequently
+  the complete cap-seven rank-priority atlas has minimal period
+  14362718970600 and exact natural/harmonic coefficients.  The >7 stratum is
+  not one asserted exact rank.  No endpoint-current, bispectrum, decrement,
+  or LRC(14) conclusion follows.
 source: codex-2026-08-15-all-modulus-layer-transport-repair
 audit: >
   first independent audit found MISTAKE-407: doubled owners are not
@@ -18,7 +20,9 @@ audit: >
   one-way transport; exact 10766900-cell transport, 6478224-cell divisor,
   3434000-cell dilation, 9216-state all-modulus CRT, 576-state odd-subatlas,
   minimal-period, dependency, semantic, security, and normal/optimized
-  replay gates; independent re-audit pending
+  replay gates; independent clean-room re-audit of the repaired proof,
+  all counts, eleven witnesses, immutable hashes, and 2643-byte transcript
+  passed
 depends_on:
   - THM-3405-common-centre-gcd-gauge-and-boolean-half-twist
   - THM-3415-zero-mode-cochain-global-rank-five-support
@@ -28,22 +32,20 @@ related:
   - THM-3469-three-times-p-half-twist-eight-owner-cover-boundary
 script: 04-computation/lrc_odd_zero_half_conjugacy_global_rank_thm3472.py
 output: 05-knowledge/results/lrc_odd_zero_half_conjugacy_global_rank_thm3472.out
-script_sha256: 0826d893e6c773418c6c6a9e7a40df4de7c619e373973ef740a634bb7d56f5eb
-output_sha256: 8bf5584f41f0db93465ffe6f6d294d13e3f25f5e972be823526ddb8bd551269c
+script_sha256: 3fce197e22e143df5944eeb8814d43f08ce9e0d71ef73b0309077f2ba84e6ce7
+output_sha256: 0d02b2a4dc67797a078dfbaefdc140778f78e33f72ee1f206583bc4daca6ed0c
 semantic_sha256: 116818fa2bbc5a0cada41b425f08c4b7afb9a3051e17d804463f002b1027d81a
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3472 -- all-modulus fixed-zero-to-half transport and global rank equality
 
-**RESERVED / REPAIRED PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT /
-INDEPENDENT RE-AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 The first independent audit rejected the original primitivity claim and its
 even-modulus boundary.  MISTAKE-407 records the exact failure.  The repaired
-proof and deterministic companion pass their internal gates, but this file
-remains outside the proved dependency graph until the stronger all-modulus
-statement passes a fresh immutable-package audit.
+proof, deterministic companion, and fresh independent immutable-package
+audit all pass.
 
 ## 1. The two ranks
 

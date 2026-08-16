@@ -1,5 +1,5 @@
 THM-3472 EXACT DETERMINISTIC COMPANION
-STATUS: RESERVED / REPAIRED PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT
+STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
 DEPENDENCY: THM-3405 d3e7dbeeb85c6f897bd9e31270bd0b6602ae4feac3b46a45eb5ce23ae5d24fe0 01-canon/theorems/THM-3405-common-centre-gcd-gauge-and-boolean-half-twist.md
 DEPENDENCY: THM-3415 de8d2f615695070dc75cad38ad4a9c22308d8bf900cd6f9a69cd2003f815a14d 01-canon/theorems/THM-3415-zero-mode-cochain-global-rank-five-support.md
 DEPENDENCY: THM-3453 a4444813a2b24aa55613eef5f4cc0538ca0148f16297dff46f80d723f1beb247 01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md

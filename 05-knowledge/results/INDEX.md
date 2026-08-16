@@ -35,8 +35,8 @@
   No global-minimum, endpoint-current, bispectrum, or LRC(14) conclusion
   follows.
 - `lrc_odd_zero_half_conjugacy_global_rank_thm3472.py` -> matching `.out`
-  [THM-3472 RESERVED / REPAIRED PROVISIONAL PROOF CANDIDATE +
-  VERIFIED-EXACT; independent re-audit pending].  MISTAKE-407 repairs the
+  [THM-3472 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  MISTAKE-407
+  repairs the
   false augmented-primitivity claim: `ell -> 2ell+1` is a conjugacy only for
   odd `Q`, but one-way cover transport survives every even `Q` after the
   self-opposite owner is deleted.  An explicit active-gcd divisor formula and
@@ -46,8 +46,8 @@
   natural/harmonic coefficients for ranks `4,5,6,7,>7` are `2/9`, `4/45`,
   `25/207`, `165741596/1554406815`, and
   `717341696/1554406815`.  Script/output/semantic LF SHA-256:
-  `0826d893e6c773418c6c6a9e7a40df4de7c619e373973ef740a634bb7d56f5eb` /
-  `8bf5584f41f0db93465ffe6f6d294d13e3f25f5e972be823526ddb8bd551269c` /
+  `3fce197e22e143df5944eeb8814d43f08ce9e0d71ef73b0309077f2ba84e6ce7` /
+  `0d02b2a4dc67797a078dfbaefdc140778f78e33f72ee1f206583bc4daca6ed0c` /
   `116818fa2bbc5a0cada41b425f08c4b7afb9a3051e17d804463f002b1027d81a`.
   The `Q=15` augmented-gcd and `Q=8` nonbijectivity hostiles are retained;
   no endpoint current or LRC(14) consequence follows.

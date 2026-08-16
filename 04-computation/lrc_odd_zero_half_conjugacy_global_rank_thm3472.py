@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact deterministic companion for repaired provisional THM-3472.
+"""Exact deterministic companion for repaired and audited THM-3472.
 
 The universal map is one-way at even modulus: a fixed-zero mask is sampled
 on the image of ell -> 2ell+1 and becomes a literal doubled-owner half mask.
@@ -460,7 +460,7 @@ def main() -> None:
         require(semantic_hash == EXPECTED_SEMANTIC_SHA256, ("semantic drift", semantic_hash))
 
     print("THM-3472 EXACT DETERMINISTIC COMPANION")
-    print("STATUS: RESERVED / REPAIRED PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT")
+    print("STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED")
     for label, relative, digest in dependency_hashes:
         print(f"DEPENDENCY: {label} {digest} {relative}")
     print(f"SECURITY_IMPORTS: {','.join(security)}")
