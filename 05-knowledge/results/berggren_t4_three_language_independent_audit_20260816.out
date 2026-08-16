@@ -1,0 +1,34 @@
+BERGGREN / T4 THREE-LANGUAGE INDEPENDENT EXACT AUDIT
+STATUS: ACCEPTED WITH ONE TERMINOLOGY REPAIR; NO LRC OR JACOBIAN CONSEQUENCE
+SCRIPT: 04-computation/berggren_t4_three_language_independent_audit_20260816.py
+OUTPUT: 05-knowledge/results/berggren_t4_three_language_independent_audit_20260816.out
+THM3339_LF_SHA256: 1e4aa8cd9d6cc9bf342328a4af0e5db8cd7eefb51eea08460d03f2c6410cee51
+MATRIX_FIRST_PROJECTIVE_ACTIONS: {'A': (1, 3, 2, 0), 'B': (1, 3, 0, 2), 'C': (3, 1, 0, 2)}
+TRUE_MOD2_LINEAR_ACTIONS: {'A': ((0, 1), (1, 0)), 'B': ((0, 1), (1, 0)), 'C': ((1, 0), (0, 1))}
+STATIC_COUNTS_ANY_TRANSLATION_A_B_C: {'A': 0, 'B': 8, 'C': 0}
+STATIC_COUNTS_PINNED_DRIFT_A_B_C: {'A': 0, 'B': 4, 'C': 0}
+SIX_FRAME_COUNTS_BY_TRANSLATION_0_P_Q_R: {'A': (0, 0, 0, 0), 'B': (0, 512, 512, 0), 'C': (0, 0, 0, 0)}
+B_POSITIVE_COUNTS: pinned=4, either lawful four-cycle translation=8, and each lawful translation has 8^3=512 six-frame families
+VARIABLE_QUOTIENT_GENERATORS: {'A': (1, 2, 0), 'B': (1, 0, 2), 'C': (1, 2, 0)} with linear bits (1,1,0)
+VARIABLE_LANGUAGE: image/minimal DFA/syntactic group = S3 x C2 of order 12; right stabilizer of the four accepting states is trivial
+VARIABLE_ACCEPTANCE: (mu,eps)=(id,0) or (reflection,1); direct all-48 S4 x <J> gauge enumeration gives 16 passing raw pairs
+VARIABLE_LEVEL_COUNTS_0_TO_19: (1, 1, 3, 11, 25, 81, 251, 715, 2193, 6593, 19603, 59115, 177257, 531025, 1594827, 4783211, 14346913, 43049985, 129139619, 387411787)
+VARIABLE_RECURRENCE_GF: (2,2,6,-9); numerator (1,-1,-1,-3), denominator (1,-2,-2,-6,9), gcd=1
+VARIABLE_SPECTRUM: trace-Newton characteristic equals (L-3)(L-1)^4(L+1)^3(L^2+2L+3)^2 and the squarefree factor annihilates the full 12-state transfer
+VARIABLE_SHORTLEX_HOSTILE_MAX_ABS_DISCREPANCY_OVER_SQRT_N_DEPTH10: 0.666666666667
+VARIABLE_CONCLUSION: a_n=(3^n+1+Re((-1+i*sqrt(2))^n))/3; shortlex A(N)=N/3+O(sqrt(N)), hence harmonic coefficient 1/3
+FIXED_LANGUAGE: paired image/minimal DFA/syntactic group = S4 x D4 of order 192; pure factors 24 and 8 and accepting right stabilizer trivial
+FIXED_PARITY_CLASSES_AND_ACCEPTING: classes={0: 96, 1: 96}, accepting={0: 16, 1: 18}
+FIXED_LEVEL_COUNTS_0_TO_29: (1, 1, 1, 4, 13, 46, 113, 421, 1121, 3667, 9801, 33166, 88893, 299248, 796489, 2690239, 7173601, 24211333, 64565297, 217930552, 581169293, 1961325202, 5230140609, 17651769337, 47071591041, 158866686871, 423643779001, 1429800073474, 3812799847933, 12868194012436)
+FIXED_MINIMAL_RECURRENCE_LAGS_1_TO_14: (0,7,0,7,0,71,0,213,0,189,0,1701,0,-2187); reduced GF denominator has the eight claimed factors
+FIXED_POLAR_COEFFICIENTS_NOT_RESIDUES: lim_(x->1/3)(1-3x)F=17/96 and lim_(x->-1/3)(1+3x)F=-1/96
+FIXED_ASYMPTOTIC: (17/96)3^n-(1/96)(-3)^n+O(3^(n/2)); parity densities 1/6 and 3/16
+FIXED_SHORTLEX_BOUNDARY_LIMITS: even=11/64, odd=35/192; natural density does not exist
+FIXED_CYLINDER_GATE: two-letter increments generate all 96 states of ker(chi); B^4 and C^6 give paired return lengths 2 and 3, so each parity chamber mixes aperiodically
+FIXED_WEIGHTED_LEVEL_ERRORS_DEPTH_8_9_10: {8: 0.004635052292971148, 9: -0.0002151450867403093, 10: 9.022042594211688e-05}
+FIXED_HARMONIC_CONCLUSION: cylinder equidistribution gives full-level masses (1/6)log3 and (3/16)log3; two-level Cesaro averaging gives coefficient 17/96, while one partial level is O(1)
+ROOT_TO_CHILD_HOSTILE: BA applies B then A, so AB*(1,2)=(5, 8); the reversed convention gives BA*(1,2)=(3, 8) and fails immediately
+FIBONACCI_GATES: variable translation k mod 6 in {0,1,2}; fixed drift k mod 12 in {0,1,2}; index harmonic coefficients 1/2 and 1/4
+QUANTIFIER_LADDER: static atlas < wordwise gauge+translation < wordwise gauge with fixed drift < one common branch gauge; only the last is ruled out generatorwise
+SEMANTIC_SHA256: 0c363166248508d0712542fd725df56b32769680ba9acbf8ee63b4a6115f88cf
+VERDICT: all substantive claims in commits 62457a7db, 9459b7693, 85f20bfde, and the 4aae3772a mixing gate are accepted; repair only the misuse of 'residue' for normalized polar coefficient
