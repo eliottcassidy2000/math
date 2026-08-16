@@ -1,6 +1,7 @@
 # Independent hostile audit of fixed-chart five-face renewal propagation
 
-**Verdict: SOUND; PROMOTION RECOMMENDED AT THE STATED CONDITIONAL SCOPE.**
+**Verdict: SOUND; SUBSEQUENTLY PROMOTED AS THM-3522 AT THE STATED
+CONDITIONAL SCOPE.**
 
 The proposed renewal lemma survives a clean derivation from the literal
 inverse-chart numerators.  There is no hidden denominator, missing branch,
@@ -17,9 +18,10 @@ Together with the first-three-face transform in
 this gives a complete packet for `Q`.  The fixed consequences are complete
 packets `A(1699,615)` for `R_5` and `A(10663,3867)` for `R_6`.
 
-This audit does not promote the reserved
-`THM-3522-fixed-keller-five-face-renewal-propagation` namespace and does not
-edit the candidate files.
+This audit did not itself promote the then-reserved
+`THM-3522-fixed-keller-five-face-renewal-propagation` namespace or edit the
+candidate files.  Its conclusions were subsequently combined with the
+independent Vieta audit and promoted in THM-3522.
 
 ## 1. Inheritance and hostile posture
 

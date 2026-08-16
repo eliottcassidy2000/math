@@ -1,7 +1,7 @@
 # The two hybrid faces propagate: `R_5` and `R_6` inherit complete packets
 
-**Status: PROOF CANDIDATE + VERIFIED-EXACT EXPONENT/SCALAR SIDECAR;
-independent audit pending.**  The exact companion is
+**Status: PROVED in THM-3522 + VERIFIED-SYMBOLIC + TWICE INDEPENDENTLY
+HOSTILE-AUDITED.**  The exact companion is
 `04-computation/keller_five_face_renewal_propagation_probe_20260816.py`.
 The `R_5` application uses proved THM-3506 and THM-3513.  The `R_6`
 application additionally uses proved THM-3521.  No image-prime,
@@ -295,5 +295,6 @@ python -B -O 04-computation/keller_five_face_renewal_propagation_probe_20260816.
 
 The companion verifies every general linear-form identity, the unique-face
 intersection, the THM-3513 scalar calibration, both new packets, both exact
-coefficient pairs, and the Cassini determinants.  It is an algebraic audit
-of the proof above, not a substitute for the independent theorem audit.
+coefficient pairs, and the Cassini determinants.  Two independent companions
+then rederived the inverse ratios and nonmonic Vieta factors and supplied the
+hostile audit used to promote THM-3522.

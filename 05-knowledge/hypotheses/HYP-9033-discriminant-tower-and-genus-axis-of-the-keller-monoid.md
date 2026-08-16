@@ -17,10 +17,12 @@ status: >
   next old-`L` valuation `v_L(N(G))=-271`, polynomial localization of
   `R_5=L^271N(G)`, and the conditional five-face transform.  THM-3521 proves
   the following finite-sheet gate `v_L(N(R_5))=-1699`, polynomial
-  localization of `R_6=L^1699N(R_5)`, and exposed top pair `(10663,3867)`;
-  the fifth image prime, degree-243 gate, renewal of `R_5`, positive
-  discriminant multiplicities, and all-level renewal remain open.  Nothing
-  here is a JC(2) or classification claim.
+  localization of `R_6=L^1699N(R_5)`, and exposed top pair `(10663,3867)`.
+  THM-3522 proves the fixed-chart renewal implication and therefore the
+  complete packets `A(1699,615)` for `R_5` and `A(10663,3867)` for `R_6`.
+  The next old-`L` polynomiality gate, fifth image prime, degree-243 gate,
+  positive discriminant multiplicities, and unconditional all-level tower
+  remain open.  Nothing here is a JC(2) or classification claim.
 source: opus-2026-07-28 (from the uniform disc law found by the
   THM-2546 referee run: disc = -4 (square)^2 L for all three
   coordinate cubics of the sporadic Keller map)
@@ -39,6 +41,7 @@ related:
   - THM-3504 (fourth prime image and four-component nonproperness set)
   - THM-3506 (five-face transform and the next old-boundary valuation)
   - THM-3521 (fixed-R5 finite sheet and following old-boundary valuation)
+  - THM-3522 (fixed-chart complete-packet renewal propagation)
 ---
 
 # HYP-9033 -- the discriminant tower and the genus axis
@@ -197,8 +200,8 @@ gcd(R_5,L)=1.
 
 It also proves the exposed face
 `R_5 ~ x^1699(3xz-2y)^615` in the relevant initial form.  The fifth image
-role, integral normalizations, global degree ledgers, degree-243 separability,
-and the two Newton renewal faces needed for all-level iteration remain open.
+role, integral normalizations, global degree ledgers, and degree-243
+separability remain open.
 THM-3521 closes the next finite-sheet question by proving
 
 ```text
@@ -207,8 +210,17 @@ R_6=L^1699N(R_5) in Q[a,b,c],
 gcd(R_6,L)=1.
 ```
 
-It also transports the next top face with pair `(10663,3867)`, but not a
-complete packet for `R_5` or `R_6`.
+It also transports the next top face with pair `(10663,3867)`.  THM-3522
+then proves the general fixed-chart implication
+
+```text
+complete A(e,m) + polynomial L^eN(P)
+  => complete A(7e-2m,3e-2m),
+```
+
+and consequently gives complete packets `A(1699,615)` for `R_5` and
+`A(10663,3867)` for `R_6`.  The next unpaid tower gate is finite-sheet
+nonvanishing, hence polynomiality, for `L^10663N(R_6)`.
 
 ## 3. Two crevasse invariants for atomhood (spectrum repaired)
 
@@ -280,7 +292,8 @@ place to HUNT for a JC(2) counterexample instead.
   image restriction.  THM-3506 proves the next old-boundary/localization gate
   `v_L(N(G))=-271` and `R_5=L^271N(G)` coprime to `L`, but no fifth image or
   discriminant claim.  THM-3521 proves the following old-boundary gate
-  `v_L(N(R_5))=-1699` and polynomial `R_6`, still without a fifth image or
+  `v_L(N(R_5))=-1699` and polynomial `R_6`; THM-3522 upgrades both `R_5` and
+  `R_6` to complete five-face packets, still without a fifth image or
   degree-243 claim.
 - P2 (VERIFIED-EXACT for the two fixed tame members): W1 and W2 obey
   `disc=-(det J)^2(square)^2L_W`, with `L_W=L o T^(-1)`.  A general
@@ -304,16 +317,18 @@ and the four-component set; THM-3506 adds the conditional five-face matrix
 `(e,m)->(7e-2m,3e-2m)`, the exact pair `(271,99)`, and the next old-`L`
 valuation/localization; THM-3513 closes the two renewal faces of `G`; and
 THM-3521 adds `v_L(N(R_5))=-1699`, polynomial `R_6`, and its exposed top
-pair.  None gives exact positive discriminant multiplicities or an all-level
-factorization law.
+pair; THM-3522 adds conditional fixed-chart renewal and the complete packets
+of `R_5` and `R_6`.  None gives exact positive discriminant multiplicities,
+the next polynomiality gate, or an unconditional all-level factorization law.
 Trace-zero persistence at depth two and the `8 -> 512` cubing pattern are
 VERIFIED for the fixed construction only.  The W1/W2 identities are exact for
 those two tame conjugates, not a classification theorem.  P4 is proved for
 the fixed tower through depth four.  THM-3506 constructs the depth-five
-cleared numerator `R_5`, and THM-3521 closes its finite-sheet gate and
-constructs the following old-`L` cleared norm `R_6`.  The next decisive tests
-are the two renewal faces of `R_5`, the image multiplicity/distinctness of
-`R_5`, and degree-243 separability.
+cleared numerator `R_5`, THM-3521 closes its finite-sheet gate and constructs
+the following old-`L` cleared norm `R_6`, and THM-3522 closes renewal through
+both packets.  The next decisive tests are finite-sheet nonvanishing for
+`L^10663N(R_6)`, the image multiplicity/distinctness of `R_5`, and
+degree-243 separability.
 
 ## Loss ledger
 

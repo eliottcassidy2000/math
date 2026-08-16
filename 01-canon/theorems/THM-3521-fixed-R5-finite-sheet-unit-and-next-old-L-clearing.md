@@ -6,10 +6,12 @@ status: >
   fixed sporadic Keller map, R_5=L^271 N(G) is nonzero at the canonical
   finite inverse point q=(2,5/6,-7/8) over L=0.  Hence
   v_L(N(R_5))=-1699, so R_6:=L^1699 N(R_5) is polynomial and coprime to L.
-  Its exposed top face is C x^10663(3xz-2y)^3867 with C nonzero.  This does
-  not prove the renewal faces of R_5, irreducibility or image status of R_5,
-  the degree-243 separability gate, an all-level law, or any general
-  Jacobian-conjecture claim.
+  Its exposed top face is C x^10663(3xz-2y)^3867 with C nonzero.  This theorem
+  itself does not prove the renewal faces of R_5; THM-3522 subsequently proves
+  fixed-chart renewal and closes the complete packets of R_5 and R_6.
+  Irreducibility or image status of R_5, the degree-243 separability gate,
+  the next polynomiality gate, an unconditional all-level law, and every
+  general Jacobian-conjecture claim remain open.
 source: codex/fixed-R5-finite-sheet/2026-08-16
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
@@ -19,6 +21,7 @@ depends_on:
   - THM-3513-fixed-G-hybrid-newton-renewal-faces
 related:
   - THM-3504-level-four-sporadic-keller-image-prime-and-four-component-nonproperness
+  - THM-3522-fixed-keller-five-face-renewal-propagation
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
   - MISTAKE-415
 scripts:
@@ -281,7 +284,7 @@ the complete packet of `G`.  Applying that argument with (6) proves (7)--
 ## 6. Exact boundary
 
 This theorem closes exactly one gate: the finite old-`L` sheet at the next
-rung.  It does **not** prove any of the following:
+rung.  By itself it does **not** prove any of the following:
 
 - the `z`-top or minimum-`gamma` renewal face of `R_5`;
 - a complete packet `A(1699,615)` for `R_5`;
@@ -292,6 +295,11 @@ rung.  It does **not** prove any of the following:
 - a sixth image component attached to `R_6`;
 - an all-level norm recurrence, arbitrary-map classification, `JC(2)`,
   `DC(2)`, or any general Jacobian-conjecture conclusion.
+
+THM-3522 subsequently closes the first two bullets by proving the complete
+packet `A(1699,615)` for `R_5`, and also proves `A(10663,3867)` for `R_6`.
+It does not change the remaining bullets.  The next finite-sheet and
+polynomiality gate is `L^10663N(R_6)`.
 
 Reproduce both exact routes with
 

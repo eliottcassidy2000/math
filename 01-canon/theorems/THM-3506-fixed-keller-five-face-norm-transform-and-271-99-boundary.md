@@ -9,8 +9,11 @@ status: >
   v_L(N(G))=-271, so R_5=L^271 N(G) is polynomial and coprime to L, and its
   exposed pair is (1699,615).  This theorem itself does not prove the two
   renewal faces for G; THM-3513 subsequently proves both for that fixed
-  polynomial.  Renewal at later rungs remains open.  No fifth image prime,
-  all-level induction, or general Jacobian claim follows.
+  polynomial.  THM-3522 subsequently proves that complete packets renew in
+  this fixed inverse chart whenever the next cleared norm is polynomial,
+  closing the packets of R_5 and R_6.  The next polynomiality gate, fifth
+  image prime, unconditional all-level induction, and every general
+  Jacobian claim remain open.
 source: codex/tropical-keller-norm/2026-08-16
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
@@ -21,6 +24,7 @@ related:
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
   - THM-3513-fixed-G-hybrid-newton-renewal-faces
   - THM-3521-fixed-R5-finite-sheet-unit-and-next-old-L-clearing
+  - THM-3522-fixed-keller-five-face-renewal-propagation
 script: 04-computation/keller_tropical_norm_face_recurrence_probe_20260816.py
 output: 05-knowledge/results/keller_tropical_norm_face_recurrence_probe_20260816.out
 script_sha256: fe1b03de9061c997a1abba6b88753e589c0a01f9f92762e49fe7ea0504ce9797
@@ -495,11 +499,13 @@ from a face picture alone.
 
 This theorem proves the three transported faces (34), (36), (37), but not
 the two renewal faces of `G`.  THM-3513 subsequently derives both by two
-hybrid Newton limits, so the fixed `G` now has the complete packet
-`A(271,99)`.  For an all-level proof from (12), renewal still has to be
-proved for `R_5` and later rungs, together with a separate finite-sheet
-unit/polynomiality gate at each new cleared norm.  THM-3521 closes that
-finite-sheet gate for `R_5` and no later rung; it does not close renewal.
+hybrid Newton limits, so the fixed `G` has the complete packet `A(271,99)`.
+THM-3522 subsequently proves that a complete packet renews through this
+fixed inverse chart whenever the next cleared norm is polynomial.  Together
+with THM-3521's following finite-sheet gate, it gives complete packets
+`A(1699,615)` for `R_5` and `A(10663,3867)` for `R_6`.  Each later rung still
+requires a separate finite-sheet unit/polynomiality proof; the next such
+gate is `L^10663N(R_6)`.
 
 ## 8. Monoid comparison and exact scope
 

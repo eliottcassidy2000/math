@@ -1,9 +1,10 @@
 # The renewal hostile closes by taking the norm before reducing the root label
 
-**Status: exact independent proof candidate delivered to the owner of reserved
-THM-3522.**  THM-3522 remains `RESERVED / UNPROVED` until its owner completes
-the theorem audit and promotes it.  This reflection records a disjoint
-derivation and exact companion; it does not itself alter the canonical status.
+**Status: exact independent hostile audit; subsequently incorporated into
+proved THM-3522.**  This reflection records the disjoint Vieta derivation and
+exact companion.  It did not itself alter canonical status; the theorem owner
+later combined it with the primary proof and the other independent audit to
+promote THM-3522.
 
 ## Inheritance and the apparent obstruction
 
