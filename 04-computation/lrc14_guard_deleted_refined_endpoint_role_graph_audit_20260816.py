@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cheap independent graph-factor audit for the refined U_full response."""
+"""Independent graph-factor and sidecar-pin audit for promoted THM-3479."""
 
 import ast
 from collections import Counter
@@ -11,9 +11,21 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ROLE_NAME = "lrc_relation_role_chart_weighted_closure_probe_20260815.py"
-ROLE_SHA256 = "e8eea838da1b4636c9796b71382e8a182e7ecfeb4ea17fef7eb265289889c502"
+ROLE_SHA256 = "207c65ca235ea5647e346027d424264e8abbcf27c5f574b5901cca13611d7e03"
+ROLE_OUTPUT = "lrc_relation_role_chart_weighted_closure_probe_20260815.out"
+ROLE_OUTPUT_SHA256 = "d9fd5272303675d9295a26faab3ddfc236941d2b99307af50d88e0b7b7af4bed"
 PRIMARY_OUTPUT = "lrc14_guard_deleted_refined_endpoint_role_probe_20260816.out"
-PRIMARY_OUTPUT_SHA256 = "056093c45a05e50028f959a1a92ade136fa435abddea41266b30d92380e2552c"
+PRIMARY_OUTPUT_SHA256 = "10a98351cc59615a5b6d2b8f555e0936d1a39566d9906127edc2b0fbc3918e73"
+SIDE_PINS = (
+    ("04-computation/lrc_relation_k4_xor_star_triangle_probe_20260815.py",
+     "b4ddf1cc735bc493a7dcdea5d622ff996aef0259d6f474282f59454bf45ad041"),
+    ("05-knowledge/results/lrc_relation_k4_xor_star_triangle_probe_20260815.out",
+     "c899644e3371a611d5385b95e56268e85d2792d682710c0a92f0f4693b0838b9"),
+    ("04-computation/lrc_endpoint_role_q1_gauge_quotient_obstruction_20260815.py",
+     "02d6cf3553edf3412da6d8eb99c7937f841d9441cc9599bc01319f72596b5887"),
+    ("05-knowledge/results/lrc_endpoint_role_q1_gauge_quotient_obstruction_20260815.out",
+     "14e9483fd1ec42cc0cdffb156dc520a491bc95d0816a85828732c965858ec5d7"),
+)
 PRIME = 572252886246508880869
 VALUES = {
     "c1": 405336876493642499425,
@@ -57,6 +69,10 @@ def digest(value):
 def main():
     primary_output = ROOT / "05-knowledge/results" / PRIMARY_OUTPUT
     require(lf_hash(primary_output) == PRIMARY_OUTPUT_SHA256, "primary output drift")
+    role_output = ROOT / "05-knowledge/results" / ROLE_OUTPUT
+    require(lf_hash(role_output) == ROLE_OUTPUT_SHA256, "role output drift")
+    for relative, expected in SIDE_PINS:
+        require(lf_hash(ROOT / relative) == expected, (relative, "sidecar drift"))
     role = load_role_module()
     charts = role.role_charts()
     require(len(charts) == 72, len(charts))
@@ -89,12 +105,14 @@ def main():
     require(not any(isinstance(node, ast.Assert) for node in ast.walk(ast.parse(source))),
             "assert node")
     print("LRC REFINED ENDPOINT ROLE U_FULL INDEPENDENT GRAPH AUDIT")
-    print("status=FINITE-EXACT graph post-audit only; THM-3479 RESERVED; LRC(14) OPEN")
-    print("dependencies=%s:%s;%s:%s" % (
-        ROLE_NAME, ROLE_SHA256, PRIMARY_OUTPUT, PRIMARY_OUTPUT_SHA256,
+    print("status=FINITE-EXACT independent graph component; THM-3479 PROVED STRUCTURAL + INDEPENDENTLY AUDITED; LRC(14) OPEN")
+    print("dependencies=%s:%s;%s:%s;%s:%s" % (
+        ROLE_NAME, ROLE_SHA256, ROLE_OUTPUT, ROLE_OUTPUT_SHA256,
+        PRIMARY_OUTPUT, PRIMARY_OUTPUT_SHA256,
     ))
-    print("universe=the five frozen U_full refined response residues; all 72 canonical role charts")
-    print("implementation=separate canonical role-chart edge/K4 determinant engine")
+    print("scope_sidecar_pins=%s" % (SIDE_PINS,))
+    print("universe=the five frozen U_full refined response residues; all 72 declared labelled role-contract charts")
+    print("implementation=separate frozen labelled-chart edge/K4 determinant engine; no source-native or C13-equivariant map")
     print("factor_zero_counts=(bridge,left_K4,right_K4,product)=%s" % (zeros,))
     print("bridge=%d multiplicity=72" % EXPECTED_BRIDGE)
     print("factor_histograms=(left=%s,right=%s)" % (

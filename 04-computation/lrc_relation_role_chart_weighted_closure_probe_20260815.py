@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Exact role-chart probe from a THM-3479 relation tuple to the 7x13 carrier.
 
-This is a finite-exact structural sidecar, not a theorem companion.  It maps
+This is a finite-exact structural component of promoted THM-3479.  It maps
 relation-coordinate *potentials* to exact graph coboundaries.  It does not map
 THM-2334 endpoint currents, phases, or physical LRC words to carrier edges.
 """
@@ -30,13 +30,13 @@ SOURCE_PINS = (
     (
         "THM-3479",
         ROOT / "01-canon/theorems/THM-3479-literal-half-twist-relation-current-two-transplant-certificate.md",
-        "1203c652fc1e480699d3f94335baba8bbefc1447eec831c7b42c011c241ee522",
-        "RESERVED-CANDIDATE",
+        "025998551e3cdf3c6e4db5c0a4f208dd32f6845970fd4729d4a276035e0fdfeb",
+        "PROVED-STRUCTURAL-AUDITED",
     ),
 )
 
 EXPECTED_SEMANTIC_SHA256 = (
-    "07daaa2bd1f5fd09ff433e40703ecd7635b59aef520a68861a4fef3437b9a1b3"
+    "1992d46a4df3a3c862e9c36ecfc4f992eea654d9373b852836c9652962ad49e7"
 )
 
 LABELS = ("c1", "c2", "c3", "H", "q1", "q2", "q3", "q4", "q5")
@@ -493,7 +493,7 @@ def main() -> None:
                  EXPECTED_SEMANTIC_SHA256))
 
     print("LRC RELATION ROLE-CHART WEIGHTED CLOSURE FINITE-EXACT SIDECAR")
-    print("STATUS: FINITE-EXACT STRUCTURAL SIDECAR TO RESERVED THM-3479; NOT CANON")
+    print("STATUS: FINITE-EXACT STRUCTURAL COMPONENT OF PROVED THM-3479; INDEPENDENTLY AUDITED")
     print(f"SOURCE_HASHES: {hashes}")
     print(f"SECURITY: {security}")
     print(f"RELATION_LABELS: {LABELS}")

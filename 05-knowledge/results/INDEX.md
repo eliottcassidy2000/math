@@ -220,27 +220,34 @@
   syntax/AST/render audited but not rerun end-to-end after packaging.  This
   proves no arbitrary-support SFC or FC case.
 - `lrc_half_twist_relation_current_bridge_thm3479.py` -> matching `.out`
-  [THM-3479 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  independent audit pending].  The all-91-unit relation
+  [THM-3479 PROVED STRUCTURAL + VERIFIED-EXACT + FINITE-EXACT +
+  INDEPENDENTLY AUDITED].  The all-91-unit relation
   `(-27,-27,-27,20110798,-41,-27,-27,-27,38)` is realized by two primitive
   q=11 tuples.  U_full has positive delayed mass and all `169/169`
-  unrestricted THM-2334 target aggregates nonzero; U_clock has the literal
-  common centre `1/22`, a same-clock delayed word, positive delayed mass, a
-  two-embedding nonconstant endpoint bank, and one explicit atomic address
-  term.  Exact q=27/q=51 lifts preserve the mod-7, 13-adic, and q=51 affine
-  `k mod 3` data.  A separate exact carrier audit finds `|Aut(G)|=72`, orders
-  `{1,2,3,4,6}`, and edge orbits `1+6+6`, so no regular-`C13`-equivariant
-  bijection maps a native thirteen-character fibre to the thirteen
-  private-support edges.  A labelled non-equivariant map and phase/holonomy
-  remain open.  Script/output/core-semantic/carrier-semantic LF SHA-256:
-  `6b8bc12eb0e6a2bd03ce9a1add43561a1fa27872c3584cc980f98c3e324e2c2b` /
-  `23185975ce26fa1dec0262894d1c3a14b3f5b040079fea7ab308e2d7f518e2b8` /
+  unrestricted THM-2334 target aggregates nonzero.  Its exact guard-packet-
+  row-refined `13^3` bank has five distinct role values and nonzero bridge,
+  both `K4` factors, and product in all `72` labelled owner-oriented charts.
+  U_clock has the literal common centre `1/22`, same-clock delayed word,
+  positive delayed mass, a two-embedding nonconstant endpoint bank, and one
+  atomic address term, but no complete coarse or refined bank.  Exact
+  q=27/q=51 lifts preserve only the stated mod-7, 13-adic, and q=51 affine
+  `k mod 3` decorations.  `|Aut(G)|=72`, with orders `{1,2,3,4,6}` and edge
+  orbits `1+6+6`, forbids a native regular-`C13`-equivariant fibre-to-edge
+  bijection.  The 72 nonvanishing charts instead map eight labelled roles to
+  vertices and then take owner-oriented edge differences; they lie in `B^1`,
+  have zero absolute `H^1`, and are noncanonical/nonphysical.  Core
+  script/output/core-semantic/carrier-semantic LF SHA-256:
+  `ad2a620cdc238f28e3384698b2c612f38cdf2566bd56b76d1cbabcc03107ec0b` /
+  `e1e4355290c493d8f9518a4bba3825173bb3137c3d50df421816946e6b1f1207` /
   `1bf53086d3da347dde443175462be716da6e9dac54c96582718d19ec8fddff21` /
   `3f17c2206feec73da48a989ab2150ceb1c7d1bc275c77291df476d882957581a`.
-  Grouped `C(a;X,m)`, U_clock `A(e_c2)`, all-unit `B(q)`, ancestry,
-  bispectrum, physical current, scalar-row exclusion, and LRC(14) are OPEN.
+  The refined transform retains the literal Boolean guard but has no mod-7
+  character.  Grouped `C(a;X,m)`, U_clock `A(e_c2)`/refinement, all-unit
+  `B(q)`, ancestry, bispectrum, physical current, scalar-row exclusion, and
+  LRC(14) are OPEN.
 - `lrc_relation_role_chart_weighted_closure_probe_20260815.py` -> matching
-  `.out` [FINITE-EXACT STRUCTURAL SIDECAR TO RESERVED THM-3479; NOT CANON].
+  `.out` [FINITE-EXACT STRUCTURAL COMPONENT OF PROVED THM-3479;
+  INDEPENDENTLY AUDITED].
   The six `-27` relation slots split as the blocker triple and
   `{q2,q3,q4}`, matching the two outer triples of the proved two-`K4`
   carrier.  Deleting `q1` as rational gauge, sending `H` to the unique hub
@@ -254,29 +261,67 @@
   index 41, and the flat-potential hostile vanishes.  This uses relation
   coordinates as potentials, not endpoint amplitudes or a physical current.
   Script/output/semantic LF SHA-256:
-  `e8eea838da1b4636c9796b71382e8a182e7ecfeb4ea17fef7eb265289889c502` /
-  `b25ea10e40082d2a1ced9d7f85a6d3525dbffde8cfd4bdb7ee6a0fe3ca266ad4` /
-  `07daaa2bd1f5fd09ff433e40703ecd7635b59aef520a68861a4fef3437b9a1b3`.
+  `207c65ca235ea5647e346027d424264e8abbcf27c5f574b5901cca13611d7e03` /
+  `d9fd5272303675d9295a26faab3ddfc236941d2b99307af50d88e0b7b7af4bed` /
+  `1992d46a4df3a3c862e9c36ecfc4f992eea654d9373b852836c9652962ad49e7`.
 - `lrc_endpoint_role_q1_gauge_quotient_obstruction_20260815.py` -> matching
-  `.out` [FINITE-EXACT UNNUMBERED SIDECAR; THM-3479 REMAINS RESERVED].  The
-  lawful coordinate response is address-side
+  `.out` [FINITE-EXACT QUOTIENT/BACK-MAP COMPONENT OF PROVED THM-3479;
+  INDEPENDENTLY AUDITED].  The lawful coordinate response is address-side
   `P_i=A_w([e_i-(w_i/w_q1)e_q1])`; evaluating character-side `gamma_w` on
   coordinate vectors is ill-typed.  For both U_full and U_clock the coarse
   `F_13^2` quotient identifies `H` and `q5`, so the unique carrier bridge has
   zero weight and every one of all 72 role-chart tree determinants vanishes,
   independently of the endpoint function.  Among the six named single-row
-  deletions, only guard deletion restores this contrast; adjoining character
-  `e_H` gives the dimension-minimal `F_13^3` quotient and a 2,197-twist bank.
-  Synthetic refined controls are nonzero in all 72 charts, but the actual
-  refined endpoint values, inverse DFT, common-ancestry realization, grouped
-  coefficient, bispectrum, and LRC(14) consequences remain OPEN.
+  deletions, only removal of the `H`-labelled owner-packet row restores this
+  contrast; the Boolean `guard_safe` factors remain.  Adjoining character
+  `e_H` gives the dimension-minimal named `F_13^3` quotient and a 2,197-twist
+  bank.  The pinned actual U_full bank realizes the normalized inverse DFT,
+  coarse fibre-sum back-map, five role values, and all 72 graph products.
+  U_clock refinement, common-ancestry realization, grouped coefficient,
+  bispectrum, and LRC(14) consequences remain OPEN.
   Script/output/semantic LF SHA-256:
-  `49e9a3657ceae8ada0e8487ee980115f7d1da1f16a7bbf121fdd5cfbd3fcc1b9` /
-  `e1a8b5ca90044a3b157828b444a582a3da36b1b869a6ad1d3d384333026b8a67` /
+  `02d6cf3553edf3412da6d8eb99c7937f841d9441cc9599bc01319f72596b5887` /
+  `14e9483fd1ec42cc0cdffb156dc520a491bc95d0816a85828732c965858ec5d7` /
   `fe9fe2d4b1d98aba3b60e1a7f6823bcccabed04d7a319f3eb20c83d25c799422`.
+- `lrc14_guard_deleted_refined_endpoint_role_probe_20260816.py` -> matching
+  `.out` [FINITE-EXACT U_FULL ENDPOINT COMPONENT OF PROVED THM-3479;
+  INDEPENDENTLY AUDITED].  With only the `H` owner-packet row removed and both
+  Boolean guard factors retained, the complete `13^3=2,197` twist bank is
+  evaluated across `71,070,080` exact interval components at a certified
+  primitive split-prime embedding.  Its `tau=0` slice recovers both coarse
+  digests, all four refined fibres sum back to the coarse response, and five
+  distinct class values give bridge residue
+  `389266878372286537904` and zero factor census `(0,0,0,0)` over all 72
+  labelled charts.  The surviving collision is `c2=q3=q4=q5`; this is an
+  unrestricted mod-13 endpoint aggregate, not grouped `C(a;X,m)`, all-unit
+  `B(q)`, ancestry, or a physical current.  Script/output/semantic LF SHA-256:
+  `ee2105742abee578a9c41ff7ec954a07ada324fccc2c643429e7ac6e6e6f8fc2` /
+  `10a98351cc59615a5b6d2b8f555e0936d1a39566d9906127edc2b0fbc3918e73` /
+  `f06a258b85212ba981de4c18027147a8875c67fc35d1f55d9128c17d746994a9`.
+- `lrc14_guard_deleted_refined_endpoint_role_graph_audit_20260816.py` ->
+  matching `.out` [FINITE-EXACT INDEPENDENT GRAPH AUDIT FOR PROVED THM-3479].
+  A separate role-chart engine reconstructs all 72 bridge/left-`K4`/right-
+  `K4`/product rows, obtains zero census `(0,0,0,0)`, bridge multiplicity 72,
+  chart digest `b7d8c2c9860e4f1aa542b1c85fdb7b65cf4985aba5a81a84ff3a324834d51c51`,
+  and exact vanishing for the flat hostile.  It pins the promoted role,
+  XOR, q1, and refined-bank artifacts.  Script/output LF SHA-256:
+  `b75f5ef933c18c07b4fd2c4812fea468a9faaa6c5847a5c6a11190cc04676261` /
+  `d4f5e4b12854bd5802842df2784d580abdd75d9a4fc58dd77db3a185a10403f1`.
+- `lrc_endpoint_ufull_frozen_five_common_ancestry_gate_20260816.py` ->
+  matching `.out` [FINITE-EXACT SCOPE GATE FOR PROVED THM-3479].  Five
+  positive Boolean atoms realize the frozen scalar values and every graph
+  product, so there is no scalar obstruction.  A split-prime sign hostile and
+  a two-atom equal-marginal/different-intersection hostile prove that reduced
+  post-marginalization values do not decide lawful common ancestry.  The first
+  missing coordinate is a shared atom key joining the left and right endpoint
+  factors before either sum.  Script/output/semantic LF SHA-256:
+  `b897eef476f6dd7f29793b2cc795d6840b66dc2e0e23f6f051e4a4d6b4b704d0` /
+  `d4043a74c600f5737fb32aab6b7b7536adb77e7af6238145fb76a2cf43ccd652` /
+  `674f52e86cabcc72d97a193528434cc9524ae3111439e53e49a43a811d4bf41a`.
 - `lrc_relation_k4_xor_star_triangle_probe_20260815.py` -> matching `.out`
-  [FINITE-EXACT STRUCTURAL SIDECAR TO RESERVED THM-3479; NOT CANON].  The six
-  equal-`-27` relation slots are modelled as the edges of `K4`, partitioned
+  [FINITE-EXACT STRUCTURAL COMPONENT OF PROVED THM-3479; INDEPENDENTLY
+  AUDITED].  The six equal-`-27` relation slots are modelled as the edges of
+  `K4`, partitioned
   into opposite pairs `(c1,q2),(c2,q3),(c3,q4)` by the three nonzero XOR
   differences; `H,q1,q5` colour the matching axes.  Inside `S4`, the exact
   relation stabilizer is the translation `V4`, and the nine coordinates split
@@ -288,9 +333,9 @@
   three-edge selector on K4, not a tournament orientation, endpoint current,
   or causal explanation of the two-transplant split.  Script/output/semantic
   LF SHA-256:
-  `c4ff7e3437e59416f91547091a8a8001a1ae0c4a405177cd0fc9f616ae99b623` /
-  `e55ea0c63df8f73a5631d3092b12961284e7f294c5aed0848c42ecd127aaba5c` /
-  `412de3695927f9d71a0eb165a24447a7f36b1e2d8090361d378ed739670dea0a`.
+  `b4ddf1cc735bc493a7dcdea5d622ff996aef0259d6f474282f59454bf45ad041` /
+  `c899644e3371a611d5385b95e56268e85d2792d682710c0a92f0f4693b0838b9` /
+  `904764346382212e617f2bc15bb95e235af42c0cf1e79131842ced17e39538c8`.
 - `keller_level_three_norm_slice_probe_20260815.py` -> matching `.out`
   [FINITE-EXACT THREE-SLICE PRECURSOR; SUPERSEDED AS THE CURRENT FRONTIER BY
   THE 20260816 GLOBAL/STRUCTURAL COMPANIONS; NOT CANON].  The odd-degree

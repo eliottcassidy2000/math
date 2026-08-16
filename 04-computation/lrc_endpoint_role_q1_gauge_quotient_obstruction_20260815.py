@@ -17,11 +17,12 @@ the unique bridge of the two-K4 carrier, so every edge-gradient determinant
 built from P has zero bridge and vanishes identically.  This is a quotient
 obstruction, not a computation of a physical LRC current.
 
-Among the six named single-row deletions, deleting the guard row is uniquely
-able to separate H from q5.  Its dual adds the single character e_H, has
-13^3=2197 twists, and is dimension-minimal.  The script verifies that the
-refined class geometry admits nonzero synthetic tree determinants; actual
-refined endpoint values remain to be computed.
+Among the six named single-row deletions, deleting the H-labelled owner-packet
+row is uniquely able to separate H from q5.  Its dual adds the single
+character e_H, has 13^3=2197 twists, and is dimension-minimal.  This does not
+delete the Boolean guard factor.  The script verifies the refined class
+geometry, and pins the later exact U_full bank realizing all 72 graph-factor
+products.  U_clock and physical/common-ancestry realization remain open.
 """
 
 from __future__ import annotations
@@ -45,22 +46,34 @@ PINS = (
         "PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED",
     ),
     (
-        "THM-3479-RESERVED",
+        "THM-3479-PROVED",
         ROOT / "01-canon/theorems/THM-3479-literal-half-twist-relation-current-two-transplant-certificate.md",
-        "1203c652fc1e480699d3f94335baba8bbefc1447eec831c7b42c011c241ee522",
-        "RESERVED / PROVISIONAL PROOF CANDIDATE",
+        "025998551e3cdf3c6e4db5c0a4f208dd32f6845970fd4729d4a276035e0fdfeb",
+        "PROVED STRUCTURAL + VERIFIED-EXACT + FINITE-EXACT + INDEPENDENTLY AUDITED",
     ),
     (
         "THM-3479-COMPANION",
         ROOT / "04-computation/lrc_half_twist_relation_current_bridge_thm3479.py",
-        "6b8bc12eb0e6a2bd03ce9a1add43561a1fa27872c3584cc980f98c3e324e2c2b",
+        "ad2a620cdc238f28e3384698b2c612f38cdf2566bd56b76d1cbabcc03107ec0b",
         None,
     ),
     (
         "ROLE-CHART-SIDECAR",
         ROOT / "04-computation/lrc_relation_role_chart_weighted_closure_probe_20260815.py",
-        "e8eea838da1b4636c9796b71382e8a182e7ecfeb4ea17fef7eb265289889c502",
+        "207c65ca235ea5647e346027d424264e8abbcf27c5f574b5901cca13611d7e03",
         None,
+    ),
+    (
+        "U_FULL-REFINED-BANK-SCRIPT",
+        ROOT / "04-computation/lrc14_guard_deleted_refined_endpoint_role_probe_20260816.py",
+        "ee2105742abee578a9c41ff7ec954a07ada324fccc2c643429e7ac6e6e6f8fc2",
+        None,
+    ),
+    (
+        "U_FULL-REFINED-BANK-OUTPUT",
+        ROOT / "05-knowledge/results/lrc14_guard_deleted_refined_endpoint_role_probe_20260816.out",
+        "10a98351cc59615a5b6d2b8f555e0936d1a39566d9906127edc2b0fbc3918e73",
+        "STATUS=PASS",
     ),
 )
 
@@ -425,7 +438,7 @@ def main() -> None:
     print(f"script={SCRIPT}")
     print(f"output={OUTPUT}")
     print(f"pins={tuple(pin_rows)}")
-    print("STATUS=FINITE-EXACT UNNUMBERED SIDECAR; THM-3479 remains RESERVED")
+    print("STATUS=FINITE-EXACT QUOTIENT/BACK-MAP COMPONENT OF PROVED THM-3479; INDEPENDENTLY AUDITED")
     print("GAMMA_TYPE=gamma_w: Ghat_w=L_w^perp/<w> -> cyclotomic endpoint-current scalars")
     print("A_TYPE=A_w: G_w=K_w/L_w -> cyclotomic unrestricted relation-residue aggregates; A is the normalized inverse DFT of gamma")
     print("RELATION_ADDRESS_TYPE=a in Lambda(w)=ker(w:Z^9->Z); C(a;X,m) is one grouped exact-address coefficient and is not computed here")
@@ -437,16 +450,16 @@ def main() -> None:
     print("COARSE_VERDICT=[r_H]=[r_q5], hence P_H=P_q5 for every A_w and all 72 weighted tree determinants vanish identically")
     print(f"coarse_synthetic_zero_determinants={tuple((name, zero, total) for name, zero, total, _ in synthetic_census)}")
     print(f"single_row_removal_separation_census={tuple(removed_row_census)}")
-    print("MINIMAL_REFINEMENT=among the six named one-row deletions, only deleting guard H separates the bridge; add character e_H; quotient dimension 3; twist bank size 2197")
+    print("MINIMAL_REFINEMENT=among the six named one-row deletions, only deleting the H-labelled owner-packet row separates the bridge; the Boolean guard_safe factors remain; add character e_H; quotient dimension 3; twist bank size 2197")
     print(f"refined_coordinate_profiles={tuple(refined_profiles)}")
     print(f"refined_synthetic_positive_controls={tuple((name, control) for name, _, _, control in synthetic_census)}")
-    print("MISSING_EXACT_DATA=the 2197 refined endpoint values gamma(alpha*v1+beta*v2+tau*e_H), their inverse DFT A_minus, and a proof that the resulting edge differences are a lawful physical common-ancestry current")
-    print("MINIMAL_IMPLEMENTABLE_EXPERIMENT=extend the U_full endpoint engine from 13^2 to 13^3 twists, inverse-transform only the five distinct refined role classes, then test the bridge and both K4 tree factors under all 72 charts")
+    print("COMPLETED_U_FULL_REFINEMENT=the pinned 2197-twist bank, normalized inverse DFT at five distinct role classes, coarse fibre-sum back-map, and graph census give nonzero bridge and both K4 factors in all 72 labelled charts")
+    print("MISSING_EXACT_DATA=the U_clock refined bank and a proof that the U_full edge differences are a lawful physical common-ancestry current")
     print("PHYSICAL_CURRENT_TYPE=an actual Boolean/common-ancestry endpoint or THM-2512 response observable; neither gamma, A, nor a synthetic graph gradient supplies it")
     print("NONCONSEQUENCES=no grouped C(a;X,m) nonvanishing, all-91-unit B(q), ancestry, bispectrum, scalar-row exclusion, or LRC(14)")
     print(f"semantic_sha256={semantic_hash}")
     print(f"security_ast_nodes_and_forbidden={security}")
-    print("VERDICT=the canonical coarse THM-2334 target response cannot power the role determinant; one extra guard character gives a dimension-minimal repair, and guard deletion is the unique successful named one-row deletion")
+    print("VERDICT=the canonical coarse THM-2334 target response cannot power the role determinant; one extra guard character gives the dimension-minimal named repair, realized exactly for U_full but not upgraded to a physical current")
 
 
 if __name__ == "__main__":

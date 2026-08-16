@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Standalone exact companion for the THM-3479 proof candidate.
+"""Standalone exact core companion for promoted THM-3479.
 
 The program checks four separately typed layers.
 
@@ -13,8 +13,9 @@ The program checks four separately typed layers.
    the q=51 affine k mod 3 character retained.
 5. The natural C13-equivariant attempt to identify a 13-character fibre with
    the proved private-support carrier's 13 edges is obstructed exactly:
-   the graph automorphism group has no element of order 13.  No arbitrary
-   non-equivariant edge labelling is manufactured.
+   the graph automorphism group has no element of order 13.  This core
+   companion does not manufacture a non-equivariant role chart; the promoted
+   package records the later explicit 72-chart sidecar separately.
 
 The two endpoint implementations are independent.  The full-bank engine
 uses periodic subtraction and a scaled sweep.  The referee engine refines
@@ -1578,7 +1579,7 @@ def main() -> None:
                  EXPECTED_SEMANTIC_SHA256))
 
     print("THM-3479 half-twist relation-current two-transplant exact companion")
-    print("status=RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; independent audit pending")
+    print("status=PROVED STRUCTURAL + VERIFIED-EXACT + FINITE-EXACT + INDEPENDENTLY AUDITED; core companion")
     print(f"script={SCRIPT}")
     print(f"stored_output={OUTPUT}")
     print(f"dependency_hashes={dependency_hashes}")
@@ -1649,12 +1650,12 @@ def main() -> None:
     print("CANDIDATE_MAP=a bijection from one translation-stable 13-character fibre to the thirteen edges")
     print("PRESERVED_PREDICATE_SOUGHT=nonzero endpoint weights yielding nonzero bridge weight and both K4 tree sums")
     print("LOST_INFORMATION=relation address, clocks, q11 masks, endpoint phase, private-sheet counts, and k-mod-3 state")
-    print("REQUIRED_SIDECAR=an explicit owner/edge label dictionary plus phase-holonomy data breaking C13 translation symmetry")
+    print("REQUIRED_SIDECAR=an explicit labelled role chart for the weighted determinant; phase-holonomy is still required for absolute H1 or physical realization")
     print("CHEAPEST_HOSTILES=no order-13 graph automorphism; unique bridge edge (u5,u7); two sixteen-term K4 tree sums")
     print("")
     print("PROVED_BY_COMPANION=explicit relation; literal masks; delayed masses; U_full all 169 unrestricted A(q); U_clock zero-centre same-clock delayed word and nonconstant endpoint bank; atomic term; q27/q51 lifts")
-    print("OBSTRUCTION=the native 13-character C13 action has no equivariant bijection to the private-support edge carrier; no canonical current-to-edge map is supplied")
-    print("OPEN=C(relation;X,m) for both tuples; U_clock A(e_c2); coupled all-91-unit B(q); non-equivariant labelled carrier map; phase/holonomy; ancestry/bispectrum; lawful Boolean THM-2512 current; scalar-row exclusion; LRC(14)")
+    print("OBSTRUCTION=the native 13-character C13 action has no equivariant bijection to the private-support edge carrier; later 72 labelled role charts are non-equivariant and noncanonical")
+    print("OPEN=C(relation;X,m) for both tuples; U_clock A(e_c2) and refined bank; coupled all-91-unit B(q); source-native or C13-equivariant endpoint-to-carrier map; phase/holonomy; ancestry/bispectrum; lawful Boolean THM-2512 current; scalar-row exclusion; LRC(14)")
     print(f"semantic_sha256={semantic_sha256}")
     print(f"carrier_semantic_sha256={carrier_semantic_sha256}")
     print(f"script_lf_sha256={lf_sha256(source)}")

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Exact guard-deleted 13^3 endpoint-role experiment for U_full."""
+"""Exact guard-packet-row-refined 13^3 endpoint-role theorem component.
+
+Only the H-labelled row is removed from the algebraic owner-packet span.
+The endpoint patterns retain their literal Boolean ``guard_safe`` factors.
+"""
 
 import ast
 from collections import Counter
@@ -11,12 +15,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BRIDGE_PATH = ROOT / "04-computation/lrc_half_twist_relation_current_bridge_thm3479.py"
-BRIDGE_SHA = "6b8bc12eb0e6a2bd03ce9a1add43561a1fa27872c3584cc980f98c3e324e2c2b"
+BRIDGE_SHA = "ad2a620cdc238f28e3384698b2c612f38cdf2566bd56b76d1cbabcc03107ec0b"
 EXPECTED_COARSE_GAMMA_SHA = "afcdb043eb1bf8095c313473a3d3bdcf4ce027f86b01b5f3cecbc7c87e6484b3"
 EXPECTED_COARSE_TARGET_SHA = "726423df1b9e1c93b356966e5c3c386669e2f6b19da0bf8818606204eb2e9ee5"
 EXPECTED_GAMMA_SHA = "1fabc5cfdbaa1455e10cd6bf9264488133616a7b0ff381623d729b4b4bfa9682"
 EXPECTED_CHART_SHA = "b7d8c2c9860e4f1aa542b1c85fdb7b65cf4985aba5a81a84ff3a324834d51c51"
-EXPECTED_SEMANTIC_SHA = "b39425cd78da4938dfea4ddb474d93fdb3bb203840ccfb82a5c4fbea10e415a8"
+EXPECTED_SEMANTIC_SHA = "f06a258b85212ba981de4c18027147a8875c67fc35d1f55d9128c17d746994a9"
 P = 13
 ROLE_CLASSES = {
     "c1": (0, 0, 0), "c2": (1, 0, 0), "c3": (0, 1, 0),
@@ -237,10 +241,10 @@ def main():
     require(not any(isinstance(node, ast.Assert) for node in ast.walk(ast.parse(source))),
             "assert node")
     print("LRC REFINED ENDPOINT ROLE PROBE U_FULL")
-    print("status=FINITE-EXACT experiment; THM-3479 RESERVED; LRC(14) OPEN")
+    print("status=FINITE-EXACT theorem component; THM-3479 PROVED STRUCTURAL + INDEPENDENTLY AUDITED; LRC(14) OPEN")
     print(f"dependency={BRIDGE_PATH.name}:{BRIDGE_SHA}")
     print(f"embedding=(prime={p},root={root},order={nn}); primitive_order_certified=True")
-    print(f"universe=gamma(alpha*v1+beta*v2+tau*e_H), F13^3, size={len(gamma)}")
+    print(f"universe=gamma(alpha*v1+beta*v2+tau*e_H), F13^3, size={len(gamma)}; H owner-packet row removed, Boolean guard_safe retained")
     print(f"interval_counts_by_alpha={tuple(count for _,count,_ in chunks)} total={sum(count for _,count,_ in chunks)}")
     print(f"gamma_sha256={digest_integers(gamma)}")
     print(f"tau0_coarse_recovery=(gamma_sha256={digest_integers(gamma0)},target_sha256={digest_integers(coarse_targets_unnormalized)})")

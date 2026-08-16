@@ -12,8 +12,7 @@ weighted tree determinant.  The canonical hostile is the flat potential,
 whose edge gradient and determinant both vanish.  The corrected near miss is
 MISTAKE-409: nonzero `H^1` flux is not necessary for this spectral predicate.
 
-The least-used sidecar is the exact relation in the RESERVED THM-3479
-candidate,
+The least-used sidecar is the exact relation now proved in audited THM-3479,
 
 ```text
 a=(-27,-27,-27,20110798,-41,-27,-27,-27,38)          (1)

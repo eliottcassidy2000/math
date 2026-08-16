@@ -17,19 +17,19 @@ SOURCE_PINS = (
     (
         "THM-3479",
         ROOT / "01-canon/theorems/THM-3479-literal-half-twist-relation-current-two-transplant-certificate.md",
-        "1203c652fc1e480699d3f94335baba8bbefc1447eec831c7b42c011c241ee522",
-        "RESERVED-CANDIDATE",
+        "025998551e3cdf3c6e4db5c0a4f208dd32f6845970fd4729d4a276035e0fdfeb",
+        "PROVED-STRUCTURAL-AUDITED",
     ),
     (
         "ROLE-CHART-SIDECAR",
         ROOT / "04-computation/lrc_relation_role_chart_weighted_closure_probe_20260815.py",
-        "e8eea838da1b4636c9796b71382e8a182e7ecfeb4ea17fef7eb265289889c502",
+        "207c65ca235ea5647e346027d424264e8abbcf27c5f574b5901cca13611d7e03",
         "FINITE-EXACT",
     ),
 )
 
 EXPECTED_SEMANTIC_SHA256 = (
-    "412de3695927f9d71a0eb165a24447a7f36b1e2d8090361d378ed739670dea0a"
+    "904764346382212e617f2bc15bb95e235af42c0cf1e79131842ced17e39538c8"
 )
 
 LABELS = ("c1", "c2", "c3", "H", "q1", "q2", "q3", "q4", "q5")
@@ -332,7 +332,7 @@ def main() -> None:
                 (semantic_hash, EXPECTED_SEMANTIC_SHA256))
 
     print("LRC NINE-SLOT K4/V4 XOR STAR-TRIANGLE FINITE-EXACT SIDECAR")
-    print("STATUS: FINITE-EXACT STRUCTURAL SIDECAR TO RESERVED THM-3479; NOT CANON")
+    print("STATUS: FINITE-EXACT STRUCTURAL COMPONENT OF PROVED THM-3479; INDEPENDENTLY AUDITED")
     print(f"SOURCE_HASHES: {hashes}")
     print(f"SECURITY: {security}")
     print("K4_EDGE_MODEL: c1/q2, c2/q3, c3/q4 are the three opposite-edge pairs; c-triple is a star and q234-triple its complementary triangle")

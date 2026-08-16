@@ -36,25 +36,31 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = "04-computation/lrc_endpoint_ufull_frozen_five_common_ancestry_gate_20260816.py"
 OUTPUT = "05-knowledge/results/lrc_endpoint_ufull_frozen_five_common_ancestry_gate_20260816.out"
-EXPECTED_SEMANTIC_SHA256 = "2db06220c73f7785d4cfa2e280938e1ebb1bd30db6bdf9bf33879faaa6f29ccf"
+EXPECTED_SEMANTIC_SHA256 = "674f52e86cabcc72d97a193528434cc9524ae3111439e53e49a43a811d4bf41a"
 
 PINS = (
     (
         "PRIMARY-2197-SCRIPT",
         ROOT / "04-computation/lrc14_guard_deleted_refined_endpoint_role_probe_20260816.py",
-        "e6ae4de8e7ba67adf027985dc72f513be2bf54b2e35a9d2c0256b1c2f49e96be",
+        "ee2105742abee578a9c41ff7ec954a07ada324fccc2c643429e7ac6e6e6f8fc2",
         None,
     ),
     (
         "PRIMARY-2197-OUTPUT",
         ROOT / "05-knowledge/results/lrc14_guard_deleted_refined_endpoint_role_probe_20260816.out",
-        "056093c45a05e50028f959a1a92ade136fa435abddea41266b30d92380e2552c",
+        "10a98351cc59615a5b6d2b8f555e0936d1a39566d9906127edc2b0fbc3918e73",
         "STATUS=PASS",
     ),
     (
-        "INDEPENDENT-GRAPH-AUDIT",
+        "INDEPENDENT-GRAPH-AUDIT-SCRIPT",
+        ROOT / "04-computation/lrc14_guard_deleted_refined_endpoint_role_graph_audit_20260816.py",
+        "b75f5ef933c18c07b4fd2c4812fea468a9faaa6c5847a5c6a11190cc04676261",
+        None,
+    ),
+    (
+        "INDEPENDENT-GRAPH-AUDIT-OUTPUT",
         ROOT / "05-knowledge/results/lrc14_guard_deleted_refined_endpoint_role_graph_audit_20260816.out",
-        "cd6abad06b62f07f72cfd69e8c02c7e98a8fdcc4a14797f551eb29b579473e6d",
+        "d4f5e4b12854bd5802842df2784d580abdd75d9a4fc58dd77db3a185a10403f1",
         "STATUS=PASS",
     ),
     (
@@ -381,7 +387,7 @@ def main() -> None:
                 ("semantic drift", semantic_hash))
 
     print("LRC U_FULL FROZEN-FIVE COMMON-ANCESTRY GATE AUDIT")
-    print("status=FINITE-EXACT typing/realization sidecar; U_full endpoint nonvanishing inherited; LRC(14) OPEN")
+    print("status=FINITE-EXACT scope gate for proved THM-3479; U_full endpoint nonvanishing inherited; physical current and LRC(14) OPEN")
     print(f"script={SCRIPT}")
     print(f"stored_output={OUTPUT}")
     print(f"dependency_hashes={tuple(pin_rows)}")

@@ -1,8 +1,8 @@
 # Coarse target landing collapses the forced `H--q5` bridge
 
 **Status: research synthesis around a FINITE-EXACT unnumbered sidecar; not a
-truth source, not a promotion of RESERVED THM-3479, and not an LRC(14)
-result.**  Reproduce the exact finite claims with
+truth source and not an LRC(14) result.  The audited statements incorporated
+below now live in promoted THM-3479.**  Reproduce the exact finite claims with
 `04-computation/lrc_endpoint_role_q1_gauge_quotient_obstruction_20260815.py`.
 
 ## 1. Inheritance and the decisive type split
@@ -264,22 +264,24 @@ Both LF-normalized transcripts equal
 byte for byte.  The immutable LF hashes are
 
 ```text
-script: 49e9a3657ceae8ada0e8487ee980115f7d1da1f16a7bbf121fdd5cfbd3fcc1b9
-output: e1a8b5ca90044a3b157828b444a582a3da36b1b869a6ad1d3d384333026b8a67
+script: 02d6cf3553edf3412da6d8eb99c7937f841d9441cc9599bc01319f72596b5887
+output: 14e9483fd1ec42cc0cdffb156dc520a491bc95d0816a85828732c965858ec5d7
 semantic: fe9fe2d4b1d98aba3b60e1a7f6823bcccabed04d7a319f3eb20c83d25c799422
 ```
 
 ## 8. 2026-08-16 update: the actual U_full guard refinement is nonzero
 
-**Status: FINITE-EXACT unrestricted mod-thirteen endpoint-aggregate
-experiment only.**  This update does not promote RESERVED THM-3479 and does
-not prove a physical current, a grouped exact-address coefficient, an
+**Status: FINITE-EXACT unrestricted mod-thirteen endpoint-aggregate theorem
+component, independently audited and incorporated in promoted THM-3479.**
+It does not prove a physical current, a grouped exact-address coefficient, an
 all-`91`-unit aggregate, a U_clock statement, a scalar-row exclusion, or
 LRC(14).
 
 The minimal experiment proposed in Section 5 has now been completed for
-`U_full`.  Delete the named guard row from the six-row packet, retain the five
-other rows, and use the lawful dual basis
+`U_full`.  Delete the named `H` guard row from the six-row algebraic packet,
+retain the five other rows, and use the lawful dual basis below.  This does
+not delete the Boolean guard: `PATTERN_E` and `PATTERN_QA` retain
+`guard_safe`.
 
 ```text
 (v1,v2,e_H).
@@ -363,7 +365,7 @@ P_H-P_q5=389266878372286537904 mod p !=0.             (18)
 The labels `c2,q3,q4,q5` still share class `(1,0,0)`, so the refinement does
 not restore every coordinate contrast.  Nevertheless those remaining edge
 zeros do not kill either complete-`K4` tree polynomial.  Across the full
-canonical chart orbit the exact zero census is
+declared labelled chart orbit the exact zero census is
 
 ```text
 (bridge, first K4, second K4, product)=(0,0,0,0)      (19)
@@ -386,13 +388,13 @@ current.
 
 ### 8.3 Independent graph audit and scope ledger
 
-A cheap independent audit imports the older canonical role-chart engine,
+A cheap independent audit imports the older frozen labelled role-chart engine,
 feeds it only the five frozen residues (17), and reconstructs all `72` factor
 rows.  It independently obtains (18)--(20) and the flat hostile.  The full
 endpoint semantic digest is
 
 ```text
-b39425cd78da4938dfea4ddb474d93fdb3bb203840ccfb82a5c4fbea10e415a8. (21)
+f06a258b85212ba981de4c18027147a8875c67fc35d1f55d9128c17d746994a9. (21)
 ```
 
 The scope ledger is:
@@ -425,8 +427,8 @@ The first command took about `2,078` seconds with four workers on the session
 host.  The checked artifacts have LF hashes
 
 ```text
-primary script: e6ae4de8e7ba67adf027985dc72f513be2bf54b2e35a9d2c0256b1c2f49e96be
-primary output: 056093c45a05e50028f959a1a92ade136fa435abddea41266b30d92380e2552c
-graph script:   abd46f6970ec2d5dd8b85bfb3d6876e2b2125890667ae62b1208d94e3395a154
-graph output:   cd6abad06b62f07f72cfd69e8c02c7e98a8fdcc4a14797f551eb29b579473e6d
+primary script: ee2105742abee578a9c41ff7ec954a07ada324fccc2c643429e7ac6e6e6f8fc2
+primary output: 10a98351cc59615a5b6d2b8f555e0936d1a39566d9906127edc2b0fbc3918e73
+graph script:   b75f5ef933c18c07b4fd2c4812fea468a9faaa6c5847a5c6a11190cc04676261
+graph output:   d4f5e4b12854bd5802842df2784d580abdd75d9a4fc58dd77db3a185a10403f1
 ```

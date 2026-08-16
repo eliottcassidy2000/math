@@ -1,8 +1,8 @@
 # Two exact transplants meet a thirteen-edge carrier only at an obstruction
 
 **Research reflection / provenance and route synthesis, not a truth source.**
-The exact claims are in the RESERVED THM-3479 candidate and its deterministic
-companion.  The private-support graph is inherited from proved THM-3473 and
+The audited exact claims are now in promoted THM-3479 and its deterministic
+package.  The private-support graph is inherited from proved THM-3473 and
 its frozen FINITE-EXACT incidence sidecar.  Nothing here proves a physical
 current, a bispectrum, a scalar-row exclusion, or LRC(14).
 

@@ -2,26 +2,31 @@
 id: THM-3479
 title: "Literal half-twist relation-current two-transplant certificate"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT PENDING.  One explicit all-91-unit relation is realized by two
-  primitive q=11 owner tuples.  U_full has literal masks, positive delayed
-  mass, a nonconstant 169-twist endpoint bank, and all 169 unrestricted
-  THM-2334 target aggregates nonzero.  U_clock has literal masks at the fixed
-  common centre 1/22, the same-clock delayed word, positive delayed mass, a
-  two-embedding nonconstant endpoint bank, and one explicit THM-2331 atomic
-  address term.  Exact q=27 and q=51 CRT lifts preserve the mod-7 and 13-adic
-  decorations, including q=51's affine k mod 3 character.  The natural
-  C13-equivariant attempt to identify a 13-character fibre with the thirteen
-  edges of the proved private-support carrier is obstructed.  No
-  grouped relation coefficient, all-91-unit aggregate, ancestry/bispectrum,
-  physical current, scalar-row exclusion, or LRC(14) conclusion follows.
+  PROVED STRUCTURAL + VERIFIED-EXACT + FINITE-EXACT + INDEPENDENTLY AUDITED.
+  One explicit all-91-unit relation is realized by two primitive q=11 owner
+  tuples.  U_full has literal masks, positive delayed mass, all 169 coarse
+  unrestricted THM-2334 target aggregates nonzero, and an exact guard-packet-
+  row-refined 13^3 endpoint bank whose five role values give nonzero bridge,
+  two K4 factors, and product in all 72 labelled charts.  U_clock has literal
+  masks at the fixed common centre 1/22, the same-clock delayed word, positive
+  delayed mass, a two-embedding nonconstant endpoint bank, and one explicit
+  THM-2331 atomic address term.  Exact q=27 and q=51 CRT lifts preserve only
+  their stated mod-7 and 13-adic decorations, including q=51's affine k mod 3
+  character.  The natural C13-equivariant 13-character-fibre-to-edge map is
+  obstructed; the 72 role charts are labelled, non-equivariant, and require an
+  owner-order orientation gauge.  No grouped relation coefficient, all-91-
+  unit aggregate, ancestry/bispectrum, physical current, scalar-row exclusion,
+  or LRC(14) conclusion follows.
 source: codex/relation-current-bridge/2026-08-15
 audit: >
   standalone deterministic exact companion; independent periodic-subtraction
   and boundary-refinement endpoint engines; exact finite-field nonvanishing
   under certified primitive embeddings; normal/-O/stored LF-identical replay;
   dependency and sidecar hash pins; AST no-assert/security gate; immutable
-  core and carrier semantic digests; independent package audit pending
+  core and carrier semantic digests; exact 13^3 refined endpoint bank;
+  independent graph-factor reconstruction; independent relation, CRT,
+  automorphism, quotient/back-map, and common-ancestry scope audit; promotion
+  audit accepted 2026-08-16
 depends_on:
   - THM-2309-owner-aligned-pivot-packets-and-visible-height-separation
   - THM-2331-two-sided-septimal-address-embedding-in-marked-current
@@ -32,14 +37,14 @@ depends_on:
   - THM-3429-prime-fibre-activity-descent-for-mixed-order-half-twist-seven-covers
   - THM-3453-global-literal-half-twist-cap-seven-support-classification
   - THM-3461-literal-half-twist-common-centre-lifts-and-q83-rank-nine-boundary
+  - THM-3473-three-times-p-eight-owner-private-sheet-partition-and-irredundancy
 related:
   - THM-2512-lawful-interaction-cut-bundle-transplant-and-replica-dichotomy
-  - THM-3473-three-times-p-eight-owner-private-sheet-partition-and-irredundancy
   - HYP-9032-the-transplant-trichotomy-rehoming-the-91-stalk-laws
 script: 04-computation/lrc_half_twist_relation_current_bridge_thm3479.py
 output: 05-knowledge/results/lrc_half_twist_relation_current_bridge_thm3479.out
-script_sha256: 6b8bc12eb0e6a2bd03ce9a1add43561a1fa27872c3584cc980f98c3e324e2c2b
-output_sha256: 23185975ce26fa1dec0262894d1c3a14b3f5b040079fea7ab308e2d7f518e2b8
+script_sha256: ad2a620cdc238f28e3384698b2c612f38cdf2566bd56b76d1cbabcc03107ec0b
+output_sha256: e1e4355290c493d8f9518a4bba3825173bb3137c3d50df421816946e6b1f1207
 semantic_sha256: 1bf53086d3da347dde443175462be716da6e9dac54c96582718d19ec8fddff21
 carrier_semantic_sha256: 3f17c2206feec73da48a989ab2150ceb1c7d1bc275c77291df476d882957581a
 hash_basis: LF-normalized bytes
@@ -47,14 +52,15 @@ hash_basis: LF-normalized bytes
 
 # THM-3479 -- literal half-twist relation-current two-transplant certificate
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT PENDING.**
+**PROVED STRUCTURAL + VERIFIED-EXACT + FINITE-EXACT + INDEPENDENTLY
+AUDITED.**
 
-This candidate records a concrete positive relation-current transplant and
-its exact stopping boundary.  The two owner tuples below realize different
-parts of the desired conjunction.  They must not be silently identified.
-The theorem is outside the proved dependency graph until an independent audit
-checks the proof, companion, stored transcript, and immutable hashes.
+This theorem records a concrete positive relation-current transplant and its
+exact stopping boundary.  The two owner tuples below realize different parts
+of the desired conjunction and must not be silently identified.  Promotion
+incorporates the exact U_full guard-packet-row-refined endpoint bank and its
+independent graph audit, while retaining every physical-current and ancestry
+boundary found by the independent end-to-end audit.
 
 ## 1. The common relation and target quotient
 
@@ -341,17 +347,133 @@ mass, and endpoint nonconstancy coexist.  The obstruction is the quantifier
 
 ```text
 U_full:  complete unrestricted 169-target nonvanishing,
+         plus the complete guard-packet-row-refined 2197-twist bank and
+         all-72 labelled graph-factor nonvanishing,
          but no same-clock common-centre delayed realization proved;
 
 U_clock: same-clock common-centre delayed realization and exact endpoint
          nonconstancy,
-         but no complete 169-target calculation.       (37)
+         but no complete 169-target or refined-bank calculation. (37)
 ```
 
 Therefore `(36)` is not yet one physical bridge row.  The split in `(37)` is
 the strongest exact boundary, not a cosmetic distinction.
 
-## 6. The 7 by 13 carrier: exact equivariance obstruction
+## 6. The guard-packet-row-refined quotient and its labelled back-map
+
+This section is only about `U_full`.  Write `w` in THM-2334 current order and
+put
+
+```text
+K_w=ker(w:F_13^9 -> F_13),
+r_i=e_i-(w_i/w_q1)e_q1 in K_w.                       (R1)
+```
+
+Let `L_w` be the span of the six published owner-packet rows.  In the coarse
+quotient `G_w=K_w/L_w`, with dual basis `(v1,v2)`, both tuples have
+
+```text
+[r_H]=[r_q5]=(1,0).                                  (R2)
+```
+
+Thus the lawful coordinate response is `P_i=A_w([r_i])`, not the ill-typed
+expression `gamma_w(e_i)`, and every coarse role chart has zero `H--q5`
+bridge.  In particular, the coarse 169-target bank by itself cannot power the
+carrier determinant.
+
+Delete only the `H`-labelled **row of the six-row owner-packet span**, and
+call the resulting rank-five span `L_w^-`.  This algebraic operation does not
+delete the Boolean guard condition: both endpoint patterns `PATTERN_E` and
+`PATTERN_QA` still contain their literal `guard_safe` factor.  Exact row
+reduction gives
+
+```text
+dim(K_w/L_w^-)=3,
+(L_w^-)^perp/<w> = <v1,v2,e_H>.                      (R3)
+```
+
+For the fixed certified primitive embedding with
+
+```text
+p=572252886246508880869,  zeta^13=1,  zeta!=1,
+```
+
+the refined transform and normalized inverse are
+
+```text
+gamma^-(alpha,beta,tau)
+  = Gamma_w(alpha v1+beta v2+tau e_H),
+
+A_w^-(x,y,t)
+  =13^(-3) sum_{alpha,beta,tau in F_13}
+     gamma^-(alpha,beta,tau) zeta^(-alpha x-beta y-tau t). (R4)
+```
+
+The quotient projection has the exact back-map
+
+```text
+A_w(x,y)=sum_{t in F_13} A_w^-(x,y,t).               (R5)
+```
+
+The `tau=0` character slice reproduces both frozen coarse digests, and `(R5)`
+is checked at all four coarse bases occurring among the role classes.  The
+eight retained role labels have five distinct refined classes:
+
+| role labels | class in `F_13^3` | `A_w^-` modulo `p` |
+|---|---:|---:|
+| `c1` | `(0,0,0)` | `405336876493642499425` |
+| `c3` | `(0,1,0)` | `518539850465495448196` |
+| `c2,q3,q4,q5` | `(1,0,0)` | `503604956476841920373` |
+| `H` | `(1,0,1)` | `320618948602619577408` |
+| `q2` | `(1,12,0)` | `15703541686881447885` |
+
+All five displayed values are distinct.  The surviving coarse collision is
+therefore refined just enough to give
+
+```text
+A_w^-(1,0,1)-A_w^-(1,0,0)
+  =389266878372286537904 mod p !=0.                  (R6)
+```
+
+The remaining role collision `c2=q3=q4=q5` is real; individual graph edge
+weights need not all be nonzero.  It does not kill the two complete `K4`
+tree polynomials.
+
+Fix the owner-order orientation gauge `u_i -> u_j` when `i<j`.  A labelled
+role chart sends `H` to the unique hub `u5`, `q5` to the unique leaf `u7`,
+bijects `(c1,c2,c3)` with one three-vertex wing and `(q2,q3,q4)` with the
+other, and may exchange the two wings.  Hence there are exactly
+
+```text
+2 * 3! * 3! = 72                                    (R7)
+```
+
+charts, forming one target-graph automorphism orbit.  In every chart the
+zero counts for
+
+```text
+(H--q5 bridge, left K4 sum, right K4 sum, product)
+```
+
+are exactly `(0,0,0,0)`.  A separately implemented graph route reproduces
+all 72 rows and the chart digest
+
+```text
+b7d8c2c9860e4f1aa542b1c85fdb7b65cf4985aba5a81a84ff3a324834d51c51. (R8)
+```
+
+Nonzero reduction proves nonvanishing of these unrestricted cyclotomic
+endpoint aggregates and their displayed graph factors.  It does not supply
+order, sign, positivity, chronology, or a common ancestry coupling.
+
+The fixed integer relation `a` has refined residue class `(1,0,6)`, not one
+of the five role classes above.  Even its residue aggregate is a sum over an
+entire congruence class, not the grouped exact-address coefficient
+`C(a;X,m)`.  Likewise no all-unit `B(q)` is present: the refined endpoint
+transform has no mod-seven mask/character coordinate.  These are type
+boundaries, not unperformed simplifications.
+
+## 7. The 7 by 13 carrier: exact equivariance obstruction
 
 This section uses proved THM-3473 and the frozen edge set from its
 FINITE-EXACT incidence sidecar.  Its private-owner packets are
@@ -369,7 +491,7 @@ whose two-section has thirteen edges.  The proposed connection contract is:
 | candidate map | choose one translation-stable thirteen-character fibre and biject it with the thirteen edges |
 | predicate sought | nonzero edge weights with nonzero bridge weight and nonzero weighted tree sums on both `K4` blocks |
 | information destroyed | exact relation address, q=11 masks, clock, endpoint phase, private-sheet counts, and the `k mod 3` state |
-| required sidecar | an explicit relation-coordinate/owner-edge dictionary plus phase or holonomy data |
+| required sidecar | for a labelled determinant, the role chart and owner-order orientation; for absolute `H^1` or physical realization, phase/holonomy and common ancestry |
 | cheapest hostiles | the unique edge `(u5,u7)` and the two sixteen-term `K4` tree polynomials |
 
 There is no native label dictionary: the source labels
@@ -396,22 +518,33 @@ there is no C13-equivariant bijection from a native 13-character fibre
 to the thirteen private-support edges.                (41)
 ```
 
-Equation `(41)` does not forbid an explicitly labelled non-equivariant map.
-It proves that such a map cannot be obtained canonically from the current
-source and target symmetries alone.  The static owner-potential currents of
-the incidence sidecar are also coboundaries and have zero graph-cycle flux;
-phase/holonomy remains a genuine required sidecar.
+Equation `(41)` does not forbid the explicit 72-chart construction in Section
+6.  The two maps have different types.  The impossible map is a
+`C13`-equivariant bijection from thirteen source characters to thirteen
+edges.  A role chart instead maps eight named relation roles to eight
+vertices, then takes their thirteen oriented edge differences; it is labelled,
+non-equivariant, and noncanonical.  Thus the positive all-72 calculation does
+not weaken `(41)`, and `(41)` does not invalidate it.
 
-## 7. Exact scope boundary
+For each role chart, the edge-difference current is a coboundary in
+`B^1(G;K)`.  All six absolute cycle pairings vanish, so its absolute `H^1`
+class is zero.  The signed weighted matrix-tree determinant is not an
+absolute-`H^1` invariant and can be nonzero on such a coboundary, once the
+owner-order orientation gauge is fixed.  Phase or holonomy remains necessary
+for a nonzero absolute `H^1` class or a physical realization, but not for the
+finite weighted-determinant statement proved here.
+
+## 8. Exact scope boundary
 
 The package does **not** prove any of the following:
 
 ```text
 C(a;X,m)!=0 for either tuple;
 A(e_c2)!=0 for U_clock;
+the 13^3 refined endpoint bank for U_clock;
 B(q)!=0 for a coupled all-91-unit target fibre;
-a canonical non-equivariant map to the private-support edges;
-a nonzero private-support H1 flux or either weighted K4 tree sum;
+a source-native, canonical, or C13-equivariant endpoint-to-edge map;
+a nonzero private-support absolute H1 flux or physical phase/holonomy;
 a lawful Boolean THM-2512 physical current;
 common ancestry or root-character bispectrum nonvanishing;
 exclusion of one of the 165 scalar rows;
@@ -419,11 +552,17 @@ LRC(14).                                               (42)
 ```
 
 The projective wedge of U_clock is zero, not a hidden current.  The atomic
-term `(27)` is support, not grouped noncancellation.  U_full's `(13)` is
-unrestricted `A(q)`, not all-unit `B(q)`.  THM-2512's signed ANOVA bundle and
-the private-support carrier remain separately typed.  LRC(14) is OPEN.
+term `(27)` is support, not grouped noncancellation.  U_full's `(13)` and
+`(R4)` are unrestricted mod-thirteen aggregates, not all-unit `B(q)`.  The
+refined endpoint worker first marginalizes its left and right atoms and only
+then forms `phase*ax*by`; it emits no shared ancestry key.  Exact hostiles show
+that equal left/right marginals and equal products can have different joint
+intersection mass, while finite-field residues also forget characteristic-
+zero order and sign.  Thus neither the five values nor their graph factors
+upgrade to a Boolean/common-ancestry current.  THM-2512's signed ANOVA bundle
+and the private-support carrier remain separately typed.  LRC(14) is OPEN.
 
-## 8. Deterministic exact companion
+## 9. Deterministic exact package
 
 Run from the repository root:
 
@@ -445,17 +584,32 @@ independent engine refines every exact boundary, checks exact midpoints, and
 directly intersects all word preimages.  The carrier audit independently
 enumerates all target graph automorphisms.
 
+The promoted refined package is replayed by
+
+```bash
+PYTHONHASHSEED=0 python -B 04-computation/lrc14_guard_deleted_refined_endpoint_role_probe_20260816.py
+PYTHONHASHSEED=1 python -B -O 04-computation/lrc14_guard_deleted_refined_endpoint_role_probe_20260816.py
+python -B 04-computation/lrc14_guard_deleted_refined_endpoint_role_graph_audit_20260816.py
+python -B 04-computation/lrc_endpoint_ufull_frozen_five_common_ancestry_gate_20260816.py
+```
+
+The first two commands replay the complete 2,197-twist bank.  The graph audit
+reconstructs the 72 factor rows independently of the endpoint engine, and the
+common-ancestry gate supplies both a positive scalar Boolean realization and
+a hostile showing why the physical-current upgrade is unavailable.
+
 The immutable LF hashes are
 
 ```text
-script:  6b8bc12eb0e6a2bd03ce9a1add43561a1fa27872c3584cc980f98c3e324e2c2b
-output:  23185975ce26fa1dec0262894d1c3a14b3f5b040079fea7ab308e2d7f518e2b8
+script:  ad2a620cdc238f28e3384698b2c612f38cdf2566bd56b76d1cbabcc03107ec0b
+output:  e1e4355290c493d8f9518a4bba3825173bb3137c3d50df421816946e6b1f1207
 core semantic:
          1bf53086d3da347dde443175462be716da6e9dac54c96582718d19ec8fddff21
 carrier semantic:
          3f17c2206feec73da48a989ab2150ceb1c7d1bc275c77291df476d882957581a
 ```
 
-The exact companion proves the finite statements above.  Independent audit
-and explicit status promotion are still required before this theorem enters
-proved canon.
+The exact core companion and pinned finite sidecars prove the scoped
+statements above.  The independent end-to-end audit accepted promotion with
+the quotient, map, cohomology, guard, and physical-current repairs now written
+explicitly into this theorem.

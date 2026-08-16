@@ -1,8 +1,8 @@
 LRC REFINED ENDPOINT ROLE PROBE U_FULL
-status=FINITE-EXACT experiment; THM-3479 RESERVED; LRC(14) OPEN
-dependency=lrc_half_twist_relation_current_bridge_thm3479.py:6b8bc12eb0e6a2bd03ce9a1add43561a1fa27872c3584cc980f98c3e324e2c2b
+status=FINITE-EXACT theorem component; THM-3479 PROVED STRUCTURAL + INDEPENDENTLY AUDITED; LRC(14) OPEN
+dependency=lrc_half_twist_relation_current_bridge_thm3479.py:ad2a620cdc238f28e3384698b2c612f38cdf2566bd56b76d1cbabcc03107ec0b
 embedding=(prime=572252886246508880869,root=279936,order=81750412320929840124); primitive_order_certified=True
-universe=gamma(alpha*v1+beta*v2+tau*e_H), F13^3, size=2197
+universe=gamma(alpha*v1+beta*v2+tau*e_H), F13^3, size=2197; H owner-packet row removed, Boolean guard_safe retained
 interval_counts_by_alpha=(5313980, 5413490, 5560040, 5543310, 5469630, 5500230, 5391350, 5391350, 5500230, 5469630, 5543310, 5560040, 5413490) total=71070080
 gamma_sha256=1fabc5cfdbaa1455e10cd6bf9264488133616a7b0ff381623d729b4b4bfa9682
 tau0_coarse_recovery=(gamma_sha256=afcdb043eb1bf8095c313473a3d3bdcf4ce027f86b01b5f3cecbc7c87e6484b3,target_sha256=726423df1b9e1c93b356966e5c3c386669e2f6b19da0bf8818606204eb2e9ee5)
@@ -14,6 +14,6 @@ factor_histograms=(bridge=((389266878372286537904, 72),),left=((2191154451097956
 chart_record_sha256=b7d8c2c9860e4f1aa542b1c85fdb7b65cf4985aba5a81a84ff3a324834d51c51
 flat_response_hostile=all role potentials 1; all 72 factor quadruples (0,0,0,0)
 semantic_schema=(dependency,embedding,scales,q_count,interval_counts,gamma_digest,coarse_digests,role_values,fibre_rows,chart_rows,zero_counts)
-semantic_sha256=b39425cd78da4938dfea4ddb474d93fdb3bb203840ccfb82a5c4fbea10e415a8
+semantic_sha256=f06a258b85212ba981de4c18027147a8875c67fc35d1f55d9128c17d746994a9
 scope=unrestricted mod13 endpoint aggregates only; not grouped C(a;X,m), all-unit B(q), physical current, ancestry, bispectrum, scalar exclusion, or LRC(14)
 STATUS=PASS

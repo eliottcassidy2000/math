@@ -1,9 +1,10 @@
 # The frozen U_full role residues pass the scalar Boolean gate but not the ancestry gate
 
 **Status: FINITE-EXACT typing and realization sidecar.**  The incoming
-`13^3` endpoint bank and its graph nonvanishing are inherited.  This note does
-not promote RESERVED THM-3479, construct a physical current, decide U_clock,
-or remove an LRC(14) row.
+`13^3` endpoint bank and its graph nonvanishing are inherited and are now
+incorporated in promoted THM-3479.  This note supplies the strict realization
+boundary: it does not construct a physical current, decide U_clock, or remove
+an LRC(14) row.
 
 ## 1. Inheritance and the exact next question
 
@@ -28,7 +29,7 @@ A(1,0,1)-A(1,0,0)
 ```
 
 and the bridge, left `K4`, right `K4`, and their product are nonzero in
-all `72` canonical role charts.  Those are exact endpoint-aggregate graph
+all `72` declared labelled role-contract charts.  Those are exact endpoint-aggregate graph
 statements.
 
 The closest proved realization mechanism is THM-2471, whose weights are
@@ -241,7 +242,7 @@ The normal and optimized transcripts agree with the stored output.  LF hashes
 are
 
 ```text
-script:   2e558a0194f4d810790a3b01b76f5e2225415495115021544fd414c5b5b1812b
-output:   b8bfb96f31995bd50ad05f4635186a4c83ebfbe7c871049b736cd430b66f18d3
-semantic: 2db06220c73f7785d4cfa2e280938e1ebb1bd30db6bdf9bf33879faaa6f29ccf
+script:   b897eef476f6dd7f29793b2cc795d6840b66dc2e0e23f6f051e4a4d6b4b704d0
+output:   d4043a74c600f5737fb32aab6b7b7536adb77e7af6238145fb76a2cf43ccd652
+semantic: 674f52e86cabcc72d97a193528434cc9524ae3111439e53e49a43a811d4bf41a
 ```
