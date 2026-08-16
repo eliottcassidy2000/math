@@ -17,6 +17,25 @@
   `a75300a81efebef83683c41ac073ffa4d3268da83e96071d7b1b576b36e5bbc7` /
   `8252145208e8976b9c8afa44cfac812866b00e25b49059808be8b25807b93f06` /
   `af0d543232869e82ee8d0191478ba7a833954cb19b387dedb6fb6f44a6fa272c`.
+- `lrc_r5_ufull_owner_node_pointed_six_state_root_difference_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT POINTED-SIX SOURCE-ROOT CANDIDATE;
+  INDEPENDENT AUDIT PENDING].  Marking the active source tail refines the
+  Boolean square to the six realized path states
+  `(0,0),(1,0),(1,6),(3,6),(3,12),(2,12)`.  Summing pointed fibres recovers
+  the pinned state/root-difference tensor exactly.  Weighted and support-only
+  tensors have maximal ranks `(6,12,13)` and centred ranks `(5,12,12)`; an
+  equal-tail lift with the same parent has only `(4,12,13)` and `(3,12,12)`.
+  The five path-edge mixed supports are `(120,144,120,144,120)`: outer edges
+  miss relation frequencies `+/-1`, the owner-gap edge misses `+/-6`, and both
+  marked-tail switch edges are `144/144`.  Flat-tail kills exactly those two
+  switch edges.  At `(1,0,6)`, the weighted/support-only matrices have ranks
+  `6/5`, with both tail contrasts supported on all 12 nonzero differences.
+  There is no cyclic `C6`, exact-address, inverse-ancestry, chronology,
+  physical-current, row-exclusion, or LRC(14) claim. Script/output/semantic
+  LF SHA-256:
+  `52b5af635b394e8f6dda59746d369b4b62a73da5ee89c6ca8e758426a7e81b76` /
+  `40ca4ce5e6e4428c833e41e412e8acc58a1a1bb25bbfb542bc43a7319fe68e7e` /
+  `5001bed534a9b8f953529101f0b7a51cf6994c7dcb29b7aed576aec239078384`.
 
 - `lrc_r5_ufull_owner_node_boolean_square_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
@@ -60,6 +79,7 @@
 - `lrc_r5_ufull_owner_node_boolean_square_refiner_probe_20260816.py` ->
   matching `.out` [FINITE-EXACT GENUINE BOOLEAN-SQUARE x F13 COMMON-OWNER
   CANDIDATE; INDEPENDENTLY AUDITED AT THE SCOPED SURVIVOR].  The three-root source spine
+  CANDIDATE; INDEPENDENTLY HOSTILE-AUDITED].  The three-root source spine
   `{0,6,12}` has six abstract nontrivial directed cuts, each a three-vertex
   tournament with one missing edge, but realizes exactly the five-state Gray
   path `{0}->{0,6}->{6}->{6,12}->{12}` with toggles `(6,0,12,6)` and measures
