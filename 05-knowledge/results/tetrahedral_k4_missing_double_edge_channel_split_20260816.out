@@ -1,0 +1,16 @@
+== K4 missing/single/double directed-edge channel split ==
+pair state -> (centered symmetric, skew, XOR):
+  missing=(0, 0) -> (-1,0,0)
+  forward=(1, 0) -> (0,1,1)
+  reverse=(0, 1) -> (0,-1,1)
+  double=(1, 1) -> (1,0,0)
+labelled loopless digraphs=4096; S4 orbits=218
+partial-orientation/semicomplete/tournament charts=729/729/64
+symmetric degree+two-matching determinant=-8; index=8
+skew score+three-Haar determinant=32; index=32
+combined continuous channel index=256; discrete reconstruction=4096/4096
+hostile skew collision: all-missing vs all-double=True; both have skew zero
+hostile symmetric collision: forward vs converse tournament=True; both have symmetric zero
+semantic ledger sha256=5e6b7523f0da756849e870e7180b457761430c7b62618fca3c488d41e4a5e08a
+scope: complete K4 representation atlas for loopless digraphs; no physical LRC/JC transport
+all exact checks passed

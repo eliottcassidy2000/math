@@ -164,6 +164,23 @@
   `b858b2245f2880deb2a2096e9ef13b79f73222a24a90bb01403d519289615d6c`;
   tournament ledger SHA-256:
   `8da9354e69971ab3e27b54564567ce3f431721c77412480b667f655d93c55e85`.
+- `tetrahedral_k4_missing_double_edge_channel_split_20260816.py` ->
+  matching `.out` [VERIFIED-EXACT FINITE ATLAS; NOT INDEPENDENTLY AUDITED].
+  A loopless directed pair's four states split as centered symmetric/skew
+  channels: missing `(-1,0)`, forward `(0,1)`, reverse `(0,-1)`, double
+  `(1,0)`, with XOR equal to skew support.  On `K4`, four undirected vertex
+  degrees plus two matching contrasts recover the six symmetric coordinates
+  at lattice index `8`; three net scores plus three Haar square holonomies
+  recover the skew coordinates at index `32`.  The combined index is `256`
+  and the signature reconstructs all `4096/4096` labelled loopless digraphs,
+  in `218` `S4` orbits.  Partial-orientation, semicomplete, and tournament
+  charts have sizes `729/729/64`.  XOR alone merges missing with double;
+  skew alone and symmetric alone both fail hostile controls.  No LRC/JC
+  transport follows.  Script/output LF SHA-256:
+  `68ff06cb07f0f198b569fb21360a8a2133589ce9dbeac6f7ae71d1c79d13cba0` /
+  `de16f012e29f4de01ee93df28855c035dc8f2f781ac4b040bc04f0302c05e522`;
+  semantic ledger SHA-256:
+  `5e6b7523f0da756849e870e7180b457761430c7b62618fca3c488d41e4a5e08a`.
 - `lrc14_stage2_root_shear_contrast_probe_20260816.py` -> matching `.out`
   [THM-3505 PROVED + FINITE-EXACT; INDEPENDENTLY AUDITED BY THE PRECEDING
   STANDALONE CONSTRUCTOR].
