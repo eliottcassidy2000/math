@@ -11,9 +11,10 @@ status: >
   renewal faces for G; THM-3513 subsequently proves both for that fixed
   polynomial.  THM-3522 subsequently proves that complete packets renew in
   this fixed inverse chart whenever the next cleared norm is polynomial,
-  closing the packets of R_5 and R_6.  The next polynomiality gate, fifth
-  image prime, unconditional all-level induction, and every general
-  Jacobian claim remain open.
+  closing the packets of R_5 and R_6.  THM-3523 subsequently closes the next
+  finite-sheet/polynomiality gate and gives the packet of R_7.  The later
+  finite sheet, fifth image prime, unconditional all-level induction, and
+  every general Jacobian claim remain open.
 source: codex/tropical-keller-norm/2026-08-16
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
@@ -25,6 +26,7 @@ related:
   - THM-3513-fixed-G-hybrid-newton-renewal-faces
   - THM-3521-fixed-R5-finite-sheet-unit-and-next-old-L-clearing
   - THM-3522-fixed-keller-five-face-renewal-propagation
+  - THM-3523-fixed-R6-finite-sheet-unit-and-next-old-L-clearing
 script: 04-computation/keller_tropical_norm_face_recurrence_probe_20260816.py
 output: 05-knowledge/results/keller_tropical_norm_face_recurrence_probe_20260816.out
 script_sha256: fe1b03de9061c997a1abba6b88753e589c0a01f9f92762e49fe7ea0504ce9797
@@ -503,9 +505,9 @@ hybrid Newton limits, so the fixed `G` has the complete packet `A(271,99)`.
 THM-3522 subsequently proves that a complete packet renews through this
 fixed inverse chart whenever the next cleared norm is polynomial.  Together
 with THM-3521's following finite-sheet gate, it gives complete packets
-`A(1699,615)` for `R_5` and `A(10663,3867)` for `R_6`.  Each later rung still
-requires a separate finite-sheet unit/polynomiality proof; the next such
-gate is `L^10663N(R_6)`.
+`A(1699,615)` for `R_5` and `A(10663,3867)` for `R_6`.  THM-3523 subsequently
+closes `L^10663N(R_6)` and gives `A(66907,24255)` for `R_7`.  Each later rung
+still requires a separate finite-sheet unit/polynomiality proof.
 
 ## 8. Monoid comparison and exact scope
 

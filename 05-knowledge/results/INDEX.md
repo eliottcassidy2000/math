@@ -1,5 +1,30 @@
 # Script Results Index
 
+- `keller_R6_finite_sheet_recursive_norm_probe_20260816.py` and
+  `keller_R6_finite_sheet_split_branch_audit_20260816.py` -> matching `.out`
+  files [THM-3523 PROVED + VERIFIED-EXACT + SPLIT-REPRESENTATION AUDITED].
+  At the canonical finite inverse point `q=(2,5/6,-7/8)`, the exact identity
+  `R_6=2^1431 L^1699 N(L)^271 N^2(L)^43 N^3(L)^7 N^4(L)N^5(L)` is evaluated
+  without expanding `R_6`.  Complete `243`-sheet `L` and frozen-`H`
+  `81x81`-determinant routes agree modulo `101,103,107`, giving nonzero
+  residues `26,70,69`; every `L`, `S`, and discriminant gate is a unit, and
+  the omitted-`64` hostile fires by exactly `64^-81`.  A fourth-prime audit
+  splits the outer cubic at `w=10,23,38`, evaluates complete `81`-sheet
+  `R_5` branches `49,22,60`, and obtains `R_6(q)=9 mod 71`, while omitting
+  one branch gives `25`.  Hence `v_L(N(R_6))=-10663` and
+  `R_7=L^10663N(R_6)` is polynomial and `L`-coprime; proved THM-3522 then
+  gives the complete fixed-chart packet `A(66907,24255)`.  The `243` here is
+  an evaluation-algebra dimension, not the open degree-`243` separability
+  gate; no image, irreducibility, all-level, arbitrary-map, or general JC
+  claim follows.  Primary script/output/semantic SHA-256:
+  `9cacaaa825d9598556f7e8baa35970d30295a139c79ed2dc22c9c5e84ef611e8` /
+  `759057c3f06b77f972f551238891049e261b56d1a2619b786d5230c6d8269d6f` /
+  `a2ede01095e73ad727285743b83d6502ff37c0ab772a19e0a03fe9036ba5f7b8`;
+  split audit:
+  `c6ab159d1ab0ba241306d11e3fbc1273f6579c9e843fd0a00994d8107ca01069` /
+  `cdd902f60147eca39bb708d86e4068f049b80efd08b69db14b2f8bcff16eaa52` /
+  `6384038b2f7e386289c7af89ac1c5a020aa18320e6957a59469ff013de396490`.
+
 - `lrc_r5_common_base_connection_obstruction_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT AUDIT ACCEPTS SCOPED FINITE-EXACT
   PACKAGE].  Rebuilds the THM-2594 joint Boolean table and the THM-3514

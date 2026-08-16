@@ -9,9 +9,10 @@ status: >
   Its exposed top face is C x^10663(3xz-2y)^3867 with C nonzero.  This theorem
   itself does not prove the renewal faces of R_5; THM-3522 subsequently proves
   fixed-chart renewal and closes the complete packets of R_5 and R_6.
-  Irreducibility or image status of R_5, the degree-243 separability gate,
-  the next polynomiality gate, an unconditional all-level law, and every
-  general Jacobian-conjecture claim remain open.
+  THM-3523 subsequently closes the next finite-sheet/polynomiality gate and
+  gives the complete packet of R_7.  Irreducibility or image status of R_5,
+  the degree-243 separability gate, later polynomiality, an unconditional
+  all-level law, and every general Jacobian-conjecture claim remain open.
 source: codex/fixed-R5-finite-sheet/2026-08-16
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
@@ -22,6 +23,7 @@ depends_on:
 related:
   - THM-3504-level-four-sporadic-keller-image-prime-and-four-component-nonproperness
   - THM-3522-fixed-keller-five-face-renewal-propagation
+  - THM-3523-fixed-R6-finite-sheet-unit-and-next-old-L-clearing
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
   - MISTAKE-415
 scripts:
@@ -298,8 +300,9 @@ rung.  By itself it does **not** prove any of the following:
 
 THM-3522 subsequently closes the first two bullets by proving the complete
 packet `A(1699,615)` for `R_5`, and also proves `A(10663,3867)` for `R_6`.
-It does not change the remaining bullets.  The next finite-sheet and
-polynomiality gate is `L^10663N(R_6)`.
+THM-3523 subsequently closes `L^10663N(R_6)`, proves `R_7` polynomial and
+`L`-coprime, and gives its complete packet `A(66907,24255)`.  It does not
+change the remaining geometric or all-level bullets.
 
 Reproduce both exact routes with
 

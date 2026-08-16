@@ -8,10 +8,11 @@ status: >
   A(7e-2m,3e-2m).  In particular, the two renewal faces propagate; no
   separate finite-sheet condition enters that implication.  Hence the fixed
   R_5 and R_6 have full packets A(1699,615) and A(10663,3867), with explicit
-  nonzero renewal scalars below.  Polynomiality at the next rung, the next
-  finite-sheet unit, fifth-image status, degree-243 separability, all-level
-  iteration, arbitrary Keller maps, and every general Jacobian claim remain
-  open.
+  nonzero renewal scalars below.  THM-3523 subsequently proves polynomiality
+  at the next rung and applies this theorem to give A(66907,24255) for R_7.
+  Later finite-sheet units, fifth-image status, degree-243 separability,
+  all-level iteration, arbitrary Keller maps, and every general Jacobian
+  claim remain open.
 source: codex/five-face-renewal-propagation/2026-08-16
 depends_on:
   - THM-3495-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness
@@ -20,6 +21,7 @@ depends_on:
   - THM-3521-fixed-R5-finite-sheet-unit-and-next-old-L-clearing
 related:
   - MISTAKE-415
+  - THM-3523-fixed-R6-finite-sheet-unit-and-next-old-L-clearing
 scripts:
   - 04-computation/keller_five_face_renewal_propagation_probe_20260816.py
   - 04-computation/keller_five_face_renewal_propagation_independent_audit_20260816.py
@@ -437,6 +439,11 @@ does **not** prove:
 - an unconditional all-level packet recurrence;
 - a classification of arbitrary Keller maps, `JC(2)`, `DC(2)`, LRC, or any
   general Jacobian-conjecture statement.
+
+The first bullet is an internal boundary of this theorem.  THM-3523
+subsequently supplies that finite-sheet and polynomiality input by a separate
+exact computation, and then uses the implication proved here to give the
+complete packet `A(66907,24255)` for `R_7`.  The remaining bullets stay open.
 
 Reproduce the exact certificate with
 
