@@ -157,14 +157,54 @@ Phi(j)=j0+j1+j2+j3,                                  (13)
 ```
 
 because `ker Phi` is the space of vertex coboundaries.  Equations (12)--(13)
-are the smallest honest template for the proposed D5 word-current/JC-flux
-map: both sides must first supply a lawful closure edge and a cochain whose
-class is preserved.  On the present static path every cochain is exact, so no
-nonzero `H1` flux can be inferred.
+are the smallest local owner-state closure template.  On the present static
+path every cochain is exact, so no nonzero `H1` flux can be inferred.
 
 The most plausible semantic source for (11) is a later `U_clock` or complete
 address return carrying state `2` back to state `0` without changing temporal
 copy.  That edge is not present in the current tensor.
+
+### Relation to the existing D5 theorems
+
+This `C4` is **not** THM-3496's seven-chart cycle.  THM-3496 already proves,
+after four explicit markings, the normalized coefficient-changing map
+
+```text
+H1_graph(C7;F13) -> H1_et(K((lambda));mu_13),
+[g] |-> (sum_i g_i) kappa_lambda.                    (D5-1)
+```
+
+It also proves that this Kummer line does not map additively to the
+characteristic-zero Hamiltonian response module.  THM-3450 supplies a
+different characteristic-zero marked-amplitude isomorphism and proves that
+the full Keller germ needs the two ANOVA margin sectors missing from a
+doubly-centred source.  Neither theorem identifies the present four owner
+states with the seven transported charts.
+
+If a lawful clock eventually supplies (11) **and** an `F13`-valued cochain
+`j` on that cycle, there is an explicit marked comparison cospan:
+
+```text
+H1(C4;F13) --s4--> F13 <--s7-- H1(C7;F13)
+                              --Phi_lambda--> Kummer H1,
+s4([j])=j0+j1+j2+j3.                                (D5-2)
+```
+
+Both seam maps are isomorphisms, so exponent-one normalization sends `[j]`
+to `s4([j]) kappa_lambda`.  This is algebraically unique after the same
+orientation and generator markings as THM-3496.  Three realization arrows
+remain absent:
+
+1. the physical `U_clock` edge producing `C4`;
+2. a coefficient map from the present characteristic-zero/cyclotomic response
+   amplitudes (represented here by good reduction in a large split field) to
+   an `F13` word-current; and
+3. a semantic map from this owner-state cycle to the seven-chart cycle.
+
+Thus (D5-2) sharpens the interface without reversing HYP-9031's direct-map
+no-go.  Even if all three arrows were supplied, THM-3496's additive-flux
+hostile and THM-3450's order-eight/order-fourteen margin hostiles would still
+have to be paid.
 
 ## 3. The diagonal bundle is six address kernels
 
@@ -342,7 +382,7 @@ one reciprocal sum.
 | quotient loss | arc reversal fails at 26 middle-root address pairs |
 | static homology | `H1(P7)=H1(P4)=0` |
 | needed sidecar | lawful closure edge `2--0`, exact address/clock and temporal copy |
-| cheapest D5 test | construct closure cochain and compare its cycle sum `Phi` with a typed JC flux class |
+| cheapest D5 test | realize the closure over `F13`, then feed its seam through THM-3496's marked cospan; additive flux still faces the proved no-go |
 | harmonic boundary | realized five supports separate; arbitrary subset sums collide |
 | scope | finite representation sidecar only; no chronology, physical current, D5 bridge, row exclusion, or LRC(14) |
 
@@ -357,7 +397,8 @@ one reciprocal sum.
 4. If the closure exists, project to antisymmetric edge cochains and test
    whether the 26-pair orientation defect is exact, annihilated, or remains as
    a second class.
-5. Only then compare the resulting class (13) with a JC flux class.  Matching
+5. Construct the missing coefficient and chart-realization arrows into
+   (D5-2).  Its marked Kummer class is still not additive JC flux; matching
    dimensions or the count six is not a bridge.
 
 ## Reproduction
@@ -369,4 +410,3 @@ python -B -O 04-computation/lrc_r5_pointed_bidirected_p4_cocycle_sidecar_2026081
 
 Normal and optimized transcripts are byte-identical.  The semantic SHA-256 is
 `b2ba313f88fbab0d36e95a63ade832492743ed6007fa0480434083d7dab0ecd3`.
-
