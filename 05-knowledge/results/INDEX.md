@@ -1,5 +1,26 @@
 # Script Results Index
 
+- `lrc_r5_ufull_owner_node_common_base_current_probe_20260816.py` ->
+  matching `.out` [FINITE-EXACT ONE-COMMON-BASE OWNER-NODE CURRENT
+  CANDIDATE; INDEPENDENT AUDIT PENDING].  On the exact joint coordinate
+  `lcm(T_source,13*T_endpoint)` and a Lucas-certified split field for
+  `lcm(T_source,13^2*T_endpoint)`, the actual THM-2471 source root-service
+  profiles and actual `U_full` endpoint Boolean factors are multiplied at
+  the same owner nodes before integration.  The endpoint harmonic descends
+  to frequency `57122` on the common base.  All five literal guard
+  restorations pass; the same-root source sector is pointwise zero before
+  integration.  The inverse `7x13` table has full spectrum
+  `(91,1,6,12,72)`, its output ANOVA has `(72,0,0,0,72)`, all seven fixed
+  `(1,0,6)` cell modes are nonzero in the split field, and the role bridge is
+  `223272610175651920448188`.  The raw source support is exactly a directed
+  cut `K_(1,12)` or `K_(2,11)`, never a tournament or bidirected pair.  This
+  remains a one-host candidate without exact `C(a;X,m)`, arrival/source-time
+  identification, `U_clock` chronology, row exclusion, or LRC(14).
+  Script/output/semantic LF SHA-256:
+  `21577dfa2cdf672ab03dd21330a0d480bcb6373ba235b2eff2f2a0ec4b8672df` /
+  `3fe36c712cdf4d26c74ddb9d3aa6361ff84cb0fc7de8f45e88bee6c20450e79b` /
+  `74cd83cecf9bf495240d6ae5b07ad28a7ae15f88bd0a06fe6e4df114a501e5da`.
+
 - `lrc_ufull_desheeted_common_residual_base_probe_20260816.py` -> matching
   `.out` [FINITE-EXACT ACTUAL-ENDPOINT ONE-BASE COUPLING CANDIDATE;
   INDEPENDENT AUDIT PENDING].  The canonical guard desheeting
