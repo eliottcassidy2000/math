@@ -45,7 +45,7 @@ The live concept board was:
 | Factorial | Kummer--Legendre coefficient heights -> actual Newton polygon, by normalized residual reduction mod `p` | exact height when `rho!=0` | extra valuation and new hull geometry when `rho=0` | `rho` at every extreme raw vertex | compute the finite residue table only on raw vertices |
 | Dirichlet | periodic-polynomial lanes -> twisted Dirichlet functions, by Fourier transform plus Hurwitz continuation | every labelled lane coefficient | finite prefix; gauge if period/root labels are dropped | character and pole-height labels | inverse DFT of all residues |
 | Rule 30 | slack polynomial and phase profile -> corner fibre product, by two restrictions | their common marked bit | mixed slack-by-phase coupling | a pointed Hasse carrier/section | physical two-section hostile |
-| LRC | endpoint atoms -> relation-chart factors, by endpoint-character summation | the unrestricted mod-13 aggregate and role character | physical grouping, sign/order, common ancestry, chronology | a joint atom key before marginalization | compare a lawful diagonal common-point coefficient with the product control |
+| LRC | endpoint atoms -> relation-chart factors, by endpoint-character summation | the unrestricted mod-13 aggregate and role character | physical grouping, sign/order, common ancestry, chronology | a joint atom key before marginalization | compare point/component contractions with the Cartesian control, then demand an address-covariance gate |
 | Jacobian | inverse-sheet values of `H` -> `N(H)`, by finite norm and the `L`-adic valuation | divisor support and total order | individual sheet identities | the escaping-pair face plus a finite-sheet unit control | compute the initial face and one finite hostile, before expanding `J` |
 
 These are typed connections, not analogies.  In particular, the LRC endpoint
@@ -76,11 +76,38 @@ two separately marginalized sums and erases the shared atom key.  A
 checkerboard pair has the same two marginals and product while its joint
 intersection changes from positive to zero.  Thus no post-marginal Fourier
 operation can reconstruct physical common ancestry.  The next lawful object
-must be formed on common points before the two marginals are multiplied.
+must be formed on a common atom, stalk, or common-base record before the two
+marginals are multiplied.
 THM-3492 makes the obstruction universal: the marginal map lands in a fibre
 product and has kernel `ker(e_U) tensor ker(e_V)`.  A physical ancestry key is
 therefore a semantic choice of lift through that exact sequence, not another
 function of the two totals.
+
+The full origin-independent `13^3` follow-up tests the strongest joint objects
+available from the present interval geometry.  In the same certified field
+and inherited two-factor normalization, its bridge values are
+
+```text
+Cartesian product                 389266878372286537904,
+same cyclic E-component           540653486701996040250,
+different-component remainder     420866277916799378523,
+same-point diagonal               167726070588785644466.
+```
+
+The first value is the sum of the next two modulo the certified prime.  Thus
+the frozen bridge has a nonzero contribution from pairs in distinct cyclic
+components; neither the point diagonal nor the unweighted same-component
+contraction recovers it.  The cyclic implementation also checked the
+`0~T` glue; this frozen universe happened to require zero origin joins, so the
+cut-segment and cyclic-component banks agree here for a certified reason, not
+by an unchecked choice of cut.
+
+This is a sharp stop, not an ancestry impossibility theorem.  It rules out
+only the unweighted same-component restriction under the inherited
+normalization.  Component-dependent weights remain undetermined, and any
+per-character coupling is still only algebraic unless it descends from an
+`ell`-independent common stalk with an address map into `F_13^3` (or a declared
+quotient), Fourier covariance, and linked nodes and horizons.
 
 ### 2. The factorial compiler reaches `r<=9998` and exposes its structural gap
 
@@ -208,10 +235,11 @@ Counterindications:
 
 ## Ranked next tests
 
-1. **LRC anchor:** form the common-point diagonal endpoint coefficient before
-   separate marginalization; compare it with the frozen bridge, product
-   control, and checkerboard hostile.  Even a hit is same-horizon data, not
-   multilevel ancestry or chronological arrival.
+1. **LRC anchor:** export an `ell`-independent common stalk and address map
+   before marginalization, then verify character covariance and retain linked
+   nodes and horizons.  Do not optimize another per-character coupling: the
+   point and cyclic-component diagonals already miss the frozen bridge, while
+   an algebraic hit would still not prove multilevel ancestry or arrival.
 2. **Factorial niche:** map factorizations of `p^K+p^s+1` to THM-3475
    divisor packets and seek an infinite subfamily disjoint from the proved
    three positive addresses `{p^s,p^K,p^K+p^s}`; keep `d=6518,56,22` as
