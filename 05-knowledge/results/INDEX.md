@@ -48,9 +48,9 @@
   and its exposed top pair is `(10663,3867)`.  Renewal of `R_5`, fifth-image
   geometry, degree `243`, all-level induction, and every general JC claim
   remain open.  Primary script/output/semantic SHA-256:
-  `1257029a1fa78b42003be5be3191e1ce16f3b7fe3b08005dee356d65e57ef6cb` /
-  `a7addc1eb7e9d3509b329b166d18da9a6afc8e48701f2e6ce6425f9963411789` /
-  `fc75d647653111a430210636cb42cbeb56abea90af8e6875ab5fa51701560d0b`.
+  `a201191410e39d47fbf607191e8bd597453c697f134d3803466694b680d8c60d` /
+  `14473ff317e30fb8a90b7d1c0c3879537ce157d7456d31e8ce6901a160d6197f` /
+  `e4610844c8bd506211662c792f27d5bac2529f9d62d63762aaf39e498c4b8707`.
   Audit script/output/semantic SHA-256:
   `1a46b961ab15a61e6e438926c8834fff56c23749f64ed2473e626bebb2fd1d04` /
   `42ddc36acea979ab859c10787da7a7737362c31a16ca0383cf8e06b8fe27ef2f` /

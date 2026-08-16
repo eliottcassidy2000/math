@@ -28,13 +28,13 @@ outputs:
   - 05-knowledge/results/keller_R5_finite_sheet_recursive_norm_probe_20260816.out
   - 05-knowledge/results/keller_R5_finite_sheet_split_global_J_audit_20260816.out
 script_sha256:
-  - 1257029a1fa78b42003be5be3191e1ce16f3b7fe3b08005dee356d65e57ef6cb
+  - a201191410e39d47fbf607191e8bd597453c697f134d3803466694b680d8c60d
   - 1a46b961ab15a61e6e438926c8834fff56c23749f64ed2473e626bebb2fd1d04
 output_sha256:
-  - a7addc1eb7e9d3509b329b166d18da9a6afc8e48701f2e6ce6425f9963411789
+  - 14473ff317e30fb8a90b7d1c0c3879537ce157d7456d31e8ce6901a160d6197f
   - 42ddc36acea979ab859c10787da7a7737362c31a16ca0383cf8e06b8fe27ef2f
 semantic_sha256:
-  - fc75d647653111a430210636cb42cbeb56abea90af8e6875ab5fa51701560d0b
+  - e4610844c8bd506211662c792f27d5bac2529f9d62d63762aaf39e498c4b8707
   - cd99969bd8949ab971cc9f7ee3fefac8aba835b2a6b4fdd323934ef4294d0589
 hash_basis: raw LF bytes for files; ordered finite-field gate ledgers as printed
 ---
@@ -162,16 +162,26 @@ and use the exact inverse formulas of THM-3495 for the universal preimage in
 cubic discriminant are units by inverting their full regular-representation
 matrices.  It also substitutes the universal point directly into `F`.
 
+Norm multiplicativity also unrolls (1) to the exact localized identity
+
+```text
+R_5=2^477 L^271 N(L)^43 N^2(L)^7 N^3(L) N^4(L).       (13)
+```
+
+This is an identity of rational functions on the finite-etale locus, not a
+Newton-face recurrence.  The companion evaluates its five norm-orbit factors
+separately and recovers the recursive value.
+
 The primary route applies (1) recursively through dimensions
 
 ```text
-1 -> 3 -> 9 -> 27 -> 81                               (13)
+1 -> 3 -> 9 -> 27 -> 81                               (14)
 ```
 
 and stops at the five-term polynomial `L`.  A second route uses dimensions
 
 ```text
-1 -> 3 -> 9 -> 27                                     (14)
+1 -> 3 -> 9 -> 27                                     (15)
 ```
 
 and evaluates the frozen `361`-term polynomial `H` directly at the bottom.
@@ -182,6 +192,17 @@ The two routes agree at three primes:
 | `101` | `74` | `49` | `60` |
 | `103` | `36` | `87` | `91` |
 | `107` | `88` | `20` | `96` |
+
+The corresponding rows `(L,N(L),N^2(L),N^3(L),N^4(L))` are
+
+```text
+p=101: (16,12,72,9,49),
+p=103: (12,53,22,85,76),
+p=107: (38,45,28,3,17).                               (16)
+```
+
+Every factor in (16) is nonzero, and substitution in (13) gives the second
+column of the table.
 
 All entries in the second column are nonzero.  The third column is computed
 twice: by three successive cubic norms and by the determinant of the literal
@@ -196,7 +217,7 @@ dimensions `1,3,9,27` are
 ```text
 p=101: (16,78,56), (12,2,41), (72,36,10), (9,9,13),
 p=103: (12,72,91), (53,5,60), (22,1,79), (85,82,68),
-p=107: (38,86,14), (45,105,34), (28,31,100), (3,95,82). (15)
+p=107: (38,86,14), (45,105,34), (28,31,100), (3,95,82). (17)
 ```
 
 Every entry is nonzero.  These are good-reduction certificates for every
@@ -209,7 +230,7 @@ explicit `H` route.  It reconstructs THM-3495's full `66,146`-term `J`.
 Over `F_71`, the outer inverse cubic above `q` splits with roots
 
 ```text
-w=10,23,38.                                            (16)
+w=10,23,38.                                            (18)
 ```
 
 The corresponding inverse points and inner ledgers are listed as
@@ -218,14 +239,14 @@ The corresponding inverse points and inner ledgers are listed as
 ```text
 (10, 0,  2, 68, 26,  4, 64),
 (23, 1, 36, 14, 57, 68, 66),
-(38,18, 60, 40, 20, 44, 19).                           (17)
+(38,18, 60, 40, 20, 44, 19).                           (19)
 ```
 
 Each point maps directly to `q`; every displayed unit and `G` value is
 nonzero.  Branchwise multiplication gives
 
 ```text
-L(q)^271 product_(F(r)=q) G(r)=43 mod 71.              (18)
+L(q)^271 product_(F(r)=q) G(r)=43 mod 71.              (20)
 ```
 
 This agrees with an additional run of the recursive companion at `p=71`,
@@ -237,7 +258,7 @@ branch product.
 All rational denominators in the displayed inverse charts and
 normalizations are units at the four primes used above.  Therefore each
 finite-field value is the reduction of the same rational number `R_5(q)`.
-One nonzero value would prove (4); equations (15), (17), and (18) provide
+One nonzero value would prove (4); equations (16)--(17), (19), and (20) provide
 four controlled witnesses by two representations.
 
 The finite branch over the generic point of `(L)` is regular.  If `R_5`
