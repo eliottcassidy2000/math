@@ -2,43 +2,310 @@
 id: THM-3528
 title: "Fixed Keller all-level cleared-norm polynomiality and finite-sheet defect identity"
 status: >
-  RESERVED / PROVISIONAL PROOF UNDER AUDIT.  Candidate statement: the raw
-  cleared norms of the fixed sporadic Keller map are polynomial and carry the
-  THM-3522 packet at every level.  The old-L multiplicity of the next raw
-  rung equals the nonnegative valuation on the regular finite inverse sheet.
-  This would not prove L-coprimality at later levels, newest-image status,
-  irreducibility, separability, distinct nonproperness components, an
-  arbitrary-map law, or any general Jacobian-conjecture claim.
+  RESERVED / PROVISIONAL PROOF UNDER AUDIT.  For the fixed sporadic Keller
+  inverse chart, a nonzero polynomial with a complete packet A(e,m) has
+  L^e times its cubic norm in Q[a,b,c], and the result has packet
+  A(7e-2m,3e-2m).  Its exact old-L multiplicity is the nonnegative order on
+  the regular finite inverse sheet.  Consequently the raw cleared-norm tower
+  from L is polynomial and carries the Pell-57 packet at every level.  This
+  does not prove later L-coprimality, newest-image status, irreducibility,
+  separability, distinct nonproperness components, an arbitrary-map law, or
+  any general Jacobian-conjecture claim.
 source: codex/all-level-cleared-norm/2026-08-16
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
   - THM-3498-level-four-old-boundary-cancellation-and-degree81-discriminant-gate
+  - THM-3506-fixed-keller-five-face-norm-transform-and-271-99-boundary
   - THM-3522-fixed-keller-five-face-renewal-propagation
 related:
+  - MISTAKE-415
+  - THM-3521-fixed-R5-finite-sheet-unit-and-next-old-L-clearing
   - THM-3523-fixed-R6-finite-sheet-unit-and-next-old-L-clearing
   - THM-3527-fixed-R7-finite-sheet-unit-and-next-old-L-clearing
+scripts:
+  - 04-computation/keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.py
+outputs:
+  - 05-knowledge/results/keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.out
+script_sha256:
+  - 050d9ef31faa59c7ebb3b4dc0ca4df1774cbc4a10a5dd89c87358d1e73842fb6
+output_sha256:
+  - 2226933130c39b16b74d6805657a1a42acc87830c35282936da571bc62162a26
+semantic_sha256:
+  - a77811be1a53f2e0d0e0eeac3b4a4ecac358f79c8ed0b6ec5fa6f03f3bb0c826
+hash_basis: LF-normalized bytes
 ---
 
-# THM-3528 -- reserved all-level cleared-norm gate
+# THM-3528 -- all complete packets clear, but finite-sheet defects may remain
 
 **RESERVED / PROVISIONAL PROOF UNDER AUDIT.**
 
-The proposed proof combines three already-proved mechanisms:
+Retain the fixed sporadic Keller map `F:C^3->C^3`, the irreducible target
+polynomial
 
-1. over `U=Spec(Q[a,b,c,L^-1])`, the inverse cover is finite etale, so the
-   norm of every source polynomial is regular on `U`;
-2. a complete packet `A(e,m)` gives valuation `-e/2` on each of the two
-   divergent old-`L` sheets, while the regular finite sheet has valuation
-   `s>=0`; hence
+```text
+L=27a^2c^2-18abc+16a+b^3c-b^2,
+```
 
-   ```text
-   v_L(N(P))=-e+s,
-   v_L(L^e N(P))=s>=0;
-   ```
+and the cubic function-field norm `N` of THM-2473 and THM-3495.  Put
+`A=Q[a,b,c]`.  Target variables are renamed `(x,y,z)` after every norm, as in
+THM-3506.
 
-3. polynomiality then activates THM-3522 and propagates
-   `(e,m)->(7e-2m,3e-2m)`.
+## 1. The theorem
 
-The proof, cone audit, normalization conventions, and exact scope are being
-written and independently hostile-audited.  This reserved file has no proved
-downstream dependencies until its status is promoted.
+Let `P in A` be nonzero and have the complete five-face packet `A(e,m)` of
+THM-3506.  Thus its complete maximum-`lambda` face, for `lambda=i-k`, is
+
+```text
+in_max-lambda(P)=C x^e(3xz-2y)^m,       C!=0.          (1)
+```
+
+At the generic point of `(L)`, let `q_fin` denote the unique regular finite
+inverse branch and define
+
+```text
+s_L(P)=v_L(P(q_fin)).                                  (2)
+```
+
+Then `s_L(P)` is a finite nonnegative integer and
+
+```text
+v_L(N(P))=-e+s_L(P),                                   (3)
+Q(P):=L^e N(P) belongs to A,                           (4)
+ord_L(Q(P))=s_L(P).                                    (5)
+```
+
+In particular, the finite-sheet unit condition `s_L(P)=0` is required for
+`L`-coprimality, but it is **not** required for polynomiality.  Applying
+THM-3522 to the now-unconditional polynomial (4) gives the complete packet
+
+```text
+A(e,m) --Q--> A(7e-2m,3e-2m).                         (6)
+```
+
+This is a closure theorem for complete packets under one fixed inverse chart,
+not a theorem about arbitrary Keller maps.
+
+## 2. The two divergent branches have exact order `-e/2`
+
+Let `R=A_(L)` be the generic DVR of the old boundary.  THM-3498 proves that
+the inverse cubic has one regular finite branch and two divergent geometric
+branches.  On either divergent branch, with `u=1/w`, one has
+
+```text
+x=u^-1,
+y=D/S+O(u),
+z=-3(D/S)u+O(u^2),
+3xz-2y=-11D/S+O(u),
+v_L(u)=1/2,                                           (7)
+```
+
+where `D/S` is a unit.  A monomial `x^i y^j z^k` therefore has leading
+`u`-order `k-i=-lambda`.  The complete face (1) evaluates to a nonzero unit
+times `u^-e`; every monomial with smaller `lambda` has strictly larger
+valuation.  Hence there is no equal-weight cancellation and
+
+```text
+v_L(P(q_div,+))=v_L(P(q_div,-))=-e/2.                 (8)
+```
+
+The exponent `m` contributes only the unit in (7).  This explains why the
+old-boundary clearing exponent is the first packet coordinate rather than a
+new scalar recurrence guessed from earlier rungs.
+
+## 3. The finite branch supplies exactly the residual multiplicity
+
+At the generic point of `(L)`, the coefficients `c,T,S,D` used in THM-3498
+are units.  The linear residual root of the inverse cubic is simple, so
+Hensel lifting places `q_fin` in the valuation ring of the completed base
+field.  Because `P` is a polynomial in the source coordinates,
+
+```text
+v_L(P(q_fin))>=0.                                      (9)
+```
+
+The value is not identically zero.  Indeed, the generic source coordinate
+field is a degree-three field extension of the target field; a nonzero
+polynomial on the source is a nonzero field element, and remains nonzero in
+each factor after completion.  Thus (2) is a finite integer.
+
+After a splitting extension of the completion, the field norm is the product
+of the three branch values.  Valuations add, with the two conjugate divergent
+roots each counted once.  Equations (8)--(9) give
+
+```text
+v_L(N(P))=(-e/2)+(-e/2)+s_L(P)=-e+s_L(P),             (10)
+```
+
+which proves (3).  This calculation includes the local degree/ramification
+weight: the pair of half-integral geometric orders is the degree-two local
+factor and has integral total order `-e`.
+
+## 4. Global regularity turns the valuation bound into polynomiality
+
+Set
+
+```text
+U=Spec(A[L^-1]).                                      (11)
+```
+
+THM-2473 identifies `V(L)` as the full nonproperness divisor of `F`; since
+`F` is etale, the restriction `F^-1(U)->U` is finite etale of degree three.
+The norm of the regular source element `P` is therefore the determinant of a
+finite locally free multiplication map and belongs to
+
+```text
+N(P) in A[L^-1].                                      (12)
+```
+
+There are consequently no hidden `S`, discriminant, chart, or other
+denominators.  Since `A` is a UFD and `L` is irreducible, (3) says precisely
+that multiplying (12) by `L^e` leaves no denominator.  This proves (4), and
+the same valuation identity gives (5).  The norm is nonzero because it is the
+field norm of a nonzero field element.
+
+Polynomiality was the only global hypothesis in THM-3522.  Applying that
+theorem now proves (6), including all five complete output faces and their
+nonzero overlap scalars.
+
+## 5. The all-level raw packet tower
+
+Define the unnormalized cleared-norm tower by
+
+```text
+P_0=L,                  (e_0,m_0)=(1,0),
+P_(n+1)=L^e_n N(P_n),
+(e_(n+1),m_(n+1))=(7e_n-2m_n,3e_n-2m_n).             (13)
+```
+
+THM-3506 proves that `L` has `A(1,0)`.  Equations (4) and (6), applied
+inductively, prove for every `n>=0` that
+
+```text
+P_n is a nonzero polynomial with complete packet A(e_n,m_n).             (14)
+```
+
+Multiplying any rung by a nonzero rational scalar changes neither its packet
+nor any `L`-valuation.  Suitable canonical scalar choices identify the first
+eight rows with the already named polynomials:
+
+| `n` | named scalar normalization | `(e_n,m_n)` |
+|---:|---|---:|
+| 0 | `L` | `(1,0)` |
+| 1 | `H` | `(7,3)` |
+| 2 | `J` | `(43,15)` |
+| 3 | `G` | `(271,99)` |
+| 4 | `R_5` | `(1699,615)` |
+| 5 | `R_6` | `(10663,3867)` |
+| 6 | `R_7` | `(66907,24255)` |
+| 7 | `R_8` | `(419839,152211)` |
+
+The next three actual raw packet rows are therefore
+
+```text
+(2634451,955095),
+(16530967,5993163),
+(103730443,37606575).                                  (15)
+```
+
+Equation (15) asserts polynomial complete packets.  It does not name their
+irreducible factors or make them image equations.
+
+## 6. Cone, Pell, and Cassini consequences
+
+The seed lies in the stronger invariant cone
+
+```text
+e>0,        0<=2m<=e.                                  (16)
+```
+
+Writing `(e',m')=(7e-2m,3e-2m)`, one has
+
+```text
+m'>=2e>0,       e'-2m'=e+2m>=0.                       (17)
+```
+
+Thus (16) propagates.  The congruences `3|m` and `e=1 mod 3` also propagate,
+so every packet in (13) is admissible.  Since the renewal matrix has trace
+`5` and determinant `-8`, both coordinates obey
+
+```text
+u_(n+2)=5u_(n+1)+8u_n.                                (18)
+```
+
+The Pell-57 and Cassini identities formerly proved only for the abstract
+matrix orbit are now realized by the raw polynomial tower for every `n`:
+
+```text
+3e_n^2-9e_nm_n+2m_n^2=3(-8)^n,                       (19)
+e_nm_(n+1)-m_ne_(n+1)=3(-8)^n.                       (20)
+```
+
+Equivalently, with `X_n=6e_n-9m_n` and `Y_n=m_n`, multiplication by
+`(5+sqrt(57))/2` gives
+
+```text
+X_n^2-57Y_n^2=36(-8)^n.                              (21)
+```
+
+The fibre-degree grading `3^n` and the packet-norm grading `(-8)^n` remain
+different gradings sharing one iteration index.
+
+## 7. The sharp boundary: polynomial packet versus new image prime
+
+For the tower (13), put
+
+```text
+s_n=s_L(P_n).                                         (22)
+```
+
+Equation (5) becomes the exact divisor-return ledger
+
+```text
+ord_L(P_(n+1))=s_n.                                   (23)
+```
+
+The finite-sheet computations of THM-3498, THM-3506, THM-3521, THM-3523,
+and THM-3527 prove `s_n=0` through input `R_7` and output `R_8`.  They remain
+strictly stronger than this theorem: they prove the corresponding cleared
+norm is coprime to `L`.  Starting with input `R_8`, the values `s_n` are open
+and may be positive.  If that occurs, the next raw packet remains polynomial
+but carries an old-`L` factor of exactly that multiplicity.
+
+Accordingly this theorem proves neither:
+
+- `L`-coprimality or finite-sheet units after `R_8`;
+- irreducibility, squarefreeness, primitivity over `Z`, or newest-image status
+  for later raw rungs;
+- separability, full degree, discriminant square classes, or distinct
+  nonproperness components at later iterate levels;
+- an all-level prime-factor or Jelonek-component classification;
+- an analogous closure law for arbitrary Keller maps, a classification of
+  Keller counterexamples, `JC(2)`, `DC(2)`, LRC, or the general Jacobian
+  conjecture.
+
+In particular, the raw all-level polynomial tower is not an all-level tower
+of new image primes.
+
+## 8. Exact arithmetic audit
+
+The companion checks the matrix determinant, the eight named packet rows,
+the next three raw rows, invariant cone, congruences, order-two recurrence,
+Pell identity through `n=15`, Cassini identity through `n=14`, and the
+symbolic valuation ledger
+
+```text
+(-e+s)+e=s>=0
+```
+
+for hostile values `s=0,1,2,e,e+1`.  Ordinary and optimized replays agree
+line-for-line with the stored output.  These checks audit the arithmetic and
+scope; Sections 2--4 are the geometric proof.
+
+Reproduce with
+
+```text
+python -B 04-computation/keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.py
+python -B -O 04-computation/keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.py
+```
+
+Promotion from the reserved status awaits the independent proof audit.
