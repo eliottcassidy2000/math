@@ -391,8 +391,11 @@ one reciprocal sum.
 1. **Completed:** the disjoint five-coordinate audit reconstructed the tensor
    and accepted all 169 diagonal maps; use its pinned artifacts as the fixed
    base for the remaining tests.
-2. Retain `r2` and test whether the actual three-digit child remains diagonal,
-   whether `sum_r2=I`, and whether any two-block cocycle composition survives.
+2. **Completed:** the
+   [third-digit probe](lrc-r5-third-current-digit-p4-live-line-obstruction-codex-20260816.md)
+   keeps all 2,197 children on the live arc lines, but full-map uniqueness is
+   only `130/169`; the pair law is vacuous-only and every fixed child raises
+   the 78-state union rank from 68 to 78.
 3. Transport the four states to a lawful `U_clock` and ask whether state `2`
    returns to state `0` on the same temporal copy, supplying (11).
 4. If the closure exists, project to antisymmetric edge cochains and test

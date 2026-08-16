@@ -1,5 +1,27 @@
 # Script Results Index
 
+- `lrc_r5_third_current_digit_pointed_root_difference_diagonal_bundle_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT STATIC THIRD-CYLINDER RESPONSE SIDECAR;
+  NO THEOREM PROMOTION].  The exact mod-2197 half-open source profiles and a
+  sparse refined-cell endpoint operator marginalize over `r2` to the pinned
+  `b1baa781a` tensor.  Its prior-address ranks are `0:35,2:2,4:2,6:130`, so a
+  full `Mat_6` conditional map is unique only for `130*13=1690` children; all
+  2,197 children have a unique live-line restriction, remain diagonal on the
+  six bidirected-P4/P7 edge lines, and have no off-diagonal mixing.  Fixed
+  prior-address sums are `I6` on the 130 full-rank fibres and the live-support
+  projector on all 169.  Stationary/lower-memory actual maps fail even on the
+  full-rank bank.  The adjacent-pair cocycle succeeds only on the
+  `455=35*13` vacuous children above zero parents.  The 78 arc/digit parent
+  rows have rank 68, while every fixed-`r2` union has rank 78, also checked on
+  literal 2197-column rows at `r2=0,6,12`; no static 78-state transfer
+  survives.  Support-normalized equals flat because every active source fibre
+  supports all 13 children.  No clock, chronology, complete address,
+  ancestry/current/H1 map, row exclusion, or LRC(14) follows.  Script/output/
+  semantic LF SHA-256:
+  `a227bc2f385d8a2eaecb27f317fa5ed66623c70938d8a97aba620298a8a7b61b` /
+  `aba447ca5c1e5b6678a6ccd93371b1b8b1bd0ceb2fe127c83c6304855fb8f80f` /
+  `3d1527fb4ce4931680e50d7135b9d1129c1816e3a9158645523e2728ddc71ec2`.
+
 - `lrc_r5_pointed_bidirected_p4_cocycle_sidecar_20260816.py` -> matching
   `.out` [FINITE-EXACT REPRESENTATION SIDECAR; PARENT INDEPENDENT AUDIT
   ACCEPTED].  The six pointed lines are canonically the six directed arcs of
