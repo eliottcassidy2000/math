@@ -71,8 +71,32 @@
   referee script/output:
   `e33714832d1638a7e0587d9d6f7eb40e1c8ec95b92958882ffa93220cf1c4212` /
   `e83775507494f737c27fa564fe8a121730f7732cd6909330320597b414054a80`.
+- `lrc14_r5_slope_pencil_independent_audit_20260816.py` -> matching `.out`
+  [THM-3505 PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].  A standalone
+  interval Boolean algebra and transfer-profile engine imports neither the
+  THM-2594 constructor nor the submitted Fourier helper.  It reconstructs all
+  `15,379` zero-padded common-base entries, matching canonical digest
+  `18463c7af393c6090c7419c76d48b7ed40f9ac8b17d8c1be247062493e334ce8`,
+  and derives the retained table by pairwise and source-folded routes, digest
+  `1ba72585187c014e482f89959ff4f19e2185e6e4fcd982d497923a304e0d37d8`.
+  Compatible roots `(64,81,475)` in `F_547` reproduce `72/72` nonzero modes
+  on each of thirteen affine slopes and `936/936` overall.  Slope zero is the
+  inherited THM-2594/THM-2512 owner-marginal mixed block; slope two is the
+  fixed-absolute-root owner marginal after `t=theta+2u`.  The anchored
+  mixed-Haar basis has raw counts `(132,132,133,4,4,4)` and `134/144` nonzero
+  coordinates for each word character, total `804/864`, with ledger
+  `5f284f6693c1f3441f51d9a86fddf6bd5d5fcaa1f76b0a9bd8add437b5e3752f`.
+  Its rank-`144` change of basis to the `864/864` nonaxial Fourier bank proves
+  that support is coordinate-dependent.  A formal binary checkerboard embeds
+  into any selected rectangle, but the actual U_full source lacks every
+  required base/root/sheet/horizon/address field, so no lawful map, current,
+  K4 bridge, row exclusion, or LRC(14) consequence follows.  Script/output LF
+  SHA-256:
+  `74f53e6d633d2862f64013387d54bf0d0bc8f66dcb694841b2b3381665e71814` /
+  `1e09ac04818325183d32f57bff7560fac4f172051b353580112822ca7c7da7a7`.
 - `lrc14_stage2_root_shear_contrast_probe_20260816.py` -> matching `.out`
-  [VERIFIED-EXACT SIDE-CAR TO PROVED THM-2594; NOT INDEPENDENTLY AUDITED].
+  [THM-3505 PROVED + FINITE-EXACT; INDEPENDENTLY AUDITED BY THE PRECEDING
+  STANDALONE CONSTRUCTOR].
   The theta-slaved and fixed-absolute-root `7 x 13` contractions differ in
   `19/91` raw and `28/91` centred cells; their difference has nonzero
   `Psi_(1,1)(1,1)` and all `5,184/5,184` primitive coefficients fire, with

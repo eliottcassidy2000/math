@@ -1,7 +1,7 @@
 # The r=5 contraction distinguishes the two root charts
 
-**Status: VERIFIED-EXACT sidecar to proved THM-2594; not independently
-audited and not a bridge/current theorem.**
+**Status: PROVED + FINITE-EXACT as THM-3505 after an independent full-table
+reconstruction; not a bridge/current theorem.**
 
 ## 1. Question after the fixed-root hostile
 
@@ -194,6 +194,22 @@ or a pure absolute-root profile.  They still live in a finite common-base
 candidate contraction.  No physical phase/current, THM-2512 generic bridge,
 THM-2449 one-point response, U_full ancestry lift, row exclusion, or LRC(14)
 conclusion follows.
+
+## Independent audit and basis boundary
+
+The independent THM-3505 audit imports neither this Fourier helper nor the
+THM-2594 constructor.  It reconstructs the full common-base table and matches
+its exact digest before transforming.  It then reproduces the complete
+`936/936` slope pencil and adds the anchored mixed-Haar basis.  That basis has
+only `804/864` nonzero word-Fourier coordinates, despite `864/864` nonaxial
+Fourier characters.  A rank-`144` exact change of basis reconciles the two
+counts: support is basis-dependent.
+
+The same audit compares the U_full minimum joint-address gate.  A formal
+binary checkerboard can be embedded into a selected `(owner,root)` rectangle,
+but the actual U_full cells still have no map to the required common base,
+roots, sheets, horizons, or address.  Thus the independent audit promotes the
+finite spectral statement while preserving the realization boundary.
 
 ## Reproduction
 

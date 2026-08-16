@@ -56,6 +56,9 @@ EXPECTED_DENOMINATOR = PACKET * DEPTH * DEPTH * GRID
 PENCIL_SHA256 = "e92e3f1b072db16ada1daa28925803ebd9e11658deb3532680911ed637dee85d"
 OWNER_MARGINAL_SHA256 = "31475920623317779b3c6de6334f258309256fb71734cc6ecd7ea6a6476b3e68"
 ABSOLUTE_LINE_SHA256 = "808df0ceb8616773cff1b5c12de2333d1495c07d119c57b9b49e68aa9bb2627f"
+COMMON_BASE_TABLE_SHA256 = "18463c7af393c6090c7419c76d48b7ed40f9ac8b17d8c1be247062493e334ce8"
+RETAINED_TABLE_SHA256 = "1ba72585187c014e482f89959ff4f19e2185e6e4fcd982d497923a304e0d37d8"
+RECTANGLE_RAW_SHA256 = "801b278fbe7f638aa621df602672da45953da7d5b961d389797530b5517ca5f4"
 RECTANGLE_FOURIER_SHA256 = "5f284f6693c1f3441f51d9a86fddf6bd5d5fcaa1f76b0a9bd8add437b5e3752f"
 
 
@@ -327,6 +330,44 @@ def integrate(product: tuple[list[int], list[int], list[int], int], intervals: l
     return sum(antiderivative(product, right) - antiderivative(product, left) for left, right in intervals)
 
 
+def prepare_mask(intervals: list[Interval]) -> tuple[list[int], list[int], list[int]]:
+    starts: list[int] = []
+    ends: list[int] = []
+    mass_before: list[int] = []
+    total = 0
+    for left, right in intervals:
+        starts.append(left)
+        ends.append(right)
+        mass_before.append(total)
+        total += right - left
+    return starts, ends, mass_before
+
+
+def mask_antiderivative(mask: tuple[list[int], list[int], list[int]], point: int) -> int:
+    starts, ends, mass_before = mask
+    index = bisect_right(starts, point) - 1
+    if index < 0:
+        return 0
+    return mass_before[index] + max(0, min(point, ends[index]) - starts[index])
+
+
+def integrate_profile_over_mask(
+    product: tuple[list[int], list[int], list[int], int],
+    mask: tuple[list[int], list[int], list[int]],
+) -> int:
+    """Integrate by the short product profile, independently of mask intervals."""
+
+    starts, values, _, _ = product
+    total = 0
+    for index, left in enumerate(starts):
+        right = starts[index + 1] if index + 1 < len(starts) else GRID
+        if values[index]:
+            total += values[index] * (
+                mask_antiderivative(mask, right) - mask_antiderivative(mask, left)
+            )
+    return total
+
+
 def build_masks() -> list[list[list[Interval]]]:
     cells: list[list[Interval]] = []
     half = GRID // 14
@@ -352,8 +393,8 @@ def build_masks() -> list[list[list[Interval]]]:
     return masks
 
 
-def retained_table() -> tuple[list[list[list[int]]], dict[str, object]]:
-    """Build T_ell(u,theta)=sum_q N(u,q,ell,theta) independently."""
+def common_base_table() -> tuple[list[list[list[list[int]]]], list[list[list[int]]], dict[str, object]]:
+    """Build N(u,q,ell,theta), then retain q by two independent routes."""
 
     e_pieces = [(left, right, 1) for left, right in E_SET]
     packet_e = transfer(e_pieces, PACKET)
@@ -364,20 +405,45 @@ def retained_table() -> tuple[list[list[list[int]]], dict[str, object]]:
     v_profile = transfer(e_pieces, DEPTH)
     source_sum = transfer(pieces(v_profile), 13)
     masks = build_masks()
+    prepared_masks = [[prepare_mask(masks[ell][theta]) for theta in range(13)] for ell in range(7)]
 
-    table = [[[0] * 13 for _ in range(13)] for _ in range(7)]
-    owner_totals: list[int] = []
+    owner_charts = [chart(u_profile, owner_root) for owner_root in range(13)]
+    source_charts = [chart(v_profile, source_root) for source_root in range(13)]
+    joint = [[[[0] * 13 for _ in range(7)] for _ in range(13)] for _ in range(13)]
+    service_numerator = 0
     for owner_root in range(13):
-        product = multiply(chart(u_profile, owner_root), source_sum)
-        owner_totals.append(product[3])
+        for source_root in range(13):
+            product = multiply(owner_charts[owner_root], source_charts[source_root])
+            service_numerator += product[3]
+            for ell in range(7):
+                for theta in range(3):
+                    joint[owner_root][source_root][ell][theta] = integrate_profile_over_mask(
+                        product, prepared_masks[ell][theta]
+                    )
+
+    table = [
+        [
+            [sum(joint[owner_root][source_root][ell][theta] for source_root in range(13)) for theta in range(13)]
+            for owner_root in range(13)
+        ]
+        for ell in range(7)
+    ]
+
+    # A second route folds the source charts before multiplication.  It must
+    # reproduce every retained entry, not merely the aggregate response.
+    folded_table = [[[0] * 13 for _ in range(13)] for _ in range(7)]
+    for owner_root in range(13):
+        product = multiply(owner_charts[owner_root], source_sum)
         for ell in range(7):
             for theta in range(3):
-                table[ell][owner_root][theta] = integrate(product, masks[ell][theta])
+                folded_table[ell][owner_root][theta] = integrate_profile_over_mask(
+                    product, prepared_masks[ell][theta]
+                )
+    require(folded_table == table, "pairwise and source-folded retained tables differ")
 
-    aggregate_total = sum(owner_totals)
-    require(Fraction(aggregate_total, EXPECTED_DENOMINATOR) == 169 * I5, "service anchor changed")
+    require(Fraction(service_numerator, EXPECTED_DENOMINATOR) == 169 * I5, "service anchor changed")
     require(all(table[0][u][t] == 0 for u in range(13) for t in range(13)), "ell=0 row should vanish")
-    return table, {
+    return joint, table, {
         "E_intervals": len(E_SET),
         "QB_intervals": len(QB_SET),
         "TB_intervals": len(TB_SET),
@@ -385,7 +451,9 @@ def retained_table() -> tuple[list[list[list[int]]], dict[str, object]]:
         "U_profile_pieces": len(u_profile[0]),
         "V_profile_pieces": len(v_profile[0]),
         "source_sum_pieces": len(source_sum[0]),
-        "service_numerator": aggregate_total,
+        "service_numerator": service_numerator,
+        "joint_entries": 13 * 13 * 7 * 13,
+        "pairwise_vs_folded_retained": "PASS",
     }
 
 
@@ -502,6 +570,8 @@ def rectangle_audit(table: list[list[list[int]]]) -> dict[str, object]:
         for owner in range(1, 13)
         for root in range(1, 13)
     ]
+    raw_digest = hashlib.sha256(repr(raw_records).encode("ascii")).hexdigest()
+    require(raw_digest == RECTANGLE_RAW_SHA256, "raw anchored-rectangle ledger mismatch")
     first_raw = next(record for record in raw_records if record[3] != 0)
     require(first_raw == (1, 1, 2, 258805184656089173356800), "first raw rectangle changed")
 
@@ -524,14 +594,59 @@ def rectangle_audit(table: list[list[list[int]]]) -> dict[str, object]:
     )
     require(zeros_by_beta == (expected_zeros,) * 6, "anchored-rectangle zero locus changed")
 
+    # Anchored rectangles and nontrivial owner/root characters are two bases
+    # of the same 12x12 mixed quotient.  Verify the change of basis directly:
+    # for r,s != 0, T_hat(r,s) is the DFT of Delta(u,t), u,t=1..12.
+    for beta in range(1, 7):
+        rectangle_beta = [
+            [
+                sum(rectangles[ell][owner - 1][root - 1] * POW7[beta][ell] for ell in range(7)) % PRIME
+                for root in range(1, 13)
+            ]
+            for owner in range(1, 13)
+        ]
+        for owner_mode in range(1, 13):
+            for root_mode in range(1, 13):
+                changed = sum(
+                    rectangle_beta[owner - 1][root - 1]
+                    * POW13[owner_mode][owner]
+                    * POW13[root_mode][root]
+                    for owner in range(1, 13)
+                    for root in range(1, 13)
+                ) % PRIME
+                require(changed == transform(table, beta, owner_mode, root_mode), "anchored/Fourier basis change failed")
+
+    def rank_mod(matrix: list[list[int]]) -> int:
+        work = [[value % PRIME for value in row] for row in matrix]
+        rank = 0
+        for column in range(len(work[0])):
+            pivot = next((row for row in range(rank, len(work)) if work[row][column]), None)
+            if pivot is None:
+                continue
+            work[rank], work[pivot] = work[pivot], work[rank]
+            inverse = pow(work[rank][column], PRIME - 2, PRIME)
+            work[rank] = [value * inverse % PRIME for value in work[rank]]
+            for row in range(len(work)):
+                if row != rank and work[row][column]:
+                    factor = work[row][column]
+                    work[row] = [(a - factor * b) % PRIME for a, b in zip(work[row], work[rank])]
+            rank += 1
+        return rank
+
+    change_matrix = [[POW13[mode][coordinate] for coordinate in range(1, 13)] for mode in range(1, 13)]
+    change_rank = rank_mod(change_matrix)
+    require(change_rank == 12, "owner/root Fourier change matrix is singular")
+
     return {
         "raw_counts": raw_counts,
-        "raw_digest": hashlib.sha256(repr(raw_records).encode("ascii")).hexdigest(),
+        "raw_digest": raw_digest,
         "first_raw": first_raw,
         "fourier_counts": counts,
         "fourier_digest": fourier_digest,
         "first_fourier": first_fourier,
         "zeros": expected_zeros,
+        "one_axis_change_rank": change_rank,
+        "tensor_change_rank": change_rank * change_rank,
     }
 
 
@@ -585,8 +700,11 @@ def schema_audit() -> dict[str, object]:
 
 
 def main() -> None:
-    table, construction = retained_table()
+    joint, table, construction = common_base_table()
+    joint_digest = hashlib.sha256(repr(joint).encode("ascii")).hexdigest()
     table_digest = hashlib.sha256(repr(table).encode("ascii")).hexdigest()
+    require(joint_digest == COMMON_BASE_TABLE_SHA256, "full common-base table differs from the canonical constructor")
+    require(table_digest == RETAINED_TABLE_SHA256, "retained table differs from the canonical constructor")
     slope = slope_audit(table)
     rectangles = rectangle_audit(table)
     schema = schema_audit()
@@ -596,6 +714,7 @@ def main() -> None:
     print(f"constructor=standalone interval Boolean algebra + transfer profiles; imports_primary_or_helper=False")
     print(f"grid={GRID}; denominator={EXPECTED_DENOMINATOR}")
     print(f"construction={construction}")
+    print(f"common_base_table_sha256={joint_digest}")
     print(f"retained_table_sha256={table_digest}")
     print(f"split_embedding=(prime={PRIME},root91={ROOT_91},root7={ROOT_7},root13={ROOT_13})")
     print(f"slope_census={slope['by_slope']}; total=936/936")
@@ -608,6 +727,7 @@ def main() -> None:
     print(f"anchored_rectangles_C7_by_beta={rectangles['fourier_counts']}; total=804/864")
     print(f"anchored_rectangles_C7_first={rectangles['first_fourier']}; sha256={rectangles['fourier_digest']}")
     print(f"anchored_rectangles_common_zero_locus={rectangles['zeros']}")
+    print(f"anchored_to_Fourier_change_of_basis=(one_axis_rank={rectangles['one_axis_change_rank']},tensor_rank={rectangles['tensor_change_rank']})")
     print("basis_verdict=all 864/864 nonaxial Fourier characters fire, while 804/864 anchored mixed-Haar coordinates fire; support is basis-dependent")
     print(f"connection_contract={schema}")
     print("typed_verdict=the table has formal mixed-Haar capacity, but no lawful ell-independent U_full cell-to-ancestry/address map is currently supplied")
