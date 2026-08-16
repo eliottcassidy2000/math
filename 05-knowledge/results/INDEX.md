@@ -2,7 +2,7 @@
 
 - `lrc_r5_pointed_bidirected_p4_cocycle_sidecar_20260816.py` -> matching
   `.out` [FINITE-EXACT REPRESENTATION SIDECAR; PARENT INDEPENDENT AUDIT
-  PENDING].  The six pointed lines are canonically the six directed arcs of
+  ACCEPTED].  The six pointed lines are canonically the six directed arcs of
   the bidirected state path `0<->1<->3<->2`, with pair census `(both-way,
   one-way,missing)=(3,0,3)`, equivalently the six edges of an alternating
   `P7`.  Its static `H1` is zero; adjoining the missing Boolean closure edge
@@ -19,9 +19,29 @@
   `0ff08766d111bc4b699428ce46470f2fb7b32098e114430f2208997dc57783c0` /
   `b2ba313f88fbab0d36e95a63ade832492743ed6007fa0480434083d7dab0ecd3`.
 
+- `lrc_r5_two_current_digits_pointed_root_difference_carrier_transition_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS THE SCOPED
+  FINITE-EXACT FIVE-COORDINATE DIAGONAL BUNDLE].  Without importing the
+  candidate, it aggregates literal ordered `(u,q)` pairs by exact OWNER-lawful
+  source cell before independently expanding all 169 `(r0,r1)` weights.
+  All three gamma/inverse parent marginals and all four submitted tensor
+  digests match.  Carrier/union ranks are six while actual/support/flat `r1`
+  amplitude ranks are `13/12`, `4/3`, and `1/0`.  No stationary `K_r1`
+  exists; all 169 fixed-`(r0,r1)` systems instead have unique diagonal
+  solutions, with `sum_r1 K_(r0,r1)=I_6` for all 13 `r0`.  The 60 exact
+  source-profile exceptions occur in the reported six `(point,r0)` fibres,
+  and their residuals are annihilated by the common endpoint operator.  This
+  is only a static address-conditioned partition of identity on the six
+  pointed arcs, not a clock, complete address, chronology, physical current,
+  nonzero `H1` class, row exclusion, or LRC(14).  Script/output/semantic LF
+  SHA-256:
+  `d57c6c38207216054e8bc8e191fa20338aa18cab3fce216ff19d593bcc6a80e2` /
+  `2c39c9cbc6a0acad45f4591724a5a84f09568078575dffe7e7c72b90b588240f` /
+  `b58d98c283a2dc42111365a3d61af0948757feda3b1ff11ca65cd7d562b15a56`.
+
 - `lrc_r5_two_current_digits_pointed_root_difference_carrier_transition_probe_20260816.py`
   -> matching `.out` [FINITE-EXACT POSITIVE FIVE-COORDINATE CANDIDATE;
-  INDEPENDENT AUDIT PENDING].  A clean-room sweep retains the pointed six,
+  INDEPENDENT HOSTILE AUDIT ACCEPTED].  A clean-room sweep retains the pointed six,
   `r0,r1`, root difference, and relation.  Gamma/inverse marginals recover the
   audited two-digit, one-digit/current-root, and pointed/root tensors.  Actual
   `r1` amplitude ranks are `13/12`,

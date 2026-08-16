@@ -1,7 +1,10 @@
 # Two inverse-cylinder digits form an address-conditioned diagonal bundle on the pointed six
 
 **Status: FINITE-EXACT POSITIVE FIVE-COORDINATE CANDIDATE ON ONE `r=5`
-OWNER BASE; INDEPENDENT AUDIT PENDING; LRC(14) remains OPEN.**  Retaining the
+OWNER BASE; INDEPENDENT HOSTILE AUDIT ACCEPTED; LRC(14) remains OPEN.**
+The disjoint audit is
+`lrc-r5-two-current-digits-pointed-diagonal-bundle-independent-hostile-audit-codex-20260816.md`.
+Retaining the
 two inverse-cylinder digits `r0,r1` jointly with the six lawful pointed tails,
 the ordered source-root difference, and the relation coordinate does not add a
 seventh response carrier.  The exact base, one-digit, two-digit, and both

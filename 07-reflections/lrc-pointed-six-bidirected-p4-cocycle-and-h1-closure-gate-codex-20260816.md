@@ -1,7 +1,7 @@
 # The pointed six is the arc module of a bidirected Boolean path
 
 **Status: FINITE-EXACT REPRESENTATION SIDECAR TO THE TWO-CURRENT-DIGIT
-CANDIDATE; INDEPENDENT AUDIT OF THAT PARENT IS PENDING; LRC(14) remains
+CANDIDATE; INDEPENDENT AUDIT OF THAT PARENT IS ACCEPTED; LRC(14) remains
 OPEN.**  The six pointed carrier lines are not merely analogous to a
 four-vertex tournament.  They have an exact intrinsic description as the six
 directed arcs of
@@ -388,8 +388,9 @@ one reciprocal sum.
 
 ## Next decisive tests
 
-1. Independently audit the parent five-coordinate tensor and its 169 diagonal
-   maps.
+1. **Completed:** the disjoint five-coordinate audit reconstructed the tensor
+   and accepted all 169 diagonal maps; use its pinned artifacts as the fixed
+   base for the remaining tests.
 2. Retain `r2` and test whether the actual three-digit child remains diagonal,
    whether `sum_r2=I`, and whether any two-block cocycle composition survives.
 3. Transport the four states to a lawful `U_clock` and ask whether state `2`

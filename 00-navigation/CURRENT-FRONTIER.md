@@ -43,7 +43,7 @@ owner `52/117`, rank4. THM-3518 pins `56,592` zero pairings; THM-3524 blocks
 Current-root `(3,4,12,12)/5184`: amplitude4 in carrier6, whole40/42;
 source-current `17->4->6`. Five-way `r1`: amplitude13/12, carrier6, 169
 diagonal `K`, no stationary `K`. P4/P7: `68/78`, reversal `143/169`, `H1=0`;
-audit/closure/address/clock/current/row/LRC remain open.
+audited; closure/address/clock/current/row/LRC open.
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;
 HYP-8871 leaves `165` rows.  THM-2363/THM-2368 are sidecars; THM-2417--2894
