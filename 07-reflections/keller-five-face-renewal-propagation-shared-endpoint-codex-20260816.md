@@ -1,6 +1,7 @@
 # Renewal is the norm of one shared endpoint, not a second state variable
 
-**Status:** research reflection for PROVED THM-3522.  The theorem is scoped to
+**Status:** research reflection for PROVED + INDEPENDENTLY AUDITED THM-3522.
+The theorem is scoped to
 the fixed THM-3495 inverse chart and assumes the cleared norm is polynomial.
 It does not supply a later finite-sheet unit, image prime, degree-243 gate,
 all-level tower, or general Jacobian statement.

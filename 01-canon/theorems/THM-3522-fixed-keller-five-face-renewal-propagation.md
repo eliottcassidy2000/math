@@ -2,7 +2,7 @@
 id: THM-3522
 title: "Fixed Keller five-face renewal propagation"
 status: >
-  PROVED + VERIFIED-EXACT.  For the fixed sporadic Keller inverse chart, if
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For the fixed sporadic Keller inverse chart, if
   P has the complete five-face packet A(e,m) and Q=L^e N(P) is polynomial,
   then Q automatically has the complete packet
   A(7e-2m,3e-2m).  In particular, the two renewal faces propagate; no
@@ -20,17 +20,27 @@ depends_on:
   - THM-3521-fixed-R5-finite-sheet-unit-and-next-old-L-clearing
 related:
   - MISTAKE-415
-script: 04-computation/keller_five_face_renewal_propagation_probe_20260816.py
-output: 05-knowledge/results/keller_five_face_renewal_propagation_probe_20260816.out
-script_sha256: 5fd3c27bf49f8fab5e96b3d3fe608b91b86151ca265d35878225f8ce6aa2f05e
-output_sha256: 9a3eba81a00e35a5c99c2285e8ea7a10b6b1764b6c8d56b4d5276c449bc1b8b8
-semantic_sha256: 8b6a447c98e4e7f6bfc493818696d4a9193b4da47ab7b2f9e0368e9155940a91
+scripts:
+  - 04-computation/keller_five_face_renewal_propagation_probe_20260816.py
+  - 04-computation/keller_five_face_renewal_propagation_independent_audit_20260816.py
+outputs:
+  - 05-knowledge/results/keller_five_face_renewal_propagation_probe_20260816.out
+  - 05-knowledge/results/keller_five_face_renewal_propagation_independent_audit_20260816.out
+script_sha256:
+  - 5fd3c27bf49f8fab5e96b3d3fe608b91b86151ca265d35878225f8ce6aa2f05e
+  - 2fafef6bca64174b71fac22aa89e5bb713847ccc47318635c61b9684c5b063cd
+output_sha256:
+  - 9a3eba81a00e35a5c99c2285e8ea7a10b6b1764b6c8d56b4d5276c449bc1b8b8
+  - 9485d14a9eb764374ca6abb25fdecafc75a210ce720bdcf4c0f2e7d0536d8dc8
+semantic_sha256:
+  - 8b6a447c98e4e7f6bfc493818696d4a9193b4da47ab7b2f9e0368e9155940a91
+  - 9de2b0a149105263ee1b3a1fba01424f9c7ff274368c689cdc5737fb340bf804
 hash_basis: raw LF bytes; exact large scalars are pinned by their prime exponents
 ---
 
 # THM-3522 -- the two renewal faces propagate
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 Retain the fixed sporadic Keller map, target polynomial `L`, inverse cubic,
 and cubic function-field norm `N` of THM-3495.  Thus, temporarily writing the
@@ -383,7 +393,7 @@ longer an independent open gate at these two rungs.
 
 ## 6. Exact audit and boundary
 
-The exact companion reconstructs both hybrid initial systems directly from
+The primary exact companion reconstructs both hybrid initial systems directly from
 THM-3495's inverse numerators.  It verifies the residual coordinate formulas
 modulo both cubics, their generic discriminants, the raw resultants, and the
 multiplication-matrix norms.  It checks all symbolic exponent identities,
@@ -396,6 +406,14 @@ L -> H/2^6,       H -> J/2^35,       J -> G.           (43)
 The first two controls have `rho=-4,-26` and therefore hostilely rule out
 the unnecessary branchwise root-independence assumption.  Ordinary and
 optimized replays agree line-for-line with the stored transcript.
+
+A disjoint implementation starts again from THM-3495's literal inverse
+numerators, uses separate weighted-initial and quotient-matrix code, checks
+both hybrid gap identities on a `17 by 17` hostile grid, and expands the
+literal gamma face for all `2,500` admissible packets with `e<=120`.  It
+independently obtains (36)--(42), the normalization controls in (43), and
+the two successive Cassini determinants `-1536,12288`.  Its verdict is
+`SOUND; promotion recommended at fixed conditional scope`.
 
 The theorem closes the renewal implication at every one-step application of
 the fixed inverse chart for which polynomiality is separately supplied.  It
@@ -414,6 +432,8 @@ Reproduce the exact certificate with
 ```text
 python 04-computation/keller_five_face_renewal_propagation_probe_20260816.py
 python -O 04-computation/keller_five_face_renewal_propagation_probe_20260816.py
+python -B 04-computation/keller_five_face_renewal_propagation_independent_audit_20260816.py
+python -B -O 04-computation/keller_five_face_renewal_propagation_independent_audit_20260816.py
 ```
 
 **QED.**

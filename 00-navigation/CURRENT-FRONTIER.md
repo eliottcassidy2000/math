@@ -337,11 +337,9 @@ is sharp: equal counts allow two densities or none.
   prove `S_(F^4)=V(LHJ G)` and `[Delta_4]=[2G]`;
   THM-3506 gives `(271,99)` and `v_L(N(G))=-271`;
   [3513](../01-canon/theorems/THM-3513-fixed-G-hybrid-newton-renewal-faces.md)
-  completes `G`'s packet; [3521](../01-canon/theorems/THM-3521-fixed-R5-finite-sheet-unit-and-next-old-L-clearing.md)
-  closes the next old-`L` gate. [3522](../01-canon/theorems/THM-3522-fixed-keller-five-face-renewal-propagation.md)
-  proves polynomial full-packet propagation, so `R5` and `R6` have packets
-  `A(1699,615)` and `A(10663,3867)`. The next `R6` finite-sheet/denominator
-  gate, fifth-image status, degree243, and all-level polynomiality remain OPEN. THM-2681
+  completes `G`; 3521 clears `R5`; [3522](../01-canon/theorems/THM-3522-fixed-keller-five-face-renewal-propagation.md)
+  gives `R5/R6` packets `A(1699,615)/A(10663,3867)`. Next sheet,
+  fifth image, degree243, and all-level polynomiality remain OPEN. THM-2681
   blocks the `A4/S4` cubic; THM-2685--2708 give its
   gain/holonomy.
   Audited THM-3448/3517: cyclic `x/y/z` are primitive all grades; `m=3` gives `S5` quintics `[L5]`, but `C3` Jelonek is sign-blind, as are odd-family `C_(2m-3)`. THM-1605's formula is absent (MISTAKE-416); arbitrary quartic `C3` remains OPEN.

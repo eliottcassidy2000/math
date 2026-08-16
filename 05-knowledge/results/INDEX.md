@@ -17,20 +17,29 @@
   `c20c59264590cd42b108363c91736df8c9e921ac94b09c1f5fbb5d977f300859` /
   `a6d6ad7a9891af8bddcba6fe7cf9f2554214731043844098f8556d1003885222`.
 
-- `keller_five_face_renewal_propagation_probe_20260816.py` -> matching
-  `.out` [THM-3522 PROVED + VERIFIED-EXACT].  Reconstructs both generic
-  hybrid inverse systems from THM-3495's numerators, checks their residual
+- `keller_five_face_renewal_propagation_probe_20260816.py` and
+  `keller_five_face_renewal_propagation_independent_audit_20260816.py` ->
+  matching `.out` files [THM-3522 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED].  The primary reconstructs both generic hybrid inverse systems
+  from THM-3495's numerators, checks their residual
   cubics, discriminants, raw resultants and multiplication-matrix norms, and
   proves the symbolic endpoint/exponent/scalar identities for polynomial
   `L^e N(P)`.  The non-divisible branch exponents `-4,-26` calibrate exactly
   against `L -> H/2^6` and `H -> J/2^35`; `J -> G` is also recovered.
   Consequently fixed `R5` and `R6` have full packets `A(1699,615)` and
-  `A(10663,3867)`, with exact renewal scalars pinned in the output.  No later
+  `A(10663,3867)`, with exact renewal scalars pinned in the output.  The
+  disjoint audit rebuilds the inverse initials, exhausts `2,500` admissible
+  packet intersections through `e<=120`, checks separate determinant and
+  resultant routes, and reaches the same supports and scalars.  No later
   polynomiality/finite-sheet, image, degree243, all-level, arbitrary-map, or
-  general JC claim follows.  Script/output/semantic LF SHA-256:
+  general JC claim follows.  Primary script/output/semantic LF SHA-256:
   `5fd3c27bf49f8fab5e96b3d3fe608b91b86151ca265d35878225f8ce6aa2f05e` /
   `9a3eba81a00e35a5c99c2285e8ea7a10b6b1764b6c8d56b4d5276c449bc1b8b8` /
-  `8b6a447c98e4e7f6bfc493818696d4a9193b4da47ab7b2f9e0368e9155940a91`.
+  `8b6a447c98e4e7f6bfc493818696d4a9193b4da47ab7b2f9e0368e9155940a91`;
+  independent:
+  `2fafef6bca64174b71fac22aa89e5bb713847ccc47318635c61b9684c5b063cd` /
+  `9485d14a9eb764374ca6abb25fdecafc75a210ce720bdcf4c0f2e7d0536d8dc8` /
+  `9de2b0a149105263ee1b3a1fba01424f9c7ff274368c689cdc5737fb340bf804`.
 - `jc_weighted_odd_family_m3_coordinate_jelonek_probe_20260816.py` ->
   matching `.out` [THM-3517 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
   IN PYTHON-FLINT].  For the explicit
