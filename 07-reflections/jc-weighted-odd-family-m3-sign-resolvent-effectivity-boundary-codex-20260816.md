@@ -1,14 +1,19 @@
 # The first odd weighted quintic: common sign class, incomplete boundary
 
-**Status: proved synthesis of THM-3517, with an exact-computation sidecar.**
-This reflection concerns the explicit cyclic weighted family only.  It does
-not reconstruct THM-1605's historically reported family, classify Keller
-maps, or change `JC(2)`.
+**Status: proved synthesis of THM-3517; the m=3 atlas is independently
+audited.**  This reflection concerns the explicit cyclic weighted family
+only.  It does not reconstruct THM-1605's historically reported family,
+classify Keller maps, or change `JC(2)`.
 
 **All-grade closure update:** reducing the `z`-reconstruction numerator
 modulo the inverse polynomial gives a nonzero `w^(n-1)` coefficient in every
 cyclic grade.  Hence `z` is primitive for all `ell`, so the common
 three-coordinate square class is no longer only an `m=3` phenomenon.
+
+**Independent-audit update:** a clean-room python-flint reconstruction now
+matches every `m=3` eliminant, discriminant, and index hash, including the
+191-term `z` quintic and 268-term index core.  A split `F_31` fibre gives
+nonzero `x,y,z` Vandermonde determinants `(28,14,1)`.
 
 ## Inheritance pass
 

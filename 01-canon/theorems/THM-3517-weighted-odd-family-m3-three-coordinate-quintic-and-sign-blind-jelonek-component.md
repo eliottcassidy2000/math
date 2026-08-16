@@ -2,8 +2,8 @@
 id: THM-3517
 title: "Weighted odd family: all-coordinate primitivity, the m=3 quintic atlas, and sign-blind Jelonek components"
 status: >
-  PROVED + VERIFIED-EXACT; M3 ATLAS INDEPENDENTLY AUDITED.  Every actual
-  source coordinate x,y,z is primitive in every member of the explicit
+  PROVED + VERIFIED-EXACT; M3 ATLAS INDEPENDENTLY AUDITED IN FLINT.  Every
+  actual source coordinate x,y,z is primitive in every member of the explicit
   THM-3448 cyclic weighted family, hence all three share the inverse
   discriminant square class.  At m=3 they are explicit quintics with class
   [D5]=[L5] after target pullback, while the exact Jelonek set is
@@ -18,11 +18,10 @@ audit: >
   deterministic exact Sympy resultants, irreducibility factorizations,
   discriminants, square roots, branch/index gcds, source-map replay,
   determinant, Newton residual, m=2 hostile, and byte-identical normal/-O
-  transcripts; a disjoint python-flint reconstruction of the map, inverse,
-  branch, all three resultants and index squares, the 191-term z eliminant,
-  268-term index core, and an F_31 split separator; symbolic all-n remainder
-  proof and direct ell=1..30 hostiles for z-primitivity; structural all-m
-  boundary deduction from audited THM-3448
+  transcripts; independent python-flint reconstruction of the map, all three
+  resultants, the 191-term z row, 268-term index core, pullback, and an F_31
+  separator; symbolic all-n remainder proof and direct ell=1..30 hostiles for
+  z-primitivity; structural all-m boundary deduction from audited THM-3448
 depends_on:
   - THM-3438-weighted-lift-keller-degree-spectrum
   - THM-3448-weighted-keller-cyclic-jelonek-inertia-family
@@ -52,11 +51,11 @@ hash_basis: LF-normalized bytes
 
 # THM-3517 -- the odd weighted family beyond the cubic
 
-**PROVED + VERIFIED-EXACT; M3 ATLAS INDEPENDENTLY AUDITED.**  The
-all-coordinate `m=3` ledger has disjoint Sympy-resultant and python-flint
-implementations plus a direct finite-field separator.  A separate symbolic
-remainder argument proves `z`-primitivity in every cyclic grade and has direct
-controls through `ell=30`.
+**PROVED + VERIFIED-EXACT; M3 ATLAS INDEPENDENTLY AUDITED.**  Sympy and a
+clean-room python-flint implementation agree on the full all-coordinate
+`m=3` ledger, including the 191-term `z` eliminant and its 268-term index
+core.  A separate symbolic remainder argument proves `z`-primitivity in every
+cyclic grade and has direct controls through `ell=30`.
 
 ## 1. Provenance boundary and the explicit object
 
@@ -432,6 +431,11 @@ computes all four discriminants, extracts exact rational square roots of the
 three ratios, checks every branch/index gcd, proves the target pullback and
 Newton residual, and runs the flat-view and `m=2` hostiles.  Truth gates use
 `require`, not `assert`; there is no randomness or elapsed-time field.
+
+The independent python-flint companion imports neither Sympy nor the candidate
+script.  It reproduces every map/eliminant/discriminant/index hash, the target
+pullback, and adds a split `F_31` fibre where the three coordinate Vandermonde
+determinants are `(28,14,1)`.
 
 The all-grade companion derives (25)--(27) symbolically and independently
 computes the complete `H mod T` remainder for every `1<=ell<=30`.  Its sharp
