@@ -79,24 +79,32 @@ a chosen square-class character gives an XOR coboundary, while the bare
 predicate “is nonsquare” need not.  Thus the size-four tournament intuition
 is accurate only after the orientation observable and character are supplied.
 
-## New all-family question
+## The all-cyclic-family question closed during integration
 
-THM-3494 proves `x,y` primitive in every weighted degree by `S_n`
-point-stabilizer maximality.  THM-3517 now proves `z` at degree five, while
-THM-3494 proves it at degree three.  The natural next question is not another
-large resultant:
+The audit's proposed coefficient-level route succeeded for every cyclic
+THM-3448 seed.  If `n=ell+2` and `H` is the numerator in
 
 ```text
-Is the reduced reconstruction
-z=gamma[gamma(gamma-1+a)-aw]/(bC^2)
-ever in the base field for a lawful weighted seed?
+z=H/(bC^2)=gamma[gamma(gamma-1+a)-aw]/(bC^2),
 ```
 
-Because an `S_n` point stabilizer is maximal, proving merely `z notin K`
-would establish `z` primitive.  A coefficient-level nonconstancy lemma for
-the remainder of the numerator modulo `T_n` could therefore replace an
-all-degree resultant atlas.  The finite separator above is the degree-five
-base case for that program.
+then the coefficient of `w^(n-1)` in `H mod T_n` is
+
+```text
+((ell+1)^3+1)P^2+(4ell^2+ell-2)P/2+4(ell+1)Q.        (1)
+```
+
+It is not the zero polynomial.  Therefore `H mod T_n` has degree `n-1`, so
+`z` cannot lie in the base field; otherwise it would give an annihilator of
+`w` below the irreducible degree `n`.  The `S_n` point-stabilizer maximality
+identified by this audit then proves `z` primitive.  Thus THM-3517 now gives
+all three primitive coordinates in every cyclic grade.  Direct exact
+remainders through `ell=30`, including the hostile `P=Q=0` where the whole
+remainder specializes to zero, accompany the symbolic proof.
+
+This closes the question for the cyclic subfamily, not for every lawful
+weighted seed.  The finite separator above remains the independently coded
+degree-five check of the general mechanism.
 
 ## Exact artifacts
 
@@ -118,6 +126,8 @@ and the independent semantic digest is
 bd208dad9732439dfa14a794ef54dbfe57d66360f5f5a39b26353ffb82b6bba3.
 ```
 
-The scope remains the explicit cyclic weighted `m=3` member.  Third-coordinate
-primitivity beyond `m=3`, identification with the unstored historical family,
-arbitrary Keller classification, `JC(2)`, and LRC remain open.
+The FLINT artifact's scope remains the explicit cyclic weighted `m=3` member;
+the separate symbolic companion proves the cyclic all-grade statement.
+Third-coordinate primitivity for arbitrary weighted seeds, identification
+with the unstored historical family, arbitrary Keller classification,
+`JC(2)`, and LRC remain open.
