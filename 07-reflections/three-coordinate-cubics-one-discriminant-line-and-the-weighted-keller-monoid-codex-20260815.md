@@ -124,17 +124,25 @@ separate a square index factor from a nonsquare carrier.  The carriers differ
 (`-1` for the quadratic arithmetic, `-L` for the cubic function field), so no
 transplant follows.
 
-## Next exact test
+## Exact test executed provisionally
 
-For the canonical weighted seeds in degrees `3,4,5`, compute and factor
+The reserved
+[THM-3494](../01-canon/theorems/THM-3494-weighted-lift-primitive-coordinate-discriminant-atlas.md)
+proof package now executes the proposed test, pending independent audit.  For
+the canonical weighted seeds in degrees `3,4,5`, it computes and factors
 
 ```text
 Disc_w(R_n(w)-Pw+Q),                                   (7)
 ```
 
-then compute at least two reconstructing coordinate eliminants per degree and
-verify their discriminant ratios are squares on the generic open set.  Record
-separately:
+and computes the actual `x`- and `y`-reconstructing coordinate eliminants in
+each degree.  Their discriminant ratios are exact nonzero squares over
+`Q(P,Q,C)`.  The degree-three row also checks `z`, giving three independent
+cubic views.  The all-degree explanation is the trace-form change-of-basis
+identity plus THM-3438's maximal point stabilizer: `S_(n-1)<S_n` has no
+intermediate subgroup, so every nonconstant `x/y` view is primitive.
+
+The result separates:
 
 1. the reduced branch divisor;
 2. the primitive-element index square;
@@ -142,7 +150,11 @@ separately:
 4. the boundary valuation cone; and
 5. the monodromy block lattice.
 
-This would turn the three-cubic observation into an all-degree
-primitive-element atlas without pretending it classifies arbitrary Keller
-maps.  No Jacobian, LRC, or tournament consequence follows merely from the
-factor `-4`.
+Items 1 and 2 are now exact on the generic chart.  Items 3 and 4 remain open
+globally across `C=0`; item 5 is inherited from THM-3438.  A further exact
+consequence is that four primitive views give six `K_4` edge indices forming
+one multiplicative coboundary.  Tournament orientation is therefore gauge,
+and XOR/square-class reduction loses the divisor-valued index sidecar.  This
+turns the three-cubic observation into an all-degree primitive-element atlas
+without pretending it classifies arbitrary Keller maps.  No LRC or physical
+tournament consequence follows merely from the factor `-4`.
