@@ -1,5 +1,25 @@
 # Script Results Index
 
+- `lrc_r5_ufull_owner_node_boolean_square_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  RANK-GREATER-THAN-ONE SOURCE-SUPPORT REFINER].  Without importing the
+  candidate or its parent, it rebuilds the THM-2471/THM-2594 source service,
+  actual THM-3514 endpoint indicators, common split field, direct `Q(13y)`
+  pullback, and five literal guard controls.  The realized source carrier is
+  the five-state Gray path `{0}->{0,6}->{6}->{6,12}->{12}`, with toggle word
+  `(6,0,12,6)`, measures `(1,12,2,12,1)/28`, and no `{0,12}` state.  `OWNER`
+  excludes only state type `{6}` and leaves four positive connected states
+  of measure `1/28`; complement is XOR by `11`.  Summing states recovers the
+  corrected delta-cell parent exactly.  Coupled/erased/centered ranks are
+  `(4,4,3)`, both bit marginals have rank two, and the meaningful Walsh x
+  `F_13` spectra are `(52,1,3,12,36)`, `(52,1,3,12,36)`, and
+  `(36,0,0,0,36)`.  This is a typed source-support refiner on one `r=5` host,
+  not exact address, `U_clock` chronology, uniform rows, a physical current,
+  row exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
+  `e585c1a18d846c4ab87fc159ad411bad90859be831831cea1c0e8f326d9b440f` /
+  `86820462aab1e54c144ffba633a323eb80985c6b0d9eab8c7d6b985ec2eafbd8` /
+  `b0996af3f1760b2118187490c93e0e01b322cb57fd6b25d3bf3688778b7e664c`.
+
 - `lrc_r5_ufull_owner_node_boolean_square_refiner_probe_20260816.py` ->
   matching `.out` [FINITE-EXACT GENUINE BOOLEAN-SQUARE x F13 COMMON-OWNER
   CANDIDATE; INDEPENDENT AUDIT PENDING].  The three-root source spine
