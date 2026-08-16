@@ -79,35 +79,32 @@ def audit_period_tower() -> tuple[list[int], list[int], list[int]]:
 
 
 def audit_exact_metric(periods: list[int], innovations: list[int]) -> int:
-    checks = 0
-    # v_m=kappa_(m+1).  Keep one extra bit so the first differing coordinate
-    # is visible, and exhaust every phase in the finite seed cycle.
-    for m in range(len(innovations)):
-        v_m = innovations[m]
-        width = v_m + 1
-        if width > MAX_WIDTH:
-            break
-        period = periods[width - 1]
-        shift = 1 << m
-        require(period >= 2 * shift, "innovation level has wrong phase period")
-        mask = (1 << width) - 1
-        row = 1
-        rows = [row]
-        for _ in range(period + shift):
-            row = phi(row, mask)
-            rows.append(row)
-        for t in range(period):
-            difference = rows[t + shift] ^ rows[t]
-            require(difference != 0, "dyadic phase shift collapsed")
-            require(valuation2(difference) == v_m, "exact metric regrading failed")
-            checks += 1
+    # Exhaust every unordered pair in the largest audited phase quotient.
+    # This simultaneously checks every available dyadic valuation and every
+    # nontrivial odd multiplier, rather than duplicating antipodal pairs.
+    period = periods[-1]
+    require(period & (period - 1) == 0, "largest phase period is not dyadic")
+    mask = (1 << MAX_WIDTH) - 1
+    rows: list[int] = []
+    row = 1
+    for _ in range(period):
+        rows.append(row)
+        row = phi(row, mask)
+    require(row == 1, "largest phase orbit did not close")
 
-        # Every odd multiple of 2^m has the same first differing state bit.
-        for odd in range(1, period // shift, 2):
-            for t in range(shift):
-                difference = rows[t + odd * shift] ^ rows[t]
-                require(valuation2(difference) == v_m, "odd-multiple metric failed")
-                checks += 1
+    checks = 0
+    for s in range(period):
+        for t in range(s + 1, period):
+            m = valuation2(t - s)
+            require(m < len(innovations), "missing innovation depth")
+            difference = rows[t] ^ rows[s]
+            require(difference != 0, "distinct phases collapsed")
+            require(
+                valuation2(difference) == innovations[m],
+                "exact all-pairs metric regrading failed",
+            )
+            checks += 1
+    require(checks == period * (period - 1) // 2, "pair universe is incomplete")
 
     print(f"exact_metric_checks={checks}")
     return checks
@@ -148,10 +145,21 @@ def audit_scalar_boundaries() -> None:
                 "synthetic tower violates no-111")
         require(sum(word) > 0, "synthetic tower has no innovations")
 
-    sparse_count = sum(sparse)
+    sparse_positions = [i for i, bit in enumerate(sparse) if bit]
+    dense_positions = [i for i, bit in enumerate(dense) if bit]
+    for positions in (sparse_positions, dense_positions):
+        # The r-th innovation obeys the exact dyadic strict ceiling inherited
+        # from the period floor: kappa_r < 2^r.
+        for r, position in enumerate(positions, start=1):
+            require(position < (1 << r), "synthetic tower violates period floor")
+
+    sparse_count = len(sparse_positions)
     dense_count = sum(dense)
-    require(sparse_count <= 13, "sparse tower count mismatch")
-    require(abs(dense_count / horizon - 2 / 3) < 1 / horizon, "dense tower density mismatch")
+    require(sparse_count == 12, "sparse tower count mismatch")
+    require(
+        abs(3 * dense_count - 2 * horizon) < 3,
+        "dense tower density mismatch",
+    )
     digest = hashlib.sha256(bytes(sparse) + bytes(dense)).hexdigest()
     print(f"scalar_hostiles horizon={horizon} sparse={sparse_count} dense={dense_count}")
     print(f"scalar_hostile_sha256={digest}")

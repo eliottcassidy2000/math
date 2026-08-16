@@ -2,13 +2,19 @@
 id: THM-3503
 title: "Rule 30 odometer ultrametric regrading and orbit-closure dimensions"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT FINITE COMPANION; PENDING
-  INDEPENDENT AUDIT.  The seed-orbit odometer conjugacy is shown to regrade
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The seed-orbit odometer
+  conjugacy is shown to regrade
   every dyadic phase distance exactly by the next innovation depth.  This
   identifies the Hausdorff, packing, and box dimensions of the orbit closure
   with lower and upper innovation densities.  No Rule 30 prize is claimed.
 source: root/rule30-sharp-unlocks/odometer-fractal-scale/2026-08-16
-audit: PENDING independent proof, scope, and replay audit.
+audit: >
+  PASS (2026-08-16), independent proof, scope, and adversarial replay audit.
+  The auditor rederived the all-Z_2 metric regrading, uniform ball masses,
+  Hausdorff/packing/box dimension identities, innovation indexing, no-111
+  bound, and wrap implication.  The repaired companion exhausts all 32,640
+  unordered phase pairs in the width-24 quotient, uses integer-only scalar
+  gates, and matches under ordinary and optimized execution.
 depends_on:
   - THM-3458-rule30-right-edge-2-adic-odometer-and-moving-observer-boundary
   - THM-3463-rule30-mealy-section-suffix-parity-current-and-complexity-boundary
@@ -18,15 +24,14 @@ related:
   - THM-3500-rule30-dyadic-section-cut-defect-and-cross-depth-valuation-carrier
 script: 04-computation/rule30_odometer_ultrametric_dimension_thm3503.py
 output: 05-knowledge/results/rule30_odometer_ultrametric_dimension_thm3503.out
-script_sha256: PENDING
-output_sha256: PENDING
+script_sha256: e82e732c819ad2c0c04a5f206d6ff73cc05b06ce13dc440fb15a4fcfc259bdc5
+output_sha256: 02fcc00d9ea2240f56235213f1ed5b9af1af5db8df8fa5ccf32542cb4ac19dbc
 hash_basis: raw bytes
 ---
 
 # THM-3503 -- Rule 30 odometer ultrametric regrading and orbit-closure dimensions
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT FINITE COMPANION; PENDING
-INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-3458 identifies the closure of the packed one-seed edge orbit with the
 2-adic odometer, but treats that identification only topologically.  The
@@ -365,13 +370,13 @@ The companion:
 
 - constructs every seed quotient through width `24`;
 - checks the period-lift and innovation indexing exactly;
-- exhausts `765` phase/odd-multiple controls for the metric law wherever the
-  first differing bit lies in that universe;
+- exhausts all `32,640` unordered phase pairs in the width-24 seed quotient,
+  including every available odd multiplier, for the metric law;
 - verifies `2665` exact covering-state cells;
 - freezes the innovation prefix `(1,3,4,6,7,9,15,16,24)`; and
 - checks finite Mersenne-sparse and density-`2/3` scalar boundary models.
 
 These finite checks are controls for the universal proofs, not extrapolations
-of (16)--(17).  Promotion requires an independent derivation of the metric and
-dimension formulas, ordinary/optimized byte equality, frozen hashes, and a
-scope audit against all three Rule 30 prizes.
+of (16)--(17).  The independent audit rederived the metric and dimension
+formulas, checked scope against all three Rule 30 prizes, and replayed the
+ordinary and optimized companions byte-for-byte against the pinned output.
