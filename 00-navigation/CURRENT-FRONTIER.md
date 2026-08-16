@@ -337,8 +337,8 @@ is sharp: equal counts allow two densities or none.
   prove `S_(F^4)=V(LHJ G)` and `[Delta_4]=[2G]`;
   THM-3506 gives `(271,99)` and `v_L(N(G))=-271`;
   [3513](../01-canon/theorems/THM-3513-fixed-G-hybrid-newton-renewal-faces.md)
-  completes `G`'s packet. `R_5` finite-sheet/renewal and
-  fifth-image/degree-243/all-level OPEN. THM-2681
+  completes `G`'s packet; 3521 closes old-L gate. R5
+  renewal/fifth-image/degree243/all-level OPEN. THM-2681
   blocks the `A4/S4` cubic; THM-2685--2708 give its
   gain/holonomy.
   THM-3057/3059/3441 refute both odd-component forms of HYP-9027. THM-3448 realizes Keller `C_ell` inertia (`ell>=2`; first `C3` in degree five) and excludes `C3` only for weighted quartics; arbitrary quartic/two-jet `C3` remains OPEN.

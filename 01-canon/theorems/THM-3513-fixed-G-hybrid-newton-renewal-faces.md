@@ -8,9 +8,10 @@ status: >
   min(i-j-5k)=-1970 with face
   C_gamma z^271(27x^2z+y^3)^205, where both displayed scalars are explicit
   nonzero rationals.  Thus this fixed G has the full five-face packet
-  A(271,99).  The next finite-sheet unit, the renewal faces of R_5, a fifth
-  image prime, all-level induction, and every general Jacobian claim remain
-  open.  The exact companion is independent of THM-3506's face script; an
+  A(271,99).  The next finite-sheet unit is left open here and subsequently
+  closed by THM-3521; the renewal faces of R_5, a fifth image prime,
+  all-level induction, and every general Jacobian claim remain open.  The
+  exact companion is independent of THM-3506's face script; an
   independent parent replay reproduced its semantic ledger exactly.  This
   is a replay audit, not a broader all-level or geometric proof audit.
 source: codex/fixed-G-renewal/2026-08-16
@@ -21,6 +22,7 @@ depends_on:
 related:
   - MISTAKE-413
   - MISTAKE-415
+  - THM-3521-fixed-R5-finite-sheet-unit-and-next-old-L-clearing
 script: 04-computation/keller_G_renewal_faces_independent_probe_20260816.py
 output: 05-knowledge/results/keller_G_renewal_faces_independent_probe_20260816.out
 script_sha256: f9e82f502026dfe499ebba9290295f98056d1b7dba7c893184d9871a032be01f
@@ -205,12 +207,13 @@ R_5=L^271N(G)
 
 lawful and give the first three output faces at `(1699,615)`.
 
-This does not determine `v_L(N(R_5))`.  The two divergent sheets are
-controlled by the exposed face, but the finite inverse sheet may still
-vanish.  Nor does this theorem prove the two renewal faces of `R_5`, a fifth
-image equation or prime, degree-`243` separability, an all-level norm
-recurrence, a statement about arbitrary Keller maps, or any version of the
-general Jacobian conjecture.
+This theorem itself does not determine `v_L(N(R_5))`: the two divergent
+sheets are controlled by the exposed face, but the finite inverse sheet may
+still vanish.  THM-3521 subsequently proves that finite sheet is a unit and
+therefore closes the valuation.  Neither theorem proves the two renewal
+faces of `R_5`, a fifth image equation or prime, degree-`243` separability,
+an all-level norm recurrence, a statement about arbitrary Keller maps, or
+any version of the general Jacobian conjecture.
 
 Reproduce the exact ledger, both residual-cubic reductions, and both face
 scalars with

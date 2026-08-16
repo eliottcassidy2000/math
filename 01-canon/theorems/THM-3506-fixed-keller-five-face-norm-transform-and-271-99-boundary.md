@@ -20,6 +20,7 @@ depends_on:
 related:
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
   - THM-3513-fixed-G-hybrid-newton-renewal-faces
+  - THM-3521-fixed-R5-finite-sheet-unit-and-next-old-L-clearing
 script: 04-computation/keller_tropical_norm_face_recurrence_probe_20260816.py
 output: 05-knowledge/results/keller_tropical_norm_face_recurrence_probe_20260816.out
 script_sha256: fe1b03de9061c997a1abba6b88753e589c0a01f9f92762e49fe7ea0504ce9797
@@ -463,9 +464,10 @@ in_max-lambda(R_5)
 (1699,615)=(7*271-2*99,3*271-2*99).                    (45)
 ```
 
-Equation (44) does not prove `v_L(N(R_5))=-1699`; that requires a new
-finite-sheet unit test.  Nor does (43) prove that `R_5` is irreducible or an
-image equation.
+Equation (44) does not by itself prove `v_L(N(R_5))=-1699`; that requires a
+new finite-sheet unit test.  THM-3521 subsequently supplies that test and
+proves the valuation.  Neither (43) nor THM-3521 proves that `R_5` is
+irreducible or an image equation.
 
 ## 7. Failure modes and induction boundary
 
@@ -495,9 +497,9 @@ This theorem proves the three transported faces (34), (36), (37), but not
 the two renewal faces of `G`.  THM-3513 subsequently derives both by two
 hybrid Newton limits, so the fixed `G` now has the complete packet
 `A(271,99)`.  For an all-level proof from (12), renewal still has to be
-proved for `R_5` and later rungs, together with the separate finite-sheet
-unit/polynomiality gate at each new cleared norm.  THM-3513 proves neither
-of those later obligations.
+proved for `R_5` and later rungs, together with a separate finite-sheet
+unit/polynomiality gate at each new cleared norm.  THM-3521 closes that
+finite-sheet gate for `R_5` and no later rung; it does not close renewal.
 
 ## 8. Monoid comparison and exact scope
 
