@@ -1,0 +1,13 @@
+== U_full H-guard sheet and joint-drift address law ==
+common 91-circle partition: 13 sheets x 3 half-open residual chambers = 39 atoms
+boundary convention: r in [0,1), [1,6), [6,7); r=1 middle and r=6 right: PASS
+guard danger-sheet arcs: left=(12,0,1), middle=(11,12,0,1), right=(11,12,0)
+safe counts by chamber=(10,9,10); every 13 Fourier mode is nonzero
+single factorization checks=507; joint factorization checks=19773
+joint kernels nonzero=1521/1521; primitive nonzero=1404/1404; frequency-one=117/117
+middle-chamber overlap by drift=(9, 8, 7, 6, 5, 5, 5, 5, 5, 5, 6, 7, 8)
+same sheet marginals can carry different drift profiles: PASS_HOSTILE
+summing the common sheet before twisting kills every nonzero tau mode: PASS_HOSTILE
+semantic ledger sha256=f345d40c9b589910d83d2fd490ca9376b3cbb86d7aa6da4825677d06075bda7a
+scope: actual U_full guard factor only; no common ancestry, endpoint coupling, current, row exclusion, or LRC(14)
+all exact checks passed

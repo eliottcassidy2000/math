@@ -52,6 +52,26 @@
   The result is fixed-map level-two scope; no higher-level primitivity,
   arbitrary-resultant saturation, exact multiplicity, or JC/DC/LRC
   consequence follows.
+- `lrc_ufull_guard_sheet_joint_drift_address_probe_20260816.py` -> matching
+  `.out` [PROVED ELEMENTARY FACTORIZATION + VERIFIED-EXACT SIDECAR; NOT
+  INDEPENDENTLY AUDITED].  The actual THM-3479 U_full H-guard translates the
+  danger window by `7*tau` on the `91`-circle.  The common decomposition
+  `s=7a+r` has `39=13*3` half-open atoms, with residual chambers
+  `[0,1),[1,6),[6,7)` and forbidden sheet arcs `{12,0,1}`,
+  `{11,12,0,1}`, and `{11,12,0}`.  Exact cyclic covariance gives nonzero
+  transforms at every frequency for every chamber.  Its two-endpoint
+  refinement by relative sheet drift has all `1521/1521` kernels nonzero
+  (`1404/1404` at primitive frequencies); the middle/middle overlap profile
+  is `(9,8,7,6,5,5,5,5,5,5,6,7,8)`.  Uniform drift couplings have identical
+  sheet marginals but different joint profiles, while summing the common
+  sheet before twisting kills every primitive mode.  This constructs an
+  actual guard address `(sheet,chamber,drift)`, not common ancestry, an
+  endpoint support relation, a physical current, a row exclusion, or
+  LRC(14).  Semantic ledger SHA-256:
+  `f345d40c9b589910d83d2fd490ca9376b3cbb86d7aa6da4825677d06075bda7a`.
+  Script/output LF SHA-256:
+  `79b78637b2cc0ff54051fde02a6651ef10c8694a8d7a865ae403696370125179` /
+  `39ced0ea361bb0268e607d42d030a61a22e0e2a571e66e585c196c352ac88f3c`.
 - `harmonic_shortlex_same_counts_no_log_density_probe_20260816.py` ->
   matching `.out` [ELEMENTARY PROOF + VERIFIED-EXACT BOUNDARY SIDECAR; NOT
   A CANON THEOREM OR INDEPENDENTLY AUDITED].  Binary first-half and last-half
