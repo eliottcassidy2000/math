@@ -17,6 +17,20 @@
   `c20c59264590cd42b108363c91736df8c9e921ac94b09c1f5fbb5d977f300859` /
   `a6d6ad7a9891af8bddcba6fe7cf9f2554214731043844098f8556d1003885222`.
 
+- `keller_five_face_renewal_propagation_probe_20260816.py` -> matching
+  `.out` [THM-3522 PROVED + VERIFIED-EXACT].  Reconstructs both generic
+  hybrid inverse systems from THM-3495's numerators, checks their residual
+  cubics, discriminants, raw resultants and multiplication-matrix norms, and
+  proves the symbolic endpoint/exponent/scalar identities for polynomial
+  `L^e N(P)`.  The non-divisible branch exponents `-4,-26` calibrate exactly
+  against `L -> H/2^6` and `H -> J/2^35`; `J -> G` is also recovered.
+  Consequently fixed `R5` and `R6` have full packets `A(1699,615)` and
+  `A(10663,3867)`, with exact renewal scalars pinned in the output.  No later
+  polynomiality/finite-sheet, image, degree243, all-level, arbitrary-map, or
+  general JC claim follows.  Script/output/semantic LF SHA-256:
+  `5fd3c27bf49f8fab5e96b3d3fe608b91b86151ca265d35878225f8ce6aa2f05e` /
+  `9a3eba81a00e35a5c99c2285e8ea7a10b6b1764b6c8d56b4d5276c449bc1b8b8` /
+  `8b6a447c98e4e7f6bfc493818696d4a9193b4da47ab7b2f9e0368e9155940a91`.
 - `jc_weighted_odd_family_m3_coordinate_jelonek_probe_20260816.py` ->
   matching `.out` [THM-3517 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
   IN PYTHON-FLINT].  For the explicit
