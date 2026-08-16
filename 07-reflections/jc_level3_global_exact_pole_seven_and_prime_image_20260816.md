@@ -1,12 +1,12 @@
 # The fixed sporadic map has a global level-three pole-seven norm and one new prime image
 
-**Status: PROVISIONAL PROOF PACKAGE + VERIFIED-EXACT; not canonized or independently
-audited.**  The proof uses the already proved fixed-map geometry in
+**Status: SUPERSEDED AS THE CURRENT FRONTIER BY PROVED THM-3495; retained as
+the independent pole/residue derivation.**  The proof uses the fixed-map geometry in
 [THM-2473](../01-canon/theorems/THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy.md),
 [THM-2576](../01-canon/theorems/THM-2576-composite-jelonek-image-divisor-and-two-component-nonproperness-law.md),
 and [THM-2582](../01-canon/theorems/THM-2582-odd-block-discriminant-tower-and-composite-jelonek-square-class.md),
-plus the pinned finite-exact slice computation.  No canon or index file is
-changed by this session.
+plus the pinned finite-exact slice computation.  THM-3495 subsequently froze
+the global primitive normalization and closed the degree-27 separability gate.
 
 ## Typing correction and inheritance
 
@@ -51,6 +51,16 @@ inverse algebra `K[w]/(E)`.  Define
 ```text
 J := L^7 N(H).                                             (1)
 ```
+
+This reflection's local `J` is the rationally normalized `J_res`.  In
+THM-3495's primitive integral notation,
+
+```text
+J_prim=2^35 J_res,      J_res=J_prim/2^35.                (1a)
+```
+
+All hypersurface statements below are scale-invariant.  Square classes must
+use (1a): `[-J_res]=[-2J_prim]`.
 
 Then the proof below gives:
 
@@ -245,26 +255,24 @@ The gradient of `H` at `(3,-1,0)` is nonzero, and `det J_F=-2`; hence the
 restriction has rank two there.  Equation (22) separates the new surface from
 both older components without relying on degree numerology.
 
-## Discriminant consequence and the remaining gate
+## Discriminant consequence and the gate closed by THM-3495
 
 The norm part of the level-three recursion is now exact:
 
 ```text
-[-L N(H)] = [-J/L^6] = [-J] in K^*/K^{*2}.               (23)
+[-L N(H)] = [-J_res/L^6] = [-J_res]
+           =[-2J_prim] in K^*/K^{*2}.                    (23)
 ```
 
 Thus the old `L` exponent is the even value `1-7=-6`, and `H` is absent from
-the norm square class.  To identify (23) with the discriminant of a chosen
-degree-27 **x-coordinate eliminant**, one still needs a squarefree
-specialization proving that this coordinate separates the 27 generic points
-and that the three degree-nine blocks are pairwise coprime in that coordinate.
-Etaleness of the map does not automatically make a selected coordinate
-primitive.  The full degree-27 discriminant and its positive multiplicities
-were not computed here.
+the norm square class.  This reflection left open whether a selected
+degree-27 `x`-coordinate separates the generic points.  THM-3495 closes that
+gate with a full-degree squarefree specialization and an off-grid determinant,
+so (23) is now the actual eliminant square class, not merely the norm class.
 
-Also still open or out of scope:
+Still open or out of scope after THM-3495:
 
-- an expanded global coefficient ledger for `J`;
+- the depth-four norm divisor and an all-level newest-factor law;
 - the corresponding norm tower for THM-3438's quartic weighted map `G`;
 - arbitrary Keller-map, atom, conjugacy, or counterexample classification;
 - `JC(2)`, `DC(1)`, and `DC(2)`;

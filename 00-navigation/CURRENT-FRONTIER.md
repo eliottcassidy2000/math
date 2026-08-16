@@ -37,10 +37,9 @@ THM-3414--3416 give ZMC rank-4/5/6 bases `8,9` / `10,12` / `11,15,23,25`.
 THM-3425 gives primitive cap-six support.
 [THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md) proves 15-atom cap-seven support only at zero current.
 [THM-3479](../01-canon/theorems/THM-3479-literal-half-twist-relation-current-two-transplant-certificate.md)
-is **RESERVED**: U_full has `169/169` targets; U_clock has a common centre;
-no tuple has both or a native `C13` edge map.  A FINITE role chart gives
-`72/72` nonzero determinants (`v_13=4`) in coordinate `B^1`, not endpoints.
-Physical closure and LRC(14) remain open.
+is **RESERVED**.  FINITE-EXACT `U_full` endpoint characters make the bridge
+and both `K4` factors nonzero on all `72` charts; separate marginals erase
+ancestry.  Physical current/LRC(14) remain open.
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;
 HYP-8871 leaves `165` rows.  THM-2363/THM-2368 are sidecars; THM-2417--2894
@@ -334,8 +333,10 @@ density need not settle `z=1` mass.
   `S_n`, first mixed grade `9`, global G1 and a non-radical `S_5` inverse;
   arbitrary-map, planar/z-affine and `A_4/A_5` classification stays open.
   THM-1300/1315 are unsettled (MISTAKE-205); THM-2473--2576 fixed-map.
-  **RESERVED:** [3495](../01-canon/theorems/THM-3495-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness.md)
-  is empty. THM-2681 blocks the `A4/S4` cubic; THM-2685--2708 give its
+  [THM-3495](../01-canon/theorems/THM-3495-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness.md)
+  gives fixed-map `N(H)=J/(2^35L^7)`, `S_(F^3)=V(LHJ)`, `[Delta_3]=[-2J]`;
+  depth four/general maps remain OPEN. THM-2681
+  blocks the `A4/S4` cubic; THM-2685--2708 give its
   gain/holonomy.
   THM-3057/3059/3441 set the boundary and refute both odd-every-component forms of HYP-9027. THM-3448 realizes Keller `C_ell` inertia (`ell>=2`; first `C3` in degree five) and excludes `C3` only for weighted quartics; arbitrary quartic/two-jet `C3` remains OPEN.
   THM-3440/3443/3450: marked mode-one LRC/Keller isomorphism on 91 sheets.  Mod-13 `H^1` has no amplitude map; order 8/14 margins block the full germ.  No current.  THM-3066 retains only their
@@ -394,7 +395,9 @@ density need not settle `z=1` mass.
   THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response (collisions persist; `gr` overcounts); THM-3354 blocks direct D5 transport.
   THM-3431 proves the secondary typed cospan: LRC deck `H^1`, selected one-root JC local `H^1`, zero additive cross-maps, and a lossy DeathBar only.
   THM-3418/19 close sparse Keller/rank; THM-3422/24/27 give integral character laws; THM-3430/33 classify wrap/all-sector Prüfer arms; THM-3436/37 give repeated-root Artin jets and their derived Euler channel.  THM-3437's inverse Tor tower recovers the Tate-module/presence bit, while its inclusion direct limit recovers the Prüfer arm; neither is LRC `H^1`. No multiroot nonwrap split or `JC(2)`/`DC(2)` follows.
-- **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`: among `7395` rows, all `2665` post-exit residuals close (`2384` divisor, `281` rho).  Row `d=6518` requires `p=29`, refuting the empirical `p<=23` guess; `d=10001` is untested.
+- **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
+  all `2665/7395` post-exit residuals close (`2384` divisor, `281` rho).
+  `d=6518` needs `p=29`, refuting `p<=23`; `d=10001` is untested.
   THM-3182/3185/3188/3191 give the three-state prime reset, carried thickness and exterior/Clifford laws; THM-3210 still blocks a monotone staircase. THM-3249--3314 give the face atlas and show endpoint ancestry/positivity remain OPEN.
   THM-3303/3328 split constant-J into sheet/cone data; THM-3465 closes pure nonreal characters, and THM-3470 closes one mixed triangular shear at moment five. General support `5` and mixed cells remain OPEN.
   THM-3466's HFC+constant-J current is one length-two Krylov block and locates zero in the boundary image or a bounded cell, but its clutch need not separate. THM-3357/3365/3362 give determinant/real-profile controls; HFC(3), FC(3), `JC(2)` and arbitrary faces remain OPEN.

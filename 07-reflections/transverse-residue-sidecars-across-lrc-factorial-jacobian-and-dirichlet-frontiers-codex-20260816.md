@@ -1,0 +1,185 @@
+# Transverse residues recover linear loss; joint ancestry does not descend
+
+**Status: INTEGRATED RESEARCH SYNTHESIS.**  The factorial, Dirichlet, and
+fixed-map Jacobian inputs cited below are proved; the LRC endpoint refinements
+are finite-exact structural probes.  This note creates no new LRC, FC, HFC, or
+Jacobian-conjecture conclusion.
+
+## Portfolio and inheritance pass
+
+- **Anchor -- LRC(14), OPEN.**  The closest carrier is reserved THM-3479's
+  literal half-twist relation packet.  Its canonical hostile is the flat
+  response, where every bridge and `K4` factor vanishes.  The corrected near
+  miss is the lawful `U_full` endpoint-character bank: it restores nonzero
+  graph factors but not a physical current.  The least-used sidecar is the
+  shared atom/ancestry key before the endpoint API separately marginalizes
+  its two sides.
+- **Niche -- factorial moments.**  THM-3161 and THM-3475 provide exact digit
+  polygons at divisor primes.  The sharp nondivisor hostile is
+  `A_2^4` at `p=5`: one raw extreme vertex has `rho=0` and lifts, creating a
+  new negative edge.  THM-3483 repairs the raw polygon by retaining the
+  normalized residual `rho_p(n,j,d)` at every extreme vertex.
+- **Wildcard -- the fixed sporadic Keller map.**  THM-2582 gives the
+  discriminant-of-a-norm law.  The hostile near miss is the expectation that
+  the old divisor `L` remains odd: `N(L)=H/(64L)` cancels it.  Three
+  irreducible slices were evidence, not a global theorem.  THM-3495 instead
+  uses the two escaping sheets, the finite survivor, and the initial
+  `L`-adic face to force the exact pole and unique image prime.
+- **Orthogonal control -- periodic-polynomial Dirichlet series.**  THM-3485
+  classifies Fourier/Jordan lanes, while a minimal recurrence forgets every
+  lower occupied rung.  THM-3490 repairs this linear loss with the full table
+  of character-labelled pole residues; a finite prefix remains invisible.
+
+The live concept board was:
+
+1. raw objects versus exact lifted objects;
+2. character or valuation directions transverse to a quotient;
+3. the smallest sidecar making an endpoint/edge exact;
+4. marginal observables versus joint carriers; and
+5. the first hostile where the sidecar vanishes or ceases to be sufficient.
+
+## Connection contracts
+
+| Lane | Source -> target and map | Preserved predicate | Destroyed information | Needed sidecar | Cheapest decisive test |
+|---|---|---|---|---|---|
+| Factorial | Kummer--Legendre coefficient heights -> actual Newton polygon, by normalized residual reduction mod `p` | exact height when `rho!=0` | extra valuation and new hull geometry when `rho=0` | `rho` at every extreme raw vertex | compute the finite residue table only on raw vertices |
+| Dirichlet | periodic-polynomial lanes -> twisted Dirichlet functions, by Fourier transform plus Hurwitz continuation | every labelled lane coefficient | finite prefix; gauge if period/root labels are dropped | character and pole-height labels | inverse DFT of all residues |
+| LRC | endpoint atoms -> relation-chart factors, by endpoint-character summation | the unrestricted mod-13 aggregate and role character | physical grouping, sign/order, common ancestry, chronology | a joint atom key before marginalization | compare a lawful diagonal common-point coefficient with the product control |
+| Jacobian | inverse-sheet values of `H` -> `N(H)`, by finite norm and the `L`-adic valuation | divisor support and total order | individual sheet identities | the escaping-pair face plus a finite-sheet unit control | compute the initial face and one finite hostile, before expanding `J` |
+
+These are typed connections, not analogies.  In particular, the LRC endpoint
+character and the factorial residue both live in finite fields, but one
+refines a marginal response and the other certifies an individual coefficient
+valuation.  Neither can be substituted for the other's predicate.
+
+## What changed in this session
+
+### 1. A lawful LRC character carrier exists, but it stops before ancestry
+
+On `U_full`, the complete `13^3` endpoint-character bank evaluates
+`71,070,080` exact endpoint intervals.  It recovers the old untwisted hashes,
+recovers every coarse fibre sum, makes the forced bridge nonzero, and gives
+zero factor counts `(0,0,0,0)` for bridge, left `K4`, right `K4`, and product
+across all 72 relation charts.  A separate graph audit reproduces the chart
+digest.  The flat-response hostile makes all factors zero.
+
+This is a real positive mechanism: the first endpoint-role character that was
+lost by the coarse aggregate restores every graph factor in the tested bank.
+It is still only an unrestricted mod-13 endpoint aggregate.  It supplies no
+grouped coefficient, all-unit current, common centre, scalar exclusion, or
+LRC(14) conclusion.
+
+The follow-up five-value gate pinpoints the next loss.  A synthetic Boolean
+atom model realizes the nonzero factors, but the current endpoint API returns
+two separately marginalized sums and erases the shared atom key.  A
+checkerboard pair has the same two marginals and product while its joint
+intersection changes from positive to zero.  Thus no post-marginal Fourier
+operation can reconstruct physical common ancestry.  The next lawful object
+must be formed on common points before the two marginals are multiplied.
+
+### 2. The factorial compiler reaches `r<=9998` and exposes its structural gap
+
+THM-3483's divisor and admissible nondivisor compilers close every
+exact-support quadratic three-moment window through `d=10000`, hence
+`r<=9998`.  In `2606<=d<=10000`, inherited exits remove 4,730 of 7,395 rows;
+divisor places close 2,384 residuals and admissible nondivisor residues close
+the remaining 281.  No row survives.  Row `d=6518` first needs `p=29`, so the
+empirical bound `p<=23` is false.
+
+There is nevertheless an all-height structural fragment.  If `d=2 mod p`
+for `p=3` or `5`, the `F` raw vertices lie only at residues `0` and
+`(p-1)/2`, where `rho=1`; the complete `G` residue tables are respectively
+`(2,1,2)` and `(3,1,1,2,2)`.  Hence every such raw pair polygon is
+automatically rho-admissible.  This does **not** by itself close a row: a
+Newton degree gap or an incompatible divisor packet is still required.
+
+The conceptual frontier is therefore no longer coefficient construction.
+It is a support theorem for the reachable degree monoid: determine when the
+digit hull has a provable interval gap into which every divisor-place packet
+falls.  A residue congruence without that interval sidecar is a sharp false
+route.
+
+### 3. The fixed Keller tower gains its third genuine component
+
+THM-3495 proves, for the one fixed THM-2473 map,
+
+```text
+N(H)=J/(2^35 L^7),
+closure(F(V(H)))=V(J),
+S_(F^3)=V(LHJ),
+[Delta_3]=[-2J].
+```
+
+The primitive absolutely irreducible `J` has 66,146 terms, multidegree
+`(86,129,76)`, and total degree 157.  The mechanism is much smaller than the
+output.  Over the generic DVR of `L`, two inverse roots diverge with
+valuation `-1/2`; the leading face
+
+```text
+-63078912 x^7(3xz-2y)^3
+```
+
+makes each contribute `-7/2`, while an exact finite-root evaluation is a
+unit.  Thus `v_L N(H)=-7`.  Finite-image geometry gives one prime; one
+irreducible slice forces generic image multiplicity one.  The large resultant
+then fixes the primitive scalar, and one full-degree squarefree specialization
+licenses the degree-27 discriminant law.
+
+This advances the fixed-map tower, not `JC(2)`: depth four needs a new norm
+divisor, pole audit, image multiplicity, distinctness proof, and primitive
+coordinate check.
+
+### 4. Full Dirichlet residues are a lossless linear observer
+
+THM-3490 proves that for a labelled period-`p` polynomial word, the residue of
+the `j`th twisted Dirichlet series at `s=m+1` is exactly the `j`th Fourier
+coefficient of its degree-`m` lane.  Fourier inversion recovers the complete
+tail.  The minimal recurrence keeps only the highest occupied rung in each
+character and is therefore strictly less informative.  This is the clean
+positive control for the session's principle: when the quotient loss is
+linear and every transverse character is retained, the residue table is
+lossless.
+
+## Reframed rule and its boundary
+
+> If a projection loses linear spectral or valuation data, adjoin the first
+> transverse residue before constructing the global object.  If it loses a
+> joint relation, no family of transforms of the already separated marginals
+> can restore it; lift to the fibre product first.
+
+Triggers:
+
+- exact objects dominate a raw lower envelope and only vertex equality is
+  missing;
+- a quotient is diagonalized by a finite character group;
+- a norm/discriminant question can be localized at one boundary DVR; or
+- a recurrence has forgotten labelled Jordan rungs.
+
+Counterindications:
+
+- the target asks whether two events have the same ancestor or occur in an
+  order;
+- the API has already summed over the shared key;
+- residue vanishing is possible at an extreme vertex; or
+- only an intermediate necessary degree set, rather than factor existence,
+  is preserved.
+
+## Ranked next tests
+
+1. **LRC anchor:** form the common-point diagonal endpoint coefficient before
+   separate marginalization; compare it with the frozen bridge, product
+   control, and checkerboard hostile.  Even a hit is same-horizon data, not
+   multilevel ancestry or chronological arrival.
+2. **Factorial niche:** prove a top-digit interval theorem for the pair degree
+   monoid in the automatically admissible `p=3,5` lanes; test the first row
+   where the congruence survives but the degree gap does not.
+3. **Jacobian wildcard:** at depth four, compute the boundary valuation and
+   finite-sheet unit before any global resultant.  Stop immediately if the
+   image divisor splits or the restriction multiplicity exceeds one.
+4. **Dirichlet control:** transport full residue tomography only to objects
+   with a declared period and character gauge; do not infer finite prefixes
+   or nonlinear ancestry from it.
+
+The main practical gain is an ordering of work: identify the quotient loss,
+test its first transverse sidecar on a hostile, and only then pay for the
+global computation.

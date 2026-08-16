@@ -291,8 +291,8 @@ atom coexists with decomposable maps whose imprimitive block systems introduce
 norm and cross-block discriminant factors.  THM-2582's fixed-map degree-nine
 calculation is the canonical hostile: composition changes the odd carrier.
 
-The provisional fixed-map level-three computation likewise finds a new prime
-image in a norm numerator.  That is evidence for a divisor-orbit tower under
+THM-3495's proved fixed-map level-three theorem finds a new prime image in a
+norm numerator.  That is evidence for a divisor-orbit tower under
 composition, not evidence that the weighted `B_n` are powers or iterates of
 the cubic `L`.  The two constructions remain separately typed.
 

@@ -3,8 +3,8 @@
 **Status: PROVED STRUCTURAL FIXED-MAP DIVISOR THEOREM + VERIFIED-EXACT
 GLOBAL IDENTITY + FINITE-EXACT DEGREE-27 SPECIALIZATION; CONDITIONAL
 ALL-LEVEL RECURSION.**  The structural proof and global reconstruction below
-have an independent exact audit.  This remains a reflection pending promotion
-to the concurrently reserved THM-3495 namespace; it did not reserve that ID.
+have an independent exact audit and are canonized as THM-3495.  The all-level
+recursion remains conditional.
 
 ## Inheritance pass and live concepts
 

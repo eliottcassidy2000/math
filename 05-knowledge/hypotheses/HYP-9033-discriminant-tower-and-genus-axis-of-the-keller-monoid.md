@@ -7,9 +7,10 @@ status: >
   normalization/conductor theorem.  THM-2576 proves the set-level composition
   law and the two irreducible components of S_(F o F).  THM-2582 proves the
   global degree-nine discriminant square class `[H]`: the old component `L` has
-  even valuation and `H` is the sole odd irreducible divisor.  Exact positive
-  multiplicities and higher iterates remain open.  Nothing here is a JC(2) or
-  classification claim.
+  even valuation and `H` is the sole odd irreducible divisor.  THM-3495 proves
+  fixed depth three: `S_(F^3)=V(LHJ)` has three distinct prime components and
+  `[Delta_3]=[-2J]`.  Exact positive multiplicities and depth >=4 remain open.
+  Nothing here is a JC(2) or classification claim.
 source: opus-2026-07-28 (from the uniform disc law found by the
   THM-2546 referee run: disc = -4 (square)^2 L for all three
   coordinate cubics of the sporadic Keller map)
@@ -23,6 +24,7 @@ related:
   - THM-2566 (two-chart saturated cusp atlas and parasitic-plane ledger)
   - THM-2570 (global normalization, conductor, and cusp-cylinder structure)
   - THM-2576 (image divisor and two-component nonproperness law for F o F)
+  - THM-3495 (third prime image, three components, and degree-27 square class)
 ---
 
 # HYP-9033 -- the discriminant tower and the genus axis
@@ -86,7 +88,7 @@ labelled roots, or boundary-effective sections.  The exact scope and the
 infinite-family classification boundary are separated in
 `07-reflections/jc-three-cubics-one-kummer-class-and-family-classification-boundary-codex-20260815.md`.
 
-## 2. The discriminant tower [set law and grade-two square class PROVED]
+## 2. The discriminant tower [set law and fixed grades two/three PROVED]
 
 THM-2576 proves for dominant polynomial maps, directly from escape sequences,
 
@@ -128,8 +130,19 @@ Likewise the former “powers of
 observed canonical integral leads are `8` and `512`, obtained by cubing the
 atom-level leads.
 
-At higher grades the exact set law gives the image tower, but distinctness and
-irreducibility of its successive closures remain open.
+THM-3495 proves the next fixed-map step.  With primitive absolutely
+irreducible `J=2^35L^7N(H)`,
+
+```text
+closure(F(V(H)))=V(J),
+S_(F^3)=V(LHJ),
+[Delta_3]=[-2J].
+```
+
+The three factors are pairwise distinct and the restriction
+`V(H)->V(J)` has generic degree one.  At depth >=4 the set law still gives
+the image tower, but distinctness, irreducibility, multiplicity, and selected
+coordinate primitivity of each new closure remain open.
 
 ## 3. Two crevasse invariants for atomhood (spectrum repaired)
 
@@ -190,39 +203,43 @@ place to HUNT for a JC(2) counterexample instead.
 
 ## 5. Predictions ledger
 
-- P1 (grade two proved at set and square-class levels):
+- P1 (fixed grades two and three proved at set and square-class levels):
   `S_(F o F)=V(LH)` with two irreducible components (THM-2576), while the
   degree-nine eliminant has discriminant square class `[H]` (THM-2582).
-  Odd part `L*H` is refuted; exact positive multiplicities remain open.
+  THM-3495 gives `S_(F^3)=V(LHJ)` and degree-27 class `[-2J]`.  Odd part
+  `L*H` at grade two is refuted; exact positive multiplicities remain open.
 - P2 (VERIFIED-EXACT for the two fixed tame members): W1 and W2 obey
   `disc=-(det J)^2(square)^2L_W`, with `L_W=L o T^(-1)`.  A general
   gauge-covariance theorem remains open.
 - P3 (reframed): within a mixed grade, primitivity proves atomness; Jelonek
   reducibility is a second one-way classifier, not an atom-degree floor.
 - P4: component count of the Jelonek divisor = the grade exponent `k`,
-  generically.
+  generically.  This now holds for the fixed map at `k=1,2,3`; all `k>=4`
+  and any family-generic form remain open.
 - P5: the genus axis governs the remaining JC(2) strata.
 
 ## Concurrent scorecard (typed after audit)
 
 The set law and image equation are canonized in THM-2576 and independently
 audited coefficient-by-coefficient.  THM-2582 now canonizes the exact norm
-identity and the global composite discriminant square class `[H]`; it is not
-an exact all-target multiplicity factorization.
+identity and the global composite discriminant square class `[H]`; THM-3495
+adds the third prime `J`, the three-component set, and `[-2J]`.  Neither is an
+exact all-target multiplicity factorization.
 Trace-zero persistence at depth two and the `8 -> 512` cubing pattern are
 VERIFIED for the fixed construction only.  The W1/W2 identities are exact for
-those two tame conjugates, not a classification theorem.  P4 is consistent at
-grade nine.  The next decisive test is a level-three norm law together with
-distinctness of `closure(F^2(V(L)))` from the earlier image components.
+those two tame conjugates, not a classification theorem.  P4 is proved for
+the fixed tower through depth three.  The next decisive test is the
+level-four norm law, boundary valuation, and distinctness of
+`closure(F^3(V(L)))` from the first three components.
 
 ## Loss ledger
 
 The saturated cuspidal law is proved for the sporadic `F` only; the raw
 pullback has the extra affine plane `c=0` described in (C).  The set-level
-composition law and odd-block square-class lemma are general, and the two
-grade-two components and their fixed-map square class are proved.  Exact
-discriminant multiplicities, the `-(det J)^2` law, and higher component count
-remain outside proved general canon.  "Generic component count" needs a
+composition law and odd-block square-class lemma are general; the fixed-map
+two- and three-component sets and their square classes are proved.  Exact
+discriminant multiplicities, the `-(det J)^2` law, and depth-four/general
+component counts remain outside proved canon.  "Generic component count" needs a
 precise genericity notion before any classification claim; none of this closes
 JC(2), classifies maps within the monoid, or controls the weighted G1 witness
 -- it supplies invariants and a hunting map.

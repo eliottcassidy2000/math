@@ -287,7 +287,7 @@
   `f2b8725341caea3bc2235dea9b69e7d33c5870a89db96a8604ef4521b2154659` /
   `1086ccb03a69f1c92eb945a6ad0118976ae7f6ef2763d4e10e3973256a53d503`.
 - `keller_level_three_norm_divisor_structure_20260816.py` -> matching `.out`
-  [PROVED STRUCTURAL SIDECAR IN A THEOREM-READY REFLECTION; NOT YET CANON].
+  [PROVED STRUCTURAL SIDECAR TO THM-3495].
   Exact quotient reduction and the Newton face
   `-63078912*x^7*(3*x*z-2*y)^3` prove that the two divergent inverse sheets
   contribute `-7/2` each to `v_L(H(q))`; an exact finite-sheet hostile is a
@@ -298,8 +298,8 @@
   `f4255f6a6918458fb877523329061a66dfdef3a80b7d54cff74394b88c2f6628` /
   `473cffeb80859a3bf91ab3c77fc6144089d2c6025735a81a7d782a8e774dbcf8`.
 - `keller_level_three_global_norm_probe_20260816.py` -> matching `.out`
-  [VERIFIED-EXACT GLOBAL NORM IDENTITY + INDEPENDENT RECONSTRUCTION; NOT YET
-  CANON].  Cubic-basis reduction gives
+  [VERIFIED-EXACT GLOBAL NORM IDENTITY + INDEPENDENT RECONSTRUCTION;
+  THM-3495 COMPANION].  Cubic-basis reduction gives
   `H(q)=(B0+B1*w+B2*w^2)/(2^35*S*L^3)` and the exact resultant gives
   `N(H)=J/(2^35*L^7)`.  The primitive squarefree `J` has 66,146 terms,
   multidegree `(86,129,76)`, total degree 157, and `gcd(J,LH)=1`; its
@@ -312,8 +312,8 @@
   `37bed904530acbddc17f3f612fcc0d4e8da85b8caddc1b3c86d49b80550e1559` /
   `1736ac542fd20d6782bc494b1199099e6d08f44830efd5d9c041764925d3db97`.
 - `keller_level_three_squarefree_tower_probe_20260816.py` -> matching `.out`
-  [FINITE-EXACT SPECIALIZATION WITH A PROVED GENERIC CONSEQUENCE; NOT YET
-  CANON].  At target `(1,1,1)`, exact triangular algebras and determinant
+  [FINITE-EXACT SPECIALIZATION WITH A PROVED GENERIC CONSEQUENCE; THM-3495
+  COMPANION].  At target `(1,1,1)`, exact triangular algebras and determinant
   interpolation produce a full degree-27 squarefree norm-product polynomial;
   a degree-plus-one off-grid determinant independently checks interpolation.
   This certifies generic block separability and pairwise coprimality, but no
