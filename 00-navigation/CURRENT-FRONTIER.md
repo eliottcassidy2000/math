@@ -328,7 +328,7 @@ decide harmonic mass at `z=1`.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383 give translated localization and atomic/owner/ANOVA/rectangle/labelled-reference inversion; physical references, positive catalysis, realization, and stable diagonal stay open. THM-2646 gives modular/exponent `B3` conjugacy; exponent is not Markov-invariant.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes exact `d_max` with planar `58<60`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks and dyadic repair.
-- **Rule 30:** [THM-3456](../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md), THM-3458/3459, and [THM-3463](../01-canon/theorems/THM-3463-rule30-mealy-section-suffix-parity-current-and-complexity-boundary.md); prizes open.
+- **Rule 30:** [THM-3468](../01-canon/theorems/THM-3468-rule30-radial-green-fold-innovation-discrepancy-and-fixed-seed-carrier-boundaries.md): backbone/tariff, Haar chart, ranks; prizes open.
 - **Jacobian/Dixmier:** `JC(2)`/`DC(2)` remain open. THM-3459 separates four
   Rule 30 lifts; no JC map. THM-3438 proves `KDeg(m)={1,3,4,...}` (`m>=3`),
   all-grade `S_n`, first mixed grade `9`, global G1, and a non-radical `S_5`
