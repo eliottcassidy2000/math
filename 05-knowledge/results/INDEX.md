@@ -39,6 +39,24 @@
   `c16e662584f381eb14f1aeeb315542391613603e02c061707a7e60870712aa06` /
   `cd55336bb1dfe5f37f020c242c4bca5b7c6be339ec57e95d69e10bbe68d9dbaa`.
 
+- `keller_level_six_degree729_recursive_tuple_probe_20260816.py` -> matching
+  `.out` [FINITE-EXACT FIXED-MAP SIXTH-ELIMINANT CANDIDATE; INDEPENDENT AUDIT
+  PENDING; NO THEOREM RESERVED].  At `(1,1,1)` over `F_733`, recursive cubic
+  adjugates build the lawful inverse tower `3,9,27,81,243`; all five inverse
+  graphs and all 20 leading/derivative/chart-denominator unit gates pass.
+  Polynomial-valued `3x3` norm determinants give the exact degree ledger
+  `3,9,27,81,243,729`.  The degree-`729` norm has derivative gcd one and 42
+  distinct fibre factors, with degree multiset
+  `3x7,6x5,9x9,12x7,18x2,24x4,27x5,36,48,162`.  Seven scalar norm checks,
+  one literal held-out `243x243` determinant, odd-sign and top-truncation
+  hostiles, and byte-identical normal/optimized replays pass.  This is a
+  good-reduction generic degree/separability candidate, not an `R_6/R_7`
+  image, irreducibility, all-level, arbitrary-map, or general JC claim.
+  Script/output/semantic LF SHA-256:
+  `087d50c42054fb833b9ac07fe8d775cfea1b3e914b649f48e7d596fedc09f8b0` /
+  `7d152cdbf720012f1dd162bfbe603ae43691717b8fb7550a2770e3d67016eba1` /
+  `8009c86f1c8f290829df2ba8332dc2b09929b08cbd55376f48a13acd8c2c427c`.
+
 - `keller_level_five_degree243_finite_field_probe_independent_20260816.py`
   and `keller_level_five_degree243_fourier_flint_independent_audit_20260816.py`
   -> matching `.out` files [THM-3525 PROVED + VERIFIED-EXACT +
