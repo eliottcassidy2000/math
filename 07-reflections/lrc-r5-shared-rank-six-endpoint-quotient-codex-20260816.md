@@ -1,27 +1,35 @@
-# The two radix sheets have one six-dimensional endpoint quotient
+# The common rank-six quotient is the six-pointed carrier
 
-**Status: FINITE-EXACT CROSS-AUDIT ON THE CANONICAL `r=5` OWNER BASE;
-SCOPED ONE-DIGIT CEILING REMAINS A HYPOTHESIS; LRC(14) remains OPEN.**  The
+**Status: FINITE-EXACT REPRESENTATION SYNTHESIS ON THE CANONICAL `r=5` OWNER
+BASE; THE FOUR-WAY PHYSICAL CANDIDATE STILL AWAITS INDEPENDENT AUDIT;
+POINTED-BUNDLE CLOSURE REMAINS A HYPOTHESIS; LRC(14) remains OPEN.**  The
 source-time high digit `b_source=floor(n/13)` and the current-leg last digit
 `r_owner=a mod 13` do not merely give two tables of rank six.  Their exact
 endpoint-relation row spaces are equal.  The common six-space carries the same
-abstract reflection in both presentations and decomposes as
+reflection in both presentations and decomposes as
 
 ```text
 W = 3 trivial + 3 sign.
 ```
 
-Its four-dimensional Boolean-square parent is `2 trivial + 2 sign`, so the
-branch refinement adds exactly one even and one odd response direction.  This
-does not identify the two radix digits: equality is obtained only after
-quotienting two different 52-dimensional source carriers by their different
-46-dimensional response kernels.
+The incoming current-branch x root-difference table supplies the missing
+carrier.  Statewise, its branch rows span exactly the corresponding rows of the
+six pointed pairs, and difference marginalization is injective on that pointed
+space.  Thus the common endpoint six-space is the image of the six-pointed
+carrier, whose path reversal consists of three transpositions.  Its
+four-dimensional Boolean-square parent is `2 trivial + 2 sign`, so the branch
+refinement adds exactly one even and one odd response direction.
+
+This does not identify the two radix digits.  Equality is obtained only after
+quotienting two different 52-dimensional radix/state carriers by their
+different 46-dimensional response kernels.  In particular, the source-time
+digit has not yet been factored through the pointed carrier before root
+difference is marginalized.
 
 The broad statement that every one-owner endpoint response has rank at most
 six is false.  The already audited root-difference and pointed-tail tables on
 the same base have raw relation rank thirteen and centred relation rank twelve.
-The only surviving ceiling is therefore explicitly scoped to one retained
-radix digit after cut-arc colour and absolute tail have been marginalized.
+Six is therefore a typed channel dimension, not a global endpoint ceiling.
 
 ## Inheritance pass
 
@@ -50,9 +58,11 @@ After the low digit is marginalized, it has the same formal reversal on
 can be a rank-one delta-cell lift.  The present test therefore compares exact
 row spaces, kernels, and involution graphs rather than support counts.
 
-The least-used nearby sidecars are the source-root difference and pointed
-absolute tail.  They are decisive hostile boundaries because they already
-break any unscoped rank-six ceiling.
+The decisive incoming mechanism is the four-way current-branch x
+root-difference candidate at `origin/main` commit `80d7fed8e`, merged into the
+rolling frontier at `23b6e7981`.  Its pointed parent is independently audited;
+the four-way integrand itself is not.  The least-used next sidecar is the
+source-time branch jointly retained with root difference.
 
 ## Typed response maps
 
@@ -116,6 +126,72 @@ audit.  The current table is rebuilt from the disjoint `13^4`-fold then
 `r_owner`-window construction.  Both exact parents agree entrywise before any
 rank comparison.
 
+## The incoming four-way table identifies the carrier
+
+Let
+
+```text
+K = Fun(F_13(source difference) x F_13(relation),k)
+```
+
+and let `P_6` be the six realized pointed cut-state incidences
+
+```text
+((0,0),(1,0),(1,6),(3,6),(3,12),(2,12)).
+```
+
+The incoming joint tensor retains `(state,r_owner,u-q,t)`.  For each fixed
+state `i`, compare in `K`
+
+```text
+M_i = span of its thirteen r_owner rows,
+P_i = span of the pointed rows (i,u).
+```
+
+The exact certificates
+
+```text
+state 0: (number of points,rank M_i,rank P_i,rank(M_i+P_i)) = (1,1,1,1),
+state 1:                                                        (2,2,2,2),
+state 2:                                                        (1,1,1,1),
+state 3:                                                        (2,2,2,2)
+```
+
+prove `M_i=P_i` statewise.  Hence the current-branch image in `K` is exactly
+the six-dimensional pointed space `P=P_0+P_1+P_2+P_3`.
+
+Now let
+
+```text
+mu : K -> H,       mu f(t)=sum_s f(s,t),
+```
+
+be difference marginalization.  A separate derived audit obtains
+
+```text
+rank P                         = 6,
+rank mu(P)                     = 6,
+rank im(Phi_owner)             = 6,
+rank(mu(P)+im(Phi_owner))      = 6.
+```
+
+Thus `mu|P` is injective and
+
+```text
+mu(P) = im(Phi_owner) = W.
+```
+
+The canonical RREF digest of `mu(P)` is exactly the previously pinned common
+endpoint digest
+
+```text
+6e9083f15408f6d2d85fb3f2747ba0bd1f987e83ce4b836cb7298aaccc84e0c4.
+```
+
+Since `im(Phi_source)=im(Phi_owner)`, the source-time table also reaches
+`mu(P)`.  This last equality occurs after difference marginalization; it does
+not yet construct a source-time map into `P` inside `K`.
+
 ## The reflection descends, but not as a residue permutation
 
 Let `J_source` and `J_owner` reverse the path state and the appropriate radix
@@ -150,9 +226,23 @@ W_0^+ = 2,     W_0^- = 2,
 (W/W_0)^+ = 1, (W/W_0)^- = 1.
 ```
 
-This is the representation-theoretic content behind the repeated rank jump
-`4 -> 6`: each radix presentation reaches the same additional trivial/sign
-pair.
+The pointed path reverses by
+
+```text
+(0,1,2,3,4,5) -> (5,4,3,2,1,0).
+```
+
+Its permutation module is therefore three two-point permutation modules,
+namely `3 trivial + 3 sign`.  The derived audit compares involution graphs and
+gets joint graph rank six with the same canonical graph digest above.  Hence
+the abstract quotient involution `j` is exactly pointed-path reversal transported
+through the injective marginal `mu|P`; it is no longer an unexplained kernel
+symmetry.
+
+Likewise the four Boolean parent states form two reversal pairs, giving
+`2 trivial + 2 sign`.  The quotient `W/W_0` is the one remaining pointed
+reversal pair, `1 trivial + 1 sign`.  This is the representation-theoretic
+content behind the repeated rank jump `4 -> 6`.
 
 There is an important hostile qualification.  Under every affine action
 
@@ -203,14 +293,15 @@ These four structures remain distinct:
 
 | structure | typed objects | relation/operation | status in this audit |
 |---|---|---|---|
-| owner path | four visible cut states, inherited from the five-state physical support path | reversal `state -> state XOR 2` | retained and used in `J` |
-| source cut arcs | ordered root pairs crossing a state cut; colour `u-q` | directed partial cut relation, with within-side pairs missing | marginalized; exact rank-13 hostile when restored |
+| owner path | six pointed `(state,u)` incidences over four visible cut states | reversal of the six-term pointed path | the actual rank-six carrier |
+| source cut arcs | ordered root pairs crossing a state cut; colour `u-q` | directed partial cut relation, with within-side pairs missing | retained in `K`, then marginalized injectively on `P`; rank-13 outside `P` |
 | tournament | vertices with exactly one oriented edge for every pair | complete antisymmetric orientation | absent; neither radix labels nor endpoint residues carry this relation |
 | radix tree | inverse-word children labelled by base-13 digits | parent/child extension and digit reversal | `b_source` and `r_owner` are children at different stages of different trees |
 
-The path involution is not a tournament orientation.  A cut arc is not a path
-edge.  A radix child label is not a pairwise relation.  Equal `F_13`
-cardinality does not identify the source and current trees.
+The path involution is not a tournament orientation.  The six pointed
+incidences are not six tournament vertices.  A cut arc is not a path edge, and
+a radix child label is not a pairwise relation.  Equal `F_13` cardinality does
+not identify the source and current trees.
 
 ## Hostile boundary: the broad ceiling is refuted
 
@@ -241,70 +332,85 @@ marginalized.
 
 ## Precise surviving conjecture
 
-**Scoped one-digit endpoint-image conjecture (HYPOTHESIS).**  Fix the canonical
-`r=5` owner base, literal guard order, endpoint factors, and relation inversion
-used above.  Retain exactly one base-13 inverse-tree digit from one source or
-current stage, and marginalize source-root difference, pointed absolute tail,
-all other inverse digits, deep/horizon labels, and exact relation addresses.
-Then its endpoint response map has image contained in the canonical
-six-dimensional `C_2` module `W`.  If the digit is nonflat, its image equals
-`W`; its branch marginal is `W_0`; and the induced reflection quotient is
+The earlier one-digit “endpoint ceiling” formulation is **SUPERSEDED** by a
+typed factorization statement.
+
+**Pointed-bundle closure conjecture (HYPOTHESIS).**  Fix the canonical `r=5`
+owner base, literal guard order, endpoint factors, and relation inversion.  For
+an inverse-tree digit or finite inverse word `w`, retain source-root difference
+before integration and form the response rows over `(difference,relation)`.
+For each Boolean state `i`, the `w`-resolved row space is contained in the
+pointed-tail space
 
 ```text
-W       = 3 trivial + 3 sign,
-W/W_0   = 1 trivial + 1 sign.
+P_i = span{ response(i,u,-,-) : (i,u) is one of the six pointed states }.
 ```
 
-This quantifies only the fixed finite owner construction.  It is not a theorem
-about other clocks, rows, primes, physical currents, or LRC(14).
+Equivalently, all such ancestry words act through the fixed six-dimensional
+pointed bundle `P`.  The current last digit proves equality for one word level.
+After difference marginalization this implies containment in `W=mu(P)`, but
+that rank-six endpoint statement is a consequence, not the primitive claim.
+
+The conjecture does not yet cover the source-time high digit: its endpoint
+marginal equals `W`, but its row space over `(difference,relation)` has not been
+constructed.  Nor does it cover older current digits, two-digit words, other
+clocks, rows, primes, physical currents, or LRC(14).
 
 ## Cheapest decisive computation
 
-The decisive two-stage hostile is the lawful joint table
+The cheapest mechanism test is now the lawful source-time joint table
 
 ```text
-T_joint(b_source,r_owner,state,t),
+T_source(state,b_source,u-q,t).
 ```
 
-formed before either digit is marginalized.  It must recover the source table
-after summing `r_owner` and the owner table after summing `b_source`.  A formal
-product of the two final marginals is inadmissible.
-
-Use the seven-dimensional annihilator of the pinned RREF basis of `W` as a
-streaming test.  Contract every joint response row against those seven
-functionals during relation inversion:
+It must recover the independently audited source-sheet table after summing
+`u-q` and the audited root-difference table after summing `b_source`.  Then,
+for each state, stack its thirteen source-branch rows over `(u-q,t)` with the
+pinned pointed rows.  The decisive certificate is
 
 ```text
-first nonzero contraction  => finite counterexample to the ceiling;
-all contractions zero      => im(T_joint) is contained in W;
-rank six plus both exact marginals => the joint refinement still reaches only W.
+expected statewise (branch rank,point rank,union rank):
+state 0: (<=1,1,1),
+state 1: (<=2,2,2),
+state 2: (<=1,1,1),
+state 3: (<=2,2,2).
 ```
 
-This is cheaper than first analyzing all Fourier modes and is logically
-decisive.  If the joint rank exceeds six, the first surviving annihilator and
-its `(b_source,r_owner,state)` row are the minimal hostile witness.  If it
-remains six, the result still does not identify the two digits; it says only
-that the endpoint response forgets their difference at this quotient.
+Any union rank larger than the point rank is an immediate counterexample to
+pointed-bundle closure; the first RREF pivot outside `P_i` is the minimal
+hostile witness.  Equality in all four states constructs the missing source
+factorization and explains the source/current common endpoint space before the
+lossy difference marginal.
+
+Only after this test should one build
+`T(b_source,r_owner,state,u-q,t)`.  That larger table asks whether the two radix
+stages act independently inside the pointed bundle; it is not the cheapest
+test of why the rank is six.
 
 ## Connection contract
 
 | field | exact answer |
 |---|---|
-| source | two distinct `52`-dimensional radix/state carriers, one before source transfer and one after the depth-`13^5` current fold |
-| target | `H=Fun(F_13(relation),F_p)` |
-| map | actual endpoint integration followed by the canonical relation inversion |
-| preserved | owner base, Boolean state marginal, literal guard order, endpoint factors, relation residue, abstract path/radix reflection quotient |
-| destroyed | 46 kernel directions in each carrier, low/older digits, root difference, pointed tail, deep/horizon labels, chronology, exact address |
-| positive gate | equal RREF row spaces, equal involution graphs, `3+3` split, common `4`-dimensional parent |
-| hostile | affine target stabilizer is trivial; root-difference and pointed tables have relation rank `13/12` |
-| boundary | no source-to-current digit map, joint ancestry table, physical current, row exclusion, or LRC(14) conclusion |
+| source | six pointed `(state,u)` incidences, plus two distinct radix/state presentations |
+| expanded target | `K=Fun(F_13(u-q) x F_13(relation),F_p)` |
+| endpoint target | `H=Fun(F_13(relation),F_p)` |
+| map | pointed response into `K`, then the injective-on-`P` difference marginal `mu:P->W`; source/current endpoint maps land in the same `W` |
+| preserved | owner base, Boolean state, literal guard order, pointed tail in `P`, cut colour in `K`, endpoint factors, path reversal |
+| destroyed by `mu` globally | root difference outside `P`; the source/current presentations additionally lose 46 kernel directions and temporal stage data |
+| positive gate | statewise current rows equal pointed rows, marginal ranks `(6,6,6,6)`, equal RREF and involution-graph hashes |
+| hostile | affine target stabilizer is trivial; unrestricted root-difference/pointed tables have relation rank `13/12` |
+| boundary | source factorization in `K`, source-to-current digit map, full joint ancestry, physical current, row exclusion, and LRC(14) remain open |
 
 ## Reproduction
 
 ```text
 python -B 04-computation/lrc_r5_endpoint_response_rank_six_representation_audit_20260816.py
 python -B -O 04-computation/lrc_r5_endpoint_response_rank_six_representation_audit_20260816.py
+python -B 04-computation/lrc_r5_pointed_carrier_rank_six_representation_audit_20260816.py
+python -B -O 04-computation/lrc_r5_pointed_carrier_rank_six_representation_audit_20260816.py
 ```
 
-The semantic digest is
-`7baeb128a4c4d5998342611fdcf821d002ffb4622692dd72c03e6f11c8d9825a`.
+The common-image and pointed-carrier semantic digests are
+`7baeb128a4c4d5998342611fdcf821d002ffb4622692dd72c03e6f11c8d9825a`
+and `5e491136809fc164bbbfc7aeb9c272b7aff05020992985a39f291bf31297903e`.

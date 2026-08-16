@@ -1,0 +1,14 @@
+== r=5 pointed-carrier representation audit ==
+pointed_states=((0, 0), (1, 0), (1, 6), (3, 6), (3, 12), (2, 12))
+pointed_path_reversal=(5, 4, 3, 2, 1, 0)
+relation_record_order=(expanded_pointed_rank,marginal_pointed_rank,owner_rank,union_rank)
+difference_marginal_identification=(6, 6, 6, 6)
+representation_order=(point_graph_rank,owner_graph_rank,joint_graph_rank,point_+-,owner_+-)
+pointed_permutation_module=(6, 6, 6, (3, 3), (3, 3))
+rowspace_digests_(expanded_pointed,marginal_pointed,owner,point_graph,owner_graph)=('6014f99bee469da11163238341e815f6901d1460ec2f3d1ac62515b65470fda5', '6e9083f15408f6d2d85fb3f2747ba0bd1f987e83ce4b836cb7298aaccc84e0c4', '6e9083f15408f6d2d85fb3f2747ba0bd1f987e83ce4b836cb7298aaccc84e0c4', '67850c2586ac9a4f242ada7173eba2fe1b3c5e6d1ae20a5e2b6d7ad0dc7d3f88', '67850c2586ac9a4f242ada7173eba2fe1b3c5e6d1ae20a5e2b6d7ad0dc7d3f88')
+tensor_digests_(joint,pointed)=(ccfdb2373578190156dca9e9012c0a98ac50cdbacea84f1ff21d5ec0ac94db5b,9c5e227d9c142373973a562a54c6a67cac60a82da1121a028b9658920d155a19)
+semantic_sha256=5e491136809fc164bbbfc7aeb9c272b7aff05020992985a39f291bf31297903e
+verdict=common rank-six endpoint quotient is the injective difference marginal of the six-pointed carrier
+typing=pointed cut-state incidences with path reversal;not tournament vertices or radix branches
+scope=derived exact representation audit of candidate joint integrand;physical four-way independent audit pending
+no_exact_address_chronology_current_row_exclusion_or_LRC14
