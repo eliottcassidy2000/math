@@ -1,0 +1,20 @@
+R5 SOURCE-ALIGNED 7x13 RESIDUE SPECTRUM -- INDEPENDENT HOSTILE AUDIT
+status=ACCEPT_SCOPED_FINITE_EXACT_PACKAGE;LRC14_OPEN
+dependencies=(thm2594=09c43af0a0a56c7a0833bbfd13ed6a96bc5a7a3718aa1bc6b77a144bde101a06,thm3514_atom_engine=f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc)
+field=(prime=572252886246508880869,root=279936,zeta7=353818603057943120846,zeta13=505438565698892403012,order=81750412320929840124)
+cell_partition=(count=7,measures=(42548128262640, 42548128262640, 42548128262640, 42548128262640, 42548128262640, 42548128262640, 42548128262640),disjoint=True,tiles_base=True,digest=2defd5f14d52d565d65ab9d5cbf358a3e62c47634caad30fdd1f1fa2a5d19e70)
+source_cell_ledger=(atom_pair_support=362/1521,entry_support=5150/138411,offset_cell_digest=5dadb2ecabfca2d90f03ba24714f6c067940882d6eaf6099bb7191a68281af06,cell_offset_digest=39d7a0b4e5b2d8b85631d682ed1967091e44dc41e17b33a77e7184d3dc93e0cf)
+cell_marginal=(recovers_all_39x39x13_entries=True,digest=96337f74f2599044870e90878b8bcfb2ce4a04dc970c88b28f23a4f237b3ea53)
+endpoint_residue_bank=(digest=c28119c8b54f47e5b7a46f1508fbba604b0e3997eaadb05b03ad28edd9aed468,totals=(503604956476841920373, 320618948602619577408, 298317460103001010047, 91211497166287295169, 342614572767859798674, 84686609743019470334, 225010624370142818572, 245722470917359830101, 469748944396534477419, 216343791594190461337, 47237609150398749084, 238138904695785648048, 24751895628753129013))
+residue_support_shapes=((91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72))
+endpoint_pair_ANOVA=(component_supports=((91, 91, 91, 91), (91, 91, 91, 91), (91, 91, 91, 91), (91, 91, 91, 91), (91, 91, 91, 91), (91, 91, 91, 91), (91, 91, 91, 91), (91, 91, 91, 91), (91, 91, 91, 91), (91, 91, 91, 91), (91, 91, 91, 91), (91, 91, 91, 91), (91, 91, 91, 91)),partition_unions=(91, 91, 91, 91, 91, 91, 91, 91, 91, 91, 91, 91, 91)/91)
+fixed_relation_1_0_6=(endpoint_total=225010624370142818572,mixed_witness_h1_k1=218019411785559321795,output_ANOVA_shape=(72, 0, 0, 0, 72),endpoint_pair_ANOVA_shape=(91, 1, 6, 12, 72))
+erasures=(cell_shape=(13, 1, 0, 12, 0),owner_shape=(7, 1, 6, 0, 0),mixed_killed=True,cell_sum_recovers_prior_owner_pullback=True)
+candidate_comparison=(coordinate_bank_digest=989dafc220a6d09aeacfce4af0e9a4fe13eedacc79fa66032ea39bc107fd8efb,spectrum_bank_digest=5f173227c5e203309f61bdfd9d47cc64a3b49ae8f14abd0f7bfc469eda278533,all_exact=True)
+proof=('seven_half_open_cells_partition_the_outer_base_before_marginalization', 'cell_sum_recovers_every_39x39x13_source_entry', 'complete_1_0_t_endpoint_bank_rebuilt_from_independent_THM3514_atoms', 'full_output_has_DC_cell_owner_and_mixed_Fourier_sectors', 'endpoint_pair_interaction_is_contracted_before_output_ANOVA', 'either_cell_or_owner_erasure_annihilates_the_mixed_sector')
+boundary=('AX_BY_are_preintegrated_endpoint_scalars', 'fixed_1_0_6_is_a_THM2334_residue_pushforward_not_exact_address_C_a_X_m', 'not_a_physical_current_or_THM2512_bridge', 'no_row_exclusion_or_LRC14_claim')
+semantic_sha256=a0534b8d995956c126ce204117a9488b222ad25dd8b483b269e37740ffe13ccb
+script_sha256_lf=c9a07252d1573cca47ce5a161d8dade2821078fc68f0f8aa03d0fd92763dae5a
+reproducibility=no_candidate_imports;no_randomness;no_elapsed_fields;normal_and_O_transcripts_must_match
+commands=python -B 04-computation/lrc_r5_source_aligned_relation_residue_7x13_independent_audit_20260816.py;python -B -O 04-computation/lrc_r5_source_aligned_relation_residue_7x13_independent_audit_20260816.py
+PASS

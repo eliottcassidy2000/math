@@ -38,6 +38,26 @@
   `5f3fbf08bef6f9a61e684f0f7616e80e1dbbda4f6bb2ed4ca3788d3b8b53d65a` /
   `c16e662584f381eb14f1aeeb315542391613603e02c061707a7e60870712aa06` /
   `cd55336bb1dfe5f37f020c242c4bca5b7c6be339ec57e95d69e10bbe68d9dbaa`.
+- `lrc_r5_source_aligned_relation_residue_7x13_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  SOURCE-TIME PACKAGE].  Without importing the candidate, it inserts all
+  seven THM-2594 half-open cells before integration and rebuilds the complete
+  THM-3514 `(1,0,t)` endpoint bank.  The clean-room tensor has 362 supported
+  atom pairs and `5150/138411` entries; summing cells recovers every
+  `39x39x13` source entry.  Transposing only its final `[c][ell]` axes gives
+  the candidate tensor digest `39d7a0b4...e0cf`.  Every residue has spectrum
+  `(91,1,6,12,72)`.  At `(1,0,6)`, output ANOVA is
+  `(72,0,0,0,72)`, endpoint-pair interaction remains
+  `(91,1,6,12,72)`, and the mixed witness is
+  `218019411785559321795`.  Cell and owner erasures give
+  `(13,1,0,12,0)` and `(7,1,6,0,0)`.  Pair-space and output-space ANOVA are
+  distinct: all four endpoint-pair components independently have `91/91`
+  support for every residue.  This remains a preintegrated `AX/BY` THM-2334
+  residue pushforward, not `C(a;X,m)`, a physical current, THM-2512 bridge,
+  row exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
+  `c9a07252d1573cca47ce5a161d8dade2821078fc68f0f8aa03d0fd92763dae5a` /
+  `5cc3b76674abb9f037e8d0f9d96a64197df9eee6f159bb7a12f9401df9ee483f` /
+  `a0534b8d995956c126ce204117a9488b222ad25dd8b483b269e37740ffe13ccb`.
 
 - `keller_level_six_degree729_recursive_tuple_probe_20260816.py` -> matching
   `.out` [FINITE-EXACT FIXED-MAP SIXTH-ELIMINANT CANDIDATE; INDEPENDENT AUDIT
