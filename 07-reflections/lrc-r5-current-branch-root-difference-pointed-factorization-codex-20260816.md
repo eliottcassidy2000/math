@@ -1,7 +1,7 @@
 # The four-way crossing factors exactly through the six pointed carriers
 
 **Status: FINITE-EXACT POSITIVE FOUR-COORDINATE CANDIDATE ON ONE `r=5`
-OWNER BASE; INDEPENDENT AUDIT PENDING; LRC(14) remains OPEN.**  Retaining the
+OWNER BASE; INDEPENDENTLY HOSTILE-AUDITED; LRC(14) remains OPEN.**  Retaining the
 current-leg inverse digit `r_owner=a mod 13` and the ordered source-root
 difference `s=u-q` together produces a nonzero irreducible
 
@@ -17,6 +17,14 @@ This is a finite common-base statistic.  It is not THM-2334's exact address,
 a word/deep physical current, U_clock chronology, a row exclusion, or a proof
 of LRC(14).
 
+The independent audit rebuilt the stronger
+`point x branch x difference x relation` object without importing this
+implementation, reproduced both segmentwise/gamma/inverse marginals and every
+pinned tensor digest, and explicitly solved every branch row in its statewise
+pointed basis.  It also separates branch amplitude rank four, pointed carrier
+rank six, and whole-tensor bipartition ranks `40/42`.  See
+`lrc-r5-current-branch-root-difference-independent-hostile-audit-codex-20260816.md`.
+
 ## Inheritance pass
 
 Three independently controlled parents meet here:
@@ -27,7 +35,7 @@ Three independently controlled parents meet here:
 3. the independently audited pointed-six refinement
    `(state,u)=((0,0),(1,0),(1,6),(3,6),(3,12),(2,12))`.
 
-The new, not-yet-audited parent is the current-leg inverse digit
+The independently audited current-leg parent is the inverse digit
 `r_owner=a mod 13` on THM-2471's sheet `X_(u,a)`.  Its three-coordinate
 response has centered ranks `(3,4,6)`.  MISTAKE-417 remains the canonical
 hostile: complete character support without a rank gate can be a delta-cell

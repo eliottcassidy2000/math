@@ -130,7 +130,7 @@
 
 - `lrc_r5_owner_node_inverse_branch_root_difference_four_way_probe_20260816.py`
   -> matching `.out` [FINITE-EXACT POSITIVE FOUR-COORDINATE CANDIDATE;
-  AUDIT PENDING].  The exact double marginal recovers the audited
+  INDEPENDENTLY HOSTILE-AUDITED].  The exact double marginal recovers the audited
   root-difference parents on summing `r_owner` and the current-branch parent
   on summing `s=u-q`.  The actual four-way ANOVA has axis ranks
   `(3,4,12,12)`, `2+2` ranks `(6,36,34)`, and all `5184=3*12^3` modes.
@@ -143,6 +143,28 @@
   `d66378cc8db99c4de087fa78413721de6aa7be3960f51ee39f29feae9313eeba` /
   `25122a1344c2677a6444a98f21beb7e4b7f27f80acc708263050916409ebea1b` /
   `0e527913f22fc7d165f795df42e25692fba9289ccaf85aee4a3a2402613bdb41`.
+
+- `lrc_r5_owner_node_inverse_branch_root_difference_four_way_independent_audit_20260816.py`
+  -> matching `.out` [FINITE-EXACT INDEPENDENT HOSTILE AUDIT ACCEPTS THE
+  SCOPED FOUR-WAY INTERACTION AND POINTED-SIX FACTORIZATION].  Without
+  importing the submitted four-way implementation, it rebuilds the stronger
+  `point x current digit x source-root difference x relation` tensor from the
+  independently audited parents.  Both marginals pass segmentwise, at gamma
+  level, and after inversion; literal guards, same-root zero, actual support,
+  and support/branch/difference-flat hostiles pass.  Actual/pure axis ranks
+  are `(4,4,12,13)/(3,4,12,12)`, `2+2` ranks are
+  `(6,40,42)/(6,36,34)`, and all `5184` pure modes fire.  Exact coordinates,
+  not only equal dimensions, prove the statewise current-branch row spaces
+  equal the six pointed rows; the stronger point-resolved carrier has global
+  base/digit/union ranks `(6,6,6)`.  Branch amplitude rank four, carrier rank
+  six, and whole-tensor ranks `40/42` are distinct.  The source/current
+  `17->4->6` and two-current `13/12->6` comparisons do not imply a stationary
+  digit recurrence; the latter has only address-conditioned diagonal
+  `K_(r0,r1)`.  No exact address, chronology, physical current, row exclusion,
+  or LRC(14) consequence.  Script/output/semantic LF SHA-256:
+  `cf2efd6317dd6ba2a05865ad11d115f1ab239e8ebafb2b8b3764447d1e0e67a3` /
+  `8b5e5101e9df0da25899d5b39c3604dae7d2706200208f153b65d37fd2f63640` /
+  `57bb908c381608415091feb14035354e7cef6dd3b11a4e9ce78c363fc703f2a0`.
 - `lrc_r5_ufull_owner_node_boolean_square_two_digit_current_ancestry_probe_20260816.py`
   -> matching `.out` [FINITE-EXACT POSITIVE TWO-DIGIT CURRENT-ANCESTRY
   OBJECT; INDEPENDENTLY HOSTILE-AUDITED WITH SCOPE REPAIR].  The lawful factorization
