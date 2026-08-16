@@ -2,19 +2,20 @@
 id: THM-3490
 title: "Full Fourier-Dirichlet residue tomography of periodic-polynomial words"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT PENDING.  The complete table of character-twisted Dirichlet residues
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The complete table of
+  character-twisted Dirichlet residues
   is exactly the Fourier coefficient array of a periodic-polynomial tail and
   recovers every lane coefficient.  Its minimal recurrence is the lossy
   projection retaining only each character row's highest occupied rung.
 source: codex-2026-08-16-full-fourier-dirichlet-residue-tomography
 audit: >
-  elementary Hurwitz-residue/Fourier proof candidate derived independently by
-  death-star-2026-08-16 and integrated with an information-loss correction;
-  exact companion checks 82 split-field packets, Fourier inversion, direct
-  Berlekamp-Massey recurrence recovery, alternating/composite-period/prefix
-  hostiles, THM-3484, normal/optimized replay, and AST security; independent
-  audit of the integrated theorem pending
+  independently audited by death-star-2026-08-16 after integration: the
+  Hurwitz-residue normalization, Fourier inversion, exact information order,
+  declared-period refinement, finite-prefix loss, demodulate-deflate
+  reconstruction, rational descent, and THM-3484/THM-3487 scopes all pass;
+  exact companion checks 82 split-field packets, direct Berlekamp-Massey
+  recovery, alternating/composite-period/prefix hostiles, normal/optimized
+  replay, and AST security.  The audit also repaired a stale script hash.
 depends_on:
   - THM-3485-periodic-polynomial-fourier-jordan-recurrence-classification
   - THM-3486-critical-harmonic-transform-of-periodic-polynomial-words
@@ -22,16 +23,15 @@ related:
   - THM-3487-two-twenty-four-state-fibonacci-bundles-cycle-type-obstruction
 script: 04-computation/periodic_polynomial_fourier_dirichlet_residue_tomography_thm3490.py
 output: 05-knowledge/results/periodic_polynomial_fourier_dirichlet_residue_tomography_thm3490.out
-script_sha256: 0a8ee350244e2c1c972ef97e8becd330e8d49bfa67d3d4d9a92eb7c2200cc96e
-output_sha256: 6218bbeca38981456c17025dc923828e641415537af5890baaeb5d3527cbeb32
+script_sha256: 52a58263a2ea00af72a1038d1d64c955e411b0f308ba7fa94621439f00d79d43
+output_sha256: 72f7b97f3acabeef953c1184a35904b1fa28d0494cb9f4d0e2100c85aa3ebc3e
 semantic_sha256: 39daa9a75e84e0fcb28141fa9079c3f616c9aa5d0689934cc239b4d911fc713e
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3490 -- every Fourier/Jordan rung is a Dirichlet residue
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-3486 identifies one scalar: the top trivial Fourier coefficient is the
 critical harmonic mass.  Keeping every character and every possible pole
@@ -271,7 +271,7 @@ the desired LRC word-current to Jacobian-flux `H^1` map.  Character labels,
 coefficient local systems, ancestry, and physical-current typing must still
 be supplied.
 
-This candidate proves no tournament classification, full Berggren-tree
+This theorem proves no tournament classification, full Berggren-tree
 transplant, LRC bispectrum nonvanishing, Jacobian counterexample
 classification, or case of LRC(14).
 
@@ -292,5 +292,5 @@ the alternating, composite-period, seven-term-prefix, and THM-3484 hostiles.
 Normal and optimized replays agree.  These finite controls support but do not
 replace the proof of (6)--(12).
 
-The integrated candidate remains outside the proved dependency graph until
-an independent audit checks the information-order correction and promotion.
+The companion verifies the finite controls; the all-period statement follows
+from the Hurwitz-residue and Fourier proof in Sections 2--4.

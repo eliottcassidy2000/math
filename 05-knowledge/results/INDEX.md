@@ -1,8 +1,8 @@
 # Script Results Index
 
 - `periodic_polynomial_fourier_dirichlet_residue_tomography_thm3490.py` ->
-  matching `.out` [THM-3490 RESERVED / PROVISIONAL PROOF CANDIDATE +
-  VERIFIED-EXACT; independent audit pending].  For a declared period and
+  matching `.out` [THM-3490 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED].  For a declared period and
   character gauge, `Res_(s=m+1) sum_n zeta^(-jn)a_n/n^s` is exactly the
   degree-`m` coefficient of Fourier colour `j`.  The complete table recovers
   every periodic-polynomial lane coefficient; THM-3485's minimal recurrence
@@ -14,8 +14,8 @@
   residue bank recovers the address word while density is only its trivial
   residue; an address gauge remains necessary.  Script/output/semantic LF
   SHA-256:
-  `0a8ee350244e2c1c972ef97e8becd330e8d49bfa67d3d4d9a92eb7c2200cc96e` /
-  `6218bbeca38981456c17025dc923828e641415537af5890baaeb5d3527cbeb32` /
+  `52a58263a2ea00af72a1038d1d64c955e411b0f308ba7fa94621439f00d79d43` /
+  `72f7b97f3acabeef953c1184a35904b1fa28d0494cb9f4d0e2100c85aa3ebc3e` /
   `39daa9a75e84e0fcb28141fa9079c3f616c9aa5d0689934cc239b4d911fc713e`.
 - `fibonacci_two_24_state_bundle_obstruction_thm3487.py` -> matching `.out`
   [THM-3487 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
