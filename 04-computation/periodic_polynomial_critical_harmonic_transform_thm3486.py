@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact structural companion for the provisional THM-3486.
+"""Exact structural companion for proved and independently audited THM-3486.
 
 The analytic theorem is proved in the theorem file.  This companion audits
 its finite algebraic inputs: the trivial top Fourier coefficient, the
@@ -288,7 +288,7 @@ def main() -> None:
                 (semantic_hash, EXPECTED_SEMANTIC_SHA256))
 
     print("THM-3486 PERIODIC-POLYNOMIAL CRITICAL HARMONIC TRANSFORM COMPANION")
-    print("STATUS: RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING")
+    print("STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED")
     print(f"SCRIPT: {SCRIPT}")
     print(f"OUTPUT: {OUTPUT}")
     print(f"PINS: {tuple(pins)}")
@@ -300,7 +300,7 @@ def main() -> None:
     print("SUBSET_SCOPE: periodic Boolean subsets have a harmonic coefficient; arbitrary subsets of N need not have density and their reciprocal subseries may converge or diverge")
     print(f"SEMANTIC_SHA256: {semantic_hash}")
     print(f"SECURITY_AST_NODES_AND_FORBIDDEN: {security}")
-    print("VERDICT: finite algebraic controls agree with the provisional theorem's top-Fourier-layer trichotomy and sharpen the two THM-3455 O(1) harmonic statements to candidate convergent constants")
+    print("VERDICT: finite algebraic controls agree with the proved theorem's top-Fourier-layer trichotomy and sharpen the two THM-3455 O(1) harmonic statements to convergent constants")
 
 
 if __name__ == "__main__":

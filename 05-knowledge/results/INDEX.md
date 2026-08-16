@@ -18,9 +18,8 @@
   `6c43abb71d127d4efe80c250f0651eeff1683c9a8df2781ddc81883f1b488a98` /
   `9c338ec5eebe1f93326ae12c00f37da58382fa2084339adbd1de422e7d05d70e`.
 - `periodic_polynomial_critical_harmonic_transform_thm3486.py` -> matching
-  `.out` [THM-3486 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  independent audit pending].  For a nonzero degree-`d` period-`p`
-  polynomial word, the candidate proves
+  `.out` [THM-3486 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a
+  nonzero degree-`d` period-`p` polynomial word, the theorem proves
   `sum_(n<=N)a_n/n^(d+1)=c H_N+C+O(1/N)`, where `c` is exactly the top
   coefficient of the trivial Fourier colour.  After subtracting `c n^d`,
   convergence is absolute iff every lane has the same leading coefficient;
@@ -32,8 +31,8 @@
   `76/187` and `43/90`.  A declared K4 star-address period has coefficient
   `1/2`, but supplies no tournament orientation.  Script/output/semantic LF
   SHA-256:
-  `04fbf42ad5953f43f1b86da75679b5fc430c2d720b3f24d1ac757731bc009d52` /
-  `a35e352e0662e9875dd854f86aca13830134f2ede0bd3a4b6a907325d08b158e` /
+  `0caa1fff76e4d18027f9e08efef3ac21cba0c4b6dd9964517aa93c6675f29202` /
+  `f6b3b3afe749974fc45b1b70da6eeee28368e1193bd986c574a359cf931fed1d` /
   `d30150749708eee29dc4f1773fc1e757e6c8f0df0b7b707b509023e8e06db748`.
 - `periodic_polynomial_fourier_jordan_recurrence_thm3485.py` -> matching
   `.out` [THM-3485 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a

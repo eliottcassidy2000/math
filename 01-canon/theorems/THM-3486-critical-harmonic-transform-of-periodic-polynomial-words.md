@@ -2,8 +2,8 @@
 id: THM-3486
 title: "Critical harmonic transform of periodic-polynomial words"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT PENDING.  For a nonzero complex period-p polynomial word of degree d,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For a nonzero complex
+  period-p polynomial word of degree d,
   the critical sum through N is c H_N+C+O(1/N), where c is the mean leading
   lane coefficient, equivalently the top coefficient of the trivial Fourier
   colour.  After subtracting c n^d, the critical series is absolute exactly
@@ -12,11 +12,12 @@ status: >
   packet.  Periodic Boolean subsets are the degree-zero specialization.
 source: codex-2026-08-16-critical-harmonic-transform
 audit: >
-  self-contained Abel-summation/Fourier proof candidate; exact companion pins
-  THM-3485 and THM-3455, checks four polynomial packets, the THM-3484 ternary
-  word, exact Abel identities, both Berggren cap-seven periods, a K4/XOR
-  Boolean-address control, normal/optimized replay, and security; independent
-  proof audit pending
+  independently audited by death-star-2026-08-16: proof, trichotomy, and
+  specializations sound after explicitly naming the Riemann zeta in (19);
+  exact companion pins THM-3485 and THM-3455, checks four polynomial packets,
+  the THM-3484 ternary word, exact Abel identities, both Berggren cap-seven
+  periods, a K4/XOR Boolean-address control, normal/optimized replay, and
+  security
 depends_on:
   - THM-3485-periodic-polynomial-fourier-jordan-recurrence-classification
   - THM-3455-berggren-q-spine-cap-seven-atom-sieve-and-fibonacci-rank-spectrum
@@ -25,18 +26,17 @@ related:
   - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
 script: 04-computation/periodic_polynomial_critical_harmonic_transform_thm3486.py
 output: 05-knowledge/results/periodic_polynomial_critical_harmonic_transform_thm3486.out
-script_sha256: 04fbf42ad5953f43f1b86da75679b5fc430c2d720b3f24d1ac757731bc009d52
-output_sha256: a35e352e0662e9875dd854f86aca13830134f2ede0bd3a4b6a907325d08b158e
+script_sha256: 0caa1fff76e4d18027f9e08efef3ac21cba0c4b6dd9964517aa93c6675f29202
+output_sha256: f6b3b3afe749974fc45b1b70da6eeee28368e1193bd986c574a359cf931fed1d
 semantic_sha256: d30150749708eee29dc4f1773fc1e757e6c8f0df0b7b707b509023e8e06db748
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3486 -- only the trivial top colour carries logarithmic mass
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-This candidate connects two proved lanes without identifying their objects.
+This theorem connects two proved lanes without identifying their objects.
 THM-3485 classifies the finite shift module of a periodic-polynomial word by
 its Fourier/Jordan colours.  THM-3455 computes natural and harmonic
 coefficients for two periodic Boolean subsets of recurrence indices.  The
@@ -83,7 +83,7 @@ c=[t^d]Q_0.                                           (5)
 Thus `c` is literally the top rung of the trivial shift eigenvalue, not an
 average introduced after the recurrence calculation.
 
-## 2. Candidate theorem and sharp trichotomy
+## 2. Theorem and sharp trichotomy
 
 Write `H_N=sum_(n=1)^N 1/n`.  There is a finite constant `C(a)` such that
 
@@ -120,7 +120,7 @@ The last assertion excludes the zero word by hypothesis.  If the word is
 zero, take `d=-infinity`, minimal recurrence one, and critical transform zero;
 there is no analytic boundary to classify.
 
-## 3. Abel-summation proof candidate
+## 3. Abel-summation proof
 
 Set
 
@@ -168,11 +168,11 @@ absolute.  Conversely, if some `beta_r!=0`, then on that residue class
 
 The reciprocal sum on one nonempty residue class diverges, so `(7)` is not
 absolute.  This proves `(8)`.  If `c=0`, at least one `ell_r` is nonzero by
-the definition of `d`, so `(9)` follows.  QED candidate.
+the definition of `d`, so `(9)` follows.  QED.
 
 ## 4. Exact Fourier/polylogarithm constant
 
-Write
+Write `zeta_R(s)` for the Riemann zeta function, and write
 
 ```text
 Q_j(t)=sum_(k=0)^d q_(j,k)t^k,                         (16)
@@ -355,7 +355,6 @@ leading layer, THM-3455's `1683/360` periods and `76/187,43/90` coefficients,
 and the declared `4/4` K4 Boolean-address split.  These finite checks support
 but do not replace the analytic proof.
 
-This candidate proves no statement about arbitrary subsets, nonperiodic
+This theorem proves no statement about arbitrary subsets, nonperiodic
 automatic words, tournament classification, Berggren ancestry transport,
-LRC currents, bispectra, Jacobian maps, or LRC(14).  It remains outside the
-proved dependency graph until an independent proof audit promotes it.
+LRC currents, bispectra, Jacobian maps, or LRC(14).

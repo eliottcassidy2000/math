@@ -1,5 +1,5 @@
 THM-3486 PERIODIC-POLYNOMIAL CRITICAL HARMONIC TRANSFORM COMPANION
-STATUS: RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING
+STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
 SCRIPT: 04-computation/periodic_polynomial_critical_harmonic_transform_thm3486.py
 OUTPUT: 05-knowledge/results/periodic_polynomial_critical_harmonic_transform_thm3486.out
 PINS: (('THM-3485', '814ad59925079c9c69c3b90ea1ee7947dbf01ec1c8855bb760fdd6dc5098fafc'), ('THM-3455', 'e357aaf8036f485c4abbfa5969a0d1f9761372dcd7337b658daaadf4cd049c09'))
@@ -11,4 +11,4 @@ K4_SCOPE: the 4/4 star/triangle row is one declared Boolean-address period, not 
 SUBSET_SCOPE: periodic Boolean subsets have a harmonic coefficient; arbitrary subsets of N need not have density and their reciprocal subseries may converge or diverge
 SEMANTIC_SHA256: d30150749708eee29dc4f1773fc1e757e6c8f0df0b7b707b509023e8e06db748
 SECURITY_AST_NODES_AND_FORBIDDEN: (2242, ())
-VERDICT: finite algebraic controls agree with the provisional theorem's top-Fourier-layer trichotomy and sharpen the two THM-3455 O(1) harmonic statements to candidate convergent constants
+VERDICT: finite algebraic controls agree with the proved theorem's top-Fourier-layer trichotomy and sharpen the two THM-3455 O(1) harmonic statements to convergent constants
