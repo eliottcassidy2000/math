@@ -20,6 +20,7 @@ depends_on:
   - THM-3485-periodic-polynomial-fourier-jordan-recurrence-classification
   - THM-3486-critical-harmonic-transform-of-periodic-polynomial-words
 related:
+  - THM-3364-cyclotomic-boolean-clocks-berggren-t4-xor-and-crt-phase
   - THM-3487-two-twenty-four-state-fibonacci-bundles-cycle-type-obstruction
 script: 04-computation/periodic_polynomial_fourier_dirichlet_residue_tomography_thm3490.py
 output: 05-knowledge/results/periodic_polynomial_fourier_dirichlet_residue_tomography_thm3490.out
@@ -241,7 +242,9 @@ the rational recurrence polynomial is not.
 
 ## 7. Subsets of the harmonic series and the 24-state bundles
 
-For a periodic Boolean word, `d=0`, and (8) says that the residues at `s=1`
+This degree-zero specialization recovers THM-3364's proved finite cyclotomic
+transform of an eventually periodic Boolean support.  For a periodic Boolean
+word, `d=0`, and (8) says that the residues at `s=1`
 are exactly the full discrete Fourier transform of its address indicator.
 The trivial residue is only its density.  All character residues together
 recover the subset within one period.
