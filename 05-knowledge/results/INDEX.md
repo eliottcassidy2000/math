@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `lrc_r5_ufull_owner_node_boolean_square_root_difference_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  THREE-COORDINATE SOURCE-CUT INTERACTION].  Without importing the candidate,
+  it reopens every selected ordered root pair on the audited square and bins
+  `s=u-q` before weighting/integration.  Segmentwise pair marginals, response
+  phase `zeta13^beta`, three literal guards, square/source-erasure marginals,
+  and source-aware same-root zero all pass.  Weighted/support-only/endpoint-only
+  ranks are `(4,12,13)/(4,12,13)/(4,7,13)` and three-way ANOVA ranks are
+  `(3,12,12)/(3,12,12)/(3,6,12)`; all centered banks have `432/432` triple
+  modes, showing why rank remains the necessary hostile.  All fifteen
+  candidate digests and fixed `(1,0,6)` records agree under normal and `-O`
+  replay.  This is source cut-arc colour, not THM-2334 relation-lattice exact
+  address, inverse ancestry, chronology, physical current, row exclusion, or
+  LRC(14).  Script/output/semantic LF SHA-256:
+  `bdb211b727550ba51c1ca83490fbda50446b6e3c0596e229cd864e741af93509` /
+  `cfb53edd90174d2362bae7235f2f85af3109a2754003afc48b94a82466b449cf` /
+  `25bbbd871fe072915b07662c76661bf72be8d46258a6ce825ab1635ef7fe5c56`.
+
 - `lrc_r5_ufull_owner_node_boolean_square_refiner_independent_audit_20260816.py`
   -> matching `.out` [SECOND-PATH HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
   BOOLEAN-SQUARE REFINER].  Without importing the candidate, it composes the
@@ -58,7 +76,7 @@
   `b0996af3f1760b2118187490c93e0e01b322cb57fd6b25d3bf3688778b7e664c`.
 - `lrc_r5_ufull_owner_node_boolean_square_root_difference_probe_20260816.py`
   -> matching `.out` [FINITE-EXACT THREE-COORDINATE COMMON-OWNER CANDIDATE;
-  INDEPENDENT AUDIT PENDING].  Retaining the lawful THM-2471 source-root
+  INDEPENDENTLY AUDITED AT THE SCOPED SURVIVOR].  Retaining the lawful THM-2471 source-root
   difference `s=u-q` before integrating the actual endpoint factors refines
   the pinned Boolean square to `V4 x F13 x F13`.  Summing `s` recovers that
   square exactly; weighted and support-only same-root slices vanish before
@@ -78,7 +96,6 @@
 
 - `lrc_r5_ufull_owner_node_boolean_square_refiner_probe_20260816.py` ->
   matching `.out` [FINITE-EXACT GENUINE BOOLEAN-SQUARE x F13 COMMON-OWNER
-  CANDIDATE; INDEPENDENTLY AUDITED AT THE SCOPED SURVIVOR].  The three-root source spine
   CANDIDATE; INDEPENDENTLY HOSTILE-AUDITED].  The three-root source spine
   `{0,6,12}` has six abstract nontrivial directed cuts, each a three-vertex
   tournament with one missing edge, but realizes exactly the five-state Gray
