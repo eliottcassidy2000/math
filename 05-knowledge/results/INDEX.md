@@ -323,6 +323,28 @@
   SHA-256:
   `fbb2d20388099377eb2498b1fb102f4e2a32785afa02a0ca00792f27c3d6bd3e` /
   `4f387efdef50fe7611d51f394ab4dd416274955fe30dbe22368a8a66ba452b10`.
+- `jc_level3_global_norm_independent_audit_20260816.py` -> matching `.out`
+  [INDEPENDENTLY AUDITED SIDECAR TO PROVED THM-3495].  On the new slice
+  `(b,c)=(1,1)`, a regular-representation calculation gives the reduced
+  denominator exactly `2^35L^7` and a primitive irreducible degree-86
+  numerator coprime to `LH`.  Two transverse values fix the positive residue
+  scalar.  A disjoint Rabin certificate proves the 527-term normalization
+  residual irreducible via `P(-1,lambda) mod 449`; the script also checks
+  `LC(P_3)=N^2(L)=J/(2^47L^6H)` and the corrected class `[-2J]`.
+  Ordinary/optimized/stored outputs are byte-identical.  Script/output LF
+  SHA-256:
+  `cb429497fbfbdf4cb538967bd472ab10051bd6fac33be10d14081b09e1543215` /
+  `62fef84710ef14c3a021b196bb4ba3589ad672a3c275a2cfb3c24a25836aea54`.
+- `jc_level3_degree27_split_finite_field_audit_20260816.py` -> matching `.out`
+  [INDEPENDENTLY AUDITED GENERICITY SIDECAR TO PROVED THM-3495].  Over
+  `F_101`, target `(93,28,83)` has a direct split `3 -> 9` inverse fibre;
+  its nine next cubic cores form three squarefree pairwise-coprime degree-nine
+  blocks and a squarefree degree-27 product.  This independently discharges
+  coordinate separation and block coprimality without using the rational
+  triangular-algebra interpolation.  Ordinary/optimized/stored outputs are
+  byte-identical.  Script/output LF SHA-256:
+  `9f8b6b4aad75b17eed8a6fd618cb661f3e61b85361b44ba676462148a2c5afc5` /
+  `af2be3f27d524937836b93aacd5fa0700d5aa930c798dcf142b10206619fc520`.
 - `lrc_private_support_7x13_incidence_h1_probe_20260815.py` -> matching
   `.out` [FINITE-EXACT STRUCTURAL SIDECAR TO PROVED THM-3473].  The
   private-support two-section has eight vertices and thirteen

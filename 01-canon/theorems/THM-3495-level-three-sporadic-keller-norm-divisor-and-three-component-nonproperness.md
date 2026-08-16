@@ -14,7 +14,12 @@ audit: >
   The generic-DVR proof, norm support and image-multiplicity argument,
   resultant normalization, nonproperness composition law, and degree-27
   squarefree specialization were independently reconstructed and audited.
-  All three pinned companions replay byte-identically under ordinary and
+  A disjoint audit then computed the previously unused (b,c)=(1,1) norm
+  slice, independently certified the normalization residual by a Rabin test,
+  matched the level-three leading coefficient to N^2(L), and found a direct
+  split 3-to-9 finite-field fibre whose nine cubic product is squarefree of
+  degree 27.
+  All five pinned companions replay byte-identically under ordinary and
   optimized Python; the global reconstruction independently reproduced the
   coefficient gcd, resultant content and degrees, J term count and degrees,
   old-factor gcds, and squarefreeness.
@@ -29,18 +34,26 @@ scripts:
   - 04-computation/keller_level_three_norm_divisor_structure_20260816.py
   - 04-computation/keller_level_three_global_norm_probe_20260816.py
   - 04-computation/keller_level_three_squarefree_tower_probe_20260816.py
+  - 04-computation/jc_level3_global_norm_independent_audit_20260816.py
+  - 04-computation/jc_level3_degree27_split_finite_field_audit_20260816.py
 outputs:
   - 05-knowledge/results/keller_level_three_norm_divisor_structure_20260816.out
   - 05-knowledge/results/keller_level_three_global_norm_probe_20260816.out
   - 05-knowledge/results/keller_level_three_squarefree_tower_probe_20260816.out
+  - 05-knowledge/results/jc_level3_global_norm_independent_audit_20260816.out
+  - 05-knowledge/results/jc_level3_degree27_split_finite_field_audit_20260816.out
 script_sha256:
   - f4255f6a6918458fb877523329061a66dfdef3a80b7d54cff74394b88c2f6628
   - 37bed904530acbddc17f3f612fcc0d4e8da85b8caddc1b3c86d49b80550e1559
   - fbb2d20388099377eb2498b1fb102f4e2a32785afa02a0ca00792f27c3d6bd3e
+  - cb429497fbfbdf4cb538967bd472ab10051bd6fac33be10d14081b09e1543215
+  - 9f8b6b4aad75b17eed8a6fd618cb661f3e61b85361b44ba676462148a2c5afc5
 output_sha256:
   - 473cffeb80859a3bf91ab3c77fc6144089d2c6025735a81a7d782a8e774dbcf8
   - 1736ac542fd20d6782bc494b1199099e6d08f44830efd5d9c041764925d3db97
   - 4f387efdef50fe7611d51f394ab4dd416274955fe30dbe22368a8a66ba452b10
+  - 62fef84710ef14c3a021b196bb4ba3589ad672a3c275a2cfb3c24a25836aea54
+  - af2be3f27d524937836b93aacd5fa0700d5aa930c798dcf142b10206619fc520
 coefficient_ledger_sha256: 9aca78e67d33351b2f2fb4dbe8ab5bdff06373fdbd8ef9ec73d29b15bffedefe
 degree_27_ledger_sha256: fa8ba9f1cb850116c347f6e31100d1902dea3ee1c11c2b6548f7280aa9f01d50
 hash_basis: raw LF bytes for files; ordered exact coefficient ledgers as stated
@@ -277,6 +290,16 @@ degree-27 eliminant and gives
 
 which is (5).  The old `L` has even exponent `-6`, and `H` is absent.
 
+An independent good-reduction route reaches the same genericity conclusion
+without the triangular algebra.  Over `F_101`, the target `(93,28,83)` has
+three explicit first preimages and three explicit second preimages above each
+of them.  All nine third cubic cores retain degree three; grouped by the
+first preimage they give three squarefree pairwise-coprime degree-nine
+blocks, and their direct product is squarefree of degree 27.  Since every
+inverse-chart denominator used by this fibre is nonzero modulo 101, this is
+a lawful good-reduction witness that the characteristic-zero generic
+discriminant is not identically zero.
+
 ## 6. Exact companions and hostile controls
 
 - `keller_level_three_norm_divisor_structure_20260816.py` cross-reduces the
@@ -288,8 +311,18 @@ which is (5).  The old `L` has even exponent `-6`, and `H` is absent.
 - `keller_level_three_squarefree_tower_probe_20260816.py` checks both inverse
   graphs, the degree-nine squarefree control, the full degree-27 squarefree
   polynomial, and an off-grid determinant.
+- `jc_level3_global_norm_independent_audit_20260816.py` computes the fresh
+  `(b,c)=(1,1)` norm by a closed regular-representation determinant.  Its
+  reduced denominator is exactly `2^35L^7`; the primitive degree-86 slice is
+  irreducible and coprime to `LH`.  It also proves the 527-term boundary
+  residual irreducible by the Rabin criterion for `P(-1,lambda) mod 449`,
+  checks both rational transverse residue values, and verifies
+  `LC(P_3)=N^2(L)=J/(2^47L^6H)` at `(1,1,1)`.
+- `jc_level3_degree27_split_finite_field_audit_20260816.py` supplies the
+  independent `F_101` split-fibre witness above and checks the three block
+  gcds plus the full degree-27 derivative gcd directly.
 
-All three companions replay identically under ordinary and optimized Python.
+All five companions replay identically under ordinary and optimized Python.
 The global reconstruction was independently reimplemented and reproduced the
 coefficient gcd, resultant content and degrees, `J` degrees and term count,
 both old-factor gcds, and squarefreeness.
