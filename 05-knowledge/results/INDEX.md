@@ -1,5 +1,24 @@
 # Script Results Index
 
+- `lrc_r5_two_current_digits_pointed_root_difference_carrier_transition_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT POSITIVE FIVE-COORDINATE CANDIDATE;
+  INDEPENDENT AUDIT PENDING].  A clean-room sweep retains the pointed six,
+  `r0,r1`, root difference, and relation.  Gamma/inverse marginals recover the
+  audited two-digit, one-digit/current-root, and pointed/root tensors.  Actual
+  `r1` amplitude ranks are `13/12`,
+  but base, one-digit, two-digit, and both union carrier ranks are all six,
+  statewise `1,2,1,2`.  No stationary `K_r1` works across all `r0`.  Instead,
+  all 169 fixed-`(r0,r1)` systems have unique diagonal `6x6` solutions,
+  `sum_r1 K_(r0,r1)=I_6` for each `r0`; there are 121 distinct actual maps
+  with rank histogram `0:35,2:2,4:2,6:130`.  Same-parent support/flat hostiles
+  have amplitude ranks `4/3` and `1/0`.
+  This is amplitude growth inside a fixed static carrier, not chronology,
+  complete address, arrival ancestry, physical current, row exclusion, or
+  LRC(14).  Script/output/semantic LF SHA-256:
+  `bc8727733804da38b9e7c691e2e9ff02de9d70d398916af3661816b9ae36c279` /
+  `c4d7e859cce2b2e37dfaf506fd722c2f9f97c12ee21352b37d580802c645a555` /
+  `38725dc1d7129b326634c99bd70e1eb414590dc24fb83bd9522e2095e41f204c`.
+
 - `lrc_r5_ufull_owner_node_boolean_square_nested_ancestry_digits_probe_20260816.py`
   -> matching `.out` [FINITE-EXACT POSITIVE NESTED SOURCE/CURRENT-ANCESTRY
   CANDIDATE; INDEPENDENT AUDIT PENDING].  On one THM-2471 Boolean stalk it

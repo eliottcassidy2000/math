@@ -36,14 +36,14 @@ THM-3356/3366 leave k2/k3 `4056/1897`; k3 is a 20-edge `Phi`-DAG and k2's
 THM-3414--3416 give ZMC rank-4/5/6 bases `8,9` / `10,12` / `11,15,23,25`.
 THM-3425 gives primitive cap-six support.
 [THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md) proves 15-atom cap-seven support only at zero current.
-THM-3479 proves U_full `169/169`,`13^3`,`72/72` (U_clock none); THM-3514 gives
-owner `52/117`, rank4/full Walsh-drift; THM-3515 gives five rank5 rows and
-`72/72` charts; THM-3518 pins phases and `56,592` zero cycle pairings.
-THM-3524 blocks folded `C7/K4` (`3<4`); 48 ancestry buckets are audited.
-MISTAKE-417 rank1. Audited square/root/point/source/current:
-`4/36`,`(3,12,12)/432`,`(5,12,12)`,6/432; two-current `3/4`,
-pure5184 scalar-only. Open: current-root `(3,4,12,12)`,
-source-current `17->4` pointed-six; audits/5-way/address/clock/LRC open.
+THM-3479: U_full `169/169`,`13^3`,`72/72` (no U_clock). THM-3514/3515:
+owner `52/117`, rank4; five rank5 rows, all chart modes. THM-3518 pins
+`56,592` zero pairings; THM-3524 blocks `C7/K4` (`3<4`); 48 buckets audited.
+MISTAKE-417 rank1. Audited square/root/point/source/current signatures:
+`4/36;(3,12,12)/432;(5,12,12);6/432`; two-current `3/4`,pure5184.
+Open: current-root `(3,4,12,12)`, source-current `17->4`; five-way `r1`
+amplitude13/12 in carrier6, 169 diagonal `K_(r0,r1)`, no `K_r1`;
+audits/address/clock/LRC.
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;
 HYP-8871 leaves `165` rows.  THM-2363/THM-2368 are sidecars; THM-2417--2894
