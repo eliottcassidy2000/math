@@ -22,6 +22,7 @@ audit: >
 depends_on:
   - THM-3458-rule30-right-edge-2-adic-odometer-and-moving-observer-boundary
   - THM-3463-rule30-mealy-section-suffix-parity-current-and-complexity-boundary
+  - THM-3493-rule30-dyadic-wrap-atlas
   - THM-3500-rule30-dyadic-section-cut-defect-and-cross-depth-valuation-carrier
   - THM-3507-rule30-normalized-dyadic-displacement-sibling-trace-and-assouad-spectrum
 related:
@@ -193,6 +194,50 @@ nestedness/strict-increase mechanism and reports the continuation through
 `v_40=93`; the cross-depth signalizer recurrence (7)--(15) is the additional
 object proved here.  The cited continuation is not used as a verifier gate,
 and no literature novelty claim is made.
+
+There is nevertheless an exact **CITED-FINITE** corollary.  The published
+list has `v_m<2^m` for every `3<=m<=40`.  THM-3493's dyadic wrap atlas,
+together with `v_0=1,v_1=3,v_2=4`, therefore gives
+
+```text
+W intersect [1,2^41-1]={1,2,3,4},
+[5,2^41-1] subset H.                                (10c)
+```
+
+The endpoint `2^41-1=2,199,023,255,551` is inherited from Rowland's cited
+finite computation; it is not independently replayed by this companion and
+has no asymptotic consequence.
+
+### 2.2 Why Rowland's fixed-diagonal doubling does not bound `d_m`
+
+Rowland's period-doubling proposition in his Section 5 uses the opposite,
+fixed-diagonal chart.  In centered seed coordinates `A_t(j)`, write
+
+```text
+b_k(t)=A_t(t-k),              ell_m(t)=A_t(m-t).
+```
+
+Then `ell_m(t)=b_(2t-m)(t)`: a fixed `ell`-column cuts diagonally across the
+right-edge sheet.  The two exact recurrences are correspondingly different:
+
+```text
+b_k(t+1)=b_k(t) xor (b_(k-1)(t) or b_(k-2)(t)),
+
+ell_m(t+1)=ell_(m-2)(t) xor ell_(m-1)(t) xor ell_m(t)
+             xor ell_(m-1)(t)ell_m(t).               (10d)
+```
+
+When Rowland's survival gate `ell_(m-1)=0` holds, the second line reduces to
+`ell_m(t+1) xor ell_m(t)=ell_(m-2)(t)`.  Its doubling test and THM-3463's
+`epsilon` are both odd cycle-holonomy obstructions.  They are not the same current: a
+Rowland doubling makes `ell_m` nonwhite and blocks an adjacent doubling,
+whereas the physical right-edge lift has `epsilon_3=epsilon_4=1`.  Thus the
+shared cohomological template transfers, but the tempting stronger
+no-adjacent-gap constraint does not.  Outside the white gate, Rowland's
+one-period fiber can synchronize and erase its owner; the packed lift remains
+an invertible translation extension.  Finally, the center is the moving
+observer `c_t=ell_t(t)`, not any fixed `ell_m` column, so fixed-column eventual
+periods do not determine a center value.
 
 ## 3. A three-letter, one-control-bit finite presentation
 
