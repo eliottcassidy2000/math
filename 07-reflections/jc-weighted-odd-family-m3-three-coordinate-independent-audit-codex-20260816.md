@@ -103,8 +103,13 @@ remainders through `ell=30`, including the hostile `P=Q=0` where the whole
 remainder specializes to zero, accompany the symbolic proof.
 
 This closes the question for the cyclic subfamily, not for every lawful
-weighted seed.  The finite separator above remains the independently coded
-degree-five check of the general mechanism.
+weighted seed.  A later clean-room audit supplied a second all-degree proof:
+at `P=2^(1-n),Q=0`, the roots `0,1/2` have unequal `H` values by a uniform
+rational inequality.  That route imports neither Sympy nor the recurrence
+companion, and replays two finite same-target/distinct-`z` points through
+`n=256` (with the sharp `gamma=0` cubic boundary retained honestly).  The
+finite `F_31` separator above remains the independently coded degree-five
+check of the full resultant atlas.
 
 ## Exact artifacts
 

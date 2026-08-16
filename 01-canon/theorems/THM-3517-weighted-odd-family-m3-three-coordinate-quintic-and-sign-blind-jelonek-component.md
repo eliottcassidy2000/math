@@ -2,16 +2,18 @@
 id: THM-3517
 title: "Weighted odd family: all-coordinate primitivity, the m=3 quintic atlas, and sign-blind Jelonek components"
 status: >
-  PROVED + VERIFIED-EXACT; M3 ATLAS INDEPENDENTLY AUDITED IN FLINT.  Every
+  PROVED + VERIFIED-EXACT; M3 ATLAS AND ALL-GRADE Z GATE INDEPENDENTLY
+  AUDITED.  Every
   actual source coordinate x,y,z is primitive in every member of the explicit
   THM-3448 cyclic weighted family, hence all three share the inverse
   discriminant square class.  At m=3 they are explicit quintics with class
   [D5]=[L5] after target pullback, while the exact Jelonek set is
   V(C) union V(L5).  For every m>=3 in the odd subfamily, the sign class
   misses the genuine C-component because its local inertia cycle is odd and
-  therefore even as a permutation.  The all-grade z proof is symbolic and
-  directly hostile-checked through ell=30.  No identification with
-  THM-1605's unstored E_m is made.
+  therefore even as a permutation.  The all-grade z proof has disjoint
+  symbolic-remainder and rational two-root certificates, with exact finite
+  hostiles through ell=30 and forward replays through n=256.  No
+  identification with THM-1605's unstored E_m is made.
 author: codex-2026-08-16
 source: codex exact extension of the Gallagher/THM-3438 weighted lift
 audit: >
@@ -21,7 +23,9 @@ audit: >
   transcripts; independent python-flint reconstruction of the map, all three
   resultants, the 191-term z row, 268-term index core, pullback, and an F_31
   separator; symbolic all-n remainder proof and direct ell=1..30 hostiles for
-  z-primitivity; structural all-m boundary deduction from audited THM-3448
+  z-primitivity; independent fractions-only two-root proof and n=3..256
+  exact forward replay; structural all-m boundary deduction from audited
+  THM-3448
 depends_on:
   - THM-3438-weighted-lift-keller-degree-spectrum
   - THM-3448-weighted-keller-cyclic-jelonek-inertia-family
@@ -46,16 +50,21 @@ all_m_output: 05-knowledge/results/jc_weighted_cyclic_z_primitivity_all_m_probe_
 all_m_script_sha256: 0c74f0546444ef28265800e89bbcd0c1161eadfdd75599b6707428c22853424b
 all_m_output_sha256: 01e1db90014ecd1f8f5fda0ecc250e23429db94bb04033bc1ab91500b4a38e4a
 all_m_semantic_sha256: 6f06d5042a944f817b23e5bc43e3d70f74098ed4640e20eb95a638bec575cbf0
+all_m_independent_script: 04-computation/jc_weighted_cyclic_z_primitivity_two_root_independent_audit_20260816.py
+all_m_independent_output: 05-knowledge/results/jc_weighted_cyclic_z_primitivity_two_root_independent_audit_20260816.out
+all_m_independent_script_sha256: b95756882ba89e51a542858807c939fd80bdd7a0d69fe3e6a7187e3318ef9cd7
+all_m_independent_output_sha256: 53c5bb974b37d3f5263247f24e70b46973ce34a286c1f5de1e9cc579b428ae05
+all_m_independent_semantic_sha256: 2c8d9f191ae5a8dddd6ef15feeb20d6564491bd0be6ea34c8e662428f74b729b
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3517 -- the odd weighted family beyond the cubic
 
-**PROVED + VERIFIED-EXACT; M3 ATLAS INDEPENDENTLY AUDITED.**  Sympy and a
-clean-room python-flint implementation agree on the full all-coordinate
-`m=3` ledger, including the 191-term `z` eliminant and its 268-term index
-core.  A separate symbolic remainder argument proves `z`-primitivity in every
-cyclic grade and has direct controls through `ell=30`.
+**PROVED + VERIFIED-EXACT; M3 ATLAS AND ALL-GRADE Z GATE INDEPENDENTLY
+AUDITED.**  Sympy and a clean-room python-flint implementation agree on the
+full all-coordinate `m=3` ledger, including the 191-term `z` eliminant and
+its 268-term index core.  Disjoint symbolic-remainder and rational two-root
+arguments prove `z`-primitivity in every cyclic grade.
 
 ## 1. Provenance boundary and the explicit object
 
@@ -375,6 +384,34 @@ contradicting the irreducible degree-`n` polynomial `T`.  Thus `z notin K`.
 At the exceptional small index `ell=1`, direct reduction gives the nonzero
 leading coefficient `3P(6P+1)/2`, proving the same conclusion.
 
+There is also a coefficient-free independent certificate.  Specialize
+
+```text
+P=2^(-(n-1)),                 Q=0.
+```
+
+Then `0` and `1/2` are roots of `T_n`.  If `m=n-3` and
+`delta=1/(2n-4)`, direct substitution gives
+
+```text
+gamma(0)=P,                       gamma(1/2)=-mP,
+H(0)=P^2(P-2-delta),
+H(1/2)=-mP[mP(mP+2+delta)+(1+delta)/2].
+```
+
+For `n=3`, `H(0)<0=H(1/2)`.  For `n>=4`, `m>=1`, `P<=1/8`, and
+`delta<=1/4`, so
+
+```text
+|H(1/2)|>P/2>=(16/9)|H(0)|.
+```
+
+Thus `H mod T_n` cannot be constant in any grade.  The `n=3` half-root has
+`gamma=0` and is used only as a polynomial-identity witness.  For every
+`n>=4`, both roots lie in the reconstruction chart and give two finite source
+points above `(A,B,C)=(0,2^(1-n),1)` with distinct actual `z` coordinates.
+This route does not use the recurrence (25) or coefficient formula (27).
+
 THM-3438 gives global `S_n` monodromy, whose point stabilizer `S_(n-1)` is
 maximal.  Therefore the extension has no proper intermediate field.  Combining
 `z notin K` with THM-3494's `x/y` argument proves, for every `ell>=1`,
@@ -443,6 +480,13 @@ hostile sets `P=Q=0`, where every tested remainder vanishes even though the
 generic leading polynomial (27) is nonzero.  This prevents a degenerate
 single-target check from being mistaken for a generic proof.
 
+The all-grade independent companion imports neither Sympy nor the recurrence
+companion.  It proves nonconstancy by the displayed two-root specialization,
+then uses exact rational arithmetic to replay both roots, reconstruction, and
+the full weighted map for every `3<=n<=256`.  At `n=3` it enforces the
+`gamma=0` chart boundary; for `n>=4` both finite points return the same target
+and different `z` values.
+
 Run
 
 ```bash
@@ -452,9 +496,12 @@ python -B 04-computation/jc_weighted_odd_family_m3_three_coordinate_independent_
 python -B -O 04-computation/jc_weighted_odd_family_m3_three_coordinate_independent_audit_20260816.py
 python -B 04-computation/jc_weighted_cyclic_z_primitivity_all_m_probe_20260816.py
 python -B -O 04-computation/jc_weighted_cyclic_z_primitivity_all_m_probe_20260816.py
+python -B 04-computation/jc_weighted_cyclic_z_primitivity_two_root_independent_audit_20260816.py
+python -B -O 04-computation/jc_weighted_cyclic_z_primitivity_two_root_independent_audit_20260816.py
 ```
 
 Each normal/optimized transcript pair is byte-identical to its stored
 LF-normalized output.  The independent FLINT semantic digest is
-`bd208dad9732439dfa14a794ef54dbfe57d66360f5f5a39b26353ffb82b6bba3`;
-the symbolic remainder is the all-grade proof.
+`bd208dad9732439dfa14a794ef54dbfe57d66360f5f5a39b26353ffb82b6bba3`.
+The independent all-grade semantic digest is
+`2c8d9f191ae5a8dddd6ef15feeb20d6564491bd0be6ea34c8e662428f74b729b`.

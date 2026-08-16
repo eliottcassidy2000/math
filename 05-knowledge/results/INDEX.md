@@ -21,6 +21,17 @@
   `ff03f0ac71922f5881bf112ae2c8cbb7f5cd49198500c19d62b5eaf5b286002e` /
   `6d64acd12b3b546e8820a683f38ada905f0a52af96ab3661319eb111c45699e0` /
   `ed6845e743f8554327653521f243817264b08d1ca864c8513c0b2af7ce17ac81`.
+- `jc_weighted_cyclic_z_primitivity_two_root_independent_audit_20260816.py`
+  -> matching `.out` [THM-3517 INDEPENDENT ALL-GRADE AUDIT].  At the exact
+  specialization `P=2^(1-n),Q=0`, the inverse polynomial has roots `0,1/2`
+  whose `z` numerators differ for every `n>=3`; a uniform magnitude bound
+  proves this independently of the symbolic remainder recurrence.  Exact
+  forward replay through `n=256` gives two finite same-target/distinct-`z`
+  points for every `n>=4`, while `n=3` is retained as the sharp `gamma=0`
+  polynomial-identity boundary.  Script/output/semantic LF SHA-256:
+  `b95756882ba89e51a542858807c939fd80bdd7a0d69fe3e6a7187e3318ef9cd7` /
+  `53c5bb974b37d3f5263247f24e70b46973ce34a286c1f5de1e9cc579b428ae05` /
+  `2c8d9f191ae5a8dddd6ef15feeb20d6564491bd0be6ea34c8e662428f74b729b`.
 - `lrc_ufull_all_role_modewise_spectral_independent_audit_20260816.py` ->
   matching `.out` [THM-3518 PROVED FINITE-EXACT CERTIFICATE + SECOND
   INDEPENDENT AUDIT OF THM-3515].  Reconstructs all five class/address
