@@ -336,5 +336,9 @@ python -B -O 04-computation/lrc_r5_two_current_digits_pointed_root_difference_ca
 The pinned semantic digest is
 `38725dc1d7129b326634c99bd70e1eb414590dc24fb83bd9522e2095e41f204c`.
 Normal and optimized output are byte-identical.  Script/output LF SHA-256:
-`bc8727733804da38b9e7c691e2e9ff02de9d70d398916af3661816b9ae36c279` /
+`9d1671e0f823fdbaa9ab79915ba05dbb4dda4c6eabb97fe4484baf4c2e3205f2` /
 `c4d7e859cce2b2e37dfaf506fd722c2f9f97c12ee21352b37d580802c645a555`.
+
+The script hash above repairs the stale `bc872773...` value printed in the
+first version of this reflection; it is the SHA-256 of the tracked LF bytes at
+commit `b1baa781a`.  The output and semantic digests are unchanged.

@@ -41,9 +41,9 @@ owner `52/117`, rank4; five rank5 rows, all chart modes. THM-3518 pins
 `56,592` zero pairings; THM-3524 blocks `C7/K4` (`3<4`); 48 buckets audited.
 MISTAKE-417 rank1. Audited square/root/point/source/current signatures:
 `4/36;(3,12,12)/432;(5,12,12);6/432`; two-current `3/4`,pure5184.
-Open: current-root `(3,4,12,12)`, source-current `17->4`; five-way `r1`
-amplitude13/12 in carrier6, 169 diagonal `K_(r0,r1)`, no `K_r1`;
-audits/address/clock/LRC.
+Open: current-root `(3,4,12,12)`, source-current `17->4`; `r1` is 13/12 in
+carrier6, 169 diagonal `K`, no `K_r1`. P4/P7: rank `68/78`, reversal
+`143/169`, `H1=0`; audit/closure/clock/LRC.
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;
 HYP-8871 leaves `165` rows.  THM-2363/THM-2368 are sidecars; THM-2417--2894
