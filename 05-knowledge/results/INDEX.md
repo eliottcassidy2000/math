@@ -1,20 +1,21 @@
 # Script Results Index
 
 - `lrc_odd_zero_half_conjugacy_global_rank_thm3472.py` -> matching `.out`
-  [THM-3472 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  independent audit pending].  The odd sheet permutation
-  `ell -> 2ell+1` transports every primitive fixed-zero mask family to a
-  half-twist family, and divisor dilation proves
-  `rho_ZMC(q)=rho_H(q)` for every odd `q>=3`, including infinity.  The full
-  odd cap-seven atlas has atoms `9`; `11,15,23,25`; `13,29,51` in ranks
-  `4,6,7`, with no rank five.  Its all-integer annotated word has minimal
-  period `729,664,650`; ambient natural/harmonic coefficients for ranks
-  `4,6,7,>7` are `1/18`, `4/45`, `283376/6633315`, and
-  `691712/2211105`.  Script/output/semantic LF SHA-256:
-  `039bf8871f04be15ead6ac8725033c81ff9782371adeffe9a01f3926ba126ab0` /
-  `b52a1d1d6767db9110991f40c0d4beadd3d49d870c449ceb5a48cae75d5f4269` /
-  `d8bc9ad4a49f954ec1c76db01a7506a5965f0dc5f58881bb7315de402d151221`.
-  The `Q=8` hostile blocks the conjugacy but proves no even-rank inequality;
+  [THM-3472 RESERVED / REPAIRED PROVISIONAL PROOF CANDIDATE +
+  VERIFIED-EXACT; independent re-audit pending].  MISTAKE-407 repairs the
+  false augmented-primitivity claim: `ell -> 2ell+1` is a conjugacy only for
+  odd `Q`, but one-way cover transport survives every even `Q` after the
+  self-opposite owner is deleted.  An explicit active-gcd divisor formula and
+  dilation now give the stronger candidate
+  `rho_ZMC(q)=rho_H(q)` for every `q>=2`, including infinity.  All fifteen
+  cap-seven atoms yield minimal period `14,362,718,970,600`; exact
+  natural/harmonic coefficients for ranks `4,5,6,7,>7` are `2/9`, `4/45`,
+  `25/207`, `165741596/1554406815`, and
+  `717341696/1554406815`.  Script/output/semantic LF SHA-256:
+  `0826d893e6c773418c6c6a9e7a40df4de7c619e373973ef740a634bb7d56f5eb` /
+  `8bf5584f41f0db93465ffe6f6d294d13e3f25f5e972be823526ddb8bd551269c` /
+  `116818fa2bbc5a0cada41b425f08c4b7afb9a3051e17d804463f002b1027d81a`.
+  The `Q=15` augmented-gcd and `Q=8` nonbijectivity hostiles are retained;
   no endpoint current or LRC(14) consequence follows.
 - `lrc_three_p_half_twist_eight_owner_template_thm3469.py` -> matching `.out`
   [THM-3469 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For every

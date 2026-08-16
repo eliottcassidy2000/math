@@ -9,6 +9,38 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-407 (2026-08-15, THM-3472 layer transport) -- owner doubling was falsely called augmented-primitive and even nonbijectivity was mistaken for a cover boundary
+
+- **What failed:** the provisional THM-3472 proof observed
+  `gcd(Q,2S)=gcd(Q,S)` for odd `Q` and concluded that doubling a primitive
+  fixed-zero owner family produced a primitive half-twist family.  THM-3415's
+  half-layer gate is instead the augmented condition
+  `gcd(2Q,r_1,...,r_k)=1`; an all-even doubled family fails that gate.  The
+  proof also treated failure of `ell -> 2ell+1` to be bijective at even `Q`
+  as a boundary for cover transport rather than only for conjugacy.
+- **Minimal witness / first failed implication:** at `Q=15`, the primitive
+  fixed-zero cover `S=(1,2,3,4,5,7)` has `gcd(15,S)=1`, but its valid doubled
+  literal half cover `(2,4,6,8,10,14)` has
+  `gcd(30,2S)=2`.  Thus “preserves primitivity” was the first false
+  implication.  At `Q=8`, owner `s=4` occupies only even fixed-zero sheets
+  and doubles to the empty self-opposite half owner; this destroys a mask
+  conjugacy but it cannot help cover the odd image sheets.
+- **Repair / strongest survivor:** the exact one-way identity
+  `B_Q(2s)(ell)=Z_Q(s)(2ell+1 mod Q)` holds for every `Q`.  A fixed-zero
+  family covering all sheets therefore covers the entire image of the affine
+  map; when `Q` is even, the self-opposite `s=Q/2` is empty on that image and
+  may be deleted.  The result is an ordinary transverse literal half cover
+  with no more owners, which is all the rank comparison needs.  Deriving the
+  active-gcd divisor interface explicitly from THM-3405 (and matching
+  THM-3415's divisor minimum) then proves the stronger equality
+  `rho_ZMC(q)=rho_H(q)` for every `q>=2`.  Augmented primitivity and even-sheet
+  invertibility are not preserved.
+- **Reusable rule:** distinguish a cover transport from an isomorphism of
+  typed primitive presentations.  Before declaring a parity obstruction,
+  identify the actual image, check whether discarded masks meet it, and ask
+  whether the target theorem needs bijectivity, cardinality equality, or only
+  a cover of no larger size.
+
 ## MISTAKE-406 (2026-08-15, THM-3469 rank typing) -- literal half-twist rank was silently used as full zero-cochain rank
 
 - **What failed:** the provisional THM-3469 proof used THM-3455's cap-seven
@@ -31,8 +63,9 @@ Format per entry:
 - **Reusable rule:** never identify a layer-specific rank with a global rank
   merely because all displayed witnesses use that layer.  Give an explicit
   conjugacy or audit every omitted layer and every divisor.  The oddness of
-  `Q` is load-bearing here; multiplication by two is not a sheet permutation
-  at even modulus.
+  `Q` makes this transport a literal sheet conjugacy.  MISTAKE-407 later
+  strengthens the rank theorem: multiplication by two is not a sheet
+  permutation at even modulus, but one-way cover transport still survives.
 
 ## MISTAKE-405 (2026-08-15, THM-3464 q=123 ancestry) -- a primitive mixed-order witness was mistaken for noninheritance
 

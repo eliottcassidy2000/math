@@ -1,103 +1,149 @@
-# Odd-layer conjugacy, the divisor monoid, and the harmonic atlas
+# All-modulus layer transport, divisor ancestry, and the harmonic atlas
 
 **Research reflection / provenance, not a truth source.**  Exact claims are
-routed to the audit-pending THM-3472 and its proved dependencies THM-3405 and
-THM-3453.  LRC(14) remains open.
+routed to repaired audit-pending THM-3472, MISTAKE-407, and proved
+dependencies THM-3405, THM-3415, and THM-3453.  LRC(14) remains open.
 
-## The map that closes the typing gap
+## The audit changed the theorem, not merely its wording
 
-The inheritance board is unusually clean:
-
-- closest proved mechanism: THM-3405's primitive-divisor/two-layer reduction;
-- canonical near miss: THM-3469 used half-layer lower bounds before making the
-  omitted fixed-zero layer explicit;
-- hostile: at even `Q=8`, `ell -> 2ell+1` reaches only odd sheets;
-- least-used sidecar: the active primitive divisor `Q`, not merely ambient
-  modulus `q`.
-
-For odd `Q`, the exact transport is
+The first THM-3472 candidate said that an odd fixed-zero primitive cover
+became a primitive half cover after doubling its owners.  That was false in
+the repository's augmented sense:
 
 ```text
-primitive fixed-zero cover on Q
-  -- ell -> 2ell+1; s -> 2s --> primitive half cover on Q
-  -- divisor dilation ----------> literal half cover on odd q.
+Q=15, S=(1,2,3,4,5,7): gcd(15,S)=1,
+2S=(2,4,6,8,10,14):   gcd(30,2S)=2.
 ```
 
-Every arrow preserves strict incidence, cover cardinality, and active gcd.
-The final grading forgets which primitive divisor supplied the cover.  This
-explains THM-3464 without overstating it: `Q=41` and `Q=123` are disjoint
-primitive layers whose minima happen to agree at eight.
+The failed coordinate was `2Q`, not `Q`.  Yet the rank proof asks only for an
+ordinary literal half cover.  Once that type is kept honest, the even hostile
+at `Q=8` becomes informative rather than terminal: `ell -> 2ell+1` is not a
+permutation, but it still maps every target sheet into the odd source coset.
+The self-opposite fixed owner is empty on that coset and can be deleted.
 
-## A monoid statement, not a list statement
-
-Divisor dilation composes multiplicatively.  Primitive mask packets are the
-atoms; multiplication by an odd scale moves them through ambient moduli
-without changing their grade.  The fixed-zero layer does not add a new atom
-on odd moduli because the sheet conjugacy embeds it into the half layer.
-
-This gives a precise version of the user's degree-graded monoid viewpoint:
+The repaired transport is therefore
 
 ```text
-object       = primitive labelled mask packet,
-operation    = divisor dilation,
+fixed-zero cover on Q
+  -- sample on image(ell -> 2ell+1); double owners --> half cover on Q
+  -- divisor dilation --------------------------------> half cover on q.
+```
+
+For odd `Q`, the first arrow is a conjugacy.  For even `Q`, it is a one-way
+cover morphism.  This distinction is exactly why the stronger all-modulus
+rank equality survives while augmented primitivity does not.
+
+## The divisor interface is an equation, not an ancestry slogan
+
+With `U=dV`, `g=gcd(q,d)`, `q=gQ`, and `d=gd_0`, THM-3405's two centres give
+
+```text
+u(c_epsilon+ell/q)
+ =epsilon v/(2Q)+d_0 v ell/Q.
+```
+
+This formula names every retained coordinate:
+
+```text
+object       = labelled mask packet on the active quotient Q,
+operation    = quotient followed by divisor dilation,
 grade        = cover cardinality,
-unit data    = owner signs and odd sheet permutation,
-forgotten    = primitive ancestry after taking the minimum.
+unit data    = d_0 in (Z/QZ)^x and the Boolean layer epsilon,
+forgotten    = primitive ancestry after taking the minimum,
+not kept     = augmented prime-breaker gcd under owner doubling.
 ```
 
-The grade is not a complete invariant.  Equal grades may come from several
-primitive layers, and a nonminimal representation may still be irredundant.
-That last distinction is exactly what the THM-3469 private-sheet frontier now
-tests.
+Divisor dilation still composes multiplicatively, so the family is a
+degree-graded monoid rather than a list.  But the corrected objects are
+ordinary covers at the transport stage; attaching the word “primitive” would
+change the category and invalidate the map.
 
-## Why the carrier is stronger than a tournament
+## A complete all-natural-number harmonic atlas
 
-Here the source and target are labelled cover hypergraphs, and the map is an
-actual sheet permutation.  It preserves every intersection order, not just
-pairwise observables.  A tournament on owners would lose the map because
-there is no intrinsic orientation between two masks.  XOR would also be too
-small: multiplicities are irrelevant to union coverage but remain useful
-sidecars for private-sheet and current questions.
-
-The ternary word `uncovered/private/multiple` is a faithful coverage summary
-only after the owner-by-sheet incidence matrix remains attached.  THM-3472
-uses the full matrix isomorphism; it does not infer equality from a ternary or
-pairwise shadow.
-
-## Exact harmonic subsets
-
-The odd cap-seven theorem turns four natural-number subsets into periodic
-sets.  Their ambient harmonic coefficients are
+THM-3453 supplies fifteen literal atoms.  The repaired equality imports all
+of them into the global zero-cochain rank.  Their word has period
 
 ```text
-rank 4:   1/18,
-rank 6:   4/45,
-rank 7:   283376/6633315,
-rank >7:  691712/2211105.
+2^3*3^2*5^2*7*11*13*17*19*23*29*37
+ =14,362,718,970,600.
 ```
 
-Thus “every subset of the naturals is a subset of the harmonic series” becomes
-a theorem only when a distribution mechanism is supplied.  Here that
-mechanism is a `576`-state CRT product with minimal annotated period
-`729,664,650`.  Arbitrary subsets have no such coefficient for free.
+Its exact natural and harmonic coefficients are
 
-## New frontiers
+```text
+rank 4:   2/9,
+rank 5:   4/45,
+rank 6:   25/207,
+rank 7:   165741596/1554406815,
+rank >7:  717341696/1554406815.
+```
 
-1. **Even equality.**  The odd proof fails at `Q=8`, but that does not prove
-   `rho_ZMC(q)<rho_H(q)` for any even `q`.  Search for the first true rank
-   separation, or construct a different even-layer transport.
-2. **Irredundant versus minimum.**  Prove the exact private-sheet formulas for
-   THM-3469's eight-owner family.  If every owner is private at all `k`, the
-   family is irredundant even on rank-4/6/7 grades, cleanly separating local
-   deletion minimality from global rank.
-3. **Current-aware transport.**  The sheet permutation preserves Boolean
-   incidence and zero cochain, but it does not manufacture a labelled
-   endpoint current.  Add owner modes, boundary labels, and target activity
-   before comparing relation-residue coefficients.
-4. **Spectral closure.**  Equality of cover ranks is upstream of the LRC
-   `7 tensor 13` bispectrum.  A bridge must preserve the current contraction,
-   not merely the cover hypergraph.
+This is the precise sense in which these subsets of the natural numbers are
+subsets of the harmonic series: periodicity supplies logarithmic
+coefficients.  An arbitrary subset has no density or harmonic coefficient
+for free.  The old odd word remains a conditioned subatlas rather than a
+discarded calculation.
 
-The central lesson is that a small affine permutation can collapse an entire
-omitted layer, but only because its divisor, parity, sign, and incidence
-sidecars are all retained.
+## Boolean derivatives meet factorial face descent
+
+Incoming THM-3466 gives the factorial face identity
+
+```text
+B_I(h)=L_n(product_(i in I)(1-partial_i)h).
+```
+
+The private-sheet atlas being developed in THM-3473 uses the incidence
+derivative
+
+```text
+delta_i=I_i product_(j!=i)(1-I_j).
+```
+
+These are not the same operator, but they share a useful grammar:
+
+- a Boolean coordinate deletion is expanded by commuting local operators;
+- the surviving term lives on a boundary/private stratum;
+- the scalar quotient forgets which coordinate supplied that stratum;
+- a current theorem needs the labelled boundary response, not only its sum.
+
+This suggests a disciplined D5-map route.  The source should be a labelled
+Boolean deletion complex, the target a boundary-current cochain, and the map
+must commute with the coboundary.  Static cover incidence alone cannot create
+the Keller flux in THM-3466, but its private atoms may provide the missing
+basis on which such a map is specified.
+
+## Why the generalized tournament is only a quotient
+
+Pairwise coactivity is symmetric, so the intrinsic directed encoding has
+both arcs or no arcs.  It is a tournament with missing and both-way edges in
+the user's generalized sense, not an oriented tournament.  The quotient
+retains whether two owners ever meet.  It loses sheet multiplicities,
+private singleton supports, divisor ancestry, and the even-map kernel.
+
+The `Q=8` correction is a canonical warning: a nonbijective sheet map can
+still preserve the target cover predicate.  Pairwise graph isomorphism would
+have been unnecessarily strong; image coverage plus an empty-kernel sidecar
+is the right invariant.
+
+## Updated concept board
+
+1. **All-modulus re-audit.**  Independently derive the active-gcd formula,
+   self-opposite deletion, all fifteen atom strata, and the huge-period CRT
+   counts before promotion.
+2. **Irredundant versus minimum.**  Complete THM-3473's exact eleven-support
+   Boolean atlas.  Rank-four members can still have an irredundant eight-owner
+   presentation, proving that grade forgets deletion ancestry.
+3. **Current-aware transport.**  Attach mode endpoints and boundary labels to
+   the layer map.  Test whether Boolean private atoms lift to nonzero current
+   coordinates or die under the same common-centre collapse.
+4. **Factorial-face/D5 bridge.**  Seek a cochain map from owner-deletion faces
+   to THM-3466's Keller boundary-current block.  The cheapest hostile is a
+   cover with positive private atoms but zero transported current.
+5. **Spectral closure.**  Rank equality remains upstream of the LRC
+   `7 tensor 13` bispectrum.  A bridge must preserve the contraction, not
+   merely cover grade or pairwise coactivity.
+
+The central research move was to weaken the map while strengthening the
+theorem: from primitive conjugacy on odd moduli to ordinary cover transport
+on every modulus.  The lost coordinate became explicit, and the global
+conclusion expanded.

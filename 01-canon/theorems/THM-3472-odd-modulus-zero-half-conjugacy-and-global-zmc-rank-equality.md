@@ -1,244 +1,307 @@
 ---
 id: THM-3472
-title: "Odd-modulus zero/half conjugacy and global ZMC-rank equality"
+title: "All-modulus fixed-zero-to-half transport and global ZMC-rank equality"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT PENDING.  For every odd q>=3, the full zero-mode-cochain rank equals
-  the literal half-twist cover rank, including infinity.  Consequently the
-  full odd cap-seven atlas has exact ranks 4,6,7 and >7 with no rank five;
-  its annotated word has minimal period 729664650 and exact natural/harmonic
-  coefficients.  No even-modulus, endpoint-current, or LRC(14) conclusion
+  RESERVED / REPAIRED PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT /
+  INDEPENDENT RE-AUDIT PENDING.  For every q>=2, the full zero-mode-cochain
+  rank equals the literal half-twist cover rank, including infinity.  The
+  corrected proof uses one-way cover transport at even primitive divisors,
+  not augmented primitivity or an even sheet bijection.  Consequently all
+  cap-seven rank strata have an exact period 14362718970600 and exact
+  natural/harmonic coefficients.  No endpoint-current or LRC(14) conclusion
   follows.
-source: codex-2026-08-15-odd-layer-conjugacy
+source: codex-2026-08-15-all-modulus-layer-transport-repair
 audit: >
-  self-contained sheet-bijection, sign normalization, primitivity, divisor
-  descent, and dilation proof; exact 10787000-cell conjugacy, 2613750-cell
-  dilation, weighted-CRT density, minimal-period, dependency, semantic,
-  security, and normal/optimized replay gates; independent audit pending
+  first independent audit found MISTAKE-407: doubled owners are not
+  augmented-primitive and Q=8 blocks conjugacy but not cover transport;
+  repaired self-contained active-gcd divisor formula and all-modulus
+  one-way transport; exact 10766900-cell transport, 6478224-cell divisor,
+  3434000-cell dilation, 9216-state all-modulus CRT, 576-state odd-subatlas,
+  minimal-period, dependency, semantic, security, and normal/optimized
+  replay gates; independent re-audit pending
 depends_on:
   - THM-3405-common-centre-gcd-gauge-and-boolean-half-twist
+  - THM-3415-zero-mode-cochain-global-rank-five-support
   - THM-3453-global-literal-half-twist-cap-seven-support-classification
 related:
   - THM-3464-u-spine-q123-rank-eight-break-and-divisor-layer-certificate
   - THM-3469-three-times-p-half-twist-eight-owner-cover-boundary
 script: 04-computation/lrc_odd_zero_half_conjugacy_global_rank_thm3472.py
 output: 05-knowledge/results/lrc_odd_zero_half_conjugacy_global_rank_thm3472.out
-script_sha256: 039bf8871f04be15ead6ac8725033c81ff9782371adeffe9a01f3926ba126ab0
-output_sha256: b52a1d1d6767db9110991f40c0d4beadd3d49d870c449ceb5a48cae75d5f4269
-semantic_sha256: d8bc9ad4a49f954ec1c76db01a7506a5965f0dc5f58881bb7315de402d151221
+script_sha256: 0826d893e6c773418c6c6a9e7a40df4de7c619e373973ef740a634bb7d56f5eb
+output_sha256: 8bf5584f41f0db93465ffe6f6d294d13e3f25f5e972be823526ddb8bd551269c
+semantic_sha256: 116818fa2bbc5a0cada41b425f08c4b7afb9a3051e17d804463f002b1027d81a
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3472 -- odd-modulus zero/half conjugacy and global ZMC-rank equality
+# THM-3472 -- all-modulus fixed-zero-to-half transport and global rank equality
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT PENDING.**
+**RESERVED / REPAIRED PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT /
+INDEPENDENT RE-AUDIT PENDING.**
 
-The proof and deterministic companion pass their internal gates.  This file
-remains outside the proved dependency graph until an independent audit checks
-the universal layer conversion and immutable package.
+The first independent audit rejected the original primitivity claim and its
+even-modulus boundary.  MISTAKE-407 records the exact failure.  The repaired
+proof and deterministic companion pass their internal gates, but this file
+remains outside the proved dependency graph until the stronger all-modulus
+statement passes a fresh immutable-package audit.
 
-## 1. Two ranks and the inheritance problem
+## 1. The two ranks
 
-For `Q>=2`, define the fixed-zero and literal half-twist masks
+For `Q>=2`, define fixed-zero and literal half-twist masks
 
 ```text
-Z_(Q,s)={j in Z/QZ:14 dist_Q(sj,0)<Q},                (1)
+Z_(Q,s)={j in Z/QZ:14 dist_Q(sj,0)<Q},                 (1)
 
 B_(Q,r)={ell in Z/QZ:
-  14 dist_(2Q)(r(2ell+1),0)<2Q}.                      (2)
+  14 dist_(2Q)(r(2ell+1),0)<2Q}.                       (2)
 ```
 
 Owners are transverse, sign-normalized, and distinct.  Let `rho_H(q)` be
 THM-3453's minimum number of masks `(2)` covering every sheet.  Let
-`rho_ZMC(q)` be THM-3405's minimum number of selected modes at one common
+`rho_ZMC(q)` be the minimum number of selected THM-3398 modes at one common
 centre with complete cochain zero.  Both ranks take values in the positive
-integers together with infinity when no transverse cover exists.
+integers together with infinity.
 
-Every half-twist cover is a zero-cochain cover at the fixed common centre
-`1/(2q)`, so
-
-```text
-rho_ZMC(q)<=rho_H(q).                                  (3)
-```
-
-THM-3405 first reduces an arbitrary zero-cochain family to a primitive
-fixed-zero or half-twist cover on some `Q|q`.  Oddness supplies the missing
-conversion back to the literal half layer.
-
-## 2. Odd fixed-zero masks conjugate into the half layer
-
-Assume `Q` is odd.  The affine sheet map
+Every literal half cover is a zero-cochain cover at common centre `1/(2q)`,
+so for every `q>=2`,
 
 ```text
-phi_Q(ell)=2ell+1 mod Q                                (4)
+rho_ZMC(q)<=rho_H(q).                                   (3)
 ```
 
-is a permutation.  Canonicalize a fixed-zero owner to
-`1<=s<=(Q-1)/2`; replacing `s` by `Q-s` does not change `(1)`.  Then `2s<Q`
-is a transverse half owner and
+The reverse inequality requires two maps: first the active-gcd divisor
+reduction, then a fixed-zero-to-half cover transport.  Neither map needs to
+preserve augmented primitivity.
+
+## 2. Deriving the divisor interface explicitly
+
+Take any active zero-cochain cover at ambient modulus `q`.  In THM-3405's
+notation write
 
 ```text
-B_(Q,2s)(ell)=Z_(Q,s)(phi_Q(ell)).                    (5)
+U=dV,       gcd(V)=1,       g=gcd(q,d),
+q=gQ,       d=g d_0,        gcd(Q,d_0)=1.              (4)
 ```
 
-Indeed, for every integer `a`,
+After the common sheet relabelling of that theorem, its centre is
 
 ```text
-dist_(2Q)(2a,0)=2 dist_Q(a,0),                        (6)
+c_epsilon=epsilon g/(2qd),       epsilon in {0,1}.     (5)
 ```
 
-so the two strict inequalities are identical after `(4)`.  Distinct
-canonical `s` give distinct doubled owners.  Moreover, for every owner family
-`S`,
+For an owner `u=dv` and sheet `ell`, direct substitution gives
 
 ```text
-gcd(Q,{2s:s in S})=gcd(Q,S),                          (7)
+u(c_epsilon+ell/q)
+ = epsilon v/(2Q)+d_0 v ell/Q.                         (6)
 ```
 
-because `Q` is odd.  Thus the conversion preserves primitivity as well as
-cardinality and coverage.  This direction is all that is needed; `(5)` does
-not assert that every odd half owner arises from the same fixed-zero chart.
+The right side depends only on `ell mod Q`.  Multiplication by `d_0` is a
+sheet permutation modulo `Q`.  Thus:
 
-## 3. Equality of the global ranks
+- at `epsilon=0`, the ambient family is the `g`-fold pullback of a fixed-zero
+  cover on `Q`;
+- at `epsilon=1`, it is the `g`-fold pullback of a literal half cover on `Q`.
 
-Let `q>=3` be odd and suppose a zero-cochain cover uses `k` owners.  By
-THM-3405's active-gcd reduction, some primitive divisor `Q|q` carries a
-`k`-owner cover in one of the two Boolean layers.
-
-- If it is already the half layer, retain it.
-- If it is the fixed-zero layer, apply `(4)--(7)` to obtain a primitive
-  half-twist cover on `Q` with at most `k` owners.
-
-Write `q=lambda Q`.  THM-3405 dilation is visible directly in `(2)`:
+Transversality descends exactly because
 
 ```text
-B_(lambda Q,lambda r)(ell)
-  =B_(Q,r)(ell mod Q),                                 (8)
+q|u  iff  Q|d_0v  iff Q|v.                             (7)
 ```
 
-because cyclic numerator distance scales by `lambda`.  The divisor cover
-therefore pulls back to a half-twist cover of all `q` sheets with at most `k`
-owners.  Hence `rho_H(q)<=rho_ZMC(q)`.  Together with `(3)`, this proves
+Coincident or sign-equivalent quotient owners may be deleted.  This derives
+the divisor-minimum interface used in THM-3415 directly from THM-3405 and
+pins the required layer and sheet permutations; it does not silently import
+an augmented prime-breaker gate.
+
+## 3. Fixed-zero cover transport for every modulus
+
+Canonicalize a fixed-zero owner to `1<=s<=Q/2`; replacing `s` by `Q-s` does
+not change `(1)`.  For every `s<Q/2` and every modulus `Q`,
 
 ```text
-rho_ZMC(q)=rho_H(q) for every odd q>=3.                (9)
+B_(Q,2s)(ell)=Z_(Q,s)(2ell+1 mod Q).                  (8)
 ```
 
-The equality includes infinity.  It is an equality of minimum grades, not an
-identification of ancestry: as THM-3464 shows at `q=123`, distinct primitive
-quotient layers may attain the same minimum.
+Indeed
 
-## 4. The full odd cap-seven atlas
+```text
+dist_(2Q)(2a,0)=2 dist_Q(a,0),                         (9)
+```
 
-THM-3453's all-modulus half-twist atoms have ranks
+so the strict inequalities agree exactly.  The doubled owner satisfies
+`0<2s<Q` and is transverse.
+
+If `Q` is odd, `phi_Q(ell)=2ell+1` is a sheet permutation.  Hence `(8)` is a
+literal mask conjugacy and preserves incidence cardinalities.
+
+If `Q` is even, `phi_Q` is two-to-one onto the odd residue coset.  The only
+canonical owner not covered by `(8)` is the self-opposite `s=Q/2`.  For odd
+`j`, however,
+
+```text
+dist_Q((Q/2)j,0)=Q/2,
+14(Q/2)<Q  is false.                                  (10)
+```
+
+Thus its fixed-zero mask is empty on the image of `phi_Q`.  If a fixed-zero
+family covers all `Q` sheets, the remaining owners already cover every image
+sheet.  Applying `(8)` therefore gives a transverse literal half cover of all
+target sheets, with no more owners than the source family.
+
+This is one-way cover transport, not an isomorphism of typed presentations.
+It does not preserve augmented primitivity.  The minimal hostile is
+
+```text
+Q=15,  S=(1,2,3,4,5,7),       gcd(15,S)=1,
+2S=(2,4,6,8,10,14),           gcd(30,2S)=2.            (11)
+```
+
+Both displayed families are valid covers in their respective layers.  Thus
+the original “preserves primitivity” sentence was false, while the cover
+transport needed for ranks survives.
+
+## 4. Equality of the global ranks
+
+Let a zero-cochain cover at `q` use `k` owners.  Equations `(4)--(7)` produce
+a cover on some `Q|q` in one Boolean layer.
+
+- Retain it if it is already a literal half cover.
+- If it is fixed-zero, apply the all-modulus transport `(8)--(10)`.
+
+In either case there is a literal half cover on `Q` with at most `k` owners.
+Write `q=lambda Q`.  Directly from `(2)`,
+
+```text
+B_(lambda Q,lambda r)(ell)=B_(Q,r)(ell mod Q).         (12)
+```
+
+Hence dilation gives a literal half cover on `q` with at most `k` owners.
+Therefore `rho_H(q)<=rho_ZMC(q)`.  Together with `(3)`,
+
+```text
+rho_ZMC(q)=rho_H(q) for every q>=2,                    (13)
+```
+
+including infinity.
+
+Equation `(13)` is equality of minimum grades, not presentation ancestry.
+Distinct primitive and inherited realizations can coexist, as THM-3464 shows
+at `q=123`.  The transport also may delete the even self-opposite owner and
+may merge sign-equivalent labels.
+
+## 5. Complete all-modulus cap-seven support
+
+THM-3453 gives the literal half-twist atoms
 
 ```text
 rank 4:  8,9;
 rank 5:  10,12;
 rank 6:  11,15,23,25;
-rank 7:  13,14,29,38,51,68,148.                       (10)
+rank 7:  13,14,29,38,51,68,148.                       (14)
 ```
 
-Only odd atoms can divide odd `q`.  Equation `(9)` therefore promotes the
-literal classification to the full zero-cochain rank:
+Equation `(13)` promotes that classification to the full zero-cochain rank.
+For every `q>=2`, apply rank priority:
 
 ```text
-rho_ZMC(q)=4  iff 9|q;
+rho_ZMC(q)=4 iff 8|q or 9|q;
 
-rho_ZMC(q)=5  never;
+rho_ZMC(q)=5 iff no rank-4 atom divides q and
+                  (10|q or 12|q);
 
-rho_ZMC(q)=6  iff 9 does not divide q and
-  one of 11,15,23,25 divides q;
+rho_ZMC(q)=6 iff no lower atom divides q and
+                  one of 11,15,23,25 divides q;
 
-rho_ZMC(q)=7  iff no lower-rank atom divides q and
-  one of 13,29,51 divides q;
+rho_ZMC(q)=7 iff no lower atom divides q and
+                  one of 13,14,29,38,51,68,148 divides q;
 
-rho_ZMC(q)>7  otherwise,                              (11)
+rho_ZMC(q)>7 otherwise.                               (15)
 ```
 
-for every odd `q>=3`.  Equation `(11)` does not classify the exact rank
-inside the final `>7` stratum.
+The final line is a cap-seven stratum, not one asserted exact rank.
 
-## 5. Exact subsets of the harmonic series
+## 6. All-natural-number and odd harmonic atlases
 
-Define an annotated word on all positive integers by writing `0` at even
-indices and `4,6,7,>7` at odd indices according to `(11)`, with `>7` placed
-at the out-of-domain index `q=1` by convention.  Its minimal period is
+The word in `(15)`, extended to `q=1` by the `>7` symbol, has minimal period
 
 ```text
-P=2*3^2*5^2*11*13*17*23*29=729,664,650.              (12)
+P=2^3*3^2*5^2*7*11*13*17*19*23*29*37
+ =14,362,718,970,600.                                  (16)
 ```
 
-The powers `3^2` and `5^2` retain the atoms `9` and `25`; the factor `17`
-retains `51`.  A weighted CRT product has only `576` local valuation states.
-In one period the census is
+A `9,216`-state weighted CRT product gives the exact census:
 
-| stratum | count | natural density / harmonic coefficient |
+| stratum | count in one period | natural density / harmonic coefficient |
 |---:|---:|---:|
-| even marker `0` | `364,832,325` | `1/2` |
-| rank 4 | `40,536,925` | `1/18` |
-| rank 5 | `0` | `0` |
-| rank 6 | `64,859,080` | `4/45` |
-| rank 7 | `31,171,360` | `283376/6633315` |
-| rank `>7` | `228,264,960` | `691712/2211105` |
+| rank 4 | `3,191,715,326,800` | `2/9` |
+| rank 5 | `1,276,686,130,720` | `4/45` |
+| rank 6 | `1,734,627,895,000` | `25/207` |
+| rank 7 | `1,531,452,347,040` | `165741596/1554406815` |
+| rank `>7` | `6,628,237,271,040` | `717341696/1554406815` |
 
-For example, after excluding rank four, the odd density is `4/9`; excluding
-the four rank-six atoms leaves `16/45`, so rank six has density `4/45`.
-The final-stratum density factors as
+For every row with density `delta`,
 
 ```text
-1/2 * 3088/3825 * 10/11 * 22/23 * 12/13 * 28/29
-  =691712/2211105.                                    (13)
+sum_(q<=N,q in row) 1/q=delta log N+O(1).              (17)
 ```
 
-Rank seven is the difference between `16/45` and `(13)`.  The companion gives
-a changing shift witness for every prime factor of `(12)`, proving
-minimality:
+Every prime in `(16)` is essential.  In the format
+`(prime,q,value,q+P/prime,value)`, changing-shift witnesses are
 
 ```text
-(2,1,>7,364832326,0),
-(3,3,>7,243221553,4),
-(5,25,6,145932955,>7),
-(11,7,>7,66333157,6),
-(13,13,7,56128063,>7),
-(17,51,7,42921501,>7),
-(23,17,>7,31724567,6),
-(29,29,7,25160879,>7).                                (14)
+(2,4,>7,7181359485304,4),
+(3,3,>7,4787572990203,4),
+(5,5,>7,2872543794125,6),
+(7,2,>7,2051816995802,7),
+(11,2,>7,1305701724602,6),
+(13,5,>7,1104824536205,7),
+(17,6,>7,844865821806,7),
+(19,38,7,755932577438,>7),
+(23,1,>7,624466042201,6),
+(29,29,7,495266171429,>7),
+(37,148,7,388181593948,>7).                           (18)
 ```
 
-Consequently each displayed density `delta` is also the coefficient in
+The original odd-only atlas remains a useful conditioned slice.  Mark even
+indices by zero and classify odd indices using atoms `9`; `11,15,23,25`;
+and `13,29,51`.  Its minimal period is `729,664,650`, its `576`-state census
+for `(0,4,5,6,7,>7)` is
 
 ```text
-sum_(q<=N,q in stratum) 1/q=delta log N+O(1).          (15)
+(364832325,40536925,0,64859080,31171360,228264960),   (19)
 ```
 
-Conditioned on odd `q`, the coefficients are twice those in the table.  This
-is a complete cap-seven subset-of-the-harmonic-series theorem; it does not
-turn the unclassified `>7` stratum into one exact rank.
-
-## 6. Sharp boundary and information contract
-
-Oddness is load-bearing for the proof.  At `Q=8`, the map `(4)` reaches only
-the four odd sheets, while `Z_(8,4)` occupies four even sheets and transports
-to the empty half mask.  This refutes use of `(4)` as an even-modulus sheet
-conjugacy.  It does not assert that rank equality itself fails at every even
-modulus; no even conclusion is made.
+and its ambient coefficients for ranks `4,6,7,>7` are
 
 ```text
-source:      a primitive fixed-zero or half-twist cover on Q|q
-target:      a literal half-twist cover on the ambient odd q
-maps:        ell -> 2ell+1, owner doubling/sign, divisor dilation
-preserved:   strict mask incidence, cover size, active gcd, zero cochain
-destroyed:   original layer label and primitive-divisor ancestry after grading
-sidecars:    odd modulus, canonical owner sign, active divisor Q
-hostile:     Q=8 nonbijective sheet map
+1/18, 4/45, 283376/6633315, 691712/2211105.           (20)
+```
+
+Thus the repair strictly extends rather than discards the audited odd
+harmonic computation.
+
+## 7. Information contract and hostile boundary
+
+At `Q=8`, `phi_Q` reaches only `{1,3,5,7}` and `Z_(8,4)` transports to the
+empty half mask.  This is the sharp failure of sheet conjugacy and of
+augmented-primitivity preservation.  It is not a failure of cover transport
+or rank equality.
+
+```text
+source:      a fixed-zero or half cover on the active divisor Q|q
+target:      a literal half cover on the ambient q
+maps:        active-gcd quotient, ell->2ell+1, owner doubling, dilation
+preserved:   strict incidence on the affine image, cover upper bound, grade
+destroyed:   even off-image sheets, augmented primitivity, layer ancestry
+sidecars:    Q,d_0,epsilon, canonical owner sign, self-opposite deletion
+hostiles:    Q=15 augmented gcd; Q=8 nonbijective sheet map
 ```
 
 The theorem gives no endpoint current, relation-residue coefficient,
 bispectrum, physical LRC row, decrement, or LRC(14) conclusion.
 
-## 7. Exact companion
+## 8. Exact companion
 
 Run from the repository root:
 
@@ -247,10 +310,11 @@ python 04-computation/lrc_odd_zero_half_conjugacy_global_rank_thm3472.py
 python -O 04-computation/lrc_odd_zero_half_conjugacy_global_rank_thm3472.py
 ```
 
-The standard-library companion checks every `40,200` owner row and
-`10,787,000` sheet cells for odd `3<=Q<=401`, including active-gcd
-preservation; `7,650` divisor-dilation rows and `2,613,750` cells at scales
-`3,5,7`; the exact `576`-state CRT census, all density reductions, the eight
-minimal-period witnesses, dependency pins, AST/security, and a frozen
-semantic digest.  It uses explicit exceptions under `-O` and performs no file
-write, dynamic evaluation, subprocess, or network action.
+The standard-library companion checks `40,200` canonical owner rows and
+`10,766,900` transport cells for every `2<=Q<=401`; the `Q=15` augmented-gcd
+hostile and `200` even self-opposite deletions; `118,072` active-gcd divisor
+rows and `6,478,224` cells through `q=80`; `15,150` dilation rows and
+`3,434,000` cells at scales `2,3,5`; the exact `9,216`-state all-modulus and
+`576`-state odd CRT censuses; all eleven period witnesses; dependency,
+semantic, and security gates.  It uses explicit exceptions under `-O` and
+performs no file write, dynamic evaluation, subprocess, or network action.
