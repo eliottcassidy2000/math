@@ -251,12 +251,12 @@ python -B -O 04-computation/lrc_r5_common_ancestry_guard_atom_root_drift_probe_2
 Normal and optimized transcripts are byte-identical.  The semantic digest is
 
 ```text
-dda1b9bd8ca0471c47c27b620c4e4172338413ec30d40839cae0ab44a3b70bc0.
+3d8c88fb7b9762f41ef35c00d980b99fc435c8352baf5dddb9fe412d1baeace0.
 ```
 
 The script and output SHA-256 hashes are
 
 ```text
-3f54efba1d6764eb051f7bd092168b91b9953544d6cf1b6cfcb9c06d26fe2704
-527a0ebb6edb75b75d5a66e6bb2bee54469315776fa941cd2ebfbaf1ac8a2fa4.
+83f1fa49ac4d02e21a1d76fed169d101715a6620342714ed05b9172ae967a730
+7727571722f69a9c59af0183c50c8bae0b7944d6acb7bbb1b3c0e9bd02d54565.
 ```

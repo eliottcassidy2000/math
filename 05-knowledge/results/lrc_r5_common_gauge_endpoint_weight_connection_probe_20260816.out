@@ -1,0 +1,16 @@
+== r=5 common-gauge / actual U_full endpoint-weight connection probe ==
+dependencies=((source,83f1fa49ac4d02e21a1d76fed169d101715a6620342714ed05b9172ae967a730,3d8c88fb7b9762f41ef35c00d980b99fc435c8352baf5dddb9fe412d1baeace0),(target,f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc,553cfe7289b0556a19a8bcd1a0382dc1372545358feac62e5229adca315f8a26))
+target_split_field=(prime=572252886246508880869,zeta13=505438565698892403012)
+target_pair_weight_sha256=c2d5911b287510335edc6aefa6d3b865c982568f678bb89ee9b82ee211962df1
+target_bridge=(full=389266878372286537904,same_sheet_d0=324498447313453607031,common_support_d_nonzero=64768431058832930873)
+target_common_support=48/52; deleting d=0 retains nonzero bridge and full (13,13,13,13) Walsh drift spectrum
+target_Walsh_F13_support=(full=(13, 13, 13, 13),restricted=(13, 13, 13, 13))
+source_common_gauge_owner_ranks=(4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4)
+projective_connection_to_full_target=((29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0)); each=(rank29,nullity0,lambda_projection0)
+projective_connection_to_restricted_target=((29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0), (29, 0, 0)); each=(rank29,nullity0,lambda_projection0)
+endpoint_pair_function_pullback_by_owner_frequency=(89020872861375921416, 236085603545857215793, 323683959657851125455, 54173676827327624142, 249656651420909028337, 103356827118739902928, 384696996346514331447, 29597935718057174234, 387428575013009974450, 249995533066198665075, 318311674730929824069, 138773773920322904500, 532141509419833569170)
+endpoint_pair_function_pullback_support=13/13 profile=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+flat_pair_function_positive_control=211784182424725384807
+semantic_sha256=6d4f3389f50c98a103c5c6cb2daedea0ed2dd86e267aaa5ab0f9a4585433693d
+scope=actual endpoint weights pulled through a lawful address measure; auxiliary contraction and sharp connection no-go only; no physical current,row exclusion,LRC(14)
+all exact checks passed

@@ -41,6 +41,23 @@
   `efbfb738f1901946210e1f438212d24e7cc34ee4ca3f02d436923d61a852bf43` /
   `642f774f2c0320470d28ac8e5046b06ccb83851deae79e412c8a3fe0676149db` /
   `544b07a84c6806ea63c48f5227b78d74844f466dd0b446b6a320ea8560238895`.
+- `lrc_r5_common_gauge_endpoint_weight_connection_probe_20260816.py` ->
+  matching `.out` [FINITE-EXACT ACTUAL-ENDPOINT-WEIGHT PULLBACK; CONNECTION
+  NO-GO].  Reconstructs the actual U_full `AX/BY` atom-pair contribution and
+  pulls that scalar function through the lawful THM-2471 common-gauge address
+  measure.  Deleting the four `d=0` endpoint buckets leaves the common
+  `48/52` support, a nonzero bridge `64768431058832930873`, and full
+  `(13,13,13,13)` Walsh drift spectrum.  The pair-function pullback is
+  nonzero at all 13 common-offset owner frequencies.  Nevertheless, for
+  every owner frequency, the full and restricted target projective systems
+  both have rank 29 and nullity zero: no fixed `4x4` channel map plus one
+  common drift convolution exists.  Thus actual endpoint weight survives a
+  lawful nonlinear address pullback, but not as the forbidden post-marginal
+  linear connection.  This is still no physical current, grouped coefficient,
+  row exclusion, or LRC(14).  Script/output/semantic SHA-256:
+  `3d25572a84c48ccc8c4550b7d4f66180fab97e028094982a2b5a58dba9e534fc` /
+  `86427a2a296db87f74fe0abed508745bcdb02780752e5eb0670e604f1a6337a8` /
+  `6d4f3389f50c98a103c5c6cb2daedea0ed2dd86e267aaa5ab0f9a4585433693d`.
 - `lrc_r5_common_ancestry_guard_atom_root_drift_probe_20260816.py` ->
   matching `.out` [FINITE-EXACT COMMON-ANCESTRY SUPPORT REALIZATION;
   INDEPENDENT AUDIT PENDING].  Inserts THM-3514's actual 39 guard atoms as
@@ -56,9 +73,9 @@
   certified coordinatewise at `547,911,1093,2003,2549`.  This is lawful
   support/spectral capacity, not equality with the frozen endpoint weights,
   a current, row exclusion, or LRC(14).  Script/output/semantic SHA-256:
-  `3f54efba1d6764eb051f7bd092168b91b9953544d6cf1b6cfcb9c06d26fe2704` /
-  `527a0ebb6edb75b75d5a66e6bb2bee54469315776fa941cd2ebfbaf1ac8a2fa4` /
-  `dda1b9bd8ca0471c47c27b620c4e4172338413ec30d40839cae0ab44a3b70bc0`.
+  `83f1fa49ac4d02e21a1d76fed169d101715a6620342714ed05b9172ae967a730` /
+  `7727571722f69a9c59af0183c50c8bae0b7944d6acb7bbb1b3c0e9bd02d54565` /
+  `3d8c88fb7b9762f41ef35c00d980b99fc435c8352baf5dddb9fe412d1baeace0`.
 
 - `lrc_r5_folded_c7_to_ufull_k4_drift_transporter_probe_20260816.py` and
   `lrc_r5_folded_c7_k4_transporter_independent_audit_20260816.py` -> matching

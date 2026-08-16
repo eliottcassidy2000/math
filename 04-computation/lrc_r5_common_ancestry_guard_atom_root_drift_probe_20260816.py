@@ -34,7 +34,7 @@ ROOT = Path(__file__).resolve().parents[1]
 P = 13
 STAGE_PATH = ROOT / "04-computation/lrc14_stage2_theta_contraction_opus_20260728.py"
 STAGE_SHA256 = "09c43af0a0a56c7a0833bbfd13ed6a96bc5a7a3718aa1bc6b77a144bde101a06"
-EXPECTED_SEMANTIC_SHA256 = "dda1b9bd8ca0471c47c27b620c4e4172338413ec30d40839cae0ab44a3b70bc0"
+EXPECTED_SEMANTIC_SHA256 = "3d8c88fb7b9762f41ef35c00d980b99fc435c8352baf5dddb9fe412d1baeace0"
 
 CHAMBERS = ("left", "middle", "right")
 ACTIVE = ("left", "right")
@@ -262,6 +262,8 @@ def main() -> None:
     # offset c=left_sheet-current_root=right_sheet-source_root.
     gauge_offset = [[[[0 for _offset in range(P)] for _d in range(P)]
                      for _right in CHAMBERS] for _left in CHAMBERS]
+    pair_gauge_offset = [[[0 for _offset in range(P)] for _right in ATOMS]
+                         for _left in ATOMS]
     atom_pair_nonzero = 0
     for left_index, (left_sheet, left_chamber) in enumerate(ATOMS):
         ci = CHAMBER_INDEX[left_chamber]
@@ -288,6 +290,7 @@ def main() -> None:
                             "common-gauge offset mismatch",
                         )
                         gauge_offset[ci][cj][drift][common_offset] += root_mass
+                        pair_gauge_offset[left_index][right_index][common_offset] += root_mass
                 bucket[ci][cj][drift][root_drift] += mass
                 pair_nonzero = pair_nonzero or mass != 0
             atom_pair_nonzero += int(pair_nonzero)
@@ -463,6 +466,7 @@ def main() -> None:
             if (drift + root_drift) % P == defect
         ))
     defect_support = sum(value != 0 for value in defect_mass)
+    pair_gauge_digest = digest_json(pair_gauge_offset)
 
     record = (
         STAGE_SHA256,
@@ -493,6 +497,7 @@ def main() -> None:
             )
             for right_rows in gauge_offset
         ),
+        pair_gauge_digest,
         tuple(owner_spectrum_records),
         combined_owner_counts,
         owner_rank_certified,
@@ -523,12 +528,22 @@ def main() -> None:
     print(f"active_Walsh_F13_Fourier_support_exact={exact_fourier_counts} (Phi13 coefficient certificate)")
     print(f"active_corner_zero_modes={corner_zero_modes}; LL=RR and LR=RL exactly")
     print(f"common_offset_owner_phase_split_primes={split_primes}")
+    print(f"pair_level_common_gauge_offset_sha256={pair_gauge_digest}")
     print(f"owner_frequency_x_Walsh_drift_Fourier_support_certified={combined_owner_counts}")
     print(f"owner_frequency_K4_ranks_certified={owner_rank_certified}")
     print(f"gauge_defect_mass_support={defect_support}/13")
     print(f"semantic_sha256={semantic}")
     print("scope=lawful guard-atom ancestry support and spectral capacity only; no endpoint weight identity, current, row exclusion, or LRC(14)")
     print("all exact checks passed")
+    return {
+        "gauge_offset": gauge_offset,
+        "pair_gauge_offset": pair_gauge_offset,
+        "active_gauge_rows": active_gauge_rows,
+        "walsh_rows": walsh_rows,
+        "root_marginal": root_marginal,
+        "denominator": denominator,
+        "semantic_sha256": semantic,
+    }
 
 
 if __name__ == "__main__":

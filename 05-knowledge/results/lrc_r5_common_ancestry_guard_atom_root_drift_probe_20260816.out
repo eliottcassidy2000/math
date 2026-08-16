@@ -17,9 +17,10 @@ active_Walsh_zero_modes_nonzero=(1, 0, 0, 1)
 active_Walsh_F13_Fourier_support_exact=(13, 12, 12, 13) (Phi13 coefficient certificate)
 active_corner_zero_modes=(586161995511426137294400, 593595775077439052580480, 593595775077439052580480, 586161995511426137294400); LL=RR and LR=RL exactly
 common_offset_owner_phase_split_primes=(547, 911, 1093, 2003, 2549)
+pair_level_common_gauge_offset_sha256=e4d0d4fa674e1f54496e613f7a3e1f057af033fa8992322a5f414ea176e1c3d4
 owner_frequency_x_Walsh_drift_Fourier_support_certified=((13, 12, 12, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13))
 owner_frequency_K4_ranks_certified=(4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4)
 gauge_defect_mass_support=13/13
-semantic_sha256=dda1b9bd8ca0471c47c27b620c4e4172338413ec30d40839cae0ab44a3b70bc0
+semantic_sha256=3d8c88fb7b9762f41ef35c00d980b99fc435c8352baf5dddb9fe412d1baeace0
 scope=lawful guard-atom ancestry support and spectral capacity only; no endpoint weight identity, current, row exclusion, or LRC(14)
 all exact checks passed
