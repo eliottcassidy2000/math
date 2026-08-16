@@ -2,8 +2,8 @@
 
 **Reflection / mechanism note, 2026-08-15.**  The truth source is
 [THM-3462](../01-canon/theorems/THM-3462-five-point-line-metric-interval-sum-preorder-atlas.md),
-which is **PROVED + VERIFIED-EXACT**.  This note records connections and
-boundaries; it is not an additional theorem or an independent audit.
+which is **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED**.  This note
+records connections and boundaries; it is not an additional theorem.
 
 ## The object that finally stayed faithful
 

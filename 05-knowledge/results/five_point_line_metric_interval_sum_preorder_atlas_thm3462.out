@@ -1,9 +1,9 @@
 THM-3462 EXACT DETERMINISTIC COMPANION
-status=PROVED + VERIFIED-EXACT
+status=PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
 arithmetic=stdlib integer/Fraction only; explicit exceptions remain active under -O
 side_effects=stdout and read-only source/dependency hashing; no writes; no network
 self_audit=imports:ast,collections,fractions,hashlib,itertools,json,math,pathlib,sys;asserts:0;banned_calls:0
-script_lf_sha256=97d9b94e1ee24e2f3c2922b17135953eb1e11d8c5fb850529f9500d2fac588bf
+script_lf_sha256=ac057c7acce3794ba7772bf548485436eee6f228633581e37d1c762d89892a95
 dependency=01-canon/theorems/THM-3457-four-point-line-metric-turnpike-preorder-atlas.md
 dependency_lf_sha256=1e0acb0775d6533ec29309e9835c22021b4d5c9eb41652f0be60c3565b7c01d5
 interval_indicators=01:1000;12:0100;23:0010;34:0001;02:1100;13:0110;24:0011;03:1110;14:0111;04:1111
@@ -514,5 +514,5 @@ C474|covector=+++++-+++++++++|dim=3|tie=strict|total_rep=(10, 6, 3, 2)|height_re
 C475|covector=+++++0+++++++++|dim=2|tie=2|total_rep=(7, 4, 2, 1)|height_rep=(7, 4, 2, 1)|reverse=C001|signature=34<23<24<12<13<01=14<02<03<04
 C476|covector=+++++++++++++++|dim=3|tie=strict|total_rep=(8, 4, 2, 1)|height_rep=(8, 4, 2, 1)|reverse=C000|signature=34<23<24<12<13<14<01<02<03<04
 ATLAS_END
-semantic_sha256=bf2b7a8e61dabfea2884c3e6bd232cdd29a5c3b2a6b43b85a9fb7d0b101002be
+semantic_sha256=90323a5738e47db6643fea438d3a6b7e3d744b6119568f1e35b2bd03b3297d88
 VERDICT=PASS: exact 477-preorder atlas, f-vector (20,125,218,114), 241 reversal classes, and 28620 labelled signatures certified

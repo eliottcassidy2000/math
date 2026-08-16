@@ -2,8 +2,9 @@
 id: THM-3462
 title: "Five-point line-metric interval-sum preorder atlas"
 status: >
-  PROVED + VERIFIED-EXACT.  The ten labelled distances of five ordered line
-  points realize exactly 477 positional total preorders.  Their tie census is
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The ten labelled
+  distances of five ordered line points realize exactly 477 positional total
+  preorders.  Their tie census is
   114,162,124,36,5,14,16,3,2,1 in the stated block types; the projective
   arrangement f-vector is (20,125,218,114).  Reversal gives 241 classes with
   five fixed signatures; S5 gives no additional positional collapse and
@@ -16,24 +17,26 @@ audit: >
   global 4-by-4 Cramer vertex enumeration over 49 affine equations and
   recursive exact Fourier--Motzkin wall insertion; full normal/optimized/stored
   replay, AST/security, dependency/hash, symmetry, hostile, documentation, and
-  scope gates.  This is not yet an independent external implementation audit.
+  scope gates; independent compressed-Cramer, Fourier--Motzkin-prefix,
+  S5-orbit, representative, hostile-sampling, replay, hash, security,
+  documentation, and routing audit PASS.
 depends_on:
   - THM-3457-four-point-line-metric-turnpike-preorder-atlas
 related:
   - THM-3454-fibonacci-selected-u-spine-farey-lorentz-isometry-and-one-tie-edge-order
 script: 04-computation/five_point_line_metric_interval_sum_preorder_atlas_thm3462.py
 output: 05-knowledge/results/five_point_line_metric_interval_sum_preorder_atlas_thm3462.out
-script_sha256: 97d9b94e1ee24e2f3c2922b17135953eb1e11d8c5fb850529f9500d2fac588bf
-output_sha256: 73a5636500c670a8699c0f579181f4482020ed8bf888d723c320f7402cf0e2e2
+script_sha256: ac057c7acce3794ba7772bf548485436eee6f228633581e37d1c762d89892a95
+output_sha256: bf28b02ce29de0bd9c83fb47207b8d1b76999939fa0e49bfe9cda1acf950ed16
 covector_sha256: 38c1e9f857ebfe1ab5473bcab15695500fa5de7293cba436924199b4f0024eff
 signature_sha256: ee30ec8827977bc514ab4b7430fd6f71c6eb9464694ebae865cd6d922f4e0ca6
-semantic_sha256: bf2b7a8e61dabfea2884c3e6bd232cdd29a5c3b2a6b43b85a9fb7d0b101002be
+semantic_sha256: 90323a5738e47db6643fea438d3a6b7e3d744b6119568f1e35b2bd03b3297d88
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3462 -- five-point line-metric interval-sum preorder atlas
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 This is a complete elementary classification of the labelled distance
 preorders of five ordered points on a line.  It is not a literature-priority
@@ -201,8 +204,10 @@ JSON, their SHA-256 is
 
 The two routes share only the derived wall matrix and exact arithmetic.  One
 uses global active-equation vertices; the other decides recursively by
-projection.  This is meaningful internal redundancy, but both live in one
-companion and do not constitute an independent external implementation audit.
+projection.  A later independent audit reconstructed a compressed Cramer
+solver, every Fourier--Motzkin prefix set, the tie/face/reversal/S5 counts,
+both sharp representative bounds, and the Fibonacci hostile without modifying
+the package.
 
 ## 4. Tie census and projective face vector
 

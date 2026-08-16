@@ -180,11 +180,12 @@ Canonical hostile examples and corrected near misses:
   physical center but identically zero current.  “Common time” is therefore
   not the missing LRC invariant.
 - [THM-3461](../01-canon/theorems/THM-3461-literal-half-twist-common-centre-lifts-and-q83-rank-nine-boundary.md)
-  is **RESERVED / PROVISIONAL + VERIFIED-EXACT, independent package audit
-  pending**.  Its `q=83` rank-nine candidate still has every projective wedge
-  equal to zero.  Even substantially richer cover support need not create the
-  missing current.  THM-3464 is an unproved empty reservation and contributes
-  no claim.
+  is **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED**.  Its `q=83`
+  rank-nine packet still has every projective wedge equal to zero.  Even
+  substantially richer cover support need not create the missing current.
+  THM-3464 is now a **RESERVED / PROVISIONAL + VERIFIED-EXACT** candidate:
+  it gives exact q123/q227 ranks internally, but remains outside the proved
+  graph pending independent audit.
 - [THM-2355](../01-canon/theorems/THM-2355-component-deletion-gram-and-twist-energy-phase-transport.md)
   and MISTAKE-221: autocorrelation/Gram data can recover energy while losing
   current phase; a perfect-autocorrelation object is a hostile, not a master
