@@ -1,5 +1,27 @@
 # Script Results Index
 
+- `keller_level_four_norm_J_mod1009_slice_probe_20260816.py` -> matching
+  `.out` [THM-3504 PROVED + VERIFIED-EXACT].  On the lawful slice `b=c=1`,
+  a Newton-at-infinity/support calculation proves
+  `deg_A(L^43N(J))<=542`.  Exactly `543` regular values over `F_1009`
+  determine the slice and `12` fresh values are held out.  The degree bound
+  is attained; the polynomial is squarefree with factor degree/exponent rows
+  `(1,1),(2,1),(2,1),(4,1),(12,1),(21,1),(500,1)` and is coprime to the
+  specialized `L,H,J`.  Two exponent-grouping orders and a closed norm versus
+  literal `3x3` multiplication determinant agree; shortened interpolation,
+  proper-power, and injected-old-factor hostiles all fire.  Direct integer
+  substitution also verifies `H(3,-1,0)=0`, `J(10,-46,33)=0`, and the two
+  finite-locus values `-504,-69753247104`.  The coefficient ledger SHA-256 is
+  `47fba77866ee50d00fcae28b834e8a0b0c18a4cf52c2cd1b9c05155410c91d00`.
+  Combined with THM-3498's localization and the finite image of irreducible
+  `V(J)`, squarefreeness forces image multiplicity one.  Thus `G` is
+  absolutely irreducible, `closure(F(V(J)))=V(G)`, `gcd(G,LHJ)=1`, and
+  `S_(F^4)=V(LHJ G)` has four irreducible components.  Script/output LF
+  SHA-256:
+  `d5d6a45cbbb6fe78fc572563f5d95394df79e8c640bd7640ac4763a7b3643410` /
+  `84920c4dbb254aa9a9d3490ca6f5767d23d29a17d137f9e950d62cf49b5f6e69`.
+  No global expansion of `G`, depth-five theorem, all-level law, or general
+  JC/DC/LRC consequence follows.
 - `jc_level4_boundary_squareclass_independent_audit_20260816.py` and
   `jc_level4_degree81_fourier_flint_independent_audit_20260816.py` -> matching
   `.out` files [THM-3498 PROVED + VERIFIED-EXACT + INDEPENDENTLY

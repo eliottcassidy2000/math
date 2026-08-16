@@ -25,6 +25,7 @@ depends_on:
 related:
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
   - MISTAKE-413
+  - THM-3504-level-four-sporadic-keller-image-prime-and-four-component-nonproperness
 scripts:
   - 04-computation/keller_level_four_old_L_boundary_norm_probe_20260816.py
   - 04-computation/keller_level_four_degree81_finite_field_probe_20260816.py
@@ -279,7 +280,8 @@ but they do not share either level-four extraction algorithm.
 This theorem concerns one fixed polynomial map in dimension three.  It does
 not construct the global polynomial `G`, factor it, determine the generic
 degree of `V(J)->V(G)`, prove `gcd(G,HJ)=1`, or show
-`S_(F^4)=V(LHJ G)`.  It gives no all-level newest-factor induction, arbitrary
+`S_(F^4)=V(LHJ G)`; those further claims are supplied separately by
+THM-3504.  It gives no all-level newest-factor induction, arbitrary
 Keller-map classification, Jacobian-conjecture, Dixmier-conjecture, or
 Lonely Runner consequence.
 

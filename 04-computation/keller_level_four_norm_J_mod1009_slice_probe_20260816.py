@@ -77,9 +77,71 @@ H_terms = [
     ((int(i), int(j), int(k)), int(coefficient))
     for (i, j, k), coefficient in namespace["H_terms"]
 ]
+
+
+def evaluate_integer_terms(terms, point: tuple[int, int, int]) -> int:
+    maxima_local = tuple(max(monomial[axis] for monomial, _coefficient in terms) for axis in range(3))
+    powers = []
+    for value, maximum in zip(point, maxima_local):
+        row = [1]
+        for _ in range(maximum):
+            row.append(row[-1] * value)
+        powers.append(row)
+    return sum(
+        coefficient * powers[0][i] * powers[1][j] * powers[2][k]
+        for (i, j, k), coefficient in terms
+    )
+
+
+def integer_fmap(point: tuple[int, int, int]) -> tuple[int, int, int]:
+    x, y, z = point
+    unit = 1 + x * y
+    four_plus = 4 + 3 * x * y
+    return (
+        unit**3 * z + y**2 * unit * four_plus,
+        y + 3 * x * unit**2 * z + 3 * x * y**2 * four_plus,
+        2 * x - 3 * x**2 * y - x**3 * z,
+    )
+
+
+def integer_l(point: tuple[int, int, int]) -> int:
+    a_value, b_value, c_value = point
+    return (
+        27 * a_value**2 * c_value**2
+        - 18 * a_value * b_value * c_value
+        + 16 * a_value
+        + b_value**3 * c_value
+        - b_value**2
+    )
+
+
+# A direct source-to-image witness makes the geometric consequence explicit.
+# It is independent of the norm-support implication used in the proof.
+q_witness = (3, -1, 0)
+p_witness = integer_fmap(q_witness)
+r_witness = integer_fmap(p_witness)
+require(p_witness == (10, -46, 33), "first image witness changed")
+require(
+    r_witness == (-1854753363, 121225664, -19180),
+    "second image witness changed",
+)
+require(evaluate_integer_terms(H_terms, q_witness) == 0, "H witness no longer vanishes")
+require(
+    evaluate_integer_terms(list(J_dictionary.items()), p_witness) == 0,
+    "J image witness no longer vanishes",
+)
+require(
+    (integer_l(p_witness), integer_l(r_witness)) == (-504, -69753247104),
+    "image witness left the two required finite loci",
+)
 del J, namespace
 gc.collect()
 print("stage: J ledger reconstructed and released", flush=True)
+print(
+    "image witness: H(3,-1,0)=0; J(10,-46,33)=0; "
+    "L(10,-46,33)/L(F(10,-46,33))=-504/-69753247104",
+    flush=True,
+)
 
 
 def mod_inverse(value: int) -> int:

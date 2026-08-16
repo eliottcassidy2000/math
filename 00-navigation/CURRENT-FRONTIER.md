@@ -336,9 +336,9 @@ density need not settle `z=1` mass.
   and primitive `x/y` atlas. `C=0`/Jelonek, composition and arbitrary-map/planar
   lanes stay open. THM-1300 exact/provenance unsettled (MISTAKE-205);
   THM-1315 corrected (MISTAKE-282); THM-2473--2576 fixed-map.
-  THM-3495 gives `S_(F^3)=V(LHJ)` and `[Delta_3]=[-2J]`. THM-3498 gives
-  `v_L(N(J))=-43`, `[Delta_4]=[2L^43N(J)]` and a degree-81 gate; the new
-  factor/image and depth `>=5` remain OPEN. THM-2681
+  THM-3495/3498/[3504](../01-canon/theorems/THM-3504-level-four-sporadic-keller-image-prime-and-four-component-nonproperness.md)
+  give `S_(F^4)=V(LHJ G)`, `[Delta_4]=[2G]`, and newest-image degree one;
+  `>=5` OPEN. THM-2681
   blocks the `A4/S4` cubic; THM-2685--2708 give its
   gain/holonomy.
   THM-3057/3059/3441 set the boundary and refute both odd-every-component forms of HYP-9027. THM-3448 realizes Keller `C_ell` inertia (`ell>=2`; first `C3` in degree five) and excludes `C3` only for weighted quartics; arbitrary quartic/two-jet `C3` remains OPEN.

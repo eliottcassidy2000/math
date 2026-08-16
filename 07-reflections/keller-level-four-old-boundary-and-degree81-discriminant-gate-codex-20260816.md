@@ -12,6 +12,11 @@ old-`L` boundary, localization, generic separability gate, and
 `[Delta_4]=[2G]`; it does not promote the open image/factorization claims
 listed below.
 
+**Subsequent closure.** THM-3504 supplies the lawful squarefree specialization
+requested below and proves `G` is the fourth prime image with
+`S_(F^4)=V(LHJ G)`.  The remainder of this reflection preserves the exact
+THM-3498 boundary before that later input.
+
 ## Inheritance pass
 
 - **Closest proved mechanism.** THM-2582 gives the odd-block discriminant
