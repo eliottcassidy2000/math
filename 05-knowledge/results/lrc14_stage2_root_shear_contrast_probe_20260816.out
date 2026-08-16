@@ -11,5 +11,8 @@ nonaxial split-prime supports: slaved=576/1008; absolute=576/1008
 off both pure-root lines=528/924; by word slot=(0, 0, 132, 132, 132, 132, 0)
 root-shear support sha256=638af80f232c55d91a4e3d5b8fb802e4c7196184b6d2c9ac9324d370d53cbcf4
 pure-theta and pure-absolute synthetic line controls: PASS_ZERO_OFF_LINE
+three-axis roots mod 547: order7=81; order13=475
+primitive C7 x C13 x C13 off-both-line modes=792/792; by C7 mode=(132, 132, 132, 132, 132, 132)
+three-axis support sha256=51ea8b27b8f14f07ed7099601e80a5b36f18510cf6da9c4f815802e6eb8f05cc
 scope: genuine two-coordinate chart sensitivity; not unique causation, a physical current, row exclusion, or LRC(14)
 all exact checks passed

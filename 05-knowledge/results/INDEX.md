@@ -59,11 +59,16 @@
   there are `528/924` certified nonzero modes off both the pure-theta line
   `r=0` and pure-absolute-root line `r=2s`, concentrated `132` apiece in word
   slots `2,3,4,5`; synthetic pure-chart controls vanish off their lines.
+  Restoring the word Fourier axis at the split embedding `F_547` gives
+  `792/792` nonzero primitive `C7 x C13 x C13` modes off both pure lines,
+  exactly `132/132` for each nontrivial `C7` mode; the three-axis support
+  ledger is
+  `51ea8b27b8f14f07ed7099601e80a5b36f18510cf6da9c4f815802e6eb8f05cc`.
   This proves genuine two-coordinate chart sensitivity, not unique slaving
   causation, a physical current, row exclusion, or LRC(14).  Script/output LF
   SHA-256:
-  `087b9bd9028e6e82236d2006002cdd6acebac866932382c0b3940dfb380626b7` /
-  `f5dbe134d1740a18e76e277ee5566c8fca3a1feb65d2573e1c24d7d01e62b5dc`;
+  `590d164f5fc30cfc6e1ca97ec99d9a4af22a397c1d9904e443c9b2ecae232915` /
+  `6c77d4b438180f042567ceb7eb06c568ab92e2a19d3f17eedef34842e33f9fd3`;
   support ledger SHA-256:
   `638af80f232c55d91a4e3d5b8fb802e4c7196184b6d2c9ac9324d370d53cbcf4`.
 - `regular_shortlex_harmonic_density_automaton_probe_20260816.py` ->

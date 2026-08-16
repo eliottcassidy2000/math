@@ -28,6 +28,7 @@ AUDIT_LF_SHA256 = "8be9c1b69b33ab51ac16ce2c2a7f836aae4b811e2817b90e25921c234578c
 CONTRAST_DECISIVE_SHA256 = "53373710f92273a8473b8c3b047257f1a2adf10fa7c878f22fe5fae829e119f0"
 CONTRAST_BUNDLE_SHA256 = "a631fb33c0862234d5df932b804a944cd5439386908fc2e755479cf0dc0e99c7"
 SHEAR_SUPPORT_SHA256 = "638af80f232c55d91a4e3d5b8fb802e4c7196184b6d2c9ac9324d370d53cbcf4"
+TRIPLE_SUPPORT_SHA256 = "51ea8b27b8f14f07ed7099601e80a5b36f18510cf6da9c4f815802e6eb8f05cc"
 
 require(
     hashlib.sha256(AUDIT_PATH.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
@@ -189,6 +190,70 @@ off_both_per_ell = tuple(
 )
 require(off_both_per_ell == (0, 0, 132, 132, 132, 132, 0), "word-cell shear profile changed")
 
+# Restore the C7 word Fourier axis at a prime splitting C91.  Root 64 has
+# exact order 91 modulo 547, so its seventh and thirteenth powers give the
+# compatible order-13 and order-7 roots.
+TRIPLE_PRIME = 547
+ROOT_91 = 64
+ROOT_13 = pow(ROOT_91, 7, TRIPLE_PRIME)
+ROOT_7 = pow(ROOT_91, 13, TRIPLE_PRIME)
+require(
+    pow(ROOT_91, 91, TRIPLE_PRIME) == 1
+    and pow(ROOT_91, 7, TRIPLE_PRIME) != 1
+    and pow(ROOT_91, 13, TRIPLE_PRIME) != 1,
+    "bad primitive 91st root",
+)
+
+
+def triple_fourier(table, word_mode: int, owner_mode: int, root_mode: int) -> int:
+    return sum(
+        table[ell][u][root]
+        * pow(ROOT_7, (-word_mode * ell) % 7, TRIPLE_PRIME)
+        * pow(ROOT_13, (-owner_mode * u - root_mode * root) % 13, TRIPLE_PRIME)
+        for ell in range(7)
+        for u in range(13)
+        for root in range(13)
+    ) % TRIPLE_PRIME
+
+
+for word_mode in range(7):
+    for owner_mode in range(13):
+        for root_mode in range(13):
+            require(
+                triple_fourier(
+                    absolute_root_table, word_mode, owner_mode, root_mode
+                )
+                == triple_fourier(
+                    slaved_root_table,
+                    word_mode,
+                    (owner_mode + 2 * root_mode) % 13,
+                    root_mode,
+                ),
+                "three-axis root shear failed",
+            )
+
+triple_off_both = []
+for word_mode in range(1, 7):
+    for owner_mode in range(1, 13):
+        for root_mode in range(1, 13):
+            if owner_mode == (2 * root_mode) % 13:
+                continue
+            value = triple_fourier(
+                slaved_root_table, word_mode, owner_mode, root_mode
+            )
+            if value:
+                triple_off_both.append(
+                    (word_mode, owner_mode, root_mode, value)
+                )
+triple_digest = hashlib.sha256(repr(triple_off_both).encode("ascii")).hexdigest()
+require(triple_digest == TRIPLE_SUPPORT_SHA256, "three-axis support ledger changed")
+require(len(triple_off_both) == 792, "a primitive three-axis mode vanished")
+triple_by_word_mode = tuple(
+    sum(record[0] == word_mode for record in triple_off_both)
+    for word_mode in range(1, 7)
+)
+require(triple_by_word_mode == (132,) * 6, "three-axis word-mode census changed")
+
 # Synthetic controls pin the interpretation of the two exceptional lines.
 pure_theta = [[(root + 1) ** 2 for root in range(13)] for _u in range(13)]
 pure_absolute_slaved = [
@@ -221,5 +286,8 @@ print(f"nonaxial split-prime supports: slaved={len(slaved_support)}/1008; absolu
 print(f"off both pure-root lines={len(off_both_lines)}/924; by word slot={off_both_per_ell}")
 print(f"root-shear support sha256={support_digest}")
 print("pure-theta and pure-absolute synthetic line controls: PASS_ZERO_OFF_LINE")
+print(f"three-axis roots mod 547: order7={ROOT_7}; order13={ROOT_13}")
+print(f"primitive C7 x C13 x C13 off-both-line modes={len(triple_off_both)}/792; by C7 mode={triple_by_word_mode}")
+print(f"three-axis support sha256={triple_digest}")
 print("scope: genuine two-coordinate chart sensitivity; not unique causation, a physical current, row exclusion, or LRC(14)")
 print("all exact checks passed")

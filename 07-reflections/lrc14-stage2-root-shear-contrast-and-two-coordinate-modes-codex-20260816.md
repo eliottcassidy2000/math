@@ -107,6 +107,37 @@ on exact cyclotomic support: nonzero reduction proves exact nonvanishing,
 while modes vanishing at this one embedding are not claimed zero over the
 integers.
 
+### Restoring the C7 word Fourier axis
+
+The slotwise count in (8) suggests a stronger test than support by individual
+`ell`.  At the split prime `547`, the primitive 91st root `64` gives
+
+```text
+zeta_7=64^13=81,             zeta_13=64^7=475.          (9)
+```
+
+Take the full Fourier transform in word slot, owner root, and root label.
+For every nontrivial word mode `beta`, every nontrivial root-label mode `s`,
+and every owner mode off the two pure lines, the coefficient is nonzero:
+
+```text
+6 * 12 * 11 = 792/792 primitive C7 x C13 x C13 modes fire. (10)
+```
+
+Each of the six `C7` modes contributes all `132/132` admissible root pairs.
+The complete split-field support ledger has SHA256
+
+```text
+51ea8b27b8f14f07ed7099601e80a5b36f18510cf6da9c4f815802e6eb8f05cc. (11)
+```
+
+This is a genuine three-axis spectral-closure statement for the realized
+candidate table.  It is not the physical `7 tensor 13` bridge sought by
+LRC(14): it retains an additional owner-root Fourier coordinate and still
+lacks the physical phase/current, common U_full atom key, and Hall-cone
+consequence.  Its value is sharper localization: cancellation does not
+reappear when the word-slot axis is Fourier transformed.
+
 ## 5. Consequence boundary
 
 This repairs the causal picture as follows:
