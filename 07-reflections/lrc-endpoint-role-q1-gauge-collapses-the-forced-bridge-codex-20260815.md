@@ -268,3 +268,165 @@ script: 49e9a3657ceae8ada0e8487ee980115f7d1da1f16a7bbf121fdd5cfbd3fcc1b9
 output: e1a8b5ca90044a3b157828b444a582a3da36b1b869a6ad1d3d384333026b8a67
 semantic: fe9fe2d4b1d98aba3b60e1a7f6823bcccabed04d7a319f3eb20c83d25c799422
 ```
+
+## 8. 2026-08-16 update: the actual U_full guard refinement is nonzero
+
+**Status: FINITE-EXACT unrestricted mod-thirteen endpoint-aggregate
+experiment only.**  This update does not promote RESERVED THM-3479 and does
+not prove a physical current, a grouped exact-address coefficient, an
+all-`91`-unit aggregate, a U_clock statement, a scalar-row exclusion, or
+LRC(14).
+
+The minimal experiment proposed in Section 5 has now been completed for
+`U_full`.  Delete the named guard row from the six-row packet, retain the five
+other rows, and use the lawful dual basis
+
+```text
+(v1,v2,e_H).
+```
+
+The exact universe is the complete bank
+
+```text
+gamma^-(alpha,beta,tau)
+ =H(alpha v1+beta v2+tau e_H),
+(alpha,beta,tau) in F_13^3,                         (12)
+```
+
+of `2,197` twists.  The pinned THM-3479 periodic-subtraction endpoint engine
+processed `71,070,080` exact interval components.  Its finite-field target is
+
+```text
+p=572252886246508880869,
+h=279936,
+ord_p(h)=81750412320929840124.                       (13)
+```
+
+The companion checks a complete Lucas certificate for the primality of `p`
+and checks that `h` has the exact order in (13).  Therefore a nonzero image is
+an exact nonvanishing certificate for the corresponding cyclotomic endpoint
+quantity; the printed residues are not being identified with the original
+cyclotomic numbers.
+
+### 8.1 Recovery controls
+
+The `tau=0` slice reproduces the earlier coarse `169`-twist bank exactly:
+
+```text
+coarse gamma digest:
+  afcdb043eb1bf8095c313473a3d3bdcf4ce027f86b01b5f3cecbc7c87e6484b3,
+coarse unnormalized target digest:
+  726423df1b9e1c93b356966e5c3c386669e2f6b19da0bf8818606204eb2e9ee5.
+                                                               (14)
+```
+
+The new full gamma digest is
+
+```text
+1fabc5cfdbaa1455e10cd6bf9264488133616a7b0ff381623d729b4b4bfa9682. (15)
+```
+
+The inverse transform uses the normalized factors `13^-3` and `13^-2` in
+the refined and coarse quotients respectively.  For each of the four distinct
+coarse role bases
+
+```text
+(0,0), (0,1), (1,0), (1,12),                         (16)
+```
+
+the direct sum of all thirteen refined fibre values equals the corresponding
+coarse response.  This is checked from the computed bank, rather than merely
+invoked as a formal orthogonality identity.  A flat role response is the
+hostile control: its bridge, both K4 tree factors, and their product vanish in
+all `72` charts.
+
+### 8.2 Actual role response and mechanism
+
+At the five distinct refined role classes, the normalized inverse-transform
+images are
+
+```text
+(0,0,0)  -> 405336876493642499425,
+(0,1,0)  -> 518539850465495448196,
+(1,0,0)  -> 503604956476841920373,
+(1,0,1)  -> 320618948602619577408,
+(1,12,0) ->  15703541686881447885.                   (17)
+```
+
+The entries in (17) are pairwise distinct in the certified image.  In
+particular, the restored guard coordinate separates `H` from `q5`:
+
+```text
+P_H-P_q5=389266878372286537904 mod p !=0.             (18)
+```
+
+The labels `c2,q3,q4,q5` still share class `(1,0,0)`, so the refinement does
+not restore every coordinate contrast.  Nevertheless those remaining edge
+zeros do not kill either complete-`K4` tree polynomial.  Across the full
+canonical chart orbit the exact zero census is
+
+```text
+(bridge, first K4, second K4, product)=(0,0,0,0)      (19)
+```
+
+where each entry counts zero values among `72` charts.  Each K4 factor takes
+nine nonzero finite-field values, and the bridge value (18) is constant over
+the orbit.  The complete chart-record digest is
+
+```text
+b7d8c2c9860e4f1aa542b1c85fdb7b65cf4985aba5a81a84ff3a324834d51c51. (20)
+```
+
+Thus the minimal repair has a precise mechanism: the extra `e_H` character
+restores exactly the forced bridge contrast, while the complete K4 tree sums
+tolerate the remaining within-wing class collision.  This proves nonzero
+**endpoint-aggregate graph factors** for U_full under the refined quotient.
+It does not realize those factors as one Boolean/common-ancestry physical
+current.
+
+### 8.3 Independent graph audit and scope ledger
+
+A cheap independent audit imports the older canonical role-chart engine,
+feeds it only the five frozen residues (17), and reconstructs all `72` factor
+rows.  It independently obtains (18)--(20) and the flat hostile.  The full
+endpoint semantic digest is
+
+```text
+b39425cd78da4938dfea4ddb474d93fdb3bb203840ccfb82a5c4fbea10e415a8. (21)
+```
+
+The scope ledger is:
+
+| object | status after this experiment |
+|---|---|
+| U_full refined `13^3` endpoint bank | FINITE-EXACT under one certified primitive embedding |
+| `tau=0` coarse recovery | FINITE-EXACT, exact stored digests |
+| refined-to-coarse fibre sums | FINITE-EXACT at all four role bases |
+| bridge and two K4 factors | FINITE-EXACT nonzero in all `72` charts |
+| flat-response hostile | FINITE-EXACT zero in all `72` charts |
+| U_clock refined bank | OPEN / NOT COMPUTED |
+| lawful Boolean/common-ancestry realization | OPEN |
+| grouped `C(a;X,m)` or all-unit `B(q)` | OPEN |
+| scalar-row exclusion or LRC(14) | OPEN |
+
+U_clock was not attempted: its recorded exact-boundary interval counts are
+materially larger than U_full's, and U_full already gives the decisive test
+of whether the minimal quotient repair can work.  No inference about U_clock
+is made.
+
+Reproduce from the repository root with
+
+```bash
+PYTHONHASHSEED=0 python3 -B 04-computation/lrc14_guard_deleted_refined_endpoint_role_probe_20260816.py
+python3 -B 04-computation/lrc14_guard_deleted_refined_endpoint_role_graph_audit_20260816.py
+```
+
+The first command took about `2,078` seconds with four workers on the session
+host.  The checked artifacts have LF hashes
+
+```text
+primary script: e6ae4de8e7ba67adf027985dc72f513be2bf54b2e35a9d2c0256b1c2f49e96be
+primary output: 056093c45a05e50028f959a1a92ade136fa435abddea41266b30d92380e2552c
+graph script:   abd46f6970ec2d5dd8b85bfb3d6876e2b2125890667ae62b1208d94e3395a154
+graph output:   cd6abad06b62f07f72cfd69e8c02c7e98a8fdcc4a14797f551eb29b579473e6d
+```

@@ -1,0 +1,12 @@
+LRC REFINED ENDPOINT ROLE U_FULL INDEPENDENT GRAPH AUDIT
+status=FINITE-EXACT graph post-audit only; THM-3479 RESERVED; LRC(14) OPEN
+dependencies=lrc_relation_role_chart_weighted_closure_probe_20260815.py:e8eea838da1b4636c9796b71382e8a182e7ecfeb4ea17fef7eb265289889c502;lrc14_guard_deleted_refined_endpoint_role_probe_20260816.out:056093c45a05e50028f959a1a92ade136fa435abddea41266b30d92380e2552c
+universe=the five frozen U_full refined response residues; all 72 canonical role charts
+implementation=separate canonical role-chart edge/K4 determinant engine
+factor_zero_counts=(bridge,left_K4,right_K4,product)=(0, 0, 0, 0)
+bridge=389266878372286537904 multiplicity=72
+factor_histograms=(left=((21911544510979567632, 6), (111601359651434606899, 6), (114103258785658096741, 12), (232015729951904717970, 6), (285225084861352073754, 6), (434904329197396717118, 12), (481322558895811397205, 12), (495287940474117820004, 6), (495671360975999459833, 6)),right=((21911544510979567632, 6), (111601359651434606899, 6), (114103258785658096741, 12), (232015729951904717970, 6), (285225084861352073754, 6), (434904329197396717118, 12), (481322558895811397205, 12), (495287940474117820004, 6), (495671360975999459833, 6)))
+chart_record_sha256=b7d8c2c9860e4f1aa542b1c85fdb7b65cf4985aba5a81a84ff3a324834d51c51
+flat_response_hostile=all 72 factor quadruples are (0,0,0,0)
+scope=no endpoint-bank rederivation, physical current, grouped coefficient, all-unit projector, U_clock statement, scalar exclusion, or LRC(14)
+STATUS=PASS
