@@ -24,14 +24,19 @@ related:
   - THM-3527-fixed-R7-finite-sheet-unit-and-next-old-L-clearing
 scripts:
   - 04-computation/keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.py
+  - 04-computation/keller_packet_monoid_branch_transplant_audit_20260816.py
 outputs:
   - 05-knowledge/results/keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.out
+  - 05-knowledge/results/keller_packet_monoid_branch_transplant_audit_20260816.out
 script_sha256:
   - 050d9ef31faa59c7ebb3b4dc0ca4df1774cbc4a10a5dd89c87358d1e73842fb6
+  - 8256c7179c415e8588a0612608f7c253baf026d8a237cd8cbf01720758e8b5dc
 output_sha256:
   - 2226933130c39b16b74d6805657a1a42acc87830c35282936da571bc62162a26
+  - b934628ab80fefe5fdc6662d10f12bffa4f6f1fb25a3006b9254f3f4b7d204d6
 semantic_sha256:
   - a77811be1a53f2e0d0e0eeac3b4a4ecac358f79c8ed0b6ec5fa6f03f3bb0c826
+  - f004cd7643933e81a2fbce73a3df6d72c9e4943702cca7ee17b32d6690be3874
 hash_basis: LF-normalized bytes
 ---
 
@@ -286,9 +291,86 @@ Accordingly this theorem proves neither:
 In particular, the raw all-level polynomial tower is not an all-level tower
 of new image primes.
 
-## 8. Exact arithmetic audit
+## 8. Packet monoid and the branch-transplant law
 
-The companion checks the matrix determinant, the eight named packet rows,
+Complete packets form a multiplicative monoid modulo nonzero rational
+scalars.  Indeed, every weighted initial form of a product is the product of
+the two initial forms, so
+
+```text
+A(e,m) * A(f,n) = A(e+f,m+n).                         (24)
+```
+
+On this monoid define the fixed cleared-norm operator
+
+```text
+T(P)=L^e N(P)        when P has packet A(e,m).         (25)
+```
+
+The polynomiality theorem makes `T` an everywhere-defined endomorphism, and
+norm multiplicativity plus grade additivity gives the exact laws
+
+```text
+T(PQ)=T(P)T(Q),       T(cP)=c^3T(P),                  (26)
+grade(T(P))=M grade(P),
+M=[[7,-2],[3,-2]].                                    (27)
+```
+
+Now suppose an old-boundary return occurs at a later raw rung:
+
+```text
+P_n=L^s R,       s=ord_L(P_n)>0.                      (28)
+```
+
+Initial forms are multiplicative, and the five initial forms of `L` are the
+packet `A(1,0)`.  Dividing each complete face of `P_n` by the corresponding
+face of `L^s` proves
+
+```text
+R has A(e_n-s,m_n),       0<s<=e_n-m_n.               (29)
+```
+
+The last bound is sharp at the packet level: the `z^(e-m)` exponent on the
+minimum-`beta` face is the first one to reach zero.  Applying (26) repeatedly
+to (28) gives the branch-transplant law
+
+```text
+P_(n+k)=P_k^s T^k(R)        for every k>=0.            (30)
+```
+
+Thus a returned `L^s` factor is carried along the canonical ancestry:
+
+```text
+L^s, H^s, J^s, G^s, R_5^s, ...                       (31)
+```
+
+up to the already recorded nonzero rational normalizations.  A positive
+later defect therefore forces a proper ancestral factor at that rung and all
+its descendants; it rules out an all-prime raw tower from that point onward.
+The converse is false: `s_n=0` proves only `L`-coprimality and does not prove
+irreducibility.
+
+The defect word has a faithful formal encoding
+
+```text
+D(t)=sum_(n>=0) s_n t^n in N[[t]],                    (32)
+```
+
+and one ancestry shift is multiplication by `t`.  Its support is literally a
+subset of the natural numbers.  Replacing (32) by a scalar harmonic subseries
+loses that support: already on `{1,...,13}`, the `8192` subsets give only
+`3712` reciprocal sums, `2944` of them collision values, with maximum
+multiplicity three; in particular
+
+```text
+1/2=1/3+1/6=1/4+1/6+1/12.                            (33)
+```
+
+The formal series, not the harmonic scalar, is the correct ancestry sidecar.
+
+## 9. Exact arithmetic audits
+
+The first companion checks the matrix determinant, the eight named packet rows,
 the next three raw rows, invariant cone, congruences, order-two recurrence,
 Pell identity through `n=15`, Cassini identity through `n=14`, and the
 symbolic valuation ledger
@@ -299,13 +381,20 @@ symbolic valuation ledger
 
 for hostile values `s=0,1,2,e,e+1`.  Ordinary and optimized replays agree
 line-for-line with the stored output.  These checks audit the arithmetic and
-scope; Sections 2--4 are the geometric proof.
+scope; Sections 2--4 are the geometric proof.  The second companion checks
+all five packet-face exponent vectors under 256 orbit-row products, renewal
+additivity, the sharp `L^s` quotient boundary through ten rows, three
+synthetic transplant hostiles through five descendants, and the complete
+`2^13` harmonic collision census.  Synthetic defects test (30); they are not
+observed returns in the fixed Keller tower.
 
 Reproduce with
 
 ```text
 python -B 04-computation/keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.py
 python -B -O 04-computation/keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.py
+python -B 04-computation/keller_packet_monoid_branch_transplant_audit_20260816.py
+python -B -O 04-computation/keller_packet_monoid_branch_transplant_audit_20260816.py
 ```
 
 Promotion from the reserved status awaits the independent proof audit.

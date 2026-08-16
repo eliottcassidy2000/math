@@ -1,5 +1,34 @@
 # Script Results Index
 
+- `keller_packet_monoid_branch_transplant_audit_20260816.py` -> matching
+  `.out` [PROVISIONAL STRUCTURAL COROLLARY PENDING THM-3528 AUDIT].  Complete
+  packet products add grades, the renewal matrix is additive on all 256
+  tested orbit-row pairs, and the cleared norm obeys the symbolic monoid law
+  `T(PQ)=T(P)T(Q)`.  If a later raw rung contains `L^s`, its packet quotient
+  is `A(e-s,m)` with sharp bound `s<=e-m`, and every descendant contains the
+  transplanted canonical factor `P_k^s`.  The faithful defect carrier is a
+  formal series; harmonic evaluation loses support (`8192` subsets of
+  `{1,...,13}` give `3712` sums and `2944` collision values).  Synthetic
+  defects are hostiles, not observed returns; later units, factors, images,
+  and general JC remain open.  Script/output/semantic LF SHA-256:
+  `8256c7179c415e8588a0612608f7c253baf026d8a237cd8cbf01720758e8b5dc` /
+  `b934628ab80fefe5fdc6662d10f12bffa4f6f1fb25a3006b9254f3f4b7d204d6` /
+  `f004cd7643933e81a2fbce73a3df6d72c9e4943702cca7ee17b32d6690be3874`.
+
+- `k4_xor_path_closure_tournament_atlas_20260816.py` -> matching `.out`
+  [FINITE-EXACT BOOLEAN/TOURNAMENT SIDECAR].  Relative to a chosen transitive
+  `T4` gauge, all 64 undirected `K4` masks biject with the 64 labelled
+  tournaments by edge reversal.  The canonical bidirected-P4 mask gives the
+  strong score-`(1,1,2,2)` tournament with two cyclic triples; all 12 P4 masks
+  have triangle-parity weight two.  Adding the Boolean closure edge makes the
+  C4 mask the alternating `K4` cut.  Its consistently oriented all-one
+  cochain has seam `4 mod 13` but parity zero mod 2, so XOR cannot supply the
+  missing D5 coefficient/current map.  No clock, flux, row exclusion, or
+  LRC(14) follows.  Script/output/semantic LF SHA-256:
+  `bcfdcf20a595e2e11bb0d70221624b8d435f34284609272c514ac8474f9aea64` /
+  `0e003b5fedffd5382cf85a39f371ae600cf1e5ffabac2eccc8deb154916e20de` /
+  `1d0dfe67dc8537728c3a71bed89c3109e9604130c4dcd24d56412f37d9fadf7d`.
+
 - `lrc_r5_third_current_digit_pointed_root_difference_diagonal_bundle_probe_20260816.py`
   -> matching `.out` [FINITE-EXACT STATIC THIRD-CYLINDER RESPONSE SIDECAR;
   NO THEOREM PROMOTION].  The exact mod-2197 half-open source profiles and a
