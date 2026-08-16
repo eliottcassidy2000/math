@@ -1,0 +1,11 @@
+== same counts, different/no shortlex logarithmic density ==
+binary level n=[2^n,2^(n+1)-1]; each selected half has a_n=2^(n-1), Kraft mass=1/2
+early limiting level mass=log(3/2); late limiting level mass=log(4/3)
+level-12 exact masses: early~0.405505800972 (2218/2219 digits), late~0.287702418470 (2516/2517 digits); early>late: PASS
+alternating stage lengths 2^(2^k) make prior/current length ratio tend to zero: PASS
+therefore the staged language has identical level counts but two distinct normalized harmonic subsequential limits
+depth-2 carrier: 4 binary words=K4 vertices; 6 comparisons=K4 edges; 3 Walsh forms=3 perfect matchings
+an order-6 tournament would have 15 comparisons, so the six-edge carrier is not T6
+semantic ledger sha256=e135ce689fe04866568fd98961a45f3ebc9fabca7c03c9bf92c50be762f2cb45
+scope: arbitrary binary shortlex language boundary; no automaton, LRC current, JC flux, or ancestry recovery
+all exact controls passed
