@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Finite exact companion for provisional THM-3511."""
+"""Finite exact companion for proved THM-3511."""
 
 from __future__ import annotations
 

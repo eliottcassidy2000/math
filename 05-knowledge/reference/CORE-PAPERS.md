@@ -18,7 +18,7 @@ collide, links—not bare IDs—are canonical.
 ## Rule 30
 
 - **Sources/status:** [announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/); [active prizes](https://rule30prize.org/) checked 2026-08-15; openness is repo inference.
-- **Imported:** [Christol et al.](https://www.numdam.org/articles/10.24033/bsmf.1926/): finite-field algebraic iff automatic; only [THM-3471](../../01-canon/theorems/THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum.md) finite sums.
+- **Imported:** [Rowland](https://doi.org/10.25088/ComplexSystems.16.3.239) gives the sequence now identified with `v_m`; [Christol et al.](https://www.numdam.org/articles/10.24033/bsmf.1926/) applies only to [THM-3471](../../01-canon/theorems/THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum.md) finite sums.
 - **Repo frontier:** [3511](../../01-canon/theorems/THM-3511-rule30-orbit-signalizer-gap-renormalization-and-shallow-portrait-hostile.md); [3512](../../01-canon/theorems/THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary.md).  No prize/priority claim.
 
 ## Lonely Runner Conjecture

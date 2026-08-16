@@ -29,9 +29,10 @@ related:
   - THM-3503-rule30-odometer-ultrametric-regrading-and-orbit-closure-dimensions
 external:
   - I. V. Bondarenko, N. V. Bondarenko, S. N. Sidki, and F. R. Zapata, "On the conjugacy problem for finite-state automorphisms of regular rooted trees," Groups, Geometry, and Dynamics 7 (2013), 323--355, arXiv:1011.2227 (CITED for orbit-signalizer terminology and finite order-graph method only)
+  - Eric S. Rowland, "Local Nested Structure in Rule 30," Complex Systems 16 (2006), 239--258, DOI 10.25088/ComplexSystems.16.3.239 (CITED for the identical nestedness sequence and values through scale 40)
 script: 04-computation/rule30_orbit_signalizer_gap_thm3511.py
 output: 05-knowledge/results/rule30_orbit_signalizer_gap_thm3511.out
-script_sha256: 436ea4f92b653db222f26774d5fbcf9774839d66d3fd51b1d8bf978f61bba183
+script_sha256: 2ce110f0b8e9c71c3d298aaf07e8e6c02b70d33e5671bc763f3f3b490caa5445
 output_sha256: 8c7599690b4eb013f94c3928c7fd6906979bdd4f5e1a1e866cfbfd2753ae8a51
 hash_basis: raw bytes after audit promotion
 ---
@@ -123,7 +124,7 @@ OS(A)={ (A^|Orb_A(u)|)|_u : u in {0,1}^* }.            (6)
 The term is imported from Bondarenko--Bondarenko--Sidki--Zapata; every
 identity below is derived directly from (1)--(5).
 
-### Provisional Theorem 2.1 (gap renormalization)
+### Theorem 2.1 (gap renormalization)
 
 Every `s_m` is active at its root, `s_0=B`, and
 
@@ -165,6 +166,33 @@ This is a first-return or Kakutani induction on nested seed cylinders.  It is
 also the exact anti-sibling common-prefix picture: `d_m` is the Gromov-product
 length by which the two odd sibling directions cancel.  Neither analogy adds
 a finiteness claim.
+
+### 2.1 Exact identification with Rowland's nestedness sequence
+
+Rowland's shifted and reflected Rule 86 coordinate defines `lambda_I(t)` as
+the initial black-run length in row `t-1`, and puts `a(m)=lambda_I(2^m)`.
+Under the coordinate equivalence in THM-3458, this is the initial low-bit run
+of ones in `R_(2^m-1)`.  Write `Phi` for the packed update represented by
+`A`.  If a packed word `x` has exactly `L` initial one bits, then its low-bit
+rule gives
+
+```text
+nu_2(Phi(x)-1)=L.                                     (10a)
+```
+
+Indeed bit zero remains one, the intervening bits cancel, and bit `L` is the
+first disagreement with the seed.  Therefore
+
+```text
+boxed: a(m)=lambda_I(2^m)=nu_2(R_(2^m)-1)=v_m.        (10b)
+```
+
+Thus Rowland's published values through `m=40` are finite historical data for
+the same sequence, not a merely similar statistic.  His paper proves the
+nestedness/strict-increase mechanism and reports the continuation through
+`v_40=93`; the cross-depth signalizer recurrence (7)--(15) is the additional
+object proved here.  The cited continuation is not used as a verifier gate,
+and no literature novelty claim is made.
 
 ## 3. A three-letter, one-control-bit finite presentation
 
