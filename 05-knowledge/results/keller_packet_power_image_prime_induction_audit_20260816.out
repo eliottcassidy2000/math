@@ -1,0 +1,12 @@
+== fixed Keller packet-power image-prime induction audit ==
+matrix=((7, -2), (3, -2));rows_0_to_9=((1, 0), (7, 3), (43, 15), (271, 99), (1699, 615), (10663, 3867), (66907, 24255), (419839, 152211), (2634451, 955095), (16530967, 5993163))
+raw_rows_n>=1=gcd(e_n,m_n)=1 and (e_n,m_n)=(1,3) mod 6: PASS through n=24
+strict_e_growth=e_(n+1)-e_n=6e_n-2m_n>=5e_n>0: PASS
+top_face_prime_support=(x^e)*(3xz-2y)^m with coprime irreducibles: PASS
+square_cube_gate=d|e and d|m is impossible for d=2,3 on every nonseed row: PASS
+hostile_A(2,0)_top_face=256*x**2;literal_square=PASS
+hostile_A(3,0)_top_face=4096*x**3;literal_cube=PASS
+image_indexing=F^n uses candidate primes P_0,...,P_(n-1);strict grades distinguish them
+semantic_sha256=ab5aa0fe7f28607c766ea4e3d1d42a7b84b4e9843ce2e35df49ebefd06bace75
+scope=arithmetic/UFD certificate conditional on geometric norm-divisor and THM-3529 finite-unit gates;no separability,exact discriminant multiplicity,arbitrary-map,or general JC claim
+all exact checks passed

@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `keller_packet_power_image_prime_induction_audit_20260816.py` -> matching
+  `.out` [VERIFIED-EXACT ARITHMETIC/UFD CERTIFICATE FOR RESERVED THM-3530;
+  GEOMETRIC INDUCTION AUDIT PENDING].  Every actual raw packet row after the
+  seed has `gcd(e_n,m_n)=1`, residue `(1,3) mod 6`, and strictly increasing
+  first grade.  Since the complete maximum-lambda face is
+  `x^e(3xz-2y)^m` on two coprime irreducibles, it cannot be a square or cube.
+  Thus, conditional on THM-3529 and the finite-etale norm-divisor lemma, a
+  candidate identity `Q=cR^d`, `1<=d<=3`, forces image degree `d=1`.
+  The complete-packet hostiles `L^2` and `L^3` have literal square/cube top
+  faces, showing grade primitivity is load-bearing.  No geometric image
+  theorem is promoted at this index state, and no separability, exact
+  discriminant multiplicity, arbitrary-map, or general JC claim is made.
+  Script/output/semantic LF SHA-256:
+  `b756f9707a5bce1885069a75e48f27c7a0163b321f9d606ce33c9e0e171fe67c` /
+  `cae9264170d3fca662d7a2dcbc4380a26fff98be279e8f57fd600a2389150dc4` /
+  `ab5aa0fe7f28607c766ea4e3d1d42a7b84b4e9843ce2e35df49ebefd06bace75`.
+
 - `keller_finite_branch_beta_homogeneous_unit_obstruction_20260816.py` ->
   matching `.out` [VERIFIED-EXACT ALGEBRAIC CERTIFICATE FOR RESERVED
   THM-3529; THEOREM AUDIT PENDING].  For the fixed sporadic map, the exact
