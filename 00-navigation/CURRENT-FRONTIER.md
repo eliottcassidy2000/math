@@ -38,8 +38,9 @@ THM-3425 gives primitive cap-six support.
 [THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md) proves 15-atom cap-seven support only at zero current.
 [THM-3479](../01-canon/theorems/THM-3479-literal-half-twist-relation-current-two-transplant-certificate.md)
 is **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED**: U_full `169/169`,
-`13^3`, `72/72`; U_clock centre/no bank. THM-3514: owner
-`52/117`, rank4 and full Walsh/drift. Both are Cartesian `B^1`;
+`13^3`, `72/72`; U_clock centre/no bank. THM-3514 gives owner `52/117`, rank4
+and full Walsh/drift. THM-3515 gives five role rows of rank5 and all 72 charts
+nonzero pointwise and in every drift/Fourier fibre. All are Cartesian `B^1`;
 ancestry/current/`H^1`/scalar/LRC remain open.
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;
