@@ -1,0 +1,25 @@
+== r=5 shared rank-six endpoint-response representation audit ==
+coordinates=(source b_source,state,relation);(owner r_owner,state,relation)
+field=(prime=755373809845391722745761,relation_carrier=Fun(F13,Fp),dimension=13)
+typed_parent=(same Boolean-square table): PASS
+pair_record_order=(source_rank,owner_rank,parent_rank,stack_rank,intersection_dim,union_mod_parent_dim)
+raw_pair=(6, 6, 4, 6, 6, 2)
+pure_pair_order=(source_rank,owner_rank,empty_parent_rank,stack_rank,intersection_dim,stack_rank)
+pure_three_way_pair=(6, 6, 0, 6, 6, 6)
+raw_with_own_pure_stack_ranks_(source,owner)=(7, 7)
+affine_stabilizers_(source,owner,common)=(((1, 0),),((1, 0),),((1, 0),))
+raw_reflection_splits_(source,owner)=((),())
+pure_reflection_splits_(source,owner)=((),())
+typed_simultaneous_path_branch_target_affine_(source,owner)=((),())
+descent_order=(source(horizontal,+,-),owner(horizontal,+,-),joint_graph_rank;then_pure)
+abstract_involution_descent=((6, 3, 3), (6, 3, 3), 6, (6, 3, 3), (6, 3, 3), 6)
+parent_descent_order=(horizontal,+,-,graph_in_raw,quotient_+,quotient_-)
+Boolean_parent_subrepresentation=(4, 2, 2, 6, 1, 1)
+centering_order=(centred_rank,centred_plus_pure_rank,raw_plus_centred_rank,raw_plus_constants_rank,raw_plus_pure_rank)
+augmentation_projection_(source,owner)=((6, 6, 7, 7, 7), (6, 6, 7, 7, 7))
+digests_(source,owner,parent,source_pure,owner_pure)=('504e91431cf4d55f6e3cb5aa7c6e6f2c34db538cb692c67857a5c7627b252261', '2a195fac7fbd60a4bbd2597bf34baf87302ead16c7c0e8c67c0667b0d320dfba', '5f4b9609faaa5f148d112a7cde5cfba0ab2c1385b4c53ea9c4bcfc6e93d106fc', '2a289e3f4de379985083c48841557da6f6777d21b6f6e7354b83b1b45ecb8e29', 'fc362ff7a4fe98ba4226fa1624235e134b43d88a76af8c1cfa09948094159c38')
+canonical_rowspace_digests_(source,owner,source_pure,owner_pure,parent,source_graph,owner_graph,parent_graph)=('6e9083f15408f6d2d85fb3f2747ba0bd1f987e83ce4b836cb7298aaccc84e0c4', '6e9083f15408f6d2d85fb3f2747ba0bd1f987e83ce4b836cb7298aaccc84e0c4', 'ae86ad2a3fd03bea95c823b2454b78f244581aa048cb2da63a03a75f484cc596', 'ae86ad2a3fd03bea95c823b2454b78f244581aa048cb2da63a03a75f484cc596', '1b4fef00a23dcb79dc52ace662bae2f858ce3da27b6ef19b902ae40f5a79e755', '67850c2586ac9a4f242ada7173eba2fe1b3c5e6d1ae20a5e2b6d7ad0dc7d3f88', '67850c2586ac9a4f242ada7173eba2fe1b3c5e6d1ae20a5e2b6d7ad0dc7d3f88', '579a14c27833b79eb5cdc045c00bd93d05e9b7bee191ced128436e15406800e8')
+semantic_sha256=7baeb128a4c4d5998342611fdcf821d002ffb4622692dd72c03e6f11c8d9825a
+typing=path involution on states;radix-tree reversal on digits;endpoint affine action on relation
+not_typing=cut arcs are marginalized;tournament relation absent;no joint ancestry/current map
+scope=finite exact target-row-space comparison only;no physical current,row exclusion,or LRC14
