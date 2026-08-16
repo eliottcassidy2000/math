@@ -157,7 +157,9 @@
   not only equal dimensions, prove the statewise current-branch row spaces
   equal the six pointed rows; the stronger point-resolved carrier has global
   base/digit/union ranks `(6,6,6)`.  Branch amplitude rank four, carrier rank
-  six, and whole-tensor ranks `40/42` are distinct.  The source/current
+  six, and whole-tensor ranks `40/42` are distinct.  The carrier is the six
+  directed arcs of the incoming bidirected-`P4` sidecar, whose static `H1`
+  is zero.  The source/current
   `17->4->6` and two-current `13/12->6` comparisons do not imply a stationary
   digit recurrence; the latter has only address-conditioned diagonal
   `K_(r0,r1)`.  No exact address, chronology, physical current, row exclusion,

@@ -115,6 +115,20 @@ Retaining all six point labels gives base, one-current-digit, and union ranks
 pointed relation carrier.  It is not the dimension of the whole four-way
 tensor: the other bipartitions have ranks `40` and `42`.
 
+The incoming representation sidecar identifies these six point labels with
+the directed arcs of the bidirected path
+
+```text
+0 <-> 1 <-> 3 <-> 2.
+```
+
+Thus the equality proved here lands more precisely in that six-arc module:
+the branch digit changes amplitudes on the arcs but creates no seventh arc
+carrier.  The alternating `P7` refinement and the contracted `P4` both have
+`H1=0`.  Consequently this factorization is not yet a cohomology class or
+flux; the missing Boolean closure edge `2--0`, a lawful clocked cochain, and
+its temporal typing remain necessary sidecars.
+
 ## Amplitude versus carrier
 
 The incoming source/current and two-current computations sharpen the scope:
