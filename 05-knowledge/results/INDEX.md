@@ -39,8 +39,30 @@
   Script/output LF SHA-256:
   `f9e82f502026dfe499ebba9290295f98056d1b7dba7c893184d9871a032be01f` /
   `becaa80c075bd46e4193b216406c2152f3d5d8565f6116ba6db9b712409badaa`.
+- `lrc_ufull_owner_boundary_k4xf13_endpoint_factorization_independent_audit_20260816.py`
+  -> matching `.out` [THM-3514 PROVED STRUCTURAL + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED].  A fresh central tensor contraction imports the
+  pinned THM-3479 endpoint primitives but no candidate guard/bucket script.
+  It derives the strict owner support `[0,1/2) union (13/2,7)` and the
+  endpoint engine's measure-equivalent half-open representative, checks the
+  13 singleton boundary difference directly against the owner-only periodic
+  intervals, and materializes all 169 unguarded atom tables.  Restoring the
+  H guard matches 78 direct guarded endpoint controls and reconstructs the
+  frozen `13^3` bank exactly.  Exactly `52/117` chamber/drift buckets survive
+  and all are nonzero for `q_H`, `q_q5`, and their bridge.  The bridge's
+  `4x13` table has rank four; all four Walsh rows are pointwise nonzero and
+  have all 13 nonzero drift-Fourier modes.  The four states are an undirected
+  `K4` carrier, not a tournament.  A common equivariant label gauge
+  `u=a+c` preserves drift but supplies no physical root or common ancestry.
+  Cartesian pairing, `B^1`, and the absence of a THM-2471 support predicate
+  remain explicit; no current, absolute `H^1`, row exclusion, or LRC(14).
+  Script/output/semantic LF SHA-256:
+  `f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc` /
+  `7684cdb6bb1641780977d9e2def3753d802bf026e126dbc5351bd8f8ddebd906` /
+  `d52c9f0a56c14a83e1e6b175c7b725314c99f09d44509bc8582847a5857f7da6`.
 - `lrc_ufull_guard_sheet_drift_bucket_bridge_probe_20260816.py` -> matching
-  `.out` [FINITE-EXACT ENDPOINT FACTORIZATION; NOT INDEPENDENTLY AUDITED].
+  `.out` [FINITE-EXACT ENDPOINT FACTORIZATION; INDEPENDENTLY AUDITED BY
+  THM-3514].
   Removing only the tau-translated H guard and splitting the remaining
   U_full E-set by the common `39=13*3` guard atoms reconstructs the frozen
   `13^3` character bank and the exact `q_H-q_q5` bridge.  The speed-13
