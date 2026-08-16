@@ -22,13 +22,15 @@
   `rho_ZMC(123)=8` and `rho_ZMC(227)=9`, with frozen half-twist witnesses
   `(1,40,42,81,82,83,117,122)` and
   `(2,6,10,215,217,219,221,223,225)`.  The first packet mixes quotient
-  orders `3^1,41^3,123^4`; the second lies in the prime order-227 layer.
+  orders `3^1,41^3,123^4`, while an exact rank-eight `q=41` packet and its
+  threefold pullback give a coexisting inherited realization at `q=123`;
+  the second displayed packet lies in the prime order-227 layer.
   Together with THM-3416/3461, the first seven parabolic U-spine ranks are
   `(6,4,7,9,8,4,9)`, refuting the square-root extrapolation at `q=123`.
   Script/output/semantic LF SHA-256:
-  `5fa9923e266f35b45df8256e43e01333a577d94d023ffd270248ed4be6c5c6e5` /
-  `86aeca62fd9cb995453028da7bec15c7b24dd125ff6cfe6eca9f9216436e09cf` /
-  `69ca08c6f454827fc67fd179b0ad2df289b4c1b58d7a67ebf719975cb583ff96`.
+  `19ac809797ac3e1387d8f66eee1a92a30150bd7a593fcb5f88b3348813909e8e` /
+  `fa0c5857a61e09bad2a2fe53936a88a05269078bc5519a0f4bb0aa993779d01f` /
+  `992ebd92709f39f2250bb9a21a10b6e0bb3c6e21860a3bf388d826e23b500b50`.
   No endpoint current, spectral closure, density change, or LRC(14)
   consequence follows.
 - `lrc_literal_half_twist_common_centre_q83_rank9_thm3461.py` -> matching

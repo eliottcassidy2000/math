@@ -25,12 +25,20 @@ has quotient orders
 123,123,41,41,3,123,41,123.
 ```
 
-No proper divisor supplies a rank-seven cover.  The positive packet instead
-uses one order-three backbone, three order-41 blocks, and four genuinely
-order-123 blocks.  Its active gcd is still one, so the packet is primitive at
-the full modulus.  Divisor ancestry is therefore not a disjoint union of
-independently priced layers; different owner orders can cooperate inside one
-primitive family.
+No proper divisor supplies a rank-seven cover, but `q=41` does supply an exact
+rank-eight cover:
+
+```text
+(3,5,11,19,28,33,37,39).
+```
+
+Its threefold pullback covers at `q=123` with active gcd three.  The displayed
+mixed-order packet is a second realization of the same rank: it uses one
+order-three backbone, three order-41 blocks, and four genuinely order-123
+blocks, while retaining active gcd one.  Thus divisor ancestry and primitive
+mixed-order structure coexist in one grade.  They are realization types, not
+mutually exclusive labels; different owner orders can still cooperate inside
+one primitive family even when the minimum rank is also inherited.
 
 This suggests a concrete search heuristic for later composite U-spine labels:
 factor `q`, enumerate quotient-order profiles before owner residues, and price

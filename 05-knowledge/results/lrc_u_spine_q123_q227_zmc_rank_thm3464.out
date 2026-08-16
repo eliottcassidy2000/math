@@ -15,6 +15,10 @@ DIVISOR_Q=3
 DIVISOR_Q=41
   layer=0 unique=20 maximal=20 digest=e3e79c0ef2384dd50c3001ff8c25903489135c71bd329486e529079d4047a9a2 cap7_witness=() stats=(1, 0, 0, 20, 20)
   layer=1 unique=40 maximal=40 digest=adf656a03e9fe9bf902af6d46d591405c0c6af0f9192d9522969989b906d2085 cap7_witness=() stats=(307, 325, 19, 40, 40)
+  half_cap8=((1, 11, 13, 15, 21, 34, 37, 39), (12, 14, 3, 40, 40))
+  frozen_witness=(3, 5, 11, 19, 28, 33, 37, 39)
+  mode_widths=(6, 6, 6, 6, 13, 6, 6, 6) multiplicity=((1, 35), (2, 6))
+  q123_threefold_pullback=(9, 15, 33, 57, 84, 99, 111, 117); active_gcd=3
 Q=123 RANK=8
   layer=0 unique=61 maximal=61 digest=8f59ee46dc001a415ea5d47d196638aa10131ebe2e9322bfa8f54d052806ac29 cap7_witness=() stats=(246, 245, 0, 61, 61)
   layer=1 unique=121 maximal=121 digest=e26afc95ea99c1612a7db1a97c6e9459fb45b3ea5c29e42e955676832536687f cap7_witness=() stats=(16949, 17104, 156, 121, 121)
@@ -34,5 +38,5 @@ Q=227 RANK=9
   open_y_radius=1/315
   multiplicity=((1, 176), (2, 38), (3, 13)) private=(22, 20, 14, 12, 18, 26, 20, 22, 22)
   common_source_centre=1/(2q); complete_cochain=0; all_projective_wedges=0
-SEMANTIC_SHA256: 69ca08c6f454827fc67fd179b0ad2df289b4c1b58d7a67ebf719975cb583ff96
+SEMANTIC_SHA256: 992ebd92709f39f2250bb9a21a10b6e0bb3c6e21860a3bf388d826e23b500b50
 VERDICT: exact q123 rank 8 and q227 rank 9; no endpoint current or LRC(14) conclusion

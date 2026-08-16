@@ -1,6 +1,6 @@
 ---
 id: THM-3464
-title: "U-spine q=123 rank-eight break and exact ZMC prefix through q=227"
+title: "U-spine q=123 rank-eight coexistence and exact ZMC prefix through q=227"
 status: >
   RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
   AUDIT PENDING.  The fifth and seventh parabolic Berggren U-spine labels
@@ -11,7 +11,7 @@ status: >
 source: codex-2026-08-15-u-spine-q123-rank-eight
 audit: >
   exact integer/Fraction two-layer banks, complete branch-and-memo set-cover
-  searches, divisor ancestry, 271816 direct/fraction mask cells, residue
+  searches, q=41 witness and threefold pullback, divisor ancestry, 271816 direct/fraction mask cells, residue
   normalization, mode-width, open-cell, multiplicity, dependency, semantic,
   AST/security, and normal/optimized replay gates; independent audit pending
 depends_on:
@@ -23,13 +23,13 @@ related:
   - THM-3454-fibonacci-selected-u-spine-farey-lorentz-isometry-and-one-tie-edge-order
 script: 04-computation/lrc_u_spine_q123_q227_zmc_rank_thm3464.py
 output: 05-knowledge/results/lrc_u_spine_q123_q227_zmc_rank_thm3464.out
-script_sha256: 5fa9923e266f35b45df8256e43e01333a577d94d023ffd270248ed4be6c5c6e5
-output_sha256: 86aeca62fd9cb995453028da7bec15c7b24dd125ff6cfe6eca9f9216436e09cf
-semantic_sha256: 69ca08c6f454827fc67fd179b0ad2df289b4c1b58d7a67ebf719975cb583ff96
+script_sha256: 19ac809797ac3e1387d8f66eee1a92a30150bd7a593fcb5f88b3348813909e8e
+output_sha256: fa0c5857a61e09bad2a2fe53936a88a05269078bc5519a0f4bb0aa993779d01f
+semantic_sha256: 992ebd92709f39f2250bb9a21a10b6e0bb3c6e21860a3bf388d826e23b500b50
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3464 -- U-spine q=123 rank-eight break and exact ZMC prefix through q=227
+# THM-3464 -- U-spine q=123 rank-eight coexistence and exact ZMC prefix through q=227
 
 **RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
 AUDIT PENDING.**
@@ -98,7 +98,7 @@ misses a sheet or if the sum of the `slots` largest individual gains is less
 than the number of missing sheets.  Both are necessary conditions, so the
 branch-and-memo search is complete in both directions.
 
-## 3. The divisor-layer break at q=123
+## 3. Divisor-layer coexistence at q=123
 
 The nontrivial divisors of `123` are `3,41,123`.  The complete banks and
 cap-seven searches are:
@@ -113,7 +113,22 @@ cap-seven searches are:
 | 123 | 1 | 121/121 | 16,949 / 17,104 / 156 | no |
 
 These all-bank exclusions are stronger than the primitive exclusions needed
-in the divisor-minimum formula.  Hence `rho_ZMC(123)>7`.  In the half layer,
+in the divisor-minimum formula.  Hence both `rho_ZMC(41)>7` and
+`rho_ZMC(123)>7`.  At `Q=41`, the half-layer packet
+
+```text
+(3,5,11,19,28,33,37,39)                              (4a)
+```
+
+covers all `41` sheets.  It has widths `(6,6,6,6,13,6,6,6)` and occupancy
+profile `1^35 2^6`, so `rho_ZMC(41)=8`.  Its threefold pullback
+
+```text
+(9,15,33,57,84,99,111,117)                           (4b)
+```
+
+covers at `q=123` with active gcd three.  Independently, the primitive
+full-modulus half-layer packet
 
 ```text
 (1,40,42,81,82,83,117,122)                            (5)
@@ -152,12 +167,14 @@ order 41:  3 owners,
 order 123: 4 owners.                                  (8a)
 ```
 
-Thus rank eight is not inherited from one proper divisor.  It is a primitive
-`q=123` family whose owners mix all three divisor orders.  This is compatible
-with the divisor-minimum theorem, which first takes the gcd of the complete
-active family; it refutes the stronger but false idea that distinct owner
-orders may be priced independently.  The fourfold overlaps in `(8)` also show
-why XOR or a partition model would lose the positive witness.
+Thus the same rank-eight grade has two different ancestry types: the inherited
+pullback `(4b)` from `q=41`, and the primitive `q=123` family `(5)` whose owners
+mix all three quotient orders.  Primitivity of one realization does not imply
+noninheritance of the grade.  What survives is a coexistence theorem: divisor
+ancestry is not a disjoint union of independently priced layers, because a
+full-modulus mixed-order packet can inhabit the same minimum rank as a proper-
+divisor pullback.  The fourfold overlaps in `(8)` also show why XOR or a
+partition model would lose the primitive positive witness.
 
 ## 4. The prime q=227 boundary
 

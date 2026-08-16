@@ -215,7 +215,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   one saddle. THM-3235 gives blowup scaling/decimation; THM-3248 factors Q4's walk resolvent and gives all-depth finite differences plus a fixed-depth Stirling compiler. Observer twins block generic scalar compression; Q4 radius/non-P stay OPEN.
   THM-3173 separates `C2*C3`, regular `S3`, and regular `C6`; their joint
   quotient has order 18, while pointed oriented quartic frames form `Q3`.
-  These are semantic action data, not a physical current or Keller bridge.
+  These are action data, not a physical current or Keller bridge.
 - THM-1880/1885 give Pell; THM-3335 blocks square-arc/skew-EW. THM-3339's `T6` loses owner; THM-3357/3364/3379 give `T3/T4`/Fibonacci quotients. An exact mod3/q15 bridge gives 4-state `S4` and 24-state frame-line packets, no owner.
 - THM-3457/3462: `25/477`.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.

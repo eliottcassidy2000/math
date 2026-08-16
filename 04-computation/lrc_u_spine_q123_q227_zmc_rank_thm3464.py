@@ -2,10 +2,11 @@
 """Exact deterministic companion for the provisional THM-3464 target.
 
 The script computes the two literal common-centre Boolean mask layers, proves
-the q=123 cap-seven exclusion and rank-eight witness, and proves the q=227
-cap-eight exclusion and rank-nine witness.  It also audits every divisor of
-123, reattaches the fixed half-twist centre to both positive witnesses, and
-checks the first seven labels of the parabolic Berggren U-spine.
+the q=41 and q=123 cap-seven exclusions and rank-eight witnesses, and proves
+the q=227 cap-eight exclusion and rank-nine witness.  It also exhibits the
+threefold q=41 pullback at q=123, reattaches the fixed half-twist centre to all
+frozen positive witnesses, and checks the first seven labels of the parabolic
+Berggren U-spine.
 
 All mathematical gates use integer or ``Fraction`` arithmetic and explicit
 exceptions, so ``python -O`` preserves the proof path.
@@ -53,10 +54,12 @@ WITNESSES = {
     123: (1, 40, 42, 81, 82, 83, 117, 122),
     227: (2, 6, 10, 215, 217, 219, 221, 223, 225),
 }
+Q41_WITNESS = (3, 5, 11, 19, 28, 33, 37, 39)
+Q123_PULLBACK = tuple(3 * owner for owner in Q41_WITNESS)
 EXPECTED_RANKS = {123: 8, 227: 9}
 EXPECTED_U_SPINE = (11, 27, 51, 83, 123, 171, 227)
 EXPECTED_PREFIX = (6, 4, 7, 9, 8, 4, 9)
-EXPECTED_SEMANTIC_SHA256 = "69ca08c6f454827fc67fd179b0ad2df289b4c1b58d7a67ebf719975cb583ff96"
+EXPECTED_SEMANTIC_SHA256 = "992ebd92709f39f2250bb9a21a10b6e0bb3c6e21860a3bf388d826e23b500b50"
 
 
 def require(condition: bool, detail: object) -> None:
@@ -364,13 +367,17 @@ def main() -> None:
                 require(not mask or mask in bank_masks[epsilon], ("residue normalization", q, owner, epsilon))
                 reference_cells += q
 
-    divisor_reports = {q: layer_report(q, (7,)) for q in (3, 41)}
+    divisor_reports = {
+        3: layer_report(3, (7,)),
+        41: layer_report(41, (7, 8)),
+    }
     q123 = layer_report(123, (7, 8))
     q227 = layer_report(227, (8, 9))
 
     for q, report in divisor_reports.items():
         for epsilon in (0, 1):
             require(not report["searches"][(epsilon, 7)][0], ("divisor cap7", q, epsilon))
+    require(divisor_reports[41]["searches"][(1, 8)][0], "q41 rank-eight search")
     for epsilon in (0, 1):
         require(not q123["searches"][(epsilon, 7)][0], ("q123 cap7", epsilon))
         require(not q227["searches"][(epsilon, 8)][0], ("q227 cap8", epsilon))
@@ -382,6 +389,11 @@ def main() -> None:
         q: witness_report(q, WITNESSES[q])
         for q in (123, 227)
     }
+    q41_witness = witness_report(41, Q41_WITNESS)
+    require(q41_witness["widths"] == (6, 6, 6, 6, 13, 6, 6, 6), q41_witness)
+    require(q41_witness["profile"] == ((1, 35), (2, 6)), q41_witness)
+    require(union_mask(123, Q123_PULLBACK, 1) == (1 << 123) - 1, "q41 pullback cover")
+    require(gcd(*Q123_PULLBACK) == 3, ("q123 pullback gcd", Q123_PULLBACK))
     require(len(WITNESSES[123]) == EXPECTED_RANKS[123], WITNESSES[123])
     require(len(WITNESSES[227]) == EXPECTED_RANKS[227], WITNESSES[227])
 
@@ -400,6 +412,11 @@ def main() -> None:
                 },
             }
             for q in (3, 41)
+        },
+        "q41_rank8": {
+            "search": divisor_reports[41]["searches"][(1, 8)],
+            "witness": q41_witness,
+            "q123_pullback": Q123_PULLBACK,
         },
         "q123": {
             "banks": q123["banks"],
@@ -447,6 +464,11 @@ def main() -> None:
                 f"  layer={epsilon} unique={bank['unique']} maximal={bank['maximal']} "
                 f"digest={bank['digest']} cap7_witness=() stats={stats}"
             )
+        if q == 41:
+            print(f"  half_cap8={report['searches'][(1, 8)]}")
+            print(f"  frozen_witness={Q41_WITNESS}")
+            print(f"  mode_widths={q41_witness['widths']} multiplicity={q41_witness['profile']}")
+            print(f"  q123_threefold_pullback={Q123_PULLBACK}; active_gcd=3")
     for q, report, lower_cap, upper_cap in (
         (123, q123, 7, 8),
         (227, q227, 8, 9),

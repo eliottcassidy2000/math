@@ -9,6 +9,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-405 (2026-08-15, THM-3464 q=123 ancestry) -- a primitive mixed-order witness was mistaken for noninheritance
+
+- **What failed:** the provisional THM-3464 package correctly found a
+  primitive full-modulus rank-eight witness at `q=123`, with quotient-order
+  profile `3^1,41^3,123^4`, but then said that rank eight was not inherited
+  from a proper divisor.  Primitivity of one realization does not exclude a
+  second realization with nontrivial active gcd.
+- **Minimal witness / first failed implication:** at `Q=41`,
+  `(3,5,11,19,28,33,37,39)` is an exact primitive half-twist eight-cover,
+  while the independently audited cap-seven exclusion proves it is minimal.
+  Its threefold pullback
+  `(9,15,33,57,84,99,111,117)` covers at `q=123` with active gcd three.
+  The first false implication was “this displayed q=123 witness is primitive
+  and mixes divisor orders, therefore the rank cannot also descend from
+  q=41.”
+- **Repair / strongest survivor:** `rho_ZMC(41)=rho_ZMC(123)=8`.  The q=123
+  grade has **coexisting** inherited and primitive realizations: the pullback
+  from q=41 and the distinct mixed-order active-gcd-one packet
+  `(1,40,42,81,82,83,117,122)`.  All q123/q227 lower bounds, witnesses,
+  centres, widths, multiplicities, the first-seven U-spine rank word, and the
+  square-root hostile survive unchanged.
+- **Reusable rule:** a primitive representative proves existence in the full
+  divisor layer, not uniqueness of ancestry.  Before declaring a grade
+  noninherited, search every proper divisor at the same rank and pull each
+  positive witness back.  Record “primitive versus inherited” as realization
+  types that may coexist, not mutually exclusive rank labels.
+
 ## MISTAKE-404 (2026-08-15, THM-3453/3455 half-twist scope) -- a fixed common mode centre was discarded with the arbitrary-centre problem
 
 - **What failed:** THM-3453 correctly classified the literal half-twist masks
