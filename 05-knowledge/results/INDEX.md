@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `lrc_private_support_7x13_incidence_h1_probe_20260815.py` -> matching
+  `.out` [FINITE-EXACT STRUCTURAL SIDECAR; THM-3473 AUDIT PENDING].  The
+  provisional private-support two-section has eight vertices and thirteen
+  edges, so deleting its `2p` hub row gives an exact full-rank `7x13`
+  incidence matrix.  Its Gram determinant is
+  `256=16*16*1`; exactly `256` maximal minors are nonzero and all are
+  `+/-1`, matching the spanning trees of two `K4`s joined by the forced
+  repair edge.  The graph cycle space has dimension six.  Every current
+  obtained from owner potentials is a coboundary and pairs zero with all six
+  cycles, so the static carrier gives no nonzero absolute `H^1` flux; a
+  phase/holonomy sidecar is required.  Script/output/semantic LF SHA-256:
+  `6f4487b69ba033fb75f64f70536b8f4c6310a82d74cdb59301827140a89df7e1` /
+  `b9ef232ddc831fbc51d0e1f9c90d588305ffe41749e24a212410328f141b4004` /
+  `648523d2d701d19ba35567fd2c96aea65cc4a7ceb65b5e200abfcac8bc8d0a82`.
+  This is an exact `7 by 13` carrier and H1 no-go boundary, not bispectrum
+  nonvanishing or an LRC(14) result.
 - `lrc_three_p_private_sheet_boolean_atlas_thm3473.py` -> matching `.out`
   [THM-3473 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
   independent audit pending].  For `p=14k-1`, the THM-3469 eight-owner
