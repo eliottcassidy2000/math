@@ -335,15 +335,13 @@ is sharp: equal counts allow two densities or none.
   `S_n` atoms (`n>=3`). Fixed-map THM-3494/3508/3519: `x/y`;
   `x/y/z,[H]`; `x/y/z,[-2J]`. THM-1300 unsettled (MISTAKE-205); THM-1315
   repaired; THM-2473--2576 fixed-map.
-  THM-3495/3498/[3504](../01-canon/theorems/THM-3504-level-four-sporadic-keller-image-prime-and-four-component-nonproperness.md)
-  prove `S_(F^4)=V(LHJ G)` and `[Delta_4]=[2G]`;
-  THM-3506 gives `(271,99)` and `v_L(N(G))=-271`;
-  [3513](../01-canon/theorems/THM-3513-fixed-G-hybrid-newton-renewal-faces.md)
-  completes `G`; 3521 clears `R5`; 3522 packets `R5/R6`:
-  `(1699,615)/(10663,3867)`; 3523/27 clear `R7/R8`:
-  `(66907,24255)/(419839,152211)`; 3525/26: degree243/729,
-  `[Delta_5,Delta_6]=[-2R_5,2R_6]`. `R5/R6` images, later/all-level gates
-  OPEN. THM-2681
+  THM-3495/98/[3504](../01-canon/theorems/THM-3504-level-four-sporadic-keller-image-prime-and-four-component-nonproperness.md):
+  `S_(F^4)=V(LHJ G)`, `[Delta_4]=[2G]`. THM-3506/3513 give `G` packet
+  `(271,99)`; 3521--23/27 give packets through `R8`, ending
+  `(419839,152211)`; 3525/26 give degree243/729 and
+  `[Delta_5,Delta_6]=[-2R_5,2R_6]`. RESERVED 3528's raw all-level packet
+  proof is independently accepted; promotion, coprimality/images/later
+  geometry remain OPEN. THM-2681
   blocks the `A4/S4` cubic; THM-2685--2708 give its
   gain/holonomy.
   Audited THM-3448/3517: cyclic `x/y/z` are primitive all grades; `m=3` gives `S5` quintics `[L5]`, but `C3` Jelonek is sign-blind, as are odd-family `C_(2m-3)`. THM-1605's formula is absent (MISTAKE-416); arbitrary quartic `C3` remains OPEN.

@@ -1,0 +1,17 @@
+== independent hostile audit: all-level Keller cleared-norm polynomiality ==
+parents={'01-canon/theorems/THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy.md': '7bc470a6c76da2e04c64319a4a66d20d8618c45383e71ad0b42a26b049bca79e', '01-canon/theorems/THM-3498-level-four-old-boundary-cancellation-and-degree81-discriminant-gate.md': '3d76e12bf874f5dbb20adefff92f03c8a1b10bab62302fdab89fd509fb91bbf4', '01-canon/theorems/THM-3506-fixed-keller-five-face-norm-transform-and-271-99-boundary.md': 'edfbfe5a577aa338535588565ea58cda07626f3b88561aa4fa7c52a77b7cfd91', '01-canon/theorems/THM-3522-fixed-keller-five-face-renewal-propagation.md': '79a522bde5c6155efa3c7c8b779b0cf179fae93d5c22226bd6af78008ed44f1c'}
+generic_DVR_units_gcd(L;c,T,S,D)=(1, 1, 1, 1);witness_(L,c,T,S,D)=(0, 1, 1, 1, 1/3): PASS
+reciprocal_cubic=-2*chi*u**3 + ell + tau*u**2;mod_L=-u**2*(2*chi*u - tau);newton=((2, Fraction(-1, 2)), (1, Fraction(0, 1))): PASS
+finite_branch=(u0=tau/(2*chi),derivative=-tau**2/(2*chi));canonical_q=(2, 5/6, -7/8);F(q)=(2/27, 1, 1);L(q)=241465/1728: PASS
+divergent_face_residual=3xz-2y->-11*d;sheet_valuations=(-e/2,-e/2): PASS
+nonmonic_hostile=(Res(E,w)=2*chi,N(w)=2*chi/ell,Res/L=N): PASS
+packet_cone_rows=15251;digest=1113ace3bf5b452e6288998d40bd4103b6764841bb9e555e016bdbded77cafbc;renewal_preserves_admissibility: PASS
+packet_orbit=((1, 0), (7, 3), (43, 15), (271, 99), (1699, 615), (10663, 3867), (66907, 24255), (419839, 152211), (2634451, 955095), (16530967, 5993163))
+cassini=(3, -24, 192, -1536, 12288, -98304, 786432, -6291456, 50331648): PASS
+valuation_rows=1066;digest=3d7e2dcfe929ba806d89f18ccdd2e6ca84a373fc097f7721bc1f3b81089fa452;v(N(P))=-e+s,v(L^eN(P))=s>=0: PASS
+scalar_control=('N(r*P)=r^3*N(P)', 'v_L(r)=0 for r in Q^*', 'rational packet scalars do not change the clearing exponent'): PASS
+global_localization=A[1/L]+v_L>=-e=>L^e*N(P) in A: PROVED ALGEBRAIC STEP
+semantic_sha256=6fe70dcf5a0f1bd4f76ef8bc4986f79be1d74e4a0b6a71e40520dae67f4e456e
+verdict=ACCEPT all-level raw polynomial packet induction at fixed-map scope
+scope=('polynomial raw cleared norms and complete packets only', 'finite-sheet valuation equals old-L multiplicity', 'no L-coprimality without finite-sheet unit', 'no image, irreducibility, separability, newest factor, or general JC')
+all exact hostile checks passed

@@ -21,6 +21,24 @@
   `a227bc2f385d8a2eaecb27f317fa5ed66623c70938d8a97aba620298a8a7b61b` /
   `aba447ca5c1e5b6678a6ccd93371b1b8b1bd0ceb2fe127c83c6304855fb8f80f` /
   `3d1527fb4ce4931680e50d7135b9d1129c1816e3a9158645523e2728ddc71ec2`.
+- `keller_all_level_cleared_norm_polynomiality_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS THE PROVISIONAL
+  THM-3528 RAW ALL-LEVEL POLYNOMIAL-PACKET LEMMA; THM-3528 REMAINS
+  RESERVED].  The audit reconstructs the reciprocal cubic
+  `L+Tu^2-2cu^3`, its one unramified finite branch and ramified quadratic
+  pair, and the exact complete-face residual `3xz-2y -> -11D/S`.  With
+  finite-sheet valuation `s>=0`, ramification-weighted norm valuation is
+  `v_L(N(P))=-e+s`; finite-etale regularity gives `N(P) in A[1/L]`, hence
+  `L^eN(P)` is polynomial with old-`L` multiplicity `s`.  THM-3522 and an
+  exact `15,251`-packet cone audit then give raw polynomial complete packets
+  at every level.  The nonmonic hostile `Res(E,w)=2c` versus `N(w)=2c/L`,
+  canonical finite branch, scalar normalization, and normal/`-O` replay pass.
+  This does not prove `s=0`, `L`-coprimality, image/new-prime status,
+  irreducibility, separability, discriminant recursion, arbitrary-map scope,
+  or any general JC claim.  Script/output/semantic LF SHA-256:
+  `4e79d10d2a90cfdcbd6948d22b7385da6ea88b923f3483da96448af1ea1cdc77` /
+  `e7247cb01a61558ee2af6ef662610e946364f6d9d32d44766841a501644ee30b` /
+  `6fe70dcf5a0f1bd4f76ef8bc4986f79be1d74e4a0b6a71e40520dae67f4e456e`.
 
 - `lrc_r5_pointed_bidirected_p4_cocycle_sidecar_20260816.py` -> matching
   `.out` [FINITE-EXACT REPRESENTATION SIDECAR; PARENT INDEPENDENT AUDIT
