@@ -17,10 +17,9 @@ collide, links—not bare IDs—are canonical.
 
 ## Rule 30
 
-- **Sources (checked 2026-08-15):** the [2019 announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/) states the questions/rule.
-  The [active listing](https://rule30prize.org/) plus submissions are dated evidence for repo inference, not a literal claim.
-- **Boundary:** [THM-3468](../../01-canon/theorems/THM-3468-rule30-radial-green-fold-innovation-discrepancy-and-fixed-seed-carrier-boundaries.md) routes the chain: valuation backbone, finite-band tariff, Haar chart, rank bounds.
-  The [LRC probe](../results/lrc14_rule30_depth_observer_no_go_20260815.out) is FINITE-EXACT; no prize/LRC result.
+- **Sources:** [announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/); [active prizes](https://rule30prize.org/) (checked 2026-08-15). Openness is repo inference.
+- **Automatic:** [Christol et al.](https://www.numdam.org/articles/10.24033/bsmf.1926/): finite-field algebraic iff automatic. [THM-3471](../../01-canon/theorems/THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum.md) uses finite sums, not the unbounded completion.
+- **Boundary:** [THM-3468](../../01-canon/theorems/THM-3468-rule30-radial-green-fold-innovation-discrepancy-and-fixed-seed-carrier-boundaries.md); no prize/LRC result.
 
 ## Lonely Runner Conjecture
 
