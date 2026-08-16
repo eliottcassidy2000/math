@@ -341,8 +341,9 @@ is sharp: equal counts allow two densities or none.
   [3513](../01-canon/theorems/THM-3513-fixed-G-hybrid-newton-renewal-faces.md)
   completes `G`; 3521 clears `R5`; 3522 gives `R5/R6` packets
   `A(1699,615)/A(10663,3867)`; 3523 clears `R7`, giving
-  `A(66907,24255)`; 3525: degree243, `[Delta_5]=[-2R_5]`.
-  `R5` fifth image, `R7` image, degree729/all-level remain OPEN. THM-2681
+  `A(66907,24255)`; 3525/26: degree243/729,
+  `[Delta_5,Delta_6]=[-2R_5,2R_6]`. `R5/R6` images, later gates and all-level
+  OPEN. THM-2681
   blocks the `A4/S4` cubic; THM-2685--2708 give its
   gain/holonomy.
   Audited THM-3448/3517: cyclic `x/y/z` are primitive all grades; `m=3` gives `S5` quintics `[L5]`, but `C3` Jelonek is sign-blind, as are odd-family `C_(2m-3)`. THM-1605's formula is absent (MISTAKE-416); arbitrary quartic `C3` remains OPEN.

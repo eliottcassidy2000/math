@@ -1,12 +1,12 @@
 # The 729 gate is computationally smaller in the polynomial norm coordinate
 
-**Status: FINITE-EXACT CANDIDATE; INDEPENDENT AUDIT PENDING; NO THEOREM
-RESERVED.**  For the fixed sporadic Keller map, one lawful fibre at target
+**Current status: PROMOTED AS THM-3526 AFTER AN INDEPENDENT LITERAL-MATRIX
+FOURIER AUDIT.**  For the fixed sporadic Keller map, one lawful fibre at target
 `(1,1,1)` over `F_733` has inverse-tower dimensions
 `3,9,27,81,243`.  Its sixth x-core norm is an exact squarefree polynomial of
-degree `729`.  This is a candidate for the generic sixth-eliminant
-degree/separability gate, not an image, irreducibility, all-level, arbitrary-map,
-or general-JC result.
+degree `729`.  THM-3526 promotes this to the generic sixth-eliminant
+degree/separability gate and proves `[Delta_6]=[2R_6]`; it remains neither an
+image, irreducibility, all-level, arbitrary-map, nor general-JC result.
 
 ## Inheritance pass
 
@@ -128,10 +128,11 @@ and squarefreeness restore exactly the predicates needed here: every one of the
 coprime.  They do not restore irreducibility of `P_6`, identify `R_6` as an
 image prime, or prove a sixth nonproperness component.
 
-By the same good-reduction openness argument used in THM-3525, this fibre is a
-complete candidate witness for nonzero generic leading coefficient and
-discriminant.  If independently audited and promoted, the next THM-2582
-odd-block calculation would read
+The independent audit reconstructs all `730` coefficients from `732` literal
+`243 by 243` determinants by multiplicative Fourier inversion, agrees with the
+digest here, and verifies that the only two possible high Fourier coefficients
+vanish.  THM-3526 therefore applies the same good-reduction openness argument
+as THM-3525 and makes the next THM-2582 odd-block calculation lawful:
 
 ```text
 [Delta_6]
@@ -155,10 +156,10 @@ python -B -O 04-computation/keller_level_six_degree729_recursive_tuple_probe_202
 The matching script/output LF-normalized SHA-256 values are
 
 ```text
-087d50c42054fb833b9ac07fe8d775cfea1b3e914b649f48e7d596fedc09f8b0
+ad5d57b124f37b23fe9541c61bc4d919106b2db6c87a38632fabf3e7c076b8de
 7d152cdbf720012f1dd162bfbe603ae43691717b8fb7550a2770e3d67016eba1.
 ```
 
 No META-PATTERNS card is added: the recursive polynomial-norm route is a
-strong method candidate, but it has so far been demonstrated on only this one
-frontier extension.
+strong method, but the evidence still consists of two representations of one
+frontier extension rather than distinct mathematical threads.

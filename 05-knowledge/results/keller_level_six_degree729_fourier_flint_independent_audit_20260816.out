@@ -1,0 +1,14 @@
+== independent F_733 level-six Fourier/FLINT audit ==
+support_sha256=3d0bee9dd97993160fc7275cb4a96e77893013c421029eada4bbd5b46ac5d3e6
+target=(1, 1, 1); regular_matrix_dimensions=(3, 9, 27, 81, 243)
+unit_gate_columns=(level,dimension,Norm(L),Norm(cubic_derivative));ledger=((1, 3, 25, 593), (2, 9, 663, 178), (3, 27, 172, 118), (4, 81, 192, 42), (5, 243, 511, 85))
+five inverse graphs and all leading/derivative/chart units: PASS
+732-point multiplicative Fourier inversion: degrees 730..731=(0, 0);degree=729
+unused X=0 determinant and all-point Horner controls: PASS
+sample_determinants=((1, 696), (2, 491), (729, 331), (730, 74), (731, 17), (732, 607));constant_sign_zero_hostile=295
+factor_degree_exponent_ledger=((3, 1), (3, 1), (3, 1), (3, 1), (3, 1), (3, 1), (3, 1), (6, 1), (6, 1), (6, 1), (6, 1), (6, 1), (9, 1), (9, 1), (9, 1), (9, 1), (9, 1), (9, 1), (9, 1), (9, 1), (9, 1), (12, 1), (12, 1), (12, 1), (12, 1), (12, 1), (12, 1), (12, 1), (18, 1), (18, 1), (24, 1), (24, 1), (24, 1), (24, 1), (27, 1), (27, 1), (27, 1), (27, 1), (27, 1), (36, 1), (48, 1), (162, 1))
+ascending_coefficient_sha256=7aba23e306b00b14b8c60c34f9762ba8b35aecac111065058dfe9d4b3f1ecd51
+semantic_sha256=d3eedf7368e7b98681ca41b76529c49403a351f79f2eb858e69df95362dc3518
+independent verdict: full degree 729 and squarefree on the lawful F_733 fibre
+scope: fixed-map generic sixth-eliminant gate only; no R6/R7 image, irreducibility, all-level, arbitrary-map, or general JC claim
+all independent exact checks passed

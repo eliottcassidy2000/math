@@ -372,9 +372,10 @@
   `5cc3b76674abb9f037e8d0f9d96a64197df9eee6f159bb7a12f9401df9ee483f` /
   `a0534b8d995956c126ce204117a9488b222ad25dd8b483b269e37740ffe13ccb`.
 
-- `keller_level_six_degree729_recursive_tuple_probe_20260816.py` -> matching
-  `.out` [FINITE-EXACT FIXED-MAP SIXTH-ELIMINANT CANDIDATE; INDEPENDENT AUDIT
-  PENDING; NO THEOREM RESERVED].  At `(1,1,1)` over `F_733`, recursive cubic
+- `keller_level_six_degree729_recursive_tuple_probe_20260816.py` and
+  `keller_level_six_degree729_fourier_flint_independent_audit_20260816.py`
+  -> matching `.out` files [THM-3526 PROVED + VERIFIED-EXACT +
+  SPLIT-REPRESENTATION AUDITED].  At `(1,1,1)` over `F_733`, recursive cubic
   adjugates build the lawful inverse tower `3,9,27,81,243`; all five inverse
   graphs and all 20 leading/derivative/chart-denominator unit gates pass.
   Polynomial-valued `3x3` norm determinants give the exact degree ledger
@@ -382,13 +383,19 @@
   distinct fibre factors, with degree multiset
   `3x7,6x5,9x9,12x7,18x2,24x4,27x5,36,48,162`.  Seven scalar norm checks,
   one literal held-out `243x243` determinant, odd-sign and top-truncation
-  hostiles, and byte-identical normal/optimized replays pass.  This is a
-  good-reduction generic degree/separability candidate, not an `R_6/R_7`
-  image, irreducibility, all-level, arbitrary-map, or general JC claim.
-  Script/output/semantic LF SHA-256:
-  `087d50c42054fb833b9ac07fe8d775cfea1b3e914b649f48e7d596fedc09f8b0` /
+  hostiles pass.  The disjoint regular-matrix route Fourier-inverts all 732
+  nonzero-field determinants, gets zero degrees 730/731 and the identical
+  730-coefficient digest.  Hence the generic sixth block gate is closed and
+  `[Delta_6]=[2R_6]`; no `R_6/R_7` image, irreducibility, all-level,
+  arbitrary-map, or general JC claim follows.  Primary script/output/semantic
+  LF SHA-256:
+  `ad5d57b124f37b23fe9541c61bc4d919106b2db6c87a38632fabf3e7c076b8de` /
   `7d152cdbf720012f1dd162bfbe603ae43691717b8fb7550a2770e3d67016eba1` /
-  `8009c86f1c8f290829df2ba8332dc2b09929b08cbd55376f48a13acd8c2c427c`.
+  `8009c86f1c8f290829df2ba8332dc2b09929b08cbd55376f48a13acd8c2c427c`;
+  audit:
+  `5ae0a538af7a65f4f5371c889e4119c9b2674636b28d59ce74f882f153d606f3` /
+  `65df39e35ed031d0f237c79be8c504caa23d9187599df2505b94e4a78d71235a` /
+  `d3eedf7368e7b98681ca41b76529c49403a351f79f2eb858e69df95362dc3518`.
 
 - `keller_level_five_degree243_finite_field_probe_independent_20260816.py`
   and `keller_level_five_degree243_fourier_flint_independent_audit_20260816.py`
