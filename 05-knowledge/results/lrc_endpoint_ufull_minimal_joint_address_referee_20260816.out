@@ -1,0 +1,15 @@
+LRC U_FULL MINIMUM JOINT-ADDRESS INDEPENDENT REFEREE
+status=FINITE-EXACT independent API/kernel audit; LRC(14) OPEN
+primary_hashes=('fd5fcfc5f92385806f5ea5e77e854c823d2b3d6e34752c7aba777744201c8055', '3c68f4b3618abbcc2653eb1b2aee4729e59a57820749396ca757341ee7f91838')
+margin_map=(rank=3,kernel_size=13,kernel=((0, 0, 0, 0), (1, 12, 12, 1), (2, 11, 11, 2), (3, 10, 10, 3), (4, 9, 9, 4), (5, 8, 8, 5), (6, 7, 7, 6), (7, 6, 6, 7), (8, 5, 5, 8), (9, 4, 4, 9), (10, 3, 3, 10), (11, 2, 2, 11), (12, 1, 1, 12)))
+joint_coordinate=(checker=(1, -1, -1, 1),pairing=4,augmented_rank=4)
+one_factor_exhaustion=(left={0},right={0})
+orthogonality_table=(((1, 0, 1), (1, 0, 1), 2197), ((1, 0, 1), (1, 0, 0), 0), ((1, 0, 0), (1, 0, 1), 0), ((1, 0, 0), (1, 0, 0), 2197))
+bank_hashes=('b5ec7b38ed4c44abffa1e760b053f4275281017d2f7667fb44532f02c4969f7f', 'd9c2b1e9d5cba6a635c4c75dccd0d0684b17ec3ee05718fabc808a902a95a86c')
+inverse_values=(positive_H_q5=(389266878372286537904, 0),hostile_H_q5=(194633439186143268952, 194633439186143268952)); bridges=(389266878372286537904, 0)
+primary_ast_audit=(('base', 'root', 'owner_sheet', 'word_sheet', 'source_sheet', 'left_horizon', 'right_horizon', 'address', 'left_factor_label', 'right_factor_label', 'measure'), ('record',), ('CompleteAtomRecord', 'int', 'int', 'int', 'record', 'tuple'), ())
+verdict=one joint scalar is necessary and sufficient for a 2x2 lift; the calibrated positive recovers only the frozen bridge, while identical marginals admit the zero-bridge hostile
+scope=no semantic map from actual endpoint cells to the joint coordinate is supplied; no K4/current/row/LRC consequence
+security_ast=(2678, ())
+semantic_sha256=bce53a4d7f5845f7067c6d0c9ce6cb63f31d477c8818722b199378aee486db52
+STATUS=PASS

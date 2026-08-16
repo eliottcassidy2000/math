@@ -1,0 +1,30 @@
+LRC U_FULL MINIMUM JOINT-ADDRESS BRIDGE GATE
+status=FINITE-EXACT API/minimal-kernel result; not a U_full ancestry realization; LRC(14) OPEN
+dependency_hashes=('ad2a620cdc238f28e3384698b2c612f38cdf2566bd56b76d1cbabcc03107ec0b', 'd1182de4d777bab20a8d423cf942151ac3149014b67d9c34883cbce37a7b0a9f', (('THM-2471', '423882a4e3b06e2020fd7f3d0748fc9e904ced4d3214ef8cd77bfd5c6b9597eb'), ('THM-2538', 'b3179e0849f581c6f5f5a44dab9b7d57d7c87f96d71259863315b23a241ae614'), ('THM-2594', '5d3e14c9416ca52f6a523453ce3511ffb886fafe2b215b87ccf64a72e97ffd8b')))
+embedding=(prime=572252886246508880869,root=279936,order=81750412320929840124)
+actual_factor_controls=(q_boundary_census=(((1, 'out', 'excluded-enter'), 4), ((1, 'out', 'excluded-leave'), 4), ((2, 'out', 'excluded-enter'), 3), ((2, 'out', 'excluded-leave'), 3), ((3, 'out', 'excluded-enter'), 5), ((3, 'out', 'excluded-leave'), 5), ((4, 'out', 'excluded-enter'), 4), ((4, 'out', 'excluded-leave'), 4), ((5, 'out', 'excluded-enter'), 15), ((5, 'out', 'excluded-leave'), 15), ((7, 'in', 'enter'), 576), ((7, 'in', 'leave'), 576), ((8, 'out', 'excluded-enter'), 28123), ((8, 'out', 'excluded-leave'), 28123)),rows=(('zero', 33810, 28730, 123752, 64165660754527020, 263333472381374948713, 367849901592567656326, '36b51bf77c363f9f283aa67925fb65e64b8b642b98c5fc023fd91695a9ee78ea', '16b86e659e712fdf9a158a45b1eafa69de88aeac9b98b7c7d9aa08ae220af744', (((1, 'out', 'excluded-enter'), 11), ((1, 'out', 'excluded-leave'), 11), ((3, 'out', 'excluded-enter'), 8), ((3, 'out', 'excluded-leave'), 8), ((4, 'out', 'excluded-enter'), 2), ((4, 'out', 'excluded-leave'), 2), ((5, 'out', 'excluded-enter'), 13), ((5, 'out', 'excluded-leave'), 13), ((7, 'out', 'excluded-enter'), 112), ((7, 'out', 'excluded-leave'), 112), ((8, 'out', 'excluded-enter'), 33664), ((8, 'out', 'excluded-leave'), 33664))), ('v2', 34560, 28730, 126429, 68024839018709963, 523949679655523736011, 87230428072980866510, '76a586d218e659391e667a04765e426b192933330c64ddd5bb8cf3efb819a15f', '0fd9a8a310d9367395d78941d124f05f80f0a7f8706604df299992a7883830c8', (((1, 'out', 'excluded-enter'), 11), ((1, 'out', 'excluded-leave'), 10), ((3, 'out', 'excluded-enter'), 6), ((3, 'out', 'excluded-leave'), 8), ((4, 'out', 'excluded-enter'), 2), ((4, 'out', 'excluded-leave'), 3), ((5, 'out', 'excluded-enter'), 27), ((5, 'out', 'excluded-leave'), 12), ((7, 'out', 'excluded-leave'), 114), ((8, 'out', 'excluded-enter'), 34514), ((8, 'out', 'excluded-leave'), 34413)))))
+visible_actual_cell_fields=('circle_interval', 'E_factor_lineage', 'Q_factor_lineage', 'E_component_index', 'Q_component_index', 'periodic_wrap_turn', 'boundary_provenance')
+required_ancestry_projection_fields=('base', 'root', 'owner_sheet', 'word_sheet', 'source_sheet', 'left_horizon', 'right_horizon', 'address')
+actual_projection_gate=FAIL_MISSING_('base', 'root', 'owner_sheet', 'word_sheet', 'source_sheet', 'left_horizon', 'right_horizon', 'address')
+complete_schema_fields=('base', 'root', 'owner_sheet', 'word_sheet', 'source_sheet', 'left_horizon', 'right_horizon', 'address', 'left_factor_label', 'right_factor_label', 'measure')
+ell_independent_address=(signature=('record',),body_names=('CompleteAtomRecord', 'int', 'int', 'int', 'record', 'tuple'))
+checkerboard_minimality=(matrix=((1, -1), (-1, 1)),row_sums=(0, 0),column_sums=(0, 0),joint_address_value=4,row_only_value=0,column_only_value=0,kernel_dimension=1)
+frozen_bridge_quarter=97316719593071634476
+positive_matrix=((194633439186143268952, 0), (0, 194633439186143268952)); hostile_matrix=((97316719593071634476, 97316719593071634476), (97316719593071634476, 97316719593071634476))
+shared_margins=(rows=(194633439186143268952, 194633439186143268952),columns=(194633439186143268952, 194633439186143268952),total=389266878372286537904)
+mixed_haar=(positive=389266878372286537904,hostile=0)
+inverse_address_values=(positive_H_q5=(389266878372286537904, 0),hostile_H_q5=(194633439186143268952, 194633439186143268952))
+bridge_only_test=(positive=389266878372286537904,hostile=0,expected=389266878372286537904)
+character_bank_sha256=(positive=b5ec7b38ed4c44abffa1e760b053f4275281017d2f7667fb44532f02c4969f7f,hostile=d9c2b1e9d5cba6a635c4c75dccd0d0684b17ec3ee05718fabc808a902a95a86c)
+reconstruction_from_margins_plus_one_joint_scalar=(positive=((194633439186143268952, 0), (0, 194633439186143268952)),hostile=((97316719593071634476, 97316719593071634476), (97316719593071634476, 97316719593071634476)))
+positive_control=linked factors are multiplied on four complete records before summation; one fixed parity address map recovers the exact frozen q_H-q_q5 bridge
+hostile_control=the flat coupling has identical row/column marginals and every separate-factor scalar, but its q_H-q_q5 bridge is zero
+minimum_coordinate=one joint pairing bit, equivalently one mixed-Haar coefficient nonzero on [[1,-1],[-1,1]]; no left-only or right-only address can see it
+calibration_scope=the inherited bridge fixes the positive model's checkerboard coefficient; this proves API sufficiency/minimality, not independent recovery from U_full geometry
+first_unresolved_map=visible factor-labelled circle cells -> THM-2471 (base,root,owner-sheet,word-sheet,source-sheet,horizons,address)
+terminology=the actual cells share circle geometry only; the formal four-atom model is a common-base schema witness, never an asserted U_full ancestry stalk
+no_K4_evaluated=True
+nonconsequence=no physical current, chronology, grouped C(a;X,m), all-unit B(q), scalar-row exclusion, or LRC(14)
+security_ast=(5848, ())
+semantic_sha256=adc0a12f3dbf8c3c626827e4df4c1d5e1deca97b7f5d4e5dfc17238cc2587294
+STATUS=PASS
