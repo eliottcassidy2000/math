@@ -215,10 +215,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   one saddle. THM-3235 gives blowup scaling/decimation; THM-3248 factors Q4's walk resolvent and gives all-depth finite differences plus a fixed-depth Stirling compiler. Observer twins block generic scalar compression; Q4 radius/non-P stay OPEN.
   THM-3173 separates `C2*C3` and regular `S3,C6`; joint quotient order is 18,
   while pointed oriented quartic frames form `Q3`. These are not currents.
-- THM-1880/1885: Pell; THM-3335: square/skew no-go; THM-3339's `T6` loses
-  owner; THM-3357/3364/3379: `T3/T4`/Fibonacci. THM-3497: `A,C` no-go,
-  `B:4/8/512`, and word densities `1/3` versus fixed log `17/96` without
-  natural density. These are finite ancestry quotients, not currents.
+- THM-1880/1885: Pell; THM-3335/3339/3357/3364/3379: Fibonacci
+  tournaments. [THM-3509](../01-canon/theorems/THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray.md):
+  `4/6/3` K4 carriers; matching loses Cassini sign. THM-3497: ancestry
+  densities. No currents.
 - THM-3457/3462: `25/477`.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.

@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `reduced_fraction_harmonic_k4_fibonacci_thm3509.py` -> matching `.out`
+  [THM-3509 PROVED + VERIFIED-EXACT + HOSTILE-AUDITED]. Every reduced
+  fraction `m/n` is equivalent to the primitive recurrence window
+  `(n-m,m,n,n+m)` and to the primitive harmonic `K4` face
+  `(u,v,z)=(xy,x(x+y),y(x+y))`, with `1/u=1/v+1/z` and exact gcd decoder.
+  Stern--Brocot mediants add vertex windows; the two Berggren parity trees
+  are paired exactly by normalized Pythagorean leg swap. `K4` and
+  `L(K4)` give honest size-four/six carriers, while the Cassini sign lives
+  on the oriented `{03,12}` antipodal fibre and is erased by the
+  three-matching quotient. THM-3506's fixed/exposed odd face pairs embed in
+  the even tree, but its determinant-`-8` update is not projectively a
+  unimodular Berggren word and remains all-level conditional on renewal.
+  Normal/-O standard-library runs check 17,543 reduced fractions and the
+  ancestry, parity, orientation, toric, polarization, and determinant
+  hostiles. No LRC or JC transfer. Script/output/semantic LF SHA-256:
+  `c12dc71df13e0c627740aaebf971c07342ce3302d674b276cc1600cf69266dd9` /
+  `3f31f6f80989b360227c792d525e013ecff9b06a8df09d252d31af801d8fdb9a` /
+  `7ca802f1f8706658b62fb330504544b9c46d473db6481429cb011b078695a46e`.
 - `keller_tropical_norm_face_recurrence_probe_20260816.py` -> matching `.out`
   [THM-3506 PROVED CONDITIONAL TRANSFORM + VERIFIED-EXACT FIXED-MAP GATE].
   Reconstructs THM-3495's frozen `66,146`-term `J`, extracts the complete

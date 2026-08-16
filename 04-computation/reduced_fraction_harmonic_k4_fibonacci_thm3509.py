@@ -37,7 +37,11 @@ DEPENDENCY_HASHES = {
     "01-canon/theorems/THM-3454-fibonacci-selected-u-spine-farey-lorentz-isometry-and-one-tie-edge-order.md":
         "2f55187055b8158f5a99fd154df14beec5c2b6e7a0a4f65bc5995d495be7d058",
 }
-EXPECTED_SEMANTIC_SHA256 = "62fe2356d17547b8b2ec0aa80b739b3366cf9261df819af7208714bc1aba083f"
+RELATED_HASHES = {
+    "01-canon/theorems/THM-3506-fixed-keller-five-face-norm-transform-and-271-99-boundary.md":
+        "2bea649cefd56e52c47f92e759e52ec32efda31a1a0b17486a5c0b8bb0f2fa8a",
+}
+EXPECTED_SEMANTIC_SHA256 = "7ca802f1f8706658b62fb330504544b9c46d473db6481429cb011b078695a46e"
 
 VERTICES = tuple(range(4))
 EDGES = tuple(combinations(VERTICES, 2))
@@ -56,6 +60,9 @@ def normalized_sha256(path: Path) -> str:
 for dependency, expected_hash in DEPENDENCY_HASHES.items():
     actual_hash = normalized_sha256(REPO_ROOT / dependency)
     require(actual_hash == expected_hash, f"dependency hash changed: {dependency}")
+for related, expected_hash in RELATED_HASHES.items():
+    actual_hash = normalized_sha256(REPO_ROOT / related)
+    require(actual_hash == expected_hash, f"related source hash changed: {related}")
 
 
 def gcd3(a: int, b: int, c: int) -> int:
@@ -108,6 +115,12 @@ def branch(seed: tuple[int, int], letter: str) -> tuple[int, int]:
     if letter == "C":
         return (x + 2 * y, y)
     raise RuntimeError(f"unknown branch: {letter}")
+
+
+def keller_seed_update(seed: tuple[int, int]) -> tuple[int, int]:
+    """THM-3506's conditional face update in x=e-m,y=m coordinates."""
+    x, y = seed
+    return (4 * x + 4 * y, 3 * x + y)
 
 
 def parent_step(seed: tuple[int, int]) -> tuple[tuple[int, int], str] | None:
@@ -173,6 +186,8 @@ def fib_pair_fast(n: int) -> tuple[int, int]:
 
 
 def is_rational_square(value: Fraction) -> bool:
+    if value <= 0:
+        return False
     numerator_root = isqrt(value.numerator)
     denominator_root = isqrt(value.denominator)
     return (
@@ -202,6 +217,11 @@ for n in range(2, FRACTION_DENOMINATOR_BOUND + 1):
         require(gcd(x, y) == 1, "reduced fraction did not give a primitive seed")
 
         weights = edge_weights(values)
+        if (x, y) == (1, 1):
+            require(len(set(values)) < 4 and len(set(weights)) < 6, "root tie disappeared")
+        else:
+            require(len(set(values)) == 4, "nonroot K4 vertex comparison acquired a tie")
+            require(len(set(weights)) == 6, "nonroot octahedral edge comparison acquired a tie")
         u, v, z = harmonic_face(weights)
         require((u, v, z) == (x * y, x * (x + y), y * (x + y)), "harmonic face changed")
         require(v * z == u * (v + z), "harmonic equation failed")
@@ -231,6 +251,9 @@ for n in range(2, FRACTION_DENOMINATOR_BOUND + 1):
             odd_lane_count += 1
         else:
             even_lane_count += 1
+            next_x, next_y = keller_seed_update((x, y))
+            require(next_x % 2 == 0 and next_y % 2 == 1, "Keller sidecar left the even-x parity lane")
+            require(gcd(next_x, next_y) == 1, "Keller sidecar lost primitivity on the even-x lane")
 
         paired = parity_pair((x, y))
         require(parity_pair(paired) == (x, y), "reduced parity involution failed")
@@ -250,6 +273,14 @@ for n in range(2, FRACTION_DENOMINATOR_BOUND + 1):
         semantic_rows.append(((m, n), values, (u, v, z), raw_triple, expected_root, word))
 
 require(odd_lane_count + even_lane_count == fraction_count, "fraction parity census changed")
+
+# The linear face-to-current formula has the harmonic equation as its exact
+# Pythagorean defect, even away from the harmonic locus.
+for u in range(1, 20):
+    for v in range(1, 20):
+        for z in range(1, 20):
+            a, b, c = triple_from_face((u, v, z))
+            require(c * c - a * a - b * b == 4 * (v * z - u * (v + z)), "Pythagorean defect identity changed")
 
 # Independent forward generation of both ternary trees.
 BERGGREN_DEPTH = 8
@@ -433,6 +464,53 @@ for t in range(1, U_SPINE_BOUND + 1):
     require(harmonic_face(edge_weights(window(m, n))) == (t, t + 1, t * (t + 1)), "U-spine harmonic triple changed")
     require(m - n == -1, "U-spine left the fixed-cusp Farey fan")
 
+# THM-3506's exact/conditional odd face orbit becomes an even-x harmonic
+# face orbit.  The first two entries are full verified packets; (271,99) is
+# the exact next exposed pair, while further iteration requires renewal.
+KELLER_FACE_PAIRS = ((7, 3), (43, 15), (271, 99))
+KELLER_PRIMITIVE_TRIPLES = ((20, 21, 29), (812, 645, 1037), (31820, 26829, 41621))
+keller_seeds = []
+for (e, m), expected_triple in zip(KELLER_FACE_PAIRS, KELLER_PRIMITIVE_TRIPLES):
+    require(e % 2 == m % 2 == 1 and gcd(e, m) == 1, "THM-3506 pair lost its odd coprime sidecar")
+    x, y = e - m, m
+    require(x % 2 == 0 and y % 2 == 1 and gcd(x, y) == 1, "THM-3506 pair left the even-x tree")
+    face = (m * (e - m), e * (e - m), e * m)
+    require(face == harmonic_face(edge_weights((x, y, x + y, x + 2 * y))), "THM-3506 harmonic face chart changed")
+    raw_triple = triple_from_face(face)
+    require(raw_triple == (e * e - m * m, 2 * e * m, e * e + m * m), "THM-3506 raw current chart changed")
+    require(gcd3(*raw_triple) == 2, "THM-3506 raw current left content two")
+    require(tuple(value // 2 for value in raw_triple) == expected_triple, "THM-3506 primitive triple changed")
+    keller_seeds.append((x, y))
+
+require(keller_seed_update(keller_seeds[0]) == keller_seeds[1], "first verified Keller seed update changed")
+require(keller_seed_update(keller_seeds[1]) == keller_seeds[2], "second exact Keller seed update changed")
+require(keller_seed_update(keller_seeds[2]) == (1084, 615), "next conditional Keller seed changed")
+
+source_root, source_word = descend(keller_seeds[0])
+target_root, target_word = descend(keller_seeds[1])
+require(source_root == target_root == (2, 1), "Keller sidecar left the even Berggren root")
+require(source_word == ("B",), "first Keller ancestry word changed")
+require(target_word == ("A",) * 6 + ("B",), "second Keller ancestry word changed")
+require(target_word[:len(source_word)] != source_word, "Keller update became a descendant branch word")
+
+branch_matrices = {
+    "A": ((1, 0), (1, 1)),
+    "B": ((1, 2), (1, 1)),
+    "C": ((1, 2), (0, 1)),
+}
+keller_matrix = ((4, 4), (3, 1))
+
+
+def det2(matrix: tuple[tuple[int, int], tuple[int, int]]) -> int:
+    return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
+
+
+require(tuple(det2(branch_matrices[letter]) for letter in "ABC") == (1, -1, 1), "branch determinant signs changed")
+require(det2(keller_matrix) == -8, "Keller seed determinant changed")
+for branch_determinant in (1, -1):
+    scalar_square = Fraction(det2(keller_matrix), branch_determinant)
+    require(not is_rational_square(scalar_square), "Keller matrix became projectively unimodular over Q")
+
 # Tournament and quotient hostiles.
 root_window = window(1, 2)
 root_edges = edge_weights(root_window)
@@ -487,6 +565,7 @@ semantic_rows.extend(
         ("farey_edges", farey_edge_count),
         ("harmonic_converse", primitive_harmonic_count),
         ("unit_pairs", tuple(sorted(unit_pairs))),
+        ("keller_sidecar", KELLER_FACE_PAIRS, tuple(keller_seeds), KELLER_PRIMITIVE_TRIPLES, source_word, target_word),
         ("hostiles", half_triple, third_triple, seed_ab, seed_ba, tuple(isolated_swap)),
     ]
 )
@@ -496,6 +575,7 @@ if EXPECTED_SEMANTIC_SHA256 != "PIN_AFTER_FIRST_RUN":
 
 print("== THM-3509 reduced-fraction harmonic K4/Fibonacci probe ==")
 print(f"dependency LF hashes={len(DEPENDENCY_HASHES)}/{len(DEPENDENCY_HASHES)}")
+print(f"related LF hashes={len(RELATED_HASHES)}/{len(RELATED_HASHES)}")
 print(
     f"reduced fractions 0<m<n<={FRACTION_DENOMINATOR_BOUND}: "
     f"total={fraction_count}; primitive-raw odd-x lane={odd_lane_count}; "
@@ -510,6 +590,8 @@ print("Pythagorean current: (a,b,c)=(u+v,2z,v+2z-u); raw content=1 iff gcd(u,v) 
 print(f"Fibonacci rows k=2..{FIBONACCI_MAX_K}: unit Cassini, closed triples, mod-3 content, T6 boundary exact")
 print(f"unit-Cassini hostile box x,y<={UNIT_BOX}: solutions={len(unit_pairs)}; all consecutive Fibonacci seeds")
 print(f"U-spine t=1..{U_SPINE_BOUND}: face=(t,t+1,t(t+1)); fixed-cusp determinant=-1")
+print("THM-3506 sidecar: (7,3),(43,15),(271,99) -> even-x harmonic faces and halved primitive triples")
+print("THM-3506 update: N=((4,4),(3,1)), det=-8; branch determinants are +/-1, with no rational projective repair")
 print("hostile ancestry/parity: 1/2 -> (3,4,5), 1/3 -> (8,6,10)/2 -> leg-swapped (3,4,5)")
 print("hostile word order: chronological AB -> 3/8, BA -> 5/8")
 print("hostile orientation: (1,2,3,5) has Cassini -1; (2,3,5,8) has +1; same transitive T4 order")
