@@ -1,7 +1,7 @@
 # A lawful common gauge realizes the 48 primitive `K4` buckets
 
 **Status: FINITE-EXACT COMMON-ANCESTRY SUPPORT REALIZATION + FIVE-PRIME
-SPECTRAL CERTIFICATE; independent audit pending.**  The actual 39 guard atoms
+SPECTRAL CERTIFICATE; INDEPENDENTLY AUDITED AND ACCEPTED AT THIS SCOPE.**  The actual 39 guard atoms
 of THM-3514 are inserted as Boolean partitions on the linked THM-2471 arrival
 and source nodes before transfer, root lifting, integration, or Fourier
 contraction.  The common torsor gauge realizes exactly the 48 owner-active
@@ -259,4 +259,14 @@ The script and output SHA-256 hashes are
 ```text
 83f1fa49ac4d02e21a1d76fed169d101715a6620342714ed05b9172ae967a730
 7727571722f69a9c59af0183c50c8bae0b7944d6acb7bbb1b3c0e9bd02d54565.
+```
+
+The disjoint audit imports only the pinned THM-2594 stage constructor and
+rebuilds the atomization, integration, gauge tensor, exact cyclotomic tests,
+and five-prime certificates.  Its script/output/semantic hashes are
+
+```text
+ec16f5124c5b83a10337fba6046d08572251d0776285b7e250a86539a26ddf97
+ebe5acbe2e19465ed10f1380eaa2bd19975849d72be64151514cb0087e645d4f
+ad81e945207703956f5d6ec300430d562c9f98a9ec8788011119a4857ab34e01.
 ```

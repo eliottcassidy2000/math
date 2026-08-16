@@ -35,7 +35,7 @@ SOURCE_SEMANTIC = "31e9e90c63053944b590195555be07ccbf84fd4c7abc2101de6a2a3562202
 TARGET_PATH = ROOT / "04-computation/lrc_ufull_owner_boundary_k4xf13_endpoint_factorization_independent_audit_20260816.py"
 TARGET_SHA256 = "f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc"
 TARGET_BUCKET_SHA256 = "553cfe7289b0556a19a8bcd1a0382dc1372545358feac62e5229adca315f8a26"
-EXPECTED_SEMANTIC_SHA256 = "430aa2201ee8f624de66f034bdf5e31b11ec6ecbe1f3f0b9cef1342b2b1bc2ff"
+EXPECTED_SEMANTIC_SHA256 = "f496b9da968f091b11d27137acdd21c4351785943c45b0e7783fce95b5915df0"
 _TARGET_WORKER_MODULE = None
 
 
@@ -71,8 +71,10 @@ def target_worker(alpha: int):
     return _TARGET_WORKER_MODULE.worker(alpha)
 
 
-def build_pair_weight(target) -> tuple[list[list[int]], tuple[object, ...]]:
-    """Independently reconstruct E_(omega,nu) from THM-3514 primitives."""
+def build_pair_weight(target) -> tuple[
+    list[list[int]], list[list[list[int]]], tuple[object, ...]
+]:
+    """Reconstruct the bridge and complete (1,0,t) atom-pair bank."""
     with ProcessPoolExecutor(max_workers=4) as pool:
         chunks = tuple(pool.map(target_worker, range(P)))
     require(tuple(chunk[0] for chunk in chunks) == tuple(range(P)), "worker order")
@@ -94,8 +96,10 @@ def build_pair_weight(target) -> tuple[list[list[int]], tuple[object, ...]]:
     ) = target.context()
     require(pow(zeta, P, prime) == 1 and zeta != 1, "target zeta order")
 
-    h_kernel = [[0] * len(target.ATOMS) for _left in target.ATOMS]
-    q5_kernel = [[0] * len(target.ATOMS) for _left in target.ATOMS]
+    kernels = [
+        [[0] * len(target.ATOMS) for _left in target.ATOMS]
+        for _t in range(P)
+    ]
     for left_index, (left_sheet, left_chamber) in enumerate(target.ATOMS):
         for right_index, (right_sheet, right_chamber) in enumerate(target.ATOMS):
             products = tuple(
@@ -103,13 +107,16 @@ def build_pair_weight(target) -> tuple[list[list[int]], tuple[object, ...]]:
                 * target.safe(right_chamber, right_sheet + tau)
                 for tau in range(P)
             )
-            q5_kernel[left_index][right_index] = sum(products) % prime
-            h_kernel[left_index][right_index] = sum(
-                value * pow(zeta, -tau % P, prime)
-                for tau, value in enumerate(products)
-            ) % prime
+            for t in range(P):
+                kernels[t][left_index][right_index] = sum(
+                    value * pow(zeta, -t * tau % P, prime)
+                    for tau, value in enumerate(products)
+                ) % prime
 
-    pair_weight = [[0] * len(target.ATOMS) for _left in target.ATOMS]
+    pair_bank = [
+        [[0] * len(target.ATOMS) for _left in target.ATOMS]
+        for _t in range(P)
+    ]
     table_index = 0
     for alpha in range(P):
         alpha_phase = pow(zeta, -alpha % P, prime)
@@ -124,27 +131,38 @@ def build_pair_weight(target) -> tuple[list[list[int]], tuple[object, ...]]:
                 for right_index, right_value in enumerate(by_values):
                     if not right_value:
                         continue
-                    kernel = (
-                        h_kernel[left_index][right_index]
-                        - q5_kernel[left_index][right_index]
-                    ) % prime
-                    pair_weight[left_index][right_index] = (
-                        pair_weight[left_index][right_index]
-                        + phase * left_value % prime * right_value % prime * kernel
-                    ) % prime
+                    base = phase * left_value % prime * right_value % prime
+                    for t in range(P):
+                        pair_bank[t][left_index][right_index] = (
+                            pair_bank[t][left_index][right_index]
+                            + base * kernels[t][left_index][right_index]
+                        ) % prime
     normalizer = pow(P**3, -1, prime)
-    pair_weight = [[value * normalizer % prime for value in row]
-                   for row in pair_weight]
+    pair_bank = [
+        [[value * normalizer % prime for value in row] for row in matrix]
+        for matrix in pair_bank
+    ]
+    pair_weight = [
+        [(pair_bank[1][left][right] - pair_bank[0][left][right]) % prime
+         for right in range(len(target.ATOMS))]
+        for left in range(len(target.ATOMS))
+    ]
     bridge = sum(sum(row) for row in pair_weight) % prime
     require(bridge == target.EXPECTED_BRIDGE, ("endpoint bridge", bridge))
+    endpoint_totals = tuple(sum(sum(row) for row in matrix) % prime
+                            for matrix in pair_bank)
+    require((endpoint_totals[1] - endpoint_totals[0]) % prime == bridge,
+            "endpoint bank bridge")
     record = (
         prime,
         zeta,
         bridge,
         sum(value != 0 for row in pair_weight for value in row),
         digest_json(pair_weight),
+        endpoint_totals,
+        digest_json(pair_bank),
     )
-    return pair_weight, record
+    return pair_weight, pair_bank, record
 
 
 def decompose_pair_function(
@@ -209,8 +227,16 @@ def main() -> None:
     require(source_data["semantic_sha256"] == SOURCE_SEMANTIC, "source semantic drift")
 
     target = load_module(TARGET_PATH, "source_aligned_endpoint_target", TARGET_SHA256)
-    pair_weight, target_record = build_pair_weight(target)
-    prime, zeta, bridge, endpoint_pair_support, pair_digest = target_record
+    pair_weight, pair_bank, target_record = build_pair_weight(target)
+    (
+        prime,
+        zeta,
+        bridge,
+        endpoint_pair_support,
+        pair_digest,
+        endpoint_totals,
+        pair_bank_digest,
+    ) = target_record
     require(pair_digest == "c2d5911b287510335edc6aefa6d3b865c982568f678bb89ee9b82ee211962df1",
             ("endpoint pair digest", pair_digest))
 
@@ -258,6 +284,36 @@ def main() -> None:
     require(all(value != 0 for value in flat_profile),
             ("flat simple-kernel control", flat_profile))
 
+    # THM-3479 computes the fixed relation a in the refined residue class
+    # (1,0,6).  Test that actual class, not only the H-q5 adjacent bridge.
+    relation_t = 6
+    relation_pair = pair_bank[relation_t]
+    relation_profile = pull_profile(
+        pair_gauge_offset, relation_pair, denominator, zeta, prime
+    )
+    _relation_left, _relation_right, relation_interaction = (
+        decompose_pair_function(relation_pair, prime)
+    )
+    relation_interaction_profile = pull_profile(
+        pair_gauge_offset, relation_interaction, denominator, zeta, prime
+    )
+    require(all(value != 0 for value in relation_profile),
+            ("fixed-relation residue profile", relation_profile))
+    require(all(value != 0 for value in relation_interaction_profile),
+            ("fixed-relation centred interaction", relation_interaction_profile))
+
+    residue_owner_bank = tuple(
+        pull_profile(pair_gauge_offset, matrix, denominator, zeta, prime)
+        for matrix in pair_bank
+    )
+    require(tuple(
+        (residue_owner_bank[1][k] - residue_owner_bank[0][k]) % prime
+        for k in range(P)
+    ) == full_profile, "bridge versus complete residue bank")
+    residue_owner_support = tuple(
+        sum(value != 0 for value in row) for row in residue_owner_bank
+    )
+
     record = (
         SOURCE_SHA256,
         SOURCE_SEMANTIC,
@@ -273,6 +329,14 @@ def main() -> None:
         interaction_profile,
         flat_profile,
         digest_json(interaction),
+        endpoint_totals,
+        pair_bank_digest,
+        residue_owner_bank,
+        residue_owner_support,
+        relation_t,
+        relation_profile,
+        relation_interaction_profile,
+        digest_json(relation_interaction),
     )
     semantic = digest_json(record)
     if EXPECTED_SEMANTIC_SHA256 != "TO_BE_PINNED":
@@ -283,6 +347,8 @@ def main() -> None:
     print(f"dependencies=((source,{SOURCE_SHA256},{SOURCE_SEMANTIC}),(target,{TARGET_SHA256},{TARGET_BUCKET_SHA256}))")
     print(f"target_split_field=(prime={prime},zeta13={zeta})")
     print(f"target_endpoint_pair=(support={endpoint_pair_support}/1521,bridge={bridge},sha256={pair_digest})")
+    print(f"target_refined_(1,0,t)_totals={endpoint_totals}")
+    print(f"target_refined_(1,0,t)_pair_bank_sha256={pair_bank_digest}")
     print(f"source_common_gauge_pair_support={source_pair_support}/1521; actual_endpoint_weighted_support={weighted_pair_support}/1521")
     print("typing=both guard labels read at endpoint/source time via f_omega^src=1_Q P^K(e P_omega), then meet on one THM-2471 base")
     print(f"actual_endpoint_simple_kernel_by_owner_frequency={full_profile}")
@@ -292,6 +358,11 @@ def main() -> None:
     print(f"endpoint_ANOVA_doubly_centred_interaction_profile={interaction_profile}")
     print("endpoint_ANOVA_profile_support=(left_only=13/13,right_only=13/13,doubly_centred_interaction=13/13)")
     print(f"flat_simple_kernel_profile={flat_profile}")
+    print(f"refined_residue_t_x_owner_support={residue_owner_support}/13")
+    print(f"fixed_relation_refined_class=(1,0,{relation_t}); endpoint_total={endpoint_totals[relation_t]}")
+    print(f"fixed_relation_residue_simple_kernel_by_owner_frequency={relation_profile}")
+    print(f"fixed_relation_residue_doubly_centred_interaction_profile={relation_interaction_profile}")
+    print("fixed_relation_residue_profile_support=(full=13/13,doubly_centred_interaction=13/13)")
     print(f"semantic_sha256={semantic}")
     print("scope=one-base source-time finite simple-kernel transplant; AX/BY remain preintegrated scalars, so no physical relation current,grouped coefficient,row exclusion,LRC(14)")
     print("all exact checks passed")

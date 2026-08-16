@@ -9,10 +9,13 @@ again realizes all 48 owner-active chamber/drift types, rank four at every
 owner character, and complete nonzero-owner Walsh--drift spectrum.  Pulling
 THM-3514's actual endpoint pair function through this measure is nonzero at
 all thirteen owner characters; its doubly centred interaction part is also
-nonzero at all thirteen.  This closes the finite temporal **atom-label**
-mismatch.  The `AX/BY` values remain preintegrated scalars, however, so this
-is not yet a physical relation current, grouped coefficient, row exclusion,
-or LRC(14).
+nonzero at all thirteen.  The complete refined `(1,0,t)` bank has all
+`13 x 13` residue/owner pullbacks nonzero.  In particular the fixed all-unit
+relation's own class `(1,0,6)` survives, as does its doubly centred
+interaction.  This closes the finite temporal **atom-label** mismatch and a
+previously open refined-residue aggregate.  The `AX/BY` values remain
+preintegrated scalars, however, so this is not yet an exact-address grouped
+coefficient, physical current, row exclusion, or LRC(14).
 
 ## 1. Inheritance: the temporal copy was the real missing coordinate
 
@@ -166,6 +169,14 @@ character, retaining `c` restores
 
 and rank four.  Thus source alignment pays no spectral price.
 
+The concurrent bucket-quotient hostile makes this retention load-bearing.
+The 117 chamber/drift sums forget a 576-dimensional within-bucket kernel on
+the 48 live types, and the thirteen owner pullbacks are jointly surjective on
+that forgotten kernel.  The present construction does not descend through
+that quotient: it keeps the exact 362 atom pairs and their common offsets
+until the endpoint pairing.  Its positive is therefore atom-alignment data,
+not a consequence of endpoint Walsh support alone.
+
 ## 5. The actual endpoint pair function survives as a one-base kernel
 
 Reconstruct THM-3514's actual endpoint pair contribution in its certified
@@ -216,13 +227,59 @@ The exact profile is
 
 Every entry is nonzero.
 
-## 6. The positive is genuinely a two-address interaction
+## 6. The fixed relation's refined residue also survives
+
+THM-3479 computes the fixed all-91-unit relation
+
+```text
+a=(-27,-27,-27,20110798,-41,-27,-27,-27,38)          (19)
+```
+
+and identifies its class in the refined U_full quotient as
+
+```text
+[a]=(1,0,6) in F_13^3.                               (20)
+```
+
+That class was explicitly outside THM-3479's five displayed role values.
+Reconstruct all thirteen actual pair functions for `(1,0,t)`.  Their endpoint
+totals are all nonzero; at the fixed relation class,
+
+```text
+A_w^-(1,0,6)=225010624370142818572 mod p !=0.         (21)
+```
+
+Pull every one of the thirteen pair functions through every owner character.
+The resulting `13 x 13` matrix has complete support:
+
+```text
+support(t,-)=13/13                 for every t.        (22)
+```
+
+For `t=6`, the full source-aligned profile is
+
+```text
+( 46205031809059160986, 521685741740425125819,
+ 322873700432346840316, 282724801483324127022,
+ 331829099837529843688, 260295280174885139954,
+ 234627007903017400843, 326892324942410583876,
+ 120836393180900983861, 378602754724321789415,
+ 110154739161650508621, 361915264916995704147,
+ 262504842983395584878 ) mod p.                        (23)
+```
+
+Again all thirteen entries are nonzero.  Equation (21) is a nonzero THM-2334
+**residue pushforward** for the correct relation class.  It is not the single
+exact-address orbit sum `C(a;X,m)`: many exact relations have the same
+residue, so aggregate nonvanishing cannot isolate the named one.
+
+## 7. The positive is genuinely a two-address interaction
 
 Double-centre `E` over its full `39 x 39` address universe:
 
 ```text
 E^circ_(omega,nu)
- =E_(omega,nu)-rowmean_omega-colmean_nu+grandmean.     (19)
+ =E_(omega,nu)-rowmean_omega-colmean_nu+grandmean.     (24)
 ```
 
 Its row and column sums vanish exactly.  Pulling the constant, left-only,
@@ -232,50 +289,59 @@ right-only, and doubly centred pieces through the same measure gives support
 flat                    13/13,
 left-only ANOVA         13/13,
 right-only ANOVA        13/13,
-doubly centred E^circ   13/13.                        (20)
+doubly centred E^circ   13/13.                        (25)
 ```
 
 In particular, the endpoint positive is not explained by normalization or
 a one-leg atom bias.  The genuinely joint endpoint interaction survives the
 source-time ancestry pullback at every owner character.
 
-## 7. Exact boundary and next theorem
+The same hostile passes for the fixed relation class `(1,0,6)`: its doubly
+centred interaction profile has support `13/13`.  Thus (21)--(23) are not
+carried only by a constant or one-sided part of that residue aggregate.
+
+## 8. Exact boundary and next theorem
 
 This calculation closes one precise debt:
 
 ```text
 arrival atom versus endpoint/source atom
-  -> repaired by source refinement (1) plus branch sidecar (8). (21)
+  -> repaired by source refinement (1) plus branch sidecar (8);
+
+fixed relation class absent from the displayed endpoint roles
+  -> repaired at residue-pushforward level by (21).             (26)
 ```
 
 It does **not** close the semantic-current debt.  The values
 `E_(omega,nu)` were obtained by the independently audited `AX/BY` endpoint
-integrations and then used as finite coefficients in (17).  The next theorem
-must show either that:
+integrations and then used as finite coefficients in (17).  The remaining
+closure program must:
 
-1. the `AX/BY` factors themselves are values of a lawful THM-2334 relation
-   current on this cospan; or
-2. the simple kernel in (17) is an allowed grouped exact-address coefficient
-   with the correct target, owner, word, and chronology.
+1. isolate the named exact-address orbit `C(a;X,m)` from the now-nonzero
+   residue class `(1,0,6)`;
+2. identify the `AX/BY` factors with a lawful physical relation current on
+   this cospan; and
+3. merge U_full's endpoint completeness with U_clock's same-clock delayed
+   realization, or replace that two-transplant split by one typed row.
 
 Without that theorem, nonvanishing of (17) removes no scalar row.  With it,
 the temporal label alignment, one-base integral, full spectrum, and nonzero
 doubly centred interaction are already in place.
 
-## 8. Connection contract
+## 9. Connection contract
 
 | field | value |
 |---|---|
 | source | THM-2471 source refinement `1_Q P^K(eP_omega)` and `eP_nu` |
-| target function | actual THM-3514 endpoint pair contribution `E_(omega,nu)` |
+| target function | actual THM-3514 bridge and complete `(1,0,t)` pair bank |
 | temporal map | retain inverse branch `n`; source sheet is `floor(n/13)` |
 | hostile marginal | raw 39-atom `T^2` transition has support 1521 but rank 3 |
 | common gauge | `a-u=b-q`, equivalently `s=-d`, with absolute offset retained |
 | preserved | endpoint-time atom pair, collision roots, owner phase, common base |
-| positive | full and doubly centred endpoint kernels are nonzero at all 13 owner modes |
-| remaining sidecar | physical relation-current/grouped-coefficient typing of `AX/BY` |
+| positive | all 169 residue/owner kernels; fixed `(1,0,6)` full and centred profiles |
+| remaining sidecar | exact-address isolation, physical current, U_full/U_clock merger |
 
-## 9. Reproduction
+## 10. Reproduction
 
 ```text
 python -B 04-computation/lrc_r5_source_aligned_guard_atom_branch_sidecar_probe_20260816.py
@@ -288,7 +354,7 @@ The semantic digests are
 
 ```text
 31e9e90c63053944b590195555be07ccbf84fd4c7abc2101de6a2a3562202de6
-430aa2201ee8f624de66f034bdf5e31b11ec6ecbe1f3f0b9cef1342b2b1bc2ff.
+f496b9da968f091b11d27137acdd21c4351785943c45b0e7783fce95b5915df0.
 ```
 
 Script/output SHA-256 pairs are
@@ -297,6 +363,6 @@ Script/output SHA-256 pairs are
 22c5c748392817ccc36889a007c65bd5f44b26c10638df6f6aac48e917547f41
 3165df77792959f2825511b8b7e7c6d112f212573d8c876d08eb18089ee9ec0f
 
-811f7dfeec5f2269bac66de98c12951201beb4353c9b0f661a717e306264ee1b
-29903ea06317bdf5abe9f7fd71c9e44ceb929fc465236c01ac69cc5ca330d1f8.
+fe8fba15e1389711ac569e118a31efbca550c90d69bc95c4d5804f4f2fc73f11
+a11e480ce88d1cf59f67ad860b2b5184a641a39e439e29492250faf339c96fb8.
 ```

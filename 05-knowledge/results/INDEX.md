@@ -47,17 +47,24 @@
   every owner mode, and full `(13,13,13,13)` nonzero-owner Walsh--drift
   support.  All 362 pairs carry nonzero actual THM-3514 endpoint weight; the
   resulting one-base finite simple kernel is nonzero at all 13 owner modes,
-  and so is its doubly centred endpoint interaction.  This closes the finite
-  temporal atom-label mismatch, but `AX/BY` remain preintegrated scalars: no
-  physical relation current, grouped coefficient, row exclusion, or LRC(14).
+  and so is its doubly centred endpoint interaction.  Extending from the
+  `H-q5` bridge to the complete refined `(1,0,t)` bank gives all `169/169`
+  residue/owner pullbacks nonzero.  The fixed all-unit relation has refined
+  class `(1,0,6)`; its endpoint aggregate is
+  `225010624370142818572`, and its full and doubly centred source-aligned
+  profiles are each nonzero at all 13 owner modes.  This closes the temporal
+  atom-label mismatch and the fixed relation's refined-residue aggregate,
+  but not its exact-address orbit sum `C(a;X,m)`.  `AX/BY` remain
+  preintegrated scalars, and the U_full/U_clock split remains: no physical
+  current, grouped coefficient, row exclusion, or LRC(14).
   Source script/output/semantic SHA-256:
   `22c5c748392817ccc36889a007c65bd5f44b26c10638df6f6aac48e917547f41` /
   `3165df77792959f2825511b8b7e7c6d112f212573d8c876d08eb18089ee9ec0f` /
   `31e9e90c63053944b590195555be07ccbf84fd4c7abc2101de6a2a3562202de6`;
   endpoint script/output/semantic SHA-256:
-  `811f7dfeec5f2269bac66de98c12951201beb4353c9b0f661a717e306264ee1b` /
-  `29903ea06317bdf5abe9f7fd71c9e44ceb929fc465236c01ac69cc5ca330d1f8` /
-  `430aa2201ee8f624de66f034bdf5e31b11ec6ecbe1f3f0b9cef1342b2b1bc2ff`.
+  `fe8fba15e1389711ac569e118a31efbca550c90d69bc95c4d5804f4f2fc73f11` /
+  `a11e480ce88d1cf59f67ad860b2b5184a641a39e439e29492250faf339c96fb8` /
+  `f496b9da968f091b11d27137acdd21c4351785943c45b0e7783fce95b5915df0`.
 
 - `keller_R6_finite_sheet_recursive_norm_probe_20260816.py` and
   `keller_R6_finite_sheet_split_branch_audit_20260816.py` -> matching `.out`
@@ -140,7 +147,7 @@
   `6d4f3389f50c98a103c5c6cb2daedea0ed2dd86e267aaa5ab0f9a4585433693d`.
 - `lrc_r5_common_ancestry_guard_atom_root_drift_probe_20260816.py` ->
   matching `.out` [FINITE-EXACT COMMON-ANCESTRY SUPPORT REALIZATION;
-  INDEPENDENT AUDIT PENDING].  Inserts THM-3514's actual 39 guard atoms as
+  INDEPENDENTLY AUDITED AND ACCEPTED AT THIS SCOPE].  Inserts THM-3514's actual 39 guard atoms as
   Boolean partitions on the linked THM-2471 arrival/source nodes before
   transfer and marginalization.  The common gauge `a-u=b-q`, equivalently
   root drift `s=-d`, has `72/117` chamber/drift support and exactly `48/52`
@@ -155,7 +162,11 @@
   a current, row exclusion, or LRC(14).  Script/output/semantic SHA-256:
   `83f1fa49ac4d02e21a1d76fed169d101715a6620342714ed05b9172ae967a730` /
   `7727571722f69a9c59af0183c50c8bae0b7944d6acb7bbb1b3c0e9bd02d54565` /
-  `3d8c88fb7b9762f41ef35c00d980b99fc435c8352baf5dddb9fe412d1baeace0`.
+  `3d8c88fb7b9762f41ef35c00d980b99fc435c8352baf5dddb9fe412d1baeace0`;
+  independent audit script/output/semantic:
+  `ec16f5124c5b83a10337fba6046d08572251d0776285b7e250a86539a26ddf97` /
+  `ebe5acbe2e19465ed10f1380eaa2bd19975849d72be64151514cb0087e645d4f` /
+  `ad81e945207703956f5d6ec300430d562c9f98a9ec8788011119a4857ab34e01`.
 
 - `lrc_r5_folded_c7_to_ufull_k4_drift_transporter_probe_20260816.py` and
   `lrc_r5_folded_c7_k4_transporter_independent_audit_20260816.py` -> matching
