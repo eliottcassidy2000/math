@@ -92,6 +92,26 @@
   `84920c4dbb254aa9a9d3490ca6f5767d23d29a17d137f9e950d62cf49b5f6e69`.
   No global expansion of `G`, depth-five theorem, all-level law, or general
   JC/DC/LRC consequence follows.
+- `keller_level_two_all_coordinate_primitivity_probe_20260816.py` ->
+  matching `.out` [VERIFIED-EXACT PROOF CANDIDATE; AWAITING INDEPENDENT
+  AUDIT].  At target `(1,1,1)`, the exact outer cubic algebra
+  `Q[X]/(25X^3+X-2)` and its inner inverse cubic form one rank-nine etale
+  algebra.  The reconstructed source coordinates satisfy all three sporadic
+  Keller equations exactly, and the power bases of `x,y,z` all have nonzero
+  `9x9` determinants.  Their squarefree characteristic polynomials have
+  factor degrees `(3,6)` and pinned coefficient hashes; direct discriminant
+  quotients equal the squares of the `y/x` and `z/x` basis-change
+  determinants.  One good specialization therefore proves all three
+  coordinates generically primitive, so THM-2582 gives the candidate common
+  class `[Disc_x]=[Disc_y]=[Disc_z]=[H]` for the fixed second iterate.  The
+  intermediate outer root is a singular rank-nine power-basis hostile.
+  This is a fixed-map, level-two square-class statement, not exact
+  multiplicities, a higher-level/family law, or a `JC(2)` result.
+  Script/output LF SHA-256:
+  `ff9fdca890828b5cd9088951f6fce6d0db2fab45ccc9af764d8d71b7fab9e855` /
+  `aefdb93b35b7eeb445a61362ceb6692d42abeb9b5251a15907eb949bdd83d245`;
+  basis-change ledger SHA-256:
+  `4ef93fd8a0384bf6b9bb44340194a7d8a159a8da4d13268173663f800b94c001`.
 - `jc_level4_boundary_squareclass_independent_audit_20260816.py` and
   `jc_level4_degree81_fourier_flint_independent_audit_20260816.py` -> matching
   `.out` files [THM-3498 PROVED + VERIFIED-EXACT + INDEPENDENTLY

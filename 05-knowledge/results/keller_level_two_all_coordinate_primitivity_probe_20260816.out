@@ -1,0 +1,13 @@
+== F^2 all-coordinate degree-nine primitivity gate ==
+target=(1,1,1); outer algebra=Q[X]/(25X^3+X-2); inner algebra rank=3
+Norm_outer(L(q))=190265288239/320=H/(64L): PASS
+inverse formulas satisfy all three sporadic Keller coordinates inside the rank-nine algebra: PASS
+x: power-basis determinant nonzero; numerator/denominator digits=62/72; factor degrees=(3, 6); charpoly sha256=af1933db4a9e9720c71ef56628ad9eb646662ba020929a726a77387fb8e04929
+y: power-basis determinant nonzero; numerator/denominator digits=57/28; factor degrees=(3, 6); charpoly sha256=393eb575a2b74eb0662c74c6e8c390de656f7a3b84d7b0930fc3f4088e2a688a
+z: power-basis determinant nonzero; numerator/denominator digits=208/82; factor degrees=(3, 6); charpoly sha256=6ac03f6767ef062f7b0ea76dd3f158fb4c225dd29608c74dfbf142bd908646c0
+basis-change ratio ledger sha256=4ef93fd8a0384bf6b9bb44340194a7d8a159a8da4d13268173663f800b94c001
+direct discriminant ratios equal the squared y/x and z/x basis-change determinants: PASS
+intermediate outer-root coordinate has singular rank-nine power basis: PASS_HOSTILE
+consequence: x,y,z are generically primitive for F^2, so all three discriminant square classes equal THM-2582 [H]
+scope: fixed sporadic map at level two; square class only, not multiplicities, higher levels, family classification, or JC(2)
+all exact checks passed
