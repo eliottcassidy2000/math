@@ -2,15 +2,24 @@
 id: THM-3494
 title: "Weighted-lift primitive-coordinate discriminant atlas"
 status: >
-  PROVISIONAL PROOF PACKAGE + VERIFIED-EXACT; pending independent audit.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.
   For every THM-3438 weighted atom of degree n>=3, the invariant inverse
-  discriminant is one reduced irreducible branch polynomial, and the actual
-  source coordinates x and y are primitive elements whose eliminant
-  discriminants differ from it only by nonzero squares.  Degree 3 also has an
-  exact z-coordinate check; degrees 3,4,5 are verified by independent
-  resultant computations.  This is an atlas for one explicit family, not a
+  discriminant is a constant unit times one reduced irreducible branch
+  polynomial, and the actual source coordinates x and y are primitive
+  elements whose eliminant discriminants differ from the full inverse
+  discriminant only by nonzero squares.  Degree 3 also has an
+  exact z-coordinate check; Sympy verifies degrees 3,4,5 and an independent
+  FLINT route verifies degrees 3,4, including z at degree 3 and the flat-view
+  and XOR hostiles.  This is an atlas for one explicit family, not a
   classification of Keller maps or a composition law.
 source: codex2 derivation, 2026-08-16
+audit: >
+  codex independent all-degree proof audit plus a disjoint python-flint
+  resultant/discriminant implementation; repaired the provisional claim that
+  the branch polynomial alone always represents the full field square class,
+  repaired the claim that every unsquared volume ratio has trivial square
+  class, and corrected the primary output hash from CRLF replay bytes to
+  LF-normalized stored bytes.
 depends_on:
   - THM-3438-weighted-lift-keller-degree-spectrum
 related:
@@ -19,26 +28,32 @@ related:
   - THM-2546-integral-coordinate-dichotomy-and-parity-lens-scope
   - THM-2582-odd-block-discriminant-tower-and-composite-jelonek-square-class
   - THM-3487-two-twenty-four-state-fibonacci-bundles-cycle-type-obstruction
+  - THM-3495-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness
 script: 04-computation/jc_weighted_primitive_coordinate_discriminant_atlas_thm3494.py
 output: 05-knowledge/results/jc_weighted_primitive_coordinate_discriminant_atlas_thm3494.out
+independent_script: 04-computation/jc_weighted_primitive_coordinate_discriminant_atlas_thm3494_independent_audit.py
+independent_output: 05-knowledge/results/jc_weighted_primitive_coordinate_discriminant_atlas_thm3494_independent_audit.out
 script_sha256: 5a84d7ae2a9c89a1a8c70eb39612f7eda41fb0f0d787366dda767a5390ae3e8c
-output_sha256: 723798b46423903ac160a0abbf2b102b606ae9af2474b81cddc3ffe3b88383f4
+output_sha256: 6402ddf6c7993fcd6dce0390d5191b0da3edb149259632e6d03de8a925e9fb1f
+independent_script_sha256: c5326c6820d5cc955653cc3c3a9e50aab909f455313fdf025e1c8470cf168e13
+independent_output_sha256: 6dda1bb7f64b8a7bec6bdca5b591e56c1a505f9e64600a2ed3222d63c356ed45
 semantic_sha256: 5d327ad97829f806a16fbe9116329c32c3941fe1def2de6234155a9f8e31e075
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3494 -- weighted-lift primitive-coordinate discriminant atlas
 
-**PROVISIONAL PROOF PACKAGE + VERIFIED-EXACT; pending independent audit.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-This theorem candidate explains which part of the fixed sporadic map's three
+This theorem explains which part of the fixed sporadic map's three
 coordinate-cubic discriminants is special to that map and which part belongs
 to every separable primitive-element atlas.  It also gives the promised first
 three rows of the THM-3438 all-degree family.
 
 ## 1. Statement
 
-Use THM-3438's canonical seed with `d=n-1>=2`, `b=c=1`:
+Let `k` be a characteristic-zero field.  Use THM-3438's canonical seed with
+`d=n-1>=2`, `b=c=1`:
 
 ```text
 p_d(w)=2w-3w^2+w(1-w)(w^(d-2)-6/[d(d+1)]),
@@ -95,9 +110,12 @@ The claims are:
    Disc_Y(E_y)/D_n in K^{*2}.                           (7)
    ```
 
-Consequently every primitive coordinate view has the same discriminant square
-class `[D_n]=[B_n]`.  Its individual squared factor is a coordinate-projection
-index, not another sheet or another branch carrier.
+Consequently every primitive coordinate view has the same full discriminant
+square class `[D_n]=[u_n B_n]`.  At the divisor-parity level the unique odd
+carrier is `B_n`; the constant class `[u_n]` must be retained in
+`K^*/K^{*2}` unless it is known to be a square.  Each view's additional
+squared factor is a coordinate-projection index, not another sheet or another
+branch carrier.
 
 The statement is over the generic chart and the explicit THM-3438 family.  It
 does not assert that every source coordinate of every Keller map is primitive,
@@ -121,17 +139,20 @@ q_d(w)=w p_d(w)-R_d(w).                                (9)
 ```
 
 It is the image of an irreducible affine line, so its closure is an
-irreducible plane curve.  On the dense locus `p_d'(w)!=0`,
+irreducible plane curve.  The derivative `p_d'` is nonzero in characteristic
+zero.  On its dense nonvanishing locus,
 
 ```text
 dQ/dP=q_d'(w)/p_d'(w)=w.                               (10)
 ```
 
-The tangent slope recovers the parameter.  Hence `(9)` is generically
-one-to-one and supplies the unique irreducible support of the resultant
+The tangent slope is a rational function on the image curve and recovers the
+parameter.  Hence `(9)` induces equality of function fields, is generically
+one-to-one, and supplies the unique irreducible support of the resultant
 `Res_w(T_n,partial_w T_n)`.
 
-At a generic point of this curve, `T_n` has exactly one double root because
+At a generic point of this curve, generic one-to-one-ness leaves exactly one
+critical root, and `T_n` has exactly one double root because
 
 ```text
 partial_w^2 T_n=p_d'(w)!=0.                            (11)
@@ -151,7 +172,12 @@ This is the discriminant version of THM-3438's generic-transposition proof of
 
 ## 3. Why the two source coordinates are primitive
 
-Let `N/K` be the normal closure of `K(w)/K`.  THM-3438 gives
+First put `K_0=k(P,Q)`.  THM-3438 gives an `S_n` normal closure over `K_0`.
+The extension `K_0(C)/K_0` is purely transcendental and therefore regular;
+it is linearly disjoint from every finite algebraic extension of `K_0`.
+Consequently irreducibility, the normal closure, and its Galois group survive
+the base change to `K=K_0(C)`.  If `N/K` is that base-changed normal closure,
+then
 
 ```text
 Gal(N/K)=S_n,        Gal(N/K(w))=S_(n-1).              (13)
@@ -196,11 +222,15 @@ congruent, so
 Disc(xi)=I_xi^2 Disc(w).                               (17)
 ```
 
-Applying `(17)` to `x` and `y` proves `(5)`.  A raw resultant in `(6)` differs
-from the corresponding monic minimal polynomial by a scalar in `K*`; scaling
-a degree-`n` polynomial multiplies its discriminant by the even power
-`2n-2`.  The same observation removes the constant leading coefficient of
-`T_n`.  This proves `(7)`.
+Applying `(17)` to `x` and `y` proves `(5)`.  More explicitly, away from the
+generic discriminant the conjugate values `C/(P-p_d(w_i))` and
+`(w_i-P+p_d(w_i))/C` are distinct because `x` and `y` are primitive; their
+denominators are nonzero because `P-p_d(w_i)=-T_n'(w_i)`.  Thus each raw
+resultant in `(6)` is a nonzero scalar in `K*` times the corresponding monic
+minimal polynomial, rather than a power of one.  Scaling a degree-`n`
+polynomial multiplies its discriminant by the even power `2n-2`.  The same
+observation removes the constant leading coefficient of `T_n`.  This proves
+`(7)`.
 
 The primitivity gate is essential.  The exact companion replaces the
 coordinate by the flat base-field view `xi=P`; its resultant is
@@ -214,7 +244,7 @@ primitive-element sidecar can therefore lose the entire extension.
 
 ## 5. Exact degrees 3, 4, and 5
 
-The independent resultant companion works over `Q[P,Q,C]`, reconstructs every
+The primary resultant companion works over `Q[P,Q,C]`, reconstructs every
 displayed polynomial, factors over `Q`, and obtains:
 
 | `n` | `D_n=u_n B_n` | `B_n` terms / `(deg_P,deg_Q)` | `I_x` core | `I_y` core |
@@ -226,6 +256,10 @@ displayed polynomial, factors over `Q`, and obtains:
 Here an index core removes the forced factor
 `C^(n(n-1)/2)` from the square root of `(7)`.  Every listed `B_n` is one
 exponent-one factor, and each displayed index core is coprime to `B_n`.
+The constants are not cosmetic in the field square class: over `Q`, the first
+two rows have `[D_3]=[-B_3]` and `[D_4]=[-B_4]`, while the displayed positive
+scalar in the fifth-degree row is a rational square.  All three rows have the
+stated odd divisor carrier `B_n`.
 
 For `n=3`, the formulas are small enough to print:
 
@@ -265,7 +299,11 @@ I_z(n=3): b4542923...be1a00
 ```
 
 The full exact ledgers, eliminant hashes, signs, scalar denominators, gcd
-checks, and ordinary/optimized controls are in the stored output.
+checks, and ordinary/optimized controls are in the stored output.  The
+independent audit uses FLINT's `fmpq_mpoly` representation, imports neither
+Sympy nor the primary script, and reproduces the complete `n=3,4` branch,
+`x`, and `y` rows, the 44-term `n=3` `z` eliminant, all displayed coefficient
+hashes in those rows, branch/index coprimality, and the flat hostile.
 
 ## 6. The fixed three cubics and the infinite family
 
@@ -292,7 +330,9 @@ norm and cross-block discriminant factors.  THM-2582's fixed-map degree-nine
 calculation is the canonical hostile: composition changes the odd carrier.
 
 THM-3495's proved fixed-map level-three theorem finds a new prime image in a
-norm numerator.  That is evidence for a divisor-orbit tower under
+norm numerator and records the full square class `[-2J]`, independently
+reinforcing the constant-unit guardrail above.  This is evidence for a
+divisor-orbit tower under
 composition, not evidence that the weighted `B_n` are powers or iterates of
 the cubic `L`.  The two constructions remain separately typed.
 
@@ -316,15 +356,36 @@ Disc(xi_j)=g_ij^2 Disc(xi_i).                          (24)
 Thus the edge labelling is the exact multiplicative coboundary of the vertex
 volumes `v_i`.  For four views there are exactly six edges of `K_4`, matching
 the proposed size-four/six-edge carrier.  But a tournament orientation is only
-a gauge choice: reversing an edge inverts its label.  Passing to square class,
-or to an XOR bit recording whether the ratio is a square, sends every edge to
-zero and forgets the divisor valuations of `g_ij`.
+a gauge choice: reversing an edge inverts its label.
 
-The preserved target is the common branch square class.  The destroyed data
-are the individual projection-collision divisors and boundary valuations.  The
-needed sidecar is the unsquared basis-volume/index cochain.  This particular
-`K_m` cochain has zero `H^1` class; that does not say that every cochain on a
-complete graph is exact, nor does it transport a physical LRC current.
+There are three distinct quotients, and the distinction is load-bearing:
+
+```text
+unsquared square class: [g_ij]=[v_j]-[v_i] in K^*/K^{*2},
+discriminant ratio:     Disc(xi_j)/Disc(xi_i)=g_ij^2,
+chosen XOR character:   chi([g_ij])=chi([v_j])-chi([v_i]) in F_2.  (25)
+```
+
+The first is an exact square-class coboundary but its individual edges need
+not vanish.  The second has trivial square class on every edge.  The third is
+an exact XOR coboundary only after a homomorphism
+`chi:K^*/K^{*2} -> F_2` is chosen.  The bare indicator "square versus nonsquare"
+is not a homomorphism when the square-class group has rank greater than one.
+The minimal rational hostile uses vertex volumes `(1,2,6)`: the edge ratios
+`(2,3,6)` are all nonsquares, so the bits `(1,1,1)` violate
+`b_12 XOR b_23=b_13`, although `g_12 g_23=g_13`.  In contrast the
+2-adic-valuation character gives `(1,0,1)`, and the discriminant ratios
+`(4,9,36)` are edgewise square-trivial.
+
+The preserved targets are the common full discriminant square class and its
+odd branch-divisor carrier; quotienting by constant units preserves only the
+second.  The destroyed data are the individual projection-collision divisors
+and boundary valuations.  The needed sidecar is the unsquared
+basis-volume/index cochain.  This particular
+cochain on the complete-graph 1-skeleton has zero `H^1` class because it is a
+coboundary; its edge labels, including their square classes, may still be
+nontrivial.  This does not say that every graph cochain is exact, nor does it
+transport a physical LRC current.
 
 ## 8. Exact verification and open boundary
 
@@ -333,6 +394,8 @@ Run
 ```bash
 python3 -B 04-computation/jc_weighted_primitive_coordinate_discriminant_atlas_thm3494.py
 python3 -B -O 04-computation/jc_weighted_primitive_coordinate_discriminant_atlas_thm3494.py
+python3 -B 04-computation/jc_weighted_primitive_coordinate_discriminant_atlas_thm3494_independent_audit.py
+python3 -B -O 04-computation/jc_weighted_primitive_coordinate_discriminant_atlas_thm3494_independent_audit.py
 ```
 
 The companion checks, without `assert`:
@@ -346,9 +409,15 @@ The companion checks, without `assert`:
 6. the full `z`-coordinate cubic at `n=3`; and
 7. the flat-coordinate hostile `(18)`.
 
-Ordinary and optimized transcripts agree byte-for-byte.  The all-degree proof
-is Sections 2--4; the finite computation is a hostile-independent check, not
-an extrapolation from three rows.
+Ordinary and optimized transcripts agree byte-for-byte after the platform
+newline convention is fixed.  The all-degree proof is Sections 2--4; the
+finite computations are independent checks, not extrapolations from the low
+rows.  The audit also verified that pure-transcendental base change preserves
+the `S_n` closure, that point-stabilizer maximality is used only after proving
+`x,y notin K`, that raw-resultant scaling contributes only even powers, and
+that the constant unit `u_n` cannot be discarded from a field square class.
+The originally pinned primary output hash was the Windows-CRLF replay hash;
+the frontmatter now records the actual LF-normalized stored-output hash.
 
 Still open or outside scope:
 

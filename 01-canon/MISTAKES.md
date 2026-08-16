@@ -9,6 +9,54 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-413 (2026-08-16, provisional THM-3494 discriminant unit) -- an odd branch divisor does not determine the full field square class up to constants
+
+- **What failed:** after proving `D_n=u_n B_n` with `u_n in k^*`, the
+  provisional statement wrote `[D_n]=[B_n]` in `K^*/K^{*2}`.  This silently
+  killed the constant square class `[u_n]`; only divisor parity is insensitive
+  to a nonzero constant unit.
+- **Minimal witness / first failed implication:** the theorem's own cubic row
+  has `D_3=-B_3`.  Over `Q`, `-1` is not a square, so
+  `[D_3]=[-B_3]!=[B_3]`, even though `B_3` is exactly the unique reduced odd
+  branch divisor.  The quartic scalar `-1/16` has the same negative unit
+  class; the fifth-degree displayed scalar is a rational square.
+- **Repair / strongest survivor:** every primitive coordinate eliminant has
+  square class `[D_n]=[u_nB_n]`, because its trace-form index and raw
+  normalization contribute squares.  The unique odd divisor carrier remains
+  `B_n`.  THM-3494 now distinguishes the full field square class from its
+  image after quotienting constant units and was repaired before promotion.
+- **Reusable rule:** a UFD factorization controls valuations, not unit square
+  classes.  Whenever a discriminant is normalized "up to scalar," retain that
+  scalar before making a claim in `K^*/K^{*2}`; discard it only in an explicitly
+  unit-quotiented divisor group.
+
+## MISTAKE-412 (2026-08-16, provisional THM-3494 XOR and hash typing) -- an exact volume coboundary need not be edgewise square-trivial
+
+- **What failed:** the provisional THM-3494 tournament paragraph labelled
+  `g_ij=v_j/v_i` and then said that passage to square class, or to the bit
+  recording square versus nonsquare, sends every edge to zero.  It also
+  labelled the primary output hash as LF-normalized although the pinned value
+  was the raw Windows-CRLF replay hash.
+- **Minimal witness / first failed implication:** over `Q`, vertex volumes
+  `(1,2,6)` give exact edge ratios `(g_12,g_23,g_13)=(2,3,6)`.  All three are
+  nonsquares, so their square classes are nonzero and the naive bits
+  `(1,1,1)` violate `b_12 XOR b_23=b_13`, even though
+  `g_12 g_23=g_13`.  The square/nonsquare indicator is not a character on a
+  square-class group of rank greater than one.  Separately, the raw CRLF hash
+  `723798b4...83f4` normalizes to the stored LF hash
+  `6402ddf6...fb1f`.
+- **Repair / strongest survivor:** the unsquared classes obey the exact
+  coboundary law `[g_ij]=[v_j]-[v_i]` in `K^*/K^{*2}` and may be nonzero
+  edgewise.  Every chosen character `K^*/K^{*2}->F_2` gives a lawful XOR
+  coboundary, while the discriminant ratios `g_ij^2` are individually
+  square-trivial.  Thus the common discriminant square class, zero graph
+  `H^1` class, and unsquared index sidecar all survive.  THM-3494 was repaired
+  before promotion, and its frontmatter now pins LF-normalized bytes.
+- **Reusable rule:** distinguish an exact multiplicative cochain, its full
+  square-class image, a selected binary character, and the non-homomorphic
+  predicate "is nonsquare."  Normalize line endings before naming a hash
+  basis rather than inferring the basis from replay equality.
+
 ## MISTAKE-411 (2026-08-15, provisional THM-3481 Walsh scope) -- odd support gives full Walsh spectrum only beyond the one-variable cube
 
 - **What failed:** the first provisional summary applied THM-3481's full

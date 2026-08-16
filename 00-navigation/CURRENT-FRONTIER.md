@@ -328,10 +328,10 @@ density need not settle `z=1` mass.
 - **Rule 30:** [3476](../01-canon/theorems/THM-3476-rule30-depth-four-transverse-jet-barrier-and-slack-pascal-atlas.md);
   [3480](../01-canon/theorems/THM-3480-rule30-staircase-transducer-entropy-and-nonrectangular-macroblock-compiler.md); [3481](../01-canon/theorems/THM-3481-rule30-cyclic-arc-norm-rank-and-marked-innovation-spectrum.md);
   [3488](../01-canon/theorems/THM-3488-rule30-inward-slack-monicity-and-parity-cartier-ramification.md); [3489](../01-canon/theorems/THM-3489-rule30-packed-restart-and-pointed-pascal-face.md); [3491](../01-canon/theorems/THM-3491-rule30-seven-four-staircase-compiler.md); [3492](../01-canon/theorems/THM-3492-rule30-fiber.md); [3493](../01-canon/theorems/THM-3493-rule30-dyadic-wrap-atlas.md). OPEN.
-- **Jacobian/Dixmier:** `JC(2)`/`DC(2)` remain open. THM-3459 separates Rule 30
-  lifts; no JC map. THM-3438 gives `KDeg(m)={1,3,4,...}` (`m>=3`), all-grade
-  `S_n`, first mixed grade `9`, global G1 and a non-radical `S_5` inverse;
-  arbitrary-map, planar/z-affine and `A_4/A_5` classification stays open.
+- **Jacobian/Dixmier:** `JC(2)`/`DC(2)` remain open. THM-3438 gives every
+  grade except `2`, all-grade `S_n`, G1 and a nonradical `S_5`; audited
+  THM-3494 gives its reduced branch and primitive `x/y` atlas. `C=0`/Jelonek,
+  composition, arbitrary-map and planar/z-affine classifications stay open.
   THM-1300/1315 are unsettled (MISTAKE-205); THM-2473--2576 fixed-map.
   [THM-3495](../01-canon/theorems/THM-3495-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness.md)
   gives fixed-map `N(H)=J/(2^35L^7)`, `S_(F^3)=V(LHJ)`, `[Delta_3]=[-2J]`;
