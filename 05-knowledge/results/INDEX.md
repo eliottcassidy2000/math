@@ -1,5 +1,36 @@
 # Script Results Index
 
+- `lrc_ufull_guard_bucket_all_role_spectral_probe_20260816.py` -> matching
+  `.out` [FINITE-EXACT ENDPOINT-RESPONSE THEOREM CANDIDATE; INDEPENDENT AUDIT
+  PENDING].  Extends the audited U_full guard-bucket factorization from the
+  `H,q5` bridge to all five distinct refined role classes.  Every class is
+  nonzero on all `52=4*13` active chamber-pair/drift buckets and the resulting
+  `5x52` tensor has rank five.  For every one of the 72 lawful role charts,
+  the forced bridge and both `K4` tree factors are nonzero on all 52 point
+  buckets, all 13 drift marginals, all 13 drift-Fourier modes, and all
+  `4*13` chamber/Fourier fibres; every drift and Fourier `5x4` slice has rank
+  four.  This is maximal endpoint weighted-tree support in graph `B^1`, not
+  common ancestry, a physical current, absolute `H^1`, a bispectrum theorem,
+  scalar exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
+  `98a4cf5c82ca10027302baf2c7fb59acb0f305143e22453d0a8660fef8d90cf0` /
+  `fe1d240a7e2d71ba04e50f53bc5833b45b5c6fa5cc3d576f8443f5428edfa7c0` /
+  `2c9495fb8bcb731361ba331d9ca4b84a60f21551dc49b16e6519c1fc4f2e9f97`.
+- `keller_level_three_three_coordinate_primitive_finite_field_probe_20260816.py`
+  -> matching `.out` [VERIFIED-EXACT FIXED-MAP LEVEL-THREE THEOREM CANDIDATE;
+  INDEPENDENT AUDIT PENDING].  In nine exact cubic quotient algebras over
+  `F_101`, reconstructs all three actual source coordinates, replays the
+  original map, and computes their regular-representation characteristic
+  polynomials.  The inherited target `(93,28,83)` is a sharp hostile with a
+  degree-one `y` collision.  The deterministic target `(77,62,4)` instead
+  gives three squarefree degree-27 products for `x,y,z`, proving a lawful
+  specialization where every coordinate generates the rank-27 fibre algebra.
+  Subject to proof audit, generic trace-form congruence upgrades THM-3495 to
+  the common class `[-2J]` for all three level-three coordinate views.  No
+  higher-level, outside-family, arbitrary-Keller, JC(2), or LRC consequence.
+  Script/output/semantic LF SHA-256:
+  `374c69d1a2b9e427b1ce586312cc1c2554454ee0f485e732a8887b5afc0586d0` /
+  `243576477c76b6b994fcf9f58d23b66fe47811e50aa5fbca041080518f03bffb` /
+  `61ddcb9dbd3c7582a514bf1a42bbff3cd9ca7d052ea9620721979ed6c8138245`.
 - `reduced_fraction_harmonic_k4_fibonacci_thm3509.py` -> matching `.out`
   [THM-3509 PROVED + VERIFIED-EXACT + HOSTILE-AUDITED]. Every reduced
   fraction `m/n` is equivalent to the primitive recurrence window

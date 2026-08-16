@@ -1,0 +1,21 @@
+LRC U_FULL ALL-ROLE GUARD-BUCKET SPECTRAL ATLAS
+status=FINITE-EXACT endpoint-response theorem component; weighted graph factors; LRC(14) OPEN
+dependency_hashes=(bucket=a1d4b667812949001fc863ba881ff7409bbae3c568a6bf7bc24c9dc88b2766b1,role=ee2105742abee578a9c41ff7ec954a07ada324fccc2c643429e7ac6e6e6f8fc2)
+field=(prime=572252886246508880869,zeta13=505438565698892403012); gamma_sha256=1fabc5cfdbaa1455e10cd6bf9264488133616a7b0ff381623d729b4b4bfa9682
+role_classes=(('c1', (0, 0, 0)), ('c2', (1, 0, 0)), ('c3', (0, 1, 0)), ('H', (1, 0, 1)), ('q2', (1, 12, 0)), ('q3', (1, 0, 0)), ('q4', (1, 0, 0)), ('q5', (1, 0, 0)))
+distinct_q_values=(((0, 0, 0), 405336876493642499425), ((0, 1, 0), 518539850465495448196), ((1, 0, 0), 503604956476841920373), ((1, 0, 1), 320618948602619577408), ((1, 12, 0), 15703541686881447885))
+tensor_shape=(q_classes=5,chamber_pairs=4,drifts=13); active_entries_per_q=52
+active_bucket_support_counts=(((0, 0, 0), 52), ((0, 1, 0), 52), ((1, 0, 0), 52), ((1, 0, 1), 52), ((1, 12, 0), 52)); five_by_52_rank=5
+pointwise_52x72_chart_bank=(entries,factor_zero_totals,all_nonzero_entries,profiles,product_zeros_by_chart,digest)=(52, (0, 0, 0, 0), 52, (((0, 0, 0, 0), 52),), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), 'a1d5183f37cc39deed976876ed91132f662f91137f41a10a79fd3e974ced2dfc')
+drift_marginal_13x72_chart_bank=(13, (0, 0, 0, 0), 13, (((0, 0, 0, 0), 13),), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), '6bcdd9fa616ba2dc4883d8334dca7358d06375d7342f43c4aac8dea45deb5027')
+drift_fourier_13x72_chart_bank=(13, (0, 0, 0, 0), 13, (((0, 0, 0, 0), 13),), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), 'e96a3859e6838fa91d04a55ca55fa4e44cafa45bd86b93c7f6b612b1e65f4dc1')
+chamber_fourier_52x72_chart_bank=(52, (0, 0, 0, 0), 52, (((0, 0, 0, 0), 52),), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), 'c9ca8c9b7ed7000b00e39b496523ad75a44379d84ea35e49163d6b64e4196e73')
+slice_ranks=(drift=(4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4),fourier=(4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4))
+global_72_chart_bank=(1, (0, 0, 0, 0), 1, (((0, 0, 0, 0), 1),), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), '42b7fb9b198dc86faaeb0b536a28a39f8f049e5502a3c4df19fb810d444de49b')
+hostiles=(flat role response kills all factors; setting q5=H kills the forced bridge and every product)
+typing=every bank is formed from eight role potentials and hence lands in graph B^1; no absolute H1 flux is inferred
+next_test=insert one lawful character-independent common-stalk ancestry relation before endpoint marginalization, then repeat the same tensor and chart gates
+security_ast=(3458, ())
+semantic_sha256=2c9495fb8bcb731361ba331d9ca4b84a60f21551dc49b16e6519c1fc4f2e9f97
+nonconsequence=no grouped current, all-unit projector, physical chronology, bispectrum theorem, scalar-row exclusion, or LRC(14)
+STATUS=PASS
