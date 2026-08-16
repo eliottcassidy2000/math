@@ -1,5 +1,28 @@
 # Script Results Index
 
+- `keller_level_five_degree243_finite_field_probe_independent_20260816.py`
+  and `keller_level_five_degree243_fourier_flint_independent_audit_20260816.py`
+  -> matching `.out` files [THM-3525 PROVED + VERIFIED-EXACT +
+  SPLIT-REPRESENTATION AUDITED].  At `(1,1,1)` over `F_251`, the inverse
+  tower has dimensions `3,9,27,81` with every graph, denominator, and
+  derivative gate a unit.  Nested coefficient algebras plus Newton
+  interpolation and independent FLINT regular matrices plus multiplicative
+  Fourier inversion recover the same degree-`243`, squarefree fifth
+  x-eliminant; degrees `244,...,249` vanish and the coefficient hash is
+  `912f32ec...00ab`.  The fibre factor degrees are
+  `1^2,2^6,3^4,4^4,6^4,9,12^3,24,36^3`, all exponent one.  Hence the generic
+  81 cubic blocks are cubic, separable, and pairwise coprime, and THM-2582
+  gives `[Delta_5]=[-2R_5]`.  No `R_5` irreducibility/image equation, fifth
+  component, all-level, arbitrary-map, or general JC claim.  Primary
+  script/output/semantic SHA-256:
+  `25e5bdcb299bd3291125a2bc5a45208f245ea53af39c37df36f8f0946c16115d` /
+  `91cf818499aeb3e0ccbb9b71ed7ead06983fbbac9c1fb4e6dd5904e5312d703e` /
+  `1397fb3a3173e8dfbe867f4fe4c2d527ef33da3c94fb60fcb227f8c60b9d15b7`;
+  FLINT audit:
+  `044f535a19a7142da23b541c8dddfd9bccfeae20d0e895bc0e0384905f12423a` /
+  `a5cabf0f78538ff7719ae203f6be3916a6b918ed13542ce9c38d125b361366a5` /
+  `0f44c226329aedf3a3c232dc44fcd228cfce9587483d92f47090baac2f2be7ea`.
+
 - `lrc_r5_common_gauge_bucket_quotient_hostile_probe_20260816.py` ->
   matching `.out` [VERIFIED FINITE-EXACT FOLLOW-UP SIDECAR; SOURCE
   INDEPENDENTLY ACCEPTED].  The thirteen common-offset owner functionals on the `39x39`
@@ -80,9 +103,10 @@
   one branch gives `25`.  Hence `v_L(N(R_6))=-10663` and
   `R_7=L^10663N(R_6)` is polynomial and `L`-coprime; proved THM-3522 then
   gives the complete fixed-chart packet `A(66907,24255)`.  The `243` here is
-  an evaluation-algebra dimension, not the open degree-`243` separability
-  gate; no image, irreducibility, all-level, arbitrary-map, or general JC
-  claim follows.  Primary script/output/semantic SHA-256:
+  an evaluation-algebra dimension, not by itself an eliminant gate;
+  subsequent THM-3525 closes the distinct degree-`243` separability problem.
+  No image, irreducibility, all-level, arbitrary-map, or general JC claim
+  follows from THM-3523.  Primary script/output/semantic SHA-256:
   `9cacaaa825d9598556f7e8baa35970d30295a139c79ed2dc22c9c5e84ef611e8` /
   `759057c3f06b77f972f551238891049e261b56d1a2619b786d5230c6d8269d6f` /
   `a2ede01095e73ad727285743b83d6502ff37c0ab772a19e0a03fe9036ba5f7b8`;
@@ -224,9 +248,10 @@
   resultant routes, and reaches the same supports and scalars.  The second
   audit checks `15,250` packets through `e<=300` plus split-prime Vieta
   controls at `109,127,163`; its wrong-monic hostile fails every nonzero
-  row.  No later
-  polynomiality/finite-sheet, image, degree243, all-level, arbitrary-map, or
-  general JC claim follows.  Primary script/output/semantic LF SHA-256:
+  row.  No later polynomiality/finite-sheet, image, degree243, all-level,
+  arbitrary-map, or general JC claim follows from that computation alone;
+  THM-3523 and THM-3525 subsequently close the next old-`L` and degree-243
+  gates, respectively.  Primary script/output/semantic LF SHA-256:
   `5fd3c27bf49f8fab5e96b3d3fe608b91b86151ca265d35878225f8ce6aa2f05e` /
   `9a3eba81a00e35a5c99c2285e8ea7a10b6b1764b6c8d56b4d5276c449bc1b8b8` /
   `8b6a447c98e4e7f6bfc493818696d4a9193b4da47ab7b2f9e0368e9155940a91`;
@@ -472,8 +497,9 @@
   prove `v_L(N(G))=-271`, hence `R_5=L^271N(G)` is polynomial and coprime to
   `L`, with exposed pair `(1699,615)`.  The exact Cassini/reduced-fraction
   sidecar passes.  THM-3513 subsequently closes the `z`-top and `gamma`
-  renewal faces for this fixed `G`; the next finite sheet, renewal for
-  `R_5`, fifth image role, degree-243 gate, and all-level law remain open.
+  renewal faces for this fixed `G`; THM-3521--3523 close the next
+  finite-sheet/renewal gates, and THM-3525 closes degree-243 separability.
+  The fifth image role and all-level law remain open.
   Script/output LF SHA-256:
   `fe1b03de9061c997a1abba6b88753e589c0a01f9f92762e49fe7ea0504ce9797` /
   `0dd07d1af0621a9f767e9c803e805de61ee428fb6a980b004cd3f06625082b52`.
