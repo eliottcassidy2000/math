@@ -1,6 +1,16 @@
 # Keller level four: the old boundary cancels again
 
-**Status: PROOF CANDIDATE + VERIFIED-EXACT; awaiting independent audit.**
+**Status: PROMOTED as THM-3498 after independent exact/proof audit.**
+
+The independent audit reconstructed the exposed face with a separate SymPy
+factorization and nested-Horner finite-sheet evaluation.  It also replaced
+the submitted finite-field engine by FLINT regular-representation matrices
+and multiplicative Fourier inversion on `F_101^*`; the held-out `X=0` value,
+degree `81`, derivative gcd, and coefficient hash all agree.  A literal
+parity ledger retained the constant class `[2]`.  The promotion proves the
+old-`L` boundary, localization, generic separability gate, and
+`[Delta_4]=[2G]`; it does not promote the open image/factorization claims
+listed below.
 
 ## Inheritance pass
 

@@ -9,8 +9,11 @@ status: >
   global degree-nine discriminant square class `[H]`: the old component `L` has
   even valuation and `H` is the sole odd irreducible divisor.  THM-3495 proves
   fixed depth three: `S_(F^3)=V(LHJ)` has three distinct prime components and
-  `[Delta_3]=[-2J]`.  Exact positive multiplicities and depth >=4 remain open.
-  Nothing here is a JC(2) or classification claim.
+  `[Delta_3]=[-2J]`.  THM-3498 proves the depth-four old-boundary valuation,
+  polynomial localization, generic degree-81 separability gate, and square
+  class `[Delta_4]=[2G]` for `G=L^43N(J)`, but not the factorization or image
+  role of `G`.  Exact positive multiplicities, the fourth component law, and
+  depth >=5 remain open.  Nothing here is a JC(2) or classification claim.
 source: opus-2026-07-28 (from the uniform disc law found by the
   THM-2546 referee run: disc = -4 (square)^2 L for all three
   coordinate cubics of the sporadic Keller map)
@@ -25,6 +28,7 @@ related:
   - THM-2570 (global normalization, conductor, and cusp-cylinder structure)
   - THM-2576 (image divisor and two-component nonproperness law for F o F)
   - THM-3495 (third prime image, three components, and degree-27 square class)
+  - THM-3498 (fourth old-boundary valuation and degree-81 square-class gate)
 ---
 
 # HYP-9033 -- the discriminant tower and the genus axis
@@ -144,6 +148,25 @@ The three factors are pairwise distinct and the restriction
 the image tower, but distinctness, irreducibility, multiplicity, and selected
 coordinate primitivity of each new closure remain open.
 
+THM-3498 proves the next discriminant gate without constructing the next
+image equation.  The exposed face
+
+```text
+in(J)=-2^58 3^51 13^8 79^4 313^2 x^43(3xz-2y)^15
+```
+
+and a finite-sheet unit control give `v_L(N(J))=-43`, hence
+`G=L^43N(J)` lies in `Q[a,b,c]` and is coprime to `L`.  A squarefree
+degree-81 good-reduction fibre then makes the odd-block recursion lawful and
+gives
+
+```text
+[Delta_4]=[2G].
+```
+
+The constant class `[2]` is retained.  Nothing here proves that `G` is
+irreducible, coprime to `H,J`, or the fourth image component.
+
 ## 3. Two crevasse invariants for atomhood (spectrum repaired)
 
 THM-3438 supersedes the old atom-degree floor: weighted lifts give a primitive
@@ -208,6 +231,9 @@ place to HUNT for a JC(2) counterexample instead.
   degree-nine eliminant has discriminant square class `[H]` (THM-2582).
   THM-3495 gives `S_(F^3)=V(LHJ)` and degree-27 class `[-2J]`.  Odd part
   `L*H` at grade two is refuted; exact positive multiplicities remain open.
+  At grade four THM-3498 proves only the square-class/localization gate
+  `[Delta_4]=[2G]`, `G=L^43N(J)` and `gcd(G,L)=1`; the set/component claim is
+  still open.
 - P2 (VERIFIED-EXACT for the two fixed tame members): W1 and W2 obey
   `disc=-(det J)^2(square)^2L_W`, with `L_W=L o T^(-1)`.  A general
   gauge-covariance theorem remains open.
@@ -223,23 +249,26 @@ place to HUNT for a JC(2) counterexample instead.
 The set law and image equation are canonized in THM-2576 and independently
 audited coefficient-by-coefficient.  THM-2582 now canonizes the exact norm
 identity and the global composite discriminant square class `[H]`; THM-3495
-adds the third prime `J`, the three-component set, and `[-2J]`.  Neither is an
-exact all-target multiplicity factorization.
+adds the third prime `J`, the three-component set, and `[-2J]`; THM-3498 adds
+the fourth old-`L` valuation, polynomial localization, degree-81 genericity
+gate, and `[2G]`.  None is an exact all-target multiplicity factorization at
+depth four.
 Trace-zero persistence at depth two and the `8 -> 512` cubing pattern are
 VERIFIED for the fixed construction only.  The W1/W2 identities are exact for
 those two tame conjugates, not a classification theorem.  P4 is proved for
-the fixed tower through depth three.  The next decisive test is the
-level-four norm law, boundary valuation, and distinctness of
-`closure(F^3(V(L)))` from the first three components.
+the fixed tower through depth three.  The next decisive test is to construct
+or specialize `G`, determine its factorization and the generic degree of
+`V(J)->V(G)`, and test its distinctness from the first three components.
 
 ## Loss ledger
 
 The saturated cuspidal law is proved for the sporadic `F` only; the raw
 pullback has the extra affine plane `c=0` described in (C).  The set-level
 composition law and odd-block square-class lemma are general; the fixed-map
-two- and three-component sets and their square classes are proved.  Exact
+two- and three-component sets and their square classes are proved; the
+depth-four square class is proved without its component set.  Exact
 discriminant multiplicities, the `-(det J)^2` law, and depth-four/general
-component counts remain outside proved canon.  "Generic component count" needs a
-precise genericity notion before any classification claim; none of this closes
-JC(2), classifies maps within the monoid, or controls the weighted G1 witness
--- it supplies invariants and a hunting map.
+component counts remain outside proved canon.  "Generic component count"
+needs a precise genericity notion before any classification claim; none of
+this closes JC(2), classifies maps within the monoid, or controls the weighted
+G1 witness -- it supplies invariants and a hunting map.

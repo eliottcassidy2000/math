@@ -1,5 +1,32 @@
 # Script Results Index
 
+- `jc_level4_boundary_squareclass_independent_audit_20260816.py` and
+  `jc_level4_degree81_fourier_flint_independent_audit_20260816.py` -> matching
+  `.out` files [THM-3498 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  PROOF-AUDITED].  The first independently discovers and factors the
+  `16`-term weight-`43` Newton face of THM-3495's `J`, checks both divergent
+  `-43/2` valuations and the finite-sheet unit by nested Horner evaluation,
+  proves `v_L(N(J))=-43`, and audits every sign and power of two in
+  `[Delta_4]=[2G]`, `G=L^43N(J)`.  The second replaces the submitted nested
+  coefficient algebra, Python determinant and Newton interpolation by FLINT
+  regular-representation matrices and multiplicative Fourier inversion on
+  all `100` elements of `F_101^*`, with `X=0` held out.  It reproduces the
+  squarefree degree-`81` ledger hash
+  `1c05c0fd5ee48fc2dd030aebdb9ad6ddd8185fb933eb91e7e39ff553424ef5a7`.
+  Independent script/output LF SHA-256 are respectively
+  `53f63e59b5de3cd07645f3031225179105f16cc341d9062a124612361171f817` /
+  `c499294d374851a4fa953cd825206b7d0517a1f098b01bd99920cdd3d3fe40fb`
+  and
+  `3d0bee9dd97993160fc7275cb4a96e77893013c421029eada4bbd5b46ac5d3e6` /
+  `aef44b43c5c26a97349129653fa22518688e964cb6a7d2deceb53027484c4567`.
+  Submitted script/output LF SHA-256 are
+  `a52a992a2455f9a6d8b5a2949b1a956969846df69f9df3492573c5ab864d837c` /
+  `a730eb715177e1be945259c01e048c974be624c67e8882a6d4c4c66293d7b85a`
+  and
+  `4039b4081c9f0d95b197d2e3a7581c66433382e53dac3b95fa2526c3a4ba4f2e` /
+  `f5498e42510641227052f578cd269697876746a6847ba6bb8cd382e726c35169`.
+  `G` is not constructed or proved irreducible/new; no fourth-component,
+  all-level, JC/DC, or LRC consequence follows.
 - `lrc14_stage2_theta_contraction_r5_independent_audit_20260816.py` ->
   matching `.out` [INDEPENDENT RECOVERY/HOSTILE AUDIT OF PROVED THM-2594].
   The parent copies normalize exactly to the repaired canonical primary

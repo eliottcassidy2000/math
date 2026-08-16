@@ -43,6 +43,9 @@ Format per entry:
   normalization contribute squares.  The unique odd divisor carrier remains
   `B_n`.  THM-3494 now distinguishes the full field square class from its
   image after quotienting constant units and was repaired before promotion.
+  THM-3498 supplies a second load-bearing check: the complete level-four
+  ledger gives `[Delta_4]=[2G]`, not `[G]`; the factor `[2]` survives both the
+  cubic norm and old-`L` cancellation.
 - **Reusable rule:** a UFD factorization controls valuations, not unit square
   classes.  Whenever a discriminant is normalized "up to scalar," retain that
   scalar before making a claim in `K^*/K^{*2}`; discard it only in an explicitly

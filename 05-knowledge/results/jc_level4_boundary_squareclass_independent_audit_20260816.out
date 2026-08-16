@@ -1,0 +1,12 @@
+== independent level-four boundary and square-class audit ==
+J coefficient-ledger sha256=9aca78e67d33351b2f2fb4dbe8ab5bdff06373fdbd8ef9ec73d29b15bffedefe
+discovered Newton support: max(i-k)=43; face terms=16
+SymPy factorization: -2^58*3^51*13^8*79^4*313^2*x^43*(3*x*z-2*y)^15
+divergent leading coefficient at d=1: 8071567357074917668173278253137003934760773385657787766360448964101877941665792 != 0
+two divergent branches: valuations -43/2 and -43/2; norm uses a product, so no cross-sheet cancellation
+finite Horner control: q=(Fraction(2, 1), Fraction(5, 6), Fraction(-7, 8)); value sha256=f4ad5e424ac9abc719f21fb92625e7c25a9e37cc614815dd1b54e43fa5936554; nonzero
+v_L(N(J))=-43; hence G=L^43*N(J) is polynomial and gcd(G,L)=1 in Q[a,b,c]
+Delta_3 ledger: [-L*J/(2^35*L^7)]=[-2J]
+Delta_4 ledger: [N(-2J)*(-L)]=[8*L*N(J)]=[8*G/L^42]=[2G]
+scope: no claim that G is primitive, squarefree, irreducible, or a new image component
+all independent exact checks passed
