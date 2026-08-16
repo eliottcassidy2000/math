@@ -78,8 +78,7 @@
   and capacity `min(a-1,(p-1)/2)H`.  Complete digit-sum tail polygons prove
   that this is the sole common local slope for every `2<=a<p`.  At `d=2501`, the structural 5-adic set
   `{625,1250}` is disjoint from the degree `256` left by `p=2,3`, closing
-  `r=2499` and extending exact quadratic three-moment windows through that
-  height.  The companion checks 48 carry cells and sharp `p=3`, `a>=p`, and
+  `r=2499`.  The companion checks 48 carry cells and sharp `p=3`, `a>=p`, and
   `a=1` hostiles, then requires exact agreement of two independently pinned
   hull engines on the full row and planted-factor controls.
   Script/output/structural/d=2501 semantic SHA-256:
@@ -87,8 +86,20 @@
   `43ef5f55c4b88bc27fca312f8512879f906acfd85d8efd99af2deee1821143c8` /
   `f0005f43cfd6464f2279f0260792357c40ed6dee7c7428968e7e9f5d07b4a4e4` /
   `89971ade6fbedd6c1ae81bb3dc0e5514a320bcedfff7a9ca706ea116b8966b45`.
-  Adaptive cross-place compilation, contiguous all-height exact quadratics,
-  and FC(3) remain open.
+  Contiguous all-height exact quadratics and FC(3) remain open.
+- `factorial_adaptive_divisor_extension_2502_thm3467.py` -> matching `.out`
+  [THM-3467 PROVED STRUCTURAL CONSEQUENCE + FINITE-EXACT + DUAL-ENGINE
+  AUDITED].  At `d=2502`, the complete `61`-adic reset forces common-factor
+  degrees to be divisible by `61`, while THM-3161's exact `41`-adic polygon
+  for `G` forces every such degree to be divisible by `41`.  Since
+  `41*61=2501>deg E=2499`, the resonant rows are coprime and exact quadratic
+  three-moment windows now close through `r=2500`.  Two pinned engines agree
+  on all raw profiles and local degree sets at `p=2,3,5,41,61`; the hostile
+  reset-plus-`2,3` trace leaves `{61}`, while the adaptive `61,41` trace is
+  empty.  Script/output/semantic SHA-256:
+  `8964f7366329c469366cd5bd18ec7a176a9aac5c3bf074c633e9dd27d4067a23` /
+  `f87c6b4dd1765bcc7a2aabecf2e3ca885ded851c8524794d1175eb39f0ae81eb` /
+  `c767afd684dbf63910db607a742c530ed9f03a8d61c97b6e2e4dd5cb22bddf98`.
 - `factorial_mixed_character_triangular_quartic_moment_gate_thm3470.py` ->
   matching `.out` [THM-3470 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  In the real triangular automorphism family
@@ -121,6 +132,29 @@
   `49272719898eec5b506e435140c0ce6aac1ce0b07ce275fff648df55b18b61f8`.
   Submask membership is necessary, not factor existence; contiguous
   all-height quadratics and FC(3) remain open.
+- `factorial_all_divisor_digit_pair_compiler_thm3475.py` and independent
+  formula-only referee -> matching `.out` files [THM-3475 PROVED +
+  VERIFIED-EXACT + FINITE-EXACT + INDEPENDENTLY AUDITED].  For every prime
+  `p|N=d-1`, the positive-slope polygon of `F=A_(N-1)^(N+1)` is exactly a
+  base-`p` digit endpoint hull (two plateaux for odd `p`, odd anchors for
+  `p=2`).  THM-3161 supplies the exact `G=A_N^(N+1)` hull, while the unknown
+  `F` prefix has nonpositive slopes and cannot meet it.  Their intersection
+  is therefore the complete necessary local pair barcode without large
+  coefficients or a Kurepa assumption.  A pinned coefficient audit checks
+  209 odd, 100 binary, and 309 pair cells.  Independent formula-only replay
+  agrees that divisor primes close 33/38 seven-exit residuals in
+  `2501<=d<=2600`; the five exact survivor packets occur at
+  `d=2516,2564,2571,2576,2586`.  The contiguous exact quadratic boundary is
+  `r<=2513`.  Primary script/output/semantic SHA-256:
+  `834d0913eb5cd5b15684c7fb88af60e42d2a6ef36feb821e261c0498f55027ab` /
+  `1fee475f1a09e2f191d295817bb20af1c055185fc16dd621091d55173bc87ad5` /
+  `886f2bcd66711a44668b003717dd4f39643fc0e9cb0b694708b8670eeaf21499`;
+  independent:
+  `9330ca1b991b9d5875779b9975fc88701ab36855a6527e1865e821e6cd3ea665` /
+  `6aeb576763a63412fad02da33bc777569e69bce87b936afcb0624b144acaec9f` /
+  `e019eb61019620cfaffa8b5bb5769e8d171f08fb5ffeb2153f209c0128d42115`.
+  Nonempty barcodes remain necessary addresses, not factors; five residual
+  rows, arbitrary support, SFC(3), and FC remain open.
 - `all_ref_concept_archaeology_20260815.py` -> matching `.out` plus frozen
   `.refs` [REPRODUCIBLE PROVENANCE INVENTORY; NOT A MATHEMATICAL VERIFIER].
   At `origin/main=5f038660851946647afee993fb3fea850cc80b7d`, the manifest freezes

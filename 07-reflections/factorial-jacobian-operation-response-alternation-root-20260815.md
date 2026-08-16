@@ -32,7 +32,8 @@ Laurent claim was checked directly against THM-3383's membership criterion.
 | Laurent effectivity response | multiplication by the polynomial target on `B/(A intersect B)` | PROVED locally nilpotent with unbounded exact response lengths |
 | prime-power carry face | first Euclidean triple at `d=a p^k+1` | PROVED complete singleton ledger for every `2<=a<p` |
 | binary-submask compiler | `NP_2(A_N^(N+1))` intersect odd reset | PROVED all `2^s p^k` windows with `2<=2^s<p` |
-| seven-exit factorial boundary | first Euclidean triple at `d=2501` | FINITE-EXACT closed independently; the wider `2501..2600` audit is intentionally not yet a theorem here |
+| all-divisor digit compiler | exact positive `F` suffix intersect THM-3161 `G` hull | PROVED pair barcode for every `p|d-1`; 33/38 residuals close |
+| seven-exit factorial boundary | first Euclidean triple at `d=2501,2502` | both closed; the wider `2501..2600` audit is intentionally not yet a theorem here |
 
 ## 3. First alternation: factorial lowering becomes Keller flux
 
@@ -288,13 +289,35 @@ d=2^s p^k+1,                 2<=2^s<p,                   (15a)
 for every `k>=1`.  Thus `d=2501` sits in the all-height family
 `d=4*5^k+1`, rather than being only an isolated computation.
 
-The next bounded universe also changes the computational design.  Among the
-`38` seven-exit residuals in `2501<=d<=2600`, `32` have a representation
-`d-1=a p^k` in the proved one-digit range.  Only `d=2501` and `d=2528` use
-such a reset prime within the old fixed bank through `47`; the other reset
-places are larger divisors of `d-1`.  The ranked next observer is therefore
-an adaptive divisor-place compiler, with singleton-ledger completeness as
-its guardrail, rather than a blindly enlarged fixed bank.
+The next row is a sharper adaptive-place control.  At `d=2502`, the
+`61`-adic singleton reset forces a common-factor degree to be divisible by
+`61`.  THM-3161's exact `41`-adic polygon of the second resonant row has
+block denominators `41` and `41^2`, so it independently forces divisibility
+by `41`.  A common factor also divides the degree-`2499` Euclidean row, but
+`41*61=2501`; hence none exists.  The old reset-plus-`2,3` trace leaves the
+hostile address `{61}`, while the adaptive `61,41` trace is empty.  This
+extends the contiguous exact quadratic boundary to `r=2500` and identifies
+the right design principle: compile divisor places from `d-1`, retaining
+their full capacities, instead of asking a fixed small-prime bank to guess
+the useful scale.
+
+The adaptive observer can be made exact for every divisor prime, not only a
+one-digit prime power.  For `p|N=d-1`, the first resonant row has a strict
+two-plateau digit recursion (an odd-anchor recursion at `p=2`); every possible
+positive-hull vertex is an actual coefficient unit.  Its unresolved Kurepa
+prefix has nonpositive slope, while THM-3161's second-row polygon has only
+positive slopes.  Their full common ledger is therefore computed from digit
+weights alone, with no large coefficients.  Two implementations apply this
+to the `38` seven-exit residuals through `d=2600`: `33` close, and only
+
+```text
+d=2516,2564,2571,2576,2586
+```
+
+retain explicit degree packets.  The first is
+`{503,1006,1509,2012}`, so the contiguous quadratic boundary reaches
+`r=2513`.  These survivors identify the exact boundary of the divisor-only
+compiler; a nondivisor place or a new sidecar is genuinely required there.
 
 ## 8. Typed bridge and next work
 

@@ -1,6 +1,6 @@
 ---
 id: THM-3467
-title: "Prime-power carry faces in the first factorial Euclidean flag and exact closure at r=2499"
+title: "Prime-power carry ledgers and adaptive exact closure through r=2500"
 status: >
   PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED.
   For p>=5, d=a p^k+1 with 2<=a<p, the two resonant factorial
@@ -8,9 +8,12 @@ status: >
   Newton face of reduced denominator p^k and exact common capacity
   min(a-1,(p-1)/2)p^k.  This face is the complete common p-adic ledger for
   every 2<=a<p.  At d=2501 the complete 2-, 3-, and 5-adic
-  degree barcodes are incompatible, closing the first residual beyond
-  THM-3201 and extending the exact quadratic three-moment boundary to
-  r=2499.  This does not close every height or FC(3).
+  degree barcodes are incompatible.  At d=2502 the 61-adic singleton
+  reset and THM-3161's 41-adic digital polygon force a hypothetical common
+  factor degree to be divisible by 2501, beyond the Euclidean-row degree.
+  These close the first two residuals beyond THM-3201 and extend the exact
+  quadratic three-moment boundary through r=2500.  This does not close every
+  height or FC(3).
 audit: >
   The carry-face proof derives coefficientwise supporting inequalities from
   Lucas, Kummer, Legendre, and base-p digit sums, proves exactness at every
@@ -19,10 +22,11 @@ audit: >
   the remaining range, two more digit-sum supporting lines give the complete
   G and F tails, whose slopes are strictly separated.
   A 48-cell exact hostile audit found the predicted face to be the complete
-  common ledger in every tested cell.  At d=2501 two separately pinned Fraction-hull and
-  determinant-hull engines reconstruct the rows, agree on every raw local
-  degree ledger and common-slope ledger, retain planted factors v and v+1,
-  and produce the same progressive trace and digest.
+  common ledger in every tested cell.  At d=2501 and again at d=2502,
+  separately pinned Fraction-hull and determinant-hull engines reconstruct
+  the rows, agree on every raw local degree ledger and common-slope ledger,
+  retain planted factors v and v+1, and produce the declared traces and
+  digests.
 source: root/factorial-jacobian-alternation/2026-08-15
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
@@ -32,14 +36,22 @@ related:
   - THM-3161-factorial-newton-euclidean-closure-through-r1998
   - THM-3183-factorial-hecke-lattice-square-and-oriented-wedge-continuant
   - THM-3185-iterated-factorial-frobenius-descent-and-witt-carry-reset-hierarchy
-script: 04-computation/factorial_seven_exit_extension_2501_thm3467.py
-output: 05-knowledge/results/factorial_seven_exit_extension_2501_thm3467.out
-script_sha256: 8ba583ae08a91bfd70dd9911fca927ba75e7376e7b49887c3915ac3c905e02e3
-output_sha256: 43ef5f55c4b88bc27fca312f8512879f906acfd85d8efd99af2deee1821143c8
+scripts:
+  - 04-computation/factorial_seven_exit_extension_2501_thm3467.py
+  - 04-computation/factorial_adaptive_divisor_extension_2502_thm3467.py
+outputs:
+  - 05-knowledge/results/factorial_seven_exit_extension_2501_thm3467.out
+  - 05-knowledge/results/factorial_adaptive_divisor_extension_2502_thm3467.out
+script_sha256:
+  - 8ba583ae08a91bfd70dd9911fca927ba75e7376e7b49887c3915ac3c905e02e3
+  - 8964f7366329c469366cd5bd18ec7a176a9aac5c3bf074c633e9dd27d4067a23
+output_sha256:
+  - 43ef5f55c4b88bc27fca312f8512879f906acfd85d8efd99af2deee1821143c8
+  - f87c6b4dd1765bcc7a2aabecf2e3ca885ded851c8524794d1175eb39f0ae81eb
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3467 -- prime-power carry faces and closure at r=2499
+# THM-3467 -- prime-power carry ledgers and closure through r=2500
 
 **PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
@@ -117,7 +129,7 @@ D_p(F,G,E)={0,H,2H,...,T H}.                               (9a)
 
 The case `a=1` remains the zero-capacity degeneration.
 
-The finite-exact corollary is
+The first finite-exact corollary is
 
 ```text
 d=2501,                         r=d-2=2499.                 (10)
@@ -132,9 +144,10 @@ Together with THM-3201, every such window beginning at
 1<=r<=2499                                                   (11)
 ```
 
-contains a nonzero moment.  This remains a bounded support-`{0,1,2}` result;
-it is not arbitrary one-variable support, `SFC(3)`, or the three-variable
-Factorial Conjecture.
+contains a nonzero moment.  Section 9 proves a second, adaptive-divisor
+corollary at `d=2502`, extending (11) through `r=2500`.  This remains a
+bounded support-`{0,1,2}` result; it is not arbitrary one-variable support,
+`SFC(3)`, or the three-variable Factorial Conjecture.
 
 ## 2. Coefficient formula
 
@@ -531,13 +544,68 @@ The exact seven-exit factorization invoice is
 2495=5*499.                                                  (55)
 ```
 
-Thus `d=2501` is genuinely the first residual after THM-3201's seven
+Thus `d=2501` was genuinely the first residual after THM-3201's seven
 uniform exits, rather than a row already covered by one of them.
 
-## 9. Audit, controls, and failure boundaries
+## 9. Adaptive divisor closure at d=2502
 
-The companion hash-pins the primary THM-3201 Fraction-hull engine and its
-independent determinant-hull referee.  Both reconstruct `F,G,E`, whose exact
+Put
+
+```text
+d=2502,        N=d-1=2501=41*61,
+F=A_2500^(2502),       G=A_2501^(2502),       deg E=2499. (55a)
+```
+
+At `p=61`, use `H=61` and `a=41` in the uniform theorem above.  Since
+`T=min(40,30)=30`, the complete common ledger is
+
+```text
+(slope 2/61, capacity 1830, denominator 61),
+D_61(F,G,E)={0,61,122,...,1830}.                           (55b)
+```
+
+Thus every positive common-factor degree is divisible by `61`.
+
+At `p=41`, THM-3161's exact digital polygon for the single row `G` has the
+two maximal blocks
+
+```text
+(slope 2/41,    capacity 820,  denominator 41),
+(slope 84/1681, capacity 1681, denominator 1681).          (55c)
+```
+
+Every factor degree of `G` is consequently divisible by `41`: the first
+block contributes a multiple of `41`, while the second contributes either
+zero or `1681=41^2`.  A common factor of `F` and `G` must therefore have
+degree divisible by
+
+```text
+lcm(41,61)=2501.                                          (55d)
+```
+
+But it also divides the Euclidean combination `E`, whose degree is `2499`.
+No positive degree is possible, so `gcd_Q(F,G)=1`.  By THM-3124, every exact
+quadratic window beginning at `r=2500` has a nonzero member.  Together with
+THM-3201 and Section 8, every exact-support quadratic window beginning at
+
+```text
+1<=r<=2500                                                 (55e)
+```
+
+contains a nonzero moment.  This proof is structural: the `41`-divisibility
+comes from THM-3161 and the `61`-divisibility from the all-`a` reset theorem,
+not from the finite replay.
+
+The hostile explains why both divisor places matter.  Starting with the
+`61` reset and intersecting only the old small observers `p=2,3` leaves the
+spurious address `{61}`.  Adding the divisor place `p=41` removes it.  The
+same row is also closed finite-exactly by the fixed trace `p=2,3,5`; that is
+an independent control, not the mechanism of the proof.
+
+## 10. Audit, controls, and failure boundaries
+
+The `d=2501` companion hash-pins the primary THM-3201 Fraction-hull engine and
+its independent determinant-hull referee.  Both reconstruct `F,G,E`, whose exact
 degrees are `(2499,2500,2498)`, and require literal equality of every raw
 degree ledger, common-slope ledger, and progressive trace.  The semantic
 trace digest is
@@ -561,6 +629,18 @@ An exact 48-cell audit used
 In every cell the complete common ledger is the singleton predicted by
 (4)--(8), independently supporting the uniform proof in Section 7.
 
+The `d=2502` companion independently reconstructs the three rows with the
+same two engine families and requires equality of all raw profiles and local
+degree sets at `p=2,3,5,41,61`.  It freezes the full `41`- and `61`-adic
+profiles, the hostile survivor `{61}`, the empty adaptive trace, both planted
+degree-one controls, and semantic digest
+
+```text
+c767afd684dbf63910db607a742c530ed9f03a8d61c97b6e2e4dd5cb22bddf98. (57a)
+```
+
+Normal and optimized replays are byte-identical to the stored transcript.
+
 The hypotheses in the structural statement are sharp for the proof:
 
 - at `p=3`, `alpha` and `beta` in (29) cease to be units; for `d=55`, the
@@ -578,5 +658,5 @@ show that neither occurs in `F`, rather than treating the `sigma` face alone
 as a complete ledger.
 
 Finally, the theorem produces a necessary local degree address, not a
-factor, and the finite closure at `d=2501` does not supply an all-height
-prime bank.  The first next seven-exit residual is `d=2502`, `r=2500`.
+factor, and its two boundary closures do not supply a contiguous all-height
+prime bank.  The first next seven-exit residual is `d=2510`, `r=2508`.

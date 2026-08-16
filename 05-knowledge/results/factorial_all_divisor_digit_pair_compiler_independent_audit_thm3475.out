@@ -1,0 +1,10 @@
+THM-3475 ALL-DIVISOR DIGIT PAIR COMPILER INDEPENDENT AUDIT
+implementation=fresh Legendre/Kummer weights, integer-cross-product hull, denominator DP; no theorem engine imports
+universe=(2501, 2502, 2510, 2511, 2512, 2513, 2514, 2515, 2516, 2517, 2518, 2519, 2520, 2528, 2529, 2530, 2538, 2564, 2565, 2566, 2567, 2568, 2569, 2570, 2571, 2572, 2573, 2574, 2575, 2576, 2577, 2578, 2586, 2587, 2588, 2589, 2590, 2600)
+seven_exit_filter_counts=(89, 78, 69, 60, 52, 44, 38)
+rows=38 pair_closed=33 survivor_rows=5
+survivors={2516: (503, 1006, 1509, 2012), 2564: (466, 699, 1165, 1631, 1864, 2097, 2330), 2571: (2056,), 2576: (103, 206, 309, 412, 515, 618, 721, 824, 927, 1030, 1133, 1236, 1339, 1442, 1545, 1648, 1751, 1854, 1957, 2060, 2163, 2266, 2369, 2472), 2586: (47, 141, 188, 235, 282, 329, 2209, 2256, 2303, 2350, 2397, 2444, 2491, 2538)}
+controls=(N,p)=(6,3) raw G blocks ((2/3,3),(1,3)) but pair degrees (0,3); (N,p)=(10,2) F suffix hull uses odd anchors only
+sidecar=all odd half/right anchors and binary unit/cancellation congruences checked over the full universe
+semantic_sha256=e019eb61019620cfaffa8b5bb5769e8d171f08fb5ffeb2153f209c0128d42115
+STATUS=PASS
