@@ -25,6 +25,27 @@
   `cdd902f60147eca39bb708d86e4068f049b80efd08b69db14b2f8bcff16eaa52` /
   `6384038b2f7e386289c7af89ac1c5a020aa18320e6957a59469ff013de396490`.
 
+- `lrc_r5_offdiagonal_drift_branch_transplant_probe_20260816.py` ->
+  matching `.out` [FINITE-EXACT SUPPORT/REPRESENTATION SIDECAR].  The common
+  torsor gauge identifies source `s=u-q` with target `-d=a-b` and fixes the
+  zero fibre.  All 273 source same-root entries vanish, while the four U_full
+  Cartesian `d=0` corners are nonzero with total
+  `324498447313453607031`; hence a typed transplant must remove or reweight
+  the endpoint diagonal.  Puncturing it yields maximal carriers
+  `6x12` and `4x12`, preserves target rank four and full Fourier support, but
+  leaves the connection certificate `(6,24,4,0,37,4,0,0)` unchanged for all
+  12 dilations.  The exact source involution `B(ell,s)=B(-ell,-s)` gives a
+  six-edge grammar, yet the reduced K4 `39x31` system has full rank and zero
+  nullity.  Thus support and connection are separate debts.  Concurrent
+  common-gauge work subsequently realizes exactly the predicted 48-bucket
+  THM-2471 arrival-address support and a nonzero all-owner endpoint-weight
+  pullback; its projective systems still have nullity zero, moving the live
+  debt to a temporal/Fubini current theorem.  This probe itself makes no
+  ancestry, current, H1, bispectrum, scalar exclusion, or LRC(14) consequence.
+  Script/output/semantic LF SHA-256:
+  `a3f8a85552c2a0f3a2f511d6f8609e14d806054882b099db6a5ed74d8d5c4437` /
+  `be3fdc726662d9b52233c9d6e2eaf7bf708ca8ebf7b87c59e604d539013f5006` /
+  `84a21447326ac6e86ff7743704653d1c280eee265cfdbe357735f5ad6d80915a`.
 - `lrc_r5_common_base_connection_obstruction_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT AUDIT ACCEPTS SCOPED FINITE-EXACT
   PACKAGE].  Rebuilds the THM-2594 joint Boolean table and the THM-3514

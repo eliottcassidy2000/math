@@ -1,0 +1,21 @@
+R5 OFF-DIAGONAL DRIFT BRANCH-TRANSPLANT PROBE
+status=FINITE-EXACT support/representation sidecar;Ufull_ancestry_not_constructed;LRC14_OPEN
+dependency=lrc_r5_common_base_connection_obstruction_independent_audit_20260816.py:efbfb738f1901946210e1f438212d24e7cc34ee4ca3f02d436923d61a852bf43
+field=(prime=572252886246508880869,zeta7=353818603057943120846,zeta13=505438565698892403012)
+typed_skeleton=(source_s=u-q,target_d=b-a,common_gauge_u=a+c_and_q=b+c_implies_s=-d;orientation_reversal_is_lawful;zero_fibre_fixed)
+source_same_root=(pointwise_zero=273/273,row_support=(0, 12, 12, 12, 12, 12, 12),punctured_support=72)
+source_difference=(sha256=9b01a1e20006983c9c3d41737ab89d8eca539bff066eab1356fc9a4f55c4cb4a,rank=6,Fourier_support=(13, 13, 13, 13, 13, 13, 13))
+source_edge_involution=(B_ell_s_equals_B_minusell_minuss=True,nonzero_ell_channels=6)
+target_drift_zero=(corner_values=(542919271526962761242, 564956562728457577520, 281582681509352363753, 79545704041698666254),all_nonzero=True,same_sheet_bridge=324498447313453607031)
+offdiagonal_target=(corner_support=(12, 12, 12, 12),Walsh_support=(12, 12, 12, 12),Fourier_support=(13, 13, 13, 13),rank=4)
+connection_certificates=(full=(6, 24, 4, 0, 37, 4, 0, 0),offdiagonal=(6, 24, 4, 0, 37, 4, 0, 0))
+edge_to_reduced_K4_certificate=(fields=source_rank,target_rank,wedge_rank,wedge_nullity,wedge_excess,augmented_rank,augmented_nullity,lambda_projection_rank,nonannihilator_entries;value=(6, 3, 18, 0, 0, 31, 0, 0, 0))
+offdiagonal_dilations=(count=12,unique=((6, 24, 4, 0, 37, 4, 0, 0),))
+single_drift_deletion_census=((0, 4, (13, 13, 13, 13), (6, 24, 4, 0, 37, 4, 0, 0)), (1, 4, (13, 13, 13, 13), (6, 24, 4, 0, 37, 4, 0, 0)), (2, 4, (13, 13, 13, 13), (6, 24, 4, 0, 37, 4, 0, 0)), (3, 4, (13, 13, 13, 13), (6, 24, 4, 0, 37, 4, 0, 0)), (4, 4, (13, 13, 13, 13), (6, 24, 4, 0, 37, 4, 0, 0)), (5, 4, (13, 13, 13, 13), (6, 24, 4, 0, 37, 4, 0, 0)), (6, 4, (13, 13, 13, 13), (6, 24, 4, 0, 37, 4, 0, 0)), (7, 4, (13, 13, 13, 13), (6, 24, 4, 0, 37, 4, 0, 0)), (8, 4, (13, 13, 13, 13), (6, 24, 4, 0, 37, 4, 0, 0)), (9, 4, (13, 13, 13, 13), (6, 24, 4, 0, 37, 4, 0, 0)), (10, 4, (13, 13, 13, 13), (6, 24, 4, 0, 37, 4, 0, 0)), (11, 4, (13, 13, 13, 13), (6, 24, 4, 0, 37, 4, 0, 0)), (12, 4, (13, 13, 13, 13), (6, 24, 4, 0, 37, 4, 0, 0)))
+proof=('THM2471_same_root_disjointness_rebuilt_pointwise_on_273_entries', 'typed_common_torsor_gauge_preserves_s_zero_iff_d_zero', 'Cartesian_Ufull_has_four_nonzero_drift_zero_corner_buckets', 'offdiagonal_projection_matches_punctured_F13_support_but_not_connection')
+boundary=('diagonal_deletion_is_necessary_not_a_proved_Ufull_ancestry_support_map', 'punctured_source_6x12_and_target_4x12_are_representation_carriers_only', 'no_ancestry_current_H1_bispectrum_scalar_exclusion_or_LRC14_claim')
+semantic_sha256=84a21447326ac6e86ff7743704653d1c280eee265cfdbe357735f5ad6d80915a
+script_sha256_lf=a3f8a85552c2a0f3a2f511d6f8609e14d806054882b099db6a5ed74d8d5c4437
+reproducibility=no_assert_truth_gates;no_randomness;no_elapsed_fields
+commands=python -B 04-computation/lrc_r5_offdiagonal_drift_branch_transplant_probe_20260816.py;python -B -O 04-computation/lrc_r5_offdiagonal_drift_branch_transplant_probe_20260816.py
+PASS
