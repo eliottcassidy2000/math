@@ -1,17 +1,462 @@
 ---
 id: THM-3479
 title: "Literal half-twist relation-current two-transplant certificate"
-status: RESERVED / UNPROVED EMPTY STUB
+status: >
+  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
+  AUDIT PENDING.  One explicit all-91-unit relation is realized by two
+  primitive q=11 owner tuples.  U_full has literal masks, positive delayed
+  mass, a nonconstant 169-twist endpoint bank, and all 169 unrestricted
+  THM-2334 target aggregates nonzero.  U_clock has literal masks at the fixed
+  common centre 1/22, the same-clock delayed word, positive delayed mass, a
+  two-embedding nonconstant endpoint bank, and one explicit THM-2331 atomic
+  address term.  Exact q=27 and q=51 CRT lifts preserve the mod-7 and 13-adic
+  decorations, including q=51's affine k mod 3 character.  The natural
+  C13-equivariant attempt to identify a 13-character fibre with the thirteen
+  edges of the audit-pending private-support carrier is obstructed.  No
+  grouped relation coefficient, all-91-unit aggregate, ancestry/bispectrum,
+  physical current, scalar-row exclusion, or LRC(14) conclusion follows.
 source: codex/relation-current-bridge/2026-08-15
-depends_on: []
+audit: >
+  standalone deterministic exact companion; independent periodic-subtraction
+  and boundary-refinement endpoint engines; exact finite-field nonvanishing
+  under certified primitive embeddings; normal/-O/stored LF-identical replay;
+  dependency and sidecar hash pins; AST no-assert/security gate; immutable
+  core and carrier semantic digests; independent package audit pending
+depends_on:
+  - THM-2309-owner-aligned-pivot-packets-and-visible-height-separation
+  - THM-2331-two-sided-septimal-address-embedding-in-marked-current
+  - THM-2334-relation-residue-current-and-character-twist-pushforward
+  - THM-2349-first-depth-one-delayed-shallow-restart
+  - THM-3398-general-finite-mode-sheet-cover-cochain
+  - THM-3405-common-centre-gcd-gauge-and-boolean-half-twist
+  - THM-3429-prime-fibre-activity-descent-for-mixed-order-half-twist-seven-covers
+  - THM-3453-global-literal-half-twist-cap-seven-support-classification
+  - THM-3461-literal-half-twist-common-centre-lifts-and-q83-rank-nine-boundary
+related:
+  - THM-2512-lawful-interaction-cut-bundle-transplant-and-replica-dichotomy
+  - THM-3473-three-times-p-eight-owner-private-sheet-partition-and-irredundancy
+  - HYP-9032-the-transplant-trichotomy-rehoming-the-91-stalk-laws
+script: 04-computation/lrc_half_twist_relation_current_bridge_thm3479.py
+output: 05-knowledge/results/lrc_half_twist_relation_current_bridge_thm3479.out
+script_sha256: e1e5d95acfeed83f6388578bd8de3c954c0523db9ec5a4e311ee79154ffcbaa6
+output_sha256: e7d9ad73d653c878c0c209905e458ae02af781d8c8a79e2494dd269100f30b4d
+semantic_sha256: 1bf53086d3da347dde443175462be716da6e9dac54c96582718d19ec8fddff21
+carrier_semantic_sha256: bf31c254225ca1b6e39f00dfb80bee1a27308d1480bc555053df4047084c6c9d
+hash_basis: LF-normalized bytes
 ---
 
 # THM-3479 -- literal half-twist relation-current two-transplant certificate
 
-**RESERVED / UNPROVED EMPTY STUB.**
+**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
+AUDIT PENDING.**
 
-This file reserves the theorem identifier and filename only. It contains no
-proved statement, no proved dependency, no candidate proof, and no admissible
-proof-graph edge. The relation-current package remains outside this namespace
-until the reservation is published centrally and a later audit explicitly
-changes this status.
+This candidate records a concrete positive relation-current transplant and
+its exact stopping boundary.  The two owner tuples below realize different
+parts of the desired conjunction.  They must not be silently identified.
+The theorem is outside the proved dependency graph until an independent audit
+checks the proof, companion, stored transcript, and immutable hashes.
+
+## 1. The common relation and target quotient
+
+Use relation-coordinate order
+
+```text
+(c1,c2,c3,H,q1,q2,q3,q4,q5).                         (1)
+```
+
+The explicit relation is
+
+```text
+a=(-27,-27,-27,20110798,-41,-27,-27,-27,38).         (2)
+```
+
+Every coordinate of `a` is a unit modulo `91`, and
+
+```text
+a mod 91=(64,64,64,71,50,64,64,64,38),
+a mod 13=(12,12,12,6,11,12,12,12,12).                (3)
+```
+
+For each of the two tuples `U` below, the exact integer equation is
+
+```text
+a.U=0,                                                (4)
+```
+
+and `gcd(U)=1`.  The six THM-2309 owner-packet rows have rank six modulo
+thirteen.  Adding the selected target axis leaves rank six, while adding the
+relation row raises the rank to seven:
+
+```text
+(rank(packet),rank(packet+target),rank(packet+a))
+  =(6,6,7).                                           (5)
+```
+
+Thus `(2)` is a live exact relation whose THM-2334 quotient retains the
+two-dimensional target plane.  Equation `(5)` is a relation-lattice statement;
+it is not endpoint nonvanishing or ancestry.
+
+## 2. The U_full transplant
+
+Put
+
+```text
+U_full=(13,2197,742586,1,183,27,131,53,313)           (6)
+```
+
+in relation order.  In THM-2334 current order this is
+
+```text
+(1,183,27,131,53,313,13,2197,742586).                 (7)
+```
+
+Modulo `22`, the raw and sign-normalized q=11 residues are
+
+```text
+raw       =(13,19,20,1,7,5,21,9,5),
+normalized=(9,3,2,1,7,5,1,9,5).                      (8)
+```
+
+Their literal masks, in the order `(1)`, are
+
+```text
+({2,8},{3,7},{5},{0,10},{1,9},{4,6},{0,10},{2,8},{4,6}). (9)
+```
+
+The six-mask witness `(1,2,3,5,7,9)` partitions all eleven sheets exactly
+once.  The delayed marked intersection has exact positive mass
+
+```text
+411318338170045 / 524041104621345129.                 (10)
+```
+
+At the exact scales
+
+```text
+T_DEN=483730250419703196,
+NN=81750412320929840124,                              (11)
+```
+
+the coordinate-twist bank has
+
+```text
+gamma(0) =248447851579556601771,
+gamma(v2)=510954897124935772821,
+gamma(v2)-gamma(0)=262507045545379171050               (12)
+```
+
+in the first certified finite-field image.  All `168` nontrivial twists
+differ from `gamma(0)`.  Exact inverse finite Fourier transformation gives
+
+```text
+#{q in F_13^2:A(q)!=0}=169.                           (13)
+```
+
+Nonzero reduction in the certified primitive image proves exact algebraic
+nonvanishing.  The complete gamma and target banks have respective digests
+
+```text
+afcdb043eb1bf8095c313473a3d3bdcf4ce027f86b01b5f3cecbc7c87e6484b3,
+726423df1b9e1c93b356966e5c3c386669e2f6b19da0bf8818606204eb2e9ee5. (14)
+```
+
+An independent exact-boundary engine obtains interval counts
+
+```text
+(|E_0|,|E_v2|,|Q_a|)=(33810,34560,28730)              (15)
+```
+
+and matches the fast engine's endpoint values under two certified embeddings.
+The values in `(13)` are the unrestricted THM-2334 aggregates `A(q)`.  They
+are not the coupled all-`91`-unit projectors `B(q)`.
+
+## 3. The U_clock transplant
+
+Put
+
+```text
+U_clock=(65,2197,742586,5,661549,655231,658533,661445,291). (16)
+```
+
+Its `13`-adic valuation profile is
+
+```text
+(1,3,5,0,0,0,0,0,0).                                 (17)
+```
+
+The raw and normalized q=11 residues are
+
+```text
+raw       =(21,19,20,5,9,5,7,15,5),
+normalized=(1,3,2,5,9,5,7,7,5),                      (18)
+```
+
+and the literal masks are
+
+```text
+({0,10},{3,7},{5},{4,6},{2,8},{4,6},{1,9},{1,9},{4,6}). (19)
+```
+
+Again `(1,2,3,5,7,9)` partitions every q=11 sheet exactly once.  More
+strongly, the literal source mask and the delayed owner word occur at the
+same fixed clock
+
+```text
+c=1/22.                                                (20)
+```
+
+The current-order base distances are
+
+```text
+(5,9,5,7,7,5,1,3,2)/22,                              (21)
+```
+
+and after the delayed dilation `R=169` they are
+
+```text
+(9,3,9,5,5,9,7,1,8)/22.                              (22)
+```
+
+The four strict margins used by the two Boolean patterns are
+
+```text
+(2/77,13/154,2/77,41/154).                            (23)
+```
+
+The complete THM-3398 cochain is zero at `(20)`, and every projective wedge
+is zero.  This is a common-centre realization, not a nonzero projective
+current.  Its exact delayed mass is
+
+```text
+1397606991636352080199080533 /
+1692517471993352536064760510465.                      (24)
+```
+
+The independent boundary engine has interval counts
+
+```text
+(147372,147404,136158).                               (25)
+```
+
+At the zero twist and `v2`, two certified finite-field embeddings give
+
+```text
+gamma(0)=
+ (56767723330345680038743661041266194,
+  65234233976034532625816110096140982),
+
+gamma(v2)=
+ (34870555972766792317398130208739733,
+  74671298727704698408794173004769050),               (26)
+```
+
+with both differences nonzero.  Hence the U_clock endpoint bank is exactly
+nonconstant.  The full `169`-twist inverse transform was not computed, so in
+particular the named aggregate `A(e_c2)` remains open.
+
+Finally, the explicit endpoint harmonics
+
+```text
+u=(-3,-3,1,2840374,-3,3,2,-3,-48974),
+v=(24,24,29,-17270424,38,30,29,24,-49012)             (27)
+```
+
+give exact address `(2)` at
+
+```text
+(X,m,Y)=(13,1,742599),                                (28)
+```
+
+with maximum absolute endpoint heights `2840374` and `17270424`; every
+endpoint coordinate is nonzero modulo seven.  This is one THM-2331 atomic
+term.  It does not prove the grouped orbit coefficient `C(a;X,m)` nonzero.
+
+## 4. Exact q=27 and q=51 CRT decorations
+
+The q=27 tuple is
+
+```text
+(28405,7599423,18279868269,3459,2016,2757,1041,3693,
+ 11163142875).                                        (29)
+```
+
+Its residues modulo `54` are
+
+```text
+(1,3,3,3,18,3,15,21,3),                              (30)
+```
+
+and `(3,15,18,21)` partitions all `27` sheets exactly once.  The q=51 tuple
+is
+
+```text
+(70993,7199569,30105550319,5825,4200,5214,7684,4421,
+ 18313194875),                                        (31)
+```
+
+with residues modulo `102`
+
+```text
+(1,1,11,11,18,12,34,35,23).                          (32)
+```
+
+The seven-mask witness `(1,11,12,18,23,34,35)` has multiplicity profile
+
+```text
+1^42 2^4 3^3 4^2.                                    (33)
+```
+
+Both lifts preserve
+
+```text
+mod 7=(6,6,5,1,0,6,5,4,3),
+v_13=(1,3,5,0,0,0,0,0,0).                            (34)
+```
+
+For q=51, reduction modulo `34` and the affine lift characters are
+
+```text
+bar r=(1,1,11,11,18,12,0,1,23),
+k mod 3=(0,0,0,0,0,0,1,1,0).                        (35)
+```
+
+On base fibres `y=0,2`, owners `1` and `35` have disjoint active sections;
+on `y=1` they agree.  Thus `(35)` retains exactly the THM-3429 affine-lift
+hostile which quotient order alone destroys.
+
+## 5. Why this is a two-transplant theorem
+
+The common mechanism is now explicit:
+
+```text
+one all-91-unit relation a
+  -> primitive owner tuples satisfying a.U=0
+  -> literal q=11 masks and a positive delayed intersection
+  -> THM-2334 endpoint character tests.               (36)
+```
+
+The positive signal is that relation compatibility, literal support, delayed
+mass, and endpoint nonconstancy coexist.  The obstruction is the quantifier
+"on the same tuple":
+
+```text
+U_full:  complete unrestricted 169-target nonvanishing,
+         but no same-clock common-centre delayed realization proved;
+
+U_clock: same-clock common-centre delayed realization and exact endpoint
+         nonconstancy,
+         but no complete 169-target calculation.       (37)
+```
+
+Therefore `(36)` is not yet one physical bridge row.  The split in `(37)` is
+the strongest exact boundary, not a cosmetic distinction.
+
+## 6. The 7 by 13 carrier: exact equivariance obstruction
+
+This section uses the frozen edge set from the FINITE-EXACT sidecar to the
+**audit-pending** THM-3473 candidate; THM-3473 is related, not a proved
+dependency.  Its private-owner packets are
+
+```text
+{u1,u4,u5,u6}, {u2,u3,u5,u8}, {u5,u7},               (38)
+```
+
+whose two-section has thirteen edges.  The proposed connection contract is:
+
+| field | exact content |
+|---|---|
+| source | the nine-coordinate U_full/U_clock relation tuples and their `F_13^2` coordinate-twist bank |
+| target | the thirteen labelled edges of the private-support two-section in `(38)` |
+| candidate map | choose one translation-stable thirteen-character fibre and biject it with the thirteen edges |
+| predicate sought | nonzero edge weights with nonzero bridge weight and nonzero weighted tree sums on both `K4` blocks |
+| information destroyed | exact relation address, q=11 masks, clock, endpoint phase, private-sheet counts, and the `k mod 3` state |
+| required sidecar | an explicit relation-coordinate/owner-edge dictionary plus phase or holonomy data |
+| cheapest hostiles | the unique edge `(u5,u7)` and the two sixteen-term `K4` tree polynomials |
+
+There is no native label dictionary: the source labels
+
+```text
+(c1,c2,c3,H,q1,q2,q3,q4,q5)                          (39)
+```
+
+and the target labels `(u1,...,u8)` are disjoint.  More decisively, a
+thirteen-character fibre has a regular translation of order thirteen.  Exact
+enumeration of all `8!` vertex permutations gives for the target graph
+
+```text
+|Aut(G)|=72,
+element orders={1,2,3,4,6},
+edge-orbit sizes=(1,6,6).                             (40)
+```
+
+An equivariant bijection would conjugate the regular source translation to a
+target graph automorphism of order thirteen, contradicting `(40)`.  Hence
+
+```text
+there is no C13-equivariant bijection from a native 13-character fibre
+to the thirteen private-support edges.                (41)
+```
+
+Equation `(41)` does not forbid an explicitly labelled non-equivariant map.
+It proves that such a map cannot be obtained canonically from the current
+source and target symmetries alone.  The static owner-potential currents of
+the incidence sidecar are also coboundaries and have zero graph-cycle flux;
+phase/holonomy remains a genuine required sidecar.
+
+## 7. Exact scope boundary
+
+The package does **not** prove any of the following:
+
+```text
+C(a;X,m)!=0 for either tuple;
+A(e_c2)!=0 for U_clock;
+B(q)!=0 for a coupled all-91-unit target fibre;
+a canonical non-equivariant map to the private-support edges;
+a nonzero private-support H1 flux or either weighted K4 tree sum;
+a lawful Boolean THM-2512 physical current;
+common ancestry or root-character bispectrum nonvanishing;
+exclusion of one of the 165 scalar rows;
+LRC(14).                                               (42)
+```
+
+The projective wedge of U_clock is zero, not a hidden current.  The atomic
+term `(27)` is support, not grouped noncancellation.  U_full's `(13)` is
+unrestricted `A(q)`, not all-unit `B(q)`.  THM-2512's signed ANOVA bundle and
+the private-support carrier remain separately typed.  LRC(14) is OPEN.
+
+## 8. Deterministic exact companion
+
+Run from the repository root:
+
+```bash
+PYTHONHASHSEED=0 python -B 04-computation/lrc_half_twist_relation_current_bridge_thm3479.py
+PYTHONHASHSEED=1 python -B -O 04-computation/lrc_half_twist_relation_current_bridge_thm3479.py
+```
+
+Both LF-normalized transcripts equal
+
+```text
+05-knowledge/results/lrc_half_twist_relation_current_bridge_thm3479.out
+```
+
+byte for byte.  The companion uses only the standard library, contains no
+`assert`, forbids dynamic execution, and pins every proved dependency.  Its
+fast endpoint engine uses periodic subtraction and a scaled sweep; the
+independent engine refines every exact boundary, checks exact midpoints, and
+directly intersects all word preimages.  The carrier audit independently
+enumerates all target graph automorphisms.
+
+The immutable LF hashes are
+
+```text
+script:  e1e5d95acfeed83f6388578bd8de3c954c0523db9ec5a4e311ee79154ffcbaa6
+output:  e7d9ad73d653c878c0c209905e458ae02af781d8c8a79e2494dd269100f30b4d
+core semantic:
+         1bf53086d3da347dde443175462be716da6e9dac54c96582718d19ec8fddff21
+carrier semantic:
+         bf31c254225ca1b6e39f00dfb80bee1a27308d1480bc555053df4047084c6c9d
+```
+
+The exact companion proves the finite statements above.  Independent audit
+and explicit status promotion are still required before this theorem enters
+proved canon.

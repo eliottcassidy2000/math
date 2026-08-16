@@ -86,6 +86,26 @@
   The expensive routes were completed separately; the final wrapper was
   syntax/AST/render audited but not rerun end-to-end after packaging.  This
   proves no arbitrary-support SFC or FC case.
+- `lrc_half_twist_relation_current_bridge_thm3479.py` -> matching `.out`
+  [THM-3479 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
+  independent audit pending].  The all-91-unit relation
+  `(-27,-27,-27,20110798,-41,-27,-27,-27,38)` is realized by two primitive
+  q=11 tuples.  U_full has positive delayed mass and all `169/169`
+  unrestricted THM-2334 target aggregates nonzero; U_clock has the literal
+  common centre `1/22`, a same-clock delayed word, positive delayed mass, a
+  two-embedding nonconstant endpoint bank, and one explicit atomic address
+  term.  Exact q=27/q=51 lifts preserve the mod-7, 13-adic, and q=51 affine
+  `k mod 3` data.  A separate exact carrier audit finds `|Aut(G)|=72`, orders
+  `{1,2,3,4,6}`, and edge orbits `1+6+6`, so no regular-`C13`-equivariant
+  bijection maps a native thirteen-character fibre to the thirteen
+  private-support edges.  A labelled non-equivariant map and phase/holonomy
+  remain open.  Script/output/core-semantic/carrier-semantic LF SHA-256:
+  `e1e5d95acfeed83f6388578bd8de3c954c0523db9ec5a4e311ee79154ffcbaa6` /
+  `e7d9ad73d653c878c0c209905e458ae02af781d8c8a79e2494dd269100f30b4d` /
+  `1bf53086d3da347dde443175462be716da6e9dac54c96582718d19ec8fddff21` /
+  `bf31c254225ca1b6e39f00dfb80bee1a27308d1480bc555053df4047084c6c9d`.
+  Grouped `C(a;X,m)`, U_clock `A(e_c2)`, all-unit `B(q)`, ancestry,
+  bispectrum, physical current, scalar-row exclusion, and LRC(14) are OPEN.
 - `lrc_private_support_7x13_incidence_h1_probe_20260815.py` -> matching
   `.out` [FINITE-EXACT STRUCTURAL SIDECAR TO PROVED THM-3473].  The
   private-support two-section has eight vertices and thirteen
