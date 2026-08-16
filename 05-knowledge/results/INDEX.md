@@ -17,6 +17,21 @@
   `fda9ce600878a69e1904fd2f1501834905f9e6f52d72ed07842e796857be7f5b` /
   `6cac7c90f3ebe3f33a27c1979b74006c545260bb6d41a68f4f76442456114fe6`.
 
+- `lrc_r5_owner_node_inverse_branch_root_difference_four_way_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT POSITIVE FOUR-COORDINATE CANDIDATE;
+  AUDIT PENDING].  The exact double marginal recovers the audited
+  root-difference parents on summing `r_owner` and the current-branch parent
+  on summing `s=u-q`.  The actual four-way ANOVA has axis ranks
+  `(3,4,12,12)`, `2+2` ranks `(6,36,34)`, and all `5184=3*12^3` modes.
+  Support-normalized, branch-flat, and difference-flat controls have zero
+  four-way interaction.  Statewise branch row spaces equal the audited
+  pointed-tail row spaces with dimensions `(1,2,1,2)`, explaining the exact
+  rank-six channel through the six realized pointed carriers.  This is not
+  exact address/current, chronology, row exclusion, or LRC(14).
+  Script/output/semantic SHA-256:
+  `d66378cc8db99c4de087fa78413721de6aa7be3960f51ee39f29feae9313eeba` /
+  `25122a1344c2677a6444a98f21beb7e4b7f27f80acc708263050916409ebea1b` /
+  `0e527913f22fc7d165f795df42e25692fba9289ccaf85aee4a3a2402613bdb41`.
 - `lrc_r5_ufull_owner_node_pointed_six_state_root_difference_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
   SIX-POINTED SOURCE-TAIL REFINEMENT].  Without importing the candidate, it
@@ -79,7 +94,7 @@
   All 13 branches survive, and reflection sends `(u,r,state)` to
   `(12-u,12-r,state XOR 2)`.  This is neither source-time sheet, exact
   address/current, nor LRC(14).  Script/output/semantic SHA-256:
-  `ae1cf021ea23f325eded42ff1dea8df903d837b1d7ab551289d62f7ab7a0348` /
+  `ae1cf021ea23f325eeded42ff1dea8df903d837b1d7ab551289d62f7ab7a0348` /
   `1b4881cda87c46bfcfcc57dc5ea33152858bda4ad632b043a30fec2f55065fec` /
   `f43e9fb0937ae93c54c2ac0aeb1257dfd8741f9cef32ef4bf2a5f3dd2cf06388`.
 - `lrc_r5_ufull_owner_node_boolean_square_refiner_independent_audit_20260816.py`

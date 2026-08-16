@@ -222,4 +222,4 @@ python -B -O 04-computation/lrc_r5_ufull_owner_node_boolean_square_inverse_owner
 The semantic digest is
 `f43e9fb0937ae93c54c2ac0aeb1257dfd8741f9cef32ef4bf2a5f3dd2cf06388`.
 The LF script digest is
-`ae1cf021ea23f325eded42ff1dea8df903d837b1d7ab551289d62f7ab7a0348`.
+`ae1cf021ea23f325eeded42ff1dea8df903d837b1d7ab551289d62f7ab7a0348`.
