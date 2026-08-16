@@ -110,6 +110,30 @@
   `f0844b03bd931a3da8ff8ad5e977688f8abea05e09bfa86c0643ffbfd320be1a` /
   `472925c638de7ac90b1a7880184766f2e8acec0f8291e2c46cf747b37cd46712` /
   `2cfe4a03f00b431ce1542cb23d96650a34819050d8f430559b531253ed7cf874`.
+- `lrc_r5_tent_location_c4_cospan_hostile_audit_20260816.py` -> matching
+  `.out` [FINITE-EXACT TYPING SIDECAR; FORMAL COSPAN CANDIDATE ONLY].  The
+  exceptional-location section splits under arc reversal as
+  `h_even=(12,12,6,6,0,0)` and
+  `h_odd=3*(e_(1->3)-e_(3->1))`.  In a marked normalized odd-edge basis,
+  middle coefficient three has the unique formal `C4` completion
+  `3*(1,1,1,1)`, with integral/mod-13/mod-2 cochain seams `12/12/0`.
+  Literal directed-arc chains introduce a factor two and mod-13 seam `11`;
+  the cycle restricts to `(3,3,3)`, not the observed `(0,3,0)`.  The mod-2
+  all-one cochain is `delta(0,1,0,1)`, while the same tuple is a nonzero
+  homology cycle.  There is no `F13 -> F2` coefficient map, no lawful closure
+  edge, and no location-to-response coefficient transport.  In the actual
+  diagonal response table, the two reflected middle-odd rows are nonzero on
+  all twenty exceptional cells but each takes eight distinct values and the
+  pair has rank two, ruling out every `r1`-blind scalar transport.  The
+  concurrent common ten-space cannot repair this: it has no common section
+  or arc-reversal action, and its two-dimensional reversal defect is exactly
+  middle-pair localized.  The surviving object is exact support alignment
+  plus an explicit marked interface with conditional D5 seam `-1`, not a
+  response amplitude, current, or `H1` realization.  Script/output/semantic
+  LF SHA-256:
+  `856eda8328665ab1a060c37dc889506a097c1c91c75036bd1b22c2763b8adc54` /
+  `bf83ef8043625a87e8a56c8478bf5c0ab0f502bf2747e72a1da074b23d774dea` /
+  `d662e9ffb12e35f60b34fcf86d5cc60788aded7de28fdcc132cfe1fc693290c3`.
 
 - `lrc_r5_third_current_digit_pointed_root_difference_diagonal_bundle_probe_20260816.py`
   -> matching `.out` [FINITE-EXACT STATIC THIRD-CYLINDER RESPONSE SIDECAR;

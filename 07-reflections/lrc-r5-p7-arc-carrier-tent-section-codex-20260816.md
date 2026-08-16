@@ -293,6 +293,27 @@ Laplacian is
 Delta h=(0,3,3,-3,-3,0).                             (13)
 ```
 
+Arc reversal gives the further exact decomposition
+
+```text
+h_even=(12,12,6,6,0,0),
+h_odd =(0,0,3,-3,0,0)=3*j_mid.                       (13a)
+```
+
+The [typed C4 cospan audit](lrc-r5-tent-location-c4-cospan-hostile-audit-codex-20260816.md)
+shows both the value and the limit of (13a).  It lives in the
+exception-**location** module.  Under a marked normalized odd-edge basis,
+middle coefficient three has the unique formal `C4` completion
+`3*(1,1,1,1)` and mod-13 seam `12=-1`; under literal directed-arc chain
+realization `j_mid` maps to twice the middle edge, giving coefficient six and
+seam `11`.  The formal cycle restricts to `(3,3,3)`, not the observed
+`(0,3,0)`, so it completes only one selected coordinate.  No lawful closure
+edge or location-to-response coefficient transport is present.  The exact
+diagonal-profile hostile is stronger: on the same middle support the actual
+odd response takes eight distinct values in each reflected `r0` row, and the
+two rows have rank two, so the location coefficient three admits no
+`r1`-blind scalar transport.
+
 What (11) is not yet is a divisor of the diagonal bundle.  No valuation,
 zero/pole order, or section whose zero locus is `D` has been supplied.  The
 observed property is failure of source proportionality, not vanishing of

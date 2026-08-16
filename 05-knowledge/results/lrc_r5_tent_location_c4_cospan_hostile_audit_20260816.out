@@ -1,0 +1,21 @@
+== r=5 tent-location / hypothetical C4 cospan hostile audit ==
+tent_(h,reversal,even,odd)=((12, 12, 9, 3, 0, 0), (12, 12, 3, 9, 0, 0), (12, 12, 6, 6, 0, 0), (0, 0, 3, -3, 0, 0))
+odd_identity=h_odd=3*j_mid; j_mid=(0, 0, 1, -1, 0, 0)
+odd_basis_P4_coefficients=(0, 3, 0)
+normalization_record=(normalized_half_difference,literal_directed_arc)
+P4_chains_and_boundaries=(((0, 3, 0), (0, -3, 3, 0)), ((0, 6, 0), (0, -6, 6, 0)))
+formal_C4_cycles=(((3, 3, 3, 3), (6, 6, 6, 6)), (3, 3))
+restriction_hostile_(cycle_restriction,observed_path)=(((3, 3, 3), (0, 3, 0)), ((6, 6, 6), (0, 6, 0)))
+cochain_seams_(Z,F13,F2,literal_F13)=(12, 12, 0, 11)
+F2_exact_cochain_potential=(0, 1, 0, 1);delta_f=(1, 1, 1, 1)
+F2_chain_status=all-one is the nonzero H1 cycle; exactness above is H^1/cochain only
+characteristic_hostile=('no_unital_ring_map_F13_to_F2', 'no_nonzero_additive_map_F13_to_split_response_field', 'integer_12_equals_minus_1_only_after_F13_reduction_not_in_response_field', 'lawful_common_integral_lift_Z_to_F13_and_Z_to_F2', 'arc_reversal_plus_minus_split_unavailable_in_characteristic_2')
+formal_shadow_cospan=('Loc_exception_threshold', 'middle_odd_coefficient_3_in_Z_address', 'MISSING_tau_address_to_response_current', 'ev_BC:Z1(C4;Z_current)_to_Z_current_is_iso', 'formal_normalized_completion_3*(1,1,1,1)')
+missing_typed_gates=('lawful_same-copy_D_to_A_closure_edge', 'address-location_to-response-amplitude_coefficient_transport', 'marked_chain_to_cochain_constitutive_identification', 'semantic_C4_to_THM3496_C7_chart_map')
+preserved=('arc_reversal_middle_support', 'middle_coefficient_after_explicit_normalization', 'C4_divergence_zero_after_formal_completion', 'integral_seam_and_its_separate_base_changes')
+lost=('exception_set_semantics', 'even_location_baseline', 'outer_edge_coefficients', 'source_cells_and_endpoint_response', 'clock_temporal_copy_and_physical_current')
+response_transport_record=(profile_sha,nonroot_r1,distinct_counts,row_rank,reflection,row_digest,first_values,scalar_verdict,remaining_gate)
+response_transport_hostile=('d1c7e561538ac6abb7c631c642d547aea7ca8dcfa33296e849a22a5061d2f595', (1, 2, 3, 4, 5, 7, 8, 9, 10, 11), (8, 8), 2, True, '7ee80b176cc42b9c900605645de1da8aff803d12e2a7b4c91df2965e3ad87ce3', (359051715977130886352290, 728944175358539724970630), 'no_r1_blind_scalar_transport', 'r1_dependent_section_still_requires_a_typed_map')
+semantic_sha256=d662e9ffb12e35f60b34fcf86d5cc60788aded7de28fdcc132cfe1fc693290c3
+verdict=useful marked candidate interface, blocked first at the closure edge and then at coefficient transport; no response amplitude, current, or D5 class
+PASS

@@ -318,7 +318,21 @@ Their consecutive drops are
 (0,3,6,3,0),                                         (24)
 ```
 
-whose generating polynomial is
+Arc reversal also splits the location section exactly as
+
+```text
+h_even=(12,12,6,6,0,0),
+h_odd =(0,0,3,-3,0,0)=3*(e_(1->3)-e_(3->1)).         (24a)
+```
+
+The [independent typing audit](lrc-r5-tent-location-c4-cospan-hostile-audit-codex-20260816.md)
+records the resulting formal closure cospan.  The normalized odd-basis
+convention gives the conditional cycle `3*(1,1,1,1)` and seam `12=-1`, while
+literal directed-arc chains introduce a factor two.  More importantly,
+`h_odd` records exception locations, not response amplitudes; the missing
+`2--0` edge and the location-to-current coefficient map both remain absent.
+
+The drop generating polynomial is
 
 ```text
 3*x*(1+x)^2.                                          (25)
