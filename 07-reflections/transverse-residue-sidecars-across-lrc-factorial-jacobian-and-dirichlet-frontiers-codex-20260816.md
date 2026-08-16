@@ -76,6 +76,10 @@ checkerboard pair has the same two marginals and product while its joint
 intersection changes from positive to zero.  Thus no post-marginal Fourier
 operation can reconstruct physical common ancestry.  The next lawful object
 must be formed on common points before the two marginals are multiplied.
+THM-3492 makes the obstruction universal: the marginal map lands in a fibre
+product and has kernel `ker(e_U) tensor ker(e_V)`.  A physical ancestry key is
+therefore a semantic choice of lift through that exact sequence, not another
+function of the two totals.
 
 ### 2. The factorial compiler reaches `r<=9998` and exposes its structural gap
 
@@ -93,11 +97,29 @@ for `p=3` or `5`, the `F` raw vertices lie only at residues `0` and
 automatically rho-admissible.  This does **not** by itself close a row: a
 Newton degree gap or an incompatible divisor packet is still required.
 
+For every odd prime `p`, `K>s>=1`, and `d=p^K+p^s+2`, that gap becomes
+explicit.  The exact pair hulls have vertices
+
+```text
+F: 0, p^s, p^K+p^s,
+G: 0, 1, p^s+1, p^K+p^s+1,
+```
+
+and their common necessary degree set is exactly
+`{0,p^s,p^K,p^K+p^s}`.  This is the odd-prime two-digit analogue of the
+binary submask compiler.  In the 281-row rho census, `d=6590=3^8+3^3+2`
+is the sole `p=3,5` instance of this form; its inherited divisor packet lies
+strictly between `27` and `6561`, so the central gap closes it structurally.
+This remains a conditional packet-disjointness compiler, not an infinite
+coprimality family.
+
 The conceptual frontier is therefore no longer coefficient construction.
 It is a support theorem for the reachable degree monoid: determine when the
 digit hull has a provable interval gap into which every divisor-place packet
-falls.  A residue congruence without that interval sidecar is a sharp false
-route.
+falls.  The `d=6518` packet survives an automatically admissible `p=3`
+polygon until `p=29`; `d=56` and `d=22` kill two naive divisor-family
+extrapolations.  A residue congruence without the interval sidecar is a sharp
+false route.
 
 ### 3. The fixed Keller tower gains its third genuine component
 

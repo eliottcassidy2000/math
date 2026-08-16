@@ -332,7 +332,8 @@ density need not settle `z=1` mass.
   lifts; no JC map. THM-3438 gives `KDeg(m)={1,3,4,...}` (`m>=3`), all-grade
   `S_n`, first mixed grade `9`, global G1 and a non-radical `S_5` inverse;
   arbitrary-map, planar/z-affine and `A_4/A_5` classification stays open.
-  THM-1300/1315 are unsettled (MISTAKE-205); THM-2473--2576 fixed-map.
+  THM-1300 certificate verified/provenance unsettled (MISTAKE-205);
+  THM-1315 corrected (MISTAKE-282); THM-2473--2576 fixed-map.
   [THM-3495](../01-canon/theorems/THM-3495-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness.md)
   gives fixed-map `N(H)=J/(2^35L^7)`, `S_(F^3)=V(LHJ)`, `[Delta_3]=[-2J]`;
   depth four/general maps remain OPEN. THM-2681
