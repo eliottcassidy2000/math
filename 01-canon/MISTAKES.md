@@ -54,7 +54,7 @@ Format per entry:
   actual target map and hostile-test it on a canonical exact element before
   promoting a quotient obstruction to a spectral obstruction.
 
-## MISTAKE-408 (2026-08-15, concurrent THM-3479 reservation) -- a stale namespace check allowed a duplicate theorem ID
+## MISTAKE-408 (2026-08-15, concurrent theorem reservations) -- a stale namespace check allowed duplicate theorem IDs
 
 - **What failed:** commit `958234d4b` first published `THM-3479` as the
   relation-current two-transplant reservation.  The later Rule-30 commit
@@ -72,10 +72,17 @@ Format per entry:
   `THM-3481` before any theorem promotion or proved dependency is added.  Its
   companion `THM-3480` reservation is unchanged; no mathematical claim is
   affected.
+- **Second exact recurrence:** commit `01f394823` published the private-count
+  gradient `THM-3482` reservation first; the later factorial commit
+  `b79304f74` independently published a second empty `THM-3482`.  The former
+  keeps its ID and the still-empty factorial stub moves to the globally
+  scanned `THM-3483`.  This recurrence occurred even after a full remote-tip
+  pre-scan: a scan is an observation, not a lock, and uniqueness must be
+  repeated after every expansion rebase as well as every reservation rebase.
 - **Reusable rule:** immediately re-fetch and repeat both YAML-ID and filename
-  searches after a reservation rebase and before pushing or expanding a stub.
-  If two empty reservations still race, publication order keeps the earlier
-  ID and the later stub moves.
+  searches after any reservation or expansion rebase and before pushing.
+  If two reservations still race, publication order keeps the earlier ID and
+  the later empty stub moves.
 
 ## MISTAKE-407 (2026-08-15, THM-3472 layer transport) -- owner doubling was falsely called augmented-primitive and even nonbijectivity was mistaken for a cover boundary
 
