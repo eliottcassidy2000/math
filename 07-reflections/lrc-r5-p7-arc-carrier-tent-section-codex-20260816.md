@@ -337,11 +337,36 @@ field has no positivity order.  “Diagonal local system” is too strong:
 “H1/cocycle” is a type error at this stage: (15) is static function data, not
 parallel transport.
 
+The concurrent complete-profile companion at `7f88e61af` sharpens this
+classification without changing it.  Its six `13 x 13` matrices
+`(k_e(r0,r1))` have ranks
+
+```text
+(11,11,12,12,11,11),
+```
+
+each has right and left eigenvalue-one nullity one, and their direct-sum rank
+is `68/78`.  Arc-reversal equality holds at exactly `143/169` addresses.  The
+26 failures all split the middle pair: 20 are the nonroot digits at
+`r0=3,9`, and six are the endpoint residuals
+
+```text
+(0,11),(0,12),(6,5),(6,7),(12,0),(12,1).
+```
+
+Chamber reflection holds on all 1,014 scalar entries.  These complete-
+profile facts independently support (8), but row-sum one over a finite field
+still supplies neither positivity nor composable transport.
+
 A future D5/H1 interpretation needs a lawful clock/address graph `Gamma`, a
 typed transport on each clock edge, and a composition law.  Only after
 restricting to invertible transports can one test cycle holonomy or a
 `Z^1(Gamma,(k^x)^6)` class.  A clock edge closing the missing `D--A` edge is a
-possible test object, not a current theorem.
+possible test object, not a current theorem.  If such an edge is lawfully
+constructed, the state path closes to `C4`, whose first (co)homology is
+one-dimensional; in a consistent orientation the candidate class coordinate
+is the sum of the four edge values.  The present tensor supplies only three
+of those four typed edges.
 
 ## Connection contract
 
@@ -361,10 +386,10 @@ possible test object, not a current theorem.
 
 ## Cheapest next decisive computations
 
-1. Export only the 169 diagonal six-vectors already computed at `b1baa781a`.
-   Direct RREF then independently confirms the derived `r0=3,9` equalities in
-   (8) and identifies the two boundary four-spaces without another endpoint
-   sweep.
+1. Persist the complete diagonal profile already reconstructed by the
+   `7f88e61af` companion (digest `d1c7e561...f595`) and run direct RREFs.  This
+   independently confirms the derived `r0=3,9` equalities in (8) and
+   identifies the two boundary four-spaces without another endpoint sweep.
 2. Retain the 60 exceptional diagonal entries and form the absolute
    remainders `child-k_e parent`.  Compare their kernel image with the
    decorated edge-stalk basis (14).  This decides whether the eight-space has
