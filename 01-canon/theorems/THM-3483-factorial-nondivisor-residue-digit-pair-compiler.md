@@ -14,7 +14,11 @@ status: >
   of the 461 residuals, and admissible nondivisor residues close the remaining
   41.  Hence the exact-support quadratic boundary is r<=3998.  This is a
   necessary-degree compiler and finite exact application, not a factor
-  construction or arbitrary-support FC/SFC theorem.
+  construction or arbitrary-support FC/SFC theorem.  Two further dual exact
+  blocks close every row through d=10000: across 2606<=d<=10000, 4730/7395
+  rows take inherited exits, divisor places close 2384/2665 residuals, and
+  admissible nondivisor residues close the remaining 281.  Thus the current
+  exact-support boundary is r<=9998; d=10001 is untested.
 audit: >
   The residue congruence, extreme-vertex hull criterion, p=2 boundary, zero
   coefficients, slope-zero typing, and five large pair ledgers were
@@ -50,6 +54,30 @@ block_output_sha256:
   - 48733decf5874c197b989d7731f0864082a65fe7b9056af67e0149d1e8a94896
   - 5c02ee06a8b14909b1b6677e1d853057eeb285ab5699cd354e5e30304533b329
 block_semantic_sha256: 95d1c233d59d00c38ce456fa7c5f5e248414e01b5ba9dc2ae9f61725d6c19dbd
+extension_scripts:
+  - 04-computation/factorial_adaptive_rho_block_6000.py
+  - 04-computation/factorial_adaptive_rho_block_6000_independent_audit.py
+  - 04-computation/factorial_adaptive_rho_block_10000.py
+  - 04-computation/factorial_adaptive_rho_boundary_10000_gate.py
+extension_outputs:
+  - 05-knowledge/results/factorial_adaptive_rho_block_6000.out
+  - 05-knowledge/results/factorial_adaptive_rho_block_6000_independent_audit.out
+  - 05-knowledge/results/factorial_adaptive_rho_block_10000.out
+  - 05-knowledge/results/factorial_adaptive_rho_boundary_10000_gate.out
+extension_script_sha256:
+  - b65edcf2870714ca57456b8297afdd05284a09b302ec4b84d2e57829520c94d1
+  - d416cb2955fd745394cf1043ac8c2eba28a6a97beb264dd9cbe9919ed8c96724
+  - 105e62698d0c3cf0066a100e9d205a5c1f1c31e64cfdba0dc2fe23decd8f0eba
+  - ee57eb8df0c25aa6bc0243f66f7f3b21affefa75f3b347b8ec19e10f88a2d5b3
+extension_output_sha256:
+  - ab629edc04e31d1889741688897bfe60f5249df60b64116391217393962b1ddf
+  - 8d6adbcaa14c85d022f726db97a80a7bafc1288505ccde720b3f5fbf6ee2a922
+  - 18b131aed2f380b1c1bace8beeb8488ced0e24599f4b7484d66a14e5869c0d22
+  - 625e0e401e914a5bfa30d139e6309b375c4461d83c4dfe76755179f0d495fea5
+extension_block_semantic_sha256:
+  - 7f8ab74ae9fae027f32fd7eabaf0338c217319e274594bd603859a1bbcca28bd
+  - d90179fdebd48dd82cd368b957c9602fbd287774287de0fecb73b4a84dca69f3
+extension_combined_semantic_sha256: 4a364bbafdfef0dc6d905063c9570b987e00eca2506506b8160ce24e453878bf
 hash_basis: raw bytes
 ---
 
@@ -289,31 +317,86 @@ The component omitting the `2187` block has maximum degree `417`, while a
 component using it has minimum degree `2187`; hence (20) has empty
 intersection with the local barcode.
 
-The two block implementations serialize the same full semantic record with
+The first two block implementations serialize the same full semantic record with
 SHA-256
 
 ```text
 95d1c233d59d00c38ce456fa7c5f5e248414e01b5ba9dc2ae9f61725d6c19dbd. (25)
 ```
 
+Two additional dual exact audits continue without a gap.  On
+`4001<=d<=6000`, their common census is
+
+```text
+total rows                         2000
+inherited seven-exit rows          1272
+post-exit residuals                 728
+closed by divisor pair ledgers      600
+closed by a rho-admissible prime    128
+survivors                             0.                    (26)
+```
+
+The block semantic SHA-256 is
+`7f8ab74ae9fae027f32fd7eabaf0338c217319e274594bd603859a1bbcca28bd`.
+On `6001<=d<=10000`, the exact census is
+
+```text
+total rows                         4000
+inherited seven-exit rows          2524
+post-exit residuals                1476
+closed by divisor pair ledgers     1364
+closed by a rho-admissible prime    112
+survivors                             0.                   (26a)
+```
+
+Its semantic SHA-256 is
+`d90179fdebd48dd82cd368b957c9602fbd287774287de0fecb73b4a84dca69f3`;
+the lightweight cross-block gate pins both records with combined SHA-256
+`4a364bbafdfef0dc6d905063c9570b987e00eca2506506b8160ce24e453878bf`.
+Across the full audited range `2606<=d<=10000`, the totals are therefore
+
+```text
+7395 rows; 4730 inherited exits; 2665 residuals;
+2384 divisor closures; 281 rho closures; 0 survivors.       (26b)
+```
+
+The actual rho-killer histogram in that full range is
+
+```text
+p=3:31, p=5:23, p=7:81, p=11:83, p=13:31,
+p=17:18, p=19:9, p=23:4, p=29:1.                          (26c)
+```
+
+The unique `p=29` row is a useful boundary hostile.  At `d=6518`, divisor
+places leave
+
+```text
+{3087,3430,4802,5145,5488,5831}.
+```
+
+Primes `13,17,19` retain the last candidate `5831`, and `p=23` is
+rho-inadmissible; the admissible `p=29` barcode has a gap from `5669` to
+`5887` and kills it.  Thus the earlier observed killer bound `p<=19` was only
+finite-range evidence, and even `p<=23` is false on the present range.
+
 Consequently every exact-support quadratic window with
 
 ```text
-1<=r<=3998                                                     (26)
+1<=r<=9998                                                   (26d)
 ```
 
 has a nonzero member among its factorial moments at exponents
-`r,r+1,r+2`.  This is a
-FINITE-EXACT application of the proved polygon compilers.  The next untested
-row is `d=4001`, or `r=3999`; it is not a known survivor.
+`r,r+1,r+2`.  This is a FINITE-EXACT application of the proved polygon
+compilers.  The next untested row is `d=10001`, or `r=9999`; it is not a known
+survivor.
 
 Equivalently, if
 
 ```text
-L(t^m)=m!,                   q(t)=a+bt+ct^2,             (26a)
+L(t^m)=m!,                   q(t)=a+bt+ct^2,             (26e)
 ```
 
-with `abc!=0`, then for every `1<=r<=3998` the three values
+with `abc!=0`, then for every `1<=r<=9998` the three values
 `L(q^r),L(q^(r+1)),L(q^(r+2))` cannot all vanish.  This does not cover a
 missing coefficient, translated or arbitrary support, all of `SFC(1)`,
 `SFC(3)`, or `FC(3)`.
@@ -372,6 +455,19 @@ python3 04-computation/factorial_adaptive_rho_block_4000_thm3483.py
 python3 -O 04-computation/factorial_adaptive_rho_block_4000_thm3483.py
 python3 04-computation/factorial_adaptive_rho_block_4000_independent_audit_thm3483.py
 python3 -O 04-computation/factorial_adaptive_rho_block_4000_independent_audit_thm3483.py
+```
+
+The extension blocks and lightweight combined gate are reproduced by
+
+```bash
+python3 04-computation/factorial_adaptive_rho_block_6000.py
+python3 -O 04-computation/factorial_adaptive_rho_block_6000.py
+python3 04-computation/factorial_adaptive_rho_block_6000_independent_audit.py
+python3 -O 04-computation/factorial_adaptive_rho_block_6000_independent_audit.py
+python3 04-computation/factorial_adaptive_rho_block_10000.py
+python3 -O 04-computation/factorial_adaptive_rho_block_10000.py
+python3 04-computation/factorial_adaptive_rho_boundary_10000_gate.py
+python3 -O 04-computation/factorial_adaptive_rho_boundary_10000_gate.py
 ```
 
 ## 7. Failure boundaries and information contract

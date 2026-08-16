@@ -133,9 +133,23 @@
   independent script/output raw SHA-256:
   `0b858f7b1154a3ee2dec43bf5238f7e6f24b524e9dc2b9f70f5b497fcef58934` /
   `5c02ee06a8b14909b1b6677e1d853057eeb285ab5699cd354e5e30304533b329`.
-  This extends the exact-support quadratic boundary through `r=3998`;
-  `d=4001` is merely untested.  A nonempty degree barcode remains necessary,
-  not a factor; no arbitrary-support SFC/FC conclusion follows.
+  Four further artifacts extend this dual exact census without a gap:
+  `factorial_adaptive_rho_block_6000.py`, its independent audit,
+  `factorial_adaptive_rho_block_10000.py`, and the lightweight
+  `factorial_adaptive_rho_boundary_10000_gate.py`, with matching `.out` files.
+  On `4001<=d<=6000` the counts are `(2000,1272,728,600,128,0)` and semantic
+  SHA-256 `7f8ab74ae9fae027f32fd7eabaf0338c217319e274594bd603859a1bbcca28bd`;
+  on `6001<=d<=10000` they are `(4000,2524,1476,1364,112,0)` and semantic
+  SHA-256 `d90179fdebd48dd82cd368b957c9602fbd287774287de0fecb73b4a84dca69f3`.
+  The combined gate digest is
+  `4a364bbafdfef0dc6d905063c9570b987e00eca2506506b8160ce24e453878bf`.
+  Primary/independent `6000` script hashes are `b65edcf...c94d1` /
+  `d416cb2...6724`; the `10000` and gate hashes are `105e626...f0eba` /
+  `ee57eb8...2d5b3`.  This extends the exact-support quadratic boundary
+  through `r=9998`; `d=10001` is merely untested.  The exact `d=6518,p=29`
+  gap is a hostile to a uniform `p<=23` claim.  A nonempty degree barcode
+  remains necessary, not a factor; no arbitrary-support SFC/FC conclusion
+  follows.
 - `factorial_dual_seven_exit_block_closure_thm3478.py` -> matching `.out`
   [THM-3478 PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
   AUDITED].  Separately pinned coefficient/Fraction-hull and
