@@ -21,8 +21,8 @@
   `d2fa0aacbda9dd90f6cd220424d3a878e7969056397e7a69c38db9433237f54c`.
 
 - `lrc_r5_ufull_owner_node_common_base_current_probe_20260816.py` ->
-  matching `.out` [FINITE-EXACT ONE-COMMON-BASE OWNER-NODE CURRENT
-  CANDIDATE; INDEPENDENT AUDIT PENDING].  On the exact joint coordinate
+  matching `.out` [FINITE-EXACT ONE-COMMON-BASE OWNER-NODE INTEGRAND
+  CANDIDATE; INDEPENDENTLY HOSTILE-AUDITED AT THE SCOPED SURVIVOR].  On the exact joint coordinate
   `lcm(T_source,13*T_endpoint)` and a Lucas-certified split field for
   `lcm(T_source,13^2*T_endpoint)`, the actual THM-2471 source root-service
   profiles and actual `U_full` endpoint Boolean factors are multiplied at
@@ -42,6 +42,24 @@
   `6ad93cd13d47159a565f39128b9a108b5203a396ed3ed05a2892222771d45e40` /
   `2a36bfd5c888b1237ad8b3c698230305e84b8fed1436ddac1b02a6f24fb141a7` /
   `98a27d4540648377c544d8e1b86c3dd3df7bb16d3431f6a9471f4844ba2e6b9f`.
+
+- `lrc_r5_ufull_owner_node_common_base_current_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS THE NARROW RESIDUE
+  BRIDGE AND REJECTS GENUINE `7x13` MIXING].  Rebuilds the THM-2594 source
+  profiles by an independent transfer fold, desheets THM-3514 endpoint
+  intervals directly, pulls back `Q(13y)`, and uses a prefix harmonic
+  primitive rather than the candidate contraction.  Complete Lucas/order,
+  `169 I5`, pointwise same-root, reference-boundary guard, frequency/phase,
+  inverse-sign, and source-erasure gates pass.  It reproduces the candidate
+  role bridge `223272610175651920448188` and every load-bearing digest.  The
+  primary hostile proves `OWNER` is exactly cell zero, so all 2197 character
+  rows lie there and the table/ANOVA have rank one.  Thus the full formal
+  spectrum is `delta_0 tensor R`, not a two-coordinate closure.  No exact
+  address, temporal/`U_clock` transport, physical current, row exclusion, or
+  LRC(14) follows. Script/output/semantic LF SHA-256:
+  `72e819f1cae92e8969516dc79215e683c538e80da64c9e989e2c5115aebb5304` /
+  `01738d82f1e0895ec294d3e716deca245567cd3e568b51d9e6669d67684a47b2` /
+  `88d4be52bcb16a52ab2656ff0c0b6bf70e33a2174652ee7e1df62376426f24e6`.
 
 - `lrc_ufull_desheeted_common_residual_base_probe_20260816.py` -> matching
   `.out` [FINITE-EXACT ACTUAL-ENDPOINT ONE-BASE COUPLING CANDIDATE;
