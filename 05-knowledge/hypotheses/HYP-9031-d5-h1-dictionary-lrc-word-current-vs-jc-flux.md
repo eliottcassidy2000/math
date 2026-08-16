@@ -11,8 +11,11 @@ status: >
   corrected comparison cospan as DEFINITIONAL bookkeeping. THM-3431 now
   proves a secondary refinement: a deck-group H1 transgression on the LRC
   side and a vertical local-H1 injection on the selected one-root JC side,
-  with zero additive cross-maps and only a lossy valuation DeathBar cospan.
-  This file is NOT a reduction.
+  with zero additive cross-maps. THM-3496 adds one sharply marked
+  coefficient-changing exception: the graph seam maps isomorphically to the
+  mu_13 Kummer line of an algebraically closed punctured normal slice and
+  commutes with degree pullback, but it stops before additive flux and every
+  physical/Keller predicate. This file is NOT a reduction.
 source: opus-2026-07-26 (successor to the shape-confirmation in
   07-reflections/spectral-vs-geometric-rank-why-LRC-stays-open-and-JC-fell-opus-20260726.md)
 related:
@@ -20,6 +23,7 @@ related:
   - THM-2504-endpoint-tournament-no-go-and-root-chart-holonomy
   - THM-2337 / THM-2356 / THM-2334 (word-current, Bockstein, 169 twists)
   - THM-2389 / THM-2406 / THM-2463 / THM-2468 (flux, pole-descent, square lifts)
+  - THM-3496-marked-graph-kummer-degree-square-and-finite-coefficient-frobenius-flux-extinction
   - HYP-9030-keller-degree-semigroup
 ---
 
@@ -43,8 +47,12 @@ obstruction/realization grammar. The current typed facts are:
   in both directions; the same holds between those finite odd groups and the
   additive characteristic-zero response module.
 
-Therefore there is no direct LRC-class-to-JC-class map in the present canon.
-The lawful survivor is a **typed comparison cospan** recording site,
+Therefore there is no unmarked map between the original geometric sites and
+no additive LRC-class-to-Hamiltonian-flux map in the present canon.  THM-3496
+does construct a marked coefficient-changing map to the selected divisor's
+`mu_13` normal Kummer line; its algebraically closed unit-root hypothesis,
+oriented uniformizer, deck generator, and exponent-one normalization are all
+load-bearing.  The broader lawful survivor is a **typed comparison cospan** recording site,
 coefficient object, distinguished class/observer, target predicate, lost
 information, missing realization sidecar, and quantifier. The historical
 same-H1 wording below is retained only for provenance and must not be cited as
@@ -55,6 +63,30 @@ degree-13 cover primitive's deck defect, a selected one-root JC observer
 embeds as `[lambda^(-q)]` in vertical local cohomology, and the two classes
 still admit no nonzero additive map in either direction. Their shared
 DeathBar record is explicitly lossy and has no universal-property claim.
+
+## 2026-08-16 refinement -- the marked normal Kummer line is reachable
+
+[THM-3496](../../01-canon/theorems/THM-3496-marked-graph-kummer-degree-square-and-finite-coefficient-frobenius-flux-extinction.md)
+proves the normalized map
+
+```text
+[g] |-> (sum_i g_i)[y^13=lambda]
+```
+
+from the oriented seven-chart graph line to the `mu_13` Kummer line of one
+oriented punctured formal normal slice.  Degree-`k` graph pullback matches
+`lambda=t^k`; degree thirteen kills and degree fourteen restores both sides.
+This is not a reversal of THM-3354: changing coefficients to `mu_13` and
+marking the normal parameter creates a new correspondence object.  There are
+twelve nonzero unmarked scalar choices, and over `Q((lambda))` unit classes
+such as `[2]` make the full Kummer group larger than the valuation line.
+
+The same theorem sharpens the target obstruction.  For `P=x+x^2z`, the
+nonzero characteristic-zero unit response becomes exact over `Z/13^r` for
+every finite `r`.  This is finite-coefficient extinction, not a universal
+Bockstein or derived-completion no-go.  The physical word-current-to-chart
+arrow and the Kummer-to-additive-flux arrow both remain open/blocked in their
+previous precise senses.
 
 ## Historical proposal -- superseded as a direct map
 

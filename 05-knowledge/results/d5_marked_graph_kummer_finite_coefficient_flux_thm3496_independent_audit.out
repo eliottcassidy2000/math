@@ -1,0 +1,24 @@
+THM-3496 INDEPENDENT GRAPH/KUMMER/FROBENIUS AUDIT
+STATUS: EXACT ALGEBRA AUDIT; REPAIRED SCOPE
+
+GRAPH / DECK
+  rank_F13(delta_C7)=6; H1 dimension=1
+  seven basis deck defects=[1, 1, 1, 1, 1, 1, 1]
+  constant chart class deck defect=7
+  all 49 basis/gauge cells preserve seam and C91 deck defect
+
+KUMMER / DEGREE
+  principal-unit thirteenth root checked through lambda^8
+  unmarked nonzero line isomorphisms=12; scalar-one marking selects one
+  hostile: over Q((lambda)), [2] is an extra valuation-zero Kummer class
+  degree square checked for k<=500; k=13 dies, k=14 returns
+
+FLUX HOSTILE
+  Bezout, D(h)=6z, [P h]=[-x^-1], and D(-x^-1)=-1 PASS
+  D(Q_p)=1-p(xz)^(p-1) and localized Frobenius PASS at (3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43)
+  weight recurrence and nonzero terminal obstruction checked through 201 terms
+  [1]=0 after coefficient reduction mod 13 and mod 13^2 (direct CAS)
+  general recurrence proves [1]=0 mod 13^r for every finite r
+  no universal Bockstein, derived-completion, or lim^1 claim is made
+
+SEMANTIC_SHA256=0c5756987947c93c271b7db5443a1618e483269c490b6710c30b9056562be1bb

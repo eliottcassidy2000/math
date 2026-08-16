@@ -1,10 +1,31 @@
 # The D5 `H^1` map reaches the marked Kummer normal slice and stops before flux
 
-**Status: PROVED-ELEMENTARY synthesis with a FINITE-EXACT unnumbered
-sidecar; not canon, not a truth source, and not an LRC(14), JC(2), or
-physical-current result.**  Reproduce the finite claims and polynomial
-identities with
+**Status: historical synthesis with a FINITE-EXACT sidecar, independently
+audited and promoted only in the repaired scope of
+[THM-3496](../01-canon/theorems/THM-3496-marked-graph-kummer-degree-square-and-finite-coefficient-frobenius-flux-extinction.md);
+this reflection is not a truth source and gives no LRC(14), JC(2), or
+physical-current result.**  Reproduce the original finite claims and
+polynomial identities with
 `04-computation/d5_marked_kummer_normal_slice_frobenius_flux_no_go_20260816.py`.
+
+## Independent audit correction -- 2026-08-16
+
+The marked graph/deck map, normal Kummer square, additive no-go, and
+Frobenius telescope survive.  Three scope repairs are load-bearing.
+
+1. The equality
+   `H^1_et(K((lambda));mu_13)=Z/13[kappa_lambda]` uses the stated
+   algebraically closed characteristic-zero residue field.  It is false over
+   a general characteristic-zero field: `[2]` is an extra valuation-zero
+   class over `Q((lambda))`.
+2. Degree and orientation naturality leave all twelve nonzero line
+   isomorphisms.  The exponent-one marking selects one normalized map; there
+   is no unmarked canonicity or maximality theorem.
+3. Equations (43)--(44) prove that `[1]` becomes exact over `Z/13^r` for
+   every finite `r`, and that ordinary `13`-adic completion kills it.  They do
+   **not** prove a universal no-go for derived completion, `lim^1`, or every
+   construction called a Bockstein tower.  All stronger Bockstein wording
+   below is superseded by this finite-coefficient statement.
 
 ## 1. Inheritance pass and verdict
 
@@ -178,9 +199,12 @@ where
 kappa_lambda=[y^13=lambda].                              (15)
 ```
 
-The equality in (14) is valuation modulo thirteen: every unit has a
-thirteenth root over the chosen complete normal slice, and `lambda` has
-valuation one.  Consequently an orientation-preserving change of uniformizer
+The equality in (14) is valuation modulo thirteen: because `K` is
+algebraically closed of characteristic zero, every constant unit has a
+thirteenth root and formal Hensel lifting gives a root of every principal
+unit; `lambda` has valuation one.  Over a general residue field the unit
+quotient need not vanish (for example `[2]` over `Q((lambda))`).
+Consequently, under the stated field hypothesis, an orientation-preserving change of uniformizer
 does not change `kappa_lambda`; reversing the meridian sends it to
 `-kappa_lambda`.  Changing the sheet coordinate `y` by a deck element is a
 torsor gauge and also leaves the class unchanged.
@@ -208,6 +232,9 @@ Thus the canonical class maps as
 ```
 
 Every map in (16) is an isomorphism between one-dimensional `F13` groups.
+Before the exponent-one normalization there are twelve nonzero scalar
+choices, all compatible with degree and orientation.  Thus the markings
+select the displayed map but prove no unmarked canonicity or maximality.
 At the finite exponent-cochain level, choose one target meridian seam
 `e_*`.  Then
 
@@ -443,8 +470,8 @@ D(Q_p)=1-p(xz)^(p-1),
 Q_p-x^-1=-P^(p-1)/x^p                    over F_p.      (42)
 ```
 
-Even retaining one integral Bockstein layer is insufficient.  For every
-`n>=1`, the analogous finite telescope gives
+The exact all-finite-coefficient statement is stronger than reduction modulo
+thirteen alone.  For every `n>=1`, the analogous finite telescope gives
 
 ```text
 [1]=(-1)^n(n+1)[(xz)^n]        in coker(D over Z).     (43)
@@ -456,9 +483,12 @@ Taking `n=13^r-1` yields
 [1]=13^r[(xz)^(13^r-1)]         for every r>=1.        (44)
 ```
 
-The natural integral response class is infinitely thirteen-divisible.  Its
-naive mod-thirteen shadow is therefore zero at every finite divisibility
-depth, while the characteristic-zero flux remains nonzero.
+The natural integral response class is infinitely thirteen-divisible.  More
+precisely, reducing (44) modulo `13^r` makes `[1]` exact for every finite
+`r`, while the characteristic-zero flux remains nonzero.  This proves loss
+under every finite coefficient quotient and under ordinary completion; it
+does not adjudicate derived completion, `lim^1`, or arbitrary higher
+Bockstein packages.
 
 ## 9. Connection and loss ledger
 
@@ -516,9 +546,9 @@ correspondence with four obligations.
    meridian and the full principal-part arm.  It cannot be an additive map
    from the local-cohomology module: the sign hostile already forbids that.
 3. **Integral/Frobenius control.**  Any coefficient change must explain
-   (38)--(44).  Naive reduction modulo thirteen, one Bockstein, and every
-   finite thirteen-divisibility truncation kill the canonical unit flux in
-   the minimal model.
+   (38)--(44).  Every finite coefficient reduction modulo `13^r` kills the
+   canonical unit flux in the minimal model.  A derived-complete or `lim^1`
+   replacement remains unadjudicated.
 4. **Root and operation naturality.**  Retain multiplicities and separate
    collided roots, and distinguish the proved normal-ramification square
    from composition of Keller maps or physical time.
@@ -532,8 +562,9 @@ The most plausible replacement category is therefore not another ordinary
 ```
 
 Equation (24) supplies its degree-action skeleton.  Equations (29)--(44)
-prove that every attempt to collapse (46) to one additive coefficient object
-loses the target before any LRC or JC theorem can transfer.
+prove the additive characteristic-zero no-go and finite-coefficient
+extinction.  They do not exclude a genuinely derived or nonadditive filtered
+realization carrying the missing extension data.
 
 ## 12. Comparison with the incoming endpoint and level-three divisor work
 
@@ -597,7 +628,7 @@ python -B 04-computation/d5_marked_kummer_normal_slice_frobenius_flux_no_go_2026
 python -B -O 04-computation/d5_marked_kummer_normal_slice_frobenius_flux_no_go_20260816.py
 ```
 
-The dependency-free companion checks:
+The dependency-free original companion checks:
 
 - rank six of the `C7` coboundary and the one-dimensional seam quotient;
 - the explicit `C91` primitive and all primitive-constant gauges;
@@ -611,6 +642,10 @@ The dependency-free companion checks:
 - the integral depth formula through 200 and the `13^r` instances for
   `r=1,2,3`; and
 - the characteristic-zero terminal recurrence.
+
+THM-3496's independent SymPy/incidence companion separately audits the full
+typing, the residue-field hostile, all twelve normalization scalars, and the
+finite-coefficient-versus-derived boundary.
 
 The calculation constructs no physical LRC current, no semantic arrival
 two-cell, no nonzero Hamiltonian cross-map, no polynomial mate, no Keller

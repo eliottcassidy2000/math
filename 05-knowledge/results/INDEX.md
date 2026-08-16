@@ -1,5 +1,27 @@
 # Script Results Index
 
+- `d5_marked_graph_kummer_finite_coefficient_flux_thm3496_independent_audit.py`
+  -> matching `.out` [THM-3496 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED, WITH SCOPE REPAIRS].  Seam sum and independent `C_91` prefix
+  integration identify the seven-chart graph line with its deck-defect line;
+  after source/deck, algebraically closed residue-field, oriented-uniformizer,
+  and exponent-one markings, it maps isomorphically to the `mu_13` Kummer
+  line.  Graph-cover degree and normal ramification commute, so degree `13`
+  kills and `14` restores the class.  There are twelve unmarked nonzero
+  scalar choices, and `[2]` over `Q((lambda))` is the sharp extra-unit
+  hostile.  For `P=x+x^2z`, `[1]` is nonzero in characteristic zero but exact
+  over `Z/13^r` for every finite `r`; no universal derived-completion or
+  Bockstein no-go follows.  This is divisor-normal, not a physical current,
+  Keller composition, flux realization, LRC(14), JC(2), or DC(2) result.
+  Independent script/output/semantic LF SHA-256:
+  `75a231dd17d2bc847c01700c6c4665b25ac841dc07e52fdfe7433d8cc4385acf` /
+  `e2aad9e9298afad36ae00abeb4d10dcb92a733902f75a8608891bda991c093e6` /
+  `0c5756987947c93c271b7db5443a1618e483269c490b6710c30b9056562be1bb`.
+  The repaired original sidecar script/output LF SHA-256 are
+  `d313a3089c32d40b814539bb45f45a19b835a5e176f3ed15aea132971d948a7c` /
+  `e8b185bff6f2bdee5d2f8e76d8804e2d36e6556edb8ab4b34335110f1d1d47b3`;
+  its semantic payload remains
+  `8b347e4b65b8a07e4ce040775733b7b1e2161280cc241629dc6d50d21a50881c`.
 - `fibonacci_t4_atlas_h1_branch_transplant_probe_20260816.py` -> matching
   `.out` [VERIFIED-EXACT STRUCTURAL SIDECAR TO PROVED THM-3487 +
   INDEPENDENTLY AUDITED].  Owner plus an order of the three nonzero `V4` directions

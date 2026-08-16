@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Exact sidecar for the marked D5 normal-slice bridge and flux no-go.
 
-This companion has two jobs.
+This original companion has two jobs.  THM-3496 records the later independent
+audit and repairs the scope from a blanket Bockstein phrase to exact
+finite-coefficient extinction modulo 13^r.
 
 1.  It writes the actual finite cochain map from the THM-2542 seven-cycle
     class to the mod-13 Kummer line of a marked JC divisor normal coordinate.
@@ -310,8 +312,8 @@ def main() -> None:
         )
         prime_checks.append(prime)
 
-    # Integral response divisibility is not repaired by retaining one
-    # Bockstein layer.  For every n>=1,
+    # Integral response divisibility forces finite-coefficient extinction.
+    # For every n>=1,
     #   D(Q_n)=1+(-1)^(n-1)(n+1)(xz)^n,
     # hence [1]=(-1)^n(n+1)[(xz)^n] in the integral cokernel.  Taking
     # n=13^r-1 makes [1] divisible by every power 13^r.
@@ -389,7 +391,7 @@ def main() -> None:
         )
 
     print("D5 MARKED KUMMER NORMAL-SLICE / FROBENIUS FLUX NO-GO")
-    print("STATUS: FINITE-EXACT sidecar; unnumbered reflection; no canon claim")
+    print("STATUS: FINITE-EXACT original sidecar; repaired canon scope in THM-3496")
     print()
     print("SOURCE H1")
     print(f"  rank(delta_C7)={delta_rank}; dim H1={SOURCE_CYCLE-delta_rank}")
@@ -417,6 +419,7 @@ def main() -> None:
     print("  Q13-x^-1=-P^12/x^13 over F13, an explicit Frobenius localized constant")
     print(f"  odd-prime telescope checked at {prime_checks}")
     print("  [1]=13^r*[(x*z)^(13^r-1)] in the integral cokernel; r=1,2,3 checked")
+    print("  consequence: finite Z/13^r coefficient shadows vanish; derived completion unadjudicated")
     print("  characteristic-zero recurrence has nonzero terminal obstruction for every finite N")
     print()
     print(f"SEMANTIC_SHA256={semantic_sha256}")

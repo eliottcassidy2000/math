@@ -393,7 +393,9 @@ density need not settle `z=1` mass.
   gives a two-pivot inverse graph and mate-integrability class on two controls.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
   THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response (collisions persist; `gr` overcounts); THM-3354 blocks direct D5 transport.
-  THM-3431 proves the secondary typed cospan: LRC deck `H^1`, selected one-root JC local `H^1`, zero additive cross-maps, and a lossy DeathBar only.
+  THM-3431 gives zero-map deck/local `H^1`; THM-3496 adds only marked
+  normal-Kummer degree and finite-`13^r` extinction--no current, derived,
+  Keller, or JC/LRC transfer.
   THM-3418/19 close sparse Keller/rank; THM-3422/24/27 give integral character laws; THM-3430/33 classify wrap/all-sector Prüfer arms; THM-3436/37 give repeated-root Artin jets and their derived Euler channel.  THM-3437's inverse Tor tower recovers the Tate-module/presence bit, while its inclusion direct limit recovers the Prüfer arm; neither is LRC `H^1`. No multiroot nonwrap split or `JC(2)`/`DC(2)` follows.
 - **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
   all `2665` residuals in `7395` rows (`2384` divisor, `281` rho).
