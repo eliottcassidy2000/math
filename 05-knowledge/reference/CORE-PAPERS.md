@@ -18,11 +18,11 @@ collide, links—not bare IDs—are canonical.
 ## Rule 30
 
 - **Sources (checked 2026-08-15):** Wolfram's [2019 announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/)
-  gives questions, rule, sideways/finite observations.  The active
-  [prize page](https://rule30prize.org/) supports treating them as open.
+  states the questions and rule; the active [prize page](https://rule30prize.org/)
+  supports the repo's open status.
 - **Boundary:** proved [THM-3456](../../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md)
   isolates the seed sidecar; the [LRC probe](../results/lrc14_rule30_depth_observer_no_go_20260815.out)
-  is finite-exact.  Sources prove no prize claim or LRC(14).
+  is finite-exact.  No prize or LRC(14) result.
 
 ## Lonely Runner Conjecture
 
