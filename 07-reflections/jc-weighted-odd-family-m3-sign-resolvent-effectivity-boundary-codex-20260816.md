@@ -174,12 +174,12 @@ During this integration, the independent exact artifact
 arrived.  Over `F_101` it gives a lawful degree-27 fixed-third-iterate fibre
 where the `x,y,z` power-basis matrices all have rank 27, while retaining a
 separate target where the `y` rank drops to 26.  This is strong FINITE-EXACT
-evidence that the same primitive-coordinate/trace-square mechanism reaches
-the fixed composition tower and would give the common class `[-2J]` there.
-Its THM-3519 file is still a `RESERVED / UNPROVED EMPTY STUB`, so it is not a
-dependency or a promoted theorem here.  It also supplies no weighted-family
-Jelonek data: primitivity corroborates (2), not the invalid implication from
-(2) to complete effectivity.
+evidence for the same primitive-coordinate/trace-square mechanism in the
+fixed composition tower.  Subsequent independent proof audit promoted
+THM-3519, which now proves the common fixed-map class `[-2J]`.  It remains a
+corroborating related theorem rather than a dependency here and supplies no
+weighted-family Jelonek data: primitivity supports (2), not the invalid
+implication from (2) to complete effectivity.
 
 The central lesson is compact: the three-cubic `-4*square^2*L` pattern does
 extend to a three-quintic common square class, but its apparent boundary

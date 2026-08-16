@@ -26,6 +26,7 @@ related:
   - THM-1605-infinite-family-extent-vs-mechanism
   - THM-2546-integral-coordinate-dichotomy-and-parity-lens-scope
   - THM-3508-level-two-sporadic-keller-three-coordinate-primitive-discriminant-square-class
+  - THM-3519-level-three-sporadic-keller-three-coordinate-primitivity-and-common-discriminant-class
 script: 04-computation/jc_weighted_odd_family_m3_coordinate_jelonek_probe_20260816.py
 output: 05-knowledge/results/jc_weighted_odd_family_m3_coordinate_jelonek_probe_20260816.out
 script_sha256: ff03f0ac71922f5881bf112ae2c8cbb7f5cd49198500c19d62b5eaf5b286002e
