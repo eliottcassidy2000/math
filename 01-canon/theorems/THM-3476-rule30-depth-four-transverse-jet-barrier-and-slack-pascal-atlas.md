@@ -245,6 +245,40 @@ integer multiplicity before reduction mod two, or the ordering of events
 inside a residue class.  This is the precise preservation/loss boundary of
 the finite jet atlas.
 
+### 4.1 The higher blocks recursively recover quotient carries
+
+The apparent loss of the quotient has an exact multiscale organization.  Put
+
+```text
+v=r+Mh,
+j=s+Mk,                0<=r,s<M.                     (21a)
+```
+
+Lucas factorization across the `m` low binary digits gives
+
+```text
+binom(r+Mh,s+Mk)=binom(r,s)binom(h,k) mod 2.          (21b)
+```
+
+Consequently the jet block `j=kM,...,kM+M-1`, after the same inverse Pascal
+transform in its low index `s`, is
+
+```text
+E_(r,k)=sum_(h>=0) binom(h,k)a_(r+Mh).                (21c)
+```
+
+For each fixed residue `r`, the sequence `(E_(r,k))_(k>=0)` is exactly the
+Hasse/Pascal transform of the quotient-slack sequence
+`(a_(r+Mh))_(h>=0)`.  Iterating (21a)--(21c) yields a dyadic tree of slack
+digits: the first block sees residues, the next blocks see their quotient
+carries, and the full tower is the tensor-product Pascal transform on all
+binary digits.  This is another proof of faithfulness, now coefficientwise
+rather than through the global ideal (12).
+
+For the physical pair in (23), the two exponents agree in the low `m` bits
+and have quotient indices differing by one.  The residue block cancels;
+the first quotient-carry coordinate, at jet `M`, detects the pair.
+
 ## 5. A physical depth-four family defeats every fixed jet bound
 
 The formal `P`-power controls above have a physical analogue after target
