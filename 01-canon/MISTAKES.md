@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-417 (2026-08-16, U_full owner-node common-base spectrum) -- full Fourier support of a delta-cell lift was mistaken for genuine two-coordinate mixing
+
+- **What failed:** the first checkpoint of the owner-node source/endpoint
+  coupling reported `(91,1,6,12,72)` raw support and `(72,0,0,0,72)` after
+  output ANOVA as though the actual `U_full` integrand had retained a
+  load-bearing seven-cell coordinate.
+- **Minimal witness / first failed implication:** `U_full` contains the owner
+  factor `||13t||<1/14`.  Under the exact desheeting
+  `t=(y+u)/13`, it becomes `||y||<1/14`, which is precisely
+  `cell_0`.  All 2,197 character rows therefore have cell support
+  `(2197,0,0,0,0,0,0)`, and the inverse table has exact form
+  `delta_0(ell)R(t)` and rank one.  Its ANOVA is the separable outer product
+  `(delta_0-1/7)(R-mean R)`.  A delta vector has all seven Fourier modes, so
+  full mixed *support* does not imply nonseparable cell/residue interaction.
+- **Repair / strongest survivor:** the common-base product, literal guard
+  controls, pointwise-zero same-root hostile, thirteen-class profile, and
+  nonzero `(1,0,6)` role bridge survive.  The seven-cell spectral-closure
+  interpretation is withdrawn.  A future candidate must show at least two
+  occupied cells and matrix rank at least two, or use a refiner not implied by
+  the endpoint owner factor, before a mixed-mode census is evidentiary.
+- **Reusable rule:** before reading multidimensional Fourier support, compute
+  coordinate support and tensor rank.  Centering a separable boundary delta
+  can populate every formal mixed frequency without creating a coupled
+  observable.
+
 ## MISTAKE-416 (2026-08-16, historical outside Keller family) -- an unstored prose description was promoted as an explicit verified family
 
 - **What failed:** the Keller file

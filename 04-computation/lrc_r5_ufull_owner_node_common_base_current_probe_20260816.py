@@ -13,8 +13,12 @@ forms, before integration,
     Q(13y) exp(2*pi*i*57122*y)
       [sum_u U_u(y) E_u(y)] [sum_q V_q(y) E_q(y)],
 
-restores the shifted endpoint guard literally, and retains the seven
-THM-2594 cells.  Thus neither endpoint leg is a preintegrated AX/BY scalar.
+restores the shifted endpoint guard literally, and records the seven
+THM-2594 cells.  A load-bearing hostile then checks the geometric collapse:
+the endpoint owner condition becomes ``||y||<1/14``, so only cell zero can
+occur.  Thus neither endpoint leg is a preintegrated AX/BY scalar, but the
+resulting ``7 x 13`` array is a separable delta-cell lift rather than a
+genuine two-coordinate cell interaction.
 
 The two inherited grids do not embed in one another.  We therefore work on
 
@@ -89,6 +93,10 @@ EXPECTED_SPECTRUM_SHA256 = (
     "4f83193667214bd64587c554e60ae26bd68e2978c85d81305b371dc7bc261f19",
     "070fbba00107a58f84cbd705d26fab2afc83da40a90f4deead13abd57bee46d8",
 )
+EXPECTED_RESIDUE_SHA256 = (
+    "c30a063cc3d44f808b1da5b19ea00a6529ed6709f8c055fc8a59b6e7c07caf91",
+    "9ddd65dc7b046e2fb6bd304929494bb15a2936779cabec34c932deb82929b6d6",
+)
 EXPECTED_ROLE_VALUES = (
     125385278409587426725290,
     657486478079327229022863,
@@ -108,7 +116,7 @@ EXPECTED_SHAPES = (
     (91, 1, 6, 12, 72),
     (72, 0, 0, 0, 72),
 )
-EXPECTED_SEMANTIC_SHA256 = "74cd83cecf9bf495240d6ae5b07ad28a7ae15f88bd0a06fe6e4df114a501e5da"
+EXPECTED_SEMANTIC_SHA256 = "98a27d4540648377c544d8e1b86c3dd3df7bb16d3431f6a9471f4844ba2e6b9f"
 
 
 def require(condition: bool, payload: object) -> None:
@@ -482,6 +490,11 @@ def integrate_profile(alpha: int, beta: int, literal_tau: int | None = None):
             continue
         weighted_segments += 1
         ell = cell_of_segment(left, right)
+        # OWNER has speed 13 and is an ``in`` factor.  On the desheeted
+        # branch 13t=y+sheet, hence OWNER is exactly ||y||<1/14=cell_0.
+        # This is a geometric zero over Q, not merely a zero in JOINT_PRIME.
+        require(ell == 0,
+                ("endpoint owner escaped cell zero", alpha, beta, left, right, ell))
         for row_index, tau in enumerate(tau_values):
             if literal_tau is None:
                 selected = tuple(
@@ -599,6 +612,33 @@ def support_shape(spectrum) -> tuple[int, int, int, int, int]:
     return dc + cell_axis + residue_axis + mixed, dc, cell_axis, residue_axis, mixed
 
 
+def rank_mod(matrix) -> int:
+    rows = [[value % JOINT_PRIME for value in row] for row in matrix]
+    rank = 0
+    columns = len(rows[0]) if rows else 0
+    for column in range(columns):
+        pivot = next(
+            (row for row in range(rank, len(rows)) if rows[row][column]), None
+        )
+        if pivot is None:
+            continue
+        rows[rank], rows[pivot] = rows[pivot], rows[rank]
+        inverse = pow(rows[rank][column], -1, JOINT_PRIME)
+        rows[rank] = [value * inverse % JOINT_PRIME for value in rows[rank]]
+        for row in range(len(rows)):
+            if row == rank or not rows[row][column]:
+                continue
+            factor = rows[row][column]
+            rows[row] = [
+                (value - factor * pivot_value) % JOINT_PRIME
+                for value, pivot_value in zip(rows[row], rows[rank])
+            ]
+        rank += 1
+        if rank == len(rows):
+            break
+    return rank
+
+
 def matrix_interaction(matrix):
     inv_q = pow(Q, -1, JOINT_PRIME)
     inv_p = pow(P, -1, JOINT_PRIME)
@@ -695,6 +735,48 @@ def main() -> None:
     source_erasure_spectrum = fourier_2d(source_erasure_table, eta, zeta)
     interaction = matrix_interaction(coupled_table)
     interaction_spectrum = fourier_2d(interaction, eta, zeta)
+    require(all(row[ell] == 0 for row in coupled_cells for ell in range(1, Q)),
+            "character bank escaped the owner cell")
+    require(all(row[ell] == 0
+                for row in source_erasure_cells for ell in range(1, Q)),
+            "source-erasure bank escaped the owner cell")
+    require(all(value == 0 for row in coupled_table[1:] for value in row),
+            "inverse table escaped the owner cell")
+    require(all(value == 0
+                for row in source_erasure_table[1:] for value in row),
+            "source-erasure inverse escaped the owner cell")
+    coordinate_ranks = (
+        rank_mod(coupled_table),
+        rank_mod(source_erasure_table),
+        rank_mod(interaction),
+    )
+    require(coordinate_ranks == (1, 1, 1),
+            ("separable coordinate ranks", coordinate_ranks))
+    residue_profile = coupled_table[0]
+    residue_spectrum = tuple(
+        sum(
+            residue_profile[relation_t]
+            * pow(zeta, -k * relation_t % P, JOINT_PRIME)
+            for relation_t in range(P)
+        ) % JOINT_PRIME
+        for k in range(P)
+    )
+    require(all(value != 0 for value in residue_spectrum),
+            ("one-dimensional residue spectrum", residue_spectrum))
+    require(all(
+        coupled_spectrum[h][k] == residue_spectrum[k]
+        for h in range(Q) for k in range(P)
+    ), "delta-cell Fourier factorization")
+    residue_mean = sum(residue_profile) * pow(P, -1, JOINT_PRIME) % JOINT_PRIME
+    cell_mean = pow(Q, -1, JOINT_PRIME)
+    require(all(
+        interaction[ell][relation_t]
+        == (
+            ((int(ell == 0) - cell_mean) % JOINT_PRIME)
+            * ((residue_profile[relation_t] - residue_mean) % JOINT_PRIME)
+        ) % JOINT_PRIME
+        for ell in range(Q) for relation_t in range(P)
+    ), "ANOVA is not the expected rank-one outer product")
     shapes = (
         support_shape(coupled_spectrum),
         support_shape(source_erasure_spectrum),
@@ -752,6 +834,9 @@ def main() -> None:
         digest_json(coupled_spectrum), digest_json(source_erasure_spectrum),
         digest_json(interaction_spectrum),
     )
+    residue_digests = (
+        digest_json(residue_profile), digest_json(residue_spectrum)
+    )
     require(counts == EXPECTED_WORK_COUNTS, ("work counts", counts))
     require(gamma_digest == EXPECTED_GAMMA_SHA256,
             ("coupled gamma digest", gamma_digest))
@@ -761,6 +846,8 @@ def main() -> None:
             ("table digests", table_digests))
     require(spectrum_digests == EXPECTED_SPECTRUM_SHA256,
             ("spectrum digests", spectrum_digests))
+    require(residue_digests == EXPECTED_RESIDUE_SHA256,
+            ("residue digests", residue_digests))
     require((*role_values, bridge) == EXPECTED_ROLE_VALUES,
             ("coupled inverse values", role_values, bridge))
     require((*source_erasure_values, source_erasure_bridge)
@@ -804,6 +891,8 @@ def main() -> None:
         table_digests,
         spectrum_digests,
         shapes,
+        coordinate_ranks,
+        residue_digests,
         role_values,
         bridge,
         source_erasure_values,
@@ -833,6 +922,8 @@ def main() -> None:
     print(f"inverse_roles=(q_H={role_values[0]},q_q5={role_values[1]},bridge={bridge})")
     print(f"source_erasure_inverse=(q_H={source_erasure_values[0]},q_q5={source_erasure_values[1]},bridge={source_erasure_bridge})")
     print(f"spectral_shapes_(total,dc,F7axis,F13axis,mixed)=(coupled={shapes[0]},source_erasure={shapes[1]},coupled_ANOVA={shapes[2]})")
+    print(f"cell_geometry=(owner_implies_cell_0,character_support_by_cell={(P**3, 0, 0, 0, 0, 0, 0)},coordinate_ranks={coordinate_ranks})")
+    print(f"separable_factorization=table=delta_cell0*residue_profile;ANOVA=(delta_cell0-1/7)*(residue_profile-mean);residue_sha256={residue_digests}")
     print(f"fixed_relation_class=(1,0,{relation_t});seven_cell_profile={relation_profile}")
     print(f"fixed_relation_F7_spectrum={relation_spectrum}")
     print(f"source_erasure_fixed_relation_profile={source_erasure_relation_profile}")
@@ -840,7 +931,7 @@ def main() -> None:
     print(f"table_sha256=(coupled={table_digests[0]},source_erasure={table_digests[1]})")
     print(f"spectrum_sha256=(coupled={spectrum_digests[0]},source_erasure={spectrum_digests[1]},coupled_ANOVA={spectrum_digests[2]})")
     print(f"semantic_sha256={semantic}")
-    print("status=FINITE-EXACT one-common-base owner-node current candidate; nonzero split-field values prove characteristic-zero nonvanishing")
+    print("status=FINITE-EXACT one-common-base owner-node current candidate with nonzero one-dimensional residue signal; the 7x13 support is a rank-one delta-cell lift, not genuine cell/residue mixing")
     print("scope=no exact C(a;X,m),no arrival/source-time identification,no U_clock chronology,no row exclusion,no LRC(14)")
     print("all exact checks passed")
 

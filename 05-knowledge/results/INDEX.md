@@ -9,17 +9,19 @@
   the same owner nodes before integration.  The endpoint harmonic descends
   to frequency `57122` on the common base.  All five literal guard
   restorations pass; the same-root source sector is pointwise zero before
-  integration.  The inverse `7x13` table has full spectrum
-  `(91,1,6,12,72)`, its output ANOVA has `(72,0,0,0,72)`, all seven fixed
-  `(1,0,6)` cell modes are nonzero in the split field, and the role bridge is
-  `223272610175651920448188`.  The raw source support is exactly a directed
+  integration.  The role bridge is nonzero at
+  `223272610175651920448188`.  However `OWNER` becomes `||y||<1/14`, so all
+  2197 character rows occupy only cell zero.  The formal spectra
+  `(91,1,6,12,72)` and `(72,0,0,0,72)` are the rank-one factorization
+  `delta_0(ell)R(t)` and its centred outer product, not genuine cell/residue
+  mixing (MISTAKE-417).  The raw source support is exactly a directed
   cut `K_(1,12)` or `K_(2,11)`, never a tournament or bidirected pair.  This
   remains a one-host candidate without exact `C(a;X,m)`, arrival/source-time
   identification, `U_clock` chronology, row exclusion, or LRC(14).
   Script/output/semantic LF SHA-256:
-  `21577dfa2cdf672ab03dd21330a0d480bcb6373ba235b2eff2f2a0ec4b8672df` /
-  `3fe36c712cdf4d26c74ddb9d3aa6361ff84cb0fc7de8f45e88bee6c20450e79b` /
-  `74cd83cecf9bf495240d6ae5b07ad28a7ae15f88bd0a06fe6e4df114a501e5da`.
+  `6ad93cd13d47159a565f39128b9a108b5203a396ed3ed05a2892222771d45e40` /
+  `2a36bfd5c888b1237ad8b3c698230305e84b8fed1436ddac1b02a6f24fb141a7` /
+  `98a27d4540648377c544d8e1b86c3dd3df7bb16d3431f6a9471f4844ba2e6b9f`.
 
 - `lrc_ufull_desheeted_common_residual_base_probe_20260816.py` -> matching
   `.out` [FINITE-EXACT ACTUAL-ENDPOINT ONE-BASE COUPLING CANDIDATE;

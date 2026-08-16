@@ -12,13 +12,15 @@ gamma_sha256=(coupled=b5246eb2a69f35e4dac7dabbf26b1703f21ed22bf803061399ebbf766b
 inverse_roles=(q_H=125385278409587426725290,q_q5=657486478079327229022863,bridge=223272610175651920448188)
 source_erasure_inverse=(q_H=471060960989539924924555,q_q5=594285905723663416170205,bridge=632148865111268231500111)
 spectral_shapes_(total,dc,F7axis,F13axis,mixed)=(coupled=(91, 1, 6, 12, 72),source_erasure=(91, 1, 6, 12, 72),coupled_ANOVA=(72, 0, 0, 0, 72))
+cell_geometry=(owner_implies_cell_0,character_support_by_cell=(2197, 0, 0, 0, 0, 0, 0),coordinate_ranks=(1, 1, 1))
+separable_factorization=table=delta_cell0*residue_profile;ANOVA=(delta_cell0-1/7)*(residue_profile-mean);residue_sha256=('c30a063cc3d44f808b1da5b19ea00a6529ed6709f8c055fc8a59b6e7c07caf91', '9ddd65dc7b046e2fb6bd304929494bb15a2936779cabec34c932deb82929b6d6')
 fixed_relation_class=(1,0,6);seven_cell_profile=(317699132065964946247468, 0, 0, 0, 0, 0, 0)
 fixed_relation_F7_spectrum=(317699132065964946247468, 317699132065964946247468, 317699132065964946247468, 317699132065964946247468, 317699132065964946247468, 317699132065964946247468, 317699132065964946247468)
 source_erasure_fixed_relation_profile=(454454155013190282848607, 0, 0, 0, 0, 0, 0)
 source_erasure_fixed_relation_F7_spectrum=(454454155013190282848607, 454454155013190282848607, 454454155013190282848607, 454454155013190282848607, 454454155013190282848607, 454454155013190282848607, 454454155013190282848607)
 table_sha256=(coupled=d30230ee4e48146651d50af82514fa4d6f5acd08360303430e47e0a0fccf4411,source_erasure=a59f045bf3e5f76d38b5e93b2ec4c98ba059dd5bc8d2a0807604771332814049)
 spectrum_sha256=(coupled=98f2fcde147575ecfb07d55246f4d4197d8e310c11b7daebf8213c7b7a54e60c,source_erasure=4f83193667214bd64587c554e60ae26bd68e2978c85d81305b371dc7bc261f19,coupled_ANOVA=070fbba00107a58f84cbd705d26fab2afc83da40a90f4deead13abd57bee46d8)
-semantic_sha256=74cd83cecf9bf495240d6ae5b07ad28a7ae15f88bd0a06fe6e4df114a501e5da
-status=FINITE-EXACT one-common-base owner-node current candidate; nonzero split-field values prove characteristic-zero nonvanishing
+semantic_sha256=98a27d4540648377c544d8e1b86c3dd3df7bb16d3431f6a9471f4844ba2e6b9f
+status=FINITE-EXACT one-common-base owner-node current candidate with nonzero one-dimensional residue signal; the 7x13 support is a rank-one delta-cell lift, not genuine cell/residue mixing
 scope=no exact C(a;X,m),no arrival/source-time identification,no U_clock chronology,no row exclusion,no LRC(14)
 all exact checks passed
