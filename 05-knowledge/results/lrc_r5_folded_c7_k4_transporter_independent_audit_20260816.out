@@ -1,0 +1,20 @@
+FOLDED-C7/K4 DRIFT TRANSPORTER -- INDEPENDENT AUDIT
+status=ACCEPT_SCOPED_FINITE_EXACT; endpoint/split-field only; LRC(14) OPEN
+dependencies=(thm3514_atom_audit=f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc,thm2594_output=bef4ee9a18ff3e2f455bad66a95252dd9989b2f60953e26e8ea0c2dc6ae7f5df)
+field=(prime=572252886246508880869,zeta7=353818603057943120846,zeta13=505438565698892403012)
+source_exact_rank=(integer_minor_rows=(1, 3, 4),integer_det=48132400318030844942585467137428417511789621695304247254245705613312000,split_rank=3,split_minor=((0, 1, 2), (0, 1, 2), 402442843464689507886))
+source_independent_split_primes=((547, 91, 3), (1093, 91, 3), (2003, 91, 3))
+source_spectrum=(nonzero=91/91,separable_vs_direct_2d=PASS); target_spectrum=(nonzero=52/52,rank=4,minor=((0, 1, 2, 3), (0, 1, 2, 3), 154930576847978146912))
+paley_fold=(orbits=((0,), (1, 6), (2, 5), (3, 4)),arc_counts=((0, 1, 1, 1), (1, 1, 2, 2), (1, 2, 1, 2), (1, 2, 2, 1)),times2=(2, 3, 1),walsh_matchings=(((0, 1), (2, 3)), ((0, 2), (1, 3)), ((0, 3), (1, 2))))
+rational_descent=(real_cubic_disc=49,split_roots=(424661381881782662835, 169426766391843876494, 550417624219391222408),QxC3field_not_Q4=True)
+allocation_universes=(predicate_filtered_48=48,predicate_filtered_192=192,all_7pow4=2401)
+allocation_censuses=(preserving=(0, 0, (4,)),folded=(0, 0, (4,)),unrestricted=(0, 0, (4,)))
+fixed_mixing=(selected_source_ranks=(3, 3, 3, 3, 3, 3, 3, 3),projective_anchor_ranks=(12, 12, 12, 12, 12, 12, 12, 12),augmented_M_lambda_ranks=(25, 25, 25, 25, 25, 25, 25, 25),nullities=(4, 4, 4, 4, 4, 4, 4, 4),lambda_projection_ranks=(0, 0, 0, 0, 0, 0, 0, 0))
+rank_obstruction=all augmented solutions have lambda_k=0 and annihilate the rank-three source; arbitrary 4x7 fixed mixing plus any common 13x13 right operator also has rank at most three
+formal_survivor=(full_kernel_supports=(13, 13, 13, 13),rank=4,sha256=9f03166d1b8d730673aeccf7bff9196d2de42e0ff9fa7c08680d38a772dc041f)
+augmentation_survivor=(supports=(13, 13, 13, 13),rank=4,sha256=351976b6d1ac51915d686b32e1cc0f3f3dfa53d1f33f7c8831f7a74a495e3025,margin_multipliers=(447723905236344097309, 449191480702777787093, 364277523777300598399, 467261792499259286805))
+thm3518_sidecar=(incidence_rank=7,cycle_rank=6,cycle_coordinates=all_zero,common_phase_rank_bound=3,lawful_source_channels_added=0)
+typing=the q_t phase is defined on U_full endpoint guard sheets, not the THM-2594 ancestry table; a common phase is rank-preserving, while channel-dependent phases leave the audited transporter class and still supply no common-stalk map
+semantic_sha256=a6d6ad7a9891af8bddcba6fe7cf9f2554214731043844098f8556d1003885222
+nonconsequence=no ancestry transplant, Boolean coupling, physical current, absolute H1, bispectrum, scalar exclusion, or LRC(14)
+STATUS=PASS

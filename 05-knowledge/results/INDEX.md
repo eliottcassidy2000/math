@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `lrc_r5_folded_c7_k4_transporter_independent_audit_20260816.py` ->
+  matching `.out` [INDEPENDENT AUDIT OF PROVISIONAL PACKAGE; SCOPED
+  PROMOTION RECOMMENDED].  Reconstructs the THM-2594 rank-three source and
+  THM-3514 rank-four U_full Walsh target without importing the submitted
+  transporter or its U_full parent.  Predicate filtering of all `7^4`
+  choices proves completeness of the `48/192/2401` allocation universes and
+  reproduces zero common kernels, even modulo amplitude/cyclic gauge.  An
+  independent `52x29` `(M,lambda_k)` system has rank 25 and annihilator-only
+  nullity four in all eight sign lifts.  The exact Paley quotient is weighted
+  and looped with off-diagonal `K4` support.  THM-3518 contributes no lawful
+  fourth source channel: its common phase is rank-preserving and all cycle
+  coordinates vanish.  No ancestry/current/H1/bispectrum/LRC(14) consequence.
+  Script/output/semantic LF SHA-256:
+  `0bf56db1acfd83d6f161dd95b5d428df90f8cb5e6ec24e729081f24a86f287f2` /
+  `c20c59264590cd42b108363c91736df8c9e921ac94b09c1f5fbb5d977f300859` /
+  `a6d6ad7a9891af8bddcba6fe7cf9f2554214731043844098f8556d1003885222`.
+
 - `jc_weighted_odd_family_m3_coordinate_jelonek_probe_20260816.py` ->
   matching `.out` [THM-3517 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
   IN PYTHON-FLINT].  For the explicit
