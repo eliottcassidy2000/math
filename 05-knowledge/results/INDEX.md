@@ -16,6 +16,21 @@
   `0bf56db1acfd83d6f161dd95b5d428df90f8cb5e6ec24e729081f24a86f287f2` /
   `c20c59264590cd42b108363c91736df8c9e921ac94b09c1f5fbb5d977f300859` /
   `a6d6ad7a9891af8bddcba6fe7cf9f2554214731043844098f8556d1003885222`.
+- `lrc_r5_paley_c7_t4_section_xor_code_audit_20260816.py` -> matching
+  `.out` [FINITE-EXACT STRUCTURAL SIDECAR].  The exact negation fold is a
+  symmetric weighted looped quotient with bidirected `K4` support.  Its eight
+  tournament sections form the affine six-edge code
+  `(x,y,1 XOR z,x,z,y)`: six are strong, one is a 3-cycle with a source, and
+  one its sink reversal; none is transitive.  The quadratic XOR invariant
+  `E=z XOR xy XOR xz XOR yz` gives `det(S)=1+8E` and cyclic-triple count
+  `2-E`.  The translated section code is a boundary complement, not the
+  cycle space: `C1(K4;F2)=Z1 direct-sum G_section`.  Hence section orientation
+  is gauge data and an invertible left mixer, not a fourth response or hidden
+  `H1` channel.  No ancestry/current/bispectrum/LRC(14) consequence.
+  Script/output/semantic LF SHA-256:
+  `00b917221e5bd90612e6d7494224fdaaac128f0e4fb503a5797d59c1c6997521` /
+  `0d39d077379f619fad67eafc402f1f4d108869f3f67c93be11234bee14eeded7` /
+  `85640c02220b246781bab2e447a6a2f9fec7ca912d27c56377fbcd943bf041bc`.
 
 - `keller_five_face_renewal_propagation_probe_20260816.py` and
   `keller_five_face_renewal_propagation_independent_audit_20260816.py` and

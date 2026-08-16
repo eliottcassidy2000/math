@@ -1,0 +1,18 @@
+PALEY C7 FOLD: T4 SECTION XOR CODE
+status=FINITE_EXACT_STRUCTURE_SIDECAR;scope=folded_transporter_typing
+fold=(orbits=((0,), (1, 6), (2, 5), (3, 4)),arc_counts=((0, 1, 1, 1), (1, 1, 2, 2), (1, 2, 1, 2), (1, 2, 2, 1)),off_diagonal=bidirected_K4)
+edge_order=((0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3));section_formula=(x,y,1_XOR_z,x,z,y)
+affine_code=(base=(0, 0, 1, 0, 0, 0),generators=((1, 0, 0, 1, 0, 0), (0, 1, 0, 0, 0, 1), (0, 0, 1, 0, 1, 0)),dimension=3,size=8)
+section_rows=(((0, 0, 0), (0, 0, 1, 0, 0, 0), (2, 2, 1, 1), 2, -1, 1, 0, 'strong'), ((0, 0, 1), (0, 0, 0, 0, 1, 0), (3, 1, 1, 1), 1, 3, 9, 1, 'cycle_plus_source'), ((0, 1, 0), (0, 1, 1, 0, 0, 1), (1, 2, 1, 2), 2, -1, 1, 0, 'strong'), ((0, 1, 1), (0, 1, 0, 0, 1, 1), (2, 1, 1, 2), 2, -1, 1, 0, 'strong'), ((1, 0, 0), (1, 0, 1, 1, 0, 0), (1, 2, 2, 1), 2, -1, 1, 0, 'strong'), ((1, 0, 1), (1, 0, 0, 1, 1, 0), (2, 1, 2, 1), 2, -1, 1, 0, 'strong'), ((1, 1, 0), (1, 1, 1, 1, 0, 1), (0, 2, 2, 2), 1, 3, 9, 1, 'cycle_plus_sink'), ((1, 1, 1), (1, 1, 0, 1, 1, 1), (1, 1, 2, 2), 2, -1, 1, 0, 'strong'))
+type_census=(strong=6,source_cycle=1,sink_cycle=1,transitive=0)
+xor_law=(exceptional_bits=((0, 0, 1), (1, 1, 0)),E=z_XOR_xy_XOR_xz_XOR_yz,det_skew=1+8E,cyclic_triangles=2-E)
+three_grammars=(times2_orbit_cycle=(2, 3, 1),walsh_matching_edge_indices=((0, 5), (1, 4), (2, 3)),section_path_edge_indices=((0, 3), (1, 5), (2, 4)))
+chain_typing=(dim_C1=6,dim_cycle=3,dim_section_gauge=3,gauge_intersection_cycle=0,boundary_on_gauge=isomorphism,C1=Z1_direct_sum_gauge)
+rank_boundary=all_section_skew_matrices_are_invertible_left_mixers_but_rank(S*X*C)<=rank(X)=3
+proof=('folded_quotient_is_symmetric_weighted_looped_K4_support_not_tournament', 'section_edge_code=(x,y,1_XOR_z,x,z,y)', 'eight_sections_form_affine_F2^3_inside_six_edge_bits', 'global_negation_reverses_all_six_arcs', 'six_strong_plus_one_source_cycle_plus_one_sink_cycle;no_transitive_section', 'exceptional=z_XOR_xy_XOR_xz_XOR_yz', 'skew_determinant=1+8*exceptional', 'C1_K4=cycle_space_direct_sum_section_gauge;boundary_isomorphism_on_gauge', 'invertible_tournament_left_mixing_cannot_raise_source_rank_three')
+scope=('orientation_requires_noncanonical_section_gauge', 'quadratic_XOR_type_is_not_a_linear_Walsh_response_channel', 'no_ancestry_Boolean_realization_current_H1_bispectrum_or_LRC14_claim')
+semantic_sha256=85640c02220b246781bab2e447a6a2f9fec7ca912d27c56377fbcd943bf041bc
+script_sha256_lf=00b917221e5bd90612e6d7494224fdaaac128f0e4fb503a5797d59c1c6997521
+reproducibility=no_assert_truth_gates;integer_boolean_only;no_randomness;no_elapsed_fields
+commands=python -B 04-computation/lrc_r5_paley_c7_t4_section_xor_code_audit_20260816.py;python -B -O 04-computation/lrc_r5_paley_c7_t4_section_xor_code_audit_20260816.py
+PASS
