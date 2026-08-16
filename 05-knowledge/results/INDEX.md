@@ -164,6 +164,24 @@
   SHA-256:
   `74f53e6d633d2862f64013387d54bf0d0bc8f66dcb694841b2b3381665e71814` /
   `1e09ac04818325183d32f57bff7560fac4f172051b353580112822ca7c7da7a7`.
+- `tetrahedral_k4_haar_xor_cycle_bridge_20260816.py` -> matching `.out`
+  [VERIFIED-EXACT REPRESENTATION SIDECAR; NOT INDEPENDENTLY AUDITED].  The
+  four cells of a `2x2` coupling are the vertices `F2^2` of `K4`.  Each of
+  the three nontrivial Walsh characters selects one equal-sign perfect
+  matching, while the tetrahedral opposite-face map sends it to twice the
+  primitive oriented complementary four-cycle.  In particular the U_full
+  checkerboard kernel `(1,-1,-1,1)` maps to
+  `2*(-e01+e02-e13+e23)`.  The three primitive cycles are orthogonal;
+  `S4` acts on their lines through `S3` with kernel `V4`; and score plus all
+  three Haar holonomies reconstructs `64/64` labelled tournaments with
+  cut/cycle lattice index `32`.  This identifies the minimum joint API
+  coordinate with a marked abstract `H1(K4)` direction, but constructs no
+  map from actual U_full cells, no current, and no LRC(14) consequence.
+  Script/output LF SHA-256:
+  `23a25f151bebca5da587fe552f920fa11109cecd3b7b8569819b5634388ede85` /
+  `b858b2245f2880deb2a2096e9ef13b79f73222a24a90bb01403d519289615d6c`;
+  tournament ledger SHA-256:
+  `8da9354e69971ab3e27b54564567ce3f431721c77412480b667f655d93c55e85`.
 - `lrc14_stage2_root_shear_contrast_probe_20260816.py` -> matching `.out`
   [THM-3505 PROVED + FINITE-EXACT; INDEPENDENTLY AUDITED BY THE PRECEDING
   STANDALONE CONSTRUCTOR].
