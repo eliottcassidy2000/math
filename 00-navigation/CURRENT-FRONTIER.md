@@ -40,10 +40,10 @@ THM-3479 proves U_full `169/169`,`13^3`,`72/72` (U_clock none); THM-3514 gives
 owner `52/117`, rank4/full Walsh-drift; THM-3515 gives five rank5 rows and
 `72/72` charts; THM-3518 pins phases and `56,592` zero cycle pairings.
 THM-3524 blocks folded `C7/K4` (`3<4`); 48 ancestry buckets are audited.
-MISTAKE-417 cell0 rank1. Square/root/point/source/current:
-`4/36`,`(3,12,12)/432`,`(5,12,12)`,rank6/432. Candidates:
-current x root `(3,4,12,12)`, two-current `3/4`, source x current `17->4`
-in pointed-six; audits/five-way/address/U_clock/LRC open.
+MISTAKE-417 rank1. Audited square/root/point/source/current:
+`4/36`,`(3,12,12)/432`,`(5,12,12)`,6/432; two-current `3/4`,
+pure5184 scalar-only. Open: current-root `(3,4,12,12)`,
+source-current `17->4` pointed-six; audits/5-way/address/clock/LRC open.
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;
 HYP-8871 leaves `165` rows.  THM-2363/THM-2368 are sidecars; THM-2417--2894

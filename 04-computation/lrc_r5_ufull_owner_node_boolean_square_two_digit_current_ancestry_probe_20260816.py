@@ -17,8 +17,8 @@ source cells and the selected U-root mask; only then are the 169 address
 weights expanded.  Summing r1 must recover the hash-pinned one-digit candidate
 row by row, and summing r0 next must recover the audited Boolean square.
 
-The decisive hostile is stronger than a flat split.  Any autonomous one-step
-digit kernel has the form
+The decisive hostile is stronger than a flat split.  Any scalar,
+state/relation-independent one-step digit factorization has the form
 
     T(state,r0,r1,t) = K(r0,r1) T1(state,r0,t),
 
@@ -878,7 +878,8 @@ def main() -> None:
     interaction_ranks = tuple(axis_ranks(value) for value in interactions)
     conditionals = tuple(conditional_ranks(value) for value in tensors)
     require(all(rank > 1 for rank in conditionals[0][0]),
-            ("autonomous digit-kernel hostile did not separate", conditionals[0]))
+            ("scalar state/relation-blind digit-factor hostile did not separate",
+             conditionals[0]))
     require(conditionals[1][0] == (1,) * P and conditionals[1][1] == (0,) * P,
             ("flat recurrence hostile", conditionals[1]))
     censuses = tuple(support_census(value) for value in spectra)
@@ -989,7 +990,7 @@ def main() -> None:
     print(f"axis_ranks_(state,r0,r1,relation,address)=(actual,flat)={ranks}")
     print(f"four_way_ANOVA_axis_ranks={interaction_ranks}")
     print(f"conditional_r1_by_(state,relation)_ranks_(raw,contrast)=(actual,flat)={conditionals}")
-    print("autonomous_kernel_hostile=rank<=1 at each fixed r0;actual rank>1 for all r0: PASS")
+    print("scalar_state_relation_blind_factor_hostile=rank<=1 at each fixed r0;actual rank>1 for all r0: PASS")
     print("spectral_census_order=(total,16 bins by mask state/r0/r1/relation from 0000 to 1111)")
     print(f"spectral_censuses_(actual,flat)={censuses}")
     print(f"four_way_ANOVA_spectral_censuses={interaction_censuses}")

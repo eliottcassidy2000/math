@@ -1,14 +1,18 @@
-# Two current inverse digits form a projective tree, but not an autonomous recurrence
+# Two current inverse digits form a projective tree with a scalar-kernel obstruction
 
-**Status: FINITE-EXACT POSITIVE TWO-DIGIT CURRENT-ANCESTRY CANDIDATE ON ONE
-`r=5` OWNER BASE; INDEPENDENT AUDIT PENDING; LRC(14) remains OPEN.**
+**Status: FINITE-EXACT POSITIVE TWO-DIGIT CURRENT-ANCESTRY OBJECT ON ONE
+`r=5` OWNER BASE; INDEPENDENTLY HOSTILE-AUDITED WITH SCOPE REPAIR;
+LRC(14) remains OPEN.**
 Retaining the two lowest base-thirteen digits of the THM-2471 current inverse
 branch gives an exact `V_4 x F_13^2 x F_13` response tensor.  Its
 `r_1` marginal is the pinned one-digit `r_owner` candidate row by row,
 and the next marginal is the audited Boolean square.  Nevertheless, the
-second digit is not generated from the first by any state/relation-independent
-one-step kernel: all thirteen conditional ranks are three or four, whereas
-every such autonomous lift has rank at most one.
+second digit is not generated from the first by any scalar
+state/relation-independent one-step factor: all thirteen conditional ranks
+are three or four, whereas
+every such scalar lift has rank at most one.  This does not obstruct
+hidden-state, matrix-valued, state-dependent, nonlinear, or temporal
+recurrences.
 
 This is a static two-cylinder ancestry statistic.  It is not a complete
 THM-2334 address, a `U_clock` transition, an arrival/source intertwiner, a
@@ -189,10 +193,11 @@ character inversion, agreeing with the compressed route.  This compression
 uses exact constancy of the source profiles; it does not coarsen a coordinate
 or replace the endpoint factors.
 
-## Conditional-rank hostile: projective is not Markov
+## Conditional-rank hostile: projective is not a scalar Markov lift
 
-Let `T_1` be the one-digit parent.  Any autonomous one-step digit kernel,
-even a completely arbitrary non-circulant one, has the form
+Let `T_1` be the one-digit parent.  Any scalar state/relation-independent
+one-step digit factor, even a completely arbitrary non-circulant one, has
+the form
 
 ```text
 T_K(state,r_0,r_1,t)
@@ -220,8 +225,9 @@ contrast ranks =
 
 Thus the second digit carries state/relation-dependent response information
 at every first digit.  Equations (7) and (11) together are the main result:
-the two levels are projectively consistent but cannot be explained by an
-autonomous first-order kernel.
+the two levels are projectively consistent but cannot be explained by a
+scalar state/relation-independent first-order factor.  No conclusion about
+general autonomous recurrences follows from this rank test.
 
 The period-three appearance in (11) is recorded but not promoted to a
 recurrence.  A recurrence claim would require the same typed operator at a
@@ -314,7 +320,7 @@ the last item.
 | preserved | common base, current sheet, collision root until endpoint selection, Boolean state, literal guards, source weights, endpoint factors, both current digits, reflection |
 | destroyed | three older current digits, source-time branch, root difference, absolute source tail, deep label, grouped exact address, chronology |
 | mandatory chain | `sum r_1 ->` pinned one-digit current tensor; `sum r_0 ->` audited Boolean square |
-| positive gate | every fixed-`r_0` conditional rank is `3` or `4`, versus autonomous-kernel bound `1` |
+| positive gate | every fixed-`r_0` conditional rank is `3` or `4`, versus the scalar state/relation-blind factor bound `1` |
 | concrete hostile | uniform `r_1` lift with identical one-digit parent, rank-one conditionals, and zero four-way interaction |
 | boundary | finite candidate on one owner base; no current, row theorem, exclusion, or LRC(14) conclusion |
 

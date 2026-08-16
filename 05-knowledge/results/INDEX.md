@@ -85,13 +85,14 @@
   `0e527913f22fc7d165f795df42e25692fba9289ccaf85aee4a3a2402613bdb41`.
 - `lrc_r5_ufull_owner_node_boolean_square_two_digit_current_ancestry_probe_20260816.py`
   -> matching `.out` [FINITE-EXACT POSITIVE TWO-DIGIT CURRENT-ANCESTRY
-  CANDIDATE; INDEPENDENT AUDIT PENDING].  The lawful factorization
+  OBJECT; INDEPENDENTLY HOSTILE-AUDITED WITH SCOPE REPAIR].  The lawful factorization
   `13^3 fold -> r1 window -> r0 window -> collision-root window` is
   profile-identical to one half-open mod-169 window for
   `a=r0+13r1+169c`.  Its exact projective chain recovers the pinned
   one-digit `r_owner` gamma/tensor and then the audited Boolean square.
   Every fixed-`r0` `r1 x (state,relation)` conditional rank is three or
-  four, refuting every autonomous digit-kernel lift (rank at most one); the
+  four, refuting every scalar state/relation-blind digit factorization (rank
+  at most one), but not general autonomous recurrences; the
   concrete same-parent flat lift has rank-one conditionals and zero four-way
   interaction.  Actual/pure axis ranks are `(4,13,13,6,4)` and
   `(3,12,12,6,4)`, and all `5184` pure four-coordinate modes fire.
@@ -100,9 +101,27 @@
   pass.  This is two static current digits, not a complete address,
   `U_clock` chronology, arrival ancestry, physical current, row exclusion,
   or LRC(14).  Script/output/semantic LF SHA-256:
-  `dee623ca8a7a29e6f8fa39faf67f796fcf5f7244a6bd72b0f058a04733a1b886` /
-  `8cc464d49a7c11f027ea8c333a61633b092db360d3bb6c9ceee95a427949f64b` /
+  `3dab580e479e4ba7ac8801c1e5d8523018e0b3dc1c2176c072e7c609033eb6c8` /
+  `b1297340f88564849a4db1b2edd51566b8728b7cc9d603a5dda05609df46f4d7` /
   `61743457afc0cff984c87affa7f2e67bf3a21e08a401ea69b679319f2f51e826`.
+
+- `lrc_r5_ufull_owner_node_boolean_square_two_digit_current_ancestry_independent_audit_20260816.py`
+  -> matching `.out` [FINITE-EXACT INDEPENDENT HOSTILE AUDIT ACCEPTS THE
+  TWO-STATIC-CURRENT-DIGIT PROJECTIVE CYLINDER WITH SCOPE REPAIR].  A
+  clean-room `13^3 fold -> r1 -> r0 -> root` reconstruction proves literal
+  half-open nested/direct mod-169 profile equality, reflection
+  `(u,r0,r1,state)->(12-u,12-r0,12-r1,state XOR2)`, and the exact marginal
+  chain to the independently audited one-digit tensor and Boolean square.
+  It matches all candidate digests, ranks, `5184` pure modes, guards,
+  same-root zero, and four direct `2197`-term inversions.  Fixed-`r0`
+  conditional ranks `3/4` are amplitude ranks, not pointed-six carrier
+  ranks; they reject only scalar state/relation-independent factors.
+  Hidden-state, matrix, state-dependent, nonlinear, and temporal recurrences
+  remain untested.  No complete address, chronology, current,
+  row exclusion, or LRC(14) consequence.  Script/output/semantic LF SHA-256:
+  `126be106a34a990f22e66b26d79ea3568ee4f394419936ed47f1bfbe0656788f` /
+  `e12b1eecf6c7b4cb2a25398a6fdfcf7d3261693e810a3104b9ca1811d54ca15e` /
+  `f2af726e9d5abd1487e841623ce2f62ca647c86e5a1a68e41eda4d9dda6c81ac`.
 
 - `lrc_r5_ufull_owner_node_pointed_six_state_root_difference_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
