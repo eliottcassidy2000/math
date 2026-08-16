@@ -328,7 +328,7 @@ is sharp: equal counts allow two densities or none.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
-- **Rule 30:** [3500](../01-canon/theorems/THM-3500-rule30-dyadic-section-cut-defect-and-cross-depth-valuation-carrier.md); [3502](../01-canon/theorems/THM-3502-rule30-four-fifths-staircase-entropy-and-sixteen-fifths-compiler.md); [3511](../01-canon/theorems/THM-3511-rule30-orbit-signalizer-gap-renormalization-and-shallow-portrait-hostile.md); [3512](../01-canon/theorems/THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary.md). OPEN.
+- **Rule 30:** [3502](../01-canon/theorems/THM-3502-rule30-four-fifths-staircase-entropy-and-sixteen-fifths-compiler.md); [3511](../01-canon/theorems/THM-3511-rule30-orbit-signalizer-gap-renormalization-and-shallow-portrait-hostile.md); [3512](../01-canon/theorems/THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary.md); [3516](../01-canon/theorems/THM-3516-rule30-marked-van-der-put-carry-and-power-section-bridge.md). OPEN.
 - **Jacobian/Dixmier:** `JC(2)`/`DC(2)` and general lanes OPEN. THM-3438 gives
   `S_n` atoms (`n>=3`). Fixed-map THM-3494/3508/3519: `x/y`;
   `x/y/z,[H]`; `x/y/z,[-2J]`. THM-1300 unsettled (MISTAKE-205); THM-1315
