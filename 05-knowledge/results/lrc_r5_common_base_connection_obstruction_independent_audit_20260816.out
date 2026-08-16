@@ -1,0 +1,20 @@
+R5 COMMON-BASE CONNECTION OBSTRUCTIONS -- INDEPENDENT AUDIT
+status=ACCEPT_SCOPED_FINITE_EXACT;split_field_representation_only;LRC14_OPEN
+dependencies=(thm2594_primary=09c43af0a0a56c7a0833bbfd13ed6a96bc5a7a3718aa1bc6b77a144bde101a06,thm3514_atom_audit=f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc)
+field=(prime=572252886246508880869,zeta7=353818603057943120846,zeta13=505438565698892403012)
+source_tables=(digests=('666200f5e79e48c02e7beaeec90ebfedccb708bd1e383d1a01997d0abf5073f7', '9353c6e645b570c659a5d42491a1dd7c79825d4bd338a476aabbd0afe10e69f2', 'ad63d008da3dfa8525db7ef4e724cf6e3a971b3f6efa3d6da9791fbd8003ed91'),raw_supports=(12, 18, 72),spectral_supports=(91, 91, 91))
+source_ranks=(slaved,absolute,union,difference,resolved,owner0,owner1,owner_delta,owner_union)=(3, 3, 4, 6, 8, 6, 6, 6, 9)
+certificate_fields=(source_rank,wedge_rank,wedge_nullity,wedge_excess,augmented_rank,augmented_nullity,lambda_projection_rank,nonannihilator_entries)
+whole_bank_certificates={'slaved7': (3, 12, 16, 0, 25, 16, 0, 0), 'absolute7': (3, 12, 16, 0, 25, 16, 0, 0), 'union14': (4, 16, 40, 0, 29, 40, 0, 0), 'difference7': (6, 24, 4, 0, 37, 4, 0, 0), 'resolved21': (8, 32, 52, 0, 45, 52, 0, 0), 'owner_k0': (6, 24, 4, 0, 37, 4, 0, 0), 'owner_k1': (6, 24, 4, 0, 37, 4, 0, 0), 'owner_delta': (6, 24, 4, 0, 37, 4, 0, 0), 'owner_union14': (9, 36, 20, 0, 49, 20, 0, 0)}
+dilation_certificates={'union14': (12, ((4, 16, 40, 0, 29, 40, 0, 0),)), 'difference7': (12, ((6, 24, 4, 0, 37, 4, 0, 0),)), 'resolved21': (12, ((8, 32, 52, 0, 45, 52, 0, 0),)), 'owner_union14': (12, ((9, 36, 20, 0, 49, 20, 0, 0),))}
+difference_folded_sections=(((0, 0, 0), (0, 1, 2, 3), (4, 16, 0, 0, 29, 0, 0, 0)), ((0, 0, 1), (0, 1, 2, 4), (4, 16, 0, 0, 29, 0, 0, 0)), ((0, 1, 0), (0, 1, 5, 3), (4, 16, 0, 0, 29, 0, 0, 0)), ((0, 1, 1), (0, 1, 5, 4), (4, 16, 0, 0, 29, 0, 0, 0)), ((1, 0, 0), (0, 6, 2, 3), (4, 16, 0, 0, 29, 0, 0, 0)), ((1, 0, 1), (0, 6, 2, 4), (4, 16, 0, 0, 29, 0, 0, 0)), ((1, 1, 0), (0, 6, 5, 3), (4, 16, 0, 0, 29, 0, 0, 0)), ((1, 1, 1), (0, 6, 5, 4), (4, 16, 0, 0, 29, 0, 0, 0)))
+absolute_sidecar_census=(named_cases=56,named_rank4=56,binary_cases=127,binary_rank4=126,binary_rank3_masks=(127,))
+difference_allocation_census=(2401, 0, 0, (4,))
+augmented_verdict=all_lambda_projections_zero_and_all_nullvectors_source_annihilators
+proof=('source_marginals_rebuilt_from_THM2594_joint_table', 'target_rebuilt_from_THM3514_independent_endpoint_atoms', 'augmented_M_lambda_system_retains_all_frequency_multipliers', 'every_nullspace_multiplier_projection_is_zero', 'every_augmented_nullvector_annihilates_the_source_curve', 'rank4_6_8_9_is_necessary_but_not_sufficient_for_common_connection')
+boundary=('failed_class=fixed_frequency_independent_channel_map_plus_one_common_C13_operator', 'survivor=joint_u_s_ell_theta_to_a_d_C_D_support_relation_before_marginalization', 'no_ancestry_current_H1_bispectrum_scalar_exclusion_or_LRC14_claim')
+semantic_sha256=544b07a84c6806ea63c48f5227b78d74844f466dd0b446b6a320ea8560238895
+script_sha256_lf=efbfb738f1901946210e1f438212d24e7cc34ee4ca3f02d436923d61a852bf43
+reproducibility=no_assert_truth_gates;candidate_scripts_not_imported;no_randomness;no_elapsed_fields
+commands=python -B 04-computation/lrc_r5_common_base_connection_obstruction_independent_audit_20260816.py;python -B -O 04-computation/lrc_r5_common_base_connection_obstruction_independent_audit_20260816.py
+PASS

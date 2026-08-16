@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `lrc_r5_common_base_connection_obstruction_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT AUDIT ACCEPTS SCOPED FINITE-EXACT
+  PACKAGE].  Rebuilds the THM-2594 joint Boolean table and the THM-3514
+  endpoint atoms without importing either candidate probe.  It independently
+  confirms source ranks `3,3,4,6,8,6,6,6,9`, full `91/91` spectra, all 12
+  torsor dilations, 8 folded sections, 56 named and 127 binary absolute-root
+  sidecars, and all 2401 root-difference allocations.  A disjoint augmented
+  `(M,lambda_k)` system retains every frequency multiplier: all multiplier
+  projections vanish and every surviving matrix annihilates the source.
+  Thus rank `4/6/8/9` is not the missing connection; the strongest survivor
+  is the unmarginalized `(u,s,ell,theta;a,d,C,D)` support relation.  No
+  ancestry/current/H1/bispectrum/scalar-exclusion/LRC(14) consequence.
+  Script/output/semantic LF SHA-256:
+  `efbfb738f1901946210e1f438212d24e7cc34ee4ca3f02d436923d61a852bf43` /
+  `642f774f2c0320470d28ac8e5046b06ccb83851deae79e412c8a3fe0676149db` /
+  `544b07a84c6806ea63c48f5227b78d74844f466dd0b446b6a320ea8560238895`.
 - `lrc_r5_folded_c7_k4_transporter_independent_audit_20260816.py` ->
   matching `.out` [INDEPENDENT AUDIT OF PROVISIONAL PACKAGE; SCOPED
   PROMOTION RECOMMENDED].  Reconstructs the THM-2594 rank-three source and
