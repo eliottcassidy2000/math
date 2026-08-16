@@ -14,5 +14,9 @@ pure-theta and pure-absolute synthetic line controls: PASS_ZERO_OFF_LINE
 three-axis roots mod 547: order7=81; order13=475
 primitive C7 x C13 x C13 off-both-line modes=792/792; by C7 mode=(132, 132, 132, 132, 132, 132)
 three-axis support sha256=51ea8b27b8f14f07ed7099601e80a5b36f18510cf6da9c4f815802e6eb8f05cc
+owner-marginal C7 x C13 primitive modes=72/72; sha256=31475920623317779b3c6de6334f258309256fb71734cc6ecd7ea6a6476b3e68
+fixed-absolute-root slope primitive modes=72/72; sha256=808df0ceb8616773cff1b5c12de2333d1495c07d119c57b9b49e68aa9bb2627f
+full affine slope pencil primitive modes=936/936; by slope=(72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72)
+full primitive slope-pencil sha256=e92e3f1b072db16ada1daa28925803ebd9e11658deb3532680911ed637dee85d
 scope: genuine two-coordinate chart sensitivity; not unique causation, a physical current, row exclusion, or LRC(14)
 all exact checks passed

@@ -138,6 +138,47 @@ lacks the physical phase/current, common U_full atom key, and Hall-cone
 consequence.  Its value is sharper localization: cancellation does not
 reappear when the word-slot axis is Fourier transformed.
 
+### The projective slope pencil and the owner quotient
+
+There is a sharper organization of the same transform.  For nonzero
+root-label frequency `s`, put
+
+```text
+lambda = r/s in F_13,                                      (12)
+```
+
+where `r` is owner-root frequency.  The primitive frequencies split into
+thirteen affine slope classes, each one a 72-element Galois orbit indexed by
+the six nonzero word modes and twelve nonzero root modes.  Exact reduction
+modulo `547` gives
+
+```text
+lambda=0:  owner marginal                         72/72,
+lambda=2:  fixed-absolute-root line                72/72,
+lambda other: eleven genuinely two-coordinate lines 11*72/11*72,
+all slopes:                                       936/936. (13)
+```
+
+Thus summing out the owner does **not** kill the signal: the resulting
+`C7 x C13` mixed transform is nonzero in all 72 primitive characters.  This
+is the explicit quotient check requested by the spectral-closure question.
+For `lambda=0` it recovers, rather than strengthens, THM-2594's already
+proved primitive mixed block; `lambda=2` is the corresponding
+fixed-absolute-root hostile, and the other eleven slopes are the new
+two-coordinate localization.
+
+The full slope-pencil ledger has SHA256
+
+```text
+e92e3f1b072db16ada1daa28925803ebd9e11658deb3532680911ed637dee85d. (14)
+```
+
+This closes the algebraic primitive-spectrum gate for this one realized
+candidate table.  It does not repair the remaining type mismatch: the table
+is still a linked-node common-base contraction rather than THM-2449's lawful
+one-point response or a positive physical current.  The missing bridge is
+therefore realization/descent, not a hidden Fourier zero.
+
 ## 5. Consequence boundary
 
 This repairs the causal picture as follows:

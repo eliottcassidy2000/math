@@ -29,6 +29,9 @@ CONTRAST_DECISIVE_SHA256 = "53373710f92273a8473b8c3b047257f1a2adf10fa7c878f22fe5
 CONTRAST_BUNDLE_SHA256 = "a631fb33c0862234d5df932b804a944cd5439386908fc2e755479cf0dc0e99c7"
 SHEAR_SUPPORT_SHA256 = "638af80f232c55d91a4e3d5b8fb802e4c7196184b6d2c9ac9324d370d53cbcf4"
 TRIPLE_SUPPORT_SHA256 = "51ea8b27b8f14f07ed7099601e80a5b36f18510cf6da9c4f815802e6eb8f05cc"
+OWNER_MARGINAL_SHA256 = "31475920623317779b3c6de6334f258309256fb71734cc6ecd7ea6a6476b3e68"
+ABSOLUTE_LINE_SHA256 = "808df0ceb8616773cff1b5c12de2333d1495c07d119c57b9b49e68aa9bb2627f"
+FULL_PRIMITIVE_SHA256 = "e92e3f1b072db16ada1daa28925803ebd9e11658deb3532680911ed637dee85d"
 
 require(
     hashlib.sha256(AUDIT_PATH.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
@@ -254,6 +257,58 @@ triple_by_word_mode = tuple(
 )
 require(triple_by_word_mode == (132,) * 6, "three-axis word-mode census changed")
 
+# The primitive frequency pairs form thirteen affine slope classes
+# lambda=owner_mode/root_mode in F_13.  The lambda=0 class is exactly the
+# owner-marginal C7 x C13 table, lambda=2 is the fixed-absolute-root line in
+# the slaved chart, and the other eleven classes are the mixed modes above.
+owner_marginal = [
+    (word_mode, root_mode, triple_fourier(slaved_root_table, word_mode, 0, root_mode))
+    for word_mode in range(1, 7)
+    for root_mode in range(1, 13)
+]
+absolute_line = [
+    (
+        word_mode,
+        root_mode,
+        triple_fourier(
+            slaved_root_table,
+            word_mode,
+            (2 * root_mode) % 13,
+            root_mode,
+        ),
+    )
+    for word_mode in range(1, 7)
+    for root_mode in range(1, 13)
+]
+full_primitive = [
+    (
+        word_mode,
+        owner_mode,
+        root_mode,
+        triple_fourier(slaved_root_table, word_mode, owner_mode, root_mode),
+    )
+    for word_mode in range(1, 7)
+    for owner_mode in range(13)
+    for root_mode in range(1, 13)
+]
+owner_marginal_digest = hashlib.sha256(repr(owner_marginal).encode("ascii")).hexdigest()
+absolute_line_digest = hashlib.sha256(repr(absolute_line).encode("ascii")).hexdigest()
+full_primitive_digest = hashlib.sha256(repr(full_primitive).encode("ascii")).hexdigest()
+require(owner_marginal_digest == OWNER_MARGINAL_SHA256, "owner marginal changed")
+require(absolute_line_digest == ABSOLUTE_LINE_SHA256, "absolute-root line changed")
+require(full_primitive_digest == FULL_PRIMITIVE_SHA256, "full primitive pencil changed")
+require(all(value for _, _, value in owner_marginal), "owner marginal has a spectral zero")
+require(all(value for _, _, value in absolute_line), "absolute-root line has a spectral zero")
+require(all(value for _, _, _, value in full_primitive), "primitive slope pencil has a spectral zero")
+slope_census = tuple(
+    sum(
+        value != 0 and owner_mode == (slope * root_mode) % 13
+        for _, owner_mode, root_mode, value in full_primitive
+    )
+    for slope in range(13)
+)
+require(slope_census == (72,) * 13, "projective slope census changed")
+
 # Synthetic controls pin the interpretation of the two exceptional lines.
 pure_theta = [[(root + 1) ** 2 for root in range(13)] for _u in range(13)]
 pure_absolute_slaved = [
@@ -289,5 +344,9 @@ print("pure-theta and pure-absolute synthetic line controls: PASS_ZERO_OFF_LINE"
 print(f"three-axis roots mod 547: order7={ROOT_7}; order13={ROOT_13}")
 print(f"primitive C7 x C13 x C13 off-both-line modes={len(triple_off_both)}/792; by C7 mode={triple_by_word_mode}")
 print(f"three-axis support sha256={triple_digest}")
+print(f"owner-marginal C7 x C13 primitive modes=72/72; sha256={owner_marginal_digest}")
+print(f"fixed-absolute-root slope primitive modes=72/72; sha256={absolute_line_digest}")
+print(f"full affine slope pencil primitive modes=936/936; by slope={slope_census}")
+print(f"full primitive slope-pencil sha256={full_primitive_digest}")
 print("scope: genuine two-coordinate chart sensitivity; not unique causation, a physical current, row exclusion, or LRC(14)")
 print("all exact checks passed")

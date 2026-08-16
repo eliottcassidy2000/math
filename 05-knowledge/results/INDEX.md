@@ -64,11 +64,17 @@
   exactly `132/132` for each nontrivial `C7` mode; the three-axis support
   ledger is
   `51ea8b27b8f14f07ed7099601e80a5b36f18510cf6da9c4f815802e6eb8f05cc`.
+  Organizing frequencies by the affine slope
+  `lambda=owner_mode/root_mode` gives `72/72` modes on each of all thirteen
+  slopes and `936/936` overall.  In particular the owner marginal
+  (`lambda=0`) and fixed-absolute-root line (`lambda=2`) are both `72/72`;
+  full slope-pencil ledger SHA-256:
+  `e92e3f1b072db16ada1daa28925803ebd9e11658deb3532680911ed637dee85d`.
   This proves genuine two-coordinate chart sensitivity, not unique slaving
   causation, a physical current, row exclusion, or LRC(14).  Script/output LF
   SHA-256:
-  `590d164f5fc30cfc6e1ca97ec99d9a4af22a397c1d9904e443c9b2ecae232915` /
-  `6c77d4b438180f042567ceb7eb06c568ab92e2a19d3f17eedef34842e33f9fd3`;
+  `58fd7ccd0e2c82ab04a21d0fbfc940f74e47bfe2db9ef4454a15aebd63118155` /
+  `e7772acf6caf63dd78b50bd4c8c18321d64a2e957b112a8842f87b669da6a143`;
   support ledger SHA-256:
   `638af80f232c55d91a4e3d5b8fb802e4c7196184b6d2c9ac9324d370d53cbcf4`.
 - `regular_shortlex_harmonic_density_automaton_probe_20260816.py` ->
