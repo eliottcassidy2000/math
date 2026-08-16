@@ -8,7 +8,12 @@ not extend the discriminant identity to the outside infinite family.
 closed by [THM-3508](../01-canon/theorems/THM-3508-level-two-sporadic-keller-three-coordinate-primitive-discriminant-square-class.md):
 all three source coordinates of the fixed level-two composite are primitive,
 so their full discriminant square class is `[H]`.  Higher levels and the
-outside family remain open.
+historically reported outside family remain open.  A second update closes the
+first **explicit weighted** beyond-cubic test: THM-3517 gives three primitive
+coordinate quintics with class `[L5]` at `m=3`, but its even `C3` inertia
+makes that class miss the genuine `C=0` Jelonek component.  MISTAKE-416
+records why this explicit cyclic family must not be identified with the
+unstored historical `E_m`.
 
 ## 1. The three discriminants collapse to one square class
 
@@ -131,9 +136,10 @@ newest-component law at every iterate.
 
 ## 5. Relation to the outside infinite family
 
-THM-1605 verifies that the outside family `E_m` is strictly broader than the
-repo's constructed examples: `m=2` is the fixed sporadic map, while the
-higher members realize fibre cardinalities
+The corrected
+[THM-1605](../01-canon/theorems/THM-1605-infinite-family-extent-vs-mechanism.md)
+does **not** provide a literal outside-family definition.  It preserves a
+historical report that higher members realize fibre cardinalities
 
 ```text
 2m-1 = 1+2(m-1).                                     (8)
@@ -141,12 +147,28 @@ higher members realize fibre cardinalities
 
 THM-1350 explains the necessity of the shape in (8) for the relevant
 equivariant fibre: one fixed point plus free involution pairs.  This is an
-orbit-count theorem, not a discriminant theorem.  Nothing currently proved
-in the repo shows that the higher `E_m` have three coordinate eliminants with
-one common class, the same Jelonek geometry, or the same composition tower.
+orbit-count theorem, not a construction or discriminant theorem.  No formula,
+source artifact, or `m>=3` replay for that historically named `E_m` survives
+in the repository, so its higher members cannot be used as proved inputs.
+
+There is now a separate lawful comparison.  THM-3517 reindexes THM-3448's
+explicit cyclic weighted family by `ell=2m-3`.  At `m=3`, it proves
+
+```text
+generic degree=5,             Mon_geom=S5,
+[Disc_x]=[Disc_y]=[Disc_z]=[L5],
+S_F=V(C) union V(L5).                                  (8a)
+```
+
+The common sign class in (8a) sees `V(L5)` but not `V(C)`, because the latter
+has even three-cycle inertia.  Thus the first explicit test simultaneously
+extends the common-class phenomenon and proves that it is too coarse for
+Jelonek effectivity.  This weighted family has ordinary first-coordinate
+degrees `7,17,27,...`, not the old report's `7,13,26,...`; it is not a
+recovery of the missing family.
 
 Therefore (2) contributes one exact invariant at `m=2`; it does not classify
-the infinite family.  A serious classification record needs at least
+the historical infinite family.  A serious classification record needs at least
 
 ```text
 degree/fibre grade
@@ -179,9 +201,10 @@ The next exact tests are correspondingly typed:
    whether the atom-level diagonal (5) survives at grade nine;
 2. compute the level-three image divisor and norm law, then test whether only
    the newest component has odd valuation;
-3. for one explicit `E_m` with `m>2`, compute a generic coordinate eliminant,
-   its sign class, and the first Jelonek divisor before proposing any family
-   law; and
+3. **closed for `E_3^cyc` by THM-3517:** compute a generic coordinate
+   eliminant, its sign class, and the first Jelonek divisor; the result is
+   three quintics of class `[L5]` and the sign-blind component `V(C)`;
+   repeat the third-coordinate primitivity audit at `m=4`; and
 4. keep the sign class separate from the effective boundary cone throughout.
 
 The strongest current conclusion is therefore precise and modest: the fixed

@@ -341,7 +341,7 @@ is sharp: equal counts allow two densities or none.
   fifth-image/degree-243/all-level OPEN. THM-2681
   blocks the `A4/S4` cubic; THM-2685--2708 give its
   gain/holonomy.
-  THM-3057/3059/3441 refute both odd-component forms of HYP-9027. THM-3448 realizes Keller `C_ell` inertia (`ell>=2`; first `C3` in degree five) and excludes `C3` only for weighted quartics; arbitrary quartic/two-jet `C3` remains OPEN.
+  THM-3448/3517: weighted `m=3` has `S5` and three quintics `[L5]`, but `C3` Jelonek is sign-blind; likewise every odd-family `C_(2m-3)`. THM-1605's formula is absent (MISTAKE-416); `z`, `m>3`, and arbitrary quartic `C3` remain OPEN.
   THM-3440/3443/3450: marked mode-one LRC/Keller isomorphism on 91 sheets.  Mod-13 `H^1` has no amplitude map; order 8/14 margins block the full germ.  No current.  THM-3066 retains only their
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
   THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;

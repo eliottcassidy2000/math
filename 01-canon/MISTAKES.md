@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-416 (2026-08-16, historical outside Keller family) -- an unstored prose description was promoted as an explicit verified family
+
+- **What failed:** the Keller file
+  `THM-1605-infinite-family-extent-vs-mechanism.md` labelled the historically
+  reported maps `E_m` verified and asserted that `m=2` was the fixed sporadic
+  map, even though the repository retained no coordinate definition, source
+  artifact, or higher-member replay.  Its companion checked only the fixed
+  map and the arithmetic identity `2m-1=1+2(m-1)`.
+- **Minimal witness / first failed implication:** targeted searches of the
+  current canon, computations, results, reflections, and retained source
+  references find no literal `E_m` formula.  The nearest lawful explicit odd
+  family is THM-3448's cyclic weighted subfamily, reindexed by `ell=2m-3` in
+  THM-3517.  Its first-coordinate degrees are exactly `7,17,27,...`, which
+  disagree with the old THM-1605 prose string `7,13,26,43,64,...`.  Therefore
+  the numerical `m=2` overlap cannot identify the higher constructions.
+- **Repair / strongest survivor:** THM-1605 is now a partially verified
+  historical record.  The fixed map's degree, determinant, three-point fibre,
+  and THM-1350's conditional `1+2k` involution-orbit mechanism survive.
+  THM-3517 supplies a disjoint explicit `m=3` test with full formula,
+  `S5` monodromy, three coordinate quintics, and exact Jelonek components;
+  it makes no claim to recover the unstored family.
+- **Reusable rule:** a numerical degree/fibre synopsis is not a mathematical
+  object.  Before extending a named family, require a literal formula or a
+  citable source, instantiate the first new parameter, and compare an
+  invariant finer than the overlapping base case.
+
 ## MISTAKE-415 (2026-08-16, fixed Keller norm-face extrapolation) -- the exposed pole pair is not a closed scalar recurrence
 
 - **What failed:** the pinned values `e=1,7,43` and exposed factors

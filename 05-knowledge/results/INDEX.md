@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `jc_weighted_odd_family_m3_coordinate_jelonek_probe_20260816.py` ->
+  matching `.out` [THM-3517 PROVED + VERIFIED-EXACT; INDEPENDENT
+  IMPLEMENTATION AUDIT PENDING FOR THE 191-TERM z ROW].  For the explicit
+  THM-3448 cyclic weighted subfamily `ell=2m-3`, the first lawful `m=3`
+  member has determinant one, ordinary degrees `(17,16,4)`, generic degree
+  five, inverse `w^5-w^4+Pw-Q`, and global monodromy `S5`.  Its `x,y,z`
+  resultants are irreducible quintics with `17,29,191` terms and all three
+  discriminants equal the irreducible `D5` times a square.  Pullback gives
+  `D5(BC,AC^2)=C^4L5`, but the exact Jelonek set is
+  `V(C) union V(L5)`: the sign class `[L5]` misses `V(C)` because its local
+  inertia is an even 3-cycle.  The flat view `(X-P)^5` and the `m=2`
+  `C^2`-without-component case are exact hostiles.  For every `m>=3` in this
+  odd subfamily, THM-3448 implies the same sign-blind `C_(2m-3)` component.
+  This is not the unstored historical THM-1605 family and gives no map
+  classification or `JC(2)` consequence.  Script/output/semantic LF SHA-256:
+  `ff03f0ac71922f5881bf112ae2c8cbb7f5cd49198500c19d62b5eaf5b286002e` /
+  `6d64acd12b3b546e8820a683f38ada905f0a52af96ab3661319eb111c45699e0` /
+  `ed6845e743f8554327653521f243817264b08d1ca864c8513c0b2af7ce17ac81`.
 - `shortlex_bary_equal_count_harmonic_boundary_probe_20260816.py` -> matching
   `.out` [ELEMENTARY ALL-BASE THEOREM CANDIDATE + VERIFIED-EXACT SIDECAR;
   INDEPENDENT AUDIT PENDING].  In every base `b>=2`, the first and last
