@@ -2,9 +2,10 @@
 """Cheap profile-level probe for the two-current-digit period-three ranks.
 
 This script deliberately does not repeat the endpoint event sweep, character
-bank, or relation inversion of the two-digit candidate.  It only reconstructs
-the already pinned nested-window source profiles and asks for the row ranks of
-the 13 older-digit sections on the six pointed owner cells.
+bank, or relation inversion.  It compares the candidate source profiles with
+the independently reconstructed two-digit profiles entrywise, applies the
+canonical owner-visible chamber/state mask independently, and asks for the row
+ranks of the 13 older-digit sections on the six pointed owner cells.
 """
 
 from __future__ import annotations
@@ -22,6 +23,9 @@ if str(HERE) not in sys.path:
 
 TWO = importlib.import_module(
     "lrc_r5_ufull_owner_node_boolean_square_two_digit_current_ancestry_probe_20260816"
+)
+AUDIT = importlib.import_module(
+    "lrc_r5_ufull_owner_node_boolean_square_two_digit_current_ancestry_independent_audit_20260816"
 )
 
 P = 13
@@ -67,8 +71,11 @@ EXPECTED_PROFILE_DIGESTS = (
     "f7d1ac1bba79a25b232dd4f0539b9a236f047b5224e49050a44c70f4d2544b68",
     "6fd60baa0f82c5f234164b2869cb369468fcbcf128e995603c49e5c07ed7ea68",
 )
+EXPECTED_AUDITED_SOURCE_SHA256 = (
+    "dd2f48375fc38b419babdd0ed13365fb56918829a663270c4b23d56635d6e097"
+)
 EXPECTED_SEMANTIC_SHA256 = (
-    "8d8869b678fc28a97e820fa8ce5af284848a5f4def4c5195a9d9a218f2a8219f"
+    "0d5798935986c13b1aa70fc1db7abac162994dabaf7dd3ab5f323ffeb1d1d63e"
 )
 
 
@@ -136,8 +143,38 @@ def state_projection_ranks(rows, cell_count: int):
     return tuple(answer)
 
 
+def independently_masked_cells():
+    values = AUDIT.source_context()
+    profiles, boundaries, cells = values[:3]
+    source_sha = values[-2]
+    require(source_sha == EXPECTED_AUDITED_SOURCE_SHA256,
+            ("independent source digest", source_sha))
+    masked = []
+    typed_count = 0
+    for (left, right), cell in zip(zip(boundaries, boundaries[1:]), cells):
+        state = cell[0]
+        chamber = AUDIT.ONE.R.chamber(left, right)
+        owner_visible = (
+            (chamber == "left" and state in (0, 1))
+            or (chamber == "right" and state in (2, 3))
+        )
+        state = state if owner_visible else None
+        typed_count += int(state is not None)
+        masked.append((state,) + cell[1:])
+    require((len(masked), typed_count) == (33, 16),
+            ("independent visibility mask", len(masked), typed_count))
+    return profiles, boundaries, tuple(masked), source_sha, typed_count
+
+
 def main() -> None:
-    _profiles, boundaries, cells, source_record = TWO.two_digit_context()
+    profiles, boundaries, candidate_cells, source_record = TWO.two_digit_context()
+    (audit_profiles, audit_boundaries, cells,
+     audit_source_sha, typed_count) = independently_masked_cells()
+    require(profiles == audit_profiles, "candidate/independent profile mismatch")
+    require(boundaries == audit_boundaries,
+            "candidate/independent boundary mismatch")
+    require(candidate_cells == cells,
+            "candidate/independent endpoint-masked cell mismatch")
     require(len(cells) == len(boundaries) - 1, "cell/boundary mismatch")
 
     weighted_rows = tuple(profile_rows(cells, r0, False) for r0 in range(P))
@@ -248,6 +285,7 @@ def main() -> None:
             == EXPECTED_PROFILE_DIGESTS, "profile digest drift")
 
     records = (
+        (audit_source_sha, len(cells), typed_count, digest_json(cells)),
         weighted_ranks,
         support_ranks,
         global_weighted_rank,
@@ -272,6 +310,7 @@ def main() -> None:
             ("semantic drift", semantic, EXPECTED_SEMANTIC_SHA256))
 
     print("== r=5 two-digit period-three pointed-profile probe ==")
+    print(f"independent_source_gate=(sha256={audit_source_sha},cells={len(cells)},owner_visible={typed_count},masked_cell_sha256={records[0][3]}): PASS")
     print(f"pointed_states={POINTED}")
     print(f"profile_r1_conditional_ranks_by_r0={weighted_ranks}")
     print(f"support_conditional_ranks_by_r0={support_ranks}")
@@ -291,7 +330,7 @@ def main() -> None:
     print(f"semantic_sha256={semantic}")
     print(f"endpoint_conditional_ranks={EXPECTED_PERIOD3};profile_to_endpoint_rank_drop={tuple(left-right for left,right in zip(weighted_ranks,EXPECTED_PERIOD3))}")
     print("endpoint_address_rank=4;profile_address_rank=12;endpoint_projection_drop=8")
-    print("scope=nested-window source profiles only;no endpoint sweep,character bank,relation inversion,or physical current")
+    print("scope=owner-visible endpoint-admissible nested-window profiles only;no endpoint sweep,character bank,relation inversion,or physical current")
 
 
 if __name__ == "__main__":

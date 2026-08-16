@@ -1,9 +1,9 @@
 # The two-digit period-three pattern is a profile flag, not a `C_3` action
 
-**Status: DERIVED FINITE-EXACT PROFILE SIDECAR TO THE TWO-DIGIT CANDIDATE AT
-`e9131a159`; THE ENDPOINT CLAUSES REMAIN CANDIDATE-LEVEL PENDING AN
-INDEPENDENT TWO-DIGIT AUDIT; THE FOUR-WAY POINTED LIFT ALSO REMAINS UNDER
-AUDIT; NO PHYSICAL CURRENT AND NO LRC(14) CONCLUSION.**
+**Status: DERIVED FINITE-EXACT PROFILE-FLAG CONSEQUENCE OF THE INDEPENDENTLY
+AUDITED TWO-DIGIT OBJECT AT `abf64fa44`; CANDIDATE AND CLEAN-ROOM PROFILES,
+BOUNDARIES, AND OWNER-VISIBLE MASK AGREE ENTRYWISE; THE FOUR-WAY POINTED LIFT
+REMAINS UNDER AUDIT; NO PHYSICAL CURRENT AND NO LRC(14) CONCLUSION.**
 
 The conditional endpoint ranks
 
@@ -28,8 +28,8 @@ but maps the three extra lines onto one line.  Its two-dimensional kernel on
 
 This gives the precise verdict on rank six.  The six-dimensional endpoint
 relation image is genuinely the already identified pointed quotient `W`, but
-six is not a ceiling on the two-digit ancestry carrier.  The raw weighted
-profile carrier has rank twelve, and its interior six-space has state-block
+six is not a ceiling on the two-digit ancestry carrier.  The owner-visible
+weighted profile carrier has rank twelve, and its interior six-space has state-block
 ranks `(1,3,1,3)`, not the pointed grading `(1,2,1,2)`.  Thus six is a genuine
 **projected response channel**, not a global or pre-integration carrier bound.
 
@@ -45,7 +45,8 @@ axes, not competing estimates of one dimension.
 
 Work over the same split field `k=F_p` as the exact endpoint computations.
 Let `C` be the 33 open source cells cut out by the 34 pinned profile
-boundaries, and let
+boundaries.  The independently reconstructed chamber/state predicate marks
+16 of them owner-visible; the remaining 17 coordinates are set to zero.  Let
 
 ```text
 P_6=((0,0),(1,0),(1,6),(3,6),(3,12),(2,12))
@@ -58,8 +59,12 @@ two-digit address `(r_0,r_1)`, define
 p_(r_0,r_1) in A=Fun(C x P_6,k)
 ```
 
-to be its exact weighted nested-window source profile, zero outside the
-matching state block.  Put
+to be its exact weighted nested-window source profile after this visibility
+projection, zero outside the matching state block.  The candidate and
+clean-room profile arrays, boundaries, and masked cell tuples agree entrywise;
+their common masked-cell hash is
+`56fe6e86a6d49ae4d7bdb0cdde5a5b70b0b2d8364c06dc7c22c7d8fafa3df4f5`.
+Put
 
 ```text
 S_r = span{p_(r,r_1): r_1 in F_13}.
@@ -94,8 +99,8 @@ U_1={1,4,7,10},  U_2={2,5,8,11},
 A_3={3,6,9},     D={0,12}.
 ```
 
-The exact rank certificates imply the following finite theorem inside the
-pinned profile implementation.
+The exact rank certificates imply the following finite theorem on the common
+candidate/clean-room owner-visible profile table.
 
 1. For every `r` in `U_1 union U_2`, the spaces `S_r` are one common space
    `L` of dimension three.
@@ -195,7 +200,7 @@ agreement is therefore necessary but not a typed factorization.
 
 ## Endpoint projection explains the visible `4,3,3`
 
-Now add the candidate-level endpoint facts from `e9131a159`.  The conditional
+Now add the independently audited endpoint facts from `abf64fa44`.  The conditional
 dimensions `dim E(S_r)` are
 
 ```text
@@ -330,6 +335,13 @@ The honest interpretation is therefore a radix-cylinder flag on an ordered
 interval, not a period-three recurrence.  A recurrence still requires a
 typed operator at a third digit or a lawful clock transport.
 
+This is not a no-go theorem for general autonomous recurrences.  As repaired
+by the independent audit, the fixed-`r_0` rank test by itself excludes only a
+scalar state/relation-independent factor `K(r_0,r_1)T_1`; hidden-state,
+matrix-valued, state-dependent, nonlinear, and temporal transitions remain
+untested.  The flag theorem additionally refutes the specific `C_3`/translation
+explanation, not those broader mechanisms.
+
 ## Where the genuine rank six lives
 
 Let `R_2` be the span of the two-digit endpoint rows over the relation
@@ -358,8 +370,8 @@ positive exact instance of pointed closure **after** endpoint transport.
 Because that probe also marginalized `s=u-q`, it does not settle closure in
 the expanded `(difference,relation)` target.
 
-It does **not** make six a pre-integration ceiling.  The present source-profile
-space has dimension twelve; its state grading is incompatible with `P_6`; and
+It does **not** make six a pre-integration ceiling.  The present owner-visible
+profile space has dimension twelve; its state grading is incompatible with `P_6`; and
 the independently audited unrestricted root-difference response has relation
 rank thirteen raw and twelve centred.  The strongest sound statement is:
 
@@ -434,7 +446,9 @@ carrier and a projection artifact.
 ## Reproduction and exact ledger
 
 The profile-only probe deliberately does not execute the endpoint event
-sweep, character bank, relation inversion, or spectral census:
+sweep, character bank, relation inversion, or spectral census.  It imports
+both source reconstructions and first requires exact equality after the
+independently derived owner-visible mask:
 
 ```text
 python -B 04-computation/lrc_r5_two_digit_period3_pointed_profile_probe_20260816.py
@@ -445,4 +459,4 @@ Its weighted/support profile hashes are
 `f7d1ac1bba79a25b232dd4f0539b9a236f047b5224e49050a44c70f4d2544b68`
 and `6fd60baa0f82c5f234164b2869cb369468fcbcf128e995603c49e5c07ed7ea68`;
 the semantic hash is
-`8d8869b678fc28a97e820fa8ce5af284848a5f4def4c5195a9d9a218f2a8219f`.
+`0d5798935986c13b1aa70fc1db7abac162994dabaf7dd3ab5f323ffeb1d1d63e`.

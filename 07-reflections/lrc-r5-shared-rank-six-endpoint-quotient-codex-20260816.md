@@ -332,14 +332,16 @@ marginalized.
 
 ## Two-digit update: six is a projected carrier, not the ancestry ceiling
 
-The candidate at `e9131a159` retains two lawful current digits
+The object at `e9131a159`, independently hostile-audited at `abf64fa44`,
+retains two lawful current digits
 `a=r_0+13r_1+169c`.  Its relation flattening has rank six and its `r_1`
 marginal is the one-digit table with relation image `W`.  Marginal row spaces
 are contained in the child row space, so equal dimensions prove that the
 two-digit relation image is again exactly `W`.
 
-The profile-level carrier before endpoint integration is much larger.  The
-derived exact sidecar
+The owner-visible profile carrier before endpoint integration is much larger.
+The derived exact sidecar, now gated entrywise against the independent source
+reconstruction,
 `lrc-r5-two-digit-profile-flag-versus-pointed-six-codex-20260816.md` finds a
 weighted profile space `G` of dimension twelve.  Its interior-multiple space
 `M` has dimension six and the same abstract reflection character `(3,3)` as
@@ -463,4 +465,4 @@ python -B -O 04-computation/lrc_r5_two_digit_period3_pointed_profile_probe_20260
 The common-image, pointed-carrier, and profile-flag semantic digests are
 `7baeb128a4c4d5998342611fdcf821d002ffb4622692dd72c03e6f11c8d9825a`
 `5e491136809fc164bbbfc7aeb9c272b7aff05020992985a39f291bf31297903e`,
-and `8d8869b678fc28a97e820fa8ce5af284848a5f4def4c5195a9d9a218f2a8219f`.
+and `0d5798935986c13b1aa70fc1db7abac162994dabaf7dd3ab5f323ffeb1d1d63e`.

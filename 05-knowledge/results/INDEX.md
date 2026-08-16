@@ -169,20 +169,23 @@
   `5e491136809fc164bbbfc7aeb9c272b7aff05020992985a39f291bf31297903e`.
 - `lrc_r5_two_digit_period3_pointed_profile_probe_20260816.py`
   -> matching `.out` [DERIVED FINITE-EXACT PROFILE-FLAG SIDECAR TO THE
-  TWO-DIGIT CANDIDATE].  Without rerunning the endpoint sweep, characters,
-  inversion, or spectral census, it derives the source-profile flag
+  INDEPENDENTLY AUDITED TWO-DIGIT OBJECT].  It matches the candidate profiles,
+  boundaries, and owner-visible cell mask entrywise to the independent
+  reconstruction.  Without rerunning the endpoint sweep, characters,
+  inversion, or spectral census, it derives the visibility-projected flag
   `L_3 subset M_6,B_10 subset G_12`, with `M intersect B=S_6` and reflection
   splits `(2,1),(3,3),(5,5),(6,6)`.  Each interior multiple is `L` plus one
   independent line; endpoint integration identifies the three lines and
   drops two boundary directions, explaining the apparent `4,3,3` pattern as
   an ordered-radix flag rather than a `C_3` action.  The state ranks
   `M=(1,3,1,3)` versus pointed `(1,2,1,2)` refute a lossless state-graded
-  carrier identification.  Endpoint clauses remain candidate-level; there is
-  no root-difference lift, physical current, row exclusion, or LRC(14).
+  carrier identification.  The endpoint tensor is independently audited;
+  there is no root-difference lift, physical current, row exclusion, or
+  LRC(14).
   Script/output/semantic LF SHA-256:
-  `2d7344c4e53855a50cd05875b37fde5784b41cdd0a1dc3b8f8c23788dd02faf1` /
-  `8fb0aee4adf09d25183138b5640cd04f5941b0a71c8b69de0c41866f58587a61` /
-  `8d8869b678fc28a97e820fa8ce5af284848a5f4def4c5195a9d9a218f2a8219f`.
+  `9578b06cc07a0af28767ada6eeb7551fd8c958a6b214212741a25923a17f667e` /
+  `2e21c8f216ea928d163c06bc802affe0e357150e300bc2fbd083ed447fd2a688` /
+  `0d5798935986c13b1aa70fc1db7abac162994dabaf7dd3ab5f323ffeb1d1d63e`.
 
 - `lrc_r5_ufull_owner_node_boolean_square_inverse_owner_branch_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
