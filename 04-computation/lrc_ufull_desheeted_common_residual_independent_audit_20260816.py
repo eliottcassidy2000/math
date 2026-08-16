@@ -7,8 +7,11 @@ point-diagonal API, this program derives a residual coordinate, reconstructs
 the old same-sheet point bank, and independently forms the ordered all-sheet
 and cross-sheet residual couplings.
 
-These are alternate finite diagonal couplings.  They carry no collision,
-horizon, source, chronology, exact-address C(a;X,m), or LRC(14) meaning.
+The endpoint OWNER condition descends exactly to the zeroth seven-cell.  Thus
+the resulting 7x13 arrays are rank-one delta-cell lifts of one-dimensional
+residue profiles, not genuine cell/residue mixing.  They remain alternate
+finite diagonal couplings with no collision, horizon, source, chronology,
+exact-address C(a;X,m), or LRC(14) meaning.
 """
 
 from __future__ import annotations
@@ -31,7 +34,7 @@ ENDPOINT_PATH = ROOT / (
 POINT_PATH = ROOT / "04-computation/lrc_endpoint_ufull_atom_bridge_kernel_probe_20260816.py"
 ENDPOINT_SHA256 = "f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc"
 POINT_SHA256 = "d1182de4d777bab20a8d423cf942151ac3149014b67d9c34883cbce37a7b0a9f"
-EXPECTED_SEMANTIC_SHA256 = "dac1a968808aaf3bf5c1f2208f62fd1c68e55b4e17af2e12aa65d8a9809a969e"
+EXPECTED_SEMANTIC_SHA256 = "9d2070f27bcac8cf576a75bc542222be1e31679bc12e989c2f9bc276e8dd872c"
 
 P = 13
 Q = 7
@@ -226,7 +229,7 @@ def residual_worker(alpha: int) -> tuple[object, ...]:
 
     rows = []
     control_records = []
-    outside_cell_zero = True
+    owner_cell_zero_exact = True
     for beta in range(P):
         ell = (0, -alpha % P, -beta % P, 0, 0, 0, 0, alpha, beta)
         unguarded = A.M.fast_build_set(word, t_den, no_guard, ell)
@@ -286,7 +289,15 @@ def residual_worker(alpha: int) -> tuple[object, ...]:
             cell_left, cell_right, cell = flat_cells[cell_position]
             require(cell_left <= left < right <= cell_right,
                     ("cell split", left, right, flat_cells[cell_position]))
-            outside_cell_zero = outside_cell_zero and cell == 0
+            # OWNER has speed 13 and remains inside the unguarded endpoint
+            # pattern.  Under t=(y+a)/13 it becomes
+            #
+            #     ||13t|| = ||y+a|| = ||y|| < 1/14,
+            #
+            # exactly the defining interval of cell_0.  This is an interval-
+            # geometry statement over Q, before finite-field integration.
+            require(cell == 0,
+                    ("endpoint OWNER escaped cell zero", alpha, beta, left, right, cell))
             counts = count_cache.get(active)
             if counts is None:
                 counts = tuple((active & safe_mask).bit_count() for safe_mask in safe_masks)
@@ -317,7 +328,7 @@ def residual_worker(alpha: int) -> tuple[object, ...]:
             rows.append((beta, tau, same_row, cross_row, full_row))
         require(endpoint_identity_checks > 0, ("empty endpoint checks", alpha, beta))
 
-    return alpha, tuple(rows), tuple(control_records), outside_cell_zero
+    return alpha, tuple(rows), tuple(control_records), owner_cell_zero_exact
 
 
 def inverse_tables(gamma_cells, zeta13: int, prime: int):
@@ -392,6 +403,31 @@ def output_interaction(table, prime: int):
     return answer
 
 
+def rank_mod(matrix, prime: int) -> int:
+    rows = [[value % prime for value in row] for row in matrix]
+    columns = len(rows[0]) if rows else 0
+    rank = 0
+    for column in range(columns):
+        pivot = next((row for row in range(rank, len(rows)) if rows[row][column]), None)
+        if pivot is None:
+            continue
+        rows[rank], rows[pivot] = rows[pivot], rows[rank]
+        inverse = pow(rows[rank][column], -1, prime)
+        rows[rank] = [value * inverse % prime for value in rows[rank]]
+        for row in range(len(rows)):
+            if row == rank or rows[row][column] == 0:
+                continue
+            factor = rows[row][column]
+            rows[row] = [
+                (value - factor * pivot_value) % prime
+                for value, pivot_value in zip(rows[row], rows[rank])
+            ]
+        rank += 1
+        if rank == len(rows):
+            break
+    return rank
+
+
 def main() -> None:
     with ProcessPoolExecutor(max_workers=4) as pool:
         chunks = tuple(pool.map(residual_worker, range(P)))
@@ -400,6 +436,7 @@ def main() -> None:
 
     A = load_endpoint("thm3514_desheeted_residual_main")
     word, t_den, nn, prime, root, zeta13, *_rest = A.context()
+    require(word[A.M.OWNER] == P, ("OWNER speed", word[A.M.OWNER]))
     zeta7 = pow(root, nn // Q, prime)
     require(pow(zeta7, Q, prime) == 1 and zeta7 != 1, "order-seven root")
     require(pow(zeta13, P, prime) == 1 and zeta13 != 1, "order-thirteen root")
@@ -407,6 +444,10 @@ def main() -> None:
     rows = tuple(row for chunk in chunks for row in chunk[1])
     require(len(rows) == P**3, len(rows))
     gamma_cells = tuple((row[2], row[3], row[4]) for row in rows)
+    require(
+        all(value == 0 for row in gamma_cells for sector in row for value in sector[1:]),
+        "character bank escaped exact owner cell",
+    )
     same_gamma = tuple(sum(row[0]) % prime for row in gamma_cells)
     cross_gamma = tuple(sum(row[1]) % prime for row in gamma_cells)
     full_gamma = tuple(sum(row[2]) % prime for row in gamma_cells)
@@ -432,6 +473,10 @@ def main() -> None:
             for cell in range(Q) for residue in range(P)),
         "same plus cross tables",
     )
+    require(
+        all(value == 0 for table in tables for row in table[1:] for value in row),
+        "inverse table escaped exact owner cell",
+    )
     spectra = tuple(dft2(table, zeta7, zeta13, prime) for table in tables)
     table_hashes = tuple(digest(table) for table in tables)
     spectrum_hashes = tuple(digest(spectrum) for spectrum in spectra)
@@ -454,6 +499,52 @@ def main() -> None:
     )
     require(interaction_shapes == ((72, 0, 0, 0, 72),) * 3, interaction_shapes)
 
+    coordinate_ranks = tuple(rank_mod(table, prime) for table in tables)
+    interaction_ranks = tuple(rank_mod(interaction, prime) for interaction in interactions)
+    require(coordinate_ranks == (1, 1, 1), coordinate_ranks)
+    require(interaction_ranks == (1, 1, 1), interaction_ranks)
+    residue_profiles = tuple(table[0] for table in tables)
+    residue_spectra = tuple(
+        tuple(
+            sum(
+                profile[residue] * pow(zeta13, (-frequency * residue) % P, prime)
+                for residue in range(P)
+            ) % prime
+            for frequency in range(P)
+        )
+        for profile in residue_profiles
+    )
+    require(all(all(value != 0 for value in spectrum) for spectrum in residue_spectra),
+            residue_spectra)
+    require(
+        all(
+            spectra[sector][cell_frequency][residue_frequency]
+            == residue_spectra[sector][residue_frequency]
+            for sector in range(3)
+            for cell_frequency in range(Q)
+            for residue_frequency in range(P)
+        ),
+        "delta-cell Fourier factorization",
+    )
+    inverse_cells = pow(Q, -1, prime)
+    inverse_residues = pow(P, -1, prime)
+    for sector, (profile, interaction) in enumerate(zip(residue_profiles, interactions)):
+        residue_mean = sum(profile) % prime * inverse_residues % prime
+        require(
+            all(
+                interaction[cell][residue]
+                == (
+                    (int(cell == 0) - inverse_cells)
+                    * (profile[residue] - residue_mean)
+                ) % prime
+                for cell in range(Q)
+                for residue in range(P)
+            ),
+            ("ANOVA outer product", sector),
+        )
+    residue_hashes = tuple(digest(profile) for profile in residue_profiles)
+    residue_spectrum_hashes = tuple(digest(spectrum) for spectrum in residue_spectra)
+
     fixed_modes = tuple(
         tuple(
             sum(table[cell][6] * pow(zeta7, (-frequency * cell) % Q, prime)
@@ -463,12 +554,13 @@ def main() -> None:
         for table in tables
     )
     require(all(all(value != 0 for value in modes) for modes in fixed_modes), fixed_modes)
-    zero_cell_rows = tuple(
+    exact_zero_cell_rows = tuple(
         tuple(cell for cell in range(1, Q) if all(table[cell][residue] == 0
                                                  for residue in range(P)))
         for table in tables
     )
-    require(zero_cell_rows == ((1, 2, 3, 4, 5, 6),) * 3, zero_cell_rows)
+    require(exact_zero_cell_rows == ((1, 2, 3, 4, 5, 6),) * 3,
+            exact_zero_cell_rows)
 
     same_values = (
         sum(same_table[cell][1] for cell in range(Q)) % prime,
@@ -496,18 +588,22 @@ def main() -> None:
         "literal_guarded_controls_equal_unguarded_atom_restoration",
         "same_sheet_bank_recovers_the_old_point_diagonal_hash",
         "ordered_same_plus_cross_equals_full_before_every_transform",
+        "OWNER_norm_13t_equals_norm_y_forces_exact_cell_0_support",
+        "inverse_tables_are_delta_cell0_times_one_dimensional_residue_profiles",
+        "ANOVA_is_a_rank_one_outer_product_not_genuine_cell_residue_mixing",
     )
     boundary = (
         "alternate_common_residual_diagonal_coupling",
         "full_bridge_differs_from_the_Cartesian_endpoint_bridge",
-        "six_zero_cell_rows_are_only_mod_p_statements",
+        "formal_7x13_Fourier_support_is_separable_and_not_a_mixing_certificate",
         "no_collision_horizon_source_chronology_exact_address_or_LRC14_claim",
     )
     semantic_surface = (
         ENDPOINT_SHA256, POINT_SHA256, (word, t_den, nn, prime, root, zeta7, zeta13),
         digest(controls), point_hash, cross_gamma_hash, full_gamma_hash,
-        table_hashes, spectrum_hashes, shapes, interaction_shapes, fixed_modes,
-        zero_cell_rows, (*same_values, same_bridge), (*full_values, full_bridge),
+        table_hashes, spectrum_hashes, shapes, interaction_shapes, coordinate_ranks,
+        interaction_ranks, residue_hashes, residue_spectrum_hashes, fixed_modes,
+        exact_zero_cell_rows, (*same_values, same_bridge), (*full_values, full_bridge),
         cross_bridge, proof, boundary,
     )
     semantic_sha256 = hashlib.sha256(repr(semantic_surface).encode("utf-8")).hexdigest()
@@ -525,9 +621,11 @@ def main() -> None:
     print(f"same_sheet_point_gamma=(hash={point_hash},values={same_values},bridge={same_bridge})")
     print(f"gamma_decomposition=(same_plus_cross_equals_full=True,same={point_hash},cross={cross_gamma_hash},full={full_gamma_hash})")
     print(f"table_spectra=(order=(same,cross,full),shapes={shapes},table_digests={table_hashes},spectrum_digests={spectrum_hashes})")
-    print(f"full_ANOVA_shapes={interaction_shapes}")
-    print(f"fixed_class_1_0_6_seven_modes={fixed_modes}")
-    print(f"zero_cell_rows_mod_p_only={zero_cell_rows}")
+    print(f"cell_geometry=(OWNER_implies_exact_cell_0,character_occupancy_by_cell={(P**3, 0, 0, 0, 0, 0, 0)},exact_zero_rows={exact_zero_cell_rows})")
+    print(f"rank_one_factorization=(table_ranks={coordinate_ranks},ANOVA_ranks={interaction_ranks},table=delta_cell0_times_R,ANOVA=(delta_cell0-1/7)_times_(R-mean_R))")
+    print(f"residue_profiles=(profile_digests={residue_hashes},spectrum_digests={residue_spectrum_hashes},all_13_modes_nonzero=True)")
+    print(f"formal_spectral_shapes_not_mixing=(raw={shapes},ANOVA={interaction_shapes})")
+    print(f"fixed_class_1_0_6_delta_profiles_with_repeated_F7_modes={fixed_modes}")
     print(f"bridge_boundary=(full_values={full_values},full_bridge={full_bridge},cross_bridge={cross_bridge},Cartesian_bridge={CARTESIAN_BRIDGE},different=True)")
     print(f"proof={proof}")
     print(f"boundary={boundary}")

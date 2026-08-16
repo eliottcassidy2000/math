@@ -71,16 +71,21 @@
   from the unguarded THM-3514 atoms.  The residual multiplicity identities
   `n + n(n-1) = n^2` give same-sheet plus ordered cross-sheet equals full;
   the same bank recovers point gamma digest `771545a5...303f` exactly.  Same,
-  cross, and full tables all have `(91,1,6,12,72)` spectrum, each output
-  interaction has `(72,0,0,0,72)`, and all seven fixed `(1,0,6)` modes are
-  nonzero.  Rows 1--6 are recorded as mod-p zeros only.  The full residual
-  bridge `543695274352737840377` differs from the Cartesian bridge
-  `389266878372286537904`: this is an alternate diagonal, with no collision,
+  cross, and full tables have formal spectrum `(91,1,6,12,72)` and centered
+  spectrum `(72,0,0,0,72)`, but MISTAKE-417's exact hostile applies:
+  `OWNER` becomes `||y||<1/14=cell_0`.  All 2,197 character rows occupy cell
+  zero, rows 1--6 vanish in characteristic zero, and each table and ANOVA
+  matrix has rank one with factorizations `delta_0(ell)R(t)` and
+  `(delta_0-1/7)(R-mean R)`.  The 13 residue modes remain nonzero, but the
+  repeated seven cell modes are not a mixing certificate.  The full residual
+  bridge `543695274352737840377` remains nonzero and differs from the
+  Cartesian bridge `389266878372286537904`: this is an alternate diagonal,
+  with no collision,
   horizon, source, chronology, exact `C(a;X,m)`, physical-current, row-
   exclusion, or LRC(14) consequence.  Script/output/semantic LF SHA-256:
-  `ede780b135f4032be364b43a9543ede259686d1b298256a258a666cdcae083f2` /
-  `d16d4adde06483097230ec314ff59f82c84d91896fa63736ed5e99991f6a7447` /
-  `dac1a968808aaf3bf5c1f2208f62fd1c68e55b4e17af2e12aa65d8a9809a969e`.
+  `53eba805e65490d6f571371cda3efa2f69e3f96aea3b1feb6aa64367748e123e` /
+  `8d32019f7af66c85e7af45793c831eebe6a21fd7667f47fa6bf581e25b4b3aa3` /
+  `9d2070f27bcac8cf576a75bc542222be1e31679bc12e989c2f9bc276e8dd872c`.
 
 - `lrc_r5_source_aligned_relation_residue_7x13_spectrum_probe_20260816.py`
   -> matching `.out` [FINITE-EXACT SOURCE-TIME 7x13 SIMPLE-KERNEL CANDIDATE;

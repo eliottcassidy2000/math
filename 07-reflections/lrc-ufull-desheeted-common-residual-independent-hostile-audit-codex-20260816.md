@@ -1,11 +1,14 @@
-# Independent hostile audit: desheeting constructs an alternate diagonal, not the Cartesian bridge
+# Independent hostile audit: the desheeted alternate diagonal is a delta-cell lift
 
 **Status: FINITE-EXACT INDEPENDENT AUDIT ACCEPTS THE SCOPED DESHEETED
 COMMON-RESIDUAL PACKAGE.  LRC(14) remains open.**  The candidate was not
 imported.  The audit started from the hash-pinned THM-3514 endpoint engine and
 the old point-diagonal API conventions, then rebuilt the residual sweep with
 a different bitmask algorithm.  Candidate artifacts were read only after the
-clean-room semantic surface had been fixed.
+clean-room semantic surface had been fixed.  This reflection now incorporates
+the exact owner-geometry correction recorded as MISTAKE-417; it withdraws the
+original mixed-cell interpretation while preserving the independently checked
+alternate diagonal and residue bridge.
 
 ## Verdict
 
@@ -20,11 +23,13 @@ the old point diagonal is exactly the same-sheet sector, while allowing all
 ordered sheet pairs gives a larger common-residual coupling.  Same-sheet plus
 cross-sheet equals the full coupling before every Fourier transform.
 
-All three resulting cell-by-residue tables have complete `7 x 13` spectrum,
-and their output interactions retain all 72 mixed modes.  The full residual
-bridge is nonzero but differs from the original Cartesian endpoint bridge.
-Thus the package constructs a natural alternate endpoint diagonal; it does
-not identify that diagonal with the Cartesian current or with LRC ancestry.
+The full residual bridge is nonzero but differs from the original Cartesian
+endpoint bridge.  However, the endpoint owner factor forces every exact
+character row into cell zero.  Each apparent `7 x 13` table is therefore
+`delta_0(ell)R(t)` and has matrix rank one.  Its formally complete Fourier
+support and 72 centered mixed modes are a separable outer-product artifact,
+not genuine cell/residue mixing.  Thus the package constructs a natural
+alternate endpoint diagonal but no septimal spectral closure.
 
 ## Why both the word and phase descend
 
@@ -55,6 +60,28 @@ u = 169(x-aT/13),          0 <= u < 13T.
 Then `y=u/(13T)`, the word coordinate is `u mod T`, and the endpoint phase is
 `root^(742586 u)`.  This simultaneously eliminates fractions and exposes the
 sheet cancellation.
+
+## The owner hostile and exact cell collapse
+
+The load-bearing condition was already present in every endpoint interval:
+
+```text
+OWNER:  ||13t|| < 1/14.
+```
+
+On the desheeted branch `t=(y+a)/13`, integer sheet translation disappears:
+
+```text
+||13t|| = ||y+a|| = ||y|| < 1/14.
+```
+
+The right-hand side is exactly `cell_0`.  The interval sweep now requires
+`ell=0` on every active segment before evaluating a character or reducing
+modulo the split prime.  Consequently all 2,197 character rows have geometric
+occupancy `(2197,0,0,0,0,0,0)`, rows 1 through 6 of every inverse table vanish
+in characteristic zero, and the three table ranks are exactly one.  The
+earlier wording "zero only mod p" was false: the zeros are forced over the
+rational interval model.
 
 ## Guard restoration and the multiplicity mechanism
 
@@ -114,22 +141,28 @@ bridge=543695274352737840377,
 and its cross-sheet bridge is `375969203763952195911`.  The Cartesian bridge
 is `389266878372286537904`, so equality fails exactly as the typing predicts.
 
-For each of same, cross, and full, the two-dimensional spectrum has census
+For each of same, cross, and full, the formal two-dimensional spectrum still
+has census
 
 ```text
 (total, DC, F_7 axis, F_13 axis, mixed)=(91,1,6,12,72).
 ```
 
-Double-centering each full output table gives `(72,0,0,0,72)`, a stronger
-check than the candidate's required full-table control.  At the fixed residue
-class `(1,0,6)`, all seven septimal Fourier modes are nonzero in all three
-sectors.  The full-sector value is the repeated nonzero reduction
-`289814661037836286866`.
+This does not show two-coordinate interaction.  If `R(t)` is the cell-zero
+row, then exactly
 
-Rows 1 through 6 of each cell table reduce to zero in the certified split
-field.  The audit records these only as mod-`p` zero reductions.  A single
-prime cannot certify that the corresponding characteristic-zero coordinates
-are zero; only the seven nonzero Fourier reductions lift to nonvanishing.
+```text
+table(ell,t) = delta_0(ell) R(t),
+ANOVA(ell,t) = (delta_0(ell)-1/7)(R(t)-mean(R)).
+```
+
+Both matrices have rank one.  The seven Fourier transforms of `delta_0` are
+all `1`, so every septimal frequency simply repeats the same nonzero
+one-dimensional residue coefficient.  The audit checks this equality at all
+91 frequencies and verifies that the residue profile alone has 13/13
+nonzero modes.  At `(1,0,6)` the repeated full-sector value
+`289814661037836286866` is therefore a useful residue nonvanishing witness,
+but it contains no independent cell information.
 
 ## Strict boundary
 
@@ -146,13 +179,14 @@ Therefore none of the following follows:
 - a grouped exact-address coefficient or row exclusion; or
 - LRC(14).
 
-The useful next map would have to lift this residual coordinate through a
-typed collision record and compare it with the already audited source-cell
-tensor without discarding either chronology or exact address.
+Any useful next map must first introduce a refiner not implied by `OWNER` and
+pass two cheap hostiles: at least two cells must be occupied in characteristic
+zero, and the cell-by-residue matrix must have rank at least two.  Only then
+would lifting through a typed collision record, chronology, and exact address
+be worth interpreting as a mixed current.
 
 ## Reproducibility
 
-Normal and optimized transcripts are byte-identical.  The semantic digest is
-`dac1a968808aaf3bf5c1f2208f62fd1c68e55b4e17af2e12aa65d8a9809a969e`,
-and the pinned script LF digest is
-`ede780b135f4032be364b43a9543ede259686d1b298256a258a666cdcae083f2`.
+Normal and optimized transcripts are byte-identical.  The repaired semantic
+digest is `9d2070f27bcac8cf576a75bc542222be1e31679bc12e989c2f9bc276e8dd872c`.
+The final script and output digests are recorded in the results index.
