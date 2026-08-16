@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-409 (2026-08-15, 7x13 private-support sidecar) -- zero absolute H1 flux was mistaken for weighted spectral singularity
+
+- **What failed:** the first private-support reflection correctly proved that
+  every owner-potential edge current is a coboundary, but its closing sentence
+  then said spectral closure required a non-coboundary weighting.  The graph
+  cohomology quotient and the signed matrix-tree determinant are different
+  target predicates; the latter does not descend to `H^1`.
+- **Minimal witness / first failed implication:** at `k=1`, the canonical
+  private-count potential is `(4,2,4,4,8,4,4,4)`.  Its edge gradient pairs
+  zero with all six cycles, while the two tetrahedral tree sums and bridge
+  weight are `-64`, `-136`, and `-4`, giving determinant `-34816`.  Thus
+  “coboundary, therefore spectrally singular” is false.
+- **Repair / strongest survivor:** THM-3482 provisionally derives all three
+  residue-class determinant factorizations and proves they are nonzero for
+  every `k>=1`.  Holonomy remains necessary for a nonzero **absolute H1
+  class**, not for this owner-order weighted determinant.  The original
+  `7x13` incidence rank, six-dimensional cycle space, and coboundary no-go all
+  remain valid.
+- **Reusable rule:** after quotienting out exact objects, do not assume a
+  different nonlinear observable factors through that quotient.  Write the
+  actual target map and hostile-test it on a canonical exact element before
+  promoting a quotient obstruction to a spectral obstruction.
+
 ## MISTAKE-408 (2026-08-15, concurrent THM-3479 reservation) -- a stale namespace check allowed a duplicate theorem ID
 
 - **What failed:** commit `958234d4b` first published `THM-3479` as the

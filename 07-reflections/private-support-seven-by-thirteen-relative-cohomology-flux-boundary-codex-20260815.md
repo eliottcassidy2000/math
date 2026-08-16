@@ -8,7 +8,7 @@ No LRC(14), bispectrum, or Jacobian conclusion is claimed.
 
 ## The unexpected exact carrier
 
-THM-3473's provisional Boolean atlas has coactivity packets
+THM-3473's proved Boolean atlas has coactivity packets
 
 ```text
 A={1,4,5,6},       B={2,3,5,8},       C={5,7}.
@@ -104,6 +104,11 @@ absolute graph flux class:   zero without an added holonomy sidecar.
 The static Boolean atlas therefore supplies a lawful source and an exact
 no-go boundary for the D5 program.
 
+This no-go concerns **absolute graph flux only**.  It does not imply that an
+edge cochain used as the diagonal weight of a Laplacian has zero determinant.
+MISTAKE-409 records that the first version of this reflection blurred those
+two predicates.
+
 ## Weighted spectral closure reduces to two tetrahedra
 
 Put a weight `w_e` on every coactivity edge and form
@@ -133,12 +138,28 @@ can still cancel inside either sixteen-term `Tau`.  Conversely, positivity
 or a separated character orbit on each tetrahedron would prove weighted
 nonvanishing immediately.
 
+Provisional THM-3482 now supplies a sharper exact control.  Give each owner
+its private-sheet count and orient edges by owner order.  The resulting edge
+gradient has zero absolute `H^1` class, but
+
+```text
+Tau_A<0,       Tau_B<0,       w_(5,7)=-4k<0
+```
+
+for every `k>=1`; hence the weighted determinant is strictly negative.  Four
+or six edge weights are actually zero, depending on `k mod 3`.  Therefore
+neither nonzero holonomy nor all-edge support is necessary for this
+graph-level spectral predicate.  What remains missing for LRC is a lawful
+map from a physical relation current to these thirteen labelled weights.
+
 ## Connection to incoming current work
 
 The THM-3472 repair taught that a weaker morphism can preserve the target
 predicate after an isomorphism fails.  Here the opposite warning applies:
 incidence rank is strong enough for a static spectral Gram determinant but
 too weak for `H^1` flux.  The missing coordinate is phase/holonomy.
+That coordinate is missing **for absolute flux**; THM-3482 shows it is not a
+formal prerequisite for weighted determinant nonvanishing.
 
 THM-2334 provides relation-residue currents as character-twisted finite
 transforms.  The incoming relation-current transplant and the nonzero
@@ -161,5 +182,7 @@ or the two tree polynomials carry the desired physical current.
   independent cycle.
 
 The result is both encouraging and restrictive.  The repo now has a genuine
-`7 by 13` combinatorial carrier with determinant `256`; spectral closure
-still demands a non-coboundary weighting.
+`7 by 13` combinatorial carrier, an exact absolute-`H^1` no-go for static
+owner gradients, and a provisional nonzero weighted determinant on one
+canonical gradient family.  Physical LRC closure still requires the missing
+relation-current-to-edge map, not non-coboundarity by itself.
