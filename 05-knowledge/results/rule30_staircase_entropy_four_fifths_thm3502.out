@@ -1,0 +1,16 @@
+THM-3502 Rule 30 four-fifths staircase entropy exact companion
+reachable_counts_h14_23=(18619, 32885, 57741, 100901, 175680, 304714, 526563, 906525, 1555372, 2660178)
+G23_vertices=1555372 G23_edges=2660178 adjacency=zero_one
+serial_mask_transition_checks=5320356
+certificate=50*A*v<=87*v iterations=3502 min=6 max=1313 sum=389727182 slack_range=(-86,0)
+certificate_payload=ascending_(two_mask_code_u64le,weight_u64le)_pairs
+certificate_sha256=a4ce932f067e0ff21e90ccd3b4216be4dbbba9440e657b4cebc7ff834b302e33
+prefactor_check=9291820096969604492187500000000000000000000000<14349764342370835133956480823902911608090938368; N_h<2^9*(87/50)^h_for_h>=22
+entropy_check=87^5=4984209207<16*50^5=5000000000; eta<4/5
+marker_check=3^5=243<2^8=256
+tariff_samples_(w,ell,h,b,address_bits)=((128, 64, 30, 27, 60), (256, 184, 105, 87, 180), (512, 432, 260, 211, 428), (1024, 936, 575, 463, 932), (2048, 1952, 1210, 971, 1948), (4096, 3992, 2485, 1991, 3988))
+compiler_query_tariff=(16/5+o(1))*n^2/w^2
+spurious_path=N24:4535965 code:22884124670 word:ABCBCBCBCBCAAAAAAAAAAAAA prefix:ABCBCBCBCBCAAAAAAAAAAAA suffix:BCBCBCBCBCAAAAAAAAAAAAA physical_word=0
+finite_lower_signal={CABC,BCBC}^m_subset_S_4m_through_m=6 checks=126 universal_claim=0
+scope=upper_bound_and_compiler_only prizes_solved=0 literature_novelty_claimed=0
+all_checks=PASS

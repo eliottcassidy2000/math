@@ -1,0 +1,21 @@
+THM-3501 exact companion: PASS
+depths=5..16 hard_unwrapped=12
+independent_engines=centered_rule30/packed_Phi, trinomial_bits/Green_recurrence
+foundation_universe=rule30_times=0..320 green_times=0..160 section_lengths=1..32 section_depths=2..16
+depth=5 p=8 ell=0 N=1 top_carrier_weight=6 frobenius_carrier_weight=1 raw=q+q^3+q^5 inward=q G=0
+depth=6 p=8 ell=1 N=2 top_carrier_weight=2 frobenius_carrier_weight=2 raw=q+q^2+q^4+q^6 inward=1+q^2 G=1+q
+depth=7 p=16 ell=0 N=3 top_carrier_weight=4 frobenius_carrier_weight=1 raw=q^3+q^4+q^5+q^7 inward=q+q^3 G=1+q
+depth=8 p=32 ell=7 N=4 top_carrier_weight=24 frobenius_carrier_weight=2 raw=1+q^2+q^4+q^6+q^8 inward=1+q^2+q^4 G=0
+depth=9 p=32 ell=0 N=5 top_carrier_weight=14 frobenius_carrier_weight=1 raw=1+q+q^2+q^3+q^4+q^5+q^6+q^7+q^9 inward=q+q^3+q^5 G=q^2+q^4
+depth=10 p=64 ell=1 N=6 top_carrier_weight=32 frobenius_carrier_weight=2 raw=q^4+q^6+q^8+q^10 inward=1+q+q^4+q^6 G=1+q
+depth=11 p=64 ell=0 N=7 top_carrier_weight=16 frobenius_carrier_weight=1 raw=q+q^2+q^5+q^6+q^7+q^8+q^9+q^11 inward=q^2+q^4+q^5+q^7 G=1+q+q^4+q^6
+depth=12 p=64 ell=3 N=8 top_carrier_weight=34 frobenius_carrier_weight=2 raw=1+q^2+q^6+q^8+q^10+q^12 inward=1+q^3+q^6+q^8 G=q^2+q^3
+depth=13 p=64 ell=0 N=9 top_carrier_weight=30 frobenius_carrier_weight=1 raw=1+q^3+q^6+q^7+q^9+q^11+q^13 inward=1+q^4+q^6+q^7+q^9 G=q^3+q^4
+depth=14 p=64 ell=1 N=10 top_carrier_weight=34 frobenius_carrier_weight=2 raw=q^4+q^5+q^9+q^10+q^12+q^14 inward=1+q+q^4+q^5+q^8+q^10 G=1+q+q^8+q^9
+depth=15 p=64 ell=0 N=11 top_carrier_weight=20 frobenius_carrier_weight=1 raw=1+q^4+q^6+q^11+q^12+q^13+q^15 inward=1+q+q^4+q^6+q^8+q^9+q^11 G=1+q+q^8+q^9
+depth=16 p=128 ell=15 N=12 top_carrier_weight=110 frobenius_carrier_weight=2 raw=q^2+q^4+q^6+q^7+q^8+q^10+q^12+q^14+q^16 inward=q^2+q^4+q^6+q^7+q^8+q^10+q^12 G=0
+k=5 positive: raw=q+q^3+q^5 inward=q nonzero_seam=2 ell=0
+k=6 hostile: raw=q+q^2+q^4+q^6 full=q+q^2 inward=1+q^2 Gamma=q^4+q^6 G=1+q K=1+q+q^4+q^6 M0(W)=q^2+q^4
+k=6 canonical cut table=1+q^2,0,q,1+q,1,q,q^2,1+q
+k=6 sparse-Frobenius cut table=1+q^2,0,1,1+q,1,q,1+q+q^2,1+q
+all gates use explicit check(); optimized mode is fully active
