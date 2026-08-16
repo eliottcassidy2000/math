@@ -40,9 +40,8 @@ THM-3479 proves U_full `169/169`,`13^3`,`72/72` (U_clock none); THM-3514 gives
 owner `52/117`, rank4/full Walsh-drift; THM-3515 gives five rank5 rows and
 `72/72` charts; THM-3518 pins phases and `56,592` zero cycle pairings.
 THM-3524 blocks folded `C7/K4` transport by rank `3<4`; audited ancestry
-realizes 48 U_full buckets.  A candidate has `169/169` `(1,0,t)`/owner
-kernels and class `(1,0,6)`; unaudited.
-This is residue-only: `C(a;X,m)`, current, `H^1`, scalar/LRC remain open.
+realizes 48 U_full buckets.  An unaudited candidate has all 169
+`(1,0,t)`/owner kernels, including `(1,0,6)`.  Exact address/current/`H^1`/LRC remain open.
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;
 HYP-8871 leaves `165` rows.  THM-2363/THM-2368 are sidecars; THM-2417--2894
@@ -340,8 +339,8 @@ is sharp: equal counts allow two densities or none.
   [3513](../01-canon/theorems/THM-3513-fixed-G-hybrid-newton-renewal-faces.md)
   completes `G`; 3521 clears `R5`; 3522 gives `R5/R6` packets
   `A(1699,615)/A(10663,3867)`; 3523 clears `R7`, giving
-  `A(66907,24255)`; 3525 proves degree243 and `[Delta_5]=[-2R_5]`.
-  `R5` image/fifth component, `R7` image, degree729/all-level remain OPEN. THM-2681
+  `A(66907,24255)`; 3525: degree243, `[Delta_5]=[-2R_5]`.
+  `R5` fifth image, `R7` image, degree729/all-level remain OPEN. THM-2681
   blocks the `A4/S4` cubic; THM-2685--2708 give its
   gain/holonomy.
   Audited THM-3448/3517: cyclic `x/y/z` are primitive all grades; `m=3` gives `S5` quintics `[L5]`, but `C3` Jelonek is sign-blind, as are odd-family `C_(2m-3)`. THM-1605's formula is absent (MISTAKE-416); arbitrary quartic `C3` remains OPEN.
