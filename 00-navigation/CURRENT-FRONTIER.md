@@ -28,11 +28,11 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 Direct frontier: `<=6`; projected caps `1579/216`. At `z1=216`, THM-3361
 closes the three `L720720` rows; THM-3378 closes row 94 of the next family and
 leaves ledger/wall/families `372913/109/12`; 12 rows remain.
-THM-3349/3350/3352/3355 close all `561` reflected six-level `k=1` bodies;
-THM-3360 proves the physical edge floor. THM-3381 bounds phase/tree drift and
-refutes residue-blind transfer. Arbitrary `k<=1`, projected `k=2,3`, rung, physical entry and LRC
-remain open; projected screens are not physical covers.
-THM-3356/3366 leave k2/k3 `4056/1897`; exact-six k3 is a 20-edge `Phi`-DAG and k2's `C3` is divisor-spliced. THM-3385/3387--3395/3398 give q2--7 and all-q mode/cochain laws.
+THM-3349--3360 close all `561` reflected six-level `k=1` bodies and prove the
+physical edge floor. THM-3381 refutes residue-blind phase/tree transfer.
+Arbitrary `k<=1`, projected `k=2,3`, rung, physical entry and LRC remain open.
+THM-3356/3366 leave k2/k3 `4056/1897`; k3 is a 20-edge `Phi`-DAG and k2's
+`C3` is divisor-spliced. THM-3385--3398 give q2--7/all-q mode/cochain laws.
 THM-3414--3416 give ZMC rank-4/5/6 bases `8,9` / `10,12` / `11,15,23,25`.
 THM-3425 gives primitive cap-six support.
 [THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md) proves 15-atom cap-seven support only at zero current.
@@ -40,8 +40,9 @@ THM-3479 proves U_full `169/169`,`13^3`,`72/72` (U_clock none); THM-3514 gives
 owner `52/117`, rank4/full Walsh-drift; THM-3515 gives five rank5 rows and
 `72/72` charts; THM-3518 pins phases and `56,592` zero cycle pairings.
 THM-3524 blocks folded `C7/K4` transport by rank `3<4`; audited ancestry
-realizes 48 U_full buckets.  An unaudited candidate has all 169
-`(1,0,t)`/owner kernels, including `(1,0,6)`.  Exact address/current/`H^1`/LRC remain open.
+realizes 48 U_full buckets. An unaudited source-time candidate retains seven
+cells: every residue has `91/91` spectrum and class `(1,0,6)` has `72/72` mixed.
+This is residue-only: `C(a;X,m)`, current, `H^1`, scalar/LRC remain open.
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;
 HYP-8871 leaves `165` rows.  THM-2363/THM-2368 are sidecars; THM-2417--2894

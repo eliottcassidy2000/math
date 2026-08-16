@@ -1,5 +1,24 @@
 # Script Results Index
 
+- `lrc_r5_source_aligned_relation_residue_7x13_spectrum_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT SOURCE-TIME 7x13 SIMPLE-KERNEL CANDIDATE;
+  INDEPENDENT AUDIT PENDING].  Retaining THM-2594's seven half-open cells
+  before the source-aligned common-base marginal gives a
+  `39x39x7x13` tensor with `362/1521` atom-pair and `5150/138411` entry
+  support; summing the cell coordinate recovers every prior common-offset
+  entry.  Contracting against the complete THM-3479 refined `(1,0,t)`
+  endpoint bank gives full `91/91=(1+6)(1+12)` Fourier support for every one
+  of the 13 residues.  For the fixed relation class `(1,0,6)`, doubly
+  centering the output table leaves all `72/72` mixed cell-owner modes
+  nonzero; doubly centering the endpoint pair matrix first still leaves
+  `91/91`.  Cell-erasure and owner-erasure controls have zero mixed support.
+  This is a preintegrated `AX/BY` residue pushforward, not exact
+  `C(a;X,m)`, a physical current, THM-2512 bridge, row exclusion, or
+  LRC(14).  Script/output/semantic LF SHA-256:
+  `5f3fbf08bef6f9a61e684f0f7616e80e1dbbda4f6bb2ed4ca3788d3b8b53d65a` /
+  `c16e662584f381eb14f1aeeb315542391613603e02c061707a7e60870712aa06` /
+  `cd55336bb1dfe5f37f020c242c4bca5b7c6be339ec57e95d69e10bbe68d9dbaa`.
+
 - `keller_level_five_degree243_finite_field_probe_independent_20260816.py`
   and `keller_level_five_degree243_fourier_flint_independent_audit_20260816.py`
   -> matching `.out` files [THM-3525 PROVED + VERIFIED-EXACT +
