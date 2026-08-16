@@ -44,7 +44,7 @@ The live concept board was:
 |---|---|---|---|---|---|
 | Factorial | Kummer--Legendre coefficient heights -> actual Newton polygon, by normalized residual reduction mod `p` | exact height when `rho!=0` | extra valuation and new hull geometry when `rho=0` | `rho` at every extreme raw vertex | compute the finite residue table only on raw vertices |
 | Dirichlet | periodic-polynomial lanes -> twisted Dirichlet functions, by Fourier transform plus Hurwitz continuation | every labelled lane coefficient | finite prefix; gauge if period/root labels are dropped | character and pole-height labels | inverse DFT of all residues |
-| Rule 30 | slack polynomial and phase profile -> corner fibre product, by two restrictions | their common marked bit | mixed slack-by-phase coupling | a pointed Hasse carrier/section | physical two-section hostile |
+| Rule 30 | slack polynomial and phase profile -> corner fibre product, by two restrictions | their common marked bit | mixed slack-by-phase coupling | a pointed Hasse carrier/section | arc-constrained two-lift hostile |
 | LRC | endpoint atoms -> relation-chart factors, by endpoint-character summation | the unrestricted mod-13 aggregate and role character | physical grouping, sign/order, common ancestry, chronology | a joint atom key before marginalization | compare point/component contractions with the Cartesian control, then demand an address-covariance gate |
 | Jacobian | inverse-sheet values of `H` -> `N(H)`, by finite norm and the `L`-adic valuation | divisor support and total order | individual sheet identities | the escaping-pair face plus a finite-sheet unit control | compute the initial face and one finite hostile, before expanding `J` |
 
