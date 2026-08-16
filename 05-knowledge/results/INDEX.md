@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `shortlex_bary_equal_count_harmonic_boundary_probe_20260816.py` -> matching
+  `.out` [ELEMENTARY ALL-BASE THEOREM CANDIDATE + VERIFIED-EXACT SIDECAR;
+  INDEPENDENT AUDIT PENDING].  In every base `b>=2`, the first and last
+  `1/b` blocks of a shortlex level have the same count `b^(n-1)` but limiting
+  harmonic masses `log((2b-1)/b)` and
+  `log(b^2/(b^2-b+1))`; their strict gap is certified by
+  `(2b-1)(b^2-b+1)-b^3=(b-1)^3`.  Superdominant alternating stages therefore
+  give an equal-count language with no logarithmic density.  For `b=3` the
+  two densities are `log(5/3)/log3` and `log(9/7)/log3`.  A bounded-width
+  ternary branch ray has finite harmonic mass, so the one-word-per-level
+  Fibonacci/Berggren ray has logarithmic density zero in branch shortlex.
+  Ternary depth two is `T9`; its `{0,2}^2` Boolean face is a `T4` with six
+  edge objects and three perfect matchings, not an automatic `T6`.  No
+  ancestry/LRC/JC transport.  Script/output/semantic LF SHA-256:
+  `771119f6feaca655cd6845353c0925f416efba7497ee5170722899fa1cd4cc2a` /
+  `b4b755ac519f488987d8cc801bc56470c5788a32af1a6e645bde835b257369f1` /
+  `8889cd4d5d3da976a099824e6242fef1a9b9f80fe83e8ae1a4c6fba5dbdf517f`.
 - `lrc_ufull_guard_bucket_all_role_spectral_probe_20260816.py` -> matching
   `.out` [FINITE-EXACT ENDPOINT-RESPONSE THEOREM CANDIDATE; INDEPENDENT AUDIT
   PENDING].  Extends the audited U_full guard-bucket factorization from the
