@@ -326,9 +326,9 @@ density need not settle `z=1` mass.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
-- **Rule 30:** [3471](../01-canon/theorems/THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum.md); [3476](../01-canon/theorems/THM-3476-rule30-depth-four-transverse-jet-barrier-and-slack-pascal-atlas.md);
+- **Rule 30:** [3476](../01-canon/theorems/THM-3476-rule30-depth-four-transverse-jet-barrier-and-slack-pascal-atlas.md);
   [3480](../01-canon/theorems/THM-3480-rule30-staircase-transducer-entropy-and-nonrectangular-macroblock-compiler.md); [3481](../01-canon/theorems/THM-3481-rule30-cyclic-arc-norm-rank-and-marked-innovation-spectrum.md);
-  [3488](../01-canon/theorems/THM-3488-rule30-inward-slack-monicity-and-parity-cartier-ramification.md); [3489](../01-canon/theorems/THM-3489-rule30-packed-restart-and-pointed-pascal-face.md); [3491](../01-canon/theorems/THM-3491-rule30-seven-four-staircase-compiler.md). OPEN. **RESERVED:** [3492](../01-canon/theorems/THM-3492-rule30-fiber.md).
+  [3488](../01-canon/theorems/THM-3488-rule30-inward-slack-monicity-and-parity-cartier-ramification.md); [3489](../01-canon/theorems/THM-3489-rule30-packed-restart-and-pointed-pascal-face.md); [3491](../01-canon/theorems/THM-3491-rule30-seven-four-staircase-compiler.md). OPEN. **RESERVED:** [3492](../01-canon/theorems/THM-3492-rule30-fiber.md), [3493](../01-canon/theorems/THM-3493-rule30-dyadic-wrap-atlas.md).
 - **Jacobian/Dixmier:** `JC(2)`/`DC(2)` remain open. THM-3459 separates Rule 30
   lifts; no JC map. THM-3438 gives `KDeg(m)={1,3,4,...}` (`m>=3`), all-grade
   `S_n`, first mixed grade `9`, global G1 and a non-radical `S_5` inverse;
