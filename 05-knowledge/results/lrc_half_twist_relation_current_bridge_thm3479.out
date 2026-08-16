@@ -54,7 +54,7 @@ q51=(residues,normalized,witness,profile,mod7,v13)=((1, 1, 11, 11, 18, 12, 34, 3
 q51_affine=(residues,bars_mod34,k_mod3,fibres)=((1, 1, 11, 11, 18, 12, 34, 35, 23), (1, 1, 11, 11, 18, 12, 0, 1, 23), (0, 0, 0, 0, 0, 0, 1, 1, 0), ((0, (), (0, 1, 16), (10, 11, 12)), (1, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16), (0, 16), (0, 16)), (2, (), (0, 15, 16), (4, 5, 6))))
 
 [7x13 private-support carrier map audit]
-carrier_source_hashes=(('THM-3473-CANDIDATE', 'RESERVED', 'b126e702e6763574f7b36ceea50d15161d20d40ee270262fa0d97947d533ca56'), ('PRIVATE-7x13-SCRIPT', 'FINITE-EXACT-SIDECAR', '6f4487b69ba033fb75f64f70536b8f4c6310a82d74cdb59301827140a89df7e1'), ('PRIVATE-7x13-OUTPUT', 'FINITE-EXACT-SIDECAR', 'b9ef232ddc831fbc51d0e1f9c90d588305ffe41749e24a212410328f141b4004'))
+carrier_source_hashes=(('THM-3473', 'PROVED', '05236a7338a4c92b443b2798508d407e2e4f82d942111d022064f6ec9fe86ca2'), ('PRIVATE-7x13-SCRIPT', 'FINITE-EXACT-SIDECAR', '6efa87aa9f9b50d57d7a2db3c282ad216057b41c10af08f648e3f3398e457b91'), ('PRIVATE-7x13-OUTPUT', 'FINITE-EXACT-SIDECAR', '77a3d5786845fdac988e8a4d23867c699368dc6d0a5714224476e24357d7ae20'))
 source_relation_labels=('c1', 'c2', 'c3', 'H', 'q1', 'q2', 'q3', 'q4', 'q5')
 target_private_owner_labels=('u1', 'u2', 'u3', 'u4', 'u5', 'u6', 'u7', 'u8')
 shared_label_dictionary=()
@@ -66,7 +66,7 @@ source_character_line_and_translation_order=(13, 13)
 c13_equivariant_bijection_exists=False
 carrier_map_verdict=NO_C13_EQUIVARIANT_13-TWIST-TO-EDGE_BIJECTION
 SOURCE=U_full/U_clock nine-coordinate relation tuples and the F13^2 coordinate-twist bank
-TARGET=thirteen edges of the audit-pending THM-3473 private-support two-section
+TARGET=thirteen edges of the proved THM-3473 private-support two-section
 CANDIDATE_MAP=a bijection from one translation-stable 13-character fibre to the thirteen edges
 PRESERVED_PREDICATE_SOUGHT=nonzero endpoint weights yielding nonzero bridge weight and both K4 tree sums
 LOST_INFORMATION=relation address, clocks, q11 masks, endpoint phase, private-sheet counts, and k-mod-3 state
@@ -77,6 +77,6 @@ PROVED_BY_COMPANION=explicit relation; literal masks; delayed masses; U_full all
 OBSTRUCTION=the native 13-character C13 action has no equivariant bijection to the private-support edge carrier; no canonical current-to-edge map is supplied
 OPEN=C(relation;X,m) for both tuples; U_clock A(e_c2); coupled all-91-unit B(q); non-equivariant labelled carrier map; phase/holonomy; ancestry/bispectrum; lawful Boolean THM-2512 current; scalar-row exclusion; LRC(14)
 semantic_sha256=1bf53086d3da347dde443175462be716da6e9dac54c96582718d19ec8fddff21
-carrier_semantic_sha256=bf31c254225ca1b6e39f00dfb80bee1a27308d1480bc555053df4047084c6c9d
-script_lf_sha256=e1e5d95acfeed83f6388578bd8de3c954c0523db9ec5a4e311ee79154ffcbaa6
+carrier_semantic_sha256=3f17c2206feec73da48a989ab2150ceb1c7d1bc275c77291df476d882957581a
+script_lf_sha256=6b8bc12eb0e6a2bd03ce9a1add43561a1fa27872c3584cc980f98c3e324e2c2b
 ALL DETERMINISTIC EXACT CHECKS PASSED

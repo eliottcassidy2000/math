@@ -2,8 +2,8 @@
 id: THM-3484
 title: "Ternary weighted-determinant minimal recurrence and cubic Fourier degree drop"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT PENDING.  The explicit period-three degree-seven word defined below
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The explicit
+  period-three degree-seven word defined below
   has minimal characteristic polynomial
   (x-1)^8(x^2+x+1)^7 and hence minimal recurrence order 22, two below the
   naive order 24.  The drop occurs because all three residue polynomials have
@@ -17,7 +17,9 @@ audit: >
   order-22 recurrence through k=5000; generating numerator; two shortened-
   factor hostiles; rational Berlekamp-Massey reconstruction; exact nonzero
   22x22 Hankel determinant and prime-power factorization; security, semantic,
-  and normal/optimized/stored replay gates; independent audit pending
+  and normal/optimized/stored replay gates; independent derivation audit of
+  every polynomial lane, Fourier component, minimality argument, recurrence,
+  generating numerator, hostile, harmonic coefficient, and Hankel determinant
 depends_on:
   - THM-3482-private-count-gradient-weighted-spectral-closure-without-absolute-h1-flux
 related:
@@ -25,16 +27,15 @@ related:
   - THM-3455-berggren-q-spine-cap-seven-atom-sieve-and-fibonacci-rank-spectrum
 script: 04-computation/lrc_ternary_weighted_determinant_minimal_recurrence_thm3484.py
 output: 05-knowledge/results/lrc_ternary_weighted_determinant_minimal_recurrence_thm3484.out
-script_sha256: 1f6edbcba3dc30ee6a279737a0783c9ba4fecb91eda77712f5dd30935597c686
-output_sha256: d3823457e7d277747d925bef2e85afbf112254c649c24a306df4d81be017c39b
+script_sha256: e0bf5f055b65a508c572530fceae70888e12cafed249d840ea0508cf8c4204fd
+output_sha256: d6f68554cea8243670e84a4d7ac32d610553dbb582091b0e77ee4a7b2af83ea3
 semantic_sha256: 0c9cac55b66f8a8aa4241ad728e3336dd000cff25544f3df7eef9af120012518
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3484 -- the ternary determinant word has order 22, not 24
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 The recurrence proof is self-contained for the explicit sequence below.
 Proved THM-3482 identifies that sequence with its private-gradient weighted
@@ -228,6 +229,14 @@ The standard-library companion derives `(10)--(13)`, audits `(12)` through
 reconstructs the recurrence by rational Berlekamp--Massey, and independently
 computes and checks the Hankel determinant `(9)`.  It includes both shortened-
 factor hostiles, security gates, and a frozen semantic digest.
+
+The independent immutable-package audit re-expanded all three THM-3482 lanes,
+rederived the cubic Fourier decomposition and its degrees, proved minimality
+from the distinct exponential colours, checked all recurrence and numerator
+coefficients, reproduced both shortened-factor failures and the exact
+`22x22` Hankel factorization, and verified the three harmonic coefficients.
+It found and repaired two stale status/scope sentences left from THM-3482's
+former provisional stage; no mathematical or computational defect remained.
 
 This theorem proves no property of an LRC relation current, no physical edge
 assignment, no bispectrum nonvanishing, no Jacobian statement, and no

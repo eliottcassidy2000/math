@@ -2,8 +2,8 @@
 
 **Research reflection / provenance and route synthesis, not a truth source.**
 The exact claims are in the RESERVED THM-3479 candidate and its deterministic
-companion.  The private-support graph is inherited only from the frozen
-FINITE-EXACT sidecar to audit-pending THM-3473.  Nothing here proves a physical
+companion.  The private-support graph is inherited from proved THM-3473 and
+its frozen FINITE-EXACT incidence sidecar.  Nothing here proves a physical
 current, a bispectrum, a scalar-row exclusion, or LRC(14).
 
 ## Inheritance pass

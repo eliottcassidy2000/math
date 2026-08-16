@@ -12,7 +12,7 @@ status: >
   address term.  Exact q=27 and q=51 CRT lifts preserve the mod-7 and 13-adic
   decorations, including q=51's affine k mod 3 character.  The natural
   C13-equivariant attempt to identify a 13-character fibre with the thirteen
-  edges of the audit-pending private-support carrier is obstructed.  No
+  edges of the proved private-support carrier is obstructed.  No
   grouped relation coefficient, all-91-unit aggregate, ancestry/bispectrum,
   physical current, scalar-row exclusion, or LRC(14) conclusion follows.
 source: codex/relation-current-bridge/2026-08-15
@@ -38,10 +38,10 @@ related:
   - HYP-9032-the-transplant-trichotomy-rehoming-the-91-stalk-laws
 script: 04-computation/lrc_half_twist_relation_current_bridge_thm3479.py
 output: 05-knowledge/results/lrc_half_twist_relation_current_bridge_thm3479.out
-script_sha256: e1e5d95acfeed83f6388578bd8de3c954c0523db9ec5a4e311ee79154ffcbaa6
-output_sha256: e7d9ad73d653c878c0c209905e458ae02af781d8c8a79e2494dd269100f30b4d
+script_sha256: 6b8bc12eb0e6a2bd03ce9a1add43561a1fa27872c3584cc980f98c3e324e2c2b
+output_sha256: 23185975ce26fa1dec0262894d1c3a14b3f5b040079fea7ab308e2d7f518e2b8
 semantic_sha256: 1bf53086d3da347dde443175462be716da6e9dac54c96582718d19ec8fddff21
-carrier_semantic_sha256: bf31c254225ca1b6e39f00dfb80bee1a27308d1480bc555053df4047084c6c9d
+carrier_semantic_sha256: 3f17c2206feec73da48a989ab2150ceb1c7d1bc275c77291df476d882957581a
 hash_basis: LF-normalized bytes
 ---
 
@@ -353,9 +353,8 @@ the strongest exact boundary, not a cosmetic distinction.
 
 ## 6. The 7 by 13 carrier: exact equivariance obstruction
 
-This section uses the frozen edge set from the FINITE-EXACT sidecar to the
-**audit-pending** THM-3473 candidate; THM-3473 is related, not a proved
-dependency.  Its private-owner packets are
+This section uses proved THM-3473 and the frozen edge set from its
+FINITE-EXACT incidence sidecar.  Its private-owner packets are
 
 ```text
 {u1,u4,u5,u6}, {u2,u3,u5,u8}, {u5,u7},               (38)
@@ -449,12 +448,12 @@ enumerates all target graph automorphisms.
 The immutable LF hashes are
 
 ```text
-script:  e1e5d95acfeed83f6388578bd8de3c954c0523db9ec5a4e311ee79154ffcbaa6
-output:  e7d9ad73d653c878c0c209905e458ae02af781d8c8a79e2494dd269100f30b4d
+script:  6b8bc12eb0e6a2bd03ce9a1add43561a1fa27872c3584cc980f98c3e324e2c2b
+output:  23185975ce26fa1dec0262894d1c3a14b3f5b040079fea7ab308e2d7f518e2b8
 core semantic:
          1bf53086d3da347dde443175462be716da6e9dac54c96582718d19ec8fddff21
 carrier semantic:
-         bf31c254225ca1b6e39f00dfb80bee1a27308d1480bc555053df4047084c6c9d
+         3f17c2206feec73da48a989ab2150ceb1c7d1bc275c77291df476d882957581a
 ```
 
 The exact companion proves the finite statements above.  Independent audit

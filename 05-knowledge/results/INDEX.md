@@ -1,8 +1,8 @@
 # Script Results Index
 
 - `lrc_ternary_weighted_determinant_minimal_recurrence_thm3484.py` ->
-  matching `.out` [THM-3484 RESERVED / PROVISIONAL PROOF CANDIDATE +
-  VERIFIED-EXACT; independent audit pending].  The explicit three-lane
+  matching `.out` [THM-3484 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED].  The explicit three-lane
   degree-seven word related to THM-3482 has minimal characteristic polynomial
   `(x-1)^8(x^2+x+1)^7`, hence order `22` rather than the naive order `24`.
   The common leading term `-16384k^7` lowers both nontrivial cubic Fourier
@@ -11,11 +11,12 @@
   `-2^382*3^191*5^22*7^8*61^7`.  Both shortened-factor hostiles fire,
   rational Berlekamp--Massey returns order 22, and each ternary lane has
   natural/harmonic coefficient `1/3`.  Script/output/semantic LF SHA-256:
-  `1f6edbcba3dc30ee6a279737a0783c9ba4fecb91eda77712f5dd30935597c686` /
-  `d3823457e7d277747d925bef2e85afbf112254c649c24a306df4d81be017c39b` /
+  `e0bf5f055b65a508c572530fceae70888e12cafed249d840ea0508cf8c4204fd` /
+  `d6f68554cea8243670e84a4d7ac32d610553dbb582091b0e77ee4a7b2af83ea3` /
   `0c9cac55b66f8a8aa4241ad728e3336dd000cff25544f3df7eef9af120012518`.
-  The theorem is self-contained for the explicit word; its determinant and
-  LRC interpretations remain outside the claim.
+  The theorem is self-contained for the explicit word; its determinant
+  interpretation is inherited from proved THM-3482, while relation-current
+  and LRC interpretations remain outside the claim.
 - `lrc_private_count_gradient_weighted_spectral_thm3482.py` -> matching
   `.out` [THM-3482 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Orient
   the thirteen THM-3473 coactivity edges
@@ -100,12 +101,30 @@
   bijection maps a native thirteen-character fibre to the thirteen
   private-support edges.  A labelled non-equivariant map and phase/holonomy
   remain open.  Script/output/core-semantic/carrier-semantic LF SHA-256:
-  `e1e5d95acfeed83f6388578bd8de3c954c0523db9ec5a4e311ee79154ffcbaa6` /
-  `e7d9ad73d653c878c0c209905e458ae02af781d8c8a79e2494dd269100f30b4d` /
+  `6b8bc12eb0e6a2bd03ce9a1add43561a1fa27872c3584cc980f98c3e324e2c2b` /
+  `23185975ce26fa1dec0262894d1c3a14b3f5b040079fea7ab308e2d7f518e2b8` /
   `1bf53086d3da347dde443175462be716da6e9dac54c96582718d19ec8fddff21` /
-  `bf31c254225ca1b6e39f00dfb80bee1a27308d1480bc555053df4047084c6c9d`.
+  `3f17c2206feec73da48a989ab2150ceb1c7d1bc275c77291df476d882957581a`.
   Grouped `C(a;X,m)`, U_clock `A(e_c2)`, all-unit `B(q)`, ancestry,
   bispectrum, physical current, scalar-row exclusion, and LRC(14) are OPEN.
+- `lrc_relation_role_chart_weighted_closure_probe_20260815.py` -> matching
+  `.out` [FINITE-EXACT STRUCTURAL SIDECAR TO RESERVED THM-3479; NOT CANON].
+  The six `-27` relation slots split as the blocker triple and
+  `{q2,q3,q4}`, matching the two outer triples of the proved two-`K4`
+  carrier.  Deleting `q1` as rational gauge, sending `H` to the unique hub
+  and omitted `q5` to the unique leaf gives 72 labelled role charts forming
+  one `Aut(G)` orbit.  The induced rank-seven map lands in `B^1(G;Q)` and
+  has zero pairing with all six absolute cycles.  Nevertheless all `72/72`
+  signed weighted tree determinants are nonzero on each of U_full and
+  U_clock, always with exact `v_13=4`; the displayed determinants are
+  `17908964716879810126984704` and
+  `-32968453616912573701504956325888921680`.  The integral projection has
+  index 41, and the flat-potential hostile vanishes.  This uses relation
+  coordinates as potentials, not endpoint amplitudes or a physical current.
+  Script/output/semantic LF SHA-256:
+  `e8eea838da1b4636c9796b71382e8a182e7ecfeb4ea17fef7eb265289889c502` /
+  `b25ea10e40082d2a1ced9d7f85a6d3525dbffde8cfd4bdb7ee6a0fe3ca266ad4` /
+  `07daaa2bd1f5fd09ff433e40703ecd7635b59aef520a68861a4fef3437b9a1b3`.
 - `lrc_private_support_7x13_incidence_h1_probe_20260815.py` -> matching
   `.out` [FINITE-EXACT STRUCTURAL SIDECAR TO PROVED THM-3473].  The
   private-support two-section has eight vertices and thirteen

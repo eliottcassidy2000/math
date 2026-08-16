@@ -12,7 +12,7 @@ The program checks four separately typed layers.
 4. Exact q=27 and q=51 congruence lifts preserve their literal covers, with
    the q=51 affine k mod 3 character retained.
 5. The natural C13-equivariant attempt to identify a 13-character fibre with
-   the provisional private-support carrier's 13 edges is obstructed exactly:
+   the proved private-support carrier's 13 edges is obstructed exactly:
    the graph automorphism group has no element of order 13.  No arbitrary
    non-equivariant edge labelling is manufactured.
 
@@ -97,21 +97,21 @@ HASH_PINS = (
 
 CARRIER_HASH_PINS = (
     (
-        "THM-3473-CANDIDATE",
+        "THM-3473",
         ROOT / "01-canon/theorems/THM-3473-three-times-p-eight-owner-private-sheet-partition-and-irredundancy.md",
-        "b126e702e6763574f7b36ceea50d15161d20d40ee270262fa0d97947d533ca56",
-        "RESERVED",
+        "05236a7338a4c92b443b2798508d407e2e4f82d942111d022064f6ec9fe86ca2",
+        "PROVED",
     ),
     (
         "PRIVATE-7x13-SCRIPT",
         ROOT / "04-computation/lrc_private_support_7x13_incidence_h1_probe_20260815.py",
-        "6f4487b69ba033fb75f64f70536b8f4c6310a82d74cdb59301827140a89df7e1",
+        "6efa87aa9f9b50d57d7a2db3c282ad216057b41c10af08f648e3f3398e457b91",
         "FINITE-EXACT-SIDECAR",
     ),
     (
         "PRIVATE-7x13-OUTPUT",
         ROOT / "05-knowledge/results/lrc_private_support_7x13_incidence_h1_probe_20260815.out",
-        "b9ef232ddc831fbc51d0e1f9c90d588305ffe41749e24a212410328f141b4004",
+        "77a3d5786845fdac988e8a4d23867c699368dc6d0a5714224476e24357d7ae20",
         "FINITE-EXACT-SIDECAR",
     ),
 )
@@ -120,7 +120,7 @@ EXPECTED_SEMANTIC_SHA256 = (
     "1bf53086d3da347dde443175462be716da6e9dac54c96582718d19ec8fddff21"
 )
 EXPECTED_CARRIER_SEMANTIC_SHA256 = (
-    "bf31c254225ca1b6e39f00dfb80bee1a27308d1480bc555053df4047084c6c9d"
+    "3f17c2206feec73da48a989ab2150ceb1c7d1bc275c77291df476d882957581a"
 )
 
 REL_LABELS = ("c1", "c2", "c3", "H", "q1", "q2", "q3", "q4", "q5")
@@ -1645,7 +1645,7 @@ def main() -> None:
     print(f"c13_equivariant_bijection_exists={carrier_obstruction[12]}")
     print(f"carrier_map_verdict={carrier_obstruction[13]}")
     print("SOURCE=U_full/U_clock nine-coordinate relation tuples and the F13^2 coordinate-twist bank")
-    print("TARGET=thirteen edges of the audit-pending THM-3473 private-support two-section")
+    print("TARGET=thirteen edges of the proved THM-3473 private-support two-section")
     print("CANDIDATE_MAP=a bijection from one translation-stable 13-character fibre to the thirteen edges")
     print("PRESERVED_PREDICATE_SOUGHT=nonzero endpoint weights yielding nonzero bridge weight and both K4 tree sums")
     print("LOST_INFORMATION=relation address, clocks, q11 masks, endpoint phase, private-sheet counts, and k-mod-3 state")

@@ -73,6 +73,19 @@ Chebyshev point. The uniform coordinate law (THM-2546 + referee):
 `-4 = -(det J)^2` and integral-coordinate leads `{2, 8} = {|det J|,
 |det J|^3}` -- the whole eliminant package is `det J`-graded.
 
+Over the generic target field this has the precise square-class consequence
+
+```text
+[disc_x]=[disc_r]=[disc_z]=[-L].
+```
+
+Thus the three cubics share one quadratic sign-resolvent/Kummer extension;
+they do not supply three independent binary classes.  This synchronizes only
+the sign quotient of their root monodromy, not their cubic splitting fields,
+labelled roots, or boundary-effective sections.  The exact scope and the
+infinite-family classification boundary are separated in
+`07-reflections/jc-three-cubics-one-kummer-class-and-family-classification-boundary-codex-20260815.md`.
+
 ## 2. The discriminant tower [set law and grade-two square class PROVED]
 
 THM-2576 proves for dominant polynomial maps, directly from escape sequences,

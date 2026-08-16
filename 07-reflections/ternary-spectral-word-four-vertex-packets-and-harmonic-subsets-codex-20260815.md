@@ -1,6 +1,6 @@
 # Two four-vertex packets produce a ternary order-22 spectral word
 
-**Research reflection / provisional synthesis, not a truth source.**
+**Research reflection / synthesis, not a truth source.**
 The exact recurrence package is routed to audit-pending THM-3484.  The graph
 determinant interpretation uses proved THM-3482.
 

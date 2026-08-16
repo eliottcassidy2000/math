@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Exact companion for provisional THM-3484.
+"""Exact companion for proved THM-3484.
 
 The script treats the three explicit degree-seven residue polynomials as a
 self-contained ternary sequence.  It derives the compressed order-22
 annihilator, proves finite linear complexity at least 22 with an exact Hankel
 determinant, and audits the cubic Fourier degree drop.  Identifying this word
-with the private-gradient determinant is related provisional THM-3482 data;
+with the private-gradient determinant is the proved THM-3482 specialization;
 no LRC current or LRC(14) assertion is made here.
 """
 
@@ -282,7 +282,7 @@ def main() -> None:
         require(semantic_hash == EXPECTED_SEMANTIC_SHA256, semantic_hash)
 
     print("THM-3484 TERNARY WEIGHTED-DETERMINANT MINIMAL RECURRENCE EXACT COMPANION")
-    print("STATUS: RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT")
+    print("STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED")
     print(f"STATE_POLYNOMIALS_CONSTANT_FIRST: {STATE_POLYNOMIALS}")
     print("GENERATING_DENOMINATOR: (1-z)*(1-z^3)^7 = (1-z)^8*(1+z+z^2)^7")
     print(f"ORDER22_RECURRENCE_COEFFICIENTS: {denominator}")
