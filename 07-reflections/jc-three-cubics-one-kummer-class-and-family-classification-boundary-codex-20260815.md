@@ -201,10 +201,10 @@ The next exact tests are correspondingly typed:
    whether the atom-level diagonal (5) survives at grade nine;
 2. compute the level-three image divisor and norm law, then test whether only
    the newest component has odd valuation;
-3. **closed for `E_3^cyc` by THM-3517:** compute a generic coordinate
-   eliminant, its sign class, and the first Jelonek divisor; the result is
-   three quintics of class `[L5]` and the sign-blind component `V(C)`;
-   repeat the third-coordinate primitivity audit at `m=4`; and
+3. **closed for every `E_m^cyc` by THM-3517:** all three coordinates are
+   primitive and share the inverse discriminant class; at `m=3` the exact
+   atlas is three quintics of class `[L5]` with sign-blind component `V(C)`;
+   next derive the all-grade `z` index-core recurrence; and
 4. keep the sign class separate from the effective boundary cone throughout.
 
 The strongest current conclusion is therefore precise and modest: the fixed

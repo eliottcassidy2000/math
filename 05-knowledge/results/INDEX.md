@@ -55,6 +55,22 @@
   `1a46b961ab15a61e6e438926c8834fff56c23749f64ed2473e626bebb2fd1d04` /
   `42ddc36acea979ab859c10787da7a7737362c31a16ca0383cf8e06b8fe27ef2f` /
   `cd99969bd8949ab971cc9f7ee3fefac8aba835b2a6b4fdd323934ef4294d0589`.
+- `jc_weighted_cyclic_z_primitivity_all_m_probe_20260816.py` -> matching
+  `.out` [THM-3517 PROVED SYMBOLIC ALL-GRADE SIDECAR + VERIFIED-EXACT
+  HOSTILES].  For every cyclic THM-3448 seed, reduction of the
+  `z`-reconstruction numerator modulo the degree `n=ell+2` inverse polynomial
+  has exact degree `n-1`.  Its leading coefficient for `ell>=2` is
+  `((ell+1)^3+1)P^2+(4ell^2+ell-2)P/2+4(ell+1)Q`, so `z` is not in the
+  target field; `S_n` point-stabilizer maximality makes it primitive.  The
+  `ell=1` coefficient is `3P(6P+1)/2`.  Thus `x,y,z` share the inverse
+  discriminant square class in every cyclic grade, while every odd-family
+  `C_(2m-3)` Jelonek component remains sign-blind.  Direct remainders through
+  `ell=30` agree; the hostile `P=Q=0` kills every remainder and shows why
+  generic polynomial nonvanishing is essential.  No historical-family,
+  classification, or `JC(2)` claim.  Script/output/semantic LF SHA-256:
+  `0c74f0546444ef28265800e89bbcd0c1161eadfdd75599b6707428c22853424b` /
+  `01e1db90014ecd1f8f5fda0ecc250e23429db94bb04033bc1ab91500b4a38e4a` /
+  `6f06d5042a944f817b23e5bc43e3d70f74098ed4640e20eb95a638bec575cbf0`.
 - `shortlex_bary_equal_count_harmonic_boundary_probe_20260816.py` -> matching
   `.out` [ELEMENTARY ALL-BASE THEOREM CANDIDATE + VERIFIED-EXACT SIDECAR;
   INDEPENDENT AUDIT PENDING].  In every base `b>=2`, the first and last

@@ -5,6 +5,11 @@ This reflection concerns the explicit cyclic weighted family only.  It does
 not reconstruct THM-1605's historically reported family, classify Keller
 maps, or change `JC(2)`.
 
+**All-grade closure update:** reducing the `z`-reconstruction numerator
+modulo the inverse polynomial gives a nonzero `w^(n-1)` coefficient in every
+cyclic grade.  Hence `z` is primitive for all `ell`, so the common
+three-coordinate square class is no longer only an `m=3` phenomenon.
+
 ## Inheritance pass
 
 - **Closest proved mechanism:** THM-3494's trace-form rule: primitive views of
@@ -146,10 +151,11 @@ instead the map from boundary components to conjugacy classes in `S5`.
 
 ## New frontiers exposed
 
-1. **Third-coordinate all-m gate.**  THM-3494 proves `x/y` primitivity in the
-   weighted family.  The exact `z` quintic is primitive at `m=3`; either prove
-   `z notin K` abstractly for every cyclic seed or find the first exceptional
-   grade.  A degree-seven `m=4` specialization is the cheapest hostile.
+1. **Closed third-coordinate gate; index recurrence next.**  THM-3517 now
+   proves `z notin K` in every cyclic grade from the explicit remainder
+   coefficient, and `S_n` maximality makes it primitive.  The open refinement
+   is a recurrence or Newton-polytope law for the rapidly growing `z`
+   power-basis index, not another primitivity test.
 2. **Effectivity functor.**  Package each boundary prime as
    `(escape count, inertia cycle type, discriminant order, primitive index,
    residue rank)`.  The m=2/m=3 pair proves no projection to only parity and

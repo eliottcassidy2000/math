@@ -1,26 +1,28 @@
 ---
 id: THM-3517
-title: "Weighted odd family: the m=3 three-coordinate quintic and sign-blind Jelonek component"
+title: "Weighted odd family: all-coordinate primitivity, the m=3 quintic atlas, and sign-blind Jelonek components"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The explicit cyclic
-  weighted subfamily E_m^cyc has generic degree 2m-1.  At m=3 all three
-  actual source coordinates are primitive quintic views with common
-  discriminant square class [D5]=[L5] after target pullback, while the exact
-  Jelonek set is V(C) union V(L5).  The sign class misses V(C), whose local
-  inertia is an even 3-cycle.  For every m>=3 in this odd subfamily, the same
-  sign-blind C-component mechanism follows from THM-3448.  This theorem does
-  not identify the subfamily with THM-1605's unstored historical E_m.
+  PROVED + VERIFIED-EXACT; M3 ATLAS INDEPENDENTLY AUDITED.  Every actual
+  source coordinate x,y,z is primitive in every member of the explicit
+  THM-3448 cyclic weighted family, hence all three share the inverse
+  discriminant square class.  At m=3 they are explicit quintics with class
+  [D5]=[L5] after target pullback, while the exact Jelonek set is
+  V(C) union V(L5).  For every m>=3 in the odd subfamily, the sign class
+  misses the genuine C-component because its local inertia cycle is odd and
+  therefore even as a permutation.  The all-grade z proof is symbolic and
+  directly hostile-checked through ell=30.  No identification with
+  THM-1605's unstored E_m is made.
 author: codex-2026-08-16
 source: codex exact extension of the Gallagher/THM-3438 weighted lift
 audit: >
   deterministic exact Sympy resultants, irreducibility factorizations,
   discriminants, square roots, branch/index gcds, source-map replay,
   determinant, Newton residual, m=2 hostile, and byte-identical normal/-O
-  transcripts; structural all-m boundary deduction from audited THM-3448.
-  A disjoint python-flint implementation reconstructs the map, inverse,
-  branch, all three resultants and index squares, including the 191-term z
-  eliminant and 268-term index core, and supplies a direct all-coordinate
-  split separator over F_31.
+  transcripts; a disjoint python-flint reconstruction of the map, inverse,
+  branch, all three resultants and index squares, the 191-term z eliminant,
+  268-term index core, and an F_31 split separator; symbolic all-n remainder
+  proof and direct ell=1..30 hostiles for z-primitivity; structural all-m
+  boundary deduction from audited THM-3448
 depends_on:
   - THM-3438-weighted-lift-keller-degree-spectrum
   - THM-3448-weighted-keller-cyclic-jelonek-inertia-family
@@ -40,15 +42,21 @@ independent_script_sha256: e0eaed0b1f034c799cd95a00ede7fdd60ff4c9258330b39845db4
 independent_output_sha256: b458c072d8220403162bd972ab32dc3c4aaacd217cfb2ebf7a0525fc0e14f96d
 semantic_sha256: ed6845e743f8554327653521f243817264b08d1ca864c8513c0b2af7ce17ac81
 independent_semantic_sha256: bd208dad9732439dfa14a794ef54dbfe57d66360f5f5a39b26353ffb82b6bba3
+all_m_script: 04-computation/jc_weighted_cyclic_z_primitivity_all_m_probe_20260816.py
+all_m_output: 05-knowledge/results/jc_weighted_cyclic_z_primitivity_all_m_probe_20260816.out
+all_m_script_sha256: 0c74f0546444ef28265800e89bbcd0c1161eadfdd75599b6707428c22853424b
+all_m_output_sha256: 01e1db90014ecd1f8f5fda0ecc250e23429db94bb04033bc1ab91500b4a38e4a
+all_m_semantic_sha256: 6f06d5042a944f817b23e5bc43e3d70f74098ed4640e20eb95a638bec575cbf0
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3517 -- the odd weighted family beyond the cubic
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**  The all-coordinate
-`m=3` ledger has disjoint Sympy-resultant and python-flint implementations,
-plus a direct finite-field separator.  Its structural input theorems were
-independently audited.
+**PROVED + VERIFIED-EXACT; M3 ATLAS INDEPENDENTLY AUDITED.**  The
+all-coordinate `m=3` ledger has disjoint Sympy-resultant and python-flint
+implementations plus a direct finite-field separator.  A separate symbolic
+remainder argument proves `z`-primitivity in every cyclic grade and has direct
+controls through `ell=30`.
 
 ## 1. Provenance boundary and the explicit object
 
@@ -312,30 +320,97 @@ either a genuine sign-blind nonproper component (`m=3`) or only index/chart
 data (`m=2`).  Effectivity cannot be recovered from square class plus
 multiplicity parity.
 
-## 6. The exact all-m survivor
+## 6. All-coordinate primitivity in every cyclic grade
 
-For this reindexed subfamily, `ell=2m-3` is odd.  THM-3448 therefore gives,
-for every `m>=3`, a genuine `C=0` component with
+The third coordinate admits an all-grade proof without computing another
+large resultant.  Write `n=ell+2`, let
+
+```text
+T=w^n-w^(n-1)+Pw-Q,
+gamma=P-(ell+1)w^ell+(ell+2)w^(ell+1),
+H=gamma[gamma(gamma-1+a)-aw],                         (24)
+```
+
+so that `C^2z=H(w)`.  Let `lambda(g)` be the coefficient of `w^(n-1)` in the
+remainder of `g` modulo `T`.  If
+
+```text
+c_k=lambda(w^k mod T),
+```
+
+then multiplication of `T=0` by `w^(k-n)` gives the exact recurrence
+
+```text
+c_k=c_(k-1)-P c_(k-n+1)+Q c_(k-n).                   (25)
+```
+
+For `n>=4`, the initial block has `c_k=1` for
+`n-1<=k<=2n-3`.  Continuing (25) through the four powers occurring at the
+top of `gamma^3` gives
+
+```text
+lambda(gamma^2)=1-n(n-2)P,
+lambda(w gamma)=1,
+
+lambda(gamma^3)
+ =1+(n^3-3n^2+3n)P^2+(6-4n)P+4(n-1)Q.              (26)
+```
+
+Since `a=-(2ell+1)/(2ell)=-(2n-3)/(2n-4)` and
+`H=gamma^3+(a-1)gamma^2-a w gamma`, equations (25)--(26) yield
+
+```text
+lambda(H)=((ell+1)^3+1)P^2
+          +(4ell^2+ell-2)P/2+4(ell+1)Q.              (27)
+```
+
+This is a nonzero polynomial.  Hence the remainder of `H` has exact degree
+`n-1`.  If `z` belonged to the target field `K=Q(P,Q,C)`, then
+
+```text
+rem_T(H)-C^2z                                         (28)
+```
+
+would be a nonzero polynomial of degree `n-1` over `K` annihilating `w`,
+contradicting the irreducible degree-`n` polynomial `T`.  Thus `z notin K`.
+At the exceptional small index `ell=1`, direct reduction gives the nonzero
+leading coefficient `3P(6P+1)/2`, proving the same conclusion.
+
+THM-3438 gives global `S_n` monodromy, whose point stabilizer `S_(n-1)` is
+maximal.  Therefore the extension has no proper intermediate field.  Combining
+`z notin K` with THM-3494's `x/y` argument proves, for every `ell>=1`,
+
+```text
+K(x)=K(y)=K(z)=K(w).                                  (29)
+```
+
+All three generic coordinate eliminants consequently have degree `n`, and
+their trace-form discriminants share the full inverse square class.  This is
+an all-family three-coordinate theorem; only the explicit 191-term `z`
+eliminant is special to the displayed `m=3` atlas.
+
+Now restrict to the odd reindexing `ell=2m-3`.  THM-3448 gives, for every
+`m>=3`, a genuine `C=0` component with
 
 ```text
 2m-3 escaping sheets in one C_(2m-3) orbit,
 v_C(Disc_w)=2m-2,
-sign(C_(2m-3))=(-1)^(2m-4)=+1.                        (24)
+sign(C_(2m-3))=(-1)^(2m-4)=+1.                        (30)
 ```
 
-Consequently the discriminant sign quotient misses `V(C)` for every
-`m>=3` in `E_m^cyc`.  The other generic component has transposition inertia
-and odd discriminant order, so it remains visible.  This is an all-family
-effectivity boundary, not an all-family three-coordinate theorem: THM-3494
-proves generic `x/y` primitivity, while the third coordinate has been checked
-here only at `m=3`.
+Thus every one of the three primitive coordinate sign classes misses `V(C)`
+for every `m>=3` in `E_m^cyc`.  The other generic component has transposition
+inertia and odd discriminant order, so it remains visible.  If its reduced
+equation is normalized as `L_m` and the discriminant unit is `u_m`, then the
+common pulled-back field class is `[u_m L_m]`; the constant class must not be
+dropped.  At `m=3`, the exact normalization above has `u_3=1`.
 
 ## 7. Persistence and failure ledger
 
 | fixed cubic feature | `m=3` verdict | exact reason |
 |---|---|---|
-| three actual primitive coordinate views | persists | three irreducible quintic resultants |
-| one common discriminant square class | persists | trace-form basis-change squares |
+| three actual primitive coordinate views | persists for every cyclic grade | remainder (27), `S_n` maximality, and THM-3494 |
+| one common discriminant square class | persists for every cyclic grade | trace-form basis-change squares |
 | literal factor `-4` and class `[-L]` | fails | the quintic invariant unit is `+1`; class is `[D5]`, then `[L5]` |
 | cubic eliminants | fails | all three eliminants have degree five |
 | sign class equals effective Jelonek support | fails | even `C3` inertia erases the real `V(C)` component |
@@ -351,12 +426,18 @@ LRC, tournament-current, or composition-tower consequence is asserted.
 
 ## 8. Exact companions and reproducibility
 
-The companion expands (7), checks both apparent cancellations and the full
+The `m=3` companion expands (7), checks both apparent cancellations and the full
 Jacobian, verifies the inverse identity, factors every resultant over `Q`,
 computes all four discriminants, extracts exact rational square roots of the
 three ratios, checks every branch/index gcd, proves the target pullback and
 Newton residual, and runs the flat-view and `m=2` hostiles.  Truth gates use
 `require`, not `assert`; there is no randomness or elapsed-time field.
+
+The all-grade companion derives (25)--(27) symbolically and independently
+computes the complete `H mod T` remainder for every `1<=ell<=30`.  Its sharp
+hostile sets `P=Q=0`, where every tested remainder vanishes even though the
+generic leading polynomial (27) is nonzero.  This prevents a degenerate
+single-target check from being mistaken for a generic proof.
 
 Run
 
@@ -365,13 +446,11 @@ python -B 04-computation/jc_weighted_odd_family_m3_coordinate_jelonek_probe_2026
 python -B -O 04-computation/jc_weighted_odd_family_m3_coordinate_jelonek_probe_20260816.py
 python -B 04-computation/jc_weighted_odd_family_m3_three_coordinate_independent_audit_20260816.py
 python -B -O 04-computation/jc_weighted_odd_family_m3_three_coordinate_independent_audit_20260816.py
+python -B 04-computation/jc_weighted_cyclic_z_primitivity_all_m_probe_20260816.py
+python -B -O 04-computation/jc_weighted_cyclic_z_primitivity_all_m_probe_20260816.py
 ```
 
-Each normal/optimized pair agrees exactly after LF normalization with its
-stored output.  The independent companion imports neither Sympy nor the
-candidate, uses FLINT resultants/discriminants/factorization, and has semantic
-digest
-
-```text
-bd208dad9732439dfa14a794ef54dbfe57d66360f5f5a39b26353ffb82b6bba3.
-```
+Each normal/optimized transcript pair is byte-identical to its stored
+LF-normalized output.  The independent FLINT semantic digest is
+`bd208dad9732439dfa14a794ef54dbfe57d66360f5f5a39b26353ffb82b6bba3`;
+the symbolic remainder is the all-grade proof.

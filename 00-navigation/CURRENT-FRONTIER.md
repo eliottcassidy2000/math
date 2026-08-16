@@ -341,7 +341,7 @@ is sharp: equal counts allow two densities or none.
   renewal/fifth-image/degree243/all-level OPEN. THM-2681
   blocks the `A4/S4` cubic; THM-2685--2708 give its
   gain/holonomy.
-  Audited THM-3448/3517: weighted `m=3` has `S5` and three quintics `[L5]`, but `C3` Jelonek is sign-blind; likewise every odd-family `C_(2m-3)`. THM-1605's formula is absent (MISTAKE-416); all-`m` `z` and arbitrary quartic `C3` remain OPEN.
+  Audited THM-3448/3517: cyclic `x/y/z` are primitive all grades; `m=3` gives `S5` quintics `[L5]`, but `C3` Jelonek is sign-blind, as are odd-family `C_(2m-3)`. THM-1605's formula is absent (MISTAKE-416); arbitrary quartic `C3` remains OPEN.
   THM-3440/3443/3450: marked mode-one LRC/Keller isomorphism on 91 sheets.  Mod-13 `H^1` has no amplitude map; order 8/14 margins block the full germ.  No current.  THM-3066 retains only their
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
   THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;

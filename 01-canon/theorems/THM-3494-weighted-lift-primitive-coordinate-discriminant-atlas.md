@@ -29,6 +29,7 @@ related:
   - THM-2582-odd-block-discriminant-tower-and-composite-jelonek-square-class
   - THM-3487-two-twenty-four-state-fibonacci-bundles-cycle-type-obstruction
   - THM-3495-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness
+  - THM-3517-weighted-odd-family-m3-three-coordinate-quintic-and-sign-blind-jelonek-component
 script: 04-computation/jc_weighted_primitive_coordinate_discriminant_atlas_thm3494.py
 output: 05-knowledge/results/jc_weighted_primitive_coordinate_discriminant_atlas_thm3494.out
 independent_script: 04-computation/jc_weighted_primitive_coordinate_discriminant_atlas_thm3494_independent_audit.py
@@ -49,6 +50,12 @@ This theorem explains which part of the fixed sporadic map's three
 coordinate-cubic discriminants is special to that map and which part belongs
 to every separable primitive-element atlas.  It also gives the promised first
 three rows of the THM-3438 all-degree family.
+
+**Closure sidecar (THM-3517).**  The third-coordinate all-degree gate is now
+proved for THM-3448's explicit cyclic weighted subfamily: an exact remainder
+coefficient shows `z notin K` in every grade, and `S_n` maximality makes it
+primitive.  This does not prove `z` primitive for the distinct canonical seed
+used below or for every weighted seed.
 
 ## 1. Statement
 
@@ -422,7 +429,8 @@ the frontmatter now records the actual LF-normalized stored-output hash.
 Still open or outside scope:
 
 - global saturation across `C=0` and the full Jelonek divisor for every seed;
-- a third primitive source-coordinate proof in every degree;
+- third-coordinate primitivity for this canonical seed or every weighted
+  seed (THM-3517 closes it only for the cyclic THM-3448 subfamily);
 - composition-norm recurrences for the weighted atoms;
 - classification up to tame conjugacy, stable equivalence, or composition;
 - any implication for `JC(2)`, `DC(1)`, `DC(2)`, LRC(14), or a physical
