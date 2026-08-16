@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `periodic_polynomial_critical_harmonic_transform_thm3486.py` -> matching
+  `.out` [THM-3486 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
+  independent audit pending].  For a nonzero degree-`d` period-`p`
+  polynomial word, the candidate proves
+  `sum_(n<=N)a_n/n^(d+1)=c H_N+C+O(1/N)`, where `c` is exactly the top
+  coefficient of the trivial Fourier colour.  After subtracting `c n^d`,
+  convergence is absolute iff every lane has the same leading coefficient;
+  otherwise it is conditional.  The finite constant is an explicit
+  root-of-unity polylogarithm packet.  Boolean periodic subsets recover their
+  density as harmonic coefficient.  The THM-3484 ternary word gives
+  `c=-16384` with absolute renormalized tail; THM-3455's full-spine and
+  Fibonacci-index subsets sharpen to convergent constants at coefficients
+  `76/187` and `43/90`.  A declared K4 star-address period has coefficient
+  `1/2`, but supplies no tournament orientation.  Script/output/semantic LF
+  SHA-256:
+  `04fbf42ad5953f43f1b86da75679b5fc430c2d720b3f24d1ac757731bc009d52` /
+  `a35e352e0662e9875dd854f86aca13830134f2ede0bd3a4b6a907325d08b158e` /
+  `d30150749708eee29dc4f1773fc1e757e6c8f0df0b7b707b509023e8e06db748`.
 - `periodic_polynomial_fourier_jordan_recurrence_thm3485.py` -> matching
   `.out` [THM-3485 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a
   characteristic-zero period-`p` polynomial word, the theorem classifies the
