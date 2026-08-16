@@ -18,6 +18,24 @@
   `c12dc71df13e0c627740aaebf971c07342ce3302d674b276cc1600cf69266dd9` /
   `3f31f6f80989b360227c792d525e013ecff9b06a8df09d252d31af801d8fdb9a` /
   `7ca802f1f8706658b62fb330504544b9c46d473db6481429cb011b078695a46e`.
+- `lrc_ufull_guard_sheet_drift_bucket_bridge_probe_20260816.py` -> matching
+  `.out` [FINITE-EXACT ENDPOINT FACTORIZATION; NOT INDEPENDENTLY AUDITED].
+  Removing only the tau-translated H guard and splitting the remaining
+  U_full E-set by the common `39=13*3` guard atoms reconstructs the frozen
+  `13^3` character bank and the exact `q_H-q_q5` bridge.  The speed-13
+  owner `in` gate forces the guard residual into two boundary slivers, so
+  all middle atoms are empty and exactly `52=4*13` chamber-pair/drift types
+  survive; every supported type is nonzero for `q_H`, `q_q5`, and their
+  difference.  The resulting `4x13` table is the canonical
+  `F_2^2 x F_13`/`K4 x F_13` carrier: it has rank four, every one of its
+  four Walsh channels is nonzero at every drift, and every Walsh channel
+  has all thirteen drift-Fourier modes nonzero.  The pairing remains the
+  Cartesian endpoint product and supplies no THM-2471 ancestry relation,
+  physical current, row exclusion, or LRC(14).  Semantic ledger SHA-256:
+  `c7b1f92cf7d8d1c09f387ff609b258480f121e39a464b9287332c32c8491d796`.
+  Script/output LF SHA-256:
+  `7593c216294fbf39d14654627620f4ce22ac7c706f4ab9848d43abfcf372e61b` /
+  `6830c18bd6413fea7c347e65c168664880621679897a630a8982446517f391aa`.
 - `keller_tropical_norm_face_recurrence_probe_20260816.py` -> matching `.out`
   [THM-3506 PROVED CONDITIONAL TRANSFORM + VERIFIED-EXACT FIXED-MAP GATE].
   Reconstructs THM-3495's frozen `66,146`-term `J`, extracts the complete
