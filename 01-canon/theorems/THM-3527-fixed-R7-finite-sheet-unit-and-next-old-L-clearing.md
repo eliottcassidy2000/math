@@ -8,8 +8,9 @@ status: >
   R_8:=L^66907 N(R_7) is polynomial and coprime to L.  Applying THM-3522
   only after this polynomiality gate gives the complete fixed-chart packet
   A(419839,152211), exactly the next Pell-57 recurrence row.  No image
-  equation, irreducibility, later finite-sheet unit, unconditional all-level
+  equation, irreducibility, later finite-sheet unit, all-level L-coprime/image
   law, arbitrary-map statement, or general Jacobian-conjecture claim follows.
+  THM-3528 subsequently proves the weaker raw all-level polynomial-packet law.
 source: codex/fixed-R7-finite-sheet/2026-08-16
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
@@ -245,8 +246,9 @@ finite-sheet denominator.
 
 Only after (6) is established does THM-3522 apply, yielding (7)--(8).  The
 Pell-57 multiplication law predicted the same pair before this computation,
-but did not supply (4)--(6).  This theorem is a prediction/realization match,
-not an all-level induction.
+but did not supply (4)--(6).  This theorem is a prediction/realization match
+and not by itself an all-level induction; THM-3528 subsequently supplies the
+raw polynomial-packet induction.
 
 ## 6. Exact boundary and reproduction
 
@@ -257,7 +259,8 @@ valuation, polynomiality and `L`-coprimality of `R_8`, and the complete packet
 - irreducibility, squarefreeness, or image-equation status of any `R_i`;
 - a fifth, sixth, seventh, or eighth new nonproperness component;
 - a later degree/separability gate or finite-sheet unit;
-- an unconditional all-level packet, polynomiality, or discriminant theorem;
+- an all-level finite-unit, image, or discriminant theorem (THM-3528
+  subsequently supplies raw polynomial packets only);
 - an arbitrary-map norm theorem, classification of Keller maps, `JC(2)`,
   `DC(2)`, LRC, or any general Jacobian-conjecture conclusion.
 

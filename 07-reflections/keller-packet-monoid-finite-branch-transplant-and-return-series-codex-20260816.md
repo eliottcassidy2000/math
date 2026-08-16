@@ -1,7 +1,7 @@
 # The finite survivor controls a branch-transplant monoid, not the prime-image tower
 
-**Status: PROVISIONAL STRUCTURAL COROLLARY OF THM-3528 PENDING ITS PROOF
-AUDIT.**  The fixed Keller packet family now has the monoid structure suggested
+**Status: PROVED STRUCTURAL COROLLARY OF INDEPENDENTLY AUDITED THM-3528;
+VERIFIED-EXACT.**  The fixed Keller packet family now has the monoid structure suggested
 at the start of the session.  Complete packets multiply by adding their two
 grades, and the cleared cubic norm is multiplicative.  The resulting operator
 shifts any returned old-boundary factor through the canonical ancestry

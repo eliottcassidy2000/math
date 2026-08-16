@@ -7,9 +7,9 @@ status: >
   inverse point q=(2,5/6,-7/8) over L=0.  Hence v_L(N(R_6))=-10663, so
   R_7:=L^10663 N(R_6) is polynomial and coprime to L.  Applying proved
   THM-3522 only after this polynomiality gate gives the complete fixed-chart
-  packet A(66907,24255) for R_7.  No image equation, degree-243 separability,
-  irreducibility, unconditional all-level law, arbitrary-map statement, or
-  general Jacobian-conjecture claim follows.
+  packet A(66907,24255) for R_7.  THM-3528 subsequently proves raw all-level
+  polynomial packets.  No image equation, irreducibility, all-level unit law,
+  arbitrary-map statement, or general Jacobian-conjecture claim follows.
 source: codex/fixed-R6-finite-sheet/2026-08-16
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
@@ -311,7 +311,8 @@ THM-3522—the complete fixed-chart packet of `R_7`.  It does **not** prove:
 - a fifth, sixth, or seventh nonproperness component;
 - the still-open degree-`243` eliminant separability/image gate (the
   `243` finite sheets in (15) are an evaluation algebra, not that gate);
-- polynomiality or a finite-sheet unit at every later rung;
+- a finite-sheet unit, L-coprimality, or image status at every later rung
+  (THM-3528 subsequently proves raw polynomiality only);
 - an arbitrary-map norm theorem, a classification of Keller maps, `JC(2)`,
   `DC(2)`, LRC, or any general Jacobian-conjecture conclusion.
 

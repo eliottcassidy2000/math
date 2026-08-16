@@ -251,8 +251,9 @@ does **not** prove:
 
 - that `R_6` is irreducible, squarefree, or an image equation;
 - a sixth nonproperness component or a formula for `S_(F^6)`;
-- polynomiality or finite-sheet nonvanishing at every later norm rung;
-- an unconditional all-level packet or discriminant induction;
+- finite-sheet nonvanishing at every later norm rung;
+- an unconditional all-level discriminant induction (THM-3528 subsequently
+  proves raw polynomial complete packets, not separability);
 - an arbitrary-map theorem, classification of Keller maps, `JC(2)`,
   `DC(2)`, or a general Jacobian-conjecture counterexample.
 

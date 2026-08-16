@@ -9,10 +9,10 @@ VERIFIED-EXACT.**  The abstract renewal orbit
 ```
 
 is exactly a multiplicative orbit in the quadratic integer ring of
-`Q(sqrt(57))`.  The fixed Keller polynomials `L,H,J,G,R5,R6,R7,R8` realize rows
-`n=0,...,7`; later rows remain conditional on new polynomiality/finite-sheet
-gates.  Nothing here proves an all-level Keller tower or any general
-Jacobian-conjecture statement.
+`Q(sqrt(57))`.  The named fixed Keller polynomials `L,H,J,G,R5,R6,R7,R8`
+realize rows `n=0,...,7`, and THM-3528 now realizes every later row as a raw
+polynomial complete packet.  Later finite-sheet units, prime/image status,
+separability, and every general Jacobian-conjecture statement remain open.
 
 ## Inheritance pass
 
@@ -227,9 +227,9 @@ map-composition grade: 3^n,
 packet/Pell grade:     Norm(alpha^n)=(-8)^n.
 ```
 
-Their shared index does not identify the gradings.  A future all-level theorem
-must still prove that every proposed norm rung is polynomial and has a finite
-sheet unit.  The Pell monoid predicts the packet only after that gate.
+Their shared index does not identify the gradings.  THM-3528 now proves that
+every raw cleared norm is polynomial; it does not prove the stronger finite-
+sheet unit needed for `L`-coprimality or a new image prime.
 
 THM-3527 now realizes the formerly predicted row
 
@@ -237,15 +237,14 @@ THM-3527 now realizes the formerly predicted row
 n=7: (419839,152211) = R8.
 ```
 
-The next two abstract rows are
+THM-3528 makes the next two rows actual raw polynomial packets:
 
 ```text
 n=8: (2634451,955095),
 n=9: (16530967,5993163).
 ```
 
-The last two are exact arithmetic consequences of the recurrence, not proved
-Keller packets.
+They are not proved irreducible, `L`-coprime, or image equations.
 
 ## Connection contract
 
@@ -258,8 +257,8 @@ Keller packets.
 | transformed | quadratic norm multiplies by `-8`; Lorentz form by `64` |
 | destroyed by triple alone | packet sign/level unless the moving-plane value is retained; Berggren ancestry word |
 | hostile | wrong `-2m` coefficient breaks (4); `det T=-512` blocks Berggren-isometry promotion |
-| fixed realization | proved through `R8` only |
-| open boundary | next polynomiality, next finite sheet, images, irreducibility, all-level tower, general JC |
+| fixed realization | raw polynomial packets at all levels by THM-3528; named/L-coprime through `R8` |
+| open boundary | next finite sheet, factors, images, irreducibility, separability, general JC |
 
 ## Reproduction
 

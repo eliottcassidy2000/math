@@ -11,9 +11,10 @@ status: >
   nonzero renewal scalars below.  THM-3523 and THM-3527 subsequently clear
   the next two rungs and apply this theorem to give A(66907,24255) for R_7
   and A(419839,152211) for R_8; THM-3525/3526 close the distinct degree-243/
-  729 separability gates.  Later finite-sheet units, image status, all-level
-  iteration, arbitrary Keller maps, and every general Jacobian claim remain
-  open.
+  729 separability gates.  THM-3528 subsequently discharges polynomiality
+  for every complete packet and proves the fixed raw packet orbit at all
+  levels.  Later finite-sheet units, L-coprimality, image status, arbitrary
+  Keller maps, and every general Jacobian claim remain open.
 source: codex/five-face-renewal-propagation/2026-08-16
 depends_on:
   - THM-3495-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness
@@ -26,6 +27,7 @@ related:
   - THM-3525-level-five-degree243-separability-and-discriminant-square-class
   - THM-3526-level-six-degree729-separability-and-discriminant-square-class
   - THM-3527-fixed-R7-finite-sheet-unit-and-next-old-L-clearing
+  - THM-3528-fixed-keller-all-level-cleared-norm-polynomiality-and-finite-sheet-defect
 scripts:
   - 04-computation/keller_five_face_renewal_propagation_probe_20260816.py
   - 04-computation/keller_five_face_renewal_propagation_independent_audit_20260816.py
@@ -329,7 +331,8 @@ implies `m<=e`; hence `e',m',r',p',d'` are all nonnegative and `3|m'`.
 Polynomiality of `Q` is nevertheless a genuine global hypothesis.  It is
 what turns the generic Laurent asymptotics (23) and (31) into complete faces
 of a polynomial in the target coordinates.  This theorem does not derive
-polynomiality from a face picture.
+polynomiality from a face picture.  THM-3528 subsequently derives it from
+finite-etale norm regularity and the nonnegative finite-sheet defect.
 
 No additional finite-sheet unit condition is used in (18)--(33).  A
 finite-sheet test at the old divisor `(L)` determines the exact `L`-adic
@@ -433,14 +436,14 @@ for the `J`, `G`, and `R_5` input states.  Dropping the nonmonic leading
 coefficient fails the required `A,C,D` exponents in every nonzero bank row.
 
 The theorem closes the renewal implication at every one-step application of
-the fixed inverse chart for which polynomiality is separately supplied.  It
-does **not** prove:
+the fixed inverse chart for which polynomiality is supplied.  Standing alone,
+it does **not** prove:
 
 - polynomiality, an exact old-`L` denominator, or a finite-sheet unit for the
   next norm `L^10663N(R_6)`;
 - irreducibility, squarefreeness, or image-equation status of `R_5` or `R_6`;
 - a fifth nonproperness component or the degree-`243` separability gate;
-- an unconditional all-level packet recurrence;
+- its polynomiality hypothesis or an unconditional all-level packet recurrence;
 - a classification of arbitrary Keller maps, `JC(2)`, `DC(2)`, LRC, or any
   general Jacobian-conjecture statement.
 
@@ -449,7 +452,9 @@ subsequently supplies that finite-sheet and polynomiality input by a separate
 exact computation, and then uses the implication proved here to give the
 complete packet `A(66907,24255)` for `R_7`.  THM-3525/3526 subsequently close
 the degree-243/729 gates, and THM-3527 clears `R_8` with packet
-`A(419839,152211)`.  Image status and the all-level bullets stay open.
+`A(419839,152211)`.  THM-3528 then supplies polynomiality and complete raw
+packets at every later rung without proving finite-sheet units.  Image status,
+L-coprimality, later separability, and general-map bullets stay open.
 
 Reproduce the exact certificate with
 

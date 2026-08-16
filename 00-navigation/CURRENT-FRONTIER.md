@@ -339,9 +339,9 @@ is sharp: equal counts allow two densities or none.
   `S_(F^4)=V(LHJ G)`, `[Delta_4]=[2G]`. THM-3506/3513 give `G` packet
   `(271,99)`; 3521--23/27 give packets through `R8`, ending
   `(419839,152211)`; 3525/26 give degree243/729 and
-  `[Delta_5,Delta_6]=[-2R_5,2R_6]`. RESERVED 3528's raw all-level packet
-  proof is independently accepted; promotion, coprimality/images/later
-  geometry remain OPEN. THM-2681
+  `[Delta_5,Delta_6]=[-2R_5,2R_6]`. Audited THM-3528 proves raw polynomial
+  packets all levels and the finite-defect/branch-transplant law; later
+  units, factors, images and geometry remain OPEN. THM-2681
   blocks the `A4/S4` cubic; THM-2685--2708 give its
   gain/holonomy.
   Audited THM-3448/3517: cyclic `x/y/z` are primitive all grades; `m=3` gives `S5` quintics `[L5]`, but `C3` Jelonek is sign-blind, as are odd-family `C_(2m-3)`. THM-1605's formula is absent (MISTAKE-416); arbitrary quartic `C3` remains OPEN.

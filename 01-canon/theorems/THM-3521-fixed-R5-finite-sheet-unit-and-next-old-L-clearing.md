@@ -11,8 +11,9 @@ status: >
   fixed-chart renewal and closes the complete packets of R_5 and R_6.
   THM-3523 subsequently closes the next finite-sheet/polynomiality gate and
   gives the complete packet of R_7.  Irreducibility or image status of R_5,
-  the degree-243 separability gate, later polynomiality, an unconditional
-  all-level law, and every general Jacobian-conjecture claim remain open.
+  the degree-243 separability gate, later finite-sheet units, later images,
+  and every general Jacobian-conjecture claim remain open.  THM-3528
+  subsequently proves the weaker raw all-level polynomial-packet law.
 source: codex/fixed-R5-finite-sheet/2026-08-16
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
@@ -295,14 +296,15 @@ rung.  By itself it does **not** prove any of the following:
 - `closure(F(V(G)))=V(R_5)` or a fifth nonproperness component;
 - full degree or squarefreeness of the degree-`243` eliminant;
 - a sixth image component attached to `R_6`;
-- an all-level norm recurrence, arbitrary-map classification, `JC(2)`,
+- an all-level L-coprime/image recurrence, arbitrary-map classification, `JC(2)`,
   `DC(2)`, or any general Jacobian-conjecture conclusion.
 
 THM-3522 subsequently closes the first two bullets by proving the complete
 packet `A(1699,615)` for `R_5`, and also proves `A(10663,3867)` for `R_6`.
 THM-3523 subsequently closes `L^10663N(R_6)`, proves `R_7` polynomial and
-`L`-coprime, and gives its complete packet `A(66907,24255)`.  It does not
-change the remaining geometric or all-level bullets.
+`L`-coprime, and gives its complete packet `A(66907,24255)`.  THM-3528 later
+closes raw polynomial packets at all levels without changing the geometric,
+finite-unit, or image bullets.
 
 Reproduce both exact routes with
 

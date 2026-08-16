@@ -10,9 +10,10 @@ status: >
   nonzero rationals.  Thus this fixed G has the full five-face packet
   A(271,99).  The next finite-sheet unit is left open here and subsequently
   closed by THM-3521.  THM-3522 subsequently proves fixed-chart renewal
-  propagation and closes the complete packets of R_5 and R_6.  The next
-  polynomiality gate, a fifth image prime, unconditional all-level
-  induction, and every general Jacobian claim remain open.  The
+  propagation and closes the complete packets of R_5 and R_6.  THM-3528
+  subsequently proves the raw all-level polynomial-packet induction.  A
+  fifth image prime, later finite-sheet units, and every general Jacobian
+  claim remain open.  The
   exact companion is independent of THM-3506's face script; an
   independent parent replay reproduced its semantic ledger exactly.  This
   is a replay audit, not a broader all-level or geometric proof audit.
@@ -215,10 +216,9 @@ sheets are controlled by the exposed face, but the finite inverse sheet may
 still vanish.  THM-3521 subsequently proves that finite sheet is a unit and
 therefore closes the valuation.  THM-3522 then proves the fixed-chart
 renewal implication and obtains the complete packets of both `R_5` and
-`R_6`.  These results still prove no fifth image equation or prime,
-degree-`243` separability, unconditional all-level polynomial tower,
-statement about arbitrary Keller maps, or version of the general Jacobian
-conjecture.
+`R_6`.  THM-3528 subsequently proves the raw all-level polynomial tower.
+These results still prove no fifth image equation or prime, statement about
+arbitrary Keller maps, or version of the general Jacobian conjecture.
 
 Reproduce the exact ledger, both residual-cubic reductions, and both face
 scalars with

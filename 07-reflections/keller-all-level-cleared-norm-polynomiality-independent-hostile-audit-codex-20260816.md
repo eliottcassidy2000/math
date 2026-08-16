@@ -1,8 +1,8 @@
 # The finite sheet can improve clearing but cannot obstruct it
 
-**Status: INDEPENDENT HOSTILE AUDIT ACCEPTS THE PROVISIONAL THM-3528
-ALL-LEVEL RAW POLYNOMIAL-PACKET LEMMA AT FIXED-MAP SCOPE; THM-3528 REMAINS
-RESERVED PENDING OWNER CANONIZATION.**
+**Status: INDEPENDENT HOSTILE AUDIT ACCEPTED THE THM-3528 ALL-LEVEL RAW
+POLYNOMIAL-PACKET LEMMA AT FIXED-MAP SCOPE; THM-3528 WAS SUBSEQUENTLY
+PROMOTED BY THE OWNER.**
 
 The proposed lemma is sound.  If a source polynomial `P` has the complete
 packet `A(e,m)`, then its fixed-chart norm satisfies

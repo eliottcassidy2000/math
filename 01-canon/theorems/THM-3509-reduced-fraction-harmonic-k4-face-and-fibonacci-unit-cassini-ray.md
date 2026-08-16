@@ -505,12 +505,11 @@ The currently lawful instances are typed as follows:
 (e,m)=(271,99)  -> (x,y)=(172,99)  -> (31820,26829,41621).               (53)
 ```
 
-The first two are THM-3506's verified full packets `H,J`. The third is its
-exact next exposed pair for `G`, whose two renewal faces remain unproved.
-The next arithmetic image `(x,y)=(1084,615)`, or `(e,m)=(1699,615)`, is the
-further exact exposed pair in THM-3506, not a promoted full packet. Iteration
-of (49) as an all-level face orbit is **CONDITIONAL** on THM-3506's renewal
-hypotheses.
+The first two were THM-3506's verified full packets `H,J`.  THM-3513 and
+THM-3522 subsequently promoted `G,R_5,...,R_8`, and THM-3528 now proves every
+later raw cleared norm has the full packet.  Thus iteration of (49) is an
+actual all-level fixed-map packet orbit.  This supplies no later finite-sheet
+unit, image equation, irreducibility, or Berggren ancestry word.
 
 Nor is (49) one fixed Berggren branch word. In the seed chart the generators
 are

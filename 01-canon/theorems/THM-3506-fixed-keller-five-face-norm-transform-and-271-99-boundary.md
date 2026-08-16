@@ -12,9 +12,10 @@ status: >
   polynomial.  THM-3522 subsequently proves that complete packets renew in
   this fixed inverse chart whenever the next cleared norm is polynomial,
   closing the packets of R_5 and R_6.  THM-3523 subsequently closes the next
-  finite-sheet/polynomiality gate and gives the packet of R_7.  The later
-  finite sheet, fifth image prime, unconditional all-level induction, and
-  every general Jacobian claim remain open.
+  finite-sheet/polynomiality gate and gives the packet of R_7.  THM-3528
+  subsequently proves raw polynomial complete packets at all levels; later
+  finite-sheet units, image primes, and every general Jacobian claim remain
+  open.
 source: codex/tropical-keller-norm/2026-08-16
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
@@ -119,8 +120,8 @@ determinant `-8`, each coordinate satisfies
 u_(n+2)=5u_(n+1)+8u_n.                                 (13)
 ```
 
-This is the precise conditional induction.  It is not an unconditional
-all-level law.
+This is the precise conditional induction inside this theorem.  THM-3528
+subsequently discharges its polynomiality hypothesis at every raw rung.
 
 ### Conditional Cassini and projective sidecar
 
@@ -506,8 +507,9 @@ THM-3522 subsequently proves that a complete packet renews through this
 fixed inverse chart whenever the next cleared norm is polynomial.  Together
 with THM-3521's following finite-sheet gate, it gives complete packets
 `A(1699,615)` for `R_5` and `A(10663,3867)` for `R_6`.  THM-3523 subsequently
-closes `L^10663N(R_6)` and gives `A(66907,24255)` for `R_7`.  Each later rung
-still requires a separate finite-sheet unit/polynomiality proof.
+closes `L^10663N(R_6)` and gives `A(66907,24255)` for `R_7`.  THM-3528 later
+proves polynomiality at every raw rung; a separate finite-sheet unit remains
+necessary for `L`-coprimality and image-prime arguments.
 
 ## 8. Monoid comparison and exact scope
 

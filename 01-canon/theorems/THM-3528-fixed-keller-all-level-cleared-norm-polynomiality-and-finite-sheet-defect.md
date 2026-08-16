@@ -2,9 +2,9 @@
 id: THM-3528
 title: "Fixed Keller all-level cleared-norm polynomiality and finite-sheet defect identity"
 status: >
-  RESERVED / PROVISIONAL PROOF UNDER AUDIT.  For the fixed sporadic Keller
-  inverse chart, a nonzero polynomial with a complete packet A(e,m) has
-  L^e times its cubic norm in Q[a,b,c], and the result has packet
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the fixed
+  sporadic Keller inverse chart, a nonzero polynomial with a complete packet
+  A(e,m) has L^e times its cubic norm in Q[a,b,c], and the result has packet
   A(7e-2m,3e-2m).  Its exact old-L multiplicity is the nonnegative order on
   the regular finite inverse sheet.  Consequently the raw cleared-norm tower
   from L is polynomial and carries the Pell-57 packet at every level.  This
@@ -12,6 +12,11 @@ status: >
   separability, distinct nonproperness components, an arbitrary-map law, or
   any general Jacobian-conjecture claim.
 source: codex/all-level-cleared-norm/2026-08-16
+audit: >
+  A clean-room reciprocal-cubic audit independently verifies finite-etale
+  norm regularity, the one-plus-ramified-pair Newton decomposition, complete
+  max-lambda noncancellation, ramification weights, the nonmonic resultant
+  hostile, rational scalar normalization, and 15,251 admissible packets.
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
   - THM-3498-level-four-old-boundary-cancellation-and-degree81-discriminant-gate
@@ -25,24 +30,29 @@ related:
 scripts:
   - 04-computation/keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.py
   - 04-computation/keller_packet_monoid_branch_transplant_audit_20260816.py
+  - 04-computation/keller_all_level_cleared_norm_polynomiality_independent_audit_20260816.py
 outputs:
   - 05-knowledge/results/keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.out
   - 05-knowledge/results/keller_packet_monoid_branch_transplant_audit_20260816.out
+  - 05-knowledge/results/keller_all_level_cleared_norm_polynomiality_independent_audit_20260816.out
 script_sha256:
   - 050d9ef31faa59c7ebb3b4dc0ca4df1774cbc4a10a5dd89c87358d1e73842fb6
   - 8256c7179c415e8588a0612608f7c253baf026d8a237cd8cbf01720758e8b5dc
+  - 4e79d10d2a90cfdcbd6948d22b7385da6ea88b923f3483da96448af1ea1cdc77
 output_sha256:
   - 2226933130c39b16b74d6805657a1a42acc87830c35282936da571bc62162a26
   - b934628ab80fefe5fdc6662d10f12bffa4f6f1fb25a3006b9254f3f4b7d204d6
+  - e7247cb01a61558ee2af6ef662610e946364f6d9d32d44766841a501644ee30b
 semantic_sha256:
   - a77811be1a53f2e0d0e0eeac3b4a4ecac358f79c8ed0b6ec5fa6f03f3bb0c826
   - f004cd7643933e81a2fbce73a3df6d72c9e4943702cca7ee17b32d6690be3874
+  - 6fe70dcf5a0f1bd4f76ef8bc4986f79be1d74e4a0b6a71e40520dae67f4e456e
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3528 -- all complete packets clear, but finite-sheet defects may remain
 
-**RESERVED / PROVISIONAL PROOF UNDER AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Retain the fixed sporadic Keller map `F:C^3->C^3`, the irreducible target
 polynomial
@@ -144,6 +154,19 @@ v_L(N(P))=(-e/2)+(-e/2)+s_L(P)=-e+s_L(P),             (10)
 which proves (3).  This calculation includes the local degree/ramification
 weight: the pair of half-integral geometric orders is the degree-two local
 factor and has integral total order `-e`.
+
+There is also an exact divisor interpretation.  Let `D=V(L)` and let
+`C_fin` be the closure in the source of the finite branch over the generic
+point of `D`.  That branch has ramification and residue degree one, so
+
+```text
+s_L(P)=ord_(C_fin)(P)
+      =length_R R/(P(q_fin)).                          (10a)
+```
+
+Consequently `s_L(P)>0` if and only if `C_fin` is a component of `V(P)`.
+It counts generic primary thickness, not the number of returning reduced
+components.
 
 ## 4. Global regularity turns the valuation bound into polynomiality
 
@@ -276,6 +299,22 @@ norm is coprime to `L`.  Starting with input `R_8`, the values `s_n` are open
 and may be positive.  If that occurs, the next raw packet remains polynomial
 but carries an old-`L` factor of exactly that multiplicity.
 
+More precisely, if `Q(P)=L^sR_P` with `L` not dividing `R_P`, then
+
+```text
+div(Q(P))=sD+div(R_P),       (Q(P)):L^infinity=(R_P). (23a)
+```
+
+Thus `s>0` is a return of the finite source component to the old target
+divisor.  It is not automatically a return of the whole hypersurface: that
+requires the reduced source hypersurface to have no other components.  Nor
+does `s=1` make `Q(P)` a reduced image equation; source reducedness, generic
+image degree, component collisions, squarefreeness, and image-support
+identification are separate gates.  The hostiles `P=t(t-1)`, `P=t^2` under
+the identity map distinguish component return, whole-hypersurface return, and
+multiplicity, while a generic degree-two finite map can send a reduced prime
+to a squared norm.
+
 Accordingly this theorem proves neither:
 
 - `L`-coprimality or finite-sheet units after `R_8`;
@@ -368,7 +407,7 @@ multiplicity three; in particular
 
 The formal series, not the harmonic scalar, is the correct ancestry sidecar.
 
-## 9. Exact arithmetic audits
+## 9. Exact arithmetic and independent hostile audits
 
 The first companion checks the matrix determinant, the eight named packet rows,
 the next three raw rows, invariant cone, congruences, order-two recurrence,
@@ -386,7 +425,17 @@ all five packet-face exponent vectors under 256 orbit-row products, renewal
 additivity, the sharp `L^s` quotient boundary through ten rows, three
 synthetic transplant hostiles through five descendants, and the complete
 `2^13` harmonic collision census.  Synthetic defects test (30); they are not
-observed returns in the fixed Keller tower.
+observed returns in the fixed Keller tower.  The independent implementation
+starts from the reciprocal cubic, verifies the Newton slopes `-1/2,0`, both
+local norm-weight conventions, `gcd(L,cTSD)=1`, the canonical finite branch,
+and the nonmonic hostile
+
+```text
+Res_w(E,w)=2c,       N(w)=2c/L.                       (34)
+```
+
+It then checks all `15,251` admissible packets with `e<=300` and independently
+returns `ACCEPT all-level raw polynomial packet induction at fixed-map scope`.
 
 Reproduce with
 
@@ -395,6 +444,8 @@ python -B 04-computation/keller_all_level_cleared_norm_packet_arithmetic_audit_2
 python -B -O 04-computation/keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.py
 python -B 04-computation/keller_packet_monoid_branch_transplant_audit_20260816.py
 python -B -O 04-computation/keller_packet_monoid_branch_transplant_audit_20260816.py
+python -B 04-computation/keller_all_level_cleared_norm_polynomiality_independent_audit_20260816.py
+python -B -O 04-computation/keller_all_level_cleared_norm_polynomiality_independent_audit_20260816.py
 ```
 
-Promotion from the reserved status awaits the independent proof audit.
+**QED.**

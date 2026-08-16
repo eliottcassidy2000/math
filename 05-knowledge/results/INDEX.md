@@ -1,7 +1,26 @@
 # Script Results Index
 
+- `keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.py` and
+  `keller_all_level_cleared_norm_polynomiality_independent_audit_20260816.py`
+  -> matching `.out` files [THM-3528 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  For every complete fixed-chart packet `A(e,m)`, the two
+  divergent sheets contribute `-e` while the regular finite sheet contributes
+  `s>=0`; finite-etale regularity then gives `L^eN(P)` polynomial with exact
+  old-`L` multiplicity `s`.  THM-3522 consequently yields raw polynomial
+  complete packets at every level, with next rows `(2634451,955095)`,
+  `(16530967,5993163)`, `(103730443,37606575)`.  This proves no later unit,
+  image prime, irreducibility, separability, discriminant recursion, or
+  general JC claim.  Primary script/output/semantic LF SHA-256:
+  `050d9ef31faa59c7ebb3b4dc0ca4df1774cbc4a10a5dd89c87358d1e73842fb6` /
+  `2226933130c39b16b74d6805657a1a42acc87830c35282936da571bc62162a26` /
+  `a77811be1a53f2e0d0e0eeac3b4a4ecac358f79c8ed0b6ec5fa6f03f3bb0c826`;
+  independent audit:
+  `4e79d10d2a90cfdcbd6948d22b7385da6ea88b923f3483da96448af1ea1cdc77` /
+  `e7247cb01a61558ee2af6ef662610e946364f6d9d32d44766841a501644ee30b` /
+  `6fe70dcf5a0f1bd4f76ef8bc4986f79be1d74e4a0b6a71e40520dae67f4e456e`.
+
 - `keller_packet_monoid_branch_transplant_audit_20260816.py` -> matching
-  `.out` [PROVISIONAL STRUCTURAL COROLLARY PENDING THM-3528 AUDIT].  Complete
+  `.out` [PROVED STRUCTURAL COROLLARY OF AUDITED THM-3528; VERIFIED-EXACT].  Complete
   packet products add grades, the renewal matrix is additive on all 256
   tested orbit-row pairs, and the cleared norm obeys the symbolic monoid law
   `T(PQ)=T(P)T(Q)`.  If a later raw rung contains `L^s`, its packet quotient
@@ -51,9 +70,8 @@
   `aba447ca5c1e5b6678a6ccd93371b1b8b1bd0ceb2fe127c83c6304855fb8f80f` /
   `3d1527fb4ce4931680e50d7135b9d1129c1816e3a9158645523e2728ddc71ec2`.
 - `keller_all_level_cleared_norm_polynomiality_independent_audit_20260816.py`
-  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS THE PROVISIONAL
-  THM-3528 RAW ALL-LEVEL POLYNOMIAL-PACKET LEMMA; THM-3528 REMAINS
-  RESERVED].  The audit reconstructs the reciprocal cubic
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS THM-3528'S PROVED
+  RAW ALL-LEVEL POLYNOMIAL-PACKET LEMMA].  The audit reconstructs the reciprocal cubic
   `L+Tu^2-2cu^3`, its one unramified finite branch and ramified quadratic
   pair, and the exact complete-face residual `3xz-2y -> -11D/S`.  With
   finite-sheet valuation `s>=0`, ramification-weighted norm valuation is
@@ -257,9 +275,9 @@
   `3(-8)^n`.  The associated primitive Pythagorean triples obey
   `A-9B+5C=3(-8)^n`; their integral transition has determinant `-512` and is
   a Lorentz similitude of multiplier `64`, not a Berggren-tree isometry.
-  Fixed Keller realization is proved only through `R8`; later arithmetic
-  rows do not prove polynomiality, images, irreducibility, an all-level tower,
-  or general JC.  Script/output/semantic SHA-256:
+  THM-3528 now realizes all rows as raw polynomial complete packets; named
+  `L`-coprime rungs stop at `R8`, and later units, images, irreducibility,
+  separability, and general JC remain open.  Script/output/semantic SHA-256:
   `6214844884b89acc366c0352b6880429c9f23c02c52e6667c5f489b14748cdd0` /
   `7cb9f492557fa7ef9710023ca377d47d5fb7f36422e78376c7ebe155cdb9b2e9` /
   `c5758a441d60c45f254edbfea3d2ec06c34886fdcd0fc9bc27685dc0aaa4a5af`.
