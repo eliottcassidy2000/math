@@ -1,10 +1,13 @@
 # The septimal fold is a `K4`, but three deep windows cannot carry four Walsh rows
 
-**Status: FINITE-EXACT REPRESENTATION THEOREM CANDIDATE; independent audit
-pending.**  The exact companion is
+**Status: PROVED as THM-3524 + FINITE-EXACT + INDEPENDENTLY AUDITED.**  The
+exact companion is
 `04-computation/lrc_r5_folded_c7_to_ufull_k4_drift_transporter_probe_20260816.py`.
 It compares proved THM-2594 with the THM-3514 endpoint bank, whose all-role
 weighted-tree strengthening has now been independently promoted as THM-3515.
+The disjoint audit is recorded in
+`lrc-r5-folded-c7-k4-transporter-independent-audit-codex-20260816.md`; normal
+and optimized replays of both implementations match their stored outputs.
 The comparison is over one certified split field.  It constructs no U_full
 ancestry relation, physical current, nonzero absolute `H^1`, scalar-row
 exclusion, or LRC(14) conclusion.
@@ -334,7 +337,7 @@ The pinned semantic digest is
 bae3749e01361ebbaf6c9cc0e7160d2e4d22d6df420d4512ba94f778718af3a1.
 ```
 
-The exact result is a split-field transporter classification and rank
-obstruction.  No Boolean coupling, physical current, grouped coefficient,
+The exact result is promoted as THM-3524, a split-field transporter
+classification and rank obstruction.  No Boolean coupling, physical current, grouped coefficient,
 all-unit projector, nonzero absolute `H^1`, D5 word-current/JC-flux map,
 scalar-row exclusion, or LRC(14) follows.

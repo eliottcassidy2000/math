@@ -35,19 +35,26 @@
   `527a0ebb6edb75b75d5a66e6bb2bee54469315776fa941cd2ebfbaf1ac8a2fa4` /
   `dda1b9bd8ca0471c47c27b620c4e4172338413ec30d40839cae0ab44a3b70bc0`.
 
-- `lrc_r5_folded_c7_k4_transporter_independent_audit_20260816.py` ->
-  matching `.out` [INDEPENDENT AUDIT OF PROVISIONAL PACKAGE; SCOPED
-  PROMOTION RECOMMENDED].  Reconstructs the THM-2594 rank-three source and
-  THM-3514 rank-four U_full Walsh target without importing the submitted
-  transporter or its U_full parent.  Predicate filtering of all `7^4`
-  choices proves completeness of the `48/192/2401` allocation universes and
-  reproduces zero common kernels, even modulo amplitude/cyclic gauge.  An
-  independent `52x29` `(M,lambda_k)` system has rank 25 and annihilator-only
-  nullity four in all eight sign lifts.  The exact Paley quotient is weighted
-  and looped with off-diagonal `K4` support.  THM-3518 contributes no lawful
-  fourth source channel: its common phase is rank-preserving and all cycle
-  coordinates vanish.  No ancestry/current/H1/bispectrum/LRC(14) consequence.
-  Script/output/semantic LF SHA-256:
+- `lrc_r5_folded_c7_to_ufull_k4_drift_transporter_probe_20260816.py` and
+  `lrc_r5_folded_c7_k4_transporter_independent_audit_20260816.py` -> matching
+  `.out` files [THM-3524 PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].
+  The exact Paley quotient is weighted and looped with off-diagonal `K4`
+  support.  The THM-2594 source has exact rank three and split spectrum
+  `91/91`; the THM-3514 U_full Walsh target has rank four and spectrum
+  `52/52`.  Complete `48/192/2401` allocation universes have zero common
+  scalar kernels even modulo amplitude/cyclic gauge.  The independent audit
+  rebuilds the target without importing the submitted transporter or its
+  U_full parent; its `52x29` `(M,lambda_k)` systems have rank 25 and
+  annihilator-only nullity four in all eight sign lifts.  More generally,
+  fixed channel mixing plus any common right operator cannot raise rank three
+  to four.  Four channel-dependent circulants are the formal survivor.
+  THM-3518's phase is target-side and its cycle coordinates vanish.  No
+  ancestry/current/H1/bispectrum/scalar-exclusion/LRC(14) consequence.
+  Primary script/output/semantic LF SHA-256:
+  `5fe3f696f122869462ff73b1b4ebdb957fa8ca7ee3692c25ef94f0f7efae81cf` /
+  `b97db9c8b0582d868c8386be5f5d8dff72968062a9b5ae79956678cd86c0b98a` /
+  `bae3749e01361ebbaf6c9cc0e7160d2e4d22d6df420d4512ba94f778718af3a1`.
+  Independent script/output/semantic LF SHA-256:
   `0bf56db1acfd83d6f161dd95b5d428df90f8cb5e6ec24e729081f24a86f287f2` /
   `c20c59264590cd42b108363c91736df8c9e921ac94b09c1f5fbb5d977f300859` /
   `a6d6ad7a9891af8bddcba6fe7cf9f2554214731043844098f8556d1003885222`.

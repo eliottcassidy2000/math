@@ -1,7 +1,7 @@
 # The folded heptagon obstruction is sound, but its missing coordinate must be source-side
 
-**Status: independent audit of a provisional finite-exact package; scoped
-promotion recommended.**  The submitted script, output, and reflection had
+**Status: independent audit supporting PROVED THM-3524 + FINITE-EXACT.**  The
+submitted script, output, and reflection had
 LF SHA-256 values
 
 ```text
@@ -214,10 +214,10 @@ Thus the newly found fourth coordinate does not by itself solve the common-
 operator transplant.  This incoming result is not part of the present audited
 package and should be independently promoted, if at all, on its own evidence.
 
-## Promotion recommendation
+## Promotion outcome
 
-Promote the provisional package as a finite-exact theorem only with all four
-scope clauses visible:
+THM-3524 promotes the package as a finite-exact theorem with all four scope
+clauses visible:
 
 ```text
 PROVED FINITE-EXACT over the certified split field;

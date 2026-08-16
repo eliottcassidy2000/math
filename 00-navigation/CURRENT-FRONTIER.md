@@ -36,12 +36,11 @@ THM-3356/3366 leave k2/k3 `4056/1897`; exact-six k3 is a 20-edge `Phi`-DAG and k
 THM-3414--3416 give ZMC rank-4/5/6 bases `8,9` / `10,12` / `11,15,23,25`.
 THM-3425 gives primitive cap-six support.
 [THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md) proves 15-atom cap-seven support only at zero current.
-[THM-3479](../01-canon/theorems/THM-3479-literal-half-twist-relation-current-two-transplant-certificate.md)
-proves U_full `169/169`,`13^3`,`72/72`; U_clock has no bank. THM-3514: owner
-`52/117`, rank4/full Walsh-drift. THM-3515: five rank5 role rows and `72/72`
-point/drift/Fourier charts. THM-3518 pins phases, `13^-3` and minors; all
-`56,592` cycle pairings vanish. These are Cartesian `B^1`; ancestry/current/
-`H^1`/scalar/LRC remain open.
+THM-3479 proves U_full `169/169`,`13^3`,`72/72` (U_clock none); THM-3514 gives
+owner `52/117`, rank4/full Walsh-drift; THM-3515 gives five rank5 rows and
+`72/72` charts; THM-3518 pins phases and `56,592` zero cycle pairings.
+THM-3524 closes the folded `C7/K4` common-right linear transplant by rank
+`3<4`.  Endpoint `B^1` only; ancestry/current/`H^1`/scalar/LRC remain open.
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;
 HYP-8871 leaves `165` rows.  THM-2363/THM-2368 are sidecars; THM-2417--2894
