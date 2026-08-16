@@ -1,5 +1,25 @@
 # Script Results Index
 
+- `fibonacci_t4_atlas_h1_branch_transplant_probe_20260816.py` -> matching
+  `.out` [VERIFIED-EXACT STRUCTURAL SIDECAR TO PROVED THM-3487 +
+  INDEPENDENTLY AUDITED].  Owner plus an order of the three nonzero `V4` directions
+  bijects with all `24` total orders of four vertices, hence all labelled
+  transitive `T4` tournaments.  The lawful affine owner edges transport this
+  atlas positionwise but have trivial holonomy.  A base-preserving
+  frame-line transplant exists exactly for a nonzero seam class
+  `h in H^1(C6;V4)`: each of `p,q,r` has exactly eight compatible point
+  gauges, partitioning all `24` initial identifications as `8+8+8`; class
+  zero has none.  Thus the same nonzero class that creates a structured
+  `T4` transplant forbids every closed owner section.  Element orders in
+  `S4` are only `1,2,3,4`, so the order-6/order-12 full shifts require a
+  time-dependent affine connection, not one static relabelling.  All `4096`
+  translation cochains split `1024` per seam class; a nontrivial-linear-return
+  hostile has two sections and cycle type `(6,6,12)`, delimiting the
+  constant-coefficient `H^1` claim.
+  Script/output/semantic LF SHA-256:
+  `0f2ea46b6df1f58be7299ed6be64aef34911559421422b9c43e11b8a275988e5` /
+  `76f7dee37b1a527e46f3048ca0600e49f96c0d2a80066944dc4cec46491abe01` /
+  `3e19be5a6d7679656f4e476ea1cb5a3bd5944a190bab860c43a8ecbd034d8176`.
 - `periodic_polynomial_fourier_dirichlet_residue_tomography_thm3490.py` ->
   matching `.out` [THM-3490 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   AUDITED].  For a declared period and
@@ -18,22 +38,31 @@
   `72f7b97f3acabeef953c1184a35904b1fa28d0494cb9f4d0e2100c85aa3ebc3e` /
   `39daa9a75e84e0fcb28141fa9079c3f616c9aa5d0689934cc239b4d911fc713e`.
 - `fibonacci_two_24_state_bundle_obstruction_thm3487.py` -> matching `.out`
-  [THM-3487 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  independent audit pending].  Synchronizing the six Fibonacci channel
+  [THM-3487 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Synchronizing the six Fibonacci channel
   orders with the four-state `P1(F3)` cycle gives permutation type `12^2`,
-  while the lawful affine-`V4` owner transport has type `6^4`.  After linear
-  gauge trivialization the mismatch is exactly `H^1(C6;V4)=V4`: the proved
+  while the lawful affine-`V4` owner transport has type `6^4`.  For the fixed
+  trivializable edge-linear system the mismatch is exactly
+  `H^1(C6;V4)=V4`: the proved
   closed owner section has class zero, and each of the three nonzero
   K4/XOR matching directions repairs the abstract cycle type but forbids
   every closed section.  The two-step frame shift survives abstractly
   (`31104` conjugacies) but not over the displayed base; each nonzero seam
-  repair has `288` abstract conjugacies.  Under a declared uniform 24-address
+  repair has `288` abstract conjugacies.  Owner plus direction order is
+  exactly the atlas of all 24 labelled transitive `T4`s; each nonzero class
+  has exactly eight base-preserving positionwise-affine atlas transplants,
+  while class zero has none.  The independent audit exhausted all `4096`
+  translation cochains and isolated the nontrivial-linear hostile
+  `(6,6,12)`.  Under a declared uniform 24-address
   word, invariant-union harmonic grades are halves versus quarters; this is
-  not a single-orbit average or a tournament.  Script/output/semantic LF
+  not a single-orbit average.  Primary script/output/semantic LF
   SHA-256:
-  `13ba2822f9f020623f59f361b8a2aac37da73eeb23c55b00157ab167adb677f9` /
-  `6c43abb71d127d4efe80c250f0651eeff1683c9a8df2781ddc81883f1b488a98` /
-  `9c338ec5eebe1f93326ae12c00f37da58382fa2084339adbd1de422e7d05d70e`.
+  `a5b2b033488555dca7fef149f3e31d8e45584af051f84e3f542f4af449154037` /
+  `4dbb93388c29ae4ac7073f5ed2d39b6e08671e6f416ae0ba05c020004d949ebb` /
+  `9c338ec5eebe1f93326ae12c00f37da58382fa2084339adbd1de422e7d05d70e`;
+  atlas sidecar:
+  `0f2ea46b6df1f58be7299ed6be64aef34911559421422b9c43e11b8a275988e5` /
+  `76f7dee37b1a527e46f3048ca0600e49f96c0d2a80066944dc4cec46491abe01` /
+  `3e19be5a6d7679656f4e476ea1cb5a3bd5944a190bab860c43a8ecbd034d8176`.
 - `periodic_polynomial_critical_harmonic_transform_thm3486.py` -> matching
   `.out` [THM-3486 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a
   nonzero degree-`d` period-`p` polynomial word, the theorem proves

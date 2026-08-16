@@ -2,37 +2,44 @@
 id: THM-3487
 title: "Two twenty-four-state Fibonacci bundles and the cycle-type obstruction"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT PENDING.  Synchronizing the proved six-state Fibonacci channel-order
-  cycle with the four-state P1(F3) cycle gives two 12-cycles, whereas its
-  lawful affine-V4 owner bundle has four 6-cycles.  Their mismatch is the
-  zero versus nonzero class in H^1(C6;V4): a nonzero seam class repairs the
-  permutation type but forbids every closed owner section.  The three repair
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Synchronizing the proved
+  six-state Fibonacci channel-order cycle with the four-state P1(F3) cycle
+  gives two 12-cycles, whereas its lawful affine-V4 owner bundle has four
+  6-cycles.  For the fixed trivializable edge-linear system, their mismatch
+  is the zero versus nonzero class in H^1(C6;V4): a nonzero seam class repairs
+  the permutation type and gives exactly eight base-preserving transitive-T4
+  atlas transplants, but forbids every closed owner section.  The three repair
   classes are the three K4 matching/XOR directions.
 source: codex-2026-08-16-two-fibonacci-24-state-bundles
 audit: >
-  self-contained cycle-holonomy and graph-cohomology proof candidate; exact
-  companion pins THM-3339 and the four-state frame-line probe, reconstructs
-  both affine gauges, checks all cycle types, all three nonzero seam classes,
-  conjugacy counts, matching-gauge fibres, normal/optimized replay, and AST
-  security; independent proof audit pending
+  independently audited by codex-Erdos-2026-08-16: cycle/section claims,
+  gauge equations, conjugacy counts, matching census, harmonic typing, and T4
+  atlas rederived; all 4096 translation cochains exhausted with 1024 per
+  class; nontrivial-linear-return hostile isolates the constant-coefficient
+  H1 scope; both companions pass normal/optimized/stored replay and security
 depends_on:
+  - THM-2622-affine-torsor-holonomy-fixed-section-spectrum-and-v4-c13-dictionary
   - THM-3339-fibonacci-three-ray-berggren-transplant-and-moving-owner-obstruction
 related:
+  - THM-3364-cyclotomic-boolean-clocks-berggren-t4-xor-and-crt-phase
   - THM-3486-critical-harmonic-transform-of-periodic-polynomial-words
   - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
 script: 04-computation/fibonacci_two_24_state_bundle_obstruction_thm3487.py
 output: 05-knowledge/results/fibonacci_two_24_state_bundle_obstruction_thm3487.out
-script_sha256: 13ba2822f9f020623f59f361b8a2aac37da73eeb23c55b00157ab167adb677f9
-output_sha256: 6c43abb71d127d4efe80c250f0651eeff1683c9a8df2781ddc81883f1b488a98
+script_sha256: a5b2b033488555dca7fef149f3e31d8e45584af051f84e3f542f4af449154037
+output_sha256: 4dbb93388c29ae4ac7073f5ed2d39b6e08671e6f416ae0ba05c020004d949ebb
 semantic_sha256: 9c338ec5eebe1f93326ae12c00f37da58382fa2084339adbd1de422e7d05d70e
+sidecar_script: 04-computation/fibonacci_t4_atlas_h1_branch_transplant_probe_20260816.py
+sidecar_output: 05-knowledge/results/fibonacci_t4_atlas_h1_branch_transplant_probe_20260816.out
+sidecar_script_sha256: 0f2ea46b6df1f58be7299ed6be64aef34911559421422b9c43e11b8a275988e5
+sidecar_output_sha256: 76f7dee37b1a527e46f3048ca0600e49f96c0d2a80066944dc4cec46491abe01
+sidecar_semantic_sha256: 3e19be5a6d7679656f4e476ea1cb5a3bd5944a190bab860c43a8ecbd034d8176
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3487 -- the missing transplant is a nonzero seam class
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 Equal cardinality does not identify two finite dynamical bundles.  In the
 present `6*4=24` collision, the complete obstruction is sixth-step holonomy.
@@ -103,6 +110,10 @@ identity because the displayed frame closes, and the affine product fixes
 `o_0` because the section (3) closes.
 
 ## 2. Cycle-holonomy lemma
+
+The closest proved general mechanism is THM-2622's affine-torsor holonomy
+fixed-section theorem.  The orbit statement needed here is its elementary
+cyclic-skew-product companion.
 
 Consider any skew product over an `m`-cycle,
 
@@ -180,10 +191,12 @@ Thus the `12^2` versus `6^4` obstruction survives lawful changes between the
 moving and fixed owner frames.  It is projective return holonomy versus
 owner return holonomy, not a coordinate accident.
 
-## 4. Exact H1 classification
+## 4. Exact H1 classification for the fixed edge-linear system
 
-After the linear trivialization (16), any affine owner transport around the
-hexagon is represented by six edge translations
+Fix the edge-linear system in (6), whose return linear part is the identity.
+After an affine gauge of the form (16) trivializes that fixed system, any
+variation which changes only its edge translations is represented by six
+elements
 
 ```text
 c=(c_0,...,c_5) in V4^6.                               (18)
@@ -206,6 +219,9 @@ and every value occurs.  This is the explicit cellular identification
 ```text
 H^1(C_6;V4)=V4.                                        (21)
 ```
+
+This is constant-coefficient cellular cohomology after the declared linear
+trivialization.  It is not a classifier for arbitrary affine local systems.
 
 The lawful owner packet (3), (6) is class `h=0`.  Its closed section is the
 corresponding flat section.  Changing the final seam by a nonzero
@@ -235,6 +251,13 @@ h!=0      iff the 12^2 projective cycle type is matched. (24)
 
 No bundle in this family has both properties.  The repair does not merely
 move the particular section (3); it forbids every closed section.
+
+The scope is sharp.  If the return linear part is the coordinate swap rather
+than the identity, THM-2622's full equation `(I-A)x=c` gives two parallel
+sections and the 24-state skew product has cycle type `(6,6,12)`.  That third
+type lies outside (21)--(24).  The strengthened exact sidecar checks this
+hostile in addition to exhausting all `4^6=4096` translation cochains:
+each class in (21) has exactly `1024` representatives.
 
 ## 5. Why the three nonzero classes are K4/XOR matchings
 
@@ -290,7 +313,73 @@ abstract conjugacies with `T_X` is
 Again these bijections need not preserve the channel-order base, owner
 section, branch letters, or any current.
 
-## 7. Periodic harmonic address grades
+## 7. The full product is a transitive-T4 atlas
+
+The factors are not tournaments, but their product has a canonical positive
+realization.  For an owner `u` and an ordered triple of the nonzero
+directions, define
+
+```text
+Theta(u;d_1,d_2,d_3)=(u,u+d_1,u+d_2,u+d_3).             (28a)
+```
+
+The entries are all four vertices of `V4`.  Conversely every total order of
+`V4` uniquely recovers its first vertex and the ordered differences from it.
+Thus
+
+```text
+V4 x Ord({p,q,r})  <->  all 4!=24 total orders of V4,   (28b)
+```
+
+equivalently all labelled transitive tournaments on four vertices.  This is
+the exact size-four tournament realization of the 24-state packet.
+
+Each moving affine edge `A_i(u)=L_i u+t_i` transports it positionwise:
+
+```text
+A_i Theta(u;pi_i)=Theta(A_i u;pi_(i+1)).                (28c)
+```
+
+Now let `A_i^(h)` be the repaired owner connection with return translation
+`tau_h`.  A base-preserving frame-line map has the form
+
+```text
+F(i,j)=(i,lambda_i(j)),                                 (28d)
+```
+
+and is equivariant exactly when
+
+```text
+lambda_(i+1) G=A_i^(h) lambda_i.                        (28e)
+```
+
+The initial point gauge determines all later ones.  Closure after six steps
+is
+
+```text
+tau_h lambda_0=lambda_0 G^2.                            (28f)
+```
+
+Since `G^2` is a double transposition, (28f) has no solution for `h=0` and
+exactly eight solutions for each `h in {p,q,r}`.  All 24 initial point gauges
+therefore partition as
+
+```text
+0 / 8 / 8 / 8                                           (28g)
+```
+
+over the four classes in (21).  For every nonzero class, these eight maps are
+base-preserving, positionwise-affine `T4`-atlas conjugacies.  They form the
+structured subset of the `288` abstract conjugacies counted in (28).
+
+So the repair is not only a cycle-type match: it gives the desired transplant
+on the indexed Fibonacci cycle, at the exact cost of losing every closed
+owner section.  The static atlas is common; the cyclic connections differ.
+No single `K4` relabelling induces either full motion, because element orders
+in `S4` are at most four while the lawful and repaired shifts have orders six
+and twelve.
+
+## 8. Periodic harmonic address grades
 
 There is one safe connection to subsets of the harmonic series.  Declare a
 uniform 24-address enumeration, repeat it periodically, and mark a subset of
@@ -303,12 +392,12 @@ T_X or T_(Y,h!=0):  {0,1/2,1},
 T_Y or T_X^2:        {0,1/4,1/2,3/4,1}.                 (29)
 ```
 
-This is the degree-zero periodic mechanism developed more generally in the
-THM-3486 candidate.  Equation (29) is **not** a time average along one orbit:
+This is the degree-zero periodic mechanism proved in THM-3486 and, with its
+full phase bank, in THM-3364.  Equation (29) is **not** a time average along one orbit:
 an invariant union has constant indicator on each orbit.  Nor does it say
 anything about arbitrary subsets of the natural numbers.
 
-## 8. Tournament and branch boundaries
+## 9. Tournament and branch boundaries
 
 The six base states in (2) are the six total orders of three matching
 channels.  They may be drawn as transitive tournaments on three channel
@@ -319,28 +408,38 @@ perfect matching, not six pairwise arc orientations.  Missing edges,
 bidirectional edges, and XOR are therefore not silently collapsed into a
 cosmetic tournament.
 
+The positive statement is (28a)--(28c): the **full owner-order product** is
+genuinely the atlas of transitive `T4`s.  Static tournament data alone still
+forgets the connection and its holonomy.  This distinction reconciles the
+size-four intuition with the fibrewise typing obstruction.
+
 Likewise, (21) is an explicit finite path-cycle model for how a word/owner
 transport can become an `H^1` class.  It suggests a useful discipline for the
 harder LRC word-current versus Jacobian-flux map: identify both holonomies,
 their coefficient local systems, and the lost gauge before comparing them.
 It does **not** write that D5 map.
 
-This candidate proves no full Berggren-tree conjugacy, no ternary branch
+This theorem proves no full Berggren-tree conjugacy, no ternary branch
 action, no physical current, no Jacobian flux, no LRC bispectrum
 nonvanishing, and no case of LRC(14).
 
-## 9. Exact companion
+## 10. Exact companions
 
 Run
 
 ```bash
 python -B 04-computation/fibonacci_two_24_state_bundle_obstruction_thm3487.py
 python -B -O 04-computation/fibonacci_two_24_state_bundle_obstruction_thm3487.py
+python -B 04-computation/fibonacci_t4_atlas_h1_branch_transplant_probe_20260816.py
+python -B -O 04-computation/fibonacci_t4_atlas_h1_branch_transplant_probe_20260816.py
 ```
 
-The companion pins the source computations, reconstructs the unique linear
+The primary companion pins the source computations, reconstructs the unique linear
 and affine edge maps, checks both owner gauges and their trivial holonomy,
 computes (12)--(13), (26)--(28), checks all three nonzero seam holonomies,
-and verifies the `8+8+8` matching-gauge census.  These finite checks support
-but do not replace the proof above.  The candidate remains outside the
-proved dependency graph until independent audit.
+and verifies the `8+8+8` matching-gauge census.  The strengthened sidecar
+checks (28a)--(28g), all `4096` translation cochains, and the
+nontrivial-linear-return hostile.  An independent audit rederived every
+cycle, section, gauge, conjugacy, harmonic, and tournament claim without
+importing either implementation.  The finite checks support but do not
+replace the proof above.  QED.
