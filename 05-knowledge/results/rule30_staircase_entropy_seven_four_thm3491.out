@@ -1,0 +1,15 @@
+THM-3491 Rule 30 seven-four staircase entropy exact companion
+tuple_mask_transition_checks=2124
+reachable_counts_h14_21=(18619, 32885, 57741, 100901, 175680, 304714, 526563, 906525)
+G21_vertices=526563 G21_edges=906525 adjacency=zero_one
+certificate=4*A*v<=7*v iterations=5789 min=11 max=2303 sum=253229011 slack_range=(-6,0)
+certificate_payload=ascending_(two_mask_code_u64le,weight_u64le)_pairs
+certificate_sha256=cf7adb12a00c294013135ebd19e606c0ff553eb2f27d65f300fbfbae45dc284a
+prefactor_check=278428242084716609536<279113347509046779498; N_h<=318*(7/4)^h_for_h>=20
+entropy_check=7^16=33232930569601<2^45=35184372088832; eta<13/16
+marker_check=3^16=43046721<2^26=67108864
+tariff_samples_(w,ell,h,b,address_bits)=((128, 64, 32, 27, 62), (256, 184, 96, 87, 174), (512, 432, 256, 211, 428), (1024, 936, 560, 463, 927), (2048, 1952, 1184, 971, 1942), (4096, 3992, 2448, 1991, 3989))
+compiler_query_tariff=(13/4+o(1))*n^2/w^2
+finite_lower_signal=CABC/BCBC_full_block_code_through_m=5 checks=62 universal_claim=0
+scope=upper_bound_and_compiler_only prizes_solved=0 literature_novelty_claimed=0
+all_checks=PASS

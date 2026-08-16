@@ -1,0 +1,20 @@
+THM-3489 RULE 30 PACKED RESTART AND POINTED PASCAL EXACT AUDIT
+pascal_universe=p=2^d,d=1..8;s=1..p-1;exact bit-packed functionals
+pascal_face_pairs_checked=502
+odd_length_all_odd_face_pairs_checked=255
+direct_arc_universe=p=2^d,d=1..6;s=1..p-1
+direct_arc_matrices_checked=120
+independently_load_bearing_image_profiles_checked=966
+rule30_restart_universe=depths_k=2..30;all t=0..P_k
+rule30_restart_phase_checks=13445
+innovation_lift_bits_eps1..30=101101101000001100000001101010
+actual_wrap_rows_k_p_epsilon_center=[(2, 2, 0, 0), (3, 2, 1, 1), (4, 4, 1, 1)]
+hard_odd_innovative_rows_k_p_center=[(7, 16, 0), (9, 32, 1), (15, 64, 1), (25, 512, 0), (27, 1024, 0), (29, 2048, 1)]
+odd_face_examples_k_p_center_order_value=[(7, 16, 0, ((9, 1), (11, 0), (13, 1), (15, 0))), (9, 32, 1, ((23, 1), (31, 0)))]
+physical_marked_pascal_faces_checked=27
+self_addressed_innovation_recursions_checked=11
+boolean_universe=all odd-support tables d=2..3;all translated singleton pairs d=2..6
+odd_support_boolean_tables_checked=136
+translated_singleton_hostile_pairs_checked=124
+scope=UNIVERSAL_PROOFS_PLUS_FINITE_EXACT_CONTROLS;no wrap-frequency,balance,nonperiodicity,or random-access conclusion
+ALL CHECKS PASSED
