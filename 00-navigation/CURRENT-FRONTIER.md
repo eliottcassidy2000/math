@@ -333,7 +333,10 @@ density need not settle `z=1` mass.
   lifts; no JC map. THM-3438 gives `KDeg(m)={1,3,4,...}` (`m>=3`), all-grade
   `S_n`, first mixed grade `9`, global G1 and a non-radical `S_5` inverse;
   arbitrary-map, planar/z-affine and `A_4/A_5` classification stays open.
-  THM-1300/1315 provenance is unsettled (MISTAKE-205); THM-2473--2576 are fixed-map only. For `A4/S4`, THM-2681 blocks the cubic identification; THM-2685--2708 locate the gain plane, exclude three model carriers and identify saturated `H^1(U,mu_2)` holonomy. Spin/realization remain open.
+  THM-1300/1315 are unsettled (MISTAKE-205); THM-2473--2576 fixed-map.
+  **RESERVED:** [3493](../01-canon/theorems/THM-3493-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness.md)
+  is empty. THM-2681 blocks the `A4/S4` cubic; THM-2685--2708 give its
+  gain/holonomy.
   THM-3057/3059/3441 set the boundary and refute both odd-every-component forms of HYP-9027. THM-3448 realizes Keller `C_ell` inertia (`ell>=2`; first `C3` in degree five) and excludes `C3` only for weighted quartics; arbitrary quartic/two-jet `C3` remains OPEN.
   THM-3440/3443/3450: marked mode-one LRC/Keller isomorphism on 91 sheets.  Mod-13 `H^1` has no amplitude map; order 8/14 margins block the full germ.  No current.  THM-3066 retains only their
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
