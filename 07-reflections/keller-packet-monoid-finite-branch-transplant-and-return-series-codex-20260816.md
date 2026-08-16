@@ -1,7 +1,7 @@
 # The finite survivor controls a branch-transplant monoid, not the prime-image tower
 
 **Status: PROVED STRUCTURAL COROLLARY OF INDEPENDENTLY AUDITED THM-3528;
-VERIFIED-EXACT.**  The fixed Keller packet family now has the monoid structure suggested
+VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The fixed Keller packet family now has the monoid structure suggested
 at the start of the session.  Complete packets multiply by adding their two
 grades, and the cleared cubic norm is multiplicative.  The resulting operator
 shifts any returned old-boundary factor through the canonical ancestry
@@ -43,8 +43,10 @@ return.  This is an exact use of the `1+2` cubic anatomy, unlike the earlier
 speculative comparison with a ternary combinatorial tree.
 
 The old finite-sheet computations showed `s=0` through input `R_7` and output
-`R_8`.  THM-3528's proposed proof shows that later `s>0` would not stop the
-packet tower.  It would instead mark a divisor return.
+`R_8`.  THM-3528 proves that a later `s>0` would not stop the packet tower.
+It would instead mark a divisor return.  Reserved THM-3529 now contains a
+stronger candidate obstruction to every such return; that argument remains
+under independent audit at this reflection state.
 
 ## 2. The complete-packet monoid
 
@@ -115,9 +117,13 @@ level n+3    contains G^s,
 ```
 
 Equation (11) is stronger than a recurrence coincidence: it is an exact
-polynomial divisibility statement.  It is also one-way.  A positive defect
-proves reducibility and propagates it; defect zero does not prove
-irreducibility, squarefreeness, or image status.
+polynomial divisibility statement.  It is also one-way.  If
+`s_j=s(P_j)>0`, then the factor occurs in the **next** rung
+`P_(j+1)=L^sR`; for every genuine later output, `m_(j+1)>0`, so `R` is
+nonconstant and reducibility propagates.  The seed hostile `P_0=L=L*1`
+shows why positive multiplicity alone does not imply reducibility when the
+cofactor is a unit.  Defect zero by itself does not prove irreducibility,
+squarefreeness, or image status.
 
 ## 4. A subset of the naturals is a return word, not a harmonic scalar
 

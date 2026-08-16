@@ -38,12 +38,16 @@
   `6fe70dcf5a0f1bd4f76ef8bc4986f79be1d74e4a0b6a71e40520dae67f4e456e`.
 
 - `keller_packet_monoid_branch_transplant_audit_20260816.py` -> matching
-  `.out` [PROVED STRUCTURAL COROLLARY OF AUDITED THM-3528; VERIFIED-EXACT].  Complete
+  `.out` [PROVED STRUCTURAL COROLLARY OF AUDITED THM-3528; VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED].  Complete
   packet products add grades, the renewal matrix is additive on all 256
   tested orbit-row pairs, and the cleared norm obeys the symbolic monoid law
   `T(PQ)=T(P)T(Q)`.  If a later raw rung contains `L^s`, its packet quotient
   is `A(e-s,m)` with sharp bound `s<=e-m`, and every descendant contains the
-  transplanted canonical factor `P_k^s`.  The faithful defect carrier is a
+  transplanted canonical factor `P_k^s`.  A positive defect of input `P_j`
+  factors output `P_(j+1)`; reducibility additionally needs a nonunit
+  cofactor (automatic for genuine later outputs because `m_(j+1)>0`), while
+  `P_0=L=L*1` is the sharp hostile.  The faithful defect carrier is a
   formal series; harmonic evaluation loses support (`8192` subsets of
   `{1,...,13}` give `3712` sums and `2944` collision values).  Synthetic
   defects are hostiles, not observed returns; later units, factors, images,

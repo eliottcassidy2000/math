@@ -383,10 +383,13 @@ Thus a returned `L^s` factor is carried along the canonical ancestry:
 L^s, H^s, J^s, G^s, R_5^s, ...                       (31)
 ```
 
-up to the already recorded nonzero rational normalizations.  A positive
-later defect therefore forces a proper ancestral factor at that rung and all
-its descendants; it rules out an all-prime raw tower from that point onward.
-The converse is false: `s_n=0` proves only `L`-coprimality and does not prove
+up to the already recorded nonzero rational normalizations.  More precisely,
+`s_j>0` puts `L^s` in the next rung `P_(j+1)`.  For every genuine later
+output, `m_(j+1)>0`, so the quotient in (29) is nonconstant; that next rung
+and all its descendants are reducible.  The seed factorization `P_0=L=L*1`
+is the sharp hostile showing that positive multiplicity does not imply
+reducibility when the cofactor is a unit.  The converse is false:
+`s_j=0` proves only that `P_(j+1)` is `L`-coprime and does not prove its
 irreducibility.
 
 The defect word has a faithful formal encoding
