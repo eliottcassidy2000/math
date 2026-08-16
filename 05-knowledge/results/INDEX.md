@@ -18,8 +18,8 @@
   `ab5aa0fe7f28607c766ea4e3d1d42a7b84b4e9843ce2e35df49ebefd06bace75`.
 
 - `keller_finite_branch_beta_homogeneous_unit_obstruction_20260816.py` ->
-  matching `.out` [VERIFIED-EXACT ALGEBRAIC CERTIFICATE FOR RESERVED
-  THM-3529; INDEPENDENT HOSTILE AUDIT ACCEPTS THE THEOREM MECHANISM].  For the fixed sporadic map, the exact
+  matching `.out` [THM-3529 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  For the fixed sporadic map, the exact
   pullback `B=F^*L` is a primitive ten-term polynomial of beta weight `-2`
   and positive `x`-degree four.  In the Laurent coordinates `p=xy`,
   `q=x^2z`, one has `x^2B=C(p,q)`, where `C` is a primitive quadratic in

@@ -2,17 +2,26 @@
 id: THM-3529
 title: "Fixed Keller complete-packet finite-sheet unit obstruction"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT HOSTILE AUDIT.
-  The candidate identifies the regular finite inverse divisor with the
-  explicit irreducible beta-homogeneous pullback B=F^*L and uses the
-  x-free complete minimum-beta packet face to exclude B from every complete
-  packet.  No statement in this file is proved canon until audit promotion.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the fixed
+  sporadic Keller map, the regular finite inverse divisor is the explicit
+  irreducible beta-homogeneous pullback B=F^*L.  The x-free complete
+  minimum-beta packet face excludes B from every complete packet, so every
+  complete packet has finite-sheet valuation zero and every positive-level
+  raw cleared norm is coprime to the old L.
 source: codex/finite-branch-beta-obstruction/2026-08-16
-depends_on: []
-related:
+audit: >
+  The independent audit rederived B, its Laurent quadratic and nonsquare
+  discriminant, the prime/reduced divisor identification, the negative-weight
+  initial-form argument, and the x-degree contradiction.  It found and
+  repaired a bounded-census scope defect: the certificate now checks the
+  full packet cone 0<=m<=e, 3|m, including A(3,3), rather than only the raw
+  orbit subcone 2m<=e.
+depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
   - THM-3506-fixed-keller-five-face-norm-transform-and-271-99-boundary
   - THM-3528-fixed-keller-all-level-cleared-norm-polynomiality-and-finite-sheet-defect
+related:
+  - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
 script: 04-computation/keller_finite_branch_beta_homogeneous_unit_obstruction_20260816.py
 output: 05-knowledge/results/keller_finite_branch_beta_homogeneous_unit_obstruction_20260816.out
 script_sha256: c3b096d9f9b29c97eb1540dc85cb3f2e6739f2aeb5d903b5f3f36672e0592694
@@ -23,10 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3529 -- the finite inverse divisor misses every complete packet
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT HOSTILE
-AUDIT.**  The argument below is deliberately not in the proved dependency
-graph until its geometric typing and graded-domain step are independently
-accepted.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Retain the fixed sporadic Keller map of THM-2473, written in source
 coordinates `(x,y,z)`, with `u=1+xy`,
@@ -53,7 +59,7 @@ beta(x^i y^j z^k)=i-j-2k.                              (3)
 
 Let `P` be any nonzero polynomial with the complete packet `A(e,m)` of
 THM-3506.  Let `s_L(P)` be the regular finite-sheet valuation in THM-3528.
-Then the candidate conclusion is
+Then
 
 ```text
 s_L(P)=0.                                               (4)
@@ -73,7 +79,7 @@ and has complete packet `A(7e-2m,3e-2m)`.  For the raw tower
 P_0=L,                 P_(n+1)=L^e_n N(P_n),            (6)
 ```
 
-this would prove
+this proves
 
 ```text
 gcd(P_n,L)=1 for every n>=1.                            (7)
@@ -231,8 +237,8 @@ Each hypothesis is load-bearing.
    would not work; the complete-face assertion excludes additional
    equal-weight `x`-terms.
 
-Even if promoted, this theorem would prove only old-`L` coprimality of the
-cleared outputs.  It would not prove that any later `P_n` is irreducible,
+This theorem proves only old-`L` coprimality of the cleared outputs.  It does
+not prove that any later `P_n` is irreducible,
 that `V(P_n)` is a new image prime, that a later eliminant is separable, that
 the discriminant recursion continues, that all nonproperness components are
 distinct, or that the construction says anything about the general Jacobian
