@@ -270,21 +270,59 @@
   `e55ea0c63df8f73a5631d3092b12961284e7f294c5aed0848c42ecd127aaba5c` /
   `412de3695927f9d71a0eb165a24447a7f36b1e2d8090361d378ed739670dea0a`.
 - `keller_level_three_norm_slice_probe_20260815.py` -> matching `.out`
-  [CONDITIONAL ALGEBRAIC SYNTHESIS + FINITE-EXACT THREE-SLICE EVIDENCE;
-  NOT CANON].  The odd-degree norm-product discriminant recursion gives
+  [FINITE-EXACT THREE-SLICE PRECURSOR; SUPERSEDED AS THE CURRENT FRONTIER BY
+  THE 20260816 GLOBAL/STRUCTURAL COMPANIONS; NOT CANON].  The odd-degree
+  norm-product discriminant recursion gives
   `[Delta_3]=[-L N(H)]=[-H N^2(L)]`.  On the exact slices
   `(b,c)=(1,2),(3,1),(1,3)`, direct multiplication determinants and
   independent resultants agree on `N(H)=K/(2^e L^7)`, with
   `e=21,35,35`; every `K` is irreducible of degree 86 and coprime to the
   specialized `LH`.  Hence each slice has `[Delta_3]=[-2K]` and the old
   `L` exponent cancels to the even value `-6`.  The transported 361-term
-  `H` artifact is raw-hash pinned before deserialization.  The global
-  numerator `J`, global pole order, divisor multiplicity, degree-27 block
-  separability, and every JC classification consequence remain OPEN.
+  `H` artifact is raw-hash pinned before deserialization.  This artifact did
+  not by itself prove a global claim; the three following 20260816 companions
+  now discharge its global pole, divisor, and degree-27 genericity questions.
   Ordinary/optimized/stored outputs are byte-identical.  Script/output LF
   SHA-256:
   `f2b8725341caea3bc2235dea9b69e7d33c5870a89db96a8604ef4521b2154659` /
   `1086ccb03a69f1c92eb945a6ad0118976ae7f6ef2763d4e10e3973256a53d503`.
+- `keller_level_three_norm_divisor_structure_20260816.py` -> matching `.out`
+  [PROVED STRUCTURAL SIDECAR IN A THEOREM-READY REFLECTION; NOT YET CANON].
+  Exact quotient reduction and the Newton face
+  `-63078912*x^7*(3*x*z-2*y)^3` prove that the two divergent inverse sheets
+  contribute `-7/2` each to `v_L(H(q))`; an exact finite-sheet hostile is a
+  unit.  Hence `v_L(N(H))=-7` without expanding the global numerator.  The
+  simultaneous point `(2/27,1,1)` checks the generic-DVR units `c,T,S,D`.
+  Ordinary/optimized/stored outputs are byte-identical.  Script/output LF
+  SHA-256:
+  `f4255f6a6918458fb877523329061a66dfdef3a80b7d54cff74394b88c2f6628` /
+  `473cffeb80859a3bf91ab3c77fc6144089d2c6025735a81a7d782a8e774dbcf8`.
+- `keller_level_three_global_norm_probe_20260816.py` -> matching `.out`
+  [VERIFIED-EXACT GLOBAL NORM IDENTITY + INDEPENDENT RECONSTRUCTION; NOT YET
+  CANON].  Cubic-basis reduction gives
+  `H(q)=(B0+B1*w+B2*w^2)/(2^35*S*L^3)` and the exact resultant gives
+  `N(H)=J/(2^35*L^7)`.  The primitive squarefree `J` has 66,146 terms,
+  multidegree `(86,129,76)`, total degree 157, and `gcd(J,LH)=1`; its
+  lexicographic coefficient-ledger hash is
+  `9aca78e67d33351b2f2fb4dbe8ab5bdff06373fdbd8ef9ec73d29b15bffedefe`.
+  All three old slice numerators are recovered coefficient-for-coefficient.
+  Structural geometry, rather than the squarefree routine, proves global
+  irreducibility.  Ordinary/optimized/stored outputs are byte-identical.
+  Script/output LF SHA-256:
+  `37bed904530acbddc17f3f612fcc0d4e8da85b8caddc1b3c86d49b80550e1559` /
+  `1736ac542fd20d6782bc494b1199099e6d08f44830efd5d9c041764925d3db97`.
+- `keller_level_three_squarefree_tower_probe_20260816.py` -> matching `.out`
+  [FINITE-EXACT SPECIALIZATION WITH A PROVED GENERIC CONSEQUENCE; NOT YET
+  CANON].  At target `(1,1,1)`, exact triangular algebras and determinant
+  interpolation produce a full degree-27 squarefree norm-product polynomial;
+  a degree-plus-one off-grid determinant independently checks interpolation.
+  This certifies generic block separability and pairwise coprimality, but no
+  degree-27 discriminant is formed.  Its ordered-coefficient SHA-256 is
+  `fa8ba9f1cb850116c347f6e31100d1902dea3ee1c11c2b6548f7280aa9f01d50`.
+  Ordinary/optimized/stored outputs are byte-identical.  Script/output LF
+  SHA-256:
+  `fbb2d20388099377eb2498b1fb102f4e2a32785afa02a0ca00792f27c3d6bd3e` /
+  `4f387efdef50fe7611d51f394ab4dd416274955fe30dbe22368a8a66ba452b10`.
 - `lrc_private_support_7x13_incidence_h1_probe_20260815.py` -> matching
   `.out` [FINITE-EXACT STRUCTURAL SIDECAR TO PROVED THM-3473].  The
   private-support two-section has eight vertices and thirteen

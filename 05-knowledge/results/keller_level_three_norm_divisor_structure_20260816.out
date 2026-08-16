@@ -1,0 +1,12 @@
+== exact level-three norm-divisor structure ==
+transported H raw/ledger sha256=5a9459b3149e500c1b00b67bd804aa7e607de06bf4610c7cdf5fa26d41d74ce9/b146c11f33e895c08f72303d282e2668d955e0a58d9268a1b445d4d5202016c2
+inverse-chart quotient formulas: PASS
+generic DVR at (L): c,T,S,D are units (simultaneous witness (2/27,1,1))
+Newton roots of E: one v_L(w)=0 and two v_L(w)=-1/2
+divergent sheets: q_y~D/S, q_z~-3(D/S)u, u=1/w
+H face: max(i-k)=7; in(H)=-63078912*x^7*(3*x*z-2*y)^3
+divergent sheets: v_L(H(q))=-7/2 each; leading 3*w*q_z-2*q_y=-11D/S
+finite sheet: q=(2, 5/6, -7/8); H(q)=3393794313700733412883215882425216567/359414999291950792704 != 0
+therefore v_L(Norm(H))=-7
+scope: structural pole proof only; global numerator and JC implications are not inferred here
+all exact checks passed

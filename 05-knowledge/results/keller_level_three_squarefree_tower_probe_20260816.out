@@ -1,0 +1,11 @@
+== finite-exact level-three squarefree tower ==
+transported H raw/ledger sha256=5a9459b3149e500c1b00b67bd804aa7e607de06bf4610c7cdf5fa26d41d74ce9/b146c11f33e895c08f72303d282e2668d955e0a58d9268a1b445d4d5202016c2
+K1: E=(25)w^3+(1)w-2; squarefree; inverse graph PASS
+P2: degree=9 squarefree; primitive lead=951326441195; off-grid norm PASS
+K2: dimension=9; inverse graph PASS
+P3: degree=27 squarefree; content=1; denominator=32687327622020737269760000000000000; off-grid norm PASS
+P3 primitive ordered-coefficient sha256=fa8ba9f1cb850116c347f6e31100d1902dea3ee1c11c2b6548f7280aa9f01d50
+P3 leading coefficient digits=86
+one target certifies generic separability and pairwise block coprimality
+scope: no degree-27 discriminant was formed; no general JC implication
+all exact checks passed
