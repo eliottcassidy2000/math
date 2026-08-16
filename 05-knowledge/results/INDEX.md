@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `lrc_r5_ufull_owner_node_boolean_square_refiner_independent_audit_20260816.py`
+  -> matching `.out` [SECOND-PATH HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  BOOLEAN-SQUARE REFINER].  Without importing the candidate, it composes the
+  separately audited parent with an independently reconstructed source-state
+  split.  It verifies the exact hierarchy `6` abstract cuts -> `5` physical
+  Gray-path states -> `4` owner states: `{0,12}` is globally absent and OWNER
+  excludes only realized `{6}`.  Parent marginal, five literal guards,
+  pointwise same-root zero, rank `(4,4,3)`, both rank-two bit marginals, all
+  `36` centered mixed modes, fixed `(1,0,6)` nonvanishing, and all seven
+  comparison digests pass; normal and `-O` transcripts are identical.  It
+  identifies the cheapest lawful next sidecar as the canonical THM-2471 last
+  inverse branch `r_owner=a mod 13` on `X_(u,a)`, to be retained before the
+  ancestry marginal; this is not `r_deep`, grouped exact `C(a;X,m)`, or a
+  temporal transport.  Script/output/semantic LF SHA-256:
+  `a75300a81efebef83683c41ac073ffa4d3268da83e96071d7b1b576b36e5bbc7` /
+  `8252145208e8976b9c8afa44cfac812866b00e25b49059808be8b25807b93f06` /
+  `af0d543232869e82ee8d0191478ba7a833954cb19b387dedb6fb6f44a6fa272c`.
+
 - `lrc_r5_ufull_owner_node_boolean_square_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
   RANK-GREATER-THAN-ONE SOURCE-SUPPORT REFINER].  Without importing the
@@ -41,7 +59,7 @@
 
 - `lrc_r5_ufull_owner_node_boolean_square_refiner_probe_20260816.py` ->
   matching `.out` [FINITE-EXACT GENUINE BOOLEAN-SQUARE x F13 COMMON-OWNER
-  CANDIDATE; INDEPENDENT AUDIT PENDING].  The three-root source spine
+  CANDIDATE; INDEPENDENTLY AUDITED AT THE SCOPED SURVIVOR].  The three-root source spine
   `{0,6,12}` has six abstract nontrivial directed cuts, each a three-vertex
   tournament with one missing edge, but realizes exactly the five-state Gray
   path `{0}->{0,6}->{6}->{6,12}->{12}` with toggles `(6,0,12,6)` and measures
