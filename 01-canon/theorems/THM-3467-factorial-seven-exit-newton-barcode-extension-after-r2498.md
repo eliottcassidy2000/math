@@ -6,22 +6,20 @@ status: >
   For p>=5, d=a p^k+1 with 2<=a<p, the two resonant factorial
   moment rows and their first full Euclidean row have an explicit common
   Newton face of reduced denominator p^k and exact common capacity
-  min(a-1,(p-1)/2)p^k.  This face is the complete common p-adic ledger
-  whenever 2<=a<=(p-1)/2 or a=p-1.  At d=2501 the complete 2-, 3-, and 5-adic
+  min(a-1,(p-1)/2)p^k.  This face is the complete common p-adic ledger for
+  every 2<=a<p.  At d=2501 the complete 2-, 3-, and 5-adic
   degree barcodes are incompatible, closing the first residual beyond
   THM-3201 and extending the exact quadratic three-moment boundary to
-  r=2499.  This is not an all-height theorem or FC(3).
+  r=2499.  This does not close every height or FC(3).
 audit: >
   The carry-face proof derives coefficientwise supporting inequalities from
   Lucas, Kummer, Legendre, and base-p digit sums, proves exactness at every
   anchor, and proves that one term uniquely controls the first Euclidean row.
-  In the small-multiplier range, G's proved face already spans its full
-  degree, immediately forcing singleton completeness.  A second pair of
-  supporting lines gives the complete two-edge polygon of G when a=p-1,
-  while a unique digit-sum maximum excludes G's second slope from F.
+  In the small-multiplier range, G's proved face spans its full degree.  In
+  the remaining range, two more digit-sum supporting lines give the complete
+  G and F tails, whose slopes are strictly separated.
   A 48-cell exact hostile audit found the predicted face to be the complete
-  common ledger in every tested cell, but completeness is not claimed
-  uniformly.  At d=2501 two separately pinned Fraction-hull and
+  common ledger in every tested cell.  At d=2501 two separately pinned Fraction-hull and
   determinant-hull engines reconstruct the rows, agree on every raw local
   degree ledger and common-slope ledger, retain planted factors v and v+1,
   and produce the same progressive trace and digest.
@@ -110,10 +108,14 @@ U=2(1+p+...+p^(k-1)) == 2 (mod p),                         (9)
 `T=0`: the `G` face remains, but `F` and `E` have no positive-length common
 `sigma` face.
 
-The theorem proves this explicit face for every displayed parameter and proves
-that it is the only common face when `2<=a<=m` or `a=p-1`.  It does **not**
-assert uniform completeness for the remaining middle multipliers
-`m<a<p-1`; that stronger statement requires a separate ledger audit.
+For every `2<=a<p`, Section 7 proves that this is the only common finite
+slope.  Thus the complete local address is
+
+```text
+D_p(F,G,E)={0,H,2H,...,T H}.                               (9a)
+```
+
+The case `a=1` remains the zero-capacity degeneration.
 
 The finite-exact corollary is
 
@@ -336,88 +338,135 @@ D_p(F,G,E)={0,H,2H,...,(a-1)H}.
 No claim about the other slopes of `F` or `E` is needed: intersecting with
 the single-slope polygon of `G` already proves completeness.  QED.
 
-### 7.2 The endpoint multiplier a=p-1
+### 7.2 The remaining multipliers m<a<p
 
-There is one uniform completeness cell.  Suppose now
-
-```text
-a=p-1,                 m=(p-1)/2,                 N=(p-1)H,
-tau=2/(p-1).                                                (34)
-```
-
-The `sigma` face of `G` from (5) runs from `(0,0)` to
-`(mH,mU)=(mH,H-1)`.  A second global supporting inequality follows from
-(15)--(20).  Write `2j=cH+s`, `0<=s<H`.  On the full range
-`0<=j<=N`,
+Assume now `m<a<p` and put
 
 ```text
-s_p(c)<=p-1,              s_p(s)<=(p-1)(k-nu(j)),
+S=(H-1)/(p-1),             q=2a-p,
+j_0=mH,                    j_*=(pH-1)/2,
+tau=2/(p-1),
+rho_G=2(qS+1)/(qH+1),      rho_F=2(qS+1)/(qH-1).           (34)
 ```
 
-where `j=0` is treated by its unit anchor.  Therefore
+Here `q` is odd and `1<=q<=p-2`.  The proved `sigma` face of `G` ends at
 
 ```text
-nu(g_j)>=tau j-1.                                           (35)
+(j_0,H-1).                                                  (35)
 ```
 
-Equality holds at `j=mH` and `j=N`: the first is the last `sigma` anchor,
-while
+The global bound
 
 ```text
-g_N=(2N)!,                  nu(g_N)=2H-1=tau N-1.           (36)
+nu(g_j)>=tau j-1                                            (36)
 ```
 
-Thus `G` has a `tau` face from `(mH,H-1)` to `(N,2H-1)`.  Since
-`sigma<tau`, the two supporting lines meet at `mH`; the `sigma` line is the
-larger one to the left and the `tau` line is the larger one to the right.
-Every coefficient point lies above both, and the displayed anchors lie on
-their piecewise maximum.  This two-segment convex chain covers the entire
-coefficient range, so these are all finite lower Newton slopes of `G`.
-
-The second slope is absent from `F`.  From (14), (16), and Legendre,
+follows from Kummer and Legendre exactly as in Section 3: if
+`2j=cH+r`, then `s_p(c)<=p-1`, and the lower `k-nu(j)` digits contribute at
+most `(p-1)(k-nu(j))`.  Equality is exact at `j_0` and `j_*`, with heights
+`H-1` and `pS`; at `j_*`, the first rising factor is
+`2j_*+1=pH`, so `Z_(N,j_*)` is a unit.  This gives the `tau` edge
 
 ```text
-nu(f_j)-tau j >= -s_p(2j)/(p-1).                            (37)
+(j_0,H-1) -> (j_*,pS).                                     (37)
 ```
 
-On
+It remains to control the tail.  For `j>j_*`, write
 
 ```text
-0<=2j<=2(p-1)H-2,
+2j=pH+v,                    1<=v<=qH,
+c=floor(v/H),               h=nu_p(v).                      (38)
 ```
 
-the digit sum has the unique maximum `(k+1)(p-1)` at
+The coefficient lower skeleton satisfies
 
 ```text
-2j=pH-1,                 j=B+mH.                            (38)
+w_G(j)-pS=k-h+1+(v-s_p(v))/(p-1)
+          >=1+(v-c)/(p-1).                                 (39)
 ```
 
-Indeed, below `pH` equality requires all `k+1` digits to be `p-1`.  Above
-`pH`, write `2j=pH+r` with `0<=r<=(p-2)H-2`; then
-`1+s_p(r)<=(k+1)(p-1)-1`.  At the unique index (38), (27) is exact and gives
+Set
 
 ```text
-nu(f_j)-tau j=-(k+1).                                      (39)
+D=p-q,              M=qH+1,              A=qS+1,
+(p-1)A=qH+D-1.                                             (40)
 ```
 
-Hence the affine functional `y-tau x` has a unique minimum on the
-coefficient points of `F`.  No lower Newton edge of `F` can have slope
-`tau`.  Since all slopes of `G` are `sigma,tau`, while `F` and `E` both
-have the proved `sigma` face, their complete common finite-slope ledger is
+The chord from `(j_*,pS)` to the leading point has rise
+`A(v+1)/M`.  After multiplying the difference between (39) and that chord by
+the positive number `(p-1)M`, it is bounded below by
 
 ```text
-((sigma, capacity mH, denominator H)).                     (40)
+Phi=M(p-1+v-c)-(qH+D-1)(v+1).                              (41)
 ```
 
-The common coordinate-root capacity is zero because `g_0` is a unit.
-Therefore
+If `c<=q-1`, the coefficient of `v` in `Phi` is `2-D<=0`, so its minimum on
+that digit block is at the right endpoint.  With `u=q-1-c`, the endpoint
+value is
 
 ```text
-D_p(F,G,E)={0,H,2H,...,mH}.                                (41)
+Hq+1+u(H(p-2)+1)>0.                                        (42)
 ```
 
-This endpoint-family completeness is structural; no bounded hull scan is
-used in its proof.  QED.
+For `c=q`, necessarily `v=qH`, the leading endpoint.  There
+
+```text
+g_N=(2N)!,             nu(g_N)=(p+q)S+1,                   (43)
+```
+
+so equality holds.  Hence the complete `G` polygon has slopes
+
+```text
+sigma, tau, rho_G,                                           (44)
+```
+
+with the last two merging when `q=p-2`.
+
+For `F`, the `sigma` face ends at `(j_*,pS-k)`.  Its leading point has height
+`pS-k+qS+1`.  At an interior tail index `2j=pH+v`,
+`1<=v<=qH-2`, the digit bound
+
+```text
+s_p(v)<=k(p-1)+q-2                                         (45)
+```
+
+holds: if `c<=q-2`, bound the leading digit by `q-2`; if `c=q-1`, use
+`v<=(qH-2)` to save one unit in the lower digits.  Since
+`s_p(pH-1)=(k+1)(p-1)`, Legendre gives
+
+```text
+nu((2j)!)-nu((pH-1)!) >= (v+p-q+1)/(p-1).                 (46)
+```
+
+The chord increase of slope `rho_F` is `(qS+1)(v+1)/(qH-1)`.  The
+cross-multiplied difference between (46) and this chord is exactly
+
+```text
+(p-q)(qH-2-v),                                             (47)
+```
+
+which is positive before the endpoint.  The leading coefficient of `F` is
+exactly `(2N-2)!`, so `F` has one post-`sigma` edge, of slope `rho_F`.
+
+Finally,
+
+```text
+sigma<tau<=rho_G<rho_F.                                    (48)
+```
+
+By convexity, every pre-`sigma` slope of `F` is below `sigma`; its only
+post-`sigma` slope is `rho_F`.  The complete `G` slope list is (44), so the
+two rows share only `sigma`.  The row `E` retains the `sigma` face proved in
+Section 6.  Therefore, for every `2<=a<p`, not merely the two boundary
+ranges,
+
+```text
+common ledger=((sigma, capacity T H, denominator H)),
+D_p(F,G,E)={0,H,2H,...,T H},       T=min(a-1,m).            (49)
+```
+
+The coordinate-root capacity is zero because `g_0` is a unit.  This proves
+uniform singleton completeness.  QED.
 
 ## 8. Exact d=2501 corollary
 
@@ -425,7 +474,7 @@ For `p=5`, `k=4`, `H=625`, `a=4`, the structural theorem gives
 
 ```text
 B=312,          U=312,          V=152,          T=2,
-sigma=312/625.                                                (42)
+sigma=312/625.                                                (50)
 ```
 
 The predicted face endpoints are reconstructed independently as
@@ -433,7 +482,7 @@ The predicted face endpoints are reconstructed independently as
 ```text
 F: (312,152)  -> (1562,776),
 G: (0,0)      -> (1250,624),
-E: (313,156)  -> (1563,780).                               (43)
+E: (313,156)  -> (1563,780).                               (51)
 ```
 
 The complete local common-slope ledgers are
@@ -446,13 +495,13 @@ p=3: (2/3,cap 3,den 3), (8/9,cap 9,den 9),
      (26/27,cap 27,den 27), (242/243,cap 243,den 243),
      (2186/2187,cap 2187,den 2187), (1,cap 27,den 1);
 
-p=5: (312/625,cap 1250,den 625).                           (44)
+p=5: (312/625,cap 1250,den 625).                           (52)
 ```
 
 In particular, the raw positive degree barcodes at `p=2` and `p=5` are
 
 ```text
-D_2^+={256,2048,2304},              D_5^+={625,1250}.      (45)
+D_2^+={256,2048,2304},              D_5^+={625,1250}.      (53)
 ```
 
 The progressive intersection is
@@ -460,7 +509,7 @@ The progressive intersection is
 ```text
 after p=2: {256,2048,2304},
 after p=3: {256},
-after p=5: empty.                                          (46)
+after p=5: empty.                                          (54)
 ```
 
 By THM-3152's degree-barcode lemma, `F,G,E` have no nonconstant common
@@ -468,7 +517,7 @@ rational factor.  Since `gcd(F,G)=gcd(F,E)`, the resonant pair is coprime.
 THM-3124 converts this back to the three-moment statement, proving
 (10)--(11).  QED.
 
-The reason for (46) is bounded-capacity incompatibility.  Coprime slope
+The reason for (54) is bounded-capacity incompatibility.  Coprime slope
 denominators alone do not force disjoint degree sets: sums and products of
 their blocks may still meet.  Completeness of each local ledger is the
 load-bearing sidecar.
@@ -479,7 +528,7 @@ The exact seven-exit factorization invoice is
 2501=41*61,              2500=2^2*5^4,
 2499=3*7^2*17,           2498=2*1249,
 2497=11*227,             2496=2^6*3*13,
-2495=5*499.                                                  (47)
+2495=5*499.                                                  (55)
 ```
 
 Thus `d=2501` is genuinely the first residual after THM-3201's seven
@@ -495,7 +544,7 @@ trace digest is
 
 ```text
 365533925519a4d8d44db78394f0785e87be5f4cc03e0a98d759f93609fb09ee.
-                                                                    (48)
+                                                                    (56)
 ```
 
 Planted common factors `v+1` and `v` retain degree `1` in both observers.
@@ -506,12 +555,11 @@ An exact 48-cell audit used
 
 ```text
 (p,k)=(5,1..3),(7,1..2),(11,1..2),(13,1),
-2<=a<p.                                                       (49)
+2<=a<p.                                                       (57)
 ```
 
-In every cell the complete common ledger was the singleton predicted by
-(4)--(8).  This is strong finite evidence for the sharper completeness
-conjecture, not a proof of it.
+In every cell the complete common ledger is the singleton predicted by
+(4)--(8), independently supporting the uniform proof in Section 7.
 
 The hypotheses in the structural statement are sharp for the proof:
 
@@ -524,10 +572,10 @@ The hypotheses in the structural statement are sharp for the proof:
 - when `p` divides `a`, `k` is not the exact reset depth; at `a=5,d=26`
   the first-flag common ledger is empty.
 
-The endpoint condition `a=p-1` in Section 7 is also load-bearing for its
-two-edge description.  For `(p,k,a)=(5,1,3)`, the tail of `G` has additional
-slopes `1/2` and `2/3`; only the proved `sigma` face survives from the general
-statement.
+The tail analysis in Section 7 is load-bearing beyond the first face.  For
+`(p,k,a)=(5,1,3)`, `G` has additional slopes `1/2` and `2/3`; the proof must
+show that neither occurs in `F`, rather than treating the `sigma` face alone
+as a complete ledger.
 
 Finally, the theorem produces a necessary local degree address, not a
 factor, and the finite closure at `d=2501` does not supply an all-height

@@ -25,12 +25,13 @@ Laurent claim was checked directly against THM-3383's membership criterion.
 | concept | source -> target map | status after the session |
 |---|---|---|
 | pure nonreal cyclic character | `g -> (g,g^dagger) -> {g,g^dagger}` | PROVED all-degree Keller rigidity; triangle HFC intersection empty |
-| mixed-character top layer | ordinary leading form plus dagger | OPEN; Keller makes it star-real up to phase, so this is the first live joint cell |
+| mixed-character top layer | ordinary leading form plus dagger | THM-3470 closes one reflection-even triangular quartic slice at moment 5; general cell OPEN |
 | factorial Boolean face descent | `prod(1-partial_i)` from bulk to coordinate faces | PROVED identity; external access boundary survives |
 | triangle current | `dbar(g)` under multiplication by `g` and boundary integration | PROVED exact length-two Krylov block under HFC+constant J |
 | pointed clutch | `d kappa=g^2 dbar(g)` on labelled source edges | PROVED existence/degree; universal sheet separation REFUTED |
 | Laurent effectivity response | multiplication by the polynomial target on `B/(A intersect B)` | PROVED locally nilpotent with unbounded exact response lengths |
-| prime-power carry face | first Euclidean triple at `d=a p^k+1` | PROVED common face for `2<=a<p`; complete singleton ledger when `a=p-1` |
+| prime-power carry face | first Euclidean triple at `d=a p^k+1` | PROVED complete singleton ledger for every `2<=a<p` |
+| binary-submask compiler | `NP_2(A_N^(N+1))` intersect odd reset | PROVED all `2^s p^k` windows with `2<=2^s<p` |
 | seven-exit factorial boundary | first Euclidean triple at `d=2501` | FINITE-EXACT closed independently; the wider `2501..2600` audit is intentionally not yet a theorem here |
 
 ## 3. First alternation: factorial lowering becomes Keller flux
@@ -106,6 +107,21 @@ The sidecars are sharp.  Without dagger,
 and for the real order-two character the odd shear `(x,y+x^3)` is nonlinear
 with Jacobian one.  Finite character syntax alone is therefore not the
 theorem.
+
+The first mixed cell behaves differently but is still finite.  On the
+normalized triangle, with `U=x-y` and `M=x+y-2/3`, the real family
+
+```text
+g=aM+b(U^2-1/6)+c(U^4-1/15)+iU                         (5a)
+```
+
+has `Jac(Re g,Im g)=-2a` and an explicit triangular polynomial inverse when
+`a!=0`.  Exact elimination shows that moments two through four have `24`
+reduced complex solutions, exactly four real; all four are tame automorphisms
+with nonzero support in every `C3` character and vanish through moment four.
+Moment five excludes each one, both by a unit Groebner ideal and by a coprime
+lex remainder.  Thus small HFC prefixes can occur even on automorphisms; the
+fifth-moment gate is universal only in this three-parameter shear slice.
 
 ## 5. Third alternation: HFC moments become a boundary Krylov block
 
@@ -234,14 +250,14 @@ the missing sidecar in the older verified large-divisor face probe.  At
 Euclidean-row shift changes, and allowing `a>=p` introduces a second carry
 scale; neither boundary is cosmetic.
 
-At the endpoint `a=p-1`, the local address closes further.  The full Newton
-polygon of `G` has exactly two slopes, `sigma` and `2/(p-1)`, while the digit
-sum `s_p(2j)` has a unique maximum at `2j=p^(k+1)-1` on the `F` range.  That
-unique minimizer excludes the second `G` slope from `F`, so the complete
-triple ledger is the singleton `sigma` block and
+The local address in fact closes for every `2<=a<p`.  When
+`a<=(p-1)/2`, the displayed `G` face spans its full degree.  Above that
+threshold, digit-sum supporting lines give complete `G` slopes
+`sigma,tau,rho_G`, while `F` has only `sigma` in common because its terminal
+slope `rho_F` is strictly larger.  Thus
 
 ```text
-D_p={0,p^k,2p^k,...,((p-1)/2)p^k}.                       (14a)
+D_p={0,p^k,2p^k,...,T p^k},   T=min(a-1,(p-1)/2).        (14a)
 ```
 
 At the former first unaudited row `d=2501,r=2499`, both THM-3201 engines give
@@ -257,13 +273,20 @@ The common semantic digest is
 `365533925519a4d8d44db78394f0785e87be5f4cc03e0a98d759f93609fb09ee`.
 The `p=5` polygon has the single relevant slope `312/625`, cap `1250`, and
 denominator `625=5^4`; because `a=4=p-1`, its complete local degree set
-`{625,1250}` is structural, and is
-is incompatible with the surviving degree `256`.  This closes the row
+`{625,1250}` is structural and incompatible with degree `256`.  This closes the row
 FINITE-EXACT and extends the exact quadratic window boundary to `r=2499`.
-The theorem proves occurrence and capacity of the carry face uniformly and
-completeness on the endpoint family.  It does not prove that this is the sole
-common face for other multipliers.  A 48-cell exact hostile audit found no
-extra face, but that remaining uniform completeness statement is OPEN.
+
+The binary place then changes the quantifier.  THM-3161's proved digital
+skeleton specializes to a complete `2`-polygon with one edge for each set bit
+of even `N`; every factor degree is a binary submask of `N`.  Intersecting
+this with (14a) proves all windows
+
+```text
+d=2^s p^k+1,                 2<=2^s<p,                   (15a)
+```
+
+for every `k>=1`.  Thus `d=2501` sits in the all-height family
+`d=4*5^k+1`, rather than being only an isolated computation.
 
 The next bounded universe also changes the computational design.  Among the
 `38` seven-exit residuals in `2501<=d<=2600`, `32` have a representation
@@ -289,9 +312,9 @@ The honest joint carrier is
   response length.
 - **Cheapest next tests:** solve the degree-at-most-four mixed-character
   Keller/HFC joint ideal; classify anti-tangent polynomial edge pairs on which
-  both `kappa` and its curvature jet descend; and determine when the proved
-  `p^k` face is the complete local ledger, rather than extending the factorial
-  scan by pattern alone.
+  both `kappa` and its curvature jet descend; and compile adaptive divisor
+  places for the non-power-of-two residuals rather than extending a fixed
+  prime bank by pattern alone.
 
 The main reframing is deliberately modest: the frontiers communicate through
 paired native operations and their response modules, not through a common

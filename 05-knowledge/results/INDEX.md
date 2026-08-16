@@ -74,9 +74,8 @@
   [THM-3467 PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
   AUDITED].  If `p>=5`, `H=p^k`, `2<=a<p`, and `d=aH+1`, the first
   factorial Euclidean triple has a common face of reduced denominator `H`
-  and capacity `min(a-1,(p-1)/2)H`.  When `a=p-1`, a second global
-  supporting line and a unique digit-sum minimizer prove that this is the
-  complete local common ledger.  At `d=2501`, the structural 5-adic set
+  and capacity `min(a-1,(p-1)/2)H`.  Complete digit-sum tail polygons prove
+  that this is the sole common local slope for every `2<=a<p`.  At `d=2501`, the structural 5-adic set
   `{625,1250}` is disjoint from the degree `256` left by `p=2,3`, closing
   `r=2499` and extending exact quadratic three-moment windows through that
   height.  The companion checks 48 carry cells and sharp `p=3`, `a>=p`, and
@@ -87,8 +86,40 @@
   `43ef5f55c4b88bc27fca312f8512879f906acfd85d8efd99af2deee1821143c8` /
   `f0005f43cfd6464f2279f0260792357c40ed6dee7c7428968e7e9f5d07b4a4e4` /
   `89971ade6fbedd6c1ae81bb3dc0e5514a320bcedfff7a9ca706ea116b8966b45`.
-  Uniform singleton-ledger completeness for other `a`, an adaptive
-  divisor-place compiler, all-height exact quadratics, and FC(3) remain open.
+  Adaptive cross-place compilation, contiguous all-height exact quadratics,
+  and FC(3) remain open.
+- `factorial_mixed_character_triangular_quartic_moment_gate_thm3470.py` ->
+  matching `.out` [THM-3470 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  In the real triangular automorphism family
+  `g=aM+b(U^2-1/6)+c(U^4-1/15)+iU`, moments two through four have exactly
+  24 reduced complex solutions and four real ones.  Every real point is a
+  tame degree-four automorphism with nonzero support in all three `C3`
+  character spaces and exits at moment five.  Exact grevlex gives the unit
+  ideal for moments two through five; an independent lex/Sturm route gives
+  the same gate and rigorous root/sign boxes.  The quadratic boundary has two
+  real three-moment survivors, both detected at moment four.  Script/output/
+  semantic raw SHA-256:
+  `614f473562ba36da297947c1420929d5d0d84ca5744df549123c7540e602720c` /
+  `195ce0b8200254697563e55487a3094801efa585b80d6bc66fe98228fe44aa86` /
+  `ce17222a7166129cf39b9f6b10c5bad061d06137a1ccb8297c21ec78a42173d0`.
+  The gate is family-specific and proves no HFC(3), FC(3), or JC(2).
+- `factorial_binary_submask_reset_families_thm3474.py` -> matching `.out`
+  [THM-3474 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For every
+  even `N`, the complete 2-adic polygon of `A_N^(N+1)` has one edge per set
+  bit and its necessary factor degrees are exactly the binary submasks of
+  `N`.  Intersecting this with THM-3467's complete odd reset gives a bit-test
+  compiler and closes every exact quadratic window at
+  `d=2^s p^k+1`, `2<=2^s<p`, for all `k>=1`.  Dual engines agree on 60
+  binary polygons/submask sets and 15 power-of-two reset cells; odd `N=5`
+  is the sharp parity hostile.  Script/output/binary/reset/global semantic
+  SHA-256:
+  `ffe323328fc0fcf41ca5166ecf851a9b1b23e19b11772d6e4cdf18e4d04fedac` /
+  `edb29cc1e2b982adeaac7b283f725ace8ef62c229b10208010cfb2f7a53b96cd` /
+  `888b5d72e72bfeae0ef53140420e728fc5c7a78bfab60e6ac29e694a0ee60edd` /
+  `3512b41ae23e168e5c500a989f37b6120e2dee7670c700b1f40f32b2fe3c45e0` /
+  `49272719898eec5b506e435140c0ce6aac1ce0b07ce275fff648df55b18b61f8`.
+  Submask membership is necessary, not factor existence; contiguous
+  all-height quadratics and FC(3) remain open.
 - `all_ref_concept_archaeology_20260815.py` -> matching `.out` plus frozen
   `.refs` [REPRODUCIBLE PROVENANCE INVENTORY; NOT A MATHEMATICAL VERIFIER].
   At `origin/main=5f038660851946647afee993fb3fea850cc80b7d`, the manifest freezes
