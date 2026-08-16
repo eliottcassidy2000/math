@@ -329,10 +329,10 @@ is sharp: equal counts allow two densities or none.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** [3500](../01-canon/theorems/THM-3500-rule30-dyadic-section-cut-defect-and-cross-depth-valuation-carrier.md); [3502](../01-canon/theorems/THM-3502-rule30-four-fifths-staircase-entropy-and-sixteen-fifths-compiler.md); [3511](../01-canon/theorems/THM-3511-rule30-orbit-signalizer-gap-renormalization-and-shallow-portrait-hostile.md); [3512](../01-canon/theorems/THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary.md). OPEN.
-- **Jacobian/Dixmier:** `JC(2)`/`DC(2)` OPEN. THM-3438 gives `S_n` atoms
-  (`n>=3`); THM-3494 primitive `x/y`; THM-3508 level-two `x/y/z`, `[H]`.
-  General lanes OPEN. THM-1300 provenance unsettled (MISTAKE-205); THM-1315 repaired;
-  THM-2473--2576 fixed-map.
+- **Jacobian/Dixmier:** `JC(2)`/`DC(2)` and general lanes OPEN. THM-3438 gives
+  `S_n` atoms (`n>=3`). Fixed-map THM-3494/3508/3519: `x/y`;
+  `x/y/z,[H]`; `x/y/z,[-2J]`. THM-1300 unsettled (MISTAKE-205); THM-1315
+  repaired; THM-2473--2576 fixed-map.
   THM-3495/3498/[3504](../01-canon/theorems/THM-3504-level-four-sporadic-keller-image-prime-and-four-component-nonproperness.md)
   prove `S_(F^4)=V(LHJ G)` and `[Delta_4]=[2G]`;
   THM-3506 gives `(271,99)` and `v_L(N(G))=-271`;
