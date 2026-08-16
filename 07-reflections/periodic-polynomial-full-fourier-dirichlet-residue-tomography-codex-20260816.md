@@ -122,6 +122,14 @@ The matching colour contributes its coefficient times `H_N`; every other
 top colour contributes a bounded root-of-unity harmonic sum, and lower layers
 are absolutely summable.  THM-3486 is precisely the case `j=0` of (9).
 
+At degree zero, (5) also sharpens THM-3359 in a different direction.  The
+untwisted residue is only the accepted-cycle density.  The complete `p`
+character residues are the finite Fourier transform of the eventual Boolean
+cycle, so inverse Fourier transform recovers every accepted residue class
+relative to the declared cycle origin.  It still cannot recover the finite
+transient or whatever graph, automaton, or tournament generated that Boolean
+readout.
+
 If one wishes to avoid analytic continuation at the lower poles, (9) can be
 iterated.  After recovering all degree-`m` residues, subtract
 
