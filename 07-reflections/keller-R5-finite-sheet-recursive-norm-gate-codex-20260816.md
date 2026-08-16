@@ -56,6 +56,16 @@ P_(r+1)=c_r L^e_r N(P_r),
 (c_r,e_r)=(64,1),(2^35,7),(1,43),(1,271).
 ```
 
+Multiplicativity unrolls this exactly on the finite-etale locus:
+
+```text
+R_5=2^477 L^271 N(L)^43 N^2(L)^7 N^3(L) N^4(L).
+```
+
+This is a value identity, not the forbidden scalar extrapolation of the
+Newton packet.  It says the finite-sheet gate is only a five-factor
+nonvanishing problem once the norm orbit is represented lawfully.
+
 To evaluate `P_4(q)` modulo a good prime, there is no reason to construct
 `P_4`, `P_3`, or `P_2`.  Form the universal inverse point in a cubic finite
 etale algebra, recurse, and take the cubic norm on return.  The dimensions
@@ -68,6 +78,10 @@ grow only as
 while the bottom polynomial has five terms.  Matrix inversion certifies
 that every apparent denominator is a unit.  Direct substitution certifies
 that every universal point really lies on the inverse graph.
+
+The three norm-orbit ledgers are `(16,12,72,9,49)`,
+`(12,53,22,85,76)`, and `(38,45,28,3,17)` modulo `101,103,107`; every
+factor is nonzero and the unrolled product recovers `74,36,88`.
 
 The second route stops at dimension `27` and evaluates the frozen `361`-term
 `H`.  It agrees with the `L` route modulo `101,103,107`.  A literal `27 by

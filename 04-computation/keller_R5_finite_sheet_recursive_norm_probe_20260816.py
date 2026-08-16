@@ -490,13 +490,25 @@ TRANSITIONS = {
 }
 
 
-def evaluate_from_L(ring, point, level: int, ledger: list[tuple], constants=TRANSITIONS):
+def evaluate_from_L(
+    ring,
+    point,
+    level: int,
+    ledger: list[tuple],
+    constants=TRANSITIONS,
+    bottom_capture: list[int] | None = None,
+):
     """Evaluate P_level, with P_0=L, through the complete norm recursion."""
 
     if level == 0:
-        return invariants(ring, point)["L"]
+        value = invariants(ring, point)["L"]
+        if bottom_capture is not None:
+            bottom_capture.append(absolute_norm(ring, value))
+        return value
     extension, source, l_value = inverse_step(ring, point, f"L-route-{level}", ledger)
-    lower_value = evaluate_from_L(extension, source, level - 1, ledger, constants)
+    lower_value = evaluate_from_L(
+        extension, source, level - 1, ledger, constants, bottom_capture
+    )
     coefficient, exponent = constants[level]
     return ring_product(
         ring,
@@ -565,13 +577,23 @@ def evaluate_prime(prime: int):
     l_ledger: list[tuple] = []
     h_ledger: list[tuple] = []
     h_capture: list[tuple] = []
-    value_from_l = evaluate_from_L(field, q, 4, l_ledger)
+    l_bottom: list[int] = []
+    value_from_l = evaluate_from_L(field, q, 4, l_ledger, bottom_capture=l_bottom)
     value_from_h = evaluate_from_H(field, q, 4, h_ledger, h_capture)
     require(value_from_l == value_from_h, f"p={prime}: L and explicit-H routes disagree")
     require(value_from_l != 0, f"p={prime}: R5 finite-sheet reduction vanished")
     require(len(l_ledger) == 4 and len(h_ledger) == 3, f"p={prime}: tower depth changed")
     require([row[1] for row in l_ledger] == [1, 3, 9, 27], f"p={prime}: L dimensions changed")
     require([row[1] for row in h_ledger] == [1, 3, 9], f"p={prime}: H dimensions changed")
+    require(len(l_bottom) == 1, f"p={prime}: bottom L norm capture changed")
+
+    # Multiplicativity of the cubic norm unrolls the four definitions to
+    # R5=2^477 L^271 N(L)^43 N^2(L)^7 N^3(L) N^4(L).
+    l_norm_orbit = tuple(row[2] for row in l_ledger) + (l_bottom[0],)
+    unrolled_value = pow(2, 477, prime)
+    for orbit_value, exponent in zip(l_norm_orbit, (271, 43, 7, 1, 1)):
+        unrolled_value = unrolled_value * pow(orbit_value, exponent, prime) % prime
+    require(unrolled_value == value_from_l, f"p={prime}: unrolled norm-orbit identity failed")
 
     h_ring, h_value = h_capture[0]
     h_norm_recursive = absolute_norm(h_ring, h_value)
@@ -592,6 +614,7 @@ def evaluate_prime(prime: int):
         "value": value_from_l,
         "wrong_h_normalization": wrong_h_normalization,
         "h_flat_norm": h_norm_flat,
+        "l_norm_orbit": l_norm_orbit,
         "l_ledger": l_ledger,
         "h_ledger": h_ledger,
     }
@@ -610,7 +633,7 @@ semantic_lines = []
 for record in records:
     semantic_lines.append(
         f"p={record['prime']};R5={record['value']};wrong64={record['wrong_h_normalization']};"
-        f"Hflat={record['h_flat_norm']}"
+        f"Hflat={record['h_flat_norm']};Lorbit={record['l_norm_orbit']}"
     )
     for row in record["l_ledger"]:
         semantic_lines.append("L:" + ":".join(map(str, row)))
@@ -629,6 +652,7 @@ for record in records:
         f"explicit-H flat norm={record['h_flat_norm']}; "
         f"wrong-H-normalization control={record['wrong_h_normalization']}"
     )
+    print(f"  (L,N(L),N^2(L),N^3(L),N^4(L))={record['l_norm_orbit']}")
     for route_name in ("l_ledger", "h_ledger"):
         compact = [
             (row[1], row[2], row[3], row[4], row[5][:12]) for row in record[route_name]
