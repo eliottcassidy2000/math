@@ -1,0 +1,25 @@
+== fixed Keller R6 finite-sheet recursive norm gate ==
+THM-3521 support sha256=a201191410e39d47fbf607191e8bd597453c697f134d3803466694b680d8c60d
+H raw sha256=5a9459b3149e500c1b00b67bd804aa7e607de06bf4610c7cdf5fa26d41d74ce9; terms=361; degrees=(14, 21, 12)
+point q=(2,5/6,-7/8); F(q)=(2/27,1,1); L(F(q))=0; L(q)=241465/1728
+primary route: five cubic algebras, descending to L on 243 sheets
+independent bottom representation: four cubic algebras, evaluating frozen H on 81 sheets
+p=101: R6(q)=26; explicit-H flat norm=37; wrong-H-normalization control=67
+  (L,N(L),N^2(L),N^3(L),N^4(L),N^5(L))=(16, 12, 72, 9, 49, 97)
+  l_ledger: (base_dim,Norm(L),Norm(S),Norm(disc),source_sha12)=[(1, 16, 78, 56, '5b085ca8499c'), (3, 12, 2, 41, '8cfa9d209b2b'), (9, 72, 36, 10, '52bd5cc49497'), (27, 9, 9, 13, '8c77f9163547'), (81, 49, 75, 58, '40e1e3d978a4')]
+  h_ledger: (base_dim,Norm(L),Norm(S),Norm(disc),source_sha12)=[(1, 16, 78, 56, '5b085ca8499c'), (3, 12, 2, 41, '8cfa9d209b2b'), (9, 72, 36, 10, '52bd5cc49497'), (27, 9, 9, 13, '8c77f9163547')]
+p=103: R6(q)=70; explicit-H flat norm=31; wrong-H-normalization control=47
+  (L,N(L),N^2(L),N^3(L),N^4(L),N^5(L))=(12, 53, 22, 85, 76, 94)
+  l_ledger: (base_dim,Norm(L),Norm(S),Norm(disc),source_sha12)=[(1, 12, 72, 91, 'bf292895feda'), (3, 53, 5, 60, '761594faf412'), (9, 22, 1, 79, '5d09fd4ad38b'), (27, 85, 82, 68, '24072442bded'), (81, 76, 73, 39, 'cf7a5b5567e3')]
+  h_ledger: (base_dim,Norm(L),Norm(S),Norm(disc),source_sha12)=[(1, 12, 72, 91, 'bf292895feda'), (3, 53, 5, 60, '761594faf412'), (9, 22, 1, 79, '5d09fd4ad38b'), (27, 85, 82, 68, '24072442bded')]
+p=107: R6(q)=69; explicit-H flat norm=13; wrong-H-normalization control=3
+  (L,N(L),N^2(L),N^3(L),N^4(L),N^5(L))=(38, 45, 28, 3, 17, 17)
+  l_ledger: (base_dim,Norm(L),Norm(S),Norm(disc),source_sha12)=[(1, 38, 86, 14, 'c3389340279f'), (3, 45, 105, 34, '8cf50b0b689e'), (9, 28, 31, 100, 'd13b5907e38b'), (27, 3, 95, 82, '79fdf431b788'), (81, 17, 72, 100, '5b31de993128')]
+  h_ledger: (base_dim,Norm(L),Norm(S),Norm(disc),source_sha12)=[(1, 38, 86, 14, 'c3389340279f'), (3, 45, 105, 34, '8cf50b0b689e'), (9, 28, 31, 100, 'd13b5907e38b'), (27, 3, 95, 82, '79fdf431b788')]
+semantic sha256=a2ede01095e73ad727285743b83d6502ff37c0ab772a19e0a03fe9036ba5f7b8
+finite-sheet verdict: R6(2,5/6,-7/8) != 0 over Q
+conditional geometric consequence with proved THM-3522 packet:
+  v_L(N(R6))=-10663 and R7=L^10663*N(R6) is polynomial and coprime to L
+  THM-3522 then gives the complete fixed-chart packet A(66907,24255) for R7
+scope: fixed map/old-L gate only; image, degree 243, all-level, and general JC remain open
+all exact checks passed
