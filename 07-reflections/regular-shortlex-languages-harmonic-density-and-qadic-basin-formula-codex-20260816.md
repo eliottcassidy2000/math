@@ -149,6 +149,42 @@ For a finite Markov chain, `h` is constant on each closed irreducible class
 and equals that class's stationary mean of `f`; transient values are
 absorption-weighted.  This proves the interpretation following (6).
 
+### Exact cylinder approximants and a vector functional equation
+
+Formula (5) is algorithmic even when there are several recurrent classes.
+For a length-`k` word `u`, let `r(u)` be its lexicographic rank and
+`s_u=delta(s_0,u)`.  Since `h(S_k)=E[H_infinity | D_1,...,D_k]`, bounded
+martingale convergence gives
+
+```text
+delta_log(S_A)
+ =1/log q * lim_(k->infinity) sum_(|u|=k) h(s_u)
+    log((c+(r(u)+1)/q^k)/(c+r(u)/q^k)).                 (15)
+```
+
+Every finite approximant is an exact rational linear combination of
+logarithms of rational numbers.  The convergence error is at most
+`||g||_infinity E|h(S_k)-H_infinity|/log q`; a spectral or absorption bound
+on the finite chain turns this into a certified numerical algorithm.
+
+There is also a compact self-similar form.  Starting the automaton at state
+`s`, let
+
+```text
+F_s(t)=E_s[H_infinity/(t+X)],       t>0.                (16)
+```
+
+Conditioning on the first digit gives the vector dilation--shift equation
+
+```text
+F_s(t)=sum_(d=0)^(q-1) F_(delta(s,d))(qt+d),
+F_s(t)~h(s)/t as t->infinity.                            (17)
+```
+
+The desired coefficient is `F_(s_0)(1/(q-1))/log q`.  Equations (15)--(17)
+do not imply that every coefficient is elementary; they isolate the exact
+finite-state/q-adic object whose arithmetic remains to be classified.
+
 ## 4. Three sharp examples
 
 ### One irreducible but periodic class
@@ -158,7 +194,7 @@ and stationary acceptance mass `1/2`.  At complete-level endpoints, the
 ordinary counting densities tend along even and odd depths to
 
 ```text
-2/3 and 1/3,                                             (15)
+2/3 and 1/3,                                             (18)
 ```
 
 so natural density fails.  Formula (6) nevertheless gives logarithmic
@@ -172,14 +208,14 @@ Accept binary words whose first digit is zero.  The accepting basin occupies
 ```text
 delta_log
  =1/log 2 * integral_0^(1/2) dx/(1+x)
- =log(3/2)/log 2.                                       (16)
+ =log(3/2)/log 2.                                       (19)
 ```
 
 This differs from the branch probability `1/2`.  Reversing the alphabet
 order moves the same-sized basin to `[1/2,1]` and gives
 
 ```text
-log(4/3)/log 2.                                         (17)
+log(4/3)/log 2.                                         (20)
 ```
 
 The two coefficients sum to one.  Thus shortlex harmonic density is
@@ -195,7 +231,7 @@ The fixed-drift automaton is an irreducible period-two group walk on
 `S4 x D4`, with `34=16+18` accepting states out of `192`; (6) gives
 
 ```text
-34/192=17/96.                                           (18)
+34/192=17/96.                                           (21)
 ```
 
 THM-3497's two-step kernel and return-length argument remains stronger: it
@@ -222,8 +258,6 @@ python3 04-computation/regular_shortlex_harmonic_density_automaton_probe_2026081
 python3 -O 04-computation/regular_shortlex_harmonic_density_automaton_probe_20260816.py
 ```
 
-The next useful extension is to make the multiple-class integral in (5)
-algorithmic: derive certified upper/lower cylinder sums for each recurrent
-basin and characterize when the result is a rational combination of
-logarithms of algebraic numbers.  No such arithmetic classification is
-claimed here.
+The next useful extension is arithmetic: characterize when (15)--(17)
+collapse to a finite rational combination of logarithms of algebraic
+numbers.  No such classification is claimed here.
