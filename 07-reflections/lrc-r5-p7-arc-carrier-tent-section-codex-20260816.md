@@ -372,6 +372,53 @@ facts support (8) through two independent construction routes, but row-sum
 one over a finite field still supplies neither positivity nor composable
 transport.
 
+## Third-digit hostile: diagonal is not a cocycle
+
+The incoming exact `r2` refinement at `840cec984` retains
+
+```text
+a=r0+13*r1+169*r2+2197*c.
+```
+
+It gives the cleanest falsification of a hidden local-system interpretation.
+Every one of the 2,197 third-digit children remains on the same six pointed
+arc lines, and every canonical map is diagonal there.  Full `Mat_6`
+uniqueness holds only for the `130*13=1690` children above rank-six parent
+addresses; over the 39 deficient parents only the action on live arc lines is
+observable.  Accordingly,
+
+```text
+sum_r2 L_(r0,r1;r2) = I_6
+```
+
+on the 130 full-rank parents, while on every parent it is exactly the
+projector onto the live arc lines.  This is a partition-of-unity law on a
+varying observable support, not parallel transport.
+
+Both plausible adjacent-pair laws fail nonvacuously.  The literal equation
+
+```text
+L_(r0,r1;r2) = K_(r1,r2) K_(r0,r1)
+```
+
+and its type-correct cumulative version hold at only `455/2197` triples.
+Those are precisely the 13 children of each of the 35 zero parents.  Thus
+there is no surviving adjacent-digit cocycle on a live carrier.
+
+Nor does adjoining the previous digit repair the defect.  The 78 rows indexed
+by `arc x r1` have parent rank 68, but for every fixed `r2` the parent/child
+union has rank 78.  Hence no linear operator on the old 68-dimensional
+observable rowspace produces the next digit.  The ten new directions are
+address-amplitude/history data: they do not mix the six arcs and they do not
+constitute chronology.  This sharply separates a stable six-line carrier
+from a growing amplitude state and rules out interpreting “rank six” as a
+global endpoint-response ceiling.
+
+The same refinement finds 104 live source profiles with two source-cell
+ratios, all endpoint-annihilated enough to preserve a diagonal response.  That
+is consistent with the decorated-kernel diagnosis above and further hostile
+evidence against ordinary `P7` incidence as its mechanism.
+
 A future D5/H1 interpretation needs a lawful clock/address graph `Gamma`, a
 typed transport on each clock edge, and a composition law.  Only after
 restricting to invertible transports can one test cycle holonomy or a
@@ -396,6 +443,7 @@ of those four typed edges.
 | root quotient | arc-reversal-even module `A^+`, dimension three |
 | interior rank-four extension | `A^+` plus middle arc-odd line |
 | exceptional source object | graph section (11), decorated quotient stalks `(2,1,1,1,1,2)` |
+| third-digit hostile | all six arc lines preserved; adjacent cocycle dead-only; old `68`-space grows to `78` |
 | lost claims | no boundary-space classification, local system, cocycle, physical current, row exclusion, or LRC(14) |
 
 ## Cheapest next decisive computations
@@ -409,7 +457,12 @@ of those four typed edges.
    and test every natural decorated-stalk incidence matrix with stalk ranks
    (14).  This decides whether the exact eight-dimensional kernel subspace has
    a sheaf-boundary factorization or is only endpoint-specific.
-3. If a lawful address clock is constructed, add one typed clock edge at a
+3. Decompose the exact ten-dimensional third-digit quotient
+   `span(parent,child)/span(parent)` under arc reversal and path reflection.
+   This is a small postprocessing calculation on the resident 78-row banks
+   and decides whether the missing history state has a canonical
+   representation, without rerunning the endpoint sweep.
+4. If a lawful address clock is constructed, add one typed clock edge at a
    time and test invertibility plus composition before computing holonomy.
    Without those gates, no D5/H1 promotion is admissible.
 
