@@ -19,6 +19,25 @@
   `e585c1a18d846c4ab87fc159ad411bad90859be831831cea1c0e8f326d9b440f` /
   `86820462aab1e54c144ffba633a323eb80985c6b0d9eab8c7d6b985ec2eafbd8` /
   `b0996af3f1760b2118187490c93e0e01b322cb57fd6b25d3bf3688778b7e664c`.
+- `lrc_r5_ufull_owner_node_boolean_square_root_difference_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT THREE-COORDINATE COMMON-OWNER CANDIDATE;
+  INDEPENDENT AUDIT PENDING].  Retaining the lawful THM-2471 source-root
+  difference `s=u-q` before integrating the actual endpoint factors refines
+  the pinned Boolean square to `V4 x F13 x F13`.  Summing `s` recovers that
+  square exactly; weighted and support-only same-root slices vanish before
+  integration, while the endpoint-only hostile fires there.  Raw directed-cut
+  arc incidence has rank `2`, but the weighted tensor has flattening ranks
+  `(4,12,13)` and maximal three-way ANOVA ranks `(3,12,12)`.  All
+  `432=3*12*12` genuinely triple Walsh/difference/relation modes survive.
+  Support-only retains the same maximal ranks; endpoint-only drops to
+  `(3,6,12)`, so typed source incidence, not numerical profile weights, is the
+  load-bearing source datum.  At `(1,0,6)` the weighted `4x13` matrix has rank
+  `4`, centred rank `3`, and chamber-reflected zero sets.  This is not exact
+  address, inverse ancestry, chronology, physical current, row exclusion, or
+  LRC(14).  Script/output/semantic LF SHA-256:
+  `dddeea995e9ab7e8abfd010e00c798c93a28ff924da8172dd114756184942a57` /
+  `0f96a72b638a8b705a344edd2f696652ad46eb7fccb5d2fcdf9b418bd0023791` /
+  `38f2cbc38bbeee0a8556e0649c4cd608645cba1477e78f3d436b860b4d696278`.
 
 - `lrc_r5_ufull_owner_node_boolean_square_refiner_probe_20260816.py` ->
   matching `.out` [FINITE-EXACT GENUINE BOOLEAN-SQUARE x F13 COMMON-OWNER
@@ -38,7 +57,7 @@
   `(1,0,6)` state values and Walsh channels are nonzero.  This is a typed
   source-support refiner, not exact address, U_clock chronology, uniform-row
   current, row exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
-  `42dd901dbd547939fdb01aae5e8ca8308b56f330fb3fb94f5aba54df8a4db4bc` /
+  `c7bbd2d82ed067914f39253ac52ce32f9e179a859fb55a421bd2b390f707d881` /
   `0235d50148e2bc3516ed5c52700d94e74c41ac73a535472b853369b09a0970d7` /
   `bae28345b0b1aea35b244bfbf04123414f0c8fbf9eeca98e39d2b94dd6d107ec`.
 

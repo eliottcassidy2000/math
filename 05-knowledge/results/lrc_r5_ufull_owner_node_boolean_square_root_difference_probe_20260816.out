@@ -1,0 +1,20 @@
+== r=5 owner-node Boolean-square x root-difference x relation probe ==
+parents=(square_sha=c7bbd2d82ed067914f39253ac52ce32f9e179a859fb55a421bd2b390f707d881,square_semantic=bae28345b0b1aea35b244bfbf04123414f0c8fbf9eeca98e39d2b94dd6d107ec,owner_semantic=98a27d4540648377c544d8e1b86c3dd3df7bb16d3431f6a9471f4844ba2e6b9f)
+coordinates=(state in V4,source_difference=u-q in F13,relation=(1,0,t) in F13)
+field=(prime=755373809845391722745761,root=148035889,zeta13=266737884585332483769981)
+work_counts=(7107008, 7108460, 1200462, 186244, 186244);state_segment_counts=(300115, 300116, 300115, 300116);literal_controls=((0, 0, 0), (1, 0, 6), (6, 6, 12)): PASS
+marginals=(weighted->Boolean_square,endpoint_only->source_erasure): PASS
+same_root=(weighted=0,support_only=0,endpoint_only_nonzero): PASS
+raw_cut_arc_profile=(rank=2,rows=((0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (0, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2), (0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (0, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2)))
+difference_support_(weighted,support_only,endpoint_only)=((1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+flattening_ranks_(state,difference,relation)=(weighted,support_only,endpoint_only)=((4, 12, 13), (4, 12, 13), (4, 7, 13))
+three_way_ANOVA_flattening_ranks=((3, 12, 12), (3, 12, 12), (3, 6, 12))
+support_census_order=(total,empty,relation,difference,difference_relation,state,state_relation,state_difference,triple)
+spectral_censuses=(weighted,support_only,endpoint_only)=((676, 1, 12, 12, 144, 3, 36, 36, 432), (676, 1, 12, 12, 144, 3, 36, 36, 432), (676, 1, 12, 12, 144, 3, 36, 36, 432))
+three_way_ANOVA_spectral_censuses=((432, 0, 0, 0, 0, 0, 0, 0, 432), (432, 0, 0, 0, 0, 0, 0, 0, 432), (432, 0, 0, 0, 0, 0, 0, 0, 432))
+fixed_relation=(1,0,6);records_(rank,ANOVA_rank,row_support,zero_sets,digest)=((4, 3, (10, 12, 10, 12), ((0, 1, 2), (0,), (0, 11, 12), (0,)), 'acde8efe1065b919716bacf43fbb09afd8dd491b219b67793d8a94f5386eaf5f'), (4, 3, (10, 12, 10, 12), ((0, 1, 2), (0,), (0, 11, 12), (0,)), 'fedbc2430a29f32ff39ec9e7948bde74e896c5d4d2a676fc1e9fdbe395d66c16'), (4, 3, (13, 13, 13, 13), ((), (), (), ()), 'e5a9460cca848458272f5a8917f2786096dd8939ab40ce28e4fb13a5fa9576c7'))
+digests=(gamma,tensor,spectrum,ANOVA,ANOVA_spectrum)=(('a83811099901421a16d39b1a04a9dd09bea96eba1b317208e58df1e6ab670ab6', '9076200eefb5d5322e8e20fdbb9fc805d17cc2deb287cc9e184e7e4a06d205d7', 'b0439188832ee6fa92913e3873a9c3b12eb01c64179843be0a7b38dd7419ce94'), ('0c6a6b831b5548d012c2954ed5fc11387657591e9de0f6ae3b55a1e593982f9f', '147490619b4a53c125140f3e57b0285e5153e6eeff6413410c5cfa9f769c8f7c', '38f44bca9e20a27dbb58962d4b750d4650e859c7418cd1bcb350476940fc0a6d'), ('998d30f5c5415ebc6350b4027fdc8b4392e0e2e034e3e8345c9e8d1944ba9a6d', '47b2ae42cd1af50f97c288d769a10707d341ddbb12845c068abfafec6a49c1fe', '4f2927945813a30ca0f3cd6c24219189079249b0d836b1c042e137b41e2ddd8c'), ('7acf66b6d9bd9c7363de7546c40a5f1dfba6e3e19cfe89d9f0d4bd8459b2a13d', 'f26eb2ee2f86b1da4a1e4762c75531942a7a4f6c39acf3903c5e879f2a14aa86', '11014600dea82e614562bef59a203287d50f803fe1f6c766ecc13ab883d7f21d'), ('6e9562dccd104a355b2fa5e35fb05a9e580f1913330ebd9aab787b32d1a2735e', '8618fe32231015f891ea291bd3cdd90ae7408cf39815911aae79b12b6cc86758', '4251ea22fea625b9f023a9714ae2a9b48fcbda2b84bbc6f7ecb8b03641ef0b86'))
+semantic_sha256=38f2cbc38bbeee0a8556e0649c4cd608645cba1477e78f3d436b860b4d696278
+status=FINITE-EXACT three-coordinate source-root/Boolean/endpoint candidate on one owner base
+scope=root difference is lawful source label;not exact address,not inverse ancestry,not chronology,not physical current,no row exclusion,no LRC(14)
+all exact checks passed
