@@ -43,6 +43,13 @@ def coefficient_hash(poly: sp.Poly) -> str:
 ROOT = Path(__file__).resolve().parents[1]
 H_PATH = ROOT / "05-knowledge/results/keller_L2_polynomial_opus_20260728.pkl"
 H_SHA256 = "5a9459b3149e500c1b00b67bd804aa7e607de06bf4610c7cdf5fa26d41d74ce9"
+EXPECTED_J11_SLICE_SHA256 = "f0b51842adf88383230a056f9bcdd19c434e17551940c23aea2fad2964c57447"
+EXPECTED_P_SHA256 = "5f15ad89e0788eafcdffecf6fa0f0204224d27fb6ecf94cd46ed1982da678333"
+EXPECTED_P_MINUS_ONE_SHA256 = "e4fa283a05df9285c7384f2fb2e4467e3a5e0d6c688abb32719fa394834470c5"
+P3_DENOMINATOR = sp.Integer(32687327622020737269760000000000000)
+P3_PRIMITIVE_LEAD = sp.Integer(
+    51781084507728969748447381099724691990978530821553059009958856196332470476610552088369
+)
 
 H_bytes = H_PATH.read_bytes()
 require(hashlib.sha256(H_bytes).hexdigest() == H_SHA256, "H artifact changed")
@@ -159,17 +166,23 @@ norm_field = (
 norm_slice = sp.cancel(norm_field.as_expr())
 print("stage: fresh slice regular-representation norm PASS", flush=True)
 norm_numerator, norm_denominator = norm_slice.as_numer_denom()
+denominator_quotient = sp.Poly(norm_denominator, A).exquo(sp.Poly(L_slice**7, A))
 require(
-    sp.Poly(norm_denominator, A).exquo(sp.Poly(L_slice**7, A)).degree() == 0,
-    "fresh slice denominator is not a constant times L^7",
+    denominator_quotient.degree() == 0
+    and denominator_quotient.LC() == 2**35,
+    "fresh slice denominator is not exactly 2^35*L^7",
 )
-J_slice = sp.cancel(L_slice**7 * norm_slice)
-J_slice_numerator, J_slice_denominator = J_slice.as_numer_denom()
-require(not sp.Poly(J_slice_numerator, A).is_zero, "fresh J slice vanished")
-require(sp.Poly(J_slice_denominator, A).degree() == 0, "fresh J slice is not polynomial")
-J_slice_poly = sp.Poly(J_slice, A, domain=sp.QQ)
-require(J_slice_poly.degree() == 86, "fresh J slice has wrong degree")
-factor_unit, factor_rows = sp.factor_list(J_slice_poly)
+
+# Keep the two normalizations separate.  J_res was the notation in the first
+# pole-seven sidecar; J is the later primitive integral global polynomial.
+J_res_slice = sp.cancel(L_slice**7 * norm_slice)
+J_primitive_slice = sp.cancel(2**35 * J_res_slice)
+J_primitive_numerator, J_primitive_denominator = J_primitive_slice.as_numer_denom()
+require(J_primitive_denominator == 1, "primitive fresh J slice is not integral")
+J_primitive_slice_poly = sp.Poly(J_primitive_numerator, A, domain=sp.ZZ)
+require(J_primitive_slice_poly.primitive()[0] == 1, "primitive fresh J slice has content")
+require(J_primitive_slice_poly.degree() == 86, "fresh J slice has wrong degree")
+factor_unit, factor_rows = sp.factor_list(J_primitive_slice_poly)
 print("stage: fresh degree-86 slice factorization PASS", flush=True)
 require(
     len(factor_rows) == 1
@@ -177,9 +190,13 @@ require(
     and factor_rows[0][1] == 1,
     "fresh J slice is reducible or a power",
 )
-require(sp.gcd(J_slice_poly, sp.Poly(L_slice, A)).degree() == 0, "fresh J slice contains L")
+require(
+    coefficient_hash(J_primitive_slice_poly) == EXPECTED_J11_SLICE_SHA256,
+    "fresh primitive J slice ledger changed",
+)
+require(sp.gcd(J_primitive_slice_poly, sp.Poly(L_slice, A)).degree() == 0, "fresh J slice contains L")
 H_slice = sp.Poly(H.subs({a: A, b: 1, c: 1}), A)
-require(sp.gcd(J_slice_poly, H_slice).degree() == 0, "fresh J slice contains H")
+require(sp.gcd(J_primitive_slice_poly, H_slice).degree() == 0, "fresh J slice contains H")
 
 # ---------------------------------------------------------------------------
 # Route B: reconstruct the boundary residual but certify it by a univariate
@@ -205,6 +222,7 @@ require(
     == (57, 84, 141, 527),
     "boundary residual shape changed",
 )
+require(coefficient_hash(P) == EXPECTED_P_SHA256, "boundary residual ledger changed")
 print("stage: boundary residual reconstruction PASS", flush=True)
 
 # No factor can depend only on tau: the lambda-coefficients have gcd one in
@@ -219,6 +237,10 @@ require(tau_content.degree() == 0, "P has a nonconstant tau-only content")
 # irreducible by Rabin's criterion; the prime divisors of 84 are 2,3,7.
 P_special = sp.Poly(P.as_expr().subs(tau, -1), lam, domain=sp.ZZ)
 require(P_special.degree() == 84, "P(-1,lambda) lost degree")
+require(
+    coefficient_hash(P_special) == EXPECTED_P_MINUS_ONE_SHA256,
+    "P(-1,lambda) ledger changed",
+)
 prime = 449
 finite_field = fmpz_mod_poly_ctx(prime)
 P_mod = finite_field(list(reversed([int(value) for value in P_special.all_coeffs()])))
@@ -239,26 +261,40 @@ require(not P_at_lambda_zero.is_zero, "P contains an extra lambda factor")
 
 residue_constant = sp.Rational(11**6 * 13**4, 2**17 * 3**15)
 for A_value, lam_value in ((sp.Rational(2, 27), 1), (sp.Integer(0), 3)):
-    direct_value = sp.cancel(J_slice.as_expr().subs(A, A_value))
+    direct_value = sp.cancel(J_res_slice.subs(A, A_value))
     residue_value = sp.cancel(
         residue_constant * lam_value**8 * P.eval({tau: 1, lam: lam_value})
     )
     require(direct_value == residue_value, "direct norm disagrees with residue sign/scalar")
     require(direct_value != 0, "fresh transverse boundary value vanished")
 
+# Cross the two incoming computations without sharing their construction.
+# The leading coefficient of the actual degree-27 product is N^2(L).  Using
+# N(L)=H/(64L) and N(H)=J/(2^35 L^7) gives J/(2^47 L^6 H).
+J111 = J_primitive_slice_poly.eval(1)
+H111 = H_slice.eval(1)
+predicted_level_three_lead = sp.Rational(J111, 2**47 * 25**6 * H111)
+observed_level_three_lead = sp.Rational(P3_PRIMITIVE_LEAD, P3_DENOMINATOR)
+require(
+    predicted_level_three_lead == observed_level_three_lead,
+    "global J and degree-27 tower disagree on N^2(L)",
+)
+
 print("== independent audit: fixed-F level-three global norm ==")
 print(f"escaping weighted face: order={weight}, constant={face_constant}")
 print("fresh slice (b,c)=(1,1): regular-representation inverse graph 3/3 PASS")
 print(
-    "fresh complete norm: denominator=constant*L^7; "
+    "fresh complete norm: denominator=2^35*L^7; primitive "
     "J slice degree 86, irreducible exponent one, gcd(J,LH)=1"
 )
-print(f"fresh J-slice coefficient ledger sha256={coefficient_hash(J_slice_poly)}")
+print(f"fresh primitive J-slice coefficient ledger sha256={EXPECTED_J11_SLICE_SHA256}")
 print("direct transverse values at a=2/27 and a=0 confirm the positive residue scalar")
 print("P lambda-content over Q[tau]: 1")
 print("P(-1,lambda) mod 449: degree 84; Rabin tests for 2,3,7 PASS")
 print(f"P(-1,lambda) coefficient-ledger sha256={coefficient_hash(P_special)}")
 print(f"P(tau,0): degree {P_at_lambda_zero.degree()}, nonzero")
 print("exceptional seam lambda*tau=2 is not a factor")
-print("scope: no expanded global J and no degree-27 coordinate discriminant")
+print("cross-package lead: P3.LC/P3.den = N^2(L) = J/(2^47*L^6*H) at (1,1,1)")
+print("primitive discriminant class is [-2J], never the stale [-J]")
+print("scope: no expanded global J and no degree-27 discriminant expansion")
 print("all independent audit checks passed")

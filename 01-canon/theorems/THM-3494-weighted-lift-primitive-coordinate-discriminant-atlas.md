@@ -9,8 +9,8 @@ status: >
   elements whose eliminant discriminants differ from the full inverse
   discriminant only by nonzero squares.  Degree 3 also has an
   exact z-coordinate check; Sympy verifies degrees 3,4,5 and an independent
-  FLINT route verifies degrees 3,4, including z at degree 3 and the flat-view
-  and XOR hostiles.  This is an atlas for one explicit family, not a
+  FLINT route verifies degrees 3,4, including z at degree 3 and the flat-view,
+  unit, and XOR hostiles.  This is an atlas for one explicit family, not a
   classification of Keller maps or a composition law.
 source: codex2 derivation, 2026-08-16
 audit: >
