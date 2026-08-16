@@ -149,6 +149,23 @@ determine the common-base intersection.  The kernel is the familiar
 two-by-two checkerboard coupling direction.  Finite Fourier inversion of the
 post-marginalization scalars is linear and cannot restore that lost coupling.
 
+More precisely, if `U` and `V` are the left- and right-atom spaces and
+`epsilon_U,epsilon_V` are total mass, the marginal map sits in the exact
+sequence
+
+```text
+0 -> ker(epsilon_U) tensor ker(epsilon_V)
+  -> U tensor V
+  -> U x_k V -> 0.                                  (9a)
+```
+
+THM-2538 gives the categorical dimension `(m-1)(n-1)` and mixed-Haar basis;
+THM-3492 independently realizes the same sequence for Rule 30 slack and phase,
+where its kernel is `(q+1)P_(N-1) tensor ker(e_h)`.  The hostile `(8)--(9)` is
+the smallest nonzero vector in `(9a)`.  Hence the missing ancestry key is
+exactly data selecting a semantically lawful lift through this sequence, not
+one more scalar appended to the two marginals.
+
 One can regard (6) as living on an independent product base.  That does not
 make it a lawful LRC ancestry: the product base has no support condition
 linking the two endpoints through owner-normalization sheets, collision roots,

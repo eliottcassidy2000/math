@@ -273,11 +273,14 @@ add a sidecar only when it eliminates a named family or state.
 **Evidence:** THM-2053/2055--2057 and MISTAKE-224.
 
 ## Join compatibility fibers before comparing marginal sizes
-**Trigger/action:** when nonempty local packets must share a witness, retain
-histograms on their common quotient and compute compatibility before totals.
-**Mechanism/counterindication:** CRT pairings can vanish despite large
-marginals; scalarize only after uniform fibres, independence, or factorization.
-**Evidence:** THM-2059, MISTAKE-231, and tournament cut-payload quotients.
+**Trigger/action:** when local packets must share a witness, compute their
+common-quotient compatibility before totals.
+**Mechanism/caution:** marginals determine the fiber product; loss
+`ker(e_L) tensor ker(e_R)` is THM-2538's transportation
+kernel, THM-3492's slack-phase kernel, and U_full's checkerboard.  Scalarize
+only after factorization or target-annihilation is proved.
+**Evidence:** THM-2059/2538/3492.
+
 ## Rank local extrema, then pass closure and effectivity
 **Trigger/action:** when sharp local caps share labels, rank the spectrum, force a finite bank, retain common fibres, and then test cycle/Čech closure plus membership in the target positive, integral, polynomial, or completed category.
 **Mechanism/counterindication:** compatible marginals may still have bad triangle products or glue only in an ambient field/signed space; skip the extra gates only after proving independence or target factorization.

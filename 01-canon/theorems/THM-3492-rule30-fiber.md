@@ -24,6 +24,7 @@ depends_on:
   - THM-3489-rule30-packed-restart-and-pointed-pascal-face
 related:
   - THM-3476-rule30-depth-four-transverse-jet-barrier-and-slack-pascal-atlas
+  - THM-2538-anchored-transverse-gain-and-common-ancestry-arrival-boundary
 script: 04-computation/rule30_slack_phase_fiber_thm3492.py
 output: 05-knowledge/results/rule30_slack_phase_fiber_thm3492.out
 script_sha256: f27374a9660c55b402f4acd31ddd4bc88fddd44200e7571a298b6606c4dbb57f
@@ -136,6 +137,21 @@ In particular,
 dim K_(p,N)=p+N,
 dim ker(Res)=N(p-1).                                 (10)
 ```
+
+This is the same universal tensor-marginal sequence as THM-2538's
+transportation kernel.  For vector spaces `U,V` with nonzero functionals
+`e_U,e_V`, contraction of a joint tensor onto its two marginals has
+
+```text
+0 -> ker(e_U) tensor ker(e_V)
+  -> U tensor V
+  -> U x_(F_2) V -> 0.                               (10a)
+```
+
+Here `U=P_N`, `V=V_p`, `ker(e_q)=(q+1)P_(N-1)`, and
+`ker(e_h)` is the zero-marked phase space, so `(10a)` is exactly `(9)`.
+The mixed-Haar checkerboard in THM-2538 is the smallest categorical instance;
+the present theorem is its polynomial-by-phase instance.
 
 ### Proof
 
