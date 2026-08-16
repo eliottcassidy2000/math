@@ -49,6 +49,75 @@
   referee script/output:
   `e33714832d1638a7e0587d9d6f7eb40e1c8ec95b92958882ffa93220cf1c4212` /
   `e83775507494f737c27fa564fe8a121730f7732cd6909330320597b414054a80`.
+- `lrc14_stage2_root_shear_contrast_probe_20260816.py` -> matching `.out`
+  [VERIFIED-EXACT SIDE-CAR TO PROVED THM-2594; NOT INDEPENDENTLY AUDITED].
+  The theta-slaved and fixed-absolute-root `7 x 13` contractions differ in
+  `19/91` raw and `28/91` centred cells; their difference has nonzero
+  `Psi_(1,1)(1,1)` and all `5,184/5,184` primitive coefficients fire, with
+  reduced-coordinate floor `60/72`.  Retaining owner root `u` gives the exact
+  shear `A_hat(r,s)=S_hat(r+2s,s)`.  At the split embedding `F_53`, `xi=16`,
+  there are `528/924` certified nonzero modes off both the pure-theta line
+  `r=0` and pure-absolute-root line `r=2s`, concentrated `132` apiece in word
+  slots `2,3,4,5`; synthetic pure-chart controls vanish off their lines.
+  This proves genuine two-coordinate chart sensitivity, not unique slaving
+  causation, a physical current, row exclusion, or LRC(14).  Script/output LF
+  SHA-256:
+  `087b9bd9028e6e82236d2006002cdd6acebac866932382c0b3940dfb380626b7` /
+  `f5dbe134d1740a18e76e277ee5566c8fca3a1feb65d2573e1c24d7d01e62b5dc`;
+  support ledger SHA-256:
+  `638af80f232c55d91a4e3d5b8fb802e4c7196184b6d2c9ac9324d370d53cbcf4`.
+- `regular_shortlex_harmonic_density_automaton_probe_20260816.py` ->
+  matching `.out` [VERIFIED-EXACT THM-3499 CONTROLS; GENERAL THEOREM
+  RESERVED AND AWAITING INDEPENDENT AUDIT].  The proof candidate states that
+  every complete finite automaton under shortlex indexing has logarithmic
+  density
+  `E[H_infinity/(1/(q-1)+X)]/log(q)`, where `H_infinity` is the eventual
+  recurrent-class stationary acceptance mass and `X` is the uniform q-adic
+  address.  A single reachable irreducible class reduces this to ordinary
+  stationary mass without an aperiodicity assumption.  Exact controls
+  reconstruct THM-3497's `4/12=1/3` and `34/192=17/96` group automata; an
+  even-length binary language has natural endpoint limits `2/3,1/3` but log
+  coefficient `1/2`; and the prefix-zero hostile has coefficient
+  `log(3/2)/log(2)`, not its unweighted basin mass `1/2`.  This covers regular
+  shortlex subsets, not arbitrary subsets of the harmonic series.
+  Script/output LF SHA-256:
+  `7433a432faa30cfb2f5f54d9f759645da2fb665f19874881147f0ffe4100e866` /
+  `41f1103aa01c1050d1cb535865ef71a7bbe6791c028178f14b69ffaabeddcc99`;
+  semantic ledger SHA-256:
+  `90586710e72cf8ebc6c36e3e84135f0053973fecf412b5d83fa22881f816ce75`.
+- `keller_level_four_old_L_boundary_norm_probe_20260816.py` and
+  `keller_level_four_degree81_finite_field_probe_20260816.py` -> matching
+  `.out` files [VERIFIED-EXACT THM-3498 PROOF CANDIDATE; RESERVED AND
+  AWAITING INDEPENDENT AUDIT].  Exact reconstruction of THM-3495's
+  66,146-term `J` gives the 16-term Newton face
+  `-2^58*3^51*13^8*79^4*313^2*x^43*(3xz-2y)^15`; both divergent inverse
+  sheets have `L`-valuation `-43/2`, while the finite hostile sheet at
+  `(2,5/6,-7/8)` is a unit, so `v_L(N(J))=-43`.  Independently, three nested
+  cubic algebras over `F_101` at `(1,1,1)` give a full degree-81 squarefree
+  fourth norm-product with off-grid determinant check and ledger SHA-256
+  `1c05c0fd5ee48fc2dd030aebdb9ad6ddd8185fb933eb91e7e39ff553424ef5a7`.
+  The submitted square-class derivation is `[Delta_4]=[2G]` for
+  `G=L^43N(J)`; promotion awaits a fresh audit of localization, constants,
+  and good reduction.  Old-boundary script/output LF SHA-256:
+  `a52a992a2455f9a6d8b5a2949b1a956969846df69f9df3492573c5ab864d837c` /
+  `a730eb715177e1be945259c01e048c974be624c67e8882a6d4c4c66293d7b85a`;
+  degree-81 script/output:
+  `4039b4081c9f0d95b197d2e3a7581c66433382e53dac3b95fa2526c3a4ba4f2e` /
+  `f5498e42510641227052f578cd269697876746a6847ba6bb8cd382e726c35169`.
+- `tetrahedral_k4_tournament_berggren_representation_atlas_20260816.py`
+  -> matching `.out` [VERIFIED-EXACT FINITE REPRESENTATION SYNTHESIS].  The
+  four vertices, six XOR edges, three perfect matchings, and four opposite
+  faces are separated as distinct `S4` representations.  Cut plus
+  opposite-face cycle coordinates have lattice determinant `-16` and
+  reconstruct all `64` labelled `T4` orientations from score and triangle
+  circulation.  The four unlabeled tournament orbits have score/cyclic-face
+  profiles `(3,1,1,1)/1`, `(2,2,2,0)/1`, `(3,2,1,0)/0`, and
+  `(2,2,1,1)/2`.  The matching action is `S4->S3` with kernel `V4`, whereas
+  odd-characteristic graph `H1` is faithful; its traces distinguish exactly
+  the class pairs merged by THM-3497's 12-state variable language.  This is
+  not a physical current or cross-domain bridge.  Script/output LF SHA-256:
+  `dca20c052e6ae681c9f7fc5fa2c8145a7da74f79d9d07d1869ed0a5d9df7d1c9` /
+  `dcb40e7868c364d06b4e3260bdcab91353077ab193e7be99b0a28a45c18c4bdd`.
 - `lrc14_stage2_theta_contraction_r5_independent_audit_20260816.py` ->
   matching `.out` [INDEPENDENT RECOVERY/HOSTILE AUDIT OF PROVED THM-2594].
   The parent copies normalize exactly to the repaired canonical primary

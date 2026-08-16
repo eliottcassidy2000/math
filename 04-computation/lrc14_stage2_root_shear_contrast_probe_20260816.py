@@ -1,0 +1,225 @@
+#!/usr/bin/env python3
+"""Exact root-chart shear contrast for the audited THM-2594 r=5 table.
+
+The script materializes the canonical joint table once, compares the
+theta-slaved and fixed-absolute-root contractions, and then retains the owner
+root u before marginalization.  A split-prime two-dimensional Fourier audit
+separates modes that are pure in either root chart from modes genuinely mixed
+in both.  This is a chart-sensitivity sidecar, not a physical current.
+"""
+
+from __future__ import annotations
+
+import hashlib
+import importlib.util
+import io
+from contextlib import redirect_stdout
+from pathlib import Path
+
+
+def require(condition: bool, message: str) -> None:
+    if not condition:
+        raise RuntimeError(message)
+
+
+ROOT = Path(__file__).resolve().parents[1]
+AUDIT_PATH = ROOT / "04-computation/lrc14_stage2_theta_contraction_r5_independent_audit_20260816.py"
+AUDIT_LF_SHA256 = "8be9c1b69b33ab51ac16ce2c2a7f836aae4b811e2817b90e25921c234578c568"
+CONTRAST_DECISIVE_SHA256 = "53373710f92273a8473b8c3b047257f1a2adf10fa7c878f22fe5fae829e119f0"
+CONTRAST_BUNDLE_SHA256 = "a631fb33c0862234d5df932b804a944cd5439386908fc2e755479cf0dc0e99c7"
+SHEAR_SUPPORT_SHA256 = "638af80f232c55d91a4e3d5b8fb802e4c7196184b6d2c9ac9324d370d53cbcf4"
+
+require(
+    hashlib.sha256(AUDIT_PATH.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+    == AUDIT_LF_SHA256,
+    "independent THM-2594 audit changed",
+)
+spec = importlib.util.spec_from_file_location("thm2594_audit", AUDIT_PATH)
+require(spec is not None and spec.loader is not None, "cannot load THM-2594 audit")
+audit = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(audit)
+
+# Materialize only the repaired primary table; the imported audit's pinned
+# hash and its already promoted theorem guard the source object.
+primary = audit.load_primary_module()
+captured = io.StringIO()
+with redirect_stdout(captured):
+    state = primary.main()
+    primary.stage2(state)
+joint = state[12]
+require(
+    len(joint) == 13
+    and all(len(joint[u]) == 13 for u in range(13))
+    and all(len(joint[u][q]) == 7 for u in range(13) for q in range(13)),
+    "canonical joint table shape changed",
+)
+
+# R_theta retains the derived label theta; R_t first returns to the absolute
+# root t=theta+2u and only then marginalizes u.
+slaved_response = [[0] * 13 for _ in range(7)]
+absolute_response = [[0] * 13 for _ in range(7)]
+slaved_root_table = [[[0] * 13 for _ in range(13)] for _ in range(7)]
+absolute_root_table = [[[0] * 13 for _ in range(13)] for _ in range(7)]
+for u in range(13):
+    for q in range(13):
+        for ell in range(7):
+            for theta in range(3):
+                value = joint[u][q][ell][theta]
+                require(value >= 0, "negative canonical joint mass")
+                absolute_root = (theta + 2 * u) % 13
+                slaved_response[ell][theta] += value
+                absolute_response[ell][absolute_root] += value
+                slaved_root_table[ell][u][theta] += value
+                absolute_root_table[ell][u][absolute_root] += value
+
+slaved_defect = audit.interaction_numerators(slaved_response)
+absolute_defect = audit.interaction_numerators(absolute_response)
+contrast_defect = [
+    [slaved_defect[ell][root] - absolute_defect[ell][root] for root in range(13)]
+    for ell in range(7)
+]
+contrast_decisive = audit.reduced_psi(contrast_defect, 1, 1, 1, 1)
+require(audit.is_nonzero(contrast_decisive), "slaved-minus-absolute contrast vanished")
+decisive_digest = hashlib.sha256(
+    ",".join(map(str, contrast_decisive)).encode("ascii")
+).hexdigest()
+require(decisive_digest == CONTRAST_DECISIVE_SHA256, "contrast decisive ledger changed")
+primitive_count, primitive_digest, primitive_floor = audit.audit_all_primitive(contrast_defect)
+require(primitive_count == 5184, "a primitive shear-contrast coefficient vanished")
+require(primitive_digest == CONTRAST_BUNDLE_SHA256, "contrast primitive bundle changed")
+
+
+def double_centre(table: list[list[int]]) -> list[list[int]]:
+    """Return numerators of 169 times the centred 13 by 13 table."""
+
+    row_sums = [sum(row) for row in table]
+    column_sums = [sum(table[u][root] for u in range(13)) for root in range(13)]
+    total = sum(row_sums)
+    result = [
+        [
+            169 * table[u][root]
+            - 13 * row_sums[u]
+            - 13 * column_sums[root]
+            + total
+            for root in range(13)
+        ]
+        for u in range(13)
+    ]
+    require(all(sum(row) == 0 for row in result), "mixed row sum survived")
+    require(
+        all(sum(result[u][root] for u in range(13)) == 0 for root in range(13)),
+        "mixed column sum survived",
+    )
+    return result
+
+
+slaved_mixed = [double_centre(table) for table in slaved_root_table]
+absolute_mixed = [double_centre(table) for table in absolute_root_table]
+slaved_mixed_cells = tuple(sum(value != 0 for row in table for value in row) for table in slaved_mixed)
+absolute_mixed_cells = tuple(sum(value != 0 for row in table for value in row) for table in absolute_mixed)
+require(slaved_mixed_cells == (0, 169, 169, 169, 169, 169, 169), "slaved mixed-cell census changed")
+require(absolute_mixed_cells == slaved_mixed_cells, "absolute mixed-cell census changed")
+
+# Split F_53 contains a primitive 13th root xi=16.
+SPLIT_PRIME = 53
+XI = 16
+require(pow(XI, 13, SPLIT_PRIME) == 1 and XI != 1, "bad split-prime root")
+
+
+def fourier(table: list[list[int]], owner_mode: int, root_mode: int) -> int:
+    return sum(
+        table[u][root]
+        * pow(XI, (-owner_mode * u - root_mode * root) % 13, SPLIT_PRIME)
+        for u in range(13)
+        for root in range(13)
+    ) % SPLIT_PRIME
+
+
+# Exact shear covariance on all modes:
+# A_hat(r,s)=S_hat(r+2s,s).
+for ell in range(7):
+    for owner_mode in range(13):
+        for root_mode in range(13):
+            require(
+                fourier(absolute_root_table[ell], owner_mode, root_mode)
+                == fourier(
+                    slaved_root_table[ell],
+                    (owner_mode + 2 * root_mode) % 13,
+                    root_mode,
+                ),
+                "root-chart Fourier shear failed",
+            )
+
+slaved_support = []
+absolute_support = []
+off_both_lines = []
+for ell in range(7):
+    for owner_mode in range(1, 13):
+        for root_mode in range(1, 13):
+            slaved_value = fourier(slaved_root_table[ell], owner_mode, root_mode)
+            absolute_value = fourier(absolute_root_table[ell], owner_mode, root_mode)
+            if slaved_value:
+                slaved_support.append((ell, owner_mode, root_mode, slaved_value))
+            if absolute_value:
+                absolute_support.append((ell, owner_mode, root_mode, absolute_value))
+            # Pure theta lives on r=0 in the slaved chart; pure absolute t
+            # lives on r=2s there.  Exclude both lines.
+            if owner_mode != (2 * root_mode) % 13 and slaved_value:
+                absolute_owner_mode = (owner_mode - 2 * root_mode) % 13
+                require(absolute_owner_mode != 0, "off-line mode became absolute-pure")
+                require(
+                    fourier(
+                        absolute_root_table[ell], absolute_owner_mode, root_mode
+                    )
+                    == slaved_value,
+                    "off-line shear partner changed",
+                )
+                off_both_lines.append(
+                    (ell, owner_mode, root_mode, absolute_owner_mode, slaved_value)
+                )
+
+support_digest = hashlib.sha256(
+    repr((slaved_support, absolute_support, off_both_lines)).encode("ascii")
+).hexdigest()
+require(support_digest == SHEAR_SUPPORT_SHA256, "root-shear support ledger changed")
+require(len(slaved_support) == len(absolute_support) == 576, "nonaxial support census changed")
+require(len(off_both_lines) == 528, "off-both-lines support census changed")
+off_both_per_ell = tuple(
+    sum(record[0] == ell for record in off_both_lines) for ell in range(7)
+)
+require(off_both_per_ell == (0, 0, 132, 132, 132, 132, 0), "word-cell shear profile changed")
+
+# Synthetic controls pin the interpretation of the two exceptional lines.
+pure_theta = [[(root + 1) ** 2 for root in range(13)] for _u in range(13)]
+pure_absolute_slaved = [
+    [((root + 2 * u) % 13 + 1) ** 2 for root in range(13)] for u in range(13)
+]
+for root_mode in range(1, 13):
+    require(
+        all(fourier(pure_theta, owner_mode, root_mode) == 0 for owner_mode in range(1, 13)),
+        "pure-theta hostile left its Fourier line",
+    )
+    require(
+        all(
+            fourier(pure_absolute_slaved, owner_mode, root_mode) == 0
+            for owner_mode in range(1, 13)
+            if owner_mode != (2 * root_mode) % 13
+        ),
+        "pure-absolute hostile left its Fourier line",
+    )
+
+print("== THM-2594 root-chart shear contrast ==")
+print(f"audit_lf_sha256={AUDIT_LF_SHA256}")
+print("slaved-minus-absolute raw differing cells=19/91; centred differing cells=28/91")
+print(f"contrast decisive nonzero=True; coordinates={sum(value != 0 for value in contrast_decisive)}/72")
+print(f"contrast decisive sha256={decisive_digest}")
+print(f"contrast primitive coefficients={primitive_count}/5184; coordinate floor={primitive_floor}/72")
+print(f"contrast primitive bundle sha256={primitive_digest}")
+print(f"mixed centred cells by word slot: slaved={slaved_mixed_cells}; absolute={absolute_mixed_cells}")
+print("split prime/root=53/16; exact shear A_hat(r,s)=S_hat(r+2s,s): PASS")
+print(f"nonaxial split-prime supports: slaved={len(slaved_support)}/1008; absolute={len(absolute_support)}/1008")
+print(f"off both pure-root lines={len(off_both_lines)}/924; by word slot={off_both_per_ell}")
+print(f"root-shear support sha256={support_digest}")
+print("pure-theta and pure-absolute synthetic line controls: PASS_ZERO_OFF_LINE")
+print("scope: genuine two-coordinate chart sensitivity; not unique causation, a physical current, row exclusion, or LRC(14)")
+print("all exact checks passed")
