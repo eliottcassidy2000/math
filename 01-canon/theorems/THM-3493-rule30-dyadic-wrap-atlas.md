@@ -2,7 +2,7 @@
 id: THM-3493
 title: "Rule 30 dyadic period floor, wrap-prefix atlas, and Mersenne hard face"
 status: >
-  PROVISIONAL PROOF CANDIDATE + FINITE-EXACT; PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.
   The persistent left boundary pair sharpens the seed-period lower bound to
   the dyadic floor and excludes every two-cycle center endpoint.  Each dyadic
   depth block consequently has either no wrapped depths or one initial wrap
@@ -13,7 +13,12 @@ status: >
   certifies that depths 5 through 2^28-1 are hard.  No Rule 30 prize is
   claimed.
 source: root-rule30-next-targets-20260816
-audit: "PENDING INDEPENDENT AUDIT"
+audit: >
+  An independent hostile audit rederived the period floor, innovation
+  valuation, block atlas and density reductions, both ambient adaptive-query
+  adversaries, and the compiler scope.  A separate two-limb 68-bit scout
+  reproduced all 28 committed valuations; ordinary and optimized runs equal
+  the stored transcript byte-for-byte: ACCEPT.
 depends_on:
   - THM-3458-rule30-right-edge-2-adic-odometer-and-moving-observer-boundary
   - THM-3480-rule30-staircase-transducer-entropy-and-nonrectangular-macroblock-compiler
@@ -23,19 +28,18 @@ related:
   - THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum
 script: 04-computation/rule30_dyadic_wrap_atlas_thm3493.py
 output: 05-knowledge/results/rule30_dyadic_wrap_atlas_thm3493.out
-script_sha256: PENDING
-output_sha256: PENDING
+script_sha256: ef80ad966d70631a4a28937f177655c9e4280dafb9ac16bd32232cc30f31f78c
+output_sha256: 0dac3f198615ece230ba2e9b5dd9df74119f19e64a5833d71c6e507f6fc5754b
 hash_basis: raw bytes
 ---
 
 # THM-3493 -- Rule 30 dyadic period floor, wrap-prefix atlas, and Mersenne hard face
 
-**PROVISIONAL PROOF CANDIDATE + FINITE-EXACT; PENDING INDEPENDENT
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-3489 closes the center whenever its depth has reached the lower-width
 seed period, but it deliberately leaves the frequency of such wraps open.
-The present candidate extracts the exact dyadic geometry of that question.
+The present theorem extracts the exact dyadic geometry of that question.
 The new input is elementary but load-bearing: the two cells on the physical
 left boundary are always `11`.  That one extra boundary bit rules out the
 only equality case left by THM-3458's period lower bound.
@@ -551,7 +555,7 @@ not an asymptotic statement.
 Smaller hostile controls in the companion check full boundary pairs through
 time `256`, exact seed cycles through width `34`, the period floor,
 no-endpoint and lift laws through width `33`, and both Mersenne functional
-masks for `m<=7` and `p/2^m in {2,4,8}`.  Every failure gate is an explicit
+masks for `1<=m<=7` and `p/2^m in {2,4,8}`.  Every failure gate is an explicit
 exception, never a Python assertion.
 
 ## 8. Hostiles and no-prize boundary
@@ -591,7 +595,7 @@ Finally, (48) is finite.  THM-3458's periodic-ring construction gives a
 genuine eventually periodic Rule 30 extension of every finite center prefix.
 Neither a large hard interval nor a fitted density settles an infinite prize.
 
-Accordingly this candidate proves no Rule 30 balance prize, nonperiodicity
+Accordingly this theorem proves no Rule 30 balance prize, nonperiodicity
 prize, random-access prize, or general computational lower bound.
 
 ## 9. Verification and status
@@ -610,7 +614,6 @@ Both modes must agree byte-for-byte with
 ```
 
 The long gate makes exactly `2^27` packed updates modulo `2^68`; ordinary
-and optimized runs execute the same explicit checks.  Script and output
-hashes remain `PENDING` until an independent proof, universe, replay, and
-scope audit accepts the package.  Until that promotion, this file is a
-provisional proof candidate rather than a proved dependency.
+and optimized runs execute the same explicit checks.  An independent
+two-limb implementation reproduced the full valuation list, and both replay
+modes match the stored transcript byte-for-byte.
