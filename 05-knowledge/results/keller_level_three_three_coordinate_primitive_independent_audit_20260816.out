@@ -1,0 +1,18 @@
+KELLER LEVEL-THREE THREE-COORDINATE PRIMITIVITY INDEPENDENT AUDIT
+status=FINITE-EXACT + symbolic clean-room audit; fixed sporadic F^3 only
+candidate_imported=False; parent_computation_imported=False
+symbolic_inverse=(numerator_degrees=(9, 6, -1),quotient_sha256=96ff553c33cb980eee181f895f730d7a4b8331c7ce59b4b677623284e4c401b3,identity=DQ-xK^2=-3g,jacobian=-2)
+direct_map_census=all F_101^3 enumerated once; both listed depth-two split trees reconstructed exactly
+witness=(target=(77, 62, 4),level_one=((13, 36, 2), (39, 84, 75), (49, 74, 79)),level_two_blocks=(((35, 40, 46), (83, 54, 93), (84, 61, 87)), ((2, 91, 44), (35, 7, 50), (64, 28, 37)), ((24, 2, 74), (84, 50, 58), (94, 59, 2))))
+good_reduction=(split_inverse_units=((13, 6), (39, 50), (49, 5), (35, 77), (83, 58), (84, 99), (2, 78), (35, 17), (64, 50), (24, 49), (84, 11), (94, 49)),L_values=(31, 1, 21, 85, 62, 35, 85, 70, 82, 99, 16, 86, 95),final_unit_determinants=((73, 7), (62, 90), (42, 89), (34, 82), (42, 56), (35, 49), (86, 45), (32, 100), (46, 82)),nine_separable_cubic_quotients=True)
+local_charpolys=(27/27 degree_three_squarefree,ledger_sha256=9b11f5d942bdd26af130481ef380ce4f9d2d67a809a5d4c649fc3517340057e5)
+global_products=(degrees=(27,27,27),derivative_gcds=((1,), (1,), (1,)),sha256=('306dc5831a989a0fe953ae5eb6127d26bd6ff07f8cc4e25d54dc0f65e53e5e19', 'aba63853d168e670461e67b67e42d26380e18c62b363c8931aa187f1a97d4e51', 'b8a09c5bfed7affdabbbb3fcf222002a3a7c11c8d55cb19bcc949494725bb51d'))
+power_basis_27x27=(ranks=(27, 27, 27),determinants=(25, 64, 1))
+parent_hostile=(target=(93, 28, 83),derivative_gcd_degrees=(0, 1, 0),power_ranks=(27, 26, 27),y_collision_pairs=((4, 5, (76, 1)),),sha256=('e10d5f365f1a673e4c2615123c1925ac9fa797395cb160495fc43df7969cd4e2', '691caf7a37960ecf904b669ebf4477c232a5eed1137b35c90a76d8b55b53237d', 'fe96f6cb23ebc5facf0d36d2d2319da007ac7c46b1b96c809de8ad88fe1ed179'))
+generic_consequence=the three power determinants are nonzero rational functions, so K(x)=K(y)=K(z)=K_3
+trace_consequence=power-basis Gram determinants differ by change-of-basis squares; THM-3495 gives the common exact class [-2J]
+scaling_gate=degree 27 eliminant scaling exponent 52=(26*2), hence a square
+scope=no exact multiplicities, level-four/all-level, arbitrary Keller, outside-family, JC(2), or LRC consequence
+security_ast=(7615,assert_free=True)
+semantic_sha256=51b5945a5f26c3335b6837b169a916d9562acd8448d2dde4f1fe1449c1e157a3
+STATUS=PASS
