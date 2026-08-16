@@ -1,0 +1,7 @@
+== fixed Keller R5 split global-J audit ==
+parent sha256=fe1b03de9061c997a1abba6b88753e589c0a01f9f92762e49fe7ea0504ce9797
+p=71; outer roots=[10, 23, 38]; rows=[(10, 0, 2, 68, 26, 4, 64), (23, 1, 36, 14, 57, 68, 66), (38, 18, 60, 40, 20, 44, 19)]
+R5(2,5/6,-7/8) mod 71=43
+semantic sha256=cd99969bd8949ab971cc9f7ee3fefac8aba835b2a6b4fdd323934ef4294d0589
+scope: independent finite-sheet audit only; no renewal, image-prime, degree-243, or general JC claim
+all exact checks passed

@@ -32,6 +32,29 @@
   `975b48c148b88a04b9fea07dcb6352cfaa98591f14eace1a38cd581a5e5876dc` /
   `6eb3f28c07e99c352f1d88615d6beddeb82c264892a9f4735a420b75bf932c19` /
   `b745ab5d95936b9a134cfe8b6ffde032e72020d950670ab8b1a4643dd58c8be6`.
+- `keller_R5_finite_sheet_recursive_norm_probe_20260816.py` and
+  `keller_R5_finite_sheet_split_global_J_audit_20260816.py` -> matching
+  `.out` files [THM-3521 PROVED + VERIFIED-EXACT +
+  REPRESENTATION-INDEPENDENTLY AUDITED].  At the canonical finite inverse
+  point `q=(2,5/6,-7/8)` above `L=0`, a four-cubic recursive route descending
+  to the five-term `L` and a three-cubic route evaluating the frozen
+  361-term `H` agree modulo `101,103,107`, giving nonzero `R_5(q)` values
+  `74,36,88`.  Every intermediate `L`, `S`, and cubic discriminant is a
+  regular-representation unit; iterated and flat `27x27` norms agree; an
+  omitted-`64` hostile fires with the required leaf exponent `27`.  A
+  representation-disjoint reconstruction of the 66,146-term `J` splits the
+  outer cubic modulo `71` and independently gives `R_5(q)=43`.  Hence
+  `v_L(N(R_5))=-1699`, `R_6=L^1699N(R_5)` is polynomial and `L`-coprime,
+  and its exposed top pair is `(10663,3867)`.  Renewal of `R_5`, fifth-image
+  geometry, degree `243`, all-level induction, and every general JC claim
+  remain open.  Primary script/output/semantic SHA-256:
+  `1257029a1fa78b42003be5be3191e1ce16f3b7fe3b08005dee356d65e57ef6cb` /
+  `a7addc1eb7e9d3509b329b166d18da9a6afc8e48701f2e6ce6425f9963411789` /
+  `fc75d647653111a430210636cb42cbeb56abea90af8e6875ab5fa51701560d0b`.
+  Audit script/output/semantic SHA-256:
+  `1a46b961ab15a61e6e438926c8834fff56c23749f64ed2473e626bebb2fd1d04` /
+  `42ddc36acea979ab859c10787da7a7737362c31a16ca0383cf8e06b8fe27ef2f` /
+  `cd99969bd8949ab971cc9f7ee3fefac8aba835b2a6b4fdd323934ef4294d0589`.
 - `shortlex_bary_equal_count_harmonic_boundary_probe_20260816.py` -> matching
   `.out` [ELEMENTARY ALL-BASE THEOREM CANDIDATE + VERIFIED-EXACT SIDECAR;
   INDEPENDENT AUDIT PENDING].  In every base `b>=2`, the first and last

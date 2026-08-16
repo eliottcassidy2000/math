@@ -337,8 +337,8 @@ is sharp: equal counts allow two densities or none.
   prove `S_(F^4)=V(LHJ G)` and `[Delta_4]=[2G]`;
   THM-3506 gives `(271,99)` and `v_L(N(G))=-271`;
   [3513](../01-canon/theorems/THM-3513-fixed-G-hybrid-newton-renewal-faces.md)
-  completes `G`'s packet. `R_5` finite-sheet/renewal and
-  fifth-image/degree-243/all-level OPEN. THM-2681
+  completes `G`'s packet; 3521 closes old-L gate. R5
+  renewal/fifth-image/degree243/all-level OPEN. THM-2681
   blocks the `A4/S4` cubic; THM-2685--2708 give its
   gain/holonomy.
   Audited THM-3448/3517: weighted `m=3` has `S5` and three quintics `[L5]`, but `C3` Jelonek is sign-blind; likewise every odd-family `C_(2m-3)`. THM-1605's formula is absent (MISTAKE-416); all-`m` `z` and arbitrary quartic `C3` remain OPEN.
