@@ -1,5 +1,24 @@
 # Script Results Index
 
+- `lrc14_stage2_theta_contraction_r5_independent_audit_20260816.py` ->
+  matching `.out` [INDEPENDENT RECOVERY/HOSTILE AUDIT OF PROVED THM-2594].
+  The parent copies normalize exactly to the repaired canonical primary
+  script/output.  Normal, optimized, and stored primary transcripts agree
+  after masking only elapsed fields.  A separately implemented ANOVA,
+  `Phi_91` reduction, toothpick transform, and factorization exhaust all
+  `5,184/5,184` primitive coefficients as nonzero; the five split-prime
+  values are `(295,213,380,1405,883)`.  Exact linked-node identities put the
+  factors over one outer base and finite ancestry sum, not one circle point.
+  The beta-zero and constant-column controls vanish, while the genuine
+  fixed-absolute-root control has a nonzero interaction and also fires
+  `5,184/5,184`; hence unique causal attribution to `theta=t-2u` is refuted.
+  This remains one realized candidate contraction, not a generic THM-2512
+  bridge, THM-2449 one-point response, physical current, row exclusion, or
+  LRC(14) result.  Audit script/output LF SHA-256:
+  `8be9c1b69b33ab51ac16ce2c2a7f836aae4b811e2817b90e25921c234578c568` /
+  `087bb018408d3438494fb4ade461a4371e26bec60e31421540fea929316dd679`;
+  primary replay semantic SHA-256:
+  `184c159dd4aedb02b38b2029846b9e88f301fcc63dd163682bbabddc438b825e`.
 - `d5_marked_graph_kummer_finite_coefficient_flux_thm3496_independent_audit.py`
   -> matching `.out` [THM-3496 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   AUDITED, WITH SCOPE REPAIRS].  Seam sum and independent `C_91` prefix
