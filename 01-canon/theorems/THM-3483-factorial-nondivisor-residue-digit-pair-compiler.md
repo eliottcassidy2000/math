@@ -1,12 +1,12 @@
 ---
-id: THM-3482
+id: THM-3483
 title: "Nondivisor residue digit polygons and pair-only factorial closure"
 status: RESERVED / UNPROVED EMPTY STUB
 source: root/factorial-jacobian-alternation/2026-08-15
 depends_on: []
 ---
 
-# THM-3482 -- nondivisor residue digit polygons and pair-only factorial closure
+# THM-3483 -- nondivisor residue digit polygons and pair-only factorial closure
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
