@@ -16,6 +16,23 @@
   `648523d2d701d19ba35567fd2c96aea65cc4a7ceb65b5e200abfcac8bc8d0a82`.
   This is an exact `7 by 13` carrier and H1 no-go boundary, not bispectrum
   nonvanishing or an LRC(14) result.
+- `jc_moving_numerator_jordan_prufer_response_thm3477.py` -> matching `.out`
+  [THM-3477 PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF-AUDITED].  For
+  `E_H=C[s,v,Y]/(sY-vH)` inside `B=C[s,h]`, `v=sh`, the additive quotient
+  `B/E_H` has an exact response normal form under multiplication by `s`.
+  A zero root of `H` gives finite Jordan bars
+  `[floor(n/(m+1))+1,n]`; every nonzero root of multiplicity `e` gives
+  Prüfer rays born at grades `floor(k/e)+1`.  The moving numerator `v^r`
+  explains the phase change inside THM-3404's full principal parts.  Exact
+  transition matrices, literal barcodes, both THM-3383 terminal
+  orientations, inverse systems, and merged-root hostiles pass on the frozen
+  universe `m=0..7`, `e=1..6`, grades `1..8`.  Normal and optimized runs are
+  byte-identical.  Script/output/semantic raw SHA-256:
+  `644cdb7508485bc808a5ddd237c3c68703f81661557e7b24574b73b405567db4` /
+  `4e681c77629ecbf24f83b07ed187e651ebc838e09818268fa53af541c03ead12` /
+  `9fca2dffaa87feb03b47505f2adb1ef197ef46978cc25530dc83c2a52dcd47d0`.
+  The inverse limits are zero/formal completions, not Prüfer modules; this is
+  an additive effectivity classification and proves no new JC(2) case.
 - `lrc_three_p_private_sheet_boolean_atlas_thm3473.py` -> matching `.out`
   [THM-3473 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
   independent audit pending].  For `p=14k-1`, the THM-3469 eight-owner

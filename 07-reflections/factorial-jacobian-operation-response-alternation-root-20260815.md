@@ -29,7 +29,7 @@ Laurent claim was checked directly against THM-3383's membership criterion.
 | factorial Boolean face descent | `prod(1-partial_i)` from bulk to coordinate faces | PROVED identity; external access boundary survives |
 | triangle current | `dbar(g)` under multiplication by `g` and boundary integration | PROVED exact length-two Krylov block under HFC+constant J |
 | pointed clutch | `d kappa=g^2 dbar(g)` on labelled source edges | PROVED existence/degree; universal sheet separation REFUTED |
-| Laurent effectivity response | multiplication by the polynomial target on `B/(A intersect B)` | PROVED locally nilpotent with unbounded exact response lengths |
+| Laurent effectivity response | multiplication by the polynomial target on `B/(A intersect B)` | THM-3477 PROVED exact finite-Jordan/Prüfer split, including transition arrows and inverse limits |
 | prime-power carry face | first Euclidean triple at `d=a p^k+1` | PROVED complete singleton ledger for every `2<=a<p` |
 | binary-submask compiler | `NP_2(A_N^(N+1))` intersect odd reset | PROVED all `2^s p^k` windows with `2<=2^s<p` |
 | all-divisor digit compiler | exact positive `F` suffix intersect THM-3161 `G` hull | PROVED pair barcode for every `p|d-1`; 33/38 residuals close |
@@ -209,16 +209,65 @@ The negative orientation swaps `u,t`.  Every class is eventually killed, but
 the exact killing times are unbounded.  The finite residue field, torsor, and
 class group therefore do not bound polynomiality debt.
 
-Equations `(7)`, `(10)`, and `(11)` give three genuinely different regimes:
+The response strings have more structure than their lengths.  Uniformly in
+both terminal orientations, write
+
+```text
+E_H=C[s,v,Y]/(sY-vH),       B=C[s,h],       v=sh,       Y=hH.  (11a)
+```
+
+The additive quotient, with its native multiplication-by-`s` operation, is
+
+```text
+B/E_H = direct-sum_(r>=1) h^r C[v]/H^r,
+[f]_r -> [vf]_(r-1).                                      (11b)
+```
+
+If `H=v^m product_i(v-alpha_i)^(e_i)`, CRT preserves these arrows but changes
+their species.  The zero-root arm is
+
+```text
+direct-sum_(j>=1) C[s]/s^(j-floor(j/(m+1))),             (11c)
+```
+
+with its `j`-th finite bar occupying grades
+`[floor(j/(m+1))+1,j]`.  Each nonzero root instead contributes countably many
+Prüfer rays, the `k`-th born in grade `floor(k/e_i)+1`.  The reason is not
+multiplicity syntax: the transition is multiplication by the uniformizer at
+zero and by a unit away from zero.
+
+This embeds in THM-3404's full principal parts by the moving numerator
+
+```text
+C[v]/H^r -> C[v]/(v^r H^r),             f -> v^r f.      (11d)
+```
+
+It is the whole local arm at a nonzero root, but a proper moving sublattice at
+zero, converting ambient Prüfer behavior into finite Jordan bars.  The arrows
+also settle the limit type:
+
+```text
+inverse limit at zero =0;
+inverse limit at alpha_i!=0 =C[[v-alpha_i]].             (11e)
+```
+
+Those completions are not the Prüfer modules; the latter are direct unions of
+the actual torsion rays in `(11b)`.  The merged-root family
+`H_alpha=v^m(v-alpha)^e` is the sharp hostile: nonzero `alpha` has finite bars
+plus rays, while `alpha=0` has only the finite barcode with parameter `m+e`.
+
+Equations `(7)`, `(10)`, and `(11)` give three genuinely different length
+regimes, and `(11a)--(11e)` split the last regime again by transition type:
 
 ```text
 uniform length two / finite prefix with later exit /
-objectwise finite but uniformly unbounded.                         (12)
+unbounded finite bars / persistent Prüfer rays.                    (12)
 ```
 
 This is the session's reusable cross-frontier result.  Before turning any
 sidecar into a finite certificate, classify which regime its native operation
-occupies.
+occupies, and retain the arrows: identical finite-stage dimensions can encode
+different effectivity debts.
 
 ## 7. Prime-power carry face and exact factorial boundary
 
@@ -325,11 +374,12 @@ The honest joint carrier is
 
 ```text
 (moment multiplication orbit, Hermitian Poisson defect,
- labelled face/current response, effectivity quotient).           (16)
+ labelled face/current response, effectivity quotient with arrows). (16)
 ```
 
 - **Preserved:** the exact factorial/HFC moments, real-star structure,
-  constant-J predicate, source orientation, and native multiplication.
+  constant-J predicate, source orientation, native multiplication, root
+  labels, and response transitions.
 - **Destroyed by the tempting scalarizations:** mixed-character ancestry,
   edge ownership, target-cell topology, boundary valuations, and uniform
   response length.

@@ -339,7 +339,7 @@ decide harmonic mass at `z=1`.
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
   THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;
   polynomial `A2` regularity and constant units are the missing gate.
-  THM-3074/3080/3081 give the Laurent tower; THM-3383/3397 have unbounded response strings. THM-3465/3466 give nonreal-character rigidity and an HFC current passport; mixed characters, effectivity and injectivity remain OPEN.
+  THM-3477 splits Laurent debt into zero-root bars and nonzero-root Prüfer rays; inverse effectivity remains OPEN. THM-3465/66 close pure/current lanes.
   THM-3067/3141's `A4` shadow loses `V4` origin; THM-3072 recovers it
   from three `C2` tables; edge/cycle loses a 3D character sector.  THM-3076
   extends this to prime affine-plane tomography, with the characteristic-`p`
