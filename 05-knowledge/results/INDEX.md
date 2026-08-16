@@ -1,5 +1,25 @@
 # Script Results Index
 
+- `lrc_r5_ufull_owner_node_boolean_square_refiner_probe_20260816.py` ->
+  matching `.out` [FINITE-EXACT GENUINE BOOLEAN-SQUARE x F13 COMMON-OWNER
+  CANDIDATE; INDEPENDENT AUDIT PENDING].  The three-root source spine
+  `{0,6,12}` has six nontrivial directed-cut states, each a three-vertex
+  tournament with one missing edge.  `U_full` owner support excludes the
+  complement pair `{6}<->{0,12}` and leaves four intrinsic states indexed by
+  `(left/right,singleton/doubleton)`; complement is XOR by `11`.  All four
+  have exact measure `1/28`.  Splitting the actual common-owner integrand by
+  these states before integration recovers the corrected parent on summation,
+  passes five literal guard controls, and retains pointwise-zero same-root.
+  Its `4x13` table has rank `4`, ANOVA rank `3`, full spectrum
+  `(52,1,3,12,36)`, and all `36` genuinely mixed modes after centering.  Each
+  one-bit marginal is rank `2` with `(26,1,1,12,12)`.  All four fixed
+  `(1,0,6)` state values and Walsh channels are nonzero.  This is a typed
+  source-support refiner, not exact address, U_clock chronology, uniform-row
+  current, row exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
+  `badc435e117b54fc92933882bf468df3429c48558e37b2bb0ee2887594be2588` /
+  `9122a929084aaee931c4e3aba36ae23515d005ab6181ead03bb6067739409f18` /
+  `d2fa0aacbda9dd90f6cd220424d3a878e7969056397e7a69c38db9433237f54c`.
+
 - `lrc_r5_ufull_owner_node_common_base_current_probe_20260816.py` ->
   matching `.out` [FINITE-EXACT ONE-COMMON-BASE OWNER-NODE CURRENT
   CANDIDATE; INDEPENDENT AUDIT PENDING].  On the exact joint coordinate
