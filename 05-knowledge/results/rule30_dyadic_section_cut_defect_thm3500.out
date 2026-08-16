@@ -1,0 +1,15 @@
+RULE30_DYADIC_SECTION_CUT_DEFECT_THM3500
+status PROVED_VERIFIED_EXACT_INDEPENDENTLY_AUDITED
+universal_split_universe m=0..12 k<=min(2q+4,96) block_pairs=835
+mealy_current_bridge_universe n=1..256 depth<=min(n+4,96) pairs=20390
+dyadic_holonomy_bridge_universe m=0..12 depth<=min(2q+5,97) pairs=835
+first_carry_hasse_checks 12
+q4_delta_k4_k5_increasing_index ('0011', '0111')
+packed_mask_control_m0_to_m18 (1, 3, 4, 6, 7, 9, 15, 16, 24, 25, 27, 29, 34, 36, 37, 39, 41, 43, 48)
+mersenne_carrier_universe p=2^d,d=2..8 parameter_pairs=28 basis_vectors=3076 frobenius_scales=12
+long_direct_gate updates=2^32 width=120 memory=constant compiler=cc source_sha256=334e64e5257cb180ca74784650b7d63c18e71672bd0ce5b7e8bd00d47550f8b8
+v_28_to_v_32 (69, 70, 72, 74, 77)
+finite_wrap_set_through_2^33_minus_1 (1, 2, 3, 4)
+finite_hard_interval (5, 8589934591)
+optional_independent_section_gate FROZEN_NOT_RUN m=28..32 peak_mask_memory_about_1.5_GiB source_sha256=c797509736a01668187a330ce14cd7748d0bc3d1a300eee590f9f0a8c4256d7f
+status PASS
