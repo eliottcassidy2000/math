@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `lrc_r5_ufull_owner_node_pointed_six_state_root_difference_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  SIX-POINTED SOURCE-TAIL REFINEMENT].  Without importing the candidate, it
+  retains `(state,u)` on every selected source pair and recovers both audited
+  root-difference parents on pointed marginalization.  Same-root zero, three
+  literal guards, the pre-guard source-tail census, all submitted digests, and
+  normal/`-O` replay pass.  Weighted/support-only/flat-tail ranks are
+  `(6,12,13)/(6,12,13)/(4,12,13)` and centered ranks are
+  `(5,12,12)/(5,12,12)/(3,12,12)`.  The equal-tail hostile has the same parent
+  but kills both within-doubleton tail contrasts, while the actual contrasts
+  fire on all 12 nonzero differences.  Path incidence, not a cosmetic `C6`
+  DFT, gives edge supports `(120,144,120,144,120)`.  This is absolute source
+  tail, not inverse ancestry, exact address, chronology, physical current,
+  row exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
+  `8c7cb5f98b15a768d4f4d6060074e0815a8f089f857ec4f3c55a0e7d877e1fec` /
+  `2d0efc3dfe834c9d65924e4404083745f2dcde863cff0254dde0612be395719a` /
+  `66db2301f88db1ced7784868095e198e3e12f1fb79175ebd902d0f569a5decef`.
+
 - `lrc_r5_ufull_owner_node_boolean_square_root_difference_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
   THREE-COORDINATE SOURCE-CUT INTERACTION].  Without importing the candidate,
@@ -54,7 +72,7 @@
   `af0d543232869e82ee8d0191478ba7a833954cb19b387dedb6fb6f44a6fa272c`.
 - `lrc_r5_ufull_owner_node_pointed_six_state_root_difference_probe_20260816.py`
   -> matching `.out` [FINITE-EXACT POINTED-SIX SOURCE-ROOT CANDIDATE;
-  INDEPENDENT AUDIT PENDING].  Marking the active source tail refines the
+  INDEPENDENTLY AUDITED AT THE SCOPED SURVIVOR].  Marking the active source tail refines the
   Boolean square to the six realized path states
   `(0,0),(1,0),(1,6),(3,6),(3,12),(2,12)`.  Summing pointed fibres recovers
   the pinned state/root-difference tensor exactly.  Weighted and support-only
