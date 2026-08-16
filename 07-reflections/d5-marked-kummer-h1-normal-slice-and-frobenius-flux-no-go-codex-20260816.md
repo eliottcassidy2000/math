@@ -589,23 +589,23 @@ the universal marginal fiber-product kernel.  A physical source realization
 must select or annihilate this whole mixed-Haar kernel; appending one more
 scalar to the marginals cannot recover it.
 
-The incoming independently exact-audited structural fixed-map package in
-[`jc-level-three-norm-recursion-and-old-factor-cancellation-codex-20260815.md`](jc-level-three-norm-recursion-and-old-factor-cancellation-codex-20260815.md)
-reports a new prime divisor `J` with
+The incoming independently proof-audited fixed-map theorem
+[THM-3495](../01-canon/theorems/THM-3495-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness.md)
+proves a new prime divisor `J` with the exact normalization
 
 ```text
-N(H)=J/L^7.                                                (47)
+N(H)=J/(2^35 L^7).                                        (47)
 ```
 
-It remains non-canon reflection material pending its stated promotion.  On
-the complement of `LJ=0`, its identity gives the associated `mu_13` Kummer
-unit the two-component divisor residue
+On the complement of `LJ=0`, the constant factor is a Kummer-trivial unit
+under the algebraically closed field gate, and the associated `mu_13` class
+has two-component divisor residue
 
 ```text
 (res_J,res_L)=(1,-7) in F13^2.                           (48)
 ```
 
-Equation (48) would be a useful **target hostile** for (17): the single
+Equation (48) is a useful **target hostile** for (17): the single
 marked normal circle must choose a component and therefore forgets the other
 residue.  The appearance of `7` in both (9) and (48) supplies no map by
 itself.  The source seven is the number of chart overlaps; the target seven
