@@ -1,7 +1,7 @@
 # The Pell-predicted packet survives the next finite-sheet gate
 
-**Status: FINITE-EXACT POSITIVE FIXED-MAP CANDIDATE; INDEPENDENT AUDIT
-PENDING; NO THEOREM RESERVED.**  At the canonical finite old-`L` inverse
+**Current status: PROMOTED AS THM-3527 AFTER A SPLIT-OUTER AND FROZEN-`H`
+AUDIT.**  At the canonical finite old-`L` inverse
 point
 
 ```text
@@ -14,8 +14,8 @@ the complete six-layer recursive norm evaluator gives
 R_7(q)!=0.
 ```
 
-All three good reductions are nonzero.  If a disjoint representation accepts
-the computation, the proved `R_7` packet `A(66907,24255)` will imply
+All three primary reductions and the disjoint split reduction are nonzero.
+Together with the proved `R_7` packet `A(66907,24255)`, THM-3527 gives
 
 ```text
 v_L(N(R_7))=-66907,
@@ -141,12 +141,12 @@ finite-sheet norm:    pays the exact old-L denominator gate at this rung.
 Their agreement is therefore a successful prediction/realization test, not
 an induction.  The next rung would again require a new finite-sheet unit.
 
-## Candidate consequence and exact boundary
+## Proved consequence and exact boundary
 
 On the two divergent sheets above the generic old-`L` divisor, the complete
 `R_7` face gives valuation `-66907/2` on each.  A nonzero finite specialization
-shows that the regular third sheet has generic valuation zero.  Hence, after
-an independent audit of (4), the same UFD argument as THM-3523 would prove
+shows that the regular third sheet has generic valuation zero.  The split
+audit realizes all `3*243` sheets, so the same UFD argument as THM-3523 proves
 
 ```text
 v_L(N(R_7))=-66907,
@@ -154,24 +154,26 @@ R_8=L^66907 N(R_7) in Q[a,b,c],
 gcd(R_8,L)=1.
 ```
 
-Only then could THM-3522 turn (6) into the complete `R_8` packet.
+THM-3522 then turns (6) into the complete `R_8` packet.
 
-The current candidate does not prove that `R_5`, `R_6`, `R_7`, or `R_8` is an
+The theorem does not prove that `R_5`, `R_6`, `R_7`, or `R_8` is an
 image prime; does not add a nonproperness component; does not prove
 irreducibility or squarefreeness of a cleared norm; and does not prove an
 unconditional all-level tower or any general Jacobian-conjecture statement.
 
-The cheapest disjoint audit is the split-outer representation already used at
-the previous rung.  Over `F_71`, the outer cubic above `q` splits at
-`w=10,23,38`.  Evaluating `R_6` on a complete 243-sheet tower above each named
-branch and multiplying the three branch values realizes the same 729 sheets
-without a single 729-dimensional algebra.
+The disjoint audit uses the split-outer representation from the previous rung.
+Over `F_71`, the outer cubic above `q` splits at `w=10,23,38`; the complete
+243-sheet branch values are `56,65,10`, whose product gives
+`R_7(q)=56 mod 71`.  Omitting the last branch gives `34`.  A frozen-`H`
+bottom determinant independently checks each branch value.
 
 ## Reproduction
 
 ```text
 python -B 04-computation/keller_R7_finite_sheet_recursive_norm_probe_20260816.py
 python -B -O 04-computation/keller_R7_finite_sheet_recursive_norm_probe_20260816.py
+python -B 04-computation/keller_R7_finite_sheet_split_outer_independent_audit_20260816.py
+python -B -O 04-computation/keller_R7_finite_sheet_split_outer_independent_audit_20260816.py
 ```
 
 The pinned semantic digest is

@@ -8,11 +8,12 @@ status: >
   A(7e-2m,3e-2m).  In particular, the two renewal faces propagate; no
   separate finite-sheet condition enters that implication.  Hence the fixed
   R_5 and R_6 have full packets A(1699,615) and A(10663,3867), with explicit
-  nonzero renewal scalars below.  THM-3523 subsequently proves polynomiality
-  at the next rung and applies this theorem to give A(66907,24255) for R_7.
-  Later finite-sheet units, fifth-image status, degree-243 separability,
-  all-level iteration, arbitrary Keller maps, and every general Jacobian
-  claim remain open.
+  nonzero renewal scalars below.  THM-3523 and THM-3527 subsequently clear
+  the next two rungs and apply this theorem to give A(66907,24255) for R_7
+  and A(419839,152211) for R_8; THM-3525/3526 close the distinct degree-243/
+  729 separability gates.  Later finite-sheet units, image status, all-level
+  iteration, arbitrary Keller maps, and every general Jacobian claim remain
+  open.
 source: codex/five-face-renewal-propagation/2026-08-16
 depends_on:
   - THM-3495-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness
@@ -22,6 +23,9 @@ depends_on:
 related:
   - MISTAKE-415
   - THM-3523-fixed-R6-finite-sheet-unit-and-next-old-L-clearing
+  - THM-3525-level-five-degree243-separability-and-discriminant-square-class
+  - THM-3526-level-six-degree729-separability-and-discriminant-square-class
+  - THM-3527-fixed-R7-finite-sheet-unit-and-next-old-L-clearing
 scripts:
   - 04-computation/keller_five_face_renewal_propagation_probe_20260816.py
   - 04-computation/keller_five_face_renewal_propagation_independent_audit_20260816.py
@@ -443,7 +447,9 @@ does **not** prove:
 The first bullet is an internal boundary of this theorem.  THM-3523
 subsequently supplies that finite-sheet and polynomiality input by a separate
 exact computation, and then uses the implication proved here to give the
-complete packet `A(66907,24255)` for `R_7`.  The remaining bullets stay open.
+complete packet `A(66907,24255)` for `R_7`.  THM-3525/3526 subsequently close
+the degree-243/729 gates, and THM-3527 clears `R_8` with packet
+`A(419839,152211)`.  Image status and the all-level bullets stay open.
 
 Reproduce the exact certificate with
 

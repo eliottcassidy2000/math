@@ -339,10 +339,10 @@ is sharp: equal counts allow two densities or none.
   prove `S_(F^4)=V(LHJ G)` and `[Delta_4]=[2G]`;
   THM-3506 gives `(271,99)` and `v_L(N(G))=-271`;
   [3513](../01-canon/theorems/THM-3513-fixed-G-hybrid-newton-renewal-faces.md)
-  completes `G`; 3521 clears `R5`; 3522 gives `R5/R6` packets
-  `A(1699,615)/A(10663,3867)`; 3523 clears `R7`, giving
-  `A(66907,24255)`; 3525/26: degree243/729,
-  `[Delta_5,Delta_6]=[-2R_5,2R_6]`. `R5/R6` images, later gates and all-level
+  completes `G`; 3521 clears `R5`; 3522 packets `R5/R6`:
+  `(1699,615)/(10663,3867)`; 3523/27 clear `R7/R8`:
+  `(66907,24255)/(419839,152211)`; 3525/26: degree243/729,
+  `[Delta_5,Delta_6]=[-2R_5,2R_6]`. `R5/R6` images, later/all-level gates
   OPEN. THM-2681
   blocks the `A4/S4` cubic; THM-2685--2708 give its
   gain/holonomy.

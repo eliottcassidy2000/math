@@ -21,6 +21,7 @@ related:
   - THM-3504-level-four-sporadic-keller-image-prime-and-four-component-nonproperness
   - THM-3506-fixed-keller-five-face-norm-transform-and-271-99-boundary
   - THM-3513-fixed-G-hybrid-newton-renewal-faces
+  - THM-3527-fixed-R7-finite-sheet-unit-and-next-old-L-clearing
   - MISTAKE-415
 scripts:
   - 04-computation/keller_R6_finite_sheet_recursive_norm_probe_20260816.py

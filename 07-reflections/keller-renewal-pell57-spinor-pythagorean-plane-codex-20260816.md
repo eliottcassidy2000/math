@@ -9,8 +9,8 @@ VERIFIED-EXACT.**  The abstract renewal orbit
 ```
 
 is exactly a multiplicative orbit in the quadratic integer ring of
-`Q(sqrt(57))`.  The fixed Keller polynomials `L,H,J,G,R5,R6,R7` realize rows
-`n=0,...,6`; later rows remain conditional on new polynomiality/finite-sheet
+`Q(sqrt(57))`.  The fixed Keller polynomials `L,H,J,G,R5,R6,R7,R8` realize rows
+`n=0,...,7`; later rows remain conditional on new polynomiality/finite-sheet
 gates.  Nothing here proves an all-level Keller tower or any general
 Jacobian-conjecture statement.
 
@@ -23,7 +23,7 @@ A(e,m) -> A(7e-2m,3e-2m)
 ```
 
 whenever the next fixed-chart norm is polynomial.  THM-3523 pays that gate
-through `R7`.  THM-3509 already identifies `(e,m)` with a reduced fraction,
+through `R8` after THM-3527.  THM-3509 identifies `(e,m)` with a reduced fraction,
 harmonic `K4` face, primitive Pythagorean current, and an arithmetic self-map
 of the even Berggren tree.  Its canonical hostile shows that the renewal
 matrix is not a fixed Berggren branch word.
@@ -163,7 +163,8 @@ J : (812,645,1037),
 G : (31820,26829,41621),
 R5: (1254188,1044885,1632413),
 R6: (49372940,41233821,64326629),
-R7: (1944120812,1622829285,2532425837).
+R7: (1944120812,1622829285,2532425837),
+R8: (76548298700,63904114029,99716487221).
 ```
 
 The renewal step acts directly on triples by
@@ -230,16 +231,21 @@ Their shared index does not identify the gradings.  A future all-level theorem
 must still prove that every proposed norm rung is polynomial and has a finite
 sheet unit.  The Pell monoid predicts the packet only after that gate.
 
-The next three abstract rows are
+THM-3527 now realizes the formerly predicted row
 
 ```text
-n=7: (419839,152211),
+n=7: (419839,152211) = R8.
+```
+
+The next two abstract rows are
+
+```text
 n=8: (2634451,955095),
 n=9: (16530967,5993163).
 ```
 
-They are exact arithmetic consequences of the recurrence, not proved Keller
-image packets.
+The last two are exact arithmetic consequences of the recurrence, not proved
+Keller packets.
 
 ## Connection contract
 
@@ -252,7 +258,7 @@ image packets.
 | transformed | quadratic norm multiplies by `-8`; Lorentz form by `64` |
 | destroyed by triple alone | packet sign/level unless the moving-plane value is retained; Berggren ancestry word |
 | hostile | wrong `-2m` coefficient breaks (4); `det T=-512` blocks Berggren-isometry promotion |
-| fixed realization | proved through `R7` only |
+| fixed realization | proved through `R8` only |
 | open boundary | next polynomiality, next finite sheet, images, irreducibility, all-level tower, general JC |
 
 ## Reproduction

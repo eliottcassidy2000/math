@@ -1,7 +1,7 @@
 # The fixed Keller norm tower needs five Newton faces, not one exponent
 
-**Current-status update:** THM-3522 now proves renewal propagation at every
-polynomial rung, and THM-3523 realizes the fixed packet through `R7`.
+**Current-status update:** THM-3522 proves renewal propagation at every
+polynomial rung, and THM-3527 now realizes the fixed packet through `R8`.
 Polynomiality of the next rung and the all-level law remain open.  The text
 below is a historical pre-3522 analysis; use the current theorems and the
 Pell-57 sidecar for present status.

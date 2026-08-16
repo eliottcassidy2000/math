@@ -38,20 +38,28 @@
   `1188df8aa2a7a84c1e8ada5fc3cc8d3b839ece70298b94f1d94c9d440caa88f3` /
   `0d177180974c20fb8f5ca4887178fe0db318bfbd41267377cfeddf1b460f4f6d` /
   `6e5605f58b7a94ea5ea4e8f62cfa7ee135b0d52512225f4aaee248ad6e21a9ae`.
-- `keller_R7_finite_sheet_recursive_norm_probe_20260816.py` -> matching
-  `.out` [FINITE-EXACT POSITIVE FIXED-MAP CANDIDATE; INDEPENDENT AUDIT
-  PENDING; NO THEOREM RESERVED].  Six recursive-adjugate cubic layers realize
+- `keller_R7_finite_sheet_recursive_norm_probe_20260816.py` and
+  `keller_R7_finite_sheet_split_outer_independent_audit_20260816.py` ->
+  matching `.out` files [THM-3527 PROVED + VERIFIED-EXACT +
+  SPLIT-REPRESENTATION AUDITED].  Six recursive-adjugate cubic layers realize
   the complete `729`-sheet norm orbit above the canonical finite old-`L`
   point.  All 72 leading/derivative/chart unit gates pass, the new `N^6(L)`
   factors are `71,17,30`, and `R_7(q)` reduces to `72,44,53` modulo
   `101,103,107`.  Omitting the `H` normalization changes the residues by
-  exactly `64^-243`.  If a disjoint split-outer audit accepts this, the exact
-  valuation clears `R_8` and THM-3522 gives the Pell-predicted packet
-  `A(419839,152211)`.  No image, irreducibility, all-level, arbitrary-map, or
-  general JC claim follows.  Script/output/semantic SHA-256:
+  exactly `64^-243`.  Independently, the split outer roots `10,23,38` over
+  `F_71` carry complete 243-sheet `R_6` values `56,65,10`; their product gives
+  `R_7(q)=56`, while an omitted branch gives `34`, and each branch agrees with
+  a frozen-`H` flat determinant.  Hence `R_8` is polynomial/L-coprime and has
+  the Pell-predicted packet `A(419839,152211)`.  No image, irreducibility,
+  all-level, arbitrary-map, or general JC claim follows.  Primary
+  script/output/semantic SHA-256:
   `80d7a5e105be82d29fb1c3caf28ec0d4d98ea1e51c02bbf080125ef812133463` /
   `100371c34090af4d9e613696b591770e9092e4f199e28e55c14095acd6f1b271` /
-  `82efb24e0c4a6e0df9671f0f5a5009dd0e77d1b0aa8ef2341780dfe23ea28c38`.
+  `82efb24e0c4a6e0df9671f0f5a5009dd0e77d1b0aa8ef2341780dfe23ea28c38`;
+  audit:
+  `623a7817ba233d3c3c5e0dfbe218fdb93fb27c3a034d882a25f10e401228a3fd` /
+  `6189cad420d7675eeb0a623ed4e62855d0cc3b14b671fce195eed67c3ac87c8f` /
+  `d8fd9ddf1f8679b90434d1f6ffa6a717c1725e3dcb5703c040e1ab724081e72b`.
 
 - `lrc_r5_ufull_owner_node_boolean_square_inverse_owner_branch_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
@@ -77,7 +85,7 @@
   `3(-8)^n`.  The associated primitive Pythagorean triples obey
   `A-9B+5C=3(-8)^n`; their integral transition has determinant `-512` and is
   a Lorentz similitude of multiplier `64`, not a Berggren-tree isometry.
-  Fixed Keller realization is proved only through `R7`; later arithmetic
+  Fixed Keller realization is proved only through `R8`; later arithmetic
   rows do not prove polynomiality, images, irreducibility, an all-level tower,
   or general JC.  Script/output/semantic SHA-256:
   `6214844884b89acc366c0352b6880429c9f23c02c52e6667c5f489b14748cdd0` /
