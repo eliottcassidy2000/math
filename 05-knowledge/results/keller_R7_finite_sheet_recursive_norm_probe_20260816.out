@@ -1,0 +1,19 @@
+== fixed Keller R7 finite-sheet recursive norm candidate ==
+THM-3526 recursive support sha256=ad5d57b124f37b23fe9541c61bc4d919106b2db6c87a38632fabf3e7c076b8de
+point q=(2,5/6,-7/8); F(q)=(2/27,1,1); L(F(q))=0; L(q)=241465/1728
+primary route: six recursive-adjugate cubic algebras, descending to L on 729 sheets
+unrolled identity=2^4293*L^10663*N(L)^1699*N2(L)^271*N3(L)^43*N4(L)^7*N5(L)*N6(L)
+p=101: R7(q)=72; wrong-H-normalization=66
+  (L,N(L),...,N^6(L))=(16, 12, 72, 9, 49, 97, 71)
+  gates (level,dim,Norm(L),Norm(derivative),Norm(y-den),Norm(x^3))=((1, 3, 16, 45, 3, 94), (2, 9, 12, 60, 91, 72), (3, 27, 72, 91, 98, 7), (4, 81, 9, 88, 46, 36), (5, 243, 49, 43, 2, 27), (6, 729, 97, 31, 75, 34))
+p=103: R7(q)=44; wrong-H-normalization=78
+  (L,N(L),...,N^6(L))=(12, 53, 22, 85, 76, 94, 17)
+  gates (level,dim,Norm(L),Norm(derivative),Norm(y-den),Norm(x^3))=((1, 3, 12, 12, 19, 8), (2, 9, 53, 43, 4, 93), (3, 27, 22, 24, 38, 95), (4, 81, 85, 35, 64, 93), (5, 243, 76, 64, 26, 42), (6, 729, 94, 78, 29, 8))
+p=107: R7(q)=53; wrong-H-normalization=19
+  (L,N(L),...,N^6(L))=(38, 45, 28, 3, 17, 17, 30)
+  gates (level,dim,Norm(L),Norm(derivative),Norm(y-den),Norm(x^3))=((1, 3, 38, 93, 24, 28), (2, 9, 45, 73, 70, 66), (3, 27, 28, 7, 106, 58), (4, 81, 3, 25, 2, 64), (5, 243, 17, 7, 80, 104), (6, 729, 17, 95, 103, 1))
+semantic_sha256=82efb24e0c4a6e0df9671f0f5a5009dd0e77d1b0aa8ef2341780dfe23ea28c38
+FINITE-EXACT candidate verdict: R7(2,5/6,-7/8) != 0 over Q
+conditional consequence after independent audit: v_L(N(R7))=-66907;R8=L^66907*N(R7) polynomial/L-coprime;packet A(419839,152211)
+scope: fixed map/old-L candidate only; no image, irreducibility, all-level, arbitrary-map, or general JC claim
+all exact checks passed

@@ -19,6 +19,20 @@
   `1188df8aa2a7a84c1e8ada5fc3cc8d3b839ece70298b94f1d94c9d440caa88f3` /
   `0d177180974c20fb8f5ca4887178fe0db318bfbd41267377cfeddf1b460f4f6d` /
   `6e5605f58b7a94ea5ea4e8f62cfa7ee135b0d52512225f4aaee248ad6e21a9ae`.
+- `keller_R7_finite_sheet_recursive_norm_probe_20260816.py` -> matching
+  `.out` [FINITE-EXACT POSITIVE FIXED-MAP CANDIDATE; INDEPENDENT AUDIT
+  PENDING; NO THEOREM RESERVED].  Six recursive-adjugate cubic layers realize
+  the complete `729`-sheet norm orbit above the canonical finite old-`L`
+  point.  All 72 leading/derivative/chart unit gates pass, the new `N^6(L)`
+  factors are `71,17,30`, and `R_7(q)` reduces to `72,44,53` modulo
+  `101,103,107`.  Omitting the `H` normalization changes the residues by
+  exactly `64^-243`.  If a disjoint split-outer audit accepts this, the exact
+  valuation clears `R_8` and THM-3522 gives the Pell-predicted packet
+  `A(419839,152211)`.  No image, irreducibility, all-level, arbitrary-map, or
+  general JC claim follows.  Script/output/semantic SHA-256:
+  `80d7a5e105be82d29fb1c3caf28ec0d4d98ea1e51c02bbf080125ef812133463` /
+  `100371c34090af4d9e613696b591770e9092e4f199e28e55c14095acd6f1b271` /
+  `82efb24e0c4a6e0df9671f0f5a5009dd0e77d1b0aa8ef2341780dfe23ea28c38`.
 
 - `lrc_r5_ufull_owner_node_boolean_square_inverse_owner_branch_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
