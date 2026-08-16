@@ -11,24 +11,26 @@ Format per entry:
 
 ## MISTAKE-408 (2026-08-15, concurrent THM-3479 reservation) -- a stale namespace check allowed a duplicate theorem ID
 
-- **What failed:** this Rule 30 session checked the fetched theorem namespace,
-  saw no `THM-3479`, and reserved that ID.  A concurrent relation-current
-  session had already created a `THM-3479` reservation in a commit which was
-  not yet visible at the instant of the check.  Rebase then placed both honest
-  stubs on `main` with the same YAML ID.
-- **Minimal witness / first failed implication:** `git ls-tree` after the next
-  fetch returned both
+- **What failed:** commit `958234d4b` first published `THM-3479` as the
+  relation-current two-transplant reservation.  The later Rule-30 commit
+  `a0a5fe066`, prepared against a stale view of `origin/main`, independently
+  created another `THM-3479`.  Both were honest empty stubs, but the second
+  publication made the YAML theorem identifier nonunique.
+- **Minimal witness / first failed implication:** the next fetched tree
+  contained both
   `THM-3479-literal-half-twist-relation-current-two-transplant-certificate.md`
   and `THM-3479-rule30-cyclic-arc-norm-rank-and-marked-innovation-spectrum.md`.
-  Filename uniqueness had therefore not implied ID uniqueness across the
+  A negative scan of one stale checkout was therefore not a lock across the
   concurrent fetch/push window.
 - **Repair / strongest survivor:** the earlier relation-current reservation
   keeps `THM-3479`; the Rule 30 cyclic-arc candidate is renumbered to
   `THM-3481` before any theorem promotion or proved dependency is added.  Its
-  mathematical content and audit are unaffected.
-- **Reusable rule:** immediately re-fetch and repeat both the YAML-ID and
-  filename search after a reservation rebase, before pushing or expanding a
-  stub.  A pre-rebase negative search is not a lock in a concurrent namespace.
+  companion `THM-3480` reservation is unchanged; no mathematical claim is
+  affected.
+- **Reusable rule:** immediately re-fetch and repeat both YAML-ID and filename
+  searches after a reservation rebase and before pushing or expanding a stub.
+  If two empty reservations still race, publication order keeps the earlier
+  ID and the later stub moves.
 
 ## MISTAKE-407 (2026-08-15, THM-3472 layer transport) -- owner doubling was falsely called augmented-primitive and even nonbijectivity was mistaken for a cover boundary
 
