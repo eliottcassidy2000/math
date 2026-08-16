@@ -210,6 +210,10 @@ the chord
 (0,0)--(Q,E_s).                                           (18)
 ```
 
+At the final endpoint, the two nonzero digits of `2(P+Q)` do not carry
+because `p` is odd, so Legendre gives
+`nu_p((2(P+Q))!)=E_K+E_s`.
+
 For the second interval, write `j=Q+t`, `0<=t<=P`.  Summing (16) gives
 
 ```text

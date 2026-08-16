@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — 2026-08-14.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
+**Rolling state — 2026-08-16.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -37,9 +37,9 @@ THM-3414--3416 give ZMC rank-4/5/6 bases `8,9` / `10,12` / `11,15,23,25`.
 THM-3425 gives primitive cap-six support.
 [THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md) proves 15-atom cap-seven support only at zero current.
 [THM-3479](../01-canon/theorems/THM-3479-literal-half-twist-relation-current-two-transplant-certificate.md)
-is **RESERVED**.  FINITE-EXACT `U_full` endpoint characters make the bridge
-and both `K4` factors nonzero on all `72` charts; separate marginals erase
-ancestry.  Physical current/LRC(14) remain open.
+is **RESERVED**.  FINITE-EXACT `U_full` endpoint characters make all `72`
+graph packets nonzero; marginalization erases ancestry.  Physical
+current/LRC(14) remain open.
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;
 HYP-8871 leaves `165` rows.  THM-2363/THM-2368 are sidecars; THM-2417--2894
@@ -331,7 +331,7 @@ density need not settle `z=1` mass.
 - **Jacobian/Dixmier:** `JC(2)`/`DC(2)` remain open. THM-3438 gives every
   grade except `2` with `S_n` atoms; audited THM-3494 gives its reduced branch
   and primitive `x/y` atlas. `C=0`/Jelonek, composition and arbitrary-map/planar
-  lanes stay open. THM-1300 proved/provenance unsettled (MISTAKE-205);
+  lanes stay open. THM-1300 exact/provenance unsettled (MISTAKE-205);
   THM-1315 corrected (MISTAKE-282); THM-2473--2576 fixed-map.
   [THM-3495](../01-canon/theorems/THM-3495-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness.md)
   proves `N(H)=J/(2^35L^7)`, `S_(F^3)=V(LHJ)`, `[Delta_3]=[-2J]`;
@@ -396,7 +396,7 @@ density need not settle `z=1` mass.
   THM-3431 proves the secondary typed cospan: LRC deck `H^1`, selected one-root JC local `H^1`, zero additive cross-maps, and a lossy DeathBar only.
   THM-3418/19 close sparse Keller/rank; THM-3422/24/27 give integral character laws; THM-3430/33 classify wrap/all-sector Prüfer arms; THM-3436/37 give repeated-root Artin jets and their derived Euler channel.  THM-3437's inverse Tor tower recovers the Tate-module/presence bit, while its inclusion direct limit recovers the Prüfer arm; neither is LRC `H^1`. No multiroot nonwrap split or `JC(2)`/`DC(2)` follows.
 - **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
-  all `2665/7395` post-exit residuals close (`2384` divisor, `281` rho).
+  all `2665` residuals in `7395` rows (`2384` divisor, `281` rho).
   `d=6518` needs `p=29`, refuting `p<=23`; `d=10001` is untested.
   THM-3182/3185/3188/3191 give the three-state prime reset, carried thickness and exterior/Clifford laws; THM-3210 still blocks a monotone staircase. THM-3249--3314 give the face atlas and show endpoint ancestry/positivity remain OPEN.
   THM-3303/3328 split constant-J into sheet/cone data; THM-3465 closes pure nonreal characters, and THM-3470 closes one mixed triangular shear at moment five. General support `5` and mixed cells remain OPEN.

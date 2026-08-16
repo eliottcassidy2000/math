@@ -192,9 +192,9 @@ Counterindications:
    separate marginalization; compare it with the frozen bridge, product
    control, and checkerboard hostile.  Even a hit is same-horizon data, not
    multilevel ancestry or chronological arrival.
-2. **Factorial niche:** prove a top-digit interval theorem for the pair degree
-   monoid in the automatically admissible `p=3,5` lanes; test the first row
-   where the congruence survives but the degree gap does not.
+2. **Factorial niche:** map factorizations of `p^K+p^s+1` to THM-3475
+   divisor packets and seek an infinite subfamily disjoint from the proved
+   four-degree set; keep `d=6518,56,22` as mandatory hostiles.
 3. **Jacobian wildcard:** at depth four, compute the boundary valuation and
    finite-sheet unit before any global resultant.  Stop immediately if the
    image divisor splits or the restriction multiplicity exceeds one.
