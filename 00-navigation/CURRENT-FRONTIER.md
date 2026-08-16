@@ -39,11 +39,12 @@ THM-3425 gives primitive cap-six support.
 THM-3479: U_full `169/169`,`13^3`,`72/72` (no U_clock). THM-3514/3515:
 owner `52/117`, rank4. THM-3518 pins `56,592` zero pairings; THM-3524 blocks
 `C7/K4` (`3<4`). MISTAKE-417 rank1. Audited signatures:
-`4/36;(3,12,12)/432;(5,12,12);6/432`; two-current `3/4`,pure5184.
+`4/36;(3,12,12)/432;(5,12,12);6/432`; two-current `12->4/W_6`,`3/4`,pure5184.
 Current-root `4/6(40/42)`; source-current `17->4->6`. `r1`: `13/12`,
-carrier6, 169 diagonal nonstationary `K`. P4/P7: `68/78`, reversal143/169,
-`H1=0`, audited. `r2`: diag2197, unique1690, `I6`/projector 130/169,
-cocycle455 dead-only, all 78-unions rank78. Bridges/LRC open.
+carrier6, 169 diagonal nonstationary `K`; P4/P7 `68/78`,
+`3=even/4=+middle noncycle`, tent8, `H1=0`, audited. `r2`: diag2197,
+unique1690, `I6`/projector130/169, cocycle455 dead-only; all 78-unions
+rank78. Closure/address/clock/current/row/LRC remain open.
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;
 HYP-8871 leaves `165` rows.  THM-2363/THM-2368 are sidecars; THM-2417--2894
