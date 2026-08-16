@@ -2,8 +2,7 @@
 id: THM-3517
 title: "Weighted odd family: the m=3 three-coordinate quintic and sign-blind Jelonek component"
 status: >
-  PROVED + VERIFIED-EXACT, with an independent implementation audit still
-  pending for the new 191-term z-coordinate quintic.  The explicit cyclic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The explicit cyclic
   weighted subfamily E_m^cyc has generic degree 2m-1.  At m=3 all three
   actual source coordinates are primitive quintic views with common
   discriminant square class [D5]=[L5] after target pullback, while the exact
@@ -17,7 +16,11 @@ audit: >
   deterministic exact Sympy resultants, irreducibility factorizations,
   discriminants, square roots, branch/index gcds, source-map replay,
   determinant, Newton residual, m=2 hostile, and byte-identical normal/-O
-  transcripts; structural all-m boundary deduction from audited THM-3448
+  transcripts; structural all-m boundary deduction from audited THM-3448.
+  A disjoint python-flint implementation reconstructs the map, inverse,
+  branch, all three resultants and index squares, including the 191-term z
+  eliminant and 268-term index core, and supplies a direct all-coordinate
+  split separator over F_31.
 depends_on:
   - THM-3438-weighted-lift-keller-degree-spectrum
   - THM-3448-weighted-keller-cyclic-jelonek-inertia-family
@@ -29,18 +32,23 @@ related:
   - THM-3519-level-three-sporadic-keller-three-coordinate-primitivity-and-common-discriminant-class
 script: 04-computation/jc_weighted_odd_family_m3_coordinate_jelonek_probe_20260816.py
 output: 05-knowledge/results/jc_weighted_odd_family_m3_coordinate_jelonek_probe_20260816.out
+independent_script: 04-computation/jc_weighted_odd_family_m3_three_coordinate_independent_audit_20260816.py
+independent_output: 05-knowledge/results/jc_weighted_odd_family_m3_three_coordinate_independent_audit_20260816.out
 script_sha256: ff03f0ac71922f5881bf112ae2c8cbb7f5cd49198500c19d62b5eaf5b286002e
 output_sha256: 6d64acd12b3b546e8820a683f38ada905f0a52af96ab3661319eb111c45699e0
+independent_script_sha256: e0eaed0b1f034c799cd95a00ede7fdd60ff4c9258330b39845db45ea159e97e2
+independent_output_sha256: b458c072d8220403162bd972ab32dc3c4aaacd217cfb2ebf7a0525fc0e14f96d
 semantic_sha256: ed6845e743f8554327653521f243817264b08d1ca864c8513c0b2af7ce17ac81
+independent_semantic_sha256: bd208dad9732439dfa14a794ef54dbfe57d66360f5f5a39b26353ffb82b6bba3
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3517 -- the odd weighted family beyond the cubic
 
-**PROVED + VERIFIED-EXACT.**  The new all-coordinate `m=3` ledger has one
-exact symbolic implementation plus optimized replay.  Its structural input
-theorems were independently audited; a second resultant implementation of the
-new 191-term `z` row remains desirable.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**  The all-coordinate
+`m=3` ledger has disjoint Sympy-resultant and python-flint implementations,
+plus a direct finite-field separator.  Its structural input theorems were
+independently audited.
 
 ## 1. Provenance boundary and the explicit object
 
@@ -213,6 +221,36 @@ phenomenon.  The mechanism is not special to cubics: once the coordinates
 are primitive, their power bases are bases of one trace algebra, so basis
 change squares relate the discriminants.
 
+The independent FLINT audit reconstructs the map before touching the inverse
+atlas, obtains the same `17`, `29`, and `191`-term coordinate resultants, and
+reproduces all three eliminant, discriminant, and index-core hashes.  In
+particular the `z` row is irreducible of coordinate degree five, its index
+root has forced factor `C^20`, the remaining `268`-term core is coprime to
+`D5`, and the exact discriminant ratio is a square.
+
+As an orthogonal separator, over `F_31` the target
+
+```text
+(A,B,C)=(26,23,1),                 (P,Q)=(23,26)       (18a)
+```
+
+has inverse roots
+
+```text
+w=(8,9,12,16,18),                                     (18b)
+```
+
+and the corresponding source-coordinate values have Vandermonde
+determinants
+
+```text
+(V_x,V_y,V_z)=(28,14,1) in F_31*.                     (18c)
+```
+
+Thus all three actual coordinates separate the five sheets in one lawful
+good-reduction fibre.  This independently certifies the primitive-element
+conclusion without trusting the large symbolic `z` factorization.
+
 The primitivity sidecar is indispensable.  Replacing an actual coordinate by
 the flat base-field view `X=P` gives exactly
 
@@ -311,7 +349,7 @@ Nothing here classifies arbitrary Keller maps, maps within a fixed grade, or
 the unstored historical outside family.  Nothing here settles `JC(2)`, and no
 LRC, tournament-current, or composition-tower consequence is asserted.
 
-## 8. Exact companion and reproducibility
+## 8. Exact companions and reproducibility
 
 The companion expands (7), checks both apparent cancellations and the full
 Jacobian, verifies the inverse identity, factors every resultant over `Q`,
@@ -325,9 +363,15 @@ Run
 ```bash
 python -B 04-computation/jc_weighted_odd_family_m3_coordinate_jelonek_probe_20260816.py
 python -B -O 04-computation/jc_weighted_odd_family_m3_coordinate_jelonek_probe_20260816.py
+python -B 04-computation/jc_weighted_odd_family_m3_three_coordinate_independent_audit_20260816.py
+python -B -O 04-computation/jc_weighted_odd_family_m3_three_coordinate_independent_audit_20260816.py
 ```
 
-Both transcripts are byte-identical to the stored LF-normalized output.  The
-new `z` row is exact but computationally large; an independent FLINT/Sage
-reimplementation would upgrade the audit status without changing the theorem's
-present scope.
+Each normal/optimized pair agrees exactly after LF normalization with its
+stored output.  The independent companion imports neither Sympy nor the
+candidate, uses FLINT resultants/discriminants/factorization, and has semantic
+digest
+
+```text
+bd208dad9732439dfa14a794ef54dbfe57d66360f5f5a39b26353ffb82b6bba3.
+```
