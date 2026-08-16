@@ -330,6 +330,52 @@ is **REFUTED**.  The missing hypothesis is not reflection but the ancestry
 quotient: root difference and absolute tail must already have been
 marginalized.
 
+## Two-digit update: six is a projected carrier, not the ancestry ceiling
+
+The candidate at `e9131a159` retains two lawful current digits
+`a=r_0+13r_1+169c`.  Its relation flattening has rank six and its `r_1`
+marginal is the one-digit table with relation image `W`.  Marginal row spaces
+are contained in the child row space, so equal dimensions prove that the
+two-digit relation image is again exactly `W`.
+
+The profile-level carrier before endpoint integration is much larger.  The
+derived exact sidecar
+`lrc-r5-two-digit-profile-flag-versus-pointed-six-codex-20260816.md` finds a
+weighted profile space `G` of dimension twelve.  Its interior-multiple space
+`M` has dimension six and the same abstract reflection character `(3,3)` as
+the pointed carrier, but its state-block ranks are `(1,3,1,3)`, versus the
+pointed grading `(1,2,1,2)`.  Thus there is no lossless state-graded
+identification: the shared character is not a typed factorization.
+
+Endpoint integration maps the three independent quotient lines at
+`r_0=3,6,9` onto one odd line and kills one trivial plus one sign direction.
+The combined-address rank four is therefore an explicit projection artifact.
+The relation rank six remains a genuine pointed **quotient** because it equals
+`W=mu(P)`, but it is not a pre-integration or global carrier ceiling.
+
+The nested source/current candidate at `2d52215a3` supplies the complementary
+positive datum.  Its complete double-character profile sector has dimension
+seventeen, but the endpoint channel map has rank four and kernel thirteen.
+At the same time, its relation rows equal the pointed rows statewise with
+dimensions `(1,2,1,2)` and globally with record `(6,6,6,6)`.  Hence it factors
+exactly as
+
+```text
+profile_17 -> amplitude quotient_4 -> direct_sum_state P_i,
+```
+
+while spanning all six relation directions.  The numbers four and six are
+Tucker ranks of different tensor axes: four counts independent channel
+amplitudes in `state x relation`, while six counts the relation-mode carrier.
+The thirteen-dimensional kernel belongs to the profile-to-amplitude map, not
+to the pointed relation map.
+
+This also locates the two-current `3/4` conditional pattern.  It describes
+sections of a four-dimensional amplitude quotient: nonmultiple cylinders see
+one common rank-three hyperplane, interior multiples add one line, and the two
+boundary profile six-spaces collapse to rank four.  It does not describe the
+six-dimensional relation carrier, which remains `W`.
+
 ## Precise surviving conjecture
 
 The earlier one-digit “endpoint ceiling” formulation is **SUPERSEDED** by a
@@ -353,40 +399,41 @@ that rank-six endpoint statement is a consequence, not the primitive claim.
 
 The conjecture does not yet cover the source-time high digit: its endpoint
 marginal equals `W`, but its row space over `(difference,relation)` has not been
-constructed.  Nor does it cover older current digits, two-digit words, other
-clocks, rows, primes, physical currents, or LRC(14).
+constructed.  The two-current-digit endpoint marginal now also equals `W`,
+but that computation summed the right root before address expansion, so it
+does not test the conjecture in `(difference,relation)`.  The nested
+source/current fibre product does prove statewise pointed equality after
+endpoint transport, but it too sums root difference.  Other clocks, rows,
+primes, physical currents, and LRC(14) remain outside its scope.
 
 ## Cheapest decisive computation
 
-The cheapest mechanism test is now the lawful source-time joint table
+The cheapest immediate mechanism test now reuses the compressed two-digit
+event pass without repeating its Fourier census.  Its current aggregation key
+`(cell_index,selected_u_mask)` multiplies by `sum_q v_q`, irreversibly losing
+the right root.  Retain `selected_mask` and the unsummed jump instead; during
+address expansion emit each selected pair `(u,q)` into `s=u-q`.
+
+For every state, stream the `169` address rows over `(s,t)` through an exact
+annihilator of the pinned pointed space `P_i`, whose dimensions are
+`(1,2,1,2)`.  Stop at the first nonzero residual.  The mandatory marginals are
 
 ```text
-T_source(state,b_source,u-q,t).
+sum_s          -> the pinned two-digit tensor;
+sum_r1         -> the one-digit current-branch x difference tensor;
+sum_r0,sum_r1  -> the audited square x difference tensor.
 ```
 
-It must recover the independently audited source-sheet table after summing
-`u-q` and the audited root-difference table after summing `b_source`.  Then,
-for each state, stack its thirteen source-branch rows over `(u-q,t)` with the
-pinned pointed rows.  The decisive certificate is
+All residuals zero construct the depth-two pointed-bundle factorization; one
+nonzero residual gives the minimal hostile
+`(state,r_0,r_1,s,t,pivot)` and proves that root-difference marginalization
+created the apparent ceiling.  This test needs neither the full joint tensor
+ledger nor the projective Fourier marginals already computed by Gibbs.
 
-```text
-expected statewise (branch rank,point rank,union rank):
-state 0: (<=1,1,1),
-state 1: (<=2,2,2),
-state 2: (<=1,1,1),
-state 3: (<=2,2,2).
-```
-
-Any union rank larger than the point rank is an immediate counterexample to
-pointed-bundle closure; the first RREF pivot outside `P_i` is the minimal
-hostile witness.  Equality in all four states constructs the missing source
-factorization and explains the source/current common endpoint space before the
-lossy difference marginal.
-
-Only after this test should one build
-`T(b_source,r_owner,state,u-q,t)`.  That larger table asks whether the two radix
-stages act independently inside the pointed bundle; it is not the cheapest
-test of why the rank is six.
+The orthogonal next test remains the lawful source-time table
+`T_source(state,b_source,u-q,t)`, with the same statewise annihilator.  It asks
+for the missing source factorization rather than duplicating the two-digit
+current probe.
 
 ## Connection contract
 
@@ -398,9 +445,9 @@ test of why the rank is six.
 | map | pointed response into `K`, then the injective-on-`P` difference marginal `mu:P->W`; source/current endpoint maps land in the same `W` |
 | preserved | owner base, Boolean state, literal guard order, pointed tail in `P`, cut colour in `K`, endpoint factors, path reversal |
 | destroyed by `mu` globally | root difference outside `P`; the source/current presentations additionally lose 46 kernel directions and temporal stage data |
-| positive gate | statewise current rows equal pointed rows, marginal ranks `(6,6,6,6)`, equal RREF and involution-graph hashes |
+| positive gate | statewise current rows equal pointed rows; nested source/current gives profile `17 -> 4` with statewise pointed ranks `(1,2,1,2)` and global `(6,6,6,6)`; equal RREF and involution-graph hashes |
 | hostile | affine target stabilizer is trivial; unrestricted root-difference/pointed tables have relation rank `13/12` |
-| boundary | source factorization in `K`, source-to-current digit map, full joint ancestry, physical current, row exclusion, and LRC(14) remain open |
+| boundary | both joint positive results marginalize root difference; two-current and source-time factorizations in `K`, physical current, row exclusion, and LRC(14) remain open |
 
 ## Reproduction
 
@@ -409,8 +456,11 @@ python -B 04-computation/lrc_r5_endpoint_response_rank_six_representation_audit_
 python -B -O 04-computation/lrc_r5_endpoint_response_rank_six_representation_audit_20260816.py
 python -B 04-computation/lrc_r5_pointed_carrier_rank_six_representation_audit_20260816.py
 python -B -O 04-computation/lrc_r5_pointed_carrier_rank_six_representation_audit_20260816.py
+python -B 04-computation/lrc_r5_two_digit_period3_pointed_profile_probe_20260816.py
+python -B -O 04-computation/lrc_r5_two_digit_period3_pointed_profile_probe_20260816.py
 ```
 
-The common-image and pointed-carrier semantic digests are
+The common-image, pointed-carrier, and profile-flag semantic digests are
 `7baeb128a4c4d5998342611fdcf821d002ffb4622692dd72c03e6f11c8d9825a`
-and `5e491136809fc164bbbfc7aeb9c272b7aff05020992985a39f291bf31297903e`.
+`5e491136809fc164bbbfc7aeb9c272b7aff05020992985a39f291bf31297903e`,
+and `8d8869b678fc28a97e820fa8ce5af284848a5f4def4c5195a9d9a218f2a8219f`.

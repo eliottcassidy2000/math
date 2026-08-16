@@ -139,6 +139,50 @@
   `623a7817ba233d3c3c5e0dfbe218fdb93fb27c3a034d882a25f10e401228a3fd` /
   `6189cad420d7675eeb0a623ed4e62855d0cc3b14b671fce195eed67c3ac87c8f` /
   `d8fd9ddf1f8679b90434d1f6ffa6a717c1725e3dcb5703c040e1ab724081e72b`.
+  `82efb24e0c4a6e0df9671f0f5a5009dd0e77d1b0aa8ef2341780dfe23ea28c38`.
+- `lrc_r5_endpoint_response_rank_six_representation_audit_20260816.py`
+  -> matching `.out` [FINITE-EXACT COMMON-IMAGE REPRESENTATION AUDIT].  On the
+  canonical owner base, the source-time high-digit and current-leg low-digit
+  `52 x 13` endpoint tables have one identical rank-six relation row space
+  `W`; their RREF and induced-involution graph hashes agree.  Path/radix
+  reversal descends as `3 trivial + 3 sign`, its Boolean parent is `2+2`, and
+  the refinement quotient is `1+1`.  The affine stabilizer on relation labels
+  is trivial, refuting a cosmetic odd-Fourier interpretation.  This compares
+  endpoint quotient spaces only, not a typed map between the two digits,
+  root-difference lift, physical current, row exclusion, or LRC(14).
+  Script/output/semantic LF SHA-256:
+  `fb9068c3e6fd7436feb31fd33869c486512e286a35ef219b6df1e9c2538fbd36` /
+  `86a2c1930cd180829078f350afb366be84aee5c6059a53e019ab8fde64a30113` /
+  `7baeb128a4c4d5998342611fdcf821d002ffb4622692dd72c03e6f11c8d9825a`.
+- `lrc_r5_pointed_carrier_rank_six_representation_audit_20260816.py`
+  -> matching `.out` [DERIVED FINITE-EXACT REPRESENTATION AUDIT; FOUR-WAY
+  INTEGRAND AUDIT PENDING].  In the current-branch x root-difference candidate,
+  statewise branch rows equal the six pointed row spaces.  Difference
+  marginalization is injective on their rank-six sum and maps it exactly to
+  the common endpoint space `W`; the pointed three-pair reversal gives the
+  same `3+3` involution graph.  This identifies the typed quotient mechanism
+  but does not independently audit the imported four-way integrand or construct
+  exact address, chronology, physical current, row exclusion, or LRC(14).
+  Script/output/semantic LF SHA-256:
+  `c8fb05a216385d9ef40a8487ee0fc0b8cb23fad4e0128be7910d79481d4bcfe8` /
+  `f1e858d13ddca89e88933cc3f5b14da93ffa61c4c185faaf5a59bad5ca060463` /
+  `5e491136809fc164bbbfc7aeb9c272b7aff05020992985a39f291bf31297903e`.
+- `lrc_r5_two_digit_period3_pointed_profile_probe_20260816.py`
+  -> matching `.out` [DERIVED FINITE-EXACT PROFILE-FLAG SIDECAR TO THE
+  TWO-DIGIT CANDIDATE].  Without rerunning the endpoint sweep, characters,
+  inversion, or spectral census, it derives the source-profile flag
+  `L_3 subset M_6,B_10 subset G_12`, with `M intersect B=S_6` and reflection
+  splits `(2,1),(3,3),(5,5),(6,6)`.  Each interior multiple is `L` plus one
+  independent line; endpoint integration identifies the three lines and
+  drops two boundary directions, explaining the apparent `4,3,3` pattern as
+  an ordered-radix flag rather than a `C_3` action.  The state ranks
+  `M=(1,3,1,3)` versus pointed `(1,2,1,2)` refute a lossless state-graded
+  carrier identification.  Endpoint clauses remain candidate-level; there is
+  no root-difference lift, physical current, row exclusion, or LRC(14).
+  Script/output/semantic LF SHA-256:
+  `2d7344c4e53855a50cd05875b37fde5784b41cdd0a1dc3b8f8c23788dd02faf1` /
+  `8fb0aee4adf09d25183138b5640cd04f5941b0a71c8b69de0c41866f58587a61` /
+  `8d8869b678fc28a97e820fa8ce5af284848a5f4def4c5195a9d9a218f2a8219f`.
 
 - `lrc_r5_ufull_owner_node_boolean_square_inverse_owner_branch_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
