@@ -319,21 +319,22 @@ density need not settle `z=1` mass.
   determinant. MISTAKE-223 blocks NC2, hyper-Bessel, or Euler-characteristic
   transfers; THM-2023 proves the `Phi_(p,q)` zero theorem independently.
 
-### Live work: support/collision profiles; analytic/automatic structure; typed tournament/LRC identities.
+### Live work: collision profiles; automatic structure; typed identities.
 
 ## Other active portfolio
 
-- **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383 give translated localization and atomic/owner/ANOVA/rectangle/labelled-reference inversion; physical references, positive catalysis, realization, and stable diagonal stay open. THM-2646 gives modular/exponent `B3` conjugacy; exponent is not Markov-invariant.
+- **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383 give localization and owner/ANOVA/rectangle/reference inversion; realization/stable diagonal stay open. THM-2646 gives modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes exact `d_max` with planar `58<60`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks and dyadic repair.
 - **Rule 30:** [3471](../01-canon/theorems/THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum.md); [3476](../01-canon/theorems/THM-3476-rule30-depth-four-transverse-jet-barrier-and-slack-pascal-atlas.md);
   [3480](../01-canon/theorems/THM-3480-rule30-staircase-transducer-entropy-and-nonrectangular-macroblock-compiler.md); [3481](../01-canon/theorems/THM-3481-rule30-cyclic-arc-norm-rank-and-marked-innovation-spectrum.md). Prizes open.
+  **RESERVED/unproved:** [3488](../01-canon/theorems/THM-3488-rule30-inward-slack-monicity-and-parity-cartier-ramification.md), [3489](../01-canon/theorems/THM-3489-rule30-packed-restart-and-pointed-pascal-face.md).
 - **Jacobian/Dixmier:** `JC(2)`/`DC(2)` remain open. THM-3459 separates four
   Rule 30 lifts; no JC map. THM-3438 proves `KDeg(m)={1,3,4,...}` (`m>=3`),
   all-grade `S_n`, first mixed grade `9`, global G1, and a non-radical `S_5`
   inverse; arbitrary-map, planar/z-affine, and `A_4/A_5` classification stays open.
   THM-1300/1315 provenance is unsettled (MISTAKE-205); THM-2473--2576 concern only the fixed map.  On the `A4/S4` route, THM-2681 blocks the cubic identification, THM-2685--2695 locate the gain plane, THM-2690--2700 exclude three model carriers, and THM-2703/2708 identify saturated `H^1(U,mu_2)` holonomy.  Spin/saturation/equivariant realization remain open.
-  THM-3057/3059 and THM-3441 establish the boundary ledger and refute both odd-every-component forms of HYP-9027.  THM-3448 proves the weighted `C=0` law `mu=(mu-2)+2*1`, realizes genuine Keller `C_ell` inertia for every `ell>=2` (first `C3` in degree five), and excludes `C3` only for weighted quartics; arbitrary quartic/two-jet `C3` remains OPEN.
+  THM-3057/3059/3441 set the boundary and refute both odd-every-component forms of HYP-9027. THM-3448 realizes Keller `C_ell` inertia (`ell>=2`; first `C3` in degree five) and excludes `C3` only for weighted quartics; arbitrary quartic/two-jet `C3` remains OPEN.
   THM-3440/3443/3450: marked mode-one LRC/Keller isomorphism on 91 sheets.  Mod-13 `H^1` has no amplitude map; order 8/14 margins block the full germ.  No current.  THM-3066 retains only their
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
   THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;
