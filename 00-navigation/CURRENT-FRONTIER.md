@@ -40,7 +40,7 @@ THM-3479 proves U_full `169/169`,`13^3`,`72/72` (U_clock none); THM-3514 gives
 owner `52/117`, rank4/full Walsh-drift; THM-3515 gives five rank5 rows and
 `72/72` charts; THM-3518 pins phases and `56,592` zero cycle pairings.
 THM-3524 blocks folded `C7/K4` (`3<4`); 48 ancestry buckets are audited.
-Source-cell `91/91`,`72/72` is scalar AX/BY; common-owner is cell-0
+Source-cell `91/91`,`72/72` scalar AX/BY; common-owner cell-0
 rank1 (MISTAKE-417); square/root/pointed are audited at
 `4/36`,`(3,12,12)/432`,`(5,12,12)`. Source/current inverse digits reach
 rank6/`432`; current audit/joint ancestry/address/U_clock/LRC open.
