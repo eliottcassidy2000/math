@@ -1,19 +1,18 @@
 # Three coordinate cubics, one sign class
 
-**Status: proved elementary deduction from THM-2546 for the fixed sporadic
-map; classification synthesis only beyond that fixed map.**  This note does
-not extend the discriminant identity to the outside infinite family.
+**Status: proved synthesis from THM-2546, THM-3508, THM-3517, and THM-3519;
+no arbitrary-map classification claim.**  The fixed sporadic tower is proved
+through level three, and the explicit THM-3448 cyclic weighted family is
+proved in every grade.  The unstored historical family formerly attributed
+to THM-1605 remains unidentified under MISTAKE-416.
 
-**Closure update, 2026-08-16:** the first test proposed in Section 6 is now
-closed by [THM-3508](../01-canon/theorems/THM-3508-level-two-sporadic-keller-three-coordinate-primitive-discriminant-square-class.md):
-all three source coordinates of the fixed level-two composite are primitive,
-so their full discriminant square class is `[H]`.  Higher levels and the
-historically reported outside family remain open.  A second update closes the
-first **explicit weighted** beyond-cubic test: THM-3517 gives three primitive
-coordinate quintics with class `[L5]` at `m=3`, but its even `C3` inertia
-makes that class miss the genuine `C=0` Jelonek component.  MISTAKE-416
-records why this explicit cyclic family must not be identified with the
-unstored historical `E_m`.
+**Closure update, 2026-08-16:** THM-3508 proves that all three source
+coordinates of the fixed level-two composite are primitive with common class
+`[H]`; THM-3519 proves the level-three class `[-2J]`.  THM-3517 proves that
+all three actual coordinates are primitive in every explicit cyclic weighted
+grade.  Its exact `m=3` quintic atlas has common class `[L5]` but Jelonek set
+`V(C) union V(L5)`, so the sign quotient misses a genuine component with
+even `C3` inertia.
 
 ## 1. The three discriminants collapse to one square class
 
@@ -129,46 +128,96 @@ class `[-L]` is not a static label that can simply be multiplied along the
 Keller monoid.  At the first composite rung the sign quotient selects the
 new image component instead.
 
-The all-degree norm-product lemma explains the parity mechanism, but only
-the fixed-map, level-two x-coordinate application is proved.  In particular,
-(7) does not prove a three-coordinate common-class law for `F o F`, nor a
-newest-component law at every iterate.
-
-## 5. Relation to the outside infinite family
-
-The corrected
-[THM-1605](../01-canon/theorems/THM-1605-infinite-family-extent-vs-mechanism.md)
-does **not** provide a literal outside-family definition.  It preserves a
-historical report that higher members realize fibre cardinalities
+THM-3508 closes the other two coordinate views: all three source coordinates
+are primitive in the same degree-nine trace algebra, hence all three have
+class `[H]`.  THM-3519 repeats the primitive-element gate at level three and
+proves
 
 ```text
-2m-1 = 1+2(m-1).                                     (8)
+[Disc(m_x)]=[Disc(m_y)]=[Disc(m_z)]=[-2J]             (7a)
 ```
 
-THM-1350 explains the necessity of the shape in (8) for the relevant
-equivariant fibre: one fixed point plus free involution pairs.  This is an
-orbit-count theorem, not a construction or discriminant theorem.  No formula,
-source artifact, or `m>=3` replay for that historically named `E_m` survives
-in the repository, so its higher members cannot be used as proved inputs.
-
-There is now a separate lawful comparison.  THM-3517 reindexes THM-3448's
-explicit cyclic weighted family by `ell=2m-3`.  At `m=3`, it proves
+for the fixed degree-27 extension.  Thus the proved fixed-tower sequence is
 
 ```text
-generic degree=5,             Mon_geom=S5,
-[Disc_x]=[Disc_y]=[Disc_z]=[L5],
-S_F=V(C) union V(L5).                                  (8a)
+degree 3:   [-L],
+degree 9:   [ H],
+degree 27:  [-2J].                                    (7b)
 ```
 
-The common sign class in (8a) sees `V(L5)` but not `V(C)`, because the latter
-has even three-cycle inertia.  Thus the first explicit test simultaneously
-extends the common-class phenomenon and proves that it is too coarse for
-Jelonek effectivity.  This weighted family has ordinary first-coordinate
-degrees `7,17,27,...`, not the old report's `7,13,26,...`; it is not a
-recovery of the missing family.
+At each level, primitivity turns the coordinate power bases into bases of
+one trace space; their discriminants differ by basis-change squares.  The
+visible unit `[-2]` at level three is retained under MISTAKE-413 discipline.
+The sequence is not a formal multiplication of earlier classes and no
+level-four three-coordinate primitivity theorem is proved.
 
-Therefore (2) contributes one exact invariant at `m=2`; it does not classify
-the historical infinite family.  A serious classification record needs at least
+## 5. Relation to the explicit cyclic weighted family
+
+MISTAKE-416 repairs the provenance boundary: the legacy THM-1605 record has
+no recoverable literal formula for its historically reported `E_m`, and its
+degree string cannot define a lawful test object.  THM-3517 instead uses the
+explicit cyclic weighted family `E_m^cyc` from THM-3448.  It has
+
+```text
+det J(E_m^cyc)=1,
+generic degree=2m-1,
+global monodromy=S_(2m-1),
+coordinate degrees=(10m-13,10m-14,4).                 (8)
+```
+
+The first-coordinate degrees begin `7,17,27,...`, not the historical
+`7,13,26,...` string.  The common `m=2` numerical degree does not identify
+the constructions.
+
+THM-3517 proves a strong all-grade statement for the explicit family:
+
+```text
+K(x)=K(y)=K(z)=K(w)                                   (8a)
+```
+
+for every cyclic grade.  The `z` gate is the nonzero remainder coefficient
+
+```text
+((ell+1)^3+1)P^2
+ +(4ell^2+ell-2)P/2+4(ell+1)Q.                        (8b)
+```
+
+Together with global `S_n` monodromy and the already proved `x,y` gates,
+this makes all three coordinates primitive.  Trace-form congruence therefore
+puts all three coordinate eliminants in one inverse discriminant square
+class in every grade.  The common-class phenomenon is not special to cubic
+degree.
+
+At the first beyond-cubic member `m=3`, the inverse is
+
+```text
+T(w)=w^5-w^4+Pw-Q,                                   (8c)
+```
+
+with `S5` monodromy and irreducible discriminant
+
+```text
+D5=256P^5-27P^4-36P^3Q-50P^2Q^2
+   -2500PQ^3+3125Q^4+256Q^3.                         (8d)
+```
+
+The `x,y,z` eliminants are irreducible quintics with `17,29,191` terms and
+all have class `[D5]`.  After `P=BC,Q=AC^2`,
+
+```text
+D5(BC,AC^2)=C^4L5,
+S_(E_3^cyc)=V(C) union V(L5),
+[Disc_x]=[Disc_y]=[Disc_z]=[L5].                      (8e)
+```
+
+The missing `C=0` component has three escaping sheets and local inertia a
+3-cycle, which is even as a permutation.  The `L5=0` component has
+transposition inertia and remains visible.  This is the exact classification
+boundary: the common sign class records parity of local monodromy, not the
+full effective Jelonek set.  THM-3517 proves the same sign-blind `C`
+component for every odd cyclic grade `m>=3`.
+
+A serious classification record therefore needs at least
 
 ```text
 degree/fibre grade
@@ -181,7 +230,10 @@ degree/fibre grade
 
 The first and second entries can agree while the remaining four differ.
 Conversely, equality of the sign class alone is far too coarse to identify a
-map: it retains only one `C2` quotient of the root permutation data.
+map: it retains only one `C2` quotient of the root permutation data.  The
+fixed compositional tower and the explicit weighted family now supply two
+proved laboratories with the same trace-form mechanism but different degree,
+monodromy, and effectivity ledgers.
 
 ## 6. Connection contract and decisive next tests
 
@@ -195,19 +247,22 @@ map: it retains only one `C2` quotient of the root permutation data.
 | required sidecar | splitting-field/block data plus oriented boundary valuations |
 | cheapest hostile | two nonisomorphic cubic extensions with the same discriminant square class |
 
-The next exact tests are correspondingly typed:
+The first three proposed tests are now closed at level two, level three, and
+the explicit `m=3` weighted member.  The next exact tests are:
 
-1. compute the other two coordinate square classes for `F o F` and ask
-   whether the atom-level diagonal (5) survives at grade nine;
-2. compute the level-three image divisor and norm law, then test whether only
-   the newest component has odd valuation;
-3. **closed for every `E_m^cyc` by THM-3517:** all three coordinates are
-   primitive and share the inverse discriminant class; at `m=3` the exact
-   atlas is three quintics of class `[L5]` with sign-blind component `V(C)`;
-   next derive the all-grade `z` index-core recurrence; and
-4. keep the sign class separate from the effective boundary cone throughout.
+1. prove or refute all-coordinate primitivity at level four of the fixed
+   compositional tower;
+2. compute full positive discriminant multiplicities rather than only their
+   square classes;
+3. retain inertia cycle type component-by-component, so even cycles cannot
+   disappear behind the sign quotient;
+4. classify the explicit cyclic family within a fixed degree only after
+   adding its Jelonek, monodromy, block, and boundary-effectivity data; and
+5. keep the unstored historical THM-1605 family separate unless an explicit
+   source formula is recovered.
 
-The strongest current conclusion is therefore precise and modest: the fixed
-sporadic map has three cubic views of one quadratic branch character, while
-its exact classification—and still more the classification of the outside
-infinite family—requires the information discarded by that character.
+The strongest current conclusion is now broader but still sharply bounded:
+three primitive coordinate views of one trace algebra necessarily share one
+quadratic sign character, at degrees `3,9,27` in the fixed tower and in every
+explicit cyclic weighted grade.  That character is a robust invariant, not
+an exact classification; the `m=3` component `C=0` is the decisive witness.
