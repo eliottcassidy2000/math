@@ -27,6 +27,28 @@
   `f5498e42510641227052f578cd269697876746a6847ba6bb8cd382e726c35169`.
   `G` is not constructed or proved irreducible/new; no fourth-component,
   all-level, JC/DC, or LRC consequence follows.
+- `lrc_endpoint_ufull_minimal_joint_address_gate_20260816.py` and
+  `lrc_endpoint_ufull_minimal_joint_address_referee_20260816.py` -> matching
+  `.out` files [FINITE-EXACT PRE-MERGE/API-KERNEL SIDECAR; NOT A U_FULL
+  ANCESTRY REALIZATION].  The primary retains actual U_full `E`/`Q` factor,
+  branch, wrap, component, and boundary lineage before endpoint summation.
+  At `ell=0/v2`, `123,752/126,429` labelled intersection cells reproduce the
+  inherited `AX`, `BY`, and overlap totals exactly.  The minimum `2x2`
+  marginal map has the one-dimensional checkerboard kernel; one fixed joint
+  parity address raises its rank from three to four and makes the inverse
+  `q_H-q_q5` bridge equal to the mixed-Haar coordinate.  A calibrated
+  nonnegative four-record table recovers
+  `389266878372286537904`, while a flat table with identical row/column
+  marginals has bridge zero.  The independent referee exhausts the full
+  `F_13^4` kernel, every one-factor functional, address orthogonality, and
+  both `2197`-character banks.  Actual interval cells still have no proved
+  map to THM-2471 base/root/sheet/horizon/address data; no `K4`, current, row
+  exclusion, or LRC(14) claim follows.  Primary script/output LF SHA-256:
+  `fd5fcfc5f92385806f5ea5e77e854c823d2b3d6e34752c7aba777744201c8055` /
+  `3c68f4b3618abbcc2653eb1b2aee4729e59a57820749396ca757341ee7f91838`;
+  referee script/output:
+  `e33714832d1638a7e0587d9d6f7eb40e1c8ec95b92958882ffa93220cf1c4212` /
+  `e83775507494f737c27fa564fe8a121730f7732cd6909330320597b414054a80`.
 - `lrc14_stage2_theta_contraction_r5_independent_audit_20260816.py` ->
   matching `.out` [INDEPENDENT RECOVERY/HOSTILE AUDIT OF PROVED THM-2594].
   The parent copies normalize exactly to the repaired canonical primary
