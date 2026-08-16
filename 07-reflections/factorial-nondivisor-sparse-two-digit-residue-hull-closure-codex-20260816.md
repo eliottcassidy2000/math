@@ -4,10 +4,11 @@ status: >
   PROVED structural lemmas + FINITE-EXACT census mining.  This is a
   theorem-ready no-ID proof packet, not canon.  It proves automatic rho
   admissibility for the p=3 and p=5 congruence lanes and an all-height exact
-  local degree compiler for d=p^K+p^s+2 at every odd prime p.  Coprimality is
-  proved when the inherited all-divisor packet misses the resulting four
-  local degrees.  It does not prove that this packet condition holds for
-  infinitely many parameters and does not extend the d<=10000 boundary.
+  Newton-polygon necessary degree barcode for d=p^K+p^s+2 at every odd prime
+  p.  Coprimality is proved when the inherited all-divisor packet misses the
+  resulting three positive addresses.  It does not prove that this packet
+  condition holds for infinitely many parameters and does not extend the
+  d<=10000 boundary.
 source: /root/jc_level3_divisor_audit/factorial-followup/2026-08-16
 depends_on:
   - THM-3483-factorial-nondivisor-residue-digit-pair-compiler
@@ -15,6 +16,8 @@ depends_on:
   - THM-3161-factorial-newton-euclidean-closure-through-r1998
   - THM-3142-prime-power-predecessor-newton-separation-and-composite-window-census
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
+related:
+  - THM-3474-factorial-binary-submask-polygon-and-prime-power-reset-families
 script: 04-computation/factorial_nondivisor_sparse_two_digit_hull_followup.py
 output: 05-knowledge/results/factorial_nondivisor_sparse_two_digit_hull_followup.out
 script_sha256: 2c6cdecbba4ad4d4cd2fbd51d6d4ae1d03bde3a7a136de55b8a9736afb5aaf78
@@ -45,14 +48,15 @@ This packet proves two structural results.
    P=p^K,              Q=p^s,              d=P+Q+2.         (2)
    ```
 
-   The complete local common-factor degree set at `p` is exactly
+   The complete Newton-polygon necessary local degree barcode at `p` is
+   exactly
 
    ```text
    D_p(F,G)={0,Q,P,P+Q}.                                    (3)
    ```
 
-The second statement gives an infinite exact local family.  It becomes a
-coprimality family under the explicit inherited sidecar
+The second statement gives an infinite exact local hull/barcode family.  It
+becomes a coprimality family under the explicit inherited sidecar
 
 ```text
 P_div(d) intersect {Q,P,P+Q}=empty,                         (4)
@@ -286,7 +290,8 @@ The numerator of `sigma_e` is
 ```
 
 so its reduced denominator is exactly `p^e`, equal to its block capacity.
-A local factor can use either zero or the whole of each common block.
+A common-factor contribution must use either zero or the whole of each common
+block.
 Taking subset sums proves (3).  The unit constant vertices show that the
 common coordinate-root capacity is zero.  QED.
 

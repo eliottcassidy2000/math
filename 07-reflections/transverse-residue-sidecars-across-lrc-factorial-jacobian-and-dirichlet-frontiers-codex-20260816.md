@@ -1,19 +1,19 @@
 # Transverse residues recover linear loss; joint ancestry does not descend
 
-**Status: INTEGRATED RESEARCH SYNTHESIS.**  The factorial, Dirichlet, and
-fixed-map Jacobian inputs cited below are proved; the LRC endpoint refinements
-are finite-exact structural probes.  This note creates no new LRC, FC, HFC, or
-Jacobian-conjecture conclusion.
+**Status: INTEGRATED RESEARCH SYNTHESIS.**  The factorial, Dirichlet, Rule 30,
+and fixed-map Jacobian inputs cited below are proved; the LRC endpoint
+refinements are finite-exact structural probes.  This note creates no new LRC,
+FC, HFC, or Jacobian-conjecture conclusion.
 
 ## Portfolio and inheritance pass
 
-- **Anchor -- LRC(14), OPEN.**  The closest carrier is reserved THM-3479's
-  literal half-twist relation packet.  Its canonical hostile is the flat
-  response, where every bridge and `K4` factor vanishes.  The corrected near
-  miss is the lawful `U_full` endpoint-character bank: it restores nonzero
-  graph factors but not a physical current.  The least-used sidecar is the
-  shared atom/ancestry key before the endpoint API separately marginalizes
-  its two sides.
+- **Anchor -- LRC(14), OPEN.**  The closest carrier is THM-3479's proved
+  structural literal half-twist relation packet.  Its canonical hostile is
+  the flat response, where every bridge and `K4` factor vanishes.  The
+  corrected near miss is the lawful `U_full` endpoint-character bank: it
+  restores nonzero graph factors but not a physical current.  The least-used
+  sidecar is the shared atom/ancestry key before the endpoint API separately
+  marginalizes its two sides.
 - **Niche -- factorial moments.**  THM-3161 and THM-3475 provide exact digit
   polygons at divisor primes.  The sharp nondivisor hostile is
   `A_2^4` at `p=5`: one raw extreme vertex has `rho=0` and lifts, creating a
@@ -44,6 +44,7 @@ The live concept board was:
 |---|---|---|---|---|---|
 | Factorial | Kummer--Legendre coefficient heights -> actual Newton polygon, by normalized residual reduction mod `p` | exact height when `rho!=0` | extra valuation and new hull geometry when `rho=0` | `rho` at every extreme raw vertex | compute the finite residue table only on raw vertices |
 | Dirichlet | periodic-polynomial lanes -> twisted Dirichlet functions, by Fourier transform plus Hurwitz continuation | every labelled lane coefficient | finite prefix; gauge if period/root labels are dropped | character and pole-height labels | inverse DFT of all residues |
+| Rule 30 | slack polynomial and phase profile -> corner fibre product, by two restrictions | their common marked bit | mixed slack-by-phase coupling | a pointed Hasse carrier/section | physical two-section hostile |
 | LRC | endpoint atoms -> relation-chart factors, by endpoint-character summation | the unrestricted mod-13 aggregate and role character | physical grouping, sign/order, common ancestry, chronology | a joint atom key before marginalization | compare a lawful diagonal common-point coefficient with the product control |
 | Jacobian | inverse-sheet values of `H` -> `N(H)`, by finite norm and the `L`-adic valuation | divisor support and total order | individual sheet identities | the escaping-pair face plus a finite-sheet unit control | compute the initial face and one finite hostile, before expanding `J` |
 
@@ -105,7 +106,7 @@ F: 0, p^s, p^K+p^s,
 G: 0, 1, p^s+1, p^K+p^s+1,
 ```
 
-and their common necessary degree set is exactly
+and their common Newton-polygon necessary degree barcode is exactly
 `{0,p^s,p^K,p^K+p^s}`.  This is the odd-prime two-digit analogue of the
 binary submask compiler.  In the 281-row rho census, `d=6590=3^8+3^3+2`
 is the sole `p=3,5` instance of this form; its inherited divisor packet lies
@@ -162,12 +163,31 @@ positive control for the session's principle: when the quotient loss is
 linear and every transverse character is retained, the residue table is
 lossless.
 
+### 5. Rule 30 supplies the universal linear marginal hostile
+
+THM-3492 independently proves the exact sequence
+
+```text
+0 -> ker(e_U) tensor ker(e_V)
+  -> U tensor V
+  -> U x_k V -> 0.
+```
+
+For its slack-polynomial and terminal-phase axes, the physical arc-image
+constraint still leaves a nontrivial mixed kernel, and depth six gives two
+arc-constrained algebraic lifts with the same physical marginal pair.  Neither
+lift is asserted to be the physical event-level joint distribution.  This is
+the linear mechanism behind the LRC checkerboard hostile: a canonical pair of
+compatible marginals is not a canonical coupling, and a pointed section is
+extra data.
+
 ## Reframed rule and its boundary
 
 > If a projection loses linear spectral or valuation data, adjoin the first
 > transverse residue before constructing the global object.  If it loses a
 > joint relation, no family of transforms of the already separated marginals
-> can restore it; lift to the fibre product first.
+> can restore it; retain the joint tensor carrier before marginalization, or
+> supply a typed lift from the fibre product back to it.
 
 Triggers:
 
@@ -194,7 +214,8 @@ Counterindications:
    multilevel ancestry or chronological arrival.
 2. **Factorial niche:** map factorizations of `p^K+p^s+1` to THM-3475
    divisor packets and seek an infinite subfamily disjoint from the proved
-   four-degree set; keep `d=6518,56,22` as mandatory hostiles.
+   three positive addresses `{p^s,p^K,p^K+p^s}`; keep `d=6518,56,22` as
+   mandatory hostiles.
 3. **Jacobian wildcard:** at depth four, compute the boundary valuation and
    finite-sheet unit before any global resultant.  Stop immediately if the
    image divisor splits or the restriction multiplicity exceeds one.
