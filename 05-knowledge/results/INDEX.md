@@ -75,6 +75,27 @@
   address contraction, not a one-integral temporal current, `H^1` class,
   grouped coefficient, row exclusion, or LRC(14) result.  Script/semantic
   LF SHA-256: `886ef5ae...1c51` / `1cf457b2...6d02`.
+- `lrc_r5_source_aligned_branch_simple_kernel_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  SOURCE-TIME PACKAGE].  Without importing either candidate script, it
+  rebuilds the full-support rank-three `39x39` raw `T^2` transition, recovers
+  the source sheet as `floor(n/13)`, constructs
+  `f_omega^src=1_Q P^2(eP_omega)`, and restores every unsplit profile.  The
+  clean-room common gauge has all 400 root pairs before restriction, 362
+  afterward, and all 48 owner-active types.  Its owner-zero spectrum is
+  `(13,12,12,13)` and every nonzero owner spectrum is full.  An independent
+  THM-3514 reconstruction gives all `169/169` full and all-address
+  doubly-centred `(1,0,t)` owner pullbacks nonzero.  The fixed `(1,0,6)`
+  residue total is exactly `225010624370142818572`, with both profiles
+  `13/13`; candidate digests and entries agree exactly.  Finite linearity
+  makes this a type-correct one-base simple-kernel integral, but `AX/BY`
+  remain preintegrated endpoint scalars.  The value is a THM-2334 residue
+  pushforward, not `C(a;X,m)`; the U_full/U_clock two-transplant boundary
+  remains, with no physical current, THM-2512 bridge, grouped coefficient,
+  row exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
+  `827644be815bf3152507af9ff82c48b76e843126b285edeb76121bf2ed347396` /
+  `d60880f6c73875cb63baf342ad946671bf5e08d11fd64766673175bb626945c5` /
+  `822957b53ef3bcaa8509fa68bd2c0d3080dec7632db3eca063e2d947162bd4b9`.
 - `lrc_r5_source_aligned_guard_atom_branch_sidecar_probe_20260816.py` and
   `lrc_r5_source_aligned_actual_endpoint_simple_kernel_probe_20260816.py` ->
   matching `.out` files [FINITE-EXACT SOURCE-TIME ONE-BASE SIMPLE-KERNEL
