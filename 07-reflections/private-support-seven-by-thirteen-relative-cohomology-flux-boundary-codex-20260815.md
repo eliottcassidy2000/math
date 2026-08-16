@@ -138,7 +138,7 @@ can still cancel inside either sixteen-term `Tau`.  Conversely, positivity
 or a separated character orbit on each tetrahedron would prove weighted
 nonvanishing immediately.
 
-Provisional THM-3482 now supplies a sharper exact control.  Give each owner
+Proved THM-3482 now supplies a sharper exact control.  Give each owner
 its private-sheet count and orient edges by owner order.  The resulting edge
 gradient has zero absolute `H^1` class, but
 

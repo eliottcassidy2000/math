@@ -2,7 +2,7 @@
 
 **Research reflection / provisional synthesis, not a truth source.**
 The exact recurrence package is routed to audit-pending THM-3484.  The graph
-determinant interpretation additionally uses audit-pending THM-3482.
+determinant interpretation uses proved THM-3482.
 
 ## The compression mechanism
 

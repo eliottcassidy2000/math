@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for the provisional THM-3482 gradient certificate.
+"""Exact companion for independently audited THM-3482.
 
 The owner order is the proved THM-3473 order.  Every coactivity edge is
 oriented from the smaller to the larger owner index.  The private-sheet count
@@ -378,7 +378,7 @@ def main() -> None:
         require(semantic_hash == EXPECTED_SEMANTIC_SHA256, semantic_hash)
 
     print("THM-3482 PRIVATE-COUNT GRADIENT WEIGHTED SPECTRAL EXACT COMPANION")
-    print("STATUS: RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT")
+    print("STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED")
     for label, relative, digest in dependencies:
         print(f"DEPENDENCY: {label} {digest} {relative}")
     print("ORIENTATION_GAUGE: each edge is oriented from smaller to larger THM-3473 owner index")

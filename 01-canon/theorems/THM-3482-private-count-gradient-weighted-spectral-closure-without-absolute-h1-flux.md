@@ -2,22 +2,24 @@
 id: THM-3482
 title: "Private-count gradient weighted spectral closure without absolute H1 flux"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT PENDING.  In the canonical THM-3473 owner order, orient the thirteen
-  coactivity edges increasingly and weight each edge by the difference of its
-  endpoint private-sheet counts.  This edge cochain is a coboundary and has
-  zero pairing with all six graph cycles, yet its weighted reduced-Laplacian
-  determinant is strictly negative for every k>=1, with the three displayed
-  residue-class factorizations.  This is graph-level, orientation-gauged
-  spectral closure, not an LRC current or LRC(14) bispectrum theorem.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  In the canonical
+  THM-3473 owner order, orient the thirteen coactivity edges increasingly
+  and weight each edge by the difference of its endpoint private-sheet
+  counts.  This edge cochain is a coboundary and pairs trivially with every
+  graph cycle, yet its weighted reduced-Laplacian determinant is strictly
+  negative for every k>=1, with the three displayed residue-class
+  factorizations.  This is graph-level, orientation-gauged spectral closure,
+  not an LRC current or LRC(14) bispectrum theorem.
 source: codex-2026-08-15-private-gradient-spectral-closure
 audit: >
   self-contained polynomial arithmetic; exact enumeration of all sixteen
   spanning trees in each K4; symbolic derivation in all three residue states;
   six symbolic cycle-pairing zero checks; direct signed 7x7 Bareiss
   determinants for k=1..3000; constant-potential and killed-bridge hostiles;
-  dependency, semantic, security, and normal/optimized replay gates;
-  independent audit pending
+  independent Prüfer and 256-minor Cauchy-Binet reconstruction; independent
+  six-triangle cycle basis, typed hub-gauge repair, k=1 orientation-reversal
+  hostile, and determinant-does-not-descend-to-H1 witness; dependency,
+  semantic, security, ID, docs, and normal/optimized/stored replay gates
 depends_on:
   - THM-3473-three-times-p-eight-owner-private-sheet-partition-and-irredundancy
 related:
@@ -25,20 +27,19 @@ related:
   - THM-3472-odd-modulus-zero-half-conjugacy-and-global-zmc-rank-equality
 script: 04-computation/lrc_private_count_gradient_weighted_spectral_thm3482.py
 output: 05-knowledge/results/lrc_private_count_gradient_weighted_spectral_thm3482.out
-script_sha256: d8fb409a7f8c175c022ae3e260e3f79a78a55f6e89e0090dd18b055aa68d615b
-output_sha256: 9c9529341bfeb133a3ced1b76f6ea4f40776150f6bb1af4d0b558890becbf60a
+script_sha256: 3a3f439a88abe5a14180e850e016db2a0b6b327fb979b5df0106ee7aaa2cbbac
+output_sha256: 6632ead82d4dcdbac3919200aa8790403a4b2d61a2da5d29893f208a08b03db9
 semantic_sha256: 98cba04620048b6c6f8fab03518ab39e0125623f033423eda29245c9b53a0162
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3482 -- a coboundary can be spectrally nondegenerate
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-The proof below is elementary and its exact companion passes the stated
-gates.  This file remains outside the proved dependency graph until an
-independent audit checks the signed matrix-tree calculation and scope.
+The proof, exact companion, independent signed matrix-tree reconstruction,
+and hostile controls pass their stated gates.  The audit repaired one typed
+pairing in `(7)`; MISTAKE-409 records the correction.
 
 ## 1. Source, target, map, and orientation gauge
 
@@ -100,8 +101,13 @@ f_k=(4k,
      4k).                                            (5)
 ```
 
-Set `w_k=Phi([f_k])`.  Since `w_k` lies in `im(B^T)` after the deleted-hub
-gauge is chosen, it represents zero in
+Set `w_k=Phi([f_k])`.  Write the deleted-hub representative as
+
+```text
+fbar_k=(f_(k,i)-f_(k,5))_(i!=5) in Q^7.             (5a)
+```
+
+Then `w_k=B^T fbar_k`.  In particular, it represents zero in
 
 ```text
 H^1(G;Q)=Q^13/im(B^T).                               (6)
@@ -110,7 +116,7 @@ H^1(G;Q)=Q^13/im(B^T).                               (6)
 Equivalently, every cycle `c in ker(B)` satisfies
 
 ```text
-<c,w_k>=<Bc,f_k>=0.                                  (7)
+<c,w_k>=<Bc,fbar_k>=0.                               (7)
 ```
 
 This vanishing is an identity in `k`, not a numerical accident.

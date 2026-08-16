@@ -61,12 +61,18 @@ Format per entry:
   zero with all six cycles, while the two tetrahedral tree sums and bridge
   weight are `-64`, `-136`, and `-4`, giving determinant `-34816`.  Thus
   “coboundary, therefore spectrally singular” is false.
-- **Repair / strongest survivor:** THM-3482 provisionally derives all three
+- **Repair / strongest survivor:** THM-3482 derives all three
   residue-class determinant factorizations and proves they are nonzero for
   every `k>=1`.  Holonomy remains necessary for a nonzero **absolute H1
   class**, not for this owner-order weighted determinant.  The original
   `7x13` incidence rank, six-dimensional cycle space, and coboundary no-go all
   remain valid.
+- **Audit correction:** the first THM-3482 draft wrote
+  `<c,w_k>=<Bc,f_k>` with `Bc in Q^7` but the displayed `f_k in Q^8`.  The
+  typed identity uses the hub-gauged representative
+  `fbar_k=(f_(k,i)-f_(k,5))_(i!=5)` and reads
+  `<c,w_k>=<Bc,fbar_k>=0`; equivalently one may pair `B_full c` with `f_k`.
+  This repairs notation only, not the cycle-vanishing or determinant claims.
 - **Reusable rule:** after quotienting out exact objects, do not assume a
   different nonlinear observable factors through that quotient.  Write the
   actual target map and hostile-test it on a canonical exact element before

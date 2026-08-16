@@ -9,8 +9,8 @@ status: >
   naive order 24.  The drop occurs because all three residue polynomials have
   the same leading coefficient, lowering both nontrivial cubic Fourier
   colours to degree six.  Every residue lane has natural and harmonic
-  coefficient 1/3.  Identifying the word with the THM-3482 weighted
-  determinant is related provisional data, not a dependency or an LRC claim.
+  coefficient 1/3.  By THM-3482 this is the canonical private-gradient
+  determinant word; no relation-current or LRC claim follows.
 source: codex-2026-08-15-ternary-spectral-recurrence
 audit: >
   self-contained integer and Q(zeta_3) arithmetic; exact degree decomposition;
@@ -18,9 +18,9 @@ audit: >
   factor hostiles; rational Berlekamp-Massey reconstruction; exact nonzero
   22x22 Hankel determinant and prime-power factorization; security, semantic,
   and normal/optimized/stored replay gates; independent audit pending
-depends_on: []
-related:
+depends_on:
   - THM-3482-private-count-gradient-weighted-spectral-closure-without-absolute-h1-flux
+related:
   - THM-3473-three-times-p-eight-owner-private-sheet-partition-and-irredundancy
   - THM-3455-berggren-q-spine-cap-seven-atom-sieve-and-fibonacci-rank-spectrum
 script: 04-computation/lrc_ternary_weighted_determinant_minimal_recurrence_thm3484.py
@@ -36,9 +36,9 @@ hash_basis: LF-normalized bytes
 **RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
 AUDIT PENDING.**
 
-The result is self-contained as a theorem about the explicit sequence below.
-Its relation to provisional THM-3482 motivates the sequence but is not used as
-a proved dependency.
+The recurrence proof is self-contained for the explicit sequence below.
+Proved THM-3482 identifies that sequence with its private-gradient weighted
+determinant word.
 
 ## 1. The three polynomial lanes
 
@@ -54,9 +54,8 @@ P_2(k)=-256k+3072k^2-15360k^3+40960k^4
        -61440k^5+49152k^6-16384k^7.                (1)
 ```
 
-These are the three factored determinant lanes displayed in provisional
-THM-3482, expanded.  Here `(1)` is simply the definition, so every statement
-below remains valid independently of THM-3482's audit status.
+These are the three factored determinant lanes proved in THM-3482, expanded.
+Here `(1)` may also be read as a self-contained sequence definition.
 
 The naive quasi-polynomial bound says that any period-three degree-seven word
 is killed by
@@ -183,7 +182,7 @@ hostiles for both multiplicities in `(7)`.
 
 ## 5. Tournaments, ternary colour, and harmonic subsets
 
-Provisional THM-3482 obtains `(1)` from two four-vertex coactivity packets.
+THM-3482 obtains `(1)` from two four-vertex coactivity packets.
 Each `K4` has six undirected edges and contributes a degree-three tree sum;
 the forced bridge contributes degree one.  Thus the geometric factorization
 
@@ -232,5 +231,5 @@ factor hostiles, security gates, and a frozen semantic digest.
 
 This theorem proves no property of an LRC relation current, no physical edge
 assignment, no bispectrum nonvanishing, no Jacobian statement, and no
-LRC(14) conclusion.  If THM-3482 is later promoted, `(7)` becomes the minimal
-recurrence of its canonical private-gradient determinant word.
+LRC(14) conclusion.  Equation `(7)` is the minimal recurrence of THM-3482's
+canonical private-gradient determinant word.

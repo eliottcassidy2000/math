@@ -17,8 +17,8 @@
   The theorem is self-contained for the explicit word; its determinant and
   LRC interpretations remain outside the claim.
 - `lrc_private_count_gradient_weighted_spectral_thm3482.py` -> matching
-  `.out` [THM-3482 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  independent audit pending].  Orient the thirteen THM-3473 coactivity edges
+  `.out` [THM-3482 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Orient
+  the thirteen THM-3473 coactivity edges
   by owner order and weight them by endpoint private-count differences.  The
   resulting edge cochain is a coboundary and pairs zero with all six cycles,
   but its signed weighted `7x7` determinant is nonzero for every `k>=1`.
@@ -28,11 +28,13 @@
   `-256k(2k-1)^6`.  Four or six edge weights vanish, so neither absolute
   graph holonomy nor all-edge support is necessary for this graph-level
   spectral predicate.  Script/output/semantic LF SHA-256:
-  `d8fb409a7f8c175c022ae3e260e3f79a78a55f6e89e0090dd18b055aa68d615b` /
-  `9c9529341bfeb133a3ced1b76f6ea4f40776150f6bb1af4d0b558890becbf60a` /
+  `3a3f439a88abe5a14180e850e016db2a0b6b327fb979b5df0106ee7aaa2cbbac` /
+  `6632ead82d4dcdbac3919200aa8790403a4b2d61a2da5d29893f208a08b03db9` /
   `98cba04620048b6c6f8fab03518ab39e0125623f033423eda29245c9b53a0162`.
-  The owner-order orientation is a required gauge; no relation-current map,
-  LRC bispectrum, or LRC(14) conclusion follows.
+  The independent audit repaired the hub-gauged pairing type and independently
+  recovered all tree sums, six cycle pairings, and an orientation-reversal
+  hostile.  The owner-order orientation is a required gauge; no relation-
+  current map, LRC bispectrum, or LRC(14) conclusion follows.
 - `factorial_dual_seven_exit_block_closure_thm3478.py` -> matching `.out`
   [THM-3478 PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
   AUDITED].  Separately pinned coefficient/Fraction-hull and

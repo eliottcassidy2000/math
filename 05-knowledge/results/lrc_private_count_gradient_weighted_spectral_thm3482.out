@@ -1,5 +1,5 @@
 THM-3482 PRIVATE-COUNT GRADIENT WEIGHTED SPECTRAL EXACT COMPANION
-STATUS: RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT
+STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
 DEPENDENCY: THM-3473 05236a7338a4c92b443b2798508d407e2e4f82d942111d022064f6ec9fe86ca2 01-canon/theorems/THM-3473-three-times-p-eight-owner-private-sheet-partition-and-irredundancy.md
 DEPENDENCY: 7x13-incidence-sidecar 6efa87aa9f9b50d57d7a2db3c282ad216057b41c10af08f648e3f3398e457b91 04-computation/lrc_private_support_7x13_incidence_h1_probe_20260815.py
 ORIENTATION_GAUGE: each edge is oriented from smaller to larger THM-3473 owner index
