@@ -23,18 +23,23 @@ related:
 scripts:
   - 04-computation/keller_five_face_renewal_propagation_probe_20260816.py
   - 04-computation/keller_five_face_renewal_propagation_independent_audit_20260816.py
+  - 04-computation/keller_five_face_renewal_vieta_independent_audit_20260816.py
 outputs:
   - 05-knowledge/results/keller_five_face_renewal_propagation_probe_20260816.out
   - 05-knowledge/results/keller_five_face_renewal_propagation_independent_audit_20260816.out
+  - 05-knowledge/results/keller_five_face_renewal_vieta_independent_audit_20260816.out
 script_sha256:
   - 5fd3c27bf49f8fab5e96b3d3fe608b91b86151ca265d35878225f8ce6aa2f05e
   - 2fafef6bca64174b71fac22aa89e5bb713847ccc47318635c61b9684c5b063cd
+  - e2651175dbe4ef21553c5d4a7949ac5ba19ddb50d31183cce322d9cc74f34770
 output_sha256:
   - 9a3eba81a00e35a5c99c2285e8ea7a10b6b1764b6c8d56b4d5276c449bc1b8b8
   - 9485d14a9eb764374ca6abb25fdecafc75a210ce720bdcf4c0f2e7d0536d8dc8
+  - 91c05274cf307ddd6d341b55b8d94616aaa4b8278792b2e5a85fb97dba38a1cd
 semantic_sha256:
   - 8b6a447c98e4e7f6bfc493818696d4a9193b4da47ab7b2f9e0368e9155940a91
   - 9de2b0a149105263ee1b3a1fba01424f9c7ff274368c689cdc5737fb340bf804
+  - 7468b48f87fab27aacf77af954ea5b63189eb8ba22ec1402b9df57d6d1378375
 hash_basis: raw LF bytes; exact large scalars are pinned by their prime exponents
 ---
 
@@ -415,6 +420,12 @@ independently obtains (36)--(42), the normalization controls in (43), and
 the two successive Cassini determinants `-1536,12288`.  Its verdict is
 `SOUND; promotion recommended at fixed conditional scope`.
 
+A second clean-room Vieta audit checks all `15,250` admissible packets with
+`1<=e<=300`; `10,167` of them have `rho` nonzero modulo three.  Split-prime
+controls at `109,127,163` verify the product-of-powers identity separately
+for the `J`, `G`, and `R_5` input states.  Dropping the nonmonic leading
+coefficient fails the required `A,C,D` exponents in every nonzero bank row.
+
 The theorem closes the renewal implication at every one-step application of
 the fixed inverse chart for which polynomiality is separately supplied.  It
 does **not** prove:
@@ -434,6 +445,8 @@ python 04-computation/keller_five_face_renewal_propagation_probe_20260816.py
 python -O 04-computation/keller_five_face_renewal_propagation_probe_20260816.py
 python -B 04-computation/keller_five_face_renewal_propagation_independent_audit_20260816.py
 python -B -O 04-computation/keller_five_face_renewal_propagation_independent_audit_20260816.py
+python -B 04-computation/keller_five_face_renewal_vieta_independent_audit_20260816.py
+python -B -O 04-computation/keller_five_face_renewal_vieta_independent_audit_20260816.py
 ```
 
 **QED.**

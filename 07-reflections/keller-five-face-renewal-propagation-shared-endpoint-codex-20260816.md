@@ -102,6 +102,12 @@ power `D^r'` and thereby the complete gamma face.
 - Polynomiality is retained as a hypothesis.  Hybrid asymptotics alone do not
   establish global denominator clearing.
 
+Two concurrent clean-room audits then rebuilt the mechanism without importing
+the primary companion.  One exhausts `2,500` admissible endpoint intersections
+through `e<=120`; the other checks `15,250` packets through `e<=300`, including
+`10,167` non-cube root-label rows, and adds split-prime Vieta controls at
+`109,127,163`.  Both recover the fixed supports and scalars exactly.
+
 ## Connection contract
 
 ```text

@@ -18,7 +18,8 @@
   `a6d6ad7a9891af8bddcba6fe7cf9f2554214731043844098f8556d1003885222`.
 
 - `keller_five_face_renewal_propagation_probe_20260816.py` and
-  `keller_five_face_renewal_propagation_independent_audit_20260816.py` ->
+  `keller_five_face_renewal_propagation_independent_audit_20260816.py` and
+  `keller_five_face_renewal_vieta_independent_audit_20260816.py` ->
   matching `.out` files [THM-3522 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   AUDITED].  The primary reconstructs both generic hybrid inverse systems
   from THM-3495's numerators, checks their residual
@@ -30,7 +31,10 @@
   `A(10663,3867)`, with exact renewal scalars pinned in the output.  The
   disjoint audit rebuilds the inverse initials, exhausts `2,500` admissible
   packet intersections through `e<=120`, checks separate determinant and
-  resultant routes, and reaches the same supports and scalars.  No later
+  resultant routes, and reaches the same supports and scalars.  The second
+  audit checks `15,250` packets through `e<=300` plus split-prime Vieta
+  controls at `109,127,163`; its wrong-monic hostile fails every nonzero
+  row.  No later
   polynomiality/finite-sheet, image, degree243, all-level, arbitrary-map, or
   general JC claim follows.  Primary script/output/semantic LF SHA-256:
   `5fd3c27bf49f8fab5e96b3d3fe608b91b86151ca265d35878225f8ce6aa2f05e` /
@@ -39,7 +43,11 @@
   independent:
   `2fafef6bca64174b71fac22aa89e5bb713847ccc47318635c61b9684c5b063cd` /
   `9485d14a9eb764374ca6abb25fdecafc75a210ce720bdcf4c0f2e7d0536d8dc8` /
-  `9de2b0a149105263ee1b3a1fba01424f9c7ff274368c689cdc5737fb340bf804`.
+  `9de2b0a149105263ee1b3a1fba01424f9c7ff274368c689cdc5737fb340bf804`;
+  Vieta audit:
+  `e2651175dbe4ef21553c5d4a7949ac5ba19ddb50d31183cce322d9cc74f34770` /
+  `91c05274cf307ddd6d341b55b8d94616aaa4b8278792b2e5a85fb97dba38a1cd` /
+  `7468b48f87fab27aacf77af954ea5b63189eb8ba22ec1402b9df57d6d1378375`.
 - `jc_weighted_odd_family_m3_coordinate_jelonek_probe_20260816.py` ->
   matching `.out` [THM-3517 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
   IN PYTHON-FLINT].  For the explicit
