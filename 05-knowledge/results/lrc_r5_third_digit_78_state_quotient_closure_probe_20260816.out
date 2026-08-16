@@ -1,0 +1,36 @@
+== r=5 third-digit 78-state quotient closure extraction ==
+parent=(raw_sha256=a227bc2f385d8a2eaecb27f317fa5ed66623c70938d8a97aba620298a8a7b61b,semantic_sha256=3d1527fb4ce4931680e50d7135b9d1129c1816e3a9158645523e2728ddc71ec2)
+certificate=(path=lrc_r5_third_digit_78_state_exact_bank_20260816.json,sha256=472925c638de7ac90b1a7880184766f2e8acec0f8291e2c46cf747b37cd46712,bank_digests=('185b2fb843d37a6e6f73be48375e40e93029ff507392df16f0058892184a1db2', 'b5b0b3bceb926ab8176c0fb5c9fd57c4ad5fa87379b8e29731d7e7094f552263', '1a3a8c73c62a9a7293ed9b80337df7211b45db31362b8bf1a5d223a6f584bec6'))
+field=(prime=755373809845391722745761,zeta13=266737884585332483769981);points=((0, 0), (1, 0), (1, 6), (3, 6), (3, 12), (2, 12))
+canonical_quotient=(ambient=78,parent_rank=68,dimension=10,block_ranks=(11, 11, 12, 12, 11, 11),block_codimensions=(2, 2, 1, 1, 2, 2),parent_basis_digest=5deb973beadccc8d882554e0bf0980dac3aa235daff5224ac3a94e8ea94d9688,annihilator_digest=bd29857a801012ee16cd60e7d31bb231d21a35a0b238da778409c8dcf568e002)
+fixed_r2=(child_ranks=(39, 44, 30, 44, 41, 46, 50, 46, 41, 44, 30, 44, 39),parent_child_union_ranks=(78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78),quotient_image_ranks=(10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10),per_arc_quotient_profile=(2, 2, 1, 1, 2, 2),same_for_all_r2=True,child_digest=9d3bcebf1a3ccbbf49a7da5cba8797774b5ba1b7ad6046078d97a3d1e39496ef)
+quotient_sections=(equal_pairs=0/78,union_rank_hist=((16, 1), (18, 10), (20, 67)),first_lift_difference=(0, 1, 18),normalized_gauge_ranks=(0, 8, 8, 8, 10, 10, 10, 10, 10, 10, 10, 10, 8),gauge_span_rank=54,first_gauge=(1, 8, '57329eafd0e2e4a133dfd9e9445374aa577fc6c38b995a28eed5849637a10484'),section_digest=dff1195245cb5c2f84f26a7aec5ba69427ad301a308f06cdbce367df5eea93f6)
+common_intersections=(all_child_dimension,quotient_rank,all_section_dimension,quotient_rank)=(14, 2, 0, 0)
+symmetry_record=(invariant,parent_plus_transform_rank,first_failure[,quotient_(plus,minus),matrix_digest])
+arc_reversal=(False, 70, (23, (5, 561436309700373999764945), 'c4fe847ed2581d93d369bddcd09f6b72021dfde250f33fe38e32dedc8453e365'))
+arc_reversal_localization=(pair,parent_rank,stabilized_rank,defect)=(((0, 1), 22, 22, 0), ((2, 3), 24, 26, 2), ((4, 5), 22, 22, 0))
+pure_digit_reflection=(False, 78, (0, (1, 1), '89e564dc53ac50713b8de10cb487e405ab3771bfd28ed601ef1ef69647e86ee9'))
+chamber_digit_reflection=(True, 68, None, (5, 5), '0802bf48249f5703f664376e464c473e69123e5ca303d08c5a92003f17829d77')
+digit_shift=(False, 78, (0, (0, 290867731318725547601048), '7ca36b3bdc7e6f9f30b969438c48cff416f0625ef652c808ab1d30adfc759985'))
+joint_arc_chamber_characters=None
+arc_stable_quotient=(stabilized_parent_rank,dimension,arc_record,chamber_record,joint_characters,child_image_ranks)
+arc_stable_quotient=(70, 8, (True, 70, None, (4, 4), '0846ee57c1c358382923511b1caf1bf2bd6cc94238813d1816b5f810407266b6'), (True, 70, None, (4, 4), 'fddc0e51be7ea5ce30e2c1f0a2951e74370473e6f5e7140df91f33e2513beadd'), (((1, 1), 2), ((1, -1), 2), ((-1, 1), 2), ((-1, -1), 2)), (8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8))
+child_symmetry=(chamber_matches,first_failure,arc_matches,first_failure)=(13, None, 0, (0, 39, 44))
+fourier_mode_record=(mode,quotient_rank,arc_even_rank,arc_odd_rank,cumulative_rank)
+digit_fourier_modes=((0, 0, 0, 0, 0), (1, 6, 3, 3, 6), (2, 6, 3, 3, 10), (3, 6, 3, 3, 10), (4, 6, 3, 3, 10), (5, 6, 3, 3, 10), (6, 6, 3, 3, 10), (7, 6, 3, 3, 10), (8, 6, 3, 3, 10), (9, 6, 3, 3, 10), (10, 6, 3, 3, 10), (11, 6, 3, 3, 10), (12, 6, 3, 3, 10))
+digit_fourier_reflection_pairs=(mode,rank_of_m_and_minus_m)=((0, 0), (1, 10), (2, 10), (3, 10), (4, 10), (5, 10), (6, 10))
+chamber_fourier_pair_eigenspaces=(mode,plus_rank,minus_rank,total)=((1, 5, 5, 10), (2, 5, 5, 10), (3, 5, 5, 10), (4, 5, 5, 10), (5, 5, 5, 10), (6, 5, 5, 10))
+arc_stable_fourier_modes=((0, 0, 0, 0, 0), (1, 4, 2, 2, 4), (2, 4, 2, 2, 8), (3, 4, 2, 2, 8), (4, 4, 2, 2, 8), (5, 4, 2, 2, 8), (6, 4, 2, 2, 8), (7, 4, 2, 2, 8), (8, 4, 2, 2, 8), (9, 4, 2, 2, 8), (10, 4, 2, 2, 8), (11, 4, 2, 2, 8), (12, 4, 2, 2, 8))
+arc_stable_fourier_pairs=((0, 0), (1, 8), (2, 8), (3, 8), (4, 8), (5, 8), (6, 8))
+common_child_quotient_chamber=(invariant,plus_rank,minus_rank)=(True, 1, 1)
+child_to_child=(containments,total,first_failure,pair_union_rank_hist)=(13, 169, (0, 1, 39, 44, 61), ((42, 1), (46, 2), (47, 2), (51, 4), (54, 3), (55, 2), (56, 8), (57, 4), (58, 3), (59, 4), (60, 4), (61, 4), (62, 7), (64, 8), (65, 4), (66, 7), (67, 2), (68, 8), (74, 1)))
+cumulative_child_union_ranks=(39, 61, 64, 74, 74, 76, 78, 78, 78, 78, 78, 78, 78)
+minimal_child_family_spanning_78=(size,count,witnesses,digest)=(3, 12, ((0, 1, 11), (1, 2, 11), (1, 3, 6), (1, 4, 11), (1, 6, 11), (1, 8, 11), (1, 10, 11), (1, 11, 12), (3, 5, 6), (4, 6, 8), (6, 7, 9), (6, 9, 11)), 'c1b620475e6630fc957707b9653ad18a0308b797d5e30b6c25e51b540958f3a2')
+child_plus_fixed_quotient_section_ranks=(39, 52, 34, 48, 45, 46, 58, 54, 49, 44, 38, 48, 47)
+common_static_coordinate_maps=(rank,digest)=((39, '2112569935dbc96e506347924f381eade33d70616789ae35ac20a7bbe29b8bd2'), (44, 'c70a5bf508dc8b06f68b0fbce4eef6fd9202b5c0cd2ba1b6bc70c5b7123f070f'), (30, '11deaa07acd8f73eea30abdc63a016d27fdfa4eabc6abcb90ddc6d4495af0cba'), (44, 'f45af3f2504b6c641c9368eac7348851b1c9f718334c274735ababa9e43da38a'), (41, '1f5a586750ee4c5daccf2fd7491c9b22cc43d6f4c8b25927598116ac21fd1e1b'), (46, '3a90ab06603208cb0c1ab5c8d85cd39a591a23a71c5945b0a86152555826e5c0'), (50, 'da1bc6bc04ac1e686bade280f3cdea68475659953f542df6614351041fe81d05'), (46, '2ddfeea6cdb57b9b19acf73cb77266ff4fa73ba8a8850df6274d7f1f801268e5'), (41, '56c7abb4d7957785adcee45e4c958d546efe0cf72d1108a2e5359c14385e758b'), (44, 'b226d1deca11bb543a878416e19989626c5ed28aa927c332064da7fcca7ad289'), (30, '5e1f6bb4ebe6e6035eaaad5e17d158e8c16dd8f77e7cad16f6878e7b95587c14'), (44, 'c2baed1b03640a011d4e3ce9a1b03b9df235d06f1ad04c00cff828e206d77d97'), (39, '27a21e21d8592a2396015e9fd7e99f6ec8530764e0808b1d28f2be3228baf826'))
+flat_support_hostile=(child_rank,parent_union_rank,quotient_rank,note)=(68, 68, 0, 'support_equals_flat_due_full_13_support')
+semantic_sha256=2cfe4a03f00b431ce1542cb23d96650a34819050d8f430559b531253ed7cf874
+interpretation=Q=F^78/Row(parent) is the same abstract ten-space for every r2, but canonical child lifts differ by parent-row gauges; a parent-plus-section basis is only a static ambient coordinatization
+transfer_gate=child-to-child containment is required for a child-only linear transfer; failure is not repaired by naming the common quotient
+scope=FINITE-EXACT static rowspace quotient on the audited pointed-P4 bank;no chronology,no complete address,no current,no H1,no ancestry,no LRC14
+all exact checks passed

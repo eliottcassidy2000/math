@@ -47,6 +47,27 @@
   `bcfdcf20a595e2e11bb0d70221624b8d435f34284609272c514ac8474f9aea64` /
   `0e003b5fedffd5382cf85a39f371ae600cf1e5ffabac2eccc8deb154916e20de` /
   `1d0dfe67dc8537728c3a71bed89c3109e9604130c4dcd24d56412f37d9fadf7d`.
+- `lrc_r5_third_digit_78_state_quotient_closure_probe_20260816.py` ->
+  matching `.out` plus `lrc_r5_third_digit_78_state_exact_bank_20260816.json`
+  [FINITE-EXACT STATIC QUOTIENT EXTRACTION; NO THEOREM PROMOTION].  From the
+  audited diagonal bank, the rank-68 parent defines the canonical quotient
+  `Q=F^78/R` of arc-graded dimension `2+2+1+1+2+2=10`; every fixed-`r2`
+  child surjects onto all ten dimensions.  The quotient is common, but its 13
+  normalized child sections are pairwise distinct and their parent-row gauge
+  differences span rank 54; all child spaces share only a rank-two quotient
+  image.  Arc reversal fails by exactly two middle-arc dimensions, while the
+  repaired quotient `F^78/(R+AR)` has dimension eight and four joint
+  arc/chamber characters of dimension two.  Coupled chamber/digit reflection
+  acts `5+5`; pure digit reflection and shift do not descend.  Every nonzero
+  Fourier mode has quotient rank six and each `{m,-m}` spans `Q` as `5+5`.
+  Only the 13 identity child containments hold; no pair spans 78, while exactly
+  12 triples minimally do.  Flat/support add quotient rank zero.  This is a
+  static envelope, not chronology/current/H1/ancestry/LRC.  Script/output/
+  certificate/semantic LF SHA-256:
+  `daa51f91c686a162ae2ca35ab7b4a50fe2997403952f1703060ba1746b770064` /
+  `f0844b03bd931a3da8ff8ad5e977688f8abea05e09bfa86c0643ffbfd320be1a` /
+  `472925c638de7ac90b1a7880184766f2e8acec0f8291e2c46cf747b37cd46712` /
+  `2cfe4a03f00b431ce1542cb23d96650a34819050d8f430559b531253ed7cf874`.
 
 - `lrc_r5_third_current_digit_pointed_root_difference_diagonal_bundle_probe_20260816.py`
   -> matching `.out` [FINITE-EXACT STATIC THIRD-CYLINDER RESPONSE SIDECAR;

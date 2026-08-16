@@ -43,7 +43,8 @@ owner `52/117`, rank4. THM-3518 pins `56,592` zero pairings; THM-3524 blocks
 Current-root `4/6;40/42`; source `17->4->6`. `r1 13/12`: carrier6,
 169 nonstationary `K`; P4/P7 `68/78`; `3/4=even/+middle`, tent8,
 `H1=0`, audited. `r2`: diag2197, unique1690, `I6`/projector130/169,
-cocycle live `0/1742`; 78-unions rank78. Typed bridges/LRC open.
+cocycle live `0/1742`; `Q10/Adef2/Q_A8`, chamber5+5, transfer self/min3.
+Typed bridges/LRC open.
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;
 HYP-8871 leaves `165` rows.  THM-2363/THM-2368 are sidecars; THM-2417--2894
