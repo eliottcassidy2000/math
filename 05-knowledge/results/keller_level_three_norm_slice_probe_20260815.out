@@ -1,4 +1,5 @@
 == finite-exact level-three Keller norm slices ==
+transported H artifact sha256=5a9459b3149e500c1b00b67bd804aa7e607de06bf4610c7cdf5fa26d41d74ce9
 transported H coefficient ledger: PASS
 slice (b,c)=(1,2)
   L=108*A**2 - 20*A + 1; disc_A(L)=-32

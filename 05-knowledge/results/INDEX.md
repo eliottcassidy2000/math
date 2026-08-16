@@ -141,6 +141,39 @@
   `e8eea838da1b4636c9796b71382e8a182e7ecfeb4ea17fef7eb265289889c502` /
   `b25ea10e40082d2a1ced9d7f85a6d3525dbffde8cfd4bdb7ee6a0fe3ca266ad4` /
   `07daaa2bd1f5fd09ff433e40703ecd7635b59aef520a68861a4fef3437b9a1b3`.
+- `lrc_relation_k4_xor_star_triangle_probe_20260815.py` -> matching `.out`
+  [FINITE-EXACT STRUCTURAL SIDECAR TO RESERVED THM-3479; NOT CANON].  The six
+  equal-`-27` relation slots are modelled as the edges of `K4`, partitioned
+  into opposite pairs `(c1,q2),(c2,q3),(c3,q4)` by the three nonzero XOR
+  differences; `H,q1,q5` colour the matching axes.  Inside `S4`, the exact
+  relation stabilizer is the translation `V4`, and the nine coordinates split
+  as six trivial lines plus one copy of each nontrivial V4 character.  Signs
+  of the three opposite-edge differences select one of four stars or four
+  triangles.  All six c/q pairings classify U_full as TRIANGLE and U_clock,
+  q27, q51 as STAR; an interlacing hostile realizes both types.  The current
+  is diagonal nonzero mod 13, but sign parity is independent.  This is a
+  three-edge selector on K4, not a tournament orientation, endpoint current,
+  or causal explanation of the two-transplant split.  Script/output/semantic
+  LF SHA-256:
+  `c4ff7e3437e59416f91547091a8a8001a1ae0c4a405177cd0fc9f616ae99b623` /
+  `e55ea0c63df8f73a5631d3092b12961284e7f294c5aed0848c42ecd127aaba5c` /
+  `412de3695927f9d71a0eb165a24447a7f36b1e2d8090361d378ed739670dea0a`.
+- `keller_level_three_norm_slice_probe_20260815.py` -> matching `.out`
+  [CONDITIONAL ALGEBRAIC SYNTHESIS + FINITE-EXACT THREE-SLICE EVIDENCE;
+  NOT CANON].  The odd-degree norm-product discriminant recursion gives
+  `[Delta_3]=[-L N(H)]=[-H N^2(L)]`.  On the exact slices
+  `(b,c)=(1,2),(3,1),(1,3)`, direct multiplication determinants and
+  independent resultants agree on `N(H)=K/(2^e L^7)`, with
+  `e=21,35,35`; every `K` is irreducible of degree 86 and coprime to the
+  specialized `LH`.  Hence each slice has `[Delta_3]=[-2K]` and the old
+  `L` exponent cancels to the even value `-6`.  The transported 361-term
+  `H` artifact is raw-hash pinned before deserialization.  The global
+  numerator `J`, global pole order, divisor multiplicity, degree-27 block
+  separability, and every JC classification consequence remain OPEN.
+  Ordinary/optimized/stored outputs are byte-identical.  Script/output LF
+  SHA-256:
+  `f2b8725341caea3bc2235dea9b69e7d33c5870a89db96a8604ef4521b2154659` /
+  `1086ccb03a69f1c92eb945a6ad0118976ae7f6ef2763d4e10e3973256a53d503`.
 - `lrc_private_support_7x13_incidence_h1_probe_20260815.py` -> matching
   `.out` [FINITE-EXACT STRUCTURAL SIDECAR TO PROVED THM-3473].  The
   private-support two-section has eight vertices and thirteen

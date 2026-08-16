@@ -128,7 +128,10 @@ Q(A)[w]/(L(A,b_0,c_0)w^3+(4-3b_0c_0)w-2c_0)
 
 using the exact inverse graph from THM-2576.  The determinant of
 multiplication by `H(q(w))` is `N(H)`; no degree-27 eliminant or discriminant
-is expanded.  On every slice the same quotient algebra first rederives the
+is expanded.  The transported pickle is pinned by its raw SHA-256
+`5a9459b3149e500c1b00b67bd804aa7e607de06bf4610c7cdf5fa26d41d74ce9`
+before deserialization, and its 361-term coefficient ledger is pinned
+independently.  On every slice the same quotient algebra first rederives the
 proved control `N(L)=H/(64L)`, and the multiplication determinant for `N(H)`
 is checked against the independent resultant of the reduced element with the
 monic cubic.
@@ -192,3 +195,8 @@ Reproduce with
 python3 04-computation/keller_level_three_norm_slice_probe_20260815.py
 python3 -O 04-computation/keller_level_three_norm_slice_probe_20260815.py
 ```
+
+The ordinary and optimized replays are byte-identical to the stored output.
+LF-normalized script/output SHA-256:
+`f2b8725341caea3bc2235dea9b69e7d33c5870a89db96a8604ef4521b2154659` /
+`1086ccb03a69f1c92eb945a6ad0118976ae7f6ef2763d4e10e3973256a53d503`.

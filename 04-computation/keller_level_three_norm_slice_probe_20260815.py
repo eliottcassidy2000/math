@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import hashlib
 import pickle
+from pathlib import Path
 
 import sympy as sp
 
@@ -28,10 +29,17 @@ def require(condition: bool, message: str) -> None:
 A, w = sp.symbols("A w")
 a, b, c = sp.symbols("a b c")
 
-with open(
-    "05-knowledge/results/keller_L2_polynomial_opus_20260728.pkl", "rb"
-) as handle:
-    H = pickle.load(handle)
+ROOT = Path(__file__).resolve().parents[1]
+H_ARTIFACT = ROOT / "05-knowledge/results/keller_L2_polynomial_opus_20260728.pkl"
+H_ARTIFACT_SHA256 = (
+    "5a9459b3149e500c1b00b67bd804aa7e607de06bf4610c7cdf5fa26d41d74ce9"
+)
+H_ARTIFACT_BYTES = H_ARTIFACT.read_bytes()
+require(
+    hashlib.sha256(H_ARTIFACT_BYTES).hexdigest() == H_ARTIFACT_SHA256,
+    "transported H pickle artifact changed",
+)
+H = pickle.loads(H_ARTIFACT_BYTES)
 
 H_poly = sp.Poly(H, a, b, c)
 H_ledger = "\n".join(
@@ -225,6 +233,7 @@ def slice_norm(b_value: int, c_value: int, denominator_two_exponent: int) -> Non
 
 
 print("== finite-exact level-three Keller norm slices ==")
+print(f"transported H artifact sha256={H_ARTIFACT_SHA256}")
 print("transported H coefficient ledger: PASS")
 slice_norm(1, 2, 21)
 slice_norm(3, 1, 35)
