@@ -15,11 +15,12 @@ These are the two independent bits
     source multiplicity: singleton/doubleton.
 
 Every state is an oriented cut S -> S^c on three roots, hence a tournament
-with one missing edge.  The six nonempty proper cuts form three complement
-pairs; the owner factor removes the middle pair ``{6},{0,12}`` and leaves a
-four-state Boolean square.  This script retains that square before
-integration and tests its Walsh x F_13 spectrum, tensor rank, marginals, and
-literal endpoint guards.
+with one missing edge.  The six nonempty proper cuts are the combinatorial
+completion.  The source actually realizes the five-state Gray path
+``{0},{0,6},{6},{6,12},{12}`` and globally omits ``{0,12}``; the owner factor
+then excludes the realized centre ``{6}``, leaving a four-state Boolean
+square.  This script retains that square before integration and tests its
+Walsh x F_13 spectrum, tensor rank, marginals, and literal endpoint guards.
 
 This is a finite-exact one-host candidate.  The Boolean square is a source
 support refiner, not an exact THM-2334 address, a U_clock chronology, or a row
@@ -50,6 +51,15 @@ EXPECTED_STATE_MEASURES = (
     345867129050087785140,
     345867129050087785140,
 )
+EXPECTED_FULL_PATH_SEGMENTS = (3, 12, 3, 12, 3)
+EXPECTED_FULL_PATH_TOGGLES = (6, 0, 12, 6)
+EXPECTED_FULL_PATH_MEASURES = (
+    345867129050087785140,
+    4150405548601053421680,
+    691734258100175570280,
+    4150405548601053421680,
+    345867129050087785140,
+)
 EXPECTED_RANKS = (4, 4, 3)
 EXPECTED_SHAPES = (
     (52, 1, 3, 12, 36),
@@ -77,7 +87,7 @@ EXPECTED_DIGESTS = (
     "1ce6928765e5433f064086a6ca945810e00878b9a8ce436dfc3c5bb369920b2b",
     "bbb69d0cc29652284cb51c292a5e9de71d8c5809dcfd5e73f4c3bf5f991544d6",
 )
-EXPECTED_SEMANTIC_SHA256 = "d2fa0aacbda9dd90f6cd220424d3a878e7969056397e7a69c38db9433237f54c"
+EXPECTED_SEMANTIC_SHA256 = "bae28345b0b1aea35b244bfbf04123414f0c8fbf9eeca98e39d2b94dd6d107ec"
 
 P = 13
 V = 4
@@ -89,6 +99,15 @@ STATE_SUBSETS = (
     frozenset((12,)),
     frozenset((6, 12)),
 )
+FULL_PATH_SUBSETS = (
+    frozenset((0,)),
+    frozenset((0, 6)),
+    frozenset((6,)),
+    frozenset((6, 12)),
+    frozenset((12,)),
+)
+GLOBALLY_MISSING_CUT = frozenset((0, 12))
+OWNER_EXCLUDED_REALIZED_CUT = frozenset((6,))
 WALSH_SIGNS = tuple(
     tuple(
         -1 if ((character[0] * state[0] + character[1] * state[1]) & 1)
@@ -161,7 +180,7 @@ def cut_certificate():
         for size in (1, 2)
         for subset in itertools.combinations(SPINE, size)
     )
-    excluded = (frozenset((6,)), frozenset((0, 12)))
+    excluded = (OWNER_EXCLUDED_REALIZED_CUT, GLOBALLY_MISSING_CUT)
     require(set(all_cuts) == set(STATE_SUBSETS) | set(excluded),
             ("six-cut family", all_cuts))
     complement = tuple(
@@ -192,6 +211,43 @@ def cut_certificate():
                 ("cut tournament census", subset, arcs))
         records.append((tuple(sorted(subset)), arcs, (missing, one_way, two_way)))
 
+    full_segments = {subset: 0 for subset in FULL_PATH_SUBSETS}
+    full_measures = {subset: 0 for subset in FULL_PATH_SUBSETS}
+    compressed_path = []
+    source_boundaries = C.context()["source_boundaries"]
+    for left, right in zip(source_boundaries, source_boundaries[1:]):
+        support = source_support(left)
+        require(support in full_segments,
+                ("source support outside five-state path", left, right, support))
+        if not compressed_path or compressed_path[-1] != support:
+            compressed_path.append(support)
+        full_segments[support] += 1
+        full_measures[support] += right - left
+    require(tuple(compressed_path) == FULL_PATH_SUBSETS,
+            ("ordered source support path", compressed_path))
+    path_toggles = tuple(
+        next(iter(left ^ right))
+        for left, right in zip(compressed_path, compressed_path[1:])
+        if len(left ^ right) == 1
+    )
+    require(len(path_toggles) == len(compressed_path) - 1
+            and path_toggles == EXPECTED_FULL_PATH_TOGGLES,
+            ("source path is not the pinned Gray path", path_toggles))
+    full_path_record = tuple(
+        (tuple(sorted(subset)), full_segments[subset], full_measures[subset])
+        for subset in FULL_PATH_SUBSETS
+    )
+    require(tuple(full_segments[subset] for subset in FULL_PATH_SUBSETS)
+            == EXPECTED_FULL_PATH_SEGMENTS,
+            ("full source path segments", full_path_record))
+    require(tuple(full_measures[subset] for subset in FULL_PATH_SUBSETS)
+            == EXPECTED_FULL_PATH_MEASURES,
+            ("full source path measures", full_path_record))
+    require(sum(full_measures.values()) == C.JOINT_COORDINATE,
+            ("full source path measure", full_path_record))
+    require(GLOBALLY_MISSING_CUT not in full_segments,
+            "globally missing cut entered source path")
+
     boundaries = sorted(
         set(C.context()["source_boundaries"])
         | {0, C.JOINT_COORDINATE,
@@ -210,11 +266,14 @@ def cut_certificate():
             ("owner-cell measure", measures))
     return (
         tuple(records),
-        tuple(tuple(sorted(subset)) for subset in excluded),
+        (tuple(sorted(GLOBALLY_MISSING_CUT)),
+         tuple(sorted(OWNER_EXCLUDED_REALIZED_CUT))),
         complement,
         WALSH_SIGNS,
         tuple(segments),
         tuple(measures),
+        full_path_record,
+        path_toggles,
     )
 
 
@@ -596,7 +655,8 @@ def main() -> None:
     print("== r=5 U_full owner-node Boolean-square refiner probe ==")
     print(f"parent=(sha256={PARENT_SHA256},semantic={C.EXPECTED_SEMANTIC_SHA256})")
     print(f"states=(labels={STATE_LABELS},source_subsets={tuple(tuple(sorted(s)) for s in STATE_SUBSETS)},complement_XOR=3)")
-    print(f"six_cut_certificate=(excluded_middle_pair={cut_record[1]},each_cut_census=(missing=1,one_way=2,two_way=0))")
+    print(f"six_cut_completion=(global_missing={cut_record[1][0]},owner_excluded_realized={cut_record[1][1]},each_cut_census=(missing=1,one_way=2,two_way=0))")
+    print(f"full_source_Gray_path=(subset,segments,measure)={cut_record[6]};toggles={cut_record[7]}")
     print(f"owner_cell_state_partition=(segments={cut_record[4]},measures={cut_record[5]},total={sum(cut_record[5])})")
     print(f"field=(prime={C.JOINT_PRIME},root={C.JOINT_ROOT},zeta13={ctx['zeta']})")
     print(f"work_counts={scalar_counts};state_segment_counts={state_counts}")

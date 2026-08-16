@@ -1,4 +1,4 @@
-# Six directed cuts collapse to a four-state Boolean square on the U_full owner cell
+# A five-state source Gray path restricts to a four-state Boolean square
 
 **Status: FINITE-EXACT CANDIDATE, INDEPENDENT AUDIT PENDING.**  Replacing the
 collapsed seven-cell coordinate of MISTAKE-417 by the actual source-support
@@ -21,7 +21,7 @@ creating tensor rank.  The least-used surviving sidecar is the support state
 of the source service itself.  It varies inside owner cell zero and is not a
 function of the old seven-cell label.
 
-## The three-root spine and all six cut states
+## The six-cut completion and the five-state source path
 
 On every exact source segment, `supp(V)` is the complement of `supp(U)`.  The
 only roots ever entering `supp(U)` are
@@ -37,10 +37,11 @@ For any nonempty proper subset `S` of `R`, orient every cross-cut pair from
 one missing edge, two one-way edges, zero two-way edges.
 ```
 
-Thus the natural size-six object is not a six-vertex tournament.  It is the
-family of all six oriented cuts of a three-vertex graph, equivalently six
-three-vertex tournaments with one edge deleted.  Complement reverses every
-arc and pairs the six states into three antipodal pairs:
+Thus the natural *combinatorial completion* has size six.  It is not a
+six-vertex tournament, but the family of all six oriented cuts of a
+three-vertex graph, equivalently six three-vertex tournaments with one edge
+deleted.  Complement reverses every arc and pairs these abstract states into
+three antipodal pairs:
 
 ```text
 {0}       <-> {6,12},
@@ -53,10 +54,34 @@ or both-way edges” prompt.  There are no both-way edges here.  The binary
 observable is membership across a source-service cut; missing edges are
 within one side of that cut.
 
+The source does **not** realize all six cuts.  Its compressed support sequence
+over the full common base is the exact Gray path
+
+```text
+{0} -> {0,6} -> {6} -> {6,12} -> {12},
+```
+
+whose single-root toggle word is
+
+```text
+(6,0,12,6).
+```
+
+The sixth cut `{0,12}` is globally absent.  In units of the whole circle, the
+five path-state measures are
+
+```text
+(1,12,2,12,1)/28.
+```
+
+This distinguishes three levels that must not be conflated: six abstract
+nontrivial cuts, five physically realized source states, and the four states
+visible after the owner restriction.
+
 ## Why the owner sees exactly four states
 
-Inside `U_full` owner cell zero, the middle support pair is absent.  The four
-visible states are
+Inside `U_full` owner cell zero, the physically realized centre `{6}` is
+absent.  The four visible states are
 
 ```text
 state  bits (component,multiplicity)  source subset
@@ -77,15 +102,17 @@ so the two surviving antipodal pairs form a genuine Boolean square.  This is
 not a cosmetic `V_4` label: both bits are defined pointwise by intrinsic
 Boolean observables before integration.
 
-The excluded pair is exactly
+The owner-excluded realized state is exactly
 
 ```text
-{6}, {0,12},
+{6},
 ```
 
-which lives in the owner-inactive middle region.  Hence the passage from six
-cuts to four states is a geometric restriction, not deletion chosen to make
-a square.
+which lives in the owner-inactive middle region.  Its complement `{0,12}` was
+already absent on the full source circle; the owner does not remove it.
+Hence the passage is `six-cut completion -> five-state physical path ->
+four-state owner square`, not deletion of a complement pair chosen to make a
+square.
 
 The exact owner-cell measures are strikingly balanced:
 
@@ -188,8 +215,9 @@ coordinate after centering, removes the corresponding Walsh axis.
 
 The object should not be called a tournament of size four.  Its four vertices
 are *states of partial tournaments* on three roots.  The correct algebra on
-the four states is the Boolean square; the correct six-object extension is
-the full family of nontrivial directed cuts.
+the four states is the Boolean square; the six-object extension is a
+combinatorial cut completion, while the actual unrestricted source object is
+the five-vertex Gray path above.
 
 ## Remaining frontier
 
@@ -200,10 +228,12 @@ row exclusion.  The next minimal tests are:
 
 1. retain one inverse-ancestry sheet or exact-address sidecar together with
    the four states and test whether rank three and the fixed class survive;
-2. determine whether the excluded middle complement pair can be transported
-   by a later `U_clock` owner without changing temporal copy; and
-3. only then ask whether the six-cut family has a lawful recurrence or tree
-   action.  No Fibonacci or ternary-tree identification is currently proved.
+2. determine whether the realized centre `{6}` can be transported by a later
+   `U_clock` owner without changing temporal copy, and separately whether the
+   missing cut `{0,12}` can ever be generated; and
+3. only then ask whether the toggle palindrome `(6,0,12,6)` has a lawful
+   recurrence or tree action.  No Fibonacci or ternary-tree identification is
+   currently proved.
 
 ## Reproduction
 
@@ -213,4 +243,4 @@ python -B -O 04-computation/lrc_r5_ufull_owner_node_boolean_square_refiner_probe
 ```
 
 Normal and optimized transcripts are byte-identical.  The semantic digest is
-`d2fa0aacbda9dd90f6cd220424d3a878e7969056397e7a69c38db9433237f54c`.
+`bae28345b0b1aea35b244bfbf04123414f0c8fbf9eeca98e39d2b94dd6d107ec`.
