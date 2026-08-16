@@ -46,6 +46,22 @@ def digest_fraction(value: Fraction) -> str:
     return hashlib.sha256(payload).hexdigest()
 
 
+def nonzero_scalar_multiple(actual, model, variables, label: str):
+    """Return c when actual=c*model in Q[variables], and fail otherwise."""
+
+    actual_poly = sp.Poly(actual, *variables, domain=sp.QQ)
+    model_poly = sp.Poly(model, *variables, domain=sp.QQ)
+    require(actual_poly.monoms() == model_poly.monoms(), f"{label}: support changed")
+    ratios = {
+        actual_poly.coeff_monomial(monomial) / model_poly.coeff_monomial(monomial)
+        for monomial in model_poly.monoms()
+    }
+    require(len(ratios) == 1, f"{label}: coefficients are not a scalar multiple")
+    scalar = next(iter(ratios))
+    require(scalar != 0, f"{label}: scalar vanished")
+    return scalar
+
+
 ROOT = Path(__file__).resolve().parents[1]
 GLOBAL_PROBE = ROOT / "04-computation/keller_level_three_global_norm_probe_20260816.py"
 H_PATH = ROOT / "05-knowledge/results/keller_L2_polynomial_opus_20260728.pkl"
@@ -62,6 +78,7 @@ require(
 )
 J = namespace["J"]
 require(namespace["coefficient_hash"](J) == J_LEDGER_SHA256, "global J ledger changed")
+sp = namespace["sp"]
 
 H = pickle.loads(H_PATH.read_bytes())
 H_poly = namespace["sp"].Poly(H)
@@ -127,17 +144,27 @@ def packet(
     expected_m: int,
     expected_top_coefficient: int,
 ) -> dict[str, object]:
+    require(expected_m % 3 == 0, f"{name}: packet requires m divisible by 3")
+    require(0 <= expected_m <= expected_e, f"{name}: packet exponent range failed")
     lambda_values = {monomial: monomial[0] - monomial[2] for monomial in terms}
     beta_values = {
         monomial: monomial[0] - monomial[1] - 2 * monomial[2]
         for monomial in terms
     }
+    gamma_values = {
+        monomial: monomial[0] - monomial[1] - 5 * monomial[2]
+        for monomial in terms
+    }
     lambda_max = max(lambda_values.values())
     lambda_min = min(lambda_values.values())
     beta_min = min(beta_values.values())
+    gamma_min = min(gamma_values.values())
     top = {m: c for m, c in terms.items() if lambda_values[m] == lambda_max}
     low = {m: c for m, c in terms.items() if lambda_values[m] == lambda_min}
     small = {m: c for m, c in terms.items() if beta_values[m] == beta_min}
+    gamma = {m: c for m, c in terms.items() if gamma_values[m] == gamma_min}
+    z_degree = max(monomial[2] for monomial in terms)
+    z_top = {m: c for m, c in terms.items() if m[2] == z_degree}
 
     require(lambda_max == expected_e, f"{name}: top lambda weight changed")
     require(
@@ -147,15 +174,61 @@ def packet(
     require(lambda_min == -expected_e, f"{name}: opposite lambda weight is not -e")
     require(len(low) == 1, f"{name}: opposite lambda face is not monomial")
     expected_low_monomial = next(iter(low))
+    renewal_m = 3 * expected_e - 2 * expected_m
     require(
-        expected_low_monomial[0] == 0 and expected_low_monomial[2] == expected_e,
+        expected_low_monomial == (0, renewal_m, expected_e),
         f"{name}: opposite lambda face is not y^r*z^e; term={expected_low_monomial}",
     )
     small_p, small_q, small_norm = gaussian_small_value(small)
     require(small_norm != 0, f"{name}: small conjugate resultant vanished")
+    xx, yy, zz = sp.symbols("xx yy zz")
+    small_factor = sp.factor(
+        sum(coefficient * yy**j * zz**k for (i, j, k), coefficient in small.items())
+    )
+    z_top_factor = sp.factor(
+        sum(coefficient * xx**i * yy**j for (i, j, k), coefficient in z_top.items())
+    )
+    gamma_factor = sp.factor(
+        sum(coefficient * xx**i * yy**j * zz**k for (i, j, k), coefficient in gamma.items())
+    )
+    beta_model = (
+        yy**renewal_m
+        * zz ** (expected_e - expected_m)
+        * (yy**2 + 27 * zz) ** (2 * expected_m // 3)
+        * (yy**2 + 108 * zz) ** (expected_m // 3)
+    )
+    z_top_model = (
+        xx ** (2 * expected_e - 4 * expected_m // 3)
+        * zz ** (2 * expected_e - 2 * expected_m // 3)
+    )
+    gamma_model = (
+        zz**expected_e
+        * (27 * xx**2 * zz + yy**3) ** (expected_e - 2 * expected_m // 3)
+    )
+    beta_scalar = nonzero_scalar_multiple(
+        small_factor, beta_model, (xx, yy, zz), f"{name}: beta face"
+    )
+    z_top_scalar = nonzero_scalar_multiple(
+        z_top_factor * zz**z_degree,
+        z_top_model,
+        (xx, yy, zz),
+        f"{name}: z-top face",
+    )
+    gamma_scalar = nonzero_scalar_multiple(
+        gamma_factor, gamma_model, (xx, yy, zz), f"{name}: gamma face"
+    )
+
+    require(beta_min == -5 * expected_e + 2 * expected_m, f"{name}: beta weight changed")
+    require(
+        z_degree == 2 * expected_e - 2 * expected_m // 3,
+        f"{name}: z degree changed",
+    )
+    require(gamma_min == -8 * expected_e + 2 * expected_m, f"{name}: gamma weight changed")
 
     next_e = expected_e - lambda_min - beta_min
     next_m = expected_low_monomial[1]
+    require(next_e == 7 * expected_e - 2 * expected_m, f"{name}: matrix e-step changed")
+    require(next_m == renewal_m, f"{name}: matrix m-step changed")
     low_coefficient = low[expected_low_monomial]
     raw_next_coefficient = (
         Fraction(16**expected_e)
@@ -175,6 +248,16 @@ def packet(
         "small_p": small_p,
         "small_q": small_q,
         "small_norm": small_norm,
+        "small_factor": small_factor,
+        "beta_scalar": beta_scalar,
+        "z_degree": z_degree,
+        "z_top_terms": len(z_top),
+        "z_top_factor": z_top_factor,
+        "z_top_scalar": z_top_scalar,
+        "gamma_min": gamma_min,
+        "gamma_terms": len(gamma),
+        "gamma_factor": gamma_factor,
+        "gamma_scalar": gamma_scalar,
         "next_e": next_e,
         "next_m": next_m,
         "raw_next_coefficient": raw_next_coefficient,
@@ -189,6 +272,31 @@ packets = [
     packet("H", H_terms, 7, 3, H_TOP_COEFFICIENT),
     packet("J", J_terms, 43, 15, J_TOP_COEFFICIENT),
 ]
+
+EXPECTED_FACE_HASHES = {
+    "L": (
+        "e43868d45dc09e7bcb8e00230b853462cac5fc867b9ab868c6299051082698b0",
+        "776084fe3906c1280e8eae27292fbc3967e204a10b0fb0c0712e2235d631cfab",
+    ),
+    "H": (
+        "6dbe7847c8e8b46b01f44688222712e9732f3eec021e9955b32b73be148a75a1",
+        "fa77606cba17ed3cb90053bd355c249d73eb3259ea407adbce34636aa4341b81",
+    ),
+    "J": (
+        "14890d5df0a74de980b2c416e60ec4ebb9f45f24bb1074c94aeb28185b6d58ef",
+        "fa3ed2569db09620551a553a22c8392e193ba12ec8783ad66456c3af9fe6f49f",
+    ),
+}
+for row in packets:
+    expected_small_hash, expected_raw_hash = EXPECTED_FACE_HASHES[row["name"]]
+    require(
+        digest_fraction(row["small_norm"]) == expected_small_hash,
+        f"{row['name']}: quadratic face norm ledger changed",
+    )
+    require(
+        digest_fraction(row["raw_next_coefficient"]) == expected_raw_hash,
+        f"{row['name']}: transformed face coefficient ledger changed",
+    )
 
 # The first two rows independently calibrate the tropical product against
 # the already proved exact norm normalizations.
@@ -350,6 +458,12 @@ for prime in (101, 103, 107):
     require(norm_j != 0 and g_at_q != 0, f"p={prime}: finite G sheet vanished")
     finite_controls.append((prime, norm_j, l_at_q, g_at_q, cubic_discriminant))
 
+require(
+    finite_controls
+    == [(101, 39, 16, 27, 56), (103, 89, 12, 98, 91), (107, 51, 38, 27, 14)],
+    "finite-sheet control ledger changed",
+)
+
 
 print("== fixed Keller tropical norm-face transform ==")
 print(f"J coefficient-ledger sha256={J_LEDGER_SHA256}")
@@ -364,6 +478,15 @@ for row in packets:
         f"lambda_min={row['lambda_min']}; beta_min={row['beta_min']}; "
         f"low=y^{row['next_m']}*z^{row['e']}; "
         f"small_terms={row['small_terms']}; small_norm_sha256={digest_fraction(small_norm)}"
+    )
+    print(f"  beta_face_factor={row['small_factor']}")
+    print(
+        f"  z_top: degree={row['z_degree']}; terms={row['z_top_terms']}; "
+        f"coefficient_factor={row['z_top_factor']}"
+    )
+    print(
+        f"  gamma_face: min={row['gamma_min']}; terms={row['gamma_terms']}; "
+        f"factor={row['gamma_factor']}"
     )
     print(
         f"  transform -> (e_next,m_next)=({row['next_e']},{row['next_m']}); "
@@ -390,6 +513,7 @@ print(
     f"hence v_L(Norm(G))=-{packets[2]['next_e']}"
 )
 print("hostile verdict: predicted (259,87) is REFUTED; exact next pair is (271,99)")
-print("general one-step law: e_next=e-lambda_min-beta_min; m_next=opposite-face y exponent")
+print("five-face one-step law: (e_next,m_next)=(7e-2m,3e-2m)")
+print("conditional iteration: u_(n+2)=5u_(n+1)+8u_n for u=e and u=m")
 print("scope: fixed norm orbit only; no irreducibility, all-level induction, or general JC claim")
 print("all exact checks passed")
