@@ -33,7 +33,8 @@ Laurent claim was checked directly against THM-3383's membership criterion.
 | prime-power carry face | first Euclidean triple at `d=a p^k+1` | PROVED complete singleton ledger for every `2<=a<p` |
 | binary-submask compiler | `NP_2(A_N^(N+1))` intersect odd reset | PROVED all `2^s p^k` windows with `2<=2^s<p` |
 | all-divisor digit compiler | exact positive `F` suffix intersect THM-3161 `G` hull | PROVED pair barcode for every `p|d-1`; 33/38 residuals close |
-| seven-exit factorial boundary | first Euclidean triple plus divisor digit ledgers | THM-3478 dual-exact closure through `r=2603`; first survivor `d=2606` has four degree addresses |
+| nondivisor residue lift | raw digit vertex `-> rho_p ->` actual Newton vertex | THM-3483 PROVED; all five old packets and all 41 new rho rows close pair-only |
+| exact factorial boundary | seven exits, divisor digit ledgers, then rho-admissible pair polygons | independent exact closure through `r=3998`; `d=4001` first untested |
 
 ## 3. First alternation: factorial lowering becomes Keller flux
 
@@ -353,7 +354,8 @@ the useful scale.
 The adaptive observer can be made exact for every divisor prime, not only a
 one-digit prime power.  For `p|N=d-1`, the first resonant row has a strict
 two-plateau digit recursion (an odd-anchor recursion at `p=2`); every possible
-positive-hull vertex is an actual coefficient unit.  Its unresolved Kurepa
+positive-hull vertex has exactly its raw valuation, with unit normalized
+residual.  Its unresolved Kurepa
 prefix has nonpositive slope, while THM-3161's second-row polygon has only
 positive slopes.  Their full common ledger is therefore computed from digit
 weights alone, with no large coefficients.  Two implementations apply this
@@ -379,7 +381,7 @@ global digest
 ```
 
 Returning to the cheap structural observer, two formula-only implementations
-of the divisor compiler close `d=2601,...,2605`.  The first survivor is
+of the divisor compiler close `d=2601,...,2605`.  Its first residual is
 
 ```text
 d=2606,       r=2604,       {521,1042,1563,2084},         (15c)
@@ -387,9 +389,64 @@ d=2606,       r=2604,       {521,1042,1563,2084},         (15c)
 
 with common extension digest
 `602f0fac54c487114457683a3264d2a095a7f048f9a0b3769332d3ead0e61289`.
-Thus the contiguous exact-support quadratic boundary is now `r=2603`.
+At this stage the contiguous exact-support quadratic boundary was `r=2603`.
 The four numbers in (15c) are necessary factor-degree addresses, not factors;
-they are the next honest target rather than evidence of a bad moment window.
+they were the next honest target rather than evidence of a bad moment window.
+
+The five earlier packets also reveal a structural replacement for their
+expensive cleanup.  For
+
+```text
+A_n^d(v)=sum_j C(n,j)(2j)!Z_(n,j)v^j,
+```
+
+and a prime `p` not dividing `d`, divide `Z_(n,j)` by `d^(n-j)` modulo `p`.
+Lucas plus one length-`p` rising-product block reduce the result to the finite
+table
+
+```text
+rho_p(n,j,d)=sum_(ell=0)^((n-j) mod p)
+ C((n-j) mod p,ell)(-d^(-1))^ell(2(j mod p)+1)_ell.       (15d)
+```
+
+If rho is nonzero at every extreme raw Kummer--Legendre vertex, every such
+vertex has exactly its raw valuation (its normalized residual is a unit), and
+the whole raw polygon is exact.
+Adaptive primes `7,13,7,13,7` then close the five packets pair-only, without
+the Euclidean row or large coefficients.  The first sharp hostile is
+`A_2^4` at `p=5`: rho vanishes at the raw constant vertex, raises it, and
+creates a new negative edge.  Thus the residue is a load-bearing sidecar, not
+a cosmetic checksum.
+
+This loops directly back to the Jacobian effectivity module.  In both lanes a
+local unit test changes the response species:
+
+```text
+JC: transition multiplier zero / unit -> finite bars / Prüfer rays;
+FC: vertex residue zero / unit        -> lifted hull / exact digit hull. (15e)
+```
+
+Multiplicity, stage dimensions, or raw digit weights alone miss that phase
+change.  Retaining the native operation and its unit sidecar is the common
+reframing that made both advances possible.
+
+The residue sidecar then scales.  Two independent exact implementations apply
+the seven exits, every divisor-place pair ledger, and only rho-admissible
+nondivisor polygons to all `1395` rows `2606<=d<=4000`.  The typed census is
+
+```text
+934 inherited exits;
+461 residuals = 420 divisor closures + 41 rho closures + 0 survivors. (15f)
+```
+
+The rho killers are `3,5,7,11,13,17`, with histogram
+`6,1,17,9,6,2`; twenty tempting but inadmissible profiles are recorded and
+never used.  Their full common semantic digest is
+`95d1c233d59d00c38ce456fa7c5f5e248414e01b5ba9dc2ae9f61725d6c19dbd`.
+In particular, the packet (15c) dies already at `p=3`: without its
+denominator-`2187` block the maximum address is `417`, while using that block
+starts at `2187`.  The exact-support quadratic boundary is therefore
+`r=3998`; `d=4001` is the first untested row, not a survivor.
 
 ## 8. Typed bridge and next work
 
@@ -408,13 +465,12 @@ The honest joint carrier is
   response length.
 - **Cheapest next tests:** solve the degree-at-most-four mixed-character
   Keller/HFC joint ideal; classify anti-tangent polynomial edge pairs on which
-  both `kappa` and its curvature jet descend; and audit the proposed
-  nondivisor residue-table lift before attacking the four `d=2606` addresses
-  with another multi-hour coefficient scan.
+  both `kappa` and its curvature jet descend; and test `d=4001` with the
+  divisor-plus-residue observer before any large-coefficient scan.
 
 The main reframing is deliberately modest: the frontiers communicate through
 paired native operations and their response modules, not through a common
 scalar discriminant.  That produced one all-degree restricted theorem, one
 new current/topology passport, a complete Jordan/Prüfer effectivity response,
-and a `105`-step exact factorial boundary advance without converting any of
-them into a full-conjecture claim.
+and a `1500`-step exact factorial boundary advance, from `r=2498` to
+`r=3998`, without converting any of them into a full-conjecture claim.

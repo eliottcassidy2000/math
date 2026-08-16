@@ -27,28 +27,6 @@ Format per entry:
   from the ambient cube size, audit the smallest cube separately before
   turning a stable congruence into a universal spectral claim.
 
-## MISTAKE-410 (2026-08-15, concurrent THM-3482 reservation) -- a clean preflight did not lock the theorem namespace
-
-- **What failed:** commit `01f3948232` reserved `THM-3482` for the private-count
-  gradient weighted-spectral candidate while the factorial lane was completing
-  its own clean history scan.  The later commit `b79304f740` then published an
-  honest factorial `THM-3482` empty stub, producing a duplicate YAML theorem ID
-  across the concurrent refs.
-- **Minimal witness / first failed implication:** after both commits became
-  visible, the ref universe contained both
-  `THM-3482-private-count-gradient-weighted-spectral...` and
-  `THM-3482-factorial-nondivisor-residue-digit-pair-compiler.md`.  Therefore a
-  negative object/content scan before publication did not imply that the ID
-  remained free during the fetch/push race.
-- **Repair / strongest survivor:** the earlier weighted-spectral reservation
-  keeps `THM-3482`; the later factorial empty stub is renumbered to `THM-3483`
-  before any theorem promotion, proved dependency, or companion artifact is
-  added.  No mathematical claim changes.
-- **Reusable rule:** clean preflight and an honest empty stub reduce collision
-  risk but are not a namespace lock.  On the first post-push fetch, compare the
-  new ID across every live ref; publication order keeps the earlier claim and
-  the later empty reservation must move before expansion.
-
 ## MISTAKE-409 (2026-08-15, 7x13 private-support sidecar) -- zero absolute H1 flux was mistaken for weighted spectral singularity
 
 - **What failed:** the first private-support reflection correctly proved that

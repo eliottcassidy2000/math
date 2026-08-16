@@ -35,6 +35,39 @@
   recovered all tree sums, six cycle pairings, and an orientation-reversal
   hostile.  The owner-order orientation is a required gauge; no relation-
   current map, LRC bispectrum, or LRC(14) conclusion follows.
+  The owner-order orientation is a required gauge; no relation-current map,
+  LRC bispectrum, or LRC(14) conclusion follows.
+- `factorial_nondivisor_residue_digit_pair_compiler_thm3483.py` -> matching
+  `.out` [THM-3483 PROVED + VERIFIED-EXACT + FINITE-EXACT + INDEPENDENTLY
+  AUDITED].  For `p` not dividing `d`, the finite residue
+  `rho_p(n,j,d)` decides whether the raw Kummer--Legendre height of
+  `[v^j]A_n^d` is exact.  Nonvanishing at every extreme raw vertex proves
+  equality of the raw and actual Newton polygons; rho zero is a definite
+  lift and can create a new edge.  The exact companion checks `23,395`
+  coefficients in `746` profiles, with zero mismatch on all `665`
+  rho-admissible profiles, and freezes the sharp `A_2^4,p=5` hostile.  At
+  adaptive primes `7,13,7,13,7`, the compiler eliminates all five THM-3475
+  packets, giving pair-only closure of all 38 residuals through `d=2600`.
+  Script/output/semantic raw SHA-256:
+  `9e37ead620f141617a9c6d51c182e09c034945793092e56e39fb061254662723` /
+  `5bfc1b06cda024080d1c4c977511bb6f0f30ecdbf7ad6e8072a1052c072bebc9` /
+  `f80c046942d62a8a6b6f3802d224cc47944568a7e9f3ef245d43baf91a4031c4`.
+  `factorial_adaptive_rho_block_4000_thm3483.py` and
+  `factorial_adaptive_rho_block_4000_independent_audit_thm3483.py`, with their
+  matching `.out` files, independently apply the divisor-plus-rho policy to all `1395`
+  rows `2606<=d<=4000`.  Of `461` post-exit residuals, divisor pair ledgers
+  close `420` and admissible nondivisor primes close the remaining `41`, with
+  zero survivors and common semantic SHA-256
+  `95d1c233d59d00c38ce456fa7c5f5e248414e01b5ba9dc2ae9f61725d6c19dbd`.
+  Primary script/output raw SHA-256:
+  `b58fd73c96929fa287b09addfe86463d0ca9998a31e37dbd964d1456828396e4` /
+  `48733decf5874c197b989d7731f0864082a65fe7b9056af67e0149d1e8a94896`;
+  independent script/output raw SHA-256:
+  `0b858f7b1154a3ee2dec43bf5238f7e6f24b524e9dc2b9f70f5b497fcef58934` /
+  `5c02ee06a8b14909b1b6677e1d853057eeb285ab5699cd354e5e30304533b329`.
+  This extends the exact-support quadratic boundary through `r=3998`;
+  `d=4001` is merely untested.  A nonempty degree barcode remains necessary,
+  not a factor; no arbitrary-support SFC/FC conclusion follows.
 - `factorial_dual_seven_exit_block_closure_thm3478.py` -> matching `.out`
   [THM-3478 PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
   AUDITED].  Separately pinned coefficient/Fraction-hull and
