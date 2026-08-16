@@ -329,10 +329,10 @@ is sharp: equal counts allow two densities or none.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** chain [3476](../01-canon/theorems/THM-3476-rule30-depth-four-transverse-jet-barrier-and-slack-pascal-atlas.md), precursor [3493](../01-canon/theorems/THM-3493-rule30-dyadic-wrap-atlas.md);
   [3500](../01-canon/theorems/THM-3500-rule30-dyadic-section-cut-defect-and-cross-depth-valuation-carrier.md); [3501](../01-canon/theorems/THM-3501-rule30-universal-cover-green-potential-and-slack-holonomy-seam.md); [3502](../01-canon/theorems/THM-3502-rule30-four-fifths-staircase-entropy-and-sixteen-fifths-compiler.md); [3503](../01-canon/theorems/THM-3503-rule30-odometer-ultrametric-regrading-and-orbit-closure-dimensions.md). OPEN.
-- **Jacobian/Dixmier:** `JC(2)`/`DC(2)` remain open. THM-3438 gives every
-  grade `n>=3` an `S_n` atom; THM-3494 gives its primitive atlas.
-  General lanes stay open. THM-1300 provenance is unsettled
-  (MISTAKE-205); THM-1315 repaired; THM-2473--2576 fixed-map.
+- **Jacobian/Dixmier:** `JC(2)`/`DC(2)` OPEN. THM-3438 gives `S_n` atoms
+  (`n>=3`); THM-3494 primitive `x/y`; THM-3508 level-two `x/y/z`, `[H]`.
+  General lanes OPEN. THM-1300 provenance unsettled (MISTAKE-205); THM-1315 repaired;
+  THM-2473--2576 fixed-map.
   THM-3495/3498/[3504](../01-canon/theorems/THM-3504-level-four-sporadic-keller-image-prime-and-four-component-nonproperness.md)
   prove `S_(F^4)=V(LHJ G)` and `[Delta_4]=[2G]`;
   [3506](../01-canon/theorems/THM-3506-fixed-keller-five-face-norm-transform-and-271-99-boundary.md)

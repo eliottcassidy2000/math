@@ -360,6 +360,14 @@ def direct_finite_field_control() -> tuple[int, tuple[int, int, int], list[tuple
     fail("no direct finite-field split control found in the registered prime bank")
 
 
+def vandermonde_determinant_mod(values: list[int], prime: int) -> int:
+    determinant = 1
+    for j in range(len(values)):
+        for i in range(j):
+            determinant = determinant * (values[j] - values[i]) % prime
+    return determinant
+
+
 def main() -> None:
     global INNER_LINEAR, INNER_CONSTANT
 
@@ -505,14 +513,33 @@ def main() -> None:
     finite_middle_counts = tuple(
         sorted(finite_middle_x_values.count(value) for value in set(finite_middle_x_values))
     )
+    finite_middle_points = sorted({middle for _source, middle in finite_fibre})
+    finite_L_values = (
+        int(L_polynomial(*finite_target) % prime),
+        tuple((middle, int(L_polynomial(*middle) % prime)) for middle in finite_middle_points),
+    )
+    sorted_finite_fibre = sorted(finite_fibre)
+    finite_vandermonde = tuple(
+        vandermonde_determinant_mod([source[axis] for source, _middle in sorted_finite_fibre], prime)
+        for axis in range(3)
+    )
     require(finite_source_counts == (9, 9, 9), "direct finite-field coordinate ranks")
     require(finite_middle_counts == (3, 3, 3), "direct finite-field hostile blocks")
+    require(finite_L_values[0] != 0, "direct finite-field outer target is off L")
+    require(all(value != 0 for _middle, value in finite_L_values[1]),
+            "direct finite-field middle targets are off L")
+    require(all(determinant != 0 for determinant in finite_vandermonde),
+            "direct finite-field Vandermonde determinants")
     require(all(F_mod(F_mod(source, prime), prime) == finite_target for source, _middle in finite_fibre),
             "direct finite-field F^2 replay")
+    print("finite_field_prime_bank=(11,13,17,19,23,29,31,37,41,43)")
     print(f"finite_field_prime={prime}")
     print(f"finite_field_target={finite_target}")
     print(f"finite_field_fibre_size={len(finite_fibre)}")
+    print(f"finite_field_fibre={sorted_finite_fibre}")
+    print(f"finite_field_L_values={finite_L_values}")
     print(f"finite_field_source_coordinate_distinct_counts={finite_source_counts}")
+    print(f"finite_field_source_vandermonde_determinants={finite_vandermonde}")
     print(f"finite_field_intermediate_x_multiplicities={finite_middle_counts}")
     print("direct_finite_field_control=PASS")
     print("all_checks=PASS")

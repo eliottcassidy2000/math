@@ -4,6 +4,12 @@
 map; classification synthesis only beyond that fixed map.**  This note does
 not extend the discriminant identity to the outside infinite family.
 
+**Closure update, 2026-08-16:** the first test proposed in Section 6 is now
+closed by [THM-3508](../01-canon/theorems/THM-3508-level-two-sporadic-keller-three-coordinate-primitive-discriminant-square-class.md):
+all three source coordinates of the fixed level-two composite are primitive,
+so their full discriminant square class is `[H]`.  Higher levels and the
+outside family remain open.
+
 ## 1. The three discriminants collapse to one square class
 
 Let

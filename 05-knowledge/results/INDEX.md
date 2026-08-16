@@ -33,6 +33,25 @@
   `84d33c86d6478ea4a1506ef75d001358c49a5510110633ee9ea5d89375cbda21`;
   exact ledger:
   `e0f67a9bdda9e6e158969c54c023b390c17fed8c4ce68b0ddeffee4936824513`.
+- `keller_level_two_three_coordinate_primitive_independent_audit.py` ->
+  matching `.out` [THM-3508 PROVED + VERIFIED-EXACT + INDEPENDENT CLEAN-ROOM
+  AUDIT].  A python-flint regular-representation implementation imports no
+  repository computation module or candidate eliminant.  At the lawful etale
+  target `(1,1,1)` it reconstructs both inverse stages, verifies `F^2=(1,1,1)`,
+  and computes exact `9x9` power-basis ranks `(9,9,9)` for source `x,y,z`.
+  The degree-three intermediate coordinate has rank `3`, determinant zero,
+  and characteristic polynomial equal to the cube of its minimal polynomial.
+  Exact trace-form ratios equal the squares of all basis-volume ratios, and
+  each coordinate discriminant divided by `H(1,1,1)=951326441195` is a
+  rational square.  An orthogonal direct enumeration of the original map on
+  `F_41^3` finds the split target `(13,0,11)`, nine distinct values in each
+  source coordinate, Vandermonde determinants `(1,14,12)`, and intermediate
+  multiplicities `(3,3,3)`.  Script/output LF SHA-256:
+  `ecf1821e9d918904d7b878931aa9ff26137e8ef4eac97234c6aec48cc5ecae5f` /
+  `2d659f01f404745a73f0b03fb3556bba0bf99cf897a11ea2607bd6fc4b705311`.
+  The result is fixed-map level-two scope; no higher-level primitivity,
+  arbitrary-resultant saturation, exact multiplicity, or JC/DC/LRC
+  consequence follows.
 - `keller_level_four_norm_J_mod1009_slice_probe_20260816.py` -> matching
   `.out` [THM-3504 PROVED + VERIFIED-EXACT].  On the lawful slice `b=c=1`,
   a Newton-at-infinity/support calculation proves
