@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `fibonacci_two_24_state_bundle_obstruction_thm3487.py` -> matching `.out`
+  [THM-3487 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
+  independent audit pending].  Synchronizing the six Fibonacci channel
+  orders with the four-state `P1(F3)` cycle gives permutation type `12^2`,
+  while the lawful affine-`V4` owner transport has type `6^4`.  After linear
+  gauge trivialization the mismatch is exactly `H^1(C6;V4)=V4`: the proved
+  closed owner section has class zero, and each of the three nonzero
+  K4/XOR matching directions repairs the abstract cycle type but forbids
+  every closed section.  The two-step frame shift survives abstractly
+  (`31104` conjugacies) but not over the displayed base; each nonzero seam
+  repair has `288` abstract conjugacies.  Under a declared uniform 24-address
+  word, invariant-union harmonic grades are halves versus quarters; this is
+  not a single-orbit average or a tournament.  Script/output/semantic LF
+  SHA-256:
+  `13ba2822f9f020623f59f361b8a2aac37da73eeb23c55b00157ab167adb677f9` /
+  `6c43abb71d127d4efe80c250f0651eeff1683c9a8df2781ddc81883f1b488a98` /
+  `9c338ec5eebe1f93326ae12c00f37da58382fa2084339adbd1de422e7d05d70e`.
 - `periodic_polynomial_critical_harmonic_transform_thm3486.py` -> matching
   `.out` [THM-3486 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
   independent audit pending].  For a nonzero degree-`d` period-`p`
