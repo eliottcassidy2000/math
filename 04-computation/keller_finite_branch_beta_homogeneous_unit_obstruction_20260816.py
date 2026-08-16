@@ -9,8 +9,8 @@ irreducibility to a quadratic in the torus-invariant variables
 
 The geometric identification of V(B) with the closure of the regular finite
 inverse sheet and the graded-domain proof excluding B from every complete
-packet are written in THM-3529.  This companion verifies their exact algebraic
-inputs and runs bounded packet/hostile controls.  It makes no image-prime,
+packet are not encoded by this script.  This companion verifies their exact
+algebraic inputs and runs bounded packet/hostile controls.  It makes no image-prime,
 irreducibility-of-later-rungs, separability, discriminant, or general-JC claim.
 """
 
@@ -24,7 +24,7 @@ import sympy as sp
 
 
 EXPECTED_SEMANTIC_SHA256 = (
-    "7c19ce6a3dc08f36fdb19487a7e26411077e1db880afb0201ddf8a67c3df25d1"
+    "8e14d28a41500a2f28a37b181089e66c668806382ea1011814b35076ebdc23fd"
 )
 
 
@@ -137,7 +137,8 @@ def main() -> None:
 
     # Symbolic packet-face bookkeeping.  Every factor y^2+cz has beta -2,
     # so the displayed complete minimum-beta face is x-free, nonzero, and has
-    # weight -5e+2m.  The bounded census checks all admissible packets e<=300.
+    # weight -5e+2m.  The bounded census checks the full admissible packet cone
+    # 0<=m<=e, 3|m through e<=300, not only the raw-orbit subcone 2m<=e.
     e_symbol, m_symbol = sp.symbols("e m", integer=True)
     symbolic_packet_beta = sp.expand(
         -(3 * e_symbol - 2 * m_symbol)
@@ -150,7 +151,7 @@ def main() -> None:
 
     packet_census = []
     for e_value in range(1, 301):
-        for m_value in range(0, e_value // 2 + 1, 3):
+        for m_value in range(0, e_value + 1, 3):
             exponents = (
                 3 * e_value - 2 * m_value,
                 e_value - m_value,
@@ -164,6 +165,8 @@ def main() -> None:
             require(beta_value == -5 * e_value + 2 * m_value,
                     ("packet beta census", e_value, m_value, beta_value))
             packet_census.append((e_value, m_value, beta_value))
+    require((3, 3, -9) in packet_census,
+            "full packet cone must include A(3,3) outside 2m<=e")
 
     # Hostile controls isolate both load-bearing hypotheses.
     # B itself is divisible by B and beta-homogeneous, but its beta face has
@@ -187,7 +190,11 @@ def main() -> None:
         ("finite_witness_gradient", tuple(map(str, gradient_at_witness))),
         ("packet_census_size", len(packet_census)),
         ("packet_census_digest", digest_json(tuple(packet_census))),
-        ("hostiles", ("B is not a packet", "x-free divisor does not obstruct")),
+        ("hostiles", (
+            "B is not a packet",
+            "x-free divisor does not obstruct",
+            "A(3,3) lies outside the raw 2m<=e subcone",
+        )),
     )
     semantic = digest_json(record)
     if EXPECTED_SEMANTIC_SHA256 != "TO_BE_PINNED":
@@ -206,7 +213,7 @@ def main() -> None:
     print(f"finite_inverse_witness=target{tuple(target_point[v] for v in (a,b,c))}<-source{tuple(source_point[v] for v in (x,y,z))};grad_B={gradient_at_witness}")
     print(f"packet_min_beta_face=x-free;symbolic_weight={symbolic_packet_beta};admissible_census={len(packet_census)}")
     print("graded_obstruction=B|P would force B|in_min_beta(P), impossible by x-degree additivity")
-    print("hostiles=B itself fails packet completeness;an x-free homogeneous divisor would evade the x-degree obstruction")
+    print("hostiles=B itself fails packet completeness;an x-free homogeneous divisor would evade the x-degree obstruction;A(3,3) tests the full cone beyond 2m<=e")
     print(f"semantic_sha256={semantic}")
     print("scope=exact algebraic inputs for finite-sheet unit theorem;no later-rung irreducibility,image-prime,separability,discriminant,or general JC claim")
     print("all exact checks passed")

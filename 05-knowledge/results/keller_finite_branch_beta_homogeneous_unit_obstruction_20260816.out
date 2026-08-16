@@ -8,9 +8,9 @@ C_as_quadratic_in_q_coefficients=(-9*(p + 1)**2, -2*(27*p**3 + 36*p**2 - 3*p - 8
 disc_q_C=64*(3*p + 4);3p+4_has_odd_linear_valuation=PASS
 irreducibility=PASS (exact factorization and primitive-quadratic discriminant certificate)
 finite_inverse_witness=target(2/27, 1, 1)<-source(2, 5/6, -7/8);grad_B=(-29/4, 33, 24)
-packet_min_beta_face=x-free;symbolic_weight=-5*e + 2*m;admissible_census=7700
+packet_min_beta_face=x-free;symbolic_weight=-5*e + 2*m;admissible_census=15250
 graded_obstruction=B|P would force B|in_min_beta(P), impossible by x-degree additivity
-hostiles=B itself fails packet completeness;an x-free homogeneous divisor would evade the x-degree obstruction
-semantic_sha256=7c19ce6a3dc08f36fdb19487a7e26411077e1db880afb0201ddf8a67c3df25d1
+hostiles=B itself fails packet completeness;an x-free homogeneous divisor would evade the x-degree obstruction;A(3,3) tests the full cone beyond 2m<=e
+semantic_sha256=8e14d28a41500a2f28a37b181089e66c668806382ea1011814b35076ebdc23fd
 scope=exact algebraic inputs for finite-sheet unit theorem;no later-rung irreducibility,image-prime,separability,discriminant,or general JC claim
 all exact checks passed

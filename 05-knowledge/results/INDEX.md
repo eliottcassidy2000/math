@@ -19,21 +19,24 @@
 
 - `keller_finite_branch_beta_homogeneous_unit_obstruction_20260816.py` ->
   matching `.out` [VERIFIED-EXACT ALGEBRAIC CERTIFICATE FOR RESERVED
-  THM-3529; THEOREM AUDIT PENDING].  For the fixed sporadic map, the exact
+  THM-3529; INDEPENDENT HOSTILE AUDIT ACCEPTS THE THEOREM MECHANISM].  For the fixed sporadic map, the exact
   pullback `B=F^*L` is a primitive ten-term polynomial of beta weight `-2`
   and positive `x`-degree four.  In the Laurent coordinates `p=xy`,
   `q=x^2z`, one has `x^2B=C(p,q)`, where `C` is a primitive quadratic in
   `q` with discriminant `64(3p+4)`; the odd linear valuation certifies
   irreducibility.  The complete packet's prescribed minimum-beta face is
-  nonzero and lies in `Q[y,z]`.  The proposed theorem identifies `V(B)`
-  with the finite inverse divisor and uses initial-form multiplicativity to
-  forbid `B|P`; that geometric/graded implication remains under independent
-  hostile audit at this index state.  No later-rung irreducibility, image
+  nonzero and lies in `Q[y,z]`.  The audit proves `V(B)=C_fin`: THM-3528
+  gives the divisor `C_fin` and `s_L=ord_(C_fin)`, while irreducibility and
+  literal containment force equality.  Initial-form multiplicativity then
+  forbids `B|P`, so every complete packet is a finite-sheet unit and every
+  positive-level raw rung is old-`L`-coprime (the seed is `P_0=L`).  The certificate's partial `2m<=e` census was
+  repaired to all `15,250` positive-`e` packets with `m<=e` through `e=300`,
+  including the omitted boundary hostile `A(3,3)`.  No later-rung irreducibility, image
   prime, separability, discriminant recursion, arbitrary-map, or general JC
   claim is made.  Script/output/semantic LF SHA-256:
-  `0e2e7ba0ee5aa45ca83aa050255cdb2f8ffda8d05c0495b7fc1c513ad1c289dc` /
-  `15b026a541afc09d6be0784f00e2c05e3c3b3b148625a1b30dec7c62875d89e6` /
-  `7c19ce6a3dc08f36fdb19487a7e26411077e1db880afb0201ddf8a67c3df25d1`.
+  `c3b096d9f9b29c97eb1540dc85cb3f2e6739f2aeb5d903b5f3f36672e0592694` /
+  `f2bbb53b498c9df4ff79d96191a5e873572f745e98c35ee148728f963d58b950` /
+  `8e14d28a41500a2f28a37b181089e66c668806382ea1011814b35076ebdc23fd`.
 
 - `keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.py` and
   `keller_all_level_cleared_norm_polynomiality_independent_audit_20260816.py`
