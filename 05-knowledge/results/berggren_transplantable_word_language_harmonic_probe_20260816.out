@@ -1,0 +1,27 @@
+BERGGREN TRANSPLANTABLE-WORD LANGUAGE / HARMONIC SUBSET EXACT PROBE
+STATUS: VERIFIED-EXACT FINITE AUTOMATON; DENSITY/HARMONIC CONSEQUENCES ARE ELEMENTARY DEDUCTIONS
+SCRIPT: 04-computation/berggren_transplantable_word_language_harmonic_probe_20260816.py
+OUTPUT: 05-knowledge/results/berggren_transplantable_word_language_harmonic_probe_20260816.out
+PIN_FULL_BRANCH_OUTPUT_SHA256: 77b7a038cf4a6fdb7f1b609729f5e387af8ea8290ef2a976c31d2141e6e85dc3
+MATCHING_QUOTIENT_GENERATORS_A_B_C: {'A': (1, 2, 0), 'B': (1, 0, 2), 'C': (1, 2, 0)}
+LINEAR_BITS_A_B_C: (1,1,0), recording whether the true mod-two direction action is J or I
+TWELVE_STATE_IMAGE: S3(perfect-matchings) x C2(linear bit); all 12 states reached by depth 6
+MINIMAL_DFA_AND_SYNTACTIC_MONOID: partition refinement leaves all 12 states distinct; the transition monoid is the regular left action of S3 x C2, hence is the same 12-element group
+ACCEPTED_STATES: (((0, 1, 2), 0), ((1, 0, 2), 1), ((2, 1, 0), 1), ((0, 2, 1), 1))
+ACCEPTANCE_RULE: (mu,eps) is wordwise affine-calibratable iff eps=0 and mu=id, or eps=1 and mu is a transposition
+RAW_EQUIVALENCE_GATE: checked on all 48 pairs S4 x <J>; exactly 16 pass, so the accepted-state fraction is 4/12=1/3
+SMALL_ACCEPTED_WORDS: {1: ('B',), 2: ('BB', 'BC', 'CB'), 3: ('AAB', 'AAC', 'ABA', 'ACA', 'BAA', 'BBB', 'BCC', 'CAA', 'CBC', 'CCB', 'CCC')}
+NOT_A_SUBMONOID_HOSTILE: B and BC pass, but BBC fails
+FIBONACCI_THREE_RAY_RESTRICTION: (BA)^r passes iff r is even; A(BA)^r and C(BC)^r pass iff r is odd; equivalently the THM-3339 Fibonacci index k passes exactly for k mod 6 in {0,1,2}
+LEVEL_COUNTS_A_0_TO_19: (1, 1, 3, 11, 25, 81, 251, 715, 2193, 6593, 19603, 59115, 177257, 531025, 1594827, 4783211, 14346913, 43049985, 129139619, 387411787)
+RECURRENCE: a_n=2a_(n-1)+2a_(n-2)+6a_(n-3)-9a_(n-4), n>=4; initials (1,1,3,11)
+GENERATING_FUNCTION: (1-x-x^2-3x^3)/((1-x)(1-3x)(1+2x+3x^2))
+CLOSED_FORM: a_n=(3^n+1+c_n)/3, where c_0=1, c_1=-1, c_n=-2c_(n-1)-3c_(n-2)=Re((-1+i*sqrt(2))^n)
+LEVEL_DENSITY: a_n/3^n=1/3+O(3^(-n/2)); in particular exactly one third asymptotically, not every branch word
+TRANSFER_CHARACTERISTIC: (lambda - 3)*(lambda - 1)**4*(lambda + 1)**3*(lambda**2 + 2*lambda + 3)**2
+TRANSFER_SPECTRAL_GATE: squarefree annihilator (lambda-3)(lambda-1)(lambda+1)(lambda^2+2lambda+3); every non-Perron eigenvalue has modulus <=sqrt(3)
+SHORTLEX_SUBSET: index the empty word and successive ternary levels consecutively; the accepted indices have A(N)=N/3+O(sqrt(N))
+HARMONIC_SUBSERIES: partial summation gives sum_{m<=N, accepted} 1/m=(1/3)log N+C+O(N^(-1/2)); the coefficient remembers automaton density, not ancestry labels
+TYPING: calibration may depend on the composite word; this is a regular language of individually calibratable addresses, not one monoid-equivariant calibration and not a physical current
+SEMANTIC_SHA256: 819e35b607cf19926cf9476d900dc4665262ae42951e04cfc739dde343d909e9
+VERDICT: the ternary branch tree contains an exact density-one-third, harmonically divergent subset of wordwise T4-calibratable addresses, recognized by the matching-action/linear-bit automaton
