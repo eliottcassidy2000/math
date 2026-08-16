@@ -2,13 +2,18 @@
 id: THM-3491
 title: "Rule 30 seven-four staircase entropy and thirteen-four compiler"
 status: >
-  PROVISIONAL PROOF CANDIDATE / AUDIT IN PROGRESS.  The physical zero-tail
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The physical zero-tail
   Rule 30 staircase language has an exact height-21 overlap-graph certificate
   proving eta<=log_2(7/4)<13/16.  In the charged word-RAM model of THM-3480,
   this improves the nonrectangular macroblock query tariff from 7/2 to 13/4.
   No Rule 30 prize or literature novelty is claimed.
 source: root-rule30-next-targets-20260816
-audit: PENDING INDEPENDENT AUDIT
+audit: >
+  An independent hostile audit rebuilt the physical factor language with a
+  separate tuple transducer, rederived the positive-vector entropy bound and
+  all charged word-budget inequalities, and checked the finite-only lower
+  signal.  Ordinary and optimized replays match the stored transcript
+  byte-for-byte: ACCEPT.
 depends_on:
   - THM-3480-rule30-staircase-transducer-entropy-and-nonrectangular-macroblock-compiler
 related:
@@ -17,14 +22,14 @@ related:
   - THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum
 script: 04-computation/rule30_staircase_entropy_seven_four_thm3491.py
 output: 05-knowledge/results/rule30_staircase_entropy_seven_four_thm3491.out
-script_sha256: PENDING
-output_sha256: PENDING
+script_sha256: d107f8603d379b9cf9f196b55369612f8db8763993c038d0c7b674f68636c58f
+output_sha256: 66e7d0c0c2abbf108c79aa8ccb7a728a3401434c7aa24460039a10b0de90d570
 hash_basis: raw bytes
 ---
 
 # THM-3491 -- Rule 30 seven-four staircase entropy and thirteen-four compiler
 
-**PROVISIONAL PROOF CANDIDATE / AUDIT IN PROGRESS.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-3480 replaced a rectangular Rule 30 cone boundary by its physically
 reachable ternary staircase and proved
@@ -356,5 +361,4 @@ The companion has no assertion-dependent gates.  It checks:
 
 The finite computations certify the displayed graph and vector.  The
 factor-language injection, positive-vector estimate, and charged compiler
-analysis prove the all-height and all-`n` consequences.  Independent audit is
-still pending.
+analysis prove the all-height and all-`n` consequences.
