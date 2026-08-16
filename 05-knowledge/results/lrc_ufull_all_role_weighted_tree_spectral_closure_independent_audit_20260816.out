@@ -1,0 +1,19 @@
+LRC U_FULL ALL-ROLE WEIGHTED-TREE SPECTRAL CLOSURE INDEPENDENT AUDIT
+status=FINITE-EXACT INDEPENDENT AUDIT; endpoint B^1 only; LRC(14) OPEN
+atom_dependency=lrc_ufull_owner_boundary_k4xf13_endpoint_factorization_independent_audit_20260816.py:f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc; imported_all_role_candidate=False
+field=(prime=572252886246508880869,zeta13=505438565698892403012); gamma_sha256=1fabc5cfdbaa1455e10cd6bf9264488133616a7b0ff381623d729b4b4bfa9682
+role_classes=(('c1', (0, 0, 0)), ('c2', (1, 0, 0)), ('c3', (0, 1, 0)), ('H', (1, 0, 1)), ('q2', (1, 12, 0)), ('q3', (1, 0, 0)), ('q4', (1, 0, 0)), ('q5', (1, 0, 0)))
+distinct_q_values=(((0, 0, 0), 405336876493642499425), ((0, 1, 0), 518539850465495448196), ((1, 0, 0), 503604956476841920373), ((1, 0, 1), 320618948602619577408), ((1, 12, 0), 15703541686881447885))
+five_class_tensor=(shape=(5,4,13),support_counts=(((0, 0, 0), 52), ((0, 1, 0), 52), ((1, 0, 0), 52), ((1, 0, 1), 52), ((1, 12, 0), 52)),rank=5)
+pointwise_52x72=(factor_zero_totals=(0, 0, 0, 0),all_nonzero_entries=52/52,digest=a1d5183f37cc39deed976876ed91132f662f91137f41a10a79fd3e974ced2dfc)
+drift_marginal_13x72=(factor_zero_totals=(0, 0, 0, 0),all_nonzero_entries=13/13,digest=6bcdd9fa616ba2dc4883d8334dca7358d06375d7342f43c4aac8dea45deb5027)
+drift_fourier_13x72=(factor_zero_totals=(0, 0, 0, 0),all_nonzero_entries=13/13,digest=e96a3859e6838fa91d04a55ca55fa4e44cafa45bd86b93c7f6b612b1e65f4dc1)
+chamber_fourier_52x72=(factor_zero_totals=(0, 0, 0, 0),all_nonzero_entries=52/52,digest=c9ca8c9b7ed7000b00e39b496523ad75a44379d84ea35e49163d6b64e4196e73)
+slice_ranks=(drift=(4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4),fourier=(4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4))
+global_chart_gate=(factor_zero_totals=(0, 0, 0, 0),digest=42b7fb9b198dc86faaeb0b536a28a39f8f049e5502a3c4df19fb810d444de49b)
+hostiles=(flat potentials kill every factor; forcing q5=H kills every bridge and product)
+typing=all thirteen edge responses are differences of eight endpoint role potentials, hence lie in graph B^1; no nonzero absolute H1 class
+nonconsequence=no common ancestry, physical current, grouped coefficient, all-unit projector, bispectrum theorem, scalar-row exclusion, or LRC(14)
+security_ast=(4457, ())
+semantic_sha256=61db05458acb26cd8d6a9a89991d3bbeed91f95f6bdf035720a3a93a5b4f886b
+STATUS=PASS
