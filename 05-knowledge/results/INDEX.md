@@ -53,6 +53,17 @@
   `082ec6bfc743e317fc5b388ad758cbb78df75de93c524cdc22c92729fa4eabc5` /
   `c82d9aba055f2f5ccbea75e092dd7a45b9a9f2a4a1b91762f32ad5852cf9c552`.
 
+- `lrc_r5_ufull_owner_node_boolean_square_inverse_owner_branch_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT POSITIVE LAST-INVERSE-OWNER-DIGIT
+  CANDIDATE; AUDIT PENDING].  Retaining THM-2471's `r_owner=a mod 13`
+  recovers the audited square.  Actual/flat ranks are `(4,4,6)`/`(4,1,4)`;
+  pure three-way ranks are `(3,4,6)`/zero, with all `432` actual triple modes.
+  All 13 branches survive, and reflection sends `(u,r,state)` to
+  `(12-u,12-r,state XOR 2)`.  This is neither source-time sheet, exact
+  address/current, nor LRC(14).  Script/output/semantic SHA-256:
+  `ae1cf021ea23f325eded42ff1dea8df903d837b1d7ab551289d62f7ab7a0348` /
+  `1b4881cda87c46bfcfcc57dc5ea33152858bda4ad632b043a30fec2f55065fec` /
+  `f43e9fb0937ae93c54c2ac0aeb1257dfd8741f9cef32ef4bf2a5f3dd2cf06388`.
 - `lrc_r5_ufull_owner_node_boolean_square_refiner_independent_audit_20260816.py`
   -> matching `.out` [SECOND-PATH HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
   BOOLEAN-SQUARE REFINER].  Without importing the candidate, it composes the
