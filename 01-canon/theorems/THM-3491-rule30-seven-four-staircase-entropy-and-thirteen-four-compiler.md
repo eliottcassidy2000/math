@@ -127,13 +127,15 @@ and sort by increasing `code_20`.
 
 ## 3. The exact `4 A v <= 7 v` certificate
 
-Starting with the all-one vector on the ordered vertices, iterate
+Starting with the all-one vector on the ordered vertices, synchronously
+iterate the whole vector by
 
 ```text
-v_i <- max(v_i, ceil(4 sum_(i->j)v_j/7)).            (11)
+v_i^(r+1)=max(v_i^r, ceil(4 sum_(i->j)v_j^r/7)).     (11)
 ```
 
-This monotone integer recurrence stabilizes after exactly `5789` updates.
+The first fixed-point check succeeds on synchronous iteration `5789`
+(`5788` strict vector updates).
 The resulting vector satisfies
 
 ```text
