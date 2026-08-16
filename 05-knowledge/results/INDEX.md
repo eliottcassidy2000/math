@@ -17,6 +17,23 @@
   `2d8efd445ee5aa2e08e1b4fb3f2bf23a04e1d565c1e25bf7828e0d024a243ab6` /
   `cd2e799cf3b44042c03622f831f38e6e305ed2418a4c662ac23fbb4be0f5d58b` /
   `cc535a60a93f5652b1980268a274f7a7280cc722e3c707bdae78467f6d367ddf`.
+- `lrc_r5_nonlinear_common_gauge_endpoint_connection_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  PACKAGE].  Without importing either submitted common-gauge probe, it splits
+  the THM-2594 source by all 39 guard atoms before `P_(13^5)`, restores every
+  unsplit root profile and pair mass, and independently rebuilds the THM-3514
+  endpoint pair function.  The source/target comparison digests agree exactly
+  (`e4d0d4fa...c3d4`, `c2d5911b...2df1`).  One common offset has full/active
+  support `72/117`, `48/52`, zero-owner spectrum `(13,12,12,13)`, and full
+  `(13,13,13,13)` spectrum at every nonzero owner character.  The actual
+  endpoint `d!=0` bridge is `64768431058832930873`, both full and restricted
+  endpoint spectra are complete, and the normalized endpoint pair pullback
+  is nonzero at all 13 owner characters.  All 26 full/restricted augmented
+  29-variable systems have rank 29 and nullity zero.  This is a finite scalar
+  address contraction, not a one-integral temporal current, `H^1` class,
+  grouped coefficient, row exclusion, or LRC(14) result.  Script/semantic
+  LF SHA-256: `886ef5ae...1c51` / `1cf457b2...6d02`.
+
 - `keller_R6_finite_sheet_recursive_norm_probe_20260816.py` and
   `keller_R6_finite_sheet_split_branch_audit_20260816.py` -> matching `.out`
   files [THM-3523 PROVED + VERIFIED-EXACT + SPLIT-REPRESENTATION AUDITED].

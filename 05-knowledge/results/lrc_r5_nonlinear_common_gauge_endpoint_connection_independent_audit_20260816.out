@@ -1,0 +1,18 @@
+R5 NONLINEAR COMMON-GAUGE ENDPOINT CONNECTION -- INDEPENDENT HOSTILE AUDIT
+status=ACCEPT_SCOPED_FINITE_EXACT_PACKAGE;LRC14_OPEN
+dependencies=(thm2594=09c43af0a0a56c7a0833bbfd13ed6a96bc5a7a3718aa1bc6b77a144bde101a06,thm3514_atom_engine=f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc)
+field=(prime=572252886246508880869,root=279936,zeta13=505438565698892403012,order=81750412320929840124)
+source_pretransfer=(f_pieces=120234,f_atom_piece_counts=(0, 0, 0, 0, 0, 0, 3192, 10655, 0, 2957, 11851, 0, 2288, 10225, 0, 1596, 11228, 264, 927, 9868, 927, 264, 11228, 1596, 0, 10225, 2288, 0, 11851, 2957, 0, 10655, 3192, 0, 0, 0, 0, 0, 0),e_atom_piece_counts=(0, 0, 0, 0, 0, 808, 3480, 0, 1529, 3480, 0, 2299, 3480, 0, 3020, 3480, 0, 3480, 3480, 0, 3480, 3480, 0, 3480, 3020, 0, 3480, 2299, 0, 3480, 1529, 0, 3480, 808, 0, 0, 0, 0, 0),restoration=((True, True), (True, True), (True, True), (True, True), (True, True), (True, True), (True, True), (True, True), (True, True), (True, True), (True, True), (True, True), (True, True)),middle_nonzero_profiles=(9, 0))
+common_gauge=(a=u+c,b=q+c,therefore_s=u-q=-d;independent_offsets_destroy_relation)
+source_common_gauge=(full_support=72/117,owner_active_support=48/52,pair_level_nonzero=378/1521,pair_digest=e4d0d4fa674e1f54496e613f7a3e1f057af033fa8992322a5f414ea176e1c3d4)
+source_owner_active=(support=48/52,k0_spectral_counts=(13, 12, 12, 13),k_nonzero_counts=((13, 13, 13, 13),),digest=cf31af2f63bfdc3a751f019aa1d39e2ce780c3984ca38715fccbe3a10cf4cf4f)
+endpoint=(full_bridge=389266878372286537904,dneq_bridge=64768431058832930873,full_spectral_counts=(13, 13, 13, 13),dneq_spectral_counts=(13, 13, 13, 13),pair_digest=c2d5911b287510335edc6aefa6d3b865c982568f678bb89ee9b82ee211962df1)
+pair_pullback=(owner_character_values=(89020872861375921416, 236085603545857215793, 323683959657851125455, 54173676827327624142, 249656651420909028337, 103356827118739902928, 384696996346514331447, 29597935718057174234, 387428575013009974450, 249995533066198665075, 318311674730929824069, 138773773920322904500, 532141509419833569170),nonzero=13/13)
+projective_systems=(variables=29,census={'endpoint_full': (13, ((29, 0),)), 'endpoint_dneq': (13, ((29, 0),))})
+proof=('39_guard_atoms_partition_f_and_e_before_P_13^5_transfer', 'atom_sums_restore_every_THM2594_root_profile_and_pair_mass', 'one_common_torsor_offset_a=u+c_b=q+c_iff_root_shift_equals_minus_drift', 'same_root_disjointness_removes_exactly_four_owner_active_buckets', 'endpoint_pair_function_rebuilt_from_THM3514_atom_workers_before_drift_grouping', 'finite_scalar_pair_pullback_retains_owner_offset_but_is_not_temporal_current', '29_variable_systems_retain_4x4_mixer_and_all_13_frequency_multipliers')
+boundary=('FINITE_EXACT_SPLIT_FIELD_ADDRESS_PULLBACK_ONLY', 'not_one_integral_over_a_common_temporal_stalk', 'no_absolute_H1_bispectrum_scalar_row_exclusion_or_LRC14_claim')
+semantic_sha256=1cf457b221107326b2cd7a5bb56a0cb1626934a2e5d8df57dcb04f04eab56d02
+script_sha256_lf=886ef5ae18c97676acf6a6bde8f698468e2197ba22cd7cd2db5d27569e511c51
+reproducibility=no_candidate_imports;no_randomness;no_elapsed_fields;normal_and_O_transcripts_must_match
+commands=python -B 04-computation/lrc_r5_nonlinear_common_gauge_endpoint_connection_independent_audit_20260816.py;python -B -O 04-computation/lrc_r5_nonlinear_common_gauge_endpoint_connection_independent_audit_20260816.py
+PASS
