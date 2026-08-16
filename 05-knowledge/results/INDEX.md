@@ -70,6 +70,24 @@
   The result is fixed-map level-two scope; no higher-level primitivity,
   arbitrary-resultant saturation, exact multiplicity, or JC/DC/LRC
   consequence follows.
+- `harmonic_shortlex_same_counts_no_log_density_probe_20260816.py` ->
+  matching `.out` [ELEMENTARY PROOF + VERIFIED-EXACT BOUNDARY SIDECAR; NOT
+  A CANON THEOREM OR INDEPENDENTLY AUDITED].  Binary first-half and last-half
+  shortlex languages have identical counts `a_n=2^(n-1)` and Kraft mass
+  `1/2` on every positive level, but logarithmic coefficients
+  `log(3/2)/log(2)` and `log(4/3)/log(2)`.  Alternating dominant blocks of
+  `2^(2^k)` levels preserves those exact counts while forcing the two values
+  as subsequential limits, so arbitrary subsets need not have logarithmic
+  density.  At depth two the four words are `K4` vertices, their six
+  comparisons are the `K4` edges, and the three nonzero Walsh forms are the
+  three perfect matchings; an order-six tournament would instead require
+  fifteen comparisons.  This sharpens THM-3499's arbitrary-language
+  boundary without supplying ancestry, LRC, or JC transport.  Semantic
+  ledger SHA-256:
+  `e135ce689fe04866568fd98961a45f3ebc9fabca7c03c9bf92c50be762f2cb45`.
+  Script/output LF SHA-256:
+  `e311a4e65491d414a9cb5a6a21d9c3113b811c74047a66f1f3e32ff698e3d2f2` /
+  `e3e075bcaa94871a815815d6c59f4cbe88d46618f96b119fb79bc68dedfc46bd`.
 - `keller_level_four_norm_J_mod1009_slice_probe_20260816.py` -> matching
   `.out` [THM-3504 PROVED + VERIFIED-EXACT].  On the lawful slice `b=c=1`,
   a Newton-at-infinity/support calculation proves
