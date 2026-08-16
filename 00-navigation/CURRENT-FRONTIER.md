@@ -267,9 +267,8 @@ indexed multiplicity  = D_A(z) + collision tax.
 THM-3359 gives periodic modular index supports/cycle-density coefficients;
 THM-2352 gives the q-adic plateau.
 [THM-3499](../01-canon/theorems/THM-3499-regular-shortlex-languages-have-logarithmic-density.md)
-gives regular shortlex log density (one-class stationary, otherwise q-adic),
-all-language harmonic=Kraft convergence, and regular `rho<q` finite/`rho=q`
-positive-log; not arbitrary subsets.
+proves regular shortlex density; [THM-3510](../01-canon/theorems/THM-3510-binary-shortlex-equal-level-count-log-density-boundary.md)
+is sharp: equal counts allow two densities or none.
 
 ### Established landmarks
 

@@ -15,6 +15,24 @@
   open.  Script/output LF SHA-256:
   `fe1b03de9061c997a1abba6b88753e589c0a01f9f92762e49fe7ea0504ce9797` /
   `0dd07d1af0621a9f767e9c803e805de61ee428fb6a980b004cd3f06625082b52`.
+- `shortlex_equal_count_log_density_boundary_audit_20260816.py` -> matching
+  `.out` [THM-3510 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Binary
+  shortlex level `n` is exactly `[2^n,2^(n+1)-1]`; its first and last halves
+  both have `2^(n-1)` terms but level harmonic limits `log(3/2)` and
+  `log(4/3)`.  Alternating these choices in stages `r_k=2^(2^k)` preserves
+  every positive level count while complete-stage logarithmic normalizations
+  tend along parity to `log(3/2)/log 2` and `log(4/3)/log 2`, so the arbitrary
+  language has no logarithmic density.  The independent exact companion
+  checks endpoints/seams and rational masses through level nine, rational
+  logarithm and complete-stage enclosures through `k=8`, and the depth-two
+  carrier: four word vertices, six lexicographic tournament arcs, and three
+  nonzero `F_2` covectors giving the three perfect matchings of `K4`.  Six
+  edge-objects would require fifteen comparisons for a tournament; no such
+  transport is asserted.  Script/output LF-normalized SHA-256:
+  `54cd8c333d5fa2bf03a9f0742b9a42f19c19bc6de9ff8e690c724d07a6f4ff6e` /
+  `84d33c86d6478ea4a1506ef75d001358c49a5510110633ee9ea5d89375cbda21`;
+  exact ledger:
+  `e0f67a9bdda9e6e158969c54c023b390c17fed8c4ce68b0ddeffee4936824513`.
 - `keller_level_four_norm_J_mod1009_slice_probe_20260816.py` -> matching
   `.out` [THM-3504 PROVED + VERIFIED-EXACT].  On the lawful slice `b=c=1`,
   a Newton-at-infinity/support calculation proves

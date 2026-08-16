@@ -26,6 +26,7 @@ related:
   - THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar
   - THM-3382-fibonacci-ray-dual-index-harmonic-bifurcation
   - THM-3497-berggren-four-frame-return-languages-and-two-harmonic-densities
+  - THM-3510-binary-shortlex-equal-level-count-log-density-boundary
 scripts:
   - 04-computation/regular_shortlex_harmonic_density_automaton_probe_20260816.py
   - 04-computation/regular_shortlex_log_density_independent_audit_20260816.py
@@ -355,3 +356,6 @@ Every subset of the positive integers can be viewed as a labelled harmonic
 subseries, but arbitrary subsets need not have logarithmic density.  The
 scalar coefficient in (6) also does not recover word ancestry, multiplicity,
 owners, tournament arcs, LRC current, Jacobian flux, or a Rule-30 carrier.
+THM-3510 gives the sharp binary boundary: identical counts on every positive
+level can yield either of two regular logarithmic densities, or no density at
+all when the within-level address is alternated in superdominant stages.
