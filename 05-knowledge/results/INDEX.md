@@ -1,9 +1,9 @@
 # Script Results Index
 
 - `periodic_polynomial_fourier_jordan_recurrence_thm3485.py` -> matching
-  `.out` [THM-3485 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  independent audit pending].  For a characteristic-zero period-`p`
-  polynomial word, the candidate classifies the minimal shift polynomial as
+  `.out` [THM-3485 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a
+  characteristic-zero period-`p` polynomial word, the theorem classifies the
+  minimal shift polynomial as
   the product of `(x-zeta^j)^(deg Q_j+1)` over its nonzero Fourier colours.
   The exact defect from the naive `p(d+1)` order is the sum of missing top
   Jordan rungs; over `Q` the factors group by cyclotomic order.  A common
@@ -12,8 +12,8 @@
   zero-colour/composite-order/common-leading hostiles, 35 generic packets,
   and every common-leading period `2..9` against exact rational
   Berlekamp--Massey.  Script/output/semantic LF SHA-256:
-  `2f3aaa4a18f8313f1b1268482dcc278ce26f8307ff482242d585516de942eeb0` /
-  `0976be36303565a5646ee5d6a8757884cfddc53236343c85bf4779f4f06bd63f` /
+  `2d6441a7c875ded74b7ff6b83509108da450f6bb18553d37652269258936a6a0` /
+  `85859d4b1585c6b72f5224f5022b258230fa4d630317fa078ac943e1f4f43789` /
   `834dfd2be5aed2f4d92b6f7fe742bc0df3a3008e61a0e1bc3fd39eef2dac54c0`.
   The Rule-30 jet comparison is analogous filtration grammar, not a transfer.
 - `lrc_ternary_weighted_determinant_minimal_recurrence_thm3484.py` ->
@@ -141,6 +141,23 @@
   `e8eea838da1b4636c9796b71382e8a182e7ecfeb4ea17fef7eb265289889c502` /
   `b25ea10e40082d2a1ced9d7f85a6d3525dbffde8cfd4bdb7ee6a0fe3ca266ad4` /
   `07daaa2bd1f5fd09ff433e40703ecd7635b59aef520a68861a4fef3437b9a1b3`.
+- `lrc_endpoint_role_q1_gauge_quotient_obstruction_20260815.py` -> matching
+  `.out` [FINITE-EXACT UNNUMBERED SIDECAR; THM-3479 REMAINS RESERVED].  The
+  lawful coordinate response is address-side
+  `P_i=A_w([e_i-(w_i/w_q1)e_q1])`; evaluating character-side `gamma_w` on
+  coordinate vectors is ill-typed.  For both U_full and U_clock the coarse
+  `F_13^2` quotient identifies `H` and `q5`, so the unique carrier bridge has
+  zero weight and every one of all 72 role-chart tree determinants vanishes,
+  independently of the endpoint function.  Among the six named single-row
+  deletions, only guard deletion restores this contrast; adjoining character
+  `e_H` gives the dimension-minimal `F_13^3` quotient and a 2,197-twist bank.
+  Synthetic refined controls are nonzero in all 72 charts, but the actual
+  refined endpoint values, inverse DFT, common-ancestry realization, grouped
+  coefficient, bispectrum, and LRC(14) consequences remain OPEN.
+  Script/output/semantic LF SHA-256:
+  `49e9a3657ceae8ada0e8487ee980115f7d1da1f16a7bbf121fdd5cfbd3fcc1b9` /
+  `e1a8b5ca90044a3b157828b444a582a3da36b1b869a6ad1d3d384333026b8a67` /
+  `fe9fe2d4b1d98aba3b60e1a7f6823bcccabed04d7a319f3eb20c83d25c799422`.
 - `lrc_relation_k4_xor_star_triangle_probe_20260815.py` -> matching `.out`
   [FINITE-EXACT STRUCTURAL SIDECAR TO RESERVED THM-3479; NOT CANON].  The six
   equal-`-27` relation slots are modelled as the edges of `K4`, partitioned

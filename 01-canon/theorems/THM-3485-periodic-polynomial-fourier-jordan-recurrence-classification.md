@@ -2,8 +2,8 @@
 id: THM-3485
 title: "Periodic-polynomial Fourier/Jordan recurrence classification"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT PENDING.  Over any characteristic-zero field, the minimal shift
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Over any
+  characteristic-zero field, the minimal shift
   polynomial of a period-p polynomial word is the product over Fourier
   colours (x-zeta^j)^(deg Q_j+1), omitting zero colours.  Its exact recurrence
   defect from the naive p(d+1) bound is the sum of the missing top Jordan
@@ -11,29 +11,28 @@ status: >
   lane coefficient removes at least one top rung from every nontrivial colour.
 source: codex-2026-08-15-periodic-polynomial-recurrence
 audit: >
-  self-contained algebraic proof candidate; exact rational/cyclotomic
-  companion; 35 generic packets, five structured zero-colour/composite-order/
-  common-leading hostiles, THM-3484 specialization, rational
-  Berlekamp--Massey minimality checks, p=2..9 leading-layer checks, security
-  and normal/optimized replay; independent proof audit pending
+  independent proof and replay audit verified Fourier/Jordan minimality,
+  Galois descent, reduced generating denominator, defect and shared-layer
+  formulas, prime/composite-period boundaries, rational cyclotomic grouping,
+  the THM-3484 specialization, zero-word boundary, modular Hankel-rank
+  minimality, security, and byte-identical normal/optimized/stored replay
 depends_on: []
 related:
   - THM-3484-ternary-weighted-determinant-minimal-recurrence-and-cubic-fourier-degree-drop
   - THM-3476-rule30-depth-four-transverse-jet-barrier-and-slack-pascal-atlas
 script: 04-computation/periodic_polynomial_fourier_jordan_recurrence_thm3485.py
 output: 05-knowledge/results/periodic_polynomial_fourier_jordan_recurrence_thm3485.out
-script_sha256: 2f3aaa4a18f8313f1b1268482dcc278ce26f8307ff482242d585516de942eeb0
-output_sha256: 0976be36303565a5646ee5d6a8757884cfddc53236343c85bf4779f4f06bd63f
+script_sha256: 2d6441a7c875ded74b7ff6b83509108da450f6bb18553d37652269258936a6a0
+output_sha256: 85859d4b1585c6b72f5224f5022b258230fa4d630317fa078ac943e1f4f43789
 semantic_sha256: 834dfd2be5aed2f4d92b6f7fe742bc0df3a3008e61a0e1bc3fd39eef2dac54c0
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3485 -- Fourier colours classify periodic-polynomial recurrences
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-This candidate isolates the general mechanism behind THM-3484's order drop.
+This theorem isolates the general mechanism behind THM-3484's order drop.
 It is elementary, but keeping the exact zero-colour and descent boundaries
 explicit prevents a finite-fit recurrence from being mistaken for a minimal
 one.
@@ -72,7 +71,7 @@ vanish.
 
 ## 2. Exact minimal shift polynomial
 
-Let `E` denote forward shift, `(Ea)_n=a_(n+1)`.  The candidate theorem is
+Let `E` denote forward shift, `(Ea)_n=a_(n+1)`.  The theorem is
 
 ```text
 boxed:
@@ -87,7 +86,7 @@ Equivalently, the reduced ordinary generating denominator is
 D_a(z)=product_(j:Q_j!=0) (1-zeta^j z)^(d_j+1).      (6)
 ```
 
-### Proof candidate
+### Proof
 
 For a nonzero polynomial `R` of degree `e`, direct subtraction gives
 
@@ -112,7 +111,7 @@ corresponding `Q_j` to the permuted Fourier colour.  It preserves each degree
 and hence fixes `(5)`.  Thus `chi_a` lies in `K[x]`.  A smaller polynomial over
 `K` would remain a smaller annihilator after extension to `L`, contradicting
 the already proved minimality there.  This also proves `(6)`, since distinct
-colours give distinct poles and `(7)` gives their exact orders.  QED candidate.
+colours give distinct poles and `(7)` gives their exact orders.  QED.
 
 The proof applies unchanged to eventual recurrences: a nonzero polynomial in
 `n` cannot vanish on an infinite tail, so deleting a finite prefix removes no
@@ -270,7 +269,12 @@ and compares it with rational Berlekamp--Massey reconstruction.  It checks the
 THM-3484 specialization, five structured hostiles, 35 generic packets, and
 common-leading packets for every `2<=p<=9`.
 
-This theorem candidate proves no LRC current, bispectrum, endpoint
+For the identically zero word, the convention is `chi=D=1` and recurrence
+order zero; the defect identity `(11)` is deliberately stated only for a
+nonzero word.  The companion's ambient degree-zero hostile records naive
+bound seven and defect seven rather than assigning a polynomial degree to
+zero.
+
+This theorem proves no LRC current, bispectrum, endpoint
 factorization, Rule 30 complexity statement, tournament classification,
-Jacobian statement, or LRC(14) conclusion.  It is outside the proved
-dependency graph until an independent proof audit promotes it.
+Jacobian statement, or LRC(14) conclusion.

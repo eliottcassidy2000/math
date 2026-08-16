@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for the THM-3485 periodic-polynomial recurrence candidate."""
+"""Exact companion for THM-3485's periodic-polynomial recurrence theorem."""
 
 from __future__ import annotations
 
@@ -414,7 +414,7 @@ def main() -> None:
     named = tuple(certificate for certificate in certificates
                   if not str(certificate[0]).startswith("generic-"))
     print("THM-3485 PERIODIC-POLYNOMIAL FOURIER/JORDAN RECURRENCE EXACT COMPANION")
-    print("STATUS: RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING")
+    print("STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED")
     print(f"SECURITY: {security}")
     print(f"THM3484_SPECIALIZATION: {specialization}")
     print(f"NAMED_HOSTILES: {named}")
