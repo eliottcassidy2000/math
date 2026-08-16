@@ -16,6 +16,25 @@
   `efbfb738f1901946210e1f438212d24e7cc34ee4ca3f02d436923d61a852bf43` /
   `642f774f2c0320470d28ac8e5046b06ccb83851deae79e412c8a3fe0676149db` /
   `544b07a84c6806ea63c48f5227b78d74844f466dd0b446b6a320ea8560238895`.
+- `lrc_r5_common_ancestry_guard_atom_root_drift_probe_20260816.py` ->
+  matching `.out` [FINITE-EXACT COMMON-ANCESTRY SUPPORT REALIZATION;
+  INDEPENDENT AUDIT PENDING].  Inserts THM-3514's actual 39 guard atoms as
+  Boolean partitions on the linked THM-2471 arrival/source nodes before
+  transfer and marginalization.  The common gauge `a-u=b-q`, equivalently
+  root drift `s=-d`, has `72/117` chamber/drift support and exactly `48/52`
+  on the owner-active `K4` carrier: all four `d=0` buckets vanish by the
+  proved same-root law.  The four rational rows have rank four and exact
+  Walsh drift-Fourier support `(13,12,12,13)`; the missing coordinates are
+  precisely the zero modes of the two one-sided Haar rows.  Retaining the
+  common offset `c=a-u=b-q` before its owner-character contraction restores
+  rank four and support `(13,13,13,13)` for every nonzero owner frequency,
+  certified coordinatewise at `547,911,1093,2003,2549`.  This is lawful
+  support/spectral capacity, not equality with the frozen endpoint weights,
+  a current, row exclusion, or LRC(14).  Script/output/semantic SHA-256:
+  `3f54efba1d6764eb051f7bd092168b91b9953544d6cf1b6cfcb9c06d26fe2704` /
+  `527a0ebb6edb75b75d5a66e6bb2bee54469315776fa941cd2ebfbaf1ac8a2fa4` /
+  `dda1b9bd8ca0471c47c27b620c4e4172338413ec30d40839cae0ab44a3b70bc0`.
+
 - `lrc_r5_folded_c7_k4_transporter_independent_audit_20260816.py` ->
   matching `.out` [INDEPENDENT AUDIT OF PROVISIONAL PACKAGE; SCOPED
   PROMOTION RECOMMENDED].  Reconstructs the THM-2594 rank-three source and
