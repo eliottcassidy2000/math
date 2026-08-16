@@ -2,7 +2,7 @@
 id: THM-3492
 title: "Rule 30 slack-phase corner fiber product and pointed-carrier ambiguity"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.
   The complete inward slack polynomial and the calibrated terminal phase
   profile meet canonically in one center bit.  Their exact common refinement
   is a corner fiber product, but every bivariate lift has a large mixed
@@ -11,6 +11,12 @@ status: >
   face, and depth six gives a physical two-section hostile.  No Rule 30 prize
   consequence is claimed.
 source: root-rule30-next-targets-20260816
+audit: >
+  An independent hostile audit rederived both exact sequences and their
+  dimensions, rank-checked additional non-power phase sets, reconstructed the
+  depth-five and depth-six controls from a separate local-rule/Green path, and
+  verified the pointed-carrier routing.  Ordinary and optimized runs equal the
+  stored transcript byte-for-byte: ACCEPT.
 depends_on:
   - THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum
   - THM-3481-rule30-cyclic-arc-norm-rank-and-marked-innovation-spectrum
@@ -20,14 +26,14 @@ related:
   - THM-3476-rule30-depth-four-transverse-jet-barrier-and-slack-pascal-atlas
 script: 04-computation/rule30_slack_phase_fiber_thm3492.py
 output: 05-knowledge/results/rule30_slack_phase_fiber_thm3492.out
-script_sha256: PENDING-INDEPENDENT-AUDIT
-output_sha256: PENDING-INDEPENDENT-AUDIT
+script_sha256: f27374a9660c55b402f4acd31ddd4bc88fddd44200e7571a298b6606c4dbb57f
+output_sha256: 3101f5286e4d6949d3fa2bdc33632d8a3e9e60a7605ed9a4392e05388333e81f
 hash_basis: raw bytes
 ---
 
 # THM-3492 -- Rule 30 slack-phase corner fiber product and pointed-carrier ambiguity
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-3488 retains the complete transport-slack polynomial and proves that its
 top ballistic face is unique.  THM-3489 retains the complete terminal phase
@@ -304,7 +310,12 @@ but (20) is still positive for the physical `N>=1`; the full mixed lift is
 still not unique.  Thus a sparse pointed face does not canonically choose a
 joint coupling.
 
-## 5. Cheapest physical hostile: depth six
+## 5. Cheapest nontrivially arc-constrained physical hostile: depth six
+
+Depth five is the absolute first two-carrier hostile, but there `s=5` is odd
+and hence `ell=0`, so its arc image is the whole phase space.  Depth six is
+the first physical hostile for which the proper ideal `I_t=Y^ell V_p`
+actually constrains every coefficient profile.
 
 At `t=6`, exact Rule 30 evolution gives
 

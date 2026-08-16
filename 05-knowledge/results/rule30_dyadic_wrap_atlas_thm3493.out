@@ -1,0 +1,15 @@
+THM-3493 RULE 30 DYADIC WRAP ATLAS EXACT AUDIT
+boundary_pair_universe=full packed rows t=1..256
+period_floor_universe=exact seed cycles widths=1..34;floor/no-endpoint/lift checks widths=1..33
+period_floor_lift_checks=33;P_1..P_33=[1, 2, 2, 4, 8, 8, 16, 32, 32, 64, 64, 64, 64, 64, 64, 128, 256, 256, 256, 256, 256, 256, 256, 256, 512, 1024, 1024, 2048, 2048, 4096, 4096, 4096, 4096]
+finite_exact_universe=t=0..2^27;packed recurrence modulo 2^68;record t=2^m,m=0..27
+finite_exact_step_updates=134217728
+dyadic_valuations_v0..v27=1,3,4,6,7,9,15,16,24,25,27,29,34,36,37,39,41,43,48,49,51,54,55,58,60,63,64,66
+wrap_depths_through_2^28-1=[1, 2, 3, 4];wrapped_ones=3
+finite_exact_hard_range=5..268435455
+mersenne_face_universe=m=1..7;p/2^m in {2,4,8};exact functional masks
+mersenne_face_cases=21;profile_load_bearing=762;current_fixed_holonomy_load_bearing=1503
+scalar_hostiles=depths_1..4095;wrap_dense_hard_count=0;hard_dense_hard_count=4090
+explicit_nonassert_checks=31281
+scope=UNIVERSAL_PROOFS_PLUS_DECLARED_FINITE_EXACT_SCOUT;no_balance,nonperiodicity,random_access,or_fixed_seed_lower_bound_prize
+ALL CHECKS PASSED
