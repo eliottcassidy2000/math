@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `periodic_polynomial_fourier_dirichlet_residue_tomography_thm3490.py` ->
+  matching `.out` [THM-3490 RESERVED / PROVISIONAL PROOF CANDIDATE +
+  VERIFIED-EXACT; independent audit pending].  For a declared period and
+  character gauge, `Res_(s=m+1) sum_n zeta^(-jn)a_n/n^s` is exactly the
+  degree-`m` coefficient of Fourier colour `j`.  The complete table recovers
+  every periodic-polynomial lane coefficient; THM-3485's minimal recurrence
+  is its strict lossy projection, retaining only each row's highest nonzero
+  rung.  THM-3486 is the top trivial entry.  An `82`-packet split-field audit
+  checks Fourier inversion against direct Berlekamp--Massey, the alternating
+  trivial-colour blind spot, composite-period zero rows, finite-prefix loss,
+  and THM-3484's `(7,6,6)` profile.  For periodic Boolean subsets the full
+  residue bank recovers the address word while density is only its trivial
+  residue; an address gauge remains necessary.  Script/output/semantic LF
+  SHA-256:
+  `0a8ee350244e2c1c972ef97e8becd330e8d49bfa67d3d4d9a92eb7c2200cc96e` /
+  `6218bbeca38981456c17025dc923828e641415537af5890baaeb5d3527cbeb32` /
+  `39daa9a75e84e0fcb28141fa9079c3f616c9aa5d0689934cc239b4d911fc713e`.
 - `fibonacci_two_24_state_bundle_obstruction_thm3487.py` -> matching `.out`
   [THM-3487 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
   independent audit pending].  Synchronizing the six Fibonacci channel
