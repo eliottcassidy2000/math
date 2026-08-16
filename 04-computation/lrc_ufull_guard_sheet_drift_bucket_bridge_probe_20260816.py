@@ -54,7 +54,7 @@ Q_Q5 = (1, 0, 0)
 EXPECTED_GAMMA_SHA256 = "1fabc5cfdbaa1455e10cd6bf9264488133616a7b0ff381623d729b4b4bfa9682"
 EXPECTED_VALUES = (320618948602619577408, 503604956476841920373)
 EXPECTED_BRIDGE = 389266878372286537904
-EXPECTED_SEMANTIC_SHA256 = "TO_BE_PINNED"
+EXPECTED_SEMANTIC_SHA256 = "0b31a992ba23cecd05f28ae353133531f41cc6d84a4a935c34a12d77fd3db590"
 
 CHAMBERS = (
     ("left", 0, 1, frozenset((12, 0, 1))),
@@ -457,6 +457,64 @@ def rank_mod(rows: tuple[tuple[int, ...], ...], prime: int) -> int:
     return rank
 
 
+def root_alignment_certificate(zeta: int, prime: int) -> tuple[object, ...]:
+    """Classify the common C13-equivariant guard-sheet/root label gauges."""
+
+    maps = tuple(
+        tuple((address + gauge) % P for address in range(P))
+        for gauge in range(P)
+    )
+    require(len(set(maps)) == P, "root-alignment gauge count")
+    for gauge, mapping in enumerate(maps):
+        require(len(set(mapping)) == P, ("root gauge not bijective", gauge))
+        for address in range(P):
+            for tau in range(P):
+                require(
+                    mapping[(address + tau) % P]
+                    == (mapping[address] + tau) % P,
+                    ("root gauge not equivariant", gauge, address, tau),
+                )
+        # Any equivariant map f obeys f(a)=f(0)+a by taking tau=a.
+        require(
+            all(mapping[address] == (mapping[0] + address) % P for address in range(P)),
+            ("equivariant classification", gauge),
+        )
+        for frequency in range(1, P):
+            gauge_phase = pow(zeta, frequency * gauge % P, prime)
+            for address in range(P):
+                require(
+                    pow(zeta, frequency * mapping[address] % P, prime)
+                    == gauge_phase
+                    * pow(zeta, frequency * address % P, prime)
+                    % prime,
+                    ("root gauge phase", gauge, frequency, address),
+                )
+        for left in range(P):
+            for right in range(P):
+                require(
+                    (mapping[right] - mapping[left]) % P == (right - left) % P,
+                    ("common-gauge drift", gauge, left, right),
+                )
+    independent_gauge_hostile = (
+        ((1 + 1) - (0 + 0)) % P,
+        (1 - 0) % P,
+    )
+    require(
+        independent_gauge_hostile[0] != independent_gauge_hostile[1],
+        "independent endpoint gauges preserved drift",
+    )
+    return (
+        len(maps),
+        "u=a+c",
+        "guard pullback g_C(a+tau) and root translation phi(y,u)+tau/13=phi(y,u+tau) both use +tau",
+        "primitive orbit coefficient changes by zeta^(k*c)",
+        "u_R-u_L=a_R-a_L under one common c",
+        "independent c_L,c_R shift the drift by c_R-c_L",
+        "label torsor only; chamber and physical-root realization remain absent",
+        independent_gauge_hostile,
+    )
+
+
 def security_certificate(path: Path) -> tuple[int, tuple[str, ...]]:
     tree = ast.parse(path.read_text(encoding="utf-8"))
     bad = []
@@ -511,6 +569,7 @@ def main() -> None:
     bridge = (h_value - q5_value) % prime
     require((h_value, q5_value) == EXPECTED_VALUES, ("inverse values", h_value, q5_value))
     require(bridge == EXPECTED_BRIDGE, ("bridge", bridge))
+    root_alignment = root_alignment_certificate(zeta, prime)
 
     normalizer = pow(P**3, -1, prime)
     h_buckets = tuple(
@@ -656,6 +715,7 @@ def main() -> None:
         q5_buckets,
         bridge_buckets,
         restriction_rows,
+        root_alignment,
         expected_zero_buckets,
         corner_rows,
         walsh_rows,
@@ -687,6 +747,7 @@ def main() -> None:
     print(f"bucket_zero_types_sha256={digest_json(expected_zero_buckets)}; schema=all 13 drifts for the five chamber pairs containing middle")
     print(f"bucket_sha256=(H={h_bucket_hash},q5={q5_bucket_hash},bridge={bridge_bucket_hash})")
     print(f"guard_equality_hostiles=(name,H,q5,bridge)={restriction_rows}; none recovers the frozen bridge")
+    print(f"root_alignment_torsor={root_alignment}")
     print(f"K4xF13_corner_table=(rank={corner_rank},vertex_rows_sha256={digest_json(corner_rows)},walsh_rows_sha256={digest_json(walsh_rows)})")
     print(f"K4_walsh_support=(names={walsh_names},drift_nonzero={walsh_nonzero},zero_drifts={walsh_zero_drifts})")
     print(f"K4_walsh_drift_spectrum=(nonzero={walsh_spectral_nonzero},zero_frequencies={walsh_zero_frequencies},sha256={digest_json(walsh_spectra)})")

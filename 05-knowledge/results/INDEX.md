@@ -50,13 +50,21 @@
   difference.  The resulting `4x13` table is the canonical
   `F_2^2 x F_13`/`K4 x F_13` carrier: it has rank four, every one of its
   four Walsh channels is nonzero at every drift, and every Walsh channel
-  has all thirteen drift-Fourier modes nonzero.  The pairing remains the
-  Cartesian endpoint product and supplies no THM-2471 ancestry relation,
-  physical current, row exclusion, or LRC(14).  Semantic ledger SHA-256:
-  `c7b1f92cf7d8d1c09f387ff609b258480f121e39a464b9287332c32c8491d796`.
+  has all thirteen drift-Fourier modes nonzero.  Same sheet, same chamber,
+  and same guard atom all fail to recover the frozen bridge.  The guard
+  sheet and THM-2471 root label have the same `+tau` action, so their 13
+  equivariant label gauges are exactly `u=a+c`; one common gauge preserves
+  pair drift and changing `c` only phases primitive coefficients.  This
+  aligns labels but does not identify physical roots.  In the audited
+  relation-role typing the weighted differences remain in `B^1`, not a
+  nonzero `H^1` flux class.  The pairing remains the Cartesian endpoint
+  product and supplies no THM-2471 common-base support relation, horizons,
+  physical current, row exclusion, or LRC(14).
+  Semantic ledger SHA-256:
+  `0b31a992ba23cecd05f28ae353133531f41cc6d84a4a935c34a12d77fd3db590`.
   Script/output LF SHA-256:
-  `7593c216294fbf39d14654627620f4ce22ac7c706f4ab9848d43abfcf372e61b` /
-  `6830c18bd6413fea7c347e65c168664880621679897a630a8982446517f391aa`.
+  `a1d4b667812949001fc863ba881ff7409bbae3c568a6bf7bc24c9dc88b2766b1` /
+  `ed1ef68e733684d7a015af314bc196fdc71e95b2a5a8d1d98d933553163a2e95`.
 - `keller_tropical_norm_face_recurrence_probe_20260816.py` -> matching `.out`
   [THM-3506 PROVED CONDITIONAL TRANSFORM + VERIFIED-EXACT FIXED-MAP GATE].
   Reconstructs THM-3495's frozen `66,146`-term `J`, extracts the complete

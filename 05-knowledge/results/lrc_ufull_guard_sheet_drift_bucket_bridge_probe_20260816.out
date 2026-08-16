@@ -16,6 +16,8 @@ bucket_nonzero_counts=(H=52,q5=52,bridge=52)/117
 bucket_support=exactly (left/right)x(left/right)xF13; every one of 52 types is nonzero for H, q5, and their bridge
 bucket_zero_types_sha256=39bc347a40e5181822862b6d0efe96f3c1d1df5abed4dadd248acc647f8a6f5f; schema=all 13 drifts for the five chamber pairs containing middle
 bucket_sha256=(H=c5bb013836492665e766a0423a71c45983f5226b99b2ea74ad7f53e33c2a8629,q5=933c6f0b768f22ee993dc02af171d3b731e0c1ab3acd7120bed157a491a29ec9,bridge=553cfe7289b0556a19a8bcd1a0382dc1372545358feac62e5229adca315f8a26)
+guard_equality_hostiles=(name,H,q5,bridge)=(('same_sheet', 118992333014385604245, 366746771947440878083, 324498447313453607031), ('same_chamber', 237441608630540813143, 468104475565795325224, 341590019311254368788), ('same_guard_atom', 319186094366758452423, 268974005044605905796, 50212089322152546627)); none recovers the frozen bridge
+root_alignment_torsor=(13, 'u=a+c', 'guard pullback g_C(a+tau) and root translation phi(y,u)+tau/13=phi(y,u+tau) both use +tau', 'primitive orbit coefficient changes by zeta^(k*c)', 'u_R-u_L=a_R-a_L under one common c', 'independent c_L,c_R shift the drift by c_R-c_L', 'label torsor only; chamber and physical-root realization remain absent', (2, 1))
 K4xF13_corner_table=(rank=4,vertex_rows_sha256=c651f1deb71258001213c32b812005fb1f07b3a834fbe0526feb5b9c1c54435a,walsh_rows_sha256=6f8ce43a58c5c05552fa4a815c955e10873ed3535ba8cb436284fe4ad18d996c)
 K4_walsh_support=(names=('constant', 'left', 'right', 'mixed'),drift_nonzero=(13, 13, 13, 13),zero_drifts=(('constant', ()), ('left', ()), ('right', ()), ('mixed', ())))
 K4_walsh_drift_spectrum=(nonzero=(13, 13, 13, 13),zero_frequencies=(('constant', ()), ('left', ()), ('right', ()), ('mixed', ())),sha256=ef4c512d3e0444cce1cacee42ebbbb2d2edef7bd866517814484d1e8e921eaa9)
@@ -25,6 +27,6 @@ positive_control=39-atom reconstruction matches the frozen full 13^3 gamma bank 
 hostile_boundary=117 drift buckets classify guard covariance only; their Cartesian endpoint pairs have no THM-2471 common-base/root/owner/word/source/horizon support relation
 next_test=retain these guard buckets while adding one independently lawful ancestry-support predicate before multiplying endpoint factors
 nonconsequence=no physical current, grouped exact-address coefficient, all-unit projector, scalar-row exclusion, or LRC(14)
-security_ast=(5424, ())
-semantic_sha256=c7b1f92cf7d8d1c09f387ff609b258480f121e39a464b9287332c32c8491d796
+security_ast=(6080, ())
+semantic_sha256=0b31a992ba23cecd05f28ae353133531f41cc6d84a4a935c34a12d77fd3db590
 STATUS=PASS
