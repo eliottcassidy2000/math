@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `factorial_dual_seven_exit_block_closure_thm3478.py` -> matching `.out`
+  [THM-3478 PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED].  Separately pinned coefficient/Fraction-hull and
+  determinant-hull routes reconstruct all 38 seven-exit residuals in
+  `2501<=d<=2600`, agree on every progressive degree trace, and close them
+  all.  Four common chunk digests combine to global semantic SHA-256
+  `28bdc29a6dadfc941ccab7b8eddafd77bd6bbcec9a2574455d4ba3a6dd439b9f`.
+  Two formula-only THM-3475 implementations then agree that divisor ledgers
+  close `d=2601..2605`; at `d=2606` they leave exactly
+  `{521,1042,1563,2084}`, semantic SHA-256
+  `602f0fac54c487114457683a3264d2a095a7f048f9a0b3769332d3ead0e61289`.
+  Hence exact-support quadratic three-moment windows close through `r=2603`.
+  Script/output raw SHA-256:
+  `65c651ce611317bc44de472c79d246c0a1bcb90ddfec8145cdd0ef33304073e7` /
+  `0bda5199917f16e59f0c6b3319cabe6184e7d93dc2556752d15166b71f653935`.
+  The expensive routes were completed separately; the final wrapper was
+  syntax/AST/render audited but not rerun end-to-end after packaging.  This
+  proves no arbitrary-support SFC or FC case.
 - `lrc_private_support_7x13_incidence_h1_probe_20260815.py` -> matching
   `.out` [FINITE-EXACT STRUCTURAL SIDECAR; THM-3473 AUDIT PENDING].  The
   provisional private-support two-section has eight vertices and thirteen

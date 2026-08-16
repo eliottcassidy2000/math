@@ -33,7 +33,7 @@ Laurent claim was checked directly against THM-3383's membership criterion.
 | prime-power carry face | first Euclidean triple at `d=a p^k+1` | PROVED complete singleton ledger for every `2<=a<p` |
 | binary-submask compiler | `NP_2(A_N^(N+1))` intersect odd reset | PROVED all `2^s p^k` windows with `2<=2^s<p` |
 | all-divisor digit compiler | exact positive `F` suffix intersect THM-3161 `G` hull | PROVED pair barcode for every `p|d-1`; 33/38 residuals close |
-| seven-exit factorial boundary | first Euclidean triple at `d=2501,2502` | both closed; the wider `2501..2600` audit is intentionally not yet a theorem here |
+| seven-exit factorial boundary | first Euclidean triple plus divisor digit ledgers | THM-3478 dual-exact closure through `r=2603`; first survivor `d=2606` has four degree addresses |
 
 ## 3. First alternation: factorial lowering becomes Keller flux
 
@@ -368,6 +368,29 @@ retain explicit degree packets.  The first is
 `r=2513`.  These survivors identify the exact boundary of the divisor-only
 compiler; a nondivisor place or a new sidecar is genuinely required there.
 
+The fixed three-row observer and the divisor compiler then alternate once
+more.  Separately pinned coefficient/Fraction-hull and determinant-hull
+engines reproduce every progressive degree set on all `38` residuals and
+close the five packets above.  Their four chunk digests combine to the common
+global digest
+
+```text
+28bdc29a6dadfc941ccab7b8eddafd77bd6bbcec9a2574455d4ba3a6dd439b9f. (15b)
+```
+
+Returning to the cheap structural observer, two formula-only implementations
+of the divisor compiler close `d=2601,...,2605`.  The first survivor is
+
+```text
+d=2606,       r=2604,       {521,1042,1563,2084},         (15c)
+```
+
+with common extension digest
+`602f0fac54c487114457683a3264d2a095a7f048f9a0b3769332d3ead0e61289`.
+Thus the contiguous exact-support quadratic boundary is now `r=2603`.
+The four numbers in (15c) are necessary factor-degree addresses, not factors;
+they are the next honest target rather than evidence of a bad moment window.
+
 ## 8. Typed bridge and next work
 
 The honest joint carrier is
@@ -385,13 +408,13 @@ The honest joint carrier is
   response length.
 - **Cheapest next tests:** solve the degree-at-most-four mixed-character
   Keller/HFC joint ideal; classify anti-tangent polynomial edge pairs on which
-  both `kappa` and its curvature jet descend; and compile adaptive divisor
-  places for the non-power-of-two residuals rather than extending a fixed
-  prime bank by pattern alone.
+  both `kappa` and its curvature jet descend; and audit the proposed
+  nondivisor residue-table lift before attacking the four `d=2606` addresses
+  with another multi-hour coefficient scan.
 
 The main reframing is deliberately modest: the frontiers communicate through
 paired native operations and their response modules, not through a common
 scalar discriminant.  That produced one all-degree restricted theorem, one
-new current/topology passport, one unbounded effectivity obstruction, and a
-new exact factorial row without converting any of them into a full-conjecture
-claim.
+new current/topology passport, a complete Jordan/Prüfer effectivity response,
+and a `105`-step exact factorial boundary advance without converting any of
+them into a full-conjecture claim.
