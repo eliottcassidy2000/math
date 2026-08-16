@@ -1,5 +1,5 @@
 ---
-id: THM-3493
+id: THM-3494
 title: "Weighted-lift primitive-coordinate discriminant atlas"
 status: RESERVED / UNPROVED EMPTY STUB
 related:
@@ -7,7 +7,7 @@ related:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
 ---
 
-# THM-3493 -- weighted-lift primitive-coordinate discriminant atlas
+# THM-3494 -- weighted-lift primitive-coordinate discriminant atlas
 
 **RESERVED / UNPROVED EMPTY STUB.**
 

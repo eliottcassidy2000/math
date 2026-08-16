@@ -81,6 +81,13 @@ Format per entry:
   scanned `THM-3483`.  This recurrence occurred even after a full remote-tip
   pre-scan: a scan is an observation, not a lock, and uniqueness must be
   repeated after every expansion rebase as well as every reservation rebase.
+- **Third exact recurrence:** commit `bb86eb0a2` published the Rule-30 dyadic
+  wrap reservation as `THM-3493`.  Two independent Keller lanes then raced
+  against that moving tip: the later weighted-coordinate atlas reservation
+  and the still later level-three divisor reservation both reused `THM-3493`.
+  The weighted atlas yields immediately to `THM-3494`; the level-three owner
+  was notified that it must also yield to a freshly rescanned ID.  Again, no
+  mathematical statement changes: only the theorem namespaces collided.
 - **Reusable rule:** immediately re-fetch and repeat both YAML-ID and filename
   searches after any reservation or expansion rebase and before pushing.
   If two reservations still race, publication order keeps the earlier ID and
