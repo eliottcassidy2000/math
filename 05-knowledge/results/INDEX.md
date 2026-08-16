@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `keller_tropical_norm_face_recurrence_probe_20260816.py` -> matching `.out`
+  [THM-3506 PROVED CONDITIONAL TRANSFORM + VERIFIED-EXACT FIXED-MAP GATE].
+  Reconstructs THM-3495's frozen `66,146`-term `J`, extracts the complete
+  `lambda`, `beta`, `z`-top, and `gamma` faces of `L,H,J`, and calibrates the
+  first two norm transforms coefficient-for-coefficient.  Inverse-chart
+  linear/quadratic edges and the Chebyshev labels `2,-1,-1` give the
+  five-face law `(e,m)->(7e-2m,3e-2m)`.  The first hostile step is
+  `(271,99)`, refuting `(259,87)`; three good-prime finite-sheet controls
+  prove `v_L(N(G))=-271`, hence `R_5=L^271N(G)` is polynomial and coprime to
+  `L`, with exposed pair `(1699,615)`.  The exact Cassini/reduced-fraction
+  sidecar passes.  The `z`-top and `gamma` renewal faces for `G`, the next
+  finite sheet, fifth image role, degree-243 gate, and all-level law remain
+  open.  Script/output LF SHA-256:
+  `fe1b03de9061c997a1abba6b88753e589c0a01f9f92762e49fe7ea0504ce9797` /
+  `0dd07d1af0621a9f767e9c803e805de61ee428fb6a980b004cd3f06625082b52`.
 - `keller_level_four_norm_J_mod1009_slice_probe_20260816.py` -> matching
   `.out` [THM-3504 PROVED + VERIFIED-EXACT].  On the lawful slice `b=c=1`,
   a Newton-at-infinity/support calculation proves

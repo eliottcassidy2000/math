@@ -323,6 +323,40 @@ require(
 )
 
 
+def matrix_step(state: tuple[int, int]) -> tuple[int, int]:
+    e_value, m_value = state
+    return 7 * e_value - 2 * m_value, 3 * e_value - 2 * m_value
+
+
+formal_states = [(1, 0)]
+for _ in range(4):
+    formal_states.append(matrix_step(formal_states[-1]))
+require(
+    formal_states == [(1, 0), (7, 3), (43, 15), (271, 99), (1699, 615)],
+    "matrix orbit changed",
+)
+for index in range(4):
+    left_e, left_m = formal_states[index]
+    right_e, right_m = formal_states[index + 1]
+    require(
+        left_e * right_m - left_m * right_e == 3 * (-8) ** index,
+        f"Cassini determinant changed at index {index}",
+    )
+for index, (e_value, m_value) in enumerate(formal_states[1:], start=1):
+    require(e_value % 6 == 1 and m_value % 6 == 3, f"mod-six orbit changed at {index}")
+    require(math.gcd(e_value, m_value) == 1, f"primitive ratio changed at {index}")
+
+pythagorean_triples = [
+    ((e_value**2 - m_value**2) // 2, e_value * m_value, (e_value**2 + m_value**2) // 2)
+    for e_value, m_value in formal_states[1:4]
+]
+require(
+    pythagorean_triples
+    == [(20, 21, 29), (812, 645, 1037), (31820, 26829, 41621)],
+    "primitive Pythagorean sidecar changed",
+)
+
+
 # --- A finite-sheet hostile for the *next* norm ---------------------------
 
 def inv_mod(value: int, prime: int) -> int:
@@ -515,5 +549,9 @@ print(
 print("hostile verdict: predicted (259,87) is REFUTED; exact next pair is (271,99)")
 print("five-face one-step law: (e_next,m_next)=(7e-2m,3e-2m)")
 print("conditional iteration: u_(n+2)=5u_(n+1)+8u_n for u=e and u=m")
+print("transported G faces: lambda_min=-271 with y^615*z^271; beta_min=-1157")
+print("R5=L^271*Norm(G): exposed pair=(1699,615); next finite-sheet gate remains open")
+print("Cassini sidecar: det(v_n,v_(n+1))=3*(-8)^n; reduced ratios are not Farey neighbors")
+print(f"primitive Pythagorean triples: {pythagorean_triples}")
 print("scope: fixed norm orbit only; no irreducibility, all-level induction, or general JC claim")
 print("all exact checks passed")

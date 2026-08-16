@@ -13,9 +13,11 @@ status: >
   polynomial localization, generic degree-81 separability gate, and square
   class `[Delta_4]=[2G]` for `G=L^43N(J)`.  THM-3504 proves the missing
   image role: `G` is absolutely irreducible, `V(J)->V(G)` has generic degree
-  one, and `S_(F^4)=V(LHJ G)` has four components.  Exact positive
-  discriminant multiplicities and depth >=5 remain open.  Nothing here is a
-  JC(2) or classification claim.
+  one, and `S_(F^4)=V(LHJ G)` has four components.  THM-3506 proves the
+  next old-`L` valuation `v_L(N(G))=-271`, polynomial localization of
+  `R_5=L^271N(G)`, and the conditional five-face transform; the fifth image
+  prime, degree-243 gate, positive discriminant multiplicities, and all-level
+  renewal remain open.  Nothing here is a JC(2) or classification claim.
 source: opus-2026-07-28 (from the uniform disc law found by the
   THM-2546 referee run: disc = -4 (square)^2 L for all three
   coordinate cubics of the sporadic Keller map)
@@ -32,6 +34,7 @@ related:
   - THM-3495 (third prime image, three components, and degree-27 square class)
   - THM-3498 (fourth old-boundary valuation and degree-81 square-class gate)
   - THM-3504 (fourth prime image and four-component nonproperness set)
+  - THM-3506 (five-face transform and the next old-boundary valuation)
 ---
 
 # HYP-9033 -- the discriminant tower and the genus axis
@@ -178,8 +181,20 @@ gcd(G,LHJ)=1,
 ```
 
 `G` is absolutely irreducible, and `V(J)->V(G)` has generic degree one.
-Depth at least five, integral normalization of `G`, and its unexpanded global
-degree ledger remain open.
+THM-3506 then derives the hidden five-face transform directly from the inverse
+chart.  The first untested pair is `(271,99)`, not `(259,87)`; a finite-sheet
+unit gives
+
+```text
+v_L(N(G))=-271,
+R_5=L^271N(G) in Q[a,b,c],
+gcd(R_5,L)=1.
+```
+
+It also proves the exposed face
+`R_5 ~ x^1699(3xz-2y)^615` in the relevant initial form.  The fifth image
+role, integral normalizations, global degree ledgers, degree-243 separability,
+and the two Newton renewal faces needed for all-level iteration remain open.
 
 ## 3. Two crevasse invariants for atomhood (spectrum repaired)
 
@@ -248,7 +263,9 @@ place to HUNT for a JC(2) counterexample instead.
   At grade four THM-3498 proves the square-class/localization gate
   `[Delta_4]=[2G]`, while THM-3504 proves `S_(F^4)=V(LHJ G)` with four
   pairwise-distinct prime components and generic degree one on the newest
-  image restriction.
+  image restriction.  THM-3506 proves the next old-boundary/localization gate
+  `v_L(N(G))=-271` and `R_5=L^271N(G)` coprime to `L`, but no fifth image or
+  discriminant claim.
 - P2 (VERIFIED-EXACT for the two fixed tame members): W1 and W2 obey
   `disc=-(det J)^2(square)^2L_W`, with `L_W=L o T^(-1)`.  A general
   gauge-covariance theorem remains open.
@@ -267,14 +284,17 @@ identity and the global composite discriminant square class `[H]`; THM-3495
 adds the third prime `J`, the three-component set, and `[-2J]`; THM-3498 adds
 the fourth old-`L` valuation, polynomial localization, degree-81 genericity
 gate, and `[2G]`; THM-3504 adds the fourth prime `G`, image multiplicity one,
-and the four-component set.  None gives exact positive discriminant
-multiplicities or an all-level factorization law.
+and the four-component set; THM-3506 adds the conditional five-face matrix
+`(e,m)->(7e-2m,3e-2m)`, the exact pair `(271,99)`, and the next old-`L`
+valuation/localization.  None gives exact positive discriminant multiplicities
+or an all-level factorization law.
 Trace-zero persistence at depth two and the `8 -> 512` cubing pattern are
 VERIFIED for the fixed construction only.  The W1/W2 identities are exact for
 those two tame conjugates, not a classification theorem.  P4 is proved for
-the fixed tower through depth four.  The next decisive test is the depth-five
-norm of `G`: its old-boundary valuations, cleared numerator, image
-multiplicity, distinctness, and degree-243 separability gate.
+the fixed tower through depth four.  The depth-five old-boundary valuation and
+cleared numerator now exist by THM-3506.  The next decisive tests are the two
+renewal faces of `G`, the finite-sheet gate beyond `R_5`, the image
+multiplicity/distinctness of `R_5`, and degree-243 separability.
 
 ## Loss ledger
 
@@ -283,7 +303,9 @@ pullback has the extra affine plane `c=0` described in (C).  The set-level
 composition law and odd-block square-class lemma are general; the fixed-map
 two-, three-, and four-component sets and their square classes are proved.
 Exact discriminant multiplicities, the `-(det J)^2` law, and depth-five or
-general component counts remain outside proved canon.  "Generic component count"
+general component counts remain outside proved canon.  THM-3506's
+`R_5=L^271N(G)` is polynomial and coprime only to `L`; it is not yet a prime
+image equation.  "Generic component count"
 needs a precise genericity notion before any classification claim; none of
 this closes JC(2), classifies maps within the monoid, or controls the weighted
 G1 witness -- it supplies invariants and a hunting map.

@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-415 (2026-08-16, fixed Keller norm-face extrapolation) -- the exposed pole pair is not a closed scalar recurrence
+
+- **What failed:** the pinned values `e=1,7,43` and exposed factors
+  `m=0,3,15` suggested `e_next=6e+1` and `m_next=2e+1`, hence the first
+  untested pair `(259,87)` for `G=L^43N(J)`.  This treated the visible
+  `(e,m)` data as though the norm read only the exposed face.
+- **Minimal witness / first failed implication:** exact extraction from the
+  canonical `66,146`-term `J` ledger gives
+  `min(i-k)=-43` with face `y^99z^43` and
+  `min(i-j-2k)=-185` with face
+  `y^99z^28(y^2+27z)^10(y^2+108z)^5`.  The inverse-chart linear and
+  quadratic edges therefore give
+  `e_next=43-(-43)-(-185)=271` and `m_next=99`, not `(259,87)`.
+- **Repair / strongest survivor:** THM-3506 proves the five-face one-step
+  transform `(e,m)->(7e-2m,3e-2m)`.  It is derived from the inverse chart and
+  resultant geometry, and it gives the exact fixed-map pair `(271,99)` plus
+  `v_L(N(G))=-271`.  All-level iteration remains conditional on renewal of
+  the `z`-top and `gamma=i-j-5k` faces.
+- **Reusable rule:** a Newton face observed on divergent sheets need not be a
+  state variable closed under norm.  Before extrapolating, include every
+  inverse-branch valuation, test each complete initial form in its residual
+  algebra, and separately test the finite sheet.
+
 ## MISTAKE-414 (2026-08-16, provisional THM-3497 pole terminology) -- a normalized polar coefficient is not an analytic residue
 
 - **What failed:** the provisional fixed-drift Berggren note called

@@ -331,16 +331,17 @@ positive-log; not arbitrary subsets.
 - **Rule 30:** chain [3476](../01-canon/theorems/THM-3476-rule30-depth-four-transverse-jet-barrier-and-slack-pascal-atlas.md), precursor [3493](../01-canon/theorems/THM-3493-rule30-dyadic-wrap-atlas.md);
   [3500](../01-canon/theorems/THM-3500-rule30-dyadic-section-cut-defect-and-cross-depth-valuation-carrier.md); [3501](../01-canon/theorems/THM-3501-rule30-universal-cover-green-potential-and-slack-holonomy-seam.md); [3502](../01-canon/theorems/THM-3502-rule30-four-fifths-staircase-entropy-and-sixteen-fifths-compiler.md); [3503](../01-canon/theorems/THM-3503-rule30-odometer-ultrametric-regrading-and-orbit-closure-dimensions.md). OPEN.
 - **Jacobian/Dixmier:** `JC(2)`/`DC(2)` remain open. THM-3438 gives every
-  grade except `2` with `S_n` atoms; audited THM-3494 gives its reduced branch
-  and primitive `x/y` atlas. `C=0`/Jelonek, composition and arbitrary-map/planar
-  lanes stay open. THM-1300 exact/provenance unsettled (MISTAKE-205);
-  THM-1315 corrected (MISTAKE-282); THM-2473--2576 fixed-map.
+  grade `n>=3` an `S_n` atom; THM-3494 gives its primitive atlas.
+  General lanes stay open. THM-1300 provenance is unsettled
+  (MISTAKE-205); THM-1315 repaired; THM-2473--2576 fixed-map.
   THM-3495/3498/[3504](../01-canon/theorems/THM-3504-level-four-sporadic-keller-image-prime-and-four-component-nonproperness.md)
-  give `S_(F^4)=V(LHJ G)`, `[Delta_4]=[2G]`, and newest-image degree one;
-  `>=5` OPEN. THM-2681
+  prove `S_(F^4)=V(LHJ G)` and `[Delta_4]=[2G]`;
+  [3506](../01-canon/theorems/THM-3506-fixed-keller-five-face-norm-transform-and-271-99-boundary.md)
+  gives face law, `(271,99)`, and `v_L(N(G))=-271`;
+  fifth-image/renewal/degree-243/all-level OPEN. THM-2681
   blocks the `A4/S4` cubic; THM-2685--2708 give its
   gain/holonomy.
-  THM-3057/3059/3441 set the boundary and refute both odd-every-component forms of HYP-9027. THM-3448 realizes Keller `C_ell` inertia (`ell>=2`; first `C3` in degree five) and excludes `C3` only for weighted quartics; arbitrary quartic/two-jet `C3` remains OPEN.
+  THM-3057/3059/3441 refute both odd-component forms of HYP-9027. THM-3448 realizes Keller `C_ell` inertia (`ell>=2`; first `C3` in degree five) and excludes `C3` only for weighted quartics; arbitrary quartic/two-jet `C3` remains OPEN.
   THM-3440/3443/3450: marked mode-one LRC/Keller isomorphism on 91 sheets.  Mod-13 `H^1` has no amplitude map; order 8/14 margins block the full germ.  No current.  THM-3066 retains only their
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
   THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;
