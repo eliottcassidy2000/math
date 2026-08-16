@@ -80,14 +80,16 @@
   `b58d98c283a2dc42111365a3d61af0948757feda3b1ff11ca65cd7d562b15a56`.
 - `lrc_r5_p7_arc_carrier_tent_section_audit_20260816.py` -> matching
   `.out` [DERIVED FINITE-EXACT REPRESENTATION AUDIT; FIVE-COORDINATE PARENT
-  REMAINS CANDIDATE].  An independent pointed-root replay identifies its six
+  INDEPENDENTLY ACCEPTED].  An independent pointed-root replay identifies its six
   relation rows injectively with both the alternating `P7` edges and the arcs
   of `0<->1<->3<->2`; the Boolean parent is the rank-four tail-star image.
   Arc reversal splits `3+3`.  For interior nonmultiples of three the diagonal
   coefficient span is exactly the root-even module; at `r0=3,6,9` it is that
   module plus `1->3-3->1`, whose boundary is nonzero.  The 60 tent-section
   failures have source-quotient stalk ranks `(2,1,1,1,1,2)`, total eight and
-  reflection split `4+4`, refuting an ordinary P7-incidence kernel.  The best
+  reflection split `4+4`; the independent full-tensor audit verifies that all
+  60 remainders are endpoint-annihilated, refuting an ordinary P7-incidence
+  kernel.  The best
   static formalization is six normalized scalar cylinder sections, not a
   local system or H1 cocycle.  Script/output/semantic LF SHA-256:
   `488caabca1376d4886dce3368aa416a542d23aee522fed063df97caf9992b5c3` /

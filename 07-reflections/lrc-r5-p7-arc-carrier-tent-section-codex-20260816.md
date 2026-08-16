@@ -1,12 +1,12 @@
 # The pointed six is a bidirected-path arc module, not a global ceiling
 
-**Status: DERIVED FINITE-EXACT REPRESENTATION SIDECAR.  THE POINTED RESPONSE
-TABLE IS RECONSTRUCTED THROUGH THE INDEPENDENT IMPLEMENTATION; THE SOURCE
-PROFILE TEST DOES NOT REPEAT THE FIVE-COORDINATE COMPUTATION AT `b1baa781a`.
-THE `r_0=3,9` COMPLETION USES THAT PINNED DIAGONAL-BUNDLE RESULT TOGETHER WITH
-THE INDEPENDENT TWO-DIGIT CONDITIONAL RANKS AT `abf64fa44`.  EVERYTHING HERE IS
-STATIC.  THERE IS NO CHRONOLOGY, LOCAL SYSTEM, COCYCLE, PHYSICAL CURRENT, ROW
-EXCLUSION, OR LRC(14) CONCLUSION.**
+**Status: DERIVED FINITE-EXACT REPRESENTATION SIDECAR WITH AN INDEPENDENTLY
+AUDITED FIVE-COORDINATE PARENT.  THE POINTED RESPONSE TABLE IS RECONSTRUCTED
+THROUGH THE INDEPENDENT IMPLEMENTATION; THIS CHEAP SIDECAR DOES NOT REPEAT THE
+FULL ENDPOINT SWEEP.  COMMIT `1d4b7f1ee` HAS SINCE RECONSTRUCTED THE COMPLETE
+DIAGONAL BUNDLE WITHOUT IMPORTING THE CANDIDATE AND ACCEPTED EVERY PARENT FACT
+USED BELOW.  EVERYTHING HERE IS STATIC.  THERE IS NO CHRONOLOGY, LOCAL SYSTEM,
+COCYCLE, PHYSICAL CURRENT, ROW EXCLUSION, OR LRC(14) CONCLUSION.**
 
 The six pointed incidences have a canonical combinatorial model.  Put the
 owner states in Gray-path order
@@ -138,22 +138,30 @@ The even module `A^+` is exactly the three-root quotient.  The odd module
 
 ## The period-three conditional ranks are now explained exactly
 
-Write the diagonal transition from `b1baa781a` as
+Write the diagonal transition first exposed at `b1baa781a` as
 
 ```text
 K_(r0,r1)=diag(k_0(r0,r1),...,k_5(r0,r1)).         (5)
 ```
 
-The parent result proves that all 169 matrices (5) exist uniquely, are
-diagonal, and satisfy
+The independent hostile audit at `1d4b7f1ee` reconstructs the ordered
+`(u,q)` contributions by exact OWNER-lawful source cell before expanding the
+169 addresses.  It matches all four candidate tensor digests and proves that
+all 169 matrices (5) exist uniquely, are diagonal, and satisfy
 
 ```text
 sum_r1 K_(r0,r1)=I_6
 ```
 
-for every fixed `r0`.  The source-profile audit independently reconstructs
-all coefficients for which child/parent proportionality holds and uses the
-parent's exact `954/954` source-to-output agreement.
+for every fixed `r0`.  Its semantic digest is
+
+```text
+b58d98c283a2dc42111365a3d61af0948757feda3b1ff11ca65cd7d562b15a56.
+```
+
+The smaller source-profile audit here independently reconstructs all
+coefficients for which child/parent proportionality holds and uses the now
+independently accepted exact `954/954` source-to-output agreement.
 
 For every interior nonmultiple of three,
 
@@ -302,14 +310,18 @@ one-digit parent line.  The six stalk dimensions are
 so the global quotient defect has dimension eight and reflection split
 `4+4`.  Before quotienting, the 60 source rows span dimension 14 and the six
 parent lines span dimension six.  Ordinary `C1(P7)` has dimension six and
-`H1(P7)=0`; neither can be the eight-dimensional kernel mechanism.
+`H1(P7)=0`; neither can be the eight-dimensional kernel mechanism.  The
+independent five-coordinate audit now additionally verifies that every one of
+the 60 nonproportional source remainders is annihilated by the common endpoint
+operator.  Thus the eight-dimensional quotient defect is an exact subspace of
+the induced endpoint kernel, not merely a source-side dimension count.
 
 The strongest exact survivor is therefore a decorated edge sheaf: rank two
 at the terminal arcs and rank one at the four inner arcs.  The endpoint map
 annihilates its classes after quotienting the target by the corresponding
-pointed response line.  Any sharper absolute-kernel statement requires the
-60 retained output coefficients from (5), not only the proportionality
-classes.
+pointed response line.  What remains open is a basis-level factorization of
+that eight-space through a decorated incidence operator; ordinary `P7`
+incidence is already refuted.
 
 ## Correct static formalization of the diagonal bundle
 
@@ -337,8 +349,9 @@ field has no positivity order.  “Diagonal local system” is too strong:
 “H1/cocycle” is a type error at this stage: (15) is static function data, not
 parallel transport.
 
-The concurrent complete-profile companion at `7f88e61af` sharpens this
-classification without changing it.  Its six `13 x 13` matrices
+The complete-profile companion at `7f88e61af`, now checked against the
+independent reconstruction at `1d4b7f1ee`, sharpens this classification
+without changing it.  Its six `13 x 13` matrices
 `(k_e(r0,r1))` have ranks
 
 ```text
@@ -354,9 +367,10 @@ is `68/78`.  Arc-reversal equality holds at exactly `143/169` addresses.  The
 (0,11),(0,12),(6,5),(6,7),(12,0),(12,1).
 ```
 
-Chamber reflection holds on all 1,014 scalar entries.  These complete-
-profile facts independently support (8), but row-sum one over a finite field
-still supplies neither positivity nor composable transport.
+Chamber reflection holds on all 1,014 scalar entries.  These complete-profile
+facts support (8) through two independent construction routes, but row-sum
+one over a finite field still supplies neither positivity nor composable
+transport.
 
 A future D5/H1 interpretation needs a lawful clock/address graph `Gamma`, a
 typed transport on each clock edge, and a composition law.  Only after
@@ -386,14 +400,15 @@ of those four typed edges.
 
 ## Cheapest next decisive computations
 
-1. Persist the complete diagonal profile already reconstructed by the
-   `7f88e61af` companion (digest `d1c7e561...f595`) and run direct RREFs.  This
-   independently confirms the derived `r0=3,9` equalities in (8) and
-   identifies the two boundary four-spaces without another endpoint sweep.
-2. Retain the 60 exceptional diagonal entries and form the absolute
-   remainders `child-k_e parent`.  Compare their kernel image with the
-   decorated edge-stalk basis (14).  This decides whether the eight-space has
-   a sheaf-boundary factorization or is only an endpoint-specific kernel.
+1. Add postprocessing to the independent full-tensor audit: RREF the six
+   diagonal coefficient vectors for each `r0` against `A^+` and
+   `A^+ + k*j_mid`.  The matrices are already resident, so this directly
+   confirms (8) and identifies the two boundary four-spaces without another
+   endpoint sweep.
+2. In that same resident tensor, retain a basis of the 60 absolute remainders
+   and test every natural decorated-stalk incidence matrix with stalk ranks
+   (14).  This decides whether the exact eight-dimensional kernel subspace has
+   a sheaf-boundary factorization or is only endpoint-specific.
 3. If a lawful address clock is constructed, add one typed clock edge at a
    time and test invertibility plus composition before computing holonomy.
    Without those gates, no D5/H1 promotion is admissible.
