@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `lrc_ternary_weighted_determinant_minimal_recurrence_thm3484.py` ->
+  matching `.out` [THM-3484 RESERVED / PROVISIONAL PROOF CANDIDATE +
+  VERIFIED-EXACT; independent audit pending].  The explicit three-lane
+  degree-seven word related to THM-3482 has minimal characteristic polynomial
+  `(x-1)^8(x^2+x+1)^7`, hence order `22` rather than the naive order `24`.
+  The common leading term `-16384k^7` lowers both nontrivial cubic Fourier
+  colours to degree six.  The generating denominator is
+  `(1-z)(1-z^3)^7`; an exact nonzero `22x22` Hankel determinant factors as
+  `-2^382*3^191*5^22*7^8*61^7`.  Both shortened-factor hostiles fire,
+  rational Berlekamp--Massey returns order 22, and each ternary lane has
+  natural/harmonic coefficient `1/3`.  Script/output/semantic LF SHA-256:
+  `1f6edbcba3dc30ee6a279737a0783c9ba4fecb91eda77712f5dd30935597c686` /
+  `d3823457e7d277747d925bef2e85afbf112254c649c24a306df4d81be017c39b` /
+  `0c9cac55b66f8a8aa4241ad728e3336dd000cff25544f3df7eef9af120012518`.
+  The theorem is self-contained for the explicit word; its determinant and
+  LRC interpretations remain outside the claim.
 - `lrc_private_count_gradient_weighted_spectral_thm3482.py` -> matching
   `.out` [THM-3482 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
   independent audit pending].  Orient the thirteen THM-3473 coactivity edges
