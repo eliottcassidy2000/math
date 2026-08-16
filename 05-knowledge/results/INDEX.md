@@ -40,6 +40,25 @@
   `b30af31ba22ed702f8dac24d7452eb36cd8dbf6eb37f937a948f9976b01c5d10` /
   `38123b9ad9171bc11054f5e41ba72f30d83a04cf0e2d70c04130da30dd0f9b6f` /
   `97694f50b071dbf875802223dd894d7e1df86ef65a194c22d588505c59eea507`.
+- `lrc_ufull_desheeted_common_residual_independent_audit_20260816.py` ->
+  matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  ALTERNATE DIAGONAL].  Without importing the candidate, it derives
+  `91t=7a+r`, `y=13t-a`, verifies `Q(169t)=Q(13y)` endpointwise, and uses
+  `742586=13^2*4394` to eliminate the sheet phase.  An exhaustive atom/twist
+  guard law plus 78 literal guarded interval controls validates restoration
+  from the unguarded THM-3514 atoms.  The residual multiplicity identities
+  `n + n(n-1) = n^2` give same-sheet plus ordered cross-sheet equals full;
+  the same bank recovers point gamma digest `771545a5...303f` exactly.  Same,
+  cross, and full tables all have `(91,1,6,12,72)` spectrum, each output
+  interaction has `(72,0,0,0,72)`, and all seven fixed `(1,0,6)` modes are
+  nonzero.  Rows 1--6 are recorded as mod-p zeros only.  The full residual
+  bridge `543695274352737840377` differs from the Cartesian bridge
+  `389266878372286537904`: this is an alternate diagonal, with no collision,
+  horizon, source, chronology, exact `C(a;X,m)`, physical-current, row-
+  exclusion, or LRC(14) consequence.  Script/output/semantic LF SHA-256:
+  `ede780b135f4032be364b43a9543ede259686d1b298256a258a666cdcae083f2` /
+  `d16d4adde06483097230ec314ff59f82c84d91896fa63736ed5e99991f6a7447` /
+  `dac1a968808aaf3bf5c1f2208f62fd1c68e55b4e17af2e12aa65d8a9809a969e`.
 
 - `lrc_r5_source_aligned_relation_residue_7x13_spectrum_probe_20260816.py`
   -> matching `.out` [FINITE-EXACT SOURCE-TIME 7x13 SIMPLE-KERNEL CANDIDATE;
