@@ -2,9 +2,9 @@
 id: THM-3473
 title: "Three-times-p eight-owner private-sheet partition and irredundancy"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT PENDING.  For p=14k-1, the THM-3469 eight-owner cover has exactly
-  eleven Boolean sheet-support types: eight positive singleton atoms, one
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For p=14k-1, the
+  THM-3469 eight-owner cover has exactly eleven Boolean sheet-support types:
+  eight positive singleton atoms, one
   two-owner repair packet, and two four-owner backbone packets.  Exact
   private counts prove representation-relative irredundancy for every k>=1;
   the residue-deficit automaton has period three and its Berggren U-spine
@@ -13,11 +13,14 @@ status: >
 source: codex-2026-08-15-private-sheet-partition
 audit: >
   self-contained nearest-p chart, strict support classification, residue
-  counts, Boolean deletion derivatives, multiplicity spectrum, generalized
-  tournament quotient, harmonic lanes, and U-spine pullback; exact 5259000
-  sheet / 42072000 owner-incidence comparison against direct cyclic masks,
-  independent rational route, semantic/security gates, and normal/optimized
-  replay; independent clean-room audit pending
+  counts, Boolean deletion derivatives, multiplicity spectrum, sparse marker
+  polynomial, bidirected two-section, harmonic lanes, and period-63 U-spine
+  pullback; exact 5259000-sheet / 42072000 owner-incidence and rational-route
+  gates; independent clean-room derivation of all eleven supports, strict
+  repair endpoints, private and multiplicity formulae, graph quotient, and
+  minimal deficit word; independent 21018000-sheet private-word and
+  1379964-cell endpoint audits; dependency, script, output, semantic, ID,
+  security, and normal/optimized/stored replay gates
 depends_on:
   - THM-3469-three-times-p-half-twist-eight-owner-cover-boundary
 related:
@@ -26,20 +29,18 @@ related:
   - THM-3472-odd-modulus-zero-half-conjugacy-and-global-zmc-rank-equality
 script: 04-computation/lrc_three_p_private_sheet_boolean_atlas_thm3473.py
 output: 05-knowledge/results/lrc_three_p_private_sheet_boolean_atlas_thm3473.out
-script_sha256: ef604ee758d5abf0f239e9b1f1bf0d058c4a8741c4d2cee0a2e46c267bb157b5
-output_sha256: ff573b6df8e49be7280a932a29aee6b8551599a88ad3cacc32a85720ab9f40f3
+script_sha256: 8831f932deb61075e754887f570390388f09ed6bd84092bd4c47dc50d7a588be
+output_sha256: 7951215e40dfd8af18984beba39fb5cce6c1c25053894ecbbacbde7158af7fab
 semantic_sha256: 1a269572f813dcfafa4d99b9dda39e6fd36514005ff671ef7eec3f6416467fcc
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3473 -- three-times-p private sheets and the Boolean support atlas
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-The proof and deterministic companion pass their internal gates.  This file
-remains outside the proved dependency graph until an independent audit checks
-the universal support classification and immutable package.
+The universal support classification, immutable package, and independent
+hostile rederivations pass their stated gates.
 
 ## 1. The affine chart and three kinds of cells
 

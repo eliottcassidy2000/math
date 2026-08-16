@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact deterministic companion for provisional THM-3473.
+"""Exact deterministic companion for independently audited THM-3473.
 
 For p=14k-1 and q=3p this program compares two independent descriptions of
 the THM-3469 eight-owner cover: direct strict cyclic-distance masks and the
@@ -405,7 +405,7 @@ def main() -> None:
         require(semantic_hash == EXPECTED_SEMANTIC_SHA256, ("semantic drift", semantic_hash))
 
     print("THM-3473 EXACT DETERMINISTIC COMPANION")
-    print("STATUS: RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT")
+    print("STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED")
     for label, relative, digest in dependency_hashes:
         print(f"DEPENDENCY: {label} {digest} {relative}")
     print(f"SECURITY_IMPORTS: {','.join(security)}")

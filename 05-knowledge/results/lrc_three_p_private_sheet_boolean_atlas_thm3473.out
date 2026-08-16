@@ -1,5 +1,5 @@
 THM-3473 EXACT DETERMINISTIC COMPANION
-STATUS: RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT
+STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
 DEPENDENCY: THM-3469 2d86e9ecf8fc14ef58a1bd0fc7a000b1fb49b42718d10d96637a3908b90f486b 01-canon/theorems/THM-3469-three-times-p-half-twist-eight-owner-cover-boundary.md
 SECURITY_IMPORTS: __future__,ast,collections,fractions,hashlib,json,math,pathlib,sys
 RESIDUE_LEMMA: N_0=2k-1; N_1=...=N_5=2k through k=10000

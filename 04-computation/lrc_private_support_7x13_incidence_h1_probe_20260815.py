@@ -2,7 +2,7 @@
 """Exact 7-by-13 incidence/H1 sidecar for the THM-3473 support graph.
 
 This is a finite structural probe, not an LRC(14) verifier.  It builds the
-bidirected two-section underlying the provisional private-sheet atlas, checks
+bidirected two-section underlying the proved private-sheet atlas, checks
 that the reduced incidence matrix has shape 7x13 and full row rank, proves
 the unweighted Gram determinant 256 by Cauchy--Binet, and constructs the
 six-dimensional cycle space.  The decisive hostile is also explicit: every
@@ -223,7 +223,7 @@ def main() -> None:
         require(semantic_hash == EXPECTED_SEMANTIC_SHA256, semantic_hash)
 
     print("PRIVATE-SUPPORT 7x13 INCIDENCE / H1 EXACT PROBE")
-    print("STATUS: FINITE-EXACT STRUCTURAL SIDECAR; THM-3473 AUDIT PENDING")
+    print("STATUS: FINITE-EXACT STRUCTURAL SIDECAR TO PROVED THM-3473")
     print(f"PACKETS_ONE_BASED: {semantic_payload['packets_one_based']}")
     print(f"EDGE_COUNT_AND_REDUCED_SHAPE: {(len(edges), (7, 13))}")
     print(f"GRAM_MATRIX: {semantic_payload['gram']}")

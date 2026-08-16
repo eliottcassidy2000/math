@@ -19,8 +19,8 @@
   syntax/AST/render audited but not rerun end-to-end after packaging.  This
   proves no arbitrary-support SFC or FC case.
 - `lrc_private_support_7x13_incidence_h1_probe_20260815.py` -> matching
-  `.out` [FINITE-EXACT STRUCTURAL SIDECAR; THM-3473 AUDIT PENDING].  The
-  provisional private-support two-section has eight vertices and thirteen
+  `.out` [FINITE-EXACT STRUCTURAL SIDECAR TO PROVED THM-3473].  The
+  private-support two-section has eight vertices and thirteen
   edges, so deleting its `2p` hub row gives an exact full-rank `7x13`
   incidence matrix.  Its Gram determinant is
   `256=16*16*1`; exactly `256` maximal minors are nonzero and all are
@@ -29,8 +29,8 @@
   obtained from owner potentials is a coboundary and pairs zero with all six
   cycles, so the static carrier gives no nonzero absolute `H^1` flux; a
   phase/holonomy sidecar is required.  Script/output/semantic LF SHA-256:
-  `6f4487b69ba033fb75f64f70536b8f4c6310a82d74cdb59301827140a89df7e1` /
-  `b9ef232ddc831fbc51d0e1f9c90d588305ffe41749e24a212410328f141b4004` /
+  `6efa87aa9f9b50d57d7a2db3c282ad216057b41c10af08f648e3f3398e457b91` /
+  `77a3d5786845fdac988e8a4d23867c699368dc6d0a5714224476e24357d7ae20` /
   `648523d2d701d19ba35567fd2c96aea65cc4a7ceb65b5e200abfcac8bc8d0a82`.
   This is an exact `7 by 13` carrier and H1 no-go boundary, not bispectrum
   nonvanishing or an LRC(14) result.
@@ -52,8 +52,8 @@
   The inverse limits are zero/formal completions, not Prüfer modules; this is
   an additive effectivity classification and proves no new JC(2) case.
 - `lrc_three_p_private_sheet_boolean_atlas_thm3473.py` -> matching `.out`
-  [THM-3473 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  independent audit pending].  For `p=14k-1`, the THM-3469 eight-owner
+  [THM-3473 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `p=14k-1`, the THM-3469 eight-owner
   presentation has exactly eleven Boolean sheet supports: eight positive
   singleton atoms, packets `(1,4,5,6)` and `(2,3,5,8)`, and repair pair
   `(5,7)`.  Exact private counts
@@ -64,8 +64,8 @@
   deficit state pulls back to a minimal period-63 U-spine word with each
   colour having ambient/conditioned harmonic coefficients `4/63` and `1/3`.
   Script/output/semantic LF SHA-256:
-  `ef604ee758d5abf0f239e9b1f1bf0d058c4a8741c4d2cee0a2e46c267bb157b5` /
-  `ff573b6df8e49be7280a932a29aee6b8551599a88ad3cacc32a85720ab9f40f3` /
+  `8831f932deb61075e754887f570390388f09ed6bd84092bd4c47dc50d7a588be` /
+  `7951215e40dfd8af18984beba39fb5cce6c1c25053894ecbbacbde7158af7fab` /
   `1a269572f813dcfafa4d99b9dda39e6fd36514005ff671ef7eec3f6416467fcc`.
   No global-minimum, endpoint-current, bispectrum, or LRC(14) conclusion
   follows.

@@ -1,7 +1,7 @@
 # The private-support graph is literally 7 by 13, but its static currents are exact
 
 **Research reflection / finite-exact structural sidecar, not a truth source.**
-The support graph is routed to audit-pending THM-3473.  The exact linear
+The support graph is supplied by proved THM-3473.  The exact linear
 algebra is frozen by
 `04-computation/lrc_private_support_7x13_incidence_h1_probe_20260815.py`.
 No LRC(14), bispectrum, or Jacobian conclusion is claimed.
