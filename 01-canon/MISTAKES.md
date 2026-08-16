@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-414 (2026-08-16, provisional THM-3497 pole terminology) -- a normalized polar coefficient is not an analytic residue
+
+- **What failed:** the provisional fixed-drift Berggren note called
+  `lim_(x->1/3)(1-3x)F(x)=17/96` and
+  `lim_(x->-1/3)(1+3x)F(x)=-1/96` the residues at the two dominant poles.
+- **Minimal witness / first failed implication:** if
+  `F(x)=A/(1-lambda*x)`, then the displayed normalized polar coefficient is
+  `A`, whereas the analytic residue at `x=1/lambda` is `-A/lambda`.  Here the
+  actual residues are `-17/288` at `1/3` and `-1/288` at `-1/3`, not the two
+  numbers printed in the provisional note.
+- **Repair / strongest survivor:** THM-3497 names the two defining limits
+  normalized polar coefficients.  Their coefficient asymptotic
+  `(17/96)3^n-(1/96)(-3)^n+O(3^(n/2))`, the parity densities, and logarithmic
+  density `17/96` are unchanged.
+- **Reusable rule:** whenever a generating-function pole is summarized by a
+  coefficient, print the defining limit.  Convert to an analytic residue only
+  after dividing by the derivative of the vanishing denominator factor.
+
 ## MISTAKE-413 (2026-08-16, provisional THM-3494 discriminant unit) -- an odd branch divisor does not determine the full field square class up to constants
 
 - **What failed:** after proving `D_n=u_n B_n` with `u_n in k^*`, the

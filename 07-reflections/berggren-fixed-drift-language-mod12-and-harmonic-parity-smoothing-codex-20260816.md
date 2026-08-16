@@ -1,9 +1,9 @@
 # Fixed Berggren drift doubles the Fibonacci clock and harmonic averaging smooths parity
 
-**Status: PROVISIONAL-PROVED elementary classification + VERIFIED-EXACT
-finite automaton, pending independent audit.**  The companion is
+**Status: PROVED in THM-3497 + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+The companion is
 `04-computation/berggren_fixed_drift_word_language_parity_probe_20260816.py`.
-This is a finite branch-language theorem candidate, not a physical LRC
+This is a finite branch-language theorem, not a physical LRC
 current or a Jacobian statement.
 
 ## 1. The quantifier ladder
@@ -104,7 +104,10 @@ even class: 16 of 96;
 odd class:  18 of 96.                                    (11)
 ```
 
-The two-step walks are mixing on their respective classes.  Consequently,
+The nine two-letter increments generate the full 96-state kernel of `chi`.
+Moreover, `B^4` and `C^6` are identity returns of two-step lengths two and
+three.  Thus the two-step walks are irreducible and aperiodic, hence mixing,
+on their respective classes.  Consequently,
 if `a_n` counts passing depth-`n` words, then
 
 ```text
@@ -136,8 +139,15 @@ The generating-function denominator factors as
  (3x^2-2x+1)(3x^2+2x+1)(9x^4-2x^2+1).                   (15)
 ```
 
-The residues at `x=1/3` and `x=-1/3` are `17/96` and
-`-1/96`; every other reciprocal pole has modulus at most `sqrt(3)`.  Hence
+The normalized polar coefficients
+
+```text
+lim_(x->1/3)(1-3x)F(x)=17/96,
+lim_(x->-1/3)(1+3x)F(x)=-1/96
+```
+
+are not analytic residues.  Every other characteristic root has modulus at
+most `sqrt(3)`.  Hence
 
 ```text
 a_n=(17/96)3^n-(1/96)(-3)^n+O(3^(n/2)),                 (16)
@@ -159,17 +169,20 @@ lim_(m->infty) |S_fix intersect [1,N_(2m+1)]|/N_(2m+1)=35/192. (17)
 
 Thus `S_fix` has no ordinary natural density.
 
-Harmonic weighting behaves differently.  On every long ternary cylinder,
-the fixed-parity walk equidistributes in its 96-state class.  The harmonic
-mass of one complete shortlex level therefore tends to
+Harmonic weighting behaves differently.  The two-step gate above gives
+uniform equidistribution from every prefix state in its 96-state class.  A
+fixed prefix is a triadic rank cylinder, so cylinder step-functions
+approximate the continuous level weight `t -> 1/(1/2+t)`.  The harmonic mass
+of one complete shortlex level therefore tends to
 
 ```text
 (1/6)log 3       on even levels,
 (3/16)log 3      on odd levels.                           (18)
 ```
 
-Two-level averaging and the fact that one partial level contributes only
-`O(1)` then give
+Two-level Cesaro averaging and the fact that one partial level lies in an
+integer interval of endpoint ratio at most three, hence contributes only
+`O(1)`, then give
 
 ```text
 sum_(m<=N, m in S_fix) 1/m

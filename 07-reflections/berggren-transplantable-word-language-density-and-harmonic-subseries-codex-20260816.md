@@ -1,7 +1,7 @@
 # One third of the ternary Berggren tree is wordwise T4-calibratable
 
-**Status: PROVISIONAL-PROVED elementary classification + VERIFIED-EXACT
-finite automaton, pending independent audit.**  The exact companion is
+**Status: PROVED in THM-3497 + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+The exact companion is
 `04-computation/berggren_transplantable_word_language_harmonic_probe_20260816.py`.
 The result classifies individual composite addresses.  It does not construct
 one branch-monoid-equivariant calibration, a physical current, or a Jacobian

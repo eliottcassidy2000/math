@@ -1,7 +1,7 @@
 # The full ternary Berggren packet and the T4 atlas have different connections
 
-**Status: VERIFIED-EXACT structural sidecar to PROVED THM-3339 and
-THM-3487.**  The finite claims are reproduced by
+**Status: PROVED in THM-3497 + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+The finite claims are reproduced by
 `04-computation/berggren_full_branch_t4_static_calibration_no_go_20260816.py`.
 This note constructs no physical LRC current, proves no Jacobian statement,
 and does not identify Berggren ancestry with either problem.
@@ -201,8 +201,10 @@ positive transplant does not imply generatorwise compatibility with (5).
 - cheapest decisive test: cycle type at one generator, strengthened by the
   twenty-four-state return census (13).
 
-The next finite object is the regular language of branch words `w` for which
+THM-3497 completes the next finite object proposed here: the regular language
+of branch words `w` for which
 the *composite* projective action `w_3` has a cycle type realizable by an
-affine map with the true composite linear part `wbar`.  This can identify
-exactly which subset of the ternary tree admits wordwise T4 calibration and
-turn its level counts into a recurrence and a harmonic-subseries statement.
+affine map with the true composite linear part `wbar`.  It identifies exactly
+which subset of the ternary tree admits wordwise T4 calibration and turns its
+level counts into a recurrence and a harmonic-subseries statement, while
+retaining the quantifier boundary above.

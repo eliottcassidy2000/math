@@ -213,10 +213,12 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   factorial-cube C-finite obstruction. THM-3213 closes balanced fixed-depth
   non-P-recursiveness; THM-3226 gives every fixed strong quotient on `q>=3`
   one saddle. THM-3235 gives blowup scaling/decimation; THM-3248 factors Q4's walk resolvent and gives all-depth finite differences plus a fixed-depth Stirling compiler. Observer twins block generic scalar compression; Q4 radius/non-P stay OPEN.
-  THM-3173 separates `C2*C3`, regular `S3`, and regular `C6`; their joint
-  quotient has order 18, while pointed oriented quartic frames form `Q3`.
-  These are action data, not a physical current or Keller bridge.
-- THM-1880/1885 give Pell; THM-3335 blocks square-arc/skew-EW. THM-3339's `T6` loses owner; THM-3357/3364/3379 give `T3/T4`/Fibonacci quotients. An exact mod3/q15 bridge gives 4-state `S4` and 24-state frame-line packets, no owner.
+  THM-3173 separates `C2*C3` and regular `S3,C6`; joint quotient order is 18,
+  while pointed oriented quartic frames form `Q3`. These are not currents.
+- THM-1880/1885: Pell; THM-3335: square/skew no-go; THM-3339's `T6` loses
+  owner; THM-3357/3364/3379: `T3/T4`/Fibonacci. THM-3497: `A,C` no-go,
+  `B:4/8/512`, and word densities `1/3` versus fixed log `17/96` without
+  natural density. These are finite ancestry quotients, not currents.
 - THM-3457/3462: `25/477`.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.

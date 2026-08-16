@@ -19,6 +19,33 @@
   `087bb018408d3438494fb4ade461a4371e26bec60e31421540fea929316dd679`;
   primary replay semantic SHA-256:
   `184c159dd4aedb02b38b2029846b9e88f301fcc63dd163682bbabddc438b825e`.
+- `berggren_t4_three_language_independent_audit_20260816.py` -> matching
+  `.out` [THM-3497 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED, WITH ONE
+  TERMINOLOGY REPAIR].  Starting only from THM-3339's integer branch matrices,
+  it rederives projective and true mod-two actions, the static/six-frame
+  `A,B,C` counts and `B` positives `4/8/512`, the minimal variable
+  `S3 x C2` and fixed-drift `S4 x D4` automata, both exact recurrences and
+  asymptotics, and the Fibonacci clocks `{0,1,2}` modulo `6` and `12`.
+  The hostile `BA` test fixes root-to-child multiplication: `BA` acts as
+  matrix `AB` and sends `(1,2)` to `(5,8)`, while reversal gives `(3,8)`.
+  For the fixed harmonic theorem, the nine two-letter increments generate
+  all 96 kernel states and `B^4/C^6` give return lengths `2/3`, proving
+  prefix-cylinder mixing and logarithmic density `17/96` despite failure of
+  natural density.  The repair renames `17/96,-1/96` normalized polar
+  coefficients, not residues.  Independent script/output/semantic LF
+  SHA-256:
+  `22e0cac6bc9294418df7ac667321dd8a091f0ec302d8be724c6593847478d891` /
+  `95fbcfa549921dc13cc65615a167dbb735625f97cbe604a4eda65c484779cfcf` /
+  `0c363166248508d0712542fd725df56b32769680ba9acbf8ee63b4a6115f88cf`.
+  The full-branch, variable-translation, and fixed-drift supporting
+  script/output LF hashes are respectively
+  `557b18c515659ca6b7acdbf4c8d66dddeb07849f85e3514780d89a6a76c2c6a4` /
+  `77b7a038cf4a6fdb7f1b609729f5e387af8ea8290ef2a976c31d2141e6e85dc3`,
+  `86a7a891ada981b61b3ebc4b02cc1b02ba29fafbd05129e5a32a91fa4c134874` /
+  `8690f9254744ac2fae5ad700e1932f45a7b996cb88be5153d864e6e9f1a02a9a`,
+  and
+  `f503aa44b7287ea200589093c17c3e68f01e456b314f84b607c6695359249d4a` /
+  `c8c87fa66bae84d1165dbdd00312e25d22fdae17841c5cc0d45aa205b7433d9b`.
 - `d5_marked_graph_kummer_finite_coefficient_flux_thm3496_independent_audit.py`
   -> matching `.out` [THM-3496 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   AUDITED, WITH SCOPE REPAIRS].  Seam sum and independent `C_91` prefix
