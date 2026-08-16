@@ -32,6 +32,27 @@
   `d66378cc8db99c4de087fa78413721de6aa7be3960f51ee39f29feae9313eeba` /
   `25122a1344c2677a6444a98f21beb7e4b7f27f80acc708263050916409ebea1b` /
   `0e527913f22fc7d165f795df42e25692fba9289ccaf85aee4a3a2402613bdb41`.
+- `lrc_r5_ufull_owner_node_boolean_square_two_digit_current_ancestry_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT POSITIVE TWO-DIGIT CURRENT-ANCESTRY
+  CANDIDATE; INDEPENDENT AUDIT PENDING].  The lawful factorization
+  `13^3 fold -> r1 window -> r0 window -> collision-root window` is
+  profile-identical to one half-open mod-169 window for
+  `a=r0+13r1+169c`.  Its exact projective chain recovers the pinned
+  one-digit `r_owner` gamma/tensor and then the audited Boolean square.
+  Every fixed-`r0` `r1 x (state,relation)` conditional rank is three or
+  four, refuting every autonomous digit-kernel lift (rank at most one); the
+  concrete same-parent flat lift has rank-one conditionals and zero four-way
+  interaction.  Actual/pure axis ranks are `(4,13,13,6,4)` and
+  `(3,12,12,6,4)`, and all `5184` pure four-coordinate modes fire.
+  The sparse 34-boundary aggregation, three literal guards, pointwise
+  same-root zero, reflection, and four direct 2,197-term inversion probes
+  pass.  This is two static current digits, not a complete address,
+  `U_clock` chronology, arrival ancestry, physical current, row exclusion,
+  or LRC(14).  Script/output/semantic LF SHA-256:
+  `dee623ca8a7a29e6f8fa39faf67f796fcf5f7244a6bd72b0f058a04733a1b886` /
+  `8cc464d49a7c11f027ea8c333a61633b092db360d3bb6c9ceee95a427949f64b` /
+  `61743457afc0cff984c87affa7f2e67bf3a21e08a401ea69b679319f2f51e826`.
+
 - `lrc_r5_ufull_owner_node_pointed_six_state_root_difference_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
   SIX-POINTED SOURCE-TAIL REFINEMENT].  Without importing the candidate, it
