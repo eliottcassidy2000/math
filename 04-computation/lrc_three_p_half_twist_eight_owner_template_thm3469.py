@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact deterministic companion for provisional THM-3469.
+"""Exact deterministic companion for audited THM-3469.
 
 The universal proof in the theorem reduces every odd phase to its signed
 remainder from the nearest multiple of p.  This companion checks the symbolic
@@ -543,7 +543,7 @@ def main() -> None:
         require(semantic_hash == EXPECTED_SEMANTIC_SHA256, ("semantic drift", semantic_hash))
 
     print("THM-3469 EXACT DETERMINISTIC COMPANION")
-    print("STATUS: RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT")
+    print("STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED")
     print("DEPENDENCIES:")
     for label, relative, digest in dependency_hashes:
         print(f"  {label} {digest} {relative}")

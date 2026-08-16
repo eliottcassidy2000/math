@@ -1,5 +1,5 @@
 THM-3469 EXACT DETERMINISTIC COMPANION
-STATUS: RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT
+STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
 DEPENDENCIES:
   THM-3405 d3e7dbeeb85c6f897bd9e31270bd0b6602ae4feac3b46a45eb5ce23ae5d24fe0 01-canon/theorems/THM-3405-common-centre-gcd-gauge-and-boolean-half-twist.md
   THM-3455 e357aaf8036f485c4abbfa5969a0d1f9761372dcd7337b658daaadf4cd049c09 01-canon/theorems/THM-3455-berggren-q-spine-cap-seven-atom-sieve-and-fibonacci-rank-spectrum.md

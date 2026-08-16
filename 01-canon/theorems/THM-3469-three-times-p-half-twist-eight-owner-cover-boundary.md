@@ -2,8 +2,8 @@
 id: THM-3469
 title: "Three-times-p half-twist eight-owner cover boundary and periodic exact-rank family"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT PENDING.  For p>=13 and q=3p, one explicit eight-owner half-twist
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For p>=13 and q=3p,
+  one explicit eight-owner half-twist
   template covers exactly when p is not 7 or 35 modulo 42.  On p=14k-1 it
   gives rank at most eight, and THM-3455 sharpens this to an exact periodic
   rank-4/6/7/8 word with minimal period 24322155 and exact natural/harmonic
@@ -15,7 +15,9 @@ audit: >
   symbolic channel, threshold, 4325328-sheet boundary, 4567750-cell odd-layer
   conjugacy, rational-mask, mode-centre, hostile/repair, CRT-period,
   rank-count, annotated U-spine, dependency, semantic, security, and
-  normal/optimized replay gates; independent audit pending
+  normal/optimized replay gates; independent clean-room audit of the strict
+  boundary, 4567750-cell odd-layer conjugacy, all 24322155 family states,
+  and the minimal 11781-letter U-spine word
 depends_on:
   - THM-3405-common-centre-gcd-gauge-and-boolean-half-twist
   - THM-3455-berggren-q-spine-cap-seven-atom-sieve-and-fibonacci-rank-spectrum
@@ -24,20 +26,18 @@ related:
   - THM-3464-u-spine-q123-rank-eight-break-and-divisor-layer-certificate
 script: 04-computation/lrc_three_p_half_twist_eight_owner_template_thm3469.py
 output: 05-knowledge/results/lrc_three_p_half_twist_eight_owner_template_thm3469.out
-script_sha256: 6bbecec3a9775d7807a43031e287681230f4365e90aa0bcc9874b5b42e6520a1
-output_sha256: 008c424f52d0140e58c8eabbee2e812c80b89419283c6b59f7cf6250a9446e8b
+script_sha256: 9f9f6d040375b5ff4e93a726410bddeb6aa1f0af47f11dc606c9febe75f2d573
+output_sha256: 075d466f1ceb3a0024eef63861b0fb8a782b7b2799990c7c4e05bdd2d7d462a3
 semantic_sha256: d8c6b1c2baf1df178ca09793b3f69bc5e537a12c77e9397d83fd3ce8c3e3e530
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3469 -- three-times-p half-twist eight-owner cover boundary
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-The proof and deterministic companion pass their internal gates.  This file
-remains outside the proved dependency graph until an independent audit checks
-the universal strict-boundary argument and immutable package.
+The proof, deterministic companion, and independent clean-room audit pass.
+The no-current/no-bispectrum/no-LRC(14) boundary remains part of the theorem.
 
 ## 1. The affine owner template
 
