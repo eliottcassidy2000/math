@@ -1,0 +1,8 @@
+== F_101 level-four degree-81 separability gate ==
+target=(1, 1, 1); tower dimensions=(3,9,27)
+three inverse graphs: PASS; all cubic derivatives and chart denominators are units
+fourth norm-product: degree=81; squarefree; off-grid determinant PASS
+ascending-coefficient sha256=1c05c0fd5ee48fc2dd030aebdb9ad6ddd8185fb933eb91e7e39ff553424ef5a7
+therefore generic fourth x-eliminant degree/separability and block coprimality are nonempty
+scope: finite-field genericity gate only; no Norm(J) numerator or discriminant expansion
+all exact checks passed
