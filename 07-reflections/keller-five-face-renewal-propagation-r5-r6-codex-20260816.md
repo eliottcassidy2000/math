@@ -281,8 +281,13 @@ What remains open is substantial:
   open;
 - none of this proves a counterexample to `JC(2)` or classifies Keller maps.
 
-The next sharp tower test is therefore the finite-sheet unit for
-`L^10663N(R_6)`, not another renewal-face extraction.
+At the time of this derivation, the next sharp tower test was the finite-sheet
+unit for `L^10663N(R_6)`, not another renewal-face extraction.  **Subsequent
+status:** THM-3523 has now paid that gate, constructing polynomial,
+`L`-coprime `R_7=L^10663N(R_6)` and transporting the complete packet
+`A(66907,24255)`.  The corresponding next polynomiality test is the
+finite-sheet unit needed for `L^66907N(R_7)`; image, irreducibility, and
+all-level claims remain open.
 
 ## 9. Reproduction
 

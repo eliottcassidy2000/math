@@ -219,8 +219,10 @@ complete A(e,m) + polynomial L^eN(P)
 ```
 
 and consequently gives complete packets `A(1699,615)` for `R_5` and
-`A(10663,3867)` for `R_6`.  The next unpaid tower gate is finite-sheet
-nonvanishing, hence polynomiality, for `L^10663N(R_6)`.
+`A(10663,3867)` for `R_6`.  THM-3523 pays the following finite-sheet gate:
+`v_L(N(R_6))=-10663`, polynomial and `L`-coprime
+`R_7=L^10663N(R_6)`, and complete packet `A(66907,24255)`.  The next unpaid
+analogue is finite-sheet nonvanishing for `L^66907N(R_7)`.
 
 ## 3. Two crevasse invariants for atomhood (spectrum repaired)
 
@@ -293,8 +295,9 @@ place to HUNT for a JC(2) counterexample instead.
   `v_L(N(G))=-271` and `R_5=L^271N(G)` coprime to `L`, but no fifth image or
   discriminant claim.  THM-3521 proves the following old-boundary gate
   `v_L(N(R_5))=-1699` and polynomial `R_6`; THM-3522 upgrades both `R_5` and
-  `R_6` to complete five-face packets, still without a fifth image or
-  degree-243 claim.
+  `R_6` to complete five-face packets; and THM-3523 proves polynomial,
+  `L`-coprime `R_7` with packet `A(66907,24255)`, still without a fifth
+  image, an `R_7` image role, or a degree-243 claim.
 - P2 (VERIFIED-EXACT for the two fixed tame members): W1 and W2 obey
   `disc=-(det J)^2(square)^2L_W`, with `L_W=L o T^(-1)`.  A general
   gauge-covariance theorem remains open.
@@ -318,17 +321,20 @@ and the four-component set; THM-3506 adds the conditional five-face matrix
 valuation/localization; THM-3513 closes the two renewal faces of `G`; and
 THM-3521 adds `v_L(N(R_5))=-1699`, polynomial `R_6`, and its exposed top
 pair; THM-3522 adds conditional fixed-chart renewal and the complete packets
-of `R_5` and `R_6`.  None gives exact positive discriminant multiplicities,
-the next polynomiality gate, or an unconditional all-level factorization law.
+of `R_5` and `R_6`; and THM-3523 adds `v_L(N(R_6))=-10663`, polynomial,
+`L`-coprime `R_7`, and `A(66907,24255)`.  None gives exact positive
+discriminant multiplicities, the following `L^66907N(R_7)` polynomiality
+gate, or an unconditional all-level factorization law.
 Trace-zero persistence at depth two and the `8 -> 512` cubing pattern are
 VERIFIED for the fixed construction only.  The W1/W2 identities are exact for
 those two tame conjugates, not a classification theorem.  P4 is proved for
 the fixed tower through depth four.  THM-3506 constructs the depth-five
 cleared numerator `R_5`, THM-3521 closes its finite-sheet gate and constructs
-the following old-`L` cleared norm `R_6`, and THM-3522 closes renewal through
-both packets.  The next decisive tests are finite-sheet nonvanishing for
-`L^10663N(R_6)`, the image multiplicity/distinctness of `R_5`, and
-degree-243 separability.
+the following old-`L` cleared norm `R_6`, THM-3522 closes renewal through
+both packets, and THM-3523 closes the `R_6` finite sheet and constructs
+`R_7`.  The next decisive tests are finite-sheet nonvanishing for
+`L^66907N(R_7)`, the image multiplicity/distinctness of `R_5`, the image role
+of `R_7`, and degree-243 separability.
 
 ## Loss ledger
 

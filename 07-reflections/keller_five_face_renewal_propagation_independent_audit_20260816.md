@@ -410,8 +410,11 @@ The promotion must continue to exclude:
 - a fifth image component or degree-`243` separability;
 - arbitrary Keller maps, `JC(2)`, `DC(2)`, or any general Jacobian claim.
 
-The next tower gate is the finite old-`L` sheet for `R_6`, not another
-renewal-face extraction.
+This was the next tower gate at the time of the audit.  THM-3523 subsequently
+closes that finite old-`L` sheet, proves polynomial and `L`-coprime
+`R_7=L^10663N(R_6)`, and gives `R_7` the complete packet
+`A(66907,24255)`.  The next analogous polynomiality gate is now the
+finite-sheet unit for `L^66907N(R_7)`, not another renewal-face extraction.
 
 ## 11. Independent artifact and replay
 
