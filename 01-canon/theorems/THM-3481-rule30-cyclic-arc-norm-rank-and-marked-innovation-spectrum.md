@@ -1,12 +1,12 @@
 ---
-id: THM-3479
+id: THM-3481
 title: "Rule 30 cyclic arc-norm rank and marked innovation spectrum"
 status: RESERVED / UNPROVED EMPTY STUB
 source: root-rule30-next-targets-20260815
 depends_on: []
 ---
 
-# THM-3479 -- Rule 30 cyclic arc-norm rank and marked innovation spectrum
+# THM-3481 -- Rule 30 cyclic arc-norm rank and marked innovation spectrum
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
