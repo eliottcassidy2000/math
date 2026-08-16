@@ -1,0 +1,15 @@
+FACTORIAL NONDIVISOR SPARSE TWO-DIGIT HULL FOLLOW-UP
+scope=exact-support quadratic resonance pair; no d-boundary extension
+rho_G_tables=((3, (2, 1, 2)), (5, (3, 1, 1, 2, 2)))
+rho_F_vertex_tables=((3, (1, 1)), (5, (1, 1)))
+rho_killer_histogram=((3, 31), (5, 23), (7, 81), (11, 83), (13, 31), (17, 18), (19, 9), (23, 4), (29, 1)) total=281
+automatic_lane_summary=((3, 66, 31, 35), (5, 38, 23, 15)) schema=(p,lane_rows,killed_at_p,not_killed_at_p)
+sparse_grid=((3, 8), (5, 6), (7, 5), (11, 4)) cells=59 status=exact_control_for_proved_formula
+sparse_census_rows=((6590, 3, (8, 3)),)
+d6590_packet=(599, 1198, 1797, 2396, 2995, 3594, 4193, 4792, 5391, 5990) local_degrees=(0, 27, 6561, 6588) intersection=()
+d6518_packet=(3087, 3430, 4802, 5145, 5488, 5831) p3_blocks=((8, 9, 9), (26, 27, 27), (80, 81, 81), (242, 243, 243), (728, 729, 729), (2186, 2187, 2187), (1, 1, 3240)) p3_post=(3087, 3430, 4802, 5145, 5488, 5831)
+d6518_p29_pre_post=((5831,), ()) final_killer=29
+collision_boundary=(p=3,n=18,blocks=(('8/9', 9, 9), ('1', 9, 1)),degree_count=19)
+five_q_hostile=(d=56,q=11,blocks=(('26/27', 27, 27), ('1', 27, 1)),candidates=(11, 22, 33, 44),intersection=(11, 22, 33, 44))
+three_q_hostile=(d=22,q=7,blocks=(('2/5', 10, 5), ('1/2', 10, 2)),candidates=(7, 14),intersection=(7, 14))
+semantic_sha256=97c1967457cb9744b3bc04e04f0a9880d9b000041efc17161171fd67a9d3dfea
