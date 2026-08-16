@@ -1,0 +1,14 @@
+THM-3480 Rule 30 staircase-transducer exact companion
+elementary_table=(((0, 0), (2, 1)), ((0, 1), (2, 0)), ((1, 1), (2, 0)))
+direct_cone_contexts_h1_6=10920
+reachable_counts_h1_13=(3, 7, 16, 35, 71, 141, 272, 517, 971, 1792, 3263, 5873, 10483)
+mask_transition_checks=46888
+factor_language_checks=1800381
+nerode_histories_h1_13=((2, 3, 3), (2, 6, 7, 7), (2, 8, 15, 16, 16), (2, 8, 24, 35, 35), (2, 8, 37, 70, 71, 71), (2, 8, 51, 134, 141, 141), (2, 8, 59, 242, 272, 272), (2, 8, 64, 439, 514, 517, 517), (2, 8, 64, 766, 948, 970, 971, 971), (2, 8, 64, 1263, 1724, 1787, 1792, 1792), (2, 8, 64, 1939, 3100, 3250, 3263, 3263), (2, 8, 64, 2718, 5540, 5848, 5871, 5873, 5873), (2, 8, 64, 3468, 9818, 10437, 10478, 10483, 10483))
+R12_vertices=5873 R13_edges=10483 certificate_iterations=998 certificate_min=15 certificate_max=457 certificate_sum=854695 max_slack=0
+certificate_sha256=52d2b23844f52fb6af9666de6034440887aafeb67f07ec2ffc9a95202a576a94
+exact_entropy_certificate=64*A*v<=117*v; eta<=log2(117/64)<7/8
+fixed_state_chunk_permutation_checks=16926
+tariff_samples_(w,ell,h,b,address_bits)=((128, 64, 32, 29, 63), (256, 184, 96, 89, 179), (512, 432, 240, 213, 429), (1024, 936, 528, 465, 933), (2048, 1952, 1112, 973, 1952), (4096, 3992, 2272, 1993, 3987))
+compiler_query_tariff=(7/2+o(1))*n^2/w^2; prizes_solved=0
+all_checks=PASS

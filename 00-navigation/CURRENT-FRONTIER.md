@@ -266,10 +266,8 @@ indexed multiplicity  = D_A(z) + collision tax.
 makes every modular **index** support of a C-finite sequence ultimately
 periodic; its harmonic coefficient is accepted cycle density. Unary
 regular lengths and ternary level counts enter; base-three address values and
-the value support of `n^2` do not. THM-2352 gives the separate q-adic plateau
-boundary. THM-3458: fixed Rule 30 edge offsets are rational on a 2-adic
-odometer; the center moves (width-six collision). Density zero alone does not
-decide harmonic mass at `z=1`.
+the value support of `n^2` do not. THM-2352 gives the q-adic plateau; zero
+density need not settle `z=1` mass.
 
 ### Established landmarks
 
@@ -328,7 +326,8 @@ decide harmonic mass at `z=1`.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383 give translated localization and atomic/owner/ANOVA/rectangle/labelled-reference inversion; physical references, positive catalysis, realization, and stable diagonal stay open. THM-2646 gives modular/exponent `B3` conjugacy; exponent is not Markov-invariant.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes exact `d_max` with planar `58<60`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks and dyadic repair.
-- **Rule 30:** [THM-3471](../01-canon/theorems/THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum.md): slack circuit; holonomy vs marked arc; macroblocks; prizes open.
+- **Rule 30:** [3471](../01-canon/theorems/THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum.md); [3476](../01-canon/theorems/THM-3476-rule30-depth-four-transverse-jet-barrier-and-slack-pascal-atlas.md);
+  [3480](../01-canon/theorems/THM-3480-rule30-staircase-transducer-entropy-and-nonrectangular-macroblock-compiler.md); [3481](../01-canon/theorems/THM-3481-rule30-cyclic-arc-norm-rank-and-marked-innovation-spectrum.md). Prizes open.
 - **Jacobian/Dixmier:** `JC(2)`/`DC(2)` remain open. THM-3459 separates four
   Rule 30 lifts; no JC map. THM-3438 proves `KDeg(m)={1,3,4,...}` (`m>=3`),
   all-grade `S_n`, first mixed grade `9`, global G1, and a non-radical `S_5`

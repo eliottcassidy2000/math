@@ -6,15 +6,18 @@ status: >
   Hasse-jet tower is a faithful P-adic
   reconstruction of the radial Rule 30 source, but no fixed jet depth is
   uniformly sufficient: one physical depth-four strip has target
-  coefficients whose first live jet grows linearly with target time.  No
+  coefficients whose first live jet grows linearly with target time.  On
+  every target coefficient, slack order is exactly twice the repeated-root
+  order of its Green-selected distance packet.  No
   Rule 30 prize or unrestricted complexity lower bound is claimed.
 source: root-rule30-next-targets-20260815
 audit: >
   An independent hostile audit rederived the complete evaluation kernel,
   exact P-adic/transverse order equality, Pascal/Lucas tensor atlas, and the
   physical depth-four family; it also extended the Green-kernel checks beyond
-  the companion universe.  Ordinary and optimized companion runs match the
-  stored output byte-for-byte: ACCEPT.
+  the companion universe.  A separate cross-carrier derivation and focused
+  re-audit check the ballistic ramification-two atlas.  Ordinary and optimized
+  companion runs match the stored output byte-for-byte: ACCEPT.
 depends_on:
   - THM-3468-rule30-radial-green-fold-innovation-discrepancy-and-fixed-seed-carrier-boundaries
   - THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum
@@ -23,10 +26,11 @@ related:
   - THM-2810-factorial-hankel-faithfulness-and-bounded-radial-carrier-no-go
   - THM-3466-factorial-face-stokes-and-keller-boundary-current
   - THM-3458-rule30-right-edge-2-adic-odometer-and-moving-observer-boundary
+  - THM-3481-rule30-cyclic-arc-norm-rank-and-marked-innovation-spectrum
 script: 04-computation/rule30_transverse_jet_barrier_thm3476.py
 output: 05-knowledge/results/rule30_transverse_jet_barrier_thm3476.out
-script_sha256: 7a5b036a14a8c1aae50761ed66759af29ad60021d21475cea9247e423627fa4e
-output_sha256: 3b09aab4b92cfeb72f3be5a584d42327f9a4f9f8e34e5beceabf2c871fdd8fe6
+script_sha256: f2a0c2f759910e88258fa8c8cfe69b3b987a7ff081fb3d1155fbd3af941f5fe8
+output_sha256: 3fbd07442c10784a926b3bc9015db62aa2de726c8389449ff6ceb4cb4fb8778b
 hash_basis: raw bytes
 ---
 
@@ -78,7 +82,8 @@ The live concept board is:
 3. transverse Hasse jets at `q=1`;
 4. Lucas/Pascal residue coordinates;
 5. a physical depth-four strip; and
-6. coefficient extraction as a moving observer.
+6. coefficient extraction as a moving observer; and
+7. the ballistic distance-to-slack ramification.
 
 All algebra below is over `F_2`.  Every target coefficient contains only
 finitely many source events, so all displayed coefficientwise slack sums are
@@ -284,6 +289,87 @@ For the physical pair in (23), the two exponents agree in the low `m` bits
 and have quotient indices differing by one.  The residue block cancels;
 the first quotient-carry coordinate, at jet `M`, detects the pair.
 
+## 4.2 Ballistic transport is a ramification of exact index two
+
+There is a smaller faithful carrier hidden behind the slack tower.  Fix a
+source depth `u` and target `t`, put `R=t-u-1`, and retain only the source
+distances selected by the Green kernel:
+
+```text
+beta_d=alpha_u(d)K(R-d,R),
+B_(u,t)(X)=sum_(0<=d<=R/2) beta_d X^d.               (21d)
+```
+
+The corresponding target coefficient of the marked strip is
+
+```text
+C_(u,t)(q)=[z^t]R_u(z,q)
+           =sum_d beta_d q^(R-2d)
+           =q^R B_(u,t)(q^(-2)).                    (21e)
+```
+
+The last expression is polynomial because every selected `d` is at most
+`R/2`.  Since
+
+```text
+q^(-2)+1=q^(-2)(q+1)^2,                              (21f)
+```
+
+reversal and the monomial factor are units at one.  For every nonzero packet,
+
+```text
+boxed:
+ ord_(q+1) C_(u,t)=2 ord_(X+1) B_(u,t).              (21g)
+```
+
+This is an exact ramification-index-two bridge between the repeated-root
+phase/Hasse filtration and the transverse slack filtration.
+
+The complete coefficient atlas is equally explicit.  Let
+
+```text
+delta=R mod 2,
+L=(R-delta)/2,
+H_(u,t)(X)=X^L B_(u,t)(X^(-1)).                      (21h)
+```
+
+Then `C(q)=q^delta H(q^2)`.  If
+
+```text
+h_j=[eta^j]H(1+eta),
+J_i=[epsilon^i]C(1+epsilon),                         (21i)
+```
+
+Frobenius gives, for every `j>=0`,
+
+```text
+boxed: J_(2j)=h_j,       J_(2j+1)=delta h_j.         (21j)
+```
+
+Thus half of the slack tower is a forced duplicate (when `R` is odd) or zero
+(when `R` is even).  The distance-packet Hasse tower is the compressed
+carrier; the slack tower is its ballistic twofold dilation.  In particular,
+every first-live slack order is even.
+
+For the depth-four family below, the selected packet is
+
+```text
+B_(4,t_M)(X)=X^6(1+X)^(M/2).                         (21k)
+```
+
+Equation (21g) predicts its live slack order `M`, and because `R` is odd,
+(21j) sharpens (24) to
+
+```text
+J_M=J_(M+1)=1.                                       (21l)
+```
+
+This is coefficientwise ramification, not global `P^M` divisibility of the
+whole physical source series.  It is also stripwise: summing source depths of
+different parity mixes the two values of `delta` in (21h).  Source-depth
+parity (or the full `u` label) is therefore a necessary sidecar before using
+the compressed atlas.
+
 ## 5. A physical depth-four family defeats every fixed jet bound
 
 The formal `P`-power controls above have a physical analogue after target
@@ -475,9 +561,12 @@ checks with explicit optimization-stable gates:
 3. polynomial ternary powers against the digit recursion for all
    `0<=n<=192` and every coefficient;
 4. (31) on a `64 x 64` low-digit universe and (32) for `0<=r<=7`;
-5. the physical family (23)--(24) for `5<=m<=11`, by both Green engines;
-6. the Pascal/Lucas atlas for moduli `2,...,256`; and
-7. the symbolic characteristic and boundary-source identities.
+5. the physical family (23)--(24) and paired jet (21l) for `5<=m<=11`, by
+   both Green engines;
+6. the Pascal/Lucas tensor atlas for moduli `2,...,256`;
+7. all `645` nonzero ballistic packets with `0<=u<=8` and `u+1<=t<=96`,
+   including their valuations and full even/odd jet atlas; and
+8. the symbolic characteristic and boundary-source identities.
 
 The finite universes audit the implementation.  Equations (8)--(13),
 (20)--(21), and the inductions in Sections 5.1--5.2 are the universal proofs.

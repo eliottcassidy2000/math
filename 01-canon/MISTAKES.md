@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-411 (2026-08-15, provisional THM-3481 Walsh scope) -- odd support gives full Walsh spectrum only beyond the one-variable cube
+
+- **What failed:** the first provisional summary applied THM-3481's full
+  Walsh-support conclusion to every odd innovative terminal profile.
+- **Minimal witness / first failed implication:** at depth `k=3`, the phase
+  cycle has size `P_k=2`, so the innovation cube has one variable.  Its exact
+  terminal row has weight one and maximal ANF degree one, but one of its two
+  Walsh coefficients is zero.  Odd truth-table support makes all Walsh
+  coefficients `2 mod 4` only when the cube size is divisible by four.
+- **Repair / strongest survivor:** every odd innovative terminal profile has
+  maximal ANF degree and uses every innovation variable.  Full nonzero Walsh
+  support and the `2 mod 4` law hold when `log_2(P_k)>=2`; `k=3` is the sharp
+  boundary.  The YAML summary, theorem statement, and hostile scope were
+  repaired before promotion.
+- **Reusable rule:** when a parity argument subtracts twice an odd signed sum
+  from the ambient cube size, audit the smallest cube separately before
+  turning a stable congruence into a universal spectral claim.
+
 ## MISTAKE-410 (2026-08-15, concurrent THM-3482 reservation) -- a clean preflight did not lock the theorem namespace
 
 - **What failed:** commit `01f3948232` reserved `THM-3482` for the private-count

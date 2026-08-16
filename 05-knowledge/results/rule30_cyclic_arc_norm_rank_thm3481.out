@@ -1,0 +1,14 @@
+THM-3481 RULE 30 CYCLIC ARC-NORM EXACT AUDIT
+operator_universe=p=2^d,d=0..7;m=1..2p;all direct circulant matrices
+operator_matrices_checked=510
+operator_rank=rank(N_m)=max(p-2^nu2(m)+1,0)
+complete_hasse_constraints_checked=1546
+constructive_odd_inverses_checked=255
+boundary_controls=N_p has rank 1;N_2p=0
+rule30_universe=depths_k=2..30;all phases_mod_Pk
+innovation_lift_bits_eps1..30=101101101000001100000001101010
+terminal_innovative_k_p_weight_degree_walshzeros=[(3, 2, 1, 1, 1), (4, 4, 4, 0, 3), (6, 8, 4, 2, 4), (7, 16, 9, 4, 0), (9, 32, 15, 5, 0), (15, 64, 31, 6, 0), (16, 128, 70, 6, 17), (24, 256, 116, 7, 24), (25, 512, 255, 9, 0), (27, 1024, 525, 10, 0), (29, 2048, 1069, 11, 0)]
+center_word_c2..c30=01110011000101100100111010111
+marked_controls=cyclic_profile=physical_left_cone_arc=center
+scope=UNIVERSAL_OPERATOR_PROOF_PLUS_FINITE_EXACT_RULE30_AUDIT;no prize conclusion
+ALL CHECKS PASSED

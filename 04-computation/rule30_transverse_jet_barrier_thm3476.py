@@ -173,6 +173,15 @@ def hasse_value(exponents: tuple[int, ...], order: int) -> int:
     return value
 
 
+def first_hasse_order(exponents: tuple[int, ...]) -> int | None:
+    if not exponents:
+        return None
+    for order in range(max(exponents) + 2):
+        if hasse_value(exponents, order):
+            return order
+    raise RuntimeError("CHECK FAILED: nonzero polynomial has no live Hasse order")
+
+
 def xor_polynomials(*polynomials: set[tuple[int, ...]]) -> set[tuple[int, ...]]:
     total: set[tuple[int, ...]] = set()
     for polynomial in polynomials:
@@ -289,6 +298,10 @@ def audit_power_family(
             hasse_value(expected, modulus) == 1,
             f"first live Hasse jet m={exponent_power}",
         )
+        check(
+            hasse_value(expected, modulus + 1) == 1,
+            f"paired live Hasse jet m={exponent_power}",
+        )
         rows_out.append((exponent_power, modulus, target_time, low_slack))
     return tuple(rows_out)
 
@@ -334,6 +347,49 @@ def audit_pascal_atlas() -> tuple[int, ...]:
                     f"Lucas tensor modulus={modulus} exponent={exponent} order={order}",
                 )
     return tuple(moduli)
+
+
+def audit_ballistic_ramification(rows: list[frozenset[int]]) -> int:
+    packet_count = 0
+    for source_depth in range(9):
+        for target_time in range(source_depth + 1, 97):
+            remainder = target_time - source_depth - 1
+            distances = []
+            slacks = []
+            for distance in range(remainder // 2 + 1):
+                slack = remainder - 2 * distance
+                source = alpha_direct(rows, source_depth, distance)
+                transport = ternary_coefficient_digit(distance + slack, slack)
+                if source & transport:
+                    distances.append(distance)
+                    slacks.append(slack)
+            if not distances:
+                continue
+
+            distance_packet = tuple(distances)
+            slack_packet = tuple(slacks)
+            distance_order = first_hasse_order(distance_packet)
+            slack_order = first_hasse_order(slack_packet)
+            check(
+                slack_order == 2 * distance_order,
+                f"ballistic valuation u={source_depth} t={target_time}",
+            )
+
+            parity = remainder & 1
+            half_degree = (remainder - parity) // 2
+            reversed_packet = tuple(half_degree - distance for distance in distances)
+            for order in range(half_degree + 1):
+                coefficient = hasse_value(reversed_packet, order)
+                check(
+                    hasse_value(slack_packet, 2 * order) == coefficient,
+                    f"ballistic even jet u={source_depth} t={target_time} j={order}",
+                )
+                check(
+                    hasse_value(slack_packet, 2 * order + 1) == (parity & coefficient),
+                    f"ballistic odd jet u={source_depth} t={target_time} j={order}",
+                )
+            packet_count += 1
+    return packet_count
 
 
 def audit_symbolic_kernel() -> None:
@@ -382,6 +438,7 @@ def main() -> None:
     audit_green(powers)
     power_rows = audit_power_family(rows, powers)
     pascal_moduli = audit_pascal_atlas()
+    ramification_packets = audit_ballistic_ramification(rows)
     audit_symbolic_kernel()
 
     print("RULE 30 TRANSVERSE-JET BARRIER EXACT AUDIT")
@@ -391,6 +448,10 @@ def main() -> None:
     print(
         f"pascal_lucas_moduli={list(pascal_moduli)} "
         "matrix_inverse=exact tensor_factorization=exact"
+    )
+    print(
+        f"ballistic_ramification_packets={ramification_packets} "
+        "ord_slack=2*ord_distance even_odd_atlas=exact"
     )
     print(
         "symbolic_kernel=P=X^2+(1+U)X+U^2; "
