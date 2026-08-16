@@ -1,0 +1,17 @@
+R5 COMMON-GAUGE BUCKET-QUOTIENT HOSTILE
+status=VERIFIED-FINITE-EXACT follow-up sidecar;source_clean_room_audit_ACCEPT;LRC14_OPEN
+dependencies=((source,83f1fa49ac4d02e21a1d76fed169d101715a6620342714ed05b9172ae967a730,3d8c88fb7b9762f41ef35c00d980b99fc435c8352baf5dddb9fe412d1baeace0),(source_audit,ec16f5124c5b83a10337fba6046d08572251d0776285b7e250a86539a26ddf97,ad81e945207703956f5d6ec300430d562c9f98a9ec8788011119a4857ab34e01),(target_context,f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc))
+field=(prime=572252886246508880869,zeta13=505438565698892403012)
+owner_atom_pair_functionals=(shape=13x1521,rank=13,sha256=db2103d1684a5545cfa8821f10bc5087edc576b41684f4ff617e299d730b83c6)
+variation_inside_117_buckets=(72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72);each varies on exactly the 72 realized chamber/drift types
+owner_active_bucket_kernel=(basis_columns=576,response_rank=13,surjective_to=F_p^13)
+rank13_minor=(labels=(('left', 'left', 1, 2), ('left', 'left', 1, 3), ('left', 'left', 1, 4), ('left', 'left', 1, 5), ('left', 'left', 1, 6), ('left', 'left', 1, 7), ('left', 'left', 2, 2), ('left', 'left', 2, 3), ('left', 'left', 2, 4), ('left', 'left', 2, 5), ('left', 'left', 2, 6), ('left', 'left', 2, 7), ('left', 'left', 6, 2)),determinant=89297302780816677760)
+two_pair_hostile=(label=('left', 'left', 1, 2),owner_pullback_changes=(506357635517450831982, 297457693587454771588, 2280088939231509784, 253476501246207360621, 300012178068603537040, 344833001106032321350, 360034674306197363701, 432421456286127436523, 501738669444641468542, 351971429601452465190, 130831662007171281091, 96659474202467704562, 427695739412524114109),all_nonzero=True,all_117_bucket_sums_unchanged=True)
+consequence=for any desired 13-vector of pullback changes, an owner-active within-bucket perturbation exists while the complete endpoint bucket/K4/Walsh data stay fixed
+theorem=('all_13_owner_functionals_are_independent_mod_bucket_constants', 'owner_active_within_bucket_kernel_already_surjects_onto_Fp13', 'complete_endpoint_bucket_table_does_not_determine_any_owner_pullback_profile', 'atom_pair_alignment_is_a_load_bearing_sidecar')
+boundary=('perturbations_are_split_field_pair_functions_not_boolean_or_positive_endpoint_realizations', 'actual_endpoint_pair_function_still_has_all_13_nonzero_pullbacks', 'no_temporal_current_grouped_coefficient_scalar_exclusion_or_LRC14_claim')
+semantic_sha256=cc535a60a93f5652b1980268a274f7a7280cc722e3c707bdae78467f6d367ddf
+script_sha256_lf=2d8efd445ee5aa2e08e1b4fb3f2bf23a04e1d565c1e25bf7828e0d024a243ab6
+reproducibility=no_assert_truth_gates;no_randomness;no_elapsed_fields
+commands=python -B 04-computation/lrc_r5_common_gauge_bucket_quotient_hostile_probe_20260816.py;python -B -O 04-computation/lrc_r5_common_gauge_bucket_quotient_hostile_probe_20260816.py
+PASS

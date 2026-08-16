@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `lrc_r5_common_gauge_bucket_quotient_hostile_probe_20260816.py` ->
+  matching `.out` [VERIFIED FINITE-EXACT FOLLOW-UP SIDECAR; SOURCE
+  INDEPENDENTLY ACCEPTED].  The thirteen common-offset owner functionals on the `39x39`
+  atom-pair space all vary inside every one of the 72 realized
+  chamber/drift buckets.  Restricting to the 576-dimensional within-bucket
+  kernel on the 48 owner-active punctured types still gives a surjective map
+  onto all thirteen pullback coordinates.  A certified `13x13` minor,
+  supported only in `LL` drifts `1,2,6`, has determinant
+  `89297302780816677760`; one two-pair `LL,d=1` perturbation changes all 13
+  pullbacks while preserving every one of the 117 endpoint bucket sums.
+  Thus complete K4/Walsh/tree data do not determine the atom-aligned
+  common-gauge pullback.  Perturbations are split-field pair functions, not
+  positive/Boolean endpoint realizations; no current or LRC(14) claim.
+  Script/output/semantic LF SHA-256:
+  `2d8efd445ee5aa2e08e1b4fb3f2bf23a04e1d565c1e25bf7828e0d024a243ab6` /
+  `cd2e799cf3b44042c03622f831f38e6e305ed2418a4c662ac23fbb4be0f5d58b` /
+  `cc535a60a93f5652b1980268a274f7a7280cc722e3c707bdae78467f6d367ddf`.
 - `keller_R6_finite_sheet_recursive_norm_probe_20260816.py` and
   `keller_R6_finite_sheet_split_branch_audit_20260816.py` -> matching `.out`
   files [THM-3523 PROVED + VERIFIED-EXACT + SPLIT-REPRESENTATION AUDITED].
