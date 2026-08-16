@@ -1,0 +1,20 @@
+R5 BOOLEAN SQUARE + INVERSE-BRANCH SHEET -- SIDECAR PROBE
+status=FINITE_EXACT_NONREDUNDANT_SOURCE_ANCESTRY_SIDECAR;LRC14_OPEN
+base=(sha256=e585c1a18d846c4ab87fc159ad411bad90859be831831cea1c0e8f326d9b440f,semantic=b0996af3f1760b2118187490c93e0e01b322cb57fd6b25d3bf3688778b7e664c)
+sidecar=high_base13_digit_b=floor(n/13);temporal_source_sheet_certificate=(15379, (1183, 1183, 1183, 1183, 1183, 1183, 1183, 1183, 1183, 1183, 1183, 1183, 1183)):PASS
+branch_profile=(sha256=ba0143302119c93b7b7b4f778478c14c265efb8c0bcb9c2945e9eaae9009b493,nonempty=(0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0),rootwise_restoration=True)
+geometric_branch_x_state_support=(matrix,components,counts_by_state,counts_by_branch)=(((0, 0, 0, 0), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (0, 0, 0, 0)), ((0, 0, 0, 0), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (0, 0, 0, 0)), (11, 11, 11, 11), (0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0))
+work_counts_(endpoint_intervals,mapped,active,q_active,weighted)=(7107008, 7108460, 1200462, 186244, 186244)
+literal_guard_controls=((0, 0, 0), (1, 0, 6), (12, 12, 0)):PASS;Boolean_square_marginal_sha256=8b8f2a2785b084e1578ba0512e4577ab79fd674b84b588fbdb8186f2009242c2:PASS
+rank_jump=(Boolean_square=4,branch_x_square=6,branch_marginal=3)
+full_F13branch_x_V4_x_F13residue_support=(('dc', 1), ('branch', 12), ('state', 3), ('residue', 12), ('branch_state', 36), ('branch_residue', 144), ('state_residue', 36), ('triple', 432))
+three_way_interaction=(rank=6,support=(('dc', 0), ('branch', 0), ('state', 0), ('residue', 0), ('branch_state', 0), ('branch_residue', 0), ('state_residue', 0), ('triple', 432)))
+fixed_relation_1_0_6=(branch_x_state_rank=3,nonzero_entries=44/52,sha256=d8d388655fe34b27122c92da84c3cfb29d96303451334fbb4fe9d8c8fc13f2b8)
+digests_(branch_profiles,gamma,table,spectrum,three_way,three_way_spectrum,fixed,branch_marginal)=('ba0143302119c93b7b7b4f778478c14c265efb8c0bcb9c2945e9eaae9009b493', '63d9304d28689ffa04b1568d538c67f3da59ecdc7e0d1c6535ad323c800ac0e5', '504e91431cf4d55f6e3cb5aa7c6e6f2c34db538cb692c67857a5c7627b252261', '61cf3999a1ef902db958851e99b8ea923c20099d81464c159613c0cf0054efdf', '8874b55a71e975e20c7b2b29efd9eec0ea93dcaecc0209d43c61712bbc9c0acf', '5d02353fd1cfa642be290264353e5e02441a2b69fa4144be72a7ae5ed9776396', 'd8d388655fe34b27122c92da84c3cfb29d96303451334fbb4fe9d8c8fc13f2b8', 'a70c2937fa755de450cc913d031b7e5f1eaf4b756900e79832db247582f76cba')
+proof=('inverse_branch_high_digit_equals_source_guard_sheet', 'thirteen_nonnegative_branch_profiles_restore_every_source_root_profile', 'branch_state_geometry_is_not_a_function_of_the_Boolean_square', 'branch_marginal_recovers_the_audited_Boolean_square_exactly', 'adjoining_branch_sheet_strictly_raises_output_rank', 'nonzero_three_way_branch_state_residue_interaction')
+boundary=('source_time_inverse_branch_sheet_not_arrival_atom', 'finite_ancestry_sidecar_not_exact_C_a_X_m', 'no_temporal_intertwiner_U_clock_uniform_rows_row_exclusion_or_LRC14')
+semantic_sha256=c82d9aba055f2f5ccbea75e092dd7a45b9a9f2a4a1b91762f32ad5852cf9c552
+script_sha256_lf=592aa0bce31f2da5d5e2ddff7f3ffe6f1398f3a07b5ce927e0d97c9fe309ae3b
+reproducibility=no_randomness;no_elapsed_fields;normal_and_O_transcripts_must_match
+commands=python -B 04-computation/lrc_r5_ufull_owner_node_boolean_square_branch_sheet_sidecar_probe_20260816.py;python -B -O 04-computation/lrc_r5_ufull_owner_node_boolean_square_branch_sheet_sidecar_probe_20260816.py
+PASS

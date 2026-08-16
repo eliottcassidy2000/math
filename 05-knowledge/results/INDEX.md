@@ -17,6 +17,23 @@
   `bdb211b727550ba51c1ca83490fbda50446b6e3c0596e229cd864e741af93509` /
   `cfb53edd90174d2362bae7235f2f85af3109a2754003afc48b94a82466b449cf` /
   `25bbbd871fe072915b07662c76661bf72be8d46258a6ce825ab1635ef7fe5c56`.
+- `lrc_r5_ufull_owner_node_boolean_square_branch_sheet_sidecar_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT NONREDUNDANT SOURCE-ANCESTRY SIDECAR].
+  Retains the high digit `b=floor(n/13)` of the left `P_169` inverse branch.
+  A `15379`-cell certificate identifies `b` with the source guard sheet, with
+  `1183` cells each.  After `Q`, only branches `1..11` survive and each
+  meets all four owner-visible Boolean states; summing branches restores every
+  audited parent row exactly.  The branch x square response rank rises from
+  `4` to `6`, while the branch marginal has rank `3`.  Removing every lower
+  marginal leaves a rank-six pure three-way interaction with all
+  `432=12*3*12` branch/state/relation modes nonzero; fixed `(1,0,6)` has rank
+  `3` and `44/52` nonzero entries.  This is source-time finite ancestry, not
+  the current-leg `r_owner`, exact `C(a;X,m)`, an arrival atom, chronology,
+  physical current, row exclusion, or LRC(14).  Script/output/semantic LF
+  SHA-256:
+  `592aa0bce31f2da5d5e2ddff7f3ffe6f1398f3a07b5ce927e0d97c9fe309ae3b` /
+  `082ec6bfc743e317fc5b388ad758cbb78df75de93c524cdc22c92729fa4eabc5` /
+  `c82d9aba055f2f5ccbea75e092dd7a45b9a9f2a4a1b91762f32ad5852cf9c552`.
 
 - `lrc_r5_ufull_owner_node_boolean_square_refiner_independent_audit_20260816.py`
   -> matching `.out` [SECOND-PATH HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
