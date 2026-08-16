@@ -339,7 +339,7 @@ decide harmonic mass at `z=1`.
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
   THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;
   polynomial `A2` regularity and constant units are the missing gate.
-  THM-3074/3080/3081 give the Laurent tower. THM-3383 and an exact cyclic/V4 hostile leave boundary effectivity and physical embedding OPEN.
+  THM-3074/3080/3081 give the Laurent tower; THM-3383/3397 have unbounded response strings. THM-3465/3466 give nonreal-character rigidity and an HFC current passport; mixed characters, effectivity and injectivity remain OPEN.
   THM-3067/3141's `A4` shadow loses `V4` origin; THM-3072 recovers it
   from three `C2` tables; edge/cycle loses a 3D character sector.  THM-3076
   extends this to prime affine-plane tomography, with the characteristic-`p`
@@ -391,30 +391,10 @@ decide harmonic mass at `z=1`.
   THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response (collisions persist; `gr` overcounts); THM-3354 blocks direct D5 transport.
   THM-3431 proves the secondary typed cospan: LRC deck `H^1`, selected one-root JC local `H^1`, zero additive cross-maps, and a lossy DeathBar only.
   THM-3418/19 close sparse Keller/rank; THM-3422/24/27 give integral character laws; THM-3430/33 classify wrap/all-sector Prüfer arms; THM-3436/37 give repeated-root Artin jets and their derived Euler channel.  THM-3437's inverse Tor tower recovers the Tate-module/presence bit, while its inclusion direct limit recovers the Prüfer arm; neither is LRC `H^1`. No multiroot nonwrap split or `JC(2)`/`DC(2)` follows.
-- **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
-  close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
-  `2201<=d<=2400` and all `35` residuals in `2401<=d<=2500` close by matching
-  independent multi-place traces.  First unaudited: `r=2499,d=2501`. THM-3182 lifts the
-  recurrence to a three-state Gauss--Manin system with rank-one prime reset and
-  Smith type `(1,p,p)`; THM-3185/3188/3191 give its exact carried p-primary
-  thickness, pre-reset character holonomy, common exterior plane and two-state
-  fixed-parameter Clifford law. THM-3186 gives P-recursive tails; THM-3210's
-  two-step nonmonotone cancellation ray still blocks the staircase. The `p>2m`
-  full-flag formula is VERIFIED only; `FC(3)`/`SFC(3)` remain OPEN.
-  THM-3249--3288 give the face atlas, four blockers, and no inherited rebind.
-  THM-3314's new unshuffle copies endpoints on all `4+31` tests, but its `700`
-  nonzero centered currents fail the counit test and endpoint fibres lose ancestry.
-  An ancestry pullback, chronology, positivity and arbitrary faces remain OPEN.
-  THM-3303/3328 split constant-J: double sheet or anti-tangent/vertex-cone data.
-  THM-3310/3321 close cyclic-quartic support `<=4`; THM-3323 leaves support `5`
-  at rank `10980/1670`. THM-3327 gives a standard-`C3` automatic phase gate.
-  THM-3357/3365 give cubic determinants: `L(P^r)=0` for odd `r` and
-  `(3r+2)!/[2(r+1)^2]` for even `r`; the Vieta Jacobian has odd moments zero
-  and `L(J^(2m))=((2m)!)^2(3m)!/m!`. Both detect at power two; bare
-  bouquets lose the observer. THM-3362 detects real odd-profile pairs in three
-  moments; complex phases can fail. HFC(3)/FC(3) remain OPEN; `p>4m+2` is mandatory.
-  THM-3459 gives a Rule 30 truth lift with `L(g)=0,L(g^2)=6` and a derangement
-  compiler; Boolean/factorial carriers conflict, so no FC transfer.
+- **Factorial:** THM-3124--3201/3467 close `{0,1,2}` windows through `r=2499`; at `d=2501`, survivor `256` misses `{625,1250}`. For `d=a p^k+1`, THM-3467 proves a `p^k` face, complete for `2<=a<=(p-1)/2` and `a=p-1`; middle/adaptive completeness remains OPEN. Next residual: `r=2500,d=2502`.
+  THM-3182/3185/3188/3191 give the three-state prime reset, carried thickness and exterior/Clifford laws; THM-3210 still blocks a monotone staircase. THM-3249--3314 give the face atlas and show endpoint ancestry/positivity remain OPEN.
+  THM-3303/3328 split constant-J into sheet/cone data; THM-3465 makes every pure nonreal rotation character linear and HFC-incompatible. THM-3310/3321 close cyclic support `<=4`, while support `5` and mixed characters remain OPEN.
+  THM-3466's HFC+constant-J current is one length-two Krylov block and locates zero in the boundary image or a bounded cell, but its clutch need not separate. THM-3357/3365/3362 give determinant/real-profile controls; HFC(3), FC(3), `JC(2)` and arbitrary faces remain OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

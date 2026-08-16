@@ -337,7 +337,20 @@ THM-2290/2292/2294 and the S79 support-Dirichlet reflection.
 ## Classify response-state growth before naming the closed form
 
 **Trigger / action:** for repeated joins, substitutions, block lifts, or transfers, derive the operation response before naming a closed form; classify the sufficient state as fixed jet, moving endpoint jet, bounded time-varying transfer, or gauged arithmetic section.
-**Mechanism / limit:** these respectively expose polynomial--exponential tails, efficient non-C-finite evolution, P-recursive elimination, or exact decimation, but do not compute an arbitrary seed or imply a converse or low bit complexity. **Evidence:** THM-3181/3202/3186/3235/3268.
+Before claiming finite detection, test whether the annihilation or nilpotency
+length is uniform over the object family.  **Mechanism / limit:** these state
+types respectively expose polynomial--exponential tails, efficient
+non-C-finite evolution, P-recursive elimination, or exact decimation, but do
+not compute an arbitrary seed or imply a converse or low bit complexity.  A
+single object may have a finite response while the family has unbounded
+response length.  On a power orbit inside a coordinate ideal, the first
+accessible pure boundary jet can itself move linearly with the power, making
+every fixed derivative bank eventually blind even before multiplier access
+is considered.  **Evidence:** THM-3181/3202/3186/3235/3268; THM-3466 has both
+an exact uniform length-two boundary-current block and the moving boundary-jet
+hostile, whereas THM-3383/3397 have locally nilpotent polynomiality-debt
+strings of every length, and THM-3465's factorial hostile exits a depth-two
+multiplication kernel at the next power.
 
 ## Divide exceptional multiplicity before judging a wall
 

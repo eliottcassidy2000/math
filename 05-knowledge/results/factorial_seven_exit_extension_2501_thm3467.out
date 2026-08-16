@@ -1,0 +1,17 @@
+THM-3467 FACTORIAL SEVEN-EXIT d=2501 DUAL EXACT AUDIT
+prime_power_carry_cells=48 max_d=1211 complete_singleton_ledgers=PASS
+prime_power_carry_hostiles=p3_shift;a_ge_p_depth_change;a1_empty
+prime_power_carry_semantic_sha256=f0005f43cfd6464f2279f0260792357c40ed6dee7c7428968e7e9f5d07b4a4e4
+universe=d=2501 r=2499 seven_exit_census=(1, 1, 1, 1, 1, 1, 1)
+row_degrees=(2499,2500,2498)
+progressive_degree_trace=((2, (256, 2048, 2304)), (3, (256,)), (5, ()))
+trace_digest=365533925519a4d8d44db78394f0785e87be5f4cc03e0a98d759f93609fb09ee
+common_slope_ledgers=((2, (((511, 256), 256, 256), ((4095, 2048), 2048, 2048))), (3, (((2, 3), 3, 3), ((8, 9), 9, 9), ((26, 27), 27, 27), ((242, 243), 243, 243), ((2186, 2187), 2187, 2187), ((1, 1), 27, 1))), (5, (((312, 625), 1250, 625),)))
+raw_degree_ledger_p2=(2, (0, 256, 2048, 2304))
+raw_degree_ledger_p5=(5, (0, 625, 1250))
+raw_degree_ledgers_sha256=e8d12c7f62e749642a1fefdcebcedc5866ece0f4f634cb1231fa10bd3e7f92da
+p5_carry=single_slope_312/625 cap=1250 denominator=625=5^4
+positive_controls=primary(v+1,v); independent=planted(v+1) and planted(v), degree 1 retained
+factorization_invoice=((2501, (41, 61)), (2500, (2, 2, 5, 5, 5, 5)), (2499, (3, 7, 7, 17)), (2498, (2, 1249)), (2497, (11, 227)), (2496, (2, 2, 2, 2, 2, 2, 3, 13)), (2495, (5, 499)))
+semantic_sha256=89971ade6fbedd6c1ae81bb3dc0e5514a320bcedfff7a9ca706ea116b8966b45
+STATUS=PASS closed=1 survivors=0 next_unaudited=d=2502/r=2500

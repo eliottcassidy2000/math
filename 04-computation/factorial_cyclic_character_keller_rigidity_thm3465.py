@@ -63,7 +63,38 @@ for degree in range(1, 8):
     require(sp.expand(jacobian(f, h, z, w) - expected) == 0, ("binary-form lemma", degree))
 
 
-# The two nonreal C3 characters stay disjoint on every homogeneous layer.
+# Opposite nonreal characters stay disjoint on every homogeneous layer for
+# every checked finite rotation.  Exponents are measured relative to the
+# source character xi in rho(z,w)=(xi*z,xi^(-1)*w).
+finite_character_checks = 0
+for order in range(3, 17):
+    for character in range(1, order):
+        if (2 * character) % order == 0:
+            continue
+        for degree in range(1, 25):
+            character_basis = tuple(
+                (iz, degree - iz)
+                for iz in range(degree + 1)
+                if (iz - (degree - iz)) % order == character
+            )
+            inverse_basis = tuple(
+                (iz, degree - iz)
+                for iz in range(degree + 1)
+                if (iz - (degree - iz)) % order == (-character) % order
+            )
+            require(
+                set(character_basis).isdisjoint(inverse_basis),
+                ("finite character overlap", order, character, degree),
+            )
+            star_basis = tuple((iw, iz) for iz, iw in character_basis)
+            require(
+                set(star_basis) == set(inverse_basis),
+                ("finite star character", order, character, degree),
+            )
+            finite_character_checks += 1
+
+
+# Pin the THM-3310 convention separately.
 for degree in range(1, 25):
     omega_basis = tuple(
         (iz, degree - iz)
@@ -152,7 +183,9 @@ require(not any(isinstance(node, ast.Assert) for node in ast.walk(ast.parse(sour
 print("THM-3465 NONREAL CYCLIC-CHARACTER KELLER RIGIDITY EXACT CONTROL")
 print("quartic_bracket_support=%d coefficient_table=PASS" % len(quartic_expected))
 print("binary_form_bracket_formula=PASS degrees=1..7")
-print("C3_character_star_disjoint=PASS degrees=1..24")
+print("finite_rotation_character_star_disjoint=PASS orders=3..16 "
+      "degrees=1..24 checks=%d" % finite_character_checks)
+print("C3_character_convention=PASS degrees=1..24")
 print("Jac_xy(z,w)=%s" % coordinate_jacobian)
 print("normalized_triangle_average_w3=%s" % w3_average)
 print("linear_control_A=%s real_J=%s third_moment=%s" % (
@@ -161,6 +194,12 @@ print("linear_control_A=%s real_J=%s third_moment=%s" % (
 print("hostiles=independent_mate_bracket_-1; C2_odd_shear_J_1")
 print("twisted_kernel_hostile=%s" % (hostile_values,))
 print("semantic_sha256=%s" % hashlib.sha256(
-    repr((quartic_expected, coordinate_jacobian, w3_average, hostile_values)).encode("utf-8")
+    repr((
+        quartic_expected,
+        finite_character_checks,
+        coordinate_jacobian,
+        w3_average,
+        hostile_values,
+    )).encode("utf-8")
 ).hexdigest())
 print("STATUS=PASS")

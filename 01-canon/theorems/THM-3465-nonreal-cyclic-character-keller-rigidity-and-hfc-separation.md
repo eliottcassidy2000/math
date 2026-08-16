@@ -2,15 +2,18 @@
 id: THM-3465
 title: "Nonreal cyclic-character Keller rigidity and all-degree HFC separation"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  In the Fourier
-  coordinates of THM-3310, every real planar polynomial map whose complex
-  coordinate lies in either nontrivial C3 character and whose real Jacobian
-  is a nonzero constant is linear.  Consequently the entire cyclic-
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For any finite
+  orientation-preserving Euclidean rotation of the real plane, a real
+  polynomial map whose complex coordinate
+  has a nonreal rotation character and whose real Jacobian is a nonzero
+  constant is linear; its character must already occur in the linear source
+  representation.  Consequently, in the Fourier coordinates of THM-3310,
+  the entire cyclic-
   eigenvector HFC(3) lane, in every degree, is disjoint from THM-3303's
   constant-Jacobian sector: the only Keller survivors are scalar multiples
   of z or zbar, and their third normalized simplex moment is nonzero.  The
   anti-linear real-structure mate, equal component degrees, and
-  chi!=chi^(-1) are load-bearing.  This proves neither HFC(3), FC(3), nor
+  eta!=eta^(-1) is load-bearing.  This proves neither HFC(3), FC(3), nor
   JC(2); mixed-character HFC cells and the cyclic lane with nonconstant
   Jacobian remain open.
 source: root/factorial-jacobian-alternation/2026-08-15
@@ -18,21 +21,23 @@ audit: >
   Two independent agents rederived the top-bracket argument, equal-degree
   binary-form lemma, character contradiction, coordinate-Jacobian factor,
   and third-moment exit.  The exact companion checks the binary-form formula,
-  character/star bookkeeping, the full cyclic-quartic bracket table, triangle
-  normalization, and sharp independent-mate and order-two hostiles.
+  finite-rotation character/star bookkeeping, the full cyclic-quartic bracket
+  table, triangle normalization, and sharp independent-mate and order-two
+  hostiles.
 depends_on:
   - THM-3018-factorial-conjecture-as-a-simplex-moment-problem
   - THM-3300-factorial-gaussian-torus-bridge-and-the-archimedes-no-go
   - THM-3310-degree-four-cyclic-eigenspace-on-the-triangle
 related:
+  - THM-1345-jc2-equivariant-category-poisson-reframing-dc1-shadow
   - THM-3016-jacobian-pair-cross-term-rigidity-at-subleading-order
   - THM-3303-keller-simplex-null-moments-force-a-boundary-collision
   - THM-3328-boundary-cone-overlap-and-anti-tangent-keller-passport
 script: 04-computation/factorial_cyclic_character_keller_rigidity_thm3465.py
 output: 05-knowledge/results/factorial_cyclic_character_keller_rigidity_thm3465.out
-script_sha256: e74f1ffdfe240e4a848fce72f5e997faedd9b10a9f95ac7b0c159b60b2bc2671
-output_sha256: edc1dc8ec628d5ebe3af15f1ba791137a6b39e8f8a632b7441d7fd516cf981b0
-semantic_sha256: 77ce350716ae0245cbb99ba4d4fdb79faf86011fab6eb2324b139e2ef85bfeee
+script_sha256: d072afb9ee508ae874fdf253084f17b206f55a030bd009382b1005c39fabe8ca
+output_sha256: 3ffba457df22503a986f20d188c3e6b68491dd643fe448a55aee13357c184a96
+semantic_sha256: 91d4afcb83b4fa6e0ca54da2946b6afd6db335888ffc9199c1351f2080811db6
 hash_basis: raw bytes
 ---
 
@@ -42,7 +47,32 @@ hash_basis: raw bytes
 
 ## 1. The common carrier
 
-On the standard triangle put
+Let `rho` be a nontrivial finite orientation-preserving Euclidean rotation of
+a real affine plane.  Recenter at its fixed point and choose conjugate complex
+linear coordinates `z,w` so that
+
+```text
+rho(z,w)=(xi z,xi^(-1)w),                         |xi|=1.           (0)
+```
+
+For `g in C[z,w]`, let `g^dagger` conjugate every coefficient and exchange
+`z,w`.  On the real plane it is the ordinary complex conjugate of `g`.  Write
+
+```text
+p=(g+g^dagger)/2,              q=(g-g^dagger)/(2i).               (0a)
+```
+
+The source-to-target map in this theorem is
+
+```text
+g  |->  (g,g^dagger)  |->  {g,g^dagger}_{z,w}
+   |->  F_g=(p,q).                                                  (0b)
+```
+
+It retains a finite rotation character and the real Keller predicate on the
+same polynomial.  The anti-linear dagger in `(0b)` is not optional.
+
+For the HFC specialization, on the standard triangle put
 
 ```text
 z=s_1+omega s_2+omega^2 s_3,
@@ -56,65 +86,52 @@ THM-3310 convention by
 rho(z,w)=(omega^2 z,omega w).                                    (2)
 ```
 
-For `g in C[z,w]`, let `g^dagger` conjugate every coefficient and exchange
-`z,w`.  On the real plane it is the ordinary complex conjugate of `g`.  Write
-
-```text
-p=(g+g^dagger)/2,              q=(g-g^dagger)/(2i).                (3)
-```
-
-The source-to-target map in this theorem is
-
-```text
-g  |->  (g,g^dagger)  |->  {g,g^dagger}_{z,w}
-   |->  F_g=(p,q).                                                   (4)
-```
-
-It keeps the HFC simplex moments and the real Keller predicate on the same
-polynomial.  The anti-linear dagger in `(4)` is not optional.
-
 ## 2. Rigidity theorem
 
-**Theorem.**  Suppose `g!=0` has one of the two nontrivial characters
+**Theorem.**  In the finite-rotation setup `(0)`, suppose
 
 ```text
-g o rho=chi g,                 chi in {omega,omega^2}.              (5)
+g o rho=eta g,                 eta!=conjugate(eta).                 (3)
 ```
 
 If
 
 ```text
-det D_(x,y)(p,q)=c in R\{0},                                    (6)
+det D_(x,y)(p,q)=c in R\{0},                                     (4)
 ```
 
-then `deg g=1`.  More precisely,
+then `deg g=1`, `eta` is one of `xi,xi^(-1)`, and `g` is a nonzero
+multiple of the corresponding linear coordinate.  In the triangle convention
+`(2)`, more precisely,
 
 ```text
-chi=omega    => g=A w,
-chi=omega^2  => g=A z,                  A!=0.                       (7)
+eta=omega    => g=A w,
+eta=omega^2  => g=A z,                  A!=0.                       (5)
 ```
 
-*Proof.*  The dagger partner has character `chi^(-1)` and the same ordinary
-degree `d`.  In the affine triangle coordinates used by THM-3310,
+*Proof.*  The dagger partner has character `eta^(-1)=conjugate(eta)` and the
+same ordinary degree `d`.  Put `K=Jac_(x,y)(z,w)`, a fixed nonzero purely
+imaginary constant.  Directly from `(0a)`,
 
 ```text
-Jac_(x,y)(z,w)=-3 sqrt(3)i,
 Jac_(x,y)(g,g^dagger)=-2i Jac_(x,y)(p,q),
+Jac_(x,y)(g,g^dagger)=K {g,g^dagger}_{z,w},
 ```
 
 so
 
 ```text
-Jac_(x,y)(p,q)=(3 sqrt(3)/2){g,g^dagger}_{z,w}.                     (8)
+Jac_(x,y)(p,q)=(iK/2){g,g^dagger}_{z,w}.                           (6)
 ```
 
-Hence `(6)` makes the bracket in `(8)` a nonzero constant.
+Hence `(4)` makes the bracket in `(6)` a nonzero constant.  On the triangle,
+`K=-3 sqrt(3)i`, recovering the factor `3 sqrt(3)/2`.
 
 Let `g_d` be the top homogeneous part.  If `d>=2`, the component of degree
 `2d-2` in the bracket is
 
 ```text
-{g_d,g_d^dagger}_{z,w}=0.                                         (9)
+{g_d,g_d^dagger}_{z,w}=0.                                         (7)
 ```
 
 We use the elementary equal-degree binary-form lemma.  If nonzero homogeneous
@@ -127,18 +144,18 @@ f=w^d F(z/w),                 h=w^d H(z/w).
 Direct differentiation gives
 
 ```text
-{f,h}=d w^(2d-2)(F'H-FH').                                       (10)
+{f,h}=d w^(2d-2)(F'H-FH').                                        (8)
 ```
 
-In characteristic zero, `(10)` vanishes exactly when `(H/F)'=0`, hence when
-`h=lambda f`.  Applying this to `(9)` makes `g_d^dagger` proportional to
-`g_d`.  But these two nonzero forms have the distinct characters `chi^(-1)`
-and `chi`, impossible because `omega!=omega^2`.  Thus `d<=1`.
+In characteristic zero, `(8)` vanishes exactly when `(H/F)'=0`, hence when
+`h=lambda f`.  Applying this to `(7)` makes `g_d^dagger` proportional to
+`g_d`.  But these two nonzero forms have the distinct characters `eta^(-1)`
+and `eta`, impossible by `(3)`.  Thus `d<=1`.
 
-The nontrivial character excludes a constant term.  The corresponding
-degree-one character space is `Cw` or `Cz`, giving `(7)`.  The bracket is
-`-|A|^2` in the first case and `|A|^2` in the second, so `(6)` is indeed
-nonzero.  QED.
+The nonreal character excludes a constant term.  The only degree-one source
+characters are `xi,xi^(-1)`, proving the general assertion.  In `(2)` their
+spaces are `Cz,Cw`, giving `(5)`.  The bracket is `-|A|^2` in the first
+displayed case and `|A|^2` in the second, so `(4)` is indeed nonzero.  QED.
 
 The mechanism is the leading-form dependence already native to planar
 Jacobian pairs, but the finite character plus real-structure sidecar turns
@@ -156,7 +173,7 @@ THM-3310 gives
 <z^3>=<w^3>=1/10.                                                 (11)
 ```
 
-Every survivor in `(7)` therefore has
+Every triangle survivor in `(5)` therefore has
 
 ```text
 <g^3>=A^3/10!=0.                                                  (12)
@@ -199,7 +216,7 @@ coefficients include
 
 Constancy forces `D=E=0`; then `[z^2w^2]=-3|C|^2` forces `C=0`, and
 `[zw]=4|B|^2` forces `B=0`.  This directly closes the quartic slice and
-independently checks `(7)`.  The top-form proof in Section 2 explains why
+  independently checks `(5)`.  The top-form proof in Section 2 explains why
 the coefficient cascade persists in every degree.
 
 ## 5. Sharp failure boundaries
@@ -212,7 +229,7 @@ g=w+Bz^2,                    h=z,                    {g,h}=-1        (15)
 ```
 
 for arbitrary `B`.  Unequal component degrees permit a nonlinear triangular
-Keller pair.  Equation `(15)` is not a real map of the form `(3)`.
+Keller pair.  Equation `(15)` is not a real map of the form `(0a)`.
 
 **The nonreal character is load-bearing.**  For order two,
 `chi=chi^(-1)`.  The real odd shear
@@ -238,8 +255,8 @@ the full FC orbit nor the dagger energy follows from it.
 ## 6. Information contract and next live cell
 
 ```text
-source:      a triangle polynomial in a pure nontrivial C3 character
-target:      its real planar map (Re g,Im g)
+source:      a real-plane polynomial in a nonreal finite-rotation character
+target:      its real planar map (Re g,Im g); then the triangle HFC cell
 operation:   Hermitian Poisson bracket with g^dagger
 preserved:   degree, character, simplex moments, constant-real-J predicate
 destroyed:   mixed-character top layers, boundary ancestry, inverse effectivity
@@ -272,8 +289,9 @@ python3 -O 04-computation/factorial_cyclic_character_keller_rigidity_thm3465.py
 
 and compare raw bytes with the declared output.  The companion uses exact
 symbolic and rational arithmetic, explicit failure gates, and no assertion-
-sensitive checks.  It verifies `(8)--(17)` and the character/star bookkeeping
-through degree 24.  The universal result is proved in Section 2, not inferred
-from those finite controls.
+  sensitive checks.  It verifies `(8)`, the triangle controls `(11)--(17)`,
+  and finite-rotation character/star bookkeeping through degree 24 for orders
+  three through sixteen.  The universal result is proved in Section 2, not
+  inferred from those finite controls.
 
 **QED.**

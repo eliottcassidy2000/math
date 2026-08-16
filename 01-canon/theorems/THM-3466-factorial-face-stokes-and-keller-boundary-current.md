@@ -6,7 +6,9 @@ status: >
   factorial functional has an exact Boolean face descent:
   B_I(h)=L_n(prod_(i in I)(1-partial_i)h).  Thus at a factorial-null power,
   every gradient-multiplier observation is exactly a codimension-one face
-  debt.  For a planar Keller pair, weighted Hamiltonian integration by parts
+  debt; on the coordinate interior ideal, every fixed pure-derivative bank
+  is eventually blind because the first accessible boundary jet grows
+  linearly with the power.  For a planar Keller pair, weighted Hamiltonian integration by parts
   makes the corresponding multiplier/face recurrence endogenous.  On a
   triangle, a constant-J polynomial g=p+iq obeys
   integral_boundary g^n d(conjugate g)=-2nic integral_Delta g^(n-1).
@@ -30,6 +32,7 @@ depends_on:
   - THM-3303-keller-simplex-null-moments-force-a-boundary-collision
   - THM-3328-boundary-cone-overlap-and-anti-tangent-keller-passport
 related:
+  - THM-2846-arbitrary-positive-cone-moment-three-transverse-boundary
   - THM-2848-whitened-moving-plane-multipole-and-pearson-boundary
   - THM-2856-sparse-factorial-lowering-decoder-and-laguerre-rank-one-defect
   - THM-3383-terminal-monomial-cone-polynomiality-fork
@@ -93,6 +96,48 @@ The multivariable formula does not evade the access boundary.  If `x_i`
 divides `f`, then the face term is identically zero; on any finite scalar-null
 window the corresponding lowerings vanish too.  Thus face descent alone is
 not a detector for the interior ideal `(x_1...x_n)`.
+
+There is a stronger jet-level failure.  Suppose
+
+```text
+ord_(x_i)(f)=e_i>=1                         (1<=i<=n).       (4a)
+```
+
+For every multiindex `beta` satisfying `beta_i<m e_i` for all `i`, repeated
+use of `(1)` has no boundary term: every boundary jet encountered before
+`partial^beta(f^m)` still contains a positive power of the relevant
+coordinate.  Hence
+
+```text
+L_n(partial^beta(f^m))=L_n(f^m).                            (4b)
+```
+
+On an FC-null orbit, every fixed finite bank of pure derivatives is therefore
+eventually identically zero; its order must grow at least linearly with `m`
+to reach the first possible boundary jet.  This is a response-depth
+obstruction, not only a first-face obstruction.
+
+The phenomenon already has a finite exact-prefix control.  Let `H` be the
+nonzero support-`{1,2,3,4}` polynomial from THM-2846/2856 with
+
+```text
+H(0)=0,             L_1(H)=L_1(H^2)=L_1(H^3)=0,
+```
+
+and put `f(x)=H(x_1)x_2...x_n`.  Then, for `m=1,2,3`,
+
+```text
+L_n(f^m)=L_1(H^m)(m!)^(n-1)=0,                             (4c)
+```
+
+and every derivative in the region `beta_i<m e_i` is blind by `(4b)`.
+Polynomial multipliers remain external: when the `i`-face of `h` vanishes,
+
+```text
+L_n(g partial_i h)=L_n((g-partial_i g)h),                  (4d)
+```
+
+which does not reduce an arbitrary multiplier to scalar moments.
 
 ## 2. A Keller bracket endogenizes a weighted multiplier recurrence
 
@@ -266,8 +311,18 @@ d kappa/dG=G^2 conjugate(G')/G'.                                    (22)
 
 At THM-3328's no-overlap anti-tangent collision
 `G_2'=-lambda G_1'` with `lambda>0`, the two first jets in `(22)`
-agree automatically.  At `G=0` they vanish.  The next lawful observer is
-therefore a curvature/clutch jet, not another tangent scalar.
+agree automatically.  Differentiating once more along the target gives
+
+```text
+d^2 kappa/dG^2
+ =2G conjugate(G')/G'
+  +G^2(conjugate(G'')G'-conjugate(G')G'')/(G')^3.          (22a)
+```
+
+The first term also agrees across an anti-tangent pair, so only the signed
+curvature term can split its second lifted jet.  At `G=0`, both `(22)` and
+`(22a)` vanish.  The next lawful observer is therefore a curvature/clutch
+jet, not another tangent scalar.
 
 The slit-annulus control is sharp again.  On its two identified radial seams,
 `d(conjugate g)=dg` and

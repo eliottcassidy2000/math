@@ -33,6 +33,62 @@
   `d8c6b1c2baf1df178ca09793b3f69bc5e537a12c77e9397d83fd3ce8c3e3e530`.
   No endpoint current, bispectrum, physical row, or LRC(14) consequence
   follows.
+- `factorial_cyclic_character_keller_rigidity_thm3465.py` -> matching `.out`
+  [THM-3465 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For any
+  finite orientation-preserving Euclidean rotation of the real plane, a real
+  polynomial map whose
+  complex coordinate has a nonreal character and whose Jacobian is a nonzero
+  constant is linear; the character must occur in the linear source
+  representation.  The top equal-degree Hermitian pair would otherwise
+  Poisson-commute, hence be proportional despite having opposite characters.
+  On the triangle this makes every pure nontrivial `C3` HFC eigencell
+  disjoint from the constant-J sector in every degree, since the only
+  survivors are `Az` or `Aw` and their third average is `A^3/10`.  The
+  independent-mate pair `(w+Bz^2,z)` and the order-two odd shear are sharp
+  hostiles.  Script/output/semantic raw SHA-256:
+  `d072afb9ee508ae874fdf253084f17b206f55a030bd009382b1005c39fabe8ca` /
+  `3ffba457df22503a986f20d188c3e6b68491dd643fe448a55aee13357c184a96` /
+  `91d4afcb83b4fa6e0ca54da2946b6afd6db335888ffc9199c1351f2080811db6`.
+  Mixed-character HFC cells, HFC(3), FC(3), and JC(2) remain open.
+- `factorial_face_stokes_keller_boundary_current_thm3466.py` -> matching
+  `.out` [THM-3466 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The
+  factorial functional has exact Boolean face descent
+  `B_I=L product_(i in I)(1-partial_i)`, and Keller Hamiltonian integration
+  by parts turns derivative multipliers into labelled face/drift fluxes.  On
+  the coordinate interior ideal, the first accessible boundary jet grows
+  linearly with the power, so every fixed pure-derivative bank is eventually
+  blind even along a null orbit.  On
+  a triangle, constant `J=c` gives
+  `integral_boundary g^n dbar(g)=-2nic integral g^(n-1)`; HFC nullity makes
+  `dbar(g)` one exact length-two nilpotent Krylov string, forces zero onto the
+  boundary image or into a bounded complementary cell, and gives the pointed
+  primitive `d kappa=g^2 dbar(g)`.  Scalar response is only reindexed moment
+  data, while the slit annulus and equilateral finite prefix are sharp
+  hostiles.  Script/output/semantic raw SHA-256:
+  `c964dd0a33264bf182087180c05c52c459aa6942e41c019374e3bfe0d72e9716` /
+  `0801e63667b1acfcd739bd318a6f1174932bc35cf53869dccaeb6d8644cf0d7a` /
+  `e925107c9d9a14f7434ada9c2195e761cae97861f76930402aa37ac81afb9527`.
+  No injectivity, inverse polynomiality, HFC(3), FC(3), or JC(2) conclusion
+  follows.
+- `factorial_seven_exit_extension_2501_thm3467.py` -> matching `.out`
+  [THM-3467 PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED].  If `p>=5`, `H=p^k`, `2<=a<p`, and `d=aH+1`, the first
+  factorial Euclidean triple has a common face of reduced denominator `H`
+  and capacity `min(a-1,(p-1)/2)H`.  When `a=p-1`, a second global
+  supporting line and a unique digit-sum minimizer prove that this is the
+  complete local common ledger.  At `d=2501`, the structural 5-adic set
+  `{625,1250}` is disjoint from the degree `256` left by `p=2,3`, closing
+  `r=2499` and extending exact quadratic three-moment windows through that
+  height.  The companion checks 48 carry cells and sharp `p=3`, `a>=p`, and
+  `a=1` hostiles, then requires exact agreement of two independently pinned
+  hull engines on the full row and planted-factor controls.
+  Script/output/structural/d=2501 semantic SHA-256:
+  `8ba583ae08a91bfd70dd9911fca927ba75e7376e7b49887c3915ac3c905e02e3` /
+  `43ef5f55c4b88bc27fca312f8512879f906acfd85d8efd99af2deee1821143c8` /
+  `f0005f43cfd6464f2279f0260792357c40ed6dee7c7428968e7e9f5d07b4a4e4` /
+  `89971ade6fbedd6c1ae81bb3dc0e5514a320bcedfff7a9ca706ea116b8966b45`.
+  Uniform singleton-ledger completeness for other `a`, an adaptive
+  divisor-place compiler, all-height exact quadratics, and FC(3) remain open.
 - `all_ref_concept_archaeology_20260815.py` -> matching `.out` plus frozen
   `.refs` [REPRODUCIBLE PROVENANCE INVENTORY; NOT A MATHEMATICAL VERIFIER].
   At `origin/main=5f038660851946647afee993fb3fea850cc80b7d`, the manifest freezes
