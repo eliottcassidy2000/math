@@ -1,0 +1,14 @@
+== THM-3522 renewal Pell/spinor sidecar ==
+renewal=(e,m)->(7e-2m,3e-2m);scalar_recurrence=u[n+2]=5u[n+1]+8u[n]
+pell=(X,Y)=(6e-9m,m);2*(X',Y')=((5,57),(1,5))*(X,Y)
+quadratic_integer=alpha=(5+sqrt(57))/2;Norm(alpha)=-8;(X+Ysqrt57)=6*alpha^n
+invariants=X^2-57Y^2=36*(-8)^n;3e^2-9em+2m^2=3*(-8)^n
+cassini=e[n]m[n+1]-m[n]e[n+1]=3*(-8)^n
+pythagorean_plane=A-9B+5C=3*(-8)^n;triple_map_det=-512;Lorentz_multiplier=64
+proved_fixed_prefix_(name,n,e,m,triple)=(('L', 0, 1, 0, None), ('H', 1, 7, 3, (20, 21, 29)), ('J', 2, 43, 15, (812, 645, 1037)), ('G', 3, 271, 99, (31820, 26829, 41621)), ('R5', 4, 1699, 615, (1254188, 1044885, 1632413)), ('R6', 5, 10663, 3867, (49372940, 41233821, 64326629)), ('R7', 6, 66907, 24255, (1944120812, 1622829285, 2532425837)))
+next_conditional_rows=((7, (419839, 152211)), (8, (2634451, 955095)), (9, (16530967, 5993163)))
+hostiles_(wrong_pair,wrong_norm,required_norm,not_isometry,not_unimodular)=((46, 15), 7056, 2304, True, True): PASS
+semantic_sha256=c5758a441d60c45f254edbfea3d2ec06c34886fdcd0fc9bc27685dc0aaa4a5af
+status=PROVED-ALGEBRAIC arithmetic sidecar;fixed Keller realization proved only through R7
+scope=no next polynomiality,no image,no irreducibility,no all-level Keller theorem,no general JC
+all exact checks passed

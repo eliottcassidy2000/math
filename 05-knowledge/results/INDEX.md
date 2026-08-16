@@ -16,6 +16,20 @@
   `4b0bd05ffa6195ff484433329e334d771bc27e7cd380136b50b45e7248bb98ba` /
   `d1b7aef51b58c28afc40ec0d08319bdaf0fae7a3f5e681dddab3d0f1d2f1a543` /
   `7063720d0e0e4847ce752102de83274ea47d7740fc435a64bae425dbd7100121`.
+- `keller_renewal_pell_spinor_sidecar_20260816.py` -> matching `.out`
+  [PROVED ALGEBRAIC COROLLARY OF THM-3522; VERIFIED-EXACT].  Under
+  `X=6e-9m`, `Y=m`, the packet recurrence is multiplication by
+  `alpha=(5+sqrt(57))/2`, so `X^2-57Y^2=36(-8)^n`,
+  `3e^2-9em+2m^2=3(-8)^n`, and the generalized Cassini determinant is
+  `3(-8)^n`.  The associated primitive Pythagorean triples obey
+  `A-9B+5C=3(-8)^n`; their integral transition has determinant `-512` and is
+  a Lorentz similitude of multiplier `64`, not a Berggren-tree isometry.
+  Fixed Keller realization is proved only through `R7`; later arithmetic
+  rows do not prove polynomiality, images, irreducibility, an all-level tower,
+  or general JC.  Script/output/semantic SHA-256:
+  `6214844884b89acc366c0352b6880429c9f23c02c52e6667c5f489b14748cdd0` /
+  `7cb9f492557fa7ef9710023ca377d47d5fb7f36422e78376c7ebe155cdb9b2e9` /
+  `c5758a441d60c45f254edbfea3d2ec06c34886fdcd0fc9bc27685dc0aaa4a5af`.
 
 - `lrc_r5_ufull_owner_node_boolean_square_source_branch_sheet_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT

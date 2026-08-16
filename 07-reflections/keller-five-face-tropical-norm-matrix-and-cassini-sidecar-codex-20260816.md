@@ -1,10 +1,10 @@
 # The fixed Keller norm tower needs five Newton faces, not one exponent
 
-**Status:** THM-3506 proves the conditional five-face transform and verifies
-the fixed-map packet through `J`.  THM-3513 subsequently proves both renewal
-faces for the fixed `G`; renewal for `R_5` and later rungs, the next finite
-sheet, and the all-level law remain open.  This reflection is explanatory,
-not an independent truth source.
+**Current-status update:** THM-3522 now proves renewal propagation at every
+polynomial rung, and THM-3523 realizes the fixed packet through `R7`.
+Polynomiality of the next rung and the all-level law remain open.  The text
+below is a historical pre-3522 analysis; use the current theorems and the
+Pell-57 sidecar for present status.
 
 ## Inheritance pass
 
