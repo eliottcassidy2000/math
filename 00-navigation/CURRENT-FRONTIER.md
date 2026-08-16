@@ -39,9 +39,9 @@ THM-3425 gives primitive cap-six support.
 THM-3479 proves U_full `169/169`,`13^3`,`72/72` (U_clock none); THM-3514 gives
 owner `52/117`, rank4/full Walsh-drift; THM-3515 gives five rank5 rows and
 `72/72` charts; THM-3518 pins phases and `56,592` zero cycle pairings.
-THM-3524 blocks folded `C7/K4` transport by rank `3<4`; audited ancestry
-realizes 48 U_full buckets. An unaudited source-time candidate retains seven
-cells: every residue has `91/91` spectrum and class `(1,0,6)` has `72/72` mixed.
+THM-3524 blocks folded `C7/K4` transport (`3<4`); audited ancestry has 48
+U_full buckets. Unaudited source-cell and desheeted-endpoint couplings both
+have `91/91` spectra and `72/72` mixed; the latter is non-Cartesian/no-collision.
 This is residue-only: `C(a;X,m)`, current, `H^1`, scalar/LRC remain open.
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;

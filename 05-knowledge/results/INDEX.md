@@ -1,5 +1,25 @@
 # Script Results Index
 
+- `lrc_ufull_desheeted_common_residual_base_probe_20260816.py` -> matching
+  `.out` [FINITE-EXACT ACTUAL-ENDPOINT ONE-BASE COUPLING CANDIDATE;
+  INDEPENDENT AUDIT PENDING].  The canonical guard desheeting
+  `91t=7a+r -> (a,y=r/7=13t-a)` identifies THM-2471's owner-node form while
+  keeping distinct endpoint sheets.  Both the delayed word
+  `Q(169t)=Q(13y)` and the endpoint harmonic descend sheet-independently
+  because `742586=13^2*4394`.  Multiplying actual endpoint indicators before
+  summation gives same-sheet plus cross-sheet sectors; the same-sheet bank
+  exactly recovers the previously audited common-point digest and inverse
+  values.  Full, same, and cross `7x13` cell/residue tables each have
+  `91/91` split-field Fourier support; full ANOVA retains `72/72` mixed
+  modes.  The fixed relation class `(1,0,6)` has all seven F7 modes nonzero.
+  The new bridge `543695274352737840377` differs from the frozen Cartesian
+  bridge, so this is an alternate diagonal coupling, not a recovery of that
+  current; collision/horizons/source packet, exact `C(a;X,m)`, chronology,
+  row exclusion, and LRC(14) remain open. Script/output/semantic LF SHA-256:
+  `b30af31ba22ed702f8dac24d7452eb36cd8dbf6eb37f937a948f9976b01c5d10` /
+  `38123b9ad9171bc11054f5e41ba72f30d83a04cf0e2d70c04130da30dd0f9b6f` /
+  `97694f50b071dbf875802223dd894d7e1df86ef65a194c22d588505c59eea507`.
+
 - `lrc_r5_source_aligned_relation_residue_7x13_spectrum_probe_20260816.py`
   -> matching `.out` [FINITE-EXACT SOURCE-TIME 7x13 SIMPLE-KERNEL CANDIDATE;
   INDEPENDENT AUDIT PENDING].  Retaining THM-2594's seven half-open cells
