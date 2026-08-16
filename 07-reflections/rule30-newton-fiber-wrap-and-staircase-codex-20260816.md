@@ -77,6 +77,8 @@ most one per dyadic scale; balance, if true, must come from the hard depths.
 
 The finite-exact scout certifies every depth from `5` through `2^28-1` as
 hard.  This large interval is a test surface, not asymptotic evidence.
+Moreover, the wrapped-one reciprocal mass is at most `2`, so any divergent
+harmonic signal in the center support transfers entirely to the hard core.
 
 ## 5. A smaller universal boundary improves the compiler
 

@@ -1,8 +1,9 @@
 # Wrapped Rule-30 ones form a convergent harmonic subseries
 
-**Status: CONDITIONAL COROLLARY OF PROVISIONAL THM-3493.**  The argument below
-is exact assuming THM-3493's dyadic wrap-prefix atlas.  THM-3493 is awaiting
-independent audit, so this note is not a canon promotion or a Rule 30 prize
+**Status: COROLLARY OF PROVED
+[THM-3493](../01-canon/theorems/THM-3493-rule30-dyadic-wrap-atlas.md).**
+The argument below is exact from its independently audited dyadic wrap-prefix
+atlas.  This reflection is not a separate canon promotion or a Rule 30 prize
 claim.
 
 ## 1. The marked subset of the harmonic series

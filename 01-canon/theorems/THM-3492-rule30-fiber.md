@@ -145,9 +145,11 @@ transportation kernel.  For vector spaces `U,V` with nonzero functionals
 ```text
 0 -> ker(e_U) tensor ker(e_V)
   -> U tensor V
-  -> U x_(F_2) V -> 0.                               (10a)
+  -> V x_(F_2) U -> 0,                               (10a)
 ```
 
+where the last map is
+`T -> ((e_U tensor id_V)T,(id_U tensor e_V)T)`.
 Here `U=P_N`, `V=V_p`, `ker(e_q)=(q+1)P_(N-1)`, and
 `ker(e_h)` is the zero-marked phase space, so `(10a)` is exactly `(9)`.
 The mixed-Haar checkerboard in THM-2538 is the smallest categorical instance;
