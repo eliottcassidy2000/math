@@ -7,9 +7,10 @@ status: >
   tower, the first untested cleared norm has exposed pair (271,99), not
   (259,87): G=L^43 N(J) has top face C x^271(3xz-2y)^99.  Moreover
   v_L(N(G))=-271, so R_5=L^271 N(G) is polynomial and coprime to L, and its
-  exposed pair is (1699,615).  The matrix recurrence is conditional on two
-  renewal faces at every later rung; those faces are not proved for G.  No
-  fifth image prime, all-level induction, or general Jacobian claim follows.
+  exposed pair is (1699,615).  This theorem itself does not prove the two
+  renewal faces for G; THM-3513 subsequently proves both for that fixed
+  polynomial.  Renewal at later rungs remains open.  No fifth image prime,
+  all-level induction, or general Jacobian claim follows.
 source: codex/tropical-keller-norm/2026-08-16
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
@@ -18,6 +19,7 @@ depends_on:
   - THM-3504-level-four-sporadic-keller-image-prime-and-four-component-nonproperness
 related:
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
+  - THM-3513-fixed-G-hybrid-newton-renewal-faces
 script: 04-computation/keller_tropical_norm_face_recurrence_probe_20260816.py
 output: 05-knowledge/results/keller_tropical_norm_face_recurrence_probe_20260816.out
 script_sha256: fe1b03de9061c997a1abba6b88753e589c0a01f9f92762e49fe7ea0504ce9797
@@ -489,10 +491,13 @@ power, and polynomiality of `L^eN(P)` must come from the finite-cover
 localization plus an exact old-boundary valuation.  Neither may be inferred
 from a face picture alone.
 
-For an all-level proof from (12), it remains to derive the `z`-top and
-`gamma` renewal faces (6)--(7) for `G`, and then to prove their preservation.
-The present theorem proves the three transported faces (34), (36), (37),
-but not those two renewal faces.  This is the precise stopping reason.
+This theorem proves the three transported faces (34), (36), (37), but not
+the two renewal faces of `G`.  THM-3513 subsequently derives both by two
+hybrid Newton limits, so the fixed `G` now has the complete packet
+`A(271,99)`.  For an all-level proof from (12), renewal still has to be
+proved for `R_5` and later rungs, together with the separate finite-sheet
+unit/polynomiality gate at each new cleared norm.  THM-3513 proves neither
+of those later obligations.
 
 ## 8. Monoid comparison and exact scope
 

@@ -1,8 +1,10 @@
 # The fixed Keller norm tower needs five Newton faces, not one exponent
 
 **Status:** THM-3506 proves the conditional five-face transform and verifies
-the fixed-map packet through `J`; the all-level renewal remains open.  This
-reflection is explanatory, not an independent truth source.
+the fixed-map packet through `J`.  THM-3513 subsequently proves both renewal
+faces for the fixed `G`; renewal for `R_5` and later rungs, the next finite
+sheet, and the all-level law remain open.  This reflection is explanatory,
+not an independent truth source.
 
 ## Inheritance pass
 
@@ -129,10 +131,11 @@ z-top: x^(2e-4m/3)z^(2e-2m/3),
 gamma-bottom: z^e(27x^2z+y^3)^(e-2m/3).
 ```
 
-These are exact for `L,H,J` and unproved for `G`.  This is the stopping
-reason.  A proof of those two `G` faces would make the next full matrix step
-lawful; a proof that the two forms are preserved would give the all-level
-induction.
+These are exact for `L,H,J`.  THM-3513 subsequently proves them for `G` by
+the hybrid weights `gamma-k` and `gamma-3k`, making the next full matrix step
+lawful for this fixed input.  The corresponding faces of `R_5` and later
+rungs are still unproved; a uniform preservation proof would be needed for
+the all-level induction.
 
 The cheapest next closure tests are therefore not a global construction of
 `G`:

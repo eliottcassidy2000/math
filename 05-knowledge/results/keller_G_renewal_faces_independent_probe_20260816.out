@@ -1,0 +1,14 @@
+== independent fixed-G renewal-face probe ==
+J coefficient-ledger sha256=9aca78e67d33351b2f2fb4dbe8ab5bdff06373fdbd8ef9ec73d29b15bffedefe; terms=66146
+J hybrid minima: delta_6=-390, terms=1, next=-389; delta_8=-542, terms=1, next=-539
+unique common endpoint=x^66*z^76; coefficient=2^15*3^171
+direct hybrid scan and gamma/z endpoint-intersection route: AGREE
+c-top inverse limit: q^3=2/(27*A^2*C), (x,y,z)~(q/s,-s/q,-C*s^6/q^3)
+target-gamma inverse limit: D*q^3-3*B*q-2=0, D=27*A^2*C+B^3
+  (x,y,z)~(q*t,-1/(q*t),-C/(q^3*t^8)); product(q)=2/D
+G z-top: max z=476; complete face=C_z*x^410*z^476; C_z sha256=0bf7a6d9f25117026b604cd1d9fe552cf5df804b216bf10513a0e695756b91e5
+G gamma-bottom: min gamma=-1970; complete face=C_g*z^271*(27*x^2*z+y^3)^205; C_g sha256=47a8ec93d64f57847fb860261f99d4827cef1cdcef3f48efbf9c338411941676
+semantic ledger sha256=2887be137141414185ab305e7e0416754f73a009625924a5b6c6c1a268101dbd
+renewal-face gate for this fixed G: BOTH PASS
+scope: no next finite-sheet unit, fifth image prime, all-level induction, or general JC claim
+all exact checks passed

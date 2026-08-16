@@ -18,6 +18,27 @@
   `c12dc71df13e0c627740aaebf971c07342ce3302d674b276cc1600cf69266dd9` /
   `3f31f6f80989b360227c792d525e013ecff9b06a8df09d252d31af801d8fdb9a` /
   `7ca802f1f8706658b62fb330504544b9c46d473db6481429cb011b078695a46e`.
+- `keller_G_renewal_faces_independent_probe_20260816.py` -> matching `.out`
+  [THM-3513 PROVED + VERIFIED-EXACT + INDEPENDENTLY REPLAYED; COMPANION
+  INDEPENDENT OF THM-3506 FACE SCRIPT].  A direct scan of THM-3495's frozen
+  `66,146`-term `J` finds the hybrid minima
+  `delta_6=i-j-6k=-390` and `delta_8=i-j-8k=-542`, both uniquely at
+  `x^66z^76` with coefficient `2^15*3^171`; the independent
+  `gamma`/`z` endpoint-intersection route agrees, and the next weights are
+  `-389` and `-539`.  Exact inverse-chart reductions at the `c`-top and
+  target-`gamma` toric limits retain the nonmonic Vieta factor
+  `D=27A^2C+B^3` and prove the complete fixed-`G` faces
+  `C_z x^410z^476` and `C_gamma z^271(27x^2z+y^3)^205`, with
+  `C_z=3^1128/2^117` and `C_gamma=3^513/2^117`.  Thus the renewal-face gate
+  for this fixed `G` closes.  The next finite-sheet unit, renewal for `R_5`,
+  fifth-image geometry, all-level induction, and every general JC claim
+  remain open.  Semantic ledger SHA-256:
+  `2887be137141414185ab305e7e0416754f73a009625924a5b6c6c1a268101dbd`.
+  An independent parent replay reproduced this ledger exactly; this is a
+  replay audit, not an all-level or geometric proof audit.
+  Script/output LF SHA-256:
+  `f9e82f502026dfe499ebba9290295f98056d1b7dba7c893184d9871a032be01f` /
+  `becaa80c075bd46e4193b216406c2152f3d5d8565f6116ba6db9b712409badaa`.
 - `lrc_ufull_guard_sheet_drift_bucket_bridge_probe_20260816.py` -> matching
   `.out` [FINITE-EXACT ENDPOINT FACTORIZATION; NOT INDEPENDENTLY AUDITED].
   Removing only the tau-translated H guard and splitting the remaining
@@ -46,9 +67,10 @@
   `(271,99)`, refuting `(259,87)`; three good-prime finite-sheet controls
   prove `v_L(N(G))=-271`, hence `R_5=L^271N(G)` is polynomial and coprime to
   `L`, with exposed pair `(1699,615)`.  The exact Cassini/reduced-fraction
-  sidecar passes.  The `z`-top and `gamma` renewal faces for `G`, the next
-  finite sheet, fifth image role, degree-243 gate, and all-level law remain
-  open.  Script/output LF SHA-256:
+  sidecar passes.  THM-3513 subsequently closes the `z`-top and `gamma`
+  renewal faces for this fixed `G`; the next finite sheet, renewal for
+  `R_5`, fifth image role, degree-243 gate, and all-level law remain open.
+  Script/output LF SHA-256:
   `fe1b03de9061c997a1abba6b88753e589c0a01f9f92762e49fe7ea0504ce9797` /
   `0dd07d1af0621a9f767e9c803e805de61ee428fb6a980b004cd3f06625082b52`.
 - `shortlex_equal_count_log_density_boundary_audit_20260816.py` -> matching
