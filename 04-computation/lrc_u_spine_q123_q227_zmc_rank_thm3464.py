@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact deterministic companion for the provisional THM-3464 target.
+"""Exact deterministic companion for THM-3464.
 
 The script computes the two literal common-centre Boolean mask layers, proves
 the q=41 and q=123 cap-seven exclusions and rank-eight witnesses, and proves
@@ -446,7 +446,7 @@ def main() -> None:
         require(semantic_hash == EXPECTED_SEMANTIC_SHA256, ("semantic drift", semantic_hash))
 
     print("THM-3464 EXACT DETERMINISTIC COMPANION")
-    print("STATUS: RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT")
+    print("STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED")
     print("DEPENDENCIES:")
     for label, relative, digest in dependency_hashes:
         print(f"  {label} {digest} {relative}")

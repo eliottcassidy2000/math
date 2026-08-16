@@ -2,18 +2,21 @@
 id: THM-3464
 title: "U-spine q=123 rank-eight coexistence and exact ZMC prefix through q=227"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT PENDING.  The fifth and seventh parabolic Berggren U-spine labels
-  have exact zero-mode-cochain ranks rho_ZMC(123)=8 and rho_ZMC(227)=9.
-  Together with proved inherited values, the first seven ranks are
-  (6,4,7,9,8,4,9).  This refutes a square-root extrapolation but gives no
-  endpoint current or LRC(14) consequence.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Exact two-layer and
+  divisor-minimum analysis gives rho_ZMC(41)=rho_ZMC(123)=8 and
+  rho_ZMC(227)=9.  At q=123 the minimum is attained both by the threefold
+  pullback of a primitive Q=41 packet and by a primitive mixed-order Q=123
+  packet.  The first seven U-spine ranks are (6,4,7,9,8,4,9).  No endpoint
+  current, spectral closure, density change, or LRC(14) consequence follows.
 source: codex-2026-08-15-u-spine-q123-rank-eight
 audit: >
   exact integer/Fraction two-layer banks, complete branch-and-memo set-cover
   searches, q=41 witness and threefold pullback, divisor ancestry, 271816 direct/fraction mask cells, residue
   normalization, mode-width, open-cell, multiplicity, dependency, semantic,
-  AST/security, and normal/optimized replay gates; independent audit pending
+  AST/security, and normal/optimized replay gates; independent clean-room
+  meet-in-the-middle lower bounds, geometry reconstruction, Q41 pullback,
+  immutable-hash, security, documentation, and normal/optimized/stored replay
+  audit PASS
 depends_on:
   - THM-3405-common-centre-gcd-gauge-and-boolean-half-twist
   - THM-3416-zero-mode-cochain-global-rank-six-support
@@ -23,20 +26,19 @@ related:
   - THM-3454-fibonacci-selected-u-spine-farey-lorentz-isometry-and-one-tie-edge-order
 script: 04-computation/lrc_u_spine_q123_q227_zmc_rank_thm3464.py
 output: 05-knowledge/results/lrc_u_spine_q123_q227_zmc_rank_thm3464.out
-script_sha256: 19ac809797ac3e1387d8f66eee1a92a30150bd7a593fcb5f88b3348813909e8e
-output_sha256: fa0c5857a61e09bad2a2fe53936a88a05269078bc5519a0f4bb0aa993779d01f
+script_sha256: 74dcb9931f64de4f0c194aa2d38a70e393c78e6525cb5f4eb439ca350764bba5
+output_sha256: 122029ec19709dd4e34d89d06fcde3b3dc129523de17b88092e9f49ae6e9a8e8
 semantic_sha256: 992ebd92709f39f2250bb9a21a10b6e0bb3c6e21860a3bf388d826e23b500b50
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3464 -- U-spine q=123 rank-eight coexistence and exact ZMC prefix through q=227
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-The exact companion and all internal controls pass.  The file remains outside
-the proved dependency graph until an independent implementation/package audit
-checks the exhaustive lower bounds and immutable files.
+The exact companion and all internal controls pass.  A clean-room
+meet-in-the-middle implementation independently reproduces every lower bound,
+the Q41 pullback, geometry, immutable package, and all replay gates.
 
 ## 1. Inheritance and typed rank problem
 
@@ -167,13 +169,13 @@ order 41:  3 owners,
 order 123: 4 owners.                                  (8a)
 ```
 
-Thus the same rank-eight grade has two different ancestry types: the inherited
-pullback `(4b)` from `q=41`, and the primitive `q=123` family `(5)` whose owners
-mix all three quotient orders.  Primitivity of one realization does not imply
-noninheritance of the grade.  What survives is a coexistence theorem: divisor
-ancestry is not a disjoint union of independently priced layers, because a
-full-modulus mixed-order packet can inhabit the same minimum rank as a proper-
-divisor pullback.  The fourfold overlaps in `(8)` also show why XOR or a
+Thus the minimum rank at `q=123` is attained in two distinct divisor layers:
+the inherited pullback `(4b)` from primitive `Q=41`, and the primitive
+full-modulus `Q=123` family `(5)`, whose owners mix all three quotient orders.
+Primitivity of one realization does not imply noninheritance of the numerical
+grade.  The grade therefore does not determine ancestry; THM-3416's divisor-
+minimum decomposition itself remains a disjoint minimum over primitive
+quotient layers.  The fourfold overlaps in `(8)` also show why XOR or a
 partition model would lose the primitive positive witness.
 
 ## 4. The prime q=227 boundary

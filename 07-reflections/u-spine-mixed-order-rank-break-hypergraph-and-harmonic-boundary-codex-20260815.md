@@ -1,7 +1,8 @@
 # U-spine mixed-order rank break, cover hypergraphs, and the harmonic boundary
 
 **Research reflection / provenance, not a truth source.**  Exact claims are
-routed to THM-3416, THM-3455, THM-3461, and the audit-pending THM-3464.
+routed to THM-3416, THM-3455, THM-3461, and the independently audited
+THM-3464.
 
 ## The mechanism behind the q=123 surprise
 
@@ -35,10 +36,10 @@ rank-eight cover:
 Its threefold pullback covers at `q=123` with active gcd three.  The displayed
 mixed-order packet is a second realization of the same rank: it uses one
 order-three backbone, three order-41 blocks, and four genuinely order-123
-blocks, while retaining active gcd one.  Thus divisor ancestry and primitive
-mixed-order structure coexist in one grade.  They are realization types, not
-mutually exclusive labels; different owner orders can still cooperate inside
-one primitive family even when the minimum rank is also inherited.
+blocks, while retaining active gcd one.  Thus the numerical grade forgets
+which primitive quotient layer attains it: both `Q=41` and `Q=123` attain
+eight.  The divisor-minimum layers remain disjoint; coexistence is equality of
+their minima, not a failure of independent layer pricing.
 
 This suggests a concrete search heuristic for later composite U-spine labels:
 factor `q`, enumerate quotient-order profiles before owner residues, and price

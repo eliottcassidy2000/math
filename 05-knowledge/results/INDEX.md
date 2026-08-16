@@ -34,8 +34,9 @@
   No historical claim is promoted by the census alone, and no open problem
   follows.
 - `lrc_u_spine_q123_q227_zmc_rank_thm3464.py` -> matching `.out`
-  [THM-3464 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  independent audit pending].  Complete zero/half-layer searches give
+  [THM-3464 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Complete
+  zero/half-layer searches and independent clean-room meet-in-the-middle
+  lower bounds give
   `rho_ZMC(123)=8` and `rho_ZMC(227)=9`, with frozen half-twist witnesses
   `(1,40,42,81,82,83,117,122)` and
   `(2,6,10,215,217,219,221,223,225)`.  The first packet mixes quotient
@@ -45,8 +46,8 @@
   Together with THM-3416/3461, the first seven parabolic U-spine ranks are
   `(6,4,7,9,8,4,9)`, refuting the square-root extrapolation at `q=123`.
   Script/output/semantic LF SHA-256:
-  `19ac809797ac3e1387d8f66eee1a92a30150bd7a593fcb5f88b3348813909e8e` /
-  `fa0c5857a61e09bad2a2fe53936a88a05269078bc5519a0f4bb0aa993779d01f` /
+  `74dcb9931f64de4f0c194aa2d38a70e393c78e6525cb5f4eb439ca350764bba5` /
+  `122029ec19709dd4e34d89d06fcde3b3dc129523de17b88092e9f49ae6e9a8e8` /
   `992ebd92709f39f2250bb9a21a10b6e0bb3c6e21860a3bf388d826e23b500b50`.
   No endpoint current, spectral closure, density change, or LRC(14)
   consequence follows.
