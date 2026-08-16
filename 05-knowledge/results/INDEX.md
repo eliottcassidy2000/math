@@ -1,5 +1,25 @@
 # Script Results Index
 
+- `lrc_r5_ufull_owner_node_boolean_square_nested_ancestry_digits_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT POSITIVE NESTED SOURCE/CURRENT-ANCESTRY
+  CANDIDATE; INDEPENDENT AUDIT PENDING].  On one THM-2471 Boolean stalk it
+  retains `n=c+13*b_source` before `Q` and `a=r_owner+13*h` in the outer
+  current fold.  All three pointwise marginals recover the audited source
+  digit, independently audited current digit, and `U_u`; reflection, four
+  literal guards, same-root zero, and an additive same-marginals hostile pass.
+  The 144 double-nontrivial source profiles have rank 17.  Their certified
+  basis maps to a rank-four state/relation amplitude quotient, while its
+  relation rows have rank six and equal the six pointed-tail rows statewise
+  `(1,2,1,2)` and globally `(6,6,6,6)`.  Thus the interaction creates no new
+  relation-output carrier direction; it supplies amplitude coordinates inside
+  the pointed-six carrier.  The selected basis has `612/612` modes.  Root
+  difference is marginalized; this is not digit equality, exact address,
+  chronology, physical current, row exclusion, or LRC(14).  Script/output/
+  semantic LF SHA-256:
+  `1188df8aa2a7a84c1e8ada5fc3cc8d3b839ece70298b94f1d94c9d440caa88f3` /
+  `0d177180974c20fb8f5ca4887178fe0db318bfbd41267377cfeddf1b460f4f6d` /
+  `6e5605f58b7a94ea5ea4e8f62cfa7ee135b0d52512225f4aaee248ad6e21a9ae`.
+
 - `lrc_r5_ufull_owner_node_boolean_square_inverse_owner_branch_independent_audit_20260816.py`
   -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
   CURRENT-LEG INVERSE-OWNER-DIGIT SIDECAR].  Without importing the candidate,
