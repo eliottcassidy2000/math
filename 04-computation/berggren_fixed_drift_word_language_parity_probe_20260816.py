@@ -208,6 +208,8 @@ def main() -> None:
     }
     require(target_character[G] == 1 and target_character[T] == 1, target_character)
     require(all(target_character[state[1]] == parity[state] for state in states), "period character")
+    require(word_state("B" * 4) == (I4, I4), "length-four return")
+    require(word_state("C" * 6) == (I4, I4), "length-six return")
 
     minimal_blocks, refinement_rounds = minimal_partition(states, index)
     require(len(minimal_blocks) == 192, len(minimal_blocks))
@@ -300,6 +302,7 @@ def main() -> None:
     print("ACCEPTANCE: projective rho_3(w) and fixed affine rho_fix(w) have the same S4 cycle type, equivalently are point-conjugate")
     print("PAIR_IMAGE: all S4 x D4, order 24*8=192; pure source and pure target subgroups have orders 24 and 8")
     print("PERIOD_CHARACTER: the D4 abelianization character chi(G)=chi(T)=1 equals word-length parity; every letter crosses the 96+96 bipartition")
+    print("TWO_STEP_MIXING_GATE: B^4 and C^6 are returns, of two-step lengths 2 and 3; together with reachability of each 96-state class this gives period one for the two-step walk")
     print("ACCEPTING_STATES_BY_PARITY: even=16 of 96, odd=18 of 96")
     print(f"MINIMAL_DFA: 192 states; partition-refinement block counts {refinement_rounds}; syntactic monoid is the regular S4 x D4 action")
     print(f"SMALL_ACCEPTED_WORDS: {small_words}")

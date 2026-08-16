@@ -7,6 +7,7 @@ FIXED_LIFTS: A~=B~=G=(u |-> Ju+p), cycle type 4; C~=T=(u |-> u+p), cycle type 2^
 ACCEPTANCE: projective rho_3(w) and fixed affine rho_fix(w) have the same S4 cycle type, equivalently are point-conjugate
 PAIR_IMAGE: all S4 x D4, order 24*8=192; pure source and pure target subgroups have orders 24 and 8
 PERIOD_CHARACTER: the D4 abelianization character chi(G)=chi(T)=1 equals word-length parity; every letter crosses the 96+96 bipartition
+TWO_STEP_MIXING_GATE: B^4 and C^6 are returns, of two-step lengths 2 and 3; together with reachability of each 96-state class this gives period one for the two-step walk
 ACCEPTING_STATES_BY_PARITY: even=16 of 96, odd=18 of 96
 MINIMAL_DFA: 192 states; partition-refinement block counts (9, 85, 172, 192, 192); syntactic monoid is the regular S4 x D4 action
 SMALL_ACCEPTED_WORDS: {1: ('B',), 2: ('BB',), 3: ('AAC', 'ACA', 'BBB', 'CAA'), 4: ('AABC', 'AACB', 'ABCA', 'ACBA', 'BAAC', 'BBBB', 'BBBC', 'BBCB', 'BCAA', 'BCBB', 'CAAB', 'CBAA', 'CBBB')}
