@@ -8,6 +8,17 @@ C7: V=7 E=7 dim_B1=6 beta1=1
 role_graph: V=8 E=13 dim_B1=7 beta1=6
 all_K4_to_C7_vertex_pullbacks_exact=16384
 
+ORIENTED TETRAHEDRAL H1 TRANSPORT
+K4: opposite-face map C0/constants -> H1 has rank 3; split_index=16
+K4_COVARIANCE: pi*Omega=sign(pi)*Omega*pi on all 24 vertex permutations
+K4_char2: quotient_rank=1 class=product_of_four_vertex_square_classes
+THM3494_n3_four_view_class_nonzero=True Iz(P=2/9,Q=0)=32/2187
+role_graph: opposite-face map rank=6; split_index=256; H1 plus bridge rank=7
+role_graph_kernel: constants plus the leaf-only direction; bridge restores the leaf
+role_charts: both_H1_wings_nonzero=72/72 bridge_nonzero=72/72
+role_H1_chart_digest=4141229331e5ff9f9d1ca303c205d7a47a3edc478e0630ae4aa7988072886e8e
+role_automorphisms=72 invariant_H1_dimension_mod13=0
+
 CYCLIC SEAM -> DECK DEFECT
 p=13,m=7,basis_checks=7, kill=13, restore=14
 p=2,m=6,V4_basis_checks=12, kill=2, restore=3

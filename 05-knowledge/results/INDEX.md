@@ -46,6 +46,26 @@
   and
   `f503aa44b7287ea200589093c17c3e68f01e456b314f84b607c6695359249d4a` /
   `c8c87fa66bae84d1165dbdd00312e25d22fdae17841c5cc0d45aa205b7433d9b`.
+- `typed_h1_coboundary_character_marginal_synthesis_probe_20260816.py`
+  -> matching `.out` [VERIFIED-EXACT TYPED SYNTHESIS; NO LRC/JC BRIDGE].
+  The independent standard-library probe separates exact graph coboundaries,
+  graph `H^1`, group characters, Betti cycle dimensions, and marginal tensor
+  kernels across THM-3494/3496/3487/3479 and promoted THM-3497.  The
+  tetrahedral opposite-face transform has
+  integral split index `16`; in characteristic two its cohomology image has
+  rank one and records the product of four vertex square classes.  The
+  audited THM-3494 cubic `(w,x,y,z)` packet makes this class nonzero via the
+  odd divisor `9P-27Q-2`.  On THM-3479's two-`K4` role carrier the analogous
+  odd-characteristic map has rank six and split index `256`; both wing classes
+  and the complementary hub-leaf bridge fire in all `72/72` endpoint charts,
+  while the audited edge-difference current itself remains an exact
+  coboundary.  The role `H^1` has no automorphism-invariant scalar over
+  `F13`, and the cross-primary coefficient Hom groups are zero.  The probe
+  also verifies both marked cyclic transgressions, the strict Berggren
+  character/language hostiles, and the `25/144` marginal image/kernel model.
+  Script/output LF SHA-256:
+  `68c18c2daede470b8e13af3fbd4a849e4b50bc5f7acb501b9391e57df3795ca9` /
+  `3ff91100bc02a9182b8560aee2ee1ad84fecd362c87522672c828dd32eb95836`.
 - `d5_marked_graph_kummer_finite_coefficient_flux_thm3496_independent_audit.py`
   -> matching `.out` [THM-3496 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   AUDITED, WITH SCOPE REPAIRS].  Seam sum and independent `C_91` prefix

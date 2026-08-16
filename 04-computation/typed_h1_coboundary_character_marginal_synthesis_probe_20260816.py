@@ -6,13 +6,18 @@ only finite consequences used by the accompanying reflection:
 
 * incidence ranks and Betti numbers for K4, C7, and the 13-edge role graph;
 * functorial exactness of the primitive-view and role-potential gradients;
+* the tetrahedral opposite-face transform, including its characteristic-two
+  collapse and the audited degree-three THM-3494 four-view index packet;
 * the cyclic-cover seam/deck-defect construction at p=13 and p=2;
 * graph H^1 versus group characters for the affine Berggren D4;
 * the variable- and fixed-drift automaton character gates; and
 * the 13 by 13 marginal tensor kernel and its checkerboard hostile.
 """
 
+from fractions import Fraction
+from hashlib import sha256
 from itertools import combinations, permutations, product
+from json import dumps
 
 
 def require(condition, message):
@@ -54,6 +59,82 @@ def incidence(vertex_count, edges):
         row[tail] = -1
         row[head] = 1
         matrix.append(row)
+    return matrix
+
+
+def matrix_vector_mod(matrix, vector, prime):
+    return tuple(
+        sum(entry * value for entry, value in zip(row, vector)) % prime
+        for row in matrix
+    )
+
+
+def transpose(matrix):
+    return [list(column) for column in zip(*matrix)]
+
+
+def determinant_integer(matrix):
+    """Fraction-free Bareiss determinant for a square integer matrix."""
+    a = [row[:] for row in matrix]
+    size = len(a)
+    require(all(len(row) == size for row in a), "determinant matrix is not square")
+    if size == 0:
+        return 1
+    sign = 1
+    previous_pivot = 1
+    for column in range(size - 1):
+        pivot = next((row for row in range(column, size) if a[row][column]), None)
+        if pivot is None:
+            return 0
+        if pivot != column:
+            a[column], a[pivot] = a[pivot], a[column]
+            sign = -sign
+        pivot_value = a[column][column]
+        for row in range(column + 1, size):
+            for target in range(column + 1, size):
+                numerator = (
+                    a[row][target] * pivot_value
+                    - a[row][column] * a[column][target]
+                )
+                require(numerator % previous_pivot == 0, "Bareiss nonintegral division")
+                a[row][target] = numerator // previous_pivot
+            a[row][column] = 0
+        previous_pivot = pivot_value
+    return sign * a[-1][-1]
+
+
+def triangle_boundary(vertices, edge_index, edge_count):
+    a, b, c = vertices
+    vector = [0] * edge_count
+    for tail, head, coefficient in ((b, c, 1), (a, c, -1), (a, b, 1)):
+        edge = (min(tail, head), max(tail, head))
+        sign = 1 if tail < head else -1
+        vector[edge_index[edge]] += coefficient * sign
+    return vector
+
+
+def opposite_face_matrix(ordered_vertices, all_edges, total_vertices):
+    """Vertex values -> boundaries of opposite faces of an oriented K4."""
+    edge_index = {edge: i for i, edge in enumerate(all_edges)}
+    matrix = [[0] * total_vertices for _ in all_edges]
+    for omitted, vertex in enumerate(ordered_vertices):
+        face = tuple(v for i, v in enumerate(ordered_vertices) if i != omitted)
+        boundary = triangle_boundary(face, edge_index, len(all_edges))
+        face_sign = -1 if omitted % 2 else 1
+        for edge, coefficient in enumerate(boundary):
+            matrix[edge][vertex] += face_sign * coefficient
+    return matrix
+
+
+def edge_action_matrix(vertex_permutation, edges):
+    edge_index = {edge: i for i, edge in enumerate(edges)}
+    matrix = [[0] * len(edges) for _ in edges]
+    for source, (tail, head) in enumerate(edges):
+        moved_tail = vertex_permutation[tail]
+        moved_head = vertex_permutation[head]
+        target_edge = (min(moved_tail, moved_head), max(moved_tail, moved_head))
+        sign = 1 if moved_tail < moved_head else -1
+        matrix[edge_index[target_edge]][source] = sign
     return matrix
 
 
@@ -225,6 +306,188 @@ def main():
     require(c7 == {"vertices": 7, "edges": 7, "B1": 6, "beta1": 1}, "C7 profile")
     require(role == {"vertices": 8, "edges": 13, "B1": 7, "beta1": 6}, "role profile")
 
+    # Oriented opposite-face map on K4.  It is not the graph gradient.
+    omega_k4 = opposite_face_matrix((0, 1, 2, 3), k4_edges, 4)
+    k4_boundary = transpose(incidence(4, k4_edges))
+    for column in transpose(omega_k4):
+        require(matrix_vector_mod(k4_boundary, column, 13) == (0, 0, 0, 0), "face boundary")
+    require(rank_mod(omega_k4, 13) == 3, "opposite-face rank")
+    require(
+        rank_mod([cut + curl for cut, curl in zip(incidence(4, k4_edges), omega_k4)], 13) == 6,
+        "K4 cut/cycle direct sum",
+    )
+    require(
+        matrix_vector_mod(omega_k4, (1, 1, 1, 1), 13) == (0,) * 6,
+        "constant potential must vanish",
+    )
+    k4_split_minor = [
+        incidence_row[:3] + omega_row[:3]
+        for incidence_row, omega_row in zip(incidence(4, k4_edges), omega_k4)
+    ]
+    require(determinant_integer(k4_split_minor) == -16, "K4 split lattice index")
+
+    # In characteristic two all four oriented face boundaries have one common
+    # nonzero cohomology class.  Thus Omega remembers exactly the sum of the
+    # four vertex square classes, i.e. the square class of their product.
+    k4_incidence = incidence(4, k4_edges)
+    require(rank_mod(k4_incidence, 2) == 3, "K4 cut rank in characteristic two")
+    require(rank_mod(omega_k4, 2) == 3, "K4 face rank in characteristic two")
+    require(
+        rank_mod([cut + curl for cut, curl in zip(k4_incidence, omega_k4)], 2) == 4,
+        "K4 characteristic-two quotient rank",
+    )
+    first_face = tuple(row[0] for row in omega_k4)
+    require(
+        rank_mod([row + [first_face[index]] for index, row in enumerate(k4_incidence)], 2)
+        == 4,
+        "K4 face class should be nonzero in characteristic two",
+    )
+    for vertex in range(1, 4):
+        face_difference = tuple(
+            row[vertex] - row[0]
+            for row in omega_k4
+        )
+        require(
+            rank_mod(
+                [row + [face_difference[index]] for index, row in enumerate(k4_incidence)],
+                2,
+            )
+            == 3,
+            "K4 face classes should agree in characteristic two",
+        )
+
+    # THM-3494's audited n=3 primitive views (w,x,y,z) have index roots
+    # 1, C^3*f, C^3*(27Q), C^6*I_z.  At the prime divisor
+    # f=9P-27Q-2, I_z does not vanish: setting Q=0 and P=2/9 gives
+    # 32/2187.  Hence f has odd valuation in their product and the resulting
+    # characteristic-two opposite-face H^1 class is genuinely nonzero.
+    p_on_index_divisor = Fraction(2, 9)
+    iz_on_index_divisor = (
+        972 * p_on_index_divisor**7
+        + 756 * p_on_index_divisor**6
+        - 189 * p_on_index_divisor**5
+    )
+    require(iz_on_index_divisor == Fraction(32, 2187), "THM-3494 z-index divisor test")
+    require(iz_on_index_divisor != 0, "THM-3494 four-view product became square")
+    for vertex_permutation in permutations(range(4)):
+        edge_action = edge_action_matrix(vertex_permutation, k4_edges)
+        orientation_sign = -1 if perm_parity(vertex_permutation) else 1
+        for vertex in range(4):
+            old_column = tuple(row[vertex] for row in omega_k4)
+            moved_column = matrix_vector_mod(edge_action, old_column, 13)
+            target_column = tuple(
+                orientation_sign * row[vertex_permutation[vertex]] % 13
+                for row in omega_k4
+            )
+            require(moved_column == target_column, "tetrahedral sign covariance")
+
+    # The two-K4-plus-bridge role graph has a rank-six oriented cycle map.
+    wing_left = (0, 3, 4, 5)
+    wing_right = (1, 2, 4, 7)
+    omega_left = opposite_face_matrix(wing_left, role_edges, 8)
+    omega_right = opposite_face_matrix(wing_right, role_edges, 8)
+    omega_role = [
+        [left + right for left, right in zip(left_row, right_row)]
+        for left_row, right_row in zip(omega_left, omega_right)
+    ]
+    role_incidence = incidence(8, role_edges)
+    role_boundary = transpose(role_incidence)
+    for column in transpose(omega_role):
+        require(matrix_vector_mod(role_boundary, column, 13) == (0,) * 8, "role cycle")
+    require(rank_mod(omega_role, 13) == 6, "role opposite-face rank")
+    require(
+        rank_mod([cut + curl for cut, curl in zip(role_incidence, omega_role)], 13) == 13,
+        "role cut/cycle direct sum",
+    )
+    bridge_row = [0] * 8
+    bridge_row[4] = -1
+    bridge_row[6] = 1
+    require(rank_mod(omega_role + [bridge_row], 13) == 7, "H1 plus bridge decomposition")
+    require(
+        matrix_vector_mod(omega_role, (0, 0, 0, 0, 0, 0, 1, 0), 13) == (0,) * 13,
+        "leaf direction must be the sharp H1 kernel",
+    )
+    role_split_minor = [
+        incidence_row[:7] + omega_row[:6]
+        for incidence_row, omega_row in zip(role_incidence, omega_role)
+    ]
+    require(determinant_integer(role_split_minor) == -256, "role split lattice index")
+
+    role_edge_set = set(role_edges)
+    role_automorphisms = tuple(
+        vertex_permutation
+        for vertex_permutation in permutations(range(8))
+        if {
+            (min(vertex_permutation[a], vertex_permutation[b]),
+             max(vertex_permutation[a], vertex_permutation[b]))
+            for a, b in role_edges
+        } == role_edge_set
+    )
+    require(len(role_automorphisms) == 72, "role automorphism count")
+    invariant_constraints = [row[:] for row in role_boundary]
+    identity_edges = tuple(range(len(role_edges)))
+    for vertex_permutation in role_automorphisms:
+        action = edge_action_matrix(vertex_permutation, role_edges)
+        for row in range(len(role_edges)):
+            invariant_constraints.append(
+                [
+                    action[row][column] - (1 if identity_edges[row] == column else 0)
+                    for column in range(len(role_edges))
+                ]
+            )
+    invariant_cycle_dimension = len(role_edges) - rank_mod(invariant_constraints, 13)
+    require(invariant_cycle_dimension == 0, "role H1 should have no invariant scalar line")
+
+    certified_prime = 572252886246508880869
+    role_values = {
+        "c1": 405336876493642499425,
+        "c2": 503604956476841920373,
+        "c3": 518539850465495448196,
+        "H": 320618948602619577408,
+        "q2": 15703541686881447885,
+        "q3": 503604956476841920373,
+        "q4": 503604956476841920373,
+        "q5": 503604956476841920373,
+    }
+    require(
+        rank_mod([cut + curl for cut, curl in zip(role_incidence, omega_role)], certified_prime)
+        == 13,
+        "role cut/cycle split at the certified prime",
+    )
+    left_outer = tuple(v for v in wing_left if v != 4)
+    right_outer = tuple(v for v in wing_right if v != 4)
+    role_class_rows = []
+    both_wings_nonzero = 0
+    bridge_nonzero = 0
+    for swap_wings in (False, True):
+        c_vertices, q_vertices = (
+            (right_outer, left_outer) if swap_wings else (left_outer, right_outer)
+        )
+        for c_order in permutations(c_vertices):
+            for q_order in permutations(q_vertices):
+                potential = [0] * 8
+                potential[4] = role_values["H"]
+                potential[6] = role_values["q5"]
+                for role_name, vertex in zip(("c1", "c2", "c3"), c_order):
+                    potential[vertex] = role_values[role_name]
+                for role_name, vertex in zip(("q2", "q3", "q4"), q_order):
+                    potential[vertex] = role_values[role_name]
+                left_class = matrix_vector_mod(omega_left, potential, certified_prime)
+                right_class = matrix_vector_mod(omega_right, potential, certified_prime)
+                full_class = matrix_vector_mod(omega_role, potential, certified_prime)
+                if any(left_class) and any(right_class):
+                    both_wings_nonzero += 1
+                bridge = (potential[6] - potential[4]) % certified_prime
+                if bridge:
+                    bridge_nonzero += 1
+                role_class_rows.append((full_class, bridge))
+    require(len(role_class_rows) == 72, "role chart count")
+    require(both_wings_nonzero == 72, "both H1 wing classes must fire")
+    require(bridge_nonzero == 72, "bridge sidecar must fire")
+    role_class_digest = sha256(
+        dumps(role_class_rows, separators=(",", ":")).encode("ascii")
+    ).hexdigest()
+
     # The universal primitive-view cochain has edge vector e_head-e_tail.
     # Every pullback around C7 telescopes, for every one of the 4^7 vertex maps.
     pullback_maps = 0
@@ -383,6 +646,26 @@ def main():
         f"dim_B1={role['B1']} beta1={role['beta1']}"
     )
     print(f"all_K4_to_C7_vertex_pullbacks_exact={pullback_maps}")
+    print()
+    print("ORIENTED TETRAHEDRAL H1 TRANSPORT")
+    print("K4: opposite-face map C0/constants -> H1 has rank 3; split_index=16")
+    print("K4_COVARIANCE: pi*Omega=sign(pi)*Omega*pi on all 24 vertex permutations")
+    print("K4_char2: quotient_rank=1 class=product_of_four_vertex_square_classes")
+    print(
+        "THM3494_n3_four_view_class_nonzero=True "
+        f"Iz(P=2/9,Q=0)={iz_on_index_divisor}"
+    )
+    print("role_graph: opposite-face map rank=6; split_index=256; H1 plus bridge rank=7")
+    print("role_graph_kernel: constants plus the leaf-only direction; bridge restores the leaf")
+    print(
+        f"role_charts: both_H1_wings_nonzero={both_wings_nonzero}/72 "
+        f"bridge_nonzero={bridge_nonzero}/72"
+    )
+    print(f"role_H1_chart_digest={role_class_digest}")
+    print(
+        f"role_automorphisms={len(role_automorphisms)} "
+        f"invariant_H1_dimension_mod13={invariant_cycle_dimension}"
+    )
     print()
     print("CYCLIC SEAM -> DECK DEFECT")
     print(f"p=13,m=7,basis_checks={transgression_13}, kill=13, restore=14")
