@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `keller_finite_branch_beta_homogeneous_unit_obstruction_20260816.py` ->
+  matching `.out` [VERIFIED-EXACT ALGEBRAIC CERTIFICATE FOR RESERVED
+  THM-3529; THEOREM AUDIT PENDING].  For the fixed sporadic map, the exact
+  pullback `B=F^*L` is a primitive ten-term polynomial of beta weight `-2`
+  and positive `x`-degree four.  In the Laurent coordinates `p=xy`,
+  `q=x^2z`, one has `x^2B=C(p,q)`, where `C` is a primitive quadratic in
+  `q` with discriminant `64(3p+4)`; the odd linear valuation certifies
+  irreducibility.  The complete packet's prescribed minimum-beta face is
+  nonzero and lies in `Q[y,z]`.  The proposed theorem identifies `V(B)`
+  with the finite inverse divisor and uses initial-form multiplicativity to
+  forbid `B|P`; that geometric/graded implication remains under independent
+  hostile audit at this index state.  No later-rung irreducibility, image
+  prime, separability, discriminant recursion, arbitrary-map, or general JC
+  claim is made.  Script/output/semantic LF SHA-256:
+  `0e2e7ba0ee5aa45ca83aa050255cdb2f8ffda8d05c0495b7fc1c513ad1c289dc` /
+  `15b026a541afc09d6be0784f00e2c05e3c3b3b148625a1b30dec7c62875d89e6` /
+  `7c19ce6a3dc08f36fdb19487a7e26411077e1db880afb0201ddf8a67c3df25d1`.
+
 - `keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.py` and
   `keller_all_level_cleared_norm_polynomiality_independent_audit_20260816.py`
   -> matching `.out` files [THM-3528 PROVED + VERIFIED-EXACT + INDEPENDENTLY
