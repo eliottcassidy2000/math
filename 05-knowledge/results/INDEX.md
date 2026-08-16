@@ -114,10 +114,34 @@
   `log(3/2)/log(2)`, not its unweighted basin mass `1/2`.  This covers regular
   shortlex subsets, not arbitrary subsets of the harmonic series.
   Script/output LF SHA-256:
+- `regular_shortlex_harmonic_density_automaton_probe_20260816.py` and
+  `regular_shortlex_log_density_independent_audit_20260816.py` -> matching
+  `.out` files [THM-3499 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  PROOF-AUDITED].  Every complete finite automaton under shortlex indexing
+  has logarithmic density
+  `E[H_infinity/(1/(q-1)+X)]/log(q)`.  With one reachable closed class this
+  is its stationary accepting mass, even when periodic; multiple classes
+  retain their ordered q-adic basin address.  For any language with `a_n`
+  accepted length-`n` words, its level mass lies between
+  `(q-1)a_n/(q^(n+1)-1)` and `(q-1)a_n/(q^n+q-2)`, so harmonic convergence is
+  equivalent to Kraft convergence.  For regular languages the sharp boundary
+  is trimmed `rho<q` (finite mass) versus `rho=q` (a reachable closed
+  accepting SCC and positive logarithmic coefficient).  The independent
+  engine exhausts all `5,832` binary three-state and `256` ternary two-state
+  languages, plus delayed-transient, reducible-periodic, reversal,
+  arbitrary-cutoff and Berggren hostiles.  It reproduces `1/3`, `17/96`,
+  even-length `1/2`, and prefix coefficients `log(3/2)/log 2` and
+  `log(4/3)/log 2`.  This does not give logarithmic density to arbitrary
+  subsets of the harmonic series.  Submitted script/output LF SHA-256:
   `7433a432faa30cfb2f5f54d9f759645da2fb665f19874881147f0ffe4100e866` /
   `41f1103aa01c1050d1cb535865ef71a7bbe6791c028178f14b69ffaabeddcc99`;
-  semantic ledger SHA-256:
+  submitted semantic ledger:
   `90586710e72cf8ebc6c36e3e84135f0053973fecf412b5d83fa22881f816ce75`.
+  Independent exact ledger:
+  `046420bde716c6f83c7314c0010e1e4b19feffae59de7c9684fb4d0bdc4b1459`;
+  independent script/output LF SHA-256:
+  `4ee6e0d44a8c52a4ac1111642f23558b2eb94795f92b867a72b7a9a41493023b` /
+  `684308fdd163e82c02661ee40a00767a4edda642211e657002fb0cab59e4eb47`.
 - `keller_level_four_old_L_boundary_norm_probe_20260816.py` and
   `keller_level_four_degree81_finite_field_probe_20260816.py` -> matching
   `.out` files [VERIFIED-EXACT THM-3498 PROOF CANDIDATE; RESERVED AND

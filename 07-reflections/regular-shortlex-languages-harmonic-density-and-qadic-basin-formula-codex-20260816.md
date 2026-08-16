@@ -1,7 +1,9 @@
 # Regular shortlex languages: harmonic density and the q-adic basin formula
 
-**Status: PROOF CANDIDATE + VERIFIED-EXACT controls; awaiting independent
-audit.**
+**Historical submission, now independently audited and promoted as PROVED
+THM-3499.**  The canonical statement includes the subsequent Kraft-series
+criterion and sharp regular spectral-radius dichotomy; this file preserves
+the submitted derivation and its provenance.
 
 ## Inheritance pass
 
