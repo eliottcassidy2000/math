@@ -12,12 +12,18 @@ status: >
   C[u,ut,y^e], while for n=-1 it is C[r^e,ut,y^e], with one explicit
   hypersurface relation in either case.  Thus no polynomial target
   automorphism makes both target coordinates polynomial in this family.
+  On the additive quotient of the target polynomial ring by this
+  intersection, multiplication by the surviving polynomial coordinate is
+  locally nilpotent but has unbounded exact response lengths: t^q has length
+  q in the positive orientation, and u^q has length q in the negative one.
   The normalized C3 locus has an explicit two-congruence-class atlas.  The
   4+3 and 4+4+3 controls are opposite sides of the fork after polynomial
   source shears, and depth composition itself is not source-automorphism
   invariant.  No arbitrary terminal module, full C3, or JC(2) exclusion is
   asserted.
-source: root/jc2-other-angles-2026-08-14
+source: >
+  root/jc2-other-angles-2026-08-14; operation-response strengthening
+  root/factorial-jacobian-alternation/2026-08-15
 depends_on:
   - THM-3081-terminal-toric-residue-parameter-mobius-rigidity-and-autonomous-decoder
 related:
@@ -25,6 +31,8 @@ related:
   - THM-3074-c3-two-pole-binomial-cancellation-and-first-key-form-depth-lattice
   - THM-3080-c3-finite-toric-key-tower-depth-partition-and-gcd-descent
   - THM-2690-normal-crossing-cyclic-cubic-resolvent-exclusion-and-reflection-completion-boundary
+  - THM-3397-torsor-killing-versus-effective-boundary-valuations
+  - THM-3466-factorial-face-stokes-and-keller-boundary-current
 script: 04-computation/jc_terminal_monomial_cone_polynomiality_fork_thm3383.py
 output: 05-knowledge/results/jc_terminal_monomial_cone_polynomiality_fork_thm3383.out
 script_sha256: b72a196e7fda4a2de33df26e1f26f06f654908a9eb42f453e210728559ad4b10
@@ -357,6 +365,47 @@ therefore be a coordinate presentation of the same terminal initial module.
 A genuinely surviving obstruction must use that module (or an equivalent
 boundary sidecar), not the depth word alone.
 
+## 7b. Polynomiality debt is an unbounded response staircase
+
+Let `E=B intersect A`, viewed only as an additive subspace of `B`.  In the
+positive orientation, `(16)` gives `E=C[u,v,G_+]`.  Because `uE` is contained
+in `E`, multiplication by `u` induces a linear operator `M_u` on the additive
+quotient `B/E`.  For every `q>=1` it has the exact response string
+
+```text
+[t^q], [u t^q], ..., [u^(q-1)t^q] != 0,
+M_u^q[t^q]=[u^q t^q]=[v^q]=0.                         (29)
+```
+
+Indeed, for `0<=k<q` put `r=q-k`.  Then
+
+```text
+u^k t^q=u^(-r)v^q.                                    (30)
+```
+
+The exact membership test in Section 5.2 would require
+`v^(gr)L^(er)` to divide `v^q`.  This is impossible: `r,e>0` and
+`L=1+cv` is coprime to `v`.  At `k=q`, however, the monomial is `v^q` and
+belongs to `E`.  Thus the least killing time is exactly `q`.
+
+In the negative orientation, `(19)` gives `E=C[t,v,G_-]`.  Multiplication by
+`t` acts on `B/E`, and the symmetric calculation gives
+
+```text
+[u^q], [t u^q], ..., [t^(q-1)u^q] != 0,
+M_t^q[u^q]=[t^q u^q]=[v^q]=0.                         (31)
+```
+
+Every individual polynomial class is eventually killed, since this holds
+monomial by monomial, but the exact response lengths are unbounded.  Hence
+the Laurent effectivity debt is an unbounded torsion staircase even though
+the residue field, cyclic torsor, and class-group ledgers are finite.  This
+is precisely THM-3397's all-power denominator filtration, recast as an
+operation-response module, and is the effectivity analogue of THM-3466: a
+bounded response bank cannot certify polynomiality for every Laurent power.
+It is not a new
+obstruction to an arbitrary Keller map and supplies no FC moment nullity.
+
 ## 8. Information contract and boundary
 
 ```text
@@ -367,7 +416,7 @@ preserved:  exact inverse Keller form, normalized tame index e, terminal depth,
             primitive gcd lattice and residue field
 destroyed:  under field-only decoding, the oriented polynomial exponent cone
 sidecar:    A intersect C(u,t), B intersect A, and the v=0/L=0 divisibilities
-test:       the opposite C3 cells (g,a)=(2,1) and (4,1).  (29)
+test:       the opposite C3 cells (g,a)=(2,1) and (4,1).  (32)
 ```
 
 The theorem excludes the complete family `(1)--(2)` and the two displayed
