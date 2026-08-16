@@ -1,0 +1,19 @@
+== fixed Keller five-face renewal propagation ==
+input endpoint: a=2e-4m/3, b=2e-2m/3, h=a-3b=-4e+2m/3
+unique hybrid minima: delta6=gamma-k=-10e+8m/3; delta8=gamma-3k=-14e+4m
+c-top residual: 27*A^2*C*q^3-2; Norm(q)=2/(27*A^2*C)
+target-gamma residual: D*q^3-3*B*q-2; D=27*A^2*C+B^3; Norm(q)=2/D
+raw resultant=2 in both charts; nonmonic leading coefficient division: PASS
+exact inverse-coordinate residual reductions and generic separability: PASS
+output pair: e'=7e-2m, m'=3e-2m
+output c-top: x^(2e'-4m'/3) z^(2e'-2m'/3)
+output gamma: z^e' (27x^2z+y^3)^(e'-2m'/3)
+endpoint compatibility: c_top_scalar=gamma_scalar*27^(e'-2m'/3)
+branchwise root-independence hostile: h(L)=-4 and h(H)=-26 are not divisible by 3
+L->H/2^6, H->J/2^35, and J->G exact renewal scalars: PASS
+R5 full renewal faces: c-top=(3^7251/2^1369)*x^2578*z^2988; gamma=(3^3384/2^1369)*z^1699*(27x^2z+y^3)^1289
+R6 full renewal faces: c-top=(3^46008/2^10493)*x^16170*z^18748; gamma=(3^21753/2^10493)*z^10663*(27x^2z+y^3)^8085
+polynomiality is the only global hypothesis; no new finite-sheet condition enters renewal
+semantic_sha256=8b6a447c98e4e7f6bfc493818696d4a9193b4da47ab7b2f9e0368e9155940a91
+scope: fixed inverse chart; no fifth image, degree243, future polynomiality, all-level, or general JC claim
+all exact checks passed
