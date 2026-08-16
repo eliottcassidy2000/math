@@ -334,7 +334,7 @@ density need not settle `z=1` mass.
   `S_n`, first mixed grade `9`, global G1 and a non-radical `S_5` inverse;
   arbitrary-map, planar/z-affine and `A_4/A_5` classification stays open.
   THM-1300/1315 are unsettled (MISTAKE-205); THM-2473--2576 fixed-map.
-  **RESERVED:** [3493](../01-canon/theorems/THM-3493-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness.md)
+  **RESERVED:** [3495](../01-canon/theorems/THM-3495-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness.md)
   is empty. THM-2681 blocks the `A4/S4` cubic; THM-2685--2708 give its
   gain/holonomy.
   THM-3057/3059/3441 set the boundary and refute both odd-every-component forms of HYP-9027. THM-3448 realizes Keller `C_ell` inertia (`ell>=2`; first `C3` in degree five) and excludes `C3` only for weighted quartics; arbitrary quartic/two-jet `C3` remains OPEN.

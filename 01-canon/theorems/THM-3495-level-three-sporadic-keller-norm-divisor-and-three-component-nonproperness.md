@@ -1,11 +1,11 @@
 ---
-id: THM-3493
+id: THM-3495
 title: "Level-three sporadic Keller norm divisor and three-component nonproperness"
 status: "RESERVED / UNPROVED EMPTY STUB"
 source: codex/frontier-many/2026-08-16
 ---
 
-# THM-3493 -- level-three sporadic Keller norm divisor and three-component nonproperness
+# THM-3495 -- level-three sporadic Keller norm divisor and three-component nonproperness
 
 **RESERVED / UNPROVED EMPTY STUB.**
 

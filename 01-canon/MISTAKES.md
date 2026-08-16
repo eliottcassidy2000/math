@@ -82,12 +82,12 @@ Format per entry:
   pre-scan: a scan is an observation, not a lock, and uniqueness must be
   repeated after every expansion rebase as well as every reservation rebase.
 - **Third exact recurrence:** commit `bb86eb0a2` published the Rule-30 dyadic
-  wrap reservation as `THM-3493`.  Two independent Keller lanes then raced
-  against that moving tip: the later weighted-coordinate atlas reservation
-  and the still later level-three divisor reservation both reused `THM-3493`.
-  The weighted atlas yields immediately to `THM-3494`; the level-three owner
-  was notified that it must also yield to a freshly rescanned ID.  Again, no
-  mathematical statement changes: only the theorem namespaces collided.
+  wrap reservation as `THM-3493`; `7aa9908e72` then published a weighted-lift
+  `THM-3493`, and `2e2dc346bd` published a third empty `THM-3493` after its
+  pre-push command printed the collision but failed to gate the following
+  rebase and push.  The first keeps `3493`; the weighted atlas moves to `3494`
+  and the fixed-map Keller stub to `3495` before proof attachment.  A printed
+  diagnostic is not a safety gate: the command must exit on a collision hit.
 - **Reusable rule:** immediately re-fetch and repeat both YAML-ID and filename
   searches after any reservation or expansion rebase and before pushing.
   If two reservations still race, publication order keeps the earlier ID and
