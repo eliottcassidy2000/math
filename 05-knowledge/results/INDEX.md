@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `lrc_three_p_half_twist_eight_owner_template_thm3469.py` -> matching `.out`
+  [THM-3469 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
+  independent audit pending].  For every `p>=13`, the explicit eight-owner
+  half-twist template at `q=3p` covers exactly when
+  `p mod 42 not in {7,35}`.  On `p=14k-1`, THM-3455 makes the resulting
+  rank-4/6/7/8 word exact with minimal period `24,322,155`; the exact rank-eight
+  density and harmonic coefficient are `57344/147407`.  The template meets
+  the parabolic U-spine exactly at `t mod 21 in {5,8,12,15}`, proving in
+  particular `rho_ZMC(291)=8`.  Script/output/semantic LF SHA-256:
+  `436a9a97d275ad250cca333afb187fd4c2bd8ef2bd2b6e9641b938acdc6d6c17` /
+  `64c968ec6e1694f4dd45ad47420036eb949c63759d8c5c9de0e26fd3586e3dc4` /
+  `42c2ecaa420914e22e57a9415efd5dce73ec6de026dfec5bd06e19d24a2582dc`.
+  No endpoint current, bispectrum, physical row, or LRC(14) consequence
+  follows.
 - `all_ref_concept_archaeology_20260815.py` -> matching `.out` plus frozen
   `.refs` [REPRODUCIBLE PROVENANCE INVENTORY; NOT A MATHEMATICAL VERIFIER].
   At `origin/main=5f038660851946647afee993fb3fea850cc80b7d`, the manifest freezes
