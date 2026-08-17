@@ -1,0 +1,23 @@
+== r=5 rank-two relative response cospan / twisted-H1 audit ==
+frozen_bank=(certificate_sha256=472925c638de7ac90b1a7880184766f2e8acec0f8291e2c46cf747b37cd46712,prime=755373809845391722745761,parent_raw=a227bc2f385d8a2eaecb27f317fa5ed66623c70938d8a97aba620298a8a7b61b,parent_semantic=3d1527fb4ce4931680e50d7135b9d1129c1816e3a9158645523e2728ddc71ec2)
+tent=(h=(12, 12, 9, 3, 0, 0),even=(12, 12, 6, 6, 0, 0),odd=(0, 0, 3, -3, 0, 0),meaning=exception_location_not_amplitude)
+Q10=(block_ranks=(11, 11, 12, 12, 11, 11),block_codimensions=(2, 2, 1, 1, 2, 2),all_13_child_profiles_equal=True,profile=(2, 2, 1, 1, 2, 2))
+symmetry=(chamber_exact=True,arc_reversal_pair_defects=((0, 1, 11, 0), (2, 3, 13, 2), (4, 5, 11, 0)))
+middle_difference=(support_size=26,support=((0, 11), (0, 12), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 7), (3, 8), (3, 9), (3, 10), (3, 11), (6, 5), (6, 7), (9, 1), (9, 2), (9, 3), (9, 4), (9, 5), (9, 7), (9, 8), (9, 9), (9, 10), (9, 11), (12, 0), (12, 1)),rank=5)
+source_endpoint=(source_rows=(3,9),source_rank=2,endpoint_rows=(0,6,12),endpoint_rank=3,direct_sum_rank=5)
+two_planes=(source_rank=2,Qmid_dual_contraction_rank=2,union_rank=3,intersection_rank=1)
+minimal_relative_sidecar=(unique_endpoint_intersection_rank=1,line=r0_6,relative_dimension=2)
+marked_transition=(row3=(194124906132980974193833, 56688580149000751581631, 404323792951742926212914),row9=(56688580149000751581631, 194124906132980974193833, 404323792951742926212914),det=58994564309246164003190,form=((a,b),(b,a)),endpoint_gauge=c*D6)
+twisted_C4=(boundary_rank,H0,H1,trivial_H1)=(1, 1, 1, 2);literal_common_line=chamber_anti_and_exact;survivor=chamber_invariant_requires_D6_quotient
+arc_stable_QA8=(middle_dual_dimension=0,meaning=repair_kills_rank_two_interface)
+coefficient_no_go=(1, 'Hom_Add(F_p^2,F_13)=Hom_Add(F_13,F_p^2)=0', 'Hom_Add(F_p^2,char0_flux)=0', 'no_unital_ring_map_F_p_to_F_13_or_F_2')
+space_digests=(source,endpoint,Qcontraction,full_difference,literal_intersection)=('d239d4686100bf08ed05e98829b97d16099c5379d87d784274e2ddf78d6c7f22', 'ce32edb5e3389cebda84f8c112d58c73f064e0ce2a294deaa5bd40215d7cd77d', '333bfa38bf656e96319831db58db4508e5796bedc9da6e12dcb16b535c7821d8', '0e1a50ea1c52cc2c81351637f9a9c367e2dd8a17f723af93a893d65eef429b5a', '50dddc7ca5e50e2aecbdadf4abe84023577621047918a14ceb56497bfd7078fa')
+semantic_sha256=9326beee2f5786195f39b201b5fdcade9e5f32b269b9f29a4bf463e3e5e344d8
+connection=Loc_{3,9}->source_response->V_rel<-Q10_middle_dual; both arrows are chamber-equivariant isomorphisms only modulo the marked endpoint line k*D_6
+preserved=two reflected source response functions,chamber involution,middle orientation defect,relative zero/nonzero
+lost=r0_6 endpoint amplitude,outer endpoint rows,absolute lift,Q10 child section,r1 chronology,closure edge,word-current semantics
+sidecar=the actual r0_6 endpoint row plus a lawful same-copy D-to-A edge and coefficient/flux realization
+tournament_xor=the intrinsic relation is a symmetric chamber involution (both-way),not a tournament;Boolean parity would erase the nonzero 2*c endpoint gauge and has no coefficient map
+verdict=the scalar hostile has a minimal two-dimensional relative repair,but the natural twisted H1 is only one-dimensional and every additive route to F13 Kummer or characteristic-zero JC flux is zero
+scope=FINITE-EXACT static good-reduction representation plus elementary local-system lemma;no physical current,no D5 flux map,no row exclusion,no LRC14
+PASS
