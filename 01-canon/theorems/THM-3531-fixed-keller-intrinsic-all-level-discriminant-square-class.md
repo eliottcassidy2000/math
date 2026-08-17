@@ -7,7 +7,8 @@ status: >
   sporadic Keller map, the basis-independent trace-discriminant square class
   is [(-1)^n P_(n-1)] in the raw cleared-norm normalization.  Hence the
   newest prime is the sole odd horizontal discriminant divisor at every
-  level.  This is not an all-level primitivity theorem for literal x/y/z.
+  level.  This theorem alone is not an all-level primitivity theorem;
+  THM-3535 subsequently supplies that separate monodromy gate.
 source: codex/intrinsic-discriminant-tower/2026-08-16
 audit: >
   The independent audit checked tower orientation, trace-discriminant
@@ -27,6 +28,8 @@ related:
   - THM-3519-level-three-sporadic-keller-three-coordinate-primitivity-and-common-discriminant-class
   - THM-3525-level-five-degree243-separability-and-discriminant-square-class
   - THM-3526-level-six-degree729-separability-and-discriminant-square-class
+  - THM-3533-fixed-keller-newest-prime-reduced-different-and-index-square
+  - THM-3535-fixed-keller-full-wreath-and-all-level-linear-primitivity
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
 script: 04-computation/keller_intrinsic_discriminant_raw_tower_audit_20260816.py
 output: 05-knowledge/results/keller_intrinsic_discriminant_raw_tower_audit_20260816.out
@@ -231,8 +234,10 @@ and its discriminant has class `(4)`.  Total primitivity also makes the
 conjugate block polynomials separable and pairwise coprime in any chosen
 tower decomposition.
 
-This is a fixed-level generic statement.  It does not produce one fixed
-rational linear form that is known to work simultaneously for every `n`.
+This is only a fixed-level generic argument.  THM-3535 subsequently avoids
+the invalid countable-intersection inference and proves, by full wreath
+monodromy plus one-step non-descent, that every nonzero constant linear form
+works simultaneously for every `n`.
 
 ## 7. Intrinsic is not literal-coordinate separability
 
@@ -254,9 +259,10 @@ The other sharp boundaries are:
 3. rescaling a raw rung by `2` changes the constant square class; and
 4. the theorem gives parity, not exact positive multiplicity.
 
-No arbitrary Keller-map law, simultaneous primitive coordinate, exact
-discriminant multiplicity, `JC(2)`, `DC(2)`, LRC, or general
-Jacobian-conjecture classification follows.
+No arbitrary Keller-map law, exact discriminant multiplicity, `JC(2)`,
+`DC(2)`, LRC, or general Jacobian-conjecture classification follows from
+this theorem.  THM-3533 separately proves newest-prime normalization
+multiplicity one, and THM-3535 supplies the simultaneous-coordinate result.
 
 ## Reproduction
 

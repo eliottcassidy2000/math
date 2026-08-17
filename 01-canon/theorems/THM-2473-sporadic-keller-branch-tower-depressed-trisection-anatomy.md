@@ -5,7 +5,8 @@ status: >
   PROVED for the exact algebraic claims (1)-(6) (symbolic identities and
   exact rational fibers, three companion scripts); VERIFIED for the
   full-wreath monodromy of F o F (Chebotarev census, 10 primes, 6.08M
-  targets); FINITE-EXACT for the tower census through depth 3;
+  targets; subsequently PROVED at every depth by THM-3535); FINITE-EXACT
+  for the tower census through depth 3;
   CONDITIONAL (off-spine genericity) for the closed-form tower law (7).
 source: opus-2026-07-26
 related:
@@ -131,6 +132,9 @@ as unadjudicated numerology, in klein-S324's spirit; not used anywhere.)
   `(F, F o F)` over ALL targets in `F_p^3` for ten primes 61..103
   matches the independent-uniform wreath model in all 13 cells (ratios
   0.92-1.02), with no off-model cell ever observed.
+- THM-3535 subsequently upgrades this evidence: THM-3530's newest image
+  prime isolates one bottom-block inertia transposition, which forces the
+  full wreath product at depth two and inductively at every depth.
 - **HYP-9030 test (i) verdict: the explicit degree-9 member F o F is
   maximally NON-atomic** (imprimitive with full kernel).  This remains an
   exact statement about the `F`-submonoid, but THM-3438 later refutes the
@@ -183,8 +187,9 @@ Jelonek tower, and the degeneration always sits on the anchored branch.**
 
 ## Loss ledger / hostile controls
 
-- The mod-p census is Chebotarev evidence, not a proof of full wreath;
-  the exact lower bound inside the kernel is `S3 x S3`.
+- In this theorem alone, the mod-p census was Chebotarev evidence and the
+  exact kernel lower bound was `S3 x S3`; THM-3535 subsequently proves the
+  full wreath group at every depth by localized inertia.
 - The closed form (7) beyond depth 3 needs each new folded point checked
   off `Z(L)`; a folded point landing on `Z(L)` would break the law at
   that node (no such point found through depth 3).

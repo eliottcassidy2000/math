@@ -4,14 +4,16 @@ title: "The discriminant tower: Jelonek divisors as classification data for the 
 status: >
   OPEN synthesis with a substantially PROVED fixed-map core.  The saturated
   cusp law and normalization are proved; THM-2582/3495/3498/3525/3526 give
-  the literal-coordinate discriminant square classes through depth six.
+  the first six literal-coordinate discriminant square classes.
   THM-3528 proves raw complete packets at every level, THM-3529 proves every
   complete packet is a finite-sheet unit, and THM-3530 proves every raw rung
   is an absolute image prime with generic image degree one and exactly n
   reduced Jelonek components for F^n.  THM-3531 proves the intrinsic
-  all-level class `[(-1)^nP_(n-1)]`.  Exact positive discriminant
-  multiplicities, literal-coordinate separability beyond depth six,
-  tame-family covariance, and monoid-wide classification remain open.
+  all-level class `[(-1)^nP_(n-1)]`; THM-3533 gives newest-prime
+  normalization exponent one; and THM-3535 proves full wreath monodromy plus
+  every nonzero constant linear form primitive at all depths.  Constant-form
+  order indices, exact old-prime multiplicities, tame-family covariance, and
+  monoid-wide classification remain open.
   Nothing here is a JC(2) or arbitrary-map classification claim.
 source: opus-2026-07-28 (from the uniform disc law found by the
   THM-2546 referee run: disc = -4 (square)^2 L for all three
@@ -36,6 +38,8 @@ related:
   - THM-3529 (all complete packets are finite-sheet units)
   - THM-3530 (all-level fixed raw image primes and component count)
   - THM-3531 (intrinsic all-level discriminant square class)
+  - THM-3533 (newest-prime normalization exponent one and index-square law)
+  - THM-3535 (full wreath monodromy and all-level constant-linear primitivity)
 ---
 
 # HYP-9033 -- the discriminant tower and the genus axis
@@ -238,6 +242,13 @@ d(K_n/K_0)=[(-1)^nP_(n-1)].
 This is basis-independent and makes the newest raw prime the sole odd
 horizontal discriminant divisor.  It does not make any prescribed affine
 coordinate primitive or determine the positive multiplicity of that prime.
+THM-3533 sharpens the newest-prime normalization coefficient to one and
+types a primitive order's remaining exponent as twice its local index.
+THM-3535 supplies the separate coordinate gate: the newest prime isolates
+one bottom-block transposition, forcing full iterated wreath monodromy; its
+ancestor-block classification and a rank-three two-fibre hostile then prove
+every nonzero constant linear form primitive at every depth.  Exact positive
+coordinate-order multiplicities remain outside that theorem.
 
 ## 3. Two crevasse invariants for atomhood (spectrum repaired)
 
@@ -298,8 +309,8 @@ place to HUNT for a JC(2) counterexample instead.
 
 ## 5. Predictions ledger
 
-- P1 (fixed component and intrinsic square-class towers proved all levels;
-  literal-coordinate classes through depth six):
+- P1 (fixed component, intrinsic square-class, and constant-linear towers
+  proved all levels):
   `S_(F o F)=V(LH)` with two irreducible components (THM-2576), while the
   degree-nine eliminant has discriminant square class `[H]` (THM-2582).
   THM-3495 gives `S_(F^3)=V(LHJ)` and degree-27 class `[-2J]`.  Odd part
@@ -311,9 +322,11 @@ place to HUNT for a JC(2) counterexample instead.
   five and six.  THM-3528/3529 give all-level complete packets and old-`L`
   units, and THM-3530 proves the newest raw polynomial is an absolute image
   prime of generic degree one at every depth.  THM-3531 proves the intrinsic
-  class `[(-1)^nP_(n-1)]` at every depth.  Literal-coordinate
-  separability beyond depth six and exact positive discriminant
-  multiplicities remain open.
+  class `[(-1)^nP_(n-1)]` at every depth; THM-3533 gives newest-prime
+  normalization exponent one; and THM-3535 proves every nonzero constant
+  linear form primitive there, so all corresponding coordinate eliminants
+  have that class.  Their local indices and exact old-prime multiplicities
+  remain open.
 - P2 (VERIFIED-EXACT for the two fixed tame members): W1 and W2 obey
   `disc=-(det J)^2(square)^2L_W`, with `L_W=L o T^(-1)`.  A general
   gauge-covariance theorem remains open.
@@ -341,15 +354,16 @@ of `R_5` and `R_6`; and THM-3523 adds `v_L(N(R_6))=-10663`, polynomial,
 `L`-coprime `R_7`, and `A(66907,24255)`.  THM-3528 promotes raw packet
 polynomiality to all levels, THM-3529 promotes finite-sheet units to all
 complete packets, and THM-3530 promotes the fixed raw image-prime/component
-tower to all levels.  THM-3531 promotes the intrinsic discriminant class to
-all levels.  Exact positive discriminant multiplicities and
-literal-coordinate separability beyond depth six remain open.
+tower to all levels.  THM-3531 promotes the intrinsic discriminant class,
+THM-3533 fixes the newest normalization exponent at one, and THM-3535
+promotes full wreath monodromy and every nonzero constant-linear primitive
+view to all levels.  Constant-view indices and exact old-prime multiplicities
+remain open.
 Trace-zero persistence at depth two and the `8 -> 512` cubing pattern are
 VERIFIED for the fixed construction only.  The W1/W2 identities are exact for
 those two tame conjugates, not a classification theorem.  P4 is now proved
 for the fixed raw tower at every depth.  The next decisive tests are
-literal-coordinate separability beyond depth six, exact discriminant
-multiplicities, and
+constant-view indices, exact old-prime multiplicities, and
 transport of the packet/divisor mechanism to tame or other family members.
 
 ## Loss ledger
@@ -359,8 +373,9 @@ pullback has the extra affine plane `c=0` described in (C).  The set-level
 composition law and odd-block square-class lemma are general.  THM-3530
 proves the fixed raw component tower and its generic-degree-one image maps at
 all depths, while THM-3531 proves its intrinsic discriminant square class,
-but neither is a family-generic law.  Exact discriminant
-multiplicities, all-level literal-coordinate separability, the monoid-wide
+THM-3533 proves newest-prime normalization multiplicity one, and THM-3535
+proves all-level constant-linear primitivity; none is a family-generic law.
+Constant-view indices, exact old-prime multiplicities, the monoid-wide
 `-(det J)^2` law, and tame-family packet covariance remain outside proved
 canon.  "Generic component count" still needs a precise family parameter
 space before any classification claim; none of this closes JC(2), classifies

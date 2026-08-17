@@ -36,6 +36,21 @@
   `44f8eea13cac2b7c4e05c69ec15b67c828ef9ca4571389c9aa479733bf133e18` /
   `74755a08a1f468f0e647427789519fdc87ffaba1b9f0bfc6d6e9f47fb2f45024` /
   `93a9f158e462686b4393163e46fcb211f607282eaaf3b8fd20a9f214156a7f9e`.
+- `keller_fixed_linear_all_level_wreath_probe_20260816.py` -> matching
+  `.out` [THM-3535 PROVED + VERIFIED-EXACT].  THM-3530's newest prime
+  isolates one tame transposition in one bottom ternary block; transitivity
+  promotes it to the full iterated wreath group.  Ancestor cylinders are
+  then the only blocks, while two THM-2473 rational fibres give the
+  full-rank difference determinant `243/4`, excluding one-step descent for
+  every nonzero constant linear form.  Hence every fixed rational form,
+  including `x,y,z`, is primitive at every depth.  The exact support probe
+  also covers all `1723` directions in `P^2(F_41)` across `48` split
+  degree-nine fibres.  It proves no constant-linear order index or
+  arbitrary-map statement; THM-3533 separately gives newest-prime
+  normalization multiplicity one.  Script/output/semantic LF
+  SHA-256: `54775a030eed27cf5a24b497d8271c18f5a58b95881b9b8f96c79ae1630c1ae3` /
+  `8f7fb51113a2e065467df91ee1314a91c101423038a52dba28cd97f44c4e3b23` /
+  `5810ca665b68ad0f8bdfc5a62445c7eb1b5d8d65ee6ae565db1e31bd1a31f9c9`.
 
 - `keller_intrinsic_discriminant_raw_tower_audit_20260816.py` -> matching
   `.out` [THM-3531 PROVED + VERIFIED-EXACT + INDEPENDENTLY
@@ -44,9 +59,9 @@
   all-level law `d(K_n/K_0)=[(-1)^n P_(n-1)]`.  The first six raw-to-named
   invoices recover `[-L],[H],[-2J],[2G],[-2R_5],[2R_6]`, retaining the
   mandatory constant class `[2]`.  Every fixed depth admits a generic
-  primitive rational linear form, but the theorem supplies neither one
-  simultaneous form nor literal-coordinate separability or exact positive
-  discriminant multiplicities.  Script/output/semantic LF SHA-256:
+  primitive rational linear form; THM-3535 subsequently proves simultaneous
+  primitivity for every nonzero constant form.  THM-3531 itself supplies no
+  exact positive discriminant multiplicities.  Script/output/semantic LF SHA-256:
   `54a9d6977275feb97759b33be8ff90a677cc86222f44548f9c5f0952ec78e553` /
   `16a1950ff176f08c7983f3b20429a8dede9ea1802d9e166081fd1dffb9ea63e0` /
   `9ccc7adc713ebf30e69af6456e212b94f4a43da4cec6215f730c58cc00ecfe46`.
