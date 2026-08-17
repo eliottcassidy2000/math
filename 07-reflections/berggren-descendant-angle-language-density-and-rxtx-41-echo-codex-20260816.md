@@ -201,30 +201,83 @@ Hence its normalized Euclid triples all lie in the D-obtuse chamber.  This is
 a sparse golden path inside the `16/41` D-language, not the source of the
 global density.
 
-## 5. The exact RXTX denominator echo is not a transfer
+## 5. The lawful size-four object is a signed partial tournament
+
+The two four-periodic wall orbits have the same orientation-sign word:
+
+```text
+alpha: B A B B,       beta: B C B B,
+sign:   - + - -,      product=-1.                       (21)
+```
+
+Here the sign is the slope of the affine CDF update in (10): `B` reverses
+the order and `A,C` preserve it.  The four phases and their successor edges
+therefore form an oriented `C4`.  Of the six unordered pairs on four
+vertices, four are observed transition edges and the two antipodal pairs are
+missing.  If inverse transitions are retained as well, the same carrier is a
+four-edge bidirected cycle with two missing pairs.  This is precisely a
+directed graph with missing/both-way edges; it is not yet a tournament.
+
+There are four ways to orient the two missing diagonals and complete the
+oriented cycle to a tournament.  Exact exhaustion shows that none is
+invariant under phase rotation.  Indeed the half-turn fixes each antipodal
+pair setwise and swaps its endpoints, so an invariant arrow on such a pair
+is impossible.  A complete `T4` would therefore add a gauge absent from the
+recurrence.
+
+Modulo two, the negative-edge indicators in (21) are a cocycle on `C4` with
+odd cycle sum.  Vertex sign changes add coboundaries, while the odd sum is
+the nonzero class in
+
+```text
+H^1(C4;F2)=F2.                                           (22)
+```
+
+This sign holonomy explains both the plus sign in `3^4+1` and the residual
+period eight.  If `R_n` is any of the three centered count residuals in
+(14), then
+
+```text
+R_(n+4)=-R_n,             R_(n+8)=R_n.                  (23)
+```
+
+Equivalently the ordinary generating functions are
+
+```text
+U(z)=(z+z^2-2z^3+2z^4)/((1-3z)(1+z^4)),
+A(z)=(z-z^2)/((1-3z)(1+z^4)),
+D(z)=(1-2z+2z^3-z^4)/((1-3z)(1+z^4)).                  (24)
+```
+
+The pole at `z=1/3` carries the densities; the roots of `1+z^4` carry the
+eight-periodic bounded discrepancy.  This is an explicit word-to-`H^1`
+map, but only for the wall automaton.  It does not furnish the missing LRC
+same-copy edge or a characteristic-zero JC flux class.
+
+## 6. The exact RXTX denominator echo is not a transfer
 
 Rybin--Zhang--Luo's RXTX preprint has the exact cost recurrence
 
 ```text
-R(n)=8R(n/4)+26M(n/4),       M(n)=n^(log_2 7).           (21)
+R(n)=8R(n/4)+26M(n/4),       M(n)=n^(log_2 7).           (25)
 ```
 
 Thus its asymptotic coefficient solves
 
 ```text
-r=(8/49)r+26/49,       r=26/(49-8)=26/41.               (22)
+r=(8/49)r+26/49,       r=26/(49-8)=26/41.               (26)
 ```
 
 The Berggren U-density solves
 
 ```text
-u=32/81-u/81,          u=32/(81+1)=16/41.               (23)
+u=32/81-u/81,          u=32/(81+1)=16/41.               (27)
 ```
 
 The common denominator is the exact integer identity
 
 ```text
-3^4+1=82=2(7^2-2^3).                                   (24)
+3^4+1=82=2(7^2-2^3).                                   (28)
 ```
 
 This is a useful **resolvent-denominator echo**: both constants come from
@@ -239,7 +292,7 @@ with four diagonal and six off-diagonal positions.  The Berggren language's
 period four instead belongs to a quadratic wall orbit.  Equal numerals do not
 identify those carriers.
 
-## 6. Boundaries
+## 7. Boundaries
 
 - The three angle classes color tree nodes; they do not orient the six edges
   of a `T4` or `T6`.

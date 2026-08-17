@@ -21,7 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 D = 145
-EXPECTED_SEMANTIC_DIGEST = "b0a83446f06d4836ebb9125a3e88fbba8fe41fe44ed79017f85d3c8cfd229129"
+EXPECTED_SEMANTIC_DIGEST = "acc0170636f7ce47b074214c116930ea6728fa3ea96314cc622e41f83966b2ec"
 
 
 def require(condition, detail):
@@ -146,6 +146,8 @@ AFFINE_CDF = {
     "C": (Fraction(0), Fraction(1, 3)),
 }
 
+ORIENTATION_SIGN = {"A": 1, "B": -1, "C": 1}
+
 
 def compose_affine(outer, inner):
     c_out, s_out = outer
@@ -158,6 +160,64 @@ def orbit_cdf_return(orbit):
     for letter, _ in reversed(orbit):
         result = compose_affine(AFFINE_CDF[letter], result)
     return result
+
+
+def signed_cycle_audit(orbit):
+    """Return the intrinsic C4 sign cocycle and its completion hostile."""
+
+    signs = tuple(ORIENTATION_SIGN[letter] for letter, _ in orbit)
+    holonomy = 1
+    for sign in signs:
+        holonomy *= sign
+    require(holonomy == -1, ("wall holonomy", orbit, signs))
+
+    # The four return edges form the oriented cycle 0->1->2->3->0.
+    # K4 has two further, antipodal pairs.  Exhaust their four tournament
+    # orientations and verify that none respects phase rotation.
+    cycle_arcs = {(0, 1), (1, 2), (2, 3), (3, 0)}
+    completions = []
+    for diagonal_02 in (0, 1):
+        for diagonal_13 in (0, 1):
+            arcs = set(cycle_arcs)
+            arcs.add((0, 2) if diagonal_02 else (2, 0))
+            arcs.add((1, 3) if diagonal_13 else (3, 1))
+            require(len(arcs) == 6, ("K4 completion", arcs))
+            invariant = all(
+                (((left + 1) % 4, (right + 1) % 4) in arcs)
+                for left, right in arcs
+            )
+            completions.append((diagonal_02, diagonal_13, invariant))
+    require(sum(item[2] for item in completions) == 0, completions)
+
+    # Vertex sign-gauge changes add a coboundary mod 2.  The parity around
+    # the cycle is the unique H^1(C4;F2) invariant and remains nonzero.
+    cocycle = tuple(0 if sign == 1 else 1 for sign in signs)
+    gauged = set()
+    for vertex_mask in range(16):
+        vertex = tuple((vertex_mask >> index) & 1 for index in range(4))
+        representative = tuple(
+            cocycle[index] ^ vertex[index] ^ vertex[(index + 1) % 4]
+            for index in range(4)
+        )
+        require(sum(representative) % 2 == 1, ("coboundary changed H1", representative))
+        gauged.add(representative)
+    require(len(gauged) == 8, ("C4 gauge orbit", gauged))
+    return signs, holonomy, tuple(completions), cocycle, len(gauged)
+
+
+def generating_numerator(sequence):
+    """Multiply a series by (1-3z)(1+z^4), coefficientwise."""
+
+    denominator = (1, -3, 0, 0, 1, -3)
+    coefficients = []
+    for degree in range(len(sequence)):
+        coefficients.append(
+            sum(
+                denominator[offset] * sequence[degree - offset]
+                for offset in range(min(degree, 5) + 1)
+            )
+        )
+    return tuple(coefficients)
 
 
 def child(letter, pair):
@@ -249,6 +309,10 @@ def main():
     beta_return = orbit_cdf_return(beta_orbit)
     require(alpha_return == (Fraction(32, 81), Fraction(-1, 81)), alpha_return)
     require(beta_return == (Fraction(50, 81), Fraction(-1, 81)), beta_return)
+    alpha_cycle = signed_cycle_audit(alpha_orbit)
+    beta_cycle = signed_cycle_audit(beta_orbit)
+    require(alpha_cycle[0] == (-1, 1, -1, -1), alpha_cycle)
+    require(beta_cycle[0] == (-1, 1, -1, -1), beta_cycle)
 
     alpha_limit = alpha_return[0] / (1 - alpha_return[1])
     beta_limit = beta_return[0] / (1 - beta_return[1])
@@ -258,6 +322,19 @@ def main():
     direct, distinct_nodes = direct_levels(10)
     recurrence = recurrence_counts(40)
     require(direct == recurrence[:11], (direct, recurrence[:11]))
+
+    generating_numerators = tuple(
+        generating_numerator(tuple(row[column] for row in recurrence))
+        for column in (1, 2, 3)
+    )
+    expected_numerators = (
+        (0, 1, 1, -2, 2),
+        (0, 1, -1),
+        (1, -2, 0, 2, -1),
+    )
+    for actual, expected in zip(generating_numerators, expected_numerators):
+        require(actual[: len(expected)] == expected, (actual, expected))
+        require(all(value == 0 for value in actual[len(expected) :]), actual)
 
     expected_residuals = (
         (-16, -9, 25),
@@ -303,7 +380,9 @@ def main():
     semantic.add(("walls", ALPHA, BETA))
     semantic.add(("orbits", alpha_orbit, beta_orbit))
     semantic.add(("returns", alpha_return, beta_return))
+    semantic.add(("signed_cycles", alpha_cycle, beta_cycle))
     semantic.add(("densities", densities))
+    semantic.add(("generating_numerators", generating_numerators))
     semantic.add(("direct", direct, distinct_nodes))
     semantic.add(("recurrence", recurrence))
     semantic.add(("residuals", tuple(residuals)))
@@ -322,7 +401,18 @@ def main():
         f"beta:{''.join(letter for letter, _ in beta_orbit)}"
     )
     print(f"four_step_cdf_returns=alpha:{alpha_return};beta:{beta_return}")
+    print(
+        "phase_carrier=oriented_C4_with_two_missing_antipodal_pairs;"
+        "edge_signs=(-,+,-,-);holonomy=-1;H1_F2=nonzero;"
+        "rotation_invariant_tournament_completions=0_of_4"
+    )
     print("count_recursions=U[n+4]=32*3^n-U[n];A[n+4]=18*3^n-A[n];D[n+4]=32*3^n-D[n]")
+    print(
+        "ordinary_generating_functions="
+        "U=(z+z^2-2z^3+2z^4)/((1-3z)(1+z^4));"
+        "A=(z-z^2)/((1-3z)(1+z^4));"
+        "D=(1-2z+2z^3-z^4)/((1-3z)(1+z^4))"
+    )
     print(f"level_densities_U_acute_D={densities}")
     print(f"residual_period8={expected_residuals}")
     print(f"direct_tree_depth=10;distinct_nodes={distinct_nodes};counts={direct}")
