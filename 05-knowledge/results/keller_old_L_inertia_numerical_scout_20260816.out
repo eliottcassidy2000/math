@@ -1,0 +1,17 @@
+== fixed Keller old-L numerical inertia scout ==
+radius=1.0e-03;steps=240;max_step_cost=1.593e-02;max_forward_residual=1.467e-09
+depth=1;degree=3;cycles={1: 1, 2: 1};tame_permutation_exponent=1;parity=1
+depth=2;degree=9;cycles={1: 3, 2: 1, 4: 1};tame_permutation_exponent=4;parity=0
+depth=3;degree=27;cycles={1: 9, 2: 1, 4: 2, 8: 1};tame_permutation_exponent=14;parity=0
+depth=4;degree=81;cycles={1: 27, 4: 3, 6: 1, 8: 3, 12: 1};tame_permutation_exponent=46;parity=0
+radius=3.0e-04;steps=480;max_step_cost=1.336e-03;max_forward_residual=3.663e-09
+depth=1;degree=3;cycles={1: 1, 2: 1};tame_permutation_exponent=1;parity=1
+depth=2;degree=9;cycles={1: 3, 2: 1, 4: 1};tame_permutation_exponent=4;parity=0
+depth=3;degree=27;cycles={1: 9, 2: 1, 4: 2, 8: 1};tame_permutation_exponent=14;parity=0
+depth=4;degree=81;cycles={1: 27, 4: 3, 6: 1, 8: 3, 12: 1};tame_permutation_exponent=46;parity=0
+radius=1.0e-04;steps=720;max_step_cost=3.858e-04;max_forward_residual=7.904e-09
+depth=1;degree=3;cycles={1: 1, 2: 1};tame_permutation_exponent=1;parity=1
+depth=2;degree=9;cycles={1: 3, 2: 1, 4: 1};tame_permutation_exponent=4;parity=0
+depth=3;degree=27;cycles={1: 9, 2: 1, 4: 2, 8: 1};tame_permutation_exponent=14;parity=0
+depth=4;degree=81;cycles={1: 27, 4: 3, 6: 1, 8: 3, 12: 1};tame_permutation_exponent=46;parity=0
+status=VERIFIED-NUMERICAL DISCOVERY ONLY;no exact inertia theorem or index claim
