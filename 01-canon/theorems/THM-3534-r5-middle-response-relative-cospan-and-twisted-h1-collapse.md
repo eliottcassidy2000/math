@@ -503,6 +503,39 @@ The two formal surviving directions may be represented by
 i_+ + i_-          and          D_(6,*).                (31e)
 ```
 
+The endpoint-forgetting map has an exact marked form on these formal
+cohomology quotients.  Put
+
+```text
+sigma=[i_++i_-],       epsilon=[D_(6,*)],
+rho=[bar i_+ + bar i_-] in H^1_form(V_rel).              (31f)
+```
+
+The quotient in `(31b)` intertwines the two chamber differentials and induces
+
+```text
+q_*:H^1_form(V_ext) -> H^1_form(V_rel),
+q_*(sigma)=rho,       q_*(epsilon)=0,
+[q_*]_(sigma,epsilon)=[1 0].                             (31g)
+```
+
+Thus its rank is one and its kernel is exactly the pure endpoint line.  A
+sum-map chart exists, but is not the marked splitting.  From `(29)`, define
+
+```text
+tau=(a+b)^(-1)[D_(3,*)+D_(9,*)]
+   =sigma+mu epsilon,
+mu=649809956606686499499867 in k.                        (31h)
+```
+
+Then `[q_*]_(sigma,tau)=[1 1]` and the kernel coordinate is `(1,-1)`.
+This merely compares two invariant lifts that differ by endpoint debt.  It
+does not turn `sigma` and `epsilon` into a cancellation pair: the former
+survives and the latter is killed.  In particular, the mixed-coordinate sum
+must not be identified with the characteristic-two determinant XOR in
+THM-3537, where both marked orbit generators survive separately before their
+sum cancels.
+
 Thus a two-dimensional formal twisted cohomology group exists only after the
 coefficient representation is enlarged from dimension two to dimension three
 and the endpoint sidecar is retained.  One class is the relative invariant
@@ -583,7 +616,9 @@ anti-invariant lines.  It would also replace the exact compressed relation
 `T_A=lambda C`, where `lambda` is neither `1` nor `-1`, by the bare
 swap and thereby erase the failure of the involution law.  Because there is
 no coefficient map from `k` to `F2`, that Boolean shadow cannot prove
-descent, exactness, or current realization.
+descent, exactness, or current realization.  Equations `(31f)--(31h)` sharpen
+the warning: the apparent sum map is created by mixing the survivor with the
+endpoint class, whereas the marked endpoint-forgetting map is a projection.
 
 ## 8. Connection and loss ledger
 

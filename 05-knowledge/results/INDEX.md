@@ -32,8 +32,11 @@
   only with the two middle dual lines, giving `U isomorphic V_rel^vee`.
   Chamber monodromy gives `dim H1(V_rel)=1`.  Retaining the endpoint in the
   minimal three-space `V_ext=S+I` gives formal twisted H1 dimension two,
-  split as relative invariant plus pure endpoint; MISTAKE-420 records the
-  repaired scope.  Pure reversal does not preserve the common realization;
+  split as relative invariant plus pure endpoint.  The induced endpoint-
+  forgetting map is canonically the projection `[1 0]`; it becomes `[1 1]`
+  only after replacing a marked survivor by a mixed lift differing by endpoint
+  debt, so it is not a transported characteristic-two XOR.  MISTAKE-420
+  records the repaired scope.  Pure reversal does not preserve the common realization;
   its compress/reinflate correspondence is `lambda*C` with
   `lambda^2!=1`.  All 127 nonempty chamber-stable child windows have
   quotient-character dimensions only `(2,1+1)`, `(6,3+3)`, or
@@ -84,11 +87,13 @@
   permutation is `(A_r,B_r,id)(01)` with involutions `A_r,B_r`; for
   `C_r=B_r A_r`, every global nonfixed cycle is twice a `C_r` cycle and
   `d_(r+1)=2*3^r-o(C_r)`.  The orbit counts `2,4,8,20` show that the failed
-  scalar law hid the assumption `o(C_r)=2^r`, first false at `r=4`.
+  scalar law hid the assumption `o(C_r)=2^r`, first false at `r=4`.  The
+  unique fixed-root section of `C_r` has cycles `(1,2)`, `(3,6)`, `(9,18)`
+  at `r=2,3,4`, exposing a conjugacy-invariant ternary odometer arm.
   This is not an exact all-level inertia theorem.
   Script/output LF SHA-256:
-  `cd60598579b2f2338d861dddd983b1d8078084f467e512be284466e620bbaeac` /
-  `91c730e7a1d7cfc87097547ccbcfa49910b49752c4b5a206612f75b68a747c5c`.
+  `4cb8bfd72ff86fb56acfea4f7881a1d620d4e7f73226f7c38546f9bf47c13824` /
+  `08c1a87d36b3f881b2ef8c4eeaf138765b4be1fca9dc7641ee0d91d5a2108ca5`.
 
 - `keller_inertia_signed_c4_h1_xor_bridge_20260816.py` -> matching `.out`
   [VERIFIED-EXACT ELEMENTARY COSPAN; UNNUMBERED].  THM-3537's quartic and

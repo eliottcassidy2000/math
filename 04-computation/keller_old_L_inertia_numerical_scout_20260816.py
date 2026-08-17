@@ -299,6 +299,29 @@ def reflection_rotation_row(
     )
 
 
+def rotation_fixed_root_row(
+    permutation: tuple[int, ...], depth: int
+) -> tuple[int, tuple[int, ...], tuple[tuple[int, int], ...], int]:
+    """Return the conjugacy-invariant fixed-root section of C=B after A."""
+
+    _, sections = root_action_and_sections(permutation, depth)
+    reflection_a, reflection_b, _ = sections
+    rotation = compose(reflection_b, reflection_a)
+    rotation_root, rotation_sections = root_action_and_sections(rotation, depth - 1)
+    fixed_roots = tuple(
+        index for index, image in enumerate(rotation_root) if index == image
+    )
+    require(len(fixed_roots) == 1,
+            ("rotation fixed-root census", depth, rotation_root, fixed_roots))
+    fixed_section = rotation_sections[fixed_roots[0]]
+    return (
+        depth - 1,
+        rotation_root,
+        cycle_histogram(fixed_section),
+        permutation_order(fixed_section),
+    )
+
+
 def lift_profile(
     parent: tuple[int, ...], child: tuple[int, ...]
 ) -> tuple[tuple[int, tuple[int, ...], int], ...]:
@@ -426,6 +449,28 @@ def main() -> None:
     require(reflection_rows == hostile_reflection_rows,
             ("inconsistent reflection-rotation rows", reflection_rows,
              hostile_reflection_rows))
+    odometer_rows = tuple(
+        rotation_fixed_root_row(permutation, depth)
+        for depth, permutation in enumerate(deep_runs[0].permutations, start=1)
+        if depth >= 3
+    )
+    hostile_odometer_rows = tuple(
+        rotation_fixed_root_row(permutation, depth)
+        for depth, permutation in enumerate(deep_runs[1].permutations, start=1)
+        if depth >= 3
+    )
+    require(odometer_rows == hostile_odometer_rows,
+            ("inconsistent fixed-root rotation rows", odometer_rows,
+             hostile_odometer_rows))
+    require(
+        odometer_rows
+        == (
+            (2, (1, 0, 2), ((1, 1), (2, 1)), 2),
+            (3, (1, 0, 2), ((3, 1), (6, 1)), 6),
+            (4, (1, 0, 2), ((9, 1), (18, 1)), 18),
+        ),
+        odometer_rows,
+    )
     rotation_orbit_counts = tuple(
         sum(count for _, count in rotation_histogram)
         for _, _, _, _, rotation_histogram, _ in reflection_rows
@@ -493,6 +538,13 @@ def main() -> None:
             f"B_cycles={b_histogram};C_equals_B_after_A_cycles={rotation_histogram};"
             f"C_orbits={rotation_orbits};C_order={rotation_order};"
             f"global_exponent=2*3^{subtree_depth}-C_orbits={exponent}"
+        )
+    for subtree_depth, rotation_root, fixed_histogram, fixed_order in odometer_rows:
+        print(
+            f"rotation_fixed_root_subtree_depth={subtree_depth};"
+            f"C_root_action={rotation_root};"
+            f"fixed_root_section_cycles={fixed_histogram};"
+            f"fixed_root_section_order={fixed_order}"
         )
     print(
         f"depths1to4_closed_form_candidate_at5={candidate_exponent};"

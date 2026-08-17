@@ -33,6 +33,9 @@ reflection_rotation_subtree_depth=1;root_action=(1, 0, 2);A_cycles=((1, 1), (2, 
 reflection_rotation_subtree_depth=2;root_action=(1, 0, 2);A_cycles=((1, 1), (2, 4));B_cycles=((1, 7), (2, 1));C_equals_B_after_A_cycles=((1, 1), (2, 2), (4, 1));C_orbits=4;C_order=4;global_exponent=2*3^2-C_orbits=14
 reflection_rotation_subtree_depth=3;root_action=(1, 0, 2);A_cycles=((1, 1), (2, 13));B_cycles=((1, 7), (2, 10));C_equals_B_after_A_cycles=((2, 3), (3, 1), (4, 3), (6, 1));C_orbits=8;C_order=12;global_exponent=2*3^3-C_orbits=46
 reflection_rotation_subtree_depth=4;root_action=(1, 0, 2);A_cycles=((1, 1), (2, 40));B_cycles=((1, 7), (2, 37));C_equals_B_after_A_cycles=((2, 9), (4, 9), (9, 1), (18, 1));C_orbits=20;C_order=36;global_exponent=2*3^4-C_orbits=142
+rotation_fixed_root_subtree_depth=2;C_root_action=(1, 0, 2);fixed_root_section_cycles=((1, 1), (2, 1));fixed_root_section_order=2
+rotation_fixed_root_subtree_depth=3;C_root_action=(1, 0, 2);fixed_root_section_cycles=((3, 1), (6, 1));fixed_root_section_order=6
+rotation_fixed_root_subtree_depth=4;C_root_action=(1, 0, 2);fixed_root_section_cycles=((9, 1), (18, 1));fixed_root_section_order=18
 depths1to4_closed_form_candidate_at5=146;observed_at5=142;verdict=REFUTED_AT_DEPTH_5
 closed_form_hidden_assumption=C_orbits_equals_2^r;observed_C_orbits=(2, 4, 8, 20);first_failure_at_r=4_is_20_not_16
 status=VERIFIED-NUMERICAL DISCOVERY ONLY;no exact inertia theorem or index claim

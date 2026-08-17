@@ -139,6 +139,21 @@ punctured-divisor monodromy representation.  No chain map between those
 complexes has been constructed.  Consequently this reflection is not the D5
 map, but it sharpens the target and supplies a decisive cancellation test.
 
+There is now an exact hostile against a subtler false bridge.  In the marked
+formal classes of THM-3534, endpoint forgetting is
+
+```text
+q_*:k{sigma,epsilon} -> k{rho},
+q_*(sigma)=rho,       q_*(epsilon)=0.                    (14)
+```
+
+It becomes the row `[1 1]` only in the mixed basis `(sigma,tau)`, with
+`tau=sigma+mu epsilon`.  Its kernel `(1,-1)` then records the difference
+between two lifts of the same survivor.  By contrast, the Keller map in
+`(10)` sends each marked orbit bit nontrivially and kills their sum.  The
+shared rank-one matrix is therefore basis-created linear algebra, not a
+transported XOR class; the coefficient fields are incompatible in any case.
+
 ## Connection contract
 
 | field | exact answer |
@@ -149,6 +164,7 @@ map, but it sharpens the target and supplies a decisive cancellation test.
 | common quotient | unique nonzero signed-`C4` switching class |
 | explicit gauge | `(0,0,0,1)` from Keller one-cut to wall word |
 | global Keller XOR | quartic `1` plus quadratic `1` equals `0` |
+| THM-3534 hostile | marked endpoint forgetting is projection `[1 0]`; `[1 1]` appears only after mixing endpoint debt into a survivor |
 | pair carrier | four successor pairs plus two missing antipodals |
 | tournament status | four completions, none rotation-invariant |
 | destroyed | orbit multiplicity, ancestry, amplitudes, coordinate index |

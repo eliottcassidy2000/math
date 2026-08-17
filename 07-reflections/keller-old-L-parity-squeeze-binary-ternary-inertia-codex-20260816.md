@@ -218,6 +218,30 @@ edge colours, the fixed loops, or ancestry would destroy the data that makes
 `(13)` work.  Proving `(12)` from the local inverse chart, then finding a
 finite recursion for the sections of `A_r` and `B_r`, is now the exact target.
 
+The unique fixed root of `C_r` gives a further conjugacy-invariant split.  Its
+section has cycle rows
+
+```text
+r=2: 1,2;       r=3: 3,6;       r=4: 9,18.             (15a)
+```
+
+Thus the verified window contains a literal ternary odometer arm: both cycle
+lengths multiply by three at each step.  The complementary swapped-root arm
+has cycles `4^(3^(r-2)),2^(3^(r-2))` for `r=2,3,4`.  Equivalently, throughout
+that window,
+
+```text
+C_r has cycles
+2*3^(r-2), 3^(r-2), 4^(3^(r-2)), 2^(3^(r-2)).          (15b)
+```
+
+Equation `(15b)` is a depth-two-through-four observation, not an all-level
+law.  Two exploratory double-precision depth-six runs returned the same next
+permutation (`d_6=466`), but their maximum forward residual was approximately
+two.  They therefore fail the validity gate and are excluded from the
+verified atlas.  A multiprecision continuation must decide whether the
+odometer arm persists and whether the complementary arm changes state again.
+
 ## 6. Subsets and harmonic series
 
 The failed formula has an exact failure set
@@ -235,6 +259,21 @@ harmonic series is an indexed Boolean word first and a scalar sum second.
 The verified window says `E` misses `{1,2,3,4}` and contains `5`.  Equivalently,
 the shifted failure set records where `o(C_r)!=2^r`.  Nothing is
 yet proved about later membership.
+
+There is a precise conditional harmonic payoff.  Depth is a unary input.  If
+the section recursion admits a finite deterministic state quotient and the
+predicate `o(C_r)!=2^r` is state-readable, then `E` is a unary regular
+language, hence ultimately periodic.  THM-3359 would then give a rational
+harmonic logarithmic coefficient, and THM-3364 would retain the complete
+periodic phase word as a cyclotomic Boolean idempotent.  The scalar harmonic
+coefficient would still be only its zero Fourier mode.
+
+The antecedent is open.  A handful of cycle rows cannot establish a finite
+state quotient, and the rejected depth-six float probe is exactly the kind of
+state change that a scalar extrapolation misses.  This cleanly separates the
+unconditional fact that every `E subset N` defines a subseries from the much
+stronger claim that this particular `E` has finite-state or periodic
+arithmetic.
 
 ## Connection contract
 
