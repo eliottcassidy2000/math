@@ -1,8 +1,8 @@
 # Three coordinate cubics, one sign class
 
 **Status: proved synthesis from THM-2546, THM-3438, THM-3448, THM-3508,
-THM-3517, THM-3519, THM-3531, THM-3533, and THM-3535; no arbitrary-map
-classification claim.**  The fixed sporadic tower now has full iterated
+THM-3517, THM-3519, THM-3531, THM-3533, THM-3535, and THM-3537; no
+arbitrary-map classification claim.**  The fixed sporadic tower now has full iterated
 wreath monodromy, all-level constant-linear primitivity, an intrinsic
 discriminant class, and a reduced newest-prime different at every level.  The
 explicit THM-3448 cyclic weighted family is proved in every grade.  The
@@ -207,6 +207,20 @@ minimal polynomials have the intrinsic class `(7c)` at all levels.  This
 still does not make their power orders locally maximal: THM-3533's index term
 in `(7e)` remains a separate coordinate question.
 
+THM-3537 begins the old-prime effective ledger at depth two.  The old factor
+`L` has normalization coefficient four and geometric inertia
+
+```text
+(4)(2)(1)^3.                                           (7g)
+```
+
+The proof is a parity squeeze: transitivity gives `3+c`, the finite-sheet
+unit removes one possible contribution, a tame cubic gives `0<=c<=2`, and
+the absence of `L` from the odd class forces `c=1`.  On the canonical
+transverse DVR, the literal `x_2` order has exponent eight and index length
+two.  Thus the passport now contains one exact positive old multiplicity and
+one prescribed-coordinate defect, but not their all-level recurrences.
+
 ## 5. Relation to the explicit cyclic weighted family
 
 MISTAKE-416 repairs the provenance boundary: the legacy THM-1605 record has
@@ -337,8 +351,9 @@ all three actual coordinates.  The next exact tests are:
 1. compute the newest-prime local index of each prescribed literal coordinate
    at every level; simultaneous primitivity is now proved by THM-3535, but
    local maximality is not;
-2. compute the old-prime positive discriminant multiplicities; the newest
-   prime is already exactly reduced by THM-3533;
+2. extend THM-3537's exact `delta_2(L)=4` to old-prime multiplicities at
+   depth three and beyond; the newest prime is already exactly reduced by
+   THM-3533;
 3. retain inertia cycle type component-by-component, so even cycles cannot
    disappear behind the sign quotient;
 4. classify the explicit cyclic family within a fixed degree only after
@@ -348,10 +363,11 @@ all three actual coordinates.  The next exact tests are:
 
 The strongest current conclusion is now broader but still sharply bounded:
 the fixed tower has full wreath monodromy, all-level literal-coordinate
-primitivity, one intrinsic newest-prime sign character, and a reduced newest
-different at every depth.  Every literal coordinate shares that character
-at every level, as do the three coordinates in every explicit cyclic
-weighted grade.  The degree-value spectrum is completely classified, but the
-maps are not.  The `m=3` sign-blind component `C=0`, the `u` versus `Lu` index
-jump, and the atomic/composite degree-nine pair are three decisive witnesses
-to the missing classification data.
+primitivity, one intrinsic newest-prime sign character, a reduced newest
+different at every depth, and the first exact old-prime inertia row
+`(4)(2)(1)^3`.  Every literal coordinate shares that character at every
+level, as do the three coordinates in every explicit cyclic weighted grade.
+The degree-value spectrum is completely classified, but the maps are not.
+The `m=3` sign-blind component `C=0`, the transverse `x_2` index two, and the
+atomic/composite degree-nine pair are three decisive witnesses to the missing
+classification data.

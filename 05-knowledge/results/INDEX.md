@@ -41,6 +41,31 @@
   Every finite map/census now has a distinct-engine reproduction; external
   hostile audit of variance and typing remains pending, so status is not
   promoted.
+- `keller_level_two_old_L_newton_index_audit_20260816.py` -> matching `.out`
+  [THM-3537 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  At depth
+  two, discriminant transitivity gives old-`L` exponent `3+c` with
+  `0<=c<=2`; THM-3531 parity forces `c=1`, hence normalization exponent four
+  and tame inertia `(4)(2)(1)^3`.  Independently, the canonical line
+  `(a,b,c)=(2/27+t,1,1)` gives the literal `x_2` Newton slopes
+  `-1/2,-1/4,0`, root packets `2+4+3`, order-discriminant exponent eight,
+  and exact transverse local index length two.  This does not compute the
+  three-variable generic coordinate index or an all-level old-prime law.
+  Script/output/semantic LF SHA-256:
+  `d2eb44fc2ad5c270ebddf7197ad2d3e3c905b7a9dad86fa80b83735551f55f5d` /
+  `f159ba5453fc8e85c0f7d814fceae1a073ef41e6d4e0328c766c543b2c631fc0` /
+  `02cbf6a236a84ca153bea6fa60fb3c1267593b9e0694c0cddc5b1d7dc5bd8f59`.
+
+- `keller_old_L_inertia_numerical_scout_20260816.py` -> matching `.out`
+  [VERIFIED-NUMERICAL DISCOVERY ONLY].  Chordal continuation of all inverse
+  leaves gives stable old-`L` cycle exponents `1,4,14,46,142` through depth
+  five and verifies every ancestry-block projection.  The first four rows
+  fit `2*3^(n-1)-2^(n-1)`, but its depth-five prediction `146` is refuted.
+  The surviving wreath-state atlas records identity, transposition, or
+  3-cycle child products around each parent orbit; depth-five cycles are
+  `36,18,8^9,4^9,1^81`.  It is not an exact all-level inertia theorem.
+  Script/output LF SHA-256:
+  `95748c8b5b000d23c7a99af5bac69c288a95db30bfbe8d49cddba8f14ad7c32f` /
+  `1374c45724a688d0790f4fe8468a329eca059cb9c9229db2bbf84abbc523b0d5`.
 
 - `keller_tame_conjugacy_covariance_audit_20260816.py` -> matching `.out`
   [THM-3532 PROVED + VERIFIED-EXACT].  For every polynomial two-sided

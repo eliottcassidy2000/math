@@ -13,9 +13,12 @@ status: >
   normalization exponent one; and THM-3535 proves full wreath monodromy plus
   every nonzero constant linear form primitive at all depths.  THM-3532 proves
   full covariance on the fixed polynomial-conjugacy orbit and only one-step
-  covariance for independent source/target changes.  Constant-form order
-  indices, old-prime multiplicities, wider tame-equivalence covariance, and
-  monoid-wide classification remain open.
+  covariance for independent source/target changes.  THM-3537 computes the
+  first old-prime normalization multiplicity `delta_2(L)=4`, its
+  `(4)(2)(1)^3` inertia, and one literal-`x_2` transverse index of length two.
+  Generic constant-form order indices, old-prime multiplicities beyond this
+  first rung, wider tame-equivalence covariance, and monoid-wide
+  classification remain open.
   Nothing here is a JC(2) or arbitrary-map classification claim.
 source: opus-2026-07-28 (from the uniform disc law found by the
   THM-2546 referee run: disc = -4 (square)^2 L for all three
@@ -43,6 +46,7 @@ related:
   - THM-3532 (two-sided one-step and fixed conjugacy-orbit covariance)
   - THM-3533 (newest-prime normalization exponent one and index-square law)
   - THM-3535 (full wreath monodromy and all-level constant-linear primitivity)
+  - THM-3537 (depth-two old-L multiplicity, inertia, and x-transverse index)
 ---
 
 # HYP-9033 -- the discriminant tower and the genus axis
@@ -254,8 +258,22 @@ different, Jelonek tower, and each primitive observation `ell` as
 `ell o phi^(-1)` under honest conjugacy.  For affine `phi` these transported
 observations remain affine-linear (the constant is irrelevant to generated
 fields); for nonlinear `phi` they need not be standard linear forms.  A
-general left/right tame equivalence transports one edge but inserts a middle
-automorphism on iteration, so no broader family theorem follows.
+  general left/right tame equivalence transports one edge but inserts a middle
+  automorphism on iteration, so no broader family theorem follows.
+
+THM-3537 opens the positive old-prime ledger at its first nontrivial rung.
+At depth two, transitivity gives `delta_2(L)=3+c`, the finite-sheet unit kills
+one possible contribution, the remaining tame cubic gives `0<=c<=2`, and
+the intrinsic even parity forces `c=1`.  Hence
+
+```text
+delta_2(L)=4,                 inertia=(4)(2)(1)^3.
+```
+
+On the canonical transverse line `(2/27+t,1,1)`, the literal `x_2` order has
+discriminant exponent eight and index length two.  This is an exact witness
+that all-level primitivity does not imply local maximality.  It is not yet a
+generic coordinate-index computation or an all-depth formula for old primes.
 
 ## 3. Two crevasse invariants for atomhood (spectrum repaired)
 

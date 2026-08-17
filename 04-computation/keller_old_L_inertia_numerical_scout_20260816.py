@@ -7,7 +7,8 @@ generic point (a,b,c)=(2/27,1,1) of L=0 and reports the resulting cycle types.
 The inverse chart is the exact one used by THM-3533.  Matching uses the
 chordal metric on each affine coordinate, so the two branches tending to
 infinity remain numerically visible.  Repeated radii and step counts are
-hostile controls against a continuation artefact.
+hostile controls against a continuation artefact.  The depth-five run is a
+hostile against the closed form suggested by depths one through four.
 """
 
 from __future__ import annotations
@@ -87,6 +88,34 @@ def inverse_levels(target: Point, depth: int) -> tuple[list[list[Point]], float]
     return levels, residual
 
 
+def continue_levels(
+    target: Point, previous: list[list[Point]], depth: int
+) -> tuple[list[list[Point]], float, float]:
+    """Continue in ancestry blocks using only local three-by-three matches."""
+
+    levels: list[list[Point]] = []
+    residual = 0.0
+    max_step_cost = 0.0
+    first_children, first_residual = inverse_points(target)
+    first_ordered, first_cost = reorder_by_continuation(previous[0], first_children)
+    levels.append(first_ordered)
+    residual = max(residual, first_residual)
+    max_step_cost = max(max_step_cost, first_cost)
+    for level_index in range(1, depth):
+        children: list[Point] = []
+        for parent_index, parent in enumerate(levels[level_index - 1]):
+            raw_children, new_residual = inverse_points(parent)
+            old_block = previous[level_index][
+                3 * parent_index : 3 * parent_index + 3
+            ]
+            ordered, step_cost = reorder_by_continuation(old_block, raw_children)
+            children.extend(ordered)
+            residual = max(residual, new_residual)
+            max_step_cost = max(max_step_cost, step_cost)
+        levels.append(children)
+    return levels, residual, max_step_cost
+
+
 def projective_pair(value: complex) -> tuple[complex, float]:
     size = abs(value)
     normalizer = np.hypot(1.0, size)
@@ -132,20 +161,82 @@ def endpoint_permutation(initial: list[Point], final: list[Point]) -> tuple[int,
     return tuple(int(value) for value in permutation)
 
 
+def endpoint_tree_permutations(
+    initial: list[list[Point]], final: list[list[Point]]
+) -> tuple[tuple[int, ...], ...]:
+    permutations = [endpoint_permutation(initial[0], final[0])]
+    for level_index in range(1, len(initial)):
+        parent_permutation = permutations[-1]
+        child_permutation = [-1] * len(initial[level_index])
+        for parent_index, parent_image in enumerate(parent_permutation):
+            final_block = final[level_index][
+                3 * parent_index : 3 * parent_index + 3
+            ]
+            initial_block = initial[level_index][
+                3 * parent_image : 3 * parent_image + 3
+            ]
+            local = endpoint_permutation(initial_block, final_block)
+            for child_index, child_image in enumerate(local):
+                child_permutation[3 * parent_index + child_index] = (
+                    3 * parent_image + child_image
+                )
+        require(-1 not in child_permutation, ("incomplete endpoint tree", level_index))
+        permutations.append(tuple(child_permutation))
+    return tuple(permutations)
+
+
 def cycle_lengths(permutation: tuple[int, ...]) -> tuple[int, ...]:
+    return tuple(sorted((len(cycle) for cycle in permutation_cycles(permutation)), reverse=True))
+
+
+def permutation_cycles(permutation: tuple[int, ...]) -> tuple[tuple[int, ...], ...]:
     seen = [False] * len(permutation)
-    lengths: list[int] = []
+    cycles: list[tuple[int, ...]] = []
     for start in range(len(permutation)):
         if seen[start]:
             continue
         cursor = start
-        length = 0
+        cycle: list[int] = []
         while not seen[cursor]:
             seen[cursor] = True
+            cycle.append(cursor)
             cursor = permutation[cursor]
-            length += 1
-        lengths.append(length)
-    return tuple(sorted(lengths, reverse=True))
+        cycles.append(tuple(cycle))
+    return tuple(cycles)
+
+
+def lift_profile(
+    parent: tuple[int, ...], child: tuple[int, ...]
+) -> tuple[tuple[int, tuple[int, ...], int], ...]:
+    require(len(child) == 3 * len(parent), ("lift degrees", len(parent), len(child)))
+    profile: dict[tuple[int, tuple[int, ...]], int] = {}
+    predicted_child_cycles: list[int] = []
+    for cycle in permutation_cycles(parent):
+        action = tuple(range(3))
+        for parent_index in cycle:
+            child_action = []
+            for child_index in range(3):
+                image = child[3 * parent_index + child_index]
+                require(
+                    image // 3 == parent[parent_index],
+                    ("block projection", parent_index, child_index, image),
+                )
+                child_action.append(image % 3)
+            require(sorted(child_action) == [0, 1, 2],
+                    ("local child permutation", child_action))
+            action = tuple(child_action[action[index]] for index in range(3))
+        action_type = cycle_lengths(action)
+        key = (len(cycle), action_type)
+        profile[key] = profile.get(key, 0) + 1
+        predicted_child_cycles.extend(len(cycle) * length for length in action_type)
+    require(
+        tuple(sorted(predicted_child_cycles, reverse=True)) == cycle_lengths(child),
+        ("lift cycle reconstruction", profile, cycle_lengths(child)),
+    )
+    return tuple(
+        (parent_length, action_type, count)
+        for (parent_length, action_type), count in sorted(profile.items())
+    )
 
 
 @dataclass(frozen=True)
@@ -153,6 +244,7 @@ class Run:
     radius: float
     steps: int
     cycle_rows: tuple[tuple[int, tuple[int, ...], int], ...]
+    lift_rows: tuple[tuple[int, tuple[tuple[int, tuple[int, ...], int], ...]], ...]
     max_step_cost: float
     max_forward_residual: float
 
@@ -165,32 +257,37 @@ def run(radius: float, steps: int, depth: int = 4) -> Run:
     for step in range(steps + 1):
         parameter = radius * cmath.exp(2j * np.pi * step / steps)
         target = (complex(2 / 27) + parameter, 1.0 + 0j, 1.0 + 0j)
-        levels, residual = inverse_levels(target, depth)
-        max_forward_residual = max(max_forward_residual, residual)
         if tracked is None:
-            tracked = [
-                sorted(level, key=lambda point: tuple((abs(z), z.real, z.imag) for z in point))
-                for level in levels
-            ]
+            levels, residual = inverse_levels(target, depth)
+            # Generation order is ancestry-compatible: child i has parent
+            # i//3.  Retaining it lets the endpoint permutations expose their
+            # exact wreath lift products rather than only global cycle types.
+            tracked = [list(level) for level in levels]
             initial = [list(level) for level in tracked]
+            max_forward_residual = max(max_forward_residual, residual)
             continue
-        for level_index, level in enumerate(levels):
-            tracked[level_index], step_cost = reorder_by_continuation(
-                tracked[level_index], level
-            )
-            max_step_cost = max(max_step_cost, step_cost)
+        tracked, residual, step_cost = continue_levels(target, tracked, depth)
+        max_forward_residual = max(max_forward_residual, residual)
+        max_step_cost = max(max_step_cost, step_cost)
 
     require(tracked is not None and initial is not None, "empty continuation")
     rows = []
-    for level_index, (first, last) in enumerate(zip(initial, tracked), start=1):
-        permutation = endpoint_permutation(first, last)
+    permutations = endpoint_tree_permutations(initial, tracked)
+    for level_index, permutation in enumerate(permutations, start=1):
         cycles = cycle_lengths(permutation)
         exponent = len(permutation) - len(cycles)
         rows.append((level_index, cycles, exponent))
+    lift_rows = tuple(
+        (depth, lift_profile(parent, child))
+        for depth, (parent, child) in enumerate(
+            zip(permutations, permutations[1:]), start=1
+        )
+    )
     return Run(
         radius=radius,
         steps=steps,
         cycle_rows=tuple(rows),
+        lift_rows=lift_rows,
         max_step_cost=max_step_cost,
         max_forward_residual=max_forward_residual,
     )
@@ -203,11 +300,28 @@ def main() -> None:
         run(1.0e-4, 720),
     )
     baseline = runs[0].cycle_rows
+    baseline_lifts = runs[0].lift_rows
     for item in runs[1:]:
         require(item.cycle_rows == baseline, ("inconsistent cycle rows", runs))
+        require(item.lift_rows == baseline_lifts, ("inconsistent lift rows", runs))
     require(baseline[0][1] == (2, 1), ("level-one positive control", baseline[0]))
     require(all(row[2] % 2 == (1 if row[0] == 1 else 0) for row in baseline),
             ("THM-3531 old-L parity", baseline))
+    deep_runs = (
+        run(1.0e-3, 360, depth=5),
+        run(3.0e-4, 720, depth=5),
+    )
+    require(deep_runs[0].cycle_rows == deep_runs[1].cycle_rows,
+            ("inconsistent depth-five cycle rows", deep_runs))
+    require(deep_runs[0].lift_rows == deep_runs[1].lift_rows,
+            ("inconsistent depth-five lift rows", deep_runs))
+    require(deep_runs[0].cycle_rows[:4] == baseline,
+            ("depth-five prefix mismatch", deep_runs[0].cycle_rows, baseline))
+    depth_five = deep_runs[0].cycle_rows[4]
+    candidate_exponent = 2 * 3**4 - 2**4
+    require(depth_five[2] == 142, depth_five)
+    require(depth_five[2] != candidate_exponent,
+            ("closed-form hostile failed", depth_five, candidate_exponent))
     print("== fixed Keller old-L numerical inertia scout ==")
     for item in runs:
         print(
@@ -221,6 +335,28 @@ def main() -> None:
                 f"depth={depth};degree={3**depth};cycles={histogram};"
                 f"tame_permutation_exponent={exponent};parity={exponent % 2}"
             )
+        for depth, profile in item.lift_rows:
+            print(f"lift={depth}->{depth + 1};parent_cycle_child_products={profile}")
+    for item in deep_runs:
+        depth, cycles, exponent = item.cycle_rows[4]
+        histogram = {length: cycles.count(length) for length in sorted(set(cycles))}
+        print(
+            f"depth5_hostile_radius={item.radius:.1e};steps={item.steps};"
+            f"max_step_cost={item.max_step_cost:.3e};"
+            f"max_forward_residual={item.max_forward_residual:.3e}"
+        )
+        print(
+            f"depth={depth};degree={3**depth};cycles={histogram};"
+            f"tame_permutation_exponent={exponent};parity={exponent % 2}"
+        )
+        print(
+            "lift=4->5;parent_cycle_child_products="
+            + str(item.lift_rows[3][1])
+        )
+    print(
+        f"depths1to4_closed_form_candidate_at5={candidate_exponent};"
+        f"observed_at5={depth_five[2]};verdict=REFUTED_AT_DEPTH_5"
+    )
     print("status=VERIFIED-NUMERICAL DISCOVERY ONLY;no exact inertia theorem or index claim")
 
 

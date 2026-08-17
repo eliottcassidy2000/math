@@ -1,0 +1,12 @@
+== fixed Keller level-two old-L Newton/index audit ==
+point=(2/27,1,1);L_slice=t*(27*t + 2);H_at_point=61815040/27
+degree=9;valuation_rows=((0, 2, '-1792'), (1, 2, '-58304'), (2, 1, '-3584'), (3, 1, '1664'), (4, 1, '248320/9'), (5, 1, '-9931808/27'), (6, 0, '-28672'), (7, 0, '-101376'), (8, None, '0'), (9, 0, '-61815040/27'))
+newton_hull=((0, 2), (2, 1), (6, 0), (9, 0));slopes=('-1/2', '-1/4', '0')
+residuals=('-1792*(2*Y + 1)', '-3584*(8*Y + 1)', '-256*(241465*Y**3 + 10692*Y + 3024)/27')
+unit_residual_discriminant=-3398871051182646293954560/27
+root_valuations=('1/2', '1/4', '0');multiplicities=(2, 4, 3)
+tame_cycles=(2, 4, 1, 1, 1);normalization_discriminant_exponent=4
+literal_x2_order_discriminant_exponent=8;local_index_length=2
+semantic_sha256=02cbf6a236a84ca153bea6fa60fb3c1267593b9e0694c0cddc5b1d7dc5bd8f59
+scope=exact depth-two old-L canonical transverse local model;no all-level old-prime recurrence,newest-prime x-index,arbitrary-map,or JC claim
+all exact checks passed
