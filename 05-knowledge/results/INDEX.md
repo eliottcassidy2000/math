@@ -36,6 +36,25 @@
   `8f9816389a701198a5809abf1f952c4b30393e908a9fed787c1d7a36beb356b3` /
   `7155daf78e5f787c05f23bbb3429d0b3e330bdd54efeb4a9c3bc693fe2ef6294` /
   `96b5ba9f5c0c66e29c5b40d20f77b11242de706a7c8b98c66647cddc283efbea`.
+- `lrc_r5_one_leg_integrand_fubini_by_probe_20260816.py` -> matching `.out`
+  [FINITE-EXACT ONE-LEG EXTERNAL-PRODUCT FUBINI; NOT TEMPORAL TRANSPORT].
+  Replacing every preintegrated BY atom by its literal half-open interval
+  endpoint primitive reproduces all `6,591` atom entries from `7,108,460`
+  pieces, the pinned `19,773` guarded endpoint-bank entries, and all `1,183`
+  retained `(t,ell,c)` outputs.  All thirteen residue spectra remain
+  `(91,1,6,12,72)`.  Direct endpoint primitives and `fast_endpoint_sum`
+  agree; normal and optimized replays match.  Deleting the right guard or
+  erasing the BY phase changes `8,112` or `8,788` pair entries while retaining
+  full fixed-relation spectral support, so support does not certify typing.
+  The ancestry variable `y`, BY endpoint `v`, and still-preintegrated AX
+  endpoint/Q variable remain separately integrated.  This is exact Fubini on
+  an external product, not a same-stalk map, THM-2449/2512 input, grouped
+  address, current, row exclusion, or LRC(14) closure.  Script/output/
+  reflection/semantic LF SHA-256:
+  `9deaf8272a477bd9cb20357e4f7f0f51c6b487e7f6f3c136b630aae7b883b713` /
+  `8ba6fd0a0e5a35ab49bc241b6737728b5f03a35567331d8cd88461de34553bcf` /
+  `b19355adf032a72544095d1280d4958ba7677507af61512abab2ba2f61fa42f8` /
+  `6b87dc762517773254e3388dffd0bed9a5101685730dd3b93ebf4c639f224e49`.
 
 - `keller_prescribed_coordinate_newest_prime_probe_20260816.py` -> matching
   `.out` [THM-3538 PROVED + VERIFIED-EXACT; ALL-LEVEL EQUALITY OPEN].  After
