@@ -1,0 +1,16 @@
+BERGGREN DESCENDANT-ANGLE LANGUAGE / DENSITY EXACT AUDIT
+source_sha256_lf=62e2f3c8364edd58f19d57f4c4ff4d6942f56a22010e3256b4aa2c1b6a4858d7
+status=PROOF_COMPLETE_ELEMENTARY_CANDIDATE+VERIFIED_EXACT;not_yet_canon
+walls=alpha=(sqrt(145)-9)/8;beta=(sqrt(145)-8)/9
+inverse_wall_itineraries=alpha:BABB;beta:BCBB
+four_step_cdf_returns=alpha:(Fraction(32, 81), Fraction(-1, 81));beta:(Fraction(50, 81), Fraction(-1, 81))
+count_recursions=U[n+4]=32*3^n-U[n];A[n+4]=18*3^n-A[n];D[n+4]=32*3^n-D[n]
+level_densities_U_acute_D=(Fraction(16, 41), Fraction(9, 41), Fraction(16, 41))
+residual_period8=((-16, -9, 25), (-7, 14, -7), (20, 1, -21), (-22, 3, 19), (16, 9, -25), (7, -14, 7), (-20, -1, 21), (22, -3, -19))
+direct_tree_depth=10;distinct_nodes=88573;counts=((0, 0, 0, 1), (1, 1, 1, 1), (2, 4, 2, 3), (3, 10, 6, 11), (4, 32, 18, 31), (5, 95, 53, 95), (6, 284, 160, 285), (7, 854, 480, 853), (8, 2560, 1440, 2561), (9, 7681, 4321, 7681), (10, 23044, 12962, 23043))
+uniform_prefix_bank=121;four_step_suffix_checks=484
+language=regular_by_periodic_wall_itinerary;shortlex_discrepancy=O(log_N)_proof_side
+harmonic=each_shortlex_type_has_logarithmic_coefficient_equal_to_its_density
+scope=no_RXTX_tensor_map_no_tournament_current_no_LRC_or_JC_consequence
+semantic_sha256=b0a83446f06d4836ebb9125a3e88fbba8fe41fe44ed79017f85d3c8cfd229129
+verdict=PASS

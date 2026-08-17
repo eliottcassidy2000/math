@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `berggren_descendant_angle_language_density_20260816.py` -> matching
+  `.out` [PROOF-COMPLETE ELEMENTARY CANDIDATE + VERIFIED-EXACT; INDEPENDENT
+  AUDIT PENDING].  THM-3334's two angle walls have inverse Berggren
+  itineraries `(BABB)^omega` and `(BCBB)^omega`.  Consequently the exact
+  U-obtuse/acute/D-obtuse level counts obey four-step recurrences and have
+  densities `16/41,9/41,16/41`, with bounded period-eight residuals.  The
+  wall languages are regular; uniform prefix contraction gives shortlex
+  discrepancy `O(log N)` and the same three logarithmic harmonic
+  coefficients.  RXTX's separate `26/41` cost constant shares only the
+  exact resolvent-denominator identity `3^4+1=2(7^2-2^3)`; no tensor,
+  tournament, LRC, or JC transfer is claimed.  Script/output/semantic LF
+  SHA-256:
+  `62e2f3c8364edd58f19d57f4c4ff4d6942f56a22010e3256b4aa2c1b6a4858d7` /
+  `0994882182afbcf9913cbd8f2072cf50d2b0c849b415cf4acc8d4e50ad3b040f` /
+  `b0a83446f06d4836ebb9125a3e88fbba8fe41fe44ed79017f85d3c8cfd229129`.
+
 - `keller_intrinsic_discriminant_raw_tower_audit_20260816.py` -> matching
   `.out` [THM-3531 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  For the fixed sporadic map, trace-discriminant
