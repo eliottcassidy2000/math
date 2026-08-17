@@ -44,62 +44,86 @@
             1,
             26
           ],
+          "split_quotient_crosscheck": true,
           "unique_L_block": true
         }
       }
     },
     {
-      "L_point_count": 1369,
-      "missing_depths": [
-        2,
-        3
-      ],
-      "prime": 37,
-      "witnesses": {}
-    },
-    {
       "L_point_count": 1681,
       "missing_depths": [
-        3
+        2
       ],
       "prime": 41,
       "witnesses": {
-        "2": {
+        "3": {
+          "algebraic_preceding_blocks": 27,
           "collision": {
             "u": {
-              "coefficient_digest": "57c122b0ec310382be19b64672a003cebba3e27b2f7f22d9b57e7a7ce52e92b4",
-              "degree": 27,
+              "coefficient_digest": "9d8d2224251a908be263e96d9f1fa349f1d12c07c37a3add62d8869d7a1521a2",
+              "degree": 81,
               "derivative_gcd": "U",
               "derivative_gcd_degree": 1,
-              "pairwise_coprime": true
+              "nine_parent_norm_degrees": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
             },
             "y": {
-              "coefficient_digest": "d5497e91e2fe2a4f6bd8ce72eed6ee74332fa259332e6d7a75da23cba13f6a23",
-              "degree": 27,
-              "derivative_gcd": "Y - 2",
+              "coefficient_digest": "de5abcf4575e0e3c81552811e0a5c54bf62e4fedfb81752e7c1020275ef517d6",
+              "degree": 81,
+              "derivative_gcd": "Y - 18",
               "derivative_gcd_degree": 1,
-              "pairwise_coprime": true
+              "nine_parent_norm_degrees": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
             },
             "z": {
-              "coefficient_digest": "f9abb168dbf47359900b1d543bfb20911c37625ddf498dfb64676d87a4fa26a8",
-              "degree": 27,
+              "coefficient_digest": "cd6422d26d550d928da3eca952d66d92cf60f430ef917bf82669b9f61a34111f",
+              "degree": 81,
               "derivative_gcd": "Z",
               "derivative_gcd_degree": 1,
-              "pairwise_coprime": true
+              "nine_parent_norm_degrees": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
             }
           },
           "eta": [
-            39,
-            18,
-            23
+            15,
+            11,
+            7
           ],
-          "level": 3,
-          "preceding_blocks": 9,
+          "level": 4,
+          "method": "nine split parents plus exact cubic quotient norms",
           "q0": [
-            1,
-            24,
-            26
+            7,
+            26,
+            3
           ],
+          "split_parent_blocks": 9,
           "unique_L_block": true
         }
       }
@@ -107,7 +131,7 @@
     {
       "L_point_count": 1849,
       "missing_depths": [
-        3
+        2
       ],
       "prime": 43,
       "witnesses": {}
@@ -115,34 +139,56 @@
     {
       "L_point_count": 2209,
       "missing_depths": [
-        3
+        2
       ],
       "prime": 47,
       "witnesses": {}
     },
     {
       "L_point_count": 2809,
-      "missing_depths": [
-        3
-      ],
+      "missing_depths": [],
       "prime": 53,
-      "witnesses": {}
-    },
-    {
-      "L_point_count": 3481,
-      "missing_depths": [
-        3
-      ],
-      "prime": 59,
-      "witnesses": {}
-    },
-    {
-      "L_point_count": 3721,
-      "missing_depths": [
-        3
-      ],
-      "prime": 61,
-      "witnesses": {}
+      "witnesses": {
+        "2": {
+          "collision": {
+            "u": {
+              "coefficient_digest": "477a1a26532469060358ea1342d4620615824a6187a4a0babbab6e415313feee",
+              "degree": 27,
+              "derivative_gcd": "U",
+              "derivative_gcd_degree": 1,
+              "pairwise_coprime": true
+            },
+            "y": {
+              "coefficient_digest": "d361d6b2e712eb8e546566e69a8e81711e8dfa57760f84a342a1e7ddb268859e",
+              "degree": 27,
+              "derivative_gcd": "Y - 7",
+              "derivative_gcd_degree": 1,
+              "pairwise_coprime": true
+            },
+            "z": {
+              "coefficient_digest": "593f01d3cb295cfb7bf0eca42f794c620c84f11821599ee1ad7be8dc582caeb2",
+              "degree": 27,
+              "derivative_gcd": "Z",
+              "derivative_gcd_degree": 1,
+              "pairwise_coprime": true
+            }
+          },
+          "eta": [
+            4,
+            38,
+            38
+          ],
+          "level": 3,
+          "preceding_blocks": 9,
+          "q0": [
+            2,
+            23,
+            4
+          ],
+          "split_quotient_crosscheck": true,
+          "unique_L_block": true
+        }
+      }
     }
   ],
   "rational_level_two": {
@@ -158,6 +204,11 @@
       "1"
     ],
     "quadratic_factor": "(118818549*X**2 + 8801374*X + 5651208)/118818549",
+    "ramified_block_square_factors": {
+      "h_u": "1/2",
+      "h_y": "1",
+      "h_z": "49/32"
+    },
     "rows": {
       "u": {
         "block0_factorization": "U**2*(2*U - 1)/2",
@@ -182,9 +233,73 @@
       }
     }
   },
-  "semantic_sha256": "81be2de6e508be40f2e67d5fe059633e3eb2d7a826c4506dfe255a893214a636",
-  "unwitnessed_depths": [
-    3
+  "reciprocal_raw_clearing_ledger": [
+    {
+      "degree": 3,
+      "level": 1,
+      "monic_x_discriminant_baseline": -3,
+      "raw_scalar_shift": 4,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    },
+    {
+      "degree": 9,
+      "level": 2,
+      "monic_x_discriminant_baseline": -15,
+      "raw_scalar_shift": 16,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    },
+    {
+      "degree": 27,
+      "level": 3,
+      "monic_x_discriminant_baseline": -51,
+      "raw_scalar_shift": 52,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    },
+    {
+      "degree": 81,
+      "level": 4,
+      "monic_x_discriminant_baseline": -159,
+      "raw_scalar_shift": 160,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    },
+    {
+      "degree": 243,
+      "level": 5,
+      "monic_x_discriminant_baseline": -483,
+      "raw_scalar_shift": 484,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    },
+    {
+      "degree": 729,
+      "level": 6,
+      "monic_x_discriminant_baseline": -1455,
+      "raw_scalar_shift": 1456,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    },
+    {
+      "degree": 2187,
+      "level": 7,
+      "monic_x_discriminant_baseline": -4371,
+      "raw_scalar_shift": 4372,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    },
+    {
+      "degree": 6561,
+      "level": 8,
+      "monic_x_discriminant_baseline": -13119,
+      "raw_scalar_shift": 13120,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    }
   ],
+  "semantic_sha256": "54e24e2b22edbc0882be21fc1c64f8b451a6c8767af779be52a3e16adcb6db34",
+  "unwitnessed_depths": [],
   "verdict": "exact cross-block noncollision witnesses; all-level criterion remains separate"
 }
