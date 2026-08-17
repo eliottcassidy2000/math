@@ -110,6 +110,24 @@
   `e3da0f4cb34c5a70257b3a186e6ce94d92cd8d0787289c33443c5c627e76a16a` /
   `772f86fb6e43b7d69262caeb9bb4c54687e16ebc4b6c3b50fd21f5506ade43de`.
 
+- `berggren_fibonacci_dihedral_reflection_cospan_20260816.py` -> matching
+  `.out` [VERIFIED-EXACT MATRIX/FAREY/TOURNAMENT COSPAN; UNNUMBERED].
+  Berggren's parabolic `U` factors as `S_B R_B` with two integral Lorentz
+  involutions; its parameter action similarly generates the Farey ray
+  `1/2,2/3,3/4,...`.  The even Fibonacci step `Q^2` factors as two
+  projective integral involutions and generates the Farey-neighbour ray
+  `1/2,3/5,8/13,...`.  Thus both are representations of the same infinite-
+  dihedral reflection--rotation presentation, but one is parabolic with
+  quadratic growth and one hyperbolic with Fibonacci growth.  The Keller
+  old-`L` products `C_r=B_r A_r` supply only a VERIFIED-NUMERICAL finite
+  third leg.  A directed `C4` has two missing pairs and four tournament
+  completions; `C6` has nine missing pairs and 512 completions; none is
+  rotation-invariant.  No ancestry, signed-cochain, Keller, or LRC transport
+  follows.  Script/output/semantic LF SHA-256:
+  `0823008ea9d4ffc11774d44047a3d6d67e9ab3fb93ad959d9f3b14439fc2c273` /
+  `56052b22df5e970df17f383d76631988bd7972aad4c60cd22ec55aed70cc4916` /
+  `2ed27bf257b908ab33b5ad5909f46d2b171b0b1b14e2f31cf2205ea6e2825114`.
+
 - `keller_tame_conjugacy_covariance_audit_20260816.py` -> matching `.out`
   [THM-3532 PROVED + VERIFIED-EXACT].  For every polynomial two-sided
   equivalence `G=tau o F o sigma`, the old extension square gives exact
