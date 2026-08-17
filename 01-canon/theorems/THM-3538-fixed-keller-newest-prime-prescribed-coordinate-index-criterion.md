@@ -24,6 +24,7 @@ related:
   - THM-3532-fixed-keller-conjugacy-covariance-and-two-sided-one-step-boundary
   - THM-3537-fixed-keller-level-two-old-L-inertia-and-x-index
   - THM-3539-fixed-keller-newest-prime-decomposition-centralizer-and-lca-packet-floor
+  - THM-3540-fixed-keller-depth-two-newest-prime-residue-saturation
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
 script: 04-computation/keller_prescribed_coordinate_newest_prime_probe_20260816.py
 output: 05-knowledge/results/keller_prescribed_coordinate_newest_prime_probe_20260816.out
@@ -393,6 +394,12 @@ blocks has the full marked-leaf point-and-pair orbits, the factors in `(10)`
 collapse to exactly `n^2` LCA valuation packets.  That decomposition-group
 saturation is not implied by full global wreath monodromy and remains open;
 without it the raw exponential factor census can persist.
+
+THM-3540 subsequently proves this point-and-pair saturation gate at `n=2`:
+the predecessor cubic over `kappa(H)` is one birational ancestry root times
+an irreducible quadratic.  Hence the six raw factors descend to four orbit
+packets there.  Saturation at every `n>=3` remains open, so this does not alter
+the all-level boundary above.
 
 The numerical old-`L` sequence `1,4,14,46,142` is discovery data only.  In
 particular, the formula fitting its first four rows predicts `146` at depth

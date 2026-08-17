@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `keller_depth_two_newest_prime_residue_saturation_20260816.py` -> matching
+  `.out` [THM-3540 PROVED + VERIFIED-EXACT].  Over the generic newest divisor
+  `H`, the predecessor cubic is its unique birational `V(L)` ancestry root
+  times a quadratic whose discriminant has square class `[-L(target)]`.
+  On the normalization axis `lambda=0`, `L(target)=16tau` and the quadratic
+  discriminant is `-256tau`; its odd `tau` valuation proves irreducibility.
+  The residue image on predecessor blocks is therefore the full marked-point
+  `S2`, proving THM-3539 point/pair saturation at `n=2`.  The six raw
+  THM-3538 factors descend to four packets with multiplicities `1,2,2,1`.
+  This proves no full decomposition-centralizer equality, saturation at
+  `n>=3`, new unitness, all-level index result, or LRC conclusion.
+  Script/output/semantic LF SHA-256:
+  `a92e5237f4ceed6b086e0f29c89536c494bbd60588630e4331b3b5443fe2d968` /
+  `6477e75c328111f4cbac497b82c1f369bbb845bfe7b66a34dcc90773d5e5f0a8` /
+  `81e36ca0659eb75dc7a0f660f4c8a40ae70bf0d4fba56c08f4ef17241349488e`.
+
 - `boolean_c4_harmonic_language_atlas_20260816.py` -> matching `.out`
   [PROVED COMPARISON CRITERIA + VERIFIED-EXACT].  XOR on two membership bits
   is the four-cell `V4` carrier: its two-generator Cayley graph has four

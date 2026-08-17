@@ -18,6 +18,7 @@ depends_on:
 related:
   - THM-3531-fixed-keller-intrinsic-all-level-discriminant-square-class
   - THM-3537-fixed-keller-level-two-old-L-inertia-and-x-index
+  - THM-3540-fixed-keller-depth-two-newest-prime-residue-saturation
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
 script: 04-computation/keller_newest_prime_decomposition_lca_packet_audit_20260816.py
 output: 05-knowledge/results/keller_newest_prime_decomposition_lca_packet_audit_20260816.out
@@ -326,6 +327,13 @@ does not prove:
 5. transport to old primes, where THM-3537's ramified predecessor hostile
    invalidates the split newest-prime model; or
 6. an arbitrary-Keller-map classification, `JC(2)`, `DC(2)`, or LRC(14).
+
+THM-3540 subsequently proves the saturation gate `(22)` at the first
+nontrivial case `n=2`.  It identifies the predecessor factorization over
+`kappa(H)` as one birational ancestry root times an irreducible quadratic,
+so the induced residue action is the full marked-point `S2` and the carrier
+has four packets.  This does not prove `(22)` for any `n>=3` or identify the
+full decomposition group even at `n=2`.
 
 The theorem instead isolates the exact missing sidecar: compute the residue
 decomposition action `(12)`.  If it is point-and-pair saturated, THM-3538's
