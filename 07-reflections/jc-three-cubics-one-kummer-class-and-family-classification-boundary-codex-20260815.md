@@ -1,10 +1,10 @@
 # Three coordinate cubics, one sign class
 
 **Status: proved synthesis from THM-2546, THM-3438, THM-3448, THM-3508,
-THM-3517, THM-3519, THM-3531, and THM-3533; no arbitrary-map classification
-claim.**  The fixed sporadic tower now has an intrinsic discriminant class
-and a reduced newest-prime different at every level; literal coordinate
-primitivity remains proved only at its separately audited levels.  The
+THM-3517, THM-3519, THM-3531, THM-3533, and THM-3535; no arbitrary-map
+classification claim.**  The fixed sporadic tower now has full iterated
+wreath monodromy, all-level constant-linear primitivity, an intrinsic
+discriminant class, and a reduced newest-prime different at every level.  The
 explicit THM-3448 cyclic weighted family is proved in every grade.  The
 unstored historical family formerly attributed to THM-1605 remains
 unidentified under MISTAKE-416.
@@ -18,6 +18,9 @@ grade.  Its exact `m=3` quintic atlas has common class `[L5]` but Jelonek set
 even `C3` inertia.  THM-3531 then closes the basis-independent fixed-tower
 class at every level, and THM-3533 upgrades its newest odd divisor from a
 parity signal to exact normalization-discriminant multiplicity one.
+THM-3535 finally proves that every nonzero rational constant linear form,
+including each literal coordinate, is primitive simultaneously at all
+levels.
 
 ## 1. The three discriminants collapse to one square class
 
@@ -189,6 +192,21 @@ not: already `u` and `Lu` at level one have valuations `1` and `7`.  Thus the
 square class, normalization different, and coordinate order are three
 strictly different layers of the passport.
 
+THM-3535 closes the remaining primitivity quantifier without countable
+avoidance.  The newest prime isolates one transposition on one bottom ternary
+block; conjugation and leaf transitivity force the full iterated wreath group
+
+```text
+Mon(F^n)=S3 wr ... wr S3.                               (7f)
+```
+
+Its only blocks are ancestor cylinders.  Two exact three-point fibres then
+show that no nonzero constant linear form descends one step, so every such
+form generates `K_n/K_0` for every `n`.  Consequently the literal `x,y,z`
+minimal polynomials have the intrinsic class `(7c)` at all levels.  This
+still does not make their power orders locally maximal: THM-3533's index term
+in `(7e)` remains a separate coordinate question.
+
 ## 5. Relation to the explicit cyclic weighted family
 
 MISTAKE-416 repairs the provenance boundary: the legacy THM-1605 record has
@@ -288,8 +306,8 @@ an imprimitive nontrivial composition cannot have primitive `S_n` monodromy.
 For every factorization by allowed degrees, compositions provide additional
 maps in the same numerical grade with visible block systems.  At degree
 nine, for example, an atomic weighted `S9` map and the fixed composite
-`F o F` with ternary blocks have the same degree but cannot be equivalent
-under source/target automorphisms.
+`F o F` with full imprimitive monodromy `S3 wr S3` have the same degree but
+cannot be equivalent under source/target automorphisms.
 
 This settles the semigroup of attainable integers, not the moduli problem.
 An exact classification of maps within one degree would still have to sort
@@ -316,8 +334,9 @@ The former square-class and newest-prime tests are now closed intrinsically
 at every fixed-tower level, while the explicit weighted family is closed for
 all three actual coordinates.  The next exact tests are:
 
-1. prove or refute one fixed literal coordinate, or one fixed rational linear
-   form, being primitive simultaneously at every fixed-tower level;
+1. compute the newest-prime local index of each prescribed literal coordinate
+   at every level; simultaneous primitivity is now proved by THM-3535, but
+   local maximality is not;
 2. compute the old-prime positive discriminant multiplicities; the newest
    prime is already exactly reduced by THM-3533;
 3. retain inertia cycle type component-by-component, so even cycles cannot
@@ -328,10 +347,11 @@ all three actual coordinates.  The next exact tests are:
    source formula is recovered.
 
 The strongest current conclusion is now broader but still sharply bounded:
-the fixed tower has one intrinsic newest-prime sign character and reduced
-newest different at every depth; three primitive coordinate views share that
-character at the audited literal-coordinate levels and in every explicit
-cyclic weighted grade.  The degree-value spectrum is completely classified,
-but the maps are not.  The `m=3` sign-blind component `C=0`, the `u` versus
-`Lu` index jump, and the atomic/composite degree-nine pair are three decisive
-witnesses to the missing classification data.
+the fixed tower has full wreath monodromy, all-level literal-coordinate
+primitivity, one intrinsic newest-prime sign character, and a reduced newest
+different at every depth.  Every literal coordinate shares that character
+at every level, as do the three coordinates in every explicit cyclic
+weighted grade.  The degree-value spectrum is completely classified, but the
+maps are not.  The `m=3` sign-blind component `C=0`, the `u` versus `Lu` index
+jump, and the atomic/composite degree-nine pair are three decisive witnesses
+to the missing classification data.
