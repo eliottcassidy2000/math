@@ -210,6 +210,18 @@ same shadow, its multiplicity rises and the gcd degree rises as well; hence
 the degree-one test does not accidentally hide a collision at the already
 repeated root.
 
+This derivative-gcd test is not a criterion for arbitrary DVR orders.  For
+`R=k[[pi]]`, `char(k)!=2`, let `t^2=pi` and take the observation
+`theta=(pi t,1)` in `k[[t]] x R`.  Its polynomial
+`(T^2-pi^3)(T-1)` reduces to `T^2(T-1)` and has derivative gcd `T`, although
+`R[theta]` has index length one in the normalization.  The fixed generic
+Keller section excludes precisely this hidden thickness.  The point
+`(2/27,1,1) in V(L)` has
+`(h_y,h_z,h_u)=(1,49/32,1/2)`; since `V(L)` is irreducible and its
+degree-one ancestry section is generic, every `h_theta(q_0)` is a unit.
+Thus `(d)=>(b)` in `(16)` uses this generic-unit sidecar and is not a
+portable gcd-only implication.
+
 Thus `y_n,z_n` generate locally maximal integral orders exactly when `(16)`
 passes.  The theorem proves this equivalence for every `n`; it does not
 assert that the test passes for every `n`.
