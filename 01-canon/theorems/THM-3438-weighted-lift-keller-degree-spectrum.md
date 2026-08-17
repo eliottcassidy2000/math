@@ -20,6 +20,7 @@ related:
   - THM-2465-g1-exclusion-package-for-degree-four-twojet-keller
   - THM-3440-weighted-lift-cyclic-infinity-torsor-and-7x13-character-grid
   - THM-3441-weighted-quartic-jelonek-components-and-inertia-parity
+  - THM-3541-keller-grade-monoid-factorization-lengths-and-elasticity
   - HYP-9030-keller-degree-semigroup
 script: 04-computation/jc_weighted_lift_degree_spectrum_thm3438.py
 output: 05-knowledge/results/jc_weighted_lift_degree_spectrum_thm3438.out
@@ -371,6 +372,12 @@ Thus HYP-9030's proved monoid law and the subfamily `{3^k}` survive, but its
 conjecture `KDeg(3)={3^k}` and atom prediction are refuted.  The tournament
 strong-component analogy remains only a grammar for factorization; actual
 blocks are controlled by intermediate fields and monodromy.
+
+THM-3541 subsequently classifies the numerical monoid behind this paragraph.
+Its atoms are exactly the odd primes, `4`, `8`, and twice an odd prime; all
+factorization-length sets are explicit intervals and the numerical elasticity
+is `3/2`.  This is a theorem about the grading.  It does not alter the fact
+that the weighted `S_n` member is a map atom in every reducible grade.
 
 ## 7. Connection and loss ledger
 

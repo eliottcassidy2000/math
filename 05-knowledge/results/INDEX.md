@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `keller_grade_monoid_factorization_lengths_thm3541_20260816.py` -> matching
+  `.out` [THM-3541 PROVED + VERIFIED-EXACT].  For the Keller grade monoid
+  `M={1} union {n>=3}`, the numerical atoms are the odd primes, `4`, `8`, and
+  twice an odd prime.  If `N=2^a m` with `m` odd and `b=Omega(m)`, all
+  numerical-atom factorization lengths form the interval
+  `[b+ceil(max(a-b,0)/3), b+floor(a/2)]`; the elasticity is exactly `3/2`.
+  The first reducible, nonunique-factorization, and variable-length grades
+  are `9`, `24=3*8=4*6`, and `36=6*6=4*3*3`.  Across maps of one grade,
+  THM-3438 realizes every atomic expression length from one to the upper
+  endpoint, but this proves no factorization uniqueness for a fixed map.
+  The atom support is `P_odd disjoint-union 2P_odd disjoint-union {4,8}` and
+  has divergent harmonic mass; so does the reducible support.  No tame-class,
+  `JC(2)`, tournament, current, or LRC claim follows.  Script/output/semantic
+  LF SHA-256:
+  `11541108facd297a55287b1657e58eac777ef97eae36a6d0cfb7c84e5024c414` /
+  `46ec02241ded0a8cba53801cc1b521f9dd9802db997356e5d802114965fc6394` /
+  `c31c4c64207547cf2b239fd59be8fc53925f75e84f4b6123772ef098a49432a3`.
+
 - `keller_depth_two_newest_prime_residue_saturation_20260816.py` -> matching
   `.out` [THM-3540 PROVED + VERIFIED-EXACT].  Over the generic newest divisor
   `H`, the predecessor cubic is its unique birational `V(L)` ancestry root

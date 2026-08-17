@@ -9,6 +9,23 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-421 (2026-08-16, THM-3540 proof gate) -- etaleness was used as a coordinate-projection derivative test
+
+- **What failed:** the first THM-3540 proof said the inverse `x`-core
+  derivative `d=E'(X)` was nonzero because the predecessor cover is etale.
+  Etaleness separates full source points, but two distinct fibre points may
+  still share one displayed coordinate, so it does not by itself make an
+  `x`-eliminant squarefree at that coordinate.
+- **Minimal witness / first failed implication:** any etale finite fibre with
+  two points having the same `x`-projection defeats the implication.  No
+  THM-3540 conclusion fails: its independent normalization-axis calculation
+  gives `d|_(lambda=0)=4` exactly, proving that `d` is a nonzero rational
+  function before the discriminant square-class division.
+- **Repair / reusable rule:** distinguish separability of the full finite
+  algebra from separability of a chosen coordinate eliminant.  Gate division
+  by a coordinate derivative with a primitive-coordinate theorem or one
+  exact nonidentity witness; here the axis witness supplies the latter.
+
 ## MISTAKE-420 (2026-08-16, provisional THM-3534 scope) -- relative rank-two H1 collapse was overextended past the endpoint-retaining coefficient space
 
 - **What failed:** the provisional THM-3534 draft correctly computed

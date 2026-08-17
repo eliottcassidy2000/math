@@ -2,7 +2,7 @@
 id: THM-3540
 title: "Fixed Keller depth-two newest-prime residue saturation and four-packet descent"
 status: >
-  PROVED + VERIFIED-EXACT.  At the depth-two newest divisor H, the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  At the depth-two newest divisor H, the
   predecessor cubic factors over kappa(H) as its unique birational ancestry
   section times an irreducible quadratic.  The residue decomposition image
   on the three predecessor blocks is therefore the full marked-point
@@ -11,6 +11,12 @@ status: >
   valuation packets.  This proves neither the full decomposition group nor
   saturation at depth at least three.
 source: codex/turnpike-atlas/2026-08-16
+audit: >
+  An independent derivation accepted the field identification, factor
+  division, arbitrary-leading-coefficient discriminant identity, DVR
+  nonsquare gate, residue orbit action, packet multiplicities, and replay.
+  MISTAKE-421 records its repair of one unnecessary etale-to-coordinate-
+  derivative shortcut; the axis value d=4 is the lawful nonvanishing gate.
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
   - THM-2570-jelonek-cusp-cylinder-normalization-and-conductor
@@ -31,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3540 -- depth two has the full residue orbit gate
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 Retain the fixed sporadic Keller map `F`, the old Jelonek prime `L=P_0`,
 and its image prime `H=P_1` up to the harmless rational normalization in
@@ -117,8 +123,8 @@ THM-2473's cusp identity supplies the independent expression
 Disc(E)=-4 S_o^2 L_o.                                  (10)
 ```
 
-The predecessor cover is finite etale at the generic point of `H`, so `d`
-is nonzero.  Combining `(9)` and `(10)` yields
+The axis calculation `(13)` below gives `d|_(lambda=0)=4`, so `d` is a
+nonzero rational function.  Combining `(9)` and `(10)` yields
 
 ```text
 delta=-L_o (2S_o/d)^2,

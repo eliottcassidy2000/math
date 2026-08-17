@@ -1,0 +1,9 @@
+== THM-3541 Keller grade-monoid factorization atlas ==
+grade_monoid=M={1} union {n>=3};atoms=odd_primes union {4,8} union {2p:p odd prime}
+length_interval_for_N=2^a*m_odd;b=Omega(m):[b+ceil(max(a-b,0)/3),b+floor(a/2)]
+first_reducible_grade=9;first_nonunique_grade=24:3*8=4*6;first_variable_length_grade=36:6*6=4*3*3
+grade_factorization_elasticity=3/2;first_attained_at=36
+sample_length_sets={4:[1], 8:[1], 9:[2], 12:[2], 18:[2], 24:[2], 36:[2, 3], 64:[2, 3], 72:[3], 144:[3, 4]}
+harmonic_atom_support=P_odd disjoint_union 2P_odd disjoint_union {4,8};cutoff=1000;exact_mass_digest=b7e6f5af07175ffcc1c941cd90ba54245bd185a4028b394ae351454de31179f1
+semantic_sha256=c31c4c64207547cf2b239fd59be8fc53925f75e84f4b6123772ef098a49432a3
+status=PROVED NUMERICAL MONOID CLASSIFICATION + VERIFIED-EXACT;map atoms remain every grade; no fixed-map factorization uniqueness or LRC claim
