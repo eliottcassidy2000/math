@@ -21,6 +21,7 @@ related:
   - THM-3531-fixed-keller-intrinsic-all-level-discriminant-square-class
   - THM-3533-fixed-keller-newest-prime-reduced-different-and-index-square
   - THM-3538-fixed-keller-newest-prime-prescribed-coordinate-index-criterion
+  - THM-3539-fixed-keller-newest-prime-decomposition-centralizer-and-lca-packet-floor
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
 script: 04-computation/keller_fixed_linear_all_level_wreath_probe_20260816.py
 output: 05-knowledge/results/keller_fixed_linear_all_level_wreath_probe_20260816.out

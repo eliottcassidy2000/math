@@ -19,6 +19,7 @@ related:
   - THM-3508-level-two-sporadic-keller-three-coordinate-primitive-discriminant-square-class
   - THM-3532-fixed-keller-conjugacy-covariance-and-two-sided-one-step-boundary
   - THM-3538-fixed-keller-newest-prime-prescribed-coordinate-index-criterion
+  - THM-3539-fixed-keller-newest-prime-decomposition-centralizer-and-lca-packet-floor
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
 script: 04-computation/keller_newest_prime_different_index_square_audit_20260816.py
 output: 05-knowledge/results/keller_newest_prime_different_index_square_audit_20260816.out
