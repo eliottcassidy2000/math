@@ -23,6 +23,7 @@ depends_on:
   - THM-3528-fixed-keller-all-level-cleared-norm-polynomiality-and-finite-sheet-defect
   - THM-3529-fixed-keller-complete-packet-finite-sheet-unit
 related:
+  - THM-3531-fixed-keller-intrinsic-all-level-discriminant-square-class
   - THM-3504-level-four-sporadic-keller-image-prime-and-four-component-nonproperness
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
 script: 04-computation/keller_packet_power_image_prime_induction_audit_20260816.py
@@ -280,7 +281,8 @@ monoid statement for other packet inputs, but no raw tower return occurs.
 The result does **not** prove:
 
 - generic separability or full degree of every later coordinate eliminant;
-- an all-level discriminant square-class recursion;
+- an all-level discriminant square-class recursion (subsequently proved
+  intrinsically in THM-3531);
 - exact positive discriminant multiplicities or singularity types;
 - primitive integral normalizations, term counts, or global multidegrees;
 - a classification of all maps in a fibre-degree grade;

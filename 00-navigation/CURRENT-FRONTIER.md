@@ -341,9 +341,9 @@ is sharp: equal counts allow two densities or none.
   `(271,99)`; 3521--23/27 give packets through `R8`, ending
   `(419839,152211)`; 3525/26 give degree243/729 and
   `[Delta_5,Delta_6]=[-2R_5,2R_6]`. THM-3528 gives all raw packets; audited
-  3529 gives all finite units; audited 3530 gives absolute image primes,
-  degree-one succession, and `n` components for `F^n`.  Coordinate
-  Separability after depth six and discriminant multiplicities remain OPEN.
+  3529 gives all finite units; 3530 gives primes and `n` components;
+  3531 gives intrinsic `[(-1)^nP_(n-1)]` at every depth.  Literal-coordinate
+  separability after depth six and exact multiplicities remain OPEN.
   THM-2681 blocks the `A4/S4` cubic; 2685--2708 give its holonomy.
   3448/3517: cyclic coordinates are primitive; `m=3` gives `S5`, but `C3` Jelonek is sign-blind. 1605 is absent (MISTAKE-416); quartic `C3` remains OPEN.
   3440/3443/3450: LRC/Keller mode on 91 sheets. Mod-13 `H^1` has no amplitude map; margins block the germ. The r5 tent seam `-1` is formal; rank two blocks response transport. No current. THM-3066 retains only their

@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `keller_intrinsic_discriminant_raw_tower_audit_20260816.py` -> matching
+  `.out` [THM-3531 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  For the fixed sporadic map, trace-discriminant
+  transitivity and the odd clearing exponents prove the basis-independent
+  all-level law `d(K_n/K_0)=[(-1)^n P_(n-1)]`.  The first six raw-to-named
+  invoices recover `[-L],[H],[-2J],[2G],[-2R_5],[2R_6]`, retaining the
+  mandatory constant class `[2]`.  Every fixed depth admits a generic
+  primitive rational linear form, but the theorem supplies neither one
+  simultaneous form nor literal-coordinate separability or exact positive
+  discriminant multiplicities.  Script/output/semantic LF SHA-256:
+  `54a9d6977275feb97759b33be8ff90a677cc86222f44548f9c5f0952ec78e553` /
+  `16a1950ff176f08c7983f3b20429a8dede9ea1802d9e166081fd1dffb9ea63e0` /
+  `9ccc7adc713ebf30e69af6456e212b94f4a43da4cec6215f730c58cc00ecfe46`.
+
 - `keller_packet_power_image_prime_induction_audit_20260816.py` -> matching
   `.out` [THM-3530 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   Every actual raw packet row after the
