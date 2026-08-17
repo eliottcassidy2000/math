@@ -44,6 +44,11 @@ pairing_output: 05-knowledge/results/lrc_r5_common_child_middle_duality_thm3534_
 pairing_script_sha256: 991c65d7c1a3fc4268afdd5a9d750a138b25fce306734e31d288195e89712d09
 pairing_output_sha256: 0320a48d59e85fcdca90e48d93b80265cc76c03f5ff2e83260cf6974af493afd
 pairing_semantic_sha256: 4261ca08016b2de90bc8f609ebf283d915f8613410a5dbc15229b02baeed8803
+pairing_audit_script: 04-computation/lrc_r5_common_child_middle_duality_flint_audit_thm3534_20260816.py
+pairing_audit_output: 05-knowledge/results/lrc_r5_common_child_middle_duality_flint_audit_thm3534_20260816.out
+pairing_audit_script_sha256: 50496905b49dce05ba7ac76bcd7714a646c1e5821b04300ec7f93069d52d5904
+pairing_audit_output_sha256: c808cfe4e5e8847b355671ac703ee185da6428dca1e449a3c3837f25193eb474
+pairing_audit_semantic_sha256: 036823a7ba481528a3d02f9b36cecc08c2a76b796d69b437ac644ea62251c53e
 hash_basis: LF-normalized bytes
 ---
 
@@ -51,6 +56,11 @@ hash_basis: LF-normalized bytes
 
 **RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT AUDIT.  DO NOT USE
 THIS FILE AS A PROVED DEPENDENCY UNTIL ITS STATUS IS EXPLICITLY PROMOTED.**
+
+**Audit status (2026-08-16): every claimed finite-exact map and census has
+both a primary exact replay and an independent FLINT reconstruction.  The
+network hostile audit of quotient variance, map typing, and scope is still
+pending, so the theorem remains provisional and outside the proof graph.**
 
 The refuted `r1`-blind scalar transport has a minimal two-dimensional repair,
 but only after one endpoint direction is quotiented.  This repairs a static
@@ -268,6 +278,13 @@ whose determinant is
 ~~~text
 149750845022728455688979 !=0 in k.                        (16f)
 ~~~
+
+The displayed scalar in `(16e)` is a value in the frozen deterministic
+free-variable/RREF chart, not an invariant of the unmarked pair `(U,L)`.
+Changing either basis changes that scalar.  The invariant content is that the
+pairing is perfect, supported only on the middle blocks, and equivariant for
+the coupled chamber involution; the pinned chart makes the numerical value
+itself reproducible.
 
 Consequently the evaluation pairing gives a marked canonical isomorphism
 
@@ -604,7 +621,20 @@ A third dependency-free postprocessor compares the all-child intersection
 with the arc-stable quotient.  It proves (16b)--(16j), including equality of
 the two rank-two subspaces by canonical RREF digest, equality of their
 eight-dimensional annihilators, the perfect middle-only pairing, and the
-non-involutive compressed arc correspondence.
+non-involutive compressed arc correspondence.  It also computes the repaired
+endpoint representation and the complete 127-window census `(16k)`.
+
+A fourth implementation imports neither exact postprocessor.  It rebuilds
+the 78-state matrices and delegates row reduction, kernels, intersections,
+inversion, and multiplication to `python-flint.fmpz_mod_mat`; for the window
+census it uses a distinct cached seven-orbit intersection lattice.  It
+independently reproduces the canonical `U` and `U^perp` digests, every map and
+scalar in `(16b)--(16j)` under the stated chart, both twisted-boundary ranks,
+and all 127 character rows in `(16k)`.  Thus every finite-exact map currently
+claimed here has an independent algebra-engine reproduction.  The theorem
+remains provisional because the external hostile audit of variance, typing,
+and scope is still pending; computational agreement alone does not promote a
+reserved bridge-shaped statement.
 
 Reproduce with
 
@@ -615,6 +645,8 @@ python -B 04-computation/lrc_r5_rank_two_relative_response_cospan_flint_audit_20
 python -B -O 04-computation/lrc_r5_rank_two_relative_response_cospan_flint_audit_20260816.py
 python -B 04-computation/lrc_r5_common_child_middle_duality_thm3534_20260816.py
 python -B -O 04-computation/lrc_r5_common_child_middle_duality_thm3534_20260816.py
+python -B 04-computation/lrc_r5_common_child_middle_duality_flint_audit_thm3534_20260816.py
+python -B -O 04-computation/lrc_r5_common_child_middle_duality_flint_audit_thm3534_20260816.py
 ```
 
 Normal and optimized transcripts byte-match the stored output.  Script,
@@ -640,6 +672,15 @@ The common-child pairing script, output, and semantic hashes are
 991c65d7c1a3fc4268afdd5a9d750a138b25fce306734e31d288195e89712d09
 0320a48d59e85fcdca90e48d93b80265cc76c03f5ff2e83260cf6974af493afd
 4261ca08016b2de90bc8f609ebf283d915f8613410a5dbc15229b02baeed8803.
+```
+
+The independent common-child FLINT audit script, output, and semantic hashes
+are
+
+```text
+50496905b49dce05ba7ac76bcd7714a646c1e5821b04300ec7f93069d52d5904
+c808cfe4e5e8847b355671ac703ee185da6428dca1e449a3c3837f25193eb474
+036823a7ba481528a3d02f9b36cecc08c2a76b796d69b437ac644ea62251c53e.
 ```
 
 The proof candidate constructs no physical current, no `C4` clock closure,

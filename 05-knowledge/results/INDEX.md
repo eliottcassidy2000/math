@@ -2,8 +2,9 @@
 
 - `lrc_r5_rank_two_relative_response_cospan_thm3534_20260816.py`,
   its FLINT audit, and
-  `lrc_r5_common_child_middle_duality_thm3534_20260816.py` -> matching
-  `.out` files [THM-3534 RESERVED / PROVISIONAL PROOF CANDIDATE;
+  `lrc_r5_common_child_middle_duality_thm3534_20260816.py` with its
+  independent FLINT audit -> matching `.out` files [THM-3534 RESERVED /
+  PROVISIONAL PROOF CANDIDATE;
   FINITE-EXACT STATIC RESPONSE PACKAGE].  The frozen middle-orientation
   difference has rank five, splitting as source rank two plus endpoint rank
   three.  The source plane and the dual-Q10 contraction plane are distinct
@@ -32,7 +33,14 @@
   common-core script/output/semantic:
   `991c65d7c1a3fc4268afdd5a9d750a138b25fce306734e31d288195e89712d09` /
   `0320a48d59e85fcdca90e48d93b80265cc76c03f5ff2e83260cf6974af493afd` /
-  `4261ca08016b2de90bc8f609ebf283d915f8613410a5dbc15229b02baeed8803`.
+  `4261ca08016b2de90bc8f609ebf283d915f8613410a5dbc15229b02baeed8803`;
+  independent common-core FLINT audit script/output/semantic:
+  `50496905b49dce05ba7ac76bcd7714a646c1e5821b04300ec7f93069d52d5904` /
+  `c808cfe4e5e8847b355671ac703ee185da6428dca1e449a3c3837f25193eb474` /
+  `036823a7ba481528a3d02f9b36cecc08c2a76b796d69b437ac644ea62251c53e`.
+  Every finite map/census now has a distinct-engine reproduction; external
+  hostile audit of variance and typing remains pending, so status is not
+  promoted.
 
 - `keller_tame_conjugacy_covariance_audit_20260816.py` -> matching `.out`
   [THM-3532 PROVED + VERIFIED-EXACT].  For every polynomial two-sided

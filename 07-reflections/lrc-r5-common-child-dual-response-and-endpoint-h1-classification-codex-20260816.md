@@ -2,10 +2,10 @@
 
 **Status: FINITE-EXACT STATIC REPRESENTATION SYNTHESIS AROUND RESERVED
 THM-3534.  THE MATRIX CLAIMS HAVE A CUSTOM-RREF REPLAY AND AN INDEPENDENT
-FLINT REPLAY FOR THE ORIGINAL RESPONSE COSPAN; THE NEW COMMON-CORE
-IDENTIFICATION HAS A DEPENDENCY-FREE EXACT REPLAY AND A NETWORK HOSTILE AUDIT
-IS PENDING.  NO PHYSICAL CURRENT, D5 FLUX, ROW EXCLUSION, OR LRC(14)
-CONCLUSION.**
+FLINT REPLAY FOR BOTH THE ORIGINAL RESPONSE COSPAN AND THE NEW COMMON-CORE,
+ENDPOINT-EXTENSION, AND 127-WINDOW PACKAGE.  EVERY FINITE MAP IS NOW
+INDEPENDENTLY REPRODUCED; THE NETWORK HOSTILE AUDIT OF VARIANCE AND TYPING IS
+PENDING.  NO PHYSICAL CURRENT, D5 FLUX, ROW EXCLUSION, OR LRC(14) CONCLUSION.**
 
 The frozen r5 tent and common ten-dimensional quotient do contain a lawful
 rank-two object.  It is more rigid, and less directly useful, than the scalar
@@ -146,6 +146,13 @@ with nonzero determinant
 ~~~text
 149750845022728455688979.
 ~~~
+
+That scalar is tied to the frozen deterministic free-variable/RREF chart.
+An extra basis reduction in the independent implementation changed the
+displayed nonzero scalar while preserving the perfect pairing; restoring the
+pinned basis recovered the number above.  Thus perfectness, middle-only
+support, and chamber equivariance are invariant, while the scalar itself is
+marked chart data.
 
 The middle response difference D contracts L injectively to a response plane
 I.  The source plane S and I are distinct, but
@@ -415,7 +422,21 @@ hash is
 4261ca08016b2de90bc8f609ebf283d915f8613410a5dbc15229b02baeed8803.
 ~~~
 
-THM-3534 remains reserved pending independent hostile audit.  This synthesis
+The disjoint audit is
+`04-computation/lrc_r5_common_child_middle_duality_flint_audit_thm3534_20260816.py`.
+It imports no primary computation, delegates the algebra to FLINT, and uses a
+cached seven-orbit window lattice.  Normal and optimized transcripts match
+the stored output.  Script, output, and semantic hashes are
+
+~~~text
+50496905b49dce05ba7ac76bcd7714a646c1e5821b04300ec7f93069d52d5904
+c808cfe4e5e8847b355671ac703ee185da6428dca1e449a3c3837f25193eb474
+036823a7ba481528a3d02f9b36cecc08c2a76b796d69b437ac644ea62251c53e.
+~~~
+
+THM-3534 remains reserved pending the external hostile audit of quotient
+variance, map typing, and scope.  The finite-reproduction gate is now clean,
+but that does not by itself promote a bridge-shaped statement.  This synthesis
 constructs no chronology, physical word-current, C4 closure edge, D5 flux,
 Jacobian counterexample, row exclusion, or LRC(14) proof.  LRC(14) remains
 **OPEN**.

@@ -1,0 +1,18 @@
+== independent FLINT audit: THM-3534 new finite maps ==
+engine=python-flint.fmpz_mod_mat;certificate_sha256=472925c638de7ac90b1a7880184766f2e8acec0f8291e2c46cf747b37cd46712;prime=755373809845391722745761
+parent_quotient=(rank,Qdim)=(68, 10)
+common_core=(common,kernel,image)=(14, 12, 2);reversal_stabilization=(70, 2)
+core_digests=(U=584eb2a4022ffed65be254f73eda96facaaaa87b2cc1b80ff8f7714dd74bd65a,reversal_kernel=584eb2a4022ffed65be254f73eda96facaaaa87b2cc1b80ff8f7714dd74bd65a,equal=True)
+dual_digests=(U_perp=b5143e9ea23f3f981c1b6b334799e7924df0a4a544b69d6dcd18defc01d0f238,QA_dual=b5143e9ea23f3f981c1b6b334799e7924df0a4a544b69d6dcd18defc01d0f238,equal=True)
+block_duals=(dimensions=(2, 2, 1, 1, 2, 2),pairing_ranks=(0, 0, 1, 1, 0, 0))
+middle_pairing=(matrix=((636675481197456361648540, 0), (0, 636675481197456361648540)),det=149750845022728455688979,perfect=True)
+relative_response=(boundary_rank,H0,H1)=(1, 1, 1);endpoint_extension=(1, 2, 2);extension_chamber=((0, 1, 0), (1, 0, 0), (0, 0, 1))
+chamber_on_U=((0, 1), (1, 0));arc_realization=(14, 16, 12)
+compressed_arc=(matrix=((0, 145859431184888028092125), (145859431184888028092125, 0)),lambda=145859431184888028092125,lambda_square=17748677861075734903229,involution=False)
+digit_reflection_gate=(76, 10, 10)
+stable_windows=(histogram=(((2, 1, 1), 119), ((6, 3, 3), 4), ((10, 5, 5), 4)),exceptional=((6, (0, 12), 20), (6, (2, 10), 18), (6, (0, 12, 2, 10), 18), (10, (3, 9), 34), (10, (5, 7), 30), (10, (6,), 50), (6, (3, 9, 6), 22), (10, (5, 7, 6), 22)))
+semantic_sha256=036823a7ba481528a3d02f9b36cecc08c2a76b796d69b437ac644ea62251c53e
+verdict=ACCEPT every new finite-rank/map/census claim by an independent algebra engine and a distinct window-lattice algorithm
+typing=U=ker(Q10->QA8) pairs perfectly with the marked middle dual;the endpoint D6 class is not supplied by any rank-3 child window
+scope=FINITE-EXACT static representation audit only;no bridge,no physical current,no D5 flux,no row exclusion,no LRC14
+PASS
