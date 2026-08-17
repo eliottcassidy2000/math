@@ -1,7 +1,8 @@
 # Three coordinate cubics, one sign class
 
 **Status: proved synthesis from THM-2546, THM-3438, THM-3448, THM-3508,
-THM-3517, THM-3519, THM-3531, THM-3532, THM-3533, THM-3535, and THM-3537; no
+THM-3517, THM-3519, THM-3531, THM-3532, THM-3533, THM-3535, THM-3537, and
+THM-3538; no
 arbitrary-map classification claim.**  The fixed sporadic tower now has full iterated
 wreath monodromy, all-level constant-linear primitivity, an intrinsic
 discriminant class, and a reduced newest-prime different at every level.  The
@@ -20,7 +21,9 @@ class at every level, and THM-3533 upgrades its newest odd divisor from a
 parity signal to exact normalization-discriminant multiplicity one.
 THM-3535 finally proves that every nonzero rational constant linear form,
 including each literal coordinate, is primitive simultaneously at all
-levels.
+levels.  THM-3538 separates primitivity from local maximality by an exact
+internal-factor/resultant carrier and proves index zero for `y,z,1/x` at the
+newest primes through levels two--four.
 
 ## 1. The three discriminants collapse to one square class
 
@@ -221,6 +224,35 @@ transverse DVR, the literal `x_2` order has exponent eight and index length
 two.  Thus the passport now contains one exact positive old multiplicity and
 one prescribed-coordinate defect, but not their all-level recurrences.
 
+THM-3538 identifies the missing prescribed-coordinate invariant at every
+newest prime.  After the finite-etale predecessor cover is strictly split,
+let `f_(theta,i)` be the last-step cubic blocks for `theta=y,z`, or for the
+integral reciprocal coordinate `theta=u=1/x` when its chart gate holds.  Then
+
+```text
+C_(theta,n)
+ =product_i h_theta(q_i)
+  product_(i<j) Res(f_(theta,i),f_(theta,j)),
+length(B_n/A[theta_n])=v(C_(theta,n)).                 (7h)
+```
+
+The first product detects collisions internal to one cubic; the second
+detects equal residue values on distinct ancestry blocks.  Local maximality
+is therefore equivalent to one forced dual-number shadow and otherwise
+squarefree, pairwise-coprime reduced blocks.  Exact characteristic-zero/good-
+reduction witnesses prove
+
+```text
+i_(y,n)=i_(z,n)=i_(u,n)=0          for n=2,3,4.         (7i)
+```
+
+This does not make literal `x_n` integral.  With `N=3^n` and reciprocal
+index `I`, its monic discriminant exponent is `3-2N+2I`, while the integral
+reciprocal and primitive raw-cleared reversal both have exponent `1+2I`.
+Thus the three cubics share one field/sign passport, but a chosen coordinate
+still needs its chart and resultant carrier.  Unitness of `(7h)` for every
+`n>=5` remains open.
+
 THM-3532 fixes the equivalence relation under which this tower passport is
 covariant.  For a two-sided change `G=tau o F o sigma`, every one-step object
 transports exactly, but iteration inserts the middle automorphism
@@ -356,13 +388,15 @@ classification boundary.
 | required sidecar | splitting-field/block data plus oriented boundary valuations |
 | cheapest hostile | two nonisomorphic cubic extensions with the same discriminant square class |
 
-The former square-class and newest-prime tests are now closed intrinsically
-at every fixed-tower level, while the explicit weighted family is closed for
-all three actual coordinates.  The next exact tests are:
+The square-class and normalized newest-prime tests are closed intrinsically
+at every fixed-tower level.  The prescribed-coordinate index has an exact
+all-level criterion and equality through levels two--four, while the explicit
+weighted family is closed for all three actual coordinates.  The next exact
+tests are:
 
-1. compute the newest-prime local index of each prescribed literal coordinate
-   at every level; simultaneous primitivity is now proved by THM-3535, but
-   local maximality is not;
+1. prove or refute unitness of THM-3538's internal-factor/resultant carrier for
+   `y_n,z_n,u_n` at every newest level `n>=5`; simultaneous primitivity alone
+   cannot decide it;
 2. extend THM-3537's exact `delta_2(L)=4` to old-prime multiplicities at
    depth three and beyond; the newest prime is already exactly reduced by
    THM-3533;
@@ -376,10 +410,11 @@ all three actual coordinates.  The next exact tests are:
 The strongest current conclusion is now broader but still sharply bounded:
 the fixed tower has full wreath monodromy, all-level literal-coordinate
 primitivity, one intrinsic newest-prime sign character, a reduced newest
-different at every depth, and the first exact old-prime inertia row
-`(4)(2)(1)^3`.  Every literal coordinate shares that character at every
-level, as do the three coordinates in every explicit cyclic weighted grade.
-The degree-value spectrum is completely classified, but the maps are not.
-The `m=3` sign-blind component `C=0`, the transverse `x_2` index two, and the
-atomic/composite degree-nine pair are three decisive witnesses to the missing
-classification data.
+different at every depth, newest-coordinate index zero through levels two--
+four for `y,z,1/x`, and the first exact old-prime inertia row
+`(4)(2)(1)^3`.  Every literal coordinate shares the intrinsic character at
+every level, as do the three coordinates in every explicit cyclic weighted
+grade.  The degree-value spectrum is completely classified, but the maps are
+not.  The `m=3` sign-blind component `C=0`, the newest/old index split, and
+the atomic/composite degree-nine pair are three decisive witnesses to the
+missing classification data.
