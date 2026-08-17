@@ -1,0 +1,10 @@
+== Keller inertia / signed C4 / H1 XOR bridge ==
+keller_c4_one_cut=(1, 0, 0, 0);berggren_wall=(1, 0, 1, 1);gauge=(0, 0, 0, 1)
+fibonacci_raw=(0, 1, 0, 0);fibonacci_to_wall_gauges=((1, 0, 1, 0), (0, 1, 0, 1))
+H1_C4_F2_dimension=1;nonzero_class_cochains=8
+old_L_orbit_bits=(1, 1, 0, 0, 0);xor_total=0;newest_prime_bit=1
+successor_edges=((0, 1), (1, 2), (2, 3), (3, 0));missing_pairs=((0, 2), (1, 3))
+tournament_completions=(((0, 2), (1, 3)), ((0, 2), (3, 1)), ((2, 0), (1, 3)), ((2, 0), (3, 1)));rotation_invariant=()
+semantic_sha256=772f86fb6e43b7d69262caeb9bb4c54687e16ebc4b6c3b50fd21f5506ade43de
+scope=determinant-line H1 cospan only;no canonical edge gauge,LRC current,D5 flux,or Berggren-Keller identification
+all exact checks passed

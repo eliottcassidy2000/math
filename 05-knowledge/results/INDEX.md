@@ -67,6 +67,21 @@
   `95748c8b5b000d23c7a99af5bac69c288a95db30bfbe8d49cddba8f14ad7c32f` /
   `1374c45724a688d0790f4fe8468a329eca059cb9c9229db2bbf84abbc523b0d5`.
 
+- `keller_inertia_signed_c4_h1_xor_bridge_20260816.py` -> matching `.out`
+  [VERIFIED-EXACT ELEMENTARY COSPAN; UNNUMBERED].  THM-3537's quartic and
+  quadratic inertia orbits each carry the nonzero determinant-line bit in
+  `H^1(D*,F2)`, while their XOR is zero, explaining the even old-`L` square
+  class; the newest transposition retains bit one.  A one-cut quartic `C4`
+  representative switches to THM-3536's Berggren wall word by vertex gauge
+  `(0,0,0,1)` and to the raw Fibonacci representative through the existing
+  complementary gauges.  The carrier has four successor pairs and two
+  missing antipodals; all four tournament completions break phase rotation.
+  This is no LRC current, D5 flux, or Berggren-Keller identification.
+  Script/output/semantic LF SHA-256:
+  `fde504c9c83c2e515d0966d495191757fa1b281ead0ff13d34f7e85aa9384371` /
+  `e3da0f4cb34c5a70257b3a186e6ce94d92cd8d0787289c33443c5c627e76a16a` /
+  `772f86fb6e43b7d69262caeb9bb4c54687e16ebc4b6c3b50fd21f5506ade43de`.
+
 - `keller_tame_conjugacy_covariance_audit_20260816.py` -> matching `.out`
   [THM-3532 PROVED + VERIFIED-EXACT].  For every polynomial two-sided
   equivalence `G=tau o F o sigma`, the old extension square gives exact

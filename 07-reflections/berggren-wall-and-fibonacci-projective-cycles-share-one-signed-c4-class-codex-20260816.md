@@ -199,6 +199,15 @@ class    = odd cycle sum.                                (12)
 
 It is useful as a template for the requested LRC word-current to JC-flux
 map because every type in `(12)` is explicit.  It does not supply that map.
+THM-3537 now supplies a third, genuinely Jacobian-side leg: the determinant
+line of its quartic old-`L` inertia orbit has the same nonzero class.  In the
+one-cut gauge `(1,0,0,0)`, the vertex switch `(0,0,0,1)` gives the wall word
+`(1,0,1,1)`.  The accompanying quadratic orbit carries a second nonzero bit,
+so the total old-`L` determinant class is `1+1=0`; this cancellation is data
+that the isolated signed `C4` quotient forgets.  The explicit audit and full
+loss ledger are in
+`keller-inertia-and-berggren-wall-share-one-signed-c4-class-codex-20260816.md`.
+
 The provisional THM-3534 response cospan lives over a large odd finite field,
 requires quotienting an endpoint line, and lacks the physical same-copy
 closure edge.  There is no coefficient-compatible identification with the
