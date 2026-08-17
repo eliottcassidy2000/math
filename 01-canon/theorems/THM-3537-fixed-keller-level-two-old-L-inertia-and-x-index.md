@@ -19,6 +19,7 @@ depends_on:
 related:
   - THM-3535-fixed-keller-full-wreath-and-all-level-linear-primitivity
   - THM-3536-berggren-angle-languages-signed-c4-and-harmonic-density
+  - THM-3538-fixed-keller-newest-prime-prescribed-coordinate-index-criterion
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
 script: 04-computation/keller_level_two_old_L_newton_index_audit_20260816.py
 output: 05-knowledge/results/keller_level_two_old_L_newton_index_audit_20260816.out

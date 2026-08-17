@@ -10,11 +10,13 @@ The script has two independent lanes.
     repeated linear factor: the double shadow on the unique L=0 block.  Thus
     no cross-block residue collision is forced at the level-two newest prime.
 
-2.  Over finite fields it searches for complete split inverse trees rooted
-    at a point q0 on V(L).  It then multiplies all last-step y-, z-, and
-    reciprocal-x cubics and checks that gcd(P,P') has degree exactly one.
-    These are finite exact witnesses against an identically vanishing
-    cross-block resultant at the corresponding characteristic-zero divisor.
+2.  Over finite fields it searches for split inverse trees rooted at a point
+    q0 on V(L).  At level four the last unsplit cubic layer is retained as an
+    exact quotient algebra and eliminated by norms.  It multiplies all
+    last-step y-, z-, and reciprocal-x cubics and checks that gcd(P,P') is
+    exactly the one forced shadow factor.  These are finite exact witnesses
+    against an identically vanishing cross-block resultant at the
+    corresponding characteristic-zero divisor.
 
 The geometric all-level reduction and its scope belong in the companion
 reflection/theorem candidate.  Finite-field witnesses are not promoted here

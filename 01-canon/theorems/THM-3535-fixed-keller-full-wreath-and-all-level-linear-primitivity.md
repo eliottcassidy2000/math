@@ -20,6 +20,7 @@ related:
   - THM-3519-level-three-sporadic-keller-three-coordinate-primitivity-and-common-discriminant-class
   - THM-3531-fixed-keller-intrinsic-all-level-discriminant-square-class
   - THM-3533-fixed-keller-newest-prime-reduced-different-and-index-square
+  - THM-3538-fixed-keller-newest-prime-prescribed-coordinate-index-criterion
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
 script: 04-computation/keller_fixed_linear_all_level_wreath_probe_20260816.py
 output: 05-knowledge/results/keller_fixed_linear_all_level_wreath_probe_20260816.out

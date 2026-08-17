@@ -341,9 +341,9 @@ is sharp: equal counts allow two densities or none.
   `(271,99)`; 3521--23/27 give packets through `R8`, ending
   `(419839,152211)`; 3525/26 give degree243/729 and
   `[Delta_5,Delta_6]=[-2R_5,2R_6]`. 3528--31: packets/units/primes/components/
-  intrinsic class; 3533: newest exponent 1; 3535: full wreath and every
-  linear view primitive; 3532: fixed-orbit covariance (W1/W2 one step).
-  Linear-view indices, old-prime exponents, wider covariance OPEN.
+  intrinsic class; 3533 newest exponent `1`; 3535 linear primitive;
+  3532 covariance; 3537 old-`L` `delta_2=4`/`x_2` index `2`; 3538 resultant
+  criterion, `y,z,1/x` index `0` at `n=2,3,4` only; all-level OPEN.
   THM-2681 blocks the `A4/S4` cubic; 2685--2708 give its holonomy.
   3448/3517: cyclic coordinates are primitive; `m=3` gives `S5`, but `C3` Jelonek is sign-blind. 1605 is absent (MISTAKE-416); quartic `C3` remains OPEN.
   3440/3443/3450: LRC/Keller mode on 91 sheets. Mod-13 `H^1` has no amplitude map; margins block the germ. The r5 tent seam `-1` is formal; rank two blocks response transport. No current. THM-3066 retains only their

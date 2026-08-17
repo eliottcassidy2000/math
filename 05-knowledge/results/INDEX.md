@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `keller_prescribed_coordinate_newest_prime_probe_20260816.py` -> matching
+  `.out` [THM-3538 PROVED + VERIFIED-EXACT; ALL-LEVEL EQUALITY OPEN].  After
+  the finite-etale predecessor cover splits at `p=(P_(n-1))`, the exact local
+  index of each prescribed integral coordinate is the valuation of the
+  product of all one-block discriminant square factors and all cross-block
+  resultants.  Thus local maximality is equivalent to one forced
+  dual-number shadow plus squarefree, pairwise-coprime remaining blocks; full
+  primitivity is insufficient.  Exact noncollision witnesses close `y_n`,
+  `z_n`, and `u_n=1/x_n` only at newest levels `n=2,3,4`, in ranks
+  `9,27,81`.  Literal `x_n` is nonintegral: if the reciprocal index is `I`,
+  its monic discriminant exponent is `3-2*3^n+2I`, while the reciprocal and
+  primitive raw-cleared reversal both have exponent `1+2I`.  THM-3537's
+  old-`L` `x_2` index two is the hostile cross-packet collision and lies
+  outside the newest-prime split hypothesis.  Script/output/semantic LF
+  SHA-256: `7e03534ef3ff1bd05d5108c327b3c40eae929f0a45baa28aa2980a9a9d632892` /
+  `5498fcdd2a35f86abb1bf80edea7a39ad5597520d4da5949b56f5e29e3187f93` /
+  `54e24e2b22edbc0882be21fc1c64f8b451a6c8767af779be52a3e16adcb6db34`.
+
 - `lrc_r5_rank_two_relative_response_cospan_thm3534_20260816.py`,
   its FLINT audit, and
   `lrc_r5_common_child_middle_duality_thm3534_20260816.py` with its
