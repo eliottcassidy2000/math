@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-420 (2026-08-16, provisional THM-3534 scope) -- relative rank-two H1 collapse was overextended past the endpoint-retaining coefficient space
+
+- **What failed:** the provisional THM-3534 draft correctly computed
+  `dim H^1(C4;V_rel,C)=1` for the two-dimensional relative response plane,
+  then said the frozen data supplied no two-dimensional chamber-faithful
+  cohomology.  That conclusion silently fixed the coefficient-space
+  dimension while quantifying over all response spaces.
+- **Minimal witness / first failed implication:** the already computed
+  three-space `V_ext=S+I` is chamber-stable and satisfies
+  `V_ext=I direct_sum E_6=S direct_sum E_6`.  Chamber swaps `i_+,i_-`
+  and fixes `D_(6,*)`, so `rank(C_ext-I)=1` and
+  `dim H^1(C4;V_ext,C_ext)=3-1=2`.  The two invariant directions are the
+  relative line `i_++i_-` and the pure endpoint line `D_(6,*)`.
+- **Repair / strongest survivor:** no **two-dimensional coefficient
+  representation** carrying the descended chamber action has two-dimensional
+  twisted H1; its invariant rank is one.  The unique minimal
+  endpoint-retaining ambient has coefficient dimension three and formal H1
+  dimension two.  One class is endpoint-only, the all-child Q10 core pairs
+  only with the relative summand, and the same-copy closure edge is still
+  absent, so neither formal group is a physical word-current or D5 flux.
+- **Reusable rule:** when a cohomology dimension is used as a no-go, state
+  both the base complex and coefficient representation.  Quotienting a
+  sidecar can lower the invariant rank; restore the minimal extension and
+  recompute before quantifying over all carriers.
+
 ## MISTAKE-419 (2026-08-16, THM-3532 promotion gate) -- target postcomposition was called conjugacy, and optimized replay erased the certificate
 
 - **What failed:** historical W1/W2 prose called

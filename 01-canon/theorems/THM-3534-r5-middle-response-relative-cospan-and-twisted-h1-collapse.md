@@ -14,12 +14,16 @@ status: >
   plane.  The descended chamber involution splits this plane 1+1, so its
   natural twisted C4 H1 has dimension one; every response row is already exact
   on the formal digit C13, the literal common chamber line is exact, and the
-  surviving chamber line requires the endpoint quotient.  This is a static
-  finite-exact representation statement, not a physical current, D5 flux map,
-  row exclusion, or LRC(14) theorem.
+  surviving chamber line requires the endpoint quotient.  Retaining that
+  endpoint line in the unique three-dimensional ambient gives formal twisted
+  H1 dimension two, split into one relative response class and one pure
+  endpoint class, but there is still no physical closure edge.  This is a
+  static finite-exact representation statement, not a physical current, D5
+  flux map, row exclusion, or LRC(14) theorem.
 source: codex r5 rank-two cospan session, 2026-08-16
 depends_on: []
 related:
+  - MISTAKE-420
   - THM-2716-c4-arm-transporter-groupoid-and-relative-degree-holotopy-boundary
   - THM-3354-inequivalent-h1-carriers-and-typed-obstruction-cospan
   - THM-3431-d5-secondary-h1-descent-defects-and-valuation-persistence
@@ -37,9 +41,9 @@ audit_output_sha256: a449fb52016453596ffc581a4df0ccde2028d8777fec6696c122f41ff24
 audit_semantic_sha256: f1dfa230027e7fd8f48c7eb7bac2034d0188ee61a4ce6f24d2579860cf532020
 pairing_script: 04-computation/lrc_r5_common_child_middle_duality_thm3534_20260816.py
 pairing_output: 05-knowledge/results/lrc_r5_common_child_middle_duality_thm3534_20260816.out
-pairing_script_sha256: 9e1ba692683346a73ddb1250adeeaf9a5839ad20fecc47ee4c0e455fa0ffdf2c
-pairing_output_sha256: cd8f64f5d742c249ba65180cf5d1f586735695ee3900f0a636cdcd99ab5c9d51
-pairing_semantic_sha256: e734d40131404ac2ca0ea1a0fbd4154d998b7bb2e18200351fcbc3debc560ce1
+pairing_script_sha256: 991c65d7c1a3fc4268afdd5a9d750a138b25fce306734e31d288195e89712d09
+pairing_output_sha256: 0320a48d59e85fcdca90e48d93b80265cc76c03f5ff2e83260cf6974af493afd
+pairing_semantic_sha256: 4261ca08016b2de90bc8f609ebf283d915f8613410a5dbc15229b02baeed8803
 hash_basis: LF-normalized bytes
 ---
 
@@ -310,6 +314,20 @@ sends the 12-dimensional kernel outside R and its common-child image has full
 rank ten in Q.  Only the coupled chamber involution is a genuine symmetry of
 the subquotient.
 
+There is no hidden one-line endpoint repair in a smaller symmetric child
+window.  Exhausting all 127 nonempty subsets of third digits stable under
+`t -> 12-t`, intersecting their child rowspaces, and projecting to Q gives
+the complete chamber-character census
+
+```text
+(dimension,plus,minus): count
+(2,1,1): 119,       (6,3,3): 4,       (10,5,5): 4.      (16k)
+```
+
+In particular, no such window has quotient dimension three or an unbalanced
+character.  Child intersection alone cannot append one invariant endpoint
+dual to U; the first possible enlargement is a balanced 2+2 complement.
+
 ## 4. The unique endpoint-relative repair
 
 The mismatch in `(16)` is exactly one endpoint direction.  Put
@@ -428,8 +446,53 @@ whose two natural lifts differ by the endpoint sidecar `2cD_(6,*)`.
 
 Using the trivial local system would give `dim H^1=2`, but then chamber
 reflection is an external decoration rather than the only symmetry that
-actually descends from the frozen quotient.  Hence the frozen data supply no
-two-dimensional chamber-faithful `H^1` class.
+actually descends from the frozen quotient.  Hence the proposed
+two-dimensional coefficient plane supplies no two-dimensional
+chamber-faithful `H^1` class.
+
+The endpoint-retaining ambient gives the sharp repair to that statement.
+Define the unique minimal chamber-stable response space containing both
+two-planes:
+
+```text
+V_ext=S+I=I direct_sum E_6=S direct_sum E_6,       dim V_ext=3.  (31a)
+```
+
+It fits into the marked exact sequence
+
+```text
+0 -> E_6 -> V_ext -> V_rel -> 0.                         (31b)
+```
+
+Both `I` and `S` give chamber-equivariant splittings of `(31b)`; their
+anti-invariant lines agree, while their invariant lifts differ by the
+nonzero endpoint term in `(29)`.  In the basis
+`(i_+,i_-,D_(6,*))`, chamber monodromy is
+
+```text
+C_ext = [0 1 0; 1 0 0; 0 0 1].                         (31c)
+```
+
+Therefore
+
+```text
+rank(C_ext-I)=1,
+dim H^0(C4;V_ext,C_ext)=dim H^1(C4;V_ext,C_ext)=2.       (31d)
+```
+
+The two formal surviving directions may be represented by
+
+```text
+i_+ + i_-          and          D_(6,*).                (31e)
+```
+
+Thus a two-dimensional formal twisted cohomology group exists only after the
+coefficient representation is enlarged from dimension two to dimension three
+and the endpoint sidecar is retained.  One class is the relative invariant
+response; the other is pure endpoint data.  The all-child core `U` pairs
+only with the first summand and supplies no dual for `E_6`.  This is still a
+formal circle calculation: the missing same-copy closure edge prevents
+`(31d)` from being a physical word-current.
 
 There is a second sharp boundary.  Stabilizing the parent rowspace under pure
 arc reversal fills both 13-dimensional middle blocks.  Therefore the repaired
@@ -574,9 +637,9 @@ f1dfa230027e7fd8f48c7eb7bac2034d0188ee61a4ce6f24d2579860cf532020.
 The common-child pairing script, output, and semantic hashes are
 
 ```text
-9e1ba692683346a73ddb1250adeeaf9a5839ad20fecc47ee4c0e455fa0ffdf2c
-cd8f64f5d742c249ba65180cf5d1f586735695ee3900f0a636cdcd99ab5c9d51
-e734d40131404ac2ca0ea1a0fbd4154d998b7bb2e18200351fcbc3debc560ce1.
+991c65d7c1a3fc4268afdd5a9d750a138b25fce306734e31d288195e89712d09
+0320a48d59e85fcdca90e48d93b80265cc76c03f5ff2e83260cf6974af493afd
+4261ca08016b2de90bc8f609ebf283d915f8613410a5dbc15229b02baeed8803.
 ```
 
 The proof candidate constructs no physical current, no `C4` clock closure,

@@ -41,7 +41,7 @@ EXPECTED_PARENT_SEMANTIC_SHA256 = (
     "3d1527fb4ce4931680e50d7135b9d1129c1816e3a9158645523e2728ddc71ec2"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "e734d40131404ac2ca0ea1a0fbd4154d998b7bb2e18200351fcbc3debc560ce1"
+    "4261ca08016b2de90bc8f609ebf283d915f8613410a5dbc15229b02baeed8803"
 )
 
 P = 13
@@ -362,6 +362,38 @@ def analyse(bank):
     require(pair_rows(dual_lifts, middle_dual, prime)
             == ((1, 0), (0, 1)), "dual normalized lifts")
 
+    difference = tuple(
+        tuple((blocks[2][row][column] - blocks[3][row][column]) % prime
+              for column in range(P))
+        for row in range(P)
+    )
+    image_plus = matmul((ell_plus_local,), difference, prime)[0]
+    image_minus = matmul((ell_minus_local,), difference, prime)[0]
+    endpoint_six = difference[6]
+    response_extension = (image_plus, image_minus, endpoint_six)
+    require(rank(response_extension, prime, P) == 3,
+            "endpoint-retaining response extension")
+    response_chamber = lambda row: tuple(
+        -value % prime for value in reversed(row)
+    )
+    require(response_chamber(image_plus) == image_minus
+            and response_chamber(image_minus) == image_plus
+            and response_chamber(endpoint_six) == endpoint_six,
+            "response extension chamber action")
+    extension_monodromy = ((0, 1, 0), (1, 0, 0), (0, 0, 1))
+    extension_boundary = tuple(
+        tuple((extension_monodromy[row][column] - int(row == column)) % prime
+              for column in range(3))
+        for row in range(3)
+    )
+    extension_cohomology = (
+        rank(extension_boundary, prime, 3),
+        3 - rank(extension_boundary, prime, 3),
+        3 - rank(extension_boundary, prime, 3),
+    )
+    require(extension_cohomology == (1, 2, 2),
+            "endpoint-retaining twisted cohomology")
+
     chamber_permutation = coordinate_permutation(
         CHAMBER_REVERSAL, tuple(P - 1 - digit for digit in range(P))
     )
@@ -429,6 +461,96 @@ def analyse(bank):
     )
     require(digit_gate == (76, 10, 10), digit_gate)
 
+    quotient_lifts, quotient_coordinates = deterministic_quotient_lifts(
+        children[0], quotient_dual, 10, prime
+    )
+    normalized_quotient_lifts = matmul(
+        inverse(quotient_coordinates, prime), quotient_lifts, prime
+    )
+    require(pair_rows(normalized_quotient_lifts, quotient_dual, prime)
+            == tuple(tuple(int(row == column) for column in range(10))
+                     for row in range(10)),
+            "normalized global quotient lifts")
+    global_chamber = pair_rows(
+        transform_rows(normalized_quotient_lifts, chamber_permutation),
+        quotient_dual,
+        prime,
+    )
+    require(matmul(global_chamber, global_chamber, prime)
+            == tuple(tuple(int(row == column) for column in range(10))
+                     for row in range(10)),
+            "global chamber involution")
+    chamber_plus = nullspace(
+        transpose(tuple(
+            tuple((global_chamber[row][column] - int(row == column)) % prime
+                  for column in range(10))
+            for row in range(10)
+        )),
+        prime,
+        10,
+    )
+    chamber_minus = nullspace(
+        transpose(tuple(
+            tuple((global_chamber[row][column] + int(row == column)) % prime
+                  for column in range(10))
+            for row in range(10)
+        )),
+        prime,
+        10,
+    )
+    require(len(chamber_plus) == len(chamber_minus) == 5,
+            "global chamber character dimensions")
+
+    reflection_orbits = (
+        (0, 12), (1, 11), (2, 10), (3, 9), (4, 8), (5, 7), (6,),
+    )
+    stable_character_counts = {}
+    exceptional_stable_windows = []
+    for mask in range(1, 1 << len(reflection_orbits)):
+        digits = tuple(
+            digit
+            for orbit_index, orbit in enumerate(reflection_orbits)
+            if (mask >> orbit_index) & 1
+            for digit in orbit
+        )
+        window = row_basis(children[digits[0]], prime)
+        for digit in digits[1:]:
+            window = intersection_basis(window, children[digit], prime)
+        window_image = row_basis(
+            pair_rows(window, quotient_dual, prime), prime, 10
+        )
+        plus_dimension = len(intersection_basis(
+            window_image, chamber_plus, prime, 10
+        ))
+        minus_dimension = len(intersection_basis(
+            window_image, chamber_minus, prime, 10
+        ))
+        character = (len(window_image), plus_dimension, minus_dimension)
+        stable_character_counts[character] = (
+            stable_character_counts.get(character, 0) + 1
+        )
+        require(plus_dimension + minus_dimension == len(window_image)
+                and plus_dimension == minus_dimension,
+                ("unbalanced chamber-stable window", digits, character))
+        if len(window_image) > 2:
+            exceptional_stable_windows.append(
+                (len(window_image), digits, len(window))
+            )
+    stable_character_histogram = tuple(sorted(stable_character_counts.items()))
+    require(stable_character_histogram
+            == (((2, 1, 1), 119), ((6, 3, 3), 4), ((10, 5, 5), 4)),
+            stable_character_histogram)
+    require(tuple(exceptional_stable_windows) == (
+        (6, (0, 12), 20),
+        (6, (2, 10), 18),
+        (6, (0, 12, 2, 10), 18),
+        (10, (3, 9), 34),
+        (10, (5, 7), 30),
+        (10, (6,), 50),
+        (6, (3, 9, 6), 22),
+        (10, (5, 7, 6), 22),
+    ), exceptional_stable_windows)
+
     record = (
         CERTIFICATE_SHA256,
         prime,
@@ -445,6 +567,7 @@ def analyse(bank):
         middle_pairing,
         middle_pairing_determinant,
         pairing_scalar,
+        extension_cohomology,
         chamber_matrix,
         (len(reversed_common), rank(common_child + reversed_common,
                                     prime, SIZE),
@@ -453,6 +576,8 @@ def analyse(bank):
         arc_scalar,
         arc_scalar_square,
         digit_gate,
+        stable_character_histogram,
+        tuple(exceptional_stable_windows),
     )
     semantic = digest(record)
     if EXPECTED_SEMANTIC_SHA256 != "TO_BE_PINNED":
@@ -470,8 +595,10 @@ def main() -> None:
         common_annihilator_digest, qa_dual_digest,
         block_dimensions, block_pairing_ranks,
         middle_pairing, middle_pairing_determinant, pairing_scalar,
-        chamber_matrix, arc_lift_record, compressed_arc, arc_scalar,
-        arc_scalar_square, digit_gate,
+        extension_cohomology, chamber_matrix, arc_lift_record,
+        compressed_arc, arc_scalar,
+        arc_scalar_square, digit_gate, stable_character_histogram,
+        exceptional_stable_windows,
     ) = record
     print("== r5 common-child / middle-dual exact refinement ==")
     print(f"frozen_bank=(certificate_sha256={certificate_sha},prime={prime})")
@@ -482,10 +609,12 @@ def main() -> None:
     print(f"dual_identity=(dimension={annihilator_dimension},common_annihilator_digest={common_annihilator_digest},QA_dual_digest={qa_dual_digest},equal=True)")
     print(f"block_duals=(dimensions={block_dimensions},common_pairing_ranks={block_pairing_ranks})")
     print(f"middle_pairing=(matrix={middle_pairing},det={middle_pairing_determinant},scalar={pairing_scalar},perfect=True,outer_blocks_zero=True)")
+    print(f"endpoint_retaining_response=(coefficient_dimension=3,boundary_rank_H0_H1={extension_cohomology},classes=(relative_invariant,endpoint_D6))")
     print(f"chamber_subquotient=(matrix={chamber_matrix},genuine_involution=True)")
     print(f"arc_realization=(common_dimension,union_with_reversal,intersection)={arc_lift_record}")
     print(f"compressed_arc=(matrix={compressed_arc},scalar_times_chamber={arc_scalar},square_scalar={arc_scalar_square},involution=False)")
     print(f"digit_reflection_gate=(parent_plus_image_of_common_kernel_rank,image_rank_in_Q,union_with_U_rank)={digit_gate}")
+    print(f"chamber_stable_child_windows=(character_histogram={stable_character_histogram},exceptional_rank_gt_2={exceptional_stable_windows})")
     print(f"semantic_sha256={semantic}")
     print("connection=U=q(intersection_t C_t)=ker(Q10->QA8) pairs perfectly with L=Q10_middle_dual, hence U is canonically V_rel_dual after the THM-3534 contraction L->V_rel")
     print("preserved=all-child common quotient class,middle orientation defect,perfect evaluation pairing,coupled chamber involution")

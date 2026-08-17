@@ -1,5 +1,39 @@
 # Script Results Index
 
+- `lrc_r5_rank_two_relative_response_cospan_thm3534_20260816.py`,
+  its FLINT audit, and
+  `lrc_r5_common_child_middle_duality_thm3534_20260816.py` -> matching
+  `.out` files [THM-3534 RESERVED / PROVISIONAL PROOF CANDIDATE;
+  FINITE-EXACT STATIC RESPONSE PACKAGE].  The frozen middle-orientation
+  difference has rank five, splitting as source rank two plus endpoint rank
+  three.  The source plane and the dual-Q10 contraction plane are distinct
+  rank-two planes whose unique endpoint-relative quotient is
+  `V_rel=(S+I)/kD_6`.  The image `U` common to all thirteen child spaces is
+  exactly `ker(Q10->Q_A8)`; `U^perp=Q_A8^vee`, and `U` pairs perfectly
+  only with the two middle dual lines, giving `U isomorphic V_rel^vee`.
+  Chamber monodromy gives `dim H1(V_rel)=1`.  Retaining the endpoint in the
+  minimal three-space `V_ext=S+I` gives formal twisted H1 dimension two,
+  split as relative invariant plus pure endpoint; MISTAKE-420 records the
+  repaired scope.  Pure reversal does not preserve the common realization;
+  its compress/reinflate correspondence is `lambda*C` with
+  `lambda^2!=1`.  All 127 nonempty chamber-stable child windows have
+  quotient-character dimensions only `(2,1+1)`, `(6,3+3)`, or
+  `(10,5+5)`; none appends a lone endpoint-invariant dual.  Every response
+  row is exact on the formal digit C13, and
+  coefficient-exponent mismatch blocks additive maps to the F13 Kummer or
+  characteristic-zero JC flux carriers.  No chronology, physical closure
+  edge, word-current, D5 flux, row exclusion, or LRC(14) conclusion follows.
+  Primary script/output/semantic hashes:
+  `4eab23ff77de9d190f13d5a41945415ba55734e0fcdc6f8eae3cbb47d4fb101d` /
+  `f6972a28ba83ce03c7bfa45a2e6b6eaa8af1504f778a2412ee536639a53f4b6c` /
+  `57a44964888fdb0a9ca1c890abbe4950c6fa7130f7ab2800c0faa8a5d6a0212d`;
+  FLINT semantic
+  `f1dfa230027e7fd8f48c7eb7bac2034d0188ee61a4ce6f24d2579860cf532020`;
+  common-core script/output/semantic:
+  `991c65d7c1a3fc4268afdd5a9d750a138b25fce306734e31d288195e89712d09` /
+  `0320a48d59e85fcdca90e48d93b80265cc76c03f5ff2e83260cf6974af493afd` /
+  `4261ca08016b2de90bc8f609ebf283d915f8613410a5dbc15229b02baeed8803`.
+
 - `keller_tame_conjugacy_covariance_audit_20260816.py` -> matching `.out`
   [THM-3532 PROVED + VERIFIED-EXACT].  For every polynomial two-sided
   equivalence `G=tau o F o sigma`, the old extension square gives exact
