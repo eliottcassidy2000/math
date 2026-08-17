@@ -8,12 +8,15 @@ status: >
   rank-three endpoint plane.  The dual middle block of the ten-dimensional
   quotient contracts to a different rank-two response plane.  The two planes
   become canonically isomorphic only relative to the unique endpoint-supported
-  line at r0=6.  The descended chamber involution splits this relative plane
-  1+1, so its natural twisted C4 H1 has dimension one; every response row is
-  already exact on the formal digit C13, the literal common chamber line is
-  exact, and the surviving chamber line requires the endpoint quotient.  This is a
-  static finite-exact representation statement, not a physical current, D5
-  flux map, row exclusion, or LRC(14) theorem.
+  line at r0=6.  Moreover, the rank-two image common to all thirteen child
+  spaces is exactly the kernel of Q10 -> Q_A8, pairs perfectly and only with
+  the dual middle block, and is therefore the dual of the relative response
+  plane.  The descended chamber involution splits this plane 1+1, so its
+  natural twisted C4 H1 has dimension one; every response row is already exact
+  on the formal digit C13, the literal common chamber line is exact, and the
+  surviving chamber line requires the endpoint quotient.  This is a static
+  finite-exact representation statement, not a physical current, D5 flux map,
+  row exclusion, or LRC(14) theorem.
 source: codex r5 rank-two cospan session, 2026-08-16
 depends_on: []
 related:
@@ -32,6 +35,11 @@ audit_output: 05-knowledge/results/lrc_r5_rank_two_relative_response_cospan_flin
 audit_script_sha256: 13316f9add30bb0d5de23d0d0339cf3bdcf666419045a84a3a6e1b96eb54e996
 audit_output_sha256: a449fb52016453596ffc581a4df0ccde2028d8777fec6696c122f41ff24bd8d6
 audit_semantic_sha256: f1dfa230027e7fd8f48c7eb7bac2034d0188ee61a4ce6f24d2579860cf532020
+pairing_script: 04-computation/lrc_r5_common_child_middle_duality_thm3534_20260816.py
+pairing_output: 05-knowledge/results/lrc_r5_common_child_middle_duality_thm3534_20260816.out
+pairing_script_sha256: 9e1ba692683346a73ddb1250adeeaf9a5839ad20fecc47ee4c0e455fa0ffdf2c
+pairing_output_sha256: cd8f64f5d742c249ba65180cf5d1f586735695ee3900f0a636cdcd99ab5c9d51
+pairing_semantic_sha256: e734d40131404ac2ca0ea1a0fbd4154d998b7bb2e18200351fcbc3debc560ce1
 hash_basis: LF-normalized bytes
 ---
 
@@ -210,6 +218,98 @@ Thus the two-dimensional defect of the quotient and the two-dimensional
 source response are not the same two-plane.  Equal ranks were hiding a
 row/column variance error.
 
+### 3a. The all-child common core is exactly dual to the middle defect
+
+Let W=k^78, let R be the rank-68 parent rowspace, and write C_t for the
+thirteen fixed-third-digit child rowspaces.  With
+
+~~~text
+q:W -> Q=W/R,
+U=q(intersection_t C_t),                                  (16a)
+~~~
+
+the frozen quotient audit gave only dim U=2.  The exact basis comparison now
+identifies this plane intrinsically.  If A is pure arc reversal, then
+
+~~~text
+dim(intersection_t C_t)=14,
+dim((intersection_t C_t) intersect R)=12,
+U=ker(Q -> W/(R+A R)),       dim U=2.                     (16b)
+~~~
+
+Thus the common child plane is not an unrelated coincidence: it is exactly
+the two-dimensional orientation-forgetting kernel.  Dually,
+
+~~~text
+U^perp=(W/(R+A R))^vee,       dim U^perp=8.               (16c)
+~~~
+
+The six block-dual dimensions are (2,2,1,1,2,2).  Pairing U with them has
+rank profile
+
+~~~text
+(0,0,1,1,0,0).                                           (16d)
+~~~
+
+Hence U pairs only with the two middle lines L=L_+ direct sum L_- from (12),
+and that pairing is perfect.  In chamber-linked deterministic bases its
+matrix is
+
+~~~text
+636675481197456361648540 * I_2,                           (16e)
+~~~
+
+whose determinant is
+
+~~~text
+149750845022728455688979 !=0 in k.                        (16f)
+~~~
+
+Consequently the evaluation pairing gives a marked canonical isomorphism
+
+~~~text
+U --sim--> L^vee.                                        (16g)
+~~~
+
+After the contraction L -> I -> V_rel proved below, duality gives the
+strongest lawful map supplied by the frozen child data:
+
+~~~text
+U --sim--> V_rel^vee.                                    (16h)
+~~~
+
+This is a genuine static cospan refinement.  It does **not** identify U with
+V_rel itself.  Such a direct identification requires a marked self-duality of
+the relative response plane, which is an additional gauge even though the two
+chamber representations are abstractly isomorphic.
+
+The lift anatomy explains why (16h) is not transport.  Put
+C_common=intersection_t C_t and K=C_common intersect R.  Chamber reflection
+preserves both spaces and swaps the two normalized quotient lines.  Pure arc
+reversal preserves K but not C_common:
+
+~~~text
+dim(C_common+A C_common)=16,
+C_common intersect A C_common=K.                         (16i)
+~~~
+
+Projecting A C_common back through C_common/K=U gives a well-defined
+compressed correspondence, not an inherited action.  In the chamber-linked
+basis it is
+
+~~~text
+T_A=lambda C,
+lambda=145859431184888028092125,
+T_A^2=lambda^2 I,
+lambda^2=17748677861075734903229 !=1.                    (16j)
+~~~
+
+The failure of C_common to be A-stable is load-bearing: one must not use
+A^2=1 to replace (16j) by an involution.  Pure digit reflection is worse; it
+sends the 12-dimensional kernel outside R and its common-child image has full
+rank ten in Q.  Only the coupled chamber involution is a genuine symmetry of
+the subquotient.
+
 ## 4. The unique endpoint-relative repair
 
 The mismatch in `(16)` is exactly one endpoint direction.  Put
@@ -339,13 +439,15 @@ eight-dimensional quotient `Q_A` has zero middle dual:
 (Q_A,middle)^vee=0.                                      (32)
 ```
 
-One may retain the rank-two interface or force arc reversal to descend, but
-the latter operation kills the former.
+Equations (16b)--(16c) make this tradeoff exact on both variances.  One may
+retain the rank-two all-child interface U and its perfect middle-dual pairing,
+or force arc reversal to descend; the latter operation kills exactly U in the
+quotient and exactly its complementary middle interface in the dual.
 
 ## 6. Why this still does not type a D5 flux map
 
 The cospan `(22)` is a static good-reduction representation.  It is not a
-physical word-current for four independent reasons.
+physical word-current for six independent reasons.
 
 1. `Loc_(3,9)` records exception locations, and `(21)` is the marked lookup
    of their two response rows.  No THM-2334/2512 current-to-location chain
@@ -357,6 +459,9 @@ physical word-current for four independent reasons.
    that depends on it cannot factor through `(19)`.
 5. On the formal digit cycle all response rows are coboundaries by
    `(11a)--(11c)`; there is no hidden nonzero address-seam class to export.
+6. The all-child core maps canonically to `V_rel^vee`, not `V_rel`.
+   Forcing arc reversal to descend kills that core, while the compressed
+   alternative `(16j)` fails the involution law.
 
 At the exact finite coefficient level there is also an immediate D5 no-go.
 The additive group of `V_rel` has exponent `p`, while the marked Kummer line
@@ -394,22 +499,25 @@ not a tournament on four vertices.
 The `+/-` decomposition in `(28)--(29)` is a lawful use of the involution.
 Calling it XOR would lose the coefficient field and, in characteristic two,
 would erase the nonzero mismatch `2cD_(6,*)` while merging the invariant and
-anti-invariant lines.  Because there is no coefficient map from `k` to `F2`,
-that Boolean shadow cannot prove descent, exactness, or current realization.
+anti-invariant lines.  It would also replace the exact compressed relation
+`T_A=lambda C`, where `lambda` is neither `1` nor `-1`, by the bare
+swap and thereby erase the failure of the involution law.  Because there is
+no coefficient map from `k` to `F2`, that Boolean shadow cannot prove
+descent, exactness, or current realization.
 
 ## 8. Connection and loss ledger
 
 | field | exact answer |
 |---|---|
 | source | two marked exceptional chambers `Loc_(3,9)`, then their actual middle-response plane `S` |
-| target | the relative response representation `V_rel`; independently, the dual middle quotient `L=Q_middle^vee` |
-| map | row lookup `tau_2`, contraction `delta_D`, and quotient by `E_6` as in `(22)` |
-| preserved | both reflected response functions, middle orientation, coupled chamber involution, relative zero/nonzero, and the exact two-channel transition |
-| destroyed | the `r0=6` endpoint amplitude, outer endpoint rows, absolute lifts, child section, digit chronology, closure edge, source/current semantics, and JC target predicate; ordinary digit-cycle H1 is already zero |
-| required sidecar | the actual endpoint line `E_6`, a lawful same-copy closure edge, a physical current-to-response chain map, and a coefficient-compatible filtered JC realization |
-| cheapest decisive tests | rank/intersection ledger `(11),(16),(18)`; transition `(24)`; twisted boundary `(30)`; arc-stable hostile `(32)` |
-| tournament verdict | intrinsic relation is both-way, so no tournament; XOR erases the load-bearing endpoint mismatch |
-| strongest survivor | a minimal chamber-equivariant two-dimensional **relative** cospan, not an `H^1` or flux bridge |
+| target | the relative response representation V_rel; independently, the all-child quotient core U and dual middle quotient L=Q_middle^vee |
+| map | row lookup tau_2, contraction delta_D, quotient by E_6, and the perfect pairing U -> L^vee -> V_rel^vee |
+| preserved | both reflected response functions, all-child common quotient class, middle orientation, coupled chamber involution, relative zero/nonzero, and the exact two-channel transition |
+| destroyed | the r0=6 endpoint amplitude, outer endpoint rows, absolute lifts, direct response self-duality, child section, digit chronology, closure edge, source/current semantics, and JC target predicate; ordinary digit-cycle H1 is already zero |
+| required sidecar | the actual endpoint line E_6, a marked response self-duality for U -> V_rel, a lawful same-copy closure edge, a physical current-to-response chain map, and a coefficient-compatible filtered JC realization |
+| cheapest decisive tests | rank/intersection ledger (11),(16),(18); common-core identities (16b)--(16f); transition (24); twisted boundary (30); arc-stable hostile (32) |
+| tournament verdict | intrinsic chamber relation is both-way, so no tournament; XOR erases both the endpoint mismatch and the nonunit scalar holonomy in (16j) |
+| strongest survivor | a minimal chamber-equivariant two-dimensional **dual relative** cospan, not an H^1 or flux bridge |
 
 ## 9. Exact evidence and current status
 
@@ -429,6 +537,12 @@ determinant, twisted boundary rank, and middle stabilization.  This is an
 independent algebra-engine replay, not yet the requested independent agent
 audit of the theorem's typing and scope.
 
+A third dependency-free postprocessor compares the all-child intersection
+with the arc-stable quotient.  It proves (16b)--(16j), including equality of
+the two rank-two subspaces by canonical RREF digest, equality of their
+eight-dimensional annihilators, the perfect middle-only pairing, and the
+non-involutive compressed arc correspondence.
+
 Reproduce with
 
 ```text
@@ -436,6 +550,8 @@ python -B 04-computation/lrc_r5_rank_two_relative_response_cospan_thm3534_202608
 python -B -O 04-computation/lrc_r5_rank_two_relative_response_cospan_thm3534_20260816.py
 python -B 04-computation/lrc_r5_rank_two_relative_response_cospan_flint_audit_20260816.py
 python -B -O 04-computation/lrc_r5_rank_two_relative_response_cospan_flint_audit_20260816.py
+python -B 04-computation/lrc_r5_common_child_middle_duality_thm3534_20260816.py
+python -B -O 04-computation/lrc_r5_common_child_middle_duality_thm3534_20260816.py
 ```
 
 Normal and optimized transcripts byte-match the stored output.  Script,
@@ -453,6 +569,14 @@ The FLINT script, output, and semantic hashes are
 13316f9add30bb0d5de23d0d0339cf3bdcf666419045a84a3a6e1b96eb54e996
 a449fb52016453596ffc581a4df0ccde2028d8777fec6696c122f41ff24bd8d6
 f1dfa230027e7fd8f48c7eb7bac2034d0188ee61a4ce6f24d2579860cf532020.
+```
+
+The common-child pairing script, output, and semantic hashes are
+
+```text
+9e1ba692683346a73ddb1250adeeaf9a5839ad20fecc47ee4c0e455fa0ffdf2c
+cd8f64f5d742c249ba65180cf5d1f586735695ee3900f0a636cdcd99ab5c9d51
+e734d40131404ac2ca0ea1a0fbd4154d998b7bb2e18200351fcbc3debc560ce1.
 ```
 
 The proof candidate constructs no physical current, no `C4` clock closure,
