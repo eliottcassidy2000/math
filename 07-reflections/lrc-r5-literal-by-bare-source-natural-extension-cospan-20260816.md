@@ -140,6 +140,10 @@ literal target intervals.  The exact endpoint-level diagonal census is
 112 atom-address pairs have both marginals positive but empty diagonal.  (5)
 ```
 
+The 169 addresses have diagonal-support histogram
+`17:4, 18:22, 19:80, 20:63`; their false-positive histogram is
+`0:81, 1:66, 2:20, 3:2`.
+
 The second line is the concrete transportation hostile promised by
 THM-2538: positive separate endpoint masses do not imply same-point support.
 The complete address ledger has digest

@@ -4,6 +4,8 @@ dependencies=((spectrum,5f3fbf08bef6f9a61e684f0f7616e80e1dbbda4f6bb2ed4ca3788d3b
 natural_extension=v=Y_(q,e')(y)=(y+q+13e')/13^6; branch_address=q+13e' in Z/13^6; v is not y
 grids=(source=297836897838480,target=483730250419703196,lcm=744944585646342921840,scales=2501183,1540)
 all_address_endpoint_census=(alpha_beta=169,target_intervals=7107008,diagonal_atom_support=3244/6591,positive_marginal_but_empty_diagonal=112,sha256=d450c50c66242664c2c13076c4dbd775793d3a191ce9a143218880574edfecad)
+address_diagonal_support_histogram=((17, 4), (18, 22), (19, 80), (20, 63))
+address_false_positive_histogram=((0, 81), (1, 66), (2, 20), (3, 2))
 selected_address=(1, 0); identity_recovery=old_tensor*2501183: PASS
 identity_tensor=(support=5150/138411,mass=32130005012548873716037676925000,sha256=0259a37742edbf3c402ad8bf1bbe5f9a798def037b3e39e3c80c3929e69ba1d7)
 natural_diagonal_tensor=(support=4885/138411,mass=16609023891511992906074761046460,sha256=196e4388b03e28b43b0291e9a4206af9621596905ea98922108e328193f93bb0)
@@ -17,5 +19,5 @@ tuple_boundary=(source_word=(1, 14, 27, 40, 53, 66, 13, 2197, 742586),U_full_wor
 preserved=bare-source endpoint node Y,source and U_full endpoint atoms,alpha,beta,all tau guards,ell,c,depth-six branch sum
 lost_or_missing=BY character,AX common-stalk lift,exact grouped address,U_full/source same-tuple theorem,chronology,physical current
 nonconsequence=no THM-2449/2512 input,current,row exclusion,or LRC(14) closure
-semantic_sha256=cce1850a9b287f4b612c6724bfc63441febc78b2223b19d6d72e6989b2590500
+semantic_sha256=13624687b1a338ef2c937d6f4d64e0e34e459b7d2ec9ef9357ee196ceb142a94
 all exact checks passed

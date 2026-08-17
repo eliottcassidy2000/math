@@ -22,6 +22,7 @@ LRC(14) conclusion.
 
 from __future__ import annotations
 
+from collections import Counter
 from contextlib import redirect_stdout
 from hashlib import sha256
 import importlib.util
@@ -55,7 +56,7 @@ TARGET_PATH = (
 TARGET_SHA256 = "f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc"
 TARGET_SEMANTIC = "d52c9f0a56c14a83e1e6b175c7b725314c99f09d44509bc8582847a5857f7da6"
 
-EXPECTED_SEMANTIC_SHA256 = "cce1850a9b287f4b612c6724bfc63441febc78b2223b19d6d72e6989b2590500"
+EXPECTED_SEMANTIC_SHA256 = "13624687b1a338ef2c937d6f4d64e0e34e459b7d2ec9ef9357ee196ceb142a94"
 
 
 def require(condition: bool, payload: object) -> None:
@@ -391,6 +392,8 @@ def main() -> None:
                 selected_target_groups = groups
     require(selected_target_groups is not None, "selected endpoint address absent")
     require(all_intersection_support > 0, "all natural-section intersections empty")
+    address_support_histogram = tuple(sorted(Counter(row[4] for row in address_rows).items()))
+    false_positive_histogram = tuple(sorted(Counter(row[6] for row in address_rows).items()))
 
     selected_diagonal_groups = tuple(
         intersect_plain(endpoint_groups[index], selected_target_groups[index])
@@ -523,6 +526,8 @@ def main() -> None:
         address_digest,
         all_intersection_support,
         marginal_false_positives,
+        address_support_histogram,
+        false_positive_histogram,
         SELECTED_ADDRESS,
         tuple(interval_mass(group) for group in selected_diagonal_groups),
         identity_stats,
@@ -575,6 +580,8 @@ def main() -> None:
         f"positive_marginal_but_empty_diagonal={marginal_false_positives},"
         f"sha256={address_digest})"
     )
+    print(f"address_diagonal_support_histogram={address_support_histogram}")
+    print(f"address_false_positive_histogram={false_positive_histogram}")
     print(
         f"selected_address={SELECTED_ADDRESS}; identity_recovery="
         f"old_tensor*{source_scale}: PASS"

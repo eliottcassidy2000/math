@@ -80,7 +80,8 @@
   Replacing the observer by the identity recovers every pinned source-tensor
   entry times the exact common-grid scale.  Across all 169 endpoint shifts,
   `3,244/6,591` atom-address diagonals are nonempty, while 112 pairs have both
-  marginals positive but empty diagonal.  The fiat `v=y` hostile has only 668
+  marginals positive but empty diagonal; per-address support lies in `17..20`
+  and false positives in `0..3`.  The fiat `v=y` hostile has only 668
   supported entries and differs in `1,131/1,183` guarded coordinates; deleting
   the right guard differs in 1,030.  Natural, fiat, and guard-deleted banks all
   retain full `(91,1,6,12,72)` spectra, so spectral closure again does not
@@ -88,10 +89,10 @@
   address, and a same-word theorem are absent; the source and `U_full` words
   differ in roles `1,3,5`.  No THM-2449/2512 input, current, row exclusion, or
   LRC(14) conclusion follows.  Script/output/reflection/semantic LF SHA-256:
-  `498fbdf9a7f884d18bc88ab44586e64f946e1d12399e977c5918d8f67765f522` /
-  `8e8e085e995a4adb2c4c3a75aa606ced45ac5e083829c5e73c475f90462b3f69` /
-  `d349851018013646986f0056645a07a38657bc97402c44241591e454c6343a67` /
-  `cce1850a9b287f4b612c6724bfc63441febc78b2223b19d6d72e6989b2590500`.
+  `eb548fd8823b0e2e732bfc1636138b1365672b05f3516733a24eaf459e60f289` /
+  `73ddd97a9dec462201fb28834c36398abf0fb01b74199450802957c07347ac33` /
+  `e783126a3f650c1ac64f150731bd4a6d36cdba3960b39a2a4817923ef11f4987` /
+  `13624687b1a338ef2c937d6f4d64e0e34e459b7d2ec9ef9357ee196ceb142a94`.
 
 - `lrc_r5_one_leg_integrand_fubini_by_probe_20260816.py` -> matching `.out`
   [FINITE-EXACT ONE-LEG EXTERNAL-PRODUCT FUBINI; NOT TEMPORAL TRANSPORT].
