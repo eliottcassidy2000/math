@@ -389,7 +389,8 @@ python -B 04-computation/keller_prescribed_coordinate_newest_prime_probe_2026081
 python -B -O 04-computation/keller_prescribed_coordinate_newest_prime_probe_20260816.py
 ```
 
-The ordinary and optimized transcripts match the stored output.  The
+The ordinary and optimized transcripts match the stored output after the
+declared LF normalization.  The
 companion uses explicit failures rather than executable assertions, checks
 the rational rank-nine product directly, independently crosschecks split and
 quotient-algebra products, and records every finite chart, degree, unique
