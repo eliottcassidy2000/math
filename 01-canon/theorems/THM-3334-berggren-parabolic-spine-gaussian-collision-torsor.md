@@ -28,6 +28,7 @@ depends_on:
   - THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone
 related:
   - THM-1310-jacobian-counterexample-fiber-geometry-S3-resolvent-jelonek
+  - THM-3536-berggren-angle-languages-signed-c4-and-harmonic-density
 script: 04-computation/berggren_parabolic_gaussian_torsor_thm3334.py
 output: 05-knowledge/results/berggren_parabolic_gaussian_torsor_thm3334.out
 script_sha256: bc201467b685fc0ba3654b17726ddbaae403a4389cbcf7259613e47d3366063a

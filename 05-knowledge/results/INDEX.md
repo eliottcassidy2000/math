@@ -1,8 +1,8 @@
 # Script Results Index
 
 - `berggren_descendant_angle_language_density_20260816.py` -> matching
-  `.out` [THM-3536 PROOF-COMPLETE ELEMENTARY CANDIDATE + VERIFIED-EXACT;
-  INDEPENDENT AUDIT ACCEPTED AFTER MISTAKE-418 FIBONACCI-SIDECAR REPAIR].
+  `.out` [THM-3536 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  MISTAKE-418 FIBONACCI-SIDECAR REPAIR APPLIED].
   THM-3334's two angle walls have inverse Berggren
   itineraries `(BABB)^omega` and `(BCBB)^omega`.  Consequently the exact
   U-obtuse/acute/D-obtuse level counts obey four-step recurrences and have
