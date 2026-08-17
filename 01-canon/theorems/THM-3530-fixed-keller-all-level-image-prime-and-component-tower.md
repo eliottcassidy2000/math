@@ -2,34 +2,40 @@
 id: THM-3530
 title: "Fixed Keller all-level image-prime and exact component tower"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT HOSTILE AUDIT.
-  Conditional on the reserved THM-3529 finite-sheet unit proof, the candidate
-  uses finite-etale norm divisors and primitive complete top-face exponents
-  to force generic image degree one at every raw rung.  No statement in this
-  file is proved canon until both the dependency and this induction are
-  independently promoted.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the fixed
+  sporadic Keller map, every raw cleared-norm rung is absolutely irreducible,
+  is the reduced equation of the preceding rung's image closure, and maps to
+  the next rung with generic degree one.  The nth self-iterate has exactly n
+  reduced Jelonek components.  The mechanism is the finite-etale prime-power
+  norm law plus coprime complete top-face exponents.
 source: codex/packet-power-image-induction/2026-08-16
-depends_on: []
-related:
+audit: >
+  The independent audit verified the localized prime contraction, geometric
+  integrality of the image, norm-valuation exponent, localized-unit removal,
+  UFD power obstruction, all-level grade primitivity, image-closure induction,
+  and reduced component indexing.  It supplied hostiles for ordinary versus
+  absolute irreducibility, generic-degree norm powers, localized boundary
+  units, and nonprimitive top grades.
+depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
+  - THM-2570-jelonek-cusp-cylinder-normalization-and-conductor
   - THM-2576-composite-jelonek-image-divisor-and-two-component-nonproperness-law
-  - THM-3504-level-four-sporadic-keller-image-prime-and-four-component-nonproperness
   - THM-3528-fixed-keller-all-level-cleared-norm-polynomiality-and-finite-sheet-defect
   - THM-3529-fixed-keller-complete-packet-finite-sheet-unit
+related:
+  - THM-3504-level-four-sporadic-keller-image-prime-and-four-component-nonproperness
+  - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
 script: 04-computation/keller_packet_power_image_prime_induction_audit_20260816.py
 output: 05-knowledge/results/keller_packet_power_image_prime_induction_audit_20260816.out
-script_sha256: b756f9707a5bce1885069a75e48f27c7a0163b321f9d606ce33c9e0e171fe67c
-output_sha256: cae9264170d3fca662d7a2dcbc4380a26fff98be279e8f57fd600a2389150dc4
+script_sha256: a9dca29c9a82ec97082adc87afc1b0695abbe3fcc3a5c5df31dabcf227f40b7a
+output_sha256: 66f3c578d9a021df0ed07c8b260015ac7b6ab284dff320af24f34fe8d5794656
 semantic_sha256: ab5aa0fe7f28607c766ea4e3d1d42a7b84b4e9843ce2e35df49ebefd06bace75
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3530 -- primitive packet faces force an all-level prime image tower
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT HOSTILE
-AUDIT.**  This file is not in the proved dependency graph.  Its proof uses
-the still-reserved THM-3529 candidate and must not be cited as canon before
-both audits are accepted.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Retain the fixed sporadic map `F:C^3->C^3`, its irreducible boundary `L`, and
 the raw cleared-norm tower
@@ -45,9 +51,9 @@ THM-3528 proves that every `P_n` is a nonzero polynomial with complete packet
 `A(e_n,m_n)`.  Rational scalar normalizations do not affect any statement
 below.
 
-## 1. Candidate theorem
+## 1. The theorem
 
-For every `n>=0`, the candidate conclusions are:
+For every `n>=0`:
 
 ```text
 P_n is absolutely irreducible;                          (2)
@@ -64,7 +70,8 @@ The polynomials `P_n` are pairwise nonassociate.  Consequently, for every
 S_(F^r)=V(P_0 P_1 ... P_(r-1))                         (5)
 ```
 
-has exactly `r` irreducible components.  This would promote the fixed-map
+has exactly `r` irreducible components as a reduced algebraic set.  This
+promotes the fixed-map
 component-count prediction of HYP-9033 from depths one through four to every
 depth.
 
@@ -73,7 +80,8 @@ depth.
 Let `P` be an absolutely irreducible complete packet `A(e,m)`.  Put
 
 ```text
-D=V(L),                 U=A^3\D,
+A_0=Q[a,b,c],
+D=V(L),                 U=Spec(A_0[L^-1]),
 X_U=F^-1(U).                                               (6)
 ```
 
@@ -83,15 +91,23 @@ THM-2473 proves that
 F_U:X_U->U                                                (7)
 ```
 
-is finite etale of degree three.  Reserved THM-3529 would prove that the
+is finite etale of degree three.  THM-3529 proves that the
 finite inverse divisor `F^-1(D)` is not a component of `V(P)`.  Hence
 
 ```text
 E=V(P) intersect X_U                                     (8)
 ```
 
-is a nonempty dense irreducible divisor in `V(P)`.  Because `(7)` is finite,
-its image is a closed irreducible surface in `U`.  Its closure is
+is a nonempty dense geometrically integral open subset of `V(P)` and a
+closed prime divisor in `X_U`.  Because `(7)` is finite,
+its image is a closed irreducible surface in `U`.  Write this equality and
+its global closure as
+
+```text
+F_U(E)=V(R) intersect U,             closure(F_U(E))=V(R). (8a)
+```
+
+Choose `R` primitive with respect to `L`.  The closure is
 Galois-stable because `F` and `P` are defined over `Q`, and it is geometrically
 irreducible because it is the closure of the image of a geometrically
 irreducible variety.  Write it as `V(R)`, with `R in Q[a,b,c]` absolutely
@@ -103,21 +119,22 @@ At the generic point of `V(R)`, the reduced prime divisor `E` has
 d=deg(E->V(R)) in {1,2,3}.                              (9)
 ```
 
-Etaleness makes the order of `P` along `E` equal to one.  The divisor of the
-finite-algebra norm on `U` is therefore the pushforward divisor
+The prime polynomial `P` has order one along `E`, and etaleness contributes
+no ramification multiplier.  The divisor of the finite-algebra norm on `U`
+is therefore the pushforward divisor
 
 ```text
 div_U N(P)=d (V(R) intersect U).                        (10)
 ```
 
-Equivalently, in the localization `A[L^-1]`,
+Equivalently, in the localization `A_0[L^-1]`,
 
 ```text
 N(P)=u R^d,                                             (11)
 ```
 
-where `u` is a unit.  Since `A` is factorial and `L` is irreducible, every
-unit of `A[L^-1]` is `cL^k` for `c!=0` and `k in Z`.  Multiplying `(11)` by
+where `u` is a unit.  Since `A_0` is factorial and `L` is irreducible, every
+unit of `A_0[L^-1]` is `cL^k` for `c!=0` and `k in Z`.  Multiplying `(11)` by
 the packet clearing power gives
 
 ```text
@@ -125,7 +142,7 @@ Q(P)=L^eN(P)=c L^(e+k) R^d.                             (12)
 ```
 
 THM-3528 identifies `ord_L Q(P)` with the finite-sheet defect; THM-3529's
-candidate value zero would make `e+k=0`.  Thus
+value zero makes `e+k=0`.  Thus
 
 ```text
 Q(P)=cR^d,                 1<=d<=3.                    (13)
@@ -172,33 +189,40 @@ d divides e',                 d divides m'.             (18)
 For the actual raw orbit, the packet arithmetic gives
 
 ```text
-gcd(e_n,m_n)=1 for every n>=1.                          (19)
+gcd(e_n,m_n)=1 for every n>=0.                          (19)
 ```
 
-Indeed the exact Cassini identity
+Indeed, write `v_n=(e_n,m_n)^T=M^n(1,0)^T`.  If an odd prime `p`
+divided both coordinates of `v_n`, then `det M=-8` would make `M` invertible
+modulo `p`, forcing `(1,0)^T=M^(-n)v_n=0 mod p`, a contradiction.  Thus the
+gcd is a power of two.  But
 
 ```text
-e_n m_(n+1)-m_n e_(n+1)=3(-8)^n                        (20)
+e_(n+1)=7e_n-2m_n=e_n mod 2,             e_0=1,        (20)
 ```
 
-restricts any common prime to `2` or `3`, while
+so every `e_n` is odd and `(19)` follows.  The independent Cassini check
 
 ```text
-(e_n,m_n)=(1,3) mod 6,                 n>=1,           (21)
+e_n m_(n+1)-m_n e_(n+1)=3(-8)^n                         (21)
 ```
 
-excludes both.  When `Q(P_n)=P_(n+1)`, equations `(18)`--`(21)` leave only
+gives a second route together with `(e_n,m_n)=(1,3) mod 6` for `n>=1`.
+When `Q(P_n)=P_(n+1)`, equations `(18)`--`(21)` leave only
 
 ```text
 d=1.                                                    (22)
 ```
 
 Thus the output is a scalar multiple of the absolutely irreducible image
-equation `R`, and the restriction has generic degree one.  This proves the
-inductive step `(2)`--`(4)`.
+equation `R`, and the restriction has generic degree one.  Since `E` is
+dense in `V(P)`, continuity gives `F(V(P)) subseteq closure(F(E))`; the
+reverse closure inclusion is immediate from `E subseteq V(P)`.  Hence
+`closure(F(V(P)))=V(R)`, proving the inductive step `(2)`--`(4)`.
 
-The base is `P_0=L`, whose absolute irreducibility is part of the fixed
-Jelonek theorem.  Induction now gives `(2)`--`(4)` at every level.
+The base is `P_0=L`, whose absolute irreducibility follows from THM-2570's
+geometrically integral cusp-cylinder normalization.  Induction now gives
+`(2)`--`(4)` at every level.
 
 ## 4. Distinctness and the exact Jelonek component count
 
@@ -225,10 +249,9 @@ Iterating `(3)` shows
 closure(F^j(V(P_0)))=V(P_j).                            (25)
 ```
 
-One way to keep `(25)` honest is to use constructibility: the dense image at
-each stage contains a dense open of the irreducible target, and the next
-generic-degree-one map remains dominant on that open.  No equality between
-an unclosed image and its closure is silently assumed.
+Equation `(25)` follows by applying the continuity/dense-open argument in
+Section 3 at each stage.  No equality between an unclosed image and its
+closure is silently assumed.
 
 The left side of `(24)` is closed.  Taking the closure of its finite union
 and using `(25)` gives
@@ -243,18 +266,18 @@ Pairwise distinct absolute primes and `(23)` prove that `(26)` has exactly
 
 ## 5. What closes, and what does not
 
-If promoted, the theorem would close four fixed-map questions at once:
+The theorem closes four fixed-map questions at once:
 
 1. every raw cleared norm is an absolute prime;
 2. every newest prime is the closure of the preceding prime's image;
 3. every newest image restriction has generic degree one; and
 4. the `r`th self-iterate has exactly `r` Jelonek components.
 
-It would also show that THM-3528's branch-transplant defect word is identically
+It also shows that THM-3528's branch-transplant defect word is identically
 zero on this raw orbit.  The transplant theorem remains a valid conditional
 monoid statement for other packet inputs, but no raw tower return occurs.
 
-The result still would **not** prove:
+The result does **not** prove:
 
 - generic separability or full degree of every later coordinate eliminant;
 - an all-level discriminant square-class recursion;
@@ -268,7 +291,7 @@ The result still would **not** prove:
 
 ## 6. Equality boundary and hostile controls
 
-The candidate has sharp failure modes.
+The theorem has sharp failure modes.
 
 1. **Primitive grade is essential.**  Since `L` has `A(1,0)`, the complete
    packets `L^2` and `L^3` have grades `(2,0)` and `(3,0)` and literal top
@@ -277,10 +300,15 @@ The candidate has sharp failure modes.
 2. **Input primeness is essential.**  For reducible `P`, different source
    components can have different image primes, so the norm need not be one
    prime power.
+   Ordinary rational irreducibility is also insufficient:
+   `x^2+y^2` is irreducible over `Q` but splits over `C`.
 3. **The finite unit is essential.**  Without THM-3529, equation `(12)` may
    retain an old-`L` factor and the one-prime-power reduction fails.
 4. **Etaleness is essential.**  Ramification could multiply the divisor
    order independently of the generic image degree.
+   Even without ramification, the finite map `t=x^2` sends the prime `y=0`
+   to `y=0` with generic degree two and norm `N(y)=y^2`; this is the sharp
+   witness that the exponent in `(13)` really is the restriction degree.
 5. **The complete face is essential.**  A selected leading monomial cannot
    support the UFD inference `(18)` if unrecorded equal-weight terms exist.
 

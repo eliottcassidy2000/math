@@ -22,6 +22,7 @@ depends_on:
   - THM-3528-fixed-keller-all-level-cleared-norm-polynomiality-and-finite-sheet-defect
 related:
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
+  - THM-3530-fixed-keller-all-level-image-prime-and-component-tower
 script: 04-computation/keller_finite_branch_beta_homogeneous_unit_obstruction_20260816.py
 output: 05-knowledge/results/keller_finite_branch_beta_homogeneous_unit_obstruction_20260816.out
 script_sha256: c3b096d9f9b29c97eb1540dc85cb3f2e6739f2aeb5d903b5f3f36672e0592694
@@ -237,11 +238,12 @@ Each hypothesis is load-bearing.
    would not work; the complete-face assertion excludes additional
    equal-weight `x`-terms.
 
-This theorem proves only old-`L` coprimality of the cleared outputs.  It does
-not prove that any later `P_n` is irreducible,
-that `V(P_n)` is a new image prime, that a later eliminant is separable, that
-the discriminant recursion continues, that all nonproperness components are
-distinct, or that the construction says anything about the general Jacobian
+This theorem itself proves only old-`L` coprimality of the cleared outputs.
+THM-3530 subsequently proves the fixed raw prime-image tower by adding a
+separate primitive-face argument.  The present theorem alone does not prove
+that an arbitrary complete-packet output is irreducible, that a later literal
+coordinate eliminant is separable, that the discriminant recursion continues,
+or that the construction transfers to another map or the general Jacobian
 conjecture.
 
 ## Reproduction

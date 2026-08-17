@@ -11,9 +11,9 @@ status: >
   A(271,99).  The next finite-sheet unit is left open here and subsequently
   closed by THM-3521.  THM-3522 subsequently proves fixed-chart renewal
   propagation and closes the complete packets of R_5 and R_6.  THM-3528
-  subsequently proves the raw all-level polynomial-packet induction.  A
-  fifth image prime, later finite-sheet units, and every general Jacobian
-  claim remain open.  The
+  subsequently proves the raw all-level polynomial-packet induction, and
+  THM-3529 proves all complete packets are finite-sheet units.  A fifth image
+  prime and every general Jacobian claim remain open at this theorem state.  The
   exact companion is independent of THM-3506's face script; an
   independent parent replay reproduced its semantic ledger exactly.  This
   is a replay audit, not a broader all-level or geometric proof audit.

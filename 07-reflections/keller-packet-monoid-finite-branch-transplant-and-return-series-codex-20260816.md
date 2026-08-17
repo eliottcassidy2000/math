@@ -1,4 +1,4 @@
-# The finite survivor controls a branch-transplant monoid, not the prime-image tower
+# The finite survivor defines a transplant monoid, but complete packets never return
 
 **Status: PROVED STRUCTURAL COROLLARY OF INDEPENDENTLY AUDITED THM-3528;
 VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The fixed Keller packet family now has the monoid structure suggested
@@ -10,10 +10,11 @@ shifts any returned old-boundary factor through the canonical ancestry
 L -> H -> J -> G -> R_5 -> R_6 -> R_7 -> R_8 -> ... . (1)
 ```
 
-This is the exact branch transplant.  It also identifies the first serious
-failure mode beyond `R_8`: not failure of polynomiality, but re-entry of the
-finite surviving inverse branch into an old divisor, after which ancestral
-factors propagate forever.
+This is the exact branch transplant.  THM-3529 subsequently proves that its
+positive-defect antecedent cannot occur for any complete packet: the finite
+survivor divisor is `V(F^*L)`, and the x-free minimum-beta face excludes it.
+Thus the transplant is a sharp conditional monoid law and hostile mechanism,
+while the fixed positive-level raw orbit has no old-`L` return at all.
 
 ## 1. Why the local `1+2` anatomy is load-bearing
 
@@ -43,10 +44,10 @@ return.  This is an exact use of the `1+2` cubic anatomy, unlike the earlier
 speculative comparison with a ternary combinatorial tree.
 
 The old finite-sheet computations showed `s=0` through input `R_7` and output
-`R_8`.  THM-3528 proves that a later `s>0` would not stop the packet tower.
-It would instead mark a divisor return.  Reserved THM-3529 now contains a
-stronger candidate obstruction to every such return; that argument remains
-under independent audit at this reflection state.
+`R_8`.  THM-3528 proves that a hypothetical later `s>0` would not stop the
+packet tower but would instead mark a divisor return.  THM-3529 now proves
+the stronger statement `s(P)=0` for every complete packet, so every
+positive-level raw output is old-`L`-coprime.
 
 ## 2. The complete-packet monoid
 
@@ -133,9 +134,11 @@ The complete finite-sheet ledger is
 D(t)=sum_(n>=0) s(P_n)t^n in N[[t]].                  (13)
 ```
 
-Its support is a subset of `N`, multiplicities are retained, and transplant
-is the unilateral shift `D(t)->tD(t)`.  This is the faithful realization of
-the “subset of the harmonic series” intuition: retain the indexed word.
+For the fixed raw orbit, THM-3529 gives `D(t)=0`.  In a general return-word
+formalism its support is a subset of `N`, multiplicities are retained, and
+transplant is the unilateral shift `D(t)->tD(t)`.  This is the faithful
+realization of the “subset of the harmonic series” intuition: retain the
+indexed word.
 
 Scalar evaluation at reciprocals is not faithful.  The exact `1..13` census
 has
@@ -217,8 +220,8 @@ not a current or flux map.
 | separate grades | fibre `3^n`, Pell `(-8)^n`, return shift `t^n` |
 | faithful subset carrier | formal defect series in `N[[t]]` |
 | lossy carrier | scalar harmonic subseries |
-| first open input | finite-sheet value of `R_8` |
-| still open | later units, factorization, images, separability, components, general JC |
+| raw finite-sheet ledger | identically zero by THM-3529 |
+| still open at this reflection state | factorization, images, separability, components, general JC |
 
 ## Reproduction
 
@@ -228,7 +231,8 @@ python -B -O 04-computation/keller_packet_monoid_branch_transplant_audit_2026081
 ```
 
 The synthetic defects in the companion are hostile arithmetic controls, not
-observed returns.  Normal and optimized outputs match.  Script/output/
+geometrically realizable defects of complete packets after THM-3529.  Normal
+and optimized outputs match.  Script/output/
 semantic LF SHA-256 are
 `8256c7179c415e8588a0612608f7c253baf026d8a237cd8cbf01720758e8b5dc`,
 `b934628ab80fefe5fdc6662d10f12bffa4f6f1fb25a3006b9254f3f4b7d204d6`,

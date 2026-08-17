@@ -2,27 +2,16 @@
 id: HYP-9033
 title: "The discriminant tower: Jelonek divisors as classification data for the Keller monoid, and the genus axis of collapse vs rigidity"
 status: >
-  OPEN synthesis with a PROVED fixed-map core: the corrected saturated
-  cuspidal law 27 c^2 L = S^2 - T^3 (MISTAKE-287) and THM-2570's global
-  normalization/conductor theorem.  THM-2576 proves the set-level composition
-  law and the two irreducible components of S_(F o F).  THM-2582 proves the
-  global degree-nine discriminant square class `[H]`: the old component `L` has
-  even valuation and `H` is the sole odd irreducible divisor.  THM-3495 proves
-  fixed depth three: `S_(F^3)=V(LHJ)` has three distinct prime components and
-  `[Delta_3]=[-2J]`.  THM-3498 proves the depth-four old-boundary valuation,
-  polynomial localization, generic degree-81 separability gate, and square
-  class `[Delta_4]=[2G]` for `G=L^43N(J)`.  THM-3504 proves the missing
-  image role: `G` is absolutely irreducible, `V(J)->V(G)` has generic degree
-  one, and `S_(F^4)=V(LHJ G)` has four components.  THM-3506 proves the
-  next old-`L` valuation `v_L(N(G))=-271`, polynomial localization of
-  `R_5=L^271N(G)`, and the conditional five-face transform.  THM-3521 proves
-  the following finite-sheet gate `v_L(N(R_5))=-1699`, polynomial
-  localization of `R_6=L^1699N(R_5)`, and exposed top pair `(10663,3867)`.
-  THM-3522 proves the fixed-chart renewal implication and therefore the
-  complete packets `A(1699,615)` for `R_5` and `A(10663,3867)` for `R_6`.
-  The next old-`L` polynomiality gate, fifth image prime, degree-243 gate,
-  positive discriminant multiplicities, and unconditional all-level tower
-  remain open.  Nothing here is a JC(2) or classification claim.
+  OPEN synthesis with a substantially PROVED fixed-map core.  The saturated
+  cusp law and normalization are proved; THM-2582/3495/3498/3525/3526 give
+  the literal-coordinate discriminant square classes through depth six.
+  THM-3528 proves raw complete packets at every level, THM-3529 proves every
+  complete packet is a finite-sheet unit, and THM-3530 proves every raw rung
+  is an absolute image prime with generic image degree one and exactly n
+  reduced Jelonek components for F^n.  Exact positive discriminant
+  multiplicities, literal-coordinate separability beyond depth six,
+  tame-family covariance, and monoid-wide classification remain open.
+  Nothing here is a JC(2) or arbitrary-map classification claim.
 source: opus-2026-07-28 (from the uniform disc law found by the
   THM-2546 referee run: disc = -4 (square)^2 L for all three
   coordinate cubics of the sporadic Keller map)
@@ -42,6 +31,9 @@ related:
   - THM-3506 (five-face transform and the next old-boundary valuation)
   - THM-3521 (fixed-R5 finite sheet and following old-boundary valuation)
   - THM-3522 (fixed-chart complete-packet renewal propagation)
+  - THM-3528 (all-level raw complete packets and defect identity)
+  - THM-3529 (all complete packets are finite-sheet units)
+  - THM-3530 (all-level fixed raw image primes and component count)
 ---
 
 # HYP-9033 -- the discriminant tower and the genus axis
@@ -199,9 +191,9 @@ gcd(R_5,L)=1.
 ```
 
 It also proves the exposed face
-`R_5 ~ x^1699(3xz-2y)^615` in the relevant initial form.  The fifth image
-role, integral normalizations, global degree ledgers, and degree-243
-separability remain open.
+`R_5 ~ x^1699(3xz-2y)^615` in the relevant initial form.  At that theorem
+state the fifth image role, integral normalizations, global degree ledgers,
+and degree-243 separability were open.
 THM-3521 closes the next finite-sheet question by proving
 
 ```text
@@ -219,10 +211,19 @@ complete A(e,m) + polynomial L^eN(P)
 ```
 
 and consequently gives complete packets `A(1699,615)` for `R_5` and
-`A(10663,3867)` for `R_6`.  THM-3523 pays the following finite-sheet gate:
-`v_L(N(R_6))=-10663`, polynomial and `L`-coprime
-`R_7=L^10663N(R_6)`, and complete packet `A(66907,24255)`.  The next unpaid
-analogue is finite-sheet nonvanishing for `L^66907N(R_7)`.
+`A(10663,3867)` for `R_6`.  THM-3523/3527 pay the next two finite-sheet
+gates, while THM-3525/3526 prove the degree-243/729 separability gates and
+classes `[-2R_5]`, `[2R_6]`.  THM-3528 then proves raw polynomial complete
+packets at every level.  THM-3529 identifies the finite divisor as `V(F^*L)`
+and proves its order is zero on every complete packet.  Finally THM-3530
+uses the primitive top-face exponents to force every norm-image exponent to
+one, proving all raw rungs are absolute image primes and
+
+```text
+S_(F^n)=union_(j=0)^(n-1) V(P_j)
+```
+
+with exactly `n` reduced components.
 
 ## 3. Two crevasse invariants for atomhood (spectrum repaired)
 
@@ -283,7 +284,8 @@ place to HUNT for a JC(2) counterexample instead.
 
 ## 5. Predictions ledger
 
-- P1 (fixed grades two through four proved at set and square-class levels):
+- P1 (fixed component tower proved all levels; literal square classes through
+  depth six):
   `S_(F o F)=V(LH)` with two irreducible components (THM-2576), while the
   degree-nine eliminant has discriminant square class `[H]` (THM-2582).
   THM-3495 gives `S_(F^3)=V(LHJ)` and degree-27 class `[-2J]`.  Odd part
@@ -291,21 +293,20 @@ place to HUNT for a JC(2) counterexample instead.
   At grade four THM-3498 proves the square-class/localization gate
   `[Delta_4]=[2G]`, while THM-3504 proves `S_(F^4)=V(LHJ G)` with four
   pairwise-distinct prime components and generic degree one on the newest
-  image restriction.  THM-3506 proves the next old-boundary/localization gate
-  `v_L(N(G))=-271` and `R_5=L^271N(G)` coprime to `L`, but no fifth image or
-  discriminant claim.  THM-3521 proves the following old-boundary gate
-  `v_L(N(R_5))=-1699` and polynomial `R_6`; THM-3522 upgrades both `R_5` and
-  `R_6` to complete five-face packets; and THM-3523 proves polynomial,
-  `L`-coprime `R_7` with packet `A(66907,24255)`, still without a fifth
-  image, an `R_7` image role, or a degree-243 claim.
+  image restriction.  THM-3525/3526 add `[-2R_5]` and `[2R_6]` at depths
+  five and six.  THM-3528/3529 give all-level complete packets and old-`L`
+  units, and THM-3530 proves the newest raw polynomial is an absolute image
+  prime of generic degree one at every depth.  Literal-coordinate
+  separability beyond depth six and exact positive discriminant
+  multiplicities remain open.
 - P2 (VERIFIED-EXACT for the two fixed tame members): W1 and W2 obey
   `disc=-(det J)^2(square)^2L_W`, with `L_W=L o T^(-1)`.  A general
   gauge-covariance theorem remains open.
 - P3 (reframed): within a mixed grade, primitivity proves atomness; Jelonek
   reducibility is a second one-way classifier, not an atom-degree floor.
 - P4: component count of the Jelonek divisor = the grade exponent `k`,
-  generically.  This now holds for the fixed map at `k=1,2,3,4`; all `k>=5`
-  and any family-generic form remain open.
+  generically.  THM-3530 proves this for the fixed raw tower at every `k`.
+  Any family-generic or monoid-wide form remains open.
 - P5: the genus axis governs the remaining JC(2) strata.
 
 ## Concurrent scorecard (typed after audit)
@@ -322,31 +323,29 @@ valuation/localization; THM-3513 closes the two renewal faces of `G`; and
 THM-3521 adds `v_L(N(R_5))=-1699`, polynomial `R_6`, and its exposed top
 pair; THM-3522 adds conditional fixed-chart renewal and the complete packets
 of `R_5` and `R_6`; and THM-3523 adds `v_L(N(R_6))=-10663`, polynomial,
-`L`-coprime `R_7`, and `A(66907,24255)`.  None gives exact positive
-discriminant multiplicities, the following `L^66907N(R_7)` polynomiality
-gate, or an unconditional all-level factorization law.
+`L`-coprime `R_7`, and `A(66907,24255)`.  THM-3528 promotes raw packet
+polynomiality to all levels, THM-3529 promotes finite-sheet units to all
+complete packets, and THM-3530 promotes the fixed raw image-prime/component
+tower to all levels.  Exact positive discriminant multiplicities and
+literal-coordinate separability beyond depth six remain open.
 Trace-zero persistence at depth two and the `8 -> 512` cubing pattern are
 VERIFIED for the fixed construction only.  The W1/W2 identities are exact for
-those two tame conjugates, not a classification theorem.  P4 is proved for
-the fixed tower through depth four.  THM-3506 constructs the depth-five
-cleared numerator `R_5`, THM-3521 closes its finite-sheet gate and constructs
-the following old-`L` cleared norm `R_6`, THM-3522 closes renewal through
-both packets, and THM-3523 closes the `R_6` finite sheet and constructs
-`R_7`.  The next decisive tests are finite-sheet nonvanishing for
-`L^66907N(R_7)`, the image multiplicity/distinctness of `R_5`, the image role
-of `R_7`, and degree-243 separability.
+those two tame conjugates, not a classification theorem.  P4 is now proved
+for the fixed raw tower at every depth.  The next decisive tests are an
+intrinsic all-level discriminant-class formulation, literal-coordinate
+separability beyond depth six, exact discriminant multiplicities, and
+transport of the packet/divisor mechanism to tame or other family members.
 
 ## Loss ledger
 
 The saturated cuspidal law is proved for the sporadic `F` only; the raw
 pullback has the extra affine plane `c=0` described in (C).  The set-level
-composition law and odd-block square-class lemma are general; the fixed-map
-two-, three-, and four-component sets and their square classes are proved.
-Exact discriminant multiplicities, the `-(det J)^2` law, and depth-five or
-general component counts remain outside proved canon.  THM-3506's
-`R_5=L^271N(G)` is polynomial and coprime only to `L`; it is not yet a prime
-image equation.  THM-3521 gives the same limited old-`L` conclusion for
-`R_6=L^1699N(R_5)` and no image role.  "Generic component count"
-needs a precise genericity notion before any classification claim; none of
-this closes JC(2), classifies maps within the monoid, or controls the weighted
-G1 witness -- it supplies invariants and a hunting map.
+composition law and odd-block square-class lemma are general.  THM-3530
+proves the fixed raw component tower and its generic-degree-one image maps at
+all depths, but not a family-generic component law.  Exact discriminant
+multiplicities, all-level literal-coordinate separability, the monoid-wide
+`-(det J)^2` law, and tame-family packet covariance remain outside proved
+canon.  "Generic component count" still needs a precise family parameter
+space before any classification claim; none of this closes JC(2), classifies
+maps within a numerical grade, or controls the weighted G1 witness -- it
+supplies invariants and a hunting map.

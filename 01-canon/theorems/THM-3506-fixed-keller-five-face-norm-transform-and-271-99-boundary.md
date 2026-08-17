@@ -13,9 +13,9 @@ status: >
   this fixed inverse chart whenever the next cleared norm is polynomial,
   closing the packets of R_5 and R_6.  THM-3523 subsequently closes the next
   finite-sheet/polynomiality gate and gives the packet of R_7.  THM-3528
-  subsequently proves raw polynomial complete packets at all levels; later
-  finite-sheet units, image primes, and every general Jacobian claim remain
-  open.
+  subsequently proves raw polynomial complete packets at all levels, and
+  THM-3529 proves every complete packet is a finite-sheet unit.  Image
+  primes and every general Jacobian claim remain open at this theorem state.
 source: codex/tropical-keller-norm/2026-08-16
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
@@ -28,6 +28,7 @@ related:
   - THM-3521-fixed-R5-finite-sheet-unit-and-next-old-L-clearing
   - THM-3522-fixed-keller-five-face-renewal-propagation
   - THM-3523-fixed-R6-finite-sheet-unit-and-next-old-L-clearing
+  - THM-3529-fixed-keller-complete-packet-finite-sheet-unit
 script: 04-computation/keller_tropical_norm_face_recurrence_probe_20260816.py
 output: 05-knowledge/results/keller_tropical_norm_face_recurrence_probe_20260816.out
 script_sha256: fe1b03de9061c997a1abba6b88753e589c0a01f9f92762e49fe7ea0504ce9797

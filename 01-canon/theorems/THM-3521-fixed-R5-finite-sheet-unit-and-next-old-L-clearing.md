@@ -11,9 +11,10 @@ status: >
   fixed-chart renewal and closes the complete packets of R_5 and R_6.
   THM-3523 subsequently closes the next finite-sheet/polynomiality gate and
   gives the complete packet of R_7.  Irreducibility or image status of R_5,
-  the degree-243 separability gate, later finite-sheet units, later images,
-  and every general Jacobian-conjecture claim remain open.  THM-3528
-  subsequently proves the weaker raw all-level polynomial-packet law.
+  later images, and every general Jacobian-conjecture claim remain open at
+  this theorem state.  THM-3525 later closes the degree-243 gate, THM-3528
+  proves the raw all-level polynomial-packet law, and THM-3529 proves all
+  complete packets are finite-sheet units.
 source: codex/fixed-R5-finite-sheet/2026-08-16
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy

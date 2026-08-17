@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Exact arithmetic/UFD certificate for reserved THM-3530.
+"""Exact arithmetic/UFD certificate for THM-3530.
 
-The geometric part of THM-3530 says that, after the finite-sheet obstruction
+The geometric proof in THM-3530 says that, after the finite-sheet obstruction
 removes the old boundary, the cleared norm of an absolutely irreducible packet
 has the form c*R^d with 1<=d<=3.  This companion certifies the remaining
 power obstruction: every non-seed raw packet row is primitive, its complete
@@ -149,9 +149,9 @@ def main() -> None:
     print("square_cube_gate=d|e and d|m is impossible for d=2,3 on every nonseed row: PASS")
     print(f"hostile_A(2,0)_top_face={hostile_square_face};literal_square=PASS")
     print(f"hostile_A(3,0)_top_face={hostile_cube_face};literal_cube=PASS")
-    print("image_indexing=F^n uses candidate primes P_0,...,P_(n-1);strict grades distinguish them")
+    print("image_indexing=F^n uses raw primes P_0,...,P_(n-1);strict grades distinguish them")
     print(f"semantic_sha256={semantic}")
-    print("scope=arithmetic/UFD certificate conditional on geometric norm-divisor and THM-3529 finite-unit gates;no separability,exact discriminant multiplicity,arbitrary-map,or general JC claim")
+    print("scope=arithmetic/UFD companion to the proved geometric norm-divisor and THM-3529 finite-unit gates;no all-level coordinate separability,exact discriminant multiplicity,arbitrary-map,or general JC claim")
     print("all exact checks passed")
 
 

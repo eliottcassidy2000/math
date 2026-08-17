@@ -508,8 +508,9 @@ The currently lawful instances are typed as follows:
 The first two were THM-3506's verified full packets `H,J`.  THM-3513 and
 THM-3522 subsequently promoted `G,R_5,...,R_8`, and THM-3528 now proves every
 later raw cleared norm has the full packet.  Thus iteration of (49) is an
-actual all-level fixed-map packet orbit.  This supplies no later finite-sheet
-unit, image equation, irreducibility, or Berggren ancestry word.
+actual all-level fixed-map packet orbit.  THM-3529 additionally proves every
+complete packet is a finite-sheet unit.  This supplies no image equation,
+irreducibility, or Berggren ancestry word.
 
 Nor is (49) one fixed Berggren branch word. In the seed chart the generators
 are

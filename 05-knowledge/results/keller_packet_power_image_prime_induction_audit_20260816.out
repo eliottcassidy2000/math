@@ -6,7 +6,7 @@ top_face_prime_support=(x^e)*(3xz-2y)^m with coprime irreducibles: PASS
 square_cube_gate=d|e and d|m is impossible for d=2,3 on every nonseed row: PASS
 hostile_A(2,0)_top_face=256*x**2;literal_square=PASS
 hostile_A(3,0)_top_face=4096*x**3;literal_cube=PASS
-image_indexing=F^n uses candidate primes P_0,...,P_(n-1);strict grades distinguish them
+image_indexing=F^n uses raw primes P_0,...,P_(n-1);strict grades distinguish them
 semantic_sha256=ab5aa0fe7f28607c766ea4e3d1d42a7b84b4e9843ce2e35df49ebefd06bace75
-scope=arithmetic/UFD certificate conditional on geometric norm-divisor and THM-3529 finite-unit gates;no separability,exact discriminant multiplicity,arbitrary-map,or general JC claim
+scope=arithmetic/UFD companion to the proved geometric norm-divisor and THM-3529 finite-unit gates;no all-level coordinate separability,exact discriminant multiplicity,arbitrary-map,or general JC claim
 all exact checks passed

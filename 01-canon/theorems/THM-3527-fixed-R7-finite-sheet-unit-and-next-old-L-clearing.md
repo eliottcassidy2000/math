@@ -8,9 +8,10 @@ status: >
   R_8:=L^66907 N(R_7) is polynomial and coprime to L.  Applying THM-3522
   only after this polynomiality gate gives the complete fixed-chart packet
   A(419839,152211), exactly the next Pell-57 recurrence row.  No image
-  equation, irreducibility, later finite-sheet unit, all-level L-coprime/image
-  law, arbitrary-map statement, or general Jacobian-conjecture claim follows.
-  THM-3528 subsequently proves the weaker raw all-level polynomial-packet law.
+  equation or irreducibility follows from this computation.  THM-3528
+  subsequently proves the raw all-level polynomial-packet law, and THM-3529
+  proves the all-level finite-unit and old-L-coprimality law.  Arbitrary-map
+  and general Jacobian-conjecture claims remain outside scope.
 source: codex/fixed-R7-finite-sheet/2026-08-16
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
@@ -20,6 +21,7 @@ depends_on:
 related:
   - THM-3525-level-five-degree243-separability-and-discriminant-square-class
   - THM-3526-level-six-degree729-separability-and-discriminant-square-class
+  - THM-3529-fixed-keller-complete-packet-finite-sheet-unit
 scripts:
   - 04-computation/keller_R7_finite_sheet_recursive_norm_probe_20260816.py
   - 04-computation/keller_R7_finite_sheet_split_outer_independent_audit_20260816.py
@@ -258,9 +260,9 @@ valuation, polynomiality and `L`-coprimality of `R_8`, and the complete packet
 
 - irreducibility, squarefreeness, or image-equation status of any `R_i`;
 - a fifth, sixth, seventh, or eighth new nonproperness component;
-- a later degree/separability gate or finite-sheet unit;
-- an all-level finite-unit, image, or discriminant theorem (THM-3528
-  subsequently supplies raw polynomial packets only);
+- a later degree/separability gate;
+- an all-level image or discriminant theorem (THM-3528 subsequently supplies
+  raw polynomial packets and THM-3529 supplies finite units only);
 - an arbitrary-map norm theorem, classification of Keller maps, `JC(2)`,
   `DC(2)`, LRC, or any general Jacobian-conjecture conclusion.
 

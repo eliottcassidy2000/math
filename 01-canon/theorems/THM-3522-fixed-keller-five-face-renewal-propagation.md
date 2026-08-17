@@ -13,8 +13,10 @@ status: >
   and A(419839,152211) for R_8; THM-3525/3526 close the distinct degree-243/
   729 separability gates.  THM-3528 subsequently discharges polynomiality
   for every complete packet and proves the fixed raw packet orbit at all
-  levels.  Later finite-sheet units, L-coprimality, image status, arbitrary
-  Keller maps, and every general Jacobian claim remain open.
+  levels; THM-3529 subsequently proves all complete packets are finite-sheet
+  units, so every positive raw rung is L-coprime.  Image status, arbitrary
+  Keller maps, and every general Jacobian claim remain open at this theorem
+  state.
 source: codex/five-face-renewal-propagation/2026-08-16
 depends_on:
   - THM-3495-level-three-sporadic-keller-norm-divisor-and-three-component-nonproperness
@@ -28,6 +30,7 @@ related:
   - THM-3526-level-six-degree729-separability-and-discriminant-square-class
   - THM-3527-fixed-R7-finite-sheet-unit-and-next-old-L-clearing
   - THM-3528-fixed-keller-all-level-cleared-norm-polynomiality-and-finite-sheet-defect
+  - THM-3529-fixed-keller-complete-packet-finite-sheet-unit
 scripts:
   - 04-computation/keller_five_face_renewal_propagation_probe_20260816.py
   - 04-computation/keller_five_face_renewal_propagation_independent_audit_20260816.py
@@ -453,8 +456,9 @@ exact computation, and then uses the implication proved here to give the
 complete packet `A(66907,24255)` for `R_7`.  THM-3525/3526 subsequently close
 the degree-243/729 gates, and THM-3527 clears `R_8` with packet
 `A(419839,152211)`.  THM-3528 then supplies polynomiality and complete raw
-packets at every later rung without proving finite-sheet units.  Image status,
-L-coprimality, later separability, and general-map bullets stay open.
+packets at every later rung.  THM-3529 subsequently proves the separate
+finite-sheet-unit and all-level old-`L`-coprimality statements.  Image status,
+later separability, and general-map bullets stay open.
 
 Reproduce the exact certificate with
 

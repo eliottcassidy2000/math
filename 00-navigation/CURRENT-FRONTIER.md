@@ -340,13 +340,13 @@ is sharp: equal counts allow two densities or none.
   `S_(F^4)=V(LHJ G)`, `[Delta_4]=[2G]`. THM-3506/3513 give `G` packet
   `(271,99)`; 3521--23/27 give packets through `R8`, ending
   `(419839,152211)`; 3525/26 give degree243/729 and
-  `[Delta_5,Delta_6]=[-2R_5,2R_6]`. Audited THM-3528 proves raw polynomial
-  packets all levels and the finite-defect/branch-transplant law; later
-  units, factors, images and geometry remain OPEN. THM-2681
-  blocks the `A4/S4` cubic; THM-2685--2708 give its
-  gain/holonomy.
-  Audited THM-3448/3517: cyclic `x/y/z` are primitive all grades; `m=3` gives `S5` quintics `[L5]`, but `C3` Jelonek is sign-blind, as are odd-family `C_(2m-3)`. THM-1605's formula is absent (MISTAKE-416); arbitrary quartic `C3` remains OPEN.
-  THM-3440/3443/3450: marked mode-one LRC/Keller isomorphism on 91 sheets.  Mod-13 `H^1` has no amplitude map; order 8/14 margins block the full germ.  No current.  THM-3066 retains only their
+  `[Delta_5,Delta_6]=[-2R_5,2R_6]`. THM-3528 gives all raw packets; audited
+  3529 gives all finite units; audited 3530 gives absolute image primes,
+  degree-one succession, and `n` components for `F^n`.  Coordinate
+  Separability after depth six and discriminant multiplicities remain OPEN.
+  THM-2681 blocks the `A4/S4` cubic; 2685--2708 give its holonomy.
+  3448/3517: cyclic coordinates are primitive; `m=3` gives `S5`, but `C3` Jelonek is sign-blind. 1605 is absent (MISTAKE-416); quartic `C3` remains OPEN.
+  3440/3443/3450: LRC/Keller mode on 91 sheets. Mod-13 `H^1` has no amplitude map; margins block the germ. The r5 tent seam `-1` is formal; rank two blocks response transport. No current. THM-3066 retains only their
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
   THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;
   polynomial `A2` regularity and constant units are the missing gate.

@@ -7,10 +7,12 @@ status: >
   A(e,m) has L^e times its cubic norm in Q[a,b,c], and the result has packet
   A(7e-2m,3e-2m).  Its exact old-L multiplicity is the nonnegative order on
   the regular finite inverse sheet.  Consequently the raw cleared-norm tower
-  from L is polynomial and carries the Pell-57 packet at every level.  This
-  does not prove later L-coprimality, newest-image status, irreducibility,
-  separability, distinct nonproperness components, an arbitrary-map law, or
-  any general Jacobian-conjecture claim.
+  from L is polynomial and carries the Pell-57 packet at every level.
+  THM-3529 subsequently proves that this finite-sheet order is zero for every
+  complete packet, hence all positive-level raw rungs are L-coprime.  This
+  theorem does not prove newest-image status, irreducibility, separability,
+  distinct nonproperness components, an arbitrary-map law, or any general
+  Jacobian-conjecture claim.
 source: codex/all-level-cleared-norm/2026-08-16
 audit: >
   A clean-room reciprocal-cubic audit independently verifies finite-etale
@@ -27,6 +29,8 @@ related:
   - THM-3521-fixed-R5-finite-sheet-unit-and-next-old-L-clearing
   - THM-3523-fixed-R6-finite-sheet-unit-and-next-old-L-clearing
   - THM-3527-fixed-R7-finite-sheet-unit-and-next-old-L-clearing
+  - THM-3529-fixed-keller-complete-packet-finite-sheet-unit
+  - THM-3530-fixed-keller-all-level-image-prime-and-component-tower
 scripts:
   - 04-computation/keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.py
   - 04-computation/keller_packet_monoid_branch_transplant_audit_20260816.py
@@ -50,7 +54,7 @@ semantic_sha256:
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3528 -- all complete packets clear, but finite-sheet defects may remain
+# THM-3528 -- all complete packets clear, with an exact finite-sheet defect
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
@@ -293,11 +297,17 @@ ord_L(P_(n+1))=s_n.                                   (23)
 ```
 
 The finite-sheet computations of THM-3498, THM-3506, THM-3521, THM-3523,
-and THM-3527 prove `s_n=0` through input `R_7` and output `R_8`.  They remain
-strictly stronger than this theorem: they prove the corresponding cleared
-norm is coprime to `L`.  Starting with input `R_8`, the values `s_n` are open
-and may be positive.  If that occurs, the next raw packet remains polynomial
-but carries an old-`L` factor of exactly that multiplicity.
+and THM-3527 originally proved `s_n=0` through input `R_7` and output `R_8`.
+THM-3529 subsequently identifies the finite divisor with the explicit prime
+`V(F^*L)` and uses the complete minimum-beta face to prove
+
+```text
+s_L(P)=0 for every complete packet P.                  (23b)
+```
+
+Hence `s_n=0` for every raw input and every `P_n` with `n>=1` is coprime to
+`L`.  The earlier finite computations are now exact instances of this
+all-packet theorem rather than the endpoint of the unit range.
 
 More precisely, if `Q(P)=L^sR_P` with `L` not dividing `R_P`, then
 
@@ -315,9 +325,8 @@ the identity map distinguish component return, whole-hypersurface return, and
 multiplicity, while a generic degree-two finite map can send a reduced prime
 to a squared norm.
 
-Accordingly this theorem proves neither:
+Accordingly this theorem by itself proves neither:
 
-- `L`-coprimality or finite-sheet units after `R_8`;
 - irreducibility, squarefreeness, primitivity over `Z`, or newest-image status
   for later raw rungs;
 - separability, full degree, discriminant square classes, or distinct
@@ -327,8 +336,10 @@ Accordingly this theorem proves neither:
   Keller counterexamples, `JC(2)`, `DC(2)`, LRC, or the general Jacobian
   conjecture.
 
-In particular, the raw all-level polynomial tower is not an all-level tower
-of new image primes.
+THM-3529 discharges the omitted all-level finite-unit statement.  Neither the
+defect identity nor that unit theorem alone makes the raw polynomial tower an
+all-level tower of new image primes; THM-3530 subsequently supplies the
+additional prime-power norm and primitive-face induction that does.
 
 ## 8. Packet monoid and the branch-transplant law
 
@@ -390,7 +401,10 @@ and all its descendants are reducible.  The seed factorization `P_0=L=L*1`
 is the sharp hostile showing that positive multiplicity does not imply
 reducibility when the cofactor is a unit.  The converse is false:
 `s_j=0` proves only that `P_(j+1)` is `L`-coprime and does not prove its
-irreducibility.
+irreducibility.  THM-3529 now proves that this positive-defect antecedent
+never occurs on the positive-level raw orbit; the transplant remains a valid
+conditional monoid identity and a hostile for packet systems lacking its
+transverse finite-divisor obstruction.
 
 The defect word has a faithful formal encoding
 
@@ -398,8 +412,10 @@ The defect word has a faithful formal encoding
 D(t)=sum_(n>=0) s_n t^n in N[[t]],                    (32)
 ```
 
-and one ancestry shift is multiplication by `t`.  Its support is literally a
-subset of the natural numbers.  Replacing (32) by a scalar harmonic subseries
+and one ancestry shift is multiplication by `t`.  For the fixed raw orbit,
+THM-3529 makes `(32)` the zero series.  In a hypothetical defect system its
+support is literally a subset of the natural numbers.  Replacing that formal
+word by a scalar harmonic subseries
 loses that support: already on `{1,...,13}`, the `8192` subsets give only
 `3712` reciprocal sums, `2944` of them collision values, with maximum
 multiplicity three; in particular
