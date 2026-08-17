@@ -2,7 +2,7 @@
 id: THM-3541
 title: "Keller grade-monoid factorization lengths and elasticity"
 status: >
-  PROVED + VERIFIED-EXACT.  The multiplicative Keller degree monoid
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The multiplicative Keller degree monoid
   M={1} union {n>=3} has atoms exactly the odd primes, 4, 8, and twice an
   odd prime.  If N=2^a m with m odd and b=Omega(m), its numerical-atom
   factorization lengths form the complete integer interval from
@@ -28,7 +28,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3541 -- exact arithmetic of the Keller grade monoid
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 Fix any ambient dimension `r>=3`.  THM-3438 proves that the generic-degree
 values of Keller endomorphisms are

@@ -25,6 +25,7 @@ related:
   - THM-3537-fixed-keller-level-two-old-L-inertia-and-x-index
   - THM-3539-fixed-keller-newest-prime-decomposition-centralizer-and-lca-packet-floor
   - THM-3540-fixed-keller-depth-two-newest-prime-residue-saturation
+  - THM-3542-fixed-keller-depth-three-newest-prime-residue-point-pair-saturation
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
 script: 04-computation/keller_prescribed_coordinate_newest_prime_probe_20260816.py
 output: 05-knowledge/results/keller_prescribed_coordinate_newest_prime_probe_20260816.out
@@ -397,9 +398,12 @@ without it the raw exponential factor census can persist.
 
 THM-3540 subsequently proves this point-and-pair saturation gate at `n=2`:
 the predecessor cubic over `kappa(H)` is one birational ancestry root times
-an irreducible quadratic.  Hence the six raw factors descend to four orbit
-packets there.  Saturation at every `n>=3` remains open, so this does not alter
-the all-level boundary above.
+an irreducible quadratic, so the six raw factors descend to four packets.
+THM-3542 proves the same gate at `n=3`: one good rational fibre has point
+orbit degrees `1,2,6` and injective pair-orbit degrees `1,2,6,6,9,12`, forcing
+the generic residue action to have every marked-tree point/pair orbit.  The
+`45` raw factors therefore descend to `9=3^2` packets.  Saturation at every
+`n>=4` remains open, so this does not alter the all-level boundary above.
 
 The numerical old-`L` sequence `1,4,14,46,142` is discovery data only.  In
 particular, the formula fitting its first four rows predicts `146` at depth
