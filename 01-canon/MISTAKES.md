@@ -9,6 +9,37 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-419 (2026-08-16, THM-3532 promotion gate) -- target postcomposition was called conjugacy, and optimized replay erased the certificate
+
+- **What failed:** historical W1/W2 prose called
+  `W_i=T_i o F` a tame conjugate and treated the pulled coordinate-core
+  discriminants as evidence that the fixed raw self-iterate tower should
+  transport without moving its packet chart.  A target postcomposition has no
+  compensating source factor `T_i^(-1)` and is not the self-map conjugate
+  `T_i o F o T_i^(-1)`.  Separately, the first THM-3532 companion put every
+  truth-bearing gate in a Python `assert`; `python -O` erased all of them, so
+  matching normal and optimized stdout did not certify optimized execution.
+- **Minimal witness / first failed implication:** exact evaluation gives
+  `W_1^2(0,0,-1)=(1,-3,0)` but `T_1F^2(0,0,-1)=(0,0,-2)`, and
+  `W_2^2(-1,0,0)=(62,4,0)` but `T_2F^2(-1,0,0)=(-2,0,0)`.
+  The transformed boundaries also leave the standard packet chart: their
+  five-extremum vectors are `(6,-1,-5,2,-8)` and
+  `(1,-8,-16,8,-40)`, versus `(1,-1,-5,2,-8)` for `L`.
+- **Repair / strongest survivor:** THM-3532 proves exact one-step covariance
+  for every two-sided polynomial equivalence and full all-level covariance for
+  every honest conjugate `phi o F o phi^(-1)`, with the five weights moved to
+  the `phi^(-1)` coordinate chart.  W1/W2 retain their exact one-step boundary,
+  norm, finite-divisor, discriminant, and literal-coordinate-core identities.
+  Their honest controls `T_i o F o T_i^(-1)` inherit the complete tower.  The
+  repaired companion uses explicit `require`/raise gates; normal and `-O`
+  executions are byte-identical to each other and the stored transcript.
+- **Reusable rule:** for `G=tau F sigma`, write
+  `G^2=tau F(sigma tau)F sigma` before transporting an iteration theorem.
+  Left/right equivalence transports one fibre square; conjugacy, or a separately
+  proved intertwiner for the inserted `sigma tau`, is required for a tower.
+  Never use an optimized replay as a validity gate until executable `assert`
+  statements have been excluded from every truth-bearing path.
+
 ## MISTAKE-418 (2026-08-16, Fibonacci angle-language sidecar) -- raw Fibonacci slope was mistaken for the canonically normalized primitive Berggren slope
 
 - **What failed:** the provisional Berggren angle-language reflection said

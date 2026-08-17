@@ -17,6 +17,7 @@ depends_on:
 related:
   - THM-2582-odd-block-discriminant-tower-and-composite-jelonek-square-class
   - THM-3508-level-two-sporadic-keller-three-coordinate-primitive-discriminant-square-class
+  - THM-3532-fixed-keller-conjugacy-covariance-and-two-sided-one-step-boundary
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
 script: 04-computation/keller_newest_prime_different_index_square_audit_20260816.py
 output: 05-knowledge/results/keller_newest_prime_different_index_square_audit_20260816.out
@@ -243,6 +244,8 @@ python -B -O 04-computation/keller_newest_prime_different_index_square_audit_202
 
 Normal and optimized transcripts match the stored output.  This theorem does
 not prove exact old-prime multiplicities, local maximality of a fixed literal
-coordinate at all depths, a simultaneous rational primitive form, tame-
-conjugacy covariance (reserved separately in THM-3532), an arbitrary Keller
-map theorem, `JC(2)`, `DC(2)`, LRC, or a general Jacobian classification.
+coordinate at all depths, a simultaneous rational primitive form, an
+arbitrary Keller-map theorem, `JC(2)`, `DC(2)`, LRC, or a general Jacobian
+classification.  THM-3532 subsequently proves transport of `(3)`--`(5)` on
+the fixed map's polynomial-conjugacy orbit; it does not enlarge that scope to
+arbitrary Keller maps or tame-equivalence classes.

@@ -30,6 +30,12 @@ x, y, z, r = sp.symbols("x y z r")
 VARS = (x, y, z)
 
 
+def require(condition, message):
+    """Optimization-safe validity gate."""
+    if not condition:
+        raise AssertionError(message)
+
+
 def subst(poly, mapping):
     return sp.expand(poly.subs(mapping, simultaneous=True))
 
@@ -102,14 +108,18 @@ T2 = (x + y * z, y + z**2, z)
 T2inv = (x - y * z + z**3, y - z**2, z)
 
 IDENTITY = VARS
-assert compose(T1, T1inv) == IDENTITY == compose(T1inv, T1)
-assert compose(T2, T2inv) == IDENTITY == compose(T2inv, T2)
+require(compose(T1, T1inv) == IDENTITY == compose(T1inv, T1),
+        "T1 inverse identity failed")
+require(compose(T2, T2inv) == IDENTITY == compose(T2inv, T2),
+        "T2 inverse identity failed")
 # det J_F=-2 and the ten-term identity F^*L=B are already independently
 # certified in THM-3529.  Re-expanding them here dominates the runtime while
 # adding no independent covariance check, so this companion treats them as
 # inherited exact inputs.
-assert jacobian_det(T1) == jacobian_det(T1inv) == 1
-assert jacobian_det(T2) == jacobian_det(T2inv) == 1
+require(jacobian_det(T1) == jacobian_det(T1inv) == 1,
+        "T1 Jacobian-unit check failed")
+require(jacobian_det(T2) == jacobian_det(T2inv) == 1,
+        "T2 Jacobian-unit check failed")
 
 base_signature = packet_signature(L)
 expected_base = {
@@ -119,9 +129,10 @@ expected_base = {
     "max_k": (2, 27 * x**2 * z**2),
     "min_gamma": (-8, z * (27 * x**2 * z + y**3)),
 }
-assert all(value == expected_base[name][0]
-           and sp.expand(poly - expected_base[name][1]) == 0
-           for name, (value, poly) in base_signature.items())
+require(all(value == expected_base[name][0]
+            and sp.expand(poly - expected_base[name][1]) == 0
+            for name, (value, poly) in base_signature.items()),
+        "base A(1,0) five-face signature failed")
 
 print("THM-3532 exact covariance controls")
 print("base_det=-2 (inherited THM-3529 exact input)")
@@ -135,16 +146,20 @@ for name, tame, tame_inv in (("W1", T1, T1inv), ("W2", T2, T2inv)):
     # therefore just the old core with the target variables pulled back.
     E = L * r**3 + (4 - 3 * y * z) * r - 2 * z
     E_post = apply_map(E, tame_inv)
-    assert sp.expand(sp.discriminant(E_post, r)
-                     + 4 * transported_S**2 * boundary) == 0
+    require(sp.expand(sp.discriminant(E_post, r)
+                      + 4 * transported_S**2 * boundary) == 0,
+            name + " target-pulled x-core discriminant failed")
 
     # In standard (x,y,z) weights the transformed seed is not A(1,0).
     standard_signature = packet_signature(boundary)
-    assert compact_signature(standard_signature) != compact_signature(base_signature)
+    require(compact_signature(standard_signature) != compact_signature(base_signature),
+            name + " did not trigger the standard-weight hostile")
     # In the transported coordinates, pull back once by T_i and recover L.
-    assert sp.expand(apply_map(boundary, tame) - L) == 0
+    require(sp.expand(apply_map(boundary, tame) - L) == 0,
+            name + " transported boundary did not recover L")
     transported_signature = packet_signature(apply_map(boundary, tame))
-    assert compact_signature(transported_signature) == compact_signature(base_signature)
+    require(compact_signature(transported_signature) == compact_signature(base_signature),
+            name + " transported A(1,0) signature failed")
 
     # Find a small exact witness to the invalid postcomposition iteration
     # identity (T_i F)^2 = T_i F^2.  This is a typing hostile, not a genericity
@@ -157,7 +172,7 @@ for name, tame, tame_inv in (("W1", T1, T1inv), ("W2", T2, T2inv)):
         if post_squared != alleged:
             score = max(abs(v) for v in post_squared + alleged)
             witnesses.append((score, point, post_squared, alleged))
-    assert witnesses
+    require(bool(witnesses), name + " postcomposition hostile bank was empty")
     _, witness_point, witness_left, witness_right = min(witnesses, key=lambda row: (row[0], row[1]))
 
     # Positive controls.  The first two equalities are formal consequences of
@@ -166,16 +181,19 @@ for name, tame, tame_inv in (("W1", T1, T1inv), ("W2", T2, T2inv)):
     for point in product((-1, 0, 1), repeat=3):
         old_target = evaluate(F, point)
         post_target = evaluate_chain(point, F, tame)
-        assert sp.Rational(boundary.subs(dict(zip(VARS, post_target)))) \
-            == sp.Rational(L.subs(dict(zip(VARS, old_target))))
+        require(sp.Rational(boundary.subs(dict(zip(VARS, post_target))))
+                == sp.Rational(L.subs(dict(zip(VARS, old_target)))),
+                name + " target boundary pullback failed at " + repr(point))
         core_mapping = dict(zip(VARS, post_target))
         core_mapping[r] = point[0]
-        assert sp.Rational(E_post.subs(core_mapping)) == 0
+        require(sp.Rational(E_post.subs(core_mapping)) == 0,
+                name + " pulled x-core failed at " + repr(point))
 
         lhs = evaluate_chain(point, tame_inv, F, tame,
                              tame_inv, F, tame)
         rhs = evaluate_chain(point, tame_inv, F, F, tame)
-        assert lhs == rhs
+        require(lhs == rhs,
+                name + " honest conjugacy square failed at " + repr(point))
 
     print(name + "_inverse=" + repr(tuple(map(str, tame_inv))))
     print(name + "_boundary=" + str(sp.factor(boundary)))
@@ -190,18 +208,22 @@ for name, tame, tame_inv in (("W1", T1, T1inv), ("W2", T2, T2inv)):
 # An affine triangular conjugacy is covered by the same formulas.
 A = (x + y + 1, y + z - 2, z + 3)
 Ainv = (x - y + z - 6, y - z + 5, z - 3)
-assert compose(A, Ainv) == IDENTITY == compose(Ainv, A)
-assert jacobian_det(A) == jacobian_det(Ainv) == 1
+require(compose(A, Ainv) == IDENTITY == compose(Ainv, A),
+        "affine inverse identity failed")
+require(jacobian_det(A) == jacobian_det(Ainv) == 1,
+        "affine Jacobian-unit check failed")
 LA = apply_map(L, Ainv)
 for point in product((-1, 0, 1), repeat=3):
     old_source = evaluate(Ainv, point)
     old_target = evaluate(F, old_source)
     new_target = evaluate(A, old_target)
-    assert sp.Rational(LA.subs(dict(zip(VARS, new_target)))) \
-        == sp.Rational(L.subs(dict(zip(VARS, old_target))))
+    require(sp.Rational(LA.subs(dict(zip(VARS, new_target))))
+            == sp.Rational(L.subs(dict(zip(VARS, old_target)))),
+            "affine boundary pullback failed at " + repr(point))
     lhs = evaluate_chain(point, Ainv, F, A, Ainv, F, A)
     rhs = evaluate_chain(point, Ainv, F, F, A)
-    assert lhs == rhs
+    require(lhs == rhs,
+            "affine honest conjugacy square failed at " + repr(point))
 print("affine_conjugacy_boundary_and_27_point_bank=True")
 
 # Exact scalar-normalization recurrence.  If L is replaced by cL and the raw
@@ -213,8 +235,10 @@ for _ in range(10):
 q = [1]
 for n in range(10):
     q.append(grades[n][0] + 3 * q[n])
-assert all(e % 2 == 1 for e, _ in grades)
-assert all(qn % 2 == (n + 1) % 2 for n, qn in enumerate(q))
+require(all(e % 2 == 1 for e, _ in grades),
+        "packet first-coordinate parity failed")
+require(all(qn % 2 == (n + 1) % 2 for n, qn in enumerate(q)),
+        "boundary-rescaling exponent parity failed")
 print("grades_0_6=" + repr(tuple(grades[:7])))
 print("boundary_rescale_exponents_q_0_6=" + repr(tuple(q[:7])))
 print("q_parity_n_plus_1=True")

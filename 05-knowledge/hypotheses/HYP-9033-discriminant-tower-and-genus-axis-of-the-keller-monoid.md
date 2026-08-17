@@ -11,8 +11,10 @@ status: >
   reduced Jelonek components for F^n.  THM-3531 proves the intrinsic
   all-level class `[(-1)^nP_(n-1)]`; THM-3533 gives newest-prime
   normalization exponent one; and THM-3535 proves full wreath monodromy plus
-  every nonzero constant linear form primitive at all depths.  Constant-form
-  order indices, exact old-prime multiplicities, tame-family covariance, and
+  every nonzero constant linear form primitive at all depths.  THM-3532 proves
+  full covariance on the fixed polynomial-conjugacy orbit and only one-step
+  covariance for independent source/target changes.  Constant-form order
+  indices, old-prime multiplicities, wider tame-equivalence covariance, and
   monoid-wide classification remain open.
   Nothing here is a JC(2) or arbitrary-map classification claim.
 source: opus-2026-07-28 (from the uniform disc law found by the
@@ -38,6 +40,7 @@ related:
   - THM-3529 (all complete packets are finite-sheet units)
   - THM-3530 (all-level fixed raw image primes and component count)
   - THM-3531 (intrinsic all-level discriminant square class)
+  - THM-3532 (two-sided one-step and fixed conjugacy-orbit covariance)
   - THM-3533 (newest-prime normalization exponent one and index-square law)
   - THM-3535 (full wreath monodromy and all-level constant-linear primitivity)
 ---
@@ -240,15 +243,19 @@ d(K_n/K_0)=[(-1)^nP_(n-1)].
 ```
 
 This is basis-independent and makes the newest raw prime the sole odd
-horizontal discriminant divisor.  It does not make any prescribed affine
-coordinate primitive or determine the positive multiplicity of that prime.
-THM-3533 sharpens the newest-prime normalization coefficient to one and
-types a primitive order's remaining exponent as twice its local index.
-THM-3535 supplies the separate coordinate gate: the newest prime isolates
-one bottom-block transposition, forcing full iterated wreath monodromy; its
-ancestor-block classification and a rank-three two-fibre hostile then prove
-every nonzero constant linear form primitive at every depth.  Exact positive
-coordinate-order multiplicities remain outside that theorem.
+horizontal discriminant divisor.  THM-3533 strengthens this at the newest
+prime: its normalization-discriminant multiplicity is exactly one, while an
+integral primitive power order has multiplicity `1+2i` for local index length
+`i`.  THM-3535 supplies the separate coordinate gate: a supported
+transposition forces full iterated wreath monodromy, and every nonzero constant
+linear form is primitive at every depth.  Its local power-order index remains
+open.  THM-3532 transports the raw packet, prime, intrinsic class, newest
+different, Jelonek tower, and each primitive observation `ell` as
+`ell o phi^(-1)` under honest conjugacy.  For affine `phi` these transported
+observations remain affine-linear (the constant is irrelevant to generated
+fields); for nonlinear `phi` they need not be standard linear forms.  A
+general left/right tame equivalence transports one edge but inserts a middle
+automorphism on iteration, so no broader family theorem follows.
 
 ## 3. Two crevasse invariants for atomhood (spectrum repaired)
 
@@ -327,9 +334,13 @@ place to HUNT for a JC(2) counterexample instead.
   linear form primitive there, so all corresponding coordinate eliminants
   have that class.  Their local indices and exact old-prime multiplicities
   remain open.
-- P2 (VERIFIED-EXACT for the two fixed tame members): W1 and W2 obey
-  `disc=-(det J)^2(square)^2L_W`, with `L_W=L o T^(-1)`.  A general
-  gauge-covariance theorem remains open.
+- P2 (PROVED fixed-orbit covariance; VERIFIED-EXACT controls): W1 and W2 are
+  target postcompositions and obey the one-step law
+  `disc=-(det J)^2(square)^2L_W`, with `L_W=L o T^(-1)`, but fail the naive
+  second-iterate transport.  THM-3532 proves all-level transport for the
+  honest conjugates `T o F o T^(-1)` and, more generally, every polynomial
+  conjugate of the fixed map.  Covariance for arbitrary tame-equivalent
+  Keller maps remains open.
 - P3 (reframed): within a mixed grade, primitivity proves atomness; Jelonek
   reducibility is a second one-way classifier, not an atom-degree floor.
 - P4: component count of the Jelonek divisor = the grade exponent `k`,
@@ -357,14 +368,15 @@ complete packets, and THM-3530 promotes the fixed raw image-prime/component
 tower to all levels.  THM-3531 promotes the intrinsic discriminant class,
 THM-3533 fixes the newest normalization exponent at one, and THM-3535
 promotes full wreath monodromy and every nonzero constant-linear primitive
-view to all levels.  Constant-view indices and exact old-prime multiplicities
-remain open.
+view to all levels.  THM-3532 proves full fixed-conjugacy-orbit covariance
+with a sharp one-step/tower boundary.  Constant-view indices, exact old-prime
+multiplicities, and wider covariance remain open.
 Trace-zero persistence at depth two and the `8 -> 512` cubing pattern are
 VERIFIED for the fixed construction only.  The W1/W2 identities are exact for
-those two tame conjugates, not a classification theorem.  P4 is now proved
-for the fixed raw tower at every depth.  The next decisive tests are
-constant-view indices, exact old-prime multiplicities, and
-transport of the packet/divisor mechanism to tame or other family members.
+those two target postcompositions, not a classification theorem.  Their honest
+conjugates are covered by THM-3532.  P4 is now proved for the fixed raw tower
+at every depth.  The next decisive tests are constant-view indices, old-prime
+discriminant multiplicities, and transport beyond the fixed conjugacy orbit.
 
 ## Loss ledger
 
@@ -374,10 +386,13 @@ composition law and odd-block square-class lemma are general.  THM-3530
 proves the fixed raw component tower and its generic-degree-one image maps at
 all depths, while THM-3531 proves its intrinsic discriminant square class,
 THM-3533 proves newest-prime normalization multiplicity one, and THM-3535
-proves all-level constant-linear primitivity; none is a family-generic law.
-Constant-view indices, exact old-prime multiplicities, the monoid-wide
-`-(det J)^2` law, and tame-family packet covariance remain outside proved
-canon.  "Generic component count" still needs a precise family parameter
-space before any classification claim; none of this closes JC(2), classifies
-maps within a numerical grade, or controls the weighted G1 witness -- it
-supplies invariants and a hunting map.
+proves all-level constant-linear primitivity.  THM-3532 carries these data
+around the fixed polynomial-conjugacy orbit, provided the five-weight chart,
+raw scalar normalization, and transported observation travel too; none is a
+family-generic law.  Constant-view indices, exact old-prime multiplicities,
+the monoid-wide `-(det J)^2` law, and covariance between distinct tame-
+equivalence classes remain outside proved canon.
+"Generic component count" still needs a precise family parameter space before
+any classification claim; none of this closes JC(2), classifies maps within a
+numerical grade, or controls the weighted G1 witness -- it supplies invariants
+and a hunting map.

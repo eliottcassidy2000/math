@@ -1,5 +1,34 @@
 # Script Results Index
 
+- `keller_tame_conjugacy_covariance_audit_20260816.py` -> matching `.out`
+  [THM-3532 PROVED + VERIFIED-EXACT].  For every polynomial two-sided
+  equivalence `G=tau o F o sigma`, the old extension square gives exact
+  one-step transport of norms, complete packets, the finite-sheet unit,
+  image-prime degree, intrinsic square class, newest reduced different, and
+  `S_G=tau(S_F)`.  Honest conjugacy `phi o F o phi^(-1)` removes the inserted
+  `sigma o tau` between iterates and transports the complete raw,
+  discriminant, and Jelonek towers.  W1/W2 are target postcompositions and
+  fail the naive second-iterate identity; their honest conjugates are the
+  positive controls.  The standard five weights are destroyed unless the
+  `phi^(-1)` coordinate chart travels with the packet.  THM-3535's primitive
+  linear observations transport as `ell o phi^(-1)`; only affine conjugacy
+  keeps this the full standard-linear family.  After MISTAKE-419,
+  every truth-bearing check uses explicit `require`/raise, and normal, `-O`,
+  and stored transcripts agree exactly.  Script/output LF SHA-256:
+  `76878a0190c065afaa85b1ce5c67d83a39122441684e4bb67e5211b51ca0b9c0` /
+  `a6d5a1db30d33adc2a6e6315e08ed311b49eda8bc80eb43c2dd8ed4141f70b43`.
+
+- `keller_newest_prime_different_index_square_audit_20260816.py` -> matching
+  `.out` [THM-3533 PROVED + VERIFIED-EXACT].  At every fixed depth, the newest
+  raw prime has normalization-discriminant multiplicity exactly one.  An
+  integral primitive power order has multiplicity `1+2i`, where `i` is its
+  local index length; locally maximal primitive generators attain one, but a
+  named affine coordinate need not.  Old-prime positive multiplicities remain
+  open.  Script/output/semantic LF SHA-256:
+  `63b751769626b77ee7e90140b5c4050008c42724951fe4594576257bdfcf6d3f` /
+  `8d1ca689cb2c6d0773bbfa14d1618a0f82116cf9c16b1b0f3174417d1397a8e4` /
+  `aa19a27d7e68467936caebb1497804c2815c07d7c160b1ca172723805d3bd79a`.
+
 - `berggren_descendant_angle_language_density_20260816.py` -> matching
   `.out` [THM-3536 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
   MISTAKE-418 FIBONACCI-SIDECAR REPAIR APPLIED].
