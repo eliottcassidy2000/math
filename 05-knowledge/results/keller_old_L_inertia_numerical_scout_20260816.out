@@ -29,5 +29,10 @@ lift=4->5;parent_cycle_child_products=((1, (1, 1, 1), 27), (4, (1, 1, 1), 3), (6
 depth5_hostile_radius=3.0e-04;steps=720;max_step_cost=8.909e-04;max_forward_residual=1.273e-04
 depth=5;degree=243;cycles={1: 81, 4: 9, 8: 9, 18: 1, 36: 1};tame_permutation_exponent=142;parity=0
 lift=4->5;parent_cycle_child_products=((1, (1, 1, 1), 27), (4, (1, 1, 1), 3), (6, (3,), 1), (8, (1, 1, 1), 3), (12, (3,), 1))
+reflection_rotation_subtree_depth=1;root_action=(1, 0, 2);A_cycles=((1, 1), (2, 1));B_cycles=((1, 3),);C_equals_B_after_A_cycles=((1, 1), (2, 1));C_orbits=2;C_order=2;global_exponent=2*3^1-C_orbits=4
+reflection_rotation_subtree_depth=2;root_action=(1, 0, 2);A_cycles=((1, 1), (2, 4));B_cycles=((1, 7), (2, 1));C_equals_B_after_A_cycles=((1, 1), (2, 2), (4, 1));C_orbits=4;C_order=4;global_exponent=2*3^2-C_orbits=14
+reflection_rotation_subtree_depth=3;root_action=(1, 0, 2);A_cycles=((1, 1), (2, 13));B_cycles=((1, 7), (2, 10));C_equals_B_after_A_cycles=((2, 3), (3, 1), (4, 3), (6, 1));C_orbits=8;C_order=12;global_exponent=2*3^3-C_orbits=46
+reflection_rotation_subtree_depth=4;root_action=(1, 0, 2);A_cycles=((1, 1), (2, 40));B_cycles=((1, 7), (2, 37));C_equals_B_after_A_cycles=((2, 9), (4, 9), (9, 1), (18, 1));C_orbits=20;C_order=36;global_exponent=2*3^4-C_orbits=142
 depths1to4_closed_form_candidate_at5=146;observed_at5=142;verdict=REFUTED_AT_DEPTH_5
+closed_form_hidden_assumption=C_orbits_equals_2^r;observed_C_orbits=(2, 4, 8, 20);first_failure_at_r=4_is_20_not_16
 status=VERIFIED-NUMERICAL DISCOVERY ONLY;no exact inertia theorem or index claim

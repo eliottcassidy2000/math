@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import cmath
 from dataclasses import dataclass
+from math import lcm
 
 import numpy as np
 from scipy.optimize import linear_sum_assignment
@@ -205,6 +206,99 @@ def permutation_cycles(permutation: tuple[int, ...]) -> tuple[tuple[int, ...], .
     return tuple(cycles)
 
 
+def compose(
+    left: tuple[int, ...], right: tuple[int, ...]
+) -> tuple[int, ...]:
+    """Return left after right, in the source-to-image convention."""
+
+    require(len(left) == len(right), ("composition degrees", len(left), len(right)))
+    return tuple(left[right[index]] for index in range(len(right)))
+
+
+def permutation_order(permutation: tuple[int, ...]) -> int:
+    answer = 1
+    for cycle in permutation_cycles(permutation):
+        answer = lcm(answer, len(cycle))
+    return answer
+
+
+def cycle_histogram(permutation: tuple[int, ...]) -> tuple[tuple[int, int], ...]:
+    lengths = cycle_lengths(permutation)
+    return tuple((length, lengths.count(length)) for length in sorted(set(lengths)))
+
+
+def root_action_and_sections(
+    permutation: tuple[int, ...], depth: int
+) -> tuple[tuple[int, ...], tuple[tuple[int, ...], ...]]:
+    """Decompose an ancestry-preserving ternary permutation at the root."""
+
+    require(len(permutation) == 3**depth, ("root section degree", depth, len(permutation)))
+    block_size = 3 ** (depth - 1)
+    root_action: list[int] = []
+    sections: list[tuple[int, ...]] = []
+    for source_root in range(3):
+        source_start = source_root * block_size
+        images = permutation[source_start : source_start + block_size]
+        target_roots = {image // block_size for image in images}
+        require(len(target_roots) == 1, ("root block image", source_root, target_roots))
+        target_root = next(iter(target_roots))
+        root_action.append(target_root)
+        section = tuple(image % block_size for image in images)
+        require(sorted(section) == list(range(block_size)),
+                ("root section permutation", source_root, section))
+        sections.append(section)
+    require(sorted(root_action) == [0, 1, 2], ("root action", root_action))
+    return tuple(root_action), tuple(sections)
+
+
+def reflection_rotation_row(
+    permutation: tuple[int, ...], depth: int
+) -> tuple[
+    int,
+    tuple[int, ...],
+    tuple[tuple[int, int], ...],
+    tuple[tuple[int, int], ...],
+    tuple[tuple[int, int], ...],
+    int,
+]:
+    """Expose the two subtree involutions and their rotation product.
+
+    The observed root action swaps blocks zero and one and fixes block two.
+    If A and B are the corresponding source sections, then g^2 on block zero
+    is C=B after A.  Every C-cycle therefore lifts to a g-cycle of twice its
+    length, while the third block is fixed pointwise.
+    """
+
+    root_action, sections = root_action_and_sections(permutation, depth)
+    require(root_action == (1, 0, 2), ("old-L root action", depth, root_action))
+    reflection_a, reflection_b, fixed_section = sections
+    identity = tuple(range(len(fixed_section)))
+    require(fixed_section == identity, ("third root section", depth, fixed_section))
+    require(compose(reflection_a, reflection_a) == identity,
+            ("A is not an involution", depth))
+    require(compose(reflection_b, reflection_b) == identity,
+            ("B is not an involution", depth))
+    rotation = compose(reflection_b, reflection_a)
+    lifted_lengths = tuple(
+        sorted((2 * length for length in cycle_lengths(rotation)), reverse=True)
+    )
+    global_nonfixed = tuple(length for length in cycle_lengths(permutation) if length > 1)
+    require(lifted_lengths == global_nonfixed,
+            ("reflection-rotation lift", depth, lifted_lengths, global_nonfixed))
+    expected_exponent = 2 * len(rotation) - len(permutation_cycles(rotation))
+    actual_exponent = len(permutation) - len(permutation_cycles(permutation))
+    require(expected_exponent == actual_exponent,
+            ("reflection-rotation exponent", depth, expected_exponent, actual_exponent))
+    return (
+        depth - 1,
+        root_action,
+        cycle_histogram(reflection_a),
+        cycle_histogram(reflection_b),
+        cycle_histogram(rotation),
+        permutation_order(rotation),
+    )
+
+
 def lift_profile(
     parent: tuple[int, ...], child: tuple[int, ...]
 ) -> tuple[tuple[int, tuple[int, ...], int], ...]:
@@ -245,6 +339,7 @@ class Run:
     steps: int
     cycle_rows: tuple[tuple[int, tuple[int, ...], int], ...]
     lift_rows: tuple[tuple[int, tuple[tuple[int, tuple[int, ...], int], ...]], ...]
+    permutations: tuple[tuple[int, ...], ...]
     max_step_cost: float
     max_forward_residual: float
 
@@ -288,6 +383,7 @@ def run(radius: float, steps: int, depth: int = 4) -> Run:
         steps=steps,
         cycle_rows=tuple(rows),
         lift_rows=lift_rows,
+        permutations=permutations,
         max_step_cost=max_step_cost,
         max_forward_residual=max_forward_residual,
     )
@@ -317,6 +413,34 @@ def main() -> None:
             ("inconsistent depth-five lift rows", deep_runs))
     require(deep_runs[0].cycle_rows[:4] == baseline,
             ("depth-five prefix mismatch", deep_runs[0].cycle_rows, baseline))
+    reflection_rows = tuple(
+        reflection_rotation_row(permutation, depth)
+        for depth, permutation in enumerate(deep_runs[0].permutations, start=1)
+        if depth >= 2
+    )
+    hostile_reflection_rows = tuple(
+        reflection_rotation_row(permutation, depth)
+        for depth, permutation in enumerate(deep_runs[1].permutations, start=1)
+        if depth >= 2
+    )
+    require(reflection_rows == hostile_reflection_rows,
+            ("inconsistent reflection-rotation rows", reflection_rows,
+             hostile_reflection_rows))
+    rotation_orbit_counts = tuple(
+        sum(count for _, count in rotation_histogram)
+        for _, _, _, _, rotation_histogram, _ in reflection_rows
+    )
+    require(rotation_orbit_counts == (2, 4, 8, 20), rotation_orbit_counts)
+    a_fixed_counts = tuple(
+        dict(a_histogram).get(1, 0)
+        for _, _, a_histogram, _, _, _ in reflection_rows
+    )
+    b_fixed_counts = tuple(
+        dict(b_histogram).get(1, 0)
+        for _, _, _, b_histogram, _, _ in reflection_rows
+    )
+    require(a_fixed_counts == (1, 1, 1, 1), a_fixed_counts)
+    require(b_fixed_counts == (3, 7, 7, 7), b_fixed_counts)
     depth_five = deep_runs[0].cycle_rows[4]
     candidate_exponent = 2 * 3**4 - 2**4
     require(depth_five[2] == 142, depth_five)
@@ -353,9 +477,31 @@ def main() -> None:
             "lift=4->5;parent_cycle_child_products="
             + str(item.lift_rows[3][1])
         )
+    for (
+        subtree_depth,
+        root_action,
+        a_histogram,
+        b_histogram,
+        rotation_histogram,
+        rotation_order,
+    ) in reflection_rows:
+        rotation_orbits = sum(count for _, count in rotation_histogram)
+        exponent = 2 * 3**subtree_depth - rotation_orbits
+        print(
+            f"reflection_rotation_subtree_depth={subtree_depth};"
+            f"root_action={root_action};A_cycles={a_histogram};"
+            f"B_cycles={b_histogram};C_equals_B_after_A_cycles={rotation_histogram};"
+            f"C_orbits={rotation_orbits};C_order={rotation_order};"
+            f"global_exponent=2*3^{subtree_depth}-C_orbits={exponent}"
+        )
     print(
         f"depths1to4_closed_form_candidate_at5={candidate_exponent};"
         f"observed_at5={depth_five[2]};verdict=REFUTED_AT_DEPTH_5"
+    )
+    print(
+        "closed_form_hidden_assumption=C_orbits_equals_2^r;"
+        f"observed_C_orbits={rotation_orbit_counts};"
+        "first_failure_at_r=4_is_20_not_16"
     )
     print("status=VERIFIED-NUMERICAL DISCOVERY ONLY;no exact inertia theorem or index claim")
 

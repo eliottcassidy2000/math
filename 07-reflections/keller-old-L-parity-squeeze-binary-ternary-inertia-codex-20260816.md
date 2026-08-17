@@ -161,12 +161,69 @@ therefore no longer another scalar fit.  It is:
 3. prove its transition counts from the reciprocal inverse chart; and
 4. only then solve the resulting state-vector recurrence for cycle counts.
 
+### 5.1 The hidden state is a product of two reflections
+
+The ancestry labels expose a sharper decomposition.  Write `g_(r+1)` for the
+observed old-`L` permutation on the ternary tree of depth `r+1`.  At the root,
+every verified depth has the same action and sections:
+
+```text
+g_(r+1) = (A_r,B_r,id) (01),
+A_r^2=B_r^2=id,
+C_r=B_r A_r.                                             (12)
+```
+
+Here `(01)` swaps the first two ternary blocks and fixes the third.  Applying
+`g_(r+1)` twice on the first block gives `C_r`.  Consequently every cycle of
+`C_r` lifts to one cycle of twice the length, while the third block contributes
+`3^r` fixed leaves.  If `o(C_r)` is the number of `C_r`-orbits, then
+
+```text
+cycles(g_(r+1)) = 2 cycles(C_r) disjoint-union 1^(3^r),
+d_(r+1) = 2*3^r-o(C_r).                                 (13)
+```
+
+The independently repeated numerical rows are
+
+| `r` | fixed by `A_r` | fixed by `B_r` | cycles of `C_r` | `o(C_r)` | order of `C_r` |
+|---:|---:|---:|---|---:|---:|
+| 1 | 1 | 3 | `2,1` | 2 | 2 |
+| 2 | 1 | 7 | `4,2^2,1` | 4 | 4 |
+| 3 | 1 | 7 | `6,4^3,3,2^3` | 8 | 12 |
+| 4 | 1 | 7 | `18,9,4^9,2^9` | 20 | 36 |
+
+Every nonfixed `A_r`- or `B_r`-orbit in this window is a transposition.  The
+seductive closed form `(7)` is therefore equivalent, in the verified window,
+to the hidden assumption
+
+```text
+o(C_r)=2^r.                                               (14)
+```
+
+It succeeds at `r=1,2,3` and fails at `r=4`, where `o(C_4)=20`, not `16`.
+This is the mechanism of the four-unit discrepancy `146-142`, not merely a
+later term that happened to miss a fit.
+
+Since `A_r` and `B_r` are involutions,
+
+```text
+A_r C_r A_r = C_r^(-1).                                  (15)
+```
+
+Thus the intrinsic binary carrier is a two-coloured reflection graph and its
+reflection--rotation relation.  The `4`- and `6`-cycles arise as rotation
+orbits of a product of reflections; they do not supply all six pairwise
+orientations required by a tournament on four vertices.  Forgetting the two
+edge colours, the fixed loops, or ancestry would destroy the data that makes
+`(13)` work.  Proving `(12)` from the local inverse chart, then finding a
+finite recursion for the sections of `A_r` and `B_r`, is now the exact target.
+
 ## 6. Subsets and harmonic series
 
 The failed formula has an exact failure set
 
 ```text
-E={n>=1 : d_n != 2*3^(n-1)-2^(n-1)} subset N.            (12)
+E={n>=1 : d_n != 2*3^(n-1)-2^(n-1)} subset N.            (16)
 ```
 
 The faithful carrier is the indicator word or generating series
@@ -175,7 +232,8 @@ size probe but cannot recover `E`; distinct finite subsets already have the
 same reciprocal sum.  This repeats the packet-return lesson: a subset of the
 harmonic series is an indexed Boolean word first and a scalar sum second.
 
-The verified window says `E` misses `{1,2,3,4}` and contains `5`.  Nothing is
+The verified window says `E` misses `{1,2,3,4}` and contains `5`.  Equivalently,
+the shifted failure set records where `o(C_r)!=2^r`.  Nothing is
 yet proved about later membership.
 
 ## Connection contract
@@ -183,10 +241,10 @@ yet proved about later membership.
 | field | exact answer |
 |---|---|
 | source | old-`L` tame inertia in the fixed Keller inverse tower |
-| target | parent-cycle state plus accumulated child product in `S_3` |
+| target | parent-cycle `S_3` product; at the root, the reflection product `C_r=B_r A_r` |
 | map | wreath restriction followed by product around a parent cycle |
 | preserved | orbit length, tame different exponent, block ancestry |
-| destroyed by exponent alone | cycle type and child-product state |
+| destroyed by exponent alone | cycle type, child-product state, and the two reflection colours |
 | exact depth-two output | `(4)(2)(1)^3`, exponent four |
 | coordinate sidecar | canonical `x_2` index length two |
 | numerical hostile | `(7)` fits depths one-four and is refuted at depth five |

@@ -62,10 +62,15 @@
   fit `2*3^(n-1)-2^(n-1)`, but its depth-five prediction `146` is refuted.
   The surviving wreath-state atlas records identity, transposition, or
   3-cycle child products around each parent orbit; depth-five cycles are
-  `36,18,8^9,4^9,1^81`.  It is not an exact all-level inertia theorem.
+  `36,18,8^9,4^9,1^81`.  More sharply, at root depth `r+1` the observed
+  permutation is `(A_r,B_r,id)(01)` with involutions `A_r,B_r`; for
+  `C_r=B_r A_r`, every global nonfixed cycle is twice a `C_r` cycle and
+  `d_(r+1)=2*3^r-o(C_r)`.  The orbit counts `2,4,8,20` show that the failed
+  scalar law hid the assumption `o(C_r)=2^r`, first false at `r=4`.
+  This is not an exact all-level inertia theorem.
   Script/output LF SHA-256:
-  `95748c8b5b000d23c7a99af5bac69c288a95db30bfbe8d49cddba8f14ad7c32f` /
-  `1374c45724a688d0790f4fe8468a329eca059cb9c9229db2bbf84abbc523b0d5`.
+  `cd60598579b2f2338d861dddd983b1d8078084f467e512be284466e620bbaeac` /
+  `91c730e7a1d7cfc87097547ccbcfa49910b49752c4b5a206612f75b68a747c5c`.
 
 - `keller_inertia_signed_c4_h1_xor_bridge_20260816.py` -> matching `.out`
   [VERIFIED-EXACT ELEMENTARY COSPAN; UNNUMBERED].  THM-3537's quartic and
