@@ -185,6 +185,26 @@
   `4cb8bfd72ff86fb56acfea4f7881a1d620d4e7f73226f7c38546f9bf47c13824` /
   `08c1a87d36b3f881b2ef8c4eeaf138765b4be1fca9dc7641ee0d91d5a2108ca5`.
 
+- `keller_old_L_inertia_mpmath_depth6_audit_20260816.py` -> matching `.out`
+  [VERIFIED-NUMERICAL BOUNDED DEPTH SIX].  An ancestry-local mpmath
+  continuation at radii `10^-3,3*10^-4`, with `80/160` step and `90/120`
+  digit controls, reproduces depth-six cycles
+  `108,54,24^9,12^9,1^243` and exponent `466`.  Every sampled cubic root has
+  a separated a-posteriori Rouche disk, every endpoint match projects through
+  all six ancestry levels, and direct substitution in the original Keller map
+  has worst relative forward residual `1.2720708e-103` in the 120-digit
+  controls despite coordinates as large as `1.1272998e40`.  The intrinsic
+  two-block return has cycles `54,27,12^9,6^9`, twenty orbits, and order
+  `108`.  Raw exchanged-block section cycle types are gauge-dependent; an
+  explicit checked reflection-gauge transport realizes the reported
+  involutions `A=(2^121,1)` and `B=(2^118,1^7)` with `C=B*A`.  Normal and
+  optimized replays agree.  This is not an exact inertia theorem, an all-level
+  recurrence, or a coordinate-index statement.  Script/output/semantic LF
+  SHA-256:
+  `9600b8b3e930853480664cf34214f94e251a018e33f52f6e68151e0bda71f472` /
+  `f5cdbaa5a4fb9b2efd4b3fcc00b934a94ac2ba164363f660725e5dfb419da98a` /
+  `dc22c0fd73fa57c92fdb62d41acce8edc9127fcf36e93d24bc5bf5e49006ceb4`.
+
 - `keller_inertia_signed_c4_h1_xor_bridge_20260816.py` -> matching `.out`
   [VERIFIED-EXACT ELEMENTARY COSPAN; UNNUMBERED].  THM-3537's quartic and
   quadratic inertia orbits each carry the nonzero determinant-line bit in

@@ -1,0 +1,21 @@
+== fixed Keller old-L mpmath depth-six ancestry audit ==
+control=radius:1e-3,steps:80,dps:90;max_step_cost=4.7666703e-2;min_step_margin=7.3434487;max_forward_residual=1.3304643e-74;max_root_residual=7.1942838e-91
+rouche=max_ratio:1.9253429e-2,max_projective_radius:2.5539603e-89,min_root_separation_ratio:4.7371187e+83;endpoint=max_cost:1.8779555e-89,min_margin:1.0439176e+86
+conditioning=min_denominator_ratio:2.2663852e-2,max_coordinate_size:2.3187615e+37,max_newton_iterations:8
+level_histograms=(((1, 1), (2, 1)), ((1, 3), (2, 1), (4, 1)), ((1, 9), (2, 1), (4, 2), (8, 1)), ((1, 27), (4, 3), (6, 1), (8, 3), (12, 1)), ((1, 81), (4, 9), (8, 9), (18, 1), (36, 1)), ((1, 243), (12, 9), (24, 9), (54, 1), (108, 1)));exponents=(1, 4, 14, 46, 142, 466)
+root_action=(2, 1, 0);raw_gauge_sections=A:((3, 6), (6, 6), (9, 1), (18, 1), (54, 1), (108, 1)),B:((81, 3),);reflection_gauge=A:((1, 1), (2, 121)),B:((1, 7), (2, 118));C=return_after_two_blocks:((6, 9), (12, 9), (27, 1), (54, 1));C_orbit_count=20;C_order=108
+control=radius:1e-3,steps:160,dps:120;max_step_cost=2.388703e-2;min_step_margin=1.4162746e+1;max_forward_residual=1.1019786e-104;max_root_residual=5.6971813e-121
+rouche=max_ratio:2.3631015e-2,max_projective_radius:1.9301215e-119,min_root_separation_ratio:6.004899e+113;endpoint=max_cost:3.2356188e-119,min_margin:1.3233227e+116
+conditioning=min_denominator_ratio:2.2663852e-2,max_coordinate_size:2.3187615e+37,max_newton_iterations:8
+level_histograms=(((1, 1), (2, 1)), ((1, 3), (2, 1), (4, 1)), ((1, 9), (2, 1), (4, 2), (8, 1)), ((1, 27), (4, 3), (6, 1), (8, 3), (12, 1)), ((1, 81), (4, 9), (8, 9), (18, 1), (36, 1)), ((1, 243), (12, 9), (24, 9), (54, 1), (108, 1)));exponents=(1, 4, 14, 46, 142, 466)
+root_action=(2, 1, 0);raw_gauge_sections=A:((3, 6), (6, 6), (9, 1), (18, 1), (54, 1), (108, 1)),B:((81, 3),);reflection_gauge=A:((1, 1), (2, 121)),B:((1, 7), (2, 118));C=return_after_two_blocks:((6, 9), (12, 9), (27, 1), (54, 1));C_orbit_count=20;C_order=108
+control=radius:3e-4,steps:160,dps:120;max_step_cost=4.008421e-3;min_step_margin=9.5207969;max_forward_residual=1.2720708e-103;max_root_residual=5.9025373e-121
+rouche=max_ratio:2.6555172e-2,max_projective_radius:2.0124762e-119,min_root_separation_ratio:2.5395843e+113;endpoint=max_cost:7.0609723e-120,min_margin:5.275401e+115
+conditioning=min_denominator_ratio:1.3051881e-2,max_coordinate_size:1.1272998e+40,max_newton_iterations:8
+level_histograms=(((1, 1), (2, 1)), ((1, 3), (2, 1), (4, 1)), ((1, 9), (2, 1), (4, 2), (8, 1)), ((1, 27), (4, 3), (6, 1), (8, 3), (12, 1)), ((1, 81), (4, 9), (8, 9), (18, 1), (36, 1)), ((1, 243), (12, 9), (24, 9), (54, 1), (108, 1)));exponents=(1, 4, 14, 46, 142, 466)
+root_action=(2, 1, 0);raw_gauge_sections=A:((6, 6), (18, 1), (27, 1), (36, 3), (54, 1)),B:((81, 3),);reflection_gauge=A:((1, 1), (2, 121)),B:((1, 7), (2, 118));C=return_after_two_blocks:((6, 9), (12, 9), (27, 1), (54, 1));C_orbit_count=20;C_order=108
+depth6_cycles=((1, 243), (12, 9), (24, 9), (54, 1), (108, 1));tame_permutation_exponent=466
+semantic_sha256=dc22c0fd73fa57c92fdb62d41acce8edc9127fcf36e93d24bc5bf5e49006ceb4
+section_gauge_boundary=raw A and B cycle types are not intrinsic;the displayed involutive A,B are a checked reflection-gauge normalization;the two-block return C is the intrinsic section datum
+status=VERIFIED-NUMERICAL BOUNDED DEPTH6 SIDE-CAR ONLY;not an exact inertia theorem,not an all-level recurrence,not a coordinate-index statement
+all high-precision continuation gates passed
