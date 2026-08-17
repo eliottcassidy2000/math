@@ -1,20 +1,41 @@
 # Script Results Index
 
 - `berggren_descendant_angle_language_density_20260816.py` -> matching
-  `.out` [PROOF-COMPLETE ELEMENTARY CANDIDATE + VERIFIED-EXACT; INDEPENDENT
-  AUDIT PENDING].  THM-3334's two angle walls have inverse Berggren
+  `.out` [THM-3536 PROOF-COMPLETE ELEMENTARY CANDIDATE + VERIFIED-EXACT;
+  INDEPENDENT AUDIT ACCEPTED AFTER MISTAKE-418 FIBONACCI-SIDECAR REPAIR].
+  THM-3334's two angle walls have inverse Berggren
   itineraries `(BABB)^omega` and `(BCBB)^omega`.  Consequently the exact
   U-obtuse/acute/D-obtuse level counts obey four-step recurrences and have
   densities `16/41,9/41,16/41`, with bounded period-eight residuals.  The
   wall languages are regular; uniform prefix contraction gives shortlex
   discrepancy `O(log N)` and the same three logarithmic harmonic
-  coefficients.  RXTX's separate `26/41` cost constant shares only the
+  coefficients.  The phase carrier is a signed `C4` with two missing
+  antipodal pairs and the nonzero class in `H^1(|C4|;F2)`; no
+  phase-rotation-invariant tournament completion exists.  The normalized
+  Fibonacci sidecar has chamber word `D,D,U`, not all `D`.  RXTX's separate
+  `26/41` cost constant shares only the
   exact resolvent-denominator identity `3^4+1=2(7^2-2^3)`; no tensor,
   tournament, LRC, or JC transfer is claimed.  Script/output/semantic LF
   SHA-256:
-  `62e2f3c8364edd58f19d57f4c4ff4d6942f56a22010e3256b4aa2c1b6a4858d7` /
-  `0994882182afbcf9913cbd8f2072cf50d2b0c849b415cf4acc8d4e50ad3b040f` /
-  `b0a83446f06d4836ebb9125a3e88fbba8fe41fe44ed79017f85d3c8cfd229129`.
+  `f7d3eb39285751f7be0db083ceff050f8347dddfefe43c0efe8b3ab6d6108f45` /
+  `662e7ccd78722b27fc27653239151b25dac28f35af2c5b8acba60b1bef6b5a54` /
+  `acc0170636f7ce47b074214c116930ea6728fa3ea96314cc622e41f83966b2ec`.
+
+- `berggren_fibonacci_signed_c4_cospan_20260816.py` -> matching `.out`
+  [VERIFIED-EXACT ELEMENTARY CANDIDATE; UNNUMBERED].  The two angle-wall
+  phase cycles have order-sign word `(-,+,-,-)`.  The raw Fibonacci cycle in
+  `P^1(F3)` has successive determinant signs `(+,-,+,+)`; the alternating
+  vertex section `(+,-,+,-)` switches it exactly to the wall word.  Hence
+  both point to the same nonzero class in `H^1(|C4|;F2)`.  The six pairs are
+  four successor pairs plus two unobserved antipodal pairs, and none of the
+  four tournament completions respects phase rotation.  The cospan is
+  explicitly raw-projective: THM-3339 parity normalization is required
+  before reading a primitive Fibonacci Berggren node.  No density, q=15
+  owner, LRC current, JC flux, or canonical tournament transfers.  LF
+  script/output/semantic SHA-256:
+  `44f8eea13cac2b7c4e05c69ec15b67c828ef9ca4571389c9aa479733bf133e18` /
+  `74755a08a1f468f0e647427789519fdc87ffaba1b9f0bfc6d6e9f47fb2f45024` /
+  `93a9f158e462686b4393163e46fcb211f607282eaaf3b8fd20a9f214156a7f9e`.
 
 - `keller_intrinsic_discriminant_raw_tower_audit_20260816.py` -> matching
   `.out` [THM-3531 PROVED + VERIFIED-EXACT + INDEPENDENTLY

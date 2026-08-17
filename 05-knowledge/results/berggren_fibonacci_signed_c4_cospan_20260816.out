@@ -1,0 +1,15 @@
+BERGGREN/FIBONACCI SIGNED-C4 COSPAN EXACT AUDIT
+source_sha256_lf=44f8eea13cac2b7c4e05c69ec15b67c828ef9ca4571389c9aa479733bf133e18
+status=VERIFIED_EXACT_ELEMENTARY_CANDIDATE;unnumbered
+wall_words=alpha:BABB;beta:BCBB
+wall_edge_signs=(-1, 1, -1, -1);wall_H1_bits=(1, 0, 1, 1)
+fibonacci_P1F3_cycle=((1, 0), (0, 1), (1, 1), (1, 2));determinant_edge_signs=(1, -1, 1, 1)
+alternating_vertex_section=(1, -1, 1, -1);switched_signs=(-1, 1, -1, -1)
+common_quotient=pointed_directed_C4_plus_nonzero_H1(C4,F2)_class
+odd_sign_gauge_orbit_size=8
+six_pairs=four_successor_pairs_plus_two_unobserved_antipodal_pairs
+C4_rotation_invariant_tournament_completions=0_of_4
+lost=wall_values,branch_letters,affine_CDF_offsets,Fibonacci_height,Farey_frame,q15_owner
+scope=no_density_transfer_no_LRC_current_no_JC_flux_no_canonical_tournament
+semantic_sha256=93a9f158e462686b4393163e46fcb211f607282eaaf3b8fd20a9f214156a7f9e
+verdict=PASS

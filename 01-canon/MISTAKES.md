@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-418 (2026-08-16, Fibonacci angle-language sidecar) -- raw Fibonacci slope was mistaken for the canonically normalized primitive Berggren slope
+
+- **What failed:** the provisional Berggren angle-language reflection said
+  every consecutive-Fibonacci slope `F_k/F_(k+1)` for `k>=2` gives a
+  D-obtuse primitive Euclid triple because the raw ratio is at least `1/2`.
+  This skipped the THM-3339 odd/odd normalization.
+- **Minimal witness / first failed implication:** at `k=4`, the raw pair is
+  `(F_4,F_5)=(3,5)`, but both entries are odd.  The primitive normalization
+  is `T(3,5)=((5-3)/2,(5+3)/2)=(1,4)`, whose slope `1/4` lies below the
+  U-obtuse wall `alpha=(sqrt(145)-9)/8`.  Normalization is not
+  slope-preserving.  More generally it is required exactly when
+  `k=1 mod 3`, and the normalized slope `(n-m)/(n+m)<=1/3<alpha`.
+- **Repair / strongest survivor:** the canonical Fibonacci three-ray locus
+  has exact chamber word `D,D,U` periodically for `k=2,3,...`; it is sparse
+  in both obtuse angle languages.  The wall cycles, CDF returns, count
+  recurrences, `16/41,9/41,16/41` densities, regular languages, harmonic
+  asymptotics, and signed-`C4` theorem are unchanged.  A raw Fibonacci
+  projective cycle may still be used only when explicitly typed as the raw
+  recurrence quotient rather than the normalized Berggren node.
+- **Reusable rule:** before transporting a recurrence on Euclid parameters
+  into the primitive Pythagorean/Berggren tree, apply the parity-content
+  normalization and recompute every slope-dependent predicate.
+
 ## MISTAKE-417 (2026-08-16, U_full owner-node common-base spectrum) -- full Fourier support of a delta-cell lift was mistaken for genuine two-coordinate mixing
 
 - **What failed:** the first checkpoint of the owner-node source/endpoint

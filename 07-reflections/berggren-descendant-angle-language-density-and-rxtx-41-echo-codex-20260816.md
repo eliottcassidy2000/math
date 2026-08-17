@@ -196,10 +196,22 @@ coefficient remembers only one of the three rational densities in (19).
 The coefficient is independent of the chosen fixed letter order; the
 constant `C_T` need not be.
 
-The consecutive-Fibonacci slope `F_k/F_(k+1)` is at least `1/2` for `k>=2`.
-Hence its normalized Euclid triples all lie in the D-obtuse chamber.  This is
-a sparse golden path inside the `16/41` D-language, not the source of the
-global density.
+The raw consecutive-Fibonacci slope `F_k/F_(k+1)` is at least `1/2` for
+`k>=2`, but this is not always the canonical primitive Euclid parameter.
+When `k=1 mod 3`, both entries are odd and THM-3339 requires
+
+```text
+T(m,n)=((n-m)/2,(n+m)/2),       x'=(n-m)/(n+m)<=1/3.
+```
+
+Thus the normalized Fibonacci three-ray locus has periodic chamber word
+
+```text
+D,D,U,D,D,U,... .                                      (20a)
+```
+
+It is a sparse path in both obtuse languages, not the source of either
+global density.  MISTAKE-418 records the repaired normalization boundary.
 
 ## 5. The lawful size-four object is a signed partial tournament
 
@@ -230,7 +242,7 @@ odd cycle sum.  Vertex sign changes add coboundaries, while the odd sum is
 the nonzero class in
 
 ```text
-H^1(C4;F2)=F2.                                           (22)
+H^1(|C4|;F2)=F2.                                         (22)
 ```
 
 This sign holonomy explains both the plus sign in `3^4+1` and the residual
