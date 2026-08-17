@@ -27,6 +27,7 @@ depends_on:
 related:
   - THM-3533-fixed-keller-newest-prime-reduced-different-and-index-square
   - THM-3535-fixed-keller-full-wreath-and-all-level-linear-primitivity
+  - THM-3542-fixed-keller-depth-three-newest-prime-residue-point-pair-saturation
 script: 04-computation/keller_depth_two_newest_prime_residue_saturation_20260816.py
 output: 05-knowledge/results/keller_depth_two_newest_prime_residue_saturation_20260816.out
 script_sha256: a92e5237f4ceed6b086e0f29c89536c494bbd60588630e4331b3b5443fe2d968
@@ -242,10 +243,10 @@ prove:
    or
 6. an arbitrary-Keller classification, `JC(2)`, a current, or LRC(14).
 
-The next residue target is now precise: at `n=3`, factor the degree-nine
-predecessor algebra over `kappa(J)` far enough to recover its orbits on the
-nine blocks and their unordered pairs.  Full field identification is more
-than THM-3539 needs; point-and-pair saturation remains the economical gate.
+THM-3542 subsequently closes that economical target at `n=3` by a good
+rational specialization and an injective pair-sum resolvent.  The next open
+residue target is `n=4`: recover the four point and twelve unordered-pair
+orbits without attempting an unnecessary full field identification.
 
 ## 7. Exact companion
 

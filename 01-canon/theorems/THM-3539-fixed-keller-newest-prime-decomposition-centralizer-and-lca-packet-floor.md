@@ -7,8 +7,9 @@ status: >
   resulting conditional packet formula for THM-3538.  The proved Keller data
   give only I<=D<=C_W(I), not D=C_W(I).  If the decomposition-group image has
   the full leaf-stabilizer point-and-pair orbits, the exponentially many
-  carrier factors reduce to exactly n^2 valuation packets.  This saturation
-  gate and all-level prescribed-coordinate index zero remain OPEN.
+  carrier factors reduce to exactly n^2 valuation packets.  THM-3540 and
+  THM-3542 prove this gate at n=2 and n=3; n>=4 and all-level prescribed-
+  coordinate index zero remain OPEN.
 source: codex/newest-prime-decomposition-sidecar/2026-08-16
 depends_on:
   - THM-3530-fixed-keller-all-level-image-prime-and-component-tower
@@ -19,6 +20,7 @@ related:
   - THM-3531-fixed-keller-intrinsic-all-level-discriminant-square-class
   - THM-3537-fixed-keller-level-two-old-L-inertia-and-x-index
   - THM-3540-fixed-keller-depth-two-newest-prime-residue-saturation
+  - THM-3542-fixed-keller-depth-three-newest-prime-residue-point-pair-saturation
   - HYP-9033-discriminant-tower-and-genus-axis-of-the-keller-monoid
 script: 04-computation/keller_newest_prime_decomposition_lca_packet_audit_20260816.py
 output: 05-knowledge/results/keller_newest_prime_decomposition_lca_packet_audit_20260816.out
@@ -328,12 +330,11 @@ does not prove:
    invalidates the split newest-prime model; or
 6. an arbitrary-Keller-map classification, `JC(2)`, `DC(2)`, or LRC(14).
 
-THM-3540 subsequently proves the saturation gate `(22)` at the first
-nontrivial case `n=2`.  It identifies the predecessor factorization over
-`kappa(H)` as one birational ancestry root times an irreducible quadratic,
-so the induced residue action is the full marked-point `S2` and the carrier
-has four packets.  This does not prove `(22)` for any `n>=3` or identify the
-full decomposition group even at `n=2`.
+THM-3540 subsequently proves the saturation gate `(22)` at `n=2`.  THM-3542
+proves it at `n=3` by a good rational specialization whose point factors have
+degrees `1,2,6` and whose injective pair-sum factors have degrees
+`1,2,6,6,9,12`; the carrier has nine packets.  Neither theorem identifies the
+full decomposition group, and `(22)` remains open for every `n>=4`.
 
 The theorem instead isolates the exact missing sidecar: compute the residue
 decomposition action `(12)`.  If it is point-and-pair saturated, THM-3538's

@@ -70,6 +70,30 @@
   `8f9816389a701198a5809abf1f952c4b30393e908a9fed787c1d7a36beb356b3` /
   `7155daf78e5f787c05f23bbb3429d0b3e330bdd54efeb4a9c3bc693fe2ef6294` /
   `96b5ba9f5c0c66e29c5b40d20f77b11242de706a7c8b98c66647cddc283efbea`.
+- `lrc_r5_literal_by_bare_source_natural_extension_support_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT LAWFUL COORDINATE-LEVEL ONE-LEG SUPPORT
+  COSPAN; INDEPENDENT
+  TYPING AUDIT PENDING].  THM-2471's bare-source node gives the non-fiat
+  pullback `v=Y_(q,e')(y)=(y+q+13e')/13^6`.  Inserting the literal `U_full`
+  BY support there before transfer yields `4,885/138,411` supported entries at
+  `(alpha,beta)=(1,0)` and retains all `1,183` `(tau,ell,c)` coordinates.
+  Replacing the observer by the identity recovers every pinned source-tensor
+  entry times the exact common-grid scale.  Across all 169 endpoint shifts,
+  `3,244/6,591` atom-address diagonals are nonempty, while 112 pairs have both
+  marginals positive but empty diagonal; per-address support lies in `17..20`
+  and false positives in `0..3`.  The fiat `v=y` hostile has only 668
+  supported entries and differs in `1,131/1,183` guarded coordinates; deleting
+  the right guard differs in 1,030.  Natural, fiat, and guard-deleted banks all
+  retain full `(91,1,6,12,72)` spectra, so spectral closure again does not
+  certify typing.  This is support only: the BY character, AX lift, grouped
+  address, and a same-word theorem are absent; the source and `U_full` words
+  differ in roles `1,3,5`.  No THM-2449/2512 input, current, row exclusion, or
+  LRC(14) conclusion follows.  Script/output/reflection/semantic LF SHA-256:
+  `eb548fd8823b0e2e732bfc1636138b1365672b05f3516733a24eaf459e60f289` /
+  `73ddd97a9dec462201fb28834c36398abf0fb01b74199450802957c07347ac33` /
+  `e783126a3f650c1ac64f150731bd4a6d36cdba3960b39a2a4817923ef11f4987` /
+  `13624687b1a338ef2c937d6f4d64e0e34e459b7d2ec9ef9357ee196ceb142a94`.
+
 - `lrc_r5_one_leg_integrand_fubini_by_probe_20260816.py` -> matching `.out`
   [FINITE-EXACT ONE-LEG EXTERNAL-PRODUCT FUBINI; NOT TEMPORAL TRANSPORT].
   Replacing every preintegrated BY atom by its literal half-open interval

@@ -1,0 +1,23 @@
+== r=5 literal-BY bare-source natural-extension support probe ==
+status=FINITE-EXACT LAWFUL COORDINATE-LEVEL ONE-LEG SUPPORT COSPAN; not a current or LRC(14) closure
+dependencies=((spectrum,5f3fbf08bef6f9a61e684f0f7616e80e1dbbda4f6bb2ed4ca3788d3b8b53d65a,cd55336bb1dfe5f37f020c242c4bca5b7c6be339ec57e95d69e10bbe68d9dbaa),(source,22c5c748392817ccc36889a007c65bd5f44b26c10638df6f6aac48e917547f41,31e9e90c63053944b590195555be07ccbf84fd4c7abc2101de6a2a3562202de6),(target,f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc,d52c9f0a56c14a83e1e6b175c7b725314c99f09d44509bc8582847a5857f7da6))
+natural_extension=v=Y_(q,e')(y)=(y+q+13e')/13^6; branch_address=q+13e' in Z/13^6; v is not y
+grids=(source=297836897838480,target=483730250419703196,lcm=744944585646342921840,scales=2501183,1540)
+all_address_endpoint_census=(alpha_beta=169,target_intervals=7107008,diagonal_atom_support=3244/6591,positive_marginal_but_empty_diagonal=112,sha256=d450c50c66242664c2c13076c4dbd775793d3a191ce9a143218880574edfecad)
+address_diagonal_support_histogram=((17, 4), (18, 22), (19, 80), (20, 63))
+address_false_positive_histogram=((0, 81), (1, 66), (2, 20), (3, 2))
+selected_address=(1, 0); identity_recovery=old_tensor*2501183: PASS
+identity_tensor=(support=5150/138411,mass=32130005012548873716037676925000,sha256=0259a37742edbf3c402ad8bf1bbe5f9a798def037b3e39e3c80c3929e69ba1d7)
+natural_diagonal_tensor=(support=4885/138411,mass=16609023891511992906074761046460,sha256=196e4388b03e28b43b0291e9a4206af9621596905ea98922108e328193f93bb0)
+hostile_v_equals_y=(support=668/138411,mass=76498321376065665451323508560,guarded_coordinate_mismatches=1131/1183,sha256=aac9b32b1a1b271d85eb4a2ae26289055220e43cb3b696f52dd54c28d5eeda63)
+guarded_natural_bank=(tau_x_ell_x_c=1183,sha256=0c96ca52529bb2c9373f42939d7cb20eb8d14ca75a1c30ebfe2b230613cf8954,tau_fourier_sha256=f5bdaaf8c0061a4922135b04ce954c42e61f1d0622571897076fd85b249aab46)
+hostile_right_guard_deleted=(coordinate_mismatches=1030/1183,sha256=1b3d42ece5c16381d180b4edc8b4f5083e4f33c6572264fb6f36305712532ad9)
+natural_tau_spectrum_shapes=((91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72))
+fiat_tau_spectrum_shapes=((91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72))
+right_guard_dropped_tau_spectrum_shapes=((91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72))
+tuple_boundary=(source_word=(1, 14, 27, 40, 53, 66, 13, 2197, 742586),U_full_word=(1, 183, 27, 131, 53, 313, 13, 2197, 742586),differing_roles=(1, 3, 5))
+preserved=bare-source endpoint node Y,source and U_full endpoint atoms,alpha,beta,all tau guards,ell,c,depth-six branch sum
+lost_or_missing=BY character,AX common-stalk lift,exact grouped address,U_full/source same-tuple theorem,chronology,physical current
+nonconsequence=no THM-2449/2512 input,current,row exclusion,or LRC(14) closure
+semantic_sha256=13624687b1a338ef2c937d6f4d64e0e34e459b7d2ec9ef9357ee196ceb142a94
+all exact checks passed
