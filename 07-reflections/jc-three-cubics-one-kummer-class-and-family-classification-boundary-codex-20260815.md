@@ -1,10 +1,13 @@
 # Three coordinate cubics, one sign class
 
-**Status: proved synthesis from THM-2546, THM-3508, THM-3517, and THM-3519;
-no arbitrary-map classification claim.**  The fixed sporadic tower is proved
-through level three, and the explicit THM-3448 cyclic weighted family is
-proved in every grade.  The unstored historical family formerly attributed
-to THM-1605 remains unidentified under MISTAKE-416.
+**Status: proved synthesis from THM-2546, THM-3438, THM-3448, THM-3508,
+THM-3517, THM-3519, THM-3531, and THM-3533; no arbitrary-map classification
+claim.**  The fixed sporadic tower now has an intrinsic discriminant class
+and a reduced newest-prime different at every level; literal coordinate
+primitivity remains proved only at its separately audited levels.  The
+explicit THM-3448 cyclic weighted family is proved in every grade.  The
+unstored historical family formerly attributed to THM-1605 remains
+unidentified under MISTAKE-416.
 
 **Closure update, 2026-08-16:** THM-3508 proves that all three source
 coordinates of the fixed level-two composite are primitive with common class
@@ -12,7 +15,9 @@ coordinates of the fixed level-two composite are primitive with common class
 all three actual coordinates are primitive in every explicit cyclic weighted
 grade.  Its exact `m=3` quintic atlas has common class `[L5]` but Jelonek set
 `V(C) union V(L5)`, so the sign quotient misses a genuine component with
-even `C3` inertia.
+even `C3` inertia.  THM-3531 then closes the basis-independent fixed-tower
+class at every level, and THM-3533 upgrades its newest odd divisor from a
+parity signal to exact normalization-discriminant multiplicity one.
 
 ## 1. The three discriminants collapse to one square class
 
@@ -145,11 +150,44 @@ degree 9:   [ H],
 degree 27:  [-2J].                                    (7b)
 ```
 
-At each level, primitivity turns the coordinate power bases into bases of
-one trace space; their discriminants differ by basis-change squares.  The
-visible unit `[-2]` at level three is retained under MISTAKE-413 discipline.
-The sequence is not a formal multiplication of earlier classes and no
-level-four three-coordinate primitivity theorem is proved.
+At these three levels, primitivity turns the coordinate power bases into
+bases of one trace space; their discriminants differ by basis-change squares.
+The visible unit `[-2]` at level three is retained under MISTAKE-413
+discipline.
+
+THM-3531 now separates that coordinate issue from the intrinsic tower.  If
+`K_n/K_0` is the degree-`3^n` extension and `P_j` is the raw image-prime
+tower, its basis-independent trace-discriminant class is
+
+```text
+d(K_n/K_0)=[(-1)^n P_(n-1)]                           (7c)
+```
+
+for every `n>=1`.  Thus the newest prime is the sole odd horizontal divisor
+at every depth.  In the named normalizations the next rows are
+
+```text
+n=4: [2G],       n=5: [-2R_5],       n=6: [2R_6].     (7d)
+```
+
+Equation `(7c)` is not a level-four theorem for literal `x,y,z`: a
+nonprimitive coordinate can have zero eliminant discriminant even when the
+trace form is nondegenerate.  It is also not formal multiplication of the
+earlier classes; trace-discriminant transitivity, odd block degree, and the
+odd raw clearing exponent produce the newest-prime rule.
+
+THM-3533 supplies the positive-multiplicity refinement missing from square
+classes.  In the normalization discriminant, `P_(n-1)` has coefficient
+exactly one for every `n`.  For any integral primitive element `theta`,
+
+```text
+v_(P_(n-1))(Disc(theta))=1+2 length(B_n/A[theta]).      (7e)
+```
+
+Locally maximal primitive elements attain one, but primitivity alone does
+not: already `u` and `Lu` at level one have valuations `1` and `7`.  Thus the
+square class, normalization different, and coordinate order are three
+strictly different layers of the passport.
 
 ## 5. Relation to the explicit cyclic weighted family
 
@@ -235,7 +273,34 @@ fixed compositional tower and the explicit weighted family now supply two
 proved laboratories with the same trace-form mechanism but different degree,
 monodromy, and effectivity ledgers.
 
-## 6. Connection contract and decisive next tests
+## 6. What is exactly classified, and what is not
+
+THM-3438 gives a complete classification of **degree values** in dimension
+at least three:
+
+```text
+KDeg(m)={1} union {3,4,5,...}       for every m>=3.      (10)
+```
+
+Degree two is impossible, and the explicit weighted lift realizes every
+degree `n>=3` with global monodromy `S_n`.  These maps are composition atoms:
+an imprimitive nontrivial composition cannot have primitive `S_n` monodromy.
+For every factorization by allowed degrees, compositions provide additional
+maps in the same numerical grade with visible block systems.  At degree
+nine, for example, an atomic weighted `S9` map and the fixed composite
+`F o F` with ternary blocks have the same degree but cannot be equivalent
+under source/target automorphisms.
+
+This settles the semigroup of attainable integers, not the moduli problem.
+An exact classification of maps within one degree would still have to sort
+at least the passport `(9)`.  The three cubic equations are one row of that
+passport: they prove a common sign quotient for one extension, not that every
+degree-three Keller map is conjugate to the sporadic example.  Stable
+extension carries all of these three-dimensional examples to every higher
+dimension, so it enlarges the ambient dimension without changing this
+classification boundary.
+
+## 7. Connection contract and decisive next tests
 
 | field | exact content |
 |---|---|
@@ -247,13 +312,14 @@ monodromy, and effectivity ledgers.
 | required sidecar | splitting-field/block data plus oriented boundary valuations |
 | cheapest hostile | two nonisomorphic cubic extensions with the same discriminant square class |
 
-The first three proposed tests are now closed at level two, level three, and
-the explicit `m=3` weighted member.  The next exact tests are:
+The former square-class and newest-prime tests are now closed intrinsically
+at every fixed-tower level, while the explicit weighted family is closed for
+all three actual coordinates.  The next exact tests are:
 
-1. prove or refute all-coordinate primitivity at level four of the fixed
-   compositional tower;
-2. compute full positive discriminant multiplicities rather than only their
-   square classes;
+1. prove or refute one fixed literal coordinate, or one fixed rational linear
+   form, being primitive simultaneously at every fixed-tower level;
+2. compute the old-prime positive discriminant multiplicities; the newest
+   prime is already exactly reduced by THM-3533;
 3. retain inertia cycle type component-by-component, so even cycles cannot
    disappear behind the sign quotient;
 4. classify the explicit cyclic family within a fixed degree only after
@@ -262,7 +328,10 @@ the explicit `m=3` weighted member.  The next exact tests are:
    source formula is recovered.
 
 The strongest current conclusion is now broader but still sharply bounded:
-three primitive coordinate views of one trace algebra necessarily share one
-quadratic sign character, at degrees `3,9,27` in the fixed tower and in every
-explicit cyclic weighted grade.  That character is a robust invariant, not
-an exact classification; the `m=3` component `C=0` is the decisive witness.
+the fixed tower has one intrinsic newest-prime sign character and reduced
+newest different at every depth; three primitive coordinate views share that
+character at the audited literal-coordinate levels and in every explicit
+cyclic weighted grade.  The degree-value spectrum is completely classified,
+but the maps are not.  The `m=3` sign-blind component `C=0`, the `u` versus
+`Lu` index jump, and the atomic/composite degree-nine pair are three decisive
+witnesses to the missing classification data.
