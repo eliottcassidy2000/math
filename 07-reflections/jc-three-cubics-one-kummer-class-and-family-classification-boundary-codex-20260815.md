@@ -1,7 +1,7 @@
 # Three coordinate cubics, one sign class
 
 **Status: proved synthesis from THM-2546, THM-3438, THM-3448, THM-3508,
-THM-3517, THM-3519, THM-3531, THM-3533, THM-3535, and THM-3537; no
+THM-3517, THM-3519, THM-3531, THM-3532, THM-3533, THM-3535, and THM-3537; no
 arbitrary-map classification claim.**  The fixed sporadic tower now has full iterated
 wreath monodromy, all-level constant-linear primitivity, an intrinsic
 discriminant class, and a reduced newest-prime different at every level.  The
@@ -220,6 +220,18 @@ the absence of `L` from the odd class forces `c=1`.  On the canonical
 transverse DVR, the literal `x_2` order has exponent eight and index length
 two.  Thus the passport now contains one exact positive old multiplicity and
 one prescribed-coordinate defect, but not their all-level recurrences.
+
+THM-3532 fixes the equivalence relation under which this tower passport is
+covariant.  For a two-sided change `G=tau o F o sigma`, every one-step object
+transports exactly, but iteration inserts the middle automorphism
+`sigma o tau`.  The complete tower therefore transports only under honest
+conjugacy `phi o F o phi^(-1)` unless a separate intertwiner is proved.
+W1/W2 are target postcompositions, and their explicit second iterates are the
+hostile counterexamples to naive tower covariance.  Under nonlinear
+conjugacy, a primitive linear observation becomes `ell o phi^(-1)`, generally
+polynomial; only affine conjugacy preserves the standard linear-observation
+family.  Thus “move within a grade” is weaker than “preserve the iterated
+passport.”
 
 ## 5. Relation to the explicit cyclic weighted family
 
