@@ -9,8 +9,9 @@ status: >
   quotient contracts to a different rank-two response plane.  The two planes
   become canonically isomorphic only relative to the unique endpoint-supported
   line at r0=6.  The descended chamber involution splits this relative plane
-  1+1, so its natural twisted C4 H1 has dimension one; the literal common line
-  is exact and the surviving line requires the endpoint quotient.  This is a
+  1+1, so its natural twisted C4 H1 has dimension one; every response row is
+  already exact on the formal digit C13, the literal common chamber line is
+  exact, and the surviving chamber line requires the endpoint quotient.  This is a
   static finite-exact representation statement, not a physical current, D5
   flux map, row exclusion, or LRC(14) theorem.
 source: codex r5 rank-two cospan session, 2026-08-16
@@ -23,9 +24,14 @@ related:
   - THM-3496-marked-graph-kummer-degree-square-and-finite-coefficient-frobenius-flux-extinction
 script: 04-computation/lrc_r5_rank_two_relative_response_cospan_thm3534_20260816.py
 output: 05-knowledge/results/lrc_r5_rank_two_relative_response_cospan_thm3534_20260816.out
-script_sha256: 0cab1bccc37237420f87656d44a5d551620456cec289a4dd4d88cee45d89fe39
-output_sha256: b3d78476fb950d613691b0d25f0ba4e1973c1079f0720123b9c4d1ccd5ace486
-semantic_sha256: 9326beee2f5786195f39b201b5fdcade9e5f32b269b9f29a4bf463e3e5e344d8
+script_sha256: 4eab23ff77de9d190f13d5a41945415ba55734e0fcdc6f8eae3cbb47d4fb101d
+output_sha256: f6972a28ba83ce03c7bfa45a2e6b6eaa8af1504f778a2412ee536639a53f4b6c
+semantic_sha256: 57a44964888fdb0a9ca1c890abbe4950c6fa7130f7ab2800c0faa8a5d6a0212d
+audit_script: 04-computation/lrc_r5_rank_two_relative_response_cospan_flint_audit_20260816.py
+audit_output: 05-knowledge/results/lrc_r5_rank_two_relative_response_cospan_flint_audit_20260816.out
+audit_script_sha256: 13316f9add30bb0d5de23d0d0339cf3bdcf666419045a84a3a6e1b96eb54e996
+audit_output_sha256: a449fb52016453596ffc581a4df0ccde2028d8777fec6696c122f41ff24bd8d6
+audit_semantic_sha256: f1dfa230027e7fd8f48c7eb7bac2034d0188ee61a4ce6f24d2579860cf532020
 hash_basis: LF-normalized bytes
 ---
 
@@ -136,6 +142,33 @@ rank-two source restriction is minimal for the two reflected exceptional
 chambers, and its ten nonroot entries have eight distinct values in each row.
 This reproves the scalar hostile while identifying the omitted endpoint
 sector exactly.
+
+There is also an all-row cohomology hostile.  Every parent block in `(2)` is
+row-sum one:
+
+```text
+P_e 1=1                    for every e.                  (11a)
+```
+
+Subtracting the two middle equations gives
+
+```text
+D 1=0.                                                     (11b)
+```
+
+Hence every row of `D`, and therefore every vector in `S`, `E`, and `R`, has
+zero seam on the formal oriented digit cycle `C13`.  Prefix integration gives
+an explicit vertex potential for all thirteen rows.  Thus
+
+```text
+image(R -> H^1_graph(C13;k))=0.                           (11c)
+```
+
+The quotient tells the same story contravariantly: the constant digit vector
+lies in `Row(B_e)` for every arc, so the constant Fourier mode has quotient
+rank zero in all six blocks.  Therefore neither the response plane nor `Q10`
+contains an ordinary digit-cycle `H^1` class.  This does not make `r1` a
+physical clock; it closes that formal interpretation if one tries it.
 
 ## 3. Contraction of the dual middle quotient
 
@@ -322,6 +355,8 @@ physical word-current for four independent reasons.
    noncanonical.  No chronology or composition law is gained by dualizing.
 4. The endpoint line `(17)` is killed, not reconstructed.  A physical target
    that depends on it cannot factor through `(19)`.
+5. On the formal digit cycle all response rows are coboundaries by
+   `(11a)--(11c)`; there is no hidden nonzero address-seam class to export.
 
 At the exact finite coefficient level there is also an immediate D5 no-go.
 The additive group of `V_rel` has exponent `p`, while the marked Kummer line
@@ -370,7 +405,7 @@ that Boolean shadow cannot prove descent, exactness, or current realization.
 | target | the relative response representation `V_rel`; independently, the dual middle quotient `L=Q_middle^vee` |
 | map | row lookup `tau_2`, contraction `delta_D`, and quotient by `E_6` as in `(22)` |
 | preserved | both reflected response functions, middle orientation, coupled chamber involution, relative zero/nonzero, and the exact two-channel transition |
-| destroyed | the `r0=6` endpoint amplitude, outer endpoint rows, absolute lifts, child section, digit chronology, closure edge, source/current semantics, and JC target predicate |
+| destroyed | the `r0=6` endpoint amplitude, outer endpoint rows, absolute lifts, child section, digit chronology, closure edge, source/current semantics, and JC target predicate; ordinary digit-cycle H1 is already zero |
 | required sidecar | the actual endpoint line `E_6`, a lawful same-copy closure edge, a physical current-to-response chain map, and a coefficient-compatible filtered JC realization |
 | cheapest decisive tests | rank/intersection ledger `(11),(16),(18)`; transition `(24)`; twisted boundary `(30)`; arc-stable hostile `(32)` |
 | tournament verdict | intrinsic relation is both-way, so no tournament; XOR erases the load-bearing endpoint mismatch |
@@ -385,20 +420,39 @@ proves every rank, intersection, transition, and local-system statement above
 by finite-field row reduction.  It includes the scalar hostile, the endpoint
 decomposition, the trivial-local-system control, and the arc-stable hostile.
 
+A second implementation imports no primary code and uses
+`python-flint.fmpz_mod_mat` for arbitrary-modulus RREF, kernels, inversion,
+and multiplication.  It independently reproduces row-sum one, zero digit
+seams and constant quotient mode, the rank-five split,
+rank-two contraction, intersection dimensions, transition coefficients,
+determinant, twisted boundary rank, and middle stabilization.  This is an
+independent algebra-engine replay, not yet the requested independent agent
+audit of the theorem's typing and scope.
+
 Reproduce with
 
 ```text
 python -B 04-computation/lrc_r5_rank_two_relative_response_cospan_thm3534_20260816.py
 python -B -O 04-computation/lrc_r5_rank_two_relative_response_cospan_thm3534_20260816.py
+python -B 04-computation/lrc_r5_rank_two_relative_response_cospan_flint_audit_20260816.py
+python -B -O 04-computation/lrc_r5_rank_two_relative_response_cospan_flint_audit_20260816.py
 ```
 
 Normal and optimized transcripts byte-match the stored output.  Script,
 output, and semantic SHA-256 are
 
 ```text
-0cab1bccc37237420f87656d44a5d551620456cec289a4dd4d88cee45d89fe39
-b3d78476fb950d613691b0d25f0ba4e1973c1079f0720123b9c4d1ccd5ace486
-9326beee2f5786195f39b201b5fdcade9e5f32b269b9f29a4bf463e3e5e344d8.
+4eab23ff77de9d190f13d5a41945415ba55734e0fcdc6f8eae3cbb47d4fb101d
+f6972a28ba83ce03c7bfa45a2e6b6eaa8af1504f778a2412ee536639a53f4b6c
+57a44964888fdb0a9ca1c890abbe4950c6fa7130f7ab2800c0faa8a5d6a0212d.
+```
+
+The FLINT script, output, and semantic hashes are
+
+```text
+13316f9add30bb0d5de23d0d0339cf3bdcf666419045a84a3a6e1b96eb54e996
+a449fb52016453596ffc581a4df0ccde2028d8777fec6696c122f41ff24bd8d6
+f1dfa230027e7fd8f48c7eb7bac2034d0188ee61a4ce6f24d2579860cf532020.
 ```
 
 The proof candidate constructs no physical current, no `C4` clock closure,

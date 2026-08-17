@@ -47,7 +47,7 @@ EXPECTED_BANK_DIGESTS = (
     "1a3a8c73c62a9a7293ed9b80337df7211b45db31362b8bf1a5d223a6f584bec6",
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "9326beee2f5786195f39b201b5fdcade9e5f32b269b9f29a4bf463e3e5e344d8"
+    "57a44964888fdb0a9ca1c890abbe4950c6fa7130f7ab2800c0faa8a5d6a0212d"
 )
 
 P = 13
@@ -227,6 +227,21 @@ def parent_blocks(k2, prime: int):
     )
 
 
+def cycle_primitive(cochain, prime: int):
+    """Prefix primitive for a seam-zero edge cochain on oriented C_13."""
+
+    require(sum(cochain) % prime == 0, "cycle seam")
+    potential = [0]
+    for edge in range(P - 1):
+        potential.append((potential[-1] + cochain[edge]) % prime)
+    rebuilt = tuple(
+        (potential[(edge + 1) % P] - potential[edge]) % prime
+        for edge in range(P)
+    )
+    require(rebuilt == tuple(cochain), ("cycle primitive", rebuilt, cochain))
+    return tuple(potential)
+
+
 def analyse(certificate, certificate_sha: str):
     prime = certificate["prime"]
     require(prime > 13 and gcd(prime, 26) == 1, "coefficient characteristic")
@@ -250,6 +265,18 @@ def analyse(certificate, certificate_sha: str):
     require(block_codimensions == (2, 2, 1, 1, 2, 2), block_codimensions)
     require(sum(block_ranks) == 68 and sum(block_codimensions) == 10,
             "Q10 dimensions")
+    row_sum_values = tuple(
+        tuple(sorted({sum(block[r0]) % prime for r0 in range(P)}))
+        for block in blocks
+    )
+    require(row_sum_values == ((1,),) * ARCS, row_sum_values)
+    constant_mode_quotient_ranks = tuple(
+        rank(transpose(block) + ((1,) * P,), prime, P)
+        - block_ranks[arc]
+        for arc, block in enumerate(blocks)
+    )
+    require(constant_mode_quotient_ranks == (0,) * ARCS,
+            constant_mode_quotient_ranks)
     child_quotient_profiles = []
     for r2 in range(P):
         profile = []
@@ -309,6 +336,10 @@ def analyse(certificate, certificate_sha: str):
         == -difference[r0][r1] % prime
         for r0 in range(P) for r1 in range(P)
     ), "difference chamber anti-symmetry")
+    difference_seams = tuple(sum(row) % prime for row in difference)
+    require(difference_seams == (0,) * P, difference_seams)
+    cycle_primitives = tuple(cycle_primitive(row, prime) for row in difference)
+    require(len(cycle_primitives) == P, "digit-cycle primitives")
 
     response_rank = rank(difference, prime, P)
     source = (difference[3], difference[9])
@@ -452,10 +483,14 @@ def analyse(certificate, certificate_sha: str):
         tent_odd,
         block_ranks,
         block_codimensions,
+        row_sum_values,
+        constant_mode_quotient_ranks,
         tuple(child_quotient_profiles),
         tuple(pair_defects),
         chamber_exact,
         support,
+        difference_seams,
+        digest_json(cycle_primitives),
         response_rank,
         source_rank,
         endpoint_rank,
@@ -483,8 +518,10 @@ def main() -> None:
     record, semantic = analyse(certificate, certificate_sha)
     (
         cert_sha, prime, tent, tent_even, tent_odd,
-        block_ranks, block_codimensions, child_profiles, pair_defects,
-        chamber_exact, support, response_rank, source_rank, endpoint_rank,
+        block_ranks, block_codimensions, row_sum_values,
+        constant_mode_quotient_ranks, child_profiles, pair_defects,
+        chamber_exact, support, difference_seams, primitive_digest,
+        response_rank, source_rank, endpoint_rank,
         source_image_union_rank, source_image_intersection,
         si_endpoint_intersection, coordinates_3, coordinates_9, determinant,
         cohomology, arc_stable_middle_dual_dimension, coefficient_no_go,
@@ -494,6 +531,7 @@ def main() -> None:
     print(f"frozen_bank=(certificate_sha256={cert_sha},prime={prime},parent_raw={EXPECTED_PARENT_RAW_SHA256},parent_semantic={EXPECTED_PARENT_SEMANTIC_SHA256})")
     print(f"tent=(h={tent},even={tent_even},odd={tent_odd},meaning=exception_location_not_amplitude)")
     print(f"Q10=(block_ranks={block_ranks},block_codimensions={block_codimensions},all_13_child_profiles_equal={len(set(child_profiles)) == 1},profile={child_profiles[0]})")
+    print(f"digit_cycle=(parent_row_sums={row_sum_values},Q10_constant_mode_quotient_ranks={constant_mode_quotient_ranks},D_seams={difference_seams},primitive_digest={primitive_digest})")
     print(f"symmetry=(chamber_exact={chamber_exact},arc_reversal_pair_defects={pair_defects})")
     print(f"middle_difference=(support_size={len(support)},support={support},rank={response_rank})")
     print(f"source_endpoint=(source_rows=(3,9),source_rank={source_rank},endpoint_rows=(0,6,12),endpoint_rank={endpoint_rank},direct_sum_rank={response_rank})")
@@ -510,7 +548,7 @@ def main() -> None:
     print("lost=r0_6 endpoint amplitude,outer endpoint rows,absolute lift,Q10 child section,r1 chronology,closure edge,word-current semantics")
     print("sidecar=the actual r0_6 endpoint row plus a lawful same-copy D-to-A edge and coefficient/flux realization")
     print("tournament_xor=the intrinsic relation is a symmetric chamber involution (both-way),not a tournament;Boolean parity would erase the nonzero 2*c endpoint gauge and has no coefficient map")
-    print("verdict=the scalar hostile has a minimal two-dimensional relative repair,but the natural twisted H1 is only one-dimensional and every additive route to F13 Kummer or characteristic-zero JC flux is zero")
+    print("verdict=the scalar hostile has a minimal two-dimensional relative repair,but every response direction is digit-cycle exact,the natural chamber-twisted C4 H1 is only one-dimensional,and every additive route to F13 Kummer or characteristic-zero JC flux is zero")
     print("scope=FINITE-EXACT static good-reduction representation plus elementary local-system lemma;no physical current,no D5 flux map,no row exclusion,no LRC14")
     print("PASS")
 
