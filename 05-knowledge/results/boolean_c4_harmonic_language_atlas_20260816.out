@@ -1,0 +1,12 @@
+== Boolean C4 / harmonic regular-language atlas ==
+xor_two_generators={'directed_arcs': 8, 'unordered_pairs': 4, 'bidirected_pairs': 4, 'missing_pairs': 2}
+xor_three_generators={'directed_arcs': 12, 'unordered_pairs': 6, 'bidirected_pairs': 6, 'missing_pairs': 0}
+translation_invariant_tournaments={'V4_xor': 0, 'C3': 2, 'C4': 0, 'C5': 4, 'C6': 0}
+harmonic_xor_identity=H_N(A xor B)=H_N(A)+H_N(B)-2H_N(A intersect B);cutoff=120;mass=149248770648637234492581793/58144272988663390205476800
+regular_counts=((0, 1, 1), (1, 2, 1), (2, 3, 2), (3, 5, 4), (4, 8, 8), (5, 13, 16), (6, 21, 32), (7, 34, 64), (8, 55, 128), (9, 89, 256), (10, 144, 512), (11, 233, 1024), (12, 377, 2048))
+radix_height=no11 has rho=phi<2 and normalized sum 6: convergent;even-XOR has rho=2 and shell ratio 1/2: divergent
+fibonacci_height=same no11 words fill [0,F_(d+2));union=N: divergent
+berggren_height=Farey denominators n+2 divergent;hypotenuse,Q,and ternary marker heights convergent
+walk_language_bounds={'loopless_C4_upper_normalized_sum': '4', 'loopless_C6_upper_normalized_sum': '6', 'successor_C4_exact_normalized_sum': '4/3', 'successor_C6_exact_normalized_sum': '6/5'}
+semantic_sha256=78ee6a60805603c034a58e93b04a99f8b927bc76d4de5b1715f11f4719ce5459
+status=VERIFIED-EXACT FINITE IDENTITIES + PROVED COMPARISON CRITERIA;no tournament equivalence, Keller bridge, current, or LRC14 claim
