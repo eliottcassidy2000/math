@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `jacobian_punctured_kummer_collision_surface_kps_s188.py` -> matching
+  `.out` [THM-3554 PROVED + VERIFIED-EXACT].  The curved collision component
+  `2-3xy-x^2z=0` of THM-1300 is `G_m x A^1`; the restricted map becomes
+  `(s,b)->(b,4s^2)` after explicit Laurent source and polynomial target
+  automorphisms.  It is a degree-two finite etale Kummer cover of the target
+  plane minus `beta^2-16alpha=0`, and its deck orbit is the known pair of
+  colliding points.  The affine closure ramifies at `s=0`; a divisorial
+  valuation argument proves that no everywhere-etale `A^2` filling can
+  preserve this exact quadratic function-field extension.  This is a
+  punctured planar near-counterexample, not `JC(2)`.  Normal/`-O` replay
+  matches.  Script/output LF SHA-256:
+  `d6e6fc9384fe31de8e0d2037e7ed70a9fd8359faf82bb7cc68283fa1208ecb6e` /
+  `789ed0276d8e2ad5e1e8d358ef56e2a6e7815bae52c98cc0045664150a81b5e1`.
+
 - `berggren_positive_cube_slope_atlas_101_kps_s183.py` -> matching `.out`
   [THM-3547 PROVED + FINITE-EXACT + VERIFIED-EXACT; INDEPENDENTLY AUDITED
   WITH WORDING REPAIRS].  The 528 primitive parity-correct slopes through denominator 101
