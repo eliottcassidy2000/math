@@ -5,7 +5,7 @@
 produced one repaired canonical proof, a new root-multiplicity-sensitive
 constraint on a hypothetical counterexample, an exact low-degree jet
 closure, several refuted construction architectures, an exact Catalan
-near-counterexample, and three concrete open counterexample programs.
+near-counterexample, and several concrete open counterexample programs.
 
 Companion:
 [`jc2_dephasing_square_rows_synthesis_codex_20260818.py`](../04-computation/jc2_dephasing_square_rows_synthesis_codex_20260818.py),
@@ -78,7 +78,13 @@ The strongest exact outcomes are:
    `B=3A/2` and `A-3A^2/4=kappa*w`.  The unique normalized solution is an
    infinite Catalan series, never a polynomial.  Mixed thickenings remain
    open.
-9. **FINITE-EXACT positive seed; OPEN projection.**  An explicit
+9. **PROVED + VERIFIED-EXACT punctured near-counterexample.**  On the curved
+   collision surface of the fixed three-variable Keller map, explicit
+   coordinates reduce the restriction to the finite etale double cover
+   `(s,b)->(b,4s^2)` with `s!=0`.  Filling the missing divisor forces
+   ramification, and no etale affine-plane filling can preserve that exact
+   quadratic function-field extension.
+10. **FINITE-EXACT positive seed; OPEN projection.**  An explicit
    four-coordinate cusp-square packet `A^2 -> A^4` is everywhere immersive,
    although none of its six natural two-coordinate projections, nor any
    constant-linear projection, is Keller.  Nonlinear polynomial projection
@@ -115,7 +121,10 @@ The strongest exact outcomes are:
   gives an all-target-pencil degree-six floor, while
   [THM-3545](../01-canon/theorems/THM-3545-catalan-self-intersection-keller-thickening-boundary.md)
   gives an exact formal collision with a nonterminating Catalan obstruction
-  to polynomiality.
+  to polynomiality, and
+  [THM-3554](../01-canon/theorems/THM-3554-punctured-kummer-collision-surface-normal-form.md)
+  gives an exact etale collision whose puncture cannot be filled while
+  retaining its quadratic function field.
 - Least-used sidecar: the normalization/order-index distinction in the fixed
   higher-dimensional Keller packets.  It is not a planar theorem, but it is
   the correct hostile test for proposed inverse-cover constructions.
@@ -860,7 +869,44 @@ reroute or cancel the Catalan tail without introducing a ramification divisor.
 Truncating the series is not enough: the first omitted coefficient becomes an
 explicit nonconstant Jacobian defect.
 
-### E. Cusp-square packet and nonlinear `4 -> 2` projection: strongest explicit seed
+### E. Punctured Kummer collision: the missing divisor is load-bearing
+
+The curved collision surface of the fixed three-variable Keller map is
+
+```text
+C=2-3xy-x^2z=0.
+```
+
+With `s=x^(-1)` and `v=xy`, its coordinate ring is
+`k[s,s^(-1),v]`, so the surface is `G_m x A^1`, not `A^2`.  Explicit Laurent
+source and polynomial target automorphisms turn the restricted map into
+
+```text
+(s,b) -> (b,4s^2),                s!=0.
+```
+
+This is a finite etale double cover, and `s -> -s` is exactly the deck
+collision.  Its natural affine completion has Jacobian `-8s` and ramifies at
+the missing divisor `s=0`.  More strongly, an everywhere-etale `A^2` filling
+cannot preserve the same quadratic extension: etale pullback of the reduced
+branch divisor has valuation one, whereas `delta=4s^2` forces every such
+valuation to be even.  This is the proved
+[THM-3554](../01-canon/theorems/THM-3554-punctured-kummer-collision-surface-normal-form.md).
+
+The Catalan, quotient, and Kummer objects now form a three-way pincer:
+
+```text
+polynomial plane + collision     -> ramification square;
+unit Jacobian + collision        -> infinite Catalan tail;
+finite etale + collision         -> punctured Laurent plane.
+```
+
+A viable deformation must change at least one load-bearing part of the exact
+quadratic extension: mix transverse terms before filling, send the missing
+divisor to infinity through a nonproper modification, or pass to higher-sheet
+asymptotic monodromy with no finite branch component.
+
+### F. Cusp-square packet and nonlinear `4 -> 2` projection: immersive projection seed
 
 Start from
 
@@ -914,7 +960,7 @@ does not constitute evidence against JC(2); it is a sharply structured
 search box whose full four-coordinate differential obstruction is already
 removed.
 
-### F. Other attractive architectures that close
+### G. Other attractive architectures that close
 
 1. **Weighted suspension -- PROVED REFUTED.**  For
    `P=xA(x^r y^s)`, the only constant-producing weight sector of a mate is
@@ -966,10 +1012,12 @@ counterexample must satisfy all of the following:
    a load-bearing asymmetric defect;
 11. a collision thickening must evade the separated Catalan tail, most likely
     through mixed terms rather than finite truncation;
-12. a cover/cusp construction must retain normalization, coordinate-order
+12. the exact quadratic Kummer collision cannot be filled across its missing
+    divisor while preserving etaleness and the same function field;
+13. a cover/cusp construction must retain normalization, coordinate-order
     index, Jelonek/nonproperness data, and hidden discriminant components.
 
-The last four are architectural necessities within the stated programs, not
+The last five are architectural necessities within the stated programs, not
 a complete classification of all planar counterexamples.
 
 ## 9. Connection ledger
@@ -984,6 +1032,7 @@ a complete classification of all planar counterexamples.
 | higher-dimensional collision | categorical quotient | invariant functions, collision image | transverse character | ramification divisor | THM-3543 square factor |
 | higher-dimensional collision | coordinate graph restriction | tangent directions, ambient unit determinant | nothing if coordinates verified | coordinate/divisibility certificate | THM-3546 four gates |
 | transverse boundary collision | Catalan formal thickening | collision and unit Jacobian | polynomiality | mixed-term/termination mechanism | solve first mixed response boxes |
+| curved ambient collision surface | punctured Kummer cover `(s,b)->(b,4s^2)` | finite etale collision | affine-plane completeness | boundary valuation / nonconstant unit | try mixed function-field deformation |
 | cusp packet `(L,T,U,S)` | two polynomial outputs | cusp-square discriminant if chosen invariantly | immersion can be lost in projection | all six minors, order index, wandering prime | nonlinear degree-box response solve |
 | leading form `H^a,H^b` | first Euclidean coefficient tower | exact divisibility | later renewal/new faces | root multiplicities and full Newton packet | bound `(6.11)` then next layer |
 
@@ -1002,16 +1051,20 @@ a complete classification of all planar counterexamples.
    corrections to both outputs, solve the constant-Jacobian equations by
    transverse degree, and test whether a finite cancellation can terminate
    the positive Catalan tail without losing the collision.
-5. **Cusp nonlinear projections.**  Search low invariant degree for
+5. **Kummer boundary deformations.**  Add the smallest mixed transverse terms
+   that change `s^2=delta/4` before filling the divisor; test whether the
+   missing divisor moves to infinity or a finite ramification valuation
+   survives.
+6. **Cusp nonlinear projections.**  Search low invariant degree for
    `A(L,T,U,S),B(L,T,U,S)` using exact response linearization in `B`, then
    reject by Jacobian factors, coordinate-order index, or periodic image
    prime.  The current finite box already rejects natural and
    constant-linear projections.
-6. **Coordinate-graph descent.**  Continue beyond the exact degree-three
+7. **Coordinate-graph descent.**  Continue beyond the exact degree-three
    graph exclusion; solve the scheme-theoretic identity at increasing degree
    and then verify coordinate status, with positive triangular controls and
    hostile smooth noncoordinate hypersurfaces.
-7. **Finite-dephasing diagnostics.**  Use the first nonzero loop correction,
+8. **Finite-dephasing diagnostics.**  Use the first nonzero loop correction,
    not the resistor limit, as a numerical detector for the coefficient
    holonomies most likely to control cancellation.
 
@@ -1031,6 +1084,9 @@ a complete classification of all planar counterexamples.
   programs, not counterexamples.
 - The Catalan thickening is a formal/local holomorphic map, not a polynomial
   endomorphism; its theorem closes only the separated ansatz.
+- The punctured Kummer map is a genuine finite etale collision, but its source
+  is `G_m x A^1`; THM-3554 excludes only affine-plane fillings with the same
+  quadratic function field.
 - `JC(2)` remains open.
 
 The most productive conceptual compression is:
@@ -1047,7 +1103,12 @@ triangular square rows
 
 leading common form
     -> Euclidean divisibility
-    -> multiplicity-sensitive codimension.
+    -> multiplicity-sensitive codimension;
+
+collision near-counterexamples
+    -> ramified polynomial quotient / nonpolynomial Catalan thickening /
+       punctured etale Kummer cover
+    -> mixed-boundary deformation problem.
 ```
 
 Those are genuine maps with explicit preserved and destroyed data.  They

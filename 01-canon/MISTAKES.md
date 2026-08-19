@@ -31,6 +31,19 @@ Format per entry:
   “image” as topological, scheme-theoretic, geometric-point, or rational-
   point image.  These need not agree.
 
+## MISTAKE-425 (2026-08-18, THM-3554 status suffix) -- a promoted proof retained its reserved-stub disclaimer
+
+- **What failed:** THM-3554 was promoted to `PROVED + VERIFIED-EXACT` with a
+  complete proof and replay, but its former reservation paragraph remained at
+  the very end and incorrectly said that no theorem, proof, or dependency was
+  asserted.
+- **Repair / strongest survivor:** remove only the stale reservation suffix.
+  The proved punctured-Kummer normal form, its exact quadratic filling
+  obstruction, and all stated scope boundaries are unchanged.
+- **Reusable rule:** when promoting a reserved theorem, search the entire body
+  for `RESERVED`, `stub`, and old no-claim language; frontmatter promotion alone
+  does not make the truth surface internally consistent.
+
 ## MISTAKE-423 (2026-08-18, provisional THM-3546 scope) -- rational-point graph containment was silently treated as a polynomial identity
 
 - **What failed:** the first THM-3546 wording said that `F(Graph(h))` lies in

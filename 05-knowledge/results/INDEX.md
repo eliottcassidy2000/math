@@ -154,7 +154,7 @@
   claimed.  Script/output/reflection SHA-256:
   `b3b44e19007f4fed665402ddf2bc08a37333ba1a81b2a125e1dd2256519f3b4a` /
   `1c0cee0ae34e5b1e8edf0a5d43e661cb24584a83a342144a4363aed0cc81b243` /
-  `381ae0eb26dd6fffd1e29ee690a0e07b4544527d74b243de4858b371753385aa`.
+  `bd978bb11ff4b643170d3dc8b22fc0e03011229ad0a9770d4e505536f9b40641`.
 
 - `jacobian_torus_quotient_ramification_square_kps_s183.py` -> matching
   `.out` [THM-3543 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
