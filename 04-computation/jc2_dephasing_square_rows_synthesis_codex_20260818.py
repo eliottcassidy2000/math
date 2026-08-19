@@ -5,7 +5,7 @@ research reflection.  It uses explicit require/raise gates so optimized
 Python executes every truth-bearing check.
 """
 
-from math import isqrt
+from math import gcd, isqrt
 
 import sympy as sp
 
@@ -314,5 +314,62 @@ require(forced_exponent(1, 3) == 2, "(5,4) squarefree exponent failed")
 require(forced_exponent(2, 3) == 3 and forced_exponent(3, 3) == 4, "repeated-root exponent failed")
 print("   D_k(H)=product L^ceil((e(k-1)+1)/2), k=2b-a: exact sample exponents PASS")
 print("   squarefree (a,b)=(5,4) forces H^2|Q_(m-1); multiplicities (2,3) force (3,4): PASS")
+
+
+print("\nSECTION I. First arithmetic degree cells after the cited global gates.")
+
+
+def omega(number):
+    return sum(sp.factorint(number).values())
+
+
+first_height = None
+first_cells = []
+for high_degree in range(101, 300):
+    if omega(high_degree) < 3:
+        continue
+    cells = []
+    for low_degree in range(8, high_degree):
+        if omega(low_degree) < 3:
+            continue
+        common_degree = gcd(low_degree, high_degree)
+        low_exponent = low_degree // common_degree
+        high_exponent = high_degree // common_degree
+        if common_degree < 16:
+            continue
+        if common_degree % 2 == 0 and sp.isprime(common_degree // 2):
+            continue
+        if low_exponent < 2 or high_exponent < 2:
+            continue
+        cells.append(
+            (low_degree, high_degree, common_degree, low_exponent, high_exponent)
+        )
+    if cells:
+        first_height = high_degree
+        first_cells = cells
+        break
+
+expected_cells = [
+    (42, 105, 21, 2, 5),
+    (63, 105, 21, 3, 5),
+    (70, 105, 35, 2, 3),
+    (84, 105, 21, 4, 5),
+]
+require(first_height == 105 and first_cells == expected_cells, "first degree-cell screen failed")
+chamber_cells = {
+    low_degree: (2 * low_degree - high_degree) // common_degree
+    for low_degree, high_degree, common_degree, _, _ in first_cells
+    if low_degree < high_degree < 2 * low_degree
+}
+require(chamber_cells == {63: 1, 70: 1, 84: 3}, "first chamber-cell screen failed")
+print(f"   first height={first_height}; cells (n,m,g,n/g,m/g)={first_cells}: PASS")
+print(f"   first-chamber cells n->k: {chamber_cells}: PASS")
+
+Hclean = u**20 * w
+Dclean = u ** forced_exponent(20, 3) * w ** forced_exponent(1, 3)
+require(Dclean == u**21 * w**2 == Hclean * u * w, "clean torus divisor failed")
+require(sp.Poly(Dclean, u, w).total_degree() == 23, "clean torus divisor degree failed")
+require(83 - 23 == 60 and 60 + 1 == 61, "clean torus quotient dimension failed")
+print("   clean torus cell (84,105): D_3(u^20 w)=u^21 w^2, leaving 61 degree-60 quotient coefficients: PASS")
 
 print("\nALL CHECKS PASSED")

@@ -148,13 +148,16 @@
   parallelogram family with mandatory cross leaks; six obstructed natural
   projections and one everywhere-immersive four-coordinate cusp packet; and
   the root-multiplicity valuation formula behind the first-Euclidean-chamber
-  divisor `D_k(H)`.  Normal and optimized executions byte-match the stored
+  divisor `D_k(H)`.  It also screens the cited global degree gates to the
+  first arithmetic height `105`, verifies the four surviving cells and the
+  three first-chamber taxes, and isolates the clean `(84,105)` torus divisor
+  `u^21w^2`.  Normal and optimized executions byte-match the stored
   transcript after newline normalization.  No planar counterexample, global
   degree theorem, resistor reduction of JC, or infinite Euclidean tower is
   claimed.  Script/output/reflection SHA-256:
-  `b3b44e19007f4fed665402ddf2bc08a37333ba1a81b2a125e1dd2256519f3b4a` /
-  `1c0cee0ae34e5b1e8edf0a5d43e661cb24584a83a342144a4363aed0cc81b243` /
-  `bd978bb11ff4b643170d3dc8b22fc0e03011229ad0a9770d4e505536f9b40641`.
+  `111ea2c19b4a344e33660fb579cc721960ffa0189bb76e861f9ec4af83304af4` /
+  `12e49b69df8824fc26559d9102abca3eaa9966c371c64175df6814e2c98425c9` /
+  `455fd3027bfc625d233be78c90e78df3eb3e3fafe47518690dbcdb366c6b55f4`.
 
 - `jacobian_torus_quotient_ramification_square_kps_s183.py` -> matching
   `.out` [THM-3543 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED

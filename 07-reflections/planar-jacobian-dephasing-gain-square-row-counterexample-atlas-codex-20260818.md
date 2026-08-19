@@ -38,12 +38,18 @@ The strongest exact outcomes are:
    `H`.  This is a short homogeneous-jet certificate, not a new global
    degree theorem: the corrected Appelgate--Onishi result and Moh already
    cover this degree pair.
-4. **PROVED target-pencil floor.**  By
+4. **PROVED target-pencil spectrum squeeze** (THM-3550's hostile audit is
+   still in progress).  By
    [THM-3544](../01-canon/theorems/THM-3544-planar-keller-target-pencil-total-degree-six-floor.md),
    every nonzero linear combination `sP+tQ` in a nonautomorphic complex
-   planar Keller pair has total degree at least six.  The quantifier over the
-   whole target pencil is stronger than a lower bound on the two displayed
-   coordinates.
+   planar Keller pair has total degree at least six; by
+   [THM-3550](../01-canon/theorems/THM-3550-prime-degree-exclusion-and-pencil-height-eight-floor.md),
+   none has prime degree and a reduced target basis has distinct degrees
+   `n<m` with `m>=8`.  Applying the corrected Appelgate--Onishi theorem in
+   every target direction strengthens this to at least three prime factors
+   per pencil degree; Moh forces the reduced height `m` above 100.  The
+   Heitmann/Guccione--Guccione--Valqui restriction further gives
+   `gcd(n,m)>=16` and rules out twice-prime gcd.
 5. **PROVED strong-dephasing limit.**  A Hermitian hopping matrix with
    `|H_xy|^2=c_xy`, under uniform site dephasing of coherence-decay rate
    `lambda`, has population generator
@@ -60,7 +66,9 @@ The strongest exact outcomes are:
    whose rows are grouped by equal exponent-vector sums.  Strong dephasing
    keeps squared edge magnitudes but discards the cycle holonomies that
    control cancellation, rank, and range.  A resistor graph is therefore a
-   useful pruning shadow, not a lossless JC carrier.
+   useful pruning shadow, not a lossless JC carrier.  THM-3548 turns this into
+   quantitative polygon, Segre-rank, dark-plaquette, shear-frustration, and
+   conditional Puiseux gates.
 7. **PROVED arithmetic merge.**  The user's triangular square rows and odd
    equal-sum rows are related by the Gaussian--Hadamard map
 
@@ -84,7 +92,13 @@ The strongest exact outcomes are:
    `(s,b)->(b,4s^2)` with `s!=0`.  Filling the missing divisor forces
    ramification, and no etale affine-plane filling can preserve that exact
    quadratic function-field extension.
-10. **FINITE-EXACT positive seed; OPEN projection.**  An explicit
+10. **PROVED/FINITE-EXACT torus-repair squeeze; OPEN cell.**  Polynomial
+   corrections of the inherited quotient fail one-sidedly in every degree,
+   through total correction degree three, and whenever affine in the
+   transverse variable.  The first clean surviving boundary is uniquely
+   `(84,105)` at the first globally admissible height, where
+   `u^21w^2|P_83` and `u^41w^3|Q_104`.
+11. **FINITE-EXACT positive seed; OPEN projection.**  An explicit
    four-coordinate cusp-square packet `A^2 -> A^4` is everywhere immersive,
    although none of its six natural two-coordinate projections, nor any
    constant-linear projection, is Keller.  Nonlinear polynomial projection
@@ -118,7 +132,11 @@ The strongest exact outcomes are:
   Its fibres are target-shear orbits in a module, not a quotient ring.
 - New proved degree/collision sidecars:
   [THM-3544](../01-canon/theorems/THM-3544-planar-keller-target-pencil-total-degree-six-floor.md)
-  gives an all-target-pencil degree-six floor, while
+  gives an all-target-pencil degree-six floor,
+  [THM-3550](../01-canon/theorems/THM-3550-prime-degree-exclusion-and-pencil-height-eight-floor.md)
+  excludes prime pencil degrees and the height-six/seven box, and
+  [THM-3548](../01-canon/theorems/THM-3548-planar-keller-conductance-shadow-gates.md)
+  records the exact conductance-side filters, while
   [THM-3545](../01-canon/theorems/THM-3545-catalan-self-intersection-keller-thickening-boundary.md)
   gives an exact formal collision with a nonterminating Catalan obstruction
   to polynomiality, and
@@ -366,6 +384,63 @@ repeat.  If peeling removes every path to the constant row, the proposed
 support admits no mate.  This recovers the mechanism of THM-2045: its highest
 weighted output is a unique leaf with a nonzero gain.
 
+### Intrinsic conductance gates
+
+[THM-3548](../01-canon/theorems/THM-3548-planar-keller-conductance-shadow-gates.md)
+quantifies four things that remain visible without pretending the shadow is
+complete.
+
+First, for `A=DF(z)`, let `C=(|A_ij|^2)` and `T=sum C_ij`.  Then
+
+```text
+|det C| <= |kappa|T/2,
+dist_F(C/T,{rank<=1}) <= |kappa|/T.
+```
+
+Along a sequence with `T->infinity`, either the two determinant matchings
+become equal in magnitude and phase -- a dark plaquette -- or one large
+channel is paired with a vanishing opposite entry.  The Wilson phase still
+distinguishes determinant zero from determinant one for identical `C`.  More
+exactly, with `r=|ad|`, `s=|bc|`, and
+`Phi=arg(ad*conj(bc))`,
+
+```text
+|kappa|^2=(r-s)^2+4rs sin^2(Phi/2).
+```
+
+Second, put `z_(a,u)=det(a,u)p_aq_u`, `c_e=|z_e|^2`, and let a nonconstant
+equal-sum fibre have `m` live channels and energy `E=sum c_e`.  Polygon
+closure gives
+
+```text
+max_e sqrt(c_e) <= sum_(f!=e)sqrt(c_f),
+c_max <= ((m-1)/m)E.
+```
+
+Here `c_e=|A_(w,u)q_u|^2` is a channel-flow intensity, not the bare dephased
+edge conductance `|A_(w,u)|^2`; it cannot prune `P` without information about
+the prospective mate.
+
+But the fibres cannot be solved independently: the unweighted matrix
+`W_(a,u)=p_aq_u` must lie on the Segre rank-one locus, so all of its `2x2`
+minors, equivalently all alternating cycle products in the full coefficient
+table, vanish.  This Segre graph has `supp(P)` and `supp(Q)` as its two vertex
+classes; it is not the response graph of `Q`-monomials versus output rows in
+`(4.2)`.  The two cycle sidecars must not be conflated.
+
+Third, the pointwise energy-minimizing target shear is controlled by
+
+```text
+beta=<grad Q,grad P>/||grad P||^2.
+```
+
+If `beta` were a polynomial in `P`, a legal target shear would make the map
+affine.  Hence every counterexample has global shear frustration
+`beta notin C[P]`.  Finally, any supplied Puiseux escape branch
+`x(t)~b t^(-r)`, `F(x(t))=a+q t^m+...` obeys the conditional bound
+`m<=r(d-2)`, where `d=max(deg P,deg Q)`.  The existence of such a displayed
+branch is an external curve-selection input, not part of the theorem.
+
 The right low-complexity program is therefore not “solve JC by resistance.”
 It is:
 
@@ -570,27 +645,90 @@ a,b>=2.                                                  (6.2)
 ```
 
 The cited one-place-at-infinity exclusion gives at least two distinct roots
-of `H`, hence `g>=2`.  The corrected Appelgate--Onishi theorem says a
-counterexample cannot have either component degree equal to a product of at
-most two primes; its proof history includes the later Nowicki--Nakai repairs
-([original](https://doi.org/10.1016/0022-4049(85)90099-4),
-[lemma repair](https://doi.org/10.1016/0022-4049(88)90069-2)).  Thus each
-component degree must have at least three prime factors counted with
-multiplicity.  Moh's degree computation shows that both degrees cannot be at
-most 100 ([Moh's summary](https://www.math.purdue.edu/~ttm/jacobian.html)).
-
-There is also a target-pencil restriction which cannot be read off from the
-sorted pair alone.  THM-3544 proves that, for a nonautomorphic complex Keller
-pair,
+of `H`.  A stronger independent degree restriction, proved in the
+Guccione--Guccione--Valqui shape analysis, gives
 
 ```text
-deg(sP+tQ)>=6  for every (s,t)!=(0,0).                 (6.2a)
+g=gcd(n,m)>=16,                 g!=2p for every prime p.
 ```
 
-Thus no target shear or more general linear pencil direction may expose a
-degree-five-or-less coordinate, even if both displayed degrees are large.
+([primary paper](https://arxiv.org/abs/1401.1784)).  The corrected
+Appelgate--Onishi theorem says a
+counterexample cannot have a component degree equal to a product of at most
+two primes; its proof history includes the later Nowicki--Nakai repairs
+([original](https://doi.org/10.1016/0022-4049(85)90099-4),
+[lemma repair](https://doi.org/10.1016/0022-4049(88)90069-2)).  Complete any
+nonzero pencil member `R=sP+tQ` to a target basis and apply the theorem there.
+Consequently **every** pencil degree has at least three prime factors counted
+with multiplicity, and is therefore at least eight.
 
-These are cited global restrictions, not results of this companion.
+The internal pencil theorems give a complementary structural statement.
+THM-3544 and THM-3550 prove that every pencil degree is composite and at
+least six, and that one can choose a reduced target basis `(R_n,S_m)` with
+
+```text
+6<=n<m,  n and m composite,                             (6.2a)
+```
+
+such that `[R]` is the unique degree-`n` direction and every other pencil
+direction has degree `m`.  The internal gates alone give `m>=8`; combined
+with Appelgate--Onishi they give `n>=8`.  Moh's computation, applied to this
+reduced basis, gives
+
+```text
+m>100.                                                  (6.2b)
+```
+
+([Moh's summary](https://www.math.purdue.edu/~ttm/jacobian.html)).  Thus the
+first arithmetic search is not a displayed low-degree pair: it is a unique
+low pencil direction of composite three-prime-factor degree below a height
+strictly above 100.
+
+The equality boundary of the internal height theorem is still informative.
+If one ignores the stronger cited exclusions and sets `m=8`, the reduced
+pair must have degrees `(6,8)` and leading forms either `(L^6,L^8)` or,
+after `GL_2`, `((xy)^3,(xy)^4)`.  The one-place and Appelgate--Onishi gates
+kill these as counterexamples: the one-place gate removes the linear-base
+cell, while Appelgate--Onishi removes both because of the degree-six member.
+They remain exact hostile controls for any claimed degree-floor argument.
+THM-3550 states this with a power-free base.  In the maximal common-base
+normalization of `(6.1)`, the first cell has `H_max=L^2`, exponents `(3,4)`,
+and one root direction; the second has `H_max=xy`, the same exponents, and
+two root directions.  These normalizations must not be identified.
+
+Combining all of the arithmetic gates above gives a small new finite screen.
+The least possible reduced height is not `102`: its only large admissible gcd
+is `34=2*17`, which the twice-prime theorem removes.  The first surviving
+height is
+
+```text
+m=105,
+(n,m;g;n/g,m/g) in
+{(42,105;21;2,5), (63,105;21;3,5),
+ (70,105;35;2,3), (84,105;21;4,5)}.                   (6.2c)
+```
+
+This is **FINITE-EXACT arithmetic**, not a claim that any cell is realizable.
+After swapping outputs to put the larger leading exponent first, the last
+three cells enter the chamber `b<a<2b`, with `k=1,1,3` respectively.  Thus
+the new divisor `(6.11)` already taxes three of the four earliest arithmetic
+cells.  Writing `F,G` for the degree-`n`, degree-105 outputs, the exact taxes
+are
+
+```text
+(63,105): rad(H) | F_62,       H^2 rad(H) | G_104;
+(70,105): rad(H) | F_69,       H   rad(H) | G_104;
+(84,105): H rad(H) | F_83,     H^2 rad(H) | G_104.
+```
+
+The remaining `(42,105)` cell has exponent pair `(2,5)`, hence lies in the
+next chamber `2b<a<3b`.  It is the unique minimal-height cell requiring a
+genuine second-chamber argument rather than a continuation of `(6.11)`.
+Subleading proportionality still gives `G_104` as a scalar multiple of
+`H^3F_41`; only the additional root divisor is presently missing.
+
+THM-3550 is currently labelled `PROVED / HOSTILE AUDIT IN PROGRESS`; the
+stronger `m>100` conclusion uses the separately cited Moh theorem.
 
 ### Subleading codimension
 
@@ -828,6 +966,49 @@ computes an exact quotient Jacobian `2(2-3v-t)^2`.  The quotient retains the
 collision only by contracting a divisor and acquiring ramification.  Graph
 restriction and quotient forgetting are opposite operations.
 
+[THM-3549](../01-canon/theorems/THM-3549-torus-quotient-correction-no-go.md)
+then tests the literal repair.  In collision coordinates the seed has
+`Jac(R,S)=-2w^2`.  No one-sided polynomial correction works in any degree;
+arbitrary simultaneous corrections of total degree at most two are
+inconsistent, degree-three corrections force the constant Jacobian to zero,
+and corrections affine in `w` fail for every degree in the other variable.
+For a collision-preserving Keller repair, the first surviving transverse box
+has sorted `w`-degrees at least `(4,5)`.  On its boundary the top coefficients
+must already be
+
+```text
+a(u)=c h(u)^4,                 b(u)=d h(u)^5.
+```
+
+Thus “subtract the conductor” is not a low-order perturbation.  The open
+cell requires simultaneous high-transverse corrections to both outputs,
+removal of the contracted line without losing the two-point collision, and
+global cancellation of every positive `w`-row.
+
+There is a particularly sharp clean-total-degree boundary.  If
+`deg h=e-1` and these `(4,5)` transverse tops dominate ordinary total degree,
+then
+
+```text
+(deg P,deg Q)=(4e,5e),       H_top=u^(e-1)w.
+```
+
+The combined gcd, Appelgate--Onishi, and Moh gates first permit `e=21`, hence
+the cell `(84,105)` with `H=u^20w`.  Repaired subleading rigidity gives
+
+```text
+Q_104=(5d/(4c))H P_83,
+D_3(H)=H rad(H)=u^21w^2 | P_83.
+```
+
+Thus the degree-83 layer of `P` has no `w^0` or `w^1` row and is parametrized
+by a degree-60 quotient: `61` coefficients rather than `84`.  This conclusion
+also gives `u^41w^3|Q_104`.  Among the four first-height cells in `(6.2c)`,
+`(84,105)` is the unique one with the clean transverse degree ratio `4:5`.
+This entire conclusion is conditional on the displayed tops controlling
+ordinary total degree; a
+lower `w`-row with larger `u`-degree must be retyped separately.
+
 ### D. Catalan self-intersection thickening: exact near-counterexample
 
 Consider the separated formal ansatz
@@ -868,6 +1049,27 @@ The live architecture is to add genuinely mixed `v^i w^j` corrections that
 reroute or cancel the Catalan tail without introducing a ramification divisor.
 Truncating the series is not enough: the first omitted coefficient becomes an
 explicit nonconstant Jacobian defect.
+
+There is a concrete positive first step.  Drop separation and write
+
+```text
+P=sum_(i=0)^N p_i(v)w^i,       p_0=v^2,
+Q=sum_(j=0)^N q_j(v)w^j,       q_0=v^3-v.
+```
+
+The coefficient of `w^r` in the Keller equation is the exact ladder
+
+```text
+sum_(i+j=r+1) [j p_i' q_j-i p_i q_j']
+   =kappa delta_(r,0).
+```
+
+For `kappa=1`, its first Bezout row has the polynomial solution
+`p_1=1`, `q_1=3v/2`.  The open question is whether later mixed rows can
+terminate while satisfying the terminal equations and retaining the boundary
+collision.  Thus this is not merely “try more terms”: it is a finite
+degree-by-degree construction ladder with a positive first row and the
+separated Catalan solution as its nonterminating hostile control.
 
 ### E. Punctured Kummer collision: the missing divisor is load-bearing
 
@@ -995,41 +1197,52 @@ counterexample must satisfy all of the following:
 
 1. both reduced leading exponents `a,b` are at least two and coprime;
 2. the common leading form has at least two distinct root directions;
-3. every nonzero target-pencil member has degree at least six;
-4. both component degrees have at least three prime factors with
-   multiplicity, and at least one degree exceeds 100;
+3. every nonzero target-pencil member has at least three prime factors with
+   multiplicity, hence degree at least eight;
+4. in a reduced target basis the pencil has one low degree `n` and one
+   generic degree `m`, with `8<=n<m`, `m>100`, `gcd(n,m)>=16`, and gcd not
+   twice a prime; its first arithmetic height is `105` with the four cells
+   in `(6.2c)`;
 5. the subleading correction `W` vanishes, by repaired THM-3025;
 6. in `b<a<2b`, every root multiplicity obeys the extra divisor tax
    `(6.10)`--`(6.12)`;
 7. the first Euclidean block must survive its layer-by-layer codimensions and
    then create a genuine new face rather than assume an endless scalar
    recurrence;
-8. any sparse coefficient ansatz must survive leaf peeling and all cross
-   leaks of its complete product support;
+8. any sparse coefficient ansatz must survive leaf peeling, every cross leak,
+   fibrewise polygon closure, and the global Segre cycle binomials;
 9. a magnitude-only or norm-only shadow is insufficient: determinant signs,
-   coefficient phases, and cycle holonomies must be retained;
+   coefficient phases, cycle holonomies, and global shear frustration must be
+   retained;
 10. exact finite even symmetry is forbidden; a near-symmetric candidate needs
    a load-bearing asymmetric defect;
-11. a collision thickening must evade the separated Catalan tail, most likely
+11. any supplied Puiseux escape branch has escape exponent
+    `m_escape<=r(d-2)` and approaches either a dark rank-one conductance
+    plaquette or a channel-degenerate regime;
+12. a torus-quotient repair preserving the inherited collision must alter
+    both outputs and begin at sorted transverse degrees at least `(4,5)`;
+13. a collision thickening must evade the separated Catalan tail, most likely
     through mixed terms rather than finite truncation;
-12. the exact quadratic Kummer collision cannot be filled across its missing
+14. the exact quadratic Kummer collision cannot be filled across its missing
     divisor while preserving etaleness and the same function field;
-13. a cover/cusp construction must retain normalization, coordinate-order
+15. a cover/cusp construction must retain normalization, coordinate-order
     index, Jelonek/nonproperness data, and hidden discriminant components.
 
-The last five are architectural necessities within the stated programs, not
-a complete classification of all planar counterexamples.
+Items 11--15 are conditional or architecture-specific necessities, not a
+complete classification of all planar counterexamples.
 
 ## 9. Connection ledger
 
 | source | target and map | preserved predicate | destroyed information | required sidecar | cheapest decisive test |
 |---|---|---|---|---|---|
 | quantum hopping `H` | resistor generator, `H_xy -> |H_xy|^2` by strong dephasing | leading population semigroup | loop phase, circulation | magnetic cycle holonomies | triangle `K^3` sign check |
-| JC response matrix `A_P` | bipartite conductance graph `|A_wu|^2` | support, magnitudes, matching, leaves | cancellation, rank on cycles, target range | gain phases on a cycle basis | `A_+` versus `A_-` square hostile |
+| differential `DF` | normalized intensity table `C/T` | asymptotic rank-one proximity | determinant Wilson phase | dark/channel-degenerate regime | THM-3548 two matrix hostiles |
+| JC response matrix `A_P` | bipartite conductance graph `|A_wu|^2` | support, magnitudes, matching, leaves, polygon bounds | cancellation, rank on cycles, target range, factorization | gain phases plus Segre cycle binomials | `A_+` versus `A_-` square hostile |
 | triangular row `(j,t+1)` | odd sum-row via `M` | bijection, additive row, norm up to factor two | primitive content without parity sheet | index-two/Gaussian content | `M^TM=2I`, axis completion |
 | sum-row vector | scalar square norm | radius and two-adic lower data | orientation and determinant sign | ordered exponent / `P^1(F_2)` color | `(1,2),(2,1)` against `(1,4)` |
 | odd-row maximum `2C_t` | filler `Q_t=2C_t+1` | collision-free row sentinel | support-point semantics | diagonal fixed point if support matters | compare `(t+1,t+1)` with `Q_t` |
 | higher-dimensional collision | categorical quotient | invariant functions, collision image | transverse character | ramification divisor | THM-3543 square factor |
+| ramified torus quotient | polynomial corrections `(A,B)` | polynomiality and chosen collision if imposed | low transverse repair cells | both outputs, `w`-degree `(4,5)`, common-power top | THM-3549 boundary solve |
 | higher-dimensional collision | coordinate graph restriction | tangent directions, ambient unit determinant | nothing if coordinates verified | coordinate/divisibility certificate | THM-3546 four gates |
 | transverse boundary collision | Catalan formal thickening | collision and unit Jacobian | polynomiality | mixed-term/termination mechanism | solve first mixed response boxes |
 | curved ambient collision surface | punctured Kummer cover `(s,b)->(b,4s^2)` | finite etale collision | affine-plane completeness | boundary valuation / nonconstant unit | try mixed function-field deformation |
@@ -1047,24 +1260,29 @@ a complete classification of all planar counterexamples.
 3. **Parallelogram tiling.**  Start with `(7.3)`, include every cross leak,
    and search for the smallest closed multi-fibre support rather than a
    hand-picked cancellation square.
-4. **Mixed Catalan thickenings.**  Add the smallest mixed `v^i w^j`
+4. **Torus-correction boundary.**  Start at transverse degrees `(4,5)` with
+   top coefficients `(c h^4,d h^5)`, impose the inherited two-point collision,
+   and solve the remaining Jacobian rows; prioritize the clean `(84,105)`
+   cell by writing `P_83=u^21w^2C_60`, only `61` homogeneous coefficients,
+   and reject any retained contracted line.
+5. **Mixed Catalan thickenings.**  Add the smallest mixed `v^i w^j`
    corrections to both outputs, solve the constant-Jacobian equations by
    transverse degree, and test whether a finite cancellation can terminate
    the positive Catalan tail without losing the collision.
-5. **Kummer boundary deformations.**  Add the smallest mixed transverse terms
+6. **Kummer boundary deformations.**  Add the smallest mixed transverse terms
    that change `s^2=delta/4` before filling the divisor; test whether the
    missing divisor moves to infinity or a finite ramification valuation
    survives.
-6. **Cusp nonlinear projections.**  Search low invariant degree for
+7. **Cusp nonlinear projections.**  Search low invariant degree for
    `A(L,T,U,S),B(L,T,U,S)` using exact response linearization in `B`, then
    reject by Jacobian factors, coordinate-order index, or periodic image
    prime.  The current finite box already rejects natural and
    constant-linear projections.
-7. **Coordinate-graph descent.**  Continue beyond the exact degree-three
+8. **Coordinate-graph descent.**  Continue beyond the exact degree-three
    graph exclusion; solve the scheme-theoretic identity at increasing degree
    and then verify coordinate status, with positive triangular controls and
    hostile smooth noncoordinate hypersurfaces.
-8. **Finite-dephasing diagnostics.**  Use the first nonzero loop correction,
+9. **Finite-dephasing diagnostics.**  Use the first nonzero loop correction,
    not the resistor limit, as a numerical detector for the coefficient
    holonomies most likely to control cancellation.
 
@@ -1072,6 +1290,9 @@ a complete classification of all planar counterexamples.
 
 - The strong-dephasing theorem is a finite-dimensional singular limit, not a
   reduction of JC to electrical networks.
+- THM-3548 supplies necessary intensity, polygon, Segre, shear, and conditional
+  escape filters.  None is sufficient, and the Puiseux bound assumes the
+  displayed branch expansion.
 - The arithmetic row maps are exact, but norms and residues are not invariant
   under `GL_2(C)`.  They can schedule an integral support search; they cannot
   impose a complex planar-JC obstruction without an integral normalization
@@ -1087,6 +1308,10 @@ a complete classification of all planar counterexamples.
 - The punctured Kummer map is a genuine finite etale collision, but its source
   is `G_m x A^1`; THM-3554 excludes only affine-plane fillings with the same
   quadratic function field.
+- THM-3549 closes one-sided, low-total-degree, and transverse-affine repairs
+  of one fixed quotient seed; the mixed `(4,5)`-and-above correction box is
+  still open.  THM-3550's prime-degree proof is canonized but remains labelled
+  as undergoing hostile audit.
 - `JC(2)` remains open.
 
 The most productive conceptual compression is:
