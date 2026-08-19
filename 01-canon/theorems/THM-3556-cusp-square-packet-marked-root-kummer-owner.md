@@ -15,6 +15,7 @@ source: kps-s188
 depends_on: []
 related:
   - THM-3535-fixed-keller-full-wreath-and-all-level-linear-primitivity
+  - THM-3548-planar-keller-conductance-shadow-gates
   - THM-3554-punctured-kummer-collision-surface-normal-form
   - THM-3555-catalan-thickening-universal-cubic-root-cover
 companion: 04-computation/cusp_square_marked_root_kummer_owner_kps_s188.py

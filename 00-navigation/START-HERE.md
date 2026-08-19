@@ -64,9 +64,9 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     `>=6` and height `>=8`; Nagata's cited degree theorem sharpens every
     pencil degree to `Omega>=3`, while arXiv:2204.14178 gives reduced height
     `>=108` and leaves only `(72,108)` below `125`.
-    THM-3543/3545/3554 give the ramified/algebraic/punctured
-    collision pincer; THM-3549 starts quotient repair at `(4,5)`, and
-    THM-3553 closes displayed polynomial graph descent in every degree.
+    THM-3543--3557 give the collision/repair atlas: quotient repair begins at
+    `(4,5)`, displayed graphs are closed, and cubic/packet/mixed-width lanes
+    remain sharply typed but open.
     THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
     THM-3212--3419 give the later infinity, deck, boundary, and linear-`z`
     atlases; THM-3418 closes sparse `f(x)+g(x)z^d`, not general fibres.

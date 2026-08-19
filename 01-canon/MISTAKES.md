@@ -119,7 +119,6 @@ Format per entry:
 - **Reusable rule:** when promoting a reserved theorem, search the entire body
   for `RESERVED`, `stub`, and old no-claim language; frontmatter promotion alone
   does not make the truth surface internally consistent.
-
 ## MISTAKE-424 (2026-08-18, THM-3554 image typing) -- a punctured Kummer cover's geometric image was called its untyped scheme/rational image
 
 - **What failed:** the first promoted THM-3554 said without qualification

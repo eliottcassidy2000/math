@@ -34,19 +34,22 @@ The live board was:
 
 | lane | object | representation | invariant / obstruction | status |
 |---|---|---|---|---|
-| Anchor | hypothetical planar Keller pair | target pencil and Newton faces | every member composite, degree at least six; height at least eight | PROVED |
+| Anchor | hypothetical planar Keller pair | target pencil and Newton faces | internal `>=6/8`; cited `Omega>=3`, height `>=108` | PROVED + CITED |
 | Anchor | THM-1300 quotient | `(v,w)->(R,S)` | collision plus conductor `-2w^2` | PROVED + EXACT |
 | Niche | dephased quantum walk | edge amplitudes and conductances | phases disappear at leading order, return as cycle flux | PROVED finite-dimensional expansion |
 | Niche | Jacobian coefficients | fibre polygons inside a Segre matrix | local closure plus global even-cycle binomials | PROVED |
 | Wildcard | self-intersecting boundary curve | formal transverse thickening | exact constant Jacobian, Catalan nontermination | PROVED + EXACT |
-| Wildcard | invariant graph in the 3D map | coordinate hypersurface | normal/tangent unit factorization | PROVED criterion, OPEN search |
+| Wildcard | invariant graph in the 3D map | coordinate hypersurface | displayed graphs fail; nonlinear coordinate charts remain | PROVED / OPEN boundary |
 | Wildcard | curved THM-1300 collision surface | punctured Kummer cover | finite etale collision, nonconstant source unit | PROVED + EXACT |
+| Wildcard | inverse-cubic owner packet | six Jacobian minors in `Gr(2,4)` | unit minor ideal but no linear decomposable projection | PROVED + OPEN nonlinear projection |
 
-The board changed twice.  First, the quotient, formal boundary, and curved
+The board changed repeatedly.  First, the quotient, formal boundary, and curved
 collision surface became a three-way pincer: polynomial-but-ramified,
-Keller-but-nonpolynomial, and etale-but-punctured.  Second, the dephasing analogy
-stopped being an attempted proof bridge and became a phase-aware search
-architecture.
+Keller-but-nonpolynomial, and etale-but-punctured.  Then the dephasing analogy
+became a phase-aware search architecture, classical bounds moved the first
+degree cell to `(72,108)`, displayed graphs closed in all degrees, and the
+immersive four-coordinate packet exposed decomposability as another lost
+phase sidecar.
 
 ## 2. The strong-dephasing theorem, with the normalization exposed
 
@@ -640,10 +643,24 @@ p_1=1,                    q_1=3v/2                     (37)
 ```
 
 for `kappa=1`.  Separation turns `(36)` into the infinite Catalan tail.
-The open question is whether polynomial `v`-dependence in higher rows can
-make the ladder terminate while the terminal equations and collision remain
-valid.  This is a finite, degree-by-degree construction problem and has a
-positive exact first row plus a hostile separated control.
+THM-3557 proves that mixed width one and two fail in every coefficient
+degree, and that width three fails through coefficient degree five.  Its
+first internally open cell is therefore `(N,D)=(3,6)`, where `D` bounds all
+coefficient degrees.
+
+That is not yet a globally admissible cell.  The ordinary degrees in `(35)`
+are at most `max(3,D+N)`, while every solution retains the boundary
+collision and would be a counterexample.  The cited degree floor therefore
+forces
+
+```text
+D+N>=108.                                              (37a)
+```
+
+At width three one needs `D>=105`, and at width four `D>=104`; below height
+`125`, the actual output degrees must be `(72,108)`.  Thus low width remains
+structurally attractive, but only with very high longitudinal coefficients
+or a deliberately nonuniform row profile.
 
 THM-3555 identifies what this ladder is trying to desingularize.  After
 adjoining the Catalan square root, the separated map is affinely equivalent
@@ -746,6 +763,103 @@ Thus a two-resonance additive shear network is tame.  This pushes a viable
 counterexample toward three or more coupled layers/cycles, consistent with
 the coefficient-polygon diagnosis.
 
+### F. Nonlinear projection of the immersive inverse-cubic packet
+
+THM-3556 supplies a different positive object.  For a polynomial `U(v,y)`,
+put
+
+```text
+T=y^2-6vU,       S=y^3-9vUy,       L=v^2(8vU-y^2).
+```
+
+Then `S^2=T^3+27LU^2`, and `LX^3+TX+2U` splits into one marked root which
+escapes at `v=0` and a quadratic Kummer pair.  For one explicit `U_*`, the
+map
+
+```text
+Z=(L,T,U_*,S):A^2 -> A^4                              (41a)
+```
+
+is everywhere immersive: its six `2 x 2` minors `M_ij` generate the unit
+ideal.  Nevertheless no natural two-coordinate projection and no constant-
+linear projection is Keller.
+
+There is a dual visible cubic `Y^3-3TY+2S` with marked root `Y=y`; its
+discriminant has the same odd Kummer owner `-L` as the escaping-root cubic.
+A projection which hides the marked sheet must therefore retain a common
+resolvent square class as well as the scalar cusp equation.
+
+The open construction is to find nonlinear target polynomials `A,B` with
+
+```text
+Jac(A(Z),B(Z))
+ =sum_(i<j)(A_iB_j-A_jB_i)(Z) M_ij=1.                 (41b)
+```
+
+This is a particularly literal dephasing bridge.  An arbitrary Bezout
+combination of the six minors exists, just as the classical intensity shadow
+may satisfy local conductance constraints.  A legal projection retains the
+discarded coherent sidecar: its six coefficients must descend through
+`C[L,T,U_*,S]`, lie on the Pluecker quadric
+
+```text
+c_12c_34-c_13c_24+c_14c_23=0,                         (41c)
+```
+
+and integrate to the exact decomposable form `dA wedge dB`.  The cheapest
+search enumerates low target degrees, imposes descent, `(41c)`, exactness and
+the selected collision before expanding `(41b)`.  A solution could still be
+tame, so nonproperness and the full degree passport remain mandatory.
+
+### G. Two nonparallel invariants with cancelling response classes
+
+THM-3551 closes three all-degree one-invariant families, and THM-3552 closes
+a broad two-channel Kummer family even when its first component is a
+polynomial submersion of high Newton area and high generic genus.  The
+obstruction is not degree: on the normalized generic fibre the forced mate
+differential is nonzero holomorphic and hence not exact.
+
+The first honest escape is therefore
+
+```text
+T=x^a y^b,       S=x^c y^d,       ad-bc=+/-1,
+P=x Phi(T,S)+Psi(T,S),                                (41d)
+```
+
+with genuinely nonlinear dependence on both `T` and `S`.  The unimodular
+exponent determinant minimizes new toric ramification, but is not enough by
+itself: an exact hostile which is only affine-linear in `S` still carries a
+nonzero holomorphic Newton-adjoint class and has no rational mate.  A positive
+signal is instead two or more response differentials of the second kind,
+with zero residues and opposite cohomology classes, whose cancellation is
+structural before any coefficient cap is raised.
+
+This is the fibre-cohomology version of the dephasing lesson.  One channel
+cannot close; two are rigidly opposite; three are the first number that can
+carry variable phase while retaining zero total response.  The cheap search
+works in the two-dimensional charge lattice, computes pole divisors and
+cohomology classes first, and solves for a polynomial mate only after a
+class cancellation is visible.
+
+### H. Alternating-factor defect invoices
+
+A second speculative ansatz starts with several smooth nonparallel factors
+`f_i` and common-power leading forms
+
+```text
+H=product_i f_i^(e_i),          P_0=H^2,       Q_0=H^3. (41e)
+```
+
+Rather than asking one approximate root to absorb every Jacobian defect,
+choose the multiplicities so consecutive correction rows invoice different
+factors.  The desired finite-termination signal is a periodic owner sequence
+whose obstruction operator is nilpotent.  The first two-factor cusp probe
+`f=y^2-x^3`, `g=y^2-2x^3`, `H=f^2g^3` failed at the next defect (rank `15`
+versus augmented rank `16`), so it is a hostile, not evidence.  The live
+experiment uses at least three factors or a different multiplicity vector
+and records owner, residual divisibility, solution dimension and target-shear
+freedom at every row.  This lane is `FINITE-EXACT exploratory`, not canon.
+
 ## 10. The consolidated counterexample passport
 
 A hypothetical planar counterexample now has to satisfy all of the following
@@ -766,6 +880,9 @@ simultaneously.
 | inherited quotient repair | both outputs changed; transverse degrees at least `(4,5)`; row-dominant first live box `(100,125)` | THM-3549 + cited degree list |
 | inherited finite collision | exact quadratic Kummer filling of the puncture is impossible | THM-3554 |
 | displayed graph descent | impossible in every polynomial degree; nonlinear coordinate hypersurfaces remain | THM-3546/3553 |
+| mixed Catalan width | `D+N>=108`; width three requires coefficient cap at least `105` | THM-3557 + cited degree list |
+| immersive packet projection | descending, integrable, decomposable minor Bezout certificate; constants fail | THM-3556 |
+| response channels | avoid all one-invariant rays and the two-channel cyclic Kummer cell; cancel fibre cohomology | THM-3551/3552 |
 
 At the cited exceptional height `108`, the Puiseux inequality becomes
 `m_contact<=106r`.  This is not sharp enough to prove properness, but it ties
@@ -789,7 +906,8 @@ suggests the testable hypothesis:
 
 This is not proved.  The cheap test is an exhaustive support enumeration at
 small degree, applying singleton, polygon, Segre, and fibre-degree gates
-before coefficient elimination.
+before coefficient elimination.  THM-3551/3552 supply all-degree evidence
+for the one-/two-channel boundary, but do not prove the general hypothesis.
 
 ### Cancellation slack as a search score — HEURISTIC
 
@@ -856,8 +974,10 @@ The session produced five durable shifts.
 5. The most credible searches are no longer generic coefficient boxes.  They
    are coherent-cycle constructions in the `(72,108)` Newton cages, the
    `(100,125)` row-dominant quotient repair (or a genuine second scale), and
-   cubic branch-curve surgery which moves ramification while exporting it to
-   infinity.
+   cubic branch-curve surgery at `D+N>=108`, including the inverse-cubic
+   packet's nonlinear decomposable projection problem.  Nonparallel
+   invariant channels and alternating factor owners are the two higher-risk
+   mechanisms most clearly outside the proved one-/two-channel walls.
 
 What did not change is the theorem status of the central problem:
 

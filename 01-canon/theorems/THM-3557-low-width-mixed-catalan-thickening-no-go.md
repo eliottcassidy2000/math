@@ -11,7 +11,9 @@ status: >
   contradictions.  Thus the first unclosed width-three cell has coefficient
   degree seven; width at least four is also open.  Every map in the ansatz
   retains the selected collision, so any solution would be a planar
-  counterexample.  No solution is claimed.
+  counterexample.  Separately, the CITED 2022 sub-125 degree classification
+  forces D+N>=108, so the internal degree-seven frontier remains globally
+  excluded through D=104 at width three.  No solution is claimed.
 source: kps-s187/kps-s188
 depends_on:
   - THM-3545-catalan-self-intersection-keller-thickening-boundary
@@ -271,7 +273,7 @@ entire affine width-three coefficient space is empty through `D=6`; the first
 open width-three target is coefficient degree seven.  Width four is
 independently open.
 
-## 6. Cubic-cover reframe and scope
+## 6. Cubic-cover reframe
 
 Under THM-3555's quadratic coordinate
 
@@ -290,6 +292,37 @@ terms in `r`; it is not an even pullback.  Hence the construction problem is
 equivalently to find an even polynomial deformation with `(24)` that retains
 the selected fiber.  Width is degree in `r^2`; the first genuinely new even
 `r^6` cell is precisely the degree-six branch closed by `(19)--(22)`.
+
+## 7. Classical degree transfer -- CITED input, proved corollary
+
+Suppose every coefficient `a_j,b_j` in `(1)` has degree at most `D`.  Then
+
+```text
+deg P,deg Q <= max(3,D+N).                             (25)
+```
+
+Any solution of `(3)` retains the collision `(4)`, so it would be a
+nonautomorphic planar Keller pair.  The
+[Guccione--Guccione--Horruitiner--Valqui](https://arxiv.org/abs/2204.14178)
+classification of hypothetical counterexample degree pairs below
+height `125` is a **CITED** input: it gives height at least `108`, and below
+`125` leaves only the reduced target-pencil degree pair `(72,108)` and its
+transpose.  Combining it with `(25)`
+proves
+
+```text
+D+N>=108.                                              (26)
+```
+
+If `D+N<125`, a linear target reduction would furthermore have to expose
+the pencil degree values `72` and `108`; the displayed components themselves
+may both have degree `108`.  Thus the first internally open cell `(N,D)=(3,7)`
+is far below the global degree floor: at width three one needs `D>=105`, and
+at width four one needs `D>=104`.  This does not solve those high-degree
+cells; it prevents a low-width search from confusing an internally new
+recurrence branch with a globally admissible counterexample.
+
+## 8. Scope
 
 This theorem excludes only ansatz `(1)` at widths `N<=2`, and at `N=3` only
 through coefficient degree six.  It does not exclude degree seven or higher,

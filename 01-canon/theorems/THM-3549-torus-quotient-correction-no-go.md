@@ -226,7 +226,8 @@ necessary gate, not an existence claim.
 
 ## 6. Ordinary-degree transfer -- CITED input, proved corollary
 
-This section imports the Guccione--Guccione--Horruitiner--Valqui
+This section imports the
+[Guccione--Guccione--Horruitiner--Valqui](https://arxiv.org/abs/2204.14178)
 classification of hypothetical counterexample degree pairs of height below
 `125`: only `(72,108)` and its transpose survive.  This is a **CITED** input,
 not an internal proof of that classification.

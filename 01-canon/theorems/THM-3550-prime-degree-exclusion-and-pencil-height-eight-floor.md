@@ -272,3 +272,17 @@ and it is not a Keller component.  The lower bound `(12)` does not assert
 that degree eight is realizable, bound generic cover degree, or prove
 properness.  It only removes every prime degree and the entire pencil-height
 six/seven box from a hypothetical counterexample.
+
+## 6. Classical comparison -- CITED, not a dependency of the proof
+
+The internal bounds above are structural and self-contained, but they are not
+the strongest known numerical bounds.  Magnus together with Nagata's
+corrected [Theorem 7.3](https://repository.kulib.kyoto-u.ac.jp/server/api/core/bitstreams/9ef8e868-5526-4830-b19f-543c0af09e7c/content)
+forces at least three prime factors, with multiplicity, in every component
+degree; target-basis completion applies this to every pencil member.
+Shastri's [one-point-at-infinity criterion](https://doi.org/10.18910/6794)
+excludes the linear-base row of `(18)`.  Finally, the **CITED / PREPRINT**
+[sub-125 classification](https://arxiv.org/abs/2204.14178) gives reduced
+pencil height at least `108`, leaving only `(72,108)` below `125`.
+Consequently `(16)`--`(19)` are hostile equality models for this theorem's
+mechanism, not live low-degree counterexample cells.
