@@ -1,0 +1,45 @@
+JC2 Catalan mixed-thickening degree-six exact audit
+python=3.13.14 sympy=1.14.0
+old_script_sha256_lf=0444ad61a0bb2cd165243db1a97f0cb0b299eb19263378c97d1dee9ff39a7e1e
+old_output_sha256_lf=cd23937963962bc4f43b83fc2f3ab6b477970c76f3151b7247c0025145380832
+old_replay=ordinary==optimized==stored;gates=86;failures=none
+identity_control=1,0
+catalan_N3_rows=1,0,0,-135/16,-405/64,-729/128
+D6_both_allowed_SE=[(0, 0), (2, 3), (4, 6)]
+D6_both_s0=raw:[1, 2];afterE1:[(2, 0)];afterE2:[]
+D6_both_SE23=afterE2:[(1, 5), (3, 3), (4, 2), (5, -1), (5, 0), (5, 1), (6, 1)];afterE3:[]
+D6_both_SE46=afterE2:[(4, 5), (5, 4), (6, -1), (6, 0), (6, 1), (6, 2), (6, 3)];afterE3:[]
+D6_e0_c0=[(1, 1, 0, 3), (2, 3, 3, 3), (3, 5, 6, 3)]
+D6_e0_CF23=afterE1:[(0, 3), (1, 3), (2, -1), (2, 0), (2, 1), (2, 2), (2, 3), (3, 5)];afterE2:[(2, -1), (2, 0), (2, 1), (2, 2), (2, 3)];afterE3:[(2, 3)];old_exact=EMPTY
+D6_e0_CF46=afterE1:[(0, 5), (1, 5), (2, 5), (3, -1), (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5)];afterE2:[(3, -1), (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5)];afterE3:[(3, 5)]
+D6_e0_constant_cf_A=[1];old_exact=EMPTY
+D6_f0_d0=[(2, 2, 2, -7), (3, 4, 5, -7)]
+D6_f0_DE23=afterE1:[(0, 1), (1, 1), (2, 2), (3, 4), (4, 6)];afterE2:[]
+D6_f0_DE46=afterE1:[(0, 3), (1, 3), (2, 3), (3, 4), (4, 6)];afterE2:[]
+D6_f0_constant_de_A=[3];old_exact=EMPTY
+D6_e_equals_f_equals_0=WIDTH_TWO_EMPTY_CAP_FREE
+D6_degree_survivors=[('e=0', 3, 4, 4, 5, 6)]
+E0_parameter=a=1+2*v*g;b=3*v/2+(3*v**2-1)*g;g=t*v**2+A*v+B
+common_power=c=C*h**2;f=F*h**3;h=v**2+u*v+r
+E1_remainder=-(2*A - 4*B**2 + 4*C*r**2 - 3)/2
+E1_d_lead=3*(C + t**2)/2
+saturation=t*C*F*(C+t**2)!=0
+E2_E3_top=-3*C*t + 2*F + t**3;-C**2 - C*t**2 + 2*F*t
+top_eliminant=(C-t**2)**2;forced=C=t**2,F=t**3
+E1_reduced_forces=A=2*B**2+3/2-2*R**2
+next_square=(A-U)**2;forced=U=A
+branch_split=(B-R)*(3*(B-R)+2*t)
+branch_A_terminal=-6*t**2
+branch_B_terminal=(2*t**2/9)*(X-81),(4*t**3/27)*(2*X-135);X=48*B*t+16*t**2
+branch_A_groebner_QQ=GroebnerBasis([1], zeta, B, t, domain='QQ', order='grevlex')
+branch_B_groebner_QQ=GroebnerBasis([1], zeta, B, t, domain='QQ', order='grevlex')
+branch_A_groebner_GF5=GroebnerBasis([1], zeta, B, t, domain='GF(5)', order='grevlex')
+branch_B_groebner_GF5=GroebnerBasis([1], zeta, B, t, domain='GF(5)', order='grevlex')
+branch_A_groebner_GF7=GroebnerBasis([1], zeta, B, t, domain='GF(7)', order='grevlex')
+branch_B_groebner_GF7=GroebnerBasis([1], zeta, B, t, domain='GF(7)', order='grevlex')
+hostile_survivor_prefix=E0,E1,E4,E5=(1,0,0,0);E2_v2=-6;E3_v3=-4
+verdict=N3_D6_AFFINE_EMPTY_EXACT
+projective_closure=NOT_COMPUTED_NOT_NEEDED_FOR_AFFINE_COEFFICIENT_EMPTINESS
+full_untriangularized_groebner=NOT_USED
+gates=64
+failures=none

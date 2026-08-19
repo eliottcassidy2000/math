@@ -84,16 +84,31 @@
   `1e0fd05c85e3eb21bccf6dd85ea029277c5df255a059f420b1425f96b3b519f5` /
   `e14c9270a87f6438891e16b85f789882f93ce62803b1d448895ed3c725d30e28` /
   `cf050ca64d5054a65a01da346489de214f695d67d0f6b98b9470d61567a39db5`.
+- `jc2_catalan_mixed_thickening_degree6_exact.py` -> matching `.out`
+  [VERIFIED-EXACT + FINITE-EXACT RESEARCH ARTIFACT; NO THEOREM ID].  The
+  complete cap-six ledger replays every THM-3557 closure and leaves only
+  `e=0`, `deg(a,b,c,d,f)=(3,4,4,5,6)`, with `c=C*h^2`, `f=F*h^3` and
+  quadratic `h`.  Exact E0/E1 parametrization and the full leading
+  saturation reduce E2/E3 to two branches: one has terminal `-6t^2`, while
+  the other forces `X=81` and `2X=135`.  Both branchwise saturated ideals
+  have Groebner basis `[1]` over `QQ` (and over `GF(5),GF(7)` as controls).
+  Thus the width-three affine coefficient space is empty through degree six;
+  degree at least seven and width at least four remain open.  All 64 new
+  gates and all 86 inherited gates remain active under `-O`; normal,
+  optimized, and stored transcripts agree.  Script/output LF SHA-256:
+  `a3f94ab9eb4157bec7effc15ac1f1a8ab0842814c3a4f4ae4f6705a97fe4346f` /
+  `02d23d80e4c50edc1323105a9d6fcc2cf5c77d729731a4be354c415251c31616`.
 - `jc2_catalan_mixed_thickening_recurrence_kps_s187.py` -> matching `.out`
   [THM-3557 PROVED + VERIFIED-EXACT + FINITE-EXACT].  The exact transverse
   recurrence proves cap-free impossibility for mixed Catalan thickenings of
   widths one and two.  At width three, exhaustive UFD branches, degree
   ledgers, and two saturated rational unit ideals prove affine coefficient-
   space emptiness through coefficient degree five; the exceptional
-  square/cube branch terminates at `-9/4`.  The first open width-three cell is
-  degree six, equivalently the first new even `r^6` cell in THM-3555's cubic-
-  cover coordinates.  Width four is also open.  All 86 truth gates pass and
-  normal/`-O`/stored transcripts agree.  Script/output LF SHA-256:
+  square/cube branch terminates at `-9/4`.  Its first open width-three cell
+  was degree six, equivalently the first new even `r^6` cell in THM-3555's
+  cubic-cover coordinates; the preceding exact artifact now closes that
+  boundary.  Width four remains open.  All 86 truth gates pass and normal/
+  `-O`/stored transcripts agree.  Script/output LF SHA-256:
   `0444ad61a0bb2cd165243db1a97f0cb0b299eb19263378c97d1dee9ff39a7e1e` /
   `cd23937963962bc4f43b83fc2f3ab6b477970c76f3151b7247c0025145380832`.
 
