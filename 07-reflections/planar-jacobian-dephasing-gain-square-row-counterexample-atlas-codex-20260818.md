@@ -4,8 +4,8 @@
 `JC(2)` remains **OPEN**.  No counterexample is claimed here.  The session
 produced one repaired canonical proof, a new root-multiplicity-sensitive
 constraint on a hypothetical counterexample, an exact low-degree jet
-closure, several refuted construction architectures, and two concrete open
-counterexample programs.
+closure, several refuted construction architectures, an exact Catalan
+near-counterexample, and three concrete open counterexample programs.
 
 Companion:
 [`jc2_dephasing_square_rows_synthesis_codex_20260818.py`](../04-computation/jc2_dephasing_square_rows_synthesis_codex_20260818.py),
@@ -38,7 +38,13 @@ The strongest exact outcomes are:
    `H`.  This is a short homogeneous-jet certificate, not a new global
    degree theorem: the corrected Appelgate--Onishi result and Moh already
    cover this degree pair.
-4. **PROVED strong-dephasing limit.**  A Hermitian hopping matrix with
+4. **PROVED target-pencil floor.**  By
+   [THM-3544](../01-canon/theorems/THM-3544-planar-keller-target-pencil-total-degree-six-floor.md),
+   every nonzero linear combination `sP+tQ` in a nonautomorphic complex
+   planar Keller pair has total degree at least six.  The quantifier over the
+   whole target pencil is stronger than a lower bound on the two displayed
+   coordinates.
+5. **PROVED strong-dephasing limit.**  A Hermitian hopping matrix with
    `|H_xy|^2=c_xy`, under uniform site dephasing of coherence-decay rate
    `lambda`, has population generator
 
@@ -49,13 +55,13 @@ The strongest exact outcomes are:
    Thus `p(lambda*tau/2) -> exp(tau L_c)p(0)`.  Kirchhoff theory is exactly
    the leading slow limit.  Phases first return through magnetic loop
    corrections: triangles contribute at the next order.
-5. **PROVED exact bridge, with a decisive loss ledger.**  The coefficient
+6. **PROVED exact bridge, with a decisive loss ledger.**  The coefficient
    equation `Jac(P,Q)=1`, for fixed `P`, is a complex bipartite gain graph
    whose rows are grouped by equal exponent-vector sums.  Strong dephasing
    keeps squared edge magnitudes but discards the cycle holonomies that
    control cancellation, rank, and range.  A resistor graph is therefore a
    useful pruning shadow, not a lossless JC carrier.
-6. **PROVED arithmetic merge.**  The user's triangular square rows and odd
+7. **PROVED arithmetic merge.**  The user's triangular square rows and odd
    equal-sum rows are related by the Gaussian--Hadamard map
 
    ```text
@@ -66,7 +72,13 @@ The strongest exact outcomes are:
    norms.  The filler `3,11,27,51,...` is one more than the transformed row
    maximum.  It is a collision-free scalar sentinel, while the diagonal
    exponent is the functorial support filler.
-7. **FINITE-EXACT positive seed; OPEN projection.**  An explicit
+8. **PROVED + VERIFIED-EXACT near-counterexample.**  The separated
+   thickening `P=v^2+A(w)`, `Q=v^3-v+vB(w)` retains the transverse collision
+   `(+/-1,0)->(1,0)` and has constant Jacobian exactly when
+   `B=3A/2` and `A-3A^2/4=kappa*w`.  The unique normalized solution is an
+   infinite Catalan series, never a polynomial.  Mixed thickenings remain
+   open.
+9. **FINITE-EXACT positive seed; OPEN projection.**  An explicit
    four-coordinate cusp-square packet `A^2 -> A^4` is everywhere immersive,
    although none of its six natural two-coordinate projections, nor any
    constant-linear projection, is Keller.  Nonlinear polynomial projection
@@ -98,6 +110,12 @@ The strongest exact outcomes are:
 - Exact response quotient:
   [THM-2230](../01-canon/theorems/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md).
   Its fibres are target-shear orbits in a module, not a quotient ring.
+- New proved degree/collision sidecars:
+  [THM-3544](../01-canon/theorems/THM-3544-planar-keller-target-pencil-total-degree-six-floor.md)
+  gives an all-target-pencil degree-six floor, while
+  [THM-3545](../01-canon/theorems/THM-3545-catalan-self-intersection-keller-thickening-boundary.md)
+  gives an exact formal collision with a nonterminating Catalan obstruction
+  to polynomiality.
 - Least-used sidecar: the normalization/order-index distinction in the fixed
   higher-dimensional Keller packets.  It is not a planar theorem, but it is
   the correct hostile test for proposed inverse-cover constructions.
@@ -552,6 +570,17 @@ component degree must have at least three prime factors counted with
 multiplicity.  Moh's degree computation shows that both degrees cannot be at
 most 100 ([Moh's summary](https://www.math.purdue.edu/~ttm/jacobian.html)).
 
+There is also a target-pencil restriction which cannot be read off from the
+sorted pair alone.  THM-3544 proves that, for a nonautomorphic complex Keller
+pair,
+
+```text
+deg(sP+tQ)>=6  for every (s,t)!=(0,0).                 (6.2a)
+```
+
+Thus no target shear or more general linear pencil direction may expose a
+degree-five-or-less coordinate, even if both displayed degrees are large.
+
 These are cited global restrictions, not results of this companion.
 
 ### Subleading codimension
@@ -759,8 +788,12 @@ polynomial support.
 
 [THM-3546](../01-canon/theorems/THM-3546-invariant-graph-keller-descent-criterion.md)
 proves a clean general criterion.  If a constant-Jacobian map in `n+1`
-variables sends one polynomial coordinate graph into another, its restriction
-is Keller in `n` variables; any collision on the graph descends.
+variables sends one polynomial coordinate graph scheme-theoretically into
+another -- equivalently,
+`F_w(x,h(x))=g(F_y(x,h(x)))` as a polynomial identity -- its restriction is
+Keller in `n` variables; any collision on the graph descends.  Over an
+infinite field, containment on all rational points implies this identity;
+over a finite field, pointwise containment alone is not enough.
 
 For an ambient three-variable collision, the search becomes:
 
@@ -774,13 +807,60 @@ Passing these gates would produce a planar counterexample with no second
 Jacobian search.  Interpolation is cheap; divisibility and coordinate status
 are load-bearing.
 
+For the fixed sporadic three-variable Keller map used in the current ambient
+program, an exact coefficient-ideal search finds no invariant polynomial
+graph `z=h(x,y)` of total degree `0,1,2,3`.  This is **FINITE-EXACT** only:
+higher-degree graphs, nongraph coordinate hypersurfaces, and semiconjugate
+surfaces remain open.
+
 The categorical torus quotient is a proved hostile, not a solution:
 [THM-3543](../01-canon/theorems/THM-3543-torus-quotient-ramification-square-no-go.md)
 computes an exact quotient Jacobian `2(2-3v-t)^2`.  The quotient retains the
 collision only by contracting a divisor and acquiring ramification.  Graph
 restriction and quotient forgetting are opposite operations.
 
-### D. Cusp-square packet and nonlinear `4 -> 2` projection: strongest explicit seed
+### D. Catalan self-intersection thickening: exact near-counterexample
+
+Consider the separated formal ansatz
+
+```text
+P(v,w)=v^2+A(w),
+Q(v,w)=v^3-v+vB(w),            A(0)=B(0)=0.
+```
+
+Direct coefficient comparison gives
+
+```text
+Jac(P,Q)=kappa
+iff B=(3/2)A and A-(3/4)A^2=kappa*w.
+```
+
+The unique normalized branch is
+
+```text
+A=(2/3)(1-sqrt(1-3*kappa*w))
+ = sum_(n>=1) C_(n-1)(3/4)^(n-1)kappa^n w^n.
+```
+
+It has the transverse double collision `(+/-1,0)->(1,0)` and constant
+Jacobian as a formal, or local holomorphic, map.  Every Catalan coefficient
+is nonzero in characteristic zero, so the tail never terminates and the map
+is not polynomial.  This is
+[THM-3545](../01-canon/theorems/THM-3545-catalan-self-intersection-keller-thickening-boundary.md),
+not a counterexample.
+
+Together with the torus-quotient hostile it forms a typed pincer:
+
+- the quotient is polynomial and colliding, but its Jacobian has a square
+  ramification factor;
+- the Catalan thickening is colliding and locally Keller, but nonpolynomial.
+
+The live architecture is to add genuinely mixed `v^i w^j` corrections that
+reroute or cancel the Catalan tail without introducing a ramification divisor.
+Truncating the series is not enough: the first omitted coefficient becomes an
+explicit nonconstant Jacobian defect.
+
+### E. Cusp-square packet and nonlinear `4 -> 2` projection: strongest explicit seed
 
 Start from
 
@@ -834,7 +914,7 @@ does not constitute evidence against JC(2); it is a sharply structured
 search box whose full four-coordinate differential obstruction is already
 removed.
 
-### E. Other attractive architectures that close
+### F. Other attractive architectures that close
 
 1. **Weighted suspension -- PROVED REFUTED.**  For
    `P=xA(x^r y^s)`, the only constant-producing weight sector of a mate is
@@ -869,21 +949,24 @@ counterexample must satisfy all of the following:
 
 1. both reduced leading exponents `a,b` are at least two and coprime;
 2. the common leading form has at least two distinct root directions;
-3. both component degrees have at least three prime factors with
+3. every nonzero target-pencil member has degree at least six;
+4. both component degrees have at least three prime factors with
    multiplicity, and at least one degree exceeds 100;
-4. the subleading correction `W` vanishes, by repaired THM-3025;
-5. in `b<a<2b`, every root multiplicity obeys the extra divisor tax
+5. the subleading correction `W` vanishes, by repaired THM-3025;
+6. in `b<a<2b`, every root multiplicity obeys the extra divisor tax
    `(6.10)`--`(6.12)`;
-6. the first Euclidean block must survive its layer-by-layer codimensions and
+7. the first Euclidean block must survive its layer-by-layer codimensions and
    then create a genuine new face rather than assume an endless scalar
    recurrence;
-7. any sparse coefficient ansatz must survive leaf peeling and all cross
+8. any sparse coefficient ansatz must survive leaf peeling and all cross
    leaks of its complete product support;
-8. a magnitude-only or norm-only shadow is insufficient: determinant signs,
+9. a magnitude-only or norm-only shadow is insufficient: determinant signs,
    coefficient phases, and cycle holonomies must be retained;
-9. exact finite even symmetry is forbidden; a near-symmetric candidate needs
+10. exact finite even symmetry is forbidden; a near-symmetric candidate needs
    a load-bearing asymmetric defect;
-10. a cover/cusp construction must retain normalization, coordinate-order
+11. a collision thickening must evade the separated Catalan tail, most likely
+    through mixed terms rather than finite truncation;
+12. a cover/cusp construction must retain normalization, coordinate-order
     index, Jelonek/nonproperness data, and hidden discriminant components.
 
 The last four are architectural necessities within the stated programs, not
@@ -900,6 +983,7 @@ a complete classification of all planar counterexamples.
 | odd-row maximum `2C_t` | filler `Q_t=2C_t+1` | collision-free row sentinel | support-point semantics | diagonal fixed point if support matters | compare `(t+1,t+1)` with `Q_t` |
 | higher-dimensional collision | categorical quotient | invariant functions, collision image | transverse character | ramification divisor | THM-3543 square factor |
 | higher-dimensional collision | coordinate graph restriction | tangent directions, ambient unit determinant | nothing if coordinates verified | coordinate/divisibility certificate | THM-3546 four gates |
+| transverse boundary collision | Catalan formal thickening | collision and unit Jacobian | polynomiality | mixed-term/termination mechanism | solve first mixed response boxes |
 | cusp packet `(L,T,U,S)` | two polynomial outputs | cusp-square discriminant if chosen invariantly | immersion can be lost in projection | all six minors, order index, wandering prime | nonlinear degree-box response solve |
 | leading form `H^a,H^b` | first Euclidean coefficient tower | exact divisibility | later renewal/new faces | root multiplicities and full Newton packet | bound `(6.11)` then next layer |
 
@@ -914,16 +998,20 @@ a complete classification of all planar counterexamples.
 3. **Parallelogram tiling.**  Start with `(7.3)`, include every cross leak,
    and search for the smallest closed multi-fibre support rather than a
    hand-picked cancellation square.
-4. **Cusp nonlinear projections.**  Search low invariant degree for
+4. **Mixed Catalan thickenings.**  Add the smallest mixed `v^i w^j`
+   corrections to both outputs, solve the constant-Jacobian equations by
+   transverse degree, and test whether a finite cancellation can terminate
+   the positive Catalan tail without losing the collision.
+5. **Cusp nonlinear projections.**  Search low invariant degree for
    `A(L,T,U,S),B(L,T,U,S)` using exact response linearization in `B`, then
    reject by Jacobian factors, coordinate-order index, or periodic image
    prime.  The current finite box already rejects natural and
    constant-linear projections.
-5. **Coordinate-graph descent.**  For an ambient Keller collision, solve the
-   divisibility `rho_s | rho_t(F)` at increasing coordinate degree, with
-   positive controls from triangular automorphisms and hostile smooth
-   noncoordinate hypersurfaces.
-6. **Finite-dephasing diagnostics.**  Use the first nonzero loop correction,
+6. **Coordinate-graph descent.**  Continue beyond the exact degree-three
+   graph exclusion; solve the scheme-theoretic identity at increasing degree
+   and then verify coordinate status, with positive triangular controls and
+   hostile smooth noncoordinate hypersurfaces.
+7. **Finite-dephasing diagnostics.**  Use the first nonzero loop correction,
    not the resistor limit, as a numerical detector for the coefficient
    holonomies most likely to control cancellation.
 
@@ -941,6 +1029,8 @@ a complete classification of all planar counterexamples.
   only `b<a<2b`; it is not an infinite tower.
 - The immersive cusp packet and graph-descent criterion are construction
   programs, not counterexamples.
+- The Catalan thickening is a formal/local holomorphic map, not a polynomial
+  endomorphism; its theorem closes only the separated ansatz.
 - `JC(2)` remains open.
 
 The most productive conceptual compression is:
