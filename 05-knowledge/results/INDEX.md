@@ -1,5 +1,46 @@
 # Script Results Index
 
+- `jc_fixed_threedimensional_graph_section_no_go_thm3553.py` -> matching `.out`
+  [THM-3553 PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVATION-AUDITED].
+  For the fixed THM-1300 map, no polynomial graph `z=h(x,y)` makes the
+  restricted pair `(F1,F2)` planar Keller: constants retain the coefficient
+  `-89`, while for every positive degree `d` the top tangential minor is
+  `-3S partial_x(S)`, `S=x^3y^2h_d`, and is nonzero.  All affine collision
+  families and the six quadratic/cubic pair cells are exact controls.  Other
+  source/target charts and nongraph coordinate hypersurfaces remain open.
+  Normal/`-O` replay matches.  Script/output/semantic LF SHA-256:
+  `e958c30bdfe681a62149b625ba310ba77354918384c1667d1f45cc81e54296f3` /
+  `f37a82c1cb18a5532d1b39f4061a8919bbc26c25753c570ef9fb4a15d72785af` /
+  `8a21ebd99f5ba06d83feb6de7561f36bde3a4053b262f1a7abaaab5206c12976`.
+
+- `jc_two_channel_kummer_obstruction_thm3552.py` -> matching `.out`
+  [THM-3552 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For coprime
+  `2<=p<q`, `T=x^p y^q`, squarefree nonconstant `phi` with `phi(0)!=0`, and
+  `Psi'=phi H!=0`, the submersion `P=x phi(T)+Psi(T)` has no rational mate.
+  On the normalized generic Kummer fibre a mate would make
+  `y dT/(q phi T)` exact, but its complete valuation ledger is nonnegative,
+  so it is a nonzero holomorphic differential.  The explicit `p=2,q=5`
+  example has Newton area `20` and genus `10`.  This is a first-coordinate
+  obstruction, not JC(2).  Normal/`-O` replay matches.
+  Script/output/semantic LF SHA-256:
+  `cef53b6f0d12c0a9a4c9a74547a33f2db68ec82f84f602d75903147bd12ccbe2` /
+  `ed088e1d47fb46328d2b34429a293db5d5b0059ce351f2ce3213f5e82043ac22` /
+  `12cf6002c32d9569d68ea0457ea0b28677a6141854b2470adf1171f4c3c1e4e0`.
+
+- `jc_one_ray_mate_no_go_thm3551.py` -> matching `.out`
+  [THM-3551 PROVED + VERIFIED-EXACT + INDEPENDENTLY SCOPE-AUDITED].  Three
+  all-degree one-invariant families have no polynomial mate unless their
+  nonlinear datum is constant: `x phi(x^p y^q)`, `x+h(xy)`, and
+  `x+h(x^p y^q)` for primitive `q>=2`.  Unique weight/residue sectors give
+  terminal leading coefficients; the diagonal family has the stronger
+  rational residue obstruction.  This includes gradient-unimodular,
+  positive-area and arbitrarily high-genus hostiles, but is not a general
+  Newton-polygon theorem.  Normal/`-O` replay matches.
+  Script/output/semantic LF SHA-256:
+  `1e0fd05c85e3eb21bccf6dd85ea029277c5df255a059f420b1425f96b3b519f5` /
+  `e14c9270a87f6438891e16b85f789882f93ce62803b1d448895ed3c725d30e28` /
+  `cf050ca64d5054a65a01da346489de214f695d67d0f6b98b9470d61567a39db5`.
+
 - `berggren_positive_cube_slope_atlas_101_kps_s183.py` -> matching `.out`
   [THM-3547 PROVED + FINITE-EXACT + VERIFIED-EXACT; INDEPENDENTLY AUDITED
   WITH WORDING REPAIRS].  The 528 primitive parity-correct slopes through denominator 101

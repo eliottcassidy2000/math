@@ -1,0 +1,16 @@
+== THM-3553 fixed-map graph-section obstruction ==
+AMBIENT det=-2 collision=3 PDE=PASS pde_sha=67c0e818d3be7ab5452604f370d9f16e5cbf6a3dc792a0c9ec8a5a96000ff2fb
+AFFINE ('p0', 'pp') free=1 coeff_y3=-89 PASS
+AFFINE ('p0', 'pm') free=1 coeff_y3=-89 PASS
+AFFINE ('pp', 'pm') free=1 coeff_y3=-89 PASS
+CONSTANT ('pp', 'pm') h=13/2 degrees=(6,5) coeff_y3=-89 FLOOR_FAIL PDE_FAIL
+SEARCH ('p0', 'pp') degree=2 free=4 pencil_floor=7 minor_top_degree=13 minor_top_terms=5 survivors=0 witness_sha=42bd3b2edd98753619fdf25f666757f705a65b5b8554d2b1d5f90d86aab9b4b6
+SEARCH ('p0', 'pm') degree=2 free=4 pencil_floor=7 minor_top_degree=13 minor_top_terms=5 survivors=0 witness_sha=b95967d07deb8e6fc1da2095b6ab6e78b63c92bcddabe44bd5291d277f0643a0
+SEARCH ('pp', 'pm') degree=2 free=4 pencil_floor=7 minor_top_degree=13 minor_top_terms=5 survivors=0 witness_sha=a67fae4d6874f2f36ec87444cc2f2d44595bf2975ffb4c257e9cf9a0509de659
+SEARCH ('p0', 'pp') degree=3 free=8 pencil_floor=8 minor_top_degree=15 minor_top_terms=7 survivors=0 witness_sha=dfb45cb4a9610ef101d3d619cec65585df4e7895ebb824c400f4e0a19e92ba5a
+SEARCH ('p0', 'pm') degree=3 free=8 pencil_floor=8 minor_top_degree=15 minor_top_terms=7 survivors=0 witness_sha=05bc7cea5d2f9e6d5b6b2155a60d58f45068466117d1347efb9dc9b5a67f9dc5
+SEARCH ('pp', 'pm') degree=3 free=8 pencil_floor=8 minor_top_degree=15 minor_top_terms=7 survivors=0 witness_sha=e499ce4962c4451eb98c4d27da2645fb13aea6b0904a8fcd897642a048e74e1c
+GENERAL exact positive-degree obstruction: top(T_h)=-3*S*d_x(S), S=x^3*y^2*h_d != 0
+SEMANTIC_SHA256=8a21ebd99f5ba06d83feb6de7561f36bde3a4053b262f1a7abaaab5206c12976
+SCOPE fixed z=h(x,y), target graph over (F1,F2); no other-chart/hypersurface claim
+PASS

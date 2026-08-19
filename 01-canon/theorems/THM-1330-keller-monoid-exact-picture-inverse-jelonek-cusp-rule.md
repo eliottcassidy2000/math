@@ -87,7 +87,9 @@ KNOWN EXACTLY: the boundary (units = deg 1); for `n>=3`, the degree-value spectr
 `{1,3,4,5,…}` (THM-3438); the degree stratification (no 2; ideal = deg ≥ 3);
 finite factorization; universal étaleness/non-properness/ramification-at-infinity; the
 covering constraint; the cusp selection rule; near-surjectivity (the image misses at
-most codimension 2 — van den Essen circle; F itself is fully surjective, THM-1315); at
+most codimension 2 — van den Essen circle; the fixed F has
+`F(A^3)=A^3 minus E` and fibre spectrum `3/1/0`, never `2`, by the
+MISTAKE-282 correction to THM-1315); at
 (n, d) = (3, 3): rigidity of F (THM-1305: deformation tangent = orbit tangent) and uniqueness
 in every tested design box (THM-1310, boxeph-S142).
 
