@@ -1,0 +1,15 @@
+CATALAN THICKENING -- UNIVERSAL CUBIC ROOT-COVER AUDIT
+polynomialized map (P,Q) = (-2*r/3 + v**2 + 2/3, -r*v + v**3)
+det d(P,Q)/d(v,r) = -2*r/3
+dr/dw = -3*kappa/(2*r); det d(P,Q)/d(v,w) = kappa
+source affine change (v,r)->(t,p): p=2*r - 3*v**2, Jacobian=2
+target affine change (P,Q)->(p,q): Jacobian=-6
+universal normal form: (t,p)->(p,-pp*tt - tt**3)
+universal Jacobian = pp + 3*tt**2; pulled back = 2*r
+cubic discriminant = -4*pp**3 - 27*qq**2
+discriminant pullback = -4*r**2*(8*r - 9*v**2)
+ramification line r=0 maps as (P,Q)=((3*v**2 + 2)/3,v**3)
+triple fiber over (1,0): [(0, -1/2), (1, 1), (-1, 1)]; Jacobians=[1/3, -2/3, -2/3]
+if corrections fix R=0, corrected Jacobian there = -6*T*(T*a0 + b0)
+VERDICT: the Catalan square root cancels the universal cubic cover's ramification factor.
+SCOPE: the polynomialized map is ramified; it is a cubic-cover template, not JC(2).

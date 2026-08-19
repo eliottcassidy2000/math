@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `catalan_universal_cubic_root_cover_kps_s188.py` -> matching `.out`
+  [THM-3555 PROVED + VERIFIED-EXACT].  Adjoining
+  `r=sqrt(1-3*kappa*w)` polynomializes THM-3545 and explicit affine changes
+  identify the result with `(t,p)->(p,-t^3-pt)`, the universal depressed-
+  cubic marked-root cover.  Its Jacobian is the marked-root derivative,
+  while `dr/dw` supplies the reciprocal factor that made the Catalan formal
+  determinant constant.  The script checks the cubic discriminant, the
+  three simple points over the Catalan collision, and the first-jet gate:
+  every polynomial correction fixing the ramification line still has zero
+  Jacobian at its cusp point.  This sharpens a degree-three nonproperness
+  search; it is not `JC(2)`.  Normal/`-O` replay matches.  Script/output LF
+  SHA-256:
+  `6a82ec49bf88a6ccf73f4de0163e078d65d1bc2f0f6976007b57e619f8b86dbe` /
+  `4b72a07e5914c114defedea2b1dfc6571005bb9dd27ec0340a5a71f3331533d8`.
+
 - `jacobian_punctured_kummer_collision_surface_kps_s188.py` -> matching
   `.out` [THM-3554 PROVED + VERIFIED-EXACT].  The curved collision component
   `2-3xy-x^2z=0` of THM-1300 is `G_m x A^1`; the restricted map becomes
