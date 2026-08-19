@@ -12,6 +12,24 @@
   soluble.  Normal/`-O` replay matches.  Script/output LF SHA-256:
   `bdb8cd4fbd14235ee144d80c4766aed5117097321cae8ec87b1aad1ffff1212c` /
   `fb0b50e2384b8834b381c3ded37358d636c7ab475b34d1c5091ff7f3f6162f49`.
+- `jc2_dephasing_square_rows_synthesis_codex_20260818.py` -> matching `.out`
+  [PROVED DERIVED IDENTITIES + FINITE-EXACT COUNTEREXAMPLE PROBES; JC(2)
+  OPEN].  Exact replay checks the Gaussian--Hadamard bijection between the
+  triangular two-square display and odd equal-sum rows; the `Q_t` filler and
+  its `4^a(8b+7)` companion; the strong-dephasing conductance generator and
+  triangle-flux correction; a same-conductance/different-rank Jacobian
+  response hostile; three low reflection-equivariant transverse no-go boxes;
+  the `(6,4),H=xy` homogeneous-jet contradiction; an infinite norm-balanced
+  parallelogram family with mandatory cross leaks; six obstructed natural
+  projections and one everywhere-immersive four-coordinate cusp packet; and
+  the root-multiplicity valuation formula behind the first-Euclidean-chamber
+  divisor `D_k(H)`.  Normal and optimized executions byte-match the stored
+  transcript after newline normalization.  No planar counterexample, global
+  degree theorem, resistor reduction of JC, or infinite Euclidean tower is
+  claimed.  Script/output/reflection SHA-256:
+  `b3b44e19007f4fed665402ddf2bc08a37333ba1a81b2a125e1dd2256519f3b4a` /
+  `1c0cee0ae34e5b1e8edf0a5d43e661cb24584a83a342144a4363aed0cc81b243` /
+  `975b7e6987a72954f2102d1e75fa549e2a49e9e786ebbe3012424741e49b57ba`.
 
 - `jacobian_torus_quotient_ramification_square_kps_s183.py` -> matching
   `.out` [THM-3543 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
