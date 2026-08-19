@@ -1,0 +1,33 @@
+# Exact output for THM-3549
+# Commands: python3 and python3 -O 04-computation/torus_quotient_correction_no_go_thm3549.py
+# The two transcripts are byte-identical.
+
+QUOTIENT
+R=-w*(3*v**2*w + 6*v*w - 4*v + 3*w - 6)
+S=-w**2*(v + 1)*(v**2*w + 2*v*w - v + w - 2)
+Jac_vw(R,S)=-2*w**2
+collision_points={v: 0, w: 2},{v: -3/2, w: 0}; image=(0,0)
+essential_fibre_cubic=rho**3 - rho**2 - 18*rho*sigma - 3*rho*w**2 + 27*sigma**2 + 16*sigma - 2*w**3 + 4*w**2
+control_(rho,sigma)=(1,1)_groebner=(650*v - 34*w**2 - 133*w + 675, (2*w - 5)*(w**2 + 2*w + 5))
+generic_degree=3; control_discriminant=-67600
+zero_fibre_set=V(w) union {(v,w)=(0,2)}
+one_sided_correction_no_go=grad(R)(-3/2,0)=0; grad(S)|_(w=0)=0
+LOW_TOTAL_DEGREE_CORRECTIONS
+D=1;collision=False;monomials_per_correction=2;equations=12;groebner_rows=1;verdict=EMPTY
+D=1;collision=True;monomials_per_correction=2;equations=14;groebner_rows=1;verdict=EMPTY
+D=2;collision=False;monomials_per_correction=5;equations=18;groebner_rows=1;verdict=EMPTY
+D=2;collision=True;monomials_per_correction=5;equations=20;groebner_rows=1;verdict=EMPTY
+D=3;collision=False;monomials_per_correction=9;equations=28;groebner_rows=25;verdict=kappa_forced_0
+D=3;collision=True;monomials_per_correction=9;equations=30;groebner_rows=19;verdict=kappa_forced_0
+AFFINE_IN_w_CORRECTIONS
+coeff_w3=-3*u**2*(u*Derivative(a(u), u) - a(u))
+coeff_w3=0 => a(u)=c*u for polynomial a in characteristic zero
+coeff_w2_after_a=cu=c*u - 3*u**3*Derivative(f(u), u) + 6*u**2*Derivative(b(u), u) - 6*u*b(u) - 2
+coeff_w2_at_u=0=-2 => NO constant Jacobian (any degrees in u; collision not used)
+equal_w_degree_4_top_Jacobian_coefficient=-4*(A4(u)*Derivative(B4(u), u) - B4(u)*Derivative(A4(u), u))
+canonical_fibre_gate_consequence: collision-preserving Keller correction requires
+sorted final w-degrees >= (4,5); hence both outputs need new w^>=4 terms and one needs w^>=5
+w_degree_(4,5)_top_Jacobian_coefficient=-4*a45(u)*Derivative(b45(u), u) + 5*b45(u)*Derivative(a45(u), u)
+coefficient=0 => a^5/b^4 is constant => a=c*h^4,b=d*h^5
+PASS
+

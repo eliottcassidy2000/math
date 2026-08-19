@@ -105,10 +105,11 @@ so
 deg_m R<=d-1<=3.                                         (8)
 ```
 
-This contradicts `(6)`.  Multiple roots only lower the fibre degree further;
-a root at infinity in the original chart is still an ordinary projective
-vector and is made the `m`-axis by `(7)`.  No translation or unproved
-genericity is being used.
+This contradicts `(6)`.  Multiplicity can only lower the contribution of
+`R_d`; lower homogeneous layers may restore fibre degree `d-1`, but the
+universal bound `(8)` is all that is used.  A root at infinity in the
+original chart is still an ordinary projective vector and is made the
+`m`-axis by `(7)`.  No translation or unproved genericity is being used.
 
 ## 4. The quintic is pinched by two different weights
 

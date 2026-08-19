@@ -40,6 +40,48 @@
   `1e0fd05c85e3eb21bccf6dd85ea029277c5df255a059f420b1425f96b3b519f5` /
   `e14c9270a87f6438891e16b85f789882f93ce62803b1d448895ed3c725d30e28` /
   `cf050ca64d5054a65a01da346489de214f695d67d0f6b98b9470d61567a39db5`.
+- `catalan_universal_cubic_root_cover_kps_s188.py` -> matching `.out`
+  [THM-3555 PROVED + VERIFIED-EXACT].  Adjoining
+  `r=sqrt(1-3*kappa*w)` polynomializes THM-3545 and explicit affine changes
+  identify the result with `(t,p)->(p,-t^3-pt)`, the universal depressed-
+  cubic marked-root cover.  Its Jacobian is the marked-root derivative,
+  while `dr/dw` supplies the reciprocal factor that made the Catalan formal
+  determinant constant.  The script checks the cubic discriminant, the
+  three simple points over the Catalan collision, and the first-jet gate:
+  every polynomial correction fixing the ramification line still has zero
+  Jacobian at its cusp point.  This sharpens a degree-three nonproperness
+  search; it is not `JC(2)`.  Normal/`-O` replay matches.  Script/output LF
+  SHA-256:
+  `cd9f593fa8efe94b839e2175f63b7b19724d36815496042904daffd7a38e58ef` /
+  `4b72a07e5914c114defedea2b1dfc6571005bb9dd27ec0340a5a71f3331533d8`.
+
+- `jacobian_punctured_kummer_collision_surface_kps_s188.py` -> matching
+  `.out` [THM-3554 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
+  WITH TYPING/TOOLING REPAIRS].  The curved collision component
+  `2-3xy-x^2z=0` of THM-1300 is `G_m x A^1`; the restricted map becomes
+  `(s,b)->(b,4s^2)` after explicit Laurent source and polynomial target
+  automorphisms.  It is a degree-two finite etale Kummer cover of the target
+  plane minus `beta^2-16alpha=0`, and its deck orbit is the known pair of
+  colliding points.  The affine closure ramifies at `s=0`; a divisorial
+  valuation argument proves that no everywhere-etale `A^2` filling can
+  preserve this exact quadratic function-field extension.  This is a
+  punctured planar near-counterexample, not `JC(2)`.  Normal/`-O` replay
+  matches.  Script/output LF SHA-256:
+  `a4301507f47fd18d45097d8b8bf079652de5640b1c36be439fd190ea8d1683df` /
+  `789ed0276d8e2ad5e1e8d358ef56e2a6e7815bae52c98cc0045664150a81b5e1`.
+- `torus_quotient_correction_no_go_thm3549.py` -> matching `.out`
+  [THM-3549 PROVED + VERIFIED-EXACT / HOSTILE-AUDITED].  In coordinates
+  `w=2-3v-t`, the THM-3543 collision quotient has Jacobian `-2w^2`, generic
+  degree three, and zero fibre `V(w) union {(0,2)}`.  One-sided corrections
+  fail in every degree; arbitrary corrections through total degree two have
+  unit coefficient ideal, while degree three forces the constant Jacobian
+  to zero, with or without the inherited collision.  Corrections affine in
+  `w` fail in every `v`-degree.  A collision-preserving Keller correction
+  must have sorted final `w`-degrees at least `(4,5)`, whose leading
+  coefficients already have the common-power form `(c h^4,d h^5)`.
+  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `4b60d1630431ea85ece7f66719ebb9e138674e0eb8df6d0e5524d70de6d10b9b` /
+  `bde9c5edd7934ed528e02614ff26175e2e70661ada1967158a5f3229c48d3921`.
 
 - `berggren_positive_cube_slope_atlas_101_kps_s183.py` -> matching `.out`
   [THM-3547 PROVED + FINITE-EXACT + VERIFIED-EXACT; INDEPENDENTLY AUDITED
@@ -53,6 +95,24 @@
   soluble.  Normal/`-O` replay matches.  Script/output LF SHA-256:
   `bdb8cd4fbd14235ee144d80c4766aed5117097321cae8ec87b1aad1ffff1212c` /
   `fb0b50e2384b8834b381c3ded37358d636c7ab475b34d1c5091ff7f3f6162f49`.
+- `jc2_dephasing_square_rows_synthesis_codex_20260818.py` -> matching `.out`
+  [PROVED DERIVED IDENTITIES + FINITE-EXACT COUNTEREXAMPLE PROBES; JC(2)
+  OPEN].  Exact replay checks the Gaussian--Hadamard bijection between the
+  triangular two-square display and odd equal-sum rows; the `Q_t` filler and
+  its `4^a(8b+7)` companion; the strong-dephasing conductance generator and
+  triangle-flux correction; a same-conductance/different-rank Jacobian
+  response hostile; three low reflection-equivariant transverse no-go boxes;
+  the `(6,4),H=xy` homogeneous-jet contradiction; an infinite norm-balanced
+  parallelogram family with mandatory cross leaks; six obstructed natural
+  projections and one everywhere-immersive four-coordinate cusp packet; and
+  the root-multiplicity valuation formula behind the first-Euclidean-chamber
+  divisor `D_k(H)`.  Normal and optimized executions byte-match the stored
+  transcript after newline normalization.  No planar counterexample, global
+  degree theorem, resistor reduction of JC, or infinite Euclidean tower is
+  claimed.  Script/output/reflection SHA-256:
+  `b3b44e19007f4fed665402ddf2bc08a37333ba1a81b2a125e1dd2256519f3b4a` /
+  `1c0cee0ae34e5b1e8edf0a5d43e661cb24584a83a342144a4363aed0cc81b243` /
+  `975b7e6987a72954f2102d1e75fa549e2a49e9e786ebbe3012424741e49b57ba`.
 
 - `jacobian_torus_quotient_ramification_square_kps_s183.py` -> matching
   `.out` [THM-3543 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
