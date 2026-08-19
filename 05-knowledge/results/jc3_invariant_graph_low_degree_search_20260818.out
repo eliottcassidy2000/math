@@ -1,0 +1,45 @@
+fixed map control: det JF = -2
+generic graph-coordinate determinant formula verified exactly
+near-miss control: F3=x*C, C=2-3xy-x^2z
+  x=0 -> z=0 gives (y,z)->(z+4y^2,y), planar Jacobian -1
+  C=0 contains the colliding orbit pair and maps to z=0
+  on C=0, x*(3y+xz)=2, so x is a nonconstant unit: C=0 is not A2
+  grad(C) vanishes on x=y=0, so C is not a coordinate polynomial
+universe: h in Qbar[x,y], total degree <= D; graph invariance E_h == 0
+coefficient ideals and Groebner calculations are over QQ
+
+D=0: unknowns=1, nonzero coefficient equations=2, max_xy_degree=3
+  equations by x,y total degree: 3:2
+  full coefficient ideal
+  exact characteristic-zero Groebner basis: [1]
+  greedy exact unit core size=1
+    g1 = 1
+  graph consequence: invariance forces q0 and planar Jacobian to be nonzero constants
+
+D=1: unknowns=3, nonzero coefficient equations=15, max_xy_degree=7
+  equations by x,y total degree: 0:1, 1:2, 2:1, 3:3, 4:3, 5:2, 6:2, 7:1
+  full coefficient ideal
+  exact characteristic-zero Groebner basis: [1]
+  greedy exact unit core size=3
+    g1 = c_0_0*c_1_0 + c_0_0
+    g2 = 3*c_0_0*c_0_1 + c_1_0**2 - 2
+    g3 = 2*c_0_0*c_0_1 + c_1_0**2 + 1
+  graph consequence: invariance forces q0 and planar Jacobian to be nonzero constants
+
+D=2: unknowns=6, nonzero coefficient equations=75, max_xy_degree=16
+  equations by x,y total degree: 0:1, 1:2, 2:3, 3:4, 4:5, 5:5, 6:5, 7:5, 8:5, 9:5, 10:5, 11:5, 12:5, 13:5, 14:6, 15:5, 16:4
+  full coefficient ideal
+  exact characteristic-zero Groebner basis: [1]
+  coefficient-system sha256=06742064b2b551324e617d78547cfc7fbbb58478acaa4cba63b926708dc21b77
+  graph consequence: invariance forces q0 and planar Jacobian to be nonzero constants
+
+D=3: unknowns=10, nonzero coefficient equations=234, max_xy_degree=27
+  equations by x,y total degree: 0:1, 1:2, 2:3, 3:4, 4:5, 5:6, 6:7, 7:8, 8:9, 9:9, 10:10, 11:10, 12:10, 13:10, 14:10, 15:10, 16:10, 17:10, 18:10, 19:10, 20:10, 21:10, 22:10, 23:10, 24:11, 25:10, 26:10, 27:9
+  normal-multiplier necessary ideal (153 equations, including q0 inverse)
+  exact characteristic-zero Groebner basis: [1]
+  coefficient-system sha256=aab4da7e81415a0a0d1f5d05ed57573a584c298b7b361b78d97fe435067e5eea
+  graph consequence: invariance forces q0 and planar Jacobian to be nonzero constants
+
+result: no invariant polynomial graph z=h(x,y) exists in degrees D=0,1,2,3
+scope: finite degree <=3 only; nongraph and semiconjugate surfaces remain open
+semantic_core_sha256=2a6c2b386f68c55c309bcf140af366ed07ec260a6c67c98371cd36517b470026
