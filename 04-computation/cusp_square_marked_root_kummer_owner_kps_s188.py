@@ -28,7 +28,7 @@ def jac(first: sp.Expr, second: sp.Expr, v: sp.Symbol,
 
 
 def main() -> None:
-    v, y, X = sp.symbols("v y X")
+    v, y, X, Y = sp.symbols("v y X Y")
     U = sp.Function("U")(v, y)
 
     T = y**2 - 6 * v * U
@@ -58,6 +58,22 @@ def main() -> None:
             "inverse-cubic discriminant square")
     require(sp.expand(cubic_disc - quadratic_disc * resultant**2) == 0,
             "product discriminant factorization")
+
+    # Dual monic cubic: y itself is a marked root in the visible packet
+    # coordinates (T,S), with the same quadratic square class -L.
+    dual_cubic = sp.expand(Y**3 - 3 * T * Y + 2 * S)
+    dual_quadratic = Y**2 + y * Y + 2 * (9 * v * U - y**2)
+    require(sp.expand(dual_cubic - (Y - y) * dual_quadratic) == 0,
+            "dual marked-root factorization")
+    dual_disc = sp.factor(sp.discriminant(dual_cubic, Y))
+    require(sp.expand(dual_disc + (54 * U)**2 * L) == 0,
+            "dual cubic discriminant")
+    dual_quadratic_disc = sp.factor(
+        y**2 - 8 * (9 * v * U - y**2)
+    )
+    require(sp.expand(dual_quadratic_disc
+                      - 9 * (y**2 - 8 * v * U)) == 0,
+            "dual quadratic Kummer discriminant")
 
     # All six natural two-coordinate projections fail the Keller test.
     jac_TS = jac(T, S, v, y)
@@ -120,6 +136,9 @@ def main() -> None:
     print(f"quadratic discriminant = {quadratic_disc}")
     print(f"linear/quadratic resultant = {resultant}")
     print(f"cubic discriminant = {cubic_disc}")
+    print(f"dual cubic Y^3-3*T*Y+2*S factors as (Y-y)*({sp.factor(dual_quadratic)})")
+    print(f"dual cubic discriminant = {dual_disc}")
+    print(f"dual quadratic discriminant = {dual_quadratic_disc}")
     print(f"Jac(T,S) = {jac_TS}")
     print("Jac(L,T), Jac(L,U), Jac(L,S) are divisible by v")
     print(f"Jac(T,U) = {jac_TU}")

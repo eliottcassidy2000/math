@@ -5,6 +5,9 @@ E(X)=L*X^3+T*X+2*U factors as (v*X+1)*(8*X**2*v**2*U(v, y) - X**2*v*y**2 - 8*X*v
 quadratic discriminant = y**2*(-8*v*U(v, y) + y**2)
 linear/quadratic resultant = -2*v*(-9*v*U(v, y) + y**2)
 cubic discriminant = 4*v**2*y**2*(-9*v*U(v, y) + y**2)**2*(-8*v*U(v, y) + y**2)
+dual cubic Y^3-3*T*Y+2*S factors as (Y-y)*(Y**2 + Y*y + 18*v*U(v, y) - 2*y**2)
+dual cubic discriminant = 2916*v**2*(-8*v*U(v, y) + y**2)*U(v, y)**2
+dual quadratic discriminant = 9*(-8*v*U(v, y) + y**2)
 Jac(T,S) = 54*v*(v*Derivative(U(v, y), v) + U(v, y))*U(v, y)
 Jac(L,T), Jac(L,U), Jac(L,S) are divisible by v
 Jac(T,U) = -2*(y*Derivative(U(v, y), v) + 3*U(v, y)*Derivative(U(v, y), y))

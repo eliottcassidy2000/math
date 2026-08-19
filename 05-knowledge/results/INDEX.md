@@ -17,15 +17,17 @@
   [THM-3556 PROVED + VERIFIED-EXACT + FINITE-EXACT POSITIVE PACKET].  The
   cusp-square coefficients factor `L*X^3+T*X+2U` into the marked root
   `X=-1/v` and a quadratic Kummer pair; projectively the marked root escapes
-  at `v=0`, while the exact discriminant is `-4*L*S^2`.  All six natural
+  at `v=0`, while the exact discriminant is `-4*L*S^2`.  Dually, `y` is a
+  marked root of `Y^3-3*T*Y+2*S`, with discriminant `-(54*U)^2*L` and the
+  same Kummer square class.  All six natural
   two-coordinate projections have proved Jacobian obstructions.  For one
   explicit `U`, the six packet minors generate the unit ideal, so the
   `A^2->A^4` packet is everywhere immersive, but no constant-linear
   combination of the minors is one.  The remaining nonlinear projection is
   a descending/integrable/decomposable minor-syzygy problem, not a planar
   counterexample.  Normal/`-O` replay matches.  Script/output LF SHA-256:
-  `e5bf45488fb2e8008bad4fe4693f04d8d7dc25bf5b265f9778e2385111dcc971` /
-  `670ac8f38a05eef09da1d836a704cfffdef5c10fa61f6334d7a08932213cc450`.
+  `a3dc5f8c58c0fd18a81cdc77e96fe1f9717b76d40777ef0db81633f14257152b` /
+  `e11cc70931087e21cff412cb244262eb64f1c5466eb9f1bc182871c8181072dd`.
 
 - `catalan_universal_cubic_root_cover_kps_s188.py` -> matching `.out`
   [THM-3555 PROVED + VERIFIED-EXACT].  Adjoining

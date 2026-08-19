@@ -19,8 +19,8 @@ related:
   - THM-3555-catalan-thickening-universal-cubic-root-cover
 companion: 04-computation/cusp_square_marked_root_kummer_owner_kps_s188.py
 output: 05-knowledge/results/cusp_square_marked_root_kummer_owner_kps_s188.out
-script_sha256: e5bf45488fb2e8008bad4fe4693f04d8d7dc25bf5b265f9778e2385111dcc971
-output_sha256: 670ac8f38a05eef09da1d836a704cfffdef5c10fa61f6334d7a08932213cc450
+script_sha256: a3dc5f8c58c0fd18a81cdc77e96fe1f9717b76d40777ef0db81633f14257152b
+output_sha256: e11cc70931087e21cff412cb244262eb64f1c5466eb9f1bc182871c8181072dd
 hash_basis: LF-normalized bytes
 ---
 
@@ -110,6 +110,37 @@ finite roots.  This is the same typed split used by the fixed Keller inverse
 cubic in THM-3535, but `(1)` gives a flexible two-source-parameter packet
 rather than asserting that its coefficients already descend to a planar
 Keller target.
+
+### 2.1 The dual visible marked-root cubic
+
+The source coordinate `y` is itself a marked root of a second cubic, now
+written directly in the visible packet coordinates `(T,S)`:
+
+```text
+Y^3-3TY+2S
+ =(Y-y)[Y^2+yY+2(9vU-y^2)].                           (9a)
+```
+
+Its discriminant is
+
+```text
+disc_Y(Y^3-3TY+2S)
+ =108(T^3-S^2)=-(54U)^2L,                             (9b)
+```
+
+and the residual quadratic has discriminant
+
+```text
+9(y^2-8vU)=-9L/v^2               in k[v,v^-1,y].      (9c)
+```
+
+Thus both marked-root presentations have the same Kummer square class
+`-L`.  The first presentation `(3)` makes the escaping root `-1/v`
+explicit; the dual presentation `(9a)` makes the finite source coordinate
+`y` a root of a cubic whose coefficients are already among the packet
+observables.  Any nonlinear projection that hides the marked sheet must
+preserve this common resolvent sidecar, not merely the scalar cusp identity
+`(2)`.
 
 ## 3. Every natural two-coordinate projection is obstructed
 
