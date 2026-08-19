@@ -2,14 +2,15 @@
 id: THM-3546
 title: "Invariant graph Keller descent criterion and collision transfer"
 status: >
-  PROVED / INDEPENDENT AUDIT PENDING.  A constant-Jacobian polynomial map in
-  n+1 variables that carries one polynomial graph to another restricts to a
+  PROVED / INDEPENDENTLY AUDITED WITH FINITE-FIELD SCOPE REPAIR.  A
+  constant-Jacobian polynomial map in n+1 variables that carries one
+  polynomial graph scheme-theoretically to another restricts to a
   constant-Jacobian map in n variables.  In graph coordinates the normal
-  component is r times a polynomial; block-triangular differentiation on
-  r=0 factors the ambient unit Jacobian into the tangential Jacobian and the
-  normal multiplier, forcing both factors to be constants.  Any collision on
-  the source graph therefore descends.  The same holds for arbitrary
-  coordinate hypersurfaces after polynomial automorphisms.
+  component is r times a polynomial; block-triangular differentiation on r=0
+  factors the ambient unit Jacobian into tangential and normal factors,
+  forcing both to be constants.  Any geometric collision on the source graph
+  therefore descends.  The same holds for arbitrary coordinate hypersurfaces
+  after polynomial left-right straightening.
 source: kps-s184
 depends_on: []
 related:
@@ -19,8 +20,8 @@ related:
 
 # THM-3546 -- a collision on a polynomial graph descends one dimension
 
-**PROVED / INDEPENDENT AUDIT PENDING.**  This gives a precise way in which a
-higher-dimensional Keller counterexample really could produce a lower-
+**PROVED / INDEPENDENTLY AUDITED WITH FINITE-FIELD SCOPE REPAIR.**  This gives
+a precise way in which a higher-dimensional Keller counterexample could produce a lower-
 dimensional one.  Unlike categorical invariant quotients, restriction to a
 polynomial graph loses no tangent direction.  The ambient Jacobian unit then
 forces both the tangent and normal factors to be units.
@@ -34,11 +35,16 @@ F:A^(n+1)->A^(n+1),              det JF=c in k*.        (1)
 ```
 
 Write source coordinates `(x,z)`, with `x=(x_1,...,x_n)`, and target
-coordinates `(y,w)`.  Let `h in k[x]` and `g in k[y]`.  Suppose
+coordinates `(y,w)`.  Let `F=(F_y,F_w)`, `h in k[x]`, and `g in k[y]`.
+Suppose the graph containment is scheme-theoretic, namely the identity
 
 ```text
-F(Graph(h)) subset Graph(g).                            (2)
+F_w(x,h(x))=g(F_y(x,h(x)))              in k[x].       (2)
 ```
+
+Equivalently, `F` carries the graph subscheme of `h` into that of `g`.
+Containment on all geometric points also suffices; over an infinite field,
+containment on all `k`-points implies `(2)`.
 
 Define the induced map on the graph by
 
@@ -52,8 +58,9 @@ Then
                          det Jf in k*.                  (4)
 ```
 
-In particular, if two distinct points of `Graph(h)` have the same image
-under `F`, then `f` is a noninjective Keller map in `n` variables.
+In particular, if two distinct points of `Graph(h)` over one common field
+extension `K/k` have the same image under `F`, then `f_K` is a noninjective
+Keller map in `n` variables.
 
 ### Proof
 
@@ -108,9 +115,12 @@ automorphism of its ambient affine space.  Suppose
 rho_t o F = a rho_s                                  (10)
 ```
 
-for a polynomial `a`, so `F` carries `V(rho_s)` into `V(rho_t)`.  Conjugating
-by the two coordinate automorphisms reduces `(10)` to `(7)`.  Therefore the
-restriction
+for a polynomial `a` in the source ring, so `F` carries `V(rho_s)` into
+`V(rho_t)`.  Choose source and target automorphisms
+`alpha_s=(u,rho_s)` and `alpha_t=(v,rho_t)`.  The left-right straightening
+`alpha_t o F o alpha_s^(-1)` reduces `(10)` to `(7)`; its determinant is the
+ambient constant multiplied by the constant ratio of the two automorphism
+Jacobians.  Therefore the restriction
 
 ```text
 F:V(rho_s) ~= A^n  ->  V(rho_t) ~= A^n               (11)
@@ -119,7 +129,8 @@ F:V(rho_s) ~= A^n  ->  V(rho_t) ~= A^n               (11)
 is Keller.  Any collision in `V(rho_s)` descends.
 
 For a proposed descent of the fixed three-variable counterexample, this turns
-the vague request for a special surface into a finite algebraic program:
+the vague request for a special surface into a four-gate test for each
+proposed pair:
 
 1. choose a source coordinate polynomial `rho_s` vanishing at two known
    colliding preimages;
@@ -167,3 +178,16 @@ hypersurface is a polynomial coordinate, or that a rational/local graph can
 be polynomially straightened.  Failure through a bounded degree does not
 exclude higher-degree graphs, nongraph coordinate hypersurfaces, or other
 three-dimensional Keller maps.
+
+The finite-field qualifier is essential if containment is stated set-
+theoretically.  Over `F_q`, the Keller map
+
+```text
+(x,z) -> (z,x^q-x)
+```
+
+sends every `F_q`-point of the graph `z=0` to that graph, but the induced map
+on rational points is constant; the polynomial identity `(2)` fails.  The
+independent audit supplied this hostile and verified the repaired proof, the
+coordinate-hypersurface form, and the absence of any characteristic
+restriction under the scheme-theoretic hypothesis.

@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-423 (2026-08-18, provisional THM-3546 scope) -- rational-point graph containment was silently treated as a polynomial identity
+
+- **What failed:** the first THM-3546 wording said that `F(Graph(h))` lies in
+  `Graph(g)` over an arbitrary field, then inferred that the straightened
+  normal component is divisible by the graph variable.  This is sound for
+  graph-subscheme containment, but set-theoretic containment on `k`-rational
+  points is weaker over finite fields.
+- **Minimal witness / first failed implication:** over `F_q`,
+  `F(x,z)=(z,x^q-x)` has determinant one and sends every rational point of
+  `z=0` to `(0,0)`, yet its straightened normal polynomial is `x^q-x`, not a
+  multiple of `z`; the induced rational-point map is constant.
+- **Repair / strongest survivor:** require
+  `F_w(x,h(x))=g(F_y(x,h(x)))` in `k[x]`, equivalently scheme-theoretic graph
+  containment or containment on all geometric points.  Then the normal
+  component is `rA`, the determinant factors as `det Jf * A(x,0)`, and both
+  factors are units.  Over an infinite field, containment on all rational
+  points already implies the identity.
+- **Reusable rule:** over finite fields, equality on rational points is not a
+  polynomial identity.  State subscheme containment or audit the vanishing
+  ideal before using divisibility.
+
 ## MISTAKE-422 (2026-08-18, THM-3025 notation collision) -- the subleading Jacobian was mistaken for the Keller constant
 
 - **What failed:** THM-3025 relabelled the multiplier in THM-3016's
