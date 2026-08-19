@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jacobian_affine_target_pullback_factor_atlas_kps_s188.py` -> matching
+  `.out` [THM-3559 PROVED + VERIFIED-EXACT].  For every affine target
+  coordinate through the fixed THM-1300 collision value, no coordinate
+  factor of its pullback contains a collision pair.  The exact common-factor
+  atlas has only two Kummer parameters and the pure `F3=xC` row.  Primitive
+  residual surfaces are excluded from `A2` by an affine-modification Euler
+  characteristic and nonconstant-unit dichotomy; Kummer cylinder factors
+  are `G_m x A1` and meet at most one collision point.  Together with
+  THM-3558, both hypersurfaces in any surviving descent must be nonlinear.
+  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `b51e6a258ce7854d71142b93555498de472082c6fa7d37cecbbc5fc67792b148` /
+  `6fdd20ee8944e915f05bc58aad7cfa2c07c7bddb53bdd229cbf2531a36cc2c36`.
+
 - `jacobian_linear_collision_plane_second_jet_no_go_kps_s188.py` -> matching
   `.out` [THM-3558 PROVED + VERIFIED-EXACT].  For every affine source plane
   through a pair in the fixed THM-1300 triple collision, the two image germs

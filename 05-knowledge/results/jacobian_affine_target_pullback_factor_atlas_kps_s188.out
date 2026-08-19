@@ -1,0 +1,11 @@
+THM-3559 affine target-pullback factor atlas
+H=A*(F1+1/4)+B*F2+C*F3=K*z+L
+K=A*u^3+3*B*x*u^2-C*x^3, u=1+x*y
+t*L|_(u=r*x)=3*r*P*t^3-5*P*t^2+(A*r^2+A/4+4*B*r)*t+A*r+2*B
+P=A*r^3+3*B*r^2-C
+normalized common-factor Groebner basis: C+r/8, B+r/2, r^2-1/4
+exception r=1/2: [A:B:C]=[1:-1/4:-1/16], P(R)=(2*R - 1)**2*(4*R + 1)/16
+exception r=-1/2: [A:B:C]=[1:1/4:1/16], P(R)=(2*R + 1)**2*(4*R - 1)/16
+pure F3 pullback: -x*(x^2*z+3*x*y-2)
+Kummer cylinder values at (p0,p+,p-): 1, -1/2-r, -1/2+r
+all active truth gates passed
