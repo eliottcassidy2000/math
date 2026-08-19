@@ -335,8 +335,8 @@ is sharp: equal counts allow two densities or none.
 - **Jacobian/Dixmier:** `JC(2)`/`DC(2)` OPEN. THM-1300 VERIFIED; MISTAKE-205
   is attribution only. THM-1315 image `A^3 minus E`, fibres `3/1/0`.
   Fixed map: 2473--2576/3494/3508/3519. THM-3543--50: quotient/degree/Catalan/
-  graph/conductance/correction gates. THM-3551--55: ray/cyclic/graph no-gos;
-  punctured/cubic boundaries. Mixed charts OPEN.
+  graph/conductance/correction gates. THM-3551--57: ray/cyclic/graph no-gos;
+  punctured/cubic/mixed boundaries. Other charts OPEN.
   THM-3495/98/3504:
   `S_(F^4)=V(LHJ G)`, `[Delta_4]=[2G]`. THM-3506/3513 give `G` packet
   `(271,99)`; 3521--23/27 give packets through `R8`, ending

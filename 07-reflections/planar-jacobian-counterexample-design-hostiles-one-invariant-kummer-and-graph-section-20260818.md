@@ -279,6 +279,21 @@ nilpotent block, or merely hide the same algebraic tail.  The decisive
 observable is the transition operator on successive defects, not the number
 of solvable jets.
 
+THM-3557 has already run this program through the first honest mixed cells.
+For
+
+```text
+P=v^2+sum_(j=1)^N a_j(v)w^j,
+Q=v^3-v+sum_(j=1)^N b_j(v)w^j,                         (3)
+```
+
+widths `N=1,2` fail in every coefficient degree, and width `N=3` fails
+through coefficient degree five.  In the cubic-root coordinate these are
+even deformations in `r`; the first new cell is an even `r^6` correction,
+equivalently width three at coefficient degree six.  Width at least four is
+also open.  The search should start at those exact boundaries rather than
+rerunning shallow mixed jets.
+
 ### Cheapest search
 
 - impose the collision and constant-J equations weight by weight;
