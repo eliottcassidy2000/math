@@ -40,6 +40,33 @@
   `1e0fd05c85e3eb21bccf6dd85ea029277c5df255a059f420b1425f96b3b519f5` /
   `e14c9270a87f6438891e16b85f789882f93ce62803b1d448895ed3c725d30e28` /
   `cf050ca64d5054a65a01da346489de214f695d67d0f6b98b9470d61567a39db5`.
+- `jc2_catalan_mixed_thickening_recurrence_kps_s187.py` -> matching `.out`
+  [THM-3557 PROVED + VERIFIED-EXACT + FINITE-EXACT].  The exact transverse
+  recurrence proves cap-free impossibility for mixed Catalan thickenings of
+  widths one and two.  At width three, exhaustive UFD branches, degree
+  ledgers, and two saturated rational unit ideals prove affine coefficient-
+  space emptiness through coefficient degree five; the exceptional
+  square/cube branch terminates at `-9/4`.  The first open width-three cell is
+  degree six, equivalently the first new even `r^6` cell in THM-3555's cubic-
+  cover coordinates.  Width four is also open.  All 86 truth gates pass and
+  normal/`-O`/stored transcripts agree.  Script/output LF SHA-256:
+  `0444ad61a0bb2cd165243db1a97f0cb0b299eb19263378c97d1dee9ff39a7e1e` /
+  `cd23937963962bc4f43b83fc2f3ab6b477970c76f3151b7247c0025145380832`.
+
+- `cusp_square_marked_root_kummer_owner_kps_s188.py` -> matching `.out`
+  [THM-3556 PROVED + VERIFIED-EXACT + FINITE-EXACT POSITIVE PACKET].  The
+  cusp-square coefficients factor `L*X^3+T*X+2U` into the marked root
+  `X=-1/v` and a quadratic Kummer pair; projectively the marked root escapes
+  at `v=0`, while the exact discriminant is `-4*L*S^2`.  All six natural
+  two-coordinate projections have proved Jacobian obstructions.  For one
+  explicit `U`, the six packet minors generate the unit ideal, so the
+  `A^2->A^4` packet is everywhere immersive, but no constant-linear
+  combination of the minors is one.  The remaining nonlinear projection is
+  a descending/integrable/decomposable minor-syzygy problem, not a planar
+  counterexample.  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `e5bf45488fb2e8008bad4fe4693f04d8d7dc25bf5b265f9778e2385111dcc971` /
+  `670ac8f38a05eef09da1d836a704cfffdef5c10fa61f6334d7a08932213cc450`.
+
 - `catalan_universal_cubic_root_cover_kps_s188.py` -> matching `.out`
   [THM-3555 PROVED + VERIFIED-EXACT].  Adjoining
   `r=sqrt(1-3*kappa*w)` polynomializes THM-3545 and explicit affine changes
