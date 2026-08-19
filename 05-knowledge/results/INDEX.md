@@ -153,13 +153,15 @@
   three first-chamber taxes, and isolates the clean `(84,105)` torus divisor
   `u^21w^2`.  Normal and optimized executions byte-match the stored
   transcript after newline normalization.  The reflection also integrates
-  THM-3555's universal cubic marked-root normal form and fixed-ramification-
-  line surgery gate.  No planar counterexample, global
+  THM-3555's universal cubic marked-root normal form, THM-3556's escaping-
+  root/Kummer factorization and decomposable projection target, and
+  THM-3557's low-width mixed-Catalan no-go with the resulting globally viable
+  coefficient-cap jump.  No planar counterexample, global
   degree theorem, resistor reduction of JC, or infinite Euclidean tower is
   claimed.  Script/output/reflection SHA-256:
   `111ea2c19b4a344e33660fb579cc721960ffa0189bb76e861f9ec4af83304af4` /
   `12e49b69df8824fc26559d9102abca3eaa9966c371c64175df6814e2c98425c9` /
-  `7ecce05df4b952b2686900cdd166cb6ff7b0fbeee83936248fc8e4c7d61d4e21`.
+  `15a8e94b0e6256a5c7e22736a9a93471e06828eb6ad829e121ed896ed65f82de`.
 
 - `jacobian_torus_quotient_ramification_square_kps_s183.py` -> matching
   `.out` [THM-3543 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED

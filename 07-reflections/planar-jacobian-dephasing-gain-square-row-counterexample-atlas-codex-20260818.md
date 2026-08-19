@@ -103,11 +103,22 @@ The strongest exact outcomes are:
    transverse variable.  The first clean surviving boundary is uniquely
    `(84,105)` at the first globally admissible height, where
    `u^21w^2|P_83` and `u^41w^3|Q_104`.
-11. **FINITE-EXACT positive seed; OPEN projection.**  An explicit
-   four-coordinate cusp-square packet `A^2 -> A^4` is everywhere immersive,
+11. **PROVED inverse-cubic owner + FINITE-EXACT positive seed; OPEN
+   projection.**  The cusp-square packet is an exact `1+2` root owner: its
+   inverse cubic factors into the marked root `-1/v`, which escapes at
+   `v=0`, and a quadratic Kummer pair, with discriminant `-4LS^2`.  An
+   explicit four-coordinate packet `A^2 -> A^4` is everywhere immersive,
    although none of its six natural two-coordinate projections, nor any
-   constant-linear projection, is Keller.  Nonlinear polynomial projection
-   is the strongest self-contained counterexample search seed found here.
+   constant-linear projection, is Keller.  A nonlinear descending,
+   integrable, decomposable projection is the strongest self-contained
+   counterexample search seed found here.
+12. **PROVED + VERIFIED-EXACT mixed-Catalan squeeze.**  In the polynomial
+   thickening of `(v^2,v^3-v)`, transverse widths one and two are impossible
+   in every coefficient degree.  Width three is impossible through
+   coefficient degree five; degree six is merely the first internally
+   unclosed recurrence cell.  Combining this with the global height-105
+   gate, a genuinely viable width-three candidate needs coefficient cap at
+   least `102`, since both total degrees are at most `D+3`.
 
 ## 2. Inheritance pass and concept board
 
@@ -148,10 +159,16 @@ The strongest exact outcomes are:
   [THM-3555](../01-canon/theorems/THM-3555-catalan-thickening-universal-cubic-root-cover.md)
   identifies its algebraic polynomialization with the universal cubic
   marked-root cover and rules out every correction fixing its ramification
-  line pointwise, and
+  line pointwise,
+  [THM-3557](../01-canon/theorems/THM-3557-low-width-mixed-catalan-thickening-no-go.md)
+  closes widths one and two and the width-three coefficient box through
+  degree five,
   [THM-3554](../01-canon/theorems/THM-3554-punctured-kummer-collision-surface-normal-form.md)
   gives an exact etale collision whose puncture cannot be filled while
-  retaining its quadratic function field.
+  retaining its quadratic function field, and
+  [THM-3556](../01-canon/theorems/THM-3556-cusp-square-packet-marked-root-kummer-owner.md)
+  identifies the cusp packet's exact marked-root/Kummer factorization and
+  nonlinear decomposable-projection target.
 - Least-used sidecar: the normalization/order-index distinction in the fixed
   higher-dimensional Keller packets.  It is not a planar theorem, but it is
   the correct hostile test for proposed inverse-cover constructions.
@@ -1130,6 +1147,23 @@ collision.  Thus this is not merely “try more terms”: it is a finite
 degree-by-degree construction ladder with a positive first row and the
 separated Catalan solution as its nonterminating hostile control.
 
+The first mixed boxes now close exactly.  For transverse width `N=1`, the
+terminal equation forces the two top coefficients to be proportional and
+the Bezout row becomes a polynomial unit impossibility.  At `N=2`, a
+cap-free Wronskian and top-degree split closes all three top-row cases.  At
+`N=3`, exact branching and saturated Groebner checks prove the affine
+coefficient variety empty for coefficient caps `D=3,4,5`.  New square/cube
+common-power types first appear at `D=6`, so that is the first **internally**
+unclosed recurrence cell.  This is
+[THM-3557](../01-canon/theorems/THM-3557-low-width-mixed-catalan-thickening-no-go.md).
+
+The global degree gates move the actual counterexample frontier much farther.
+If every `a_j,b_j` has degree at most `D`, both components have total degree
+at most `D+N`.  Since the first globally admissible reduced height is `105`,
+any viable width-three instance must have `D+3>=105`, hence `D>=102`.
+Therefore the `D=6` branch is valuable for discovering a renewal mechanism,
+but is already globally excluded as a planar counterexample cell.
+
 ### E. Punctured Kummer collision: the missing divisor is load-bearing
 
 The curved collision surface of the fixed three-variable Keller map is
@@ -1197,8 +1231,32 @@ For every polynomial `U(v,y)`, one has
 S^2=T^3+27LU^2.                                         (7.6)
 ```
 
-This packages a cubic inverse discriminant as one genuine component times a
-square.  Every natural two-coordinate output is obstructed:
+This is an exact inverse-cubic owner, not just a discriminant mnemonic.  Put
+
+```text
+E(X)=LX^3+TX+2U.
+```
+
+Then
+
+```text
+E(X)=(vX+1)
+     [v(8vU-y^2)X^2+(y^2-8vU)X+2U].                   (7.6a)
+```
+
+The marked root is `X=-1/v`, or projectively `[-1:v]`, and reaches infinity
+exactly at `v=0`.  The quadratic factor has square class `-L` after removing
+the square `(y/v)^2`, while the full discriminant is
+
+```text
+disc_X(E)=-4LS^2.                                      (7.6b)
+```
+
+Thus the packet contains one explicit escaping root and one quadratic
+Kummer pair; `L` is the odd discriminant/infinity owner and `S^2` records
+finite-root collisions.  This is the proved structural content of
+[THM-3556](../01-canon/theorems/THM-3556-cusp-square-packet-marked-root-kummer-owner.md).
+Every natural two-coordinate output is nevertheless obstructed:
 
 ```text
 Jac(T,S)=54vU(U+vU_v),
@@ -1234,6 +1292,26 @@ image-prime curve so that a self-cover Euler obstruction does not fire.  This
 does not constitute evidence against JC(2); it is a sharply structured
 search box whose full four-coordinate differential obstruction is already
 removed.
+
+The legal projection coefficients are much more constrained than the unit
+minor ideal suggests.  If `Z=(L,T,U,S)` and `A_i,B_i` denote derivatives in
+the four packet coordinates, then
+
+```text
+Jac(A(Z),B(Z))=sum_(i<j)(A_iB_j-A_jB_i)(Z) M_ij.       (7.10)
+```
+
+The six coefficients must descend through `k[Z]`, be integrable, and be the
+Pluecker coordinates of a decomposable two-form; in particular
+
+```text
+c_12 c_34-c_13 c_24+c_14 c_23=0.                      (7.11)
+```
+
+So the exact remaining problem is a descending, integrable, decomposable
+Bezout certificate for the six minors, followed by a nonproperness and
+nontrivial-fibre audit.  Arbitrary source coefficients exist; constant
+coefficients fail; this typed middle class is open.
 
 ### G. Other attractive architectures that close
 
@@ -1297,12 +1375,17 @@ counterexample must satisfy all of the following:
 13. a collision thickening must evade the separated Catalan tail and, in the
     universal cubic chart, move the ramification line at order zero rather
     than fix it through higher normal jets;
-14. the exact quadratic Kummer collision cannot be filled across its missing
+14. in the mixed Catalan ansatz, widths one and two are impossible, width
+    three is internally closed through coefficient degree five, and the
+    global height gate forces any viable width-three cap to be at least `102`;
+15. the exact quadratic Kummer collision cannot be filled across its missing
     divisor while preserving etaleness and the same function field;
-15. a cover/cusp construction must retain normalization, coordinate-order
-    index, Jelonek/nonproperness data, and hidden discriminant components.
+16. a cusp-packet projection must solve the descending, integrable,
+    decomposable minor Bezout equation, retain its escaping marked root, and
+    preserve normalization, coordinate-order index, Jelonek/nonproperness
+    data, and hidden discriminant components.
 
-Items 11--15 are conditional or architecture-specific necessities, not a
+Items 11--16 are conditional or architecture-specific necessities, not a
 complete classification of all planar counterexamples.
 
 ## 9. Connection ledger
@@ -1319,8 +1402,9 @@ complete classification of all planar counterexamples.
 | ramified torus quotient | polynomial corrections `(A,B)` | polynomiality and chosen collision if imposed | low transverse repair cells | both outputs, `w`-degree `(4,5)`, common-power top | THM-3549 boundary solve |
 | higher-dimensional collision | coordinate graph restriction | tangent directions, ambient unit determinant | nothing if coordinates verified | coordinate/divisibility certificate | THM-3546 four gates |
 | transverse boundary collision | Catalan formal thickening, then universal cubic root cover after adjoining `r` | selected collision and the exact ramification-cancellation mechanism | polynomiality in `w`; constant Jacobian after polynomialization | mixed terms that move `R=0` and send branching to infinity | fixed-line first jet, then mixed response boxes |
+| mixed Catalan polynomial ansatz | coefficient-row recurrence `E_k` | polynomiality and selected collision | low width cannot terminate the tail | width/degree state plus global degree passport | width 3 degree 6 as hostile; viable cap at least 102 |
 | curved ambient collision surface | punctured Kummer cover `(s,b)->(b,4s^2)` | finite etale collision | affine-plane completeness | boundary valuation / nonconstant unit | try mixed function-field deformation |
-| cusp packet `(L,T,U,S)` | two polynomial outputs | cusp-square discriminant if chosen invariantly | immersion can be lost in projection | all six minors, order index, wandering prime | nonlinear degree-box response solve |
+| cusp packet `(L,T,U,S)` | marked-root/Kummer inverse cubic, then two nonlinear polynomial outputs | escaping root, odd discriminant owner, full immersion | decomposability and descent can fail in projection | Pluecker relation, integrability, order index, wandering prime | solve the descending minor-Bezout system |
 | leading form `H^a,H^b` | first Euclidean coefficient tower | exact divisibility | later renewal/new faces | root multiplicities and full Newton packet | bound `(6.11)` then next layer |
 
 ## 10. Next exact experiments
@@ -1339,21 +1423,23 @@ complete classification of all planar counterexamples.
    and solve the remaining Jacobian rows; prioritize the clean `(84,105)`
    cell by writing `P_83=u^21w^2C_60`, only `61` homogeneous coefficients,
    and reject any retained contracted line.
-5. **Mixed Catalan thickenings.**  Add the smallest mixed `v^i w^j`
-   corrections to both outputs, solve the constant-Jacobian equations by
-   transverse degree, and test whether a finite cancellation can terminate
-   the positive Catalan tail without losing the collision.  In the universal
-   cubic chart, require the deformation to move `R=p+3t^2=0` at order zero;
-   reject every ansatz that merely fixes the line and changes its normal jet.
+5. **Mixed Catalan thickenings.**  Use width-three degree six only as the
+   cheapest renewal-mechanism probe; it is globally too small.  For an actual
+   counterexample search, jump to sparse coefficient cap at least `102`,
+   impose the height-105 degree cells, and solve the recurrence with support
+   pruning.  In the universal cubic chart, require the deformation to move
+   `R=p+3t^2=0` at order zero; reject every ansatz that merely fixes the line
+   and changes its normal jet.
 6. **Kummer boundary deformations.**  Add the smallest mixed transverse terms
    that change `s^2=delta/4` before filling the divisor; test whether the
    missing divisor moves to infinity or a finite ramification valuation
    survives.
 7. **Cusp nonlinear projections.**  Search low invariant degree for
    `A(L,T,U,S),B(L,T,U,S)` using exact response linearization in `B`, then
-   reject by Jacobian factors, coordinate-order index, or periodic image
-   prime.  The current finite box already rejects natural and
-   constant-linear projections.
+   impose descent, the Pluecker relation, and differential integrability
+   before testing the coordinate-order index or periodic image prime.  The
+   current finite box already rejects natural and constant-linear
+   projections.
 8. **Coordinate-graph descent.**  Continue beyond the exact degree-three
    graph exclusion; solve the scheme-theoretic identity at increasing degree
    and then verify coordinate status, with positive triangular controls and
@@ -1377,12 +1463,17 @@ complete classification of all planar counterexamples.
   excluded by stronger cited results.
 - The new divisor `(6.11)` concerns only the first post-subleading layer and
   only `b<a<2b`; it is not an infinite tower.
-- The immersive cusp packet and graph-descent criterion are construction
-  programs, not counterexamples.
+- The immersive cusp packet has a proved marked-root/Kummer inverse-cubic
+  factorization, but its nonlinear decomposable projection and graph-descent
+  criterion are construction programs, not counterexamples.
 - The Catalan thickening is a formal/local holomorphic map in `(v,w)`, not a
   polynomial endomorphism.  Its polynomialized `(v,r)` model is a ramified
   finite cubic cover, not Keller; THM-3555 excludes only corrections fixing
   the whole ramification line, while mixed surgeries moving it remain open.
+- THM-3557 closes mixed Catalan widths one and two in all coefficient degrees
+  and width three only through cap five.  Its cap-six cell is internally
+  open but globally excluded by the cited degree gates; no mixed thickening
+  is constructed.
 - The punctured Kummer map is a genuine finite etale collision, but its source
   is `G_m x A^1`; THM-3554 excludes only affine-plane fillings with the same
   quadratic function field.
@@ -1412,7 +1503,11 @@ collision near-counterexamples
     -> ramified polynomial quotient / nonpolynomial Catalan thickening /
        ramified connected cubic root cover / punctured etale Kummer cover
     -> move finite branching to nonproper escape through a mixed-boundary
-       deformation.
+       deformation;
+
+cusp-square packet
+    -> marked root escaping at `v=0` + quadratic Kummer pair
+    -> descending integrable decomposable projection problem.
 ```
 
 Those are genuine maps with explicit preserved and destroyed data.  They
