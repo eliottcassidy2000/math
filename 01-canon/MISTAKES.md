@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-424 (2026-08-18, THM-3554 image typing) -- a punctured Kummer cover's geometric image was called its untyped scheme/rational image
+
+- **What failed:** the first promoted THM-3554 said without qualification
+  that the image of the collision surface in the target plane was exactly
+  `U=D(beta^2-16alpha)`.  This conflated the morphism's topological/geometric-
+  point image with its scheme-theoretic image in `A^2` and its image on
+  `k`-rational points.
+- **Minimal witness / first failed implication:** over `Q`, the target point
+  `(alpha,beta)=(-1/8,0)` lies in `U(Q)` because `delta=2`, but a preimage
+  would require `s^2=delta/4=1/2`.  Thus it is not in the rational-point
+  image.  Conversely, the scheme-theoretic image in the ambient `A^2` is all
+  of `A^2`, because the topological image `U` is dense.
+- **Repair / strongest survivor:** `S->U` is finite etale and surjective, so
+  its topological image and its image on algebraically closed points are
+  exactly `U`.  State the ambient scheme-theoretic closure and rational-point
+  square-class qualification separately.  The Kummer normal form, deck
+  collision, and no-etale-filling valuation proof are unchanged; the latter
+  in fact holds over every field of characteristic different from two.
+- **Reusable rule:** for a nonproper or punctured morphism, always type
+  “image” as topological, scheme-theoretic, geometric-point, or rational-
+  point image.  These need not agree.
+
 ## MISTAKE-423 (2026-08-18, provisional THM-3546 scope) -- rational-point graph containment was silently treated as a polynomial identity
 
 - **What failed:** the first THM-3546 wording said that `F(Graph(h))` lies in

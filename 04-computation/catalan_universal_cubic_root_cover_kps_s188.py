@@ -13,6 +13,12 @@ from __future__ import annotations
 import sympy as sp
 
 
+def require(condition: bool, label: str) -> None:
+    """Keep every truth-bearing check active under ``python -O``."""
+    if not bool(condition):
+        raise ArithmeticError(f"FAILED: {label}")
+
+
 def main() -> None:
     v, r = sp.symbols("v r")
     kappa = sp.symbols("kappa", nonzero=True)
@@ -26,13 +32,14 @@ def main() -> None:
         [sp.diff(P, v), sp.diff(P, r)],
         [sp.diff(Q, v), sp.diff(Q, r)],
     ])))
-    assert sp.expand(jac_vr + sp.Rational(2, 3) * r) == 0
+    require(sp.expand(jac_vr + sp.Rational(2, 3) * r) == 0,
+            "polynomialized Jacobian")
 
     # Since r^2=1-3*kappa*w, dr/dw=-3*kappa/(2r).  This is the
     # inverse-ramification factor that turns jac_vr into kappa.
     dr_dw = -3 * kappa / (2 * r)
     jac_vw = sp.cancel(jac_vr * dr_dw)
-    assert jac_vw == kappa
+    require(jac_vw == kappa, "Catalan chain-rule cancellation")
 
     # Affine source and target changes.
     t = v
@@ -42,7 +49,7 @@ def main() -> None:
         [sp.diff(t, v), sp.diff(t, r)],
         [sp.diff(p, v), sp.diff(p, r)],
     ])))
-    assert source_change_jac == 2
+    require(source_change_jac == 2, "source affine change")
 
     PP, QQ = sp.symbols("PP QQ")
     target_p = 2 - 3 * PP
@@ -51,9 +58,9 @@ def main() -> None:
         [sp.diff(target_p, PP), sp.diff(target_p, QQ)],
         [sp.diff(target_q, PP), sp.diff(target_q, QQ)],
     ])))
-    assert target_change_jac == -6
-    assert sp.expand(p - (2 - 3 * P)) == 0
-    assert sp.expand(q + t**3 + p * t) == 0
+    require(target_change_jac == -6, "target affine change")
+    require(sp.expand(p - (2 - 3 * P)) == 0, "target p identity")
+    require(sp.expand(q + t**3 + p * t) == 0, "universal root equation")
 
     # Universal marked-root cover and its branch data.
     tt, pp = sp.symbols("tt pp")
@@ -62,23 +69,30 @@ def main() -> None:
         [sp.diff(pp, tt), sp.diff(pp, pp)],
         [sp.diff(universal_q, tt), sp.diff(universal_q, pp)],
     ])))
-    assert universal_jac == pp + 3 * tt**2
-    assert sp.expand(universal_jac.subs({tt: t, pp: p}) - 2 * r) == 0
+    require(universal_jac == pp + 3 * tt**2,
+            "universal-cover Jacobian")
+    require(sp.expand(universal_jac.subs({tt: t, pp: p}) - 2 * r) == 0,
+            "ramification coordinate pullback")
 
     X = sp.symbols("X")
     cubic = X**3 + pp * X + sp.symbols("qq")
     cubic_disc = sp.factor(sp.discriminant(cubic, X))
-    assert cubic_disc == -4 * pp**3 - 27 * sp.symbols("qq")**2
+    require(cubic_disc == -4 * pp**3 - 27 * sp.symbols("qq")**2,
+            "cubic discriminant")
     pulled_disc = sp.factor(cubic_disc.subs({pp: p, sp.symbols("qq"): q}))
-    assert sp.expand(pulled_disc + 4 * r**2 * (8 * r - 9 * v**2)) == 0
+    require(sp.expand(pulled_disc + 4 * r**2 * (8 * r - 9 * v**2)) == 0,
+            "discriminant pullback")
 
     target_cusp = sp.factor((3 * P - 2)**3 - 27 * Q**2)
-    assert sp.expand(4 * target_cusp - pulled_disc) == 0
+    require(sp.expand(4 * target_cusp - pulled_disc) == 0,
+            "target cusp normalization")
     branch_P = sp.factor(P.subs(r, 0))
     branch_Q = sp.factor(Q.subs(r, 0))
-    assert sp.expand(branch_P - (v**2 + sp.Rational(2, 3))) == 0
-    assert branch_Q == v**3
-    assert sp.expand((3 * branch_P - 2)**3 - 27 * branch_Q**2) == 0
+    require(sp.expand(branch_P - (v**2 + sp.Rational(2, 3))) == 0,
+            "branch P parametrization")
+    require(branch_Q == v**3, "branch Q parametrization")
+    require(sp.expand((3 * branch_P - 2)**3 - 27 * branch_Q**2) == 0,
+            "branch maps to cusp")
 
     # The Catalan collision pair acquires the third marked root.
     triple = [
@@ -91,10 +105,12 @@ def main() -> None:
                      for vv, rr in triple]
     triple_jacs = [sp.factor(jac_vr.subs({v: vv, r: rr}))
                    for vv, rr in triple]
-    assert triple_images == [(1, 0), (1, 0), (1, 0)]
-    assert triple_jacs == [sp.Rational(1, 3),
-                           -sp.Rational(2, 3),
-                           -sp.Rational(2, 3)]
+    require(triple_images == [(1, 0), (1, 0), (1, 0)],
+            "three-point collision")
+    require(triple_jacs == [sp.Rational(1, 3),
+                            -sp.Rational(2, 3),
+                            -sp.Rational(2, 3)],
+            "simple collision Jacobians")
 
     # First-jet ramification-line gate.  Let R=p+3t^2.  If both corrected
     # components are congruent to the universal cover modulo R, write them
@@ -107,8 +123,10 @@ def main() -> None:
     corrected_jac_on_R0 = sp.factor(
         row_P[0] * row_Q[1] - row_P[1] * row_Q[0]
     )
-    assert sp.expand(corrected_jac_on_R0 + 6 * T * (T * a0 + b0)) == 0
-    assert corrected_jac_on_R0.subs(T, 0) == 0
+    require(sp.expand(corrected_jac_on_R0 + 6 * T * (T * a0 + b0)) == 0,
+            "fixed-ramification-line first jet")
+    require(corrected_jac_on_R0.subs(T, 0) == 0,
+            "cusp-point Jacobian obstruction")
 
     print("CATALAN THICKENING -- UNIVERSAL CUBIC ROOT-COVER AUDIT")
     print(f"polynomialized map (P,Q) = ({P}, {Q})")

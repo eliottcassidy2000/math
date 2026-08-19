@@ -20,7 +20,7 @@ depends_on:
   - THM-3554-punctured-kummer-collision-surface-normal-form
 companion: 04-computation/catalan_universal_cubic_root_cover_kps_s188.py
 output: 05-knowledge/results/catalan_universal_cubic_root_cover_kps_s188.out
-script_sha256: 6a82ec49bf88a6ccf73f4de0163e078d65d1bc2f0f6976007b57e619f8b86dbe
+script_sha256: cd9f593fa8efe94b839e2175f63b7b19724d36815496042904daffd7a38e58ef
 output_sha256: 4b72a07e5914c114defedea2b1dfc6571005bb9dd27ec0340a5a71f3331533d8
 hash_basis: LF-normalized bytes
 ---

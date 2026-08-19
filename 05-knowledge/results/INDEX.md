@@ -12,11 +12,12 @@
   Jacobian at its cusp point.  This sharpens a degree-three nonproperness
   search; it is not `JC(2)`.  Normal/`-O` replay matches.  Script/output LF
   SHA-256:
-  `6a82ec49bf88a6ccf73f4de0163e078d65d1bc2f0f6976007b57e619f8b86dbe` /
+  `cd9f593fa8efe94b839e2175f63b7b19724d36815496042904daffd7a38e58ef` /
   `4b72a07e5914c114defedea2b1dfc6571005bb9dd27ec0340a5a71f3331533d8`.
 
 - `jacobian_punctured_kummer_collision_surface_kps_s188.py` -> matching
-  `.out` [THM-3554 PROVED + VERIFIED-EXACT].  The curved collision component
+  `.out` [THM-3554 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
+  WITH TYPING/TOOLING REPAIRS].  The curved collision component
   `2-3xy-x^2z=0` of THM-1300 is `G_m x A^1`; the restricted map becomes
   `(s,b)->(b,4s^2)` after explicit Laurent source and polynomial target
   automorphisms.  It is a degree-two finite etale Kummer cover of the target
@@ -26,7 +27,7 @@
   preserve this exact quadratic function-field extension.  This is a
   punctured planar near-counterexample, not `JC(2)`.  Normal/`-O` replay
   matches.  Script/output LF SHA-256:
-  `d6e6fc9384fe31de8e0d2037e7ed70a9fd8359faf82bb7cc68283fa1208ecb6e` /
+  `a4301507f47fd18d45097d8b8bf079652de5640b1c36be439fd190ea8d1683df` /
   `789ed0276d8e2ad5e1e8d358ef56e2a6e7815bae52c98cc0045664150a81b5e1`.
 - `torus_quotient_correction_no_go_thm3549.py` -> matching `.out`
   [THM-3549 PROVED + VERIFIED-EXACT / HOSTILE-AUDITED].  In coordinates
