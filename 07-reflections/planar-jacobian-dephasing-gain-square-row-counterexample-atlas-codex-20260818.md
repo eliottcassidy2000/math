@@ -129,6 +129,14 @@ The strongest exact outcomes are:
    therefore forbids descent between displayed source and target graphs in
    every degree.  Nonlinear ambient coordinates and nongraph coordinate
    hypersurfaces remain open.
+14. **PROVED one-invariant and cyclic-fibre no-mate walls.**  Multiplicative,
+   diagonal-additive, and thickened primitive one-invariant rays have no
+   nonlinear polynomial Jacobian mate; the diagonal case has no rational
+   mate.  Even a squarefree two-channel additive thickening can remain
+   mateless because its forced response form is a nonzero holomorphic
+   differential on the normalized generic Kummer fibre.  The next sparse
+   construction scale therefore needs two genuinely nonparallel primitive
+   invariants, not more powers or more genus on one ray.
 
 ## 2. Inheritance pass and concept board
 
@@ -163,8 +171,12 @@ The strongest exact outcomes are:
   excludes prime pencil degrees and the height-six/seven box, and
   [THM-3548](../01-canon/theorems/THM-3548-planar-keller-conductance-shadow-gates.md)
   records the exact conductance-side filters,
-  [THM-3553](../01-canon/theorems/THM-3553-fixed-cubic-keller-map-polynomial-graph-section-no-go.md)
+  [THM-3553](../01-canon/theorems/THM-3553-fixed-threedimensional-keller-map-polynomial-graph-section-no-go.md)
   excludes every displayed polynomial graph for the fixed ambient cubic map,
+  [THM-3551](../01-canon/theorems/THM-3551-one-ray-planar-jacobian-mate-no-go.md)
+  closes three all-degree one-invariant ray families,
+  [THM-3552](../01-canon/theorems/THM-3552-two-face-cyclic-fiber-holomorphic-exactness-obstruction.md)
+  closes a squarefree two-channel Kummer family by holomorphic exactness,
   while
   [THM-3545](../01-canon/theorems/THM-3545-catalan-self-intersection-keller-thickening-boundary.md)
   gives an exact formal collision with a nonterminating Catalan obstruction
@@ -186,14 +198,15 @@ The strongest exact outcomes are:
   higher-dimensional Keller packets.  It is not a planar theorem, but it is
   the correct hostile test for proposed inverse-cover constructions.
 
-### Six live concepts
+### Seven live concepts
 
 1. leading-form Euclidean divisibility and root multiplicity;
 2. equal-sum coefficient fibres and magnetic holonomy;
 3. Gaussian--Hadamard row transport and its index-two parity sidecar;
 4. cusp-square discriminant packets and nonlinear projection;
 5. coordinate-hypersurface descent from an ambient Keller collision;
-6. connected cubic root covers and ramification-to-infinity surgery.
+6. connected cubic root covers and ramification-to-infinity surgery;
+7. generic-fibre response differentials and their residue/divisor classes.
 
 The session changed the board as follows.  The row transport became an exact
 map, but failed the ordinary Keller predicate by a Laurent Jacobian factor.
@@ -205,6 +218,10 @@ root-multiplicity divisor rather than another untyped recurrence guess.
 The Catalan tail became a coordinate symptom rather than an isolated series:
 its algebraic coordinate is the ramified universal cubic root cover, sharply
 locating the missing operation as moving finite branching to nonproper escape.
+The sparse support lane also acquired a firm scale boundary: many monomials
+on one primitive ray still give only one response channel, while two
+nonparallel exponent vectors are the first place determinant-weighted fibre
+cycles and cancellable response poles can coexist.
 
 ## 3. The quantum-to-resistor statement, with constants and boundaries
 
@@ -1022,21 +1039,17 @@ graph lane now closes in **every** degree.  If `H` is the top homogeneous
 form of a nonconstant `h`, the unique top tangential Jacobian row is
 
 ```text
--3x^5y^4 H(3H+xH_x),
+-3S partial_x(S),                  S=x^3y^2H,
 ```
 
-and the Euler-weight operator `3+x partial_x` is injective in characteristic
-zero.  For constant `h=c`, the top row is
-
-```text
--9x^3y^4(cx+3y)(cx+2y),
-```
-
-including the nonzero hostile `-54x^3y^6` at `c=0`.  Hence the restricted
-tangential Jacobian is never constant, so THM-3546 forbids any displayed
-source graph `z=h(x,y)` from landing scheme-theoretically in a displayed
-polynomial target graph.  This is the proved
-[THM-3553](../01-canon/theorems/THM-3553-fixed-cubic-keller-map-polynomial-graph-section-no-go.md).
+which is nonzero because every monomial of `S` has positive `x` exponent.
+For every constant `h`, the restricted Jacobian has the universal coefficient
+`[y^3]=-89`; an independent top-row check gives
+`-9x^3y^4(cx+3y)(cx+2y)`.  Hence the restricted tangential Jacobian is never
+constant, so THM-3546 forbids any displayed source graph `z=h(x,y)` from
+landing scheme-theoretically in a displayed polynomial target graph.  This
+is the proved and exactly replayed
+[THM-3553](../01-canon/theorems/THM-3553-fixed-threedimensional-keller-map-polynomial-graph-section-no-go.md).
 Graphs after nonlinear ambient coordinate changes and nongraph coordinate
 hypersurfaces remain open; the plane `x=0` is the sharp hostile because it
 does descend to a polynomial plane automorphism.
@@ -1385,28 +1398,49 @@ coefficients fail; this typed middle class is open.
 
 ### G. Other attractive architectures that close
 
-1. **Weighted suspension -- PROVED REFUTED.**  For
-   `P=xA(x^r y^s)`, the only constant-producing weight sector of a mate is
-   `Q_0=yf(w)`.  The top coefficient of
+1. **One-invariant rays -- PROVED REFUTED in three all-degree families.**
+   For `P=x phi(x^p y^q)`, the only constant-producing weight sector of a
+   mate is `Q_0=yf(T)`.  The top coefficient of
 
    ```text
-   Jac(P,Q_0)=Af+swAf'+rwA'f
+   phi f+pT phi'f+qT phi f'
    ```
 
-   is `a_d f_N(1+sN+rd)`, nonzero in characteristic zero.
-2. **Two-mode reciprocal ansatz -- PROVED REFUTED.**  For
+   is `(1+pd+qN)lc(phi)lc(f)`, nonzero in characteristic zero.  The diagonal
+   additive ray `x+h(xy)` is even stronger: in coordinates `(z,v)=(P,xy)`,
+   a mate would integrate `dv/(z-h(v))`, whose nonzero residues forbid a
+   rational primitive.  For `q>=2`, the thickened additive ray
+   `x+h(x^p y^q)` dies in its unique residue-one sector.  This is
+   [THM-3551](../01-canon/theorems/THM-3551-one-ray-planar-jacobian-mate-no-go.md).
+2. **Two-channel cyclic fibre -- PROVED REFUTED despite submersion and
+   genus.**  For
+   `P=x phi(T)+Psi(T)`, `T=x^p y^q`, with `2<=p<q`, squarefree
+   `phi(0)!=0`, and `Psi'=phi H!=0`, the gradient ideal is one.  Yet on the
+   normalized generic Kummer fibre a mate would force
+
+   ```text
+   dQ=kappa y dT/(q phi(T)T).
+   ```
+
+   The right side is a nonzero holomorphic differential and therefore not
+   rationally exact.  The explicit `(p,q)=(2,5)` hostile has four Newton
+   vertices and genus ten.  This is
+   [THM-3552](../01-canon/theorems/THM-3552-two-face-cyclic-fiber-holomorphic-exactness-obstruction.md):
+   adding a channel in the same invariant `T` is not adding a nonparallel
+   response direction.
+3. **Two-mode reciprocal ansatz -- PROVED REFUTED.**  For
    `P=xf(xy)+yh(xy)`, `Q=xk(xy)+yg(xy)`, disjoint support sectors force two
    Wronskians to vanish; the remaining equation is a derivative of `tfg`
    and constancy reduces the map to linear.
-3. **Homogeneous Hamiltonian perturbation -- REFUTED modulo the classical
+4. **Homogeneous Hamiltonian perturbation -- REFUTED modulo the classical
    binary-Hessian lemma.**  `P=x+H_y`, `Q=y-H_x` gives
    `Jac(P,Q)=1+det Hess(H)`.  Vanishing homogeneous binary Hessian forces
    `H` to be a power of one linear form, hence a triangular shear.
-4. **Bare cubic cusp -- PROVED REFUTED.**  The simplest parametrization has
+5. **Bare cubic cusp -- PROVED REFUTED.**  The simplest parametrization has
    Jacobian proportional to the escape coordinate.  Equations `(7.5)`--`(7.7)`
    show that allowing arbitrary `U` still blocks all six natural coordinate
    pairs.
-5. **Gaussian--Hadamard Laurent transform -- OPEN only as a toric ansatz.**
+6. **Gaussian--Hadamard Laurent transform -- OPEN only as a toric ansatz.**
    Equation `(5.18)` changes a Keller constant into `-2Y/X`.  A lawful search
    would have to start with a Laurent pair of bracket `-X/(2Y)` whose image is
    polynomial and retains the index-two axis/parity sidecar.
@@ -1431,10 +1465,14 @@ counterexample must satisfy all of the following:
    then create a genuine new face rather than assume an endless scalar
    recurrence;
 8. any sparse coefficient ansatz must survive leaf peeling, every cross leak,
-   fibrewise polygon closure, and the global Segre cycle binomials;
+   fibrewise polygon closure, and the global Segre cycle binomials; it must
+   also use at least two nonparallel primitive invariants, because extra
+   powers, Newton area, or high genus on one invariant ray do not create a
+   second response channel;
 9. a magnitude-only or norm-only shadow is insufficient: determinant signs,
    coefficient phases, cycle holonomies, and global shear frustration must be
-   retained;
+   retained; on a generic compactified fibre, the forced response form must
+   be exact, so a nonzero holomorphic class is an immediate no-mate witness;
 10. exact finite even symmetry is forbidden; a near-symmetric candidate needs
    a load-bearing asymmetric defect;
 11. any supplied Puiseux escape branch has escape exponent
@@ -1469,6 +1507,7 @@ complete classification of all planar counterexamples.
 | quantum hopping `H` | resistor generator, `H_xy -> |H_xy|^2` by strong dephasing | leading population semigroup | loop phase, circulation | magnetic cycle holonomies | triangle `K^3` sign check |
 | differential `DF` | normalized intensity table `C/T` | asymptotic rank-one proximity | determinant Wilson phase | dark/channel-degenerate regime | THM-3548 two matrix hostiles |
 | JC response matrix `A_P` | bipartite conductance graph `|A_wu|^2` | support, magnitudes, matching, leaves, polygon bounds | cancellation, rank on cycles, target range, factorization | gain phases plus Segre cycle binomials | `A_+` versus `A_-` square hostile |
+| one primitive toric invariant `T` | normalized generic fibre and forced response one-form | submersion, Newton area, and fibre genus | a second independent response channel | residues and compactified divisor class | THM-3551 residue / THM-3552 holomorphic-exactness test |
 | triangular row `(j,t+1)` | odd sum-row via `M` | bijection, additive row, norm up to factor two | primitive content without parity sheet | index-two/Gaussian content | `M^TM=2I`, axis completion |
 | sum-row vector | scalar square norm | radius and two-adic lower data | orientation and determinant sign | ordered exponent / `P^1(F_2)` color | `(1,2),(2,1)` against `(1,4)` |
 | odd-row maximum `2C_t` | filler `Q_t=2C_t+1` | collision-free row sentinel | support-point semantics | diagonal fixed point if support matters | compare `(t+1,t+1)` with `Q_t` |
@@ -1491,7 +1530,10 @@ complete classification of all planar counterexamples.
    over exact target shears, and solve the remaining gain holonomies.
 3. **Parallelogram tiling.**  Start with `(7.3)`, include every cross leak,
    and search for the smallest closed multi-fibre support rather than a
-   hand-picked cancellation square.
+   hand-picked cancellation square.  Require two nonparallel primitive
+   invariants from the outset and compute the forced response differential
+   on the normalized generic fibre; reject a residue or nonzero holomorphic
+   class before solving large coefficient systems.
 4. **Torus-correction boundary.**  Start at transverse degrees `(4,5)` with
    top coefficients `(c h^4,d h^5)`, impose the inherited two-point collision,
    and solve the remaining Jacobian rows; prioritize the clean `(100,125)`
@@ -1538,6 +1580,10 @@ complete classification of all planar counterexamples.
   excluded by stronger cited results.
 - The new divisor `(6.11)` concerns only the first post-subleading layer and
   only `b<a<2b`; it is not an infinite tower.
+- THM-3551 and THM-3552 close their stated one-invariant and Kummer families,
+  not arbitrary two-invariant Newton polygons.  Their residue/divisor tests
+  are necessary hostiles for new first-coordinate proposals, not a global
+  no-mate theorem.
 - The cited 2022 sub-`125` list is imported rather than reproved.  It excludes
   the weaker height-`105` screen and leaves `(72,108)` as the current first
   passport; it does not assert that such a counterexample exists.
@@ -1579,6 +1625,10 @@ triangular square rows
 leading common form
     -> Euclidean divisibility
     -> multiplicity-sensitive codimension;
+
+one primitive invariant
+    -> one Hamiltonian response channel
+    -> terminal coefficient, residue, or holomorphic non-exactness;
 
 collision near-counterexamples
     -> ramified polynomial quotient / nonpolynomial Catalan thickening /
