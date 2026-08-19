@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `cusp_square_packet_subring_projection_audit_20260818.py` -> matching
+  `.out` [VERIFIED-EXACT + FINITE-EXACT BOUNDED NO-GO; THM-3556 UNCHANGED].
+  For THM-3556's explicit `U_*`, exact Groebner elimination and a linear
+  subresultant give rational recovery of both source coordinates, so
+  `Q(L,T,U,S)=Q(v,y)` and the field extension has degree one.  An explicit
+  two-point collision over an irreducible cubic field proves that the packet
+  subring is nevertheless proper and that neither `v` nor `y` is polynomial
+  in the packet.  A degree-three arbitrary source-polynomial minor Bezout
+  certificate is displayed and shown both non-descending and
+  nondecomposable.  Exact linearized ranks `67/68` at packet degree two and
+  `187/188` at degree three exclude even arbitrary bivector sums, hence every
+  legal constant-Jacobian projection through packet degree three.  Degree
+  four and higher remain open; no `JC(2)` claim is made.  Normal/`-O` replay
+  matches.  Script/output/reflection LF SHA-256:
+  `62563ebd5802fe5c7f2bcff35b6a5705f035f17daeb20a78371e92eebea302fd` /
+  `236c346caa1b9ea849a2ea38c7f5157bdc00fbf5af6947394535c4f592a4af73` /
+  `9d67cf6cae996e86b8ae59d7d882c24125357863d302366dbebf87e974657019`.
+
 - `jacobian_affine_target_pullback_factor_atlas_kps_s188.py` -> matching
   `.out` [THM-3559 PROVED + VERIFIED-EXACT].  For every affine target
   coordinate through the fixed THM-1300 collision value, no coordinate
