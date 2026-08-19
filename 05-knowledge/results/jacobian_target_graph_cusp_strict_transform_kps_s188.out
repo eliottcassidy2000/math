@@ -1,0 +1,9 @@
+target-graph Jelonek cusp strict-transform compiler
+108*a^2*L=(12*a-b^2)^3+E^2
+P=-r^2,E=r^3,a=(b^2-r^2)/12
+E_graph-r^3=-(b-r)^2/2*[b+2r+3/4*(b+r)^2*phi]
+s=b+r: G_phi=2s-b+3/4*s^2*phi(s(2b-s)/12,b)
+G_phi|r=0=(3/4)*b^2*(4/(3b)+phi(b^2/12,b))
+ideal rational graph: phi=(b^3-18ab)/(54a^2), L=P^3/(108a^2)
+F7 quadratic balance: total=19, genuinely_quadratic=0
+all active truth gates passed

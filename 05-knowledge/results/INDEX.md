@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `jacobian_target_graph_cusp_strict_transform_kps_s188.py` -> matching
+  `.out` [DERIVED-EXACT + FINITE-EXACT DIAGNOSTIC].  THM-1335's
+  cube-plus-square identity converts every target graph `c+phi(a,b)=0` into
+  the strict-transform curve
+  `2s-b+(3/4)s^2 phi(s(2b-s)/12,b)=0`; its `r=0` slice is exactly the omitted-
+  curve intersection.  The ideal rational section kills the square term and
+  leaves a triple parabola but exposes the load-bearing `a^-2` denominator,
+  explaining the Danielewski completion frontier.  Exhaustive `F_7`
+  quadratic balance has `19` uniform rows and no genuinely quadratic row;
+  this finite diagnostic is not a characteristic-zero no-go.  Script/output/
+  reflection LF SHA-256:
+  `28b6e1cfaa7398c260dcba8c75b19c658fd6213660898b6bcf3ca9612421fe2a` /
+  `80277f1f4bba114a1c9750b863bc6e75391a2f1dd87dc04500caad7cd444ff9f` /
+  `e7580090cb0159e48f71e76f1586982f02c0f173e006a1d5ea1b61cd83f6f046`.
+
 - `cusp_square_packet_subring_projection_audit_20260818.py` -> matching
   `.out` [VERIFIED-EXACT + FINITE-EXACT BOUNDED NO-GO; THM-3556 UNCHANGED].
   For THM-3556's explicit `U_*`, exact Groebner elimination and a linear
