@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jc2_catalan_mixed_thickening_recurrence_kps_s187.py` -> matching `.out`
+  [THM-3557 PROVED + VERIFIED-EXACT + FINITE-EXACT].  The exact transverse
+  recurrence proves cap-free impossibility for mixed Catalan thickenings of
+  widths one and two.  At width three, exhaustive UFD branches, degree
+  ledgers, and two saturated rational unit ideals prove affine coefficient-
+  space emptiness through coefficient degree five; the exceptional
+  square/cube branch terminates at `-9/4`.  The first open width-three cell is
+  degree six, equivalently the first new even `r^6` cell in THM-3555's cubic-
+  cover coordinates.  Width four is also open.  All 86 truth gates pass and
+  normal/`-O`/stored transcripts agree.  Script/output LF SHA-256:
+  `0444ad61a0bb2cd165243db1a97f0cb0b299eb19263378c97d1dee9ff39a7e1e` /
+  `cd23937963962bc4f43b83fc2f3ab6b477970c76f3151b7247c0025145380832`.
+
 - `cusp_square_marked_root_kummer_owner_kps_s188.py` -> matching `.out`
   [THM-3556 PROVED + VERIFIED-EXACT + FINITE-EXACT POSITIVE PACKET].  The
   cusp-square coefficients factor `L*X^3+T*X+2U` into the marked root
