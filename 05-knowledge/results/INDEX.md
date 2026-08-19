@@ -148,20 +148,23 @@
   parallelogram family with mandatory cross leaks; six obstructed natural
   projections and one everywhere-immersive four-coordinate cusp packet; and
   the root-multiplicity valuation formula behind the first-Euclidean-chamber
-  divisor `D_k(H)`.  It also screens the cited global degree gates to the
-  first arithmetic height `105`, verifies the four surviving cells and the
-  three first-chamber taxes, and isolates the clean `(84,105)` torus divisor
-  `u^21w^2`.  Normal and optimized executions byte-match the stored
+  divisor `D_k(H)`.  It retains the height-`105` AON/Moh/2014-gcd screen as a
+  labeled weaker hostile, then imports the cited 2022 sub-`125` list and
+  verifies its arithmetic consequences: live first pair `(72,108)`, radical
+  subleading tax, first row-dominant torus box `(100,125)` with divisor
+  `u^25w^2`, and width-three mixed-Catalan cap at least `105`.  Normal and
+  optimized executions byte-match the stored
   transcript after newline normalization.  The reflection also integrates
   THM-3555's universal cubic marked-root normal form, THM-3556's escaping-
-  root/Kummer factorization and decomposable projection target, and
+  root/Kummer factorization, dual visible cubic, and decomposable projection
+  target, THM-3553's all-degree displayed-graph no-go, and
   THM-3557's low-width mixed-Catalan no-go with the resulting globally viable
   coefficient-cap jump.  No planar counterexample, global
   degree theorem, resistor reduction of JC, or infinite Euclidean tower is
   claimed.  Script/output/reflection SHA-256:
-  `111ea2c19b4a344e33660fb579cc721960ffa0189bb76e861f9ec4af83304af4` /
-  `12e49b69df8824fc26559d9102abca3eaa9966c371c64175df6814e2c98425c9` /
-  `15a8e94b0e6256a5c7e22736a9a93471e06828eb6ad829e121ed896ed65f82de`.
+  `7eb8e39a7d108a3a229545e0b539abd980f571a41787406162394d114ec22703` /
+  `dac8899f87ea4a9de4654d29c2b746a76061544a60d89efd5f830bac45433dfd` /
+  `8adf92081d658f7465b4fa648b4bb79f6def78219e89a66d22e31d6c2df84224`.
 
 - `jacobian_torus_quotient_ramification_square_kps_s183.py` -> matching
   `.out` [THM-3543 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED

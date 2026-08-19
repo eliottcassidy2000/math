@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-427 (2026-08-18, degree-passport scope) -- the first survivor of a weaker sieve was called globally admissible
+
+- **What failed:** the first synthesis called the four height-`105` cells
+  surviving the Appelgate--Onishi/Nagata, Moh, and 2014 gcd filters the first
+  “globally admissible” degree cells.  That wording omitted the stronger
+  cited 2022 sub-`125` degree-pair classification.
+- **Minimal witness / first failed implication:** the 2022 list leaves only
+  `(72,108)` (and its transpose) below height `125`, so every height-`105`
+  cell in the weaker screen is excluded.
+- **Repair / strongest survivor:** retain the height-`105` enumeration only
+  as a finite hostile validating the weaker filter stack.  The current cited
+  passport has first reduced pair `(72,108)`.  Its consequences move the
+  row-dominant torus boundary from `(84,105)` to the first not-yet-excluded
+  `(100,125)` box and move the width-three mixed-Catalan coefficient cap from
+  `102` to at least `105`.
+- **Reusable rule:** every “first admissible” computation must name the exact
+  inherited filter set.  When a stronger classification is imported, keep
+  the old frontier only as a labeled hostile, never as the live global floor.
+
 ## MISTAKE-426 (2026-08-18, THM-3555 status suffix) -- a second promoted proof retained its reserved-stub disclaimer
 
 - **What failed:** THM-3555 was promoted to `PROVED + VERIFIED-EXACT` with a

@@ -38,9 +38,17 @@ SECTION H. Root-multiplicity divisor squeeze in the first Euclidean chamber.
    D_k(H)=product L^ceil((e(k-1)+1)/2), k=2b-a: exact sample exponents PASS
    squarefree (a,b)=(5,4) forces H^2|Q_(m-1); multiplicities (2,3) force (3,4): PASS
 
-SECTION I. First arithmetic degree cells after the cited global gates.
-   first height=105; cells (n,m,g,n/g,m/g)=[(42, 105, 21, 2, 5), (63, 105, 21, 3, 5), (70, 105, 35, 2, 3), (84, 105, 21, 4, 5)]: PASS
+SECTION I. Weaker AON/Moh/2014-gcd sieve: retained as a hostile, not the live frontier.
+   weaker sieve first height=105; cells (n,m,g,n/g,m/g)=[(42, 105, 21, 2, 5), (63, 105, 21, 3, 5), (70, 105, 35, 2, 3), (84, 105, 21, 4, 5)]: PASS
    first-chamber cells n->k: {63: 1, 70: 1, 84: 3}: PASS
-   clean torus cell (84,105): D_3(u^20 w)=u^21 w^2, leaving 61 degree-60 quotient coefficients: PASS
+   obsolete torus hostile (84,105): D_3(u^20 w)=u^21 w^2, leaving 61 degree-60 quotient coefficients: PASS
+
+SECTION J. Imported 2022 sub-125 degree list and the repaired live frontier.
+   cited unique reduced pair below height 125 is (72,108)=(36*2,36*3): arithmetic PASS
+   its first-chamber tax is rad(H)|F_71 and H rad(H)|G_107: PASS
+   squarefree H leaves 36 subleading coefficients and gives codimension 144 in the paired rows: PASS
+   first row-dominant 4:5 box not excluded is (100,125), with h-degree 24: PASS
+   D_3(u^24 w)=u^25 w^2; P_99 has a degree-72 quotient (73 coefficients), and u^49 w^3|Q_124: PASS
+   width-three mixed Catalan needs coefficient cap at least 105 before the cited degree passport permits it: PASS
 
 ALL CHECKS PASSED

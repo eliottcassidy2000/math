@@ -49,7 +49,9 @@ The strongest exact outcomes are:
    every target direction strengthens this to at least three prime factors
    per pencil degree; Moh forces the reduced height `m` above 100.  The
    Heitmann/Guccione--Guccione--Valqui restriction further gives
-   `gcd(n,m)>=16` and rules out twice-prime gcd.
+   `gcd(n,m)>=16` and rules out twice-prime gcd.  Finally, the cited 2022
+   sub-`125` classification leaves only the reduced pair `(72,108)` (up to
+   transpose) below height `125`; this is the live first degree passport.
 5. **PROVED strong-dephasing limit.**  A Hermitian hopping matrix with
    `|H_xy|^2=c_xy`, under uniform site dephasing of coherence-decay rate
    `lambda`, has population generator
@@ -100,14 +102,16 @@ The strongest exact outcomes are:
 10. **PROVED/FINITE-EXACT torus-repair squeeze; OPEN cell.**  Polynomial
    corrections of the inherited quotient fail one-sidedly in every degree,
    through total correction degree three, and whenever affine in the
-   transverse variable.  The first clean surviving boundary is uniquely
-   `(84,105)` at the first globally admissible height, where
-   `u^21w^2|P_83` and `u^41w^3|Q_104`.
+   transverse variable.  Importing the 2022 degree list moves the first
+   row-dominant `4:5` boundary not already excluded to `(100,125)`, where
+   `u^25w^2|P_99` and `u^49w^3|Q_124`; only `73` homogeneous quotient
+   coefficients remain in the lower subleading row.
 11. **PROVED inverse-cubic owner + FINITE-EXACT positive seed; OPEN
    projection.**  The cusp-square packet is an exact `1+2` root owner: its
    inverse cubic factors into the marked root `-1/v`, which escapes at
    `v=0`, and a quadratic Kummer pair, with discriminant `-4LS^2`.  An
-   explicit four-coordinate packet `A^2 -> A^4` is everywhere immersive,
+   observable dual cubic marks `y` and carries the same square class `-L`.
+   An explicit four-coordinate packet `A^2 -> A^4` is everywhere immersive,
    although none of its six natural two-coordinate projections, nor any
    constant-linear projection, is Keller.  A nonlinear descending,
    integrable, decomposable projection is the strongest self-contained
@@ -116,9 +120,15 @@ The strongest exact outcomes are:
    thickening of `(v^2,v^3-v)`, transverse widths one and two are impossible
    in every coefficient degree.  Width three is impossible through
    coefficient degree five; degree six is merely the first internally
-   unclosed recurrence cell.  Combining this with the global height-105
+   unclosed recurrence cell.  Combining this with the live height-108
    gate, a genuinely viable width-three candidate needs coefficient cap at
-   least `102`, since both total degrees are at most `D+3`.
+   least `105`, since both total degrees are at most `D+3`.
+13. **PROVED all-degree displayed-graph no-go.**  For the fixed cubic Keller
+   map, restriction to every displayed polynomial graph `z=h(x,y)` has an
+   explicit nonzero positive-degree tangential Jacobian top row.  THM-3546
+   therefore forbids descent between displayed source and target graphs in
+   every degree.  Nonlinear ambient coordinates and nongraph coordinate
+   hypersurfaces remain open.
 
 ## 2. Inheritance pass and concept board
 
@@ -152,7 +162,10 @@ The strongest exact outcomes are:
   [THM-3550](../01-canon/theorems/THM-3550-prime-degree-exclusion-and-pencil-height-eight-floor.md)
   excludes prime pencil degrees and the height-six/seven box, and
   [THM-3548](../01-canon/theorems/THM-3548-planar-keller-conductance-shadow-gates.md)
-  records the exact conductance-side filters, while
+  records the exact conductance-side filters,
+  [THM-3553](../01-canon/theorems/THM-3553-fixed-cubic-keller-map-polynomial-graph-section-no-go.md)
+  excludes every displayed polynomial graph for the fixed ambient cubic map,
+  while
   [THM-3545](../01-canon/theorems/THM-3545-catalan-self-intersection-keller-thickening-boundary.md)
   gives an exact formal collision with a nonterminating Catalan obstruction
   to polynomiality,
@@ -726,10 +739,8 @@ normalization of `(6.1)`, the first cell has `H_max=L^2`, exponents `(3,4)`,
 and one root direction; the second has `H_max=xy`, the same exponents, and
 two root directions.  These normalizations must not be identified.
 
-Combining all of the arithmetic gates above gives a small new finite screen.
-The least possible reduced height is not `102`: its only large admissible gcd
-is `34=2*17`, which the twice-prime theorem removes.  The first surviving
-height is
+Combining only the Appelgate--Onishi/Nagata, Moh, and 2014 gcd gates gives a
+useful but superseded finite screen.  Its first surviving height is
 
 ```text
 m=105,
@@ -738,12 +749,12 @@ m=105,
  (70,105;35;2,3), (84,105;21;4,5)}.                   (6.2c)
 ```
 
-This is **FINITE-EXACT arithmetic**, not a claim that any cell is realizable.
-After swapping outputs to put the larger leading exponent first, the last
-three cells enter the chamber `b<a<2b`, with `k=1,1,3` respectively.  Thus
-the new divisor `(6.11)` already taxes three of the four earliest arithmetic
-cells.  Writing `F,G` for the degree-`n`, degree-105 outputs, the exact taxes
-are
+This is **FINITE-EXACT arithmetic under that named weaker sieve**, not a live
+frontier.  The cited 2022 Guccione--Guccione--Horruitiner--Valqui
+classification of degree pairs below height `125` excludes all four cells.
+They are retained as hostile controls because the new divisor already taxes
+three of them.  After swapping outputs to put the larger leading exponent
+first, those taxes are
 
 ```text
 (63,105): rad(H) | F_62,       H^2 rad(H) | G_104;
@@ -751,14 +762,36 @@ are
 (84,105): H rad(H) | F_83,     H^2 rad(H) | G_104.
 ```
 
-The remaining `(42,105)` cell has exponent pair `(2,5)`, hence lies in the
-next chamber `2b<a<3b`.  It is the unique minimal-height cell requiring a
-genuine second-chamber argument rather than a continuation of `(6.11)`.
-Subleading proportionality still gives `G_104` as a scalar multiple of
-`H^3F_41`; only the additional root divisor is presently missing.
+The omitted stronger input is a cited preprint
+([primary](https://arxiv.org/abs/2204.14178)), not proved here.  Up to
+transpose, it leaves exactly one reduced pair below height `125`:
 
-THM-3550 is currently labelled `PROVED / HOSTILE AUDIT IN PROGRESS`; the
-stronger `m>100` conclusion uses the separately cited Moh theorem.
+```text
+(n,m;g;n/g,m/g)=(72,108;36;2,3).                      (6.2d)
+```
+
+This is now the live first degree passport.  Put `F=F_72`, `G=G_108` and
+swap the outputs when applying the `b<a<2b` divisor theorem.  Then
+`(a,b)=(3,2)`, `k=1`, and
+
+```text
+rad(H) | F_71,                    H rad(H) | G_107.    (6.2e)
+```
+
+In particular, a squarefree degree-36 base forces `H|F_71` and
+`H^2|G_107`.  Then `F_71=H C_35`, so the entire subleading pair is controlled
+by only `36` coefficients instead of the original `72`; its codimension in
+the `108+72`-dimensional pair of binary-form rows is `108+36=144`.  The
+former height-`105` wording is corrected in MISTAKE-427.
+
+For completeness, within the obsolete height-`105` screen the last three
+cells enter the chamber `b<a<2b`, with `k=1,1,3` respectively.
+The remaining `(42,105)` cell has exponent pair `(2,5)` and lies in the next
+chamber
+`2b<a<3b`; this explains why the weaker hostile screen still tests both the
+proved first chamber and its failure boundary.  THM-3550 is now labelled
+`PROVED / INDEPENDENTLY HOSTILE-AUDITED`; the stronger degree lists remain
+separately cited inputs.
 
 ### Subleading codimension
 
@@ -984,11 +1017,29 @@ Passing these gates would produce a planar counterexample with no second
 Jacobian search.  Interpolation is cheap; divisibility and coordinate status
 are load-bearing.
 
-For the fixed sporadic three-variable Keller map used in the current ambient
-program, an exact coefficient-ideal search finds no invariant polynomial
-graph `z=h(x,y)` of total degree `0,1,2,3`.  This is **FINITE-EXACT** only:
-higher-degree graphs, nongraph coordinate hypersurfaces, and semiconjugate
-surfaces remain open.
+For the fixed sporadic three-variable Keller map, the displayed polynomial-
+graph lane now closes in **every** degree.  If `H` is the top homogeneous
+form of a nonconstant `h`, the unique top tangential Jacobian row is
+
+```text
+-3x^5y^4 H(3H+xH_x),
+```
+
+and the Euler-weight operator `3+x partial_x` is injective in characteristic
+zero.  For constant `h=c`, the top row is
+
+```text
+-9x^3y^4(cx+3y)(cx+2y),
+```
+
+including the nonzero hostile `-54x^3y^6` at `c=0`.  Hence the restricted
+tangential Jacobian is never constant, so THM-3546 forbids any displayed
+source graph `z=h(x,y)` from landing scheme-theoretically in a displayed
+polynomial target graph.  This is the proved
+[THM-3553](../01-canon/theorems/THM-3553-fixed-cubic-keller-map-polynomial-graph-section-no-go.md).
+Graphs after nonlinear ambient coordinate changes and nongraph coordinate
+hypersurfaces remain open; the plane `x=0` is the sharp hostile because it
+does descend to a polynomial plane automorphism.
 
 The categorical torus quotient is a proved hostile, not a solution:
 [THM-3543](../01-canon/theorems/THM-3543-torus-quotient-ramification-square-no-go.md)
@@ -1023,21 +1074,29 @@ then
 (deg P,deg Q)=(4e,5e),       H_top=u^(e-1)w.
 ```
 
-The combined gcd, Appelgate--Onishi, and Moh gates first permit `e=21`, hence
-the cell `(84,105)` with `H=u^20w`.  Repaired subleading rigidity gives
+The weaker gcd, Appelgate--Onishi, and Moh gates permitted `e=21`, but the
+2022 sub-`125` classification excludes that `(84,105)` hostile.  For every
+`e<25`, the height `5e` is below `125`, while the ratio `4:5` cannot equal
+the unique surviving ratio `72:108=2:3`.  Hence the first row-dominant box
+not excluded by the cited list is
 
 ```text
-Q_104=(5d/(4c))H P_83,
-D_3(H)=H rad(H)=u^21w^2 | P_83.
+(deg P,deg Q)=(100,125),       e=25,       H=u^24w.
 ```
 
-Thus the degree-83 layer of `P` has no `w^0` or `w^1` row and is parametrized
-by a degree-60 quotient: `61` coefficients rather than `84`.  This conclusion
-also gives `u^41w^3|Q_104`.  Among the four first-height cells in `(6.2c)`,
-`(84,105)` is the unique one with the clean transverse degree ratio `4:5`.
-This entire conclusion is conditional on the displayed tops controlling
-ordinary total degree; a
-lower `w`-row with larger `u`-degree must be retyped separately.
+Repaired subleading rigidity and `(6.11)` give
+
+```text
+Q_124=(5d/(4c))H P_99,
+D_3(H)=H rad(H)=u^25w^2 | P_99,
+u^49w^3 | Q_124.
+```
+
+Thus `P_99` is parametrized by a degree-72 quotient: `73` homogeneous
+coefficients rather than `100`.  This entire conclusion is conditional on
+the displayed tops controlling ordinary total degree; a lower `w`-row with
+larger `u`-degree creates a second Newton scale and must be retyped
+separately.  MISTAKE-427 records why `(84,105)` is now only a hostile.
 
 ### D. Catalan self-intersection thickening and its universal cubic cover
 
@@ -1159,8 +1218,8 @@ unclosed recurrence cell.  This is
 
 The global degree gates move the actual counterexample frontier much farther.
 If every `a_j,b_j` has degree at most `D`, both components have total degree
-at most `D+N`.  Since the first globally admissible reduced height is `105`,
-any viable width-three instance must have `D+3>=105`, hence `D>=102`.
+at most `D+N`.  Since the live first reduced height is `108`, any viable
+width-three instance must have `D+3>=108`, hence `D>=105`.
 Therefore the `D=6` branch is valuable for discovering a renewal mechanism,
 but is already globally excluded as a planar counterexample cell.
 
@@ -1256,6 +1315,17 @@ Thus the packet contains one explicit escaping root and one quadratic
 Kummer pair; `L` is the odd discriminant/infinity owner and `S^2` records
 finite-root collisions.  This is the proved structural content of
 [THM-3556](../01-canon/theorems/THM-3556-cusp-square-packet-marked-root-kummer-owner.md).
+There is also a dual cubic visible entirely in the packet observables:
+
+```text
+Y^3-3TY+2S=(Y-y)[Y^2+yY+2(9vU-y^2)],
+disc_Y=-(54U)^2L.
+```
+
+Here the finite source coordinate `y` is the marked root, and the residual
+quadratic again has square class `-L`.  Any projection that hides the
+escaping sheet must preserve this common resolvent sidecar, not just the
+scalar cusp identity.
 Every natural two-coordinate output is nevertheless obstructed:
 
 ```text
@@ -1352,8 +1422,8 @@ counterexample must satisfy all of the following:
    multiplicity, hence degree at least eight;
 4. in a reduced target basis the pencil has one low degree `n` and one
    generic degree `m`, with `8<=n<m`, `m>100`, `gcd(n,m)>=16`, and gcd not
-   twice a prime; its first arithmetic height is `105` with the four cells
-   in `(6.2c)`;
+   twice a prime; the cited sub-`125` list makes `(72,108)` the unique first
+   pair, with the radical taxes in `(6.2e)`;
 5. the subleading correction `W` vanishes, by repaired THM-3025;
 6. in `b<a<2b`, every root multiplicity obeys the extra divisor tax
    `(6.10)`--`(6.12)`;
@@ -1370,22 +1440,26 @@ counterexample must satisfy all of the following:
 11. any supplied Puiseux escape branch has escape exponent
     `m_escape<=r(d-2)` and approaches either a dark rank-one conductance
     plaquette or a channel-degenerate regime;
-12. a torus-quotient repair preserving the inherited collision must alter
+12. displayed polynomial-graph descent from the fixed cubic Keller map is
+    impossible in every degree, so ambient descent must use a nonlinear
+    coordinate change or a nongraph coordinate hypersurface;
+13. a torus-quotient repair preserving the inherited collision must alter
     both outputs and begin at sorted transverse degrees at least `(4,5)`;
-13. a collision thickening must evade the separated Catalan tail and, in the
+    its first row-dominant `4:5` box not cited away is `(100,125)`;
+14. a collision thickening must evade the separated Catalan tail and, in the
     universal cubic chart, move the ramification line at order zero rather
     than fix it through higher normal jets;
-14. in the mixed Catalan ansatz, widths one and two are impossible, width
+15. in the mixed Catalan ansatz, widths one and two are impossible, width
     three is internally closed through coefficient degree five, and the
-    global height gate forces any viable width-three cap to be at least `102`;
-15. the exact quadratic Kummer collision cannot be filled across its missing
+    global height gate forces any viable width-three cap to be at least `105`;
+16. the exact quadratic Kummer collision cannot be filled across its missing
     divisor while preserving etaleness and the same function field;
-16. a cusp-packet projection must solve the descending, integrable,
+17. a cusp-packet projection must solve the descending, integrable,
     decomposable minor Bezout equation, retain its escaping marked root, and
     preserve normalization, coordinate-order index, Jelonek/nonproperness
     data, and hidden discriminant components.
 
-Items 11--16 are conditional or architecture-specific necessities, not a
+Items 11--17 are conditional or architecture-specific necessities, not a
 complete classification of all planar counterexamples.
 
 ## 9. Connection ledger
@@ -1400,9 +1474,9 @@ complete classification of all planar counterexamples.
 | odd-row maximum `2C_t` | filler `Q_t=2C_t+1` | collision-free row sentinel | support-point semantics | diagonal fixed point if support matters | compare `(t+1,t+1)` with `Q_t` |
 | higher-dimensional collision | categorical quotient | invariant functions, collision image | transverse character | ramification divisor | THM-3543 square factor |
 | ramified torus quotient | polynomial corrections `(A,B)` | polynomiality and chosen collision if imposed | low transverse repair cells | both outputs, `w`-degree `(4,5)`, common-power top | THM-3549 boundary solve |
-| higher-dimensional collision | coordinate graph restriction | tangent directions, ambient unit determinant | nothing if coordinates verified | coordinate/divisibility certificate | THM-3546 four gates |
+| higher-dimensional collision | coordinate-hypersurface restriction | tangent directions and ambient unit determinant | displayed polynomial graphs are all obstructed | nonlinear coordinates or a nongraph hypersurface | THM-3553 top row, then THM-3546 four gates |
 | transverse boundary collision | Catalan formal thickening, then universal cubic root cover after adjoining `r` | selected collision and the exact ramification-cancellation mechanism | polynomiality in `w`; constant Jacobian after polynomialization | mixed terms that move `R=0` and send branching to infinity | fixed-line first jet, then mixed response boxes |
-| mixed Catalan polynomial ansatz | coefficient-row recurrence `E_k` | polynomiality and selected collision | low width cannot terminate the tail | width/degree state plus global degree passport | width 3 degree 6 as hostile; viable cap at least 102 |
+| mixed Catalan polynomial ansatz | coefficient-row recurrence `E_k` | polynomiality and selected collision | low width cannot terminate the tail | width/degree state plus global degree passport | width 3 degree 6 as hostile; viable cap at least 105 |
 | curved ambient collision surface | punctured Kummer cover `(s,b)->(b,4s^2)` | finite etale collision | affine-plane completeness | boundary valuation / nonconstant unit | try mixed function-field deformation |
 | cusp packet `(L,T,U,S)` | marked-root/Kummer inverse cubic, then two nonlinear polynomial outputs | escaping root, odd discriminant owner, full immersion | decomposability and descent can fail in projection | Pluecker relation, integrability, order index, wandering prime | solve the descending minor-Bezout system |
 | leading form `H^a,H^b` | first Euclidean coefficient tower | exact divisibility | later renewal/new faces | root multiplicities and full Newton packet | bound `(6.11)` then next layer |
@@ -1420,13 +1494,13 @@ complete classification of all planar counterexamples.
    hand-picked cancellation square.
 4. **Torus-correction boundary.**  Start at transverse degrees `(4,5)` with
    top coefficients `(c h^4,d h^5)`, impose the inherited two-point collision,
-   and solve the remaining Jacobian rows; prioritize the clean `(84,105)`
-   cell by writing `P_83=u^21w^2C_60`, only `61` homogeneous coefficients,
+   and solve the remaining Jacobian rows; prioritize the clean `(100,125)`
+   cell by writing `P_99=u^25w^2C_72`, only `73` homogeneous coefficients,
    and reject any retained contracted line.
 5. **Mixed Catalan thickenings.**  Use width-three degree six only as the
    cheapest renewal-mechanism probe; it is globally too small.  For an actual
-   counterexample search, jump to sparse coefficient cap at least `102`,
-   impose the height-105 degree cells, and solve the recurrence with support
+   counterexample search, jump to sparse coefficient cap at least `105`,
+   impose the height-108 pair `(72,108)`, and solve the recurrence with support
    pruning.  In the universal cubic chart, require the deformation to move
    `R=p+3t^2=0` at order zero; reject every ansatz that merely fixes the line
    and changes its normal jet.
@@ -1440,10 +1514,11 @@ complete classification of all planar counterexamples.
    before testing the coordinate-order index or periodic image prime.  The
    current finite box already rejects natural and constant-linear
    projections.
-8. **Coordinate-graph descent.**  Continue beyond the exact degree-three
-   graph exclusion; solve the scheme-theoretic identity at increasing degree
-   and then verify coordinate status, with positive triangular controls and
-   hostile smooth noncoordinate hypersurfaces.
+8. **Coordinate-hypersurface descent.**  Stop searching displayed graphs,
+   which THM-3553 excludes in every degree.  Instead enumerate low-degree
+   nonlinear ambient coordinate changes and nongraph coordinate
+   hypersurfaces, then test exact divisibility and coordinate status, using
+   the plane `x=0` as the positive hostile control.
 9. **Finite-dephasing diagnostics.**  Use the first nonzero loop correction,
    not the resistor limit, as a numerical detector for the coefficient
    holonomies most likely to control cancellation.
@@ -1463,6 +1538,9 @@ complete classification of all planar counterexamples.
   excluded by stronger cited results.
 - The new divisor `(6.11)` concerns only the first post-subleading layer and
   only `b<a<2b`; it is not an infinite tower.
+- The cited 2022 sub-`125` list is imported rather than reproved.  It excludes
+  the weaker height-`105` screen and leaves `(72,108)` as the current first
+  passport; it does not assert that such a counterexample exists.
 - The immersive cusp packet has a proved marked-root/Kummer inverse-cubic
   factorization, but its nonlinear decomposable projection and graph-descent
   criterion are construction programs, not counterexamples.
@@ -1477,10 +1555,13 @@ complete classification of all planar counterexamples.
 - The punctured Kummer map is a genuine finite etale collision, but its source
   is `G_m x A^1`; THM-3554 excludes only affine-plane fillings with the same
   quadratic function field.
+- THM-3553 excludes polynomial graphs only in the displayed coordinates of
+  one fixed ambient cubic map.  It does not exclude graphs after nonlinear
+  ambient changes or nongraph coordinate hypersurfaces.
 - THM-3549 closes one-sided, low-total-degree, and transverse-affine repairs
   of one fixed quotient seed; the mixed `(4,5)`-and-above correction box is
-  still open.  THM-3550's prime-degree proof is canonized but remains labelled
-  as undergoing hostile audit.
+  still open.  Its `(100,125)` transfer assumes the transverse top rows also
+  dominate ordinary degree.  THM-3550 is independently hostile-audited.
 - `JC(2)` remains open.
 
 The most productive conceptual compression is:

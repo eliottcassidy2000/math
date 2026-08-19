@@ -316,7 +316,7 @@ print("   D_k(H)=product L^ceil((e(k-1)+1)/2), k=2b-a: exact sample exponents PA
 print("   squarefree (a,b)=(5,4) forces H^2|Q_(m-1); multiplicities (2,3) force (3,4): PASS")
 
 
-print("\nSECTION I. First arithmetic degree cells after the cited global gates.")
+print("\nSECTION I. Weaker AON/Moh/2014-gcd sieve: retained as a hostile, not the live frontier.")
 
 
 def omega(number):
@@ -362,7 +362,7 @@ chamber_cells = {
     if low_degree < high_degree < 2 * low_degree
 }
 require(chamber_cells == {63: 1, 70: 1, 84: 3}, "first chamber-cell screen failed")
-print(f"   first height={first_height}; cells (n,m,g,n/g,m/g)={first_cells}: PASS")
+print(f"   weaker sieve first height={first_height}; cells (n,m,g,n/g,m/g)={first_cells}: PASS")
 print(f"   first-chamber cells n->k: {chamber_cells}: PASS")
 
 Hclean = u**20 * w
@@ -370,6 +370,57 @@ Dclean = u ** forced_exponent(20, 3) * w ** forced_exponent(1, 3)
 require(Dclean == u**21 * w**2 == Hclean * u * w, "clean torus divisor failed")
 require(sp.Poly(Dclean, u, w).total_degree() == 23, "clean torus divisor degree failed")
 require(83 - 23 == 60 and 60 + 1 == 61, "clean torus quotient dimension failed")
-print("   clean torus cell (84,105): D_3(u^20 w)=u^21 w^2, leaving 61 degree-60 quotient coefficients: PASS")
+print("   obsolete torus hostile (84,105): D_3(u^20 w)=u^21 w^2, leaving 61 degree-60 quotient coefficients: PASS")
+
+
+print("\nSECTION J. Imported 2022 sub-125 degree list and the repaired live frontier.")
+
+# CITED input: the 2022 Guccione--Guccione--Horruitiner--Valqui
+# classification leaves only (72,108), up to transpose, below height 125.
+# The assertions below verify only its exact arithmetic consequences.
+cited_sub125_pair = (72, 108)
+low_degree, high_degree = cited_sub125_pair
+common_degree = gcd(low_degree, high_degree)
+require(
+    (common_degree, low_degree // common_degree, high_degree // common_degree)
+    == (36, 2, 3),
+    "cited sub-125 pair typing failed",
+)
+require(
+    omega(low_degree) >= 3 and omega(high_degree) >= 3,
+    "cited sub-125 pair failed the prime-factor gate",
+)
+require(
+    common_degree >= 16
+    and not (common_degree % 2 == 0 and sp.isprime(common_degree // 2)),
+    "cited sub-125 pair failed the gcd gate",
+)
+require(
+    all(forced_exponent(root_multiplicity, 1) == 1 for root_multiplicity in range(1, 36)),
+    "(72,108) radical divisor typing failed",
+)
+require(71 - 36 == 35 and 35 + 1 == 36, "(72,108) squarefree quotient dimension failed")
+require(108 + 36 == 144, "(72,108) squarefree subleading codimension failed")
+print("   cited unique reduced pair below height 125 is (72,108)=(36*2,36*3): arithmetic PASS")
+print("   its first-chamber tax is rad(H)|F_71 and H rad(H)|G_107: PASS")
+print("   squarefree H leaves 36 subleading coefficients and gives codimension 144 in the paired rows: PASS")
+
+row_dominant_pairs = [(4 * N, 5 * N) for N in range(1, 25)]
+require(cited_sub125_pair not in row_dominant_pairs, "4:5 torus ratio met the cited 2:3 pair")
+require((4 * 25, 5 * 25) == (100, 125), "first row-dominant torus boundary failed")
+Hlive = u**24 * w
+Dlive = u ** forced_exponent(24, 3) * w ** forced_exponent(1, 3)
+require(Dlive == u**25 * w**2 == Hlive * u * w, "live torus divisor failed")
+require(sp.Poly(Dlive, u, w).total_degree() == 27, "live torus divisor degree failed")
+require(99 - 27 == 72 and 72 + 1 == 73, "live torus quotient dimension failed")
+require(Hlive * Dlive == u**49 * w**3, "live torus high subleading divisor failed")
+print("   first row-dominant 4:5 box not excluded is (100,125), with h-degree 24: PASS")
+print("   D_3(u^24 w)=u^25 w^2; P_99 has a degree-72 quotient (73 coefficients), and u^49 w^3|Q_124: PASS")
+
+mixed_width = 3
+first_live_height = 108
+minimum_coefficient_cap = first_live_height - mixed_width
+require(minimum_coefficient_cap == 105, "mixed-Catalan global cap transfer failed")
+print("   width-three mixed Catalan needs coefficient cap at least 105 before the cited degree passport permits it: PASS")
 
 print("\nALL CHECKS PASSED")
