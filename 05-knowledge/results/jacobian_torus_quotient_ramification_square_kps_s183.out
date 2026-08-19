@@ -1,0 +1,18 @@
+THM-1300 TORUS QUOTIENT -- EXACT RAMIFICATION AUDIT
+A(v,t) = (v + 1)*(t*v**2 + 2*t*v + t + 3*v**3 + 4*v**2)
+B(v,t) = 3*t*v**2 + 6*t*v + 3*t + 9*v**3 + 12*v**2 + v
+C(v,t) = -t - 3*v + 2
+V(v,t) = B*C = -(t + 3*v - 2)*(3*t*v**2 + 6*t*v + 3*t + 9*v**3 + 12*v**2 + v)
+T(v,t) = A*C^2 = (v + 1)*(t + 3*v - 2)**2*(t*v**2 + 2*t*v + t + 3*v**3 + 4*v**2)
+det d(V,T)/d(v,t) = 2*(t + 3*v - 2)**2
+q0=(0,0): (A,B,C,V,T,jac) = (0, 0, 2, 0, 0, 8)
+q1=(-3/2,13/2): (A,B,C,V,T,jac) = (-1/4, 0, 0, 0, 0, 0)
+on C=0: B=2*(2*v + 3), A=(v + 1)*(v + 2)
+the whole line C=0 maps to (V,T)=(0,0)
+rational escape (T/V^2,V): Jacobian = -2/(3*t*v**2 + 6*t*v + 3*t + 9*v**3 + 12*v**2 + v)**2
+local A(r,c) = -c*r**3 + 3*c*r**2/2 - 3*c*r/4 + c/8 + r**2 - 1/4
+local B(r,c) = -3*c*r**2 + 3*c*r - 3*c/4 + 4*r
+quadratic initial map = (-3*c**2/4 + 4*c*r, -c**2/4)
+local Jacobian = -2*c**2; initial Jacobian = -2*c**2
+VERDICT: the categorical quotient has a forced ramification square C^2.
+SCOPE: this obstructs invariant polynomial compression only; it is not JC(2).

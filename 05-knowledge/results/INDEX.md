@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `jacobian_torus_quotient_ramification_square_kps_s183.py` -> matching
+  `.out` [THM-3543 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
+  WITH SCOPE REPAIRS].  For the fixed THM-1300 map, the full source and target
+  torus invariant rings are `k[xy,x^2z]` and `k[beta gamma,alpha gamma^2]`.
+  The induced polynomial-plane map is `(BC,AC^2)` with exact Jacobian
+  `2(2-3v-t)^2`; the whole line `2-3v-t=0` contracts to the origin.  Every
+  polynomial pair of target invariants factors through this map, so its
+  pullback Jacobian is zero or remains divisible by the ramification square.
+  The rational recombination `(T/V^2,V)` removes that square only by creating
+  the pole `-2/B^2`.  This is a full-torus target-invariant polynomial
+  compression no-go, not a theorem about source invariants, semi-invariants,
+  non-invariant surfaces, or `JC(2)`.  Script/output LF SHA-256:
+  `9066e3319ba74c31408cbd505e1ae0f849de00d0357582cafb4ccf4aeaf13e51` /
+  `3d9388a73d7bd3308098cba3f2754be9b356f13c095c1f07fd595e03c65345c6`.
+
 - `keller_grade_monoid_factorization_lengths_thm3541_20260816.py` -> matching
   `.out` [THM-3541 PROVED + VERIFIED-EXACT].  For the Keller grade monoid
   `M={1} union {n>=3}`, the numerical atoms are the odd primes, `4`, `8`, and
