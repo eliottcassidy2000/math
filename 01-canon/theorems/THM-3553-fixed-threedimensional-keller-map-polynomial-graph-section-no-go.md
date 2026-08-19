@@ -18,6 +18,8 @@ related:
   - THM-3543-quotient-stabilization-collision-versus-ramification-boundary
   - THM-3544-planar-keller-target-pencil-total-degree-six-floor
   - THM-3546-invariant-graph-keller-descent-criterion
+  - THM-3550-prime-degree-exclusion-and-pencil-height-eight-floor
+  - THM-3554-punctured-kummer-collision-surface-normal-form
 script: 04-computation/jc_fixed_threedimensional_graph_section_no_go_thm3553.py
 output: 05-knowledge/results/jc_fixed_threedimensional_graph_section_no_go_thm3553.out
 script_sha256: e958c30bdfe681a62149b625ba310ba77354918384c1667d1f45cc81e54296f3
