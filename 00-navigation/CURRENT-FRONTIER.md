@@ -339,8 +339,8 @@ is sharp: equal counts allow two densities or none.
   `>=8`; cited Nagata/GGHV gates sharpen this to `Omega(deg R)>=3` and
   reduced height `>=108`, with only `(72,108)` below `125`.
   THM-3543/3545/3554 give the ramified/algebraic/punctured collision pincer;
-  THM-3549 starts quotient repair at transverse `(4,5)`; THM-3553 closes all
-  displayed polynomial graphs. THM-3551/3552 close the one-ray and cyclic-
+  THM-3549 starts quotient repair at `(4,5)`; THM-3553/3558 close displayed
+  graphs and affine-plane/smooth-target descents. THM-3551/3552 close one-ray/cyclic-
   exactness families; THM-3555--57 give cubic-root/cusp-square owners and the
   low-width mixed no-go. THM-3546/3548 leave nonlinear coordinate-hypersurface
   descent and phase-aware conductance gates.

@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jacobian_linear_collision_plane_second_jet_no_go_kps_s188.py` -> matching
+  `.out` [THM-3558 PROVED + VERIFIED-EXACT].  For every affine source plane
+  through a pair in the fixed THM-1300 triple collision, the two image germs
+  cannot lie in one target hypersurface smooth at the common value.  The
+  pairs involving `p0` have nonparallel transported tangent planes for every
+  plane parameter.  The `p+,p-` family has exactly two tangent-compatible
+  planes over `Q(sqrt(13))`, but their target graph Hessians differ.  Thus no
+  affine coordinate-plane descent survives any smooth target coordinate
+  change; nonlinear source coordinate hypersurfaces remain open.  Normal and
+  `-O` replay matches.  Script/output LF SHA-256:
+  `fd56a535bcb48601a5eca0a22aed066d71d1e8ea9baa120a027e6373a4dc8288` /
+  `9764c1507dc148ccc9fc6af63d43186b0e3cb0c6ad0d2d1c516e97fd490f6cee`.
+
 - `jc_fixed_threedimensional_graph_section_no_go_thm3553.py` -> matching `.out`
   [THM-3553 PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVATION-AUDITED].
   For the fixed THM-1300 map, no polynomial graph `z=h(x,y)` makes the
