@@ -1,12 +1,12 @@
 ---
-id: THM-3553
+id: THM-3554
 title: "Punctured Kummer normal form of the fixed Keller collision surface"
 status: RESERVED / UNPROVED EMPTY STUB
 source: kps-s188
 depends_on: []
 ---
 
-# THM-3553 -- punctured Kummer normal form of the fixed Keller collision surface
+# THM-3554 -- punctured Kummer normal form of the fixed Keller collision surface
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
