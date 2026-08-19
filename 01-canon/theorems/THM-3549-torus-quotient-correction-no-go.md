@@ -9,7 +9,11 @@ status: >
   most two give the unit coefficient ideal; through degree three the
   constant is forced to zero, with or without the inherited collision.
   Corrections affine in w fail in every u-degree.  Any collision-preserving
-  Keller correction must instead give sorted final w-degrees at least (4,5).
+  Keller correction must instead give sorted final w-degrees at least (4,5),
+  whose transverse top is already a common fourth/fifth power.  As a
+  separately labeled CITED corollary of the 2022 sub-125 degree
+  classification, the first row-dominant boundary box not already excluded
+  has ordinary degree pair (100,125).
 source: boxeph-2026-08-18-jacobian-dephasing
 depends_on:
   - THM-3543-torus-quotient-ramification-square-no-go
@@ -220,7 +224,43 @@ quartic/quintic coefficients.  Its lower rows must cancel the inherited
 `-2w^2` and preserve the collision.  Equations `(18)`--`(20)` are a further
 necessary gate, not an existence claim.
 
-## 6. Search interpretation and failure boundary
+## 6. Ordinary-degree transfer -- CITED input, proved corollary
+
+This section imports the Guccione--Guccione--Horruitiner--Valqui
+classification of hypothetical counterexample degree pairs of height below
+`125`: only `(72,108)` and its transpose survive.  This is a **CITED** input,
+not an internal proof of that classification.
+
+In the boundary cell `(18)`--`(20)`, put
+
+```text
+N=deg h+1.                                                (21)
+```
+
+If the two top transverse rows also determine the ordinary total degrees,
+then their unique top terms have degrees
+
+```text
+(deg P,deg Q)=(4N,5N).                                   (22)
+```
+
+For `N<25`, the height `5N` is below `125`, but `(4N,5N)` cannot equal
+`(72,108)` or its transpose because its ratio is `4:5`, not `2:3`.
+Therefore every row-dominant case with `N<25` is excluded by the cited
+classification.  The first row-dominant box not excluded by that numerical
+gate is
+
+```text
+N=25,          deg h=24,          (deg P,deg Q)=(100,125). (23)
+```
+
+This does not say that `(100,125)` exists or passes any Newton/infinity
+gate.  Below `N=25`, a viable correction would need a lower-`w`, higher-`u`
+row to dominate ordinary degree, thereby producing a genuinely second
+Newton scale.  If that new height remained below `125`, its reduced pair
+would have to be `(72,108)`.
+
+## 7. Search interpretation and failure boundary
 
 The quotient already supplies polynomiality, a genuine collision, generic
 degree three, and a simple square conductor.  The no-gos show why subtracting
