@@ -10,8 +10,10 @@ status: >
   lambda, the target shear c+lambda*b^m has Jelonek section normalized by
   s^2=4+3lambda*b^(m+1), with one finite point removed.  Its section Euler
   characteristic is -m, its omitted-curve intersection has m+1 points, and
-  its full pullback has Euler characteristic m+2, never that of A2.  Thus
-  no monomial b-shear pullback is a source coordinate, in any degree.
+  its full pullback has Euler characteristic m+2, never that of A2.  The
+  specialized core cubic has no rational root by the a-infinity valuation,
+  so the pullback is irreducible.  Thus no monomial b-shear pullback has any
+  source-coordinate factor, in any degree.
 source: kps-s188
 depends_on:
   - THM-1300-jacobian-counterexample-dixmier-A3-explicit
@@ -22,8 +24,8 @@ related:
   - THM-3559-affine-target-coordinate-pullback-no-go
 companion: 04-computation/jacobian_jelonek_euler_monomial_shear_kps_s188.py
 output: 05-knowledge/results/jacobian_jelonek_euler_monomial_shear_kps_s188.out
-script_sha256: 9328348e3350a677be17d8a458c0cc016719d8c98f241aef649e18ee886e3677
-output_sha256: 83352cfe7a4d0edfe8212c0e42a4b805ac21c97cef0b082cb1d63dc062b1d885
+script_sha256: a1f757e1bb83db9475d8e6d771cb8c7b88eefd4a55c766bafee5db6b246b3c60
+output_sha256: 8aec39457572d62841f9faa25ed836e0ec9b8d758c7712adee804ff8e4f92675
 hash_basis: LF-normalized bytes
 ---
 
@@ -216,14 +218,34 @@ Since `m+2!=1`, the pullback hypersurface
 V(F3+lambda F2^m)                                      (21)
 ```
 
-is never isomorphic to `A^2` and `F3+lambda F2^m` is never a source
-coordinate.  This closes the complete monomial `b`-shear family in every
-degree.
+is never isomorphic to `A^2`.  In fact it is irreducible.  THM-2473's core
+fibre cubic over the function field `C(a,b)` of `T_m` specializes to
 
-The theorem concerns the **complete pullback** in `(21)`.  It does not rule
-out a coordinate irreducible factor of `(21)`, a mixed polynomial shear
-`c+phi(a,b)`, or a nonlinear target coordinate not triangular in `c`.
-Those are the surviving descent cells.
+```text
+L_m x^3+(4+3lambda b^(m+1))x+2lambda b^m.             (22)
+```
+
+At the discrete valuation `a=infinity`, `v(a)=-1`, its three terms at an
+alleged rational root of valuation `k in Z` have valuations
+
+```text
+-2+3k,                         k,                      0.  (23)
+```
+
+For `k<=0`, the first is the unique minimum.  For `k>=1`, the constant term
+is the unique minimum.  A vanishing valued sum must attain its minimum at
+least twice, so `(22)` has no root in `C(a,b)` and is irreducible.  Since `F`
+is quasi-finite, every irreducible component of the hypersurface `(21)`
+would dominate `T_m`; `(22)` therefore proves that `(21)` has only one
+component.
+
+Thus `F3+lambda F2^m` is irreducible and not a coordinate.  It has no
+source-coordinate factor.  This closes the complete monomial `b`-shear
+family in every degree.
+
+The theorem does not rule out a mixed polynomial shear `c+phi(a,b)` or a
+nonlinear target coordinate not triangular in `c`.  Those are the surviving
+descent cells.
 
 ## 5. Exact verification
 
@@ -237,8 +259,9 @@ python3 -O 04-computation/jacobian_jelonek_euler_monomial_shear_kps_s188.py
 The ordinary and optimized transcripts agree.  The companion verifies the
 universal discriminant identity by replacing `b^(m+1)` with one symbol, and
 then independently checks `(11)`, `(15)`, `(17)--(20)` for `1<=m<=12`,
-covering both parity classes and the two CM elliptic cases.  The proof of the
-all-degree formulas is the displayed algebra, not an extrapolation from the
-twelve controls.
+covering both parity classes and the two CM elliptic cases.  It also checks
+the valuation minimum across `-24<=k<=24`; the two-case proof after `(23)`
+covers every integer.  The all-degree claims are displayed algebra, not an
+extrapolation from finite controls.
 
 **QED.**

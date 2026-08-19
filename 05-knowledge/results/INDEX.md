@@ -39,11 +39,13 @@
   `c+lambda*b^m`, `m>=1`, the Jelonek section normalizes to
   `s^2=4+3lambda*b^(m+1)` with one point removed, so its Euler characteristic
   is `-m`; the omitted-curve intersection has `m+1` points and the complete
-  pullback has Euler characteristic `m+2`, never `1`.  This closes all degrees;
-  `m=2,3` are respectively the equianharmonic and lemniscatic elliptic curves.
+  pullback has Euler characteristic `m+2`, never `1`.  The core cubic's
+  `a`-infinity term valuations `(-2+3k,k,0)` have a unique minimum for every
+  integer `k`, proving the pullback irreducible and closing coordinate
+  factors too.  The `m=2,3` curves are equianharmonic and lemniscatic.
   Normal/`-O` replay matches.  Script/output LF SHA-256:
-  `9328348e3350a677be17d8a458c0cc016719d8c98f241aef649e18ee886e3677` /
-  `83352cfe7a4d0edfe8212c0e42a4b805ac21c97cef0b082cb1d63dc062b1d885`.
+  `a1f757e1bb83db9475d8e6d771cb8c7b88eefd4a55c766bafee5db6b246b3c60` /
+  `8aec39457572d62841f9faa25ed836e0ec9b8d758c7712adee804ff8e4f92675`.
 
 - `jacobian_affine_target_pullback_factor_atlas_kps_s188.py` -> matching
   `.out` [THM-3559 PROVED + VERIFIED-EXACT].  For every affine target

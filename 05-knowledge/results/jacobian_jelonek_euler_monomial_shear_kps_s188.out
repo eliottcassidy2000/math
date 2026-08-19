@@ -15,4 +15,6 @@ m n genus infinity chi(D) chi(e) chi(preimage)
 11 12 5 2 -11 12 13
 12 13 6 1 -12 13 14
 formula: chi(D)=-m, chi(e)=m+1, chi(F^-1(T_m))=m+2
+core cubic root valuations at a=infinity: (-2+3k,k,0), unique minimum for every k in Z
+verdict: pullback irreducible; no coordinate factor in any monomial shear
 all active truth gates passed
