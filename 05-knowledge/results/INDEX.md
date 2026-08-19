@@ -17,6 +17,18 @@
   `62563ebd5802fe5c7f2bcff35b6a5705f035f17daeb20a78371e92eebea302fd` /
   `236c346caa1b9ea849a2ea38c7f5157bdc00fbf5af6947394535c4f592a4af73` /
   `9d67cf6cae996e86b8ae59d7d882c24125357863d302366dbebf87e974657019`.
+- `jacobian_jelonek_euler_monomial_shear_kps_s188.py` -> matching `.out`
+  [THM-3560 PROVED + VERIFIED-EXACT].  Constructible Euler integration through
+  the fixed map's exact `3/1/0` fibre strata gives the coordinate-pullback gate
+  `2chi(T intersect L)+chi(T intersect E)=2`.  For every monomial target shear
+  `c+lambda*b^m`, `m>=1`, the Jelonek section normalizes to
+  `s^2=4+3lambda*b^(m+1)` with one point removed, so its Euler characteristic
+  is `-m`; the omitted-curve intersection has `m+1` points and the complete
+  pullback has Euler characteristic `m+2`, never `1`.  This closes all degrees;
+  `m=2,3` are respectively the equianharmonic and lemniscatic elliptic curves.
+  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `9328348e3350a677be17d8a458c0cc016719d8c98f241aef649e18ee886e3677` /
+  `83352cfe7a4d0edfe8212c0e42a4b805ac21c97cef0b082cb1d63dc062b1d885`.
 
 - `jacobian_affine_target_pullback_factor_atlas_kps_s188.py` -> matching
   `.out` [THM-3559 PROVED + VERIFIED-EXACT].  For every affine target

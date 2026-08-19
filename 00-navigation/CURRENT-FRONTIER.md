@@ -341,11 +341,9 @@ is sharp: equal counts allow two densities or none.
   THM-3543/3545/3554 give the ramified/algebraic/punctured collision pincer;
   THM-3549 starts quotient repair at `(4,5)`; THM-3553/3558/3559 close
   displayed graphs and every descent linear on either side. THM-3551/3552
-  close one-ray/cyclic-
-  exactness families; THM-3555--57 + D6 close mixed `N<=2` and `N=3,D<=6`;
-  `D>=7`/width `>=4` open.
-  THM-3546/3548 leave nonlinear coordinate-hypersurface descent and phase-aware
-  conductance gates.
+  close one-ray/cyclic families. THM-3555--57 + D6 close mixed `N<=2` and
+  `N=3,D<=6`; `D>=7`/width `>=4` open. THM-3560 closes monomial target
+  shears; THM-3546/3548 leave nonlinear descent/conductance.
   THM-3495--3542 give the iterated image/divisor/packet/LCA atlas: packets are
   explicit through `R8`, index is zero through level four, and higher levels
   remain open. THM-3504 is the level-four router. THM-2681/2685--2708 block
