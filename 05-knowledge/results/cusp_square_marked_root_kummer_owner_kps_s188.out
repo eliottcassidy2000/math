@@ -1,0 +1,15 @@
+CUSP-SQUARE PACKET -- MARKED-ROOT/KUMMER OWNER AUDIT
+L=v^2*(8*v*U-y^2), T=y^2-6*v*U, S=y^3-9*v*U*y
+S^2-T^3-27*L*U^2 = 0
+E(X)=L*X^3+T*X+2*U factors as (v*X+1)*(8*X**2*v**2*U(v, y) - X**2*v*y**2 - 8*X*v*U(v, y) + X*y**2 + 2*U(v, y))
+quadratic discriminant = y**2*(-8*v*U(v, y) + y**2)
+linear/quadratic resultant = -2*v*(-9*v*U(v, y) + y**2)
+cubic discriminant = 4*v**2*y**2*(-9*v*U(v, y) + y**2)**2*(-8*v*U(v, y) + y**2)
+Jac(T,S) = 54*v*(v*Derivative(U(v, y), v) + U(v, y))*U(v, y)
+Jac(L,T), Jac(L,U), Jac(L,S) are divisible by v
+Jac(T,U) = -2*(y*Derivative(U(v, y), v) + 3*U(v, y)*Derivative(U(v, y), y))
+Jac(U,S)|_(v=0) = 3*y*(y*Subs(Derivative(U(v, y), v), v, 0) + 3*U(0, y)*Derivative(U(0, y), y))
+explicit packet minor Groebner basis contains 1: True
+constant linear minor-combination solution set = EmptySet
+VERDICT: the packet is one marked escaping root plus a quadratic Kummer pair.
+SCOPE: natural/constant-linear projections fail; nonlinear projections remain open.
