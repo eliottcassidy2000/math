@@ -2,12 +2,13 @@
 id: THM-3547
 title: "Positive two-cube slope atlas through denominator 101 and four Pell rays"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT / INDEPENDENT AUDIT PENDING.  Among
+  PROVED + FINITE-EXACT + VERIFIED-EXACT / INDEPENDENTLY AUDITED WITH WORDING
+  REPAIRS.  Among
   the 528 primitive parity-correct reduced slopes through denominator 101,
   an exhaustive screen by every prime at most 199 excludes 517 and leaves 11
   explicitly listed screen survivors.  Four survivors carry directly
   certified positive odd Pell orbits, giving four infinite families of
-  distinct positive cubes x^3+y^3=(2r+1)^2+2.  No global insolubility or
+  positive ordered cube pairs with x^3+y^3=(2r+1)^2+2.  No global insolubility or
   everywhere-local-solubility statement is made for the other seven.
 source: kps-s185
 depends_on:
@@ -24,7 +25,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3547 -- four positive Pell rays survive the slope atlas through 101
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT / INDEPENDENT AUDIT PENDING.**
+**PROVED + FINITE-EXACT + VERIFIED-EXACT / INDEPENDENTLY AUDITED WITH WORDING
+REPAIRS.**
 THM-3375 found one positive ray and THM-3376 found a second.  The larger exact
 atlas shows that the mechanism is neither unique nor visible at small height:
 two more rays have enormous first certified seeds.
@@ -46,17 +48,22 @@ a=mn^2u^3+(2m+n)u,
 q=m^2n^2u^4+2m(m+n)u^2+1.                              (2)
 ```
 
-The two identities needed to compile a sum of two cubes are equivalent to
+The nontrivial identity needed to compile a sum of two cubes is controlled by
 
 ```text
 3W^2=n^2(4m^2-n^2)u^2+4(2m^2+2mn-n^2).                (3)
 ```
 
-Indeed `(3)` gives
+Indeed the first identity below holds identically, while direct expansion gives
 
 ```text
-a^2+2=dq,                    4q-d^2=3e^2.              (4)
+a^2+2=dq,
+4q-d^2-3e^2
+ =u^2[n^2(4m^2-n^2)u^2+4(2m^2+2mn-n^2)-3W^2].        (4)
 ```
+
+Thus for `u!=0`, equation `(3)` is equivalent to `4q-d^2=3e^2`.  Every
+certified ray below has positive odd `u`.
 
 For odd `u,W`, define
 
@@ -171,7 +178,9 @@ so `(5)` gives `x>y>0` at every depth.  Also `u'>u` for positive data, hence
 the orbit supplies infinitely many distinct positive integer solutions of
 `(6)`.
 
-The four limiting chamber ratios are
+Multiplication by the positive unit `P+Q sqrt(D)>1` gives
+`W_j/u_j -> sqrt(D)`.  Since `e_j=u_jW_j` and
+`d_j=n^2u_j^2+2`, the four limiting chamber ratios are
 
 ```text
 e/d -> sqrt(85)/23, sqrt(621)/29, sqrt(165)/47,
@@ -179,7 +188,16 @@ e/d -> sqrt(85)/23, sqrt(621)/29, sqrt(165)/47,
 ```
 
 respectively.  Their squares are distinct rational numbers, so the four rays
-are asymptotically distinct.  The companion prints and verifies the exact
+are asymptotically distinct.  In fact the reduced slope can be recovered from
+any compiled positive ordered pair: with
+
+```text
+N=sqrt(x+y-2)=nu,              a=sqrt(x^3+y^3-2),
+m/n=(a-N)/(N(x+y)).                                     (15)
+```
+
+Thus different displayed slopes cannot produce the same ordered pair, though
+no claim is made that their target-value sets are disjoint.  The companion prints and verifies the exact
 first `(x,y,r)` member of each ray; the huge members for `(26,47)` and
 `(98,101)` explain why bounded-height searches missed them.
 
@@ -197,3 +215,8 @@ representations.  The sharp next arithmetic target is to separate, for those
 seven slopes, three different possibilities that a finite prime screen cannot
 distinguish: a later local obstruction, a global norm-class obstruction, or a
 positive odd Pell orbit with another enormous regulator.
+
+The independent audit reconstructed all `528` slopes, all first-obstruction
+counts, the eleven survivors, every seed/unit norm, the cone recurrence,
+parity, growth, cube identities, replay hashes, and limits.  It supplied the
+`u!=0` precision in `(4)` and the limit justification above.

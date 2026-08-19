@@ -1,8 +1,8 @@
 # Script Results Index
 
 - `berggren_positive_cube_slope_atlas_101_kps_s183.py` -> matching `.out`
-  [THM-3547 PROVED + FINITE-EXACT + VERIFIED-EXACT; INDEPENDENT AUDIT
-  PENDING].  The 528 primitive parity-correct slopes through denominator 101
+  [THM-3547 PROVED + FINITE-EXACT + VERIFIED-EXACT; INDEPENDENTLY AUDITED
+  WITH WORDING REPAIRS].  The 528 primitive parity-correct slopes through denominator 101
   are screened modulo every prime through 199: 517 have a displayed first
   obstruction and exactly 11 survive the screen.  Four survivors `(14,23)`,
   `(26,29)`, `(26,47)`, `(98,101)` have explicit odd seeds and positive
