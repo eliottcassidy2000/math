@@ -1,15 +1,17 @@
 ---
 id: THM-3557
-title: "Low-width mixed Catalan thickening no-go and degree-six frontier"
+title: "Low-width mixed Catalan thickening no-go and degree-seven frontier"
 status: >
   PROVED + VERIFIED-EXACT + FINITE-EXACT.  For polynomial mixed
   thickenings of the self-intersection (v^2,v^3-v), transverse widths one
   and two admit no constant-Jacobian solution in any coefficient degree.
   At width three, the affine coefficient variety is exactly empty when all
-  coefficient degrees are at most 3, 4, or 5.  Thus the first unclosed
-  width-three cell has coefficient degree six; width at least four is also
-  open.  Every map in the ansatz retains the selected collision, so any
-  solution would be a planar counterexample.  No solution is claimed.
+  coefficient degrees are at most six.  The new degree-six square/cube branch
+  is forced to C=t^2,F=t^3 and then ends in two exact lower-row
+  contradictions.  Thus the first unclosed width-three cell has coefficient
+  degree seven; width at least four is also open.  Every map in the ansatz
+  retains the selected collision, so any solution would be a planar
+  counterexample.  No solution is claimed.
 source: kps-s187/kps-s188
 depends_on:
   - THM-3545-catalan-self-intersection-keller-thickening-boundary
@@ -21,8 +23,13 @@ related:
 companion: 04-computation/jc2_catalan_mixed_thickening_recurrence_kps_s187.py
 output: 05-knowledge/results/jc2_catalan_mixed_thickening_recurrence_kps_s187.out
 proof_note: 07-reflections/jc2-catalan-mixed-thickening-recurrence-kps-S187.md
+degree_six_companion: 04-computation/jc2_catalan_mixed_thickening_degree6_exact.py
+degree_six_output: 05-knowledge/results/jc2_catalan_mixed_thickening_degree6_exact.out
+degree_six_proof_note: 07-reflections/jc2-catalan-mixed-thickening-degree-six-exact-closure-20260818.md
 script_sha256: 0444ad61a0bb2cd165243db1a97f0cb0b299eb19263378c97d1dee9ff39a7e1e
 output_sha256: cd23937963962bc4f43b83fc2f3ab6b477970c76f3151b7247c0025145380832
+degree_six_script_sha256: a3f94ab9eb4157bec7effc15ac1f1a8ab0842814c3a4f4ae4f6705a97fe4346f
+degree_six_output_sha256: 02d23d80e4c50edc1323105a9d6fcc2cf5c77d729731a4be354c415251c31616
 hash_basis: LF-normalized bytes
 ---
 
@@ -30,8 +37,8 @@ hash_basis: LF-normalized bytes
 
 **PROVED + VERIFIED-EXACT + FINITE-EXACT.**  Mixed dependence on the boundary
 parameter does not repair THM-3545 at shallow transverse width.  Width two
-fails by a cap-free Wronskian/degree argument; width three first acquires a
-genuinely new branch at coefficient degree six.
+fails by a cap-free Wronskian/degree argument; width three is now empty
+through coefficient degree six and first remains open at degree seven.
 
 The field has characteristic zero.
 
@@ -142,7 +149,7 @@ Its first term has degree `2r+1`, while its Wronskian has degree at most
 This is the width-one system.  Hence no width-two solution exists, without a
 degree cap.
 
-## 4. Width three through coefficient degree five
+## 4. Width three through coefficient degree six
 
 For `N=3`, write
 
@@ -206,7 +213,7 @@ For each `D=3,4,5`, the affine coefficient variety is exactly empty.  This is
 not a failure of a heuristic solver and makes no statement about projective
 points at infinity, which do not represent affine polynomial coefficients.
 
-## 5. Controls and the first open cell
+## 5. Degree-six closure and the first open cell
 
 The exact recurrence has two positive controls:
 
@@ -220,7 +227,7 @@ The second control preserves the genuine Catalan prefix and locates its first
 leak at the correct row.  All 86 truth gates remain active under optimized
 execution, and ordinary/optimized transcripts equal the stored output.
 
-At `D=6`, new common-power cases appear:
+At `D=6`, the new common-power cases are
 
 ```text
 (deg s,deg e)=(4,6),
@@ -229,31 +236,63 @@ At `D=6`, new common-power cases appear:
 ```
 
 They are absent from the cap-five proof and cannot be discarded by repeating
-its ledger.  Thus the first open width-three target is exactly coefficient
-degree six.  Width four is independently open.
+its ledger.  The degree-six companion performs the exhaustive refined ledger.
+Every branch closes except
+
+```text
+e=0,                deg(a,b,c,d,f)=(3,4,4,5,6),       (19)
+c=C h^2,            f=F h^3,             deg h=2.
+```
+
+An exact parametrization of `E0,E1`, saturated by every prescribed leading
+coefficient, reduces the top coefficients of `E2,E3` to
+
+```text
+-3Ct+2F+t^3=0,              2Ft-C^2-Ct^2=0.           (20)
+```
+
+Their eliminant is `(C-t^2)^2`, so `C=t^2,F=t^3`.  The next rows force a
+common coefficient `U=A` and then split as
+
+```text
+(B-R)(3(B-R)+2t)=0.                                   (21)
+```
+
+The first branch has terminal coefficient `-6t^2`.  In the second, putting
+`X=48Bt+16t^2` forces simultaneously
+
+```text
+X=81,                         2X=135,                  (22)
+```
+
+which is impossible in characteristic zero.  Independently, both branch
+ideals saturated by `t!=0` have Groebner basis `[1]` over `Q`.  Thus the
+entire affine width-three coefficient space is empty through `D=6`; the first
+open width-three target is coefficient degree seven.  Width four is
+independently open.
 
 ## 6. Cubic-cover reframe and scope
 
 Under THM-3555's quadratic coordinate
 
 ```text
-r^2=1-3w,                 w=(1-r^2)/3,                 (19)
+r^2=1-3w,                 w=(1-r^2)/3,                 (23)
 ```
 
 every polynomial mixed thickening in `(1)` becomes even in `r`, and
 
 ```text
-Jac_(v,r)(P,Q)=Jac_(v,w)(P,Q) dw/dr=-2r/3.             (20)
+Jac_(v,r)(P,Q)=Jac_(v,w)(P,Q) dw/dr=-2r/3.             (24)
 ```
 
 The actual Catalan polynomialization also has Jacobian `-2r/3`, but uses odd
 terms in `r`; it is not an even pullback.  Hence the construction problem is
-equivalently to find an even polynomial deformation with `(20)` that retains
-the selected fiber.  Width is degree in `r^2`, so `(18)` is the first new
-even `r^6` cell.
+equivalently to find an even polynomial deformation with `(24)` that retains
+the selected fiber.  Width is degree in `r^2`; the first genuinely new even
+`r^6` cell is precisely the degree-six branch closed by `(19)--(22)`.
 
 This theorem excludes only ansatz `(1)` at widths `N<=2`, and at `N=3` only
-through coefficient degree five.  It does not exclude the degree-six cell,
+through coefficient degree six.  It does not exclude degree seven or higher,
 width four, other boundary curves, or planar counterexamples.  It proves no
-projective-closure statement and makes no inference from the interrupted raw
-Groebner attempt recorded in the research note.
+projective-closure statement; affine coefficient-space emptiness is the
+relevant quantified claim.
