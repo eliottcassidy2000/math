@@ -13,6 +13,19 @@
   matches.  Script/output LF SHA-256:
   `d6e6fc9384fe31de8e0d2037e7ed70a9fd8359faf82bb7cc68283fa1208ecb6e` /
   `789ed0276d8e2ad5e1e8d358ef56e2a6e7815bae52c98cc0045664150a81b5e1`.
+- `torus_quotient_correction_no_go_thm3549.py` -> matching `.out`
+  [THM-3549 PROVED + VERIFIED-EXACT / HOSTILE-AUDITED].  In coordinates
+  `w=2-3v-t`, the THM-3543 collision quotient has Jacobian `-2w^2`, generic
+  degree three, and zero fibre `V(w) union {(0,2)}`.  One-sided corrections
+  fail in every degree; arbitrary corrections through total degree two have
+  unit coefficient ideal, while degree three forces the constant Jacobian
+  to zero, with or without the inherited collision.  Corrections affine in
+  `w` fail in every `v`-degree.  A collision-preserving Keller correction
+  must have sorted final `w`-degrees at least `(4,5)`, whose leading
+  coefficients already have the common-power form `(c h^4,d h^5)`.
+  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `4b60d1630431ea85ece7f66719ebb9e138674e0eb8df6d0e5524d70de6d10b9b` /
+  `bde9c5edd7934ed528e02614ff26175e2e70661ada1967158a5f3229c48d3921`.
 
 - `berggren_positive_cube_slope_atlas_101_kps_s183.py` -> matching `.out`
   [THM-3547 PROVED + FINITE-EXACT + VERIFIED-EXACT; INDEPENDENTLY AUDITED
