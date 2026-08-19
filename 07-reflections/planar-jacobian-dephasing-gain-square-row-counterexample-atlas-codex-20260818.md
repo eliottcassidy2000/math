@@ -127,7 +127,11 @@ The strongest exact outcomes are:
    map, restriction to every displayed polynomial graph `z=h(x,y)` has an
    explicit nonzero positive-degree tangential Jacobian top row.  THM-3546
    therefore forbids descent between displayed source and target graphs in
-   every degree.  Nonlinear ambient coordinates and nongraph coordinate
+   every degree.  Moreover, no affine source plane through a displayed
+   collision pair can land in **any** target hypersurface smooth at the
+   collision: four branches fail at the tangent plane, and the only two
+   tangent-compatible planes over `Q(sqrt(13))` have unequal image Hessians.
+   The complete linear descent cell is closed; nonlinear source coordinate
    hypersurfaces remain open.
 14. **PROVED one-invariant and cyclic-fibre no-mate walls.**  Multiplicative,
    diagonal-additive, and thickened primitive one-invariant rays have no
@@ -173,6 +177,9 @@ The strongest exact outcomes are:
   records the exact conductance-side filters,
   [THM-3553](../01-canon/theorems/THM-3553-fixed-threedimensional-keller-map-polynomial-graph-section-no-go.md)
   excludes every displayed polynomial graph for the fixed ambient cubic map,
+  [THM-3558](../01-canon/theorems/THM-3558-linear-collision-plane-smooth-target-hypersurface-no-go.md)
+  excludes every affine collision plane against every smooth target
+  hypersurface by a tangent/Hessian obstruction,
   [THM-3551](../01-canon/theorems/THM-3551-one-ray-planar-jacobian-mate-no-go.md)
   closes three all-degree one-invariant ray families,
   [THM-3552](../01-canon/theorems/THM-3552-two-face-cyclic-fiber-holomorphic-exactness-obstruction.md)
@@ -1054,6 +1061,27 @@ Graphs after nonlinear ambient coordinate changes and nongraph coordinate
 hypersurfaces remain open; the plane `x=0` is the sharp hostile because it
 does descend to a polynomial plane automorphism.
 
+Changing target coordinates does not rescue the linear collision cell.
+[THM-3558](../01-canon/theorems/THM-3558-linear-collision-plane-smooth-target-hypersurface-no-go.md)
+considers every affine source plane through two points of the displayed
+triple collision and every target hypersurface smooth at the common image.
+For the two pairs involving the fixed point, the transported tangent-plane
+normals already disagree; the decisive resultant is `-647 C^4`.  For the
+moving pair, exactly two planes survive the tangent test, with slope
+`a^2=13`, but their target graph Hessians differ by
+
+```text
+[[21632/27, 32a/9], [32a/9, -32/27]].
+```
+
+Thus no affine coordinate plane can descend the collision in any smooth
+target coordinate chart.  Together THM-3553 and THM-3558 close the complete
+linear descent cell.  The surviving ambient architecture must use a
+nonlinear source coordinate surface whose two transported image germs agree
+to all orders in one smooth target coordinate surface.  The positive plane
+`x=0` does not contradict this: it contains only one displayed collision
+preimage, so it cannot carry the collision itself.
+
 The categorical torus quotient is a proved hostile, not a solution:
 [THM-3543](../01-canon/theorems/THM-3543-torus-quotient-ramification-square-no-go.md)
 computes an exact quotient Jacobian `2(2-3v-t)^2`.  The quotient retains the
@@ -1479,8 +1507,9 @@ counterexample must satisfy all of the following:
     `m_escape<=r(d-2)` and approaches either a dark rank-one conductance
     plaquette or a channel-degenerate regime;
 12. displayed polynomial-graph descent from the fixed cubic Keller map is
-    impossible in every degree, so ambient descent must use a nonlinear
-    coordinate change or a nongraph coordinate hypersurface;
+    impossible in every degree, and no affine collision plane maps into any
+    smooth target hypersurface; ambient descent must use a nonlinear source
+    coordinate surface whose two image germs agree to all orders;
 13. a torus-quotient repair preserving the inherited collision must alter
     both outputs and begin at sorted transverse degrees at least `(4,5)`;
     its first row-dominant `4:5` box not cited away is `(100,125)`;
@@ -1513,7 +1542,7 @@ complete classification of all planar counterexamples.
 | odd-row maximum `2C_t` | filler `Q_t=2C_t+1` | collision-free row sentinel | support-point semantics | diagonal fixed point if support matters | compare `(t+1,t+1)` with `Q_t` |
 | higher-dimensional collision | categorical quotient | invariant functions, collision image | transverse character | ramification divisor | THM-3543 square factor |
 | ramified torus quotient | polynomial corrections `(A,B)` | polynomiality and chosen collision if imposed | low transverse repair cells | both outputs, `w`-degree `(4,5)`, common-power top | THM-3549 boundary solve |
-| higher-dimensional collision | coordinate-hypersurface restriction | tangent directions and ambient unit determinant | displayed polynomial graphs are all obstructed | nonlinear coordinates or a nongraph hypersurface | THM-3553 top row, then THM-3546 four gates |
+| higher-dimensional collision | coordinate-hypersurface restriction | tangent directions and ambient unit determinant | displayed graphs and every affine collision plane are obstructed | nonlinear source coordinate surface with all-order branch agreement | THM-3558 tangent/Hessian gate, then THM-3546 |
 | transverse boundary collision | Catalan formal thickening, then universal cubic root cover after adjoining `r` | selected collision and the exact ramification-cancellation mechanism | polynomiality in `w`; constant Jacobian after polynomialization | mixed terms that move `R=0` and send branching to infinity | fixed-line first jet, then mixed response boxes |
 | mixed Catalan polynomial ansatz | coefficient-row recurrence `E_k` | polynomiality and selected collision | low width cannot terminate the tail | width/degree state plus global degree passport | width 3 degree 6 as hostile; viable cap at least 105 |
 | curved ambient collision surface | punctured Kummer cover `(s,b)->(b,4s^2)` | finite etale collision | affine-plane completeness | boundary valuation / nonconstant unit | try mixed function-field deformation |
@@ -1556,11 +1585,12 @@ complete classification of all planar counterexamples.
    before testing the coordinate-order index or periodic image prime.  The
    current finite box already rejects natural and constant-linear
    projections.
-8. **Coordinate-hypersurface descent.**  Stop searching displayed graphs,
-   which THM-3553 excludes in every degree.  Instead enumerate low-degree
-   nonlinear ambient coordinate changes and nongraph coordinate
-   hypersurfaces, then test exact divisibility and coordinate status, using
-   the plane `x=0` as the positive hostile control.
+8. **Coordinate-hypersurface descent.**  Stop searching displayed graphs or
+   affine collision planes: THM-3553 and THM-3558 close both cells.  Enumerate
+   nonlinear source coordinate surfaces through a collision pair, compare
+   the two transported target branch jets before attempting global
+   divisibility, and require all-order agreement in a smooth target
+   coordinate surface.  Use `x=0` as a positive one-branch hostile control.
 9. **Finite-dephasing diagnostics.**  Use the first nonzero loop correction,
    not the resistor limit, as a numerical detector for the coefficient
    holonomies most likely to control cancellation.
@@ -1604,6 +1634,10 @@ complete classification of all planar counterexamples.
 - THM-3553 excludes polynomial graphs only in the displayed coordinates of
   one fixed ambient cubic map.  It does not exclude graphs after nonlinear
   ambient changes or nongraph coordinate hypersurfaces.
+- THM-3558 closes affine source planes through the displayed collision pairs
+  against target hypersurfaces smooth at their common image.  It does not
+  exclude nonlinear source coordinate surfaces, singular target
+  hypersurfaces, another ambient map, or direct planar constructions.
 - THM-3549 closes one-sided, low-total-degree, and transverse-affine repairs
   of one fixed quotient seed; the mixed `(4,5)`-and-above correction box is
   still open.  Its `(100,125)` transfer assumes the transverse top rows also

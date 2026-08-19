@@ -157,16 +157,17 @@
   transcript after newline normalization.  The reflection also integrates
   THM-3555's universal cubic marked-root normal form, THM-3556's escaping-
   root/Kummer factorization, dual visible cubic, and decomposable projection
-  target, THM-3553's all-degree displayed-graph no-go, THM-3551's
-  one-invariant residue walls, THM-3552's cyclic-fibre holomorphic-exactness
-  obstruction, and
+  target, THM-3553's all-degree displayed-graph no-go, THM-3558's affine-
+  plane tangent/Hessian no-go against arbitrary smooth target hypersurfaces,
+  THM-3551's one-invariant residue walls, THM-3552's cyclic-fibre
+  holomorphic-exactness obstruction, and
   THM-3557's low-width mixed-Catalan no-go with the resulting globally viable
   coefficient-cap jump.  No planar counterexample, global
   degree theorem, resistor reduction of JC, or infinite Euclidean tower is
   claimed.  Script/output/reflection SHA-256:
   `7eb8e39a7d108a3a229545e0b539abd980f571a41787406162394d114ec22703` /
   `dac8899f87ea4a9de4654d29c2b746a76061544a60d89efd5f830bac45433dfd` /
-  `3fdbc947baca1cd702fa09fe4e19b684ec8d4e769ce81605121c1af0d5c36ccf`.
+  `e20f807fbb5124cb78c2fc6fd1e4df0bfe61564d9a0c9b89f7448ebc108b7475`.
 
 - `jacobian_torus_quotient_ramification_square_kps_s183.py` -> matching
   `.out` [THM-3543 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
