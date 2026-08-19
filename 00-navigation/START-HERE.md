@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-16; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-08-18; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -60,16 +60,16 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     period plus parity the primitive half cap-six breaker. Composite rank
     seven and FC(3) remain open.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.
+    THM-3544/3550 internally force hypothetical pencil degrees composite
+    `>=6` and height `>=8`; Nagata's cited degree theorem sharpens every
+    pencil degree to `Omega>=3`, while arXiv:2204.14178 gives reduced height
+    `>=108` and leaves only `(72,108)` below `125`.
+    THM-3543/3545/3554 give the ramified/algebraic/punctured
+    collision pincer; THM-3549 starts quotient repair at `(4,5)`, and
+    THM-3553 closes displayed polynomial graph descent in every degree.
     THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
-    THM-3212/3225 leave critical points; THM-3237--3265 give the infinity
-    staircase; THM-3279/3289 close affine `C,E` on both pairs. On `C=c+x,E'=1`,
-    THM-3306/3309 give a nonsplit `2/72` deck with gradient failure; THM-3319
-    persists it over the two-clutch etale germ. THM-3303/3328 split the
-    constant-J boundary residual into open overlap, anti-tangent collision, or
-    vertex-cone incidence. THM-3326/3348/3386/3406/3412 give the linear-`z`
-    ladder: affine-modification `I^q`, support/thickness, and full torsion arms;
-    THM-3418 closes sparse `f(x)+g(x)z^d`, `d>=2`, Keller components; THM-3419
-    gives generic response `deg(rad(g))` copies of regular `mu_d`, not general fibers.
+    THM-3212--3419 give the later infinity, deck, boundary, and linear-`z`
+    atlases; THM-3418 closes sparse `f(x)+g(x)z^d`, not general fibres.
     THM-3367 tames line images only; `JC(2)`/`DC(2)` remain OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The

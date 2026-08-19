@@ -332,42 +332,31 @@ is sharp: equal counts allow two densities or none.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** [3502](../01-canon/theorems/THM-3502-rule30-four-fifths-staircase-entropy-and-sixteen-fifths-compiler.md); [3511](../01-canon/theorems/THM-3511-rule30-orbit-signalizer-gap-renormalization-and-shallow-portrait-hostile.md); [3512](../01-canon/theorems/THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary.md); [3516](../01-canon/theorems/THM-3516-rule30-marked-van-der-put-carry-and-power-section-bridge.md). OPEN.
-- **Jacobian/Dixmier:** `JC(2)`/`DC(2)` OPEN. THM-1300 VERIFIED; MISTAKE-205
-  is attribution only. THM-1315 image `A^3 minus E`, fibres `3/1/0`.
-  Fixed map: 2473--2576/3494/3508/3519. THM-3543--50: quotient/degree/Catalan/
-  graph/conductance/correction gates. THM-3551--57: ray/cyclic/graph no-gos;
-  punctured/cubic/mixed boundaries. Other charts OPEN.
-  THM-3495/98/3504:
-  `S_(F^4)=V(LHJ G)`, `[Delta_4]=[2G]`. THM-3506/3513 give `G` packet
-  `(271,99)`; 3521--23/27 give packets through `R8`, ending
-  `(419839,152211)`; 3525/26 give degree243/729 and
-  `[Delta_5,Delta_6]=[-2R_5,2R_6]`. 3528--31: packets/units/primes/components/
-  intrinsic class; 3533 newest exponent `1`; 3535 linear primitive;
-  3532/37 covariance/old-`L` index; 3538--42: LCA packets (`n=2` `6->4`,
-  `n=3` `45->9`), index `0` through `n=4`; higher OPEN. 3541 grade-only.
-  THM-2681 blocks the `A4/S4` cubic; 2685--2708 give its holonomy.
-  3448/3517: cyclic coordinates are primitive; `m=3` gives `S5`, but `C3` Jelonek is sign-blind. 1605 is absent (MISTAKE-416); quartic `C3` remains OPEN.
-  3440/3443/3450: LRC/Keller mode on 91 sheets. Mod-13 `H^1` has no amplitude map; margins block the germ. The r5 tent seam `-1` is formal; rank two blocks response transport. No current. THM-3066 retains only their
-  product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
-  THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;
-  polynomial `A2` regularity and constant units are the missing gate.
-  THM-3477 splits Laurent debt into zero-root bars and nonzero-root Prüfer rays; inverse effectivity remains OPEN. THM-3465/66 close pure/current lanes.
-  THM-3067/3141's `A4` shadow loses `V4` origin; THM-3072 recovers it
-  from three `C2` tables; edge/cycle loses a 3D character sector.  THM-3076
-  extends this to prime affine-plane tomography, with the characteristic-`p`
-  nilpotent boundary.  Reflection/physical realization are sidecars.
-  THM-3157/3173 align supplied owner/orientation data with the local `C3`
-  hexagon/frame cube; THM-2681 still blocks a global resolvent.
-  THM-2862/2864/2968/2971 give two sextic
-  lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
-  affine sidecars remain.  THM-2867 gives the regular `S3` carrier.  THM-2871 makes that face unramified and
-  puts the first paired escape at `A=B=0`: `C in (B)` gives integral
-  depression; square/Jelonek/reconstruction remain open.  On planar slices
-  THM-2699--2722 classify
-  affine-linear targets and fixed-`d` pairs; unrestricted `C[A,d]^2` is
-  equivalent to `JC(2)` after a coordinate change, while `B`-targets and
-  nongraph surfaces stay open.  The degree-eighteen lane closes sparse and
-  `H_2` branches and sends `H_4` to the common-root wall.
+- **Jacobian/Dixmier:** `JC(2)`/`DC(2)` OPEN. THM-1300 is VERIFIED-EXACT;
+  MISTAKE-205 repairs attribution only. THM-1315 has image `A^3 minus E`
+  and fibre spectrum `3/1/0`. Fixed-map packets: 2473--2576/3494/3508/3519.
+  THM-3544/3550 internally force composite pencil degrees `>=6` and height
+  `>=8`; cited Nagata/GGHV gates sharpen this to `Omega(deg R)>=3` and
+  reduced height `>=108`, with only `(72,108)` below `125`.
+  THM-3543/3545/3554 give the ramified/algebraic/punctured collision pincer;
+  THM-3549 starts quotient repair at transverse `(4,5)`; THM-3553 closes all
+  displayed polynomial graphs. THM-3551/3552 close the one-ray and cyclic-
+  exactness families; THM-3555--57 give cubic-root/cusp-square owners and the
+  low-width mixed no-go. THM-3546/3548 leave nonlinear coordinate-hypersurface
+  descent and phase-aware conductance gates.
+  THM-3495--3542 give the iterated image/divisor/packet/LCA atlas: packets are
+  explicit through `R8`, index is zero through level four, and higher levels
+  remain open. THM-3504 is the level-four router. THM-2681/2685--2708 block
+  the `A4/S4` cubic and retain its holonomy; 3448/3517 leave quartic `C3`
+  open (MISTAKE-416). THM-3440/3443/3450 and 3064/66/68 show the LRC/Keller
+  modes have no lawful amplitude/current transport and still allow a punctured
+  `C3`; polynomial `A2` regularity and constant units are missing.
+  THM-3067/3072/3076/3141 give character-loss/tomography sidecars;
+  THM-2862--2871/2968/2971 give sextic lifts and the regular `S3` carrier.
+  THM-2699--2722 classify the stated planar slices; unrestricted
+  `C[A,d]^2` is equivalent to `JC(2)`, while `B`-targets and nongraph
+  surfaces stay open. Degree eighteen closes sparse/`H_2`, sending `H_4`
+  to the common-root wall.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2247 close the affine-through-
   quartic and terminal-through-fourteen strata; THM-2262/2297--2480, including

@@ -1,10 +1,11 @@
 # Planar Jacobian counterexamples through dephasing, conductance, and hidden phase
 
 **Status: PROVED synthesis with new canon THM-3544, THM-3545,
-THM-3548, THM-3549, and THM-3550; VERIFIED-EXACT quotient and Catalan
-experiments; OPEN counterexample constructions.**  No polynomial planar
+THM-3548, THM-3549, and THM-3550, integrating incoming THM-3554;
+VERIFIED-EXACT quotient and Catalan experiments; OPEN counterexample
+constructions.**  No polynomial planar
 counterexample and no proof of `JC(2)` is claimed.  The main outcome is a
-smaller counterexample passport, two complementary near-counterexamples, and
+smaller counterexample passport, a three-way near-counterexample pincer, and
 three sharply typed construction cells.
 
 The motivating quantum-to-classical statement is true with normalization
@@ -39,10 +40,11 @@ The live board was:
 | Niche | Jacobian coefficients | fibre polygons inside a Segre matrix | local closure plus global even-cycle binomials | PROVED |
 | Wildcard | self-intersecting boundary curve | formal transverse thickening | exact constant Jacobian, Catalan nontermination | PROVED + EXACT |
 | Wildcard | invariant graph in the 3D map | coordinate hypersurface | normal/tangent unit factorization | PROVED criterion, OPEN search |
+| Wildcard | curved THM-1300 collision surface | punctured Kummer cover | finite etale collision, nonconstant source unit | PROVED + EXACT |
 
-The board changed twice.  First, the quotient and formal boundary became a
-two-sided pincer: one is polynomial and colliding but not Keller; the other
-is Keller and colliding but not polynomial.  Second, the dephasing analogy
+The board changed twice.  First, the quotient, formal boundary, and curved
+collision surface became a three-way pincer: polynomial-but-ramified,
+Keller-but-nonpolynomial, and etale-but-punctured.  Second, the dephasing analogy
 stopped being an attempted proof bridge and became a phase-aware search
 architecture.
 
@@ -309,7 +311,7 @@ nonproperness; it is conditional on the displayed branch.
 [THM-3544](../01-canon/theorems/THM-3544-planar-keller-target-pencil-total-degree-six-floor.md)
 and
 [THM-3550](../01-canon/theorems/THM-3550-prime-degree-exclusion-and-pencil-height-eight-floor.md)
-give the strongest numerical squeeze from this session.
+give the strongest **internal** numerical squeeze from this session.
 
 For a nonautomorphic complex planar Keller pair:
 
@@ -347,27 +349,53 @@ n=a deg H,      m=b deg H,      a,b>=2,                (23)
 
 where `H` is power-free.  Both `n,m` are composite, `n>=6`, and `m>=8`.
 
-If the height floor is sharp, the degree pattern is exactly `(6,8)`.  Only
-two ordinary leading architectures survive:
+Three classical `CITED` gates make the viable box much smaller than this
+elementary boundary.  Nagata's repaired Appelgate--Onishi theorem, together
+with Magnus, says that a component whose degree has at most two prime
+factors counted with multiplicity belongs to an automorphic pair.  Completing
+each nonzero pencil member to a target basis therefore gives
+
+```text
+Omega(deg R)>=3                  for every pencil member. (21a)
+```
+
+Guccione--Guccione--Horruitiner--Valqui list all hypothetical
+counterexample degree pairs of height below `125`, leaving only `(72,108)`
+and its transpose.  Applied to `(22)`, this gives
+
+```text
+m>=108;       if m<125, then (n,m)=(72,108).            (21b)
+```
+
+Finally, Shastri's one-point-at-infinity criterion says the common leading
+base has at least two distinct projective roots: a top form `lambda L^n`
+would make the pair automorphic.  These are imported results, not new proofs
+of this session.
+
+Consequently the internal height-eight equality is a sharp hostile boundary,
+not a viable counterexample cell.  If that internal floor were sharp, the
+degree pattern would be `(6,8)` and only two leading architectures would
+survive:
 
 ```text
 (R_6,S_8)=(cL^6,dL^8),
 (R_6,S_8)=(c(xy)^3,d(xy)^4).                            (24)
 ```
 
-The second, two-root architecture also enters the repaired subleading
-rigidity of THM-3025; the one-root architecture is its sharp exceptional
-locus.  More precisely, in the mirrored `g=2,(a,b)=(3,4)` normalization,
+The cited degree theorem excludes both, and the cited infinity theorem
+separately excludes the one-root row.  The two-root architecture remains a
+useful negative control for the internal gates and also enters the repaired
+subleading rigidity of THM-3025.  More precisely, in the mirrored
+`g=2,(a,b)=(3,4)` normalization,
 THM-3016 and repaired THM-3025 force the degree-seven/degree-five rows into
 `Q_7=lambda H P_5`, or force both to vanish; a generic translation places
 the empty branch in the same relation.  Those two theorems still await an
 independent hostile audit after MISTAKE-422, so this is a secondary gate, not
-part of the fully audited degree chain.  It makes the one-root cell the less
-constrained of the two, not a reason to assume it exists.
+part of the fully audited degree chain.
 
-## 7. The polynomial/algebraic collision pincer
+## 7. The polynomial/algebraic/punctured collision pincer
 
-Two exact objects now approach a counterexample from opposite sides.
+Three exact objects now approach a counterexample from different sides.
 
 ### 7.1 Polynomial and colliding, but ramified
 
@@ -429,6 +457,50 @@ and infinite Catalan tail; polynomiality fails on the boundary-thickening
 side.  A real counterexample must couple variables strongly enough to avoid
 both one-variable inversion obstructions.
 
+### 7.3 Etale and colliding, but punctured
+
+[THM-3554](../01-canon/theorems/THM-3554-punctured-kummer-collision-surface-normal-form.md)
+restricts the same three-dimensional map to its curved collision component
+
+```text
+C=2-3xy-x^2z=0.                                        (30a)
+```
+
+Because `x(3y+xz)=2` there, `x` is a unit and the surface is not `A^2` but
+
+```text
+G_m x A^1 = Spec C[s,s^(-1),v],       s=x^(-1).        (30b)
+```
+
+Explicit Laurent source and polynomial target automorphisms put the
+restricted map in the exact normal form
+
+```text
+(s,b) -> (b,4s^2): G_m x A^1 -> A^1 x G_m.            (30c)
+```
+
+It is a finite etale Kummer cover of degree two and its deck involution
+contains the known collision.  Filling `s=0` gives the affine map
+`(s,b)->(b,4s^2)` with Jacobian `-8s`.  More strongly, an everywhere-etale
+`A^2` filling with the same quadratic function-field extension is
+impossible: the pullback of the reduced divisor `delta=0` would have odd
+valuation by etaleness and even valuation because `delta=4s^2`.
+
+The three failures are sharply complementary:
+
+```text
+quotient:     polynomial plane + collision, but a contracted divisor;
+thickening:   local Keller + collision, but an infinite algebraic tail;
+restriction:  finite etale + collision, but a punctured Laurent plane.
+```
+
+A genuine counterexample has to retain the finite collision, remove the
+puncture without restoring a finite branch divisor, and terminate
+polynomially.  Live escapes must change the Kummer function field through
+mixed corrections, send the missing divisor to infinity by a nonproper
+affine modification, or use higher-sheet noninjectivity carried entirely by
+the asymptotic set.
+
 ## 8. The quotient repair box begins much later than expected
 
 [THM-3549](../01-canon/theorems/THM-3549-torus-quotient-correction-no-go.md)
@@ -469,23 +541,24 @@ low-degree perturbation.
 
 ## 9. Ranked counterexample architectures
 
-### A. Minimal-height coherent-cycle ansatz
+### A. The cited first degree cell: a `(72,108)` coherent-cycle ansatz
 
-This is the sharpest wholly planar cell.  Start in the one-root `(6,8)`
-architecture with hostile face skeletons
+If the reduced height is below `125`, `(21b)` leaves one degree cell.  In a
+maximal common-base normalization its ordinary leading forms are
 
 ```text
-R_0=(x^3+alpha y^2)^2,
-S_0=(x^4+beta y^2)^2.                                  (34)
+R_72=c K^2,              S_108=d K^3,       deg K=36,  (34)
 ```
 
-Every positive-weight face of each scaffold is a proper power, their
-ordinary tops are `x^6,x^8`, and both have `y`-fibre degree four.  They are
-not a Keller pair: their Jacobian retains the displayed square-base factors.
+and Shastri forces `K` to have at least two distinct projective roots.  A
+cheap sparse hostile seed is `K=x^17 y^19`; a dense control is a product of
+36 distinct linear forms.  Neither leading pair is Keller--the top gradients
+share the expected base--but they expose the exact rows that lower terms must
+repair.  For every root direction of `K`, attach a lower Newton face which is
+itself a proper power, raises the linear-fibre degree to at least four, and
+shares no global gradient factor.
 
-The live ansatz adds coefficients at lattice points strictly inside the
-Newton triangles below the two upper segments.  Such points do not alter the
-positive-weight top faces.  Search those coefficients in this order:
+Search those lower coefficients in this order:
 
 1. reject singleton coefficient fibres and polygon-energy violations;
 2. impose all Segre rank-one cycle binomials;
@@ -497,6 +570,16 @@ The key creative change is to require at least one genuine three-or-more-
 channel fibre cycle.  Two-channel cancellations are phase-rigid and tend to
 collapse into binomial/common-factor geometry; a three-channel polygon is
 the first place holonomy can move while magnitudes stay admissible.
+
+The low-degree scaffold
+
+```text
+(x^3+alpha y^2)^2,       (x^4+beta y^2)^2
+```
+
+remains a sharp negative control for the new internal height-eight argument,
+but the classical degree and one-point-at-infinity gates exclude it from the
+live counterexample search.
 
 ### B. High-transverse repair of the inherited quotient
 
@@ -513,6 +596,25 @@ flat Groebner box.  The fixed source term `-2w^2` is an external amplitude in
 the degree-two fibre; all other nonconstant fibres must close to zero.  The
 global Segre cycles then decide whether the separately chosen closures come
 from one pair `A,B`.
+
+There is also a concrete ordinary-degree threshold.  Put `N=deg h+1`.  If
+the displayed top-`w` rows in `(32)` dominate total degree, then the pair has
+degrees exactly
+
+```text
+(4N,5N).                                                (34a)
+```
+
+The cited sub-`125` list excludes every such pair with `N<25`; none has ratio
+`72:108`.  The first row-dominant box not classically excluded is therefore
+
+```text
+deg h=24,                 (deg P,deg Q)=(100,125).      (34b)
+```
+
+Below that threshold, a candidate must create a lower-`w`, higher-`u` row
+which supplies a genuine second Newton scale.  If the resulting height stays
+below `125`, that second scale must land exactly in the `(72,108)` cell.
 
 ### C. Mixed finite completion of the Catalan thickening
 
@@ -543,6 +645,21 @@ make the ladder terminate while the terminal equations and collision remain
 valid.  This is a finite, degree-by-degree construction problem and has a
 positive exact first row plus a hostile separated control.
 
+THM-3555 identifies what this ladder is trying to desingularize.  After
+adjoining the Catalan square root, the separated map is affinely equivalent
+to the universal marked-root cubic cover
+
+```text
+(t,p) -> (p,-t^3-pt).
+```
+
+It is a connected generic `S_3` cover, but ramifies on `p+3t^2=0`.  Any
+polynomial correction which fixes that entire line pointwise still has zero
+Jacobian at its cusp.  Thus a viable mixed construction must move the branch
+curve at order zero, retain only selected collision fibres, and export every
+remaining sheet merger to infinity.  This is a much narrower surgery problem
+than arbitrary termination of `(36)`.
+
 ### D. Coordinate-hypersurface descent from the 3D counterexample
 
 THM-3546 gives a literal route that the torus quotient does not test.  Find
@@ -562,6 +679,41 @@ global divisibility `(38)` and proof that both `rho`'s are polynomial
 coordinates.  The torus quotient fails because it discards the normal
 character and contracts a divisor; an invariant graph must retain that
 normal direction until the unit factorization is made.
+
+THM-3554 closes the most obvious curved surface: `C=0` contains the collision
+and its restriction is etale, but its coordinate ring has the nonconstant
+unit `x`, so it is `G_m x A^1`, not a coordinate plane.  A concurrent
+`FINITE-EXACT` calculation first found no invariant same-graph section of
+degree at most three, but THM-3553's top-form argument closes the displayed
+graph lane in every degree.  For
+
+```text
+f=(F_1(x,y,h),F_2(x,y,h)),             h in C[x,y],
+```
+
+if `D=deg h>=1`, the top forms are
+
+```text
+A=x^3y^3 h_D,             B=3x^3y^2 h_D,
+A=(y/3)B,                 Jac(A,B)=-(1/3)B B_x !=0.   (38a)
+```
+
+The last nonvanishing is robust: writing `B=3x^3y^2h_D`, the operator
+`3+x partial_x` has positive eigenvalues `3,...,D+3` on the degree-`D`
+monomials.  This is the unique top Jacobian row, of degree `2D+9`.  If `h=c`
+is constant, including `c=0`, the same identity holds with
+
+```text
+A=x^2y^3(cx+3y),          B=3x^2y^2(cx+3y).           (38b)
+```
+
+Thus `Jac(f)` is never constant.  THM-3546 would force it to be a nonzero
+constant if the displayed source graph mapped scheme-theoretically into
+*any target graph in the displayed target coordinates*.  No such graph pair
+exists.  What remains open is a nongraph coordinate hypersurface, a graph
+after nonlinear ambient coordinate changes, or a different three-dimensional
+Keller map.  This scope is essential: the plane `x=0` does restrict to a
+Keller map and maps into `F_3=0`.
 
 ### E. Sparse resonant additive layers are a negative control
 
@@ -601,8 +753,8 @@ simultaneously.
 
 | coordinate | necessary profile | source |
 |---|---|---|
-| total target degrees | reduced `(n,m)` with `6<=n<m`, both composite, `m>=8` | THM-3544/3550 |
-| leading forms | `R_n=cH^a,S_m=dH^b`, `a,b>=2` | top Jacobian + THM-2102 |
+| total target degrees | internally `6<=n<m`, composite, `m>=8`; cited `Omega>=3`, `m>=108`, and sub-`125` pair only `(72,108)` | THM-3544/3550; Nagata; GGHV |
+| leading forms | `R_n=cH^a,S_m=dH^b`, `a,b>=2`, with at least two projective roots | top Jacobian + THM-2102; Shastri |
 | linear source fibres | every nonzero pencil member has degree at least four in every direction | THM-2063/2071/2118 |
 | positive-weight faces | every face of every pencil member is a proper power | THM-2102/2740 |
 | coefficient fibres | polygon closure and concentration bound | THM-3548 |
@@ -611,12 +763,13 @@ simultaneously.
 | escape differential | dark or channel-degenerate rank-one intensity shadow | THM-3548 |
 | Puiseux contact | `m_contact<=r(d-2)` for a branch in the displayed form | THM-3548 |
 | sparse fibres | avoid the classified `f(x)+g(x)z^d` cells | THM-3418 |
-| inherited quotient repair | both outputs changed; transverse degrees at least `(4,5)` | THM-3549 |
+| inherited quotient repair | both outputs changed; transverse degrees at least `(4,5)`; row-dominant first live box `(100,125)` | THM-3549 + cited degree list |
+| inherited finite collision | exact quadratic Kummer filling of the puncture is impossible | THM-3554 |
+| displayed graph descent | impossible in every polynomial degree; nonlinear coordinate hypersurfaces remain | THM-3546/3553 |
 
-At minimal height eight, the Puiseux inequality becomes
-`m_contact<=6r`.  This is not yet sharp enough to prove properness, but it
-ties a global degree floor to a quantitative infinity profile for the first
-time in this lane.
+At the cited exceptional height `108`, the Puiseux inequality becomes
+`m_contact<=106r`.  This is not sharp enough to prove properness, but it ties
+the actual first degree cell to a quantitative infinity profile.
 
 ## 11. Underexplored operations and cheap probes
 
@@ -693,15 +846,18 @@ The session produced five durable shifts.
 2. The classical resistor shadow is provably insufficient for the Jacobian
    condition; the missing datum is a Wilson phase already visible in a
    `2 x 2` plaquette.
-3. Every hypothetical planar counterexample pencil now has composite member
-   degrees at least six and height at least eight, with an exact reduced
-   common-base spectrum.
-4. The fixed 3D collision yields two complementary near-counterexamples and
-   a sharply delayed quotient-repair cell.
+3. The new internal proof gives composite pencil degrees at least six and
+   height at least eight; classical cited results sharpen the live search to
+   `Omega>=3`, height at least `108`, and the unique sub-`125` cell
+   `(72,108)`.
+4. The fixed 3D collision yields a three-way quotient/thickening/puncture
+   pincer, a sharply delayed quotient-repair cell, and an all-degree no-go for
+   displayed polynomial graph descent.
 5. The most credible searches are no longer generic coefficient boxes.  They
-   are coherent-cycle constructions in the `(6,8)` Newton cages, the
-   common-power `(4,5)` quotient repair, or a mixed finite solution of the
-   boundary ladder `(36)`.
+   are coherent-cycle constructions in the `(72,108)` Newton cages, the
+   `(100,125)` row-dominant quotient repair (or a genuine second scale), and
+   cubic branch-curve surgery which moves ramification while exporting it to
+   infinity.
 
 What did not change is the theorem status of the central problem:
 

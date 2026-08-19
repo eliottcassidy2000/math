@@ -8,7 +8,8 @@ status: >
   Jacobian.  Constant graphs retain a universal -89 coefficient.  For every
   positive degree d, the top tangential minor is
   -3 S partial_x(S), S=x^3 y^2 h_d, and is nonzero.  Hence this entire fixed
-  graph chart cannot descend the known collision to a planar Keller pair.
+  graph chart cannot descend the known collision to a planar Keller pair or
+  be carried into a polynomial target graph in the displayed coordinates.
   Other source/target coordinates and nongraph coordinate hypersurfaces
   remain open.
 source: root-2026-08-18-planar-jacobian-counterexample-hostiles
@@ -63,6 +64,16 @@ Jac(P_h,Q_h) is never constant.                          (4)
 Consequently no graph in this fixed source chart, including every graph
 through any collision pair in `(2)`, yields a planar Keller pair using the
 fixed target coordinates `(F1,F2)`.
+
+More strongly, there are no polynomials `h,g in C[x,y]` satisfying
+
+```text
+F3(x,y,h(x,y))=g(P_h(x,y),Q_h(x,y)).                    (4a)
+```
+
+Indeed, `(4a)` is scheme-theoretic containment of the source graph in a
+polynomial target graph.  THM-3546 would then force `Jac(P_h,Q_h)` to be a
+nonzero constant, contradicting `(4)`.
 
 ## 1. Exact tangential-minor equation
 
@@ -123,6 +134,14 @@ If `h` is constant, `(5)--(6)` instead give the universal coefficient
 ```
 
 So constant graphs fail as well.  This proves `(4)`.
+
+The top layer also gives an independent constant-graph check.  For `h=c`,
+
+```text
+(P_h)_6=x^2y^3(cx+3y),       (Q_h)_5=3x^2y^2(cx+3y),
+```
+
+whose Jacobian is `-9x^3y^4(cx+3y)(cx+2y)`, nonzero even at `c=0`.
 
 ## 3. Collision interpolation is not the missing ingredient
 

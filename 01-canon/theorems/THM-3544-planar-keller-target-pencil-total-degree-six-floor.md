@@ -2,7 +2,7 @@
 id: THM-3544
 title: "Planar Keller target-pencil total-degree-six floor"
 status: >
-  PROVED.  If a complex planar Keller pair is not a polynomial automorphism,
+  PROVED / INDEPENDENTLY HOSTILE-AUDITED.  If a complex planar Keller pair is not a polynomial automorphism,
   then every nonzero member of its target pencil has total degree at least
   six.  Degrees at most four are reduced to the complete linear-through-cubic
   source-fibre closures by placing a projective root of the top binary form
@@ -30,7 +30,7 @@ related:
 
 # THM-3544 -- planar Keller target-pencil total-degree-six floor
 
-**PROVED.**
+**PROVED / INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 

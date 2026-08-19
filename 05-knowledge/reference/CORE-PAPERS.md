@@ -224,6 +224,13 @@ collide, links—not bare IDs—are canonical.
 - **Repo consumers:** [THM-1300](../../01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md) verifies the sporadic map; [THM-3438](../../01-canon/theorems/THM-3438-weighted-lift-keller-degree-spectrum.md) derives the weighted family and exact degree spectrum.
 - **Boundary:** no `JC(2)`, `DC(1/2)`, arbitrary-map classification, or priority claim follows; use THM-1300's byte-zero correction for attribution.
 
+### Nagata / Shastri / Guccione--Guccione--Horruitiner--Valqui — planar degree and infinity gates
+
+- **Primary:** Nagata's revised [paper, Theorem 7.3](https://repository.kulib.kyoto-u.ac.jp/server/api/core/bitstreams/9ef8e868-5526-4830-b19f-543c0af09e7c/content) repairs Appelgate--Onishi; Shastri's published [Proposition, p. 218](https://doi.org/10.18910/6794) is the one-point/one-place-at-infinity criterion; [arXiv:2204.14178v1](https://arxiv.org/abs/2204.14178) (2022) is **CITED / PREPRINT**.
+- **Imported:** Magnus plus Nagata force `Omega(deg R)>=3` for every member of a counterexample pencil. Shastri forces at least two projective roots in each top form. The 2022 list gives reduced height `>=108`, with only `(72,108)` below `125`.
+- **Consumer:** [THM-3550](../../01-canon/theorems/THM-3550-prime-degree-exclusion-and-pencil-height-eight-floor.md) is an independent elementary prime/height-eight gate; the session synthesis imports the stronger classical bounds.
+- **Boundary:** none proves `JC(2)`, existence of `(72,108)`, or a height-`125` theorem.
+
 ### Belov--Kanel--Kontsevich — *The Jacobian Conjecture is stably equivalent to the Dixmier Conjecture*
 
 - **Primary / freshness:** [arXiv:math/0512171](https://arxiv.org/abs/math/0512171),

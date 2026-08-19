@@ -2,7 +2,7 @@
 id: THM-3550
 title: "Prime-degree exclusion and pencil-height eight floor for planar Keller counterexamples"
 status: >
-  PROVED / HOSTILE AUDIT IN PROGRESS.  No nonzero target-pencil member of a
+  PROVED / INDEPENDENTLY HOSTILE-AUDITED.  No nonzero target-pencil member of a
   nonautomorphic complex planar Keller pair has prime total degree.  The
   first positive-weight Newton face leaving the forced pure-power top vertex
   would have a second vertex whose exponent is simultaneously divisible by
@@ -21,7 +21,7 @@ related:
 
 # THM-3550 -- prime-degree exclusion and pencil-height eight floor
 
-**PROVED / HOSTILE AUDIT IN PROGRESS.**  Let
+**PROVED / INDEPENDENTLY HOSTILE-AUDITED.**  Let
 
 ```text
 F=(P,Q):C^2 -> C^2,             Jac(P,Q)=kappa in C*,  (1)
@@ -150,7 +150,8 @@ Section 1, and cannot have smaller degree by THM-3544.  Thus `deg S>=8`.
 
 ## 3. Reduced pencil spectrum and typed leading cells
 
-Every Keller pencil admits a target basis `(R,S)` with distinct degrees
+Every nonautomorphic Keller pencil under the standing hypotheses admits a
+target basis `(R,S)` with distinct degrees
 
 ```text
 n=deg R < m=deg S.                                      (13)
