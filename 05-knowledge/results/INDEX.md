@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `berggren_positive_cube_slope_atlas_101_kps_s183.py` -> matching `.out`
+  [THM-3547 PROVED + FINITE-EXACT + VERIFIED-EXACT; INDEPENDENT AUDIT
+  PENDING].  The 528 primitive parity-correct slopes through denominator 101
+  are screened modulo every prime through 199: 517 have a displayed first
+  obstruction and exactly 11 survive the screen.  Four survivors `(14,23)`,
+  `(26,29)`, `(26,47)`, `(98,101)` have explicit odd seeds and positive
+  norm-one units; the invariant cone `L=n^2u-W>0`, `H=n^2W-Du>0` is preserved
+  by `L'=PL+QH`, `H'=PH+DQ L`, proving four infinite positive two-cube rays.
+  The other seven are not claimed globally insoluble or everywhere locally
+  soluble.  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `bdb8cd4fbd14235ee144d80c4766aed5117097321cae8ec87b1aad1ffff1212c` /
+  `fb0b50e2384b8834b381c3ded37358d636c7ab475b34d1c5091ff7f3f6162f49`.
+
 - `jacobian_torus_quotient_ramification_square_kps_s183.py` -> matching
   `.out` [THM-3543 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
   WITH SCOPE REPAIRS].  For the fixed THM-1300 map, the full source and target
