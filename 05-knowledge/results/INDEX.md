@@ -14,6 +14,19 @@
   non-invariant surfaces, or `JC(2)`.  Script/output LF SHA-256:
   `9066e3319ba74c31408cbd505e1ae0f849de00d0357582cafb4ccf4aeaf13e51` /
   `3d9388a73d7bd3308098cba3f2754be9b356f13c095c1f07fd595e03c65345c6`.
+- `catalan_self_intersection_keller_thickening_thm3545.py` -> matching
+  `.out` [THM-3545 PROVED + VERIFIED-EXACT].  In the separated ansatz
+  `P=v^2+A(w)`, `Q=v^3-v+vB(w)`, constant nonzero Jacobian forces
+  `B=3A/2` and `A-3A^2/4=kappa*w`.  The unique normalized branch has the
+  transverse collision `(+/-1,0)->(1,0)` and Catalan expansion
+  `A=sum_(n>=1) C_(n-1)(3/4)^(n-1)kappa^n w^n`; every coefficient is nonzero,
+  so no polynomial solution exists in this ansatz.  The companion checks 35
+  exact gates, including two Jacobian paths and the first defect of all
+  truncations through degree 12.  This is an algebraic/formal
+  near-counterexample, not a polynomial map or a result on general mixed
+  thickenings.  Script/output LF SHA-256:
+  `70bcccaf01bdc03de1833f21b908ca9af0b4d7832330ce6faba32d107ae26dd4` /
+  `d7cde63e4c7d30759ae5713695ca3d692563be993728f3d895b9c7101e478880`.
 
 - `keller_grade_monoid_factorization_lengths_thm3541_20260816.py` -> matching
   `.out` [THM-3541 PROVED + VERIFIED-EXACT].  For the Keller grade monoid
