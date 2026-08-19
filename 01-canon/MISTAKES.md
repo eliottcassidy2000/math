@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-422 (2026-08-18, THM-3025 notation collision) -- the subleading Jacobian was mistaken for the Keller constant
+
+- **What failed:** THM-3025 relabelled the multiplier in THM-3016's
+  rigidity identity as `J = Jac(P,Q) in k*`.  In THM-3016 the displayed
+  multiplier is instead the homogeneous subleading form
+  `j = Jac(H,Q_(m-1))`, which may vanish.  Thus the original step
+  `j Jac(W,H)=0 => Jac(W,H)=0` was unjustified, and the companion script's
+  opening prose repeated the same collision.
+- **First failed implication:** the zero branch `j=0` makes the product
+  identity tautological, so it supplies no information about `W` by division.
+  This is a proof-text error rather than a counterexample to the conclusion.
+- **Repair / strongest survivor:** split on `j`.  If `j!=0`, THM-3016's
+  common-form and coprime-degree argument gives `W=0` whenever `H` has at
+  least two distinct roots.  If `j=0`, then `Q_(m-1)!=0` would make `H` and
+  `Q_(m-1)` powers of a common form of degree dividing both `g` and `m-1`;
+  since `g|m`, that degree is one and `H` has only one root.  Hence for
+  `K>=2`, `Q_(m-1)=0`.  The subleading Keller equation then gives
+  `Jac(P_(n-1),H)=0`, and the same `gcd(g,n-1)=1` argument forces
+  `P_(n-1)=0`.  Therefore `W=0` survives in both branches.  THM-3025 and its
+  replay now use distinct names `J0=Jac(P,Q)` and
+  `j=Jac(H,Q_(m-1))`; no division by `j` occurs in the zero branch.
+- **Reusable rule:** never reuse the full-Jacobian symbol for a homogeneous
+  coefficient or response row.  Before dividing a named Jacobian, expand its
+  arguments and degree and audit the zero branch explicitly.
+
 ## MISTAKE-421 (2026-08-16, THM-3540 proof gate) -- etaleness was used as a coordinate-projection derivative test
 
 - **What failed:** the first THM-3540 proof said the inverse `x`-core

@@ -1,70 +1,96 @@
-"""JC(2): is W = 0 FORCED?  (the first open question named in THM-3016 section 5)
+"""Exact referee for repaired THM-3025 (MISTAKE-422).
 
-THM-3016 (R):  J * Jac(W, H) = 0  with  W = P_{n-1} - kappa H^{a-b} Q_{m-1},
-deg W = n-1,  H homogeneous of degree g,  n = ga,  m = gb,  gcd(a,b) = 1.
-J = Jac(P,Q) is a NONZERO constant, so  Jac(W,H) = 0.
+Typed notation:
+    J0 = Jac(P,Q) in k*              (the full Keller constant),
+    j  = Jac(H,Q_(m-1))              (the possibly-zero subleading form).
 
-CLAIM.  For binary forms, Jac(W,H) = 0 with W != 0 forces W^g = c H^{n-1},
-and then, because gcd(g, n-1) = gcd(g, ga-1) = 1, H must be a PURE POWER OF A
-SINGLE LINEAR FORM, H = l^g.  That is K = 1 -- the one-place-at-infinity
-configuration.  Hence for any pair with K >= 2 directions at infinity,
-W = 0 is FORCED.
+THM-3016 proves j*Jac(W,H)=0.  This replay does not divide by j in its zero
+branch.  It checks the common-form degree obstruction by exact linear
+nullities and checks the relevant coprimality identities.
 """
-import sympy as sp
+
 from math import gcd
 
-x, y = sp.symbols('x y')
+import sympy as sp
 
-def jac(f, g_):
-    return sp.expand(sp.diff(f, x) * sp.diff(g_, y) - sp.diff(f, y) * sp.diff(g_, x))
 
-print("STEP 1.  For binary forms, Jac(W,H)=0  <=>  W^deg(H) = c H^deg(W).")
-print("   (check both directions on random forms)")
-ok = True
-for (H, W, tag) in [
-    ((x + y) ** 3, (x + y) ** 5, "common linear form"),
-    ((x + 2 * y) ** 2 * (x - y) ** 2, ((x + 2 * y) * (x - y)) ** 6, "common quadratic"),
-    ((x + y) * (x - y), (x + y) ** 2, "NOT proportional powers"),
-]:
-    J = sp.expand(jac(W, H))
-    dH, dW = sp.total_degree(sp.expand(H)), sp.total_degree(sp.expand(W))
-    prop = sp.simplify(sp.expand(W ** dH) / sp.expand(H ** dW))
-    isprop = prop.free_symbols == set()
-    print(f"   {tag:26s}: Jac=0? {J == 0};  W^dH / H^dW constant? {isprop}")
-    ok &= (J == 0) == isprop
+x, y = sp.symbols("x y")
 
-print(f"   equivalence held on all samples: {ok}")
 
-print("\nSTEP 2.  The arithmetic: gcd(g, n-1) = gcd(g, ga-1) = 1 always.")
-bad = [(g_, a_) for g_ in range(1, 40) for a_ in range(1, 40) if gcd(g_, g_ * a_ - 1) != 1]
-print(f"   pairs (g,a) with 1<=g,a<=39 and gcd(g, ga-1) != 1:  {bad if bad else 'NONE'}")
-print("   => in W^g = c H^{n-1}, writing H = prod l_i^{e_i} forces g | e_i(n-1),")
-print("      and gcd(g,n-1)=1 gives g | e_i; with sum e_i = g and e_i >= 1 there is")
-print("      EXACTLY ONE i, with e_i = g.  So H = l^g:  a single direction, K = 1.")
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
 
-print("\nSTEP 3.  Direct check: for K >= 2 (H with >= 2 distinct linear factors),")
-print("   is W = 0 the ONLY homogeneous solution of Jac(W,H)=0 in degree n-1 = ga-1?")
-for (Hexpr, g_, a_, tag) in [
-    ((x + y) * (x - y), 2, 2, "H=(x+y)(x-y), g=2, a=2 -> deg W=3"),
-    ((x + y) * (x - y), 2, 3, "H=(x+y)(x-y), g=2, a=3 -> deg W=5"),
-    ((x + y) ** 2 * (x - y), 3, 2, "H=(x+y)^2(x-y), g=3, a=2 -> deg W=5"),
-    (x * y * (x + y), 3, 3, "H=xy(x+y), g=3, a=3 -> deg W=8"),
-    ((x + y) * (x - y) * (x + 2 * y), 3, 4, "H=(x+y)(x-y)(x+2y), g=3,a=4 -> deg W=11"),
-]:
-    dW = g_ * a_ - 1
-    cs = sp.symbols(f'c0:{dW+1}')
-    W = sum(cs[i] * x ** i * y ** (dW - i) for i in range(dW + 1))
-    eqs = sp.Poly(jac(W, Hexpr), x, y).coeffs()
-    sol = sp.solve(eqs, cs, dict=True)
-    allzero = all(all(sp.simplify(s.get(c, 0)) == 0 for c in cs) for s in sol) if sol else False
-    K = len(sp.factor_list(sp.expand(Hexpr))[1])
-    print(f"   {tag:44s} K={K}: only W=0? {allzero}")
 
-print("\nSTEP 4.  Control -- when K = 1 the solution space is genuinely NONZERO:")
-for (Hexpr, g_, a_) in [((x + y) ** 2, 2, 2), ((x + y) ** 3, 3, 2)]:
-    dW = g_ * a_ - 1
-    cs = sp.symbols(f'c0:{dW+1}')
-    W = sum(cs[i] * x ** i * y ** (dW - i) for i in range(dW + 1))
-    sol = sp.solve(sp.Poly(jac(W, Hexpr), x, y).coeffs(), cs, dict=True)
-    Wsol = sp.simplify(W.subs(sol[0])) if sol else 0
-    print(f"   H=(x+y)^{g_}, deg W={dW}:  W = {sp.factor(Wsol)}   (nonzero <=> K=1)")
+def jac(f, g):
+    return sp.expand(sp.diff(f, x) * sp.diff(g, y) - sp.diff(f, y) * sp.diff(g, x))
+
+
+def homogeneous_nullity(H, degree):
+    coeffs = sp.symbols(f"c0:{degree + 1}")
+    F = sum(coeffs[i] * x**i * y ** (degree - i) for i in range(degree + 1))
+    polynomial = sp.Poly(jac(F, H), x, y)
+    equations = polynomial.coeffs()
+    matrix, _ = sp.linear_eq_to_matrix(equations, coeffs)
+    return len(coeffs) - matrix.rank()
+
+
+print("STEP 1. Keep the two Jacobians typed.")
+print("   J0=Jac(P,Q) is the nonzero Keller constant.")
+print("   j=Jac(H,Q_(m-1)) is a subleading form and may be zero.")
+print("   THM-3016 gives j*Jac(W,H)=0, so a j=0/j!=0 split is mandatory.")
+
+print("\nSTEP 2. Exact coprime-degree gate.")
+bad_n = []
+bad_m = []
+for g in range(1, 60):
+    for a in range(1, 60):
+        if gcd(g, g * a - 1) != 1:
+            bad_n.append((g, a))
+    for b in range(1, 60):
+        if gcd(g, g * b - 1) != 1:
+            bad_m.append((g, b))
+require(not bad_n and not bad_m, "coprime-degree gate failed")
+print("   gcd(g,ga-1)=gcd(g,gb-1)=1 for 1<=g,a,b<60: PASS")
+
+print("\nSTEP 3. K>=2 hostile nullities in degree ga-1 (the j!=0 branch).")
+hostiles = [
+    ((x + y) * (x - y), 2, 2, "(x+y)(x-y), g=2, a=2"),
+    ((x + y) * (x - y), 2, 3, "(x+y)(x-y), g=2, a=3"),
+    ((x + y) ** 2 * (x - y), 3, 2, "(x+y)^2(x-y), g=3, a=2"),
+    (x * y * (x + y), 3, 3, "xy(x+y), g=3, a=3"),
+    ((x + y) * (x - y) * (x + 2 * y), 3, 4, "three roots, g=3, a=4"),
+]
+for H, g, a, label in hostiles:
+    degree = g * a - 1
+    nullity = homogeneous_nullity(H, degree)
+    require(nullity == 0, f"unexpected K>=2 kernel for {label}")
+    print(f"   {label:38s} degree={degree:2d}, nullity={nullity}: PASS")
+
+print("\nSTEP 4. The j=0 branch closes both subleading forms.")
+H = x * y
+q_nullity = homogeneous_nullity(H, 3)  # g=2, m=4, degree m-1
+p_nullity = homogeneous_nullity(H, 5)  # g=2, n=6, degree n-1
+require(q_nullity == 0 and p_nullity == 0, "j=0 branch hostile failed")
+print("   H=xy: Jac(H,Q_3)=0 has nullity 0: Q_3=0")
+print("   H=xy: Jac(P_5,H)=0 has nullity 0: P_5=0")
+print("   hence W=0 without dividing by j: PASS")
+
+print("\nSTEP 5. K=1 sharp controls.")
+controls = [((x + y) ** 2, 3, 1), ((x + y) ** 3, 5, 1)]
+for H, degree, expected in controls:
+    nullity = homogeneous_nullity(H, degree)
+    require(nullity == expected, "K=1 sharp control failed")
+    print(f"   H={sp.factor(H)}, degree={degree}: nullity={nullity} (nonzero): PASS")
+
+print("\nSTEP 6. Symbolic product identity controls.")
+j, w0, w1 = sp.symbols("j w0 w1")
+W = w0 * x**3 + w1 * x**2 * y
+H = x * y
+product = sp.expand(j * jac(W, H))
+require(product.subs(j, 0) == 0, "zero branch is not tautological")
+require(product.subs({j: 1, w0: 1, w1: 0}) != 0, "nonzero branch hostile failed")
+print("   j=0 annihilates the product for arbitrary W: PASS")
+print("   j!=0 does not annihilate a hostile W automatically: PASS")
+
+print("\nALL CHECKS PASSED")
