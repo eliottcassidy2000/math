@@ -265,8 +265,3 @@ different Jelonek curve, or affine modifications that change the function
 field.  It proves an affine normal form, its finite-cover and discriminant
 structure, and the fixed-ramification-line no-go `(23)`.  The final line of
 `(27)` remains the open counterexample architecture.
-
-This identifier is reserved for an audited affine-equivalence theorem between
-the algebraic square-root polynomialization of THM-3545's Catalan thickening
-and the universal depressed-cubic marked-root cover.  No theorem, proof, or
-dependency is asserted by this stub.

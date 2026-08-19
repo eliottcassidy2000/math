@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-426 (2026-08-18, THM-3555 status suffix) -- a second promoted proof retained its reserved-stub disclaimer
+
+- **What failed:** THM-3555 was promoted to `PROVED + VERIFIED-EXACT` with a
+  full affine-equivalence proof and companion, but the old reservation suffix
+  still claimed that no theorem, proof, or dependency was asserted.
+- **Repair / strongest survivor:** remove the stale suffix.  The universal
+  cubic marked-root normal form, discriminant calculation, and fixed-
+  ramification-line no-go are unchanged.
+- **Reusable rule:** the promotion audit in MISTAKE-425 is now triggered by a
+  second independent instance; search the full body for reservation language
+  before every status promotion, including the final paragraph after scope.
+
+## MISTAKE-425 (2026-08-18, THM-3554 status suffix) -- a promoted proof retained its reserved-stub disclaimer
+
+- **What failed:** THM-3554 was promoted to `PROVED + VERIFIED-EXACT` with a
+  complete proof and replay, but its former reservation paragraph remained at
+  the very end and incorrectly said that no theorem, proof, or dependency was
+  asserted.
+- **Repair / strongest survivor:** remove only the stale reservation suffix.
+  The proved punctured-Kummer normal form, its exact quadratic filling
+  obstruction, and all stated scope boundaries are unchanged.
+- **Reusable rule:** when promoting a reserved theorem, search the entire body
+  for `RESERVED`, `stub`, and old no-claim language; frontmatter promotion alone
+  does not make the truth surface internally consistent.
+
 ## MISTAKE-424 (2026-08-18, THM-3554 image typing) -- a punctured Kummer cover's geometric image was called its untyped scheme/rational image
 
 - **What failed:** the first promoted THM-3554 said without qualification
@@ -30,19 +55,6 @@ Format per entry:
 - **Reusable rule:** for a nonproper or punctured morphism, always type
   “image” as topological, scheme-theoretic, geometric-point, or rational-
   point image.  These need not agree.
-
-## MISTAKE-425 (2026-08-18, THM-3554 status suffix) -- a promoted proof retained its reserved-stub disclaimer
-
-- **What failed:** THM-3554 was promoted to `PROVED + VERIFIED-EXACT` with a
-  complete proof and replay, but its former reservation paragraph remained at
-  the very end and incorrectly said that no theorem, proof, or dependency was
-  asserted.
-- **Repair / strongest survivor:** remove only the stale reservation suffix.
-  The proved punctured-Kummer normal form, its exact quadratic filling
-  obstruction, and all stated scope boundaries are unchanged.
-- **Reusable rule:** when promoting a reserved theorem, search the entire body
-  for `RESERVED`, `stub`, and old no-claim language; frontmatter promotion alone
-  does not make the truth surface internally consistent.
 
 ## MISTAKE-423 (2026-08-18, provisional THM-3546 scope) -- rational-point graph containment was silently treated as a polynomial identity
 

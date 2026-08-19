@@ -80,12 +80,17 @@ The strongest exact outcomes are:
    norms.  The filler `3,11,27,51,...` is one more than the transformed row
    maximum.  It is a collision-free scalar sentinel, while the diagonal
    exponent is the functorial support filler.
-8. **PROVED + VERIFIED-EXACT near-counterexample.**  The separated
+8. **PROVED + VERIFIED-EXACT near-counterexample and cubic normal form.**  The separated
    thickening `P=v^2+A(w)`, `Q=v^3-v+vB(w)` retains the transverse collision
    `(+/-1,0)->(1,0)` and has constant Jacobian exactly when
    `B=3A/2` and `A-3A^2/4=kappa*w`.  The unique normalized solution is an
-   infinite Catalan series, never a polynomial.  Mixed thickenings remain
-   open.
+   infinite Catalan series, never a polynomial in `w`.  After adjoining its
+   square root, however, the map polynomializes and is affinely equivalent
+   to the universal depressed-cubic marked-root cover
+   `(t,p)->(p,-t^3-pt)`.  This reveals a third simple point in the collision
+   fibre and proves that any polynomial repair fixing the cubic ramification
+   line pointwise still ramifies at its cusp.  Mixed repairs that move that
+   line at order zero remain open.
 9. **PROVED + VERIFIED-EXACT punctured near-counterexample.**  On the curved
    collision surface of the fixed three-variable Keller map, explicit
    coordinates reduce the restriction to the finite etale double cover
@@ -139,7 +144,11 @@ The strongest exact outcomes are:
   records the exact conductance-side filters, while
   [THM-3545](../01-canon/theorems/THM-3545-catalan-self-intersection-keller-thickening-boundary.md)
   gives an exact formal collision with a nonterminating Catalan obstruction
-  to polynomiality, and
+  to polynomiality,
+  [THM-3555](../01-canon/theorems/THM-3555-catalan-thickening-universal-cubic-root-cover.md)
+  identifies its algebraic polynomialization with the universal cubic
+  marked-root cover and rules out every correction fixing its ramification
+  line pointwise, and
   [THM-3554](../01-canon/theorems/THM-3554-punctured-kummer-collision-surface-normal-form.md)
   gives an exact etale collision whose puncture cannot be filled while
   retaining its quadratic function field.
@@ -147,13 +156,14 @@ The strongest exact outcomes are:
   higher-dimensional Keller packets.  It is not a planar theorem, but it is
   the correct hostile test for proposed inverse-cover constructions.
 
-### Five live concepts
+### Six live concepts
 
 1. leading-form Euclidean divisibility and root multiplicity;
 2. equal-sum coefficient fibres and magnetic holonomy;
 3. Gaussian--Hadamard row transport and its index-two parity sidecar;
 4. cusp-square discriminant packets and nonlinear projection;
-5. coordinate-hypersurface descent from an ambient Keller collision.
+5. coordinate-hypersurface descent from an ambient Keller collision;
+6. connected cubic root covers and ramification-to-infinity surgery.
 
 The session changed the board as follows.  The row transport became an exact
 map, but failed the ordinary Keller predicate by a Laurent Jacobian factor.
@@ -162,6 +172,9 @@ holonomy became the mandatory sidecar.  The cusp construction lost every
 obvious two-coordinate projection, but gained an everywhere-immersive
 four-coordinate packet.  The Euclidean lane gained an explicit
 root-multiplicity divisor rather than another untyped recurrence guess.
+The Catalan tail became a coordinate symptom rather than an isolated series:
+its algebraic coordinate is the ramified universal cubic root cover, sharply
+locating the missing operation as moving finite branching to nonproper escape.
 
 ## 3. The quantum-to-resistor statement, with constants and boundaries
 
@@ -1009,7 +1022,7 @@ This entire conclusion is conditional on the displayed tops controlling
 ordinary total degree; a
 lower `w`-row with larger `u`-degree must be retyped separately.
 
-### D. Catalan self-intersection thickening: exact near-counterexample
+### D. Catalan self-intersection thickening and its universal cubic cover
 
 Consider the separated formal ansatz
 
@@ -1039,16 +1052,62 @@ is not polynomial.  This is
 [THM-3545](../01-canon/theorems/THM-3545-catalan-self-intersection-keller-thickening-boundary.md),
 not a counterexample.
 
+The square root is not merely a generating-function artifact.  Adjoin
+
+```text
+r^2=1-3*kappa*w.
+```
+
+Then the Catalan map polynomializes to
+
+```text
+H(v,r)=(v^2+(2/3)(1-r), v^3-vr),
+Jac_(v,r)(H)=-(2/3)r,             dr/dw=-3*kappa/(2r).
+```
+
+The two factors cancel under the chain rule, explaining the formal constant
+Jacobian.  With `t=v`, `p=2r-3v^2` and an affine target change, `H` becomes
+
+```text
+G(t,p)=(p,-t^3-pt).
+```
+
+This is the universal marked-root cover of `X^3+pX+q=0`: it is finite flat
+of degree three, has Jacobian `R=p+3t^2`, and its discriminant pulls back as
+
+```text
+G^*(-4p^3-27q^2)=-(p+3t^2)^2(4p+3t^2).
+```
+
+The apparent Catalan pair is part of the simple three-point fibre
+`(v,r)=(1,1),(-1,1),(0,-1/2)` over `(1,0)`.  Thus the square root hides the
+third marked root while also cancelling a genuine finite ramification
+factor.  This is the proved
+[THM-3555](../01-canon/theorems/THM-3555-catalan-thickening-universal-cubic-root-cover.md).
+
+It gives a strong surgery gate.  Any correction fixing `R=0` pointwise has
+the form
+
+```text
+G_tilde=(p+R A, -t^3-pt+R B),
+Jac(G_tilde)|_(R=0)=-6t(tA+B)|_(R=0),
+```
+
+so its Jacobian still vanishes at the cusp preimage `(t,p)=(0,0)`.  A viable
+polynomial deformation must move the ramification line already at order
+zero while separately preserving only a selected collision fibre.  This is
+more restrictive than adding a higher normal jet.
+
 Together with the torus-quotient hostile it forms a typed pincer:
 
 - the quotient is polynomial and colliding, but its Jacobian has a square
   ramification factor;
 - the Catalan thickening is colliding and locally Keller, but nonpolynomial.
 
-The live architecture is to add genuinely mixed `v^i w^j` corrections that
-reroute or cancel the Catalan tail without introducing a ramification divisor.
-Truncating the series is not enough: the first omitted coefficient becomes an
-explicit nonconstant Jacobian defect.
+The live architecture is to add genuinely mixed corrections that reroute the
+Catalan tail, move the cubic ramification line, and replace finite branching
+by nonproper escape at infinity.  Truncating the series is not enough: the
+first omitted coefficient becomes an explicit nonconstant Jacobian defect.
 
 There is a concrete positive first step.  Drop separation and write
 
@@ -1095,6 +1154,14 @@ branch divisor has valuation one, whereas `delta=4s^2` forces every such
 valuation to be even.  This is the proved
 [THM-3554](../01-canon/theorems/THM-3554-punctured-kummer-collision-surface-normal-form.md).
 
+Here the image must be typed carefully.  As a morphism onto the punctured
+target `U=A^2\setminus V(beta^2-16alpha)`, the cover is finite etale and
+surjective, so its topological and algebraically-closed-point images are
+`U`.  Its scheme-theoretic image closure in the ambient `A^2` is all of
+`A^2`, while its `k`-rational-point image can be smaller by the square class
+of `beta^2-16alpha`.  None of these distinctions changes the boundary
+valuation obstruction.
+
 The Catalan, quotient, and Kummer objects now form a three-way pincer:
 
 ```text
@@ -1102,6 +1169,12 @@ polynomial plane + collision     -> ramification square;
 unit Jacobian + collision        -> infinite Catalan tail;
 finite etale + collision         -> punctured Laurent plane.
 ```
+
+The sheet structure sharpens the comparison.  The Kummer slice supplies an
+etale but disconnected `1+2` cover, whereas the universal cubic has connected
+generic `S_3` monodromy but finite discriminant ramification.  The desired
+planar architecture must combine the missing halves: connected sheets with
+the finite branch locus replaced by escape to infinity.
 
 A viable deformation must change at least one load-bearing part of the exact
 quadratic extension: mix transverse terms before filling, send the missing
@@ -1221,8 +1294,9 @@ counterexample must satisfy all of the following:
     plaquette or a channel-degenerate regime;
 12. a torus-quotient repair preserving the inherited collision must alter
     both outputs and begin at sorted transverse degrees at least `(4,5)`;
-13. a collision thickening must evade the separated Catalan tail, most likely
-    through mixed terms rather than finite truncation;
+13. a collision thickening must evade the separated Catalan tail and, in the
+    universal cubic chart, move the ramification line at order zero rather
+    than fix it through higher normal jets;
 14. the exact quadratic Kummer collision cannot be filled across its missing
     divisor while preserving etaleness and the same function field;
 15. a cover/cusp construction must retain normalization, coordinate-order
@@ -1244,7 +1318,7 @@ complete classification of all planar counterexamples.
 | higher-dimensional collision | categorical quotient | invariant functions, collision image | transverse character | ramification divisor | THM-3543 square factor |
 | ramified torus quotient | polynomial corrections `(A,B)` | polynomiality and chosen collision if imposed | low transverse repair cells | both outputs, `w`-degree `(4,5)`, common-power top | THM-3549 boundary solve |
 | higher-dimensional collision | coordinate graph restriction | tangent directions, ambient unit determinant | nothing if coordinates verified | coordinate/divisibility certificate | THM-3546 four gates |
-| transverse boundary collision | Catalan formal thickening | collision and unit Jacobian | polynomiality | mixed-term/termination mechanism | solve first mixed response boxes |
+| transverse boundary collision | Catalan formal thickening, then universal cubic root cover after adjoining `r` | selected collision and the exact ramification-cancellation mechanism | polynomiality in `w`; constant Jacobian after polynomialization | mixed terms that move `R=0` and send branching to infinity | fixed-line first jet, then mixed response boxes |
 | curved ambient collision surface | punctured Kummer cover `(s,b)->(b,4s^2)` | finite etale collision | affine-plane completeness | boundary valuation / nonconstant unit | try mixed function-field deformation |
 | cusp packet `(L,T,U,S)` | two polynomial outputs | cusp-square discriminant if chosen invariantly | immersion can be lost in projection | all six minors, order index, wandering prime | nonlinear degree-box response solve |
 | leading form `H^a,H^b` | first Euclidean coefficient tower | exact divisibility | later renewal/new faces | root multiplicities and full Newton packet | bound `(6.11)` then next layer |
@@ -1268,7 +1342,9 @@ complete classification of all planar counterexamples.
 5. **Mixed Catalan thickenings.**  Add the smallest mixed `v^i w^j`
    corrections to both outputs, solve the constant-Jacobian equations by
    transverse degree, and test whether a finite cancellation can terminate
-   the positive Catalan tail without losing the collision.
+   the positive Catalan tail without losing the collision.  In the universal
+   cubic chart, require the deformation to move `R=p+3t^2=0` at order zero;
+   reject every ansatz that merely fixes the line and changes its normal jet.
 6. **Kummer boundary deformations.**  Add the smallest mixed transverse terms
    that change `s^2=delta/4` before filling the divisor; test whether the
    missing divisor moves to infinity or a finite ramification valuation
@@ -1303,8 +1379,10 @@ complete classification of all planar counterexamples.
   only `b<a<2b`; it is not an infinite tower.
 - The immersive cusp packet and graph-descent criterion are construction
   programs, not counterexamples.
-- The Catalan thickening is a formal/local holomorphic map, not a polynomial
-  endomorphism; its theorem closes only the separated ansatz.
+- The Catalan thickening is a formal/local holomorphic map in `(v,w)`, not a
+  polynomial endomorphism.  Its polynomialized `(v,r)` model is a ramified
+  finite cubic cover, not Keller; THM-3555 excludes only corrections fixing
+  the whole ramification line, while mixed surgeries moving it remain open.
 - The punctured Kummer map is a genuine finite etale collision, but its source
   is `G_m x A^1`; THM-3554 excludes only affine-plane fillings with the same
   quadratic function field.
@@ -1332,8 +1410,9 @@ leading common form
 
 collision near-counterexamples
     -> ramified polynomial quotient / nonpolynomial Catalan thickening /
-       punctured etale Kummer cover
-    -> mixed-boundary deformation problem.
+       ramified connected cubic root cover / punctured etale Kummer cover
+    -> move finite branching to nonproper escape through a mixed-boundary
+       deformation.
 ```
 
 Those are genuine maps with explicit preserved and destroyed data.  They
