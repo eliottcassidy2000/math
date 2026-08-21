@@ -2,8 +2,8 @@
 id: THM-3640
 title: "Berggren positive two-cube slope atlas through denominator 401"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + FINITE-EXACT + VERIFIED-EXACT /
-  PENDING INDEPENDENT HOSTILE AUDIT.  Among 8,195 primitive parity-correct
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  Among 8,195 primitive parity-correct
   slopes through denominator 401, exact local screening through prime 997
   leaves 104 rows.  Complete generalized-Pell class and compiler-address
   orbit decisions leave exactly 42 slopes, each with an explicit invariant
@@ -12,10 +12,12 @@ status: >
   density, or asymptotic is claimed.
 source: kps-s189 / THM-3594 bounded slope-atlas continuation, 2026-08-21
 audit: >
-  PENDING -- author-side normal and optimized replays hash-pin the audited
-  parent, all candidates, prime obstructions, 104 complete LMM/unit-orbit
-  ledgers, 42 positive seeds, and the semantic transcript.  Independent
-  clean-room reconstruction remains the promotion gate.
+  PASS -- an independent prime screen and SymPy generalized-Pell
+  implementation reconstructed all 8,195 slopes, 8,091 exclusions, 104
+  survivors, 373 complete classes and every modulo-2n unit orbit.  It matched
+  the 42 admissible slopes, all 42 seeds and next-period cone/cube checks,
+  every ledger digest, and byte-identical normal/-O/stored 331-gate streams;
+  it also verified the THM-3639/3640 ID-race repair.
 depends_on:
   - THM-3594-berggren-positive-cube-slope-atlas-through-201
 related:
@@ -32,8 +34,8 @@ hash_basis: raw LF bytes for files; canonical JSON for semantic ledger
 
 # THM-3640 -- positive two-cube slope atlas through 401
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + FINITE-EXACT + VERIFIED-EXACT /
-PENDING INDEPENDENT HOSTILE AUDIT.**  This doubles THM-3594's denominator
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  This doubles THM-3594's denominator
 range while retaining both halves of its proof: local primes may exclude a
 slope, but only complete generalized-Pell classes and their finite compiler
 orbits may certify the surviving slopes.
@@ -241,5 +243,5 @@ python3 -O 04-computation/berggren_positive_cube_slope_atlas_401_thm3640.py
 
 The result is bounded by `(1)`.  It proves no unbounded slope family,
 parametrization, natural density, asymptotic count, or complete census of
-integers representable as sums of two distinct cubes.  Independent hostile
-reconstruction remains required for promotion.
+integers representable as sums of two distinct cubes.  The independent
+hostile audit closes the promotion gate.  **QED.**
