@@ -1,0 +1,15 @@
+THM-3634 exact companion -- proved quadratic-fold first-stable rank debt
+status=PROVED + VERIFIED-EXACT + HOSTILE-AUDITED
+SECTION compiler relation and retained triple
+PASS compiler=surface_relation retained_triple=(0,0,-3)
+SECTION quadratic critical derivative and first-stable determinant
+PASS t=0 shadow=(f_x,f_t;g_x,g_t)=(Uprime,A;Vprime,B)
+SECTION constant GL2 output covariance and rank-one factors
+PASS rank1_combo gives_unit_derivative and_affine_triple_contradiction
+SECTION equal-triple-value enlargement and hostile sharpness
+PASS E=C+L*C[x] hostile=triple_equal determinant=1 ranks=(2,2)
+PASS caveat=hostile_membership_in_gamma_Q(R)_NOT_ASSERTED
+SECTION source AST gate
+PASS ast_assertion_nodes=0
+CHECKS=28
+RESULT=PASS
