@@ -2,7 +2,7 @@
 id: THM-3624
 title: "Russell-cylinder non-even-fold weighted-cokernel boundary"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For non-even quadratic folds, the common-collision first-jet escape is an
   explicit rational surface with one zero-common subcurve removed.  Every
   nonzero escape carries a weighted vertical cokernel, but on the principal
@@ -12,7 +12,12 @@ status: >
   scalar staircase mechanism only; it proves neither a no-Keller theorem nor
   a Keller example for non-even folds.
 source: root / noneven_fold_probe parity-hostile continuation, 2026-08-21
-audit: PENDING -- provisional theorem and exact companion require hostile audit
+audit: >
+  PASS -- an independent hostile reconstruction checked the full first-jet
+  surface and every projective stratum, the weighted cokernel, the generic
+  degree-two invoice and exceptional u=+-9/4 closure, and the explicit
+  degree-four finite survivor; normal, optimized, and stored 89-gate
+  transcripts are byte-identical.
 depends_on:
   - THM-3612-russell-cylinder-even-fold-nongraph-collision-jet-rigidity
 related:
@@ -20,14 +25,14 @@ related:
   - THM-3605-russell-cylinder-graph-slice-puncture-no-filling
 script: 04-computation/jc2_russell_cylinder_noneven_fold_weighted_cokernel_thm3624.py
 output: 05-knowledge/results/jc2_russell_cylinder_noneven_fold_weighted_cokernel_thm3624.out
-script_sha256: 9064f9c7d497e86891c1f6a1ea68457262144b9966636bcbc8da5d3698fca598
-output_sha256: 8d0b12b04fa089a00a2fb1bc02534e9be16d440a33d91922b83ec8493bb28ada
+script_sha256: 18b7bdc062909bd45d271c6e1744ef4c1ccc360385e769db419e36418dac3468
+output_sha256: 6a38a8b220bbc40b77062f92e75dc4f3272361f2fb8e39c77d00786b46baa462
 hash_basis: raw LF bytes
 ---
 
 # THM-3624 -- Russell-cylinder non-even-fold weighted-cokernel boundary
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 This theorem identifies exactly where evenness enters the THM-3619 collision
 staircase.  The first-jet classification is complete.  The higher calculation
 is deliberately finite and negative in scope: it exhibits a non-even

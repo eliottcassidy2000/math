@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3624.
+"""Exact controls for proved THM-3624.
 
 The script verifies the complete non-even first-jet tangent-match locus, its
 projective parametrization, the weighted vertical top-symbol cokernel, the
@@ -64,8 +64,8 @@ def source_monomials(maximum_degree):
     ]
 
 
-print("THM-3624 exact companion -- provisional non-even weighted-cokernel boundary")
-print("status=first-jet classification plus finite formal survivor; audit=PENDING")
+print("THM-3624 exact companion -- proved non-even weighted-cokernel boundary")
+print("status=proved finite mechanism and independently hostile-audited")
 
 
 print("SECTION compiler collision and general non-even tangent table")
