@@ -1,6 +1,6 @@
 # Multiplicity, conductor, and phase debt: one sidecar principle on three frontiers
 
-Status: **TYPED SYNTHESIS + CORRECTED FINITE-EXACT LRC EXTENSION**
+Status: **TYPED SYNTHESIS + CORRECTED FINITE-EXACT CROSS-FRONTIER EXTENSION**
 (2026-08-21).
 This is not a theorem and does not create a dependency.  It specializes the
 existing meta-patterns “controlled forgetting requires a sidecar” and “the
@@ -209,7 +209,7 @@ Thus the single polynomial identity `J_0=1` already forces the nonzero debt;
 `J_1=0` is not needed.  The live frontier has moved from another cell on the
 same fold to another collision polynomial or compiler.
 
-An exact incoming `Q_h` probe makes that move nonvacuous.  Its actual
+An exact `Q_h` restriction-ring probe makes that move nonvacuous.  Its actual
 restriction ring has generator degrees `24,27,39,119,134,214`, quotient
 dimension `155`, semigroup conductor `299`, and global conductor degree `310`.
 For `(U,V)=(c,e)` it nevertheless contains a unique first actual-ring Bezout
@@ -217,7 +217,30 @@ witness at symmetric source cutoff `334`, with `deg(T,A,B)=(308,334,331)`.
 THM-3627 still closes the same hostile at source degree six for arbitrary
 target two-forms.  Hence completion debt, conductor debt, zero-stable
 determinant debt, and transverse stable-order debt are genuinely distinct;
-the sharp next computation is the `Q_h` analogue of `(9b)`.
+the compiler must retain them as separate coordinates.
+
+THM-3641 now supplies the missing curvature coordinate.  On every ordinary
+retained cell of the full projective first-jet atlas it proves
+
+```text
+lambda(J_2)=D_Q+mu_-J_0'(-1)+mu_0J_0'(0)+mu_+J_0'(1). (9c)
+```
+
+In the principal chart,
+
+```text
+D_Q=-2((9-4u)r_-+(9+4u)r_++243)/81.                  (9d)
+```
+
+For `Q_h`, `(u,r_-,r_+)=(1,0,-243/13)`, so the retained debt is exactly zero.
+This is a qualitative boundary rather than a smaller nonzero invoice: the
+universal three-value obstruction that closed the minimal Hermite fold has
+disappeared.  A current exact agent computation, still **PROVISIONAL**, reports
+an actual-ring global `J_1` lift for this zero-debt witness and complete
+retained `J_2` cancellation.  The unresolved predicate is stronger and
+global: whether the full polynomial `J_2(x)` lies in the actual higher-lift
+image for the available gauge.  THM-3642 remains a reserved, unproved
+namespace until that membership problem and the next stable order are closed.
 
 ## 4. AMM: the horizon ratio hides a three-term phase cocycle
 
@@ -254,10 +277,74 @@ The normalized error deteriorates by exactly `15/8192` at the larger fixed
 trace.  Equation `(12)` explains why a one-coordinate golden fit can rebound
 and then worsen: the margin collapse, headroom defect, and Sturmian depth phase
 move separately.  The sidecar is the phase invoice, not a replacement
-asymptotic law.  The `R=16384,D0=400` trace is known to fail but is not known
-terminal in this package.
+asymptotic law.
 
-## 5. Transfer rule and counterindications
+THM-3644 now resolves the immediate local offset question without inventing a
+global threshold.  At `R=16384` the complete consecutive bracket is
+
+```text
+D0=401,...,412 : DIE,
+D0=413,...,416 : CLOSED,
+OPEN_RESIDUAL   : none.                                (13)
+```
+
+The adjacent event jumps from death at row `4116` for `D0=412` to closure at
+capture row `10116` for `D0=413`; an independent FLINT/fmpz reconstruction
+matches the load-bearing pair.  Thus `413` is the first closure **within this
+bracket**, not a proved global least offset: Rule-A closure monotonicity below
+`401` is absent from the proof graph.  The discontinuous event coordinate in
+`(13)` is another instance of the sidecar principle.  An offset records the
+input word, but the terminal branch and capture/death row record different
+fibres of the exact automaton.
+
+## 5. Two-cube and Mordell arithmetic: support and Selmer sidecars
+
+The Berggren/two-distinct-cubes lane exhibits the same failure of scalar
+compression in arithmetic form.  For a primitive parity-correct slope set
+
+```text
+U=n-m,                V=2m-n,                T=2m+n.   (14)
+```
+
+THM-3645 proves, pending a full independent hostile audit, that every odd
+mod-prime obstruction to the associated conic is supported on `nVT`.  At a
+support prime its entire mod-prime content is one of two characters:
+
+```text
+p|n or p|V : (6/p)=1,                 p|T : (-2/p)=1. (15)
+```
+
+Together with the `p=3` condition, a screen through `n` is complete because
+`V<n` and `T/3<n`.  It forces exactly the two cones
+
+```text
+(n,V)=(5,23) or (23,5) mod 24.                         (16)
+```
+
+This replaces a long blind prime screen by a typed support divisor plus two
+quadratic characters.  It also exposed a concrete correction: the first
+slope passing the fixed `p<=997` screen but failing the complete support test
+is `(m,n)=(512,1019)`, already obstructed at `p=1019`; the formerly reported
+`(1012,1039)` is only a later escape.  Neither `(15)` nor `(16)` supplies
+`p`-adic solubility, an integral cube decomposition, or an admissible Pell
+orbit.
+
+On the fixed-`107` Mordell curve
+
+```text
+E: y^2=x^3+1225041,                                    (17)
+```
+
+THM-3643 now independently certifies the ordinary real-quadratic class number
+`h(Q(sqrt(1225041)))=1`.  THM-3646 then gives a candidate exact rank theorem,
+pending its own hostile audit: a rational point with denominator `14723^2`
+adds a third independent mod-`3` class, while explicit `3`-isogeny support
+bounds the rank above by three.  The conceptual correction is important:
+`3`-saturation of the old two-point subgroup did not imply completeness of
+the Mordell--Weil group.  The missing sidecar was the complementary isogeny
+Selmer support, not a denser search inside the old lattice.
+
+## 6. Transfer rule and counterindications
 
 When an exact quotient almost selects the desired object:
 
@@ -271,17 +358,20 @@ When an exact quotient almost selects the desired object:
 This move is counterindicated when the target predicate is already invariant
 on quotient fibres, or when the proposed sidecar is only a coordinate gauge.
 In particular, a static arc projector is not a current, a completed Newton
-interpolant is not algebraic, and an exact finite-scale phase invoice is not a
-limit theorem.
+interpolant is not algebraic, an exact finite-scale phase invoice is not a
+limit theorem, and a mod-prime support classification is not a rational or
+integral point.
 
 The productive research question is therefore:
 
 ```text
 What is the smallest noncommuting or nonlocal observable that separates the
-remaining fibre while preserving the actual target predicate?              (13)
+remaining fibre while preserving the actual target predicate?              (18)
 ```
 
-That question is now concrete on all three frontiers: temporal entry after
-the corrected middle projector `(9)` for LRC, the universal second-stable
-residue for the actual-ring `Q_h` witness, and the terminal-offset/front-phase
-transition at `R=16384` for AMM.
+That question is now concrete on five frontiers: temporal entry after the
+corrected middle projector `(9)` for LRC; global `J_2` membership after the
+zero-debt actual-ring `Q_h` lift; offset monotonicity versus terminal-event
+type at `R=16384` for AMM; a `p`-adic/global sidecar beyond the two-cube support
+characters; and the precise index/generator structure behind the new third
+Mordell point.
