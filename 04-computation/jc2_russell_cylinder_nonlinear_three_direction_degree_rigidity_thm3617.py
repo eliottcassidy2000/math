@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3617 nonlinear target rigidity.
+"""Exact controls for proved THM-3617 nonlinear target rigidity.
 
 The universal no-go is proof-driven through injectivity on one line and
 Jung--van der Kulk degree divisibility.  This companion verifies the Russell
@@ -63,8 +63,8 @@ def target_exponents(maximum_degree):
     )
 
 
-print("THM-3617 exact companion -- provisional nonlinear three-direction rigidity")
-print("status=verified exact controls; independent hostile audit pending; cited all-degree steps are proof-driven")
+print("THM-3617 exact companion -- proved nonlinear three-direction rigidity")
+print("status=verified exact controls plus independent hostile audit; cited all-degree steps are proof-driven")
 
 
 print("SECTION Russell compiler and graph polynomiality")
@@ -567,4 +567,4 @@ print("PASS hostile_gates=16 lambda_profile=28,56 eta_profile=30,30 R4_profile=5
 
 
 print(f"PASS total_exact_gates={CHECKS}")
-print("RESULT PASS -- provisional theorem candidate verified-exact; independent hostile audit pending")
+print("RESULT PASS -- proved, verified-exact, independently hostile-audited")

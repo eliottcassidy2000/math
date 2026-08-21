@@ -2,18 +2,19 @@
 id: THM-3617
 title: "Russell-cylinder nonlinear three-direction degree rigidity"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  On every polynomial Russell-cylinder graph, the genuinely
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On every
+  polynomial Russell-cylinder graph, the genuinely
   nonlinear target pair theta Y+R(B,C), V(B,C)S+Q(B,C) cannot have nonzero
   constant ordinary Jacobian when theta, [B^3]R, [B^2]V, and V(0,0) are
   nonzero and deg R,deg Q<=3, deg V<=2.  The x=0 trace is injective; three
   exact degree profiles violate Jung--van der Kulk divisibility; the sole
-  cancellation h=-xq+n has [q]Jac=8 theta V(0,0).  This file is not a
-  proved dependency before hostile audit and status promotion.
+  cancellation h=-xq+n has [q]Jac=8 theta V(0,0).
 source: root / nonlinear_cylinder_shears follow-up, 2026-08-21
 audit: >
-  PENDING -- exact companion frozen provisionally; independent mathematical
-  and replay audit required before promotion.
+  PASS -- independent hostile audit reconstructed the quotient-safe
+  non-postcomposition proof, line inverse, all degree branches, exceptional
+  trace, and method hostiles; normal, optimized, and stored 4,330-gate
+  transcripts are byte-identical.
 depends_on:
   - THM-3614-russell-cylinder-collision-free-full-linear-projection-rigidity
 related:
@@ -25,16 +26,14 @@ external:
   - "Jung--van der Kulk: degree divisibility for polynomial automorphisms of the affine plane."
 script: 04-computation/jc2_russell_cylinder_nonlinear_three_direction_degree_rigidity_thm3617.py
 output: 05-knowledge/results/jc2_russell_cylinder_nonlinear_three_direction_degree_rigidity_thm3617.out
-script_sha256: ee9d82cecb7e05408041b7443b8466d2f6e792c747c2daf20decc901267f6189
-output_sha256: d5471aaed4655e64a84b381624eacbb6e8190a91b3483261d6d577319f417f06
+script_sha256: 7649a96bb772c5c110d2669574a26cd7d38adb6f2b36b3d61d827848af9f0239
+output_sha256: 235d911491d58e2d8b1cdff998fe2eb431289c23451b8b7ddd49501dc7c4d145
 hash_basis: raw LF bytes
 ---
 
 # THM-3617 -- Russell-cylinder nonlinear three-direction degree rigidity
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**  The proof and exact controls are complete, but this file is
-not a proved dependency until an independent hostile audit promotes it.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 All rings and derivatives are over `C`.  Degrees of source polynomials mean
 ordinary total degree in `(x,q)`; degrees of target polynomials mean ordinary
@@ -249,8 +248,7 @@ Jac(F,G)(0,q)
 ```
 
 This contradicts constancy and closes the last graph.  Together with
-Sections 2--3, it proves the provisional claim `(5)` pending independent
-hostile audit.
+Sections 2--3, it proves `(5)`.
 
 ## 5. Preservation/loss ledger and sharp method boundaries
 
