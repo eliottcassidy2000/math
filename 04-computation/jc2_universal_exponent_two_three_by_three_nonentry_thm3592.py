@@ -4,9 +4,10 @@
 The theorem is universal in the squarefree target and in the integer supports.
 This standard-library-only companion checks the finite collision-pattern
 catalogue, component/deletion gates, every scalar-arm placement in the five
-connected families, the hooked-family differential identities, and all sharp
-boundaries displayed in THM-3592.  Finite parameter ranges are hostile exact
-controls; the universal steps are proved symbolically in the theorem.
+connected collision types and their reversal-sensitive representatives, the
+hooked-family differential identities, and all sharp boundaries displayed in
+THM-3592.  Finite parameter ranges are hostile exact controls; the universal
+steps are proved symbolically in the theorem.
 """
 
 from __future__ import annotations
@@ -243,6 +244,11 @@ require(
     "H6 fibres",
 )
 require(
+    cell_fibres((1, 1), (2, 1))
+    == [("00",), ("10",), ("01", "20"), ("02", "11"), ("12", "21"), ("22",)],
+    "reversed H6 fibres",
+)
+require(
     cell_fibres((2, 5), (5, 2))
     == [("00",), ("10",), ("01",), ("02", "11", "20"), ("12",), ("21",), ("22",)],
     "R7 fibres",
@@ -256,6 +262,16 @@ require(
     cell_fibres((2, 5), (3, 2))
     == [("00",), ("10",), ("01",), ("02", "11"), ("12", "20"), ("21",), ("22",)],
     "E- fibres",
+)
+require(
+    cell_fibres((5, 2), (3, 2))
+    == [("00",), ("01",), ("02", "10"), ("20",), ("11",), ("12", "21"), ("22",)],
+    "reversed E+ fibres",
+)
+require(
+    cell_fibres((5, 2), (2, 3))
+    == [("00",), ("01",), ("02", "10"), ("11", "20"), ("21",), ("12",), ("22",)],
+    "reversed E- fibres",
 )
 
 
@@ -299,7 +315,17 @@ for p in range(1, 25):
                 "E- rectangle corner 10")
         require(fibre_size_at_cell((p, q), (q - p, p), (2, 2)) == 1,
                 "E- rectangle corner 22")
-        euclidean_rectangles += 2
+        # Reversed E+: scalar double 12/21 has singleton corners 11/22.
+        require(fibre_size_at_cell((q, p), (q - p, p), (1, 1)) == 1,
+                "reversed E+ rectangle corner 11")
+        require(fibre_size_at_cell((q, p), (q - p, p), (2, 2)) == 1,
+                "reversed E+ rectangle corner 22")
+        # Reversed E-: scalar double 02/10 has singleton corners 00/12.
+        require(fibre_size_at_cell((q, p), (p, q - p), (0, 0)) == 1,
+                "reversed E- rectangle corner 00")
+        require(fibre_size_at_cell((q, p), (p, q - p), (1, 2)) == 1,
+                "reversed E- rectangle corner 12")
+        euclidean_rectangles += 4
 
 
 # ---------------------------------------------------------------------------
@@ -478,6 +504,80 @@ require(set(hook_survivors) == {"H1_PRIMARY", "H1_MIRROR", "H2", "H3"},
         "exactly four hooked ladders")
 
 
+def reversed_hook_singleton_gate_feasible(
+    p_weights: tuple[int, int, int],
+    q_weights: tuple[int, int, int],
+    gated_cell: tuple[int, int],
+) -> bool:
+    """Joint order test for the reversed-hook singleton rows 00,10,22."""
+    gate_i, gate_j = gated_cell
+    fixed_p = {gate_i: 1 if p_weights[gate_i] == -2 else 0}
+    fixed_q = {gate_j: 1 if q_weights[gate_j] == -2 else 0}
+    q0_floor = regularity_floor(q_weights[0])
+    q0_orders = [fixed_q[0]] if 0 in fixed_q else range(q0_floor, 1025)
+    for q0_order in q0_orders:
+        if not pair_order_possible(
+            p_weights[0], q_weights[0], fixed_p.get(0), q0_order
+        ):
+            continue
+        if not pair_order_possible(
+            p_weights[1], q_weights[0], fixed_p.get(1), q0_order
+        ):
+            continue
+        if pair_order_possible(
+            p_weights[2], q_weights[2], fixed_p.get(2), fixed_q.get(2)
+        ):
+            return True
+    return False
+
+
+# Simultaneous reversal is an additive-support symmetry but not a regularity
+# symmetry.  The omitted hook orientation has one surviving gate: 21=(1,-2)
+# for d>=3.  Its lowest double row has arm orders (2d-1)ell and
+# (2d+2)ell-1, so cancellation would require 3ell=1.
+REVERSED_H_FIBRES = (
+    ((0, 1), (2, 0)),
+    ((0, 2), (1, 1)),
+    ((1, 2), (2, 1)),
+)
+reversed_hook_survivors: list[tuple[int, tuple[int, int], bool]] = []
+reversed_hook_gate_rows = 0
+reversed_hook_valuation_rows = 0
+for step in range(1, 65):
+    p_offsets = (0, step, 2 * step)
+    q_offsets = (0, 2 * step, 3 * step)
+    for cells in REVERSED_H_FIBRES:
+        for cell in cells:
+            for negative_on_p in (True, False):
+                p_weights, q_weights = weights_from_gate(
+                    p_offsets, q_offsets, cell, negative_on_p
+                )
+                if reversed_hook_singleton_gate_feasible(
+                    p_weights, q_weights, cell
+                ):
+                    reversed_hook_survivors.append((step, cell, negative_on_p))
+                reversed_hook_gate_rows += 1
+    if step >= 3:
+        for arm_order in range(1, 65):
+            first_order = (2 * step - 1) * arm_order
+            second_order = (2 * step + 2) * arm_order - 1
+            first_multiplier = (2 * step - 1) * (1 - 2 * arm_order)
+            second_multiplier = -(2 * step + 2) * arm_order
+            require(first_multiplier != 0 and second_multiplier != 0,
+                    "reversed-hook nonzero initial multipliers")
+            require(first_order != second_order,
+                    "reversed-hook valuation mismatch")
+            if step == 3:
+                require((step - 1) * arm_order >= 2,
+                        "reversed-hook d=3 alternate gate is never simple")
+            reversed_hook_valuation_rows += 1
+require(
+    reversed_hook_survivors
+    == [(step, (2, 1), False) for step in range(3, 65)],
+    "exact reversed-hook survivor ladder",
+)
+
+
 # Reflected triple: all six scalar gates die on a singleton row, including
 # x=1, x=2, and y=2 zero-weight boundaries.
 reflected_gate_rows = 0
@@ -512,11 +612,17 @@ for p in range(1, 25):
     for q in range(p + 1, 25):
         if q == 2 * p:
             continue
-        for gaps_b, scalar_cells, singleton_cells in (
-            ((p, q - p), ((1, 2), (2, 0)), ((0, 0), (1, 1), (0, 2), (2, 1), (2, 2))),
-            ((q - p, p), ((0, 2), (1, 1)), ((0, 0), (1, 0), (0, 1), (2, 1), (2, 2))),
+        for gaps_a, gaps_b, scalar_cells, singleton_cells in (
+            ((p, q), (p, q - p), ((1, 2), (2, 0)),
+             ((0, 0), (1, 1), (0, 2), (2, 1), (2, 2))),
+            ((p, q), (q - p, p), ((0, 2), (1, 1)),
+             ((0, 0), (1, 0), (0, 1), (2, 1), (2, 2))),
+            ((q, p), (q - p, p), ((0, 2), (1, 0)),
+             ((0, 0), (0, 1), (2, 0), (1, 1), (2, 2))),
+            ((q, p), (p, q - p), ((1, 1), (2, 0)),
+             ((0, 0), (0, 1), (2, 1), (1, 2), (2, 2))),
         ):
-            p_offsets, q_offsets = offsets((p, q)), offsets(gaps_b)
+            p_offsets, q_offsets = offsets(gaps_a), offsets(gaps_b)
             for cell in scalar_cells:
                 for negative_on_p in (True, False):
                     p_weights, q_weights = weights_from_gate(
@@ -924,7 +1030,11 @@ print(
     "four ladders exactly PASS"
 )
 print(
-    f"R7 gates={reflected_gate_rows}; nonrectangular E gates={euclidean_gate_rows}; "
+    f"reversed H6 placements={reversed_hook_gate_rows}; one ladder and "
+    f"valuation rows={reversed_hook_valuation_rows} PASS"
+)
+print(
+    f"R7 gates={reflected_gate_rows}; four-orientation nonrectangular E gates={euclidean_gate_rows}; "
     "all singleton-killed PASS"
 )
 print("H1 primary/mirror: terminal, leak-elimination, k>1, and k=1 compatibility PASS")

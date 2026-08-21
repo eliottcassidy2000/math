@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-432 (2026-08-21, THM-3592 support classification) -- simultaneous reversal was not a regularity symmetry
+
+- **What failed:** the first THM-3592 proof classified three-point sumsets
+  modulo simultaneous reversal, but audited only the canonical hook and
+  Euclidean representatives.  Although reversal preserves the additive fibre
+  pattern, it changes the absolute weights and therefore the divisibility
+  floor `Sigma^ceil(-u/2)|f`; it is not a symmetry of Danielewski regularity.
+- **Minimal witness / first failed implication:** the omitted hook
+  `(d,d;2d,d)` has fibre word
+  `00;10;01+20;02+11;12+21;22`.  Its `21=(1,-2)` arm gate survives every
+  singleton test for all `d>=3`, so the canonical-hook census cannot be
+  transported through reversal.
+- **Repair / strongest survivor:** THM-3592 now audits the reflected hook and
+  both reflected Euclidean families separately.  The hook survivor is killed
+  by the exact arm-order mismatch `(2d-1)ell != (2d+2)ell-1`; the reflected
+  Euclidean rows die by rectangle and singleton gates.  The companion now
+  includes all three orientations and the universal seven-piece support floor
+  survives, pending a second independent hostile audit.
+- **Reusable rule:** quotient a finite support atlas only by symmetries that
+  preserve every downstream side condition.  If the target uses signed
+  weights, divisibility floors, or boundary regularity, replay every
+  reversal-sensitive orbit representative before claiming exhaustiveness.
+
 ## MISTAKE-431 (2026-08-21, THM-3579 degree-operator lemma) -- the constant/constant zero boundary was omitted
 
 - **What failed:** the first statement of THM-3579's degree-rigid operator

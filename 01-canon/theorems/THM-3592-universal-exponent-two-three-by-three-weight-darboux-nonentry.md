@@ -2,7 +2,7 @@
 id: THM-3592
 title: "Universal exponent-two three-by-three weight Darboux nonentry"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  For every
+  PROVED + VERIFIED-EXACT / REPAIRED AFTER FAILED AUDIT; REAUDIT PENDING.  For every
   squarefree polynomial Sigma over C of degree at least two, no polynomial
   Darboux pair on c^2 e=Sigma(b), after scalar removal, can have exactly three
   nonzero homogeneous weight pieces in each output.  The proof classifies all
@@ -14,9 +14,11 @@ status: >
 source: kps-s188 / unequal-step three-by-three Darboux hostile lane, 2026-08-21
 audit: >
   The standard-library exact companion passes ordinary and optimized Python
-  with byte-identical output.  An independent hostile audit has not yet been
-  performed; this file must not be labelled independently audited until one is
-  recorded.
+  with byte-identical output.  The first independent hostile audit correctly
+  rejected the pushed version because simultaneous support reversal is not a
+  regularity-preserving symmetry: the reflected hook and two reflected
+  Euclidean representatives had been omitted.  They are now proved below and
+  included in the companion.  A second hostile audit is pending.
 depends_on:
   - THM-3569-danielewski-two-by-three-weight-darboux-nonentry
   - THM-3579-equal-step-three-by-three-danielewski-darboux-nonentry
@@ -28,16 +30,19 @@ related:
   - THM-3584-all-exponent-equal-step-three-by-three-danielewski-darboux-nonentry
 script: 04-computation/jc2_universal_exponent_two_three_by_three_nonentry_thm3592.py
 output: 05-knowledge/results/jc2_universal_exponent_two_three_by_three_nonentry_thm3592.out
-script_sha256: b0089fdd6daafcdcb9d2515bf7a314c4723d5f16e3f367bd150241849838ef8d
-output_sha256: e9a618f930dc463a2393954cfe77a27334182060788631c7daf06d260e4db2d8
+script_sha256: 863795c6254ba1ab2e246ba078885a625724978d53834dcf3f27dfdf19753539
+output_sha256: effd1c69f39035adf8f8c59d663496f96f7db2247f982d2025b6de7b9b85b894
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3592 -- universal exponent-two three-by-three weight Darboux nonentry
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.**  This closes
+**PROVED + VERIFIED-EXACT / REPAIRED AFTER FAILED AUDIT; REAUDIT PENDING.**  This closes
 the unequal-step `3 x 3` cell left by THM-3579 and the last six-piece cell left
-by THM-3583.  The independent-audit qualifier is deliberately pending.
+by THM-3583.  The first hostile audit caught a reversal-sensitive omission;
+Sections 5.5 and 7 now close the three missing representatives, and the
+independent-audit qualifier is deliberately pending until that repair is
+reaudited.
 
 All rings are over `C`.  Let `Sigma in C[b]` be squarefree with
 `deg Sigma>=2`, and put
@@ -120,15 +125,18 @@ only for
 R=2,              (m,n)=(1,0).                        (8)
 ```
 
-The `R=1` candidate has zero multiplier.  Thus every scalar fibre must contain
-an address with weights
+The `R=1` candidate has zero multiplier.  Thus at each arm every scalar fibre
+must contain at least one address with weights
 
 ```text
 (-2,1)  or  (1,-2),                                    (9)
 ```
 
 whose negative coefficient is simple and whose positive coefficient is a
-unit at every arm.  This is the scalar-arm gate.
+unit at that arm.  When two such weight addresses coexist, this statement
+does not by itself select one address uniformly over all arms; a separate
+compatibility or no-alternation argument is then required.  This is the
+scalar-arm gate.
 
 ### 1.3 Euler factors
 
@@ -186,10 +194,10 @@ classification for `|A+B|<=7`:
 |---:|---|---|---|
 | 5 | equal AP | `(d,d ; d,d)` | `01=10`, `02=11=20`, `12=21` |
 | 6 | diagonal `D` | `(x,y ; x,y)`, `x!=y` | `01=10`, `02=20`, `12=21` |
-| 6 | hook `H` | `(d,d ; d,2d)` | `01=10`, `11=20`, `02=21` |
+| 6 | hook `H`, `bar H` | `(d,d ; d,2d)`; `(d,d ; 2d,d)` | `01=10`, `11=20`, `02=21`; `01=20`, `02=11`, `12=21` |
 | 7 | reflected `R` | `(x,y ; y,x)`, `x!=y` | `02=11=20` |
-| 7 | Euclidean `E+` | `(p,q ; p,q-p)`, `0<p<q`, `q!=2p` | `01=10`, `12=20` |
-| 7 | Euclidean `E-` | `(p,q ; q-p,p)`, same range | `02=11`, `12=20` |
+| 7 | Euclidean `E+`, `bar E+` | `(p,q ; p,q-p)`; `(q,p ; q-p,p)`, `0<p<q`, `q!=2p` | `01=10`, `12=20`; `02=10`, `12=21` |
+| 7 | Euclidean `E-`, `bar E-` | `(p,q ; q-p,p)`; `(q,p ; p,q-p)`, same range | `02=11`, `12=20`; `02=10`, `11=20` |
 | 7 | AP extension | `(d,d ; d,t)`, `t notin {d,2d}` | two doubles |
 | 7 | AP contained | `(d,d ; p,d-p)`, `p!=d/2` | two doubles |
 | 7 | AP dyadic | `(d,d ; 2d,2d)` | two doubles |
@@ -228,7 +236,7 @@ vertex isolated, and the dyadic form has the middle vertex isolated on the
 fine-scale side.  The connected list is therefore exactly
 
 ```text
-equal AP, D, H, R, E+, E-.                              (16)
+equal AP, D, H/bar H, R, E+/bar E+, E-/bar E-.          (16)
 ```
 
 The equal-AP case is THM-3579.  It remains to close the other five types.
@@ -472,7 +480,7 @@ S-[4kU/(pL)]K^(2k+1)R_2
 ```
 
 A Darboux pair has `R_2=0` and `S=1`, contradicting `(10)`.  This closes all
-four hooked ladders.
+four ladders in the displayed orientation `H`.
 
 Two nondeletion checks are worth recording.  In the primary ladder, the two
 summands in each zero row must cancel nontrivially:
@@ -489,6 +497,63 @@ Equations `(25)--(26)`, rather than either deletion, are therefore the minimal
 genuinely connected leak obstruction.  This is also why a `2 x 4` theorem
 cannot simply replace the hooked calculation: deleting one vertex here gives
 `3 x 2`, while the full cell has three pieces on both sides.
+
+### 5.5 The simultaneously reversed hook
+
+The additive classification also has the reversal-sensitive representative
+
+```text
+A={0,d,2d},                    B={0,2d,3d},
+00; 10; 01+20; 02+11; 12+21; 22.                      (41a)
+```
+
+It cannot be discarded by simultaneous reversal, because `(3)` distinguishes
+positive from negative absolute weights.  Testing the twelve scalar-arm
+placements against the singleton rows `00,10,22` leaves, for `d>=3`, exactly
+the address `21` with weights `(1,-2)`.  The only same-sign cases not killed
+immediately by a mixed or zero/nonzero singleton are:
+
+```text
+20:(1,-2):  ord(g_0)=1 forces ord(f_0)=(2d-1)/2;
+11:(-2,1): ord(f_1)=1 forces both (d-1)/2 and (d+2)/2 integral;
+12:(-2,1): ord(f_1)=1 forces both (3d-1)/2 and (d+2)/2 integral.
+```
+
+The first is impossible because `2d-1` is odd, and each of the last two asks
+opposite parities of `d`.  All remaining placements have a strict mixed-sign
+singleton (with the direct zero/nonzero boundary at `d=1,2`).
+
+For the survivor, the absolute supports are
+
+```text
+supp(P)=(1-2d,1-d,1),          supp(Q)=(-2d-2,-2,d-2).
+```
+
+The singleton equations give, for nonzero constants `A,B,L,U,M`,
+
+```text
+f_0=A h^(2d-1),   f_1=L h^(d-1),   g_0=B h^(2d+2),
+f_2=U K,          g_2=M K^(d-2),              Sigma|h. (41b)
+```
+
+At an arm write `ell=ord(h)>=1`.  Scalar effectiveness at `21` gives
+`ord(g_1)=1` and `ord(f_2)=0`.  In the lower double row
+
+```text
+W_(1-2d,-2)(f_0,g_1)+W_(1,-2d-2)(f_2,g_0)=0,          (41c)
+```
+
+the two summands have respective orders
+
+```text
+(2d-1)ell,                    (2d+2)ell-1,
+```
+
+and nonzero initial multipliers `(2d-1)(1-2ell)` and
+`-(2d+2)ell`.  Cancellation would require `3ell=1`, impossible.  When
+`d=3`, the other address `12` also has weight pair `(-2,1)`, but `(41b)`
+gives `ord(f_1)=2ell>=2`, so it cannot supply a simple arm or alternate with
+`21`.  Hence `bar H` is empty as well.
 
 ## 6. The reflected triple
 
@@ -512,7 +577,7 @@ arm gates in that fibre all fail:
 
 Thus the reflected family is empty.
 
-## 7. The two Euclidean families
+## 7. The four oriented Euclidean families
 
 For `E+`, the double `01+10` is a `2 x 2` diagonal whose other corners
 `00,11` are singleton, so it cannot be scalar.  The other double is
@@ -539,8 +604,29 @@ For `E-`, the double `12+20` is a `2 x 2` diagonal with singleton corners
 11:(1,-2)  -> 10 mixed.                                (44)
 ```
 
-So both Euclidean families are empty.  Sections 3--7 exhaust every possible
-three-by-three collision pattern, proving the theorem.
+For the simultaneously reversed representative `bar E+`, the doubles are
+`02+10` and `12+21`.  The latter is a `2 x 2` diagonal with singleton corners
+`11,22`.  In the former, the four gates
+
+```text
+02:(-2,1), 02:(1,-2), 10:(-2,1), 10:(1,-2)
+```
+
+die respectively on the singleton cells `20,00,00,20` by strict mixed signs.
+
+For `bar E-`, the double `02+10` is the rectangle with singleton corners
+`00,12`.  The four gates in `11+20` die as follows:
+
+```text
+11:(-2,1) -> 01 mixed,       11:(1,-2) -> 21 mixed,
+20:(-2,1) -> 00 mixed,
+20:(1,-2) -> 01 mixed for p>=3, zero/nonzero for p=2,
+             and 21 mixed for p=1.                    (44a)
+```
+
+Thus all four oriented Euclidean representatives are empty.  Sections 3--7
+exhaust every possible three-by-three collision pattern without quotienting
+by a false regularity symmetry, proving the theorem.
 
 ## 8. Exact support floor and scope
 
@@ -609,10 +695,14 @@ The companion uses only the Python standard library and unconditional
   catalogue on every positive gap quadruple in `[1,24]^4`, with primitive
   dilation normalization;
 - every component/deletion verdict in that census and the exact fibre words;
-- all diagonal and Euclidean `2 x 2` rectangles in the hostile ranges;
+- all diagonal and all four oriented Euclidean `2 x 2` rectangles in the
+  hostile ranges;
 - all twelve hook gate placements for `1<=d<=64`, including the `H2` bridge
   valuation and every zero-weight boundary;
-- all reflected and Euclidean arm gates through gap 24;
+- all twelve reversed-hook gates for `1<=d<=64`, its unique candidate ladder,
+  and 3,968 exact arm-valuation mismatches;
+- all reflected-triple and four-orientation Euclidean arm gates through gap
+  24;
 - every displayed hooked differential identity for `1<=k<=8`, including the
   `k=1` compatibility, cube first integral, and H3 row subtraction;
 - the Euler leading-degree gate and all three sharp hostiles; and
