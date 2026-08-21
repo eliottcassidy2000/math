@@ -258,12 +258,13 @@ In the principal chart,
 D_Q=-2((9-4u)r_-+(9+4u)r_++243)/81.                  (9d)
 ```
 
-For `Q_h`, `(u,r_-,r_+)=(1,0,-243/13)`, so the retained debt is exactly zero.
-This is a qualitative boundary rather than a smaller nonzero invoice: the
-universal three-value obstruction that closed the minimal Hermite fold has
-disappeared.  A **FINITE-EXACT AGENT RESULT**, routed to the reserved THM-3642
-namespace but not yet a maintained theorem package, now reaches the stronger
-global identity.  After a global actual-ring `J_1=0` lift, `J_2=0` reduces to
+For `Q_h` (the degree-six polynomial called `Q_6` in THM-3642),
+`(u,r_-,r_+)=(1,0,-243/13)`, so the retained second-order debt is exactly
+zero.  This is a qualitative boundary rather than a smaller nonzero invoice:
+the universal three-value obstruction that closed the minimal Hermite fold
+has disappeared.  Promoted and independently audited THM-3642 reaches the
+stronger global identity.  After a global actual-ring `J_1=0` lift, `J_2=0`
+reduces to
 
 ```text
 c'W-e'Z=r_2.                                            (9e)
@@ -281,9 +282,21 @@ lambda(f)=(5f(-1)-18f(0)+13f(1))/18.                  (9f)
 Since every representative gauge from `ker gamma_h` has vertical derivative
 vanishing at the three retained points, it lies in `ker Lambda=im M`.  Thus
 the global `J_2` solve is gauge-complete for every actual-ring witness in this
-cell that reaches `J_1=0`.  The live order is now `J_3`, where second vertical
-derivatives enter.  THM-3642 remains reserved and unproved until the exact
-reproduction is archived and independently audited.
+cell that reaches `J_1=0`.
+
+The apparent `J_3` frontier is now superseded.  THM-3642 proves, for arbitrary
+target two-forms on this fixed compiler, the universal fourth-stable identity
+
+```text
+J_0=1 and J_2=0  ==>  lambda(J_4)=365888/6561 !=0.    (9g)
+```
+
+Neither `J_1` nor `J_3` is needed.  A symmetric-curvature degree-seven
+control on the same zero-second-debt wall similarly forces
+`lambda(J_4)=5440/81`.  Thus zero second debt is a delay, not a passage:
+the fixed degree-six actual lift reaches `J_1=J_2=0` but cannot have constant
+source Jacobian.  The lawful frontier is no longer another jet on these two
+folds; it is a different collision polynomial, nonquadratic fold, or compiler.
 
 ## 4. AMM: the horizon ratio hides a three-term phase cocycle
 
@@ -441,8 +454,9 @@ remaining fibre while preserving the actual target predicate?              (18)
 ```
 
 That question is now concrete on five frontiers: a lawful digit/entry action
-realizing the fixed packet `A_6` and arc involution for LRC; the global `J_3`
-membership problem after the zero-debt actual-ring `Q_h` lift; offset
-monotonicity versus terminal-event type at `R=16384` for AMM; a
+realizing the fixed packet `A_6` and arc involution for LRC; a new
+collision polynomial, nonquadratic fold, or compiler beyond THM-3642's
+universal fourth-order wall; offset monotonicity versus terminal-event type
+at `R=16384` for AMM; a
 `p`-adic/global sidecar beyond the two-cube Frobenian support characters; and
 the precise index/height structure behind the new third Mordell point.
