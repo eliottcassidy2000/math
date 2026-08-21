@@ -1,0 +1,17 @@
+== THM-3659 LRC mod-169 carry-response cochain obstruction ==
+field=p:755373809845391722745761;addresses:169;ordered_pairs:28561
+parent_sha256_lf=('f0323550a039bd3c59bc3367a9a48503ff10db2b642e99e21d9499e984492ccd', 'fdebbbba161149edec8c86b9f382ede76153e85aa01da635f0900075fe751628');reconstruction_sha256=('53eb6e618d0669bdb27841a1800c46e32456bb6c6d3698c590ae0d5e68822033', 'fd1b837d9de3e4f9e586d29b69ed6726364ce97535d2e48f441c6ccd694250de')
+correction_plane=rank:2;rref_sha256:2d82d5adbb3c5a71035ab622e36e51e2a6a701a941a9f6f31ca308b8de13d17c
+split_defect=(rank,nonzero,distinct,ledger_sha256,set_sha256)=(2, 26474, 549, '60157457d94bae51c5d7b1565c8a723d8f1eb393fa1932aa04b75b18d0c9ffd4', 'da24116fa8625c8ace4d0c73f035d5c65dac40c5675bb3aff0b9d6a4cd7ba68d')
+cyclic_defect=(rank,nonzero,distinct,ledger_sha256,set_sha256)=(2, 26079, 542, '87c012e756ae05e8eaccfc9e7e196801b7fe63148d3c2acea3b2b3f2da2e8b28', '56ff55b338d20ad9462e05233516d7d16aaa71d7ab278857fc038355d3083963')
+carry_defect_all=(rank,nonzero,distinct,ledger_sha256,set_sha256)=(2, 11856, 55, '990458cc105c467e003d6bb4dfabf73a5758edfe1b2e714994f284c41366cb47', 'fab617c98cced507ae0963863b7d2fa3cdb35fb675fb1df6ecc9bad6ea74b309')
+carry_defect_kappa1=(rank,nonzero,distinct,ledger_sha256,set_sha256)=(2, 11856, 55, '779cb3d9a8894da80c90e747c0abf4454b28cdaa4c96329081edddf6ecaaf21c', 'fab617c98cced507ae0963863b7d2fa3cdb35fb675fb1df6ecc9bad6ea74b309')
+carry_response_table=(rank,nonzero,distinct,ledger_sha256,set_sha256)=(2, 139, 55, '5ff98b219cdaca81c951233e2a3ebc92bf0aa906002a57c6a6c07c0874c61dd8', 'fab617c98cced507ae0963863b7d2fa3cdb35fb675fb1df6ecc9bad6ea74b309');table_sha256=0e48e8384bcb5d98f52eba69f3e3bf1a01d739558d5bf53d90c94767aa455939
+carry_factor=Gamma(x,y)=e(t0,t1+1)-e(t0,t1);weighted_nonzero_invoice=11856
+generic_scalar_automaton=addresses:124;distinct_values:16;reversal_even:True;group_sha256:d7df097a3d6be10d04b00462805c40759c553255ffe9b13c8bc5c7cdf93bdee0
+generic_interval_degrees=(11, 21, 21, 5, 5, 21, 21, 11);cyclic_fourier_support_sizes=(169, 169);support_sha256=eeaa938f930285cfe8dd0c571b729cb7e20cb65fb872102298c8a55b14d04df6
+one_bit_carry_sidecar=REFUTED;carry1 response has 55 values and rank 2
+semantic_sha256=31a8f50ea2d5a9dbbc52403a50dd49594addc45baa3de9c0043752db64a1fac8
+script_sha256_lf=7617ebcf84508513b71efe3009c84ba88b46d1db41123f1bf1b17530a48aa186
+scope=static finite-field response cochain;not current/chronology/entry/characteristic-zero/LRC14
+PASS
