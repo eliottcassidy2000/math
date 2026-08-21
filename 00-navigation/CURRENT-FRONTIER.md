@@ -346,13 +346,17 @@ is sharp: equal counts allow two densities or none.
   channels. THM-3600/04 give the multiarm chart intersection, no-`A2` filling,
   and compiler degree floors. THM-3605/07/08/11/14/17 close the stated
   Russell graph/shear/projection families. THM-3618 classifies every single
-  fibre separator; THM-3622 resolves its graph closure into a visible missing
-  line plus an invisible normalization-arm/tangent debt. THM-3619/23 close
-  all even folds with `0!=H in t^2 C[t]`; THM-3624 leaves non-even and
-  `H'(0)!=0` folds OPEN. Factor-bearing/nodal completion obstructions are in
+  fibre separator; THM-3622 resolves its graph closure into a missing line
+  plus normalization-arm/tangent debt. THM-3619/23 close
+  all even folds. THM-3627 kills one non-even polynomial at degree six, but
+  THM-3630's formal pair and cutoff-dependent polynomials rule out a uniform
+  jet bound. THM-3632 blocks its algebraization and fixed-`Q` stable-output
+  completion; THM-3634 forces two rank-two gates. THM-3629 leaves fully
+  mixed `H'(0)!=0` pairs OPEN; any witness is a noninjective `JC(2)` map.
+  Factor-bearing/nodal obstructions are in
   THM-3564--78. The `A4/S4` cubic is blocked; quartic `C3` remains open
   (MISTAKE-416). Unrestricted `C[A,d]^2` is still equivalent to `JC(2)`;
-  named planar slices and sparse/`H_2` sectors close, while `H_4` reaches the
+  named slices and sparse/`H_2` sectors close, while `H_4` reaches the
   common-root wall.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2247 close the affine-through-
