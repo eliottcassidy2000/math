@@ -1,0 +1,27 @@
+status=FINITE-EXACT; no JC(2) conclusion outside the stated universe
+word=M=E_-(Z)E_+(V)E_-(U)E_+(W);det(M)=1
+small_nonzero={-2,-1,-1/2,1/2,1,2}
+W={y,x,x+y,x-y,x+2y,x-2y,2x+y,2x-y}; U=support<=3 in {x,y,x^2,xy,y^2}
+V=QQ[x,y]_(total_degree<=4),V(0)=0; curls solved over all QQ
+Z=QQ[x,y]_(total_degree<=8),Z(0)=0; curls solved over all QQ
+raw_U=2550;raw_UW=20400
+full_rank_mod_1009_certificates={'inconsistent': 17850, 'zero-only': 2546}
+first_row_histogram=2x+y:inconsistent:2550,2x-y:inconsistent:2550,x:inconsistent:2550,x+2y:inconsistent:2550,x+y:inconsistent:2550,x-2y:inconsistent:2550,x-y:inconsistent:2550,y:dimension-1:4,y:zero-only:2546
+delta_nonzero_nonunit_eligible_first_row_survivors=0
+survivor_alpha={-2,-1,1,2};s=x+y^2/2;q=y+alpha*s^2/2
+full_solution_spaces=V=QQ*q and Z=QQ*p after V(0)=Z(0)=0
+small_points:V=t*q,t in small_nonzero;p=s+t*q^2/2
+small_points:Z=z*p,z in small_nonzero union {0};r=q+z*p^2/2
+maps=168;inverse_certificates=168
+coefficient_span_histogram={4: 168}
+balanced_z0_span4_controls=24
+named_linear_involution_intertwining_maps=0
+exact_point_bank=49;collision_hits=0
+counterexample_survivors=0;mechanism=every survivor is four sequential shears
+hostile=U=x,W=x,V=0 has determinant one but first-curl defect -1
+depth5_word=E_+(R)E_-(Z)E_+(V)E_-(U)E_+(W)
+depth5_base=U,V,W in +/-{x,y,x^2,xy,y^2};Z=QQ[x,y]_(total_degree<=6),constant allowed
+depth5_first_correction_systems=1000;histogram={'mod-1009-inconsistent': 1000}
+checks=1331
+semantic_sha256=30c3e05f9464f81dad868131badb936a4c644e3bd078575818f68ea0a227d0e8
+source_sha256=ee53b73418b373e8196db50665646cf025c22179d1b4af4ce024e328f28d62df

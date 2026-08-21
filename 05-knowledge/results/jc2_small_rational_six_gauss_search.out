@@ -1,0 +1,17 @@
+status=FINITE-EXACT; no JC(2) conclusion outside the stated universe
+word=E_-(S)E_+(R)E_-(Z)E_+(V)E_-(U)E_+(W)
+base=U,V,W,Z independently in +/-{x,y,x^2,xy,y^2}
+R=entire C[x,y] total-degree<=6; constant included; dim=28
+systems=10000;prime=1009;rank_histogram={(28, 29): 10000}
+certificate=maximal coefficient rank 28 and augmented rank 29 modulo 1009 implies characteristic-zero inconsistency
+S_not_searched=top row never closes
+two_scale_base=U,V,Z in +/-{x,y,x^2,xy,y^2};W=y^2+/-x;R=entire total-degree<=8,dim=45
+two_scale_systems=2000;prime=1009;rank_histogram={(45, 46): 2000}
+positive_control=U=1,V=y,W=-1,Z=-1,R=1,S=y has epsilon=1,kappa=-1 and gives identity
+hostile=omit R or S: top defect remains +1 or bottom curl remains -1, respectively
+height2_control=s=x+y^2/2;W=V=y,U=s,Z=1,R=-1,S=-s^2/2;epsilon=kappa=s;F=(-q,s+q+q^2/2),q=y+s^2/2
+counterexample_survivors=0
+checks=16
+semantic_sha256=6627eb13817b3c18d4657e06b80ee56f6206779528ce91fa249e2528fa9a6884
+dependency_sha256=ee53b73418b373e8196db50665646cf025c22179d1b4af4ce024e328f28d62df
+source_sha256=a053642aa10798784ac3c9ac7110e9641a975e96a148b26958a1f13a68479416

@@ -1,0 +1,25 @@
+status=PROVED-SYMBOLIC+FINITE-EXACT; no JC(2) or Weihrauch conclusion
+core=[[1+xy,x^2],[-y^2,1-xy]];det=1;curls=(-x,-y)
+lower_repair=(1+xy)Z_y-x^2 Z_x-xZ=y;a_i=(-1)^i/(i+2)!;no finite polynomial truncation
+formal_solutions=lower:(exp(-xy)-1+xy)/x^2;upper:-(exp(xy)-1-xy)/y^2
+all_W_identity=curl_lower(E_-(Z) C E_+(W))=-y+L(Z)-d_x(W[-y^2+(1+xy)Z]);proof in reflection
+scaled_cycle_operator=I+backward_shift
+n=3:det=2,rank=3,alternating_kernel=0,balanced_rectangles=0
+n=4:det=0,rank=3,alternating_kernel=1,balanced_rectangles=6
+n=5:det=2,rank=5,alternating_kernel=0,balanced_rectangles=0
+n=6:det=0,rank=5,alternating_kernel=1,balanced_rectangles=20
+n=7:det=2,rank=7,alternating_kernel=0,balanced_rectangles=0
+n=8:det=0,rank=7,alternating_kernel=1,balanced_rectangles=70
+n=9:det=2,rank=9,alternating_kernel=0,balanced_rectangles=0
+n=10:det=0,rank=9,alternating_kernel=1,balanced_rectangles=252
+n=11:det=2,rank=11,alternating_kernel=0,balanced_rectangles=0
+n=12:det=0,rank=11,alternating_kernel=1,balanced_rectangles=924
+rectangle_size_n=full row when gcd(2,n)=1;even n also has 2-by-(n/2)
+orthogonal_grids=1 for odd n;1+n!/2 for even n;extra datum is relative matching holonomy
+weighted_cycle_det=product(alpha_i)-(-1)^n;Cohn product=(n+1)! so every actual cyclic closure is nonsingular
+first_even_weighted_kernel=two-cycle weights (2,1/2);support parity without multiplier holonomy is insufficient
+zero_rectangle_parity_tables=2^(n+1);potentials unique modulo one global bit
+search_router=couple terminal residues on support cycles and retain weighted holonomy;single acyclic factorial ladders are exact no-go controls
+checks=106
+semantic_sha256=5aa8a03f0a3530fd6c03161b19488f302b1c9ea348c5acd0f0d0f4a5f57510aa
+source_sha256=1a9ff3b9cb8190e434307400f658ff8bf476d1629924af91b61b8bfcc81091ee
