@@ -57,6 +57,10 @@ require(sp.expand(linear_unit_remainder) == 0, "R*u=1 modulo S")
 target_quadratic = sp.expand(MF * (RF * x**2 - 2 * H * x) + 4 * UF)
 quadratic_relation_quotient, quadratic_relation_remainder = sp.div(target_quadratic, Q, z)
 require(sp.expand(quadratic_relation_remainder) == 0, "target quadratic relation modulo Q")
+require(
+    len(sp.Poly(quadratic_relation_quotient, x, y, z, H).terms()) == 54,
+    "target quadratic quotient term count",
+)
 
 K = sp.expand(-H**2 - sp.Rational(1, 4) * VF * (RF * x**2 - 2 * H * x))
 unit_quotient, unit_remainder = sp.div(sp.expand(1 - MF * K), Q, z)
@@ -92,7 +96,12 @@ print("S_H=x+2*(1+xy)*H(F1,F2)")
 print("R(F1,F2)*(1+xy)=1 mod S_H")
 print("H^2*M+1=U*V on the target")
 print("M(F1,F2)*K_H=1 mod Q_H")
-print("certificate term counts:", len(sp.Poly(linear_unit_quotient, x, y, z, H).terms()), len(sp.Poly(unit_quotient, x, y, z, H).terms()))
+print(
+    "relation/inverse certificate term counts:",
+    len(sp.Poly(linear_unit_quotient, x, y, z, H).terms()),
+    len(sp.Poly(quadratic_relation_quotient, x, y, z, H).terms()),
+    len(sp.Poly(unit_quotient, x, y, z, H).terms()),
+)
 print("degree rows (deg_a H,deg_a R,deg_a M):", degree_rows)
 print("H=0 hostile: S=x and R=1, so nonzero H is load-bearing")
 print("verdict: every irreducible component of every nonzero reducible graph pullback has a nonconstant unit")

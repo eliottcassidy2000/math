@@ -9,6 +9,22 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-429 (2026-08-20, THM-3574 certificate bookkeeping) -- the intermediate quotient inherited the final quotient's term count
+
+- **What failed:** the first THM-3574 proof said that the intermediate
+  core-cofactor quotient `B_H` had 152 expanded terms.  An independent
+  recomputation found 54; 152 is the term count of the final Bezout quotient
+  `C_H=V(F)B_H/4`.
+- **Repair / strongest survivor:** the companion now gates all three counts:
+  8 for the linear-unit quotient, 54 for the core-cofactor quotient, and 152
+  for the final inverse certificate.  Both divisibilities and the universal
+  nonconstant-unit theorem are unchanged.  The proof also now spells out the
+  smoothness, dominance, and generic-cubic argument that sends source
+  reducibility into THM-3573's Pell compiler.
+- **Reusable rule:** when one certificate is obtained by multiplying another,
+  record and verify their sizes separately; a valid divisibility does not
+  make its intermediate and final expanded quotients interchangeable.
+
 ## MISTAKE-428 (2026-08-20, THM-3571 irreducibility case split) -- vanishing quadratic `a` coefficients did not force `deg_a(phi)=0`
 
 - **What failed:** the first THM-3571 proof said that `A=B=0` in the

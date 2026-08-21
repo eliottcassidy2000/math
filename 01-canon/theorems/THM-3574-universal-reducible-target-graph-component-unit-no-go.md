@@ -2,7 +2,8 @@
 id: THM-3574
 title: "Universal reducible target-graph component unit no-go"
 status: >
-  PROVED + VERIFIED-EXACT.  Every irreducible component of every reducible
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; MISTAKE-429
+  repaired.  Every irreducible component of every reducible
   nonzero polynomial target-graph pullback for the fixed THM-1300 map has a
   nonconstant unit and hence is not A2.  THM-3573 writes the graph as
   phi_H=4H(1+bH+4aH^2).  Its source pullback factors universally as S_H Q_H.
@@ -18,14 +19,14 @@ related:
   - THM-3571-quadratic-target-graph-euler-no-go
 companion: 04-computation/jacobian_universal_reducible_graph_component_unit_no_go_kps_s188.py
 output: 05-knowledge/results/jacobian_universal_reducible_graph_component_unit_no_go_kps_s188.out
-script_sha256: a0f53bdc4576bf586a982f291590b75e47bab07f37530d6055431f783f7ef333
-output_sha256: 7188e9f7b4a6e9e781abd2cd72e528dee6fc43c09cb18cc19758dd5fbb758571
+script_sha256: 75886def4e44d747ff505d277e803883ff744e6eff3382d444405d7285822d4c
+output_sha256: f4868cd1738e021ad7e52928fe8e8a9d4421ba9b2918fcd5395ea1a9ae81a0c0
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3574 -- universal reducible target-graph component unit no-go
 
-**PROVED + VERIFIED-EXACT.**  The proper-factor route through triangular
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The proper-factor route through triangular
 target graphs is closed in every degree.  Every component of every reducible
 nonzero graph pullback carries an explicit nonconstant unit, so no component
 can be a source coordinate plane.
@@ -61,13 +62,28 @@ a source coordinate.
 
 ## 2. The universal source factorization
 
-By THM-3573, reducibility of `(2)` is equivalent to the existence of
-`0!=H in C[a,b]` such that
+We first justify entry into THM-3573's compiler.  The hypersurface `(2)` is
+smooth: the chain rule gives
+
+```text
+grad(P_phi)=JF^T (phi_a,phi_b,1),                       (4)
+```
+
+and both `det(JF)` and the last displayed vector are nonzero.  Every
+irreducible component is therefore a two-dimensional reduced hypersurface,
+and quasi-finiteness of `F` makes it dominate the graph `T_phi`.  Also the
+generic graph fibre has degree three.  Indeed its leading coefficient
+`L_phi` cannot vanish identically: setting `a=0` in `L_phi=0` would require
+`b phi(0,b)=-1`.  If the generic core cubic were irreducible, its degree-three
+generic fibre algebra would be a field, contradicting the presence of two
+dominating source components.  Thus the core cubic is reducible.
+
+THM-3573 now gives `0!=H in C[a,b]` such that
 
 ```text
 phi=phi_H=4H U,
 
-U=1+bH+4aH^2.                                          (4)
+U=1+bH+4aH^2.                                          (5)
 ```
 
 Introduce three more target polynomials
@@ -77,7 +93,7 @@ R=1+2bH+12aH^2,
 
 M=48a^2H^2+8abH+16a-b^2,
 
-V=1-bH+12aH^2.                                         (5)
+V=1-bH+12aH^2.                                         (6)
 ```
 
 First treat `H` as an independent indeterminate.  Direct expansion in
@@ -86,7 +102,7 @@ First treat `H` as an independent indeterminate.  Direct expansion in
 ```text
 F3+phi_H(F1,F2)=S_H Q_H,
 
-S_H=x+2u H(F1,F2).                                     (6)
+S_H=x+2u H(F1,F2).                                     (7)
 ```
 
 Before the substitution, the second factor is the compact polynomial
@@ -94,7 +110,7 @@ Before the substitution, the second factor is the compact polynomial
 ```text
 Q_H =
  8H^2x^2y^2z+24H^2xy^3+16H^2xyz+32H^2y^2+8H^2z
- +2Hx^2yz+6Hxy^2+2Hxz+2Hy-x^2z-3xy+2.                (7)
+ +2Hx^2yz+6Hxy^2+2Hxz+2Hy-x^2z-3xy+2.                (8)
 ```
 
 Equation `(7)` is then evaluated at `H(F1,F2)`.  This is a polynomial
@@ -105,7 +121,7 @@ factorization; no localization or generic specialization is used.
 The first exact Bezout identity is
 
 ```text
-R(F1,F2)u-1=S_H A_H,                                   (8)
+R(F1,F2)u-1=S_H A_H,                                   (9)
 ```
 
 where, before substituting `H(F1,F2)`,
@@ -113,17 +129,17 @@ where, before substituting `H(F1,F2)`,
 ```text
 A_H=
  6Hx^3y^3z+18Hx^2y^4+18Hx^2y^2z+42Hxy^3
- +18Hxyz+24Hy^2+6Hz+y.                                 (9)
+ +18Hxyz+24Hy^2+6Hz+y.                                (10)
 ```
 
 Hence on every irreducible component whose equation divides `S_H`, the
 target function `R(F1,F2)` is a unit with inverse `u`.
 
 It is not constant on such a component.  If `m=deg_a(H)`, the unique top
-`a`-term in `(5)` gives
+`a`-term in `(6)` gives
 
 ```text
-deg_a(R)=2m+1.                                         (10)
+deg_a(R)=2m+1.                                        (11)
 ```
 
 Moreover, THM-2473 makes `F` quasi-finite.  Every hypersurface component of
@@ -137,36 +153,36 @@ nonconstant target polynomial `R` remains nonconstant there.
 The short target identity driving the second component is
 
 ```text
-H^2M+1=UV.                                              (11)
+H^2M+1=UV.                                             (12)
 ```
 
 THM-3573's core packet is
 
 ```text
-E_phi(X)=(RX+2H)(RMX^2-2HMX+4U).                       (12)
+E_phi(X)=(RX+2H)(RMX^2-2HMX+4U).                      (13)
 ```
 
-On the source, the second factor in `(12)` is exactly divisible by `Q_H`:
+On the source, the second factor in `(13)` is exactly divisible by `Q_H`:
 
 ```text
-M(F)(R(F)x^2-2H(F)x)+4U(F)=Q_H B_H                    (13)
+M(F)(R(F)x^2-2H(F)x)+4U(F)=Q_H B_H                    (14)
 ```
 
 for a polynomial `B_H in C[x,y,z]`.  Here and below `F` in parentheses means
-`(F1,F2)`.  The exact quotient in `(13)` is not printed because its expanded
-form has 152 terms; polynomial division over `Q` is an active companion gate.
+`(F1,F2)`.  The exact quotient in `(14)` is not printed because its expanded
+form has 54 terms; polynomial division over `Q` is an active companion gate.
 
 Define the polynomial
 
 ```text
 K_H=-H(F)^2
-    -V(F)(R(F)x^2-2H(F)x)/4.                           (14)
+    -V(F)(R(F)x^2-2H(F)x)/4.                           (15)
 ```
 
-Combining `(11)` and `(13)` gives a literal Bezout identity
+Combining `(12)` and `(14)` gives a literal Bezout identity
 
 ```text
-1-M(F)K_H=Q_H C_H                                     (15)
+1-M(F)K_H=Q_H C_H                                     (16)
 ```
 
 with `C_H in C[x,y,z]`.  Thus `M(F1,F2)` is a unit on every irreducible
@@ -175,7 +191,7 @@ component whose equation divides `Q_H`.
 It is again nonconstant.  The unique top `a`-term gives
 
 ```text
-deg_a(M)=2m+2,                                         (16)
+deg_a(M)=2m+2,                                        (17)
 ```
 
 and the same quasi-finite dominance argument applies.  Therefore no
@@ -183,7 +199,7 @@ irreducible component from `Q_H`, including any further splitting of `Q_H`,
 is `A2`.
 
 Every irreducible factor of `P_phi=S_HQ_H` divides at least one of the two
-packets.  Equations `(8)` and `(15)` therefore supply a nonconstant unit on
+packets.  Equations `(9)` and `(16)` therefore supply a nonconstant unit on
 every component, proving the theorem.
 
 ## 5. Geometry and boundary checks
@@ -200,7 +216,7 @@ S_H=x-u h(F2),
 
 R=3ah^2-bh+1,
 
-M=12a^2h^2-4abh+16a-b^2.                              (17)
+M=12a^2h^2-4abh+16a-b^2.                              (18)
 ```
 
 Thus THM-3568's degree-one Euler obstruction is the first slice of the
@@ -208,10 +224,10 @@ universal unit theorem.  The present result is stronger in degree range but
 weaker in topology: it does not compute the Euler characteristic of the
 components.
 
-At the excluded boundary `H=0`, `(6)` reduces to
+At the excluded boundary `H=0`, `(7)` reduces to
 
 ```text
-F3=x(2-3xy-x^2z),                 R=1.                 (18)
+F3=x(2-3xy-x^2z),                 R=1.                (19)
 ```
 
 The purported unit on the linear packet becomes constant and that packet is
@@ -228,10 +244,10 @@ python3 -O 04-computation/jacobian_universal_reducible_graph_component_unit_no_g
 ```
 
 The ordinary and optimized transcripts agree.  The companion verifies the
-target identities `(11)--(12)`, source factorization `(6)--(7)`, both Bezout
-certificates `(8)` and `(15)`, the degree rows `(10)` and `(16)` through six
-independent controls, the first-resonance regression `(17)`, and the zero-row
-hostile `(18)`.  The two certificate quotients have respectively 8 and 152
-terms; no numerical inference is used.
+target identities `(12)--(13)`, source factorization `(7)--(8)`, both Bezout
+certificates `(9)` and `(16)`, the degree rows `(11)` and `(17)` through six
+independent controls, the first-resonance regression `(18)`, and the zero-row
+hostile `(19)`.  The linear-unit, core-cofactor, and final Bezout quotients
+have respectively 8, 54, and 152 terms; no numerical inference is used.
 
 **QED.**

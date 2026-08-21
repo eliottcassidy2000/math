@@ -1,7 +1,8 @@
 # Script Results Index
 
 - `jacobian_universal_reducible_graph_component_unit_no_go_kps_s188.py` ->
-  matching `.out` [THM-3574 PROVED + VERIFIED-EXACT].  Every irreducible
+  matching `.out` [THM-3574 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; MISTAKE-429 repaired].  Every irreducible
   component of every reducible nonzero polynomial target-graph pullback has
   a nonconstant unit and is therefore not `A2`.  THM-3573's universal
   `phi_H=4H(1+bH+4aH^2)` pullback factors as `S_H Q_H`.  Exact Bezout
@@ -9,8 +10,8 @@
   a unit on every factor of `Q_H`; quasi-finiteness preserves their
   nonconstancy.  The excluded `H=0` row recovers the coordinate factor `x`.
   Normal/`-O` replay matches.  Script/output LF SHA-256:
-  `a0f53bdc4576bf586a982f291590b75e47bab07f37530d6055431f783f7ef333` /
-  `7188e9f7b4a6e9e781abd2cd72e528dee6fc43c09cb18cc19758dd5fbb758571`.
+  `75886def4e44d747ff505d277e803883ff744e6eff3382d444405d7285822d4c` /
+  `f4868cd1738e021ad7e52928fe8e8a9d4421ba9b2918fcd5395ea1a9ae81a0c0`.
 - `jacobian_polynomial_pell_parameter_descent_thm3573.py` -> matching `.out`
   [THM-3573 PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF/HOSTILE-AUDITED].
   THM-3570's rational parameter gives a polynomial target graph exactly when
