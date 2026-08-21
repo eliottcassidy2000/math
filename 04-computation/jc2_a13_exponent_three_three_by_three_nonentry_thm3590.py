@@ -395,7 +395,7 @@ print("PASS formal near misses pinpoint the two-arm exact-negative dependency")
 
 
 print("SECTION consequence invoice")
-print("PASS conditional arm+jet gate forces >=3 pieces in each coordinate")
+print("PASS THM-3589 arm+jet gate forces >=3 pieces in each coordinate")
 print("PASS h=0 scalar absent; h=1 homogeneous degree obstruction")
 print("PASS h=2 all collision graphs retain a singleton spanning tree")
 print("PASS h=3 unequal gaps give six-cycle; equal gaps fail modulo three")

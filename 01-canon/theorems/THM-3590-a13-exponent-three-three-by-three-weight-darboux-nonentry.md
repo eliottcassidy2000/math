@@ -2,13 +2,13 @@
 id: THM-3590
 title: "A13 exponent-three three-by-three weight Darboux nonentry"
 status: >
-  PROVISIONAL / CONDITIONAL ON RESERVED THM-3589 + VERIFIED-EXACT / PENDING
-  INDEPENDENT AUDIT.  Assuming the per-coordinate two-central-arm weight
-  invoice stated in Section 2, no polynomial Darboux pair on the A13
+  PROVISIONAL + VERIFIED-EXACT / PENDING INDEPENDENT AUDIT.  Using the proved
+  per-coordinate two-central-arm weight invoice of THM-3589, no polynomial
+  Darboux pair on the A13
   exponent-three target has exactly three nonconstant weight pieces in each
   coordinate.  The complement-edge cases h=0,1,2,3 are complete.  This file
-  remains outside the proved dependency graph until THM-3589 is promoted and
-  the present proof is independently audited.
+  remains outside the proved dependency graph until the present proof is
+  independently audited and explicitly promoted.
 source: root / delegated A13 three-by-three Darboux hostile, 2026-08-21
 audit: >
   The arm-unit classification, complement matching, all three two-edge
@@ -17,7 +17,6 @@ audit: >
   stored 92,630-gate output; independent mathematical audit remains pending.
 depends_on:
   - THM-3581-critical-value-multiarm-keller-compiler-and-A13-carrier
-provisional_dependencies:
   - THM-3589-danielewski-central-arm-every-line-and-kummer-trace-darboux-gates
 related:
   - THM-3569-danielewski-two-by-three-weight-darboux-nonentry
@@ -28,22 +27,21 @@ external:
   - "Gwozdziewicz, Injectivity on one line, arXiv:alg-geom/9305008, Theorem 1.1."
 script: 04-computation/jc2_a13_exponent_three_three_by_three_nonentry_thm3590.py
 output: 05-knowledge/results/jc2_a13_exponent_three_three_by_three_nonentry_thm3590.out
-script_sha256: cc998cb08a166798ebe308913ebdcf390b9d0773b884660c60c90ed5a241b581
-output_sha256: a38db318f6c7f2a65a43971f0f6636b6de7b8a6e7faf28d261be1635354369ce
+script_sha256: 5d2864467984bcc9bd7929174f5c0a3b746b9238b14c528f9dfa4ac678751762
+output_sha256: 1a7cae06671ec33499bd564735796791d6e7cd38429b6dde4735c8183e5a8702
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3590 -- A13 exponent-three three-by-three weight Darboux nonentry
 
-**PROVISIONAL / CONDITIONAL ON RESERVED THM-3589 + VERIFIED-EXACT / PENDING
-INDEPENDENT AUDIT.**  The algebraic proof below is complete once the explicit
-two-central-arm invoice `(9)` is available.  That invoice is currently the
-reserved THM-3589 candidate, so this theorem is not yet a proved dependency.
+**PROVISIONAL + VERIFIED-EXACT / PENDING INDEPENDENT AUDIT.**  The explicit
+two-central-arm invoice `(9)` is the proved THM-3589 input.  The new content
+here is the complete complement-edge and singleton-graph proof.
 
 This closes the complete `3 x 3` weight cell for the degree-thirteen carrier.
 It constructs neither a Darboux pair nor a planar Jacobian counterexample.
-Conditionally, the same arm/jet invoice closes every cell with a two-piece
-coordinate.  The `3 x 4` and larger support cells remain open.
+The same arm/jet invoice closes every cell with a two-piece coordinate.  The
+`3 x 4` and larger support cells remain open.
 
 ## 1. Target, grading, and complement graph
 
@@ -99,11 +97,10 @@ r_i+s_j=-2.                                           (7)
 Because both supports are strictly ordered, these edges form an order-
 reversing matching.  Let `h` be their number, so `0<=h<=3`.
 
-## 2. Conditional two-central-arm invoice
+## 2. Two-central-arm invoice from THM-3589
 
-The only provisional input is the following per-coordinate statement from
-the reserved THM-3589 candidate.  For each `R in {P,Q}`, on the two central
-arms
+The proved THM-3589 per-coordinate statement says that, for each
+`R in {P,Q}`, on the two central arms
 
 ```text
 L_c={b=e=0},                  L_e={b=c=0},             (8)
@@ -164,11 +161,11 @@ reflection they are therefore canonically
 r_1=-3,                         s_1=1.                (12c)
 ```
 
-This also gives the conditional target-wide corollary that no Darboux pair
-on the A13 target can have only two weight pieces in either coordinate.
+This also gives the target-wide corollary that no Darboux pair on the A13
+target can have only two weight pieces in either coordinate.
 
-The expected proof of `(9)` is worth typing, although it is not imported
-until THM-3589 is promoted.  In the THM-3581 compiler, the source lines
+The proof mechanism of `(9)` is worth recalling.  In the THM-3581 compiler,
+the source lines
 `q=0` and `x=0` map isomorphically to `L_c` and `L_e`.  Composing a Darboux
 map with the compiler gives a noninjective planar Keller map.  Gwozdziewicz's
 one-line theorem says its restriction to neither source line can be
@@ -384,8 +381,8 @@ an arithmetic progression would be
 whose full complement has unique negative weight `4-3m`, congruent to one
 modulo three rather than an exact `-3k` required by `(12)`.
 
-This proves `h!=3`.  Together with Sections 4--5 it proves the conditional
-theorem. **QED, conditional on `(9)`.**
+This proves `h!=3`.  Together with Sections 4--5 it proves the theorem.
+**QED.**
 
 ## 7. Hostiles, symmetry, and failure boundary
 
@@ -427,7 +424,7 @@ theorem. **QED, conditional on `(9)`.**
 ## 8. Exact scope and remaining counterexample frontier
 
 ```text
-PROVISIONAL, CONDITIONAL ON THM-3589:
+PROVISIONAL / PENDING INDEPENDENT AUDIT:
   no 3 x 3 weight support can carry a polynomial Darboux pair on
   c^3 e=b(b^2+kappa^2), kappa!=0;
   each Darboux coordinate needs at least three weight pieces, so every
