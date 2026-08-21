@@ -2,7 +2,7 @@
 id: THM-3658
 title: "LRC mod-169 carry-Fourier block intertwiner"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On the pinned field, the split character basis of two separate mod-13
   digits and the cyclic character basis of their assembled mod-169 residue
   are joined by thirteen invertible 13-by-13 blocks.  The zero high-frequency
@@ -12,6 +12,13 @@ status: >
   laws or their natural convolutions, as witnessed by one carry.  This is a
   linear character-basis bridge, not a physical-current chain map or LRC(14).
 source: kps-s191 / THM-3657 carry-sidecar continuation, 2026-08-21
+audit: >
+  PASS -- agent Boyle independently derived C_v=E^(-1)D_vE and the inverse
+  geometric-sum formula, proved both density profiles and all block ranks,
+  checked the root orders, 57,122 basis evaluations, 169 reversal identities,
+  normal/optimized transcripts, and every hash.  It explicitly separated
+  pointwise multiplication (preserved) from split/cyclic convolution (not
+  intertwined); no mathematical or scope correction was required.
 depends_on:
   - THM-3657-lrc-two-current-quotient-address-atlas-and-reversal-gate
 related:
@@ -26,8 +33,8 @@ hash_basis: raw LF bytes
 
 # THM-3658 -- the two mod-13 digits have an exact carry-Fourier bridge
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  This theorem constructs the lawful linear change of character
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  This theorem constructs the lawful linear change of character
 basis suggested by THM-3657's carry sidecar.  It simultaneously records why
 that change of basis is not yet a current or convolution intertwiner.
 

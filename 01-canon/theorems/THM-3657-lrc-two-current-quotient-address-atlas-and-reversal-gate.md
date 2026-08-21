@@ -2,7 +2,7 @@
 id: THM-3657
 title: "LRC two-current quotient address atlas and reversal gate"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In THM-3593's rank-two state/constant correction quotient, the 169
   two-current addresses split into 37 kernel rows, one 124-address reversal-
   fixed projective line, and eight singleton lines in four reversal pairs.
@@ -12,6 +12,13 @@ status: >
   is a static finite-field gate, not chronology, current, physical entry,
   characteristic-zero transport, row exclusion, or LRC(14).
 source: kps-s191 / THM-3593 address-atlas continuation, 2026-08-21
+audit: >
+  PASS -- agent Nash independently reconstructed the rank-two quotient and
+  all 186 labeled rows, reproduced both replays and all hashes, verified the
+  37/124/8 atlas, exact right reversal covariance, both eigenlines, and the
+  arbitrary-finite-relation gate.  The transpose action failed on all 132
+  nonzero two-current rows.  The mod-169 interval/shell addendum and all
+  28,561 split-versus-cyclic additions also passed; no scope leak remained.
 depends_on:
   - THM-3593-lrc-common-a4-anova-graph-flag
 related:
@@ -29,8 +36,8 @@ hash_basis: raw LF bytes
 
 # THM-3657 -- the LRC correction quotient has eight exceptional addresses
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  The theorem is an address-level classification inside the static
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  The theorem is an address-level classification inside the static
 rank-two quotient of THM-3593.  Its cancellation corollary permits arbitrary
 field coefficients, but it does not assert that such coefficients or address
 combinations are physically realizable.
