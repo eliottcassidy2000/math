@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3608 nonlinear target-shear rigidity.
+"""Exact controls for proved and hostile-audited THM-3608.
 
 The universal exclusion is proof-driven: a boundary degree argument and a
 first-nonzero formal-arm coefficient force the normalized first output to be
@@ -40,7 +40,7 @@ def jacobian(first, second, first_var, second_var):
     )
 
 
-print("THM-3608 exact companion -- provisional nonlinear target-shear rigidity")
+print("THM-3608 exact companion -- proved nonlinear target-shear rigidity")
 print("status=finite exact controls; universal formal argument is proof-driven")
 
 
@@ -337,4 +337,4 @@ print("PASS arbitrary_coordinate_hostile=two_arms_identified open_exit=yes")
 
 
 print(f"PASS total_exact_gates={CHECKS}")
-print("RESULT provisional_controls_passed; independent hostile audit still required")
+print("RESULT=PASS")

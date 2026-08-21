@@ -2,8 +2,8 @@
 id: THM-3608
 title: "Russell-cylinder nonlinear target-shear formal rigidity"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT
-  CONTROLS; NOT YET PROVED CANON.  For every polynomial source graph, a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  polynomial source graph, a
   first output L=u(C)B+F(C) with u(0) nonzero and a second output
   M=S+K(L,C) cannot have nonzero constant ordinary Jacobian.  This includes
   arbitrary separated shears K=H(C)+G(L), all fibre-triangular polynomial
@@ -14,7 +14,14 @@ status: >
   u(0) nonzero is sharp for this proof.  Arbitrary nonlinear target
   coordinates that identify the two arms remain open.
 source: root/nonlinear_cylinder_shears target-shear niche, 2026-08-21
-audit: PENDING -- provisional package requires independent hostile audit
+audit: >
+  PASS.  An independent hostile audit rederived the full u,F,K determinant
+  with K_T cancellation and fixed-T K_c, the boundary degree argument, the
+  first formal-arm recurrence and completion injection, the forced endpoint
+  and D-pole, the collision, the u(0)=0 formal-algebraic hostile, and the
+  arm-identifying coordinate boundary.  Normal and optimized replays are
+  byte-identical to the stored 167-gate transcript; the AST has no assertion
+  gates, and documentation and diff checks pass.
 depends_on:
   - THM-3561-rational-keller-danielewski-polynomial-completion
   - THM-3607-russell-cylinder-mixed-projection-degree-seven-gate
@@ -23,17 +30,16 @@ related:
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
 script: 04-computation/jc2_russell_cylinder_nonlinear_target_shear_thm3608.py
 output: 05-knowledge/results/jc2_russell_cylinder_nonlinear_target_shear_thm3608.out
-script_sha256: fc61ed3db426ce3a21bcc9660440c43ef403479195b61d1ed62d1e8e04f6150f
-output_sha256: d9d2850174cb23ca07614a1327a724bc3b0b0e8860c234683dfb86cc1b0b1a36
+script_sha256: ffe3c69d6e243f67778ade2df0fe7d18790e76c3db85b481cec1d0d40840efb2
+output_sha256: 8dcf9e228548ac36968ce3e932171e6f5365086c24412a041b130ed70102acc7
 hash_basis: raw LF bytes
 ---
 
 # THM-3608 -- Russell-cylinder nonlinear target-shear formal rigidity
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT.**  This candidate
-strictly extends the mixed linear face of THM-3607, but it is not part of the
-proved dependency graph until an independent audit promotes it.  All rings
-and derivatives below are over `C`.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem
+strictly extends the mixed linear face of THM-3607.  All rings and
+derivatives below are over `C`.
 
 ## 0. Statement and preservation/loss ledger
 
@@ -64,7 +70,7 @@ L_h=u(c)B_h+F(c),
 M_h=S_h+K(L_h,c).                                      (3)
 ```
 
-Then the provisional theorem is
+Then the theorem is
 
 ```text
 Jac_(x,q)(L_h,M_h) notin C*.                           (4)
@@ -223,7 +229,7 @@ The first term in `(21)` is regular at the prime divisor `D=0`, because
 `c=0` there and `u(0)!=0`.  By contrast, `ac=b/c` has order `-1` there:
 `c=xD(D+2)` has a simple `D` factor while `b=-4` modulo `D`.  Therefore
 `(21)` has a genuine simple `D=0` pole and cannot be a polynomial `h`.  This
-proves the provisional claim `(4)`.
+proves the claim `(4)`.
 
 The rejected solution is exact and sharp on the punctured source.  For any
 `t in C*`, set
