@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3600.
+"""Exact controls for proved, hostile-audited THM-3600.
 
 The universal arm-cover, intersection, Cech descent, exact-image implication,
 and normal no-filling lemma are proved in the theorem.  This companion checks

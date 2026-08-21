@@ -2,8 +2,7 @@
 id: THM-3600
 title: "Danielewski arm-plane atlas, singular shear, and no-filling gate"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + FINITE-EXACT COMPANION;
-  PENDING INDEPENDENT HOSTILE AUDIT AND EXPLICIT PROMOTION.  Every split
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every split
   squarefree surface c^n e=Sigma(b) is covered by affine planes obtained by
   retaining one arm.  Their overlaps are glued by singular symplectic
   shears, and the global ring is the intersection of all plane-chart rings.
@@ -17,8 +16,12 @@ status: >
   No polynomial Darboux pair and no counterexample to JC(2) is claimed.
 source: root / arm_chart_compactification, 2026-08-21
 audit: >
-  PENDING.  The theorem is outside the proved dependency graph until an
-  independent current-byte hostile audit and explicit status promotion.
+  PASS.  An independent committed-blob audit rederived the arm charts,
+  singular-shear intersection, Hermite--Pade and Laurent equivalences,
+  degree invoices, de Rham groups and exponent-one boundary, compiler/A13
+  specialization, unit lattice, and every hypothesis of the no-filling
+  lemma.  Normal and optimized companions are byte-identical to the stored
+  2,020-gate output; the verifier AST contains no assertion gates.
 depends_on:
   - THM-3581-critical-value-multiarm-keller-compiler-and-A13-carrier
 related:
@@ -27,18 +30,17 @@ related:
   - THM-3598-danielewski-rational-exact-polar-graph-family-and-classification
 script: 04-computation/jc2_danielewski_arm_plane_atlas_no_filling_thm3600.py
 output: 05-knowledge/results/jc2_danielewski_arm_plane_atlas_no_filling_thm3600.out
-script_sha256: 35244df361cd43aa836c583845c815a67335dedafdbba387089805975da56eeb
+script_sha256: ec04b112f3f0ade1d4ab578266cda4444b085d003cca9d16492843e31c2144c5
 output_sha256: c27abdfd0a16acd12d44566096fbed6b479d12457a3129a2813d2127b1c31421
 hash_basis: raw LF bytes
 ---
 
 # THM-3600 -- Danielewski arm-plane atlas, singular shear, and no-filling gate
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + FINITE-EXACT COMPANION;
-PENDING INDEPENDENT HOSTILE AUDIT AND EXPLICIT PROMOTION.**  The unconditional
-arm-atlas theorem and the compiler-dependent corollary are separated below.
-This candidate constructs no polynomial Darboux pair and proves no case of
-`JC(2)` false.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The
+unconditional arm-atlas theorem and the compiler-dependent corollary are
+separated below.  This theorem constructs no polynomial Darboux pair and
+proves no case of `JC(2)` false.
 
 All varieties, rings, differentials, and roots below are over `C`.
 
