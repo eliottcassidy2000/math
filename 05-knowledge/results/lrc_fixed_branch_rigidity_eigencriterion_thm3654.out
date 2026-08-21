@@ -1,0 +1,13 @@
+== THM-3654 fixed-branch rigidity eigencriterion ==
+parent_sha256_raw=(('THM3647_theorem', '40bd2d192cf5c9d22b41c34b2bd0ad91c29b37658bedc23923b31682371c47a5'), ('THM3647_script', '2e42c26d43e5d94b5a5c33c6b425dc64f72b7cd38e0759d8dba61aab3fb4c11b'), ('THM3647_output', '300a43fcc6cbc679d0ec91f571d19115c292555d1ae1fa92db64e65678002950'))
+field=p:755373809845391722745761;branch=6;spectra=(alpha:485148529749842658283160,beta:533745727702934015947346)
+flag=R:4=K:2+middle:2
+operator=A6-alpha*I=(beta-alpha)*Pi_M
+criterion=c_in_K iff literal_branch6(c)=alpha*branch_sum(c)
+complement=beta_eigenspace_inside_R=middle_plane
+quotient=LambdaSharp=defect_middle/(beta-alpha)*T_mid;T_mid_invertible
+digests={'K': '065ca6f0d61df266a5e55aab3d50e03f35ddc37a156373eabf6ec6c04cc8015f', 'R': 'a3ca24b41fb507941de6e274058bf4658918a13d9ca9902e6483fb52be444446', 'defect_operator': '885b286dc4248ce10041b4cc3fe8bba5f8114b8c4331ddc1f4fc2c8ebcf73dc6', 'literal_defects': 'd78fbd4d7f3bd288d96e70fb266a1c13e039cd198ebde65e57bf2205624d5b04', 'lambda_coordinates': '055b75ba67d21f678f256e2c76e712bde5788296fa468b5b6a7f938dd69e770d'}
+semantic_sha256=4cab3b1ef03eebf75afcd7f968bf2e1de7729711de3c519261b645fc60000369
+CHECKS=18;imported_address_checks=6
+status=FINITE-EXACT STATIC LITERAL-BRANCH EIGENCRITERION
+scope=no chronology/current/characteristic-zero/row-exclusion/LRC14
