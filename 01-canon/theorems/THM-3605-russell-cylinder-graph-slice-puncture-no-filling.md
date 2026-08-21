@@ -12,8 +12,9 @@ status: >
   Polynomial graphs over the punctured Darboux plane are classified exactly;
   the unit-form graphs merely apply a triangular change to the original
   rational Keller pair and retain its double pole.  The fixed second
-  coordinate has no polynomial Jacobian mate.  Non-graph slices and
-  projections genuinely mixing the cylinder coordinate remain open.
+  coordinate has no polynomial Jacobian mate.  THM-3607 separately closes
+  every rank-two linear projection of (B,C,S); non-graph slices, nonlinear
+  projections, and projections involving Y remain open.
 source: root / arm_chart_compactification stable-cylinder wildcard, 2026-08-21
 audit: >
   PASS.  An independent committed-byte hostile audit rederived both polynomial
@@ -29,6 +30,7 @@ depends_on:
 related:
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
   - THM-3569-danielewski-two-by-three-weight-darboux-nonentry
+  - THM-3607-russell-cylinder-mixed-projection-degree-seven-gate
 citation:
   - "Moser-Jauslin and Poloni, Isomorphisms between cylinders over Danielewski surfaces, arXiv:2002.12202, Section 5.1."
 script: 04-computation/jc2_russell_cylinder_graph_slice_no_filling_thm3605.py
@@ -452,7 +454,8 @@ It does not close:
 
 - an implicitly defined `A2` in the cylinder that is not a polynomial graph
   over `(x,q)` or `(a,c)`;
-- a planar projection mixing `S` essentially with both arm coordinates;
+- a nonlinear projection of `(B,C,S)`, or a projection involving `Y`
+  (rank-two linear projections of `(B,C,S)` are closed by THM-3607);
 - a different cylinder isomorphism followed by a genuinely different
   filling; or
 - any construction that changes the fixed second coordinate `c`.

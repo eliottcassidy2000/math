@@ -1,4 +1,4 @@
-THM-3607 exact companion -- provisional rank-two projection formal rigidity
+THM-3607 exact companion -- proved rank-two projection formal rigidity
 status=finite exact controls; all-degree completion argument is proof-driven
 SECTION compiler identities and mixed arm normal form
 PASS compiler_and_arm_gates=7 determinant=-3

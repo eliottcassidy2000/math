@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3607.
+"""Exact controls for proved and independently audited THM-3607.
 
 The rank-two linear-projection obstruction is proof-driven: its hard face
 uses a polynomial boundary ODE and a first-nonzero coefficient in the formal
@@ -43,7 +43,7 @@ def jacobian(first, second, first_var, second_var):
     )
 
 
-print("THM-3607 exact companion -- provisional rank-two projection formal rigidity")
+print("THM-3607 exact companion -- proved rank-two projection formal rigidity")
 print("status=finite exact controls; all-degree completion argument is proof-driven")
 
 

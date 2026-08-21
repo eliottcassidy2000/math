@@ -2,7 +2,7 @@
 id: THM-3607
 title: "Russell-cylinder rank-two linear-projection formal rigidity and degree-seven gate"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For every polynomial cylinder graph w=h(x,q), no rank-two linear projection
   of the three polynomial coordinates (B,C,S) has a nonzero constant ordinary
   Jacobian.  This conclusion does not require the graph to retain the
@@ -15,14 +15,13 @@ status: >
   full-collision-preserving degree-at-most-two calculation ends in -81/2.
 source: root / cylinder_mixed_projection mixed-projection wildcard, 2026-08-21
 audit: >
-  PENDING INDEPENDENT AUDIT.  The exact companion verifies the Russell graph
-  identities, rank-two row reduction, the fixed-C and (B,C) faces, the
-  determinant-to-PDE sign, the explicit arm-completion inverse, formal
-  recurrence, ordinary initial-form bracket and degree-seven arithmetic, the
-  complete quadratic collision elimination, and the sharp punctured graph.
-  Normal and optimized replays are byte-identical to the stored output.  The
-  all-degree conclusion is proof-driven and is not promoted before a separate
-  hostile proof audit.
+  PASS.  An independent hostile audit rederived every rank-two row-space
+  branch, the generalized rho/tau transport equation and its sign, the
+  explicit global arm-completion inverse, the first-coefficient formal
+  rigidity, the boundary pole, the degree-seven initial-form gate, the exact
+  quadratic collision chain, and the sharp punctured control.  Normal and
+  optimized replays are byte-identical to the stored 1,812-gate transcript;
+  the AST has no assertion gates, and the documentation and diff checks pass.
 depends_on:
   - THM-3561-rational-keller-danielewski-polynomial-completion
 related:
@@ -30,15 +29,15 @@ related:
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
 script: 04-computation/jc2_russell_cylinder_mixed_projection_thm3607.py
 output: 05-knowledge/results/jc2_russell_cylinder_mixed_projection_thm3607.out
-script_sha256: 59214827b8361378f2b8952c2cb0850584bca3305e6a3d21d376e2cd21542ebb
-output_sha256: 4ca192d1047b42ada9e672e8660e4635c32fb4a69d2c5cb69c26f3fc903b87b2
+script_sha256: 43fa8ab3587707dee105b4d38db5456fd2ba6e2eb722e4c20a8a4f015b2b0a75
+output_sha256: 49bf56b3ec2b540a7117cc8a84eb0e3d0bc36d1dfa227b449a767a5c2573592a
 hash_basis: raw LF bytes
 ---
 
 # THM-3607 -- Russell-cylinder rank-two linear-projection formal rigidity
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT
-AUDIT.**  The theorem closes every rank-two linear projection using the
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The theorem
+closes every rank-two linear projection using the
 three coordinates `(B,C,S)` on a polynomial graph.  It does not rule out an
 implicit non-graph `A2`, a nonlinear projection, or a projection involving
 the remaining cylinder coordinate `Y`.
