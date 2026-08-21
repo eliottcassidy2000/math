@@ -2,7 +2,7 @@
 id: THM-3661
 title: "LRC exceptional detector simple-spectrum convolution rigidity"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   THM-3660's signed eight-address detector has zero Fourier coefficient only
   at the trivial character, and its other 168 coefficients are pairwise
   distinct, for both the split F13^2 and assembled cyclic C169 group laws.
@@ -12,6 +12,13 @@ status: >
   spans exactly the 156-dimensional zero-vertical-sum space.  These are group-
   algebra and cyclotomic facts, not a physical translation law or LRC(14).
 source: kps-s191 / THM-3660 Fourier continuation, 2026-08-21
+audit: >
+  PASS -- agent Carver independently reconstructed both spectra, products,
+  translate ranks, derivative support/rank, inverse kernels and identities;
+  checked both characteristic polynomials by independent gcds; and reproduced
+  normal/optimized transcripts and every hash.  It separately verified the
+  prime/root-order reduction argument for the characteristic-zero lift and
+  the full-End simple-spectrum centralizer theorem.  No scope gap remained.
 depends_on:
   - THM-3660-lrc-exceptional-leakage-functional-and-fourteen-edge-boundary
 related:
@@ -27,8 +34,8 @@ hash_basis: raw LF bytes
 
 # THM-3661 -- one eight-point detector separates every nonconstant mode
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  The signed exceptional detector is simultaneously cyclic for both
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  The signed exceptional detector is simultaneously cyclic for both
 natural convolution algebras on the 169-address set.  More strongly, its
 convolution operator has no repeated eigenvalue.
 
