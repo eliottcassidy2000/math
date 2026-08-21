@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `amm12592_r512_truncated_adjoint_pascal_horizons_thm3588.py` -> matching
+  `.out` [THM-3588 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Positive integer adjoint-Pascal
+  multipliers on each fatal top cell's exact backward light cone telescope
+  the causal cell inequalities to five literal Farkas contradictions.  For
+  `D0=0,...,4`, every prefix surviving the Rule-A death must differ by rows
+  `(35,38,39,42,44)`, improving THM-3577's scalar-capacity bounds
+  `(49,52,53,56,59)` by `(14,14,14,14,15)`.  The preceding cuts have
+  positive values for this certificate family; they are hostiles, not
+  feasible prefixes.  Exact sparse coefficient cancellation, all cut signs,
+  pinned boundary integers, and normal/`-O` replay pass.  This is no
+  alternative construction or uniform AMM bound.  Script/output LF SHA-256:
+  `692ac6411f9a99c2734fe85995915b144a9752528816bae6df73cd0943c53985` /
+  `a71c4b1a0503b6ee79f5bde7c0d0d4448cb34c0e7f0a245e26bd11d8b5c5bdd8`.
 - `jc2_equal_step_three_by_three_danielewski_nonentry_thm3579.py` ->
   matching `.out` [THM-3579 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED; MISTAKE-431 repaired].  On every squarefree
