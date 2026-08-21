@@ -341,7 +341,8 @@ is sharp: equal counts allow two densities or none.
   mixed `N<=2` and
   `N=3,D<=6`; `D>=7`/width `>=4` open. THM-3560 closes monomial shears.
   THM-3561 gives an etale triple collision on non-`A2` `Y`; 3569 forces six
-  pieces (`3x3`,`2x4` open). 3562/63 close balanced passports/one nongraph
+  pieces, and 3579 closes the additively minimal common-step `3x3` cell
+  (`3x3` unequal-step and `2x4` open). 3562/63 close balanced passports/one nongraph
   slice. 3564/65/68/70/71/73/74 classify factor-bearing graphs as
   `phi=4H(1+bH+4aH^2)`; every component has a nonconstant unit. Graphs through
   degree two have no `A2`; 3578 gives the quasi-finite boundary-rank and

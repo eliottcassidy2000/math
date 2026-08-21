@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `jc2_equal_step_three_by_three_danielewski_nonentry_thm3579.py` ->
+  matching `.out` [THM-3579 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; MISTAKE-431 repaired].  On every squarefree
+  `c^2 e=Sigma(b)` with `deg Sigma>=2`, no Darboux pair can have two
+  nonconstant three-term weight supports that are arithmetic progressions
+  with the same step.  The five possible scalar-row alignments reduce to
+  homogeneous degree gates, two differential-operator obstructions, or the
+  central `3m/(3m+3)` ladder; a cube first integral and a terminal
+  coprimality contradiction close the central row.  Since `|A+B|=5` for
+  three-element integer supports exactly in the common-step case, any
+  surviving `3 x 3` candidate has at least six potential output rows before
+  cancellation.  Unequal-step `3 x 3`, `2 x 4`, and JC(2) remain open.
+  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `ad5ec528af81693a0f71fe703ac2ec332f50bb088bc1821786f08d136bb9cd5d` /
+  `71f4bdef61bb7d7f66a2fc7bb0d720abe1b8118b32f1d36235912f78bbd8025c`.
 - `berggren_positive_cube_slope_completion_101_thm3580.py` -> matching
   `.out` [THM-3580 PROVED + FINITE-EXACT + VERIFIED-EXACT].  The complete
   generalized-Pell `P,Q,a` class reduction and fundamental-unit orbits modulo

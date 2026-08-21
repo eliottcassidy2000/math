@@ -9,6 +9,23 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-431 (2026-08-21, THM-3579 degree-operator lemma) -- the constant/constant zero boundary was omitted
+
+- **What failed:** the first statement of THM-3579's degree-rigid operator
+  lemma quantified over all nonzero polynomials `H,u` and then asserted
+  `deg E_H(u)=deg J_H(u)=deg H+deg u-1` with nonzero leading coefficient.
+- **Minimal witness / first failed implication:** `H=u=1` gives
+  `E_H(u)=J_H(u)=0`, while the displayed degree is `-1` and there is no
+  nonzero leading coefficient.
+- **Repair / strongest survivor:** require `deg H+deg u>0`.  Every use in the
+  proof has `deg H>=deg Sigma>=2` (or a nonzero arm-divisible companion), so
+  all five scalar-row exclusions and the equal-step `3x3` theorem are
+  unchanged.  An independent audit accepted every load-bearing valuation,
+  support, first-integral, and coprimality step after this one-line repair.
+- **Reusable rule:** before applying a leading-term degree formula for a
+  differential operator, split off the constant/constant zero image even
+  when later applications automatically have positive degree.
+
 ## MISTAKE-430 (2026-08-20, THM-3569 promotion suffix) -- the audited universal theorem retained its provisional scope block
 
 - **What failed:** after THM-3569 was promoted to an independently audited

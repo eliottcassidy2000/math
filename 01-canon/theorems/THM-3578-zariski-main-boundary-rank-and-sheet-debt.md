@@ -23,6 +23,7 @@ depends_on:
   - THM-3572-squarefree-danielewski-affine-modification-and-two-bracket-collapse
 related:
   - THM-3561-rational-keller-danielewski-polynomial-completion
+  - THM-3576-higher-exponent-belyi-keller-collision-tower
   - THM-3574-universal-reducible-target-graph-component-unit-no-go
 ---
 
@@ -201,6 +202,37 @@ The five visible target curves force at least five finite-envelope boundary
 primes, while `(4)` independently forces at least two.  The two lower bounds
 measure different information: incidence with the Jelonek set versus the
 free divisor-class lattice.
+
+### 3.3 Higher-exponent Belyi tower
+
+Incoming THM-3576 supplies, for every `n>=2`, an etale map of degree
+
+```text
+d_n=n(n-1)+1
+```
+
+to `Y_n:c^n e=b(b-beta_n)`, again with `Pic(Y_n)=Z`.  In the order central
+`e=0`, side `e=0`, and side `c=0`, its generic affine fibre sizes are
+
+```text
+(1,(n-1)^2,n),
+```
+
+so its exact sheet-debt vector is
+
+```text
+(n(n-1), n, (n-1)^2),             total=2d_n-1.       (17a)
+```
+
+The total equals the global Euler defect
+
+```text
+d_n chi_c(Y_n)-chi_c(A2)=2d_n-1,                      (17b)
+```
+
+because `chi_c(Y_n)=2`.  Equality between the unweighted generic-curve debt
+sum and the Euler defect is special to this three-arm passport; `(12)` does
+not assert it for an arbitrary quasi-finite map.
 
 ## 4. Sharp controls and scope
 
