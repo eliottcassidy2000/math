@@ -2,8 +2,8 @@
 id: THM-3631
 title: "Russell-cylinder non-even closed-form survival through order five"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + FINITE-EXACT + VERIFIED-EXACT /
-  PENDING INDEPENDENT HOSTILE AUDIT.  For the fixed non-even hostile polynomial
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  For the fixed non-even hostile polynomial
   Q_h of THM-3627, a closed polynomial target two-form pulls back to the common
   normalized unit through total source degree five on all three collision
   branches.  The exact combined system has rank 92 in 168 unknowns and a
@@ -14,11 +14,13 @@ status: >
   counterexample.
 source: kps-s189 / THM-3627 de Rham leak continuation, 2026-08-21
 audit: >
-  PENDING -- author exact reconstruction pins THM-3624 and THM-3627, rebuilds
-  every pullback matrix, imposes the full de Rham equation through degree five,
-  verifies all shapes and rational ranks, and checks the nonzero constant row,
-  semantic digest, source LF, and no-assert AST gate.  Independent hostile
-  audit remains required.
+  PASS -- an independent hostile reconstruction using the THM-3627 Fraction
+  sparse-series backend matched every pullback and de Rham matrix, recovered
+  the complete rank table and a 49-term rational witness with
+  (P(0),K(0),R(0))=(0,4,0), checked the exterior-derivative sign and the
+  common nonzero constant, and verified byte-identical normal, optimized, and
+  stored transcripts after the declared LF normalization.  The audit also
+  repaired two wording/provenance imprecisions without changing the claim.
 depends_on:
   - THM-3624-russell-cylinder-noneven-fold-weighted-cokernel-boundary
   - THM-3627-russell-cylinder-noneven-hostile-degree-six-closure
@@ -35,8 +37,8 @@ hash_basis: LF-normalized bytes for files; canonical JSON for semantic ledger
 
 # THM-3631 -- non-even closed-form survival through order five
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + FINITE-EXACT + VERIFIED-EXACT /
-PENDING INDEPENDENT HOSTILE AUDIT.**  THM-3627 found the first arbitrary-form
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+THM-3627 found the first arbitrary-form
 obstruction for one explicit non-even fold.  This refinement shows that the
 positive side immediately below that obstruction survives the necessary de
 Rham condition and therefore represents genuine local target-pair germs.
@@ -135,9 +137,9 @@ most five whose three pullbacks equal
 12 d xi wedge dt + terms of source degree at least 6.   (10)
 ```
 
-The same `Omega_5`, truncated at lower source order, supplies every earlier
-row of the table.  The `76` in the final column is an exact affine dimension,
-not a numerical nullity estimate.
+The same `Omega_5`, after truncating its pullback to lower source order,
+supplies a solution for every earlier `N` in the table.  The `76` in the final
+column is an exact affine dimension, not a numerical nullity estimate.
 
 ## 3. These are genuine local target-pair jets
 
@@ -205,9 +207,10 @@ python3 -O 04-computation/jc2_russell_cylinder_noneven_closed_form_order_five_th
 ```
 
 The companion pins the promoted THM-3624 and THM-3627 theorem, script, and
-output packages; reconstructs every pullback matrix independently through
-degree five; and imposes all coefficients of `(8)`.  It contains no Python
-assertion statement.
+output packages; reconstructs every pullback matrix through degree five using
+the pinned THM-3624 exact constructor; and imposes all coefficients of `(8)`.
+It contains no Python assertion statement.  The independent hostile audit
+supplied a separate reconstruction through the THM-3627 sparse-series engine.
 
 This candidate proves no global regular pair on the Russell cylinder, no
 polynomial Darboux decomposition, no Keller map, and no counterexample to the
@@ -215,4 +218,4 @@ planar Jacobian conjecture.  Its sharp contribution is the local boundary:
 closedness leaks no earlier than the degree-six arbitrary-form obstruction for
 this fixed non-even hostile.
 
-Independent hostile audit remains the promotion gate.
+The independent hostile audit closes the promotion gate.  **QED.**
