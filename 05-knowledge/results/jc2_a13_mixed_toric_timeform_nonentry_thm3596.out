@@ -1,0 +1,13 @@
+THM-3596 exact companion
+SECTION Laurent Hamiltonian packet
+PASS Laurent elimination, density, time form, and derivative gcd
+SECTION Newton hull and interior time-form point
+PASS hull vertices=6 distances=[1, 7, 17, 36, 6, 1]
+SECTION toric face packet
+PASS six faces; only bottom has the two triple torus roots
+SECTION smooth-arm restoration
+PASS three arm charts and generic unit time forms
+SECTION THM-3591 invoice controls
+PASS lambda=0 hostile and lambda=3/2 fully paid arm/scalar control
+CHECKS=63
+RESULT=PASS
