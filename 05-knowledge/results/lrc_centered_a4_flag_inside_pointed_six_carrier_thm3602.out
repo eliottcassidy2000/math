@@ -1,0 +1,23 @@
+== THM-3602 centered A4 flag inside pointed six carrier ==
+field=(prime=755373809845391722745761,state=4,relation=13,H_dimension=52,Fun0_dimension=12)
+parent_sha256_lf={'thm3593': '3ee8486833d539599a4c8add304172b72929c69f3859e9cc1ce22e3018199516', 'p6_clean': 'cf2efd6317dd6ba2a05865ad11d115f1ab239e8ebafb2b8b3764447d1e0e67a3'}
+shared_relation_order=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);shared_zeta13=266737884585332483769981
+pointed_states=((0, 0), (1, 0), (1, 6), (3, 6), (3, 12), (2, 12))
+space_ranks={'K2': 2, 'R4': 4, 'P6': 6, 'Q6': 6}
+space_digests={'K2': '193c82c6337f88c9b6c1bb2464198808336f42cc7036f5c3ae30af449e147357', 'R4': '28bca0c67b0d94431fe3c43181a46d7b55e6cfce98fdc232f837acfde0ccec8c', 'P6': '6e9083f15408f6d2d85fb3f2747ba0bd1f987e83ce4b836cb7298aaccc84e0c4', 'Q6': 'ae86ad2a3fd03bea95c823b2454b78f244581aa048cb2da63a03a75f484cc596'}
+stack_ranks={'K2_R4': 4, 'R4_P6': 7, 'R4_Q6': 6, 'K2_P6': 6, 'K2_Q6': 6, 'P6_Q6': 7, 'P6_constants': 7, 'Q6_constants': 7, 'Q6_zero_sum': 12}
+intersection_dimensions={'R4_inter_P6': 3, 'R4_inter_Q6': 4, 'K2_inter_P6': 2, 'K2_inter_Q6': 2, 'P6_inter_Q6': 5}
+intersection_digests={'R4_inter_P6': 'ad92a4ba1888bb52d2e9cbcb19fd5967fe10f048c16705817e79201b7b2359bf', 'R4_inter_Q6': '28bca0c67b0d94431fe3c43181a46d7b55e6cfce98fdc232f837acfde0ccec8c', 'K2_inter_P6': '193c82c6337f88c9b6c1bb2464198808336f42cc7036f5c3ae30af449e147357', 'K2_inter_Q6': '193c82c6337f88c9b6c1bb2464198808336f42cc7036f5c3ae30af449e147357', 'P6_inter_Q6': '739439d079f8639399af6f3737345c6c175af24b51c5c159b46045e52c3420e1'}
+augmentation_graph={'centering_domain_rank': 6, 'centering_image_rank': 6, 'centering_kernel_dimension': 0, 'lambda_rank': 1, 'lambda_kernel_dimension': 5, 'lambda_on_R4_rank': 1, 'lambda_on_R4_kernel_dimension': 3, 'lambda_on_K2_rank': 0, 'lambda_basis_values_sha256': '8252d50c932b8459a5fd8b90912753df143a3d3a8bb7160498edac5373fc2345', 'lambda_R4_values_sha256': '04b71552c5c374baa382ef767444a6f4a97d2da048cc49a65df77c0653f61831'}
+projection_ranks={'R4_to_F13_mod_P6': 1, 'R4_to_Fun0_mod_Q6': 0, 'K2_to_Fun0_mod_Q6': 0}
+flag=K2(2)<R4(4)<Q6(6)<Fun0(F13)(12)
+refined_flag=K2(2)<(R4_inter_P6)(3)<R4(4)<Q6(6)
+affine_reindexing_count=156
+affine_intersection_histogram=(((0, 0), 155), ((4, 2), 1))
+affine_nonzero_exceptions=((1, 0, 4, 2),)
+affine_atlas_sha256=f074cff98c370dbebfefc998f96ef761641ba28657a21c1b5c20f95b790678a6
+semantic_sha256=fdce64910b2eb0c200ef9761cd6518f65c6b3295083c161d00c76a5c8c83d095
+script_sha256_lf=c6954206f6a3187a98772fdf2313f0fd91d7df12f38ec7438d39be7bad7235e8
+status=FINITE-EXACT companion candidate;independent audit still required
+scope=static finite-field relation target;not difference-fibre lift;not chronology/current/entry/characteristic-zero/LRC14
+PASS
