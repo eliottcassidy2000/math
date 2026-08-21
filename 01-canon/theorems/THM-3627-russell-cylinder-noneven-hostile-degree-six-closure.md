@@ -2,7 +2,7 @@
 id: THM-3627
 title: "Russell-cylinder non-even hostile degree-six closure"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The explicit non-even polynomial Q_h from THM-3624 survives the enlarged
   arbitrary-target-two-form collision system through total source degree five,
   but fails exactly at degree six.  A sparse exact left-cokernel certificate
@@ -10,7 +10,11 @@ status: >
   constant column.  This closes Q_h only; the general non-even-fold family
   remains OPEN.
 source: root / audit_thm3624 higher-order hostile continuation, 2026-08-21
-audit: PENDING -- provisional theorem and exact companion require hostile audit
+audit: >
+  PASS -- an independent FLINT reconstruction recovered the degree-five
+  survivor and degree-six rank jump, verified all 252 column annihilations
+  and the nonzero 23-term certificate debt, and checked the hostile mutation;
+  normal, optimized, and stored 53-gate transcripts are byte-identical.
 depends_on:
   - THM-3624-russell-cylinder-noneven-fold-weighted-cokernel-boundary
 related:
@@ -18,14 +22,14 @@ related:
   - THM-3619-russell-cylinder-even-fold-higher-jet-staircase
 script: 04-computation/jc2_russell_cylinder_noneven_hostile_degree_six_closure_thm3627.py
 output: 05-knowledge/results/jc2_russell_cylinder_noneven_hostile_degree_six_closure_thm3627.out
-script_sha256: 0f79dda958cab53d59965427032610142d024e23028343b9797a26af94569020
-output_sha256: c5e8785c03da19b19c22b930c88e908117a0964e82e683b3ace9c5c17096244f
+script_sha256: fcafd6fe3f3ce42432958a4ee074ec2150b943d3dc30552213a8b9e8cd3a0689
+output_sha256: c46ee58088554811aac00ce013e55d3d0b67f3d958e25ee55b0f24af125de0a4
 hash_basis: raw LF bytes
 ---
 
 # THM-3627 -- Russell-cylinder non-even hostile degree-six closure
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 This result continues the exact hostile polynomial from THM-3624 by two more
 source degrees.  It closes that polynomial at degree six in a system strictly
 larger than the decomposable system `dF wedge dG`.  It does not close the

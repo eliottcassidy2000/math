@@ -255,8 +255,8 @@ def pullback_matrix(maximum_degree):
     return sp.Matrix(rows), target
 
 
-print("THM-3627 exact companion -- provisional non-even hostile degree-six closure")
-print("status=finite exact arbitrary-two-form obstruction; audit=PENDING")
+print("THM-3627 exact companion -- proved non-even hostile degree-six closure")
+print("status=proved finite-exact and independently hostile-audited")
 
 
 print("SECTION hostile polynomial and collision jets")
