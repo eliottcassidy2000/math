@@ -2,23 +2,22 @@
 id: THM-3569
 title: "Universal squarefree Danielewski two-by-three weight Darboux nonentry"
 status: >
-  PROVISIONAL UNIVERSAL SCOPE GENERALIZATION + VERIFIED-EXACT; PENDING
-  INDEPENDENT HOSTILE AUDIT.  For every squarefree polynomial Sigma of
-  degree at least two, a polynomial Darboux pair on c^2 e=Sigma(b) cannot
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  squarefree polynomial Sigma of degree at least two, a polynomial Darboux
+  pair on c^2 e=Sigma(b) cannot
   have at most two nonconstant weight pieces in one output and at most three
   in the other.  After scalar removal every possible pair must have support
   sizes (2,at least 4), (at least 4,2), or (at least 3,at least 3), hence at
-  least six nonconstant homogeneous pieces.  The previously proved and
-  independently audited specialization Sigma=b(b+4) remains contained in
-  the statement.  The universal scope is not promoted pending a fresh audit.
-  No Darboux pair and no counterexample to JC(2) is claimed.
+  least six nonconstant homogeneous pieces.  No general Darboux pair and no
+  counterexample to JC(2) is claimed.
 source: codex-2026-08-20-frontier-overnight; root/elliptic_arm_counterexamples, 2026-08-20
 audit: >
-  PENDING independent audit of the universal scope.  The original
-  Sigma=b(b+4) scope was independently hostile-audited.  The expansion audit
-  found that the proof and companion use only squarefree root orders,
-  degree at least two, and characteristic zero; fresh ordinary and optimized
-  replays agree on degrees two through seven and the sharp boundary controls.
+  Two independent hostile audits rederived the support-collision trichotomy,
+  every lower and upper ladder, all squarefree-root valuation gates, and the
+  sharp degree-one and repeated-root boundaries.  Neither proof uses the
+  coefficients or number of roots of b(b+4).  Independent enlarged support
+  and valuation censuses found no extra profile.  Ordinary, optimized, and
+  stored exact transcripts agree.
 depends_on: []
 related:
   - THM-3404-factorized-danielewski-principal-parts-and-finite-cover-obstruction
@@ -33,10 +32,9 @@ hash_basis: LF-normalized bytes
 
 # THM-3569 -- universal squarefree Danielewski two-by-three weight Darboux nonentry
 
-**PROVISIONAL UNIVERSAL SCOPE GENERALIZATION + VERIFIED-EXACT; PENDING
-INDEPENDENT HOSTILE AUDIT.**  The original quadratic specialization remains
-proved and audited; this revision exposes and generalizes its actual proof
-mechanism.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The original
+quadratic specialization is the first member of the universal squarefree
+statement; the proof mechanism depends only on simple arms and their degree.
 
 THM-3561 turns a rational triple collision into an everywhere-etale
 polynomial map from `A2` to a smooth Danielewski surface.  A polynomial
@@ -114,6 +112,11 @@ For `r=0` the bracket is divisible by `Sigma`; for `r>=2` it is divisible
 by `Sigma^(m-1)`.  For `r=1` its degree is
 `deg(f)+deg(g)+deg(Sigma)-1>=1`, with nonzero leading multiplier in
 characteristic zero.  Hence no homogeneous scalar bracket exists.
+If one whole output had a single weight, only the unique complementary
+weight of the other output could contribute to the scalar row; every other
+weight would produce a disjoint nonzero row and could be deleted after its
+bracket vanished.  This would leave the forbidden homogeneous scalar pair.
+Thus the one-by-arbitrary-width boundary is closed as well.
 
 The complete two-by-two cell is also empty.  Its only possible cross-matched
 normal form is
@@ -249,7 +252,7 @@ At any arm put `k_0=ord(h)` and `m=R k_0/d`.  Since `R>2`, the scalar row
 must survive through the weight-`-2` middle coefficient, so that coefficient
 is simple there.  Its contribution to the shared nonzero row has exact order
 `m` and coefficient `R-2m`, which is nonzero for `d in {1,3}` and integral
-`k_0>=1`.  The other term has order
+`k_0>=1`.  The other term has order at least
 
 ```text
 m+3k_0/d-1>m.                                             (16)
