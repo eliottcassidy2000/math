@@ -24,7 +24,8 @@
   `a664d9a93ee760013d668f6fabba72370f8d9a88602df06534f217c3c2f01852` /
   `f05b6075e28d6da0726698f8a895a46b733b7aa3e7bc63d8717b2daa6c4d7f69`.
 - `jacobian_quadratic_target_graph_euler_no_go_kps_s188.py` -> matching
-  `.out` [THM-3571 PROVED + VERIFIED-EXACT].  Every collision-compatible
+  `.out` [THM-3571 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  MISTAKE-428 repaired].  Every collision-compatible
   genuinely quadratic target graph has irreducible pullback with
   `chi(X)>=2`, hence no source-coordinate factor.  Its strict Jelonek section
   satisfies `chi(D)=2-rho(delta)-nu`; exact saturated Groebner reduction of

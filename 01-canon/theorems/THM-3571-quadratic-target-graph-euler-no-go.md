@@ -2,7 +2,8 @@
 id: THM-3571
 title: "Quadratic target-graph Euler no-go"
 status: >
-  PROVED + VERIFIED-EXACT.  Every collision-compatible genuinely quadratic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; MISTAKE-428
+  repaired.  Every collision-compatible genuinely quadratic
   target graph c+phi(a,b)=0 for the fixed THM-1300 Keller map has irreducible
   complete pullback X with compactly supported Euler characteristic at least
   two.  Hence X is not A2 and the pullback polynomial has no source-coordinate
@@ -309,12 +310,15 @@ chi(X_phi)>=-1+2*3+2*1-5=2.                            (33)
 Since `chi(A2)=1`, the complete pullback is not `A2`.
 
 Finally, it is irreducible.  If `A!=0`, then `deg_a(phi)=2`, and THM-3564's
-degree-resonance gate applies.  If `A=0,B!=0`, then `deg_a(phi)=1`; the only
-reducible rows are THM-3565's `h`-family, whose nonconstant members have total
-degree at least four and whose constant members are affine.  If `A=B=0`,
-then `C!=0` and `deg_a(phi)=0`, again excluded by THM-3564.  Thus an alleged
-source-coordinate factor would have to be the whole irreducible pullback,
-contradicting `(33)`.  This proves the theorem.
+degree-resonance gate applies.  If `A=0` and `(B,D)!=(0,0)`, then
+`deg_a(phi)=1`.  THM-3565 says reducibility would force the coefficient of
+`a` to be `-2h(b)^3`.  But here that coefficient is the linear polynomial
+`Bb+D`; a polynomial cube of degree at most one is constant.  Hence `h` is
+constant, `B=0`, and THM-3565's whole row is affine, contrary to genuine
+quadraticity.  The remaining case is `A=B=D=0`; then `C!=0` and
+`deg_a(phi)=0`, so THM-3564 applies.  Thus an alleged source-coordinate
+factor would have to be the whole irreducible pullback, contradicting `(33)`.
+This proves the theorem.
 
 ## 6. Exact verification
 

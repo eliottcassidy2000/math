@@ -9,6 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-428 (2026-08-20, THM-3571 irreducibility case split) -- vanishing quadratic `a` coefficients did not force `deg_a(phi)=0`
+
+- **What failed:** the first THM-3571 proof said that `A=B=0` in the
+  collision-compatible quadratic
+  `phi=Aa^2+Bab+Cb^2+Da+Eb+D/4-A/16` forces `deg_a(phi)=0`.  It forgot the
+  surviving linear term `Da`.
+- **Minimal witness / first failed implication:**
+  `phi=a+b^2+1/4` has `A=B=0`, is genuinely quadratic, contains the collision
+  value, and has `deg_a(phi)=1`, not zero.
+- **Repair / strongest survivor:** the Euler and discriminant proof was
+  unaffected.  For irreducibility, split the residual cell by `D`.  If
+  `D!=0`, THM-3565 would require `-2h(b)^3=D`; hence `h` is constant and the
+  entire reducible row is affine, contradicting the `b^2` term.  If `D=0`,
+  THM-3564 applies at `deg_a(phi)=0`.  More generally, when `A=0` and
+  `(B,D)!=(0,0)`, comparison of `Bb+D=-2h^3` again forces `h` constant and
+  excludes every genuinely quadratic row.  THM-3571 survives unchanged.
+- **Reusable rule:** determine a partial degree from every coefficient of
+  that variable, including lower-degree terms; a vanished top homogeneous
+  block does not by itself put a polynomial on the degree-zero face.
+
 ## MISTAKE-427 (2026-08-18, degree-passport scope) -- the first survivor of a weaker sieve was called globally admissible
 
 - **What failed:** the first synthesis called the four height-`105` cells
