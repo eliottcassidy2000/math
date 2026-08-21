@@ -1,0 +1,20 @@
+THM-3629 exact companion -- provisional linear-vertical global-form boundary
+status=verified-exact proof controls; independent hostile audit=PENDING
+SECTION compiler, retained triple, and shifted D=0 sign collision
+PASS collision=retained_triple plus_D0_sign_pair_on_every_even_shift
+SECTION global exact two-form on Y2
+PASS eta=dalpha polynomial_global Phi_pull=-3dx_dq
+SECTION Russell inverse transport and affine pullback
+PASS eta_tilde=Theta_inverse_pull_eta affine_H=ht gives_-3h normalized_12
+SECTION exact decomposition linear algebra
+PASS dF_dG=lambda_eta_tilde forces_Fw=Gw=0 over_fraction_field
+SECTION nonlinear critical-value and stable-only hostiles
+PASS nonlinear_H surface_only_output_impossible; pure_w_output_impossible
+SECTION complete affine-linear global target cell
+PASS affine_linear_bcew arbitrary_constant_two_form_cell_empty
+SECTION sharp local and nonclosed controls
+PASS affine_local_pair; nonlinear_1_over_Hprime_form_nonclosed_and_extra_term
+SECTION source AST gate
+PASS ast_assertion_nodes=0
+CHECKS=73
+RESULT=PASS
