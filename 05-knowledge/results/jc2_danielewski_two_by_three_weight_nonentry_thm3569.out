@@ -1,0 +1,7 @@
+THM-3569 Danielewski two-by-three weight nonentry
+support collision classes: isolated / lower arithmetic / upper arithmetic
+lower exceptional ladder {-2,1} x {-5,-2,1}: exact factor PASS
+upper A exact controls: [(1, 1, 'ordinary'), (2, 3, 'particular+cube'), (3, 1, 'ordinary'), (4, 1, 'ordinary'), (5, 3, 'particular+cube'), (6, 1, 'ordinary'), (7, 1, 'ordinary'), (8, 3, 'particular+cube')]
+upper B exact controls: [1, 2, 3, 4, 5, 6, 7, 8]
+every surviving constant row has a positive-degree differential factor
+all optimization-safe truth gates passed

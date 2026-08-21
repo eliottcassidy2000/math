@@ -11,6 +11,19 @@
   Normal/`-O` replay matches.  Script/output LF SHA-256:
   `d633a3f3f6191aa48524d4519ecc61374a411980695ce2b28b0f97f0310ec8f1` /
   `fa142160b424be9d6432debef441a1d4d40694ea8d96c9b4178033d0ebb66acc`.
+- `jc2_danielewski_two_by_three_weight_nonentry_thm3569.py` -> matching
+  `.out` [THM-3569 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  On THM-3561's smooth Danielewski target, exact support convolution reduces
+  every `2 x 3` Darboux cell to isolated, lower-arithmetic, or
+  upper-arithmetic rows.  Arm valuations and common-power equations leave
+  three explicit ladders; their scalar rows factor through `h(hK)'`,
+  `h'K+2hK'`, `3h'K+2hK'`, or the cube-branch `h'J+2hJ'`, all nonconstant
+  because `b(b+4)|h`.  Hence a putative polynomial Darboux pair needs support
+  sizes `(2,>=4)`, `(>=4,2)`, or `(>=3,>=3)`, at least six nonconstant
+  pieces.  The `3 x 3` and `2 x 4` cells remain open.  Normal/`-O` replay
+  matches.  Script/output LF SHA-256:
+  `98e062a15921b9cb0e5b17afdd5bf206d11970631c3891230c1b86b0d064dfa3` /
+  `9f364247a3ae9114db6d8d143391facd9adb98593fb5e22ded34cefdfc430922`.
 
 - `jacobian_reducible_graph_component_euler_no_go_kps_s188.py` -> matching
   `.out` [THM-3568 PROVED + VERIFIED-EXACT].  In THM-3565's complete

@@ -341,9 +341,9 @@ is sharp: equal counts allow two densities or none.
   mixed `N<=2` and
   `N=3,D<=6`; `D>=7`/width `>=4` open. THM-3560 closes monomial shears.
   [3561](../01-canon/theorems/THM-3561-rational-keller-danielewski-polynomial-completion.md)
-  gives an etale triple collision via smooth non-`A2` Danielewski `Y`; a
-  constant Poisson pair on `Y` would refute `JC(2)`, but every
-  at-most-two-weights/output cell fails.
+  gives an etale triple collision on non-`A2` Danielewski `Y`. THM-3569
+  forces any constant-Poisson pair to at least six pieces; first open cells
+  are `3 x 3` and `2 x 4`.
   [3562](../01-canon/theorems/THM-3562-balanced-resonant-pole-unit-lagrange-nonentry.md)
   closes balanced nonsplit passports. [3563](../01-canon/theorems/THM-3563-nongraph-conductor-node-cycle-keller-obstruction.md)
   closes all target projections on one nongraph slice by a three-node cycle.
