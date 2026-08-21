@@ -1,10 +1,11 @@
 # Two-cube support density and the parabolic/hyperbolic split
 
-Status: **FINITE-EXACT PROBE + RIGOROUS SIEVE-DIMENSION DERIVATION +
-CONDITIONAL ASYMPTOTIC SYNTHESIS** (2026-08-21).  This reflection is not a
-theorem and creates no proof dependency.  Its exact input is THM-3645.  The
-upper-bound mechanism in Section 3 is rigorous; the full asymptotic still
-requires the two stated correlation-theorem interfaces.
+Status: **FINITE-EXACT PROBE + PROMOTED SIEVE UPPER BOUND + CONDITIONAL
+ASYMPTOTIC SYNTHESIS** (2026-08-21).  This reflection is not itself a theorem
+and creates no proof dependency.  Its exact input is THM-3645; Section 3 has
+now been promoted, with explicit fundamental-lemma parameters and hostile
+audit, as THM-3656.  The full asymptotic still requires the two stated
+correlation-theorem interfaces.
 
 ## 1. The local screen is three correlated prime semigroups
 
@@ -115,17 +116,23 @@ Elementary counting in `0<V<n<=N` has total remainder
 sum_(d<=D)|r_d| << ND(log D)^2+D^2(log D)^2.           (9)
 ```
 
-Taking `D=N^(1/3)` and then a fixed-level fundamental-lemma sieve proves the
-rigorous upper bound
+Taking
+
+```text
+D=N^(1/3),        s=16,        z=D^(1/16)=N^(1/48)
+```
+
+in the arbitrary-dimensional upper fundamental lemma proves the rigorous
+upper bound
 
 ```text
 A(N) << N^2/(log N)^(3/2).                            (10)
 ```
 
 Dropping primitivity and the conditions at `2,3` only enlarges the set, so
-they create no gap in this upper bound.  A maintained theorem package and a
-primary-source citation audit remain to be written before `(10)` is used as a
-canon dependency.
+they create no gap in this upper bound.  This is now the maintained and
+independently audited THM-3656, using the Diamond--Halberstam--Richert
+arbitrary-dimensional upper sieve.  It supplies no lower bound.
 
 ## 4. The coupled constant and the honest asymptotic boundary
 
@@ -204,12 +211,25 @@ pairwise independent triples
 (24a+23,24b+5,  16a+8b+17).                           (16)
 ```
 
-Two interfaces remain explicit: verify the fixed-character support
-indicators uniformly in the required multiplicative-function class,
-including exceptional-character terms; and add primitivity by truncated
-Moebius inversion, using `(10)` to bound the common-prime tail.  Until those
-are written and the primary theorem is checked, `(15)` and `(14)` are
-**CONDITIONAL / CONJECTURAL**, not proved.
+The literature audit resolves the first membership question but exposes a
+two-mode correction.  Matthiesen's
+[linear-correlation framework](https://arxiv.org/abs/1606.04482) and its
+companion multiplicative-function paper explicitly include indicators of
+integers composed entirely of completely split primes, so both support
+indicators qualify.  However
+
+```text
+b_D chi_D=b_D,
+```
+
+so the persistent character set is `{1,chi_D}`, not just the trivial
+character.  The clean constant in `(14)` therefore requires the full fixed
+`2 x 2 x 2` character expansion in the correlation theorem, not its
+trivial-character corollary.  A second, genuinely separate interface is the
+uniform truncated-Moebius tail needed to impose primitivity; THM-3656 is the
+natural upper-bound sidecar for that tail.  Until the eight character terms
+and this tail are simplified, `(15)` and `(14)` remain **CONDITIONAL /
+CONJECTURAL**, not proved.
 
 ## 5. Parabolic screens versus hyperbolic existence
 
@@ -246,11 +266,12 @@ global, and a locally viable slope is not an admissible Pell orbit.
 
 ## 6. Crisp next targets
 
-1. Package `(5)--(10)` as a maintained upper-bound theorem with a
-   primary-source citation and an independently audited remainder estimate.
-2. Verify the multiplicative-class and exceptional-character interfaces for
-   the two support indicators; then derive `(15)` and `(14)` from the precise
-   linear-correlation theorem.
+1. **Completed as THM-3656:** `(5)--(10)` are now a maintained upper-bound
+   theorem with explicit `D,s,z`, primary sieve attribution, and independent
+   remainder audit.
+2. Expand the two persistent modes `{1,chi_24}` and `{1,chi_-8}` into the
+   eight fixed-character main terms of the precise correlation theorem, then
+   simplify them to `(14)`.
 3. Extend the exact census by residue cone and fixed-`V` slice to identify
    secondary terms or exceptional concentrations.
 4. Measure the conversion from local survivors to complete Pell/compiler
