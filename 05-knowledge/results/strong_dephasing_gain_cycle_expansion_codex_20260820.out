@@ -1,0 +1,35 @@
+SECTION A. Slow invariant graph and the retardation correction.
+   R1=B, R2=CB, R3=C^2B-BAB: PASS
+   G1=Pi K^2 Pi, G2=Pi K^3 Pi, G3=Pi K^4 Pi-2(Pi K^2 Pi)^2: PASS
+   explicit H^2/H^3/H^4 entry formulas for G3: PASS
+   the second term in G3 is the population-retardation correction: PASS
+
+SECTION B. Triangle flux is the lambda^-2 skew circulation.
+   G2_xy=-6 Im(H_xy (H^2)_yx)=-6 sum_z Im(H_xy H_yz H_zx): PASS
+   G2 is real skew, annihilates constants, and breaks uniform detailed balance when nonzero: PASS
+   on a triangle G1 and G3 are phase blind while G2 detects sin(flux): PASS
+
+SECTION C. A chordless square first contributes cos(flux) at lambda^-3.
+   holonomy-bearing G3 contribution is Re(H01 H12 H23 H30)*C4_pattern: PASS
+   C4_pattern has diagonal/adjacent/opposite coefficients 4/-8/12: PASS
+   unit pi flux gives G3_02=-16 on a nonedge, so higher-order G need not be Metzler: PASS
+
+SECTION D. Trees are phase-gauge controls at every order.
+   Pi K^n Pi agrees for phased and real paths for n=2,...,8: PASS
+   the all-order reason is diagonal-unitary gauge removal on a tree: PASS
+
+SECTION E. Bipartite response graphs: G3 recovers Gram/wedge energy.
+   same |A_wu| but ranks 1/2; G3 distinguishes them: PASS
+   G3_uv=6 |(A* A)_uv|^2-8 sum_w |A_wu A_wv|^2 for input vertices u!=v: PASS
+   conductances + G3 recover ||col_u wedge col_v||^2 and ||wedge^2 A||_F^2: PASS
+   for a 2x2 block this recovered invariant is |det A|^2: PASS
+
+SECTION F. Independent numerical Riccati and gauge controls.
+   triangle truncation error times lambda^4 is stable at 40/80/160: PASS
+   bipartite square truncation error times lambda^5 is stable at 40/80/160: PASS
+   exact Riccati slow generator is unchanged by a random vertex gauge: PASS
+
+VERDICT: PASS
+The resistor generator is G1/lambda; triangle sin-holonomy is G2/lambda^2;
+square cos-holonomy and the bipartite Gram/wedge rank certificate are G3/lambda^3.
+Beyond leading order the raw population-coordinate slow generator need not be Markov.
