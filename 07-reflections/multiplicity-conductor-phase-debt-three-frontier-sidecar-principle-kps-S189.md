@@ -1,6 +1,7 @@
 # Multiplicity, conductor, and phase debt: one sidecar principle on three frontiers
 
-Status: **TYPED SYNTHESIS + ONE PROVISIONAL LRC EXTENSION** (2026-08-21).
+Status: **TYPED SYNTHESIS + CORRECTED FINITE-EXACT LRC EXTENSION**
+(2026-08-21).
 This is not a theorem and does not create a dependency.  It specializes the
 existing meta-patterns “controlled forgetting requires a sidecar” and “the
 same representation is not the same carrier.”
@@ -79,7 +80,18 @@ is the candidate rank-two projector onto `K2sharp`.  The gain is precise:
 Neither operation supplies chronology, a current, characteristic-zero
 transfer, or an LRC(14) row exclusion.
 
-The sharp next typed map is the endpoint-arc imbalance on the centered
+An older, independently audited third-digit carrier gives a striking hostile
+alignment without licensing a transfer.  There the same arc reversal fails on
+the full `78`-coordinate parent, and its entire rank-two defect is localized on
+the middle point pair `(2,3)`; the endpoint pairs `(0,1)` and `(4,5)` have zero
+defect.  Stabilizing by the involution yields an eight-dimensional quotient
+with balanced arc-even/odd characters, but none of the thirteen child spaces
+is itself arc-invariant.  Thus `(4)` removes exactly the historical defect
+location, while the child failure proves that the static projector is not yet
+a chronological transition.  This is evidence of the mechanism, not an
+identification of the two carriers.
+
+The first tempting quotient map was the endpoint-arc imbalance on the centered
 coefficient frame,
 
 ```text
@@ -87,10 +99,50 @@ delta_arc:R4sharp -> F_p^2,
 delta_arc(c)=(c0-c1,c4-c5).                             (6)
 ```
 
-If exact reconstruction confirms `ker(delta_arc)=K2sharp`, then `(6)` and the
-THM-3615 augmentation have the same kernel on `R4sharp`; their induced quotient
-isomorphism is the first lawful static coefficient/address intertwiner.  It
-would still need a temporal-entry sidecar before any physical current claim.
+The hostile reconstruction **refutes** this interpretation.  In the same
+centered point frame,
+
+```text
+K2sharp=span(e0+e1,e4+e5),
+R4sharp=span(e0+e1,e2,e3,e4+e5).                       (7)
+```
+
+Hence `delta_arc` vanishes on all of `R4sharp`; its kernel is four-dimensional,
+not `K2sharp`, and the augmentation cannot factor through it.  The corrected
+map is the middle-arc coordinate
+
+```text
+delta_mid(c)=(c2,c3).                                   (8)
+```
+
+It has rank two and kernel `K2sharp`.  Better, it is already address-theoretic:
+
+```text
+Pi_M=I-Pi_W=diag(0,0,1,1,0,0) in mathcal A,
+ker(Pi_M|R4sharp)=K2sharp,
+im(Pi_M|R4sharp)=span(e2,e3).                           (9)
+```
+
+The THM-3615 augmentation now has the exact factorization
+
+```text
+LambdaSharp|R4sharp=T_mid o delta_mid,                  (10)
+```
+
+where, in the pinned middle-coordinate and canonical augmentation bases,
+
+```text
+T_mid=
+[126498113787680818370196  646561219255993169342961]
+[384727693242765231857657  452865069702498262026030],
+
+det(T_mid)=275730381649850587765623 !=0 mod p.          (11)
+```
+
+Thus the intrinsic quotient isomorphism
+`R4sharp/K2sharp -> A2sharp` is real, but the endpoint story was false.  The
+displayed matrix depends on the pinned bases; the quotient map does not.  It
+still needs a temporal-entry sidecar before any physical current claim.
 
 ## 3. Jacobian fold: completion pays jets but not diagonal constants
 
@@ -126,9 +178,27 @@ one connected rational function
 
 and the missing sidecar is the diagonal residue/evaluation condition on the
 collision fibre.  More collision jets cannot recover it uniformly: THM-3630
-proves survival at every finite cutoff.  THM-3634 consequently moves to the
-first stable jet and proves two independent rank-two debts; the fully mixed
-rank-two/rank-two cell remains open.
+proves survival at every finite cutoff.
+
+Incoming THM-3635/3637 sharpen this boundary twice.  For the minimal Hermite
+curve, the actual restriction ring has global conductor degree `82` and does
+contain a genuine rank-two/rank-two zero-stable determinant witness with fixed
+pair `(U,V)=(c,e)`; the least symmetric coefficient cutoff is `94`.  That
+witness even admits an exact first-stable lift `J_1=0`.  Nevertheless every
+unbounded determinant witness in the same restriction classes which reaches
+`J_1=0` has the identical second-stable retained debt
+
+```text
+lambda(J_2)=-2072/81.                                  (9a)
+```
+
+The value is independent of the full affine first-jet gauge, higher lifts,
+and representatives modulo the restriction kernel.  The vertical compiler
+terms are load-bearing: deleting them changes the quotient rather than merely
+changing coordinates.  Thus completion debt, actual-ring conductor debt, and
+stable-order debt are three different obstructions.  The fixed `(c,e)` cell
+is now closed at second order; other zero-stable pairs and the tangent-rank-one
+stratum remain open.
 
 ## 4. AMM: the horizon ratio hides a three-term phase cocycle
 
@@ -151,8 +221,7 @@ Then the exact invoice is
 q-theta R=m+1-2h-e.                                    (11)
 ```
 
-For the fixed failed traces at `R=8192,16384`, the provisional THM-3633
-package gives
+For the fixed failed traces at `R=8192,16384`, promoted THM-3633 gives
 
 ```text
 (h,m,ell)_8192  =(31,57,1271),
@@ -194,5 +263,6 @@ remaining fibre while preserving the actual target predicate?              (13)
 ```
 
 That question is now concrete on all three frontiers: temporal entry after
-`delta_arc` for LRC, the fully mixed first-stable pair for the Russell fold,
-and the terminal-offset/front-phase transition at `R=16384` for AMM.
+the corrected middle projector `(9)` for LRC, a zero-stable pair outside the
+second-order-closed `(c,e)` Russell cell (especially the tangent-rank-one
+stratum), and the terminal-offset/front-phase transition at `R=16384` for AMM.

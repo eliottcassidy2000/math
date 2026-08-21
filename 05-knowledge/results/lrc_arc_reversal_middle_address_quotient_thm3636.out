@@ -1,0 +1,14 @@
+== THM-3636 LRC arc reversal and middle-address quotient ==
+field=(p=755373809845391722745761,points=((0, 0), (1, 0), (1, 6), (3, 6), (3, 12), (2, 12)))
+parent_sha256_lf=(('THM3625_theorem', '7da43a28045b53d0243b0abfeb9451866d2a04af48f71e4758ee92a5e30add7d'), ('THM3625_script', 'b32b985e2817f135dcc6d19f8f675d3d174e7f1b2a81bd14848d5424fabaf6ad'), ('THM3625_output', '8ef35eb1d7dd2f00c67db0171483ac1a9da8851eb21afb88bbdef5976a49b325'), ('THM3615_theorem', '652b9628a256de9d4970294bc6185e8503464d94e34666ca0b6a971d7b367ec5'), ('THM3615_script', '25a37a623f1d955f2e0b6723e0ab103bac32c9ccfabc1d0d9146123be0f6b7c7'), ('THM3615_output', '493cf285d16881fbb7018724b47f44dbcbc183b984aa7602c30043628d0a5f40'))
+coordinate_forms=(K=((1, 1, 0, 0, 0, 0), (0, 0, 0, 0, 1, 1)),R=((1, 1, 0, 0, 0, 0), (0, 0, 1, 0, 0, 0), (0, 0, 0, 1, 0, 0), (0, 0, 0, 0, 1, 1)),W=((1, 0, 0, 0, 0, 0), (0, 1, 0, 0, 0, 0), (0, 0, 0, 0, 1, 0), (0, 0, 0, 0, 0, 1)))
+operators=(Pi_M_power=(231956577553530055552921, 258341843836556363678220, 526705381605750340113858, 221092595255266945805223),digests_S_W_K_M=('02426ab4b994ba3cb3e8c6ba75fa47c66ba557f67f0be3bddaa3a94fd4ff337d', 'a012489eeab9b598118e47cfa78074926fd6c389601d724f718fb1923d872bf6', '584c5dfef50dc58d6661ab1526d9f2bba0c8e1f26f029f57a36a600160bda5eb', '6ed996b3aa6a81a9f774d833948add65d5164224b776344d1a3a128f298535e7'))
+crossed_algebra=(dimension=8,commutators=((0, 28), (2, 36)),blocks=(2, 4, 2),arc_unions=(2, 2, 2, 2),sign_ranks=((1, 1), (1, 1)))
+endpoint_hostile=(delta=((0, 0), (0, 0), (0, 0), (0, 0)),rank=0,digest=beed38852f054455adc87056afa51a4f131584c61dfe144dec3cdc84adc08946)
+middle_quotient=(delta=((328155314279913654806084, 137651553417032744939622), (245084669815688719740978, 477439142977399339821232), (623057923537522729093585, 163150079038429398632212), (0, 0)),rank=2,kernel=K,image=((0, 0, 1, 0, 0, 0), (0, 0, 0, 1, 0, 0)))
+augmentation_factor=(T=((126498113787680818370196, 646561219255993169342961), (384727693242765231857657, 452865069702498262026030)),det=275730381649850587765623,profile_digest=4af0bf56a78f56ef0af7d3cd6ff6d11b046d43421dc2e6006158b70616e3ede6,expanded_digest=54e969e70b3b42d3ad5ecd4601ee63451bdfbcec18f368ef7f975b744d223ea3)
+semantic_sha256=6d230ba65767bdb7080f86d391213c9ef0e6d0fcb7edf3b7e2a7ea6629bd5c73
+script_sha256_lf=796a80daae5401c37f280ed97d7c80b40e47c06c23c3d03a844f38f797595001
+CHECKS=69;imported_address_checks=6
+scope=static pinned finite-field coefficient/address quotient;no chronology/current/characteristic-zero/LRC14
+RESULT=PASS
