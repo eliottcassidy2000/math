@@ -1,0 +1,15 @@
+THM-3613 THREE-BY-FOUR SIZE-SEVEN RAY PARITY GATE
+thm3606_theorem_sha256_lf=c9b99569cafa1c2b14dbc065e1c66d24ce97d3e1bd2d388e616da2f5ad5510c4
+thm3606_script_sha256_lf=9d558f5637c5cc3573214fe00817bd6acb4c749b85a9046644e2390bd1d0ad91
+thm3606_output_sha256_lf=58b1160bd8831139fc5a6d4eb5102c876df4b47a823293080413c8f6c3f995b4
+rays=W002:1,1,1,1,2:rank4:primitive;W003:1,2,1,1,1:rank4:primitive;W004:1,2,1,1,2:rank4:primitive;W005:2,1,2,1,1:rank4:primitive;W006:1,1,1,2,1:rank4:primitive;W007:2,1,1,1,1:rank4:primitive;W008:1,1,2,1,1:rank4:primitive
+exceptional_counts_total/rejected=W002:n1=0/0,n2=3/1,n3=4/1;W003:n1=1/1,n2=6/4,n3=6/0;W004:n1=3/1,n2=12/5,n3=10/1;W005:n1=4/3,n2=7/5,n3=10/3;W006:n1=2/1,n2=7/5,n3=8/0;W007:n1=2/2,n2=4/4,n3=6/3;W008:n1=0/0,n2=2/1,n3=4/2
+tail_even_counts_total/rejected=W002:6/4;W003:8/4;W004:12/5;W005:12/5;W006:12/5;W007:8/4;W008:6/4
+tail_odd_counts_total/rejected=W002:6/2;W003:8/1;W004:12/2;W005:12/3;W006:12/2;W007:8/4;W008:6/4
+tail_totals=even:64/31;odd:64/18
+mechanism=tail_sign_graph_constant_for_n>=4;no_new_eligible_after3;unique_arm;R=2/gcd(2,component_weights);parity_only
+semantic_sha256=3e30e66899f6c1f49dd82ad41fa1a19a73f4fe247fa8f0b30fbcfd4ab7fe0ac6
+script_sha256_lf=2b4423460e89696f95b5a046affeeaf36920a59f529ee08762440cbd0260daed
+boundary=necessary_scalar-arm/singleton gate only;surviving placements are not Darboux pairs
+status=PROVED+EXACT+OPTIMIZATION-SAFE;size-seven ray residue classification
+PASS
