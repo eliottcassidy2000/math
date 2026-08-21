@@ -1,0 +1,25 @@
+THM-3632 exact companion -- proved formal-pair obstruction
+status=thm3630_F_nonlocal_algebraic_and_no_fixed_Q_completion; audit=HOSTILE-PASS
+SECTION compiler relation and retained triple fibre
+PASS compiler_relation=exact fibre=(0,0,-3,0)^3 rho0_demo=u1_non_even c_x=3
+SECTION THM-3630 common rational side continuation
+PASS thm3630_side_fold=one_rational_Q_infinity regular_at=minus1_plus1
+PASS moving_side_sections=minus_g_plus_g common_target=(0,0,-3+4w2,w)
+PASS side_primitives=kappa*(x_plusminus_g) continuation_ideal=(kappa,h0)
+SECTION affine-in-x pullback-ring equalizer
+PASS intersection=B_Q_cap_(C[w]+Cx)=C[w] equalizer_ideal=(kappa)
+PASS polynomial_derivative_gate=dx_p_kappa_implies_p=kappa*x+h(w) degrees=6x5
+SECTION target-local unit denominator gate
+PASS target_local=unit_denominator_preserves_three_residues obstruction=kappa
+PASS denominator_boundary=any_affine_separator_must_be_undefined_at_y0
+SECTION normalized rho0 branch primitives
+PASS sections=chi_minus_chi0_chi_plus constants=(-1,0,1) rho0_expansion=w2_w4
+PASS normalized_primitives=kappa*(x-chi_i) compatibility_ideal=(kappa)
+PASS thm3630_comparison=chi_side=plusminus_g_through_w4
+SECTION sharp zero boundary and scope controls
+PASS kappa0_boundary=C[w] normalized_F=0 source_Jacobian=0
+PASS scope=second_coordinate_w_only specific_thm3630_F_and_fixed_Q_closed other_packets_mixed_pairs_JC2_OPEN
+SECTION source AST gate
+PASS ast_assertion_nodes=0
+CHECKS=96
+RESULT=PASS
