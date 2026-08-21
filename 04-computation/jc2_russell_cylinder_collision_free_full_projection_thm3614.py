@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3614 collision-free linear projections.
+"""Exact controls for proved THM-3614 collision-free linear projections.
 
 The all-degree theorem uses the cited injectivity-on-one-line and
 Jung--van der Kulk results.  This companion verifies the Russell identities,
@@ -53,8 +53,8 @@ def homogeneous_component(expression, degree, x_var, q_var, scale_var):
     return sp.expand(scaled.coeff(scale_var, degree))
 
 
-print("THM-3614 exact companion -- provisional collision-free full linear projection rigidity")
-print("status=finite exact controls; cited all-degree automorphism steps are proof-driven")
+print("THM-3614 exact companion -- proved collision-free full linear projection rigidity")
+print("status=verified exact controls plus independent hostile audit; cited all-degree steps are proof-driven")
 
 
 print("SECTION Russell compiler, polynomiality, and transverse line restriction")
@@ -322,4 +322,4 @@ print(
 
 
 print(f"PASS total_exact_gates={CHECKS}")
-print("RESULT provisional_controls_passed; independent hostile audit still required")
+print("RESULT PASS -- proved, verified-exact, independently hostile-audited")

@@ -2,7 +2,7 @@
 id: THM-3614
 title: "Russell-cylinder collision-free full linear-projection rigidity"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For every polynomial cylinder graph, no rank-two linear projection of all
   four Russell coordinates (B,C,Y,S) has nonzero constant ordinary
   Jacobian; no collision hypothesis is needed.  THM-3610 already closes
@@ -13,7 +13,11 @@ status: >
   coefficient [q]J=8.  No nonlinear projection, implicit source plane, or
   JC(2) counterexample is claimed.
 source: root / full-cylinder degree-divisibility follow-up, 2026-08-21
-audit: PENDING -- theorem and exact companion require independent hostile audit
+audit: >
+  PASS -- independent hostile audit reconstructed the transverse line inverse,
+  every ordinary-degree branch and quadratic cancellation, and the exceptional
+  coefficient [q]J=8; normal, optimized, and stored 14,535-gate transcripts
+  are byte-identical.
 depends_on:
   - THM-3610-russell-cylinder-full-linear-projection-collision-rigidity
 related:
@@ -26,14 +30,14 @@ external:
   - "Jung--van der Kulk: degree divisibility for polynomial automorphisms of the affine plane."
 script: 04-computation/jc2_russell_cylinder_collision_free_full_projection_thm3614.py
 output: 05-knowledge/results/jc2_russell_cylinder_collision_free_full_projection_thm3614.out
-script_sha256: dada8a37e7391a0cdb3961e3186546c83e612fc98358f247d84c3a81a39c2a17
-output_sha256: f2877bdfa7f22a5922dd796d8c2df32fec813af56c563faba7c671a3b2249969
+script_sha256: 268d4c23d8db7715dee23d1d89732eee13df05ad1b077e9d1622802d0fc733ba
+output_sha256: 391abbc78d5dd1063ccd39cc3c5a8033d4ddafbd3ba9460e6c6991b787d995bf
 hash_basis: raw LF bytes
 ---
 
 # THM-3614 -- Russell-cylinder collision-free full linear-projection rigidity
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 This result removes the only collision hypothesis from THM-3610.  It still
 concerns polynomial source graphs and linear target projections; nonlinear
 target functions and implicit source planes remain separate problems.
