@@ -2,7 +2,7 @@
 id: THM-3628
 title: "Compiler higher-separator graph normalization and new arm"
 status: >
-  PROVISIONAL PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For every higher THM-3618 separator H=e^(m-1)z, m>=2, the graph
   closure has a uniform saturated two-relation presentation and image the
   complement of one new affine line. Its normalization is obtained by
@@ -10,7 +10,13 @@ status: >
   source omits the old d=0,-2 arms and a new d=-3 arm. The normalization is
   smooth for m=2 and has one A_(m-2) point for m>=3.
 source: root / audit_thm3622 higher-separator continuation, 2026-08-21
-audit: PENDING -- independent hostile reconstruction has not yet been completed.
+audit: >
+  PASS -- an independent hostile reconstruction recovered the saturated graph
+  kernel and exact image, five-relation finite birational normalization,
+  three-chart normality and sharp A_(m-2) boundary, exact source open and
+  three omitted arms, every valuation and semigroup, and the m=1/old-model
+  obstruction; normal, optimized, and stored 241-gate transcripts are
+  byte-identical.
 depends_on:
   - THM-3561-rational-keller-danielewski-polynomial-completion
   - THM-3618-compiler-one-graph-observable-fibre-separator-no-embedding
@@ -19,14 +25,14 @@ related:
   - THM-3605-russell-cylinder-graph-slice-puncture-no-filling
 script: 04-computation/jc2_compiler_higher_separator_graph_normalization_thm3628.py
 output: 05-knowledge/results/jc2_compiler_higher_separator_graph_normalization_thm3628.out
-script_sha256: 574d75d7b5fb6afb72088abce687fc2b0d4d0d91fb4aa419fdc1e89a56927647
-output_sha256: 112c4cfc7040b15cd2aa883a272570cdd54d05cf78902873e414e5cf3bd94b3a
+script_sha256: f6871b997e6dde1bb95bb63c2a1b0fef9c507dc5f0312a49a1a0d844a1c2c403
+output_sha256: 24e44765280ff1aa6b5155f61debb5976ceac3f44638eca34baf01034eec8c12
 hash_basis: raw LF bytes
 ---
 
 # THM-3628 -- compiler higher-separator graph normalization and new arm
 
-**PROVISIONAL PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 All rings and closed points are over `C`. Retain the compiler coordinates
 

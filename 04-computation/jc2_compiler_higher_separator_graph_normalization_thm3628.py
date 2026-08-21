@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3628.
+"""Exact controls for proved THM-3628.
 
 The companion checks the uniform saturated graph equations for the higher
 compiler separators H=E^(m-1)z, the replacement normalization obtained by
@@ -43,7 +43,7 @@ def basis_expressions(groebner_basis):
 
 
 print("THM-3628 exact companion -- higher separator graph normalization")
-print("status=provisional verified-exact pending independent hostile audit")
+print("status=proved, verified exact, and independently hostile-audited")
 
 
 print("SECTION compiler coordinates and uniform generic inverse")
@@ -400,4 +400,4 @@ print(f"PASS contrast_hygiene_gates={CHECKS - SECTION_START} T_not_finite_new_ve
 
 
 print(f"PASS total_exact_gates={CHECKS}")
-print("RESULT PASS -- provisional uniform theorem verified; independent hostile audit pending")
+print("RESULT PASS -- proved uniform theorem independently hostile-audited")

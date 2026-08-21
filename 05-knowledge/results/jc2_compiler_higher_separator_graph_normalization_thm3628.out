@@ -1,5 +1,5 @@
 THM-3628 exact companion -- higher separator graph normalization
-status=provisional verified-exact pending independent hostile audit
+status=proved, verified exact, and independently hostile-audited
 SECTION compiler coordinates and uniform generic inverse
 PASS generic_gates=12 Delta=E^(2m-1)-H^2
 SECTION exact saturated graph kernels for m2 and m3
@@ -15,4 +15,4 @@ PASS valuation_gates=56 cusp_delta=mminus1 q_pole=2mminus2
 SECTION m1 contrast, old-normalization hostile, and hygiene
 PASS contrast_hygiene_gates=10 T_not_finite_new_vertical_arm
 PASS total_exact_gates=241
-RESULT PASS -- provisional uniform theorem verified; independent hostile audit pending
+RESULT PASS -- proved uniform theorem independently hostile-audited
