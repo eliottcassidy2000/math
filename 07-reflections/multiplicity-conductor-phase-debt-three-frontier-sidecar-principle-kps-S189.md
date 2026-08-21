@@ -195,10 +195,29 @@ lambda(J_2)=-2072/81.                                  (9a)
 The value is independent of the full affine first-jet gauge, higher lifts,
 and representatives modulo the restriction kernel.  The vertical compiler
 terms are load-bearing: deleting them changes the quotient rather than merely
-changing coordinates.  Thus completion debt, actual-ring conductor debt, and
-stable-order debt are three different obstructions.  The fixed `(c,e)` cell
-is now closed at second order; other zero-stable pairs and the tangent-rank-one
-stratum remain open.
+changing coordinates.
+
+THM-3638/3639 then remove the apparent cell dependence.  For **every**
+zero-stable/first-stable restriction cell on the fixed minimal Hermite fold,
+including both retained tangent ranks, the division-free identity is
+
+```text
+lambda(J_2)=-2072/81+(5/27)J_0'(-1)-(13/27)J_0'(1).    (9b)
+```
+
+Thus the single polynomial identity `J_0=1` already forces the nonzero debt;
+`J_1=0` is not needed.  The live frontier has moved from another cell on the
+same fold to another collision polynomial or compiler.
+
+An exact incoming `Q_h` probe makes that move nonvacuous.  Its actual
+restriction ring has generator degrees `24,27,39,119,134,214`, quotient
+dimension `155`, semigroup conductor `299`, and global conductor degree `310`.
+For `(U,V)=(c,e)` it nevertheless contains a unique first actual-ring Bezout
+witness at symmetric source cutoff `334`, with `deg(T,A,B)=(308,334,331)`.
+THM-3627 still closes the same hostile at source degree six for arbitrary
+target two-forms.  Hence completion debt, conductor debt, zero-stable
+determinant debt, and transverse stable-order debt are genuinely distinct;
+the sharp next computation is the `Q_h` analogue of `(9b)`.
 
 ## 4. AMM: the horizon ratio hides a three-term phase cocycle
 
@@ -263,6 +282,6 @@ remaining fibre while preserving the actual target predicate?              (13)
 ```
 
 That question is now concrete on all three frontiers: temporal entry after
-the corrected middle projector `(9)` for LRC, a zero-stable pair outside the
-second-order-closed `(c,e)` Russell cell (especially the tangent-rank-one
-stratum), and the terminal-offset/front-phase transition at `R=16384` for AMM.
+the corrected middle projector `(9)` for LRC, the universal second-stable
+residue for the actual-ring `Q_h` witness, and the terminal-offset/front-phase
+transition at `R=16384` for AMM.

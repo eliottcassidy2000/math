@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-433 (2026-08-21, THM-3639 namespace race) -- a pre-push ID check did not survive a concurrent reservation
+
+- **What failed:** the Berggren denominator-401 package checked that
+  `THM-3639` was free and pushed a reservation, but another session reserved
+  the same YAML identifier under a different filename during the subsequent
+  fetch/rebase/push window.  Git could merge the two paths, so the mathematical
+  files landed with a duplicate theorem ID.
+- **Minimal witness / first failed implication:** commit `a25a2ee6d` reserved
+  `THM-3639` for the Russell-cylinder universal stable debt before the cube
+  reservation commit `34289e968` reached `origin/main`.  Filename uniqueness
+  therefore did not imply YAML-ID uniqueness on the rebased tree.
+- **Repair / strongest survivor:** the complete cube theorem, companion, and
+  transcript were moved to the then-free `THM-3640`; the three obsolete cube
+  paths carrying `3639` were removed in commit `4d49fa05a`.  Semantic digest
+  `879a912b...c1836374` and every mathematical count are unchanged.  The
+  Russell-cylinder `THM-3639` remains the sole owner of that identifier.
+- **Reusable rule:** reserve scarce IDs in a tiny checkpoint and, after every
+  rebase, recheck both filenames and YAML IDs on the exact candidate tree
+  immediately before committing.  If the remote acquired the ID, renumber
+  before pushing; an earlier availability check is not a concurrency lock.
+
 ## MISTAKE-432 (2026-08-21, THM-3592 support classification) -- simultaneous reversal was not a regularity symmetry
 
 - **What failed:** the first THM-3592 proof classified three-point sumsets
