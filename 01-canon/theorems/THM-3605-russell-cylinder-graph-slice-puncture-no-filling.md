@@ -2,7 +2,7 @@
 id: THM-3605
 title: "Russell cylinder graph-slice and puncture no-filling gate"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For the two-arm exponent-two Danielewski surface behind THM-3561, the
   Russell cylinder formula gives an explicit polynomial isomorphism to the
   cylinder over the exponent-one surface and transports the residue volume
@@ -16,13 +16,14 @@ status: >
   projections genuinely mixing the cylinder coordinate remain open.
 source: root / arm_chart_compactification stable-cylinder wildcard, 2026-08-21
 audit: >
-  PENDING INDEPENDENT AUDIT.  The exact companion checks both polynomial
-  cylinder maps and their compositions in the hypersurface quotient rings,
-  residue-volume transport, the THM-3561 specialization and collision curve,
-  all graph identities, weight-ODE divisibility obstructions, pole hostiles,
-  and positive punctured controls.  Normal and optimized replays are
-  byte-identical to the stored output.  These checks do not promote the
-  theorem before an independent proof audit.
+  PASS.  An independent committed-byte hostile audit rederived both polynomial
+  cylinder maps and their hypersurface-quotient compositions, the volume sign,
+  stable etaleness and collision curve, the unique arm and pole invoices, both
+  weight-ODE obstructions, the punctured graph iff and target graph, and every
+  stated OPEN boundary.  The official arXiv source supports exactly the cited
+  cylinder starting formula.  Normal and optimized replays are byte-identical
+  to the stored 436-gate transcript; the AST has no assertion gates, and the
+  documentation and committed diff checks pass.
 depends_on:
   - THM-3561-rational-keller-danielewski-polynomial-completion
 related:
@@ -32,15 +33,15 @@ citation:
   - "Moser-Jauslin and Poloni, Isomorphisms between cylinders over Danielewski surfaces, arXiv:2002.12202, Section 5.1."
 script: 04-computation/jc2_russell_cylinder_graph_slice_no_filling_thm3605.py
 output: 05-knowledge/results/jc2_russell_cylinder_graph_slice_no_filling_thm3605.out
-script_sha256: e66938c4da6394dd20aafd2e5e074846176eadb94093c95ce5fad41a47a692e8
-output_sha256: b984b8e876aecb310a33f118b2e73bfd736ffa3712f72bcbf0c9fc1724609c40
+script_sha256: 42741cb8b6ec5f8b400024822cd456d4117c690d3859495f5e7344f4740c53b6
+output_sha256: ab45e070f372bd9e8290c44bdf67035de2c1072071d8703810f48d077b50af26
 hash_basis: raw LF bytes
 ---
 
 # THM-3605 -- Russell cylinder graph-slice and puncture no-filling gate
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT
-AUDIT.**  Nothing below is a polynomial counterexample to `JC(2)`.  The
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Nothing below
+is a polynomial counterexample to `JC(2)`.  The
 cylinder map is three-dimensional, and every successful planar graph found
 below is defined only on the punctured source of THM-3561.
 

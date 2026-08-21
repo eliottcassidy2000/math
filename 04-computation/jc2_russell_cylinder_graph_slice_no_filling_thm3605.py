@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3605.
+"""Exact controls for proved and independently audited THM-3605.
 
 The universal graph obstructions are proved by the weight and divisibility
 arguments in the theorem.  This companion verifies every displayed algebraic
@@ -41,7 +41,7 @@ def jacobian(first, second, first_var, second_var):
     )
 
 
-print("THM-3605 exact companion -- provisional Russell-cylinder graph-slice gate")
+print("THM-3605 exact companion -- proved Russell-cylinder graph-slice gate")
 print("status=finite exact controls; universal graph/no-mate conclusions are proof-driven")
 
 

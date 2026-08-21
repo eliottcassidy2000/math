@@ -1,4 +1,4 @@
-THM-3605 exact companion -- provisional Russell-cylinder graph-slice gate
+THM-3605 exact companion -- proved Russell-cylinder graph-slice gate
 status=finite exact controls; universal graph/no-mate conclusions are proof-driven
 SECTION polynomial Russell specialization and inverse
 PASS cylinder quotient compositions=7 polynomial-coordinate gates=14 volume gates=2
