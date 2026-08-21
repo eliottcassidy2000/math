@@ -2,7 +2,7 @@
 id: THM-3648
 title: "AMM R=16384 terminal local failure adjoint golden-phase recovery"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   At the last failed offset in THM-3644's complete D0=401,...,416 bracket,
   namely D0=412, the exact positive adjoint forces departure from Rule A by
   row 1564.  The ratio 1564/16384 lies below (3-sqrt(5))/8, but its absolute
@@ -12,6 +12,14 @@ status: >
   offset monotonicity, full-entry infeasibility, asymptotic law, or AMM bound
   is claimed.
 source: kps-s190 / THM-3644 terminal-local-failure continuation, 2026-08-21
+audit: >
+  PASS -- an independent clean-room reconstruction reproduced the degree
+  profile, first death, 9919-bit fatal value, all pinned digests, the complete
+  negative adjoint wall 1565,...,4115 and its 3,255,076 active cells.  It
+  independently verified the square gap 305, the 9/8192 error improvement,
+  dyadic defect 18, phase invoice 48=37-2(-12)-13, normal/optimized streams,
+  adjacent D0=413 closure, parent order, hashes, and every local-scope
+  firewall.  No mathematical correction was required.
 depends_on:
   - THM-3633-amm-r16384-fixed-failed-trace-adjoint-phase-shock
   - THM-3644-amm12592-exact-offset-threshold-at-R16384
@@ -27,8 +35,8 @@ hash_basis: raw LF bytes
 
 # THM-3648 -- terminal local AMM failure recovers the golden adjoint phase
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  The word *terminal* below is local to THM-3644's audited bracket.
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  The word *terminal* below is local to THM-3644's audited bracket.
 That scope is load-bearing.
 
 ## 1. The adjacent failed/closed pair
