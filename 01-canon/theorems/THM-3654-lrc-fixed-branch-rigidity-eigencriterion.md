@@ -2,7 +2,7 @@
 id: THM-3654
 title: "LRC fixed-branch rigidity eigencriterion"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On THM-3636's four-dimensional relation space, literal restriction of the
   centered six-point tensor to the fixed branch r=6 has alpha eigenspace
   exactly the rank-two rigidity plane and beta eigenspace exactly the middle
@@ -11,6 +11,14 @@ status: >
   not chronology, current, characteristic-zero transport, row exclusion, or
   LRC(14).
 source: kps-s191 / THM-3647 literal-branch continuation, 2026-08-21
+audit: >
+  PASS -- agent Gibbs independently reconstructed the literal 13-by-13 branch
+  tensor through 81 gates, recovered A_6 and both eigenspaces in coefficient
+  and profile coordinates, derived the middle-coordinate change and
+  LambdaSharp factorization, and reproduced normal and optimized transcripts.
+  A non-symmetric hostile control distinguished the stated right row action
+  from the false transpose action.  All script, output, and semantic hashes
+  matched; no scope leak or mathematical correction was found.
 depends_on:
   - THM-3647-lrc-single-reversal-paired-branch-spectral-projector
 related:
@@ -26,8 +34,8 @@ hash_basis: raw LF bytes
 
 # THM-3654 -- a literal fixed branch detects the LRC rigidity plane
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  Unlike THM-3647's abstract spectral reconstruction, this theorem
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  Unlike THM-3647's abstract spectral reconstruction, this theorem
 returns to the branch-resolved tensor and identifies the corresponding
 literal restriction map.  The restriction remains a static observable.
 
