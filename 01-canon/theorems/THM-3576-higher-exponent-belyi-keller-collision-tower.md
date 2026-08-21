@@ -9,8 +9,10 @@ status: >
   generically of degree n(n-1)+1, noninjective, and misses exactly one target
   point.  Its physical symplectic form is exact and the constant function is
   a sum of two polynomial Poisson brackets, while every homogeneous and
-  two-by-two weight cell is empty.  The n=3 member has degree seven and
-  alternating monodromy A7.  A single polynomial Darboux pair on any
+  two-by-two or two-by-three weight cell is empty; every Darboux pair needs
+  at least six homogeneous pieces.  The degree-d_n inverse carrier has
+  cited monodromy A_(d_n) for odd n and S_(d_n) for even n; the n=3 member
+  is the first nonsolvable case, of degree seven.  A single polynomial Darboux pair on any
   target would give a planar Jacobian counterexample; no such pair and no
   counterexample to JC(2) is claimed.
 source: root, 2026-08-20
@@ -18,7 +20,10 @@ audit: PENDING INDEPENDENT HOSTILE AUDIT
 depends_on: []
 related:
   - THM-3566-chebyshev-pell-odd-keller-collision-tower
+  - THM-3569-danielewski-two-by-three-weight-darboux-nonentry
   - THM-3572-squarefree-danielewski-affine-modification-and-two-bracket-collapse
+external:
+  - "Cameron, Kemp, Maslak, Melamed, Moy, Pham, and Wei, Shabat Polynomials and Monodromy Groups of Trees Uniquely Determined by their Passport, Involve 12 (2019), 791-812, Propositions 2 and 7, DOI 10.2140/involve.2019.12.791."
 script: 04-computation/jc2_higher_exponent_belyi_keller_thm3576.py
 output: 05-knowledge/results/jc2_higher_exponent_belyi_keller_thm3576.out
 script_sha256: PENDING
@@ -87,6 +92,26 @@ Its passports over `0,beta_n,infinity` are
 ```text
 (1,n^(n-1)),          (n,1^((n-1)^2)),          (d_n). (7)
 ```
+
+This is exactly Adrianov's size-one Shabat family, rather than merely a
+passport match.  In Cameron--Kemp--Maslak--Melamed--Moy--Pham--Wei,
+Proposition 2, set their parameters `r=s=n,t=1` and then put `z=1+t`.
+If `S_n(z)=sum_(k=0)^(n-1)(1/n)_k z^k/k!`, direct coefficient comparison
+gives
+
+```text
+P_n(t)=S_n(1+t)/S_n(1),
+B_n(t)=-F_(n,n,1)(1+t)/S_n(1)^n.                      (7a)
+```
+
+Their Proposition 7 therefore supplies the exact cited monodromy group
+
+```text
+Mon(B_n)=A_(d_n) for n odd,       S_(d_n) for n even. (7b)
+```
+
+The completion below is new data layered over that one-variable inverse
+carrier; the theorem makes no novelty claim for `(1)--(7b)`.
 
 ## 2. A constant-Jacobian rational pair
 
@@ -217,8 +242,11 @@ and
 {c^r f,c^s g}=c^(r+s+n-1)(s f'g-rfg').               (21b)
 ```
 
-A homogeneous scalar bracket needs `r+s=1-n`.  After swapping, take `r>=0`.
-Root divisibility eliminates every case except `r=1,s=-n`; there the
+A homogeneous scalar bracket needs `r+s=1-n`.  If both weights are negative,
+both coefficients vanish on every squarefree arm, so their bracket also
+vanishes there and cannot be one.  Thus one weight is nonnegative and, after
+swapping, take `r>=0`.  Root divisibility eliminates every case except
+`r=1,s=-n`; there the
 coefficient is
 
 ```text
@@ -228,7 +256,13 @@ coefficient is
 whose degree is `deg f+deg g+deg Sigma-1>=1` with nonzero leading
 multiplier.  Thus no homogeneous scalar bracket exists.
 
-The complete two-by-two cell has cross-matched normal form
+For the complete two-by-two cell, first subtract scalar weight-zero pieces.
+Each extreme output weight has a unique bracket owner and must vanish.  At a
+simple arm a vanishing homogeneous bracket cannot mix strict opposite signs;
+a zero-weight boundary forces the retained zero-weight coefficient to be
+scalar and is therefore removable.  If the upper extreme were still
+negative, both scalar-row summands would vanish at every arm.  Consequently
+the only surviving sign routing has the cross-matched normal form
 
 ```text
 P=c^(-R)f+c^(T-n+1)F,
@@ -251,10 +285,138 @@ The scalar row factors exactly as
 ```
 
 The first factor has positive degree and leading coefficient
-`(deg h+n deg K)lc(h)lc(K)`.  The case `T=n` is symmetric.  Hence every
-putative Darboux pair on `Y_n` needs at least five nonconstant homogeneous
-pieces.  The stronger exponent-two two-by-three obstruction does not
-automatically transfer to `n>2`.
+`(deg h+n deg K)lc(h)lc(K)`.  The case `T=n` is symmetric, so the complete
+two-by-two cell is empty.  More generally, if one output is homogeneous,
+its unique complementary component in the other output would itself give a
+forbidden homogeneous scalar bracket.  Hence every Darboux pair on `Y_n`
+needs at least two pieces in each output and at least five nonconstant
+homogeneous pieces in total.  The stronger exponent-two two-by-three
+obstruction in fact has the following all-exponent form.
+
+### 4.2 The complete two-by-three cell is universally empty
+
+Suppose one output has two weights `r_0<r_1` and the other has three.
+The scalar row needs at least two complementary pairs, because one pair
+alone would be a forbidden homogeneous scalar bracket.  Put
+`delta=r_1-r_0`.  The two complementary weights differ by `delta`.
+Translation of supports in `(21b)` shows that the third weight must extend
+this length-two arithmetic progression at its lower or upper end.  At any
+other position its two bracket rows form a disconnected zero component and
+can be deleted, reducing to the forbidden two-by-two cell.
+
+The same simple-arm sign lemma used above, including its inert zero-weight
+boundary, puts the two-weight output in the form
+
+```text
+P=c^(-R)f+c^(T-n+1)F,                   R,T>=1.         (21f)
+```
+
+The two possible three-weight supports are therefore
+
+```text
+LOWER: {-R-2T+n-1, -T, R-n+1},
+UPPER: {-T, R-n+1, 2R+T-2n+2}.                         (21g)
+```
+
+At a simple root of `Sigma`, the scalar row can survive only if the
+negative coefficient of weight `-R` or `-T` has a simple zero and the
+opposite multiplier is nonzero.  Formula `(21a)` makes this equivalent to
+
+```text
+R=n                         or T=n.                    (21h)
+```
+
+It remains to close the exceptional ladders forced by `(21h)`.
+
+For the lower support write
+
+```text
+Q=c^(-R-2T+n-1)g+c^(-T)g_1+c^(R-n+1)H.                (21i)
+```
+
+If `R=n` and `T=n`, the two extreme Wronskians and the shared row give
+
+```text
+f=A h^n,                 g=B h^(2n+1),
+F=L K,                   H=M K,
+g_1=h^n(D+(2n+1)LB hK/(nA)),             Sigma|h.      (21j)
+```
+
+The scalar row is divisible by `h^(n-1)(hK)'`, so it cannot be one.  If
+`R=n` but `T!=n`, survival of the first scalar summand forces
+`gcd(n,2T+1)=n`.  Hence `n` is odd and, for some `k>=1`,
+
+```text
+2T+1=n(2k+1),             p=T-n+1,
+f=A h,                    g=B h^(2k+1),
+F=L K^p,                  H=M K,
+g_1=(2k+1)LB h^(2k)K^p/A,                 Sigma|h.     (21k)
+```
+
+Its scalar row has the nonunit factor
+
+```text
+K h'+n hK'.                                             (21l)
+```
+
+Finally take `T=n,R>n`.  The lowest Wronskian has common-power divisor
+`d=gcd(R,n+1)`.  If `k_0` is the arm order of its common base, the two terms
+in the shared row have orders
+
+```text
+m=Rk_0/d,                 at least m+(n+1)k_0/d-1.     (21m)
+```
+
+Equality would force `d=(n+1)k_0`, hence `d=n+1,k_0=1`; but then
+`m=R/(n+1)<ceil(R/n)`, contradicting `(21a)`.  Thus the lower support is
+empty.
+
+For the upper support write
+
+```text
+Q=c^(-T)g+c^(R-n+1)G+c^(2R+T-2n+2)H.                  (21n)
+```
+
+If `R=n`, arm survival in the lowest Wronskian forces `T=nk`.  Put
+
+```text
+p=n(k-1)+1, q=nk+2, d=gcd(p,n+1),
+m=p/d,             ell=(n+1)/d,             nu=q/d.
+```
+
+Then all extreme and shared rows have the exact solution
+
+```text
+f=A h,       g=B h^k,       F=L K^m,       H=M K^nu,
+G=nu AM hK^ell/(mL)+G_0,                    Sigma|h,
+K'G_0-dKG_0'=0.                                           (21o)
+```
+
+If `G_0=0`, the scalar row has factor `dKh'+nhK'`.  Otherwise UFD
+comparison gives `K=lambda J^d,G_0=mu J`, and the factor is
+`Jh'+nhJ'`.  Each has degree at least one, with nonzero characteristic-zero
+leading coefficient.  The dual case `T=n` forces `R=nk` and has
+
+```text
+f=A h^k,       g=B h,       F=L K,       H=M K^q,
+q=n(2k-1)+2,
+G=D K^(n(k-1)+1)+(qAM/L)h^kK^(q-1),                   (21p)
+```
+
+whose scalar row again has factor `Kh'+nhK'`.
+
+These cases exhaust `(21g)--(21h)`.  Therefore no constant bracket has
+support sizes at most `(2,3)` or `(3,2)` on any smooth squarefree
+`c^n e=Sigma(b)` with `n>=2` and `deg Sigma>=2`.  Every Darboux pair lies
+in one of
+
+```text
+(2,>=4),                   (>=4,2),                   (>=3,>=3),
+```
+
+and uses at least six nonconstant homogeneous pieces.  Degree-one `Sigma` is
+the sharp failure boundary: eliminating `b` makes the surface a polynomial
+plane, and `{c,e}=-Sigma'` is already a homogeneous nonzero constant.
 
 ## 5. The polynomial etale collision map
 
@@ -328,7 +490,12 @@ side arm:         n for e!=0, 0 at the omitted origin. (28)
 Etaleness removes ramification from the surface map, but not the nonproper
 boundary modes.
 
-## 7. The degree-seven alternating carrier
+## 7. Alternating/symmetric monodromy and the degree-seven carrier
+
+The exact Shabat identification `(7a)` and the cited monodromy theorem `(7b)`
+show that the inverse carrier is already the full alternating group for every
+odd `n` and the full symmetric group for every even `n`.  This sharply
+separates the tower from a radical or hidden Kummer construction.
 
 For `n=3`,
 
@@ -346,11 +513,12 @@ over beta_3:        (3,1,1,1,1),
 over infinity:      (7).                              (30)
 ```
 
-Its monodromy group is exactly `A_7`.  Transitivity in prime degree makes
-the group primitive; side inertia is a literal 3-cycle, so Jordan's theorem
-puts `A_7` inside the group.  Every branch permutation in `(30)` is even,
-giving the reverse inclusion.  This is a nonsolvable carrier, unlike the
-dihedral/Kummer inverse of the exponent-two Chebyshev tower.
+As an independent check of the cited all-scale result, its monodromy group is
+exactly `A_7`: transitivity in prime degree makes the group primitive; side
+inertia is a literal 3-cycle, so Jordan's theorem puts `A_7` inside the
+group.  Every branch permutation in `(30)` is even, giving the reverse
+inclusion.  This is the smallest nonsolvable carrier in the tower, unlike
+the dihedral/Kummer inverse of the exponent-two Chebyshev family.
 
 ## 8. Counterexample reduction, ledger, and boundary
 
@@ -383,11 +551,12 @@ outside its scope.
 
 ## 9. Exact verification contract
 
-The companion uses exact rational symbolic arithmetic.  It checks the
-universal polynomial/ODE, divisibility, Jacobian, surface, critical-value,
-maximal-intersection, and fibre invoices for `2<=n<=8`.  It independently
-checks every displayed `n=3` coefficient, all Poisson-generator pullbacks,
-the discriminant/passport, seven collision branches, and the three
-nonproperness modes.  These finite rows control the formulas; the universal
-quantifiers come from the coefficient, valuation, and torus-grading proofs
-above.
+The companion uses exact rational symbolic arithmetic.  For `2<=n<=8` it
+checks the polynomial/ODE and critical-value identities, the exact Shabat
+change of variables, structural maximal-intersection exponent invoices,
+Jacobian and surface identities, the two-bracket formula, and complete
+two-by-two and two-by-three factorization controls.  It independently checks every displayed
+`n=3` coefficient, all Poisson-generator pullbacks, and the
+discriminant/passport.  These finite rows control the formulas; the image,
+fibre, nonproperness, and universal quantifiers come from the explicit
+valuation and torus-grading proofs above rather than finite extrapolation.

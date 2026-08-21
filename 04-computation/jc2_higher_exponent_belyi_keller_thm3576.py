@@ -4,7 +4,7 @@
 from __future__ import annotations
 
 import ast
-from math import comb
+from math import comb, gcd
 from pathlib import Path
 
 import sympy as sp
@@ -48,8 +48,130 @@ def on_target(expr: sp.Expr, n: int, sigma: sp.Expr) -> sp.Expr:
     return sp.cancel(expr.subs(e, sigma / c**n))
 
 
-def audit_tower() -> tuple[int, int, int, int]:
+def weight_bracket_rows(
+    left: list[tuple[int, sp.Expr]], right: list[tuple[int, sp.Expr]], n: int
+) -> dict[int, sp.Expr]:
+    rows: dict[int, sp.Expr] = {}
+    for r, f in left:
+        for s, g in right:
+            weight = r + s + n - 1
+            coefficient = s * sp.diff(f, b) * g - r * f * sp.diff(g, b)
+            rows[weight] = sp.expand(rows.get(weight, 0) + coefficient)
+    return rows
+
+
+def require_scalar_factor(
+    left: list[tuple[int, sp.Expr]],
+    right: list[tuple[int, sp.Expr]],
+    n: int,
+    factor: sp.Expr,
+    label: str,
+) -> int:
+    rows = weight_bracket_rows(left, right, n)
+    for weight, coefficient in rows.items():
+        if weight != 0:
+            require(zero(coefficient), f"{label}: nonzero row {weight}")
+    scalar = sp.expand(rows.get(0, 0))
+    require(not zero(scalar), f"{label}: vacuous scalar")
+    remainder = sp.rem(sp.Poly(scalar, b), sp.Poly(sp.expand(factor), b))
+    require(remainder.is_zero, f"{label}: scalar factor")
+    require(sp.degree(factor, b) >= 1, f"{label}: factor must be nonunit")
+    return 3
+
+
+def audit_universal_two_by_three() -> int:
+    checks = 0
+    sigma = b * (b - 5)
+    h = sp.expand(sigma * (b**2 + 2 * b + 3))
+    K = b**3 - b + 2
+    J = b**2 + 3 * b + 3
+    A, BB, L, M, D, mu = map(sp.Rational, (2, 3, 5, 7, 11, 13))
+
+    for n in range(2, 9):
+        # LOWER, R=T=n.
+        lam = sp.Rational(2 * n + 1, n) * L * BB / A
+        left = [(-n, A * h**n), (1, L * K)]
+        right = [
+            (-(2 * n + 1), BB * h ** (2 * n + 1)),
+            (-n, h**n * (D + lam * h * K)),
+            (1, M * K),
+        ]
+        checks += require_scalar_factor(
+            left, right, n, h ** (n - 1) * sp.diff(h * K, b), f"lower equal n={n}"
+        )
+
+        # LOWER odd ladder, 2T+1=n(2k+1).
+        if n % 2 == 1:
+            for k in range(1, 4):
+                T = (n * (2 * k + 1) - 1) // 2
+                p = T - n + 1
+                C = sp.Rational(2 * k + 1) * L * BB / A
+                left = [(-n, A * h), (p, L * K**p)]
+                right = [
+                    (-(2 * T + 1), BB * h ** (2 * k + 1)),
+                    (-T, C * h ** (2 * k) * K**p),
+                    (1, M * K),
+                ]
+                factor = K * sp.diff(h, b) + n * h * sp.diff(K, b)
+                checks += require_scalar_factor(left, right, n, factor, f"lower odd n={n},k={k}")
+
+        # UPPER, R=n and T=nk, including the homogeneous shared solution.
+        for k in range(1, 5):
+            T = n * k
+            p = n * (k - 1) + 1
+            q_high = n * k + 2
+            d = gcd(p, n + 1)
+            m = p // d
+            ell = (n + 1) // d
+            nu = q_high // d
+            C = sp.Rational(nu) * A * M / (m * L)
+            left = [(-n, A * h), (p, L * K**m)]
+            right = [(-T, BB * h**k), (1, C * h * K**ell), (q_high, M * K**nu)]
+            factor = d * K * sp.diff(h, b) + n * h * sp.diff(K, b)
+            checks += require_scalar_factor(left, right, n, factor, f"upper R=n={n},k={k}")
+
+            KK = J**d
+            left_hom = [(-n, A * h), (p, L * KK**m)]
+            right_hom = [
+                (-T, BB * h**k),
+                (1, C * h * KK**ell + mu * J),
+                (q_high, M * KK**nu),
+            ]
+            factor_hom = J * sp.diff(h, b) + n * h * sp.diff(J, b)
+            checks += require_scalar_factor(
+                left_hom, right_hom, n, factor_hom, f"upper homogeneous n={n},k={k}"
+            )
+
+        # UPPER dual, T=n and R=nk.
+        for k in range(1, 5):
+            R_weight = n * k
+            middle = n * (k - 1) + 1
+            q_high = n * (2 * k - 1) + 2
+            C = sp.Rational(q_high) * A * M / L
+            left = [(-R_weight, A * h**k), (1, L * K)]
+            right = [
+                (-n, BB * h),
+                (middle, D * K**middle + C * h**k * K ** (q_high - 1)),
+                (q_high, M * K**q_high),
+            ]
+            factor = K * sp.diff(h, b) + n * h * sp.diff(K, b)
+            checks += require_scalar_factor(left, right, n, factor, f"upper T=n={n},k={k}")
+
+        # LOWER T=n,R>n: an order collision can never coexist with arm regularity.
+        for R_weight in range(n + 1, 4 * n + 1):
+            d = gcd(R_weight, n + 1)
+            for arm_order in range(1, 5):
+                m = R_weight * arm_order // d
+                order_collision = (n + 1) * arm_order == d
+                arm_regular = m >= (R_weight + n - 1) // n
+                require(not (order_collision and arm_regular), f"lower mismatch n={n},R={R_weight}")
+                checks += 1
+    return checks
+
+
+def audit_tower() -> tuple[int, int, int, int, int]:
     ode_checks = 0
+    shabat_checks = 0
     geometry_checks = 0
     intersection_checks = 0
     fewnomial_checks = 0
@@ -66,6 +188,17 @@ def audit_tower() -> tuple[int, int, int, int]:
         require(sp.gcd(W, P * R) == 1, f"boundary disjoint n={n}")
         require(beta != 0, f"beta nonzero n={n}")
         ode_checks += 10
+
+        # Exact change of variables to the cited Adrianov size-one Shabat
+        # polynomial F_(n,n,1)(z)=(1-z)S_n(z)^n.
+        S_shift = sp.Add(
+            *(sp.rf(sp.Rational(1, n), k) * (1 + t) ** k / sp.factorial(k) for k in range(n))
+        )
+        S_one = sp.expand(S_shift.subs(t, 0))
+        F_shift = sp.expand(-t * S_shift**n)
+        require(zero(P - S_shift / S_one), f"Adrianov P identification n={n}")
+        require(zero(B + F_shift / S_one**n), f"Adrianov B identification n={n}")
+        shabat_checks += 2
 
         # Master Keller specialization in the invariant t-coordinate.
         G = sp.expand(P * R)
@@ -121,7 +254,7 @@ def audit_tower() -> tuple[int, int, int, int]:
             require(zero(middle - expected), f"2x2 factor n={n},k={k}")
             require(sp.degree(K * sp.diff(h, b) + n * h * sp.diff(K, b), b) >= 1, "2x2 unit hostile")
             fewnomial_checks += 3
-    return ode_checks, geometry_checks, intersection_checks, fewnomial_checks
+    return ode_checks, shabat_checks, geometry_checks, intersection_checks, fewnomial_checks
 
 
 def audit_direct_source() -> int:
@@ -186,7 +319,8 @@ def audit_no_asserts() -> int:
 
 
 def main() -> None:
-    ode, geometry, intersection, fewnomial = audit_tower()
+    ode, shabat, geometry, intersection, fewnomial = audit_tower()
+    two_by_three = audit_universal_two_by_three()
     direct = audit_direct_source()
     explicit, passport, poisson = audit_degree_seven()
     assert_nodes = audit_no_asserts()
@@ -194,9 +328,11 @@ def main() -> None:
     print("status PROVISIONAL_VERIFIED_EXACT_PENDING_INDEPENDENT_AUDIT")
     print("universe exact_QQ_symbolic_exponents_2_through_8")
     print("hypergeometric_ode_and_critical_value_checks", ode)
+    print("adrianov_shabat_identification_checks", shabat)
     print("geometry_observable_and_two_bracket_checks", geometry)
     print("maximal_intersection_exponent_checks", intersection)
     print("universal_two_by_two_factorization_checks", fewnomial)
+    print("universal_two_by_three_factorization_checks", two_by_three)
     print("direct_source_keller_surface_checks", direct)
     print("degree_seven_display_checks", explicit)
     print("degree_seven_passport_discriminant_checks", passport)
