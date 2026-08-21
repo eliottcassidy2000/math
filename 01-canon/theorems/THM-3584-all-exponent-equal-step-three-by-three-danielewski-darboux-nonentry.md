@@ -2,7 +2,7 @@
 id: THM-3584
 title: "All-exponent equal-step three-by-three Danielewski Darboux nonentry"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
   exponent N>=2 and every squarefree Sigma of degree at least two, a reduced
   polynomial Darboux pair on c^N e=Sigma(b) cannot have both weight supports
   equal to length-three arithmetic progressions with the same positive step.
@@ -12,9 +12,12 @@ status: >
   consequence for the planar Jacobian conjecture is claimed.
 source: kps-s188 / delegated all-exponent Darboux attack, 2026-08-21
 audit: >
-  Author self-audit plus an optimization-safe exact companion.  The proof has
-  not yet received an independent hostile audit, so the stronger audit label
-  carried by THM-3579 is deliberately not inherited.
+  An independent reconstruction checked the bracket shift, arm-unit channel,
+  both off-central operator factorizations, 17,737,925 admissible central
+  profiles, the parity-sensitive gcd and square obstruction, and every odd
+  endpoint subfamily.  Normal and optimized stdout agree with the stored
+  output.  The audit also found the shorter regularity contradiction recorded
+  after (47); the terminal gcd argument remains as an independent closure.
 depends_on: []
 related:
   - THM-3569-danielewski-two-by-three-weight-darboux-nonentry
@@ -30,7 +33,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3584 -- all-exponent equal-step three-by-three Danielewski Darboux nonentry
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.**  This is an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This is an
 exponent-uniform replacement for the `N=2` argument of THM-3579.  The odd
 exponents are not a formal substitution: they create two genuine central
 resonances, both closed below.
@@ -218,7 +221,8 @@ degree at least two.
 ## 3. The one-channel rows `kappa=0,4`
 
 For `kappa=0`, the scalar row is a single homogeneous bracket.  The gate
-`(17)` reduces it, up to exchange, to
+`(17)` reduces it, up to the bracket-preserving reflection
+`(P,Q)->(Q,-P)`, to
 
 ```text
 E_N(H,u)=1,                   Sigma divides H.          (23)
@@ -248,7 +252,7 @@ supp(Q)={-T,R-(N-1),2R+T-2(N-1)}.                      (26)
 ```
 
 The scalar row has two channels.  By `(17)`, one can contribute a unit only
-if `R=N` or `T=N`.  Exchange `P,Q` if necessary and take `R=N`.  Formula
+if `R=N` or `T=N`.  Apply `(P,Q)->(Q,-P)` if necessary and take `R=N`.  Formula
 `(19)` and the required simple arm then force
 
 ```text
@@ -282,7 +286,7 @@ U+V=d-(N-1).                                             (30)
 ```
 
 Applying gate `(17)` to the two scalar channels and then, if necessary,
-exchanging the outputs gives exactly two high-endpoint possibilities:
+applying `(P,Q)->(Q,-P)` gives exactly two high-endpoint possibilities:
 
 ```text
 (U,V)=(d-N,1)            or            (d+1,-N).       (31)
@@ -344,7 +348,7 @@ The gate says that the middle channel can survive only for `p=1` or
 ```
 
 An endpoint channel can survive only for `R=N` or `T=N`.  Combining its
-simple-arm requirement with `(19)` forces, up to exchange,
+simple-arm requirement with `(19)` forces, up to `(P,Q)->(Q,-P)`,
 
 ```text
 R=N,                    T=Nk.                           (39)
@@ -380,7 +384,9 @@ Q=c^(-R-N-1)g+c^(-N)q+c^(R-N+1)G.                     (42)
 
 The scalar channel `(a,q)` has weights `(1,-N)`.  Since neither endpoint
 alternative in `(40)` overlaps this family, the scalar identity forces `a`
-to be a unit and `q` to be simple at every arm.
+to be an arm-local unit (`a(beta)!=0` at each arm root `beta`) and `q` to be
+simple at every arm.  No assertion that `a` is a constant unit of `C[b]` is
+used.
 
 ### 7.1 The lower bridge fixes the arm order
 
@@ -422,6 +428,18 @@ f=A h^m,         g=B h^(m+1),                         m>=1. (47)
 
 In particular, the common arm polynomial `h` is simple at every root of
 `Sigma`.
+
+There is already a short contradiction here.  The coefficient `f` has
+weight `-R=-(N+1)m`, so regularity `(7)` requires
+
+```text
+ord_beta(f) >= ceil((N+1)m/N) >= m+1.                 (47a)
+```
+
+at every simple root `beta` of `Sigma`.  But `(47)` and the simple-arm
+conclusion give `ord_beta(f)=m`.  Thus family `(M)` is empty.  The next two
+subsections retain the independent first-integral/terminal closure because
+it isolates the odd-exponent resonance that was absent at `N=2`.
 
 ### 7.2 The `(N+1)`-power first integral
 
