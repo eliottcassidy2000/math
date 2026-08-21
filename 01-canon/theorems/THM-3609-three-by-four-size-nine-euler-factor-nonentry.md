@@ -2,7 +2,7 @@
 id: THM-3609
 title: "Exponent-two three-by-four size-nine Euler-factor nonentry"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For every
   squarefree Sigma over C of degree at least two, an exponent-two polynomial
   Darboux pair with three retained homogeneous pieces against four cannot have
   additive sumset size nine.  THM-3606 leaves four oriented words and one
@@ -15,11 +15,16 @@ status: >
   JC(2) is claimed.
 source: kps-s188 + agent Hegel / THM-3606 four-word continuation, 2026-08-21
 audit: >
-  Author derivation and exact implementer audit.  The companion hash-pins the
+  Author derivation, exact implementer audit, and independent hostile audit by
+  agent Arendt.  The companion hash-pins the
   THM-3606 atlas, derives both two-parameter collision cones, reconstructs the
   singleton exponent networks, proves uniqueness of the arm address, and
   checks the polynomial Euler factorizations symbolically and on hostile
-  admissible parameters.  Independent hostile audit remains pending.
+  admissible parameters.  The independent audit reimplemented the finite
+  size-nine census, rederived both cones and chamber inequalities, checked the
+  zero-weight boundary and UFD gcds, proved the unique-arm order calculation,
+  and independently expanded both scalar factorizations.  Ordinary and
+  optimized companion runs reproduced the stored output byte-for-byte.
 depends_on:
   - THM-3606-exponent-two-three-by-four-scalar-singleton-gate-atlas
   - THM-3592-universal-exponent-two-three-by-three-weight-darboux-nonentry
@@ -35,7 +40,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3609 -- exponent-two three-by-four size-nine Euler-factor nonentry
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.**  This closes
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**  This closes
 the top additive layer of the exponent-two `3 x 4` sector.  The proof does not
 delete the scalar cut.  It converts the surrounding singleton rows into a
 global factor of the scalar equation.
