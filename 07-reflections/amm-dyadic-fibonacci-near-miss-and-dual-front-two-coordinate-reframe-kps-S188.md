@@ -73,19 +73,32 @@ the adjoint atlas,
 | `256,0` | 61 | 24 | 0.093750 |
 | `512,4` | 121 | 44 | 0.085938 |
 | `1024,14` | 250 | 94 | 0.091797 |
+| `2048,37` | 508 | 195 | 0.095215 |
 
 The normalized dual horizon is roughly stable near nine percent across these
-three scales even though the greedy offset threshold is moving toward a
-positive linear slack.  This is only a three-scale signal, but it suggests a
-better asymptotic object than another formula for `D0*`: a limiting dual
-profile `B(theta;epsilon)` whose first sign change is `theta=q/R`.
+four scales even though the greedy offset threshold is moving toward a
+positive linear slack.  The fourth point sharpens a possible factorization:
+
+```text
+j/R = 0.248046875 ~ 1/4,
+q/j = 0.3838582677... ~ phi^-2,
+q/R = 0.09521484375 ~ phi^-2/4 = 0.0954915028....       (4)
+```
+
+The appearance of `phi^-2` is not numerology-free evidence: THM-3027 proves
+that the same number is the universal binding mass fraction in the
+archimedean capacity problem.  But the four-point sequence is nonmonotone
+(`R=512` is a visible hostile point), so this remains a pre-registered target,
+not a limit claim.  The decisive next datum is the terminal failed offset at
+`R=4096`.  Conceptually the right object is a limiting dual profile
+`B(theta;epsilon)` whose first sign change is `theta=q/R`.
 
 The superblock theorem supplies a third coordinate: the row at which a
 same-sign front pair enters an absorbing death regime.  A lawful AMM no-go
 would require an overlap statement of the form
 
 ```text
-every departure before q enters a superblock basin before escape.          (4)
+every departure before q enters a superblock basin before escape.          (5)
 ```
 
 No current theorem proves `(4)`.  The adjoint wall constrains *when* a repair
@@ -93,7 +106,7 @@ must occur; the front theorem constrains *what happens after a specified
 state enters its basin*.  Their state spaces and allowed continuation classes
 must be matched explicitly before composition.
 
-## 4. Exact computational move unlocked by the reframe
+## 4. The adjoint is an exact top-distance walk
 
 The original certificate routine recomputed the same transposed Pascal cone
 for every cut.  If `lambda_i` is the level propagated from the fatal top cell,
@@ -101,21 +114,54 @@ then all cuts arise in one reverse pass:
 
 ```text
 B_i=B_(i+1)+<lambda_i,u_i^A-L_i>,
-lambda_(i-1)=truncate(K_i^T lambda_i).                 (5)
+lambda_(i-1)=truncate(K_i^T lambda_i).                 (6)
 ```
 
 This reduces the cut atlas from repeated backward cones to one cone per
-failed offset.  THM-3597 pins `(5)` against the legacy coefficient-cancellation
-routine at both boundary cuts of the hardest offset in each epoch.  The next
-exact target is therefore practical:
+failed offset.  THM-3597 pins `(6)` against the legacy coefficient-cancellation
+routine at both boundary cuts of the hardest offset in each epoch, and
+THM-3601 does so again at `R=2048`.
+
+There is a further exact compression.  Put
 
 ```text
-R=2048, D0=37: compute the full B_s sweep and locate q(2048,37).             (6)
+delta_i=d_i-d_(i-1) in {0,1},
+r=d_i-1-t,
+M_i(z)=sum_r lambda_i(d_i-1-r) z^r.                    (7)
 ```
 
-If `q/R` remains near `0.09`, seek a scaling inequality for `(5)`.  If it
-breaks, inspect the multiplier mass/front overlap at the first broken scale;
-that is the missing coordinate, not an invitation to fit a new sequence.
+The fatal top cell initializes `M_(j-1)=1`.  Directly changing coordinates in
+the Pascal transpose gives
+
+```text
+delta_i=0: M_(i-1)(z)=(1+z)M_i(z),
+delta_i=1: M_(i-1)(z)=Pi_(>=0)[z^(-1)(1+z)^2 M_i(z)].  (8)
+```
+
+Thus the dual multiplier is a one-dimensional, time-inhomogeneous boundary
+walk in *distance below the current top*.  A flat degree step permits `r` to
+stay or increase by one; a rising degree step permits moves `-1,0,+1` with
+weights `1,2,1`, while deleting the illegal move below `r=0`.  This proves
+that the dual cone and the primal high-cell front already live in the same
+coordinate.  The missing overlap theorem is therefore not a mysterious map
+between two state spaces: it is a sign/escape statement for the charges
+
+```text
+h_i(r)=u_i^A(d_i-1-r)-L_i(d_i-1-r)                    (9)
+```
+
+sampled by the walk `(8)`.
+
+This is the most concrete new analytic target.  Derive a scaling limit for
+the Sturmian `delta_i` word and the charged walk `(8)--(9)`.  If its zero is
+`theta=phi^-2/4`, the coincidence in `(4)` has a mechanism; if not, the
+`R=4096` exact wall should expose the missing state variable.
+
+The completed exact target is
+
+```text
+R=2048, D0=37: j=508, first negative cut=196, q=195.    (10)
+```
 
 ## 5. Cross-frontier pattern
 
