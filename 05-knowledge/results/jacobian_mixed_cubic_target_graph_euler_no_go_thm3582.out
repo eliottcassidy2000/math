@@ -1,0 +1,22 @@
+THM-3582 mixed-cubic target-graph exact audit
+universal: strict transform, discriminant Delta=s^2*R, omitted support verified
+I/M=14: two univariate gcds are units
+I/M=12: resultant support {0,-54}; both exceptions empty
+I/M=11: B=0 unit; resultant support {0}; w=-54 tail gcd unit
+II/E=0: 24/24 unit
+II/E!=0,M=9: 4/4 unit
+II/E!=0,M=10: B=0 5/5 unit; tangent 5/5 unit
+II/E!=0,M=11: 5/5 unit
+II/E!=0,M=12: 5 resultant cells + symmetric exceptional unit
+III/one-root M=13: empty
+III/one-root M=11: empty
+III/one-root M=10: empty
+III/two-root E=0: 16/16 unit
+III/E!=0,M=13: 6 resultant cells; 6 apparent branches empty
+III/E!=0,M=10: B=0 5/5 unit; tangent 5/5 resultants
+III/E!=0,M=11: 5/5 resultant cells empty
+hostile b^3-12ab: (rhoDelta,rhoG3,tau,rhoF,chiD,chiX)=(9,1,0,0,-7,17)
+hostile ab^2: (11,1,0,5,-9,16)
+hostile triple fibre: G(1,b)=b^3, tau=1, chiX=20
+scope: pure b^3 has chiX=5; reducible H=-b/2 starts at total degree 4
+all active truth gates passed
