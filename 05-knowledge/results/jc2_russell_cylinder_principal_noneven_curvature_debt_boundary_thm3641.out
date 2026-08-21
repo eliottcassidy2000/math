@@ -1,0 +1,27 @@
+THM-3641 exact companion -- proved curvature-debt atlas
+status=PROVED_VERIFIED_EXACT_INDEPENDENTLY_HOSTILE_AUDITED
+SECTION stable decomposable coefficients
+PASS stable_coefficients=J0,J1,J2
+SECTION universal compiler jets
+PASS compiler_jets=tangent,vertical,vertical_prime,curvature
+PASS branchwise_symplectic_determinant=12
+SECTION generic finite rho chart
+PASS generic_finite_identity_and_zero_debt_hyperplane
+PASS generic_ordinary=K*(4u-9)*(4u+9)!=0
+SECTION exceptional finite charts
+PASS exceptional_rho=+4,-4 identities
+PASS exceptional_ordinary=vplus_notin(9,9/2),vminus_notin(-9,-9/2)
+SECTION infinite projective chart
+PASS infinite_chart_identity
+PASS infinite_ordinary=u_notin(0,+9/4,-9/4)
+SECTION principal recovery and polynomial controls
+PASS principal_boundary=THM3624_invoice
+PASS controls=Q1(-2072/81),Qh(0),Q6(0),Qstar(0)
+PASS control_tangent_determinants=(39,15,54)
+SECTION Hermite realizability and minimality
+PASS every_value_slope_curvature_packet_has_degree<=8_control
+PASS Q6_minimal_degree_in_fixed_Q1_slope_packet=6
+SECTION active-gate audit
+PASS ast_assert_nodes=0
+CHECKS=104
+RESULT=PASS
