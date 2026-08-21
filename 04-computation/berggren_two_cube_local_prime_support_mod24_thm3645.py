@@ -127,8 +127,9 @@ def main() -> None:
     screen_997 = tuple(p for p in factor_primes if p <= 997)
     require(len(screen_997) == 168 and screen_997[-1] == 997, "prime screen")
 
-    # Independent small-universe brute force validates every special-prime
-    # formula and the claim that primes off n*V*T cannot obstruct.
+    # Independent small-universe brute force compares the least structural
+    # obstruction with the least brute-force obstruction.  The theorem's
+    # hostile audit separately checked every candidate-prime pair here.
     hostile_primes = primes_up_to(97)
     for m, n in candidates(31):
         structural = next(

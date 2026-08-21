@@ -2,12 +2,20 @@
 id: THM-3645
 title: "Berggren two-cube local prime support and mod-24 cones"
 status: >
-  PROVED + LOCAL-ALGEBRA + FINITE-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + LOCAL-ALGEBRA + FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Every mod-prime obstruction to the slope conic is supported on nVT.
   A screen through n forces exactly two mod-24 candidate cones.  The first
   slope escaping the fixed p<=997 screen is (512,1019), not the previously
   reported (1012,1039).  No p-adic or Pell-orbit sufficiency is claimed.
 source: kps-s189 / THM-3640 local-screen structure, 2026-08-21
+audit: >
+  PASS after two wording repairs -- an independent reconstruction proved the
+  full support-prime iff theorem, exceptional primes, mod-24 cones, and
+  screen-through-n completeness; replayed all finite counts and digests;
+  checked all 1375 candidate-prime pairs through (n,p)=(31,97) and all 65769
+  nonzero residue pairs with zero disagreements; and verified the first
+  fixed-screen escape and infinite CRT family.  Normal and optimized streams
+  match the stored transcript after LF normalization.
 depends_on:
   - THM-3640-berggren-positive-cube-slope-atlas-through-401
 related:
@@ -15,7 +23,7 @@ related:
   - THM-3594-berggren-positive-cube-slope-atlas-through-201
 script: 04-computation/berggren_two_cube_local_prime_support_mod24_thm3645.py
 output: 05-knowledge/results/berggren_two_cube_local_prime_support_mod24_thm3645.out
-script_sha256: 57e483ae90922b4370ad826479169b0d5d10621e04bce389d949f77f0ce43c68
+script_sha256: 0193e4dfe3a6124985ac8108b9daf2473ace85b45f569cf6f3e486f243c4fc68
 output_sha256: ec67a7c70dbbbe7fb6ebc43acccde79f386da115d82e01c445b88ae0f83a0b7a
 semantic_sha256: 3844db20b97ae505d83bd2131daabb9eec87bbfcdb725258f188299624e0b4b4
 hash_basis: raw LF bytes for files; canonical JSON for semantic ledger
@@ -23,8 +31,8 @@ hash_basis: raw LF bytes for files; canonical JSON for semantic ledger
 
 # THM-3645 -- two-cube local prime support and mod-`24` cones
 
-**PROVED + LOCAL-ALGEBRA + FINITE-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  Consider a primitive parity-correct slope
+**PROVED + LOCAL-ALGEBRA + FINITE-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  Consider a primitive parity-correct slope
 
 ```text
 n odd,  m even,  n/2<m<n,  gcd(m,n)=1.                 (1)
@@ -206,10 +214,13 @@ python3 04-computation/berggren_two_cube_local_prime_support_mod24_thm3645.py
 python3 -O 04-computation/berggren_two_cube_local_prime_support_mod24_thm3645.py
 ```
 
-The companion includes a second-path brute residue comparison for every
-candidate through `n=31` and every prime through `97`; it also directly
-brute-checks `(17)` at all `168` screened primes and at `1019`.  Normal and
-optimized modes reproduce the stored transcript byte for byte.
+For every candidate through `n=31`, the companion compares the least
+structural obstruction through `97` with the least brute-force obstruction
+through `97`; it also directly brute-checks `(17)` at all `168` screened
+primes and at `1019`.  The hostile audit strengthens the small-universe check
+to every candidate-prime and nonzero residue-prime pair.  Normal and optimized
+streams agree byte for byte and reproduce the stored transcript after LF
+normalization.
 
 The theorem classifies the mod-prime gate only.  It proves neither `Q_p`
 solubility nor generalized-Pell class existence, compiler-orbit admissibility,
