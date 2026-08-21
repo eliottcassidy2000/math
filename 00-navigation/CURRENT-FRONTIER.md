@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — 2026-08-16.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
+**Rolling state — 2026-08-21.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -334,30 +334,29 @@ is sharp: equal counts allow two densities or none.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** [3502](../01-canon/theorems/THM-3502-rule30-four-fifths-staircase-entropy-and-sixteen-fifths-compiler.md); [3511](../01-canon/theorems/THM-3511-rule30-orbit-signalizer-gap-renormalization-and-shallow-portrait-hostile.md); [3512](../01-canon/theorems/THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary.md); [3516](../01-canon/theorems/THM-3516-rule30-marked-van-der-put-carry-and-power-section-bridge.md). OPEN.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN; THM-1300 is VERIFIED-EXACT
-  (MISTAKE-205). THM-3544/50 force composite degree `>=6`, height `>=8`;
-  cited Nagata/GGHV give reduced height `>=108`, with only `(72,108)<125`.
-  THM-3543--60 close the recorded collision, ray, cyclic, low-width, and
-  monomial-shear sectors; `D>=7`/width `>=4` remains open. THM-3561 supplies
-  the triple-collision compiler on `Y`; THM-3569/83/84 and 3581/89--92 close
-  `2x3`, `N=2` `2x4`, and the proved equal-step/A13 `3x3` cells, while the
-  wider general cells remain OPEN. THM-3595/96/98/99 close separated,
-  mixed-toric, graph/shallow-negative, and affine-linear rational-mate
-  channels. THM-3600/04 give the multiarm chart intersection, no-`A2` filling,
-  and compiler degree floors. THM-3605/07/08/11/14/17 close the stated
-  Russell graph/shear/projection families. THM-3618 classifies every single
-  fibre separator; THM-3622 resolves its graph closure into a missing line
-  plus normalization-arm/tangent debt. THM-3619/23 close
-  all even folds. THM-3627 kills one non-even polynomial at degree six, but
-  THM-3630's formal pair and cutoff-dependent polynomials rule out a uniform
-  jet bound. THM-3632 blocks its algebraization and fixed-`Q` stable-output
-  completion; THM-3634 forces two rank-two gates. THM-3629 leaves fully
-  mixed `H'(0)!=0` pairs OPEN; any witness is a noninjective `JC(2)` map.
-  Factor-bearing/nodal obstructions are in
-  THM-3564--78. The `A4/S4` cubic is blocked; quartic `C3` remains open
-  (MISTAKE-416). Unrestricted `C[A,d]^2` is still equivalent to `JC(2)`;
-  named slices and sparse/`H_2` sectors close, while `H_4` reaches the
-  common-root wall.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT
+  (MISTAKE-205); THM-3544/50 force composite degree `>=6`, height `>=8`, and
+  Nagata/GGHV give reduced height `>=108` (only `(72,108)<125`).
+  THM-3543--60 close recorded collision/ray/cyclic/low-width/shear sectors
+  (`D>=7`/width `>=4` OPEN). THM-3561/69/83/84 and 3581/89--92 close the
+  `2x3`, `N=2` `2x4`, and equal-step/A13 `3x3` compiler cells;
+  wider cells stay OPEN. THM-3595/96/98/99 close separated/toric/graph/
+  shallow-negative/affine-rational channels; THM-3600/04 give multiarm
+  intersection/no-`A2` filling/floors; THM-3605/07/08/11/14/17 close
+  Russell families. THM-3618/22 classify fibre separators and their graph
+  closure; THM-3619/23 close all even folds. Non-even THM-3627 closes one
+  polynomial, THM-3630 denies a uniform jet bound, THM-3632 blocks its
+  algebraization, and THM-3634/35 give the rank gates, retained jet plane,
+  and an actual `t=0` witness. On minimal `Q_1`, THM-3637--39 force universal
+  nonzero `J_2` debt in every retained
+  rank-one/two `J_0=1` cell. THM-3641 exposes ordinary curvature zero-debt
+  planes; THM-3642 realizes one by an exact `Q_6` lift through `J_2`, then
+  forces nonzero `J_4` debt for `Q_6,Q_*`. Other ordinary zero-debt polynomials,
+  THM-3641's excluded nonordinary tangent collisions, nonquadratic folds, and
+  THM-3629's mixed `H'(0)!=0` pairs remain OPEN. A positive global pair here
+  pulls back to a noninjective Keller map and refutes `JC(2)`. THM-3564--78
+  cover factor/nodal obstructions; `A4/S4` cubic is blocked, quartic `C3` OPEN
+  (MISTAKE-416), and unrestricted `C[A,d]^2` remains equivalent to `JC(2)`.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2247 close the affine-through-
   quartic and terminal-through-fourteen strata; THM-2262/2297--2480, including
