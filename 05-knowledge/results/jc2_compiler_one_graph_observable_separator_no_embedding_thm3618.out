@@ -1,5 +1,5 @@
-THM-3618 exact companion -- provisional one-graph-observable separator classification
-status=verified exact controls; proof candidate pending independent hostile audit
+THM-3618 exact companion -- proved one-graph-observable separator classification
+status=proved, verified exact, and independently hostile-audited
 SECTION compiler ring, normal surface, and two-observable identity
 PASS compiler_and_surface_gates=10 surface=smooth two_observables=recover_q
 SECTION generic inverse and complete special-fibre controls
@@ -19,4 +19,4 @@ PASS puncture_gates=26 separator_traces_in=C[u] x_trace=u^-1
 SECTION fibrewise separator powers and THM-3614 exceptional graph
 PASS fibre_power_rows=36 tested_m=1..12 exceptional_h=-z+n_is_m1
 PASS total_exact_gates=467
-RESULT PASS -- provisional proof candidate; exact companion frozen pending hostile audit
+RESULT PASS -- proved and independently hostile-audited

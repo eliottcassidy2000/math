@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3618 one-observable classification.
+"""Exact controls for proved THM-3618 one-observable classification.
 
 The all-degree Laurent-weight and normal-image arguments are proof-driven.
 This companion checks their algebraic inputs, positive and hostile controls,
@@ -32,8 +32,8 @@ def same(left, right):
     return zero(left - right)
 
 
-print("THM-3618 exact companion -- provisional one-graph-observable separator classification")
-print("status=verified exact controls; proof candidate pending independent hostile audit")
+print("THM-3618 exact companion -- proved one-graph-observable separator classification")
+print("status=proved, verified exact, and independently hostile-audited")
 
 
 print("SECTION compiler ring, normal surface, and two-observable identity")
@@ -294,4 +294,4 @@ print("PASS fibre_power_rows=36 tested_m=1..12 exceptional_h=-z+n_is_m1")
 
 
 print(f"PASS total_exact_gates={CHECKS}")
-print("RESULT PASS -- provisional proof candidate; exact companion frozen pending hostile audit")
+print("RESULT PASS -- proved and independently hostile-audited")

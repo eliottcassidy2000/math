@@ -2,13 +2,18 @@
 id: THM-3618
 title: "Compiler one-graph-observable fibre separator and no embedding"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-  AUDIT.  The polynomial observables separating every closed fibre of the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The polynomial
+  observables separating every closed fibre of the
   THM-3561 compiler are exactly r+lambda e^(m-1)xq with r in C[b,c,e],
   lambda nonzero, and m>=1.  None generates C[x,q] over C[b,c,e], while the
-  two observables xq and x do.  This result is not yet proved canon.
+  two observables xq and x do.
 source: root / audit_thm3611 off-diagonal-conic wildcard, 2026-08-21
-audit: PENDING -- provisional package frozen for independent hostile audit
+audit: >
+  PASS -- an independent hostile audit reconstructed the complete fibre
+  inventory, normal-intersection descent, Laurent one-weight gate, positive
+  cyclic contradiction, negative survivor classification, every boundary
+  fibre, and the puncture obstruction; normal, optimized, and stored
+  467-gate transcripts are byte-identical.
 depends_on:
   - THM-3561-rational-keller-danielewski-polynomial-completion
 related:
@@ -16,16 +21,14 @@ related:
   - THM-3614-russell-cylinder-collision-free-full-linear-projection-rigidity
 script: 04-computation/jc2_compiler_one_graph_observable_separator_no_embedding_thm3618.py
 output: 05-knowledge/results/jc2_compiler_one_graph_observable_separator_no_embedding_thm3618.out
-script_sha256: 2dfb92206451b68033e0cc1404e4320709ed866334d78f3450eb9138db69385f
-output_sha256: 69ea7d635abdce6708e331aabe542e3b3dc602502792b400f1eaec497017741a
+script_sha256: 345ca3ad70fd24a2649b823a51a613e062b46ab4104c0cbb7d97f871ec6fa935
+output_sha256: bef41bebadf5ef64a4a26b00fb085d5e763c1a3dd088cf7ad977f04571132795
 hash_basis: raw LF bytes
 ---
 
 # THM-3618 -- compiler one-graph-observable fibre separator and no embedding
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  This file is not proved canon.  No proved theorem may depend on it
-until the pending audit promotes its status.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 All rings are over `C`.  Put
 
@@ -354,7 +357,7 @@ x=u^(-1),              q=-u^2,
 
 For every separator `(3)`, all generators of `R[h]` restrict to `C[u]`,
 whereas `x` restricts to `u^(-1)`.  Therefore `x` is not in `R[h]`, proving
-`(4)`.  Geometrically, the graph has a missing limit above
+`(4)`.  Geometrically, one explicit witness is the missing limit above
 `p_infinity=(-4,0,0)` at `u=0`; pointwise injectivity has not paid the
 properness/closure debt.
 
