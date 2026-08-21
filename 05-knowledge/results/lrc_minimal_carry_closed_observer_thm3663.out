@@ -1,0 +1,17 @@
+== THM-3663 LRC minimal carry-closed exceptional observer ==
+address_set=169;detector_support=8;columns=(0, 3, 6, 9, 12)
+parent_sha256_lf=('7c8ebacaff5318b58ed1588d2e38edf1bc3c14ea81beec069d781450db986251', '61893d6e628232e877c73d6102f042654327fddfe7d51d1cf79c1aa6bc65419f')
+observer_columns=(0, 1, 12);coordinates=39
+observer_injective=split:169/169,cyclic:169/169
+operation_actions=vertical_carry:coordinate_permutation;reversal:signed_coordinate_permutation
+carry_closed_minimum=3 columns=39 coordinates
+success_counts_by_columns=(size1:0,size2:0,size3:13)
+successful_size3_banks=exactly cyclically consecutive column triples
+split_semantic_sha256=469dc89bea771723d278d51bad0ea3db4e9090079b9c6cc5e37dbd3feaac693c
+cyclic_semantic_sha256=a7820d4070295336dc9a45cb2ed2ec024819ae0d250258de77be2508d0981ddf
+boundary_bank_hostile=O(0,0)=O(0,1)=zero for both 11 and 14 offsets, both laws
+unrestricted_translate_minimum_interval=[21,39]
+semantic_sha256=953994bb4440423e1569e8c35165a2a60c8d7c3fa438b92508203ab64f3085a9
+script_sha256_lf=3cbcad785da8a0231a9482c8d263bdc2fcde7dc153c0dbc3ed4766a6ef8b5966
+scope=address-level observer congruence;not physical current/first-return/entry/LRC14
+PASS
