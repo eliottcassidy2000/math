@@ -1,6 +1,6 @@
 # Script Results Index
 
-- `jc2_cohn_parity_cycle_repair.py` -> matching `.out` [THM-3651 PROVED +
+- `jc2_cohn_parity_cycle_repair.py` -> matching `.out` [THM-3653 PROVED +
   FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED; Cohn non-elementarity CITED;
   recovery implication CONDITIONAL].  The determinant-one Cohn core has curl
   defects `(-x,-y)`; its first repair forces
@@ -13,13 +13,13 @@
   `1a9ff3b9cb8190e434307400f658ff8bf476d1629924af91b61b8bfcc81091ee` /
   `34f2ff8c8e9d78c1d48d37e1931d912c4713b1a05f5db5daa37e2b23b5a2a8f1`.
 - `jc2_small_rational_four_gauss_search.py` -> matching `.out` [FINITE-EXACT;
-  Wright criterion CITED + independently reproved in THM-3650].  The complete
+  Wright criterion CITED + independently reproved in THM-3652].  The complete
   four-word rational atlas leaves only explicit sequential shears; all 1,000
   signed-monomial five-word correction systems fail.  Script/output SHA-256:
   `ee53b73418b373e8196db50665646cf025c22179d1b4af4ce024e328f28d62df` /
   `1b973bbb3db8e4b18118797914322a6625295e7dd541df7541ab0e65f99aa08f`.
 - `jc2_small_rational_six_gauss_search.py` -> matching `.out` [FINITE-EXACT;
-  tame stratum by THM-3650].  All 10,000 degree-six monomial bases and 2,000
+  tame stratum by THM-3652].  All 10,000 degree-six monomial bases and 2,000
   two-scale degree-eight bases have maximal inconsistent ranks; two nonzero-
   defect controls integrate tamely.  Script/output SHA-256:
   `a053642aa10798784ac3c9ac7110e9641a975e96a148b26958a1f13a68479416` /

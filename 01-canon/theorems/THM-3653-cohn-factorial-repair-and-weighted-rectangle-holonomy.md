@@ -1,5 +1,5 @@
 ---
-id: THM-3651
+id: THM-3653
 title: "Cohn factorial repair obstruction and weighted rectangle holonomy"
 status: >
   PROVED + FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED; CITED for Cohn
@@ -12,7 +12,7 @@ status: >
 source: boxeph / parity recovery and Cohn-core hostile audits, 2026-08-21
 depends_on: []
 related:
-  - THM-3650-wright-elementary-jacobian-criterion-reduced-word-reproof
+  - THM-3652-wright-elementary-jacobian-criterion-reduced-word-reproof
   - THM-3613-three-by-four-size-seven-ray-parity-gate
 script: 04-computation/jc2_cohn_parity_cycle_repair.py
 output: 05-knowledge/results/jc2_cohn_parity_cycle_repair.out
@@ -23,7 +23,7 @@ external:
   - https://www.numdam.org/item/PMIHES_1966__30__5_0/
 ---
 
-# THM-3651 -- Cohn repair tails and weighted odd/even holonomy
+# THM-3653 -- Cohn repair tails and weighted odd/even holonomy
 
 **PROVED + FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED; CITED for the
 non-elementarity statement.**

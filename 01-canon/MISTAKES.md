@@ -9,6 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-434 (2026-08-21, Cohn repair-cycle transfer) -- parity was substituted for multiplier holonomy
+
+- **What failed:** factorial rescaling turns the interior recurrence in the
+  Cohn repair path into an alternating `d_i=-d_(i-1)` chain.  The first draft
+  then closed this flattened chain cyclically and treated the usual odd/even
+  kernel of `I+S_n` as if it were a cyclic Cohn repair.
+- **Minimal witness / first failed implication:** rescaling is not periodic.
+  For weighted cyclic equations `alpha_i c_i+c_(i-1)=0`, the determinant is
+  `product(alpha_i)-(-1)^n`.  The Cohn seam retains weights
+  `2,3,...,n+1`, so its determinant is `(n+1)!-(-1)^n`, nonzero for every
+  `n`; even support does not close it.
+- **Repair / strongest survivor:** odd/even rectangle rigidity remains a
+  valid support filter.  A coefficient cycle must additionally carry signed
+  multiplier holonomy `(-1)^n`; the smallest even rational positive control
+  has reciprocal gains `2,1/2`.  THM-3653 and its companion separate these
+  two predicates explicitly.
+- **Reusable rule:** a gauge that flattens a transport equation on a path need
+  not descend through a quotient seam.  Before cyclically identifying support
+  endpoints, retain edge weights and test the exact product holonomy.
+
 ## MISTAKE-433 (2026-08-21, THM-3639 namespace race) -- a pre-push ID check did not survive a concurrent reservation
 
 - **What failed:** the Berggren denominator-401 package checked that

@@ -1,5 +1,5 @@
 ---
-id: THM-3650
+id: THM-3652
 title: "Wright elementary-Jacobian criterion with a reduced-word proof"
 status: >
   CITED + INDEPENDENTLY REPROVED + INDEPENDENTLY HOSTILE-AUDITED.  Over a
@@ -19,7 +19,7 @@ external:
   - https://hub.hku.hk/bitstream/10722/48401/1/63202.pdf
 ---
 
-# THM-3650 -- Wright's elementary-Jacobian criterion
+# THM-3652 -- Wright's elementary-Jacobian criterion
 
 **CITED + INDEPENDENTLY REPROVED + INDEPENDENTLY HOSTILE-AUDITED.**
 
