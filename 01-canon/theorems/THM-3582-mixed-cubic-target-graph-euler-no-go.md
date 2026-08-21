@@ -2,7 +2,7 @@
 id: THM-3582
 title: "Mixed-cubic target-graph Euler no-go"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  Every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every
   collision-compatible target graph of exact total degree three and
   a-degree one for the fixed THM-1300 Keller map has irreducible complete
   pullback X with compactly supported Euler characteristic at least two.
@@ -12,6 +12,12 @@ status: >
   by finite saturated-ideal and resultant atlases over QQ.  Irreducibility
   follows from THM-3573's complete polynomial Pell-descent classification.
 source: kps-s188 / delegated mixed-cubic target-graph attack, 2026-08-21
+audit: >
+  Independently accepted by agent Anscombe on 2026-08-21 after re-deriving
+  the strict-transform saturation, cubic Euler formula, omitted support,
+  all three finite coefficient chambers, irreducibility upgrade, and scope;
+  normal and optimized replays matched the stored transcript and pinned
+  hashes exactly.
 depends_on:
   - THM-3560-jelonek-euler-gate-monomial-target-shear-no-go
   - THM-3571-quadratic-target-graph-euler-no-go
@@ -27,12 +33,13 @@ hash_basis: LF-normalized bytes
 
 # THM-3582 -- mixed-cubic target-graph Euler no-go
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**  The next target-graph
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The next target-graph
 cell after THM-3571 is closed.  The result is a computer-assisted theorem:
 the geometric and Euler identities below are displayed algebra, while the
 finite exceptional atlases are exact Groebner/resultant computations over
-`QQ`, replayed with ordinary and optimized Python.  No independent audit is
-claimed here.
+`QQ`, replayed with ordinary and optimized Python.  An independent hostile
+audit re-derived the saturation, Euler accounting, finite chamber atlas, and
+irreducibility step and matched both replays to the pinned transcript.
 
 All varieties are over `C`; `chi` means compactly supported topological Euler
 characteristic.  The fixed Keller map is the map `F:A3->A3` of THM-1300.
