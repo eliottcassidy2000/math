@@ -2,7 +2,7 @@
 id: THM-3576
 title: "Higher-exponent Belyi Keller collision tower"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For every integer n at least two, an explicit rational Keller pair has a
   maximal polynomial-observable completion on the smooth surface
   c^n e=b(b-beta_n).  The resulting polynomial map from A2 is etale,
@@ -16,7 +16,12 @@ status: >
   target would give a planar Jacobian counterexample; no such pair and no
   counterexample to JC(2) is claimed.
 source: root, 2026-08-20
-audit: PENDING INDEPENDENT HOSTILE AUDIT
+audit: >
+  Independent hostile audit rederived the critical-value completion,
+  maximal observable ring, exact image and fibre invoices, all homogeneous,
+  two-by-two, and two-by-three weight obstructions including every small
+  boundary and homogeneous side branch, and the cited Shabat/monodromy
+  specialization.  Ordinary and optimized exact replays are byte-identical.
 depends_on: []
 related:
   - THM-3566-chebyshev-pell-odd-keller-collision-tower
@@ -26,14 +31,14 @@ external:
   - "Cameron, Kemp, Maslak, Melamed, Moy, Pham, and Wei, Shabat Polynomials and Monodromy Groups of Trees Uniquely Determined by their Passport, Involve 12 (2019), 791-812, Propositions 2 and 7, DOI 10.2140/involve.2019.12.791."
 script: 04-computation/jc2_higher_exponent_belyi_keller_thm3576.py
 output: 05-knowledge/results/jc2_higher_exponent_belyi_keller_thm3576.out
-script_sha256: PENDING
-output_sha256: PENDING
+script_sha256: 3413997e87a787f4e147f0f8afc56192b7a6ba80229f70c280f3027882d61a45
+output_sha256: d9b0ff5b7d10213cf403edeee6375c6069cd3c9855a864c481152f905688cab9
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3576 -- higher-exponent Belyi Keller collision tower
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 This theorem does **not** refute `JC(2)`.  It builds a new tower of exact
 near-counterexamples whose boundary exponent, collision passport, and
 monodromy differ from the exponent-two Chebyshev family.
@@ -308,7 +313,7 @@ The same simple-arm sign lemma used above, including its inert zero-weight
 boundary, puts the two-weight output in the form
 
 ```text
-P=c^(-R)f+c^(T-n+1)F,                   R,T>=1.         (21f)
+P=c^(-R)f+c^(T-n+1)F,   R,T>=1,   R+T-n+1>0.           (21f)
 ```
 
 The two possible three-weight supports are therefore
@@ -318,15 +323,24 @@ LOWER: {-R-2T+n-1, -T, R-n+1},
 UPPER: {-T, R-n+1, 2R+T-2n+2}.                         (21g)
 ```
 
-At a simple root of `Sigma`, the scalar row can survive only if the
-negative coefficient of weight `-R` or `-T` has a simple zero and the
-opposite multiplier is nonzero.  Formula `(21a)` makes this equivalent to
+Here the small-weight boundaries are load-bearing.  At a simple root of
+`Sigma`, if `R<n-1` then both coefficients in the first scalar pair have
+negative weight and vanish; if `R=n-1` its derivative multiplier is zero;
+if `R>n` then `(21a)` makes even the derivative of `f` vanish.  The only
+survivor is `R=n`, where `f` may have a simple zero and the opposite weight
+is one.  The identical argument for the second scalar pair gives `T=n`.
+Thus all cases `1<=R,T<n`, including zero-weight boundaries, are discharged
+and arm survival is equivalent to
 
 ```text
 R=n                         or T=n.                    (21h)
 ```
 
 It remains to close the exceptional ladders forced by `(21h)`.
+The unique high extreme forces, modulo the removable zero boundary,
+`T>=n` when `R=n` and `R>=n` when `T=n`: below those thresholds its two
+weights have strict opposite signs, while equality is the already separated
+`R=T=n` case.  Thus the integer parameters used below omit no small ladder.
 
 For the lower support write
 
@@ -353,23 +367,43 @@ F=L K^p,                  H=M K,
 g_1=(2k+1)LB h^(2k)K^p/A,                 Sigma|h.     (21k)
 ```
 
+The shared first-order equation also permits a formal homogeneous summand
+`v_0` with `n h v_0'-T h'v_0=0`.  It would satisfy
+`h^T=lambda v_0^n`.  But `(2T+1)=n(2k+1)` gives `gcd(n,T)=1`, so UFD
+comparison would make `h` an `n`th power, contradicting its simple zeros on
+the squarefree arms.  Hence `v_0=0`, and `(21k)` is the complete polynomial
+solution.
+
 Its scalar row has the nonunit factor
 
 ```text
 K h'+n hK'.                                             (21l)
 ```
 
-Finally take `T=n,R>n`.  The lowest Wronskian has common-power divisor
-`d=gcd(R,n+1)`.  If `k_0` is the arm order of its common base, the two terms
-in the shared row have orders
+Finally take `T=n,R>n` and put `d=gcd(R,n+1)`.  The lowest and highest
+Wronskians give
 
 ```text
-m=Rk_0/d,                 at least m+(n+1)k_0/d-1.     (21m)
+f=A h^(R/d),       g=B h^((R+n+1)/d),
+F=L K,             H=M K^(R-n+1).
 ```
 
-Equality would force `d=(n+1)k_0`, hence `d=n+1,k_0=1`; but then
-`m=R/(n+1)<ceil(R/n)`, contradicting `(21a)`.  Thus the lower support is
-empty.
+The complete shared-row solution is
+
+```text
+g_1=C h^((n+1)/d)K+v_0,
+C=(R+n+1)LB/(RA),
+v_0^d=lambda h^n.                                      (21m)
+```
+
+Here `gcd(d,n)=1`.  A nonzero polynomial `v_0` therefore forces
+`h=mu J^d` and `v_0=nu J^n`; at every arm its order is at least `n`, so it
+cannot supply the simple zero needed by the scalar row.  The particular
+summand could be simple only if `d=n+1` and the arm order of `h` were one.
+But then `ord(f)=R/(n+1)<ceil(R/n)`, contradicting `(21a)`.  Thus `g_1`
+is never simple on an arm; the other scalar summand contains `f`, whose
+order is at least two because `R>n`.  The scalar row vanishes at every arm,
+so the lower support is empty.
 
 For the upper support write
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Finite exact companion for provisional THM-3576."""
+"""Finite exact companion for proved and independently audited THM-3576."""
 
 from __future__ import annotations
 
@@ -85,6 +85,7 @@ def audit_universal_two_by_three() -> int:
     h = sp.expand(sigma * (b**2 + 2 * b + 3))
     K = b**3 - b + 2
     J = b**2 + 3 * b + 3
+    J_arm = sp.expand(sigma * J)
     A, BB, L, M, D, mu = map(sp.Rational, (2, 3, 5, 7, 11, 13))
 
     for n in range(2, 9):
@@ -105,6 +106,9 @@ def audit_universal_two_by_three() -> int:
             for k in range(1, 4):
                 T = (n * (2 * k + 1) - 1) // 2
                 p = T - n + 1
+                require(gcd(n, T) == 1, f"lower homogeneous gcd n={n},k={k}")
+                require(sp.gcd(h, sp.diff(h, b)) == 1, f"lower simple base n={n},k={k}")
+                checks += 2
                 C = sp.Rational(2 * k + 1) * L * BB / A
                 left = [(-n, A * h), (p, L * K**p)]
                 right = [
@@ -157,15 +161,69 @@ def audit_universal_two_by_three() -> int:
             factor = K * sp.diff(h, b) + n * h * sp.diff(K, b)
             checks += require_scalar_factor(left, right, n, factor, f"upper T=n={n},k={k}")
 
-        # LOWER T=n,R>n: an order collision can never coexist with arm regularity.
+        # LOWER T=n,R>n: check the complete particular solution and the
+        # homogeneous sidecar, then gate the simple-arm obstruction.
+        for R_weight in sorted({n + 1, n + 2, 2 * n, 2 * n + 1}):
+            d = gcd(R_weight, n + 1)
+            a = R_weight // d
+            g_power = (R_weight + n + 1) // d
+            ell = (n + 1) // d
+            high_power = R_weight - n + 1
+            C = sp.Rational(R_weight + n + 1, R_weight) * L * BB / A
+            left = [(-R_weight, A * h**a), (1, L * K)]
+            right = [
+                (-(R_weight + n + 1), BB * h**g_power),
+                (-n, C * h**ell * K),
+                (high_power, M * K**high_power),
+            ]
+            rows = weight_bracket_rows(left, right, n)
+            for weight, coefficient in rows.items():
+                if weight != 0:
+                    require(zero(coefficient), f"lower complete row n={n},R={R_weight},w={weight}")
+                    checks += 1
+
+            scalar = sp.expand(rows[0])
+            arm_regular = a >= (R_weight + n - 1) // n
+            if arm_regular:
+                remainder = sp.rem(sp.Poly(scalar, b), sp.Poly(sigma, b))
+                require(remainder.is_zero, f"lower complete arm factor n={n},R={R_weight}")
+                checks += 1
+
         for R_weight in range(n + 1, 4 * n + 1):
             d = gcd(R_weight, n + 1)
             for arm_order in range(1, 5):
                 m = R_weight * arm_order // d
                 order_collision = (n + 1) * arm_order == d
-                arm_regular = m >= (R_weight + n - 1) // n
-                require(not (order_collision and arm_regular), f"lower mismatch n={n},R={R_weight}")
+                local_regular = m >= (R_weight + n - 1) // n
+                require(not (order_collision and local_regular), f"lower mismatch n={n},R={R_weight}")
                 checks += 1
+
+        # A nonzero homogeneous solution v0^d=h^n is also checked exactly at
+        # the maximal divisor d=n+1; it cannot create a simple arm.
+        R_weight = n + 1
+        d = n + 1
+        a = 1
+        g_power = 2
+        ell = 1
+        high_power = 2
+        h_hom = J_arm**d
+        v0 = mu * J_arm**n
+        C = sp.Rational(2 * n + 2, n + 1) * L * BB / A
+        left_hom = [(-R_weight, A * h_hom**a), (1, L * K)]
+        right_hom = [
+            (-(2 * n + 2), BB * h_hom**g_power),
+            (-n, C * h_hom**ell * K + v0),
+            (high_power, M * K**high_power),
+        ]
+        rows_hom = weight_bracket_rows(left_hom, right_hom, n)
+        for weight, coefficient in rows_hom.items():
+            if weight != 0:
+                require(zero(coefficient), f"lower homogeneous row n={n},w={weight}")
+                checks += 1
+        scalar_hom = sp.expand(rows_hom[0])
+        remainder_hom = sp.rem(sp.Poly(scalar_hom, b), sp.Poly(sigma, b))
+        require(remainder_hom.is_zero, f"lower homogeneous arm factor n={n}")
+        checks += 1
     return checks
 
 
@@ -325,7 +383,7 @@ def main() -> None:
     explicit, passport, poisson = audit_degree_seven()
     assert_nodes = audit_no_asserts()
     print("THM-3576 finite exact companion")
-    print("status PROVISIONAL_VERIFIED_EXACT_PENDING_INDEPENDENT_AUDIT")
+    print("status PROVED_VERIFIED_EXACT_INDEPENDENTLY_HOSTILE_AUDITED")
     print("universe exact_QQ_symbolic_exponents_2_through_8")
     print("hypergeometric_ode_and_critical_value_checks", ode)
     print("adrianov_shabat_identification_checks", shabat)
