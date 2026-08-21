@@ -2,14 +2,22 @@
 id: THM-3621
 title: "Russell-cylinder polynomial even-fold all-order vertical-cokernel rigidity"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED / ALTERNATIVE
+  REDUNDANT CERTIFICATION OF THM-3619.
   Every polynomial even fold in the THM-3612 family is excluded: no pair of
   regular target functions pulls back to a nonzero constant source Jacobian.
   The all-order vertical-cokernel invoice forces the unique formal side germ
   Q_infinity=-3/4-9/(4x^2), which cannot be polynomial.  This closes only the
   stated even-fold family, not planar JC.
 source: kps-s189 / THM-3619 all-order shifted-evaluation continuation, 2026-08-21
-audit: PENDING -- proof and exact companion require independent hostile audit
+audit: >
+  PASS -- an independent hostile reconstruction verified the shift
+  filtration, branch signs, exact moving target and bivector identity, all
+  target-displacement orders, normalized coefficient -16, recurrence,
+  polynomial contradiction, and finite THM-3619 reconciliation.  Normal,
+  optimized, and stored 752-gate transcripts agree after LF normalization.
+  The theorem is a distinct proof, not a stronger closure result.
+superseded_by: THM-3619-russell-cylinder-even-fold-higher-jet-staircase
 depends_on:
   - THM-3612-russell-cylinder-even-fold-nongraph-collision-jet-rigidity
 related:
@@ -24,11 +32,14 @@ hash_basis: raw LF bytes
 
 # THM-3621 -- Russell-cylinder polynomial even-fold all-order vertical-cokernel rigidity
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED / ALTERNATIVE
+REDUNDANT CERTIFICATION OF THM-3619.**
 
 All formal rings and differential forms below are over `C`.  This theorem
-upgrades the finite THM-3619 staircase to an all-order identity.  Its proof is
-analytic formal algebra, not an extrapolation from the four computed rows.
+was developed concurrently with the promotion of THM-3619.  It gives an
+independent shifted-evaluation/bivector proof of the same even-fold closure;
+THM-3619 is the primary canonical statement.  The proof here is analytic
+formal algebra, not an extrapolation from four computed rows.
 
 ## 1. Statement
 
@@ -255,6 +266,11 @@ The exact companion verifies `(10),(12)--(15),(18)--(19),(24)` and hostile
 finite instances of the general coefficient formula with optimization-safe
 gates.  The quantifier over all `n` rests on the formal proof in Sections
 2--5, not on a bounded computation.
+
+The companion's displayed ancestry `PIN` strings are historical provenance:
+its executable gates check their syntax, not the current repository blobs.
+The source/output hashes in this theorem and the 752 mathematical gates are
+the verified package; no dependency claim rests on those provenance strings.
 
 Reproduce with
 
