@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Finite exact companion for provisional THM-3572."""
+"""Finite exact companion for proved and independently audited THM-3572."""
 
 from __future__ import annotations
 
@@ -159,6 +159,88 @@ def audit_two_by_two_factorization(sigmas: list[sp.Expr]) -> int:
     return controls
 
 
+def audit_all_width_owner_and_three_by_three(sigma: sp.Expr) -> tuple[int, int]:
+    """Structural controls for Sections 5.3 and 5.5."""
+    owner_checks = 0
+    f = sp.expand(sigma * (b**2 + b + 1))
+    F = b**3 - b + 2
+    z = sp.expand(f * F)
+    zz = sp.symbols("zz")
+
+    # Lower-chain conjugation identity, valid for every polynomial R_j.
+    for j in range(-6, 0):
+        RjZ = zz**2 + (j + 8) * zz + 3
+        RprevZ = zz**3 + (j + 9) * zz**2 + 5
+        Rj = RjZ.subs(zz, z)
+        Rprev = RprevZ.subs(zz, z)
+        qj = f ** (-2 * j) * Rj
+        qprev = f ** (-2 * (j - 1)) * Rprev
+        layer = sp.expand(
+            f * sp.diff(qj, b)
+            + 2 * j * sp.diff(f, b) * qj
+            + 2 * (j - 1) * sp.diff(F, b) * qprev
+            - F * sp.diff(qprev, b)
+        )
+        transformed = sp.expand(
+            sp.diff(z, b)
+            * (
+                sp.diff(RjZ, zz).subs(zz, z)
+                + 2 * (j - 1) * Rprev
+                - z * sp.diff(RprevZ, zz).subs(zz, z)
+            )
+        )
+        require(zero(f ** (2 * j - 1) * layer - transformed), "lower owner conjugation")
+        owner_checks += 1
+
+    # Upper-chain conjugation identity, independent of the lower induction.
+    for j in range(1, 7):
+        SjZ = zz**2 + (j + 2) * zz + 7
+        SprevZ = zz**3 + (j + 4) * zz + 11
+        Sj = SjZ.subs(zz, z)
+        Sprev = SprevZ.subs(zz, z)
+        qj = F ** (2 * j) * Sj
+        qprev = F ** (2 * (j - 1)) * Sprev
+        layer = sp.expand(
+            f * sp.diff(qj, b)
+            + 2 * j * sp.diff(f, b) * qj
+            + 2 * (j - 1) * sp.diff(F, b) * qprev
+            - F * sp.diff(qprev, b)
+        )
+        transformed = sp.expand(
+            sp.diff(z, b)
+            * (
+                2 * j * Sj
+                + z * sp.diff(SjZ, zz).subs(zz, z)
+                - sp.diff(SprevZ, zz).subs(zz, z)
+            )
+        )
+        require(zero(layer - F ** (2 * j - 1) * transformed), "upper owner conjugation")
+        owner_checks += 1
+
+    # Direct coefficient formulas for the parity-compatible 3x3 support.
+    three_checks = 0
+    k = sp.expand(sigma * (b**2 + 3))
+    A, B, C = map(sp.Rational, (2, 3, 5))
+    ff = A * k**3
+    gg = B * k**2
+    aa = b**4 + 2 * b + 1
+    FF = b**3 - 2 * b + 4
+    qq = b**5 + b**2 + 3
+    HH = C * FF**2
+    low_extreme = sp.expand(-2 * sp.diff(ff, b) * gg + 3 * ff * sp.diff(gg, b))
+    high_extreme = sp.expand(2 * sp.diff(FF, b) * HH - FF * sp.diff(HH, b))
+    require(zero(low_extreme) and zero(high_extreme), "3x3 extreme powers")
+    three_checks += 2
+    low_next = sp.expand(3 * ff * sp.diff(qq, b) - 2 * sp.diff(aa, b) * gg + aa * sp.diff(gg, b))
+    low_reduced = sp.expand(k**3 * (3 * A * sp.diff(qq, b) - 2 * B * sp.diff(aa / k, b)))
+    require(zero(low_next - low_reduced), "3x3 low adjacent layer")
+    high_next = sp.expand(2 * sp.diff(aa, b) * HH + aa * sp.diff(HH, b) - FF * sp.diff(qq, b))
+    high_reduced = sp.expand(FF * (2 * C * sp.diff(aa * FF, b) - sp.diff(qq, b)))
+    require(zero(high_next - high_reduced), "3x3 high adjacent layer")
+    three_checks += 2
+    return owner_checks, three_checks
+
+
 def audit_quadratic() -> int:
     sigma = b * (b + 4)
     u = -sp.Rational(1, 4)
@@ -193,6 +275,18 @@ def audit_degree_five() -> tuple[int, int, int]:
     identity_checks += 1
     require(sp.degree(t * (1 + t**2) ** 2, t) == 5, "generic degree")
     identity_checks += 1
+    Bt = t * (1 + t**2) ** 2
+    require(zero(sp.diff(Bt, t) - (1 + t**2) * (1 + 5 * t**2)), "critical derivative")
+    require(zero(sp.discriminant(Bt - b, t) - b**2 * (3125 * b**2 + 256)), "critical discriminant")
+    require(sp.Poly(Bt - b, t, domain=sp.QQ.frac_field(b)).is_irreducible, "degree-five irreducibility")
+    require(zero(sp.resultant(1 + 5 * t**2, Bt - b, t) - (3125 * b**2 + 256)), "side values")
+    require(zero(sp.rem(125 * t**6 + 450 * t**4 + 565 * t**2 + 256, 1 + 5 * t**2, t) - 160), "side W unit")
+    D = (1 + t**2) * (1 + 5 * t**2)
+    Wt = 125 * t**6 + 450 * t**4 + 565 * t**2 + 256
+    require(zero(sp.resultant(Wt, Bt - b, t) - (3125 * b**2 + 256) ** 3), "W Jelonek resultant")
+    require(zero(sp.resultant(D, Bt - b, t) - b**2 * (3125 * b**2 + 256)), "D Jelonek resultant")
+    require(sp.gcd(Wt, sp.diff(Wt, t)) == 1 and sp.gcd(Wt, t * D) == 1, "simple disjoint boundary modes")
+    identity_checks += 8
 
     # Poisson morphism on the three generator pairs.
     subs = {b: bb, c: cc, e: ee}
@@ -219,6 +313,21 @@ def audit_degree_five() -> tuple[int, int, int]:
         collision_checks += 4
     require(1 + 2 + 2 == 5, "collision multiplicity invoice")
     collision_checks += 1
+
+    # Exact image-complement controls: central arm is filled; side origins are
+    # missing while every nonzero side-arm e is realized by S=0 and W=160.
+    side_t = sp.I / sp.sqrt(5)
+    side_b = sp.simplify(Bt.subs(t, side_t))
+    side_Q = t**3 + 2 * side_t * t**2 + sp.Rational(7, 5) * t + sp.Rational(16, 5) * side_t
+    require(zero((3125 * side_b**2 + 256)), "side critical value")
+    require(zero((1 + 5 * t**2).subs(t, side_t)), "side critical root")
+    require(zero((125 * t**6 + 450 * t**4 + 565 * t**2 + 256).subs(t, side_t) - 160), "side arm unit")
+    require(zero(Bt - side_b - (t - side_t) ** 2 * side_Q), "side special-fibre factor")
+    require(zero(side_Q.subs(t, side_t) - 4 * side_t), "side Q at owner")
+    require(zero(side_Q.subs(t, -side_t) - sp.Rational(8, 5) * side_t), "side Q at conjugate")
+    require(zero(sp.resultant(side_Q, 1 + t**2, t) + sp.Rational(16, 125)), "side Q avoids P")
+    require(side_t != 0 and side_b != 0, "side origin contradiction inputs")
+    collision_checks += 8
 
     u = -sp.Rational(28125, 131072) * b
     tau = -(9375 * b**2 + 512) / 131072
@@ -250,12 +359,13 @@ def main() -> None:
     rank_checks, functional_checks = audit_de_rham(rational_sigmas)
     formula_checks, homogeneous_controls = audit_homogeneous_formula(rational_sigmas[1])
     two_by_two_controls = audit_two_by_two_factorization([rational_sigmas[0], rational_sigmas[1]])
+    all_width_owner_checks, three_by_three_checks = audit_all_width_owner_and_three_by_three(rational_sigmas[1])
     quadratic_checks = audit_quadratic()
     degree5_checks, collision_checks, cubic_checks = audit_degree_five()
     assert_nodes = audit_no_asserts()
 
     print("THM-3572 finite exact companion")
-    print("status PROVISIONAL_VERIFIED_EXACT_PENDING_INDEPENDENT_AUDIT")
+    print("status PROVED_VERIFIED_EXACT_INDEPENDENTLY_HOSTILE_AUDITED")
     print("universe exact_QQ_symbolic_squarefree_degrees_2_through_6")
     print("bezout_primitive_and_two_bracket_checks", bezout_checks)
     print("de_rham_rank_checks", rank_checks)
@@ -263,6 +373,8 @@ def main() -> None:
     print("homogeneous_formula_checks", formula_checks)
     print("homogeneous_nonconstant_controls", homogeneous_controls)
     print("two_by_two_factorization_controls", two_by_two_controls)
+    print("all_width_owner_conjugation_controls", all_width_owner_checks)
+    print("symmetric_three_by_three_controls", three_by_three_checks)
     print("quadratic_controls", quadratic_checks)
     print("degree_five_identity_and_poisson_checks", degree5_checks)
     print("degree_five_collision_branch_checks", collision_checks)

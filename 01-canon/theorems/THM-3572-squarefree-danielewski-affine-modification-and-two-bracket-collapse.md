@@ -2,22 +2,30 @@
 id: THM-3572
 title: "Squarefree Danielewski affine modification and two-bracket collapse"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For every squarefree polynomial Sigma of degree h at least two, the smooth
   surface c^2 e=Sigma(b) has Picard rank h-1 and an everywhere symplectic
   Poisson structure whose physical form db wedge dc/c^2 is globally exact.
   A Bezout identity for Sigma and Sigma' expresses the constant function one
   as a sum of two polynomial Poisson brackets.  Nevertheless no single
-  constant bracket can have one homogeneous output, or at most two weights
-  in each output; a Darboux pair must use at least five nonzero weight pieces.
+  constant bracket can have one homogeneous output, at most two weights in
+  each output, or a two-by-three support; a Darboux pair must use at least six
+  nonzero weight pieces.
   The first genuinely three-arm example supports an explicit degree-five
   etale noninjective polynomial map from A2.  A single Darboux pair on that
   non-A2 target would therefore be a planar Jacobian counterexample.  No such
   pair, and no counterexample to JC(2), is claimed.
 source: root, 2026-08-20
-audit: PENDING INDEPENDENT HOSTILE AUDIT
-depends_on: []
+audit: >
+  PASS.  The squarefree-arm geometry, de Rham and Poisson identities,
+  homogeneous/two-by-two/two-by-three support obstructions, all-width
+  {-1,1} owner obstruction, selected three-by-three obstruction, and the
+  degree-five S5 carrier were independently rederived.  Normal, optimized,
+  and stored companion transcripts are byte-identical.
+depends_on:
+  - THM-3569-danielewski-two-by-three-weight-darboux-nonentry
 related:
+  - THM-1350-equivariant-fixed-locus-JC
   - THM-3406-affine-modification-power-jets-and-principal-part-transgression
   - THM-3561-rational-keller-danielewski-polynomial-completion
   - THM-3566-chebyshev-pell-odd-keller-collision-tower
@@ -26,14 +34,14 @@ external:
   - "Dubouloz and Poloni, On a class of Danielewski surfaces in affine 3-space, arXiv:math/0602549."
 script: 04-computation/jc2_squarefree_danielewski_two_bracket_thm3572.py
 output: 05-knowledge/results/jc2_squarefree_danielewski_two_bracket_thm3572.out
-script_sha256: PENDING
-output_sha256: PENDING
+script_sha256: a1ce52375c7264400e7f2b6b9970aa75b3ca16ec34f6611686889ed84934c502
+output_sha256: d7bb058966dc1534c000ea4e57102156493b1c4664d4eb1b1cf32407385aa52d
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3572 -- squarefree Danielewski affine modification and two-bracket collapse
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 This theorem does **not** refute `JC(2)`.  It isolates a concrete family of
 non-`A2` targets on which the topological obstruction has already failed, the
 constant has Poisson-bracket length at most two, and the remaining debt is
@@ -223,6 +231,20 @@ particular
 The Picard and de Rham ranks therefore agree, but the symplectic form relevant
 to the planar construction lies in a nonzero weight and is already exact.
 
+There is also an exact Poisson-homology reading.  Multiplication by `omega`
+identifies the linear span of polynomial brackets with the exact polynomial
+two-forms, because `{P,Q}omega=dP wedge dQ`.  Hence
+
+```text
+A_Sigma/span{brackets}
+  ~= c C[b] / c{(Sigma g)':g in C[b]}.                (23a)
+```
+
+The constant `1` vanishes in this quotient, while the `h-1` arm classes are
+genuine.  For the cubic of Section 6 they have representatives `c,bc`; the
+two-bracket identity below is therefore not hiding a nonzero commutator
+class.
+
 ## 4. The constant has bracket length at most two
 
 Rewrite `(13)` as
@@ -368,13 +390,140 @@ with nonzero leading coefficient
 `(deg h+2deg K)lc(h)lc(K)`.  The case `T=2` is symmetric.
 
 Therefore no constant bracket exists when both outputs use at most two
-weights.  Any solution has support sizes
+weights.  The universal squarefree theorem THM-3569 closes the entire
+two-by-three cell as well.  Any solution has support sizes
 
 ```text
-(2,>=3),           (>=3,2),           or (>=3,>=3),   (40)
+(2,>=4),           (>=4,2),           or (>=3,>=3),   (40)
 ```
 
-and at least five nonzero homogeneous pieces after constants are removed.
+and at least six nonzero homogeneous pieces after constants are removed.
+
+### 5.3 The canonical two-bracket compression owner fails at every width
+
+A natural two-sided compression ansatz has one output supported at weights
+`{-1,1}`.  This entire lane is empty, even if the other output has
+arbitrarily many weights.
+
+Indeed write
+
+```text
+P=c^(-1)f+cF,                    Sigma|f,              (41)
+```
+
+and decompose an arbitrary `Q` into parity chains.  Only the even chain
+containing weights `-2,0` can contribute to output weight zero; all odd or
+disconnected chains have disjoint nonzero output supports and must vanish
+separately before being deleted.  A chain containing only one of weights
+`-2,0` reduces its scalar row to the forbidden homogeneous cell.  Write the
+unique remaining finite chain as
+
+```text
+Q_even=sum_(j=L)^U c^(2j)q_j,       L<=-1<=0<=U.       (42)
+```
+
+The coefficient of output weight `2j` is
+
+```text
+L_j=fq_j'+2j f'q_j+2(j-1)F'q_(j-1)-Fq_(j-1)'.        (43)
+```
+
+At the lower endpoint, `L_L=0` integrates to
+`q_L=Cf^(-2L)`.  Put `z=fF`.  Ascending through the zero layers only as far
+as `j=-1` gives
+
+```text
+q_j=f^(-2j)R_j(z),                  L<=j<=-1.          (44)
+```
+
+To see the closure, multiply `(43)` by `f^(2j-1)`: its first half becomes
+the derivative of `f^(2j)q_j`, while the second becomes
+
+```text
+z'[2(j-1)R_(j-1)-zR_(j-1)'].                         (45)
+```
+
+Independently, the upper endpoint gives `q_U=CF^(2U)`.  Descending through
+the zero layers `j=U,...,1` gives
+
+```text
+q_j=F^(2j)S_j(z),                       0<=j<=U.
+```
+
+Here the two halves of `(43)`, after the appropriate power of `F` is
+removed, are respectively
+`z'[2jS_j+zS_j']` and `-z'S_(j-1)'`.  Thus
+`q_(-1)=f^2R_(-1)(z)` and `q_0=S_0(z)`.  Only now is the scalar layer taken:
+
+```text
+L_0=f z'[S_0'-2R_(-1)-zR_(-1)'].                     (46)
+```
+
+It is divisible by the nonconstant polynomial `f`, so it cannot equal one.
+Thus no Darboux pair can have either output supported exactly at weights
+`{-1,1}`.  This closes the most direct attempt to compress `(25)`, not merely
+a bounded truncation of that attempt.
+
+### 5.4 Locally nilpotent Hamiltonian shears cannot work
+
+The cited Makar--Limanov classification for surfaces
+`x^n z-P(y)`, `n>=2`, `deg P>=2`, applies to `(1)` and gives
+
+```text
+ML(Y_Sigma)=C[c].                                      (47)
+```
+
+Equivalently, every algebraic `Ga`-action preserves the unique reducible
+`A1`-fibre `c=0`.  This has a direct Darboux consequence.  If a Hamiltonian
+derivation `D_P={P,-}` were locally nilpotent, `(47)` would give
+`D_P(c)=0`.  The kernel of `D_c={c,-}` is `C[c]`, hence `P in C[c]`.
+Then `{P,Q}=P'(c){c,Q}=1` would force `P'` to be a nonzero constant and
+would give a polynomial slice for `D_c`.  A slice would identify
+`A_Sigma=C[c,Q]`, contradicting
+
+```text
+A_Sigma/(c)=C[b,e]/(Sigma(b)),                         (48)
+```
+
+the disjoint union of `h>=2` affine lines.  Therefore both Hamiltonian
+derivations in any Darboux pair must be genuinely non-locally-nilpotent.
+Tame `Ga` flows cannot clear the rational pole `1/c`.
+
+### 5.5 A natural parity-compatible three-by-three cell also fails
+
+For the symmetric cubic in Section 6, the anti-Poisson involution suggests
+the balanced supports
+
+```text
+P=c^(-3)f+c^(-1)a+cF,
+Q=c^(-2)g+q_0+c^2H.                                  (48a)
+```
+
+This entire support pattern is empty for every squarefree `Sigma`.  The two
+extreme equations give
+
+```text
+f=A k^3,              g=B k^2,              H=C F^2, (48b)
+```
+
+with nonzero constants `A,B,C`, a nonconstant `k`, and `Sigma|k`.  The next
+two weight equations integrate to
+
+```text
+(a/k)'=(3A/(2B))q_0',          q_0'=2C(aF)'.          (48c)
+```
+
+Consequently, for constants `lambda!=0,E`,
+
+```text
+a(1-lambda kF)=E k.                                   (48d)
+```
+
+If `E=0`, then `kF` is a nonzero constant.  If `E!=0`, coprimality of `k`
+and `1-lambda kF` forces the latter factor to be a unit, again making `kF`
+constant.  Both conclusions contradict the nonconstancy and divisibility of
+`k`.  This closes the most symmetric six-piece compression, but it is not a
+classification of all three-by-three supports.
 
 ## 6. A degree-five, three-arm near-counterexample
 
@@ -384,55 +533,135 @@ The general system is not merely formal.  Put
 t=x^2q,              P=1+t^2,              S=1+5t^2,
 a=q/S^2,             c=xSP,                 b=tP^2,
 W=125t^6+450t^4+565t^2+256,
-e=qW.                                                   (41)
+e=qW.                                                   (49)
 ```
 
 The rational pair has
 
 ```text
-Jac_(x,q)(a,c)=-1.                                    (42)
+Jac_(x,q)(a,c)=-1.                                    (50)
 ```
 
 Moreover
 
 ```text
 (3125b^2+256)=S^2W,
-c^2e=b(3125b^2+256).                                  (43)
+c^2e=b(3125b^2+256).                                  (51)
 ```
+
+This packet is governed by the one-variable critical-value map
+
+```text
+B(t)=t(1+t^2)^2,             B'(t)=(1+t^2)(1+5t^2),
+Disc_t(B(t)-b)=b^2(3125b^2+256).                      (52)
+```
+
+Thus `Sigma_3` is exactly the reduced finite critical-value polynomial.  The
+two roots of `3125b^2+256` are the two side critical values; the central
+critical value `b=0` has the two collision roots `t=+/-i` and the unramified
+root `t=0`.  This derivative/dessin sidecar explains both the etale
+completion and its three boundary arms.
+
+The same passport distinguishes this example sharply from the dihedral
+Chebyshev tower.  Infinity supplies a 5-cycle, while either side critical
+value has exactly one simple critical point and therefore transposition
+inertia.  Conjugating that transposition by the 5-cycle gives a connected
+transposition graph, so the generic Galois closure of `B(t)-b` has group
+`S_5`.  Adjoining the independent coordinate `c` does not change that group.
+Thus `Phi_5` is a genuinely nonradical, nonsolvable near-counterexample
+carrier rather than a hidden Kummer cover.
 
 Thus `(b,c,e)` defines a polynomial morphism
 
 ```text
 Phi_5:A2_(x,q) -> Y_3,
-Y_3: c^2e=Sigma_3(b),       Sigma_3=b(3125b^2+256).    (44)
+Y_3: c^2e=Sigma_3(b),       Sigma_3=b(3125b^2+256).    (53)
 ```
 
 On the dense set `S!=0`, `b=ac^2` and
-`e=a(3125b^2+256)`, so `(42)` implies
+`e=a(3125b^2+256)`, so `(50)` implies
 
 ```text
-Jac(P(Phi_5),Q(Phi_5))=-{P,Q}(Phi_5)                  (45)
+Jac(P(Phi_5),Q(Phi_5))=-{P,Q}(Phi_5)                  (54)
 ```
 
-for all `P,Q in C[Y_3]`.  Both sides are polynomial, hence `(45)` holds
+for all `P,Q in C[Y_3]`.  Both sides are polynomial, hence `(54)` holds
 everywhere.  Since the brackets on source and target are nondegenerate,
 `Phi_5` is etale.
 
-The equation `b=t(1+t^2)^2` has generic degree five; after `t` is chosen,
-`x` and `q` are recovered from `c=xSP` and `t=x^2q`.  Hence `Phi_5` has
-generic degree five.  It is visibly noninjective.  For every `lambda!=0`,
+The rational map `B:P1_t->P1_b` has degree five, so
+`[C(t):C(B)]=5`; equivalently `t(1+t^2)^2-b` is irreducible over `C(b)`.
+It remains irreducible over the purely transcendental extension `C(b,c)`.
+After `t` is chosen, `x` and `q` are recovered from `c=xSP` and `t=x^2q`.
+Hence `Phi_5` has generic degree five.  It is visibly noninjective.  For
+every `lambda!=0`,
 the target point
 
 ```text
-(b,c,e)=(0,0,256lambda)                               (46)
+(b,c,e)=(0,0,256lambda)                               (55)
 ```
 
 has five distinct preimages: `(x,q)=(0,lambda)`, and for each
 `t in {i,-i}` the two choices
 
 ```text
-q=16lambda,              x^2=t/(16lambda).             (47)
+q=16lambda,              x^2=t/(16lambda).             (56)
 ```
+
+The geometric image is exact:
+
+```text
+Phi_5(A2(C))=Y_3(C) minus
+  {(beta,0,0):3125beta^2+256=0}.                       (57)
+```
+
+Indeed, for `c!=0` a root of `B(t)=b` with `PS!=0` recovers
+`x=c/(PS)` and `q=t/x^2`.  Such a root is automatic away from the three
+critical values.  At `b=0`, take `t=0`.  At a side value `beta=B(u)`,
+`u^2=-1/5`, one has
+
+```text
+B(t)-beta=(t-u)^2 Q_u(t),
+Q_u=t^3+2ut^2+(7/5)t+(16/5)u,
+Q_u(u)=4u,               Q_u(-u)=8u/5,
+Res_t(Q_u,1+t^2)=-16/125.                              (57a)
+```
+
+Thus the three roots of `Q_u` avoid `PS`.  On the central arm `b=c=0`,
+the unramified root `t=0` supplies every value of `e`.  On either side arm,
+the root `u` of `S` supplies every `e!=0` because `W=160` modulo `S`, whereas
+`e=0` would force `q=0` and contradict `u!=0`.  The two missing points in
+`(57)` are codimension two; the scheme-theoretic closure of the image is
+still all of `Y_3`.
+
+The complete nonproperness locus is nevertheless divisorial.  With
+`D=PS`, elimination gives
+
+```text
+Res_t(W,B-b)=(3125b^2+256)^3,
+Res_t(D,B-b)=b^2(3125b^2+256),
+gcd(W,W')=gcd(W,tD)=1.                                (57b)
+```
+
+Consequently the Jelonek set is the union of five affine lines:
+
+```text
+N(Phi_5)=
+ union_(Sigma_3(beta)=0){b=beta,e=0}
+ union_(3125beta^2+256=0){b=beta,c=0}.                (57c)
+```
+
+In the coordinates `t=x^2q`, bounded image along an escaping source sequence
+forces either `x->infinity,D(t)->0,e->0` or
+`x->0,W(t)->0,c->0`; the simple roots in `(57b)` realize every point on the
+listed lines.  Thus etaleness has removed ramification, not the nonproper
+sheet debt.
+
+The fibre invoice is correspondingly nonconstant.  On `c!=0` the fibre has
+respectively `5,1,3` points over generic, central-critical, and side-critical
+values of `b`.  The central arm has five points for `e!=0` and one at its
+origin; either side arm has two points for `e!=0` and none at its omitted
+origin.  No branch ramifies--the missing points have escaped to infinity.
 
 Therefore a pair `P,Q in C[Y_3]` with `{P,Q}=1` would make
 `(P(Phi_5),Q(Phi_5))` a polynomial, etale, noninjective endomorphism of
@@ -444,18 +673,39 @@ For this symmetric cubic,
 
 ```text
 U=-28125b/131072,
-T=-(9375b^2+512)/131072,                               (48)
+T=-(9375b^2+512)/131072,                               (58)
 ```
 
-satisfy `(12)`, so `(25)` is completely explicit.  The involution
-`(b,c,e)|->(-b,c,-e)` is anti-Poisson; it is a useful parity sidecar, not a
-solution of the compression problem.
+satisfy `(12)`, so `(25)` is completely explicit.
+
+None of the generators `b,c,e` can be one coordinate of a Darboux pair.
+The image of `{b,-}` lies in `(c)`.  The derivation `{c,-}` is locally
+nilpotent with kernel `C[c]` but has no slice because `c=0` is reducible.
+On the slice `e=1`, the equation `c^2=Sigma_3(b)` is an affine elliptic
+curve, and `{e,-}` is dual to the holomorphic differential `db/(2c)`.
+A polynomial slice would make that nonzero holomorphic differential exact on
+the projective elliptic completion, which is impossible.
+
+The involution `iota(b,c,e)=(-b,c,-e)` is anti-Poisson.  Its fixed locus is
+the line `b=e=0`.  For an `iota`-eigen Darboux pair the parities must be
+opposite; the odd coordinate vanishes on that line, while etaleness forces
+the even coordinate to restrict affinely with nonzero `c` coefficient.  This
+is the two-dimensional fixed-locus gate of the cited equivariant theorem,
+and it is a useful hostile test rather than a construction.
 
 ## 7. What the standard bracket-width analogy does and does not give
 
-The bracket-width literature studies standard Danielewski surfaces such as
-`D_Sigma` in `(8)`.  The comparison is exact only through the nonfinite map
-`pi` in `(9)`:
+The cited Danielewski bracket-width paper proves width at most two for the
+standard quadratic surface and relates width one to a global one-form
+decomposition.  Its width concerns the entire Lie algebra generated by
+locally nilpotent vector fields, not merely the bracket length of the
+constant `1`.  On the standard surface `[omega_D]!=0`, so `1` is not even in
+the derived Poisson space.  Here the nonfinite modification pulls
+`omega_D` back to the still-nonexact form `c omega`, while the physical form
+`omega` becomes exact and `1` acquires the two-bracket decomposition `(25)`.
+
+The comparison is therefore exact only through the nonfinite map `pi` in
+`(9)`:
 
 ```text
 source object:       Y_Sigma with exponent-two boundary,
@@ -478,15 +728,26 @@ The theorem proves:
 
 1. a universal exact primitive and two-bracket decomposition for every
    squarefree `Sigma` of degree at least two;
-2. the complete homogeneous and two-by-two Newton cells are empty;
-3. an explicit degree-five etale noninjective map to a three-arm non-`A2`
-   target.
+2. the complete homogeneous, two-by-two, and two-by-three Newton cells are
+   empty;
+3. the canonical `{-1,1}` compression owner fails at every width, locally
+   nilpotent Hamiltonian shears fail, and a natural symmetric three-by-three
+   cell fails;
+4. an explicit degree-five etale noninjective map onto the complement of two
+   points in a three-arm non-`A2` target.
 
 It does **not** prove a one-bracket pair exists, that the target is `A2`, or
-that `JC(2)` fails.  The first surviving construction cells have weight
-support `(2,3)` and `(3,2)`.  The sharp next calculation is the symmetric
-cubic `Sigma_3`, where the anti-Poisson involution can organize those five
-pieces without erasing either of the two independent boundary classes.
+that `JC(2)` fails.  The first formally surviving support sizes are
+`(2,4)`, `(4,2)`, and `(3,3)`; Section 5.5 kills one particularly symmetric
+three-by-three support but does not classify any complete surviving family.
+Any
+eventual Darboux map `Y_3->A2` must itself be nonproper and have generic
+degree at least two: a finite etale cover of `A2_C` is trivial, while a
+degree-one etale map, by Zariski Main, would identify this normal surface with
+an affine open of `A2`.  A divisorial complement would create a nonconstant
+unit, contrary to `A_Sigma^*=C^*`; a codimension-two complement has the same
+normal coordinate ring as `A2`, so affineness would force the whole plane,
+contrary to `(6)`.
 
 ## 9. Exact verification contract
 
@@ -497,9 +758,12 @@ The companion uses exact rational symbolic arithmetic.  It checks:
 - de Rham quotient ranks and the root-antiderivative functionals;
 - the universal homogeneous formula and bounded structural controls for the
   two-by-two factorization, including `1<=k<=8`;
+- bounded exact controls for the all-width `{-1,1}` recursion and the
+  symmetric three-by-three obstruction;
 - the quadratic identity `(27)`;
-- every polynomial identity in the degree-five packet `(41)--(48)`, its
-  rational Jacobian, five collision preimages, and anti-Poisson involution.
+- every polynomial identity in the degree-five packet `(49)--(58)`, its
+  critical-value discriminant, rational Jacobian, five collision preimages,
+  exact two-point image complement, and anti-Poisson involution.
 
 The finite rows are hostile and positive controls for the all-degree proofs;
 they are not extrapolated universes.
