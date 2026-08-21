@@ -1,0 +1,22 @@
+THM-3604 exact companion -- provisional compiler multiarm pencil floor
+scope=finite exact controls; every-line, Pade, and planar composite inputs are proof-driven
+SECTION integer multiarm and leading-c invoices
+PASS invoice_rows=35 n=2..6 h=2..8
+SECTION sharp e^r Hermite-Pade controls
+PASS sharp_power_rows=60 equality=d_a/(arm degree)=h
+SECTION nodal (2,3) arm boundary and target-GL2 hostiles
+PASS nodal_GL2_rows=48 arm_degrees=2,3 immersed_noninjective
+SECTION global nodal lifts and zero-Jacobian warning
+PASS global_nodal_rows=12 exact_floors=2h,3h warning=Jacobian_zero
+SECTION total-degree/composite arithmetic separation
+PASS composite_floor_rows=55 n=2..6 h=2..12
+SECTION A13 specialization
+PASS A13 h=3 a_floors=6,9 leading_c_orders=12,18 total_floors=18,27
+SECTION consequence ledger
+every-line=each completed target direction has central-arm degree>=2; each basis max>=3
+multiarm=Pade descent multiplies arm degree by h; the leading-c tariff adds to total degree
+planar=central chart is a nonautomorphic Keller map, so total degrees are composite>=6
+sharp=e^r and nodal (2,3) attain invoices but the displayed nodal lift has Jacobian zero
+nonconsequence=no global Darboux pair and no JC(2) counterexample is constructed
+CHECKS=1849
+FINAL PASS -- THM-3604 finite exact controls
