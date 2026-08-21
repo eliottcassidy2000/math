@@ -2,8 +2,8 @@
 id: THM-3625
 title: "LRC point-by-branch split four-character address algebra"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + FINITE-EXACT + VERIFIED-EXACT /
-  PENDING INDEPENDENT HOSTILE AUDIT.  The thirteen point-by-branch address
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  The thirteen point-by-branch address
   operators above THM-3615 are invertible and span a commutative, unital,
   product-closed four-dimensional algebra isomorphic to F_p^4.  Its action on
   the six-point module has character multiplicities 2,1,1,2.  The inherited
@@ -13,11 +13,12 @@ status: >
   characteristic-zero transfer, row exclusion, or LRC(14) result is claimed.
 source: kps-s189 / THM-3615 destroyed-address-sidecar continuation, 2026-08-21
 audit: >
-  PENDING -- author exact reconstruction passed the parent pins, all 13
-  address ranks, 169 commutators, product closure, Fourier and reversal
-  controls, cyclic minimal polynomial, split-character decomposition,
-  inherited-flag intersections, multiplicity obstruction, and semantic
-  digest.  Independent hostile reconstruction remains required.
+  PASS -- an independent clean-room reconstruction recovered all thirteen
+  addresses, their sum, ranks, commutators and products, built independent
+  Lagrange spectral projectors, exhausted all sixteen spectral kernel/image
+  patterns, reconstructed the inherited flags and Fourier/reversal atlases,
+  and matched every pinned digest.  Normal and optimized runs execute all 39
+  gates and agree byte-for-byte with the stored transcript.
 depends_on:
   - THM-3615-lrc-pointed-root-difference-lift-flag
 related:
@@ -33,8 +34,8 @@ hash_basis: LF-normalized bytes for files; canonical JSON for semantic ledger
 
 # THM-3625 -- LRC point-by-branch split four-character address algebra
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + FINITE-EXACT + VERIFIED-EXACT /
-PENDING INDEPENDENT HOSTILE AUDIT.**  This restores the branch address that
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+This restores the branch address that
 THM-3615 deliberately summed away.  It identifies both the structure gained
 and the exact multiplicity information still missing.
 
@@ -242,4 +243,4 @@ is narrower and useful: the missing LRC observable must act non-scalarly on a
 doubled character block, so another commutative branch-address statistic is
 provably insufficient.
 
-Independent hostile audit remains the promotion gate.
+The independent hostile audit closes the promotion gate.  **QED.**
