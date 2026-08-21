@@ -1,0 +1,24 @@
+THM-3638 exact companion -- tangent-rank-one second-stable debt
+status=PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
+SECTION stable expansion
+PASS stable_coefficients=J0,J1,J2
+SECTION compiler and retained jets
+PASS tangents=tau_c,tau_z verticals=n_c,n_z lambda_annihilator=true
+PASS ordinary_triple_determinants=(39,15,54)
+SECTION graph-ideal representative invariance
+PASS ker_gamma_at_ordinary_triple subset m^3
+SECTION normalized rank-one Hessian invoice
+PASS J0prime forces ucc=-3bc-3658/585 ucz=7/4-3bz/2 uzz=58/65
+PASS lambda_J2=-2072/81 independent_of_bc_bz_and_higher_lifts=true
+PASS hostile_vertical_derivative_mutation=-4129/162
+SECTION unnormalized shear-covariance cross-check
+PASS unnormalized_factor=J0compatibility*(-8/27) around -2072/81
+SECTION actual-ring rank-one t0 control
+PASS actual_U=c actual_V=z^2 cutoff101_ranks=(122,123)
+PASS cutoff102_ranks=(124,124) unique_AB_degrees=(93,102)
+PASS actual_AB_hashes=a17fb9620b7d... d43b93e89fcf...
+PASS minimal_actual_witness_J1=LOCAL_FAIL mismatch_hash=a48a97b7b9d...
+SECTION source AST gate
+PASS ast_assertion_nodes=0
+CHECKS=44
+RESULT=PASS
