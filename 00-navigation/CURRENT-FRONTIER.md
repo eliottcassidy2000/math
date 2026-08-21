@@ -347,8 +347,8 @@ is sharp: equal counts allow two densities or none.
   [3562](../01-canon/theorems/THM-3562-balanced-resonant-pole-unit-lagrange-nonentry.md)
   closes balanced nonsplit passports. [3563](../01-canon/theorems/THM-3563-nongraph-conductor-node-cycle-keller-obstruction.md)
   closes all target projections on one nongraph slice by a three-node cycle.
-  THM-3564/65 classify graph factors: `d=1` is the h-family and quadratics
-  are irreducible. 3495--3542 packets reach `R8`, with index zero to level 4.
+  THM-3564/65 classify graph factors (`d=1`: h-family; quadratics irreducible);
+  THM-3568 excludes all h-factors. 3495--3542 packets reach `R8`/index 4.
   2681/85--2708
   block the `A4/S4` cubic; 3448/3517 leave quartic `C3` open (MISTAKE-416).
   3440/43/50 and 3064/66/68 deny lawful LRC/Keller amplitude transport but

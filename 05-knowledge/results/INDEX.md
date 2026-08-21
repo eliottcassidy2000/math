@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jacobian_reducible_graph_component_euler_no_go_kps_s188.py` -> matching
+  `.out` [THM-3568 PROVED + VERIFIED-EXACT].  In THM-3565's complete
+  reducible `deg_a(phi)=1` family, the degree-one component is
+  `A2 minus V(3ah^2-bh+1)` and has a nonconstant unit.  If `rho,mu,nu` are
+  the reduced root counts of `h`, `(bh)^2-2bh+4`, and `bh-2`, the irreducible
+  degree-two component has Euler characteristic `-3+3rho+2mu+nu`: exactly
+  `2` for constant `h` and at least `5` otherwise.  Thus neither factor is
+  `A2`, closing every factor-bearing first-resonance graph.  A repeated-root
+  hostile confirms support rather than multiplicity counting.  Normal/`-O`
+  replay matches.  Script/output LF SHA-256:
+  `e281372c6a6c3ee1a7689288847d44a032b152aebf5e20def393cb7289e72b52` /
+  `77845935c7a5414e9d90d77aef7858670f34518607d7b55e6fc78910019499d7`.
+
 - `jacobian_resonant_linear_a_factor_classification_kps_s188.py` -> matching
   `.out` [THM-3565 PROVED + VERIFIED-EXACT].  For `deg_a(phi)=1`, a triangular
   target-graph pullback is reducible iff
