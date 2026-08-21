@@ -2,13 +2,22 @@
 id: THM-3646
 title: "Berggren fixed-107 Mordell rank exactly three"
 status: >
-  PROVED + CITED + FINITE-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + CITED + FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The Mordell curve y^2=x^3+1225041 has rational rank exactly three.
   The lower bound uses an explicit third point and three finite reductions;
   the upper bound applies Bandini's explicit 3-isogeny Selmer-support theorem
   with exact class numbers 137 and 1.  No integral-point classification is
   claimed.
 source: kps-s189 / 3-isogeny descent frontier, 2026-08-21
+audit: >
+  PASS -- an independent reconstruction checked the generic isogeny
+  identities and rational kernels, the three finite-reduction equations and
+  determinant, the 137 reduced forms by both form enumeration and an analytic
+  character sum, every Bandini support substitution and norm-kernel bound,
+  and the exact third point.  A second proof path uses the forward Selmer
+  bound together with Cassels's correctly oriented ratio c(phi)=1/3; it makes
+  the real class-number-one input redundant but confirms the same upper
+  bound.  No Mordell--Weil basis or integral-point completeness was inferred.
 depends_on:
   - THM-3620-berggren-fixed-107-mordell-rank-two-and-local-collision
   - THM-3643-berggren-fixed107-real-quadratic-class-number-one
@@ -24,7 +33,7 @@ hash_basis: raw LF bytes for files; canonical JSON for semantic ledger
 
 # THM-3646 -- fixed-`107` Mordell rank exactly three
 
-**PROVED + CITED + FINITE-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  Put
+**PROVED + CITED + FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Put
 
 ```text
 B=107^3-2=1225041=3*408347,
