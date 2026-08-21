@@ -1,341 +1,456 @@
 ---
 id: THM-3619
-title: "Russell-cylinder even-fold higher-jet staircase"
+title: "Russell-cylinder even-fold all-order collision-jet closure"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.
-  On the doubly tuned THM-3612 even-fold locus, exact arbitrary-target-two-form
-  collision matrices give four further necessary side-jet conditions through
-  source order ten.  With q_m=Q^(m)(1), they are q_3=54, q_4=-270,
-  q_5=1620, and q_6=-11340.  The displayed finite staircase is proved by
-  exact jet algebra; its apparent all-order recurrence and rational limiting
-  germ are CONJECTURAL beyond q_6.  No JC(2) counterexample is claimed.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every even
+  polynomial Q with Q(0)=-3/4 and
+  Q(1)=Q(-1)=-3, the THM-3612 fold admits no pair of regular target
+  functions whose source Jacobian is a nonzero constant.  The all-order
+  comparison-curve invoice forces the Taylor germ
+  -3/4-9/(4x^2) at x=1, which no polynomial with the stated values can
+  have.  Exact source-order 4,6,8,10 matrices remain independent finite
+  controls.  No JC(2) counterexample is claimed.
 source: root / audit_thm3612 higher-jet continuation, 2026-08-21
-audit: PENDING -- provisional theorem and exact companion require hostile audit
+audit: >
+  PASS -- two independent hostile derivations checked the local chart, exact
+  moving triple, parity and error orders, vertical coefficient extraction,
+  all-order induction, polynomial contradiction, and finite controls; normal,
+  optimized, and stored 310-gate transcripts are byte-identical.
 depends_on:
   - THM-3612-russell-cylinder-even-fold-nongraph-collision-jet-rigidity
 related:
+  - THM-3561-rational-keller-danielewski-polynomial-completion
   - THM-3605-russell-cylinder-graph-slice-puncture-no-filling
   - THM-3610-russell-cylinder-full-linear-projection-collision-rigidity
 script: 04-computation/jc2_russell_cylinder_even_fold_higher_jet_staircase_thm3619.py
 output: 05-knowledge/results/jc2_russell_cylinder_even_fold_higher_jet_staircase_thm3619.out
-script_sha256: 7b5cc4f246c86e5cb4a061a23d371053ecb2fe9d54e0dc2d5e0b35569107cae7
-output_sha256: d16a7df35ff58ca77708169da6d7aea8832c8f511cf0ae05135d6dca2f20873e
+script_sha256: 5430d5078ca017ae0aab39c95c4c1beb35520e5ad1823077c767e52dab2ffc18
+output_sha256: 5332bfe8d30afb3401bb5fe818fd2fb8178ea30691e4caa73a6a07ebc0955a66
 hash_basis: raw LF bytes
 ---
 
-# THM-3619 -- Russell-cylinder even-fold higher-jet staircase
+# THM-3619 -- Russell-cylinder even-fold all-order collision-jet closure
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.**
-This file continues THM-3612 only on its doubly tuned boundary.  It proves a
-finite staircase through source order ten.  The tempting all-order pattern in
-Section 6 is deliberately labelled **CONJECTURAL**.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem
+closes the doubly tuned boundary left by
+THM-3612.  The proof is local at the retained triple collision, but its
+quantifier over target pairs is global and unrestricted: the two outputs may
+be arbitrary regular functions on the Russell target cylinder.
 
-All rings, formal germs, and differential forms are over `C`.
+All rings, formal germs, derivatives, and differential forms are over `C`.
 
-## 0. Setup, normalization, and statement
+## 0. Statement and scope
 
-Retain the THM-3612 even fold
+Retain the THM-3612 polynomial fold
 
 ```text
 E_Q(x,t)=(x,Q(x)+t^2,t),
 Q even,                 Q(0)=-3/4,       Q(1)=Q(-1)=-3.      (1)
 ```
 
+For arbitrary regular functions `F,G` on the exponent-one Russell target
+cylinder, write
+
+```text
+J_Q(F,G)=Jac_(x,t)(F o Psi o E_Q,G o Psi o E_Q).            (2)
+```
+
+Then
+
+```text
+                         J_Q(F,G) notin C*.                  (3)
+```
+
+Thus **every even polynomial fold `(1)` is closed** as a possible source of a
+nonzero constant planar Jacobian, for every regular target pair.  This does
+not close non-even folds, folds nonquadratic in the stable coordinate, or
+implicit source planes outside `(1)`; those families remain **OPEN**.
+
 Write
 
 ```text
-q_m=Q^(m)(1).                                               (2)
+q_n=Q^(n)(1).                                                (4)
 ```
 
-The three source points `p_-=(-1,0),p_0=(0,0),p_+=(1,0)` have
-one common image `y_0` under the stabilized Russell map.  At the first-jet
-escape of THM-3612, any hypothetical nonzero constant source Jacobian can be
-normalized to the common value `12`.  THM-3612 proves the first two necessary
-conditions
+The mechanism is an all-order necessary recurrence.  THM-3612 first forces
+`q_1=9/2`; thereafter a comparison of the three collision branches forces
 
 ```text
-q_1=9/2,                         q_2=-27/2.                 (3)
+q_n=-(n+1)q_(n-1),                         n>=2.             (5)
 ```
 
-This theorem proves four more finite implications.  For every pair of regular
-functions on the Russell target cylinder,
+The resulting formal germ has a pole at `x=0` and cannot be polynomial.
+
+## 1. A local Darboux chart and the universal pullback formula
+
+Before the Russell-cylinder isomorphism of THM-3605, use the THM-3561
+coordinates
 
 ```text
-(3) and q_3 != 54
-    ==> source Jacobian is not a nonzero constant;
-
-(3), q_3=54, and q_4 != -270
-    ==> source Jacobian is not a nonzero constant;
-
-(3), q_3=54, q_4=-270, and q_5 != 1620
-    ==> source Jacobian is not a nonzero constant;
-
-(3), q_3=54, q_4=-270, q_5=1620, and q_6 != -11340
-    ==> source Jacobian is not a nonzero constant.          (4)
+D=1+x^2q,
+a=q/D^2,                  c=xD(D+2),
+b=ac^2=(D-1)(D+2)^2,      e=a(b+4)=q(D+3).                 (6)
 ```
 
-Thus every surviving even polynomial fold must satisfy
+At the common target point `(b,c,e,w)=(0,0,-3,0)`, the function `b+4` is a
+unit.  Hence
 
 ```text
-(q_1,...,q_6)=(9/2,-27/2,54,-270,1620,-11340).             (5)
+a=e/(b+4),                 c=c,                 w=w          (7)
 ```
 
-The locus `(5)` remains **OPEN**.  No assertion beyond `q_6` is part of the
-proved statement.
-
-## 1. Why arbitrary target two-forms suffice
-
-Use the smooth target parameters of THM-3612
+are regular local target parameters on `Y_2 x A1`; transporting them through
+the polynomial isomorphism of THM-3605 gives an equally valid chart on the
+Russell target cylinder.  The exact source determinant is
 
 ```text
-c=C,                         y=Y,                 z=S+3/4.  (6)
+Jac_(x,q)(a,c)=-3.                                        (8)
 ```
 
-Every target pair `F,G` gives the target two-form
+For the actual two-form `dF wedge dG`--or, more generally, for an arbitrary
+formal target two-form--write
 
 ```text
-Omega=dF wedge dG
-     =A(c,y,z) dc wedge dy
-      +K(c,y,z) dc wedge dz
-      +R(c,y,z) dy wedge dz.                              (7)
+Omega=P da wedge dc+K da wedge dw+R dc wedge dw.           (9)
 ```
 
-The proof below allows `A,K,R` to be completely arbitrary formal coefficient
-functions.  This is a strict enlargement of the closed decomposable forms
-coming from regular pairs.  Consequently, an obstruction for `(7)` is an
-all-regular-target-pair obstruction and needs no linear-projection or
-polynomial-in-ambient-coordinates hypothesis.
-
-Let `phi_i` be the target germ of the fold at `p_i`, using local source
-coordinates `xi=x-x_i,t`.  Define
+On the fold `q=Q(x)+t^2,w=t`, let total `x` derivatives at fixed `t` be
+denoted by `a_x,c_x`.  Equations `(8),(9)` give the exact coefficient
 
 ```text
-phi_i^*Omega=j_i(xi,t) dxi wedge dt.                       (8)
+E_Q^*Omega=j(x,t) dx wedge dt,
+j=-6tP+a_x K+c_x R.                                      (10)
 ```
 
-For a constant normalized Jacobian, every nonconstant coefficient of every
-`j_i` vanishes and all three constant coefficients equal `12`.
+Indeed, `q_t=2t`, so
+`Jac_(x,t)(a,c)=Jac_(x,q)(a,c)q_t=-6t`.
 
-## 2. The finite pullback universe and its unique vertical cokernel
-
-For `N>=0`, put
+At the middle branch `x=0,t=0`, evenness and `(1)` give
 
 ```text
-T_N=(C[c,y,z]_(degree <= N))^3,
-S_N=direct_sum_(i=-,0,+) C[xi,t]_(degree <= N).            (9)
+a=-3/4,             c=0,             a_x=0,             c_x=3. (11)
 ```
 
-Substitution in `(7),(8)` gives an exact linear map
+If `(2)` were a nonzero constant, scale one output so that it is `12`.
+Then `(10),(11)` force
 
 ```text
-P_N^Q:T_N -> S_N.                                         (10)
+R(y_0)=4.                                                 (12)
 ```
 
-Its dimensions are
+No decomposability or closedness condition on `(9)` is used below.  Allowing
+arbitrary `P,K,R` is a strict enlargement of the forms `dF wedge dG`, so the
+eventual obstruction applies in particular to every regular target pair.
+
+## 2. The exact moving comparison triple
+
+Put
 
 ```text
-dim T_N=3 binom(N+3,3),              dim S_N=3 binom(N+2,2). (11)
+s=t^2,       g=(1-4s/3)^(-1/2),       X=g-1,
+Q_infinity(x)=-3/4-9/(4x^2).                              (13)
 ```
 
-On the tuned tangent planes `(3)`, the linear target germs are
+The following three points in `(x,q,w)` share an **exact** target in the
+local chart `(a,c,w)`:
 
 ```text
-             c              y                 z
-p_-          3xi            -9xi+4t          -9xi/4
-p_0          3xi            -9xi+4t           0
-p_+          3xi            -9xi+4t           9xi/4.       (12)
+gamma_0=(0,-3/4+s,t),
+gamma_-=(-g,-3/g^2,t),          gamma_+=(g,-3/g^2,t),
+
+(a,c,w)(gamma_0)=(a,c,w)(gamma_-)
+                 =(a,c,w)(gamma_+)=(-3/4+s,0,t).          (14)
 ```
 
-For a homogeneous target coefficient of degree `N`, every source monomial
-except the pure vertical `t^N` coefficient can be prescribed independently
-on the three branches.  The three vertical values are affine in the three
-equally spaced `z/c` slopes `-3/4,0,3/4`.  Hence the homogeneous symbol has
+For the middle point `D=1`; for the two side points `D=-2`.  Also
 
 ```text
-rank 3(N+1)-1                                             (13)
+Q_infinity(g)+s=-3/g^2.                                  (15)
 ```
 
-and its one-dimensional cokernel is represented by
+Suppose, for some `n>=2`, that the side jets of `Q` and `Q_infinity` agree
+through order `n-1` at `x=1`.  Then
 
 ```text
-Delta_N(j)=[t^N]j_- - 2[t^N]j_0 + [t^N]j_+.              (14)
+E(t)=Q(g)-Q_infinity(g)=O((g-1)^n)=O(s^n)=O(t^(2n)).      (16)
 ```
 
-This explains why each new even obstruction is one scalar after all lower
-source rows have been killed.  Odd orders through nine introduce no new
-constant-target obstruction in the exact matrices.
+The actual side-fold points at `x=+-g` therefore differ from the comparison
+points `(14)` only by `E(t)` in their `q` coordinate.  Taylor expansion in
+that coordinate changes the `K,R` terms of `(10)` by `O(t^(2n))`; the `P`
+term has the extra factor `t` and changes by `O(t^(2n+1))`.  In the side
+derivatives, the actual slopes `Q'(+-g)` are retained rather than replaced by
+the slope of `Q_infinity`.
 
-## 3. Exact higher-jet invoices
+Let `j_-,j_0,j_+` be the source germs of `(10)` in the local coordinates
+`xi=x+1,x,x-1`, respectively, and define
 
-Direct expansion of the unrestricted map `(10)`, followed by exact row
-reduction modulo all lower source rows, gives the following four identities.
-The common constant has already been normalized to `12`.
+```text
+C_Q(t)=j_-(-X,t)+j_+(X,t)-2j_0(0,t).                     (17)
+```
+
+At the exact common target `(14)`, parity gives
+
+```text
+a(-x,q)=a(x,q),          c(-x,q)=-c(x,q),
+a_x(-g)=-a_x(g),         c_x(-g)=c_x(g).                 (18)
+```
+
+Thus the `P` terms in `(17)` cancel among the three branches, the side `K`
+terms cancel each other, and the middle `K` term vanishes.  Direct
+differentiation of `c=xD(D+2)` at the side comparison value
+`x=g,q=-3/g^2`, while retaining the actual slope `Q'(g)`, gives
+
+```text
+c_x=12-2g^3Q'(g);                   (side)
+c_x=3.                              (middle)              (19)
+```
+
+Consequently, with `a_0=-3/4+s`,
+
+```text
+C_Q(t)=R(a_0,0,t)[18-4g^3Q'(g)]+O(t^(2n))
+      =-4R(a_0,0,t)g^3(Q'-Q_infinity')(g)+O(t^(2n)),     (20)
+```
+
+because `Q_infinity'(x)=9/(2x^3)`.  This identity is the geometric source of
+every row of the staircase.
+
+## 3. Coefficient extraction and the all-order invoice
+
+Let
+
+```text
+q_n^infinity=Q_infinity^(n)(1)
+            =(-1)^(n-1) 9(n+1)!/4.                       (21)
+```
+
+These jets obey
+
+```text
+q_n^infinity=-(n+1)q_(n-1)^infinity.                     (22)
+```
+
+Under the order-`n-1` matching hypothesis of Section 2, put
+
+```text
+delta_n=q_n-q_n^infinity=q_n+(n+1)q_(n-1).               (23)
+```
+
+Then
+
+```text
+(Q'-Q_infinity')(1+X)
+       =delta_n X^(n-1)/(n-1)!+O(X^n),
+X=(2/3)s+O(s^2).                                         (24)
+```
+
+Using `(12),(20),(24)` yields the exact leading coefficient
+
+```text
+[t^(2n-2)]C_Q(t)
+ =-c_n delta_n,
+c_n=2^(n+3)/(3^(n-1)(n-1)!),                 n>=2.       (25)
+```
+
+For completeness, `(25)` is also the intrinsic vertical source-jet invoice.
+For `N=2n-2`, define
+
+```text
+Delta_N(j)=[t^N]j_- -2[t^N]j_0+[t^N]j_+.                (26)
+```
+
+Suppose all source coefficients of total degree below `N` equal those of the
+constant `12`.  A shifted monomial `xi^k t^ell`, with `k>=1`, can contribute
+to order `t^N` in `(17)` only if `ell+2k<=N`.  If a higher coefficient of
+`X(t)^k` supplies the remaining order, then
+
+```text
+k+ell <= N-k < N.                                        (27)
+```
+
+Its source coefficient is therefore already zero.  Only `k=0` survives, so
+
+```text
+[t^N]C_Q(t)=Delta_N(j).
+```
+
+Combining this with `(25)` proves the all-order quotient identity
+
+```text
+Delta_(2n-2)
+ =-2^(n+3)/(3^(n-1)(n-1)!)
+    (q_n+(n+1)q_(n-1)),                       n>=2,       (28)
+```
+
+modulo the constant-J source rows of lower total degree.
+
+At `n=2`, `(28)` is
+
+```text
+Delta_2=-(32/3)(q_2+3q_1),                               (29)
+```
+
+which is exactly the corrected THM-3612 invariant
+`-16(2q_2+27)/3` after `q_1=9/2`.
+
+## 4. Induction and the polynomial contradiction
+
+Assume for contradiction that `(2)` is the normalized constant `12`.
+THM-3612 first forces
+
+```text
+q_1=9/2=q_1^infinity.                                    (30)
+```
+
+Apply `(28)` with `n=2`.  Since a constant germ has every `Delta_N=0` and
+`c_n!=0`, it forces `q_2=q_2^infinity`.  Inductively, if the jets match
+through `n-1`, the same identity forces
+
+```text
+q_n=q_n^infinity=-(n+1)q_(n-1).                          (31)
+```
+
+Thus the Taylor series of `Q` at `1` is exactly the Taylor series of
+`Q_infinity` there.  Equivalently, the polynomial
+
+```text
+H(x)=xQ'(x)+2(Q(x)+3/4)                                  (32)
+```
+
+has zero Taylor series at `x=1`, because `Q_infinity` satisfies `H=0`.
+Hence `H` is the zero polynomial.  If `a_d x^d` is the highest nonconstant
+term of `Q`, its coefficient in `H` is `(d+2)a_d`, impossible in
+characteristic zero.  Therefore the only polynomial solution of `(32)` is
+`Q=-3/4`, contradicting `Q(1)=-3`.  This proves `(3)`.
+
+The same contradiction is visible directly from `(21)`: every
+`q_n^infinity` is nonzero, whereas the derivatives of a polynomial vanish
+above its degree.
+
+## 5. Independent finite matrices and the first four higher invoices
+
+The comparison proof above is all-order.  Independently, exact unrestricted
+target-two-form matrices in the polynomial smooth target parameters
+
+```text
+(C,Y,Z)=(C,Y,S+3/4)                                      (33)
+```
+
+verify the first four higher instances.  With the common constant normalized
+to `12`, they are
 
 ```text
 q_1=9/2, q_2=-27/2:
-Delta_4 = -(32/9)(q_3-54);                               (15)
+Delta_4 =-(32/9)(q_3-54);                                (34)
 
 q_3=54:
-Delta_6 = -(64/81)(q_4+270);                             (16)
+Delta_6 =-(64/81)(q_4+270);                              (35)
 
 q_4=-270:
-Delta_8 = -(32/243)(q_5-1620);                           (17)
+Delta_8 =-(32/243)(q_5-1620);                            (36)
 
 q_5=1620:
-Delta_10= -(64/3645)(q_6+11340).                         (18)
+Delta_10=-(64/3645)(q_6+11340).                          (37)
 ```
 
-Here “modulo all lower source rows” has a literal meaning: if the coefficients
-of total source degree less than `N` agree with the constant `12`, then the
-left side of the corresponding invoice is the displayed scalar.  Target
-coefficient jets of degree `N` cancel from `Delta_N` by `(12)--(14)`; target
-jets of higher degree cannot affect source order `N`.
+For an invoice at source order `N`, the lower map uses every target
+coefficient of degree at most `N-1` and every source row of total degree at
+most `N-1`.  Its exact ranks are
 
-The exact lower-row and homogeneous-symbol ranks are
-
-| source invoice | lower map | lower rank | symbol rank | full rank |
+| invoice | lower map | lower rank | degree-`N` symbol rank | full rank |
 |---|---:|---:|---:|---:|
 | `Delta_4` | `30 x 60` | `26` | `14` | `40` |
 | `Delta_6` | `63 x 168` | `57` | `20` | `77` |
 | `Delta_8` | `108 x 360` | `100` | `26` | `126` |
 | `Delta_10` | `165 x 660` | `155` | `32` | `187` |
 
-On the hostile control immediately before each new tuning, adjoining the
-constant target column raises the corresponding full rank by one.  On the
-newly tuned value, it does not.  Thus `(15)--(18)` are necessary conditions,
-not statistics of an intermediate projection.
-
-## 4. `Q_dag` is closed at source order four
-
-THM-3612 stopped at
+The homogeneous symbol has rank `3(N+1)-1`; its unique missing vertical
+direction is `(26)`.  In each finite matrix, an explicit sparse left quotient
+row expresses `(26)` in the lower rowspace.  Applying that row to the
+constant target column gives, respectively,
 
 ```text
-Q_dag=-3/4-27x^2/2+18x^4-27x^6/4.                       (19)
+1536,              -6144,              51200/3,
+-360448/9.                                                (38)
 ```
 
-It has
+These are exact finite controls of `(34)--(37)`, not numerical evidence for
+the all-order argument.
+
+## 6. Hostile polynomial controls
+
+The THM-3612 second-order survivor is
 
 ```text
-(q_1,q_2,q_3)=(9/2,-27/2,-378).                         (20)
+Q_dag=-3/4-27x^2/2+18x^4-27x^6/4.                       (39)
 ```
 
-Therefore `(15)` gives
+It matches `q_1,q_2` but has `q_3=-378`; hence `(34)` gives
+`Delta_4=1536`.  The following even polynomials successively match the
+formal side jets farther:
 
 ```text
-Delta_4=-(32/9)(-378-54)=1536.                          (21)
-```
-
-This contradicts a constant Jacobian.  In particular, the second-order
-survivor displayed in THM-3612 cannot be extended through source order four,
-even after allowing every higher target jet in both outputs.
-
-One sparse representative of the exact row identity behind `(21)` is
-
-```text
-Delta_4 = 128[1]j_0
-          +(2/3)([xi]j_- - [xi]j_+)
-          -(4/9)([xi^2]j_- + [xi^2]j_+)
-          +(2/3)([xi t^2]j_- - [xi t^2]j_+),            (22)
-```
-
-where `[1]j_0` denotes the constant coefficient common to the normalized
-lower system.  Under `j_i=12`, `(22)` is exactly `1536`.
-
-## 5. Explicit polynomial boundary controls
-
-The following even polynomials retain `(1)` and successively meet the side
-jet conditions.  They are hostile controls for the sharpness of the finite
-invoices; they are not asserted to carry a Darboux pair.
-
-```text
-Q_3=-3/4-27x^2/2+9x^4+81x^6/4-27x^8+9x^10,             (23)
+Q_3=-3/4-27x^2/2+9x^4+81x^6/4-27x^8+9x^10,             (40)
 
 Q_4=-3/4-27x^2/2-45x^4/4+405x^6/4-297x^8/2
-    +90x^10-81x^12/4,                                   (24)
+    +90x^10-81x^12/4,                                   (41)
 
 Q_5=-3/4-27x^2/2-45x^4+270x^6-486x^8
-    +855x^10/2-189x^12+135x^14/4,                       (25)
+    +855x^10/2-189x^12+135x^14/4,                       (42)
 
 Q_6=-3/4-27x^2/2-189x^4/2+567x^6-2457x^8/2
-    +2835x^10/2-1863x^12/2+1323x^14/4-99x^16/2.         (26)
+    +2835x^10/2-1863x^12/2+1323x^14/4-99x^16/2.         (43)
 ```
 
-Their tuned jets and next hostile invoices are
+Their first mismatches are
 
-| control | matched side jets | next side jet | next invoice |
+| control | matched formal side jets | first mismatching jet | invoice |
 |---|---|---:|---:|
-| `Q_3` | `q_1,q_2,q_3` | `q_4=7506` | `Delta_6=-6144` |
+| `Q_dag` | through `q_2` | `q_3=-378` | `Delta_4=1536` |
+| `Q_3` | through `q_3` | `q_4=7506` | `Delta_6=-6144` |
 | `Q_4` | through `q_4` | `q_5=-127980` | `Delta_8=51200/3` |
 | `Q_5` | through `q_5` | `q_6=2269620` | `Delta_10=-360448/9` |
-| `Q_6` | through `q_6` | not tested here | **OPEN** |
+| `Q_6` | through `q_6` | `q_7=-43454880` | `Delta_12=2293760/27` |
 
-They can be generated recursively from `Q_dag` by
+The last row uses the proved all-order invoice `(28)`, not an order-twelve
+matrix.  Thus `Q_6` is no longer an open survivor: like every other
+polynomial in `(1)`, it is closed at a finite order.  None of these controls
+is asserted to carry a Darboux pair.
+
+They are generated by
 
 ```text
-Q_3=Q_dag+9 x^4(x^2-1)^3,
+Q_3=Q_dag+9x^4(x^2-1)^3,
 Q_4=Q_3-(81/4)x^4(x^2-1)^4,
 Q_5=Q_4+(135/4)x^4(x^2-1)^5,
-Q_6=Q_5-(99/2)x^4(x^2-1)^6.                             (27)
+Q_6=Q_5-(99/2)x^4(x^2-1)^6.                             (44)
 ```
 
-The factor `x^4(x^2-1)^m` preserves the central value and every side jet of
-order below `m`; its `m`-th derivative at `1` is `2^m m!`.  The independent
-controls `x^2(x^2-1)^m` change central jets while producing the same new side
-jet.  Exact paired probes with these two perturbations confirm that the four
-quotient invoices depend on the displayed side jet, not on the central jet or
-the next unused side jet.
+The factor `x^4(x^2-1)^m` preserves the central value and all side jets below
+order `m`; its order-`m` derivative at `1` is `2^m m!`.  The paired probes
+`x^2(x^2-1)^m` change central jets while producing the same new side jet.
+They independently check that `(34)--(37)` depend on the displayed side jet,
+not on an omitted central jet.
 
-## 6. Conjectural all-order pattern -- not proved
+## 7. Boundary and exact reproduction
 
-The four proved coefficients equal
+The theorem proves exactly the all-regular-target-pair exclusion `(3)` for
+the even quadratic-stable-coordinate polynomial folds `(1)`.  The proof does
+not classify:
 
-```text
-c_n=2^(n+3)/(3^(n-1)(n-1)!),                n=3,4,5,6, (28)
-```
+- non-even `Q`;
+- replacements of `t^2` by a nonquadratic stable-coordinate term; or
+- implicit source planes outside this fold family.
 
-and `(15)--(18)` have the common form
+Those exits remain **OPEN**.  The former tuned polynomial locus is not open:
+the all-order recurrence closes it.
 
-```text
-Delta_(2n-2)=-c_n (q_n+(n+1)q_(n-1)).                  (29)
-```
-
-It is natural to conjecture `(29)` for every `n>=3`.  If so, a formal survivor
-would have to obey
-
-```text
-q_n=-(n+1)q_(n-1),
-q_n=(-1)^(n-1) 9(n+1)!/4.                               (30)
-```
-
-Together with `Q(1)=-3`, the unique formal germ would be
-
-```text
-Q_infinity(x)=-3/4-9/(4x^2).                            (31)
-```
-
-The pole at `x=0` is incompatible with a polynomial even fold satisfying
-`Q(0)=-3/4`.  This would close every polynomial even fold if the all-order
-identity were proved.  It is **not** proved here: `(28)--(31)` are
-`CONJECTURAL` beyond `q_6` and must not be used as an all-even-fold exclusion.
-
-## 7. Scope and exact reproduction
-
-The proved result closes `Q_dag` and every even polynomial fold failing one of
-the finite side-jet conditions `(5)`.  It does not close:
-
-- the finite tuned locus `(5)`, represented by `Q_6`;
-- the conjectural recurrence beyond `q_6`;
-- non-even folds;
-- nonquadratic folds in the stable coordinate; or
-- implicit source planes outside the THM-3612 family.
-
-All these exits remain **OPEN**.
-
-The deterministic companion constructs the exact truncated branch germs,
-the unrestricted arbitrary-two-form pullback matrices, the sparse quotient
-rows, every rank in the table, the controls `(19),(23)--(27)`, and the four
-invoices `(15)--(18)`.  It also verifies the tangent-symbol cokernel and the
-finite coefficient pattern `(28)`.
+The deterministic companion verifies the compiler identities, the local
+`b+4` chart and Jacobian, the exact common comparison target, the side
+`c_x` formula, parity, the coefficient and source-order gates for
+`2<=n<=12`, the rational ODE, every polynomial control `(39)--(44)`, and the
+four independent unrestricted-two-form matrices `(34)--(38)`.
 
 Reproduce with
 

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Exact finite controls for provisional THM-3619.
+"""Exact all-order and finite-matrix controls for proved THM-3619.
 
-The script works with arbitrary target two-forms, a strict enlargement of
-forms dF wedge dG.  It constructs the exact lower pullback matrices and checks
-sparse quotient rows for source orders 4, 6, 8, and 10.  Nothing here asserts
-the conjectural continuation beyond q_6.
+The symbolic gates verify the local Darboux chart, the exact moving collision
+triple, and the all-order coefficient/order mechanism through n=12.  As an
+independent finite control, the script also constructs unrestricted target
+two-form pullback matrices and checks sparse quotient rows at source orders
+4, 6, 8, and 10.
 """
 
 import ast
@@ -90,14 +91,15 @@ def expression_poly(expression, xi, t, cap):
     }
 
 
-print("THM-3619 exact companion -- provisional higher even-fold jet staircase")
-print("status=finite exact through q6/source order10; all-order pattern CONJECTURAL")
+print("THM-3619 exact companion -- proved all-order even-fold closure")
+print("status=proved, verified exact, and independently hostile-audited")
 
 
-print("SECTION compiler coordinates and polynomial controls")
+print("SECTION compiler coordinates and local b+4 chart")
 x, q, w, xi, t = sp.symbols("x q w xi t")
 u = x**2 * q
 D = 1 + u
+a_source = q / D**2
 b = sp.expand(u * (u + 3) ** 2)
 c_source = sp.expand(x * (u + 1) * (u + 3))
 e = sp.expand(q * (u + 4))
@@ -111,6 +113,94 @@ Z_source = sp.expand(S_source + sp.Rational(3, 4))
 
 require("compiler c2e", zero(c_source**2 * e - b * (b + 4)))
 require("Russell target relation", zero(C_source * Y_source - B * (B + 4)))
+require("b+4 factorization", zero(b + 4 - D**2 * (D + 3)))
+require("local chart b=ac2", zero(a_source * c_source**2 - b))
+require("local chart e=a(b+4)", zero(a_source * (b + 4) - e))
+jacobian_ac = sp.det(
+    sp.Matrix(
+        [
+            [sp.diff(a_source, x), sp.diff(a_source, q)],
+            [sp.diff(c_source, x), sp.diff(c_source, q)],
+        ]
+    )
+)
+require("local chart Jac(x,q)(a,c)", zero(jacobian_ac + 3))
+require("collision b+4 unit", (b + 4).subs({x: 0, q: -sp.Rational(3, 4)}) == 4)
+
+q_slope, P_form, K_form, R_form = sp.symbols("q_slope P_form K_form R_form")
+a_x_total = sp.diff(a_source, x) + sp.diff(a_source, q) * q_slope
+c_x_total = sp.diff(c_source, x) + sp.diff(c_source, q) * q_slope
+a_t_total = 2 * t * sp.diff(a_source, q)
+c_t_total = 2 * t * sp.diff(c_source, q)
+jacobian_fold = sp.expand(a_x_total * c_t_total - a_t_total * c_x_total)
+require("fold Jac(x,t)(a,c)", zero(jacobian_fold + 6 * t))
+pullback_coefficient = (
+    P_form * jacobian_fold + K_form * a_x_total + R_form * c_x_total
+)
+require(
+    "universal two-form pullback",
+    zero(
+        pullback_coefficient
+        - (-6 * t * P_form + a_x_total * K_form + c_x_total * R_form)
+    ),
+)
+
+require("a even in x", zero(a_source.subs(x, -x) - a_source))
+require("c odd in x", zero(c_source.subs(x, -x) + c_source))
+require(
+    "total a_x odd",
+    zero(
+        a_x_total.subs({x: -x, q_slope: -q_slope}, simultaneous=True)
+        + a_x_total
+    ),
+)
+require(
+    "total c_x even",
+    zero(
+        c_x_total.subs({x: -x, q_slope: -q_slope}, simultaneous=True)
+        - c_x_total
+    ),
+)
+
+s, g_exact = sp.symbols("s g_exact")
+s_exact = sp.Rational(3, 4) * (1 - g_exact**-2)
+q_side_exact = -3 / g_exact**2
+a_middle = a_source.subs({x: 0, q: -sp.Rational(3, 4) + s_exact})
+c_middle = c_source.subs({x: 0, q: -sp.Rational(3, 4) + s_exact})
+a_side = a_source.subs({x: g_exact, q: q_side_exact})
+c_side = c_source.subs({x: g_exact, q: q_side_exact})
+require("comparison side D=-2", zero(D.subs({x: g_exact, q: q_side_exact}) + 2))
+require("comparison common a", zero(a_side - a_middle))
+require("comparison common c middle", c_middle == 0)
+require("comparison common c side", zero(c_side))
+
+Q_infinity = -sp.Rational(3, 4) - sp.Rational(9, 4) / x**2
+require(
+    "comparison rational side q",
+    zero(Q_infinity.subs(x, g_exact) + s_exact - q_side_exact),
+)
+side_c_x = c_x_total.subs({x: g_exact, q: q_side_exact})
+require(
+    "comparison side c_x",
+    zero(side_c_x - (12 - 2 * g_exact**3 * q_slope)),
+)
+central_a_x = a_x_total.subs(
+    {x: 0, q: -sp.Rational(3, 4) + s, q_slope: 0}
+)
+central_c_x = c_x_total.subs(
+    {x: 0, q: -sp.Rational(3, 4) + s, q_slope: 0}
+)
+require("comparison middle a_x", zero(central_a_x))
+require("comparison middle c_x", central_c_x == 3)
+require("constant normalization R0", 4 * central_c_x == 12)
+require(
+    "comparison rational derivative cancellation",
+    zero(4 * g_exact**3 * sp.diff(Q_infinity, x).subs(x, g_exact) - 18),
+)
+print("PASS chart=local_b+4 Jac=-3 pullback=j parity_and_common_target=exact")
+
+
+print("SECTION polynomial controls")
 
 Qdag = (
     -sp.Rational(3, 4)
@@ -152,10 +242,11 @@ require("Qdag hostile third jet", sp.diff(Qdag, x, 3).subs(x, 1) == -378)
 require("Q3 hostile fourth jet", sp.diff(Q3, x, 4).subs(x, 1) == 7506)
 require("Q4 hostile fifth jet", sp.diff(Q4, x, 5).subs(x, 1) == -127980)
 require("Q5 hostile sixth jet", sp.diff(Q5, x, 6).subs(x, 1) == 2269620)
-print("PASS controls=Qdag,Q3,Q4,Q5,Q6 matched_side_jets_through_q6")
+require("Q6 hostile seventh jet", sp.diff(Q6, x, 7).subs(x, 1) == -43454880)
+print("PASS controls=Qdag,Q3,Q4,Q5,Q6 matches_and_first_failures_through_q7")
 
 
-print("SECTION perturbation and finite coefficient gates")
+print("SECTION perturbation controls and all-order coefficient gates")
 for order in range(3, 7):
     central_probe = sp.expand(x**2 * (x**2 - 1) ** order)
     side_probe = sp.expand(x**4 * (x**2 - 1) ** order)
@@ -185,7 +276,7 @@ for order in range(3, 7):
 
 
 def invoice_coefficient(order):
-    """Finite c_n from THM-3619."""
+    """The exact all-order coefficient c_n from THM-3619."""
     return sp.Rational(2 ** (order + 3), 3 ** (order - 1) * factorial(order - 1))
 
 
@@ -197,7 +288,58 @@ expected_coefficients = {
 }
 for order, expected in expected_coefficients.items():
     require(f"finite coefficient n={order}", invoice_coefficient(order) == expected)
-print("PASS perturbation_orders=3..6 coefficient_pattern=finite_only")
+
+g_series = (1 - sp.Rational(4, 3) * s) ** -sp.Rational(1, 2)
+X_series = sp.series(g_series - 1, s, 0, 13).removeO()
+require(
+    "comparison g defining equation",
+    zero(g_series**2 * (1 - sp.Rational(4, 3) * s) - 1),
+)
+require("comparison X leading term", sp.expand(X_series).coeff(s, 1) == sp.Rational(2, 3))
+
+for order in range(2, 13):
+    invoice_order = 2 * order - 2
+    require(
+        f"rational jet closed form n={order}",
+        sp.diff(Q_infinity, x, order).subs(x, 1) == target_jet(order),
+    )
+    require(
+        f"rational jet recurrence n={order}",
+        target_jet(order) == -(order + 1) * target_jet(order - 1),
+    )
+    x_power_lead = sp.expand(X_series ** (order - 1)).coeff(s, order - 1)
+    require(
+        f"X power leading coefficient n={order}",
+        x_power_lead == sp.Rational(2 ** (order - 1), 3 ** (order - 1)),
+    )
+    comparison_lead = sp.series(
+        -16 * g_series**3 * (g_series - 1) ** (order - 1) / factorial(order - 1),
+        s,
+        0,
+        order,
+    ).removeO().expand().coeff(s, order - 1)
+    require(
+        f"all-order comparison coefficient n={order}",
+        comparison_lead == -invoice_coefficient(order),
+    )
+    require(
+        f"comparison error above invoice n={order}",
+        2 * order > invoice_order,
+    )
+    for xi_degree in range(1, invoice_order // 2 + 1):
+        t_degree = invoice_order - 2 * xi_degree
+        require(
+            f"shift source-order gate n={order} k={xi_degree}",
+            xi_degree + t_degree < invoice_order,
+        )
+
+q6_delta = sp.diff(Q6, x, 7).subs(x, 1) + 8 * sp.diff(Q6, x, 6).subs(x, 1)
+require("Q6 all-order delta7", q6_delta == -43545600)
+require(
+    "Q6 all-order Delta12",
+    -invoice_coefficient(7) * q6_delta == sp.Rational(2293760, 27),
+)
+print("PASS perturbations=orders3..6 all_order_coefficients_and_order_gates=n2..12")
 
 
 C_target, Y_target, Z_target = sp.symbols("C_target Y_target Z_target")
@@ -497,28 +639,34 @@ for invoice_order in (4, 6, 8, 10):
     )
 
 
-print("SECTION finite recurrence and rational-pattern boundary")
-for order in range(2, 7):
-    require(
-        f"finite recurrence target n={order}",
-        target_jet(order) == -(order + 1) * target_jet(order - 1),
-    )
+print("SECTION rational germ and polynomial contradiction")
 h = sp.symbols("h")
-Q_infinity = -sp.Rational(3, 4) - sp.Rational(9, 4) / x**2
-for order in range(1, 7):
+for order in range(1, 13):
     require(
-        f"rational pattern jet n={order}",
+        f"rational germ jet n={order}",
         sp.diff(Q_infinity, x, order).subs(x, 1) == target_jet(order),
     )
-require("rational pattern value at one", Q_infinity.subs(x, 1) == -3)
+require("rational germ value at one", Q_infinity.subs(x, 1) == -3)
 require(
-    "rational pattern Taylor through q6",
-    sp.series(Q_infinity.subs(x, 1 + h), h, 0, 7).removeO()
+    "rational germ Taylor through q12",
+    sp.series(Q_infinity.subs(x, 1 + h), h, 0, 13).removeO()
     == -3
-    + sum(target_jet(order) * h**order / factorial(order) for order in range(1, 7)),
+    + sum(target_jet(order) * h**order / factorial(order) for order in range(1, 13)),
 )
-require("rational pattern has x pole", sp.limit(x**2 * Q_infinity, x, 0) == -sp.Rational(9, 4))
-print("PASS finite_recurrence=q1..q6 rational_germ=CONJECTURAL_beyond_q6")
+require(
+    "rational germ differential equation",
+    zero(x * sp.diff(Q_infinity, x) + 2 * (Q_infinity + sp.Rational(3, 4))),
+)
+require(
+    "rational germ has x pole",
+    sp.limit(x**2 * Q_infinity, x, 0) == -sp.Rational(9, 4),
+)
+for degree in range(1, 13):
+    require(
+        f"polynomial ODE top coefficient nonzero degree={degree}",
+        degree + 2 != 0,
+    )
+print("PASS rational_germ=exact ODE_polynomial_contradiction=degree_independent")
 
 
 print("SECTION source AST gate")

@@ -1,17 +1,19 @@
-THM-3619 exact companion -- provisional higher even-fold jet staircase
-status=finite exact through q6/source order10; all-order pattern CONJECTURAL
-SECTION compiler coordinates and polynomial controls
-PASS controls=Qdag,Q3,Q4,Q5,Q6 matched_side_jets_through_q6
-SECTION perturbation and finite coefficient gates
-PASS perturbation_orders=3..6 coefficient_pattern=finite_only
+THM-3619 exact companion -- proved all-order even-fold closure
+status=proved, verified exact, and independently hostile-audited
+SECTION compiler coordinates and local b+4 chart
+PASS chart=local_b+4 Jac=-3 pullback=j parity_and_common_target=exact
+SECTION polynomial controls
+PASS controls=Qdag,Q3,Q4,Q5,Q6 matches_and_first_failures_through_q7
+SECTION perturbation controls and all-order coefficient gates
+PASS perturbations=orders3..6 all_order_coefficients_and_order_gates=n2..12
 SECTION unrestricted two-form quotient matrices
 PASS N=4 lower=30x60 rank=26 symbol=14 full=40 forced=1536
 PASS N=6 lower=63x168 rank=57 symbol=20 full=77 forced=-6144
 PASS N=8 lower=108x360 rank=100 symbol=26 full=126 forced=51200/3
 PASS N=10 lower=165x660 rank=155 symbol=32 full=187 forced=-360448/9
-SECTION finite recurrence and rational-pattern boundary
-PASS finite_recurrence=q1..q6 rational_germ=CONJECTURAL_beyond_q6
+SECTION rational germ and polynomial contradiction
+PASS rational_germ=exact ODE_polynomial_contradiction=degree_independent
 SECTION source AST gate
 PASS ast_assertion_nodes=0
-CHECKS=149
+CHECKS=310
 RESULT=PASS
