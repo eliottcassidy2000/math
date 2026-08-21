@@ -2,8 +2,8 @@
 id: THM-3606
 title: "Exponent-two three-by-four scalar and singleton gate atlas"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Among the 149 connected oriented three-by-four additive-support
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  Among the 149 connected oriented three-by-four additive-support
   words of THM-3603, exactly 38 admit an integer realization, a scalar fibre,
   a scalar-arm address, and both-zero-or-same-strict-sign weights on every
   singleton fibre.  There are exactly 178 such anchor/orientation schemes.
@@ -14,13 +14,14 @@ status: >
   planar Jacobian counterexample, or proof of JC(2) is claimed.
 source: kps-s188 / THM-3603 coefficient-gate continuation, 2026-08-21
 audit: >
-  Author exact audit.  The standard-library companion hash-pins THM-3603,
-  solves every nonhomogeneous word-cone branch by rational RREF and a complete
-  one-parameter congruence search, and independently scans every positive
-  five-gap vector in [1,16]^5.  The global, generic-scaled, and bounded word
-  sets agree.  Ordinary and optimized runs are byte-identical to the stored
-  transcript after LF normalization.  Independent hostile audit remains
-  pending.
+  ACCEPT.  An independent SymPy reconstruction agreed on all 1,900 affine
+  systems (1,091 inconsistent, 599 points, 210 lines), all 38 words and 178
+  schemes, every orientation/fibre/exposure count, and the complete bounded
+  [1,16]^5 control.  It independently checked the congruence-period argument
+  and the rectangle-exposed 2x2 reduction.  Ordinary, optimized, and stored
+  outputs are byte-identical after LF normalization; all pinned hashes match.
+  The audit sharpened the exposition to distinguish singleton-row vanishing
+  from its necessary sign trace.
 depends_on:
   - THM-3603-three-by-four-additive-support-collision-cones-and-fibre-cut-atlas
   - THM-3592-universal-exponent-two-three-by-three-weight-darboux-nonentry
@@ -39,8 +40,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3606 -- exponent-two three-by-four scalar and singleton gate atlas
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-AUDIT.**  This is the first coefficient-independent weight gate after the
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+This is the first coefficient-independent weight gate after the
 additive classification of THM-3603.  It is global over positive integral
 weight gaps.  It deliberately stops before the coupled polynomial coefficient
 equations.
@@ -182,8 +183,10 @@ F={(i,j),(k,l)},                i!=k, j!=l.                         (11)
 ```
 
 Call it rectangle-exposed when the two cross-corners `(i,l)` and `(k,j)` are
-both singleton fibres.  Their bracket rows vanish by `(6)`.  Retain only the
-two `P` pieces indexed by `i,k` and the two `Q` pieces indexed by `j,l`.
+both singleton fibres.  Because they are non-scalar singleton rows of the
+Darboux equation, their brackets vanish individually; `(6)` records the
+resulting necessary weight alternatives.  Retain only the two `P` pieces
+indexed by `i,k` and the two `Q` pieces indexed by `j,l`.
 The two diagonal addresses in `(11)` still give the complete scalar row, while
 the cross-corners give zero.  The truncation would therefore be a `2 x 2`
 Darboux pair, contradicting THM-3569.  Hence every rectangle-exposed scalar
