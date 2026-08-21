@@ -2,8 +2,9 @@
 id: THM-3578
 title: "Zariski-main boundary rank and the nonproper sheet-debt inequality"
 status: >
-  PROVED.  Let f:A2_C->Y be a dominant quasi-finite morphism of generic
-  degree d to a normal affine surface.  In the finite normalization supplied
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED.  Let f:A2_C->Y be a dominant
+  quasi-finite morphism of generic degree d to a normal affine surface.  In
+  the finite normalization supplied
   by Zariski Main, the divisorial boundary has at least
   rank(Cl(Y)/torsion) irreducible components.  If f is etale and its
   divisorial nonproperness curves have generic affine fibre sizes n_C, then
@@ -12,6 +13,10 @@ status: >
   (4,2,2,3,3), respectively.  This is a necessary nonproperness-capacity
   law, not a planar Jacobian obstruction when the target is A2.
 source: kps-s188, 2026-08-20
+audit: >
+  An independent reconstruction verified the localization/conorm rank bound,
+  the generic-DVR sheet-length formula without a global flatness assumption,
+  the boundary-to-Jelonek incidence, and both exact fibre/debt vectors.
 depends_on:
   - THM-3404-factorized-danielewski-principal-parts-and-finite-cover-obstruction
   - THM-3566-chebyshev-pell-odd-keller-collision-tower
@@ -23,8 +28,9 @@ related:
 
 # THM-3578 -- Zariski-main boundary rank and sheet debt
 
-**PROVED.**  This theorem quantifies the exact resource that separates the
-new Danielewski near-counterexamples from a finite cover of affine space.
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem quantifies the
+exact resource that separates the new Danielewski near-counterexamples from
+a finite cover of affine space.
 It does not prove `JC(2)`, and for target `A2` its class-group lower bound is
 zero.
 

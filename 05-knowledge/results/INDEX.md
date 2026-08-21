@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `berggren_positive_cube_slope_completion_101_thm3580.py` -> matching
+  `.out` [THM-3580 PROVED + FINITE-EXACT + VERIFIED-EXACT].  The complete
+  generalized-Pell `P,Q,a` class reduction and fundamental-unit orbits modulo
+  `2n` close all seven survivors left by THM-3547.  Three die by exact
+  valuation-one nonsquare descent at `p=13,11,13`; the other four have class
+  ledgers `9x2,1x60,1x10,6x34`, with no odd compiler phase.  Thus among all
+  `528` primitive parity-correct slopes through denominator `101`, exactly
+  `(14,23),(26,29),(26,47),(98,101)` are admissible, and each inherits an
+  infinite positive ray.  Normal/`-O` replay is byte-identical and an
+  independent SymPy LMM path agrees on all eleven rows.  Script/output LF
+  SHA-256: `09cd67a5bf0c2c0368e3e9ca4350d2cbb4c856ccc3bca4afa21254aaef26e184` /
+  `c8dcdf02f7454a677e7bdc31a34c4909338b8d0b2084a646b44646d4d9af2f0b`.
 - `amm12592_r512_offset_transition_causal_horizon_kps_s188.py` -> matching
   `.out` [THM-3577 PROVED + VERIFIED-EXACT].  At `R=512`, exact Rule A dies
   for golden-floor offsets `D0=0,...,4` at rows `107,110,113,116,121` and
