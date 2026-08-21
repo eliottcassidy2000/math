@@ -2,8 +2,8 @@
 id: THM-3594
 title: "Berggren positive two-cube slope atlas through denominator 201"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Among all 2,072 primitive parity-correct reduced slopes through
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  Among all 2,072 primitive parity-correct reduced slopes through
   denominator 201, an exact screen by every prime at most 499 leaves 30
   rows.  Complete generalized-Pell class enumeration and unit-orbit analysis
   modulo 2n leaves exactly 15 parity-admissible slopes.  Every admissible
@@ -13,10 +13,11 @@ status: >
   density, or asymptotic is claimed.
 source: kps-s188 / Berggren arithmetic wildcard, 2026-08-21
 audit: >
-  Author proof audit plus optimization-safe exact replay.  The finite screen,
-  LMM completeness mechanism, all orbit addresses, fifteen compiled seeds,
-  and positive-cone recurrences are pinned.  Independent hostile audit is
-  still required before the stronger audit label is used.
+  ACCEPT.  An independent quadratic-residue screen and separate
+  continued-fraction/unit implementation reconstructed all 2,072 slopes, 95
+  primes, 30 survivors, 112 LMM classes, 52 admissible classes, and 84 good
+  phases.  All sign/conjugation variants and all good-phase positive-cone
+  passages were checked, as were parent hashes and normal/-O/stored replay.
 depends_on:
   - THM-3547-positive-two-cube-slope-atlas-through-101
   - THM-3580-berggren-positive-cube-slope-atlas-completion-through-101
@@ -32,8 +33,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3594 -- Berggren positive two-cube slope atlas through 201
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-AUDIT.**  This doubles the denominator range of THM-3580 while retaining its
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+This doubles the denominator range of THM-3580 while retaining its
 complete global norm-class and parity-orbit sidecars.  It is not another
 local screen presented as a classification.
 
@@ -196,6 +197,9 @@ sqrt(K)<n                                                   (14)
 
 is equivalent to `m<n`, positive unit iteration eventually gives `W<n h`.
 The verifier constructs such a point explicitly in every row of `(13)`.
+The independent audit checked all 84 good phases, not merely the fifteen
+selected representatives; every phase entered the cone immediately after
+sign choice.
 
 The positivity is then permanent, not a one-point accident.  Put
 
