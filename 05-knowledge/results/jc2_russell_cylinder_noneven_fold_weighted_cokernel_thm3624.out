@@ -1,0 +1,20 @@
+THM-3624 exact companion -- provisional non-even weighted-cokernel boundary
+status=first-jet classification plus finite formal survivor; audit=PENDING
+SECTION compiler collision and general non-even tangent table
+PASS collision=triple tangent_table=general_non_even_exact
+SECTION first-jet nonzero locus and projective parametrization
+PASS tangent_match=surface zero_common=removed rho_parametrization=all_strata
+SECTION weighted vertical top symbol
+PASS weighted_vertical_cokernel=general rho0_weight=(9-4u,-18,9+4u)
+SECTION generic degree-two invoice and exceptional closure
+PASS degree2=weighted_side_invoice central_q2=free exceptional_u=plusminus9/4_closed
+SECTION explicit non-even polynomial finite survivor
+PASS Q_h N=0 shape=3x3 rank=2 augmented=2
+PASS Q_h N=1 shape=9x12 rank=7 augmented=7
+PASS Q_h N=2 shape=18x30 rank=15 augmented=15
+PASS Q_h N=3 shape=30x60 rank=26 augmented=26
+PASS Q_h N=4 shape=45x105 rank=40 augmented=40
+SECTION source AST gate
+PASS ast_assertion_nodes=0
+CHECKS=89
+RESULT=PASS
