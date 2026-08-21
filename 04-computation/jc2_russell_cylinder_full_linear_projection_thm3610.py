@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3610.
+"""Exact controls for proved and hostile-audited THM-3610.
 
 The proof is all-degree and uses a formal-arm argument plus the cited
 injectivity-on-one-line theorem.  This companion verifies every displayed
@@ -42,7 +42,7 @@ def jacobian(first, second, first_var, second_var):
     )
 
 
-print("THM-3610 exact companion -- provisional full linear-projection gate")
+print("THM-3610 exact companion -- proved full linear-projection gate")
 print("status=finite exact controls; all-degree formal and one-line steps are proof-driven")
 
 
@@ -332,7 +332,7 @@ require("q=0 inverse cylinder coordinate", same(W_inverse, plane_w))
 require("q=0 positive plane Jacobian", jacobian(C_q0, W_inverse, plane_x, plane_w) == 3)
 print(
     f"PASS collision_rows={collision_rows} line_reconstruction=2 "
-    "positive_plane_controls=4"
+    "positive_plane_controls=3"
 )
 
 

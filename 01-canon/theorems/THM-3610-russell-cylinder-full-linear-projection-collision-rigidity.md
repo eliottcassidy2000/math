@@ -2,8 +2,8 @@
 id: THM-3610
 title: "Russell-cylinder full linear-projection collision rigidity"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.
-  For a polynomial cylinder graph retaining the full THM-3561 triple
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a
+  polynomial cylinder graph retaining the full THM-3561 triple
   collision, no rank-two linear projection of all four Russell coordinates
   (B,C,Y,S) has nonzero constant ordinary Jacobian.  Projection planes that
   meet span(B,C) are excluded without the collision hypothesis by the
@@ -13,27 +13,35 @@ status: >
   retained collision.  No nonlinear projection, implicit non-graph source
   plane, or JC(2) counterexample is claimed.
 source: root / omitted-Y full-cylinder projection niche, 2026-08-21
-audit: PENDING -- theorem and exact companion require independent hostile audit
+audit: >
+  PASS.  An independent hostile audit rederived the complete row-space
+  trichotomy, the Y-only boundary ODE, the S+sigmaY determinant and formal
+  recurrence, and the transverse-line reconstruction.  It checked
+  Gwozdziewicz's one-line theorem against the primary source with every
+  hypothesis typed, and verified the retained collision contradiction.
+  Normal and optimized runs are byte-identical to the stored 15,028-gate
+  transcript; the AST has no assertion gates, and documentation and diff
+  checks pass.
 depends_on:
   - THM-3561-rational-keller-danielewski-polynomial-completion
-  - THM-3589-danielewski-central-arm-every-line-and-kummer-trace-darboux-gates
   - THM-3607-russell-cylinder-mixed-projection-degree-seven-gate
 related:
+  - THM-3589-danielewski-central-arm-every-line-and-kummer-trace-darboux-gates
   - THM-3605-russell-cylinder-graph-slice-puncture-no-filling
   - THM-3608-russell-cylinder-nonlinear-target-shear-rigidity
 external:
   - "Gwozdziewicz, Injectivity on one line, arXiv:alg-geom/9305008, Theorem 1.1."
 script: 04-computation/jc2_russell_cylinder_full_linear_projection_thm3610.py
 output: 05-knowledge/results/jc2_russell_cylinder_full_linear_projection_thm3610.out
-script_sha256: 2355d952ffbed7d821a4db4f6f5f0a1bacd2adb8cb213482ab29ec0560382b9c
-output_sha256: 4eb2a234b5f23eade40bbb3428b9558efc7c8a7f3dedd58d4eded6fe4af8ac26
+script_sha256: d83e4452a94ff1a48f43e3feda7380e56b269385503bf9de8e6fca82bc3b0094
+output_sha256: c96249605b3899195483da25e983c0776966c5a4693dc112dc373943bb7c8a65
 hash_basis: raw LF bytes
 ---
 
 # THM-3610 -- Russell-cylinder full linear-projection collision rigidity
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.**
-The result below closes every rank-two *linear* projection of the four
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The result
+below closes every rank-two *linear* projection of the four
 Russell-cylinder coordinates once the full stable collision is retained.
 It does not close nonlinear target projections or implicit non-graph source
 surfaces.
@@ -307,10 +315,13 @@ projection plane meeting `span(B,C)`.
 3. The condition `(4)` retains the full four-coordinate collision.  A
    projected pair may collide under weaker conditions, but those are not
    used here.
-4. Coordinate planes give sharp positive controls once collision retention
-   is dropped: on `x=0`, `(Y,S)=(4w,(q+3w^2)/4)` is triangular in `(q,w)`;
-   on `q=0`, the inverse cylinder coordinate paired with `C` is also a
-   constant-Jacobian plane.  Neither plane retains the triple collision.
+4. Two out-of-scope boundary controls show that the cylinder itself contains
+   Keller planes: on the non-graph plane `x=0`,
+   `(Y,S)=(4w,q+3w^2/4)` is triangular in `(q,w)`; on the non-graph plane
+   `q=0`, the nonlinear inverse cylinder coordinate paired with `C` is also
+   a constant-Jacobian plane.  Neither plane retains the triple collision.
+   These controls do not settle the `r=0` polynomial-graph branch without
+   condition `(4)`.
 5. No Darboux pair on the Danielewski target and no counterexample to
    `JC(2)` is constructed.
 
@@ -329,7 +340,7 @@ The companion must check, without truth-bearing `assert` statements:
 - a finite exact Grassmannian row-space census confirming the `r=0,1,2`
   trichotomy and both normalized `r=1` branches;
 - active hostile controls showing that `(Y,S)` on `x=0` and the inverse
-  arm coordinate on `q=0` become Keller only after collision loss.
+  arm coordinate on `q=0` are Keller on collision-losing non-graph planes.
 
 Passing that companion verifies the displayed algebra and the finite
 row-space classification.  The all-degree conclusions use the polynomial
