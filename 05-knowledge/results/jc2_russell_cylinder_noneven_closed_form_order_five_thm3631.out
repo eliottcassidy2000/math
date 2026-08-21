@@ -1,0 +1,16 @@
+== THM-3631 non-even closed-form order-five survival ==
+parent_sha256_lf (('thm3624_theorem', 'd805a9318f6782f68d9e958e93a57430d3dce2159c98afa74635b4405da620e5'), ('thm3624_script', '18b7bdc062909bd45d271c6e1744ef4c1ccc360385e769db419e36418dac3468'), ('thm3624_output', '6a38a8b220bbc40b77062f92e75dc4f3272361f2fb8e39c77d00786b46baa462'), ('thm3627_theorem', 'e6d9156cc6b0af1cc109749e5c31067ffb97fa01b4c7c912be28d74b9abd98de'), ('thm3627_script', 'fcafd6fe3f3ce42432958a4ee074ec2150b943d3dc30552213a8b9e8cd3a0689'), ('thm3627_output', 'c46ee58088554811aac00ce013e55d3d0b67f3d958e25ee55b0f24af125de0a4'))
+degree 0 pullback (3, 3) leak (0, 3) ranks (2, 0, 2, 2) solution_dimension 1
+degree 1 pullback (9, 12) leak (1, 12) ranks (7, 1, 8, 8) solution_dimension 4
+degree 2 pullback (18, 30) leak (4, 30) ranks (15, 4, 19, 19) solution_dimension 11
+degree 3 pullback (30, 60) leak (10, 60) ranks (26, 10, 36, 36) solution_dimension 24
+degree 4 pullback (45, 105) leak (20, 105) ranks (40, 20, 60, 60) solution_dimension 45
+degree 5 pullback (63, 168) leak (35, 168) ranks (57, 35, 92, 92) solution_dimension 76
+closedness_equation P_w-K_epsilon+R_c=0
+N5_constant_rows (12, 12, 12); target_form_at_origin=nonzero
+N6_parent_boundary arbitrary_rank=77 augmented=78; all forms fail
+semantic_sha256 f8ce8a774ffca01430a00519e6672d30c7458e51829037e1daf731163c138796
+script_sha256_lf 9eb341a3c6c451865ecc1891faee4db7aa96e210133375aec0cd7277d56440be
+CHECKS 59
+SCOPE local closed-form/formal target-pair jet through N=5; no global polynomial pair/JC2
+RESULT=PASS
