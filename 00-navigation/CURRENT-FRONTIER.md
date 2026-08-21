@@ -332,18 +332,19 @@ is sharp: equal counts allow two densities or none.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** [3502](../01-canon/theorems/THM-3502-rule30-four-fifths-staircase-entropy-and-sixteen-fifths-compiler.md); [3511](../01-canon/theorems/THM-3511-rule30-orbit-signalizer-gap-renormalization-and-shallow-portrait-hostile.md); [3512](../01-canon/theorems/THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary.md); [3516](../01-canon/theorems/THM-3516-rule30-marked-van-der-put-carry-and-power-section-bridge.md). OPEN.
-- **Jacobian/Dixmier:** `JC(2)`/`DC(2)` OPEN. THM-1300 is VERIFIED-EXACT;
-  MISTAKE-205 repairs attribution only. THM-1315 has image `A^3 minus E`
-  and fibre spectrum `3/1/0`. Fixed-map packets: 2473--2576/3494/3508/3519.
-  THM-3544/3550 internally force composite pencil degrees `>=6` and height
-  `>=8`; cited Nagata/GGHV gates sharpen this to `Omega(deg R)>=3` and
-  reduced height `>=108`, with only `(72,108)` below `125`.
-  THM-3543/3545/3554 give the ramified/algebraic/punctured collision pincer;
-  THM-3549 starts quotient repair at `(4,5)`; THM-3553/3558/3559 close
-  displayed graphs and every descent linear on either side. THM-3551/3552
+- **Jacobian/Dixmier:** `JC(2)`/`DC(2)` OPEN. THM-1300 VERIFIED-EXACT
+  (MISTAKE-205); THM-1315: `A^3 minus E`, fibres `3/1/0`.
+  2473--2576/3494/3508/3519. THM-3544/3550 force
+  composite degree `>=6`, height `>=8`; cited Nagata/GGHV give
+  `Omega(deg R)>=3`, reduced height `>=108`, only `(72,108)<125`.
+  THM-3543/45/54: ramified/algebraic/punctured collision pincer; THM-3549
+  starts quotient repair at `(4,5)`; THM-3553/58/59 close displayed graphs
+  and descent linear on either side. THM-3551/3552
   close one-ray/cyclic families. THM-3555--57 + D6 close mixed `N<=2` and
-  `N=3,D<=6`; `D>=7`/width `>=4` open. THM-3560 closes monomial target
-  shears; THM-3546/3548 leave nonlinear descent/conductance.
+  `N=3,D<=6`; `D>=7`/width `>=4` open. THM-3560 closes monomial shears;
+  [3562](../01-canon/theorems/THM-3562-balanced-resonant-pole-unit-lagrange-nonentry.md)
+  closes balanced exact-prefix nonsplit passports (unbalanced/other charts
+  open). THM-3546/3548 leave nonlinear descent/conductance.
   THM-3495--3542 give the iterated image/divisor/packet/LCA atlas: packets are
   explicit through `R8`, index is zero through level four, and higher levels
   remain open. THM-3504 is the level-four router. THM-2681/2685--2708 block
