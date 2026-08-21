@@ -334,33 +334,26 @@ is sharp: equal counts allow two densities or none.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** [3502](../01-canon/theorems/THM-3502-rule30-four-fifths-staircase-entropy-and-sixteen-fifths-compiler.md); [3511](../01-canon/theorems/THM-3511-rule30-orbit-signalizer-gap-renormalization-and-shallow-portrait-hostile.md); [3512](../01-canon/theorems/THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary.md); [3516](../01-canon/theorems/THM-3516-rule30-marked-van-der-put-carry-and-power-section-bridge.md). OPEN.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT
-  (MISTAKE-205). THM-3544/50 force composite degree `>=6`,
-  height `>=8`; cited Nagata/GGHV give `Omega(deg R)>=3`, reduced height
-  `>=108`, only `(72,108)<125`. THM-3543/45/54 give the collision pincer;
-  3549 starts repair at `(4,5)`; 3553/58/59 close displayed graphs/linear
-  descent, and 3551/52 close one-ray/cyclic families. 3555--57 + D6 close
-  mixed `N<=2` and
-  `N=3,D<=6`; `D>=7`/width `>=4` open. THM-3560 closes monomial shears.
-  THM-3561: triple collision on `Y`. 3569/83/84 close `2x3`, `N=2`
-  `2x4`, equal-step `3x3`; 3581/89--91 force arm labels and close A13
-  `3x3`. Unequal-step and `N>2` `2x4`/wider cells stay OPEN. 3562/63 close
-  passports/nongraph slice.
-  3564/65/68/70/71/73/74 classify factor-bearing graphs as
-  `phi=4H(1+bH+4aH^2)`; every component has a nonconstant unit. Graphs through
-  degree two have no `A2`; 3578 gives the quasi-finite boundary-rank and
-  sheet-debt law. THM-3567 makes separated completions nodal
-  and non-quasi-finite from degree three. 3495--3542
-  reach `R8`, with index zero to level four.
-  2681/85--2708
-  block the `A4/S4` cubic; 3448/3517 leave quartic `C3` open (MISTAKE-416).
-  3440/43/50 and 3064/66/68 deny lawful LRC/Keller amplitude transport but
-  still allow a punctured `C3`: polynomial `A2` regularity/constant units are
-  missing. 3067/72/76/3141 give tomography sidecars; 2862--71/2968/2971 the
-  regular `S3` carrier. 2699--2722 classify named planar
-  slices; unrestricted `C[A,d]^2` is equivalent to `JC(2)`, while other
-  `B`/nongraph targets remain open. Degree 18 closes sparse/`H_2`; `H_4`
-  reaches the common-root wall.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN; THM-1300 is VERIFIED-EXACT
+  (MISTAKE-205). THM-3544/50 force composite degree `>=6`, height `>=8`;
+  cited Nagata/GGHV give reduced height `>=108`, with only `(72,108)<125`.
+  THM-3543--60 close the recorded collision, ray, cyclic, low-width, and
+  monomial-shear sectors; `D>=7`/width `>=4` remains open. THM-3561 supplies
+  the triple-collision compiler on `Y`; THM-3569/83/84 and 3581/89--92 close
+  `2x3`, `N=2` `2x4`, and the proved equal-step/A13 `3x3` cells, while the
+  wider general cells remain OPEN. THM-3595/96/98/99 close separated,
+  mixed-toric, graph/shallow-negative, and affine-linear rational-mate
+  channels. THM-3600/04 give the multiarm chart intersection, no-`A2` filling,
+  and compiler degree floors. THM-3605/07/08/11/14/17 close the stated
+  Russell graph/shear/projection families. THM-3618 classifies every single
+  fibre separator; THM-3622 resolves its graph closure into a visible missing
+  line plus an invisible normalization-arm/tangent debt. THM-3619/23 close
+  all even folds with `0!=H in t^2 C[t]`; THM-3624 leaves non-even and
+  `H'(0)!=0` folds OPEN. Factor-bearing/nodal completion obstructions are in
+  THM-3564--78. The `A4/S4` cubic is blocked; quartic `C3` remains open
+  (MISTAKE-416). Unrestricted `C[A,d]^2` is still equivalent to `JC(2)`;
+  named planar slices and sparse/`H_2` sectors close, while `H_4` reaches the
+  common-root wall.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2247 close the affine-through-
   quartic and terminal-through-fourteen strata; THM-2262/2297--2480, including
