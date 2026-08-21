@@ -418,9 +418,10 @@
 - `lrc_r5_rank_two_relative_response_cospan_thm3534_20260816.py`,
   its FLINT audit, and
   `lrc_r5_common_child_middle_duality_thm3534_20260816.py` with its
-  independent FLINT audit -> matching `.out` files [THM-3534 RESERVED /
-  PROVISIONAL PROOF CANDIDATE;
-  FINITE-EXACT STATIC RESPONSE PACKAGE].  The frozen middle-orientation
+  independent FLINT audit -> matching `.out` files [THM-3534 PROVED +
+  VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, WITH MISTAKE-420 SCOPE
+  REPAIR; FINITE-EXACT STATIC RESPONSE PACKAGE].  Over the fixed prime
+  `755373809845391722745761`, the frozen middle-orientation
   difference has rank five, splitting as source rank two plus endpoint rank
   three.  The source plane and the dual-Q10 contraction plane are distinct
   rank-two planes whose unique endpoint-relative quotient is
@@ -456,9 +457,12 @@
   `50496905b49dce05ba7ac76bcd7714a646c1e5821b04300ec7f93069d52d5904` /
   `c808cfe4e5e8847b355671ac703ee185da6428dca1e449a3c3837f25193eb474` /
   `036823a7ba481528a3d02f9b36cecc08c2a76b796d69b437ac644ea62251c53e`.
-  Every finite map/census now has a distinct-engine reproduction; external
-  hostile audit of variance and typing remains pending, so status is not
-  promoted.
+  Every finite map/census has a distinct-engine reproduction.  The promotion
+  audit independently checked primality, row/column variance, quotient-dual
+  typing, the endpoint-retaining MISTAKE-420 hostile, symmetry, and all four
+  normal/optimized/stored transcripts.  This excludes no row: the scalar
+  ledger stays `165`, and the `84` `(s,ell)` cells are internal to one
+  canonical non-cover row rather than a subledger.
 - `keller_level_two_old_L_newton_index_audit_20260816.py` -> matching `.out`
   [THM-3537 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  At depth
   two, discriminant transitivity gives old-`L` exponent `3+c` with

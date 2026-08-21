@@ -2,8 +2,9 @@
 id: THM-3534
 title: "R5 middle-response relative cospan and twisted H1 collapse"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT AUDIT; NOT IN THE
-  PROOF GRAPH.  On the frozen r5 diagonal bank, the full middle-orientation
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, WITH THE
+  MISTAKE-420 ENDPOINT-RETAINING SCOPE REPAIR.  On the fixed-prime frozen r5
+  diagonal bank, the full middle-orientation
   difference has rank five and splits into a rank-two source plane plus a
   rank-three endpoint plane.  The dual middle block of the ten-dimensional
   quotient contracts to a different rank-two response plane.  The two planes
@@ -21,6 +22,10 @@ status: >
   static finite-exact representation statement, not a physical current, D5
   flux map, row exclusion, or LRC(14) theorem.
 source: codex r5 rank-two cospan session, 2026-08-16
+audit: >
+  2026-08-20 external variance, coefficient-space, symmetry, primality,
+  replay, and consequence audit; all four custom-RREF/FLINT normal and
+  optimized transcripts LF-match their stored outputs
 depends_on: []
 related:
   - MISTAKE-420
@@ -54,13 +59,15 @@ hash_basis: LF-normalized bytes
 
 # THM-3534 -- R5 middle-response relative cospan and twisted H1 collapse
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT AUDIT.  DO NOT USE
-THIS FILE AS A PROVED DEPENDENCY UNTIL ITS STATUS IS EXPLICITLY PROMOTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, WITH THE
+MISTAKE-420 ENDPOINT-RETAINING SCOPE REPAIR.**
 
-**Audit status (2026-08-16): every claimed finite-exact map and census has
-both a primary exact replay and an independent FLINT reconstruction.  The
-network hostile audit of quotient variance, map typing, and scope is still
-pending, so the theorem remains provisional and outside the proof graph.**
+The promotion audit independently checked row/column variance, quotient-dual
+typing, the endpoint-retaining coefficient extension, every symmetry used,
+the fixed modulus's primality, all four exact replays in normal and optimized
+modes, and the consequence boundary.  The theorem is only about the pinned
+finite good-reduction matrix bank over `(1)`.  In particular, it contains no
+physical arrival map, clock edge, current, or scalar-row exclusion.
 
 The refuted `r1`-blind scalar transport has a minimal two-dimensional repair,
 but only after one endpoint direction is quotiented.  This repairs a static
@@ -666,10 +673,13 @@ census it uses a distinct cached seven-orbit intersection lattice.  It
 independently reproduces the canonical `U` and `U^perp` digests, every map and
 scalar in `(16b)--(16j)` under the stated chart, both twisted-boundary ranks,
 and all 127 character rows in `(16k)`.  Thus every finite-exact map currently
-claimed here has an independent algebra-engine reproduction.  The theorem
-remains provisional because the external hostile audit of variance, typing,
-and scope is still pending; computational agreement alone does not promote a
-reserved bridge-shaped statement.
+claimed here has an independent algebra-engine reproduction.  The external
+hostile audit checked variance, typing, coefficient-space scope, and
+nonconsequences in addition to the independent computations.  In particular
+it recomputed the MISTAKE-420 hostile `V_ext`, verified that the second formal
+class is the pure endpoint line, and checked that the 84 `(s,ell)` cells
+elsewhere in the `r=5` packet are internal coordinates of one canonical
+non-cover row rather than 84 of the 165 live scalar rows.
 
 Reproduce with
 
@@ -718,6 +728,7 @@ c808cfe4e5e8847b355671ac703ee185da6428dca1e449a3c3837f25193eb474
 036823a7ba481528a3d02f9b36cecc08c2a76b796d69b437ac644ea62251c53e.
 ```
 
-The proof candidate constructs no physical current, no `C4` clock closure,
+This theorem constructs no physical current, no `C4` clock closure,
 no map to THM-2542's chart class, no JC flux, no row exclusion, and no result
-on LRC(14).  LRC(14) remains **OPEN**.
+on LRC(14).  The scalar ledger does not move: all `165` rows remain, and
+LRC(14) remains **OPEN**. **QED.**
