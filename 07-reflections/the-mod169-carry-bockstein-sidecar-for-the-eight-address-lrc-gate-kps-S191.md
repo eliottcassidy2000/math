@@ -4,6 +4,20 @@
 THM-2334, THM-3534, THM-3593, THM-3654, and THM-3657 are **PROVED** at
 their stated scopes; the chain maps proposed below are **OPEN**.
 
+**Exact update after THM-3658/3659.**  The proposed *one-bit* carry sidecar is
+**REFUTED**.  The lawful linear split/cyclic character transform is now proved
+in THM-3658, while THM-3659 computes the nonlinear defect exactly: on a carry
+it is not one fixed vector but an address-dependent rank-two response with
+55 values.  The strongest survivor is the full response table
+
+```text
+R(t0,t1)=e(t0,t1+1)-e(t0,t1),   0<=t0<=11, 0<=t1<=12. (0)
+```
+
+The discussion below is retained as the route that exposed this missing
+coordinate; every occurrence of a bare carry-bit bridge is superseded by
+the response-table formulation (0).
+
 ## 1. Inheritance pass
 
 - **Closest proved mechanism.**  THM-3657 classifies the 169 two-current
@@ -102,9 +116,10 @@ The carry `kappa` is the missing two-cocycle.  Forgetting it replaces the
 nonsplit cyclic extension by its split associated graded `F_13 direct_sum
 F_13`.  A lawful bridge must therefore be one of the following:
 
-1. a **filtered** map retaining the carry/Bockstein as a sidecar;
+1. a **filtered** map retaining the carry and response table (0) as a
+   sidecar;
 2. a deliberately **nonlinear** map whose defect from additivity is exactly
-   `(10)`; or
+   the address-dependent response in THM-3659; or
 3. a proof that the physical current is confined to a carry-trivial chart.
 
 The third option is hostile: the kernel and exceptional sets in `(2)--(3)`
@@ -118,7 +133,7 @@ following proof obligation:
 ```text
 THM-2334 exact relation current
   -> split target character q in G^                         [proved]
-  -> carry-sensitive lift (q,beta(q)) in a filtered C_169  [OPEN]
+  -> carry/response-sensitive filtered lift               [OPEN]
   -> two-current row a_(r0,r1) in THM-3585                 [OPEN]
   -> correction e(a) in E2                                 [proved]
   -> exceptional exposure X                                [THM-3657]
@@ -132,7 +147,7 @@ For any proposed arrow one must record:
 |---|---|
 | source | THM-2334 quotient character together with its exact-address orbit coefficient |
 | target | the assembled mod-169 inverse-digit label, not a free pair of residues |
-| map | a filtered lift whose additivity defect is the carry cocycle `(10)` |
+| map | a filtered lift whose defect transports both the carry (10) and response (0) |
 | preserved | reversal `(4)`, nonzero source correction, and the endpoint/chamber mark `(5)` |
 | destroyed | absolute relation address beyond mod 13, unless supplied as a sidecar |
 | cheapest hostile | prove the lift cannot be additive by `(8)` and test whether it drops rank after reduction mod 13 |
@@ -141,7 +156,7 @@ If this chain exists and a closed physical word supplies a relation of the
 form used by THM-3657, the 169-state noncancellation problem becomes an
 eight-address exposure problem.  Nothing currently proves that hypothesis.
 
-## 5. Concrete next computations
+## 5. Exact probes completed and the repaired frontier
 
 ### 5.1 Generic amplitude atlas
 
@@ -152,17 +167,18 @@ quotient reversal.  Write, in its pinned RREF coordinates,
 e(a)=mu(a)(1,b)                  for generic a.         (11)
 ```
 
-Exact reversal gives `mu(168-a)=mu(a)`.  The next probe should tabulate
-`mu(a)` and test, with hostile controls, whether it is:
+Exact reversal gives `mu(168-a)=mu(a)`.  THM-3659 now tabulates this scalar.
+It has exactly 16 values, but its interpolation degrees on the eight generic
+intervals are
 
-- constant on the carry-free intervals;
-- a low-degree polynomial separately on those intervals;
-- a discrete Green function with jumps exactly at `(2)--(3)`; or
-- genuinely high-complexity.
+```text
+(11,21,21,5,5,21,21,11),
+```
 
-A positive result would turn the projective gate into a scalar transport
-law.  A negative result would identify the missing coordinate that the line
-atlas suppresses.
+and both full coordinate sequences have cyclic Fourier support `169/169`.
+Thus the finite-state amplitude compression is real, while the proposed
+low-degree and sparse-frequency compressions are **REFUTED**.  A useful law
+must retain the 16-state partition or an equivalent address sidecar.
 
 ### 5.2 Carry-defect rank
 
@@ -172,19 +188,53 @@ For every pair of labels define
 Delta(x,y)=e(x plus y)-e(x)-e(y),                     (12)
 ```
 
-where `plus` is cyclic addition `(9)`, and compare it with the same formula
-under split coordinatewise addition.  Compute the ranks and supports of the
-two defect banks.  The decisive positive signal is that the cyclic defect
-factors through the one-bit carry `kappa`; the decisive negative signal is a
-rank larger than the carry sidecar can support.
+where `plus` is cyclic addition (9), and compare it with the same formula
+under split coordinatewise addition.  THM-3659 completes this computation.
+The split and cyclic defect banks have exact records
+
+```text
+(rank, nonzero, distinct)=(2,26474,549), (2,26079,542).
+```
+
+Their difference vanishes without a carry and, with a carry, factors through
+the split sum by (0).  The table has 156 cells, 139 nonzero cells, 55 values,
+and rank two.  Consequently the one-bit factorization is **REFUTED**, but a
+much smaller 156-cell factorization survives.
 
 ### 5.3 Exceptional exposure against target twists
 
-Do not identify THM-2334 twist indices with `(r0,r1)`.  Instead enumerate
-all affine/linear identifications of the associated graded quotients that
-respect reversal, then ask whether the nonconstant twist variance can be
-supported away from the image of `X`.  This is a finite hostile test for any
-candidate filtered lift, not evidence that such a lift is physical.
+Do not identify THM-2334 twist indices with `(r0,r1)`.  THM-3658 proves the
+exact block Fourier change between the two character bases but also proves
+that it is not a convolution or current map.  The repaired finite test is:
+
+1. enumerate reversal-compatible associated-graded identifications;
+2. transport the complete table (0), not just the carry bit;
+3. ask whether a physically admissible coefficient law can place all
+   response energy on generic reversal pairs and avoid `X`.
+
+Arbitrary reversal-symmetric weights *can* avoid `X`; variance alone cannot
+prove exposure.  The missing predicate must therefore come from chronology,
+current conservation, positivity, or an exact-address sidecar.
+
+### 5.4 Crisp next theorem target
+
+Define the exceptional response energy for any candidate physical weight
+`theta` by
+
+```text
+E_X(theta)=sum_(t in X or t+(0,1) in X)
+             theta(t) ||R(t)||^2.                     (12a)
+```
+
+The norm here is only a placeholder until a characteristic-zero or
+positive-semidefinite lift is typed.  The next useful theorem is not
+`E_X>0` for arbitrary symmetric weights (false), but one of:
+
+- an exact current identity forcing positive mass on response edges incident
+  to `X`;
+- a chronology restriction excluding every generic-only response cycle; or
+- a dual certificate separating the physical coefficient cone from the
+  generic-only kernel.
 
 ## 6. Cross-thread lesson from AMM 12592
 
@@ -204,9 +254,15 @@ The next LRC move should preserve the mod-169 extension state from the start.
 
 ## 7. Status
 
-**PROVED:** the atlas `(2)--(5)`, the quotient reversal, the source/two-row
-projective disjointness, the eight-address necessary gate, and the elementary
-group obstruction `(8)`.
+**PROVED:** the atlas (2)--(5), the quotient reversal, the source/two-row
+projective disjointness, the eight-address necessary gate, the elementary
+group obstruction (8), THM-3658's exact block Fourier transform, and
+THM-3659's 55-value response-table factorization.
 
-**OPEN:** every current-to-digit chain map, every filtered/Bockstein lift,
-physical exposure of `X`, scalar amplitude law `(11)`, and LRC(14).
+**REFUTED:** a constant one-bit carry response, low-degree generic interval
+laws, cyclic Fourier sparsity, and exceptional exposure from arbitrary
+reversal-symmetric variance alone.
+
+**OPEN:** every current-to-digit chain map, every filtered response lift,
+physical exposure of `X`, a useful law for the 16-state scalar automaton,
+and LRC(14).
