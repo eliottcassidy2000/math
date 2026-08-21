@@ -1,0 +1,9 @@
+THM-3570 universal Pell-conic target-graph factor audit
+disc_phi=-(12*a*x^2-b^2*x^2-2*b*x-1)*(12*a*x^2-b^2*x^2+b*x+2)^2
+Pell conic: W^2=(1+b*x)^2-12*a*x^2
+parameter: q=t-b, x=-2*q/(q^2+2*b*q+12*a)
+compiler: phi=4*(q^2+b*q+4*a)/q^3
+other branch is the same compiler under q -> 12*a/q
+equivalent equation: phi*q^3-4*q^2-4*b*q-16*a=0
+h-family regression: q=-2/h
+all active truth gates passed

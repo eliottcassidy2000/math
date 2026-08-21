@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `jacobian_universal_pell_conic_factor_compiler_kps_s188.py` -> matching
+  `.out` [THM-3570 PROVED + VERIFIED-EXACT].  Every nonzero polynomial target
+  graph has reducible core cubic iff some `q in C(a,b)^*` satisfies
+  `phi=4(q^2+bq+4a)/q^3`; then
+  `x=-2q/(q^2+2bq+12a)` is a root.  Solving the core equation for `phi`
+  exposes the Pell conic `W^2=(1+bx)^2-12ax^2`; its two rational branches
+  are exchanged by `q -> 12a/q`.  The equivalent cubic search equation is
+  `phi*q^3-4q^2-4bq-16a=0`, and `q=-2/h` recovers THM-3565 exactly.
+  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `d633a3f3f6191aa48524d4519ecc61374a411980695ce2b28b0f97f0310ec8f1` /
+  `fa142160b424be9d6432debef441a1d4d40694ea8d96c9b4178033d0ebb66acc`.
+
 - `jacobian_reducible_graph_component_euler_no_go_kps_s188.py` -> matching
   `.out` [THM-3568 PROVED + VERIFIED-EXACT].  In THM-3565's complete
   reducible `deg_a(phi)=1` family, the degree-one component is
