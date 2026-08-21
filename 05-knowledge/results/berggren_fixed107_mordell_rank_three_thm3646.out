@@ -1,0 +1,14 @@
+== THM-3646 fixed-107 Mordell rank-three exact companion ==
+curves=E:y2=x3+1225041;Eprime:y2=x3-33076107
+U=(Fraction(50913, 16), Fraction(-11482065, 64));R=(Fraction(8279053120, 216766729), Fraction(-3611785597108493, 3191456551067));R_denominator=14723^(2,3)
+finite_independence=((5, 6), (11, 12), (13, 12));matrix_det_mod3=2
+finite_ledger_sha256=d985d07101b9be37cc65140441c12988c3dbfb19f781ec88887a734d87b3b563
+Kminus_discriminant=-408347;reduced_forms=137;forms_sha256=f63314f2acd0b4d48226c35d579ed26a70a33fe63e30e2c6aca8c3ab1d17283a
+Kplus_discriminant=1225041;ordinary_class_number=1;source=THM-3643
+Bandini_support=phi:{3}->2_split_primes;psi:{2}->2_split_primes
+norm_kernel_dimensions=phi:1;psi:2;selmer_sum_upper=3
+rank_lower=3_by_finite_reduction;rank_upper=3_by_two_isogeny_Selmer_bounds
+semantic_sha256=30cf28dee9ac8842062cddb843db2c43e7dd66f2ba3d23d7bd70143aa2e74ae9
+CHECKS=93
+status=CANDIDATE EXACT COMPANION;imported Selmer-support theorem requires audit
+scope=rank only;no integral-point classification or new two-cube ray
