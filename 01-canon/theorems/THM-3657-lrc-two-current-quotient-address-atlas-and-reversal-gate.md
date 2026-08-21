@@ -157,6 +157,10 @@ spaces is being made.
 
 ## 4. The multi-stranger exceptional-address gate
 
+Here *multi-stranger* means only an arbitrary number of two-current address
+rows in one linear relation.  It is not THM-518's unrelated large-speed
+"stranger" terminology or its Weyl-decoupling statement.
+
 Every one of the 17 source-current corrections is nonzero, and their 17
 projective lines are pairwise distinct.  More strongly,
 
