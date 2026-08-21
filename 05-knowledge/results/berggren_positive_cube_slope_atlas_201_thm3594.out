@@ -1,0 +1,28 @@
+== THM-3594 Berggren positive two-cube slope atlas through 201 ==
+universe=(limit=201,candidate_count=2072)
+prime_screen=(limit=499,prime_count=95,excluded=2042,survivors=30)
+screen_survivors=((14,23),(26,29),(26,47),(38,47),(38,53),(50,53),(50,71),(62,95),(74,95),(74,101),(98,101),(86,125),(98,125),(86,149),(110,149),(122,149),(86,167),(98,167),(110,167),(146,167),(98,173),(110,173),(122,173),(170,173),(98,191),(110,191),(170,191),(110,197),(146,197),(182,197))
+admissible_slopes=((14,23),(26,29),(26,47),(98,101),(86,125),(86,149),(110,149),(122,149),(86,167),(98,167),(110,167),(146,167),(170,191),(110,197),(182,197))
+new_beyond_101=((86,125),(86,149),(110,149),(122,149),(86,167),(98,167),(110,167),(146,167),(170,191),(110,197),(182,197))
+row=14/23|K=85|C=676|classes=3|periods=(11, 11, 11)|good=(0, 1)|branches=3|fallbacks=2|seed_class=0|phase=7|period=11|cycles=0|period_unit_bits=(210,207)|seed_bits=(144,137,281,280)|seed_sha256=657e95b2da1d9facc1bbbd68f508c7d0659268d1dced55437e9e8ec22cfb081a
+row=26/29|K=621|C=2692|classes=6|periods=(10, 10, 10, 10, 10, 10)|good=(0, 3)|branches=6|fallbacks=0|seed_class=0|phase=0|period=10|cycles=0|period_unit_bits=(139,134)|seed_bits=(13,3,16,12)|seed_sha256=acc505c00e62736bbaa90e7d2f11854eb79af5f20bd527fac49970ab4a60bb43
+row=26/47|K=165|C=2116|classes=9|periods=(46, 46, 46, 46, 46, 46, 46, 46, 46)|good=(0, 1, 2, 3, 6, 7)|branches=9|fallbacks=0|seed_class=0|phase=10|period=46|cycles=0|period_unit_bits=(509,505)|seed_bits=(114,105,220,219)|seed_sha256=a10f7051cf7b9b1ecad0f680cb9bb80a1b8eea996efa593c35cbcaf59123153b
+row=98/101|K=9405|C=38404|classes=6|periods=(34, 34, 34, 34, 34, 34)|good=(0, 1, 2, 3)|branches=6|fallbacks=0|seed_class=0|phase=2|period=34|cycles=0|period_unit_bits=(673,666)|seed_bits=(51,38,88,83)|seed_sha256=83d80e01d54a38f9ef13f18bc9e0de3d761bf6a5ea1f9adcd3bd35ccf6a21ebd
+row=86/125|K=4653|C=27556|classes=3|periods=(50, 50, 50)|good=(0, 1)|branches=3|fallbacks=0|seed_class=0|phase=8|period=50|cycles=0|period_unit_bits=(2005,1999)|seed_bits=(341,328,669,667)|seed_sha256=7af7cfe3eefcb09666b550ca2bb9a7fa3ef4f1b9f5e3d03e6e71b853d3c942a2
+row=86/149|K=2461|C=24292|classes=6|periods=(50, 50, 50, 50, 50, 50)|good=(1, 2)|branches=6|fallbacks=0|seed_class=1|phase=10|period=50|cycles=0|period_unit_bits=(7428,7422)|seed_bits=(1570,1557,3127,3126)|seed_sha256=1f7e19b7c769a953226af4ef4d7021cdd8da6f59569ef588ede485bf193967f4
+row=110/149|K=8733|C=46372|classes=6|periods=(25, 25, 25, 25, 25, 25)|good=(0, 3)|branches=6|fallbacks=0|seed_class=0|phase=4|period=25|cycles=0|period_unit_bits=(1599,1592)|seed_bits=(309,295,603,601)|seed_sha256=94e09d62aed7b0c8b2d1b3f317f12c156cac5109b52c1c544f7da166c875da7b
+row=122/149|K=12445|C=58564|classes=5|periods=(150, 150, 150, 150, 150)|good=(0, 1, 2, 3)|branches=15|fallbacks=0|seed_class=0|phase=12|period=150|cycles=0|period_unit_bits=(3542,3535)|seed_bits=(289,275,564,561)|seed_sha256=6ad0b1db63e69f7519b372367b1153486faabfa2f8ac2c4a0c1e9fc9c49ba06a
+row=86/167|K=565|C=20836|classes=6|periods=(83, 83, 83, 83, 83, 83)|good=(0, 1, 2, 3)|branches=6|fallbacks=2|seed_class=0|phase=19|period=83|cycles=0|period_unit_bits=(4119,4114)|seed_bits=(967,955,1923,1923)|seed_sha256=d3d91350d1463e178fb8a96b73c96a1674f745ae8e260c54bfccabd7d0f37a05
+row=98/167|K=3509|C=32068|classes=2|periods=(83, 83)|good=(0, 1)|branches=6|fallbacks=0|seed_class=0|phase=0|period=83|cycles=0|period_unit_bits=(2366,2361)|seed_bits=(31,18,49,48)|seed_sha256=4599231b0661bab4cd740f18ee2b7996c2af42f20a3d5b9578a44d77b5a3d595
+row=110/167|K=6837|C=44068|classes=12|periods=(166, 166, 166, 166, 166, 166, 166, 166, 166, 166, 166, 166)|good=(0, 1, 2, 3, 4, 5, 6, 7)|branches=12|fallbacks=0|seed_class=0|phase=36|period=166|cycles=0|period_unit_bits=(7327,7321)|seed_bits=(1623,1609,3232,3231)|seed_sha256=e973bc048bb94a5b0e15127667ff76bc009b6a6f3ffcc57a5479893c6dc3daea
+row=146/167|K=19125|C=84676|classes=6|periods=(83, 83, 83, 83, 83, 83)|good=(0, 1, 2, 3)|branches=6|fallbacks=0|seed_class=0|phase=27|period=83|cycles=0|period_unit_bits=(7936,7929)|seed_bits=(2626,2612,5238,5235)|seed_sha256=c8340ad02269f0dfa2586c509e0d0862e53fee998cb1b19d761ed182049440ad
+row=170/191|K=26373|C=115012|classes=6|periods=(95, 95, 95, 95, 95, 95)|good=(0, 1, 2, 3)|branches=6|fallbacks=0|seed_class=0|phase=36|period=95|cycles=0|period_unit_bits=(9477,9469)|seed_bits=(3651,3636,7286,7283)|seed_sha256=08f3c67e3645af046eba0d924b6147e52aafea096a4a2668b55ce33505fe5250
+row=110/197|K=3197|C=38308|classes=4|periods=(198, 198, 198, 198)|good=(0, 1, 2, 3)|branches=12|fallbacks=0|seed_class=0|phase=38|period=198|cycles=0|period_unit_bits=(3621,3615)|seed_bits=(711,697,1409,1408)|seed_sha256=91d73a83843e550302ae4a4025e24219559e32306162c009e49acf9706a984e2
+row=182/197|K=31229|C=132196|classes=6|periods=(11, 11, 11, 11, 11, 11)|good=(1, 2)|branches=6|fallbacks=0|seed_class=1|phase=0|period=11|cycles=0|period_unit_bits=(1709,1702)|seed_bits=(97,82,179,174)|seed_sha256=01033c4486b9323f6aec523ab698935f3f5a773679463741d3b02ce47c904cf6
+obstruction_counts=((3, 1553), (5, 84), (7, 157), (11, 42), (13, 40), (17, 15), (23, 3), (29, 6), (31, 19), (37, 20), (41, 4), (47, 4), (53, 5), (59, 5), (61, 9), (71, 2), (79, 5), (83, 4), (89, 5), (101, 4), (103, 5), (107, 6), (109, 8), (113, 5), (127, 5), (131, 4), (137, 5), (149, 1), (151, 4), (157, 2), (167, 2), (179, 6), (181, 2), (197, 1))
+seed_ledger_sha256=8ff45843ce97b3ea6bdeeeab691bf1c06b53f7b58ea82abb1fa28edc14952a40
+semantic_sha256=2389ac8015a1f1394f938fe5ebf87933175dcdc7b4480901bdeba2c3a6b57de0
+script_sha256_lf=d3466965aa2ccaca81c3f4f4369dbca8f54f03c8472c7d5094459e38ea8977bd
+status=FINITE-EXACT+VERIFIED-EXACT;15 positive infinite rays
+scope=n<=201 only;no unbounded parametrization;no density/asymptotic
+PASS
