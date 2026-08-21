@@ -2,7 +2,7 @@
 id: THM-3660
 title: "LRC exceptional leakage functional and fourteen-edge boundary"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The quotient of THM-3657's correction plane by its generic projective line
   has a normalized functional taking value 0 off the eight exceptional
   addresses and values +1/-1 on two reversal-paired four-sets.  Its vertical
@@ -12,6 +12,13 @@ status: >
   exact squared ledger 1,560.  This is a static finite-field detector, not a
   physical positivity or LRC(14) theorem.
 source: kps-s191 / THM-3659 exceptional-boundary continuation, 2026-08-21
+audit: >
+  PASS -- agent Poincare independently reconstructed the detector from the
+  THM-3593/3657 tensor, reproduced the exact signed support, all 14/11 edges,
+  seven reversal pairs, all 28,561 carry-pair multiplicities and the
+  1092/0/1248/1560 ledger, both replays, and every hash.  It specifically
+  audited the integer-lift and positivity wording; no characteristic-zero,
+  PSD, physical-current, or scope inference was present.
 depends_on:
   - THM-3657-lrc-two-current-quotient-address-atlas-and-reversal-gate
 related:
@@ -27,8 +34,8 @@ hash_basis: raw LF bytes
 
 # THM-3660 -- the eight exceptional addresses are an exact signed boundary
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  THM-3657's projective gate can be sharpened to a scalar detector.
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  THM-3657's projective gate can be sharpened to a scalar detector.
 The detector is exact, normalized, reversal-compatible, and supported on
 precisely the eight addresses that the many-row cancellation gate requires.
 
