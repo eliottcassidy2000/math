@@ -2,25 +2,28 @@
 id: THM-3603
 title: "Three-by-four additive-support collision cones and fibre-cut atlas"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For positive three-point and four-point supports, the complete
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  For positive three-point and four-point supports, the complete
   connected additive-collision locus consists of 83 rational cones and 149
   oriented sum-fibre words.  Simultaneous reversal has three fixed words and
   73 two-cycles and is retained, not quotiented.  Every connected word of
   sumset size eight or nine loses projection connectivity after deletion of
   one collision fibre; the unique size-six word and exactly four size-seven
-  words have cut debt two.  This is additive-support combinatorics only: no
-  coefficient deletion, Darboux nonentry, or JC(2) conclusion is claimed.
+  words have cut debt two.  The only coefficient deletion used is the inherited
+  deletion of whole disconnected zero-bracket components; no deletion follows
+  merely from a one-fibre cut.  No new Darboux nonentry or JC(2) conclusion is
+  claimed.
 source: kps-s188 + agent Anscombe / open exponent-two 3x4 support sector, 2026-08-21
 audit: >
-  Author replay and code audit.  The standard-library exact companion uses
-  rational RREF, exact one- and two-dimensional chamber enumeration, and no
-  floating point or assert-dependent gate.  Ordinary and optimized runs are
-  byte-identical after LF normalization and match the stored transcript.  An
-  independent primitive gap-at-most-16 census realizes all 149 globally
-  enumerated words with maximum minimal witness gap five; it is a hostile
-  control, not the source of globality.  Independent hostile audit remains
-  pending.
+  PASS.  An independent SymPy reconstruction recovered 786 flats, maximal
+  connected dimension two, 83 cones, 149 words, the full cone/chamber and
+  reversal counts, and every fibre-cut, cut-debt, cut-size, and exposure count.
+  An independent gap-at-most-five scan realizes exactly all 149 words and all
+  83 closure masks.  Ordinary and optimized companions are byte-identical to
+  the stored transcript after LF normalization.  The audit caught and repaired
+  an expository scope contradiction: whole disconnected components are lawfully
+  deleted, but a one-fibre projection cut is never treated as coefficient
+  deletion.
 depends_on:
   - THM-3592-universal-exponent-two-three-by-three-weight-darboux-nonentry
   - THM-3583-universal-exponent-two-two-by-four-weight-darboux-nonentry
@@ -39,8 +42,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3603 -- three-by-four additive-support collision cones and fibre-cut atlas
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-AUDIT.**  This classifies the additive skeleton of the first still-open
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+This classifies the additive skeleton of the first still-open
 seven-piece exponent-two Darboux sector.  It deliberately stops before the
 coefficient and arm-regularity equations.
 
@@ -231,12 +234,18 @@ chamber argument in Section 2.
 THM-3592 and THM-3583 leave `(3,4)` and its transpose among the minimal
 seven-piece exponent-two sectors.  Their component-deletion argument gives a
 precise corollary here.  If either projection graph is disconnected, retain
-the unique component containing the scalar row and delete every zero-bracket
-component.  A disconnected `A` graph leaves at most two `A` weights and is
-excluded by the `2 x 4` theorem THM-3583; a disconnected `B` graph leaves at
-most three `B` weights and is excluded by the `3 x 3` theorem THM-3592.
-Consequently every putative exponent-two `3 x 4` Darboux pair has one of the
-149 connected oriented words in this atlas.
+the unique component containing the scalar row and delete every other whole
+component, whose bracket is zero on its disjoint set of rows.  A scalar fibre
+contains at least two distinct indices on each side.  Hence a disconnected
+three-vertex `A` graph leaves exactly two `A` weights in its scalar component
+and reduces to the `2 x <=4` theorem THM-3583.  A disconnected four-vertex `B`
+graph leaves either two `B` weights, again covered by THM-3583 after exchange,
+or three, covered by the `3 x 3` theorem THM-3592.  Consequently every
+putative exponent-two `3 x 4` Darboux pair has one of the 149 connected
+oriented words in this atlas.
+
+This is the only coefficient deletion used in the theorem.  In particular,
+the one-fibre cuts of Section 4 are not components and are not deleted.
 
 This removes the unbounded additive-support search from that cell.  What
 remains is finite but algebraic: for each word, impose the bracket
