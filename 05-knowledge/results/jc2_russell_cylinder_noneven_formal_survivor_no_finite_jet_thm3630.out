@@ -1,5 +1,5 @@
-THM-3630 exact companion -- provisional non-even formal survivor
-status=formal decomposable-pair survivor and no uniform finite jet bound; audit=PENDING
+THM-3630 exact companion -- proved non-even formal survivor
+status=formal decomposable-pair survivor and no uniform finite jet bound; audit=HOSTILE-PASS
 SECTION exact common curve and transverse slopes
 PASS common_curve=exact c_x=3 lambda=(-3/(4g^3),u/3,3/(4g^3)) exceptional_u=plusminus9/4
 PASS formal_gluing=Vandermonde normal_degrees_all m0_boundary=4

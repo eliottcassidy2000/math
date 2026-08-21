@@ -2,7 +2,7 @@
 id: THM-3630
 title: "Russell-cylinder non-even formal survivor and no finite jet bound"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On the non-even rho=0 tangent stratum, an explicit three-branch formal
   packet admits an all-order decomposable formal target pair (F,w) with
   common Jacobian 12. Hermite and target-jet interpolation therefore give
@@ -10,7 +10,11 @@ status: >
   prescribed finite collision cutoff. This constructs neither one all-order
   polynomial nor a global constant-Jacobian pair or Keller map.
 source: root / audit_thm3627 all-order non-even continuation, 2026-08-21
-audit: PENDING -- provisional theorem and exact companion require hostile audit
+audit: >
+  PASS -- an independent hostile audit reconstructed the formal CRT/Newton
+  gluing and decomposable pullback, replayed the Hermite and hostile-repair
+  ranks through an independent exact polynomial backend, and verified
+  byte-identical normal, optimized, and stored 147-gate transcripts.
 depends_on:
   - THM-3624-russell-cylinder-noneven-fold-weighted-cokernel-boundary
   - THM-3619-russell-cylinder-even-fold-higher-jet-staircase
@@ -19,14 +23,14 @@ related:
   - THM-3627-russell-cylinder-noneven-hostile-degree-six-closure
 script: 04-computation/jc2_russell_cylinder_noneven_formal_survivor_no_finite_jet_thm3630.py
 output: 05-knowledge/results/jc2_russell_cylinder_noneven_formal_survivor_no_finite_jet_thm3630.out
-script_sha256: e057bef58af3f6f6a979becff2f7e9e63f738de8934e396642addd9a3ec285af
-output_sha256: adc573378b8de821d14d83cd4b0781949bbf06515189ff1414cb069edf5fc320
+script_sha256: 71e7c5e94b2230ed81f2bde2da8d4089fe63885d8cbb49bd8ece4ca9509e3712
+output_sha256: b79491514c83740a26a03a89d5f6f3e48a3db664928e23b6a32c12090163a3c1
 hash_basis: raw LF bytes
 ---
 
 # THM-3630 -- Russell-cylinder non-even formal survivor and no finite jet bound
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 This theorem identifies the sharp limitation of the local collision-jet
 route on the principal non-even stratum left by THM-3624 and THM-3627. The
 single hostile polynomial of THM-3627 closes at source degree six, but the

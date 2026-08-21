@@ -33,8 +33,8 @@ def zero(expression):
     return sp.cancel(expression) == 0
 
 
-print("THM-3630 exact companion -- provisional non-even formal survivor")
-print("status=formal decomposable-pair survivor and no uniform finite jet bound; audit=PENDING")
+print("THM-3630 exact companion -- proved non-even formal survivor")
+print("status=formal decomposable-pair survivor and no uniform finite jet bound; audit=HOSTILE-PASS")
 
 
 print("SECTION exact common curve and transverse slopes")
