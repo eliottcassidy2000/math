@@ -1,5 +1,16 @@
 # Script Results Index
 
+- `jacobian_target_graph_degree_resonance_irreducibility_kps_s188.py` ->
+  matching `.out` [THM-3564 PROVED + VERIFIED-EXACT].  For every nonzero
+  target graph `c+phi(a,b)=0`, the core cubic at `a=infinity` has a unique
+  least term valuation unless `deg_a(phi)=1 mod 3`; the only possible tie is
+  `v(x)=(deg_a(phi)+2)/3`.  Thus all nonresonant pullback hypersurfaces are
+  irreducible, while resonance remains necessary rather than sufficient.
+  This reduces factor-bearing triangular searches to `a`-degrees
+  `1,4,7,...`.  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `6d5895a87268763412ebd87cba63003060ba89f28dfbbac47469dbbac5f3408c` /
+  `a79f387fd26ccf756193296bb31388c3b1300e6575968546148b5955383a34f9`.
+
 - `jacobian_target_graph_cusp_strict_transform_kps_s188.py` -> matching
   `.out` [DERIVED-EXACT + FINITE-EXACT DIAGNOSTIC].  THM-1335's
   cube-plus-square identity converts every target graph `c+phi(a,b)=0` into

@@ -1,0 +1,25 @@
+THM-3564 target-graph degree-resonance audit
+coefficient a-degrees: d=0 -> (2,0,0); d>=1 -> (2+2d,d,d)
+d k_candidate
+0 none
+1 1
+2 none
+3 none
+4 2
+5 none
+6 none
+7 3
+8 none
+9 none
+10 4
+11 none
+12 none
+13 5
+14 none
+15 none
+for d=0, valuations are (-2+3k,k,0): unique minimum for every k in Z
+for d>=1, valuations are (-(2+2d)+3k,-d+k,-d)
+k<=0: first term uniquely minimal
+k>0: middle term exceeds constant; a tie can only satisfy 3k=d+2
+resonant degrees: d=1 mod 3; all other nonzero target graphs have irreducible core cubic
+all active truth gates passed
