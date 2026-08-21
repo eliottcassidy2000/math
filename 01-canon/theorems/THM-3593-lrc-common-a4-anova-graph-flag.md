@@ -2,8 +2,8 @@
 id: THM-3593
 title: "LRC common A4 ANOVA graph flag"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Over the pinned field of THM-3585, the common raw A4 plane is the
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  Over the pinned field of THM-3585, the common raw A4 plane is the
   graph of an isomorphism between a four-dimensional additive ANOVA plane
   and its four-dimensional interaction image.  The additive plane in turn
   projects isomorphically onto a pure-relation four-plane and has only a
@@ -12,9 +12,12 @@ status: >
   physical entry, characteristic-zero lift, or LRC(14) conclusion is proved.
 source: kps-s188 / LRC ANOVA graph continuation, 2026-08-21
 audit: >
-  Author proof audit plus optimization-safe exact companion.  Every ANOVA
-  idempotent, component basis, graph stack, and standard-subspace
-  intersection is checked.  Independent hostile audit remains pending.
+  Independently accepted by agent Godel on 2026-08-21 after reconstructing
+  all ANOVA identities on the 52 coordinate vectors, all component and
+  intersection bases, both graph directions, the rank-two correction and
+  kernel, the field primality certificate, normal/optimized replay, and every
+  pinned digest.  The audit requested the explicit kernel/surjectivity steps
+  now inserted in Sections 2--3; no mathematical or scope failure remained.
 depends_on:
   - THM-3585-lrc-common-a4-channel-plane-and-centering-complement
 script: 04-computation/lrc_common_a4_anova_graph_flag_thm3593.py
@@ -26,8 +29,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3593 -- LRC common A4 ANOVA graph flag
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-AUDIT.**  This resolves the internal ANOVA geometry of THM-3585's common
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+This resolves the internal ANOVA geometry of THM-3585's common
 four-plane.  It does not promote that static plane to a dynamical carrier.
 
 ## 1. Four ANOVA idempotents
@@ -91,8 +94,19 @@ Therefore
 A intersect B=A intersect I=B intersect I=0.           (7)
 ```
 
-Both projections `A->B` and `A->I` are isomorphisms.  Equivalently, there is
-a unique isomorphism `T:B->I` such that
+Put `P_a=P_0+P_s+P_r`.  The two restricted projections have kernels
+
+```text
+ker(P_a|A)=A intersect I=0,       ker(P_i|A)=A intersect B=0.
+```
+
+They both have rank four by `(4)`, hence are isomorphisms.  Equivalently,
+
+```text
+T=(P_i|A) composed with (P_a|A)^(-1):B->I
+```
+
+is the unique isomorphism such that
 
 ```text
 A={b+T(b):b in B},                    A+I=B direct_sum I. (8)
@@ -108,16 +122,23 @@ basis of `A+I` equals that of `B+I` entrywise and has digest
 
 ## 3. Second graph: the additive plane is relation-led
 
-Since `dim R=dim B=4`, the projection
+The projection is onto because
 
 ```text
-P_r:B->R                                                 (10)
+P_r(B)=P_r(P_a A)=P_r A=R.                            (10)
+```
+
+Since `dim R=dim B=4`,
+
+```text
+P_r|B:B->R
 ```
 
 is an isomorphism.  Hence `B` is the graph of a unique linear map
 
 ```text
-U:R->E subset im(P_0+P_s),              rank U=2.       (11)
+U=(P_0+P_s) composed with (P_r|B)^(-1):R->E,
+im U=E,                                  rank U=2.       (11)
 ```
 
 The rank in `(11)` is exactly `dim E=2`.  Its kernel is the part of the
@@ -138,7 +159,8 @@ A=graph(T:B_4->I_4).                                    (13)
 The state correction is genuinely tied to the constant coordinate.  The
 separate images have dimensions `dim C0=1`, `dim S=2`, while their paired
 image `E=(P_0+P_s)A` still has dimension two.  Projection `E->S` is an
-isomorphism, so `E` is itself the graph of one linear functional `S->C0`.
+isomorphism because `P_s(E)=P_s(A)=S` and both spaces have dimension two.
+Thus `E` is itself the graph of one linear functional `S->C0`.
 
 ## 4. Hostile intersections and interpretation
 
@@ -168,8 +190,9 @@ kernel; equality of dimensions or Fourier support cannot supply the map.
 The companion hash-pins and reconstructs the THM-3585 source tensor, applies
 all four projections in `(2)`, and verifies idempotence component by
 component.  It pins the eight component ranks and canonical basis digests,
-the seven stack ranks, all six intersection dimensions, and graph equality
-`(9)`.  Its semantic digest is
+the seven stack ranks, the six recorded standard-subspace intersections plus
+`B intersect I` through the additive--interaction stack rank, and graph
+equality `(9)`.  Its semantic digest is
 
 ```text
 44d2d062a447eb68fc58b33eee8d23fb8092e1829534fb7c4f9e9f082e037f76. (15)
