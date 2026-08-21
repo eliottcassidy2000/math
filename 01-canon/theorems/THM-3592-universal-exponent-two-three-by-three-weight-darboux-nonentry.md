@@ -2,7 +2,8 @@
 id: THM-3592
 title: "Universal exponent-two three-by-three weight Darboux nonentry"
 status: >
-  PROVED + VERIFIED-EXACT / REPAIRED AFTER FAILED AUDIT; REAUDIT PENDING.  For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (REPAIRED AFTER
+  FAILED FIRST AUDIT).  For every
   squarefree polynomial Sigma over C of degree at least two, no polynomial
   Darboux pair on c^2 e=Sigma(b), after scalar removal, can have exactly three
   nonzero homogeneous weight pieces in each output.  The proof classifies all
@@ -13,12 +14,12 @@ status: >
   Jacobian counterexample, or solution of JC(2) is claimed.
 source: kps-s188 / unequal-step three-by-three Darboux hostile lane, 2026-08-21
 audit: >
-  The standard-library exact companion passes ordinary and optimized Python
-  with byte-identical output.  The first independent hostile audit correctly
-  rejected the pushed version because simultaneous support reversal is not a
-  regularity-preserving symmetry: the reflected hook and two reflected
-  Euclidean representatives had been omitted.  They are now proved below and
-  included in the companion.  A second hostile audit is pending.
+  The first independent hostile audit correctly rejected the pushed version
+  because simultaneous support reversal is not a regularity-preserving
+  symmetry; see MISTAKE-432.  After repair, a second independent audit
+  reconstructed the reversed hook and both mirrored Euclidean families,
+  checked every boundary and arm-order ladder, and verified that ordinary,
+  optimized, and stored transcripts are byte-identical.
 depends_on:
   - THM-3569-danielewski-two-by-three-weight-darboux-nonentry
   - THM-3579-equal-step-three-by-three-danielewski-darboux-nonentry
@@ -37,12 +38,12 @@ hash_basis: LF-normalized bytes
 
 # THM-3592 -- universal exponent-two three-by-three weight Darboux nonentry
 
-**PROVED + VERIFIED-EXACT / REPAIRED AFTER FAILED AUDIT; REAUDIT PENDING.**  This closes
-the unequal-step `3 x 3` cell left by THM-3579 and the last six-piece cell left
-by THM-3583.  The first hostile audit caught a reversal-sensitive omission;
-Sections 5.5 and 7 now close the three missing representatives, and the
-independent-audit qualifier is deliberately pending until that repair is
-reaudited.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (REPAIRED AFTER
+FAILED FIRST AUDIT).**  This closes the unequal-step `3 x 3` cell left by
+THM-3579 and the last six-piece cell left by THM-3583.  The first hostile
+audit caught a reversal-sensitive omission; Sections 5.5 and 7 close the
+three missing representatives, and the repaired proof has now passed a
+second independent audit.
 
 All rings are over `C`.  Let `Sigma in C[b]` be squarefree with
 `deg Sigma>=2`, and put
