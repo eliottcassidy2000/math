@@ -3,7 +3,7 @@
 
 The universal no-go is proof-driven through injectivity on one line and
 Jung--van der Kulk degree divisibility.  This companion verifies the Russell
-compiler, the line inverse, the genuinely three-direction target certificate,
+compiler, the line inverse, the quotient-safe three-direction certificate,
 the postcomposition chain rule, all target-monomial degree invoices, the three
 graph degree profiles, the exceptional Jacobian trace, and sharp method
 hostiles.  It uses exact SymPy arithmetic and no assertion gates.
@@ -161,7 +161,7 @@ require("line reconstruct q", same(recovered_q, q))
 print("PASS target_coefficient_gates=6 line_restriction_and_reconstruction=8")
 
 
-print("SECTION essential three-direction certificate and postcomposition chain rule")
+print("SECTION quotient-safe three-direction certificate and postcomposition chain rule")
 Ytarget, Starget = sp.symbols("Ytarget Starget")
 f_restricted = sp.expand(theta * Ytarget + Rpoly.subs(U, 0))
 g_restricted = sp.expand(Vpoly.subs(U, 0) * Starget + Qpoly.subs(U, 0))
@@ -177,6 +177,48 @@ require("second gradient coefficient vector", second_vector == (r10, theta, 0))
 require("third gradient coefficient vector", third_vector == (q10, 0, nu))
 require("three-direction determinant", direction_matrix.det() == 3 * lam * theta * nu)
 
+# The determinant above is an ancillary ambient control.  The load-bearing
+# certificate works in the Russell quotient.  A polynomial H(U,V) killed by
+# ell*d_U+m*d_V is a polynomial in mU-ell V; exact powers supply controls for
+# that characteristic-zero kernel.  If the resulting S-free linear form has
+# a Y coefficient, its highest pure Y power survives the quotient normal
+# form with leading monomial C*Y.  If it has no Y coefficient, no Y appears.
+ell, mm, UU, VV = sp.symbols("ell mm UU VV")
+kernel_coordinate = mm * UU - ell * VV
+directional_kernel_rows = 0
+for degree in range(9):
+    packet = sp.expand(kernel_coordinate**degree)
+    require(
+        f"directional kernel power {degree}",
+        zero(ell * sp.diff(packet, UU) + mm * sp.diff(packet, VV)),
+    )
+    directional_kernel_rows += 1
+
+Bt, Ct, Yt = sp.symbols("Bt Ct Yt")
+n0, nB, nC, nY = sp.symbols("n0 nB nC nY")
+quotient_basis = sp.groebner(
+    [Ct * Yt - Bt * (Bt + 4)],
+    Ct,
+    Yt,
+    Bt,
+    order="lex",
+    domain=sp.QQ[n0, nB, nC, nY],
+)
+linear_form = n0 + nB * Bt + nC * Ct + nY * Yt
+pure_y_rows = 0
+for degree in range(2, 9):
+    normal = sp.expand(quotient_basis.reduce(sp.expand(linear_form**degree))[1])
+    pure_coefficient = sp.Poly(normal, Ct, Yt, Bt).coeff_monomial(Yt**degree)
+    require(f"quotient pure-Y survivor degree={degree}", pure_coefficient == nY**degree)
+    pure_y_rows += 1
+
+no_y_rows = 0
+for degree in range(1, 9):
+    no_y_packet = sp.expand((linear_form.subs(nY, 0)) ** degree)
+    require(f"quotient no-Y branch degree={degree}", sp.diff(no_y_packet, Yt) == 0)
+    no_y_rows += 1
+require("linear one-form has no B3", sp.Poly(linear_form, Bt, Ct, Yt).coeff_monomial(Bt**3) == 0)
+
 H1u, H1v, H2u, H2v = sp.symbols("H1u H1v H2u H2v")
 Lx, Lq, Mx, Mq = sp.symbols("Lx Lq Mx Mq")
 composed_jacobian = sp.expand(
@@ -185,7 +227,11 @@ composed_jacobian = sp.expand(
 )
 factored_jacobian = sp.expand((H1u * H2v - H1v * H2u) * (Lx * Mq - Lq * Mx))
 require("postcomposition chain rule", composed_jacobian == factored_jacobian)
-print("PASS three_direction_gates=4 determinant=3*lambda*theta*nu chain_rule_gates=1")
+print(
+    "PASS ambient_direction_gates=4 determinant=3*lambda*theta*nu "
+    f"quotient_directional_kernel={directional_kernel_rows} pure_Y={pure_y_rows} "
+    f"no_Y={no_y_rows} linear_B3=1 chain_rule_gates=1"
+)
 
 
 print("SECTION complete target-monomial degree invoices")

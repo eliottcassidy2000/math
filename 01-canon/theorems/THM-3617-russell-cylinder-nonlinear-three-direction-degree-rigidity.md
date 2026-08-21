@@ -25,8 +25,8 @@ external:
   - "Jung--van der Kulk: degree divisibility for polynomial automorphisms of the affine plane."
 script: 04-computation/jc2_russell_cylinder_nonlinear_three_direction_degree_rigidity_thm3617.py
 output: 05-knowledge/results/jc2_russell_cylinder_nonlinear_three_direction_degree_rigidity_thm3617.out
-script_sha256: 6f5e2205853a92f8f9a24588cfadeac4bd57d47c90a4637b39af66874f90d61d
-output_sha256: 295d6d3703cb503fa35b8f9a6f7dfaa76830d73c39e91985a8b0d8ef56d48802
+script_sha256: ee9d82cecb7e05408041b7443b8466d2f6e792c747c2daf20decc901267f6189
+output_sha256: d5471aaed4655e64a84b381624eacbb6e8190a91b3483261d6d577319f417f06
 hash_basis: raw LF bytes
 ---
 
@@ -99,27 +99,38 @@ right would be units of `C[x,q]`; in particular `Jac(L,M)` would be a nonzero
 constant, contrary to THM-3614.  Thus every polynomial postcomposition through
 a fixed rank-two linear target plane is already closed.
 
-As an ambient target polynomial map on `A4`, the family `(4)` does not
-secretly reduce to that corollary.  Restrict the target variables to `C=0`
-and write
+The family `(4)` does not secretly reduce to that corollary.  This must be
+proved in the Russell quotient, not by treating all four ambient coordinates
+as independent.  Write
 
 ```text
-f(T,Y)=theta Y+R(T,0),
-g(T,S)=V(T,0)S+Q(T,0).                                  (7)
+mathcal R=C[B,C,Y,S]/(CY-B(B+4)).                       (7)
 ```
 
-If `(f,g)` factored through two linear forms on the three-space `(T,Y,S)`, all
-coefficient vectors of their gradients would lie in one fixed subspace of
-dimension at most two.  Put `r_10=[T]R(T,0)` and `q_10=[T]Q(T,0)`.  Those
-coefficient vectors contain
+Suppose, to the contrary, that `(F,G)=(H_1(L,M),H_2(L,M))` in `mathcal R`
+for two linear forms `L,M`.  The functions `F,G` are algebraically
+independent: on `C!=0`, the variables are `(B,C,S)`, `F` is nonconstant in
+`(B,C)`, and `G` is affine in the free variable `S` with nonzero coefficient
+`V`.  Hence `L,M` are algebraically independent and the substitution
+`C[U,V]->mathcal R`, `(U,V)=(L,M)`, is injective.
+
+Let `ell=L_S` and `m=M_S`.  If `ell=m=0`, every polynomial in `L,M` is
+independent of `S`, contradicting the term `V(B,C)S` in `G`.  Otherwise,
+differentiate `F=H_1(L,M)` with respect to `S` on `C!=0`.  It gives
 
 ```text
-(3lambda,0,0),        (r_10,theta,0),        (q_10,0,nu). (8)
+ell (H_1)_U + m (H_1)_V=0,
+H_1=P(mU-ell V),
+F=P(N),                 N=mL-ell M.                    (8)
 ```
 
-Their determinant is `3lambda theta nu != 0`.  Hence three target directions
-are essential.  Dependence on `C` may make the pair four-directional, but is
-not needed for the obstruction.
+Here `N` is an `S`-free linear form in `(B,C,Y)`.  In the normal form for
+`C[B,C,Y]/(CY-B(B+4))`, a pure power `Y^j` is never reduced.  If the
+`Y`-coefficient of `N` is zero, `P(N)` cannot contain `theta Y`.  If it is
+nonzero and `deg P=j>=2`, `P(N)` has a nonzero pure `Y^j` term, again
+impossible because `F=theta Y+R(B,C)` has `Y`-degree one.  Thus `deg P<=1`,
+which cannot supply `lambda B^3`.  This proves that three target directions
+are essential in the Russell quotient itself.
 
 ## 2. The source line is injective
 
@@ -278,8 +289,9 @@ counterexample to JC(2).
 The exact companion must verify without truth-bearing `assert` statements:
 
 - the Russell identities and the line reconstruction `(9),(10)`;
-- the three-direction determinant in `(8)` and the postcomposition chain
-  rule `(6)`;
+- the quotient-safe one-linear-form obstruction `(7),(8)`, an ancillary
+  ambient three-direction determinant, and the postcomposition chain rule
+  `(6)`;
 - the top forms `(12)--(17)` over explicit high-, low-, and quadratic graph
   universes, together with complete allowed-target monomial degree invoices;
 - the divisibility inequalities on a stated integer grid;
