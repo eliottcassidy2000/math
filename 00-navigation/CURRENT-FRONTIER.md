@@ -340,14 +340,12 @@ is sharp: equal counts allow two densities or none.
   descent, and 3551/52 close one-ray/cyclic families. 3555--57 + D6 close
   mixed `N<=2` and
   `N=3,D<=6`; `D>=7`/width `>=4` open. THM-3560 closes monomial shears.
-  [3561](../01-canon/theorems/THM-3561-rational-keller-danielewski-polynomial-completion.md)
-  gives an etale triple collision on non-`A2` `Y`; THM-3569 forces any
-  constant-Poisson pair to six pieces, leaving `3x3` and `2x4`. THM-3562
-  closes balanced passports and THM-3563 one nongraph slice. THM-3564/65/68/
-  3570 compile graph factors: degree one has no `A2` factor and quadratics
-  are irreducible. [3567](../01-canon/theorems/THM-3567-separated-rational-keller-maximal-observable-nodal-completion-no-go.md)
-  makes separated full-field completions nodal and non-quasi-finite from
-  degree three, distinct from 3561's target-ring intersection. 3495--3542
+  THM-3561 gives an etale triple collision on non-`A2` `Y`; 3569 forces six
+  pieces (`3x3`,`2x4` open). 3562/63 close balanced passports/one nongraph
+  slice. 3564/65/68/70/73 give exactly
+  `phi=4H(1+bH+4aH^2)`, `deg_a(phi)=3deg_a(H)+1`; degree one has no `A2`
+  factor and degree two is irreducible. THM-3567 makes separated completions
+  nodal and non-quasi-finite from degree three. 3495--3542
   reach `R8`, with index zero to level four.
   2681/85--2708
   block the `A4/S4` cubic; 3448/3517 leave quartic `C3` open (MISTAKE-416).

@@ -1,4 +1,4 @@
-# Overnight frontier synthesis: conductor cycles, gain cycles, and a six-piece Darboux floor
+# Overnight frontier synthesis: conductor cycles, Pell descent, and a six-piece Darboux floor
 
 **Session status (2026-08-20).**  `JC(2)` and `LRC(14)` remain open.  This
 session produced and independently audited exact stopping theorems, a sharper
@@ -180,18 +180,28 @@ descent predicate.  This is the concrete MISTAKE-420 boundary.
 
 ## 6. Other exact squeezes recovered during the session
 
-- THM-3564 restricts factor-bearing target graphs to
-  `deg_a(phi)=1 mod 3`; resonance is necessary, not sufficient.
-- THM-3565 classifies the reducible first-resonance family, and the proved
-  THM-3568 file with slug
-  `reducible-target-graph-component-euler-no-go` excludes both components
-  from being `A2`.  Irreducible resonant pullbacks remain a separate gate.
+- [THM-3570](../01-canon/theorems/THM-3570-universal-pell-conic-target-graph-factor-compiler.md)
+  turns target-graph reducibility into the exact rational equation
+  `phi q^3-4q^2-4bq-16a=0`.  [THM-3573](../01-canon/theorems/THM-3573-polynomial-target-graph-pell-parameter-descent-classification.md)
+  closes its polynomial-descent problem: necessarily `q=1/H` and
+  `phi=4H(1+bH+4aH^2)`, so `deg_a(phi)=3deg_a(H)+1`.  Hence every allowed
+  resonance is realized, but by a rigid polynomial family rather than an
+  arbitrary target graph.
+- The first new graph resonance is the exact quartic packet
+  `H=u(b)a+v(b)`.  Its core has a polynomial linear factor; the hostile
+  `H=a` has an irreducible quadratic cofactor.  The open question has moved
+  from finding factors to testing the geometry of their source components.
+- THM-3565 is the `H=-h(b)/2` degree-one specialization, and the proved
+  THM-3568 file with slug `reducible-target-graph-component-euler-no-go`
+  excludes both of its components from being `A2`.  This no-go is not yet an
+  all-`H` theorem.
 - THM-3562 closes every balanced pole passport in its normalized nonsplit
   Faber chart by a common pole unit and a Lagrange sum contradiction.
-- RESERVED THM-3567 is auditing whether the separated rational family
-  `P=f(x),Q=y/f'(x)` has a nodal, not smooth, full-field polynomial-observable
-  completion.  Until promotion, its collision/contraction packet is a proof
-  candidate and is not used above.
+- [THM-3567](../01-canon/theorems/THM-3567-separated-rational-keller-maximal-observable-nodal-completion-no-go.md)
+  proves that the separated rational family `P=f(x),Q=y/f'(x)` has full-field
+  polynomial-observable ring `A^2=Delta(P)B`.  It has one node per critical
+  value and, from degree three, contracts regular companion lines.  This is
+  distinct from THM-3561's smaller smooth target-ring intersection.
 
 These results sharpen architectures; none is a global planar degree
 exclusion.  The current cited degree passport still leaves the leading cell
@@ -205,11 +215,14 @@ framework.
 2. **Danielewski `2 x 4`:** classify the two extra-weight collision patterns;
    isolated pieces should collapse to THM-3569, while two-sided arithmetic
    extensions are the genuine survivors.
-3. **Nongraph escape:** deform the node matching so its jump cochain has zero
+3. **Quartic Pell row:** start with `H=u(b)a+v(b)`, factor the source pullback,
+   and test normalization, Euler characteristic, and collision retention on
+   each component.  Do not infer `A2` from the compiled linear factor.
+4. **Nongraph escape:** deform the node matching so its jump cochain has zero
    period, then test the stronger one-form gate `(6)` rather than minors.
-4. **Gain sidecar:** add `G3` wedge energies to coefficient-fibre searches;
+5. **Gain sidecar:** add `G3` wedge energies to coefficient-fibre searches;
    do not use the sign-indefinite correction as a transition-rate matrix.
-5. **LRC:** seek an actual arrival/current map into the promoted response
+6. **LRC:** seek an actual arrival/current map into the promoted response
    carrier; another static quotient computation cannot move the ledger.
 
 The common lesson is now exact.  Squaring amplitudes, quotienting branch

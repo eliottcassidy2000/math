@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `jacobian_polynomial_pell_parameter_descent_thm3573.py` -> matching `.out`
+  [THM-3573 PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF/HOSTILE-AUDITED].
+  THM-3570's rational parameter gives a polynomial target graph exactly when
+  `q=1/H` for some nonzero `H in C[a,b]`; then
+  `phi=4H(1+bH+4aH^2)` and `deg_a(phi)=3deg_a(H)+1`.  The core cubic factors
+  polynomially as `(RX+2H)(RMX^2-2HMX+4U)`.  The complete degree-four row is
+  `H=u(b)a+v(b)`, while `H=a` is a hostile with one rational linear factor and
+  irreducible quadratic cofactor.  This classifies graph-factor descent, not
+  `A2` components or Jacobian counterexamples.  Normal/`-O` replay matches.
+  Script/output LF SHA-256:
+  `a664d9a93ee760013d668f6fabba72370f8d9a88602df06534f217c3c2f01852` /
+  `f05b6075e28d6da0726698f8a895a46b733b7aa3e7bc63d8717b2daa6c4d7f69`.
 - `jacobian_universal_pell_conic_factor_compiler_kps_s188.py` -> matching
   `.out` [THM-3570 PROVED + VERIFIED-EXACT].  Every nonzero polynomial target
   graph has reducible core cubic iff some `q in C(a,b)^*` satisfies
