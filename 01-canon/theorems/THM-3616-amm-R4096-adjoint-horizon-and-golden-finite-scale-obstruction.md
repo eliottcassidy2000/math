@@ -2,8 +2,8 @@
 id: THM-3616
 title: "AMM R=4096 adjoint horizon and golden finite-scale obstruction"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-  AUDIT.  At the pre-registered hostile epoch R=4096, the archived failing
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  At the pre-registered hostile epoch R=4096, the archived failing
   Rule-A offset D0=88 dies at row 1014.  Its positive truncated-adjoint wall
   changes sign between cuts 382 and 383, so every admissible continuation
   surviving that fatal inequality must differ from Rule A by row 382.  The
@@ -13,12 +13,12 @@ status: >
   alternative feasibility, uniform extractor, or AMM constant is claimed.
 source: kps-s188 + agent Anscombe / THM-3601 continuation, 2026-08-21
 audit: >
-  Author/implementer exact audit.  The compressed standard-library companion
-  hash-pins THM-3601, first reproduces its full R=2048 boundary control, then
-  rebuilds the R=4096 degree word, fatal row, positive adjoint recurrence,
-  boundary integers, bit lengths, active-cell count, and exact radical
-  comparison.  Ordinary and optimized runs are byte-identical.  Independent
-  hostile audit remains pending.
+  ACCEPT.  An independent full-state reconstruction recovered the 4096-degree
+  profile and fatal row, rederived the top-distance adjoint recurrence, and
+  directly cancelled every free coefficient at cuts 382 and 383.  It obtained
+  the complete negative-cut interval, boundary integers, digest, bit lengths,
+  active-cell count, and exact radical gaps, and checked the departure-row
+  indexing and scope.  Normal, optimized, and stored transcripts agree.
 depends_on:
   - THM-3601-amm-r2048-terminal-failure-adjoint-horizon
 related:
@@ -34,8 +34,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3616 -- AMM R=4096 adjoint horizon and golden finite-scale obstruction
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-AUDIT.**  This executes the hostile test pre-registered in THM-3601.  The
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  This executes the hostile test pre-registered in THM-3601.  The
 test confirms the next exact adjoint horizon but rejects the simplest reading
 of the apparent golden scaling.
 
@@ -184,5 +184,14 @@ failed Rule-A trace up to a cut: it does not construct a repair, prove the
 full entry polytope infeasible, or establish entry into the superblock basin.
 It proves no alternative feasibility, asymptotic horizon law, uniform
 extractor, value of the AMM constant `C*`, or improvement to its bound.
+
+The independent audit reconstructed the degree word and fatal row with a
+full-state, feed-aware replay, then derived the compressed recurrence anew.
+Direct coefficient ledgers at both boundary cuts leave zero residue in every
+free coordinate.  It found negative cuts exactly `383,...,1013`, reproduced
+the boundary digest and `199396` active cells, and checked that cut `383`
+assumes agreement through row `382`.  Finally it verified
+`577^2-5*256^2=5249` and `573^2-5*256^2=649`, so the two signed errors and
+their absolute difference `1/512` are exact.
 
 **QED.**
