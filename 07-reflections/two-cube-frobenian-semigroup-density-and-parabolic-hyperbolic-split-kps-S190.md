@@ -1,9 +1,10 @@
 # Two-cube support density and the parabolic/hyperbolic split
 
-Status: **FINITE-EXACT PROBE + CONJECTURAL ASYMPTOTIC SYNTHESIS**
-(2026-08-21).  This is not a theorem and creates no proof dependency.
-Its exact input is THM-3645; its asymptotic and transfer statements are
-explicitly conjectural.
+Status: **FINITE-EXACT PROBE + RIGOROUS SIEVE-DIMENSION DERIVATION +
+CONDITIONAL ASYMPTOTIC SYNTHESIS** (2026-08-21).  This reflection is not a
+theorem and creates no proof dependency.  Its exact input is THM-3645.  The
+upper-bound mechanism in Section 3 is rigorous; the full asymptotic still
+requires the two stated correlation-theorem interfaces.
 
 ## 1. The local screen is three correlated prime semigroups
 
@@ -72,42 +73,128 @@ SHA256 bfe5927eba9ea6a62116a481265f39e31ed69eb32ee5e5befe218accd0e4bba3
 and prints only the integer ledger and its semantic digest.  The displayed
 logarithmic normalization is a diagnostic computed from that ledger.
 
-## 3. Frobenian `3/2`-law conjecture
+## 3. The sieve dimension is rigorously `3/2`
 
-Each allowed prime set in `(3)` has Dirichlet density `1/2`.  The Dirichlet
-series of integers supported on one such set therefore has a square-root
-singularity at `s=1`; by the usual Landau--Selberg--Delange heuristic, one
-form contributes a factor `(log N)^(-1/2)`.  There are three genuinely
-different forms in `(4)`.  This predicts
+For `p>=5`, put `chi_6=(6/p)=chi_24` and
+`chi_-2=(-2/p)=chi_-8`.  The bad residue set in `F_p^2` is the union of
 
 ```text
-A(N) ~ kappa N^2/(log N)^(3/2),                        (5)
+n=0 and V=0  if chi_24(p)=-1,
+2n+V=0       if chi_-8(p)=-1.                          (5)
 ```
 
-with a positive singular-series constant apparently near
+These three lines are distinct.  If `rho(p)` is their union size, then
 
 ```text
-kappa approximately 0.009.                             (6)
+(chi_24,chi_-8)   (+,+)  (+,-)  (-,+)  (-,-)
+rho(p)                 0       p    2p-1    3p-2.      (6)
 ```
 
-Equations `(5)--(6)` are **CONJECTURAL**.  The linear relation among the three
-forms, the coprimality condition, and the exceptional primes `2,3` all enter
-the constant.  Multiplying three one-variable constants would ignore exactly
-the correlations that matter.
-
-A plausible rigorous first target is only the upper bound
+Writing `e_D(p)=1_(chi_D(p)=-1)`, one has
 
 ```text
-A(N) << N^2/(log N)^(3/2).                             (7)
+rho(p)/p^2=(2e_24(p)+e_-8(p))/p+O(1/p^2),
+2e_24+e_-8=3/2-chi_24-chi_-8/2.                        (7)
 ```
 
-This should be approachable as a half-dimensional Frobenian sieve on each of
-the three forms.  A full asymptotic needs a two-variable Selberg--Delange or
-comparable correlation theorem and a convergent local singular series.  A
-lower bound may meet a genuine parity/correlation barrier; the finite table
-does not decide that issue.
+The prime number theorem in the fixed residue classes modulo `24` therefore
+gives
 
-## 4. Parabolic screens versus hyperbolic existence
+```text
+sum_(p<=z) rho(p) log(p)/p^2=(3/2)log z+O(1).          (8)
+```
+
+This is exactly the coupled sieve-dimension axiom with dimension `3/2`.
+It must be applied once to the union `(5)`, not as three formally independent
+half-dimensional sieves.
+
+For squarefree `d`, CRT gives at most `3^omega(d)d` bad residue classes.
+Elementary counting in `0<V<n<=N` has total remainder
+
+```text
+sum_(d<=D)|r_d| << ND(log D)^2+D^2(log D)^2.           (9)
+```
+
+Taking `D=N^(1/3)` and then a fixed-level fundamental-lemma sieve proves the
+rigorous upper bound
+
+```text
+A(N) << N^2/(log N)^(3/2).                            (10)
+```
+
+Dropping primitivity and the conditions at `2,3` only enlarges the set, so
+they create no gap in this upper bound.  A maintained theorem package and a
+primary-source citation audit remain to be written before `(10)` is used as a
+canon dependency.
+
+## 4. The coupled constant and the honest asymptotic boundary
+
+Selberg--Delange gives, for the one-form support indicator attached to a
+quadratic character `chi_D`, the constant
+
+```text
+C_D=1/sqrt(pi) * [ L(1,chi_D)
+      product_(chi_D(p)=-1)(1-p^-2)
+      product_(p|D)(1-p^-1) ]^(1/2).                  (11)
+```
+
+Here
+
+```text
+C_24  approximately 0.30845624,
+C_-8  approximately 0.40503888,
+L(1,chi_24)=log(5+2sqrt(6))/sqrt(6),
+L(1,chi_-8)=pi/(2sqrt(2)).                             (12)
+```
+
+After dividing the actual local density by the three marginal densities,
+only the equal-sign Frobenius classes contribute.  The absolutely convergent
+correction is
+
+```text
+mathfrak C=
+ product_(p>=5,chi_24=chi_-8=+1)(1-p^-2)
+ * product_(p>=5,chi_24=chi_-8=-1)
+       (1-2/p)/(1-1/p)^2
+ approximately 0.95871001.                            (13)
+```
+
+The triangular area supplies `1/2`; the coupled local condition at `p=3`
+supplies another `1/2`; the apparent mod-`24` cone factor is already coupled
+to the third form's mod-`8` support and must not be multiplied again.  The
+predicted constant is therefore
+
+```text
+kappa=(1/4) C_24^2 C_-8 mathfrak C
+      approximately 0.0092365781.                     (14)
+```
+
+At `N=49999`, the exact normalized count is `0.0090176366`, or
+`0.9762963` times `(14)`.  The agreement is strong evidence but not a proof
+of
+
+```text
+A(N) ~ kappa N^2/(log N)^(3/2).                       (15)
+```
+
+The elementary sieve proving `(10)` cannot supply the matching lower bound.
+A full asymptotic appears to fit the geometry of linear-correlation theorems
+for small-mean multiplicative functions: the two residue cones give the
+pairwise independent triples
+
+```text
+(24a+5, 24b+23, 16a+8b+11),
+(24a+23,24b+5,  16a+8b+17).                           (16)
+```
+
+Two interfaces remain explicit: verify the fixed-character support
+indicators uniformly in the required multiplicative-function class,
+including exceptional-character terms; and add primitivity by truncated
+Moebius inversion, using `(10)` to bound the common-prime tail.  Until those
+are written and the primary theorem is checked, `(15)` and `(14)` are
+**CONDITIONAL / CONJECTURAL**, not proved.
+
+## 5. Parabolic screens versus hyperbolic existence
 
 The user's Berggren-tree branch supplies a useful dynamical distinction.  On
 the Pythagorean `U`-spine the generating matrix is unipotent; `N=U-I` has
@@ -117,7 +204,7 @@ from THM-3645 is analogous.  With
 ```text
 M=product_(p<=997)p,
 U_s=507+2Ms,          V_s=5,
-m_s=512+2Ms,          n_s=1019+4Ms,                   (8)
+m_s=512+2Ms,          n_s=1019+4Ms,                  (17)
 ```
 
 translation in `s` preserves every residue seen by the fixed screen.  This is
@@ -134,17 +221,19 @@ is therefore naturally two-stage:
 
 ```text
 parabolic/Frobenian stage: classify or count viable slope support,
-hyperbolic/Pell stage:     certify an infinite positive ray.             (9)
+hyperbolic/Pell stage:     certify an infinite positive ray.            (18)
 ```
 
 Confusing the stages causes both common errors: a fixed finite screen is not
 global, and a locally viable slope is not an admissible Pell orbit.
 
-## 5. Crisp next targets
+## 6. Crisp next targets
 
-1. Derive the Euler product predicted for `kappa`, including the coupled
-   local factors for `(n,V,2n+V)` and the primitive/parity conditions.
-2. Prove `(7)` by a three-form Frobenian upper-bound sieve.
+1. Package `(5)--(10)` as a maintained upper-bound theorem with a
+   primary-source citation and an independently audited remainder estimate.
+2. Verify the multiplicative-class and exceptional-character interfaces for
+   the two support indicators; then derive `(15)` and `(14)` from the precise
+   linear-correlation theorem.
 3. Extend the exact census by residue cone and fixed-`V` slice to identify
    secondary terms or exceptional concentrations.
 4. Measure the conversion from local survivors to complete Pell/compiler
@@ -152,7 +241,7 @@ global, and a locally viable slope is not an admissible Pell orbit.
    is one bounded datum, not a density.
 5. Search for a Vieta or tree operation on `(U,V)` that preserves the full
    support semigroups and the compiler address.  Preserving only finitely many
-   residues, as in `(8)`, is an automatic hostile control.
+   residues, as in `(17)`, is an automatic hostile control.
 
 The main transferable point is that the sparse set of two-distinct-cube
 slopes appears to be governed first by a *fractional sieve dimension* and only
