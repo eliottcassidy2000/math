@@ -2,7 +2,7 @@
 id: THM-3647
 title: "LRC single point-reversal branch-orbit spectral projector"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The point-order-reversal fixed subalgebra of THM-3625's thirteen branch
   addresses is exactly the two-channel algebra F I + F Pi_W.  Each of its
   seven branch-orbit packets is an invertible cyclic generator, so any one
@@ -11,6 +11,14 @@ status: >
   finite-field algebra, not chronology, current, characteristic-zero
   transport, row exclusion, or LRC(14).
 source: kps-s189 / THM-3636 sparse branch-packet continuation, 2026-08-21
+audit: >
+  PASS -- independent clean-room reconstruction distinguished the point and
+  arc reversals, checked all thirteen covariance equations, recovered the
+  two-dimensional fixed algebra by an independent Reynolds/rank calculation,
+  verified all seven packet spectra, quadratic identities and affine
+  projectors, and reconstructed the rank-two rigidity projector.  Both normal
+  and optimized replays match the stored transcript; all parent and package
+  hashes, semantic digests, AST0 and LF gates pass.  No scope leak was found.
 depends_on:
   - THM-3636-lrc-arc-reversal-and-middle-address-quotient-intertwiner
 related:
@@ -26,8 +34,8 @@ hash_basis: LF-normalized bytes for parents; raw LF bytes for this package
 
 # THM-3647 -- one point-reversal branch orbit recovers the LRC projector
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  This compresses the static projector mechanism of THM-3636 from
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+This compresses the static projector mechanism of THM-3636 from
 the full branch-address algebra to any one point-reversal orbit packet.  Two
 different reversals are load-bearing and must not be conflated.
 
