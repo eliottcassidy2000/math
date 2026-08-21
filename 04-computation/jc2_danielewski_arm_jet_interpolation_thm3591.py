@@ -7,6 +7,7 @@ calibrated bulk defect, and sharp boundaries without Python assert gates.
 """
 
 from math import prod
+from itertools import combinations
 
 import sympy as sp
 
@@ -240,6 +241,101 @@ require("double-dagger full bracket not constant", ddagger_reduced != -1)
 require("double-dagger added weight", len({-9, -3, -2, 2, 4}) == 5)
 
 print("PASS scalar payment, arm repair, nodal arms, and nonscalar-layer failure")
+
+
+print("SECTION eight-piece support and <=10-piece additive-repair nonentry")
+R_support = {-6, 1, 3}
+S_support = {-9, -3, -2, 2, 4}
+forced_sums = {-6, -4, -1, 0, 1}
+expected_edges = {
+    -6: (3, -9),
+    -4: (-6, 2),
+    -1: (1, -2),
+    0: (3, -3),
+    1: (3, -2),
+}
+for total, edge in expected_edges.items():
+    edges = sorted((r, s) for r in R_support for s in S_support if r + s == total)
+    require(f"unique base sum {total}", edges == [edge])
+
+ff = sp.Function("ff")(b)
+gg = sp.Function("gg")(b)
+
+
+def weight_wronskian(r, s):
+    return sp.expand(s * sp.diff(ff, b) * gg - r * ff * sp.diff(gg, b))
+
+
+base_product_identities = (
+    sp.diff(ff**3 * gg, b) + ff**2 * weight_wronskian(3, -9) / 3,
+    sp.diff(ff * gg**3, b) - gg**2 * weight_wronskian(-6, 2) / 2,
+    sp.diff(ff**2 * gg, b) + ff * weight_wronskian(1, -2),
+    sp.diff(ff * gg, b) + weight_wronskian(3, -3) / 3,
+    sp.diff(ff**2 * gg**3, b) + ff * gg**2 * weight_wronskian(3, -2),
+)
+for index, identity in enumerate(base_product_identities):
+    require(f"base product derivative {index}", sp.simplify(identity) == 0)
+
+
+def cover_by_new_p(value):
+    return {total for total in forced_sums if any(value + s == total for s in S_support)}
+
+
+def cover_by_new_q(value):
+    return {total for total in forced_sums if any(r + value == total for r in R_support)}
+
+
+p_candidates = sorted(
+    {total - s for total in forced_sums for s in S_support} - R_support
+)
+q_candidates = sorted(
+    {total - r for total in forced_sums for r in R_support} - S_support
+)
+
+one_p = [p for p in p_candidates if cover_by_new_p(p) == forced_sums]
+one_q = [q for q in q_candidates if cover_by_new_q(q) == forced_sums]
+require("no one-P repair", one_p == [])
+require("no one-Q repair", one_q == [])
+
+two_p = [
+    pair
+    for pair in combinations(p_candidates, 2)
+    if cover_by_new_p(pair[0]) | cover_by_new_p(pair[1]) == forced_sums
+]
+two_q = [
+    pair
+    for pair in combinations(q_candidates, 2)
+    if cover_by_new_q(pair[0]) | cover_by_new_q(pair[1]) == forced_sums
+]
+mixed = []
+for p_value in p_candidates:
+    for q_value in q_candidates:
+        covered = cover_by_new_p(p_value) | cover_by_new_q(q_value)
+        if p_value + q_value in forced_sums:
+            covered.add(p_value + q_value)
+        if covered == forced_sums:
+            mixed.append((p_value, q_value))
+require("unique two-P repair support", two_p == [(-3, -2)])
+require("no two-Q repair support", two_q == [])
+require("unique mixed repair support", mixed == [(-3, -1)])
+
+require(
+    "two-P survivor product peel",
+    sp.simplify(
+        sp.diff(ff**2 * gg, b) - ff * weight_wronskian(-2, 4) / 2
+    )
+    == 0,
+)
+require(
+    "mixed survivor product peel",
+    sp.simplify(
+        sp.diff(ff * gg**3, b) + gg**2 * weight_wronskian(3, -1)
+    )
+    == 0,
+)
+require("negative-weight Sigma invoice", {r: (-r + 2) // 3 for r in (-9, -6, -3, -2, -1)} == {-9: 3, -6: 2, -3: 1, -2: 1, -1: 1})
+
+print("PASS full 3x5 cell and every one-/two-piece enlargement; frontier >=11")
 
 
 print("SECTION separated and Sigma-corrected arm-blind controls")

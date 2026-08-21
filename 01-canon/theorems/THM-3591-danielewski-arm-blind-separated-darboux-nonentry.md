@@ -12,15 +12,18 @@ status: >
   than removes, the debt into the bulk ideal.  Explicit seven- and
   eight-piece candidates separate four distinct construction invoices:
   nonlinear central arms, inverse-derivative interpolation, the scalar
-  bracket layer, and all remaining weight layers.  No Darboux pair and no
-  counterexample to JC(2) is constructed.
+  bracket layer, and all remaining weight layers.  The complete support
+  cell of the eight-piece carrier and every one- or two-piece enlargement
+  are empty, so its additive-repair frontier begins at eleven pieces.  No
+  Darboux pair and no counterexample to JC(2) is constructed.
 source: root / planar-Jacobian construction-hostile session, 2026-08-21
 audit: >
   An independent hostile audit rederived the intrinsic arm restriction,
   inverse-derivative sidecar, arbitrary Sigma-multiple and separated no-go,
-  calibrated bulk debt, all seven/eight-piece weight invoices, and sharp
+  calibrated bulk debt, all seven/eight-piece weight invoices, the full
+  eight-piece support and its one-/two-piece enlargement no-go, and sharp
   degree, exponent, and characteristic boundaries.  Normal and optimized
-  companions are byte-identical to the stored 455-gate output.
+  companions are byte-identical to the stored 473-gate output.
 related:
   - THM-3561-rational-keller-danielewski-polynomial-completion
   - THM-3576-higher-exponent-belyi-keller-collision-tower
@@ -28,8 +31,8 @@ related:
   - THM-3589-danielewski-central-arm-every-line-and-kummer-trace-darboux-gates
 script: 04-computation/jc2_danielewski_arm_jet_interpolation_thm3591.py
 output: 05-knowledge/results/jc2_danielewski_arm_jet_interpolation_thm3591.out
-script_sha256: 95178037a86c52ecdf82234987acadfeb3ff3bdf478bbf205b40d541072fdf2f
-output_sha256: a7ed1d7cdd54e7088c1d90462efb8082ce900dd069b7084fe39e90bf8dbfe6e1
+script_sha256: a9f7358cb7cfe642e9790473aef4196963da9cdb87ca440a4cd60112aaf48043
+output_sha256: 52d72ab8f928053fed6d264c9e855d68066d5ca42ea7e212ca5a2d0879912a54
 hash_basis: raw LF bytes
 ---
 
@@ -320,6 +323,68 @@ uncancelled nonzero weight layer.  This is the sharpest explicit construction
 control here: paying every boundary and scalar invoice is still not a Keller
 pair.
 
+### 3.4 The whole support cell and its first two enlargements are empty
+
+The failure of `(30)` is coefficient-independent.  Let
+
+```text
+R={-6,1,3},                  S={-9,-3,-2,2,4}.           (32)
+```
+
+For an exact support with arbitrary nonzero coefficient polynomials, the
+addition sums `-6,-4,-1,0,1` have the unique edges
+
+```text
+(3,-9), (-6,2), (1,-2), (3,-3), (3,-2).                (33)
+```
+
+The zero-Wronskian equations on these five edges would respectively make
+
+```text
+f_3^3 g_-9,   f_-6 g_2^3,   f_1^2 g_-2,
+f_3 g_-3,     f_3^2 g_-2^3                                (34)
+```
+
+constant.  Each is a nonzero polynomial divisible by `Sigma`, because a
+negative weight `r` carries `Sigma^ceil(-r/3)`.  Thus every equation is
+impossible in characteristic zero.  In particular, the complete `3 x 5`
+cell `(32)` is empty.
+
+One new `Q`-weight would have to lie simultaneously in
+
+```text
+{0,-7},              {-5,-7},              {5,-4},      (35)
+```
+
+to collide the first three sums in `(33)`; one new `P`-weight would have to
+lie in
+
+```text
+{-3,-4,-8,-10},  {5,-1,-2,-8},  {8,2,-3,-5}.           (36)
+```
+
+Both intersections are empty.  Hence every nine-piece enlargement is empty.
+
+For two new weights, an exact finite set-cover census of all five sums in
+`(33)`, including a possible new--new edge, leaves only
+
+```text
+new P-weights {-3,-2};
+or new P-weight {-3} and new Q-weight {-1}.              (37)
+```
+
+The first survivor has the unique sum-`2` edge `(-2,4)`; vanishing would
+give `(f_-2^2 g_4)'=0`, impossible because `Sigma|f_-2`.  The second has
+the unique sum-`2` edge `(3,-1)`; vanishing would give
+`(f_3 g_-1^3)'=0`, impossible because `Sigma|g_-1`.  Therefore every
+support obtained from `(32)` by adding at most two nonzero homogeneous
+pieces is empty, even after arbitrary coefficient reoptimization.
+
+This is a local construction frontier, not a target-wide support floor:
+other seven-, eight-, nine-, or ten-piece supports are not classified here.
+But any additive repair of the fully arm/scalar-paid carrier `(30)` needs at
+least eleven total pieces.
+
 ## 4. Sharp boundaries and hostile examples
 
 1. `deg Sigma>=2` is sharp.  For `Sigma=b`, the surface is `A2_(c,e)` and
@@ -367,6 +432,7 @@ check:
 - the seven-piece nodal-arm candidate `(19)--(23)`;
 - the globally scalar-paid but nonscalar-layer-defective candidate
   `(24)--(29)` and its arm-interpolating eight-piece repair `(30)--(31)`;
+- the exact support census and product-derivative peels `(32)--(37)`;
 - the degree-one, exponent-one, and positive-characteristic hostiles.
 
 The proof is universal over `C`; the finite rows are controls, not an

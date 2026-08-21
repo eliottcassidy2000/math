@@ -1,0 +1,15 @@
+THM-3595 exact companion
+SECTION Hamiltonian time-form identities
+PASS 600 Hamiltonian/residue-form controls
+SECTION finite critical-point cancellation
+PASS 8 local ramification/different cancellations
+SECTION complete infinity valuation invoice
+PASS 114048 integer/divisibility/infinity gates; min=-1 with one nonzero-residue pair
+SECTION elliptic and A13 first-kind controls
+PASS elliptic smoothness and A13 divisor=7P_++7P_-, genus=8
+SECTION b-mixed affine cubic
+PASS mixed cubic and pure-e conic affine-linear time-form controls
+SECTION sharp rational hostiles
+PASS one-channel, degree-one, nu=0, exponent-zero, constant-Sigma, and characteristic-p hostiles
+CHECKS=114679
+RESULT=PASS
