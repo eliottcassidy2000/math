@@ -1,5 +1,5 @@
-THM-3629 exact companion -- provisional linear-vertical global-form boundary
-status=verified-exact proof controls; independent hostile audit=PENDING
+THM-3629 exact companion -- proved linear-vertical global-form boundary
+status=proved, verified exact, and independently hostile-audited
 SECTION compiler, retained triple, and shifted D=0 sign collision
 PASS collision=retained_triple plus_D0_sign_pair_on_every_even_shift
 SECTION global exact two-form on Y2

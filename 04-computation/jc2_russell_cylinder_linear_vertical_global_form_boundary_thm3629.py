@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3629.
+"""Exact controls for proved THM-3629.
 
 The gates verify the compiler collision algebra, the global polynomial
 representative of the Darboux two-form and its Russell transport, the exact
@@ -31,8 +31,8 @@ def zero(expression):
     return sp.cancel(expression) == 0
 
 
-print("THM-3629 exact companion -- provisional linear-vertical global-form boundary")
-print("status=verified-exact proof controls; independent hostile audit=PENDING")
+print("THM-3629 exact companion -- proved linear-vertical global-form boundary")
+print("status=proved, verified exact, and independently hostile-audited")
 
 
 print("SECTION compiler, retained triple, and shifted D=0 sign collision")

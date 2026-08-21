@@ -2,8 +2,8 @@
 id: THM-3629
 title: "Russell-cylinder linear vertical-fold global-form boundary"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / PENDING
-  INDEPENDENT HOSTILE AUDIT.  For an even retained-collision polynomial Q
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For an even
+  retained-collision polynomial Q
   and H in t C[t] with H'(0) nonzero, every hypothetical global regular
   target pair with nonzero constant source Jacobian is already a
   noninjective polynomial Keller map.  If H is nonlinear, neither output
@@ -16,11 +16,11 @@ status: >
   JC(2) counterexample is claimed.
 source: root / audit_thm3623 linear-boundary continuation, 2026-08-21
 audit: >
-  PENDING -- the shifted D=0 collision, nonlinear critical-value unit gate,
-  global exact form and Russell transport, decomposition determinant, and
-  complete affine-linear q-degree staircase have a 73-gate exact companion,
-  but this final byte package has not yet received an independent hostile
-  audit.
+  PASS -- an independent hostile derivation checked the shifted D=0
+  collision, nonlinear critical-value unit gate, global exact form and Russell
+  transport, decomposition determinant, complete affine-linear q-degree
+  staircase, and local/nonclosed boundaries; normal, optimized, and stored
+  73-gate transcripts are byte-identical.
 depends_on:
   - THM-3561-rational-keller-danielewski-polynomial-completion
   - THM-3605-russell-cylinder-graph-slice-puncture-no-filling
@@ -30,22 +30,22 @@ related:
   - THM-3622-compiler-one-observable-graph-closure-normalization-arm-debt
 script: 04-computation/jc2_russell_cylinder_linear_vertical_global_form_boundary_thm3629.py
 output: 05-knowledge/results/jc2_russell_cylinder_linear_vertical_global_form_boundary_thm3629.out
-script_sha256: ef9301fef9a927aeeca9bfbf2dbee865dd5e676d823ba29e8edf347930da9983
-output_sha256: cf76704dea7a7f737c75e281f623cd0c3aa2c0534ad565e1f8da9ad4444de44a
+script_sha256: fa7c8c0edaf2ee31140f810923001126bf935ee1b3da3a21dc8cfd2203e54613
+output_sha256: 182dcf40daa4eec4c8a02118e0dbedeb72b517fba4dc5e926e80336c03a77e6e
 hash_basis: raw LF bytes
 ---
 
 # THM-3629 -- Russell-cylinder linear vertical-fold global-form boundary
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / PENDING
-INDEPENDENT HOSTILE AUDIT.**  This candidate identifies the exact globality
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem
+identifies the exact globality
 debt left by the `H'(0)!=0` local escape in THM-3623.  It proves several
 unrestricted no-entry lemmas, but it deliberately does **not** close every
 global target pair in this boundary.
 
 All rings, differentials, and closed points are over `C`.
 
-## 0. Setup and candidate statement
+## 0. Setup and statement
 
 Use the exponent-two Danielewski surface and its cylinder
 
@@ -90,7 +90,7 @@ them through `Theta` to `F^#,G^# in A`.  Write
 f=F o Psi o E_(Q,H),          g=G o Psi o E_(Q,H).     (6)
 ```
 
-The candidate boundary theorem has five parts.
+The boundary theorem has five parts.
 
 1. If `Jac_(x,t)(f,g)` is a nonzero constant, then `(f,g)` is already a
    noninjective polynomial Keller map and hence a counterexample to `JC(2)`.
@@ -359,11 +359,12 @@ give `(31)`.  Therefore exact global decomposition of `(27)` is equivalent
 to the residual polynomial Darboux system `(36)` of THM-3561.  That system
 is **OPEN** in arbitrary support.
 
-For `H=ht`, the same calculation gives the exact surface-only equivalence
+For `H=ht`, restrict explicitly to surface-only pairs `F^#,G^# in R`.  The
+same calculation gives the exact equivalence
 
 ```text
 Jac_(x,t)(f,g)=kappa in C*
- iff {F^#,G^#}=-kappa/(3h),             F^#,G^# in R.   (37)
+ iff {F^#,G^#}=-kappa/(3h).                             (37)
 ```
 
 The implication uses that `(x,t)->(x,q=Q(x)+ht)` is a polynomial
@@ -467,12 +468,12 @@ The tempting local functions `F=a,G=-4c/H'(w)` do not silently repair
 closedness.  Their source coefficient is
 
 ```text
-12+4a_x c H''/(H')^2,                                  (47)
+12+4 delta_Q(a) c H''/(H')^2,                          (47)
 ```
 
 not the constant produced by the enlarged form `(45)`.
 
-What is proved by this candidate:
+What is proved by this theorem:
 
 1. every positive global pair would already be a `JC(2)` counterexample;
 2. every nonlinear survivor must genuinely mix `R` and `w` in both outputs;
@@ -521,5 +522,5 @@ CHECKS=73
 RESULT=PASS
 ```
 
-with zero Python assertion statements.  The exact gates support the
-provisional proof but do not replace the pending independent hostile audit.
+with zero Python assertion statements.  They are finite controls for the
+written proof, not a replacement for it.
