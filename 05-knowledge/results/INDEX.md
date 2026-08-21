@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jacobian_resonant_linear_a_factor_classification_kps_s188.py` -> matching
+  `.out` [THM-3565 PROVED + VERIFIED-EXACT].  For `deg_a(phi)=1`, a triangular
+  target-graph pullback is reducible iff
+  `phi=-2h(b)^3a+b*h(b)^2-2h(b)` with nonzero `h in C[b]`.  The core splits
+  into one linear and one irreducible quadratic factor, while the source has
+  explicit factor `x-(1+xy)h(F2)`.  An exact rational-root dichotomy and
+  two-variable Groebner basis exclude the only other branch as
+  `16a/b^3-4/b`.  Hence every genuinely quadratic graph pullback is
+  irreducible; collision-compatible affine rows recover exactly the two
+  Kummer exceptions.  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `9f5ff066138e80875fa9d71b29277553f04160d580d6745a7183ea95b330b459` /
+  `2b679c8f2bbeb9c060a31de77ad64756c12214118b47d10e2590706bdedb643e`.
+
 - `jacobian_target_graph_degree_resonance_irreducibility_kps_s188.py` ->
   matching `.out` [THM-3564 PROVED + VERIFIED-EXACT].  For every nonzero
   target graph `c+phi(a,b)=0`, the core cubic at `a=infinity` has a unique
