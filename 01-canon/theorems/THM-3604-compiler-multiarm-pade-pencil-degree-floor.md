@@ -2,8 +2,7 @@
 id: THM-3604
 title: "Compiler multiarm Hermite--Pade pencil-degree floor"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + FINITE-EXACT COMPANION;
-  PENDING INDEPENDENT HOSTILE AUDIT AND EXPLICIT PROMOTION.  On a nontrivial
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On a nontrivial
   critical-value compiler with h arms, every nonzero member of a hypothetical
   global Darboux pencil has central-chart a-degree at least 2h, and every
   target basis has a member of a-degree at least 3h.  If
@@ -14,8 +13,14 @@ status: >
   constructed.
 source: root / planar-Jacobian arm-chart degree-invoice session, 2026-08-21
 audit: >
-  PENDING.  This theorem remains outside the proved dependency graph until an
-  independent current-byte hostile audit and explicit status promotion.
+  PASS.  An independent current-byte hostile audit rederived the target-basis
+  completion quantifier, both central-arm degree invoices, the full
+  Hermite--Pade leading-coefficient tariff, its ordinary-total-degree
+  conversion, the independent composite-degree input, the A13 specialization,
+  and every equality hostile.  It also ran an independent 1,200-row global-ring
+  cancellation probe.  Normal and optimized runs are byte-identical to the
+  stored 1,849-gate transcript; the AST has no assertion gates, and the
+  documentation and committed diff checks pass.
 depends_on:
   - THM-3581-critical-value-multiarm-keller-compiler-and-A13-carrier
   - THM-3589-danielewski-central-arm-every-line-and-kummer-trace-darboux-gates
@@ -25,15 +30,14 @@ related:
   - THM-3544-planar-keller-target-pencil-total-degree-six-floor
 script: 04-computation/jc2_compiler_multiarm_pade_pencil_floor_thm3604.py
 output: 05-knowledge/results/jc2_compiler_multiarm_pade_pencil_floor_thm3604.out
-script_sha256: 5b57ccdbbe34e5c6c938ad3a3759ca4149e05c920d0a470b8f89bbd42a956bc7
-output_sha256: 81600b9669c3c639ea201699ea1bef92fb6398de4922df72506dd4cb560a7b0a
+script_sha256: eaf4e83f12bf7918ac5338ede266e92b24d2e27227205b46fbed9afb931dcb3d
+output_sha256: c5e65493ec62eb16ec24544fbac529b038aa2976c6cbe423f36862e3af798d06
 hash_basis: raw LF bytes
 ---
 
 # THM-3604 -- Compiler multiarm Hermite--Pade pencil-degree floor
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + FINITE-EXACT COMPANION;
-PENDING INDEPENDENT HOSTILE AUDIT AND EXPLICIT PROMOTION.**  This candidate
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem
 combines three already proved mechanisms.  It constructs no polynomial
 Darboux pair and proves no case of `JC(2)` false.
 

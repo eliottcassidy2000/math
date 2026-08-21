@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3604.
+"""Exact controls for proved and independently audited THM-3604.
 
 The universal pencil floors are proof-driven consequences of THM-3589,
 THM-3600, and THM-3550.  This companion checks the integer invoices, sharp
@@ -41,7 +41,7 @@ def is_composite(integer):
     return any(integer % divisor == 0 for divisor in range(2, int(integer**0.5) + 1))
 
 
-print("THM-3604 exact companion -- provisional compiler multiarm pencil floor")
+print("THM-3604 exact companion -- proved compiler multiarm pencil floor")
 print("scope=finite exact controls; every-line, Pade, and planar composite inputs are proof-driven")
 
 
