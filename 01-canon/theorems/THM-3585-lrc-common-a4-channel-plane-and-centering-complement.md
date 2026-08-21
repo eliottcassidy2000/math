@@ -2,7 +2,8 @@
 id: THM-3585
 title: "LRC common A4 channel plane and centering complement"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT.  Over the pinned prime
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  Over the pinned prime
   755373809845391722745761, the seventeen-row nested source/current tensor
   and the 169-row two-current tensor have the same rank-four raw image in
   Fun(V4 x F13,F_p).  Their state/relation-centred images are also the same
@@ -11,6 +12,12 @@ status: >
   identity only: no chronology, current, physical entry, row exclusion,
   characteristic-zero lift, or LRC(14) conclusion is proved.
 source: kps-s188 / delegated LRC channel comparison, 2026-08-21
+audit: >
+  An independent reconstruction checked both typed tensors entrywise, used a
+  separately written modular eliminator to recover every raw, centred, stack,
+  and four-axis rank and canonical basis, verified all 186 margin rows, the
+  prime/congruence hypotheses, both replays, and every pinned digest.  The
+  finite-field/static-only and ambient-complement scope restrictions survived.
 two_current_parent: 04-computation/lrc_r5_ufull_owner_node_boolean_square_two_digit_current_ancestry_probe_20260816.py
 two_current_parent_sha256_lf: 3dab580e479e4ba7ac8801c1e5d8523018e0b3dc1c2176c072e7c609033eb6c8
 source_current_parent: 04-computation/lrc_r5_ufull_owner_node_boolean_square_nested_ancestry_digits_probe_20260816.py
@@ -24,7 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3585 -- LRC common A4 channel plane and centering complement
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT.**
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
