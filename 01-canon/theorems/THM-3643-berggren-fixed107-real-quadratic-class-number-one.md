@@ -2,15 +2,24 @@
 id: THM-3643
 title: "Berggren fixed-107 real quadratic class number one"
 status: >
-  PROVED + FINITE-EXACT + RIGOROUS-ARB; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + RIGOROUS-ARB + INDEPENDENTLY HOSTILE-AUDITED.
   The ordinary ideal class number of Q(sqrt(1225041)) is exactly one.
-  This is a quadratic descent sidecar only: it does not prove that the
-  fixed-107 Mordell curve has rank exactly two.
+  This is a quadratic descent sidecar only: by itself it does not determine
+  the fixed-107 Mordell rank.
 source: kps-s189 / fixed-107 Mordell descent sidecar, 2026-08-21
+audit: >
+  PASS -- an independent SymPy continued-fraction reconstruction recovered
+  period 1372 and both Pell-coordinate hashes; a separate binary-Kronecker
+  implementation matched all 612520 half-range character values; and a fresh
+  256-bit Arb evaluation isolated -H/R at 1 with radius 6.60e-72.  The audit
+  also checked the ordinary-versus-narrow factor, the Gauss-sum sign, the
+  half-integral-unit obstruction, all hashes, and LF-normalized transcript
+  agreement in normal and optimized modes.
 depends_on:
   - THM-3620-berggren-fixed-107-mordell-rank-two-and-local-collision
 related:
   - THM-3640-berggren-positive-cube-slope-atlas-through-401
+  - THM-3646-berggren-fixed107-mordell-rank-exactly-three
 script: 04-computation/berggren_fixed107_real_quadratic_class_number_one_thm3643.py
 output: 05-knowledge/results/berggren_fixed107_real_quadratic_class_number_one_thm3643.out
 script_sha256: 95878dc28b5910e8330bbdd0b67db4759218712d4ab95d5d3c348d5c96e008ca
@@ -21,8 +30,8 @@ hash_basis: raw LF bytes for files; canonical JSON for semantic ledger
 
 # THM-3643 -- fixed-`107` real quadratic class number one
 
-**PROVED + FINITE-EXACT + RIGOROUS-ARB; PENDING INDEPENDENT HOSTILE
-AUDIT.**  Put
+**PROVED + FINITE-EXACT + RIGOROUS-ARB + INDEPENDENTLY HOSTILE-AUDITED.**
+Put
 
 ```text
 D=1225041=3*408347,       K=Q(sqrt(D)).                 (1)
@@ -141,11 +150,12 @@ python3 04-computation/berggren_fixed107_real_quadratic_class_number_one_thm3643
 python3 -O 04-computation/berggren_fixed107_real_quadratic_class_number_one_thm3643.py
 ```
 
-Both modes print the stored transcript byte for byte.  The code uses no
+Both modes print the stored transcript byte for byte after CRLF-to-LF
+normalization.  The code uses no
 floating-point value in the algebraic decisions; all logarithms and
 trigonometric values in `(6)` are Arb balls with directed rounding.
 
 The theorem removes an arithmetic ambiguity in a possible `3`-descent on the
-Mordell curve of THM-3620.  It does **not** compute either `3`-Selmer group,
-does not prove `rank E(Q)=2`, and does not enlarge the bounded slope atlas of
-THM-3640.
+Mordell curve of THM-3620.  By itself it computes neither `3`-Selmer group nor
+the Mordell rank.  THM-3646 uses it as one input to a separate exact rank-three
+argument.  It does not enlarge the bounded slope atlas of THM-3640.
