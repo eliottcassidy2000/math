@@ -22,6 +22,7 @@ related:
   - THM-3561-rational-keller-danielewski-polynomial-completion
   - THM-3605-russell-cylinder-graph-slice-puncture-no-filling
   - THM-3610-russell-cylinder-full-linear-projection-collision-rigidity
+  - THM-3623-russell-cylinder-even-general-vertical-fold-all-order-closure
 script: 04-computation/jc2_russell_cylinder_even_fold_higher_jet_staircase_thm3619.py
 output: 05-knowledge/results/jc2_russell_cylinder_even_fold_higher_jet_staircase_thm3619.out
 script_sha256: 5430d5078ca017ae0aab39c95c4c1beb35520e5ad1823077c767e52dab2ffc18
@@ -63,8 +64,10 @@ Then
 
 Thus **every even polynomial fold `(1)` is closed** as a possible source of a
 nonzero constant planar Jacobian, for every regular target pair.  This does
-not close non-even folds, folds nonquadratic in the stable coordinate, or
-implicit source planes outside `(1)`; those families remain **OPEN**.
+not close non-even folds or implicit source planes outside `(1)`.  The
+nonzero critical vertical replacements `t^2 -> H(t)` with `H in t^2 C[t]`
+are proved separately in THM-3623; vertical terms with `H'(0)!=0` remain
+outside both theorems.
 
 Write
 
@@ -440,11 +443,12 @@ the even quadratic-stable-coordinate polynomial folds `(1)`.  The proof does
 not classify:
 
 - non-even `Q`;
-- replacements of `t^2` by a nonquadratic stable-coordinate term; or
+- vertical replacements with `H'(0)!=0`; or
 - implicit source planes outside this fold family.
 
-Those exits remain **OPEN**.  The former tuned polynomial locus is not open:
-the all-order recurrence closes it.
+Those exits remain **OPEN**.  Nonzero replacements `H in t^2 C[t]` are now
+closed by the separate all-order extension THM-3623.  The former tuned
+polynomial locus is not open: the recurrence here closes it.
 
 The deterministic companion verifies the compiler identities, the local
 `b+4` chart and Jacobian, the exact common comparison target, the side

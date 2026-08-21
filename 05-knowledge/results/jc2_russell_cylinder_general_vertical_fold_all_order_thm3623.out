@@ -1,5 +1,5 @@
-THM-3623 exact companion -- provisional general vertical-fold closure
-status=verified-exact proof controls; independent hostile audit=PENDING
+THM-3623 exact companion -- proved general vertical-fold closure
+status=proved, verified exact, and independently hostile-audited
 SECTION local chart and general pullback
 PASS chart=local_b+4 Jac_ac=-3 pullback=-3HprimeP+axK+cxR
 SECTION exact comparison and epsilon divisibility

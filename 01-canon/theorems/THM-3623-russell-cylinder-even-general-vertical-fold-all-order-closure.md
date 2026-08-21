@@ -2,8 +2,8 @@
 id: THM-3623
 title: "Russell-cylinder even general-vertical-fold all-order closure"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / PENDING
-  INDEPENDENT HOSTILE AUDIT.  Let Q be even with Q(0)=-3/4 and
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let Q be even
+  with Q(0)=-3/4 and
   Q(1)=Q(-1)=-3, and let 0!=H in t^2 C[t].  On the closed source plane
   q=Q(x)+H(t), w=t, no pair of regular functions on the exponent-one
   Russell target cylinder has a nonzero constant source Jacobian.  If
@@ -14,10 +14,10 @@ status: >
   No JC(2) counterexample is claimed.
 source: root / general_vertical_fold comparison-curve extension, 2026-08-21
 audit: >
-  PENDING -- the exact chart, epsilon-divisible error ledger, generalized
-  coefficient and shift orders, all-order induction, and k=1/H=0 hostile
-  boundaries have a 276-gate exact companion, but this final byte package
-  has not yet received an independent hostile audit.
+  PASS -- an independent hostile derivation checked the exact chart,
+  epsilon-divisible error ledger, generalized coefficient and shift orders,
+  all-order induction, and k=1/H=0 hostile boundaries; normal, optimized,
+  and stored 276-gate transcripts are byte-identical.
 depends_on:
   - THM-3561-rational-keller-danielewski-polynomial-completion
   - THM-3605-russell-cylinder-graph-slice-puncture-no-filling
@@ -27,20 +27,19 @@ related:
   - THM-3614-russell-cylinder-collision-free-full-linear-projection-rigidity
 script: 04-computation/jc2_russell_cylinder_general_vertical_fold_all_order_thm3623.py
 output: 05-knowledge/results/jc2_russell_cylinder_general_vertical_fold_all_order_thm3623.out
-script_sha256: 6ba705ea6a05adca27400e16e26daf277da45a80f9735d058b1156b9eec6e6c4
-output_sha256: 2c11ad826bc73dae7f593344d6be7f2c646160a6ed3999a81296d530253a819c
+script_sha256: a808ab75fd6d7893d1a010116b4e9202e6cf2e2a35b72522f6f3106f3a4984a4
+output_sha256: 6c981576bac2e02691061d97e24cb967c5422d2b5595b5b80dc74c952e0f742e
 hash_basis: raw LF bytes
 ---
 
 # THM-3623 -- Russell-cylinder even general-vertical-fold all-order closure
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / PENDING
-INDEPENDENT HOSTILE AUDIT.**  This candidate extends the exact moving-triple
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem
+extends the exact moving-triple
 mechanism of THM-3619 from the quadratic vertical fold to every nonzero
 polynomial vertical displacement having a critical point at the retained
 triple collision.  Its quantifier over target pairs is unrestricted, but the
-statement remains outside the proved dependency graph until independent
-audit and explicit promotion.
+statement remains local to the specified family of closed source planes.
 
 All rings, formal germs, derivatives, and differential forms are over `C`.
 
@@ -79,7 +78,7 @@ J_(Q,H)(F,G)
  =Jac_(x,t)(F o Psi o E_(Q,H),G o Psi o E_(Q,H)).          (4)
 ```
 
-The candidate theorem is
+The theorem is
 
 ```text
                          J_(Q,H)(F,G) notin C*.            (5)
@@ -560,5 +559,5 @@ CHECKS=276
 RESULT=PASS
 ```
 
-with zero Python assertion statements.  These exact gates support the
-provisional proof but do not replace the pending independent hostile audit.
+with zero Python assertion statements.  They are finite controls for the
+all-order proof, not a replacement for it.

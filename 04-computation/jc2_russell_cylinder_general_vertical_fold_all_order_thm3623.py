@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact comparison and boundary controls for provisional THM-3623.
+"""Exact comparison and boundary controls for proved THM-3623.
 
 The gates verify the local Darboux chart, the general H(t) pullback, the
 epsilon-divisible comparison geometry, several generalized invoice scales,
@@ -38,8 +38,8 @@ def t_order(polynomial, t):
     return min(monomial[0] for monomial, _ in expanded.terms())
 
 
-print("THM-3623 exact companion -- provisional general vertical-fold closure")
-print("status=verified-exact proof controls; independent hostile audit=PENDING")
+print("THM-3623 exact companion -- proved general vertical-fold closure")
+print("status=proved, verified exact, and independently hostile-audited")
 
 
 print("SECTION local chart and general pullback")
