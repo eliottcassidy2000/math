@@ -1,5 +1,5 @@
 ---
-id: THM-3630
+id: THM-3631
 title: "Russell-cylinder non-even closed-form survival through order five"
 status: RESERVED / UNPROVED EMPTY STUB
 source: kps-s189 / THM-3627 de Rham leak continuation, 2026-08-21
@@ -8,9 +8,10 @@ depends_on: []
 related:
   - THM-3624-russell-cylinder-noneven-fold-weighted-cokernel-boundary
   - THM-3627-russell-cylinder-noneven-hostile-degree-six-closure
+  - THM-3630-russell-cylinder-noneven-formal-survivor-no-finite-jet-bound
 ---
 
-# THM-3630 -- non-even closed-form survival through order five
+# THM-3631 -- non-even closed-form survival through order five
 
 **RESERVED / UNPROVED EMPTY STUB.**  This namespace is reserved for a possible
 exact theorem that the THM-3627 hostile polynomial admits a closed target
