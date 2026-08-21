@@ -11,12 +11,17 @@ status: >
   sum_C(d-n_C) is at least that rank.  The Chebyshev--Pell and three-arm S5
   Danielewski maps have exact sheet-debt vectors (d-1,d-1,1) and
   (4,2,2,3,3), respectively.  This is a necessary nonproperness-capacity
-  law, not a planar Jacobian obstruction when the target is A2.
+  law, not a planar Jacobian obstruction when the target is A2.  For every
+  complex quasi-finite map, the same pointwise sheet-defect function also
+  integrates exactly to d chi_c(Y)-chi_c(X), without a positivity claim.
 source: kps-s188, 2026-08-20
 audit: >
   An independent reconstruction verified the localization/conorm rank bound,
   the generic-DVR sheet-length formula without a global flatness assumption,
-  the boundary-to-Jelonek incidence, and both exact fibre/debt vectors.
+  the boundary-to-Jelonek incidence, and both exact fibre/debt vectors.  The
+  later Euler-integration companion is the direct constructible-Fubini
+  identity; its separate nonnegativity clause is restricted to the finite-flat
+  envelopes available for the displayed smooth-target etale towers.
 depends_on:
   - THM-3404-factorized-danielewski-principal-parts-and-finite-cover-obstruction
   - THM-3566-chebyshev-pell-odd-keller-collision-tower
@@ -145,6 +150,43 @@ rank(Cl(Y)/torsion)
 The middle term is deliberately retained.  Distinct boundary primes may
 map to the same target curve, so class-group rank does not by itself lower
 bound the number of components of `J(f)`.
+
+### 2.1 Euler integration of the same debt function
+
+There is an exact topological companion to `(12)`.  For any dominant
+quasi-finite complex morphism `f:X->Y` of generic degree `d`, the function
+
+```text
+delta_f(y)=d-#f^(-1)(y)                                  (12a)
+```
+
+is constructible.  Euler integration of constructible functions gives
+
+```text
+d chi_c(Y)-chi_c(X)=integral_Y delta_f d chi_c.          (12b)
+```
+
+Equivalently, choose a finite constructible stratification
+`Y=disjoint_union S_alpha` on which the fibre cardinality is the constant
+`n_alpha`.  Then
+
+```text
+d chi_c(Y)-chi_c(X)
+  =sum_alpha (d-n_alpha) chi_c(S_alpha).                 (12c)
+```
+
+This is just Fubini for compactly supported Euler characteristic:
+`chi_c(X)=sum_alpha n_alpha chi_c(S_alpha)`.  It requires neither
+properness nor a flat finite envelope.  Under the smooth-target etale
+hypotheses of the towers below, Zariski Main plus miracle flatness makes
+`#f^(-1)(y)<=d`, so `(12a)` is literally a nonnegative debt everywhere.
+
+The distinction between `(12)` and `(12c)` is essential.  The former counts
+generic divisorial debt without Euler weights and bounds boundary-prime
+capacity.  The latter also sees punctures, curve intersections, omitted
+points, and other lower-dimensional strata.  An equality between
+`sum_C delta_C` and the global Euler defect therefore needs a passport
+calculation; it is not a formal consequence of quasi-finiteness.
 
 ## 3. Exact invoices for the two live Danielewski towers
 
