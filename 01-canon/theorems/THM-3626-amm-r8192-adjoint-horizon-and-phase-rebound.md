@@ -2,8 +2,8 @@
 id: THM-3626
 title: "AMM R=8192 adjoint horizon and finite-scale phase rebound"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + FINITE-EXACT + VERIFIED-EXACT /
-  PENDING INDEPENDENT HOSTILE AUDIT.  At the archived last-failing Rule-A
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  At the archived failed Rule-A
   epoch (R,D0)=(8192,191), the exact trace dies at row 2045.  Its positive
   truncated-adjoint wall changes sign between cuts 773 and 774, forcing every
   admissible continuation avoiding that fatal inequality to depart by row
@@ -13,11 +13,13 @@ status: >
   feasibility, eventual limit, uniform extractor, or AMM bound is claimed.
 source: kps-s189 / THM-3616 hostile dyadic continuation, 2026-08-21
 audit: >
-  PENDING -- author exact reconstruction and optimization replay passed 27
-  gates, including the inherited R=4096 control, complete degree profile,
-  fatal row, contiguous adjoint wall, boundary and active-ledger digests,
-  exact radical comparisons, dyadic defects, AST assertion exclusion, and
-  parent/source pins.  Independent hostile reconstruction remains required.
+  PASS -- independent hostile reconstruction recovered the complete degree
+  profile, fatal row and sign, contiguous adjoint wall, departure indexing,
+  boundary and active-ledger metadata and digests, exact radical comparisons,
+  and dyadic defects.  Normal and optimized runs execute all 27 gates and
+  agree with the stored transcript after LF normalization.  Audit corrected
+  "last-failing" to the package-supported statement "failed"; no adjacent
+  survivor is claimed.
 depends_on:
   - THM-3616-amm-R4096-adjoint-horizon-and-golden-finite-scale-obstruction
 related:
@@ -33,8 +35,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3626 -- AMM `R=8192` adjoint horizon and phase rebound
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + FINITE-EXACT + VERIFIED-EXACT /
-PENDING INDEPENDENT HOSTILE AUDIT.**  This is the next hostile dyadic epoch
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+This is the next hostile dyadic epoch
 after THM-3616.  It certifies one archived failed Rule-A prefix and sharpens
 the finite-scale phase diagnosis; it does not construct a repair.
 
@@ -46,7 +48,7 @@ For `0<=i<8192`, use the inherited exact Fibonacci--Lucas comparison to set
 d_i(D0)=floor(log_5(phi^(2(8192+i))))+D0.               (1)
 ```
 
-At the archived last-failing Rule-A offset `D0=191`, the exact profile has
+At the archived failed Rule-A offset `D0=191`, the exact profile has
 
 ```text
 first death j=2045,
@@ -201,4 +203,5 @@ agreeing with the archived failed Rule-A prefix through a cut.  It proves no
 alternative feasibility, uniform extractor, asymptotic horizon law, value of
 the AMM constant, or improvement to its bound.
 
-Independent hostile audit remains the promotion gate.
+The independent hostile audit reconstructed every load-bearing integer and
+index.  **QED.**
