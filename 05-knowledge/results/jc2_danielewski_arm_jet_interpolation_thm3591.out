@@ -1,0 +1,11 @@
+THM-3591 exact companion
+SECTION arm restriction and inverse-derivative sidecars
+PASS 324 arm restrictions and sidecar values
+SECTION explicit sidecars and calibrated bulk debt
+PASS explicit inverse jets and 36 calibrated bulk controls
+SECTION separated and Sigma-corrected arm-blind controls
+PASS 15 separated/Sigma-corrected arm-blind gates
+SECTION sharp boundaries
+PASS degree-one, exponent-one, and 8 characteristic-p hostile gates
+CHECKS=416
+RESULT=PASS
