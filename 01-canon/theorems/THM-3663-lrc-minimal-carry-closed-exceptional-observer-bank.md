@@ -2,7 +2,7 @@
 id: THM-3663
 title: "LRC minimal carry-closed exceptional observer bank"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Three consecutive low-digit columns of translates of THM-3660's signed
   exceptional detector form a 39-coordinate injective observer for all 169
   addresses under both split and cyclic subtraction.  Vertical carry acts by
@@ -12,6 +12,14 @@ status: >
   fail even to distinguish (0,0) from (0,1).  This is an address-level
   operation congruence, not a physical-current observer or LRC(14).
 source: kps-s192 / THM-3661 adaptive-observer continuation, 2026-08-21
+audit: >
+  PASS -- agent Raman independently reconstructed both 169-code observer
+  tables, the carry and signed-reversal coordinate actions, and the complete
+  one-, two-, and three-column census.  It recovered exactly the thirteen
+  consecutive three-column minima, both boundary-bank collisions, the
+  unrestricted lower bound 21, both simple spectra, and the permutation-
+  centralizer corollary.  Normal and optimized transcripts and all pinned
+  hashes agreed; no physical-current or LRC(14) inference was introduced.
 depends_on:
   - THM-3660-lrc-exceptional-leakage-functional-and-fourteen-edge-boundary
   - THM-3661-lrc-exceptional-detector-simple-spectrum-convolution-rigidity
@@ -27,8 +35,8 @@ hash_basis: raw LF bytes
 
 # THM-3663 -- a minimal carry-closed observer has three columns
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  The exceptional detector can be turned into a complete finite
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  The exceptional detector can be turned into a complete finite
 observer while making the native vertical carry and reversal operations
 visible on observer coordinates.
 

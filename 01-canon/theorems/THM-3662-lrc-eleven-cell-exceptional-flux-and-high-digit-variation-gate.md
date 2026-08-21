@@ -2,7 +2,7 @@
 id: THM-3662
 title: "LRC eleven-cell exceptional flux and high-digit variation gate"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The 156-cell carry response has 17 zero rows, 128 nonzero rows on the
   generic reversal-even line, and exactly 11 rows with an exceptional
   reversal-odd component.  Every weighted transverse response is one
@@ -12,6 +12,14 @@ status: >
   cancel.  Translated fluxes detect exactly high-digit variation, but no
   physical current-to-weight table is constructed.
 source: kps-s191 / THM-3660 response-flux continuation, 2026-08-21
+audit: >
+  PASS -- agent Euler independently reconstructed the 17/128/11 response
+  partition, the ten transverse projective classes, both rank-11 coordinate
+  matrices, the rank-4 reversal-odd projection, every projector and flux
+  identity, both cancellation hostiles, the noncocycle witness, and the two
+  rank-156 translate spans with their row-constant annihilator.  Normal and
+  optimized transcripts and all pinned hashes agreed.  It found no scope or
+  positivity overclaim.
 depends_on:
   - THM-3660-lrc-exceptional-leakage-functional-and-fourteen-edge-boundary
   - THM-3661-lrc-exceptional-detector-simple-spectrum-convolution-rigidity
@@ -28,8 +36,8 @@ hash_basis: raw LF bytes
 
 # THM-3662 -- the transverse carry response is one eleven-cell flux
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  Taking the correct reversal eigenspace turns THM-3659's apparently
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  Taking the correct reversal eigenspace turns THM-3659's apparently
 dense rank-two response into a sparse signed boundary.  This theorem records
 the exact linear functional that any future physical weight table must pass.
 
