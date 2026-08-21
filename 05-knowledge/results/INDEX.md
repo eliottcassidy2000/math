@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `amm12592_r512_offset_transition_causal_horizon_kps_s188.py` -> matching
+  `.out` [THM-3577 PROVED + VERIFIED-EXACT].  At `R=512`, exact Rule A dies
+  for golden-floor offsets `D0=0,...,4` at rows `107,110,113,116,121` and
+  enters THM-3332's `F1--F3` cone at `D0=5`.  The five minimal causal-capacity
+  horizons are `58,58,60,60,62`, forcing any surviving alternatives to
+  differ by rows `49,52,53,56,59`.  The positive row has state/next degrees
+  `386/387`, support maximum `18`, and exact `F2/F3` margins `14/1229`.
+  This is a fixed-policy finite atlas, not an alternative-prefix
+  infeasibility or uniform sub-two extractor.  Normal/`-O` replay matches.
+  Script/output LF SHA-256:
+  `c782f3236b5f3815a98b8b78bf55481c6e26a3d8d431ec8b40fbab42ed7c5210` /
+  `b34896bb94b83a1f9d14e296bd4b5f7aefb1634dc412d93abf069843b193017d`.
 - `jacobian_universal_reducible_graph_component_unit_no_go_kps_s188.py` ->
   matching `.out` [THM-3574 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED; MISTAKE-429 repaired].  Every irreducible
