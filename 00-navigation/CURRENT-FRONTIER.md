@@ -342,10 +342,10 @@ is sharp: equal counts allow two densities or none.
   `N=3,D<=6`; `D>=7`/width `>=4` open. THM-3560 closes monomial shears.
   THM-3561 gives an etale triple collision on non-`A2` `Y`; 3569 forces six
   pieces (`3x3`,`2x4` open). 3562/63 close balanced passports/one nongraph
-  slice. 3564/65/68/70/73 give exactly
-  `phi=4H(1+bH+4aH^2)`, `deg_a(phi)=3deg_a(H)+1`; degree one has no `A2`
-  factor and degree two is irreducible. THM-3567 makes separated completions
-  nodal and non-quasi-finite from degree three. 3495--3542
+  slice. 3564/65/68/70/71/73 give exactly
+  `phi=4H(1+bH+4aH^2)`, `deg_a(phi)=3deg_a(H)+1`, and close every graph cell
+  through degree two against `A2`. THM-3567 makes separated completions nodal
+  and non-quasi-finite from degree three. 3495--3542
   reach `R8`, with index zero to level four.
   2681/85--2708
   block the `A4/S4` cubic; 3448/3517 leave quartic `C3` open (MISTAKE-416).

@@ -12,6 +12,17 @@
   Script/output LF SHA-256:
   `a664d9a93ee760013d668f6fabba72370f8d9a88602df06534f217c3c2f01852` /
   `f05b6075e28d6da0726698f8a895a46b733b7aa3e7bc63d8717b2daa6c4d7f69`.
+- `jacobian_quadratic_target_graph_euler_no_go_kps_s188.py` -> matching
+  `.out` [THM-3571 PROVED + VERIFIED-EXACT].  Every collision-compatible
+  genuinely quadratic target graph has irreducible pullback with
+  `chi(X)>=2`, hence no source-coordinate factor.  Its strict Jelonek section
+  satisfies `chi(D)=2-rho(delta)-nu`; exact saturated Groebner reduction of
+  all sixteen possible two-root multiplicity cells proves `rho(delta)>=3`,
+  while `nu>=1` and the omitted support has at most five points.  The only
+  nonunit cells `(2,2)` and `(2,4)` force the quadratic coefficients to
+  vanish.  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `feb93461bb523404b8720385758ecb66df22a511c68bf5cd2fbd7a52ee5fe129` /
+  `895e98e2c9a427ad7416121d0a3bddb8c778e096700d3a4cbc5ca3d795c75b9d`.
 - `jacobian_universal_pell_conic_factor_compiler_kps_s188.py` -> matching
   `.out` [THM-3570 PROVED + VERIFIED-EXACT].  Every nonzero polynomial target
   graph has reducible core cubic iff some `q in C(a,b)^*` satisfies
