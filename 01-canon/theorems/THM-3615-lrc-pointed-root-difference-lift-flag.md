@@ -162,9 +162,9 @@ U(r) |-> LambdaSharp((mu|Q6sharp)^(-1)r).                (14)
 This is an exact linear identification of quotient planes.  It is not a
 physical identification of the state and difference coordinates.
 
-That qualification is forced by an exact hostile control.  Since the six
-pointed generators are independent, write a vector of `R4sharp` in the
-ordered coefficient coordinates of `(2)` and set
+That qualification is forced by an exact hostile control.  Write a vector of
+`R4sharp` in the independent centered point frame
+`(C_T(g_x))_(x ordered by (2))`, which spans `Q6sharp`, and set
 
 ```text
 Delta(c)=(c_1-c_2,c_3-c_4).                            (15)
