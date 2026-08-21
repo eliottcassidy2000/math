@@ -15,6 +15,7 @@ source: kps-s191 / THM-3593 address-atlas continuation, 2026-08-21
 depends_on:
   - THM-3593-lrc-common-a4-anova-graph-flag
 related:
+  - THM-2334-relation-residue-current-and-character-twist-pushforward
   - THM-3534-r5-middle-response-relative-cospan-and-twisted-h1-collapse
   - THM-3647-lrc-single-reversal-paired-branch-spectral-projector
   - THM-3654-lrc-fixed-branch-rigidity-eigencriterion
@@ -109,6 +110,28 @@ two-chamber location `Loc_(3,9)`.  This provenance is explanatory only: the
 present theorem reconstructs and checks all 169 rows directly, and it does
 not identify the two typed response spaces.
 
+There is an exact carry-sensitive reframe.  Assemble the two digits in their
+physical window order as
+
+```text
+a=r0+13 r1 in {0,...,168}.                             (8a)
+```
+
+Direct substitution in `(6)--(7)` gives
+
+```text
+Z=[0,11] union [78,90] union [157,168],
+X=84 plus_or_minus {13,36,59,72}.                      (8b)
+```
+
+Here the second line denotes all eight ordinary integer representatives.
+Thus the kernel is two boundary blocks plus one central block, while the
+exceptions are four shells about `84`.  This is also a warning against
+identifying every 169-element address object in the proof graph: the composed
+digits naturally form the nonsplit cyclic extension `Z/169Z`, not the split
+additive group `F13^2`.  Any comparison with THM-2334's 169 character twists
+must retain the carry cocycle; cardinality alone supplies no chain map.
+
 ## 3. Reversal acts by an exact quotient involution
 
 Let simultaneous point reversal act on address pairs by
@@ -116,6 +139,9 @@ Let simultaneous point reversal act on address pairs by
 ```text
 j(r0,r1)=(12-r0,12-r1).                               (9)
 ```
+
+In the assembled coordinate `(8a)`, this is the affine involution
+`a -> 168-a=-a-1 (mod 169)`, whose unique fixed residue is `84`.
 
 In the RREF coordinates of `(5)`, define
 
