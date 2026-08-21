@@ -1,0 +1,35 @@
+THM-3575 coprime Pell target-coordinate Euler audit
+status=PROVED VERIFIED-EXACT INDEPENDENTLY HOSTILE-AUDITED
+symbolic universe=Q[a,b,c,x,y,z,P,Q,p,q,t,v,w]; exact polynomial/rational identities
+G_(P,Q)=Q^3*c-2*P^3*a+b*P^2*Q-2*P*Q^2 is a target coordinate for gcd(P,Q)=1
+G_(P,Q)(F)=(Q(B)*x-P(B)*u)*S_(P,Q)
+Euler formula=-3+3*nP+3*nQ+2*nDelta+nE-2*[Q(0)=0]
+strict vertical: Q(b0)=0 gives one Jelonek point if b0!=0, an A1 fibre if b0=0
+linear component inverse audited on Q!=0 and on every nonzero Q-root vertical
+control rows: name | P | Q | nP | nQ | nDelta | nE | delta0 | chi(S)
+constant | 1 | 1 | 0 | 0 | 2 | 1 | 0 | 2
+collision-fixed | b | 1 | 1 | 0 | 4 | 2 | 0 | 10
+collision-plus | 2 | 1 | 0 | 0 | 2 | 1 | 0 | 2
+collision-minus | -2 | 1 | 0 | 0 | 2 | 1 | 0 | 2
+Euler-sharp | 1 | b | 0 | 1 | 1 | 1 | 1 | 1
+higher-vertical | 1 | b**2 | 0 | 1 | 3 | 2 | 1 | 6
+nonsymmetric | b - 1 | b + 1 | 1 | 1 | 4 | 2 | 0 | 13
+repeated-P | (b - 1)**2 | b + 1 | 1 | 1 | 6 | 3 | 0 | 18
+vertical descent m,nDelta,nE,chi(S):
+1 | 1 | 1 | 1
+2 | 3 | 2 | 6
+3 | 5 | 3 | 11
+4 | 7 | 4 | 16
+5 | 9 | 5 | 21
+6 | 11 | 6 | 26
+7 | 13 | 7 | 31
+8 | 15 | 8 | 36
+finite hostile universe=ordered coprime P,Q, degree<=2, coefficients {-1,0,1}, Delta*E!=0
+finite pairs=532; collision-sharp=0; sharp=[(-1, -b), (-1, b), (1, -b), (1, b)]
+Euler-sharp family: P=t,Q=b; chi(S_t)=1 for every t!=0 after exact boundary correction
+irreducible boundary: t^2-2*t+4!=0
+split boundary: t=1+-i*sqrt(3), G=b^3*c+16*a-4*b^2
+quotient discriminant=108*t^2*(v+1)^6*H_t(v)
+quotient Euler: generic=-3; t=2 -> -2; degeneration cubic -> -3
+t=1 hostile: G=b^3*c-2*a-b^2, chi(S)=1, quotient chi=-3
+all active truth gates passed
