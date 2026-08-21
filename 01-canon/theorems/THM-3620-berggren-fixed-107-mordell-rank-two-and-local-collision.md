@@ -1,6 +1,6 @@
 ---
 id: THM-3620
-title: "Berggren fixed-107 Mordell rank two and local denominator collisions"
+title: "Berggren fixed-107 rank-two 3-saturated subgroup and local denominator collisions"
 status: >
   RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.
   On E:Y^2=X^3+107^3-2, the two Berggren/two-cube points
@@ -23,7 +23,7 @@ output_sha256: 74e21293e69d3d3058810011dd1d2f6a7b556bb2b0321a4d96800fb6e6458396
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3620 -- fixed `107` supports a rank-two Mordell fibre
+# THM-3620 -- fixed `107` supports a rank-two 3-saturated subgroup
 
 **RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.**
 
@@ -155,17 +155,19 @@ The corresponding chord factorizations are
   =-(X-232)(X-4960)(620944X-94164361).                  (16)
 ```
 
-They record two distinct local collisions:
+They record two distinct local coordinate collisions:
 
 ```text
-P=(1,1)=Q                    in E(F_3),                  (17)
+P=(1,1)=Q              on the singular cubic modulo 3,  (17)
 P=(35,157)=-Q                in E(F_197).                (18)
 ```
 
 Thus subtracting the points exposes powers of `3` in `(13)`, while adding
 them exposes powers of `197` in `(14)`.  These are exact examples of a useful
 denominator heuristic; they are not asserted to classify all denominators in
-`H`.
+`H`.  Since `3` divides the discriminant, `(17)` is deliberately not written
+as an equality in an elliptic-curve group and plays no role in the rank or
+saturation argument.
 
 ## 5. Fixed-fibre congruence support
 
@@ -218,6 +220,7 @@ python3 04-computation/berggren_fixed_107_mordell_rank_two_thm3620.py
 python3 -O 04-computation/berggren_fixed_107_mordell_rank_two_thm3620.py
 ```
 
-Both streams must be byte-identical to the stored output.  The companion uses
-271 explicit optimization-safe gates and pins THM-3370 by LF hash
+Both streams must agree with one another and with the stored output after LF
+normalization.  The companion uses 271 explicit optimization-safe gates and
+pins THM-3370 by LF hash
 `9abf73a45d789fe5a804977235a3bce3e415c3ad6da865a628d8f338159fa53a`.
