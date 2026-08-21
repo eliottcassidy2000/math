@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Finite exact companion for provisional THM-3596.
+"""Finite exact companion for proved, hostile-audited THM-3596.
 
 The proof is toric and local.  This script verifies the exact Laurent packet,
 Newton polygon, face polynomials, arm resolutions, and the THM-3591 invoice

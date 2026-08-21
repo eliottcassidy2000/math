@@ -2,7 +2,7 @@
 id: THM-3596
 title: "A13 invoice-paid mixed-coordinate toric time-form nonentry"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On the A13 three-arm surface c^3 e=b(b^2+1), an explicit one-parameter
   family of genuinely mixed coordinates (five weights when lambda is
   nonzero) has no rational constant-bracket mate.  The member lambda=3/2 is
@@ -12,6 +12,12 @@ status: >
   smooth affine arms, where the form is a unit.  No Darboux pair and no
   counterexample to JC(2) is constructed.
 source: root / planar-Jacobian mixed-coordinate construction-hostile session, 2026-08-21
+audit: >
+  An independent hostile audit rederived the Laurent time form, hull and
+  primitive distances, every toric face, generic nondegeneracy, the complete
+  smooth-arm resolution including hidden-branch valuations, and uniformity
+  in lambda.  Normal and optimized companions are byte-identical to the
+  stored 63-gate output.
 depends_on:
   - THM-3591-danielewski-arm-blind-separated-darboux-nonentry
 related:
@@ -20,15 +26,15 @@ related:
   - THM-3595-danielewski-separated-transverse-time-form-rational-nonentry
 script: 04-computation/jc2_a13_mixed_toric_timeform_nonentry_thm3596.py
 output: 05-knowledge/results/jc2_a13_mixed_toric_timeform_nonentry_thm3596.out
-script_sha256: 0c8a9ae72dea21daf7d04a23527fd53717279f7055d322fd740e0b01dc05d4e1
+script_sha256: ee25a56ebdaa909f7d04eff3a0578f77ab6587aa593c867076caa461ba6661b3
 output_sha256: 0bdc43c1e7816a770c7a664ec5737550abfc219963c2464e23dd213ba926dd92
 hash_basis: raw LF bytes
 ---
 
 # THM-3596 -- A13 invoice-paid mixed-coordinate toric time-form nonentry
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / PENDING INDEPENDENT
-AUDIT.**  This theorem attacks the most developed explicit mixed coordinate,
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem
+attacks the most developed explicit mixed coordinate,
 not merely another bounded support box.  It proves that even an arbitrary
 rational mate cannot repair that coordinate.  It does not exclude other
 mixed coordinates or prove any case of `JC(2)`.
@@ -92,7 +98,7 @@ Thus `(4)` would imply
 dP=kappa eta.                                            (8)
 ```
 
-on every generic component.  Exact computation gives
+on the integral generic fibre.  Exact computation gives
 
 ```text
 gcd(16c^9 F_b,8c^10 F_c)=1 in C(lambda)[b,c],           (9)
@@ -198,7 +204,8 @@ above.  The root `b=0` lies at the `FA` corner and is already resolved by
 
 ## 4. Nonexactness
 
-The generic fibre is smooth on the affine surface.  Sections 2--3 show that
+By generic smoothness in characteristic zero, the generic fibre is smooth on
+the affine surface.  Sections 2--3 show that
 `eta` extends to a nonzero holomorphic differential on its smooth projective
 normalization.  In
 characteristic zero, the differential of a rational function has a pole at
