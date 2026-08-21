@@ -16,8 +16,9 @@ source: root / general_vertical_fold comparison-curve extension, 2026-08-21
 audit: >
   PASS -- an independent hostile derivation checked the exact chart,
   epsilon-divisible error ledger, generalized coefficient and shift orders,
-  all-order induction, and k=1/H=0 hostile boundaries; normal, optimized,
-  and stored 276-gate transcripts are byte-identical.
+  all-order induction, and k=1/H=0 hostile boundaries; normal and optimized
+  276-gate transcripts are byte-identical to each other and identical to the
+  stored LF transcript after LF normalization.
 depends_on:
   - THM-3561-rational-keller-danielewski-polynomial-completion
   - THM-3605-russell-cylinder-graph-slice-puncture-no-filling
@@ -546,7 +547,8 @@ python3 04-computation/jc2_russell_cylinder_general_vertical_fold_all_order_thm3
 python3 -O 04-computation/jc2_russell_cylinder_general_vertical_fold_all_order_thm3623.py
 ```
 
-The normal and optimized transcripts must be byte-identical to
+The normal and optimized transcripts must be byte-identical to each other and
+identical after LF normalization to
 
 ```text
 05-knowledge/results/jc2_russell_cylinder_general_vertical_fold_all_order_thm3623.out
