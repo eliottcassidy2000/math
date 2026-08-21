@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for provisional THM-3590.
+"""Exact companion for proved and independently audited THM-3590.
 
 This checks the complete complement-edge combinatorics and a finite hostile
 atlas for the A13 exponent-three 3 x 3 Darboux nonentry.  The universal

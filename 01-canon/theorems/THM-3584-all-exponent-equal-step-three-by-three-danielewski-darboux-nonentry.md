@@ -24,10 +24,11 @@ related:
   - THM-3572-squarefree-danielewski-affine-modification-and-two-bracket-collapse
   - THM-3576-higher-exponent-belyi-keller-collision-tower
   - THM-3579-equal-step-three-by-three-danielewski-darboux-nonentry
+  - THM-3583-universal-exponent-two-two-by-four-weight-darboux-nonentry
 script: 04-computation/jc_all_exponent_equal_step_three_by_three_danielewski_nonentry_thm3584.py
 output: 05-knowledge/results/jc_all_exponent_equal_step_three_by_three_danielewski_nonentry_thm3584.out
-script_sha256: 94dcd278a2acfaa945508996a2117a5f3be62cdff312f62956ad4bdd7d1a3949
-output_sha256: 4a580c807b8c11b61fd46e7acc7fd1748a56c1de231b65e95c719882beceb639
+script_sha256: cf2f2476de20d2f0579911b514f347db68f9027467a53601a0da7d3649085719
+output_sha256: f947662c3e290ad1edf180907afe4997c7851b38bf0b905cf861b5a58dac0b7f
 hash_basis: LF-normalized bytes
 ---
 
@@ -666,12 +667,17 @@ PROVED:
   for every N>=2 and every squarefree Sigma with deg Sigma>=2,
   every reduced equal-step 3 x 3 weight-support cell is empty;
 
-OPEN / NOT CLAIMED:
+NOT CLAIMED HERE:
   unequal-step 3 x 3 cells;
   2 x 4, 4 x 2, and larger support cells;
-  the proposed THM-3576 higher-exponent collision tower;
+  the separately proved THM-3576 higher-exponent collision tower;
   existence or nonexistence of arbitrary Darboux pairs on A_(N,Sigma);
-  any conclusion for JC(2).                             (74)
+  any conclusion for JC(2);
+
+CURRENT BOUNDARY:
+  THM-3583 separately closes 2 x 4 and 4 x 2 when N=2;
+  unequal-step 3 x 3 in general, the all-Sigma N>2 2 x 4 / 4 x 2
+  cells, and arbitrary wider Darboux pairs remain open.  (74)
 ```
 
 Reproduce the exact companion with

@@ -2,19 +2,19 @@
 id: THM-3590
 title: "A13 exponent-three three-by-three weight Darboux nonentry"
 status: >
-  PROVISIONAL + VERIFIED-EXACT / PENDING INDEPENDENT AUDIT.  Using the proved
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Using the proved
   per-coordinate two-central-arm weight invoice of THM-3589, no polynomial
-  Darboux pair on the A13
-  exponent-three target has exactly three nonconstant weight pieces in each
-  coordinate.  The complement-edge cases h=0,1,2,3 are complete.  This file
-  remains outside the proved dependency graph until the present proof is
-  independently audited and explicitly promoted.
+  Darboux pair on the A13 exponent-three target has exactly three nonconstant
+  weight pieces in each coordinate.  The complement-edge cases h=0,1,2,3
+  are complete.  No target-wide Darboux nonentry or planar Jacobian
+  consequence is claimed.
 source: root / delegated A13 three-by-three Darboux hostile, 2026-08-21
 audit: >
-  The arm-unit classification, complement matching, all three two-edge
-  collision trees, unequal-gap six-cycle, and equal-gap congruence boundary
-  have exact controls.  Normal and optimized runs are byte-identical to the
-  stored 92,630-gate output; independent mathematical audit remains pending.
+  Two independent hostile reconstructions checked the arm-unit
+  classification, complement matching, both orientations of all three
+  two-edge collision trees, the unequal-gap six-cycle, and the equal-gap
+  congruence boundary.  Normal and optimized runs are byte-identical to the
+  stored 92,630-gate output.
 depends_on:
   - THM-3581-critical-value-multiarm-keller-compiler-and-A13-carrier
   - THM-3589-danielewski-central-arm-every-line-and-kummer-trace-darboux-gates
@@ -27,14 +27,14 @@ external:
   - "Gwozdziewicz, Injectivity on one line, arXiv:alg-geom/9305008, Theorem 1.1."
 script: 04-computation/jc2_a13_exponent_three_three_by_three_nonentry_thm3590.py
 output: 05-knowledge/results/jc2_a13_exponent_three_three_by_three_nonentry_thm3590.out
-script_sha256: 5d2864467984bcc9bd7929174f5c0a3b746b9238b14c528f9dfa4ac678751762
+script_sha256: 6627a8780bb4061a9de148f736bdf1c8c99fcdcb38a9f492c8b2c8835da982c8
 output_sha256: 1a7cae06671ec33499bd564735796791d6e7cd38429b6dde4735c8183e5a8702
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3590 -- A13 exponent-three three-by-three weight Darboux nonentry
 
-**PROVISIONAL + VERIFIED-EXACT / PENDING INDEPENDENT AUDIT.**  The explicit
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The explicit
 two-central-arm invoice `(9)` is the proved THM-3589 input.  The new content
 here is the complete complement-edge and singleton-graph proof.
 
@@ -320,7 +320,32 @@ connected in every case.  Equations `(26)` force one common normalized
 logarithmic derivative for all six coefficients.  Every Wronskian, including
 both scalar channels, is then zero.  This contradicts `{P,Q}=1`.
 
-The case where `(2,0)` is the second edge is the reflected argument.  Hence
+For completeness, take `(2,0)` as the second scalar edge.  Then
+
+```text
+A=3k-2,                         B!=3m-2.              (28a)
+```
+
+The only possible nonscalar collisions are
+
+```text
+D_1: {(0,2),(1,0)},             B=3(m-k)-3,
+D_2: {(0,2),(2,1)},             B=3(m+k)-1,
+D_3: {(1,2),(2,1)},             B=3k+2.               (28b)
+```
+
+At most one occurs.  In the generic case the singleton edges contain
+`{00,01,10,12,22}`; after deleting the colliding pair in `D_1,D_2,D_3`,
+they contain, respectively,
+
+```text
+{00,01,12,21,22},
+{00,01,10,12,22},
+{00,01,02,10,22}.                                  (28c)
+```
+
+Each is again a spanning tree, so the identical normalized-logarithmic-
+derivative argument kills both scalar channels.  Hence
 
 ```text
 h!=2.                                                 (29)
@@ -424,7 +449,7 @@ This proves `h!=3`.  Together with Sections 4--5 it proves the theorem.
 ## 8. Exact scope and remaining counterexample frontier
 
 ```text
-PROVISIONAL / PENDING INDEPENDENT AUDIT:
+PROVED:
   no 3 x 3 weight support can carry a polynomial Darboux pair on
   c^3 e=b(b^2+kappa^2), kappa!=0;
   each Darboux coordinate needs at least three weight pieces, so every

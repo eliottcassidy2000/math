@@ -3,9 +3,13 @@ SECTION arm restriction and inverse-derivative sidecars
 PASS 324 arm restrictions and sidecar values
 SECTION explicit sidecars and calibrated bulk debt
 PASS explicit inverse jets and 36 calibrated bulk controls
+SECTION seven-piece nodal-arm candidate
+PASS seven-piece nodal curves, inverse arm jet, and nonzero bulk defect
+SECTION scalar-paid seven-piece and arm-interpolating eight-piece hostiles
+PASS scalar payment, arm repair, nodal arms, and nonscalar-layer failure
 SECTION separated and Sigma-corrected arm-blind controls
 PASS 15 separated/Sigma-corrected arm-blind gates
 SECTION sharp boundaries
 PASS degree-one, exponent-one, and 8 characteristic-p hostile gates
-CHECKS=416
+CHECKS=455
 RESULT=PASS

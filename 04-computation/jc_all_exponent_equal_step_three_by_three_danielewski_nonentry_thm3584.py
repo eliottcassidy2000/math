@@ -769,5 +769,5 @@ print(
 )
 print("N=3 sharp profiles: (-4,1,6)|(-8,-3,2); (-3,-1,1)^2; (-3,2,7)|(-9,-4,1)")
 print("hostiles: both-negative / zero-multiplier / repeated-arm / degree-one / Laurent-pole")
-print("scope: reduced exact equal-step 3x3 supports; no THM-3576 tower or JC consequence")
+print("scope: reduced exact equal-step 3x3 supports; does not reprove THM-3576; no JC consequence")
 print("all optimization-safe exact truth gates passed")
