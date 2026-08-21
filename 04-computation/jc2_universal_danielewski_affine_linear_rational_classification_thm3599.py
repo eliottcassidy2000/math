@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Finite exact companion for provisional THM-3599.
+"""Finite exact companion for proved, hostile-audited THM-3599.
 
 The proof is Newton-polygon and residue driven.  This companion checks every
 coefficient mask on a broad integer box, the exact rational-mate boundaries,

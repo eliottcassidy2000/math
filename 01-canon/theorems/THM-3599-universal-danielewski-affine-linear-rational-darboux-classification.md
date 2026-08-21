@@ -2,7 +2,7 @@
 id: THM-3599
 title: "Universal Danielewski affine-linear rational Darboux classification"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On every smooth squarefree Danielewski surface c^N e=Sigma(b) with N>=2
   and deg Sigma>=2, an affine-linear target delta+lambda b+mu c+nu e has a
   rational nonzero-constant-bracket mate if and only if nu=0 and the target
@@ -10,6 +10,12 @@ status: >
   except for one logarithmic conic boundary with nonzero residues.  No
   polynomial Darboux pair or counterexample to JC(2) is constructed.
 source: root / planar-Jacobian affine time-form session, 2026-08-21
+audit: >
+  An independent hostile audit rederived generic-fibre regularity, every
+  Newton mask and margin, all toric faces, the resonant double-root
+  resolution, affine-arm units, the unique logarithmic conic residues, both
+  rational-mate formulas, and the exponent/degree boundaries.  Normal and
+  optimized companions are byte-identical to the stored 2,611-gate output.
 depends_on:
   - THM-3596-a13-invoice-paid-mixed-coordinate-toric-time-form-nonentry
 related:
@@ -17,15 +23,15 @@ related:
   - THM-3598-danielewski-rational-exact-polar-graph-family-and-classification
 script: 04-computation/jc2_universal_danielewski_affine_linear_rational_classification_thm3599.py
 output: 05-knowledge/results/jc2_universal_danielewski_affine_linear_rational_classification_thm3599.out
-script_sha256: 9641456fa3d0f14fe1c85f654d0607aef3e871cb0fbb85f31b9c607dd84bd17c
+script_sha256: 621314d2b76809d3297fc63e433d800923818c7a90d562061aa89ab59c1da430
 output_sha256: 37fef42a4577b01af4d1b8b636a7390de3bf94c8858f546aeae900d33aab9a2b
 hash_basis: raw LF bytes
 ---
 
 # THM-3599 -- Universal Danielewski affine-linear rational Darboux classification
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / PENDING INDEPENDENT
-AUDIT.**  This theorem gives a complete rational-mate classification in the
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem
+gives a complete rational-mate classification in the
 affine-linear target cell.  The hypotheses `N>=2`, `deg Sigma>=2`, and
 squarefreeness are explicit and load-bearing.  It proves no case of `JC(2)`.
 
