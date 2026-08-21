@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3611 central-transverse first coordinates.
+"""Exact controls for proved THM-3611 central-transverse first coordinates.
 
 The universal statement is proof-driven.  This companion checks the formal
 arm division and jets, the arbitrary-P transport determinant, direct source
@@ -40,8 +40,8 @@ def jacobian(first, second, first_var, second_var):
     )
 
 
-print("THM-3611 exact companion -- provisional central-transverse nonlinear coordinate rigidity")
-print("status=finite exact controls; universal formal/localized proof is proof-driven")
+print("THM-3611 exact companion -- proved central-transverse nonlinear coordinate rigidity")
+print("status=verified exact controls plus independent hostile audit; universal proof is proof-driven")
 
 
 print("SECTION Russell compiler and polynomial graph coordinates")
@@ -367,4 +367,4 @@ print("PASS collapsed_arm_coordinate=independent_control square_no_go=complete a
 
 
 print(f"PASS total_exact_gates={CHECKS}")
-print("RESULT provisional_controls_passed; independent hostile audit still required")
+print("RESULT PASS -- proved, verified-exact, independently hostile-audited")

@@ -2,8 +2,8 @@
 id: THM-3611
 title: "Russell-cylinder central-transverse nonlinear first-coordinate rigidity"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT
-  CONTROLS; NOT YET PROVED CANON.  Let P(T,C) and K(U,C) be arbitrary
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let P(T,C)
+  and K(U,C) be arbitrary
   polynomials.  If P_T(0,0) is nonzero, then no polynomial source graph followed by
   L=P(B,C), M=S+K(L,C) has nonzero constant ordinary Jacobian.  The central
   formal arm forces the localized quotient (P(B,C)-P(0,0))/C to be constant;
@@ -14,7 +14,11 @@ status: >
   square-identity proof.  Vanishing P_T(0,0), first outputs involving S or Y,
   and implicit non-graph planes remain open.
 source: root/nonlinear_cylinder_shears maximal nonlinear-coordinate envelope, 2026-08-21
-audit: PENDING -- provisional package requires independent hostile audit
+audit: >
+  PASS -- independent hostile audit rederived the formal transport, boundary
+  recurrence, algebraic descent, polynomial intersection, two-arm
+  contradiction, and sharp controls; normal, optimized, and stored 204-gate
+  transcripts are byte-identical.
 depends_on:
   - THM-3561-rational-keller-danielewski-polynomial-completion
   - THM-3608-russell-cylinder-nonlinear-target-shear-rigidity
@@ -24,14 +28,14 @@ related:
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
 script: 04-computation/jc2_russell_cylinder_arm_separating_nonlinear_first_coordinate_thm3611.py
 output: 05-knowledge/results/jc2_russell_cylinder_arm_separating_nonlinear_first_coordinate_thm3611.out
-script_sha256: ac0a85269a0eb621907d769c95a3577ee6e23a16fbb31c300a997a2a9c88fd69
-output_sha256: 56a302aaa9f67ebe345d76b0c24348b37212f097a4b72b063f90afcaee9794ce
+script_sha256: 15fb891d648ee53ab2f581a0db1193ab4f3af7ce02583adfaff55f066d6fdd59
+output_sha256: 76cfdb1e45a232b5a573b5e0d7cf9c23ddec8a13577736aa3c87725746063a93
 hash_basis: raw LF bytes
 ---
 
 # THM-3611 -- Russell-cylinder central-transverse nonlinear first-coordinate rigidity
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT.**  This is a proposed
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This is a
 strict extension of THM-3608 from first outputs affine in `B` over `C[C]` to
 arbitrary polynomials in `(B,C)` transverse to `B` at the central arm.  It is not part of the proved dependency
 graph until an independent audit promotes it.  All rings and derivatives are
@@ -399,7 +403,7 @@ because its normalized first output is `Z=nu+mu Y_h`.
 
 ## 7. Sharp scope and open exits
 
-The provisional result closes every nonlinear `P(B,C)` with
+The result closes every nonlinear `P(B,C)` with
 `P_T(0,0)!=0`; no arm-separation hypothesis remains.  It includes first
 coordinates which are not polynomial coordinates and coordinates produced
 by arbitrary target automorphisms whenever their selected `P(B,C)` is

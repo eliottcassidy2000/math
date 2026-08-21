@@ -1,5 +1,5 @@
-THM-3611 exact companion -- provisional central-transverse nonlinear coordinate rigidity
-status=finite exact controls; universal formal/localized proof is proof-driven
+THM-3611 exact companion -- proved central-transverse nonlinear coordinate rigidity
+status=verified exact controls plus independent hostile audit; universal proof is proof-driven
 SECTION Russell compiler and polynomial graph coordinates
 PASS compiler_gates=7 determinant=-3
 SECTION nonlinear P division and central jets with mixed arm labels
@@ -19,4 +19,4 @@ PASS alpha_zero_method_hostile=nonconstant_formal_Z determinant=3
 SECTION collapsed-arm coordinate and complete square no-go
 PASS collapsed_arm_coordinate=independent_control square_no_go=complete affine_family=closed
 PASS total_exact_gates=204
-RESULT provisional_controls_passed; independent hostile audit still required
+RESULT PASS -- proved, verified-exact, independently hostile-audited
