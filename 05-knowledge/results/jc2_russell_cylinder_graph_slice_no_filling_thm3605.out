@@ -1,0 +1,17 @@
+THM-3605 exact companion -- provisional Russell-cylinder graph-slice gate
+status=finite exact controls; universal graph/no-mate conclusions are proof-driven
+SECTION polynomial Russell specialization and inverse
+PASS cylinder quotient compositions=7 polynomial-coordinate gates=14 volume gates=2
+SECTION THM-3561 stabilization and collision curve
+PASS compiler identities=12 collision rows=3x8 stable polynomial gates=8
+SECTION collision-bearing arm and polynomial source-graph hostiles
+PASS root-zero arm identities=4 polynomial graph hostiles=8x3 affine gates=3
+SECTION weight identity and source-graph ODE obstruction
+PASS weight formula rows=55 ODE gates=6 bounded no-unit degrees=0..8
+SECTION complete punctured-Darboux graph classification
+PASS punctured graph rows=20 gates_per_row=11 affine=2 positive=4
+SECTION fixed-c no-polynomial-mate obstruction
+PASS fixed-c root rows=5x4 bounded no-mate degrees=0..8 zero boundary=1
+SECTION status and scope sentinels
+PASS dimension=3 stable; graph scopes only; non-graph and S-mixing projections remain OPEN
+ALL EXACT CHECKS PASSED gates=436
