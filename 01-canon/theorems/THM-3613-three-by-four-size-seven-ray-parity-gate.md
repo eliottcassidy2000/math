@@ -2,7 +2,7 @@
 id: THM-3613
 title: "Exponent-two three-by-four size-seven ray parity gate"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  The seven
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The seven
   sumset-seven words in the exponent-two 3 x 4 support atlas are primitive
   one-dimensional rays.  At scales n>=4 their scalar-arm placements and
   singleton sign graphs stabilize, and the UFD exponent of the negative arm
@@ -12,13 +12,17 @@ status: >
   assert that any surviving placement is a Darboux pair.
 source: kps-s188 / THM-3609 continuation, 2026-08-21
 audit: >
-  Author proof and exact companion verification.  The companion hash-pins
+  Author proof, exact companion verification, and independent hostile audit
+  by agent Kepler.  The companion hash-pins
   THM-3606, proves rank four for each collision-equality system, identifies its
   primitive integral kernel generator, enumerates all exceptional scales,
   certifies affine sign stabilization for every tail candidate, bridges the
   symbolic tail ledger record-for-record to the original integer evaluator in
   both parity classes, and agrees byte-for-byte under ordinary and optimized
-  Python.  Independent hostile audit remains pending.
+  Python.  The independent audit rebuilt all 18 collision hyperplanes,
+  enumerated all 132 raw affine arm candidates and all 336 singleton rows
+  before filtering, rechecked the symbolic/direct bridge at scales
+  4,5,6,7,100,101, and reproduced every exceptional and parity count.
 depends_on:
   - THM-3606-exponent-two-three-by-four-scalar-singleton-gate-atlas
   - THM-3592-universal-exponent-two-three-by-three-weight-darboux-nonentry
@@ -34,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3613 -- exponent-two three-by-four size-seven ray parity gate
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.**  This theorem
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**  This theorem
 is a global arithmetic refinement of the scalar-arm/singleton gate on the
 smallest unresolved additive layer.  It is not a bounded search: after three
 explicit exceptional scales, the proof treats every positive scale at once.
