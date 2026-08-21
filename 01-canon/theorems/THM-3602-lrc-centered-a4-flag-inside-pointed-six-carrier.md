@@ -2,8 +2,8 @@
 id: THM-3602
 title: "LRC centered A4 flag inside the pointed six carrier"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Over the pinned field, state averaging transports the THM-3593
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Over the
+  pinned field, state averaging transports the THM-3593
   relation flag K2<R4 into Fun_0(F13), where it lies inside the centered
   pointed six-carrier Q6 with dimensions 2<4<6<12.  The raw carrier P6 is the
   graph of one nonzero augmentation functional over Q6.  Its intersections
@@ -14,11 +14,15 @@ status: >
   is claimed.
 source: kps-s188 + agent Godel / THM-3593 pointed-carrier continuation, 2026-08-21
 audit: >
-  Author/implementer exact audit.  The standard-library companion hash-pins
+  Author/implementer exact audit and independent hostile audit by agent
+  Aquinas.  The standard-library companion hash-pins
   and independently reconstructs the THM-3593 relation flag and the clean-room
   pointed carrier, verifies every rank, intersection, augmentation kernel,
-  parent digest, and all 156 affine target reindexings.  Normal and optimized
-  runs are byte-identical.  Independent hostile audit remains pending.
+  parent digest, and all 156 affine target reindexings.  The independent audit
+  used orthogonal-complement elimination, reconstructed the typed state
+  average and functional kernels, independently enumerated the affine atlas,
+  and reproduced all file and semantic hashes.  Normal and optimized runs are
+  byte-identical and no assertion-dependent gate is present.
 depends_on:
   - THM-3593-lrc-common-a4-anova-graph-flag
 related:
@@ -34,8 +38,8 @@ hash_basis: LF-normalized bytes for files; canonical JSON for semantic ledgers
 
 # THM-3602 -- LRC centered A4 flag inside the pointed six carrier
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-AUDIT.**  This supplies the typed comparison requested by THM-3593.  It also
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**  This
+supplies the typed comparison requested by THM-3593.  It also
 isolates exactly what that comparison forgets: the difference coordinate and
 all temporal data.
 
