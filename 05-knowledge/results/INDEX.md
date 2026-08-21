@@ -37,6 +37,22 @@
   replay matches.  Script/output LF SHA-256:
   `e281372c6a6c3ee1a7689288847d44a032b152aebf5e20def393cb7289e72b52` /
   `77845935c7a5414e9d90d77aef7858670f34518607d7b55e6fc78910019499d7`.
+- `jc_separated_rational_keller_observable_suspension_thm3567.py` ->
+  matching `.out` [THM-3567 PROVED + VERIFIED-EXACT + HOSTILE-AUDITED].
+  For every separated seed `P=f(x),Q=y/f'(x)` with squarefree derivative
+  and distinct critical values, the full target-field intersection is
+  `k[P,A,B]/(A^2-Delta(P)B)`.  It has one ordinary node per critical value;
+  the induced map is finite etale of degree `deg(f)` over `Delta!=0`, is not
+  globally etale, and for degree at least three contracts regular companion
+  lines.  The rational cubic has a triple collision and two explicit
+  collapsed lines.  A quadratic hostile shows that `Delta!=0` need not be
+  the maximal etale locus.  This full-field result is explicitly distinct
+  from THM-3561's smooth polynomial-target-ring intersection and proves no
+  planar counterexample.  All `99` gates and normal/`-O`/stored transcripts
+  match.  Script/output/reflection LF SHA-256:
+  `7c10c13ac53255643553ee3645b5a68ee916292b8feace4edb120642ff430f29` /
+  `8f290240535fe3ad5d82298a5110b5dd683a152dec64f31e49258eff4463380b` /
+  `f787bf681c3ca586b16696c555ea2c5db27edef633ffd48a452236ebac1aa732`.
 
 - `jacobian_resonant_linear_a_factor_classification_kps_s188.py` -> matching
   `.out` [THM-3565 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].

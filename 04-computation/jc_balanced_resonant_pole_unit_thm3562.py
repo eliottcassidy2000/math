@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact non-assert companion for provisional THM-3562."""
+"""Exact non-assert companion for proved THM-3562."""
 
 from fractions import Fraction
 

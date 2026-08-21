@@ -1,0 +1,13 @@
+THM-3567 separated rational Keller full-field companion: PASS
+cubic seed: f=x(x-3)(x-8); Q=y/f'(x); Jac(f,Q)=1
+triple collision: (0,0),(3,0),(8,0) -> (0,0)
+critical values: -36, 400/27; both simple and distinct
+full-field intersection surface: A^2=(P+36)(27P-400)B
+singular locus: exactly (-36,0,0) and (400/27,0,0)
+collapsed companion lines: x=-1 and x=25/3
+parity divisibility controls: n=1..16, sharp ceil(n/2)
+parity controls: 16
+exact gates: 99
+degree-two boundary: Delta=0 has etale points away from the node
+consequence: this separated completion is singular; d>=3 is not quasi-finite
+scope: full target field of separated seeds only; no JC(2) conclusion

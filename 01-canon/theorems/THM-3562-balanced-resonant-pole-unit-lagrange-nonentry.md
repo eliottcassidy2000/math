@@ -25,7 +25,7 @@ related:
   - MISTAKE-317
 script: 04-computation/jc_balanced_resonant_pole_unit_thm3562.py
 output: 05-knowledge/results/jc_balanced_resonant_pole_unit_thm3562.out
-script_sha256: 06f9e33a6da9add6b3c03baeb20fdd5bb624dbb06b4a44a8203ffe9b46725efa
+script_sha256: 2153d2ecfc65f59d24fc1be09f7af66d1637762df0f82c04dddfc66e5915160d
 output_sha256: 4692b4fba5243d67b03887fd2abedab7af9aca6334c36354afe034bf4212ce24
 hash_basis: LF-normalized bytes
 ---
@@ -198,7 +198,7 @@ If `h=1`, balance gives `p_1=N=2e`, so the only pole part is even.  With
 `S=1`, THM-2796's exact squareclass criterion says that this response is
 split, contrary to the nonsplit hypothesis.  Thus neither `h>=2` nor
 `h=1` can occur.  No nonconstant balanced response enters the normalized
-nonsplit chart `(2)`.  QED, provisionally pending final promotion.
+nonsplit chart `(2)`.  QED.
 
 ## 5. First asymmetric finite-pole hostile control
 

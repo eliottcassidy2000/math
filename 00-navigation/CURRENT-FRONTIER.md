@@ -341,14 +341,14 @@ is sharp: equal counts allow two densities or none.
   mixed `N<=2` and
   `N=3,D<=6`; `D>=7`/width `>=4` open. THM-3560 closes monomial shears.
   [3561](../01-canon/theorems/THM-3561-rational-keller-danielewski-polynomial-completion.md)
-  gives an etale triple collision on non-`A2` Danielewski `Y`. THM-3569
-  forces any constant-Poisson pair to at least six pieces; first open cells
-  are `3 x 3` and `2 x 4`.
-  [3562](../01-canon/theorems/THM-3562-balanced-resonant-pole-unit-lagrange-nonentry.md)
-  closes balanced nonsplit passports. [3563](../01-canon/theorems/THM-3563-nongraph-conductor-node-cycle-keller-obstruction.md)
-  closes all target projections on one nongraph slice by a three-node cycle.
-  THM-3564/65/68/3570 compile graph factors: `d=1` is h-family with no
-  `A2` factor; quadratics are irreducible. 3495--3542 packets reach `R8`/index4.
+  gives an etale triple collision on non-`A2` `Y`; THM-3569 forces any
+  constant-Poisson pair to six pieces, leaving `3x3` and `2x4`. THM-3562
+  closes balanced passports and THM-3563 one nongraph slice. THM-3564/65/68/
+  3570 compile graph factors: degree one has no `A2` factor and quadratics
+  are irreducible. [3567](../01-canon/theorems/THM-3567-separated-rational-keller-maximal-observable-nodal-completion-no-go.md)
+  makes separated full-field completions nodal and non-quasi-finite from
+  degree three, distinct from 3561's target-ring intersection. 3495--3542
+  reach `R8`, with index zero to level four.
   2681/85--2708
   block the `A4/S4` cubic; 3448/3517 leave quartic `C3` open (MISTAKE-416).
   3440/43/50 and 3064/66/68 deny lawful LRC/Keller amplitude transport but
