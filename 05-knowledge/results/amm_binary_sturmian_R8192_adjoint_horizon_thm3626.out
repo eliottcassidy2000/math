@@ -1,0 +1,17 @@
+== THM-3626 AMM R8192 exact adjoint horizon ==
+parent_sha256_lf (('theorem', '48116058545de3e8614d7fede8159baaa6d900315d55894d7669c48c4f1f11bf'), ('script', 'c6753be05870700747aadb3f43e41a24e80f84f37b79e07fe70960f71a9e864a'), ('output', '519e52f14ad8dc8cb42a182d769b00847eed1a19783958184adf36f87c8d679f'))
+control_R4096 (88, 1014, (2537, 3143, 4986))
+epoch (8192, 191)
+death_fatal_bits_profile (2045, 4937, (5089, 6312, 9987))
+wall (774, 773, (774, 2044))
+boundary ((4939, 4930), 'd42558aa87d6c8e57f739abdb54758ec192d0c6081d3ab850ce04c746cedecc3')
+active (808356, 'dcbbf6f02e3c4b2d01ad0d8e35a6e8b46a73fa8d08c07969306adc544c4a5ba5')
+q_over_R (773, 8192)
+golden_error (-2299+1024*sqrt(5))/8192<0
+error_rebound 9/8192 closer than R4096;7/8192 farther than R2048
+dyadic_defects q8192-2*q4096=9;death8192-2*death4096=17
+semantic_sha256 226de0151e7fe6f9ded73b11041bb83d259f8d4d5d44c738de8f9b706d052d59
+script_sha256_lf 548e5ddaad0b7220687468552a448f3021ad16b3162a2c11409d139d31ee3be5
+CHECKS 27
+SCOPE fixed failed Rule-A prefix; no alternative feasibility/asymptotic AMM bound
+PASS
