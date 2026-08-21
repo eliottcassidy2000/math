@@ -9,6 +9,20 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-430 (2026-08-20, THM-3569 promotion suffix) -- the audited universal theorem retained its provisional scope block
+
+- **What failed:** after THM-3569 was promoted to an independently audited
+  theorem for every squarefree `Sigma` of degree at least two, Section 5
+  still labeled that universal statement `PENDING AUDIT` and called only the
+  old specialization `Sigma=b(b+4)` proved.
+- **Repair / strongest survivor:** replace the stale block by the proved
+  universal scope.  The support-collision proof, exact companion, hashes,
+  open `3x3`/`2x4` boundary, and all mathematical claims are unchanged.
+- **Reusable rule:** promotion audits must search scope tables and fenced
+  status summaries as well as frontmatter and final paragraphs; stale truth
+  labels can survive inside a theorem even when its proof was correctly
+  generalized.
+
 ## MISTAKE-429 (2026-08-20, THM-3574 certificate bookkeeping) -- the intermediate quotient inherited the final quotient's term count
 
 - **What failed:** the first THM-3574 proof said that the intermediate

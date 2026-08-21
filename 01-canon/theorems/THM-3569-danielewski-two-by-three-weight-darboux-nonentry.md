@@ -405,11 +405,9 @@ unchanged to every squarefree target in THM-3572.  In the universal scope it
 says:
 
 ```text
-PENDING AUDIT: homogeneous, 2 x 2, 2 x 3, and 3 x 2 polynomial weight
-               cells contain no Darboux pair for every squarefree Sigma
-               of degree at least two;
-
-PROVED:         the same statement for Sigma=b(b+4);
+PROVED:   homogeneous, 2 x 2, 2 x 3, and 3 x 2 polynomial weight
+          cells contain no Darboux pair for every squarefree Sigma
+          of degree at least two;
 
 OPEN:     the first six-piece cells 3 x 3 and 2 x 4;
           all larger mixed cells;
