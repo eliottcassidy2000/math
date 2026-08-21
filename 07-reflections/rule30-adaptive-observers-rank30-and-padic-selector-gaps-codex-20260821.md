@@ -439,14 +439,25 @@ The connection is methodological, not an identification of objects.  No map
 from Rule 30 states to Mordell--Weil points or p-adic zeta values has been
 proved.
 
+A same-day incoming result sharpens the carry warning.
+[THM-3658](../01-canon/theorems/THM-3658-lrc-mod169-carry-fourier-block-intertwiner.md)
+constructs an exact invertible Fourier change between split two-digit and
+cyclic carry coordinates, but proves that it does **not** intertwine their
+natural convolutions.  This is the right model for a future Rule 30 overflow
+representation: an invertible character transform may reorganize all visible
+state and still fail to commute with the native operation.  The decisive test
+for any carry-Fourier enrichment is therefore first-return intertwining, not
+matrix rank or invertibility alone.
+
 ## 9. Ranked next experiments
 
 1. **Adaptive Rule 30 observer compiler.**  For physical `s_m`, measure the
    least source depth needed to recover the next selected-ray bank, not just
    the least depth that distinguishes `s_m`.  Seek a recursive overflow state
-   coming from
+   coming from a split/cyclic carry transform in the style of THM-3658 and
    [THM-3512](../01-canon/theorems/THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary.md)
-   and THM-3516's carry data.
+   plus THM-3516's marked carry data.  Require exact first-return
+   intertwining; linear invertibility is insufficient.
 
 2. **Multi-scale period schemes rather than cosmetic tournaments.**  The
    exact scale-fixed period-five/seven schemes are now closed by the linear
