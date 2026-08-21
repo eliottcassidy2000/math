@@ -29,6 +29,17 @@ Format per entry:
   rebase, recheck both filenames and YAML IDs on the exact candidate tree
   immediately before committing.  If the remote acquired the ID, renumber
   before pushing; an earlier availability check is not a concurrency lock.
+- **Same-day recurrence / sparse repair:** the same race recurred while
+  reserving the AMM threshold as `THM-3642`: root commit `b645cbbcd` acquired
+  that ID between checks, while the already-started push of `dac6e6da8`
+  completed despite a late interrupt.  The first renumber checkpoint added
+  `THM-3644` but, because the stale path was skip-worktree in the sparse
+  checkout, did not delete the duplicate.  After explicitly materializing the
+  path, commit `fe8a7a4fe` removed it; the Russell-cylinder theorem is again
+  the sole `THM-3642`.  Strengthened rule: after interrupting any push, fetch
+  and inspect `origin/main` rather than assuming cancellation; in sparse
+  worktrees, verify deletions in the index and finish with `git grep` for the
+  YAML ID on the pushed tree.
 
 ## MISTAKE-432 (2026-08-21, THM-3592 support classification) -- simultaneous reversal was not a regularity symmetry
 
