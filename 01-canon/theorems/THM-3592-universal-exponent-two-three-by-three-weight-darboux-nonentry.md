@@ -515,11 +515,11 @@ immediately by a mixed or zero/nonzero singleton are:
 
 ```text
 20:(1,-2):  ord(g_0)=1 forces ord(f_0)=(2d-1)/2;
-11:(-2,1): ord(f_1)=1 forces both (d-1)/2 and (d+2)/2 integral;
+11:(-2,1): ord(f_1)=1 forces both (2d-1)/2 and (d+2)/2 integral;
 12:(-2,1): ord(f_1)=1 forces both (3d-1)/2 and (d+2)/2 integral.
 ```
 
-The first is impossible because `2d-1` is odd, and each of the last two asks
+The first two are impossible because `2d-1` is odd, and the last asks
 opposite parities of `d`.  All remaining placements have a strict mixed-sign
 singleton (with the direct zero/nonzero boundary at `d=1,2`).
 
