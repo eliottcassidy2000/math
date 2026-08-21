@@ -1,0 +1,36 @@
+THM-3561 exact companion
+middle_leaf_unit_identity=PASS
+middle_leaf_ring=QQ[x,w,(1-x^2*w)^-1]
+rational_pair=(q/D^2, x*D*(D+2))
+rational_jacobian=-3
+rational_collision_rows=[(0, -3/4, 1, -3/4, 0), (1, -3, -2, -3/4, 0), (-1, -3, -2, -3/4, 0)]
+completion=(b,c,e)=((D-1)(D+2)^2, xD(D+2), q(D+3))
+target_relation=c^2*e-b*(b+4)=0
+inverse_cubic=-B + T**3 + 3*T**2 - 4
+J_bc=-3*x**2*(q*x**2 + 1)**2*(q*x**2 + 3)**2
+J_ce=6*(q*x**2 + 2)*(q**2*x**4 + 4*q*x**2 + 1)
+boundary_jacobians={1: 12, 0: -12, -2: 12}
+completed_collision_rows=[(0, 0, -3), (0, 0, -3), (0, 0, -3)]
+target_smooth=PASS
+image=Y_minus_{(-4,0,0)}
+generic_degree=3
+intersection_generators=b,c,e
+intersection_weight=-1 cancellation_order=1 normal_form=q*x*(q*x**2 + 1)*(q*x**2 + 3)*(q*x**2 + 4)
+intersection_weight=-2 cancellation_order=1 normal_form=q*(q*x**2 + 4)
+intersection_weight=-3 cancellation_order=2 normal_form=q**2*x*(q*x**2 + 1)*(q*x**2 + 3)*(q*x**2 + 4)**2
+intersection_weight=-4 cancellation_order=2 normal_form=q**2*(q*x**2 + 4)**2
+intersection_weight=-5 cancellation_order=3 normal_form=q**3*x*(q*x**2 + 1)*(q*x**2 + 3)*(q*x**2 + 4)**3
+intersection_weight=-6 cancellation_order=3 normal_form=q**3*(q*x**2 + 4)**3
+intersection_weight=-7 cancellation_order=4 normal_form=q**4*x*(q*x**2 + 1)*(q*x**2 + 3)*(q*x**2 + 4)**4
+intersection_weight=-8 cancellation_order=4 normal_form=q**4*(q*x**2 + 4)**4
+poisson_generators={b,c}:c^2 {c,e}:-2(b+2) {b,e}:-2ce
+affine_linear_constant_bracket=zero_only
+symplectic_primitive=global_exact
+homogeneous_weight_controls=[(0, 1, 6), (1, 1, 6), (2, 2, 8), (3, 2, 8), (4, 3, 10), (5, 3, 10), (6, 4, 12), (7, 4, 12), (8, 5, 14)]
+homogeneous_constant_bracket=none
+two_by_two_weight_controls=[(1, 6, 6), (2, 6, 16), (3, 6, 26), (4, 6, 36), (5, 6, 46), (6, 6, 56), (7, 6, 66), (8, 6, 76)]
+two_by_two_constant_bracket=none
+generator_slices=none
+euler_Y=2 euler_A2=1
+picard_Y=Z
+scope=NO_JC2_CLAIM; solve {P,Q}=unit on Y to obtain one
