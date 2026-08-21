@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-3569's two-by-three weight nonentry."""
+"""Exact companion for THM-3569's universal squarefree 2x3 nonentry."""
 
 from __future__ import annotations
 
@@ -26,6 +26,54 @@ def W(r: int, f: s.Expr, t: int, g: s.Expr) -> s.Expr:
 
 def zero(expr: s.Expr, message: str) -> None:
     require(s.simplify(s.expand(expr)) == 0, message)
+
+
+# The proof uses no coefficients of Sigma: only squarefreeness, arm orders,
+# and deg(Sigma)>=2.  Exact split samples expose those inputs in several
+# degrees and verify the positive-degree obstruction factors arm by arm.
+squarefree_degrees = []
+for degree in range(2, 8):
+    Sigma = s.prod(b - root for root in range(degree))
+    require(s.degree(Sigma, b) == degree, "squarefree sample degree failed")
+    require(s.gcd(Sigma, s.diff(Sigma, b)) == 1, "squarefree sample gcd failed")
+    for root in range(degree):
+        require(Sigma.subs(b, root) == 0, "sample arm missing")
+        require(s.diff(Sigma, b).subs(b, root) != 0, "sample arm not simple")
+    K_sample = b + degree + 1
+    differential_factor = s.diff(Sigma, b) * K_sample + 2 * Sigma
+    require(
+        s.degree(differential_factor, b) == degree,
+        "positive-degree obstruction factor collapsed",
+    )
+    squarefree_degrees.append(degree)
+
+
+# At an arm, the complementary scalar row with negative weight -R has
+# minimum order ceil(R/2) and initial multiplier R-1 when its positive mate
+# is a unit.  Precisely R=2 can survive.  R=1 is the essential zero-multiplier
+# boundary.
+simple_arm_survivors = []
+for R in range(1, 17):
+    minimum_order = (R + 1) // 2
+    can_survive = minimum_order == 1 and R - 1 != 0
+    require(can_survive == (R == 2), "simple-arm scalar gate failed")
+    if can_survive:
+        simple_arm_survivors.append(R)
+
+
+# Sharp external boundaries.  Degree one is A2 and has the homogeneous pair
+# {c,-e/u}=1; a repeated root makes the Poisson tensor vanish on its arm.
+u = s.Integer(7)
+Sigma_linear = u * b + 3
+zero(W(1, s.Integer(1), -2, -Sigma_linear / u) - 1,
+     "degree-one homogeneous Darboux boundary")
+Sigma_repeated = b**2 * (b - 1)
+require(Sigma_repeated.subs(b, 0) == 0, "repeated-root relation boundary")
+require(s.diff(Sigma_repeated, b).subs(b, 0) == 0,
+        "repeated-root Poisson degeneration boundary")
+require(s.rem(b**2, b**2, domain=s.QQ) == 0, "repeated square control failed")
+require(s.rem(b, b**2, domain=s.QQ) != 0,
+        "squarefree radical implication hostile failed")
 
 
 # Support arithmetic.  With P weights r,r+delta, the complementary Q weights
@@ -141,7 +189,11 @@ for k in range(1, 9):
     upper_b_rows.append(k)
 
 
-print("THM-3569 Danielewski two-by-three weight nonentry")
+print("THM-3569 universal squarefree Danielewski two-by-three nonentry")
+print(f"squarefree degree controls: {squarefree_degrees}")
+print(f"simple-arm scalar survivors: {simple_arm_survivors}")
+print("degree-one homogeneous Darboux boundary: PASS")
+print("nonsquarefree Poisson-degenerate arm boundary: PASS")
 print("support collision classes: isolated / lower arithmetic / upper arithmetic")
 print("lower exceptional ladder {-2,1} x {-5,-2,1}: exact factor PASS")
 print(f"upper A exact controls: {upper_a_rows}")

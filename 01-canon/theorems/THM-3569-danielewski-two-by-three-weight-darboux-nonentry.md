@@ -1,66 +1,81 @@
 ---
 id: THM-3569
-title: "Danielewski two-by-three weight Darboux nonentry"
+title: "Universal squarefree Danielewski two-by-three weight Darboux nonentry"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the smooth
-  Danielewski target c^2 e=b(b+4) of THM-3561, a polynomial Darboux pair
-  cannot have at most two nonconstant weight pieces in one output and at
-  most three in the other.  After scalar removal every possible pair must
-  have support sizes (2,at least 4), (at least 4,2), or (at least 3,at
-  least 3), hence at least six nonconstant homogeneous pieces.  The result
-  closes the complete two-by-three cell only; it neither supplies nor
-  excludes a general Darboux pair and proves no JC(2) conclusion.
-source: codex-2026-08-20-frontier-overnight
+  PROVISIONAL UNIVERSAL SCOPE GENERALIZATION + VERIFIED-EXACT; PENDING
+  INDEPENDENT HOSTILE AUDIT.  For every squarefree polynomial Sigma of
+  degree at least two, a polynomial Darboux pair on c^2 e=Sigma(b) cannot
+  have at most two nonconstant weight pieces in one output and at most three
+  in the other.  After scalar removal every possible pair must have support
+  sizes (2,at least 4), (at least 4,2), or (at least 3,at least 3), hence at
+  least six nonconstant homogeneous pieces.  The previously proved and
+  independently audited specialization Sigma=b(b+4) remains contained in
+  the statement.  The universal scope is not promoted pending a fresh audit.
+  No Darboux pair and no counterexample to JC(2) is claimed.
+source: codex-2026-08-20-frontier-overnight; root/elliptic_arm_counterexamples, 2026-08-20
 audit: >
-  An independent hostile audit rederived the support-collision trichotomy,
-  arm-order gates, both arithmetic extensions, every exceptional
-  factorization, and the exact companion.  The ordinary and optimized
-  replays agree.  The squarefree-arm, characteristic-zero, polynomial, and
-  support-size boundaries are explicit.
-depends_on:
-  - THM-3561-rational-keller-danielewski-polynomial-completion
+  PENDING independent audit of the universal scope.  The original
+  Sigma=b(b+4) scope was independently hostile-audited.  The expansion audit
+  found that the proof and companion use only squarefree root orders,
+  degree at least two, and characteristic zero; fresh ordinary and optimized
+  replays agree on degrees two through seven and the sharp boundary controls.
+depends_on: []
 related:
   - THM-3404-factorized-danielewski-principal-parts-and-finite-cover-obstruction
+  - THM-3561-rational-keller-danielewski-polynomial-completion
+  - THM-3572-squarefree-danielewski-affine-modification-and-two-bracket-collapse
 script: 04-computation/jc2_danielewski_two_by_three_weight_nonentry_thm3569.py
 output: 05-knowledge/results/jc2_danielewski_two_by_three_weight_nonentry_thm3569.out
-script_sha256: 98e062a15921b9cb0e5b17afdd5bf206d11970631c3891230c1b86b0d064dfa3
-output_sha256: 9f364247a3ae9114db6d8d143391facd9adb98593fb5e22ded34cefdfc430922
+script_sha256: 2f8a7de8e6b57dcd0555807e16560838a2e678b92a842531526e211685415914
+output_sha256: d6afee0c5aa39239a2b4f698787becb7866a8ff6f29c88a8ffabf9d37112ae95
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3569 -- Danielewski two-by-three weight Darboux nonentry
+# THM-3569 -- universal squarefree Danielewski two-by-three weight Darboux nonentry
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVISIONAL UNIVERSAL SCOPE GENERALIZATION + VERIFIED-EXACT; PENDING
+INDEPENDENT HOSTILE AUDIT.**  The original quadratic specialization remains
+proved and audited; this revision exposes and generalizes its actual proof
+mechanism.
 
 THM-3561 turns a rational triple collision into an everywhere-etale
 polynomial map from `A2` to a smooth Danielewski surface.  A polynomial
 Darboux pair on that surface would compose with the map to give a genuine
-planar Jacobian counterexample.  THM-3561 excludes homogeneous pairs and the
-complete two-by-two weight cell.  The present theorem closes the next
-fewnomial cell, two weights by three weights, in every degree.
+planar Jacobian counterexample.  THM-3572 produces analogous squarefree
+targets, including a cubic target with a degree-five etale noninjective map.
+The present proof is independent of those construction formulas: it closes
+the next fewnomial cell, two weights by three weights, uniformly for every
+smooth squarefree target of degree at least two.
 
-All rings are over a characteristic-zero field.  Put
+All rings are over `C`.  Fix a squarefree polynomial `Sigma in C[b]` of
+degree `N>=2`, and put
 
 ```text
-S=b(b+4),
-Y=Spec k[b,c,e]/(c^2 e-S).                              (1)
+A_Sigma=C[b,c,e]/(c^2 e-Sigma(b)),
+Y_Sigma=Spec A_Sigma.                                  (1)
 ```
 
-The two roots of `S` are called the arms.
+The distinct roots of `Sigma` are called the arms.  Give `A_Sigma` the
+symplectic Poisson bracket
+
+```text
+{b,c}=c^2,              {c,e}=-Sigma'(b),
+{b,e}=-2ce.                                            (1a)
+```
 
 ## 1. Graded Poisson problem and statement
 
-Use the THM-3561 grading
+Use the grading
 
 ```text
 wt(b)=0,                    wt(c)=1,                    wt(e)=-2. (2)
 ```
 
-The weight-`r` piece of `k[Y]` has the unique form `c^r f(b)` on `c!=0`,
+The weight-`r` piece of `A_Sigma` has the unique form `c^r f(b)` on `c!=0`,
 where
 
 ```text
-S^ceil(-r/2) divides f             when r<0.             (3)
+Sigma^ceil(-r/2) divides f         when r<0.             (3)
 ```
 
 For two homogeneous pieces,
@@ -70,13 +85,13 @@ For two homogeneous pieces,
 W_(r,s)(f,g)=s f'g-r f g'.                              (4)
 ```
 
-Suppose `P,Q in k[Y]` satisfy `{P,Q}=1`.  Subtract scalar weight-zero
+Suppose `P,Q in A_Sigma` satisfy `{P,Q}=1`.  Subtract scalar weight-zero
 pieces.  The claim is:
 
 > It is impossible for one of `P,Q` to have at most two nonzero homogeneous
 > pieces and the other to have at most three.
 
-Together with THM-3561 this leaves only
+Together with the smaller-cell proof below this leaves only
 
 ```text
 (#supp P,#supp Q) in
@@ -85,6 +100,51 @@ Together with THM-3561 this leaves only
 
 Thus every putative Darboux pair needs at least six nonconstant homogeneous
 pieces.
+
+We record the universal smaller-cell input, so the present theorem has no
+provisional dependency.  A homogeneous scalar bracket would have weights
+`r,-r-1`.  After swapping, take `r>=0` and write
+
+```text
+P=c^r f,       Q=c^(-r-1) Sigma^m g,
+m=ceil((r+1)/2).                                      (5a)
+```
+
+For `r=0` the bracket is divisible by `Sigma`; for `r>=2` it is divisible
+by `Sigma^(m-1)`.  For `r=1` its degree is
+`deg(f)+deg(g)+deg(Sigma)-1>=1`, with nonzero leading multiplier in
+characteristic zero.  Hence no homogeneous scalar bracket exists.
+
+The complete two-by-two cell is also empty.  Its only possible cross-matched
+normal form is
+
+```text
+P=c^(-R)f+c^(T-1)F,
+Q=c^(-T)g+c^(R-1)G,                                  (5b)
+```
+
+where `R,T>=1`, `Sigma^ceil(R/2)|f`, and
+`Sigma^ceil(T/2)|g`.  Its two extreme rows and scalar row are
+
+```text
+Rfg'-Tf'g=0,              (R-1)F'G-(T-1)FG'=0,
+(R-1)f'G+RfG'-TF'g-(T-1)Fg'=1.                       (5c)
+```
+
+At an arm the scalar row can survive only through a simple negative
+coefficient, forcing `R=2` or `T=2`; weight `-1` has zero derivative
+multiplier and does not survive.  If `R=2`, the first equation and simplicity
+give `T=2k`, `f=A h`, `g=B h^k`, and `Sigma|h`.  The second equation gives
+`F=L K^(2k-1),G=M K`, and the scalar row factors as
+
+```text
+(Kh'+2hK')
+(AM-k(2k-1)LB K^(2k-2)h^(k-1)).                      (5d)
+```
+
+The first factor has degree `deg K+deg h-1>=1`, with nonzero leading
+coefficient.  The case `T=2` is symmetric.  This proves the universal
+homogeneous and two-by-two inputs used below.
 
 ## 2. Support collision trichotomy
 
@@ -117,10 +177,10 @@ x=alpha-delta             or             x=beta+delta,  (9)
 ```
 
 all four nonconstant rows are isolated and must vanish separately.  Deleting
-the inert third piece then gives the two-by-two cell excluded by THM-3561.
+the inert third piece then gives the universally excluded two-by-two cell.
 Thus only the lower and upper arithmetic extensions in `(9)` can survive.
 
-We will use one arm-order lemma repeatedly.  At a root of `S`, let
+We will use one arm-order lemma repeatedly.  At a root of `Sigma`, let
 `m=ord(f), n=ord(g)`.  If `W_(r,s)(f,g)=0`, its first possible arm coefficient
 is
 
@@ -128,7 +188,7 @@ is
 s m-r n.                                                 (10)
 ```
 
-By `(3)`, a negative-weight coefficient vanishes on both arms.  Equation
+By `(3)`, a negative-weight coefficient vanishes on every arm.  Equation
 `(10)` shows that a vanishing extreme row cannot pair a negative weight with
 a positive weight.  A zero weight on the other side would force its retained
 coefficient to be scalar, already removed.  Hence the lower extreme has two
@@ -152,9 +212,17 @@ The scalar row in both cases is the sum of the complementary pairs
 
 ## 3. The lower extension fails
 
-At an arm, the scalar row can be nonzero only if the coefficient of weight
-`-R` has a simple zero or the coefficient of weight `-T` has a simple zero.
-Divisibility `(3)` and the nonzero derivative multipliers in `(4)` force
+At an arm, if `m=ord(f)` and `n=ord(G)`, the first complementary scalar
+summand has initial multiplier
+
+```text
+(R-1)m+Rn.                                            (12a)
+```
+
+It can be nonzero of order zero only when `m=1,n=0,R>=2`; divisibility
+`(3)` then forces `R=2`.  At `R=1` the derivative multiplier `R-1`
+vanishes, so a unit `G` does not contribute.  The other complementary
+summand gives the symmetric conclusion.  Thus
 
 ```text
 R=2                         or                         T=2. (13)
@@ -177,16 +245,25 @@ f=a h^(R/d),                g_0=B h^((R+3)/d),
 d=gcd(R,3).                                                  (15)
 ```
 
-At an arm put `k_0=ord(h)` and `m=R k_0/d`.  Simplicity of the weight-`-2`
-middle coefficient makes the first term of the shared nonzero row have
-exact order `m` and nonzero coefficient `R-2m`.  The other term has order
+At any arm put `k_0=ord(h)` and `m=R k_0/d`.  Since `R>2`, the scalar row
+must survive through the weight-`-2` middle coefficient, so that coefficient
+is simple there.  Its contribution to the shared nonzero row has exact order
+`m` and coefficient `R-2m`, which is nonzero for `d in {1,3}` and integral
+`k_0>=1`.  The other term has order
 
 ```text
 m+3k_0/d-1>m.                                             (16)
 ```
 
-For `d=3`, divisibility `(3)` forces `k_0>=2`, so the strict inequality
-still holds.  The row cannot cancel.  Hence the sole lower candidate is
+For `d=1` the strict inequality is immediate.  For `d=3`, the coefficient
+`g_0` has weight `-(R+3)`, so `(3)` gives
+
+```text
+(R+3)k_0/3 >= ceil((R+3)/2),
+```
+
+and hence `k_0>=2`; this again makes `(16)` strict.  The row cannot cancel.
+Hence the sole lower candidate is
 
 ```text
 R=T=2,
@@ -211,14 +288,24 @@ Substitution in the scalar row factors it as
 h(hK)' [2aM-L(2D+3lambda hK)]=1.                         (20)
 ```
 
-Because `f` has negative weight, `(3)` and squarefreeness of `S` give
-`S|h`.  The left side of `(20)` is divisible by a nonconstant polynomial,
+Because `f` has negative weight, `(3)` and squarefreeness of `Sigma` give
+`Sigma|h`.  The left side of `(20)` is divisible by a nonconstant polynomial,
 a contradiction.
 
 ## 4. The upper extension fails
 
-The same arm test, now combined with the lowest common-power equation,
-leaves exactly two ladders:
+In the upper support, the lowest extreme equation has the common-power
+solution
+
+```text
+f=a h^(R/d_0),          g=B h^(T/d_0),
+d_0=gcd(R,T).                                           (20a)
+```
+
+The scalar arm test says either the `f`-summand is simple, which forces
+`R=2,d_0=2` and therefore even `T`, or the `g`-summand is simple, which
+forces `T=2,d_0=2` and therefore even `R`.  Thus the exhaustive upper
+possibilities are exactly two ladders:
 
 ```text
 A: R=2, T=2k,
@@ -242,7 +329,7 @@ The two extreme equations have the common-power form
 
 ```text
 f=a h,        g=B h^k,
-F=L K^(p/d),  H=M K^(q/d),             S|h.             (24)
+F=L K^(p/d),  H=M K^(q/d),             Sigma|h.         (24)
 ```
 
 Let `G` be the coefficient of the middle weight `1`.  The shared positive
@@ -281,7 +368,7 @@ coefficient of `(26)` is
 (deg(h)+2deg(K)) lc(h)lc(K),                              (29)
 ```
 
-nonzero in characteristic zero, and `deg(h)>=2` because `S|h`.  None can
+nonzero in characteristic zero, and `deg(h)>=2` because `Sigma|h`.  None can
 divide the unit `1`.  Ladder A is empty.
 
 ### 4.2 Ladder B
@@ -290,7 +377,7 @@ The extreme equations now give
 
 ```text
 f=a h^k,        g=B h,        F=L K,        H=M K^(4k),
-S|h.                                                       (30)
+Sigma|h.                                                   (30)
 ```
 
 The shared positive row integrates to
@@ -310,23 +397,42 @@ empty, completing the two-by-three exclusion.
 
 ## 5. Boundary and counterexample design
 
-This theorem strengthens only the exact THM-3561 residual system.  It says:
+This theorem strengthens the exact THM-3561 residual system and applies
+unchanged to every squarefree target in THM-3572.  In the universal scope it
+says:
 
 ```text
-PROVED:   homogeneous, 2 x 2, 2 x 3, and 3 x 2 polynomial weight cells
-          contain no Darboux pair;
+PENDING AUDIT: homogeneous, 2 x 2, 2 x 3, and 3 x 2 polynomial weight
+               cells contain no Darboux pair for every squarefree Sigma
+               of degree at least two;
+
+PROVED:         the same statement for Sigma=b(b+4);
 
 OPEN:     the first six-piece cells 3 x 3 and 2 x 4;
           all larger mixed cells;
-          existence of any polynomial Darboux pair on Y;
+          existence of any polynomial Darboux pair on Y_Sigma;
           JC(2).                                          (33)
 ```
 
-The rational Darboux pair `{b,-1/c}=1` from THM-3561 is the sharp hostile:
+The rational Darboux pair `{b,-1/c}=1` is the sharp hostile:
 it passes the bracket equation by retaining a pole and therefore lies
-outside `k[Y]`.  Repeated-arm Danielewski equations can change `(3)` and the
-arm-order lemma; positive characteristic can kill the derivative
-coefficients.  Neither boundary is covered.
+outside `A_Sigma`.
+
+The degree threshold is sharp.  If `Sigma=ub+v` has degree one, then
+
+```text
+A_Sigma=C[c,e],                 {c,e}=-u,
+{c,-e/u}=1.                                             (33a)
+```
+
+Thus the degree-one target is `A2` and already has a one-by-one homogeneous
+Darboux pair.  If `Sigma` is not squarefree, a multiple root `beta` gives a
+line `c=0,b=beta` on which `c^2`, `Sigma'(b)`, and `2ce` all vanish.  Every
+Poisson bracket vanishes there, so **no** polynomial Darboux pair exists at
+all.  That stronger no-go is singular and Poisson-degenerate; it is not a
+smooth near-counterexample and is not the mechanism proved above.  Positive
+characteristic remains outside scope because it can kill the derivative and
+leading-degree multipliers.
 
 For counterexample search, coefficient count alone is now too loose.  The
 cheapest exact cells are the convolution polygons `3 x 3` and `2 x 4`, and
@@ -342,10 +448,12 @@ python3 04-computation/jc2_danielewski_two_by_three_weight_nonentry_thm3569.py
 python3 -O 04-computation/jc2_danielewski_two_by_three_weight_nonentry_thm3569.py
 ```
 
-The companion exhausts finite support-collision controls, verifies `(19)--
-(20)`, and checks every upper factorization for `1<=k<=8`, including all
-`d=3` and cube-homogeneous branches.  These are exact identity controls.  The
-all-degree conclusion is the symbolic support, valuation, UFD, and
-first-order-equation argument above, not extrapolation from eight rows.
+The companion exhausts finite support-collision controls; checks squarefree
+samples in degrees two through seven; verifies the sharp degree-one and
+nonsquarefree boundaries, `(19)--(20)`, and every upper factorization for
+`1<=k<=8`, including all `d=3` and cube-homogeneous branches.  These are exact
+identity controls.  The all-degree conclusion is the symbolic support,
+valuation, UFD, and first-order-equation argument above, not extrapolation
+from the sampled degrees or eight ladder rows.
 
 **QED.**
