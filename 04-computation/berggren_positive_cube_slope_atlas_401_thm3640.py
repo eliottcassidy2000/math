@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact THM-3639 companion: positive two-cube slopes through n=401.
+"""Exact THM-3640 companion: positive two-cube slopes through n=401.
 
 The script extends the independently audited THM-3594 decision pipeline.  A
 prime obstruction is only an exclusion gate; every local survivor is decided
@@ -95,7 +95,7 @@ def load_parent():
     expected = tuple((label, expected) for label, _path, expected in PARENT_FILES)
     require(observed == expected, ("parent drift", observed, expected))
     path = PARENT_FILES[1][1]
-    spec = importlib.util.spec_from_file_location("thm3639_parent", path)
+    spec = importlib.util.spec_from_file_location("thm3640_parent", path)
     require(spec is not None and spec.loader is not None, "parent loader")
     module = importlib.util.module_from_spec(spec)
     sys.modules[spec.name] = module
@@ -208,7 +208,7 @@ def main() -> None:
     good_counts = tuple(len(row[6]) for row in orbit_ledger)
     period_sets = tuple(tuple(sorted({period for period, _hits in row[5]}))
                         for row in orbit_ledger)
-    print("== THM-3639 Berggren positive two-cube slope atlas through 401 ==")
+    print("== THM-3640 Berggren positive two-cube slope atlas through 401 ==")
     print(f"parent_sha256_lf={parent_hashes}")
     print(f"universe=(limit={LIMIT},candidates={len(slopes)},primes={len(primes)},prime_limit={primes[-1]})")
     print(f"screen=(excluded={len(slopes)-len(survivors)},survivors={len(survivors)},histogram_digest={observed_digests['obstruction_histogram']})")
