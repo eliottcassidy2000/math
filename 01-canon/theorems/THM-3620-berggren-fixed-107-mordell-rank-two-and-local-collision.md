@@ -2,14 +2,19 @@
 id: THM-3620
 title: "Berggren fixed-107 rank-two 3-saturated subgroup and local denominator collisions"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On E:Y^2=X^3+107^3-2, the two Berggren/two-cube points
   P=(232,3703) and Q=(4960,349321) generate a rank-two, 3-saturated
   subgroup of E(Q).  Their difference and sum exhibit exact denominator
   collisions at 3 and 197.  This proves neither rank equality nor a complete
   integral-point classification.
 source: kps-s189 / Berggren fixed-summand Mordell wildcard, 2026-08-21
-audit: PENDING -- exact companion and proof require independent hostile audit
+audit: >
+  PASS -- an independent reconstruction verified primality, discriminant,
+  all three finite-field counts, the two mod-3 quotient kernels and their
+  zero intersection, torsion/rank/saturation logic, exact rational sums and
+  chords, local collisions, depth congruences, and an unpruned finite scan.
+  Normal, optimized, and stored transcripts agree after LF normalization.
 depends_on:
   - THM-3370-berggren-two-cube-biquadratic-norm-collision
 related:
@@ -25,7 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3620 -- fixed `107` supports a rank-two 3-saturated subgroup
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3370 found two positive Berggren/two-cube intersections sharing the
 summand `107`.  This theorem studies that fixed-summand fibre as one elliptic
