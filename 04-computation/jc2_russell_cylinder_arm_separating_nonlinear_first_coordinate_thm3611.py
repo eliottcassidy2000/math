@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3611 nonlinear first coordinates.
+"""Exact controls for provisional THM-3611 central-transverse first coordinates.
 
 The universal statement is proof-driven.  This companion checks the formal
 arm division and jets, the arbitrary-P transport determinant, direct source
 specializations, the boundary/first-coefficient degree mechanisms, a sharp
-nonlinear formal endpoint, the localized quotient guardrail, and both sharp
-method boundaries (vanishing central derivative and collapsed arm label).
+nonlinear formal endpoint, the localized quotient guardrail, algebraic
+descent, and both sharp controls (vanishing derivative and collapsed arms).
 """
 
 import sympy as sp
@@ -40,7 +40,7 @@ def jacobian(first, second, first_var, second_var):
     )
 
 
-print("THM-3611 exact companion -- provisional arm-separating nonlinear coordinate rigidity")
+print("THM-3611 exact companion -- provisional central-transverse nonlinear coordinate rigidity")
 print("status=finite exact controls; universal formal/localized proof is proof-driven")
 
 
@@ -68,13 +68,14 @@ require("S graph polynomial", sp.denom(sp.cancel(S_graph)) == 1)
 print("PASS compiler_gates=7 determinant=-3")
 
 
-print("SECTION nonlinear P division, central jets, and arm separation")
+print("SECTION nonlinear P division and central jets with mixed arm labels")
 T, C, Avec = sp.symbols("T C Avec")
 P_templates = (
     T + T**2,
     3 + 2 * T - C + T**3 + C * T**2 + 2 * C**2,
     -2 - 3 * T + 4 * C + C * T + C**2 * T**2 + T**2,
     5 + T - 2 * C + 2 * T**2 - C * T**2 + T**4,
+    2 + T * (T + 4) * (1 + T) + C * (1 + T**2 + C * T),
 )
 Xi_templates = []
 for index, P_template in enumerate(P_templates):
@@ -90,14 +91,18 @@ for index, P_template in enumerate(P_templates):
         f"central affine jet row={index}",
         sp.expand(Xi_value.subs(C, 0)) == alpha_value * Avec + r_value,
     )
-    require(
-        f"hostile arm separation row={index}",
-        P_template.subs({T: -4, C: 0}) != p0_value,
-    )
     require(f"nonlinear first coordinate row={index}", sp.degree(P_template, T) >= 2)
     Xi_templates.append(sp.expand(Xi_value))
 
-print(f"PASS nonlinear_P_rows={len(P_templates)} Xi_division=yes arms=separated")
+require(
+    "separated-arm control",
+    P_templates[0].subs({T: -4, C: 0}) != P_templates[0].subs({T: 0, C: 0}),
+)
+require(
+    "identified-arm control",
+    P_templates[-1].subs({T: -4, C: 0}) == P_templates[-1].subs({T: 0, C: 0}),
+)
+print(f"PASS nonlinear_P_rows={len(P_templates)} Xi_division=yes arm_labels=mixed")
 
 
 print("SECTION abstract psi transport determinant and K_U cancellation")
@@ -135,11 +140,13 @@ K_templates = (
     U**2 + C * U + C**2,
     U**3 - 2 * C * U + C,
     2 * U**2 * C + U - C**3,
+    U**2 + C * U - 2 * C,
 )
 source_rows = (
     (P_templates[0], Xi_templates[0], K_templates[0], sp.Integer(0)),
     (P_templates[1], Xi_templates[1], K_templates[1], x + q),
     (P_templates[2], Xi_templates[2], K_templates[2], x * q + x**2),
+    (P_templates[-1], Xi_templates[-1], K_templates[3], q),
 )
 
 for index, (P_template, Xi_template, K_template, h_source) in enumerate(source_rows):
@@ -233,11 +240,11 @@ M_endpoint = (
 )
 require("endpoint ac determinant", same(jacobian(L_endpoint, M_endpoint, aa, c0), -tt))
 require("endpoint source determinant", same(-3 * jacobian(L_endpoint, M_endpoint, aa, c0), 3 * tt))
-require("endpoint hostile arm separated", (T + T**2).subs(T, -4) == 12)
+require("endpoint nonlinear P value", (T + T**2).subs(T, -4) == 12)
 print("PASS nonlinear_formal_endpoint=exact Catalan_terms=6 determinant=3t")
 
 
-print("SECTION localized quotient and hostile D-arm clearing")
+print("SECTION localized quotient, algebraic descent, and two-arm contradiction")
 P_control = T + T**2
 p0_control = 0
 Xi_control = Avec + C * Avec**2
@@ -247,16 +254,65 @@ L_control = sp.expand(P_control.subs({T: b, C: c}))
 require("control quotient clearing", same(c * Z_control, L_control - p0_control))
 require("control Z not global polynomial", sp.denom(Z_control) != 1)
 require("control L global polynomial", sp.denom(sp.cancel(L_control)) == 1)
+
+# Birational field coordinates: v=x^2 q and c=x(v+1)(v+3).
+vv, cs = sp.symbols("vv cs")
+p_v = sp.expand((vv + 1) * (vv + 3))
+x_inverse = sp.cancel(cs / p_v)
+q_inverse = sp.cancel(vv * p_v**2 / cs**2)
+v_recovered = sp.cancel(x_inverse**2 * q_inverse)
+c_recovered = sp.cancel(x_inverse * (v_recovered + 1) * (v_recovered + 3))
+require("birational inverse recovers v", same(v_recovered, vv))
+require("birational inverse recovers c", same(c_recovered, cs))
+v_source = x**2 * q
+require("source c=xp(v)", same(c, x * ((v_source + 1) * (v_source + 3))))
+
+# Finite algebraic/elimination control for P(T)=T+T^2.
+Balg = sp.symbols("Balg")
+algebraic_relation = sp.Poly(Balg**2 + Balg - tt * cs, Balg)
+require("finite algebraic relation degree", algebraic_relation.degree() == 2)
 require(
-    "hostile D arm B=-4",
-    same(b.subs(q, -1 / x**2), -4),
+    "finite algebraic discriminant",
+    sp.discriminant(algebraic_relation.as_expr(), Balg) == 1 + 4 * tt * cs,
 )
-require("hostile D arm c=0", same(c.subs(q, -1 / x**2), 0))
-require(
-    "separated P detects hostile arm",
-    P_control.subs({T: -4, C: 0}) != P_control.subs({T: 0, C: 0}),
+B_endpoint = sp.cancel(c0 * A_endpoint)
+require("formal endpoint solves B algebraic relation", same(B_endpoint**2 + B_endpoint, tt * c0))
+
+# Exact Bezout controls model C[x,q] intersect C(c)=C[c].
+zv = sp.symbols("zv")
+bezout_rows = (
+    (zv**2 + 1, (zv - 2) * (zv + 3)),
+    (zv**3 + 2 * zv + 2, zv**2 - zv + 1),
+    (2 * zv**2 + 3 * zv + 5, zv**3 - 2),
 )
-print("PASS quotient_guardrail=localized_only cleared_identity=polynomial D_arm=separated")
+for index, (f_poly, g_poly) in enumerate(bezout_rows):
+    bezout_f, bezout_g, gcd_value = sp.gcdex(f_poly, g_poly, zv)
+    require(f"Bezout gcd row={index}", gcd_value == 1)
+    require(
+        f"Bezout identity row={index}",
+        sp.expand(bezout_f * f_poly + bezout_g * g_poly) == 1,
+    )
+    require(
+        f"Bezout substitution row={index}",
+        same(
+            (bezout_f * f_poly + bezout_g * g_poly).subs(zv, c),
+            1,
+        ),
+    )
+
+# The descended polynomial s(c) would have incompatible values over c=0.
+central_point = {x: 0, q: 0}
+hostile_point = {x: 1, q: -1}
+require("central point c=0", c.subs(central_point) == 0)
+require("central point B=0", B_graph.subs(central_point) == 0)
+require("hostile point D=0", D.subs(hostile_point) == 0)
+require("hostile point c=0", c.subs(hostile_point) == 0)
+require("hostile point B=-4", B_graph.subs(hostile_point) == -4)
+require("two-arm value mismatch", B_graph.subs(hostile_point) - B_graph.subs(central_point) == -4)
+print(
+    "PASS quotient_guardrail=localized_only birational_inverse=yes "
+    f"Bezout_rows={len(bezout_rows)} arm_values=0,-4"
+)
 
 
 print("SECTION vanishing-central-derivative formal hostile")
@@ -307,7 +363,7 @@ require(
 )
 require("collapsed family central derivative", sp.diff(p0v + nu * Cv + mu * Bv * (Bv + 4), Bv).subs({Bv: 0, Cv: 0}) == 4 * mu)
 require("collapsed family arm equality", same((p0v + nu * Cv + mu * Bv * (Bv + 4)).subs({Bv: -4, Cv: 0}), p0v))
-print("PASS collapsed_arm_coordinate=method_hostile square_no_go=complete affine_family=closed")
+print("PASS collapsed_arm_coordinate=independent_control square_no_go=complete affine_family=closed")
 
 
 print(f"PASS total_exact_gates={CHECKS}")

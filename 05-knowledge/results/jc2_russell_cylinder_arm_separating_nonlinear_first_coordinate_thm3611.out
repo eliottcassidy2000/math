@@ -1,22 +1,22 @@
-THM-3611 exact companion -- provisional arm-separating nonlinear coordinate rigidity
+THM-3611 exact companion -- provisional central-transverse nonlinear coordinate rigidity
 status=finite exact controls; universal formal/localized proof is proof-driven
 SECTION Russell compiler and polynomial graph coordinates
 PASS compiler_gates=7 determinant=-3
-SECTION nonlinear P division, central jets, and arm separation
-PASS nonlinear_P_rows=4 Xi_division=yes arms=separated
+SECTION nonlinear P division and central jets with mixed arm labels
+PASS nonlinear_P_rows=5 Xi_division=yes arm_labels=mixed
 SECTION abstract psi transport determinant and K_U cancellation
 PASS abstract_transport_gates=3 sign=plus3 K_U_cancelled=yes
 SECTION direct polynomial-source arbitrary-P rows
-PASS direct_source_rows=3 localized_Z_handled=yes
+PASS direct_source_rows=4 localized_Z_handled=yes
 SECTION boundary and first-formal-coefficient degree gates
 PASS boundary_rows=9 formal_first_rows=42
 SECTION nonlinear sharp formal endpoint P=T+T^2
 PASS nonlinear_formal_endpoint=exact Catalan_terms=6 determinant=3t
-SECTION localized quotient and hostile D-arm clearing
-PASS quotient_guardrail=localized_only cleared_identity=polynomial D_arm=separated
+SECTION localized quotient, algebraic descent, and two-arm contradiction
+PASS quotient_guardrail=localized_only birational_inverse=yes Bezout_rows=3 arm_values=0,-4
 SECTION vanishing-central-derivative formal hostile
 PASS alpha_zero_method_hostile=nonconstant_formal_Z determinant=3
 SECTION collapsed-arm coordinate and complete square no-go
-PASS collapsed_arm_coordinate=method_hostile square_no_go=complete affine_family=closed
-PASS total_exact_gates=179
+PASS collapsed_arm_coordinate=independent_control square_no_go=complete affine_family=closed
+PASS total_exact_gates=204
 RESULT provisional_controls_passed; independent hostile audit still required
