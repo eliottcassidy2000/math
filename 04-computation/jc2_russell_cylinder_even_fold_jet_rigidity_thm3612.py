@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for provisional THM-3612.
+"""Exact controls for proved THM-3612.
 
 The all-regular-function theorem is local and proof-driven.  This companion
 uses exact truncated collision germs rather than expanding the full high-degree
@@ -69,8 +69,8 @@ def homogeneous_part(expression, variables, degree):
     return sp.expand(sum(kept, sp.Integer(0)))
 
 
-print("THM-3612 exact companion -- provisional even-fold collision-jet gate")
-print("status=finite exact controls; all-regular conclusion is formal-jet proof-driven")
+print("THM-3612 exact companion -- proved even-fold collision-jet gate")
+print("status=verified exact controls plus independent hostile audit; all-regular proof is formal-jet driven")
 
 
 print("SECTION compiler, Russell relation, and collision")

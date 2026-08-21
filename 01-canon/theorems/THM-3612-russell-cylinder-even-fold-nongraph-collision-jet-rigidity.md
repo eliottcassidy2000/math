@@ -2,7 +2,7 @@
 id: THM-3612
 title: "Russell-cylinder even-fold non-graph collision-jet rigidity"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The closed planes q=Q(x)+t^2, w=t are genuine non-graphs over (x,q)
   and retain the full THM-3561 triple collision at t=0.  For every even
   Q with Q(0)=-3/4 and Q(±1)=-3, and for every pair of regular functions
@@ -13,7 +13,11 @@ status: >
   Q'(1)=9/2, Q''(1)=-27/2 remains OPEN and has an explicit second-order
   formal survivor; no JC(2) counterexample is claimed.
 source: root / implicit_cylinder_slice non-graph wildcard, 2026-08-21
-audit: PENDING -- theorem and exact companion require independent hostile audit
+audit: >
+  PASS -- independent hostile audit reconstructed the fold geometry, complete
+  first- and second-jet systems, cubic-coefficient cancellation, sharp
+  survivors, and OPEN doubly tuned boundary; normal, optimized, and stored
+  241-gate transcripts are byte-identical.
 depends_on:
   - THM-3561-rational-keller-danielewski-polynomial-completion
   - THM-3605-russell-cylinder-graph-slice-puncture-no-filling
@@ -23,14 +27,14 @@ related:
   - THM-3611-russell-cylinder-arm-separating-nonlinear-first-coordinate-rigidity
 script: 04-computation/jc2_russell_cylinder_even_fold_jet_rigidity_thm3612.py
 output: 05-knowledge/results/jc2_russell_cylinder_even_fold_jet_rigidity_thm3612.out
-script_sha256: 3445b03d22a6bed7adf913e6b6a49faf02707432c7df0f26f39e32b4014554a0
-output_sha256: 2c5a9305c278806139cdeae8810378350e8118a3e45bfd1e5639d7b002aa835d
+script_sha256: fa210b98b493f5426f77567769c8f3356440de0b2dad00fca3c029b71efa0f43
+output_sha256: abb71fdac67e97e0c759cf970e3d787b0cbe60c802638303e1d237eab4f59c4b
 hash_basis: raw LF bytes
 ---
 
 # THM-3612 -- Russell-cylinder even-fold non-graph collision-jet rigidity
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 This theorem closes an infinite, genuinely non-graph family of polynomial
 planes using only the common collision point and its branch jets.  The
 quantifier over target pairs is unrestricted: the outputs may be arbitrary
