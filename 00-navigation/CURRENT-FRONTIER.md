@@ -332,32 +332,32 @@ is sharp: equal counts allow two densities or none.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** [3502](../01-canon/theorems/THM-3502-rule30-four-fifths-staircase-entropy-and-sixteen-fifths-compiler.md); [3511](../01-canon/theorems/THM-3511-rule30-orbit-signalizer-gap-renormalization-and-shallow-portrait-hostile.md); [3512](../01-canon/theorems/THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary.md); [3516](../01-canon/theorems/THM-3516-rule30-marked-van-der-put-carry-and-power-section-bridge.md). OPEN.
-- **Jacobian/Dixmier:** `JC(2)`/`DC(2)` OPEN. THM-1300 VERIFIED-EXACT
-  (MISTAKE-205); THM-1315: `A^3 minus E`, fibres `3/1/0`.
-  2473--2576/3494/3508/3519. THM-3544/3550 force
-  composite degree `>=6`, height `>=8`; cited Nagata/GGHV give
-  `Omega(deg R)>=3`, reduced height `>=108`, only `(72,108)<125`.
-  THM-3543/45/54: ramified/algebraic/punctured collision pincer; THM-3549
-  starts quotient repair at `(4,5)`; THM-3553/58/59 close displayed graphs
-  and descent linear on either side. THM-3551/3552
-  close one-ray/cyclic families. THM-3555--57 + D6 close mixed `N<=2` and
-  `N=3,D<=6`; `D>=7`/width `>=4` open. THM-3560 closes monomial shears;
+- **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT
+  (MISTAKE-205). THM-3544/50 force composite degree `>=6`,
+  height `>=8`; cited Nagata/GGHV give `Omega(deg R)>=3`, reduced height
+  `>=108`, only `(72,108)<125`. THM-3543/45/54 give the collision pincer;
+  3549 starts repair at `(4,5)`; 3553/58/59 close displayed graphs/linear
+  descent, and 3551/52 close one-ray/cyclic families. 3555--57 + D6 close
+  mixed `N<=2` and
+  `N=3,D<=6`; `D>=7`/width `>=4` open. THM-3560 closes monomial shears.
+  [3561](../01-canon/theorems/THM-3561-rational-keller-danielewski-polynomial-completion.md)
+  gives an etale triple collision via smooth non-`A2` Danielewski `Y`; a
+  constant Poisson pair on `Y` would refute `JC(2)`, but every
+  at-most-two-weights/output cell fails.
   [3562](../01-canon/theorems/THM-3562-balanced-resonant-pole-unit-lagrange-nonentry.md)
-  closes balanced nonsplit passports; THM-3564 confines graph factors to
-  `deg_a(phi)=1 mod3`; other charts/descent remain open (3546/3548).
-  THM-3495--3542 give the iterated image/divisor/packet/LCA atlas: packets are
-  explicit through `R8`, index is zero through level four, and higher levels
-  remain open. THM-3504 is the level-four router. THM-2681/2685--2708 block
-  the `A4/S4` cubic and retain its holonomy; 3448/3517 leave quartic `C3`
-  open (MISTAKE-416). THM-3440/3443/3450 and 3064/66/68 show the LRC/Keller
-  modes have no lawful amplitude/current transport and still allow a punctured
-  `C3`; polynomial `A2` regularity and constant units are missing.
-  THM-3067/3072/3076/3141 give character-loss/tomography sidecars;
-  THM-2862--2871/2968/2971 give sextic lifts and the regular `S3` carrier.
-  THM-2699--2722 classify the stated planar slices; unrestricted
-  `C[A,d]^2` is equivalent to `JC(2)`, while `B`-targets and nongraph
-  surfaces stay open. Degree eighteen closes sparse/`H_2`, sending `H_4`
-  to the common-root wall.
+  closes balanced nonsplit passports. [3563](../01-canon/theorems/THM-3563-nongraph-conductor-node-cycle-keller-obstruction.md)
+  closes all target projections on one nongraph slice by a three-node cycle.
+  THM-3564 confines graph factors to `deg_a(phi)=1 mod3`. The 3495--3542
+  packet atlas is explicit through `R8`, index zero through level four.
+  2681/85--2708
+  block the `A4/S4` cubic; 3448/3517 leave quartic `C3` open (MISTAKE-416).
+  3440/43/50 and 3064/66/68 deny lawful LRC/Keller amplitude transport but
+  still allow a punctured `C3`: polynomial `A2` regularity/constant units are
+  missing. 3067/72/76/3141 give tomography sidecars; 2862--71/2968/2971 the
+  regular `S3` carrier. 2699--2722 classify named planar
+  slices; unrestricted `C[A,d]^2` is equivalent to `JC(2)`, while other
+  `B`/nongraph targets remain open. Degree 18 closes sparse/`H_2`; `H_4`
+  reaches the common-root wall.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2247 close the affine-through-
   quartic and terminal-through-fourteen strata; THM-2262/2297--2480, including
