@@ -343,9 +343,8 @@ is sharp: equal counts allow two densities or none.
   close one-ray/cyclic families. THM-3555--57 + D6 close mixed `N<=2` and
   `N=3,D<=6`; `D>=7`/width `>=4` open. THM-3560 closes monomial shears;
   [3562](../01-canon/theorems/THM-3562-balanced-resonant-pole-unit-lagrange-nonentry.md)
-  closes balanced exact-prefix nonsplit passports (unbalanced/other charts
-  open); THM-3564 confines graph factors to `deg_a(phi)=1 mod3`.
-  THM-3546/3548 leave nonlinear descent/conductance.
+  closes balanced nonsplit passports; THM-3564 confines graph factors to
+  `deg_a(phi)=1 mod3`. Other charts/nonlinear descent remain open (3546/3548).
   THM-3495--3542 give the iterated image/divisor/packet/LCA atlas: packets are
   explicit through `R8`, index is zero through level four, and higher levels
   remain open. THM-3504 is the level-four router. THM-2681/2685--2708 block
