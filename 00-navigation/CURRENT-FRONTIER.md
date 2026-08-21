@@ -344,7 +344,8 @@ is sharp: equal counts allow two densities or none.
   pieces (`3x3`,`2x4` open). 3562/63 close balanced passports/one nongraph
   slice. 3564/65/68/70/71/73/74 classify factor-bearing graphs as
   `phi=4H(1+bH+4aH^2)`; every component has a nonconstant unit. Graphs through
-  degree two have no `A2`. THM-3567 makes separated completions nodal
+  degree two have no `A2`; 3578 gives the quasi-finite boundary-rank and
+  sheet-debt law. THM-3567 makes separated completions nodal
   and non-quasi-finite from degree three. 3495--3542
   reach `R8`, with index zero to level four.
   2681/85--2708
