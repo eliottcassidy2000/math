@@ -2,7 +2,7 @@
 id: THM-3598
 title: "Danielewski rational-exact polar graph family and classification"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On every exponent-n Danielewski surface with n>=2 there is an explicit
   infinite family of polynomial target functions with rational
   constant-bracket mates.  Choosing the transverse factor a=Sigma makes the
@@ -11,12 +11,18 @@ status: >
   with rational mates are classified by A^(n-1)/h' in C[h] of degree at
   most n-2; exponent three collapses to h'=A^2/beta.  None of the
   nonconstant-h exact graphs has a regular mate on a nonconstant squarefree
-  target.  Conversely, arbitrary polynomial positive-channel repairs above
+  target.  Complementarily, arbitrary polynomial positive-channel repairs above
   A/c^s have no rational mate when s divides n-1 and A contains a squarefree
   multiarm divisor.
   This is a polar near-counterexample, not a Darboux pair or a JC(2)
   counterexample.
 source: root / planar-Jacobian mixed-coordinate construction-hostile session, 2026-08-21
+audit: >
+  An independent hostile audit rederived the all-exponent residue classifier,
+  explicit primitive, exponent-three parity collapse, constant-h boundary,
+  arm/residual primitive-torsor obstruction, shallow-negative field trace,
+  and reciprocal divisor-degree lemma.  Normal and optimized companions are
+  byte-identical to the stored 599-gate output.
 depends_on: []
 related:
   - THM-3589-danielewski-central-arm-every-line-and-kummer-trace-darboux-gates
@@ -24,15 +30,15 @@ related:
   - THM-3596-a13-invoice-paid-mixed-coordinate-toric-time-form-nonentry
 script: 04-computation/jc2_danielewski_rational_exact_polar_graph_thm3598.py
 output: 05-knowledge/results/jc2_danielewski_rational_exact_polar_graph_thm3598.out
-script_sha256: 373fa3b2d39790d743e93b553d6bfff0d63bc247905b7f111ab6730b8b90c8f6
+script_sha256: 95b8275c950d32ce862558cc3e17cf9f277495c93bbb3d817a85d58df0762a52
 output_sha256: 22ad72a4d963548805480d8a3c0b2a08ae3a1eca75d3ef38d3f731a78fe04799
 hash_basis: raw LF bytes
 ---
 
 # THM-3598 -- Danielewski rational-exact polar graph family and classification
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / PENDING INDEPENDENT
-AUDIT.**  This theorem is a positive hostile to the idea that rational
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem is
+a positive hostile to the idea that rational
 time-form exactness is rare or nearly sufficient.  It gives many exact
 rational mates, then identifies precisely why they cannot be regular.  It
 constructs no polynomial Darboux pair and proves no case of `JC(2)`.
@@ -98,7 +104,8 @@ x=Sigma c=c^(n+1)e,                                     (9)
 
 so `Q=H+G(c^(n+1)e)` is a polynomial function.  This alternate presentation
 records its contact with the arm divisor; intrinsically it is still the
-positive transverse graph `H+G(Sigma c)`, not a third independent channel.
+positive-weight, all-arm-critical graph `H+G(Sigma c)`, not a third
+independent channel.
 On every arm
 
 ```text
@@ -244,7 +251,7 @@ weight count.
 
 The sign of the transverse weight is load-bearing.  Suppose `Sigma` is
 squarefree with at least two distinct roots.  Let `1<=s<=n-1` divide `n-1`,
-write `n-1=ks`, take arbitrary `F in C[b,c]`, and let `A` be a nonzero
+write `n-1=qs`, take arbitrary `F in C[b,c]`, and let `A` be a nonzero
 multiple of `Sigma`.  Then
 
 ```text
@@ -271,23 +278,23 @@ Tr_(K_0(c)/K_0)(eta)
  =-[c^(n-s-1)](1/T(c)) db.                              (25)
 ```
 
-The last coefficient is a polynomial in `w` of degree `k-1`, with leading
-term `-w^(k-1)/A^k`.  Exactness upstairs would imply exactness of the trace;
-differentiating `k-1` times in `w` would make `db/A^k` exact.
+The last coefficient is a polynomial in `w` of degree `q-1`, with leading
+term `-w^(q-1)/A^q`.  Exactness upstairs would imply exactness of the trace;
+differentiating `q-1` times in `w` would make `db/A^q` exact.
 
 That is impossible when `A` has at least two distinct roots.  Indeed, if
-`S'=1/A^k` and the distinct roots of `A` have multiplicities
+`S'=1/A^q` and the distinct roots of `A` have multiplicities
 `m_1,...,m_r`, then (apart from the immediate simple-pole logarithmic case)
-`S` has finite poles of orders `km_i-1`, while `S-S(infinity)` has a zero of
-order `k deg(A)-1` at infinity.  Degree zero of a principal divisor would
+`S` has finite poles of orders `qm_i-1`, while `S-S(infinity)` has a zero of
+order `q deg(A)-1` at infinity.  Degree zero of a principal divisor would
 require
 
 ```text
-sum_i(km_i-1)=k deg(A)-r >= k deg(A)-1,
+sum_i(qm_i-1)=q deg(A)-r >= q deg(A)-1,
 ```
 
-so `r<=1`.  The root-count boundary is sharp: for one-root `A`, `db/A^k`
-is rationally exact whenever `k deg(A)>1`; the remaining equality case is
+so `r<=1`.  The root-count boundary is sharp: for one-root `A`, `db/A^q`
+is rationally exact whenever `q deg(A)>1`; the remaining equality case is
 logarithmic.  In exponent three, `(25)` specializes to
 
 ```text

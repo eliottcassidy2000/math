@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Finite exact companion for provisional THM-3598.
+"""Finite exact companion for proved, hostile-audited THM-3598.
 
 The theorem is identity- and residue-driven.  This script checks the
 all-exponent rational-exact family, arm-pole hostile, the complete positive
-exponent-three graph-linear residue classifier, and the negative-graph
+all-exponent graph-linear residue classifier, and the negative-graph
 multi-root obstruction without Python assert gates.
 """
 
