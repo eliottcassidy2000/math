@@ -169,6 +169,23 @@ kappa=(1/4) C_24^2 C_-8 mathfrak C
       approximately 0.0092365781.                     (14)
 ```
 
+A deterministic numerical companion evaluates the absolutely convergent
+products through `p<=5,000,000` and gives
+
+```text
+(C_24,C_-8,mathfrak C,kappa)
+=(0.308456238399,0.405038871708,0.958709981736,0.009236577500).
+
+04-computation/berggren_two_cube_coupled_constant_kps_s191.py
+SHA256 abbee2d7ae1374e5556814a5e73fa0cd5f7ee2cfd3f9f2d03df8dbf0f1187165
+
+05-knowledge/results/berggren_two_cube_coupled_constant_kps_s191.out
+SHA256 058bced4c6b86b5976aecf8a838a05c6c928a70f2d4e4b0980d930219b028440
+```
+
+This is **VERIFIED-NUMERICAL** evidence for the product, not an infinite-tail
+bound or an asymptotic theorem.
+
 At `N=49999`, the exact normalized count is `0.0090176366`, or
 `0.9762963` times `(14)`.  The agreement is strong evidence but not a proof
 of
