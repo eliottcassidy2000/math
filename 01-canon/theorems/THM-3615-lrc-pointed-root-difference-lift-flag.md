@@ -2,8 +2,8 @@
 id: THM-3615
 title: "LRC pointed root-difference lift flag"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Retaining root difference before marginalization uniquely lifts the
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  Retaining root difference before marginalization uniquely lifts the
   THM-3602 centered flag to K2sharp<R4sharp<Q6sharp with dimensions 2<4<6.
   Difference marginalization is an isomorphism on both the raw and centered
   six-carriers, but it collapses one line of a hidden rank-two raw-to-centered
@@ -13,13 +13,18 @@ status: >
   characteristic-zero transfer, row exclusion, or LRC(14) result is claimed.
 source: kps-s188 + agent Godel / THM-3602 continuation, 2026-08-21
 audit: >
-  Author/implementer exact audit.  The companion independently reconstructs
+  PASS -- independent hostile reconstruction reproduced the full parent census,
+  direct root-difference inversion, both marginal isomorphisms, the complete
+  sharp flag and intersection ledger, the rank-two augmentation and its lost
+  marginal line, and all affine, reversal, Fourier, coordinate-swap, and
+  duplicate-state negative controls.  The companion independently reconstructs
   the THM-3602 flag and the clean-room four-way pointed tensor, verifies both
   marginal isomorphisms, every sharp rank/intersection, the rank-two
   augmentation and its one-dimensional marginal kernel, slice and Fourier
   ledgers, hostile affine/reversal/transpose controls, and the failure of the
   tempting duplicate-state physical identification.  Normal and optimized
-  runs are byte-identical.  Independent hostile audit remains pending.
+  runs exit zero and are identical to the stored transcript after LF
+  normalization.
 depends_on:
   - THM-3602-lrc-centered-a4-flag-inside-pointed-six-carrier
   - THM-3593-lrc-common-a4-anova-graph-flag
@@ -36,8 +41,8 @@ hash_basis: LF-normalized bytes for files; canonical JSON for semantic ledgers
 
 # THM-3615 -- LRC pointed root-difference lift flag
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-AUDIT.**  This restores exactly one coordinate discarded in THM-3602 and
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+This restores exactly one coordinate discarded in THM-3602 and
 identifies what its marginalization destroyed.  The result is stronger than a
 rank coincidence but remains static and branch-summed.
 
