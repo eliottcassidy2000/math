@@ -293,9 +293,9 @@ equivalently to find an even polynomial deformation with `(24)` that retains
 the selected fiber.  Width is degree in `r^2`; the first genuinely new even
 `r^6` cell is precisely the degree-six branch closed by `(19)--(22)`.
 
-## 7. Classical degree transfer -- CITED input, proved corollary
+## 7. Classical degree transfer -- CITED input
 
-Suppose every coefficient `a_j,b_j` in `(1)` has degree at most `D`.  Then
+If all coefficient polynomials in `(1)` have degree at most `D`, then
 
 ```text
 deg P,deg Q <= max(3,D+N).                             (25)

@@ -1,9 +1,10 @@
 # Planar Jacobian counterexamples through dephasing, conductance, and hidden phase
 
 **Status: PROVED synthesis with new canon THM-3544, THM-3545,
-THM-3548, THM-3549, and THM-3550, integrating incoming THM-3554;
-VERIFIED-EXACT quotient and Catalan experiments; OPEN counterexample
-constructions.**  No polynomial planar
+THM-3548--THM-3550, THM-3586, and THM-3587, integrating
+THM-3551--THM-3557;
+VERIFIED-EXACT quotient, dephasing, Catalan, and packet experiments; OPEN
+counterexample constructions.**  No polynomial planar
 counterexample and no proof of `JC(2)` is claimed.  The main outcome is a
 smaller counterexample passport, a three-way near-counterexample pincer, and
 three sharply typed construction cells.
@@ -38,18 +39,27 @@ The live board was:
 | Anchor | THM-1300 quotient | `(v,w)->(R,S)` | collision plus conductor `-2w^2` | PROVED + EXACT |
 | Niche | dephased quantum walk | edge amplitudes and conductances | phases disappear at leading order, return as cycle flux | PROVED finite-dimensional expansion |
 | Niche | Jacobian coefficients | fibre polygons inside a Segre matrix | local closure plus global even-cycle binomials | PROVED |
+| Niche | Keller derivative plaquette | consecutive fibres `T=bc`, `T+kappa=ad` | factor allocation, curls, and coefficient-span observer | PROVED + EXACT |
 | Wildcard | self-intersecting boundary curve | formal transverse thickening | exact constant Jacobian, Catalan nontermination | PROVED + EXACT |
 | Wildcard | invariant graph in the 3D map | coordinate hypersurface | displayed graphs fail; nonlinear coordinate charts remain | PROVED / OPEN boundary |
 | Wildcard | curved THM-1300 collision surface | punctured Kummer cover | finite etale collision, nonconstant source unit | PROVED + EXACT |
-| Wildcard | inverse-cubic owner packet | six Jacobian minors in `Gr(2,4)` | unit minor ideal but no linear decomposable projection | PROVED + OPEN nonlinear projection |
+| Wildcard | inverse-cubic owner packet | noninjective differential-rank-two `A^2->A^4` packet | normal multiplier misses the singular-minor ideal in all degrees | PROVED + VERIFIED-EXACT CLOSED |
+| Wildcard | nodal cylinder | cap-38 width-`(4,6)` two-scale scaffold | all-line passport and period pass; residual Keller PDE | PROVED gates + FINITE-EXACT OPEN |
 
 The board changed repeatedly.  First, the quotient, formal boundary, and curved
 collision surface became a three-way pincer: polynomial-but-ramified,
 Keller-but-nonpolynomial, and etale-but-punctured.  Then the dephasing analogy
 became a phase-aware search architecture, classical bounds moved the first
 degree cell to `(72,108)`, displayed graphs closed in all degrees, and the
-immersive four-coordinate packet exposed decomposability as another lost
-phase sidecar.
+differential-rank-two four-coordinate packet exposed decomposability as another
+lost phase sidecar.  Its exact image ideal then closed that packet in every
+target degree.  Finally, the nodal cylinder passed the missing normal-ideal
+gate and moved the first surviving construction to a two-scale `(4,6)` width
+cell whose collision, every-line, and period tests can all be paid exactly.
+In parallel, retaining the coherent differential plaquette before taking
+magnitudes turned the determinant into two consecutive reducible fibres and
+closed every unbalanced four-factor cell, every positive toric carrier, and
+every coefficient-span cell of dimension at most two.
 
 ## 2. The strong-dephasing theorem, with the normalization exposed
 
@@ -175,12 +185,74 @@ length `g` first permits gauge-sensitive data at slow order
 `2 x 2` determinant is invisible to the classical limit and to the triangle
 correction, but appears at fourth commutator order.
 
+That last order statement has an exact finite control.  On the unit cycle
+`0-1-2-3-0`, put the entire Wilson variable `z=exp(i Phi)` on the edge
+`3->0`.  With `B=Pcal K Qcal`, `C=Qcal K Pcal`, and
+`D=Qcal K Qcal`, exact matrix-unit computation gives
+
+```text
+B D C=0,
+B D^2 C(z)-B D^2 C(1)
+  =(z+z^(-1)-2)
+    [ 2 -4  6 -4
+     -4  2 -4  6
+      6 -4  2 -4
+     -4  6 -4  2 ].                                  (11a)
+```
+
+Every row of the displayed matrix sums to zero, and
+`z+z^(-1)-2=2(cos Phi-1)`.  Hence the `C_4` flux first appears in the raw
+fourth Schur-walk coefficient and at order `Gamma^(-2)` after leading time
+normalization, exactly as the girth rule predicts.  This is `FINITE-EXACT`:
+the [script](../04-computation/dephasing_c4_flux_order_control.py) and
+[stored output](../05-knowledge/results/dephasing_c4_flux_order_control.out)
+claim the Wilson factor and its first order, not convention-dependent
+phase-blind memory terms in a fully normalized effective generator.
+
+The exact control extends to every girth.  With
+`A_m=BD^(m-2)C`, every raw word below graph girth `g` is phase blind, while
+the first Wilson monomials occur in `A_g`.  On the unit `g`-cycle, if `S` is
+the cyclic shift and `R_g=(I-S)^g`, then
+
+```text
+Delta A_g=i(-1)^((g-1)/2)(z-z^-1)R_g,       g odd,
+Delta A_g=  (-1)^(g/2)(z+z^-1-2)R_g,        g even.    (11b)
+```
+
+Thus odd cycles return as sine/skew/oriented signals and even cycles as
+cosine/symmetric signals; overlapping girth cycles add their embedded copies.
+The statement is for literal population coordinates and the raw Schur series
+`B(Gamma-D)^(-1)C` (convergent for `Gamma>||D||`, or formal in
+`Gamma^-1`).  Arbitrary phase-dependent coordinate changes can manufacture
+earlier-looking terms, and nonconstant onsite potentials remove some
+zero-onsite comparison symmetries without changing the girth threshold.
+
+On the weighted `K_2,2` built from
+`A=[a b;c d]`, put `W=ad conjugate(bc)` and `R=|abcd|`.  The same fourth word
+gives
+
+```text
+Delta A_4=(W+conjugate(W)-2R)(I-S)^4,                 (11c)
+|det A|^2=|ad|^2+|bc|^2-2R-(Delta A_4)_(00)/2.        (11d)
+```
+
+So the resistor shadow plus its first plaquette correction reconstructs the
+determinant modulus exactly.  For a Keller matrix, the scalar coefficient is
+`q=(|ad|-|bc|)^2-|kappa|^2 in [-|kappa|^2,0]`; after `kappa=1`, its operator
+norm is at most `16`.  When `|ad||bc|` grows, the Wilson phase is forced toward
+constructive alignment, while THM-3548's channel-degenerate branch remains a
+separate unsqueezed regime.  The complete signs, graph-wide formula, sharp
+boundaries, and hostile controls are in the
+[cycle-flux note](dephasing-cycle-flux-girth-law-boxeph-20260820.md),
+[companion](../04-computation/dephasing_cycle_flux_girth_control.py), and
+[output](../05-knowledge/results/dephasing_cycle_flux_girth_control.out).
+
 This is the first decisive bridge lesson.  Kirchhoff theory is obtained for
 free only after the information carrying determinant interference has been
 discarded.  Finite-dephasing spectroscopy, rather than the infinite limit,
 is the natural analogue of a Jacobian phase sidecar.
 
-## 4. Five typed connection contracts
+## 4. Six typed connection contracts
 
 | source | target and map | predicate preserved | information destroyed | required sidecar | cheapest decisive test |
 |---|---|---|---|---|---|
@@ -188,6 +260,7 @@ is the natural analogue of a Jacobian phase sidecar.
 | Jacobian coefficient pair | channel energy, `z_ab -> |z_ab|^2` | channel support and cancellation capacity | complex closing phase | fibre polygon phases | polygon inequality and exact coefficient sum |
 | coefficient channels | independent fibre networks | each local zero sum | common factorization `p_aq_b` | Segre even-cycle binomials | rank-one minors before solving fibres |
 | Keller differential | intensity matrix `DF -> (|DF_ij|^2)` | entry growth and near-rank-one profile | determinant plaquette phase | `arg(ad overline(bc))` | equal-intensity determinant-zero/one pair |
+| Keller differential | matching carrier `[[a,b],[c,d]] -> (T=bc,T+kappa=ad)` | determinant and two factor partitions | edge allocation and both row curls | UFD allocation plus integrability | toric `SL_2` hostile and balanced-factor census |
 | THM-1300 collision | torus quotient `(x,y,z)->(xy,x^2z)` | polynomiality and a collision | character/normal direction | a coordinate hypersurface or normal multiplier | test divisibility in THM-3546 |
 
 The table explains why a bare Laplacian resemblance cannot imply `JC(2)`.
@@ -308,6 +381,73 @@ second is polynomial degree.  The normalized intensity matrix approaches
 rank one at least as fast as `O(|t|^(2(r+m)))`.  This does not import the
 curve-selection theorem needed to produce `(19)` from arbitrary
 nonproperness; it is conditional on the displayed branch.
+
+### 5.5 The coherent plaquette is a consecutive-factor pencil
+
+The phase sidecar can be retained algebraically before taking magnitudes.
+Write
+
+```text
+a=P_x,       b=P_y,       c=Q_x,       d=Q_y,
+T=bc,                    T+kappa=ad.                   (20a)
+```
+
+The determinant gives the two consecutive fibres in `(20a)`, but their
+factor allocation must also satisfy
+
+```text
+a_y=b_x,                 c_y=d_x.                      (20b)
+```
+
+The all-degree UFD/curl analysis in
+[THM-3587](../01-canon/theorems/THM-3587-consecutive-keller-fibre-factor-toric-and-coefficient-span-gates.md)
+and its
+[`reflection`](keller-consecutive-factorization-integrability-plaquette-boxeph-20260820.md)
+proves the following additional passport.  In a hypothetical nonautomorphism,
+all four derivative entries are nonunits,
+
+```text
+Omega(T),Omega(T+kappa)>=2,
+omega(T)+omega(T+kappa)>=4,                            (20c)
+```
+
+and equality in the distinct-factor bound is forced to be balanced `(2,2)`.
+A carrier `T=h(x^p y^q)` is impossible in every degree.  More generally,
+`T=h(R)` is tame whenever every distinguished level `R-r`, for a root of
+`h(h+kappa)`, is irreducible; a scalar-carrier construction must spend a
+reducible selected fibre.
+
+There is an independent coefficient observer.  Let `S_F` be the span of the
+nonconstant coefficient matrices of `DF`.  If `dim S_F<=2`, its Frobenius
+annihilator contains a rank-one matrix and exposes a constant directional
+derivative, so the map is tame.  At rank three the only surviving annihilator
+is invertible and a constant source gauge gives
+
+```text
+F=(lambda x+H_y,lambda y-H_x),
+T=-(H_xy^2+mu),          T+kappa=lambda^2-H_xy^2.      (20d)
+```
+
+In this trace gauge the distinct-factor floor strengthens from four to five.
+Thus a minimal balanced `(2,2)` matching table must have full coefficient
+span four; the first open rank-three cell must already have a reducible
+distinguished `H_xy` level.
+
+The sharp positive control is a three-shear automorphism with balanced
+fibres, gradient-coprime `T`, and full span four.  Hence none of these fields
+is sufficient.  A useful generator that pays determinant and factor balance
+up front is
+
+```text
+E_+(V)E_-(U)E_+(W)
+ =[1+UV, V+W(1+UV); U,1+UW],                           (20e)
+```
+
+leaving only two explicit curl PDEs, quotient gauges, collision, every-line,
+and nonproperness.  The nodal boundary frame factors into the opposite
+three-shear orientation plus one final right shear; its unipotent branch
+holonomy is therefore exactly the coherent datum omitted by the matching
+products.
 
 ## 6. The global degree passport is much smaller
 
@@ -658,7 +798,8 @@ D+N>=108.                                              (37a)
 ```
 
 At width three one needs `D>=105`, and at width four `D>=104`; below height
-`125`, the actual output degrees must be `(72,108)`.  Thus low width remains
+`125`, a target-reduced basis must have degree values `(72,108)` (the
+displayed components may both have degree `108`).  Thus low width remains
 structurally attractive, but only with very high longitudinal coefficients
 or a deliberately nonuniform row profile.
 
@@ -763,7 +904,7 @@ Thus a two-resonance additive shear network is tame.  This pushes a viable
 counterexample toward three or more coupled layers/cycles, consistent with
 the coefficient-polygon diagnosis.
 
-### F. Nonlinear projection of the immersive inverse-cubic packet
+### F. Nonlinear projection of the differential-rank-two inverse-cubic packet
 
 THM-3556 supplies a different positive object.  For a polynomial `U(v,y)`,
 put
@@ -780,16 +921,42 @@ map
 Z=(L,T,U_*,S):A^2 -> A^4                              (41a)
 ```
 
-is everywhere immersive: its six `2 x 2` minors `M_ij` generate the unit
-ideal.  Nevertheless no natural two-coordinate projection and no constant-
-linear projection is Keller.
+has differential rank two everywhere: its six `2 x 2` minors `M_ij` generate
+the unit ideal.  It is not injective.  Indeed the two distinct conjugate
+points
+
+```text
+p_+/-=(8/27 +/- 4sqrt(5)/9, 3/2 +/- 3sqrt(5)/5)
+```
+
+have the common packet value
+
+```text
+Z(p_+)=Z(p_-)=(-6724/3645,57/20,27/40,27/40).        (41a')
+```
+
+The radical-free certificate is
+`27v-20y+22=y^2-3y+9/20=0`.  Thus the packet is a
+differential-rank-two polynomial surface parameterization with a genuine
+geometric double fibre, not an algebraic embedding.  Every polynomial target
+projection retains the collision.
+
+The two tangent sheets are locally compatible with unit area: for
+
+```text
+B_0=(9627/304384)T-(205687/1369728)U_*,
+```
+
+one has `Jac(L,B_0)=1` at both points.  Hence the obstruction below is global,
+not a first-jet contradiction at the self-intersection.  Nevertheless no
+natural two-coordinate projection is Keller.
 
 There is a dual visible cubic `Y^3-3TY+2S` with marked root `Y=y`; its
 discriminant has the same odd Kummer owner `-L` as the escaping-root cubic.
 A projection which hides the marked sheet must therefore retain a common
 resolvent square class as well as the scalar cusp equation.
 
-The open construction is to find nonlinear target polynomials `A,B` with
+The would-be construction asks for nonlinear target polynomials `A,B` with
 
 ```text
 Jac(A(Z),B(Z))
@@ -806,10 +973,198 @@ discarded coherent sidecar: its six coefficients must descend through
 c_12c_34-c_13c_24+c_14c_23=0,                         (41c)
 ```
 
-and integrate to the exact decomposable form `dA wedge dB`.  The cheapest
-search enumerates low target degrees, imposes descent, `(41c)`, exactness and
-the selected collision before expanding `(41b)`.  A solution could still be
-tame, so nonproperness and the full degree passport remain mandatory.
+and arise simultaneously from ambient polynomial potentials as
+`dA wedge dB`.  These conditions must hold before pullback; relations only
+modulo the image ideal need not lift.  Even a closed, de Rham-exact,
+decomposable polynomial two-form need not equal `dA wedge dB` for polynomial
+`A,B`, so “exactness” alone is not the missing integrability gate.
+An exact hostile in four variables is
+
+```text
+omega=(dy-y dx) wedge (dz+z dx)=d(y dz+yz dx).
+```
+
+Its kernel contains `partial_t` and
+`partial_x+y partial_y-z partial_z`; their common polynomial invariants are
+`C[yz]`, so two polynomial potentials annihilated by the kernel have zero
+wedge.  Thus this closed, exact, decomposable `omega` is not `dA wedge dB`.
+
+Two finite exact relaxations first closed the bottom of this search.  For all target
+polynomials of total degree at most two, the `139 x 91` bracket-coefficient
+matrix has full/deleted-constant ranks `67,67`.  For total degree at most
+three, all `34` nominal target functions and `561` pair brackets give a
+`336 x 561` matrix with ranks `187,187`.  In each case the constant row is
+already forced by the nonconstant rows even when bivector coefficients vary
+independently, before Pluecker or potential-realizability constraints.
+Therefore target degree at most three is impossible.
+
+The packet image algebra first appeared as a finite shadow.  In integral
+coordinates `(L,T,W,R)=(L,T,2U_*,2S)`, besides
+
+```text
+F_3=R^2-4T^3-27LW^2,
+```
+
+there is an exact `28`-term quartic relation `G_4`.  Pullback dimensions
+through target degree seven agree exactly with the Hilbert function of a
+`(3,4)` complete intersection: the kernel dimensions are
+
+```text
+0,0,1,6,20,50,104.                                   (41c')
+```
+
+At the packet double value, `grad G_4=(-21/5)grad F_3`, the singularity
+expected from the two immersed sheets.  A subsequent exact elimination now
+promotes this shadow: `ker Q[L,T,W,R]=(F_3,G_4)` is an absolutely prime
+complete intersection.  Adjoining the marked root `y` gives its smooth
+normalization, although the original plane parameterization is birational
+and nonfinite because two vertical `W=0` lines are reached only from source
+infinity.  The linear-subresultant coefficient `alpha` is simultaneously
+the rational-inverse denominator, the main conductor owner, and the exact
+normal multiplier
+
+```text
+det d(F_3,G_4,A,B)(Z)=9 alpha(Z) Jac(A(Z),B(Z)).
+```
+
+The generic unordered-pair conductor has a genus-two model; it contains the
+known quadratic double fibre and has one explicitly recorded triple fibre.
+The original
+[relation probe](../04-computation/cusp_square_packet_image_relation_probe.py)
+is retained as an independent low-degree control, while the
+[full image companion](../04-computation/cusp_square_packet_image_ideal_thm3556.py)
+and [output](../05-knowledge/results/cusp_square_packet_image_ideal_thm3556.out)
+carry the exact proof gates.
+
+The full image theorem turns the projection equation into an all-degree
+obstruction.  If `N_ij=det(dF_3,dG_4,e_i,e_j)`, then
+
+```text
+N_ij(Z)=9 alpha(Z)M_ij                                  (41c'')
+```
+
+for all six oriented pairs.  Exact rational grevlex reduction gives
+
+```text
+alpha notin (F_3,G_4,N_ij),
+Phi(alpha)=81/50,                                      (41c''')
+```
+
+where `Phi` extracts the `LR^2` coefficient of the reduced normal form and
+annihilates the ideal.  Therefore even arbitrary descended coefficients
+`C_ij` cannot satisfy `sum C_ij(Z)M_ij=1`: multiplying such an identity by
+`9alpha(Z)` and using the full kernel would contradict `(41c''')`.  Actual
+potential pairs are a strict subclass.  The
+[all-degree companion](../04-computation/cusp_square_all_degree_descended_bivector_no_go_thm3556.py)
+and [output](../05-knowledge/results/cusp_square_all_degree_descended_bivector_no_go_thm3556.out)
+make all six Hodge signs, the thirteen-element basis, the nonzero remainder,
+and three prime-field controls reproducible.
+
+Before this closure, the exact collision activated the cited planar degree
+floor.  Since the
+source degrees of `(L,T,U_*,S)` are `(6,4,3,5)`, a target cap `E` gives source
+height at most `6E`; the GGHV bound forces `E>=18`.  At the first cap, target
+reduction must have source degrees `(72,108)`, and the top packet ledger is
+forced to
+
+```text
+A_top~L_top^12=(L_top^6)^2,
+B_top~L_top^18=(L_top^6)^3.                           (41c'''')
+```
+
+This cap-`18` `2:3` cusp cell remains an independent degree/face hostile, but
+`(41c''')` proves that no packet cap survives.  The lesson is architectural:
+a replacement collision surface must make its descended normal multiplier
+belong to the image singular-minor ideal before Pluecker or potential
+integrability is even worth testing.
+
+### F'. A nodal cylinder passes the normal-ideal gate
+
+The normalization
+
+```text
+(u,t)->(u,X=t^2-1,Y=t(t^2-1)),
+H=Y^2-X^2(X+1)                                        (41N1)
+```
+
+is a differential immersion and identifies `t=+1` with `t=-1`.  Its Hodge
+multiplier is `X`, but now
+
+```text
+X=-((3X+1)/2)H_X-(9/4)YH_Y               modulo H,    (41N2)
+```
+
+so the descended normal-ideal gate passes.  An explicit closed ambient
+two-form also contracts to one; a diagonal-invariant argument proves that
+particular certificate is not `dA wedge dB`, leaving the correct global
+integrability sidecar exposed.
+
+Classical degree and face gates put the first target cap at `38`, with reduced
+source tops
+
+```text
+[t^35(t+lambda u)]^2,       [t^35(t+lambda u)]^3.     (41N3)
+```
+
+The inhomogeneous nodal relation is load-bearing: it reduces the literal cube
+of `Y^12+lambda uXY^11` from ambient cap `39` to cap `38`.  But the resulting
+width-`(2,3)` scaffold is dead.  Gwozdziewicz's injectivity-on-one-line
+theorem demands noninjectivity on every affine source line, while his quoted
+Abhyankar--Lang Newton theorem gives, for the reduced `(72,108)` pair,
+
+```text
+N_B=(3/2)N_A,                 width_u(B)=(3/2)width_u(A). (41N4)
+```
+
+The highest-`u` Jacobian row also forces
+`a_m=alpha h^(m/d), b_n=beta h^(n/d)`, `d=gcd(m,n)`.  A root of `h` kills
+width `(2,3)` to an immersed degree-at-most-two line map, hence to an
+injective line.  Thus `(2,3)` is impossible and `(41N4)` makes `(4,6)` the
+first surviving width.  At target cap `38`, its shared lower base satisfies
+`deg_t h<=32`, genuinely below the degree-`35` infinity base.
+
+There is an exact positive scaffold at that boundary.  Put
+
+```text
+h=XY^10,   C=Y^12+lambda uXY^11,   D=C+mu u^2h.       (41N5)
+```
+
+Then `D^2` has cap/source degree/width `(26,72,4)`, while the nodal relation
+reduces `D^3` to `(38,108,6)` without changing its pullback.  With
+`eta=3X+1`, the low rows
+
+```text
+A=D^2+u^2-1+eta Y/2,
+B_0=D^3+u^3-u+3eta uY/4                              (41N6)
+```
+
+give the same immersed nodal boundary with unit jet on all three degree-drop
+lines `t=-1,0,1` and retain the four-point conductor fibre.  On every other
+affine line the restriction degrees remain in ratios
+`(72,108),(70,105),(68,102)`, or `(4,6)`; Abhyankar--Moh divisibility then
+rules out an injective restriction.  Thus `(41N6)` pays the full every-line
+necessary gate, not merely a sampled set.
+
+The remaining global sidecar is visible but not fatal.  For
+`A=a+Yc,B=b+Yd`, the nodal action
+
+```text
+Phi_F(u)=integral_(-1)^1 A B_t dt,
+Jac(A,B)=1  ==>  Phi_F=2u+constant.                   (41N7)
+```
+
+has an exact beta-integral coefficient formula.  No pair with the normalized
+nodal boundary and only first-conductor-layer terms can satisfy the Keller
+PDE; a genuine `(X,Y)^2` correction is forced.  Conversely, a three-moment
+dual built from `X^(j+2)(X+1)`, `j=0,1,2`, repairs `(41N7)` for `(41N6)` by
+target-cap-at-most-ten corrections, preserving widths, all root-line jets,
+the four-point fibre, and every-line degree passport.  Its full Jacobian is
+still nonconstant.  This is therefore a sharply typed counterexample seed,
+not a counterexample: degree, Newton width, collision, normal ideal, all
+affine lines, first jets, the first conductor layer, and the global period
+have been separated from the residual Keller PDE.  Exact formulas are in the
+[nodal-cylinder scaffold](nodal-cylinder-keller-projection-scaffold-boxeph-20260820.md)
+and its width/period companion.
 
 ### G. Two nonparallel invariants with cancelling response classes
 
@@ -876,12 +1231,15 @@ simultaneously.
 | target response | nonremovable shear frustration | THM-2230/3548 |
 | escape differential | dark or channel-degenerate rank-one intensity shadow | THM-3548 |
 | Puiseux contact | `m_contact<=r(d-2)` for a branch in the displayed form | THM-3548 |
+| derivative matching carrier | two reducible consecutive fibres; distinct-factor total at least four, balanced if equality; no toric ray; coefficient span at least three | THM-3587 |
+| rank-three derivative span | in constant-trace gauge the matching distinct-factor total is at least five | THM-3587 |
 | sparse fibres | avoid the classified `f(x)+g(x)z^d` cells | THM-3418 |
 | inherited quotient repair | both outputs changed; transverse degrees at least `(4,5)`; row-dominant first live box `(100,125)` | THM-3549 + cited degree list |
 | inherited finite collision | exact quadratic Kummer filling of the puncture is impossible | THM-3554 |
 | displayed graph descent | impossible in every polynomial degree; nonlinear coordinate hypersurfaces remain | THM-3546/3553 |
 | mixed Catalan width | `D+N>=108`; width three requires coefficient cap at least `105` | THM-3557 + cited degree list |
-| immersive packet projection | descending, integrable, decomposable minor Bezout certificate; constants fail | THM-3556 |
+| cusp-square packet projection | closed in every target degree: its descended normal multiplier is outside the image singular-minor ideal | THM-3556 |
+| nodal-cylinder projection | cap `38`; widths at least `(4,6)` with lower base degree `<=32`; genuine conductor-square term; every-line, holonomy, and period gates | THM-3586 + Gwozdziewicz/Lang |
 | response channels | avoid all one-invariant rays and the two-channel cyclic Kummer cell; cancel fibre cohomology | THM-3551/3552 |
 
 At the cited exceptional height `108`, the Puiseux inequality becomes
@@ -946,17 +1304,29 @@ is leverage `c_e R_eff(e)` on the coefficient bipartite graph.  The cheapest
 probe is to compare it with Groebner infeasibility across small support
 atlases.  No coordinate invariance or proof implication is claimed.
 
-### Normal multiplier as the missing resistor terminal — OPEN
+### Normal multiplier as the missing resistor terminal — PROVED gate, OPEN generator
 
 In THM-3546 the normal derivative is the second factor whose product with the
 tangential Jacobian is the ambient unit.  The torus quotient deletes this
 terminal and obtains `w^2`.  A graph/hypersurface search should therefore
 record the normal multiplier as an extra boundary node rather than eliminate
-it.  The exact test is divisibility `(38)`, not similarity of Laplacians.
+it.  More generally, for a local-complete-intersection image with Hodge
+identities `N_I(Z)=mu(Z)M_I`, a descended unit-minor certificate forces
+
+```text
+mu in (image relations, normal minors N_I).            (42a)
+```
+
+The cusp-square packet fails `(42a)` by the exact quotient dual
+`Phi(mu)!=0`; the nodal cylinder passes it by the explicit Bezout identity
+`(41N2)`.  This is a reusable first gate, not a sufficient criterion:
+closedness, Pluecker decomposability, and global polynomial potentials remain
+separate.  For a hypersurface `(42a)` specializes to the normal divisibility
+test `(38)`, not similarity of Laplacians.
 
 ## 12. What changed, and what did not
 
-The session produced five durable shifts.
+The session produced seven durable shifts.
 
 1. The motivating dephasing statement is exact for a simple graph with
    uniform node dephasing, with explicit corrections for nonuniform rates,
@@ -971,11 +1341,20 @@ The session produced five durable shifts.
 4. The fixed 3D collision yields a three-way quotient/thickening/puncture
    pincer, a sharply delayed quotient-repair cell, and an all-degree no-go for
    displayed polynomial graph descent.
-5. The most credible searches are no longer generic coefficient boxes.  They
+5. The inverse-cubic packet is now a differential-rank-two *noninjective*
+   polynomial parameterization with a prime complete-intersection image, but
+   its conductor multiplier fails the singular-minor ideal test.  This closes
+   every nonlinear target degree, not only the former cap-three census.
+6. Before magnitudes are taken, the differential plaquette is a pencil of two
+   consecutive reducible fibres.  UFD allocation plus the two curls close the
+   unbalanced and toric cells, while coefficient observers route the last
+   rank-three boundary to a five-factor Hessian gauge.
+7. The most credible searches are no longer generic coefficient boxes.  They
    are coherent-cycle constructions in the `(72,108)` Newton cages, the
-   `(100,125)` row-dominant quotient repair (or a genuine second scale), and
-   cubic branch-curve surgery at `D+N>=108`, including the inverse-cubic
-   packet's nonlinear decomposable projection problem.  Nonparallel
+   `(100,125)` row-dominant quotient repair (or a genuine second scale), cubic
+   branch-curve surgery at `D+N>=108`, and the cap-`38` nodal-cylinder cell
+   whose multiplier gate passes and whose marked boundary already has a
+   four-point fibre.  Nonparallel
    invariant channels and alternating factor owners are the two higher-risk
    mechanisms most clearly outside the proved one-/two-channel walls.
 

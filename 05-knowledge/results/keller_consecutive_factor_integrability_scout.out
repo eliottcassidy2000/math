@@ -1,0 +1,13 @@
+consecutive-factor/integrability exact scout
+universe=C[x,y], kappa=1 controls; exact Q and Q(lambda) arithmetic
+factor_floor_control=Omega_total:4,omega_total:3,tame
+toric_gap=(p*K+1)(q*L+1)-p*q*K*L=p*K+q*L+1
+toric_gap_sweep=1<=p,q,K,L<=7
+balanced_generator=three-element_Gauss_chart;two_curl_PDEs_remain
+nodal_boundary=three_nontrivial_shears+holonomy_right_shear
+two_shear=balanced(2,2),gradient-coprime,critical,span:3,observer:c-a=-1
+three_shear=balanced(2,2),gradient-coprime,critical,span:4,pivot_det:-1/32
+gradient_gcd_crosscheck=SymPy+python-FLINT
+rank3_matching=T:-(R^2+mu),T+kappa:lambda^2-R^2
+checks=53
+PASS

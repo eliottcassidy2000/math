@@ -1,0 +1,8 @@
+THM-3556 PACKET IMAGE-RELATION PROBE
+coordinates=(L,T,W=2U,R=2S)
+relations_verified=degree_3_cusp,degree_4_28_term_relation
+hilbert_rows_degree,total_monomials,pullback_rank,kernel=[(1, 4, 4, 0), (2, 14, 14, 0), (3, 34, 33, 1), (4, 69, 63, 6), (5, 125, 105, 20), (6, 209, 159, 50), (7, 329, 225, 104)]
+complete_intersection_3_4_counts_match_through_degree_7=True
+collision_relation_gradient_ratio=quartic/cubic=-21/5
+VERDICT=finite exact evidence for a (3,4) packet-image complete intersection
+SCOPE=full image-ideal generation and primeness remain open

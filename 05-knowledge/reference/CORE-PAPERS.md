@@ -211,25 +211,28 @@ collide, links—not bare IDs—are canonical.
 
 ### Lee — *Lonely runners in real life: Sharp bounds for time-dependent velocities*
 
-- **Primary / freshness:** [arXiv:2607.16082v1](https://arxiv.org/abs/2607.16082), submitted 2026-07-17. **RADAR / PREPRINT v1.**
-- **Imported role:** proves the sharp `2^(-n+1)` extreme-runner guarantee for ordered time-dependent velocities with divergent relative displacement, while intermediate runners can stay close forever.
-- **Boundary:** no theorem depends on it; it stress-tests linear-flow assumptions but proves nothing about constant-velocity LRC(14), `1/14`, integer spectra, or finite checking.
+- **RADAR / PREPRINT v1:** [arXiv:2607.16082v1](https://arxiv.org/abs/2607.16082) proves the sharp `2^(-n+1)` extreme-runner guarantee for ordered time-dependent velocities with divergent relative displacement.  No theorem depends on it, and it proves nothing about constant-velocity LRC(14), `1/14`, integer spectra, or finite checking.
 
 ## Jacobian, Dixmier, and Poisson
 
 ### July 2026 explicit dimension-three Jacobian certificate — public announcement, no paper
 
-- **Primary / freshness:** [announcement](https://x.com/__alpoge__/status/2079028340955197566), [displayed map](https://jacobianfun.org/jacobian-explained), and [weighted lift](https://github.com/algal/jacobianfun/blob/main/RESEARCH.md).  These are web sources, not paper or peer review.
-- **Imported role:** the displayed determinant-`-2` triple collision refutes `JC(n)` for `n>=3`.  The weighted construction realizes every generic degree `d>=3` (including a quartic 2-jet); the repo independently proves its `S_d` monodromy, atom status, and non-radical `S_5` inverse.
-- **Repo consumers:** [THM-1300](../../01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md) verifies the sporadic map; [THM-3438](../../01-canon/theorems/THM-3438-weighted-lift-keller-degree-spectrum.md) derives the weighted family and exact degree spectrum.
-- **Boundary:** no `JC(2)`, `DC(1/2)`, arbitrary-map classification, or priority claim follows; use THM-1300's byte-zero correction for attribution.
+- **Sources/status:** [announcement](https://x.com/__alpoge__/status/2079028340955197566), [map](https://jacobianfun.org/jacobian-explained), [weighted lift](https://github.com/algal/jacobianfun/blob/main/RESEARCH.md); not a paper or peer review.
+- **Imported/boundary:** the determinant-`-2` triple collision refutes `JC(n)` for `n>=3`; [THM-1300](../../01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md) and [THM-3438](../../01-canon/theorems/THM-3438-weighted-lift-keller-degree-spectrum.md) verify the map/spectrum.  No `JC(2)` or Dixmier conclusion follows.
 
 ### Nagata / Shastri / Guccione--Guccione--Horruitiner--Valqui — planar degree and infinity gates
 
-- **Primary:** Nagata's revised [paper, Theorem 7.3](https://repository.kulib.kyoto-u.ac.jp/server/api/core/bitstreams/9ef8e868-5526-4830-b19f-543c0af09e7c/content) repairs Appelgate--Onishi; Shastri's published [Proposition, p. 218](https://doi.org/10.18910/6794) is the one-point/one-place-at-infinity criterion; [arXiv:2204.14178v1](https://arxiv.org/abs/2204.14178) (2022) is **CITED / PREPRINT**.
-- **Imported:** Magnus plus Nagata force `Omega(deg R)>=3` for every member of a counterexample pencil. Shastri forces at least two projective roots in each top form. The 2022 list gives reduced height `>=108`, with only `(72,108)` below `125`.
-- **Consumer:** [THM-3550](../../01-canon/theorems/THM-3550-prime-degree-exclusion-and-pencil-height-eight-floor.md) is an independent elementary prime/height-eight gate; the session synthesis imports the stronger classical bounds.
-- **Boundary:** none proves `JC(2)`, existence of `(72,108)`, or a height-`125` theorem.
+- **Primary/imported:** Nagata's corrected [Theorem 7.3](https://repository.kulib.kyoto-u.ac.jp/server/api/core/bitstreams/9ef8e868-5526-4830-b19f-543c0af09e7c/content) gives `Omega(deg R)>=3` for every counterexample-pencil member; Shastri's [criterion](https://doi.org/10.18910/6794) forces two top-form roots; [arXiv:2204.14178v1](https://arxiv.org/abs/2204.14178) gives reduced height `>=108`, only `(72,108)` below `125`.
+- **Consumer/boundary:** [THM-3550](../../01-canon/theorems/THM-3550-prime-degree-exclusion-and-pencil-height-eight-floor.md) supplies an independent elementary floor.  None proves `JC(2)`, existence of `(72,108)`, or height `125`.
+
+### Gwozdziewicz / Lang — injective lines and Newton similarity
+
+- **CITED:** [Gwozdziewicz, Thm. 1.1](https://arxiv.org/abs/alg-geom/9305008) makes a planar Keller map injective on one line an automorphism.  [Lang](https://doi.org/10.1016/0022-4049(91)90128-O) proves that, when both degrees exceed one, their origin-augmented Newton polygons scale by the degree ratio.  Necessary only.
+
+### Jelonek--Lasoń — quantitative nonproperness-set uniruledness
+
+- **CITED:** [arXiv:1411.5011v2](https://arxiv.org/abs/1411.5011), *Manuscripta Math.* **156** (2018), [DOI](https://doi.org/10.1007/s00229-017-0965-0): a generically finite degree-`d` map's nonproperness set is covered by polynomial curves of degree `<=d-1`; planar components are rational.
+- **Boundary:** finite collision/conductor curves are different loci, so THM-3556's genus-two pair curve is no contradiction; withdrawn arXiv:2011.03472 is not imported.
 
 ### Belov--Kanel--Kontsevich — *The Jacobian Conjecture is stably equivalent to the Dixmier Conjecture*
 

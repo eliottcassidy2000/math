@@ -1,0 +1,19 @@
+THM-3556 PACKET IMAGE-IDEAL AND NORMALIZATION AUDIT
+coordinates=(L,T,W=2U,R=2S)
+image_ideal=(degree_3_F,degree_4_G); G_terms=28
+top_forms_coprime=True; complete_intersection_Hilbert_function=all_degrees
+resultant_identity=27W^2G+A_F=27Res_Y(C,Q)
+resultant_specialization_mod7=R^4+2R^2+R+1; irreducible=True
+absolute_irreducibility_smooth_point=(T,W,R)=(0,2,0); dH/dR=64
+W_local_prime=True; W_supported_minimal_prime=False
+marked_root_inverse=y=-beta/alpha; alpha_nonzero=True
+normalization=B[y]; elimination_generators=4; smooth=True
+resultant_singular_radical=radical(H,alpha)=radical(H,dH)
+hodge_normal_multiplier=N_ij(Z)/(M_ij)=9alpha for all six pairs
+pair_curve_discriminant=(5s-6)^2D6; genus=2; disc(D6)=-26132324317743978381312
+known_pair=(s,W,p,delta)=(3,27/20,9/20,36/5)
+triple_fibre=(L,T,W,R)=(1/54,1/2,-1,-1)
+W0_components=vertical_line_0,vertical_line_1,graph_curve
+W0_singular=vertical_line_0 plus (L,T,W,R)=(-169/2916,9/4,0,-27/4)
+parameterization_birational=True; finite=False
+VERDICT=exact full image ideal, smooth normalization, and conductor audit

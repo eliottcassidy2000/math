@@ -1,0 +1,20 @@
+THM-3556 QUADRATIC TARGET-PROJECTION AUDIT
+base_field=Q; extension_scope=every characteristic-zero field
+collision_points=(8/27 + 4*sqrt(5)/9, 3*sqrt(5)/5 + 3/2);(8/27 - 4*sqrt(5)/9, 3/2 - 3*sqrt(5)/5)
+collision_packet_L_T_U_S=(-6724/3645, 57/20, 27/40, 27/40)
+collision_first_jet_control=Jac(L,(9627/304384)T-(205687/1369728)U)=1_on_both_sheets
+target_degree_nonconstant_basis=['L', 'T', 'U', 'S', 'LL', 'LT', 'LU', 'LS', 'TT', 'TU', 'TS', 'UU', 'US', 'SS']
+composition_dimension=14
+wedge_columns=binomial(14,2)=91
+zero_wedge_columns=['L^LL', 'T^TT', 'U^UU', 'S^SS']
+coefficient_matrix_shape=(139, 91)
+exact_ranks_full_nonconstant=67,67
+modular_rank_controls=[(1000003, 67, 67), (1000033, 67, 67)]
+constant_row_in_nonconstant_row_span=True
+descent_relaxation_shape=(139, 90)
+descent_relaxation_exact_ranks_full_nonconstant=80,80
+packet_source_degrees=(6, 4, 3, 5)
+cap18_height108_exponents=[(18, 0, 0, 0)]
+cap18_common_top_v48_y24_exponents=[(12, 0, 0, 0)]
+VERDICT: no target-total-degree-<=2 pair has nonzero constant Jacobian.
+SCOPE: the total-degree-3-and-higher nonlinear projection problem remains open here.

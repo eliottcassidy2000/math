@@ -1,0 +1,20 @@
+NODAL-CYLINDER WIDTH AND PERIOD GATES
+cited_Newton_polygon_scale=3/2
+minimal_width_(2,3)=excluded_by_every_line_gate
+first_surviving_scaled_width=(4,6)
+two_scale_source_base_degrees=(36,34)
+two_scale_coefficient_t_degrees=(35,32)
+two_scale_target_caps=(D:13,D2:26,D3_raw:39,D3_reduced:38)
+degree_drop_root_lines=(-1,0,1); nodal_and_unit_jet=True
+four_point_conductor_fibre=True
+nodal_period_formula=Phi'=2*Jac
+period_positive_hostile=True; hostile_Keller=False
+normalization_PDE_split=True
+first_conductor_layer_no_go=PROVED
+second_conductor_layer_required=True
+two_scale_unrepaired_period_degree=6
+two_scale_period_repaired=True
+period_repair_target_cap<=10; preserves_width_and_root_jets=True
+period_repaired_scaffold_Keller=False
+corrected_J_minus_1_mod_1000003=(759686,317751)
+VERDICT=stronger finite-exact counterexample cell, no Keller pair

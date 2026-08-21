@@ -229,6 +229,72 @@
   `-O` replay matches.  Script/output LF SHA-256:
   `fd56a535bcb48601a5eca0a22aed066d71d1e8ea9baa120a027e6373a4dc8288` /
   `9764c1507dc148ccc9fc6af63d43186b0e3cb0c6ad0d2d1c516e97fd490f6cee`.
+- Canon route for the next two companions: [THM-3586, nodal-cylinder cap-38
+  width, period, and second-conductor Keller gates](../../01-canon/theorems/THM-3586-nodal-cylinder-cap38-width-period-and-second-conductor-keller-gates.md).
+
+- Canon route for `keller_consecutive_factor_integrability_scout.py`:
+  [THM-3587, consecutive Keller fibre factor, toric-carrier, and
+  coefficient-span gates](../../01-canon/theorems/THM-3587-consecutive-keller-fibre-factor-toric-and-coefficient-span-gates.md).
+
+- `nodal_cylinder_keller_projection_scaffold.py` -> matching `.out`
+  [PROVED STRUCTURAL + FINITE-EXACT + CITED DEGREE TRANSFER; OPEN
+  CORRECTION CELL].  The normalization `(u,t)->(u,t^2-1,t(t^2-1))` of a
+  nodal-cubic cylinder is differential-rank two and identifies the full
+  lines `t=+/-1`.  Its descended Hodge multiplier passes the image-Jacobian-
+  ideal gate, and an explicit closed ambient two-form contracts to one; a
+  diagonal-invariant argument proves that displayed form is not `dA wedge
+  dB`.  Combining the cited reduced-height bound with the proper-power and
+  infinity-root gates moves its first possible target cap from `36` to `38`,
+  where the image relation gives an exact one-scale degree-`(72,108)`
+  square/cube lift.  A nodal boundary curve supplies unit transverse jets and
+  an explicit four-point fibre, as required by the cited injective-line gate.
+  The scaffold's full Jacobian is not constant; independently, an exact
+  horizontal-line specialization makes its first component affine-linear and
+  injective, so the injective-line theorem kills the displayed point and
+  yields a coefficient-divisibility gate for corrections.
+  Normal/`-O` replay matches.  Script/output SHA-256:
+  `de61c326e049e056f204d21f04fc2265e43742411d26bd6703b504f9ed0f40df` /
+  `0df404c494ef6b579d681203d521da2f8896fdf25cd0b96f0e179b01e64ce897`.
+
+- `nodal_cylinder_width_period_gates.py` -> matching `.out`
+  [PROVED STRUCTURAL + FINITE-EXACT + CITED NEWTON TRANSFER; OPEN KELLER
+  PDE].  In the reduced `(72,108)` cap-`38` cell, Newton-polygon similarity
+  and the every-line theorem exclude width `(2,3)` and force the first
+  surviving width `(4,6)`, with a second coefficient base of `t`-degree at
+  most `32`.  An exact two-scale scaffold attains this bound and passes all
+  affine-line, three root-line, unit-jet, and four-point-fibre gates.  The
+  companion proves the nodal period/PDE formulas and an all-degree first-
+  conductor-layer no-go, then repairs the period by a three-moment dual of
+  target cap at most ten without changing the passport.  The repaired
+  Jacobian remains nonconstant.  Normal/`-O` replay matches.  Script/output
+  SHA-256:
+  `a2483f1da3237df5896c9fd508b2d137bca5fb82a67ffec4043accbe088fe050` /
+  `de3514b83157b63558deefee1e8137cd6ba5e99b13cfa813d142c6b4c8fc9f16`.
+
+- `dephasing_c4_flux_order_control.py` -> matching `.out`
+  [FINITE-EXACT CONTROL; SUBSUMED BY THE GIRTH COMPANION].  For a unit four-cycle with one
+  Wilson variable `z`, the third Schur-walk coefficient vanishes and the
+  phase-dependent part of the raw fourth coefficient factors exactly as
+  `(z+z^-1-2)M`, where `M` is the displayed conservative `4 x 4` matrix.
+  Thus the first plaquette-flux term occurs at fourth commutator order, or
+  order `Gamma^-2` on the leading-normalized slow scale.  This controls the
+  phase and order, not the convention-dependent phase-blind memory terms.
+  Normal/`-O` replay matches.  Script/output SHA-256:
+  `e04245dc6df02c2cc70d8ff103e562d0c8692d953c7d425de40c9720eddbb1d4` /
+  `a0471191863620887a67fa17f8fdc30282e26479825567b37cf5695252aa2b8f`.
+
+- `dephasing_cycle_flux_girth_control.py` -> matching `.out`
+  [PROVED STRUCTURAL + FINITE-EXACT STRONG-DEPHASING CONTROL].  On a graph
+  of girth `g`, raw population Schur words are phase-blind below order `g`;
+  the first Wilson-cycle term is at normalized slow order
+  `Gamma^{-(g-2)}`.  On `C_g` it is a sine/cosine flux scalar times
+  `(I-S)^g`, skew/oriented for odd `g` and symmetric for even `g`.  The
+  weighted `K_(2,2)` identity recovers `|det A|^2` from conductances and the
+  raw fourth coefficient, identifying the Keller reverse-triangle slack.
+  Weighted cycle, tree, chord, onsite, and normal/`-O` hostile controls pass.
+  Script/output SHA-256:
+  `f873637c59da1db34084efd714c45bfc17c5e1465a72b441bf8815c37e463ae9` /
+  `c0630fce8a5c0790d3d53e26d7b5f14ce105dad95db1491c4b8240fb358e4137`.
 
 - `jc_fixed_threedimensional_graph_section_no_go_thm3553.py` -> matching `.out`
   [THM-3553 PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVATION-AUDITED].
@@ -295,8 +361,80 @@
   cubic-cover coordinates; the preceding exact artifact now closes that
   boundary.  Width four remains open.  All 86 truth gates pass and normal/
   `-O`/stored transcripts agree.  Script/output LF SHA-256:
+  square/cube branch terminates at `-9/4`.  The separate exact cap-six
+  companion now closes the first new even `r^6` boundary, so the first open
+  width-three cell is degree seven.  Width four is also open.  All 86 truth gates pass and
+  normal/`-O`/stored transcripts agree.  Script/output LF SHA-256:
   `0444ad61a0bb2cd165243db1a97f0cb0b299eb19263378c97d1dee9ff39a7e1e` /
   `cd23937963962bc4f43b83fc2f3ab6b477970c76f3151b7247c0025145380832`.
+
+- `cusp_square_cubic_projection_no_go_thm3556.py` -> matching `.out`
+  [THM-3556 FINITE-EXACT CUBIC NO-GO].  The `34` nominal nonconstant
+  target monomials of total degree at most three have pullback rank `33`,
+  with unique relation `R^2-4T^3-27LW^2=0` after the integral scaling
+  `(W,R)=(2U_*,2S)`.  All `561` pairwise brackets give a `336 by 561`
+  source-coefficient matrix whose full/deleted-constant ranks are exactly
+  `187,187`; four prime-field controls agree.  Thus not even an arbitrary
+  bivector in this relaxed universe reaches a nonzero constant, so no pair
+  of total target degree at most three is Keller.  Normal/`-O` replay
+  matches.  Script/output LF SHA-256:
+  `0b0a7f129ebbed95cc85e4ed8dad2f8996ab3dc0d8c66b468e1452d7bcaeb281` /
+  `41841c39426d6a42872fe1ea09bf9cc9169c3efe8473097e55bd84871770b933`.
+
+- `cusp_square_packet_image_relation_probe.py` -> matching `.out`
+  [FINITE-EXACT IMAGE-ALGEBRA PROBE; SUPERSEDED AS AN OPEN BOUNDARY].  In integral packet
+  coordinates `(L,T,W,R)=(L,T,2U_*,2S)`, it verifies the cubic cusp relation
+  and a new `28`-term quartic relation.  Pullback kernel dimensions through
+  total target degree seven are `0,0,1,6,20,50,104`, exactly the Hilbert
+  counts for a `(3,4)` complete intersection.  At the exact packet double
+  value the two relation gradients are proportional by `-21/5`.  This is
+  finite evidence; the full image-ideal companion below now proves the
+  conjecture suggested by these counts.  Normal/`-O` replay matches.
+  Script/output SHA-256:
+  `d88ab1e6d64ae7c71852049025e1ee951f30d6c2fb677f66c4a204b5f05fc6cf` /
+  `0da77f87941f181841ab65d99d977a3d4e7242ffa9ad9ce121bbe97c07c879f6`.
+
+- `cusp_square_packet_image_ideal_thm3556.py` -> matching `.out`
+  [THM-3556 PROVED + VERIFIED-EXACT FULL IMAGE AND NORMALIZATION].  In
+  integral coordinates, the packet kernel is exactly the absolutely prime
+  complete intersection `(F_3,G_4)`.  A resultant specialization modulo
+  `7`, the `W`-localization, and a hostile `W=0` witness certify primeness
+  with no hidden boundary component.  Adjoining the integral marked root
+  gives a four-relation finite birational model whose Jacobian rank-drop
+  ideal is the unit ideal, hence the smooth normalization.  The companion
+  also verifies the exact conductor multiplier `alpha`, the six-component
+  Hodge identity, the genus-two unordered-pair curve, the triple fibre, the
+  full `W=0` singular boundary, and two formal nonproperness charts.  Normal
+  and `-O` transcripts agree.  Script/output LF SHA-256:
+  `392b4eb2b3cae0cdfe985a1ca4e15dc36121a1a7d2bf1e66e23824a502728755` /
+  `494c04e2a63b88d70e9b94076002d92d6d3f4d7d8747213ade0e3b6bcf7d850a`.
+
+- `cusp_square_all_degree_descended_bivector_no_go_thm3556.py` -> matching
+  `.out` [THM-3556 PROVED + VERIFIED-EXACT ALL-DEGREE NO-GO].  For the exact
+  image ideal `(F_3,G_4)`, the six normal minors satisfy
+  `N_ij(Z)=9 alpha(Z)M_ij`.  A rational grevlex basis of
+  `(F,G,N_ij)` gives a nonzero normal form for `alpha`; the compact quotient
+  dual `Phi=[L R^2]NF` has `Phi(alpha)=81/50` and kills that ideal.  Thus
+  even an arbitrary descended bivector cannot give a nonzero constant, so
+  no polynomial target pair of any degree is Keller.  Three good-reduction
+  controls and normal/`-O` replay agree.  Script/output SHA-256:
+  `78de3e52d2095c7cedfd47b1d5533a8a37f2c0c7aab053a73409062fae428818` /
+  `323a884e710e4a2698f1267fc2596b69547da7b5cbc4e76ec6979a32fbfa23dc`.
+
+- `cusp_square_quadratic_projection_no_go_thm3556.py` -> matching `.out`
+  [THM-3556 PROVED COLLISION + FINITE-EXACT QUADRATIC NO-GO].  The reduced
+  scheme `(27v-20y+22,y^2-3y+9/20)` is a pair of distinct points over
+  `Q(sqrt(5))` on which `(L,T,U_*,S)` is constant.  A displayed affine
+  projection has Jacobian one at both first jets, so the later obstruction
+  is global.  The `14` quadratic pullbacks are independent; the full and
+  deleted-constant ranks of their `139 by 91` bracket matrix are `67,67`.
+  A broader arbitrary-descending-coefficient relaxation has ranks `80,80`.
+  Therefore no pair of total target degree at most two is Keller.  The
+  `(6,4,3,5)` source-degree ledger and the two unique cap-`18` top monomials
+  are additional exact controls.  Normal/`-O` replay matches.  Script/output
+  LF SHA-256:
+  `2db8317c35df10a882a7f87837b7b09e48887b17fe6d67e67af1650681b36b7f` /
+  `a21b0cc00f077bb67a9eda80ee39628c3988fe66a5d534a070ff0c09865bd975`.
 
 - `cusp_square_marked_root_kummer_owner_kps_s188.py` -> matching `.out`
   [THM-3556 PROVED + VERIFIED-EXACT + FINITE-EXACT POSITIVE PACKET].  The
@@ -304,13 +442,14 @@
   `X=-1/v` and a quadratic Kummer pair; projectively the marked root escapes
   at `v=0`, while the exact discriminant is `-4*L*S^2`.  Dually, `y` is a
   marked root of `Y^3-3*T*Y+2*S`, with discriminant `-(54*U)^2*L` and the
-  same Kummer square class.  All six natural
-  two-coordinate projections have proved Jacobian obstructions.  For one
-  explicit `U`, the six packet minors generate the unit ideal, so the
-  `A^2->A^4` packet is everywhere immersive, but no constant-linear
-  combination of the minors is one.  The remaining nonlinear projection is
-  a descending/integrable/decomposable minor-syzygy problem, not a planar
-  counterexample.  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  same Kummer square class.  All six natural two-coordinate projections
+  have proved Jacobian obstructions.  For one explicit `U`, the six packet
+  minors generate the unit ideal, so the `A^2->A^4` packet has differential
+  rank two everywhere, but no constant-linear combination of the minors is
+  one.  Its former nonlinear projection problem is the ambient descending
+  minor-syzygy problem now closed in all degrees by THM-3556's exact image-
+  ideal/normal-multiplier obstruction.  Normal/`-O` replay matches.  Script/output LF
+  SHA-256:
   `a3dc5f8c58c0fd18a81cdc77e96fe1f9717b76d40777ef0db81633f14257152b` /
   `e11cc70931087e21cff412cb244262eb64f1c5466eb9f1bc182871c8181072dd`.
 

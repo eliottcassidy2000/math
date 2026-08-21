@@ -1,0 +1,20 @@
+THM-3556 CUBIC TARGET-PROJECTION BIVECTOR AUDIT
+base_field=Q; extension_scope=every characteristic-zero field
+packet_rescaling=(L,T,W,R)=(L,T,2U_*,2S)
+rescaling_effect=nonzero diagonal scaling of target functions and bracket columns
+target_universe=all nonconstant monomials of total target degree<=3 in four packet coordinates
+target_function_count=34
+target_pullback_coefficient_shape=111x34
+target_pullback_exact_rank=33
+unique_target_relation=R^2-4*T^3-27*L*W^2=0
+bivector_columns=binomial(34,2)=561
+source_coefficient_rows=336;total_degree_range=0..33
+coefficient_matrix_shape=336x561
+constant_row_index=0;deleted_shape=335x561
+exact_ranks_full_deleted=187,187
+modular_ranks_prime_full_deleted=[(1000003, 187, 187), (1000033, 187, 187), (1000037, 187, 187), (2147483647, 187, 187)]
+quadratic_positive_control=shape=139x91;exact=67,67;modular=[(1000003, 67, 67), (1000033, 67, 67), (1000037, 67, 67), (2147483647, 67, 67)]
+constant_row_in_nonconstant_row_span=True
+VERDICT: no arbitrary bivector on the degree-<=3 target space yields a nonzero constant.
+COROLLARY: no pair of target polynomials of total target degree<=3 has nonzero constant source Jacobian.
+SCOPE: this is the fixed explicit packet; target degree>=4 remains open.
