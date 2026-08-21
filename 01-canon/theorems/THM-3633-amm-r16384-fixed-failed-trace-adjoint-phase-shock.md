@@ -2,8 +2,8 @@
 id: THM-3633
 title: "AMM R=16384 fixed-failed-trace adjoint phase shock"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + FINITE-EXACT + VERIFIED-EXACT /
-  PENDING INDEPENDENT HOSTILE AUDIT.  At the fixed archived failed trace
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  At the fixed archived failed trace
   (R,D0)=(16384,400), the exact Rule-A profile dies at row 4055 and its
   positive truncated-adjoint wall changes sign between cuts 1516 and 1517.
   Hence every admissible continuation avoiding that fatal inequality must
@@ -13,10 +13,12 @@ status: >
   no AMM bound or asymptotic law is claimed.
 source: kps-s189 + agent Newton / THM-3626 dyadic continuation, 2026-08-21
 audit: >
-  PENDING -- author/agent exact reconstruction passed the complete profile,
-  fatal, checkpointed adjoint, contiguous-wall, boundary, active-ledger,
-  phase-invoice, dyadic-defect, parent-pin, no-assert, semantic, and normal/-O
-  gates.  Independent hostile reconstruction remains required.
+  PASS -- an independent reconstruction used linear Fibonacci--Lucas
+  recurrences, a separate binomial compiler, and checkpoint width 113; it
+  swept every cut, recovered the complete profile, fatal, contiguous wall,
+  boundary, active ledger, phase invoice, dyadic defects, and all pinned
+  digests, and matched the stored 27,594-gate transcript in normal and -O
+  mode.  The audit explicitly retained the nonterminal D0=400 boundary.
 depends_on:
   - THM-3626-amm-r8192-adjoint-horizon-and-phase-rebound
 related:
@@ -32,8 +34,8 @@ hash_basis: LF-normalized bytes for files; canonical JSON for semantic ledger
 
 # THM-3633 -- AMM `R=16384` fixed-failed-trace adjoint phase shock
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + FINITE-EXACT + VERIFIED-EXACT /
-PENDING INDEPENDENT HOSTILE AUDIT.**  This certifies one fixed failed trace at
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  This certifies one fixed failed trace at
 the next dyadic scale after THM-3626.  It does not claim that the archived
 offset is the last failure.
 
@@ -207,4 +209,5 @@ This package does not identify the terminal failing offset.  The theorem
 proves no adjacent survivor, alternative feasibility, asymptotic phase law,
 uniform extractor, value of the AMM constant, or improvement to its bound.
 
-Independent hostile audit remains the promotion gate.
+The independent hostile audit closes the promotion gate without changing the
+strict boundary above.  **QED.**
