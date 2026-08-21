@@ -12,7 +12,8 @@ def require(condition: bool, label: str) -> None:
 
 
 a, b, x = sp.symbols("a b x")
-A, u, r, v, w = sp.symbols("A u r v w", nonzero=True)
+A, u = sp.symbols("A u", nonzero=True)
+r, v, w = sp.symbols("r v w")
 
 
 def core(phi: sp.Expr) -> tuple[sp.Expr, sp.Expr]:
@@ -152,7 +153,10 @@ F2 = sp.expand(ys + 3 * xs * us**2 * zs + 3 * xs * ys**2 * (4 + 3 * xs * ys))
 F3 = sp.expand(2 * xs - 3 * xs**2 * ys - xs**3 * zs)
 pull_H = sp.expand(F3 - 2 * H**3 * F1 + H**2 * F2 - 2 * H)
 source_linear = xs - us * H
-source_cofactor = sp.factor(sp.cancel(pull_H / source_linear))
+source_cofactor_fraction = sp.cancel(pull_H / source_linear)
+source_cofactor, source_denominator = source_cofactor_fraction.as_numer_denom()
+require(source_denominator == 1, "universal source cofactor polynomiality")
+source_cofactor = sp.factor(source_cofactor)
 require(sp.expand(pull_H - source_linear * source_cofactor) == 0, "universal source factorization")
 
 # Collision-compatible total-degree <=2: deg(h)=0, then h=+-2.  These are

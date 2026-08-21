@@ -14,7 +14,8 @@
   `77845935c7a5414e9d90d77aef7858670f34518607d7b55e6fc78910019499d7`.
 
 - `jacobian_resonant_linear_a_factor_classification_kps_s188.py` -> matching
-  `.out` [THM-3565 PROVED + VERIFIED-EXACT].  For `deg_a(phi)=1`, a triangular
+  `.out` [THM-3565 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  For `deg_a(phi)=1`, a triangular
   target-graph pullback is reducible iff
   `phi=-2h(b)^3a+b*h(b)^2-2h(b)` with nonzero `h in C[b]`.  The core splits
   into one linear and one irreducible quadratic factor, while the source has
@@ -23,7 +24,7 @@
   `16a/b^3-4/b`.  Hence every genuinely quadratic graph pullback is
   irreducible; collision-compatible affine rows recover exactly the two
   Kummer exceptions.  Normal/`-O` replay matches.  Script/output LF SHA-256:
-  `9f5ff066138e80875fa9d71b29277553f04160d580d6745a7183ea95b330b459` /
+  `f15ac70a58883fa27a91adbe166137a09ba00f4fe996a61ae5e6119a109e59ae` /
   `2b679c8f2bbeb9c060a31de77ad64756c12214118b47d10e2590706bdedb643e`.
 
 - `jacobian_target_graph_degree_resonance_irreducibility_kps_s188.py` ->

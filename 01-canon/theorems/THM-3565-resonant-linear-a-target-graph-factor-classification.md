@@ -2,7 +2,8 @@
 id: THM-3565
 title: "Resonant linear-a target-graph factor classification"
 status: >
-  PROVED + VERIFIED-EXACT.  For phi in C[a,b] with deg_a(phi)=1, the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For phi in
+  C[a,b] with deg_a(phi)=1, the
   pullback of c+phi=0 under the fixed THM-1300 Keller map is reducible if
   and only if phi=-2h(b)^3a+b h(b)^2-2h(b) for a nonzero h in C[b].  Its
   generic core cubic has exactly one linear and one irreducible quadratic
@@ -11,6 +12,12 @@ status: >
   irreducible pullback.  Among collision-compatible affine graphs, h=+-2
   recovers exactly THM-3559's two Kummer rows.
 source: kps-s188
+audit: >
+  An independent assumption-free audit reproduced the rational-root
+  dichotomy, saturated quadratic-denominator Groebner basis, Laurent hostile,
+  polynomial descent, residual nonsquare gate, and generic-to-geometric
+  component typing.  It also prompted the field-correct branch wording and
+  removal of unnecessary nonzero assumptions on r,v,w in the companion.
 depends_on:
   - THM-1300-jacobian-counterexample-dixmier-A3-explicit
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
@@ -20,15 +27,16 @@ related:
   - THM-3560-jelonek-euler-gate-monomial-target-shear-no-go
 companion: 04-computation/jacobian_resonant_linear_a_factor_classification_kps_s188.py
 output: 05-knowledge/results/jacobian_resonant_linear_a_factor_classification_kps_s188.out
-script_sha256: 9f5ff066138e80875fa9d71b29277553f04160d580d6745a7183ea95b330b459
+script_sha256: f15ac70a58883fa27a91adbe166137a09ba00f4fe996a61ae5e6119a109e59ae
 output_sha256: 2b679c8f2bbeb9c060a31de77ad64756c12214118b47d10e2590706bdedb643e
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3565 -- resonant linear-a target-graph factor classification
 
-**PROVED + VERIFIED-EXACT.**  The first resonance left by THM-3564 is not an
-unstructured exceptional cell.  It is one explicit one-function family.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The first
+resonance left by THM-3564 is not an unstructured exceptional cell.  It is
+one explicit one-function family.
 
 All fields and varieties are over `C`.  Target coordinates are `(a,b,c)`,
 source coordinates are `(x,y,z)`, and `F=(F1,F2,F3)` is THM-1300's fixed
@@ -149,8 +157,10 @@ remaining two coefficients, up to nonzero scalars, are
 (b-6u)^2(b+12u),             bu(b-6u)^2(b+6u).            (14)
 ```
 
-Their polynomial gcd is `(b-6u)^2`; at `b=6u`, equation `R=0` also holds.
-Thus `(13)` is the only solution.  It gives
+In the field `K=C(b)`, the first equation in `(14)` forces `b=6u` or
+`b=-12u`, while the second forces `b=6u`, `b=-6u`, or `b=0`.  Since `u!=0`
+and `b` is nonzero in `K`, their only common possibility is `b=6u`; there
+equation `R=0` also holds.  Thus `(13)` is the only solution.  It gives
 
 ```text
 phi=-2a/(27u^3)+(b-6u)/(9u^2),
@@ -317,8 +327,10 @@ python3 -O 04-computation/jacobian_resonant_linear_a_factor_classification_kps_s
 ```
 
 The ordinary and optimized transcripts agree.  The companion keeps every
-coefficient equation active, recomputes `(19)` over `Q`, verifies the
-exceptional rational row `(21)`, verifies `(4)`, `(24)--(27)`, and checks the
-source factorization before substituting `H=h(F2)`.
+coefficient equation active without assuming `r`, `v`, or `w` nonzero,
+recomputes `(19)` over `Q`, verifies the exceptional rational row `(21)`,
+verifies `(4)`, `(24)--(27)`, and checks both polynomiality and the identity
+of the source cofactor before substituting `H=h(F2)`.  An independent
+assumption-free derivation reproduced every structural branch.
 
 **QED.**
