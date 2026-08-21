@@ -1,0 +1,21 @@
+p=2 printed coefficient controls PASS
+p=13 analytic gain exponent A=1.000000000000
+p=13 legacy height exponent B=1.669613735754
+p=13 legacy irrationality exponent theta=A/B=0.598940927824
+gap B-A=0.669613735754; required height reduction=40.1059%
+
+finite exact rational rows (eta approximant is a_n/b_n up to sign)
+ n  v13(b_n)  log(den(a_n))/n  log(height(a_n/b_n))/(n log 13)
+ 5         0     2.317977301221                     1.202248134665
+10         0     2.119345744852                     1.113126979003
+15         0     1.892476217794                     1.116499786638
+20         0     2.470448984535                     1.365162320900
+30         1     2.568050014392                     1.402621374514
+40         0     2.446444051301                     1.383156977028
+50         1     2.801362942486                     1.531734699218
+60         1     2.736860586611                     1.512189820037
+70         0     2.731968231272                     1.523946482274
+80         0     2.875069221263                     1.591309502907
+
+denominator-only gate d < 0.5*log(13) = 1.282474678731
+universal proof uses d=3; the finite rows above are a scout, not a limit
