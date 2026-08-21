@@ -1,0 +1,15 @@
+ELLIPTIC_RANK30_OPTIMAL_LOCAL_OBSERVER_CERTIFICATE_20260821
+status=PROVED_RANK_LOWER_BOUND_30+FINITE_EXACT_CERTIFICATE;exact_rank_open_unconditionally
+model=y^2+x*y=x^3+A4*x+A6;public_points=30;incidence=PASS
+stored_minimal_discriminant=-46714661255308767314567688733841531918983356002159772613256840842851650254036518701100578342601553513579222272710220496887616034526983492843954090554197033638137245037791044053017600000000;invariant_formula=PASS;minimality_not_checked
+prime_bank=(43,61,101,211,223,241,263,271,283,311,313,457,521,569,571)
+group_orders=(56,72,120,212,248,260,292,296,304,344,336,464,516,600,604)
+rank_trace=((43,56,0,2,('20e6880e','126ccc78')),(61,72,2,4,('06170047','01d1ea93')),(101,120,4,6,('052a4b36','0079c4d0')),(211,212,6,8,('0c7ed89c','366605fb')),(223,248,8,10,('05a73670','12d0ab6d')),(241,260,10,12,('32832eba','3cc69d56')),(263,292,12,14,('0f8bfc32','2a6243cb')),(271,296,14,16,('0aa8285c','014dc1fd')),(283,304,16,18,('3b209041','026242cd')),(311,344,18,20,('236064ce','33830010')),(313,336,20,22,('0361f05e','20b2fcbd')),(457,464,22,24,('173205d6','04c4926c')),(521,516,24,26,('29f601da','2fe93a25')),(569,600,26,28,('3f806383','21eba3f0')),(571,604,28,30,('16d757f9','0498d8a6')))
+local_dimension_cap=2;cardinality_lower_bound=15;achieved=15
+lexicographically_least_minimal_bank_in_odd_good_primes_through_571=PASS
+integral_model_crosscheck=W^2=X^3+X^2+16*A4*X+64*A6;X=4x;W=8y+4x;PASS
+torsion_sidecar=good_p23_group_order_33;E(Q)[2]=0
+column_masks=('1623a28c','25543c9d','22f6ca55','11b6e6c3','1978ddfa','3aa09792','19d7eba6','3d66a4e8','1d40aa90','1e822718','10641da2','22205e5b','32b11940','0e345708','3436b07a','28b19a6b','1a18952c','196a3dd5','118089c7','2a00d072','3160026c','0b7761f3','1b96aaeb','3fa85f09','0f5d9118','165f7686','36c019d4','07017840','14490e82','0f2d2c81')
+semantic_sha256=d4f91e4ec3d2b4ffd2f3d2008020f6c2f126d5a5925089fa1eb5e42ac31d170b
+scope=rank_at_least_30_only;no_rank_upper_bound;no_curve_generation_mechanism
+ALL CHECKS PASSED
