@@ -1,5 +1,5 @@
 ---
-id: THM-3572
+id: THM-3573
 title: "Polynomial target-graph Pell-parameter descent classification"
 status: RESERVED / UNPROVED EMPTY STUB
 source: codex-2026-08-20-frontier-overnight
@@ -10,7 +10,7 @@ related:
   - THM-3565-resonant-linear-a-target-graph-factor-classification
 ---
 
-# THM-3572 -- polynomial target-graph Pell-parameter descent classification
+# THM-3573 -- polynomial target-graph Pell-parameter descent classification
 
 **RESERVED / UNPROVED EMPTY STUB.**  Reserved for the UFD audit of polynomial
 descent in THM-3570's rational Pell parameter.  The intended claim is that a
