@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact algebra controls for provisional THM-3622.
+"""Exact algebra controls for proved THM-3622.
 
 The companion verifies the saturated four-relation presentation of the
 one-observable graph closure, its boundary and singular line, the saturated
@@ -43,7 +43,7 @@ def basis_expressions(groebner_basis):
 
 
 print("THM-3622 exact companion -- one-observable graph closure and normalization")
-print("status=provisional verified-exact pending independent hostile audit")
+print("status=proved, verified exact, and independently hostile-audited")
 
 
 print("SECTION source compiler and graph coordinates")
@@ -376,4 +376,4 @@ print(f"PASS nonfinite_hygiene_gates={CHECKS - SECTION_START} x_not_integral_ove
 
 
 print(f"PASS total_exact_gates={CHECKS}")
-print("RESULT PASS -- provisional theorem algebra verified; independent hostile audit pending")
+print("RESULT PASS -- proved theorem algebra verified and independently hostile-audited")

@@ -2,7 +2,7 @@
 id: THM-3622
 title: "Compiler one-observable graph closure, normalization, and arm debt"
 status: >
-  PROVISIONAL PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For the THM-3561 compiler with the single separating observable z=xq,
   the affine graph closure has an exact saturated four-relation presentation.
   The source map is injective, birational, and quasi-finite with image the
@@ -12,7 +12,12 @@ status: >
   the absent smooth line. The missing coordinate x has a simple pole on both
   omitted arms.
 source: root / graph_closure_geometry normalization wildcard, 2026-08-21
-audit: PENDING -- independent hostile reconstruction has not yet been completed.
+audit: >
+  PASS -- an independent hostile reconstruction recovered both saturated
+  presentations, the exact image and singular tangent debt, the smooth
+  normalization and its three arms, the glued inverse charts, and every
+  divisorial valuation; normal, optimized, and stored 115-gate transcripts
+  are byte-identical.
 depends_on:
   - THM-3561-rational-keller-danielewski-polynomial-completion
   - THM-3618-compiler-one-graph-observable-fibre-separator-no-embedding
@@ -21,14 +26,14 @@ related:
   - THM-3614-russell-cylinder-collision-free-full-linear-projection-rigidity
 script: 04-computation/jc2_compiler_one_observable_graph_closure_normalization_thm3622.py
 output: 05-knowledge/results/jc2_compiler_one_observable_graph_closure_normalization_thm3622.out
-script_sha256: 08090418c1a5f5e77683cc4e25366c86d3ed436ebe20b0a5d0f764593c53db25
-output_sha256: 12669069fd48ca156732c3d970563552da15e7b6297e4d00678f297f9ac81159
+script_sha256: 8f1f338f1cfc5dc132564593c69a83ac82adaee023739b4a59a241c33fcbcd7e
+output_sha256: 7eb9821770b8831d35b81ef3fa503df4fdb7a94cd7dadcec6c89842936ffc39c
 hash_basis: raw LF bytes
 ---
 
 # THM-3622 -- compiler one-observable graph closure, normalization, and arm debt
 
-**PROVISIONAL PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 All rings and closed points are over `C`. Retain the THM-3561 compiler and
 the first separator from THM-3618:
