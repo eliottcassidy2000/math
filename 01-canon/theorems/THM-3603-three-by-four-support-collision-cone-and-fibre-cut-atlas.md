@@ -21,9 +21,10 @@ audit: >
   enumerated words with maximum minimal witness gap five; it is a hostile
   control, not the source of globality.  Independent hostile audit remains
   pending.
-related:
+depends_on:
   - THM-3592-universal-exponent-two-three-by-three-weight-darboux-nonentry
   - THM-3583-universal-exponent-two-two-by-four-weight-darboux-nonentry
+related:
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
 script: 04-computation/jc2_three_by_four_additive_support_atlas_thm3603.py
 output: 05-knowledge/results/jc2_three_by_four_additive_support_atlas_thm3603.out
@@ -228,11 +229,19 @@ chamber argument in Section 2.
 ## 6. Darboux boundary and the next gate
 
 THM-3592 and THM-3583 leave `(3,4)` and its transpose among the minimal
-seven-piece exponent-two sectors.  This theorem removes the unbounded
-additive-support search from that cell.  What remains is finite but algebraic:
-for each of the 149 oriented words, impose the bracket cancellation equations,
-the scalar-arm address condition, and the all-arm Hermite--Pade divisibility
-of THM-3600.
+seven-piece exponent-two sectors.  Their component-deletion argument gives a
+precise corollary here.  If either projection graph is disconnected, retain
+the unique component containing the scalar row and delete every zero-bracket
+component.  A disconnected `A` graph leaves at most two `A` weights and is
+excluded by the `2 x 4` theorem THM-3583; a disconnected `B` graph leaves at
+most three `B` weights and is excluded by the `3 x 3` theorem THM-3592.
+Consequently every putative exponent-two `3 x 4` Darboux pair has one of the
+149 connected oriented words in this atlas.
+
+This removes the unbounded additive-support search from that cell.  What
+remains is finite but algebraic: for each word, impose the bracket
+cancellation equations, the scalar-arm address condition, and the all-arm
+Hermite--Pade divisibility of THM-3600.
 
 The cut theorem suggests the right order of attack.  At `m>=8`, first isolate
 a cut fibre and eliminate its bracket equation.  The projection graph on one
