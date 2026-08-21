@@ -2,8 +2,8 @@
 id: THM-3601
 title: "AMM R=2048 terminal Rule-A failure and adjoint horizon"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-  AUDIT.  At the exact golden-floor epoch R=2048, the last failing Rule-A
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  At the exact golden-floor epoch R=2048, the last failing Rule-A
   offset D0=37 dies at row 508.  A positive integer truncated-adjoint
   certificate is nonnegative at cut 195 and negative at cut 196, so every
   admissible continuation which survives this fatal inequality must differ
@@ -12,13 +12,12 @@ status: >
   AMM constant.
 source: kps-s188 / THM-3597 dyadic adjoint continuation, 2026-08-21
 audit: >
-  Author exact audit only.  The optimization-safe standard-library companion
-  hash-pins THM-3597, rebuilds the golden degree words and Rule-A traces,
-  performs the complete one-sweep adjoint ledger, proves its single strict
-  sign wall and monotonicity, and independently compares the sweep with the
-  legacy coefficient-cancellation certificate at cuts 195 and 196.  Ordinary
-  and optimized replay are byte-identical to the stored output.  Independent
-  hostile audit remains pending.
+  ACCEPT.  An independent exact reconstruction recovered both offset traces,
+  every Pascal multiplier and lower-box slack, the monotone sign wall and its
+  complete negative-cut interval, both boundary integers and their digest,
+  and the 48,828-cell direct coefficient ledgers at cuts 195 and 196.  It
+  separately checked the departure-row indexing and the stated scope.
+  Ordinary and optimized replays are byte-identical to the stored output.
 depends_on:
   - THM-3597-amm-dyadic-rule-a-transition-and-adjoint-horizons-through-R1024
 related:
@@ -36,8 +35,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3601 -- AMM R=2048 terminal Rule-A failure and adjoint horizon
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-AUDIT.**  The dyadic adjoint atlas reaches its first scale beyond the finite
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  The dyadic adjoint atlas reaches its first scale beyond the finite
 range of THM-3597.  The new point also exposes a possible golden-ratio scaling
 coordinate, recorded only as a hypothesis in Section 4.
 
@@ -164,6 +163,14 @@ semantic digest is
 ```text
 aac4e238138a4acde9618854eee894d08131830e4f6745dd9351432c434c1247.
 ```
+
+An independent implementation reconstructed the degree words and both Rule-A
+traces, verified nonnegativity of every Pascal multiplier and lower-box slack,
+and obtained the same negative cuts `196,...,507`.  It assembled the direct
+free-coordinate ledgers at both boundary cuts, found zero residue in every
+coordinate, and reproduced the boundary digest and `48,828` active cells.
+It also checked the logically load-bearing index: agreement through row `195`
+activates `B_196<0`; positivity of `B_195` is only a boundary control.
 
 This theorem is confined to `R=2048`, offsets `37,38`, and the fixed Rule A.
 It proves no alternative feasibility, no asymptotic limit in Section 4, no
