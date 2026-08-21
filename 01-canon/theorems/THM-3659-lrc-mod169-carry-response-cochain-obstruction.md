@@ -2,7 +2,7 @@
 id: THM-3659
 title: "LRC mod-169 carry-response cochain obstruction"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In THM-3657's pinned rank-two correction quotient, changing the address law
   from split mod-13 addition to cyclic mod-169 addition has an exact
   carry-response defect.  It vanishes off carries and, on a carry, factors
@@ -12,6 +12,14 @@ status: >
   neither a constant carry vector nor a sparse-frequency repair survives.
   This is a static finite-field obstruction, not a current law or LRC(14).
 source: kps-s191 / THM-3657 carry-response continuation, 2026-08-21
+audit: >
+  PASS -- agent Kant independently reconstructed both defect banks, the
+  carry factor, every pair multiplicity, the 156-cell response table, and all
+  hashes; normal and optimized replays were byte-identical.  It additionally
+  verified that the 16 generic states are distinct correction vectors with
+  multiplicities (2,2,2,2,4,4,6,6,6,6,6,6,12,16,20,24), and that even the
+  zero-extended generic scalar has all 169 Fourier modes.  No type or scope
+  leak remained.
 depends_on:
   - THM-3657-lrc-two-current-quotient-address-atlas-and-reversal-gate
 related:
@@ -27,8 +35,8 @@ hash_basis: raw LF bytes
 
 # THM-3659 -- carry needs an address-dependent rank-two response
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  This theorem computes the first nonlinear obstruction behind the
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  This theorem computes the first nonlinear obstruction behind the
 linear change of basis in THM-3658.  The obstruction is much smaller than an
 arbitrary function on two addresses, but strictly larger than one carry bit.
 
