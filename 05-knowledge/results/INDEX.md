@@ -16,7 +16,8 @@
   `ad5ec528af81693a0f71fe703ac2ec332f50bb088bc1821786f08d136bb9cd5d` /
   `71f4bdef61bb7d7f66a2fc7bb0d720abe1b8118b32f1d36235912f78bbd8025c`.
 - `berggren_positive_cube_slope_completion_101_thm3580.py` -> matching
-  `.out` [THM-3580 PROVED + FINITE-EXACT + VERIFIED-EXACT].  The complete
+  `.out` [THM-3580 PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  The complete
   generalized-Pell `P,Q,a` class reduction and fundamental-unit orbits modulo
   `2n` close all seven survivors left by THM-3547.  Three die by exact
   valuation-one nonsquare descent at `p=13,11,13`; the other four have class
@@ -24,7 +25,9 @@
   `528` primitive parity-correct slopes through denominator `101`, exactly
   `(14,23),(26,29),(26,47),(98,101)` are admissible, and each inherits an
   infinite positive ray.  Normal/`-O` replay is byte-identical and an
-  independent SymPy LMM path agrees on all eleven rows.  Script/output LF
+  independent reconstruction also checks both unit directions, all sign
+  variants, nonsquare-`K` LMM completeness, and every inherited seed; the
+  SymPy LMM path agrees on all eleven rows.  Script/output LF
   SHA-256: `09cd67a5bf0c2c0368e3e9ca4350d2cbb4c856ccc3bca4afa21254aaef26e184` /
   `c8dcdf02f7454a677e7bdc31a34c4909338b8d0b2084a646b44646d4d9af2f0b`.
 - `amm12592_r512_offset_transition_causal_horizon_kps_s188.py` -> matching

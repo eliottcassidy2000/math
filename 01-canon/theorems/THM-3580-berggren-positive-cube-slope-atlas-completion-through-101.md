@@ -2,7 +2,8 @@
 id: THM-3580
 title: "Berggren positive-cube slope-atlas completion through 101"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT.  In the primitive parity-correct
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  In the primitive parity-correct
   slope universe 3<=n<=101, exactly four slopes admit the odd Pell data
   required by the positive two-cube compiler: (14,23), (26,29), (26,47),
   and (98,101).  THM-3547 already gives an infinite positive ray for each.
@@ -10,6 +11,12 @@ status: >
   p-adic descent and four die after a complete generalized-Pell class
   enumeration and finite fundamental-unit orbit calculation modulo 2n.
 source: kps-s188, 2026-08-21
+audit: >
+  ACCEPT.  The parity address, three valuation-one nonsquare descents,
+  generalized-Pell/LMM completeness without a squarefree-K hypothesis,
+  all sign and inverse-unit variants, every modular class orbit, and the
+  four inherited positive seeds were independently reconstructed.  Normal,
+  optimized, and stored transcripts agree.
 depends_on:
   - THM-3547-positive-two-cube-slope-atlas-through-101
 related:
@@ -25,7 +32,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3580 -- completion of the positive-cube slope atlas through 101
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT.**  This closes the seven rows left
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+This closes the seven rows left
 open by THM-3547.  It is a bounded slope classification, not an asymptotic
 for sums of two cubes and not a classification for arbitrary denominator.
 
