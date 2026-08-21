@@ -2,8 +2,8 @@
 id: THM-3597
 title: "AMM dyadic Rule-A transition and adjoint horizons through R=1024"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-  AUDIT.  At the exact golden-floor epochs R=256,512,1024, Rule A first
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  At the exact golden-floor epochs R=256,512,1024, Rule A first
   survives among the tested consecutive nonnegative offsets at D0=1,5,15.
   Every smaller tested offset dies at the listed row, and positive integer
   truncated-adjoint Pascal multipliers force any surviving alternative to
@@ -12,11 +12,13 @@ status: >
   extractor, or an AMM constant.
 source: kps-s188 / AMM adjoint scaling continuation, 2026-08-21
 audit: >
-  Author exact audit only.  The optimization-safe standard-library companion
-  reconstructs all golden floors, Rule-A rows, 21 deaths, three surviving
-  prefixes, positive dual multipliers, strict sign boundaries and monotonic
-  walls.  Ordinary and optimized replay are byte-identical to the stored
-  output.  Independent hostile audit remains pending.
+  Independent audit by agent Aquinas, 2026-08-21: ACCEPT.  A separately
+  written dense-binomial implementation reconstructed all 21 death rows and
+  first-negative cuts, the three survivor controls, the transposed-adjoint
+  identity and sign direction, and the agreement-through-row off-by-one.
+  Complete boundary tuples agreed with the legacy certificates at the hardest
+  offset of every epoch.  Ordinary, optimized and stored outputs were
+  byte-identical, and all parent, semantic, script and output hashes matched.
 depends_on:
   - THM-3588-amm-r512-truncated-adjoint-pascal-repair-horizons
 related:
@@ -33,8 +35,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3597 -- AMM dyadic Rule-A transition and adjoint horizons through 1024
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-AUDIT.**  THM-3588's positive dual certificate is now reconstructed at three
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+THM-3588's positive dual certificate is now reconstructed at three
 dyadic epochs.  The result separates two coordinates which must not be
 conflated: the row where Rule A first dies and the much earlier row by which
 any surviving alternative must already have departed from it.
