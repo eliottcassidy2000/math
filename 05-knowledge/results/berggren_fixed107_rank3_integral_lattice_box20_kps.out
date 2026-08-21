@@ -1,0 +1,9 @@
+== fixed-107 rank-three subgroup integral lattice box ==
+curve=y^2=x^3+1225041;basis=P,Q,R_from_THM-3646
+box=[-20,20]^3\{0};coefficients=68920
+integral_absolute_points=[[232,3703,1851,[1,0,0]],[4960,349321,174660,[0,1,0]]]
+positive_odd_ordinates=2;new_fixed107_two_cube_depths=0
+semantic_sha256=e5058698fc561701a6d0b8b04adc0240bd7ceea4b7569a9b880bd9a385061dd5
+CHECKS=14
+status=FINITE-EXACT SUBGROUP CENSUS
+scope=coefficient box only;not a Mordell-Weil basis or integral-point classification

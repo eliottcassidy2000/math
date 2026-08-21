@@ -144,6 +144,32 @@ Thus the intrinsic quotient isomorphism
 displayed matrix depends on the pinned bases; the quotient map does not.  It
 still needs a temporal-entry sidecar before any physical current claim.
 
+THM-3647 compresses the static observable further.  Point-order reversal
+
+```text
+J=(05)(14)(23)                                          (11a)
+```
+
+pairs the branch addresses by `r -> -r-1`.  For every one of its seven orbit
+packets `B_r`, including the fixed singleton `B_6=A_6`, the exact spectrum is
+
+```text
+B_r=alpha_r Pi_W+beta_r Pi_M,       alpha_r!=beta_r.    (11b)
+```
+
+Hence any single packet gives
+
+```text
+Pi_W=(B_r-beta_r I)/(alpha_r-beta_r),
+Pi_K=Pi_W(I+S)/2.                                       (11c)
+```
+
+The fixed branch `A_6` alone therefore recovers the endpoint/middle split;
+native directed-arc reversal `S=(01)(23)(45)` then recovers rigidity.  The
+distinction between `J` and `S` is load-bearing.  This removes thirteen-way
+spectral overhead, but not the missing physical type: an address operator is
+still not a child transition or clock edge.
+
 ## 3. Jacobian fold: completion pays jets but not diagonal constants
 
 THM-3630 constructs a decomposable formal pair on a product of three completed
@@ -235,12 +261,29 @@ D_Q=-2((9-4u)r_-+(9+4u)r_++243)/81.                  (9d)
 For `Q_h`, `(u,r_-,r_+)=(1,0,-243/13)`, so the retained debt is exactly zero.
 This is a qualitative boundary rather than a smaller nonzero invoice: the
 universal three-value obstruction that closed the minimal Hermite fold has
-disappeared.  A current exact agent computation, still **PROVISIONAL**, reports
-an actual-ring global `J_1` lift for this zero-debt witness and complete
-retained `J_2` cancellation.  The unresolved predicate is stronger and
-global: whether the full polynomial `J_2(x)` lies in the actual higher-lift
-image for the available gauge.  THM-3642 remains a reserved, unproved
-namespace until that membership problem and the next stable order are closed.
+disappeared.  A **FINITE-EXACT AGENT RESULT**, routed to the reserved THM-3642
+namespace but not yet a maintained theorem package, now reaches the stronger
+global identity.  After a global actual-ring `J_1=0` lift, `J_2=0` reduces to
+
+```text
+c'W-e'Z=r_2.                                            (9e)
+```
+
+In the `310`-dimensional quotient target, the correction map has rank `309`
+and its augmentation by `r_2` still has rank `309`; exact lifts have
+`deg(T_2,Z,W)=(308,1044,1041)`.  The unique cokernel is
+
+```text
+Lambda([P],[Q])=lambda(c'Q-e'P),
+lambda(f)=(5f(-1)-18f(0)+13f(1))/18.                  (9f)
+```
+
+Since every representative gauge from `ker gamma_h` has vertical derivative
+vanishing at the three retained points, it lies in `ker Lambda=im M`.  Thus
+the global `J_2` solve is gauge-complete for every actual-ring witness in this
+cell that reaches `J_1=0`.  The live order is now `J_3`, where second vertical
+derivatives enter.  THM-3642 remains reserved and unproved until the exact
+reproduction is archived and independently audited.
 
 ## 4. AMM: the horizon ratio hides a three-term phase cocycle
 
@@ -306,9 +349,9 @@ compression in arithmetic form.  For a primitive parity-correct slope set
 U=n-m,                V=2m-n,                T=2m+n.   (14)
 ```
 
-THM-3645 proves, pending a full independent hostile audit, that every odd
-mod-prime obstruction to the associated conic is supported on `nVT`.  At a
-support prime its entire mod-prime content is one of two characters:
+THM-3645, now independently hostile-audited, proves that every odd mod-prime
+obstruction to the associated conic is supported on `nVT`.  At a support
+prime its entire mod-prime content is one of two characters:
 
 ```text
 p|n or p|V : (6/p)=1,                 p|T : (-2/p)=1. (15)
@@ -329,6 +372,18 @@ is `(m,n)=(512,1019)`, already obstructed at `p=1019`; the formerly reported
 `p`-adic solubility, an integral cube decomposition, or an admissible Pell
 orbit.
 
+The exact S190 continuation counts the complete mod-prime gate through
+`n<=49999`: among `126,652,918` primitive parity candidates there are
+`633,416` survivors.  The normalized values
+`A(N)(log N)^(3/2)/N^2` remain near `0.009`, motivating—but not proving—the
+Frobenian three-semigroup law
+
+```text
+A(N) ~ kappa N^2/(log N)^(3/2).                        (16a)
+```
+
+This is a fractional-sieve conjecture, not a Pell or global-solubility count.
+
 On the fixed-`107` Mordell curve
 
 ```text
@@ -336,13 +391,29 @@ E: y^2=x^3+1225041,                                    (17)
 ```
 
 THM-3643 now independently certifies the ordinary real-quadratic class number
-`h(Q(sqrt(1225041)))=1`.  THM-3646 then gives a candidate exact rank theorem,
-pending its own hostile audit: a rational point with denominator `14723^2`
-adds a third independent mod-`3` class, while explicit `3`-isogeny support
-bounds the rank above by three.  The conceptual correction is important:
+`h(Q(sqrt(1225041)))=1`.  Independently audited THM-3646 proves rank exactly
+three: a rational point with denominator `14723^2` adds a third independent
+mod-`3` class, while explicit `3`-isogeny support bounds the rank above by
+three.  The conceptual correction is important:
 `3`-saturation of the old two-point subgroup did not imply completeness of
 the Mordell--Weil group.  The missing sidecar was the complementary isogeny
 Selmer support, not a denser search inside the old lattice.
+
+An exact bounded continuation scans all `68,920` nonzero combinations
+`aP+bQ+cR` with `|a|,|b|,|c|<=20`.  Its only integral absolute points are the
+two known points `P,Q`; hence it finds no new fixed-`107` two-cube depth.  The
+companion paths and hashes are
+
+```text
+04-computation/berggren_fixed107_rank3_integral_lattice_box20_kps.py
+fcda4363faa7d14275e692ffc7e78c3f80b0a811b3652cf0a2ab5013fe8374f8
+
+05-knowledge/results/berggren_fixed107_rank3_integral_lattice_box20_kps.out
+4e1b6847467c62ab12f30293386e902cb934f06787b40514b9dca821b4a01efa.
+```
+
+This is only a coefficient box in `<P,Q,R>`.  Until the subgroup index and a
+height reduction are known, it is not an integral-point classification.
 
 ## 6. Transfer rule and counterindications
 
@@ -369,9 +440,9 @@ What is the smallest noncommuting or nonlocal observable that separates the
 remaining fibre while preserving the actual target predicate?              (18)
 ```
 
-That question is now concrete on five frontiers: temporal entry after the
-corrected middle projector `(9)` for LRC; global `J_2` membership after the
-zero-debt actual-ring `Q_h` lift; offset monotonicity versus terminal-event
-type at `R=16384` for AMM; a `p`-adic/global sidecar beyond the two-cube support
-characters; and the precise index/generator structure behind the new third
-Mordell point.
+That question is now concrete on five frontiers: a lawful digit/entry action
+realizing the fixed packet `A_6` and arc involution for LRC; the global `J_3`
+membership problem after the zero-debt actual-ring `Q_h` lift; offset
+monotonicity versus terminal-event type at `R=16384` for AMM; a
+`p`-adic/global sidecar beyond the two-cube Frobenian support characters; and
+the precise index/height structure behind the new third Mordell point.
