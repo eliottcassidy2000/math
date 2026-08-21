@@ -31,7 +31,7 @@ PINNED_THM3601 = (
     (
         "theorem",
         ROOT / "01-canon/theorems/THM-3601-amm-r2048-terminal-failure-adjoint-horizon.md",
-        "c449150f6c7abb8feb47bb3a247027c61005ff7d3215380e4fbf2452118f34a2",
+        "e7574bd0a2fbd75d71c9fbb4dcdfc9eef9023a0cc5dcbae3c2c1e2fc0be0447d",
     ),
     (
         "script",
@@ -70,7 +70,7 @@ EXPECTED_4096 = {
     "active_digest": "fb837984d57ac02681619ae75c9c00a53918f85a9b7bf0517b21dec5682c2d64",
 }
 
-EXPECTED_SEMANTIC_SHA256 = "7134258c3082ba95cb01e7cf459bbfc6759ac93778af7b6f2787a0b478c096d9"
+EXPECTED_SEMANTIC_SHA256 = "4cd0b160559ea7b6820b90f7ccb204d76206d3271517b6e6afa06e5dce6a5d9a"
 
 
 def require(condition: bool, payload: object) -> None:
