@@ -1,0 +1,22 @@
+THM-3617 exact companion -- provisional nonlinear three-direction rigidity
+status=verified exact controls; independent hostile audit pending; cited all-degree steps are proof-driven
+SECTION Russell compiler and graph polynomiality
+PASS compiler_gates=11 determinant=-3
+SECTION arbitrary target coefficient universe and x=0 reconstruction
+PASS target_coefficient_gates=6 line_restriction_and_reconstruction=8
+SECTION essential three-direction certificate and postcomposition chain rule
+PASS three_direction_gates=4 determinant=3*lambda*theta*nu chain_rule_gates=1
+SECTION complete target-monomial degree invoices
+PASS target_exponents=R10,V6,Q10 degree_invoice_profiles=101
+SECTION exact source leading forms for high graph degrees
+PASS high_source_rows=35 tested_d=3..7
+SECTION low and quadratic source leading forms
+PASS low_rows=12 quadratic_form_gates=8 quadratic_census=27 linear_census=9
+SECTION Jung--van der Kulk divisibility grid
+PASS divisibility_rows=1201 high_grid=3..300 boundary_profiles=3
+SECTION exceptional h=-xq+n arbitrary-coefficient trace
+PASS exceptional_source_jets=11 target_trace_gates=20 q_coefficient=8*theta*nu
+SECTION sharp coefficient and degree-cap method hostiles
+PASS hostile_gates=16 lambda_profile=28,56 eta_profile=30,30 R4_profile=56,56 Q6_profile=30,60
+PASS total_exact_gates=4305
+RESULT PASS -- provisional theorem candidate verified-exact; independent hostile audit pending
