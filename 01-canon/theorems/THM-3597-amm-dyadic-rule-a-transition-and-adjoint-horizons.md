@@ -1,5 +1,5 @@
 ---
-id: THM-3596
+id: THM-3597
 title: "AMM dyadic Rule-A transition and adjoint horizons through R=1024"
 status: >
   RESERVED / UNPROVED PROVISIONAL STUB.  Exact continuation indicates sharp
@@ -11,7 +11,7 @@ status: >
 source: kps-s188 / AMM adjoint scaling continuation, 2026-08-21
 ---
 
-# THM-3596 -- AMM dyadic Rule-A transition and adjoint horizons through 1024
+# THM-3597 -- AMM dyadic Rule-A transition and adjoint horizons through 1024
 
 **RESERVED / UNPROVED PROVISIONAL STUB.**
 
