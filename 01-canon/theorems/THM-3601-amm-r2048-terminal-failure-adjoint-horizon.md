@@ -1,5 +1,5 @@
 ---
-id: THM-3600
+id: THM-3601
 title: "AMM R=2048 terminal-failure adjoint horizon"
 status: >
   RESERVED / UNPROVED PROVISIONAL STUB.  An exact one-sweep computation at
@@ -11,7 +11,7 @@ status: >
 source: kps-s188 / R=2048 dual continuation, 2026-08-21
 ---
 
-# THM-3600 -- AMM R=2048 terminal-failure adjoint horizon
+# THM-3601 -- AMM R=2048 terminal-failure adjoint horizon
 
 **RESERVED / UNPROVED PROVISIONAL STUB.**
 
