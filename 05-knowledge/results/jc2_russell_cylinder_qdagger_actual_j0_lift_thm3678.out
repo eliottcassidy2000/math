@@ -1,0 +1,9 @@
+weights=(30, 21, 18);gcd=3;derivative_gcd_degree=0
+cutoff=192;monomials=173;shape=213x346;operator_rank=208;augmented_rank=209;feasible=False
+cutoff=195;monomials=179;shape=216x358;operator_rank=214;augmented_rank=214;feasible=True
+F_support=107;G_support=104;F_target_hash=587dc21dbba0b2bd48356bac7d8ab9bfbd7e44923aee8e35fe2237b00068cf72;G_target_hash=2aed39df3314c9e74040c70afe9fc63753bcec0f00e0bd5276a2293fe2cdca6c
+F_degree=195;F_hash=1180c242b841d42de48806f962deb9fe2caa182b6435929ec4612bc4859c36cb;G_degree=192;G_hash=942601ed5f8b7ceabdd15221affb3cb5b0ef98acc331859db0fd2527eeb5bcc3
+deltaF_degree=187;deltaF_hash=fca72977cd805fb4cb8253115d74c61e34b45b9c924711bec2baae916ce78aba
+deltaG_degree=184;deltaG_hash=0e3b6b7ae43928d7773d21839432c2faed7861fe5772270b20977a58fa683d10
+retained_F=(0, 0, 0);retained_G=(1/3, 1/3, 1/3)
+RESULT=PASS;gates=238
