@@ -1,0 +1,14 @@
+== THM-3666 LRC owner-pivot dual pair-swap twists ==
+parents_sha256_lf=('a17a015f9187b59a36cef541100ae29a83395690294148ddee6ec5a45e0ea889', 'f487850adfe0e0c5cc1f71efabf85f5e8c150bc42453b08f6d87afc41a322b4b', 'ce220ede12175b6851810782c880f95048fe9f4643cc4f52f47a7f4d8dcb7b0c', 'd2d9b49db9ef3eabf7e3ae17cea247da554a9f8df2abfc3907243d317b21fec1', 'a5ef75f038d80c5d91308bb5379303970b44e9e538323eb49cf8779386356938', '172fe3e32fc27bb2abb21f4c7a7af59e71cdfa4c604586b2d4f8725a5ac6211a')
+normalized_scalar_types=248832;sha256=fa67e33dada038b9b03ea86158a10ec3171433f1d76e2920da07a72a2124667f
+dual_basis=alpha=e_a-e_ka,beta=e_b-e_kb;L_perp=<w,alpha,beta>
+target_pairing=<alpha,e_a>=<beta,e_b>=1;cross_pairings=0
+owner_packet_choices=120;sha256=42fbfde64f61ebf0175b7373b04dd3e685ff10835c0d980a6a994012428a35f2
+twist_table=169;support_labels=(a,ka,b,kb);sha256=bcb82a2c7936cf9078d83276406acc48b5780aba51bfd8695f20f282c423ccae
+word_action=neutral because 13 divides R;present_action=opposite 1/13 pair shifts
+unit_deep_phase_avoidance_counts=((0, 80), (1, 80), (2, 80), (3, 80), (4, 80), (5, 80))
+three_twist_test=H(x,y)+H(x-1,y)-2H(x,y-1)
+semantic_sha256=b40649847f46b03b54cc48cb0c6968c861936e4c81441eaaf33adc2f6636ffa0
+script_sha256_lf=8871c9d8a6eff3d1be33d7944197cffbb8a11c60f6d61132be27a89ce22ff96a
+scope=typed relation-twist coordinate action;not ancestry-digit alignment or nonvanishing
+PASS
