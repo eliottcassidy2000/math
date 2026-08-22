@@ -2,7 +2,7 @@
 id: THM-3678
 title: "Russell-cylinder Q_dagger actual-ring J_0 lift"
 status: >
-  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  For the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the
   degree-eight zero-second-and-fourth-debt fold Q_dagger from THM-3677, the
   zero-stable pair U=c,V=e has a rational actual-target-ring lift through
   J_0=1.  In the raw b^i c^j e^k restriction-degree filtration, cutoff 195
@@ -11,6 +11,14 @@ status: >
   certificate.  This is only the first stable gate; no J_1,J_2, Keller-pair,
   or JC(2) conclusion is claimed.
 source: kps-s194 / Q_dagger actual-lift scout, 2026-08-21
+audit: >
+  PASS -- kps-s195 independently checked the J_0 pullback equation, actual
+  target-ring typing of the raw monomial columns, both exact rank jumps, the
+  gcd-three cutoff minimality scope, deterministic free-zero RREF
+  certificate, restriction/normal-derivative identities, retained values,
+  and every pinned hash.  Normal and optimized companions returned all 238
+  gates byte-identically.  The sharpness claim remains explicitly confined
+  to the raw weighted packet filtration.  No correction was required.
 depends_on:
   - THM-3677-russell-cylinder-degree-eight-fourth-debt-parabola
 related:
@@ -24,7 +32,7 @@ hash_basis: raw LF bytes
 
 # THM-3678 -- Q_dagger actual-ring J_0 lift
 
-**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  The sharp
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The sharp
 fourth-debt candidate from THM-3677 passes the first actual-ring gate.  The
 statement is deliberately limited to `J_0`; the coupled stable equations have
 not yet been certified.
