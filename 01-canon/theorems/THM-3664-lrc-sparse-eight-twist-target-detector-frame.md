@@ -2,7 +2,7 @@
 id: THM-3664
 title: "LRC sparse eight-twist target detector frame"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   After choosing any basis of THM-2334's target-twist group, one transplanted
   copy of THM-3661's signed eight-point mask detects exactly the nonconstant
   twist profile.  Hence a nonzero target fibre exists if and only if one of
@@ -12,6 +12,14 @@ status: >
   the target-twist group, not an identification with the two-current chart
   and not a proof that any covering-row imbalance is nonzero.
 source: kps-s192 / THM-2334 x THM-3661 typed Fourier continuation, 2026-08-21
+audit: >
+  PASS -- agent Lorentz independently checked the typed transplant and every
+  Fourier normalization, all 28561 profile-basis transfer identities, exact
+  reconstruction, both Parseval constants, the fourteen norms and integer
+  determinant by independent resultants, and all 26208 basis masks.  Normal
+  and optimized transcripts and all hashes matched.  It also verified that
+  the THM-3665 sharpening and every physical/all-91-unit scope exclusion are
+  stated correctly.
 depends_on:
   - THM-2334-relation-residue-current-and-character-twist-pushforward
   - THM-3661-lrc-exceptional-detector-simple-spectrum-convolution-rigidity
@@ -30,8 +38,8 @@ hash_basis: raw LF bytes
 
 # THM-3664 -- eight twists detect the complete nonzero target current
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  THM-2334 reduces target survival to nonconstancy of a function on
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  THM-2334 reduces target survival to nonconstancy of a function on
 169 twists.  The present theorem replaces its dense variance test by a
 sparse local witness involving four plus and four minus twists.
 
