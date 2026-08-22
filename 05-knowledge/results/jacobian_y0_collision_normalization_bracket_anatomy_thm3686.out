@@ -1,7 +1,7 @@
 theorem=THM-3686-y0-collision-normalization-and-bracket-anatomy
 restriction=A=3z(2-x^2z);B=2xz(2-x^2z);C=x(1-x^2z)
 kernel=16A^3C^2+27B^4-36AB^2
-immersion_minors=(-12*z*(x**2*z - 2)*(x**2*z - 1), -6*(2*x**4*z**2 - 4*x**2*z + 1), -2*x*(3*x**4*z**2 - 6*x**2*z + 2))
+source_differential_minors=(-12*z*(x**2*z - 2)*(x**2*z - 1), -6*(2*x**4*z**2 - 4*x**2*z + 1), -2*x*(3*x**4*z**2 - 6*x**2*z + 2));unit_ideal=1
 source_bezout=1=(-1/6+2t-t^2){A,C}+2xz(t-2){B,C};t=x^2z
 normalization_generator=g=1-x^2z=2AC/(3B);cubic=g^3-g+BC/2
 normalization_relations=BC-2g(1-g^2);3Bg-2AC;4A(1-g^2)-3B^2

@@ -9,7 +9,8 @@ status: >
   the source plane is the complement of two boundary lines.  The retained
   collision consists of the g=+1 and g=-1 normalization points over
   (A,B,C)=(0,0,1), while g=0 is a third, missing point of that fibre.  The
-  source parametrization is an immersion, 1 is a sum of two Poisson
+  source parametrization is unramified with everywhere-injective differential,
+  1 is a sum of two Poisson
   brackets of elements of R, and the remaining one-bracket equation is
   exactly a planar Jacobian-counterexample construction problem.  No
   homogeneous pair works in any degree, and an exact Groebner gate excludes
@@ -33,10 +34,10 @@ outputs:
   - 05-knowledge/results/jacobian_y0_collision_normalization_bracket_anatomy_thm3686.out
   - 05-knowledge/results/jacobian_y0_target_degree3_one_bracket_no_go_thm3686.out
 script_sha256:
-  - 8d2bf6a92c2ba7db9530490b1cf9325284fe61a2d412ebd34f447ea4b4baac8b
+  - f1b92216adc03101227861caccb5e02b19f7d8e52e9be7aa14cfa5b50b84f1cb
   - 04b31009f7808d434e89a8ea99ac7d40250ac16f9920d60e17236bbef12612f8
 output_sha256:
-  - 79c8db71c266fa42eef5b2552c51b41dcde63a0dfdaefc5137bc8f350fc1b549
+  - e989173b9afabbbcbda2ba06a596ed422fc3cc9094ed4c618874c48b20714b3e
   - aed11227c2637b890632f8c54f55ec596ff93550fcdbbf1ff8757c23ffd1bf90
 hash_basis: LF-normalized bytes
 ---
@@ -119,7 +120,7 @@ H_C=32A^3C.                                             (9)
 Thus the retained collision lands on a singular target axis; it is not an
 unexplained failure of a smooth parametrization.
 
-## 2. The source map is nevertheless an immersion
+## 2. The source differential is nevertheless injective everywhere
 
 The three source minors are
 
@@ -136,9 +137,11 @@ suffice:
 1=(-1/6+2t-t^2){A,C}+2xz(t-2){B,C}.                    (11)
 ```
 
-So the map `A^2_(x,z)->Spec(R)` is an immersion everywhere.  The collision
-must be explained by normalization branches and nonproper boundary, not by
-a critical point on the source plane.
+So the map `A^2_(x,z)->Spec(R)` is unramified, equivalently its differential
+has rank two everywhere.  It is **not** an immersion in the
+algebraic-geometric sense, because `(24)` makes it noninjective.  The
+collision must be explained by normalization branches and nonproper
+boundary, not by a critical point on the source plane.
 
 ## 3. Exact smooth normalization
 

@@ -2,7 +2,8 @@
 """Exact companion for THM-3686.
 
 This script audits the ``y=0`` restriction of the weighted quartic Keller
-map from THM-3438.  It verifies the image equation, the source immersion and
+map from THM-3438.  It verifies the image equation, the injective source
+differential and
 an explicit Bezout identity, the cubic normalization presentation and its
 smoothness, the retained collision on distinct normalization sheets, and
 explicit three- and two-bracket decompositions of one.
@@ -46,7 +47,7 @@ def main() -> None:
         -6 * (2 * t**2 - 4 * t + 1),
         -2 * x * (3 * t**2 - 6 * t + 2),
     )
-    require(tuple(sp.expand(left - right) for left, right in zip((J_AB, J_AC, J_BC), expected_minors)) == (0, 0, 0), "immersion minors")
+    require(tuple(sp.expand(left - right) for left, right in zip((J_AB, J_AC, J_BC), expected_minors)) == (0, 0, 0), "source differential minors")
 
     bezout = sp.expand((-sp.Rational(1, 6) + 2 * t - t**2) * J_AC + 2 * x * z * (t - 2) * J_BC)
     require(bezout == 1, ("source Bezout identity", sp.factor(bezout)))
@@ -223,7 +224,7 @@ def main() -> None:
     print("theorem=THM-3686-y0-collision-normalization-and-bracket-anatomy")
     print("restriction=A=3z(2-x^2z);B=2xz(2-x^2z);C=x(1-x^2z)")
     print("kernel=16A^3C^2+27B^4-36AB^2")
-    print(f"immersion_minors={(J_AB, J_AC, J_BC)}")
+    print(f"source_differential_minors={(J_AB, J_AC, J_BC)};unit_ideal=1")
     print("source_bezout=1=(-1/6+2t-t^2){A,C}+2xz(t-2){B,C};t=x^2z")
     print("normalization_generator=g=1-x^2z=2AC/(3B);cubic=g^3-g+BC/2")
     print("normalization_relations=BC-2g(1-g^2);3Bg-2AC;4A(1-g^2)-3B^2")
