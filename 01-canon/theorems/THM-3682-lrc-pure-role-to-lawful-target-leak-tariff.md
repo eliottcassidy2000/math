@@ -2,18 +2,25 @@
 id: THM-3682
 title: "LRC pure-role to lawful-target leak tariff"
 status: >
-  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  On a pure
-  THM-2305 target word, freeze every factor except the redundant named danger
-  factor and compare that forced THM-2362 role profile with the lawful
-  THM-2365 co-shift row.  Their difference is an exact covariant-leak
-  sequence.  The nonzero-character energy of the lawful row is at least the
-  squared positive part of sqrt(role energy)-sqrt(leak energy).  Thus any
-  leak energy below 121 rho^2/2028 forces target drift, with explicit sharp
-  THM-3674 tariffs.  A translated danger-weight hostile attains equality at
-  complete cancellation, so positivity and even quadratic root energy do
-  not remove the leak sidecar.  This is a conditional transfer theorem, not
-  a covering-row leak bound or LRC(14) proof.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED AFTER TYPING
+  REPAIR.  The nonzero-character energy of any covariant profile is at least
+  the squared positive part of sqrt(frozen-role energy)-sqrt(leak energy).
+  THM-2362 therefore gives a sharp 121 rho^2/2028 gate and THM-3674 gives
+  exact drift tariffs for a current-scale present-Q auxiliary table.  The
+  original THM-2365 handoff instead contains Q(Rx): because 13 divides R,
+  its redundant word factor is target-fixed, so the present-Q table is not
+  that delayed row.  A translated danger-weight hostile attains complete
+  cancellation.  The abstract tariff and auxiliary realization are proved;
+  the target/word intertwiner, covering-row leak bound, and LRC(14) remain open.
 source: kps-s197 / pure-role versus diagonal-coshift comparison, 2026-08-21
+audit: >
+  PASS AFTER ONE LOAD-BEARING SCALE REPAIR -- Lovelace independently checked
+  every Fourier and THM-3674 normalization, the sharp interval hostile, and
+  the root-energy constants.  The audit caught that the first draft moved a
+  redundant factor inside the delayed word Q(Rx); periodicity actually fixes
+  it under the lawful target co-shift.  The repaired theorem applies directly
+  to an explicitly constructed current-scale present-Q table and records the
+  missing target/word-action intertwiner for the original delayed current.
 depends_on:
   - THM-2305-canonical-blocker-word-handoff-hypergraph
   - THM-2362-thirteen-shift-successor-statistic-and-role-jet-floor
@@ -33,10 +40,11 @@ hash_basis: raw LF bytes for files; canonical exact hostile ledger for semantic 
 
 # THM-3682 -- the role mode survives exactly when covariance cannot pay for it
 
-**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  This theorem
-identifies the missing coordinate between THM-2362's factor-coloured role and
-THM-2365's lawful target action.  It is an exact Hilbert-space comparison,
-not an assertion that the missing term is small on a hypothetical cover.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED AFTER TYPING
+REPAIR.**  This theorem identifies the missing coordinate between
+THM-2362's factor-coloured role and a covariant target profile.  It is an
+exact Hilbert-space comparison.  Its physical realization below is a new
+current-scale present-word table, not the original delayed handoff current.
 
 ## 1. The universal finite-group tariff
 
@@ -81,19 +89,27 @@ E(C)>=(1-sqrt(theta))^2 E(R).                       (6)
 
 No sign or phase hypothesis is hidden in this estimate.
 
-## 2. Exact typing on a pure LRC word
+## 2. Exact current-scale realization and the delayed-word boundary
 
-Put `p=13`.  Fix a THM-2305 pure word `Q_(j,{a})`, with `a` the nondeep
-THM-2365 target blocker and `c` the deepest target blocker.  The scalar cover
-makes the displayed `a`-danger factor redundant: after deleting it, the
-remaining nonnegative density is still supported where that factor equals
-one.
+Put `p=13`.  Fix a THM-2305 pure word `Q=Q_(j,{a})`, with `a` the nondeep
+target blocker and `c` the deepest target blocker.  At the **current scale**
+write its indicator as
+
+```text
+1_Q(x)=d(c_a x)G_0(x).                               (7)
+```
+
+The scalar cover makes the displayed `a`-danger factor redundant, so
+
+```text
+support(G_0) subset {x:d(c_a x)=1}.                 (8)
+```
 
 Fix the second target coordinate at `t=0` and include the exact successor
 weight
 
 ```text
-chi(x)=2-d(13c x),                 1<=chi<=2.        (7)
+chi(x)=2-d(13c x),                 1<=chi<=2.        (9)
 ```
 
 Push the remaining base density forward through `y=c_a x`.  The finite-root
@@ -101,73 +117,108 @@ average gives an integrable nonnegative density `w_0(y)` with
 
 ```text
 support(w_0) subset D={d=1},
-rho=int_T w_0(y)dy>0.                               (8)
+rho=int_T w_0(y)dy>0.                              (10)
 ```
 
 With the sign inherited from THM-2365, put
 
 ```text
 A_s(y)=d(y-s/13),
-R_s=int_T w_0(y)A_s(y)dy.                           (9)
+R_s=int_T w_0(y)A_s(y)dy.                          (11)
 ```
 
 Changing `s` to `-s` does not change any energy.  Hence THM-2362 gives
 
 ```text
-E(R)>=121 rho^2/2028.                              (10)
+E(R)>=121 rho^2/2028.                              (12)
 ```
 
-Now let every other present factor undergo the actual lawful quotient-dual
-co-shift.  Delete only the moving `a`-factor and push the resulting remainder
-forward in the same way; call its density `w_s`.  The actual successor row is
+Construct a **present-Q auxiliary table** by setting the delayed factor to
+`W=1` and co-shifting every current-scale factor of `Q` in the chosen lawful
+two-target chart.  Write
 
 ```text
-C_s=S(s,0)=int_T w_s(y)A_s(y)dy.                   (11)
+E^Q_(s,0)(x)=d(c_a x-s/13)G_s(x).                  (13)
+```
+
+Delete only the moving `a`-factor and push `G_s(x)chi(x)dx` forward through
+`y=c_a x`; explicitly,
+
+```text
+w_s(y)=1/|c_a| sum_(c_a x=y)G_s(x)chi(x).           (14)
+```
+
+The auxiliary successor row is now exactly
+
+```text
+C_s=S_Q(s,0)=int_T w_s(y)A_s(y)dy.                 (15)
 ```
 
 Thus the covariant leak has the concrete physical formula
 
 ```text
-L_s=int_T (w_s(y)-w_0(y))A_s(y)dy.                 (12)
+L_s=int_T (w_s(y)-w_0(y))A_s(y)dy.                 (16)
 ```
 
-This is the promised map.  The source and target use the same word, named
-danger factor, successor weight, and target coordinate.  Freezing the other
-factors destroys only their covariance; `(12)` records exactly that lost
-information.
+For this present-Q table, the source and target use the same current-scale
+word, named danger factor, successor weight, and quotient-dual coordinate.
+Freezing the other factors destroys only their covariance; `(16)` records
+exactly that lost information.
 
-Combining `(4)` and `(10)` yields the usable gate
+The original THM-2365 handoff table is different.  It has
+
+```text
+F_(s,0)(x)=E_(s,0)(x)Q(Rx),               13|R.     (17)
+```
+
+The redundant danger factor lies inside `Q(Rx)`.  Under the lawful target
+co-shift it becomes
+
+```text
+d(Rc_a x-Rs/13)=d(Rc_a x),                         (18)
+```
+
+so it is fixed by periodicity.  Pushing through `y=c_a x` produces `d(Ry)`,
+not `A_s(y)`.  Therefore `(15)` does **not** type the original delayed row.
+Relating `S_Q` to that row requires a target/word-action intertwiner or
+Bockstein sidecar not proved here.
+
+Combining `(4)` and `(12)` yields the usable gate
 
 ```text
 E(L)<121 rho^2/2028
 
-  => E(C)>=(11rho/sqrt(2028)-sqrt(E(L)))^2>0.       (13)
+  => E(C)>=(11rho/sqrt(2028)-sqrt(E(L)))^2>0.       (19)
 ```
 
-Consequently the THM-2365 successor marginal is nonconstant and its drift is
-positive.
+Consequently the present-Q successor marginal is nonconstant and its lawful
+auxiliary drift is positive.  No conclusion about the delayed handoff row
+follows without the intertwiner after `(18)`.
 
 ## 3. Sharp target-energy invoice
 
-Let `S(s,t)` be the complete THM-2365 successor table and keep the row
-`C_s=S(s,0)`.  The global mean minimizes squared distance on this row, so
+Let `S_Q(s,t)` be the complete present-Q auxiliary successor table and keep
+the row `C_s=S_Q(s,0)`.  The global mean minimizes squared distance on this
+row, so
 
 ```text
-Var(S)
- =1/p^2 sum_(s,t)|S(s,t)-S_bar|^2
- >=E(C)/p.                                         (14)
+Var(S_Q)
+ =1/p^2 sum_(s,t)|S_Q(s,t)-S_Q_bar|^2
+ >=E(C)/p.                                         (20)
 ```
 
-The constant `1/p` is sharp: take every other row to be constant at the mean
-of `C`.  THM-3674 now gives, at `p=13`,
+Retaining the deep target complement in `G_s` and inserting the shifted deep
+danger probe gives the same exact diagonal zero `H_Q(t,s,t)=0` as in
+THM-2365.  The constant `1/p` is sharp: take every other row to be constant
+at the mean of `C`.  THM-3674 now gives, at `p=13`,
 
 ```text
-D_H   >=E(C)/2028,
-E_dt  >=E(C)/26364.                                (15)
+D_Q   >=E(C)/2028,
+E_dt,Q >=E(C)/26364.                               (21)
 ```
 
-Here `E_dt` is the nonzero-deep, nonzero-target energy in THM-3674.  Under
-the strict hypothesis in `(13)`, set
+Here `E_dt,Q` is the nonzero-deep, nonzero-target energy of this auxiliary
+tensor.  Under the strict hypothesis in `(19)`, set
 
 ```text
 Gamma=(11rho/sqrt(2028)-sqrt(E(L)))^2.
@@ -176,15 +227,14 @@ Gamma=(11rho/sqrt(2028)-sqrt(E(L)))^2.
 Then the entirely explicit consequence is
 
 ```text
-Var(S)>=Gamma/13,
-D_H>=Gamma/2028,
-E_dt>=Gamma/26364.                                 (16)
+Var(S_Q)>=Gamma/13,
+D_Q>=Gamma/2028,
+E_dt,Q>=Gamma/26364.                               (22)
 ```
 
-Thus the remaining covering-row task is not “make a role harmonic”: that is
-already forced.  It is the quantitative assertion that the other factors'
-covariant leak cannot be exactly antiparallel with enough energy to erase
-that harmonic.
+For the auxiliary table, the remaining task is to keep the other factors'
+covariant leak from becoming exactly antiparallel.  For the original handoff,
+an earlier task comes first: construct the target/word intertwiner in `(18)`.
 
 ## 4. The cancellation threshold is attained physically
 
@@ -192,7 +242,7 @@ Let
 
 ```text
 D=(-1/14,1/14) mod 1,             w_0=d,
-A_s(y)=d(y-s/13).                                  (17)
+A_s(y)=d(y-s/13).                                  (23)
 ```
 
 The frozen overlap profile is exactly
@@ -200,14 +250,14 @@ The frozen overlap profile is exactly
 ```text
 R_0=1/7,
 R_1=R_12=6/91,
-R_s=0 otherwise.                                   (18)
+R_s=0 otherwise.                                   (24)
 ```
 
 Its nonzero-character energy is
 
 ```text
 E(R)=2508/1399489
-    >121/99372=121 rho^2/2028.                     (19)
+    >121/99372=121 rho^2/2028.                     (25)
 ```
 
 Now covary the remainder by the same translation:
@@ -221,7 +271,7 @@ Then
 ```text
 C_s=int A_s(y)^2dy=1/7             for every s,
 
-E(C)=0,             L^o=-R^o,      E(L)=E(R).       (20)
+E(C)=0,             L^o=-R^o,      E(L)=E(R).       (26)
 ```
 
 This is an exact interval-set hostile, not a rounding or endpoint artifact.
@@ -238,15 +288,15 @@ THM-2305 supplies, on the same pure word and for every nonzero root character
 ```text
 W_kappa=1_Q |M_kappa|^2,
 
-int W_kappa>p_a^2.                                  (21)
+int W_kappa>p_a^2.                                  (27)
 ```
 
-Multiplying by the successor weight `(7)` only increases its mass.  Deleting
+Multiplying by the successor weight `(9)` only increases its mass.  Deleting
 the redundant named danger factor and freezing the root-energy weight gives
 the rigorously typed quadratic **role** floor
 
 ```text
-E(R_kappa)>121 p_a^4/2028.                          (22)
+E(R_kappa)>121 p_a^4/2028.                          (28)
 ```
 
 The root-character action is not automatically the lawful target action.  If
@@ -256,14 +306,15 @@ then Sections 1--3 apply to its leak.  In that conditional lane, the concrete
 sufficient test
 
 ```text
-E(L_kappa)<=121 p_a^4/2028                          (23)
+E(L_kappa)<=121 p_a^4/2028                          (29)
 ```
 
 forces a nonconstant lawful **quadratic-energy** profile.  If
-`p_a>rho_j/3`, the right side can be weakened to the source-only threshold
+`p_a>rho_j/3`, the smaller source-only threshold gives the stronger sufficient
+leak hypothesis
 
 ```text
-121 rho_j^4/164268.                                 (24)
+121 rho_j^4/164268.                                 (30)
 ```
 
 This does not by itself land the original linear marked current.  The
@@ -279,13 +330,16 @@ overclaiming it:
 
 ```text
 ordinary pure word:
-  bound E(L) below the role floor -> actual THM-2365 drift;
+  present-Q table + bound E(L) below the role floor -> auxiliary drift;
+
+original delayed word:
+  first construct a target/word-action intertwiner;
 
 root-energy word:
   first construct the target/root covariant family,
-  then bound E(L_kappa) below (23) -> quadratic drift,
+  then bound E(L_kappa) below (29) -> quadratic drift,
   then prove a polarization/intertwiner sidecar -> linear target current.
-                                                               (25)
+                                                               (31)
 ```
 
 ## 6. Exact companion and scope
@@ -301,7 +355,8 @@ python -O -B 04-computation/lrc_pure_role_lawful_target_leak_tariff_thm3682.py
 ```
 
 Both executions agree with the pinned LF transcript and pass `169` active
-gates.  The theorem does not bound the leak on a hypothetical scalar cover,
-does not exclude THM-3670's thirteen-number recirculation locus, does not
-identify quadratic and linear targets, and does not prove LRC(14).  **QED
-pending independent hostile audit.**
+gates.  The theorem does not identify the present-Q auxiliary table with the
+original delayed handoff, bound either leak on a hypothetical scalar cover,
+exclude THM-3670's thirteen-number recirculation locus, or identify quadratic
+and linear targets.  The independent audit found and repaired exactly this
+current-scale/delayed-scale seam.  LRC(14) remains open.  **QED.**

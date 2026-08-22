@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-440 (2026-08-21, first THM-3682 draft) -- moving a current-scale pure-word role inside a target-fixed delayed word
+
+- **What failed:** the first role-to-target leak draft wrote the original
+  THM-2365 successor row as `S(s,0)=int w_s(y)d(y-s/13)dy` by treating the
+  redundant danger factor of a pure terminal word as a present factor.
+- **Minimal witness / first failed implication:** the actual handoff has
+  `F_(s,0)(x)=E_(s,0)(x)Q(Rx)` with `13|R`.  Its word factor transforms as
+  `d(Rc_a x-Rs/13)=d(Rc_a x)`, so the target action fixes it exactly.  The
+  pushforward contains `d(Ry)`, not `d(y-s/13)`.  Thus the forced
+  factor-coloured role mode does not type the original delayed target row.
+- **Repair / strongest survivor:** the normalized Fourier reverse-triangle
+  tariff, `121 rho^2/2028` role floor, sharp cancellation hostile, and
+  `1/2028`, `1/26364` energy invoices are correct.  THM-3682 now realizes
+  them on an explicitly constructed current-scale present-`Q` auxiliary
+  table.  Transport to the original handoff requires a target/word-action
+  intertwiner or Bockstein sidecar.  The reusable warning is: a factor may be
+  movable before transport but neutral after a clock divisible by the target
+  modulus; always type the scale before composing character actions.
+
 ## MISTAKE-439 (2026-08-21, THM-3676 audit) -- disjointness from the blind space was mislabeled as the sharp detector premise
 
 - **What failed:** the first THM-3676 draft called
