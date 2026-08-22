@@ -2,7 +2,8 @@
 id: THM-3689
 title: "Fully transverse two-by-two sparse-support Keller gate"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT.  In the normalized planar chart
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  In the normalized planar chart
   P=x plus two nonlinear monomials and Q=y plus two nonlinear monomials,
   suppose both P monomials have nonzero x exponent, both Q monomials have
   nonzero y exponent, and every P/Q exponent pair has nonzero determinant.
@@ -13,6 +14,10 @@ status: >
   or parallel-exponent boundary.  Those boundaries, larger supports, and
   JC(2) remain open; no counterexample is claimed.
 source: jc-sparse-direct-search / 2026-08-22
+audit: >
+  PASS -- root independently checked the eight-term expansion, the equivalence
+  between constant Jacobian and a no-singleton equality partition under the
+  active hypotheses, all-exponent scope, both replays, and documentation.
 depends_on: []
 related:
   - THM-3418-one-monomial-nonlinear-fiber-keller-classification
@@ -29,7 +34,8 @@ hash_basis: raw LF bytes for files; ordered partition/solution/exit ledger for s
 
 # THM-3689 -- fully transverse two-by-two sparse-support Keller gate
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT.**  This theorem attacks the
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+This theorem attacks the
 smallest genuinely two-sided sparse chart directly in the source polynomial
 ring.  It does not use a degree bound, Newton-area proxy, or failure to find a
 coefficient solution: its obstruction occurs before the coefficient equations.
@@ -46,6 +52,12 @@ B=(gamma_1,delta_1),      D=(gamma_2,delta_2)             (1)
 ```
 
 be distinct pairs of nonnegative integer exponent vectors on each side, with
+
+```text
+|(rho,sigma)|:=rho+sigma,
+```
+
+and
 
 ```text
 |A|,|C|,|B|,|D| >= 2.                                    (2)
