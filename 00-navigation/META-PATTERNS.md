@@ -1,6 +1,7 @@
 # Meta-Patterns for Mathematical Research
 
-**Status:** CURRENT. **Role/Use:** compact defaults from repeated successes and failures; scan triggers and evidence. Each card states applicability, action, mechanism, and counterindication; new cards require distinct-thread evidence or a severe repaired failure.
+**Status:** CURRENT. Compact defaults from repeated successes and failures;
+new cards require distinct-thread evidence or a severe repaired failure.
 
 ## Separate observer type, recurrence class, and finite head
 
@@ -10,14 +11,13 @@ THM-3288's degree-14 tail with prefix/Hankel order 15 is a sharp head tax.
 
 ## Peel the distinguished prime, then force a small torsion collision
 
-**Trigger/action:** for density-`1/p` combs on `D`, prove the quotient-index dichotomy after `D=pq`, split transverse sections from vertical spikes, and
-Möbius-count only base loads/status bits.  After a wall forces one unbounded
-primitive-unit label of denominator `d`, let `S` be the distinct residues of
-the fixed-clean cells mod `d`.  If `r|d`, `2<=r<=7`, and `|S|>d/r`, two
-residues share a coset of the order-`r` subgroup; their effective order is at
-most `r`, so every unit phase separates them by at least `1/7`. **Caution:**
-prove the high wall and finite low-pair reduction first; zero-high relaxations often pass,
-and several movers defeat the finish. **Evidence:** THM-2928/2941 (`M=7`, `z=324/312`) and THM-2072's antipodal dyadic seam.
+**Trigger/action:** for density-`1/p` combs on `D=pq`, split transverse
+sections from vertical spikes and Möbius-count only base loads/status bits.
+If a wall forces an unbounded primitive-unit denominator `d`, keep the clean
+residues `S`: when `r|d`, `2<=r<=7`, and `|S|>d/r`, two share an order-`r`
+coset and every unit phase separates them by at least `1/7`. **Caution:** first
+prove the high wall and finite low-pair reduction; zero-high relaxations and
+multiple movers can survive. **Evidence:** THM-2928/2941 and THM-2072.
 
 ## Inventory retained power classes before classifying base-curve genus
 
@@ -67,11 +67,11 @@ jet on an arbitrary zero face, while THM-3066 erases the pointed Keller ratio.
 
 ## Search the statement before the method
 
-**Trigger:** inheriting a target, naming an invariant, or proposing a “new” lemma.
-**Action:** search exact constants, inequalities, quantifiers, construction shape, theorem IDs, and canonical synonym families; dereference every cited ID.
-**Mechanism:** methods give the same theorem disjoint vocabularies, so method-keyword searches miss prior solutions and refutations.
-**Counterindication:** independent rederivation remains useful when framed as verification and compared proof-by-proof.
-**Evidence:** MISTAKE-183, 187, 189, 200, and 158 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
+**Trigger/action:** before naming a lemma, search its constants, quantifiers,
+shape, IDs and synonym families; dereference citations. Different methods hide
+the same theorem under disjoint vocabularies. Independent rederivation is still
+useful as explicit proof-by-proof verification. **Evidence:** MISTAKE-158/183/
+187/189/200 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
 
 ## Correct the object before sharpening the technique
 
@@ -339,21 +339,16 @@ THM-2290/2292/2294 and the S79 support-Dirichlet reflection.
 
 ## Classify response-state growth before naming the closed form
 
-**Trigger / action:** for repeated joins, substitutions, block lifts, or transfers, derive the operation response before naming a closed form; classify the sufficient state as fixed jet, moving endpoint jet, bounded time-varying transfer, or gauged arithmetic section.
-Before claiming finite detection, test whether the annihilation or nilpotency
-length is uniform over the object family.  **Mechanism / limit:** these state
-types respectively expose polynomial--exponential tails, efficient
-non-C-finite evolution, P-recursive elimination, or exact decimation, but do
-not compute an arbitrary seed or imply a converse or low bit complexity.  A
-single object may have a finite response while the family has unbounded
-response length.  On a power orbit inside a coordinate ideal, the first
-accessible pure boundary jet can itself move linearly with the power, making
-every fixed derivative bank eventually blind even before multiplier access
-is considered.  **Evidence:** THM-3181/3202/3186/3235/3268; THM-3466 has both
-an exact uniform length-two boundary-current block and the moving boundary-jet
-hostile, whereas THM-3383/3397 have locally nilpotent polynomiality-debt
-strings of every length, and THM-3465's factorial hostile exits a depth-two
-multiplication kernel at the next power.
+**Trigger/action:** for repeated joins, lifts or substitutions, derive the
+operation response first; classify its sufficient state as fixed jet, moving
+endpoint jet, time-varying transfer, or gauged arithmetic section. Test
+uniform annihilation length over the family before claiming finite detection.
+**Mechanism/limit:** one object can have finite response while family length is
+unbounded; a moving boundary jet eventually blinds every fixed derivative
+bank. These states expose tail type or decimation, not a converse or low bit
+complexity. **Evidence:** THM-3181/3202/3186/3235/3268; THM-3466 contrasts a
+uniform length-two block with its moving-jet hostile; THM-3383/3397 have debt
+strings of every length, and THM-3465 exits a depth-two kernel one power later.
 
 ## Divide exceptional multiplicity before judging a wall
 

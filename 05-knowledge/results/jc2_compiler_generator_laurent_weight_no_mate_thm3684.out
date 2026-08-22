@@ -1,0 +1,5 @@
+THM-3684 exact companion -- compiler-generator Laurent-weight no-mate
+status=PROVED VERIFIED-EXACT
+semantic_sha256=285475b809b60618be6c799a35ff0c1dd28caeb5ed24273ef6052d04480b4250
+CHECKS=682
+RESULT=PASS

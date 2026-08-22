@@ -26,43 +26,27 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 ### Exact live obligation
 
 Direct frontier: `<=6`; projected caps `1579/216`. At `z1=216`, THM-3361
-closes the three `L720720` rows; THM-3378 closes row 94 of the next family and
-leaves ledger/wall/families `372913/109/12`; 12 rows remain.
-THM-3349--3360 close all `561` reflected six-level `k=1` bodies and prove the
-physical edge floor. THM-3381 refutes residue-blind phase/tree transfer.
-Arbitrary `k<=1`, projected `k=2,3`, rung, physical entry and LRC remain open.
-THM-3356/3366 leave k2/k3 `4056/1897`; k3 is a 20-edge `Phi`-DAG and k2's
-`C3` is divisor-spliced. THM-3385--3398 give q2--7/all-q mode/cochain laws.
-THM-3414--3416 give ZMC rank-4/5/6 bases `8,9` / `10,12` / `11,15,23,25`.
-THM-3425 gives primitive cap-six support.
-[THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md) proves 15-atom cap-seven support only at zero current.
-THM-3479: U_full `169/169`,`13^3`,`72/72` (no U_clock). THM-3514/3515:
-owner `52/117`, rank4. THM-3518 pins `56,592` zero pairings; THM-3524 blocks
-`C7/K4` (`3<4`). MISTAKE-417 rank1. Audited signatures:
-`4/36;(3,12,12)/432;(5,12,12);6/432`; two-current `12->4/W_6`,`3/4`,pure5184.
-Current-root `4/6;40/42`; source `17->4->6`. `r1 13/12`: carrier6,
-169 nonstationary `K`; P4/P7 `68/78`; `3/4=even/+middle`, tent8,
-`H1=0`, audited. `r2`: diag2197, unique1690, `I6`/projector130/169,
-cocycle live `0/1742`; `Q10/Adef2/Q_A8`, chamber5+5, transfer self/min3.
-Typed bridges/LRC open.
-THM-3665 proves the optimal three-site target detector; audited THM-3666
-realizes it by one centre and two blocker/graft pair shifts, and THM-3667/3668
-give its sharp level-13 frame and finite-group rank-plus-one law.  Audited
-THM-3669 and THM-3672 are complementary exact positive controls on the typed
-non-cover row: every one of the 120 packet currents is nonzero and every
-THM-2365 successor-mass defect is strictly negative.  Audited THM-3670
-reduces a genuine-cover sufficient test to thirteen rational masses: all
-thirty chosen defects can vanish only when six `A` masses agree, six `B`
-masses agree, and `S0+A=2B`.  Audited THM-3671 identifies the fixed-source
-all-packet blind space as the pure-source line, with one extra nonsource
-diagonal exactly on the scalar-sum-zero branch; four charts suffice.  The
-live analytic obligation is to exclude the thirteen-mass recirculation on a
-genuine cover, or to prove that the grouped all-unit current is nonzero in a
-strict common phase cone (termwise all-unit address banks do not supply this).
-THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
-two normal completions but empty outer co-support.  Current/exit stay open;
-HYP-8871 leaves `165` rows.  THM-2363/THM-2368 are sidecars; THM-2417--2894
-recover valuations, not `28,393` semantic roots/gluing (MISTAKE-281/300/310/313).
+closes the three `L720720` rows; THM-3378 leaves 12 rows in the next family
+(`372913/109/12`). THM-3349--3360 close all 561 reflected six-level `k=1`
+bodies and prove the edge floor; THM-3381 blocks residue-blind phase/tree
+transfer. Arbitrary `k<=1`, projected `k=2,3`, rung and physical entry remain.
+THM-3356/3366 leave k2/k3 `4056/1897`; THM-3385--3398 give the q2--7/all-q
+mode/cochain laws. THM-3414--3416 give ZMC rank-4/5/6 bases; THM-3425 gives
+primitive cap-six support; [THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md)
+allows 15-atom cap-seven support only at zero current.
+
+The newest exact interface is THM-3665--3672. The optimal three-site detector
+has a one-centre/two-shift realization, sharp level-13 frame and rank-plus-one
+law. All 120 typed packet currents are nonzero and all THM-2365 successor-mass
+defects are negative. A genuine-cover sufficient test reduces to thirteen
+rational masses: simultaneous vanishing forces six equal `A` masses, six equal
+`B` masses and `S0+A=2B`. The fixed-source blind space is the pure-source line,
+with one extra nonsource diagonal only on the scalar-sum-zero branch. The live
+analytic obligation is to exclude that thirteen-mass recirculation on a
+genuine cover, or prove grouped all-unit current nonzero in a strict common
+phase cone; termwise address banks do not do this. Older CSP/ray/phase/current
+work (THM-3135--3524) supplies sidecars, not the typed bridge or LRC conclusion.
+THM-2363/THM-2368 are sidecars; THM-2417--2894 recover valuations, not the `28,393` semantic roots or their gluing (MISTAKE-281/300/310/313).
 
 ### Independent routes that remain live
 
@@ -370,10 +354,21 @@ is sharp: equal counts allow two densities or none.
   nonzero `J_2` debt in every retained
   rank-one/two `J_0=1` cell. THM-3641 exposes ordinary curvature zero-debt
   planes; THM-3642 realizes one by an exact `Q_6` lift through `J_2`, then
-  forces nonzero `J_4` debt for `Q_6,Q_*`. Other ordinary zero-debt polynomials,
+  forces nonzero `J_4` debt for `Q_6,Q_*`. THM-3677 cuts the complete
+  degree-at-most-eight principal zero-second-debt plane by one rational
+  zero-fourth-debt parabola. THM-3678/3680 lift its rational point
+  `Q_dagger` through the actual target-ring equations `J_0=1,J_1=J_2=0`,
+  but THM-3681 closes every continuation at universal order six. Pending-
+  audit THM-3683 computes the whole parabola's sixth debt: only the four
+  roots of one irreducible quartic survive the complete retained six-jet
+  window; no actual lift at those roots is known. THM-3684 proves that no
+  nonconstant polynomial in one of `b,c,e` has a mate even in the full source
+  ring, so mixing only the opposite output cannot work. Higher-degree
+  zero-debt polynomials, the four THM-3683 folds,
   THM-3641's excluded nonordinary tangent collisions, nonquadratic folds, and
-  THM-3629's mixed `H'(0)!=0` pairs remain OPEN. A positive global pair here
-  pulls back to a noninjective Keller map and refutes `JC(2)`. THM-3564--78
+  THM-3629's genuinely two-output-mixed `H'(0)!=0` pairs remain OPEN. A
+  positive global pair here pulls back to a noninjective Keller map and
+  refutes `JC(2)`. THM-3564--78
   cover factor/nodal obstructions; `A4/S4` cubic is blocked, quartic `C3` OPEN
   (MISTAKE-416), and unrestricted `C[A,d]^2` remains equivalent to `JC(2)`.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
