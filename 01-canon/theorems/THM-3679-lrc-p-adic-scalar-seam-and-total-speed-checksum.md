@@ -7,11 +7,14 @@ status: >
   target-zero address to be globally scalar.  On the all-coordinate-unit
   relation fibre this scalar hostile exists exactly when 13^n divides the
   total speed sum.  Hence for every positive integer row it dies by depth
-  nu_13(sum w_i)+1.  This is an address/Bockstein theorem: no common grouped
-  current, physical higher-digit packet action, phase noncancellation,
-  covering-row exclusion, or LRC(14) conclusion is proved.
+  nu_13(sum w_i)+1.  THM-2334 realizes each higher difference pushforward by
+  exact coordinate twists at a sufficiently delayed word clock.  No common
+  grouped current across two legitimate owner-source semantics, phase
+  noncancellation, covering-row exclusion, or LRC(14) conclusion is proved.
 source: kps-s195 / THM-3676 Bockstein continuation, 2026-08-21
 depends_on:
+  - THM-2334-relation-residue-current-and-character-twist-pushforward
+  - THM-2365-lawful-target-coshift-and-h-drift-dichotomy
   - THM-3676-lrc-cross-source-blind-intersection-and-scalar-seam
 related:
   - THM-2337-expiration-word-residue-invisibility-and-first-bockstein-sidecar
@@ -51,9 +54,10 @@ Fix a selected source `j in B`, write `{a,b}=B minus {j}`, and for distinct
 pi^j_(k,l,n)(r)=(r_a-r_k,r_b-r_l) in A_n^2.         (3)
 ```
 
-At `n=1`, this is the target-difference map underlying THM-3671/3676.  For
-`n>1`, equation (3) is presently a relation-address refinement, not an
-asserted physical target quotient.
+At `n=1`, this is the target-difference map underlying THM-3671/3676.  At
+larger `n`, equation (3) is first a relation-address refinement; Section 5
+records its exact coordinate-twist realization and the remaining semantic
+qualification.
 
 Use the four charts
 
@@ -159,26 +163,43 @@ n_*=v+1.                                            (13)
 No positive speed row can remain jointly scalar-blind at every 13-adic
 depth.
 
-## 5. Exact semantic boundary
+## 5. Exact twist realization and semantic boundary
 
-THM-2334 permits reduction of the exact relation-address current modulo any
-integer, and THM-3658 gives a linear carry-sensitive character bridge at
-modulus 169.  Neither result identifies (3), for `n>1`, with the physical
-owner-packet action used by the mod-thirteen target quotient.  A shift by
-`1/13^n` also leaves a transported word neutral only when its clock contains
-enough powers of thirteen.
+THM-2334 permits reduction of the exact relation-address current modulo every
+integer `N`.  At `N=13^n`, push that current through (3).  Fourier inversion
+identifies its two-dimensional transform with the coordinate twists
 
-More importantly, THM-2305 does not yet transport literally one nonzero
-grouped residue current, in the same labelled coordinates and phase gauge,
-through two distinct source packet families.  The new exact interface is
+```text
+ell=s(e_a-e_k)+t(e_b-e_l),          s,t in A_n,      (14)
+```
+
+which translate the nine base coordinates by `ell_i/13^n`.  If the delayed
+word clock is `R=13^K` with `K>=n`, its translated coordinate is shifted by
+
+```text
+R ell_i/13^n in Z,
+```
+
+so every transported word factor is unchanged.  THM-2365 permits the fixed
+positive word clock to be chosen arbitrarily large.  Thus each higher packet
+difference has an exact physical coordinate-twist profile on any one fixed
+owner current; no new carry-convolution identification is needed.
+
+What remains missing is the cross-source semantics.  THM-2305 does not yet
+transport literally one nonzero grouped all-unit residue current, in the same
+labelled coordinates and phase gauge, through two distinct legitimate
+owner-source packet families.  Merely applying the second set of coordinate
+twists to the first owner's current does not prove that it is the second
+owner-aligned packet current.  The new exact interface is
 
 ```text
 common all-unit current at depth n_*
   + sourcewise noncancellation
   + two source packet actions
-  -> some higher target or divided-difference target is nonzero.   (14)
+  -> some higher target or divided-difference target is nonzero.   (15)
 ```
 
 Equation (13) proves that there is no algebraic scalar hostile left at that
-depth.  It does not supply any premise in (14).  No scalar row is excluded
+depth, while (14) realizes each action separately.  It does not supply the
+common-current or noncancellation premises in (15).  No scalar row is excluded
 and LRC(14) remains open.  **QED.**
