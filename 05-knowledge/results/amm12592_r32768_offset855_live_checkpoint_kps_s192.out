@@ -1,3 +1,5 @@
 R=32768;offsets=(855,856);runs=independent;engine=8887080fc6e30760efa4a0ba76218ec97676cc717c6e76ccefbaeec6c73684ad
 offset=855;stable_result=(855, 'CLOSED', 20238, 20449, 32551, 40044, 16383, 8132, None);seconds=4701.792
 offset=856;stable_result=(856, 'CLOSED', 20233, 20450, 32549, 40045, 16383, 8134, None);seconds=4223.111
+offset=854;full_diagnostic_replay=INCONCLUSIVE_MEMORYERROR;site=junkL1_observer_addition;no_rule_A_status_obtained
+offset=854;observer_elided_state_replay=IN_PROGRESS;controls=((64,0),(64,1),(512,4),(512,5));dynamics_unchanged=junkL1_is_diagnostic_only
