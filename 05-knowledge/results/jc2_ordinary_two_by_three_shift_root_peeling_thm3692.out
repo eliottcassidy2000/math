@@ -1,0 +1,14 @@
+THM-3692 exact companion -- ordinary 2x3 shift-root peeling
+forced_determinant=ell*sy + k*sx + 1
+I_seed2:profile=((1, 2), (2, 2), (3, 2), (4, 2), (5, 2), (6, 1)):singletons=(6,)
+II_seed3:profile=((1, 2), (2, 2), (3, 2), (4, 2), (5, 2), (7, 1)):singletons=(7,)
+II_root3:profile=((1, 2), (2, 2), (3, 2), (4, 2), (5, 1), (6, 1), (7, 1)):singletons=(5, 6, 7)
+II_both3:profile=((1, 2), (2, 2), (3, 3), (4, 2), (5, 1), (6, 1)):singletons=(5, 6)
+III_root3:profile=((1, 2), (2, 3), (3, 3), (4, 2), (5, 1)):singletons=(5,)
+III_root4:profile=((1, 2), (2, 3), (3, 2), (4, 2), (5, 1), (6, 1)):singletons=(5, 6)
+direct_degree7=monomials:33,universe:2880768,survivors:0
+leading_parallel_degree10=monomials:63,full_universe:77555583,tests:3739003,survivors:0
+controls=one_by_three_tame:PASS,two_pure_y_plus_y:PASS,collision_debt:PASS
+semantic_sha256=48c059b4da5666623bf5f82c7b99b7c92f5156ba05efab16f38788b50f14222e
+CHECKS=40
+RESULT=PASS
