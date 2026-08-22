@@ -2,7 +2,7 @@
 id: THM-3687
 title: "Russell-cylinder exceptional-quartic actual-ring J0 lift"
 status: >
-  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  Over the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over the
   irreducible quartic field cut out by THM-3683's sixth-debt polynomial, all
   four exceptional degree-eight folds have one uniform actual-target-ring
   lift through J_0=1.  A split finite-field fibre selects a 218-square only;
@@ -12,6 +12,12 @@ status: >
   feasibility are finite-field controls only.  No J_1, J_2, Keller-pair, or
   JC(2) claim is made.
 source: jc_zero_debt_lift / exceptional-quartic actual lift, 2026-08-22
+audit: >
+  PASS -- root independently checked actual target-monomial typing, the
+  G_1/F_1 column signs, the 218-field-square to 872-rational-square power-
+  basis expansion, exact contraction, all 219 residual rows, and the strict
+  finite-field-only boundary; a fresh normal replay matched the frozen
+  hashes and transcript without correction.
 depends_on:
   - THM-3683-russell-cylinder-sixth-debt-quartic-on-the-zero-fourth-parabola
 related:
@@ -28,7 +34,7 @@ hash_basis: raw LF bytes
 
 # THM-3687 -- all four sixth-debt folds pass the actual `J_0` gate
 
-**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  The four
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The four
 algebraic folds left by THM-3683 are not merely retained-jet survivors.  One
 actual target-ring certificate over their common quartic field proves
 `J_0=1` uniformly at all four complex embeddings.
@@ -215,4 +221,4 @@ python3 -O -B 04-computation/jc2_russell_cylinder_exceptional_quartic_exact_j0_l
 
 Both modes must match the stored LF transcript byte-for-byte.  The companion
 also runs the split-prime controls in `(16)` and contains no Python `assert`
-statements.  **QED pending independent hostile audit.**
+statements.  **QED.**
