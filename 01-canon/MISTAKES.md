@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-437 (2026-08-21, THM-3671 audit) -- termwise unit support was conflated with a nonzero grouped phase-cone measure
+
+- **What failed:** the first THM-3671 draft described the blind-space theorem
+  as ranging over all owner-pivot packets without fixing the selected source,
+  allowed a formally zero measure, used an ambiguous “open half-plane,” and
+  treated THM-2325/2331's termwise all-unit address bank as the grouped
+  residue-measure support needed by the pushforward argument.
+- **Minimal witness / first failed implication:** changing the selected source
+  changes the blind source line, so two such fixed-source intersections may
+  already meet only at zero.  The zero measure has every pushforward zero.
+  Also `1,-1` lie in an affine open half-plane such as `Im(z)<1` but cancel;
+  only a strict half-plane through the origin forbids cancellation.
+- **Repair / strongest survivor:** for one fixed selected source and target
+  pair, the exact all-packet intersection and four-chart reduction pass.  For
+  a nonzero grouped measure whose nonzero coefficients satisfy
+  `Re(exp(-i theta)z)>0`, all-coordinate-unit support forces a nonzero target
+  pushforward off the scalar-sum-zero branch.  Neither nonzero grouped support
+  nor this common phase cone is currently known for the LRC current.
+- **Reusable rule:** a term bank is not its grouped coefficient measure, and
+  a geometric cone prevents cancellation only when it is pointed at the
+  origin.  State the grouping map, nonzero premise, and fixed ambient stratum
+  before applying support-intersection arguments.
+
 ## MISTAKE-436 (2026-08-21, THM-3670 audit) -- a raw boundary jump was substituted for a signed successor-mass defect
 
 - **What failed:** the first THM-3670 draft advertised its successor-mass

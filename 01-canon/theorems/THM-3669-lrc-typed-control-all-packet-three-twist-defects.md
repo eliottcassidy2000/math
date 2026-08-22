@@ -2,7 +2,7 @@
 id: THM-3669
 title: "LRC typed-control all-packet three-twist defects"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On the canon-recorded THM-2334 typed non-cover row, every one of the 120
   owner-pivot packet choices has a nonzero support-minimal three-twist target
   defect at the trivial center.  The packets collapse to thirty ordered graft
@@ -12,6 +12,15 @@ status: >
   marked-product Fourier jet.  This is a positive control on a typed non-cover
   row, not a covering-row transfer or an LRC(14) proof.
 source: kps-s193 / THM-3666 physical positive-control continuation, 2026-08-21
+audit: >
+  PASS -- Bohr reproduced normal and optimized transcripts and the semantic
+  digest, then independently checked all thirty charts, their fourfold
+  omitted-label multiplicity, the thirteen present geometries, signs, deep
+  phases, primality/order certificates, canonical residuals, mass valuations,
+  exclusive boundary, and first marked-product jet.  The compact 8269-byte
+  packet ledger reproduced SHA-256
+  9521c4654c9fddb43094e1194b36ef75f6118b8b216918c3f80787270c6db55a.
+  No correction was required; the non-cover scope remains explicit.
 depends_on:
   - THM-2334-relation-residue-current-and-character-twist-pushforward
   - THM-3665-lrc-support-minimal-three-twist-target-detector
@@ -29,8 +38,8 @@ hash_basis: raw bytes
 
 # THM-3669 -- every typed-control owner packet has a local target defect
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  This theorem evaluates THM-3665's support-minimal detector in the
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+This theorem evaluates THM-3665's support-minimal detector in the
 physical pair-swap coordinates of THM-3666.  Its purpose is to separate
 detector availability from the still-open covering-row transfer.
 

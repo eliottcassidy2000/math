@@ -2,16 +2,26 @@
 id: THM-3671
 title: "LRC all-packet blind subspace and phase-cone gate"
 status: >
-  PROVED; PENDING INDEPENDENT HOSTILE AUDIT.  The intersection of the
-  zero-target fibres of all owner-pivot pair-swap packets is exactly the pure
-  source line when the six unit residues have nonzero sum, and gains one
-  all-nonsource diagonal line when that sum vanishes.  Four explicit packet
-  charts already cut out the same blind subspace.  Consequently, off the
-  scalar sum-zero branch, any nonzero nonnegative or common-open-half-plane
-  residue measure supported on all-coordinate mod-13 units has a nonzero
-  target in some packet.  Actual LRC currents are complex and no required
-  phase cone is proved; no LRC(14) conclusion is claimed.
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED.  For one fixed selected source and
+  target pair, the intersection of the zero-target fibres of its 120
+  owner-pivot packets is exactly the pure source line when the six unit
+  residues have nonzero sum, and gains one all-nonsource diagonal line when
+  that sum vanishes.  Four explicit packet charts already cut out the same
+  blind subspace.  Off the scalar sum-zero branch, any nonzero residue measure
+  whose coefficients lie in one strict origin-centred phase cone and whose
+  support has all mod-13 coordinates nonzero has a nonzero target in some
+  packet.  Actual LRC currents are complex and neither the nonzero grouped
+  measure nor the required phase cone is proved; no LRC(14) conclusion is
+  claimed.
 source: kps-s193 / all-packet intersection after THM-3666, 2026-08-21
+audit: >
+  PASS AFTER SCOPE REPAIRS -- Galileo independently verified dim(K)=8, each
+  packet-fibre dimension 6, both branches of the all-thirty intersection, the
+  four-chart equality graph, the all-unit scalar hostile, and the phase-cone
+  pushforward argument.  The audit fixed the selected source and target pair,
+  excluded the zero measure, made the half-plane strict and origin-centred,
+  and separated termwise all-unit address banks from a nonzero grouped
+  residue measure.
 depends_on:
   - THM-2309-owner-aligned-pivot-packets-and-visible-height-separation
   - THM-3666-lrc-owner-pivot-dual-pair-swap-twist-basis
@@ -23,14 +33,15 @@ related:
 
 # THM-3671 -- four pair-swap charts expose every nonsource residue
 
-**PROVED; PENDING INDEPENDENT HOSTILE AUDIT.**  This theorem identifies the
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem identifies the
 exact algebraic object that every owner-pivot packet misses.  It also isolates
 the minimal positivity/phase sidecar that would make the all-unit projector
 useful.
 
 ## 1. Packet zero fibres
 
-Work over `F=F_13` with the nine owner-pivot labels
+Fix one THM-2309 selected source `j` and its target pair `{a,b}`.  Work over
+`F=F_13` with their nine owner-pivot labels
 
 ```text
 U={0,1,2,3,4,5},
@@ -66,7 +77,7 @@ L_(k,l)=T_(k,l)^perp intersection K
 ```
 
 The omitted-unit choice does not affect (4), so these thirty planes represent
-all 120 owner packets.
+all 120 owner packets associated with this fixed source and target pair.
 
 ## 2. Exact all-packet intersection
 
@@ -143,8 +154,9 @@ mod-thirteen and should not be confused with septimal word charge.
 
 ## 4. Positivity or one phase cone would activate the all-unit support
 
-Let `mu` be a finite complex residue measure on `K`, supported on vectors with
-all nine coordinates nonzero.  For a packet `(k,l)`, push `mu` through
+Let `mu` be a nonzero finite complex residue measure on `K`, supported on
+vectors with all nine coordinates nonzero.  For a packet `(k,l)`, push `mu`
+through
 
 ```text
 pi_(k,l)(r)=(r_a-r_k,r_b-r_l).                     (13)
@@ -153,8 +165,9 @@ pi_(k,l)(r)=(r_a-r_k,r_b-r_l).                     (13)
 Assume either
 
 1. every nonzero coefficient of `mu` is a positive real number; or
-2. after one common rotation, every nonzero coefficient lies in an open
-   half-plane.
+2. there is one angle `theta` such that every nonzero coefficient `z` obeys
+   `Re(exp(-i theta)z)>0`, so all coefficients lie in one strict open
+   half-plane through the origin.
 
 In either case, every nonempty fibre aggregate is nonzero: a sum of vectors
 in one open half-plane cannot vanish.  If all thirty packet pushforwards were
@@ -169,13 +182,16 @@ sigma_U!=0 and a common phase cone
 
 By (10), four packet charts suffice in (14).
 
-THM-2325/2331 provide enormous all-`91`-unit support, whose mod-thirteen
-reduction satisfies the support hypothesis above.  They do **not** provide a
-common phase cone for the actual marked current.  The coefficients include
-endpoint, deep and terminal phases, so (14) is a conditional transfer gate,
-not a completed current theorem.  A non-Archimedean alternative would be one
-uniquely minimal valuation in a nonzero packet fibre, but no such valuation
-sidecar is proved here.
+THM-2325/2331 provide enormous all-`91`-unit term/address banks, whose
+reductions have all coordinates nonzero.  They do **not** prove that the
+corresponding grouped all-unit residue measure is nonzero, nor that any
+aggregate coefficient survives.  Thus neither the nonzero-measure premise
+nor the common phase-cone premise of (14) is currently supplied for the
+actual marked current.  The coefficients include endpoint, deep and terminal
+phases, so (14) is a conditional transfer gate, not a completed current
+theorem.  A non-Archimedean alternative would be one uniquely minimal
+valuation in a nonzero packet fibre, but no such valuation sidecar is proved
+here.
 
 No visible-height or terminal-phase assertion is made, and LRC(14) remains
 open.  **QED.**
