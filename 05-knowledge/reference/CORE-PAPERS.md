@@ -215,10 +215,16 @@ collide, links—not bare IDs—are canonical.
 
 ## Jacobian, Dixmier, and Poisson
 
-### July 2026 explicit dimension-three Jacobian certificate — public announcement, no paper
+### Gao / Shaska / Meng--Yang — the 2026 Jacobian boundary
 
-- **Sources/status:** [announcement](https://x.com/__alpoge__/status/2079028340955197566), [map](https://jacobianfun.org/jacobian-explained), [weighted lift](https://github.com/algal/jacobianfun/blob/main/RESEARCH.md); not a paper or peer review.
-- **Imported/boundary:** the determinant-`-2` triple collision refutes `JC(n)` for `n>=3`; [THM-1300](../../01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md) and [THM-3438](../../01-canon/theorems/THM-3438-weighted-lift-keller-degree-spectrum.md) verify the map/spectrum.  No `JC(2)` or Dixmier conclusion follows.
+- Gao [arXiv:2608.00222v1](https://arxiv.org/abs/2608.00222) gives the
+  tangent-sweep counterexamples in every dimension `>2`;
+  [THM-1300](../../01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md)/[3438](../../01-canon/theorems/THM-3438-weighted-lift-keller-degree-spectrum.md)
+  verify the repo's degree-four map/lift.
+- Shaska [arXiv:2607.20210v2](https://arxiv.org/abs/2607.20210) excludes all
+  planar equivariant signatures; THM-3686/3691 are analogues.
+- Meng--Yang [arXiv:2607.22198v2](https://arxiv.org/abs/2607.22198) leaves only
+  `JC(2)` and `HC(4)`, with `HC(4) => JC(2)`; no planar/Dixmier conclusion.
 
 ### Nagata / Shastri / Guccione--Guccione--Horruitiner--Valqui — planar degree and infinity gates
 
