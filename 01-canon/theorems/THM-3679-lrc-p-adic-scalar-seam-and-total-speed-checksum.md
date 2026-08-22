@@ -64,6 +64,11 @@ A_n=Z/13^n Z,
 K_n={r in A_n^9:sum_i r_i w_i=0 in A_n}.            (2)
 ```
 
+Throughout this theorem, an address coordinate called a **unit** means a unit
+of `A_n`, equivalently nonzero modulo thirteen.  The all-`91`-unit bank implies
+this condition, but the converse need not hold modulo seven; no septimal
+support claim is made here.
+
 Fix a selected source `j in B`, write `{a,b}=B minus {j}`, and for distinct
 `k,l in U` define the full depth-`n` packet difference
 
