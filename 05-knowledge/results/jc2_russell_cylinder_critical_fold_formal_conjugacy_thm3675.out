@@ -1,0 +1,8 @@
+THM-3675 exact companion -- critical-fold formal conjugacy closure
+status=PROVED VERIFIED-EXACT PENDING-INDEPENDENT-HOSTILE-AUDIT
+PASS abstract_cokernel=Lambda(1)=0_Jk_endpoint_sum=0_J0_debt_nonzero
+PASS Q6_H2_k=2_alpha=3/2_psi_sha256=ce46c86e3bdd40169c653daf50de0ad66456ac7c334aad8979211d987ee66c42 Kk=125/294_K2k=-1816925/963144_forced=91472/729
+PASS Qstar_H3_k=3_alpha=-2_psi_sha256=30892888427cbe9dedb36faedf120296765e543c5a2abdc93cffdb4b6d41ecbe Kk=2401/4050_K2k=4296910891/18042750000_forced=21760/81
+PASS Q6_H4_k=4_alpha=5/3_psi_sha256=3dcb7f7fef38af06f17640330bd428ecfe70a8c5b995d88e3ab90e94c1d87b69 Kk=-566779/432000_K2k=7424353906463/1866240000000_forced=9147200/59049
+CHECKS=50
+RESULT=PASS
