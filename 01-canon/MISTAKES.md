@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-439 (2026-08-21, THM-3676 audit) -- disjointness from the blind space was mislabeled as the sharp detector premise
+
+- **What failed:** the first THM-3676 draft called
+  `supp(mu) intersection W=empty` the sharp cross-source phase-cone
+  alternative.
+- **Minimal witness / first failed implication:** a positive measure such as
+  `delta_0+delta_(e_j)` meets the nonzero-sum hostile `{0}` but has mass
+  outside it and is detected by the other source family.  Likewise
+  `delta_1+delta_(e_j)` meets the zero-sum scalar line without being confined
+  to it.
+- **Repair / strongest survivor:** under a common strict phase cone, the
+  exact premise is only `supp(mu) not subset W`, where `W={0}` or
+  `W=span(1)`.  The cross-source intersections and eight-chart theorem were
+  correct.  Source switching was also retyped as two packet families over
+  one fixed labelled residue kernel.
+- **Reusable rule:** when a contradiction says every support point lies in
+  a hostile subspace, negate containment, not intersection.
+
 ## MISTAKE-438 (2026-08-21, THM-3674 audit) -- the zero three-site mask was left inside a Rayleigh quotient
 
 - **What failed:** the first THM-3674 draft stated

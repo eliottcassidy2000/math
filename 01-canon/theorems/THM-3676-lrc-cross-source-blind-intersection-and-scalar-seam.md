@@ -2,15 +2,24 @@
 id: THM-3676
 title: "LRC cross-source blind intersection and scalar seam"
 status: >
-  PROVED; PENDING INDEPENDENT HOSTILE AUDIT.  For the three possible
-  selected blocker sources in one owner-pivot row, two distinct sources
-  already cut the common all-packet blind space to zero when the six unit
-  residues have nonzero sum, and to the global scalar line when that sum is
-  zero.  Consequently eight explicit packet charts detect any one common
-  phase-cone residue measure off the stated hostile.  Actual owner currents
-  change at handoff, and no common-current transport, scalar-line exclusion,
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED.  For the three possible selected
+  blocker sources over one fixed labelled scalar residue row, two distinct
+  source-dependent packet families already cut the common all-packet blind
+  space to zero when the six unit residues have nonzero sum, and to the
+  global scalar line when that sum is zero.  Consequently eight explicit
+  packet charts detect any one common phase-cone residue measure having
+  some mass outside that common blind space.  Actual owner currents change
+  at handoff, and no common-current transport, scalar-line exclusion,
   covering-row consequence, or LRC(14) conclusion is proved.
 source: kps-s195 / cross-source owner-packet seam, 2026-08-21
+audit: >
+  PASS AFTER TWO SCOPE REPAIRS -- Franklin independently reconstructed each
+  four-chart equality graph, both one-source spaces, both cross-source
+  intersections, the eight-chart count, and the strict phase-cone
+  pushforward.  The audit replaced support disjointness by the exact weaker
+  condition that support is not contained in the common blind space, and
+  typed source switching as two packet families over one common labelled
+  residue kernel rather than two sources inside one already selected packet.
 depends_on:
   - THM-3671-lrc-all-packet-blind-subspace-and-phase-cone-gate
 related:
@@ -19,9 +28,9 @@ related:
   - THM-3671-lrc-all-packet-blind-subspace-and-phase-cone-gate
 ---
 
-# THM-3676 -- two owner roles leave only the scalar seam
+# THM-3676 -- two source packet families leave only the scalar seam
 
-**PROVED; PENDING INDEPENDENT HOSTILE AUDIT.**  This is a finite linear
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.**  This is a finite linear
 statement in one fixed mod-thirteen row.  Its conditional measure corollary
 requires literally the same grouped residue measure in both source charts.
 It does not identify the distinct semantic currents produced by two owner
@@ -117,25 +126,31 @@ hypothesis.  Therefore, if every pushforward were supported only at target
 zero, every point of `supp(mu)` would lie in the intersection (7) or (9).
 
 It follows that some one of the eight charts has a nonzero target aggregate
-under either of the following sharp alternatives:
+under either of the following exact alternatives:
 
 ```text
-sigma_U!=0 and 0 notin supp(mu);                    (11)
+sigma_U!=0 and supp(mu) not subset {0};             (11)
 
-sigma_U=0 and supp(mu) intersection span(1)=empty.  (12)
+sigma_U=0 and supp(mu) not subset span(1).          (12)
 ```
 
-In particular, all-coordinate-unit support supplies the premise in (11),
-but not in (12): every nonzero scalar vector has all nine coordinates
-nonzero.  The scalar seam is therefore not an artefact of forgetting unit
-support.
+These conditions are weaker than disjointness from the hostile.  For
+example, `delta_0+delta_(e_j)` meets `{0}` but is detected by the other
+source family; in the zero-sum branch `delta_1+delta_(e_j)` meets the scalar
+line but is likewise detected.  In particular, all-coordinate-unit support
+supplies the premise in (11), but not in (12): every nonzero scalar vector
+has all nine coordinates nonzero.  The scalar seam is therefore not an
+artefact of forgetting unit support.
 
 ## 4. Exact remaining bridge
 
 THM-2305 gives positive-measure blocker-word handoffs, but the current on an
 incoming subset of `E_j` and the current used for an outgoing subset of
 `E_j` need not agree and can live on disjoint physical subsets.  Equations
-(7)--(12) cannot be applied to those two currents without a transport map.
+(7)--(12) require literally one atomic function `mu:K->C` in the same
+labelled coordinates before source-dependent quotienting, with no hidden
+gauge change or rephasing.  They cannot be applied to the two owner currents
+without a transport map.
 Likewise THM-2337's first word jet is decomposition-coloured and is not a
 function of the uncoloured relation address; it does not presently exclude
 the scalar line in (9).
