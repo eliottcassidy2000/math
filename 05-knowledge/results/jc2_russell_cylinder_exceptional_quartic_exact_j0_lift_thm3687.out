@@ -1,0 +1,9 @@
+field=Q[alpha]/(72783360*alpha^4-77822208*alpha^3-28419741*alpha^2+7849770*alpha-1276420)
+cutoff=198;monomials=187;K_square=218;Q_square=872;full_rows=219
+modular_controls=p137,p163;four_roots_each;cutoff195=214/215;cutoff198=218/218;scope=FINITE_FIELD_ONLY
+F1_support=108;G1_support=107;F1_degree=198;G1_degree=195
+F1_target_hash=d3ac53e05a433a4d9d0a7d52b138d6c2e998341c8dc7477f20a79646221afc0c;G1_target_hash=0a37d8b98f192a78e5774c2d73209011615024e41654ad5a444db4373537f61d
+F1_hash=221deea140f9b010f6672eeb3bc4bbf6f126b6ac6f2e6b8263abf70b2476dcca;G1_hash=f310fce20fecb88b151ad9dfda5300997a0287a84b0ed674d05327b71f562bf9
+deltaF1_degree=190;deltaG1_degree=187
+J0=1;full_quartic_field_residual=0
+RESULT=PASS

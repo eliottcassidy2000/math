@@ -359,12 +359,12 @@ is sharp: equal counts allow two densities or none.
   zero-fourth-debt parabola. THM-3678/3680 lift its rational point
   `Q_dagger` through the actual target-ring equations `J_0=1,J_1=J_2=0`,
   but THM-3681 closes every continuation at universal order six. Pending-
-  audit THM-3683 computes the whole parabola's sixth debt: only the four
-  roots of one irreducible quartic survive the complete retained six-jet
-  window; no actual lift at those roots is known. THM-3684 proves that no
+  audit THM-3683 leaves only four quartic roots after the retained six-jet
+  screen; THM-3687 lifts all four uniformly through actual-ring `J_0=1`,
+  while `J_1,J_2` and higher continuation remain open. THM-3684 proves that no
   nonconstant polynomial in one of `b,c,e` has a mate even in the full source
   ring, so mixing only the opposite output cannot work. Higher-degree
-  zero-debt polynomials, the four THM-3683 folds,
+  zero-debt polynomials, continuation of the four THM-3683 folds,
   THM-3641's excluded nonordinary tangent collisions, nonquadratic folds, and
   THM-3629's genuinely two-output-mixed `H'(0)!=0` pairs remain OPEN. A
   positive global pair here pulls back to a noninjective Keller map and
