@@ -38,6 +38,10 @@ script_sha256: cb9e80f688254bf6c83927c20306e33a3e716ddd16e1e70febf577cc96baecde
 output_sha256: c357dc4643e251b42807d1c086b27928d2c3b1f2ffa9b1c3c9875f402d4c2c8d
 semantic_sha256: 7afb7edb68614deebafcf4d544ffa6c4e28be94ed1b656ddb269aead70b5fb77
 hash_basis: raw LF bytes
+audit_script: 04-computation/lrc_joint_chart_anova_marginal_hostile_thm3679.py
+audit_output: 05-knowledge/results/lrc_joint_chart_anova_marginal_hostile_thm3679.out
+audit_script_sha256: 6fbf74edf22fb04e4912ee437180f138bf8a106c9a7fecaa6ec5d6745279562d
+audit_output_sha256: 4355ee4fb645e88239b6a67f446ed8ffbcbf421888342ce0a2ec2a23b175f6d6
 audit: >
   lovelace-2026-08-21 independently reconstructed the finite-ring kernels,
   checksum criterion, one-source valuation law, exact hostile relation, and
@@ -452,9 +456,17 @@ odd prime three is deliberately distinct from the LRC prime thirteen; these
 are finite-ring controls for the proof mechanism, not an exhaustive proof of
 the all-`n` statement.
 
+The audit companion independently verifies all four explicit ANOVA vectors,
+all fifteen normalized subset addresses, their relation and all-unit gates,
+the absence of a joint-zero atom, and the four exact `delta_0` marginals.  Its
+normal and optimized transcripts agree with the pinned LF-normalized output at
+all `75` active gates.
+
 ```bash
 python -B 04-computation/lrc_padic_scalar_seam_total_speed_checksum_thm3679.py
 python -B -O 04-computation/lrc_padic_scalar_seam_total_speed_checksum_thm3679.py
+python -B 04-computation/lrc_joint_chart_anova_marginal_hostile_thm3679.py
+python -B -O 04-computation/lrc_joint_chart_anova_marginal_hostile_thm3679.py
 ```
 
 Normal and optimized transcripts are byte-identical to the pinned output.
