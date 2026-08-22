@@ -3,4 +3,5 @@ offset=855;stable_result=(855, 'CLOSED', 20238, 20449, 32551, 40044, 16383, 8132
 offset=856;stable_result=(856, 'CLOSED', 20233, 20450, 32549, 40045, 16383, 8134, None);seconds=4223.111
 offset=854;full_diagnostic_replay=INCONCLUSIVE_MEMORYERROR;site=junkL1_observer_addition;no_rule_A_status_obtained
 offset=854;observer_elided_state_replay=(854,'DIE',8246,20448,25379,40043,4394,8130,19875);seconds=4076.338;controls=((64,0),(64,1),(512,4),(512,5));dynamics_unchanged=junkL1_is_diagnostic_only
-offset=854;run_runner_sha256=78bed4b5304a64dfaea3942d7d658ee676c9867853d254cb9b64dfb78dcfc7cb;durable_runner_sha256=962577096266bdc6df7b004eb38412b85a8a2b47eb9dd000f4666e9829043207;source_difference=one_terminal_blank_line;independent_optimized_replay=IN_PROGRESS
+offset=854;run_runner_sha256=78bed4b5304a64dfaea3942d7d658ee676c9867853d254cb9b64dfb78dcfc7cb;durable_runner_sha256=962577096266bdc6df7b004eb38412b85a8a2b47eb9dd000f4666e9829043207;source_difference=one_terminal_blank_line
+offset=854;independent_state_only_audit=PASS;python_integer_controls=45;flint_controls=5;arb_degree_profile=65536_exact_zero_ambiguous;stable_result=(854,'DIE',8246,20448,25379,40043,4394,8130,19875);seconds=1835.3803317

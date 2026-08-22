@@ -1,8 +1,8 @@
 # AMM R=32768: offsets 855 and 856 close -- live boundary checkpoint
 
-**kps-S192/S193/S195 checkpoint, 2026-08-21.  Three FINITE-EXACT state
-runs pin the adjacent fixed-Rule-A split; an independent optimized replay of
-the lower endpoint is pending.**
+**kps-S192/S193/S195/S196 checkpoint, 2026-08-21.  Three FINITE-EXACT state
+runs pin the adjacent fixed-Rule-A split, and a disjoint state-only engine has
+now independently hostile-audited the lower endpoint.**
 
 The pinned THM-3644 Rule-A engine
 
@@ -72,9 +72,30 @@ The completed run used a scratch copy whose SHA-256 is
 ```
 
 It differs from the durable runner pinned below by exactly one terminal blank
-line.  An optimized replay from the durable path is in progress as an
-independent execution audit.  Until that returns, this remains a finite-exact
-checkpoint rather than a promoted theorem.
+line.
+
+The independent audit did not reuse the AST transformation.  It wrote a new
+state-only engine which streams the coefficients of `2G_R`, retains only the
+degree, sparse junk state, feed flag and `c_0`, and contains no trace or
+`junkL1` observer.  Direct source inspection confirms that the two production
+`junkL1` updates feed only `trace[*]["junkL1_bits"]` and cannot influence a
+clamp, sparse-state update, branch, `minus2`, `T6b`, death row or overflow
+bit count.  The independent ledger contains
+
+```text
+45 Python-integer production/state-only controls,
+5 FLINT integer controls spanning DIE and CLOSED outcomes,
+65,536 Arb-certified degree floors with zero ambiguous intervals,
+
+FLINT target:
+  (854,'DIE',8246,20448,25379,40043,4394,8130,19875),
+  elapsed=1835.3803317 seconds.
+```
+
+Thus the lower endpoint is independently hostile-audited.  The artifact
+remains called a checkpoint only because no separate theorem ID has been
+reserved; its fixed-instance finite-exact content no longer has a pending
+execution gate.
 
 Reproduction command:
 
@@ -88,8 +109,8 @@ The original durable runner imports
 source-pinned `stable_result` at the requested offsets.  The low-memory runner
 source-pins the same engine, AST-selects the same three functions, removes
 exactly the two diagnostic `junkL1` additions, and cross-checks four terminal
-controls before the long replay.  A durable theorem package will replace this
-checkpoint only after the independent replay is available.
+controls before the long replay.  The disjoint audit instead reconstructs the
+state transition directly and supplies the independent implementation gate.
 
 Checkpoint artifacts:
 
@@ -98,7 +119,7 @@ runner sha256:
 65b6fab453a0adb156bc79e1f9168fd46d95037fd345e2322861ec1f76f15ba0
 
 stored output sha256:
-8314337ac5001222b463b283f9fe7e50ded4f4ae79c57e52cf1bf5cafbb44e70
+a3c1c856979fd7b0b21ca12f93d08b3340345fd175187b9c724a14bc91b97710
 
 low-memory state runner sha256:
 962577096266bdc6df7b004eb38412b85a8a2b47eb9dd000f4666e9829043207
