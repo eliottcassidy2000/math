@@ -1,0 +1,20 @@
+== THM-3665 LRC support-minimal three-twist target detector ==
+parents_sha256_lf=('ce220ede12175b6851810782c880f95048fe9f4643cc4f52f47a7f4d8dcb7b0c', 'd2d9b49db9ef3eabf7e3ae17cea247da554a9f8df2abfc3907243d317b21fec1')
+mask=delta_(0,0)+delta_(1,0)-2delta_(0,1);support:3;l1:4;mean:0
+fourier_zero_set=((0, 0),);nontrivial_support:168
+universal_transfer_pairs=28561;sha256=f01b01df7b93ad7d57e6dd14557952c68cbf1f424d1b21951e6de2194dc91b3c
+two_site_differences=168;nontrivial_zeros_each:12;sha256=34217d51f44597645aa0e2fe90e96bafb82a57c76cbb48b55fb67f8ff13febb2
+general_minimum_support_on_Fp^d=d+1
+projective_line_norms=(13, 13, 35503, 20969, 18603, 6773, 26039, 169, 26039, 6773, 18603, 20969, 35503, 53248);minimum:13
+integer_augmentation_determinant=9072750758202804116713220630638041462433831593234432=13*26417870930056774319865792^2
+integer_determinant_mod_p=408889968250631621108841
+spectral_case_sha256=986d812c0ed8bddf9bd905b353cae3fe193fbfb773206b1040a90e9359b2e133
+exact_min_multiplier=4*sin(pi/13)^2;frequencies=((2, 1), (11, 12))
+exact_max_multiplier=4*cos(pi/26);frequencies=((0, 6), (0, 7))
+sharp_l2_frame_bounds=16*sin(pi/13)^4 and 16*cos(pi/26)^2
+ordered_basis_detectors=26208;distinct:26208
+criterion=nonzero target iff H(s)+H(s-a)-2H(s-b) is nonzero for some s
+semantic_sha256=7130760feb9c252c6f7d1b2dc5fdd2b224f3469718aa4363380511de88c586d3
+script_sha256_lf=a5ef75f038d80c5d91308bb5379303970b44e9e538323eb49cf8779386356938
+scope=abstract target-twist group;not inherited physical exceptional support or LRC14
+PASS

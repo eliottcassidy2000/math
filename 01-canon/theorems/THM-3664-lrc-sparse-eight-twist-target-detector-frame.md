@@ -19,6 +19,7 @@ related:
   - THM-3660-lrc-exceptional-leakage-functional-and-fourteen-edge-boundary
   - THM-3662-lrc-eleven-cell-exceptional-flux-and-high-digit-variation-gate
   - THM-3663-lrc-minimal-carry-closed-exceptional-observer-bank
+  - THM-3665-lrc-support-minimal-three-twist-target-detector
 script: 04-computation/lrc_sparse_eight_twist_detector_frame_thm3664.py
 output: 05-knowledge/results/lrc_sparse_eight_twist_detector_frame_thm3664.out
 script_sha256: f60472d32b1ce92fba3ddedf82b3cef98dc6b45e7eb82e7ee49aecb5561fda89
@@ -33,6 +34,12 @@ hash_basis: raw LF bytes
 AUDIT.**  THM-2334 reduces target survival to nonconstancy of a function on
 169 twists.  The present theorem replaces its dense variance test by a
 sparse local witness involving four plus and four minus twists.
+
+**Sharpening.**  THM-3665 proves that three support sites are optimal for an
+abstract linear twist detector.  The continuing value of the present mask is
+its inheritance from the physical exceptional-address pattern, its exact
+cyclotomic norm atlas, and its comparison with THM-3660--3663; it is not
+support-minimal on the freely based target group.
 
 ## 1. The typed transplant
 
@@ -246,7 +253,7 @@ selected twists the physical exceptional addresses of THM-3660.
 ## 7. Consequence and remaining frontier
 
 For every THM-2334 stratum, the previously open unrestricted target step
-can now be stated in its sparsest exact form:
+can now be stated in one physically inherited sparse exact form:
 
 ```text
 find one basis theta and one centre s for which (5) is nonzero.      (24)
