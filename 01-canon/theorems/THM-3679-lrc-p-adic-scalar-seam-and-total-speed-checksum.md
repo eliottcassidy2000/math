@@ -11,7 +11,10 @@ status: >
   nu_13(sum w_i)+1.  For one source alone, its all-unit blind tower persists
   at every depth exactly when the source speed and the sum of the other eight
   speeds have equal 13-adic valuation; otherwise it dies at the first unequal
-  layer.  THM-2334 realizes each higher difference pushforward by exact
+  layer.  In the equal-valuation case one explicit primitive exact relation
+  realizes the hostile tower, whereas the combined two-source chart map is
+  injective on the exact relation lattice.  THM-2334 realizes each higher
+  difference pushforward by exact
   coordinate twists at a sufficiently delayed word clock.  At any depth where
   the all-unit blind fibre is empty, nonzero total mass of the all-unit
   restricted current forces a nonzero joint-chart target without a phase-cone
@@ -228,6 +231,31 @@ then `nu_13(S_j)=nu_13(W)`, so this one fixed source loses its all-unit blind
 fibre already at depth `nu_13(W)+1`.  Taking `j` to be the deepest blocker
 therefore avoids cross-source transport on every row whose total-speed
 valuation is smaller than that blocker depth.
+
+The criterion is sharp because it is the reduction of an exact integer
+relation.  Put
+
+```text
+g_j=gcd(w_j,S_j).
+```
+
+All integer solutions of the one-source blind equation are multiples of the
+primitive vector whose off-source coordinate is `w_j/g_j` and whose source
+coordinate is `-S_j/g_j`.  Both coordinate values are nonzero modulo thirteen
+exactly when
+
+```text
+nu_13(w_j)=nu_13(S_j).
+```
+
+Thus the persistent branch of (16) is realized at every depth by one exact
+all-unit relation, rather than by unrelated finite-ring lifts.
+
+Across two sources, the integer equality graph forces `r=c 1`.  The exact
+relation equation is then `cW=0` in `Z`.  Since `W>0`, it forces `c=0`.
+Consequently the combined two-source chart map is injective on the exact
+relation lattice.  Equations (9)--(13) quantify how many 13-adic digits are
+needed before that characteristic-zero injectivity becomes visible.
 
 ## 6. Exact twist realization and semantic boundary
 
