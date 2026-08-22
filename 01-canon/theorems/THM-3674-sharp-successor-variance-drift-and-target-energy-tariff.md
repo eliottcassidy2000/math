@@ -2,7 +2,7 @@
 id: THM-3674
 title: "Sharp successor variance, drift, and target-energy tariff"
 status: >
-  PROVED; PENDING INDEPENDENT HOSTILE AUDIT.  The THM-2365 drift splits
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED.  The THM-2365 drift splits
   exactly into p^-2 times the variance of its successor marginal plus the
   nonzero-deep, nonzero-target energy.  For arbitrary tensors the sharp
   variance constant is p^-2.  The lawful diagonal-plane zero improves it
@@ -11,6 +11,14 @@ status: >
   and deep-target energy at least |Delta|^2/2056392.  This is a quantitative
   transfer theorem, not a covering-row nonvanishing result or LRC(14) proof.
 source: kps-s194 / Averroes marginal decomposition, 2026-08-21
+audit: >
+  PASS AFTER ONE DOMAIN REPAIR -- Copernicus independently reconstructed all
+  Fourier normalizations, the exact orthogonal split, diagonal-zero
+  sharpening, equality cases, nonnegative extremizers, repeated-site table,
+  and p=13 constants.  Exhaustive p=2 tests covered 6561 arbitrary and 81
+  lawful small tensors, with further p=3,5 hostile probes.  The audit added
+  the required nonzero-mask premise to the Cauchy quotient, which otherwise
+  reads 0/0 at a=b=0.
 depends_on:
   - THM-2365-lawful-target-coshift-and-h-drift-dichotomy
 related:
@@ -21,7 +29,7 @@ related:
 
 # THM-3674 -- successor variation pays a sharp target-energy tariff
 
-**PROVED; PENDING INDEPENDENT HOSTILE AUDIT.**  This theorem keeps all
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem keeps all
 normalizations from THM-2365.  Its first identity is an exact orthogonal
 decomposition, not an estimate.
 
@@ -176,14 +184,16 @@ w=delta_x+delta_(x+a)-2delta_(x+b),
 kappa=sum_y|w(y)|^2.                                (18)
 ```
 
-Since `sum_y w(y)=0`, Cauchy--Schwarz gives the sharp estimate
+Since `sum_y w(y)=0`, if `w!=0` then Cauchy--Schwarz gives the sharp estimate
 
 ```text
 Var(S)>=|Delta|^2/(kappa p^2).                      (19)
 ```
 
-Equality holds exactly when `S-S_bar` is a scalar multiple of `w`.  If the
-three sites are distinct, `kappa=6`; composing (19) with (13) gives
+Equality holds exactly when `S-S_bar` is a scalar multiple of `w`.  If
+`a=b=0`, then `w=0` and `Delta=0`, so (19) is vacuous rather than a quotient
+`0/0`.  If the three sites are distinct, `kappa=6`; composing (19) with (13)
+gives
 
 ```text
 D>=|Delta|^2/(6p^3(p-1)),
@@ -212,8 +222,8 @@ kappa=2  if a=b!=0,
 kappa=0  if a=b=0.                                  (22)
 ```
 
-Taking `g` proportional to the combined mask `w` in (16)--(17) attains
-(19)--(20), so all displayed constants are sharp simultaneously.
+Taking `g` proportional to any nonzero combined mask `w` in (16)--(17)
+attains (19)--(20), so all displayed constants are sharp simultaneously.
 
 For THM-3670, `a=(1,0)` and `b=(0,1)`, so the three sites are distinct.
 Any exact nonzero rational successor defect therefore pays the tariff (21).

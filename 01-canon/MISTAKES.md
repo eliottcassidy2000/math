@@ -9,6 +9,21 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-438 (2026-08-21, THM-3674 audit) -- the zero three-site mask was left inside a Rayleigh quotient
+
+- **What failed:** the first THM-3674 draft stated
+  `Var(S)>=|Delta|^2/(kappa p^2)` for every pair of displacements, while its
+  own collision table included `kappa=0` at `a=b=0`.
+- **Minimal witness / first failed implication:** when `a=b=0`, the combined
+  mask and defect are both zero.  The displayed right side is `0/0`, not a
+  defined zero bound.
+- **Repair / strongest survivor:** require the combined mask to be nonzero
+  before dividing by its squared norm; the zero-mask case is vacuous.  The
+  exact drift decomposition, sharp lawful constant, all nonzero-mask equality
+  cases, and the distinct-site LRC tariff passed exhaustive hostile checks.
+- **Reusable rule:** every norm or Rayleigh quotient needs an explicit
+  nonzero-vector domain, even when the degenerate numerator vanishes too.
+
 ## MISTAKE-437 (2026-08-21, THM-3671 audit) -- termwise unit support was conflated with a nonzero grouped phase-cone measure
 
 - **What failed:** the first THM-3671 draft described the blind-space theorem
