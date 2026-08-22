@@ -7,9 +7,11 @@ status: >
   target-zero address to be globally scalar.  On the all-coordinate-unit
   relation fibre this scalar hostile exists exactly when 13^n divides the
   total speed sum.  Hence for every positive integer row it dies by depth
-  nu_13(sum w_i)+1.  THM-2334 realizes each higher difference pushforward by
-  exact coordinate twists at a sufficiently delayed word clock.  No common
-  grouped current across two legitimate owner-source semantics, phase
+  nu_13(sum w_i)+1.  For one source alone, its all-unit blind tower persists
+  at every depth exactly when the source speed and the sum of the other eight
+  speeds have equal 13-adic valuation; otherwise it dies at the first unequal
+  layer.  THM-2334 realizes each higher difference pushforward by exact
+  coordinate twists at a sufficiently delayed word clock.  No grouped-current
   noncancellation, covering-row exclusion, or LRC(14) conclusion is proved.
 source: kps-s195 / THM-3676 Bockstein continuation, 2026-08-21
 depends_on:
@@ -55,7 +57,7 @@ pi^j_(k,l,n)(r)=(r_a-r_k,r_b-r_l) in A_n^2.         (3)
 ```
 
 At `n=1`, this is the target-difference map underlying THM-3671/3676.  At
-larger `n`, equation (3) is first a relation-address refinement; Section 5
+larger `n`, equation (3) is first a relation-address refinement; Section 6
 records its exact coordinate-twist realization and the remaining semantic
 qualification.
 
@@ -163,14 +165,66 @@ n_*=v+1.                                            (13)
 No positive speed row can remain jointly scalar-blind at every 13-adic
 depth.
 
-## 5. Exact twist realization and semantic boundary
+## 5. One source often kills its own blind tower
+
+The two-source checksum is universal, but many rows do not need an owner
+handoff.  Fix one source `j`, put
+
+```text
+S_j=W-w_j=sum_(i!=j)w_i,
+a=nu_13(w_j),                    b=nu_13(S_j).       (14)
+```
+
+Both valuations are finite because all speeds are positive.  By (5), a
+one-source blind all-unit address has one unit value `c` off the source and
+another unit value `d` at the source.  Its relation equation is
+
+```text
+c S_j+d w_j=0 mod 13^n.                            (15)
+```
+
+After division by the unit `c`, put `u=d/c`.  If `n<=min(a,b)`, both terms in
+`S_j+u w_j` vanish modulo `13^n`, so a blind lift exists.  If
+`n>min(a,b)` and `a!=b`, exactly one term has the smaller valuation and
+cancellation is impossible.  Finally, if `a=b=lambda<n`, divide by
+`13^lambda`; the two quotients are units, and
+
+```text
+u congruent -(S_j/13^lambda)(w_j/13^lambda)^(-1)
+  mod 13^(n-lambda)
+```
+
+has a unit lift.  Therefore the exact criterion is
+
+```text
+one-source blind all-unit fibre at depth n is nonempty
+
+iff
+
+n<=min(a,b) or a=b.                                 (16)
+```
+
+When `a!=b`, the first empty depth is `min(a,b)+1`, and every deeper fibre is
+empty.  A particularly useful corollary follows from the non-Archimedean
+triangle law.  If
+
+```text
+nu_13(W)<nu_13(w_j),                                (17)
+```
+
+then `nu_13(S_j)=nu_13(W)`, so this one fixed source loses its all-unit blind
+fibre already at depth `nu_13(W)+1`.  Taking `j` to be the deepest blocker
+therefore avoids cross-source transport on every row whose total-speed
+valuation is smaller than that blocker depth.
+
+## 6. Exact twist realization and semantic boundary
 
 THM-2334 permits reduction of the exact relation-address current modulo every
 integer `N`.  At `N=13^n`, push that current through (3).  Fourier inversion
 identifies its two-dimensional transform with the coordinate twists
 
 ```text
-ell=s(e_a-e_k)+t(e_b-e_l),          s,t in A_n,      (14)
+ell=s(e_a-e_k)+t(e_b-e_l),          s,t in A_n,      (18)
 ```
 
 which translate the nine base coordinates by `ell_i/13^n`.  If the delayed
@@ -193,13 +247,21 @@ twists to the first owner's current does not prove that it is the second
 owner-aligned packet current.  The new exact interface is
 
 ```text
-common all-unit current at depth n_*
+valuation-mismatch route:
+  one nonzero all-unit current at the first empty depth in (16)
+  + one-source noncancellation
+  -> some higher target is nonzero;
+
+valuation-aligned route:
+  common all-unit current at depth n_*
   + sourcewise noncancellation
   + two source packet actions
-  -> some higher target or divided-difference target is nonzero.   (15)
+  -> some higher target is nonzero.                              (19)
 ```
 
 Equation (13) proves that there is no algebraic scalar hostile left at that
-depth, while (14) realizes each action separately.  It does not supply the
-common-current or noncancellation premises in (15).  No scalar row is excluded
-and LRC(14) remains open.  **QED.**
+depth, equation (16) gives the cheaper one-source split, and (18) realizes
+each action separately.  The theorem does not supply a nonzero all-unit
+grouped measure or its phase/valuation noncancellation, nor the common-current
+premise needed in the aligned route (19).  No scalar row is excluded and
+LRC(14) remains open.  **QED.**
