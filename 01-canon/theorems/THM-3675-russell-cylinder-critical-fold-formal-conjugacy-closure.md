@@ -2,7 +2,7 @@
 id: THM-3675
 title: "Russell-cylinder critical-fold formal-conjugacy closure"
 status: >
-  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  For either
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For either
   THM-3642 zero-debt collision polynomial Q_6 or Q_*, and every nonzero
   critical vertical displacement H in t^2 C[t], no arbitrary target two-form
   has nonzero constant pullback on q=Q(x)+H(t), w=t.  A formal target/source
@@ -12,6 +12,14 @@ status: >
   no target pair exists in these families.  H'(0)!=0, other Q, and
   nonordinary tangent collisions remain open.
 source: kps-s194 / THM-3673 formal-reparameterization continuation, 2026-08-21
+audit: >
+  PASS -- kps-s195 independently checked formal monomialization and inverse
+  series, the simultaneous source/target coordinate change, completed-ring
+  two-form typing, transformation of a constant source density to the
+  x-independent series kappa*psi'(u), and annihilation of every positive
+  coefficient row except the nonzero retained J_0 debt.  Normal and
+  optimized companions returned all 50 gates with the pinned hashes.  No
+  correction was required.
 depends_on:
   - THM-3673-russell-cylinder-monomial-ramification-debt-dilation
 related:
@@ -27,7 +35,7 @@ hash_basis: raw LF bytes
 
 # THM-3675 -- every critical vertical fold over Q_6 and Q_* is closed
 
-**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  The
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The
 monomial obstruction in THM-3673 survives arbitrary higher terms of the
 vertical displacement.  The reason is not that those terms disappear: they
 are absorbed by a formal coordinate change, after which a hypothetical

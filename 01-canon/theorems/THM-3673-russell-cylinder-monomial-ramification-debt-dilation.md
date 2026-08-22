@@ -2,7 +2,7 @@
 id: THM-3673
 title: "Russell-cylinder monomial ramification debt dilation"
 status: >
-  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  For each of
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For each of
   the two THM-3642 zero-second-debt collision polynomials Q_6 and Q_*, every
   monomial vertical fold q=Q(x)+alpha t^k, w=t with alpha nonzero and k>=2
   inherits the quadratic universal debt identity after the exact index
@@ -12,11 +12,19 @@ status: >
   Jacobian on either fold.  The affine k=1, nonmonomial H, other Q, and
   nonordinary tangent-collision boundaries remain open.
 source: kps-s194 / ramification row-space continuation, 2026-08-21
+audit: >
+  PASS -- kps-s195 independently rederived the stable-character congruences,
+  the A versus B/C decimation, coefficient-and-x-derivative preservation,
+  alpha scaling of source densities, both retained debts, and the genuine
+  k=1 failure.  Normal and optimized exact companions both returned all
+  4202 gates with the pinned script/output hashes.  No correction was
+  required.
 depends_on:
   - THM-3642-russell-cylinder-zero-debt-actual-lift-and-fourth-stable-closure
 related:
   - THM-3629-russell-cylinder-linear-vertical-fold-global-form-boundary
   - THM-3641-russell-cylinder-principal-noneven-curvature-debt-boundary
+  - THM-3675-russell-cylinder-critical-fold-formal-conjugacy-closure
 script: 04-computation/jc2_russell_cylinder_monomial_ramification_debt_dilation_thm3673.py
 output: 05-knowledge/results/jc2_russell_cylinder_monomial_ramification_debt_dilation_thm3673.out
 script_sha256: 81d8237c9fefae07176d82bffb7d9b84763be3c13bb72755da2e0530d90db573
@@ -26,7 +34,7 @@ hash_basis: raw LF bytes
 
 # THM-3673 -- monomial ramification dilates the zero-debt obstruction
 
-**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  The
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The
 quadratic fourth-stable obstruction of THM-3642 is not peculiar to the
 quadratic exponent.  The stable character decomposition transports it to
 every monomial ramification order.  This closes a genuine part of the
@@ -245,9 +253,10 @@ Q in {Q_6,Q_*}, alpha!=0, monomial H(t)=alpha t^k, k>=2,
 arbitrary target two-forms, hence arbitrary actual target pairs.          (19)
 ```
 
-It does not cover
+By itself it does not cover
 
-- a general polynomial `H` with two or more nonzero monomials;
+- a general polynomial `H` with two or more nonzero monomials; THM-3675
+  subsequently closes that lane for the two fixed polynomials in (2);
 - the affine or nonlinear `H'(0)!=0` mixed-pair frontier of THM-3629;
 - another ordinary zero-debt polynomial from the THM-3641 hyperplanes;
 - a THM-3641 nonordinary tangent collision;
