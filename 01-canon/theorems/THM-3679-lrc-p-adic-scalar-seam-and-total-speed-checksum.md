@@ -15,8 +15,9 @@ status: >
   coordinate twists at a sufficiently delayed word clock.  At any depth where
   the all-unit blind fibre is empty, nonzero total mass of the all-unit
   restricted current forces a nonzero joint-chart target without a phase-cone
-  premise.  No one-packet marginal, covering-row exclusion, or LRC(14)
-  conclusion is proved.
+  premise, and that total mass is the same scalar projector at every depth.
+  No one-packet marginal, covering-row exclusion, or LRC(14) conclusion is
+  proved.
 source: kps-s195 / THM-3676 Bockstein continuation, 2026-08-21
 depends_on:
   - THM-2334-relation-residue-current-and-character-twist-pushforward
@@ -250,6 +251,30 @@ positive word clock to be chosen arbitrarily large.  Thus each higher packet
 difference has an exact physical coordinate-twist profile on any one fixed
 owner current; no new carry-convolution identification is needed.
 
+The analytic nonvanishing premise does not grow with the depth.  Let
+`C_(rho,13^n)` be THM-2334's Abel residue current and let `U_n` be its
+all-coordinate-unit locus.  Absolute regrouping at `rho<1` gives
+
+```text
+M_(rho,n)=sum_(r in U_n)C_(rho,13^n)(r)
+
+ =sum_(lambda in Lambda;
+       lambda_i not congruent 0 mod 13 for every i)
+    C_rho(lambda),                                  (19)
+```
+
+because being a unit modulo `13^n` depends only on the first digit.  The
+right side is independent of `n`.  Each finite residue sum has a boundary
+limit by THM-2334, so
+
+```text
+M_n=M_1                    for every n>=1.           (20)
+```
+
+Thus one nonzero mod-thirteen all-unit total mass can be carried directly to
+the finite checksum-killing depth; no separate nonvanishing theorem is needed
+at each Bockstein layer.
+
 There is also an exact joint-chart consequence which avoids the phase-cone
 premise of THM-3676.  Let `Pi_(j,n)` collect the eight coordinates of the four
 maps (3), and let `Pi_(j,j',n)` collect all sixteen coordinates for two
@@ -257,7 +282,7 @@ sources.  Let `mu` be any complex residue measure on `K_n`, supported on the
 all-coordinate-unit locus, and assume
 
 ```text
-M=sum_(r in K_n)mu(r)!=0.                            (19)
+M=sum_(r in K_n)mu(r)!=0.                            (21)
 ```
 
 At the first empty depth in (16), the zero fibre of `Pi_(j,n)` does not meet
@@ -286,14 +311,14 @@ valuation-aligned route:
   common all-unit current at depth n_*
   + sourcewise noncancellation
   + two source packet actions
-  -> some higher target is nonzero.                              (20)
+  -> some higher target is nonzero.                              (22)
 ```
 
 Equation (13) proves that there is no algebraic scalar hostile left at that
 depth, equation (16) gives the cheaper one-source split, and (18) realizes
 each action separately.  The theorem does not supply a nonzero all-unit
-total mass (19), nor the common-current and one-packet marginal premises needed
-in the aligned route (20).  A nonzero joint aggregate can cancel after
+total mass (21), nor the common-current and one-packet marginal premises needed
+in the aligned route (22).  A nonzero joint aggregate can cancel after
 marginalizing away the other chart coordinates.  No scalar row is excluded
 and LRC(14) remains open.
 
