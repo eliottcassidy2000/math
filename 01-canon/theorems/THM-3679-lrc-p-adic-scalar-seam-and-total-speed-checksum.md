@@ -2,7 +2,7 @@
 id: THM-3679
 title: "LRC p-adic scalar seam and total-speed checksum"
 status: >
-  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  At every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  At every
   depth 13^n, four
   packet charts for each of two distinct blocker sources force a jointly
   target-zero address to be globally scalar.  On the all-coordinate-unit
@@ -18,7 +18,9 @@ status: >
   coordinate twists at a sufficiently delayed word clock.  At any depth where
   the all-unit blind fibre is empty, nonzero total mass of the all-unit
   restricted current forces a nonzero joint-chart target without a phase-cone
-  premise, and that total mass is the same scalar projector at every depth.
+  premise.  Reduction compatibility at N_n=7*13^n identifies the all-91-unit
+  total at every depth with the base scalar sum_q B(q), while the higher
+  character twists remain septimally charged.
   No one-packet marginal, covering-row exclusion, or LRC(14) conclusion is
   proved.
 source: kps-s195 / THM-3676 Bockstein continuation, 2026-08-21
@@ -36,16 +38,30 @@ script_sha256: cb9e80f688254bf6c83927c20306e33a3e716ddd16e1e70febf577cc96baecde
 output_sha256: c357dc4643e251b42807d1c086b27928d2c3b1f2ffa9b1c3c9875f402d4c2c8d
 semantic_sha256: 7afb7edb68614deebafcf4d544ffa6c4e28be94ed1b656ddb269aead70b5fb77
 hash_basis: raw LF bytes
+audit: >
+  lovelace-2026-08-21 independently reconstructed the finite-ring kernels,
+  checksum criterion, one-source valuation law, exact hostile relation, and
+  higher-depth reduction compatibility.  The hostile audit also supplied a
+  pure four-way ANOVA measure showing that every one-chart marginal may
+  cancel although the joint pushforward is nonzero, and it isolated the
+  remaining role-to-packet intertwiner.  No theorem conclusion relies on a
+  deepest blocker carrying a nonzero semantic current.
 ---
 
 # THM-3679 -- every positive row eventually fails the scalar checksum
 
-**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  This theorem
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem
 lifts the exact
 equality graph of THM-3676 from `F_13` to every finite ring
 `Z/13^n Z`.  It identifies a finite depth at which the last mod-thirteen
 scalar hostile must disappear.  It does not prove that the semantic LRC
 current is transported to that depth.
+
+The independent audit reconstructed the ring argument without field division,
+the exact integer kernel, and the reduction tower.  It then attacked the
+strongest tempting marginal conclusion: an explicit signed all-unit measure
+has nonzero total and nonzero joint target but zero pushforward through each
+of the four individual charts.  Section 6 records this sharp boundary.
 
 ## 1. Higher packet differences
 
@@ -234,8 +250,11 @@ nu_13(W)<nu_13(w_j),                                (17)
 
 then `nu_13(S_j)=nu_13(W)`, so this one fixed source loses its all-unit blind
 fibre already at depth `nu_13(W)+1`.  Taking `j` to be the deepest blocker
-therefore avoids cross-source transport on every row whose total-speed
-valuation is smaller than that blocker depth.
+therefore gives the cheapest *algebraic* one-source split on every row whose
+total-speed valuation is smaller than that blocker depth.  Its physical use
+additionally requires that this source own a nonzero marked current.  The
+canonical semantic construction universally guarantees a shallow owner, not
+a deepest owner, so no deepest-source handoff is inferred here.
 
 The criterion is sharp because it is the reduction of an exact integer
 relation.  Put
@@ -309,6 +328,48 @@ mass can be regrouped directly at the finite checksum-killing depth; no
 separate nonvanishing theorem is needed at each Bockstein layer.  Equation
 (20) does not compare currents built with two different delayed clocks.
 
+There is a sharper version which retains the septimal all-unit projector.
+Put
+
+```text
+N_n=7*13^n.
+```
+
+Reduce the same exact relation current modulo `N_n`.  Reduction
+`K_(N_(n+1))->K_(N_n)` pushes `C_(rho,N_(n+1))` to `C_(rho,N_n)`.  Moreover,
+an exact relation coordinate is a unit modulo `N_n` if and only if it is
+coprime to `91`; this condition is independent of `n`.  Hence
+
+```text
+T_n^91
+ :=sum_(y in K_(N_n); every y_i in (Z/N_n Z)^times)
+      C_(N_n)(y;1-)
+
+ =sum_(lambda in Lambda; gcd(lambda_i,91)=1 for every i)
+      C(lambda)
+
+ =T_1^91.                                           (20a)
+```
+
+At depth one, THM-2334 partitions this same all-`91`-unit current by the
+mod-thirteen packet target, so
+
+```text
+T_n^91=T_1^91=sum_(q in (Z/13 Z)^2) B(q).           (20b)
+```
+
+Thus the p-adic checksum argument needs only the single base scalar premise
+
+```text
+sum_q B(q)!=0.                                      (20c)
+```
+
+This is strictly a compatibility statement for finite residue regroupings of
+one fixed current.  It does **not** make the higher physical twists neutral
+modulo seven: THM-2334 shows that their word charge remains septimally active.
+Consequently (20b) neither supplies a role-to-packet intertwiner nor identifies
+currents belonging to two different owner words.
+
 There is also an exact joint-chart consequence which avoids the phase-cone
 premise of THM-3676.  Let `Pi_(j,n)` collect the eight coordinates of the four
 maps (3), and let `Pi_(j,j',n)` collect all sixteen coordinates for two
@@ -355,6 +416,26 @@ total mass (21), nor the common-current and one-packet marginal premises needed
 in the aligned route (22).  A nonzero joint aggregate can cancel after
 marginalizing away the other chart coordinates.  No scalar row is excluded
 and LRC(14) remains open.
+
+The marginal warning is sharp even before analytic semantics are imposed.
+The independent hostile audit uses
+
+```text
+w=(1,2,3,4,5,6,0,0,0) mod 13
+```
+
+and constructs four relation vectors `v_i`, one visible in each chart and
+zero in the other three.  Every nonempty subset sum `r_S=sum_(i in S)v_i` can
+be normalized to an all-coordinate-unit relation.  The signed measure
+
+```text
+mu(r_S)=(-1)^(|S|+1),              empty!=S subset {1,2,3,4}
+```
+
+has total mass one and a nonzero joint pushforward, but every individual
+chart pushforward is `delta_0`.  This is the pure four-way ANOVA interaction:
+joint noncancellation cannot be marginalized chart by chart without a new
+structural property of the canonical interval-factor coefficients.
 
 ## 7. Exact finite-ring controls
 
