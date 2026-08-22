@@ -1,0 +1,11 @@
+theorem=THM-3686-y0-target-degree3-one-bracket-no-go
+sympy_version=1.14.0
+universe=P,Q_are_arbitrary_C-linear_combinations_of_nonconstant_A^iB^jC^k_with_i+j+k<=N;constants_irrelevant
+N=2;target_basis=9;coefficient_variables=18;xz_equations=55;groebner=(1,);wedge_support=55;wedge_columns=36;wedge_rank=26;augmented_rank=27;wedge_nullity=10
+N=2;labels=((0, 0, 1), (0, 1, 0), (1, 0, 0), (0, 0, 2), (0, 1, 1), (0, 2, 0), (1, 0, 1), (1, 1, 0), (2, 0, 0))
+N=3;target_basis=19;coefficient_variables=38;xz_equations=131;groebner=(1,);wedge_support=131;wedge_columns=171;wedge_rank=75;augmented_rank=75;wedge_nullity=96
+N=3;labels=((0, 0, 1), (0, 1, 0), (1, 0, 0), (0, 0, 2), (0, 1, 1), (0, 2, 0), (1, 0, 1), (1, 1, 0), (2, 0, 0), (0, 0, 3), (0, 1, 2), (0, 2, 1), (0, 3, 0), (1, 0, 2), (1, 1, 1), (1, 2, 0), (2, 0, 1), (2, 1, 0), (3, 0, 0))
+consequence=no_single_bracket_equals_1_through_total_target_degree_3
+linear_controls=N2_absent_from_bracket_span;N3_present_in_bracket_span_but_not_as_one_decomposable_wedge
+scope=finite_exact_target_degree_gate;arbitrary_mixed_weight_one_bracket_remains_open
+commands=python3 -B 04-computation/jacobian_y0_target_degree3_one_bracket_no_go_thm3686.py;python3 -B -O 04-computation/jacobian_y0_target_degree3_one_bracket_no_go_thm3686.py

@@ -363,7 +363,7 @@ is sharp: equal counts allow two densities or none.
   screen; THM-3687 lifts all four uniformly through actual-ring `J_0=1`,
   while `J_1,J_2` and higher continuation remain open. THM-3684 proves that no
   nonconstant polynomial in one of `b,c,e` has a mate even in the full source
-  ring, so mixing only the opposite output cannot work. Higher-degree
+  ring. THM-3685/86 close native graphs and force mixed target degree `>=4`. Higher-degree
   zero-debt polynomials, continuation of the four THM-3683 folds,
   THM-3641's excluded nonordinary tangent collisions, nonquadratic folds, and
   THM-3629's genuinely two-output-mixed `H'(0)!=0` pairs remain OPEN. A

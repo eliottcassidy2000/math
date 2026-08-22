@@ -1,0 +1,17 @@
+theorem=THM-3686-y0-collision-normalization-and-bracket-anatomy
+restriction=A=3z(2-x^2z);B=2xz(2-x^2z);C=x(1-x^2z)
+kernel=16A^3C^2+27B^4-36AB^2
+immersion_minors=(-12*z*(x**2*z - 2)*(x**2*z - 1), -6*(2*x**4*z**2 - 4*x**2*z + 1), -2*x*(3*x**4*z**2 - 6*x**2*z + 2))
+source_bezout=1=(-1/6+2t-t^2){A,C}+2xz(t-2){B,C};t=x^2z
+normalization_generator=g=1-x^2z=2AC/(3B);cubic=g^3-g+BC/2
+normalization_relations=BC-2g(1-g^2);3Bg-2AC;4A(1-g^2)-3B^2
+normalization_jacobian_rank=2_everywhere;smooth_normal_surface
+collision_normalization_rows=((0, 0, 1, 1), (0, 0, 1, -1));fibre_g=g*(g - 1)*(g + 1)
+canonical_form=-(g/C^2)dC^dg_on_D0_chart=-(1/(4Ag))dA^dB_on_Dminus_chart;divisor=D0
+three_bracket=1={C,-B^2/4+A/6+A^2C^2/6}+(7/4){BC^2,ABC}-(13/8){AC^3,B^2}
+degree3_four_bracket=1={C,A/6-B^2/4}+{C^2,A^2C}/12-(13/6){C^3,AB^2}+5{BC^2,ABC}
+two_bracket_coefficients=108a^2+2040a-403=0;23324a+920b^2-4459=0;b!=0
+two_bracket_support=P1,Q1,P2,Q2_target_degree_at_most_4;identity=verified_mod_coefficient_field
+four_function_linear_compression=unique_w01=1,w23=1/(102b),cross=0;Pluecker=1/(102b)!=0
+scope=bracket_width_at_most_2;one_bracket_Darboux_pair_open;homogeneous_all_degree_blocked_in_theorem
+commands=python3 -B 04-computation/jacobian_y0_collision_normalization_bracket_anatomy_thm3686.py;python3 -B -O 04-computation/jacobian_y0_collision_normalization_bracket_anatomy_thm3686.py
