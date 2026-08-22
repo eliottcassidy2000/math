@@ -1,0 +1,18 @@
+== THM-3664 LRC sparse eight-twist detector frame ==
+parents_sha256_lf=('ce220ede12175b6851810782c880f95048fe9f4643cc4f52f47a7f4d8dcb7b0c', 'd2d9b49db9ef3eabf7e3ae17cea247da554a9f8df2abfc3907243d317b21fec1', '7c8ebacaff5318b58ed1588d2e38edf1bc3c14ea81beec069d781450db986251', '61893d6e628232e877c73d6102f042654327fddfe7d51d1cf79c1aa6bc65419f')
+twist_group=F13^2;size:169;detector_support:8;mean:0
+fourier_zero_set=((0, 0),);nontrivial_support:168
+universal_transfer_pairs=28561;sha256=3da8706f46fd12fc8cbdd822355e2063519b72285999b6f3906acd708f157984
+projective_representatives=((1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (1, 12), (0, 1))
+projective_line_norms=(13, 53248, 13, 223093, 13, 9477, 137917, 320437, 13, 36517, 9477, 2197, 13, 13);minimum:13
+integer_augmentation_determinant=18258988969361052598805681298174465892061184;square:4273053822427357700928^2
+integer_determinant_mod_p=669422013050837354847410
+pointwise_multiplier_bounds=13/8^11<=abs(g_hat)<=8
+l2_frame_bounds=(169/8^22)||H-Hbar||^2<=||g*H||^2<=64||H-Hbar||^2
+GL2_basis_masks=26208;distinct:26208;sha256=acfdf613f12b47f85c3b2dc48a95bd98cc59f92bdaf369b29e51e7a25ba4fccd
+criterion=nonzero target iff some translated signed eight-twist imbalance is nonzero
+reconstruction=H-Hbar=h*(g*H), h_hat(0)=0, h_hat(q)=1/g_hat(q)
+semantic_sha256=24c09ef5a3681ccbf9878276e1e7fda2efabc947b0e86c06a6bf594e088561a6
+script_sha256_lf=f60472d32b1ce92fba3ddedf82b3cef98dc6b45e7eb82e7ee49aecb5561fda89
+scope=typed target-twist group after a chosen basis;not a physical address identification or LRC14
+PASS
