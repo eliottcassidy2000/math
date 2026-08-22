@@ -11,8 +11,11 @@ status: >
   at every depth exactly when the source speed and the sum of the other eight
   speeds have equal 13-adic valuation; otherwise it dies at the first unequal
   layer.  THM-2334 realizes each higher difference pushforward by exact
-  coordinate twists at a sufficiently delayed word clock.  No grouped-current
-  noncancellation, covering-row exclusion, or LRC(14) conclusion is proved.
+  coordinate twists at a sufficiently delayed word clock.  At any depth where
+  the all-unit blind fibre is empty, nonzero total mass of the all-unit
+  restricted current forces a nonzero joint-chart target without a phase-cone
+  premise.  No one-packet marginal, covering-row exclusion, or LRC(14)
+  conclusion is proved.
 source: kps-s195 / THM-3676 Bockstein continuation, 2026-08-21
 depends_on:
   - THM-2334-relation-residue-current-and-character-twist-pushforward
@@ -239,6 +242,25 @@ positive word clock to be chosen arbitrarily large.  Thus each higher packet
 difference has an exact physical coordinate-twist profile on any one fixed
 owner current; no new carry-convolution identification is needed.
 
+There is also an exact joint-chart consequence which avoids the phase-cone
+premise of THM-3676.  Let `Pi_(j,n)` collect the eight coordinates of the four
+maps (3), and let `Pi_(j,j',n)` collect all sixteen coordinates for two
+sources.  Let `mu` be any complex residue measure on `K_n`, supported on the
+all-coordinate-unit locus, and assume
+
+```text
+M=sum_(r in K_n)mu(r)!=0.                            (19)
+```
+
+At the first empty depth in (16), the zero fibre of `Pi_(j,n)` does not meet
+the support.  At depth `n_*` in (13), the same is true for
+`Pi_(j,j',n_*)`.  In either case the joint pushforward has value zero at its
+zero label, while the sum of all its fibre aggregates is `M`.  Hence some
+nonzero joint label has nonzero aggregate.  No sign or common half-plane is
+used.  The complete character group of this joint pushforward consists of
+arbitrary linear combinations of the dipoles in (18), so THM-2334 realizes
+the conclusion by finitely many physical coordinate twists.
+
 What remains missing is the cross-source semantics.  THM-2305 does not yet
 transport literally one nonzero grouped all-unit residue current, in the same
 labelled coordinates and phase gauge, through two distinct legitimate
@@ -256,12 +278,13 @@ valuation-aligned route:
   common all-unit current at depth n_*
   + sourcewise noncancellation
   + two source packet actions
-  -> some higher target is nonzero.                              (19)
+  -> some higher target is nonzero.                              (20)
 ```
 
 Equation (13) proves that there is no algebraic scalar hostile left at that
 depth, equation (16) gives the cheaper one-source split, and (18) realizes
 each action separately.  The theorem does not supply a nonzero all-unit
-grouped measure or its phase/valuation noncancellation, nor the common-current
-premise needed in the aligned route (19).  No scalar row is excluded and
-LRC(14) remains open.  **QED.**
+total mass (19), nor the common-current and one-packet marginal premises needed
+in the aligned route (20).  A nonzero joint aggregate can cancel after
+marginalizing away the other chart coordinates.  No scalar row is excluded
+and LRC(14) remains open.  **QED.**
