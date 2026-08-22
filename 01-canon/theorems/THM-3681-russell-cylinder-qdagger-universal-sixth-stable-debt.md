@@ -2,7 +2,7 @@
 id: THM-3681
 title: "Russell-cylinder Q_dagger universal sixth-stable debt"
 status: >
-  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  For the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the
   degree-eight Q_dagger fold, every arbitrary target two-form satisfies one
   universal retained order-six identity.  If J_0=1 and J_2=J_4=0, it forces
   Lambda(J_6)=-326763520/3^13.  Hence no target two-form, and therefore no
@@ -10,6 +10,14 @@ status: >
   conjugacy close the same Q_dagger compiler for every nonzero critical
   displacement H in t^2 C[t].  This closes one candidate family, not JC(2).
 source: kps-s196 / complete retained order-six two-form cokernel scout, 2026-08-21
+audit: >
+  PASS AFTER ONE QUOTIENT-WORDING REPAIR -- Lovelace independently rebuilt
+  the complete 30 by 252 Taylor matrix without opening the companion,
+  recovered rank 26, all 23 displayed coefficients, the negative
+  326763520/3^13 debt, the order-four control, and the all-k/formal-conjugacy
+  transfer.  The audit corrected "one constant-active line" to one
+  constant-active class modulo the three-dimensional inherited order-four
+  cokernel; literal representatives are not unique.
 depends_on:
   - THM-3673-russell-cylinder-monomial-ramification-debt-dilation
   - THM-3675-russell-cylinder-critical-fold-formal-conjugacy-closure
@@ -18,15 +26,15 @@ related:
   - THM-3680-russell-cylinder-qdagger-coupled-stable-lift
 script: 04-computation/jc2_russell_cylinder_qdagger_sixth_stable_debt_thm3681.py
 output: 05-knowledge/results/jc2_russell_cylinder_qdagger_sixth_stable_debt_thm3681.out
-script_sha256: 98272d9d0b1f81bc7752e0b78f66832b21e28942987b3980a159197f79542618
-output_sha256: 6e3c9869f6c7dd233ab9ebc6b2475654658d7747aa461de66522d6a10936ce8f
+script_sha256: ea572f82368c42fa94d0abb6c05c71113e2b3d2a099c7f9587c8e647e59c332c
+output_sha256: 64a29b54dabe774c437a49f7799bc6fe53ea8accc02c4c010025ef6c48ae456d
 semantic_sha256: 204b836a68a19c64404a409d7a6298aa370a1ae9a8607b3100d288e2e384c982
 hash_basis: raw LF bytes for files; canonical nonzero row/value ledger for semantic hash
 ---
 
 # THM-3681 -- Q_dagger universal sixth-stable debt
 
-**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  The
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The
 zero-fourth-debt candidate survives the actual target-ring equations through
 `J_2`, but it meets a universal arbitrary-two-form obstruction two even
 layers later.  The obstruction is local at the retained ordinary triple and
@@ -191,10 +199,16 @@ for `30` rows total.  Exact rational elimination gives
 rank=26,                    left-cokernel dimension=4. (17)
 ```
 
-Exactly one cokernel line is nonzero on the constant `J_0` vector.  Normalize
-it so that its `J_6` block is `(5/18,-1,13/18)`; its complete nonzero ledger
-is exactly `(7)--(10)`.  Thus the finite matrix proves the identity for every
-formal two-form jet, and hence for every global regular target two-form.
+The constant-`J_0` response is a nonzero functional on this cokernel.  Its
+kernel is exactly the three-dimensional order-four cokernel embedded with
+zero `J_6` block.  Therefore the quotient by the inherited constant-inactive
+subspace is one-dimensional.  Equations `(7)--(10)` are the displayed sparse
+representative of that unique active **class**, normalized to have `J_6`
+block `(5/18,-1,13/18)`.  They are not a unique literal line: any inherited
+order-four null row may be added.  The independent audit found this
+representative unique after restricting to its displayed `23` positions.
+Thus the finite matrix proves the identity for every formal two-form jet, and
+hence for every global regular target two-form.
 
 The semantic SHA-256 in the front matter binds every nonzero
 `(stable degree,branch,source degree):coefficient` entry of this normalized
@@ -231,8 +245,10 @@ Hence a nonzero constant source density already contradicts
 0=alpha^3 kappa (326763520/3^13).                     (21)
 ```
 
-Now let `0!=H in t^2 C[t]`.  THM-3675 formally monomializes `H` and transforms
-a hypothetical constant density into the `x`-independent series
+Now let `0!=H in t^2 C[t]`.  We reuse the `Q`-independent formal-conjugacy
+calculation from THM-3675 (rather than its conclusion, whose stated scope is
+`Q_6,Q_*`).  It formally monomializes `H` and transforms a hypothetical
+constant density into the `x`-independent series
 `kappa psi'(u)`.  Every positive stable coefficient is therefore constant in
 `x`.  The value coefficients of each positive block in `(7)` sum to zero:
 
@@ -261,9 +277,11 @@ zero constant-active cokernel rows.                    (24)
 ```
 
 This exactly reproduces `Q_dagger`'s zero fourth debt and is a hostile control
-against manufacturing a false obstruction by truncation.  The companion also
-mutates one nonzero coefficient of `(7)` and detects failure on the complete
-monomial universe.
+against manufacturing a false obstruction by truncation.  Its three null
+rows embed exactly as the constant-inactive subspace of the order-six
+cokernel, leaving the one-dimensional active quotient class.  The companion
+also mutates one nonzero coefficient of `(7)` and detects failure on the
+complete monomial universe.
 
 THM-3680 remains a genuine survival theorem: actual target-ring coefficients
 do solve `J_0=1,J_1=J_2=0`.  The present result proves that no continuation of
@@ -286,6 +304,9 @@ python -O -B 04-computation/jc2_russell_cylinder_qdagger_sixth_stable_debt_thm36
 
 Normal and optimized transcripts agree with the pinned LF output.  The
 companion reconstructs all `252` columns, the two exact cokernels, the unique
-constant-active row, every one of the `252` identity evaluations, the
-predecessor and mutation controls, and an assertion-free AST at `287` active
-gates.  **QED pending independent hostile audit.**
+constant-active quotient class, every one of the `252` identity evaluations,
+the exact order-four embedding, predecessor and mutation controls, and an
+assertion-free AST.  The independent audit separately reconstructed the
+matrix from the literal source Jacobian, caught the quotient wording, checked
+Taylor-versus-raw-derivative factorials on hostile columns, and recovered the
+same all-`k` transfer.  **QED.**

@@ -195,7 +195,8 @@ responses = [
     for vector in left_kernel
 ]
 active = [index for index, response in enumerate(responses) if response]
-require(len(active) == 1, "unique constant-active left-cokernel line")
+require(active, "nonzero constant-response functional on the left cokernel")
+require(len(left_kernel) - 1 == 3, "constant-inactive cokernel dimension")
 
 vector = left_kernel[active[0]]
 j6_indices = [index for index, row in enumerate(ROWS) if row[0] == 6]
@@ -289,6 +290,35 @@ responses4 = [
 require((len(ROWS4), len(column4_indices), rank4, len(kernel4)) == (18, 105, 15, 3), "order-four control shape")
 require(not any(responses4), "order-four constant response vanishes")
 
+# The order-four cokernel embeds as the complete constant-inactive subspace of
+# the order-six cokernel.  Thus the constant-active obstruction is a unique
+# quotient class, not a unique literal line: adding any embedded order-four
+# row produces another constant-active representative.
+embedded4 = []
+for index, vector4 in enumerate(kernel4):
+    extension = [fmpq(0) for _ in ROWS]
+    for local_row, global_row in enumerate(row4_indices):
+        extension[global_row] = vector4[local_row]
+    require(
+        all(
+            sum(
+                (extension[row] * fq(column[row]) for row in range(len(ROWS))),
+                fmpq(0),
+            )
+            == 0
+            for column in COLUMNS
+        ),
+        f"order-four cokernel embedding {index}",
+    )
+    embedded4.append(extension)
+
+quotient_span = fmpq_mat(
+    4,
+    len(ROWS),
+    [value for row in (*embedded4, relation) for value in row],
+)
+require(quotient_span.rank() == 4, "one-dimensional active quotient class")
+
 source = Path(__file__).read_text(encoding="utf-8")
 require(
     sum(isinstance(node, ast.Assert) for node in ast.walk(ast.parse(source))) == 0,
@@ -297,7 +327,7 @@ require(
 
 print("Qdagger_retained_values_slopes_and_D2=PASS")
 print("order4_control=rows18_columns105_rank15_leftnullity3_constantactive0")
-print("order6_complete=rows30_columns252_rank26_leftnullity4_constantactive1")
+print("order6_complete=rows30_columns252_rank26_leftnullity4_inactive3_activequotient1")
 print(f"lambda_relation_sha256={relation_sha256}")
 print("forced_lambda_J6=-326763520/1594323=-326763520/3^13")
 print(f"RESULT=PASS;gates={gates}")
