@@ -1,0 +1,8 @@
+THM-3689 exact companion -- fully transverse 2x2 sparse-support gate
+universe=no-singleton partitions of 8 labelled Jacobian contributions
+partitions=715
+profiles=(2, 2, 2, 2):105,(2, 2, 4):210,(2, 3, 3):280,(2, 6):28,(3, 5):56,(4, 4):35,(8,):1
+exits=equal_P_supports:676,equal_Q_supports:23,first_P_exponent_is_linear:8,second_P_exponent_is_linear:8
+semantic_sha256=1bde0faea0db3139bada3f6d73d35b9eb772be369431bbf532259fe81667bccf
+CHECKS=723
+RESULT=PASS
