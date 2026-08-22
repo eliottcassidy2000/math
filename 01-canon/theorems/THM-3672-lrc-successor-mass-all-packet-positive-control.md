@@ -7,8 +7,10 @@ status: >
   hence all 120 owner-pivot packets, have a strictly negative THM-2365
   three-site successor-mass defect.  The calculation uses the actual
   successor weight 2-d(13cx), not plain marked mass.  This validates the
-  THM-3670 rational gate on one hostile control but proves no covering-row
-  statement and does not prove LRC(14).
+  THM-3670 rational gate on one hostile control.  THM-3674 converts the
+  strongest exact defect into drift at least 1.078089085e-12 and
+  nonzero-deep, nonzero-target energy at least 8.292992962e-14.  This proves
+  no covering-row statement and does not prove LRC(14).
 source: kps-s193 / Parfit successor-ledger extraction, 2026-08-21
 audit: >
   PASS -- Socrates independently reproduced normal and optimized transcripts,
@@ -16,12 +18,14 @@ audit: >
   danger-prefix integration, THM-2365 sign convention, thirteen successor
   identities, thirty strict negative defects, the canonical reduction, and
   the 6*5*4 packet count.  No correction was required and the non-cover scope
-  was confirmed.
+  was confirmed.  The later energy invoice is exact rational substitution
+  into independently hostile-audited THM-3674.
 depends_on:
   - THM-2365-lawful-target-coshift-and-h-drift-dichotomy
   - THM-3666-lrc-owner-pivot-dual-pair-swap-twist-basis
   - THM-3669-lrc-typed-control-all-packet-three-twist-defects
   - THM-3670-lrc-successor-mass-transfer-and-thirteen-number-gate
+  - THM-3674-sharp-successor-variance-drift-and-target-energy-tariff
 script: 04-computation/lrc_successor_mass_all_pair_swap_control_thm3672.py
 output: 05-knowledge/results/lrc_successor_mass_all_pair_swap_control_thm3672.out
 script_sha256: a191f934b20494b98e878fc5504a328c47d4cb6a92ea332246f782fac80c01c8
@@ -146,7 +150,45 @@ recirculation locus: neither the six `A_k` nor the six `B_l` are all equal.
 The repeated first three values are a real symmetry of this row, not a
 rounding artifact.
 
-## 4. Verification and scope
+## 4. Exact energy invoice
+
+THM-3674 applies because every legal pair-swap chart uses three distinct
+sites.  For the canonical defect (11), its sharp tariff gives
+
+```text
+D >=123050711705006599185961
+    /148212992112761067316289860457462400
+   =8.3022891550147709424... * 10^-13,
+
+E_dt>=123050711705006599185961
+    /1926768897465893875111768185947011200
+   =6.3863762730882853403... * 10^-14.              (12)
+```
+
+The largest defect magnitude in the thirty-entry ledger is
+
+```text
+20786137969714/N
+ =799466844989/1935939835950120.                    (13)
+```
+
+It occurs at `(k,l)=(5,0),(5,1),(5,2)` and yields the stronger exact bounds
+
+```text
+D >=639147236236665754410121
+    /592851968451044269265159441829849600
+   =1.0780890850486303030... * 10^-12,
+
+E_dt>=639147236236665754410121
+    /7707075589863575500447072743788044800
+   =8.2929929619125407924... * 10^-14.              (14)
+```
+
+Here `D` and `E_dt` are the normalized THM-3674 quantities for the selected
+packet tensor.  Equation (14) is a certified energy floor on this non-cover
+control, not a lower bound uniform over hypothetical covering rows.
+
+## 5. Verification and scope
 
 The companion pins the parent THM-2334 interval engine by SHA-256, reconstructs
 all thirteen marked interval sets from half-open rational endpoints, evaluates
