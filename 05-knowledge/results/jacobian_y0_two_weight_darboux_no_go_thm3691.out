@@ -1,0 +1,12 @@
+theorem=THM-3691-y0-collision-ring-two-weight-darboux-no-go
+master_bracket_rows=((-5, -2, -6), (-3, 0, -2), (-2, 1, 0), (-1, 4, 4), (0, -4, -3), (2, 5, 8))
+weight_modules=negative_-R_has_h^ceil(R/2);positive_R_has_u^R
+divisibility_target_degree_controls=((1, 3), (2, 6), (3, 10), (4, 15), (5, 21), (6, 28), (7, 36), (8, 45), (9, 55), (10, 66))
+crossed_equal_gap_window=-7..7;survivors=91
+edge_cases=opposite_sign_extreme_impossible;a_or_b_1_reduces_to_homogeneous_or_h_divisible
+odd_b_endpoint_controls=(3, 5, 7, 9, 11)
+even_b_factor_rows=((2, 1, 1, 0, 0), (4, 2, 3, 1, 2), (6, 3, 5, 2, 4), (8, 4, 7, 3, 6), (10, 5, 9, 4, 8), (12, 6, 11, 5, 10), (14, 7, 13, 6, 12), (16, 8, 15, 7, 14), (18, 9, 17, 8, 16), (20, 10, 19, 9, 18))
+even_factor=constant_equation=(Hprime*K+2H*Kprime)*(c1+c2*H^(b/2-1)*K^(b-2))
+consequence=no_Darboux_pair_when_each_output_has_at_most_two_active_grading_weights
+scope=all_degree_in_R;three_or_more_weights_in_at_least_one_output_remain_open
+commands=python3 -B 04-computation/jacobian_y0_two_weight_darboux_no_go_thm3691.py;python3 -B -O 04-computation/jacobian_y0_two_weight_darboux_no_go_thm3691.py
