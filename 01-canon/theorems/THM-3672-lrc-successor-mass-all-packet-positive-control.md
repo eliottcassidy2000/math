@@ -2,7 +2,7 @@
 id: THM-3672
 title: "LRC successor-mass all-packet positive control"
 status: >
-  FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  On the
+  FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the
   typed non-cover row of THM-3669, all thirty legal ordered graft charts, and
   hence all 120 owner-pivot packets, have a strictly negative THM-2365
   three-site successor-mass defect.  The calculation uses the actual
@@ -10,6 +10,13 @@ status: >
   THM-3670 rational gate on one hostile control but proves no covering-row
   statement and does not prove LRC(14).
 source: kps-s193 / Parfit successor-ledger extraction, 2026-08-21
+audit: >
+  PASS -- Socrates independently reproduced normal and optimized transcripts,
+  all hashes, the parent pin, half-open interval intersections, two-window
+  danger-prefix integration, THM-2365 sign convention, thirteen successor
+  identities, thirty strict negative defects, the canonical reduction, and
+  the 6*5*4 packet count.  No correction was required and the non-cover scope
+  was confirmed.
 depends_on:
   - THM-2365-lawful-target-coshift-and-h-drift-dichotomy
   - THM-3666-lrc-owner-pivot-dual-pair-swap-twist-basis
@@ -26,7 +33,7 @@ hash_basis: raw LF bytes
 
 # THM-3672 -- the exact successor detector fires on every control packet
 
-**FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**
+**FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3669 proves that every owner-pivot packet on one typed non-cover row has a
 nonzero complex target-current defect.  THM-3670 instead offers a cheaper
