@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-435 (2026-08-21, THM-3667 audit) -- a frequency-dependent phase was mistaken for spectral conjugacy
+
+- **What failed:** the first THM-3667 draft correctly proved that swapping the
+  two positive weights preserves every Fourier-multiplier magnitude, then
+  incorrectly transferred the thirteen eigenvalue collisions from one
+  maximin orientation to the other and advertised a conditioning-versus-
+  rigidity tradeoff.
+- **Minimal witness / first failed implication:** the exact identity is
+  `lambda_(1-a)(-u,v-u)=zeta^u lambda_a(u,v)`.  The factor `zeta^u` depends on
+  the frequency.  It preserves singular values but not equality of complex
+  eigenvalues and is not a conjugacy; already the two traces are `169a` and
+  `169(1-a)`.  An exact `Phi_13` reduction gives 143 singletons plus thirteen
+  doubles for `(a,b)=(a_*,b_*)`, but 169 singletons for the swapped optimizer.
+- **Repair / strongest survivor:** the maximin weights, frame constants and
+  magnitude equality cases survive.  The stronger repaired result is that
+  optimal conditioning and full simple-spectrum rigidity coexist in the
+  swapped orientation.  The exceptional real collision weights in `0<b<1`
+  form the finite chord-ratio set
+  `{sin(r*pi/13)/sin(s*pi/13):1<=r<s<=6}`.
+- **Reusable rule:** an identity of the form `lambda'(phi(q))=c(q)lambda(q)`
+  transports norm/frame data only.  Before transferring eigenvalue
+  multiplicities, centralizers or conjugacy, prove that `c(q)` is constant or
+  perform a second exact spectrum census.
+
 ## MISTAKE-434 (2026-08-21, Cohn repair-cycle transfer) -- parity was substituted for multiplier holonomy
 
 - **What failed:** factorial rescaling turns the interior recurrence in the

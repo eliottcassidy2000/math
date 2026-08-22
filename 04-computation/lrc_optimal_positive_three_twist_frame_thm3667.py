@@ -20,7 +20,7 @@ EXPECTED_PARENT_HASHES = (
     "a5ef75f038d80c5d91308bb5379303970b44e9e538323eb49cf8779386356938",
     "172fe3e32fc27bb2abb21f4c7a7af59e71cdfa4c604586b2d4f8725a5ac6211a",
 )
-EXPECTED_SEMANTIC_SHA256 = "458ca3b1a351bb98be8968f79fc9e7c54b3bb571d654eb80cdd26d6842fca53c"
+EXPECTED_SEMANTIC_SHA256 = "528591ae1b3448ba5a3e50b9c9e72a303a9d337ba4bbc46f8126006e319be12e"
 
 P = 13
 N = P * P
@@ -228,7 +228,29 @@ def main() -> None:
                 ("upper spectral inequality", frequency, value, enclosure))
         upper_intervals[frequency] = enclosure
 
-    # Exact eigenvalue collision census after multiplying by D=y+1:
+    # The swapped optimizer has the same multiplier magnitudes under
+    # (u,v)->(-u,v-u), but equality of complex eigenvalues is not preserved
+    # by the resulting frequency-dependent phase.  Record both equality
+    # sets before doing the two separate cyclotomic collision censuses.
+    swapped_squared_rows = {
+        ((-u) % P, (v - u) % P): value
+        for (u, v), value in squared_rows.items()
+    }
+    swapped_lower_equalities = tuple(
+        frequency for frequency, value in swapped_squared_rows.items()
+        if frequency != (0, 0) and sub(value, gap_numerator) == constant(0)
+    )
+    require(tuple(sorted(swapped_lower_equalities)) ==
+            ((1, 1), (2, 1), (11, 12), (12, 12)),
+            ("swapped lower equality set", swapped_lower_equalities))
+    swapped_upper_equalities = tuple(
+        frequency for frequency, value in swapped_squared_rows.items()
+        if sub(upper_numerator, value) == constant(0)
+    )
+    require(tuple(sorted(swapped_upper_equalities)) == ((0, 6), (0, 7)),
+            ("swapped upper equality set", swapped_upper_equalities))
+
+    # Exact eigenvalue collision census at (a,b)=(y/D,1/D):
     # D*lambda(u,v)=y+z^u-(y+1)z^v.
     eigenclasses = {}
     for u in range(P):
@@ -263,6 +285,34 @@ def main() -> None:
     centralizer_dimension = 143 + 13 * 4
     require(centralizer_dimension == 195, centralizer_dimension)
 
+    # At the equally optimal swapped orientation (a,b)=(1/D,y/D),
+    # D*lambda(u,v)=1+y*z^u-(y+1)z^v.  Its spectrum is simple.
+    swapped_eigenclasses = {}
+    for u in range(P):
+        for v in range(P):
+            coefficients = [0] * P
+            coefficients[0] += 1
+            coefficients[(u + 1) % P] += 1             # +y*z^u
+            coefficients[(u - 1) % P] += 1
+            coefficients[(v + 1) % P] -= 1             # -(y+1)*z^v
+            coefficients[(v - 1) % P] -= 1
+            coefficients[v] -= 1
+            key = canonical_cyclotomic(coefficients)
+            swapped_eigenclasses.setdefault(key, []).append((u, v))
+    swapped_multiplicities = tuple(
+        sorted(len(value) for value in swapped_eigenclasses.values())
+    )
+    require(len(swapped_eigenclasses) == N
+            and swapped_multiplicities == (1,) * N,
+            ("swapped collision multiplicities",
+             len(swapped_eigenclasses), swapped_multiplicities))
+    swapped_zero_classes = tuple(
+        value for key, value in swapped_eigenclasses.items() if key == (0,) * 12
+    )
+    require(swapped_zero_classes == ([(0, 0)],),
+            ("swapped zero class", swapped_zero_classes))
+    swapped_centralizer_dimension = N
+
     semantic = digest_json((
         parent_hashes, P, MINPOLY,
         tuple(str(value) for value in X_INTERVAL),
@@ -271,11 +321,17 @@ def main() -> None:
         tuple(sine4),
         tuple((frequency, squared_rows[frequency]) for frequency in sorted(squared_rows)),
         lower_equalities, upper_equalities,
+        tuple(sorted(swapped_lower_equalities)),
+        tuple(sorted(swapped_upper_equalities)),
         tuple((key, tuple(value)) for key, value in sorted(eigenclasses.items())),
         double_classes, centralizer_dimension,
+        tuple((key, tuple(value))
+              for key, value in sorted(swapped_eigenclasses.items())),
+        swapped_centralizer_dimension,
     ))
-    require(semantic == EXPECTED_SEMANTIC_SHA256,
-            ("semantic digest", semantic, EXPECTED_SEMANTIC_SHA256))
+    if EXPECTED_SEMANTIC_SHA256 is not None:
+        require(semantic == EXPECTED_SEMANTIC_SHA256,
+                ("semantic digest", semantic, EXPECTED_SEMANTIC_SHA256))
 
     source = Path(__file__).resolve()
     require(not any(isinstance(node, ast.Assert)
@@ -289,11 +345,15 @@ def main() -> None:
     print(f"lower_equality_frequencies={lower_equalities};strict_others:{len(lower_intervals)}")
     print("upper_multiplier_squared=4*cos(pi/26)^2")
     print(f"upper_equality_frequencies={upper_equalities};strict_others:{len(upper_intervals)}")
-    print("optimizer=unique up to swapping the two positive sites")
-    print(f"eigenvalue_classes={len(eigenclasses)};singletons:143;doubles:13")
-    print(f"double_classes={double_classes}")
-    print(f"full_linear_centralizer_dimension={centralizer_dimension}")
-    print("tradeoff=optimal conditioning creates 13 double eigenvalues;equal weights retain simple spectrum")
+    print("optimizers=(a,b)=(y/(y+1),1/(y+1)) and its swap")
+    print(f"swapped_lower_equality_frequencies={tuple(sorted(swapped_lower_equalities))}")
+    print(f"swapped_upper_equality_frequencies={tuple(sorted(swapped_upper_equalities))}")
+    print(f"a_star_orientation_eigenvalue_classes={len(eigenclasses)};singletons:143;doubles:13")
+    print(f"a_star_orientation_double_classes={double_classes}")
+    print(f"a_star_orientation_centralizer_dimension={centralizer_dimension}")
+    print(f"swapped_orientation_eigenvalue_classes={len(swapped_eigenclasses)};singletons:169;doubles:0")
+    print(f"swapped_orientation_centralizer_dimension={swapped_centralizer_dimension}")
+    print("orientation_asymmetry=optimal conditioning and simple spectrum coexist at swapped optimizer")
     print(f"semantic_sha256={semantic}")
     print(f"script_sha256_lf={lf_sha256(source)}")
     print("scope=positive three-site convolution frames on F13^2;not covering-row nonvanishing or LRC14")

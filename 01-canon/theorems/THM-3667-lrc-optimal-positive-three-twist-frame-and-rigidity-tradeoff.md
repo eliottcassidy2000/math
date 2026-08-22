@@ -1,37 +1,52 @@
 ---
 id: THM-3667
-title: "LRC optimal positive three-twist frame and rigidity tradeoff"
+title: "LRC optimal positive three-twist frame and orientation-selective rigidity"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
+  AFTER CORRECTION.
   Among all normalized positive three-site averaging masks on F13^2, the
   worst nontrivial Fourier multiplier is maximized by explicit real
   cyclotomic weights.  The exact lower and upper frame constants and all
-  equality frequencies are determined.  At the unique optimizer (up to
-  swapping the positive sites), exactly thirteen eigenvalue pairs collide,
-  enlarging the full linear centralizer from dimension 169 to 195.  Equal
-  weights retain simple spectrum but have a smaller gap.  This optimizes an
-  abstract target-twist observer; it does not prove covering-row
-  nonconstancy or LRC(14).
+  equality frequencies are determined.  The two optimizers obtained by
+  swapping the positive weights have identical singular-value spectra but
+  different eigenvalue multiplicities: one has thirteen double classes and
+  centralizer dimension 195, while the swapped orientation has simple
+  spectrum and centralizer dimension 169.  Thus optimal conditioning and
+  full simple-spectrum rigidity coexist.  This optimizes an abstract
+  target-twist observer; it does not prove covering-row nonconstancy or
+  LRC(14).
 source: kps-s192 / weighted continuation of THM-3665, 2026-08-21
+audit: >
+  PASS AFTER MATERIAL CORRECTION -- agent Herschel independently reproduced
+  both maximin optimizers, every exact lower and upper inequality and equality
+  case, and all pinned inputs.  The audit found that swapping positive sites
+  multiplies eigenvalues by a frequency-dependent phase: it preserves
+  magnitudes but not collisions.  The original claim that both optimal
+  orientations have thirteen double classes was therefore false.  A second
+  exact cyclotomic census now proves that the swapped optimizer has 169
+  distinct eigenvalues; the theorem, companion, transcript, hashes and
+  interpretation were repaired.  The audit also corrected the numerical gap
+  and identified the full finite exceptional collision set.
 depends_on:
   - THM-3665-lrc-support-minimal-three-twist-target-detector
 related:
   - THM-3666-lrc-owner-pivot-dual-pair-swap-twist-basis
 script: 04-computation/lrc_optimal_positive_three_twist_frame_thm3667.py
 output: 05-knowledge/results/lrc_optimal_positive_three_twist_frame_thm3667.out
-script_sha256: f90565ddce543be2a8a37fe715e32a2eb1d660380b51315ba3847fd3b5889dce
-output_sha256: 8c70caa5ad5fb990c4078e1af3c072471d6e2352cd9800ed65000f6a72642a88
-semantic_sha256: 458ca3b1a351bb98be8968f79fc9e7c54b3bb571d654eb80cdd26d6842fca53c
+script_sha256: a8336fc79c7f7d66a0a3fcaa9f653daf67a4dc335ad3d6aae2fb1026d9a15ed3
+output_sha256: f9e670ad81043d76fa5f0f39f74e010893d8a54dd1290c97b897c18f85f025e1
+semantic_sha256: 528591ae1b3448ba5a3e50b9c9e72a303a9d337ba4bbc46f8126006e319be12e
 hash_basis: raw LF bytes
 ---
 
-# THM-3667 -- optimal conditioning forces thirteen spectral collisions
+# THM-3667 -- optimal conditioning has a simple-spectrum orientation
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  THM-3665 used equal positive weights because they give a simple
-spectrum and an especially clean maximum principle.  They are not the
-best-conditioned positive weights.  The exact optimizer exposes a sharp
-conditioning-versus-rigidity boundary.
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
+AFTER CORRECTION.**  THM-3665 used equal positive weights because they give a
+simple spectrum and an especially clean maximum principle.  They are not the
+best-conditioned positive weights.  There are two oriented optimal masks:
+one has thirteen spectral collisions, while the swapped one has simple
+spectrum.  The distinction is invisible to singular values.
 
 ## 1. Positive three-site family
 
@@ -61,7 +76,15 @@ mu(a)=min_((u,v)!=(0,0)) |lambda_(a,1-a)(u,v)|.     (3)
 ```
 
 Swapping the two positive support sites by an affine rebasing gives
-`mu(a)=mu(1-a)`, so it suffices to optimize on `a>=1/2`.
+`mu(a)=mu(1-a)`, so it suffices to optimize on `a>=1/2`.  More precisely,
+
+```text
+lambda_(1-a)(-u,v-u)=zeta^u lambda_a(u,v).          (3a)
+```
+
+This identity preserves multiplier magnitudes.  Its phase depends on the
+frequency, so it does **not** preserve eigenvalue collisions or give a
+similarity between the two convolution operators.
 
 ## 2. Two hostile modes force the optimizer
 
@@ -153,6 +176,14 @@ for every nontrivial frequency.  Equality occurs exactly at
 (1,0),(12,0),(2,1),(11,12).                         (16)
 ```
 
+For the swapped optimizer, (4) transports the lower equality set to
+
+```text
+(1,1),(2,1),(11,12),(12,12),                       (16a)
+```
+
+while the upper equality set remains `(0,6),(0,7)`.
+
 The companion proves all 164 strict signs by rational interval arithmetic;
 the four equalities reduce to the zero polynomial in `Q[x]/(P)`.  Consequently
 the upper bound forced in Section 2 is attained, and
@@ -169,7 +200,7 @@ For comparison, equal normalized weights have gap
 
 ```text
 mu(1/2)=2sin(pi/13)^2 approximately 0.114544,
-mu(a_*) approximately 0.172729.                     (18)
+mu(a_*) approximately 0.1727342188105364557.        (18)
 ```
 
 Thus optimal weighting improves the amplitude gap by about 51 percent.
@@ -193,7 +224,7 @@ with equality exactly at `(0,6),(0,7)`.  Hence, for every twist profile `H`,
 
 Both constants are sharp character profiles.
 
-## 5. The optimizer loses simple spectrum
+## 5. The two optimal orientations have different rigidity
 
 Multiplying (2) by `D=y+1` gives the cyclotomic integer
 
@@ -201,7 +232,8 @@ Multiplying (2) by `D=y+1` gives the cyclotomic integer
 D lambda(u,v)=y+zeta^(-u)-(y+1)zeta^(-v).           (21)
 ```
 
-There are exactly 156 distinct values in the 169-frequency spectrum:
+For the orientation `(a,b)=(a_*,b_*)`, there are exactly 156 distinct values
+in the 169-frequency spectrum:
 
 ```text
 143 singleton eigenvalues,
@@ -233,21 +265,44 @@ sum of squared eigenvalue multiplicities.  Thus
 dim Cent_End(C_m)=143+13*2^2=195.                   (25)
 ```
 
-By contrast, THM-3665's equal-weight mask has 169 distinct eigenvalues and
-centralizer dimension 169.  Exact maximin conditioning therefore forces a
-strict loss of linear rigidity.
+For the equally optimal swapped orientation `(a,b)=(b_*,a_*)`, multiplication
+by `D` instead gives
 
-The loss is confined to the exact optimizer.  Pairwise collisions impose
-only finitely many exceptional algebraic weight ratios, so generic weights
-arbitrarily close to `(a_*,b_*)` recover simple spectrum with arbitrarily
-near-optimal gap.
+```text
+D lambda(u,v)=1+y zeta^(-u)-(y+1)zeta^(-v).        (26)
+```
+
+Exact reduction of all 169 values modulo `Phi_13` proves that they are
+pairwise distinct.  Its full linear centralizer therefore has dimension 169.
+The traces `169a_*` and `169b_*` already rule out similarity of the two
+oriented operators.  This repairs the tempting but false inference from the
+magnitude identity (3a): optimal conditioning and full simple-spectrum
+rigidity coexist at the swapped optimizer.
+
+The collision locus itself is finite and explicit.  A collision for a mask
+whose coefficient on `delta_(e_1)` is `b` forces
+
+```text
+b=(zeta^(-v)-zeta^(-v'))/(zeta^(-u)-zeta^(-u')).   (27)
+```
+
+Resolving the phase of the two chords shows that the exceptional real weights
+in `0<b<1` are exactly
+
+```text
+{ sin(r*pi/13)/sin(s*pi/13) : 1<=r<s<=6 }.         (28)
+```
+
+Here `b_*=sin(pi/13)/sin(3pi/13)` is exceptional, whereas the swapped
+coefficient `a_*` is not.  Generic nearby weights are also simple-spectrum,
+but the stronger point is that no perturbation away from optimality is needed.
 
 ## 6. Interpretation for the LRC target plane
 
 In THM-3666's pair-swap coordinates, the optimal local test is
 
 ```text
-a_* H(x,y)+b_* H(x-1,y)-H(x,y-1).                  (26)
+a_* H(x,y)+b_* H(x-1,y)-H(x,y-1).                  (29)
 ```
 
 Its vanishing is a positive weighted harmonic recurrence.  The finite
@@ -255,15 +310,18 @@ maximum-modulus principle still makes global vanishing equivalent to a
 constant twist profile, while (20) gives the best possible uniform stability
 among normalized positive three-site tests.
 
-There are now two useful observables rather than one universally superior
-choice:
+There are now three useful orientations rather than a conditioning-versus-
+rigidity dichotomy:
 
 ```text
 equal rational weights:
   simpler arithmetic, simple spectrum, strongest centralizer rigidity;
 
-optimal cyclotomic weights:
-  largest frame gap, but thirteen spectral collisions.             (27)
+optimal weights (a_*,b_*):
+  largest frame gap, with thirteen spectral collisions;
+
+swapped optimal weights (b_*,a_*):
+  the same largest frame gap and a simple spectrum.                 (30)
 ```
 
 Neither observable proves that the canonical marked current is nonconstant
@@ -283,5 +341,6 @@ python3 -B -O 04-computation/lrc_optimal_positive_three_twist_frame_thm3667.py
 Both streams match the stored transcript.  The assertion-free companion
 proves the isolating interval from rational pi bounds and alternating cosine
 bounds, performs every sign comparison in the exact degree-six real
-cyclotomic field, classifies both equality sets, and reduces all 169
-eigenvalues in `Q(zeta_13)` to obtain the complete collision census.  **QED.**
+cyclotomic field, classifies the equality sets in both orientations, and
+separately reduces both 169-value spectra in `Q(zeta_13)` to obtain the
+complete collision censuses.  **QED.**

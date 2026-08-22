@@ -2,14 +2,22 @@
 id: THM-3668
 title: "Finite-group generator-rank-plus-one harmonic detector law"
 status: >
-  PROVED.  If a nontrivial finite group needs d generators, every nonzero
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED.  If a nontrivial finite group needs d generators, every nonzero
   mean-zero convolution mask whose kernel consists exactly of the constants
   has at least d+1 support sites.  Conversely, every minimal generating tuple
-  produces a positive d+1-site mask with exactly that kernel.  The result
+  produces a signed d+1-site mask with positive averaging weights and exactly
+  that kernel.  The result
   extends THM-3665 from elementary abelian groups to arbitrary finite groups.
   Finiteness is load-bearing; no non-sofic, amenability, or infinite-group
   conclusion is claimed.
 source: kps-s192 / nonabelian maximum-principle continuation of THM-3665, 2026-08-21
+audit: >
+  PASS -- agent Pauli independently checked the support-coset lower bound,
+  the maximum-modulus propagation and finite-semigroup step, the nonabelian
+  Fourier block, and edge cases including cyclic groups and non-generating
+  supports.  Exact checks on C2, C6, S3 and D8 agreed.  The audit repaired one
+  terminological ambiguity: the mean-zero mask is signed, while its averaging
+  coefficients are positive.  No infinite-group or non-sofic transfer is made.
 depends_on:
   - THM-3665-lrc-support-minimal-three-twist-target-detector
 related:
@@ -19,7 +27,7 @@ related:
 
 # THM-3668 -- finite-group harmonic detection costs generator rank plus one
 
-**PROVED.**  This theorem isolates the group-theoretic mechanism behind the
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem isolates the group-theoretic mechanism behind the
 three-twist LRC detector.  Fourier diagonalization is unnecessary.
 
 ## 1. Statement
@@ -106,7 +114,7 @@ for all `s in T`.  Equations (2)--(3) give
 So the kernel contains a nonconstant function, contradicting (4).  This
 proves the lower bound.
 
-## 3. Positive construction by the maximum-modulus principle
+## 3. Signed construction with positive averaging weights
 
 Let `f` satisfy `C_mu f=0` for the mask (7).  The convolution equation is
 
