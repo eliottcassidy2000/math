@@ -2,7 +2,7 @@
 id: THM-3680
 title: "Russell-cylinder Q_dagger coupled stable lift"
 status: >
-  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  The degree-eight
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The degree-eight
   Q_dagger fold has an actual rational target-ring lift with J_0=1 and
   J_1=J_2=0.  A mod-1000003 rank calculation at restriction cutoff 369 selects
   a 947-by-947 pivot square; that square is rebuilt and solved over Q, and the
@@ -11,6 +11,14 @@ status: >
   a modular control, not a characteristic-zero minimality theorem.  No J_3,
   J_4, Keller-pair, or JC(2) conclusion is claimed.
 source: kps-s194 / Q_dagger coupled actual-lift continuation, 2026-08-21
+audit: >
+  PASS -- kps-s196 independently derived J_0,J_1,J_2 by expanding the pulled
+  target coefficients through t^3, checked every normal-derivative sign and
+  factorial, actual target-ring typing of all four raw-monomial blocks, the
+  modular pivot scope, exact rational square, and full unselected residuals.
+  A fresh normal replay returned all 970 gates and the pinned transcript;
+  the nearby cutoff-366 failure remains explicitly modular-only.  No
+  correction was required.
 depends_on:
   - THM-3677-russell-cylinder-degree-eight-fourth-debt-parabola
   - THM-3678-russell-cylinder-qdagger-actual-j0-lift
@@ -25,11 +33,28 @@ hash_basis: raw LF bytes
 
 # THM-3680 -- Q_dagger coupled stable lift
 
-**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  The sharp
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The sharp
 zero-second-and-fourth-debt candidate does not stop at formal retained data: it
 has an actual target-ring lift through the first two stable equations.
 
 All rings are over `C`; the certificate itself is rational.
+
+For the independent formula audit, if the pulled target functions are written
+as `sum_m a_m(x)t^m` and `sum_m b_m(x)t^m`, direct differentiation gives
+
+```text
+J_n=sum_(i+j=n+1)(j a_i' b_j-i a_i b_j').              (0)
+```
+
+Here
+
+```text
+a_0=c, a_1=F_1, a_2=F_2+delta(c), a_3=F_3+delta(F_1),
+b_0=e, b_1=G_1, b_2=G_2+delta(e), b_3=G_3+delta(G_1).
+```
+
+Substitution into `(0)` independently reproduces every term and coefficient
+in `(3)--(7)` below; no stable-recursion template was assumed.
 
 ## 1. Frozen predecessor and equations
 
