@@ -45,6 +45,20 @@ Current-root `4/6;40/42`; source `17->4->6`. `r1 13/12`: carrier6,
 `H1=0`, audited. `r2`: diag2197, unique1690, `I6`/projector130/169,
 cocycle live `0/1742`; `Q10/Adef2/Q_A8`, chamber5+5, transfer self/min3.
 Typed bridges/LRC open.
+THM-3665 proves the optimal three-site target detector; audited THM-3666
+realizes it by one centre and two blocker/graft pair shifts, and THM-3667/3668
+give its sharp level-13 frame and finite-group rank-plus-one law.  Audited
+THM-3669 and THM-3672 are complementary exact positive controls on the typed
+non-cover row: every one of the 120 packet currents is nonzero and every
+THM-2365 successor-mass defect is strictly negative.  Audited THM-3670
+reduces a genuine-cover sufficient test to thirteen rational masses: all
+thirty chosen defects can vanish only when six `A` masses agree, six `B`
+masses agree, and `S0+A=2B`.  Audited THM-3671 identifies the fixed-source
+all-packet blind space as the pure-source line, with one extra nonsource
+diagonal exactly on the scalar-sum-zero branch; four charts suffice.  The
+live analytic obligation is to exclude the thirteen-mass recirculation on a
+genuine cover, or to prove that the grouped all-unit current is nonzero in a
+strict common phase cone (termwise all-unit address banks do not supply this).
 THM-3135--3285 give CSP/ray/phase laws; THM-3285 has `169` middle origins and
 two normal completions but empty outer co-support.  Current/exit stay open;
 HYP-8871 leaves `165` rows.  THM-2363/THM-2368 are sidecars; THM-2417--2894
@@ -328,8 +342,12 @@ is sharp: equal counts allow two densities or none.
 
 ## Other active portfolio
 
-- **AMM:** THM-3588 forces `R=512` departures by `(35,38,39,42,44)`;
-  feasibility/`C*` OPEN.
+- **AMM:** THM-3588 forces `R=512` departures by `(35,38,39,42,44)`.
+  At `R=32768`, independent FINITE-EXACT Rule-A replays close offsets `855`
+  and `856`; the predicted split there is REFUTED.  The observer-elided
+  `D0=854` replay is live after the full-diagnostic run exhausted memory at a
+  nonlogical `junkL1` observer.  No monotonicity in `D0`, global feasibility,
+  or value of `C*` follows; those remain OPEN.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
