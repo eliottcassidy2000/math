@@ -1,0 +1,8 @@
+THM-3677 exact companion -- degree-eight fourth-debt parabola
+status=PROVED VERIFIED-EXACT PENDING-INDEPENDENT-HOSTILE-AUDIT
+PASS family_complete=Q6+pR1+rR2_dimension2_zero_second_debt
+PASS symbolic_two_form_monomials=105_fourth_debt=64*p/9 - 33280*r**2/81 + 108032*r/729 + 365888/6561
+PASS zero_fourth_debt_parabola=p=520r^2/9-1688r/81-5717/729
+PASS Qdagger=(22868x8-89583x6+2916x5+123684x4-5832x3-63530x2+2916x-2187)/2916
+CHECKS=122
+RESULT=PASS
