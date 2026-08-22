@@ -2,7 +2,7 @@
 id: THM-3666
 title: "LRC owner-pivot dual pair-swap twist basis"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The dual of every owner-aligned THM-2309 target quotient has an explicit
   sparse basis alpha=e_a-e_ka and beta=e_b-e_kb modulo the scalar gauge.
   Thus THM-2334's abstract target twists act on the present interval product
@@ -12,12 +12,24 @@ status: >
   H(x,y)+H(x-1,y)-2H(x,y-1)!=0.  No such nonvanishing is proved on a
   hypothetical covering row, and no ancestry-digit identification is made.
 source: kps-s192 / owner-pivot dualization after THM-3665, 2026-08-21
+audit: >
+  PASS AFTER ONE SCOPE REPAIR -- agent Schrodinger independently reproduced
+  the rank, nullspace, dipole pairings and action, the hostile R=1 control,
+  all phase counts, rank 168 versus the rank-156 two-site/dependent controls,
+  all 248832 normalized scalar types, all 120 packet choices, and every pinned
+  hash.  The audit caught that zeroing one shifted endpoint coefficient is a
+  sufficient strategy rather than an equivalent reformulation: the zero-free
+  nonconstant profile H(x,y)=2+zeta_13^x is a minimal hostile witness.  Section
+  7 now distinguishes the equivalent recurrence/strictness obligations from
+  that optional zero-forcing strategy.  THM-2350 is also credited explicitly
+  for the earlier dipole normal form and action.
 depends_on:
   - THM-2309-owner-aligned-pivot-packets-and-visible-height-separation
   - THM-2334-relation-residue-current-and-character-twist-pushforward
   - THM-3665-lrc-support-minimal-three-twist-target-detector
 related:
   - THM-2327-two-colour-marked-unit-c3-triangle
+  - THM-2350-owner-pivot-dual-dipole-normal-form
   - THM-3664-lrc-sparse-eight-twist-target-detector-frame
 script: 04-computation/lrc_owner_pivot_dual_pair_swap_twists_thm3666.py
 output: 05-knowledge/results/lrc_owner_pivot_dual_pair_swap_twists_thm3666.out
@@ -29,10 +41,15 @@ hash_basis: raw LF bytes
 
 # THM-3666 -- target twists are local blocker/unit pair swaps
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  THM-3665 reduced the target-current question to three values of a
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+THM-3665 reduced the target-current question to three values of a
 function on an abstract plane.  The owner-aligned packet now supplies the
 missing concrete coordinates on that plane.
+
+THM-2350 already proved the owner-pivot dipole normal form and its local
+action.  The new content here is the adaptation to THM-3665's support-minimal
+three-twist recurrence together with the exhaustive 120-choice and scalar-type
+ledger; no novelty is claimed for the dipole coordinates themselves.
 
 ## 1. Owner-pivot notation
 
@@ -236,15 +253,17 @@ coordinates.
 
 ## 7. The sharpened analytic frontier
 
-The remaining unrestricted target obligation on a hypothetical covering row
-is now exactly one of the following equivalent tasks:
+The target obligation on a hypothetical covering row is equivalent to items
+1, 2, and the existential strictness in item 4 below.  Item 3 is instead a
+sufficient zero-forcing strategy, not a necessary reformulation: for example,
+the nonconstant profile `H(x,y)=2+zeta_13^x` is zero-free.
 
 1. find a packet choice and one `(x,y)` where the pair-swap recurrence (21)
    fails;
 2. prove the 169 pair-shifted marked currents cannot be harmonic under (22);
 3. force one shifted present rectangle to have a zero endpoint coefficient
    while `H(0,0)` remains the nonzero THM-2327 current;
-4. obtain a strict triangle inequality at a maximal-modulus twist.
+4. obtain a strict triangle inequality at some maximal-modulus twist.
 
 The most concrete next experiment is to enumerate the 120 packet choices on
 the canon-recorded typed rows and record whether one of the three shifted
