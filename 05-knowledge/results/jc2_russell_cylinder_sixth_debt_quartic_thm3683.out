@@ -1,0 +1,10 @@
+family=THM3677_zero_fourth_parabola;domain=QQ(r)
+order4=rows18_columns105_rank15_nullity3_constantinactive3
+order6=rows30_columns252_rank26_nullity4_activequotient1_nonzero23
+sixth_debt=-256*(72783360*r**4 - 77822208*r**3 - 28419741*r**2 + 7849770*r - 1276420)/1594323
+exceptional_roots=irreducible_quartic;real=2;nonreal=2;isolating=(-1/2,-2/5),(13/10,4/3)
+exceptional_field=rank26_nullity4_constantactive0
+discriminant=-8003379749137430490967268590424928811403550720
+relation_sha256=2fa2923fb48a36623a58b7fe4d8a9c52af20ec781b0fcbb35f65af897aebd8cd
+quartic_sha256=07c0716d557f56e5db7e30e8a1ea28322a34026b1266e3939e2446937d7483a5
+RESULT=PASS;gates=296
