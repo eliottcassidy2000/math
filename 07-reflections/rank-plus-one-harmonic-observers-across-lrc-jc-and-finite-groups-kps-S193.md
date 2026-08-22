@@ -194,8 +194,10 @@ centralizer.  Any capacity optimization should be audited for this loss.
 ## 6. AMM checkpoint and possible observer use
 
 At `R=32768`, the pinned Rule-A engine has exact `CLOSED` outcomes at offsets
-855 and 856.  The earlier predicted split is refuted, and the adjacent hostile
-offset 854 is running assumption-free.  No monotonicity in offset is used.
+855 and 856, while the observer-elided exact state replay gives
+`854:DIE@8246`.  The adjacent pair 854/855 is therefore a one-step local
+fixed-policy transition.  The optimized independent execution audit is live;
+no monotonicity in offset is used.
 
 The harmonic-observer work suggests a future AMM partition refinement:
 
@@ -219,7 +221,7 @@ the exact offset boundary, not a cosmetic Markov reinterpretation.
    choices for shifted-product emptiness or a unique boundary endpoint.
 3. Build the JC ordinary-triple overlap graph described in Section 4 and stop
    immediately if branch-jet transport is not representative-independent.
-4. Finish the assumption-free AMM `D0=854` run; only an adjacent DIE/CLOSED
-   pair earns a local-transition theorem.
+4. Finish the independent optimized `D0=854` replay and, if it agrees, promote
+   the adjacent `854:DIE` / `855:CLOSED` pair to a local-transition theorem.
 5. Keep equal and optimal three-site masks as separate tools: do not spend
    centralizer rigidity when only a frame gap is needed, or vice versa.

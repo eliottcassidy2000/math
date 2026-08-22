@@ -1,8 +1,8 @@
 # AMM R=32768: offsets 855 and 856 close -- live boundary checkpoint
 
-**kps-S192/S193 checkpoint, 2026-08-21.  Two FINITE-EXACT independent
-closure runs; the lower adjacent state replay and independent audit are
-pending.**
+**kps-S192/S193/S195 checkpoint, 2026-08-21.  Three FINITE-EXACT state
+runs pin the adjacent fixed-Rule-A split; an independent optimized replay of
+the lower endpoint is pending.**
 
 The pinned THM-3644 Rule-A engine
 
@@ -42,8 +42,8 @@ but is never used in a branch, clamp, state update or terminal decision.  The
 failure therefore supplies **no** Rule-A status and is not evidence of death,
 closure or mathematical infeasibility.
 
-An exact state replay is now running with only the two `junkL1` observer
-updates removed by an AST transformation.  The pinned dynamics are otherwise
+An exact state replay with only the two `junkL1` observer updates removed by
+an AST transformation has now completed.  The pinned dynamics are otherwise
 byte-identical, and the transformed engine reproduces the original
 `stable_result` on the hostile/positive controls
 
@@ -51,10 +51,30 @@ byte-identical, and the transformed engine reproduces the original
 (R,D0)=(64,0),(64,1),(512,4),(512,5).
 ```
 
-If 854 dies, the pair 854/855 will pin a one-step local Rule-A transition.  If
-854 also closes, the search must continue downward; no monotonicity assumption
-is being used.  In particular THM-3026's admissible-profile monotonicity is not
-being conflated with this fixed heuristic engine's status.
+The exact lower record is
+
+```text
+D0=854:
+  (854,'DIE',8246,20448,25379,40043,4394,8130,19875),
+  elapsed=4076.338 seconds.
+```
+
+Thus `854:DIE` and `855:CLOSED` pin a one-step local fixed-Rule-A transition.
+No monotonicity assumption is being used: the result says nothing about
+offsets below 854 or above 856.  In particular THM-3026's admissible-profile
+monotonicity is not being conflated with this fixed heuristic engine's
+status.
+
+The completed run used a scratch copy whose SHA-256 is
+
+```text
+78bed4b5304a64dfaea3942d7d658ee676c9867853d254cb9b64dfb78dcfc7cb.
+```
+
+It differs from the durable runner pinned below by exactly one terminal blank
+line.  An optimized replay from the durable path is in progress as an
+independent execution audit.  Until that returns, this remains a finite-exact
+checkpoint rather than a promoted theorem.
 
 Reproduction command:
 
@@ -69,8 +89,7 @@ source-pinned `stable_result` at the requested offsets.  The low-memory runner
 source-pins the same engine, AST-selects the same three functions, removes
 exactly the two diagnostic `junkL1` additions, and cross-checks four terminal
 controls before the long replay.  A durable theorem package will replace this
-checkpoint only after the adjacent state result and an independent replay are
-available.
+checkpoint only after the independent replay is available.
 
 Checkpoint artifacts:
 
@@ -79,7 +98,7 @@ runner sha256:
 65b6fab453a0adb156bc79e1f9168fd46d95037fd345e2322861ec1f76f15ba0
 
 stored output sha256:
-24703605154f9f55d5a9e0dc7600c2873006b774ac3a77ea71b2b4bc9ac8dc25
+8314337ac5001222b463b283f9fe7e50ded4f4ae79c57e52cf1bf5cafbb44e70
 
 low-memory state runner sha256:
 962577096266bdc6df7b004eb38412b85a8a2b47eb9dd000f4666e9829043207

@@ -344,10 +344,11 @@ is sharp: equal counts allow two densities or none.
 
 - **AMM:** THM-3588 forces `R=512` departures by `(35,38,39,42,44)`.
   At `R=32768`, independent FINITE-EXACT Rule-A replays close offsets `855`
-  and `856`; the predicted split there is REFUTED.  The observer-elided
-  `D0=854` replay is live after the full-diagnostic run exhausted memory at a
-  nonlogical `junkL1` observer.  No monotonicity in `D0`, global feasibility,
-  or value of `C*` follows; those remain OPEN.
+  and `856`, while the observer-elided exact state replay gives
+  `854:DIE@8246`.  Thus `854/855` is a one-step local fixed-Rule-A transition;
+  an optimized independent execution audit is live before theorem promotion.
+  No monotonicity in `D0`, global feasibility, or value of `C*` follows;
+  those remain OPEN.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
