@@ -2,7 +2,8 @@
 id: THM-3679
 title: "LRC p-adic scalar seam and total-speed checksum"
 status: >
-  PROVED; PENDING INDEPENDENT HOSTILE AUDIT.  At every depth 13^n, four
+  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  At every
+  depth 13^n, four
   packet charts for each of two distinct blocker sources force a jointly
   target-zero address to be globally scalar.  On the all-coordinate-unit
   relation fibre this scalar hostile exists exactly when 13^n divides the
@@ -25,11 +26,18 @@ related:
   - THM-2337-expiration-word-residue-invisibility-and-first-bockstein-sidecar
   - THM-3658-lrc-mod169-carry-fourier-block-intertwiner
   - THM-3676-lrc-cross-source-blind-intersection-and-scalar-seam
+script: 04-computation/lrc_padic_scalar_seam_total_speed_checksum_thm3679.py
+output: 05-knowledge/results/lrc_padic_scalar_seam_total_speed_checksum_thm3679.out
+script_sha256: cb9e80f688254bf6c83927c20306e33a3e716ddd16e1e70febf577cc96baecde
+output_sha256: c357dc4643e251b42807d1c086b27928d2c3b1f2ffa9b1c3c9875f402d4c2c8d
+semantic_sha256: 7afb7edb68614deebafcf4d544ffa6c4e28be94ed1b656ddb269aead70b5fb77
+hash_basis: raw LF bytes
 ---
 
 # THM-3679 -- every positive row eventually fails the scalar checksum
 
-**PROVED; PENDING INDEPENDENT HOSTILE AUDIT.**  This theorem lifts the exact
+**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  This theorem
+lifts the exact
 equality graph of THM-3676 from `F_13` to every finite ring
 `Z/13^n Z`.  It identifies a finite depth at which the last mod-thirteen
 scalar hostile must disappear.  It does not prove that the semantic LRC
@@ -287,4 +295,27 @@ each action separately.  The theorem does not supply a nonzero all-unit
 total mass (19), nor the common-current and one-packet marginal premises needed
 in the aligned route (20).  A nonzero joint aggregate can cancel after
 marginalizing away the other chart coordinates.  No scalar row is excluded
-and LRC(14) remains open.  **QED.**
+and LRC(14) remains open.
+
+## 7. Exact finite-ring controls
+
+The companion computes Smith normal forms over `Z`, not ranks over a field.
+Each one-source chart matrix has seven unit invariant factors and nullity two;
+every two-source matrix has eight unit invariant factors and nullity one, and
+the third source adds no rank.  Thus (5)--(6) hold after base change to every
+coefficient ring.
+
+Independently, it exhausts the unit equation (15), the scalar checksum (7),
+and the divided-difference zero upgrade over `Z/3^n Z` through `n=4`.  The
+finite ledger contains `12,651` hostile cases and `13,007` active gates.  The
+odd prime three is deliberately distinct from the LRC prime thirteen; these
+are finite-ring controls for the proof mechanism, not an exhaustive proof of
+the all-`n` statement.
+
+```bash
+python -B 04-computation/lrc_padic_scalar_seam_total_speed_checksum_thm3679.py
+python -B -O 04-computation/lrc_padic_scalar_seam_total_speed_checksum_thm3679.py
+```
+
+Normal and optimized transcripts are byte-identical to the pinned output.
+**QED.**
