@@ -2,7 +2,7 @@
 id: THM-3677
 title: "Russell-cylinder degree-eight fourth-debt parabola"
 status: >
-  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  The complete
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The complete
   degree-at-most-eight principal Hermite family with the Q_6 retained values,
   slopes, and zero second debt is the affine plane Q_(p,r)=Q_6+pR_1+rR_2.
   Every member has a universal arbitrary-two-form fourth-stable identity;
@@ -13,6 +13,15 @@ status: >
   fourth debt vanishes; this supplies no lift or Keller pair.  The displayed
   degree-eight Q_dagger is the sharp next candidate.  JC(2) remains open.
 source: kps-s194 / ordinary zero-debt Hermite-family continuation, 2026-08-21
+audit: >
+  PASS -- kps-s195 independently checked the seven confluent-Hermite rows,
+  the two-dimensional kernel basis, all retained values/slopes/curvatures,
+  the completeness of the local four-jet two-form universe, the symbolic
+  fourth-debt identity, both known specializations, the rational parabola,
+  and the exact Q_dagger polynomial.  The Q-independent character-dilation
+  and formal-conjugacy transfer was retyped against audited THM-3673/3675.
+  Normal and optimized companions returned all 122 gates with the pinned
+  hashes.  No correction was required.
 depends_on:
   - THM-3641-russell-cylinder-principal-noneven-curvature-debt-boundary
   - THM-3642-russell-cylinder-zero-debt-actual-lift-and-fourth-stable-closure
@@ -27,7 +36,7 @@ hash_basis: raw LF bytes
 
 # THM-3677 -- the fourth debt cuts out one rational parabola
 
-**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  The two
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The two
 isolated fourth-debt calculations in THM-3642 extend to the complete
 degree-at-most-eight ordinary zero-second-debt family.  The fourth debt is a
 quadratic polynomial, not an unexplained pointwise constant.  Its zero set is
