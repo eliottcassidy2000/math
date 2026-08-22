@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-441 (2026-08-22, first THM-3684 draft) -- three named generator subalgebras were broadened to every one-direction output
+
+- **What failed:** the proof excludes a Jacobian mate for outputs in
+  `C[b]`, `C[c]`, or `C[e]`, but its first concluding slogan said that each
+  output must mix two target directions.
+- **Minimal witness / first failed implication:** the Laurent argument uses
+  the pure weights of exactly `b`, `c`, and `e`.  It says nothing about a
+  different one-generated subalgebra such as `C[b+c]` or the stable algebra
+  `C[w]`; calling all of these one "direction" erased the generator type.
+- **Repair / strongest survivor:** THM-3684 now states precisely that neither
+  output may lie in `C[b]`, `C[c]`, or `C[e]`, and arbitrary mixing only in
+  the opposite output cannot repair that slice.  The master Laurent formula,
+  all three leading coefficients, the univariate-composition extension, and
+  the full-source no-mate result passed independent hostile audit unchanged.
+- **Reusable rule:** a grading obstruction for named homogeneous generators
+  transfers to their univariate polynomial algebras, not automatically to
+  every rank-one or one-generated subalgebra.
+
 ## MISTAKE-440 (2026-08-21, first THM-3682 draft) -- moving a current-scale pure-word role inside a target-fixed delayed word
 
 - **What failed:** the first role-to-target leak draft wrote the original

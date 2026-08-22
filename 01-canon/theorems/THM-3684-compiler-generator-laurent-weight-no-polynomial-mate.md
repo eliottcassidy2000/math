@@ -2,7 +2,7 @@
 id: THM-3684
 title: "Compiler-generator Laurent-weight no-polynomial-mate theorem"
 status: >
-  PROVED + VERIFIED-EXACT.  For the THM-3561 compiler, none of the three
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the THM-3561 compiler, none of the three
   source polynomials b, c, e has a nonzero-constant Jacobian mate even in the
   full source ring C[x,q].  More generally, no nonconstant polynomial in one
   of b,c,e has such a mate.  Consequently a Russell-cylinder construction
@@ -10,6 +10,12 @@ status: >
   by arbitrary stable-coordinate mixing.  This is an all-degree no-go for
   that lane, not a counterexample or a general mixed-pair obstruction.
 source: root / affine-mixed Hamiltonian-slice reframe, 2026-08-22
+audit: >
+  PASS AFTER ONE SCOPE-WORDING REPAIR -- an independent Laurent-chart audit
+  rederived the master weight formula, all three nonzero leading
+  coefficients, uniqueness of Laurent weights, and the univariate-composition
+  step.  It narrowed the conclusion from an overbroad "two directions" slogan
+  to the proved C[b], C[c], C[e] scope; no displayed identity changed.
 depends_on:
   - THM-3561-rational-keller-danielewski-polynomial-completion
 related:
@@ -25,7 +31,7 @@ hash_basis: raw LF bytes for files; displayed generator/weight/operator ledger f
 
 # THM-3684 -- compiler generators have no polynomial Jacobian mate
 
-**PROVED + VERIFIED-EXACT.**  A stable variable enlarges the target ring, so
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  A stable variable enlarges the target ring, so
 the one-generator slice obstructions inside the Danielewski surface do not by
 themselves exclude a mate after pullback.  The Laurent-weight calculation
 below closes that gap in the strongest possible ambient ring: the proposed
@@ -180,11 +186,11 @@ rules out a nonzero constant source Jacobian even when the second output has
 arbitrary degree and arbitrary stable-coordinate dependence.  The same holds
 after swapping the outputs.
 
-Thus the live mixed-pair lane has a sharper entry condition:
+Thus the live mixed-pair lane has the following sharper entry condition:
 
 ```text
-each output must mix at least two genuinely independent target directions;
-stable mixing in only the opposite output cannot rescue a generator slice. (18)
+neither output may lie in C[b], C[c], or C[e]; if one does, arbitrary
+mixing in only the opposite output cannot rescue the pair.              (18)
 ```
 
 The theorem does **not** exclude a nonlinear surface coordinate involving
