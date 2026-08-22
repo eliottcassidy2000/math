@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-436 (2026-08-21, THM-3670 audit) -- a raw boundary jump was substituted for a signed successor-mass defect
+
+- **What failed:** the first THM-3670 draft advertised its successor-mass
+  gate for every owner-pivot packet and said that any boundary-jump
+  discrepancy obstructed the rigid thirteen-number configuration.
+- **Minimal witness / first failed implication:** the THM-2365 successor
+  blocker must be one of the two target blockers; selecting it as the source
+  leaves the theorem's two-dimensional target quotient.  Independently,
+  `f_0=1_[0,1/2)`, `f_A=1_[1/2,1)`, and `f_B=1_[1/4,3/4)` have a nontrivial
+  boundary-jump combination but
+  `integral(f_0+f_A-2f_B)=0`.  Jumps can cancel after signed integration.
+- **Repair / strongest survivor:** restrict to THM-2365 strata whose
+  successor blocker lies in the target pair.  A boundary or valuation
+  calculation is sufficient only if it proves a nonzero signed successor
+  integral or directly contradicts the thirteen-number equations.  The core
+  implication, the rank-11 system on thirteen masses, and the resulting
+  two-dimensional recirculation locus all passed independent hostile audit.
+- **Reusable rule:** when a detector is defined by an integral, local support
+  or jump asymmetry is not itself the detector.  Push the local witness
+  through every projection and signed integration before claiming survival.
+
 ## MISTAKE-435 (2026-08-21, THM-3667 audit) -- a frequency-dependent phase was mistaken for spectral conjugacy
 
 - **What failed:** the first THM-3667 draft correctly proved that swapping the

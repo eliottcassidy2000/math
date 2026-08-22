@@ -2,10 +2,12 @@
 id: THM-3670
 title: "LRC successor-mass transfer and thirteen-number gate"
 status: >
-  PROVED; PENDING INDEPENDENT HOSTILE AUDIT.  For any owner-pivot packet, a
-  nonzero three-site defect in THM-2365's nonnegative successor mass forces
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED.  For any fixed THM-2365 owner/word
+  stratum whose successor blocker is one of the two THM-2309 target blockers,
+  a nonzero three-site defect in THM-2365's nonnegative successor mass forces
   positive H-drift, hence some exact 91-unit frequency triangle with a
-  nonzero target fibre, hence a nonzero physical three-pair-swap defect.
+  nonzero target fibre, hence a nonzero three-site physical factor-shift
+  defect formed from the centre and two blocker/graft pair shifts.
   Across all 120 packet choices the sufficient test depends on only thirteen
   rational masses.  Simultaneous failure on all thirty graft charts is
   equivalent to six equal a-graft masses, six equal b-graft masses, and one
@@ -13,6 +15,16 @@ status: >
   triangle, the all-coordinate 91-unit projector, visible height or terminal
   phase, and does not prove LRC(14).
 source: kps-s193 / THM-2365-to-THM-3665 transfer composition, 2026-08-21
+audit: >
+  PASS AFTER SCOPE REPAIRS -- Rawls independently verified the THM-2365 sign
+  convention, the implication from nonconstant successor mass to positive
+  H-drift, and extraction of a nonzero target fibre with gcd(m,91)=1.
+  THM-3665 then gives a three-site defect and THM-3666 identifies its two
+  relative shifts with sparse blocker/graft dipoles.  The thirty equations
+  have rank 11 on thirteen variables and nullity 2.  The audit restricted the
+  theorem to strata where the successor blocker is a target blocker and
+  corrected the false suggestion that an arbitrary boundary-jump discrepancy
+  by itself certifies a nonzero signed successor mass.
 depends_on:
   - THM-2365-lawful-target-coshift-and-h-drift-dichotomy
   - THM-3665-lrc-support-minimal-three-twist-target-detector
@@ -24,16 +36,18 @@ related:
 
 # THM-3670 -- the covering transfer is a thirteen-number obstruction
 
-**PROVED; PENDING INDEPENDENT HOSTILE AUDIT.**  This theorem composes an older
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem composes an older
 nonnegative all-frequency observable with the new support-minimal target
 detector.  It replaces “control one preselected complex triangle” by a
 rational mass test that is allowed to choose its own exact triangle.
 
 ## 1. Owner-pivot sign convention and successor mass
 
-Let `a,c` be the two target blockers, with `c` the deepest blocker, and choose
-distinct graft units `k,l` in an owner-pivot packet.  THM-3666 gives the dual
-dipoles
+Fix a THM-2365 owner/word stratum in which the successor/deep blocker `c` is
+one of the two THM-2309 target blockers rather than the selected source.  Let
+`a,c` be the two target blockers, with `c` the deepest blocker, and choose
+distinct graft units `k,l` in one of its owner-pivot packets.  THM-3666 gives
+the dual dipoles
 
 ```text
 alpha=e_a-e_k,
@@ -71,7 +85,7 @@ divisible by thirteen.
 Suppose
 
 ```text
-S_(k,l)(0,0)+S_(k,l)(-1,0)-2S_(k,l)(0,-1) !=0.     (5)
+S_(k,l)(0,0)+S_(k,l)(1,0)-2S_(k,l)(0,1) !=0.       (5)
 ```
 
 Then `S_(k,l)` is nonconstant.  If THM-2365's drift energy `D_K` vanished,
@@ -107,23 +121,23 @@ Finite Fourier inversion in THM-2334 and THM-3665 say that (8) makes (9)
 nonconstant and hence forces some centre `(s,t)` with
 
 ```text
-J(s,t)+J(s-1,t)-2J(s,t-1) !=0.                     (10)
+J(s,t)+J(s+1,t)-2J(s,t+1) !=0.                     (10)
 ```
 
 Because the ordered twist basis in (9) is `(-alpha,-beta)`, the three terms
-in (10) are precisely the two reversed blocker/graft pair shifts supplied by
-(1).  THM-3666 therefore turns (10) into a concrete physical pair-swap
-defect.  This proves the transfer
+in (10) are precisely the centre and the two reversed blocker/graft pair
+shifts supplied by (1).  THM-3666 therefore turns (10) into a nonzero
+three-site physical factor-shift defect.  This proves the transfer
 
 ```text
 nonzero rational successor defect
   => positive nonnegative H-drift
   => some exact 91-unit nonzero target triangle
-  => some physical three-pair-swap defect.          (11)
+  => some three-site physical factor-shift defect.  (11)
 ```
 
-The centre in (10), and the extracted `(X,m)`, need not be the centre or
-triangle used in (5).
+The centre in (10) need not be `(0,0)`, and the extracted `(X,m)` is not
+preselected by the successor-mass test (5).
 
 ## 3. All 120 packets reduce to thirteen masses
 
@@ -131,12 +145,12 @@ Let the six guard/unit labels be `U={0,...,5}`.  Put
 
 ```text
 S_0=S_(k,l)(0,0),
-A_k=S_(k,l)(-1,0),
-B_l=S_(k,l)(0,-1).                                  (12)
+A_k=S_(k,l)(1,0),
+B_l=S_(k,l)(0,1).                                   (12)
 ```
 
-The first value is independent of both grafts.  At `(-1,0)` only the
-`a/k` dipole moves, so `A_k` is independent of `l`; at `(0,-1)` only the
+The first value is independent of both grafts.  At `(1,0)` only the
+`a/k` dipole moves, so `A_k` is independent of `l`; at `(0,1)` only the
 `c/l` dipole moves, so `B_l` is independent of `k`.  The omitted-unit label
 does not occur in either dipole.  Hence the 120 owner packets collapse first
 to the thirty legal ordered pairs `k!=l`, and their successor defects are
@@ -170,10 +184,12 @@ Combining (11) and (14)--(15) yields the operative gate:
 > exactly the rigid form (15), at least one owner-pivot packet admits some
 > exact `91`-unit triangle with a nonzero physical target defect.
 
-Thus a single graft-mass discrepancy, boundary-jump discrepancy, or exact
-valuation obstruction to (15) is sufficient.  One isolated drifting graft is
-not by itself enough: THM-2367 gives exact positive masks that recirculate one
-pair.  The new requirement is simultaneous six-graft recirculation.
+Thus any exact discrepancy among the thirteen masses is sufficient.  A
+boundary or valuation calculation is sufficient only when it proves that the
+corresponding signed successor integral is nonzero, or otherwise directly
+obstructs (15).  One isolated drifting graft is not by itself enough:
+THM-2367 gives exact positive masks that recirculate one pair.  The new
+requirement is simultaneous six-graft recirculation.
 
 ## 4. Sharp remaining covering-row lemma
 
