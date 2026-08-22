@@ -2,17 +2,27 @@
 id: THM-3665
 title: "LRC support-minimal three-twist target detector"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   A nonzero mean-zero convolution mask on F_p^d whose Fourier transform is
   nonzero at every nontrivial character needs at least d+1 support sites,
   and an explicit d+1-site mask attains the bound.  For THM-2334's
   two-dimensional twist group, the optimal mask is delta_0+delta_a-2delta_b
   for any ordered basis (a,b).  Thus nonzero target survival is equivalent
   to one three-twist imbalance H(s)+H(s-a)-2H(s-b) being nonzero.  Exact
-  spectral extrema give sharp l2 frame constants.  This does not prove that
-  a covering-row imbalance is nonzero or identify twists with physical
-  ancestry addresses.
+  spectral extrema give sharp l2 frame constants, and all 169 multipliers
+  are pairwise distinct, giving full convolution-centralizer rigidity.  This
+  does not prove that a covering-row imbalance is nonzero or identify twists
+  with physical ancestry addresses.
 source: kps-s192 / support-capacity sharpening of THM-3664, 2026-08-21
+audit: >
+  PASS -- agent Turing independently proved the d+1 lower bound and
+  construction (including d=1 and p=2), the exact three-site equivalence,
+  both sharp spectral extrema and equality cases, and the simple-spectrum
+  strengthening.  Independent resultants and multiplication determinants
+  reproduced all fourteen norms and the determinant, two further modular
+  reductions agreed, and normal/optimized transcripts and every pinned hash
+  matched.  No all-91-unit, physical-address, covering-row, or LRC(14)
+  overclaim was found.
 depends_on:
   - THM-2334-relation-residue-current-and-character-twist-pushforward
 related:
@@ -28,8 +38,8 @@ hash_basis: raw LF bytes
 
 # THM-3665 -- three twists are necessary and sufficient
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  The eight-point detector of THM-3664 is useful because it descends
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  The eight-point detector of THM-3664 is useful because it descends
 from the exceptional two-current geometry.  Once the task is posed purely on
 the freely based target-twist group, however, a universal rank-plus-one law
 gives the optimal detector.
@@ -140,6 +150,38 @@ h_hat(0)=0,
 h_hat(q)=1/m_hat(q), q!=0,
 h*M_(a,b)=H-H_bar.                                  (12)
 ```
+
+### 2a. The optimal detector also has simple spectrum
+
+The `169` values in (13), including the trivial value zero, are pairwise
+distinct.  Suppose the values at `(u,v)` and `(u',v')` agree.  After
+cancelling the constant term, the polynomial
+
+```text
+C(z)=z^(-u)-z^(-u')-2z^(-v)+2z^(-v') mod (z^13-1) (12a)
+```
+
+vanishes at `zeta_13`.  Its degree-12 representative is a rational multiple
+of `Phi_13`, the only rational relation among the thirteen powers.  But its
+coefficient sum is zero, whereas `Phi_13(1)=13`; therefore that multiple is
+zero and every coefficient of `C` vanishes.  If `v!=v'`, the coefficient at
+`z^(-v)` is
+
+```text
+-2 + [u=v] - [u'=v] in {-3,-2,-1},                 (12b)
+```
+
+impossible.  Hence `v=v'`, and then `u=u'`.
+
+Consequently convolution by `m_(a,b)` has simple spectrum and
+
+```text
+Cent_End(C_m)=C[C_m], degree <169.                  (12c)
+```
+
+Any permutation commuting with `C_m` is a convolution permutation and hence
+a group translation.  Thus support optimality, stable inversion, and full
+operation-centralizer rigidity coexist in the same three-site observable.
 
 ## 3. Sharp spectrum at level thirteen
 
