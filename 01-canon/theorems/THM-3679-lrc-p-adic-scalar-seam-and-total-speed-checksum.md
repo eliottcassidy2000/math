@@ -271,9 +271,10 @@ limit by THM-2334, so
 M_n=M_1                    for every n>=1.           (20)
 ```
 
-Thus one nonzero mod-thirteen all-unit total mass can be carried directly to
-the finite checksum-killing depth; no separate nonvanishing theorem is needed
-at each Bockstein layer.
+Thus, for one fixed delayed current, its nonzero mod-thirteen all-unit total
+mass can be regrouped directly at the finite checksum-killing depth; no
+separate nonvanishing theorem is needed at each Bockstein layer.  Equation
+(20) does not compare currents built with two different delayed clocks.
 
 There is also an exact joint-chart consequence which avoids the phase-cone
 premise of THM-3676.  Let `Pi_(j,n)` collect the eight coordinates of the four
