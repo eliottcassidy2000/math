@@ -1,0 +1,27 @@
+THM-3600 exact companion -- provisional arm-plane atlas and no-filling gate
+scope=finite exact controls; universal cover/intersection/descent/filling statements are proof-driven
+SECTION arm-plane charts, singular shears, and global primitive
+PASS chart_rows=75 shear_rows=100 logarithmic_rows=20
+SECTION Hermite-Pade and Laurent shear membership gates
+PASS Hermite-Pade_rows=36 Laurent_rows=80 one-chart hostiles active
+SECTION Cech incidence, de Rham, and Picard ranks
+PASS Cech_rows=8 H1_dR=0 H2_rank=h-1 Picard_rank=h-1
+SECTION hostile boundaries
+PASS multiple-root missed-arm hostile and n=1 residue boundary
+SECTION cyclic compiler and direct Keller controls
+PASS cyclic_compiler_rows=5 direct_Jacobian=-1
+SECTION A13 punctures, central chart, collision, and zero-value escape
+PASS A13 deleted_Gm=2 pole_order=3 zero_order=1 collision_count=13
+SECTION normal no-filling and quantitative unit rank
+PASS no-filling: each nonzero critical point forces a unit; independence_rows=26 forced_rank=3
+zero-critical-value escape=P-roots remain and carry central collisions
+nonnormal boundary=conductor may hide integral t only after etaleness is lost
+SECTION consequence ledger
+unconditional=arm charts A2; overlaps singular shears; global ring is all-chart intersection
+Hamilton-Jacobi=for n>=2 alpha=(c da+n a dc)/(n-1), d alpha=omega
+compiler=central chart pulls back to punctured A2 and is surjective etale by THM-3581
+A13=two Gm punctures retain a surjective degree-13 etale collision map to A2
+boundary=n=1 logarithmic; repeated roots singular; zero critical values escape no-filling
+nonconsequence=no polynomial Darboux pair and no JC(2) counterexample
+CHECKS=2020
+FINAL PASS -- THM-3600 finite exact controls

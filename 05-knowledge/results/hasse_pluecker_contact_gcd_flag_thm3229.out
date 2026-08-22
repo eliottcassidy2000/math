@@ -1,0 +1,14 @@
+dependency_thm3221_sha256=6ae707482cf73ebbd995722fe056d093df37d3aea0af6f58d6989e18d0b06f84
+assert_nodes=0,float_literals=0
+prescribed_contact_bank=2,3,4,5
+hasse_pluecker_orientation_checks=52
+prescribed_contact_checks=10
+nested_gcd_flag_checks=13
+degree_bound_termination=D14
+omega_degree_checks=13
+constant_scaling_checks=13
+proportional_boundary_checks=3
+small_characteristic_hostile=F3:x_vs_x+x3_contact3_Hasse_only
+multiple_root_boundary=first_derivatives_zero
+scope=root_free_simple-divisor-flag_not_root_ordering_or_resonant_moment_PRS
+all_exact_checks=PASS

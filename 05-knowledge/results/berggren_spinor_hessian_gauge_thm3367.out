@@ -1,0 +1,8 @@
+THM-3367 exact companion
+universe=C[s,t]; symbolic rings over Z, Q, and Q(i)
+binary_hessian_formula_degrees=2..8
+affine_rank_audit=generic squared-minor ideal
+hostile_hessian_curls=(-t, s + t**2)
+determinant_mixing_hostile=(spinor:1,triple:-3)
+checks=35
+PASS

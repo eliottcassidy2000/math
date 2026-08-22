@@ -1,0 +1,21 @@
+AMM12592 R8 SLACK-KERNEL LOCALITY SCOUT
+carrier=profile=[4, 5, 5, 6, 7, 7, 8, 8];y_columns=42;slack_columns=114;augmented_shape=114x156
+displacement=y_nonzero=34;slack_nonzero=98;kernel_check=True
+width=1;windows=7;allocation_variables=34;lp_status=2;lp_success=False;exact_rational_candidate=False;nonzero_atoms=None;exact_farkas=True;exact_integer_candidate=False
+width_1_farkas=eq_nonzero=1;ub_nonzero=3;max_abs=1;rhs=-2150;sha256=85280a1b6724768385fcb621919ec28f955e90978e58933f1cb43dd0ec684a6a
+width=2;windows=13;allocation_variables=92;lp_status=2;lp_success=False;exact_rational_candidate=False;nonzero_atoms=None;exact_farkas=True;exact_integer_candidate=False
+width_2_farkas=eq_nonzero=3;ub_nonzero=6;max_abs=2;rhs=-605;sha256=047f447029a37884ced4a509a8b5d351a46a3c9d1e281a6d7b07e8a4775b8d75
+width=3;windows=18;allocation_variables=166;lp_status=2;lp_success=False;exact_rational_candidate=False;nonzero_atoms=None;exact_farkas=True;exact_integer_candidate=False
+width_3_farkas=eq_nonzero=5;ub_nonzero=12;max_abs=4;rhs=-111;sha256=884c3326a889ad0c7205f0de3a50c5b8fc2ec43f1a29ca8fac86d124ba698b25
+width=4;windows=22;allocation_variables=246;lp_status=2;lp_success=False;exact_rational_candidate=False;nonzero_atoms=None;exact_farkas=True;exact_integer_candidate=False
+width_4_farkas=eq_nonzero=6;ub_nonzero=27;max_abs=12;rhs=-333;sha256=1e3077c7e4bf9c650c4b8ace2b12c30a9886c46ae21067b3717f6461c849d992
+width=5;windows=25;allocation_variables=320;lp_status=0;lp_success=True;exact_rational_candidate=True;nonzero_atoms=10;exact_farkas=False;exact_integer_candidate=True
+width_5_candidate=common_denominator=1122;atoms=0-1:y2:s12:q1|0-2:y4:s12:q1|0-3:y1:s8:q1|1-4:y10:s18:q11|1-5:y16:s34:q1122|2-5:y6:s18:q1122|2-6:y19:s50:q1122|3-5:y13:s26:q102|4-6:y12:s30:q34|5-6:y5:s20:q34
+width_5_integer_candidate=atoms=0-1:y1:s8|0-2:y1:s6|0-3:y10:s32|0-4:y4:s14|1-5:y15:s34|2-5:y18:s54|2-6:y2:s10|3-5:y3:s14|3-6:y8:s20|4-6:y10:s30|5-5:y2:s12|5-6:y1:s6
+width_5_integer_atom_sha256=36de54cfff43b71efee10d33e6a4df06aa0fa7fea13819571176d5174cf32eb2
+width=6;windows=27;allocation_variables=378;lp_status=0;lp_success=True;exact_rational_candidate=True;nonzero_atoms=9;exact_farkas=False;exact_integer_candidate=True
+width=7;windows=28;allocation_variables=412;lp_status=0;lp_success=True;exact_rational_candidate=True;nonzero_atoms=10;exact_farkas=False;exact_integer_candidate=True
+first_exact_conformal_window_width=5
+semantic_sha256=75b989bd93a9f96f521809926fc44972a5e525504d111dc97c4af33d8689e8a5
+source_lf_sha256=745fd7bbe1b1acbac915e9b068f9ac7931e6705466711005f42375c946663e9c
+scope=CONFORMAL_WINDOW_ALLOCATION_FOR_ONE_R8_DISPLACEMENT_NOT_FULL_GRAVER_BASIS_NOT_R512_NOT_AMM_CLOSURE

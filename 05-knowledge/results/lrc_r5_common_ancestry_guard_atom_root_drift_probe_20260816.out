@@ -1,0 +1,26 @@
+== r=5 common-ancestry U_full guard-atom/root-drift probe ==
+dependency=lrc14_stage2_theta_contraction_opus_20260728.py:09c43af0a0a56c7a0833bbfd13ed6a96bc5a7a3718aa1bc6b77a144bde101a06
+partition=39 actual guard atoms on each linked node X_(u,a),Y_(q,e'); one THM-2471 Boolean fibre
+input_piece_counts=(f=120234,E=57072); atom_groups_nonempty=(21, 20)/(39,39)
+folded_profile_sizes=(arrival=(1, 1, 1, 1, 1, 1, 6, 8, 1, 6, 9, 1, 6, 9, 1, 6, 7, 6, 6, 6, 6, 6, 7, 6, 1, 9, 6, 1, 9, 6, 1, 8, 6, 1, 1, 1, 1, 1, 1),source=(1, 1, 1, 1, 1, 8, 7, 1, 8, 7, 1, 8, 7, 1, 8, 7, 1, 7, 7, 1, 7, 7, 1, 7, 8, 1, 7, 8, 1, 7, 8, 1, 7, 8, 1, 1, 1, 1, 1))
+atom_pair_support=420/1521
+root_colour_support=12/13; s=0 mass=0
+service_anchor=sum_M=48602521488933856/1996669193081744181=169*I5: PASS
+common_gauge=left_sheet-u=right_sheet-q iff s=-d; predicate applied before marginalization
+common_gauge_support=72/117; masks=(('left', 'left', (0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)), ('left', 'middle', (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)), ('left', 'right', (0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)), ('middle', 'left', (0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)), ('middle', 'middle', (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)), ('middle', 'right', (0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)), ('right', 'left', (0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)), ('right', 'middle', (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)), ('right', 'right', (0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)))
+owner_active_common_gauge_support=48/52; d=0 vanishes by source diagonal law
+opposite_sign_s_equals_d_support=72/117 (hostile orientation comparison)
+active_K4_row_ranks_mod_(547, 911)=(4, 4)
+active_Walsh_raw_support=(12, 12, 12, 12)/13
+active_Walsh_F13_Fourier_support_mod_(547, 911)=((13, 12, 12, 11), (13, 12, 12, 13))
+active_Walsh_zero_modes_nonzero=(1, 0, 0, 1)
+active_Walsh_F13_Fourier_support_exact=(13, 12, 12, 13) (Phi13 coefficient certificate)
+active_corner_zero_modes=(586161995511426137294400, 593595775077439052580480, 593595775077439052580480, 586161995511426137294400); LL=RR and LR=RL exactly
+common_offset_owner_phase_split_primes=(547, 911, 1093, 2003, 2549)
+pair_level_common_gauge_offset_sha256=e4d0d4fa674e1f54496e613f7a3e1f057af033fa8992322a5f414ea176e1c3d4
+owner_frequency_x_Walsh_drift_Fourier_support_certified=((13, 12, 12, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13))
+owner_frequency_K4_ranks_certified=(4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4)
+gauge_defect_mass_support=13/13
+semantic_sha256=3d8c88fb7b9762f41ef35c00d980b99fc435c8352baf5dddb9fe412d1baeace0
+scope=lawful guard-atom ancestry support and spectral capacity only; no endpoint weight identity, current, row exclusion, or LRC(14)
+all exact checks passed

@@ -1,0 +1,19 @@
+== F_1009 slice gate for G=L^43*Norm(J) ==
+stage: reconstructing THM-3495 J from its frozen exact route
+stage: J ledger reconstructed and released
+image witness: H(3,-1,0)=0; J(10,-46,33)=0; L(10,-46,33)/L(F(10,-46,33))=-504/-69753247104
+stage: evaluating 543 interpolation nodes (primary remaining axis=1, groups=4160)
+stage: checking 12 held-out determinants and the second aggregation route
+J infinity weight=228; per-sheet pole bound=152
+G(A,1,1) degree bound=542; attained degree=542
+regular residue count=1006; interpolation/holdout=543/12
+J aggregation plans: remaining-axis-1:4160-groups, remaining-axis-2:5657-groups, remaining-axis-0:6662-groups
+closed cubic norm = direct 3x3 multiplication determinant: PASS
+twelve held-out direct norms and second J aggregation route: PASS
+degree-541 shortened-interpolation hostile: FAILS as required
+G slice squarefree; factor degree/exponent rows=[(1, 1), (2, 1), (2, 1), (4, 1), (12, 1), (21, 1), (500, 1)]
+gcd degrees with specialized (L,H,J)=(0,0,0)
+proper-power and injected-old-H hostiles: detected
+ascending G-slice coefficient-ledger sha256=47fba77866ee50d00fcae28b834e8a0b0c18a4cf52c2cd1b9c05155410c91d00
+scope: finite-exact mod-1009 slice/multiplicity/coprimality gate for one fixed map; no global Norm(J) expansion and no general JC conclusion
+all exact checks passed

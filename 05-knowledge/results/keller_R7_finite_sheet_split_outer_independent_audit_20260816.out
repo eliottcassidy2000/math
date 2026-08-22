@@ -1,0 +1,18 @@
+== fixed Keller R7 split-outer independent audit ==
+THM-3521 support sha256=a201191410e39d47fbf607191e8bd597453c697f134d3803466694b680d8c60d
+p=71;outer L=53;roots=[10, 23, 38]
+branch rows=(w,y,z,R6,frozen-H-flat-norm,(L,N(L),...,N^5(L)))
+  (10, 0, 2, 56, 23, (26, 24, 57, 62, 6, 14))
+  (23, 1, 36, 65, 64, (57, 34, 38, 40, 5, 6))
+  (38, 18, 60, 10, 50, (20, 34, 44, 36, 54, 49))
+  w=10 L-gates(dim,Norm(L),Norm(S),Norm(disc))=((1, 26, 23, 4), (3, 24, 26, 35), (9, 57, 53, 66), (27, 62, 64, 32), (81, 6, 5, 33))
+  w=10 H-gates(dim,Norm(L),Norm(S),Norm(disc))=((1, 26, 23, 4), (3, 24, 26, 35), (9, 57, 53, 66), (27, 62, 64, 32))
+  w=23 L-gates(dim,Norm(L),Norm(S),Norm(disc))=((1, 57, 70, 68), (3, 34, 34, 19), (9, 38, 15, 26), (27, 40, 47, 35), (81, 5, 54, 69))
+  w=23 H-gates(dim,Norm(L),Norm(S),Norm(disc))=((1, 57, 70, 68), (3, 34, 34, 19), (9, 38, 15, 26), (27, 40, 47, 35))
+  w=38 L-gates(dim,Norm(L),Norm(S),Norm(disc))=((1, 20, 53, 44), (3, 34, 56, 54), (9, 44, 21, 29), (27, 36, 69, 13), (81, 54, 70, 34))
+  w=38 H-gates(dim,Norm(L),Norm(S),Norm(disc))=((1, 20, 53, 44), (3, 34, 56, 54), (9, 44, 21, 29), (27, 36, 69, 13))
+split_product_R7(q)_mod_71=56;omit_w_38=34
+wrong_H_normalization=46;semantic_sha256=d8fd9ddf1f8679b90434d1f6ffa6a717c1725e3dcb5703c040e1ab724081e72b
+independent verdict: complete split 3*243-sheet R7 finite value is nonzero
+scope: fixed-map old-L gate only; no image, irreducibility, all-level, arbitrary-map, or general JC claim
+all independent exact checks passed

@@ -1,0 +1,25 @@
+MULTI-EDGE VISIBLE-KERNEL HELLY AND BORDERED-RESOLVENT FINITE-EXACT SCOUT
+status=FINITE-EXACT;no_theorem_id;static_symmetric_relation_walks_only
+dependency_hashes=BEGIN
+fd9c4feaa9a39db14c754a3ff7267ad5f71e2cd71953119c07df53fafb96bab6  01-canon/theorems/THM-3305-single-edge-visible-zero-mode-and-rank-two-resolvent-update.md
+5704ee8d6641a12e50d6a6179ccf58f911ba782cfe369ac70a32db51887565b2  04-computation/gmc_single_edge_zero_mode_resolvent_update_partial_scout_20260803.py
+b52db8c18d3182fb79ed5a230d9f75775155f438c7f32e974ab1ff3fcb15e556  05-knowledge/results/gmc_single_edge_zero_mode_resolvent_update_partial_scout_20260803.out
+dependency_hashes=END
+pair_census=55;visible_pairs=10;new_pair_minimal_circuits=0;signature_types=17;serialized_bytes=1934;sha256=86badaa9186021f92c026a591b29436790335d76468db2c18fa260c7feef36f0
+edge_lattice=2048;serialized_bytes=37894;sha256=53f740b8fd3e8b1baa88a460e210662d51b6aa69ff8a157fcdfc9fd5d8510ad0
+size_summary=((0, (1, 1, 0, 0)), (1, (11, 10, 1, 1)), (2, (55, 45, 10, 1)), (3, (165, 115, 50, 3)), (4, (330, 188, 142, 10)), (5, (462, 212, 250, 20)), (6, (462, 169, 293, 25)), (7, (330, 91, 239, 23)), (8, (165, 29, 136, 18)), (9, (55, 4, 51, 13)), (10, (11, 0, 11, 7)), (11, (1, 0, 1, 1)))
+minimal_visible_circuits=6;arity_profile=(one:1,two:0,three:5)
+circuit=((7, 18),);mass=3/5;signature=(23, 42, 15, 8, 7, 9);primitive=(sum:3,norm:15,support_size:7);compatible_next_edges=((2, 10), (3, 22), (10, 16), (10, 22), (11, 13), (13, 18), (13, 22), (16, 21), (17, 22), (19, 22));breaking_next_edges=();head_stats=(-108, 19440, -180)
+circuit=((2, 10), (13, 18), (17, 22));mass=12/35;signature=(23, 52, 13, 7, 6, 11);primitive=(sum:12,norm:420,support_size:12);compatible_next_edges=((10, 16), (16, 21));breaking_next_edges=((3, 22), (7, 18), (10, 22), (11, 13), (13, 22), (19, 22));head_stats=(288, 241920, 840)
+circuit=((2, 10), (13, 22), (17, 22));mass=12/35;signature=(23, 46, 13, 7, 6, 11);primitive=(sum:12,norm:420,support_size:12);compatible_next_edges=((10, 16), (16, 21));breaking_next_edges=((3, 22), (7, 18), (10, 22), (11, 13), (13, 18), (19, 22));head_stats=(216, 136080, 630)
+circuit=((10, 22), (13, 18), (17, 22));mass=12/35;signature=(23, 52, 13, 7, 6, 11);primitive=(sum:12,norm:420,support_size:12);compatible_next_edges=((10, 16), (16, 21));breaking_next_edges=((2, 10), (3, 22), (7, 18), (11, 13), (13, 22), (19, 22));head_stats=(288, 241920, 840)
+circuit=((10, 22), (13, 22), (17, 22));mass=12/35;signature=(23, 46, 13, 7, 6, 11);primitive=(sum:12,norm:420,support_size:12);compatible_next_edges=((10, 16), (16, 21));breaking_next_edges=((2, 10), (3, 22), (7, 18), (11, 13), (13, 18), (19, 22));head_stats=(216, 136080, 630)
+circuit=((13, 22), (17, 22), (19, 22));mass=3/7;signature=(23, 46, 13, 7, 6, 11);primitive=(sum:3,norm:21,support_size:5);compatible_next_edges=((7, 18), (10, 16), (11, 13), (13, 18), (16, 21));breaking_next_edges=((2, 10), (3, 22), (10, 22));head_stats=(216, 108864, 504)
+persistent_circuit=((7,18),);compatible_with_all_other_edges=true;upper_interval_zero_mass_lower_bound=3/5
+fragile_triple=((2, 10), (13, 18), (17, 22));fourth_edge_masses={(3, 22): 12/59, (7, 18): 14/15, (10, 16): 12/35, (10, 22): 0, (11, 13): 12/37, (13, 22): 0, (16, 21): 12/35, (19, 22): 0}
+bordered_compiler=pairs:55;terms:20;local_dimension_max:10;update_shape_counts=(((2, 4, 0), 21), ((2, 4, 1), 21), ((2, 4, 2), 3), ((5, 10, 0), 7), ((5, 10, 1), 3));exact_match=true
+mechanism=visible_kernel_Helly_arity_and_local_formal_Woodbury_inverse;persistent_and_fragile_zero_modes_separate
+preserved=exact_all_ones_static_walk_counts_active_node_births_and_kernel_mass;lost=walk_identity_chronology_tournament_orientation_and_bit_complexity
+scope=no_tournament_no_response_composition_no_GMC_FC_or_LRC_consequence
+source_ast=(assert_nodes=0,float_literals=0)
+ALL EXACT CHECKS PASSED

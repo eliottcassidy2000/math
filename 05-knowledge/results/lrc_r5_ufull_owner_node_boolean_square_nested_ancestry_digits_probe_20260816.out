@@ -1,0 +1,27 @@
+== r=5 nested source-sheet x inverse-owner digit conditional probe ==
+parents=(source_sha=592aa0bce31f2da5d5e2ddff7f3ffe6f1398f3a07b5ce927e0d97c9fe309ae3b,owner_sha=ae1cf021ea23f325eeded42ff1dea8df903d837b1d7ab551289d62f7ab7a0348)
+stage_word=(n=c+13*b_source before Q(X);a=r_owner+13*h in outer P_(13^5);X=(w_u+a)/13^5;Z=(X+n)/169)
+typing=both labels coexist on THM-2471 Boolean stalk (y,u,a,n,e');no source/arrival atom or temporal intertwiner used
+joint_source=(upper_piece_counts,boundaries,projected_boundaries,support,reflection_checks,additive_hostile_checks,all_double_profile_rank,selected_profile_rank,basis_indices,basis_pairs,raw_sha,profile_sha,all_double_sha,projected_sha)=((1, 56, 72, 72, 72, 72, 72, 72, 72, 72, 72, 56, 1), 34, 24, ((0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)), 72501, 7293, 17, 17, (0, 1, 2, 3, 4, 5, 6, 7, 12, 13, 14, 24, 25, 36, 37, 48, 49), ((1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (4, 1), (4, 2), (5, 1), (5, 2)), 'c5e4a115e3aa1e32c1dbb78e93208ea9b96249e1499dca3d7dcf9e784e6fff42', 'e8dfef7401b4f1d94e173a625ac4ca5d744a5abcc596bd455d4268cb6ac6669b', '52dcdd0628334b1b7ac3205201f61a755ca937577febedcb9170a74d3937bfa6', '79ef29bf0265375b049209568ac3d7682049321fd35d1f40bc383189841f1d58')
+marginals=(sum_r_owner->audited b_source profiles,sum_b_source->current-leg r_owner candidate profiles,double_sum->U_u): POINTWISE PASS
+reflection=(y,u,b_source,r_owner)->(1-y,12-u,12-b_source,12-r_owner): PASS
+conditional_character_bank=((1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (4, 1), (4, 2), (5, 1), (5, 2));both_digit_frequencies_nonzero=True
+work_counts=(7107008, 7108460, 1200462, 186244, 186244);state_counts=(300115, 300116, 300115, 300116);literal_controls=((0, 0, 0), (1, 0, 6), (6, 6, 12), (12, 12, 0)): PASS;same_root=0
+conditional_ranks=(raw_character_state_x_relation=6,pure_four_way_character_state_x_relation=6)
+channel_to_output_ranks=(source_profile_basis=17,raw_state_x_relation=4,pure_four_way_state_x_relation=4,pure_kernel_dimension=13)
+inherited_rank_ceiling=relation rows equal the pointed-six carrier exactly;the joint interaction supplies four amplitude-coordinate directions inside it
+per_character_pair_four_way_ranks=(3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3)
+minimal_conditional_rank_witnesses=(count=136,first_indices=(0, 1),first_pairs=((1, 1), (1, 2)),sha256=a8a71534431736ed5e3f8be3f5b0ce7ee51ae6c1b44fe728dd34d19271df8ed1)
+pure_four_way_relation_fourier_support=612/612
+pointed_relation_rowspace_(point_count,joint_rank,point_rank,union_rank)=((1, 1, 1, 1), (2, 2, 2, 2), (1, 1, 1, 1), (2, 2, 2, 2)): PASS
+pointed_global_relation_rowspace_(point_count,joint_rank,point_rank,union_rank)=(6, 6, 6, 6): PASS
+pointed_coordinate_map=(sha256=ab2ef8f59f9655c9d777b74684c2a1c98074dd5f8f52b1c4b4e654fe3da9bf18,pivot_columns=((0,), (0, 1), (0,), (0, 1))): PASS
+fixed_relation_(1,0,6)_double_character_x_state_rank=4
+hostile=additive lift A_(b,r)=B_b/13+R_r/13-U/169 has both exact one-digit marginals and zero every double-nontrivial character: PASS
+digests_(gamma,tensor,pointed_gamma,pointed_tensor,pointed_coordinates,four_way,spectrum,fixed)=('9d0aa6823ed9bb83b338350d9da3d86c52e552a844b4334e3571bf2393f04cd1', '53e1d8e6de69dcd1cf5740acce7b245f7d9a388cfa2b27da4aefb00f3075df14', '007b223794c84a88a38b1c2cd58964d9076fbefb565ce08a2a9fac4554662d94', 'bb47eb3c85032473008b05713823bc959116a1b7ccad3f733bc2b4bc681c29ec', 'ab2ef8f59f9655c9d777b74684c2a1c98074dd5f8f52b1c4b4e654fe3da9bf18', '25fb801785351464a569f076371cce559941cb0d42722e0d5a4564ea6b4c9d3e', 'c55f53bfbb5dbe44a09cdf44b8381c21d3c0ed2563843f0d35c1b2c0fb842e64', '4a88d14c398b6648546ffef3025ae4e92bc4fea4d4ea896f0f1da8d06745156c')
+semantic_sha256=6e5605f58b7a94ea5ea4e8f62cfa7ee135b0d52512225f4aaee248ad6e21a9ae
+script_sha256_lf=1188df8aa2a7a84c1e8ada5fc3cc8d3b839ece70298b94f1d94c9d440caa88f3
+status=FINITE-EXACT lawful nested ancestry construction with conditional-rank and pointed-carrier gates on one r=5 owner base
+scope=relation-output carrier comparison only;root difference marginalized;not equality of digits,not exact C(a;X,m),not chronology,not physical current,no row exclusion,no LRC(14)
+commands=python -B 04-computation/lrc_r5_ufull_owner_node_boolean_square_nested_ancestry_digits_probe_20260816.py;python -B -O 04-computation/lrc_r5_ufull_owner_node_boolean_square_nested_ancestry_digits_probe_20260816.py
+PASS

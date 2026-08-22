@@ -1,0 +1,6 @@
+[PASS] EN_D_decoupling: 600/600
+[PASS] EN_M_monotone: 600/600
+[PASS] EN_C_mixedcone_step: 600/600
+[PASS] EN_G_growthlaw: 600/600
+[PASS] EN_DR_capdrift: 600/600
+OVERALL: ALL-PASS

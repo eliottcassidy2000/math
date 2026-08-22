@@ -29,6 +29,11 @@ script: 04-computation/lrc14_stage2_theta_contraction_opus_20260728.py
 output: 05-knowledge/results/lrc14_stage2_theta_contraction_opus_20260728.out
 script_sha256: 09c43af0a0a56c7a0833bbfd13ed6a96bc5a7a3718aa1bc6b77a144bde101a06
 output_sha256: bef4ee9a18ff3e2f455bad66a95252dd9989b2f60953e26e8ea0c2dc6ae7f5df
+recovery_audit_script: 04-computation/lrc14_stage2_theta_contraction_r5_independent_audit_20260816.py
+recovery_audit_output: 05-knowledge/results/lrc14_stage2_theta_contraction_r5_independent_audit_20260816.out
+recovery_audit_script_sha256: 8be9c1b69b33ab51ac16ce2c2a7f836aae4b811e2817b90e25921c234578c568
+recovery_audit_output_sha256: 087bb018408d3438494fb4ade461a4371e26bec60e31421540fea929316dd679
+replay_semantic_sha256: 184c159dd4aedb02b38b2029846b9e88f301fcc63dd163682bbabddc438b825e
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -163,3 +168,31 @@ The audit also found MISTAKE-295 and then independently verified the repaired
 fixed-absolute-root table, including its nonzero primitive bundle.  Thus the
 promoted result is the narrow auxiliary linked-node contraction stated here,
 not a one-point lawful response, physical current, or row exclusion. **QED.**
+
+## 2026-08-16 recovery audit
+
+The recovery audit named in the frontmatter found that the parent-worktree
+copies and these canonical artifacts are identical after CRLF-to-LF
+normalization.  It reproduced the primary transcript in normal and optimized
+modes, masking only elapsed fields.  Starting from the materialized exact
+common-base table, a separately written ANOVA/cyclotomic implementation then
+checked the THM-2512 factorization and directly exhausted all `5,184`
+primitive quadruples: all are nonzero.  It also exhausted the genuine
+fixed-absolute-root hostile, where all `5,184` primitive coefficients are
+again nonzero.
+
+The same audit rederived the linked-node identities
+
+```text
+13 w_u-y=u,
+c_3 X_(u,a)-2(y+u)/13=2a,
+13^6 X_(u,a)-y=u+13a,
+```
+
+and checked the deep-window law on every exact breakpoint cell.  These
+integer differences prove descent to one outer base while preserving the
+distinction between `w_u`, `X_(u,a)`, and `Y_(q,e')`.  The audit therefore
+confirms the theorem's present narrow status and independently rejects any
+claim that affine slaving is the unique cause of nonvanishing.  It does not
+add a second independent constructor for the underlying interval table and
+does not strengthen the theorem to a generic bridge or current.

@@ -1,0 +1,25 @@
+R5 FOLDED-C7 TO U_FULL K4xF13 DRIFT TRANSPORTER PROBE
+status=FINITE-EXACT marked split-field comparison; LRC(14) OPEN
+dependencies=(ufull=98a4cf5c82ca10027302baf2c7fb59acb0f305143e22453d0a8660fef8d90cf0,r5_output=bef4ee9a18ff3e2f455bad66a95252dd9989b2f60953e26e8ea0c2dc6ae7f5df)
+field=(prime=572252886246508880869,zeta7=353818603057943120846,zeta13=505438565698892403012)
+source_raw_spectrum=(7 septimal profiles x 13 root frequencies; nonzero=91/91)
+source_interaction_spectrum=(6 primitive septimal profiles x 12 primitive root frequencies; nonzero=72/72; double centring deletes the 13-mode septimal-trivial sector and six remaining root-zero margins)
+target_spectrum=(4 Walsh channels x 13 drift frequencies; nonzero=52/52; rank=4)
+paley_negation_fold=(orbits=((0,), (1, 6), (2, 5), (3, 4)),arc_counts=((0, 1, 1, 1), (1, 1, 2, 2), (1, 2, 1, 2), (1, 2, 2, 1)),times2_cycle=(2, 3, 1))
+k4_nontrivial_walsh_matchings=(((0, 1), (2, 3)), ((0, 2), (1, 3)), ((0, 3), (1, 2)))
+rational_algebra_boundary=(Q[C7]^inversion = Q plus cyclic cubic x^3+x^2-2x-1 of discriminant 49; Q[F2^2]=Q^4; no Q-algebra isomorphism; both split after marked base extension)
+allocation_census=(trivial_preserving_48=(0, 0, (4,)),all_folded_192=(0, 0, (4,)),all_mode_choices_2401=(0, 0, (4,)))
+allocation_fields=(exact_common_kernel,gauge/amplitude_common_kernel,observed_numbers_of_kernel_classes)
+fixed_channel_mixing_system=(all_7_source_profiles_rank=3,selected_4_source_ranks=(3, 3, 3, 3, 3, 3, 3, 3),target_rank=4,projective_equation_ranks=(12, 12, 12, 12, 12, 12, 12, 12),solution_space=annihilator-only)
+calibration={'constant': 0, 'left': 1, 'right': 2, 'mixed': 3}; full_kernel_supports=(13, 13, 13, 13); full_kernel_rank=4
+full_kernel_sha256=9f03166d1b8d730673aeccf7bff9196d2de42e0ff9fa7c08680d38a772dc041f
+augmentation_kernel_supports=(13, 13, 13, 13); augmentation_kernel_rank=4
+augmentation_kernel_sha256=351976b6d1ac51915d686b32e1cc0f3f3dfa53d1f33f7c8831f7a74a495e3025
+margin_multipliers=(447723905236344097309, 449191480702777787093, 364277523777300598399, 467261792499259286805)
+margin_split=for each selected raw C13 profile, full minus augmentation transport is a constant kernel; for septimal modes 1,2,3 the centred source is the THM-2594 interaction, while the septimal-trivial profile is wholly absent after double centring
+hostile=no folded-mode allocation yields one scalar drift convolution after independent channel amplitude/cyclic-gauge calibration; all fixed channel-mixing projective solutions annihilate the rank-three, three-window source, so one common convolution cannot reach the rank-four Walsh target
+survivor=four marked channel-dependent invertible circulants transport the raw r5 profiles to the four U_full Walsh rows; this is formal spectral equivalence only
+next_test=a shared linear drift transplant needs a fourth independent source channel (new deep window/sidecar); a lawful relation could instead be nonlinear, nonconvolutional, channel-dependent, or frequency-dependent
+semantic_sha256=bae3749e01361ebbaf6c9cc0e7160d2e4d22d6df420d4512ba94f778718af3a1
+nonconsequence=no Boolean coupling, physical current, H1 flux, grouped coefficient, row exclusion, or LRC(14)
+STATUS=PASS

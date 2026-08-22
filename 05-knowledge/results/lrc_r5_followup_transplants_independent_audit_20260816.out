@@ -1,0 +1,28 @@
+R5 FOLLOW-UP TRANSPLANTS -- INDEPENDENT AUDIT
+status=ACCEPT_SCOPED_FINITE_EXACT; split-field/common-circulant only; LRC(14) OPEN
+dependencies=(thm2594=09c43af0a0a56c7a0833bbfd13ed6a96bc5a7a3718aa1bc6b77a144bde101a06,thm3514_atom_audit=f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc)
+candidate_hashes=(A=113793a41d39e8ac1ad3d745b9c9238cba92721805a379ee4378a000bacca33c,A_out=f367cc991df9edae8b27a312d16f2189f62899e8a961f22cbf24a339ba9b10b0,B=0448a111eb9f37fe8ee79c1c94d4be82e42911c15b72800f61d3316fa229fc86,B_out=5d634711f53f07280b53f4d494800ca3e1dd396f93789c6a40706c1b3e2a8d69)
+field=(prime=572252886246508880869,zeta7=353818603057943120846,zeta13=505438565698892403012,denominator_unit=True)
+target_reconstruction=(direct_equals_kernel=True,wrong_left_sheet_phase_mismatches=52,walsh_rank=4,spectral_support=52/52)
+A_support=(physical_slaved=12/91,physical_absolute=18/91,spectral=91/91+91/91)
+A_exact_ranks=(slaved=3,absolute=3,union=4,intersection=2)
+A_core_projective={'slaved7': ((3, 12, 16, 16, 0), 12, 25, 16, 0, True), 'absolute7': ((3, 12, 16, 16, 0), 12, 25, 16, 0, True), 'union14': ((4, 16, 40, 40, 0), 16, 29, 40, 0, True)}
+A_affine_gauge=(common_translations=13/13,dilations=12/12,relative_phase_x_dilation=156/156,signature_classes=((3, 12, 44, 44, 0), (4, 16, 40, 40, 0), (5, 20, 36, 36, 0), (6, 24, 32, 32, 0)),all_zero_excess=True)
+A_sidecars=(named_cases=56,named_rank4=56,binary_cases=127,binary_rank4=126,zero_mask=(127,),all_zero_excess=True)
+B_support=(physical=72/91,same_root_zero=True,spectral=91/91)
+B_exact_ranks=(root_difference=6,theta_resolved=8)
+B_core_projective={'root_difference7': ((6, 24, 4, 4, 0), 24, 37, 4, 0, True), 'theta_resolved21': ((8, 32, 52, 52, 0), 32, 45, 52, 0, True)}
+B_affine_gauge=(root_dilations=12/12,theta_dilations=12/12,owner_minus_dilations=12/12,owner_plus_dilations=12/12,all_zero_excess=True)
+B_owner_phase_minus=(ranks=(6, 6, 6, 9),systems=(((6, 24, 4, 4, 0), 24, 37, 4, 0, True), ((6, 24, 4, 4, 0), 24, 37, 4, 0, True), ((6, 24, 4, 4, 0), 24, 37, 4, 0, True), ((9, 36, 20, 20, 0), 36, 49, 20, 0, True)))
+B_owner_phase_plus=(ranks=(6, 6, 6, 9),systems=(((6, 24, 4, 4, 0), 24, 37, 4, 0, True), ((6, 24, 4, 4, 0), 24, 37, 4, 0, True), ((6, 24, 4, 4, 0), 24, 37, 4, 0, True), ((9, 36, 20, 20, 0), 36, 49, 20, 0, True)))
+B_owner_full_affine=(owner_modes=12/12,coupled_owner_mode_x_drift_dilation=144/144,rank_classes=((6, 6, 9),),signature_classes=((9, 36, 20, 20, 0),))
+B_folded=(cases=8,signatures=((4, 16, 0, 0, 0), (4, 16, 0, 0, 0), (4, 16, 0, 0, 0), (4, 16, 0, 0, 0), (4, 16, 0, 0, 0), (4, 16, 0, 0, 0), (4, 16, 0, 0, 0), (4, 16, 0, 0, 0)))
+B_allocations=(all_7pow4=2401,common_exact=0,common_amplitude_shift=0,kernel_class_counts=(4,))
+projective_formulation=(tuple_fields=source_rank,wedge_rank,nullity,annihilator_dimension,excess;anchor_equals_wedge=True;augmented_lambda_projection_zero=True)
+source_split_prime_crosschecks=((547, (91, 3), (91, 3), (91, 6)), (1093, (91, 3), (91, 3), (91, 6)), (2003, (91, 3), (91, 3), (91, 6)))
+sign_and_gauge_ledger=(target_phase=+a forced by direct tau route; source_owner_+u_and_-u_both_audited; drift_DFT_reversal_is_dilation_12; translations_are_absorbed_frequency_phases)
+denominator_ledger=(one common DENC scalar; invertible at certified and three hostile split primes; A_projective_invariance=True;B_projective_invariance=True)
+semantic_sha256=69e4dd6d71290663a560a5809c9fc509a0649891fd28b403a69d92b822046fc5
+scope=fixed frequency-independent channel mixing followed by one common C13-circulant/projective multiplier; arbitrary right operators, nonlinear support relations, and pre-marginal ancestry couplings are not excluded
+nonconsequence=no U_full common ancestry, Boolean coupling, physical current, absolute H1, bispectrum, scalar exclusion, or LRC(14)
+STATUS=PASS

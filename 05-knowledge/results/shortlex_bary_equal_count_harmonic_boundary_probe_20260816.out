@@ -1,0 +1,13 @@
+== b-ary shortlex equal-count harmonic boundary probe ==
+level_n=[1+(b^n-1)/(b-1), next_start-1]; first/last blocks each have b^(n-1) indices
+limiting level masses=(log((2b-1)/b),log(b^2/(b^2-b+1)))
+strict gap certificate=(2b-1)(b^2-b+1)-b^3=(b-1)^3>0
+log-density candidates=level_mass/log(b); superdominant alternating stages destroy existence
+exact_level_rows=41; level_ledger_sha256=986305533be6eef970cc9ffc4d17f99d18bd352abe7e7f680a5bd25aa3ac3d6c
+stage_rows=63; final_stage_ratio_gate=(bases=2..8,count=7,each<1/10^20)
+ternary_depth2=(vertices=9,lex_T9_arcs=36,boolean_face=((0, 0), (0, 2), (2, 0), (2, 2)),T4_arcs=6,matchings=(((1, 0), (((0, 0), (0, 2)), ((2, 0), (2, 2)))), ((0, 1), (((0, 0), (2, 0)), ((0, 2), (2, 2)))), ((1, 1), (((0, 0), (2, 2)), ((0, 2), (2, 0))))))
+six K4 edges are edge objects; a separate T6 needs 15 comparisons and an added orientation
+bounded-width branch ray has finite harmonic mass; in particular a one-word-per-level Fibonacci/Berggren ray has logarithmic density zero
+ray_bound_rows=33; semantic_sha256=8889cd4d5d3da976a099824e6242fef1a9b9f80fe83e8ae1a4c6fba5dbdf517f
+scope=shortlex/harmonic theorem candidate only; no ancestry transport, LRC, Keller, or automatic tournament conclusion
+all exact checks passed

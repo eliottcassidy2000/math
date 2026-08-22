@@ -1,0 +1,16 @@
+LRC14 CORE-RESCUE COLLAR ATOMS EXACT PROBE
+source_sha256_lf=b02bc72b6adfee0cabe8f7893f1f0ca372f529154b26f7ddcbf1812e43be87f9
+dependency_sha256_lf=(('THM-3387-script', '9b0b46874a569d674b937b37cf74a8985fca2b77e3e480a75fb4924ea602f25a'), ('THM-3387-output', 'b4d9ce439bab4501bfd5e2cf13eb0b0e3685b7364f30e43b7d5ca9138d25cb5c'), ('q3-script', '5323346310a9a6b188caa0131b177b2ae8e23c7113808cda8955f89828e62154'), ('q3-output', '5a32319fb8a91b476d292da292ae3cc9933f5f94aad7eb0e834f49e52252c535'), ('q5-script', '96b5addc012546b051987d623eff01581f6616219228524f9465be63f09776a0'), ('q5-output', '83a76d6d04be5a7721d070f923612c9f034ed3dac72b5f84636d8632796facfe'), ('q6-script', 'e16ae18816b0620dde6ae05db01846ce49a37c292c7cccc76532ec2fc9c728d6'), ('q6-output', '3628260d408258b1f9ad385c23c4d4bdea8cf0c7bad65f02dbbff9dc0e5de889'))
+status=FINITE-EXACT unnumbered sidecar;four collar atoms generate all twelve q<=7 core rescues
+q3_atom=edge:(8,11,13);centres:(2j+1)/6,j=0..2;radial_collar:(2/231,1/112);core_clock=2
+q5_atom_a=edge:(6,11,12,13,14);centres:j/5,j=0..4;radial_collar:(9/770,1/84);core_clock=1
+q5_atom_b=edge:(7,9,11,12,13);centres:(2j+1)/10,j=0..4;radial_collar:(1/245,1/168);core_clock=2
+q6_atom=edge:(3,8,11,13);centres:j/6,j=0..5;radial_collar:(2/231,1/112);core_clock=1
+branch_transplant=q3_odd_sixth_collars_plus_even_sixth_fill_equals_q6_all_sixth_collars
+boundary_anatomy=(('q3', ((11, 0),), ((8, 1),), ((8, (1,)), (11, (0,)), (13, (2,)))), ('q5a', ((11, 4),), ((6, 0),), ((6, (0,)), (11, (4,)), (12, (2,)), (13, (3,)), (14, (1,)))), ('q5b', ((7, 3),), ((12, 2),), ((7, (3,)), (9, (0,)), (11, (4,)), (12, (2,)), (13, (1,)))), ('q6', ((11, 1),), ((8, 0), (8, 3)), ((3, (0, 2, 4)), (8, (0, 3)), (11, (1,)), (13, (5,)))))
+q6_inert_extensions=(1, 5, 7, 9, 10, 14);active_extensions=((2, True, (Fraction(1, 84), Fraction(13, 84), Fraction(5, 28), Fraction(9, 28))), (4, True, (Fraction(1, 84), Fraction(13, 84), Fraction(5, 28), Fraction(9, 28))))
+rescue_records=((3, (1, 2, 3), (8, 11, 13)), (3, (1, 2, 4), (8, 11, 13)), (3, (2, 3, 4), (8, 11, 13)), (5, (1,), (6, 11, 12, 13, 14)), (5, (2,), (7, 9, 11, 12, 13)), (6, (1,), (1, 3, 8, 11, 13)), (6, (1,), (3, 5, 8, 11, 13)), (6, (1,), (3, 7, 8, 11, 13)), (6, (1,), (3, 8, 9, 11, 13)), (6, (1,), (3, 8, 10, 11, 13)), (6, (1,), (3, 8, 11, 13, 14)), (6, (1, 2), (3, 8, 11, 13)))
+rescue_count=3(q3)+2(q5)+7(q6)=12;q2_and_q4_have_none
+scope=exact_phase_cell_anatomy;no_new_row,no_refined_decrement,no_LRC14
+semantic_sha256=3a1d4bba94086d82c12c94225fc0403be165cc6e7bb5245fde07d4bc60d7c022
+verdict=PASS

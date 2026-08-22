@@ -1,0 +1,15 @@
+THM-3568 reducible target-graph component Euler audit
+L_phi=(3*a*h^2-b*h+1)^2*(12*a^2*h^2-4*a*b*h+16*a-b^2)
+D intersect C and omitted support: b*h-2=0 (reduced)
+degree-one component: A2 minus V(D), with unit D
+h r m n chi(D) chi(C) chi(linear) chi(quadratic)
+1 | 0 | 2 | 1 | 1 | 0 | 0 | 2
+2 | 0 | 2 | 1 | 1 | 0 | 0 | 2
+b | 1 | 4 | 2 | 0 | -3 | 1 | 10
+b**2 | 1 | 6 | 3 | 0 | -5 | 1 | 15
+(b - 1)**2 | 1 | 6 | 3 | 0 | -5 | 1 | 15
+b**2 - 3 | 2 | 6 | 2 | -1 | -6 | 2 | 17
+formula: chi(quadratic)=-3+3*r+2*m+n
+constant h: chi=2; nonconstant h: chi>=5
+verdict: neither irreducible component is A2 for any nonzero polynomial h
+all active truth gates passed

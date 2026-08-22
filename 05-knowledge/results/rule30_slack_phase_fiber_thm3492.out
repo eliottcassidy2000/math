@@ -1,0 +1,12 @@
+THM-3492 RULE 30 SLACK-PHASE FIBER EXACT AUDIT
+abstract_universe=p=2^d,d=1..6;all_marks;N=1..4;parameter_triples=504
+abstract_linear_algebra=restriction_columns=76440;kernel_basis_vectors=53340;target_basis_lifts=23100;max_domain_dimension=320;max_kernel_dimension=252
+arc_universe=p=2^d,d=1..6;1<=s<p;N=1..4;parameter_triples=480;direct_arc_matrices=120
+arc_linear_algebra=restricted_kernel_vectors=50130;restricted_target_lifts=21732;max_constrained_kernel_dimension=252
+pointed_routing=carriers=3864;two_carrier_hostiles=456;singleton_face_positive_kernels=24
+physical_depth6=p=8;s=6;hstar=2;ell=1;N=2;c=0;B=0;D_exponents=(0, 2);kernel_dimension=12
+physical_F6=(1, 0, 0, 0, 1, 0, 1, 1)
+physical_M6=(0, 1, 0, 1, 1, 1, 0, 1)
+physical_point_face=(2, 3, 6, 7);values=((2, 0), (3, 1), (6, 0), (7, 1));routes=(2,3)
+ordinary_mode_and_optimized_mode_use_identical_explicit_gates
+ALL CHECKS PASSED

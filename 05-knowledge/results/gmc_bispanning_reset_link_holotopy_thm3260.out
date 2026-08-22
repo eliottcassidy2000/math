@@ -1,0 +1,22 @@
+THM-3260 BISPANNING RESET-LINK HOLOTOPY ATLAS EXACT AUDIT
+dependency_hash_checks=4
+assert_nodes=0,float_literals=0
+pair_bank=(31 total,8 delayed,23 reset-link)
+full_graph=(V13,E23,beta11),unique_bridge=(13,14),leaf=14
+core_graph=(V12,E22,beta11),bipartition=((2, 11, 16, 18, 22), (3, 7, 10, 13, 17, 19, 21))
+kuratowski=K33_subdivision,left=(10,3,18),right=(11,16,22),PASS
+automorphism_group=C2,nontrivial=(17 21)
+covering_graph=(V15,E31,beta17),unique_bridge=(3,9)
+relative_layer=(8 delayed edges,2 new vertices,boundary_rank2,H1_rank6)
+covering_automorphism_group=S3(10,17,21)xC2(14,18),orders=(1,2,3,6)
+edge_coloured_automorphism_group=C2,nontrivial=(17 21)
+unordered_two_tree_decompositions=4960,digest=28285b3925c94703da8a0267642ffe8d20c30f5d76b443c52c146aa525c2b822
+symmetric_exchange_graph=(V4960,E43408,min_degree13,max_degree27,connected)
+nontrivial_automorphism_fixed_tree_pairs=0
+first_tree=((2, 10), (2, 13), (2, 17), (2, 19), (3, 11), (3, 16), (7, 18), (10, 11), (10, 22), (13, 18), (16, 21))
+second_tree=((2, 21), (3, 22), (7, 22), (10, 16), (11, 13), (13, 22), (16, 17), (17, 22), (18, 19), (19, 22), (21, 22))
+incidence_determinants=(-1, -1),transition_det=1
+transition_digest=4d692df61815d6f39e0dbe40259ab9fe6e0dc19ef26722497834ec25ad6019cc
+conditional_bridge=cyclic_difference+C12_vertex_label+tree_pair_gives_integral_11D_polarization
+scope=no_faithful_C12_torsor_action,no_order7_action,no_planar_dual,no_canonical_owner_phase_map
+all_exact_checks=PASS

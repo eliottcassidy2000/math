@@ -1,0 +1,30 @@
+WEIGHTED CRITICAL-PHASE RESPONSE-PATH EXACT SCOUT
+dependency_hash_checks=13
+assert_nodes=0,float_literals=0
+independent_THM3269_response_reconstruction=(11 states,22 rows,all_integral)
+independent_clutch=(23 reset edges,22 core edges,orientation_and_scale_PASS)
+strength_range=(12654135326210/11849988963879,66479967673052544/306432210196733)
+strength_bank_sha256=c7b8441f54bd893f33f1767db913da0d40f392f20d74f6d177782a0490dc911a
+independent_spanning_trees=74748,bispanning=(4960 unordered,9920 ordered)
+independent_unique_weighted_chart=((2, 13), (2, 17), (2, 19), (2, 21), (3, 11), (3, 16), (7, 22), (10, 11), (16, 17), (18, 19), (21, 22))
+independent_complement=((2, 10), (3, 22), (7, 18), (10, 16), (10, 22), (11, 13), (13, 18), (13, 22), (16, 21), (17, 22), (19, 22))
+independent_second_over_best=111771229679330735594490655/106891942612503954628585203
+independent_tree=(Aut1,center17,radius4,diameter8,leaves=(7,10,13,18))
+independent_incidence=(det(1, -1),transition_det=-1,digest=93f9ae1643ad9606f15826d8f1d3809fd0b04ce1d74c11d92d354edbdd737d4f)
+canonical_full_Jac_root=17,generator=[16-17],vertex_order=(17, 16, 18, 13, 11, 22, 19, 10, 7, 21, 2, 3)
+secondary_J12_singleton_generator=[7-17]=7*[16-17]
+canonical_vertex_phase=((2, 10), (3, 10), (7, 7), (10, 10), (11, 4), (13, 4), (16, 1), (17, 0), (18, 1), (19, 4), (21, 8), (22, 1))
+oriented_edge_targets=all_except_4_8
+tree_edge_targets=(1, 2, 3, 5, 6, 7, 9, 10, 11),cotree_edge_targets=(0, 1, 3, 5, 6, 7, 9, 11)
+unweighted_phase_hop_distances=(1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1)
+weighted_phase_path_bank=0:((3, 11, 10), (10, 11, 3))@25025006903228968482171/9358007889540925731463;1:((7, 22, 21),)@4117478020950840745301900523488000/181067356219656228631993554957801;2:((21, 2),)@2556604002388690672/627821797117010301;3:((18, 19),)@4566023170631/1510274189347;4:((19, 2, 21),)@5283860475339823645447139037140308586/736904568303910466989977698132844195;5:((21, 22),)@325385963940378812800/15279959903050007919;6:((7, 22), (22, 7))@12654135326210/11849988963879;7:((22, 21),)@325385963940378812800/15279959903050007919;8:((21, 2, 19),)@5283860475339823645447139037140308586/736904568303910466989977698132844195;9:((19, 18),)@4566023170631/1510274189347;10:((2, 21),)@2556604002388690672/627821797117010301;11:((21, 22, 7),)@4117478020950840745301900523488000/181067356219656228631993554957801
+weighted_phase_path_bank_sha256=74ee0d0c8a965882b3a3f8bc6254eeba83109eebbbc57f69590f903dce6219f1
+phase_geodesic_backbone=((2, 19), (2, 21), (3, 11), (7, 22), (10, 11), (18, 19), (21, 22)),forest_components=(6,3,1,1,1)
+weak_tree_global_phase_geodesics=12/12,endpoint_geodesics=48/132
+strong_cotree_global_phase_geodesics=0/12
+phase_backbone_carriers=(205 all spanning,36 ordered_bispanning)
+phase_exchange_subatlas=(V36,E120,degree4..10,connected,diameter5,Tstar_degree8)
+Tstar_all_spanning_weight_rank=60,phase_subatlas_weight_minimum=unique
+loss=phase_target_forgets_endpoints_and_6229_part;product_forgets_witness_bank_and_is_not_response_composition
+scope=canonical_internal_response_phase_only,no_vertex_torsor,no_owner_phase,no_positive_current,no_GMC_or_LRC_decrement
+all_exact_checks=PASS

@@ -1,0 +1,27 @@
+JC2 Catalan mixed-thickening exact recurrence audit
+python=3.13.14 sympy=1.14.0
+gates=86
+recurrence=E_k=sum_{i+j=k+1}(j*a_i'*b_j-i*a_i*b_j'), a_0=v^2, b_0=v^3-v
+target=E_0=1; E_k=0 for 1<=k<=2N-1
+N3_rows=-3*v**2*a1(v) + 2*v*b1(v) + a1(v) | -6*v**2*a2(v) + 4*v*b2(v) - a1(v)*Derivative(b1(v), v) + 2*a2(v) + b1(v)*Derivative(a1(v), v) | -9*v**2*a3(v) + 6*v*b3(v) - a1(v)*Derivative(b2(v), v) - 2*a2(v)*Derivative(b1(v), v) + 3*a3(v) + b1(v)*Derivative(a2(v), v) + 2*b2(v)*Derivative(a1(v), v) | -a1(v)*Derivative(b3(v), v) - 2*a2(v)*Derivative(b2(v), v) - 3*a3(v)*Derivative(b1(v), v) + b1(v)*Derivative(a3(v), v) + 2*b2(v)*Derivative(a2(v), v) + 3*b3(v)*Derivative(a1(v), v) | -2*a2(v)*Derivative(b3(v), v) - 3*a3(v)*Derivative(b2(v), v) + 2*b2(v)*Derivative(a3(v), v) + 3*b3(v)*Derivative(a2(v), v) | -3*a3(v)*Derivative(b3(v), v) + 3*b3(v)*Derivative(a3(v), v)
+identity_control=1,0
+catalan_N3_rows=1,0,0,-135/16,-405/64,-729/128
+N1=IMPOSSIBLE_CAP_FREE
+N2=IMPOSSIBLE_CAP_FREE
+N2_main_gap=2r+2_vs_at_most_2r-2
+N2_one_sided_gap=2r+1_vs_at_most_2r
+N3_D3_ledger=bothE2:[(3, 3)];bothE3:[];e0c0:[(1, 1), (2, 3)];squarecube:[(2, 3)];f0d0:[(2, 2, 2)];DE23:[];constcf:[1];constde:[]
+N3_D3=AFFINE_EMPTY_EXACT
+N3_D4_ledger=bothE2:[(3, 3), (4, 2)];bothE3:[];e0c0:[(1, 1), (2, 3)];squarecube:[(2, 3)];f0d0:[(2, 2, 2)];DE23:[];constcf:[1];constde:[3]
+N3_D4=AFFINE_EMPTY_EXACT
+N3_D5_ledger=bothE2:[(1, 5), (3, 3), (4, 2), (5, 0), (5, 1)];bothE3:[];e0c0:[(1, 1), (2, 3)];squarecube:[(2, 3)];f0d0:[(2, 2, 2), (3, 4, 5)];DE23:[];constcf:[1];constde:[3]
+N3_D5=AFFINE_EMPTY_EXACT
+exceptional_groebner_QQ=GroebnerBasis([1], zeta, root, h0, h1, domain='QQ', order='grevlex')
+exceptional_groebner_GF5=GroebnerBasis([1], zeta, root, h0, h1, domain='GF(5)', order='grevlex')
+exceptional_groebner_GF7=GroebnerBasis([1], zeta, root, h0, h1, domain='GF(7)', order='grevlex')
+exceptional_terminal=-9/4
+constant_cf_terminal_gap=9/4
+constant_cf_groebner_QQ=GroebnerBasis([1], zeta_const, d_at_zero, f_const, c_const, h_const, domain='QQ', order='grevlex')
+projective_closure=NOT_COMPUTED_NOT_NEEDED_FOR_AFFINE_COEFFICIENT_EMPTINESS
+raw_full_ideal=NOT_USED;solver_failure_claims=none
+failures=none

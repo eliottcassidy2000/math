@@ -1,0 +1,111 @@
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+GRID d=60: L*=40  L*-2d/3=0  tau*=40/60=0.66667  star0_identity=True
+GRID d=100: L*=67  L*-2d/3=1  tau*=67/100=0.67000  star0_identity=True
+GRID d=153: L*=77  L*-2d/3=-25  tau*=77/153=0.50327  star0_identity=True
+GRID d=306: L*=204  L*-2d/3=0  tau*=204/306=0.66667  star0_identity=True
+GRID d=612: L*=408  L*-2d/3=0  tau*=408/612=0.66667  star0_identity=True
+GRID d=1262: L*=842  L*-2d/3=1  tau*=842/1262=0.66719  star0_identity=True
+GRID d=2538: L*=1692  L*-2d/3=0  tau*=1692/2538=0.66667  star0_identity=True
+GRID d=5090: L*=3394  L*-2d/3=1  tau*=3394/5090=0.66680  star0_identity=True
+done in 7.0s
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+GRID d=60: L*=40  L*-2d/3=0  tau*=40/60=0.66667  star0_identity=True
+GRID d=100: L*=67  L*-2d/3=1  tau*=67/100=0.67000  star0_identity=True
+GRID d=153: L*=102  L*-2d/3=0  tau*=102/153=0.66667  star0_identity=True
+GRID d=306: L*=204  L*-2d/3=0  tau*=204/306=0.66667  star0_identity=True
+GRID d=612: L*=408  L*-2d/3=0  tau*=408/612=0.66667  star0_identity=True
+GRID d=1262: L*=842  L*-2d/3=1  tau*=842/1262=0.66719  star0_identity=True
+GRID d=2538: L*=1692  L*-2d/3=0  tau*=1692/2538=0.66667  star0_identity=True
+GRID d=5090: L*=3394  L*-2d/3=1  tau*=3394/5090=0.66680  star0_identity=True
+done in 7.0s
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+DEATH plain R=512 D0=4: outcome={'DIE': 121} first_precond=15 ({'i': 15, 'd': 319, 'L': 213, 'gap': 106, 'm_bits': 292, 'theta_bits': 292})
+   noseed: first_valid=15 predicted_death=121 actual=121 match=True min_front_margin_bits=5 attempts=1
+   seeded: first_valid=25 predicted_death=121 match=True min_front_margin_bits=13 max_psi_vs_a_bits=-4 attempts=11  (0.2s)
+done in 0.2s
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+DEATH plain R=1024 D0=14: outcome={'DIE': 250} first_precond=21 ({'i': 21, 'd': 638, 'L': 409, 'gap': 229, 'm_bits': 600, 'theta_bits': 599})
+   noseed: first_valid=21 predicted_death=250 actual=250 match=True min_front_margin_bits=3 attempts=1
+   seeded: first_valid=42 predicted_death=250 match=True min_front_margin_bits=16 max_psi_vs_a_bits=-3 attempts=22  (0.9s)
+done in 0.9s
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+DEATH desc1 R=1024 D0=13: outcome={'DIE': 245} first_precond=20 ({'i': 20, 'd': 637, 'L': 412, 'gap': 225, 'm_bits': 596, 'theta_bits': 595})
+   noseed: first_valid=20 predicted_death=245 actual=245 match=True min_front_margin_bits=5 attempts=1
+   seeded: first_valid=38 predicted_death=245 match=True min_front_margin_bits=16 max_psi_vs_a_bits=-7 attempts=10  (1.1s)
+done in 1.1s
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+DEATH plain R=2048 D0=37: outcome={'DIE': 508} first_precond=39 ({'i': 39, 'd': 1284, 'L': 815, 'gap': 469, 'm_bits': 1214, 'theta_bits': 1214})
+   noseed: first_valid=39 predicted_death=508 actual=508 match=True min_front_margin_bits=4 attempts=1
+   seeded: first_valid=70 predicted_death=508 match=True min_front_margin_bits=19 max_psi_vs_a_bits=-7 attempts=32  (5.7s)
+done in 5.7s
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+DEATH plain R=4096 D0=88: outcome={'DIE': 1014} first_precond=39 ({'i': 39, 'd': 2560, 'L': 1585, 'gap': 975, 'm_bits': 2452, 'theta_bits': 2452})
+   noseed: first_valid=39 predicted_death=1014 actual=1014 match=True min_front_margin_bits=3 attempts=1
+   seeded: first_valid=87 predicted_death=1014 match=True min_front_margin_bits=21 max_psi_vs_a_bits=-3 attempts=48  (37.9s)
+done in 37.9s
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+CONTROL plain R=512 D0=5: outcome={'CLOSED_capture': 312} precond_rows=0 first_precond=None -> OK (never fires) (0.1s)
+done in 0.1s
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+CONTROL plain R=1024 D0=15: outcome={'CLOSED_capture': 639} precond_rows=0 first_precond=None -> OK (never fires) (0.5s)
+done in 0.5s
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+CONTROL desc1 R=1024 D0=14: outcome={'CLOSED_capture': 628} precond_rows=0 first_precond=None -> OK (never fires) (0.7s)
+done in 0.7s
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+CONTROL plain R=2048 D0=38: outcome={'CLOSED_capture': 1271} precond_rows=0 first_precond=None -> OK (never fires) (2.6s)
+done in 2.6s
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+GRID d=60: L*=40  L*-2d/3=0  tau*=40/60=0.66667  star0_identity=True
+GRID d=100: L*=67  L*-2d/3=1  tau*=67/100=0.67000  star0_identity=True
+GRID d=153: L*=102  L*-2d/3=0  tau*=102/153=0.66667  star0_identity=True
+GRID d=306: L*=204  L*-2d/3=0  tau*=204/306=0.66667  star0_identity=True
+GRID d=612: L*=408  L*-2d/3=0  tau*=408/612=0.66667  star0_identity=True
+GRID d=1262: L*=842  L*-2d/3=1  tau*=842/1262=0.66719  star0_identity=True
+GRID d=2538: L*=1692  L*-2d/3=0  tau*=1692/2538=0.66667  star0_identity=True
+GRID d=5090: L*=3394  L*-2d/3=1  tau*=3394/5090=0.66680  star0_identity=True
+DEATH plain R=512 D0=4: outcome={'DIE': 121} first_precond=15 ({'i': 15, 'd': 319, 'L': 213, 'gap': 106, 'm_bits': 292, 'theta_bits': 292})
+   noseed: first_valid=15 predicted_death=121 actual=121 match=True min_front_margin_bits=5 attempts=1
+   seeded: first_valid=25 predicted_death=121 match=True min_front_margin_bits=13 max_psi_vs_a_bits=-4 attempts=11  (0.2s)
+DEATH plain R=1024 D0=14: outcome={'DIE': 250} first_precond=21 ({'i': 21, 'd': 638, 'L': 409, 'gap': 229, 'm_bits': 600, 'theta_bits': 599})
+   noseed: first_valid=21 predicted_death=250 actual=250 match=True min_front_margin_bits=3 attempts=1
+   seeded: first_valid=42 predicted_death=250 match=True min_front_margin_bits=16 max_psi_vs_a_bits=-3 attempts=22  (1.0s)
+DEATH desc1 R=1024 D0=13: outcome={'DIE': 245} first_precond=20 ({'i': 20, 'd': 637, 'L': 412, 'gap': 225, 'm_bits': 596, 'theta_bits': 595})
+   noseed: first_valid=20 predicted_death=245 actual=245 match=True min_front_margin_bits=5 attempts=1
+   seeded: first_valid=38 predicted_death=245 match=True min_front_margin_bits=16 max_psi_vs_a_bits=-7 attempts=10  (1.1s)
+DEATH plain R=2048 D0=37: outcome={'DIE': 508} first_precond=39 ({'i': 39, 'd': 1284, 'L': 815, 'gap': 469, 'm_bits': 1214, 'theta_bits': 1214})
+   noseed: first_valid=39 predicted_death=508 actual=508 match=True min_front_margin_bits=4 attempts=1
+   seeded: first_valid=70 predicted_death=508 match=True min_front_margin_bits=19 max_psi_vs_a_bits=-7 attempts=32  (5.8s)
+DEATH plain R=8192 D0=191: outcome={'DIE': 2045} first_precond=57 ({'i': 57, 'd': 5123, 'L': 3135, 'gap': 1988, 'm_bits': 4938, 'theta_bits': 4933})
+   noseed: first_valid=57 predicted_death=2045 actual=2045 match=True min_front_margin_bits=8 attempts=1
+   seeded: first_valid=113 predicted_death=2045 match=True min_front_margin_bits=24 max_psi_vs_a_bits=-8 attempts=57  (325.4s)
+done in 325.4s
+DEATH plain R=4096 D0=88: outcome={'DIE': 1014} first_precond=39 ({'i': 39, 'd': 2560, 'L': 1585, 'gap': 975, 'm_bits': 2452, 'theta_bits': 2452})
+   noseed: first_valid=39 predicted_death=1014 actual=1014 match=True min_front_margin_bits=3 attempts=1
+   seeded: first_valid=87 predicted_death=1014 match=True min_front_margin_bits=21 max_psi_vs_a_bits=-3 attempts=48  (38.2s)
+CONTROL plain R=512 D0=5: outcome={'CLOSED_capture': 312} precond_rows=0 first_precond=None -> OK (never fires) (0.1s)
+CONTROL plain R=1024 D0=15: outcome={'CLOSED_capture': 639} precond_rows=0 first_precond=None -> OK (never fires) (0.5s)
+CONTROL desc1 R=1024 D0=14: outcome={'CLOSED_capture': 628} precond_rows=0 first_precond=None -> OK (never fires) (0.7s)
+CONTROL plain R=2048 D0=38: outcome={'CLOSED_capture': 1271} precond_rows=0 first_precond=None -> OK (never fires) (2.6s)
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+DEATH plain R=8192 D0=191: outcome={'DIE': 2045} first_precond=57 ({'i': 57, 'd': 5123, 'L': 3135, 'gap': 1988, 'm_bits': 4938, 'theta_bits': 4933})
+   noseed: first_valid=57 predicted_death=2045 actual=2045 match=True min_front_margin_bits=8 attempts=1
+   seeded: first_valid=113 predicted_death=2045 match=True min_front_margin_bits=24 max_psi_vs_a_bits=-8 attempts=57  (326.0s)
+done in 326.0s
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+CONTROL plain R=8192 D0=192: outcome={'CLOSED_capture': 5064} precond_rows=0 first_precond=None -> OK (never fires) (107.4s)
+done in 107.5s

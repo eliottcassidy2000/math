@@ -1,0 +1,19 @@
+KELLER FIVE-FACE RENEWAL PROPAGATION -- INDEPENDENT HOSTILE AUDIT
+implementation=candidate-independent; starts from THM-3495 inverse numerators
+inverse_top=(A,B,C*s^3), w=q/s: q^3=2/(27*A^2*C), inverse~(q/s,-s/q,-C*s^6/q^3)
+inverse_gamma=(A*t,B/t,C/t^5), w=q*t: D*q^3-3*B*q-2=0, inverse~(q*t,-1/(q*t),-C/(q^3*t^8))
+nonmonic_vieta=det(mult_q)=2/D; resultant(D*q^3-3*B*q-2,q)=2; leading D must be divided
+hybrid_gaps=delta6_gap=gamma_gap+z_gap; delta8_gap=gamma_gap+3*z_gap; equality iff both gaps vanish
+admissible_packet_intersection_hostiles=2500; e<=120; all PASS
+normalization_calibration=H:{'top': (2, 24), 'gamma': (2, 9)}; J:{'top': (15, 171), 'gamma': (15, 72)}; matches canonical extracted coefficients
+J_to_G_scalars_2_3={'top': (-117, 1128), 'gamma': (-117, 513)}
+R5_state=(1699, 615); max_z=(2578, 2988); min_gamma=(-12362, 1699, 1289)
+R5_renewal_scalars=top 3^7251/2^1369; gamma 3^3384/2^1369
+R6_state=(10663, 3867); max_z=(16170, 18748); min_gamma=(-77570, 10663, 8085)
+R6_renewal_scalars=top 3^46008/2^10493; gamma 3^21753/2^10493
+cassini_determinants=(-1536, 12288)
+polynomiality_gate=sufficient for renewal once the source packet is complete; not implied by face asymptotics
+boundary=THM-3506+3513 give polynomial R5; THM-3521 gives polynomial R6; next finite-sheet/polynomiality gate remains open
+semantic_sha256=9de2b0a149105263ee1b3a1fba01424f9c7ff274368c689cdc5737fb340bf804
+VERDICT=SOUND; promotion recommended at fixed conditional scope
+STATUS=PASS

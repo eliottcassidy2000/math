@@ -1,0 +1,59 @@
+CUSP-SQUARE PACKET SUBRING / PROJECTION AUDIT
+python = 3.13.14; sympy = 1.14.0
+exact domain = QQ; polynomial orders = lex where stated
+packet U = 1+y-y^2/2-(3/2)*v*y*(y-3)
+packet source total degrees (L,T,U,S) = [6, 4, 3, 5]
+
+ELIMINATION AND FUNCTION FIELD
+Groebner basis length for <cubic,quadratic> = 13
+Groebner elimination generators in QQ[t,u,s] = 1
+resultant H(t,u,s) = 2*s**4 - 9*s**3*t - 6*s**3*u + 27*s**3 - 2*s**2*t**3 - 12*s**2*t*u**2 + 18*s**2*t*u - 8*s**2*u**3 + 54*s**2*u**2 - 54*s**2*u + 9*s*t**4 + 6*s*t**3*u - 27*s*t**3 - 15*s*t**2*u**2 - 24*s*t*u**3 + 48*s*t*u**2 + 12*s*u**4 - 32*s*u**3 + 36*s*u**2 + 18*t**4*u**2 - 18*t**4*u + 36*t**3*u**3 - 90*t**3*u**2 + 54*t**3*u + 42*t**2*u**4 - 138*t**2*u**3 + 96*t**2*u**2 + 24*t*u**5 - 72*t*u**4 + 48*t*u**3 + 8*u**6 - 24*u**5 + 24*u**4 - 8*u**3
+D(t,u,s) = s**2 + 3*s*t + s*u - 3*t**3 - 6*t**2*u + 9*t**2 - 5*t*u**2 + 14*t*u - 2*u**3 + 6*u**2
+C(t,u,s) = -3*s**2 + 2*s*t**2 + 4*s*t*u - 9*s*t - 4*s*u - 6*t*u**2 + 6*t*u - 4*u**3 + 4*u**2
+recovery on D*U != 0: y=-C/D
+recovery on D*U != 0: v=(C^2-T*D^2)/(6*U*D^2)
+D(Z)(0,0) = 4, so D(Z) is not the zero polynomial
+field verdict: QQ(L,T,U,S)=QQ(v,y), extension degree = 1
+
+GLOBAL POLYNOMIAL-RECOVERY HOSTILE
+p(alpha) = 324*alpha**3 + 54*alpha**2 - 27*alpha + 2
+P=(alpha,0)
+Q=(-2*alpha,(2 - 18*alpha)/(1 - 6*alpha))
+Z(P)=Z(Q)=(8*alpha^3,-6*alpha,1,0) in QQ(alpha)^4
+P != Q and both v- and y-coordinates differ
+ring verdict: QQ[L,T,U,S] is a proper subring of QQ[v,y]
+polynomial recovery verdict: neither v nor y is in QQ[L,T,U,S]
+
+ARBITRARY SIX-MINOR BEZOUT CERTIFICATE
+source coefficient search rows: degree, rows, columns, rank, augmented
+  0, 26, 6, 6, 7
+  1, 37, 18, 18, 19
+  2, 49, 36, 36, 37
+  3, 62, 60, 50, 50
+q_LT = -(1031862564*v*y**2 - 2321690769*v*y - 157872234*y**2 + 359658153*y - 474177188)/471110880
+q_LU = (717522*v*y**2 - 145466811*v*y + 562646094*v - 336314222*y**2 + 963524072*y + 69406448)/235555440
+q_LS = 3*(19108566*v*y - 28662849*v - 9495974*y + 16836126)/78518480
+q_TU = (781338000*v**3 + 986408166*v**2*y - 539384622*v**2 + 253977733*v*y**2 - 186038176*v*y - 242480956*v - 58888860)/353333160
+q_TS = -(4779160758*v**2*y - 6976740033*v**2 - 531875820*v*y + 2046987612*v - 475590316*y + 507480826)/3179998440
+q_US = 0
+sum q_ij*M_ij = 1
+coefficient equality at packet collision = [False, False, False, False, False, True]
+Plucker(q)(0,0) = -5635730007837389/93633241466689200 != 0
+verdict: this is an arbitrary source-polynomial certificate; it neither
+descends through the packet nor is its displayed bivector decomposable
+
+LEGAL PACKET-PROJECTION LINEARIZED OBSTRUCTION
+degree<=1: formal/pullback basis 4/4; pairs=6; matrix=26x6; rank=6; augmented=7
+  controls: mod 1000003: 6/7, mod 1000033: 6/7
+degree<=2: formal/pullback basis 14/14; pairs=91; matrix=139x91; rank=67; augmented=68
+  controls: mod 1000003: 67/68, mod 1000033: 67/68
+  dual certificate: support=68; sha256=9c0b91e9620494f905ca5be9b0d285294dbec304e4dd655f0bdbe30d3fe0ad96
+degree<=3: formal/pullback basis 34/33; pairs=528; matrix=336x528; rank=187; augmented=188
+  controls: mod 1000003: 187/188, mod 1000033: 187/188
+linearized verdict: 1 is outside even the full arbitrary bivector span
+through packet degree 3; hence no decomposable exact dA wedge dB pair
+A(Z),B(Z) of packet degree <=3 has nonzero constant Jacobian
+
+SCOPE
+VERIFIED-EXACT + FINITE-EXACT through packet degree 3.
+No claim is made for packet degree >=4, other packets, or JC(2).

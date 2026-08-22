@@ -1,0 +1,51 @@
+FC3 joint two-face row-(2,10) policy/sidecar beach audit
+dependency_hash_checks=8
+faces=(support_(1,2)_I2:239,support_(1,3)_I2:4319),joint=4558
+exclusive_records=(small=71,full=407,joint=478)
+primitive_tests=(small_axis=11,full_axis=16,joint_axis=16,joint_plus_face=17)
+small_axis_depth_profile=(None, None, None, None, 8, 8, 8, 8)
+small_axis_minimum_leaves=8
+small_axis_optimal_tree=('n', 3, 1, ('n', 4, 0, ('n', 5, 0, 10, 2), 2), ('n', 1, 1, ('n', 2, 1, 10, 2), ('n', 2, 1, 2, ('n', 5, 0, 2, 10))))
+full_axis_depth_profile=(None, None, None, None, None, 15, 15, 15)
+full_axis_minimum_leaves=15
+face_blind_conflict_count=19
+face_blind_conflicts=(((0, 0, 0, 0, 1, 0, 0, 0), ((0, 2), (1, 10))), ((0, 0, 0, 1, 1, 0, 0, 0), ((0, 2), (1, 10))), ((0, 0, 1, 0, 1, 0, 0, 0), ((0, 2), (1, 10))), ((0, 0, 1, 1, 1, 0, 0, 0), ((0, 2), (1, 10))), ((1, 0, 0, 0, 1, 0, 0, 0), ((0, 2), (1, 10))), ((1, 0, 0, 1, 1, 0, 0, 0), ((0, 2), (1, 10))), ((1, 0, 1, 0, 1, 0, 0, 0), ((0, 2), (1, 10))), ((1, 0, 1, 1, 1, 0, 0, 0), ((0, 2), (1, 10))), ((1, 3, 1, 1, 0, 0, 0, 0), ((0, 2), (1, 10))), ((1, 3, 2, 0, 0, 0, 0, 0), ((0, 2), (1, 10))), ((2, 3, 1, 1, 0, 0, 0, 0), ((0, 2), (1, 10))), ((2, 3, 2, 0, 0, 0, 0, 0), ((0, 2), (1, 10))), ((3, 2, 2, 0, 0, 0, 0, 0), ((0, 2), (1, 10))), ((3, 3, 1, 1, 0, 0, 0, 0), ((0, 2), (1, 10))), ((3, 3, 2, 0, 0, 0, 0, 0), ((0, 2), (1, 10))), ((4, 2, 1, 1, 0, 0, 0, 0), ((0, 2), (1, 10))), ((4, 2, 2, 0, 0, 0, 0, 0), ((0, 2), (1, 10))), ((4, 3, 1, 1, 0, 0, 0, 0), ((0, 2), (1, 10))), ((4, 3, 2, 0, 0, 0, 0, 0), ((0, 2), (1, 10))))
+face_blind_conflict_sha256=7bd246a6267514657b32af3cc4993fd2516a8ad577a71f1a1a348e8ac2966d45
+minimal_face_blind_witness=state_(5):small_requires_row2,full_requires_row10
+face_blind_axis_policy=IMPOSSIBLE_even_for_arbitrary_count_vector_function
+raw_count_vector_collision_tax=4558-4319=239_cross_face_pairs
+face_aware_depth_profile=(None, None, None, None, None, None, 23, 23, 22)
+face_aware_minimum_leaves=22
+face_aware_minimum_depth_tree=('n', 8, 0, ('face', 0, 0, ('n', 3, 1, ('n', 4, 0, ('n', 5, 0, 10, 2), 2), ('n', 1, 1, ('n', 2, 1, 10, 2), ('n', 2, 1, 2, ('n', 5, 0, 2, 10)))), ('n', 7, 0, ('n', 3, 0, 10, ('n', 6, 0, ('n', 4, 1, 10, 2), ('n', 5, 0, 10, 2))), 2)), ('n', 5, 1, ('n', 1, 1, ('n', 2, 0, ('n', 4, 1, 2, 10), 10), 10), ('n', 2, 1, ('n', 4, 1, 10, 2), ('n', 2, 2, ('n', 3, 1, 2, 10), 2))))
+face_aware_minimum_depth_tree_stats=(depth,leaves,face_nodes)=(6, 23, 1)
+face_aware_minimum_depth_tree_sha256=61eac5c65580bc41cd2a62a4d129d25ba1990fa7ce0d3479084c9e35362b7c10
+face_aware_minimum_leaf_tree=('n', 5, 1, ('n', 8, 0, ('n', 7, 0, ('n', 3, 1, ('face', 0, 0, ('n', 4, 0, ('n', 5, 0, 10, 2), 2), 10), ('n', 5, 0, ('face', 0, 0, 2, 10), ('n', 6, 0, ('n', 1, 1, ('n', 2, 1, 10, 2), ('n', 2, 1, 2, 10)), 2))), 2), ('n', 1, 1, ('n', 2, 0, ('n', 4, 1, 2, 10), 10), 10)), ('n', 2, 2, ('n', 8, 0, 2, ('n', 2, 1, ('n', 4, 1, 10, 2), ('n', 3, 1, 2, 10))), 2))
+face_aware_minimum_leaf_tree_stats=(depth,leaves,face_nodes)=(8, 22, 2)
+face_aware_minimum_leaf_tree_sha256=94e83bfeece6fde6c0c5182479644560caca287de3b7257542a52ad556abd3d0
+gate_first_face_bit=(depth=6,leaves=23)
+conditional_face_bit_consults=(small=238/238,full=2159/4318)
+minimum_leaf_tree_face_bit_consults=(small=198/238,full=599/4318)
+joint_assignments=(small_row2=171,small_row10=67,full_row2=1955,full_row10=2363)
+minimal_selector_sidecar=one_persistent_face_bit; zero_bits_impossible
+uniformly_initialized_previous_chart_bit=IMPOSSIBLE_at_state_(5)
+face_initialized_memory_bit=EQUIVALENT_to_persistent_face_bit_and_SUFFICIENT
+continuation_classes=(chart,unsigned_coordinate,chart_plus_coordinate,signed_edit)
+continuation_classes_(untagged,face_tagged)=((313, 345), (4125, 4208), (4520, 4548), (4536, 4558))
+signed_word_collision_count=22
+signed_word_collisions=(((0, (1, 1, 1, 1, 2, 2, 2, 3, 4, 5)), (1, (1, 1, 1, 1, 2, 3, 3, 4, 5, 6, 7, 8))), ((0, (1, 1, 1, 1, 2, 2, 3, 4, 5)), (1, (1, 1, 1, 1, 3, 3, 4, 5, 6, 7, 8))), ((0, (1, 1, 1, 2, 2, 2, 3, 4, 5)), (1, (1, 1, 1, 2, 3, 3, 4, 5, 6, 7, 8))), ((0, (1, 1, 1, 2, 2, 3, 4, 5)), (1, (1, 1, 1, 3, 3, 4, 5, 6, 7, 8))), ((0, (1, 1, 2, 2, 2, 3, 4, 5)), (1, (1, 1, 2, 3, 3, 4, 5, 6, 7, 8))), ((0, (1, 1, 2, 2, 3, 4, 5)), (1, (1, 1, 3, 3, 4, 5, 6, 7, 8))), ((0, (1, 2, 2)), (1, (1, 3, 6, 7, 8))), ((0, (1, 2, 2, 2, 3, 4)), (1, (1, 2, 3, 3, 4, 6, 7, 8))), ((0, (1, 2, 2, 2, 3, 4, 5)), (1, (1, 2, 3, 3, 4, 5, 6, 7, 8))), ((0, (1, 2, 2, 3)), (1, (1, 3, 3, 6, 7, 8))), ((0, (1, 2, 2, 3, 4)), (1, (1, 3, 3, 4, 6, 7, 8))), ((0, (1, 2, 2, 3, 4, 5)), (1, (1, 3, 3, 4, 5, 6, 7, 8))), ((0, (1, 2, 2, 3, 5)), (1, (1, 3, 3, 5, 6, 7, 8))), ((0, (1, 2, 2, 4, 5)), (1, (1, 3, 4, 5, 6, 7, 8))), ((0, (1, 2, 2, 5)), (1, (1, 3, 5, 6, 7, 8))), ((0, (2, 2)), (1, (3, 6, 7, 8))), ((0, (2, 2, 2, 3, 4, 5)), (1, (2, 3, 3, 4, 5, 6, 7, 8))), ((0, (2, 2, 3)), (1, (3, 3, 6, 7, 8))), ((0, (2, 2, 3, 4, 5)), (1, (3, 3, 4, 5, 6, 7, 8))), ((0, (2, 2, 3, 5)), (1, (3, 3, 5, 6, 7, 8))), ((0, (2, 2, 4, 5)), (1, (3, 4, 5, 6, 7, 8))), ((0, (2, 2, 5)), (1, (3, 5, 6, 7, 8))))
+signed_word_collision_sha256=8bac417122ef8df947f856212e263724dcb8989217cad1f332d041d879f63624
+parikh_classes=(unsigned_untagged=1536,unsigned_face_tagged=1632,signed_untagged=4478,signed_face_tagged=4558)
+parikh_cross_face_intersections=(unsigned=96,signed=80)
+small_distance_factors=((1, 2, 1, 1), (1, 2, 1), (1, 2), (1, 1), (1, 1), (1,), (1,), (1,))
+small_distance_coefficients=(1, 8, 27, 51, 61, 50, 28, 11, 2)
+full_distance_factors=((1, 2, 1, 1), (1, 1, 1, 1), (1, 1, 1), (1, 2), (1, 2), (1, 1), (1, 1), (1, 1))
+full_distance_coefficients=(1, 11, 55, 169, 365, 598, 775, 810, 685, 467, 250, 101, 28, 4)
+joint_distance_coefficients=(2, 19, 82, 220, 426, 648, 803, 821, 687, 467, 250, 101, 28, 4)
+joint_distance_closed_form=(1+2z+z^2+z^3)(1+z)^4(1+2z)[1+(1+z^2)(1+z+z^2)(1+2z)]-z^6-z^8
+face_catalytic_enumerator=u*D12(z)+v*D13(z)
+signed_parikh_collision_tax=4558-4478=80_cross_face_pairs
+initial_response_by_face_distance=((0, 1, 8, 0), (0, 2, 24, 3), (0, 3, 39, 12), (0, 4, 41, 20), (0, 5, 32, 18), (0, 6, 19, 9), (0, 7, 7, 4), (0, 8, 1, 1), (1, 1, 7, 4), (1, 2, 27, 28), (1, 3, 74, 95), (1, 4, 153, 212), (1, 5, 253, 345), (1, 6, 345, 430), (1, 7, 380, 430), (1, 8, 331, 354), (1, 9, 224, 243), (1, 10, 113, 137), (1, 11, 40, 61), (1, 12, 8, 20), (1, 13, 0, 4))
+joint_(distance,switch)_enumerator=(((0, 0), 2), ((1, 0), 19), ((2, 0), 57), ((2, 1), 25), ((3, 0), 105), ((3, 1), 113), ((3, 2), 2), ((4, 0), 130), ((4, 1), 282), ((4, 2), 13), ((4, 3), 1), ((5, 0), 125), ((5, 1), 480), ((5, 2), 37), ((5, 3), 5), ((5, 4), 1), ((6, 0), 102), ((6, 1), 615), ((6, 2), 67), ((6, 3), 17), ((6, 4), 2), ((7, 0), 74), ((7, 1), 623), ((7, 2), 85), ((7, 3), 37), ((7, 4), 2), ((8, 0), 45), ((8, 1), 505), ((8, 2), 85), ((8, 3), 51), ((8, 4), 1), ((9, 0), 24), ((9, 1), 327), ((9, 2), 67), ((9, 3), 49), ((10, 0), 10), ((10, 1), 167), ((10, 2), 37), ((10, 3), 36), ((11, 0), 2), ((11, 1), 65), ((11, 2), 15), ((11, 3), 19), ((12, 1), 17), ((12, 2), 4), ((12, 3), 7), ((13, 1), 2), ((13, 3), 2))
+joint_route_sha256=091cd79646808e5eee2dc96c0722d337fcbdc2b1ad728f2d09fdbac51831fa67
+typed_scope=two promoted I2 faces; row selector and commutative route responses only; no FC3 closure
+all_exact_checks=PASS

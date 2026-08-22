@@ -1,0 +1,19 @@
+== r=5 source-aligned guard-atom / inverse-branch-sidecar probe ==
+dependency=(arrival_base,83f1fa49ac4d02e21a1d76fed169d101715a6620342714ed05b9172ae967a730,3d8c88fb7b9762f41ef35c00d980b99fc435c8352baf5dddb9fe412d1baeace0)
+left_refinement=f_omega^src=1_Q P^K(e P_omega); right_refinement=e_nu=e P_nu
+endpoint_atom_groups_nonempty=(left=20,right=20)/39
+atom_pair_support=(all_roots=400,common_gauge=362)/1521
+root_colour_support=12/13; s=0 mass=0
+service_anchor=sum_M=48602521488933856/1996669193081744181=169*I5: PASS
+common_gauge_support=(full=48/117,owner_active=48/52,opposite=48/117)
+active_K4_ranks_mod_split_primes=(4, 4, 4, 4, 4)
+active_Walsh_zero_modes_nonzero=(1, 0, 0, 1)
+owner_frequency_x_Walsh_drift_Fourier_support_certified=((13, 12, 12, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13), (13, 13, 13, 13))
+owner_frequency_K4_ranks_certified=(4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4)
+pair_level_source_aligned_common_gauge_sha256=96337f74f2599044870e90878b8bcfb2ce4a04dc970c88b28f23a4f237b3ea53
+raw_temporal_transition=(support=1521/1521,rankQ=3,source_sheet_rows_identical=True)
+raw_temporal_sheet_aggregate=all_91; every nonzero source F13 character is erased
+inverse_branch_sidecar=source_sheet=floor(branch_0_to_168/13): PASS
+semantic_sha256=31e9e90c63053944b590195555be07ccbf84fd4c7abc2101de6a2a3562202de6
+scope=source-time endpoint labels on one ancestry base and exact branch-sidecar boundary only; no endpoint AX/BY weight,current,row exclusion,LRC(14)
+all exact checks passed

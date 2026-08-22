@@ -1,0 +1,18 @@
+THM-3477 MOVING-NUMERATOR JORDAN--PRUEFER RESPONSE AUDIT
+status=PASS
+universe=m0..7;e1..6;grade1..8;block_index1..160
+exact_transition_matrix_cells=zero:23520;unit:15288
+literal_barcode_states=finite:1008;ray:756
+nonzero_root_unit_conjugacy_checks=168
+moving_numerator_embedding_checks=11928
+inverse_tower_checks=1504;zero_limit=0;unit_limit=C[[p]]
+finite_barcode=interval[n]=[floor(n/(m+1))+1,n];length=n-floor(n/(m+1))
+finite_length_multiplicity=one_each;extra_copy_exactly_when_m_divides_length
+ray_barcode=ray[k]=[floor(k/e)+1,infinity);e_births_per_grade
+module=finite_cyclic_blocks_direct_sum_Pruefer_rays;direct_sum_not_product
+limit_guard=inverse_limit_is_formal_completion_not_Pruefer_module
+terminal_specializations=positive:48;negative:41;legacy_strings:712;g1:+6/-2
+merged_root_hostile=cells:336;rank_invisible:294;rank_drop:42;Pruefer_rays_disappear
+controls=unit_H_zero_module;m0_pure_rays;e1_ray_survives;r1_all_kernel
+scope=graded_additive_effectivity_module;not_a_quotient_ring;no_JC2
+semantic_sha256=9fca2dffaa87feb03b47505f2adb1ef197ef46978cc25530dc83c2a52dcd47d0

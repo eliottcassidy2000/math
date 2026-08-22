@@ -1,0 +1,21 @@
+THM-3385 Q-FIBRE COMPLEMENT-CLOCK COMPANION
+source_sha256_lf=8d3add2104ca91e89017ae643f573c8c5f6b45a4fdfecd9d65c16f48fd51b356
+dependency_sha256_lf=(('THM-3366', '9d6a356cf7440f0eae271ec8163b53895df9ac70332be27a1b0fe62da5172e43'), ('THM-3381', '2aae4c0d7112c2d55e347016fb6fe194b921df63c33a7d7e429ec4d320676137'), ('THM-2928-support', '778842c0e8e7172835ca6ae673fb6156f212d4296e672bce4e7cc2815195bf1a'), ('THM-3366-k3-audit', '0bf0d3b3c6b530ed3b37b3cf3d6c9dd38edebf331e2f6c7fcbcca1741a5e15c0'))
+status=PROVED analytic q-fibre identity plus FINITE-EXACT literal-body census
+fibre_capacity=gcd(u,q)*ceil((q/gcd(u,q))/7);sufficient_if=sum_capacity<q
+capacity_exact_orbit_checks=100;orbit_range=1..100
+literal_body_certificates=6420;q_histogram=((2, 147), (3, 45), (4, 35), (5, 495), (6, 57), (7, 2079), (11, 1287), (12, 196), (13, 1287), (14, 792))
+structural_rows_k0_to_k6=(6273, 6420, 6420, 6420, 1272, 227, 192)
+structural_occurrences_k0_to_k6=(83942791283821, 3115391844730, 106719668256, 3253046409, 8230092, 35818, 192)
+continuous_event_samples=1335;strict_boundaries_included=True
+refined_k3_seven=(((1, 2, 6, 8, 10, 14), 11760, 5880, (1, 3, 4, 5, 7), 388), ((2, 3, 6, 8, 10, 14), 11760, 5880, (1, 3, 4, 5, 7), 388), ((2, 5, 6, 8, 10, 14), 11760, 5880, (1, 3, 4, 5, 7), 388), ((2, 6, 7, 8, 10, 14), 11760, 5880, (1, 3, 4, 5, 7), 388), ((2, 6, 8, 9, 10, 14), 35280, 17640, (1, 3, 4, 5, 7), 1008), ((2, 6, 8, 10, 11, 14), 129360, 64680, (1, 3, 4, 5, 7), 2544), ((2, 6, 8, 10, 13, 14), 152880, 76440, (1, 3, 4, 5, 7), 2544));occurrences=7648;completion=(1,3,4,5,7)
+boolean_fibre_q4=((1, 1), (2, 2), (3, 1));boolean_fibre_q6=((1, 1), (2, 2), (3, 3), (4, 2), (5, 1));object=hypergraph_not_tournament
+hostile_radius=q2,rho>1/4,x=1/4 blocks both sheets;rho=1/4 strict survives
+hostile_capacity=sum=q is inconclusive:(1,3) survives but (1,9) blocks y=1/9
+hostile_divisibility=q2,u=2 blocks both sheets at y=0 and must descend as core clock 1
+hostile_wrong_divisor=L/4 first_gap=(Fraction(0, 1), Fraction(1, 28)) expected_half_even_gap=(Fraction(0, 1), Fraction(1, 14))
+hostile_k0_pool14=q2_rows:147;strict_grid_aware_subset_tests:216237;all_need_at_least_5
+grid_convention=U_D equals descended danger union minus the D-grid;owner clock remains required
+scope=no arbitrary reflected phase,no necessity of capacity bound,no physical drift realization,no LRC14
+semantic_sha256=76345873bbfbe37fde097e9a23e92744fb376ad0eb94d7f0eb1ff33c5f7223de
+verdict=PASS

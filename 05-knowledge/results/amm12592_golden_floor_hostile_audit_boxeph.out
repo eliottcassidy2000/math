@@ -1,0 +1,169 @@
+AMM 12592 golden-floor hostile audit (boxeph) -- exact arithmetic only
+chain audited: THM-3009 -> THM-3017 -> THM-3027 -> THM-3024
+
+==============================================================================
+PART 1 -- EXACT INTEGER BRACKETING OF gamma* = log(phi)/log(sqrt 5)
+==============================================================================
+Fibonacci sandwich of phi (exact):
+  k= 10:  F_11/F_10 vs phi: +1,   F_12/F_11 vs phi: -1   (alternating sandwich)
+  k= 20:  F_21/F_20 vs phi: +1,   F_22/F_21 vs phi: -1   (alternating sandwich)
+  k= 30:  F_31/F_30 vs phi: +1,   F_32/F_31 vs phi: -1   (alternating sandwich)
+
+Exact classification of the chain's rational rates vs gamma*:
+  1/2                    : BELOW gamma*   (exact)
+  2457/6592              : BELOW gamma*   (exact)
+  2457/4135              : BELOW gamma*   (exact)
+  3/5                    : ABOVE gamma*   (exact)
+  299/500  (=0.598)      : ABOVE gamma*   (exact)
+  149/250  (=0.596)      : BELOW gamma*   (exact)
+  597987/1000000         : BELOW gamma*   (exact)
+  597988/1000000         : ABOVE gamma*   (exact)
+
+CF-convergent bracket, certified by pure-integer Fibonacci/Lucas tests:
+  115939/193882  <  gamma*  <  105183/175895
+  width = 1/34102874390 ~ 2.932e-11
+  (floats above are display only; the certificates are 5^p vs L_2q,F_2q integer comparisons)
+
+==============================================================================
+PART 2 -- SYMBOLIC AUDIT OF THE TANGENCY COLLAPSE (sympy 1.9)
+==============================================================================
+  (K)  H(rho)+rho log2 - A(1+gamma rho)      == 0   PROVED-symbolic
+  D = gamma(1+tau)/(1+gamma rho)             == 0: True
+  (V) - [2log(1-tau)-log(tau)]               == 0   PROVED-symbolic
+  root of (1-tau)^2 = tau in (0,1):  tau* = 3/2 - sqrt(5)/2
+    tau* - phi^-2                            == 0
+    u* = (1-tau*)/(1+tau*) - 1/sqrt5         == 0
+    (1-tau*)/tau* - phi                      == 0
+    2+phi - phi*sqrt5                        == 0
+  hence gamma* = log((1-tau*)/tau*) / log(1/u*) = log(phi)/log(sqrt5)  EXACTLY.
+  dpsi/dsigma formula (stationarity (S))     == 0
+  d2psi/dsigma2 + [(1+g)/(1-rho)+1/rho](1+tau)/(g(1+sigma)^2) == 0
+    => psi is STRICTLY CONCAVE in sigma on 0<rho<1: the interior
+       stationary point is the GLOBAL inner max (no scan needed).
+  dpsi/dgamma + (1+sigma) log(1-rho)         == 0
+    => psi (hence Psi = max_sigma psi) is STRICTLY INCREASING in gamma
+       at fixed tau: for gamma < gamma*, Psi(gamma,tau*) < H(tau*),
+       so the CONTINUUM FLOOR DIRECTION is symbolic -- the numeric
+       global-tau scan is NOT load-bearing for the lower bound.
+  (K_b) general alphabet residual            == 0
+    => tau* = phi^-2 universal in b; gamma*(b) = log(phi)/log((b+phi)/phi);
+       b=2 special only through 2+phi = phi sqrt5.  PROVED-symbolic.
+  THM-3009 (CLO)-residual - (M - 2L)         == 0
+    => (CLO) <=> delta^2 = 1 - delta, root delta* = 1/phi.  PROVED-symbolic.
+  sigma(gamma_hi) > 0  (exact Q(sqrt5) sign): True
+  sigma(gamma_lo) < tau*  (exact):            True
+    dsigma/dgamma = -rho*(1+tau*)/(1+gamma rho*)^2 < 0, so
+    0 < sigma* in (0.038635396253, 0.038635396266) < tau*
+    -- INTERIOR, certified via the exact rational bracket of PART 1
+    + monotonicity.  UPGRADED from THM-3027's 3000-point scan.
+  THM-3009 ell* = 0.340273686535521642014103153661225344519003659993566740173585
+           1-gamma* = 0.402012564334559850254973497951378421959420869704581083130898
+    0 < ell* < 1-gamma*: margins 0.340273686535521642014103153661225344519003659993566740173585 and 0.0617388777990382082408703442902
+    (closed-form log expressions evaluated at 60 dps; margins ~0.34
+     and ~0.062, vastly above evaluation error.  VERIFIED-60dps.)
+
+==============================================================================
+PART 3 -- EXACT (ARCH) RE-REFEREE (integers / Fraction only)
+==============================================================================
+3.0  identities behind reduction B (exact):
+  sum_i C(a,i)C(i,r) = C(a,r) 2^(a-r), a<=40          : True
+  hockey-stick centring sum_k C(m-1-k,t+1-k)=C(m,t+1) : True
+  mod-2 reduction ((1+u)^m-1)/u == u^(m-1) over F2    : True
+
+3.1  hostile monotonicity sweep (validates the binary search):
+  m=  8:   33 candidates, verdict ladder monotone: True;  flip in (3/2, 14/9]
+  m= 16:  125 candidates, verdict ladder monotone: True;  flip in (14/9, 25/16]
+  m= 32:  466 candidates, verdict ladder monotone: True;  flip in (64/41, 25/16]
+
+3.2  certified refuted rates, recomputed from scratch (exact):
+  m=    8: rho(m) >          3/2 = 1.500000; gamma_m = 0.500000 < gamma* (exact); gap ~ 0.09799  matches committed
+  m=   16: rho(m) >         14/9 = 1.555556; gamma_m = 0.555556 < gamma* (exact); gap ~ 0.04243  matches committed
+  m=   32: rho(m) >        64/41 = 1.560976; gamma_m = 0.560976 < gamma* (exact); gap ~ 0.03701  matches committed
+  m=   64: rho(m) >       115/73 = 1.575342; gamma_m = 0.575342 < gamma* (exact); gap ~ 0.02264
+  m=  128: rho(m) >      239/151 = 1.582781; gamma_m = 0.582781 < gamma* (exact); gap ~ 0.01521
+  m=  256: rho(m) >      224/141 = 1.588652; gamma_m = 0.588652 < gamma* (exact); gap ~ 0.00933
+  m=  512: rho(m) >      508/319 = 1.592476; gamma_m = 0.592476 < gamma* (exact); gap ~ 0.00551  matches committed
+  m= 1024: rho(m) >    1992/1249 = 1.594876; gamma_m = 0.594876 < gamma* (exact); gap ~ 0.00311  matches committed
+  refuted ladder strictly increasing in m: True
+
+3.3  exact margins at sandwich rationals (D0 = -1 committed profile), m <= 1024:
+  m=   64:        149/250: PASS (min rhs/lhs ~2^+0 at d=63) |    597987/10^6: PASS (min rhs/lhs ~2^+0 at d=63) |            3/5: PASS (min rhs/lhs ~2^+0 at d=63) |        299/500: PASS (min rhs/lhs ~2^+0 at d=63)
+  m=  256:        149/250: PASS (min rhs/lhs ~2^+0 at d=255) |    597987/10^6: PASS (min rhs/lhs ~2^+0 at d=255) |            3/5: PASS (min rhs/lhs ~2^+0 at d=255) |        299/500: PASS (min rhs/lhs ~2^+0 at d=255)
+  m= 1024:        149/250: PASS (min rhs/lhs ~2^+0 at d=1023) |    597987/10^6: PASS (min rhs/lhs ~2^+0 at d=1023) |            3/5: PASS (min rhs/lhs ~2^+0 at d=1023) |        299/500: PASS (min rhs/lhs ~2^+0 at d=1023)
+
+3.4  targeted exact checks at m = 2048, 4096:
+  m=2048: committed refuted candidate C=3890/2437 (gamma=0.596225): first (ARCH) failure at d=1262 (d/m=0.6162);  gamma_m < gamma* exact: True
+          next candidate 423/265 = 1.5962264: PASSES
+          C = 8/5 (gamma = 3/5 > gamma*): PASSES
+  m=4096: committed refuted candidate C=6709/4201 (gamma=0.597001): first (ARCH) failure at d=2527 (d/m=0.6169);  gamma_m < gamma* exact: True
+          next candidate 1704/1067 = 1.5970009: PASSES
+          C = 8/5 (gamma = 3/5 > gamma*): PASSES
+
+3.5  D0-robustness of the refutation (floor profile a_k = floor(g(m+k)) + D0):
+  m=2048, gamma=59/100, D0=0: FAILS at d=1165
+  m=2048, gamma=59/100, D0=2: FAILS at d=1173
+  => the refutation below gamma* is not an artifact of the -1 offset; bounded
+     additive slack D0 does not rescue a rate below gamma* at large m (THM-3029 (D0)).
+
+==============================================================================
+PART 4 -- EXACT AUTOPSY OF THE THM-3024 CROSS-SHELL HALL MODEL
+==============================================================================
+rate gamma = 71/125 = 0.568 (certified BELOW gamma*), shells [8, 16, 32, 64, 128, 256, 512]
+
+4.1  per-shell (ARCH) verdicts (exact):
+  m=   8: pass
+  m=  16: pass
+  m=  32: pass
+  m=  64: FAIL at d=36 (d/m=0.562)
+  m= 128: FAIL at d=69 (d/m=0.539)
+  m= 256: FAIL at d=133 (d/m=0.520)
+  m= 512: FAIL at d=263 (d/m=0.514)
+
+4.2  the rescue: shell 128 absorbs shell 64's deficit at the SAME absolute degree d=36:
+  shell 64:  demand has 59 bits, supply 59 bits -> deficit 55 bits
+  shell 128: demand has 106 bits, supply 143 bits -> slack  143 bits
+  two-shell tail cut at (M=64, d=36): SATISFIED (slack exceeds deficit by ~2^88)
+
+4.3  ALL degree-resolved tail cuts over the window, exact:
+  violated tail cuts: 819 total; of these, 819 have d > 255, where ONLY the deepest shell (m=512) has any demand or supply
+  violated tail cuts with genuine multi-shell content (d <= 255): 0
+  violated degrees: d in [263, 379]  (deepest shell's binding band, d/512 ~ 0.514..0.740)
+
+  => every violated cut lives at degrees only the deepest shell reaches: the
+     'binding degree-resolved cut' of THM-3024 (G3) is the deepest shell's OWN
+     per-shell (ARCH) constraint -- a TRUNCATION EDGE ARTIFACT, not a cross-shell
+     obstruction.  Any per-shell deficit interior to the window is absorbed by
+     the next shell with exponential room (4.2).  In the model AS STATED
+     (unbounded forward routing at fixed absolute degree), demand at fixed d
+     grows polynomially in m while supply grows exponentially, so EVERY tail
+     cut with an unbounded (or merely one-shell-deeper) tail is satisfied for
+     ANY gamma > 0: the transportation relaxation yields NO general-class floor.
+
+==============================================================================
+AUDIT SUMMARY
+==============================================================================
+  THM-3009: floor direction SOUND.  Finite-m certified bounds reproduced
+            exactly; every refuted rate certified < gamma* by integer
+            Fibonacci/Lucas tests; candidate-ladder monotonicity validated;
+            tangency algebra re-proved symbolically.  Remaining gaps: the
+            finite-m Stirling transfer lemma (sec 10.3) is sketched, not
+            written (LOW severity, one direction, routine); threshold
+            EXACTNESS from above still rests on an uncertified numeric scan
+            (MODERATE, not load-bearing for the floor).
+  THM-3017: SOUND within scope (H=1 checkpoint-closure criterion).  Its
+            20-digit numerics are superseded by the symbolic collapse.
+  THM-3027: SOUND.  Collapse (S)+(T)+(V) => (1-tau)^2 = tau re-derived
+            symbolically; inner concavity + gamma-monotonicity PROVED here,
+            making the floor direction scan-free; sigma* interiority upgraded
+            to an exact certificate.  Laplace/Stirling rate passage remains
+            ASSUMED (needs an error-term lemma; routine for the barrier
+            direction).
+  THM-3024: GAP FOUND (HIGH).  Within its own transportation model the
+            degree-resolved Hall cuts do NOT bind below golden once the
+            window extends past the binding shell; the reported binding cuts
+            are truncation edge artifacts, and the model as stated admits
+            unbounded forward absorption at any gamma > 0.  (G2)'s
+            degree-preservation premise also contradicts the degree-rescaling
+            invariance opus's aggregate argument needs.  C*_general =
+            log_5(5 phi^2) is NOT established; general-class floor OPEN.
+

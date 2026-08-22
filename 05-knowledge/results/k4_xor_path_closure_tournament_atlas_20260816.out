@@ -1,0 +1,14 @@
+== K4 XOR/path-closure tournament atlas ==
+labelled_masks=64;labelled_tournaments=64;edges=((0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3))
+tournament_type_census=((((0, 1, 2, 3), 0, False), 24), (((0, 2, 2, 2), 1, False), 8), (((1, 1, 1, 3), 1, False), 8), (((1, 1, 2, 2), 2, True), 24))
+hamiltonian_P4_masks=12;triangle_parity_weight=2
+K4_cut_space=8;triangle_parity_kernel=8: EQUAL
+canonical_P4=(41, ((0, 2), (0, 3), (1, 0), (1, 3), (2, 1), (3, 2)), (2, 2, 1, 1), 2, True, (0, 1, 1, 0))
+canonical_C4_closure=(45, ((0, 2), (1, 0), (1, 3), (2, 1), (3, 0), (3, 2)), (1, 2, 1, 2), 2, True, (0, 0, 0, 0));alternating_cut={0,2}|{1,3}
+generalized_pair_census=(name,both,one,missing)=(('P4', 3, 0, 3), ('C4', 4, 0, 2), ('transitive_T4', 0, 6, 0))
+xor_interpretation=bidirected mask reverses selected arcs of a fixed transitive T4 gauge
+coefficient_boundary=(oriented_C4_sum_mod13,parity_sum_mod2)=(4, 0)
+D5_boundary=no canonical F13-to-F2 coefficient transport; XOR forgets the nonzero oriented circulation
+semantic_sha256=1d0dfe67dc8537728c3a71bed89c3109e9604130c4dcd24d56412f37d9fadf7d
+scope=finite K4 Boolean/tournament atlas;no LRC current,D5 bridge,Keller flux,or row exclusion
+all exact checks passed

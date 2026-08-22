@@ -8,8 +8,8 @@ profile (d'_i >= d_i): each block lifts by convolving its deltas with
 So the beam FAILING at a larger profile while SUCCEEDING at a smaller one is a pure
 search artefact.  Exploit it: lift the gamma=1/2 solutions onto sub-3/5 profiles.
 """
-import sys
-sys.path.insert(0, '/tmp/math-wt-coinC2/04-computation')
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # repo 04-computation (was a deleted session worktree)
 import amm12592_gamma35_beam_deathstar as beam
 from math import comb
 from fractions import Fraction as F

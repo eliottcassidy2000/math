@@ -2,7 +2,7 @@
 id: THM-3149
 title: "Depth-three selector persistence and cross-support wall"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   At support (1,3), bank I2, no probability law on all 134 physically
   multiplicity-valid pole prefixes of length at most three is Hasse-positive
   in every degree 5 through 11.  The four THM-3144 upset facets still suffice,
@@ -13,6 +13,15 @@ status: >
   states.  This is a finite averaged virtual-prefix theorem, not a sequential
   stopping process or an original-response decomposition.
 source: root/multiscale-newton-flag/product-gamma-width3-2026-08-02
+audit: >
+  An independent immutable audit reconstructed both physical pole multisets
+  and state censuses, rechecked the four-row 134-state separator and the
+  two-row 42-state cross-support separator, and recovered every declared
+  range and equality state.  It separately verified all six length-singleton
+  descriptions, the Farkas implication, and the distinction between the full
+  probability simplex and realizable sequential stopping laws.  Fresh normal
+  and optimized runs byte-match the stored 1,309-byte transcript and both
+  declared LF-normalized hashes.
 depends_on:
   - THM-3115-low-degree-monomial-fibre-newton-refinement-transport
   - THM-3120-row-pole-prefix-newton-flag-positivity
@@ -31,8 +40,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3149 -- depth-three selector persistence and cross-support wall
 
-**PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3144 proves a genuine selector death barcode on the 41 physical pole
 prefixes of length one or two: a common positive selector survives through
@@ -297,4 +305,4 @@ dual section over those facets.  The missing next sidecar is either a
 depth-uniform dual certificate or a lawful compactness/recurrence mechanism
 controlling how these dual coefficients evolve with prefix depth.
 
-QED (candidate pending independent theorem audit).
+QED.

@@ -1,0 +1,14 @@
+dependency_thm3192_sha256=69ae0b5e4c9526d643bc976220a4752e33632248c80394ca4cf9c9620105878f
+universal_coefficient_tables=11
+universal_coefficient_checks=121
+locality_pairs=63
+catalan_orbit_steps=8
+catalan_orbit_coefficients=261
+catalan_signs=1,-1,-1,1,1,-1,-1,1,1,-1,-1
+pivot_sharpness_steps=10
+pivot_leading_checks=65
+connection_sharpness_steps=11
+connection_leading_checks=65
+jet_budget=(pivot_k:2k,connection_k:2k+1)
+regular_hostile=(C,C+z^(2k),C+z^(2k+1))
+scope=sharp_universal_information_budget_not_simultaneous_chart_nonvanishing

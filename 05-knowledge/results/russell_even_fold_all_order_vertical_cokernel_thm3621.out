@@ -1,0 +1,30 @@
+THM-3621 exact companion -- all-order Russell even-fold vertical cokernel
+status=exact_companion_for_independent_audit; theorem_file_not_modified
+SECTION pinned ancestry
+PIN audited=THM-3561,THM-3605,THM-3612 provisional_finite_control=THM-3619
+PIN THM-3612_commit=3cd370a3a525d0b5aec22dcaf1810c8fedb0eecc THM-3619_commit=31e3364dc868a90c308552c3412052fb8ae5c357
+SECTION compiler and exact Q_infinity identity
+PASS target=(0,4*t,7*t^2/4) side_sum=2*middle_bivector
+PASS G_plus(0)-G_minus(0)=(-16,0,0) normalized_A0=1
+SECTION rho shifted-evaluation cokernel rows
+PASS rho_row N=4 side_entries=6 center_control=128 sha256=4abde4ba039a2a5cb34e97b88379c82eec0851b3a87ea6a1970245523bbd8ce0
+PASS rho_row N=6 side_entries=12 center_control=-512 sha256=2756f298bd16e55fa3fd3ff8e583de82feb4f94e7be5cc611c30b0b782e43427
+PASS rho_row N=8 side_entries=20 center_control=12800/9 sha256=2daee45e5e5a965c5cde72855e3e6b30756d4ee8494768c26f24bb873f54b835
+PASS rho_row N=10 side_entries=30 center_control=-90112/27 sha256=af4088220a044c7fb770223330f14b59e667c065eece9fcbd77f8f4bf8445146
+SECTION shift filtration and arbitrary target two-form
+PASS filtration n=3..20 xi->rho raises every active lower-row monomial above the invoice
+PASS target_two_form=arbitrary_formal_(A,K,R); closedness/decomposability_unused
+SECTION normalized all-order invoice and recurrence
+PASS normalized_invoice n=3..20 Delta=-2^(n+3)/(3^(n-1)*(n-1)!)*(q_n+(n+1)q_(n-1))
+PASS THM-3619 finite invoices={n3:1536,n4:-6144,n5:51200/3,n6:-360448/9}
+PASS recurrence_rows_sha256=c2c83d928d4d4af72eb4b19cc6d5243363583bbb0d46154c845b98e19676343e
+SECTION polynomial-versus-rational-germ endpoint
+PASS all Taylor jets determine a polynomial; x^2*(Q+3/4)=-9/4 fails at x=0
+SCOPE=polynomial even-fold family only; no global Keller pair or JC(2) claim
+SECTION source optimization and LF gates
+PASS ast_assertion_nodes=0 raw_LF=TRUE
+source_sha256=456841200aeeb7985c8925dfa046edf6d12944a70ba54f62039624401c377656
+semantic_sha256=b705c5c924d19e6042496420c9998291c77ef9f7c9d41bcaeea7bf0261f823c2
+normal_minus_O_byte_identity=VERIFY_WITH_MATCHING_STORED_TRANSCRIPT
+CHECKS=752
+RESULT=PASS

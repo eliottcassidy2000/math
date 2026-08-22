@@ -1,0 +1,23 @@
+THM-3365 FACTORIAL VANDERMONDE ALL-POWER BENCHMARK
+assertion_nodes 0 floating_literals 0
+Vieta_map ('x + y + z', 'x*y + x*z + y*z', 'x*y*z')
+Jacobian_determinant x**2*y - x**2*z - x*y**2 + x*z**2 + y**2*z - y*z**2
+factorization -(x-y)(y-z)(z-x)
+TORIC BOUQUET AUDIT
+A_V_columns ((2, 1, 0), (2, 0, 1), (1, 2, 0), (1, 0, 2), (0, 2, 1), (0, 1, 2)) rank 3
+c_V (-1, 1, 1, -1, -1, 1) A_V_c_V (0, 0, 0)
+proper_conformal_checks 62 proper_conformal_relations () Graver True
+four_column_relation (1, -1, 0, 0, -1, 1) support 4 c_V_is_circuit False
+Gale_rows ((2, 2, 3), (-2, -1, -2), (-1, -2, -2), (1, 0, 0), (0, 1, 0), (0, 0, 1)) rank 3 A_V_times_Gale_zero True
+proportional_Gale_pairs () bouquet_partition ((1,), (2,), (3,), (4,), (5,), (6,))
+same_support_L_signed_all_plus (0, 12)
+direct_exponents (0, 12) direct_moments (1, 0, 24, 0, 207360, 0, 31352832000, 0, 32446418780160000, 0, 143497531697135616000000, 0, 2040245609709367034118144000000)
+chamber_beta_closed_checks 65 m_range (0, 64)
+even_formula (2m)!^2(3m)!/m! odd_formula 0
+simplex_m0_unnormalized_normalized ((1, 2), (1, 1))
+simplex_m1_unnormalized_normalized ((1, 1680), (1, 840))
+permutation_signs (((0, 1, 2), 1), ((0, 2, 1), -1), ((1, 0, 2), -1), ((1, 2, 0), 1), ((2, 0, 1), 1), ((2, 1, 0), -1))
+scalar_controls (('-3', 'real-positive-even-moments', ('1', '0', '216', '0', '16796160', '0', '22856214528000')), ('2', 'real-positive-even-moments', ('1', '0', '96', '0', '3317760', '0', '2006581248000')), ('I', 'complex-nonzero-not-ordered', ('1', '0', '-24', '0', '207360', '0', '-31352832000')))
+xyz_hostile_n1_to_n12 (1, 8, 216, 13824, 1728000, 373248000, 128024064000, 65548320768000, 47784725839872000, 47784725839872000000, 63601470092869632000000, 109903340320478724096000000)
+semantic_sha256 5e4b4741681568dc3359d9441c3cbb8022241fba938f1f6356f7d4eade33e18f
+status=ALL EXACT CHECKS PASSED; alternating determinant benchmark only, not FC(3)

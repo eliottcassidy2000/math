@@ -1,0 +1,28 @@
+BACKBONE MAXIMIZING-WITNESS SECTION EXACT SCOUT
+dependency_hash_checks=15
+assert_nodes=0,float_literals=0
+independent_response_rebuild=(11_link_states,22_rows,all_integral)
+core=(V12,E22),selected_tree=11_edges,backbone=7_edges_on_9_rows
+dominance_relation=large_ratio_trap_to_small_ratio_trap;orientation_reversal=PASS
+relation_bank_sha256=304204d695d4c7c23e63e1a809ccafc6e5bbbb4a4b97b8b95efeb0ce2c7870a3
+backbone_paths=(36/36_lift);length_histogram=((1, 14), (2, 10), (3, 6), (4, 4), (5, 2))
+phase_minimizers=(14/14_lift;target_0_and_6_reversal_ties)
+backbone_global_sections=4;row_order=(2, 3, 7, 10, 11, 18, 19, 21, 22);words=(('Q+4', 'Q-1', 'Q-7', 'Q-1', 'Q+4', 'Q+1', 'Q-1', 'Q-1', 'Q+4'), ('Q+4', 'Q-1', 'Q-7', 'Q-1', 'Q+4', 'Q+2', 'Q-1', 'Q-1', 'Q+4'), ('Q+4', 'Q-1', 'Q-7', 'Q-1', 'Q+4', 'Q+4', 'Q-1', 'Q-1', 'Q+4'), ('Q+4', 'Q-1', 'Q-7', 'Q-1', 'Q+4', 'Q+5', 'Q-1', 'Q-1', 'Q+4'))
+backbone_section_sha256=5602fecdf065d428af010d12159f2c966d7127b0a99ffef93dec3ad0b3d5c99d
+common_maximizer_state=Q+4;edge_roles=(((2, 19), 'source'), ((2, 21), 'source'), ((3, 11), 'target'), ((7, 22), 'target'), ((10, 11), 'target'), ((18, 19), 'source'), ((21, 22), 'target'))
+common_state_row_values=((2, 16680033356234096640), (3, -23486961549312), (7, -16680033356234096640), (10, -48264627879936), (11, 434381650919424), (18, 1013501804559728640), (19, -857578450012078080), (21, -1303144952758272), (22, 106145666812398796800))
+primitive_integral_row_weights=((2, 42643624821113444310), (3, 15142381932918445787181600), (7, 21321812410556722155), (10, 7368720279128024944327200), (11, 1637493395361783320961600), (18, 701821231345410678810), (19, 414712545795015401115), (21, 272915565893630553493600), (22, 6701141043317826963))
+common_state_trap_margins=(each_edge=355648542223452256719445831365899059200,full_9_row=1066945626670356770158337494097697177600)
+THM3278_cut_at_Q+4=(positive_small=(2,11,16,18,22),negative_full=(3,7,10,13,17,19,21))
+full_core_primitive_row_weights=((2, 73474965566778464546130), (3, 26090324070418482091313896800), (7, 36737482783389232273065), (10, 12696305040937586979075765600), (11, 2821401120208352662016836800), (13, 39300234402264634486662975), (16, 1009443096386399316559081507200), (17, 453439465747770963538420200), (18, 1209237981608142599589630), (19, 714549716404811536121145), (21, 470233520034725443669472800), (22, 11546066017636615857249))
+full_core_Q+4_trap_margins=(22_edges_each=612782438251008238327605167443444079001600,full_12_row=1838347314753024714982815502330332237004800)
+selected_tree_paths=(68/132_lift);lift_histogram=((1, 22), (2, 22), (3, 14), (4, 8), (5, 2));nonlift_histogram=((2, 4), (3, 12), (4, 14), (5, 14), (6, 12), (7, 6), (8, 2))
+full_core_paths=(2442/21226_lift);lift_histogram=((1, 44), (2, 110), (3, 214), (4, 426), (5, 520), (6, 612), (7, 302), (8, 214))
+full_core_lift_sha256=67e067301309dd4854fca950e9a3afc8862d4218237a4de9d87c14c0e7e6e31b
+canonical_root_hostile=2-17-16;middle_fibres=(Q-1,Q-8),disjoint
+shortest_Tstar_nonlifts=((2, 17, 16), (11, 3, 16), (16, 3, 11), (16, 17, 2))
+physical_Q_directed_transitions=11_all_end_at_Q;dominance_arrows_are_not_transitions
+map=oriented_row_path_to_static_maximizing_trap-state_section
+preserved=edge_clutch_maximum_and_shared_middle_witness;lost=ratio_endpoint_and_chronological_response_state
+scope=support_(1,3)_bank_I2_reset_link_dominance_Cech_handoff_only,no_response_composition_no_GMC_or_LRC_consequence
+all_exact_checks=PASS

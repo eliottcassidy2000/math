@@ -1,0 +1,22 @@
+R5 U_FULL OWNER-NODE BOOLEAN SQUARE -- INDEPENDENT HOSTILE AUDIT
+status=ACCEPT_SCOPED_FINITE_EXACT_GENUINE_RANK_GT_1_REFINER;LRC14_OPEN
+dependencies=(THM2594_engine=09c43af0a0a56c7a0833bbfd13ed6a96bc5a7a3718aa1bc6b77a144bde101a06,THM3514_engine=f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc)
+joint_field=(coordinate=9684279613402457983920,order=125895634974231953790960,prime=755373809845391722745761,generator=23,root=148035889,zeta13=266737884585332483769981)
+source_profile=(hash=2de29f9be7fd16ceb4be5d15f7a71aa3d09f2907ec39f7af0b2017eadf3c18d2,root_spine=(0, 6, 12),same_root_pointwise_zero=True)
+source_support_Gray_path=(states=((0,), (0, 6), (6,), (6, 12), (12,)),toggles=((6,), (0,), (12,), (6,)),measures=(345867129050087785140, 4150405548601053421680, 691734258100175570280, 4150405548601053421680, 345867129050087785140),absent=(0,12))
+realized_cut_certificate=(((0,), 1, 2, 0), ((0, 6), 1, 2, 0), ((6,), 1, 2, 0), ((6, 12), 1, 2, 0), ((12,), 1, 2, 0))
+owner_state_partition_over_Q=(visible_subsets=((0,), (0, 6), (12,), (6, 12)),excluded_type=(6,),weight_segments=(3, 2, 3, 2),components=(1, 1, 1, 1),measures=(345867129050087785140, 345867129050087785140, 345867129050087785140, 345867129050087785140),total=1383468516200351140560,complement_XOR=3)
+work_counts=(7107008, 7108460, 1200462, 186244, 186244);state_segment_counts=(300115, 300116, 300115, 300116)
+literal_guard_controls=((0, 0, 0), (0, 1, 6), (1, 0, 6), (6, 6, 12), (12, 12, 0)):PASS;parent_delta_cell_marginal=('b5246eb2a69f35e4dac7dabbf26b1703f21ed22bf803061399ebbf766b9a073d', '20c83a7804c9437a7ccfaae5d3bf685fc1327c4defc385c1cf213f2f9643e258'):PASS
+coordinate_ranks=(coupled,source_erasure,ANOVA)=(4, 4, 3)
+spectral_shapes_(total,dc,V4axis,F13axis,mixed)=((52, 1, 3, 12, 36), (52, 1, 3, 12, 36), (36, 0, 0, 0, 36))
+fixed_relation_1_0_6=(profile=(79866518267205440406168, 310652419985144092895775, 367085997033220164935953, 315468006625786970755333),Walsh=(317699132065964946247468, 576205898534886264436774, 463338744438734120356418, 472969917720019876075534))
+bit_marginals_(component,multiplicity)=((2, (26, 1, 1, 12, 12), '43450c53365624033ec2c098fb52812934d94de5daf1c3396d4e59b2e03bc680', 'd48f20b5fe98a19bcfd20a55781dce268a3127a7fc76e8d6752f1c5f656ee896'), (2, (26, 1, 1, 12, 12), 'daebb6ead49585eba1e118db3333af16179388a3d987bd626c2f151e3980db6d', '051da2cd94ed11bf9fb4fb708a1d15b8206a3a26729f35b5dc4f68609ef5efa6'))
+digests_(gamma,erased_gamma,table,erased_table,spectrum,erased_spectrum,ANOVA_spectrum)=('8b8f2a2785b084e1578ba0512e4577ab79fd674b84b588fbdb8186f2009242c2', 'cedec6b55700ec2854b426a4f35c73549d720af2d8a34b065a7d16cdaa57f8b5', '5f4b9609faaa5f148d112a7cde5cfba0ab2c1385b4c53ea9c4bcfc6e93d106fc', '518a002b724438f3a604732576000d61d19b03498dadcb39df32e9f1de4a5a8f', '84f9cbc7352413a13f517f7d2bcb90ef6fd5af5c8cbed9d3bebe8e870da25cb1', '1ce6928765e5433f064086a6ca945810e00878b9a8ce436dfc3c5bb369920b2b', 'bbb69d0cc29652284cb51c292a5e9de71d8c5809dcfd5e73f4c3bf5f991544d6')
+proof=('five_state_source_support_Gray_path_with_toggles_6_0_12_6', 'source_support_0_12_never_occurs_and_OWNER_excludes_only_type_6', 'each_realized_support_is_a_directed_cut_with_one_missing_edge', 'four_states_have_equal_exact_measure_and_complement_XOR_3', 'direct_Q13y_lift_and_independent_event_sweep', 'five_literal_guard_controls_and_pointwise_zero_same_root', 'state_marginal_recovers_corrected_delta_cell_parent', 'rank4_and_centred_rank3_precede_Fourier_interpretation', 'both_binary_marginals_rank2_and_all_36_mixed_modes_nonzero')
+boundary=('typed_source_support_refiner_on_one_r5_owner_node_host', 'not_exact_address_or_U_clock_chronology_or_uniform_rows', 'not_row_exclusion_or_LRC14')
+semantic_sha256=b0996af3f1760b2118187490c93e0e01b322cb57fd6b25d3bf3688778b7e664c
+script_sha256_lf=e585c1a18d846c4ab87fc159ad411bad90859be831831cea1c0e8f326d9b440f
+reproducibility=no_candidate_imports;no_randomness;no_elapsed_fields;normal_and_O_transcripts_must_match
+commands=python -B 04-computation/lrc_r5_ufull_owner_node_boolean_square_independent_audit_20260816.py;python -B -O 04-computation/lrc_r5_ufull_owner_node_boolean_square_independent_audit_20260816.py
+PASS

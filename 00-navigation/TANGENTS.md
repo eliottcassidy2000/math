@@ -1761,8 +1761,8 @@ Running the public `vzsky/13-lonely-runners` verifier's experimental `LrcVerifie
 **T358** #lonely-runner #scalar-ramp #dirichlet-equality #micro-staircase | certainty: high computational / proof target | source: codex-2026-05-31-S364
 The full scalar-ramp family `v_i=m i mod n` blocks every full micro-staircase cell for both `n=14` and `n=15`. This is the Dirichlet equality spine in residue form, so any composite micro-staircase lemma must first excise scalar ramps. See HYP-1818 and `05-knowledge/results/lonely_runner_feedback_loop_s364.out`.
 
-**T359** #lonely-runner #non-scalar-blockers #missed-cells #fourteen-runners | certainty: medium computational | source: codex-2026-05-31-S364
-After scalar-ramp excision, local search found no full non-scalar blocker. Best `n=14` near-blocker covers `11312/11368` cells, missing only 56; best `n=15` covers `14280/14400`, missing 120. The missed-cell ledgers are the next finite proof target.
+**T359** #lonely-runner #non-scalar-blockers #missed-cells #fourteen-runners | certainty: finite-exact classification / historical near-blockers | source: codex-2026-05-31-S364; updated 2026-08-03
+After scalar-ramp excision, the historical local search found no full non-scalar blocker. Best `n=14` near-blocker covers `11312/11368` cells, missing only 56; best `n=15` covers `14280/14400`, missing 120. The global question is now **FINITE-EXACT**: independent one-hot and four-bit encodings prove that only scalar ramps fully block the `n=14` system, and both prove normalized `n=15` UNSAT. The live target is the speed-to-residue/endpoint lift, not further blocker enumeration. See HYP-1818 and HYP-1823.
 
 **T360** #lonely-runner #counterexample-search #gated-speeds #endpoint-cover | certainty: medium negative evidence | source: codex-2026-05-31-S364
 Deterministic and random `14`/`15`-gated speed families did not produce open-cover candidates. Simply adding the forced `n`-divisible speed tends to reopen positive gaps or boundary witnesses, supporting quotient/descent over counterexample construction.
@@ -1794,8 +1794,8 @@ Sorted length-`k` product-sum collisions obey the finite prefix gate `a_1*...*a_
 **T369** #formalization #product-sum #defect-normal-form #lean | certainty: proved in Lean | source: codex-2026-05-31-S366
 `TournamentH7.ProductSum` formalizes the THM-361 list core: deleting ones preserves product and changes sum by exactly `ones`, product-sum iff `core.prod = core.sum + ones`, padding by defect many ones repairs equality, and the positive ordered two-entry resonance is only `(2,2)`. See `05-knowledge/results/lean_product_sum_s366.out`.
 
-**T370** #lonely-runner #scalar-gauge #fourteen-runners #micro-staircase | certainty: proved gauge / proof target | source: codex-2026-05-31-S367
-THM-363 proves scalar-gauge reindexing: adding `m*i` to a residue vector reindexes alpha cells by `alpha -> alpha + s*m/n`. In the `n=14,k=13` system, normalize by `v_1=0`; all scalar ramps collapse to zero. The quotient proof target is now sharp: prove every nonzero normalized class has a safe cell. See HYP-1823.
+**T370** #lonely-runner #scalar-gauge #fourteen-runners #micro-staircase | certainty: proved gauge + finite-exact quotient | source: codex-2026-05-31-S367; updated 2026-08-03
+THM-363 proves scalar-gauge reindexing: adding `m*i` to a residue vector reindexes alpha cells by `alpha -> alpha + s*m/n`. In the `n=14,k=13` system, normalize by `v_1=0`; all scalar ramps collapse to zero. Independent exact encodings now prove the sharp quotient statement: every nonzero normalized class has a safe cell. This does not supply the lift to actual speed tuples or prove LRC(14). See HYP-1823.
 
 **T371** #lonely-runner #2-torsion #near-blocker #unit-shifts | certainty: high computational | source: codex-2026-05-31-S367
 The complete normalized `2`-torsion cube for `n=14` has a unique best near-blocker: the coordinate-6 half-turn `(0,0,0,0,0,7,0,0,0,0,0,0,0)`, missing 56 cells. All misses occur at odd shifts, eight alpha patterns repeated across seven shifts. Support scans through size 3 get worse, suggesting a parity/unit-shift proof route.

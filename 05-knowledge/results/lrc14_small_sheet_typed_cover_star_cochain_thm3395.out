@@ -1,0 +1,21 @@
+THM-3395 small-sheet typed-cover/star-cochain exact audit
+dependency pins: OK
+independent q=6 convergence pins: OK
+q=2: V=(1, 3, 5, 7, 9, 11, 13); minimal-edge-ranks=((2, 18),); I=(1, 7, 3, 0, 0, 0, 0, 0); global-safe=252; core-rescues=0; exact=252
+q=3: V=(1, 2, 4, 5, 7, 8, 10, 11, 13, 14); minimal-edge-ranks=((3, 48),); I=(1, 10, 45, 72, 38, 6, 0, 0, 0, 0, 0); global-safe=585; core-rescues=3; exact=588
+q=4: V=(1, 2, 3, 5, 6, 7, 9, 10, 11, 13, 14); minimal-edge-ranks=((2, 4), (3, 15), (4, 17)); I=(1, 11, 51, 118, 123, 44, 3, 0, 0, 0, 0, 0); global-safe=619; core-rescues=0; exact=619
+q=5: V=(1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14); minimal-edge-ranks=((5, 231),); I=(1, 12, 66, 220, 495, 561, 268, 45, 1, 0, 0, 0, 0); global-safe=1617; core-rescues=2; exact=1619
+q=6: V=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 13, 14); minimal-edge-ranks=((3, 3), (4, 29), (5, 7)); I=(1, 12, 66, 217, 441, 515, 304, 76, 5, 0, 0, 0, 0); global-safe=1471; core-rescues=7; exact=1478
+q=7: V=(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13); minimal-edge-ranks=(); I=(1, 12, 66, 220, 495, 792); global-safe=2079; core-rescues=0; exact=2079
+q=5 edge SHA256: 296a57df572b22ef4ed23db9996da2c7104091e7300beb6026473cc7e12c7ed2
+q=5 profile SHA256: 43f234455bfb468cfa6703265b05910c80b415bee184950a4602709d5c5c7524
+q=6 edge SHA256: f52aa82e9179fb04a4fc1c53ff96035edb538c22c06d5ac5bf8f41a22f5f78c1
+q=6 profile SHA256: 949a5ffe61bd034887d4d3795c312408e27a83e528e14ac4a0882949a48801af
+q=6 hostile (2,8,14) pair fibres: ((0, 1, (4,)), (0, 2, (-4,)), (1, 2, (-8, 4))); star=EMPTY
+q=6 positive (2,8,10) pair fibres: ((0, 1, (4,)), (0, 2, (4,)), (1, 2, (-4,))); star=NONEMPTY
+q=5 hostile (1,2,3,4,9) pair fibres: ((0, 1, (-1,)), (0, 2, (-1,)), (0, 3, (-1,)), (0, 4, (1,)), (1, 2, (1,)), (1, 3, (2,)), (1, 4, (1,)), (2, 3, (1,)), (2, 4, (-3,)), (3, 4, (-2, 3))); star=EMPTY
+q=5 positive (1,2,3,4,7) pair fibres: ((0, 1, (-1,)), (0, 2, (-1,)), (0, 3, (-1,)), (0, 4, (-2,)), (1, 2, (1,)), (1, 3, (2,)), (1, 4, (-2, 3)), (2, 3, (1,)), (2, 4, (1,)), (3, 4, (-1,))); star=NONEMPTY
+strict boundary (q7 strict, q7 closed, q8 strict two-sheet): (0, 2, 2)
+typed criterion versus independent event sweep: 6540 subsets, 0 discrepancies
+semantic SHA256: a47bf86457583259aa3712bfd5ca849328a7fa7b2db8e194345a910abb6610c1
+all exact checks: PASS

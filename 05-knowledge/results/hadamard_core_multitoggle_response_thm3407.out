@@ -1,0 +1,24 @@
+THM-3407 HADAMARD CORE MULTI-TOGGLE RESPONSE: EXACT CONTROLS
+PIN 01-canon/theorems/THM-3403-hadamard-core-maxdet-smith-and-circuit-descent.md 645abd68beb3c4e461f51de99b0690cd5cbb0f18164b44ea6f416bf22a56fa44
+PIN 04-computation/hadamard_core_descent_thm3403.py 4f75f8be55840747790d29f54bbf9d202a445dcbaf09c09bca38f385d01c4894
+PIN 05-knowledge/results/hadamard_core_descent_thm3403.out 0a428ad558077b95f76724cd51f68d0a50a06b14a66400d50a4b37b1240e6322
+PIN 01-canon/theorems/THM-3394-twelve-formerly-missing-hadamard-orders-through-2000.md 63e3e841b609f2e9a38bbaa13dbbd665d6c05d7594fdb92351653207c3cadf86
+PIN 04-computation/hadamard_twelve_order_bank_thm3394.py 7ae931b3cf268550287bd0621b9b85b8ea167126fadfb90d57b5106d0f82fb2d
+PIN 04-computation/hadamard_twelve_order_signword_thm3394.b85 68f7ceebb67005bf1b968171f7e6897cc33bde68adbd63f14bd45edfeb7b3f06
+PIN 05-knowledge/results/hadamard_twelve_order_bank_thm3394.out d8efee90947015a7e6fc28a1685cc3d378357a85e1d4814953b32b17c5cd76a9
+ORDER668 normalized_sha256=73f1de1539849e1dc7e6085cc69c563fd2965c44970263e8203384bd1a46aa63 product_counts=333,334 responses(one,low,high)=(333/334,166/167,55445/55778) shell_counts=49555629432,49407259284 row_swap=2x334:rho=-1
+TRIPLE_PALETTE offdiagonal_states=64 minor_by_negative_pairs=0:{-4,0};1:{0};2:{0,4};3:{4} orientation_needed_exactly_for_even_pair_parity
+PALEY N=4 m=1 two_shells(low,high)=(0,1/2) counts(low,high)=(24,12) direct_pair_checks=36
+   window masks=512 mobius_nonzero=1,9,12,6,0,0,0,0,0,0 equality_sizes=[(4, 3), (6, 2)] same_line_tests=4 row_column_swap=4,4
+PALEY N=8 m=2 two_shells(low,high)=(1/2,5/8) counts(low,high)=(672,504) direct_pair_checks=1176
+   window masks=512 mobius_nonzero=1,9,12,6,0,0,0,0,0,0 equality_sizes=[] same_line_tests=8 row_column_swap=8,8
+   triple_hostile pair_data=(-1, 1, -1) signed_minors=(4, 0) responses=('7/16', '1/2') determinants=(14, 16)
+PALEY N=12 m=3 two_shells(low,high)=(2/3,13/18) counts(low,high)=(3960,3300) direct_pair_checks=7260
+   window masks=512 mobius_nonzero=1,9,12,6,0,0,0,0,0,0 equality_sizes=[] same_line_tests=12 row_column_swap=12,12
+   triple_hostile pair_data=(-1, -1, 1) signed_minors=(4, 0) responses=('16/27', '11/18') determinants=(864, 891)
+PALEY N=20 m=5 two_shells(low,high)=(4/5,41/50) counts(low,high)=(34200,30780) direct_pair_checks=4
+   window masks=512 mobius_nonzero=1,9,12,6,0,0,0,0,0,0 equality_sizes=[] same_line_tests=20 row_column_swap=20,20
+   triple_hostile pair_data=(-1, -1, 1) signed_minors=(4, 0) responses=('92/125', '37/50') determinants=(14375000, 14453125)
+semantic_sha256=6333b6b8292916e6917b9d04c82bb7b4bf86d6fe2c9dfda45acfce5e3eb98a09
+FINITE CONTROLS ONLY; UNIVERSAL FORMULAS AND TRADE FLOOR USE THE PROOF
+ALL CHECKS PASSED

@@ -1,0 +1,10 @@
+LRC14 D=14 COMPLEMENT-CLOCK TERMINAL REFEREE
+status=VERIFIED-EXACT finite support and pointwise identity; small-LRC contradiction analytic/cited
+body=(1, 2, 3, 4, 6, 12);L=168;safe_addresses=88;safe_ranges=((12, 13), (15, 26), (30, 39), (45, 52), (60, 69), (71, 78), (90, 97), (99, 108), (116, 123), (129, 138), (142, 153), (155, 156))
+S14=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);denominator_shapes=26
+alpha_controls=64;endpoint_and_midpoint_probes=118336
+identity=Y14(alpha)=[1/14,13/14]\D_(14alpha)
+completion=T=D_1 union D_(14alpha) union six quotient danger combs
+support_dependency_sha256=778842c0e8e7172835ca6ae673fb6156f212d4296e672bce4e7cc2815195bf1a
+semantic_sha256=d0584eaa7f4c4a7d47aa08fb9daf59d66ac1be8a6b8fd69ea7ecb3b9eca3b3ce
+verdict=PASS

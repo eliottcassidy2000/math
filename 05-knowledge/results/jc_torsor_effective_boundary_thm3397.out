@@ -1,0 +1,19 @@
+THM-3397 exact boundary-effectivity controls
+arithmetic=integer+rational only
+terminal_parameter_cells=896
+terminal_exact_clearing_controls=896
+terminal_v_boundary_one-step_hostiles=768
+terminal_L_boundary_one-step_hostiles=896
+terminal_divisor_smith_forms=e=2..9: (1,e)
+terminal_identity=v^(m*q)*L^(e*q)*(X^-1*v^-m)^q=Y^q
+terminal_pullback_poles=(-m,-e,0) on (xy=1,x=0,y=0)
+v4_divisor_smith_form=(1,2,2)
+v4_monomials_tested=343
+v4_invariant_monomials=91
+three_view_nonzero_coefficient_triples=124
+three_view_forced_boundary_poles=300
+three_view_class_labels=(1,0),(0,1),(1,1); xor_sum=(0,0)
+invariant_reciprocal_sum=(ab+ac+bc)/d^2
+pullback_reciprocal_sum=x^-2+y^-2+z^-2
+semantic_sha256=a63ab86be7767bc5e160c13d4b0d5e228ef347dc27ee502849c75f2627d0f09f
+result=PASS

@@ -1,0 +1,15 @@
+dependency_thm3215_sha256=00c5775d62a6db1f651265bfc7f659f96cdf40464b644d29ae4dab7df419dba8
+assert_nodes=0,float_literals=0
+first_separation_checks=27
+nonlinear_coordinate_change_checks=27
+minimal_composition_checks=44
+coordinate_weight_checks=44
+prime_order_checks=561
+divided_carry_checks=231
+finite_degree_reconstruction_checks=30
+uniform_depth_hostile_checks=10
+same_divisor_hostile=u_vs_u_times_1_plus_u
+higher_truncation_hostile=F3:(u+u^2)^3=u+u^5_mod_u^6
+proportionality_boundary=normalized_tower_needs_derivative_anchor
+scope=selected_simple_root_local_separation_not_global_selector_or_moment_survival
+all_exact_checks=PASS

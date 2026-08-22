@@ -1,0 +1,17 @@
+== independent hostile audit: source-time P169 high-branch x Boolean square x relation ==
+parent=(square_sha256=a75300a81efebef83683c41ac073ffa4d3268da83e96071d7b1b576b36e5bbc7,square_semantic=af0d543232869e82ee8d0191478ba7a833954cb19b387dedb6fb6f44a6fa272c)
+sidecar=b=floor(n/13);temporal_source_sheet_certificate=(15379, (1183, 1183, 1183, 1183, 1183, 1183, 1183, 1183, 1183, 1183, 1183, 1183, 1183)): PASS
+branch_profile=(sha256=ba0143302119c93b7b7b4f778478c14c265efb8c0bcb9c2945e9eaae9009b493,nonempty=(0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0),rootwise_restoration=True)
+geometric_branch_x_state_support=(((0, 0, 0, 0), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (0, 0, 0, 0)), ((0, 0, 0, 0), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1), (0, 0, 0, 0)), (11, 11, 11, 11), (0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0))
+source_profile_sha256=2de29f9be7fd16ceb4be5d15f7a71aa3d09f2907ec39f7af0b2017eadf3c18d2;work_counts=(7107008, 7108460, 1200462, 186244, 186244);literal_controls=((0, 0, 0), (1, 0, 6), (12, 12, 0)): PASS
+marginals=(branch->audited_square gamma and table): PASS;same_root_pointwise_zero=PASS
+rank_jump_(square,branch_x_state,branch_marginal)=(4, 6, 3)
+full_spectral_support=(('dc', 1), ('branch', 12), ('state', 3), ('residue', 12), ('branch_state', 36), ('branch_residue', 144), ('state_residue', 36), ('triple', 432))
+three_way_interaction=(rank=6,support=(('dc', 0), ('branch', 0), ('state', 0), ('residue', 0), ('branch_state', 0), ('branch_residue', 0), ('state_residue', 0), ('triple', 432)))
+fixed_(1,0,6)=(branch_x_state_rank=3,nonzero_entries=44/52,digest=d8d388655fe34b27122c92da84c3cfb29d96303451334fbb4fe9d8c8fc13f2b8)
+digests_(profiles,gamma,table,spectrum,three_way,three_way_spectrum,fixed,branch_marginal)=('ba0143302119c93b7b7b4f778478c14c265efb8c0bcb9c2945e9eaae9009b493', '63d9304d28689ffa04b1568d538c67f3da59ecdc7e0d1c6535ad323c800ac0e5', '504e91431cf4d55f6e3cb5aa7c6e6f2c34db538cb692c67857a5c7627b252261', '61cf3999a1ef902db958851e99b8ea923c20099d81464c159613c0cf0054efdf', '8874b55a71e975e20c7b2b29efd9eec0ea93dcaecc0209d43c61712bbc9c0acf', '5d02353fd1cfa642be290264353e5e02441a2b69fa4144be72a7ae5ed9776396', 'd8d388655fe34b27122c92da84c3cfb29d96303451334fbb4fe9d8c8fc13f2b8', 'a70c2937fa755de450cc913d031b7e5f1eaf4b756900e79832db247582f76cba')
+semantic_sha256=6cac7c90f3ebe3f33a27c1979b74006c545260bb6d41a68f4f76442456114fe6
+verdict=ACCEPT scoped nonredundant source-time inverse-branch sidecar
+typing=source P169 high digit;not current-leg r_owner,not arrival atom,not exact address,not chronology
+scope=one owner base;root difference and pointed tail marginalized;no row exclusion,no LRC(14)
+all exact hostile checks passed

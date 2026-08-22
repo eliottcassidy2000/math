@@ -1,0 +1,12 @@
+== fixed Keller R6 split-outer-branch audit ==
+THM-3521 support sha256=a201191410e39d47fbf607191e8bd597453c697f134d3803466694b680d8c60d
+p=71; outer L=53; roots=[10, 23, 38]
+branch rows (w,y,z,R5,bottom-N4L)=[(10, 0, 2, 49, 6), (23, 1, 36, 22, 5), (38, 18, 60, 60, 54)]
+  w=10 gates (dim,Norm(L),Norm(S),Norm(disc),sha12)=[(1, 26, 23, 4, '792f7927d2f4'), (3, 24, 26, 35, '7e4cccba2eda'), (9, 57, 53, 66, '8efb89b37763'), (27, 62, 64, 32, '35e8d41257b0')]
+  w=23 gates (dim,Norm(L),Norm(S),Norm(disc),sha12)=[(1, 57, 70, 68, '6b59029a7b8c'), (3, 34, 34, 19, 'd1ad0ab26a49'), (9, 38, 15, 26, '3ca1e446704c'), (27, 40, 47, 35, '0791146308d6')]
+  w=38 gates (dim,Norm(L),Norm(S),Norm(disc),sha12)=[(1, 20, 53, 44, '83efac1182f0'), (3, 34, 56, 54, '009bc79b155a'), (9, 44, 21, 29, '31b426554cac'), (27, 36, 69, 13, 'bd37a03aad24')]
+split product R6(q) mod 71=9; direct nested control=9
+omit-w=38 hostile=25
+semantic sha256=6384038b2f7e386289c7af89ac1c5a020aa18320e6957a59469ff013de396490
+scope: fixed-map finite-sheet audit only; no image, degree-243 separability, all-level, or JC claim
+all exact checks passed

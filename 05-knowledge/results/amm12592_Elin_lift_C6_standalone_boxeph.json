@@ -1,0 +1,25 @@
+{
+ "R128_D04": {
+  "base_ok": true,
+  "lift_+1": {
+   "admissible": true,
+   "identity": true
+  },
+  "lift_+7": {
+   "admissible": true,
+   "identity": true
+  }
+ },
+ "R128_D08": {
+  "base_ok": true,
+  "lift_+1": {
+   "admissible": true,
+   "identity": true
+  },
+  "lift_+7": {
+   "admissible": true,
+   "identity": true
+  }
+ },
+ "ALL_PASS": true
+}

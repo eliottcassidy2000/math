@@ -1,0 +1,15 @@
+THM-3592 exact control
+normalized collision census: gaps 1..24, primitive under dilation; types AP5 / D6,H6 / R7,E+7,E-7,AP-extension/contained/dyadic7 PASS
+collision identity: |A+B|=9-C+tau; tau=1 iff reflected gaps; labelled rows=6000 PASS
+component deletion: all |A+B|>=8 and all three AP seven-row families have a disconnected support graph PASS
+rectangle reductions: D6=1656, Euclidean=1056 sampled exact rows PASS
+simple-arm gate: (-2,1)/(1,-2) only; H6 placements=768, four ladders exactly PASS
+reversed H6 placements=768; one ladder and valuation rows=3968 PASS
+R7 gates=1656; four-orientation nonrectangular E gates=4224; all singleton-killed PASS
+H1 primary/mirror: terminal, leak-elimination, k>1, and k=1 compatibility PASS
+H2: bridge, cube first integral, scalar K*h'+3*h*K' factor PASS
+H3: singleton rows and scalar-minus-row Euler factor PASS
+degree hostiles: 765 Euler rows; rational pole, degree-one, and repeated-root boundaries PASS
+support floor: total nonconstant support >=7; total-seven frontier 2+5/3+4/4+3/5+2
+scope: squarefree Sigma over C, deg Sigma>=2, exponent two; no JC(2) conclusion
+PASS

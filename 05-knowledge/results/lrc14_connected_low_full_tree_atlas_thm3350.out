@@ -1,0 +1,13 @@
+LRC14 CONNECTED INTRINSIC-LOW SIX-LEVEL ATLAS
+status=FINITE-EXACT;two independent complete enumerators;read-only exact referee
+layer_counts=(1, 8, 94, 1295, 19389, 305909);reverse_layer_counts=(1, 8, 94, 1295, 19389, 305909)
+unlabelled_orbits=305909;labelled_vectors=220254480
+max_height=7776;unique_max_orbit=(1, 6, 36, 216, 1296, 7776)
+orbit_digest=6d0b14b4608ba696bb107689afecf985a8ad70f5e5e3ada8698b70e5bede8681
+labelled_orbit_ledger_digest=357926e866c6fd1b2705175a2caf57b30f44e04729e157f16ed66c54238b5a43
+edge_count_hist=((5, 171119), (6, 88196), (7, 32244), (8, 10046), (9, 3131), (10, 894), (11, 210), (12, 58), (13, 9), (14, 2))
+fourteen_low_edge_orbits=((1, 2, 3, 4, 6, 12), (2, 3, 4, 6, 8, 12))
+coordinate_alphabet=126;sorted_position_graph_masks=9233
+high_complement_component_hist=(((2, 1, 1, 1, 1), 2), ((2, 2, 1, 1), 1), ((3, 1, 1, 1), 8), ((3, 3), 4), ((4, 1, 1), 210), ((4, 2), 8), ((5, 1), 3914), ((6,), 301762))
+high_connected_orbits=301762;high_disconnected_orbits=4147
+zero_witness={'body': (1, 2, 3, 4, 6, 12), 'ruler': 168, 'cell': 90, 'word': (1, 3, 9, 27, 108, 432), 'path': ((0, 1), (1, 2), (2, 3), (3, 4), (4, 5)), 'limits': (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), 'physical': (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), 'debt': Fraction(5824887360027324, 3056780423523449161), 'alternate_cell': 12, 'alternate_low_tree_limit': Fraction(29, 224), 'high_limit_tree': (Fraction(1453183, 12108096), ((Fraction(335, 10584), (1, 3), (1, 9)), (Fraction(443, 17472), (3, 5), (1, 16)), (Fraction(59, 2772), (1, 4), (1, 36)), (Fraction(4, 189), (0, 3), (1, 27)), (Fraction(19, 924), (2, 5), (1, 48)))), 'high_physical_tree': (Fraction(315022568681158, 2614867770336569), ((Fraction(36, 1133), (1, 3), (1, 9)), (Fraction(174038, 6851251), (3, 5), (1, 16)), (Fraction(16356, 758773), (1, 4), (1, 36)), (Fraction(24, 1133), (0, 3), (1, 27)), (Fraction(62532, 3041641), (2, 5), (1, 48)))), 'high_physical_margin': Fraction(362436495428246378, 3056780423523449161)}

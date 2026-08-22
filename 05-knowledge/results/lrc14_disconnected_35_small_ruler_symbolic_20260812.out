@@ -1,0 +1,6 @@
+LRC14 DISCONNECTED 3:5 SMALL-RULER SYMBOLIC FLOOR
+contexts 2530 rulers 29 cells 62
+finite_heads 56191 affine_residue_classes 56191 maximum_stable_g 134
+negative 0 zero 0 weakest_cleared (1980, (336, 174, 12, 3), 51, 102)
+semantic_sha256 d2c3db4cdf0a9ab2c2bb4c197f8dff1250202323e4d187816bfa7c5416111c51
+conclusion=for every context and every g>=1, I(3g,5g)>=1/294

@@ -1,0 +1,28 @@
+THM-3637 exact companion -- proved second-stable debt
+status=PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
+SECTION stable Jacobian coefficients
+PASS J0=Uprime*B-A*Vprime
+PASS J1=2Uprime*E+Aprime*B-A*Bprime-2C*Vprime
+PASS J2=3Uprime*H+2Aprime*E+Cprime*B-A*Eprime-2C*Bprime-3D*Vprime
+SECTION minimal retained compiler and vertical jets
+PASS Q1_degree=5 retained_triple=(0,0,-3) tangents=(39,15,54)
+PASS delta_c=(2,0,-2) delta_e=(-2,4,-2) delta_c_prime=(-9,0,-9)
+SECTION retained cokernel and graph-ideal gauge
+PASS lambda=(5,-18,13)/18 annihilates retained tangent plane
+PASS ker_gamma subset m^3 and delta(ker_gamma) subset branchwise_m^2
+SECTION actual-ring basis and normalized Bezout witness
+PASS J0_actual matrix=109x108 ranks=(108,108) degrees_A_B=(94,91)
+PASS J0_actual hashes_A_B=c7253d6126f.../1b330351288f...
+SECTION exact first-order extension
+PASS J1_actual matrix=189x268 ranks=(188,188) residual=0
+PASS J1_actual degrees_X_Y=(173,91) hashes=13403da7b39e.../6432e36c32a...
+SECTION all-unbounded retained gauge and second-order debt
+PASS all_J0_gauges p=sigma-7/6 q=-58/195 r=-3658/1755 s=sigma
+PASS all_J1_lifts common_X=-29/585 common_Y=-sigma/6-137/36
+PASS delta_F1_G1 contribution=-1829/27 active_mutation=3415/81
+PASS J2_lambda_debt=-2072/81 independent_of_sigma_and_all_lifts
+PASS scope=fixed_gamma_F0_c_gamma_G0_e_not_fixed_target_representatives
+SECTION source AST gate
+PASS ast_assertion_nodes=0
+CHECKS=59
+RESULT=PASS

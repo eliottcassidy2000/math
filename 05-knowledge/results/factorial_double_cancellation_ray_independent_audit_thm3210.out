@@ -1,0 +1,11 @@
+THM-3210 INDEPENDENT DOUBLE-CANCELLATION AUDIT
+implementation=custom Q[N,D,V] + Sylvester + F_p arithmetic
+general_length3_formula_and_rational_locus=PASS
+ray_identities=(E2=2,E3=0,E4=0,E5=closed_nonzero)
+visibility_profile=(visible,invisible,invisible,visible)
+resultant_irreducibility_rows=[(1, 2160, 17), (2, 8960, 19), (3, 81000, 13)]
+gcd_resultants_E34_E35=d^2_for_n=1,2,3
+quartics_irreducible_over_Q_by_mod_primes=(17,19,13)
+hostile_and_off_ray_positive_control=PASS
+scope=Q(n,d)[v]_degree_and_scalar_visibility_not_PRS_depth
+INDEPENDENT EXACT AUDIT PASSED

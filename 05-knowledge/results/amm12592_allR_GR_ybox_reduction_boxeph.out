@@ -1,0 +1,54 @@
+==============================================================================
+(A) S3 recompute: coefficients of 2G_R = q^{R-1} - E_{R-1}
+==============================================================================
+  [PASS] [x^0]2G_R = 2 and [x^j]2G_R = (-1)^j C(R-1,j) - 1 (j>=1), R=2..1024
+  [PASS] 2G_R even coefficientwise iff R = 2^t (R=2..1024)  -- [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
+
+==============================================================================
+(B) Y-BOX LEMMA: Delta=(p-q)+2*gamma admissible at d  <=>  cells y of gamma
+    at degree d satisfy -C(d-1,k) <= y_k <= C(d-1,k-1).  Parity vanishes.
+==============================================================================
+  [PASS] ballot parity b_k == C(d,k) mod 2 and Pascal split, d=1..199
+  [PASS] all admissible Delta at d=1..5 map to in-box y (exhaustive, 18204 blocks)
+  [PASS] all in-box y at d=1..5 map to admissible Delta (exhaustive, 18204 cells arrays)
+  [PASS] random d<=40: in-box y admissible AND out-of-box y inadmissible (4000+4000)
+
+==============================================================================
+(C) corners: y = -C(d-1,k) is gamma=-p (Delta=-1); y = +C(d-1,k-1) is gamma=q (Delta=+1)
+==============================================================================
+  [PASS] corners are -p / +q (Delta = -1 / +1), d = 1..59
+
+==============================================================================
+(D) boundary cells: y_0 = gamma(1) in {-1,0}, y_d = gamma(0) in {0,1}
+==============================================================================
+  [PASS] y_0 = gamma(1) in {-1,0} and y_d = gamma(0) in {0,1} (random)
+
+==============================================================================
+(E) atom feasibility: eps*p^a*q^b at degree d, cells eps*C(d-a-b,k-b)
+==============================================================================
+  [PASS] cells(p^a q^b) = C(d-a-b,k-b); +feasible iff b>=1, -feasible iff a>=1 (d<=15)  -- []
+
+==============================================================================
+(F) witness map: known witnesses -> y-cells, master equation sum x^i gamma_i = G_R
+==============================================================================
+  [PASS] combined R=8: identity/admissible/D0=0/normal-form=True/y-box=True/sum=G_R:True
+  [PASS] combined R=16: identity/admissible/D0=0/normal-form=True/y-box=True/sum=G_R:True
+  [PASS] combined R=32: identity/admissible/D0=0/normal-form=True/y-box=True/sum=G_R:True
+  [PASS] floor_witness_R8_ruleB: identity/admissible/D0=0/normal-form=True/y-box=True/sum=G_R:True
+  [PASS] floor_witness_R16_ruleB: identity/admissible/D0=0/normal-form=True/y-box=True/sum=G_R:True
+  [PASS] witness_R128_ruleB_D0_0: identity/admissible/D0=0/normal-form=True/y-box=True/sum=G_R:True
+  [PASS] witness_R256_ruleA_D0_1: identity/admissible/D0=1/normal-form=True/y-box=True/sum=G_R:True
+  [PASS] witness_R512_ruleA_D0_8: identity/admissible/D0=8/normal-form=True/y-box=True/sum=G_R:True
+
+==============================================================================
+SUMMARY: ALL CHECKS PASSED
+==============================================================================
+
+REDUCED PROBLEM (proved above, no parity left):
+  find integer cell arrays y_i (i = 0..R-2), y_{i,k} in
+      [-C(d_i-1,k), C(d_i-1,k-1)],
+  with  sum_{i=0}^{R-2} x^i * (sum_k y_{i,k} B_{d_i,k}) = G_R,
+  where [x^0]G_R = 1, [x^j]G_R = ((-1)^j C(R-1,j) - 1)/2.
+Equivalently gamma_i = q*beta_i - p*alpha_i with alpha_i,beta_i subunital at
+degree d_i - 1 (cells in [0, C(d_i-1,k)]).  Corners: gamma_i = -p ... +q.
+

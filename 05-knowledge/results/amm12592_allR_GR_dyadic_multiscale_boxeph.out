@@ -1,0 +1,18 @@
+  [PASS] (IDENTITY M) dyadic multiscale expansion of Ghat_R, R = 4..1024
+  [PASS] every coefficient receives <= t = log2 R pieces (R = 512)  -- max overlap = 8
+
+piece magnitude vs gamma* envelope (R = 512): scale l, piece sup bits, 
+  window width 2^(l+1), first-window row cap bits ~ 0.598*(R+start)
+  l = 0: W empty (scale trivial)
+  l = 1: sup(P_l) bits =    1, width =    4, cap bits at row 1 ~ 306
+  l = 2: sup(P_l) bits =    5, width =    8, cap bits at row 1 ~ 306
+  l = 3: sup(P_l) bits =   12, width =   16, cap bits at row 1 ~ 306
+  l = 4: sup(P_l) bits =   28, width =   32, cap bits at row 1 ~ 306
+  l = 5: sup(P_l) bits =   59, width =   64, cap bits at row 1 ~ 306
+  l = 6: sup(P_l) bits =  123, width =  128, cap bits at row 1 ~ 306
+  l = 7: sup(P_l) bits =  250, width =  256, cap bits at row 1 ~ 306
+  l = 8: sup(P_l) bits =  506, width =  512, cap bits at row 1 ~ 306
+
+top scale l = t-1 is (1+u)^{R/2-1} W_{t-1}: the R/2-epoch binomial times
+the half-Pascal row => doubling recursion skeleton for route (c).
+SUMMARY: ALL CHECKS PASSED

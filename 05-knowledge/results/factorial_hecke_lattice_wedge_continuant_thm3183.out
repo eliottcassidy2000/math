@@ -1,0 +1,14 @@
+THM-3183 FACTORIAL HECKE LATTICE / WEDGE CONTINUANT EXACT CONTROL
+hecke_square=P_(n+1)S_n=G_nP_n
+reset_smith_profiles=P_in:111,S:11p,P_out:11p,G:1pp
+reset_length_balance=2=1+1-0
+exterior_profiles=P_in:111,S:1pp,P_out:1pp,G:ppp2
+exterior_length_balance=4=2+2-0
+smith_fixture_count=4
+two_step_pivot=(n+2-d)n(n+1)Delta*d
+same_smith_hostile_observed_valuations=(infinity,1,2)
+offset6_prs_leading_pivots=(H,J)
+offset6_direct_top_jet_checks=66
+offset6_bare_wall=(j-4)(p+j)(p+j+1)(p+6)Delta
+scope=no_floor_s_over_2_or_arbitrary_offset_claim
+ALL EXACT CHECKS PASSED

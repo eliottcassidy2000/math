@@ -1,0 +1,25 @@
+candidate mu=13.806686 requires liminf log(g_n)/n >= 0.258082286998
+
+ n   log(g_n)/n   finite-mu proxy
+ 100 0.643707084040       9.328370101
+ 200 0.375444434173      12.046590621
+ 300 0.308246500734      12.995129737
+ 320 0.258118873236      13.806057173
+ 350 0.306480868744      13.022070843
+ 400 0.249757796568      13.951268375
+ 500 0.248708104200      13.969715039
+ 600 0.188867853372      15.108542922
+ 700 0.183026201582      15.229743697
+ 800 0.149955055083      15.954303526
+ 900 0.140697175123      16.169653421
+1000 0.144241715553      16.086519685
+
+closest finite match through 1000: n=320, saving=0.258118873236, proxy=13.806057173
+n=320 exact gcd factorization {2: 63, 3: 6, 5: 3, 7: 3, 11: 2, 13: 2, 17: 2, 19: 1, 23: 1}
+n=320 two-primary loss rate = 0.136463351173
+n=320 odd-gcd saving rate = 0.121655522063
+naive full-gcd finite proxy = 13.806057173
+charge 2^63 against 2-adic decay -> finite proxy = 16.426739660
+divide only by odd gcd -> finite proxy = 16.631383638
+HOSTILE: the rate falls to 0.144241715553 at n=1000; no positive liminf is established
+all integrality and exact Casoratian gates PASS through n=1000

@@ -1,0 +1,84 @@
+  selftest R=8: 2907 random even moves; identity=True parity=True reversible=True
+  selftest R=16: 3176 random even moves; identity=True parity=True reversible=True
+  selftest R=32: 3337 random even moves; identity=True parity=True reversible=True
+  SELFTEST PASS
+
+amm12592_floor_witness_R64.json: R=64 admissible=True identity=True
+  metrics: interior sat = 1 at (0, 1), #full(cap>1) = 899, max|cell| = 3.446e+21, mid max|c| = 3.665e+18
+  carve 64->128: identity=True overshoot=29 at (67, 0)
+amm12592_floor_witness_R64_boxeph.json: R=64 admissible=True identity=True
+  metrics: interior sat = 1 at (0, 1), #full(cap>1) = 403, max|cell| = 3.446e+21, mid max|c| = 3.4e+21
+  carve 64->128: identity=True overshoot=46.6912 at (54, 2)
+amm12592_floor_witness_R64_slim.json: R=64 admissible=True identity=True
+  metrics: interior sat = 0.996925 at (1, 21), #full(cap>1) = 0, max|cell| = 3.354e+21, mid max|c| = 3.4e+21
+  carve 64->128: identity=True overshoot=35 at (59, 0)
+
+================================================================================
+EXPERIMENT LEDGER (runs driven by this module, 2026-08-03; all identities exact,
+all failures are search/transport negatives -- NEVER infeasibility evidence,
+THM-3029 sec 1)
+================================================================================
+BAND PROFILES (max_j |E[j][dt_j - m]| / cap, one-level differenced carve):
+  32-> 64 (CLOSED, 0 fallbacks): m=0: 3      m=2: 1.47   m>=4: <=1.2
+  16-> 32 (CLOSED, 22 fallbacks): m=0: 7     m=4: 5.3    m=12: 2.9
+  64->128 from beam seed:        m=0: 21    m=20: 16.6  m=40: 11.3  <- disease
+  64->128 low-k: k=0: 29  k=1..12: 13-17 (rows 22-26, 63-67)
+ROW LOADS L1(E_j)/2^dt_j, 64->128 beam seed: hot rows (4: 6.0) (22-26: 4.3-4.8)
+  (45-46: 4.6-5.5) (57: 7.3) (76-77: 9.1/6.1) (84-85: 6.0/5.5); sum = 236.2
+CARRY AVALANCHE LAW (measured, debug_fallback): a bulge at depth m climbs
+  exactly 1 depth/row (lift edge C(r2,.), r2 = dt[j+1]-dt[j]+1) growing
+  x2-4/row; caps at fixed small depth grow only ~x1.5 -> any band bulge
+  above box scale is terminal within ~m rows.  First fallback (beam seed,
+  bandvac 29/4/keep1, W=12 L=24): row 20 depth 12, |e|/cap = 6.7e5; death
+  row 32.  EXCHANGE RATES: forward transport multiplies mass 2^r vs cap
+  growth 2^(0.6r) (net loss 2^(0.4r) ~ 2^(row) per row); backward gather
+  divides mass 2^(1.6dj) vs caps 2^(0.6dj) but splash C(r,t) loses beyond
+  depth ~d/4.  Top cells (k = d_i) admit NO move in either direction.
+STEER SELF-CORRECTION (measured): local E edits at prescribed cells are
+  re-planned around -- identical overflow e = -99 vs cap 97 at (35,96)
+  after every donor variant; the only live dials are the +-1 top targets.
+SWEEP GRIDS 64->128 (Steer engine): raw + bandvac + vacuum_fix + teleport
+  (nearest-first, r<=24) x W in {10..100} x L in {8..40}: all fail rows
+  12-65 (band bulges).  32x4 (T=3 double-fold carve, overshoot 5739):
+  raw W=40 L=40: 'final carry nonzero' (all 128 rows threaded); vac W=10
+  L=8: nfall=1 (single e=-99 overflow) then top -3 at row 36 -- the
+  closest deterministic approach.  sweep_beam (top-sign branching, exact
+  per-state Steer override; reproduces 32->64 with nfall=0): 32x4vac dies
+  row 46.
+CONCLUSION: seed cell fatness is NOT the 64->128 obstruction (carve
+  overshoot 29 vs 25 at the closed 32->64).  The obstruction is the
+  near-top BAND of the carve, inherited from the seed witnesses'
+  correction windows touching the top cells of rows ~30-50.  The needed
+  object is an R=64 witness whose corrections avoid the top band (depth
+  <~ 45); hunt-slim (rank = Bernstein-cell roughness of the residual) is
+  implemented here as the follow-up search.
+amm12592_floor_witness_R64_cellslim.json: R=64 admissible=True identity=True
+  metrics: interior sat = 1 at (0, 1), #full(cap>1) = 638, max|cell| = 3.446e+21, mid max|c| = 3.225e+13
+  carve 64->128: identity=True overshoot=19 at (57, 0)
+
+================================================================================
+LATE-SESSION BREAKTHROUGH (hunt-slim, rank = Bernstein-cell roughness)
+================================================================================
+solve_prof(R=64, floor, beam=120, ctrl=2, span=2, rank='cellmax'
+  = (residual degree, max |Bernstein cell| of residual at own degree)):
+  SOLVED in 32s, verified exact -> amm12592_floor_witness_R64_cellslim.json
+  mid max|c| = 3.22e13  (beam-l1deg seed: 3.7e18; doubling output: 3.4e21)
+  -- five orders slimmer, at the F_64 ~ 1.6e13 coefficient scale.
+  carve 64->128 overshoot: 19  (< 25 of the CLOSED 32->64 step!)
+  carve tops: +-1..9 (16->32-closed-like); band m<=20: 7-9x; m=30: 3.2x.
+  band_vacuum(M0=29, spread=4) on this carve: ZERO stuck cells (fully
+  clean band to depth 29 -- first time on any 64->128 carve).
+REMAINING OBSTRUCTION (the R=128 frontier, isolated): stuck band mass at
+  depths 30-45 in rows ~17-40, total ~7.0e23 -- SEED-INDEPENDENT (same
+  7.0-7.1e23 for beam-l1deg, cellmax, cellsat seeds): an intrinsic
+  component of the differenced-carve transport, not of the seed.  Both
+  transport directions lose exponentially there (forward 2^r mass vs
+  2^(0.6r) caps; backward splash C(r,t) vs cap growth (d-m)/m < 3 beyond
+  depth ~d/4), and the early rows' total capacity is genuinely too small
+  to absorb it.  Sweeps die at rows 33-36 when its climbing tail reaches
+  the top band.  NEXT LEVERS: (i) in-row cancellation routing against
+  opposite-signed bulk (row loads L1/2^d up to 9 mean heavy cancellation
+  is available in principle); (ii) a carve variant that avoids creating
+  the 7e23 band component (different pairing/differencing of THM-3026
+  products); (iii) direct R=128 beam with rank='cellmax' -- the rank that
+  produced the 5-orders-slimmer R=64 witness in 32 seconds.

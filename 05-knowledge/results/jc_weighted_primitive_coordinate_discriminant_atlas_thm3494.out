@@ -1,0 +1,24 @@
+THM-3494 weighted-lift primitive-coordinate discriminant atlas
+status=FINITE-EXACT_LOW_DEGREE_COMPANION;all_degree_step_is_proof_text
+universe=Q(P,Q,C);degrees=3,4,5;coordinates=x,y;degree3_extra_coordinate=z
+n=3;p=-3*w**2 + 2*w;T=-P*w + Q - w**3 + w**2
+n=3;branch_scalar=-1;branch_stats=(5, 3, (3, 2), '37562bfd2b6d06cedcfabcb4b4904db42f503f410ffa86a6534c6b24e6d7697e');branch=4*P**3 - P**2 - 18*P*Q + 27*Q**2 + 4*Q
+n=3;x_row=('x', 8, 'e1549b29f1503e3e8381b6c4890ba6790f11c80f4712a9da8adff3112c4a8d86', 3, (3, 1, (1, 1), 'ce9f8dadb0528fed1a40d9aa8425acc51d23e5b2c59ee0c61919e3bb0d49c454'), '9*P - 27*Q - 2')
+n=3;y_row=('y', 6, 'bb2e991185459bc465132df508d60df94b7605f34fc98f4586f7ee3e33e86772', 3, (1, 1, (0, 1), '1c9df71a6e89eb7f8040074a60bceceafc7e298505f69789f2c5707774785acb'), '27*Q')
+n=3;hostile=flat_coordinate_resultant=(X-P)^n_has_zero_discriminant
+n=4;p=-w**3 - 3*w**2/2 + 3*w/2;T=-P*w + Q - w**4/4 - w**3/2 + 3*w**2/4
+n=4;branch_scalar=-1/16;branch_stats=(9, 4, (4, 3), '62c7064c3132534306fa01216b99211a1a1bd5651226758277fa12edab971978');branch=27*P**4 + 35*P**3 - 114*P**2*Q - 9*P**2 + 96*P*Q**2 - 117*P*Q + 64*Q**3 + 207*Q**2 + 27*Q
+n=4;x_row=('x', 16, 'd12282071239dc4aa83413614705ca9315f31c2a2f251a96f6e302d8deeb31e1', 6, (10, 3, (3, 3), 'e4cf75a510e1bc6ca40b2c692ec80845fa20385918cfc8a25509d314ccbc6b36'), 'hash-pinned-in-row')
+n=4;y_row=('y', 16, '303906747e922735323f3a74ea44594fa0d6fef4a2929e9d83b81eccc851b88d', 6, (8, 3, (3, 3), 'a0ce0c6d577e9982d2f88ffb7ba1a861d1628e31e0b428b92e731a00488f19c1'), 'hash-pinned-in-row')
+n=4;hostile=flat_coordinate_resultant=(X-P)^n_has_zero_discriminant
+n=5;p=-w**4 + w**3 - 27*w**2/10 + 17*w/10;T=-P*w + Q - w**5/5 + w**4/4 - 9*w**3/10 + 17*w**2/20
+n=5;branch_scalar=1/4000000;branch_stats=(14, 5, (5, 4), '54742f630852a01c2b4d693e48702a83ee22f37901cefd61a63f4637f3753551');branch=8192000*P**5 - 17058675*P**4 - 38210000*P**3*Q + 12278715*P**3 + 57100000*P**2*Q**2 + 67741050*P**2*Q - 1957975*P**2 - 20000000*P*Q**3 - 75376000*P*Q**2 - 45893931*P*Q + 20000000*Q**4 - 18900000*Q**3 + 46613461*Q**2 + 6657115*Q
+n=5;x_row=('x', 28, '4a0df414a2eb9f5cf67167b887d37e5044de6f6a36e5237751c840c0561f4344', 10, (28, 6, (6, 6), 'ff542f9bdf8437bc0e5f33d00efc9398c1280f780610b75f1ce0141dce3ba674'), 'hash-pinned-in-row')
+n=5;y_row=('y', 31, '81007d6746a648041837b62c9050253d50320ea266b2e83c0989f37a8506bbc3', 10, (26, 6, (6, 6), 'b0ca5895db19ff213fb7e8a32584f34c292fb2a48597e23647963bec9310d5c1'), 'hash-pinned-in-row')
+n=5;hostile=flat_coordinate_resultant=(X-P)^n_has_zero_discriminant
+n=3;z_row=('z', 44, '02045cc1ed4fd0e10f49688fbf4d3fc8566e7af591c973b20794785f1fe8781e', 6, (15, 7, (7, 3), 'b45429234347865c0b4c372bccccaea692692c57ae1409290c8eca3205be1a00'), '972*P**7 - 2916*P**6*Q + 756*P**6 - 8019*P**5*Q - 189*P**5 + 19683*P**4*Q**2 - 2430*P**4*Q - 19683*P**3*Q**3 + 37179*P**3*Q**2/2 + 1809*P**3*Q/4 - 59049*P**2*Q**3/2 + 15309*P**2*Q**2/4 - 59049*P*Q**3/4 - 2187*P*Q**2/8 - 19683*Q**3/8')
+branch_hashes=('37562bfd2b6d06cedcfabcb4b4904db42f503f410ffa86a6534c6b24e6d7697e', '62c7064c3132534306fa01216b99211a1a1bd5651226758277fa12edab971978', '54742f630852a01c2b4d693e48702a83ee22f37901cefd61a63f4637f3753551')
+coordinate_index_hashes=(('ce9f8dadb0528fed1a40d9aa8425acc51d23e5b2c59ee0c61919e3bb0d49c454', '1c9df71a6e89eb7f8040074a60bceceafc7e298505f69789f2c5707774785acb'), ('e4cf75a510e1bc6ca40b2c692ec80845fa20385918cfc8a25509d314ccbc6b36', 'a0ce0c6d577e9982d2f88ffb7ba1a861d1628e31e0b428b92e731a00488f19c1'), ('ff542f9bdf8437bc0e5f33d00efc9398c1280f780610b75f1ce0141dce3ba674', 'b0ca5895db19ff213fb7e8a32584f34c292fb2a48597e23647963bec9310d5c1'))
+mechanism=common_reduced_branch_carrier_times_coordinate_projection_index_square
+scope=no_arbitrary_map_classification;no_composition_norm;no_LRC_or_tournament_transfer
+semantic_sha256=5d327ad97829f806a16fbe9116329c32c3941fe1def2de6234155a9f8e31e075

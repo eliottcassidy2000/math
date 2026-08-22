@@ -1,0 +1,11 @@
+Composite CRT-even micro-staircase flat audit
+scope=PROVED_finite_residue_cell_theorems_plus_FINITE-EXACT_audit;not_LRC
+n14_endpoint_owner_table=((0, (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)), (1, (13,)), (2, (7,)), (3, (9,)), (4, (7,)), (5, (11,)), (6, (7,)), (7, (2, 4, 6, 8, 10, 12)), (8, (7,)), (9, (3,)), (10, (7,)), (11, (5,)), (12, (7,)), (13, (1,)));status=PASS
+unique_protector_half_turn_sidecar=support_checks=63,parity_checks=182,weighted_boundary_remainder_closed=749216;status=PASS
+explicit_even_bin_rows={2: (13, 12, 12, 11, 11, 10), 4: (6, 13, 6, 12, 5, 12), 6: (4, 8, 13, 3, 8, 12), 8: (3, 6, 10, 13, 3, 6), 10: (2, 5, 8, 11, 13, 2), 12: (2, 4, 6, 9, 11, 13)}
+odd_half_turn_danger_sets={2: (), 4: (2, 6), 6: (), 8: (4, 12), 10: (), 12: (6,)}
+general_2p_activation_graph_audit=primes=25,rows=1134,edges=940,max_out_degree=2,range=p3..101;status=PASS
+right_boundary_even_flat=blockers=2702727,mitm_vectors=7529536,nonscalar_false_positives=2702726;status=PASS
+full_microstaircase_even_flat=blockers=1,mitm_vectors=7529536,unit_one_defect_safe_candidates=336,coordinate6_half_turn_safe_candidates=56;status=PASS
+source_lf_sha256=848ed70743a97048b18123801f6c4309b7e8d7829b9bc1df31e49088a31bd3c9
+ALL_CHECKS_PASSED

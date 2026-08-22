@@ -7,12 +7,15 @@ status: >
   DIFFERENT) multiplier subgroups H_A, H_B of (Z/333)^x of order >= 7 having
   at most 25 orbits each.  Extends the common-subgroup obstruction of
   arXiv:2607.20765 (which leaves the asymmetric case explicitly open) to
-  two-sided structured pairs.  The unrestricted existence problem (and hence
-  Hadamard order 668) remains OPEN.
+  two-sided structured pairs.  The unrestricted Legendre-pair existence
+  problem remains OPEN.  Hadamard order 668 is now PROVED independently by
+  THM-3393 through a length-166 four-sequence construction; no converse from
+  that matrix to a length-333 Legendre pair is available.
 source: mac-mini-2026-07-28-S171 (external open-problem raid; Epoch
   FrontierMath "Hadamard Matrices", order 668 = 2*333 + 2)
 depends_on: []
-related: []
+related:
+  - THM-3393-hadamard-order-668-explicit-certificate
 script: 04-computation/legendre333_asym_multiplier_mim_macmini_S171.py
 output: 05-knowledge/results/legendre333_asym_multiplier_macmini_S171.out
 script_sha256: 0389a1cb412faee47d5c2bee574f92e6095649d7893378b0b3f36c8dfc37abce
@@ -57,10 +60,10 @@ invariant under the order-15 QR subgroup.
   side only (e.g. |H| = 9 or 12 one-sided with an unstructured partner); the
   fully unstructured problem; affine (translation-composed) symmetries;
   two-block or Yang-multiplication structures.
-* The Hadamard-668 problem is untouched in general: this prunes the natural
-  "different subgroup for each sequence" attack that the 2607.20765 authors
-  left open, redirecting effort to genuinely unstructured or
-  differently-structured searches.
+* Historically this left Hadamard order 668 untouched.  THM-3393 now proves
+  that order by a bordered four-sequence construction of length 166.  The
+  present exclusion remains valid and the unrestricted length-333 Legendre
+  pair problem remains open; the two statements are no longer to be conflated.
 
 ## One-sided boundary (same session)
 
@@ -83,8 +86,9 @@ sha256 6385e0a888b3574c0f95ed816504c5d596e6624332afaac54549c4a55f7f1956) gives:
   so 1,536 is the count of genuinely distinct remaining attack targets
   (best class: max-PSD 512.8, order-18, 25 orbits).
 
-So the one-sided route is NOT closed; it is reduced to 12,048 explicit
+So the one-sided Legendre-pair route is NOT closed; it is reduced to 12,048 explicit
 candidate classes, each posing a prescribed-PAF problem for the partner sequence
 (`PAF_B = -2 - PAF_A`), best attacked per-candidate by SAT/pseudo-Boolean
-with XOR-cardinality encodings, flattest PSD first.  This is the sharpest
-remaining structured route to Hadamard order 668 identified this session.
+with XOR-cardinality encodings, flattest PSD first.  It is a structured route
+to a length-333 Legendre pair, no longer a necessary route to Hadamard order
+668 after THM-3393.

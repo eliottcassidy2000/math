@@ -1,0 +1,23 @@
+THM-3590 exact companion
+SECTION exponent-three bracket and arm normal forms
+PASS bracket formula, 30 negative normal forms, and central jet gate
+SECTION simple-arm unit classification
+PASS unique arm-unit channel=(-3,1) and homogeneous h=1 degree gate
+SECTION complement counts h=0,1,2,3
+PASS explicit controls for every complement-edge count
+SECTION h=2 collision and singleton-tree atlas
+PASS h=2 rows left=9438 right=9438 collisions={'C1': 121, 'C2': 55, 'C3': 110, 'none': 9152}
+SECTION h=3 unequal-gap six-cycle and equal-gap boundary
+PASS h=3 full rows=361, every off-matching graph is a connected six-cycle
+SECTION sharp support hostiles
+PASS formal near misses pinpoint the two-arm exact-negative dependency
+SECTION consequence invoice
+PASS THM-3589 arm+jet gate forces >=3 pieces in each coordinate
+PASS h=0 scalar absent; h=1 homogeneous degree obstruction
+PASS h=2 all collision graphs retain a singleton spanning tree
+PASS h=3 unequal gaps give six-cycle; equal gaps fail modulo three
+H2_LEFT_ROWS=9438
+H2_RIGHT_ROWS=9438
+H3_ROWS=361
+CHECKS=92630
+RESULT=PASS

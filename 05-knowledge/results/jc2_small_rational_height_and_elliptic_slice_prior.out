@@ -1,0 +1,84 @@
+JC2 SMALL-RATIONAL HEIGHT AND ELLIPTIC-SLICE PRIOR
+scope: exact algebra/finite controls; no JC(2) proof or counterexample
+
+[I] THM-1300 coefficient profiles
+original expanded: terms=[7, 6, 3] degrees=[7, 6, 4] H=12 maxden=1
+tangent identity G=(F3/2,F2,F1): terms=[3, 6, 7] degrees=[4, 6, 7] H=12 maxden=2
+diagonal characters collapse D=diag(a,b,c) to s=ab, t=a^2 c
+H<=8 gauges: []
+H<=9 gauges: [('-1/2', '-3/4'), ('-1/2', '-1/2'), ('-1/2', '-1/4'), ('-1/2', '1/4'), ('-1/2', '1/2'), ('-1/2', '3/4'), ('1/2', '-3/4'), ('1/2', '-1/2'), ('1/2', '-1/4'), ('1/2', '1/4'), ('1/2', '1/2'), ('1/2', '3/4')]
+proved diagonal-orbit minimum: H=9
+secondary representative s=t=1/2: terms=[3, 6, 7] H=9 maxden=8
+secondary collision: (0,0,-1/2),(+/-1,-/+3,13) -> (0,0,-1/2)
+
+[II] seven-parameter factored-support Keller elimination
+universe: parameters (p,q,r,A,B,C,D), branch p!=0
+det(DG)-1 has 12 coefficient equations:
+  e01 monomial=(7, 5, 1): -2*p**3*(A*C*p**2 + 2*A*D*r - 3*B*D*r)
+  e02 monomial=(6, 6, 0): -2*p*r*(3*A*C*p**2 - 2*B*C*p**2 - B*D*r)
+  e03 monomial=(6, 4, 1): -p**2*(9*A*C*p**2 + 2*A*D*p*q + 14*A*D*r + A*p**3 - 3*B*D*p*q - 21*B*D*r)
+  e04 monomial=(5, 5, 0): -5*A*C*p**3*q - 17*A*C*p**2*r - 4*A*p**3*r + 3*B*C*p**3*q + 12*B*C*p**2*r + 3*B*D*p*q*r + 3*B*D*r**2 + 3*B*p**3*r
+  e05 monomial=(5, 3, 1): -4*p*(4*A*C*p**2 + 2*A*D*p*q + 4*A*D*r + A*p**3 - 3*B*D*p*q - 6*B*D*r)
+  e06 monomial=(4, 4, 0): -14*A*C*p**2*q - 16*A*C*p*r - 3*A*p**3*q - 11*A*p**2*r + 9*B*C*p**2*q + 12*B*C*p*r + B*D*p*q**2 + 5*B*D*q*r + 2*B*p**3*q + 9*B*p**2*r + 2*C*p**3 - 2*D*p*r
+  e07 monomial=(4, 2, 1): -14*A*C*p**2 - 10*A*D*p*q - 6*A*D*r - 6*A*p**3 + 15*B*D*p*q + 9*B*D*r + 3*D*p**2
+  e08 monomial=(3, 3, 0): -13*A*C*p*q - 5*A*C*r - 8*A*p**2*q - 10*A*p*r + 9*B*C*p*q + 4*B*C*r + 2*B*D*q**2 + 6*B*p**2*q + 9*B*p*r + 6*C*p**2 - D*p*q - D*r + p**3
+  e09 monomial=(3, 1, 1): -2*(3*A*C*p + 2*A*D*q + 2*A*p**2 - 3*B*D*q - 3*D*p)
+  e10 monomial=(2, 2, 0): -4*A*C*q - 7*A*p*q - 3*A*r + 3*B*C*q + 6*B*p*q + 3*B*r + 6*C*p + 3*p**2
+  e11 monomial=(2, 0, 1): -A*C - A*p + 3*D
+  e12 monomial=(1, 1, 0): -2*A*q + 2*B*q + 2*C + 3*p
+lex Groebner basis size: 29
+selected ideal certificates:
+  p**4*(A - B)
+  -p**4*(-A*q + 12*p)
+  -p**3*(-A*r + 9*p**2)
+  -2*A*q + 2*B*q + 2*C + 3*p
+  -2*A**2*q + 2*A*B*q + A*p + 6*D
+on p!=0 these force A!=0 and
+  B=A, q=12p/A, r=9p^2/A, C=-3p/2, D=-Ap/6
+sufficiency: det(DG)=1 identically
+orbit identity: s=p, t=Ap/3; no nongauge modulus remains in this support
+
+[III] exact rational universes
+B=1: |R_B|=3
+B=2: |R_B|=7
+B=4: |R_B|=23
+B=9: |R_B|=111
+B=12: |R_B|=183
+B=9 k=2: 12321
+B=9 k=3: 1367631
+B=9 k=4: 151807041
+B=9 k=5: 16850581551
+B=9 k=7: 207616015289871
+B=9 k=13: 388328016259855395064461231
+typed dense (72,108) tangent-identity slots: 8690
+dense box B=1 has 4147 decimal digits
+dense box B=2 has 7344 decimal digits
+dense box B=9 has 17774 decimal digits
+affine Gauss chart B=1 universe: 19683
+curl-integrable (coefficient and grid implementations): 375 375
+(deg P,deg Q,coefficient-span) histogram:
+  (1, 1, 0) 99
+  (1, 2, 1) 30
+  (2, 1, 1) 186
+  (2, 2, 1) 60
+positive Gauss control: determinant=1, both curls=0, coefficient span=4, tame
+determinant-only hostile: both curl defects = x-y
+
+[IV] ICARM elliptic-rank leaderboard curve #273
+model: y^2+xy=x^3+a4*x+a6
+a-invariant digit lengths: a4=63 a6=94
+displayed coefficient height digits: 94
+stored points checked exactly on curve: 30/30
+integral/rational-nonintegral points: 19/11
+denominator bases d (den x=d^2, den y=d^3): [1, 2, 3, 5, 13, 23, 37, 97, 1327, 19963]
+maximum denominator base: 19963
+affine point-height digit range: 46..60
+minimal discriminant matches the frozen primary-data value
+CITED/CURRENT DATABASE FIELD: rank_lower_bound=30
+NOT REPROVED HERE: independence, rank>=30, analytic rank, or exact rank
+
+[V] height hostile
+forcing collision 0,(1,1,1) and identity jet: terms=[22, 14, 4] H=945 maxden=64
+lesson: collision normalization can destroy small displayed height; search orbit/generator height first
+
+VERDICT: ALL LOCAL EXACT AND FINITE CONTROLS PASS

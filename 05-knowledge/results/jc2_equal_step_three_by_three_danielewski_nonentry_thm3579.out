@@ -1,0 +1,12 @@
+THM-3579 equal-step three-by-three Danielewski Darboux nonentry
+Laurent compiler and convolution multiplicities [1,2,3,2,1]: PASS
+squarefree degree controls: [2, 3, 4, 5, 6, 7]
+simple-arm scalar survivor: [(2, 1, 0)]
+degree-rigid operator controls: deg(H)=[2, 3, 4, 5, 6, 7], deg(v)=0..7
+row-1 exact ladder controls: k=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+row-3 exact ladder controls: n=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+central post-extreme support law: |R-T|=3
+central exact bridge controls: m=[1, 2, 3, 4, 5, 6, 7, 8]
+terminal coprimality controls: m=[1, 2, 3, 4, 5, 6, 7, 8]
+sharp hostiles: cube resonance / degree one / rational pole / selected profile
+all optimization-safe exact truth gates passed

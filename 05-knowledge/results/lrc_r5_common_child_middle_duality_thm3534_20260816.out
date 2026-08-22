@@ -1,0 +1,24 @@
+== r5 common-child / middle-dual exact refinement ==
+frozen_bank=(certificate_sha256=472925c638de7ac90b1a7880184766f2e8acec0f8291e2c46cf747b37cd46712,prime=755373809845391722745761)
+parent_quotient=(parent_rank,Q_dimension)=(68, 10)
+common_subquotient=(intersection_dimension,kernel_in_parent,image_in_Q)=(14, 12, 2)
+arc_stabilization=(parent_plus_reversal_rank,kernel_dimension)=(70, 2)
+core_identity=(common_image_digest=584eb2a4022ffed65be254f73eda96facaaaa87b2cc1b80ff8f7714dd74bd65a,arc_kernel_digest=584eb2a4022ffed65be254f73eda96facaaaa87b2cc1b80ff8f7714dd74bd65a,equal=True)
+dual_identity=(dimension=8,common_annihilator_digest=b5143e9ea23f3f981c1b6b334799e7924df0a4a544b69d6dcd18defc01d0f238,QA_dual_digest=b5143e9ea23f3f981c1b6b334799e7924df0a4a544b69d6dcd18defc01d0f238,equal=True)
+block_duals=(dimensions=(2, 2, 1, 1, 2, 2),common_pairing_ranks=(0, 0, 1, 1, 0, 0))
+middle_pairing=(matrix=((636675481197456361648540, 0), (0, 636675481197456361648540)),det=149750845022728455688979,scalar=636675481197456361648540,perfect=True,outer_blocks_zero=True)
+endpoint_retaining_response=(coefficient_dimension=3,boundary_rank_H0_H1=(1, 2, 2),classes=(relative_invariant,endpoint_D6))
+chamber_subquotient=(matrix=((0, 1), (1, 0)),genuine_involution=True)
+arc_realization=(common_dimension,union_with_reversal,intersection)=(14, 16, 12)
+compressed_arc=(matrix=((0, 145859431184888028092125), (145859431184888028092125, 0)),scalar_times_chamber=145859431184888028092125,square_scalar=17748677861075734903229,involution=False)
+digit_reflection_gate=(parent_plus_image_of_common_kernel_rank,image_rank_in_Q,union_with_U_rank)=(76, 10, 10)
+chamber_stable_child_windows=(character_histogram=(((2, 1, 1), 119), ((6, 3, 3), 4), ((10, 5, 5), 4)),exceptional_rank_gt_2=((6, (0, 12), 20), (6, (2, 10), 18), (6, (0, 12, 2, 10), 18), (10, (3, 9), 34), (10, (5, 7), 30), (10, (6,), 50), (6, (3, 9, 6), 22), (10, (5, 7, 6), 22)))
+semantic_sha256=4261ca08016b2de90bc8f609ebf283d915f8613410a5dbc15229b02baeed8803
+connection=U=q(intersection_t C_t)=ker(Q10->QA8) pairs perfectly with L=Q10_middle_dual, hence U is canonically V_rel_dual after the THM-3534 contraction L->V_rel
+preserved=all-child common quotient class,middle orientation defect,perfect evaluation pairing,coupled chamber involution
+lost=common literal lift under arc reversal,digit reflection,endpoint D6,chronology,closure edge,current semantics,JC target predicate
+sidecar=a marked self-duality is required to turn V_rel_dual into V_rel;D6 and lawful clock/chain data remain required for any current
+tournament_xor=the intrinsic chamber relation is both-way;the projected arc correspondence is lambda*chamber with lambda not plus_or_minus_one,so XOR erases the exact obstruction
+verdict=the frozen rank-two common child core is exactly the orientation-forgetting kernel and only a dual static response carrier;forcing arc reversal kills it,while compressing reversal produces nontrivial scalar holonomy rather than an action
+scope=FINITE-EXACT static quotient-duality result;no physical current,no H1 bridge,no D5 flux,no row exclusion,no LRC14
+PASS

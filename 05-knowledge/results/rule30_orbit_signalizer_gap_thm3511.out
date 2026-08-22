@@ -1,0 +1,13 @@
+RULE30_ORBIT_SIGNALIZER_GAP_THM3511
+status PROVED_VERIFIED_EXACT_INDEPENDENTLY_AUDITED
+right_action_B2_section0 CB thm3463_factor_display BC display_conversion_checks 46
+renormalization_scales 23 m_range (0, 22) terminal_v23 58
+gap_prefix (2, 1, 2, 1, 2, 6, 1, 8, 1, 2, 2, 5, 2, 1, 2, 2, 2, 5, 1, 2, 3, 1, 3)
+direct_section_checks 17 digest e6f413b60231d610f54308302bab7ec3bd87b506930a0d17e9f5223beb049d96
+marked_unit_borrow_checks 17 q4_units (25, 6403, 1607)
+phase_owner_scales (0, 7) phase_checks 255 ratio_checks 255 transition_checks 255
+owner_conjugacy_depth4_checks 4080
+shallow_hostile scales (7, 17) shared_perm3 76543210 costs (8, 5)
+hostile_perm4 7e5cb290f6d43a18 f6543a987edcb210 distinct_depth4 23
+transcript_sha256 d06c6d7291bf043d028760f0dc1af50a225aa103a50a14084715a0ba9672e5ca
+ALL CHECKS PASSED

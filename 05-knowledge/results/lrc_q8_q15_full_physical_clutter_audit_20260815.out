@@ -1,0 +1,25 @@
+LRC Q8-Q15 FULL PHYSICAL CLUTTER INDEPENDENT EXACT AUDIT
+source_sha256_lf=e54b77eeae05484cbbfacd904e850815f7e78a5e3306f21ad87a68ffbfae9e2e
+status=FINITE-EXACT full literal subset universes;independent event-cell route;unnumbered_and_not_canon
+route=all_rational_boundaries_plus_all_open_cell_midpoints;speed_sheet_sample_bitsets;no_mode_or_cochain_import
+q=8;vertices=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14);boundaries=945;samples=1890;true_minimal_rank_profile=((4, 15), (5, 17), (6, 6));edge_sha256=a129c5ef4a5babaa8e4c9e1e986cdcce33d4b9d174881492efcbca031c048002
+q=8;true_independence_profile=(1, 13, 78, 286, 700, 1152, 1217, 762, 254, 39, 2, 0, 0, 0);first_edge_above_old_cutoff=(1, 3, 5, 11, 13, 14)
+q=9;vertices=(1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14);boundaries=1441;samples=2882;true_minimal_rank_profile=((4, 9), (5, 13), (6, 54), (7, 2));edge_sha256=1e0321520c2360be3f0e0ffdd887e37e4bcb7d8fc0b11f23e68cd5fe83ed57c5
+q=9;true_independence_profile=(1, 13, 78, 286, 706, 1205, 1347, 884, 292, 42, 2, 0, 0, 0);first_edge_above_old_cutoff=(1, 2, 5, 7, 11, 13)
+q=10;vertices=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14);boundaries=1301;samples=2602;true_minimal_rank_profile=((5, 18), (6, 70), (7, 4));edge_sha256=d14ad83ff1ff83b55ccca9d4ac803190cf496629a568c589f1e1f10b56671916
+q=10;true_independence_profile=(1, 13, 78, 286, 715, 1269, 1532, 1115, 411, 59, 1, 0, 0, 0);first_edge_above_old_cutoff=(1, 2, 4, 6, 7, 8)
+q=11;vertices=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14);boundaries=2025;samples=4050;true_minimal_rank_profile=((6, 23), (7, 91), (8, 9));edge_sha256=dc7112501a40296e447326129efadfb1ff8021bc78f87b7cc40fcf5520540076
+q=11;true_independence_profile=(1, 13, 78, 286, 715, 1287, 1693, 1520, 816, 224, 26, 1, 0, 0);first_edge_above_old_cutoff=(1, 2, 3, 5, 7, 9)
+q=12;vertices=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14);boundaries=1249;samples=2498;true_minimal_rank_profile=((4, 1), (5, 7), (6, 17), (7, 14));edge_sha256=8479a2e2d0788372aaeb53886bc172378fc13d8b86bff72cf80ef463d847d8bf
+q=12;true_independence_profile=(1, 13, 78, 286, 714, 1271, 1612, 1382, 720, 202, 29, 2, 0, 0);first_edge_above_old_cutoff=(1, 2, 7, 8, 9, 10)
+q=13;vertices=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14);boundaries=2341;samples=4682;true_minimal_rank_profile=((7, 22), (8, 29), (9, 2));edge_sha256=0915d5d6270a5a661080efc8952380d5064f30db2ca5c9ae5c9a36d61a4aba08
+q=13;true_independence_profile=(1, 13, 78, 286, 715, 1287, 1716, 1694, 1166, 488, 106, 10, 0, 0);first_edge_above_old_cutoff=(1, 2, 3, 5, 7, 9, 11)
+q=14;vertices=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);boundaries=756;samples=1512;true_minimal_rank_profile=((7, 3), (8, 60), (9, 9));edge_sha256=09c5990ad50c0d0b7c133b16d10f1c72cb1bc85eb9f7754a48bd4073fce6acbf
+q=14;true_independence_profile=(1, 13, 78, 286, 715, 1287, 1716, 1713, 1212, 540, 133, 17, 1, 0);first_edge_above_old_cutoff=(1, 3, 4, 5, 9, 11, 13)
+q=15;vertices=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14);boundaries=2101;samples=4202;true_minimal_rank_profile=((6, 157), (7, 16), (8, 6));edge_sha256=3980d53a1bd43516da447e9ff52f91a423c1cca4e6904cd1e2d8b249e8c39c12
+q=15;true_independence_profile=(1, 14, 91, 364, 1001, 2002, 2846, 2768, 1743, 642, 117, 8, 0, 0, 0);first_edge_above_old_cutoff=(1, 2, 3, 5, 7, 8, 13)
+repair=old_q8_q14_profiles_are_generated_by_rank_le5_edges;old_q15_profile_is_generated_by_rank_le6_edges;their_low_rank_counts_and_I5_values_survive
+hostile=q8_first_omitted_edge_(1,3,5,11,13,14);q15_first_omitted_edge_(1,2,3,5,7,8,13)
+scope=full_physical_clutters_on_literal_speed_pools_only;no_core_rescue_change;no_refined_decrement;no_LRC14_ledger_change
+semantic_sha256=2baecf15b57ac7adcfaf41342d74cf12eba363a6d0726566e67eabfcf78b0d22
+verdict=PASS

@@ -1,0 +1,95 @@
+{
+ "session": "boxeph multifront 2026-08-03, lane D1 bulk rule",
+ "script": "04-computation/amm12592_bulkrule_design_sweep_boxeph.py",
+ "regression": "plain variant bit-identical to certified fast engine at (256,0),(256,1),(512,4),(512,5)",
+ "finalist": "desc1 (descending absorb-window + single-cell vent -excess/2)",
+ "thresholds_best_of_family": {
+  "128": {
+   "D0": 0,
+   "variant": "any",
+   "capture": 81
+  },
+  "256": {
+   "D0": 0,
+   "variant": "desc1",
+   "capture": 154,
+   "referee": "ALL-PASS",
+   "witness_sha256": "5950bd4287d499221609bfaf7f42b6200637a1ede108c9086173a6b41fb60709",
+   "die_pair": null
+  },
+  "512": {
+   "D0": 4,
+   "variant": "tr15",
+   "capture": 319,
+   "referee": "ALL-PASS",
+   "witness_sha256": "311975f69412f09efbc171b71bb9485da8c1e2f9cda804de526c2a70013c9e83",
+   "die_pair": {
+    "D0": 3,
+    "row": 119
+   }
+  },
+  "1024": {
+   "D0": 14,
+   "variant": "desc1",
+   "capture": 628,
+   "referee": "ALL-PASS",
+   "witness_sha256": "81391349e842d8086d3d90c2da41ebc215183521a70977be32fcb2cbe1206cd4",
+   "die_pair": {
+    "D0": 13,
+    "row": 245
+   }
+  },
+  "2048": {
+   "D0": 36,
+   "variant": "desc1",
+   "capture": 1271,
+   "referee": "spots x2/x3/debt",
+   "die_pair": {
+    "D0": 35,
+    "row": 503
+   }
+  },
+  "4096": {
+   "D0": 87,
+   "variant": "desc1",
+   "capture": 2537,
+   "referee": "spots x2/x3/debt",
+   "die_pair": {
+    "D0": 86,
+    "row": 1019
+   }
+  },
+  "8192": {
+   "D0_upper": 188,
+   "variant": "desc1",
+   "capture": 5064,
+   "referee": "spots x2/x3/debt",
+   "note": "desc also closes 189; lower probes not run"
+  }
+ },
+ "plain_thresholds": {
+  "128": 0,
+  "256": 1,
+  "512": 5,
+  "1024": 15,
+  "2048": 38,
+  "4096": 89,
+  "8192": 192,
+  "16384": [
+   401,
+   416
+  ]
+ },
+ "mechanism": {
+  "die_signature": "same-sign block nucleates behind front, value freezes (T9a), marches",
+  "close_signature": "strict alternation, inward envelope ratio ~2-4, front recedes",
+  "ratio_law": "alternating train ratio rho: (1,2,1) multiplier (1-rho)^2, (1,1) multiplier (1-rho); rho=2 magnitude-preserving; rho<2 decays",
+  "immortality": "same-sign block above cap scale cannot be dissolved by any in-box rule (cap tail geometric, T9b) -- CONJECTURED exact lemma",
+  "verdict": "local one-row-lookahead clamp class: uniform gain, growing absolute 0,1,1,1,2,2,>=4 across doublings, relative ~2%; still LINEAR D0*(R) on this data"
+ },
+ "hazards": [
+  "rule thresholds non-monotone in D0 and in variant strength (train 512: D0=4 dies earlier than D0=3; tr15 breaks plain closure at 1024 D0=15)",
+  "vent-ladder depth 2 vs 1 flips 256 D0=0 (spec pinned as desc1)",
+  "all negatives are rule-class statements, never epoch-infeasibility evidence"
+ ]
+}

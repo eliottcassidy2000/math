@@ -1,0 +1,11 @@
+THM-3599 exact companion
+SECTION affine rational-mate boundary
+PASS 20 rational-mate and sharp-boundary identities
+SECTION complete Newton-mask census
+PASS 2528 mask, hull, margin, and unique-boundary controls
+SECTION toric face and resonant resolution
+PASS 60 bottom, left-face, and resonant-face controls
+SECTION logarithmic conic residues
+PASS 3 opposite nonzero logarithmic-residue controls
+CHECKS=2611
+RESULT=PASS

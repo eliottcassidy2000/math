@@ -1,0 +1,63 @@
+THM-3606 EXPONENT-TWO 3-BY-4 SCALAR/SINGLETON GATE ATLAS
+parent_sha256_lf=85c8a5e8200e0999b0e671f2419f3b9a52f03c862370cfa5a6afc7aaf8715c74
+parent_words=149;exact_surviving_words=38
+exact_word_counts=6:1,7:7,8:26,9:4
+exact_scheme_counts=6:12,7:66,8:90,9:10
+orientation_counts=+-:90,-+:88
+scalar_fibre_size_counts=2:161,3:17
+scalar_cut_scheme_counts=(6, False):12,(7, False):62,(7, True):4,(8, False):70,(8, True):20,(9, True):10
+scalar_exposed_scheme_counts=(6, False):12,(7, False):66,(8, False):66,(8, True):24,(9, False):4,(9, True):6
+words_with_some_scalar_cut=21;ids=W002,W006,W008,W009,W010,W012,W015,W016,W022,W030,W032,W033,W034,W036,W037,W042,W045,W072,W073,W141,W149
+words_with_unexposed_scalar_scheme=31;ids=W001,W002,W003,W004,W005,W006,W007,W008,W009,W010,W011,W012,W015,W016,W022,W030,W031,W032,W033,W034,W036,W037,W040,W041,W042,W043,W045,W072,W073,W141,W149
+exact_max_scheme_witness_gap=12
+exact_word_ids=W001,W002,W003,W004,W005,W006,W007,W008,W009,W010,W011,W012,W015,W016,W018,W020,W022,W023,W024,W030,W031,W032,W033,W034,W035,W036,W037,W038,W040,W041,W042,W043,W044,W045,W072,W073,W141,W149
+projective_sample_words=18;ids=W001,W003,W004,W005,W006,W007,W010,W015,W016,W032,W033,W036,W037,W040,W044,W045,W072,W149
+generic_scaled_words=38;ids=W001,W002,W003,W004,W005,W006,W007,W008,W009,W010,W011,W012,W015,W016,W018,W020,W022,W023,W024,W030,W031,W032,W033,W034,W035,W036,W037,W038,W040,W041,W042,W043,W044,W045,W072,W073,W141,W149
+hostile_bound=16;connected_vectors=6724;surviving_vectors=1288;surviving_placements=3790;surviving_words=38
+bounded_surviving_vectors_by_sumset=6:16,7:54,8:1064,9:154
+three_path_word_sets_equal=1
+semantic_sha256=c21d12829dc415dded4fcd2347c23137991904da598cbe4cd8ad4e8844f5c1f0
+bounded_semantic_sha256=68437764f3eb632545e70224b265f1e74b01a30826d2cac5c6658e150358ff07
+script_sha256_lf=9d558f5637c5cc3573214fe00817bd6acb4c749b85a9046644e2390bd1d0ad91
+EXACT_GLOBAL_WORDS
+W001=m:6;schemes:12;unexposed:12;residual_anchor:1:01-+@3,3,3,3,3;best_witness:3,3,3,3,3;scheme_sha256:714910c3a8e807a7097fc1c2e9a4df2919e90df4f79a90a1c3d13e6f11295131;word:00|01=10|02=11=20|03=12=21|13=22|23
+W002=m:7;schemes:6;unexposed:6;residual_anchor:1:01-+@3,3,3,3,6;best_witness:3,3,3,3,6;scheme_sha256:bbd0305a6914cb9b0f7ac55c544e283d7bfb06e4643331e14fb943d436af2bd9;word:00|01=10|02=11=20|12=21|03=22|13|23
+W003=m:7;schemes:8;unexposed:8;residual_anchor:1:01-+@3,6,3,3,3;best_witness:3,6,3,3,3;scheme_sha256:49c165bf05c4c5b0fe18fca280b4986b7fed5836d828688b3d3daeb526fbef60;word:00|01=10|02=11|03=12=20|13=21|22|23
+W004=m:7;schemes:12;unexposed:12;residual_anchor:1:01-+@3,6,3,3,6;best_witness:3,6,3,3,6;scheme_sha256:7992c961168ff94fb3a621be5a8a8f0bc0c4b0601bf1991ecc6d6ac8f42fba4c;word:00|01=10|02=11|12=20|03=21|13=22|23
+W005=m:7;schemes:12;unexposed:12;residual_anchor:1:01-+@6,3,6,3,3;best_witness:6,3,6,3,3;scheme_sha256:32d5852519eea753ab03ec3eda0ee0029a811b4fdaf83ca03b940f794c52a46b;word:00|01=10|02=20|03=11|12=21|13=22|23
+W006=m:7;schemes:12;unexposed:12;residual_anchor:1:01-+@3,3,3,6,3;best_witness:3,3,3,6,3;scheme_sha256:35387d8317540c98731f3b47bcb95c18baec32815d3ea276bdff7cddd58c1c98;word:00|01=10|11=20|02=21|03=12|13=22|23
+W007=m:7;schemes:10;unexposed:10;residual_anchor:2:10+-@2,1,1,1,1;best_witness:2,1,1,1,1;scheme_sha256:0fe4c7786ecbb0e8b33e8ce9bf7314bf17a95ee37761f14044a918fe67c3a182;word:00|01|02=10|03=11=20|12=21|13=22|23
+W008=m:7;schemes:6;unexposed:6;residual_anchor:2:20+-@3,3,6,3,3;best_witness:3,3,6,3,3;scheme_sha256:238dc4372555f23d6c0960e1205fb17f071483ef16ddd79c7b9403bfe5c32201;word:00|10|01=20|02=11|03=12=21|13=22|23
+W009=m:8;schemes:4;unexposed:4;residual_anchor:1:01-+@3,9,3,3,3;best_witness:3,9,3,3,3;scheme_sha256:396af5a2155c159dfa2aeb171e721e74fb28f5f1832aadf5692473fb7bf73255;word:00|01=10|02=11|03=12|13=20|21|22|23
+W010=m:8;schemes:4;unexposed:4;residual_anchor:1:01-+@6,9,6,6,3;best_witness:6,9,6,6,3;scheme_sha256:0e98cbabd51da7626b01de575e02dd9f1a415a85aa5ae430936e1cd82d761cd2;word:00|01=10|02=11|03=20|12|13=21|22|23
+W011=m:8;schemes:2;unexposed:2;residual_anchor:1:01-+@3,6,3,3,9;best_witness:3,6,3,3,9;scheme_sha256:7db63a159ece52a6030119adae5cafc94db8e4704dbe4ee68443cdcdc25bc2d1;word:00|01=10|02=11|12=20|21|03=22|13|23
+W012=m:8;schemes:4;unexposed:4;residual_anchor:1:01-+@3,9,3,3,6;best_witness:3,9,3,3,6;scheme_sha256:b4ebb33e819185144fbede9a7c4b45e712b61b2240c51113d1bda3c2bc6442b2;word:00|01=10|02=11|12|03=20|13=21|22|23
+W015=m:8;schemes:4;unexposed:3;residual_anchor:1:01-+@9,6,9,6,3;best_witness:9,6,9,6,3;scheme_sha256:fe098318e1739e24fc708042f095cc3454ade05a3ea5de3cf0b6ce4dcbc56df5;word:00|01=10|02=20|03=11|12=21|13|22|23
+W016=m:8;schemes:4;unexposed:3;residual_anchor:1:01-+@9,3,9,3,6;best_witness:9,3,9,3,6;scheme_sha256:1e95ef1077dc70d11a64b4a9a22acfad7e6ba5b74a67b82fed42e2e2b05e7f95;word:00|01=10|02=20|03=11|12=21|22|13|23
+W018=m:8;schemes:2;unexposed:0;residual_anchor:-;best_witness:6,3,6,3,6;scheme_sha256:b3bf303b62f4d153cf887a40cf0ecad9e2080aabf968ff55130252c79bb5df54;word:00|01=10|02=20|11|03=12=21|22|13|23
+W020=m:8;schemes:2;unexposed:0;residual_anchor:-;best_witness:6,3,6,3,9;scheme_sha256:936a4f214ca954fc23b5ec0fb4b79fc7c15ae9f3f1975880c8d7071dd58162a9;word:00|01=10|02=20|11|12=21|03=22|13|23
+W022=m:8;schemes:4;unexposed:4;residual_anchor:1:01-+@3,3,3,6,6;best_witness:3,3,3,6,6;scheme_sha256:be1d900295e9c96573bfaf6c2d5b61ce481bd11149623b4cf733c070151aeace;word:00|01=10|11=20|02=21|12|03=22|13|23
+W023=m:8;schemes:2;unexposed:0;residual_anchor:-;best_witness:3,6,3,6,3;scheme_sha256:198b94fe615e4c862160486c3069a4d15fbfeaeab4839047a4ef8ee181fd1f47;word:00|01=10|11|02=20|03=12=21|13|22|23
+W024=m:8;schemes:2;unexposed:0;residual_anchor:-;best_witness:3,6,3,6,9;scheme_sha256:866c3a7d44ca86713582ba9742595b290f1b46349ae0cd07a128db328bbd1cca;word:00|01=10|11|02=20|12=21|03=22|13|23
+W030=m:8;schemes:4;unexposed:4;residual_anchor:5:12-+@9,3,6,3,3;best_witness:9,3,6,3,3;scheme_sha256:942fe43f958e7c8b7750068935bcd8fabcc6f8ec846a74451f0bef8ab62bff11;word:00|01|02=10|03=20|11|12=21|13=22|23
+W031=m:8;schemes:2;unexposed:2;residual_anchor:2:02-+@6,3,3,3,6;best_witness:6,3,3,3,6;scheme_sha256:993d6a6437550e1fe540fe64b9a0470241f3276e548125ebdabfcd77bac61895;word:00|01|02=10|11=20|03=12=21|22|13|23
+W032=m:8;schemes:5;unexposed:5;residual_anchor:2:10+-@2,1,1,1,3;best_witness:2,1,1,1,3;scheme_sha256:dac0ce3b886f77d5c37ae1e3c50653e02d45290e7a659867bb1b59791aabc88f;word:00|01|02=10|11=20|12=21|03=22|13|23
+W033=m:8;schemes:5;unexposed:4;residual_anchor:5:12-+@9,6,3,6,6;best_witness:3,2,1,2,2;scheme_sha256:88699a09ef7340586084ada4df603a255ff8580e00f7256742a7fd51076077a9;word:00|01|02=10|11|03=20|12=21|13=22|23
+W034=m:8;schemes:4;unexposed:4;residual_anchor:3:03-+@9,3,3,3,3;best_witness:9,3,3,3,3;scheme_sha256:4675a64886b142459cd895fce0f7d9d2252b82a397301086b10dd5fd7be7b662;word:00|01|02|03=10|11=20|12=21|13=22|23
+W035=m:8;schemes:2;unexposed:0;residual_anchor:-;best_witness:6,3,3,6,3;scheme_sha256:fb96698a6b248b35a2991a2321dcff07778dd5fc10d4cdc8810bad82f86f1eb9;word:00|01|10|02=11=20|03=21|12|13=22|23
+W036=m:8;schemes:5;unexposed:4;residual_anchor:4:20+-@2,3,1,2,3;best_witness:2,3,1,2,3;scheme_sha256:c1fb6ed901cebfdb47345d75b0b27c0e41d3fd241e2e227404da63fc77e728c9;word:00|01|10|02=11|12=20|03=21|13=22|23
+W037=m:8;schemes:6;unexposed:6;residual_anchor:2:01-+@1,2,3,1,1;best_witness:1,2,3,1,1;scheme_sha256:c3576c279f34b9330eae0bed40e2b284c7d57a8fa9fe07335bce77981bc18c5e;word:00|10|01=20|02=11|03=12|13=21|22|23
+W038=m:8;schemes:2;unexposed:0;residual_anchor:-;best_witness:6,3,9,6,3;scheme_sha256:474751658b63783301052770761b96d0125db1a59d6f7499a268fca831a3afae;word:00|10|01=20|02=11|03=21|12|13=22|23
+W040=m:8;schemes:4;unexposed:2;residual_anchor:5:03-+@1,2,3,1,2;best_witness:1,2,3,1,2;scheme_sha256:82c13e755a8d424fb0383b852d3d5f7213cff7cc057dcdb2547745bc776fb997;word:00|10|01=20|02=11|12|03=21|13=22|23
+W041=m:8;schemes:2;unexposed:2;residual_anchor:6:13-+@6,3,9,3,3;best_witness:6,3,9,3,3;scheme_sha256:eb352e02efc0622ab02bc2359536188d49d9b9410137f6a26462a17293e8279d;word:00|10|01=20|02|03=11|12=21|13=22|23
+W042=m:8;schemes:4;unexposed:4;residual_anchor:4:21+-@3,3,6,6,3;best_witness:3,3,6,6,3;scheme_sha256:fe1041fbc2bd5b9525aab44edb7a5b5aa27ea9fa8b9146a9a7303dffad0d05a1;word:00|10|01=20|11|02=21|03=12|13=22|23
+W043=m:8;schemes:2;unexposed:2;residual_anchor:4:12-+@3,6,6,3,3;best_witness:3,6,6,3,3;scheme_sha256:c88f99c92451d89d8b37ad0bceef60b34863c9c6345217e003c2a0215ad37a9d;word:00|10|01|02=11=20|03=12|13=21|22|23
+W044=m:8;schemes:4;unexposed:0;residual_anchor:-;best_witness:1,2,2,1,2;scheme_sha256:83c58dad5f8bf485a558aa258194eb6a9a1cbaf5e0349ea687cd81ad998fa20d;word:00|10|01|02=11=20|12|03=21|13=22|23
+W045=m:8;schemes:5;unexposed:3;residual_anchor:4:12-+@3,9,6,3,9;best_witness:1,3,2,1,3;scheme_sha256:09c0b9f63800d734f8b7b9c851bc24e318e014adc0c6c5f3ebc4bdc596c74561;word:00|10|01|02=11|12=20|03=21|13=22|23
+W072=m:9;schemes:3;unexposed:1;residual_anchor:3:11+-@9,3,3,6,6;best_witness:3,1,1,2,2;scheme_sha256:2edabe6f195f9b106d9c430bf14d7f335383ec26b84d6f8661f1bdcea0939ba8;word:00|01|02=10|11=20|03=21|12|22|13|23
+W073=m:9;schemes:2;unexposed:1;residual_anchor:3:11+-@9,6,6,3,12;best_witness:9,6,6,3,12;scheme_sha256:16d074271e4dc7402a168439693bba66dc6b9081d388cfb5024c21ffd7354826;word:00|01|02=10|11=20|12|03=21|22|13|23
+W141=m:9;schemes:2;unexposed:1;residual_anchor:5:12-+@6,9,12,3,6;best_witness:6,9,12,3,6;scheme_sha256:b381f15bee1b47f0ec9b251f9e61b0c22629f5fce8406090e7e057f27b6b7173;word:00|10|01|02=20|11|03=12|13=21|22|23
+W149=m:9;schemes:3;unexposed:1;residual_anchor:5:12-+@3,9,6,6,3;best_witness:1,3,2,2,1;scheme_sha256:5a0101bcf6b78c3b44e581ab29b2ce9bb97caa55e3c057c36c8627db534a008d;word:00|10|01|11|02=20|03=12|13=21|22|23
+boundary=necessary scalar-arm and singleton-row gates only;no multi-address differential cancellation, arm nonalternation,Hermite-Pade regularity, Darboux pair, or Jacobian conclusion
+status=PROVED+FINITE-EXACT+VERIFIED-EXACT;global affine gate atlas
+PASS

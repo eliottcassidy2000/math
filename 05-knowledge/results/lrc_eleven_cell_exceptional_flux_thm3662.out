@@ -1,0 +1,16 @@
+== THM-3662 LRC eleven-cell exceptional flux gate ==
+field=p:755373809845391722745761;carry_table:12x13;parent_sha256_lf=('37a7c775096d80c4d8acd9d39fc0812e32545a963ee572ea773157d0ef6804c6', 'd24cda381808b5ec6009a47fc967f1293486e3ffb95d9153f4e4cd0bd3ed0730')
+grandparent_sha256_lf=('f0323550a039bd3c59bc3367a9a48503ff10db2b642e99e21d9499e984492ccd', 'fdebbbba161149edec8c86b9f382ede76153e85aa01da635f0900075fe751628');reconstruction_sha256=('53eb6e618d0669bdb27841a1800c46e32456bb6c6d3698c590ae0d5e68822033', 'fd1b837d9de3e4f9e586d29b69ed6726364ce97535d2e48f441c6ccd694250de')
+response_partition=zero:17,generic_line:128,transverse:11;distinct_values=(1,44,10)
+transverse_cells=((0, 10), (0, 11), (0, 12), (3, 8), (3, 9), (6, 4), (6, 5), (6, 6), (6, 7), (9, 2), (9, 3));flux_coefficients=(((0, 10), 1), ((0, 11), -2), ((0, 12), 1), ((3, 8), -1), ((3, 9), 1), ((6, 4), 1), ((6, 5), -1), ((6, 6), -1), ((6, 7), 1), ((9, 2), 1), ((9, 3), -1))
+response_matrix_ranks=(11, 11);odd_projected_rank=4
+odd_projector=Pi_-;scalar:c=28939885940104996879767;Pi_-e=-c*g*(1,-b);Pi_-R=-c*Dg*(1,-b)
+natural_carry_weights=13(12-t0);full_response_sum=(0, 0)
+positive_reversal_hostile=((1, 0), (11, 11));vector=(289369708799585224299099, 644718915560530562860929);sum:zero
+interior_symmetric_flux_coefficients=(-2, 2, 2, -2);representatives=((3, 8), (3, 9), (6, 4), (6, 5))
+projected_response_2cocycle=REFUTED;witness=((0, 1), (1, 0), (12, 9));associator=-1
+response_sha256=0e48e8384bcb5d98f52eba69f3e3bf1a01d739558d5bf53d90c94767aa455939
+semantic_sha256=5606124428d10919903c0d7cff433e2550a5e14010c971e4cdcf261a6ff28342
+script_sha256_lf=be144898d386b703e7eb9e754b0cd99e729b06aabb2f823c86b10e0c208f0f5e
+scope=static finite-field response/flux;not physical weights/chronology/positivity/LRC14
+PASS

@@ -1,0 +1,22 @@
+== independent hostile audit: Boolean square x source root difference x relation ==
+parent=(square_sha256=a75300a81efebef83683c41ac073ffa4d3268da83e96071d7b1b576b36e5bbc7,square_semantic=af0d543232869e82ee8d0191478ba7a833954cb19b387dedb6fb6f44a6fa272c)
+coordinates=(state in V4,source_cut_arc_difference s=u-q in F13,relation=(1,0,t) in F13)
+source_profile_sha256=2de29f9be7fd16ceb4be5d15f7a71aa3d09f2907ec39f7af0b2017eadf3c18d2;field=(prime=755373809845391722745761,zeta13=266737884585332483769981)
+work_counts=(7107008, 7108460, 1200462, 186244, 186244);state_segment_counts=(300115, 300116, 300115, 300116);literal_controls=((0, 0, 0), (1, 0, 6), (6, 6, 12)): PASS
+root_pair_gate=ordered selected pairs weighted before integration;difference_orientation=s=u-q;beta_phase=zeta13^beta: PASS
+marginals=(weighted->audited_square,endpoint_only->audited_source_erasure): PASS
+same_root=(weighted=0,support_only=0,endpoint_only_nonzero): PASS
+raw_cut_arc_profile=(rank=2,rows=((0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (0, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2), (0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (0, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2)))
+difference_support_(weighted,support_only,endpoint_only)=((1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+flattening_ranks_(state,difference,relation)=((4, 12, 13), (4, 12, 13), (4, 7, 13))
+three_way_ANOVA_flattening_ranks=((3, 12, 12), (3, 12, 12), (3, 6, 12))
+support_census_order=(total,empty,relation,difference,difference_relation,state,state_relation,state_difference,triple)
+spectral_censuses=((676, 1, 12, 12, 144, 3, 36, 36, 432), (676, 1, 12, 12, 144, 3, 36, 36, 432), (676, 1, 12, 12, 144, 3, 36, 36, 432))
+three_way_ANOVA_spectral_censuses=((432, 0, 0, 0, 0, 0, 0, 0, 432), (432, 0, 0, 0, 0, 0, 0, 0, 432), (432, 0, 0, 0, 0, 0, 0, 0, 432))
+fixed_relation=(1,0,6);records_(rank,ANOVA_rank,row_support,zero_sets,digest)=((4, 3, (10, 12, 10, 12), ((0, 1, 2), (0,), (0, 11, 12), (0,)), 'acde8efe1065b919716bacf43fbb09afd8dd491b219b67793d8a94f5386eaf5f'), (4, 3, (10, 12, 10, 12), ((0, 1, 2), (0,), (0, 11, 12), (0,)), 'fedbc2430a29f32ff39ec9e7948bde74e896c5d4d2a676fc1e9fdbe395d66c16'), (4, 3, (13, 13, 13, 13), ((), (), (), ()), 'e5a9460cca848458272f5a8917f2786096dd8939ab40ce28e4fb13a5fa9576c7'))
+digests=(gamma,tensor,spectrum,ANOVA,ANOVA_spectrum)=(('a83811099901421a16d39b1a04a9dd09bea96eba1b317208e58df1e6ab670ab6', '9076200eefb5d5322e8e20fdbb9fc805d17cc2deb287cc9e184e7e4a06d205d7', 'b0439188832ee6fa92913e3873a9c3b12eb01c64179843be0a7b38dd7419ce94'), ('0c6a6b831b5548d012c2954ed5fc11387657591e9de0f6ae3b55a1e593982f9f', '147490619b4a53c125140f3e57b0285e5153e6eeff6413410c5cfa9f769c8f7c', '38f44bca9e20a27dbb58962d4b750d4650e859c7418cd1bcb350476940fc0a6d'), ('998d30f5c5415ebc6350b4027fdc8b4392e0e2e034e3e8345c9e8d1944ba9a6d', '47b2ae42cd1af50f97c288d769a10707d341ddbb12845c068abfafec6a49c1fe', '4f2927945813a30ca0f3cd6c24219189079249b0d836b1c042e137b41e2ddd8c'), ('7acf66b6d9bd9c7363de7546c40a5f1dfba6e3e19cfe89d9f0d4bd8459b2a13d', 'f26eb2ee2f86b1da4a1e4762c75531942a7a4f6c39acf3903c5e879f2a14aa86', '11014600dea82e614562bef59a203287d50f803fe1f6c766ecc13ab883d7f21d'), ('6e9562dccd104a355b2fa5e35fb05a9e580f1913330ebd9aab787b32d1a2735e', '8618fe32231015f891ea291bd3cdd90ae7408cf39815911aae79b12b6cc86758', '4251ea22fea625b9f023a9714ae2a9b48fcbda2b84bbc6f7ecb8b03641ef0b86'))
+semantic_sha256=25bbbd871fe072915b07662c76661bf72be8d46258a6ce825ab1635ef7fe5c56
+verdict=ACCEPT scoped finite-exact three-coordinate source-cut interaction
+typing=source root difference is a lawful cut-arc colour;not THM-2334 exact address;not inverse ancestry;not chronology
+scope=one owner base;no physical current,no uniform rows,no row exclusion,no LRC(14)
+all exact hostile checks passed

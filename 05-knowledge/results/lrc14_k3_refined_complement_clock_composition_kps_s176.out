@@ -1,0 +1,16 @@
+LRC14 K=3 REFINED COMPLEMENT-CLOCK COMPOSITION
+status=FINITE-EXACT intersection of final one-spike and pool-14 ledgers
+arrangement_points=206;atoms=205;support_closed_rows=19053;support_completion_histogram=((1, 12659), (2, 2764), (3, 976), (4, 1052), (5, 1602))
+pre_summary=(398241574, 2548901482, 1904, 1823, 107)
+pre_occurrence_by_c=Counter({2: 1351841956, 3: 1065317472, 1: 71619386, 4: 60122668})
+pre_shape_by_c=Counter({2: 255882564, 3: 103263188, 1: 30050140, 4: 9045682})
+refined_closed_rows=7;refined_closed_occurrences=7648
+refined_closed_detail=((5880, (1, 2, 6, 8, 10, 14), 388), (5880, (2, 3, 6, 8, 10, 14), 388), (5880, (2, 5, 6, 8, 10, 14), 388), (5880, (2, 6, 7, 8, 10, 14), 388), (17640, (2, 6, 8, 9, 10, 14), 1008), (64680, (2, 6, 8, 10, 11, 14), 2544), (76440, (2, 6, 8, 10, 13, 14), 2544))
+post_summary=(398241574, 2548893834, 1897, 1823, 107)
+post_occurrence_by_c=Counter({2: 1351841956, 3: 1065309824, 1: 71619386, 4: 60122668})
+post_shape_by_c=Counter({2: 255882564, 3: 103263188, 1: 30050140, 4: 9045682})
+completion_semantic_sha256=b39ea7cb2cc116f8ea98de697b6ec31dbdc1b5e22eac1b132ce7c27241705ff1
+pre_semantic_sha256=06b3e5a7a05d5c9a2f1633d74061f1605c2aab856b315026ad697245bac84964
+post_semantic_sha256=1dd557b3629ed4c48f2b85412b48476b29e300990f38bdfe65cef2372fbab8d4
+solver_cache=CacheInfo(hits=56846, misses=174398, maxsize=None, currsize=174398)
+verdict=PASS

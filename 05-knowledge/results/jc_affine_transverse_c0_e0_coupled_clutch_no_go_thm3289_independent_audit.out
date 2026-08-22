@@ -1,0 +1,17 @@
+THM-3289 independent affine C0-E0 coupled-clutch audit
+dependency_hash_checks=8
+resultant_route=sympy_builtin;resultant=V^3*K40;gradient_reduction=raw-R2-(Vp*y/2)*R1=0;R1_y_lead=4=>no_projective_y_infinity
+unique_weighted_degree97=128*C*V^6*d*k^2;affine_lead=128*d^2*k^2*V_lead^6
+coefficient_scope=char0_field_K0;c0,d,e0,k_in_K0;C=c0+d*x;E=e0+k*x;e0_gradient_inert=1
+finite_owner_gate=Delta=k-Aprime*C;Delta=0_gives_explicit_critical_point_z=-C;parameter_lanes=d=0|d!=0,k=0|d*k!=0
+T_rows=((3, 8), (4, 11), (5, 14), (6, 17));lead=16*m*(m-1)/(m-2)*v^3*(k-Aprime*c);no_T_escape_under_finite_gate
+S_q3=(8/3)*v1^2*(2c-k)*(6c*v1^2+3k*v1^2+4v2);finite_hostile=k=2c;live_k=-2c-4v2/(3v1^2)
+S_q4_d_slope=(128/3)*v1^2*(3c*v1^2+v2);slope_zero=>live_k=2c=>finite_gate_failure;live_d=derived_unique
+case=4111;fresh_jets=(deg_q5,deg_q6)=(3,4);PRS_full=((4, 3), (3, 2), (2, 1), (1, 0));PRS_live=((4, 2), (2, 1), (1, 0));PRS_slope=((4, 1), (1, 0));terminal_gcd_degrees=(0,0,0);unit_invariant_wall_ideal=(q5,q6)=1;profiles_are_route_specific;MISTAKE360_unit_rule_respected=1;wall_digest=2419b7a2dec9baf12eddd926f19210a652b9a8e9f8807b50261bf5b81de0c489
+case=4111;control=(C,k)=(1+x,1);finite_gate=unit_mod_ST;rad(V)=S*T;boundary_from_disjoint_local_orders=S^3*T^8*x^9*(x-1)^0;degrees=(K,boundary,H)=(97,44,53);H_owner_disjoint_squarefree=1;H_digest=ae98818930edc795b9a7a73a957ddf2f2e70dee40695bb3ea489c9a8c16780d4
+case=3211;fresh_jets=(deg_q5,deg_q6)=(3,4);PRS_full=((4, 3), (3, 2), (2, 1), (1, 0));PRS_live=((4, 2), (2, 1), (1, 0));PRS_slope=((4, 1), (1, 0));terminal_gcd_degrees=(0,0,0);unit_invariant_wall_ideal=(q5,q6)=1;profiles_are_route_specific;MISTAKE360_unit_rule_respected=1;wall_digest=f8b33b23d6ad95a4e0d5c9b7c73ef326d5a31797d5319aa5d2ececf042bdb408
+case=3211;control=(C,k)=(1+x,1);finite_gate=unit_mod_ST;rad(V)=S*T;boundary_from_disjoint_local_orders=S^3*T^8*x^6*(x-1)^3;degrees=(K,boundary,H)=(97,44,53);H_owner_disjoint_squarefree=1;H_digest=621f57adfa31900c88fa44d0443d9baf81d199a201a4b9963d99914d134b1d21
+independent_case_digests=(('2419b7a2dec9baf12eddd926f19210a652b9a8e9f8807b50261bf5b81de0c489', 'ae98818930edc795b9a7a73a957ddf2f2e70dee40695bb3ea489c9a8c16780d4'), ('f8b33b23d6ad95a4e0d5c9b7c73ef326d5a31797d5319aa5d2ececf042bdb408', '621f57adfa31900c88fa44d0443d9baf81d199a201a4b9963d99914d134b1d21'))
+audited_consequence=finite_gate_and_d*k!=0=>ord_S(K)<=6,ord_S(H)<=3,no_T_escape,off_owner_resultant_root_multiplicity>=53-3=50;not_distinct_point_count
+scope=independent_audit_of_provisional_THM3289_and_inherited_dependencies;lanes_d0_THM3212|dne0_k0_THM3279|dkne0_THM3289;no_theorem_or_promotion_pin;not_inverse_cover_not_JC2
+source_ast=(assert_nodes=0,float_literals=0,primary_import_or_execution_paths=0)

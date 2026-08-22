@@ -1,0 +1,18 @@
+THM-3627 exact companion -- proved non-even hostile degree-six closure
+status=proved finite-exact and independently hostile-audited
+SECTION hostile polynomial and collision jets
+PASS Q_h=non_even collision_jets=orders_0_through_7_exact
+SECTION arbitrary-target-two-form rank staircase
+PASS N=0 shape=3x3 rank=2 augmented=2
+PASS N=1 shape=9x12 rank=7 augmented=7
+PASS N=2 shape=18x30 rank=15 augmented=15
+PASS N=3 shape=30x60 rank=26 augmented=26
+PASS N=4 shape=45x105 rank=40 augmented=40
+PASS N=5 shape=63x168 rank=57 augmented=57
+PASS N=6 shape=84x252 rank=77 augmented=78
+SECTION sparse degree-six left-cokernel certificate
+PASS left_cokernel=support_23 all_252_columns_killed target_debt=465700024/59319 mutation=detected
+SECTION source AST gate
+PASS ast_assertion_nodes=0
+CHECKS=53
+RESULT=PASS

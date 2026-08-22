@@ -1,0 +1,11 @@
+== THM-3540 depth-two newest-prime residue saturation ==
+inverse_factorization=one birational V(L) root + residual quadratic
+quadratic_disc_square_class=[-L(target)]
+axis=lambda=0;source=(0,0,tau);target=(tau,0,0);L=16*tau;quadratic_disc=-256*tau;tau_valuation=1
+residual_quadratic=irreducible over kappa(H);residue_action_on_predecessor_blocks=1+2=S2-stabilizer
+block_orbits=((0,), (1, 2));pair_orbits=(((1, 2),), ((0, 1), (0, 2)));THM3538_packets=4=2^2
+index_packet_formula=v(A_marked)+2v(A_off)+2v(R_marked_off)+v(R_off_off)
+image_L_ledger_sha256=7d91ccbcac8c53fac2a8c8a33a1ad250e5db207032d65632b631ad0e97d2bfa4
+quadratic_disc_ledger_sha256=59383666c2794bd46f7720da555ce44ff99533eefb3e715b1010d9545db3f9b3
+semantic_sha256=81e36ca0659eb75dc7a0f660f4c8a40ae70bf0d4fba56c08f4ef17241349488e
+status=PROVED SYMBOLIC DEPTH-TWO POINT/PAIR SATURATION;no full-centralizer, n>=3, all-level-index, or LRC claim

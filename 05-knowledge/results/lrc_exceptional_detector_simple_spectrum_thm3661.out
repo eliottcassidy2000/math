@@ -1,0 +1,20 @@
+== THM-3661 LRC exceptional detector simple-spectrum rigidity ==
+field=p:755373809845391722745761;groups:F13^2,C169;characters:169;zeta:123453826432109539554819;omega:298763986285447441216949
+parent_sha256_lf=('37a7c775096d80c4d8acd9d39fc0812e32545a963ee572ea773157d0ef6804c6', 'd24cda381808b5ec6009a47fc967f1293486e3ffb95d9153f4e4cd0bd3ed0730')
+detector=signed indicator X_plus-X_minus;support:8;mean:0
+split_fourier_zero_set=((0, 0),);nontrivial_support:168;distinct:168;determinant:669422013050837354847410
+split_fourier_sha256=9e2088a22f89c4e81ac10bd824c3e735f09f06a4e54f89a070485da7a831e61e
+split_characteristic_degree=169;squarefree=True;sha256=79074cae506283cdcdacfecd6b47f54e8464abdb415e410fc0aca89cfe296ee3
+cyclic_fourier_zero_set=(0,);nontrivial_support:168;distinct:168;determinant:540112521324494664145058
+cyclic_fourier_sha256=c579b898150678a32c36ec081f0adf5c599a770ffdd9caa4c2aaf41fa8f6c809
+cyclic_characteristic_degree=169;squarefree=True;sha256=fc36447edf23c4027e422bd4ddf49a3dede5d78c8d143767517e5e5adae121b0
+both_convolution_spectra=simple;centralizers=F[C_g],degree<169
+split_translate_span=augmentation_ideal;rank:168
+vertical_derivative_fourier_support=156;sha256=5eab6723e39aa7b96b67f803abff2108013f31bb1a0faa6b74e3eda9c0711551
+split_inverse_kernel=support:168;distinct_values:169;zero:((7,7),);sha256=57461b00c68e7debadec08403171b06bed70cf5c9b9dc9852e3e091b73b7e40c
+cyclic_inverse_kernel=support:168;distinct_values:169;zero:(85,);sha256=fde5a03b6439bd4a06186adb313827fc48e97397c8b35a87c65cd8958069bb53
+inverse_identities=h*g=delta_0-(1/169)1 in both group laws
+semantic_sha256=c9ffab0b789d087cc094e137274c6a17a2ef4c06aaa165a6969d77e404bc8ec9
+script_sha256_lf=7c8ebacaff5318b58ed1588d2e38edf1bc3c14ea81beec069d781450db986251
+scope=finite group algebra and cyclotomic detector;not physical translation/current/LRC14
+PASS

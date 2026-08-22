@@ -1,0 +1,19 @@
+THM-3418 ONE-MONOMIAL NONLINEAR-FIBER KELLER AUDIT
+arithmetic: exact Fraction polynomial algebra; assertion-independent
+gradient controls:
+  f=x^2, g=x^2: FAIL
+  f=x, g=x: FAIL
+  f=x, g=x^2: PASS
+  f=x, g=(x^2+1)^2: PASS
+  f=x, g=3: PASS
+  f=x, g=0: PASS
+nonconstant recurrence cases: 35
+nonzero degree/leading/telescoping coefficients checked: 245
+sharp hostile: P=x+x^2*z^2 has unimodular gradient and an infinite residue-one tail
+nonsplit hostile: g=(x^2+1)^2 has the same nonterminating tail over Q
+Hamiltonian sector transition/wrap checks: 525
+constant-g tame normal forms and inverses checked: 21
+classification: f=a*x+b, g=c, Q=(kappa/a)*z+H(P)
+scope: d>=2 one-monomial fiber stratum only; JC(2) remains open
+semantic_sha256=90d08019ad87638fecc375d76258e282bc6a4de17f53e01ca87802c8f05c5c92
+ALL EXACT CHECKS PASSED

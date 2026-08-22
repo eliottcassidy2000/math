@@ -2,19 +2,30 @@
 id: HYP-9033
 title: "The discriminant tower: Jelonek divisors as classification data for the Keller monoid, and the genus axis of collapse vs rigidity"
 status: >
-  OPEN synthesis with a PROVED fixed-map core: the corrected saturated
-  cuspidal law 27 c^2 L = S^2 - T^3 (MISTAKE-287) and THM-2570's global
-  normalization/conductor theorem.  THM-2576 proves the set-level composition
-  law and the two irreducible components of S_(F o F).  THM-2582 proves the
-  global degree-nine discriminant square class `[H]`: the old component `L` has
-  even valuation and `H` is the sole odd irreducible divisor.  Exact positive
-  multiplicities and higher iterates remain open.  Nothing here is a JC(2) or
-  classification claim.
+  OPEN synthesis with a substantially PROVED fixed-map core.  The saturated
+  cusp law and normalization are proved; THM-2582/3495/3498/3525/3526 give
+  the first six literal-coordinate discriminant square classes.
+  THM-3528 proves raw complete packets at every level, THM-3529 proves every
+  complete packet is a finite-sheet unit, and THM-3530 proves every raw rung
+  is an absolute image prime with generic image degree one and exactly n
+  reduced Jelonek components for F^n.  THM-3531 proves the intrinsic
+  all-level class `[(-1)^nP_(n-1)]`; THM-3533 gives newest-prime
+  normalization exponent one; and THM-3535 proves full wreath monodromy plus
+  every nonzero constant linear form primitive at all depths.  THM-3532 proves
+  full covariance on the fixed polynomial-conjugacy orbit and only one-step
+  covariance for independent source/target changes.  THM-3537 computes the
+  first old-prime normalization multiplicity `delta_2(L)=4`, its
+  `(4)(2)(1)^3` inertia, and one literal-`x_2` transverse index of length two.
+  Generic constant-form order indices, old-prime multiplicities beyond this
+  first rung, wider tame-equivalence covariance, and monoid-wide
+  classification remain open.
+  Nothing here is a JC(2) or arbitrary-map classification claim.
 source: opus-2026-07-28 (from the uniform disc law found by the
   THM-2546 referee run: disc = -4 (square)^2 L for all three
   coordinate cubics of the sporadic Keller map)
 related:
-  - HYP-9030-keller-degree-semigroup (the monoid; atoms {1,3} conjectured)
+  - THM-3438-weighted-lift-keller-degree-spectrum (S_n atoms in every grade)
+  - HYP-9030-keller-degree-semigroup (old atom spectrum refuted)
   - THM-2473 / THM-2546 (branch tower; integral-coordinate dichotomy)
   - THM-1330 (necessary monoid atlas -- gains an invariant here)
   - HYP-9031 (the D5 dictionary -- gains the genus axis)
@@ -22,6 +33,20 @@ related:
   - THM-2566 (two-chart saturated cusp atlas and parasitic-plane ledger)
   - THM-2570 (global normalization, conductor, and cusp-cylinder structure)
   - THM-2576 (image divisor and two-component nonproperness law for F o F)
+  - THM-3495 (third prime image, three components, and degree-27 square class)
+  - THM-3498 (fourth old-boundary valuation and degree-81 square-class gate)
+  - THM-3504 (fourth prime image and four-component nonproperness set)
+  - THM-3506 (five-face transform and the next old-boundary valuation)
+  - THM-3521 (fixed-R5 finite sheet and following old-boundary valuation)
+  - THM-3522 (fixed-chart complete-packet renewal propagation)
+  - THM-3528 (all-level raw complete packets and defect identity)
+  - THM-3529 (all complete packets are finite-sheet units)
+  - THM-3530 (all-level fixed raw image primes and component count)
+  - THM-3531 (intrinsic all-level discriminant square class)
+  - THM-3532 (two-sided one-step and fixed conjugacy-orbit covariance)
+  - THM-3533 (newest-prime normalization exponent one and index-square law)
+  - THM-3535 (full wreath monodromy and all-level constant-linear primitivity)
+  - THM-3537 (depth-two old-L multiplicity, inertia, and x-transverse index)
 ---
 
 # HYP-9033 -- the discriminant tower and the genus axis
@@ -72,7 +97,20 @@ Chebyshev point. The uniform coordinate law (THM-2546 + referee):
 `-4 = -(det J)^2` and integral-coordinate leads `{2, 8} = {|det J|,
 |det J|^3}` -- the whole eliminant package is `det J`-graded.
 
-## 2. The discriminant tower [set law and grade-two square class PROVED]
+Over the generic target field this has the precise square-class consequence
+
+```text
+[disc_x]=[disc_r]=[disc_z]=[-L].
+```
+
+Thus the three cubics share one quadratic sign-resolvent/Kummer extension;
+they do not supply three independent binary classes.  This synchronizes only
+the sign quotient of their root monodromy, not their cubic splitting fields,
+labelled roots, or boundary-effective sections.  The exact scope and the
+infinite-family classification boundary are separated in
+`07-reflections/jc-three-cubics-one-kummer-class-and-family-classification-boundary-codex-20260815.md`.
+
+## 2. The discriminant tower [set law and fixed grades two through four PROVED]
 
 THM-2576 proves for dominant polynomial maps, directly from escape sequences,
 
@@ -114,16 +152,138 @@ Likewise the former “powers of
 observed canonical integral leads are `8` and `512`, obtained by cubing the
 atom-level leads.
 
-At higher grades the exact set law gives the image tower, but distinctness and
-irreducibility of its successive closures remain open.
+THM-3495 proves the next fixed-map step.  With primitive absolutely
+irreducible `J=2^35L^7N(H)`,
 
-## 3. Two crevasse invariants for atomhood
+```text
+closure(F(V(H)))=V(J),
+S_(F^3)=V(LHJ),
+[Delta_3]=[-2J].
+```
 
-The atom-degree floor program (HYP-9030's Busch-crevasse analogue)
-gains a second invariant:
+The three factors are pairwise distinct and the restriction
+`V(H)->V(J)` has generic degree one.
+
+THM-3498 proves the next discriminant gate without constructing the next
+image equation.  The exposed face
+
+```text
+in(J)=-2^58 3^51 13^8 79^4 313^2 x^43(3xz-2y)^15
+```
+
+and a finite-sheet unit control give `v_L(N(J))=-43`, hence
+`G=L^43N(J)` lies in `Q[a,b,c]` and is coprime to `L`.  A squarefree
+degree-81 good-reduction fibre then makes the odd-block recursion lawful and
+gives
+
+```text
+[Delta_4]=[2G].
+```
+
+The constant class `[2]` is retained.  THM-3504 closes the image question
+without a global expansion: on `b=c=1`, a proved degree bound `542` and an
+exact squarefree `F_1009` specialization force the only possible norm
+exponent to be one.  The same specialization is coprime to the old factors.
+Consequently
+
+```text
+closure(F(V(J)))=V(G),
+S_(F^4)=V(LHJ G),
+gcd(G,LHJ)=1,
+```
+
+`G` is absolutely irreducible, and `V(J)->V(G)` has generic degree one.
+THM-3506 then derives the hidden five-face transform directly from the inverse
+chart.  The first untested pair is `(271,99)`, not `(259,87)`; a finite-sheet
+unit gives
+
+```text
+v_L(N(G))=-271,
+R_5=L^271N(G) in Q[a,b,c],
+gcd(R_5,L)=1.
+```
+
+It also proves the exposed face
+`R_5 ~ x^1699(3xz-2y)^615` in the relevant initial form.  At that theorem
+state the fifth image role, integral normalizations, global degree ledgers,
+and degree-243 separability were open.
+THM-3521 closes the next finite-sheet question by proving
+
+```text
+v_L(N(R_5))=-1699,
+R_6=L^1699N(R_5) in Q[a,b,c],
+gcd(R_6,L)=1.
+```
+
+It also transports the next top face with pair `(10663,3867)`.  THM-3522
+then proves the general fixed-chart implication
+
+```text
+complete A(e,m) + polynomial L^eN(P)
+  => complete A(7e-2m,3e-2m),
+```
+
+and consequently gives complete packets `A(1699,615)` for `R_5` and
+`A(10663,3867)` for `R_6`.  THM-3523/3527 pay the next two finite-sheet
+gates, while THM-3525/3526 prove the degree-243/729 separability gates and
+classes `[-2R_5]`, `[2R_6]`.  THM-3528 then proves raw polynomial complete
+packets at every level.  THM-3529 identifies the finite divisor as `V(F^*L)`
+and proves its order is zero on every complete packet.  Finally THM-3530
+uses the primitive top-face exponents to force every norm-image exponent to
+one, proving all raw rungs are absolute image primes and
+
+```text
+S_(F^n)=union_(j=0)^(n-1) V(P_j)
+```
+
+with exactly `n` reduced components.
+
+THM-3531 now closes the intrinsic square-class recursion at every depth.  If
+`K_n/K_0` is the degree-`3^n` function-field extension and `P_j` denotes the
+raw rung, then
+
+```text
+d(K_n/K_0)=[(-1)^nP_(n-1)].
+```
+
+This is basis-independent and makes the newest raw prime the sole odd
+horizontal discriminant divisor.  THM-3533 strengthens this at the newest
+prime: its normalization-discriminant multiplicity is exactly one, while an
+integral primitive power order has multiplicity `1+2i` for local index length
+`i`.  THM-3535 supplies the separate coordinate gate: a supported
+transposition forces full iterated wreath monodromy, and every nonzero constant
+linear form is primitive at every depth.  Its local power-order index remains
+open.  THM-3532 transports the raw packet, prime, intrinsic class, newest
+different, Jelonek tower, and each primitive observation `ell` as
+`ell o phi^(-1)` under honest conjugacy.  For affine `phi` these transported
+observations remain affine-linear (the constant is irrelevant to generated
+fields); for nonlinear `phi` they need not be standard linear forms.  A
+  general left/right tame equivalence transports one edge but inserts a middle
+  automorphism on iteration, so no broader family theorem follows.
+
+THM-3537 opens the positive old-prime ledger at its first nontrivial rung.
+At depth two, transitivity gives `delta_2(L)=3+c`, the finite-sheet unit kills
+one possible contribution, the remaining tame cubic gives `0<=c<=2`, and
+the intrinsic even parity forces `c=1`.  Hence
+
+```text
+delta_2(L)=4,                 inertia=(4)(2)(1)^3.
+```
+
+On the canonical transverse line `(2/27+t,1,1)`, the literal `x_2` order has
+discriminant exponent eight and index length two.  This is an exact witness
+that all-level primitivity does not imply local maximality.  It is not yet a
+generic coordinate-index computation or an all-depth formula for old primes.
+
+## 3. Two crevasse invariants for atomhood (spectrum repaired)
+
+THM-3438 supersedes the old atom-degree floor: weighted lifts give a primitive
+`S_n` atom in every grade `n>=3`, and numerical product grades also contain
+composites.  The two invariants below now distinguish maps *within* a mixed
+grade rather than predict which atom degrees exist:
 
 1. **Monodromy primitivity** (THM-2473: `F o F` is maximally
-   imprimitive; a primitive composite-degree monodromy = new atom).
+   imprimitive; THM-3438 realizes primitive `S_n` monodromy at every grade).
 2. **Jelonek irreducibility**: `F`'s `L` is irreducible (atom-
    consistent); a `k`-fold composite generically has `>= k` Jelonek
    components. Prediction P4: grade-`3^k` members have Jelonek sets
@@ -174,39 +334,83 @@ place to HUNT for a JC(2) counterexample instead.
 
 ## 5. Predictions ledger
 
-- P1 (grade two proved at set and square-class levels):
+- P1 (fixed component, intrinsic square-class, and constant-linear towers
+  proved all levels):
   `S_(F o F)=V(LH)` with two irreducible components (THM-2576), while the
   degree-nine eliminant has discriminant square class `[H]` (THM-2582).
-  Odd part `L*H` is refuted; exact positive multiplicities remain open.
-- P2 (VERIFIED-EXACT for the two fixed tame members): W1 and W2 obey
-  `disc=-(det J)^2(square)^2L_W`, with `L_W=L o T^(-1)`.  A general
-  gauge-covariance theorem remains open.
-- P3: any new atom candidate must simultaneously break monodromy
-  imprimitivity AND Jelonek reducibility expectations.
+  THM-3495 gives `S_(F^3)=V(LHJ)` and degree-27 class `[-2J]`.  Odd part
+  `L*H` at grade two is refuted; exact positive multiplicities remain open.
+  At grade four THM-3498 proves the square-class/localization gate
+  `[Delta_4]=[2G]`, while THM-3504 proves `S_(F^4)=V(LHJ G)` with four
+  pairwise-distinct prime components and generic degree one on the newest
+  image restriction.  THM-3525/3526 add `[-2R_5]` and `[2R_6]` at depths
+  five and six.  THM-3528/3529 give all-level complete packets and old-`L`
+  units, and THM-3530 proves the newest raw polynomial is an absolute image
+  prime of generic degree one at every depth.  THM-3531 proves the intrinsic
+  class `[(-1)^nP_(n-1)]` at every depth; THM-3533 gives newest-prime
+  normalization exponent one; and THM-3535 proves every nonzero constant
+  linear form primitive there, so all corresponding coordinate eliminants
+  have that class.  Their local indices and exact old-prime multiplicities
+  remain open.
+- P2 (PROVED fixed-orbit covariance; VERIFIED-EXACT controls): W1 and W2 are
+  target postcompositions and obey the one-step law
+  `disc=-(det J)^2(square)^2L_W`, with `L_W=L o T^(-1)`, but fail the naive
+  second-iterate transport.  THM-3532 proves all-level transport for the
+  honest conjugates `T o F o T^(-1)` and, more generally, every polynomial
+  conjugate of the fixed map.  Covariance for arbitrary tame-equivalent
+  Keller maps remains open.
+- P3 (reframed): within a mixed grade, primitivity proves atomness; Jelonek
+  reducibility is a second one-way classifier, not an atom-degree floor.
 - P4: component count of the Jelonek divisor = the grade exponent `k`,
-  generically.
+  generically.  THM-3530 proves this for the fixed raw tower at every `k`.
+  Any family-generic or monoid-wide form remains open.
 - P5: the genus axis governs the remaining JC(2) strata.
 
 ## Concurrent scorecard (typed after audit)
 
 The set law and image equation are canonized in THM-2576 and independently
 audited coefficient-by-coefficient.  THM-2582 now canonizes the exact norm
-identity and the global composite discriminant square class `[H]`; it is not
-an exact all-target multiplicity factorization.
+identity and the global composite discriminant square class `[H]`; THM-3495
+adds the third prime `J`, the three-component set, and `[-2J]`; THM-3498 adds
+the fourth old-`L` valuation, polynomial localization, degree-81 genericity
+gate, and `[2G]`; THM-3504 adds the fourth prime `G`, image multiplicity one,
+and the four-component set; THM-3506 adds the conditional five-face matrix
+`(e,m)->(7e-2m,3e-2m)`, the exact pair `(271,99)`, and the next old-`L`
+valuation/localization; THM-3513 closes the two renewal faces of `G`; and
+THM-3521 adds `v_L(N(R_5))=-1699`, polynomial `R_6`, and its exposed top
+pair; THM-3522 adds conditional fixed-chart renewal and the complete packets
+of `R_5` and `R_6`; and THM-3523 adds `v_L(N(R_6))=-10663`, polynomial,
+`L`-coprime `R_7`, and `A(66907,24255)`.  THM-3528 promotes raw packet
+polynomiality to all levels, THM-3529 promotes finite-sheet units to all
+complete packets, and THM-3530 promotes the fixed raw image-prime/component
+tower to all levels.  THM-3531 promotes the intrinsic discriminant class,
+THM-3533 fixes the newest normalization exponent at one, and THM-3535
+promotes full wreath monodromy and every nonzero constant-linear primitive
+view to all levels.  THM-3532 proves full fixed-conjugacy-orbit covariance
+with a sharp one-step/tower boundary.  Constant-view indices, exact old-prime
+multiplicities, and wider covariance remain open.
 Trace-zero persistence at depth two and the `8 -> 512` cubing pattern are
 VERIFIED for the fixed construction only.  The W1/W2 identities are exact for
-those two tame conjugates, not a classification theorem.  P4 is consistent at
-grade nine.  The next decisive test is a level-three norm law together with
-distinctness of `closure(F^2(V(L)))` from the earlier image components.
+those two target postcompositions, not a classification theorem.  Their honest
+conjugates are covered by THM-3532.  P4 is now proved for the fixed raw tower
+at every depth.  The next decisive tests are constant-view indices, old-prime
+discriminant multiplicities, and transport beyond the fixed conjugacy orbit.
 
 ## Loss ledger
 
 The saturated cuspidal law is proved for the sporadic `F` only; the raw
 pullback has the extra affine plane `c=0` described in (C).  The set-level
-composition law and odd-block square-class lemma are general, and the two
-grade-two components and their fixed-map square class are proved.  Exact
-discriminant multiplicities, the `-(det J)^2` law, and higher component count
-remain outside proved general canon.  "Generic component count" needs a
-precise genericity notion before any classification claim; none of this closes
-JC(2), classifies the monoid, or excludes G1 -- it supplies invariants and a
-hunting map.
+composition law and odd-block square-class lemma are general.  THM-3530
+proves the fixed raw component tower and its generic-degree-one image maps at
+all depths, while THM-3531 proves its intrinsic discriminant square class,
+THM-3533 proves newest-prime normalization multiplicity one, and THM-3535
+proves all-level constant-linear primitivity.  THM-3532 carries these data
+around the fixed polynomial-conjugacy orbit, provided the five-weight chart,
+raw scalar normalization, and transported observation travel too; none is a
+family-generic law.  Constant-view indices, exact old-prime multiplicities,
+the monoid-wide `-(det J)^2` law, and covariance between distinct tame-
+equivalence classes remain outside proved canon.
+"Generic component count" still needs a precise family parameter space before
+any classification claim; none of this closes JC(2), classifies maps within a
+numerical grade, or controls the weighted G1 witness -- it supplies invariants
+and a hunting map.

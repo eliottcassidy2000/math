@@ -1,0 +1,129 @@
+{
+ "session": "boxeph multifront 2026-08-03, Angle B2 continuation: fast T6 junk-flow",
+ "engine": "amm12592_transient_fast_junkflow_boxeph.py (exact clamped-Pascal flow, PROVED conjugate to rule A via T2+T6; certified block-equal vs slow at R=8..128, trace-equal vs stored slow traces at R=256,512 incl. all deaths)",
+ "D0_thresholds_exact": {
+  "128": 0,
+  "256": 1,
+  "512": 5,
+  "1024": 15,
+  "2048": 38,
+  "4096": 89,
+  "8192": 192,
+  "16384": "in [401, 416] (400 dies row 4055, 416 closes capture 10126; 408 was marching at kill, unverified)"
+ },
+ "death_rows_at_threshold_minus_1": {
+  "1024_D014": {
+   "death_row": 250,
+   "T6b_bound": 230,
+   "margin": 20
+  },
+  "2048_D037": {
+   "death_row": 508,
+   "T6b_bound": 476,
+   "margin": 32
+  },
+  "4096_D087": {
+   "death_row": 1010,
+   "T6b_bound": 978,
+   "margin": 32
+  },
+  "4096_D088": {
+   "death_row": 1014,
+   "T6b_bound": 980,
+   "margin": 34
+  },
+  "8192_D0191": {
+   "death_row": 2045,
+   "T6b_bound": 1988,
+   "margin": 57
+  }
+ },
+ "T6b_predictions_confirmed": {
+  "R1024_D0_0": {
+   "pre_registered_bound": 202,
+   "death_row": 207,
+   "margin": 5
+  },
+  "R1024_D0_8": {
+   "pre_registered_bound": 218,
+   "death_row": 227,
+   "margin": 9
+  },
+  "no_death_below_bound_anywhere": true
+ },
+ "ballot_debt_T8_confirmed": {
+  "every_closure_minus2_rows_equals_half_R_minus_1": true,
+  "examples": {
+   "1024": 511,
+   "2048": 1023,
+   "4096": 2047
+  },
+  "capture_rows_over_R": {
+   "1024_D015": 0.624,
+   "2048_D038": 0.6206,
+   "4096_D089": 0.6194
+  }
+ },
+ "growth_law_numerology_EXACT": {
+  "normalized_D0_times_1024_over_R": {
+   "256": 4,
+   "512": 10,
+   "1024": 15,
+   "2048": 19,
+   "4096": 22.25,
+   "8192": 24,
+   "16384": "(25.06, 26.0]"
+  },
+  "arithmetic_pattern": "4,10,15,19,22,24 (increments 6,5,4,3,2); only deviation on six doublings: +1 in D0 at R=4096 (89 vs 88)",
+  "R8192_prediction_of_pattern_VERIFIED_EXACTLY": 192,
+  "pre_registered_prediction_R16384": "saturation law: D0*=400 (384 dies); sublinear law: 384 closes. Probes running.",
+  "implication_if_saturates": "eps_inf = 25/1024 ~ 0.0244; plain rule A needs LINEAR slack; Estimate E false for plain rule; C* <= 1+gamma*+eps via (E-lin) would still need proof; golden constant requires bulk-modified rule",
+  "status": "CONJECTURED; six-doubling exact data",
+  "R16384_RESULT": "D0=400 DIES (row 4055 = T9'-predicted exactly; bound 4012); D0=416 CLOSES; exact-saturation-at-25/1024 law REFUTED; increments (in 1024ths): 6, 5, 4, 3.25, 1.75, then in (1.06, 2.0]",
+  "threshold_ratios_D0_2R_over_D0_R": [
+   5,
+   3,
+   2.533,
+   2.342,
+   2.157,
+   "2.09..2.17"
+  ],
+  "best_reading": "D0*(R)/R monotone increasing, ratio D0(2R)/D0(R) declining to ~2 from above: linear growth with decaying correction; eps_inf >= 401/(16*1024) ~ 0.0245, best estimate 0.025-0.028"
+ },
+ "hazard": "rule-A deaths at D0 below threshold are NEVER epoch-infeasibility evidence; the R=128 LP already showed scheduled solutions exist where greedy variants die",
+ "T4b_edge_lemma": {
+  "status": "PROVED skeleton + exact grid certificate (101 in-window points, 0 violations, R to 8192 incl. non-dyadic)",
+  "statement": "row-0 overflow block = cells [0, R-2-d0] exactly; t_lo = R-1-d0; T6b bound = 2d0-R+2 = (2gamma*-1)R + 2D0 + O(1)",
+  "closed_forms": "tau* = (1-gamma*)/gamma*; c1 = 2gamma*-1 (entropy equation satisfied identically at tau=(1-g)/g by H(p)=H(1-p))",
+  "window": "R/2 < d <= 2(R-1)/3 and d(3R-4d-4) > 2(R-2-d)(R-1-d)",
+  "certificate": "amm12592_transient_T4b_certificate_boxeph.json"
+ },
+ "T9_march": {
+  "edge_transport_identity": "PROVED+verified: w at new extreme cell = old extreme junk exactly, all runs",
+  "phi_condition": "d(d-t-1) < (t+1)(t+2) at every front in every run (front depth stays below 1/phi cap-growth threshold)",
+  "geometric_tail_trigger_FALSIFIED": "first formalization fired at row 1 on R=256..1024 deaths while the front still dawdles: the front's own junk is small (overflow tapers at the edge) and is absorbed at landing; the march is driven by the interior bulge, not edge transport",
+  "verified_invariant": "in every death run the gap decreases by exactly 1/row after the last non-decrease row (R=2048 D0=37: 480 consecutive -1 steps)"
+ },
+ "feed_phase_correction": {
+  "old_claim_falsified": "'all deaths occur in feed phase' (first sitting, R<=512 data)",
+  "exact": {
+   "2048_D037": {
+    "i_feed": 491,
+    "death": 508
+   },
+   "4096_D088": {
+    "i_feed": 974,
+    "death": 1014
+   },
+   "8192_D0191": {
+    "i_feed": 1940,
+    "death": 2045
+   },
+   "16384_D0400": {
+    "i_feed": 3870,
+    "death": 4055
+   }
+  },
+  "reading": "near-threshold marches outlive the feed; die/stall is decided by whether the march triggers DURING feed"
+ }
+}

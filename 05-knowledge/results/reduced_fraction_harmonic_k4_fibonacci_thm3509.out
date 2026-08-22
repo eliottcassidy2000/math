@@ -1,0 +1,23 @@
+== THM-3509 reduced-fraction harmonic K4/Fibonacci probe ==
+dependency LF hashes=6/6
+related LF hashes=1/1
+reduced fractions 0<m<n<=240: total=17543; primitive-raw odd-x lane=11702; content-two even-x lane=5841; max descent=238
+two Berggren trees through depth 8: level counts=[2, 6, 18, 54, 162, 486, 1458, 4374, 13122]; nodes=19682
+Stern-Brocot depth 12: nodes=4095; componentwise window mediants exact
+Farey denominator box 64: edges=2392; edge polarization exact
+primitive harmonic converse with v,z<=600: triples=255
+harmonic face: 1/u=1/v+1/z; octahedral completion=(u+v,2z-u,v+2z)
+Pythagorean current: (a,b,c)=(u+v,2z,v+2z-u); raw content=1 iff gcd(u,v) is odd
+Fibonacci rows k=2..120: unit Cassini, closed triples, mod-3 content, T6 boundary exact
+unit-Cassini hostile box x,y<=600: solutions=13; all consecutive Fibonacci seeds
+U-spine t=1..240: face=(t,t+1,t(t+1)); fixed-cusp determinant=-1
+THM-3506 sidecar: (7,3),(43,15),(271,99) -> even-x harmonic faces and halved primitive triples
+THM-3506 update: N=((4,4),(3,1)), det=-8; branch determinants are +/-1, with no rational projective repair
+hostile ancestry/parity: 1/2 -> (3,4,5), 1/3 -> (8,6,10)/2 -> leg-swapped (3,4,5)
+hostile word order: chronological AB -> 3/8, BA -> 5/8
+hostile orientation: (1,2,3,5) has Cassini -1; (2,3,5,8) has +1; same transitive T4 order
+hostile toric lift: six weights 2 satisfy antipodal products but require irrational vertex square root
+hostile operation: Stern-Brocot mediants add K4 vertices; six edge products require mixed polarization
+semantic ledger sha256=7ca802f1f8706658b62fb330504544b9c46d473db6481429cb011b078695a46e
+scope: arithmetic/representation theorem only; no physical LRC current, row exclusion, or JC transfer
+all exact checks passed

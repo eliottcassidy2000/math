@@ -1,0 +1,10 @@
+critical inverse-cover and elimination-cofactor probe
+sympy_resultant_hazard=(version=1.14.0,low_odd_first_wrong=1,high_odd_first_correct=1,swap_antisymmetry_broken=1);load_bearing_path=literal_sylvester_only
+universal_sidecar=resultant=V^3*K40;h=4R2+Vp*R1=a*y^2+b*y+c;ell=l1*y+l0=U*R1+W*R2;U-(Vp/4)*W=a^2;a*l0^2-b*l0*l1+c*l1^2=16*a^2*Res(R1,R2)
+case=4111;control=(C,Eprime)=(1+x,1);critical_scheme=Spec(K[x]/H)_graph_y=-l0/l1;degrees=(H,a,l1,l0,Y)=(53,32,80,88,fractional);gcds=(H,Hprime)=(1);(H,owner)=(1);(H,a)=(1);(H,l1)=(1);H_digest=ae98818930edc795b9a7a73a957ddf2f2e70dee40695bb3ea489c9a8c16780d4;section_projective_pair_digest=5ea209d5455f7fb13488cb11fd1e82aded97ded1f6c3681b27b3b5ebc6904a95
+case=3211;control=(C,Eprime)=(1+x,1);critical_scheme=Spec(K[x]/H)_graph_y=-l0/l1;degrees=(H,a,l1,l0,Y)=(53,32,80,88,fractional);gcds=(H,Hprime)=(1);(H,owner)=(1);(H,a)=(1);(H,l1)=(1);H_digest=621f57adfa31900c88fa44d0443d9baf81d199a201a4b9963d99914d134b1d21;section_projective_pair_digest=7436a32bbdd517c27a9ed7a977784ff64706f7ab5f7e108891d13e68995cbae2
+hostiles=non_squarefree:Res(4y^3,y^2+x)=16x^3_and_l1=-4x;squarefree_but_a_nonunit:Res(4(y^3-1),x*y^2+y-1)=16x(x^2+3),a=x;separation=root_inverse_needs_linear_pivot;unimodular_cofactor_chart_needs_a_sidecar
+source_ast=(assert_nodes=0,float_literals=0)
+case_digests=(('ae98818930edc795b9a7a73a957ddf2f2e70dee40695bb3ea489c9a8c16780d4', '5ea209d5455f7fb13488cb11fd1e82aded97ded1f6c3681b27b3b5ebc6904a95'), ('621f57adfa31900c88fa44d0443d9baf81d199a201a4b9963d99914d134b1d21', '7436a32bbdd517c27a9ed7a977784ff64706f7ab5f7e108891d13e68995cbae2'))
+consequence=fixed_squarefree_degree53_controls_have_exact_reduced_critical_graphs_and_unimodular_elimination_cofactor_pairs
+scope=FINITE-EXACT_two_controls;not_universal_affine_CE;not_Keller_primitive_cofactor;not_polynomial_inverse_cover;not_JC2

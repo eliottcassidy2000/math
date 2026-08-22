@@ -1,0 +1,22 @@
+== THM-2594 root-chart shear contrast ==
+audit_lf_sha256=8be9c1b69b33ab51ac16ce2c2a7f836aae4b811e2817b90e25921c234578c568
+slaved-minus-absolute raw differing cells=19/91; centred differing cells=28/91
+contrast decisive nonzero=True; coordinates=67/72
+contrast decisive sha256=53373710f92273a8473b8c3b047257f1a2adf10fa7c878f22fe5fae829e119f0
+contrast primitive coefficients=5184/5184; coordinate floor=60/72
+contrast primitive bundle sha256=a631fb33c0862234d5df932b804a944cd5439386908fc2e755479cf0dc0e99c7
+mixed centred cells by word slot: slaved=(0, 169, 169, 169, 169, 169, 169); absolute=(0, 169, 169, 169, 169, 169, 169)
+split prime/root=53/16; exact shear A_hat(r,s)=S_hat(r+2s,s): PASS
+nonaxial split-prime supports: slaved=576/1008; absolute=576/1008
+off both pure-root lines=528/924; by word slot=(0, 0, 132, 132, 132, 132, 0)
+root-shear support sha256=638af80f232c55d91a4e3d5b8fb802e4c7196184b6d2c9ac9324d370d53cbcf4
+pure-theta and pure-absolute synthetic line controls: PASS_ZERO_OFF_LINE
+three-axis roots mod 547: order7=81; order13=475
+primitive C7 x C13 x C13 off-both-line modes=792/792; by C7 mode=(132, 132, 132, 132, 132, 132)
+three-axis support sha256=51ea8b27b8f14f07ed7099601e80a5b36f18510cf6da9c4f815802e6eb8f05cc
+owner-marginal C7 x C13 primitive modes=72/72; sha256=31475920623317779b3c6de6334f258309256fb71734cc6ecd7ea6a6476b3e68
+fixed-absolute-root slope primitive modes=72/72; sha256=808df0ceb8616773cff1b5c12de2333d1495c07d119c57b9b49e68aa9bb2627f
+full affine slope pencil primitive modes=936/936; by slope=(72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72)
+full primitive slope-pencil sha256=e92e3f1b072db16ada1daa28925803ebd9e11658deb3532680911ed637dee85d
+scope: genuine two-coordinate chart sensitivity; not unique causation, a physical current, row exclusion, or LRC(14)
+all exact checks passed

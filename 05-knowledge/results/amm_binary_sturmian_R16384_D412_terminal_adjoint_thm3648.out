@@ -1,0 +1,16 @@
+== THM-3648 R16384,D0=412 terminal-local-failure adjoint ==
+parent_sha256_raw=(('THM3633_theorem', '936afc9acbfff61b9398502d2ea6114ec2b6f852098b06680a33fc9480decd07'), ('THM3633_script', 'a4888d29f0eb1f59debea6f1545b16928bd9278af77bfa9ae5f5480ee08bdab4'), ('THM3633_output', '6754b09009d72ecee1fb5e5e3230adf2a660578cfa34a047dd154ddb28088104'), ('THM3644_theorem', '1dcde7cf49f8dd757a21f57061fcaf59773edea0f3abc6ad3efda96adc2c6e28'), ('THM3644_script', 'ddf248e8939bbdefa7b2544bbd3df1c23e47e53e00aae4013d09149eae2ca59c'), ('THM3644_output', '28cedef2dc0b176b62f0633d93ea23a7c316993ed197743bd54f4466eb860c21'))
+adjacent=412:DIE@4116;413:CLOSED@10116;scope:THM3644 bracket
+profile=(10209, 12670, 20006);profile_digest=b4c95d7379b5f31b0d48e30aeab9d9912b1fead409a51b519aea2f3bfaa5ff43
+fatal_bits=9919;fatal_digest=da8aba4bb9ab4ab93723461c1a98380604999fda9e5bc880d1065fd1b1fd40c1
+wall=(first_negative:1565,q:1564,endpoints:(1565,4115));wall_digest=b40324f8cb11b874b043bed7a3f3c55757b0a297d4ebac0731a4f0556b0d73d8
+boundary=bits:(9920,9919);digest=cb782c23c903e5fe244baf206f745259e91122a10bd7d3feb13a6e5be0fb6a58
+active_cells=3255076;active_digest=7012e2dca4351711ac35d9842e46f48be8b2b5ce1aba9f12e68bb0784442ce5b
+phase={'h': 31, 'edge_bound': 4036, 'margin': 80, 'ell': 2551, 'ell_error': (4599, -2048), 'q_error': (-4580, 2048)}
+golden_error=(-1145+512*sqrt(5))/4096<0;square_gap=305
+versus_R8192_D191=absolute_error_improves_by_9/8192;q_defect=+18
+versus_same_scale_D400=(delta_q,delta_death,delta_h,delta_margin,delta_ell)=(48,61,-12,37,13);invoice=37-2*(-12)-13=48
+semantic_sha256=56e327478603425cc77ae386681b25d7a0ef29778f59183538e35f704609c9e7
+CHECKS=22;parent_checks=18509
+status=FINITE-EXACT TERMINAL-LOCAL-FAILURE PREFIX
+scope=no global offset monotonicity/full-entry infeasibility/asymptotic law/AMM bound

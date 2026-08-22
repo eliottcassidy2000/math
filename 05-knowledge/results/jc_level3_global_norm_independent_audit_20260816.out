@@ -1,0 +1,20 @@
+stage: fresh slice inverse and H evaluation PASS
+stage: fresh slice regular-representation norm PASS
+stage: fresh degree-86 slice factorization PASS
+stage: boundary residual reconstruction PASS
+stage: independent Rabin irreducibility certificate PASS
+== independent audit: fixed-F level-three global norm ==
+escaping weighted face: order=7, constant=83958031872
+fresh slice (b,c)=(1,1): regular-representation inverse graph 3/3 PASS
+fresh complete norm: denominator=2^35*L^7; primitive J slice degree 86, irreducible exponent one, gcd(J,LH)=1
+fresh primitive J-slice coefficient ledger sha256=f0b51842adf88383230a056f9bcdd19c434e17551940c23aea2fad2964c57447
+direct transverse values at a=2/27 and a=0 confirm the positive residue scalar
+P lambda-content over Q[tau]: 1
+P(-1,lambda) mod 449: degree 84; Rabin tests for 2,3,7 PASS
+P(-1,lambda) coefficient-ledger sha256=e4fa283a05df9285c7384f2fb2e4467e3a5e0d6c688abb32719fa394834470c5
+P(tau,0): degree 6, nonzero
+exceptional seam lambda*tau=2 is not a factor
+cross-package lead: P3.LC/P3.den = N^2(L) = J/(2^47*L^6*H) at (1,1,1)
+primitive discriminant class is [-2J], never the stale [-J]
+scope: no expanded global J and no degree-27 discriminant expansion
+all independent audit checks passed

@@ -1,0 +1,21 @@
+LRC RELATION ROLE-CHART WEIGHTED CLOSURE FINITE-EXACT SIDECAR
+STATUS: FINITE-EXACT STRUCTURAL COMPONENT OF PROVED THM-3479; INDEPENDENTLY AUDITED
+SOURCE_HASHES: (('THM-3473', 'PROVED', '05236a7338a4c92b443b2798508d407e2e4f82d942111d022064f6ec9fe86ca2'), ('THM-3479', 'PROVED-STRUCTURAL-AUDITED', '025998551e3cdf3c6e4db5c0a4f208dd32f6845970fd4729d4a276035e0fdfeb'))
+SECURITY: ('NO_ASSERT_AST', ('__future__', 'ast', 'fractions', 'functools', 'hashlib', 'itertools', 'json', 'math', 'pathlib'), ('__import__', 'compile', 'eval', 'exec'))
+RELATION_LABELS: ('c1', 'c2', 'c3', 'H', 'q1', 'q2', 'q3', 'q4', 'q5')
+RELATION: (-27, -27, -27, 20110798, -41, -27, -27, -27, 38)
+SIX_EQUAL_MINUS27_SLOTS: (c1,c2,c3,q2,q3,q4)
+ROLE_CONTRACT: delete q1 as rational relation gauge; H->u5 hub; q5->u7 leaf; blocker triple and q2/q3/q4 triple -> the two K4 wings
+Q1_GAUGE_LIFT_OF_CONSTANT_POTENTIAL: 20110674/41
+INTEGRAL_BOUNDARY: q1 projection has index 41 in Z^8; the chart is an isomorphism only over Q
+GRAPH_AUTOMORPHISMS_AND_ORDERS: (72, (1, 2, 3, 4, 6))
+ROLE_CHARTS_AND_AUT_ORBITS: (72, 1)
+COCHAIN_MAP: ker(a:Q^9->Q)/<diagonal gauge> ~= B^1(G;Q), rank 7
+ABSOLUTE_H1: dim H^1(G;Q)=6; all six cycle pairings vanish in every chart
+U_FULL_CENSUS: ('U_full', 72, 72, 30, (40, 32), 13274164826342976214399104, 271831106186322315764451840, 10967424, 4, -408230882586462649, 140608, -312, 17908964716879810126984704, (13, 27, 131, 2197, 1, 742586, 313, 53))
+U_CLOCK_CENSUS: ('U_clock', 72, 72, 36, (24, 48), 32306541335470185030222097366465869648, 34342070230891759730426145545700165040, 5026736, 4, -408094818615760385, -282469436237523288, -286, -32968453616912573701504956325888921680, (65, 655231, 658533, 2197, 5, 742586, 291, 661445))
+UNIFORM_13_ADIC_LAW: every one of 72 determinants has valuation_13 exactly 4 for each tuple
+CANONICAL_FACTORIZATION: determinant=(u5-u7 bridge weight)*(first K4 tree sum)*(second K4 tree sum)
+HOSTILE_FLAT_POTENTIAL: determinant=0
+SEMANTIC_SHA256: 1992d46a4df3a3c862e9c36ecfc4f992eea654d9373b852836c9652962ad49e7
+VERDICT: the role-labelled relation-potential transplant is unique up to graph automorphism and has robust nonzero weighted closure on both tuples, but it is an exact coboundary with zero absolute H1 and is not an endpoint current, phase map, bispectrum, physical row, or LRC(14) proof

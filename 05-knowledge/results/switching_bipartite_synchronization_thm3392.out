@@ -1,0 +1,15 @@
+THM-3392 bipartite/synchronized sign referee
+switching_normalized_classes=1099
+sign_cube_evaluations=67732
+n=2_B_over_Q_histogram=1/1:1
+n=3_B_over_Q_histogram=1/1:2
+n=4_B_over_Q_histogram=1/1:8
+n=5_B_over_Q_histogram=1/1:64
+n=6_B_over_Q_histogram=1/1:1012,6/5:12
+first_strict_order=6_FINITE_EXACT
+strict_witness_Q=10_B=12_ratio=6/5
+ternary_disjoint_support_identity=PASS
+zero_diagonal_and_symmetry_hostiles_Q=0_B=2_PASS
+sylvester_hadamard_orders=2,4,8,16,32,64_PASS
+sharpness_lower_bound=2m(m-1)/(m^2+2m^(3/2))_TENDS_TO_2
+ALL CHECKS PASSED

@@ -1,0 +1,26 @@
+BERGGREN FIXED-DRIFT WORD LANGUAGE / PARITY-SPLIT EXACT PROBE
+STATUS: VERIFIED-EXACT FINITE AUTOMATON; ASYMPTOTIC CONSEQUENCES ARE ELEMENTARY DEDUCTIONS
+SCRIPT: 04-computation/berggren_fixed_drift_word_language_parity_probe_20260816.py
+OUTPUT: 05-knowledge/results/berggren_fixed_drift_word_language_parity_probe_20260816.out
+PIN_VARIABLE_TRANSLATION_OUTPUT_SHA256: 8690f9254744ac2fae5ad700e1932f45a7b996cb88be5153d864e6e9f1a02a9a
+FIXED_LIFTS: A~=B~=G=(u |-> Ju+p), cycle type 4; C~=T=(u |-> u+p), cycle type 2^2; TGT=G^(-1)
+ACCEPTANCE: projective rho_3(w) and fixed affine rho_fix(w) have the same S4 cycle type, equivalently are point-conjugate
+PAIR_IMAGE: all S4 x D4, order 24*8=192; pure source and pure target subgroups have orders 24 and 8
+PERIOD_CHARACTER: the D4 abelianization character chi(G)=chi(T)=1 equals word-length parity; every letter crosses the 96+96 bipartition
+TWO_STEP_MIXING_GATE: B^4 and C^6 are returns, of two-step lengths 2 and 3; together with reachability of each 96-state class this gives period one for the two-step walk
+ACCEPTING_STATES_BY_PARITY: even=16 of 96, odd=18 of 96
+MINIMAL_DFA: 192 states; partition-refinement block counts (9, 85, 172, 192, 192); syntactic monoid is the regular S4 x D4 action
+SMALL_ACCEPTED_WORDS: {1: ('B',), 2: ('BB',), 3: ('AAC', 'ACA', 'BBB', 'CAA'), 4: ('AABC', 'AACB', 'ABCA', 'ACBA', 'BAAC', 'BBBB', 'BBBC', 'BBCB', 'BCAA', 'BCBB', 'CAAB', 'CBAA', 'CBBB')}
+B_SPINE_POSITIVE: every B^n passes under the identity point calibration
+LEVEL_COUNTS_A_0_TO_29: (1, 1, 1, 4, 13, 46, 113, 421, 1121, 3667, 9801, 33166, 88893, 299248, 796489, 2690239, 7173601, 24211333, 64565297, 217930552, 581169293, 1961325202, 5230140609, 17651769337, 47071591041, 158866686871, 423643779001, 1429800073474, 3812799847933, 12868194012436)
+ORDER_14_RECURRENCE_LAGS_1_TO_14: (0,7,0,7,0,71,0,213,0,189,0,1701,0,-2187); 192+ consecutive residual gates vanish, licensing all n by Cayley-Hamilton
+GENERATING_FUNCTION_NUMERATOR: -729*x**13 - 243*x**12 + 243*x**11 - 162*x**10 - 99*x**9 - 45*x**8 - 56*x**6 + 11*x**5 - x**4 - 3*x**3 - 6*x**2 + x + 1
+GENERATING_FUNCTION_DENOMINATOR: (x - 1)*(x + 1)*(3*x - 1)*(3*x + 1)*(3*x**2 + 1)*(3*x**2 - 2*x + 1)*(3*x**2 + 2*x + 1)*(9*x**4 - 2*x**2 + 1)
+PARITY_ASYMPTOTIC: a_n=(17/96)3^n-(1/96)(-3)^n+O(3^(n/2)); even levels tend to 1/6, odd levels to 3/16
+SHORTLEX_NATURAL_DENSITY_NO_GO: at complete level boundaries, density tends to 11/64 along even levels and 35/192 along odd levels
+SHORTLEX_HARMONIC_DENSITY: two-level logarithmic averaging gives sum_{m<=N,accepted}1/m=(17/96)log N+o(log N), even though natural density fails
+FIBONACCI_FIXED_DRIFT_GATE: (BA)^r passes iff r=0 mod 4; A(BA)^r and C(BC)^r pass iff r=3 mod 4; equivalently k mod 12 in {0,1,2}
+FIBONACCI_INDEX_HARMONIC: the fixed-drift passing indices have coefficient 1/4 in the harmonic series; actual Fibonacci/triple-coordinate reciprocal weights still converge
+TYPING: the point gauge may still depend on the composite word, but the affine target drift is fixed globally; this is not one simultaneous branch calibration and has no LRC/Jacobian consequence
+SEMANTIC_SHA256: e4b54dc2edb32e2852037018e38c380eabf47619e1b156e4511f82d9f5420da0
+VERDICT: retaining THM-3339's drift doubles the Fibonacci gate from mod 6 to mod 12 and turns the clean one-third tree density into an exact parity-split language whose harmonic density survives at 17/96

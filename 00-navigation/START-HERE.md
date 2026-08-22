@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-02; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-08-18; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -16,11 +16,14 @@ Run the bounded packet before reading large files:
 python3 agents/start_session.py --topic "<target statement or object>"
 ```
 
-Then read the relevant frontier section, the active guardrails, and the exact theorem or evidence it links. `SESSION-LOG.md`, `TANGENTS.md`, reflections, old frontier snapshots, the full mistakes ledger, and the giant hypothesis index are searchable history—not mandatory warm-up.
+Then read the routed frontier, guardrails, and theorem. Logs and reflections are searchable history, not warm-up.
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) open.** THM-2941/3210 reduce the reflected sufficient-family residual to `561` bodies, `m>=2,3<Q/m<6`, off `4/5`, gcd `<=5`. THM-3135 blocks uniform H lanes; THM-3150 closes fixed H dilation rays from `62`. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
+1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`.
+   THM-3378 leaves ledger/wall/families `372913/109/12` at `z1=216`.
+   THM-3349--3360 close the 561-body lane; THM-3366 leaves projected rows/counts `4,056/200,069,517,203` (`k=2`) and `1,897/2,548,893,834` (`k=3`).
+   THM-3368 adds a Horn tariff, not an LRC proof; the rung, physical entry and LRC remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -45,23 +48,29 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    cofinite aperiodic return set with infinitely many zero odd constant terms.
    HYP-8930's fixed-support unique-channel lemma survives. HYP-8931 is vacuous:
    `lambda=0, delta=-1, F=empty`; `98/116` is a bounded census, not a theorem (MISTAKE-240).
-9. **Whole-packet Frobenius is transferable but not an LRC proof.** THM-2041
-   preserves exact-order/parity/conductor packets. LRC still needs a nonzero
-   safe seed and a pointwise exit.
-10. **Tournament structure is operational.** Order-join makes Hamiltonian-path
-   count multiplicative and triangle count additive (THM-1862); signed Rédei
-   data is join-multiplicative (THM-1936); zeta lives on the strong core
-   (THM-1926). THM-2195 makes transitivity the scalar substitution-product boundary.
-   THM-3121 restores the path-cover kernel; `C3` has three shells. Unmarked transport remains open; scalar invariants are exact only through `n<=6`.
-11. **A reciprocal integer sequence has two profiles.** THM-2000/2005/2352 separate support, multiplicity, and q-adic thresholds; THM-2438/2433/2500 give the Poisson--Newton transform and finite-hole classification.
-    THM-3055/3056 give divisor upsets/Hankel minors; THM-3124/3131/3142/3143 close quadratics through `r<=998`; THM-3148 gives fixed-offset resultants; THM-3260 closes the ternary-Cantor chamber and explains `D=201`; THM-3126 compresses six LRC carriers.
-12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is the exact new counterexample. THM-2063/2071 close linear/quadratic source fibers; THM-2084/2118/2102 close cubics; THM-2202 removes every twice-odd finite pole.
-    THM-2214/2247 close the stated terminal degrees through `14`; THM-2371/THM-2376/THM-2406 close the inherited degree-`18` branch; THM-2671/2683/2692 and THM-2778 close the inherited nonsplit degree-`22` branch and every complete chosen-sheet split exact-prefix degree. THM-2796 exposes the live carrier `A(R_Q/q)=VG`.
-    THM-3057/3059 make quartic Jelonek parity tame infinity-inertia sign; THM-3066 retains only the cofactor product, and THM-3064's pointed norm does not exclude `C3`.
-    THM-3070--3201 terminate the local `C3` decoder. THM-3230 recovers `Lambda` from a fixed sheet; THM-3270 gives the mark-holonomy gate, while THM-3271--3274 decode the fixed centered scalar but prove that its chain-rule cofactor is independent. Geometric realization remains open.
-    THM-3123 classifies the last two abstract heptic passports and finds four hostile-audited `S7` maps, but does not supply Keller-chart entry.
-    THM-3133 excludes simple response zeros; THM-3140 blocks only its explicit `R=8` odd-bipole.
-    Degrees `>=26`, nonpolynomial prefixes, chart entry, raising/descent, uniform Keller-`C3` exclusion, other branches, `JC(2)`, and `DC(2)` remain open.
+9. **Whole-packet Frobenius is not an LRC proof.** THM-3255/3267 give rank and
+   phase; THM-3285 gives a literal `R-M-R` horn. Its FINITE-EXACT `13`-label
+   normal atlas has two middle completions but no outer co-support. A two-axis
+   atom, current and LRC(14) remain OPEN.
+10. **Pair structure must be typed.** THM-3315/3364/3369/3372 give local
+    tournament/walk currents; THM-3423 gives a Cayley disjointness graph, not
+    a tournament. None supplies nonlocal LRC arcs or physical time.
+11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
+    separate collision, phase and harmonic address. THM-3425 makes joint
+    period plus parity the primitive half cap-six breaker. Composite rank
+    seven and FC(3) remain open.
+12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.
+    THM-3544/3550 internally force hypothetical pencil degrees composite
+    `>=6` and height `>=8`; Nagata's cited degree theorem sharpens every
+    pencil degree to `Omega>=3`, while arXiv:2204.14178 gives reduced height
+    `>=108` and leaves only `(72,108)` below `125`.
+    THM-3543--3557 give the collision/repair atlas: quotient repair begins at
+    `(4,5)`, displayed graphs are closed, and cubic/packet/mixed-width lanes
+    remain sharply typed but open.
+    THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
+    THM-3212--3419 give the later infinity, deck, boundary, and linear-`z`
+    atlases; THM-3418 closes sparse `f(x)+g(x)z^d`, not general fibres.
+    THM-3367 tames line images only; `JC(2)`/`DC(2)` remain OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
@@ -73,48 +82,16 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 14. **The peel obstruction is quantized.** THM-2048 decomposes discrepancy into
     the old `6mu^2` floor plus an exact integer fiber-occupancy variance tax. It
     strictly improves the uniform tail test but is not a universal proof.
-15. **Every counterexample is in a finite labelled code/deck/fan atlas.**
-    THM-2051 forces a support-`3..5`, height-`2^20` relation. THM-2052 forces
-    relation rank at least eleven: rank twelve is a finite maximal-minor box,
-    while rank eleven gives finite two-anchor stars. THM-2053 adds the
-    exact transverse deck `D_N(m)` and a sufficient determinant gate whose
-    strict failure carrier is an indexed union of 26 open tangent disks.
-    THM-2055/2056 turn the determinant side into a signed-hull normal fan and
-    finite Kelvin/Farey certificate. THM-2057 closes two AP one-tail families:
-    `{1,...,11,13}` core by `12a`/`14a` clocks and an `84a|w` binding branch,
-    and the `{1,...,12}` core by `13a`/`14a` clocks and a `182a|w` deep-well
-    branch. THM-2058 splits reduced-order packets and leaves one coprime
-    longitudinal interval per fixed bad denominator/owner; THM-2059 joins
-    arbitrary-clock core/tail packets by CRT but does not force overlap.
-    THM-2060/2064 reduce capacity to a dyadic seam; THM-2061/2062 fold it and
-    add a hereditary wheel; THM-2065 makes circuit-free templates finite;
-    THM-2066 closes divisor-complete cores through `24`; THM-2069 proves the
-    deletion-code/cogirth wheel; THM-2074 proves density-one strict LRC(14).
-    THM-2072/2073/2075/2077 retain the dyadic terminal and owner addresses;
-    THM-2078/2080 force size `7..10`, maximum `>=25`, and depth `<=4`.
-    THM-2081--2087 make the rank-seven relation bound effective at `57` and
-    close modular/lacunary branches; THM-2088--2093 reduce all no-pair cut
-    lanes to finite banks; THM-2091/2094/2096 close the four-`7|q` branch and
-    strengthen tree energy; THM-2097 makes every depth-four rank-seven
-    template finite template-by-template. THM-2100 upgrades the bounded
-    guard-ratio lane to one uniform full-row box
-    `max(S)<=22,822,941,298,192,042`. THM-2126 computes the exact rank-eight
-    pair spectrum: the universal strict tree-margin target is false, and scalar
-    divisor-complete one-deletion-primitive rows have no uniform positive
-    margin. Those families fail newer clock/content gates; the actual finite
-    rows and cover-equality branch remain undischarged. THM-2114--2138 route
-    the live rank-eight residue through finite-ring needles, content, and
-    all-depth scalar closure. THM-2139/2141 close profiles `(1,5,2)` and
-    `(2,5,1)`; the exact fivefold residual is `(1,6,1)`, `(1,7,0)`, `(2,6,0)`,
-    `(3,5,0)`. THM-2140 gives depth/polar invoices; THM-2148/2168 give the
-    Fano classification and top-two depth majorization; THM-2168 now eliminates its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
-    THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current.
-    THM-2196/2199 prove rank twelve; THM-2208/2212 give bounded anchors and exact rulers per rank-eleven plane, while THM-2203 fixes scalar transport at `16/208`.
-    THM-2198--2258 leave `165` depth-one rows. On the `150` strict rows, THM-2323--2334 reach exact target aggregates and reduce nonzero-target survival to `169` coordinate twists.
-    THM-2337/2340 identify pure-word landing with main effects or interaction; THM-2343/2344 reduce zero-only failure to a shifted endpoint convolution inverse. THM-2344's strengthened hostile proves that an arbitrary nonconstant word on one aligned active axis still cannot break it.
-    THM-2368 retains root modes but admits zero-drift hostiles. THM-2378/2381/2382/2385 empty hard `W=k=1` and every `k=2` septimal alternative except `(t,b)=(1,0)`; retain its multiplicity-excess word. THM-2379/2380/2384 leave owner-typed dual incidence open.
-    MISTAKE-260 forbids extracting an anchored nonzero Fourier sum from an unordered inverse-root count. MISTAKE-261 corrects the separate quotient loss: THM-2356's planar graph tomography detects refined target--jet support, but coarse target landing is a row sum with a `28,393`-dimensional kernel. THM-2363's derived detector dominates coarse energy only in the forward direction and is not yet a lawful physical probe.
-    THM-2452--2542 close spatial phase/anchor/clock seams but not arrival. THM-2763 replaces the old `169` carrier quotient by exact address `(r,k,l)`, `r.W=l-k`: size `13^4` two-sided and `13^3` for imbalance. Neither is THM-2625's endpoint plane or a factor allocation. Live: attach the labelled sidecar to one determinant sector and all-unit `B(q)`.
+15. **Every counterexample is in a finite labelled code/deck/fan atlas.** THM-2051/2052 force support `3..5`, bounded height, and rank at least eleven; THM-2053/2055/2056 give the transverse deck, determinant gate, signed fan, and finite Kelvin/Farey certificate. THM-2057--2059 close two AP-tail families and split/join clock packets, without forcing overlap.
+    THM-2060--2100, including THM-2081--2087 and THM-2088--2093, fold the
+    dyadic seam, retain owner addresses, and give the uniform box
+    `max(S)<=22,822,941,298,192,042`.
+    THM-2114--2168 leave four signatures and scalar `5+3`; THM-2187--2385
+    retain slope/current, prove rank twelve, and leave `165` depth-one rows
+    plus an owner-typed multiplicity word.
+    MISTAKE-260/MISTAKE-261 block inverse-root nonvanishing and expose the
+    `28,393`-dimensional landing kernel; THM-2363/THM-2368 remain sidecars.
+    THM-2452--2763 close seams, not arrival; sector attachment remains live.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.
@@ -125,13 +102,14 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2196; effectivize circuit carries while preserving owner/tie, positive-Haar current, joint continuation, and equality skeleton |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2196 and THM-3285; effectivize circuit carries while preserving owner/tie, endpoint origin, positive-Haar current, joint continuation, and equality skeleton |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
-| NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111, formal interfaces, guardrails |
-| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2158/2180/2181/2189/2194/2202 |
+| NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111/3365, formal interfaces; FC(3) open |
+| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2202/3279/3289/3367 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
-| Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005 and their frozen outputs |
+| Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3288/3359/3499/3510; distinguish index, level count, value, and address |
+| Pythagorean/Pell/power sums | [THM-3357](../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md) | THM-3333--3336/3339/3341/3345--3347/3353/3356/3358/3370/3375/3376; retain content/unit, branch order, ancestry, positivity chamber, and consumer labels |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177/2191; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
 | Formalization | relevant theorem's `formalization` field | `00-navigation/*FORMALIZATION*`, then a clean build/axiom audit |
 | Research method | [`RESEARCH-PROTOCOL.md`](RESEARCH-PROTOCOL.md) | [`META-PATTERNS.md`](META-PATTERNS.md), relevant reflections |

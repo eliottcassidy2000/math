@@ -1,0 +1,12 @@
+RULE30_SCALE_FIXED_PERIOD_SCHEME_NO_GO_20260821
+status=PROVED_LINEARIZATION_CONSEQUENCE+FINITE-EXACT_SPECTRA;no_prize
+dependency_sha256=82c177c9db3c112f0d9bd7e493d8cfd6db53926ba46151b0d9d2d2ef61199d81
+operator=(T_n*A)_j=A_(2j)+A_(2j+1);odd_indices_mod_n
+spectral_records=((3,'(lambda-2)*(lambda-1)*(lambda+1)',1,1,1,0),(5,'(lambda-2)*(lambda-1)*(lambda+1)*(lambda**2+1)',1,1,1,0),(7,'(lambda-2)*(lambda-1)**2*(lambda**2+lambda+1)**2',1,2,0,4))
+period5_saturated_geometry=projective_points_only
+period7_saturated_geometry=projective_points_and_projective_lines;genus_zero
+physical_filter=only_lambda_2;constant_amplitude;G_j=-1;gap=1
+obstruction=scale_fixed_repeats_gap_1;THM-3512_no_consecutive_gap_1
+semantic_sha256=715a42a990d290582c66a42721549c35616067530635b4db6f3dea4cf97aaa59
+scope=periods_3_5_7_exact_scale_fixed_profiles_only;no_multiscale_cycle
+ALL CHECKS PASSED

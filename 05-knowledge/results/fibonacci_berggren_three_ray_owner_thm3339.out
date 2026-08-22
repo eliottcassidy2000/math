@@ -1,0 +1,21 @@
+THM-3339 VERIFIED-EXACT
+golden_pell_search_n_max=999; exact_converse_proved_by_descent
+fibonacci_indices_checked=2..201
+ray_counts={'(BA)^r': 67, 'A(BA)^r': 67, 'C(BC)^r': 66}
+raw_content_two_count=66
+parameter_identity=G^3=AB; normalized_identity=T*G^3*T^-1=CB
+root_to_child_words=(BA)^r | A(BA)^r | C(BC)^r
+residue_cycle=(b,c,a)->(b,a,c)->(a,b,c)->(a,c,b)->(c,a,b)->(c,b,a)
+cassini_sign=(-1)^k; six_edge_middle_swap=03<->12
+four_vertex_controls=(1,2,3,5),(2,3,5,8): same transitive T4
+root_window_hostile=(1,1,2,3): tie
+s4_edge_images=24; odd_images=0; isolated_middle_swap_in_image=0
+matching_image=6; kernel=4; lifts_per_matching_action=4
+owner_fixing_S3_lift_pairs=4; transitive_S4_lift_pairs=12
+lift_profile={(6, 1, 2, 2): 4, (24, 0, 2, 4): 4, (24, 0, 4, 2): 4, (24, 0, 4, 4): 4}
+v4_matching_hostile=(1,2,3,5)->(2,1,5,3)
+affine_owner_period=0,p,p,r,q,q; drift=p,0,q,p,0,q
+affine_branch_image_order=8; linear_image=2; translation_kernel=4
+signed_current_stabilizer=1; decoder=t=(s+sigma)p+sigma*q
+BA_current_hostile=(39,80,89,89)->(39,80,89,-89)
+ALL CHECKS PASSED

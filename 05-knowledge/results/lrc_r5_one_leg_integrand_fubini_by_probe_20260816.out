@@ -1,0 +1,20 @@
+== r=5 one-leg literal-BY integrand Fubini probe ==
+status=FINITE-EXACT ONE-LEG EXTERNAL-PRODUCT FUBINI; not same-stalk temporal transport; LRC(14) OPEN
+dependencies=((spectrum,5f3fbf08bef6f9a61e684f0f7616e80e1dbbda4f6bb2ed4ca3788d3b8b53d65a,cd55336bb1dfe5f37f020c242c4bca5b7c6be339ec57e95d69e10bbe68d9dbaa),(target,f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc,d52c9f0a56c14a83e1e6b175c7b725314c99f09d44509bc8582847a5857f7da6))
+split_embedding=(prime=572252886246508880869,zeta7=353818603057943120846,zeta13=505438565698892403012)
+literal_BY_interval_census=(pieces=7108460,atom_entries=6591,exact_equalities=6591)
+literal_BY_formula=root^(w_B*169*L)-root^(w_B*169*R) for each retained half-open [L,R)
+independent_routes=(direct endpoint primitive,fast_endpoint_sum): PASS
+guarded_pair_bank_Fubini=(entries=19773,sha256=c28119c8b54f47e5b7a46f1508fbba604b0e3997eaadb05b03ad28edd9aed468): PASS
+source_common_ancestry=(pair_support=362/1521,entry_support=5150/138411,tensor_sha256=39d7a0b4e5b2d8b85631d682ed1967091e44dc41e17b33a77e7184d3dc93e0cf)
+retained_output_Fubini=(coordinates=1183,coordinate_sha256=989dafc220a6d09aeacfce4af0e9a4fe13eedacc79fa66032ea39bc107fd8efb,spectrum_sha256=5f173227c5e203309f61bdfd9d47cc64a3b49ae8f14abd0f7bfc469eda278533): PASS
+all_13_residue_spectrum_shapes=(91,1,6,12,72)
+fixed_relation=(1,0,6);mixed_witness_(1,1)=218019411785559321795
+hostile_right_guard_deleted=(pair_mismatches=8112,relation_shape=(91, 1, 6, 12, 72),sha256=9ceaf0e9a5a028b42fbcfd0079d7b40bff524fe6924e1d92c5a82c7a076205be)
+hostile_BY_phase_erased=(pair_mismatches=8788,relation_shape=(91, 1, 6, 12, 72),sha256=3c72547ce2a85ce61532f7792077eae3f8fa49e76ed1d13797a1297ae68d948f)
+hostile_common_base_marginals=(cell_erased=(13, 1, 0, 12, 0),owner_erased=(7, 1, 6, 0, 0))
+variables=source ancestry y is integrated inside M at fixed (ell,c); BY endpoint v is separately interval-integrated; AX endpoint x/Q is still preintegrated; alpha,beta,tau,t are finite sums
+typing=lawful exact iterated/product-space Fubini with every guard and source coordinate retained; NOT a diagonal/common-stalk temporal map
+nonconsequence=no THM-2449/2512 row,grouped exact address,U_full/U_clock same-tuple identification,current,row exclusion,or LRC(14) closure
+semantic_sha256=6b87dc762517773254e3388dffd0bed9a5101685730dd3b93ebf4c639f224e49
+all exact checks passed

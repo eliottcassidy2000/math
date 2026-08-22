@@ -1,0 +1,26 @@
+THM-3461 EXACT DETERMINISTIC COMPANION
+status=PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
+dependency_count=8;reference_fraction_cells=16742
+identity=B_(q,r)=D_(q,r)(1/(2q));selected_h=r_mod_2q;A_i=r_i;P_ij=0
+q=11|owners=(1, 2, 3, 5, 7, 9)|d=1|g=1|widths=(4, 11, 4, 4, 4, 4)|y_radius=2/63|multiplicity=((1, 11),)|private=(2, 1, 2, 2, 2, 2)
+masks=1:(0, 10);2:(5,);3:(3, 7);5:(4, 6);7:(1, 9);9:(2, 8)
+q=27|owners=(3, 15, 18, 21)|d=3|g=3|widths=(6, 6, 27, 6)|y_radius=1/49|multiplicity=((1, 27),)|private=(6, 6, 9, 6)
+masks=3:(0, 8, 9, 17, 18, 26);15:(3, 5, 12, 14, 21, 23);18:(1, 4, 7, 10, 13, 16, 19, 22, 25);21:(2, 6, 11, 15, 20, 24)
+q=51|owners=(1, 11, 12, 18, 23, 34, 35)|d=1|g=1|widths=(2, 2, 9, 9, 2, 51, 2)|y_radius=1/245|multiplicity=((1, 42), (2, 4), (3, 3), (4, 2))|private=(6, 6, 4, 4, 6, 10, 6)
+masks=1:(0, 1, 2, 3, 47, 48, 49, 50);11:(4, 9, 18, 23, 27, 32, 41, 46);12:(4, 8, 12, 21, 25, 29, 38, 42, 46);18:(5, 8, 11, 22, 25, 28, 39, 42, 45);23:(4, 6, 15, 24, 26, 35, 44, 46);34:(1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43, 46, 49);35:(1, 14, 17, 20, 30, 33, 36, 49)
+rank_q11=6|banks0=1/1/a18736e88910bc168ddfd39a413f4b9323802c5a4303d33f74dd50dd5cfca72a|banks1=6/6/28d34ffb622310bb2be4577d0cd0f439eedb8fa24db5b5c689e1cb517a9c59ca|lower0=(1, 0, 0, 1, 1)|lower1=(1, 0, 0, 6, 6)|positive=((1, 2, 3, 5, 7, 9), (7, 6, 0, 6, 6))
+rank_q27=4|banks0=11/10/6969c6c558a8818eb3acc90347b87256371318837ba545313ffe9f3d2096e52c|banks1=23/22/2686f6ec556885173b9731bbe1121cd61aa4daa44837864c137f7dfceed483dc|lower0=(1, 0, 0, 11, 10)|lower1=(1, 0, 0, 23, 22)|positive=((3, 15, 18, 21), (5, 4, 0, 23, 22))
+rank_q51=7|banks0=25/25/39acaa98d2681a62cdb01741308e1bae351771d13c4ad82f5dfa6aad53204378|banks1=49/41/6f8f9af310dd0bc5c389ace9b80f61bc7ed14e607d587f40887a198f2fa1986d|lower0=(10, 9, 0, 25, 25)|lower1=(149, 150, 2, 49, 41)|positive=((6, 19, 24, 25, 34, 43, 49), (10, 9, 0, 49, 41))
+rank_q83=9|banks0=41/41/30f7bf55f1e34c8d5019deaeff76a7e48d3ca631b311cf10a6af058e14a62f56|banks1=82/82/26f2d5c24d283e6756dcd204e2f105a7ddc8d313bbca8cc7ba05dab759d5126e|lower0=(6, 5, 0, 41, 41)|lower1=(27992, 28809, 818, 82, 82)|positive=((1, 13, 14, 27, 41, 42, 55, 69, 70), (10046, 11307, 1262, 82, 82))
+q83_witness=(1, 13, 14, 27, 41, 42, 55, 69, 70)|multiplicity=((1, 66), (2, 12), (3, 5))|private=(6, 6, 8, 10, 8, 6, 8, 8, 6)
+physical_q11=row(1, 2, 3, 5, 7, 9, 11)|D=8820|open_non_grid_y=193/378|core1_safe=true
+physical_q27=row(1, 3, 15, 18, 21, 27)|D=980|open_non_grid_y=149/294|core1_safe=true
+physical_q51=row(1, 11, 12, 18, 23, 34, 35, 51)|D=1487640|open_non_grid_y=1227/2450|core1_safe=true
+same_mask_hostile=q11:owners(1,23),mask_equal,radii=('2/77', '2/1771')
+q27_ancestry=3*(1, 5, 6, 7);primitive_breaker=1
+q51_affine_hostile=1_and_35_equal_mod34;lift_characters_mod3=(0,1);masks_differ
+crt_7x13_entry=((11, 1, 5083, 1), (11, 2, 138580, 2), (27, 3, 57135, 1), (27, 15, 215475, 2), (51, 1, 19279, 1), (51, 11, 1538069, 2));masks_and_zero_wedge_preserved
+current_boundary=one_projective_ray;all_pair_wedges_and_tree_tariffs_zero;endpoint_current_not_determined_by_mask
+semantic_sha256=97647a6cf82b23de0ddb962b6b2b714d6ca9904408af87e001fa37d0c9b37e90
+scope=fixed half-twist/ZMC and exact q83 rank only; no endpoint current, LRC row, decrement, spectral closure, or LRC(14) conclusion
+VERDICT=PASS

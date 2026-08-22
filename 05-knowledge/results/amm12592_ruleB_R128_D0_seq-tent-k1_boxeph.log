@@ -1,0 +1,10 @@
+RULE-B R=128 D0=0 [seq-tent-k1] start
+  i=   0 d=  76 sig1=    1 headbits=   1 maxbits= 124 junkbits= 127 ov0=1 ov1=1 t=    0.0s
+  i=  32 d=  95 sig1=   33 headbits=   1 maxbits=  86 junkbits=  89 ov0=0 ov1=1 t=    0.4s
+  i=  64 d= 114 sig1=   61 headbits=   1 maxbits= 137 junkbits= 140 ov0=0 ov1=0 t=    0.9s
+  i=  96 d= 133 sig1=   29 headbits=   1 maxbits= 204 junkbits= 207 ov0=1 ov1=1 t=    1.7s
+  i= 125 d= 151 sig1=    0 headbits=   1 maxbits= 237 junkbits= 241 ov0=1 ov1=1 t=    2.7s
+  i= 126 d= 151 sig1=   -1 headbits=   1 maxbits= 237 junkbits= 241 ov0=0 ov1=1 t=    2.7s
+  i= 127 d= 152 sig1=    0 headbits=   0 maxbits= 238 junkbits= 242 ov0=1 ov1=0 t=    2.7s
+RULE-B R=128 D0=0 [seq-tent-k1] NEGATIVE: {'die_row': 128, 'const_bits': -1, 'residual_L1': 6494730658412293789096434832477786733431652831690965481297251953998508292, 'elapsed': 2.7}
+trace: /tmp/math-wt-boxeph-multifront/05-knowledge/results/amm12592_ruleB_trace_R128_D0_0_seq-tent-k1_boxeph.json

@@ -1,0 +1,58 @@
+combined R=8:
+  marker word (gamma_i(1)): 0---000
+  #(-1 rows) = 3 (need R/2-1 = 3), all in {0,-1}: True
+  max cell saturation |y|/box = 3/3 ~ 1, nonzero cells = 15 / 49
+  cancellation: max_t log2(S_t/|g_t|) ~ 1 bits at t = 6; mean bitdiff = 0.1
+  bitdiff profile (t = 0, 1, ...): 0 0 0 0 0 0 1 0
+
+combined R=16:
+  marker word (gamma_i(1)): --00-----000000
+  #(-1 rows) = 7 (need R/2-1 = 7), all in {0,-1}: True
+  max cell saturation |y|/box = 1/1 ~ 1, nonzero cells = 88 / 213
+  cancellation: max_t log2(S_t/|g_t|) ~ 2 bits at t = 15; mean bitdiff = 0.1
+  bitdiff profile (t = 0, 1, ...): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+
+combined R=32:
+  marker word (gamma_i(1)): -00--0-----0-0-0-0000000-0---00
+  #(-1 rows) = 15 (need R/2-1 = 15), all in {0,-1}: True
+  max cell saturation |y|/box = 1/1 ~ 1, nonzero cells = 218 / 887
+  cancellation: max_t log2(S_t/|g_t|) ~ 16 bits at t = 31; mean bitdiff = 1.5
+  bitdiff profile (t = 0, 2, ...): 0 0 0 0 0 0 0 0 0 0 0 0 0 1 5 13
+
+R8 ruleB:
+  marker word (gamma_i(1)): 0---000
+  #(-1 rows) = 3 (need R/2-1 = 3), all in {0,-1}: True
+  max cell saturation |y|/box = 3/3 ~ 1, nonzero cells = 13 / 49
+  cancellation: max_t log2(S_t/|g_t|) ~ 1 bits at t = 6; mean bitdiff = 0.1
+  bitdiff profile (t = 0, 1, ...): 0 0 0 0 0 0 1 0
+
+R16 ruleB:
+  marker word (gamma_i(1)): --0000000-----0
+  #(-1 rows) = 7 (need R/2-1 = 7), all in {0,-1}: True
+  max cell saturation |y|/box = 1/1 ~ 1, nonzero cells = 54 / 213
+  cancellation: max_t log2(S_t/|g_t|) ~ 4 bits at t = 15; mean bitdiff = 0.4
+  bitdiff profile (t = 0, 1, ...): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 4
+
+R128 ruleB D0=0:
+  marker word (gamma_i(1)): 00--000--000--000--000--000--00---------------------------------------------------000000000000000000...
+  #(-1 rows) = 63 (need R/2-1 = 63), all in {0,-1}: True
+  max cell saturation |y|/box = 75/75 ~ 1, nonzero cells = 1339 / 14568
+  cancellation: max_t log2(S_t/|g_t|) ~ 36 bits at t = 127; mean bitdiff = 2.0
+  bitdiff profile (t = 0, 8, ...): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 14
+
+R256 ruleA D0=1:
+  marker word (gamma_i(1)): 0--000--000--000--000--000--000--000--000--00---00---00---00----------------------------------------...
+  #(-1 rows) = 127 (need R/2-1 = 127), all in {0,-1}: True
+  max cell saturation |y|/box = 153/153 ~ 1, nonzero cells = 4636 / 58786
+  cancellation: max_t log2(S_t/|g_t|) ~ 65 bits at t = 255; mean bitdiff = 3.1
+  bitdiff profile (t = 0, 16, ...): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 17
+
+R512 ruleA D0=8:
+  marker word (gamma_i(1)): 0--000--000--000--000--000--000--000--000--000--000--000--000--000--000--000--000--00---00---00---00...
+  #(-1 rows) = 255 (need R/2-1 = 255), all in {0,-1}: True
+  max cell saturation |y|/box = 313/313 ~ 1, nonzero cells = 15930 / 238716
+  cancellation: max_t log2(S_t/|g_t|) ~ 109 bits at t = 511; mean bitdiff = 4.3
+  bitdiff profile (t = 0, 32, ...): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 24
+
+interpretation: bitdiff ~ log2 of gross/net mass; linear-in-R growth =
+deep cancellation is intrinsic to winning constructions; bounded = shallow.

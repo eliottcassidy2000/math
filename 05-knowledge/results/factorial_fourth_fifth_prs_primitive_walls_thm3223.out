@@ -1,0 +1,14 @@
+THM-3223 exact fourth/fifth resonant PRS wall tower
+dependency_pin=THM-3217
+input_top_jets=11 exact_rational_pivots=2 PASS
+direct_moment_controls=9 coordinate_checks=18 PASS
+rho4_factors=(d-1)^12*H^4*J^2*W13 denominator_2_power=28
+rho5_factors=(d-1)^29*H^10*J^4*U^2*W20 denominator_2_power=69
+primitive_degrees=13,20 irreducible_mod_primes=47,29 parity_mod2=1,1
+pell_d_minus_1_exponents=1,2,5,12,29
+normalization_scalings=1,1,3,7,17,41,99
+offset2_p41_table=(6,15,2,0) offset2_p43_table=(14,0,24,23)
+anchored_zero_return_p43=23
+wall_clutch_controls=24 whole_row=PASS next_row_zero=PASS
+fixed_offset_extension=finite_exception_set_through_row5
+scope=selected_pivots_not_full_row_or_arbitrary_depth

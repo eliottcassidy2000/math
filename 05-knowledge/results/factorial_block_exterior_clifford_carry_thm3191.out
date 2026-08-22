@@ -1,0 +1,9 @@
+FACTORIAL-BLOCK EXTERIOR CLIFFORD CARRY EXACT CONTROL
+one_block_parameter_checks=300
+complementary_chart_vector_checks=38336
+carried_local_block_checks=456
+global_fixed_parameter_product_checks=392
+one_block_cubic=D^3=s^2*Delta*D
+global_p_primary_state_smith=1,p^H,p^H
+global_p_primary_exterior_smith=p^H,p^H,p^(2H)
+ALL EXACT CHECKS PASSED

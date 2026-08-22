@@ -1,0 +1,13 @@
+== AMM fixed R16384,D0=400 checkpointed adjoint sidecar ==
+parent_sha256_lf (('THM3626_theorem', '174ea12b9b3e3679295d31210a77b1cd6ab093f380f8e62c7437d31023606a36'), ('THM3626_script', '548e5ddaad0b7220687468552a448f3021ad16b3162a2c11409d139d31ee3be5'), ('THM3626_output', '4319f792b1c69b84ea30496ef0500d3666da73575d4de267a60428d5c757300b'), ('THM3616_theorem', '48116058545de3e8614d7fede8159baaa6d900315d55894d7669c48c4f1f11bf'), ('THM3616_script', 'c6753be05870700747aadb3f43e41a24e80f84f37b79e07fe70960f71a9e864a'), ('THM3616_output', '519e52f14ad8dc8cb42a182d769b00847eed1a19783958184adf36f87c8d679f'))
+R8192_control {'epoch': (8192, 191), 'death': 2045, 'profile': (5089, 6312, 9987), 'profile_digest': 'a595c188bf04c1397bed449f23bfda56a13a9d6143d4d6f48ff23bb1a10d2df1', 'fatal_bits': 4937, 'fatal_digest': '1e78264343b58c90f5f0cb24302813b284cba1f9ba4ca60eb7740a74a15a37a9', 'wall': (774, 773, (774, 2044)), 'wall_digest': 'a0ee6805424226ade0ec4ee728689106cb4a44b18df8de19938449fad98171f9', 'boundary': ((4939, 4930), 'd42558aa87d6c8e57f739abdb54758ec192d0c6081d3ab850ce04c746cedecc3'), 'active': (808356, 'dcbbf6f02e3c4b2d01ad0d8e35a6e8b46a73fa8d08c07969306adc544c4a5ba5'), 'phase': {'h': 31, 'edge_bound': 1988, 'margin': 57, 'ell': 1271, 'ell_error': (2295, -1024), 'q_error': (-2299, 1024)}}
+R16384_target {'epoch': (16384, 400), 'death': 4055, 'profile': (10197, 12622, 19994), 'profile_digest': 'e9bca4cece8530ea385422cc8958b83e5e2e60a25d4c44d93338d523941febed', 'fatal_bits': 9874, 'fatal_digest': '03c36f2c031cfcb59f07d49f7838f82c80905f4947a53d1ad754d4ef200bd254', 'wall': (1517, 1516, (1517, 4054)), 'wall_digest': '3b443de3b7116591e37e6d0a2e8a96e4b716204028b190da4c860f741cc53461', 'boundary': ((9870, 9874), '6ecf448b01a6225777b389d9293084e5c706c7cdf80fdfdf87f859b9e05d787f'), 'active': (3221991, 'de05e4c1cd3748884a8866af9fb274ae01b3d749c80bc63dcfe63806f73a87e6'), 'phase': {'h': 43, 'edge_bound': 4012, 'margin': 43, 'ell': 2538, 'ell_error': (4586, -2048), 'q_error': (-4628, 2048)}}
+golden_error_R8192 (-2299+1024*sqrt(5))/8192<0|square_gap:42521
+golden_error_R16384 (-1157+512*sqrt(5))/4096<0|square_gap:27929
+error_deterioration E16384-E8192=15/8192>0
+dyadic_defects q:-30|death:-35|depth:-4
+semantic_sha256 08450a048b8e1379d3945e9464021b53203bb10f82638daf6bbfca076bd71a00
+script_sha256_lf a4888d29f0eb1f59debea6f1545b16928bd9278af77bfa9ae5f5480ee08bdab4
+CHECKS 27594
+SCOPE fixed failed R16384,D0=400 prefix; D0=400 not known terminal; no AMM bound
+PASS

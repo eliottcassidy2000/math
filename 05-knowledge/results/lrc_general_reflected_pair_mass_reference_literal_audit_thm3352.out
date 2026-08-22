@@ -1,0 +1,6 @@
+LRC GENERAL REFLECTED PAIR MASS AUDIT
+status=VERIFIED-EXACT hostile + seeded literal interval audit
+hostiles 7 equal_level_checks 1039584 random_seed 0 random_checks 5000 checks 1044591
+semantic_sha256 b960b450d70fbfb5521b3d90eb4d8064fcb126fe7be4fd81f3c2beebbbffa4a0
+engine_sha256 da941a4267147d5442be81ae81880742d2f6b901bfc1d20fb667822402a2950e
+audit_sha256 a5091bb697e03bdf59fd6f31f61bea99d02a2d628e64d66851b0a8b1a8f02ba4

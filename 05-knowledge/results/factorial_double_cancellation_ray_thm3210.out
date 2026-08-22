@@ -1,0 +1,17 @@
+THM-3210 FACTORIAL EXTERIOR DOUBLE-CANCELLATION RAY EXACT CONTROL
+amplitude_degree_rows=[(1, (0, 1, 2, 3, 4)), (2, (0, 1, 2, 3, 4)), (3, (0, 1, 2, 3, 4)), (4, (0, 1, 2, 3, 4))]
+length3_locus=v=(n+3)(d-n-2)/(2d[(4n+9)d-(n+3)(4n+7)])
+length3_locus_rows=[(1, '2*(d - 3)/(d*(13*d - 44))'), (2, '5*(d - 4)/(2*d*(17*d - 75))'), (3, '(d - 5)/(d*(7*d - 38))'), (4, '7*(d - 6)/(2*d*(25*d - 161))'), (5, '4*(d - 7)/(d*(29*d - 216))'), (6, '3*(d - 8)/(2*d*(11*d - 93))'), (7, '5*(d - 9)/(d*(37*d - 350))'), (8, '11*(d - 10)/(2*d*(41*d - 429))'), (9, '2*(d - 11)/(d*(15*d - 172))')]
+thm3186_hostile_is_locus_point=(n=1,d=5,v=4/105)
+ray=(d=n+4, v=(n+3)/(3(n+4)(2n+5)))
+ray_Delta=(2*n + 3)/(3*(2*n + 5))
+ray_beta_n=n*(n + 1)*(n + 4)*(2*n + 3)/(3*(2*n + 5))
+ray_c_(n+1)=2
+ray_E2=2  ray_E3=0  ray_E4=0
+ray_E5=-4*(n + 2)*(n + 3)**2*(n + 4)*(2*n + 3)*(10*n**3 + 101*n**2 + 336*n + 366)/(27*(2*n + 5)**2)
+visibility_profile_lengths_2_3_4_5=('visible', 'invisible', 'invisible', 'visible')
+positivity_bank_n=1..40
+triple_cancellation_shared_resultant=[(1, '2160*d**2'), (2, '8960*d**2'), (3, '81000*d**2')]
+rational_double_ray_uniqueness=[(1, [5]), (2, [6]), (3, [7])]
+scope=exit_time_amplitude_only_no_PRS_depth_or_GMC2_consequence
+ALL EXACT CHECKS PASSED

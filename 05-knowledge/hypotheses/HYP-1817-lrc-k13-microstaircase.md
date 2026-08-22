@@ -146,10 +146,20 @@ nonzero blocker.  The unique binary extremal is the coordinate-6 half-turn,
 which still misses `56` candidates across eight explicit alpha cells and the
 seven odd shifts.
 
+The 2026-08-03 full SAT classification now proves the finite quotient target:
+the zero class is the only full blocker.  A one-hot full-shift encoding and an
+independent four-bit reflected-shift encoding agree; ungauged enumeration
+finds exactly the `14` scalar ramps.  What remains in this hypothesis is no
+longer finite blocker classification.  It is the typed lift from a candidate
+speed tuple to this residue-cell system, including gcd/endpoint cases and a
+uniform cell-width consequence on the prime grids used by the public
+verifier.
+
 ## Test Plan
 
 1. Build an exact SAT/backtracking checker for the full `n=14` micro-staircase
    cell arrangement, not merely random search, after excluding scalar ramps.
+   **Done with an independent encoding audit.**
 2. Classify non-scalar residue vectors by the smallest cell width that resolves them.
 3. Prove a uniform lower width bound for all non-scalar, non-gcd tight-lift vectors.
 4. If the width bound is too small, isolate the exceptional vectors and compare
@@ -171,3 +181,7 @@ seven odd shifts.
 - THM-364.
 - `04-computation/lonely_runner_scalar_excision_s371.py`.
 - `05-knowledge/results/lonely_runner_scalar_excision_s371.out`.
+- `04-computation/lrc14_microstaircase_scalar_ramp_sat_classification_opus_20260803.py`.
+- `05-knowledge/results/lrc14_microstaircase_scalar_ramp_sat_classification_opus_20260803.out`.
+- `04-computation/lrc14_microstaircase_binary_audit_microstaircase_audit_agent.py`.
+- `05-knowledge/results/lrc14_microstaircase_binary_audit_microstaircase_audit_agent.out`.

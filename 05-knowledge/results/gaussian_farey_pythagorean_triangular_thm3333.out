@@ -1,0 +1,28 @@
+THM-3333 exact consequence audit
+ray_bound=48
+primitive_projective_rays=713
+odd_odd_parity_vertices=235
+unordered_ray_pairs=253828
+farey_edges=1423
+oriented_mediant_faces_checked=1423
+farey_face_raw_contents=1,1,2; normalized_edge_weights=1,1,2
+fixed_owner_scalar_updates=5692
+kelvin_gate_controls=5 pass=3 fail=2
+euclid_parameter_rows=435
+graph_clique_controls:
+  params=(2, 1) triple=(3, 4, 5) r=1 parameter_graph_h1=1 parameter_clique_h1=0 overlap=3 graph_relative_h1=2 clique_relative_h1=0
+  params=(3, 2) triple=(5, 12, 13) r=2 parameter_graph_h1=2 parameter_clique_h1=0 overlap=5 graph_relative_h1=8 clique_relative_h1=0
+  params=(4, 1) triple=(15, 8, 17) r=3 parameter_graph_h1=3 parameter_clique_h1=0 overlap=7 graph_relative_h1=18 clique_relative_h1=0
+  params=(4, 3) triple=(7, 24, 25) r=3 parameter_graph_h1=3 parameter_clique_h1=0 overlap=7 graph_relative_h1=18 clique_relative_h1=0
+  params=(5, 2) triple=(21, 20, 29) r=6 parameter_graph_h1=6 parameter_clique_h1=0 overlap=13 graph_relative_h1=72 clique_relative_h1=0
+signed_in_exradius_and_polygonal_rows=ALL
+hostile_norm_collision_65: Lorentz pairings 2 versus 32
+hostile_primitive_normalization: Lorentz pairing 2 -> 1
+hostile_unordered_triple: adjacent spinors -> same 3-4-5
+hostile_edge_orientation: scalar 2 both ways; face det -4/+4
+hostile_det_two_shell: Lorentz pairing 8
+hostile_ambient_addition: (8,16,18) != (16,30,34)
+hostile_leg_swap: Lorentz pairing 2 -> 9
+hostile_arbitrary_nulls: pairing 2 without raw spinor edge
+hostile_berggren_edge: determinant 2; Lorentz pairing 8
+ALL CHECKS PASSED

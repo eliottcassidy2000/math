@@ -6,8 +6,8 @@ If gamma = 0.598 closes at R = 8,16,32,64 with small D0, then C <= 1.598 < 8/5 =
 for those epochs -- an improvement on the repo's standing upper bound, and evidence
 that the archimedean floor log_5(5 phi^2) is TIGHT.
 """
-import sys
-sys.path.insert(0, '/tmp/math-wt-coinC2/04-computation')
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # repo 04-computation (was a deleted session worktree)
 import amm12592_gamma35_beam_deathstar as beam
 from fractions import Fraction as F
 import time

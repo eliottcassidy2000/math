@@ -1,0 +1,15 @@
+THM-3435 dyadic fibre-grid decomposition exact companion
+status=VERIFIED_EXACT_COMPANION_FOR_PROVED_THM3435;all_modulus_literal_half_twist_identity;no_rank7_or_LRC14_conclusion
+decomposition=Q=2^a*N_Nodd;r=2^b*s_with_b=min(v2(r),a);b=a_gives_full_2^a_pullback;b<a_gives_M=2^(a-b)=7q+c_and_each_N_fibre_has_2^b*(q+extra_y)_points
+extra_mask=extra_y_is_H_N^(c/14)(s+qN);c_cycles_1,2,4_with_active_depth_mod3;local_points_are_a_cyclic_interval_in_the_n=s*t_coordinate
+strict_boundary=active_dyadic_branches_never_hit_1/14_endpoints_by_2_adic_valuation;inactive_pullbacks_can_hit_and_retain_strict_exclusion
+boolean_branch=depth1_and_depth2_preimage_masks_are_pairwise_disjoint_and_fuse_to_radius_2^k/14;depth3_eight_branch_family_covers_every_sheet_with_multiplicity_1_or_2;each_sheet_has_a_local_C8_order_but_global_overlap_is_only_across_the_4plus4_parity_bipartition
+formula_audit=(limit,sheet_cells,fibre_rows,active_rows,inactive_rows,inactive_endpoint_checks,remainder_histogram,parity_cycle,active_endpoint_hits,inactive_endpoint_example)=(192, 4755520, 449888, 12476, 24580, 24580, (((2, 0, 2), 336992), ((4, 0, 4), 84224), ((8, 1, 1), 21056), ((16, 2, 2), 5312), ((32, 4, 4), 1472), ((64, 9, 1), 704), ((128, 18, 2), 128)), ((0, 1, 1), (1, 2, 0), (2, 4, 0)), 0, (14, 2, 0))
+branch_audit=(limit,multiplicity_histogram,first_depth2,first_depth3,first_seven_fail,first_seven_cover)=(192, (((1, 0, 0), 256), ((1, 0, 1), 18080), ((1, 1, 1), 192), ((2, 0, 0), 48), ((2, 0, 1), 4464), ((2, 1, 1), 144), ((3, 1, 1), 216), ((3, 1, 2), 936), ((3, 2, 2), 24)), (2, 0, (0, 1, 2, 3), 2), (4, 0, (0, 1, 2, 3, 4, 5, 6, 7), Counter({1: 4})), (16, 1, 0, 14), (8, 1, 0, 8))
+hostiles=(first_not_a_section,first_equal_count_different_affine_lift,inactive_strict_endpoint)=((8, 1, (2,)), (8, 1, 3, (2,), 129, 36), (14, 2, (0, 6, 7, 13)))
+information_loss=fibre_counts_and_extra_mask_do_not_locate_the_affine_cyclic_interval;a_tournament_orientation_is_not_intrinsic;depth2_has_missing_edges_and_depth3_global_conflict_graph_is_a_subgraph_of_K4,4_with_a_sheet-dependent_local_C8_sidecar
+scope=literal_half_twist_masks_only;no_owner_cap_classification;no_arbitrary_common_time;no_physical_current;LRC14_remains_open
+semantic_sha256=bb9fce50f5ee51048eb02a79aef83151a1593b8b16ef73992243b88d8726545e
+script_sha256_lf=a79a7757c93bb903c10a157a9bce4b942c74548a25dd395157f273d8f8c67cb9
+reproducibility=standard_library_only;no_elapsed_fields;all_truth_gates_survive_python_O
+commands=python -B 04-computation/lrc_dyadic_fibre_grid_decomposition_thm3435.py;python -B -O 04-computation/lrc_dyadic_fibre_grid_decomposition_thm3435.py

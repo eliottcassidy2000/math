@@ -1,0 +1,37 @@
+{
+  "session": "boxeph multifront 2026-08-03, Angle B2 transient theorem",
+  "conjugacy_verified": {
+    "vs_independent_ruleA_implementation": [8, 16, 32, 64, 128],
+    "vs_stored_witness_json": {"256": {"D0": 1}, "512": {"D0": 8}},
+    "parity_fires_all_runs": 0
+  },
+  "T4_initial_window_D0_0": {
+    "columns": ["R", "d0", "t_lo", "in_frac_milli", "worst_over_bits"],
+    "rows": [[128, 76, 51, 337, 119], [256, 153, 102, 337, 242],
+             [512, 306, 205, 332, 491], [1024, 612, 411, 329, 988],
+             [2048, 1224, 823, 328, 1983], [4096, 2449, 1646, 328, 3974],
+             [8192, 4898, 3293, 327, 7955]]
+  },
+  "death_table": {
+    "columns": ["R", "D0", "bound_d0_minus_tlo_plus_1", "death_row", "margin"],
+    "rows": [[256, 0, 52, 61, 9], [512, 0, 102, 107, 5], [512, 1, 104, 110, 6],
+             [512, 2, 106, 113, 7], [512, 3, 108, 116, 8], [512, 4, 110, 121, 11]],
+    "note": "R512 D0=1..4 death rows 110/113/116/121 reproduce the old D0scan exactly; gap d_i - tmax closes at exactly 1 per row after an initial dawdle equal to the margin"
+  },
+  "closures": {
+    "columns": ["R", "D0", "capture_row", "last_clamped_row", "ballot_debt_rows", "half_R_minus_1"],
+    "rows": [[128, 0, 81, 80, 63, 63], [512, 5, 312, 311, 255, 255],
+             [512, 6, "closed (no trace kept of capture row in .out, trace json has it)", null, null, null],
+             [512, 8, 319, 318, 255, 255]],
+    "D0_thresholds_exact": {"8-128": 0, "256": 1, "512": 5},
+    "new_witness": "amm12592_witness_R512_ruleA_D0_5_boxeph.json"
+  },
+  "i_feed": {"128,0": 31, "256,0": 63, "512,0": 128, "512,5": 125, "512,8": 123, "1024,0": 256, "1024,16": 246},
+  "constants": {
+    "tau_star": "0.672275938184554746 (root of (1-g*tau)H(g(1-tau)/(1-g*tau)) = g*H(tau), g = gamma*)",
+    "one_minus_tau_star": "0.327724061815445254",
+    "c1_death_delay": "gamma*(1-tau*) = 0.195974871330880299",
+    "front_load_ratio_behind_crossover": "(1-g*tau*)/(g*(1-tau*)) ~ 3.0505",
+    "cap_ratio_at_crossover": "tau*/(1-tau*) ~ 2.0514"
+  }
+}

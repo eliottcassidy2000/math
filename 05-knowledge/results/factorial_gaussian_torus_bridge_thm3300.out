@@ -1,0 +1,13 @@
+THM-3300 FACTORIAL-GAUSSIAN TORUS BRIDGE EXACT CONTROL
+bridge=L_fac(x^alpha)=alpha!=E[prod |z_i|^(2 alpha_i)], cov 1/2
+bridge_rows=63
+moment_map=<f(|z|^2)>_{S^(2n-1)} = <f>_{Delta_(n-1)}
+moment_map_rows=43
+cyclic_closed_form=<(sum omega^j s_j)^m> = (n-1)! m!/(m+n-1)! [n|m]
+closed_form_rows=12
+eigenspace_dims=(deg1,deg2,deg3)=(1,2,3)
+cyclic_exclusions=[(1, 1, 'explicit'), (2, 2, 'gcd'), (3, 3, 'resultant gcd mod p')]
+resultant_degrees=(Res36,Res39)=(18,27)
+projective_controls=deg2_infinity=(1/11340,1/43783740); deg3_c0_zero_degrees=(3,6,9); gcds=(constant,constant); endpoints_nonzero
+scope=HFC route analysis only; no FC(n) proof or refutation
+ALL EXACT CHECKS PASSED

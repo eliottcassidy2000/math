@@ -2,6 +2,13 @@
 
 **Status:** VERIFIED-EXACT (rational-function identities + numeric radical-inverse
 verification + overdetermined exact trace fits; slots marked pending).
+
+> **NON-RADICAL SUCCESSOR (THM-3438 / MISTAKE-396).**  The statements below
+> about the sporadic cubic and its iterates remain exact, but “every known
+> counterexample is radical-invertible” is superseded.  The weighted degree-five
+> Keller map has geometric monodromy `S_5`, so it is an explicit non-radical
+> inverse.  An `A_5` realization remains interesting but is no longer the first
+> Abel--Ruffini-obstructed Keller map.
 **Author:** kind-pasteur-2026-07-20-S128c101 (HYP-8150). Input: the owner's two
 explicit fiber families. Builds on THM-1310 (fiber geometry), THM-1335
 (trisection modulus, trace-polynomiality), mac-mini THM-1340 (engine
@@ -52,15 +59,14 @@ tower is: one square root (the discriminant — the √(−L) resolvent class of
 THM-1310) followed by one cube root — Cardano = the trisection of THM-1335 made
 algebraic; over {g=0} it degenerates to Family 2's rational-plus-quadratic form.
 
-**Consequence for the salvage catalog / realization program (new dichotomy):**
-every explicit JC counterexample currently known (F, its conjugates, the towers
-F^{∘m} — solvable iterated-S₃ monodromy) is **RADICAL-INVERTIBLE**: fibers are
-expressible in radicals. The transitive group census leaves `A₅` as a
-possible degree-5 monodromy (not a realized Keller cover); an
-icosahedral Keller map would be the first **Abel–Ruffini-obstructed**
-counterexample — non-injective AND non-radical. "Radical-invertible or not" is
-a new coarse invariant slicing the realization program at exactly the
-solvable/unsolvable line.
+**Consequence for the salvage catalog / realization program (corrected
+dichotomy):** `F`, its conjugates, and the towers `F^{∘m}` are
+**RADICAL-INVERTIBLE** because their iterated-`S_3` monodromy is solvable.
+THM-3438's weighted degree-five map instead has full `S_5` monodromy and is
+the first explicit **Abel--Ruffini-obstructed** Keller inverse in the repo.
+“Radical-invertible or not” remains a genuine coarse invariant, while `A_5`
+is now a separate alternating-monodromy realization problem rather than the
+threshold witness.
 
 ## (3) The trace module (fit method, 18+ exact samples each, overdetermined)
 

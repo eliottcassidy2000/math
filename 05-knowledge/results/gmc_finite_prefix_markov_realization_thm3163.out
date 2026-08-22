@@ -1,0 +1,16 @@
+THM-3163 universal finite-prefix Markov realization
+dense_n4_terminal_states=16
+dense_n4_reachable_states=16
+dense_n4_kernel_normalization_checks=16
+dense_n4_positive_transitions=32
+selector_pole_multiset=(1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 5, 5, 6, 7, 8)
+selector_unlabeled_terminal_states=7
+selector_labelled_terminal_states=29
+selector_reachable_prefix_states=232
+selector_kernel_normalization_checks=232
+selector_positive_transitions=728
+selector_unlabeled_projection=EXACT
+selector_independent_deletion_support=IMPOSSIBLE
+same_terminal_law_distinct_order_kernels=2
+scope=abstract_state_dependent_chain_not_response_transport
+all_exact_checks=PASS

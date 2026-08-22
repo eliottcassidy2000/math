@@ -1,0 +1,18 @@
+LRC14 DISCONNECTED-LOW FINITE HEAD EXACT CERTIFICATE
+status=FINITE-EXACT physical pair-floor census; no affine-tail claim
+contexts=2530;groups=1304;rulers=29
+channels_by_g=((1,148110),(2,36978),(3,16286));channels_total=201374
+physical_rows=509476220;dyadic_screen_bits=56
+target_bound_rows=498526403;phase_a_exact_rows=10949817;candidate_band_groups=22819986;phase_b_exact_rows=36276868
+phase_a_minimum=92/7645@(g,P,Q;L,cell,e,f)=(1,4,5;168,90,12,6)
+global_minimum=92/7645@(g,P,Q;L,cell,e,f)=(1,4,5;168,90,12,6)
+global_minimum_minus_1/294=19403/2247630
+failures_below_1/294=0;first_failure=none
+seed_control=92/7645@(1,4,5;168,90,12,6);phase_a_failures=0
+summary_rows=201374
+conclusion=every finite-head physical mass is at least 1/294 iff failures_below_1/294=0
+context_sha256=efea6bd97522fe1c31a5a88ca9f3223f9e7a8c08e3be85c493e9f62fdfaf06e4
+channel_sha256=04b3b49cc072e73aa7472e9dd8573e8240c715d4bc5badb1cbd90fa92b233c28
+probe_count=99;probe_semantic_sha256=779775924578a481977044abcfd2f859190712585d48adfdc583e22add3c4392
+channel_summary_sha256=85ff8655e647585c9113bdf204807d62e1c9e0243e50ec93971b592f9b46949e
+compiler_source_sha256=d7d6e97a760a2c03e124aa24c1f7f3adaec52f19491dd4ce5a5fa54e3e2af151

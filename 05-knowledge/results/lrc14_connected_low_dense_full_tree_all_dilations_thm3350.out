@@ -1,0 +1,19 @@
+LRC14 CONNECTED-LOW DENSE FULL-TREE COMPILER
+status=VERIFIED-EXACT finite universe + analytic all-channel tail
+selector_sha256=cd8b08087f0f7e1e0c0c7d0be673629c7c2702c170c5c1e771e1d76df1d3cd1c
+bodies=649
+dense_profiles=(((1, 2, 3, 4, 6, 12), ((0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 4), (3, 5), (4, 5)), ((0, 5),)), ((2, 3, 4, 6, 8, 12), ((0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 5), (2, 3), (2, 4), (2, 5), (3, 4), (3, 5), (4, 5)), ((1, 4),)))
+universal_debt_rank_rows=467280
+universal_debt_max_row=(Fraction(186636088362, 11773143757375), (1, 2, 3, 4, 6, 12), 168, (6, 5, 4, 3, 2, 1))
+two_high_floor=2/105;strict_gap=112842806764/35319431272125
+debt_semantic_sha256=e919f2bc07fae564d518cad9547f639c2693fbf723d3bc96dbc1b4c962f2cba7
+dense_assignments=934560
+selected_tree_types=145763
+tail_threshold_hist=((1, 934335), (2, 223), (3, 2))
+weakest_homogeneous_limit_margin_row=(Fraction(148335185300354078659, 1924191320819535630720), (2, 3, 4, 8, 10, 12), 1680, 900, (1, 2, 3, 4, 6, 12), (6, 4, 2, 1, 12, 3), ((1, 5), (0, 3), (3, 4), (0, 1), (2, 4)), Fraction(3163, 40320))
+head_checks=227;failures=0
+max_threshold_rows=((3, (1, 2, 3, 4, 6, 12), 168, 90, (1, 2, 3, 4, 6, 12), (4, 12, 2, 6, 3, 1), ((4, 5), (1, 4), (1, 2), (3, 5), (0, 4)), Fraction(14171, 114240)), (3, (1, 2, 3, 4, 6, 12), 168, 90, (1, 2, 3, 4, 6, 12), (12, 6, 4, 2, 3, 1), ((3, 4), (4, 5), (2, 4), (0, 5), (1, 5)), Fraction(355261, 2242240)))
+weakest_head_row=(Fraction(1359521303047, 13562237063235), (1, 2, 3, 4, 6, 12), 168, 90, (1, 2, 3, 4, 6, 12), (4, 3, 2, 1, 12, 6), ((1, 4), (0, 3), (3, 4), (1, 2), (0, 5)), 1, Fraction(11222022859, 103961399091), Fraction(1148868469148, 149184607695585), Fraction(1571, 14112), 2)
+assignment_semantic_sha256=9d185440b228327d438fa70cabbc5474fe40613abed0d728bf915f6ff1a78fca
+head_semantic_sha256=9a955420daa11e583e92384288e16506b346335d580032cf95f1a37e71a7c053
+conclusion=dense-low exceptional shapes close at every common dilation

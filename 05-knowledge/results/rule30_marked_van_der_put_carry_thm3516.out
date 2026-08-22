@@ -1,0 +1,12 @@
+RULE30_MARKED_VAN_DER_PUT_CARRY_THM3516
+status PROVED_VERIFIED_EXACT_INDEPENDENTLY_AUDITED
+packed_universe (0, 4096) exact_untruncated_rows 4097
+valuation_scales (0, 12) v_prefix (1, 3, 4, 6, 7, 9, 15, 16, 24, 25, 27, 29, 34)
+path_universe (1, 32) period_checks 32 normalized_checks 32 van_der_put_terms 80 block_terms 342
+n6_carry row_J_W (6409, 3204, 801) J_terms (12, 3192) J_mod64 (12, 56) direct_xor_lowercarry_center (1, 1, 0)
+projective_origin_checks 12 calibrated_gauge 3
+power_section_depths (0, None, 0, 2, 9, 23, 49, 112, 232, 487, 997, 2019, 4062)
+universal_B_power_sections 13 input_depth_rule q_minus_1
+power_center_prefix (1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1)
+unary_future_output_q_range (1, 256) total_classes 66048 class_rule 2q_plus_1
+ALL CHECKS PASSED

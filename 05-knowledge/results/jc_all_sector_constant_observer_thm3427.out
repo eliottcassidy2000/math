@@ -1,0 +1,21 @@
+ALL-SECTOR CONSTANT OBSERVER PACKET -- EXACT HOSTILE REFEREE
+closed selected nonwrap primitives: 176
+nonwrap ordered multiplicity/character profiles: 585
+nonwrap profiles removed by degree/root-count gate: 505
+exact nonwrap Q(t)-linear systems solved: 80
+wrap residue profiles: 1554
+wrap zero-residue vectors: 5
+wrap rational primitive identities: 192
+wrap evaluation-at-t splittings: 28
+local pole/intersection coefficients: 11700
+polynomial leading-diagonal identities: 49590
+two-infinity incompatibility checks: 6318
+minimal integral arrow checks: 2896
+exact resonant defect completions: 74
+sharp multiroot nonwrap hostiles: 4
+surviving nonwrap direct profiles and q(x,t):
+  d=2, sigma=1, exponents=(3,): q=(x + 1)/(t + 1)
+  d=4, sigma=2, exponents=(3,): q=(x + 1)/(2*(t + 1))
+  d=6, sigma=3, exponents=(3,): q=(x + 1)/(3*(t + 1))
+multiroot constant-observer survivors (all characters): 0
+CLASSIFICATION VERIFIED ON DECLARED FINITE UNIVERSES

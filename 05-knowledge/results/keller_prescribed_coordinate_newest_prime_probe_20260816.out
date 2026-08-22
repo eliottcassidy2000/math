@@ -1,0 +1,305 @@
+{
+  "finite_field_rows": [
+    {
+      "L_point_count": 961,
+      "missing_depths": [
+        2,
+        3
+      ],
+      "prime": 31,
+      "witnesses": {
+        "1": {
+          "collision": {
+            "u": {
+              "coefficient_digest": "13342def3a6d684e1a9ff2ad2ba608e18dc73e2755252696d9d05ed8c3fdae8d",
+              "degree": 9,
+              "derivative_gcd": "U",
+              "derivative_gcd_degree": 1,
+              "pairwise_coprime": true
+            },
+            "y": {
+              "coefficient_digest": "03fd6aced5eb3dbafeedc83005539478334d54c2e5410e7a0e3826a9921e01a4",
+              "degree": 9,
+              "derivative_gcd": "Y + 9",
+              "derivative_gcd_degree": 1,
+              "pairwise_coprime": true
+            },
+            "z": {
+              "coefficient_digest": "59ed0497bf26568581176b49c3f8d76223e50251750116eebe09e20cba4401ff",
+              "degree": 9,
+              "derivative_gcd": "Z",
+              "derivative_gcd_degree": 1,
+              "pairwise_coprime": true
+            }
+          },
+          "eta": [
+            5,
+            24,
+            4
+          ],
+          "level": 2,
+          "preceding_blocks": 3,
+          "q0": [
+            1,
+            1,
+            26
+          ],
+          "split_quotient_crosscheck": true,
+          "unique_L_block": true
+        }
+      }
+    },
+    {
+      "L_point_count": 1681,
+      "missing_depths": [
+        2
+      ],
+      "prime": 41,
+      "witnesses": {
+        "3": {
+          "algebraic_preceding_blocks": 27,
+          "collision": {
+            "u": {
+              "coefficient_digest": "9d8d2224251a908be263e96d9f1fa349f1d12c07c37a3add62d8869d7a1521a2",
+              "degree": 81,
+              "derivative_gcd": "U",
+              "derivative_gcd_degree": 1,
+              "nine_parent_norm_degrees": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            },
+            "y": {
+              "coefficient_digest": "de5abcf4575e0e3c81552811e0a5c54bf62e4fedfb81752e7c1020275ef517d6",
+              "degree": 81,
+              "derivative_gcd": "Y - 18",
+              "derivative_gcd_degree": 1,
+              "nine_parent_norm_degrees": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            },
+            "z": {
+              "coefficient_digest": "cd6422d26d550d928da3eca952d66d92cf60f430ef917bf82669b9f61a34111f",
+              "degree": 81,
+              "derivative_gcd": "Z",
+              "derivative_gcd_degree": 1,
+              "nine_parent_norm_degrees": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          },
+          "eta": [
+            15,
+            11,
+            7
+          ],
+          "level": 4,
+          "method": "nine split parents plus exact cubic quotient norms",
+          "q0": [
+            7,
+            26,
+            3
+          ],
+          "split_parent_blocks": 9,
+          "unique_L_block": true
+        }
+      }
+    },
+    {
+      "L_point_count": 1849,
+      "missing_depths": [
+        2
+      ],
+      "prime": 43,
+      "witnesses": {}
+    },
+    {
+      "L_point_count": 2209,
+      "missing_depths": [
+        2
+      ],
+      "prime": 47,
+      "witnesses": {}
+    },
+    {
+      "L_point_count": 2809,
+      "missing_depths": [],
+      "prime": 53,
+      "witnesses": {
+        "2": {
+          "collision": {
+            "u": {
+              "coefficient_digest": "477a1a26532469060358ea1342d4620615824a6187a4a0babbab6e415313feee",
+              "degree": 27,
+              "derivative_gcd": "U",
+              "derivative_gcd_degree": 1,
+              "pairwise_coprime": true
+            },
+            "y": {
+              "coefficient_digest": "d361d6b2e712eb8e546566e69a8e81711e8dfa57760f84a342a1e7ddb268859e",
+              "degree": 27,
+              "derivative_gcd": "Y - 7",
+              "derivative_gcd_degree": 1,
+              "pairwise_coprime": true
+            },
+            "z": {
+              "coefficient_digest": "593f01d3cb295cfb7bf0eca42f794c620c84f11821599ee1ad7be8dc582caeb2",
+              "degree": 27,
+              "derivative_gcd": "Z",
+              "derivative_gcd_degree": 1,
+              "pairwise_coprime": true
+            }
+          },
+          "eta": [
+            4,
+            38,
+            38
+          ],
+          "level": 3,
+          "preceding_blocks": 9,
+          "q0": [
+            2,
+            23,
+            4
+          ],
+          "split_quotient_crosscheck": true,
+          "unique_L_block": true
+        }
+      }
+    }
+  ],
+  "rational_level_two": {
+    "eta": [
+      "113651/19683",
+      "14399/6561",
+      "2584/19683"
+    ],
+    "outer_factorization": "(27*X - 2)*(118818549*X**2 + 8801374*X + 5651208)/43046721",
+    "q0": [
+      "2/27",
+      "1",
+      "1"
+    ],
+    "quadratic_factor": "(118818549*X**2 + 8801374*X + 5651208)/118818549",
+    "ramified_block_square_factors": {
+      "h_u": "1/2",
+      "h_y": "1",
+      "h_z": "49/32"
+    },
+    "rows": {
+      "u": {
+        "block0_factorization": "U**2*(2*U - 1)/2",
+        "coefficient_digest": "7e7241ee6b82ed07b43138ee6e4ceb5f560bbc192370294e4b8f73f16fef1c37",
+        "derivative_gcd": "U",
+        "other_degree": 6,
+        "total_degree": 9
+      },
+      "y": {
+        "block0_factorization": "(3*Y - 1)**2*(6*Y - 5)/54",
+        "coefficient_digest": "818dbbc1d1683b3105ab4e145483df0adeaf746a42c33ea23a42e84131df3932",
+        "derivative_gcd": "Y - 1/3",
+        "other_degree": 6,
+        "total_degree": 9
+      },
+      "z": {
+        "block0_factorization": "Z**2*(8*Z + 7)/8",
+        "coefficient_digest": "4d7a14e83a25a56413d7cf52bf8166332d597091a4c0892f26c2d7d2e08fd0af",
+        "derivative_gcd": "Z",
+        "other_degree": 6,
+        "total_degree": 9
+      }
+    }
+  },
+  "reciprocal_raw_clearing_ledger": [
+    {
+      "degree": 3,
+      "level": 1,
+      "monic_x_discriminant_baseline": -3,
+      "raw_scalar_shift": 4,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    },
+    {
+      "degree": 9,
+      "level": 2,
+      "monic_x_discriminant_baseline": -15,
+      "raw_scalar_shift": 16,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    },
+    {
+      "degree": 27,
+      "level": 3,
+      "monic_x_discriminant_baseline": -51,
+      "raw_scalar_shift": 52,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    },
+    {
+      "degree": 81,
+      "level": 4,
+      "monic_x_discriminant_baseline": -159,
+      "raw_scalar_shift": 160,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    },
+    {
+      "degree": 243,
+      "level": 5,
+      "monic_x_discriminant_baseline": -483,
+      "raw_scalar_shift": 484,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    },
+    {
+      "degree": 729,
+      "level": 6,
+      "monic_x_discriminant_baseline": -1455,
+      "raw_scalar_shift": 1456,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    },
+    {
+      "degree": 2187,
+      "level": 7,
+      "monic_x_discriminant_baseline": -4371,
+      "raw_scalar_shift": 4372,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    },
+    {
+      "degree": 6561,
+      "level": 8,
+      "monic_x_discriminant_baseline": -13119,
+      "raw_scalar_shift": 13120,
+      "reciprocal_and_raw_baseline": 1,
+      "v_norm_x": -1
+    }
+  ],
+  "semantic_sha256": "54e24e2b22edbc0882be21fc1c64f8b451a6c8767af779be52a3e16adcb6db34",
+  "unwitnessed_depths": [],
+  "verdict": "exact cross-block noncollision witnesses; all-level criterion remains separate"
+}

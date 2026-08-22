@@ -1,0 +1,10 @@
+== independent F_101 split-fibre degree-27 audit ==
+target=(93, 28, 83); level-one points=[(10, 17, 82), (39, 90, 66), (52, 36, 24)]
+level-two blocks=[[(16, 70, 96), (90, 98, 7), (96, 9, 53)], [(50, 45, 99), (72, 58, 17), (80, 32, 9)], [(2, 57, 13), (21, 83, 49), (78, 15, 61)]]
+fibre census: 3 first preimages and 3+3+3 second preimages
+three degree-nine blocks: squarefree and pairwise coprime
+direct nine-cubic product: degree 27 and squarefree
+degree-27 ascending-coefficient sha256=fd4e337b6b7c5bb043741c72e39aaec2edd16e8cd9a23a216d68c099bf0f8c67
+therefore generic x-coordinate separation/coprimality is nonempty
+scope: finite-field genericity certificate only; no discriminant expansion
+all independent audit checks passed

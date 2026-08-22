@@ -1,0 +1,22 @@
+R5 FIXED-ABSOLUTE-ROOT FOURTH-CHANNEL PROBE
+status=FINITE-EXACT common-base source reindex versus endpoint Walsh target; LRC(14) OPEN
+dependencies=(primary=09c43af0a0a56c7a0833bbfd13ed6a96bc5a7a3718aa1bc6b77a144bde101a06,transporter=5fe3f696f122869462ff73b1b4ebdb957fa8ca7ee3692c25ef94f0f7efae81cf)
+field=(prime=572252886246508880869,zeta7=353818603057943120846,zeta13=505438565698892403012)
+source_cell_support=(slaved=12/91,absolute=18/91)
+source_spectral_support=(slaved=91/91,absolute=91/91)
+source_row_ranks=(slaved=3,absolute=3,union=4)
+source_plane_intersection_dimension=2
+whole_projective_systems={'slaved7': (3, 12, 16, 0), 'absolute7': (3, 12, 16, 0), 'union14': (4, 16, 40, 0)}
+affine_torsor_dilation_systems=((1, (4, 16, 40, 0)), (2, (4, 16, 40, 0)), (3, (4, 16, 40, 0)), (4, (4, 16, 40, 0)), (5, (4, 16, 40, 0)), (6, (4, 16, 40, 0)), (7, (4, 16, 40, 0)), (8, (4, 16, 40, 0)), (9, (4, 16, 40, 0)), (10, (4, 16, 40, 0)), (11, (4, 16, 40, 0)), (12, (4, 16, 40, 0)))
+affine_torsor_positive_cases=0
+projective_tuple_fields=(source_rank,equation_rank,nullity,excess_beyond_source_annihilators)
+one_named_absolute_sidecar=(cases=56,rank4=56,positive_transport_cases=0)
+one_named_positive_records=()
+binary_absolute_sidecar=(cases=127,rank4=126,positive_transport_cases=0)
+binary_rank3_masks=(127,)
+binary_positive_records=()
+slaved_table_sha256=666200f5e79e48c02e7beaeec90ebfedccb708bd1e383d1a01997d0abf5073f7
+absolute_table_sha256=9353c6e645b570c659a5d42491a1dd7c79825d4bd338a476aabbd0afe10e69f2
+semantic_sha256=6ad55eeab7f8e5479194965e819b030f177f4500be37cb189688262dc8af35da
+nonconsequence=no U_full ancestry relation, physical current, H1 flux, scalar-row exclusion, or LRC(14)
+STATUS=PASS

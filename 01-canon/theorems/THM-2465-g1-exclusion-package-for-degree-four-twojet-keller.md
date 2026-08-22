@@ -39,15 +39,17 @@ status: >
   D4 lane conditionally has a 1+2 matching algebra, an auxiliary quadratic,
   and an unramified split owner pair.  A
   THM-1310-as-resolvent witness must satisfy the five conditions
-  (N1)-(N5)). VERDICT: no witness found; G1 remains OPEN with
-  detection floors recorded per box. Nothing here resolves G1,
-  the order-{1,3} conjecture, or any JC.
+  (N1)-(N5)). SUPERSEDED GLOBAL VERDICT: THM-3438 gives an explicit
+  z-quadratic field-degree-four Keller witness, so G1 is positive.  The
+  exclusions and detection floors here remain valid on their stated strata;
+  the z-affine order-{1,3} conjecture and JC(2) remain open.
 source: kind-pasteur-2026-07-26-S134
 depends_on:
   - THM-2446-twojet-zgraded-jacobian-decomposition-and-cone-system
   - THM-2455-quartic-swallowtail-scaffold-and-endpoint-corrections
   - THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient
 related:
+  - THM-3438-weighted-lift-keller-degree-spectrum
   - THM-1310-conic-pair-fibers-and-design-equations
   - THM-1340-engine-trichotomy-zaffine-keller
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
@@ -74,11 +76,20 @@ hash_basis: working-tree bytes (LF); per-file hashes in INDEX entry
 
 # THM-2465 -- what a degree-four 2-jet Keller map must be
 
-**PROVED + VERDICT OPEN** as itemized in the status. Produced by a
+**PROVED LOCAL EXCLUSIONS + GLOBAL VERDICT SUPERSEDED/POSITIVE** as itemized
+in the status. Produced by a
 six-agent workflow (theory strata, degree arithmetic, staircase and
 conic-cap hunts, adversarial verification, synthesis); every
 load-bearing computational claim was independently re-derived over
 QQ and fresh primes by the adversarial pass, with zero refutations.
+
+> **GLOBAL G1 CORRECTION (THM-3438 / MISTAKE-396).**  The weighted-lift map
+> `G` is polynomial, quadratic in `z`, has constant determinant `-6`, generic
+> field degree four, and the collision `G(1,0,0)=G(-1,0,2)`.  It lies outside
+> the boxes eliminated here, in the previously unsearched high-degree
+> line-cap tail, and has geometric monodromy `S_4`.  Consequently the old sentence “G1 remains
+> open” was false globally; every local exclusion below survives unchanged,
+> and `G` does not touch the z-affine order-`{1,3}` conjecture.
 
 > **MONODROMY CORRECTION (THM-2598 / MISTAKE-297).**  The original
 > synthesis inherited THM-1375's unconditional self-normalizing rule and
@@ -416,12 +427,11 @@ pair.  In particular,
 an affine point-cap field-degree-four map exists **if and only if** a planar
 field-degree-four Keller map exists.
 
-Hence field degrees `{1, 3}` are realized on
-both residual strata, and **an unconditional degree-4 exclusion
-there would prove the degree-4 case of the z-affine order-{1,3}
-conjecture** -- no cheap all-strata resolution exists. Conversely
-this makes the G1 question a sharp, well-posed door: the residual
-arena is the point/line-cap z-affine quartic-engine problem plus the
+Hence field degrees `{1, 3}` are realized on both residual strata, and **an
+unconditional degree-4 exclusion there would prove the degree-4 case of the
+z-affine order-{1,3} conjecture**.  THM-3438 settles global G1 positively on
+a z-quadratic stratum but supplies no z-affine witness.  The residual arena
+for the order conjecture is the point/line-cap z-affine quartic-engine problem plus the
 named pockets with floors (r2b, r1, staircase branches, conic-cap
 off-ray kernel families, deg >= 5 tails, and the pending GB boxes).
 

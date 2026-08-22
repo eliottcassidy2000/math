@@ -1,0 +1,7 @@
+C3 REPEATED-JOIN MOVING JET -- THM-3202 INDEPENDENT AUDIT
+status=VERIFIED-EXACT;no_transfer_kernel_or_finite_difference_imports=true
+engine=flat_Held_Karp_endpoints_plus_canonical_set_partitions
+profile_controls=4;d=1..3;checks=12;PASS
+K1_H_r1_to_r4=(3, 45, 2721, 421425);max_vertices=12;PASS
+C3_H_r1_to_r2=(3159, 82069875945);max_vertices=18;PASS
+cyclic_cube_control=3159;vertex_level=PASS

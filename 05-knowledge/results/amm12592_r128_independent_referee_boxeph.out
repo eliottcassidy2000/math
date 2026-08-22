@@ -1,0 +1,71 @@
+==============================================================================
+AMM 12592 -- INDEPENDENT REFEREE (fresh implementation from statement (*))
+gamma* floors certified by exact Fib/Lucas integer sign tests; no floats,
+no rational proxy, no imports from any solver in this repo.
+==============================================================================
+
+--- amm12592_floor_witness_R128_direct.json  (R=128) ---
+    claimed verified flag: True   source: 'gamma* floor (beam ckpt row 119 + exact 8-row banded repair)'
+    struct=True box=True parity=True unit=True identity=True
+    profile==exact gamma* floor: True (D0 max slack 0, min slack 0)
+    effective rate max d_i/(R+i) = 58/97 ~ 0.597938  (< gamma*: True)
+    VERDICT: PASS
+    negative controls (must all be True): identity-break=True parity-break=True box-break=True
+
+--- amm12592_floor_witness_R128_lp.json  (R=128) ---
+    claimed verified flag: True   source: 'gamma* floor (LP-clamp + parity-rounding beam, Angle 3, independent of the direct beam witness)'
+    struct=True box=True parity=True unit=True identity=True
+    profile==exact gamma* floor: True (D0 max slack 0, min slack 0)
+    effective rate max d_i/(R+i) = 58/97 ~ 0.597938  (< gamma*: True)
+    VERDICT: PASS
+    negative controls (must all be True): identity-break=True parity-break=True box-break=True
+
+--- amm12592_floor_witness_R128_rule_boxeph.json  (R=128) ---
+    claimed verified flag: True   source: 'greedy attractor rule (parameter-free deterministic): Delta_i = AdmClamp_tozero(trunc_{d_i}(sigma_{i-1} - x E_{R-2-i}))'
+    struct=True box=True parity=True unit=True identity=True
+    profile==exact gamma* floor: True (D0 max slack 0, min slack 0)
+    effective rate max d_i/(R+i) = 58/97 ~ 0.597938  (< gamma*: True)
+    VERDICT: PASS
+    negative controls (must all be True): identity-break=True parity-break=True box-break=True
+
+--- amm12592_floor_witness_R64_slim.json  (R=64) ---
+    claimed verified flag: True   source: 'split-jump greedy slimming of amm12592_floor_witness_R64_boxeph.json (6427 moves); rebalancer=amm12592_slimming_rebalancer_boxeph.py'
+    struct=True box=True parity=True unit=True identity=True
+    profile==exact gamma* floor: True (D0 max slack 0, min slack 0)
+    effective rate max d_i/(R+i) = 58/97 ~ 0.597938  (< gamma*: True)
+    VERDICT: PASS
+    negative controls (must all be True): identity-break=True parity-break=True box-break=True
+
+==============================================================================
+ANGLE 4 STRUCTURAL AUDIT (hostile sweeps, exact)
+==============================================================================
+A1 closed form C = q^(R-1) - x*E_(R-2) solves qC = p^R+q^R-p(p-q):
+   R = 2..1024 exhaustive: CONFIRMED (no counterexample)
+A2 helper identity (p-q)(1+..+x^(R-2)) = E_(R-2)+2x^(R-1), R=2..1024: CONFIRMED
+   master-equation equivalence (identity in arbitrary c_i), hostile R in (5,6,7,96,100,129,250,255) x3 random trials: CONFIRMED
+A3 dyadic parity theorem (q^(R-1)-E_(R-1) even IFF R=2^t):
+   all-even set in [1,1024] = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
+   equals powers of two: True; big-int binomial + full-coefficient cross-check R<=300: True
+A4 ballot-normal-form instantiation sweep (last row == -1 as poly, master eq sum x^i c_i == q^(R-1)-E_(R-1), c-cells even):
+   R  8 (combined slim):        last=-1 True   master-eq True   c-even True
+   R 16 (combined slim):        last=-1 True   master-eq True   c-even True
+   R 32 (combined slim):        last=-1 True   master-eq True   c-even True
+   amm12592_floor_witness_R64.json              last=-1 True   master-eq True   c-even True
+   amm12592_floor_witness_R64_boxeph.json       last=-1 False  master-eq False  c-even True
+   amm12592_floor_witness_R64_cellslim.json     last=-1 True   master-eq True   c-even True
+   amm12592_floor_witness_R64_rule_boxeph.json  last=-1 True   master-eq True   c-even True
+   amm12592_floor_witness_R64_slim.json         last=-1 False  master-eq False  c-even True
+   amm12592_floor_witness_R128_direct.json      last=-1 False  master-eq False  c-even True
+   amm12592_floor_witness_R128_lp.json          last=-1 False  master-eq False  c-even True
+   amm12592_floor_witness_R128_rule_boxeph.json last=-1 True   master-eq True   c-even True
+
+==============================================================================
+SUMMARY
+==============================================================================
+amm12592_floor_witness_R128_direct.json: PASS  eff=58/97  floor-exact=True  controls=True
+amm12592_floor_witness_R128_lp.json: PASS  eff=58/97  floor-exact=True  controls=True
+amm12592_floor_witness_R128_rule_boxeph.json: PASS  eff=58/97  floor-exact=True  controls=True
+amm12592_floor_witness_R64_slim.json: PASS  eff=58/97  floor-exact=True  controls=True
+
+R=128 exact-gamma*-floor epoch closure: CONFIRMED (three independent witnesses)
+All witnesses + controls pass: True

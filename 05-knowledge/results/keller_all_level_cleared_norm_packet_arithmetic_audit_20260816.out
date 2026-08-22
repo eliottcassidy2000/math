@@ -1,0 +1,13 @@
+== fixed Keller all-level cleared-norm packet arithmetic audit ==
+matrix=((7, -2), (3, -2));det=-8;named_rows=(('L', (1, 0)), ('H', (7, 3)), ('J', (43, 15)), ('G', (271, 99)), ('R5', (1699, 615)), ('R6', (10663, 3867)), ('R7', (66907, 24255)), ('R8', (419839, 152211)))
+next_raw_packet_rows=((2634451, 955095), (16530967, 5993163), (103730443, 37606575))
+cone_transport=(e>0,0<=2m<=e)->(m'>=2e,e'-2m'=e+2m>=0): PASS
+congruences=(m divisible by 3,e=1 mod 3): PASS
+recurrence=u_(n+2)=5u_(n+1)+8u_n for e and m: PASS
+pell=3e_n^2-9e_nm_n+2m_n^2=3*(-8)^n through n=15: PASS
+cassini=e_nm_(n+1)-m_ne_(n+1)=3*(-8)^n through n=14: PASS
+valuation_identity=v_L(N(P_n))=-e_n+s_n;v_L(L^e_n*N(P_n))=s_n>=0: SYMBOLIC PASS
+finite_unit_boundary=s_n=0 is proved through input R7/output R8 only;later s_n may be positive
+semantic_sha256=a77811be1a53f2e0d0e0eeac3b4a4ecac358f79c8ed0b6ec5fa6f03f3bb0c826
+scope=arithmetic/valuation audit for raw cleared norms;no later L-coprimality,image,irreducibility,separability,new component,or general JC claim
+all exact checks passed

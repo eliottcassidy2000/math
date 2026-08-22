@@ -1,0 +1,12 @@
+DIFFERENTIAL-OWNER / TRANSVERSE-COVARIANT EXACT AUDIT
+[PASS] polynomial target shear preserves the generated base-derivation module
+[PASS] 7 nonlinear automorphisms: 49 implicit derivatives, sharp A_m!=0 and A_(m+1)=0
+[PASS] nonlinear automorphism plus quadratic target shear keeps Jac(P,S)=1
+[PASS] THM-3167 cubic branch: first differential hull contains X^{-1}
+[PASS] the same cubic unit obstruction survives a nonlinear target shear
+[PASS] cubic punctured branch: six independent nonterminating transverse derivatives
+[PASS] 42 power-branch values: partial_t^n(X)=(1/m)_(falling n) X^(1-mn), never zero for m>1
+[PASS] polynomial Gate-II hostile: v-tail is blind but the full differential hull gains X^{-1}
+[PASS] Laurent near miss h=xy^2, s=-1/y: D_h^3(x)=0 without an A^2 owner
+[PASS] compositional gate: Phi'(X) * partial_v(X)=1 for Phi(X)=X^3
+SUMMARY: 0 failed controls; all arithmetic is exact over QQ(symbols)

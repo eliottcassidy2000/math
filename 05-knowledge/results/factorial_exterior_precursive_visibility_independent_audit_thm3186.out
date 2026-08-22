@@ -1,0 +1,12 @@
+THM-3186 INDEPENDENT P-RECURSIVE VISIBILITY AUDIT
+implementation=custom sparse polynomial ring + Fraction matrices
+free_cleared_order3_recurrence_checks=5
+normalized_factorial_continuant_checks=7
+normalized_ogf_differential_coefficient_checks=8
+leading_V_(j+2)_coefficient=(j_degree=2,leading=-1)
+factorial_boundary_recurrence_checks=8
+vanishing_exit_coefficient_at=(n=1,d=5,j=3)
+hostile_visibility=(V2=-100/21,V3=0,transverse_nonzero)
+same_smith_positive_V3=115140
+scope=scalar_exterior_visibility_not_PRS_depth_or_factorial_closure
+INDEPENDENT EXACT AUDIT PASSED

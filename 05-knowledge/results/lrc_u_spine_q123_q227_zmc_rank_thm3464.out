@@ -1,0 +1,42 @@
+THM-3464 EXACT DETERMINISTIC COMPANION
+STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
+DEPENDENCIES:
+  THM-3405 d3e7dbeeb85c6f897bd9e31270bd0b6602ae4feac3b46a45eb5ce23ae5d24fe0 01-canon/theorems/THM-3405-common-centre-gcd-gauge-and-boolean-half-twist.md
+  THM-3416 42a9309145de51d1bb6fca0b7c1945302ff37a63a3183e1dfed838c07118e8bf 01-canon/theorems/THM-3416-zero-mode-cochain-global-rank-six-support.md
+  THM-3455 e357aaf8036f485c4abbfa5969a0d1f9761372dcd7337b658daaadf4cd049c09 01-canon/theorems/THM-3455-berggren-q-spine-cap-seven-atom-sieve-and-fibonacci-rank-spectrum.md
+  THM-3461 371d39375740f97d896d722fbddbe124dc7d91a79d7fe7179e2fcc1bd9ce615f 01-canon/theorems/THM-3461-literal-half-twist-common-centre-lifts-and-q83-rank-nine-boundary.md
+SECURITY_IMPORTS: __future__,ast,collections,fractions,functools,hashlib,json,math,pathlib,sys
+REFERENCE_MASK_CELLS: 271816
+U_SPINE_Q_1_TO_7: (11, 27, 51, 83, 123, 171, 227)
+ZMC_PREFIX_Q_1_TO_7: (6, 4, 7, 9, 8, 4, 9)
+DIVISOR_Q=3
+  layer=0 unique=1 maximal=1 digest=a18736e88910bc168ddfd39a413f4b9323802c5a4303d33f74dd50dd5cfca72a cap7_witness=() stats=(1, 0, 0, 1, 1)
+  layer=1 unique=1 maximal=1 digest=fca4adca539ab572bed3062d53d84ce6b238062210077ccc84d78c79a3dcc5a2 cap7_witness=() stats=(1, 0, 0, 1, 1)
+DIVISOR_Q=41
+  layer=0 unique=20 maximal=20 digest=e3e79c0ef2384dd50c3001ff8c25903489135c71bd329486e529079d4047a9a2 cap7_witness=() stats=(1, 0, 0, 20, 20)
+  layer=1 unique=40 maximal=40 digest=adf656a03e9fe9bf902af6d46d591405c0c6af0f9192d9522969989b906d2085 cap7_witness=() stats=(307, 325, 19, 40, 40)
+  half_cap8=((1, 11, 13, 15, 21, 34, 37, 39), (12, 14, 3, 40, 40))
+  frozen_witness=(3, 5, 11, 19, 28, 33, 37, 39)
+  mode_widths=(6, 6, 6, 6, 13, 6, 6, 6) multiplicity=((1, 35), (2, 6))
+  q123_threefold_pullback=(9, 15, 33, 57, 84, 99, 111, 117); active_gcd=3
+Q=123 RANK=8
+  layer=0 unique=61 maximal=61 digest=8f59ee46dc001a415ea5d47d196638aa10131ebe2e9322bfa8f54d052806ac29 cap7_witness=() stats=(246, 245, 0, 61, 61)
+  layer=1 unique=121 maximal=121 digest=e26afc95ea99c1612a7db1a97c6e9459fb45b3ea5c29e42e955676832536687f cap7_witness=() stats=(16949, 17104, 156, 121, 121)
+  half_cap8=((1, 40, 42, 81, 82, 83, 117, 122), (82, 81, 0, 121, 121))
+  frozen_witness=(1, 40, 42, 81, 82, 83, 117, 122)
+  mode_widths=(4, 11, 39, 18, 123, 4, 18, 11)
+  open_y_radius=2/581
+  multiplicity=((1, 106), (2, 6), (4, 11)) private=(12, 12, 10, 12, 24, 12, 12, 12)
+  common_source_centre=1/(2q); complete_cochain=0; all_projective_wedges=0
+Q=227 RANK=9
+  layer=0 unique=113 maximal=113 digest=648b0592a704f5bf75aff7f6a4ee15cb54b47f89d338edce1ee34b173d9518e7 cap8_witness=() stats=(3681, 3792, 112, 113, 113)
+  layer=1 unique=226 maximal=226 digest=585743528af55e48c05efb5ada8a4f8dbb730605f9023e2a1d74b2da3e35a95e cap8_witness=() stats=(254223, 257248, 3026, 226, 226)
+  zero_cap9=((), (356355, 365568, 9214, 113, 113))
+  half_cap9=((2, 6, 10, 215, 217, 219, 221, 223, 225), (25892, 26580, 689, 226, 226))
+  frozen_witness=(2, 6, 10, 215, 217, 219, 221, 223, 225)
+  mode_widths=(3, 3, 3, 10, 10, 10, 10, 10, 10)
+  open_y_radius=1/315
+  multiplicity=((1, 176), (2, 38), (3, 13)) private=(22, 20, 14, 12, 18, 26, 20, 22, 22)
+  common_source_centre=1/(2q); complete_cochain=0; all_projective_wedges=0
+SEMANTIC_SHA256: 992ebd92709f39f2250bb9a21a10b6e0bb3c6e21860a3bf388d826e23b500b50
+VERDICT: exact q123 rank 8 and q227 rank 9; no endpoint current or LRC(14) conclusion

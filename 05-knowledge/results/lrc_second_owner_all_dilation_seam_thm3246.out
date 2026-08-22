@@ -1,0 +1,16 @@
+THM-3246 all-dilation second-owner seam exact control
+dependency_hash_checks=3,dependency_replay=PASS
+assert_nodes=0,float_literals=0
+lane=(P,Q;e,f)=(3,5;1,2),cells=168,period=1
+polynomial_pieces=boundary:(12096,-1032,2);outer:(12096,-24,0);left_ramp:(16044-168j,48,0);middle:(4032,96,0);right_ramp:(168j-12012,48,0)
+seam_component_unaligned_checks=(24, 2)
+interior_term_certificates=9360,direct_geometry_controls=1008
+signs_positive_negative_zero=(156, 12, 0)
+negative_cells=(0, 1, 2, 3, 4, 5, 162, 163, 164, 165, 166, 167),negative_q=-17/3087000
+positive_q_min_max=(1/6174000,751/666792000)
+hodge_sum=1/24696
+row_table_sha256=5bc58c22a518b89313752eeffb55aea6c60da221f5142c405cd7bc445f266e84
+q_word_sha256=b53d77a69f39a5f8c893b4cdceaaeecdd0dc70a16be02e6d28f3f6d7b520feef
+singer_gauge_checks=672,max_negative_line_intersection=1
+scope=all-dilation-second-corrector-not-cellwise-LRC-exclusion
+all_exact_checks=PASS

@@ -1,7 +1,7 @@
 # Reflections: idea provenance and structural synthesis
 
 Reflections record the “why behind the what”: reframings, cross-domain maps,
-failure anatomy, procedural perspective generation, and mathematical
+failure anatomy, perspective generation, and
 compulsions that outgrow one theorem. They are a first-class source of ideas
 and a deliberately **non-canonical** source of truth.
 

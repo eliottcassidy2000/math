@@ -1,0 +1,13 @@
+LRC REFINED ENDPOINT ROLE U_FULL INDEPENDENT GRAPH AUDIT
+status=FINITE-EXACT independent graph component; THM-3479 PROVED STRUCTURAL + INDEPENDENTLY AUDITED; LRC(14) OPEN
+dependencies=lrc_relation_role_chart_weighted_closure_probe_20260815.py:207c65ca235ea5647e346027d424264e8abbcf27c5f574b5901cca13611d7e03;lrc_relation_role_chart_weighted_closure_probe_20260815.out:d9fd5272303675d9295a26faab3ddfc236941d2b99307af50d88e0b7b7af4bed;lrc14_guard_deleted_refined_endpoint_role_probe_20260816.out:10a98351cc59615a5b6d2b8f555e0936d1a39566d9906127edc2b0fbc3918e73
+scope_sidecar_pins=(('04-computation/lrc_relation_k4_xor_star_triangle_probe_20260815.py', 'b4ddf1cc735bc493a7dcdea5d622ff996aef0259d6f474282f59454bf45ad041'), ('05-knowledge/results/lrc_relation_k4_xor_star_triangle_probe_20260815.out', 'c899644e3371a611d5385b95e56268e85d2792d682710c0a92f0f4693b0838b9'), ('04-computation/lrc_endpoint_role_q1_gauge_quotient_obstruction_20260815.py', '02d6cf3553edf3412da6d8eb99c7937f841d9441cc9599bc01319f72596b5887'), ('05-knowledge/results/lrc_endpoint_role_q1_gauge_quotient_obstruction_20260815.out', '14e9483fd1ec42cc0cdffb156dc520a491bc95d0816a85828732c965858ec5d7'))
+universe=the five frozen U_full refined response residues; all 72 declared labelled role-contract charts
+implementation=separate frozen labelled-chart edge/K4 determinant engine; no source-native or C13-equivariant map
+factor_zero_counts=(bridge,left_K4,right_K4,product)=(0, 0, 0, 0)
+bridge=389266878372286537904 multiplicity=72
+factor_histograms=(left=((21911544510979567632, 6), (111601359651434606899, 6), (114103258785658096741, 12), (232015729951904717970, 6), (285225084861352073754, 6), (434904329197396717118, 12), (481322558895811397205, 12), (495287940474117820004, 6), (495671360975999459833, 6)),right=((21911544510979567632, 6), (111601359651434606899, 6), (114103258785658096741, 12), (232015729951904717970, 6), (285225084861352073754, 6), (434904329197396717118, 12), (481322558895811397205, 12), (495287940474117820004, 6), (495671360975999459833, 6)))
+chart_record_sha256=b7d8c2c9860e4f1aa542b1c85fdb7b65cf4985aba5a81a84ff3a324834d51c51
+flat_response_hostile=all 72 factor quadruples are (0,0,0,0)
+scope=no endpoint-bank rederivation, physical current, grouped coefficient, all-unit projector, U_clock statement, scalar exclusion, or LRC(14)
+STATUS=PASS

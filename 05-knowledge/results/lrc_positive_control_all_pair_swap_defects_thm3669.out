@@ -1,0 +1,24 @@
+== THM-3669 typed-control all-packet three-twist census ==
+parents_sha256=('0e4a9e181263647e13d2a6738b6996c45df901d9d2b37d4d589dfddfbdd91480', 'fabae42d085cd9c338a142cbd0898116fde48f27e9c14aa1c3bcc3abfdb99130', '8871c9d8a6eff3d1be33d7944197cffbb8a11c60f6d61132be27a89ce22ff96a', '1015cff6d84f2571cabaaf3e66fad92bee2cba4ba9d616769643dc4809e5c9b9')
+row=(1, 14, 27, 40, 53, 66, 13, 2197, 742586);word={a};R=169;triangle=(13,1,742599)
+cyclotomic_order=50334435734703120;embeddings=((352341050142921841, 435817657216), (956354278959359281, 153943385426666320))
+unique_present_sets=13;ordered_graft_charts=30;owner_packets=120
+all_30_chart_defects_nonzero_in_both_embeddings=True
+all_120_packet_defects_nonzero_in_both_embeddings=True
+chart_ledger_sha256=96371acacc8d95131e7b32bf254255154675ff128eaa622f0522419b97a81f05
+packet_ledger_sha256=7af045f5d317453b8fa856088b76e883ba1640d774cf0b6015febc966b84e9a7
+independent_compact_packet_sha256=9521c4654c9fddb43094e1194b36ef75f6118b8b216918c3f80787270c6db55a;bytes=8269
+canonical_packet=(omitted=0,graft_a=1,graft_b=2)
+canonical_gamma=(H0=(310354333794505177, 928156429768775202),Ha=(173156527261826497, 288184598848954178),Hb=(317831260334985463, 423756868609874985))
+canonical_overlap_numerators=(60084076348296, 54135630512964, 61887542465528)
+canonical_components=(188056, 169431, 186674)
+canonical_three_twist_residual=(200189390529282589, 368827291397979410)
+canonical_mass_residual=-9555378069796/50334435734703120=-183757270573/967969917975060
+canonical_overlap_v13=(2, 1, 1);residual_v13=1
+canonical_marked_product_first_jet=(212565399985231344, 197131116389696829)
+canonical_first_exclusive_boundary=(7791347595131100, 'zero', 1, 1);time=1609245/10396204
+mass_valuation_patterns=((2, 1, 1, 1), (2, 1, 1, 2), (2, 1, 2, 1))
+semantic_sha256=a33d438898b3c714557bc652add55c82e7d648ded6e9416a5ddb0a674282e27f
+script_sha256=757d7c8521a1756ec15ee5785f37fac89c20b1c9cfc0a21003b2f822b8ef29f4
+scope=typed non-cover positive control;no covering-row transfer or LRC(14) closure
+PASS

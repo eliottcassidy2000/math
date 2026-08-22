@@ -1,0 +1,15 @@
+== fixed F^3 all-coordinate finite-field primitivity probe ==
+dependency=jc_level3_degree27_split_finite_field_audit_20260816.py:9f8b6b4aad75b17eed8a6fd618cb661f3e61b85361b44ba676462148a2c5afc5
+parent_target_hostile=(target=(93, 28, 83),coordinate_hashes=('e10d5f365f1a673e4c2615123c1925ac9fa797395cb160495fc43df7969cd4e2', '691caf7a37960ecf904b669ebf4477c232a5eed1137b35c90a76d8b55b53237d', 'fe96f6cb23ebc5facf0d36d2d2319da007ac7c46b1b96c809de8ad88fe1ed179'),derivative_gcd_degrees=(0, 1, 0))
+search_census=(iterations=5937,seen=5937,split_depth_two=3,lawful_nine_blocks=2,local_coordinate_generators=2)
+field=F_101; witness_target=(77, 62, 4); level_one=((13, 36, 2), (39, 84, 75), (49, 74, 79))
+witness_level_two_blocks=(((35, 40, 46), (83, 54, 93), (84, 61, 87)), ((2, 91, 44), (35, 7, 50), (64, 28, 37)), ((24, 2, 74), (84, 50, 58), (94, 59, 2)))
+fibre_algebra=nine separable rank-three cubic quotients; total rank=27
+each local x,y,z multiplication characteristic polynomial has degree 3 and is squarefree
+each global x,y,z product has degree 27 and is squarefree; every coordinate separates all 27 geometric points
+coordinate_product_sha256=(x,y,z)=('306dc5831a989a0fe953ae5eb6127d26bd6ff07f8cc4e25d54dc0f65e53e5e19', 'aba63853d168e670461e67b67e42d26380e18c62b363c8931aa187f1a97d4e51', 'b8a09c5bfed7affdabbbb3fcf222002a3a7c11c8d55cb19bcc949494725bb51d')
+local_row_sha256=b1526ceed64a88703bfb6c1322db947cc0b1e934405d072631224728ad97b4c5
+semantic_sha256=61ddcb9dbd3c7582a514bf1a42bbff3cd9ca7d052ea9620721979ed6c8138245
+generic consequence candidate=K(x)=K(y)=K(z) for fixed F^3; trace-form congruence gives common class [-2J]
+scope=no exact discriminant multiplicities, level-four/all-level, arbitrary Keller, outside-family, JC(2), or LRC consequence
+all exact checks passed

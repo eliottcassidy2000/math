@@ -1,0 +1,27 @@
+== r=5 P7 / bidirected-P4 pointed-carrier audit ==
+field=F_755373809845391722745761;pointed_order=((0, 0), (1, 0), (1, 6), (3, 6), (3, 12), (2, 12))
+P7_vertices=(('state', 0), ('root', 0), ('state', 1), ('root', 6), ('state', 3), ('root', 12), ('state', 2))
+directed_arcs_(tail,head)=((0, 1), (1, 0), (1, 3), (3, 1), (3, 2), (2, 3))
+partial_tournament_pair_counts_(both,single,missing)=(3, 0, 3)
+adjacency_in_state_path_order_(0, 1, 3, 2)=((0, 1, 0, 0), (1, 0, 1, 0), (0, 1, 0, 1), (0, 0, 1, 0))
+edge_response_order=(rank,tail_star_rank,root_even_rank,relation_sha,parent_sha,root_even_sha)
+edge_response=(6, 4, 3, '6e9083f15408f6d2d85fb3f2747ba0bd1f987e83ce4b836cb7298aaccc84e0c4', '1b4fef00a23dcb79dc52ace662bae2f858ce3da27b6ef19b902ae40f5a79e755', 'a8cb371c63d8d43b6a867797ac1dff951599def28da5bc194c73233e03073088')
+representations_(arc_reversal,path_reflection,tail_star,root_even)=((6, 3, 3), (6, 3, 3), (4, 2, 2), (3, 2, 1))
+P7_boundary_(rank,H1_dim)=(6, 0)
+ordinary_P4_current_boundary_(rank,middle_current_boundary)=(3, (0, 755373809845391722745759, 2, 0))
+root_pair_record_order=(left_arc,right_arc,comparable,equal,unequal,missing)
+root_pair_source_to_output_records=((0, 1, 159, 159, 0, 10), (2, 3, 149, 143, 6, 20), (4, 5, 159, 159, 0, 10))
+central_root_unequal_coefficients=((2, 3, 0, 11, 231258693198868437012796, 372867843530325052298666), (2, 3, 0, 12, 307932397609001659987362, 166323247277545044701492), (2, 3, 6, 5, 204399275034714836533236, 13970811776810769074487), (2, 3, 6, 7, 13970811776810769074487, 204399275034714836533236), (2, 3, 12, 0, 166323247277545044701492, 307932397609001659987362), (2, 3, 12, 1, 372867843530325052298666, 231258693198868437012796))
+complete_coefficient_spaces_(r0,rank,rowspace_sha)=((1, 3, '7016acfc7f118cac9d673713ebd4139b2d57800d72a2527007322f81a609a4c6'), (2, 3, '7016acfc7f118cac9d673713ebd4139b2d57800d72a2527007322f81a609a4c6'), (4, 3, '7016acfc7f118cac9d673713ebd4139b2d57800d72a2527007322f81a609a4c6'), (5, 3, '7016acfc7f118cac9d673713ebd4139b2d57800d72a2527007322f81a609a4c6'), (7, 3, '7016acfc7f118cac9d673713ebd4139b2d57800d72a2527007322f81a609a4c6'), (8, 3, '7016acfc7f118cac9d673713ebd4139b2d57800d72a2527007322f81a609a4c6'), (10, 3, '7016acfc7f118cac9d673713ebd4139b2d57800d72a2527007322f81a609a4c6'), (11, 3, '7016acfc7f118cac9d673713ebd4139b2d57800d72a2527007322f81a609a4c6'), (6, 4, 'a3ca24b41fb507941de6e274058bf4658918a13d9ca9902e6483fb52be444446'))
+coefficient_module_shas_(root_even,plus_middle_current)=('7016acfc7f118cac9d673713ebd4139b2d57800d72a2527007322f81a609a4c6', 'a3ca24b41fb507941de6e274058bf4658918a13d9ca9902e6483fb52be444446')
+interior_r0_module_classification=((1, 'root-even', 3), (2, 'root-even', 3), (3, 'root-even+middle-current', 4), (4, 'root-even', 3), (5, 'root-even', 3), (6, 'root-even+middle-current', 4), (7, 'root-even', 3), (8, 'root-even', 3), (9, 'root-even+middle-current', 4), (10, 'root-even', 3), (11, 'root-even', 3))
+tent_section_(values,drops,line_laplacian,nonroot_digits)=((12, 12, 9, 3, 0, 0), (0, 3, 6, 3, 0), (0, 3, 3, -3, -3, 0), (1, 2, 3, 4, 5, 7, 8, 9, 10, 11))
+defect_stalk_records_(raw_rank,quotient_rank,all_rank,digest)=((3, 2, 3, 'c3c6b09aaefabac55411aacac8e7ef30891c6ab4aab8dc93245aa0d7e98ea7e6'), (2, 1, 2, '84f25e8c126e45ed72f27f7f97d583ec2d6fd66219e57065c24b0d38a6b0da48'), (2, 1, 2, 'f31f17d775a1e0b3c452cc4af166d5b9474282bb7aac0318492298e281a6b555'), (2, 1, 2, 'a9dbcbadf52543cfb8922e86614f279c3c3db35847d9cac49c4acbdf566a12c5'), (2, 1, 2, 'be5a63139b866f338b5f5d1a8da596ccbe51da2b9e5979a4f8be1521d77e57f9'), (3, 2, 3, 'e15427672a2680c0804bc0e3d2517cba592b77fc6e2c7e5a0a9b8f5decf0406c'))
+defect_global_(raw,parent,quotient)=(14, 6, 8);reflection_+-=(4, 4)
+classification=('six_scalar_cylinder_sections', 'fixed_r0_sum_over_r1_equals_one', 'diagonal_endomorphisms_of_trivial_arc_bundle', 'not_probability_without_positivity', 'not_local_system_noninvertible_and_no_transport', 'not_H1_no_clock_no_composition_and_H1_P7_zero')
+record_sha256=c1e17b60d62fdafe6a2b99fd5df6d097db1d327590ab0995bda182466d609ec4
+semantic_sha256=54f2fd0702cfee4b3af954ca3719b9966cb06e9227a94bdc8b14651c452d5feb
+verdict=pointed relation rows are the injective P7-edge/bidirected-P4 arc module;interior rank3/4 is arc-even versus arc-even plus the middle current
+tent_verdict=exception support is a reflection-equivariant edge section with an 8D decorated-edge quotient defect;not a divisor without a valuation or zero-locus theorem
+typing=arcs have owner-state tails and root-paired reversals;K4 six-edge cardinality is not an incidence-preserving identification
+scope=derived finite exact static response sidecar;no chronology,local system,H1 cocycle,physical current,row exclusion,or LRC14

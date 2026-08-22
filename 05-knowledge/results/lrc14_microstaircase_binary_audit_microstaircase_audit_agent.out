@@ -1,0 +1,37 @@
+Independent binary-CNF micro-staircase audit
+scope=FINITE-EXACT residue-cell model; not LRC(14) or LRC(15)
+python=3.13.14 implementation=CPython
+python_sat=1.9.dev5 platform=Windows-11-10.0.26100-SP0
+script_sha256=8f342b69ed1b9e7abf93ec5779b87ed6f5add2b9a9a1802a0634a870dc1b02aa
+n=14
+  breakpoints=813 atomic_open_intervals=812 distinct_patterns=812 full_candidates=11368
+  open_cell_samples=one_third,two_thirds agree_on_every_interval
+  shift_zero=universally_blocked
+  reflection_shift_representatives=(1, 2, 3, 4, 5, 6, 7) raw_representative_candidates=5684 unique_cover_clauses=4142
+  reflection_rule=(s,b)->(-s,n-1-b); blocker_set_preserved
+  gauge_rule=w_i=v_i-v_1*i; w=0 iff v_i=v_1*i
+  residue_encoding=4_bits+equality_atoms_iff; no_one_hot_clauses
+  binary_truth_table_audit=PASSED
+  variables=234 base_clauses=936 normalized_clauses=5083
+  normalized_reduced_dimacs_sha256=80ad6b466df958b9d8ba117fd015910e56bccf7cf6e2914e1457390ee04a4113
+  minisat22_normalized_nonzero=UNSAT
+  lingeling_normalized_nonzero=UNSAT
+  directly_verified_scalar_ramps=14/14
+  ungauged_models=14 nonscalar_models=0
+  ungauged_scalar_multipliers=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+n=15
+  breakpoints=961 atomic_open_intervals=960 distinct_patterns=960 full_candidates=14400
+  open_cell_samples=one_third,two_thirds agree_on_every_interval
+  shift_zero=universally_blocked
+  reflection_shift_representatives=(1, 2, 3, 4, 5, 6, 7) raw_representative_candidates=6720 unique_cover_clauses=5606
+  reflection_rule=(s,b)->(-s,n-1-b); blocker_set_preserved
+  gauge_rule=w_i=v_i-v_1*i; w=0 iff v_i=v_1*i
+  residue_encoding=4_bits+equality_atoms_iff; no_one_hot_clauses
+  binary_truth_table_audit=PASSED
+  variables=266 base_clauses=1064 normalized_clauses=6675
+  normalized_reduced_dimacs_sha256=f9b4ce46e28722b92a17371a90c71b7450dce494ecdac4f3509dbd84f720f83a
+  minisat22_normalized_nonzero=UNSAT
+  lingeling_normalized_nonzero=UNSAT
+  directly_verified_scalar_ramps=15/15
+  ungauged_enumeration=SKIPPED
+ALL_CHECKS_PASSED

@@ -1,0 +1,32 @@
+THM-3286 MOVE-DECORATED THREE-FACE SECTION PARTIAL SCOUT
+status=FINITE-EXACT PARTIAL;no_theorem_ID;no_promotion
+dependency_hashes=BEGIN
+fd48e7e142d44b5c60baec7e7bc1b59e2640f672f8de019d3ed2a2e7d969163c  01-canon/theorems/THM-3286-three-face-availability-helly-defect-and-binary-origin-width.md
+201e7348cc4f1e7fe4cfd51cfda42db85b8943d8d33f2d9080f20df562ecccaa  04-computation/gmc_complete_physical_bank_unique_reset_thm3238.py
+77b6a45b1715e9412732e3e89103809071eab4e3225f95510b7b59b022ddc93b  05-knowledge/results/gmc_complete_physical_bank_unique_reset_thm3238.out
+c31eff8a10c6a6e1ab7e3ea6759388b02cbd9591695182f2d3756e08da38c8c3  04-computation/fc3_three_support_face_availability_hypergraph_scout_20260803.py
+a3e44f6d2eb0e26386e399e7d582e6eb67512125233eb1b49d2b62c4d0869e05  05-knowledge/results/fc3_three_support_face_availability_hypergraph_scout_20260803.out
+07cf5cc1056bdd978a3a1d1146fee8139bef9a84e3b83aad08a0522b4df63a0f  04-computation/fc3_selector_origin_bipartition_phase_bridge_thm3278.py
+5e67eec14698f5258d17c5ba1ed295de3b9ff355aa279adb6d523ce3df683c7a  05-knowledge/results/fc3_selector_origin_bipartition_phase_bridge_thm3278.out
+dependency_hashes=END
+face_profiles=(('F12', ((1, 4), (2, 3), (3, 2), (4, 1), (5, 1)), (1, 2, 2, 3, 4, 5), 239, 238), ('F13', ((1, 4), (2, 3), (3, 2), (4, 2), (5, 2), (6, 1), (7, 1), (8, 1)), (1, 3, 3, 4, 5, 6, 7, 8), 4319, 4318), ('F23', ((1, 2), (2, 4), (3, 1), (4, 3), (5, 3), (6, 1), (7, 1), (8, 1)), (2, 3, 4, 4, 5, 6, 7, 8), 3839, 3838))
+triple_universe=94;triple_state_digest=5835c0ad5c8d0747bf366a11a14c6b5f80f2326317e4539c13bc16b713711180;response_tasks=943
+typed_map=B_f(n)={(row,successor):strict_ascent_and_reset_directed};projection_(row,successor)->row_recovers_THM3286_triple_atlas=PASS
+decorated_face_digests=(('F12', 'c9def3e31568c4abe88deefc2b9835e31939dda60b9c62b7ab92c258407db2bd'), ('F13', 'f399eb76e5bc9851941d4483295f8a060a921f959a92365fbc97d71617c66df4'), ('F23', '44020e284ad310da061b18b9b0bbb4d372bdbf458aa4aafdb3e7f20a6a113618'))
+decorated_pair_summary=(('F12', 'F13'), 13, ((4, 5), (1, 3, 4), (1, 4, 5), (2, 4, 5), (3, 4, 5), (1, 2, 3, 4), (1, 2, 4, 5), (1, 3, 4, 5), (2, 2, 4, 5), (2, 3, 4, 5), (1, 2, 2, 4, 5), (1, 2, 3, 4, 5), (2, 2, 3, 4, 5)), ((3, 4, 5), (1, 3, 4, 5)), ((1, 3, 4, 5), (1, 2, 3, 4, 5)), '80901a99a0958325589bb2a9fdd07a704645f75fe98fa7d66cc02d01efa78a89')
+decorated_pair_summary=(('F12', 'F23'), 5, ((2, 3, 4), (1, 2, 3, 4), (2, 3, 4, 5), (1, 2, 3, 4, 5), (2, 2, 3, 4, 5)), (), ((2, 3, 4, 5), (1, 2, 3, 4, 5), (2, 2, 3, 4, 5)), '221f1805df7c37f948f70cf4e926a9174eac66facc372d38d1b8b98117879ecf')
+decorated_pair_summary=(('F13', 'F23'), 0, (), (), (), '684e83ead4c16ae8fa9d955c529083ec63dd3f9eac67e72b291bfb21a9d222a0')
+decorated_triple_empty_count=16;decorated_triple_empty_locus=((5,), (3, 4), (4, 5), (1, 3, 4), (1, 4, 5), (2, 3, 4), (2, 4, 5), (3, 4, 5), (1, 2, 3, 4), (1, 2, 4, 5), (1, 3, 4, 5), (2, 2, 4, 5), (2, 3, 4, 5), (1, 2, 2, 4, 5), (1, 2, 3, 4, 5), (2, 2, 3, 4, 5));proper_decorated_Helly_locus=((5,), (3, 4));triple_digest=4b9e8ecf8548357b19836cd8575a0ecadff3798001a078d3ce52415b6fb8d793
+local_minimum_supplied_origin_histogram=((1, 78), (2, 16));local_width_two_locus=((5,), (3, 4), (4, 5), (1, 3, 4), (1, 4, 5), (2, 3, 4), (2, 4, 5), (3, 4, 5), (1, 2, 3, 4), (1, 2, 4, 5), (1, 3, 4, 5), (2, 2, 4, 5), (2, 3, 4, 5), (1, 2, 2, 4, 5), (1, 2, 3, 4, 5), (2, 2, 3, 4, 5));local_width_three_locus=()
+minimum_fixed_supplied_origin_alphabet=2;optimal_colourings=((0, 1, 1), (1, 0, 0));canonical_optimal_colourings=((0, 1, 1),)
+uncoloured_global_static_section=False;minimum_coloured_global_static_section=True;iteration_record_schema=(label,face_block,decorated_choices,distinct_internal_targets,exit_choices,forced_exit_states,max_arbitrary_internal_edges,max_lex_moves_to_exit,lex_digest);iteration_records=(((0, 1, 1), ((0, ('F12',), 2859, 268, 69, 7, 5, 6, '7892a85be1005e3070204add40502252fd2142ad3f91ea5610a153a8cd3a0845'), (1, ('F13', 'F23'), 4595, 215, 2651, 5, 6, 6, 'acec2a32647c705bd53839a1bb12fcb32a49a35dcc70295e36c6506e7930425a'))),)
+control_state_(5)=((('F12', ((1, 5), (2, 5), (3, 5), (4, 5))), ('F13', ((1, 5), (3, 5), (4, 5), (5, 6), (5, 7), (5, 8))), ('F23', ((2, 5), (3, 5), (4, 5), (5, 6), (5, 7), (5, 8)))), (('F12', 36), ('F13', 59), ('F23', 64)), (), ((3, 5), (4, 5)), (), ((('F12', 'F13'), 1, '8d6bf54a9e446637f06c918b5feef11817c84161bbcc44204887b61fed462e35', ((12, (1, 5)),)), (('F12', 'F23'), 6, '42584b4d5d813743af67fe36adbddba88fd7d177edb024dd92b7bfffdf7f33bb', ((8, (2, 5)), (8, (3, 5)), (16, (2, 5)), (16, (3, 5)), (18, (3, 5)), (22, (3, 5)))), (('F13', 'F23'), 45, 'e39abd2a9fc129a7b048bafa75dc9ab9d5459c31358fdf5109c56445ddf17910', 'DIGEST_ONLY')))
+inherited_conflict_controls=(((3, 4, 5), (), ()), ((1, 3, 4, 5), (), ()))
+canonical_row_alphabet_(16,17)_restricted_94_extensions=((1, ()), (2, ((0, 1, 1), (1, 0, 0))), (3, ((0, 1, 2), (0, 2, 1), (1, 0, 2), (1, 2, 0), (2, 0, 1), (2, 1, 0))))
+restriction_boundary=PINNED_THM3286_proves_(16,17)_has_no_extension_on_all_8394_face_state_decisions;restricted_94_rescue_is_not_a_full_domain_controller
+minimal_projection_failure=(('F12', 'F13'), (4, 5), 'row_successor_coupling', (5,), ((1, 4, 5), (3, 4, 5)), (), (('F12', ((1, 4, 5), (2, 4, 5), (3, 4, 5))), ('F13', ((1, 4, 5), (3, 4, 5), (4, 5, 6), (4, 5, 7), (4, 5, 8)))), (('F12', ((5, (1, 4, 5)), (5, (2, 4, 5)), (5, (3, 4, 5)))), ('F13', ((5, (4, 5, 6)),))))
+minimal_incompatible_reset_hostile=(('F12', 'F23'), (2, 3, 4, 5), (5, 12))
+first_failed_THM3286_implication=common_projected_row_does_not_imply_a_common_(row,physical_successor);incompatible_resets_or_row_move_coupling_are_the_missing_coordinates
+source_ast=(assert_nodes=0,float_literals=0)
+scope=exactly_three_named_bank_I2_faces_and_inherited_94_triple_states;iteration_stops_on_exit_from_inherited_graph;no_FC3_SFC3_GMC_positivity_or_unbounded_history_claim
+ALL FINITE-EXACT PARTIAL CHECKS PASSED

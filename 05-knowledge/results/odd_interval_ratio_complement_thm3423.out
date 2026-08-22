@@ -1,0 +1,10 @@
+rational_connection_cells=9160
+dyadic_color_cells=9160
+sharp_clique_edges=342
+rounding_cells=60049
+finite_ratio_pair_cells=616848
+finite_normalized_graph_cells=21092
+finite_controls=h2:p23:L11:c1:D0:w1;h3:p59:L19:c2:D4:w2;h4:p109:L27:c1:D4:w2;h5:p197:L39:c2:D12:w3;h6:p307:L51:c1:D12:w3;h7:p487:L69:c4:D24:w3;h8:p701:L87:c5:D24:w3;h9:p1039:L115:c4:D36:w4;h10:p1459:L145:c9:D36:w4;h11:p2003:L181:c12:D56:w4;h12:p2663:L221:c11:D56:w4;h13:p3457:L265:c12:D80:w4;h14:p4397:L313:c15:D80:w4;h15:p5501:L365:c26:D96:w4;h16:p6761:L421:c25:D96:w4
+h7_residue_controls=r1:p547:L77:D24;r9:p541:L77:D24;r11:p557:L79:D24;r13:p587:L83:D24
+semantic_sha256=05f52e47dd904880524b09744efd98c90e6e53b4b37976dbe805ff0d8199a6c2
+odd_interval_ratio_complement=PASS

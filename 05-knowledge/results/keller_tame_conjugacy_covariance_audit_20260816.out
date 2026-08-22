@@ -1,0 +1,24 @@
+THM-3532 exact covariance controls
+base_det=-2 (inherited THM-3529 exact input)
+base_A10_signature=(('max_lambda', 1, '16*x'), ('min_lambda', -1, 'y**3*z'), ('min_beta', -5, 'y**3*z'), ('max_k', 2, '27*x**2*z**2'), ('min_gamma', -8, 'z*(27*x**2*z + y**3)'))
+W1_inverse=('x', 'y', '-x**2 + z')
+W1_boundary=27*x**6 - 54*x**4*z + 18*x**3*y - x**2*y**3 + 27*x**2*z**2 - 18*x*y*z + 16*x + y**3*z - y**2
+W1_standard_signature=(('max_lambda', 6, '27*x**6'), ('min_lambda', -1, 'y**3*z'), ('min_beta', -5, 'y**3*z'), ('max_k', 2, '27*x**2*z**2'), ('min_gamma', -8, 'z*(27*x**2*z + y**3)'))
+W1_transported_signature_recovers_A10=True
+W1_finite_divisor_identity=True
+W1_x_core_disc=-4*(S_o_Tinv)^2*(L_o_Tinv)
+W1_postcomposition_square_hostile=((0, 0, -1), ('1', '-3', '0'), ('0', '0', '-2'))
+W1_honest_conjugacy_27_point_bank=True
+W2_inverse=('x - y*z + z**3', 'y - z**2', 'z')
+W2_boundary=27*x**2*z**2 - 54*x*y*z**3 - 18*x*y*z + 54*x*z**5 + 18*x*z**3 + 16*x + y**3*z + 27*y**2*z**4 - 3*y**2*z**3 + 18*y**2*z**2 - y**2 - 54*y*z**6 + 3*y*z**5 - 36*y*z**4 + 2*y*z**2 - 16*y*z + 27*z**8 - z**7 + 18*z**6 - z**4 + 16*z**3
+W2_standard_signature=(('max_lambda', 1, '16*x'), ('min_lambda', -8, '27*z**8'), ('min_beta', -16, '27*z**8'), ('max_k', 8, '27*z**8'), ('min_gamma', -40, '27*z**8'))
+W2_transported_signature_recovers_A10=True
+W2_finite_divisor_identity=True
+W2_x_core_disc=-4*(S_o_Tinv)^2*(L_o_Tinv)
+W2_postcomposition_square_hostile=((-1, 0, 0), ('62', '4', '0'), ('-2', '0', '0'))
+W2_honest_conjugacy_27_point_bank=True
+affine_conjugacy_boundary_and_27_point_bank=True
+grades_0_6=((1, 0), (7, 3), (43, 15), (271, 99), (1699, 615), (10663, 3867), (66907, 24255))
+boundary_rescale_exponents_q_0_6=(1, 4, 19, 100, 571, 3412, 20899)
+q_parity_n_plus_1=True
+VERDICT=one-step_two-sided_covariance; all-level_honest_conjugacy; standard_weights_require_transport

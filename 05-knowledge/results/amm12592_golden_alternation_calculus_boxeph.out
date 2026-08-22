@@ -1,0 +1,33 @@
+========================================================================
+LANE D3 script A: alternation-transport calculus certificates (exact ints)
+G1: identity 400/400, zero-sum 400/400, defect-mass-L1 400/400, ratio law 8/8, naive-envelope counterexample: 9 violating cells (e.g. (1, 200, 100))
+G2 R=256 D0=0 d=153: sign_law=True supp=[0,101] (T4b True); ratio-2 crossover pred 53, last_sub2=52 first_super2=53 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 100 cells [2, 101]
+G2 R=256 D0=1 d=154: sign_law=True supp=[0,100] (T4b True); ratio-2 crossover pred 55, last_sub2=54 first_super2=55 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 99 cells [2, 100]
+G2 R=512 D0=0 d=306: sign_law=True supp=[0,204] (T4b True); ratio-2 crossover pred 103, last_sub2=103 first_super2=104 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 203 cells [2, 204]
+G2 R=512 D0=5 d=311: sign_law=True supp=[0,199] (T4b True); ratio-2 crossover pred 113, last_sub2=112 first_super2=113 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 198 cells [2, 199]
+G2 R=1024 D0=0 d=612: sign_law=True supp=[0,410] (T4b True); ratio-2 crossover pred 203, last_sub2=203 first_super2=204 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 409 cells [2, 410]
+G2 R=1024 D0=15 d=627: sign_law=True supp=[0,395] (T4b True); ratio-2 crossover pred 233, last_sub2=232 first_super2=233 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 394 cells [2, 395]
+G2 R=2048 D0=38 d=1262: sign_law=True supp=[0,784] (T4b True); ratio-2 crossover pred 479, last_sub2=478 first_super2=479 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 783 cells [2, 784]
+G2 R=4096 D0=89 d=2538: sign_law=True supp=[0,1556] (T4b True); ratio-2 crossover pred 983, last_sub2=982 first_super2=983 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 1555 cells [2, 1556]
+G2 R=8192 D0=192 d=5090: sign_law=True supp=[0,3100] (T4b True); ratio-2 crossover pred 1991, last_sub2=1990 first_super2=1991 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 3099 cells [2, 3100]
+done in 0.2s
+========================================================================
+LANE D3 script A: alternation-transport calculus certificates (exact ints)
+G3pre plain R=512 D0=4: outcome={'DIE': 121} first_defect={'row': 10, 'cells': [205, 206], 'front': 207} first_front_advance={'row': 2, 'new_front': 201} (row-0 crossover t2=111, row-0 front=200)
+G3pre plain R=512 D0=5: outcome={'CLOSED_capture': 312} first_defect={'row': 70, 'cells': [102], 'front': 103} first_front_advance={'row': 2, 'new_front': 200} (row-0 crossover t2=113, row-0 front=199)
+G3pre plain R=1024 D0=14: outcome={'DIE': 250} first_defect={'row': 15, 'cells': [401, 402], 'front': 403} first_front_advance={'row': 9, 'new_front': 399} (row-0 crossover t2=231, row-0 front=396)
+G3pre plain R=1024 D0=15: outcome={'CLOSED_capture': 639} first_defect={'row': 139, 'cells': [202], 'front': 203} first_front_advance={'row': 9, 'new_front': 398} (row-0 crossover t2=233, row-0 front=395)
+done in 14.0s
+========================================================================
+LANE D3 script A: alternation-transport calculus certificates (exact ints)
+G1: identity 400/400, zero-sum 400/400, defect-mass-L1 400/400, ratio law 8/8, naive-envelope counterexample: 9 violating cells (e.g. (1, 200, 100))
+G2 R=256 D0=0 d=153: sign_law=True supp=[0,101] (T4b True); ratio-2 crossover pred 53, last_sub2=52 first_super2=53 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 100 cells [2, 101]
+G2 R=256 D0=1 d=154: sign_law=True supp=[0,100] (T4b True); ratio-2 crossover pred 55, last_sub2=54 first_super2=55 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 99 cells [2, 100]
+G2 R=512 D0=0 d=306: sign_law=True supp=[0,204] (T4b True); ratio-2 crossover pred 103, last_sub2=103 first_super2=104 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 203 cells [2, 204]
+G2 R=512 D0=5 d=311: sign_law=True supp=[0,199] (T4b True); ratio-2 crossover pred 113, last_sub2=112 first_super2=113 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 198 cells [2, 199]
+G2 R=1024 D0=0 d=612: sign_law=True supp=[0,410] (T4b True); ratio-2 crossover pred 203, last_sub2=203 first_super2=204 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 409 cells [2, 410]
+G2 R=1024 D0=15 d=627: sign_law=True supp=[0,395] (T4b True); ratio-2 crossover pred 233, last_sub2=232 first_super2=233 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 394 cells [2, 395]
+G2 R=2048 D0=38 d=1262: sign_law=True supp=[0,784] (T4b True); ratio-2 crossover pred 479, last_sub2=478 first_super2=479 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 783 cells [2, 784]
+G2 R=4096 D0=89 d=2538: sign_law=True supp=[0,1556] (T4b True); ratio-2 crossover pred 983, last_sub2=982 first_super2=983 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 1555 cells [2, 1556]
+G2 R=8192 D0=192 d=5090: sign_law=True supp=[0,3100] (T4b True); ratio-2 crossover pred 1991, last_sub2=1990 first_super2=1991 mixed_outside_w8=0; D2a<0 on 0 cells None, D2a>0 on 3099 cells [2, 3100]
+done in 0.2s

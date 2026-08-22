@@ -1,0 +1,11 @@
+RULE-B R=128 D0=0 [cellwise-zero] start
+  i=   0 d=  76 sig1=   -1 headbits=   1 maxbits= 124 junkbits= 120 ov0=0 ov1=0 t=    0.0s
+  i=  32 d=  95 sig1=    1 headbits=   1 maxbits=  40 junkbits=  35 ov0=0 ov1=0 t=    0.2s
+  i=  64 d= 114 sig1=    1 headbits=   1 maxbits=  10 junkbits=  10 ov0=0 ov1=0 t=    0.5s
+  i=  96 d= 133 sig1=    1 headbits=   1 maxbits=   5 junkbits=   5 ov0=0 ov1=0 t=    1.0s
+  i= 125 d= 151 sig1=    0 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=    1.5s
+  i= 126 d= 151 sig1=   -1 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=    1.5s
+  i= 127 d= 152 sig1=    0 headbits=   0 maxbits=   0 junkbits=   0 ov0=0 ov1=0 t=    1.5s
+RULE-B R=128 D0=0 [cellwise-zero] CLOSED VERIFIED: {'closed': True, 'adm': True, 'identity': True, 'profile_ok': True, 'elapsed': 2.8}
+witness: /tmp/math-wt-boxeph-multifront/04-computation/amm12592_witness_R128_ruleB_D0_0_boxeph.json
+trace: /tmp/math-wt-boxeph-multifront/05-knowledge/results/amm12592_ruleB_trace_R128_D0_0_cellwise-zero_boxeph.json

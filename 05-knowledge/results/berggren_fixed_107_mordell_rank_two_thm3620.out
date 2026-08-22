@@ -1,0 +1,30 @@
+== THM-3620 fixed-107 Mordell rank-two exact companion ==
+parent_thm3370_sha256_lf=9abf73a45d789fe5a804977235a3bce3e415c3ad6da865a628d8f338159fa53a
+B=1225041=3*408347;prime_factor_is_prime=1
+displayed_discriminant=-648313395126192;good_reduction=(7, 13, 19)
+points=P(232, 3703),Q(4960, 349321);depths=(1851,174660);curve_identities=PASS
+finite_field_counts=((7, 4), (13, 12), (19, 27));torsion_gcd_bound=1
+three_image_13=(None,(1,0),(3,0),(9,0))
+coefficient_kernel_13=((0,0),(1,2),(2,1));condition=a+b=0_mod_3
+three_image_19=(None,(0,4),(0,15))
+coefficient_kernel_19=((0,0),(1,1),(2,2));condition=a-b=0_mod_3
+kernel_intersection=((0, 0),);rank_lower_bound=2
+three_saturation=PASS;proof=3T=aP+bQ=>a=3a0,b=3b0=>3(T-a0P-b0Q)=O=>T_in_span_by_torsion_zero
+hostile_one_prime_only=13_leaves_(1,2),(2,1);19_leaves_(1,1),(2,2)
+Q_minus_P=((3448, 9), (-204659, 27));denominators=(3^2,3^3)
+P_plus_Q=((94164361, 620944), (1062189113125, 489303872));denominators=((4*197)^2,(4*197)^3)
+chord_Q_minus_P=(224X-63077)^2-9(X^3+B)=-(X-232)(X-4960)(9X-3448)
+chord_P_plus_Q=(57603X-10445932)^2-788^2(X^3+B)=-(X-232)(X-4960)(620944X-94164361)
+collision_mod_3=P(1, 1)=Q(1, 1)
+collision_mod_197=P(35, 157)=-Q(35, 40)
+hostile_integrality=Q-P_and_P+Q_are_nonintegral
+fixed_107_depth_support=mod7:(3,);mod9:(2, 6);mod63:(24, 38)
+finite_exact_scan=X[-107,10000000];modular_candidates=4422;points=((232, 3703), (4960, 349321))
+finite_scan_scope=no_complete_integral_point_classification
+semantic_sha256=95622596e5eababb0bbfeb8ddf28d0587aabe0ad04408c0a44d350f20a8955bb
+script_sha256_lf=d04425f7b9c0590f6e456476eb76cdd846286750b82602fdf2ba806fe617fc80
+hash_basis=LF-normalized bytes;semantic=canonical sorted compact JSON
+PASS explicit_require_gates=271
+report_payload_sha256=7006240bcb2d89681318fc8866a82707528a7db65e847cd214e57a08969ae9b2
+status=EXACT CERTIFICATE;rank>=2 and 3-saturated subgroup
+scope=no rank equality;no complete E_107(Z);finite scan only

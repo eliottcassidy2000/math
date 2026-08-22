@@ -1,0 +1,7 @@
+DISCONNECTED HEAD263 INDEPENDENT PYTHON AUDIT
+rows 201377 contexts 2530 argmin_exact_checks 201377 full_context_controls 220 control_mass_checks 556600
+failures 0 by_g ((1, (1, 3, 5, Fraction(158, 46397), 336, 174, 12, 3)), (2, (2, 3, 5, Fraction(1258, 186873), 336, 174, 12, 3)), (3, (3, 3, 5, Fraction(3254, 421429), 336, 174, 12, 3)))
+task_semantic_sha256 2771f2f901f2f052952343fd77412114ae1d1d99543f42539bc28d0f0f1948af
+engine_sha256 da941a4267147d5442be81ae81880742d2f6b901bfc1d20fb667822402a2950e context_sha256 efea6bd97522fe1c31a5a88ca9f3223f9e7a8c08e3be85c493e9f62fdfaf06e4 ledger_sha256 1caa410d5e57d6085e730270091da3d8433f14d0bd74d98f6283f2ec8a4ca7a0
+c_source_sha256 498ef114fbf7b3d54e62de4556cd0f669b0300f882d61d16c39f1566f5efb23f generator_sha256 468a88781de94cb6d0d49d500371bb234b1ddb2615e8e8a8c6203c827d1ca298 python_assert_nodes 0
+control_semantic_sha256 d24a7ea39659a271fb87f145aeaa16a98c85851dbfdb2762226f3f59655e5841

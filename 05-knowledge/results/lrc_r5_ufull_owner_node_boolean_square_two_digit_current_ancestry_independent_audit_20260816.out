@@ -1,0 +1,27 @@
+== independent hostile audit: two current inverse digits x Boolean square x relation ==
+parent=(one_digit_sha256=4b0bd05ffa6195ff484433329e334d771bc27e7cd380136b50b45e7248bb98ba,semantic=7063720d0e0e4847ce752102de83274ea47d7740fc435a64bae425dbd7100121)
+digits=a=r0+13*r1+169*c;construction=independent 13^3 fold -> r1 -> r0 -> root
+half_open_nested_window_equals_direct_mod169_window: PASS
+source=(f_pieces=120234,fold_pieces=547,r1_pieces=(7, 55, 53, 54, 54, 55, 3, 55, 54, 54, 53, 55, 7),address_pieces=715,root_pieces=2743,boundaries=34,active_root_support=((132,), (132,), (132,), (132,)),sha256=dd2f48375fc38b419babdd0ed13365fb56918829a663270c4b23d56635d6e097)
+reflection=(u,r0,r1,state)->(12-u,12-r0,12-r1,state_XOR2);intervals=(33, 30);mass_sha256=4869b7db8c3a713cdb7dabc91949d0c37d4220560b640db3d88e853e3ce2f49a: PASS
+field=(prime=755373809845391722745761,root=148035889,zeta13=266737884585332483769981)
+sparse_work=(counts=(7107008, 7108460, 1200462, 186244, 186244),state_counts=(300115, 300116, 300115, 300116),updates=1248644,keys_by_tau=(310, 310, 1186, 1186, 1186, 902, 618, 618, 902, 1186, 1186, 1186, 310))
+literal_controls=((0, 0, 0), (1, 0, 6), (6, 6, 12)): PASS;same_root=0
+direct_2197_term_inversion_probes=(((0, 0, 1), (322383479003395571142375, 652209513571172027017012, 380488686199075270671641)), ((1, 6, 7), (697962230161895224492129, 321725971461886166285600, 242345101589067781680478)), ((2, 4, 9), (9243580176343212298593, 85755045745196838326775, 624201457125133858214241)), ((3, 12, 11), (546928898629614439108454, 48211157869431777318692, 258819341437113154438961))): PASS
+marginal_chain=(sum_r1->independently_audited_r0 gamma/tensor,sum_r0->audited_square): PASS
+axis_ranks_(state,r0,r1,relation,address)=(actual,flat)=((4, 13, 13, 6, 4), (4, 4, 1, 6, 4))
+four_way_ANOVA_axis_ranks=((3, 12, 12, 6, 4), (0, 0, 0, 0, 0))
+conditional_r1_by_(state,relation)_ranks_(raw,contrast)=(actual,flat)=(((4, 3, 3, 4, 3, 3, 4, 3, 3, 4, 3, 3, 4), (4, 3, 3, 4, 3, 3, 4, 3, 3, 4, 3, 3, 4)), ((1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)))
+amplitude_carrier_typing=conditional ranks are r1-to-(state,relation) amplitude ranks;pointed-six coordinate marginalized;no carrier or recurrence conclusion
+hostile_scope=actual rank>1 refutes only scalar state/relation-independent K(r0,r1)*T1 factorization
+nonclaim=does_not_refute_hidden_state,matrix_valued,state_dependent,nonlinear,or_temporal_recurrence
+spectral_census_order=(total,16 bins by state/r0/r1/relation mask 0000..1111)
+spectral_censuses_(actual,flat)=((8788, 1, 12, 12, 144, 12, 144, 144, 1728, 3, 36, 36, 432, 36, 432, 432, 5184), (676, 1, 12, 0, 0, 12, 144, 0, 0, 3, 36, 0, 0, 36, 432, 0, 0))
+four_way_ANOVA_spectral_censuses=((5184, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5184), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+fixed_(1,0,6)_records=((4, (132, 133, 132, 133), (4, 3, 3, 4, 3, 3, 4, 3, 3, 4, 3, 3, 4), 'd4c0e037f48c7f7c5759d497798c208e3e70fd94600d827d80d22c568043522c'), (4, (169, 169, 169, 169), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), '9b9e8372ae008139744bac343d9a89b7003691d46ddb4c9d5ced071e594b8a9f'))
+alpha_gamma_digests=('9eb5ee6775d877e319272190d1d39df9a1bea1cb60f7947cdc4f34c9f7f362e1', 'a4e0cc5521ec8dae63f513ec0e34ac96d550d2597676689ea0f2bc3ea036d9d5', '6d796c3fc5d0a1f58ab701f0fccc183d3c7954a6b61f27120a7735ddb3e74dc1', '6c523a119e6fef952b29b5c4cb7f77bede76da74e63fc759d81a06c41434c740', '93f13337db351986d01d772b02868794135021472f1c7cd03d061403be642c12', '216c33d878bfad06dddd75e06a4589773d7a961bde423f1504940a3b1e4108f7', 'bc85bce549d7ab8e0abaec1ee488dd77efdeaa1126320b9d00fc54f6ff697592', 'ffefd0093190c730018653856e43214f9869fc0d34e4dd5edb71fc1885cbf3da', 'b865880bbbb274ffc43b82ef6fd3ef7cbc79826a8f4ed7e43969df227a6b74a5', '762b0a14df8ed52dd942b3e1a927864c7ea85c0cf27f14770c856baa02b449ca', '5b0f2f8c3957dd8d3a5fce6d45de993376603d7d713e9c5ef9303a0b2cd83f08', 'fa5098b6c025587ce3741b53bcf9f2196931e1ce80274ad8b47a73bf0f91b694', '32c3d17ca29cadcb6f0c3fc4dde9d5690cbf1d903c514df1e1d24dab0ce3ca67')
+digests=(tensor,tau_core,r0_parent,square,flat,ANOVA,spectra,ANOVA_spectra)=('53eb6e618d0669bdb27841a1800c46e32456bb6c6d3698c590ae0d5e68822033', 'fd1b837d9de3e4f9e586d29b69ed6726364ce97535d2e48f441c6ccd694250de', '2a195fac7fbd60a4bbd2597bf34baf87302ead16c7c0e8c67c0667b0d320dfba', '5f4b9609faaa5f148d112a7cde5cfba0ab2c1385b4c53ea9c4bcfc6e93d106fc', '0ba2b6072c22ed3ef8058f54c428923b633892849b4cc3ddad0d137479cceca8', ('50ac8fbd386ee78aead3ad370e6945c521a44cd426934f611531edf4c54a4dba', '9f8cd9688152ba01c408eccbf5979960c60a693c52e226096bef896e8ef7338d'), ('4351f36a0727317990ea67b969f9b68dd668a9f5e904f24b0cdf44a95dcfcca6', 'eb4ad01f374e55b0bca39a47290aa5a9bf96953f1c5aff4693995d0a3b1421e5'), ('e7bd15c1765c8cfe38d6ac8f53d9e55d7fc30a788c812e1fb09fbddacd4ddffa', '9f8cd9688152ba01c408eccbf5979960c60a693c52e226096bef896e8ef7338d'))
+semantic_sha256=f2af726e9d5abd1487e841623ce2f62ca647c86e5a1a68e41eda4d9dda6c81ac
+verdict=ACCEPT scoped two-static-current-digit projective cylinder and scalar-factor obstruction
+scope=not complete address,not general autonomous-recurrence no-go,not U_clock chronology,not arrival ancestry,not physical current,no row exclusion,no LRC(14)
+all exact hostile checks passed

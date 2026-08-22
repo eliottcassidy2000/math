@@ -1,0 +1,14 @@
+THM-3416 exact zero-mode-cochain global rank-six companion
+pinned_dependencies=(('THM-3405-two-gauge', 'd3e7dbeeb85c6f897bd9e31270bd0b6602ae4feac3b46a45eb5ce23ae5d24fe0'), ('THM-3414-fixed-zero-six', '5568a4e93bc4478566335e2722c488c999797462eeb7c95af364b20dba41e998'), ('THM-3415-rank-five', 'de8d2f615695070dc75cad38ad4a9c22308d8bf900cd6f9a69cd2003f815a14d'))
+half_density=(H6,small_low_max,q43)=((3, 5, 8, 9, 10, 11, 12, 15, 17, 22, 23, 24, 29, 36), (Fraction(6, 37), 37), (43, 7, Fraction(7, 43)))
+order3_complement_classifier=((5, 15, 10, 2, 'tie'), (8, 24, 16, 4, 'strict'), (9, 9, 6, 2, 'strict'), (10, 30, 20, 4, 'tie'), (12, 12, 8, 2, 'strict'), (15, 15, 10, 2, 'tie'))
+order5_complement_classifier=((3, 15, 12, 4, 'strict'), (8, 40, 32, 8, 'strict'), (9, 45, 36, 8, 'strict'), (10, 10, 8, 2, 'strict'), (25, 25, 20, 4, 'tie'))
+reflection_union_and_CRT_deficits=(((17, 16, (2, 3), (3, 5, 7, 9, 11, 13)), (29, 28, (4, 5), (5, 9, 13, 17, 21, 25))), (Fraction(7, 731), 1, 0, 5), (Fraction(644, 21199), 1, 1, 4))
+positive_atoms=((11, 1, (1, 2, 3, 5, 7, 9), (2, 1, 2, 2, 2, 2), ((1, 11),), 'e445eac5bd512e17df5c03a2285171b57768eaad2189863d0a806da7041f6460'), (15, 0, (1, 2, 3, 4, 5, 7), (3, 3, 3, 3, 5, 3), ((1, 14), (6, 1)), 'f37f973cc50e48764802b6af2865f28c07fd513d2b32cdec080163f2bb886951'), (15, 1, (1, 4, 6, 7, 8, 10), (2, 3, 3, 2, 3, 5), ((1, 14), (4, 1)), '45ac171ed6444232b7b21839964c6cbef8c9a1bf388510a52cb66702d18ce8f3'), (23, 1, (1, 4, 5, 7, 9, 11), (4, 3, 4, 4, 4, 4), ((1, 23),), '2a6135115883c91bea8fdb3077427bdc26bc33b2128cb9f5f2d0ff647e0d1985'), (25, 1, (1, 9, 10, 11, 19, 21), (4, 4, 5, 4, 4, 4), ((1, 25),), 'f4921e8db1ec0f95d37cc9674b995f2625957c590d66548b9b4153d6d86f2867'))
+primitive_cap6_Q2_Q200=(epsilon_counts,support_count,rank6_count,row_sha256)=((26, 67), 88, 26, 'ce685a53fa3ffd3ead6cd774653692c18b706350c5061c2672c3f7019ef0254e')
+rank6_Q2_Q200=(11, 15, 22, 23, 25, 33, 44, 46, 55, 66, 69, 75, 77, 92, 105, 115, 121, 125, 138, 143, 154, 161, 165, 175, 187, 195)
+periodic_arithmetic=(period,rank6_count,density,support_count,density)=(455400, 55000, Fraction(25, 207), 196680, Fraction(149, 345))
+fibonacci_period600=(ranks,count,residues,density)=(((8, 6), (9, 12), (10, 15), (12, 12), (11, 10), (15, 20), (23, 24), (25, 25)), 48, (10, 20, 25, 40, 50, 70, 80, 100, 110, 125, 130, 140, 160, 170, 175, 190, 200, 220, 230, 250, 260, 275, 280, 290, 310, 320, 325, 340, 350, 370, 380, 400, 410, 425, 430, 440, 460, 470, 475, 490, 500, 520, 530, 550, 560, 575, 580, 590), Fraction(2, 25))
+berggren_U_period99=(count,residues,density)=(14, (0, 8, 11, 22, 30, 33, 44, 52, 63, 66, 74, 85, 88, 96), Fraction(14, 99))
+scope=all-q proof is analytic; primitive cap-six census is finite-exact only through Q=200; no physical-time or LRC(14) consequence
+semantic_sha256=99892baf39b3d2b1b6a802bf21e0fe4164f155030d8ad051bc7ae26513b01ca3

@@ -1,0 +1,18 @@
+THM-3628 exact companion -- higher separator graph normalization
+status=proved, verified exact, and independently hostile-audited
+SECTION compiler coordinates and uniform generic inverse
+PASS generic_gates=12 Delta=E^(2m-1)-H^2
+SECTION exact saturated graph kernels for m2 and m3
+PASS graph_gates=46 Jm=(FB,FC):(E*Delta)^infinity
+SECTION exact five-relation normalization
+PASS normalization_gates=34 Nm=Sm[d,W] finite_birational
+SECTION normality charts and sharp m2 versus m3 boundary
+PASS normality_gates=16 m2=smooth m3=A1 general=Amminus2
+SECTION five E-zero arms and exact source open
+PASS arm_open_gates=67 source=Nm_minus_N0_Nminus2_Vminus3
+SECTION semigroups, valuations, and multiplied debts
+PASS valuation_gates=56 cusp_delta=mminus1 q_pole=2mminus2
+SECTION m1 contrast, old-normalization hostile, and hygiene
+PASS contrast_hygiene_gates=10 T_not_finite_new_vertical_arm
+PASS total_exact_gates=241
+RESULT PASS -- proved uniform theorem independently hostile-audited

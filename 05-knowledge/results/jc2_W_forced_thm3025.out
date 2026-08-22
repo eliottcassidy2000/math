@@ -1,24 +1,29 @@
-STEP 1.  For binary forms, Jac(W,H)=0  <=>  W^deg(H) = c H^deg(W).
-   (check both directions on random forms)
-   common linear form        : Jac=0? True;  W^dH / H^dW constant? True
-   common quadratic          : Jac=0? True;  W^dH / H^dW constant? True
-   NOT proportional powers   : Jac=0? False;  W^dH / H^dW constant? False
-   equivalence held on all samples: True
+STEP 1. Keep the two Jacobians typed.
+   J0=Jac(P,Q) is the nonzero Keller constant.
+   j=Jac(H,Q_(m-1)) is a subleading form and may be zero.
+   THM-3016 gives j*Jac(W,H)=0, so a j=0/j!=0 split is mandatory.
 
-STEP 2.  The arithmetic: gcd(g, n-1) = gcd(g, ga-1) = 1 always.
-   pairs (g,a) with 1<=g,a<=39 and gcd(g, ga-1) != 1:  NONE
-   => in W^g = c H^{n-1}, writing H = prod l_i^{e_i} forces g | e_i(n-1),
-      and gcd(g,n-1)=1 gives g | e_i; with sum e_i = g and e_i >= 1 there is
-      EXACTLY ONE i, with e_i = g.  So H = l^g:  a single direction, K = 1.
+STEP 2. Exact coprime-degree gate.
+   gcd(g,ga-1)=gcd(g,gb-1)=1 for 1<=g,a,b<60: PASS
 
-STEP 3.  Direct check: for K >= 2 (H with >= 2 distinct linear factors),
-   is W = 0 the ONLY homogeneous solution of Jac(W,H)=0 in degree n-1 = ga-1?
-   H=(x+y)(x-y), g=2, a=2 -> deg W=3            K=2: only W=0? True
-   H=(x+y)(x-y), g=2, a=3 -> deg W=5            K=2: only W=0? True
-   H=(x+y)^2(x-y), g=3, a=2 -> deg W=5          K=2: only W=0? True
-   H=xy(x+y), g=3, a=3 -> deg W=8               K=3: only W=0? True
-   H=(x+y)(x-y)(x+2y), g=3,a=4 -> deg W=11      K=3: only W=0? True
+STEP 3. K>=2 hostile nullities in degree ga-1 (the j!=0 branch).
+   (x+y)(x-y), g=2, a=2                   degree= 3, nullity=0: PASS
+   (x+y)(x-y), g=2, a=3                   degree= 5, nullity=0: PASS
+   (x+y)^2(x-y), g=3, a=2                 degree= 5, nullity=0: PASS
+   xy(x+y), g=3, a=3                      degree= 8, nullity=0: PASS
+   three roots, g=3, a=4                  degree=11, nullity=0: PASS
 
-STEP 4.  Control -- when K = 1 the solution space is genuinely NONZERO:
-   H=(x+y)^2, deg W=3:  W = c3*(x + y)**3   (nonzero <=> K=1)
-   H=(x+y)^3, deg W=5:  W = c5*(x + y)**5   (nonzero <=> K=1)
+STEP 4. The j=0 branch closes both subleading forms.
+   H=xy: Jac(H,Q_3)=0 has nullity 0: Q_3=0
+   H=xy: Jac(P_5,H)=0 has nullity 0: P_5=0
+   hence W=0 without dividing by j: PASS
+
+STEP 5. K=1 sharp controls.
+   H=(x + y)**2, degree=3: nullity=1 (nonzero): PASS
+   H=(x + y)**3, degree=5: nullity=1 (nonzero): PASS
+
+STEP 6. Symbolic product identity controls.
+   j=0 annihilates the product for arbitrary W: PASS
+   j!=0 does not annihilate a hostile W automatically: PASS
+
+ALL CHECKS PASSED

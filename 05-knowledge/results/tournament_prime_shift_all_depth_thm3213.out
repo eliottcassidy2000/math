@@ -1,0 +1,14 @@
+TOURNAMENT PRIME-SHIFT ALL-DEPTH AUDIT
+status=exact_controls;general_prime_shift_proof_is_algebraic
+d4_p_index_mod_p2=36F_p(2)+84F_p(3)+72F_p(4)+12F_p(5)
+d4_p_index_closed=12*(-4+8*2^p-7*3^p+4^p+5^p) mod p^2
+d4_p_index_quotient=12*(24q_p(2)-21q_p(3)+5q_p(5)) mod p
+p_index_first_quotients=((5, 0), (7, 5), (11, 1), (13, 0), (17, 6), (19, 12), (23, 3), (29, 12))
+p_index_exact_exception_valuations=((5, 3), (13, 2))
+FINITE_SCOUT_ONLY_limit=1000000;zero_first_layers=(13,)
+prime_shift_identity=F_T_(p+s)(c)=F_T_(s+1)(c) mod p
+output_shift_identity=F_U_(p+s)(d)=F_U_(s+1)(d) mod p
+shift_controls=120
+minimal_constants_d1_to12=((1, 1, 0, 3), (2, 1, 0, 6), (3, 1, 0, 6), (4, 2, 1, 1944), (5, 2, 1, 1800), (6, 2, 1, 720), (7, 3, 2, 2600640), (8, 3, 2, 1451520), (9, 3, 2, 362880), (10, 4, 3, 6651590400), (11, 4, 3, 2634508800), (12, 4, 3, 479001600))
+d4_shift=1;constant=1944=2^3*3^5;new_p3_denominator_at_r=p+1_for_all_p>3
+verdict=singly_factorial_normalized_non_C_finite_for_every_fixed_d

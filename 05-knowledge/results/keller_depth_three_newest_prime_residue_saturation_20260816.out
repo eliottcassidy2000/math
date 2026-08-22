@@ -1,0 +1,12 @@
+== THM-3542 depth-three newest-prime point/pair saturation ==
+specialization=(tau,lambda)=(0,1);q0=(1/9,4/3,0);q2=F^2(q0)
+L(q1)=7664/81;L(q2)=-2129081689932006656253463984/984770902183611232881
+fibre_gates=outer_squarefree;all reconstruction denominators units;degree9;point_x_squarefree;marked_child=1+2;PASS
+point_factor_degrees=((1, 1), (2, 1), (6, 1));point_modular_certificates=(((), (0, 1)), (((13, (2,)),), (0, 2)), (((13, (6,)),), (0, 6)))
+pair_factor_degrees=((1, 1), (2, 1), (6, 1), (6, 1), (9, 1), (12, 1));pair_sums_squarefree=PASS;pair_modular_certificates=(((), (0, 1)), (((13, (2,)),), (0, 2)), (((13, (6,)),), (0, 6)), (((13, (6,)),), (0, 6)), (((13, (3, 6)), (19, (1, 4, 4))), (0, 9)), (((13, (6, 6)),), (0, 6, 12)))
+H2_order=144;point_orbits=(1, 2, 6);pair_orbits=(1, 2, 6, 6, 9, 12);packets=9=3^2
+specialized_orbits=H2_orbits;therefore generic residue point/pair orbits=H2_orbits by good-specialization refinement
+point_ledger_sha256=aeaceefd2c807801a84c004a7bf1ac8a7f7da762eb4e36f20de5a7533ffb1819
+pair_ledger_sha256=570bc5a62f4a5b85a4ad12f38d0ac1bb80c86588d95c085d26b33aa1843ba875
+semantic_sha256=d79f24556807af9c7c335104564bb9f6baf047d42ca46a0123da669a228e6835
+status=PROVED FINITE-EXACT DEPTH-THREE POINT/PAIR SATURATION;no full decomposition group, n>=4, coordinate-index, or LRC claim

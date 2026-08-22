@@ -1,0 +1,23 @@
+THM-3180 SIX-EXIT FIRST-EUCLIDEAN-FLAG PRIMARY AUDIT
+canonical_dependency=factorial_multiplace_newton_degree_barcode_thm3152.py sha256=f804d3996abe4df981dbf7db877af4aeca9218df64b0ac382af876a3cdca15a0
+exit_order=(d prime,d-1 prime power,d-2 prime,d-3 prime,d-4 prime,d-5 prime)
+census_3_1000=(831, 642, 513, 390, 301, 211)
+census_1001_2000=(865, 725, 617, 511, 426, 341)
+census_3_2000=(1696, 1367, 1130, 901, 727, 552)
+old_report_progression_after_exits_3_to_6=((56, 45, 38, 30), (123, 100, 79, 58), (121, 101, 86, 72), (154, 125, 104, 83), (163, 140, 119, 98))
+census_2001_2200=(176, 149, 130, 111, 95, 79)
+new_chunk_progression_after_exits_3_to_6=((31, 25, 20, 15), (29, 24, 20, 16), (31, 26, 22, 18), (39, 36, 33, 30))
+new_six_exit_residual_count=79 residual_digest=8d93a3f8b5fb2877e35872d96b2dbce0d3a219265e0718471e5913b54236fad5
+related_thm3176_seven_exit_residual_count=66
+bank=(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47)
+deterministic_work_chunks=((2001, 2050), (2051, 2100), (2101, 2150), (2151, 2200)) max_workers=4
+chunk_semantic_trace_digests=('f1278e4b6f1855e75edcff6e02f0d6c2b00a1ce82a2abf15492d7c3d2a0a6a0d', '5d33c39afdfa96a0e8d0ecc3c34a4ebbcc0ea644b3d22a2fc8927689e87a7281', '7884bb2d58460b834be608fa68ea6acfadc76c489e9806f4fbf0ce4aaeb73341', '30617545e693dc35b7226deb83d6e5e93d81bce89d578f3360d642f5eb7eb2c6')
+global_semantic_trace_digest=650960f5ec5129fbb170360331dec10843172f81584c954c55216c5f9c166052
+killer_histogram=((2, 8), (3, 5), (5, 20), (7, 12), (11, 10), (13, 1), (17, 11), (19, 5), (23, 5), (29, 2)) max_killer_prime=29
+hostile_control_d_2009_trace=((2, (128, 256, 384, 512, 640, 768, 896, 1024, 1152, 1280, 1408, 1536, 1664, 1792, 1920)), (3, (128, 256, 384, 512, 640, 768, 896, 1024, 1152, 1280, 1408, 1536, 1664, 1792, 1920)), (5, ()))
+positive_controls=planted(v+1) and planted(v), degree 1 retained
+closed=79 survivors=0
+consequence=every exact {0,1,2} quadratic window 1<=r<=2198 is nonzero in at least one slot
+first_unaudited=r=2199 d=2201 seven_exit_residual=True
+first_unaudited_factorization=(31*71,2^3*5^2*11,3*733,2*7*157,13^3,2^2*3^2*61,5*439)
+STATUS=PASS

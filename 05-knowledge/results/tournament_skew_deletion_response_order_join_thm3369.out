@@ -1,0 +1,14 @@
+THM-3369 SKEW DELETION RESPONSE ORDERED-JOIN ORIENTATION CURRENT
+object=Omega_T(z,w)=sum_uv(A_uv-A_vu)r_Tu(z)r_Tv(w)^T;r_Tv=s_(T-v);s_T=(P_T,zN_T)^T
+first_response=sum_v_r_Tv=n*s_T-z*s_T_prime
+two_factor_law=two_internal_H-conjugates+(H_Y*q_X)(z)(H_X*q_Y)(w)^T-(H_X*q_Y)(z)(H_Y*q_X)(w)^T
+many_factor_law=sum_internal_conjugates+ordered_pairwise_transformed_q_wedges
+covariance_audit=labelled_tournaments_orders_1_to_5:1099;relabels_through_order_4:1589;converse_negates_Omega;Omega(w,z)^T=-Omega(z,w);sha256:2742c1fd54b4f34b6c894ce4d22c01888cab4254cf0a8e41496830a9af699fb1
+join_audit=all_ordered_factor_pairs_total_order_at_most_6:2553;reverse_equal_total_order_at_most_3:5;sha256:02db9efeb5ad40e9629c61ce5e4c8cc4e5487d5894f9b1989cdd3884798e3a79
+three_factor_audit=all_ordered_labelled_triples_total_order_at_most_6:339;sha256:652c5c2c02b5a92e39f0775c7abc30eb6c0b98a55a6ca898c5a52f71ec556bf0
+sharp_hostile=K1_join_C3_versus_C3_join_K1;common_s;scores:(3, 1, 1, 1)_versus_(2, 2, 2, 0);Omega_reverse=-Omega_forward;Omega_forward_01=-24*w^3*(z+1)*(4*z^2+2*z+1)
+hostile_sha256=1a69962011e3f18906f6b1aea516c840460302d4d1c1037a1b15b329d4e3ce0d
+truth_gates=assert_nodes:0;float_literals:0
+semantic_sha256=cd70e45bc435acb281084bdee703dcf36e7b53b6877003b8260a5ff40671f12e
+scope=exact_operation_response_and_one_sharp_order_bit;no_injectivity_or_chronology_claim
+all_exact_controls=PASS

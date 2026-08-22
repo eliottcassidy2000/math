@@ -1,0 +1,29 @@
+FC3 unrestricted-22-row two-face selector obstruction
+dependency_hash_checks=6
+faces=(support_(1,2)_I2:239,support_(1,3)_I2:4319)
+shared_raw_count_vectors=239
+shared_joint_nonreset_vectors=238
+small_reset_shared_but_small_unconstrained=(1, 2, 1, 1, 1, 0, 0, 0)
+facewise_all_22_row_coverage=PASS
+common_availability_size_histogram=((0, 2), (1, 4), (2, 2), (7, 1), (9, 8), (10, 8), (11, 11), (12, 11), (13, 15), (14, 10), (15, 7), (16, 11), (17, 10), (18, 16), (19, 13), (20, 29), (21, 52), (22, 28))
+unrestricted_conflict_count=2
+unrestricted_conflict=((3, 4, 5), (2, 5, 8, 9, 11, 12, 14, 16, 18, 22), (3, 4, 6, 7, 10, 13, 17, 19, 20, 21), ())
+unrestricted_conflict=((1, 3, 4, 5), (2, 5, 9, 11, 12, 14, 16, 18, 22), (3, 4, 6, 7, 10, 13, 17, 19, 20, 21), ())
+conflict_distance_records=(state,small_l1,full_l1):(((3, 4, 5), 3, 5), ((1, 3, 4, 5), 2, 4))
+unique_minimum_pole_cardinality_conflict=(3,4,5)
+unique_multiset_inclusion_minimal_conflict=(3,4,5)
+unique_closest_to_small_reset_conflict=(1,3,4,5):distance=2
+conflicts_form_one_small_Q_directed_edge=PASS
+pair_universal_intersections=(((5,), (12,)), ((4, 5), (5,)), ((1, 3, 5), (5,)), ((1, 4, 5), (5,)), ((3, 4, 5), ()), ((1, 3, 4, 5), ()))
+positive_control=(5):common_available=(12,)
+hostile_controls=((3,4,5),(1,3,4,5))
+unrestricted_availability_atlas_sha256=9ee92c1bc68f02cb023031ec3f0cf6eb154408f49ff3e67f39db54e9c706bcd8
+compatible_face_blind_shared_vectors=236
+canonical_common_selector_row_census=((1, 184), (2, 25), (3, 21), (5, 5), (12, 1))
+face_blind_unrestricted_22_row_selector=IMPOSSIBLE
+minimum_static_face_origin_sidecar_bits=1
+minimum_face_bit_dependency_locus_raw_vectors=2
+localized_one_bit_selector_cases_checked=4556
+localized_one_bit_selector=PASS
+typed_scope=two_promoted_bank_I2_faces; arbitrary_deterministic_count_vector_selector; no_other_face_or_FC3_closure
+all_exact_checks=PASS

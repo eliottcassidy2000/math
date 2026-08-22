@@ -1,0 +1,170 @@
+{
+ "witnesses": {
+  "amm12592_floor_witness_R128_direct.json": {
+   "name": "amm12592_floor_witness_R128_direct.json",
+   "R": 128,
+   "struct_ok": true,
+   "box_ok": true,
+   "parity_ok": true,
+   "unit_ok": true,
+   "identity_ok": true,
+   "profile_is_exact_floor": true,
+   "D0_max_slack": 0,
+   "min_slack": 0,
+   "eff_rate": [
+    58,
+    97
+   ],
+   "eff_lt_gamma": true,
+   "VERDICT": "PASS",
+   "controls_ok": true
+  },
+  "amm12592_floor_witness_R128_lp.json": {
+   "name": "amm12592_floor_witness_R128_lp.json",
+   "R": 128,
+   "struct_ok": true,
+   "box_ok": true,
+   "parity_ok": true,
+   "unit_ok": true,
+   "identity_ok": true,
+   "profile_is_exact_floor": true,
+   "D0_max_slack": 0,
+   "min_slack": 0,
+   "eff_rate": [
+    58,
+    97
+   ],
+   "eff_lt_gamma": true,
+   "VERDICT": "PASS",
+   "controls_ok": true
+  },
+  "amm12592_floor_witness_R128_rule_boxeph.json": {
+   "name": "amm12592_floor_witness_R128_rule_boxeph.json",
+   "R": 128,
+   "struct_ok": true,
+   "box_ok": true,
+   "parity_ok": true,
+   "unit_ok": true,
+   "identity_ok": true,
+   "profile_is_exact_floor": true,
+   "D0_max_slack": 0,
+   "min_slack": 0,
+   "eff_rate": [
+    58,
+    97
+   ],
+   "eff_lt_gamma": true,
+   "VERDICT": "PASS",
+   "controls_ok": true
+  },
+  "amm12592_floor_witness_R64_slim.json": {
+   "name": "amm12592_floor_witness_R64_slim.json",
+   "R": 64,
+   "struct_ok": true,
+   "box_ok": true,
+   "parity_ok": true,
+   "unit_ok": true,
+   "identity_ok": true,
+   "profile_is_exact_floor": true,
+   "D0_max_slack": 0,
+   "min_slack": 0,
+   "eff_rate": [
+    58,
+    97
+   ],
+   "eff_lt_gamma": true,
+   "VERDICT": "PASS",
+   "controls_ok": true
+  }
+ },
+ "audit": {
+  "A1_bad": [],
+  "A2_helper_bad": [],
+  "A2_equiv_bad": [],
+  "A3_all_even_set": [
+   1,
+   2,
+   4,
+   8,
+   16,
+   32,
+   64,
+   128,
+   256,
+   512,
+   1024
+  ],
+  "A3_iff_ok": true,
+  "A3_cross_ok": true,
+  "A4": {
+   "combined_R8": {
+    "last_row_is_minus_one": true,
+    "last_row_cells_full_box": true,
+    "c_cells_all_even": true,
+    "master_equation_holds": true
+   },
+   "combined_R16": {
+    "last_row_is_minus_one": true,
+    "last_row_cells_full_box": true,
+    "c_cells_all_even": true,
+    "master_equation_holds": true
+   },
+   "combined_R32": {
+    "last_row_is_minus_one": true,
+    "last_row_cells_full_box": true,
+    "c_cells_all_even": true,
+    "master_equation_holds": true
+   },
+   "amm12592_floor_witness_R64.json": {
+    "last_row_is_minus_one": true,
+    "last_row_cells_full_box": true,
+    "c_cells_all_even": true,
+    "master_equation_holds": true
+   },
+   "amm12592_floor_witness_R64_boxeph.json": {
+    "last_row_is_minus_one": false,
+    "last_row_cells_full_box": false,
+    "c_cells_all_even": true,
+    "master_equation_holds": false
+   },
+   "amm12592_floor_witness_R64_cellslim.json": {
+    "last_row_is_minus_one": true,
+    "last_row_cells_full_box": true,
+    "c_cells_all_even": true,
+    "master_equation_holds": true
+   },
+   "amm12592_floor_witness_R64_rule_boxeph.json": {
+    "last_row_is_minus_one": true,
+    "last_row_cells_full_box": true,
+    "c_cells_all_even": true,
+    "master_equation_holds": true
+   },
+   "amm12592_floor_witness_R64_slim.json": {
+    "last_row_is_minus_one": false,
+    "last_row_cells_full_box": false,
+    "c_cells_all_even": true,
+    "master_equation_holds": false
+   },
+   "amm12592_floor_witness_R128_direct.json": {
+    "last_row_is_minus_one": false,
+    "last_row_cells_full_box": false,
+    "c_cells_all_even": true,
+    "master_equation_holds": false
+   },
+   "amm12592_floor_witness_R128_lp.json": {
+    "last_row_is_minus_one": false,
+    "last_row_cells_full_box": false,
+    "c_cells_all_even": true,
+    "master_equation_holds": false
+   },
+   "amm12592_floor_witness_R128_rule_boxeph.json": {
+    "last_row_is_minus_one": true,
+    "last_row_cells_full_box": true,
+    "c_cells_all_even": true,
+    "master_equation_holds": true
+   }
+  }
+ },
+ "r128_closed": true,
+ "all_pass": true
+}

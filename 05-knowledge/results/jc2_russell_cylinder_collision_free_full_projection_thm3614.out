@@ -1,0 +1,18 @@
+THM-3614 exact companion -- proved collision-free full linear projection rigidity
+status=verified exact controls plus independent hostile audit; cited all-degree steps are proof-driven
+SECTION Russell compiler, polynomiality, and transverse line restriction
+PASS compiler_polynomial_gates=13 line_restriction_and_reconstruction=8
+SECTION ordinary leading forms for graph degrees at least three
+PASS high_degree_rows=28 tested_d=3..9
+SECTION degree-at-most-one base profiles
+PASS low_degree_graphs=3 low_profile_rows=12 profile=11,13
+SECTION generic quadratic universe and hostile cancellations
+PASS generic_quadratic_forms=6 top_universe=27 top_generic=26 top_cancel=1 linear_nonzero=8 linear_zero=1
+SECTION Jung--van der Kulk divisibility grid
+PASS divisibility_rows=398 high_grid=3..100 boundary_profiles=3
+SECTION exceptional h=-xq+n line derivatives and unavoidable q coefficient
+PASS exceptional_formulas=9 q_coefficient=8 projection_parameter_independent=yes
+SECTION complete {-1,0,1} transverse row-space normalization census
+PASS rank_two_matrices=6240 r0=3888 r1=2304 r2=48 transverse_normalizations=3888
+PASS total_exact_gates=14535
+RESULT PASS -- proved, verified-exact, independently hostile-audited

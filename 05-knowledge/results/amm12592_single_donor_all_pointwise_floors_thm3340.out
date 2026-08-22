@@ -1,0 +1,15 @@
+status=THM-3340_VERIFIED_EXACT
+coefficient_horizons=2,4,8,16,32,64,128,256,512
+exhaustive_rotation_horizons=2,4,8,16
+M2_one_sided_donor_counts=(1,)
+M4_one_sided_donor_counts=(1, 1, 1)
+M8_one_sided_donor_counts=(1, 4, 10, 13, 10, 4, 1)
+M16_one_sided_donor_counts=(1, 10, 64, 250, 676, 1336, 1990, 2269, 1990, 1336, 676, 250, 64, 10, 1)
+M32_one_sided_donor_counts=(1, 22, 316, 2908, 19384, 99664, 411100, 1396978, 3985180, 9676672, 20207320, 36573388, 57703840, 79697212, 96629830, 103020253, 96629830, 79697212, 57703840, 36573388, 20207320, 9676672, 3985180, 1396978, 411100, 99664, 19384, 2908, 316, 22, 1)
+finite_profile=T_M(1)=M; T_M(n)=n+1 for 2<=n<M
+rotation_bijection=PASS
+unmatched_injection=PASS
+strong_one_sided_half_capacity=PASS
+closed_discrepancy_factorization=PASS
+layer_bisection=PASS
+source_sha256=961b0cedfc2aa8f18247c8f58a5629882f0c27809cfec4fe40ad206287b4d1cc

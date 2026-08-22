@@ -1,0 +1,25 @@
+universal_resultant=PASS
+infinity_coefficients=x99,x98_share_(a*t-v);x97_wall=-2*v^6*kappa/a^4
+degree_ledger_d=0..9=(96, 96, 96, 96, 96, 96, 96, 96, 96, 99)
+case=4111
+degree8_parameter_quotients=(52, 50, 48, 46, 50, 48)
+degree9_parameter_quotients=(52, 52, 52, 52, 55, 55)
+wall_norm_coefficients=(1250000000, 5131065625, 7626867738, 4689453125)
+kappa_norm=494424620106921/3276800000000
+degrees=(t=0:52,t=2:55,t=2/Gamma:53)
+generic_H_sha256=ac322bcb115435eafb088a3a341068eed215d1fe1904e7ce8ba3191ee92a613c
+wall_H_sha256=46a312714b2a79aff5c5d17a53127dc32ea83e8755f90793d6e4ca7655abc9d4
+reciprocal_law=w^2~-64*delta/(Gamma^3*kappa)=-64*epsilon/(Gamma^4*kappa)
+case=3211
+degree8_parameter_quotients=(52, 50, 48, 46, 50, 48)
+degree9_parameter_quotients=(52, 52, 52, 52, 55, 55)
+wall_norm_coefficients=(23887872, 293981184, -339674272, -14068359375)
+kappa_norm=-102215864475620375014841556549072265625/12116574790945106558976
+degrees=(t=0:52,t=2:55,t=2/Gamma:53)
+generic_H_sha256=7485c912563b1648ce356126972931a1fd951b68e73ec329df8495d0457c9513
+wall_H_sha256=2489a717d526e3bb75b323519b3f290945353d94e706d078f9e5de0f7d720b48
+reciprocal_law=w^2~-64*delta/(Gamma^3*kappa)=-64*epsilon/(Gamma^4*kappa)
+finite_case=4111 good_reduction=(p=113,u=85) wall_t=85 kappa=56 controls=(('generic', 55, 0, 0, 0), ('wall', 53, 0, 0, 0))
+finite_case=3211 good_reduction=(p=101,u=64) wall_t=89 kappa=16 controls=(('generic', 55, 0, 0, 0), ('wall', 53, 0, 0, 0))
+SCOPE=PROVED_CANDIDATE_SYMBOLIC_PLUS_FINITE_EXACT_CONTROLS;JC2=NOT_CLAIMED
+FAILED_CHECKS=NONE

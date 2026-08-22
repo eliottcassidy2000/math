@@ -1,0 +1,12 @@
+THM-3562 balanced resonant pole-unit exact companion: PASS
+resonance universe: k=2..40, delta=1..12
+resonance/pure-q gates: 2535
+Lagrange universe: h=2..16, three rational node packets per h
+Lagrange packets: 45
+balanced delta passports: even total 2..10, all positive compositions
+passport packets: 682 genuinely nonsplit: 651
+R=8 hostile: poles (33,11); s_F=1/(2x); E(1)=-3E(0)
+R=8 control gates: 19
+exact gates: 3977
+consequence: no balanced entrant in the normalized nonsplit polynomial exact-square-prefix chart
+scope: unbalanced responses, nonpolynomial prefixes, other charts, and JC(2) remain open

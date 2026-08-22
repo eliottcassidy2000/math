@@ -1,0 +1,22 @@
+LRC14 projected k3 z223 terminal descent and cap222
+dependency=THM3139_source:92e1c22088998d37db89020ac1ebbb7d1ee17e3539152ab205f8b0cd92532e36;output:4f0ae623d0134406f83f466c0a9f1353525a992acb8ee82c2e92f2f0537f32c5;semantic:1eb7e8faefafe41fd6f6cbc108ba09295dbcbb7fe8016d7ec0cbdc258adf358a
+atlas=sha256:cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda;rows:6060
+layer=z1:223;rows:65;wall:54;order:11;row_order_sha256:58454a33efe0b74fddeddb498d1518033ccf74064b19ec611d63a223f6065566;states:2986;crude:1094;status:1767;residual:125;direct_farkas:0;legacy_farkas:1767;screen_record_sha256:88220270f2b1b43aeb0fe237472b31e971ad0a275ef904301f08a89cd748d2eb;residual_rows:7;residual_sha256:822fcd1cd347acbec8773b95a04bb5e17c598a8225cc9ebc4ab6ce7aeca96b83
+terminal=z1:223;rows:7;masks:125;positive_two_high_gap:7;closed:7;zero_high_hostiles:115;one_high_cases:125;low_label_sets:13;coarse:114;exact:11;maxgap:0;failures:0;minimum_slack:1;closure_sha256:35b165deda53bd549fec3cf6ad4b70ce8f7c02b26c639d386cde8f80b6dfe071;case_vector_sha256:11ba29c9a3f933a495709a4449146d9fbce064b9978160724bdf324a52623774
+TERMINAL;E=(1, 5, 6, 9, 12, 14);L=17640;high=1738;masks=3;two_high_gap=4592897/1781319540;zero_high_hostiles=0;one_high_cases=3;low_label_sets=3;coarse=0;exact=3;maxgap=0;failed=0;minimum_slack=1;case_certificate_sha256=cd24785751e414090961fe762708d5ec3a1c37566c7367f87275f2d59c270b3b
+TERMINAL;E=(1, 5, 9, 11, 12, 14);L=194040;high=19111;masks=26;two_high_gap=710947830479/186473498391180;zero_high_hostiles=23;one_high_cases=26;low_label_sets=1;coarse=23;exact=3;maxgap=0;failed=0;minimum_slack=1;case_certificate_sha256=fee2b047b545c6c376a92f1e78d90166dc46ae45d731ddb6357083bf633ab612
+TERMINAL;E=(1, 6, 8, 10, 13, 14);L=152880;high=15057;masks=21;two_high_gap=23086249/6711909750;zero_high_hostiles=20;one_high_cases=21;low_label_sets=1;coarse=20;exact=1;maxgap=0;failed=0;minimum_slack=1;case_certificate_sha256=b03eeb0483b4b485f1a669715d45675b16bbeac240b8467a15e6f286c7f6cc2e
+TERMINAL;E=(1, 8, 10, 11, 12, 14);L=129360;high=12741;masks=35;two_high_gap=10584004307/2766026731468;zero_high_hostiles=32;one_high_cases=35;low_label_sets=2;coarse=31;exact=4;maxgap=0;failed=0;minimum_slack=1;case_certificate_sha256=845ce0888f482cc808e34f3737151a4a3f9c75e6d97c35e4aeb29ffa67f465f2
+TERMINAL;E=(1, 8, 10, 12, 13, 14);L=152880;high=15057;masks=29;two_high_gap=3702203876491/1251052725555360;zero_high_hostiles=29;one_high_cases=29;low_label_sets=4;coarse=29;exact=0;maxgap=0;failed=0;minimum_slack=2;case_certificate_sha256=955c4cab0f38a5143796459c1df78e83e0cb448098d69ff363062834da9fe5b4
+TERMINAL;E=(2, 6, 8, 10, 12, 14);L=11760;high=1159;masks=1;two_high_gap=37234922948/10736624397135;zero_high_hostiles=1;one_high_cases=1;low_label_sets=1;coarse=1;exact=0;maxgap=0;failed=0;minimum_slack=58;case_certificate_sha256=9f18c68032220a912c5ff455de68c01eac1f8323717950f138ce59d833200dd1
+TERMINAL;E=(2, 8, 10, 11, 12, 14);L=129360;high=12741;masks=10;two_high_gap=377052164623/89139292362120;zero_high_hostiles=10;one_high_cases=10;low_label_sets=1;coarse=10;exact=0;maxgap=0;failed=0;minimum_slack=14;case_certificate_sha256=04b95ad37ed6ad18d6a0a64dbf7248ac41b9bf393415883fa994519313e68e13
+direction_screen=the_ray_quotient_and_exact_Farkas_status_checks_close_a_superset_of_every_actual_projected_assignment;all_order_rows_have_zero_residual
+direction_terminal=each_residual_is_a_wall_row;the_strictly_positive_duplicate_permitting_two_high_gap_and_wall_at_least_one_high_gate_force_exactly_one_high;the_one_high_bank_uses_high_ray_suprema_and_enlarges_the_actual_assignment_set
+direction_carrier=every_one_high_case_is_closed_by_complete_cell_projected_support_cardinality;no_max_gap_fallback_is_used
+fixed_modulus=gcd(223,L)=1_for_every_row_so_first_d=L;every_residual_status_tuple_has_lcm(ds)=L
+evidence_boundary=all_raw_Farkas_certificates_are_verified_exactly_but_the_screen_digest_uses_only_row[:19];the_terminal_closure_digest_omits_the_chosen_duplicate_gap_maximizer_witness;the_top_level_semantic_binds_only_solver_witness_free_digests_and_basis_invariant_counts
+promotion_consequence=ledger 374090-65=374025;projected_k3_cap:z1<=222
+next_layer=z1:222;rows:219;wall:199;order:20;row_order_sha256:68ea5b7128d3deafd4bb9a14f6d1d09ba867a5f117645a3e1f4f3d03e761de73;status:occupied
+scope=projected_k3_necessary_atlas_only;no_physical_cover_classification_outside_the_projection;no_k<=1_or_final_rung_or_LRC14_claim
+semantic_sha256=f6493459d78f6af58b999bd54c8b72e2a8f989c533a1e5a91d5e6bc337352ec7
+all_exact_controls=PASS

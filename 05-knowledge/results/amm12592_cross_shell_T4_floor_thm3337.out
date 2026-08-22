@@ -1,0 +1,11 @@
+status=THM-3337_VERIFIED_EXACT
+deadline_vector_T1_to_T7=2,3,5,5,7,7,8
+all_layer_heads={1: 4, 2: 14, 3: 28, 4: 35, 5: 28, 6: 14, 7: 4}
+all_layer_totals={1: 8, 2: 28, 3: 56, 4: 70, 5: 56, 6: 28, 7: 8}
+shell_2_doubled_deficit={1: 0, 2: -2, 3: -4, 4: 0, 5: 4, 6: 2, 7: 0}
+shell_4_doubled_deficit={1: 0, 2: 2, 3: 4, 4: 0, 5: -4, 6: -2, 7: 0}
+power_basis_head_polynomial=[0, 4, -14, 28, -35, 28, -14, 4, -1]
+target=(1-p^8-(1-p)^8)/2
+checksum_prefix_control=PASS
+causality=PASS
+source_sha256=af051babc893801ffc133448fbb15ba758f0199a2f27d387a9f3dfedc27660fd

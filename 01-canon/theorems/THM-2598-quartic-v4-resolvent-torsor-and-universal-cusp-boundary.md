@@ -23,7 +23,9 @@ status: >
   the finite normalization.  Consequently no grade-three Keller anatomy
   descends without an additional affine/Keller realization and V4-origin
   sidecar.  This theorem alone excludes no D4/A4/S4 branch; after THM-2633
-  only A4/S4 remain live.  G1, JC(2), and DC(2) remain open.
+  only A4/S4 remain possible.  THM-3438 later realizes the S4 branch and
+  settles global G1 positively; A4 realization, planar degree four, JC(2),
+  and DC(2) remain open.
 source: codex-2026-07-27-quartic-resolvent-transfer
 depends_on:
   - THM-2455-quartic-swallowtail-scaffold-and-endpoint-corrections
@@ -31,6 +33,7 @@ depends_on:
   - THM-2465-g1-exclusion-package-for-degree-four-twojet-keller
   - THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule
 related:
+  - THM-3438-weighted-lift-keller-degree-spectrum
   - THM-1375-reduced-jacobian-lattice-reflection-driven
   - THM-1310-conic-pair-fibers-and-design-equations
   - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
@@ -53,6 +56,11 @@ hash_basis: working-tree bytes (LF)
 # THM-2598 -- what the quartic resolvent remembers, and what it cannot carry
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED + CORRECTION.**
+
+> **GLOBAL G1 UPDATE (THM-3438 / MISTAKE-396).**  The weighted quartic is an
+> explicit `S_4` 2-jet Keller map.  This realizes one of the two surviving
+> monodromy rows without altering any resolvent, `V_4`, or boundary statement
+> proved here.  The `A_4` and planar lanes remain open.
 All algebraic identities and finite permutation claims below
 are reproduced by the exact companion.  The Galois/valuation assertions are
 proved here.  This theorem strengthens the classical layer of THM-2455; it

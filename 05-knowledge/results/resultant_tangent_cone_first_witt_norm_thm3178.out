@@ -1,0 +1,12 @@
+RESULTANT TANGENT CONE / CONORMAL NORM EXACT CONTROL
+case=linear rmn=1,2,2 theta=[6] norm=6 resfg=1 tangent=6 disc=1 normomega=6
+case=split2 rmn=2,3,3 theta=[5, 5] norm=-50 resfg=-1 tangent=50 disc=9 normomega=450
+case=irreducible2 rmn=2,3,4 theta=[0, -3] norm=9 resfg=4 tangent=36 disc=-4 normomega=36
+case=split3 rmn=3,4,4 theta=[-4, 0, 10] norm=33696 resfg=-3 tangent=-101088 disc=2916 normomega=-98257536
+case=repeated3 rmn=3,4,4 theta=[7, -9, 6] norm=64 resfg=-1 tangent=-64 disc=0 normomega=0
+split3_branch_omegas=[648, -54, 2808]
+frame_covariance=det:[2, 1],normdet:5,theta_new:[3, -6],norm_new:45
+determinant_wall=det:[-1, 1],theta:[5, -5],norm:0
+nonfull_gcd_first_nonzero_order=2
+cubic_1plus2=p:3,q:5,r:7,omega:-354,res_over_A:-6372,disc_over_A:6372
+ALL EXACT CHECKS PASSED

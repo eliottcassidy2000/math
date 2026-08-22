@@ -1,0 +1,9 @@
+== regular shortlex harmonic-density controls ==
+variable Berggren automaton: states=12 accept=4 stationary/log coefficient=1/3
+fixed Berggren automaton: states=192 accept=34=17/96; parity chambers=16/96,18/96
+periodic even-length binary language: natural endpoint limits=2/3,1/3; log coefficient=1/2
+prefix-zero binary basin: coefficient=log(3/2)/log(2), not 1/2
+prefix-one reversed-order basin: coefficient=log(4/3)/log(2); complementary sum=1
+semantic ledger sha256=90586710e72cf8ebc6c36e3e84135f0053973fecf412b5d83fa22881f816ce75
+scope: exact finite-state controls for the analytic theorem; no arbitrary-subset regularity claim
+all exact checks passed

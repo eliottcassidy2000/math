@@ -423,6 +423,99 @@ attained by no single rule, and any method with $T(4)=5$ must abandon shell
 balance altogether.
 
 \medskip
+\noindent\textbf{A cross-shell addendum: every pointwise floor is attained.}
+The shell obstruction does not survive global compensation.  Fix a power of
+two $M$.  There is one exactly fair method with
+\[
+ T_M(1)=M,\qquad T_M(n)=n+1\quad(2\le n<M),                 \tag{*}
+\]
+after which the old cyclic-checksum continuation is left unchanged.  On
+$2\le n<M$, stop at the first disagreement, declaring \head{} on both
+initial-bit branches when $n$ is even and \tail{} on both when $n$ is odd.
+
+Here is the complete capacity argument for the delayed $n=1$ branch.  In the
+weight-$w$ layer of $\{0,1\}^M$, put
+\[
+ A_w=\binom{M-2}{w-1},qquad
+ E_w=\#\{n\ge2:n\text{ even}\},\qquad
+ O_w=\#\{n\ge3:n\text{ odd}\},
+\]
+where the last two symbols count words, not indices.  There are $2A_w$ words
+with $n=1$.  Left cyclic rotation is a weight-preserving bijection from the
+odd-$n$ words to the even-$n$ words whose last bit equals their initial bit.
+Thus $E_w-O_w$ counts the remaining even-$n$ words.  If such a word has
+critical value $n$, rotating it left by $n-1$ places gives an $n=1$ word.
+This map is injective: the image ends in a run of exactly $n-1$ copies of its
+initial bit, which recovers $n$ and the inverse rotation.  Consequently
+\[
+ 0\le E_w-O_w\le2A_w.                                      \tag{**}
+\]
+All interior binomial coefficients $\binom Mw$ are even because $M$ is a
+power of two.  Hence $E_w-O_w$ is even, and
+\[
+ r_w:=A_w-\frac{E_w-O_w}{2}
+     =\frac12\binom Mw-E_w
+\]
+is an integer in $[0,A_w]$ by (**).  On the $01$ branch with $n=1$, read to
+flip $M$ and label any $r_w$ of its $A_w$ weight-$w$ words \head{}; label the
+$10$ branch \tail{}.  Each layer then has $E_w+r_w=\binom Mw/2$ heads, so its
+head probability on the nonconstant length-$M$ prefixes is
+$(1-p^M-q^M)/2$.  Splicing this prefix into the checksum method preserves
+exact fairness and proves (*).
+
+For any fixed $n\ge2$, choosing a dyadic $M>n$ meets the unavoidable floor
+$T(n)\ge n+1$; $M=2$ handles $n=1$.  Therefore the pointwise optimum is
+\[
+                         T_{\rm opt}(n)=n+1\qquad(n\ge1).    \tag{***}
+\]
+The quantifiers in (***) are important: $M$, hence the method, may depend on
+the target $n$.  This does not produce one method attaining all floors and
+does not determine the asymptotic constant $C^*$ below.
+
+There is nevertheless a single method which attains almost all of these
+floors.  Partition the streams into the dyadic annuli in which the first
+$d=2^r$ bits are constant and the first $M=2d$ bits are not.  Put
+$H=M-1$.  On a nonconstant prefix of length $H$, label both orientations
+
+\[
+ n-d\text{ odd as \head,}\qquad n-d\text{ even as \tail}
+ \quad(d<n<H).
+\]
+
+In a prefix weight layer let $A_w$ count the critical-$d$ words and let
+$D_w=E_w-O_w$ be the signed count already prescribed.  The same rotation as
+above gives $0\le D_w\le A_w$.  Moreover every interior layer of this odd
+prefix shell has odd size, since over $\mathbf F_2$
+\[
+ (1+x)^{d-1}(1+x^d)=(1+x)^{2d-1},
+\]
+and all binomial coefficients in row $2d-1$ are odd.  Therefore
+$A_w-D_w$ is positive and odd.  Select
+\[
+ q_w={A_w-D_w+(-1)^w\over2}
+\]
+critical-$d$ prefixes of weight $w$ as \head.  This is feasible and leaves
+signed prefix count $(-1)^w$ in layer $w$.  Finally label
+$0^H1$ as \head{} and $1^H0$ as \tail.  The exact cancellation is
+\[
+ (1+x)\sum_{w=1}^{H-1}(-1)^w x^w+x-x^H=0.
+\]
+Thus every full $M$-bit composition layer is bisected.  Applying the rule on
+all dyadic annuli gives one fair method with
+\[
+ T(1)=2,\qquad
+ T(n)=\begin{cases}2n-1,&n\ge2\text{ a power of two},\\
+                    n+1,&\text{otherwise}.
+       \end{cases}                                             \tag{****}
+\]
+So a single method meets the pointwise floor away from a zero-density set of
+critical values.  The one-bit donor saving in (****) is sharp if every
+non-donor row is required to stop at its floor: the donor enumerator can be
+made divisible by $1+x$, but its derivative at $-1$ receives magnitude
+$M-2$ from the top row and at most $2$ from the penultimate row, so it is
+never divisible by $(1+x)^2$.
+
+\medskip
 \noindent\textbf{The linear-deadline frame.}
 The proposer's commentary poses the problem of minimizing $C$ such that, for
 some constant $D$, a method always terminates within $Cn+D$ flips. Five
@@ -479,16 +572,15 @@ $n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15\\
 floor $n+1$          & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16\\
 Theorem~\ref{thm:c}  & 2 & 3 & 4 & 6 & 7 & 7 & 8 & 12 & 15 & 15 & 15 & 15 & 15 & 15 & 16\\
 dyadic contrast      & 2 & 4 & 4 & 8 & 6 & 8 & 8 & 16 & 10 & 12 & 12 & 16 & 14 & 16 & 16\\
-best known           & 2 & 3 & 4 & 6 & 6 & 7 & 8 & 12 & 10 & 12 & 12 & 15 & 14 & 15 & 16\\
-optimal?             & y & y & y & ? & y & y & y & ? & y & ? & y & ? & y & y & y\\
+pointwise optimum    & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16\\
+proved?              & y & y & y & y & y & y & y & y & y & y & y & y & y & y & y\\
 \bottomrule
 \end{tabular}
 \end{center}
-(``Best known'' minimizes over the two methods separately; no single method
-attaining the whole row is known, and on the shell $m=4$ we know none exists.
-The optimum $T(n)=n+1$ is settled at every odd $n$ and at $n=2^{r+1}-2$; the
-first undetermined value is $T(4)\in\{5,6\}$, with $T(4)=6$ optimal among
-shell-balanced methods.)
+(The last two rows are pointwise: the optimizing method may depend on $n$.
+The single-donor construction above proves every entry but does not attain
+the whole row in one method.  The earlier $T(4)\ge6$ statement remains valid
+only inside the shell-balanced class.)
 
 \emph{3. The dyadic structure is forced.} Call $[N,N+\ell)$ a \emph{block} if
 a method decides every critical value in it by flip $N+\ell$, and
@@ -595,8 +687,9 @@ $n=2^r$ and to $0$ at $n=2^{r+1}-2$ and $n=2^{r+1}-1$. Whether it is solvable
 with $d_n=\gamma n+O(1)$ for some $\gamma<1$ is exactly the proposer's
 question, with $C^{*}=1+\inf\gamma$. For $C=1$ the $W_n$ range over a fixed finite set
 of polynomials, which is why we expect a rigidity argument to refute that
-case; and individual small values --- e.g.\ whether $T(4)=5$ is attainable by
-any method at all --- are finite feasibility questions. We would be glad to
+case.  The individual pointwise values are all settled by (***) above; the
+finite questions that remain concern simultaneous Pareto profiles and their
+compatibility with a uniform asymptotic envelope. We would be glad to
 learn what value of $C$ the proposer has in mind, and whether the intended
 reading of $Cn+D$ is uniform or asymptotic.
 

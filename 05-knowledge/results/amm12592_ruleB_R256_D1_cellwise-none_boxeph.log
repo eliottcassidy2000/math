@@ -1,0 +1,15 @@
+RULE-B R=256 D0=1 [cellwise-none] start
+  i=   0 d= 154 sig1=   -1 headbits=   1 maxbits= 251 junkbits= 243 ov0=0 ov1=0 t=    0.0s
+  i=  32 d= 173 sig1=   -5 headbits=   1 maxbits= 211 junkbits= 179 ov0=0 ov1=0 t=    1.0s
+  i=  64 d= 192 sig1=   -1 headbits=   1 maxbits=  72 junkbits=  63 ov0=0 ov1=0 t=    2.0s
+  i=  96 d= 211 sig1=   31 headbits=   1 maxbits=  25 junkbits=  23 ov0=0 ov1=0 t=    3.1s
+  i= 128 d= 230 sig1=   63 headbits=   1 maxbits=  12 junkbits=  12 ov0=0 ov1=0 t=    4.5s
+  i= 160 d= 249 sig1=   93 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=    6.2s
+  i= 192 d= 268 sig1=   61 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=    8.1s
+  i= 224 d= 288 sig1=   29 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=   10.6s
+  i= 253 d= 305 sig1=    0 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=   13.1s
+  i= 254 d= 305 sig1=   -1 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=   13.2s
+  i= 255 d= 306 sig1=    0 headbits=   0 maxbits=   0 junkbits=   0 ov0=0 ov1=0 t=   13.3s
+RULE-B R=256 D0=1 [cellwise-none] CLOSED VERIFIED: {'closed': True, 'adm': True, 'identity': True, 'profile_ok': True, 'elapsed': 25.3}
+witness: /tmp/math-wt-boxeph-multifront/04-computation/amm12592_witness_R256_ruleB_D0_1_boxeph.json
+trace: /tmp/math-wt-boxeph-multifront/05-knowledge/results/amm12592_ruleB_trace_R256_D0_1_cellwise-none_boxeph.json

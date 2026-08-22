@@ -48,8 +48,8 @@ resolvent, and `disc(phi)=5` is exactly `1-4w|_{w=-1}`. **Signature 2 is a curve
 algebraic (golden).**
 
 Scope of the floor: THM-3009 is rigorous for *balanced block* schemes (dyadic by THM-3007). For a GENERAL
-exactly-fair extractor only `C* >= 1` (floor lemma) and my `C* > 1` (Szego rigidity, gamma=0 impossible) are
-proved. Closing "general = balanced-block" (an optimality/rearrangement statement) is the open lower-bound
+exactly-fair extractor only `C*>=1` is proved as an infimum bound; THM-3342 additionally proves that every
+fixed `n+o(n)` envelope is impossible. Closing "general = balanced-block" (an optimality/rearrangement statement) is the open lower-bound
 frontier; see sec 5.
 
 ## 2. S(k): the SAME edge mechanism, one dimension up -- why irreducible (the new unification)
@@ -115,13 +115,15 @@ section is analogy and reformulation, not progress on JC.
 
 ## 5. The one concrete open lower-bound frontier that is mine
 
-The AMM **general-class** floor (beyond balanced-block) is still only `C* > 1` (my Szego argument: at
+The AMM **general-class** floor (beyond balanced-block) is still only `C*>=1`; THM-3342 proves the stronger
+but differently quantified fact that no single extractor has sublinear excess.  In the bounded Szego argument, at
 `gamma=0` the finite-coefficient spine is rational, the two circles `|p|=1, |p-1|=1` meet only at
 `e^{+-i pi/3}`, and integrality kills it). For `gamma>0` the coefficients grow like `2^{gamma m}` and the
 domain of convergence bends to `|p|(|p|+|1-p|)^gamma<1`, on whose boundary `p=1` sits but `e^{+-i pi/3}` does
 NOT (there `|p|+|1-p|=2`, so `2^gamma>1` pushes it out) -- which is precisely why the two-circle rigidity is
 special to `gamma=0` and does not itself give the golden floor generally. The honest status: balanced-block
-floor = golden (THM-3009), general floor in `(1, golden]` with `>1` proved. Reducing general to balanced-block
+floor = golden (THM-3009 within its stated scope), general infimum in `[1, golden]` with slope one unattained.
+Reducing general to balanced-block
 (optimality of even splitting) is the missing rearrangement lemma.
 
 ## Summary

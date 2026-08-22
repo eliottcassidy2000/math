@@ -1,0 +1,16 @@
+NONLINEAR MULTIROOT UNIT RIGIDITY -- EXACT HOSTILE REFEREE
+closed one-root generic primitive identities: 144
+local pole coefficients: 2244
+local zero-order coefficients: 2244
+two-infinity incompatibility checks: 363204
+ordered multiplicity profiles: 775
+profiles eliminated by top-degree/root-count gate: 668
+exact Q(t)-linear systems solved: 107
+sharp hostile checks: 4
+surviving profiles and exact q(x,t):
+  d=2, exponents=(3,): q=(x + 1)/(t + 1)
+  d=2, exponents=(5,): q=(x + 1)*(t + 2*x + 3)/(3*(t + 1)**2)
+  d=3, exponents=(4,): q=(x + 1)/(t + 1)
+  d=4, exponents=(5,): q=(x + 1)/(t + 1)
+multiroot survivors: 0
+CLASSIFICATION VERIFIED ON DECLARED FINITE UNIVERSE

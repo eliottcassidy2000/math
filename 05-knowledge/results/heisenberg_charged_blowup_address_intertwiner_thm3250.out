@@ -1,0 +1,10 @@
+THM-3250 exact companion
+dependency_hashes=2 assert_nodes=0 float_literals=0
+p=3 charged_tests=486 neutral_address_types=3 neutral_flag_types=9 weyl_dimension=9 cyclic_span=9 hostile_span=3 norm_ratio=3 max_full_rank=21 defect=6
+p=5 charged_tests=12500 neutral_address_types=5 neutral_flag_types=25 weyl_dimension=25 cyclic_span=25 hostile_span=5 norm_ratio=5 max_full_rank=105 defect=20
+p=7 charged_tests=100842 neutral_address_types=7 neutral_flag_types=49 weyl_dimension=49 cyclic_span=49 hostile_span=7 norm_ratio=7 max_full_rank=301 defect=42
+p=13 charged_tests=4455516 neutral_address_types=13 neutral_flag_types=169 weyl_dimension=169 cyclic_span=169 hostile_span=13 norm_ratio=13 max_full_rank=2041 defect=156
+p13_dimensions=neutral:169 charged:2028 total:2197 multiplicity:13
+p13_full_map=max_rank:2041 kernel:156 cokernel:156
+p13_pointed_gate=det_source:1 det_target:1 det_map:1 unique:1
+THM-3250 PASS

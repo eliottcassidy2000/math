@@ -1,0 +1,10 @@
+THM-3380 GENERATOR-FREE WITNESS AUDIT
+n8_symmetric_fibre=PASS four_classes two_M_converse_pairs
+common_s=((1, 8, 56, 224, 704, 1472, 2176, 1920, 768), (0, 8, 56, 352, 1200, 3200, 5248, 5248, 2304))
+common_Dham=(52, 110, 80, 108, 0, 32, 0, 0, 1)
+M_differing_deletion_sizes=(1, 2) sums=(762,752)
+n8_palindrome=PASS ABBA_vs_BAAB common_M_s_Gamma xi=Omega=0
+palindrome_SCC_words=((1, 3, 3, 1), (3, 1, 1, 3))
+n9_fugacity=PASS common_Dham=(394, 656, 664, 304, 262, 0, 50, 0, 0, 1) full=((161, 9), (157, 10))
+C3_of_C3=PASS full=(207, 37) Dham=(710, 648, 972, 444, 324, 0, 60, 0, 0, 1)
+semantic_sha256=f1e12cae71100526b0311e178306348dd4aeed3e356e595415d6cabe703087de

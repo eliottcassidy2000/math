@@ -1,0 +1,15 @@
+THM-3484 TERNARY WEIGHTED-DETERMINANT MINIMAL RECURRENCE EXACT COMPANION
+STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
+STATE_POLYNOMIALS_CONSTANT_FIRST: {0: (0, 0, 0, 0, -2048, 4096, 8192, -16384), 1: (0, 0, 0, 0, 2048, 4096, -24576, -16384), 2: (0, -256, 3072, -15360, 40960, -61440, 49152, -16384)}
+GENERATING_DENOMINATOR: (1-z)*(1-z^3)^7 = (1-z)^8*(1+z+z^2)^7
+ORDER22_RECURRENCE_COEFFICIENTS: (1, -1, 0, -7, 7, 0, 21, -21, 0, -35, 35, 0, 35, -35, 0, -21, 21, 0, 7, -7, 0, -1, 1)
+GENERATING_NUMERATOR_COEFFICIENTS: (0, -34816, -338432, -28657152, -335106048, -313495296, -3294224640, -9788725248, -4813545216, -26592198912, -36296777728, -11030363648, -39322132992, -27167668224, -5002493952, -11956875264, -3768176640, -338608896, -502246656, -40216576, -239360, -186624)
+CUBIC_FOURIER_DEGREES_AND_LEADS_IN_Q(omega): ((7, 6, 6), ((Fraction(-16384, 1), Fraction(0, 1)), (Fraction(32768, 3), Fraction(24576, 1)), (Fraction(-40960, 3), Fraction(-24576, 1))))
+SHORTENED_FACTOR_HOSTILES_FIRST_FAILURES: ((21, -180592312320), (20, 55897620480))
+BERLEKAMP_MASSEY_FIRST100: order=22 coefficients=(Fraction(1, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(-7, 1), Fraction(7, 1), Fraction(0, 1), Fraction(21, 1), Fraction(-21, 1), Fraction(0, 1), Fraction(-35, 1), Fraction(35, 1), Fraction(0, 1), Fraction(35, 1), Fraction(-35, 1), Fraction(0, 1), Fraction(-21, 1), Fraction(21, 1), Fraction(0, 1), Fraction(7, 1), Fraction(-7, 1), Fraction(0, 1), Fraction(-1, 1), Fraction(1, 1))
+HANKEL22_DETERMINANT: -2^382*3^191*5^22*7^8*61^7
+HANKEL22_SHA256: e40f7d8a234c7147504c9b9f92fde962409d92d8e4d441ead313c7aa2acd201b
+VALUES_K0_TO5000_SHA256: 0ce34013aa354cd1b2cd37fe6596538d8c61f9e1f14716f3da86896070b79ee0
+HARMONIC_LANES: each residue class mod3 has natural and harmonic coefficient 1/3
+SEMANTIC_SHA256: 0c9cac55b66f8a8aa4241ad728e3336dd000cff25544f3df7eef9af120012518
+VERDICT: the explicit ternary degree-seven word has minimal recurrence order 22 because its common leading term lowers both nontrivial cubic Fourier colours to degree six; no LRC current or LRC(14) conclusion follows

@@ -1,0 +1,12 @@
+LRC REFLECTED-CHANNEL RAY-LIMIT BERNOULLI CERTIFICATE
+primitive_channels_Q_le_100=1519
+exact_limit_formula_checks=27342
+formula_record_sha256=aaf0e24385aed8a03298a4b0948903d66f9b44e3f4c79e05e60777515f170425
+coarse_tail=limit >= 1/49-1/(3PQ); PQ>=31 gives >=1/105+1/7595
+small_channel_minima=((3, 5, Fraction(1, 105), ((1, 2), (3, 1), (2, 3))), (4, 5, Fraction(1, 70), ()), (4, 7, Fraction(1, 49), ()), (5, 6, Fraction(2, 105), ()))
+equality_ray_polynomials=((1, 2, 4032, 96), (3, 1, 4032, 744), (2, 3, 4032, 48))
+equality_ray_branch_stability_max_g=24;engine_sha256=d73273a4cf4b88bea2890e001166d96cb07dd9b61f3a248ff1538ec44579796a
+exception_hostile=(P,Q;e,f;g)=(3,5;6,1;2), mass=2030/280393, limit=17/1680
+period_scout_P_eq_Q_minus_1_e12_f1=((5, 56, 14), (6, 67, 67), (7, 78, 13), (8, 89, 89), (9, 100, 25), (10, 111, 37), (11, 122, 61), (12, 133, 133), (13, 144, 12), (14, 155, 155), (15, 166, 83), (16, 177, 59), (17, 188, 47), (18, 199, 199), (19, 210, 35), (20, 221, 221), (21, 232, 58), (22, 243, 81), (23, 254, 127), (24, 265, 265), (25, 276, 23), (26, 287, 287), (27, 298, 149), (28, 309, 103), (29, 320, 80), (30, 331, 331))
+scope=uniform_ray_limits_and_three_exact_sharp_rays_not_LRC14_or_finite_head_replacement
+FAILED_CHECKS=NONE

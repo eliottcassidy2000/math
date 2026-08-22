@@ -1,0 +1,11 @@
+THM-3429 prime-fibre activity descent
+typed_universe=Q_does_not_divide_each_selected_residue;r=0_universal_and_r=Q_empty_are_excluded
+dependency_sha256_lf=(('THM-3416', '42a9309145de51d1bb6fca0b7c1945302ff37a63a3183e1dfed838c07118e8bf'), ('THM-3421', '2f577354a06628660d90f70aca34378a186b7e67a55795e6c4a5c32a255d9736'))
+capacity_prime_solutions=(2, 3, 5, 11, 17, 23, 29)
+mixed_target_free_odd_primes=(3,5,17,29);all_active_target_free_primes=(13,29)
+projection_fibre_audit=(records,projection_cells,active_fibres,active_points,p7_controls)=(((21, 3, 7, 1, 6, 6), (21, 7, 3, 1, 2, 2), (35, 5, 7, 1, 6, 6), (35, 7, 5, 1, 4, 4), (49, 7, 7, 1, 6, 6), (51, 3, 17, 1, 16, 16), (51, 17, 3, 3, 2, 2), (77, 7, 11, 1, 10, 10), (77, 11, 7, 2, 6, 6), (85, 5, 17, 1, 16, 16), (85, 17, 5, 3, 4, 4), (87, 3, 29, 1, 28, 28), (87, 29, 3, 5, 2, 2), (119, 7, 17, 1, 16, 16), (119, 17, 7, 3, 6, 6), (121, 11, 11, 2, 10, 10), (143, 11, 13, 2, 12, 12), (143, 13, 11, 2, 10, 10), (169, 13, 13, 2, 12, 12), (203, 7, 29, 1, 28, 28), (203, 29, 7, 5, 6, 6), (289, 17, 17, 3, 16, 16), (493, 17, 29, 3, 28, 28), (493, 29, 17, 5, 16, 16), (529, 23, 23, 4, 22, 22), (841, 29, 29, 5, 28, 28)), 169356, 165788, 490322, ((21, 1), (35, 1), (49, 1), (77, 1), (119, 1), (203, 1)))
+Q51_affine_lift_cocycle=(residues,orders,fibres,cells)=((1, 11, 12, 18, 23, 34, 35), (51, 51, 17, 17, 51, 3, 51), ((0, (), ((1, (0, 1, 16)), (11, (3, 6, 9)), (12, (4, 7, 14)), (18, (13, 14, 15)), (23, (2, 5, 8)), (35, (10, 11, 12))), 17, 1), (1, (34,), ((1, (0, 16)), (11, (1, 15)), (12, (1, 8, 15)), (18, (7, 8, 9)), (23, (1, 15)), (35, (0, 16))), 7, 7), (2, (), ((1, (0, 15, 16)), (11, (7, 10, 13)), (12, (2, 9, 12)), (18, (1, 2, 3)), (23, (8, 11, 14)), (35, (4, 5, 6))), 17, 1)), 306)
+prime_positive_controls=(Q,rank)=((11, 6), (13, 7), (23, 6), (29, 7))
+transverse_boundary_controls=(Q,r0_size,rQ_size)=((13, 13, 0), (31, 31, 0), (51, 51, 0))
+semantic_sha256=c46b24a98d32f83e1933276372e8bc1688ac9d3c3efa54c154ec19fcd1094c2d
+status=PROVED_EXACT_COMPANION;analytic_reduction_not_finite_classification;residual_17adic_towers_open;no_LRC14_decrement

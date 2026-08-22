@@ -1,0 +1,26 @@
+multiplicative Singer twelve-balance exact discovery
+status=VERIFIED-EXACT-DISCOVERY-CANDIDATE;not-promoted
+dependency_hash_checks=6,dependency_replay=PASS
+assert_nodes=0,float_literals=0,sympy_exact=YES
+group=C_168,norm_quotient=C_12,norm_fibres=12x14
+hodge_class_sum_each=1/296352
+mass_class_sum_each=120960*g^2-528*g+2;denominator=(504*g-1)(840*g-2)
+common_zero_orders=(2, 3, 4, 6, 12),common_gcd=S12=1+x+...+x^11
+hodge_circulant_rank=157;mass_circulant_rank=157_for_every_integer_g>=1
+negative_seam_norm_transversal=YES;each_hodge_phase_signs=(13+,1-)
+each_of_12_hodge_phase_slices_multiplicative_rank=168
+each_of_12_positive_mass_phase_slices_multiplicative_rank=168_for_every_integer_g>=1
+single_norm_phase_additive_support_profiles=((8, 7), (7, 8), (8, 7), (7, 8), (8, 7), (7, 8), (8, 7), (7, 8), (8, 7), (7, 8), (8, 7), (7, 8));matrix_rank_at_most_7
+remaining_order_obstructions=unit:(7, 14, 21, 28, 42, 56, 84, 168);order8,24:504*g-1;order1:60480*g^2-264*g+1
+direct_dilation_controls=(1, 2, 3, 17, 18, 57, 58, 169)
+singer_gauges=8064;hostile_exact_gauges=((1, 0), (5, 167), (13, 83), (43, 57), (71, 91), (167, 7));rank_invariant=PASS
+centered_norm_fibre_marker_rank=11,signs=(14,154),direct_complement=YES
+nonnegative_norm_fibre_indicator_rank=12,trivial_overlap=1,full_sum_rank=168
+positivity_boundary=any_nonzero_nonnegative_filling_marker_has_rank_at_least_12
+q_integer_sha256=42b6748e556a9174d240944870aca2889b2d9a3dd9e65cd5e0bbfaf765a51a65
+mass_coefficient_sha256=ee20e5cbc1780396d48672458f8a18e5a559084524abb92335da659547918b36
+coordinate_gcd_sha256=7f57d08b5074bf149ab9a4574529d6f240f0c2ce353218de8f3ead6643dd6470
+phase_mass_certificate_sha256=12bdd9200200d990dec14ee38728b9187a7c6c232c58d2aaff8d847158838625
+centered_marker_sha256=ed0530eb7d113ba1f9c6438b23affea649674fdcae6ccc5b64a42f02a17290b4
+scope=abstract-multiplicative-orbit;no-endpoint-target-ancestry-or-LRC14-decrement
+all_exact_checks=PASS

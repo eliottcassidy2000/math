@@ -1,0 +1,14 @@
+AMM12592 R8 INTEGER ENTRY-SECTION EXACT AUDIT
+status=PROVED+FINITE-EXACT
+polytope=R=8;D0=0;profile=[4, 5, 5, 6, 7, 7, 8, 8];variables=42;inequalities=106
+integer_witness=y0=[6, -3, 2, 1];y1=[-1, 0, 0, 0, 0];y2=[-1, 0, 0, 0, 0];y3=[0, 0, 0, 0, 0, 0];y4=[0, 0, 0, 0, 0, 0, 0];y5=[0, 0, 0, 0, 0, 0, 0];y6=[0, 0, 0, 0, 0, 0, 0, 0]
+integer_active_set=active=25;active_rank=22;witness_sha256=40d8a1e02077aebc5f2a23716643fc2b0f56e85991d5ef30ef2dcdc659ace8b1
+hostile_separation=fractional_active=45;fractional_active_rank=42;shared_active=8;shared_rank=7;hostile_rows_made_strict=37;new_integer_active_rows=17
+entry=i_pf=3;degree=6;junk=[-2, 0, 0, 0, 0];support_max=0;F1=true;F2=2<=5;F3_margin_t2=18;F4_capture_clock=4<=R_minus_2=6
+immediate_capture=next_load=[-2, -4, -2, 0, 0, 0, 0];load_is_inside_clamp_box=true;next_junk_is_zero=true
+R512_entry_reduction=last_feed_row=129;i_pf=130;entry_degree=383;prefix_variables=44750;full_variables=234117;prefix_causal_inequalities=89146
+R512_half_junk_cone=y_t<=0_for_0<=t<=382;y_381=y_382=0;-2*y_0<=382;-2*y_(t-1)-y_(t-2)<=C(382,t)_for_2<=t<=382
+conditional_compiler=an_integer_feasible_R512_prefix_landing_in_this_cone_extends_by_THM3332_to_an_exact_floor_witness
+conclusion=the_integer_certificate_is_selected_by_a_feed_free_entry_section_and_not_by_the_denominator_103_vertex_active_face
+nonconsequence=no_integrality_or_total_unimodularity_theorem;no_R512_integer_point;the_entry_cone_condition_is_sufficient_not_necessary_for_arbitrary_witnesses;no_new_AMM_deadline_bound
+source_lf_sha256=2c3e86a23e137d1349763e9cb631fde6ba01caaef1cc11e661ee3c53d31fc9a9

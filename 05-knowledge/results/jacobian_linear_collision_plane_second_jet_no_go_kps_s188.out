@@ -1,0 +1,11 @@
+THM-3558 exact tangent/second-jet audit
+ambient determinant: -2
+collision fibre: p0,p+,p- -> (-1/4,0,0)
+p0,p+ tangent resultant: -647*C**4
+p0,p- tangent resultant: -647*C**4
+p+,p- tangent cross factor: r^2-13*c^2
+exceptional plane graph determinants: 9*(a-3)/8, 9*(a+3)/8
+common target gradient: (-32*a/9,4/9), a^2=13
+Hessian difference:
+Matrix([[21632/27, 32*a/9], [32*a/9, -32/27]])
+all active truth gates passed

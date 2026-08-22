@@ -1,0 +1,12 @@
+EXACT CONTROL ONLY -- finite checks do not prove the uniform theorem
+PUNCTURE double: r=1 det=1 theta_res=(0) M=[(1)]
+PUNCTURE two-double: r=2 det=-1 theta_res=(-2,2) M=[(-1,0),(1,1)]
+PUNCTURE three-double: r=3 det=-1/2 theta_res=(-3/4,0,3/4) M=[(1/2,0,0),(-1,-1,-1),(1/2,1,2)]
+PUNCTURE simple-boundary: r=1 det=1 theta_res=(2/5) M=[(1)]
+PUNCTURE mixed: r=3 det=-36/1045 theta_res=(148/75625,-77760/15768841,242252/81450625) M=[(6/55,-9/55,27/110),(-36/209,-12/209,-4/209),(6/95,21/95,147/190)]
+PUNCTURE irregular-repeated: r=4 det=1/15120 theta_res=(-213/614656000,1001/13436928,-368/5250987,-427/104976000) M=[(-1/280,3/280,-9/280,27/280),(1/72,1/72,1/72,1/72),(-1/63,-4/63,-16/63,-64/63),(1/180,7/180,49/180,343/180)]
+ONE_ROOT samples (d,e,nu,N): [(2, 1, 1, 1), (5, 2, 2, 2), (7, 7, 7, 1), (10, 'inf', 10, 1)]
+ONE_ROOT hostile bank passed: 51 cases, d=2..10; sharp N-1 failure, N success, N+1 success; exact D(Q)=H(P)
+semantic_sha256=53440533bb8e511bef86c24b5827d61f5560b457bc2d116ca9e40c518b74fcfc
+source_sha256=105bed99614bde959db73c2d3b7efb3927e94b9eb234db74717f73886520f4f6
+PASS

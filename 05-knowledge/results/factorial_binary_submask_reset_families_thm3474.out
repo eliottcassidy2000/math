@@ -1,0 +1,12 @@
+THM-3474 FACTORIAL BINARY-SUBMASK RESET FAMILIES EXACT AUDIT
+dependencies=factorial_multiplace_newton_degree_barcode_thm3152.py:f804d3996abe4df981dbf7db877af4aeca9218df64b0ac382af876a3cdca15a0;factorial_six_exit_first_flag_2200_independent_audit_thm3180.py:5d00729ae39cdf1d085eca73d4612d4960a0788dd746f945ab2e8936ebbd466d
+binary_universe=even_2<=N<=120 cells=60 dual_hulls_and_submasks=PASS
+binary_semantic_sha256=888b5d72e72bfeae0ef53140420e728fc5c7a78bfab60e6ac29e694a0ee60edd
+reset_cases=((5, 2, 1), (5, 2, 2), (5, 2, 3), (5, 4, 1), (5, 4, 2), (5, 4, 3), (7, 2, 1), (7, 2, 2), (11, 2, 1), (11, 4, 1), (11, 4, 2), (17, 2, 1), (17, 4, 1), (17, 8, 1), (17, 16, 1))
+reset_cells=15 positive_intersections=0 dual_engines=PASS
+reset_semantic_sha256=3512b41ae23e168e5c500a989f37b6120e2dee7670c700b1f40f32b2fe3c45e0
+hostile_odd_N=5 formal=((0, 0), (1, 1), (5, 8)) actual=((0, 3), (5, 8))
+positive_controls=primary(v+1,v); independent=planted(v+1) and planted(v), degree 1 retained
+consequence=power_two_reset_families_verified_in_15_cells
+semantic_sha256=49272719898eec5b506e435140c0ce6aac1ce0b07ce275fff648df55b18b61f8
+STATUS=PASS

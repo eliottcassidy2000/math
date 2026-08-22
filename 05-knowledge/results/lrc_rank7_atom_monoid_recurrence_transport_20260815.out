@@ -1,0 +1,10 @@
+Rank-seven atom-monoid recurrence transport
+dependency_sha256_lf=(('THM-3416', '42a9309145de51d1bb6fca0b7c1945302ff37a63a3183e1dfed838c07118e8bf'), ('THM-3420', '5f307c906c054850f2589b2e9fb7c0e902b3571747a6c61ebc2c2f2628212b2f'), ('rank-seven-scout-script', 'bcf80194bd5697b121b08b239f096d67d7e0214bbc81abf4a9fb1f6d939fa560'), ('rank-seven-scout-output', '95012438ffa2e36183ef3e56a9881c3daa52ddfe118abebfd02106b1b28f65a2'))
+status=PROVED_EXACT_INCLUSION atom_generated_degrees_have_rho_ZMC_7;FINITE_EXACT_Berggren_depth10_prefix;NO_completeness_claim;no_LRC14_decrement
+atoms_replayed=((13, 1, (1, 2, 3, 5, 7, 9, 11)), (14, 1, (1, 3, 4, 5, 9, 11, 13)), (29, 0, (1, 4, 5, 6, 7, 9, 13)), (29, 1, (1, 5, 7, 8, 12, 13, 22)), (38, 1, (1, 9, 17, 20, 21, 29, 37)), (51, 1, (1, 11, 12, 18, 23, 34, 35)), (68, 1, (8, 11, 23, 24, 45, 56, 57)), (148, 1, (8, 33, 41, 100, 107, 115, 140)))
+atom_monoid=(period,density_and_harmonic_coefficient,cumulative_rank_le7_lower_bound)=(14362718970600, Fraction(165741596, 1554406815), Fraction(837065119, 1554406815))
+Fibonacci=(apparition,period,count,density,law)=(((8, 6), (9, 12), (10, 15), (11, 10), (12, 12), (15, 20), (23, 24), (25, 25), (13, 7), (14, 24), (29, 14), (38, 18), (51, 36), (68, 18), (148, 114)), 1050, 108, Fraction(18, 175), '7|n and 6,10,15,25 do not divide n')
+Berggren_U_spine=(period,roots_mod51,count,density,law)=(1683, (2, 19, 29, 46), 72, Fraction(8, 187), 'n mod51 in roots; n mod9 not 1,5; n mod11 not 0,8')
+Berggren_ternary_atom_monoid_levels=(depth,nodes,states,accepting)=((0, 1, 1, 0), (1, 3, 3, 0), (2, 9, 9, 1), (3, 27, 27, 3), (4, 81, 81, 9), (5, 243, 243, 17), (6, 729, 729, 48), (7, 2187, 2187, 176), (8, 6561, 6561, 500), (9, 19683, 19683, 1506), (10, 59049, 59049, 4587))
+semantic_sha256=64e9032fc79cf2c5014497baddbbccbc3439650903b25447505f93bc66fb1c26
+scope=verified_rank7_atoms_times_fibre_degrees_outside_THM3416_rank_le6_support;density_is_unconditional_for_this_subfamily_and_only_a_lower_bound_for_full_rank7;harmonic_coefficients_refer_to_periodic_degree_or_index_subsets;LRC14_open

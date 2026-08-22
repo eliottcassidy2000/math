@@ -1,0 +1,8 @@
+chart_0_pushforward={(0, 0): 1}
+chart_1_pushforward={(0, 0): 1}
+chart_2_pushforward={(0, 0): 1}
+chart_3_pushforward={(0, 0): 1}
+support_size=15
+total_mass=1
+joint_zero_mass=0
+RESULT=PASS;gates=75

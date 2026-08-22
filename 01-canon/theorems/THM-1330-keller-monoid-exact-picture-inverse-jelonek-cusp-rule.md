@@ -1,10 +1,10 @@
 ---
 id: THM-1330
 title: THE KELLER MONOID NECESSARY-STRUCTURE ATLAS — units = degree 1, the ideal {deg ≥ 3}, finite factorization, universal non-properness/ramification-at-infinity, the inverse Jelonek problem, and the Zariski cusp selection rule
-status: PROVED-with-citations FOR THE INDIVIDUAL NECESSARY-STRUCTURE CLAIMS; NOT A CLASSIFICATION OF ALL COUNTEREXAMPLES. The monoid/ideal/factorization laws are elementary given Keller 1939 [birational case], Białynicki-Birula–Rosenlicht [injective ⟹ automorphism], and Campbell [Galois ⟹ invertible]. Non-properness is a covering-space argument; the selection rule uses Zariski–Lefschetz and Deligne–Fulton; the displayed example's cusp computations are exact/numeric-certified. The inverse Jelonek realization problem, irreducible seeds beyond the verified family, and JC(2) remain open.
+status: PROVED-with-citations FOR THE INDIVIDUAL NECESSARY-STRUCTURE CLAIMS; NOT A CLASSIFICATION OF ALL COUNTEREXAMPLES. The monoid/ideal/factorization laws are elementary given Keller 1939 [birational case], Białynicki-Birula–Rosenlicht [injective ⟹ automorphism], and Campbell [Galois ⟹ invertible]. Non-properness is a covering-space argument; the selection rule uses Zariski–Lefschetz and Deligne–Fulton; the displayed example's cusp computations are exact/numeric-certified. The inverse Jelonek realization problem, classification beyond the verified weighted irreducible family, and JC(2) remain open.
 source: mac-mini-2026-07-20-S135 (owner: can we get an exact picture of ALL counterexamples?)
 depends_on: [THM-1300, THM-1305, THM-1310, THM-1315, HYP-8115]
-related: [THM-1320, THM-1325 (Drużkowski strata), klein-S325 (Smith selection rule), HYP-8125]
+related: [THM-1320, THM-1325 (Drużkowski strata), THM-3438, klein-S325 (Smith selection rule), HYP-8125]
 output: 05-knowledge/results/jc_keller_monoid_cusp_rule_macmini_S135.out
 ---
 
@@ -33,10 +33,15 @@ Fix n and let 𝒦ₙ = {polynomial F: ℂⁿ → ℂⁿ with det JF ∈ ℂ*} (
   Rosenlicht) F ∈ Aut, hence G ∈ Aut. So 𝒳ₙ is a two-sided ideal: counterexamples absorb
   composition.
 - **(finite factorization)** deg multiplicativity + units = deg⁻¹(1) ⟹ every F ∈ 𝒳ₙ is a
-  FINITE composition of irreducible Keller maps. The realizable-degree set R = deg(𝒦ₙ) is a
-  multiplicative sub-semigroup of {1, 3, 4, 5, …} with {3^m} ⊆ R (the F-tower, pairwise
-  inequivalent by THM-1310) and 2 ∉ R. Since 2 ∉ R, degree-4 and degree-6 counterexamples
-  are AUTOMATICALLY irreducible if they exist; realizability of 4, 5, 6, 7 is open.
+  FINITE composition of irreducible Keller maps. The realizable-degree image `R_n=deg(𝒦ₙ)`
+  is a multiplicative submonoid of `{1,3,4,5,…}`.  For every `n>=3`, THM-3438's
+  weighted lifts prove the exact value spectrum `R_n={1,3,4,5,…}`; for `n=1` only degree
+  one occurs, while the `n=2` image remains tied to `JC(2)`.  Since every nonunit factor
+  has degree at least three, every map of degree `3` through `8` is automatically a
+  composition atom; more generally this holds whenever the degree is not a product
+  `ab` with `a,b>=3`.  THM-3438 further gives an `S_d` atom in every grade `d>=3`,
+  while compositions realize every product grade `ab`; hence every such grade is
+  mixed and degree nine is the first.  Degree one is the unit, not an atom.
 - **(degree-3 monodromy)** deg 3 non-Galois ⟹ monodromy exactly S₃ (THM-1310/1315 for F;
   forced generally).
 
@@ -78,10 +83,13 @@ A₂-edge the fleet's ADE reading (kps/klein) predicted. Also verified: |F⁻¹|
 
 ## 4. What is exactly known vs open about 𝒳ₙ (the honest ledger)
 
-KNOWN EXACTLY: the boundary (units = deg 1); the degree stratification (no 2; ideal = deg ≥ 3);
+KNOWN EXACTLY: the boundary (units = deg 1); for `n>=3`, the degree-value spectrum
+`{1,3,4,5,…}` (THM-3438); the degree stratification (no 2; ideal = deg ≥ 3);
 finite factorization; universal étaleness/non-properness/ramification-at-infinity; the
 covering constraint; the cusp selection rule; near-surjectivity (the image misses at
-most codimension 2 — van den Essen circle; F itself is fully surjective, THM-1315); at
+most codimension 2 — van den Essen circle; the fixed F has
+`F(A^3)=A^3 minus E` and fibre spectrum `3/1/0`, never `2`, by the
+MISTAKE-282 correction to THM-1315); at
 (n, d) = (3, 3): rigidity of F (THM-1305: deformation tangent = orbit tangent) and uniqueness
 in every tested design box (THM-1310, boxeph-S142).
 
@@ -89,6 +97,7 @@ CONJECTURAL: Mount-Everest (HYP-8115(d)): at (3,3) there is exactly ONE irreduci
 counterexample up to two-sided Aut-equivalence — the strongest "exact picture" statement;
 current evidence is rigidity + multi-box uniqueness, not a proof.
 
-OPEN: realizability of degrees 4, 5, 6, 7; JC₂ (hence whether 𝒳₂ = ∅) and the Dixmier floor
-DC₂ ⟹ JC₂ ⟹ DC₁; unique factorization (up to units) in 𝒦ₙ; the full inverse-Jelonek
-realization theory (which allowed triples actually glue polynomially).
+OPEN: classification within each realized degree, decomposition in the numerically
+factorable grades (beginning at degree 9), `JC₂` (hence whether `𝒳₂=∅`) and the Dixmier
+floor `DC₂ ⟹ JC₂ ⟹ DC₁`; unique factorization (up to units) in 𝒦ₙ; the full
+inverse-Jelonek realization theory (which allowed triples actually glue polynomially).

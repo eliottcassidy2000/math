@@ -1,0 +1,19 @@
+THM-3201 SEVEN-EXIT FIRST-EUCLIDEAN-FLAG PRIMARY AUDIT
+primary_engine=factorial_six_exit_first_flag_2200_thm3180.py sha256=50b4691c72d5d0b942eafdb922273ee749127f9725bd3728a9b422bfc494e69e
+exit_order=(d prime,d-1 prime power,d-2 prime,d-3 prime,d-4 prime,d-5 prime,d-6 prime)
+universe=2201<=d<=2400 census=(170, 139, 115, 92, 75, 58, 50)
+chunk_progressions=((43, 35, 29, 24, 20, 16, 13), (42, 34, 27, 20, 16, 12, 10), (44, 38, 34, 30, 26, 22, 20), (41, 32, 25, 18, 13, 8, 7))
+seven_exit_residual_count=50 residual_digest=7539e5847cc8d9dabe1d03f0263ad20756a412a9ead305fec113958aef198c89
+bank=(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47)
+deterministic_work_chunks=((2201, 2250), (2251, 2300), (2301, 2350), (2351, 2400)) max_workers=4
+chunk_semantic_trace_digests=('c5ae943fb48def718476e25ccc13a8686bd91c63eb7e0bdf5f4aa1bebc122bb9', 'aeeea5306caef0795662da6a1ad0ddea0b6c41d4456325dad3dce80b9eecb8ff', 'a94e496eb375418d344b3c9795ffe140bdd016ff7b4850cc4a4690094d0e2a93', 'a1d6bd79159cedf31a448924668414b6f1a8943f542ce69dc2e2655b79999b4f')
+global_semantic_trace_digest=7235556fedc91343a003b308de1288347ff78afad44f840fdfd8391401707e03
+closed=50 survivors=0
+survivor_rows=()
+killer_histogram=((2, 4), (3, 13), (5, 16), (7, 2), (11, 2), (13, 10), (17, 2), (37, 1)) max_killer_prime=37
+hostile_boundary_d_2201_trace=((2, (2048,)), (3, ()))
+positive_controls=planted(v+1) and planted(v), degree 1 retained
+first_next_seven_exit_residual=d=2406 r=2404
+first_next_factorization=(2*3*401,5*13*37,2^2*601,3^3*89,2*1201,7^4,2^5*3*5^2)
+consequence=every exact {0,1,2} quadratic window 1<=r<=2403 is nonzero in at least one slot
+STATUS=PASS

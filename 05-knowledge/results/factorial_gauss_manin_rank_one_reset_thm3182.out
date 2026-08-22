@@ -1,0 +1,13 @@
+FACTORIAL GAUSS--MANIN RANK-ONE RESET EXACT CONTROL
+transfer_direct_checks=24
+scalar_recurrence_checks=21
+weighted_scalar_gauge_checks=21
+determinant_checks=96
+rank_one_reset_checks=23
+full_state_descent_checks=161
+smith_type_1_p_p_checks=4
+exterior_square_p_p_p2_checks=4
+scalar_companion_smith_1_1_p_checks=4
+simple_discriminant_wall_smith=1,p,p^2
+p_divides_s_hostile=zero_reset
+ALL EXACT CHECKS PASSED

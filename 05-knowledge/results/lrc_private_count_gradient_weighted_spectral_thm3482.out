@@ -1,0 +1,17 @@
+THM-3482 PRIVATE-COUNT GRADIENT WEIGHTED SPECTRAL EXACT COMPANION
+STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
+DEPENDENCY: THM-3473 05236a7338a4c92b443b2798508d407e2e4f82d942111d022064f6ec9fe86ca2 01-canon/theorems/THM-3473-three-times-p-eight-owner-private-sheet-partition-and-irredundancy.md
+DEPENDENCY: 7x13-incidence-sidecar 6efa87aa9f9b50d57d7a2db3c282ad216057b41c10af08f648e3f3398e457b91 04-computation/lrc_private_support_7x13_incidence_h1_probe_20260815.py
+ORIENTATION_GAUGE: each edge is oriented from smaller to larger THM-3473 owner index
+PACKETS_ONE_BASED: ((1, 4, 5, 6), (2, 3, 5, 8), (5, 7))
+SYMBOLIC_ROWS_STATE_TA_TB_BRIDGE_FULL_ZEROEDGES: ((0, (0, 0, 0, -64), (-8, 16, 32, -64), (0, -4), (0, 0, 0, 0, -2048, 4096, 8192, -16384), 4), (1, (0, 0, 0, -64), (8, 16, -96, -64), (0, -4), (0, 0, 0, 0, 2048, 4096, -24576, -16384), 4), (2, (8, -48, 96, -64), (8, -48, 96, -64), (0, -4), (0, -256, 3072, -15360, 40960, -61440, 49152, -16384), 6))
+FACTORED_FULL_DETERMINANTS:
+  k=0 mod3: -2048*k^4*(2k-1)^2*(2k+1)
+  k=1 mod3: -2048*k^4*(8k^3+12k^2-2k-1)
+  k=2 mod3: -256*k*(2k-1)^6
+DIRECT_7x7_AUDIT_K1_TO3000_SHA256: 7ed6f640b774535b8e7243bae704ffea35196c8de3011456df23005b6c768b66
+FIRST_THREE_K_TA_TB_BRIDGE_DET: ((1, 1, -64, -136, -4, -34816), (2, 2, -216, -216, -8, -373248), (3, 0, -1728, -1400, -12, -29030400))
+H1_PAIRING: all six symbolic cycle pairings vanish identically in every ternary state
+HOSTILES: constant owner potential det=0; equalized (5,7) bridge det=0
+SEMANTIC_SHA256: 98cba04620048b6c6f8fab03518ab39e0125623f033423eda29245c9b53a0162
+VERDICT: the canonical private-count coboundary has zero absolute graph H1 class but nonzero owner-order weighted 7x13 determinant for every k>=1; no LRC current or LRC(14) conclusion follows

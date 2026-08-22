@@ -1,0 +1,16 @@
+HETEROGENEOUS FACTORIAL EXTERIOR REFLECTION EXACT CONTROL
+one_block_parameter_checks=300
+quadratic_root_eigenline_defect_checks=3316
+binary_root_line_identity_checks=3616
+ordered_pair_invariant_checks=32304
+sylvester_resultant_checks=32304
+sharp_scalar_pair_classification_checks=32304
+heterogeneous_word_checks=119256
+p5_F1=2,2;4,3
+p5_F2=2,2;0,3
+p5_F2F1=2,0;2,4
+p5_(F2F1)^2=4,0;2,1
+p5_shared_infinity_pair=1,0;2,1
+common_kernel=e0
+common_image=y0-y1+y2=0
+ALL EXACT CHECKS PASSED

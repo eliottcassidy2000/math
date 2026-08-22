@@ -1,0 +1,13 @@
+THM-3589 exact companion
+SECTION Poisson and Kummer identities
+PASS Poisson generators, z=ce, and sharp rational hostile n=2..8
+SECTION cyclic compiler central lines
+PASS 12 cyclic compiler rows and both central-line charts
+SECTION stable-subalgebra arm split
+PASS arm decomposition, regular vanishing, and residue controls (341 gates)
+SECTION boundary curves and weight invoice
+PASS nodal sharpness, affine hostile, and 140 weight-survival gates
+SECTION transverse central-arm jet
+PASS transverse jet, three-weight floor, and constant-Sigma hostile (42 gates)
+CHECKS=711
+RESULT=PASS

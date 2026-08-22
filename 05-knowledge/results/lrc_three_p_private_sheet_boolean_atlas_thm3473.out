@@ -1,0 +1,19 @@
+THM-3473 EXACT DETERMINISTIC COMPANION
+STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
+DEPENDENCY: THM-3469 2d86e9ecf8fc14ef58a1bd0fc7a000b1fb49b42718d10d96637a3908b90f486b 01-canon/theorems/THM-3469-three-times-p-half-twist-eight-owner-cover-boundary.md
+SECURITY_IMPORTS: __future__,ast,collections,fractions,hashlib,json,math,pathlib,sys
+RESIDUE_LEMMA: N_0=2k-1; N_1=...=N_5=2k through k=10000
+DIRECT_ATLAS_K1_TO500: cells=5259000 owner_tests=42072000
+CLASSIFICATION_SHA256: 0ded756ca28ea42ee68990cc3bb8a314d01028da4ff1727f524194efe72aab9a
+RESIDUE_SUMMARY_SHA256: 502f3fa670a353c7662cbb631e3096c1a91254576dbe8289dc8f9a7f39924490
+FRACTION_REFERENCE_K1_TO60: cells=76680 owner_tests=613440
+BOOLEAN_SUPPORT_TYPES_ONE_BASED: ((1,), (2,), (3,), (4,), (5,), (6,), (7,), (8,), (1, 4, 5, 6), (2, 3, 5, 8), (5, 7))
+PRIVATE_COUNTS_OWNER_ORDER: (4k,4k-2e1,4k-2e0,4k,8k-2e2,4k,4k-2e2,4k)
+MULTIPLICITY_COUNTS: weight1=36k-2-2e2; weight2=2k+2e2; weight4=4k-1
+FIRST_SIX_ROWS: ((1, (4, 2, 4, 4, 8, 4, 4, 4), ((1, 34), (2, 2), (4, 3))), (2, (8, 8, 8, 8, 14, 8, 6, 8), ((1, 68), (2, 6), (4, 7))), (3, (12, 12, 10, 12, 24, 12, 12, 12), ((1, 106), (2, 6), (4, 11))), (4, (16, 14, 16, 16, 32, 16, 16, 16), ((1, 142), (2, 8), (4, 15))), (5, (20, 20, 20, 20, 38, 20, 18, 20), ((1, 176), (2, 12), (4, 19))), (6, (24, 24, 22, 24, 48, 24, 24, 24), ((1, 214), (2, 12), (4, 23))))
+BIDIRECTED_TWO_SECTION: {'packets_one_based': ((1, 4, 5, 6), (2, 3, 5, 8), (5, 7)), 'undirected_edges': 13, 'bidirected_arcs': 26, 'degrees': (3, 3, 3, 3, 7, 3, 1, 3), 'hub_one_based': 5, 'warning': '2-section loses sheet counts, singleton atoms, and k mod 3'}
+U_SPINE_DEFICIT_WORD: {'period': 63, 'counts': ((-1, 51), (0, 4), (1, 4), (2, 4)), 'minimality_witnesses': ((21, 5, 0, 26, 1), (9, 3, -1, 12, 0)), 'ambient_each_state': '4/63', 'conditioned_each_state': '1/3'}
+ASYMPTOTIC_SHEET_DENSITIES: singleton=6/7; each multiple packet=1/21
+DEFICIT_LANES: k mod 3; each natural/harmonic coefficient=1/3
+SEMANTIC_SHA256: 1a269572f813dcfafa4d99b9dda39e6fd36514005ff671ef7eec3f6416467fcc
+VERDICT: exact 11-support Boolean atlas and eight positive deletion deficits for every k>=1; global rank minimality and LRC(14) do not follow

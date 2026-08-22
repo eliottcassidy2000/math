@@ -1,0 +1,32 @@
+LRC U_FULL GUARD-SHEET DRIFT-BUCKET BRIDGE DECOMPOSITION
+status=FINITE-EXACT endpoint factorization; actual guard address, Cartesian endpoint pairing; LRC(14) OPEN
+dependency_hashes=('ad2a620cdc238f28e3384698b2c612f38cdf2566bd56b76d1cbabcc03107ec0b', '79b78637b2cc0ff54051fde02a6651ef10c8694a8d7a865ae403696370125179', 'ee2105742abee578a9c41ff7ec954a07ada324fccc2c643429e7ac6e6e6f8fc2', '10a98351cc59615a5b6d2b8f555e0936d1a39566d9906127edc2b0fbc3918e73')
+embedding=(prime=572252886246508880869,root=279936,order=81750412320929840124)
+common_guard_partition=(atoms=39,sheets=13,chambers=('left', 'middle', 'right'),half_open=((0,1),(1,6),(6,7)))
+owner_boundary_gate=(speed=13,condition=distance(13*t,Z)<1/14,residual_support_half_open=([0,1/2),[13/2,7)),active_guard_atoms=26,middle_atoms_empty=True)
+pair_kernel_types=(full_atom_pairs=1521,drift_types=117,H_nonzero=1521,q5_nonzero=1521)
+unguarded_interval_counts_by_alpha=(531398, 541349, 556004, 554331, 546963, 550023, 539135, 539135, 550023, 546963, 554331, 556004, 541349) total=7107008
+atom_split_interval_counts_by_alpha=(531398, 541470, 556125, 554452, 547084, 550144, 539256, 539256, 550144, 547084, 554452, 556125, 541470) total=7108460
+nonempty_atom_tables_by_alpha=(334, 334, 333, 334, 333, 334, 334, 334, 334, 333, 334, 333, 334) total=4338
+overlap_lengths_by_alpha=(1858665371318005146, 1734412148280771986, 1678750002297983069, 1632488082281374916, 1620258709508805132, 1708996774663621976, 1576602427955016683, 1576602427955016683, 1708996774663621976, 1620258709508805132, 1632488082281374916, 1678750002297983069, 1734412148280771986)
+direct_parent_controls=(pairs=((0, 0), (0, 1), (1, 0), (12, 12)),tau_each=13,count=52,sha256=ac20bfb32f2af72235f41b26ae07921124edf3cce974ecdc839aa0c3b2c74b95)
+reconstructed_gamma_sha256=1fabc5cfdbaa1455e10cd6bf9264488133616a7b0ff381623d729b4b4bfa9682
+inverse_values=((q_H,320618948602619577408),(q_q5,503604956476841920373),bridge=389266878372286537904)
+bucket_nonzero_counts=(H=52,q5=52,bridge=52)/117
+bucket_support=exactly (left/right)x(left/right)xF13; every one of 52 types is nonzero for H, q5, and their bridge
+bucket_zero_types_sha256=39bc347a40e5181822862b6d0efe96f3c1d1df5abed4dadd248acc647f8a6f5f; schema=all 13 drifts for the five chamber pairs containing middle
+bucket_sha256=(H=c5bb013836492665e766a0423a71c45983f5226b99b2ea74ad7f53e33c2a8629,q5=933c6f0b768f22ee993dc02af171d3b731e0c1ab3acd7120bed157a491a29ec9,bridge=553cfe7289b0556a19a8bcd1a0382dc1372545358feac62e5229adca315f8a26)
+guard_equality_hostiles=(name,H,q5,bridge)=(('same_sheet', 118992333014385604245, 366746771947440878083, 324498447313453607031), ('same_chamber', 237441608630540813143, 468104475565795325224, 341590019311254368788), ('same_guard_atom', 319186094366758452423, 268974005044605905796, 50212089322152546627)); none recovers the frozen bridge
+root_alignment_torsor=(13, 'u=a+c', 'guard pullback g_C(a+tau) and root translation phi(y,u)+tau/13=phi(y,u+tau) both use +tau', 'primitive orbit coefficient changes by zeta^(k*c)', 'u_R-u_L=a_R-a_L under one common c', 'independent c_L,c_R shift the drift by c_R-c_L', 'label torsor only; chamber and physical-root realization remain absent', (2, 1))
+K4xF13_corner_table=(rank=4,vertex_rows_sha256=c651f1deb71258001213c32b812005fb1f07b3a834fbe0526feb5b9c1c54435a,walsh_rows_sha256=6f8ce43a58c5c05552fa4a815c955e10873ed3535ba8cb436284fe4ad18d996c)
+K4_walsh_support=(names=('constant', 'left', 'right', 'mixed'),drift_nonzero=(13, 13, 13, 13),zero_drifts=(('constant', ()), ('left', ()), ('right', ()), ('mixed', ())))
+K4_walsh_drift_spectrum=(nonzero=(13, 13, 13, 13),zero_frequencies=(('constant', ()), ('left', ()), ('right', ()), ('mixed', ())),sha256=ef4c512d3e0444cce1cacee42ebbbb2d2edef7bd866517814484d1e8e921eaa9)
+K4_scope=four left/right chamber-pair states are the F2^2/K4 carrier at each drift; no pairwise orientation or tournament is inherited
+factorization=remove only H guard; owner speed-13 in-gate restricts to 26 boundary atoms; restore g_C(a+tau); expand AX*BY; sum into 52 supported (C,D,d) buckets with common-sheet Fourier phase
+positive_control=39-atom reconstruction matches the frozen full 13^3 gamma bank and both inverse role values exactly
+hostile_boundary=117 drift buckets classify guard covariance only; their Cartesian endpoint pairs have no THM-2471 common-base/root/owner/word/source/horizon support relation
+next_test=retain these guard buckets while adding one independently lawful ancestry-support predicate before multiplying endpoint factors
+nonconsequence=no physical current, grouped exact-address coefficient, all-unit projector, scalar-row exclusion, or LRC(14)
+security_ast=(6080, ())
+semantic_sha256=0b31a992ba23cecd05f28ae353133531f41cc6d84a4a935c34a12d77fd3db590
+STATUS=PASS

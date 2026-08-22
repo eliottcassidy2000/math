@@ -1,0 +1,22 @@
+THM-3204 PARABOLIC CONTINUANT SINGLE GATE EXACT CONTROL
+unital_jacobi_cyclic_cokernel_cases=225
+deleted_minor_identity=det(rows_2..n,cols_1..n-1)=prod(subdiagonal)
+hostile_non_unital_invariant_factors=[3, 3]
+chebyshev_identity_checks=11
+chebyshev_form=det tridiag(1,alpha,1)_n = U_n(alpha/2)
+parabolic_locus=alpha=+-2  (Chebyshev endpoints)
+parabolic_closed_form_checks=78
+zero_period p=3 parabolic=[3] nonparabolic=[2, 4]
+zero_period p=5 parabolic=[5] nonparabolic=[2, 3, 4, 6]
+zero_period p=7 parabolic=[7] nonparabolic=[2, 3, 4, 6, 8]
+zero_period p=11 parabolic=[11] nonparabolic=[2, 3, 4, 5, 6, 10, 12]
+zero_period p=13 parabolic=[13] nonparabolic=[2, 3, 4, 6, 7, 12, 14]
+smith_obstruction_bank=27
+scalar_reset_smith=(1,1,p)_admits_jacobi_form
+weighted_reset_smith=(1,p,p)_forbids_jacobi_form
+factorial_parabolic_condition=-4*d*i*v + 4*i**3*v**2 + 8*i**2*v**2 + 5*i*v**2 + i + v**2
+consecutive_obstruction=-(8i^3+20i^2+12i-1)
+consecutive_rows=[(1, -39, 0), (2, -167, 0), (3, -431, 0), (4, -879, 0), (5, -1559, 0), (6, -2519, 0), (7, -3807, 0), (8, -5471, 0), (9, -7559, 0), (10, -10119, 0), (11, -13199, 0), (12, -16847, 0)]
+single_step_parabolic_witnesses=[(1, '19/4'), (2, '77/8'), (3, '199/12'), (4, '409/16')]
+scope=continuant_gate_structure_not_NC2_GMC2_JC2_or_LRC14
+ALL EXACT CHECKS PASSED

@@ -1,0 +1,29 @@
+THM-3401 CENTERED TRANSVERSE SHEET-COVER RANK EXACT COMPANION
+source_sha256_lf=fff146868de4b1ec5993ed404fca4200e8e3eac47a7cb902ff51d559eef228e0
+status=PROVED analytic classification plus VERIFIED-EXACT independent literal set-cover search
+universe=all q=15..28 and all transverse speed residues 1..q-1 at source centre zero
+rank_table=((15, 6), (16, 5), (17, 8), (18, 5), (19, 9), (20, 6), (21, 8), (22, 7), (23, 11), (24, 6), (25, 11), (26, 8), (27, 10), (28, 8))
+quotient_block_checks_q14_to_q29=328;classification_checks=287;construction_checks=122
+independent_search_subsets_tested=9828
+q=15;phi=8;prime_divisors=(3, 5);rank=6;literal_types=6;search_subsets=63;construction=(1, 2, 3, 4, 5, 7);search_witness=(1, 2, 3, 4, 5, 7)
+q=16;phi=8;prime_divisors=(2,);rank=5;literal_types=7;search_subsets=112;construction=(1, 3, 5, 7, 8);search_witness=(1, 3, 5, 7, 8)
+q=17;phi=16;prime_divisors=(17,);rank=8;literal_types=8;search_subsets=255;construction=(1, 2, 3, 4, 5, 6, 7, 8);search_witness=(1, 2, 3, 4, 5, 6, 7, 8)
+q=18;phi=6;prime_divisors=(2, 3);rank=5;literal_types=7;search_subsets=113;construction=(1, 5, 6, 7, 9);search_witness=(1, 5, 6, 7, 9)
+q=19;phi=18;prime_divisors=(19,);rank=9;literal_types=9;search_subsets=511;construction=(1, 2, 3, 4, 5, 6, 7, 8, 9);search_witness=(1, 2, 3, 4, 5, 6, 7, 8, 9)
+q=20;phi=8;prime_divisors=(2, 5);rank=6;literal_types=8;search_subsets=237;construction=(1, 3, 4, 7, 9, 10);search_witness=(1, 3, 4, 7, 9, 10)
+q=21;phi=12;prime_divisors=(3, 7);rank=8;literal_types=8;search_subsets=255;construction=(1, 2, 3, 4, 5, 7, 8, 10);search_witness=(1, 2, 3, 4, 5, 7, 8, 10)
+q=22;phi=10;prime_divisors=(2, 11);rank=7;literal_types=7;search_subsets=127;construction=(1, 2, 3, 5, 7, 9, 11);search_witness=(1, 2, 3, 5, 7, 9, 11)
+q=23;phi=22;prime_divisors=(23,);rank=11;literal_types=11;search_subsets=2047;construction=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);search_witness=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+q=24;phi=8;prime_divisors=(2, 3);rank=6;literal_types=10;search_subsets=762;construction=(1, 5, 7, 8, 11, 12);search_witness=(1, 5, 7, 8, 11, 12)
+q=25;phi=20;prime_divisors=(5,);rank=11;literal_types=11;search_subsets=2047;construction=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12);search_witness=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12)
+q=26;phi=12;prime_divisors=(2, 13);rank=8;literal_types=8;search_subsets=255;construction=(1, 2, 3, 5, 7, 9, 11, 13);search_witness=(1, 2, 3, 5, 7, 9, 11, 13)
+q=27;phi=18;prime_divisors=(3,);rank=10;literal_types=11;search_subsets=2044;construction=(1, 2, 4, 5, 7, 8, 9, 10, 11, 13);search_witness=(1, 2, 4, 5, 7, 8, 9, 10, 11, 13)
+q=28;phi=12;prime_divisors=(2, 7);rank=8;literal_types=10;search_subsets=1000;construction=(1, 3, 4, 5, 9, 11, 13, 14);search_witness=(1, 3, 4, 5, 9, 11, 13, 14)
+q14_strict_hostile=unit_owners_cover_only_zero;all_transverse_union=(0, 2, 4, 6, 7, 8, 10, 12);missing_units=(1, 3, 5, 9, 11, 13);cover_rank=NONE
+q28_endpoint_hostile=+-2 strict_equalities_excluded;checks=24
+q29_boundary=unit_blocks_have_two_sign_pairs;times2_orbit=(1, 2, 4, 8, 13, 3, 6, 12, 5, 10, 9, 11, 7, 14);edge_count=14;cycle_min_edge_cover=7;literal_cover_rank=7;old_formula=14
+q29_edge_cover_witness=((1, 2), (3, 13), (4, 8), (5, 10), (6, 12), (7, 14), (9, 11));literal_speed_witness=(1, 4, 5, 6, 7, 9, 13)
+q15_canonical_construction=(1,2,3,4,5,7);rank=6;zero_cochain_triphase_edge_explained
+scope=centered_zero_cochain_transverse_cover_only;nonzero_centres_and_LRC14_remain_open
+semantic_sha256=41c31d22b1a1b6fa3637d129fad3a311565d21bf45ad9f322bd550d595c157cd
+verdict=PASS

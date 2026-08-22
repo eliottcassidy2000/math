@@ -1,0 +1,15 @@
+THM-3252 SINGER-COMPACTIFIED OWNER CYCLICITY EXACT AUDIT
+dependency_hash_checks=5
+assert_nodes=0,float_literals=0
+owner_digest=b53d77a69f39a5f8c893b4cdceaaeecdd0dc70a16be02e6d28f3f6d7b520feef,signs=(156,12,0),sum=1/24696
+scale=32006016000,scaled_sum=1296000,hodge_completion=-1296000
+singer_plane=F13[u]/(u^2-2),alpha=(1,2),orbit=168
+gauge_count=8064,prime=1000000007,all_determinants_nonzero=PASS
+zero_completion_census=(168, 463433994, 'e8391c1b3f0a4584f6df15953aa89ed49a8b7dedaf8707ccbfa3689b8fa229e2', '7e15bdc29de5647c3aae0a3e36125c3944e1fe38b58f038c3bb0ed45395e7c54', 540717, 999459290)
+hodge_completion_census=(168, 565425212, 'c4a504a86966c5dc7c0d375e962ae2419fe99271c79b8ae7ddc2f25a5d82d730', 'bf31ba1bebb4664b6b929237ec57d328ee0b901595f61c6d02e111dc2d5ce85a', 6636781, 993363226)
+identity_zero_determinant=1306489535376679896012084927085361464824505576544950660174960053
+identity_hodge_determinant=-41129257721095723275557032050508281832453443425542278710444911947
+central_contrast=(12,-1^12),neutral=0,charged_blocks=13
+charged_orbit_span_dimension=12*169=2028
+scope=signed-second-corrector-linear-frame-not-positive-physical-current
+all_exact_checks=PASS

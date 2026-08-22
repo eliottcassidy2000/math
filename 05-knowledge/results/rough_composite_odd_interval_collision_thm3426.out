@@ -1,0 +1,10 @@
+rational_connection_cells=9160
+dyadic_color_cells=9160
+sharp_clique_edges=342
+rounding_cells=22201
+rough_unit_action_cells=1032666
+rough_normalized_graph_cells=42184
+rough_composite_controls=h2:n27:spf3:L13:c1:D0:nonunit4;h2:n33:spf3:L15:c3:D0:nonunit8;h3:n65:spf5:L21:c2:D4:nonunit6;h3:n77:spf7:L25:c2:D4:nonunit6;h4:n119:spf7:L29:c3:D4:nonunit6;h4:n125:spf5:L31:c1:D4:nonunit6;h5:n209:spf11:L41:c4:D12:nonunit6;h5:n217:spf7:L43:c2:D12:nonunit8;h6:n319:spf11:L53:c1:D12:nonunit6;h6:n343:spf7:L57:c1:D12:nonunit8;h7:n517:spf11:L73:c6:D24:nonunit8;h7:n527:spf17:L75:c2:D24:nonunit6;h8:n697:spf17:L87:c1:D24:nonunit8;h8:n713:spf23:L89:c1:D24:nonunit6;h9:n1027:spf13:L113:c10:D36:nonunit10;h9:n1037:spf17:L115:c2:D36:nonunit8;h10:n1469:spf13:L145:c19:D36:nonunit14;h10:n1501:spf19:L149:c11:D36:nonunit10;h11:n2021:spf43:L183:c8:D56:nonunit8;h11:n2033:spf19:L183:c20:D56:nonunit12;h12:n2669:spf17:L221:c17:D56:nonunit16;h12:n2701:spf37:L225:c1:D56:nonunit10;h13:n3473:spf23:L267:c2:D80:nonunit14;h13:n3481:spf59:L267:c10:D80:nonunit4;h14:n4399:spf53:L313:c17:D80:nonunit10;h14:n4427:spf19:L315:c17:D80:nonunit18;h15:n5491:spf17:L365:c16:D96:nonunit40;h15:n5497:spf23:L365:c22:D96:nonunit18;h16:n6751:spf43:L421:c15:D96:nonunit12;h16:n6757:spf29:L421:c21:D96:nonunit16
+small_prime_hostile=h9:n969:L107:extras(161, 325, 644, 808)
+semantic_sha256=f03aded979fb19d75378b50614b6df1dc100ed6e25d08cd482501810ae72a691
+rough_composite_odd_interval_collision=PASS

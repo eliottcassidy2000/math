@@ -1,0 +1,25 @@
+family=backbone;active_vertices=18;directed_arrows=32;minimal_scalar_order=10;hankel_rank=10
+family=backbone;a_0_to_a_14=(18, 32, 84, 160, 412, 798, 2060, 4012, 10426, 20362, 53286, 104272, 274628, 538258, 1425644)
+family=backbone;recurrence_coefficients_lag1_to_10=(Fraction(0, 1), Fraction(16, 1), Fraction(0, 1), Fraction(-94, 1), Fraction(0, 1), Fraction(244, 1), Fraction(0, 1), Fraction(-263, 1), Fraction(0, 1), Fraction(93, 1))
+family=backbone;characteristic_factor=(z**4 - 5*z**2 + 3)*(z**6 - 11*z**4 + 36*z**2 - 31)
+family=backbone;generating_denominator_factor=-(3*x**4 - 5*x**2 + 1)*(31*x**6 - 36*x**4 + 11*x**2 - 1)
+family=backbone;generating_numerator=2*(279*x**9 + 216*x**8 - 762*x**7 - 514*x**6 + 623*x**5 + 380*x**4 - 176*x**3 - 102*x**2 + 16*x + 9)
+family=selected_tree;active_vertices=23;directed_arrows=40;minimal_scalar_order=14;hankel_rank=14
+family=selected_tree;a_0_to_a_14=(23, 40, 104, 212, 536, 1174, 2950, 6700, 16850, 39058, 98502, 231232, 584846, 1384502, 3510318)
+family=selected_tree;recurrence_coefficients_lag1_to_14=(Fraction(0, 1), Fraction(20, 1), Fraction(0, 1), Fraction(-158, 1), Fraction(0, 1), Fraction(630, 1), Fraction(0, 1), Fraction(-1343, 1), Fraction(0, 1), Fraction(1493, 1), Fraction(0, 1), Fraction(-774, 1), Fraction(0, 1), Fraction(144, 1))
+family=selected_tree;characteristic_factor=(z**2 - 2)*(z**4 - 5*z**2 + 3)*(z**8 - 13*z**6 + 54*z**4 - 77*z**2 + 24)
+family=selected_tree;generating_denominator_factor=-(2*x**2 - 1)*(3*x**4 - 5*x**2 + 1)*(24*x**8 - 77*x**6 + 54*x**4 - 13*x**2 + 1)
+family=selected_tree;generating_numerator=1152*x**13 + 984*x**12 - 5952*x**11 - 4745*x**10 + 10710*x**9 + 7907*x**8 - 8484*x**7 - 5828*x**6 + 3254*x**5 + 2090*x**4 - 588*x**3 - 356*x**2 + 40*x + 23
+family=full_core;active_vertices=26;directed_arrows=68;minimal_scalar_order=15;hankel_rank=15
+family=full_core;a_0_to_a_14=(26, 68, 274, 1018, 4134, 16400, 67270, 270718, 1114054, 4498562, 18529428, 74885666, 308530344, 1247186562, 5138801640)
+family=full_core;recurrence_coefficients_lag1_to_15=(Fraction(0, 1), Fraction(34, 1), Fraction(0, 1), Fraction(-404, 1), Fraction(0, 1), Fraction(2285, 1), Fraction(0, 1), Fraction(-6701, 1), Fraction(0, 1), Fraction(10096, 1), Fraction(0, 1), Fraction(-7156, 1), Fraction(0, 1), Fraction(1808, 1), Fraction(0, 1))
+family=full_core;characteristic_factor=z*(z - 2)*(z + 2)*(z**12 - 30*z**10 + 284*z**8 - 1149*z**6 + 2105*z**4 - 1676*z**2 + 452)
+family=full_core;generating_denominator_factor=-(2*x - 1)*(2*x + 1)*(452*x**12 - 1676*x**10 + 2105*x**8 - 1149*x**6 + 284*x**4 - 30*x**2 + 1)
+family=full_core;generating_numerator=-2*(696*x**14 - 3808*x**13 - 8672*x**12 + 17140*x**11 + 21970*x**10 - 24644*x**9 - 22573*x**8 + 15495*x**7 + 11000*x**6 - 4630*x**5 - 2661*x**4 + 647*x**3 + 305*x**2 - 34*x - 13)
+MAXIMIZING-WITNESS LIFTED-WALK RATIONAL SERIES
+dependency_hash_checks=2;source_replay=PASS
+definition=a_n_counts_length_n_walks_in_active_(row,static_witness)_automaton
+mechanism=finite_symmetric_bipartite_transfer_matrix;parity_recurrences_are_exact
+scope=static_dominance_witness_sequences_only;not_simple_row_paths_not_chronological_response_dynamics
+source_ast=(assert_nodes=0,float_literals=0)
+all_exact_checks=PASS

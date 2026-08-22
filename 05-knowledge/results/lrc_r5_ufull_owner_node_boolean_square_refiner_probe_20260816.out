@@ -1,0 +1,18 @@
+== r=5 U_full owner-node Boolean-square refiner probe ==
+parent=(sha256=6ad93cd13d47159a565f39128b9a108b5203a396ed3ed05a2892222771d45e40,semantic=98a27d4540648377c544d8e1b86c3dd3df7bb16d3431f6a9471f4844ba2e6b9f)
+states=(labels=((0, 0), (0, 1), (1, 0), (1, 1)),source_subsets=((0,), (0, 6), (12,), (6, 12)),complement_XOR=3)
+six_cut_completion=(global_missing=(0, 12),owner_excluded_realized=(6,),each_cut_census=(missing=1,one_way=2,two_way=0))
+full_source_Gray_path=(subset,segments,measure)=(((0,), 3, 345867129050087785140), ((0, 6), 12, 4150405548601053421680), ((6,), 3, 691734258100175570280), ((6, 12), 12, 4150405548601053421680), ((12,), 3, 345867129050087785140));toggles=(6, 0, 12, 6)
+owner_cell_state_partition=(segments=(3, 2, 3, 2),measures=(345867129050087785140, 345867129050087785140, 345867129050087785140, 345867129050087785140),total=1383468516200351140560)
+field=(prime=755373809845391722745761,root=148035889,zeta13=266737884585332483769981)
+work_counts=(7107008, 7108460, 1200462, 186244, 186244);state_segment_counts=(300115, 300116, 300115, 300116)
+literal_guard_controls=((0, 0, 0), (0, 1, 6), (1, 0, 6), (6, 6, 12), (12, 12, 0)): PASS;parent_delta_cell_marginal=PASS;same_root=0
+coordinate_ranks=(coupled,source_erasure,ANOVA)=(4, 4, 3)
+spectral_shapes_(total,dc,V4axis,F13axis,mixed)=(coupled=(52, 1, 3, 12, 36),source_erasure=(52, 1, 3, 12, 36),ANOVA=(36, 0, 0, 0, 36))
+fixed_relation=(1,0,6);state_profile=(79866518267205440406168, 310652419985144092895775, 367085997033220164935953, 315468006625786970755333);Walsh=(317699132065964946247468, 576205898534886264436774, 463338744438734120356418, 472969917720019876075534)
+bit_marginals_(chamber,multiplicity)=((2, (26, 1, 1, 12, 12), '43450c53365624033ec2c098fb52812934d94de5daf1c3396d4e59b2e03bc680', 'd48f20b5fe98a19bcfd20a55781dce268a3127a7fc76e8d6752f1c5f656ee896'), (2, (26, 1, 1, 12, 12), 'daebb6ead49585eba1e118db3333af16179388a3d987bd626c2f151e3980db6d', '051da2cd94ed11bf9fb4fb708a1d15b8206a3a26729f35b5dc4f68609ef5efa6'))
+digests=(gamma,erased_gamma,table,erased_table,spectrum,erased_spectrum,ANOVA_spectrum)=('8b8f2a2785b084e1578ba0512e4577ab79fd674b84b588fbdb8186f2009242c2', 'cedec6b55700ec2854b426a4f35c73549d720af2d8a34b065a7d16cdaa57f8b5', '5f4b9609faaa5f148d112a7cde5cfba0ab2c1385b4c53ea9c4bcfc6e93d106fc', '518a002b724438f3a604732576000d61d19b03498dadcb39df32e9f1de4a5a8f', '84f9cbc7352413a13f517f7d2bcb90ef6fd5af5c8cbed9d3bebe8e870da25cb1', '1ce6928765e5433f064086a6ca945810e00878b9a8ce436dfc3c5bb369920b2b', 'bbb69d0cc29652284cb51c292a5e9de71d8c5809dcfd5e73f4c3bf5f991544d6')
+semantic_sha256=bae28345b0b1aea35b244bfbf04123414f0c8fbf9eeca98e39d2b94dd6d107ec
+status=FINITE-EXACT genuine rank>1 Boolean-square x F13 source/endpoint candidate on one owner-node base
+scope=source support refiner,not exact C(a;X,m),not U_clock chronology,not uniform rows,no row exclusion,no LRC(14)
+all exact checks passed

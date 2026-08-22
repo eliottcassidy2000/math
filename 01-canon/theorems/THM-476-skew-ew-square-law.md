@@ -79,7 +79,9 @@ vectors, so no square condition arises — only the kernel/parity obstruction of
    (Armario–Frau). Multiplier-symmetric two-circulant searches this session: see results file
    + session reflection.
 3. **Tao C23a/C23b.** The even-order skew ladder (n ≡ 0: skew-Hadamard, κ=1; n ≡ 2: EW iff
-   2n−3 = k², κ → √2) is the tournament shadow of the Hadamard-conjecture frontier: all four
-   open Hadamard orders < 2000 (668, 716, 892, 1132) are skew-eligible (could fall via a DRT),
-   while the n ≡ 2 ladder shows exactly how much determinant skewness costs when perfect
-   flatness is arithmetically barred.
+   2n−3 = k², κ → √2) is the tournament shadow of the Hadamard-conjecture frontier.  At the
+   time of this record, 668, 716, 892, and 1132 were among the open Hadamard orders below
+   2000 and were skew-eligible (they could have fallen via a DRT).  THM-3394 now proves
+   ordinary Hadamard existence at those and eight other formerly missing orders, but does
+   not prove that any of its matrices is skew-Hadamard.  The n ≡ 2 ladder still shows exactly
+   how much determinant skewness costs when perfect flatness is arithmetically barred.

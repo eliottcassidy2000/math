@@ -1,0 +1,13 @@
+THM-3584 all-exponent equal-step three-by-three Danielewski Darboux nonentry
+Laurent compiler rows: 3025; convolution=[1,2,3,2,1]
+regularity controls: 3193; simple-arm gates: N=2..32 (31 exponents), survivor=(-N,1) and reflection
+kappa=0/4 degree gates: 1200
+kappa=1 operator/support controls: 132
+kappa=3 operator/support controls: 132; sign-branch controls: 231
+central census: 136185; middle profiles=4104; odd-endpoint profiles=129
+middle family: arm=8448, bridges=88, terminal-gcd=88; gamma=1 even N / 2 odd N
+odd-N endpoint family: first-integrals=36, bridges=36, terminal-gcd=30
+N=3 sharp profiles: (-4,1,6)|(-8,-3,2); (-3,-1,1)^2; (-3,2,7)|(-9,-4,1)
+hostiles: both-negative / zero-multiplier / repeated-arm / degree-one / Laurent-pole
+scope: reduced exact equal-step 3x3 supports; does not reprove THM-3576; no JC consequence
+all optimization-safe exact truth gates passed

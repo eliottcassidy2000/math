@@ -1,0 +1,9 @@
+LRC14 DISCONNECTED AFFINE-RAY QUOTIENT AUDIT
+original_rays 22890 primitive_rays 14168 by_d (644, 644, 1288, 1288, 2576, 1288, 3864, 2576)
+carrier_chambers (('high', 13386), ('low-nonresonant', 765), ('low-unit', 17))
+maximum_strict_cutoff 14913 maximizing_rows 56
+carrier_relevant_occurrences 18930273
+post_universal_many_turn_occurrences 8079264 by_d (140750, 193712, 487986, 591192, 1360800, 779590, 2607038, 1918196)
+primitive_ray_sha256 cc7cc412a79baf2bd72fb3a58df0e3e0ef306de1372acc4fbfa945e9279cbb2d
+semantic_sha256 7a4ff17393137c5e3afcf24411d3d6cf2d0078255534c0b22b82110f167abcec
+status=FINITE-EXACT ray quotient and cutoff arithmetic; carrier proof and physical census separate

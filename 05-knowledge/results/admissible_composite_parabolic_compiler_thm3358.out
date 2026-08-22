@@ -1,0 +1,23 @@
+THM-3358 ADMISSIBLE COMPOSITE PARABOLIC COMPILER AUDIT
+grades 146 rank_distribution ((1, 101), (2, 43), (3, 1), (4, 1)) max_grade 32045
+primitive_representations 199 oriented_hensel_centers 398 unit_prefixes 100384
+normal_fibre_points 743214 exact_grade_branches 553216 conjugation_quotient_branches 276608 compiled_word_rows 1106432
+two_path_center_and_exact_shell_match=True all_sampled_branch_starts_equal_one True independent_2d_3d_controls 48
+prime_power_controls
+  25 (1, 1, 2, 50, 40, 20, 20)
+  125 (1, 1, 2, 250, 200, 100, 100)
+  169 (1, 1, 2, 338, 312, 156, 156)
+rank_four_control 32045 (4, 8, 16, 512720, 344064, 172032, 21504)
+rank_four_roots (1081, 3546, 4851, 5501, 7316, 7966, 9271, 11736, 20308, 22773, 24078, 24728, 26543, 27193, 28498, 30963)
+max_prefix (16022, (32045, 1)) max_suffix (696, (985, ((29, 12), 'A')))
+general_affine_normal (44, 10814, 9024, 4512, '9a5f3058e13140091429c7deff7e17b2093b8ab9d12f7d6058d7fd3ab4431cd6')
+unary_word_invariant (121, 14641, 87846, 'b4f5e17d175cc505bdd88bee7e6c6d8a56e8198e5c41a00e72ee74fcdc62e2d0')
+unitary_boolean_faces (584, 1592, 3620, 'f170bc47620385e61628d5db387867f3a29bfe041010b7b8810ae74487cfd82a')
+hostiles even (10, (14, 2)) inert (3, 45, (63, 9)) bad_split (125, (175, 25))
+p5_raw (1, 8) p5_centered (3, 21) p5_exact (1, 6, 8, 11, 13, 16, 18, 23)
+affine_hostiles ramified_c ((0,), (0, 5, 10, 15, 20)) ramified_A ((2,), (2,)) partial_power (25, 428, 5, (600, 85), 5)
+compiler_no_go_hostiles charge (0, (2, 1), (-1, 7), (-5, 35), 15) parity (9, (19, 9), (-2, 29), ((-29, -2), (-22, 19), (-19, -22), (-2, 29), (2, -29), (19, 22), (22, -19), (29, 2)))
+exact_shell_sha256 385b513612da847bfed44fcd49fe26d0215c12be35353dab2aa77189a803e333
+semantic_sha256 a9cff64857122f215f3a7c38fcc34853246041973d98164ff714475035777711
+normalization=all checks exact; compare stdout after LF normalization
+ALL CHECKS PASS

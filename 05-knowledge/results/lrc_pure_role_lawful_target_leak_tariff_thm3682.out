@@ -1,0 +1,6 @@
+danger_role=1/7,6/91,0,0,0,0,0,0,0,0,0,0,6/91
+role_energy=2508/1399489;THM2362_floor=121/99372
+covariant_target_energy=0;leak_energy=2508/1399489
+row_to_table=2508/18193357;drift_factor=1/2028;deep_target_factor=1/26364
+semantic_sha256=8b596be28ef491b71c1a8bb4255ffee1e60a3086c4d82a8feebccfcfc7accb7d
+RESULT=PASS;gates=169

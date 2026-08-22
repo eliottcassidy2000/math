@@ -1,0 +1,27 @@
+LRC U_FULL ALL-ROLE MODEWISE SPECTRAL INDEPENDENT AUDIT
+status=FINITE-EXACT INDEPENDENT AUDIT; endpoint B^1 only; LRC(14) OPEN
+candidate=(commit=b5e18d2b1c84,source_sha256=98a4cf5c82ca10027302baf2c7fb59acb0f305143e22453d0a8660fef8d90cf0,imported=False)
+trusted_parent=(THM-3514 atom audit,source_sha256=f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc)
+field=(prime=572252886246508880869,zeta13=505438565698892403012); gamma_sha256=1fabc5cfdbaa1455e10cd6bf9264488133616a7b0ff381623d729b4b4bfa9682
+role_classes=(('c1', (0, 0, 0)), ('c2', (1, 0, 0)), ('c3', (0, 1, 0)), ('H', (1, 0, 1)), ('q2', (1, 12, 0)), ('q3', (1, 0, 0)), ('q4', (1, 0, 0)), ('q5', (1, 0, 0)))
+five_q_values=(((0, 0, 0), 405336876493642499425), ((0, 1, 0), 518539850465495448196), ((1, 0, 0), 503604956476841920373), ((1, 0, 1), 320618948602619577408), ((1, 12, 0), 15703541686881447885))
+bucket_routes=(direct_tau_slices=PASS,canonical_guard_kernels=PASS,equal=True,phase_checks=3042)
+phase_hostiles=(target_sign=((0, 1, 0), ('left', 'left', 0), 26461852298079162167, 119509360393971210577),tau_sign=((1, 0, 1), ('left', 'left', 0), 309477751434222963513, 13758465298279769122),drift_dft_sign=((0, 0, 0), 1, 83824780274804594487, 468665068434428720737))
+normalizer=(correct=13^-3,witness_wrong_13^-2=((0, 0, 0), ('left', 'left', 0), 60583331018602792757, 215330416995327424972))
+active_support=(((0, 0, 0), 52), ((0, 1, 0), 52), ((1, 0, 0), 52), ((1, 0, 1), 52), ((1, 12, 0), 52)); five_by_52_rank=5; rank5_minor=((0, 1, 2, 3, 4), 215017650918161056500)
+pointwise_52x72_bank=(52, (0, 0, 0, 0), 52, (((0, 0, 0, 0), 52),), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), 'a1d5183f37cc39deed976876ed91132f662f91137f41a10a79fd3e974ced2dfc')
+drift_13x72_bank=(13, (0, 0, 0, 0), 13, (((0, 0, 0, 0), 13),), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), '6bcdd9fa616ba2dc4883d8334dca7358d06375d7342f43c4aac8dea45deb5027')
+fourier_13x72_bank=(13, (0, 0, 0, 0), 13, (((0, 0, 0, 0), 13),), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), 'e96a3859e6838fa91d04a55ca55fa4e44cafa45bd86b93c7f6b612b1e65f4dc1')
+chamber_fourier_52x72_bank=(52, (0, 0, 0, 0), 52, (((0, 0, 0, 0), 52),), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), 'c9ca8c9b7ed7000b00e39b496523ad75a44379d84ea35e49163d6b64e4196e73')
+slice_ranks=(drift=(4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4),fourier=(4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4))
+rank_minor_digests=(drift=7d9f7bc2091007a57467d5e1a9bf0f132aef9018a769fbaf5fe966a4f1f318c6,fourier=2ef04676425e8dbebd1957c84e851a30426c17618c5fbc8b3d6008ea7abffe59)
+graph_typing=(vertices,edges,incidence_rank,cycle_rank,bridge_edge_index)=(8, 13, 7, 6, 11)
+cycle_pairing_checks=(point,drift,fourier,chamber_fourier,global)=(22464, 5616, 5616, 22464, 432); all_zero=True
+tree_checks=each K4 uses 16 explicit spanning trees; both reduced Laplacians and full 7x7 determinant agree at every bank entry/chart
+candidate_semantic_reconstructed=2c9495fb8bcb731361ba331d9ca4b84a60f21551dc49b16e6519c1fc4f2e9f97
+hostiles=(flat potentials kill all factors; H=q5 kills bridge/product; wrong phase signs and 13^-2 normalization have explicit witnesses)
+typing=edge responses are gradients of eight role potentials, hence lie in B^1; the forced bridge occurs in no cycle and all six cycle pairings vanish
+nonconsequence=no common ancestry, physical or grouped current, absolute H1 flux, all-unit projector, bispectrum theorem, scalar-row exclusion, or LRC(14)
+security_ast=(8288, ())
+semantic_sha256=b745ab5d95936b9a134cfe8b6ffde032e72020d950670ab8b1a4643dd58c8be6
+STATUS=PASS

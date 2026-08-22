@@ -1,0 +1,29 @@
+{
+ "stage": "slow",
+ "pass": 18,
+ "fail": 0,
+ "fails": [],
+ "text": [
+  "==========================================================================",
+  "STAGE slow -- definition-level rule A (polynomial coords) vs my fast flow",
+  "==========================================================================",
+  "  [PASS] T4 closed form == definition-level decode (6 grids, all cells)",
+  "  [PASS] slow definition-level rule A (128,0) reproduces canon CLOSED 81  -- closed=True capture=81 parity_fires=0",
+  "  [PASS] T3: parity fix never fires at (128,0)",
+  "  [PASS] slow run witness: sum x^i Delta_i == (1-x)^(R-1) at (128,0)",
+  "  [PASS] block-for-block: fast junk flow == slow rule A at (128,0), rows 1..81",
+  "  [PASS] slow definition-level rule A (128,8) reproduces canon CLOSED 78  -- closed=True capture=78 parity_fires=0",
+  "  [PASS] T3: parity fix never fires at (128,8)",
+  "  [PASS] slow run witness: sum x^i Delta_i == (1-x)^(R-1) at (128,8)",
+  "  [PASS] block-for-block: fast junk flow == slow rule A at (128,8), rows 1..78",
+  "  [PASS] slow definition-level rule A (256,0) reproduces canon DIE 61  -- die=61",
+  "  [PASS] T3: parity fix never fires at (256,0)",
+  "  [PASS] block-for-block: fast junk flow == slow rule A at (256,0), rows 1..61",
+  "  [PASS] fast flow death row matches at (256,0)  -- 61",
+  "  [PASS] slow definition-level rule A (256,16) reproduces canon CLOSED 150  -- closed=True capture=150 parity_fires=0",
+  "  [PASS] T3: parity fix never fires at (256,16)",
+  "  [PASS] slow run witness: sum x^i Delta_i == (1-x)^(R-1) at (256,16)",
+  "  [PASS] block-for-block: fast junk flow == slow rule A at (256,16), rows 1..150",
+  "  [PASS] T1: encode_d(ballot) == 2x-1 for every profile degree (128,8)+(256,16)"
+ ]
+}

@@ -1,0 +1,37 @@
+THM-3212 CENTERED HEPTIC SOURCE MORSE OBSTRUCTION EXACT AUDIT
+passport=(4,1,1,1)
+accessory_modulus=100*u**3 + 244*u**2 + 237*u + 44
+v=8*u**2/7 + 9*u/7 + 8/7
+S=5*u/7 + x + 5/7
+A0=80*(u + 1)*(8*u**2/7 + 9*u/7 + 8/7)**2/343
+C=-80*(u + 1)*(8*u**2 + 9*u + 8)**2/2401
+D_plus_A0_equals_S_E2=PASS
+F_equals_VG2_and_2VGprime_plus_VprimeG_equals_2=PASS
+A_src_equals_VG_equals_2SET_over_C=PASS
+T_F_equals_A_src2_over_V_equals_F; d_F=0; s_F=-E0=PASS
+g_equals_ST_degree=5; g_divides_V_and_A_src=PASS
+owner_resultant_reduced=16*(15253494994681038744228670740243304*u**2 + 43580492782070721201559735352499167*u + 13827118367764842130186547629314404)/262152798313763923943042755126953125
+owner_resultant_digest=10e912b64868c3010702
+A_src_prime_unit_mod_g=PASS
+centered_source_has_one_critical_point_over_each_g_root_for_every_E0=PASS
+five_forced_critical_points_are_reduced_with_Hessian_det_minus_Aprime2=PASS
+B=1,C0=0,E0=x_local_control: B=1,Delta=1,Pz_root_z=0,Px=1=PASS
+passport=(3,2,1,1)
+accessory_modulus=75*u**3 - 89*u**2 - 31*u + 61
+v=8*u**2/7 - 16*u/21 - 16/21
+S=5*u/7 + x - 4/7
+A0=9*(5*u - 4)*(8*u**2/7 - 16*u/21 - 16/21)**2/343
+C=-64*(5*u - 4)*(3*u**2 - 2*u - 2)**2/2401
+D_plus_A0_equals_S_E2=PASS
+F_equals_VG2_and_2VGprime_plus_VprimeG_equals_2=PASS
+A_src_equals_VG_equals_2SET_over_C=PASS
+T_F_equals_A_src2_over_V_equals_F; d_F=0; s_F=-E0=PASS
+g_equals_ST_degree=5; g_divides_V_and_A_src=PASS
+owner_resultant_reduced=-536870912*(11500259656150185095115844*u**2 - 16128644950755662326155199*u + 6824609861527514650982644)/21234376663414877839386463165283203125
+owner_resultant_digest=2f19f465a02a41f80399
+A_src_prime_unit_mod_g=PASS
+centered_source_has_one_critical_point_over_each_g_root_for_every_E0=PASS
+five_forced_critical_points_are_reduced_with_Hessian_det_minus_Aprime2=PASS
+B=1,C0=0,E0=x_local_control: B=1,Delta=1,Pz_root_z=0,Px=1=PASS
+scope=four_THM3123_S7_covers_centered_family_not_JC2_or_chart_entry
+FAILED_CHECKS=NONE

@@ -1,0 +1,13 @@
+== THM-3643 fixed-107 real quadratic class-number certificate ==
+D=1225041=3*408347;fundamental_discriminant=1;cofactor_prime=1
+continued_fraction=a0:1106;period:1372;period_sha256:58a9d02a98d2c84b604bbe294b07af3f260fd6dcd35e66d9e160bf00423220bb
+negative_pell=insoluble_by_even_period;half_integral_units=excluded_mod8
+pell_unit=x_bits:2361;y_bits:2351;x_sha256:63e1b510226445803da8a12e7135feb50bd0fa72679187360f93e2e06a431daf;y_sha256:29a5b75264591984afe592a206756ba861e54bb8016747a6c77c048edc4100f8
+character_counts=(-1:204173,0:204174,1:204173)
+character_sha256=5523960d6bbdab87f22a750a2f1fb35f10e63fa61aa845a21e66534a99775888
+half_log_sine_sum=[-1636.857453696630438860368892008879746470313 +/- 8.07e-40]
+regulator=[1636.8574536966304388603688920088797464703130480 +/- 4.92e-44]
+class_number_ball=[1.00000000000000000000000000000000000000000 +/- 5.23e-43]
+semantic_sha256=f7fefe14d31997d3e6cd2744695fcc1da368bca544a52e7fdc1d8609d028f001
+status=PROVED FINITE-EXACT RIGOROUS-ARB;ordinary_class_number=1
+scope=quadratic sidecar only;no Mordell rank equality or Selmer bound

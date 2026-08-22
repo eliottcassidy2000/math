@@ -1,0 +1,7 @@
+RULE-B R=1024 D0=12 [cellwise-none] start
+  i=   0 d= 624 sig1=   -1 headbits=   1 maxbits=1018 junkbits= 982 ov0=0 ov1=0 t=    0.5s
+  i=  64 d= 662 sig1=   13 headbits=   1 maxbits=1035 junkbits= 884 ov0=0 ov1=0 t=   32.4s
+  i= 128 d= 700 sig1=    3 headbits=   1 maxbits=1089 junkbits= 777 ov0=0 ov1=0 t=   85.4s
+  i= 192 d= 739 sig1=    1 headbits=   1 maxbits=1144 junkbits= 880 ov0=0 ov1=0 t=  148.9s
+RULE-B R=1024 D0=12 [cellwise-none] NEGATIVE: {'die_row': 240, 'const_bits': 591, 'sig1': 8, 'targ': None, 'head_bits': [591, 599, 607, 614, 621, 627, 633, 639, 644, 650, 655, 660], 'junk_bits': 956, 'elapsed': 184.2}
+trace: /tmp/math-wt-boxeph-multifront/05-knowledge/results/amm12592_ruleB_trace_R1024_D0_12_cellwise-none_boxeph.json

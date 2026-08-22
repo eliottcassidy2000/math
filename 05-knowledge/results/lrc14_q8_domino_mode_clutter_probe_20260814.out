@@ -1,0 +1,19 @@
+Q8 DOMINO MODE-CLUTTER EXACT PROBE
+source_sha256_lf=3e523a2ff8cbd6329782347c56fae2d8519a161c3d127697ca452f3891890b9c
+dependency_sha256_lf=(('THM-3387', 'c540255a185efb54c67035d69f3fbd94f4c1ad3e30c4e31738a8800e81198613'), ('THM-3387-output', 'b4d9ce439bab4501bfd5e2cf13eb0b0e3685b7364f30e43b7d5ca9138d25cb5c'), ('THM-3389-script', 'cd963c20ff47c9840222c6bfd95088e3d649ac90edd518353c0f64f4f5ec9bfd'), ('THM-3389-output', '45459e60a69bea9d7e99746fb1b1ad8dc8f79506bb27eb7f287f887c38270adc'))
+status=FINITE-EXACT literal q8 rank<=5 probe plus analytic singleton/domino mode-cochain candidate;unnumbered_and_not_canon
+mode_species=odd:8_singletons_plus_8_adjacent_dominoes;gcd2:4_antipodal_pairs;gcd4:2_parity_quadruples
+mode_radii=singleton_or_coset:1/(14u);odd_domino:1/(112u)
+cochain=p_ij=16u_i u_j(x_i-x_j);congruence_mod_16gcd;overlap_7|p|<w_i*u_j+w_j*u_i;zero_triangle_circulation
+literal_vertices=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14);minimal_edges_through_rank5=32;rank_le5_profile=((4, 15), (5, 17));gcd_type_profile=(((1, 1, 1, 1), 8), ((2, 2, 2, 2), 1), ((4, 2, 1, 1), 6), ((2, 1, 1, 1, 1), 1), ((2, 2, 1, 1, 1), 6), ((2, 2, 2, 1, 1), 7), ((4, 1, 1, 1, 1), 3))
+minimal_edge_list_through_rank5=((1, 3, 5, 7), (1, 3, 5, 9), (1, 3, 7, 11), (1, 3, 9, 11), (1, 5, 7, 13), (1, 5, 9, 13), (1, 7, 11, 13), (1, 9, 11, 13), (1, 10, 11, 12), (1, 10, 12, 13), (1, 11, 12, 14), (1, 12, 13, 14), (2, 6, 10, 14), (4, 5, 9, 14), (4, 9, 13, 14), (1, 3, 10, 11, 14), (1, 5, 6, 7, 11), (1, 5, 6, 11, 14), (1, 5, 7, 11, 12), (1, 6, 7, 10, 13), (1, 6, 9, 10, 14), (1, 6, 10, 11, 14), (2, 3, 7, 9, 10), (2, 3, 10, 11, 13), (2, 3, 10, 13, 14), (2, 5, 6, 11, 14), (2, 5, 9, 11, 14), (2, 6, 7, 9, 10), (2, 9, 10, 11, 14), (2, 10, 11, 13, 14), (4, 5, 7, 9, 11), (4, 7, 9, 11, 13))
+profile_generated_by_rank_le5_edges=(1, 13, 78, 286, 700, 1152, 1223, 777, 266, 42, 2, 0, 0, 0)
+domino_control=((1, 3, 5, 7), ((1, 3, 5, 7), (((0, 1), 15, 1, 'domino', (0, 1)), ((3, 6), 13, 1, 'domino', (1, 2)), ((2, 7), 11, 1, 'domino', (2, 3)), ((4, 5), 9, 1, 'domino', (3, 4))), ((0, 1, 0), (0, 2, 0), (0, 3, 0), (1, 2, 0), (1, 3, 0), (2, 3, 0))))
+q4_quotient_lift_control=((2, 6, 10, 14), ((2, 6, 10, 14), (((0, 4), 0, 8, 'singleton', (0,)), ((3, 7), 12, 8, 'singleton', (1,)), ((1, 5), 12, 8, 'singleton', (1,)), ((2, 6), 8, 8, 'singleton', (2,))), ((0, 1, 8), (0, 2, 8), (0, 3, 16), (1, 2, -16), (1, 3, -8), (2, 3, 24))))
+pairwise_feasible_mode_nonedge=order:(12, 10, 14),modes:(((0, 2, 4, 6), 0, 8, 'singleton'), ((1, 5), 12, 8, 'singleton'), ((3, 7), 12, 8, 'singleton'))
+q8_body_candidates=1287;global_transverse_rows=1152;exact_rows=1152;core_rescues=()
+body_identity=I5=1152;all_135_unsafe_rows_leak_outside_core_clock1
+typing=mode_expanded_cover_clutter_plus_complete_affine_cochain;sign_tournament_is_lossy
+scope=exact_q8_rank_le5_slice_for_T3387;higher_rank_physical_clutter_not_enumerated;no_theorem_promotion,no_refined_decrement,no_LRC14
+semantic_sha256=5051166544008df0a96c50e8fc2c293e4e35b6192974417abe9a487a547d98f4
+verdict=PASS

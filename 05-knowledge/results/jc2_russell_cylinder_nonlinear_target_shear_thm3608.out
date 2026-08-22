@@ -1,0 +1,18 @@
+THM-3608 exact companion -- proved nonlinear target-shear rigidity
+status=finite exact controls; universal formal argument is proof-driven
+SECTION Russell compiler and root-zero arm normal form
+PASS compiler_gates=7 determinant=-3
+SECTION universal u,F,K differential-jet identity
+PASS abstract_transport_gates=3 K_L_cancelled=yes
+SECTION direct polynomial-source transport rows
+PASS direct_source_rows=4 polynomiality_gates=8
+SECTION boundary ODE and first-formal-coefficient degree gates
+PASS boundary_degree_rows=9 formal_first_rows=42 constant_endpoint=yes
+SECTION sharp punctured controls, collision, and D-pole invoice
+PASS punctured_endpoint_rows=3 pole_residue=2/x collision=common
+SECTION singular-u formal-algebraic hostile
+PASS singular_u_hostile=exact nonconstant_Z=yes inverse_coefficients=6
+SECTION arbitrary-coordinate arm-identification hostile
+PASS arbitrary_coordinate_hostile=two_arms_identified open_exit=yes
+PASS total_exact_gates=167
+RESULT=PASS

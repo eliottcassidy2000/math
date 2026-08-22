@@ -1,0 +1,13 @@
+degree-six retuned quintic infinity-wall wildcard
+dependency_hash_checks=16
+universal_top_jet=wall_c99=wall_c98=0;wall_c97=-2*a^11*(a*Kappa+4*r1*s-8*r);retuned_c96=-a^11*(a*Rho+8*r*Lambda-32*q*r1)/r1;retuned_c95=-3*a^11*(a*Sigma+64*q*Theta)/(8*Lambda);quintic_c94=-a^12*Psi/(16*Theta^2)
+quintic_invariant=Theta=r1^3-4*r1*r2+8*r3+8;Psi_terms=58;Psi_total_degree=11;Psi_sha256=6b1814756894c97cfe6a31a3bd4ae51bc1dc591879211ec5f67d65f2a960e860
+accessory_case=4111 Theta_norm=-37200002176/5359375 Sigma_norm=-157881139404422797328384/28722900390625 Psi_norm=-572298646716642082095739982919499776/301716116790771484375 q_star_norm=2107940627729338801/186000010880000000 r_star_norm=-3018470836755969/1860000108800000 s_star_norm=1568249062443/1162500068000 degree=50 H_sha256=7926bec47cfbfad38a1de91dfeebf84b824da3c780f478240bf66bc6e9981d26
+accessory_case=3211 Theta_norm=249238609408/48234375 Sigma_norm=64559323245631953174528/28722900390625 Psi_norm=-4402683590765317259172542063793800401125376/1697153156948089599609375 q_star_norm=-8978749567656192625/9187932097216512 r_star_norm=8285100359018853125/484519856689152 s_star_norm=-4924346007190859375/161506618896384 degree=50 H_sha256=631e99ab7332025f3a338fd15919afa90cd9e542e2ed3c314dc0a4b4867015ec
+finite_case=4111 good_reduction=(p=113,u=85) (t_star,s_star,r_star,q_star)=(85,1,43,54) controls=(degree,gcd_B_boundary,gcd_H_boundary,gcd_H_Hprime,h50)=(50, 0, 0, 0, 97)
+finite_case=3211 good_reduction=(p=101,u=64) (t_star,s_star,r_star,q_star)=(89,75,80,100) controls=(degree,gcd_B_boundary,gcd_H_boundary,gcd_H_Hprime,h50)=(50, 0, 0, 0, 56)
+quintic_law=w^5~-256*Theta^2*delta/(a*Psi)=-128*Theta^2*epsilon/Psi
+local_inertia=one_5_cycle_on_five_escaping_critical_roots;sign=even
+remaining_critical_points=50;branchwise_Keller_cofactor=NOT_SUPPLIED
+scope=critical-resultant-strict-transform-not-polynomial-inverse-cover-not-JC2
+source_ast=(assert_nodes=0,float_literals=0)

@@ -1,0 +1,16 @@
+THM-3623 exact companion -- proved general vertical-fold closure
+status=proved, verified exact, and independently hostile-audited
+SECTION local chart and general pullback
+PASS chart=local_b+4 Jac_ac=-3 pullback=-3HprimeP+axK+cxR
+SECTION exact comparison and epsilon divisibility
+PASS comparison=common_target side_errors=epsilon_divisible main=R(18-4g^3Qprime)
+SECTION generalized invoice scales
+PASS invoices=k2,k3,k4,k7 n1..6 errors_above_invoice shifts_use_lower_rows
+SECTION k=1 enlarged-form and local Darboux boundary
+PASS k1=formal_P_survivor affine_local_pair shift_symbol_not_vertical
+SECTION H=0 static boundary
+PASS H0=static_comparison_forces_only_q1 higher_Q_jets_invisible
+SECTION source AST gate
+PASS ast_assertion_nodes=0
+CHECKS=276
+RESULT=PASS

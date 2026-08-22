@@ -1,0 +1,13 @@
+THM-3400 DISCOUNTED NORMING-ORBIT COMMUTATOR-FLUX TARIFF
+source_sha256_lf=778784e967ee26d5973dec01f9ed87c048da99589183103aec3b655a53203a82
+status=PROVED exact tariff and optimal robust norm bound
+tariff=Lambda_x>=kappa(kappa-c) for kappa>c>=2
+robust_bound=kappa<=(c+sqrt(c^2+4epsilon))/2
+sharp_budget_rows=12 equality=PASS
+favorable_noncommuting_rows=4 leakage_negative=PASS
+square_zero_omission_rows=4 leakage_positive=PASS
+periodic_involution_rows=4 Lambda=kappa^2+1 PASS
+finite_prefix_rows=5 uniform_tail_required=PASS
+exact_ledger_checks=128
+semantic_sha256=6cfccf40aefd4df5b0dc41c8a6c17a16ae39e36adb1581121cfae0349b79f6dc
+verdict=PASS

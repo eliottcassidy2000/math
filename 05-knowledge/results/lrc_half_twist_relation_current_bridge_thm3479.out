@@ -1,0 +1,82 @@
+THM-3479 half-twist relation-current two-transplant exact companion
+status=PROVED STRUCTURAL + VERIFIED-EXACT + FINITE-EXACT + INDEPENDENTLY AUDITED; core companion
+script=04-computation/lrc_half_twist_relation_current_bridge_thm3479.py
+stored_output=05-knowledge/results/lrc_half_twist_relation_current_bridge_thm3479.out
+dependency_hashes=(('THM-2309', 'PROVED', 'dd4db397efac078a7c049956491f56c0c1b111daeb17bf9fddc117d39a253bc1'), ('THM-2331', 'PROVED', '1e986d42105f9186ed0809f14798cbf92dcaae1af3f50813a56687ed02dbac35'), ('THM-2334', 'PROVED', 'c80f7bb3d31274a02f046fa6cea3b36cd56c62be611936ca32ee723881cd3899'), ('THM-2349', 'PROVED', 'fcf6af64b1810d763473bb2d84efb5c76868c533d35bddfaad8b0a39e80ea3d6'), ('THM-3398', 'PROVED', '01901da2bb382184cfe4466550afe79255598f580f00a761fc32731a52ec9378'), ('THM-3405', 'PROVED', 'd3e7dbeeb85c6f897bd9e31270bd0b6602ae4feac3b46a45eb5ce23ae5d24fe0'), ('THM-3429', 'PROVED', '58ebf850fc79fc9afed57966b7599e7376a6684fa3bbc5a2aa2e1a8e6e0ca148'), ('THM-3453', 'PROVED', 'a4444813a2b24aa55613eef5f4cc0538ca0148f16297dff46f80d723f1beb247'), ('THM-3461', 'PROVED', '371d39375740f97d896d722fbddbe124dc7d91a79d7fe7179e2fcc1bd9ce615f'))
+security_certificate=('NO_ASSERT_AST', ('__future__', 'ast', 'bisect', 'fractions', 'hashlib', 'math', 'pathlib'), ('__import__', 'compile', 'eval', 'exec'))
+relation_labels=('c1', 'c2', 'c3', 'H', 'q1', 'q2', 'q3', 'q4', 'q5')
+relation=(-27, -27, -27, 20110798, -41, -27, -27, -27, 38)
+relation_mod_91=(64, 64, 64, 71, 50, 64, 64, 64, 38)
+relation_mod_13=(12, 12, 12, 6, 11, 12, 12, 12, 12)
+target_axis_ranks=(U_full,U_clock)=((6, 6, 7),(6, 6, 7))
+
+[U_full]
+tuple_relation_order=(13, 2197, 742586, 1, 183, 27, 131, 53, 313)
+tuple_current_order=(1, 183, 27, 131, 53, 313, 13, 2197, 742586)
+exact_relation=0  primitive=1
+q11_residues_mod22=(13, 19, 20, 1, 7, 5, 21, 9, 5)
+q11_normalized=(9, 3, 2, 1, 7, 5, 1, 9, 5)
+q11_masks=((2, 8), (3, 7), (5,), (0, 10), (1, 9), (4, 6), (0, 10), (2, 8), (4, 6))
+q11_witness_profile=((1, 11),)
+delayed_mass=411318338170045/524041104621345129
+full_bank_scales=(T_DEN,NN)=(483730250419703196, 81750412320929840124)
+full_bank_gamma=(zero,v2,diff)=(248447851579556601771, 510954897124935772821, 262507045545379171050)
+full_bank_nonconstant_twists=168/168
+full_bank_nonzero_unrestricted_targets=169/169
+full_bank_gamma_sha256=afcdb043eb1bf8095c313473a3d3bdcf4ce027f86b01b5f3cecbc7c87e6484b3
+full_bank_target_sha256=726423df1b9e1c93b356966e5c3c386669e2f6b19da0bf8818606204eb2e9ee5
+independent_intervals=(E0,Ev2,Qa)=(33810, 34560, 28730)
+independent_endpoint_images=(AX0,AXv2,BY0,BYv2)=((263333472381374948713, 943470807284885900842), (523949679655523736011, 930290002246125433456), (367849901592567656326, 478322449598622688750), (87230428072980866510, 228380476345275410214))
+
+[U_clock]
+tuple_relation_order=(65, 2197, 742586, 5, 661549, 655231, 658533, 661445, 291)
+tuple_current_order=(5, 661549, 655231, 658533, 661445, 291, 65, 2197, 742586)
+exact_relation=0  primitive=1
+valuation_profile=(1, 3, 5, 0, 0, 0, 0, 0, 0)
+q11_residues_mod22=(21, 19, 20, 5, 9, 5, 7, 15, 5)
+q11_normalized=(1, 3, 2, 5, 9, 5, 7, 7, 5)
+q11_masks=((0, 10), (3, 7), (5,), (4, 6), (2, 8), (4, 6), (1, 9), (1, 9), (4, 6))
+q11_witness_profile=((1, 11),)
+zero_centre=1/22  projective_wedge_values=(Fraction(0, 1),)
+same_clock_base_distances=(Fraction(5, 22), Fraction(9, 22), Fraction(5, 22), Fraction(7, 22), Fraction(7, 22), Fraction(5, 22), Fraction(1, 22), Fraction(3, 22), Fraction(1, 11))
+same_clock_future_distances=(Fraction(9, 22), Fraction(3, 22), Fraction(9, 22), Fraction(5, 22), Fraction(5, 22), Fraction(9, 22), Fraction(7, 22), Fraction(1, 22), Fraction(4, 11))
+same_clock_margins=(Fraction(2, 77), Fraction(13, 154), Fraction(2, 77), Fraction(41, 154))
+delayed_mass=1397606991636352080199080533/1692517471993352536064760510465
+independent_intervals=(E0,Ev2,Qa)=(147372, 147404, 136158)
+endpoint_gamma=(zero,v2,diff)=((56767723330345680038743661041266194, 65234233976034532625816110096140982), (34870555972766792317398130208739733, 74671298727704698408794173004769050), (55728453977924232992728645219440300, 9437064751670165782978062908628068))
+atomic_term=(u,v,address,X,m,Y,max_u,max_v)=((-3, -3, 1, 2840374, -3, 3, 2, -3, -48974), (24, 24, 29, -17270424, 38, 30, 29, 24, -49012), (-27, -27, -27, 20110798, -41, -27, -27, -27, 38), 13, 1, 742599, 2840374, 17270424)
+
+[q27/q51 congruence lifts]
+q27_tuple=(28405, 7599423, 18279868269, 3459, 2016, 2757, 1041, 3693, 11163142875)
+q27=(residues,normalized,witness,profile,mod7,v13)=((1, 3, 3, 3, 18, 3, 15, 21, 3), (1, 3, 3, 3, 18, 3, 15, 21, 3), (3, 15, 18, 21), ((1, 27),), (6, 6, 5, 1, 0, 6, 5, 4, 3), (1, 3, 5, 0, 0, 0, 0, 0, 0))
+q51_tuple=(70993, 7199569, 30105550319, 5825, 4200, 5214, 7684, 4421, 18313194875)
+q51=(residues,normalized,witness,profile,mod7,v13)=((1, 1, 11, 11, 18, 12, 34, 35, 23), (1, 1, 11, 11, 18, 12, 34, 35, 23), (1, 11, 12, 18, 23, 34, 35), ((1, 42), (2, 4), (3, 3), (4, 2)), (6, 6, 5, 1, 0, 6, 5, 4, 3), (1, 3, 5, 0, 0, 0, 0, 0, 0))
+q51_affine=(residues,bars_mod34,k_mod3,fibres)=((1, 1, 11, 11, 18, 12, 34, 35, 23), (1, 1, 11, 11, 18, 12, 0, 1, 23), (0, 0, 0, 0, 0, 0, 1, 1, 0), ((0, (), (0, 1, 16), (10, 11, 12)), (1, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16), (0, 16), (0, 16)), (2, (), (0, 15, 16), (4, 5, 6))))
+
+[7x13 private-support carrier map audit]
+carrier_source_hashes=(('THM-3473', 'PROVED', '05236a7338a4c92b443b2798508d407e2e4f82d942111d022064f6ec9fe86ca2'), ('PRIVATE-7x13-SCRIPT', 'FINITE-EXACT-SIDECAR', '6efa87aa9f9b50d57d7a2db3c282ad216057b41c10af08f648e3f3398e457b91'), ('PRIVATE-7x13-OUTPUT', 'FINITE-EXACT-SIDECAR', '77a3d5786845fdac988e8a4d23867c699368dc6d0a5714224476e24357d7ae20'))
+source_relation_labels=('c1', 'c2', 'c3', 'H', 'q1', 'q2', 'q3', 'q4', 'q5')
+target_private_owner_labels=('u1', 'u2', 'u3', 'u4', 'u5', 'u6', 'u7', 'u8')
+shared_label_dictionary=()
+target_packets_and_edges=(((0, 3, 4, 5), (1, 2, 4, 7), (4, 6)), ((0, 3), (0, 4), (0, 5), (1, 2), (1, 4), (1, 7), (2, 4), (2, 7), (3, 4), (3, 5), (4, 5), (4, 6), (4, 7)))
+target_degrees=(3, 3, 3, 3, 7, 3, 1, 3)
+target_automorphisms_and_orders=(72, (1, 2, 3, 4, 6))
+target_edge_orbit_sizes=(1, 6, 6)
+source_character_line_and_translation_order=(13, 13)
+c13_equivariant_bijection_exists=False
+carrier_map_verdict=NO_C13_EQUIVARIANT_13-TWIST-TO-EDGE_BIJECTION
+SOURCE=U_full/U_clock nine-coordinate relation tuples and the F13^2 coordinate-twist bank
+TARGET=thirteen edges of the proved THM-3473 private-support two-section
+CANDIDATE_MAP=a bijection from one translation-stable 13-character fibre to the thirteen edges
+PRESERVED_PREDICATE_SOUGHT=nonzero endpoint weights yielding nonzero bridge weight and both K4 tree sums
+LOST_INFORMATION=relation address, clocks, q11 masks, endpoint phase, private-sheet counts, and k-mod-3 state
+REQUIRED_SIDECAR=an explicit labelled role chart for the weighted determinant; phase-holonomy is still required for absolute H1 or physical realization
+CHEAPEST_HOSTILES=no order-13 graph automorphism; unique bridge edge (u5,u7); two sixteen-term K4 tree sums
+
+PROVED_BY_COMPANION=explicit relation; literal masks; delayed masses; U_full all 169 unrestricted A(q); U_clock zero-centre same-clock delayed word and nonconstant endpoint bank; atomic term; q27/q51 lifts
+OBSTRUCTION=the native 13-character C13 action has no equivariant bijection to the private-support edge carrier; later 72 labelled role charts are non-equivariant and noncanonical
+OPEN=C(relation;X,m) for both tuples; U_clock A(e_c2) and refined bank; coupled all-91-unit B(q); source-native or C13-equivariant endpoint-to-carrier map; phase/holonomy; ancestry/bispectrum; lawful Boolean THM-2512 current; scalar-row exclusion; LRC(14)
+semantic_sha256=1bf53086d3da347dde443175462be716da6e9dac54c96582718d19ec8fddff21
+carrier_semantic_sha256=3f17c2206feec73da48a989ab2150ceb1c7d1bc275c77291df476d882957581a
+script_lf_sha256=ad2a620cdc238f28e3384698b2c612f38cdf2566bd56b76d1cbabcc03107ec0b
+ALL DETERMINISTIC EXACT CHECKS PASSED

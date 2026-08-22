@@ -1,0 +1,15 @@
+== exact global level-three Keller norm ==
+transported H raw/ledger sha256=5a9459b3149e500c1b00b67bd804aa7e607de06bf4610c7cdf5fa26d41d74ce9/b146c11f33e895c08f72303d282e2668d955e0a58d9268a1b445d4d5202016c2
+inverse-coordinate power tables: PASS
+scaled H(q): w-degree=50; coefficient terms=798450
+H(q(w))=(B0+B1*w+B2*w^2)/(2^35*S*L^3); B term counts=(3406, 3608, 3752)
+resultant=2^70*L^4*S^3*J; hence Norm(H)=J/(2^35*L^7)
+J: primitive, squarefree, gcd(J,LH)=1
+J: terms=66146; multidegree=(86, 129, 76); total degree=157
+J coefficient-ledger sha256=9aca78e67d33351b2f2fb4dbe8ab5bdff06373fdbd8ef9ec73d29b15bffedefe
+slice (b,c)=(1, 2): content=16384; degree=86; sha256=de18f1f38b29b92cbbe46c913a1446fe017a4566615d60e37a96d82307ae84a7
+slice (b,c)=(3, 1): content=1; degree=86; sha256=f55ce6cbdeadcb27f30a7aa0ca75094b5ded4a344f6d976cf31021b2eb6e6579
+slice (b,c)=(1, 3): content=1; degree=86; sha256=c3c98f832b92316343ee24da5f3898c5e3465fc621edd3f063441686cc62febf
+three old slice artifacts recovered coefficient-for-coefficient
+scope: one fixed three-dimensional Keller map; no general JC conclusion
+all exact checks passed

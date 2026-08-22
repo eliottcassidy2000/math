@@ -1,0 +1,13 @@
+== independent F_251 level-five Fourier/FLINT audit ==
+support_sha256=3d0bee9dd97993160fc7275cb4a96e77893013c421029eada4bbd5b46ac5d3e6
+target=(1, 1, 1); regular_matrix_dimensions=(3, 9, 27, 81)
+inverse graphs and all leading/derivative/chart units: PASS
+250-point multiplicative Fourier inversion: degrees 244..249 vanish; degree=243
+unused X=0 determinant and all-point Horner controls: PASS
+factor_degree_exponent_ledger=((1, 1), (1, 1), (2, 1), (2, 1), (2, 1), (2, 1), (2, 1), (2, 1), (3, 1), (3, 1), (3, 1), (3, 1), (4, 1), (4, 1), (4, 1), (4, 1), (6, 1), (6, 1), (6, 1), (6, 1), (9, 1), (12, 1), (12, 1), (12, 1), (24, 1), (36, 1), (36, 1), (36, 1))
+constant_sign_zero_hostile=72
+FLINT derivative gcd=1; the 243-root norm-product is squarefree
+ascending_coefficient_sha256=912f32ec0b9b375d9db2ba71d7fdf224456c86862871ae0f8f92bac5038f00ab
+semantic_sha256=0f44c226329aedf3a3c232dc44fcd228cfce9587483d92f47090baac2f2be7ea
+scope: good-reduction generic fifth-eliminant gate only; no R5 image prime, irreducibility, all-level, or general JC claim
+all independent exact checks passed

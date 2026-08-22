@@ -1,0 +1,21 @@
+C3 REPEATED-JOIN MOVING JET -- THM-3202 EXACT COMPANION
+status=PROVED+VERIFIED-EXACT;no_canonical_runtime_imports=true
+identity=F_Br(c)=sum_j(-1)^(c-j)binom(c,j)Q_A(j)^r
+identity=F_Ur(d)=sum_c [x^c]W_C3^d product_i F_Br(c_i)
+H_special=3sum_c(F_c^3+F_(c+1)F_c^2+F_(c+1)^2F_c)
+superexponential_floor=F_Ur(d)>=3^d*binom(ar-1,d-1)*((ar)!)^3;fixed_d>=1
+verdict=no_fixed_finite_polynomial_exponential;no_eventual_constant_coefficient_recurrence;no_rational_ordinary_GF
+K1_levels=1..8;fixed_d_checks=24
+K1_r=1;block_order=1;H=3;p_d_1_to_3=(3, 3, 1)
+K1_r=2;block_order=2;H=45;p_d_1_to_3=(45, 171, 186)
+K1_r=3;block_order=3;H=2721;p_d_1_to_3=(2721, 18345, 37135)
+K1_r=4;block_order=4;H=421425;p_d_1_to_3=(421425, 4097151, 12319566)
+K1_r=5;block_order=5;H=132518793;p_d_1_to_3=(132518793, 1692590313, 6792929011)
+K1_r=8;block_order=8;H_digits_sha256=(17, 'a6cff78eec4f1ad2059ceb0a0393ff34f28c385a11d57666f72ca025c22802d7')
+C3_levels=1..5;fixed_d_checks=15
+C3_r=1;block_order=3;H=3159;p_d_1_to_3=(3159, 21303, 42201)
+C3_r=2;block_order=6;H=82069875945;p_d_1_to_3=(82069875945, 1298567110239, 6498273301434)
+C3_r=3;block_order=9;H=195780715669875147291;p_d_1_to_3=(195780715669875147291, 4943174081062364981307, 40194007852295622036249)
+C3_r=4;block_order=12;H_digits_sha256=(31, '90de3b8263b8b7355bb619b2a57467dd2cb883edbd4ba297ce720c8c5bd92f0e')
+C3_r=5;block_order=15;H_digits_sha256=(43, '739233940aca9b0ad67639614d0bf27911cd6fb85b9d0f5c598b0b9ee657c407')
+same_H_hostile=mask40_vs_mask76;H_factor=15;C3_equal_lift_H=(178036299,193215375);scalar_H_REFUTED

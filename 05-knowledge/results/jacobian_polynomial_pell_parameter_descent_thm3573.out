@@ -1,0 +1,8 @@
+THM-3573 polynomial Pell-parameter descent audit
+classification: q=1/H, phi=4*H*(1+b*H+4*a*H^2)
+degree law: deg_a(phi)=3*deg_a(H)+1
+L_phi=R^2*M and E_phi=(R*X+2*H)*(R*M*X^2-2*H*M*X+4*U)
+degree-four family: H=u(b)*a+v(b), u!=0
+hostile H=a: phi=4*a+4*b*a^2+16*a^4
+N=c*a obstruction: D0=-b*c/4 then D1=c/b, not polynomial
+all active truth gates passed

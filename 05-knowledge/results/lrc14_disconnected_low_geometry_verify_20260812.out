@@ -1,0 +1,11 @@
+disconnected_profile_count 36520
+realizable_profile_count 36520
+scale_separated_maximum_coordinate 9331
+realizability_semantic_sha256 9ad5d29562c8aa99fd6b852c8f9786042495cc93cfc5c968df2a42947970e324
+partition_rows (((5, 1), 19389), ((4, 2), 10360), ((4, 1, 1), 1295), ((3, 3), 4465), ((3, 2, 1), 752), ((3, 1, 1, 1), 94), ((2, 2, 2), 120), ((2, 2, 1, 1), 36), ((2, 1, 1, 1, 1), 8), ((1, 1, 1, 1, 1, 1), 1))
+multipartite_tree_counts (((5, 1), 1), ((4, 2), 32), ((4, 1, 1), 48), ((3, 3), 81), ((3, 2, 1), 216), ((3, 1, 1, 1), 324), ((2, 2, 2), 384), ((2, 2, 1, 1), 576), ((2, 1, 1, 1, 1), 864), ((1, 1, 1, 1, 1, 1), 1296))
+homogeneous_gap 1121969414539/35319431272125
+q_ge_8p_physical_floor 23/4655
+q_ge_8p_gap_over_1_294 43/27930
+five_q_ge_8p_edges_minus_debt 570672686921/494472037809750
+all_exact_checks=PASS

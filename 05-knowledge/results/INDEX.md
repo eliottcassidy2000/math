@@ -1,5 +1,4377 @@
 # Script Results Index
 
+- `jc2_cohn_parity_cycle_repair.py` -> matching `.out` [THM-3653 PROVED +
+  FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED; Cohn non-elementarity CITED;
+  recovery implication CONDITIONAL].  The determinant-one Cohn core has curl
+  defects `(-x,-y)`; its first repair forces
+  `a_i=(-1)^i/(i+2)!`, and no decoration with at most one elementary factor
+  on each side is row-integrable.  Size-`n` rectangles in `2 x n` are
+  odd-rigid/even-balanced, but a weighted cycle closes only when
+  `product(alpha_i)=(-1)^n`; the actual Cohn product `(n+1)!` never closes,
+  while `(2,1/2)` is the first reciprocal even kernel.  Normal/`-O` replay
+  matches.  Script/output SHA-256:
+  `1a9ff3b9cb8190e434307400f658ff8bf476d1629924af91b61b8bfcc81091ee` /
+  `34f2ff8c8e9d78c1d48d37e1931d912c4713b1a05f5db5daa37e2b23b5a2a8f1`.
+- `jc2_small_rational_four_gauss_search.py` -> matching `.out` [FINITE-EXACT;
+  Wright criterion CITED + independently reproved in THM-3652].  The complete
+  four-word rational atlas leaves only explicit sequential shears; all 1,000
+  signed-monomial five-word correction systems fail.  Script/output SHA-256:
+  `ee53b73418b373e8196db50665646cf025c22179d1b4af4ce024e328f28d62df` /
+  `1b973bbb3db8e4b18118797914322a6625295e7dd541df7541ab0e65f99aa08f`.
+- `jc2_small_rational_six_gauss_search.py` -> matching `.out` [FINITE-EXACT;
+  tame stratum by THM-3652].  All 10,000 degree-six monomial bases and 2,000
+  two-scale degree-eight bases have maximal inconsistent ranks; two nonzero-
+  defect controls integrate tamely.  Script/output SHA-256:
+  `a053642aa10798784ac3c9ac7110e9641a975e96a148b26958a1f13a68479416` /
+  `66cb20d192fe4030bea17a5948e382fffe95e291ec59606dea566a97b1c627cc`.
+- `jc2_small_rational_height_and_elliptic_slice_prior.py` -> matching `.out`
+  [VERIFIED-EXACT + FINITE-EXACT].  It proves diagonal-orbit height 9 for the
+  THM-1300 witness, identifies the factored family with that orbit, checks all
+  30 listed ICARM curve-273 points, and routes non-elementary coefficient
+  schemes to genus-zero/one arithmetic.  Script/output SHA-256:
+  `bd8c349d6fa6697b73a1af4f1962831b1349d6122c4c55264d50f41cd16d2f9c` /
+  `bfe629a238db327bc593e7abc94e32ba01b306f73ee0da7847566fa888ff2c9a`.
+- `caratheodory_flat_reciprocal_keller_transfer_audit.py` -> matching `.out`
+  [PROVED-SYMBOLIC + FINITE-EXACT + FINITE-NUMERICAL].  It proves the local
+  umbilic index formula and polynomial winding firewall, closes the rational
+  quadratic conductor cell, and carefully leaves global uniqueness/convexity
+  numerical.  Script/output SHA-256:
+  `16af5d27325d068463961284317e3d0db959944e77974a55937e7aae398a0247` /
+  `82b6c3c85f3900b35845aaa39e36c5c833c60884557f100ce14be4793b4c2deb`.
+- `amm12592_r512_truncated_adjoint_pascal_horizons_thm3588.py` -> matching
+  `.out` [THM-3588 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Positive integer adjoint-Pascal
+  multipliers on each fatal top cell's exact backward light cone telescope
+  the causal cell inequalities to five literal Farkas contradictions.  For
+  `D0=0,...,4`, every prefix surviving the Rule-A death must differ by rows
+  `(35,38,39,42,44)`, improving THM-3577's scalar-capacity bounds
+  `(49,52,53,56,59)` by `(14,14,14,14,15)`.  The preceding cuts have
+  positive values for this certificate family; they are hostiles, not
+  feasible prefixes.  Exact sparse coefficient cancellation, all cut signs,
+  pinned boundary integers, and normal/`-O` replay pass.  This is no
+  alternative construction or uniform AMM bound.  Script/output LF SHA-256:
+  `692ac6411f9a99c2734fe85995915b144a9752528816bae6df73cd0943c53985` /
+  `a71c4b1a0503b6ee79f5bde7c0d0d4448cb34c0e7f0a245e26bd11d8b5c5bdd8`.
+- `jc2_equal_step_three_by_three_danielewski_nonentry_thm3579.py` ->
+  matching `.out` [THM-3579 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; MISTAKE-431 repaired].  On every squarefree
+  `c^2 e=Sigma(b)` with `deg Sigma>=2`, no Darboux pair can have two
+  nonconstant three-term weight supports that are arithmetic progressions
+  with the same step.  The five possible scalar-row alignments reduce to
+  homogeneous degree gates, two differential-operator obstructions, or the
+  central `3m/(3m+3)` ladder; a cube first integral and a terminal
+  coprimality contradiction close the central row.  Since `|A+B|=5` for
+  three-element integer supports exactly in the common-step case, any
+  surviving `3 x 3` candidate has at least six potential output rows before
+  cancellation.  Unequal-step `3 x 3`, `2 x 4`, and JC(2) remain open.
+  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `ad5ec528af81693a0f71fe703ac2ec332f50bb088bc1821786f08d136bb9cd5d` /
+  `71f4bdef61bb7d7f66a2fc7bb0d720abe1b8118b32f1d36235912f78bbd8025c`.
+- `berggren_positive_cube_slope_completion_101_thm3580.py` -> matching
+  `.out` [THM-3580 PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  The complete
+  generalized-Pell `P,Q,a` class reduction and fundamental-unit orbits modulo
+  `2n` close all seven survivors left by THM-3547.  Three die by exact
+  valuation-one nonsquare descent at `p=13,11,13`; the other four have class
+  ledgers `9x2,1x60,1x10,6x34`, with no odd compiler phase.  Thus among all
+  `528` primitive parity-correct slopes through denominator `101`, exactly
+  `(14,23),(26,29),(26,47),(98,101)` are admissible, and each inherits an
+  infinite positive ray.  Normal/`-O` replay is byte-identical and an
+  independent reconstruction also checks both unit directions, all sign
+  variants, nonsquare-`K` LMM completeness, and every inherited seed; the
+  SymPy LMM path agrees on all eleven rows.  Script/output LF
+  SHA-256: `09cd67a5bf0c2c0368e3e9ca4350d2cbb4c856ccc3bca4afa21254aaef26e184` /
+  `c8dcdf02f7454a677e7bdc31a34c4909338b8d0b2084a646b44646d4d9af2f0b`.
+- `amm12592_r512_offset_transition_causal_horizon_kps_s188.py` -> matching
+  `.out` [THM-3577 PROVED + VERIFIED-EXACT].  At `R=512`, exact Rule A dies
+  for golden-floor offsets `D0=0,...,4` at rows `107,110,113,116,121` and
+  enters THM-3332's `F1--F3` cone at `D0=5`.  The five minimal causal-capacity
+  horizons are `58,58,60,60,62`, forcing any surviving alternatives to
+  differ by rows `49,52,53,56,59`.  The positive row has state/next degrees
+  `386/387`, support maximum `18`, and exact `F2/F3` margins `14/1229`.
+  This is a fixed-policy finite atlas, not an alternative-prefix
+  infeasibility or uniform sub-two extractor.  Normal/`-O` replay matches.
+  Script/output LF SHA-256:
+  `c782f3236b5f3815a98b8b78bf55481c6e26a3d8d431ec8b40fbab42ed7c5210` /
+  `b34896bb94b83a1f9d14e296bd4b5f7aefb1634dc412d93abf069843b193017d`.
+- `jacobian_universal_reducible_graph_component_unit_no_go_kps_s188.py` ->
+  matching `.out` [THM-3574 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; MISTAKE-429 repaired].  Every irreducible
+  component of every reducible nonzero polynomial target-graph pullback has
+  a nonconstant unit and is therefore not `A2`.  THM-3573's universal
+  `phi_H=4H(1+bH+4aH^2)` pullback factors as `S_H Q_H`.  Exact Bezout
+  identities make `R(F1,F2)` a unit on every factor of `S_H` and `M(F1,F2)`
+  a unit on every factor of `Q_H`; quasi-finiteness preserves their
+  nonconstancy.  The excluded `H=0` row recovers the coordinate factor `x`.
+  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `75886def4e44d747ff505d277e803883ff744e6eff3382d444405d7285822d4c` /
+  `f4868cd1738e021ad7e52928fe8e8a9d4421ba9b2918fcd5395ea1a9ae81a0c0`.
+- `jacobian_polynomial_pell_parameter_descent_thm3573.py` -> matching `.out`
+  [THM-3573 PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF/HOSTILE-AUDITED].
+  THM-3570's rational parameter gives a polynomial target graph exactly when
+  `q=1/H` for some nonzero `H in C[a,b]`; then
+  `phi=4H(1+bH+4aH^2)` and `deg_a(phi)=3deg_a(H)+1`.  The core cubic factors
+  polynomially as `(RX+2H)(RMX^2-2HMX+4U)`.  The complete degree-four row is
+  `H=u(b)a+v(b)`, while `H=a` is a hostile with one rational linear factor and
+  irreducible quadratic cofactor.  This classifies graph-factor descent, not
+  `A2` components or Jacobian counterexamples.  Normal/`-O` replay matches.
+  Script/output LF SHA-256:
+  `a664d9a93ee760013d668f6fabba72370f8d9a88602df06534f217c3c2f01852` /
+  `f05b6075e28d6da0726698f8a895a46b733b7aa3e7bc63d8717b2daa6c4d7f69`.
+- `jacobian_quadratic_target_graph_euler_no_go_kps_s188.py` -> matching
+  `.out` [THM-3571 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  MISTAKE-428 repaired].  Every collision-compatible
+  genuinely quadratic target graph has irreducible pullback with
+  `chi(X)>=2`, hence no source-coordinate factor.  Its strict Jelonek section
+  satisfies `chi(D)=2-rho(delta)-nu`; exact saturated Groebner reduction of
+  all sixteen possible two-root multiplicity cells proves `rho(delta)>=3`,
+  while `nu>=1` and the omitted support has at most five points.  The only
+  nonunit cells `(2,2)` and `(2,4)` force the quadratic coefficients to
+  vanish.  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `feb93461bb523404b8720385758ecb66df22a511c68bf5cd2fbd7a52ee5fe129` /
+  `895e98e2c9a427ad7416121d0a3bddb8c778e096700d3a4cbc5ca3d795c75b9d`.
+- `jacobian_universal_pell_conic_factor_compiler_kps_s188.py` -> matching
+  `.out` [THM-3570 PROVED + VERIFIED-EXACT].  Every nonzero polynomial target
+  graph has reducible core cubic iff some `q in C(a,b)^*` satisfies
+  `phi=4(q^2+bq+4a)/q^3`; then
+  `x=-2q/(q^2+2bq+12a)` is a root.  Solving the core equation for `phi`
+  exposes the Pell conic `W^2=(1+bx)^2-12ax^2`; its two rational branches
+  are exchanged by `q -> 12a/q`.  The equivalent cubic search equation is
+  `phi*q^3-4q^2-4bq-16a=0`, and `q=-2/h` recovers THM-3565 exactly.
+  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `d633a3f3f6191aa48524d4519ecc61374a411980695ce2b28b0f97f0310ec8f1` /
+  `fa142160b424be9d6432debef441a1d4d40694ea8d96c9b4178033d0ebb66acc`.
+- `jc2_danielewski_two_by_three_weight_nonentry_thm3569.py` -> matching
+  `.out` [THM-3569 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  On THM-3561's smooth Danielewski target, exact support convolution reduces
+  every `2 x 3` Darboux cell to isolated, lower-arithmetic, or
+  upper-arithmetic rows.  Arm valuations and common-power equations leave
+  three explicit ladders; their scalar rows factor through `h(hK)'`,
+  `h'K+2hK'`, `3h'K+2hK'`, or the cube-branch `h'J+2hJ'`, all nonconstant
+  because `b(b+4)|h`.  Hence a putative polynomial Darboux pair needs support
+  sizes `(2,>=4)`, `(>=4,2)`, or `(>=3,>=3)`, at least six nonconstant
+  pieces.  The `3 x 3` and `2 x 4` cells remain open.  Normal/`-O` replay
+  matches.  Script/output LF SHA-256:
+  `98e062a15921b9cb0e5b17afdd5bf206d11970631c3891230c1b86b0d064dfa3` /
+  `9f364247a3ae9114db6d8d143391facd9adb98593fb5e22ded34cefdfc430922`.
+
+- `jacobian_reducible_graph_component_euler_no_go_kps_s188.py` -> matching
+  `.out` [THM-3568 PROVED + VERIFIED-EXACT].  In THM-3565's complete
+  reducible `deg_a(phi)=1` family, the degree-one component is
+  `A2 minus V(3ah^2-bh+1)` and has a nonconstant unit.  If `rho,mu,nu` are
+  the reduced root counts of `h`, `(bh)^2-2bh+4`, and `bh-2`, the irreducible
+  degree-two component has Euler characteristic `-3+3rho+2mu+nu`: exactly
+  `2` for constant `h` and at least `5` otherwise.  Thus neither factor is
+  `A2`, closing every factor-bearing first-resonance graph.  A repeated-root
+  hostile confirms support rather than multiplicity counting.  Normal/`-O`
+  replay matches.  Script/output LF SHA-256:
+  `e281372c6a6c3ee1a7689288847d44a032b152aebf5e20def393cb7289e72b52` /
+  `77845935c7a5414e9d90d77aef7858670f34518607d7b55e6fc78910019499d7`.
+- `jc_separated_rational_keller_observable_suspension_thm3567.py` ->
+  matching `.out` [THM-3567 PROVED + VERIFIED-EXACT + HOSTILE-AUDITED].
+  For every separated seed `P=f(x),Q=y/f'(x)` with squarefree derivative
+  and distinct critical values, the full target-field intersection is
+  `k[P,A,B]/(A^2-Delta(P)B)`.  It has one ordinary node per critical value;
+  the induced map is finite etale of degree `deg(f)` over `Delta!=0`, is not
+  globally etale, and for degree at least three contracts regular companion
+  lines.  The rational cubic has a triple collision and two explicit
+  collapsed lines.  A quadratic hostile shows that `Delta!=0` need not be
+  the maximal etale locus.  This full-field result is explicitly distinct
+  from THM-3561's smooth polynomial-target-ring intersection and proves no
+  planar counterexample.  All `99` gates and normal/`-O`/stored transcripts
+  match.  Script/output/reflection LF SHA-256:
+  `7c10c13ac53255643553ee3645b5a68ee916292b8feace4edb120642ff430f29` /
+  `8f290240535fe3ad5d82298a5110b5dd683a152dec64f31e49258eff4463380b` /
+  `f787bf681c3ca586b16696c555ea2c5db27edef633ffd48a452236ebac1aa732`.
+
+- `jacobian_resonant_linear_a_factor_classification_kps_s188.py` -> matching
+  `.out` [THM-3565 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  For `deg_a(phi)=1`, a triangular
+  target-graph pullback is reducible iff
+  `phi=-2h(b)^3a+b*h(b)^2-2h(b)` with nonzero `h in C[b]`.  The core splits
+  into one linear and one irreducible quadratic factor, while the source has
+  explicit factor `x-(1+xy)h(F2)`.  An exact rational-root dichotomy and
+  two-variable Groebner basis exclude the only other branch as
+  `16a/b^3-4/b`.  Hence every genuinely quadratic graph pullback is
+  irreducible; collision-compatible affine rows recover exactly the two
+  Kummer exceptions.  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `f15ac70a58883fa27a91adbe166137a09ba00f4fe996a61ae5e6119a109e59ae` /
+  `2b679c8f2bbeb9c060a31de77ad64756c12214118b47d10e2590706bdedb643e`.
+
+- `jacobian_target_graph_degree_resonance_irreducibility_kps_s188.py` ->
+  matching `.out` [THM-3564 PROVED + VERIFIED-EXACT].  For every nonzero
+  target graph `c+phi(a,b)=0`, the core cubic at `a=infinity` has a unique
+  least term valuation unless `deg_a(phi)=1 mod 3`; the only possible tie is
+  `v(x)=(deg_a(phi)+2)/3`.  Thus all nonresonant pullback hypersurfaces are
+  irreducible, while resonance remains necessary rather than sufficient.
+  This reduces factor-bearing triangular searches to `a`-degrees
+  `1,4,7,...`.  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `6d5895a87268763412ebd87cba63003060ba89f28dfbbac47469dbbac5f3408c` /
+  `a79f387fd26ccf756193296bb31388c3b1300e6575968546148b5955383a34f9`.
+
+- `jacobian_target_graph_cusp_strict_transform_kps_s188.py` -> matching
+  `.out` [DERIVED-EXACT + FINITE-EXACT DIAGNOSTIC].  THM-1335's
+  cube-plus-square identity converts every target graph `c+phi(a,b)=0` into
+  the strict-transform curve
+  `2s-b+(3/4)s^2 phi(s(2b-s)/12,b)=0`; its `r=0` slice is exactly the omitted-
+  curve intersection.  The ideal rational section kills the square term and
+  leaves a triple parabola but exposes the load-bearing `a^-2` denominator,
+  explaining the Danielewski completion frontier.  Exhaustive `F_7`
+  quadratic balance has `19` uniform rows and no genuinely quadratic row;
+  this finite diagnostic is not a characteristic-zero no-go.  Script/output/
+  reflection LF SHA-256:
+  `28b6e1cfaa7398c260dcba8c75b19c658fd6213660898b6bcf3ca9612421fe2a` /
+  `80277f1f4bba114a1c9750b863bc6e75391a2f1dd87dc04500caad7cd444ff9f` /
+  `e7580090cb0159e48f71e76f1586982f02c0f173e006a1d5ea1b61cd83f6f046`.
+
+- `cusp_square_packet_subring_projection_audit_20260818.py` -> matching
+  `.out` [VERIFIED-EXACT + FINITE-EXACT BOUNDED NO-GO; THM-3556 UNCHANGED].
+  For THM-3556's explicit `U_*`, exact Groebner elimination and a linear
+  subresultant give rational recovery of both source coordinates, so
+  `Q(L,T,U,S)=Q(v,y)` and the field extension has degree one.  An explicit
+  two-point collision over an irreducible cubic field proves that the packet
+  subring is nevertheless proper and that neither `v` nor `y` is polynomial
+  in the packet.  A degree-three arbitrary source-polynomial minor Bezout
+  certificate is displayed and shown both non-descending and
+  nondecomposable.  Exact linearized ranks `67/68` at packet degree two and
+  `187/188` at degree three exclude even arbitrary bivector sums, hence every
+  legal constant-Jacobian projection through packet degree three.  Degree
+  four and higher remain open; no `JC(2)` claim is made.  Normal/`-O` replay
+  matches.  Script/output/reflection LF SHA-256:
+  `62563ebd5802fe5c7f2bcff35b6a5705f035f17daeb20a78371e92eebea302fd` /
+  `236c346caa1b9ea849a2ea38c7f5157bdc00fbf5af6947394535c4f592a4af73` /
+  `9d67cf6cae996e86b8ae59d7d882c24125357863d302366dbebf87e974657019`.
+- `jacobian_jelonek_euler_monomial_shear_kps_s188.py` -> matching `.out`
+  [THM-3560 PROVED + VERIFIED-EXACT].  Constructible Euler integration through
+  the fixed map's exact `3/1/0` fibre strata gives the coordinate-pullback gate
+  `2chi(T intersect L)+chi(T intersect E)=2`.  For every monomial target shear
+  `c+lambda*b^m`, `m>=1`, the Jelonek section normalizes to
+  `s^2=4+3lambda*b^(m+1)` with one point removed, so its Euler characteristic
+  is `-m`; the omitted-curve intersection has `m+1` points and the complete
+  pullback has Euler characteristic `m+2`, never `1`.  The core cubic's
+  `a`-infinity term valuations `(-2+3k,k,0)` have a unique minimum for every
+  integer `k`, proving the pullback irreducible and closing coordinate
+  factors too.  The `m=2,3` curves are equianharmonic and lemniscatic.
+  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `a1f757e1bb83db9475d8e6d771cb8c7b88eefd4a55c766bafee5db6b246b3c60` /
+  `8aec39457572d62841f9faa25ed836e0ec9b8d758c7712adee804ff8e4f92675`.
+
+- `jacobian_affine_target_pullback_factor_atlas_kps_s188.py` -> matching
+  `.out` [THM-3559 PROVED + VERIFIED-EXACT].  For every affine target
+  coordinate through the fixed THM-1300 collision value, no coordinate
+  factor of its pullback contains a collision pair.  The exact common-factor
+  atlas has only two Kummer parameters and the pure `F3=xC` row.  Primitive
+  residual surfaces are excluded from `A2` by an affine-modification Euler
+  characteristic and nonconstant-unit dichotomy; Kummer cylinder factors
+  are `G_m x A1` and meet at most one collision point.  Together with
+  THM-3558, both hypersurfaces in any surviving descent must be nonlinear.
+  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `b51e6a258ce7854d71142b93555498de472082c6fa7d37cecbbc5fc67792b148` /
+  `6fdd20ee8944e915f05bc58aad7cfa2c07c7bddb53bdd229cbf2531a36cc2c36`.
+
+- `jacobian_linear_collision_plane_second_jet_no_go_kps_s188.py` -> matching
+  `.out` [THM-3558 PROVED + VERIFIED-EXACT].  For every affine source plane
+  through a pair in the fixed THM-1300 triple collision, the two image germs
+  cannot lie in one target hypersurface smooth at the common value.  The
+  pairs involving `p0` have nonparallel transported tangent planes for every
+  plane parameter.  The `p+,p-` family has exactly two tangent-compatible
+  planes over `Q(sqrt(13))`, but their target graph Hessians differ.  Thus no
+  affine coordinate-plane descent survives any smooth target coordinate
+  change; nonlinear source coordinate hypersurfaces remain open.  Normal and
+  `-O` replay matches.  Script/output LF SHA-256:
+  `fd56a535bcb48601a5eca0a22aed066d71d1e8ea9baa120a027e6373a4dc8288` /
+  `9764c1507dc148ccc9fc6af63d43186b0e3cb0c6ad0d2d1c516e97fd490f6cee`.
+- Canon route for the next two companions: [THM-3586, nodal-cylinder cap-38
+  width, period, and second-conductor Keller gates](../../01-canon/theorems/THM-3586-nodal-cylinder-cap38-width-period-and-second-conductor-keller-gates.md).
+
+- Canon route for `keller_consecutive_factor_integrability_scout.py`:
+  [THM-3587, consecutive Keller fibre factor, toric-carrier, and
+  coefficient-span gates](../../01-canon/theorems/THM-3587-consecutive-keller-fibre-factor-toric-and-coefficient-span-gates.md).
+
+- `nodal_cylinder_keller_projection_scaffold.py` -> matching `.out`
+  [PROVED STRUCTURAL + FINITE-EXACT + CITED DEGREE TRANSFER; OPEN
+  CORRECTION CELL].  The normalization `(u,t)->(u,t^2-1,t(t^2-1))` of a
+  nodal-cubic cylinder is differential-rank two and identifies the full
+  lines `t=+/-1`.  Its descended Hodge multiplier passes the image-Jacobian-
+  ideal gate, and an explicit closed ambient two-form contracts to one; a
+  diagonal-invariant argument proves that displayed form is not `dA wedge
+  dB`.  Combining the cited reduced-height bound with the proper-power and
+  infinity-root gates moves its first possible target cap from `36` to `38`,
+  where the image relation gives an exact one-scale degree-`(72,108)`
+  square/cube lift.  A nodal boundary curve supplies unit transverse jets and
+  an explicit four-point fibre, as required by the cited injective-line gate.
+  The scaffold's full Jacobian is not constant; independently, an exact
+  horizontal-line specialization makes its first component affine-linear and
+  injective, so the injective-line theorem kills the displayed point and
+  yields a coefficient-divisibility gate for corrections.
+  Normal/`-O` replay matches.  Script/output SHA-256:
+  `de61c326e049e056f204d21f04fc2265e43742411d26bd6703b504f9ed0f40df` /
+  `0df404c494ef6b579d681203d521da2f8896fdf25cd0b96f0e179b01e64ce897`.
+
+- `nodal_cylinder_width_period_gates.py` -> matching `.out`
+  [PROVED STRUCTURAL + FINITE-EXACT + CITED NEWTON TRANSFER; OPEN KELLER
+  PDE].  In the reduced `(72,108)` cap-`38` cell, Newton-polygon similarity
+  and the every-line theorem exclude width `(2,3)` and force the first
+  surviving width `(4,6)`, with a second coefficient base of `t`-degree at
+  most `32`.  An exact two-scale scaffold attains this bound and passes all
+  affine-line, three root-line, unit-jet, and four-point-fibre gates.  The
+  companion proves the nodal period/PDE formulas and an all-degree first-
+  conductor-layer no-go, then repairs the period by a three-moment dual of
+  target cap at most ten without changing the passport.  The repaired
+  Jacobian remains nonconstant.  Normal/`-O` replay matches.  Script/output
+  SHA-256:
+  `a2483f1da3237df5896c9fd508b2d137bca5fb82a67ffec4043accbe088fe050` /
+  `de3514b83157b63558deefee1e8137cd6ba5e99b13cfa813d142c6b4c8fc9f16`.
+
+- `dephasing_c4_flux_order_control.py` -> matching `.out`
+  [FINITE-EXACT CONTROL; SUBSUMED BY THE GIRTH COMPANION].  For a unit four-cycle with one
+  Wilson variable `z`, the third Schur-walk coefficient vanishes and the
+  phase-dependent part of the raw fourth coefficient factors exactly as
+  `(z+z^-1-2)M`, where `M` is the displayed conservative `4 x 4` matrix.
+  Thus the first plaquette-flux term occurs at fourth commutator order, or
+  order `Gamma^-2` on the leading-normalized slow scale.  This controls the
+  phase and order, not the convention-dependent phase-blind memory terms.
+  Normal/`-O` replay matches.  Script/output SHA-256:
+  `e04245dc6df02c2cc70d8ff103e562d0c8692d953c7d425de40c9720eddbb1d4` /
+  `a0471191863620887a67fa17f8fdc30282e26479825567b37cf5695252aa2b8f`.
+
+- `dephasing_cycle_flux_girth_control.py` -> matching `.out`
+  [PROVED STRUCTURAL + FINITE-EXACT STRONG-DEPHASING CONTROL].  On a graph
+  of girth `g`, raw population Schur words are phase-blind below order `g`;
+  the first Wilson-cycle term is at normalized slow order
+  `Gamma^{-(g-2)}`.  On `C_g` it is a sine/cosine flux scalar times
+  `(I-S)^g`, skew/oriented for odd `g` and symmetric for even `g`.  The
+  weighted `K_(2,2)` identity recovers `|det A|^2` from conductances and the
+  raw fourth coefficient, identifying the Keller reverse-triangle slack.
+  Weighted cycle, tree, chord, onsite, and normal/`-O` hostile controls pass.
+  Script/output SHA-256:
+  `f873637c59da1db34084efd714c45bfc17c5e1465a72b441bf8815c37e463ae9` /
+  `c0630fce8a5c0790d3d53e26d7b5f14ce105dad95db1491c4b8240fb358e4137`.
+
+- `jc_fixed_threedimensional_graph_section_no_go_thm3553.py` -> matching `.out`
+  [THM-3553 PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVATION-AUDITED].
+  For the fixed THM-1300 map, no polynomial graph `z=h(x,y)` makes the
+  restricted pair `(F1,F2)` planar Keller: constants retain the coefficient
+  `-89`, while for every positive degree `d` the top tangential minor is
+  `-3S partial_x(S)`, `S=x^3y^2h_d`, and is nonzero.  All affine collision
+  families and the six quadratic/cubic pair cells are exact controls.  Other
+  source/target charts and nongraph coordinate hypersurfaces remain open.
+  Normal/`-O` replay matches.  Script/output/semantic LF SHA-256:
+  `e958c30bdfe681a62149b625ba310ba77354918384c1667d1f45cc81e54296f3` /
+  `f37a82c1cb18a5532d1b39f4061a8919bbc26c25753c570ef9fb4a15d72785af` /
+  `8a21ebd99f5ba06d83feb6de7561f36bde3a4053b262f1a7abaaab5206c12976`.
+
+- `jc_two_channel_kummer_obstruction_thm3552.py` -> matching `.out`
+  [THM-3552 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For coprime
+  `2<=p<q`, `T=x^p y^q`, squarefree nonconstant `phi` with `phi(0)!=0`, and
+  `Psi'=phi H!=0`, the submersion `P=x phi(T)+Psi(T)` has no rational mate.
+  On the normalized generic Kummer fibre a mate would make
+  `y dT/(q phi T)` exact, but its complete valuation ledger is nonnegative,
+  so it is a nonzero holomorphic differential.  The explicit `p=2,q=5`
+  example has Newton area `20` and genus `10`.  This is a first-coordinate
+  obstruction, not JC(2).  Normal/`-O` replay matches.
+  Script/output/semantic LF SHA-256:
+  `cef53b6f0d12c0a9a4c9a74547a33f2db68ec82f84f602d75903147bd12ccbe2` /
+  `ed088e1d47fb46328d2b34429a293db5d5b0059ce351f2ce3213f5e82043ac22` /
+  `12cf6002c32d9569d68ea0457ea0b28677a6141854b2470adf1171f4c3c1e4e0`.
+
+- `jc_one_ray_mate_no_go_thm3551.py` -> matching `.out`
+  [THM-3551 PROVED + VERIFIED-EXACT + INDEPENDENTLY SCOPE-AUDITED].  Three
+  all-degree one-invariant families have no polynomial mate unless their
+  nonlinear datum is constant: `x phi(x^p y^q)`, `x+h(xy)`, and
+  `x+h(x^p y^q)` for primitive `q>=2`.  Unique weight/residue sectors give
+  terminal leading coefficients; the diagonal family has the stronger
+  rational residue obstruction.  This includes gradient-unimodular,
+  positive-area and arbitrarily high-genus hostiles, but is not a general
+  Newton-polygon theorem.  Normal/`-O` replay matches.
+  Script/output/semantic LF SHA-256:
+  `1e0fd05c85e3eb21bccf6dd85ea029277c5df255a059f420b1425f96b3b519f5` /
+  `e14c9270a87f6438891e16b85f789882f93ce62803b1d448895ed3c725d30e28` /
+  `cf050ca64d5054a65a01da346489de214f695d67d0f6b98b9470d61567a39db5`.
+- `jc2_catalan_mixed_thickening_degree6_exact.py` -> matching `.out`
+  [VERIFIED-EXACT + FINITE-EXACT RESEARCH ARTIFACT; NO THEOREM ID].  The
+  complete cap-six ledger replays every THM-3557 closure and leaves only
+  `e=0`, `deg(a,b,c,d,f)=(3,4,4,5,6)`, with `c=C*h^2`, `f=F*h^3` and
+  quadratic `h`.  Exact E0/E1 parametrization and the full leading
+  saturation reduce E2/E3 to two branches: one has terminal `-6t^2`, while
+  the other forces `X=81` and `2X=135`.  Both branchwise saturated ideals
+  have Groebner basis `[1]` over `QQ` (and over `GF(5),GF(7)` as controls).
+  Thus the width-three affine coefficient space is empty through degree six;
+  degree at least seven and width at least four remain open.  All 64 new
+  gates and all 86 inherited gates remain active under `-O`; normal,
+  optimized, and stored transcripts agree.  Script/output LF SHA-256:
+  `a3f94ab9eb4157bec7effc15ac1f1a8ab0842814c3a4f4ae4f6705a97fe4346f` /
+  `02d23d80e4c50edc1323105a9d6fcc2cf5c77d729731a4be354c415251c31616`.
+- `jc2_catalan_mixed_thickening_recurrence_kps_s187.py` -> matching `.out`
+  [THM-3557 PROVED + VERIFIED-EXACT + FINITE-EXACT].  The exact transverse
+  recurrence proves cap-free impossibility for mixed Catalan thickenings of
+  widths one and two.  At width three, exhaustive UFD branches, degree
+  ledgers, and two saturated rational unit ideals prove affine coefficient-
+  space emptiness through coefficient degree five; the exceptional
+  square/cube branch terminates at `-9/4`.  Its first open width-three cell
+  was degree six, equivalently the first new even `r^6` cell in THM-3555's
+  cubic-cover coordinates; the preceding exact artifact now closes that
+  boundary.  Width four remains open.  All 86 truth gates pass and normal/
+  `-O`/stored transcripts agree.  Script/output LF SHA-256:
+  square/cube branch terminates at `-9/4`.  The separate exact cap-six
+  companion now closes the first new even `r^6` boundary, so the first open
+  width-three cell is degree seven.  Width four is also open.  All 86 truth gates pass and
+  normal/`-O`/stored transcripts agree.  Script/output LF SHA-256:
+  `0444ad61a0bb2cd165243db1a97f0cb0b299eb19263378c97d1dee9ff39a7e1e` /
+  `cd23937963962bc4f43b83fc2f3ab6b477970c76f3151b7247c0025145380832`.
+
+- `cusp_square_cubic_projection_no_go_thm3556.py` -> matching `.out`
+  [THM-3556 FINITE-EXACT CUBIC NO-GO].  The `34` nominal nonconstant
+  target monomials of total degree at most three have pullback rank `33`,
+  with unique relation `R^2-4T^3-27LW^2=0` after the integral scaling
+  `(W,R)=(2U_*,2S)`.  All `561` pairwise brackets give a `336 by 561`
+  source-coefficient matrix whose full/deleted-constant ranks are exactly
+  `187,187`; four prime-field controls agree.  Thus not even an arbitrary
+  bivector in this relaxed universe reaches a nonzero constant, so no pair
+  of total target degree at most three is Keller.  Normal/`-O` replay
+  matches.  Script/output LF SHA-256:
+  `0b0a7f129ebbed95cc85e4ed8dad2f8996ab3dc0d8c66b468e1452d7bcaeb281` /
+  `41841c39426d6a42872fe1ea09bf9cc9169c3efe8473097e55bd84871770b933`.
+
+- `cusp_square_packet_image_relation_probe.py` -> matching `.out`
+  [FINITE-EXACT IMAGE-ALGEBRA PROBE; SUPERSEDED AS AN OPEN BOUNDARY].  In integral packet
+  coordinates `(L,T,W,R)=(L,T,2U_*,2S)`, it verifies the cubic cusp relation
+  and a new `28`-term quartic relation.  Pullback kernel dimensions through
+  total target degree seven are `0,0,1,6,20,50,104`, exactly the Hilbert
+  counts for a `(3,4)` complete intersection.  At the exact packet double
+  value the two relation gradients are proportional by `-21/5`.  This is
+  finite evidence; the full image-ideal companion below now proves the
+  conjecture suggested by these counts.  Normal/`-O` replay matches.
+  Script/output SHA-256:
+  `d88ab1e6d64ae7c71852049025e1ee951f30d6c2fb677f66c4a204b5f05fc6cf` /
+  `0da77f87941f181841ab65d99d977a3d4e7242ffa9ad9ce121bbe97c07c879f6`.
+
+- `cusp_square_packet_image_ideal_thm3556.py` -> matching `.out`
+  [THM-3556 PROVED + VERIFIED-EXACT FULL IMAGE AND NORMALIZATION].  In
+  integral coordinates, the packet kernel is exactly the absolutely prime
+  complete intersection `(F_3,G_4)`.  A resultant specialization modulo
+  `7`, the `W`-localization, and a hostile `W=0` witness certify primeness
+  with no hidden boundary component.  Adjoining the integral marked root
+  gives a four-relation finite birational model whose Jacobian rank-drop
+  ideal is the unit ideal, hence the smooth normalization.  The companion
+  also verifies the exact conductor multiplier `alpha`, the six-component
+  Hodge identity, the genus-two unordered-pair curve, the triple fibre, the
+  full `W=0` singular boundary, and two formal nonproperness charts.  Normal
+  and `-O` transcripts agree.  Script/output LF SHA-256:
+  `392b4eb2b3cae0cdfe985a1ca4e15dc36121a1a7d2bf1e66e23824a502728755` /
+  `494c04e2a63b88d70e9b94076002d92d6d3f4d7d8747213ade0e3b6bcf7d850a`.
+
+- `cusp_square_all_degree_descended_bivector_no_go_thm3556.py` -> matching
+  `.out` [THM-3556 PROVED + VERIFIED-EXACT ALL-DEGREE NO-GO].  For the exact
+  image ideal `(F_3,G_4)`, the six normal minors satisfy
+  `N_ij(Z)=9 alpha(Z)M_ij`.  A rational grevlex basis of
+  `(F,G,N_ij)` gives a nonzero normal form for `alpha`; the compact quotient
+  dual `Phi=[L R^2]NF` has `Phi(alpha)=81/50` and kills that ideal.  Thus
+  even an arbitrary descended bivector cannot give a nonzero constant, so
+  no polynomial target pair of any degree is Keller.  Three good-reduction
+  controls and normal/`-O` replay agree.  Script/output SHA-256:
+  `78de3e52d2095c7cedfd47b1d5533a8a37f2c0c7aab053a73409062fae428818` /
+  `323a884e710e4a2698f1267fc2596b69547da7b5cbc4e76ec6979a32fbfa23dc`.
+
+- `cusp_square_quadratic_projection_no_go_thm3556.py` -> matching `.out`
+  [THM-3556 PROVED COLLISION + FINITE-EXACT QUADRATIC NO-GO].  The reduced
+  scheme `(27v-20y+22,y^2-3y+9/20)` is a pair of distinct points over
+  `Q(sqrt(5))` on which `(L,T,U_*,S)` is constant.  A displayed affine
+  projection has Jacobian one at both first jets, so the later obstruction
+  is global.  The `14` quadratic pullbacks are independent; the full and
+  deleted-constant ranks of their `139 by 91` bracket matrix are `67,67`.
+  A broader arbitrary-descending-coefficient relaxation has ranks `80,80`.
+  Therefore no pair of total target degree at most two is Keller.  The
+  `(6,4,3,5)` source-degree ledger and the two unique cap-`18` top monomials
+  are additional exact controls.  Normal/`-O` replay matches.  Script/output
+  LF SHA-256:
+  `2db8317c35df10a882a7f87837b7b09e48887b17fe6d67e67af1650681b36b7f` /
+  `a21b0cc00f077bb67a9eda80ee39628c3988fe66a5d534a070ff0c09865bd975`.
+
+- `cusp_square_marked_root_kummer_owner_kps_s188.py` -> matching `.out`
+  [THM-3556 PROVED + VERIFIED-EXACT + FINITE-EXACT POSITIVE PACKET].  The
+  cusp-square coefficients factor `L*X^3+T*X+2U` into the marked root
+  `X=-1/v` and a quadratic Kummer pair; projectively the marked root escapes
+  at `v=0`, while the exact discriminant is `-4*L*S^2`.  Dually, `y` is a
+  marked root of `Y^3-3*T*Y+2*S`, with discriminant `-(54*U)^2*L` and the
+  same Kummer square class.  All six natural two-coordinate projections
+  have proved Jacobian obstructions.  For one explicit `U`, the six packet
+  minors generate the unit ideal, so the `A^2->A^4` packet has differential
+  rank two everywhere, but no constant-linear combination of the minors is
+  one.  Its former nonlinear projection problem is the ambient descending
+  minor-syzygy problem now closed in all degrees by THM-3556's exact image-
+  ideal/normal-multiplier obstruction.  Normal/`-O` replay matches.  Script/output LF
+  SHA-256:
+  `a3dc5f8c58c0fd18a81cdc77e96fe1f9717b76d40777ef0db81633f14257152b` /
+  `e11cc70931087e21cff412cb244262eb64f1c5466eb9f1bc182871c8181072dd`.
+
+- `catalan_universal_cubic_root_cover_kps_s188.py` -> matching `.out`
+  [THM-3555 PROVED + VERIFIED-EXACT].  Adjoining
+  `r=sqrt(1-3*kappa*w)` polynomializes THM-3545 and explicit affine changes
+  identify the result with `(t,p)->(p,-t^3-pt)`, the universal depressed-
+  cubic marked-root cover.  Its Jacobian is the marked-root derivative,
+  while `dr/dw` supplies the reciprocal factor that made the Catalan formal
+  determinant constant.  The script checks the cubic discriminant, the
+  three simple points over the Catalan collision, and the first-jet gate:
+  every polynomial correction fixing the ramification line still has zero
+  Jacobian at its cusp point.  This sharpens a degree-three nonproperness
+  search; it is not `JC(2)`.  Normal/`-O` replay matches.  Script/output LF
+  SHA-256:
+  `cd9f593fa8efe94b839e2175f63b7b19724d36815496042904daffd7a38e58ef` /
+  `4b72a07e5914c114defedea2b1dfc6571005bb9dd27ec0340a5a71f3331533d8`.
+
+- `jacobian_punctured_kummer_collision_surface_kps_s188.py` -> matching
+  `.out` [THM-3554 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
+  WITH TYPING/TOOLING REPAIRS].  The curved collision component
+  `2-3xy-x^2z=0` of THM-1300 is `G_m x A^1`; the restricted map becomes
+  `(s,b)->(b,4s^2)` after explicit Laurent source and polynomial target
+  automorphisms.  It is a degree-two finite etale Kummer cover of the target
+  plane minus `beta^2-16alpha=0`, and its deck orbit is the known pair of
+  colliding points.  The affine closure ramifies at `s=0`; a divisorial
+  valuation argument proves that no everywhere-etale `A^2` filling can
+  preserve this exact quadratic function-field extension.  This is a
+  punctured planar near-counterexample, not `JC(2)`.  Normal/`-O` replay
+  matches.  Script/output LF SHA-256:
+  `a4301507f47fd18d45097d8b8bf079652de5640b1c36be439fd190ea8d1683df` /
+  `789ed0276d8e2ad5e1e8d358ef56e2a6e7815bae52c98cc0045664150a81b5e1`.
+- `torus_quotient_correction_no_go_thm3549.py` -> matching `.out`
+  [THM-3549 PROVED + VERIFIED-EXACT / HOSTILE-AUDITED].  In coordinates
+  `w=2-3v-t`, the THM-3543 collision quotient has Jacobian `-2w^2`, generic
+  degree three, and zero fibre `V(w) union {(0,2)}`.  One-sided corrections
+  fail in every degree; arbitrary corrections through total degree two have
+  unit coefficient ideal, while degree three forces the constant Jacobian
+  to zero, with or without the inherited collision.  Corrections affine in
+  `w` fail in every `v`-degree.  A collision-preserving Keller correction
+  must have sorted final `w`-degrees at least `(4,5)`, whose leading
+  coefficients already have the common-power form `(c h^4,d h^5)`.
+  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `4b60d1630431ea85ece7f66719ebb9e138674e0eb8df6d0e5524d70de6d10b9b` /
+  `bde9c5edd7934ed528e02614ff26175e2e70661ada1967158a5f3229c48d3921`.
+
+- `berggren_positive_cube_slope_atlas_101_kps_s183.py` -> matching `.out`
+  [THM-3547 PROVED + FINITE-EXACT + VERIFIED-EXACT; INDEPENDENTLY AUDITED
+  WITH WORDING REPAIRS].  The 528 primitive parity-correct slopes through denominator 101
+  are screened modulo every prime through 199: 517 have a displayed first
+  obstruction and exactly 11 survive the screen.  Four survivors `(14,23)`,
+  `(26,29)`, `(26,47)`, `(98,101)` have explicit odd seeds and positive
+  norm-one units; the invariant cone `L=n^2u-W>0`, `H=n^2W-Du>0` is preserved
+  by `L'=PL+QH`, `H'=PH+DQ L`, proving four infinite positive two-cube rays.
+  The other seven are not claimed globally insoluble or everywhere locally
+  soluble.  Normal/`-O` replay matches.  Script/output LF SHA-256:
+  `bdb8cd4fbd14235ee144d80c4766aed5117097321cae8ec87b1aad1ffff1212c` /
+  `fb0b50e2384b8834b381c3ded37358d636c7ab475b34d1c5091ff7f3f6162f49`.
+- `jc2_dephasing_square_rows_synthesis_codex_20260818.py` -> matching `.out`
+  [PROVED DERIVED IDENTITIES + FINITE-EXACT COUNTEREXAMPLE PROBES; JC(2)
+  OPEN].  Exact replay checks the Gaussian--Hadamard bijection between the
+  triangular two-square display and odd equal-sum rows; the `Q_t` filler and
+  its `4^a(8b+7)` companion; the strong-dephasing conductance generator and
+  triangle-flux correction; a same-conductance/different-rank Jacobian
+  response hostile; three low reflection-equivariant transverse no-go boxes;
+  the `(6,4),H=xy` homogeneous-jet contradiction; an infinite norm-balanced
+  parallelogram family with mandatory cross leaks; six obstructed natural
+  projections and one everywhere-immersive four-coordinate cusp packet; and
+  the root-multiplicity valuation formula behind the first-Euclidean-chamber
+  divisor `D_k(H)`.  It retains the height-`105` AON/Moh/2014-gcd screen as a
+  labeled weaker hostile, then imports the cited 2022 sub-`125` list and
+  verifies its arithmetic consequences: live first pair `(72,108)`, radical
+  subleading tax, first row-dominant torus box `(100,125)` with divisor
+  `u^25w^2`, and width-three mixed-Catalan cap at least `105`.  Normal and
+  optimized executions byte-match the stored
+  transcript after newline normalization.  The reflection also integrates
+  THM-3555's universal cubic marked-root normal form, THM-3556's escaping-
+  root/Kummer factorization, dual visible cubic, and decomposable projection
+  target, THM-3553's all-degree displayed-graph no-go, THM-3558's affine-
+  plane tangent/Hessian no-go against arbitrary smooth target hypersurfaces,
+  THM-3551's one-invariant residue walls, THM-3552's cyclic-fibre
+  holomorphic-exactness obstruction, and
+  THM-3557's low-width mixed-Catalan no-go with the resulting globally viable
+  coefficient-cap jump.  No planar counterexample, global
+  degree theorem, resistor reduction of JC, or infinite Euclidean tower is
+  claimed.  Script/output/reflection SHA-256:
+  `7eb8e39a7d108a3a229545e0b539abd980f571a41787406162394d114ec22703` /
+  `dac8899f87ea4a9de4654d29c2b746a76061544a60d89efd5f830bac45433dfd` /
+  `e20f807fbb5124cb78c2fc6fd1e4df0bfe61564d9a0c9b89f7448ebc108b7475`.
+
+- `jacobian_torus_quotient_ramification_square_kps_s183.py` -> matching
+  `.out` [THM-3543 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
+  WITH SCOPE REPAIRS].  For the fixed THM-1300 map, the full source and target
+  torus invariant rings are `k[xy,x^2z]` and `k[beta gamma,alpha gamma^2]`.
+  The induced polynomial-plane map is `(BC,AC^2)` with exact Jacobian
+  `2(2-3v-t)^2`; the whole line `2-3v-t=0` contracts to the origin.  Every
+  polynomial pair of target invariants factors through this map, so its
+  pullback Jacobian is zero or remains divisible by the ramification square.
+  The rational recombination `(T/V^2,V)` removes that square only by creating
+  the pole `-2/B^2`.  This is a full-torus target-invariant polynomial
+  compression no-go, not a theorem about source invariants, semi-invariants,
+  non-invariant surfaces, or `JC(2)`.  Script/output LF SHA-256:
+  `9066e3319ba74c31408cbd505e1ae0f849de00d0357582cafb4ccf4aeaf13e51` /
+  `3d9388a73d7bd3308098cba3f2754be9b356f13c095c1f07fd595e03c65345c6`.
+- `catalan_self_intersection_keller_thickening_thm3545.py` -> matching
+  `.out` [THM-3545 PROVED + VERIFIED-EXACT].  In the separated ansatz
+  `P=v^2+A(w)`, `Q=v^3-v+vB(w)`, constant nonzero Jacobian forces
+  `B=3A/2` and `A-3A^2/4=kappa*w`.  The unique normalized branch has the
+  transverse collision `(+/-1,0)->(1,0)` and Catalan expansion
+  `A=sum_(n>=1) C_(n-1)(3/4)^(n-1)kappa^n w^n`; every coefficient is nonzero,
+  so no polynomial solution exists in this ansatz.  The companion checks 35
+  exact gates, including two Jacobian paths and the first defect of all
+  truncations through degree 12.  This is an algebraic/formal
+  near-counterexample, not a polynomial map or a result on general mixed
+  thickenings.  Script/output LF SHA-256:
+  `70bcccaf01bdc03de1833f21b908ca9af0b4d7832330ce6faba32d107ae26dd4` /
+  `d7cde63e4c7d30759ae5713695ca3d692563be993728f3d895b9c7101e478880`.
+
+- `keller_grade_monoid_factorization_lengths_thm3541_20260816.py` -> matching
+  `.out` [THM-3541 PROVED + VERIFIED-EXACT].  For the Keller grade monoid
+  `M={1} union {n>=3}`, the numerical atoms are the odd primes, `4`, `8`, and
+  twice an odd prime.  If `N=2^a m` with `m` odd and `b=Omega(m)`, all
+  numerical-atom factorization lengths form the interval
+  `[b+ceil(max(a-b,0)/3), b+floor(a/2)]`; the elasticity is exactly `3/2`.
+  The first reducible, nonunique-factorization, and variable-length grades
+  are `9`, `24=3*8=4*6`, and `36=6*6=4*3*3`.  Across maps of one grade,
+  THM-3438 realizes every atomic expression length from one to the upper
+  endpoint, but this proves no factorization uniqueness for a fixed map.
+  The atom support is `P_odd disjoint-union 2P_odd disjoint-union {4,8}` and
+  has divergent harmonic mass; so does the reducible support.  No tame-class,
+  `JC(2)`, tournament, current, or LRC claim follows.  Script/output/semantic
+  LF SHA-256:
+  `11541108facd297a55287b1657e58eac777ef97eae36a6d0cfb7c84e5024c414` /
+  `46ec02241ded0a8cba53801cc1b521f9dd9802db997356e5d802114965fc6394` /
+  `c31c4c64207547cf2b239fd59be8fc53925f75e84f4b6123772ef098a49432a3`.
+
+- `keller_depth_two_newest_prime_residue_saturation_20260816.py` -> matching
+  `.out` [THM-3540 PROVED + VERIFIED-EXACT].  Over the generic newest divisor
+  `H`, the predecessor cubic is its unique birational `V(L)` ancestry root
+  times a quadratic whose discriminant has square class `[-L(target)]`.
+  On the normalization axis `lambda=0`, `L(target)=16tau` and the quadratic
+  discriminant is `-256tau`; its odd `tau` valuation proves irreducibility.
+  The residue image on predecessor blocks is therefore the full marked-point
+  `S2`, proving THM-3539 point/pair saturation at `n=2`.  The six raw
+  THM-3538 factors descend to four packets with multiplicities `1,2,2,1`.
+  This proves no full decomposition-centralizer equality, saturation at
+  `n>=3`, new unitness, all-level index result, or LRC conclusion.
+  Script/output/semantic LF SHA-256:
+  `a92e5237f4ceed6b086e0f29c89536c494bbd60588630e4331b3b5443fe2d968` /
+  `6477e75c328111f4cbac497b82c1f369bbb845bfe7b66a34dcc90773d5e5f0a8` /
+  `81e36ca0659eb75dc7a0f660f4c8a40ae70bf0d4fba56c08f4ef17241349488e`.
+
+- `boolean_c4_harmonic_language_atlas_20260816.py` -> matching `.out`
+  [PROVED COMPARISON CRITERIA + VERIFIED-EXACT].  XOR on two membership bits
+  is the four-cell `V4` carrier: its two-generator Cayley graph has four
+  bidirected pairs and two missing pairs, while adding the third generator
+  makes every `K4` pair bidirected.  There is no translation-invariant
+  tournament on `V4`, `C4`, or `C6`; `C3` and `C5` give positive controls.
+  The exact shell bound for the marker code `b^d+value_b(w)` makes reciprocal
+  convergence equivalent to convergence of `sum_d |L_d|/b^d`.  Hence the
+  no-adjacent-ones/Fibonacci language is thin in binary radix height but
+  exhaustive under Fibonacci/Zeckendorf height, even-parity XOR is harmonic-
+  thick, and the Berggren `U`-spine diverges in Farey-denominator height but
+  converges in hypotenuse, quadratic-`Q`, and ternary-marker heights.  The
+  four-cell identity retains the intersection term needed by harmonic XOR;
+  it supplies no tournament equivalence, Keller bridge, current, or LRC(14)
+  conclusion.  Script/output/semantic LF SHA-256:
+  `4b0827c22812ed74138b768b5edb9978db8a846e26cae85620603d4cbd6ffc52` /
+  `c91a2f77eb597678fc8ba04038a30da5347fa51726167c2f60dd99004d22c8a3` /
+  `78ee6a60805603c034a58e93b04a99f8b927bc76d4de5b1715f11f4719ce5459`.
+
+- `keller_newest_prime_decomposition_lca_packet_audit_20260816.py` ->
+  matching `.out` [THM-3539 PROVED GROUP THEORY + CONDITIONAL KELLER
+  REDUCTION + VERIFIED-EXACT].  For newest-prime inertia generated by one
+  supported bottom transposition in `W_n`, the normalizer and centralizer are
+  equal and are exactly the stabilizer of the third sibling in the ramified
+  block.  The actual decomposition group is proved only to satisfy
+  `I<=D<=C_W(I)`; strict henselization erases the residue group `D/I`, so full
+  centralizer or predecessor-orbit saturation remains OPEN.  The maximal
+  allowed marked-leaf action has exactly `n` predecessor-block orbits and
+  `n(n-1)` unordered-pair LCA orbits.  Under the explicit point-and-pair
+  saturation gate, THM-3538's carrier therefore reduces to exactly `n^2`
+  valuation packets.  Unconditionally this is an orbit floor, while the raw
+  upper count is `3^(n-1)(3^(n-1)+1)/2`; no all-level index-zero claim follows.
+  Script/output/semantic LF SHA-256:
+  `8f9816389a701198a5809abf1f952c4b30393e908a9fed787c1d7a36beb356b3` /
+  `7155daf78e5f787c05f23bbb3429d0b3e330bdd54efeb4a9c3bc693fe2ef6294` /
+  `96b5ba9f5c0c66e29c5b40d20f77b11242de706a7c8b98c66647cddc283efbea`.
+- `lrc_r5_literal_by_bare_source_natural_extension_support_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT LAWFUL COORDINATE-LEVEL ONE-LEG SUPPORT
+  COSPAN; INDEPENDENT
+  TYPING AUDIT PENDING].  THM-2471's bare-source node gives the non-fiat
+  pullback `v=Y_(q,e')(y)=(y+q+13e')/13^6`.  Inserting the literal `U_full`
+  BY support there before transfer yields `4,885/138,411` supported entries at
+  `(alpha,beta)=(1,0)` and retains all `1,183` `(tau,ell,c)` coordinates.
+  Replacing the observer by the identity recovers every pinned source-tensor
+  entry times the exact common-grid scale.  Across all 169 endpoint shifts,
+  `3,244/6,591` atom-address diagonals are nonempty, while 112 pairs have both
+  marginals positive but empty diagonal; per-address support lies in `17..20`
+  and false positives in `0..3`.  The fiat `v=y` hostile has only 668
+  supported entries and differs in `1,131/1,183` guarded coordinates; deleting
+  the right guard differs in 1,030.  Natural, fiat, and guard-deleted banks all
+  retain full `(91,1,6,12,72)` spectra, so spectral closure again does not
+  certify typing.  This is support only: the BY character, AX lift, grouped
+  address, and a same-word theorem are absent; the source and `U_full` words
+  differ in roles `1,3,5`.  No THM-2449/2512 input, current, row exclusion, or
+  LRC(14) conclusion follows.  Script/output/reflection/semantic LF SHA-256:
+  `eb548fd8823b0e2e732bfc1636138b1365672b05f3516733a24eaf459e60f289` /
+  `73ddd97a9dec462201fb28834c36398abf0fb01b74199450802957c07347ac33` /
+  `e783126a3f650c1ac64f150731bd4a6d36cdba3960b39a2a4817923ef11f4987` /
+  `13624687b1a338ef2c937d6f4d64e0e34e459b7d2ec9ef9357ee196ceb142a94`.
+
+- `lrc_r5_one_leg_integrand_fubini_by_probe_20260816.py` -> matching `.out`
+  [FINITE-EXACT ONE-LEG EXTERNAL-PRODUCT FUBINI; NOT TEMPORAL TRANSPORT].
+  Replacing every preintegrated BY atom by its literal half-open interval
+  endpoint primitive reproduces all `6,591` atom entries from `7,108,460`
+  pieces, the pinned `19,773` guarded endpoint-bank entries, and all `1,183`
+  retained `(t,ell,c)` outputs.  All thirteen residue spectra remain
+  `(91,1,6,12,72)`.  Direct endpoint primitives and `fast_endpoint_sum`
+  agree; normal and optimized replays match.  Deleting the right guard or
+  erasing the BY phase changes `8,112` or `8,788` pair entries while retaining
+  full fixed-relation spectral support, so support does not certify typing.
+  The ancestry variable `y`, BY endpoint `v`, and still-preintegrated AX
+  endpoint/Q variable remain separately integrated.  This is exact Fubini on
+  an external product, not a same-stalk map, THM-2449/2512 input, grouped
+  address, current, row exclusion, or LRC(14) closure.  Script/output/
+  reflection/semantic LF SHA-256:
+  `9deaf8272a477bd9cb20357e4f7f0f51c6b487e7f6f3c136b630aae7b883b713` /
+  `8ba6fd0a0e5a35ab49bc241b6737728b5f03a35567331d8cd88461de34553bcf` /
+  `b19355adf032a72544095d1280d4958ba7677507af61512abab2ba2f61fa42f8` /
+  `6b87dc762517773254e3388dffd0bed9a5101685730dd3b93ebf4c639f224e49`.
+
+- `keller_prescribed_coordinate_newest_prime_probe_20260816.py` -> matching
+  `.out` [THM-3538 PROVED + VERIFIED-EXACT; ALL-LEVEL EQUALITY OPEN].  After
+  the finite-etale predecessor cover splits at `p=(P_(n-1))`, the exact local
+  index of each prescribed integral coordinate is the valuation of the
+  product of all one-block discriminant square factors and all cross-block
+  resultants.  Thus local maximality is equivalent to one forced
+  dual-number shadow plus squarefree, pairwise-coprime remaining blocks; full
+  primitivity is insufficient.  Exact noncollision witnesses close `y_n`,
+  `z_n`, and `u_n=1/x_n` only at newest levels `n=2,3,4`, in ranks
+  `9,27,81`.  Literal `x_n` is nonintegral: if the reciprocal index is `I`,
+  its monic discriminant exponent is `3-2*3^n+2I`, while the reciprocal and
+  primitive raw-cleared reversal both have exponent `1+2I`.  THM-3537's
+  old-`L` `x_2` index two is the hostile cross-packet collision and lies
+  outside the newest-prime split hypothesis.  Script/output/semantic LF
+  SHA-256: `7e03534ef3ff1bd05d5108c327b3c40eae929f0a45baa28aa2980a9a9d632892` /
+  `5498fcdd2a35f86abb1bf80edea7a39ad5597520d4da5949b56f5e29e3187f93` /
+  `54e24e2b22edbc0882be21fc1c64f8b451a6c8767af779be52a3e16adcb6db34`.
+
+- `lrc_r5_rank_two_relative_response_cospan_thm3534_20260816.py`,
+  its FLINT audit, and
+  `lrc_r5_common_child_middle_duality_thm3534_20260816.py` with its
+  independent FLINT audit -> matching `.out` files [THM-3534 PROVED +
+  VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, WITH MISTAKE-420 SCOPE
+  REPAIR; FINITE-EXACT STATIC RESPONSE PACKAGE].  Over the fixed prime
+  `755373809845391722745761`, the frozen middle-orientation
+  difference has rank five, splitting as source rank two plus endpoint rank
+  three.  The source plane and the dual-Q10 contraction plane are distinct
+  rank-two planes whose unique endpoint-relative quotient is
+  `V_rel=(S+I)/kD_6`.  The image `U` common to all thirteen child spaces is
+  exactly `ker(Q10->Q_A8)`; `U^perp=Q_A8^vee`, and `U` pairs perfectly
+  only with the two middle dual lines, giving `U isomorphic V_rel^vee`.
+  Chamber monodromy gives `dim H1(V_rel)=1`.  Retaining the endpoint in the
+  minimal three-space `V_ext=S+I` gives formal twisted H1 dimension two,
+  split as relative invariant plus pure endpoint.  The induced endpoint-
+  forgetting map is canonically the projection `[1 0]`; it becomes `[1 1]`
+  only after replacing a marked survivor by a mixed lift differing by endpoint
+  debt, so it is not a transported characteristic-two XOR.  MISTAKE-420
+  records the repaired scope.  Pure reversal does not preserve the common realization;
+  its compress/reinflate correspondence is `lambda*C` with
+  `lambda^2!=1`.  All 127 nonempty chamber-stable child windows have
+  quotient-character dimensions only `(2,1+1)`, `(6,3+3)`, or
+  `(10,5+5)`; none appends a lone endpoint-invariant dual.  Every response
+  row is exact on the formal digit C13, and
+  coefficient-exponent mismatch blocks additive maps to the F13 Kummer or
+  characteristic-zero JC flux carriers.  No chronology, physical closure
+  edge, word-current, D5 flux, row exclusion, or LRC(14) conclusion follows.
+  Primary script/output/semantic hashes:
+  `4eab23ff77de9d190f13d5a41945415ba55734e0fcdc6f8eae3cbb47d4fb101d` /
+  `f6972a28ba83ce03c7bfa45a2e6b6eaa8af1504f778a2412ee536639a53f4b6c` /
+  `57a44964888fdb0a9ca1c890abbe4950c6fa7130f7ab2800c0faa8a5d6a0212d`;
+  FLINT semantic
+  `f1dfa230027e7fd8f48c7eb7bac2034d0188ee61a4ce6f24d2579860cf532020`;
+  common-core script/output/semantic:
+  `991c65d7c1a3fc4268afdd5a9d750a138b25fce306734e31d288195e89712d09` /
+  `0320a48d59e85fcdca90e48d93b80265cc76c03f5ff2e83260cf6974af493afd` /
+  `4261ca08016b2de90bc8f609ebf283d915f8613410a5dbc15229b02baeed8803`;
+  independent common-core FLINT audit script/output/semantic:
+  `50496905b49dce05ba7ac76bcd7714a646c1e5821b04300ec7f93069d52d5904` /
+  `c808cfe4e5e8847b355671ac703ee185da6428dca1e449a3c3837f25193eb474` /
+  `036823a7ba481528a3d02f9b36cecc08c2a76b796d69b437ac644ea62251c53e`.
+  Every finite map/census has a distinct-engine reproduction.  The promotion
+  audit independently checked primality, row/column variance, quotient-dual
+  typing, the endpoint-retaining MISTAKE-420 hostile, symmetry, and all four
+  normal/optimized/stored transcripts.  This excludes no row: the scalar
+  ledger stays `165`, and the `84` `(s,ell)` cells are internal to one
+  canonical non-cover row rather than a subledger.
+- `keller_level_two_old_L_newton_index_audit_20260816.py` -> matching `.out`
+  [THM-3537 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  At depth
+  two, discriminant transitivity gives old-`L` exponent `3+c` with
+  `0<=c<=2`; THM-3531 parity forces `c=1`, hence normalization exponent four
+  and tame inertia `(4)(2)(1)^3`.  Independently, the canonical line
+  `(a,b,c)=(2/27+t,1,1)` gives the literal `x_2` Newton slopes
+  `-1/2,-1/4,0`, root packets `2+4+3`, order-discriminant exponent eight,
+  and exact transverse local index length two.  This does not compute the
+  three-variable generic coordinate index or an all-level old-prime law.
+  Script/output/semantic LF SHA-256:
+  `d2eb44fc2ad5c270ebddf7197ad2d3e3c905b7a9dad86fa80b83735551f55f5d` /
+  `f159ba5453fc8e85c0f7d814fceae1a073ef41e6d4e0328c766c543b2c631fc0` /
+  `02cbf6a236a84ca153bea6fa60fb3c1267593b9e0694c0cddc5b1d7dc5bd8f59`.
+
+- `keller_old_L_inertia_numerical_scout_20260816.py` -> matching `.out`
+  [VERIFIED-NUMERICAL DISCOVERY ONLY].  Chordal continuation of all inverse
+  leaves gives stable old-`L` cycle exponents `1,4,14,46,142` through depth
+  five and verifies every ancestry-block projection.  The first four rows
+  fit `2*3^(n-1)-2^(n-1)`, but its depth-five prediction `146` is refuted.
+  The surviving wreath-state atlas records identity, transposition, or
+  3-cycle child products around each parent orbit; depth-five cycles are
+  `36,18,8^9,4^9,1^81`.  More sharply, at root depth `r+1` the observed
+  permutation is `(A_r,B_r,id)(01)` with involutions `A_r,B_r`; for
+  `C_r=B_r A_r`, every global nonfixed cycle is twice a `C_r` cycle and
+  `d_(r+1)=2*3^r-o(C_r)`.  The orbit counts `2,4,8,20` show that the failed
+  scalar law hid the assumption `o(C_r)=2^r`, first false at `r=4`.  The
+  unique fixed-root section of `C_r` has cycles `(1,2)`, `(3,6)`, `(9,18)`
+  at `r=2,3,4`, exposing a conjugacy-invariant ternary odometer arm.
+  This is not an exact all-level inertia theorem.
+  Script/output LF SHA-256:
+  `4cb8bfd72ff86fb56acfea4f7881a1d620d4e7f73226f7c38546f9bf47c13824` /
+  `08c1a87d36b3f881b2ef8c4eeaf138765b4be1fca9dc7641ee0d91d5a2108ca5`.
+
+- `keller_old_L_inertia_mpmath_depth6_audit_20260816.py` -> matching `.out`
+  [VERIFIED-NUMERICAL BOUNDED DEPTH SIX].  An ancestry-local mpmath
+  continuation at radii `10^-3,3*10^-4`, with `80/160` step and `90/120`
+  digit controls, reproduces depth-six cycles
+  `108,54,24^9,12^9,1^243` and exponent `466`.  Every sampled cubic root has
+  a separated a-posteriori Rouche disk, every endpoint match projects through
+  all six ancestry levels, and direct substitution in the original Keller map
+  has worst relative forward residual `1.2720708e-103` in the 120-digit
+  controls despite coordinates as large as `1.1272998e40`.  The intrinsic
+  two-block return has cycles `54,27,12^9,6^9`, twenty orbits, and order
+  `108`.  Raw exchanged-block section cycle types are gauge-dependent; an
+  explicit checked reflection-gauge transport realizes the reported
+  involutions `A=(2^121,1)` and `B=(2^118,1^7)` with `C=B*A`.  Normal and
+  optimized replays agree.  This is not an exact inertia theorem, an all-level
+  recurrence, or a coordinate-index statement.  Script/output/semantic LF
+  SHA-256:
+  `9600b8b3e930853480664cf34214f94e251a018e33f52f6e68151e0bda71f472` /
+  `f5cdbaa5a4fb9b2efd4b3fcc00b934a94ac2ba164363f660725e5dfb419da98a` /
+  `dc22c0fd73fa57c92fdb62d41acce8edc9127fcf36e93d24bc5bf5e49006ceb4`.
+
+- `keller_inertia_signed_c4_h1_xor_bridge_20260816.py` -> matching `.out`
+  [VERIFIED-EXACT ELEMENTARY COSPAN; UNNUMBERED].  THM-3537's quartic and
+  quadratic inertia orbits each carry the nonzero determinant-line bit in
+  `H^1(D*,F2)`, while their XOR is zero, explaining the even old-`L` square
+  class; the newest transposition retains bit one.  A one-cut quartic `C4`
+  representative switches to THM-3536's Berggren wall word by vertex gauge
+  `(0,0,0,1)` and to the raw Fibonacci representative through the existing
+  complementary gauges.  The carrier has four successor pairs and two
+  missing antipodals; all four tournament completions break phase rotation.
+  This is no LRC current, D5 flux, or Berggren-Keller identification.
+  Script/output/semantic LF SHA-256:
+  `fde504c9c83c2e515d0966d495191757fa1b281ead0ff13d34f7e85aa9384371` /
+  `e3da0f4cb34c5a70257b3a186e6ce94d92cd8d0787289c33443c5c627e76a16a` /
+  `772f86fb6e43b7d69262caeb9bb4c54687e16ebc4b6c3b50fd21f5506ade43de`.
+
+- `berggren_fibonacci_dihedral_reflection_cospan_20260816.py` -> matching
+  `.out` [VERIFIED-EXACT MATRIX/FAREY/TOURNAMENT COSPAN; UNNUMBERED].
+  Berggren's parabolic `U` factors as `S_B R_B` with two integral Lorentz
+  involutions; its parameter action similarly generates the Farey ray
+  `1/2,2/3,3/4,...`.  The even Fibonacci step `Q^2` factors as two
+  projective integral involutions and generates the Farey-neighbour ray
+  `1/2,3/5,8/13,...`.  Thus both are representations of the same infinite-
+  dihedral reflection--rotation presentation, but one is parabolic with
+  quadratic growth and one hyperbolic with Fibonacci growth.  The Keller
+  old-`L` products `C_r=B_r A_r` supply only a VERIFIED-NUMERICAL finite
+  third leg.  A directed `C4` has two missing pairs and four tournament
+  completions; `C6` has nine missing pairs and 512 completions; none is
+  rotation-invariant.  No ancestry, signed-cochain, Keller, or LRC transport
+  follows.  Script/output/semantic LF SHA-256:
+  `0823008ea9d4ffc11774d44047a3d6d67e9ab3fb93ad959d9f3b14439fc2c273` /
+  `56052b22df5e970df17f383d76631988bd7972aad4c60cd22ec55aed70cc4916` /
+  `2ed27bf257b908ab33b5ad5909f46d2b171b0b1b14e2f31cf2205ea6e2825114`.
+
+- `keller_tame_conjugacy_covariance_audit_20260816.py` -> matching `.out`
+  [THM-3532 PROVED + VERIFIED-EXACT].  For every polynomial two-sided
+  equivalence `G=tau o F o sigma`, the old extension square gives exact
+  one-step transport of norms, complete packets, the finite-sheet unit,
+  image-prime degree, intrinsic square class, newest reduced different, and
+  `S_G=tau(S_F)`.  Honest conjugacy `phi o F o phi^(-1)` removes the inserted
+  `sigma o tau` between iterates and transports the complete raw,
+  discriminant, and Jelonek towers.  W1/W2 are target postcompositions and
+  fail the naive second-iterate identity; their honest conjugates are the
+  positive controls.  The standard five weights are destroyed unless the
+  `phi^(-1)` coordinate chart travels with the packet.  THM-3535's primitive
+  linear observations transport as `ell o phi^(-1)`; only affine conjugacy
+  keeps this the full standard-linear family.  After MISTAKE-419,
+  every truth-bearing check uses explicit `require`/raise, and normal, `-O`,
+  and stored transcripts agree exactly.  Script/output LF SHA-256:
+  `76878a0190c065afaa85b1ce5c67d83a39122441684e4bb67e5211b51ca0b9c0` /
+  `a6d5a1db30d33adc2a6e6315e08ed311b49eda8bc80eb43c2dd8ed4141f70b43`.
+
+- `keller_newest_prime_different_index_square_audit_20260816.py` -> matching
+  `.out` [THM-3533 PROVED + VERIFIED-EXACT].  At every fixed depth, the newest
+  raw prime has normalization-discriminant multiplicity exactly one.  An
+  integral primitive power order has multiplicity `1+2i`, where `i` is its
+  local index length; locally maximal primitive generators attain one, but a
+  named affine coordinate need not.  Old-prime positive multiplicities remain
+  open.  Script/output/semantic LF SHA-256:
+  `63b751769626b77ee7e90140b5c4050008c42724951fe4594576257bdfcf6d3f` /
+  `8d1ca689cb2c6d0773bbfa14d1618a0f82116cf9c16b1b0f3174417d1397a8e4` /
+  `aa19a27d7e68467936caebb1497804c2815c07d7c160b1ca172723805d3bd79a`.
+
+- `berggren_descendant_angle_language_density_20260816.py` -> matching
+  `.out` [THM-3536 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  MISTAKE-418 FIBONACCI-SIDECAR REPAIR APPLIED].
+  THM-3334's two angle walls have inverse Berggren
+  itineraries `(BABB)^omega` and `(BCBB)^omega`.  Consequently the exact
+  U-obtuse/acute/D-obtuse level counts obey four-step recurrences and have
+  densities `16/41,9/41,16/41`, with bounded period-eight residuals.  The
+  wall languages are regular; uniform prefix contraction gives shortlex
+  discrepancy `O(log N)` and the same three logarithmic harmonic
+  coefficients.  The phase carrier is a signed `C4` with two missing
+  antipodal pairs and the nonzero class in `H^1(|C4|;F2)`; no
+  phase-rotation-invariant tournament completion exists.  The normalized
+  Fibonacci sidecar has chamber word `D,D,U`, not all `D`.  RXTX's separate
+  `26/41` cost constant shares only the
+  exact resolvent-denominator identity `3^4+1=2(7^2-2^3)`; no tensor,
+  tournament, LRC, or JC transfer is claimed.  Script/output/semantic LF
+  SHA-256:
+  `f7d3eb39285751f7be0db083ceff050f8347dddfefe43c0efe8b3ab6d6108f45` /
+  `662e7ccd78722b27fc27653239151b25dac28f35af2c5b8acba60b1bef6b5a54` /
+  `acc0170636f7ce47b074214c116930ea6728fa3ea96314cc622e41f83966b2ec`.
+
+- `berggren_fibonacci_signed_c4_cospan_20260816.py` -> matching `.out`
+  [VERIFIED-EXACT ELEMENTARY CANDIDATE; UNNUMBERED].  The two angle-wall
+  phase cycles have order-sign word `(-,+,-,-)`.  The raw Fibonacci cycle in
+  `P^1(F3)` has successive determinant signs `(+,-,+,+)`; the alternating
+  vertex section `(+,-,+,-)` switches it exactly to the wall word.  Hence
+  both point to the same nonzero class in `H^1(|C4|;F2)`.  The six pairs are
+  four successor pairs plus two unobserved antipodal pairs, and none of the
+  four tournament completions respects phase rotation.  The cospan is
+  explicitly raw-projective: THM-3339 parity normalization is required
+  before reading a primitive Fibonacci Berggren node.  No density, q=15
+  owner, LRC current, JC flux, or canonical tournament transfers.  LF
+  script/output/semantic SHA-256:
+  `44f8eea13cac2b7c4e05c69ec15b67c828ef9ca4571389c9aa479733bf133e18` /
+  `74755a08a1f468f0e647427789519fdc87ffaba1b9f0bfc6d6e9f47fb2f45024` /
+  `93a9f158e462686b4393163e46fcb211f607282eaaf3b8fd20a9f214156a7f9e`.
+- `keller_fixed_linear_all_level_wreath_probe_20260816.py` -> matching
+  `.out` [THM-3535 PROVED + VERIFIED-EXACT].  THM-3530's newest prime
+  isolates one tame transposition in one bottom ternary block; transitivity
+  promotes it to the full iterated wreath group.  Ancestor cylinders are
+  then the only blocks, while two THM-2473 rational fibres give the
+  full-rank difference determinant `243/4`, excluding one-step descent for
+  every nonzero constant linear form.  Hence every fixed rational form,
+  including `x,y,z`, is primitive at every depth.  The exact support probe
+  also covers all `1723` directions in `P^2(F_41)` across `48` split
+  degree-nine fibres.  It proves no constant-linear order index or
+  arbitrary-map statement; THM-3533 separately gives newest-prime
+  normalization multiplicity one.  Script/output/semantic LF
+  SHA-256: `54775a030eed27cf5a24b497d8271c18f5a58b95881b9b8f96c79ae1630c1ae3` /
+  `8f7fb51113a2e065467df91ee1314a91c101423038a52dba28cd97f44c4e3b23` /
+  `5810ca665b68ad0f8bdfc5a62445c7eb1b5d8d65ee6ae565db1e31bd1a31f9c9`.
+
+- `keller_intrinsic_discriminant_raw_tower_audit_20260816.py` -> matching
+  `.out` [THM-3531 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  For the fixed sporadic map, trace-discriminant
+  transitivity and the odd clearing exponents prove the basis-independent
+  all-level law `d(K_n/K_0)=[(-1)^n P_(n-1)]`.  The first six raw-to-named
+  invoices recover `[-L],[H],[-2J],[2G],[-2R_5],[2R_6]`, retaining the
+  mandatory constant class `[2]`.  Every fixed depth admits a generic
+  primitive rational linear form; THM-3535 subsequently proves simultaneous
+  primitivity for every nonzero constant form.  THM-3531 itself supplies no
+  exact positive discriminant multiplicities.  Script/output/semantic LF SHA-256:
+  `54a9d6977275feb97759b33be8ff90a677cc86222f44548f9c5f0952ec78e553` /
+  `16a1950ff176f08c7983f3b20429a8dede9ea1802d9e166081fd1dffb9ea63e0` /
+  `9ccc7adc713ebf30e69af6456e212b94f4a43da4cec6215f730c58cc00ecfe46`.
+
+- `keller_packet_power_image_prime_induction_audit_20260816.py` -> matching
+  `.out` [THM-3530 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Every actual raw packet row after the
+  seed has `gcd(e_n,m_n)=1`, residue `(1,3) mod 6`, and strictly increasing
+  first grade.  Since the complete maximum-lambda face is
+  `x^e(3xz-2y)^m` on two coprime irreducibles, it cannot be a square or cube.
+  The finite-etale prime contraction gives `Q=cR^d`, `1<=d<=3`, and the
+  primitive face forces image degree `d=1`.  Induction proves every raw rung
+  absolutely irreducible, every newest image restriction generically
+  degree one, and exactly `n` reduced Jelonek components for `F^n`.
+  The complete-packet hostiles `L^2` and `L^3` have literal square/cube top
+  faces, showing grade primitivity is load-bearing.  No all-level literal
+  coordinate separability, exact discriminant multiplicity, arbitrary-map,
+  or general JC claim is made.
+  Script/output/semantic LF SHA-256:
+  `a9dca29c9a82ec97082adc87afc1b0695abbe3fcc3a5c5df31dabcf227f40b7a` /
+  `66f3c578d9a021df0ed07c8b260015ac7b6ab284dff320af24f34fe8d5794656` /
+  `ab5aa0fe7f28607c766ea4e3d1d42a7b84b4e9843ce2e35df49ebefd06bace75`.
+
+- `keller_finite_branch_beta_homogeneous_unit_obstruction_20260816.py` ->
+  matching `.out` [THM-3529 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  For the fixed sporadic map, the exact
+  pullback `B=F^*L` is a primitive ten-term polynomial of beta weight `-2`
+  and positive `x`-degree four.  In the Laurent coordinates `p=xy`,
+  `q=x^2z`, one has `x^2B=C(p,q)`, where `C` is a primitive quadratic in
+  `q` with discriminant `64(3p+4)`; the odd linear valuation certifies
+  irreducibility.  The complete packet's prescribed minimum-beta face is
+  nonzero and lies in `Q[y,z]`.  The audit proves `V(B)=C_fin`: THM-3528
+  gives the divisor `C_fin` and `s_L=ord_(C_fin)`, while irreducibility and
+  literal containment force equality.  Initial-form multiplicativity then
+  forbids `B|P`, so every complete packet is a finite-sheet unit and every
+  positive-level raw rung is old-`L`-coprime (the seed is `P_0=L`).  The certificate's partial `2m<=e` census was
+  repaired to all `15,250` positive-`e` packets with `m<=e` through `e=300`,
+  including the omitted boundary hostile `A(3,3)`.  No later-rung irreducibility, image
+  prime, separability, discriminant recursion, arbitrary-map, or general JC
+  claim is made.  Script/output/semantic LF SHA-256:
+  `c3b096d9f9b29c97eb1540dc85cb3f2e6739f2aeb5d903b5f3f36672e0592694` /
+  `f2bbb53b498c9df4ff79d96191a5e873572f745e98c35ee148728f963d58b950` /
+  `8e14d28a41500a2f28a37b181089e66c668806382ea1011814b35076ebdc23fd`.
+
+- `keller_all_level_cleared_norm_packet_arithmetic_audit_20260816.py` and
+  `keller_all_level_cleared_norm_polynomiality_independent_audit_20260816.py`
+  -> matching `.out` files [THM-3528 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  For every complete fixed-chart packet `A(e,m)`, the two
+  divergent sheets contribute `-e` while the regular finite sheet contributes
+  `s>=0`; finite-etale regularity then gives `L^eN(P)` polynomial with exact
+  old-`L` multiplicity `s`.  THM-3522 consequently yields raw polynomial
+  complete packets at every level, with next rows `(2634451,955095)`,
+  `(16530967,5993163)`, `(103730443,37606575)`.  This proves no later unit,
+  image prime, irreducibility, separability, discriminant recursion, or
+  general JC claim.  Primary script/output/semantic LF SHA-256:
+  `050d9ef31faa59c7ebb3b4dc0ca4df1774cbc4a10a5dd89c87358d1e73842fb6` /
+  `2226933130c39b16b74d6805657a1a42acc87830c35282936da571bc62162a26` /
+  `a77811be1a53f2e0d0e0eeac3b4a4ecac358f79c8ed0b6ec5fa6f03f3bb0c826`;
+  independent audit:
+  `4e79d10d2a90cfdcbd6948d22b7385da6ea88b923f3483da96448af1ea1cdc77` /
+  `e7247cb01a61558ee2af6ef662610e946364f6d9d32d44766841a501644ee30b` /
+  `6fe70dcf5a0f1bd4f76ef8bc4986f79be1d74e4a0b6a71e40520dae67f4e456e`.
+
+- `keller_packet_monoid_branch_transplant_audit_20260816.py` -> matching
+  `.out` [PROVED STRUCTURAL COROLLARY OF AUDITED THM-3528; VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED].  Complete
+  packet products add grades, the renewal matrix is additive on all 256
+  tested orbit-row pairs, and the cleared norm obeys the symbolic monoid law
+  `T(PQ)=T(P)T(Q)`.  If a later raw rung contains `L^s`, its packet quotient
+  is `A(e-s,m)` with sharp bound `s<=e-m`, and every descendant contains the
+  transplanted canonical factor `P_k^s`.  A positive defect of input `P_j`
+  factors output `P_(j+1)`; reducibility additionally needs a nonunit
+  cofactor (automatic for genuine later outputs because `m_(j+1)>0`), while
+  `P_0=L=L*1` is the sharp hostile.  The faithful defect carrier is a
+  formal series; harmonic evaluation loses support (`8192` subsets of
+  `{1,...,13}` give `3712` sums and `2944` collision values).  Synthetic
+  defects are hostiles, not observed returns; later units, factors, images,
+  and general JC remain open.  Script/output/semantic LF SHA-256:
+  `8256c7179c415e8588a0612608f7c253baf026d8a237cd8cbf01720758e8b5dc` /
+  `b934628ab80fefe5fdc6662d10f12bffa4f6f1fb25a3006b9254f3f4b7d204d6` /
+  `f004cd7643933e81a2fbce73a3df6d72c9e4943702cca7ee17b32d6690be3874`.
+
+- `k4_xor_path_closure_tournament_atlas_20260816.py` -> matching `.out`
+  [FINITE-EXACT BOOLEAN/TOURNAMENT SIDECAR].  Relative to a chosen transitive
+  `T4` gauge, all 64 undirected `K4` masks biject with the 64 labelled
+  tournaments by edge reversal.  The canonical bidirected-P4 mask gives the
+  strong score-`(1,1,2,2)` tournament with two cyclic triples; all 12 P4 masks
+  have triangle-parity weight two.  Adding the Boolean closure edge makes the
+  C4 mask the alternating `K4` cut.  Its consistently oriented all-one
+  cochain has seam `4 mod 13` but parity zero mod 2, so XOR cannot supply the
+  missing D5 coefficient/current map.  No clock, flux, row exclusion, or
+  LRC(14) follows.  Script/output/semantic LF SHA-256:
+  `bcfdcf20a595e2e11bb0d70221624b8d435f34284609272c514ac8474f9aea64` /
+  `0e003b5fedffd5382cf85a39f371ae600cf1e5ffabac2eccc8deb154916e20de` /
+  `1d0dfe67dc8537728c3a71bed89c3109e9604130c4dcd24d56412f37d9fadf7d`.
+- `lrc_r5_third_digit_78_state_quotient_closure_probe_20260816.py` ->
+  matching `.out` plus `lrc_r5_third_digit_78_state_exact_bank_20260816.json`
+  [FINITE-EXACT STATIC QUOTIENT EXTRACTION; NO THEOREM PROMOTION].  From the
+  audited diagonal bank, the rank-68 parent defines the canonical quotient
+  `Q=F^78/R` of arc-graded dimension `2+2+1+1+2+2=10`; every fixed-`r2`
+  child surjects onto all ten dimensions.  The quotient is common, but its 13
+  normalized child sections are pairwise distinct and their parent-row gauge
+  differences span rank 54; all child spaces share only a rank-two quotient
+  image.  Arc reversal fails by exactly two middle-arc dimensions, while the
+  repaired quotient `F^78/(R+AR)` has dimension eight and four joint
+  arc/chamber characters of dimension two.  Coupled chamber/digit reflection
+  acts `5+5`; pure digit reflection and shift do not descend.  Every nonzero
+  Fourier mode has quotient rank six and each `{m,-m}` spans `Q` as `5+5`.
+  Only the 13 identity child containments hold; no pair spans 78, while exactly
+  12 triples minimally do.  Flat/support add quotient rank zero.  This is a
+  static envelope, not chronology/current/H1/ancestry/LRC.  Script/output/
+  certificate/semantic LF SHA-256:
+  `daa51f91c686a162ae2ca35ab7b4a50fe2997403952f1703060ba1746b770064` /
+  `f0844b03bd931a3da8ff8ad5e977688f8abea05e09bfa86c0643ffbfd320be1a` /
+  `472925c638de7ac90b1a7880184766f2e8acec0f8291e2c46cf747b37cd46712` /
+  `2cfe4a03f00b431ce1542cb23d96650a34819050d8f430559b531253ed7cf874`.
+- `lrc_r5_tent_location_c4_cospan_hostile_audit_20260816.py` -> matching
+  `.out` [FINITE-EXACT TYPING SIDECAR; FORMAL COSPAN CANDIDATE ONLY].  The
+  exceptional-location section splits under arc reversal as
+  `h_even=(12,12,6,6,0,0)` and
+  `h_odd=3*(e_(1->3)-e_(3->1))`.  In a marked normalized odd-edge basis,
+  middle coefficient three has the unique formal `C4` completion
+  `3*(1,1,1,1)`, with integral/mod-13/mod-2 cochain seams `12/12/0`.
+  Literal directed-arc chains introduce a factor two and mod-13 seam `11`;
+  the cycle restricts to `(3,3,3)`, not the observed `(0,3,0)`.  The mod-2
+  all-one cochain is `delta(0,1,0,1)`, while the same tuple is a nonzero
+  homology cycle.  There is no `F13 -> F2` coefficient map, no lawful closure
+  edge, and no location-to-response coefficient transport.  In the actual
+  diagonal response table, the two reflected middle-odd rows are nonzero on
+  all twenty exceptional cells but each takes eight distinct values and the
+  pair has rank two, ruling out every `r1`-blind scalar transport.  The
+  concurrent common ten-space cannot repair this: it has no common section
+  or arc-reversal action, and its two-dimensional reversal defect is exactly
+  middle-pair localized.  The surviving object is exact support alignment
+  plus an explicit marked interface with conditional D5 seam `-1`, not a
+  response amplitude, current, or `H1` realization.  Script/output/semantic
+  LF SHA-256:
+  `856eda8328665ab1a060c37dc889506a097c1c91c75036bd1b22c2763b8adc54` /
+  `bf83ef8043625a87e8a56c8478bf5c0ab0f502bf2747e72a1da074b23d774dea` /
+  `d662e9ffb12e35f60b34fcf86d5cc60788aded7de28fdcc132cfe1fc693290c3`.
+
+- `lrc_r5_third_current_digit_pointed_root_difference_diagonal_bundle_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT STATIC THIRD-CYLINDER RESPONSE SIDECAR;
+  NO THEOREM PROMOTION].  The exact mod-2197 half-open source profiles and a
+  sparse refined-cell endpoint operator marginalize over `r2` to the pinned
+  `b1baa781a` tensor.  Its prior-address ranks are `0:35,2:2,4:2,6:130`, so a
+  full `Mat_6` conditional map is unique only for `130*13=1690` children; all
+  2,197 children have a unique live-line restriction, remain diagonal on the
+  six bidirected-P4/P7 edge lines, and have no off-diagonal mixing.  Fixed
+  prior-address sums are `I6` on the 130 full-rank fibres and the live-support
+  projector on all 169.  Stationary/lower-memory actual maps fail even on the
+  full-rank bank.  The adjacent-pair cocycle succeeds only on the
+  `455=35*13` vacuous children above zero parents.  The 78 arc/digit parent
+  rows have rank 68, while every fixed-`r2` union has rank 78, also checked on
+  literal 2197-column rows at `r2=0,6,12`; no static 78-state transfer
+  survives.  Support-normalized equals flat because every active source fibre
+  supports all 13 children.  No clock, chronology, complete address,
+  ancestry/current/H1 map, row exclusion, or LRC(14) follows.  Script/output/
+  semantic LF SHA-256:
+  `a227bc2f385d8a2eaecb27f317fa5ed66623c70938d8a97aba620298a8a7b61b` /
+  `aba447ca5c1e5b6678a6ccd93371b1b8b1bd0ceb2fe127c83c6304855fb8f80f` /
+  `3d1527fb4ce4931680e50d7135b9d1129c1816e3a9158645523e2728ddc71ec2`.
+- `keller_all_level_cleared_norm_polynomiality_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS THM-3528'S PROVED
+  RAW ALL-LEVEL POLYNOMIAL-PACKET LEMMA].  The audit reconstructs the reciprocal cubic
+  `L+Tu^2-2cu^3`, its one unramified finite branch and ramified quadratic
+  pair, and the exact complete-face residual `3xz-2y -> -11D/S`.  With
+  finite-sheet valuation `s>=0`, ramification-weighted norm valuation is
+  `v_L(N(P))=-e+s`; finite-etale regularity gives `N(P) in A[1/L]`, hence
+  `L^eN(P)` is polynomial with old-`L` multiplicity `s`.  THM-3522 and an
+  exact `15,251`-packet cone audit then give raw polynomial complete packets
+  at every level.  The nonmonic hostile `Res(E,w)=2c` versus `N(w)=2c/L`,
+  canonical finite branch, scalar normalization, and normal/`-O` replay pass.
+  This does not prove `s=0`, `L`-coprimality, image/new-prime status,
+  irreducibility, separability, discriminant recursion, arbitrary-map scope,
+  or any general JC claim.  Script/output/semantic LF SHA-256:
+  `4e79d10d2a90cfdcbd6948d22b7385da6ea88b923f3483da96448af1ea1cdc77` /
+  `e7247cb01a61558ee2af6ef662610e946364f6d9d32d44766841a501644ee30b` /
+  `6fe70dcf5a0f1bd4f76ef8bc4986f79be1d74e4a0b6a71e40520dae67f4e456e`.
+
+- `lrc_r5_pointed_bidirected_p4_cocycle_sidecar_20260816.py` -> matching
+  `.out` [FINITE-EXACT REPRESENTATION SIDECAR; PARENT INDEPENDENT AUDIT
+  ACCEPTED].  The six pointed lines are canonically the six directed arcs of
+  the bidirected state path `0<->1<->3<->2`, with pair census `(both-way,
+  one-way,missing)=(3,0,3)`, equivalently the six edges of an alternating
+  `P7`.  Its static `H1` is zero; adjoining the missing Boolean closure edge
+  gives `C4` with one-dimensional `H1` generated by `(1,1,1,1)`.  The 169
+  diagonal maps form six row-sum-one `13x13` kernels of direct-sum rank
+  `68/78`.  Chamber reflection holds on all 1,014 entries; arc reversal
+  descends at `143/169` address pairs and fails at exactly 26 middle-root
+  pairs, split into 20 source and 6 endpoint defects.  The six exceptional
+  `r0` fibres have drops `3*(0,1,2,1,0)`.  The five realized support sets have
+  distinct reciprocal sums, but all 8,192 subsets of `{1,...,13}` collapse to
+  only 3,712 sums.  No clock, chronology, current, D5 bridge, row exclusion,
+  or LRC(14) follows.  Script/output/semantic LF SHA-256:
+  `8b03b8fcf146c33d9203da68572fcc477f32f0fae2042f7c51c0f570a6bc3583` /
+  `0ff08766d111bc4b699428ce46470f2fb7b32098e114430f2208997dc57783c0` /
+  `b2ba313f88fbab0d36e95a63ade832492743ed6007fa0480434083d7dab0ecd3`.
+
+- `lrc_r5_two_current_digits_pointed_root_difference_carrier_transition_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS THE SCOPED
+  FINITE-EXACT FIVE-COORDINATE DIAGONAL BUNDLE].  Without importing the
+  candidate, it aggregates literal ordered `(u,q)` pairs by exact OWNER-lawful
+  source cell before independently expanding all 169 `(r0,r1)` weights.
+  All three gamma/inverse parent marginals and all four submitted tensor
+  digests match.  Carrier/union ranks are six while actual/support/flat `r1`
+  amplitude ranks are `13/12`, `4/3`, and `1/0`.  No stationary `K_r1`
+  exists; all 169 fixed-`(r0,r1)` systems instead have unique diagonal
+  solutions, with `sum_r1 K_(r0,r1)=I_6` for all 13 `r0`.  The 60 exact
+  source-profile exceptions occur in the reported six `(point,r0)` fibres,
+  and their residuals are annihilated by the common endpoint operator.  This
+  is only a static address-conditioned partition of identity on the six
+  pointed arcs, not a clock, complete address, chronology, physical current,
+  nonzero `H1` class, row exclusion, or LRC(14).  Script/output/semantic LF
+  SHA-256:
+  `d57c6c38207216054e8bc8e191fa20338aa18cab3fce216ff19d593bcc6a80e2` /
+  `2c39c9cbc6a0acad45f4591724a5a84f09568078575dffe7e7c72b90b588240f` /
+  `b58d98c283a2dc42111365a3d61af0948757feda3b1ff11ca65cd7d562b15a56`.
+- `lrc_r5_p7_arc_carrier_tent_section_audit_20260816.py` -> matching
+  `.out` [DERIVED FINITE-EXACT REPRESENTATION AUDIT; FIVE-COORDINATE PARENT
+  INDEPENDENTLY ACCEPTED].  An independent pointed-root replay identifies its six
+  relation rows injectively with both the alternating `P7` edges and the arcs
+  of `0<->1<->3<->2`; the Boolean parent is the rank-four tail-star image.
+  Arc reversal splits `3+3`.  For interior nonmultiples of three the diagonal
+  coefficient span is exactly the root-even module; at `r0=3,6,9` it is that
+  module plus `1->3-3->1`, whose boundary is nonzero.  The 60 tent-section
+  failures have source-quotient stalk ranks `(2,1,1,1,1,2)`, total eight and
+  reflection split `4+4`; the independent full-tensor audit verifies that all
+  60 remainders are endpoint-annihilated, refuting an ordinary P7-incidence
+  kernel.  The best
+  static formalization is six normalized scalar cylinder sections, not a
+  local system or H1 cocycle.  Script/output/semantic LF SHA-256:
+  `488caabca1376d4886dce3368aa416a542d23aee522fed063df97caf9992b5c3` /
+  `1a4178ea6598222816df965694157f31d3371664dcb76bf89a5fb0e220628945` /
+  `54f2fd0702cfee4b3af954ca3719b9966cb06e9227a94bdc8b14651c452d5feb`.
+
+- `lrc_r5_two_current_digits_pointed_root_difference_carrier_transition_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT POSITIVE FIVE-COORDINATE CANDIDATE;
+  INDEPENDENT HOSTILE AUDIT ACCEPTED].  A clean-room sweep retains the pointed six,
+  `r0,r1`, root difference, and relation.  Gamma/inverse marginals recover the
+  audited two-digit, one-digit/current-root, and pointed/root tensors.  Actual
+  `r1` amplitude ranks are `13/12`,
+  but base, one-digit, two-digit, and both union carrier ranks are all six,
+  statewise `1,2,1,2`.  No stationary `K_r1` works across all `r0`.  Instead,
+  all 169 fixed-`(r0,r1)` systems have unique diagonal `6x6` solutions,
+  `sum_r1 K_(r0,r1)=I_6` for each `r0`; there are 121 distinct actual maps
+  with rank histogram `0:35,2:2,4:2,6:130`.  Same-parent support/flat hostiles
+  have amplitude ranks `4/3` and `1/0`.
+  This is amplitude growth inside a fixed static carrier, not chronology,
+  complete address, arrival ancestry, physical current, row exclusion, or
+  LRC(14).  Script/output/semantic LF SHA-256:
+  `9d1671e0f823fdbaa9ab79915ba05dbb4dda4c6eabb97fe4484baf4c2e3205f2` /
+  `c4d7e859cce2b2e37dfaf506fd722c2f9f97c12ee21352b37d580802c645a555` /
+  `38725dc1d7129b326634c99bd70e1eb414590dc24fb83bd9522e2095e41f204c`.
+
+- `lrc_r5_ufull_owner_node_boolean_square_nested_ancestry_digits_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT POSITIVE NESTED SOURCE/CURRENT-ANCESTRY
+  CANDIDATE; INDEPENDENT AUDIT PENDING].  On one THM-2471 Boolean stalk it
+  retains `n=c+13*b_source` before `Q` and `a=r_owner+13*h` in the outer
+  current fold.  All three pointwise marginals recover the audited source
+  digit, independently audited current digit, and `U_u`; reflection, four
+  literal guards, same-root zero, and an additive same-marginals hostile pass.
+  The 144 double-nontrivial source profiles have rank 17.  Their certified
+  basis maps to a rank-four state/relation amplitude quotient, while its
+  relation rows have rank six and equal the six pointed-tail rows statewise
+  `(1,2,1,2)` and globally `(6,6,6,6)`.  Thus the interaction creates no new
+  relation-output carrier direction; it supplies amplitude coordinates inside
+  the pointed-six carrier.  The selected basis has `612/612` modes.  Root
+  difference is marginalized; this is not digit equality, exact address,
+  chronology, physical current, row exclusion, or LRC(14).  Script/output/
+  semantic LF SHA-256:
+  `1188df8aa2a7a84c1e8ada5fc3cc8d3b839ece70298b94f1d94c9d440caa88f3` /
+  `0d177180974c20fb8f5ca4887178fe0db318bfbd41267377cfeddf1b460f4f6d` /
+  `6e5605f58b7a94ea5ea4e8f62cfa7ee135b0d52512225f4aaee248ad6e21a9ae`.
+- `keller_R7_finite_sheet_recursive_norm_probe_20260816.py` and
+  `keller_R7_finite_sheet_split_outer_independent_audit_20260816.py` ->
+  matching `.out` files [THM-3527 PROVED + VERIFIED-EXACT +
+  SPLIT-REPRESENTATION AUDITED].  Six recursive-adjugate cubic layers realize
+  the complete `729`-sheet norm orbit above the canonical finite old-`L`
+  point.  All 72 leading/derivative/chart unit gates pass, the new `N^6(L)`
+  factors are `71,17,30`, and `R_7(q)` reduces to `72,44,53` modulo
+  `101,103,107`.  Omitting the `H` normalization changes the residues by
+  exactly `64^-243`.  Independently, the split outer roots `10,23,38` over
+  `F_71` carry complete 243-sheet `R_6` values `56,65,10`; their product gives
+  `R_7(q)=56`, while an omitted branch gives `34`, and each branch agrees with
+  a frozen-`H` flat determinant.  Hence `R_8` is polynomial/L-coprime and has
+  the Pell-predicted packet `A(419839,152211)`.  No image, irreducibility,
+  all-level, arbitrary-map, or general JC claim follows.  Primary
+  script/output/semantic SHA-256:
+  `80d7a5e105be82d29fb1c3caf28ec0d4d98ea1e51c02bbf080125ef812133463` /
+  `100371c34090af4d9e613696b591770e9092e4f199e28e55c14095acd6f1b271` /
+  `82efb24e0c4a6e0df9671f0f5a5009dd0e77d1b0aa8ef2341780dfe23ea28c38`;
+  audit:
+  `623a7817ba233d3c3c5e0dfbe218fdb93fb27c3a034d882a25f10e401228a3fd` /
+  `6189cad420d7675eeb0a623ed4e62855d0cc3b14b671fce195eed67c3ac87c8f` /
+  `d8fd9ddf1f8679b90434d1f6ffa6a717c1725e3dcb5703c040e1ab724081e72b`.
+  `82efb24e0c4a6e0df9671f0f5a5009dd0e77d1b0aa8ef2341780dfe23ea28c38`.
+- `lrc_r5_endpoint_response_rank_six_representation_audit_20260816.py`
+  -> matching `.out` [FINITE-EXACT COMMON-IMAGE REPRESENTATION AUDIT].  On the
+  canonical owner base, the source-time high-digit and current-leg low-digit
+  `52 x 13` endpoint tables have one identical rank-six relation row space
+  `W`; their RREF and induced-involution graph hashes agree.  Path/radix
+  reversal descends as `3 trivial + 3 sign`, its Boolean parent is `2+2`, and
+  the refinement quotient is `1+1`.  The affine stabilizer on relation labels
+  is trivial, refuting a cosmetic odd-Fourier interpretation.  This compares
+  endpoint quotient spaces only, not a typed map between the two digits,
+  root-difference lift, physical current, row exclusion, or LRC(14).
+  Script/output/semantic LF SHA-256:
+  `fb9068c3e6fd7436feb31fd33869c486512e286a35ef219b6df1e9c2538fbd36` /
+  `86a2c1930cd180829078f350afb366be84aee5c6059a53e019ab8fde64a30113` /
+  `7baeb128a4c4d5998342611fdcf821d002ffb4622692dd72c03e6f11c8d9825a`.
+- `lrc_r5_pointed_carrier_rank_six_representation_audit_20260816.py`
+  -> matching `.out` [DERIVED FINITE-EXACT REPRESENTATION AUDIT; FOUR-WAY
+  INTEGRAND AUDIT PENDING].  In the current-branch x root-difference candidate,
+  statewise branch rows equal the six pointed row spaces.  Difference
+  marginalization is injective on their rank-six sum and maps it exactly to
+  the common endpoint space `W`; the pointed three-pair reversal gives the
+  same `3+3` involution graph.  This identifies the typed quotient mechanism
+  but does not independently audit the imported four-way integrand or construct
+  exact address, chronology, physical current, row exclusion, or LRC(14).
+  Script/output/semantic LF SHA-256:
+  `c8fb05a216385d9ef40a8487ee0fc0b8cb23fad4e0128be7910d79481d4bcfe8` /
+  `f1e858d13ddca89e88933cc3f5b14da93ffa61c4c185faaf5a59bad5ca060463` /
+  `5e491136809fc164bbbfc7aeb9c272b7aff05020992985a39f291bf31297903e`.
+- `lrc_r5_two_digit_period3_pointed_profile_probe_20260816.py`
+  -> matching `.out` [DERIVED FINITE-EXACT PROFILE-FLAG SIDECAR TO THE
+  INDEPENDENTLY AUDITED TWO-DIGIT OBJECT].  It matches the candidate profiles,
+  boundaries, and owner-visible cell mask entrywise to the independent
+  reconstruction.  Without rerunning the endpoint sweep, characters,
+  inversion, or spectral census, it derives the visibility-projected flag
+  `L_3 subset M_6,B_10 subset G_12`, with `M intersect B=S_6` and reflection
+  splits `(2,1),(3,3),(5,5),(6,6)`.  Each interior multiple is `L` plus one
+  independent line; endpoint integration identifies the three lines and
+  drops two boundary directions, explaining the apparent `4,3,3` pattern as
+  an ordered-radix flag rather than a `C_3` action.  The state ranks
+  `M=(1,3,1,3)` versus pointed `(1,2,1,2)` refute a lossless state-graded
+  carrier identification.  The endpoint tensor is independently audited;
+  there is no root-difference lift, physical current, row exclusion, or
+  LRC(14).
+  Script/output/semantic LF SHA-256:
+  `9578b06cc07a0af28767ada6eeb7551fd8c958a6b214212741a25923a17f667e` /
+  `2e21c8f216ea928d163c06bc802affe0e357150e300bc2fbd083ed447fd2a688` /
+  `0d5798935986c13b1aa70fc1db7abac162994dabaf7dd3ab5f323ffeb1d1d63e`.
+
+- `lrc_r5_ufull_owner_node_boolean_square_inverse_owner_branch_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  CURRENT-LEG INVERSE-OWNER-DIGIT SIDECAR].  Without importing the candidate,
+  it factors `13^5=13*13^4`, retains `r_owner=a mod 13`, and reconstructs all
+  digit/root profiles over the independently audited Boolean square.  The
+  rootwise marginal, reflection `(u,r,state)->(12-u,12-r,state XOR 2)`, split
+  field, three literal guards, same-root zero, and exact square gamma/table
+  marginals pass.  Actual/flat ranks are `(4,4,6)/(4,1,4)`, centered ranks are
+  `(3,4,6)/zero`, all `432/432` pure triple modes fire, and fixed `t=6` has
+  rank `4` with `52/52` nonzero entries.  All candidate digests and normal/
+  `-O` replay agree.  This is current-leg last digit, not source-time sheet,
+  root difference, full inverse ancestry, exact address, chronology, physical
+  current, row exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
+  `4b0bd05ffa6195ff484433329e334d771bc27e7cd380136b50b45e7248bb98ba` /
+  `d1b7aef51b58c28afc40ec0d08319bdaf0fae7a3f5e681dddab3d0f1d2f1a543` /
+  `7063720d0e0e4847ce752102de83274ea47d7740fc435a64bae425dbd7100121`.
+- `keller_renewal_pell_spinor_sidecar_20260816.py` -> matching `.out`
+  [PROVED ALGEBRAIC COROLLARY OF THM-3522; VERIFIED-EXACT].  Under
+  `X=6e-9m`, `Y=m`, the packet recurrence is multiplication by
+  `alpha=(5+sqrt(57))/2`, so `X^2-57Y^2=36(-8)^n`,
+  `3e^2-9em+2m^2=3(-8)^n`, and the generalized Cassini determinant is
+  `3(-8)^n`.  The associated primitive Pythagorean triples obey
+  `A-9B+5C=3(-8)^n`; their integral transition has determinant `-512` and is
+  a Lorentz similitude of multiplier `64`, not a Berggren-tree isometry.
+  THM-3528 now realizes all rows as raw polynomial complete packets; named
+  `L`-coprime rungs stop at `R8`, and later units, images, irreducibility,
+  separability, and general JC remain open.  Script/output/semantic SHA-256:
+  `6214844884b89acc366c0352b6880429c9f23c02c52e6667c5f489b14748cdd0` /
+  `7cb9f492557fa7ef9710023ca377d47d5fb7f36422e78376c7ebe155cdb9b2e9` /
+  `c5758a441d60c45f254edbfea3d2ec06c34886fdcd0fc9bc27685dc0aaa4a5af`.
+
+- `lrc_r5_ufull_owner_node_boolean_square_source_branch_sheet_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  SOURCE-TIME P169 HIGH-BRANCH SIDECAR].  Without importing the candidate, it
+  reconstructs each `b=floor(n/13)` profile from exact inverse images of `E`,
+  then applies `Q`, `P_(13^5)`, and the common-owner endpoint coupling.  The
+  `15379`-cell source-sheet certificate, all rootwise restorations, branches
+  `1..11`, flat `11 x 4` support geometry, three guards, same-root zero, and
+  exact square gamma/table marginals pass.  Response ranks jump `4 -> 6`, the
+  branch marginal has rank `3`, and the pure three-way interaction has rank
+  `6` with `432/432` modes; all eight submitted digests and normal/`-O` replay
+  agree.  This is source-time high digit, not current-leg `r_owner`, arrival
+  atom, exact address, chronology, row exclusion, or LRC(14).
+  Script/output/semantic LF SHA-256:
+  `5d53792e0f3251459a412e8f729d2ff2945c66de2e75d343655af1e18db2a5cd` /
+  `fda9ce600878a69e1904fd2f1501834905f9e6f52d72ed07842e796857be7f5b` /
+  `6cac7c90f3ebe3f33a27c1979b74006c545260bb6d41a68f4f76442456114fe6`.
+
+- `lrc_r5_owner_node_inverse_branch_root_difference_four_way_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT POSITIVE FOUR-COORDINATE CANDIDATE;
+  INDEPENDENTLY HOSTILE-AUDITED].  The exact double marginal recovers the audited
+  root-difference parents on summing `r_owner` and the current-branch parent
+  on summing `s=u-q`.  The actual four-way ANOVA has axis ranks
+  `(3,4,12,12)`, `2+2` ranks `(6,36,34)`, and all `5184=3*12^3` modes.
+  Support-normalized, branch-flat, and difference-flat controls have zero
+  four-way interaction.  Statewise branch row spaces equal the audited
+  pointed-tail row spaces with dimensions `(1,2,1,2)`, explaining the exact
+  rank-six channel through the six realized pointed carriers.  This is not
+  exact address/current, chronology, row exclusion, or LRC(14).
+  Script/output/semantic SHA-256:
+  `d66378cc8db99c4de087fa78413721de6aa7be3960f51ee39f29feae9313eeba` /
+  `25122a1344c2677a6444a98f21beb7e4b7f27f80acc708263050916409ebea1b` /
+  `0e527913f22fc7d165f795df42e25692fba9289ccaf85aee4a3a2402613bdb41`.
+
+- `lrc_r5_owner_node_inverse_branch_root_difference_four_way_independent_audit_20260816.py`
+  -> matching `.out` [FINITE-EXACT INDEPENDENT HOSTILE AUDIT ACCEPTS THE
+  SCOPED FOUR-WAY INTERACTION AND POINTED-SIX FACTORIZATION].  Without
+  importing the submitted four-way implementation, it rebuilds the stronger
+  `point x current digit x source-root difference x relation` tensor from the
+  independently audited parents.  Both marginals pass segmentwise, at gamma
+  level, and after inversion; literal guards, same-root zero, actual support,
+  and support/branch/difference-flat hostiles pass.  Actual/pure axis ranks
+  are `(4,4,12,13)/(3,4,12,12)`, `2+2` ranks are
+  `(6,40,42)/(6,36,34)`, and all `5184` pure modes fire.  Exact coordinates,
+  not only equal dimensions, prove the statewise current-branch row spaces
+  equal the six pointed rows; the stronger point-resolved carrier has global
+  base/digit/union ranks `(6,6,6)`.  Branch amplitude rank four, carrier rank
+  six, and whole-tensor ranks `40/42` are distinct.  The carrier is the six
+  directed arcs of the incoming bidirected-`P4` sidecar, whose static `H1`
+  is zero.  The source/current
+  `17->4->6` and two-current `13/12->6` comparisons do not imply a stationary
+  digit recurrence; the latter has only address-conditioned diagonal
+  `K_(r0,r1)`.  No exact address, chronology, physical current, row exclusion,
+  or LRC(14) consequence.  Script/output/semantic LF SHA-256:
+  `cf2efd6317dd6ba2a05865ad11d115f1ab239e8ebafb2b8b3764447d1e0e67a3` /
+  `8b5e5101e9df0da25899d5b39c3604dae7d2706200208f153b65d37fd2f63640` /
+  `57bb908c381608415091feb14035354e7cef6dd3b11a4e9ce78c363fc703f2a0`.
+- `lrc_r5_ufull_owner_node_boolean_square_two_digit_current_ancestry_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT POSITIVE TWO-DIGIT CURRENT-ANCESTRY
+  OBJECT; INDEPENDENTLY HOSTILE-AUDITED WITH SCOPE REPAIR].  The lawful factorization
+  `13^3 fold -> r1 window -> r0 window -> collision-root window` is
+  profile-identical to one half-open mod-169 window for
+  `a=r0+13r1+169c`.  Its exact projective chain recovers the pinned
+  one-digit `r_owner` gamma/tensor and then the audited Boolean square.
+  Every fixed-`r0` `r1 x (state,relation)` conditional rank is three or
+  four, refuting every scalar state/relation-blind digit factorization (rank
+  at most one), but not general autonomous recurrences; the
+  concrete same-parent flat lift has rank-one conditionals and zero four-way
+  interaction.  Actual/pure axis ranks are `(4,13,13,6,4)` and
+  `(3,12,12,6,4)`, and all `5184` pure four-coordinate modes fire.
+  The sparse 34-boundary aggregation, three literal guards, pointwise
+  same-root zero, reflection, and four direct 2,197-term inversion probes
+  pass.  This is two static current digits, not a complete address,
+  `U_clock` chronology, arrival ancestry, physical current, row exclusion,
+  or LRC(14).  Script/output/semantic LF SHA-256:
+  `3dab580e479e4ba7ac8801c1e5d8523018e0b3dc1c2176c072e7c609033eb6c8` /
+  `b1297340f88564849a4db1b2edd51566b8728b7cc9d603a5dda05609df46f4d7` /
+  `61743457afc0cff984c87affa7f2e67bf3a21e08a401ea69b679319f2f51e826`.
+
+- `lrc_r5_ufull_owner_node_boolean_square_two_digit_current_ancestry_independent_audit_20260816.py`
+  -> matching `.out` [FINITE-EXACT INDEPENDENT HOSTILE AUDIT ACCEPTS THE
+  TWO-STATIC-CURRENT-DIGIT PROJECTIVE CYLINDER WITH SCOPE REPAIR].  A
+  clean-room `13^3 fold -> r1 -> r0 -> root` reconstruction proves literal
+  half-open nested/direct mod-169 profile equality, reflection
+  `(u,r0,r1,state)->(12-u,12-r0,12-r1,state XOR2)`, and the exact marginal
+  chain to the independently audited one-digit tensor and Boolean square.
+  It matches all candidate digests, ranks, `5184` pure modes, guards,
+  same-root zero, and four direct `2197`-term inversions.  Fixed-`r0`
+  conditional ranks `3/4` are amplitude ranks, not pointed-six carrier
+  ranks; they reject only scalar state/relation-independent factors.
+  Hidden-state, matrix, state-dependent, nonlinear, and temporal recurrences
+  remain untested.  No complete address, chronology, current,
+  row exclusion, or LRC(14) consequence.  Script/output/semantic LF SHA-256:
+  `126be106a34a990f22e66b26d79ea3568ee4f394419936ed47f1bfbe0656788f` /
+  `e12b1eecf6c7b4cb2a25398a6fdfcf7d3261693e810a3104b9ca1811d54ca15e` /
+  `f2af726e9d5abd1487e841623ce2f62ca647c86e5a1a68e41eda4d9dda6c81ac`.
+
+- `lrc_r5_ufull_owner_node_pointed_six_state_root_difference_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  SIX-POINTED SOURCE-TAIL REFINEMENT].  Without importing the candidate, it
+  retains `(state,u)` on every selected source pair and recovers both audited
+  root-difference parents on pointed marginalization.  Same-root zero, three
+  literal guards, the pre-guard source-tail census, all submitted digests, and
+  normal/`-O` replay pass.  Weighted/support-only/flat-tail ranks are
+  `(6,12,13)/(6,12,13)/(4,12,13)` and centered ranks are
+  `(5,12,12)/(5,12,12)/(3,12,12)`.  The equal-tail hostile has the same parent
+  but kills both within-doubleton tail contrasts, while the actual contrasts
+  fire on all 12 nonzero differences.  Path incidence, not a cosmetic `C6`
+  DFT, gives edge supports `(120,144,120,144,120)`.  This is absolute source
+  tail, not inverse ancestry, exact address, chronology, physical current,
+  row exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
+  `8c7cb5f98b15a768d4f4d6060074e0815a8f089f857ec4f3c55a0e7d877e1fec` /
+  `2d0efc3dfe834c9d65924e4404083745f2dcde863cff0254dde0612be395719a` /
+  `66db2301f88db1ced7784868095e198e3e12f1fb79175ebd902d0f569a5decef`.
+
+- `lrc_r5_ufull_owner_node_boolean_square_root_difference_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  THREE-COORDINATE SOURCE-CUT INTERACTION].  Without importing the candidate,
+  it reopens every selected ordered root pair on the audited square and bins
+  `s=u-q` before weighting/integration.  Segmentwise pair marginals, response
+  phase `zeta13^beta`, three literal guards, square/source-erasure marginals,
+  and source-aware same-root zero all pass.  Weighted/support-only/endpoint-only
+  ranks are `(4,12,13)/(4,12,13)/(4,7,13)` and three-way ANOVA ranks are
+  `(3,12,12)/(3,12,12)/(3,6,12)`; all centered banks have `432/432` triple
+  modes, showing why rank remains the necessary hostile.  All fifteen
+  candidate digests and fixed `(1,0,6)` records agree under normal and `-O`
+  replay.  This is source cut-arc colour, not THM-2334 relation-lattice exact
+  address, inverse ancestry, chronology, physical current, row exclusion, or
+  LRC(14).  Script/output/semantic LF SHA-256:
+  `bdb211b727550ba51c1ca83490fbda50446b6e3c0596e229cd864e741af93509` /
+  `cfb53edd90174d2362bae7235f2f85af3109a2754003afc48b94a82466b449cf` /
+  `25bbbd871fe072915b07662c76661bf72be8d46258a6ce825ab1635ef7fe5c56`.
+- `lrc_r5_ufull_owner_node_boolean_square_branch_sheet_sidecar_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT NONREDUNDANT SOURCE-ANCESTRY SIDECAR;
+  INDEPENDENTLY AUDITED AT THE SCOPED SURVIVOR].
+  Retains the high digit `b=floor(n/13)` of the left `P_169` inverse branch.
+  A `15379`-cell certificate identifies `b` with the source guard sheet, with
+  `1183` cells each.  After `Q`, only branches `1..11` survive and each
+  meets all four owner-visible Boolean states; summing branches restores every
+  audited parent row exactly.  The branch x square response rank rises from
+  `4` to `6`, while the branch marginal has rank `3`.  Removing every lower
+  marginal leaves a rank-six pure three-way interaction with all
+  `432=12*3*12` branch/state/relation modes nonzero; fixed `(1,0,6)` has rank
+  `3` and `44/52` nonzero entries.  This is source-time finite ancestry, not
+  the current-leg `r_owner`, exact `C(a;X,m)`, an arrival atom, chronology,
+  physical current, row exclusion, or LRC(14).  Script/output/semantic LF
+  SHA-256:
+  `592aa0bce31f2da5d5e2ddff7f3ffe6f1398f3a07b5ce927e0d97c9fe309ae3b` /
+  `082ec6bfc743e317fc5b388ad758cbb78df75de93c524cdc22c92729fa4eabc5` /
+  `c82d9aba055f2f5ccbea75e092dd7a45b9a9f2a4a1b91762f32ad5852cf9c552`.
+
+- `lrc_r5_ufull_owner_node_boolean_square_inverse_owner_branch_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT POSITIVE LAST-INVERSE-OWNER-DIGIT
+  SIDECAR; INDEPENDENTLY AUDITED AT THE SCOPED SURVIVOR].  Retaining
+  THM-2471's `r_owner=a mod 13`
+  recovers the audited square.  Actual/flat ranks are `(4,4,6)`/`(4,1,4)`;
+  pure three-way ranks are `(3,4,6)`/zero, with all `432` actual triple modes.
+  All 13 branches survive, and reflection sends `(u,r,state)` to
+  `(12-u,12-r,state XOR 2)`.  This is neither source-time sheet, exact
+  address/current, nor LRC(14).  Script/output/semantic SHA-256:
+  `ae1cf021ea23f325eeded42ff1dea8df903d837b1d7ab551289d62f7ab7a0348` /
+  `1b4881cda87c46bfcfcc57dc5ea33152858bda4ad632b043a30fec2f55065fec` /
+  `f43e9fb0937ae93c54c2ac0aeb1257dfd8741f9cef32ef4bf2a5f3dd2cf06388`.
+- `lrc_r5_ufull_owner_node_boolean_square_refiner_independent_audit_20260816.py`
+  -> matching `.out` [SECOND-PATH HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  BOOLEAN-SQUARE REFINER].  Without importing the candidate, it composes the
+  separately audited parent with an independently reconstructed source-state
+  split.  It verifies the exact hierarchy `6` abstract cuts -> `5` physical
+  Gray-path states -> `4` owner states: `{0,12}` is globally absent and OWNER
+  excludes only realized `{6}`.  Parent marginal, five literal guards,
+  pointwise same-root zero, rank `(4,4,3)`, both rank-two bit marginals, all
+  `36` centered mixed modes, fixed `(1,0,6)` nonvanishing, and all seven
+  comparison digests pass; normal and `-O` transcripts are identical.  It
+  identifies the cheapest lawful next sidecar as the canonical THM-2471 last
+  inverse branch `r_owner=a mod 13` on `X_(u,a)`, to be retained before the
+  ancestry marginal; this is not `r_deep`, grouped exact `C(a;X,m)`, or a
+  temporal transport.  Script/output/semantic LF SHA-256:
+  `a75300a81efebef83683c41ac073ffa4d3268da83e96071d7b1b576b36e5bbc7` /
+  `8252145208e8976b9c8afa44cfac812866b00e25b49059808be8b25807b93f06` /
+  `af0d543232869e82ee8d0191478ba7a833954cb19b387dedb6fb6f44a6fa272c`.
+- `lrc_r5_ufull_owner_node_pointed_six_state_root_difference_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT POINTED-SIX SOURCE-ROOT CANDIDATE;
+  INDEPENDENTLY AUDITED AT THE SCOPED SURVIVOR].  Marking the active source tail refines the
+  Boolean square to the six realized path states
+  `(0,0),(1,0),(1,6),(3,6),(3,12),(2,12)`.  Summing pointed fibres recovers
+  the pinned state/root-difference tensor exactly.  Weighted and support-only
+  tensors have maximal ranks `(6,12,13)` and centred ranks `(5,12,12)`; an
+  equal-tail lift with the same parent has only `(4,12,13)` and `(3,12,12)`.
+  The five path-edge mixed supports are `(120,144,120,144,120)`: outer edges
+  miss relation frequencies `+/-1`, the owner-gap edge misses `+/-6`, and both
+  marked-tail switch edges are `144/144`.  Flat-tail kills exactly those two
+  switch edges.  At `(1,0,6)`, the weighted/support-only matrices have ranks
+  `6/5`, with both tail contrasts supported on all 12 nonzero differences.
+  There is no cyclic `C6`, exact-address, inverse-ancestry, chronology,
+  physical-current, row-exclusion, or LRC(14) claim. Script/output/semantic
+  LF SHA-256:
+  `52b5af635b394e8f6dda59746d369b4b62a73da5ee89c6ca8e758426a7e81b76` /
+  `40ca4ce5e6e4428c833e41e412e8acc58a1a1bb25bbfb542bc43a7319fe68e7e` /
+  `5001bed534a9b8f953529101f0b7a51cf6994c7dcb29b7aed576aec239078384`.
+
+- `lrc_r5_ufull_owner_node_boolean_square_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  RANK-GREATER-THAN-ONE SOURCE-SUPPORT REFINER].  Without importing the
+  candidate or its parent, it rebuilds the THM-2471/THM-2594 source service,
+  actual THM-3514 endpoint indicators, common split field, direct `Q(13y)`
+  pullback, and five literal guard controls.  The realized source carrier is
+  the five-state Gray path `{0}->{0,6}->{6}->{6,12}->{12}`, with toggle word
+  `(6,0,12,6)`, measures `(1,12,2,12,1)/28`, and no `{0,12}` state.  `OWNER`
+  excludes only state type `{6}` and leaves four positive connected states
+  of measure `1/28`; complement is XOR by `11`.  Summing states recovers the
+  corrected delta-cell parent exactly.  Coupled/erased/centered ranks are
+  `(4,4,3)`, both bit marginals have rank two, and the meaningful Walsh x
+  `F_13` spectra are `(52,1,3,12,36)`, `(52,1,3,12,36)`, and
+  `(36,0,0,0,36)`.  This is a typed source-support refiner on one `r=5` host,
+  not exact address, `U_clock` chronology, uniform rows, a physical current,
+  row exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
+  `e585c1a18d846c4ab87fc159ad411bad90859be831831cea1c0e8f326d9b440f` /
+  `86820462aab1e54c144ffba633a323eb80985c6b0d9eab8c7d6b985ec2eafbd8` /
+  `b0996af3f1760b2118187490c93e0e01b322cb57fd6b25d3bf3688778b7e664c`.
+- `lrc_r5_ufull_owner_node_boolean_square_root_difference_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT THREE-COORDINATE COMMON-OWNER CANDIDATE;
+  INDEPENDENTLY AUDITED AT THE SCOPED SURVIVOR].  Retaining the lawful THM-2471 source-root
+  difference `s=u-q` before integrating the actual endpoint factors refines
+  the pinned Boolean square to `V4 x F13 x F13`.  Summing `s` recovers that
+  square exactly; weighted and support-only same-root slices vanish before
+  integration, while the endpoint-only hostile fires there.  Raw directed-cut
+  arc incidence has rank `2`, but the weighted tensor has flattening ranks
+  `(4,12,13)` and maximal three-way ANOVA ranks `(3,12,12)`.  All
+  `432=3*12*12` genuinely triple Walsh/difference/relation modes survive.
+  Support-only retains the same maximal ranks; endpoint-only drops to
+  `(3,6,12)`, so typed source incidence, not numerical profile weights, is the
+  load-bearing source datum.  At `(1,0,6)` the weighted `4x13` matrix has rank
+  `4`, centred rank `3`, and chamber-reflected zero sets.  This is not exact
+  address, inverse ancestry, chronology, physical current, row exclusion, or
+  LRC(14).  Script/output/semantic LF SHA-256:
+  `dddeea995e9ab7e8abfd010e00c798c93a28ff924da8172dd114756184942a57` /
+  `0f96a72b638a8b705a344edd2f696652ad46eb7fccb5d2fcdf9b418bd0023791` /
+  `38f2cbc38bbeee0a8556e0649c4cd608645cba1477e78f3d436b860b4d696278`.
+
+- `lrc_r5_ufull_owner_node_boolean_square_refiner_probe_20260816.py` ->
+  matching `.out` [FINITE-EXACT GENUINE BOOLEAN-SQUARE x F13 COMMON-OWNER
+  CANDIDATE; INDEPENDENTLY HOSTILE-AUDITED].  The three-root source spine
+  `{0,6,12}` has six abstract nontrivial directed cuts, each a three-vertex
+  tournament with one missing edge, but realizes exactly the five-state Gray
+  path `{0}->{0,6}->{6}->{6,12}->{12}` with toggles `(6,0,12,6)` and measures
+  `(1,12,2,12,1)/28`; `{0,12}` is globally absent.  `U_full` owner support
+  further excludes the realized centre `{6}` and leaves four intrinsic states
+  indexed by `(left/right,singleton/doubleton)`; complement is XOR by `11`.
+  All four have exact measure `1/28`.  Splitting the actual common-owner
+  integrand by these states before integration recovers the parent on summation,
+  passes five literal guard controls, and retains pointwise-zero same-root.
+  Its `4x13` table has rank `4`, ANOVA rank `3`, full spectrum
+  `(52,1,3,12,36)`, and all `36` genuinely mixed modes after centering.  Each
+  one-bit marginal is rank `2` with `(26,1,1,12,12)`.  All four fixed
+  `(1,0,6)` state values and Walsh channels are nonzero.  This is a typed
+  source-support refiner, not exact address, U_clock chronology, uniform-row
+  current, row exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
+  `c7bbd2d82ed067914f39253ac52ce32f9e179a859fb55a421bd2b390f707d881` /
+  `0235d50148e2bc3516ed5c52700d94e74c41ac73a535472b853369b09a0970d7` /
+  `bae28345b0b1aea35b244bfbf04123414f0c8fbf9eeca98e39d2b94dd6d107ec`.
+
+- `lrc_r5_ufull_owner_node_common_base_current_probe_20260816.py` ->
+  matching `.out` [FINITE-EXACT ONE-COMMON-BASE OWNER-NODE INTEGRAND
+  CANDIDATE; INDEPENDENTLY HOSTILE-AUDITED AT THE SCOPED SURVIVOR].  On the exact joint coordinate
+  `lcm(T_source,13*T_endpoint)` and a Lucas-certified split field for
+  `lcm(T_source,13^2*T_endpoint)`, the actual THM-2471 source root-service
+  profiles and actual `U_full` endpoint Boolean factors are multiplied at
+  the same owner nodes before integration.  The endpoint harmonic descends
+  to frequency `57122` on the common base.  All five literal guard
+  restorations pass; the same-root source sector is pointwise zero before
+  integration.  The role bridge is nonzero at
+  `223272610175651920448188`.  However `OWNER` becomes `||y||<1/14`, so all
+  2197 character rows occupy only cell zero.  The formal spectra
+  `(91,1,6,12,72)` and `(72,0,0,0,72)` are the rank-one factorization
+  `delta_0(ell)R(t)` and its centred outer product, not genuine cell/residue
+  mixing (MISTAKE-417).  The raw source support is exactly a directed
+  cut `K_(1,12)` or `K_(2,11)`, never a tournament or bidirected pair.  This
+  remains a one-host candidate without exact `C(a;X,m)`, arrival/source-time
+  identification, `U_clock` chronology, row exclusion, or LRC(14).
+  Script/output/semantic LF SHA-256:
+  `6ad93cd13d47159a565f39128b9a108b5203a396ed3ed05a2892222771d45e40` /
+  `2a36bfd5c888b1237ad8b3c698230305e84b8fed1436ddac1b02a6f24fb141a7` /
+  `98a27d4540648377c544d8e1b86c3dd3df7bb16d3431f6a9471f4844ba2e6b9f`.
+
+- `lrc_r5_ufull_owner_node_common_base_current_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS THE NARROW RESIDUE
+  BRIDGE AND REJECTS GENUINE `7x13` MIXING].  Rebuilds the THM-2594 source
+  profiles by an independent transfer fold, desheets THM-3514 endpoint
+  intervals directly, pulls back `Q(13y)`, and uses a prefix harmonic
+  primitive rather than the candidate contraction.  Complete Lucas/order,
+  `169 I5`, pointwise same-root, reference-boundary guard, frequency/phase,
+  inverse-sign, and source-erasure gates pass.  It reproduces the candidate
+  role bridge `223272610175651920448188` and every load-bearing digest.  The
+  primary hostile proves `OWNER` is exactly cell zero, so all 2197 character
+  rows lie there and the table/ANOVA have rank one.  Thus the full formal
+  spectrum is `delta_0 tensor R`, not a two-coordinate closure.  No exact
+  address, temporal/`U_clock` transport, physical current, row exclusion, or
+  LRC(14) follows. Script/output/semantic LF SHA-256:
+  `72e819f1cae92e8969516dc79215e683c538e80da64c9e989e2c5115aebb5304` /
+  `01738d82f1e0895ec294d3e716deca245567cd3e568b51d9e6669d67684a47b2` /
+  `88d4be52bcb16a52ab2656ff0c0b6bf70e33a2174652ee7e1df62376426f24e6`.
+
+- `lrc_ufull_desheeted_common_residual_base_probe_20260816.py` -> matching
+  `.out` [FINITE-EXACT ACTUAL-ENDPOINT ONE-BASE COUPLING CANDIDATE;
+  INDEPENDENT AUDIT PENDING].  The canonical guard desheeting
+  `91t=7a+r -> (a,y=r/7=13t-a)` identifies THM-2471's owner-node form while
+  keeping distinct endpoint sheets.  Both the delayed word
+  `Q(169t)=Q(13y)` and the endpoint harmonic descend sheet-independently
+  because `742586=13^2*4394`.  Multiplying actual endpoint indicators before
+  summation gives same-sheet plus cross-sheet sectors; the same-sheet bank
+  exactly recovers the previously audited common-point digest and inverse
+  values.  Full, same, and cross `7x13` cell/residue tables each have
+  `91/91` split-field Fourier support; full ANOVA retains `72/72` mixed
+  modes.  The fixed relation class `(1,0,6)` has all seven F7 modes nonzero.
+  The new bridge `543695274352737840377` differs from the frozen Cartesian
+  bridge, so this is an alternate diagonal coupling, not a recovery of that
+  current; collision/horizons/source packet, exact `C(a;X,m)`, chronology,
+  row exclusion, and LRC(14) remain open. Script/output/semantic LF SHA-256:
+  `b30af31ba22ed702f8dac24d7452eb36cd8dbf6eb37f937a948f9976b01c5d10` /
+  `38123b9ad9171bc11054f5e41ba72f30d83a04cf0e2d70c04130da30dd0f9b6f` /
+  `97694f50b071dbf875802223dd894d7e1df86ef65a194c22d588505c59eea507`.
+- `lrc_ufull_desheeted_common_residual_independent_audit_20260816.py` ->
+  matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  ALTERNATE DIAGONAL].  Without importing the candidate, it derives
+  `91t=7a+r`, `y=13t-a`, verifies `Q(169t)=Q(13y)` endpointwise, and uses
+  `742586=13^2*4394` to eliminate the sheet phase.  An exhaustive atom/twist
+  guard law plus 78 literal guarded interval controls validates restoration
+  from the unguarded THM-3514 atoms.  The residual multiplicity identities
+  `n + n(n-1) = n^2` give same-sheet plus ordered cross-sheet equals full;
+  the same bank recovers point gamma digest `771545a5...303f` exactly.  Same,
+  cross, and full tables have formal spectrum `(91,1,6,12,72)` and centered
+  spectrum `(72,0,0,0,72)`, but MISTAKE-417's exact hostile applies:
+  `OWNER` becomes `||y||<1/14=cell_0`.  All 2,197 character rows occupy cell
+  zero, rows 1--6 vanish in characteristic zero, and each table and ANOVA
+  matrix has rank one with factorizations `delta_0(ell)R(t)` and
+  `(delta_0-1/7)(R-mean R)`.  The 13 residue modes remain nonzero, but the
+  repeated seven cell modes are not a mixing certificate.  The full residual
+  bridge `543695274352737840377` remains nonzero and differs from the
+  Cartesian bridge `389266878372286537904`: this is an alternate diagonal,
+  with no collision,
+  horizon, source, chronology, exact `C(a;X,m)`, physical-current, row-
+  exclusion, or LRC(14) consequence.  Script/output/semantic LF SHA-256:
+  `53eba805e65490d6f571371cda3efa2f69e3f96aea3b1feb6aa64367748e123e` /
+  `8d32019f7af66c85e7af45793c831eebe6a21fd7667f47fa6bf581e25b4b3aa3` /
+  `9d2070f27bcac8cf576a75bc542222be1e31679bc12e989c2f9bc276e8dd872c`.
+
+- `lrc_r5_source_aligned_relation_residue_7x13_spectrum_probe_20260816.py`
+  -> matching `.out` [FINITE-EXACT SOURCE-TIME 7x13 SIMPLE-KERNEL CANDIDATE;
+  INDEPENDENT AUDIT PENDING].  Retaining THM-2594's seven half-open cells
+  before the source-aligned common-base marginal gives a
+  `39x39x7x13` tensor with `362/1521` atom-pair and `5150/138411` entry
+  support; summing the cell coordinate recovers every prior common-offset
+  entry.  Contracting against the complete THM-3479 refined `(1,0,t)`
+  endpoint bank gives full `91/91=(1+6)(1+12)` Fourier support for every one
+  of the 13 residues.  For the fixed relation class `(1,0,6)`, doubly
+  centering the output table leaves all `72/72` mixed cell-owner modes
+  nonzero; doubly centering the endpoint pair matrix first still leaves
+  `91/91`.  Cell-erasure and owner-erasure controls have zero mixed support.
+  This is a preintegrated `AX/BY` residue pushforward, not exact
+  `C(a;X,m)`, a physical current, THM-2512 bridge, row exclusion, or
+  LRC(14).  Script/output/semantic LF SHA-256:
+  `5f3fbf08bef6f9a61e684f0f7616e80e1dbbda4f6bb2ed4ca3788d3b8b53d65a` /
+  `c16e662584f381eb14f1aeeb315542391613603e02c061707a7e60870712aa06` /
+  `cd55336bb1dfe5f37f020c242c4bca5b7c6be339ec57e95d69e10bbe68d9dbaa`.
+- `lrc_r5_source_aligned_relation_residue_7x13_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  SOURCE-TIME PACKAGE].  Without importing the candidate, it inserts all
+  seven THM-2594 half-open cells before integration and rebuilds the complete
+  THM-3514 `(1,0,t)` endpoint bank.  The clean-room tensor has 362 supported
+  atom pairs and `5150/138411` entries; summing cells recovers every
+  `39x39x13` source entry.  Transposing only its final `[c][ell]` axes gives
+  the candidate tensor digest `39d7a0b4...e0cf`.  Every residue has spectrum
+  `(91,1,6,12,72)`.  At `(1,0,6)`, output ANOVA is
+  `(72,0,0,0,72)`, endpoint-pair interaction remains
+  `(91,1,6,12,72)`, and the mixed witness is
+  `218019411785559321795`.  Cell and owner erasures give
+  `(13,1,0,12,0)` and `(7,1,6,0,0)`.  Pair-space and output-space ANOVA are
+  distinct: all four endpoint-pair components independently have `91/91`
+  support for every residue.  This remains a preintegrated `AX/BY` THM-2334
+  residue pushforward, not `C(a;X,m)`, a physical current, THM-2512 bridge,
+  row exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
+  `c9a07252d1573cca47ce5a161d8dade2821078fc68f0f8aa03d0fd92763dae5a` /
+  `5cc3b76674abb9f037e8d0f9d96a64197df9eee6f159bb7a12f9401df9ee483f` /
+  `a0534b8d995956c126ce204117a9488b222ad25dd8b483b269e37740ffe13ccb`.
+
+- `keller_level_six_degree729_recursive_tuple_probe_20260816.py` and
+  `keller_level_six_degree729_fourier_flint_independent_audit_20260816.py`
+  -> matching `.out` files [THM-3526 PROVED + VERIFIED-EXACT +
+  SPLIT-REPRESENTATION AUDITED].  At `(1,1,1)` over `F_733`, recursive cubic
+  adjugates build the lawful inverse tower `3,9,27,81,243`; all five inverse
+  graphs and all 20 leading/derivative/chart-denominator unit gates pass.
+  Polynomial-valued `3x3` norm determinants give the exact degree ledger
+  `3,9,27,81,243,729`.  The degree-`729` norm has derivative gcd one and 42
+  distinct fibre factors, with degree multiset
+  `3x7,6x5,9x9,12x7,18x2,24x4,27x5,36,48,162`.  Seven scalar norm checks,
+  one literal held-out `243x243` determinant, odd-sign and top-truncation
+  hostiles pass.  The disjoint regular-matrix route Fourier-inverts all 732
+  nonzero-field determinants, gets zero degrees 730/731 and the identical
+  730-coefficient digest.  Hence the generic sixth block gate is closed and
+  `[Delta_6]=[2R_6]`; no `R_6/R_7` image, irreducibility, all-level,
+  arbitrary-map, or general JC claim follows.  Primary script/output/semantic
+  LF SHA-256:
+  `ad5d57b124f37b23fe9541c61bc4d919106b2db6c87a38632fabf3e7c076b8de` /
+  `7d152cdbf720012f1dd162bfbe603ae43691717b8fb7550a2770e3d67016eba1` /
+  `8009c86f1c8f290829df2ba8332dc2b09929b08cbd55376f48a13acd8c2c427c`;
+  audit:
+  `5ae0a538af7a65f4f5371c889e4119c9b2674636b28d59ce74f882f153d606f3` /
+  `65df39e35ed031d0f237c79be8c504caa23d9187599df2505b94e4a78d71235a` /
+  `d3eedf7368e7b98681ca41b76529c49403a351f79f2eb858e69df95362dc3518`.
+
+- `keller_level_five_degree243_finite_field_probe_independent_20260816.py`
+  and `keller_level_five_degree243_fourier_flint_independent_audit_20260816.py`
+  -> matching `.out` files [THM-3525 PROVED + VERIFIED-EXACT +
+  SPLIT-REPRESENTATION AUDITED].  At `(1,1,1)` over `F_251`, the inverse
+  tower has dimensions `3,9,27,81` with every graph, denominator, and
+  derivative gate a unit.  Nested coefficient algebras plus Newton
+  interpolation and independent FLINT regular matrices plus multiplicative
+  Fourier inversion recover the same degree-`243`, squarefree fifth
+  x-eliminant; degrees `244,...,249` vanish and the coefficient hash is
+  `912f32ec...00ab`.  The fibre factor degrees are
+  `1^2,2^6,3^4,4^4,6^4,9,12^3,24,36^3`, all exponent one.  Hence the generic
+  81 cubic blocks are cubic, separable, and pairwise coprime, and THM-2582
+  gives `[Delta_5]=[-2R_5]`.  No `R_5` irreducibility/image equation, fifth
+  component, all-level, arbitrary-map, or general JC claim.  Primary
+  script/output/semantic SHA-256:
+  `25e5bdcb299bd3291125a2bc5a45208f245ea53af39c37df36f8f0946c16115d` /
+  `91cf818499aeb3e0ccbb9b71ed7ead06983fbbac9c1fb4e6dd5904e5312d703e` /
+  `1397fb3a3173e8dfbe867f4fe4c2d527ef33da3c94fb60fcb227f8c60b9d15b7`;
+  FLINT audit:
+  `044f535a19a7142da23b541c8dddfd9bccfeae20d0e895bc0e0384905f12423a` /
+  `a5cabf0f78538ff7719ae203f6be3916a6b918ed13542ce9c38d125b361366a5` /
+  `0f44c226329aedf3a3c232dc44fcd228cfce9587483d92f47090baac2f2be7ea`.
+
+- `lrc_r5_common_gauge_bucket_quotient_hostile_probe_20260816.py` ->
+  matching `.out` [VERIFIED FINITE-EXACT FOLLOW-UP SIDECAR; SOURCE
+  INDEPENDENTLY ACCEPTED].  The thirteen common-offset owner functionals on the `39x39`
+  atom-pair space all vary inside every one of the 72 realized
+  chamber/drift buckets.  Restricting to the 576-dimensional within-bucket
+  kernel on the 48 owner-active punctured types still gives a surjective map
+  onto all thirteen pullback coordinates.  A certified `13x13` minor,
+  supported only in `LL` drifts `1,2,6`, has determinant
+  `89297302780816677760`; one two-pair `LL,d=1` perturbation changes all 13
+  pullbacks while preserving every one of the 117 endpoint bucket sums.
+  Thus complete K4/Walsh/tree data do not determine the atom-aligned
+  common-gauge pullback.  Perturbations are split-field pair functions, not
+  positive/Boolean endpoint realizations; no current or LRC(14) claim.
+  Script/output/semantic LF SHA-256:
+  `2d8efd445ee5aa2e08e1b4fb3f2bf23a04e1d565c1e25bf7828e0d024a243ab6` /
+  `cd2e799cf3b44042c03622f831f38e6e305ed2418a4c662ac23fbb4be0f5d58b` /
+  `cc535a60a93f5652b1980268a274f7a7280cc722e3c707bdae78467f6d367ddf`.
+- `lrc_r5_nonlinear_common_gauge_endpoint_connection_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  PACKAGE].  Without importing either submitted common-gauge probe, it splits
+  the THM-2594 source by all 39 guard atoms before `P_(13^5)`, restores every
+  unsplit root profile and pair mass, and independently rebuilds the THM-3514
+  endpoint pair function.  The source/target comparison digests agree exactly
+  (`e4d0d4fa...c3d4`, `c2d5911b...2df1`).  One common offset has full/active
+  support `72/117`, `48/52`, zero-owner spectrum `(13,12,12,13)`, and full
+  `(13,13,13,13)` spectrum at every nonzero owner character.  The actual
+  endpoint `d!=0` bridge is `64768431058832930873`, both full and restricted
+  endpoint spectra are complete, and the normalized endpoint pair pullback
+  is nonzero at all 13 owner characters.  All 26 full/restricted augmented
+  29-variable systems have rank 29 and nullity zero.  This is a finite scalar
+  address contraction, not a one-integral temporal current, `H^1` class,
+  grouped coefficient, row exclusion, or LRC(14) result.  Script/semantic
+  LF SHA-256: `886ef5ae...1c51` / `1cf457b2...6d02`.
+- `lrc_r5_source_aligned_branch_simple_kernel_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT HOSTILE AUDIT ACCEPTS SCOPED FINITE-EXACT
+  SOURCE-TIME PACKAGE].  Without importing either candidate script, it
+  rebuilds the full-support rank-three `39x39` raw `T^2` transition, recovers
+  the source sheet as `floor(n/13)`, constructs
+  `f_omega^src=1_Q P^2(eP_omega)`, and restores every unsplit profile.  The
+  clean-room common gauge has all 400 root pairs before restriction, 362
+  afterward, and all 48 owner-active types.  Its owner-zero spectrum is
+  `(13,12,12,13)` and every nonzero owner spectrum is full.  An independent
+  THM-3514 reconstruction gives all `169/169` full and all-address
+  doubly-centred `(1,0,t)` owner pullbacks nonzero.  The fixed `(1,0,6)`
+  residue total is exactly `225010624370142818572`, with both profiles
+  `13/13`; candidate digests and entries agree exactly.  Finite linearity
+  makes this a type-correct one-base simple-kernel integral, but `AX/BY`
+  remain preintegrated endpoint scalars.  The value is a THM-2334 residue
+  pushforward, not `C(a;X,m)`; the U_full/U_clock two-transplant boundary
+  remains, with no physical current, THM-2512 bridge, grouped coefficient,
+  row exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
+  `827644be815bf3152507af9ff82c48b76e843126b285edeb76121bf2ed347396` /
+  `d60880f6c73875cb63baf342ad946671bf5e08d11fd64766673175bb626945c5` /
+  `822957b53ef3bcaa8509fa68bd2c0d3080dec7632db3eca063e2d947162bd4b9`.
+- `lrc_r5_source_aligned_guard_atom_branch_sidecar_probe_20260816.py` and
+  `lrc_r5_source_aligned_actual_endpoint_simple_kernel_probe_20260816.py` ->
+  matching `.out` files [FINITE-EXACT SOURCE-TIME ONE-BASE SIMPLE-KERNEL
+  TRANSPLANT; INDEPENDENT AUDIT PENDING].  THM-2471's source refinement
+  `f_omega^src=1_Q P^K(eP_omega)` puts both 39-atom labels at endpoint time
+  before their packets meet on one first-collision base.  The raw 39-atom
+  `T^2` transition has full `1521/1521` support but exact rank three and
+  identical source-sheet rows, erasing every nonzero `F_13` source
+  character; the retained 169-branch sidecar restores the sheet exactly as
+  `floor(branch/13)`.  The source-aligned common gauge has `362/1521` atom
+  pairs and exactly the 48 owner-active nonzero-drift types, rank four at
+  every owner mode, and full `(13,13,13,13)` nonzero-owner Walsh--drift
+  support.  All 362 pairs carry nonzero actual THM-3514 endpoint weight; the
+  resulting one-base finite simple kernel is nonzero at all 13 owner modes,
+  and so is its doubly centred endpoint interaction.  Extending from the
+  `H-q5` bridge to the complete refined `(1,0,t)` bank gives all `169/169`
+  residue/owner pullbacks nonzero.  The fixed all-unit relation has refined
+  class `(1,0,6)`; its endpoint aggregate is
+  `225010624370142818572`, and its full and doubly centred source-aligned
+  profiles are each nonzero at all 13 owner modes.  This closes the temporal
+  atom-label mismatch and the fixed relation's refined-residue aggregate,
+  but not its exact-address orbit sum `C(a;X,m)`.  `AX/BY` remain
+  preintegrated scalars, and the U_full/U_clock split remains: no physical
+  current, grouped coefficient, row exclusion, or LRC(14).
+  Source script/output/semantic SHA-256:
+  `22c5c748392817ccc36889a007c65bd5f44b26c10638df6f6aac48e917547f41` /
+  `3165df77792959f2825511b8b7e7c6d112f212573d8c876d08eb18089ee9ec0f` /
+  `31e9e90c63053944b590195555be07ccbf84fd4c7abc2101de6a2a3562202de6`;
+  endpoint script/output/semantic SHA-256:
+  `fe8fba15e1389711ac569e118a31efbca550c90d69bc95c4d5804f4f2fc73f11` /
+  `a11e480ce88d1cf59f67ad860b2b5184a641a39e439e29492250faf339c96fb8` /
+  `f496b9da968f091b11d27137acdd21c4351785943c45b0e7783fce95b5915df0`.
+
+- `keller_R6_finite_sheet_recursive_norm_probe_20260816.py` and
+  `keller_R6_finite_sheet_split_branch_audit_20260816.py` -> matching `.out`
+  files [THM-3523 PROVED + VERIFIED-EXACT + SPLIT-REPRESENTATION AUDITED].
+  At the canonical finite inverse point `q=(2,5/6,-7/8)`, the exact identity
+  `R_6=2^1431 L^1699 N(L)^271 N^2(L)^43 N^3(L)^7 N^4(L)N^5(L)` is evaluated
+  without expanding `R_6`.  Complete `243`-sheet `L` and frozen-`H`
+  `81x81`-determinant routes agree modulo `101,103,107`, giving nonzero
+  residues `26,70,69`; every `L`, `S`, and discriminant gate is a unit, and
+  the omitted-`64` hostile fires by exactly `64^-81`.  A fourth-prime audit
+  splits the outer cubic at `w=10,23,38`, evaluates complete `81`-sheet
+  `R_5` branches `49,22,60`, and obtains `R_6(q)=9 mod 71`, while omitting
+  one branch gives `25`.  Hence `v_L(N(R_6))=-10663` and
+  `R_7=L^10663N(R_6)` is polynomial and `L`-coprime; proved THM-3522 then
+  gives the complete fixed-chart packet `A(66907,24255)`.  The `243` here is
+  an evaluation-algebra dimension, not by itself an eliminant gate;
+  subsequent THM-3525 closes the distinct degree-`243` separability problem.
+  No image, irreducibility, all-level, arbitrary-map, or general JC claim
+  follows from THM-3523.  Primary script/output/semantic SHA-256:
+  `9cacaaa825d9598556f7e8baa35970d30295a139c79ed2dc22c9c5e84ef611e8` /
+  `759057c3f06b77f972f551238891049e261b56d1a2619b786d5230c6d8269d6f` /
+  `a2ede01095e73ad727285743b83d6502ff37c0ab772a19e0a03fe9036ba5f7b8`;
+  split audit:
+  `c6ab159d1ab0ba241306d11e3fbc1273f6579c9e843fd0a00994d8107ca01069` /
+  `cdd902f60147eca39bb708d86e4068f049b80efd08b69db14b2f8bcff16eaa52` /
+  `6384038b2f7e386289c7af89ac1c5a020aa18320e6957a59469ff013de396490`.
+
+- `lrc_r5_offdiagonal_drift_branch_transplant_probe_20260816.py` ->
+  matching `.out` [FINITE-EXACT SUPPORT/REPRESENTATION SIDECAR].  The common
+  torsor gauge identifies source `s=u-q` with target `-d=a-b` and fixes the
+  zero fibre.  All 273 source same-root entries vanish, while the four U_full
+  Cartesian `d=0` corners are nonzero with total
+  `324498447313453607031`; hence a typed transplant must remove or reweight
+  the endpoint diagonal.  Puncturing it yields maximal carriers
+  `6x12` and `4x12`, preserves target rank four and full Fourier support, but
+  leaves the connection certificate `(6,24,4,0,37,4,0,0)` unchanged for all
+  12 dilations.  The exact source involution `B(ell,s)=B(-ell,-s)` gives a
+  six-edge grammar, yet the reduced K4 `39x31` system has full rank and zero
+  nullity.  Thus support and connection are separate debts.  Concurrent
+  common-gauge work subsequently realizes exactly the predicted 48-bucket
+  THM-2471 arrival-address support and a nonzero all-owner endpoint-weight
+  pullback; its projective systems still have nullity zero, moving the live
+  debt to a temporal/Fubini current theorem.  This probe itself makes no
+  ancestry, current, H1, bispectrum, scalar exclusion, or LRC(14) consequence.
+  Script/output/semantic LF SHA-256:
+  `a3f8a85552c2a0f3a2f511d6f8609e14d806054882b099db6a5ed74d8d5c4437` /
+  `be3fdc726662d9b52233c9d6e2eaf7bf708ca8ebf7b87c59e604d539013f5006` /
+  `84a21447326ac6e86ff7743704653d1c280eee265cfdbe357735f5ad6d80915a`.
+- `lrc_r5_common_base_connection_obstruction_independent_audit_20260816.py`
+  -> matching `.out` [INDEPENDENT AUDIT ACCEPTS SCOPED FINITE-EXACT
+  PACKAGE].  Rebuilds the THM-2594 joint Boolean table and the THM-3514
+  endpoint atoms without importing either candidate probe.  It independently
+  confirms source ranks `3,3,4,6,8,6,6,6,9`, full `91/91` spectra, all 12
+  torsor dilations, 8 folded sections, 56 named and 127 binary absolute-root
+  sidecars, and all 2401 root-difference allocations.  A disjoint augmented
+  `(M,lambda_k)` system retains every frequency multiplier: all multiplier
+  projections vanish and every surviving matrix annihilates the source.
+  Thus rank `4/6/8/9` is not the missing connection; the strongest survivor
+  is the unmarginalized `(u,s,ell,theta;a,d,C,D)` support relation.  No
+  ancestry/current/H1/bispectrum/scalar-exclusion/LRC(14) consequence.
+  Script/output/semantic LF SHA-256:
+  `efbfb738f1901946210e1f438212d24e7cc34ee4ca3f02d436923d61a852bf43` /
+  `642f774f2c0320470d28ac8e5046b06ccb83851deae79e412c8a3fe0676149db` /
+  `544b07a84c6806ea63c48f5227b78d74844f466dd0b446b6a320ea8560238895`.
+- `lrc_r5_common_gauge_endpoint_weight_connection_probe_20260816.py` ->
+  matching `.out` [FINITE-EXACT ACTUAL-ENDPOINT-WEIGHT PULLBACK; CONNECTION
+  NO-GO].  Reconstructs the actual U_full `AX/BY` atom-pair contribution and
+  pulls that scalar function through the lawful THM-2471 common-gauge address
+  measure.  Deleting the four `d=0` endpoint buckets leaves the common
+  `48/52` support, a nonzero bridge `64768431058832930873`, and full
+  `(13,13,13,13)` Walsh drift spectrum.  The pair-function pullback is
+  nonzero at all 13 common-offset owner frequencies.  Nevertheless, for
+  every owner frequency, the full and restricted target projective systems
+  both have rank 29 and nullity zero: no fixed `4x4` channel map plus one
+  common drift convolution exists.  Thus actual endpoint weight survives a
+  lawful nonlinear address pullback, but not as the forbidden post-marginal
+  linear connection.  This is still no physical current, grouped coefficient,
+  row exclusion, or LRC(14).  Script/output/semantic SHA-256:
+  `3d25572a84c48ccc8c4550b7d4f66180fab97e028094982a2b5a58dba9e534fc` /
+  `86427a2a296db87f74fe0abed508745bcdb02780752e5eb0670e604f1a6337a8` /
+  `6d4f3389f50c98a103c5c6cb2daedea0ed2dd86e267aaa5ab0f9a4585433693d`.
+- `lrc_r5_common_ancestry_guard_atom_root_drift_probe_20260816.py` ->
+  matching `.out` [FINITE-EXACT COMMON-ANCESTRY SUPPORT REALIZATION;
+  INDEPENDENTLY AUDITED AND ACCEPTED AT THIS SCOPE].  Inserts THM-3514's actual 39 guard atoms as
+  Boolean partitions on the linked THM-2471 arrival/source nodes before
+  transfer and marginalization.  The common gauge `a-u=b-q`, equivalently
+  root drift `s=-d`, has `72/117` chamber/drift support and exactly `48/52`
+  on the owner-active `K4` carrier: all four `d=0` buckets vanish by the
+  proved same-root law.  The four rational rows have rank four and exact
+  Walsh drift-Fourier support `(13,12,12,13)`; the missing coordinates are
+  precisely the zero modes of the two one-sided Haar rows.  Retaining the
+  common offset `c=a-u=b-q` before its owner-character contraction restores
+  rank four and support `(13,13,13,13)` for every nonzero owner frequency,
+  certified coordinatewise at `547,911,1093,2003,2549`.  This is lawful
+  support/spectral capacity, not equality with the frozen endpoint weights,
+  a current, row exclusion, or LRC(14).  Script/output/semantic SHA-256:
+  `83f1fa49ac4d02e21a1d76fed169d101715a6620342714ed05b9172ae967a730` /
+  `7727571722f69a9c59af0183c50c8bae0b7944d6acb7bbb1b3c0e9bd02d54565` /
+  `3d8c88fb7b9762f41ef35c00d980b99fc435c8352baf5dddb9fe412d1baeace0`;
+  independent audit script/output/semantic:
+  `ec16f5124c5b83a10337fba6046d08572251d0776285b7e250a86539a26ddf97` /
+  `ebe5acbe2e19465ed10f1380eaa2bd19975849d72be64151514cb0087e645d4f` /
+  `ad81e945207703956f5d6ec300430d562c9f98a9ec8788011119a4857ab34e01`.
+
+- `lrc_r5_folded_c7_to_ufull_k4_drift_transporter_probe_20260816.py` and
+  `lrc_r5_folded_c7_k4_transporter_independent_audit_20260816.py` -> matching
+  `.out` files [THM-3524 PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].
+  The exact Paley quotient is weighted and looped with off-diagonal `K4`
+  support.  The THM-2594 source has exact rank three and split spectrum
+  `91/91`; the THM-3514 U_full Walsh target has rank four and spectrum
+  `52/52`.  Complete `48/192/2401` allocation universes have zero common
+  scalar kernels even modulo amplitude/cyclic gauge.  The independent audit
+  rebuilds the target without importing the submitted transporter or its
+  U_full parent; its `52x29` `(M,lambda_k)` systems have rank 25 and
+  annihilator-only nullity four in all eight sign lifts.  More generally,
+  fixed channel mixing plus any common right operator cannot raise rank three
+  to four.  Four channel-dependent circulants are the formal survivor.
+  THM-3518's phase is target-side and its cycle coordinates vanish.  No
+  ancestry/current/H1/bispectrum/scalar-exclusion/LRC(14) consequence.
+  Primary script/output/semantic LF SHA-256:
+  `5fe3f696f122869462ff73b1b4ebdb957fa8ca7ee3692c25ef94f0f7efae81cf` /
+  `b97db9c8b0582d868c8386be5f5d8dff72968062a9b5ae79956678cd86c0b98a` /
+  `bae3749e01361ebbaf6c9cc0e7160d2e4d22d6df420d4512ba94f778718af3a1`.
+  Independent script/output/semantic LF SHA-256:
+  `0bf56db1acfd83d6f161dd95b5d428df90f8cb5e6ec24e729081f24a86f287f2` /
+  `c20c59264590cd42b108363c91736df8c9e921ac94b09c1f5fbb5d977f300859` /
+  `a6d6ad7a9891af8bddcba6fe7cf9f2554214731043844098f8556d1003885222`.
+- `lrc_r5_paley_c7_t4_section_xor_code_audit_20260816.py` -> matching
+  `.out` [FINITE-EXACT STRUCTURAL SIDECAR].  The exact negation fold is a
+  symmetric weighted looped quotient with bidirected `K4` support.  Its eight
+  tournament sections form the affine six-edge code
+  `(x,y,1 XOR z,x,z,y)`: six are strong, one is a 3-cycle with a source, and
+  one its sink reversal; none is transitive.  The quadratic XOR invariant
+  `E=z XOR xy XOR xz XOR yz` gives `det(S)=1+8E` and cyclic-triple count
+  `2-E`.  The translated section code is a boundary complement, not the
+  cycle space: `C1(K4;F2)=Z1 direct-sum G_section`.  Hence section orientation
+  is gauge data and an invertible left mixer, not a fourth response or hidden
+  `H1` channel.  No ancestry/current/bispectrum/LRC(14) consequence.
+  Script/output/semantic LF SHA-256:
+  `00b917221e5bd90612e6d7494224fdaaac128f0e4fb503a5797d59c1c6997521` /
+  `0d39d077379f619fad67eafc402f1f4d108869f3f67c93be11234bee14eeded7` /
+  `85640c02220b246781bab2e447a6a2f9fec7ca912d27c56377fbcd943bf041bc`.
+
+- `keller_five_face_renewal_propagation_probe_20260816.py` and
+  `keller_five_face_renewal_propagation_independent_audit_20260816.py` and
+  `keller_five_face_renewal_vieta_independent_audit_20260816.py` ->
+  matching `.out` files [THM-3522 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED].  The primary reconstructs both generic hybrid inverse systems
+  from THM-3495's numerators, checks their residual
+  cubics, discriminants, raw resultants and multiplication-matrix norms, and
+  proves the symbolic endpoint/exponent/scalar identities for polynomial
+  `L^e N(P)`.  The non-divisible branch exponents `-4,-26` calibrate exactly
+  against `L -> H/2^6` and `H -> J/2^35`; `J -> G` is also recovered.
+  Consequently fixed `R5` and `R6` have full packets `A(1699,615)` and
+  `A(10663,3867)`, with exact renewal scalars pinned in the output.  The
+  disjoint audit rebuilds the inverse initials, exhausts `2,500` admissible
+  packet intersections through `e<=120`, checks separate determinant and
+  resultant routes, and reaches the same supports and scalars.  The second
+  audit checks `15,250` packets through `e<=300` plus split-prime Vieta
+  controls at `109,127,163`; its wrong-monic hostile fails every nonzero
+  row.  No later polynomiality/finite-sheet, image, degree243, all-level,
+  arbitrary-map, or general JC claim follows from that computation alone;
+  THM-3523 and THM-3525 subsequently close the next old-`L` and degree-243
+  gates, respectively.  Primary script/output/semantic LF SHA-256:
+  `5fd3c27bf49f8fab5e96b3d3fe608b91b86151ca265d35878225f8ce6aa2f05e` /
+  `9a3eba81a00e35a5c99c2285e8ea7a10b6b1764b6c8d56b4d5276c449bc1b8b8` /
+  `8b6a447c98e4e7f6bfc493818696d4a9193b4da47ab7b2f9e0368e9155940a91`;
+  independent:
+  `2fafef6bca64174b71fac22aa89e5bb713847ccc47318635c61b9684c5b063cd` /
+  `9485d14a9eb764374ca6abb25fdecafc75a210ce720bdcf4c0f2e7d0536d8dc8` /
+  `9de2b0a149105263ee1b3a1fba01424f9c7ff274368c689cdc5737fb340bf804`;
+  Vieta audit:
+  `e2651175dbe4ef21553c5d4a7949ac5ba19ddb50d31183cce322d9cc74f34770` /
+  `91c05274cf307ddd6d341b55b8d94616aaa4b8278792b2e5a85fb97dba38a1cd` /
+  `7468b48f87fab27aacf77af954ea5b63189eb8ba22ec1402b9df57d6d1378375`.
+- `jc_weighted_odd_family_m3_coordinate_jelonek_probe_20260816.py` ->
+  matching `.out` [THM-3517 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
+  IN PYTHON-FLINT].  For the explicit
+  THM-3448 cyclic weighted subfamily `ell=2m-3`, the first lawful `m=3`
+  member has determinant one, ordinary degrees `(17,16,4)`, generic degree
+  five, inverse `w^5-w^4+Pw-Q`, and global monodromy `S5`.  Its `x,y,z`
+  resultants are irreducible quintics with `17,29,191` terms and all three
+  discriminants equal the irreducible `D5` times a square.  Pullback gives
+  `D5(BC,AC^2)=C^4L5`, but the exact Jelonek set is
+  `V(C) union V(L5)`: the sign class `[L5]` misses `V(C)` because its local
+  inertia is an even 3-cycle.  The flat view `(X-P)^5` and the `m=2`
+  `C^2`-without-component case are exact hostiles.  For every `m>=3` in this
+  odd subfamily, THM-3448 implies the same sign-blind `C_(2m-3)` component.
+  The independent companion reproduces every map, eliminant, 191-term `z`,
+  268-term index, discriminant, and pullback hash and adds an `F_31`
+  all-coordinate separator with Vandermonde determinants `(28,14,1)`.
+  This is not the unstored historical THM-1605 family and gives no map
+  classification or `JC(2)` consequence.  Script/output/semantic LF SHA-256:
+  `ff03f0ac71922f5881bf112ae2c8cbb7f5cd49198500c19d62b5eaf5b286002e` /
+  `6d64acd12b3b546e8820a683f38ada905f0a52af96ab3661319eb111c45699e0` /
+  `ed6845e743f8554327653521f243817264b08d1ca864c8513c0b2af7ce17ac81`.
+- `jc_weighted_cyclic_z_primitivity_two_root_independent_audit_20260816.py`
+  -> matching `.out` [THM-3517 INDEPENDENT ALL-GRADE AUDIT].  At the exact
+  specialization `P=2^(1-n),Q=0`, the inverse polynomial has roots `0,1/2`
+  whose `z` numerators differ for every `n>=3`; a uniform magnitude bound
+  proves this independently of the symbolic remainder recurrence.  Exact
+  forward replay through `n=256` gives two finite same-target/distinct-`z`
+  points for every `n>=4`, while `n=3` is retained as the sharp `gamma=0`
+  polynomial-identity boundary.  Script/output/semantic LF SHA-256:
+  `b95756882ba89e51a542858807c939fd80bdd7a0d69fe3e6a7187e3318ef9cd7` /
+  `53c5bb974b37d3f5263247f24e70b46973ce34a286c1f5de1e9cc579b428ae05` /
+  `2c8d9f191ae5a8dddd6ef15feeb20d6564491bd0be6ea34c8e662428f74b729b`.
+- `lrc_ufull_all_role_modewise_spectral_independent_audit_20260816.py` ->
+  matching `.out` [THM-3518 PROVED FINITE-EXACT CERTIFICATE + SECOND
+  INDEPENDENT AUDIT OF THM-3515].  Reconstructs all five class/address
+  tensors both from direct tau slices and from canonical guard kernels, with
+  all `3042` translation-phase identities and explicit wrong-sign/
+  wrong-normalizer hostiles.  The `5x52` rank-five claim has a nonzero minor;
+  all drift/Fourier rank-four slices have minor certificates.  Sixteen-tree,
+  reduced-Laplacian and full-graph determinants agree in every bank/chart,
+  while all `56,592` cycle pairings vanish: endpoint `B^1`, no absolute
+  `H^1`.  No ancestry, current, bispectrum, scalar exclusion, or LRC(14).
+  Script/output/semantic LF SHA-256:
+  `975b48c148b88a04b9fea07dcb6352cfaa98591f14eace1a38cd581a5e5876dc` /
+  `6eb3f28c07e99c352f1d88615d6beddeb82c264892a9f4735a420b75bf932c19` /
+  `b745ab5d95936b9a134cfe8b6ffde032e72020d950670ab8b1a4643dd58c8be6`.
+- `keller_R5_finite_sheet_recursive_norm_probe_20260816.py` and
+  `keller_R5_finite_sheet_split_global_J_audit_20260816.py` -> matching
+  `.out` files [THM-3521 PROVED + VERIFIED-EXACT +
+  REPRESENTATION-INDEPENDENTLY AUDITED].  At the canonical finite inverse
+  point `q=(2,5/6,-7/8)` above `L=0`, a four-cubic recursive route descending
+  to the five-term `L` and a three-cubic route evaluating the frozen
+  361-term `H` agree modulo `101,103,107`, giving nonzero `R_5(q)` values
+  `74,36,88`.  Every intermediate `L`, `S`, and cubic discriminant is a
+  regular-representation unit; iterated and flat `27x27` norms agree; an
+  omitted-`64` hostile fires with the required leaf exponent `27`.  A
+  representation-disjoint reconstruction of the 66,146-term `J` splits the
+  outer cubic modulo `71` and independently gives `R_5(q)=43`.  Hence
+  `v_L(N(R_5))=-1699`, `R_6=L^1699N(R_5)` is polynomial and `L`-coprime,
+  and its exposed top pair is `(10663,3867)`.  Renewal of `R_5`, fifth-image
+  geometry, degree `243`, all-level induction, and every general JC claim
+  remain open.  Primary script/output/semantic SHA-256:
+  `a201191410e39d47fbf607191e8bd597453c697f134d3803466694b680d8c60d` /
+  `14473ff317e30fb8a90b7d1c0c3879537ce157d7456d31e8ce6901a160d6197f` /
+  `e4610844c8bd506211662c792f27d5bac2529f9d62d63762aaf39e498c4b8707`.
+  Audit script/output/semantic SHA-256:
+  `1a46b961ab15a61e6e438926c8834fff56c23749f64ed2473e626bebb2fd1d04` /
+  `42ddc36acea979ab859c10787da7a7737362c31a16ca0383cf8e06b8fe27ef2f` /
+  `cd99969bd8949ab971cc9f7ee3fefac8aba835b2a6b4fdd323934ef4294d0589`.
+- `jc_weighted_cyclic_z_primitivity_all_m_probe_20260816.py` -> matching
+  `.out` [THM-3517 PROVED SYMBOLIC ALL-GRADE SIDECAR + VERIFIED-EXACT
+  HOSTILES].  For every cyclic THM-3448 seed, reduction of the
+  `z`-reconstruction numerator modulo the degree `n=ell+2` inverse polynomial
+  has exact degree `n-1`.  Its leading coefficient for `ell>=2` is
+  `((ell+1)^3+1)P^2+(4ell^2+ell-2)P/2+4(ell+1)Q`, so `z` is not in the
+  target field; `S_n` point-stabilizer maximality makes it primitive.  The
+  `ell=1` coefficient is `3P(6P+1)/2`.  Thus `x,y,z` share the inverse
+  discriminant square class in every cyclic grade, while every odd-family
+  `C_(2m-3)` Jelonek component remains sign-blind.  Direct remainders through
+  `ell=30` agree; the hostile `P=Q=0` kills every remainder and shows why
+  generic polynomial nonvanishing is essential.  No historical-family,
+  classification, or `JC(2)` claim.  Script/output/semantic LF SHA-256:
+  `0c74f0546444ef28265800e89bbcd0c1161eadfdd75599b6707428c22853424b` /
+  `01e1db90014ecd1f8f5fda0ecc250e23429db94bb04033bc1ab91500b4a38e4a` /
+  `6f06d5042a944f817b23e5bc43e3d70f74098ed4640e20eb95a638bec575cbf0`.
+- `shortlex_bary_equal_count_harmonic_boundary_probe_20260816.py` -> matching
+  `.out` [ELEMENTARY ALL-BASE THEOREM CANDIDATE + VERIFIED-EXACT SIDECAR;
+  INDEPENDENT AUDIT PENDING].  In every base `b>=2`, the first and last
+  `1/b` blocks of a shortlex level have the same count `b^(n-1)` but limiting
+  harmonic masses `log((2b-1)/b)` and
+  `log(b^2/(b^2-b+1))`; their strict gap is certified by
+  `(2b-1)(b^2-b+1)-b^3=(b-1)^3`.  Superdominant alternating stages therefore
+  give an equal-count language with no logarithmic density.  For `b=3` the
+  two densities are `log(5/3)/log3` and `log(9/7)/log3`.  A bounded-width
+  ternary branch ray has finite harmonic mass, so the one-word-per-level
+  Fibonacci/Berggren ray has logarithmic density zero in branch shortlex.
+  Ternary depth two is `T9`; its `{0,2}^2` Boolean face is a `T4` with six
+  edge objects and three perfect matchings, not an automatic `T6`.  No
+  ancestry/LRC/JC transport.  Script/output/semantic LF SHA-256:
+  `771119f6feaca655cd6845353c0925f416efba7497ee5170722899fa1cd4cc2a` /
+  `b4b755ac519f488987d8cc801bc56470c5788a32af1a6e645bde835b257369f1` /
+  `8889cd4d5d3da976a099824e6242fef1a9b9f80fe83e8ae1a4c6fba5dbdf517f`.
+- `lrc_ufull_guard_bucket_all_role_spectral_probe_20260816.py` -> matching
+  `.out` [PROMOTED AS THM-3515; SECOND INDEPENDENT CERTIFICATE THM-3518].
+  Extends the audited U_full guard-bucket factorization from the
+  `H,q5` bridge to all five distinct refined role classes.  Every class is
+  nonzero on all `52=4*13` active chamber-pair/drift buckets and the resulting
+  `5x52` tensor has rank five.  For every one of the 72 lawful role charts,
+  the forced bridge and both `K4` tree factors are nonzero on all 52 point
+  buckets, all 13 drift marginals, all 13 drift-Fourier modes, and all
+  `4*13` chamber/Fourier fibres; every drift and Fourier `5x4` slice has rank
+  four.  This is maximal endpoint weighted-tree support in graph `B^1`, not
+  common ancestry, a physical current, absolute `H^1`, a bispectrum theorem,
+  scalar exclusion, or LRC(14).  Script/output/semantic LF SHA-256:
+  `98a4cf5c82ca10027302baf2c7fb59acb0f305143e22453d0a8660fef8d90cf0` /
+  `fe1d240a7e2d71ba04e50f53bc5833b45b5c6fa5cc3d576f8443f5428edfa7c0` /
+  `2c9495fb8bcb731361ba331d9ca4b84a60f21551dc49b16e6519c1fc4f2e9f97`.
+  The submitted output's pointwise zero-census tuple writes only 71 zeros;
+  THM-3518 independently reconstructs the actual 72-entry tuple and leaves
+  the submitted package untouched.
+- `keller_level_three_three_coordinate_primitive_finite_field_probe_20260816.py`
+  -> matching `.out` [VERIFIED-EXACT FIXED-MAP LEVEL-THREE THEOREM CANDIDATE;
+  INDEPENDENT AUDIT PENDING].  In nine exact cubic quotient algebras over
+  `F_101`, reconstructs all three actual source coordinates, replays the
+  original map, and computes their regular-representation characteristic
+  polynomials.  The inherited target `(93,28,83)` is a sharp hostile with a
+  degree-one `y` collision.  The deterministic target `(77,62,4)` instead
+  gives three squarefree degree-27 products for `x,y,z`, proving a lawful
+  specialization where every coordinate generates the rank-27 fibre algebra.
+  Subject to proof audit, generic trace-form congruence upgrades THM-3495 to
+  the common class `[-2J]` for all three level-three coordinate views.  No
+  higher-level, outside-family, arbitrary-Keller, JC(2), or LRC consequence.
+  Script/output/semantic LF SHA-256:
+  `374c69d1a2b9e427b1ce586312cc1c2554454ee0f485e732a8887b5afc0586d0` /
+  `243576477c76b6b994fcf9f58d23b66fe47811e50aa5fbca041080518f03bffb` /
+  `61ddcb9dbd3c7582a514bf1a42bbff3cd9ca7d052ea9620721979ed6c8138245`.
+- `reduced_fraction_harmonic_k4_fibonacci_thm3509.py` -> matching `.out`
+  [THM-3509 PROVED + VERIFIED-EXACT + HOSTILE-AUDITED]. Every reduced
+  fraction `m/n` is equivalent to the primitive recurrence window
+  `(n-m,m,n,n+m)` and to the primitive harmonic `K4` face
+  `(u,v,z)=(xy,x(x+y),y(x+y))`, with `1/u=1/v+1/z` and exact gcd decoder.
+  Stern--Brocot mediants add vertex windows; the two Berggren parity trees
+  are paired exactly by normalized Pythagorean leg swap. `K4` and
+  `L(K4)` give honest size-four/six carriers, while the Cassini sign lives
+  on the oriented `{03,12}` antipodal fibre and is erased by the
+  three-matching quotient. THM-3506's fixed/exposed odd face pairs embed in
+  the even tree, but its determinant-`-8` update is not projectively a
+  unimodular Berggren word and remains all-level conditional on renewal.
+  Normal/-O standard-library runs check 17,543 reduced fractions and the
+  ancestry, parity, orientation, toric, polarization, and determinant
+  hostiles. No LRC or JC transfer. Script/output/semantic LF SHA-256:
+  `c12dc71df13e0c627740aaebf971c07342ce3302d674b276cc1600cf69266dd9` /
+  `3f31f6f80989b360227c792d525e013ecff9b06a8df09d252d31af801d8fdb9a` /
+  `7ca802f1f8706658b62fb330504544b9c46d473db6481429cb011b078695a46e`.
+- `keller_G_renewal_faces_independent_probe_20260816.py` -> matching `.out`
+  [THM-3513 PROVED + VERIFIED-EXACT + INDEPENDENTLY REPLAYED; COMPANION
+  INDEPENDENT OF THM-3506 FACE SCRIPT].  A direct scan of THM-3495's frozen
+  `66,146`-term `J` finds the hybrid minima
+  `delta_6=i-j-6k=-390` and `delta_8=i-j-8k=-542`, both uniquely at
+  `x^66z^76` with coefficient `2^15*3^171`; the independent
+  `gamma`/`z` endpoint-intersection route agrees, and the next weights are
+  `-389` and `-539`.  Exact inverse-chart reductions at the `c`-top and
+  target-`gamma` toric limits retain the nonmonic Vieta factor
+  `D=27A^2C+B^3` and prove the complete fixed-`G` faces
+  `C_z x^410z^476` and `C_gamma z^271(27x^2z+y^3)^205`, with
+  `C_z=3^1128/2^117` and `C_gamma=3^513/2^117`.  Thus the renewal-face gate
+  for this fixed `G` closes.  The next finite-sheet unit, renewal for `R_5`,
+  fifth-image geometry, all-level induction, and every general JC claim
+  remain open.  Semantic ledger SHA-256:
+  `2887be137141414185ab305e7e0416754f73a009625924a5b6c6c1a268101dbd`.
+  An independent parent replay reproduced this ledger exactly; this is a
+  replay audit, not an all-level or geometric proof audit.
+  Script/output LF SHA-256:
+  `f9e82f502026dfe499ebba9290295f98056d1b7dba7c893184d9871a032be01f` /
+  `becaa80c075bd46e4193b216406c2152f3d5d8565f6116ba6db9b712409badaa`.
+- `lrc_ufull_owner_boundary_k4xf13_endpoint_factorization_independent_audit_20260816.py`
+  -> matching `.out` [THM-3514 PROVED STRUCTURAL + VERIFIED-EXACT +
+  INDEPENDENTLY AUDITED].  A fresh central tensor contraction imports the
+  pinned THM-3479 endpoint primitives but no candidate guard/bucket script.
+  It derives the strict owner support `[0,1/2) union (13/2,7)` and the
+  endpoint engine's measure-equivalent half-open representative, checks the
+  13 singleton boundary difference directly against the owner-only periodic
+  intervals, and materializes all 169 unguarded atom tables.  Restoring the
+  H guard matches 78 direct guarded endpoint controls and reconstructs the
+  frozen `13^3` bank exactly.  Exactly `52/117` chamber/drift buckets survive
+  and all are nonzero for `q_H`, `q_q5`, and their bridge.  The bridge's
+  `4x13` table has rank four; all four Walsh rows are pointwise nonzero and
+  have all 13 nonzero drift-Fourier modes.  The four states are an undirected
+  `K4` carrier, not a tournament.  A common equivariant label gauge
+  `u=a+c` preserves drift but supplies no physical root or common ancestry.
+  Cartesian pairing, `B^1`, and the absence of a THM-2471 support predicate
+  remain explicit; no current, absolute `H^1`, row exclusion, or LRC(14).
+  Script/output/semantic LF SHA-256:
+  `f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc` /
+  `7684cdb6bb1641780977d9e2def3753d802bf026e126dbc5351bd8f8ddebd906` /
+  `d52c9f0a56c14a83e1e6b175c7b725314c99f09d44509bc8582847a5857f7da6`.
+- `lrc_ufull_guard_sheet_drift_bucket_bridge_probe_20260816.py` -> matching
+  `.out` [FINITE-EXACT ENDPOINT FACTORIZATION; INDEPENDENTLY AUDITED BY
+  THM-3514].
+  Removing only the tau-translated H guard and splitting the remaining
+  U_full E-set by the common `39=13*3` guard atoms reconstructs the frozen
+  `13^3` character bank and the exact `q_H-q_q5` bridge.  The speed-13
+  owner `in` gate forces the guard residual into two boundary slivers, so
+  all middle atoms are empty and exactly `52=4*13` chamber-pair/drift types
+  survive; every supported type is nonzero for `q_H`, `q_q5`, and their
+  difference.  The resulting `4x13` table is the canonical
+  `F_2^2 x F_13`/`K4 x F_13` carrier: it has rank four, every one of its
+  four Walsh channels is nonzero at every drift, and every Walsh channel
+  has all thirteen drift-Fourier modes nonzero.  Same sheet, same chamber,
+  and same guard atom all fail to recover the frozen bridge.  The guard
+  sheet and THM-2471 root label have the same `+tau` action, so their 13
+  equivariant label gauges are exactly `u=a+c`; one common gauge preserves
+  pair drift and changing `c` only phases primitive coefficients.  This
+  aligns labels but does not identify physical roots.  In the audited
+  relation-role typing the weighted differences remain in `B^1`, not a
+  nonzero `H^1` flux class.  The pairing remains the Cartesian endpoint
+  product and supplies no THM-2471 common-base support relation, horizons,
+  physical current, row exclusion, or LRC(14).
+  Semantic ledger SHA-256:
+  `0b31a992ba23cecd05f28ae353133531f41cc6d84a4a935c34a12d77fd3db590`.
+  Script/output LF SHA-256:
+  `a1d4b667812949001fc863ba881ff7409bbae3c568a6bf7bc24c9dc88b2766b1` /
+  `ed1ef68e733684d7a015af314bc196fdc71e95b2a5a8d1d98d933553163a2e95`.
+- `keller_tropical_norm_face_recurrence_probe_20260816.py` -> matching `.out`
+  [THM-3506 PROVED CONDITIONAL TRANSFORM + VERIFIED-EXACT FIXED-MAP GATE].
+  Reconstructs THM-3495's frozen `66,146`-term `J`, extracts the complete
+  `lambda`, `beta`, `z`-top, and `gamma` faces of `L,H,J`, and calibrates the
+  first two norm transforms coefficient-for-coefficient.  Inverse-chart
+  linear/quadratic edges and the Chebyshev labels `2,-1,-1` give the
+  five-face law `(e,m)->(7e-2m,3e-2m)`.  The first hostile step is
+  `(271,99)`, refuting `(259,87)`; three good-prime finite-sheet controls
+  prove `v_L(N(G))=-271`, hence `R_5=L^271N(G)` is polynomial and coprime to
+  `L`, with exposed pair `(1699,615)`.  The exact Cassini/reduced-fraction
+  sidecar passes.  THM-3513 subsequently closes the `z`-top and `gamma`
+  renewal faces for this fixed `G`; THM-3521--3523 close the next
+  finite-sheet/renewal gates, and THM-3525 closes degree-243 separability.
+  The fifth image role and all-level law remain open.
+  Script/output LF SHA-256:
+  `fe1b03de9061c997a1abba6b88753e589c0a01f9f92762e49fe7ea0504ce9797` /
+  `0dd07d1af0621a9f767e9c803e805de61ee428fb6a980b004cd3f06625082b52`.
+- `shortlex_equal_count_log_density_boundary_audit_20260816.py` -> matching
+  `.out` [THM-3510 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Binary
+  shortlex level `n` is exactly `[2^n,2^(n+1)-1]`; its first and last halves
+  both have `2^(n-1)` terms but level harmonic limits `log(3/2)` and
+  `log(4/3)`.  Alternating these choices in stages `r_k=2^(2^k)` preserves
+  every positive level count while complete-stage logarithmic normalizations
+  tend along parity to `log(3/2)/log 2` and `log(4/3)/log 2`, so the arbitrary
+  language has no logarithmic density.  The independent exact companion
+  checks endpoints/seams and rational masses through level nine, rational
+  logarithm and complete-stage enclosures through `k=8`, and the depth-two
+  carrier: four word vertices, six lexicographic tournament arcs, and three
+  nonzero `F_2` covectors giving the three perfect matchings of `K4`.  Six
+  edge-objects would require fifteen comparisons for a tournament; no such
+  transport is asserted.  Script/output LF-normalized SHA-256:
+  `54cd8c333d5fa2bf03a9f0742b9a42f19c19bc6de9ff8e690c724d07a6f4ff6e` /
+  `84d33c86d6478ea4a1506ef75d001358c49a5510110633ee9ea5d89375cbda21`;
+  exact ledger:
+  `e0f67a9bdda9e6e158969c54c023b390c17fed8c4ce68b0ddeffee4936824513`.
+- `keller_level_two_three_coordinate_primitive_independent_audit.py` ->
+  matching `.out` [THM-3508 PROVED + VERIFIED-EXACT + INDEPENDENT CLEAN-ROOM
+  AUDIT].  A python-flint regular-representation implementation imports no
+  repository computation module or candidate eliminant.  At the lawful etale
+  target `(1,1,1)` it reconstructs both inverse stages, verifies `F^2=(1,1,1)`,
+  and computes exact `9x9` power-basis ranks `(9,9,9)` for source `x,y,z`.
+  The degree-three intermediate coordinate has rank `3`, determinant zero,
+  and characteristic polynomial equal to the cube of its minimal polynomial.
+  Exact trace-form ratios equal the squares of all basis-volume ratios, and
+  each coordinate discriminant divided by `H(1,1,1)=951326441195` is a
+  rational square.  An orthogonal direct enumeration of the original map on
+  `F_41^3` finds the split target `(13,0,11)`, nine distinct values in each
+  source coordinate, Vandermonde determinants `(1,14,12)`, and intermediate
+  multiplicities `(3,3,3)`.  Script/output LF SHA-256:
+  `ecf1821e9d918904d7b878931aa9ff26137e8ef4eac97234c6aec48cc5ecae5f` /
+  `2d659f01f404745a73f0b03fb3556bba0bf99cf897a11ea2607bd6fc4b705311`.
+  The result is fixed-map level-two scope; no higher-level primitivity,
+  arbitrary-resultant saturation, exact multiplicity, or JC/DC/LRC
+  consequence follows.
+- `lrc_ufull_guard_sheet_joint_drift_address_probe_20260816.py` -> matching
+  `.out` [PROVED ELEMENTARY FACTORIZATION + VERIFIED-EXACT SIDECAR; NOT
+  INDEPENDENTLY AUDITED].  The actual THM-3479 U_full H-guard translates the
+  danger window by `7*tau` on the `91`-circle.  The common decomposition
+  `s=7a+r` has `39=13*3` half-open atoms, with residual chambers
+  `[0,1),[1,6),[6,7)` and forbidden sheet arcs `{12,0,1}`,
+  `{11,12,0,1}`, and `{11,12,0}`.  Exact cyclic covariance gives nonzero
+  transforms at every frequency for every chamber.  Its two-endpoint
+  refinement by relative sheet drift has all `1521/1521` kernels nonzero
+  (`1404/1404` at primitive frequencies); the middle/middle overlap profile
+  is `(9,8,7,6,5,5,5,5,5,5,6,7,8)`.  Uniform drift couplings have identical
+  sheet marginals but different joint profiles, while summing the common
+  sheet before twisting kills every primitive mode.  This constructs an
+  actual guard address `(sheet,chamber,drift)`, not common ancestry, an
+  endpoint support relation, a physical current, a row exclusion, or
+  LRC(14).  Semantic ledger SHA-256:
+  `f345d40c9b589910d83d2fd490ca9376b3cbb86d7aa6da4825677d06075bda7a`.
+  Script/output LF SHA-256:
+  `79b78637b2cc0ff54051fde02a6651ef10c8694a8d7a865ae403696370125179` /
+  `39ced0ea361bb0268e607d42d030a61a22e0e2a571e66e585c196c352ac88f3c`.
+- `harmonic_shortlex_same_counts_no_log_density_probe_20260816.py` ->
+  matching `.out` [ELEMENTARY PROOF + VERIFIED-EXACT BOUNDARY SIDECAR; NOT
+  A CANON THEOREM OR INDEPENDENTLY AUDITED].  Binary first-half and last-half
+  shortlex languages have identical counts `a_n=2^(n-1)` and Kraft mass
+  `1/2` on every positive level, but logarithmic coefficients
+  `log(3/2)/log(2)` and `log(4/3)/log(2)`.  Alternating dominant blocks of
+  `2^(2^k)` levels preserves those exact counts while forcing the two values
+  as subsequential limits, so arbitrary subsets need not have logarithmic
+  density.  At depth two the four words are `K4` vertices, their six
+  comparisons are the `K4` edges, and the three nonzero Walsh forms are the
+  three perfect matchings; an order-six tournament would instead require
+  fifteen comparisons.  This sharpens THM-3499's arbitrary-language
+  boundary without supplying ancestry, LRC, or JC transport.  Semantic
+  ledger SHA-256:
+  `e135ce689fe04866568fd98961a45f3ebc9fabca7c03c9bf92c50be762f2cb45`.
+  Script/output LF SHA-256:
+  `e311a4e65491d414a9cb5a6a21d9c3113b811c74047a66f1f3e32ff698e3d2f2` /
+  `e3e075bcaa94871a815815d6c59f4cbe88d46618f96b119fb79bc68dedfc46bd`.
+- `keller_level_four_norm_J_mod1009_slice_probe_20260816.py` -> matching
+  `.out` [THM-3504 PROVED + VERIFIED-EXACT].  On the lawful slice `b=c=1`,
+  a Newton-at-infinity/support calculation proves
+  `deg_A(L^43N(J))<=542`.  Exactly `543` regular values over `F_1009`
+  determine the slice and `12` fresh values are held out.  The degree bound
+  is attained; the polynomial is squarefree with factor degree/exponent rows
+  `(1,1),(2,1),(2,1),(4,1),(12,1),(21,1),(500,1)` and is coprime to the
+  specialized `L,H,J`.  Two exponent-grouping orders and a closed norm versus
+  literal `3x3` multiplication determinant agree; shortened interpolation,
+  proper-power, and injected-old-factor hostiles all fire.  Direct integer
+  substitution also verifies `H(3,-1,0)=0`, `J(10,-46,33)=0`, and the two
+  finite-locus values `-504,-69753247104`.  The coefficient ledger SHA-256 is
+  `47fba77866ee50d00fcae28b834e8a0b0c18a4cf52c2cd1b9c05155410c91d00`.
+  Combined with THM-3498's localization and the finite image of irreducible
+  `V(J)`, squarefreeness forces image multiplicity one.  Thus `G` is
+  absolutely irreducible, `closure(F(V(J)))=V(G)`, `gcd(G,LHJ)=1`, and
+  `S_(F^4)=V(LHJ G)` has four irreducible components.  Script/output LF
+  SHA-256:
+  `d5d6a45cbbb6fe78fc572563f5d95394df79e8c640bd7640ac4763a7b3643410` /
+  `84920c4dbb254aa9a9d3490ca6f5767d23d29a17d137f9e950d62cf49b5f6e69`.
+  No global expansion of `G`, depth-five theorem, all-level law, or general
+  JC/DC/LRC consequence follows.
+- `keller_level_two_all_coordinate_primitivity_probe_20260816.py` ->
+  matching `.out` [VERIFIED-EXACT PROOF CANDIDATE; AWAITING INDEPENDENT
+  AUDIT].  At target `(1,1,1)`, the exact outer cubic algebra
+  `Q[X]/(25X^3+X-2)` and its inner inverse cubic form one rank-nine etale
+  algebra.  The reconstructed source coordinates satisfy all three sporadic
+  Keller equations exactly, and the power bases of `x,y,z` all have nonzero
+  `9x9` determinants.  Their squarefree characteristic polynomials have
+  factor degrees `(3,6)` and pinned coefficient hashes; direct discriminant
+  quotients equal the squares of the `y/x` and `z/x` basis-change
+  determinants.  One good specialization therefore proves all three
+  coordinates generically primitive, so THM-2582 gives the candidate common
+  class `[Disc_x]=[Disc_y]=[Disc_z]=[H]` for the fixed second iterate.  The
+  intermediate outer root is a singular rank-nine power-basis hostile.
+  This is a fixed-map, level-two square-class statement, not exact
+  multiplicities, a higher-level/family law, or a `JC(2)` result.
+  Script/output LF SHA-256:
+  `ff9fdca890828b5cd9088951f6fce6d0db2fab45ccc9af764d8d71b7fab9e855` /
+  `aefdb93b35b7eeb445a61362ceb6692d42abeb9b5251a15907eb949bdd83d245`;
+  basis-change ledger SHA-256:
+  `4ef93fd8a0384bf6b9bb44340194a7d8a159a8da4d13268173663f800b94c001`.
+- `jc_level4_boundary_squareclass_independent_audit_20260816.py` and
+  `jc_level4_degree81_fourier_flint_independent_audit_20260816.py` -> matching
+  `.out` files [THM-3498 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  PROOF-AUDITED].  The first independently discovers and factors the
+  `16`-term weight-`43` Newton face of THM-3495's `J`, checks both divergent
+  `-43/2` valuations and the finite-sheet unit by nested Horner evaluation,
+  proves `v_L(N(J))=-43`, and audits every sign and power of two in
+  `[Delta_4]=[2G]`, `G=L^43N(J)`.  The second replaces the submitted nested
+  coefficient algebra, Python determinant and Newton interpolation by FLINT
+  regular-representation matrices and multiplicative Fourier inversion on
+  all `100` elements of `F_101^*`, with `X=0` held out.  It reproduces the
+  squarefree degree-`81` ledger hash
+  `1c05c0fd5ee48fc2dd030aebdb9ad6ddd8185fb933eb91e7e39ff553424ef5a7`.
+  Independent script/output LF SHA-256 are respectively
+  `53f63e59b5de3cd07645f3031225179105f16cc341d9062a124612361171f817` /
+  `c499294d374851a4fa953cd825206b7d0517a1f098b01bd99920cdd3d3fe40fb`
+  and
+  `3d0bee9dd97993160fc7275cb4a96e77893013c421029eada4bbd5b46ac5d3e6` /
+  `aef44b43c5c26a97349129653fa22518688e964cb6a7d2deceb53027484c4567`.
+  Submitted script/output LF SHA-256 are
+  `a52a992a2455f9a6d8b5a2949b1a956969846df69f9df3492573c5ab864d837c` /
+  `a730eb715177e1be945259c01e048c974be624c67e8882a6d4c4c66293d7b85a`
+  and
+  `4039b4081c9f0d95b197d2e3a7581c66433382e53dac3b95fa2526c3a4ba4f2e` /
+  `f5498e42510641227052f578cd269697876746a6847ba6bb8cd382e726c35169`.
+  `G` is not constructed or proved irreducible/new; no fourth-component,
+  all-level, JC/DC, or LRC consequence follows.
+- `lrc_endpoint_ufull_minimal_joint_address_gate_20260816.py` and
+  `lrc_endpoint_ufull_minimal_joint_address_referee_20260816.py` -> matching
+  `.out` files [FINITE-EXACT PRE-MERGE/API-KERNEL SIDECAR; NOT A U_FULL
+  ANCESTRY REALIZATION].  The primary retains actual U_full `E`/`Q` factor,
+  branch, wrap, component, and boundary lineage before endpoint summation.
+  At `ell=0/v2`, `123,752/126,429` labelled intersection cells reproduce the
+  inherited `AX`, `BY`, and overlap totals exactly.  The minimum `2x2`
+  marginal map has the one-dimensional checkerboard kernel; one fixed joint
+  parity address raises its rank from three to four and makes the inverse
+  `q_H-q_q5` bridge equal to the mixed-Haar coordinate.  A calibrated
+  nonnegative four-record table recovers
+  `389266878372286537904`, while a flat table with identical row/column
+  marginals has bridge zero.  The independent referee exhausts the full
+  `F_13^4` kernel, every one-factor functional, address orthogonality, and
+  both `2197`-character banks.  Actual interval cells still have no proved
+  map to THM-2471 base/root/sheet/horizon/address data; no `K4`, current, row
+  exclusion, or LRC(14) claim follows.  Primary script/output LF SHA-256:
+  `fd5fcfc5f92385806f5ea5e77e854c823d2b3d6e34752c7aba777744201c8055` /
+  `3c68f4b3618abbcc2653eb1b2aee4729e59a57820749396ca757341ee7f91838`;
+  referee script/output:
+  `e33714832d1638a7e0587d9d6f7eb40e1c8ec95b92958882ffa93220cf1c4212` /
+  `e83775507494f737c27fa564fe8a121730f7732cd6909330320597b414054a80`.
+- `lrc14_r5_slope_pencil_independent_audit_20260816.py` -> matching `.out`
+  [THM-3505 PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].  A standalone
+  interval Boolean algebra and transfer-profile engine imports neither the
+  THM-2594 constructor nor the submitted Fourier helper.  It reconstructs all
+  `15,379` zero-padded common-base entries, matching canonical digest
+  `18463c7af393c6090c7419c76d48b7ed40f9ac8b17d8c1be247062493e334ce8`,
+  and derives the retained table by pairwise and source-folded routes, digest
+  `1ba72585187c014e482f89959ff4f19e2185e6e4fcd982d497923a304e0d37d8`.
+  Compatible roots `(64,81,475)` in `F_547` reproduce `72/72` nonzero modes
+  on each of thirteen affine slopes and `936/936` overall.  Slope zero is the
+  inherited THM-2594/THM-2512 owner-marginal mixed block; slope two is the
+  fixed-absolute-root owner marginal after `t=theta+2u`.  The anchored
+  mixed-Haar basis has raw counts `(132,132,133,4,4,4)` and `134/144` nonzero
+  coordinates for each word character, total `804/864`, with ledger
+  `5f284f6693c1f3441f51d9a86fddf6bd5d5fcaa1f76b0a9bd8add437b5e3752f`.
+  Its rank-`144` change of basis to the `864/864` nonaxial Fourier bank proves
+  that support is coordinate-dependent.  A formal binary checkerboard embeds
+  into any selected rectangle, but the actual U_full source lacks every
+  required base/root/sheet/horizon/address field, so no lawful map, current,
+  K4 bridge, row exclusion, or LRC(14) consequence follows.  Script/output LF
+  SHA-256:
+  `74f53e6d633d2862f64013387d54bf0d0bc8f66dcb694841b2b3381665e71814` /
+  `1e09ac04818325183d32f57bff7560fac4f172051b353580112822ca7c7da7a7`.
+- `tetrahedral_k4_haar_xor_cycle_bridge_20260816.py` -> matching `.out`
+  [VERIFIED-EXACT REPRESENTATION SIDECAR; NOT INDEPENDENTLY AUDITED].  The
+  four cells of a `2x2` coupling are the vertices `F2^2` of `K4`.  Each of
+  the three nontrivial Walsh characters selects one equal-sign perfect
+  matching, while the tetrahedral opposite-face map sends it to twice the
+  primitive oriented complementary four-cycle.  In particular the U_full
+  checkerboard kernel `(1,-1,-1,1)` maps to
+  `2*(-e01+e02-e13+e23)`.  The three primitive cycles are orthogonal;
+  `S4` acts on their lines through `S3` with kernel `V4`; and score plus all
+  three Haar holonomies reconstructs `64/64` labelled tournaments with
+  cut/cycle lattice index `32`.  This identifies the minimum joint API
+  coordinate with a marked abstract `H1(K4)` direction, but constructs no
+  map from actual U_full cells, no current, and no LRC(14) consequence.
+  Script/output LF SHA-256:
+  `23a25f151bebca5da587fe552f920fa11109cecd3b7b8569819b5634388ede85` /
+  `b858b2245f2880deb2a2096e9ef13b79f73222a24a90bb01403d519289615d6c`;
+  tournament ledger SHA-256:
+  `8da9354e69971ab3e27b54564567ce3f431721c77412480b667f655d93c55e85`.
+- `tetrahedral_k4_missing_double_edge_channel_split_20260816.py` ->
+  matching `.out` [VERIFIED-EXACT FINITE ATLAS; NOT INDEPENDENTLY AUDITED].
+  A loopless directed pair's four states split as centered symmetric/skew
+  channels: missing `(-1,0)`, forward `(0,1)`, reverse `(0,-1)`, double
+  `(1,0)`, with XOR equal to skew support.  On `K4`, four undirected vertex
+  degrees plus two matching contrasts recover the six symmetric coordinates
+  at lattice index `8`; three net scores plus three Haar square holonomies
+  recover the skew coordinates at index `32`.  The combined index is `256`
+  and the signature reconstructs all `4096/4096` labelled loopless digraphs,
+  in `218` `S4` orbits.  Partial-orientation, semicomplete, and tournament
+  charts have sizes `729/729/64`.  XOR alone merges missing with double;
+  skew alone and symmetric alone both fail hostile controls.  No LRC/JC
+  transport follows.  Script/output LF SHA-256:
+  `68ff06cb07f0f198b569fb21360a8a2133589ce9dbeac6f7ae71d1c79d13cba0` /
+  `de16f012e29f4de01ee93df28855c035dc8f2f781ac4b040bc04f0302c05e522`;
+  semantic ledger SHA-256:
+  `5e6b7523f0da756849e870e7180b457761430c7b62618fca3c488d41e4a5e08a`.
+- `lrc14_stage2_root_shear_contrast_probe_20260816.py` -> matching `.out`
+  [THM-3505 PROVED + FINITE-EXACT; INDEPENDENTLY AUDITED BY THE PRECEDING
+  STANDALONE CONSTRUCTOR].
+  The theta-slaved and fixed-absolute-root `7 x 13` contractions differ in
+  `19/91` raw and `28/91` centred cells; their difference has nonzero
+  `Psi_(1,1)(1,1)` and all `5,184/5,184` primitive coefficients fire, with
+  reduced-coordinate floor `60/72`.  Retaining owner root `u` gives the exact
+  shear `A_hat(r,s)=S_hat(r+2s,s)`.  At the split embedding `F_53`, `xi=16`,
+  there are `528/924` certified nonzero modes off both the pure-theta line
+  `r=0` and pure-absolute-root line `r=2s`, concentrated `132` apiece in word
+  slots `2,3,4,5`; synthetic pure-chart controls vanish off their lines.
+  Restoring the word Fourier axis at the split embedding `F_547` gives
+  `792/792` nonzero primitive `C7 x C13 x C13` modes off both pure lines,
+  exactly `132/132` for each nontrivial `C7` mode; the three-axis support
+  ledger is
+  `51ea8b27b8f14f07ed7099601e80a5b36f18510cf6da9c4f815802e6eb8f05cc`.
+  Organizing frequencies by the affine slope
+  `lambda=owner_mode/root_mode` gives `72/72` modes on each of all thirteen
+  slopes and `936/936` overall.  In particular the owner marginal
+  (`lambda=0`) and fixed-absolute-root line (`lambda=2`) are both `72/72`;
+  full slope-pencil ledger SHA-256:
+  `e92e3f1b072db16ada1daa28925803ebd9e11658deb3532680911ed637dee85d`.
+  This proves genuine two-coordinate chart sensitivity, not unique slaving
+  causation, a physical current, row exclusion, or LRC(14).  Script/output LF
+  SHA-256:
+  `58fd7ccd0e2c82ab04a21d0fbfc940f74e47bfe2db9ef4454a15aebd63118155` /
+  `e7772acf6caf63dd78b50bd4c8c18321d64a2e957b112a8842f87b669da6a143`;
+  support ledger SHA-256:
+  `638af80f232c55d91a4e3d5b8fb802e4c7196184b6d2c9ac9324d370d53cbcf4`.
+- `regular_shortlex_harmonic_density_automaton_probe_20260816.py` ->
+  matching `.out` [VERIFIED-EXACT THM-3499 CONTROLS; GENERAL THEOREM
+  RESERVED AND AWAITING INDEPENDENT AUDIT].  The proof candidate states that
+  every complete finite automaton under shortlex indexing has logarithmic
+  density
+  `E[H_infinity/(1/(q-1)+X)]/log(q)`, where `H_infinity` is the eventual
+  recurrent-class stationary acceptance mass and `X` is the uniform q-adic
+  address.  A single reachable irreducible class reduces this to ordinary
+  stationary mass without an aperiodicity assumption.  Exact controls
+  reconstruct THM-3497's `4/12=1/3` and `34/192=17/96` group automata; an
+  even-length binary language has natural endpoint limits `2/3,1/3` but log
+  coefficient `1/2`; and the prefix-zero hostile has coefficient
+  `log(3/2)/log(2)`, not its unweighted basin mass `1/2`.  This covers regular
+  shortlex subsets, not arbitrary subsets of the harmonic series.
+  Script/output LF SHA-256:
+- `regular_shortlex_harmonic_density_automaton_probe_20260816.py` and
+  `regular_shortlex_log_density_independent_audit_20260816.py` -> matching
+  `.out` files [THM-3499 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  PROOF-AUDITED].  Every complete finite automaton under shortlex indexing
+  has logarithmic density
+  `E[H_infinity/(1/(q-1)+X)]/log(q)`.  With one reachable closed class this
+  is its stationary accepting mass, even when periodic; multiple classes
+  retain their ordered q-adic basin address.  For any language with `a_n`
+  accepted length-`n` words, its level mass lies between
+  `(q-1)a_n/(q^(n+1)-1)` and `(q-1)a_n/(q^n+q-2)`, so harmonic convergence is
+  equivalent to Kraft convergence.  For regular languages the sharp boundary
+  is trimmed `rho<q` (finite mass) versus `rho=q` (a reachable closed
+  accepting SCC and positive logarithmic coefficient).  The independent
+  engine exhausts all `5,832` binary three-state and `256` ternary two-state
+  languages, plus delayed-transient, reducible-periodic, reversal,
+  arbitrary-cutoff and Berggren hostiles.  It reproduces `1/3`, `17/96`,
+  even-length `1/2`, and prefix coefficients `log(3/2)/log 2` and
+  `log(4/3)/log 2`.  This does not give logarithmic density to arbitrary
+  subsets of the harmonic series.  Submitted script/output LF SHA-256:
+  `7433a432faa30cfb2f5f54d9f759645da2fb665f19874881147f0ffe4100e866` /
+  `41f1103aa01c1050d1cb535865ef71a7bbe6791c028178f14b69ffaabeddcc99`;
+  submitted semantic ledger:
+  `90586710e72cf8ebc6c36e3e84135f0053973fecf412b5d83fa22881f816ce75`.
+  Independent exact ledger:
+  `046420bde716c6f83c7314c0010e1e4b19feffae59de7c9684fb4d0bdc4b1459`;
+  independent script/output LF SHA-256:
+  `4ee6e0d44a8c52a4ac1111642f23558b2eb94795f92b867a72b7a9a41493023b` /
+  `684308fdd163e82c02661ee40a00767a4edda642211e657002fb0cab59e4eb47`.
+- `keller_level_four_old_L_boundary_norm_probe_20260816.py` and
+  `keller_level_four_degree81_finite_field_probe_20260816.py` -> matching
+  `.out` files [VERIFIED-EXACT THM-3498 PROOF CANDIDATE; RESERVED AND
+  AWAITING INDEPENDENT AUDIT].  Exact reconstruction of THM-3495's
+  66,146-term `J` gives the 16-term Newton face
+  `-2^58*3^51*13^8*79^4*313^2*x^43*(3xz-2y)^15`; both divergent inverse
+  sheets have `L`-valuation `-43/2`, while the finite hostile sheet at
+  `(2,5/6,-7/8)` is a unit, so `v_L(N(J))=-43`.  Independently, three nested
+  cubic algebras over `F_101` at `(1,1,1)` give a full degree-81 squarefree
+  fourth norm-product with off-grid determinant check and ledger SHA-256
+  `1c05c0fd5ee48fc2dd030aebdb9ad6ddd8185fb933eb91e7e39ff553424ef5a7`.
+  The submitted square-class derivation is `[Delta_4]=[2G]` for
+  `G=L^43N(J)`; promotion awaits a fresh audit of localization, constants,
+  and good reduction.  Old-boundary script/output LF SHA-256:
+  `a52a992a2455f9a6d8b5a2949b1a956969846df69f9df3492573c5ab864d837c` /
+  `a730eb715177e1be945259c01e048c974be624c67e8882a6d4c4c66293d7b85a`;
+  degree-81 script/output:
+  `4039b4081c9f0d95b197d2e3a7581c66433382e53dac3b95fa2526c3a4ba4f2e` /
+  `f5498e42510641227052f578cd269697876746a6847ba6bb8cd382e726c35169`.
+- `tetrahedral_k4_tournament_berggren_representation_atlas_20260816.py`
+  -> matching `.out` [VERIFIED-EXACT FINITE REPRESENTATION SYNTHESIS].  The
+  four vertices, six XOR edges, three perfect matchings, and four opposite
+  faces are separated as distinct `S4` representations.  Cut plus
+  opposite-face cycle coordinates have lattice determinant `-16` and
+  reconstruct all `64` labelled `T4` orientations from score and triangle
+  circulation.  The four unlabeled tournament orbits have score/cyclic-face
+  profiles `(3,1,1,1)/1`, `(2,2,2,0)/1`, `(3,2,1,0)/0`, and
+  `(2,2,1,1)/2`.  The matching action is `S4->S3` with kernel `V4`, whereas
+  odd-characteristic graph `H1` is faithful; its traces distinguish exactly
+  the class pairs merged by THM-3497's 12-state variable language.  This is
+  not a physical current or cross-domain bridge.  Script/output LF SHA-256:
+  `dca20c052e6ae681c9f7fc5fa2c8145a7da74f79d9d07d1869ed0a5d9df7d1c9` /
+  `dcb40e7868c364d06b4e3260bdcab91353077ab193e7be99b0a28a45c18c4bdd`.
+- `lrc14_stage2_theta_contraction_r5_independent_audit_20260816.py` ->
+  matching `.out` [INDEPENDENT RECOVERY/HOSTILE AUDIT OF PROVED THM-2594].
+  The parent copies normalize exactly to the repaired canonical primary
+  script/output.  Normal, optimized, and stored primary transcripts agree
+  after masking only elapsed fields.  A separately implemented ANOVA,
+  `Phi_91` reduction, toothpick transform, and factorization exhaust all
+  `5,184/5,184` primitive coefficients as nonzero; the five split-prime
+  values are `(295,213,380,1405,883)`.  Exact linked-node identities put the
+  factors over one outer base and finite ancestry sum, not one circle point.
+  The beta-zero and constant-column controls vanish, while the genuine
+  fixed-absolute-root control has a nonzero interaction and also fires
+  `5,184/5,184`; hence unique causal attribution to `theta=t-2u` is refuted.
+  This remains one realized candidate contraction, not a generic THM-2512
+  bridge, THM-2449 one-point response, physical current, row exclusion, or
+  LRC(14) result.  Audit script/output LF SHA-256:
+  `8be9c1b69b33ab51ac16ce2c2a7f836aae4b811e2817b90e25921c234578c568` /
+  `087bb018408d3438494fb4ade461a4371e26bec60e31421540fea929316dd679`;
+  primary replay semantic SHA-256:
+  `184c159dd4aedb02b38b2029846b9e88f301fcc63dd163682bbabddc438b825e`.
+- `berggren_t4_three_language_independent_audit_20260816.py` -> matching
+  `.out` [THM-3497 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED, WITH ONE
+  TERMINOLOGY REPAIR].  Starting only from THM-3339's integer branch matrices,
+  it rederives projective and true mod-two actions, the static/six-frame
+  `A,B,C` counts and `B` positives `4/8/512`, the minimal variable
+  `S3 x C2` and fixed-drift `S4 x D4` automata, both exact recurrences and
+  asymptotics, and the Fibonacci clocks `{0,1,2}` modulo `6` and `12`.
+  The hostile `BA` test fixes root-to-child multiplication: `BA` acts as
+  matrix `AB` and sends `(1,2)` to `(5,8)`, while reversal gives `(3,8)`.
+  For the fixed harmonic theorem, the nine two-letter increments generate
+  all 96 kernel states and `B^4/C^6` give return lengths `2/3`, proving
+  prefix-cylinder mixing and logarithmic density `17/96` despite failure of
+  natural density.  The repair renames `17/96,-1/96` normalized polar
+  coefficients, not residues.  Independent script/output/semantic LF
+  SHA-256:
+  `22e0cac6bc9294418df7ac667321dd8a091f0ec302d8be724c6593847478d891` /
+  `95fbcfa549921dc13cc65615a167dbb735625f97cbe604a4eda65c484779cfcf` /
+  `0c363166248508d0712542fd725df56b32769680ba9acbf8ee63b4a6115f88cf`.
+  The full-branch, variable-translation, and fixed-drift supporting
+  script/output LF hashes are respectively
+  `557b18c515659ca6b7acdbf4c8d66dddeb07849f85e3514780d89a6a76c2c6a4` /
+  `77b7a038cf4a6fdb7f1b609729f5e387af8ea8290ef2a976c31d2141e6e85dc3`,
+  `86a7a891ada981b61b3ebc4b02cc1b02ba29fafbd05129e5a32a91fa4c134874` /
+  `8690f9254744ac2fae5ad700e1932f45a7b996cb88be5153d864e6e9f1a02a9a`,
+  and
+  `f503aa44b7287ea200589093c17c3e68f01e456b314f84b607c6695359249d4a` /
+  `c8c87fa66bae84d1165dbdd00312e25d22fdae17841c5cc0d45aa205b7433d9b`.
+- `typed_h1_coboundary_character_marginal_synthesis_probe_20260816.py`
+  -> matching `.out` [VERIFIED-EXACT TYPED SYNTHESIS; NO LRC/JC BRIDGE].
+  The independent standard-library probe separates exact graph coboundaries,
+  graph `H^1`, group characters, Betti cycle dimensions, and marginal tensor
+  kernels across THM-3494/3496/3487/3479 and promoted THM-3497.  The
+  tetrahedral opposite-face transform has
+  integral split index `16`; in characteristic two its cohomology image has
+  rank one and records the product of four vertex square classes.  The
+  audited THM-3494 cubic `(w,x,y,z)` packet makes this class nonzero via the
+  odd divisor `9P-27Q-2`.  On THM-3479's two-`K4` role carrier the analogous
+  odd-characteristic map has rank six and split index `256`; both wing classes
+  and the complementary hub-leaf bridge fire in all `72/72` endpoint charts,
+  while the audited edge-difference current itself remains an exact
+  coboundary.  The role `H^1` has no automorphism-invariant scalar over
+  `F13`, and the cross-primary coefficient Hom groups are zero.  The probe
+  also verifies both marked cyclic transgressions, the strict Berggren
+  character/language hostiles, and the `25/144` marginal image/kernel model.
+  Script/output LF SHA-256:
+  `68c18c2daede470b8e13af3fbd4a849e4b50bc5f7acb501b9391e57df3795ca9` /
+  `3ff91100bc02a9182b8560aee2ee1ad84fecd362c87522672c828dd32eb95836`.
+- `d5_marked_graph_kummer_finite_coefficient_flux_thm3496_independent_audit.py`
+  -> matching `.out` [THM-3496 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED, WITH SCOPE REPAIRS].  Seam sum and independent `C_91` prefix
+  integration identify the seven-chart graph line with its deck-defect line;
+  after source/deck, algebraically closed residue-field, oriented-uniformizer,
+  and exponent-one markings, it maps isomorphically to the `mu_13` Kummer
+  line.  Graph-cover degree and normal ramification commute, so degree `13`
+  kills and `14` restores the class.  There are twelve unmarked nonzero
+  scalar choices, and `[2]` over `Q((lambda))` is the sharp extra-unit
+  hostile.  For `P=x+x^2z`, `[1]` is nonzero in characteristic zero but exact
+  over `Z/13^r` for every finite `r`; no universal derived-completion or
+  Bockstein no-go follows.  This is divisor-normal, not a physical current,
+  Keller composition, flux realization, LRC(14), JC(2), or DC(2) result.
+  Independent script/output/semantic LF SHA-256:
+  `75a231dd17d2bc847c01700c6c4665b25ac841dc07e52fdfe7433d8cc4385acf` /
+  `e2aad9e9298afad36ae00abeb4d10dcb92a733902f75a8608891bda991c093e6` /
+  `0c5756987947c93c271b7db5443a1618e483269c490b6710c30b9056562be1bb`.
+  The repaired original sidecar script/output LF SHA-256 are
+  `d313a3089c32d40b814539bb45f45a19b835a5e176f3ed15aea132971d948a7c` /
+  `e8b185bff6f2bdee5d2f8e76d8804e2d36e6556edb8ab4b34335110f1d1d47b3`;
+  its semantic payload remains
+  `8b347e4b65b8a07e4ce040775733b7b1e2161280cc241629dc6d50d21a50881c`.
+- `fibonacci_t4_atlas_h1_branch_transplant_probe_20260816.py` -> matching
+  `.out` [VERIFIED-EXACT STRUCTURAL SIDECAR TO PROVED THM-3487 +
+  INDEPENDENTLY AUDITED].  Owner plus an order of the three nonzero `V4` directions
+  bijects with all `24` total orders of four vertices, hence all labelled
+  transitive `T4` tournaments.  The lawful affine owner edges transport this
+  atlas positionwise but have trivial holonomy.  A base-preserving
+  frame-line transplant exists exactly for a nonzero seam class
+  `h in H^1(C6;V4)`: each of `p,q,r` has exactly eight compatible point
+  gauges, partitioning all `24` initial identifications as `8+8+8`; class
+  zero has none.  Thus the same nonzero class that creates a structured
+  `T4` transplant forbids every closed owner section.  Element orders in
+  `S4` are only `1,2,3,4`, so the order-6/order-12 full shifts require a
+  time-dependent affine connection, not one static relabelling.  All `4096`
+  translation cochains split `1024` per seam class; a nontrivial-linear-return
+  hostile has two sections and cycle type `(6,6,12)`, delimiting the
+  constant-coefficient `H^1` claim.
+  Script/output/semantic LF SHA-256:
+  `0f2ea46b6df1f58be7299ed6be64aef34911559421422b9c43e11b8a275988e5` /
+  `76f7dee37b1a527e46f3048ca0600e49f96c0d2a80066944dc4cec46491abe01` /
+  `3e19be5a6d7679656f4e476ea1cb5a3bd5944a190bab860c43a8ecbd034d8176`.
+- `periodic_polynomial_fourier_dirichlet_residue_tomography_thm3490.py` ->
+  matching `.out` [THM-3490 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED].  For a declared period and
+  character gauge, `Res_(s=m+1) sum_n zeta^(-jn)a_n/n^s` is exactly the
+  degree-`m` coefficient of Fourier colour `j`.  The complete table recovers
+  every periodic-polynomial lane coefficient; THM-3485's minimal recurrence
+  is its strict lossy projection, retaining only each row's highest nonzero
+  rung.  THM-3486 is the top trivial entry.  An `82`-packet split-field audit
+  checks Fourier inversion against direct Berlekamp--Massey, the alternating
+  trivial-colour blind spot, composite-period zero rows, finite-prefix loss,
+  and THM-3484's `(7,6,6)` profile.  For periodic Boolean subsets the full
+  residue bank recovers the address word while density is only its trivial
+  residue; an address gauge remains necessary.  Script/output/semantic LF
+  SHA-256:
+  `52a58263a2ea00af72a1038d1d64c955e411b0f308ba7fa94621439f00d79d43` /
+  `72f7b97f3acabeef953c1184a35904b1fa28d0494cb9f4d0e2100c85aa3ebc3e` /
+  `39daa9a75e84e0fcb28141fa9079c3f616c9aa5d0689934cc239b4d911fc713e`.
+- `fibonacci_two_24_state_bundle_obstruction_thm3487.py` -> matching `.out`
+  [THM-3487 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Synchronizing the six Fibonacci channel
+  orders with the four-state `P1(F3)` cycle gives permutation type `12^2`,
+  while the lawful affine-`V4` owner transport has type `6^4`.  For the fixed
+  trivializable edge-linear system the mismatch is exactly
+  `H^1(C6;V4)=V4`: the proved
+  closed owner section has class zero, and each of the three nonzero
+  K4/XOR matching directions repairs the abstract cycle type but forbids
+  every closed section.  The two-step frame shift survives abstractly
+  (`31104` conjugacies) but not over the displayed base; each nonzero seam
+  repair has `288` abstract conjugacies.  Owner plus direction order is
+  exactly the atlas of all 24 labelled transitive `T4`s; each nonzero class
+  has exactly eight base-preserving positionwise-affine atlas transplants,
+  while class zero has none.  The independent audit exhausted all `4096`
+  translation cochains and isolated the nontrivial-linear hostile
+  `(6,6,12)`.  Under a declared uniform 24-address
+  word, invariant-union harmonic grades are halves versus quarters; this is
+  not a single-orbit average.  Primary script/output/semantic LF
+  SHA-256:
+  `a5b2b033488555dca7fef149f3e31d8e45584af051f84e3f542f4af449154037` /
+  `4dbb93388c29ae4ac7073f5ed2d39b6e08671e6f416ae0ba05c020004d949ebb` /
+  `9c338ec5eebe1f93326ae12c00f37da58382fa2084339adbd1de422e7d05d70e`;
+  atlas sidecar:
+  `0f2ea46b6df1f58be7299ed6be64aef34911559421422b9c43e11b8a275988e5` /
+  `76f7dee37b1a527e46f3048ca0600e49f96c0d2a80066944dc4cec46491abe01` /
+  `3e19be5a6d7679656f4e476ea1cb5a3bd5944a190bab860c43a8ecbd034d8176`.
+- `periodic_polynomial_critical_harmonic_transform_thm3486.py` -> matching
+  `.out` [THM-3486 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a
+  nonzero degree-`d` period-`p` polynomial word, the theorem proves
+  `sum_(n<=N)a_n/n^(d+1)=c H_N+C+O(1/N)`, where `c` is exactly the top
+  coefficient of the trivial Fourier colour.  After subtracting `c n^d`,
+  convergence is absolute iff every lane has the same leading coefficient;
+  otherwise it is conditional.  The finite constant is an explicit
+  root-of-unity polylogarithm packet.  Boolean periodic subsets recover their
+  density as harmonic coefficient.  The THM-3484 ternary word gives
+  `c=-16384` with absolute renormalized tail; THM-3455's full-spine and
+  Fibonacci-index subsets sharpen to convergent constants at coefficients
+  `76/187` and `43/90`.  A declared K4 star-address period has coefficient
+  `1/2`, but supplies no tournament orientation.  Script/output/semantic LF
+  SHA-256:
+  `0caa1fff76e4d18027f9e08efef3ac21cba0c4b6dd9964517aa93c6675f29202` /
+  `f6b3b3afe749974fc45b1b70da6eeee28368e1193bd986c574a359cf931fed1d` /
+  `d30150749708eee29dc4f1773fc1e757e6c8f0df0b7b707b509023e8e06db748`.
+- `periodic_polynomial_fourier_jordan_recurrence_thm3485.py` -> matching
+  `.out` [THM-3485 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a
+  characteristic-zero period-`p` polynomial word, the theorem classifies the
+  minimal shift polynomial as
+  the product of `(x-zeta^j)^(deg Q_j+1)` over its nonzero Fourier colours.
+  The exact defect from the naive `p(d+1)` order is the sum of missing top
+  Jordan rungs; over `Q` the factors group by cyclotomic order.  A common
+  leading lane coefficient removes at least `p-1` orders.  The companion
+  recovers THM-3484's `(7,6,6)` profile and order 22, checks five structured
+  zero-colour/composite-order/common-leading hostiles, 35 generic packets,
+  and every common-leading period `2..9` against exact rational
+  Berlekamp--Massey.  Script/output/semantic LF SHA-256:
+  `2d6441a7c875ded74b7ff6b83509108da450f6bb18553d37652269258936a6a0` /
+  `85859d4b1585c6b72f5224f5022b258230fa4d630317fa078ac943e1f4f43789` /
+  `834dfd2be5aed2f4d92b6f7fe742bc0df3a3008e61a0e1bc3fd39eef2dac54c0`.
+  The Rule-30 jet comparison is analogous filtration grammar, not a transfer.
+- `lrc_ternary_weighted_determinant_minimal_recurrence_thm3484.py` ->
+  matching `.out` [THM-3484 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED].  The explicit three-lane
+  degree-seven word related to THM-3482 has minimal characteristic polynomial
+  `(x-1)^8(x^2+x+1)^7`, hence order `22` rather than the naive order `24`.
+  The common leading term `-16384k^7` lowers both nontrivial cubic Fourier
+  colours to degree six.  The generating denominator is
+  `(1-z)(1-z^3)^7`; an exact nonzero `22x22` Hankel determinant factors as
+  `-2^382*3^191*5^22*7^8*61^7`.  Both shortened-factor hostiles fire,
+  rational Berlekamp--Massey returns order 22, and each ternary lane has
+  natural/harmonic coefficient `1/3`.  Script/output/semantic LF SHA-256:
+  `e0bf5f055b65a508c572530fceae70888e12cafed249d840ea0508cf8c4204fd` /
+  `d6f68554cea8243670e84a4d7ac32d610553dbb582091b0e77ee4a7b2af83ea3` /
+  `0c9cac55b66f8a8aa4241ad728e3336dd000cff25544f3df7eef9af120012518`.
+  The theorem is self-contained for the explicit word; its determinant
+  interpretation is inherited from proved THM-3482, while relation-current
+  and LRC interpretations remain outside the claim.
+- `lrc_private_count_gradient_weighted_spectral_thm3482.py` -> matching
+  `.out` [THM-3482 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Orient
+  the thirteen THM-3473 coactivity edges
+  by owner order and weight them by endpoint private-count differences.  The
+  resulting edge cochain is a coboundary and pairs zero with all six cycles,
+  but its signed weighted `7x7` determinant is nonzero for every `k>=1`.
+  The two `K4` tree sums and forced bridge factor the three ternary lanes as
+  `-2048k^4(2k-1)^2(2k+1)`,
+  `-2048k^4(8k^3+12k^2-2k-1)`, and
+  `-256k(2k-1)^6`.  Four or six edge weights vanish, so neither absolute
+  graph holonomy nor all-edge support is necessary for this graph-level
+  spectral predicate.  Script/output/semantic LF SHA-256:
+  `3a3f439a88abe5a14180e850e016db2a0b6b327fb979b5df0106ee7aaa2cbbac` /
+  `6632ead82d4dcdbac3919200aa8790403a4b2d61a2da5d29893f208a08b03db9` /
+  `98cba04620048b6c6f8fab03518ab39e0125623f033423eda29245c9b53a0162`.
+  The independent audit repaired the hub-gauged pairing type and independently
+  recovered all tree sums, six cycle pairings, and an orientation-reversal
+  hostile.  The owner-order orientation is a required gauge; no relation-
+  current map, LRC bispectrum, or LRC(14) conclusion follows.
+  The owner-order orientation is a required gauge; no relation-current map,
+  LRC bispectrum, or LRC(14) conclusion follows.
+- `factorial_nondivisor_residue_digit_pair_compiler_thm3483.py` -> matching
+  `.out` [THM-3483 PROVED + VERIFIED-EXACT + FINITE-EXACT + INDEPENDENTLY
+  AUDITED].  For `p` not dividing `d`, the finite residue
+  `rho_p(n,j,d)` decides whether the raw Kummer--Legendre height of
+  `[v^j]A_n^d` is exact.  Nonvanishing at every extreme raw vertex proves
+  equality of the raw and actual Newton polygons; rho zero is a definite
+  lift and can create a new edge.  The exact companion checks `23,395`
+  coefficients in `746` profiles, with zero mismatch on all `665`
+  rho-admissible profiles, and freezes the sharp `A_2^4,p=5` hostile.  At
+  adaptive primes `7,13,7,13,7`, the compiler eliminates all five THM-3475
+  packets, giving pair-only closure of all 38 residuals through `d=2600`.
+  Script/output/semantic raw SHA-256:
+  `9e37ead620f141617a9c6d51c182e09c034945793092e56e39fb061254662723` /
+  `5bfc1b06cda024080d1c4c977511bb6f0f30ecdbf7ad6e8072a1052c072bebc9` /
+  `f80c046942d62a8a6b6f3802d224cc47944568a7e9f3ef245d43baf91a4031c4`.
+  `factorial_adaptive_rho_block_4000_thm3483.py` and
+  `factorial_adaptive_rho_block_4000_independent_audit_thm3483.py`, with their
+  matching `.out` files, independently apply the divisor-plus-rho policy to all `1395`
+  rows `2606<=d<=4000`.  Of `461` post-exit residuals, divisor pair ledgers
+  close `420` and admissible nondivisor primes close the remaining `41`, with
+  zero survivors and common semantic SHA-256
+  `95d1c233d59d00c38ce456fa7c5f5e248414e01b5ba9dc2ae9f61725d6c19dbd`.
+  Primary script/output raw SHA-256:
+  `b58fd73c96929fa287b09addfe86463d0ca9998a31e37dbd964d1456828396e4` /
+  `48733decf5874c197b989d7731f0864082a65fe7b9056af67e0149d1e8a94896`;
+  independent script/output raw SHA-256:
+  `0b858f7b1154a3ee2dec43bf5238f7e6f24b524e9dc2b9f70f5b497fcef58934` /
+  `5c02ee06a8b14909b1b6677e1d853057eeb285ab5699cd354e5e30304533b329`.
+  Four further artifacts extend this dual exact census without a gap:
+  `factorial_adaptive_rho_block_6000.py`, its independent audit,
+  `factorial_adaptive_rho_block_10000.py`, and the lightweight
+  `factorial_adaptive_rho_boundary_10000_gate.py`, with matching `.out` files.
+  On `4001<=d<=6000` the counts are `(2000,1272,728,600,128,0)` and semantic
+  SHA-256 `7f8ab74ae9fae027f32fd7eabaf0338c217319e274594bd603859a1bbcca28bd`;
+  on `6001<=d<=10000` they are `(4000,2524,1476,1364,112,0)` and semantic
+  SHA-256 `d90179fdebd48dd82cd368b957c9602fbd287774287de0fecb73b4a84dca69f3`.
+  The combined gate digest is
+  `4a364bbafdfef0dc6d905063c9570b987e00eca2506506b8160ce24e453878bf`.
+  Primary/independent `6000` script hashes are `b65edcf...c94d1` /
+  `d416cb2...6724`; the `10000` and gate hashes are `105e626...f0eba` /
+  `ee57eb8...2d5b3`.  This extends the exact-support quadratic boundary
+  through `r=9998`; `d=10001` is merely untested.  The exact `d=6518,p=29`
+  gap is a hostile to a uniform `p<=23` claim.  A nonempty degree barcode
+  remains necessary, not a factor; no arbitrary-support SFC/FC conclusion
+  follows.
+- `factorial_dual_seven_exit_block_closure_thm3478.py` -> matching `.out`
+  [THM-3478 PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED].  Separately pinned coefficient/Fraction-hull and
+  determinant-hull routes reconstruct all 38 seven-exit residuals in
+  `2501<=d<=2600`, agree on every progressive degree trace, and close them
+  all.  Four common chunk digests combine to global semantic SHA-256
+  `28bdc29a6dadfc941ccab7b8eddafd77bd6bbcec9a2574455d4ba3a6dd439b9f`.
+  Two formula-only THM-3475 implementations then agree that divisor ledgers
+  close `d=2601..2605`; at `d=2606` they leave exactly
+  `{521,1042,1563,2084}`, semantic SHA-256
+  `602f0fac54c487114457683a3264d2a095a7f048f9a0b3769332d3ead0e61289`.
+  Hence exact-support quadratic three-moment windows close through `r=2603`.
+  Script/output raw SHA-256:
+  `65c651ce611317bc44de472c79d246c0a1bcb90ddfec8145cdd0ef33304073e7` /
+  `0bda5199917f16e59f0c6b3319cabe6184e7d93dc2556752d15166b71f653935`.
+  The expensive routes were completed separately; the final wrapper was
+  syntax/AST/render audited but not rerun end-to-end after packaging.  This
+  proves no arbitrary-support SFC or FC case.
+- `lrc_half_twist_relation_current_bridge_thm3479.py` -> matching `.out`
+  [THM-3479 PROVED STRUCTURAL + VERIFIED-EXACT + FINITE-EXACT +
+  INDEPENDENTLY AUDITED].  The all-91-unit relation
+  `(-27,-27,-27,20110798,-41,-27,-27,-27,38)` is realized by two primitive
+  q=11 tuples.  U_full has positive delayed mass and all `169/169`
+  unrestricted THM-2334 target aggregates nonzero.  Its exact guard-packet-
+  row-refined `13^3` bank has five distinct role values and nonzero bridge,
+  both `K4` factors, and product in all `72` labelled owner-oriented charts.
+  U_clock has the literal common centre `1/22`, same-clock delayed word,
+  positive delayed mass, a two-embedding nonconstant endpoint bank, and one
+  atomic address term, but no complete coarse or refined bank.  Exact
+  q=27/q=51 lifts preserve only the stated mod-7, 13-adic, and q=51 affine
+  `k mod 3` decorations.  `|Aut(G)|=72`, with orders `{1,2,3,4,6}` and edge
+  orbits `1+6+6`, forbids a native regular-`C13`-equivariant fibre-to-edge
+  bijection.  The 72 nonvanishing charts instead map eight labelled roles to
+  vertices and then take owner-oriented edge differences; they lie in `B^1`,
+  have zero absolute `H^1`, and are noncanonical/nonphysical.  Core
+  script/output/core-semantic/carrier-semantic LF SHA-256:
+  `ad2a620cdc238f28e3384698b2c612f38cdf2566bd56b76d1cbabcc03107ec0b` /
+  `e1e4355290c493d8f9518a4bba3825173bb3137c3d50df421816946e6b1f1207` /
+  `1bf53086d3da347dde443175462be716da6e9dac54c96582718d19ec8fddff21` /
+  `3f17c2206feec73da48a989ab2150ceb1c7d1bc275c77291df476d882957581a`.
+  The refined transform retains the literal Boolean guard but has no mod-7
+  character.  Grouped `C(a;X,m)`, U_clock `A(e_c2)`/refinement, all-unit
+  `B(q)`, ancestry, bispectrum, physical current, scalar-row exclusion, and
+  LRC(14) are OPEN.
+- `lrc_relation_role_chart_weighted_closure_probe_20260815.py` -> matching
+  `.out` [FINITE-EXACT STRUCTURAL COMPONENT OF PROVED THM-3479;
+  INDEPENDENTLY AUDITED].
+  The six `-27` relation slots split as the blocker triple and
+  `{q2,q3,q4}`, matching the two outer triples of the proved two-`K4`
+  carrier.  Deleting `q1` as rational gauge, sending `H` to the unique hub
+  and omitted `q5` to the unique leaf gives 72 labelled role charts forming
+  one `Aut(G)` orbit.  The induced rank-seven map lands in `B^1(G;Q)` and
+  has zero pairing with all six absolute cycles.  Nevertheless all `72/72`
+  signed weighted tree determinants are nonzero on each of U_full and
+  U_clock, always with exact `v_13=4`; the displayed determinants are
+  `17908964716879810126984704` and
+  `-32968453616912573701504956325888921680`.  The integral projection has
+  index 41, and the flat-potential hostile vanishes.  This uses relation
+  coordinates as potentials, not endpoint amplitudes or a physical current.
+  Script/output/semantic LF SHA-256:
+  `207c65ca235ea5647e346027d424264e8abbcf27c5f574b5901cca13611d7e03` /
+  `d9fd5272303675d9295a26faab3ddfc236941d2b99307af50d88e0b7b7af4bed` /
+  `1992d46a4df3a3c862e9c36ecfc4f992eea654d9373b852836c9652962ad49e7`.
+- `lrc_endpoint_role_q1_gauge_quotient_obstruction_20260815.py` -> matching
+  `.out` [FINITE-EXACT QUOTIENT/BACK-MAP COMPONENT OF PROVED THM-3479;
+  INDEPENDENTLY AUDITED].  The lawful coordinate response is address-side
+  `P_i=A_w([e_i-(w_i/w_q1)e_q1])`; evaluating character-side `gamma_w` on
+  coordinate vectors is ill-typed.  For both U_full and U_clock the coarse
+  `F_13^2` quotient identifies `H` and `q5`, so the unique carrier bridge has
+  zero weight and every one of all 72 role-chart tree determinants vanishes,
+  independently of the endpoint function.  Among the six named single-row
+  deletions, only removal of the `H`-labelled owner-packet row restores this
+  contrast; the Boolean `guard_safe` factors remain.  Adjoining character
+  `e_H` gives the dimension-minimal named `F_13^3` quotient and a 2,197-twist
+  bank.  The pinned actual U_full bank realizes the normalized inverse DFT,
+  coarse fibre-sum back-map, five role values, and all 72 graph products.
+  U_clock refinement, common-ancestry realization, grouped coefficient,
+  bispectrum, and LRC(14) consequences remain OPEN.
+  Script/output/semantic LF SHA-256:
+  `02d6cf3553edf3412da6d8eb99c7937f841d9441cc9599bc01319f72596b5887` /
+  `14e9483fd1ec42cc0cdffb156dc520a491bc95d0816a85828732c965858ec5d7` /
+  `fe9fe2d4b1d98aba3b60e1a7f6823bcccabed04d7a319f3eb20c83d25c799422`.
+- `lrc14_guard_deleted_refined_endpoint_role_probe_20260816.py` -> matching
+  `.out` [FINITE-EXACT U_FULL ENDPOINT COMPONENT OF PROVED THM-3479;
+  INDEPENDENTLY AUDITED].  With only the `H` owner-packet row removed and both
+  Boolean guard factors retained, the complete `13^3=2,197` twist bank is
+  evaluated across `71,070,080` exact interval components at a certified
+  primitive split-prime embedding.  Its `tau=0` slice recovers both coarse
+  digests, all four refined fibres sum back to the coarse response, and five
+  distinct class values give bridge residue
+  `389266878372286537904` and zero factor census `(0,0,0,0)` over all 72
+  labelled charts.  The surviving collision is `c2=q3=q4=q5`; this is an
+  unrestricted mod-13 endpoint aggregate, not grouped `C(a;X,m)`, all-unit
+  `B(q)`, ancestry, or a physical current.  Script/output/semantic LF SHA-256:
+  `ee2105742abee578a9c41ff7ec954a07ada324fccc2c643429e7ac6e6e6f8fc2` /
+  `10a98351cc59615a5b6d2b8f555e0936d1a39566d9906127edc2b0fbc3918e73` /
+  `f06a258b85212ba981de4c18027147a8875c67fc35d1f55d9128c17d746994a9`.
+- `lrc14_guard_deleted_refined_endpoint_role_graph_audit_20260816.py` ->
+  matching `.out` [FINITE-EXACT INDEPENDENT GRAPH AUDIT FOR PROVED THM-3479].
+  A separate role-chart engine reconstructs all 72 bridge/left-`K4`/right-
+  `K4`/product rows, obtains zero census `(0,0,0,0)`, bridge multiplicity 72,
+  chart digest `b7d8c2c9860e4f1aa542b1c85fdb7b65cf4985aba5a81a84ff3a324834d51c51`,
+  and exact vanishing for the flat hostile.  It pins the promoted role,
+  XOR, q1, and refined-bank artifacts.  Script/output LF SHA-256:
+  `b75f5ef933c18c07b4fd2c4812fea468a9faaa6c5847a5c6a11190cc04676261` /
+  `d4f5e4b12854bd5802842df2784d580abdd75d9a4fc58dd77db3a185a10403f1`.
+- `lrc_endpoint_ufull_frozen_five_common_ancestry_gate_20260816.py` ->
+  matching `.out` [FINITE-EXACT SCOPE GATE FOR PROVED THM-3479].  Five
+  positive Boolean atoms realize the frozen scalar values and every graph
+  product, so there is no scalar obstruction.  A split-prime sign hostile and
+  a two-atom equal-marginal/different-intersection hostile prove that reduced
+  post-marginalization values do not decide lawful common ancestry.  The first
+  missing coordinate is a shared atom key joining the left and right endpoint
+  factors before either sum.  Script/output/semantic LF SHA-256:
+  `b897eef476f6dd7f29793b2cc795d6840b66dc2e0e23f6f051e4a4d6b4b704d0` /
+  `d4043a74c600f5737fb32aab6b7b7536adb77e7af6238145fb76a2cf43ccd652` /
+  `674f52e86cabcc72d97a193528434cc9524ae3111439e53e49a43a811d4bf41a`.
+- `lrc_relation_k4_xor_star_triangle_probe_20260815.py` -> matching `.out`
+  [FINITE-EXACT STRUCTURAL COMPONENT OF PROVED THM-3479; INDEPENDENTLY
+  AUDITED].  The six equal-`-27` relation slots are modelled as the edges of
+  `K4`, partitioned
+  into opposite pairs `(c1,q2),(c2,q3),(c3,q4)` by the three nonzero XOR
+  differences; `H,q1,q5` colour the matching axes.  Inside `S4`, the exact
+  relation stabilizer is the translation `V4`, and the nine coordinates split
+  as six trivial lines plus one copy of each nontrivial V4 character.  Signs
+  of the three opposite-edge differences select one of four stars or four
+  triangles.  All six c/q pairings classify U_full as TRIANGLE and U_clock,
+  q27, q51 as STAR; an interlacing hostile realizes both types.  The current
+  is diagonal nonzero mod 13, but sign parity is independent.  This is a
+  three-edge selector on K4, not a tournament orientation, endpoint current,
+  or causal explanation of the two-transplant split.  Script/output/semantic
+  LF SHA-256:
+  `b4ddf1cc735bc493a7dcdea5d622ff996aef0259d6f474282f59454bf45ad041` /
+  `c899644e3371a611d5385b95e56268e85d2792d682710c0a92f0f4693b0838b9` /
+  `904764346382212e617f2bc15bb95e235af42c0cf1e79131842ced17e39538c8`.
+- `keller_level_three_norm_slice_probe_20260815.py` -> matching `.out`
+  [FINITE-EXACT THREE-SLICE PRECURSOR; SUPERSEDED AS THE CURRENT FRONTIER BY
+  THE 20260816 GLOBAL/STRUCTURAL COMPANIONS; NOT CANON].  The odd-degree
+  norm-product discriminant recursion gives
+  `[Delta_3]=[-L N(H)]=[-H N^2(L)]`.  On the exact slices
+  `(b,c)=(1,2),(3,1),(1,3)`, direct multiplication determinants and
+  independent resultants agree on `N(H)=K/(2^e L^7)`, with
+  `e=21,35,35`; every `K` is irreducible of degree 86 and coprime to the
+  specialized `LH`.  Hence each slice has `[Delta_3]=[-2K]` and the old
+  `L` exponent cancels to the even value `-6`.  The transported 361-term
+  `H` artifact is raw-hash pinned before deserialization.  This artifact did
+  not by itself prove a global claim; the three following 20260816 companions
+  now discharge its global pole, divisor, and degree-27 genericity questions.
+  Ordinary/optimized/stored outputs are byte-identical.  Script/output LF
+  SHA-256:
+  `f2b8725341caea3bc2235dea9b69e7d33c5870a89db96a8604ef4521b2154659` /
+  `1086ccb03a69f1c92eb945a6ad0118976ae7f6ef2763d4e10e3973256a53d503`.
+- `keller_level_three_norm_divisor_structure_20260816.py` -> matching `.out`
+  [PROVED STRUCTURAL SIDECAR TO THM-3495].
+  Exact quotient reduction and the Newton face
+  `-63078912*x^7*(3*x*z-2*y)^3` prove that the two divergent inverse sheets
+  contribute `-7/2` each to `v_L(H(q))`; an exact finite-sheet hostile is a
+  unit.  Hence `v_L(N(H))=-7` without expanding the global numerator.  The
+  simultaneous point `(2/27,1,1)` checks the generic-DVR units `c,T,S,D`.
+  Ordinary/optimized/stored outputs are byte-identical.  Script/output LF
+  SHA-256:
+  `f4255f6a6918458fb877523329061a66dfdef3a80b7d54cff74394b88c2f6628` /
+  `473cffeb80859a3bf91ab3c77fc6144089d2c6025735a81a7d782a8e774dbcf8`.
+- `keller_level_three_global_norm_probe_20260816.py` -> matching `.out`
+  [VERIFIED-EXACT GLOBAL NORM IDENTITY + INDEPENDENT RECONSTRUCTION;
+  THM-3495 COMPANION].  Cubic-basis reduction gives
+  `H(q)=(B0+B1*w+B2*w^2)/(2^35*S*L^3)` and the exact resultant gives
+  `N(H)=J/(2^35*L^7)`.  The primitive squarefree `J` has 66,146 terms,
+  multidegree `(86,129,76)`, total degree 157, and `gcd(J,LH)=1`; its
+  lexicographic coefficient-ledger hash is
+  `9aca78e67d33351b2f2fb4dbe8ab5bdff06373fdbd8ef9ec73d29b15bffedefe`.
+  All three old slice numerators are recovered coefficient-for-coefficient.
+  Structural geometry, rather than the squarefree routine, proves global
+  irreducibility.  Ordinary/optimized/stored outputs are byte-identical.
+  Script/output LF SHA-256:
+  `37bed904530acbddc17f3f612fcc0d4e8da85b8caddc1b3c86d49b80550e1559` /
+  `1736ac542fd20d6782bc494b1199099e6d08f44830efd5d9c041764925d3db97`.
+- `keller_level_three_squarefree_tower_probe_20260816.py` -> matching `.out`
+  [FINITE-EXACT SPECIALIZATION WITH A PROVED GENERIC CONSEQUENCE; THM-3495
+  COMPANION].  At target `(1,1,1)`, exact triangular algebras and determinant
+  interpolation produce a full degree-27 squarefree norm-product polynomial;
+  a degree-plus-one off-grid determinant independently checks interpolation.
+  This certifies generic block separability and pairwise coprimality, but no
+  degree-27 discriminant is formed.  Its ordered-coefficient SHA-256 is
+  `fa8ba9f1cb850116c347f6e31100d1902dea3ee1c11c2b6548f7280aa9f01d50`.
+  Ordinary/optimized/stored outputs are byte-identical.  Script/output LF
+  SHA-256:
+  `fbb2d20388099377eb2498b1fb102f4e2a32785afa02a0ca00792f27c3d6bd3e` /
+  `4f387efdef50fe7611d51f394ab4dd416274955fe30dbe22368a8a66ba452b10`.
+- `jc_level3_global_norm_independent_audit_20260816.py` -> matching `.out`
+  [INDEPENDENTLY AUDITED SIDECAR TO PROVED THM-3495].  On the new slice
+  `(b,c)=(1,1)`, a regular-representation calculation gives the reduced
+  denominator exactly `2^35L^7` and a primitive irreducible degree-86
+  numerator coprime to `LH`.  Two transverse values fix the positive residue
+  scalar.  A disjoint Rabin certificate proves the 527-term normalization
+  residual irreducible via `P(-1,lambda) mod 449`; the script also checks
+  `LC(P_3)=N^2(L)=J/(2^47L^6H)` and the corrected class `[-2J]`.
+  Ordinary/optimized/stored outputs are byte-identical.  Script/output LF
+  SHA-256:
+  `cb429497fbfbdf4cb538967bd472ab10051bd6fac33be10d14081b09e1543215` /
+  `62fef84710ef14c3a021b196bb4ba3589ad672a3c275a2cfb3c24a25836aea54`.
+- `jc_level3_degree27_split_finite_field_audit_20260816.py` -> matching `.out`
+  [INDEPENDENTLY AUDITED GENERICITY SIDECAR TO PROVED THM-3495].  Over
+  `F_101`, target `(93,28,83)` has a direct split `3 -> 9` inverse fibre;
+  its nine next cubic cores form three squarefree pairwise-coprime degree-nine
+  blocks and a squarefree degree-27 product.  This independently discharges
+  coordinate separation and block coprimality without using the rational
+  triangular-algebra interpolation.  Ordinary/optimized/stored outputs are
+  byte-identical.  Script/output LF SHA-256:
+  `9f8b6b4aad75b17eed8a6fd618cb661f3e61b85361b44ba676462148a2c5afc5` /
+  `af2be3f27d524937836b93aacd5fa0700d5aa930c798dcf142b10206619fc520`.
+- `lrc_private_support_7x13_incidence_h1_probe_20260815.py` -> matching
+  `.out` [FINITE-EXACT STRUCTURAL SIDECAR TO PROVED THM-3473].  The
+  private-support two-section has eight vertices and thirteen
+  edges, so deleting its `2p` hub row gives an exact full-rank `7x13`
+  incidence matrix.  Its Gram determinant is
+  `256=16*16*1`; exactly `256` maximal minors are nonzero and all are
+  `+/-1`, matching the spanning trees of two `K4`s joined by the forced
+  repair edge.  The graph cycle space has dimension six.  Every current
+  obtained from owner potentials is a coboundary and pairs zero with all six
+  cycles, so the static carrier gives no nonzero absolute `H^1` flux; a
+  phase/holonomy sidecar is required.  Script/output/semantic LF SHA-256:
+  `6efa87aa9f9b50d57d7a2db3c282ad216057b41c10af08f648e3f3398e457b91` /
+  `77a3d5786845fdac988e8a4d23867c699368dc6d0a5714224476e24357d7ae20` /
+  `648523d2d701d19ba35567fd2c96aea65cc4a7ceb65b5e200abfcac8bc8d0a82`.
+  This is an exact `7 by 13` carrier and H1 no-go boundary, not bispectrum
+  nonvanishing or an LRC(14) result.
+- `jc_moving_numerator_jordan_prufer_response_thm3477.py` -> matching `.out`
+  [THM-3477 PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF-AUDITED].  For
+  `E_H=C[s,v,Y]/(sY-vH)` inside `B=C[s,h]`, `v=sh`, the additive quotient
+  `B/E_H` has an exact response normal form under multiplication by `s`.
+  A zero root of `H` gives finite Jordan bars
+  `[floor(n/(m+1))+1,n]`; every nonzero root of multiplicity `e` gives
+  Prüfer rays born at grades `floor(k/e)+1`.  The moving numerator `v^r`
+  explains the phase change inside THM-3404's full principal parts.  Exact
+  transition matrices, literal barcodes, both THM-3383 terminal
+  orientations, inverse systems, and merged-root hostiles pass on the frozen
+  universe `m=0..7`, `e=1..6`, grades `1..8`.  Normal and optimized runs are
+  byte-identical.  Script/output/semantic raw SHA-256:
+  `644cdb7508485bc808a5ddd237c3c68703f81661557e7b24574b73b405567db4` /
+  `4e681c77629ecbf24f83b07ed187e651ebc838e09818268fa53af541c03ead12` /
+  `9fca2dffaa87feb03b47505f2adb1ef197ef46978cc25530dc83c2a52dcd47d0`.
+  The inverse limits are zero/formal completions, not Prüfer modules; this is
+  an additive effectivity classification and proves no new JC(2) case.
+- `lrc_three_p_private_sheet_boolean_atlas_thm3473.py` -> matching `.out`
+  [THM-3473 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `p=14k-1`, the THM-3469 eight-owner
+  presentation has exactly eleven Boolean sheet supports: eight positive
+  singleton atoms, packets `(1,4,5,6)` and `(2,3,5,8)`, and repair pair
+  `(5,7)`.  Exact private counts
+  `(4k,4k-2e1,4k-2e0,4k,8k-2e2,4k,4k-2e2,4k)` prove presentation-relative
+  irredundancy even when the global rank is four.  Multiplicity counts are
+  `36k-2-2e2`, `2k+2e2`, `4k-1` at weights `1,2,4`; the bidirected
+  two-section is two `K4`s plus one edge glued at owner `2p`.  The ternary
+  deficit state pulls back to a minimal period-63 U-spine word with each
+  colour having ambient/conditioned harmonic coefficients `4/63` and `1/3`.
+  Script/output/semantic LF SHA-256:
+  `8831f932deb61075e754887f570390388f09ed6bd84092bd4c47dc50d7a588be` /
+  `7951215e40dfd8af18984beba39fb5cce6c1c25053894ecbbacbde7158af7fab` /
+  `1a269572f813dcfafa4d99b9dda39e6fd36514005ff671ef7eec3f6416467fcc`.
+  No global-minimum, endpoint-current, bispectrum, or LRC(14) conclusion
+  follows.
+- `lrc_odd_zero_half_conjugacy_global_rank_thm3472.py` -> matching `.out`
+  [THM-3472 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  MISTAKE-407
+  repairs the
+  false augmented-primitivity claim: `ell -> 2ell+1` is a conjugacy only for
+  odd `Q`, but one-way cover transport survives every even `Q` after the
+  self-opposite owner is deleted.  An explicit active-gcd divisor formula and
+  dilation now give the stronger candidate
+  `rho_ZMC(q)=rho_H(q)` for every `q>=2`, including infinity.  All fifteen
+  cap-seven atoms yield minimal period `14,362,718,970,600`; exact
+  natural/harmonic coefficients for ranks `4,5,6,7,>7` are `2/9`, `4/45`,
+  `25/207`, `165741596/1554406815`, and
+  `717341696/1554406815`.  Script/output/semantic LF SHA-256:
+  `3fce197e22e143df5944eeb8814d43f08ce9e0d71ef73b0309077f2ba84e6ce7` /
+  `0d02b2a4dc67797a078dfbaefdc140778f78e33f72ee1f206583bc4daca6ed0c` /
+  `116818fa2bbc5a0cada41b425f08c4b7afb9a3051e17d804463f002b1027d81a`.
+  The `Q=15` augmented-gcd and `Q=8` nonbijectivity hostiles are retained;
+  no endpoint current or LRC(14) consequence follows.
+- `lrc_three_p_half_twist_eight_owner_template_thm3469.py` -> matching `.out`
+  [THM-3469 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For every
+  `p>=13`, the explicit eight-owner
+  half-twist template at `q=3p` covers exactly when
+  `p mod 42 not in {7,35}`.  On `p=14k-1`, THM-3455 makes the resulting
+  rank-4/6/7/8 word exact with minimal period `24,322,155`; the exact rank-eight
+  index-harmonic coefficient is `57344/147407`, and its linear-label
+  coefficient is `4096/442221`.  An exact odd-modulus sheet conjugacy closes
+  the fixed-zero/half-layer lower-bound gap.  The template meets the parabolic
+  U-spine exactly at `t mod 21 in {5,8,12,15}`; its annotated lane has minimal
+  period `11,781`, counts `(748,272,144,1080)` in ranks `(4,6,7,8)`, and proves
+  in particular `rho_ZMC(291)=8`.  Script/output/semantic LF SHA-256:
+  `9f9f6d040375b5ff4e93a726410bddeb6aa1f0af47f11dc606c9febe75f2d573` /
+  `075d466f1ceb3a0024eef63861b0fb8a782b7b2799990c7c4e05bdd2d7d462a3` /
+  `d8c6b1c2baf1df178ca09793b3f69bc5e537a12c77e9397d83fd3ce8c3e3e530`.
+  No endpoint current, bispectrum, physical row, or LRC(14) consequence
+  follows.
+- `factorial_cyclic_character_keller_rigidity_thm3465.py` -> matching `.out`
+  [THM-3465 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For any
+  finite orientation-preserving Euclidean rotation of the real plane, a real
+  polynomial map whose
+  complex coordinate has a nonreal character and whose Jacobian is a nonzero
+  constant is linear; the character must occur in the linear source
+  representation.  The top equal-degree Hermitian pair would otherwise
+  Poisson-commute, hence be proportional despite having opposite characters.
+  On the triangle this makes every pure nontrivial `C3` HFC eigencell
+  disjoint from the constant-J sector in every degree, since the only
+  survivors are `Az` or `Aw` and their third average is `A^3/10`.  The
+  independent-mate pair `(w+Bz^2,z)` and the order-two odd shear are sharp
+  hostiles.  Script/output/semantic raw SHA-256:
+  `d072afb9ee508ae874fdf253084f17b206f55a030bd009382b1005c39fabe8ca` /
+  `3ffba457df22503a986f20d188c3e6b68491dd643fe448a55aee13357c184a96` /
+  `91d4afcb83b4fa6e0ca54da2946b6afd6db335888ffc9199c1351f2080811db6`.
+  Mixed-character HFC cells, HFC(3), FC(3), and JC(2) remain open.
+- `factorial_face_stokes_keller_boundary_current_thm3466.py` -> matching
+  `.out` [THM-3466 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The
+  factorial functional has exact Boolean face descent
+  `B_I=L product_(i in I)(1-partial_i)`, and Keller Hamiltonian integration
+  by parts turns derivative multipliers into labelled face/drift fluxes.  On
+  the coordinate interior ideal, the first accessible boundary jet grows
+  linearly with the power, so every fixed pure-derivative bank is eventually
+  blind even along a null orbit.  On
+  a triangle, constant `J=c` gives
+  `integral_boundary g^n dbar(g)=-2nic integral g^(n-1)`; HFC nullity makes
+  `dbar(g)` one exact length-two nilpotent Krylov string, forces zero onto the
+  boundary image or into a bounded complementary cell, and gives the pointed
+  primitive `d kappa=g^2 dbar(g)`.  Scalar response is only reindexed moment
+  data, while the slit annulus and equilateral finite prefix are sharp
+  hostiles.  Script/output/semantic raw SHA-256:
+  `c964dd0a33264bf182087180c05c52c459aa6942e41c019374e3bfe0d72e9716` /
+  `0801e63667b1acfcd739bd318a6f1174932bc35cf53869dccaeb6d8644cf0d7a` /
+  `e925107c9d9a14f7434ada9c2195e761cae97861f76930402aa37ac81afb9527`.
+  No injectivity, inverse polynomiality, HFC(3), FC(3), or JC(2) conclusion
+  follows.
+- `factorial_seven_exit_extension_2501_thm3467.py` -> matching `.out`
+  [THM-3467 PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED].  If `p>=5`, `H=p^k`, `2<=a<p`, and `d=aH+1`, the first
+  factorial Euclidean triple has a common face of reduced denominator `H`
+  and capacity `min(a-1,(p-1)/2)H`.  Complete digit-sum tail polygons prove
+  that this is the sole common local slope for every `2<=a<p`.  At `d=2501`, the structural 5-adic set
+  `{625,1250}` is disjoint from the degree `256` left by `p=2,3`, closing
+  `r=2499`.  The companion checks 48 carry cells and sharp `p=3`, `a>=p`, and
+  `a=1` hostiles, then requires exact agreement of two independently pinned
+  hull engines on the full row and planted-factor controls.
+  Script/output/structural/d=2501 semantic SHA-256:
+  `8ba583ae08a91bfd70dd9911fca927ba75e7376e7b49887c3915ac3c905e02e3` /
+  `43ef5f55c4b88bc27fca312f8512879f906acfd85d8efd99af2deee1821143c8` /
+  `f0005f43cfd6464f2279f0260792357c40ed6dee7c7428968e7e9f5d07b4a4e4` /
+  `89971ade6fbedd6c1ae81bb3dc0e5514a320bcedfff7a9ca706ea116b8966b45`.
+  Contiguous all-height exact quadratics and FC(3) remain open.
+- `factorial_adaptive_divisor_extension_2502_thm3467.py` -> matching `.out`
+  [THM-3467 PROVED STRUCTURAL CONSEQUENCE + FINITE-EXACT + DUAL-ENGINE
+  AUDITED].  At `d=2502`, the complete `61`-adic reset forces common-factor
+  degrees to be divisible by `61`, while THM-3161's exact `41`-adic polygon
+  for `G` forces every such degree to be divisible by `41`.  Since
+  `41*61=2501>deg E=2499`, the resonant rows are coprime and exact quadratic
+  three-moment windows now close through `r=2500`.  Two pinned engines agree
+  on all raw profiles and local degree sets at `p=2,3,5,41,61`; the hostile
+  reset-plus-`2,3` trace leaves `{61}`, while the adaptive `61,41` trace is
+  empty.  Script/output/semantic SHA-256:
+  `8964f7366329c469366cd5bd18ec7a176a9aac5c3bf074c633e9dd27d4067a23` /
+  `f87c6b4dd1765bcc7a2aabecf2e3ca885ded851c8524794d1175eb39f0ae81eb` /
+  `c767afd684dbf63910db607a742c530ed9f03a8d61c97b6e2e4dd5cb22bddf98`.
+- `factorial_mixed_character_triangular_quartic_moment_gate_thm3470.py` ->
+  matching `.out` [THM-3470 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  In the real triangular automorphism family
+  `g=aM+b(U^2-1/6)+c(U^4-1/15)+iU`, moments two through four have exactly
+  24 reduced complex solutions and four real ones.  Every real point is a
+  tame degree-four automorphism with nonzero support in all three `C3`
+  character spaces and exits at moment five.  Exact grevlex gives the unit
+  ideal for moments two through five; an independent lex/Sturm route gives
+  the same gate and rigorous root/sign boxes.  The quadratic boundary has two
+  real three-moment survivors, both detected at moment four.  Script/output/
+  semantic raw SHA-256:
+  `614f473562ba36da297947c1420929d5d0d84ca5744df549123c7540e602720c` /
+  `195ce0b8200254697563e55487a3094801efa585b80d6bc66fe98228fe44aa86` /
+  `ce17222a7166129cf39b9f6b10c5bad061d06137a1ccb8297c21ec78a42173d0`.
+  The gate is family-specific and proves no HFC(3), FC(3), or JC(2).
+- `factorial_binary_submask_reset_families_thm3474.py` -> matching `.out`
+  [THM-3474 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For every
+  even `N`, the complete 2-adic polygon of `A_N^(N+1)` has one edge per set
+  bit and its necessary factor degrees are exactly the binary submasks of
+  `N`.  Intersecting this with THM-3467's complete odd reset gives a bit-test
+  compiler and closes every exact quadratic window at
+  `d=2^s p^k+1`, `2<=2^s<p`, for all `k>=1`.  Dual engines agree on 60
+  binary polygons/submask sets and 15 power-of-two reset cells; odd `N=5`
+  is the sharp parity hostile.  Script/output/binary/reset/global semantic
+  SHA-256:
+  `ffe323328fc0fcf41ca5166ecf851a9b1b23e19b11772d6e4cdf18e4d04fedac` /
+  `edb29cc1e2b982adeaac7b283f725ace8ef62c229b10208010cfb2f7a53b96cd` /
+  `888b5d72e72bfeae0ef53140420e728fc5c7a78bfab60e6ac29e694a0ee60edd` /
+  `3512b41ae23e168e5c500a989f37b6120e2dee7670c700b1f40f32b2fe3c45e0` /
+  `49272719898eec5b506e435140c0ce6aac1ce0b07ce275fff648df55b18b61f8`.
+  Submask membership is necessary, not factor existence; contiguous
+  all-height quadratics and FC(3) remain open.
+- `factorial_all_divisor_digit_pair_compiler_thm3475.py` and independent
+  formula-only referee -> matching `.out` files [THM-3475 PROVED +
+  VERIFIED-EXACT + FINITE-EXACT + INDEPENDENTLY AUDITED].  For every prime
+  `p|N=d-1`, the positive-slope polygon of `F=A_(N-1)^(N+1)` is exactly a
+  base-`p` digit endpoint hull (two plateaux for odd `p`, odd anchors for
+  `p=2`).  THM-3161 supplies the exact `G=A_N^(N+1)` hull, while the unknown
+  `F` prefix has nonpositive slopes and cannot meet it.  Their intersection
+  is therefore the complete necessary local pair barcode without large
+  coefficients or a Kurepa assumption.  A pinned coefficient audit checks
+  209 odd, 100 binary, and 309 pair cells.  Independent formula-only replay
+  agrees that divisor primes close 33/38 seven-exit residuals in
+  `2501<=d<=2600`; the five exact survivor packets occur at
+  `d=2516,2564,2571,2576,2586`.  The contiguous exact quadratic boundary is
+  `r<=2513`.  Primary script/output/semantic SHA-256:
+  `834d0913eb5cd5b15684c7fb88af60e42d2a6ef36feb821e261c0498f55027ab` /
+  `1fee475f1a09e2f191d295817bb20af1c055185fc16dd621091d55173bc87ad5` /
+  `886f2bcd66711a44668b003717dd4f39643fc0e9cb0b694708b8670eeaf21499`;
+  independent:
+  `9330ca1b991b9d5875779b9975fc88701ab36855a6527e1865e821e6cd3ea665` /
+  `6aeb576763a63412fad02da33bc777569e69bce87b936afcb0624b144acaec9f` /
+  `e019eb61019620cfaffa8b5bb5769e8d171f08fb5ffeb2153f209c0128d42115`.
+  Nonempty barcodes remain necessary addresses, not factors; five residual
+  rows, arbitrary support, SFC(3), and FC remain open.
+- `all_ref_concept_archaeology_20260815.py` -> matching `.out` plus frozen
+  `.refs` [REPRODUCIBLE PROVENANCE INVENTORY; NOT A MATHEMATICAL VERIFIER].
+  At `origin/main=5f038660851946647afee993fb3fea850cc80b7d`, the manifest freezes
+  `193` nonsymbolic branch/remote refs, `175` with outside-main commits,
+  `4,697` unique outside-main commits, and `2,362` historically touched paths
+  absent from main.  The broader all-ref comparison adds exactly seven stash
+  commits and `128` absent paths.  Positive branch-only motif controls and the
+  current THM-2355 hostile pass.  Filename hits prove only reachability and
+  absence; truth and novelty are audited in the companion
+  [all-ref archaeology reflection](../../07-reflections/all-ref-archaeology-chain-enriched-context-and-operation-defects-root-20260815.md).
+  Script/output/manifest SHA-256:
+  `a5906fed1e139ad172fb215d45d956f879d60b1287378c9c80eb89837734b9bc` /
+  `d194b6392342d461f263e2847c053257a581755493acfe50c1b4f2a5da10d691` /
+  `5247a018b94671c952d569bfc0600c13acbc17191974267b2329e149c33b11b9`.
+  No historical claim is promoted by the census alone, and no open problem
+  follows.
+- `lrc_u_spine_q123_q227_zmc_rank_thm3464.py` -> matching `.out`
+  [THM-3464 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Complete
+  zero/half-layer searches and independent clean-room meet-in-the-middle
+  lower bounds give
+  `rho_ZMC(123)=8` and `rho_ZMC(227)=9`, with frozen half-twist witnesses
+  `(1,40,42,81,82,83,117,122)` and
+  `(2,6,10,215,217,219,221,223,225)`.  The first packet mixes quotient
+  orders `3^1,41^3,123^4`, while an exact rank-eight `q=41` packet and its
+  threefold pullback give a coexisting inherited realization at `q=123`;
+  the second displayed packet lies in the prime order-227 layer.
+  Together with THM-3416/3461, the first seven parabolic U-spine ranks are
+  `(6,4,7,9,8,4,9)`, refuting the square-root extrapolation at `q=123`.
+  Script/output/semantic LF SHA-256:
+  `74dcb9931f64de4f0c194aa2d38a70e393c78e6525cb5f4eb439ca350764bba5` /
+  `122029ec19709dd4e34d89d06fcde3b3dc129523de17b88092e9f49ae6e9a8e8` /
+  `992ebd92709f39f2250bb9a21a10b6e0bb3c6e21860a3bf388d826e23b500b50`.
+  No endpoint current, spectral closure, density change, or LRC(14)
+  consequence follows.
+- `lrc_literal_half_twist_common_centre_q83_rank9_thm3461.py` -> matching
+  `.out` [THM-3461 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Reattaching
+  THM-3398 modes proves the literal identity
+  `B_(q,r)=D_(q,r)(1/(2q))`, the fixed zero-cochain lifts at `q=11,27,51`,
+  widths `(4,11,4,4,4,4)/(6,6,27,6)/(2,2,9,9,2,51,2)`, three open
+  non-grid physical cells, and the one-ray current collapse.  Complete zero
+  and half-layer searches give exact ranks `6,4,7,9` at `q=11,27,51,83`;
+  the `q=83` cap-eight searches visit `6` and `27,992` states, while
+  `(1,13,14,27,41,42,55,69,70)` covers at rank nine.  An independent
+  meet-in-the-middle lower bound and immutable-package replay both pass.
+  Script/output/semantic
+  LF SHA-256: `8e98c0f89a4035eeec6c4e3688d51ab546928a14fe275a32ab48ec65bcb473a4` /
+  `1734f1c4f38fb4cf61097cffc80eecfc6f1335816507842cfbca9a315d62ce42` /
+  `97647a6cf82b23de0ddb962b6b2b714d6ca9904408af87e001fa37d0c9b37e90`.
+  CRT valuation decoration is compatible with the masks, but no endpoint
+  current, LRC row, spectral closure, or LRC(14) consequence follows.
+- `five_point_line_metric_interval_sum_preorder_atlas_thm3462.py` -> matching
+  `.out` [THM-3462 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Ten
+  contiguous interval
+  indicators give `25` forced and `20` mixed comparisons, deduplicating to
+  `15` disjoint-block walls.  Exact Cramer enumeration over `211,876` affine
+  four-equation systems and an algorithmically independent `7,053`-decision
+  Fourier--Motzkin insertion both certify exactly `477` positional preorders.
+  Tie census and projective f-vector are frozen; reversal gives five fixed
+  signatures and `241` classes, `S5` gives no further positional collapse,
+  and arbitrary labellings give `28,620`.  Primitive total `<=23` and
+  coordinate height `<=10` are sharp at `(6,5,4,8)` and `(2,3,4,10)`.
+  An independent compressed-Cramer/prefix/S5/hostile audit reproduces every
+  count.  Script/output/covector/semantic LF-normalized SHA-256:
+  `ac057c7acce3794ba7772bf548485436eee6f228633581e37d1c762d89892a95` /
+  `bf28b02ce29de0bd9c83fb47207b8d1b76999939fa0e49bfe9cda1acf950ed16` /
+  `38c1e9f857ebfe1ab5473bcab15695500fa5de7293cba436924199b4f0024eff` /
+  `90323a5738e47db6643fea438d3a6b7e3d744b6119568f1e35b2bd03b3297d88`.
+  This is not a general turnpike theorem, a tournament equivalence, or an
+  LRC/Jacobian result.
+- `four_point_line_metric_turnpike_preorder_atlas_thm3457.py` -> matching
+  `.out` [THM-3457 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Exact rational sign-stratum feasibility classifies the six
+  labelled distances of four ordered line points into `25` positional total
+  preorders: `10/10/4/1` strict/one-tie/two-tie/maximal.  Reversal and abstract
+  `S4` each give `14` classes with three fixed signatures; arbitrary vertex
+  labellings give `300`.  XOR on the weight-two layer of `F_2^4` detects
+  adjacent/opposite edge incidence and proves an opposite tie is necessarily
+  paired.  Rank-one centred Gram controls, the Fibonacci wall, its `k=3`
+  boundary, and the hostile gaps `(1,3,4)` are frozen.
+  Script/output/semantic LF-normalized SHA-256:
+  `1c0f33c69bc3cde0ef9be284b662e7d74e40cc9fbd82d5c35046eb1472e3ed21` /
+  `52e0a0000677b81a6a3a63078b36d3419f994a69d543f7219ffc48100b457008` /
+  `a04174188df0edc25bef47c3f67dd5309f28e835519e4efbfa26e3df03c2cb0a`.
+  No general turnpike reconstruction, RXTX speedup, LRC, Rule 30, or Jacobian
+  consequence follows.
+- `left_permutive_trace_torsor_rule30_thm3456.py` -> matching `.out`
+  [THM-3456 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a
+  radius-one CA permutive in its left input, the center
+  trace and positive initial half-line form a triangular coordinate system.
+  The exact companion checks all `16` binary left-permutive ECA through depth
+  `6`, Rules 30/60 through depth `8`, `502,400` forward traces, `5,568`
+  constructive inversions, periodic-state aliases through width `7`, seed
+  prefixes through width `64`, and seed cylinders through width `24`.  Rule
+  60 is the constant-seed hostile; width `7` is the first nonconstant
+  periodic one-column alias, while two adjacent traces recover a finite
+  cylinder.  Script/output/semantic LF-normalized SHA-256:
+  `e7ac9717c2f5618d18cae2225c4fd68391d2e07d98f0e9b1bcb188e5ef7ad993` /
+  `a04fc7d1c6124888b772f10f0ee5ab22d62c43b669b56f15a440de4e51bce9fd` /
+  `1fda893b46126cb9653f758a88a9f0266fe93c6e12bee6d4de527fa09f5b42ca`.
+  Two proof/computation audits and a separate primary-source audit passed.
+  The three Rule 30 prizes and LRC(14) remain open.
+- `lrc14_rule30_depth_observer_no_go_20260815.py` -> matching `.out`
+  [UNNUMBERED FINITE-EXACT OBSERVER PROBE + ELEMENTARY TYPED NO-GO].
+  Sampling the literal single-seed Rule 30 centre trace at the three depths
+  of every first-depth-one profile `(1,b,c)` sends the `165` rows to four
+  fibres of sizes `36,36,51,42`; the last two mix repeated/strict owner types
+  as `8+43` and `7+35`.  Retaining the full profile makes those bits
+  deterministic and adds no information.  Every additive/XOR homomorphism
+  `F_13^2 -> F_2^m` is zero, while an explicit nonlinear four-bit labelling
+  can carry a 13-cycle and is outside that no-go.  An independent residue
+  check pins THM-2344's same-axis obstruction on all `13^4=28,561` phase
+  rows.  Script/output/semantic LF-normalized SHA-256:
+  `1ce6dea8eaefc267690c82de0feb56b50e3348cef88fe20541ce77cdaa3d9006` /
+  `fe8414e95241ff242b1ea32238402dfea7085af43923ac004ca46bc36ed5062b` /
+  `6e7c45392e5894ff13e12a413aee9196cd1a2ac2a378f5df3a4f90a0e355d60a`.
+  No scalar row, grouped-current cancellation, or LRC(14) consequence follows.
+- `berggren_q_spine_cap7_fibonacci_spectrum_thm3455.py` -> matching `.out`
+  [THM-3455 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Intersecting THM-3453's fifteen divisor atoms with
+  `q_t=4t(t+1)+3=(2t+1)^2+2` leaves exactly `9,11,51`, producing a complete
+  exact rank-`4/6/7/>7` law of minimal period `1683` with counts
+  `374/238/72/999` and cap-seven density `76/187`.  Fibonacci sampling has
+  minimal labelled rank period `360`, counts `60/90/22/188`, and cap-seven
+  index/harmonic coefficient `43/90`; reciprocal Fibonacci spine-index,
+  positive-rooted-depth, and branch-label subseries still converge.  Exact controls
+  exhaust all atom residues,
+  both full periods and every proper-period hostile, with `q_1..q_4` realizing
+  ranks `6,4,7,>7` and `q_20=1683` enforcing lower-rank priority.
+  Script/output/semantic LF SHA-256:
+  `1b2c01462bf31844b90deb87f4552ae260a6abeade0f01eb8baad612fbc77306` /
+  `bb092c7185d7f369ec77154c361c645c44388f027e1b62d657cd1880b7a81344` /
+  `330499ea2bcbf3d2a0da6d3512870ebfae83c9e8268c78e7291ed00f0d95e652`.
+  Every finite rank has a labelled fixed-half-twist common centre and zero
+  cochain; no other-centre classification, nonzero current, decrement,
+  LRC(14), or Jacobian consequence follows.
+- `lrc_global_literal_half_twist_cap7_support_thm3453.py` -> matching `.out`
+  [THM-3453 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The theorem
+  uses strong-induction period
+  descent, a direct mixed-prime fibre invoice, and the exact fixed fibre with
+  odd cofactor to compose the proved odd, prime-even, and prime-quarter
+  classifications.  Its only residual lane `Q=2*17^b` is excluded by an
+  order-sensitive two-sided mass invoice.  The all-modulus support
+  antichain is
+  `{8,9,10,11,12,13,14,15,23,25,29,38,51,68,148}`.  Exact controls freeze
+  all atom witnesses/ranks; `Q=6,34,578`; period descent; the mixed-prime
+  list; and `103,488` fixed-fibre owner rows comprising `11,582,552` sheet
+  cells.  Normal, optimized, and stored transcripts are byte-identical.
+  Script/output/semantic LF-normalized SHA-256:
+  `fb0147ba4f5ee6e918ba8509667daa149e2a1ee835b51fe7a1ff7b35bae5f146` /
+  `4c22fe1f62507d40e3fb6b8bdb8e7bc14ad9c52cd3f228e8c823f803f06c84a1` /
+  `5f5d2c29d47a15abc8cf74d2b0f40769c220c3a646b4ba4c6bb21ca5d49cc1fa`.
+  Two independent immutable-package audits passed, including a separate
+  clean-room strict-mask classification through `Q=200`, all atom ranks, and
+  hostile closures at `Q=366,578`.  MISTAKE-404 records that the labelled
+  masks do realize `c=1/(2Q)` with zero cochain.  No arbitrary-centre
+  classification, nonzero runner-current, decrement, or LRC(14) consequence
+  follows.
+- `fibonacci_u_spine_farey_lorentz_one_tie_thm3454.py` -> matching `.out`
+  [THM-3454 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  On the fixed-cusp leaf chain, `P_t=U^(t-1)(3,4,5)` identifies rooted
+  Berggren distance, Farey cross-determinant magnitude, and
+  `sqrt(<P_s,P_t>_L/2)` with `|t-s|`.  Four consecutive Fibonacci spine indices
+  (at rooted depths one lower) have
+  six costs
+  `(F_(k-2),F_(k-1),F_k,F_k,F_(k+1),2F_k)`, hence a five-level total preorder
+  and strict `K6` orientation with only the adjacent edge `02/23` missing.
+  One marked origin seam plus gap recurrence gives an all-length additive
+  converse; the Cassini/Pell unit selects exactly the Fibonacci windows.
+  The branch labels `q_(F_n)` have minimal order-six recurrence and first
+  `6 x 6` Hankel determinant `393216`.  Exact controls cover `780` fan pairs,
+  `3060` four-point and `3003` five-point windows, all `24` `S4` relabelings,
+  and Pell pairs through `500`.  Script/output/semantic LF SHA-256:
+  `fadfe97113ea1d38472face781a39f3c5f615f9aea093025269b3c72e03372fa` /
+  `35c964e0635e07f16146b3c439d0eee32a0d465009ceea17e1d71729d3f68b07` /
+  `ff0262595d3dea442d874294e5166c95c47c5b7514375d8b13ab604cdbd6b4f9`.
+  Cross-determinant is not full Farey graph distance, pairwise costs forget
+  common translation, and no full-tree, LRC, or Jacobian consequence follows.
+- `lrc_prime_quarter_half_twist_cap7_classification_thm3451.py` -> matching
+  `.out` [THM-3451 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  post-THM-3445 target-free
+  prime-quarter rows `Q=4p`, the four-type central-fibre invoice reduces
+  `1,312` raw mass profiles to `959` admissible profiles, the fully typed
+  line/coset compiler gives positive pair weight at least `15>Omega_max=12`
+  from prime `449`, and all `96` unit classes modulo `420` have rooted zero
+  clique number six.  The no-cap exact stitch through prime `443` finds
+  exact support `p=17,37`, with all four `p=17` profiles and the
+  unique `p=37` profile frozen.  Legacy THM-3435-`A_0` target-free scope also
+  contains the proper-period pullbacks `p=7,19`.  Script/output/semantic
+  LF-normalized SHA-256:
+  `edda04033f24aa4275e19b05b56857db9570d9e78e02912c8a167445591b0422` /
+  `00af2309eb53f3e8937d2604a3db6ea1a7a57c2a7f39f7873915655a2d511aa6` /
+  `b455ca48ce8454d754b1a7d4f816ecd76bb431a5b9202757152badd5e0993482`.
+  An independent immutable full-package audit reconstructed every analytic,
+  exact-search, graph, witness, hash, security, and scope gate.  No
+  composite-even, arbitrary-time, decrement, or LRC(14) conclusion follows.
+- `unequal_depth_noncommuting_hensel_heisenberg_orbits_thm3452.py` ->
+  matching `.out` [THM-3452 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].
+  For depths `c1,c2`, the theorem gives the weighted abelian
+  range through `T=c1+c2` and the mixed-modulus class-two range through
+  `T+min(c1,c2)`.  Under the safe ordinary-carry hypothesis, orbit exponents
+  are `2a-T` and `3a-2T`, with bank exponents
+  `(d-2)(a-C)+M-C` and `(d-3)(a-C)+2M-C`.  When `p=2,C=1<M`, the across-level
+  iff instead uses nonzero shallow carry and the repaired square carry
+  `sigma=delta+delta^[2]`; a global positive model and an involution hostile
+  distinguish repaired from ordinary triple rank.  Exact controls freeze
+  three presentations, seven affine equality rows, `65,536` right-action
+  checks, four sharp higher-bracket defects, every depth-one fibre of the
+  dyadic positive rows, and the hostile kernels.  Script/output/semantic LF
+  SHA-256:
+  `9918d0edff5f16eccd64a3b81cf9685bccbc3917aefb3fe9f1ba8d3c0c0bfb50` /
+  `020803b42eee75331f70a5fe02be5251d85533e3a1c4dd6343a513ff285d9e70` /
+  `c0c00380198dca87af2940d7986199885633b9a042aeae25b557656abadb6d4b`.
+  Independent derivation, exact-control reconstruction, normal/optimized/
+  stored replay, dependency, hash, semantic, AST/security, ID, scope, and
+  documentation gates passed; MISTAKE-400 records and repairs the provisional
+  status-routing defect.  No LRC, `JC(2)`, or physical consequence is claimed.
+- `lrc14_exact_six_divisor_feature_lift_20260815.py` -> matching `.out`
+  [PROVED finite graph reduction + FINITE-EXACT + INDEPENDENTLY AUDITED].
+  The current `k=3` ledger has `1823` full-period self keys, `20` unique
+  half-ruler nonself edges, and `54` no-six keys.  Its twenty-edge body graph
+  is a DAG under
+  `Phi(F)=1_[1 in F]+2*1_[5 in F]-2*1_[10 in F]`, with maximum path length
+  two.  Retaining the divisor sends eight targets outside the current ledger
+  and twelve to self keys; `38` common GF feature classes representing
+  `298227` occurrences survive, all terminating at those self keys.  The sole
+  refined `k=2` body `C3` splices divisor rows `17640,17640,4410` and becomes
+  acyclic on `(F,D)`.  This is not physical mutation or an LRC(14) terminal.
+  Script/output/semantic LF SHA-256:
+  `e20dd7dda94afef1d8a044fd130832018f8b5c8b6859bb8a078b6f6dbaa16943` /
+  `eddf99812bceda20fddef6d5cad649232b1ab4d3796ef2a96d1e1329ae17c0a1` /
+  `c423bca65a43fdbfddc25b972a373002890f2c0a6f42c6aea96a8c2e2dacb8e5`.
+- `lrc14_refined_exact_six_scc_sidecar_20260815.py` -> matching `.out`
+  [FINITE-EXACT structural sidecar; MISTAKE-401 PORTABILITY REPAIR].  The raw
+  two-three-cycle reduction and refined `k=2` body-quotient / acyclic `k=3`
+  conclusions are unchanged.  Dependency paths now serialize with POSIX
+  separators, so normal/optimized replay is byte-identical on Windows too.
+  Script/output/semantic LF SHA-256:
+  `cb0c02afe0d9bcf44f9790ea51c2499de41ce7f3b2df4571f56809153bade2f2` /
+  `c7e711150aded2449064ac633c3316b7141081e232fb2553af55dd2fef9e28b1` /
+  `d3be3507d47946f2fa688f70faa572aad1312b8e2ecee30330af9e684bbbed31`.
+- `d5_marked_carrier_full_germ_obstruction_thm3450.py` -> matching `.out`
+  [THM-3450 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Under linked
+  degree-91 root, inertia, branch, action, and amplitude markings, one LRC
+  primitive Fourier coefficient and its Galois orbit determine the full
+  rational doubly-centred `7 x 13` interaction; multiplication by the Keller
+  mode-one unit is an explicit strict filtered `C91`-equivariant isomorphism.
+  The map is characteristic-zero, not a map from the exponent-13 `H^1` class,
+  and independent gauge reversal kills it.  Exact recurrence coefficients at
+  orders eight `(0,6)` and fourteen `(1,0)` occupy the two missing ANOVA margin
+  sectors, so the full Keller germ cannot factor through centred interaction
+  alone.  Script/output/semantic LF SHA-256:
+  `17ef1da1413d011c788d1ff000158fa163b5c08ed284c4aa34acc2630b1642f4` /
+  `6398cf8c57667618de68bad0667abc1b1ebdabafda93c3da4d52fd9bf2d68b68` /
+  `ac9cdaf18e641572ccac24731d0959177038a7aa95a0559872a7a500708a2f2a`.
+  No physical current, LRC(14), or `JC(2)` consequence follows.
+- `noncommuting_smooth_hensel_heisenberg_orbits_thm3449.py` -> matching
+  `.out` [THM-3449 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  two equal-depth smooth Hensel
+  automorphisms, the first commutator carry is their vector-field Lie bracket
+  at depth `2c`.  The naive abelian exponent action is universally valid
+  through level `2c` and fails on a fibre at `2c+1` when that bracket is
+  nonzero there.  Through `3c`, the replacement is the exact class-two group
+  with normal forms `x^i y^j z^r` of orders
+  `p^(a-c),p^(a-c),p^(a-2c)`; triple carry independence gives free orbit size
+  `p^(2(a-c)+(a-2c))`.  At `p=2,c=1`, the deepest test instead uses
+  `sigma=delta+delta^[2]`.  Controls freeze the abstract presentation, seven
+  affine-Heisenberg rows, a denominator-free all-prime `3c+1` higher-bracket
+  hostile, and an integral dyadic square-collapse hostile.  Script/output/
+  semantic LF SHA-256:
+  `b1ab908fc42dbd95824b0535ef3cbbaf5d55d68faf77a959a38ab6a348df790f` /
+  `dfe2528430981840feac984a47a45ca726ae3ec05a52966ba263230ae6356005` /
+  `fa4dbd16a9f56fb350388fde53c8b3ef39cdfbc6f3092cd31aed83c506bc8154`.
+  No unequal-depth noncommuting theorem, LRC, `JC(2)`, or physical transport
+  is claimed.
+- `jc_weighted_cyclic_jelonek_inertia_thm3448.py` -> matching `.out`
+  [THM-3448 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a
+  weighted seed with `n=deg R` and `mu=ord_0 R`, the generic `C=0` inertia
+  is one `(mu-1)`-cycle, its raw `w`-discriminant order satisfies
+  `mu=(mu-2)+2*1`, and the exact Jelonek set is `V(C) union V(L_p)` except
+  for the finite cubic `(n,mu)=(3,2)`.  The explicit degree-five map has
+  determinant one and a genuine three-sheet `C3` component; the seeds
+  `R_ell=w^(ell+1)(1-w)` realize `C_ell` for every `ell>=2`, while weighted
+  quartics cannot realize `C3`.  A frozen quartic hostile shows that clean
+  primitive-clearing formulas require nonzero separated pole residues.
+  Script/output/semantic LF SHA-256:
+  `a0410cf3d921fce6ddaa801c332c2cad10fae2a279efbada2aadb35bc498ebff` /
+  `768b2b1a75b937daa161bcad9f39310829bccbc843799425309ea2d0fe087fbe` /
+  `dbb99005e17dc8e2d69d514244640530476b74f01a723d5e5bd418bf42b27a80`.
+
+- `weighted_depth_commuting_hensel_lattice_thm3446.py` -> matching `.out`
+  [THM-3446 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For commuting
+  generators at depths `c_i`,
+  pointwise-independent first carries give a freely acting direct product of
+  cyclic exponent channels on every depth-`C` fibre.  The orbit-bank exponent is
+  `(d-r)(a-C)+sum(c_i-C)`, so full rank is transitive only at equal depths;
+  dependence creates a stabilizer by the sharp universal alignment level
+  `M+1` (not necessarily its earliest failure level).
+  Controls include a three-depth affine packet, all nine nonlinear weighted
+  fibres, the delayed dependence hostile, and `p=2` depths `(2,3)`.
+  Script/output/semantic LF SHA-256:
+  `117f9a3a27aacdbc7f3576fb8edd53b35c12e39c35fe5b1d46577b8a708280b2` /
+  `cec4e30c279d284fc657ca72b781c7163f911947dfef0c9188307d644bb2d2f3` /
+  `317fbb4d6c074e76a3886a8653f4b6bb6423f97c135cff44c2df212722e85bb2`.
+  No LRC, `JC(2)`, or boundary-response transport is claimed.
+- `lrc_prime_even_half_twist_cap7_classification_thm3445.py` -> matching
+  `.out` [THM-3445 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For the
+  target-free literal `Q=2p`
+  cap-seven lane, the typed parity-constrained interval formula reduces every
+  cross pair to exact line sections; the phase-free `a<100` table and
+  `a>=100` plateau leave only four mixed height-eight tangencies, whose exact
+  AP counts exceed eight from prime `p=607`.  The A/A lift bit, E/E
+  successive-minima floor `10`, and all `64` typed zero graphs modulo `240`
+  then give clique number `6`.  The theorem stitches the pinned FINITE-EXACT
+  `p<=599` atlas to a direct negative `p=601` row and proves exact support
+  `p=7,19`; an independent full-package audit reconstructed every gate.
+  Script/output/semantic LF-normalized SHA-256:
+  `ca061487acdf56f3d0507ad55d9b33c5e9724ddb9d7fdba815d46a1b7deb4382` /
+  `bcdef4ca8e5ba5a786be31aa6757f704f4aae0e7ae0953e504701acc7a4290f2` /
+  `45e7e843b1767ef7254be729add71ea6ef501160503b46a03cbb43e3e53517c3`.
+  No composite-even, arbitrary-time, decrement, or LRC(14) claim follows.
+- `regular_group_orbit_tournament_parity_thm3447.py` -> matching `.out`
+  [THM-3447 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  A regular
+  finite-group orbit has an invariant tournament iff its group order is odd.
+  If `t` is the number of nonidentity involutions and
+  `q=(|G|-1-t)/2`, each involution forces a disjoint perfect matching of
+  missing/bidirected pairs; generalized, partial, semicomplete, symmetric,
+  maximal-partial, and tournament counts are respectively
+  `4^q 2^t`, `3^q`, `3^q`, `2^(q+t)`, `2^q`, and (when `t=0`) `2^q`.
+  This exactly separates odd Hensel half-set gauges from two-adic XOR ties,
+  but supplies no canonical orientation or LRC current.  Script/output/
+  semantic LF SHA-256:
+  `8868aa940cbde11b7b79b5a5c4f805622dca3b1486c4d82e87a0566917330099` /
+  `d772b7947f59c071d22035ff20c19075a3093fab6b708b8caf5f62339086fae5` /
+  `0672eab70672e58ff4f44298e7547bb44b9843f0f8f47987374fd03895b142c9`.
+
+- `commuting_smooth_hensel_lattice_action_thm3444.py` -> matching `.out`
+  [THM-3444 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For `r`
+  commuting automorphisms of a smooth
+  `d`-dimensional `Z_p`-scheme, pointwise independence of their first-carry
+  fields gives a free `(Z/p^(a-c)Z)^r` action on every depth-`c` fibre, orbit
+  size `p^(r(a-c))`, and `p^((d-r)(a-c))` orbit banks; first-lift freeness is
+  equivalent to independence.  Controls cover affine equality with `r<d`
+  and `r=d`, nine nonlinear conjugate-translation fibres, a dependent
+  hostile, and the sharp `p=2,c=1` failure versus `c=2` survival.
+  Script/output/semantic LF SHA-256:
+  `7bf18fd6329ce80801f0712d3df37636dfec53154520b04824ecd2342407491c` /
+  `7f8587e4bf37ba932ecf6b5f0748284088cb58a7ccac07df8d1feaea3ae197b7` /
+  `a3393fafed345ae96bea50a5dcc4dfb7dadb56320e1d7cefd57a800d3ed615c1`.
+  No LRC, `JC(2)`, or boundary-response transport is claimed.
+
+- `smooth_hensel_vector_field_orbits_thm3442.py` -> matching `.out`
+  [THM-3442 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a smooth
+  finite-type `Z_p`-scheme of pure relative dimension `d`, a
+  congruence-to-identity automorphism at depth `c` has first-carry vector
+  field `delta_g`.  When `p` is odd or `c>=2`, every depth-`c` Hensel fibre
+  above a nonzero value of `delta_g` has orbit length `p^(a-c)` and exactly
+  `p^((d-1)(a-c))` cycles; a zero fixes the whole first lifting fibre.  The
+  exact controls cover affine dimensions one through three, nonlinear shear,
+  multiplicative and excluded-zero fibres, and the sharp `p=2,c=1` failure
+  versus `c=2` survival.  Script/output/semantic LF SHA-256:
+  `26edd280a13f8a9e9cff84d0b1d480fc839dfc2134d0223b49ab4db5902a455c` /
+  `2e95fc184e1c2ec732f67d190a4333fd5f7e8d315e5dbc7b2f3e0e52e9be9abc` /
+  `c72801a6c4fcb534b9e71ab0bb23da9163fc1051c45895b9bcd65241fd0a1c49`.
+  No LRC, `JC(2)`, or boundary-response transport is claimed.
+
+- `near_identity_grassmannian_hensel_orbits_thm3439.py` -> matching `.out`
+  [THM-3439 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For odd `p`,
+  no invariant first-carry `k`-plane gives orbit length `p^(a-c)` and exactly
+  `p^((k(n-k)-1)(a-c))` cycles in every depth-`c` Grassmann fibre; an
+  invariant plane fixes a whole first lift, and transitivity is unique to
+  `P^1`.  Controls cover dimensions `2..4`, `Gr_1/Gr_2`, depths `1,2`, the
+  `p=2` hostile, and a `6,561`-point fibre.  Script/output/semantic LF SHA-256:
+  `bc8c27860aa62b9816f55243fc24c1fa72b4b0e1c83767a12c3a04166b14d492` /
+  `834d376ebd73d36329b8ac4853c1d42a07bc84fefe64a7cc5abd73791e694a50` /
+  `a446d26482fdcc5ac913ca882efea17fc2cd0603c27223532884d87d6b4cc51a`.
+  No LRC transport is claimed.
+- `lrc_prime_even_half_twist_low_weight_tail_probe_20260815.py` -> matching
+  `.out` [UNNUMBERED FINITE-EXACT CONTROLS; UNIFORM TAIL LEMMA OPEN].  Exact
+  `A/A,B/E` tangent counts have last prime weight-at-most-eight boundaries
+  `521,601,593`, so all displayed tangents weigh at least `12` for prime
+  `p>=607`.  The `p=601` DFS is negative; full root scans at all `58` primes
+  `607<=p<=997` find no `0<w<=8` edge and no zero ratio above height seven.
+  Controls in all `96` invertible classes modulo `420` give candidate clique
+  number `6`, always the complementary-pair `A^4BE` orbit.  Uniform atlas
+  exhaustion remains OPEN.  Script/output/semantic LF-normalized SHA-256:
+  `4bb0c853fa3bebabf1414d75aa2b43d4b00c22a2b49cbaaac5e06bde5986c4ba` /
+  `a9012981cef620a0eeac6883f6e6cb080272c3d99cb73703a0b45212f9cb9b80` /
+  `17411c3f578f369ca6ab424db0db6730b547db5deb598e87fa341da49dd6473b`.
+  No LRC transport is claimed.
+
+- `jc_derived_boundary_jet_euler_thm3437.py` -> matching `.out`
+  [THM-3437 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  At a repeated
+  geometric boundary root, derived Artin reduction
+  has free `(Tor_0,Tor_1)` ranks `(N-1+epsilon,epsilon)`, so the Euler rank is
+  always `N-1`; inverse limits recover the selected arm's Tate module/presence
+  bit, while canonical kernel inclusions have direct limit equal to the actual
+  Pruefer arm.  Neither limit recovers its DeathBar slope/intercept.
+  Exact checks cover `379,225` repeated-root sector-profile rows (`56,411`
+  selected and `322,814` unselected), `2,275,350` derived jet-rank identities,
+  principal-part kernels/transitions, and foreign-support invertibility.
+  Script/output/semantic LF SHA-256:
+  `1326ce34ad7aa32f56ff8b79a87335a93a688bd9a4bd6ddb962d8988a2271a5c` /
+  `e6e25bac54d1f55eb29f04912f80fb04f3578f6ea2606dc39b03c8e2ce13ee08` /
+  `20bd151f40a3991b0fc85108f85339ebf9b48b24bc3113d8d480468b3ecef3f7`.
+  No JC/LRC transfer follows.
+- `lrc_prime_even_half_twist_cap7_finite_atlas_20260815.py` -> matching `.out`
+  [UNNUMBERED FINITE-EXACT; ALL-PRIME TAIL OPEN].  Direct strict-mask search
+  over all `103` target-free odd primes `p<=599` on `Q=2p` finds cap-seven
+  support only at `p=7,19`, reproducing the `Q=14,38` witnesses; every prime
+  from `191` through `599` is a new exact negative.  The profile DFS uses
+  odd-unit type normalization and the iff total-overlap budget, with no node
+  cap.  Six large residue controls give normalized zero-degrees `(19,31,23)`,
+  mixed/A-only disjoint clique numbers `6/4`, complementary-pair equality
+  witnesses, and a height-`7` rational atlas for all zero neighbors.  These
+  are OPEN tail signals, not an all-prime classification.  Script/output/
+  semantic LF-normalized SHA-256:
+  `ed54b01f9bf155643b6407c6af8ee6f15c7a099f8ac3b60399dd49b496fb1d12` /
+  `9751da7e0464f16f92b675ca9c95b118fd3fe95fc11cc99c9a7015d8425adb65` /
+  `19f846db72803c683f608149aac8c7da2015eaca6e1e3524d9954eaeef0fa826`.
+
+- `jc_multiroot_boundary_jet_packet_probe_20260815.py` -> matching `.out`
+  [THM-3436 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].
+  At every repeated geometric root, the target-character quotient modulo
+  `(P-beta)^q` is free over `K'[lambda]/lambda^q`, of rank `N` exactly in a
+  THM-3433-selected character and `N-1` otherwise.  CRT, `28` vertical
+  Neumann inverses, `35` horizontal gauges, `126,576` graph ranks, and
+  `506,304` derived packet instances are checked.  The last count is
+  bookkeeping; the unit conjugacy proves freeness.  Script/output LF SHA-256:
+  `3dcfc4f3f36ed658a64f3d45b7e055eb6bab10fa536522368a1aa3e32eab6332` /
+  `0d9908f5695a64895fd1d78cace03340b35bf9831e3ebd1eb53747eb563fc01c`.
+  Simple roots, integral splitting, and `JC(2)` remain outside scope.
+
+- `fibonacci_berggren_17adic_hensel_torsor_probe_20260815.py` -> matching
+  `.out` [PROVED UNNUMBERED HENSEL-FIBRE LEMMA + FINITE-EXACT `a=1..4` +
+  INDEPENDENTLY AUDITED].
+  For `G=[[0,1],[1,1]]`, the two projective 9-cycles modulo `17` are exactly
+  the two Legendre classes of `D(m,n)=n^2-mn-m^2`.  With `K=G^18`, the
+  nonsplit first layer of `-K=I-17B` makes `K` freely transitive on every
+  Hensel fibre of `P^1(Z/17^a)->P^1(F_17)` for every `a`; the companion checks
+  all `88,434` level-four points.  On the canonical Fibonacci base lifts
+  `n_0=3,...,11`, the calibrated exponent retains the affine lift and realizes
+  fibre subsets as periodic XOR/harmonic supports, while the labelled
+  `T4/T6` shadows freeze and forget that exponent.  MISTAKE-394 repairs only
+  the `T4` observable's name and the tied `n=2` support boundary.  This is no
+  LRC current transport.  Script/output/semantic LF-normalized SHA-256:
+  `e87a2efa71f0dca430dd86fdb6d8d72d0ece4687be730ddc70c8674c4d70b496` /
+  `0f46375097b6dc6a4f801f98fa0609bd7858e05941d66a9efd4fcc2c0c0b3d90` /
+  `bc6795aa3a4647b44cfa0b15f5112503cace4c9228dbdf18afb9e5aa8217fff0`.
+
+- `lrc_dyadic_fibre_grid_decomposition_thm3435.py` and
+  `lrc_dyadic_fibre_grid_census_thm3435.py` -> matching `.out` files
+  [THM-3435 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; bounded census
+  FINITE-EXACT only].  For every `Q=2^aR`, a literal half block splits into a
+  repeated `d=2^(a-b)=7q+c` grid over each odd-base fibre, with exact count
+  `2^b(q+epsilon_j)` and an affine cyclic-interval sidecar.  The remainder
+  `c` cycles through `2,4,1`; two and four coefficient branches are disjoint
+  (OR=XOR), while eight cover with multiplicity one or two and only a
+  sheet-local cyclic order.  The primary companion reconstructs `4,755,520`
+  sheet cells and `449,888` active fibre rows through `Q=192`, including all `24,580`
+  inactive endpoint laws.  The all-`Q` even cap-seven lane is reduced to
+  two- and four-colour affine sections, not classified.  The separate census
+  finds primitive support `{14,38,68,148}` through `Q=362`; an independent
+  no-dominance search of the same `60` rows agrees in `1,835,142` states.
+  `Q=366` is the first unclassified boundary.  Decomposition script/output/semantic
+  LF-normalized SHA-256:
+  `a79a7757c93bb903c10a157a9bce4b942c74548a25dd395157f273d8f8c67cb9` /
+  `5c7dff656d867a81d75dafb504ca6adc21b41dfd936a0bef0491bf658b1e1428` /
+  `bb9fce50f5ee51048eb02a79aef83151a1593b8b16ef73992243b88d8726545e`.
+  Census script/output/semantic hashes:
+  `d301f0cc802b311e578109a571e85e1ecf1e81a20efdd688bc4c91b8dc6c530d` /
+  `df94ab3b8b085fb9ddaf668438d6b07af92c0095a3dfee5774c2c85e13fe5b0d` /
+  `35dfbba192b4b17b72cda5a019692a9af5ee1ce406f3ca4a7d7ff551fe349096`.
+  No all-`Q` rank-seven classification or LRC(14) consequence follows.
+
+- `lrc_seventeen_fibre_two_sided_mass_closure_thm3434.py` -> matching `.out`
+  [THM-3434 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The two-sided
+  fibre invoice closes both residual towers `17^a` and `5*17^a`, including
+  the exceptional `Q=85` boundary, and proves that odd transverse literal
+  half-twist rank is at most seven exactly on multiples of
+  `{9,11,13,15,23,25,29,51}`.  The primary companion checks density and
+  fibre laws, nine levels of each tower, `176,850` period-descent cells, the
+  `760`-state `Q=85` negative search, positive atoms/pullbacks, and all odd
+  `Q<=101`.  Normal, optimized, and stored outputs agree.  Primary
+  script/output/semantic LF-normalized SHA-256:
+  `910349a5c5c4178b068cfe5427d01d7b7efadc54875b01bac87b162d0eccf996` /
+  `3adbdc6c6937b13a8c6e7dfc1ab8b27ba001af6860341fb082e2a01a65dcf0dc` /
+  `13984be8cee76a72b5d1ff98011538e56eb9c5f86ff3db41ed80f7c536189f2d`.
+  Arbitrary common time and LRC(14) remain open.
+
+- `lrc_rank7_residual_17adic_tower_probe_20260815.py` -> matching `.out`
+  [THM-3434 VERIFIED-EXACT INDEPENDENT COMPANION].  A separate third-point
+  derivation checks `Q=51,85,289`, `1,006,880` forced `Q=85` profiles, and
+  the affine-lift hostile.  Audit repaired an uncommitted near miss: even
+  full-order owners also spend a third point on the covered fixed fibre, so
+  no coarse `Q=85` profile survives.  The pair-overlap bank is only a hostile
+  sidecar.  Normal, optimized, and stored outputs agree.
+  Script/output/semantic LF-normalized SHA-256:
+  `b70570b1baecb719399e7819fce772d2aad7d145e8e44811164046d623cff1fa` /
+  `6b10dec50965d932b73d4c6f16d79c1aa00a4b733b425dd33b1a64595a5ce8f1` /
+  `2939e6278cc64659599ec030d620cd52b12574cbfb2f531a3e34d8ebf8df1fcd`.
+
+- `lrc_order2_fixed_half_parity_transplant_thm3432.py` -> matching `.out`
+  [THM-3432 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For every
+  `R>=2` and strict `0<delta<=1/2`, restricting fixed-zero blocks on `2R` to
+  odd sheets is exactly the half-twist block on `R`; adjoining the unique
+  order-two residue therefore raises the conditional minimum rank by one.
+  Full joint period is preserved, while for odd `R` the half augmented gate
+  additionally needs an odd residue.  The companion checks 5,990,700 sheet
+  cells, 94,760 affine-unit rows, ten direct rank controls, multiplicities,
+  and the sharp all-even `R=15` hostile.  Script/output/semantic LF-normalized
+  SHA-256: `5be8316df17232cb797c830207190b793faf2088a9d9c172a509f6ef986207e9` /
+  `f4f4ccfccc0ff82a7920abb9d69245539c0eb498a383fe4895a5c08f01088ca9` /
+  `509ab5d7e01e3ffad5ba93bbfdd9081c84697db9457213658d750bbf40c681a9`.
+  No unconstrained fixed-rank, mixed rank-seven, or LRC(14) claim follows.
+
+- `lrc_prime_fibre_activity_descent_thm3429.py` -> matching `.out`
+  [THM-3429 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  In the
+  transverse universe `Q not divide r_i` (so the universal `r=0` and empty
+  `r=Q` representatives are excluded), an odd joint-period half-twist cover
+  by at most seven blocks outside the proved rank-at-most-six bases has every
+  prime coordinate in `{3,5,13,17,29}`.  A coordinate omitted by some owner
+  is one of `3,5,17,29`, while an all-active coordinate is `13` or `29`.
+  Every quotient coindex is `{3,5,17,29}`-smooth; after removing divisor atoms
+  `13,29,51`, THM-3429 reduces the frontier to `17^a` and `5*17^a`, which
+  downstream THM-3434 now excludes.
+  Exact dual companions check inactive projection, strict fibre capacity,
+  prime powers, the transverse boundary, and the full `Q=51,p=17` affine
+  lift-cocycle table.  That atom proves the reduction is not yet a recursive
+  classifier: congruent coefficients modulo `2p` can separate on nonfixed
+  fibres.  Normal and optimized transcripts agree.  Primary
+  script/output/semantic LF-normalized SHA-256:
+  `2de78875810a95eaa1ccdddfd4a91cac4db5ea32bcbe384a635f1045d5a692c7` /
+  `75b6d84866f38c826b4e26e1374f7d45aa233704de47e37dc3499bf5b0689f99` /
+  `c46b24a98d32f83e1933276372e8bc1688ac9d3c3efa54c154ec19fcd1094c2d`.
+  The second companion also verifies the general activity floor and Boolean
+  defect budgets, while the standalone parity proof closes `p=7`.  No
+  rank-seven antichain completeness,
+  arbitrary-time, or LRC(14) conclusion is claimed.
+
+- `odd_target_free_p7_half_twist_parity_obstruction.py` -> matching `.out`
+  [PROVED COROLLARY + VERIFIED-EXACT, independent of THM-3429].  Directly
+  from THM-3416, a target-free odd joint-period cap-seven cover with `7|Q`
+  would have seven active owners and exactly one hit per owner on every
+  seven-fibre.  Exact block sizes force all seven residues even, so they
+  collide at the reflection-fixed sheet; the augmented gcd also remains
+  even.  The all-`Q` proof is checked against repeated-seven hostiles and
+  exact small-cover controls.  Normal, optimized, and stored outputs agree.
+  Script/output/semantic LF-normalized SHA-256:
+  `397b5678e0c8a1600a1bf34c9e8ba4408e155264d2af6c6302fcb53a202f5a89` /
+  `dbc55b66973a3a06c00cec8ef0b446e32679d946944b5c97167738e4904f567c` /
+  `8599e1b8ced3588d68d4cdd176de5932b72cb1ac4bc434b2dab14114f3914d89`.
+  This closes only the `p=7` lane; fixed zero, arbitrary time, and LRC(14)
+  remain open.
+
+- `rough_composite_odd_interval_collision_thm3426.py` -> matching `.out`
+  [THM-3426 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For an odd
+  modulus `n` with `spf(n)>h`, the exact complement of the unit-multiplier
+  collision set of the maximal symmetric odd interval is the reduced
+  opposite-parity packet `D_h`; interval entries themselves may be nonunits.
+  Beyond `n>2(h-1)^3`, pairwise-disjoint unit dilates have sharp clique number
+  `1+floor(log2(h-1))`.  The exact companion checks 9,160 rational cells,
+  22,201 parity-lift cells, 1,032,666 unit-action cells, 42,184 normalized
+  graph pairs, and 30 rough composite controls through `h=16`.  The hostile
+  `(h,n,L)=(9,969,107)` has exactly four extra multipliers
+  `{161,325,644,808}`, exposing the noncancellable factor-three arm.  No mixed
+  quotient-order cover, physical-time, or LRC(14) conclusion follows.
+  Script/output/semantic LF-normalized SHA-256:
+  `b96eeca089ac86e2d82f0d52fef37ca8b509d5ffd76615ed08524748791d3ced` /
+  `97fb799cf97d6485ef48aac93caa486c223d147207a4d5a72bc5f52ff2becb2c` /
+  `f03aded979fb19d75378b50614b6df1dc100ed6e25d08cd482501810ae72a691`.
+
+- `jc_nonlinear_multiroot_unit_rigidity_thm3424.py` -> matching `.out`
+  [THM-3424 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `P=ax+b+g(x)z^d` in characteristic zero with `d>=2` and nonconstant `g`,
+  the generic Hamiltonian unit class vanishes exactly for
+  `g=c(x-alpha)^(1+qd)`, `q>=1`.  Its exact integral annihilator is then
+  `((P-(a alpha+b))^q)` and is zero otherwise.  Root valuations and two
+  independent infinity locks force the one-root form; THM-3422 supplies the
+  integral exponent.  The exact companion checks 775 canonical-root
+  multiplicity profiles, 107 exact `Q(t)` systems, 144 closed primitives,
+  and 367,692 local/infinity coefficients.  Constant and zero `g` have zero
+  response; no full multiroot module, mate, new Keller case, or `JC(2)`
+  conclusion is claimed.  Script/output LF-normalized SHA-256:
+  `22c29c3e0086dbe1a592d39027b41e1626484d032e3f7ddc9499629d4f294e38` /
+  `2d14bebf31cc736d158a74ce135d36f57c42663668630799e5d89d163f545921`.
+
+- `lrc_half_twist_rank6_joint_period_probe_20260815.py` -> matching `.out`
+  [THM-3425 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  If
+  `8,9,10,12` do not divide `Q`, a half-twist cover by at most six blocks has
+  quotient-order joint period `Q` iff `Q` is one of `11,15,22,23,25`.
+  Consequently primitive augmented half-twist cap-six support is exactly the
+  multiples of `{8,9,10,12}` together with those five isolated degrees.  The
+  proof reduces orders `3,5,15,17,29` by exact complement quotas, isolates
+  the `11/22` and `23` reflection cores with normalized weights, and kills
+  their mixture by a CRT missed-cylinder gap at least `269/10879`.  Candidate
+  supersets at `Q=33,66` require 2,178,022 exact six-subset checks; all covers
+  have smaller joint period.  The companion also checks 160 lower-base
+  breaker repairs, the primitive `Q=27` five-cover, `Q=33,46` period-loss
+  hostiles, and an odd-`Q` all-even parity hostile.  In the lower-base-free
+  fixed-zero sector, cap-six support is exactly `Q=15`; no standalone all-`Q`
+  fixed-zero formula is claimed.  Normal and optimized transcripts agree.
+  Script/output/semantic LF-normalized SHA-256:
+  `df87baa9e752b3bda4f55fe29f7bda0219b2fc7978ffc47c3cd37c0f4319cf75` /
+  `c643d6ddd1c3fe03daa06850cf8aae91287eab90229bcf2c95ffa0469a8dee79` /
+  `4ac644546e4f81631b5c12a404779397c5c63da67f3e4dd5c1b88da1fa8beda1`.
+  No LRC(14) ledger decrement.
+
+- `d5_secondary_h1_descent_defects_thm3431.py` -> matching `.out`
+  [THM-3431 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The degree-13 cyclic cover sends
+  the LRC chart class to the deck defect of its primitive, explicitly
+  `h(j+7)-h(j)=7a`, while a selected JC observer embeds into
+  `H^1_(lambda)(K[lambda])` as `[lambda^(-q_sigma)]`.  The companion checks
+  all twelve nonzero chart steps, `1,092` primitive edges, `14,196` deck
+  cells, `2,028` group-cocycle identities, and `562` selected JC profiles
+  with `7,058` annihilator states.  It also freezes the two-way additive
+  no-go and the lossy bars `[0,1)` versus `[0,q_sigma)`.  Normal and
+  optimized transcripts agree.  Script/output/semantic LF-normalized SHA-256:
+  `9bcd3f10c1741b7328905b31d8401a205a6916b2a0767c3860a8f5a2b45e0ee7` /
+  `41375ee1c22b2ed1c39adf5a6a985896f7fbd976980cb1753d93b69fa39f5b52` /
+  `79f37de16658ac1e755e0acb5640507dba716756d9b3136f378004a4d29bcc21`.
+  No cross-coefficient map, universal common-image property, current,
+  LRC(14), or JC(2) follows.
+
+- `jc_all_sector_constant_observer_thm3427.py` -> matching `.out`
+  [THM-3427 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `P=ax+b+g(x)z^d`, the generic sector operator
+  `L_sigma(q)=sigma q+(t-x)(sigma(g'/g)q-dq')` has an exact polynomial
+  presentation of rank `deg(rad(g))`, including the separately repaired wrap
+  input.  The constant observer in character `sigma` dies generically exactly
+  for one-root `g=c(x-alpha)^e` with `d|sigma(e-1)`; its integral annihilator
+  is the corresponding power `(P-(a alpha+b))^(sigma(e-1)/d)`.  The canonical
+  resonant reducer is the normalized horizontal truncation, with exact
+  root-interpolated low defect; in the wrap sector it recovers every
+  multiplicity excess `e_i-1` when the radical is taken monic.  The companion
+  checks `585` nonwrap profiles,
+  `1,554` wrap residue profiles, `74` exact defect completions, closed
+  primitives, integral arrows, and multiroot hostiles.  Normal, optimized, and
+  stored outputs agree.  Script/output LF-normalized SHA-256:
+  `cffd6e8d2bf92ce6e793769320e9c2f1798337a8ccb221a6ef5d324774818895` /
+  `be694f75fccc2398b7072ac59c8529a27ceb2c34ba3db6e667dbf002ad495654`.
+  No polynomial mate or JC(2) conclusion follows.
+
+- `jc_nonlinear_wrap_linearization_thm3430.py` -> matching `.out`
+  [THM-3430 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `P_d=ax+b+g(x)z^d`, the nonlinear weight-`d-1` wrap sector and the full
+  response of `P_1=ax+b+g(x)w` have identical filtered stages
+  `K[x]/g^(k+1)`, transitions, and `K[P]`-actions.  If `S=rad(g)` and
+  `c=g/S`, the resulting module is noncanonically
+  `K[P]^deg(S) direct-sum K[x,c^-1]/K[x]`; its canonical torsion has one
+  geometric Prüfer arm per repeated root and stage-`k` thickness
+  `(k+1)deg(c)`.  Split CRT plus THM-3422, faithful finite-normal descent, a
+  Vandermonde free section, and PID window maps `[r]->[cr]` give the integral
+  identification for arbitrary `g`.  The companion checks 2,640 transition
+  entries, 5,280 action identities, 1,700 CRT packets, 5,460 torsion windows,
+  468 root intertwiners, and the scoped nonwrap hostiles/endpoints.  Normal,
+  optimized, and stored outputs agree.  No full nonwrap decomposition,
+  polynomial mate, Keller case, or `JC(2)` conclusion follows.  Script/output
+  LF-normalized SHA-256:
+  `a0cb78d5d8e63722701088596df5c84f749719c8a1fc2027180f6e5fa905a9e8` /
+  `7f57f4d6acd4566699acaa1424945fb7b0b29c4740663043873d2778de4a36dd`.
+
+- `lrc_rank7_prime_fibre_activity_descent_thm3429.py` -> matching `.out`
+  [THM-3429 VERIFIED-EXACT INDEPENDENT COMPANION].  For a prime `p|Q`, the
+  script directly checks
+  that `p`-divisible half-twist blocks are full pullbacks to `Q/p` and every
+  active block hits at most `ceil(p/7)` points per fibre.  Its exact universe
+  is every transverse residue on every prime fibre of all `93` odd composite
+  `Q<=315`: `2,078,480` pullback cells and `11,819,480` active cells.  It
+  verifies the activity floors for every odd prime through `997`, the Boolean
+  defect budgets `(4,2,0,1,1)` on primes `(3,5,7,17,29)`, the sharp
+  target-free `Q=51` atom, and the nonprimitive scaled-13 hostile at `Q=39`.
+  Normal and optimized transcripts agree.  Script/output/semantic
+  LF-normalized SHA-256:
+  `f89f31256715615babe7ffec792363f9149134a5d02cf20db906ed45c210f1a8` /
+  `ba5196cfa2f8ec82c2cd4fb0320181375334c85525fdb8a5b9e891f2f613c2cf` /
+  `c3b8596233d20f55e5c0bf0419c5f3f627cbf371e3004a5f40ab8a582a09b9f8`.
+  This independently verifies the base activity inequality; its `p=7`
+  equality row is superseded as a cover lane by THM-3429's fixed-fibre gate.
+  THM-3434 closes the residual towers; arbitrary time and LRC(14) remain open.
+
+- `rough_maximal_order_half_twist_rank7_finite_boundary_20260815.py` ->
+  matching `.out` [FINITE-EXACT INDEPENDENT THM-3428 BOUNDARY].  The complete
+  universe is all 116 odd `11<=Q<512` with `spf(Q)>7`, including 23
+  composites, every full-quotient-order coefficient modulo sign, and every
+  scalar-feasible exact owner count through seven.  Distinct coefficients
+  with accidentally equal masks remain distinct owner choices.  Across 249
+  profiles, 26,333 states and 646,035 branches, cap-seven support is exactly
+  `Q={11,13,23,29}`, with full-order minimum ranks `6,7,6,7`; no composite is
+  positive.  Nine accidental mask coincidences are retained, literal masks
+  are independently reconstructed from coefficient coordinates, and selected
+  hostiles include `121,169,323,493`.  Together with the independently audited
+  analytic `Q>=512` proof, this supplies THM-3428's computer-assisted all-rough
+  full-order classification; it is not a mixed-order theorem.
+  Normal and optimized transcripts agree.  Script/output/semantic
+  LF-normalized SHA-256:
+  `ca3ea3d64703a88987c20d1ad148695543db6f64bb6abcd9619905ee79969fe7` /
+  `d1268dc5ec58ffba6c1c32f2bd4e59790996cb07eba1593b64c66cb6b4528961` /
+  `b61db8412c1a45419cb4be595f75c802461472f24525b017b3d50d01af9f35ef`.
+  Composite mixed-order rank seven and LRC(14) remain open.
+
+- `lrc_prime_half_twist_rank7_classification_thm3421.py` -> matching `.out`
+  [THM-3421 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  A literal
+  half-twist cover by at most seven blocks on prime `p` sheets exists exactly
+  for `p in {11,13,23,29}`, with exact minimum ranks `6,7,6,7`.  Above
+  `p=511`, the residue-class capacity invoice and THM-3423's sharp odd-dilate
+  clique law force a contradiction; below it, an exact normalized-mask DFS
+  checks 197 scalar-feasible parity profiles and replays all four witnesses.
+  Independent literal-bank conjugacy and direct optimization recover the
+  same support and ranks.  Composite sheet numbers, arbitrary physical common
+  times, and LRC(14) remain open.  Script/output/semantic LF-normalized
+  SHA-256:
+  `693db87db8664f76fdc7bc6d520c8d3d36c51376aa6c9a67beef1aad6d84aae9` /
+  `77ad7cf9566f5aa02f9bfa7d9abbbce21b4a37db7137616b2771f1b8169775dc` /
+  `f0c7ceb122e90fd3792d72e80a205a6c4bd823cfb5b04064764b95ddc9d9471d`.
+
+- `odd_interval_ratio_complement_thm3423.py` -> matching `.out`
+  [THM-3423 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  If `L` is the
+  largest odd integer with
+  `hL<p`, then beyond explicit cubic thresholds the exact complement of
+  `O_L/O_L` consists of the reduced opposite-parity fractions `+-a/b` with
+  `a+b<=h`.  The pairwise-disjoint-dilate Cayley graph has sharp clique
+  number `1+floor(log2(h-1))`, colored by `v_2 mod` that number and attained
+  by `{1,2,4,...}`.  Exact controls check 9,160 rational connections, 60,049
+  parity-constrained rounding cells, 616,848 finite-field ratio pairs, and
+  the four `h=7` prime residue classes.  No composite-modulus, cover, or LRC
+  conclusion is claimed.  Script/output/semantic LF-normalized SHA-256:
+  `230b9c90f341dc272b50392c6537c3fe0363ccf8e5f055a52c33c20df9b61a3f` /
+  `9227e53fe70e01793ff56f0f074f48d8da439f0f7138b539d462cd455a72aade` /
+  `05f52e47dd904880524b09744efd98c90e6e53b4b37976dbe805ff0d8199a6c2`.
+
+- `jc_one_root_nonlinear_integral_response_thm3422.py` -> matching `.out`
+  [THM-3422 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `P=ax+b+c(x-alpha)^e z^d`, every simple-root sector is `K[lambda]`.
+  For `e>1`, target sector `s-1` is a free line plus one lambda-Pruefer arm
+  when `d|s(e-1)`, and is the Laurent line otherwise.  Exactly
+  `gcd(d,e-1)` characters carry torsion, with depth-`k` length
+  `k(e-1)+s(e-1)/d`.  The unit class has annihilator
+  `(lambda^((e-1)/d))` exactly when `d|(e-1)`.  A separately typed
+  repeated split-root first-window formula records the full puncture-
+  monodromy vector and explicitly does not claim a global multiple-root
+  decomposition.  The exact companion checks 34,504 direct relations,
+  30,576 orbit transitions, 30,576 lambda breaks, 2,268 torsion windows,
+  50 unit primitives, and 126,360 split-fiber character dimensions.
+  Script/output LF-normalized SHA-256:
+  `1c862dd5dfaee00a3ee5827a9d004c160a574deb103cd3b878a6615aeac7a766` /
+  `1e0abbff4bbd2ab601cbf2aee4c840789f4ebf36a1444bf2aa8c8506579e485d`.
+
+- `jc_generic_kummer_response_thm3419.py` -> matching `.out`
+  [THM-3419 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `P=ax+b+g(x)z^d`, `a!=0`, every one of the `d` generic Hamiltonian
+  response sectors has `K[P]`-rank `N=deg(rad(g))`; after adjoining the
+  `d`th roots of unity, the response is `N` copies of the regular `mu_d`
+  representation.  The proof identifies the localized cokernel with de Rham
+  `H^1`, then uses the unique affine ramification point and compact-support
+  Lefschetz traces.  An independent Riemann--Hurwitz calculation shows exact
+  cancellation between multiplicity-dependent genus and deleted points.
+  The exact referee checks `3,751` valuation packets, `26,257` character
+  traces and sector ranks, `108,779` grading shifts, and `341` linear-`z`
+  regressions.  Constant and zero `g` have zero integral response; this is a
+  Hamiltonian-response theorem, not a new Keller case or JC(2) result.
+  Script/output LF-normalized SHA-256:
+  `e60107df6d609d210c61ded6437f9a7e5323f029e271c094695d587989aafcd0` /
+  `1b194ef30b97810b1890dbd6d5f3bde8f7ba9d5228bc3f44d03b97cfd5049310`.
+
+- `lrc_prime_rank7_splitter_closures_thm3420.py` -> matching `.out`
+  [THM-3420 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For prime
+  sheet degree `p`, a fixed-zero cover by at most seven strict danger blocks
+  exists iff `p=29`; in the half-twist prime class `p=13 mod 14`, one exists
+  iff `p=13`.  Both atoms have exact zero-mode-cochain rank seven.  Exact
+  order-mod-14 defect and reflection invoices expose the critical infinite
+  tails.  Equality reduces the fixed-zero case to a multiplicative splitter;
+  power sums leave `p=29,211`, a circular-gap ratio-set argument kills 211,
+  and the 29 atom is the Paley quadratic-residue splitter.  A six-variable
+  Newton obstruction closes the critical half-twist class, with a Lucas
+  certificate for its large numerator factor.  The remaining half-twist
+  prime classes `p=1,9,11 mod 14` and composite rank seven stay open.
+  Normal and optimized outputs are byte-identical.  Script/output/semantic
+  LF-normalized SHA-256:
+  `f95aaf081ccd5c92cb7474104f242623bba9246bdc19eb04ce8da81f3c4e2af6` /
+  `22740907984a9e64e75208c0a01ce0222fd844dfe65826685ff11e64274ef959` /
+  `4dffcebc010848fc022824c46a916208d8b46c70ac3306168463b613ce58a7ed`.
+  No arbitrary-time or LRC(14) consequence.
+
+- `lrc_prime_rank7_remaining_half_classes_scout_20260815.py` -> matching
+  `.out` [FINITE-EXACT PRIME p29--500, LIVE HALF-TWIST CLASSES ONLY].  After
+  THM-3420 closes fixed-zero primes and half-twist classes `3,5,13 mod 14`,
+  the canonical augmented solver checks all 43 primes through 500 in the
+  remaining classes `1,9,11`.  The sole cap-seven positive is `p=29`, with
+  three even and four odd blocks; the fixed sheet has multiplicity three and
+  every other sheet multiplicity one, so sheet OR and XOR still agree.
+  Controls `p=37,43,53` represent all three live classes, and `p=211,499`
+  test the long tail.  The search visits 137,209 memoized states and 138,587
+  branches.  Normal and optimized transcripts agree exactly.  This is no
+  all-prime closure.  Script/output/semantic LF-normalized SHA-256:
+  `6266189ff6043c055b51a79df83bfce841bfca5fd30b0b36eef5fede94c29975` /
+  `fd975b519dfaeef0180cd4428c1e1b9ceee708030ea794eccf7a774f6ba99dcc` /
+  `ee528fc41630c7a9146fe62c5976fbf5421c3c4f427de07d2d7a6e8b9e777959`.
+  No LRC(14) ledger decrement.
+
+- `lrc_rank7_collision_breaker_recurrence_state_20260815.py` -> matching
+  `.out` [PROVED-EXACT REFINEMENT OF THE RANK-SEVEN ATOM-GENERATED
+  SUBFAMILY].  The eight literal witnesses over seven base degrees are
+  classified by quotient-order profile, multiplicity polynomial, total
+  overlap `Omega`, even-multiplicity defect, collision genus `G`, joint
+  period `L`, period defect `Delta`, and the half-twist odd-residue bit.
+  Under a fibre of degree `k`, the multiplicity polynomial and
+  `(Omega,|E|,G)` scale by `k`, while `L` stays at the atom base and
+  `Delta=k`; thus finite collision control requires an unbounded
+  multiplicative fibre cocycle.  The collision-free `Q=26` scaled/primitive
+  pair and the `Q=58` genus/defect swap prove that collision anatomy does not
+  determine period promotion.  The atom-generated density splits exactly as
+  `67404/737035` with an OR=XOR certificate available and
+  `4717312/310881363` with only even-defect atoms available.  Fibonacci's
+  refined label clock has period `239400` and state densities
+  `8/175,2/105,4/105`; the odd Berggren carrier reduces to modulus
+  `364832325`, with unimodular child determinants `(1,-1,1)`.  Normal and
+  optimized transcripts match.  This is not antichain completeness and gives
+  no LRC cut.  Script/output/semantic LF-normalized SHA-256:
+  `9990b2b619ff0c6bfd3a98a5cf80c3bc3ff2b5aebfa5d7d1ca97865270110376` /
+  `8439f36af9cef10c021f1f2fa7f843d7ff7573942aecf9e4e2e3a5b606bbf97a` /
+  `2dc0c1826a03b19b797ddd702c9c877cd77d0a8ec9e0883a5ca13bee22936d0d`.
+
+- `lrc_rank7_atom_monoid_recurrence_transport_20260815.py` -> matching
+  `.out` [PROVED-EXACT RANK-SEVEN INCLUSION + EXACT PERIODIC TRANSPORTS;
+  FINITE-EXACT BERGGREN DEPTH-TEN PREFIX].  Each replayed base in
+  `{13,14,29,38,51,68,148}` has rank seven by its literal seven-cover and
+  THM-3416's lower bound.  Hence every multiple of one of those bases that
+  avoids `{8,9,10,11,12,15,23,25}` also has rank exactly seven.  This proved
+  atom-generated monoid has period `14362718970600` and exact natural and
+  harmonic coefficient `165741596/1554406815`; the same number is only a
+  lower bound for the full rank-seven stratum.  Fibonacci indices in the
+  subfamily are exactly `7|n` with `6,10,15,25` all not dividing `n`, 108
+  classes modulo 1050 and coefficient `18/175`.  On the Berggren U-spine,
+  the exact law is `n mod 51 in {2,19,29,46}`, `n mod 9 not in {1,5}`, and
+  `n mod 11 not in {0,8}`, giving 72 classes modulo 1683 and coefficient
+  `8/187`.  The full ternary prefix has accepting counts
+  `0,0,1,3,9,17,48,176,500,1506,4587` through depth ten; no limiting tree
+  density is inferred.  Normal and optimized transcripts agree exactly.
+  Script/output/semantic LF-normalized SHA-256:
+  `5248721148ca18bd82cae9bda3f8fa86b3bf2fc35fbce88369c5d3c1c0d3c36a` /
+  `572c001aaa647774d19b53a1309ad10f7c8044426db15d145fbcfbd7a81e5cc6` /
+  `64e9032fc79cf2c5014497baddbbccbc3439650903b25447505f93bc66fb1c26`.
+  This is not a complete rank-seven classification and gives no LRC cut.
+
+- `lrc_zero_mode_cochain_rank7_ancestor_scout_20260815.py` -> matching `.out`
+  [FINITE-EXACT TARGET-FREE Q2--200 BOTH-TWIST CAP-SEVEN CENSUS;
+  ALL-q DIVISOR ANTICHAIN HYPOTHESIS ONLY].  Outside the proved rank-at-most-six
+  bases `{8,9,10,11,12,15,23,25}`, the exact primitive positives through
+  `Q=200` have minimal divisor antichain `{13,14,29,38,51,68,148}`.  Within
+  this finite window, the global rank-seven degrees are exactly the target-free
+  multiples of those seven candidates.  The atom atlas records every sheet
+  multiplicity and its collision hypergraph: `Q=13,14` are partitions;
+  `Q=29,68` have only odd multiplicities and hence still satisfy sheet
+  `OR=XOR`; `Q=38,51,148` have respectively 4, 6, and 8 even-multiplicity
+  sheets, which are exactly the XOR defects.  This parity carrier is a
+  hypergraph, not a tournament.  The candidate-generated subset has proved
+  harmonic coefficient `165741596/1554406815`; identifying it with the full
+  rank-seven support, and identifying `837065119/1554406815` as the exact
+  cumulative coefficient, remain conditional on the unproved all-q antichain
+  hypothesis.  The solver examines 33,508 raw types and 1,885,285 states;
+  normal, optimized, and stored outputs are byte-identical after newline
+  normalization.  Script/output/semantic LF-normalized SHA-256:
+  `bcf80194bd5697b121b08b239f096d67d7e0214bbc81abf4a9fb1f6d939fa560` /
+  `95012438ffa2e36183ef3e56a9881c3daa52ddfe118abebfd02106b1b28f65a2` /
+  `dec1ecff2442edb765582647ba529b338a99aa0e04fb7f27313fe97ac92c406a`.
+  No all-q theorem and no LRC(14) ledger decrement.
+
+- `lrc_zero_mode_cochain_rank6_support_thm3416.py` -> matching `.out`
+  [THM-3416 PROVED ALL-q GLOBAL RANK-SIX SUPPORT + VERIFIED-EXACT
+  PRIMITIVE Q2--200 HOSTILE CENSUS + INDEPENDENT AUDIT CLEAN].  For distinct
+  positive transverse owners with zero complete mode cochain,
+  `rho_ZMC(q)<=6` iff one of `{8,9,10,11,12,15,23,25}` divides `q`, and its
+  rank is exactly six iff one of `{11,15,23,25}` divides `q` while none of
+  `{8,9,10,12}` does.  Exact order-three and order-five complement
+  classifiers, followed by reflection-orbit bounds on orders 17 and 29 and
+  an equal-fibre CRT missed-core product, prove the half-twist converse;
+  THM-3414 supplies the fixed-zero converse.  Five positive controls cover
+  the four new bases, and the independent finite census checks both twists
+  only through `Q=200`.  The rank-six support has period `455400` and density
+  `25/207`; Fibonacci and Berggren transports have densities `2/25` and
+  `14/99`.  Normal and optimized outputs are byte-identical.  No arbitrary
+  physical-time or LRC(14) consequence is claimed.
+  Script/output/semantic LF-normalized SHA-256:
+  `c946cf9a66daa13da790cc9b1129993f9b5c1a8a2bdc6dec1bcc07b644989122` /
+  `733a3ed02910348b87b561df7f1c79eef2dc431a8d702f2c0f807db33c1298cc` /
+  `99892baf39b3d2b1b6a802bf21e0fe4164f155030d8ad051bc7ae26513b01ca3`.
+
+- `jc_one_monomial_nonlinear_fiber_thm3418.py` -> matching `.out`
+  [THM-3418 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  DERIVATION/TYPE/REPLAY-AUDITED].  Over any
+  characteristic-zero field, a planar Keller equation with
+  `P=f(x)+g(x)z^d`, `d>=2`, forces `f=ax+b`, constant `g=c`, and
+  `Q=(kappa/a)z+H(P)`; conversely these are explicit tame automorphisms.
+  Gradient unimodularity first forces `f' in K*` and `g|(g')^2`, but every
+  nonconstant `g` then creates an unavoidable residue-one recurrence whose
+  degree is `k(deg(g)-1)` and whose leading multiplier never vanishes.  The
+  exact referee checks six gradient controls, 35 nonconstant recurrence
+  cells with 245 degree/leading/telescoping coefficients, and 21 constant-`g`
+  normal forms/inverses, plus 525 Hamiltonian sector/wrap checks.  This closes
+  only the sparse top-plus-constant fiber stratum, not a general
+  intermediate-coefficient fiber or JC(2).
+  Script/output/semantic LF-normalized SHA-256:
+  `8ae459feb969e00cbb92acd718cdeb49b0d20d86323cdb98e6c31a8fd6a4fe2f` /
+  `4bce9383f966c05468d4c61de5e7bdd3ce77f4a0ce9a8e997e0fed4cfc5dfe05` /
+  `90d08019ad87638fecc375d76258e282bc6a4de17f53e01ca87802c8f05c5c92`.
+- `lrc_zero_mode_cochain_rank6_support_probe_20260815.py` -> matching
+  `.out` [THM-3416 PROVED ALL-q GLOBAL RANK-SIX SUPPORT DOWNSTREAM OF
+  THM-3414's COMPUTER-ASSISTED PROVED FIXED-ZERO ATLAS + ELEMENTARY HALF-TWIST
+  ANCHORED-COMPLEMENT PROOF + VERIFIED-EXACT Q2--300 HOSTILE CENSUS +
+  INDEPENDENT PROOF/ARITHMETIC AUDIT PASS].  For unrestricted positive
+  transverse owners with zero complete mode cochain, `rho_ZMC(q)=6` iff one
+  of `11,15,23,25` divides `q` and none of `8,9,10,12` does.  Literal
+  half-twist rank at most six occurs exactly on multiples of
+  `{8,9,10,11,12,15,23,25}`; this is not a primitive iff, since pullback can
+  lose the breaker coordinate (`Q=33` is the canonical hostile).  Capacity
+  leaves target-free orders `{3,5,17,29}`.  Four successive complement quotas
+  `2/15,4/25,14/85,24/145` eliminate them; the mixed load
+  `70/493<14/85` closes the formerly live 17/29 gap.  Their exact pairwise
+  loads form a four-vertex generalized tournament with missing equality edge
+  `{3,5}` (killed by base 15) and bidirected edge `17<->29`; this is a proof
+  sidecar, not the six-block cover carrier.  The `Q=11,23,25` atoms are exact
+  sheet partitions, while `Q=15` has one multiply covered fixed sheet.  The
+  rank-six support has natural/harmonic coefficient `25/207`; cumulative
+  rank-at-most-six coefficient is `149/345`; Farey density is
+  `157981/1244160`; Fibonacci indices are 12 classes modulo 150; the Berggren
+  U-spine has 14 classes modulo 99, and the full ternary tree is a finite
+  automaton modulo 56925.  The canonical solver scans both twists through
+  `Q=300` with 133,058 raw types, 734,163 states, and 751,364 branches; normal
+  and optimized outputs are byte-identical.  A clean-room audit additionally
+  checks every target-free `Q<=1000` and hostiles
+  `1479,1972,2465,3451,4913`.  Script/output/semantic LF-normalized SHA-256:
+  `ed7672fd75b7c5ede23c0b7752e06849faa9c693d18e0639eee5b39f17d03a21` /
+  `3eb932643e76f2ac7836d8d435bf259183e2c3778216b0458bf4487b5894102a` /
+  `18abbdc82a40b0299d9dc59cd745d52a09e9706d3cf0cb0379ab5ed2f064df22`.
+  No LRC(14) ledger decrement.
+
+- `lrc_zero_mode_cochain_rank5_support_probe_20260815.py` -> matching
+  `.out` [THM-3415 PROVED ALL-q GLOBAL RANK-FIVE SUPPORT DOWNSTREAM OF
+  THM-3408's COMPUTER-ASSISTED PROVED CUTOFF + VERIFIED-EXACT INDEPENDENT
+  PRIMITIVE Q2--500 HOSTILE CENSUS + INDEPENDENT PROOF/ARITHMETIC AUDITS
+  PASS].  For
+  unrestricted distinct positive transverse owners with zero complete mode
+  cochain,
+  `rho_ZMC(q)=5` iff `(10|q or 12|q)` and neither `8` nor `9` divides `q`.
+  Half-twist block density and the unique order-three complement force every
+  primitive rank-at-most-five quotient into bases `{8,9,10,12}`; at zero
+  twist, THM-3408's additive-order dual excludes base-free five-covers and an
+  exact complement bound kills the sole odd `15|Q,v_3(Q)=1` residual.  The
+  `Q=10,12` atoms are disjoint anchor-plus-four-petal partitions, so OR
+  equals XOR for sheet masks only; no augmented prime-breaker XOR claim is
+  made, and the carrier remains a cover clutter rather than a tournament.
+  The rank-five support is 32 classes modulo 360, with natural
+  and harmonic density `4/45`; its Farey/Stern--Brocot denominator density is
+  `43/864`, Fibonacci support is `n=15 mod 30`, and every odd Berggren
+  `2c+1` label is excluded.  A rare-coordinate solver checks both twists for
+  every `2<=Q<=500` using 371,760 raw types, 381,717 memoized states, and
+  386,458 branches.  It sees zero-twist primitive rank five only at `16,18`
+  and half-twist rank five only at `10,12` and the `8/9` breaker lifts; this
+  last primitive converse is FINITE-EXACT only.  A selective independent
+  hostile at `Q=555` has no rank-at-most-five primitive cover in either
+  twist.  Normal and optimized outputs are byte-identical.
+  Script/output/semantic LF-normalized SHA-256:
+  `b753d8a1f8fd2e8c636ab81815b1561db2a3c451feda5b7dacfef8b57c060306` /
+  `7528c4b508cd4a762f22642192c0209f6ba97d9987ad6d7c3157bd7ccfc01832` /
+  `8c4a9bc6fee718a2c6f6ec282b14bb7f7968aec40ec37b9c8d12a3e13e8528dc`.
+  No LRC(14) ledger decrement.
+
+- `lrc_projective_cochain_wedge_scalar_hub_thm3410.py` -> matching `.out`
+  [THM-3410 PROVED ANALYTIC + PROVED-ELEMENTARY + VERIFIED-EXACT;
+  INDEPENDENT AUDIT REQUESTED].  For every realized THM-3398 packet,
+  `A_i=2qu_i x_i` is integral and `P_ij=A_i u_j-u_i A_j`.  Factoring column
+  contents and contracting equal primitive rays turns the exact faithful-tree
+  tariffs into a weighted projective MST and connectivity threshold, with
+  content lower bounds.  The canonical `p=2,3,5` half-grid residue partitions
+  carry scalar fibres `gcd(a,p)=1`, `7a Delta<q`, with exact tariffs
+  `(tau_1,tau_infinity)=(2a(p-1)d^2,2ad^2)` for `q=pd`.  Fixed-scalar pure
+  dilation has degree two, while the full hidden scalar fibre has sharp
+  degree-three diameter.  The companion checks 92,400 lattice systems, all 44
+  admissible direct physical hubs through q40, two boundary hostiles, and both
+  q15 packets; normal/optimized outputs are byte-identical.  No LRC decrement.
+  Script/output/semantic LF-normalized SHA-256:
+  `5d4ee3abad66c8052a0d78406aa633f29b0bbb110c76438ea2f417774800d7f7` /
+  `ec8451b180e96287d9dfecd3bfa484d7b4a8e1ac82108694c4656c83968e0179` /
+  `bc6cc2bd14fb566ee7e57adc27291e3dea1085cf542891128cc4feea93d44c51`.
+
+- `lrc_unrestricted_zero_mode_cochain_rank_probe_20260815.py` -> matching
+  `.out` [PROVED-ANALYTIC THM-3405 DIVISOR-ANCESTRY REDUCTION +
+  PROVED-ELEMENTARY COMPLETE PRIMITIVE/GLOBAL RANK-FOUR CLASSIFICATION +
+  FINITE-EXACT UNRESTRICTED POSITIVE-TRANSVERSE q15--28 ZERO-MODE-COCHAIN
+  RANKS; INDEPENDENTLY BFS/COMBINATION-AUDITED; UNNUMBERED].  Writing an
+  active family as `U=dV`, with `gcd(V)=1`, and setting
+  `g=gcd(q,d),Q=q/g`, every zero-cochain certificate is exactly the `g`-fold
+  pullback of a primitive `Q`-sheet cover at twist zero or one-half.
+  For every possible full cover (necessarily using at least two types),
+  primitive positive lifts exist iff
+  `gcd(M_epsilon,r_1,...,r_s)=1`, converted to finite set cover by adjoining
+  one breaker bit for every prime dividing `M_0=Q` or `M_1=2Q`.  Thus
+  `rho_ZMC(q)=min_(Q|q,Q>=2,epsilon) rho_epsilon^prim(Q)`.  Exact ranks for
+  q15--28 are `(6,4,8,4,9,5,8,6,6,4,6,7,4,7)`; ancestors
+  `8,9,10,11,13,14` explain every nonprimitive drop, and literal half-centre
+  witnesses are replayed.  q25 rank six and q27 rank four also have
+  elementary capacity lower bounds.  Quotient-order capacity and the forced
+  common zero sheet prove that three owners never suffice.  Exact analysis of
+  19 quotient-order profiles and 979 augmented realizations shows that the
+  only primitive rank-four atoms are half-twist `Q=8,9`; hence global rank
+  four holds iff `8|q` or `9|q`.  This full support has density and harmonic
+  residue `2/9`; it pulls back to Berggren-spine
+  indices `n=1,5 mod 9` and Fibonacci indices `6|n`.  Union-state BFS visits 36,580 states
+  and 565,480 transitions; an independent exhaustive route checks 394,418
+  subsets.  A third, independently written rare-coordinate branch-and-bound
+  audit checks both twists for every `2<=Q<=500`: no rank-at-most-three cover
+  occurs, and its only primitive rank-four positives are the displayed
+  half-twist atoms at `Q=8,9`.  Its rank-three/rank-four audit digests are
+  `e5b660100f95d7c41c9a6460a42b2283435c1020d8b74e0e0a36a48e0d79f82b` /
+  `c55882988ee546925d84844b55980a93e676541257077c48ac2af8083d92fd08`.
+  MISTAKE-390 records the harmless scope repairs: the lift iff requires at
+  least two selected types, and quotient-order lcm `Q` is only a necessary
+  condition for fixed literal owners.  Script/output/semantic LF-normalized
+  SHA-256:
+  `70c176e1a056d285471a07d1d011a26070ff288c3cee5ec39971d349d416de31` /
+  `52684d84bba6076c760285937e29cfd4a81c998324d6a9019e2919d4f764ab5d` /
+  `233c092a9b73dcf8a40b9c21b52b99e322b059f003554bd79721bae317c30c7e`.
+  codex-2026-08-15 THM-3405 divisor ancestry, Boolean prime-breaker
+  realization, literal pullback audit, and independent rare-coordinate
+  hostile audit.  MISTAKE-391 repairs the formerly stale indexed output hash;
+  normal and optimized fresh replays match the committed transcript exactly.
+
+- hadamard_twelve_order_bank_thm3394.py plus immutable signword data ->
+  matching output [THM-3394 PROVED + VERIFIED-EXACT + INERT RECONSTRUCTION +
+  HOSTILE-AUDITED + INDEPENDENTLY AUDITED].  One frozen 23,828-sign word and
+  192-bit schedule render
+  explicit matrices at orders
+  668,716,892,1132,1244,1388,1436,1676,1772,1916,1948,1964.
+  The standard-library verifier checks exact consumption, shapes, signs,
+  raw and normalized hashes, periodic/SDS or OA construction sidecars, and
+  all 12,913,704 unordered distinct row pairs at half-order Hamming
+  distance.  A one-entry hostile is rejected; ordinary and optimized runs
+  are byte-identical.  This closes only those twelve finite orders, not the
+  Hadamard conjecture.  Source/data/output SHA-256:
+  7ae931b3cf268550287bd0621b9b85b8ea167126fadfb90d57b5106d0f82fb2d /
+  68f7ceebb67005bf1b968171f7e6897cc33bde68adbd63f14bd45edfeb7b3f06 /
+  d8efee90947015a7e6fc28a1685cc3d378357a85e1d4814953b32b17c5cd76a9.
+
+- `hadamard668_explicit_certificate_thm3393.py` -> matching `.out`
+  [THM-3393 PROVED + VERIFIED-EXACT + GENERATOR-INDEPENDENT CERTIFICATE +
+  INDEPENDENTLY AUDITED].
+  An embedded normalized `668 x 668` sign matrix has frozen text SHA-256
+  `73f1de1539849e1dc7e6085cc69c563fd2965c44970263e8203384bd1a46aa63`.
+  The standard-library verifier checks all `222,778` distinct row pairs at
+  Hamming distance `334`, hence `H H^T=668I`, and independently rebuilds the
+  same matrix from a `4-(166;82,83,83,83;164)` supplementary difference
+  family in a four-row-bordered Goethals--Seidel array.  Ordinary and
+  optimized runs are byte-identical; an independent reconstruction/Gram/SDS
+  and block-construction audit found no defect. Source/output SHA-256:
+  `f637f2017954ee949e83871470179d529c69bd7add404c0924b0b4dcf2be030f` /
+  `83870dbcbe81ded0c718be1fa3696fb0016dd0fcba3eba1a27d1300e06e148de`.
+
+- `switching_bipartite_synchronization_thm3392.py` -> matching `.out`
+  [THM-3392 PROVED + VERIFIED-EXACT + HOSTILE-AUDITED]. For every real
+  symmetric zero-diagonal matrix, the bipartite and synchronized sign norms
+  satisfy `Q<=B<=2Q`. Disjoint ternary polarization gives the upper bound,
+  and a Sylvester-Hadamard two-block sign family makes the factor two
+  asymptotically sharp. Exact switching-class exhaustion through order six
+  finds `B=Q` through order five and histogram `{1:1012,6/5:12}` at order
+  six; the canonical strict witness has `Q=10,B=12`. Diagonal and skew
+  `Q=0<B=2` hostiles show both hypotheses are essential. Ordinary and
+  optimized runs are byte-identical. Source/output SHA-256:
+  `fad03eca02ec8da0a4bd51ba1ff54e3830636b6c49b4fa563299e25d5865fae9` /
+  `d2ef8e250c05eeaae2930c72737f67de6315faeb0406a081302286de9913f2f3`.
+
+| `factorial_hfc3_fourier_kernel_degree4_probe_thm3304.out` + alternating-quintic companion | [PROVED + VERIFIED-EXACT; FINITE-EXACT MOD-103 SIDECAR; DEGREE-FOUR CELL OPEN IN THIS COMPUTATION; THM-3304] | In Fourier barycentric coordinates, `sum N_(r,s)u^r v^s/(r!s!)=1/(1-u^3-v^3-3uv)`, so `<a^r b^s>` vanishes exactly off the `C3`-balanced congruence and is strictly positive on it.  This forces shortest closed coefficient-phase covering width at least `pi/3` for a cubic-null vector in the five-dimensional degree-four cyclic cell; THM-3310 later sharpens the inequality to strict and THM-3321 closes support four.  Independently, every alternating quintic is `V(Ae1^2+Be2)`, and its exact second/fourth moment numerators have resultant `846709600` with nonzero infinity coefficients `7,111`, excluding that entire HFC(3) cell.  Support/Fourier/output SHA-256: `1c7058df1bbd72b6f2eec7ebb9c06e49a09218df41a96bd4edf6d85e11d5394a` / `6bb43cf838c50124677ddbb88bd034d23608d8a6e9aae1c5b4e079623a1fa817` / `74c3fd06b528bb5e858b3db413788f058ea5d272484fe73e75354c7ae26c3ca5`; sign script/output: `8b94cc7792ce79df1b78813b60acb8a2ffc6e4994b0fb646319b59932de2f239` / `21935d028698ff34400e5652a2d81ee3cb17b3e7baab240a6cc4635cb2876c8f`. | root/cross-frontier-35-81-2026-08-03 |
+
+| `gmc_coprime_selector_geodesic_potentials_thm3280.out` + independent audit | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3280] | In the saturated augmentation basis of `Z[C12]`, the selector word has SNF `(1^10,35)` and the clutch-product-minimizer edge-parity word has SNF `(1^9,9,9)`, so their coprime defects complete the full rank-eleven lattice; a direct mixed minor is `+1`, and completion holds after any integral alignment. The independent no-SymPy audit refutes a physical common-vertex reading: `j12(16)=j12(18)` while `ell(16)!=ell(18)`, the pulled-back word has mass eight, rank eight and SNF `(1^7,2,0,0,0)`, and ordinary hop parity has index eight/SNF `(1^8,2,2,2)` rather than defect 81. This is abstract gauge completion only, with no FC/LRC/GMC decrement. Primary script/output SHA-256: `85d86e7707a852425a33108182559437a73f92979d9491f1221b19296336c017` / `97065ac5eeaaaa12136cf1f4c9d2e7aed665e6d10f9f37aaed27f7a41fc6a10c`; independent: `27d8f6b736649783ad8a4c7542fc0460c9cb1b52db80f177785af7f6783c1b6c` / `35728e8928c7b7a7686dbf3d2c148be84b0329f9a617f8dbe18940d5c5f0e49f`. | root/cross-frontier-35-81-2026-08-03 |
+
 - `lrc14_projected_k3_signed_ray_gate_thm2984.py` -> matching `.out`
   [THM-2984 PROVED + FINITE-EXACT + HOSTILE-AUDITED + LEAN-CORE-FORMALIZED].
   Exact residue replay checks the centered bad-band cardinality and transporter,
@@ -2401,8 +6773,12 @@
 - `lrc14_endpoint_tournament_holonomy_no_go_thm2504.py` -> matching `.out` [THM-2504 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The abstract untyped affine seven-cube admits no invariant tournament because a translation swaps every pair; after retaining polarity but forgetting all role types/names, exactly `1,652` same-weight ties are forced. Hamming parity is an exact cut with zero cycle part, and THM-2502 lex order is a chosen transitive gauge. On `C_13`, the cyclic tournament has nonzero holonomy but inversion gives its global converse; fixed-path and transported-path audits separate coordinate support from gauge invariance. Quadratic residues and guard overlaps are symmetric. THM-2457's uniform common-chart packet model ties all `8,128` asymmetry comparisons. Hashes `a13e2994...077cd66` / `e0cdfb47...860a6d`.
 - `jc2_degree22_cd_plane_ramification_thm2469.py` -> matching `.out` [THM-2469 PROVED + VERIFIED-EXACT]. On the degree-22 `C,D` plane, the root-free invariants `lambda=D^3/C^4`, `r=D/(Cy)` give a 19-term bidegree `(8,5)` eliminant. Its Newton polygon reduces every factorization to a linear/quadratic `v`-factor, and both exact ideals force `lambda=0`, proving uniform absolute irreducibility. The discriminant is `constant*lambda^4*W_4^2*K_30`, with `W_4` exactly the excluded wall. The collision divisor has degree 36, with separate degree-drop and wall-only factors; the Sylvester-valuation bound leaves at least twenty simple finite branch values off the wall in every fibre, so the degree-five normalization has genus at least six. This closes the fifth of ten support-two planes. Hashes `8d38b9f4...4298` / `1bc5eb1e...2721`.
 - `lrc14_active_dipole_sweep_thm2503.py` -> matching `.out` [THM-2503 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The sharp opposite-shift duplicate-probe atlas has ordinary profile census `9:20,10:35,11:14` and guard census `7:32,8:69,9:52,10:8`; total service lies in `[9rho,11rho]` or `[7rho,10rho]`, with sharp maximum floors `4rho/5`, `2rho/3` and sharp Fourier energies `T^2/2028`, `T^2/1690`. Rational packets have all twelve nonzero shift colours. THM-2384's primal/dual obstruction remains decisive: these are auxiliary probe colours, not canonical THM-2350 targets or relation currents. Hashes `d7fd2921...745195f` / `ed66e4aa...65c8957`.
-- `keller_degree_semigroup_kps_S135.py` -> matching `.out` [HYP-9030 verified base]. The JC>=3 counterexample family reframed as a degree-graded monoid: det J_F = -2 + real triple collision re-verified; branch anatomy 4T^3-3T-+1 = (T-+1)(2T+-1)^2 (the 1+2 motif = mu_3 fixed point + folded pair; -1/4 = -e_3 of the collision fiber, klein-S324's mechanism independently confirmed); det J_(FoF) = 4 => {3^k} subset KDeg(n) for n>=3; conjecture KDeg(3) = <3> puts G1's degree 4 as the Keller world's '7' (first non-atom-non-product), the HYP-9029 grammar one universe over. Plus the BM rank-lock sharpening of the first-untested-point law (fib locks at 4, tri at 6; weak form confirmed, strong form released).
-- `lrc14_delayed_word_joint_retention_thm2466.py` -> matching `.out` [THM-2466 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. Disintegrating the endpoint H-drift and semantic service onto one supplied oriented root base makes the same endpoint clock act as `Q(13^(k-1)y)` on both fixed densities. Boolean discrepancy and Fourier BV give the common error constant `C_Q=min(mu(Q)(1-mu(Q)),Var(Q)/12)`. Thus any fixed positive owner word sufficiently far out retains a THM-2459 four-atom union with drift at least `mu(Q)^2D_0/252004`, service at least `mu(Q)M_0/32768`, and root coefficient at least `mu(Q)M_0/66453504`. Owner support, the common root section, and positive service are hypotheses; no prescribed first clock, old address, or scalar row follows. Hashes `0940c48f...e1b0` / `3e1ad096...1f65`.
+- `keller_degree_semigroup_kps_S135.py` -> matching `.out` [HYP-9030 VERIFIED BASE; COMPLETENESS/ATOM CONJECTURES REFUTED BY THM-3438]. The exact surviving content is the monoid law, `{3^k}` subfamily, cubic collision anatomy, and BM rank-lock calculation.  The former claims `KDeg(3)=<3>`, global G1 open, and atom degrees `{1,3}` are superseded: degree one is the unit, weighted lifts realize every degree `>=3`, and each grade contains an `S_n` atom.
+- `jc_weighted_lift_degree_spectrum_thm3438.py` -> matching `.out` [THM-3438 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The weighted-lift identities cancel both apparent poles, give `det JF_p=bc`, and reduce inversion to the irreducible pencil `R(w)-Pw+cQ`; the explicit seeds realize every generic degree `n>=3`, so `KDeg(m)={1,3,4,...}` for every `m>=3`.  The quartic 2-jet has degrees `(12,11,4)`, `z`-degrees `(2,2,1)`, determinant `-6`, and collision `G(1,0,0)=G(-1,0,2)`.  A separate ordered-two-root incidence proof gives monodromy `S_n`, hence a weighted atom in every grade; compositions occupy exactly grades `ab`, `a,b>=3`, so degree `9` is first mixed and the degree-five `S_5` inverse is non-radical.  Exact finite banks cover degrees `3..100` and expanded lifts `3..18`; normal/optimized/stored outputs agree.  Script/output/semantic SHA-256: `f31dc1ac...3982` / `110a3ed0...c57` / `fb0f262a...a721`.  This classifies degree and atom/composite **existence spectra**, not arbitrary maps, Jelonek sets, z-affine order-`{1,3}`, or `JC(2)`.
+ - `jc_weighted_lift_infinity_inertia_thm3440.py` -> matching `.out` [THM-3440 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Reciprocal Eisenstein gives one tame place of index `n` over `Q=infinity` and local `n`-cycle inertia.  At `n=91`, point CRT exponents `78,14`, dual exponents `13,7`, all `91` character addresses, and the trivial-action pullback `H^1(<tau^14>;F13)->H^1(C13;F13)` are exact.  Source valuations `(90,-90,-270)` locate a source-infinity center, and a finite simple transposition excludes global cyclicity.  This is a local branch carrier/mod-13 class bridge, not an LRC amplitude, Tor/de Rham class, current, or bispectrum theorem.  Normal/optimized/stored outputs agree; script/output/semantic SHA-256: `33046ebf...69e` / `f46f52ab...998` / `d2284337...dc7`.
+ - `jc_weighted_lift_infinity_character_thm3443.py` -> matching `.out` [THM-3443 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  On the degree-91 infinity torsor, `s^-90 x_j` has leading profile `(rho/91)zeta^j`, so its marked normalized `(1,1)` coefficient is nonzero and the mode-one component is a unit in `K[[t]]`.  Exact deck semivariance forces order `m` into mode `1-m`; the nonzero `s^2` term lies in normalized mode `(6,12)`, refuting purity of the full germ.  Conventional roots relabel the leading mode as `(6,2)`.  This is a Keller leading amplitude, not an LRC intertwiner, bispectrum, or current.  Normal/optimized/stored outputs agree; script/output/semantic SHA-256: `912b264a...042` / `812a719c...404` / `2cba8839...ee8`.
+ - `jc_weighted_quartic_jelonek_inertia_thm3441.py` -> matching `.out` [THM-3441 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For the weighted quartic, `S_G=V(C) union V(L)` exactly and `Disc_w(f)=-16C^2L`.  The `C` component loses one sheet with identity inertia; its raw order two is monogenic index `i=1`, while a generic infinity-separating primitive has cleared exponent `12`.  The `L` component loses two sheets with transposition inertia, index zero, and exponent `5`.  Hence HYP-9027's Keller-every-component-odd successor is refuted, while parity equals inertia sign survives on both components.  THM-3448 subsequently realizes genuine `C3` in degree five and excludes it only for weighted quartics.  Normal/optimized/stored outputs agree; script/output/semantic SHA-256: `adace19f...993f` / `8e9629df...a04` / `84d29019...0cf`.
+ - `lrc14_delayed_word_joint_retention_thm2466.py` -> matching `.out` [THM-2466 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. Disintegrating the endpoint H-drift and semantic service onto one supplied oriented root base makes the same endpoint clock act as `Q(13^(k-1)y)` on both fixed densities. Boolean discrepancy and Fourier BV give the common error constant `C_Q=min(mu(Q)(1-mu(Q)),Var(Q)/12)`. Thus any fixed positive owner word sufficiently far out retains a THM-2459 four-atom union with drift at least `mu(Q)^2D_0/252004`, service at least `mu(Q)M_0/32768`, and root coefficient at least `mu(Q)M_0/66453504`. Owner support, the common root section, and positive service are hypotheses; no prescribed first clock, old address, or scalar row follows. Hashes `0940c48f...e1b0` / `3e1ad096...1f65`.
 - `lrc14_delayed_word_simultaneous_drift_service_thm2466.py` -> matching `.out` [THM-2466 INDEPENDENT EXACT REFEREE]. A separate exact interval-intersection implementation checks `60` circular-BV word/function/frequency covariances, simultaneous drift/service retention, the `252004`, `32768`, and `66453504` invoices, and the small-clock/zero-mean hostiles. Hashes `4f68d2be...b4d6497` / `3527b4c2...e2cf6`.
 - `jc2_degree22_bw_plane_square_lift_thm2468.py` -> matching `.out` [THM-2468 PROVED + VERIFIED-EXACT]. On the degree-22 `B,W` support-two plane, `lambda=W/B^3` gives the exact quintic pencil `R_lambda=R_0-82458112 lambda p^3(616p-1089v+63)^2`. Every factorization would contain a line or conic: the line ideal is unit, and the three conic top types are unit or force the forbidden cubic-root boundary `h=0`, proving uniform absolute irreducibility. Restoring `p=B/y^2` as `Y^2=1/p` exposes the fixed squarefree section `R(0,v)=-567L_5(v)`; five smooth simple zeros force at least six quadratic branch places and genus at least two. This closes the fourth of ten support-two planes. Hashes `00cf5ce1...45b6` / `cf087693...c156`.
 - `metagraph_pureblue_n13_threaded_kps_S134.cpp` -> matching `.out` [THM-2454 n=13 CONFIRMATION, third consecutive pre-registered hit]. The 2^36 threaded pruned census (21 raw survivors, 15 classes; n=11/12 controls exact): pure-blue(13) = 13 with the locked inventory confirmed class-for-class -- 10 rigid [1,3,9,9,9,9,27,27,27,81] = pal13(13) + (15,5,3) + 2x(135,45,3) (T5-centered palindromes). The alphabet law {1,C3,T5} now stands at ELEVEN exhaustive census points; no new pure-blue atom through size 13. Hashes `149e60b8...` / `94fcdfe4...`.
@@ -2415,7 +6791,8 @@
   varying-projective branches are automorphisms, rank-one constant-direction
   scale is empty, and rank-zero constant direction is an automorphism or an
   exact planar-Keller suspension with field degree preserved.
-- `jacobian_g1_*_kps_S134.py` family (8 scripts) -> matching `.out`s [HISTORICAL THM-2465 row; see the corrected row immediately above]. The old unconditional “no intermediate fields at degree 4” wording was repaired by MISTAKE-297, and THM-2633 later excludes the restored D4 lane by a different point-stabilizer gate. The exact script hashes and stratum computations in this row are unchanged; use the preceding row for current mathematical scope. sha16: jacobian_g1_conic_cap_hunt_kps_S134.py d2f67b62de6fd8bc; jacobian_g1_conic_kernel_structure_kps_S134.py dcf520d385d9c243; jacobian_g1_degree_arithmetic_kps_S134.py 9580577631a41611; jacobian_g1_gb_wildcert_kps_S134.py d4fc6a2fc9d889aa; jacobian_g1_line_strata_kps_S134.py f9bb6356c74fe79c; jacobian_g1_staircase_replication_kps_S134.py 6bfa818f65ed3ac7; jacobian_g1_strata_kps_S134.py 8e2152b85e91db3d; jacobian_g1_stratum_exclusions_kps_S134.py 5394a5dacfd49234; jacobian_g1_conic_cap_hunt_kps_S134.out 6e37cc25aa91cf8a; jacobian_g1_degree_arithmetic_kps_S134.out 3c1fdf8880fcc894; jacobian_g1_line_strata_kps_S134.out ca3f11532704c6dd; jacobian_g1_staircase_replication_kps_S134.out d376d8208d5d3e18; jacobian_g1_strata_kps_S134.out 19628afa0c3d10fd; jacobian_g1_stratum_exclusions_kps_S134.out d8d9a962ef3948e8
+ - **THM-2465 global-status correction (THM-3438 / MISTAKE-396):** the S134 computations remain proved restricted exclusions, but their global G1-open verdict is superseded.  THM-3438's weighted quartic is a field-degree-four z-quadratic Keller witness; only the fixed point/line/conic caps and z-affine order-`{1,3}` lane remain open or excluded as stated.
+ - `jacobian_g1_*_kps_S134.py` family (8 scripts) -> matching `.out`s [HISTORICAL THM-2465 row; see the corrected row immediately above]. The old unconditional “no intermediate fields at degree 4” wording was repaired by MISTAKE-297, and THM-2633 later excludes the restored D4 lane by a different point-stabilizer gate. The exact script hashes and stratum computations in this row are unchanged; use the preceding row for current mathematical scope. sha16: jacobian_g1_conic_cap_hunt_kps_S134.py d2f67b62de6fd8bc; jacobian_g1_conic_kernel_structure_kps_S134.py dcf520d385d9c243; jacobian_g1_degree_arithmetic_kps_S134.py 9580577631a41611; jacobian_g1_gb_wildcert_kps_S134.py d4fc6a2fc9d889aa; jacobian_g1_line_strata_kps_S134.py f9bb6356c74fe79c; jacobian_g1_staircase_replication_kps_S134.py 6bfa818f65ed3ac7; jacobian_g1_strata_kps_S134.py 8e2152b85e91db3d; jacobian_g1_stratum_exclusions_kps_S134.py 5394a5dacfd49234; jacobian_g1_conic_cap_hunt_kps_S134.out 6e37cc25aa91cf8a; jacobian_g1_degree_arithmetic_kps_S134.out 3c1fdf8880fcc894; jacobian_g1_line_strata_kps_S134.out ca3f11532704c6dd; jacobian_g1_staircase_replication_kps_S134.out d376d8208d5d3e18; jacobian_g1_strata_kps_S134.out 19628afa0c3d10fd; jacobian_g1_stratum_exclusions_kps_S134.out d8d9a962ef3948e8
 - `lrc14_linked_blocker_clock_cell_thm2464.py` -> matching `.out` [THM-2464 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. On a common root parent, ordinary two-root and guard four-root charts force their exact `lambda=1` linked blocker safe; `lambda=2` is the sharp phase-before-speed threshold for freely rebuilt linked bits. For a fixed tuple, arbitrarily delayed packets exist iff the full same-clock joint cell has interior. The THM-2462 tuple realizes two linked test words at common `lambda=10` and then a fixed positive delayed word. The conditional `128->64` invoice requires a still-missing canonical blocker/root identification. Hashes `e4c66419...f5a3e` / `8612b1dd...174b5`.
 - `ham_excess_spectra_kps_S134.py` + `ham_excess_ext_kps_S134.cpp` -> matching `.out`s [HYP-9028 evidence]. The Hamiltonian excess H/(n!/2^(n-1)) of both circulant families climbs monotonically to 2.598 (rotational, n=23) / 2.557 (Paley, p=23) with geometrically shrinking differences extrapolating to e; the e(1-alpha/n) fit drifts alpha 1.23 -> 1.02, targeting exc = e(1 - 1/n). Free-rotation lemma n|H verified on every row. Numerology control: tc(QR_11)=1729 is Chernick-Carmichael but tc(QR_19) fails Korselt -- coincidence recorded and killed. Origin: THM-2454's tc(T_11)=1729 mined per owner dispatch (reflection mining-1729-...-kps-S134).
 - `metagraph_pureblue_n12_pruned_kps_S133.cpp` -> matching `.out` [THM-2454 n=12 CONFIRMATION + THM-2453 prediction CONFIRMED]. Pruned survivor engine (impurity witnessed by sampled alternative Hamiltonian paths; only false survivors possible, killed by exhaustive enumeration; n=9/10/11 controls exact): pure-blue(12) = 6, all rigid, H-multiset [1,9,9,9,9,81] with the first 3^4 class (palindrome C3^4), zero nonrigid -- the center law's even-n exclusion and the Narayana closed form both confirmed as pre-registered. 2^30 cube -> 163 raw survivors in 89 classes. Also metagraph_rotational_bluemult_kps_S133.cpp: bm(T_p) = 1,3,3,37 vs tc = 1,3,9,1729 (taxicab!) -- purity ratio collapses; T5 pure because p=5 is the last small point. Hashes `22a96e45...` / `d0b2e6d1...`.
@@ -2428,7 +6805,8 @@
 - `lrc14_endpoint_newton_carry_boundary_thm2502.py` -> matching `.out` [THM-2502 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The `128` complete endpoint masks give `24` cells with per-blocker extension counts `1,16,8,4,2,1`, and six aggregate first-failure layers of sizes `4,64,32,16,8,4`. Their first-difference orientation is only the transitive lex tournament, with colour counts `4096,...,64`; its successor-chain colours are the exact 2-adic ruler. The all-safe ghost is the unique seventh Boolean Gregory--Newton coefficient, invisible to every lower mixed difference at zero. THM-2350 supplies only two-role/four-role target dipoles, so splitting the two roles of one active dipole leaves a rank-three four-cell ambiguity; arbitrary cross-pairs are not asserted zero-sum. Safe/danger complements also have identical jump nodes and opposite nontrivial Fourier coefficients. The verifier checks all `8,128` mask pairs, `341,376` triples, `127` carries, all `24` cells, `168` nonzero dipole characters, Newton layers, and cospan recurrences. THM-2452 bypasses these losses by copying a complete atom and releasing the old exact frequency; no row is removed. Hashes `7f6bea32...a71bf1` / `e5901d57...f243a2`.
 - `jacobian_d4_swallowtail_scaffold_kps_S132.py` -> matching `.out` [THM-2455 PROVED + REFUTED + VERIFIED-EXACT]. The d=4 classical layer: 27 Delta_4 = 4I^3 - J^2 (I = p^2+12r, J = 2p^3+27q^2-72pr) fills THM-1335's master-identity slot; all three resolvent cubics have disc IDENTICALLY equal to Delta_4 (unit 1, square class convention-invariant -- zero-locus 'resolvent conductor' arguments are dead); swallowtail strata ideal-exact (A2 edge = {I=J=0}); the quadrisection pencil disc = 2^17 (1-m)(1+m)^2 provably avoids the cuspidal edge, RETIRING 'A_3 at both ends'; 2-jet frame identities sign-pinned. Hashes `ec546ed6...693b` / `305ce12f...27fd`.
 - `jacobian_twojet_disc_jelonek_maps_kps_S132.py` + `..._controls_...` -> matching `.out`s [HYP-9027 evidence base]. Three explicit degree-4 2-jet maps + d=3 control: disc = (unit)(Jelonek)^odd (odd branch)(square) holds in every case with N = 9, 5, 3 all odd and the Jelonek factor always leading-coefficient-driven; mu is a NON-unit at d=4 (Maps II/III), refuting the naive d=3 transfer; V4/D4/S4 monodromies realized with certificates; coordinate-artifact squares certified (unramified-fiber checks); tame Keller control collapses to a monic linear eliminant (P1 vacuous at field degree 1). Hashes `d1175b2c...1ba4` / `615a94e4...2be5`, `fd778bd0...e218` / `b4facd92...5854`.
-- `metagraph_pureblue_n11_kps_S132.cpp` + `metagraph_pureblue_alphabet_kps_S132.py` -> matching `.out`s [THM-2454 FINITE-EXACT + PROVED + CONFIRMED + REFUTED]. The 2^25 blue-cube census gives pure-blue(11) = 9: seven rigid classes exactly as THM-2453's pre-registered Narayana prediction ([1,3,9,9,9,27,27] CONFIRMED), plus TWO nonrigid classes (15,5,3) and (135,45,3) = palindromic stacks (1,1,1,T5,1,1,1) and (C3,T5,C3), refuting THM-2444's '+1 per odd n'. Center law PROVED: pure-blue <=> rigid {1,C3} halves + pure-blue center; decisive witness stack(T5,T5) has blue-mult 3 vs tc 9 (mixed). Complete closed form c(n/2) / c((n-1)/2)+c((n-3)/2)+c((n-5)/2) matches all nine censuses; predicts 6,13,9,19,13 for n=12..16. Touched classes 279,968 extends the A002785 line. Hashes `e4041a9a.../79846933...`, `07b6398f.../17e32bfb...`.
+ - **HYP-9027 status correction (THM-3441/3448):** the preceding S132 files remain the historical evidence base, but both the general odd-exponent conjecture and its Keller-every-component-odd successor are refuted.  The exact survivor is cleared-discriminant parity equals infinity-inertia sign.  THM-3448 realizes genuine Keller `C_ell` inertia for every `ell>=2`; only arbitrary quartic/two-jet `C3` remains open.
+ - `metagraph_pureblue_n11_kps_S132.cpp` + `metagraph_pureblue_alphabet_kps_S132.py` -> matching `.out`s [THM-2454 FINITE-EXACT + PROVED + CONFIRMED + REFUTED]. The 2^25 blue-cube census gives pure-blue(11) = 9: seven rigid classes exactly as THM-2453's pre-registered Narayana prediction ([1,3,9,9,9,27,27] CONFIRMED), plus TWO nonrigid classes (15,5,3) and (135,45,3) = palindromic stacks (1,1,1,T5,1,1,1) and (C3,T5,C3), refuting THM-2444's '+1 per odd n'. Center law PROVED: pure-blue <=> rigid {1,C3} halves + pure-blue center; decisive witness stack(T5,T5) has blue-mult 3 vs tc 9 (mixed). Complete closed form c(n/2) / c((n-1)/2)+c((n-3)/2)+c((n-5)/2) matches all nine censuses; predicts 6,13,9,19,13 for n=12..16. Touched classes 279,968 extends the A002785 line. Hashes `e4041a9a.../79846933...`, `07b6398f.../17e32bfb...`.
 - `lrc14_aggregate_endpoint_restoration_thm2452.py` -> matching `.out` [THM-2452 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. Complete co-shifted Boolean endpoint masks diagonalize before smoothing: the `128` local atoms give bare drift at least `D_0/16384`, eligible energy at least `D_0/212992`, and one coefficient of squared modulus at least `D_0/429391872`; adaptively, a THM-2445 cell has only `(1,16,8,4,2,1)` complete extensions and preserves a preselected finite colour with the reciprocal amplitude loss. Full-`X` recombination kills every off-diagonal THM-2448 transition, after which THM-2365 reselects a fresh exact `X` and `91`-unit `m`. The old address and semantic owner/repair/root gauge are not preserved. Hashes `680f68e0...8cbf4e` / `2f96dcf3...d55295`.
 - `metagraph_palindromic_narayana_kps_S132.py` -> matching `.out` [THM-2453 PROVED + FINITE-EXACT]. The rigid stratum has a closed form: palindromic stacks over {single, C3} are always rigid-SC with H = |Aut| = 3^t (stack multiplicativity + canonical strong decomposition), counted by Narayana's cows palindromes pal13(n) = c(n/2) / c((n-1)/2)+c((n-3)/2) (A000930, the d=3 rung of HYP-3003's carry family; d=2 Fibonacci is the summand-graph spine). Census identification exact for n=3..10 in count AND H-multiset; strong towers C3[C3,1,1] (tc=5) and C3[C3,C3,C3] nonrigid. Locked predictions: rigid-SC(11)=7 [1,3,9,9,9,27,27] => pure-blue(11)=8; rigid-SC(12)=6 [1,9,9,9,9,81]. Hashes `d8a239cf...53f6` / `1e034fac...5c8b`.
 - `twin_ancestral_geometries_kps_S132.py` -> matching `.out` [HYP-9026 census layer FINITE-EXACT]. Two canonical ancestral geometries on the twin ranks from the THM-2422 parent fibre: the min-partner STAIRCASE has depth a constant-order fraction of rank index (max 118,503; fraction 0.59->0.29) and its partner histogram is the first-hit transform of the THM-2447 harmonics (top partners 5,7,30,70 with 70=2*5*7 boosted at both primes); the balanced MEDIANT tree (Stern-Brocot analog) exists at every rank, has max depth 28 vs log2(k_max)=24, window means log2 k + ~3.4 with monotone-decreasing ratio. Every balanced split is a windowed Seymour certificate. Hard checks all pass. 
@@ -4772,7 +9150,7 @@ optimized runs byte-match the stored transcript.
 | `jc_sextic_e3_monodromy_block_lattice_thm2821.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2821] | THM-2817's power carrier has monodromy `(C3 x C3) semidirect C2` of order `18`, its unique block-size-three intermediate field, and a genuine `C2*C3` quotient action.  The Chebyshev carrier has dihedral monodromy of order `12`, both block-size-two and block-size-three fields, but no `C2*C3` surjection because its abelianization is `C2 x C2`.  Thus only Chebyshev admits both `3 then 2` and `2 then 3` rational decompositions; neither response decomposition alone lifts to a polynomial Keller-map decomposition. | root/sextic-e3-monodromy-block-lattice-2026-07-28 |
 | `jc_cyclic_resonance_simple_zero_thm2831.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2831] | At `d=s=0`, every normalized `R=3k+2` Faber bank is the odd polynomial `K_Q=T P(T^2)`.  A common simple zero of `V,M` gives `ord(T)=2a-1`, so `ord(A_src K_Q)` is negative for `a=0` and at least two for `a>=1`, never the required one.  This excludes the full cyclic THM-2796 resonance in that chart even with lower rows; nonzero `d` or `s` remains open. | root/cyclic-resonance-simple-zero-2026-07-28; independent uniform-all-pole audit |
 | `sens_degree_fullsens_macmini_S171.out` | [FINITE-EXACT two independent engines + PROVED reduction; THM-2832] | Exhaustive decision of full point-sensitivity vs real degree for Boolean functions: (2,3) SAT (NAE), (2,4) UNSAT, (3,6) SAT (12 Kushilevitz-type witnesses), and (3,7) **UNSAT** (818,943-node exhaustive C DFS; independently CP-SAT INFEASIBLE).  Hence the maximal number of sensitive coordinates of a degree-3 Boolean function at any input is exactly 6: Kushilevitz is optimal at degree 3, closing the degree-3 route past exponent log6/log3.  Frontier moves to (4,10)/(5,14). | mac-mini-2026-07-28-S171 |
-| `legendre333_asym_multiplier_macmini_S171.out` | [FINITE-EXACT + POSITIVE CONTROL; THM-2833] | No Legendre pair of length 333 (-> Hadamard 668) exists with the two sequences separately invariant under possibly different multiplier subgroups of order >= 7 with <= 25 orbits: exhaustive per-side enumeration with exact PAF meet-in-the-middle join over all subgroup pairs; asymmetric case left open by arXiv:2607.20765 now excluded in this range.  L=31 control recovers the classical Legendre-symbol pair exactly. | mac-mini-2026-07-28-S171 |
+| `legendre333_asym_multiplier_macmini_S171.out` | [FINITE-EXACT + POSITIVE CONTROL; THM-2833] | No Legendre pair of length 333 exists with the two sequences separately invariant under possibly different multiplier subgroups of order >= 7 with <= 25 orbits: exhaustive per-side enumeration with exact PAF meet-in-the-middle join over all subgroup pairs; the asymmetric case left open by arXiv:2607.20765 is excluded in this range.  The unrestricted Legendre-pair problem remains open, while THM-3393 now proves Hadamard order 668 by an unrelated length-166 four-sequence construction.  L=31 control recovers the classical Legendre-symbol pair exactly. | mac-mini-2026-07-28-S171; frontier superseded by THM-3393 |
 | `gmc_disjoint_positive_cones_pascal_ratio_thm2830.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2830] | For every nonzero positive adjacent-difference cone `V`, the nonlinear Pascal quotient `R_n=L(d_nV^2)/L(d_nV)` obeys the sharp coercive bound `R_(n+1)-R_n>=2A_n^2/A_(n+1)`.  The cyclic kernel satisfies `K_n(p,q,r)>=6H_n(p)H_n(q)H_n(r)`, with equality only at `(0,0,0)`.  Integration by parts proves the disjoint two-cone orientation and, more generally, every interlaced positive pair whose shifted upper coefficients MLR-dominate the lower coefficients; an exact pairwise Cauchy--Binet formula puts every remaining sign in those shifted coefficient minors.  This yields moment-three plane and moment-six constant-free two-charge Gaussian detection.  The ratio need not be convex, and the stronger four-index matching inequality is bypassed. | root/disjoint-adjacent-cone-factorial-orientation-2026-07-28; two independent hostile audits |
 | `gmc_disjoint_cone_matching_reduction_thm2830.out` | [INDEPENDENT PROVED + VERIFIED-EXACT SIDECAR; THM-2830] | An independent beta-integral/Abel-summation route proves the same strict Pascal-ratio ladder by splitting its cyclic determinant into high and low pieces.  Six prefix polynomials have respectively 46/51/46 and 140/145/136 nonzero nonnegative terms with positive constant terms; a second general-jump Newton certificate and 19,800 matching-forward controls provide independent redundancy.  The stronger unsymmetrized four-label matching claim remains open and is not used. | root/disjoint-cone-matching-reduction-2026-07-28 |
 | `lrc14_prime_power_unit_mass_q11_response_thm2839.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2839] | In every finite `p`-group algebra, a `p`-integral mask is a unit exactly when its augmentation is a `p`-unit; cyclic masks then have no Fourier zeros and their translates span the full regular module.  THM-2835's 449-sheet q11 horn consequently has all `13^5=371293` ancestry characters and full regular rank.  Its 20/44/260 response quotients are nondeterministic, twelve formal q-rotations are absent physically, and every inverse is signed unless the mask is a monomial.  This pays algebraic ancestry rank but supplies no positive multiplier, `E3` transport, row exclusion, or LRC(14). | root/q11-outer-word-scan-2026-07-28; independent root/audit-2809-augmentation-unit-2026-07-28 |
@@ -4833,3 +9211,131 @@ optimized runs byte-match the stored transcript.
 | `gmc_first_gap_wall_stripped_norm_core_continuation_thm2973.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2973] | For supports `{n,n+1,n+2,n+M}` with `n>=0` and `27<=M<=31`, the two full Macaulay charts have the same explicit common flag and primitive wall-stripped pure-resultant core. The width-31 correction must include the simple quartic wall `(31,25)` beside the quadratic wall `(31,21)`. All five cores are dense, coefficient-positive, and PF2; `R=W N` excludes a common quadratic/cubic/quartic projective zero and hence simultaneous vanishing of the first four factorial moments. Calibrated chart coprimality is a separate check. `M=32` and arbitrary width are outside scope. Script/output SHA-256: `3539d1fcd7dd317659aab8296a86ab928999a7efff237e3f00571481a80cdad3` / `7146c4bb062d453de50af3285a9d8f7764184b4716fb3d690ee2eed78d5e7bd8`. | codex-gmc-first-gap-norm-core-continuation-2026-07-30; independent hostile algebra/replay audit |
 | `gmc_first_gap_wall_stripped_norm_core_at_thirty_two_thm2978.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2978] | For support `{n,n+1,n+2,n+32}`, the two full Macaulay charts have the same explicit flag and degree-660 primitive wall-stripped pure-resultant core. All 661 coefficients are positive and PF2; q/c/f and the core have no integer wall root, and no exceptional width-32 Smith correction is needed. Associated common-factor relations exclude a common ternary projective zero and simultaneous vanishing of the first four factorial moments. Width 33, fixed-prime gates, and arbitrary radial coefficients remain open. Script/output SHA-256: `4787aac1159f8ee9bdf7ad27df9654c3ed46ab32060d38965ba691b662c132cb` / `32e0ac71ffe557868238a9e1cf8e019864f6260675093a9cb45bfeb2e24c7f76`. | codex-gmc-first-gap-norm-core-m32-2026-07-30; independent hostile algebra/replay audit |
 | `circuit_holotopy_slack_persistence_probe.out` | [PROVED ABSTRACT LEMMAS + VERIFIED-EXACT CONTROLS; REFLECTION] | Closed compact minimal infeasibility carries one selected-nerve sphere whose death is the exact uniform-slack minimax value, but row scaling changes that metric lifetime. The weak projective-ray fibre compactifies to a finite segment or full cylinder; at strict zero residual the infinity point is excluded. Mod-p cokernels, Farkas supports, physical nerves, and Gaussian Sylvester Smith bars are kept type-distinct. This is a proof-space/obstruction synthesis, not GMC or LRC closure. Script/output SHA-256: `0d750b0658f8dc7b3037905e44be32ea87e884057c084279712da8a5d9c040ae` / `bf6544f2dc71373e8ede515fb3d462f9e313a6000a088718a185cd60308e044f`. | codex/circuit-holotopy-synthesis-2026-07-30; independent hostile audit |
+| `parabolic_continuant_single_gate_thm3204.out` | [PROVED + VERIFIED-EXACT; THM-3204] | A tridiagonal matrix with unit sub-diagonal has cyclic cokernel `R/(det)`, verified on 225 unital Jacobi matrices with a non-unital `(3,3)` hostile; the deleted minor on rows `2..n`, columns `1..n-1` is the sub-diagonal product.  Constant form is the Chebyshev minor `U_n(alpha/2)` (11 sizes), parabolic at `alpha=+-2` with value `(+-1)^n(n+1)` (78 instances).  Exhaustive over ALL `(alpha,c)`, `c` a unit, for `p=3,5,7,11,13`: the continuant zero set is a nonempty AP whose difference is exactly `p` iff `alpha^2=4c`, and otherwise divides `p^2-1` and never equals `p`.  A 27-row bank reproduces THM-3182/3183's reset Smith types `(1,1,p)` and `(1,p,p)`, so the weighted Gauss--Manin reset admits no continuant form.  For the factorial exterior transfer step `i` is parabolic iff `(i+1)(2i+1)^2v^2-4idv+i=0`, and `(i+1)P_i-iP_(i+1)=-(8i^3+20i^2+12i-1)v^2` proves no two consecutive steps can be.  Ordinary/optimized outputs are byte-identical.  Script/output SHA-256: `55830b22729c56015ecb0e9815ff1ff0798d57ab0f28cfadc6f4fc3216624ece` / `d3c7b70a8f62fb933184bd0546a7d521ff20cc53edac6f07ae19cb0b93ea0f88`. | death-star-imw-pi-n-s2-2026-08-02 |
+| `lambda_algebra_toda_parabolic_gate_thm3205.out` | [PROVED + VERIFIED-EXACT + FINITE-EXACT; THM-3205] | Self-contained odd-primary lambda-algebra engine: admissible normal form, Adem-type relations, Koszul-signed differential.  Replays all eleven identities displayed in arXiv:1506.00952 at `p=3,5,7,11,13`; `d^2=0` on 4150 normalized words with **3640** explicit failures of the unsigned Leibniz rule; confluence (leftmost vs rightmost reduction) on 4356 words.  In the index-sum/lambda-count stratification of `Lambda*lambda(2)` the excess-one `q=1` stratum is exactly `{u_0..u_k}`, its target exactly `{v_0..v_k}`, and `d^1` is entrywise `tridiag(1,-2,1)`; the kernel is one-dimensional iff `p` divides the index sum `k+2` (45 rows), integrally the cokernel is cyclic `Z/(k+2)` (through `k=13`), and the class is the explicit cycle `z_k=sum (i+1)u_i` with leading `mu_2` coefficient `-1` (17 rows, hostile control finds no spurious cycle).  Excess `2,3,4` are injective for every tested `(p,delta)`, with a positive control confirming the excess-one kernel.  Ordinary/optimized outputs are byte-identical.  Script/output SHA-256: `c328f89f621bc7141168a8ad5bf904c28a605a0cd24fd12c36a31c6052a9016a` / `b24a223990d04c756fc8b43c8454e63fa09d9abe824f4cf8c3787c446c612426`. | death-star-imw-pi-n-s2-2026-08-02 |
+| `factorial_double_cancellation_ray_thm3210.out` | [PROVED + VERIFIED-EXACT + FINITE-EXACT; THM-3210] | THM-3186's exit-time amplitude has `deg_v E_L = L-2`, so the complete length-three cancellation set is the rational graph `v=(n+3)(d-n-2)/(2d[(4n+9)d-(n+3)(4n+7)])`, matched against `solve` on nine base indices; THM-3186's published hostile is its `(n,d)=(1,5)` point `4/105`.  On the ray `d=n+4`, `v=(n+3)/(3(n+4)(2n+5))`, symbolically in `n`: `E_2=2`, `E_3=E_4=0`, and `E_5=-4(n+2)(n+3)^2(n+4)(2n+3)(10n^3+101n^2+336n+366)/(27(2n+5)^2)`, with `Delta`, `v`, `beta_n` strictly positive for `n=1..40` and `c_(n+1)=2`.  Visibility at lengths `2,3,4,5` is visible/invisible/invisible/visible, so it is not monotone.  For `n=1,2,3` the ray is the unique nonzero rational double-cancellation locus and `gcd(Res(E3,E4),Res(E3,E5))=const*d^2` excludes any triple cancellation.  Ordinary/optimized outputs are byte-identical.  Script/output SHA-256: `d76de542b5904825deae4d556b150eec97311d44f7246ec7b1f394f2676157ba` / `f052824666dd572a569ca07d67aa1ec1489b370c963055bc35b5d958993916d2`. | death-star-imw-pi-n-s2-2026-08-02 |
+| `archimedes_flatness_gmc3_family_thm3290.out` | [PROVED + VERIFIED-EXACT; THM-3290] | With `rho=t^2+xy` the operator `4d_x d_y+d_t^2` is the Laplacian of `rho`, so a GVC statement about `Delta^6` in three variables IS a GMC(3) statement.  On the sphere the supplied object collapses to one complex variable via `xC_nu=rho^(2nu+1)-t^2 A^(2nu)`, giving the master formula `<x^(2delta) R_nu^k> = C(k-nu,k-delta) * 2^(2k)(2k)!/(4k+1)!!`: the `t`-antiderivative is flat to order `2k+1` at `a=1` while the prefactor has degree only `k-nu`.  Proves the supplied `Delta^(6m)(P^m)=0` and closed form `2^(8m+1)(6m+1)!(2m)!(12m+3)!!/(4m+1)!!` for ALL `m>=1`, gives the sharp threshold `<R_nu^k>=0 iff k>=nu` with sub-threshold value `(-1)^k C(nu-1,k) F_(2k)(1)`, and yields the infinite family `P_nu=R_nu^nu`, `Q_nu=x^(2nu)`, `D=Delta^((4nu+2)nu)` (degrees 12, 40, 84, ...).  Three independent routes agree; the vanishing is created by the `t`-average, not termwise.  No JC, JC(2), GMC(2) or NC2 consequence.  Ordinary/optimized outputs are byte-identical.  Script/output SHA-256: `69bb5dcf03ca1acf15542fe214d4916d26fc8f8f04f104becc12a300798c1ec0` / `bdf22d1896c8d994177fe547050298ea9f8e6a8e9d5cca5f12e96e9c19e385b9`. | death-star-gvc3-counterexample-2026-08-03 |
+| `two_block_tv_homogenization_rigidity_thm3291.out` | [PROVED + VERIFIED-EXACT; THM-3291] | Exact closed form `TV(Bin(2,x),Bin(2,y))=|x-y|(1+|x+y-1|)` on a complete 25x25 rational grid.  For two single-observation blocks, `delta_N <= delta_1+delta_2-delta_1 delta_2` holds with zero violations on the COMPLETE `17^4=83,521`-point rational grid; the proof is a box constraint `|x+y-1|<=1-(delta_1+delta_2)/2` plus AM-GM, with an opposite-sign branch using `min(delta)(1-max(delta))>=0`.  The nontrivial equality locus is classified and rigid: same sign, `delta_1=delta_2`, and every block pinned to one common face of the unit square -- 62 predicted points, 62 actual, matching in both directions, with no mixed-equality case.  Hostile control: doubling the correction term fails at 11,520 points.  Equivalent reading: the affinity `1-delta` is supermultiplicative.  The general block statement stays CITED.  Ordinary/optimized outputs are byte-identical.  Script/output SHA-256: `6a7ff7e89a714907cd08abb2b68cab6e2e7e412b5b899c1a475636d8bdd7321a` / `f19438cb639eb288ea75acbb18025dedf0fbc806d493fdc3595fc3f1085d2ac7`. | death-star-gvc3-counterexample-2026-08-03 |
+| `factorial_gaussian_torus_bridge_thm3300.out` | [PROVED + VERIFIED-EXACT + FINITE-EXACT; THM-3300] | The factorial functional IS a Gaussian moment functional: `L_fac(x^alpha)=alpha!=E[prod|z_i|^(2 alpha_i)]` for independent standard complex Gaussians (63 monomial rows, `n=1,2,3`; covariance `1/2` pinned by a hostile control), and the moment map sends the uniform measure of `S^(2n-1)` to the uniform measure of `Delta_(n-1)` (43 rows).  Hence HFC(n) is exactly the `U(1)^n`-invariant part of the Gaussian moment problem in `2n` real variables, and THM-3290's mechanism cannot be transported: its annihilator is projection onto torus weight zero, which is the identity on the factorial class, and its coefficient extraction needs an angular pole that invariant polynomials do not have.  Torsion dichotomy: `U(1)` characters have infinite order so a nonzero weight kills every `m`, while the simplex's affine automorphism group is only `S_n`, leaving `m in eZ` alive.  Exact closed form `<(sum omega^j s_j)^m>=(n-1)! m!/(m+n-1)! [n|m]` for `m<=12`; cyclic-eigenvector families on `Delta_2` of degree 1, 2, 3 excluded (explicit; exact `Q(omega)` projective gcd plus infinity point; mod-`p` resultant certificate at `p=10^9+9` with interpolated degrees 18 and 27 plus a separately empty `c0=0` line).  Ordinary/optimized outputs are byte-identical.  Script/output SHA-256: `f0384ba08f857491d28fba27c048bb9bb8e7da65277014bbbd66abbd91c13f2c` / `708e2493a7d4a941a12d8bcbba7c3e71490672f5f3cda179eee5b73e74e8d31d`. | death-star-fc-archimedes-port-2026-08-03 |
+| `symmetry_vanishing_mathieu_thm3301.out` | [PROVED + VERIFIED-EXACT; THM-3301] | If a compact group preserves the functional and `P` is an eigenvector for a character of infinite order, then `L(P^m)=0` for every `m>=1` AND, for every fixed `Q`, `L(Q P^m)=0` for all but finitely many `m` -- the exceptional set being exactly the `m` with `chi^(-m)` in the isotypic support of `Q`.  So the Mathieu/vanishing conclusion HOLDS: no counterexample to a GMC/GVC/FC/Image-type conjecture can be an eigenvector.  Verified on 24 eigenvector rows and 18 `(P,Q)` pairs where the nonvanishing exponents match the prediction EXACTLY (at most one per pair), with a weight-zero hostile control.  THM-3290's `P` has torus weight set `{-2,0,2,4,6,8}`, so it is not an eigenvector, and it violates the conclusion at `m=1,2,3,4` -- by the theorem it had to mix weights.  Finite order `e` leaves exactly `eZ` alive.  Ordinary/optimized outputs are byte-identical.  Script/output SHA-256: `266c019a7d1f2b7bd115dd33d829d524ac368038e945a743c3f60cbe5ea0b66a` / `e8bcce93f2287be41732eb84b04a05057d373035b2b7d829040c348d91226f05`. | death-star-fc-archimedes-port-2026-08-03 |
+| `degree_four_cyclic_eigenspace_thm3310.out` | [PROVED + VERIFIED-EXACT + FINITE-EXACT; THM-3310] | In the complex coordinate `z = s1 + omega s2 + omega^2 s3` (which sends `Delta_2` to the equilateral triangle on `1,omega,omega^2` and is THM-3300's degree-one eigenvector) the cyclic rotation acts by `z -> omega^2 z`, so `z^a zbar^b` is an `omega`-eigenvector iff `a-b = 2 mod 3`.  The degree-`d` eigenspace therefore has the monomial basis `{z^a zbar^b : a+b<=d, a-b=2 mod 3}`, dimensions `1,2,3,5,7,9,12` for `d=1..7` (each checked against an independent group projection); the degree-four basis is `{zbar, z^2, z zbar^2, z^3 zbar, zbar^4}` and the lower-degree eigenspaces are literally coordinate sub-loci, so their exclusions are re-derived here.  Exact mixed-moment table `<z^a zbar^b>` through total degree 36, vanishing iff `a=b mod 3`, with `1/4, 1/10, 2/35, 1/28, 29/560` and the THM-3300 closed form on the pure-power axis.  All 10 coordinate lines and planes are excluded, so no `g` of support `<=3` works.  THM-3310 itself leaves supports 4 and 5 untreated; THM-3321 later excludes support 4, while support 5 remains OPEN.  Carries the MISTAKE-363 modular guard `p > 4m+2` with an explicit failure demonstration at `p=7`.  Script/output SHA-256: `1a46fb4311a44d7807eccaf9339b291b8d930710d9f7c1fc8ebd03ac0c7acba6` / `5d7292f2cc311c727e16d379c8134371ca3f3d1ac610ab2a1748fff8c8bb757c`. | death-star-delta2-degree4-2026-08-03 |
+| `factorial_hfc3_cyclic_quartic_sparse_strata_thm3310_independent.out` + lopsided cubic companion | [INDEPENDENTLY VERIFIED-EXACT; THM-3310] | A characteristic-zero route using the exact Fourier kernel, but not the primary THM-3310 script, excludes all ten coordinate lines by nonzero rational resultants and all ten coordinate planes by exact unit Groebner ideals for `M3,M6,M9`; normal and optimized outputs agree.  The cubic moment has all 35 coefficients positive, so every cubic-null vector has shortest closed coefficient-phase covering width strictly greater than `pi/3`.  Exact lopsided radii exclude five full phase fibres around the coordinate axes; the second-largest coefficient modulus at any cubic zero is greater than `1/23` of the largest.  This computation itself leaves supports 4 and 5 untreated; THM-3321 later excludes support 4, and THM-3323 proves exact degree-21 support-five rank `10980` and quotient dimension `1670` without closing support 5.  Sparse script/output SHA-256: `d5e04a22a374ba430f948dc8ab3b840076bbe8d92c18ceabed464d90a4d0b69a` / `a84049a4c4a313cb0bd61d0459d0bfba1f7906e40d578918f38831ead3b91b17`; phase script/output: `5aec456943b0e58ad7cfc1c02bb6993b7e4c0a3d74a33215016fe89b6fab78d0` / `af05f1eb7517cb44e1d74d97b827b740bdaa39291f79da36eedea59beeacec36`. | root/creative-passports-2026-08-03 |
+| `factorial_hfc3_alternating_sextic_thm3311.out` | [PROVED + VERIFIED-EXACT; THM-3311] | Every homogeneous alternating sextic is `V(Ae1^3+Be1e2+Ce3)`.  Odd moments vanish by transposition, while two independent exact integrations and complete projective elimination show `I2=I4=I6=0` has no nonzero complex solution: the `A=1` ideal is `[1]`, independent resultants of degrees `8,12` have coprime full-degree reductions mod 17, the `A=0,B=1` resultant is `14827264400`, and `[0:0:1]` gives `(1,1,12)`.  `I2,I4` alone retain a genuine irreducible degree-eight survivor, so `I6` is load-bearing.  This closes one homogeneous sign cell, not HFC(3) or FC(3).  Script/output SHA-256: `743ae0a937bb18965ee2d6469235acd47e4fcd86bd5ddb52bf10a0efbc31b75e` / `07a42600cb8ed306adfe5be16dbf28ecb4b199b5575b17aedf16303857541cdb`. | root/creative-passports-2026-08-03 |
+| `jc_exceptional_quadratic_cofactor_passport_thm3312.out` | [PROVED UNIVERSAL + INDEPENDENTLY VERIFIED-EXACT OVER THM-3309; THM-3312] | For `B=A[t]/(Pt^2-Qt+R)`, exact trace, norm, and conjugate-difference square give the unordered quadratic passport.  On THM-3309's fixed exceptional fibres the critical `y`-root, first-normal velocity, and elimination-cofactor ratio remain genuinely conjugate.  Although `U-(V'/4)W=P^2`, the projective ratio does not descend: `(U sigma(W)-sigma(U)W)^2=256P^4 delta`, so `U/W` itself generates `B/A`.  THM-3309 directly proves that both true gradient components vanish; this companion independently cross-checks them through the unit triangular localized pair.  Hence no Keller Bezout row exists and the mate-integrability class is not entered.  The two fixed degree-36 accessory fields pass exact replay; no root, mate, inverse, JC(2), or DC(2) follows.  Script/output SHA-256: `f2c87512b3d67c005822e934bb8ba8f8011f6ea4a0bda42f6202c10723cd0106` / `2ce88681395c40081f5bb68c9de81a5bac2e7d7f56626834bbfac6c304f547d0`. | root/creative-passports-2026-08-03 |
+| `lrc14_j7_k3_z216_third_complete_ruler_cost_prefix_laminar_status_audit_20260803.out` | [INDEPENDENT VERIFIED-EXACT CROSS-AUDIT; THM-3308/3313] | Concurrent with the canonical companions, this inherited-engine replay confirms that the complete `gcd72/L72072` singleton and `gcd24/L25872` three-row family close with `423=289 crude+134 status+0 residual`, moving the projected ledger `373161->373157`, wall rows `357->353`, and complete families `33->31` at cap 216.  The new status taxonomy is `128` coordinate unions, `2` zero-reduced unions, `3` two-fans, and `1` laminar modular cut.  A solver-free nested-threshold modular inequality also resolves all eleven former weighted cores (ten two-threshold, one three-threshold).  Index 64 remains an eight-mask hostile.  No physical entry, endpoint/owner/phase/current, arbitrary `k<=1`, rung, or LRC(14) conclusion.  Script/output SHA-256: `cd7f7e529ebf009af055cd92f4449f8ba1eaa768a5493157505cbb9db462dc9f` / `5861334b1f9ebfd2b2c612b1646b45f13a97dc71eeaca68301cc5070732be25c`. | root/creative-passports-2026-08-03 |
+| `jc_exceptional_quadratic_two_clutch_formal_persistence_scout_20260803.out` | [PROVED + VERIFIED-EXACT; THM-3319] | The two linear-subresultant coefficients cut an algebraic surface etale over the `(d,k)` clutch plane at each exceptional degree-36 point; the base-germ completion is the unique two-parameter branch.  Adjoining the surviving quadratic root gives the distinct connected finite-etale rank-two deck, and the gradient remains zero locally.  No global component, section, mate, inverse, JC(2), or DC(2) follows.  Script/output SHA-256: `4a578ecf29351027762d3fd1e48dadc0d5ba162478e97c91eafbeed55c774f38` / `166b12fa4e81b8b0c4ba46fc532c220e4f3088ad89e2b2b67163034f61c7da28`. | root/creative-synthesis-next-2026-08-03 |
+| `lrc14_j7_k3_z216_fourth_intrinsic_ruler_cost_prefix_affine_multicover_closure_scout_20260803.out` | [PROVED + VERIFIED-EXACT; THM-3320] | The next complete singleton and three-row families close as `230=172+58+0`, moving ledger/wall/families `373157/353/31` to `373153/349/29`.  Two apparent integral support-three status circuits have exact half-affine support-two duals; row 138 remains a genuine support-three control.  Projected-atlas scope only; LRC(14) remains OPEN.  Script/output/semantic SHA-256: `b515c70174d58ad859a08c29949cdee36a4e04122451a66237732570ab5ee213` / `d1845611f27d427a1d38afe349ed07bc964590fd39a3e88cd45e6ea34a86bc38` / `c201276eb84f71806a7eb683e42d723b930f7cd0f79862e8d6b1e0ad07d37dd9`. | root/creative-synthesis-next-2026-08-03 |
+| `degree_four_support4_macaulay_scout_20260803.out` | [PROVED + FINITE-EXACT; THM-3321] | The Hesse kernel gives a one-sum mixed-moment formula and lattice recurrence.  Five guarded nonzero degree-21 minors exclude every cyclic-quartic coefficient support at most four over characteristic zero; the named Hesse torus is not a moment symmetry and supplies no second normalization.  Full support five and FC(3) remain OPEN.  Script/output SHA-256: `74bb6fd1c0019f5fe934fa27744bfab68bfbfdc6bb746857500b91c8507792e1` / `fec8bc92300373612a1b18c9a1a26818232cdc771ed95b646d685dbd64b3357e`. | root/creative-synthesis-next-2026-08-03 |
+| `tournament_switching_coronal_second_moment_join_compiler_20260803.out` | [PROVED + VERIFIED-EXACT; THM-3322] | The uniform switching-cube second moment is determined by `P` plus the vertex-deletion Gram; equal `P` first fails at order seven.  Selected ordered joins obey the exact `(P,N)` split product, which forgets SCC order.  Script/output/semantic SHA-256: `c33ad0ee6b3333401e24ad94e59ea7d851b283af1849b1cbdc4a14c645fc5f4a` / `6747c637bf1bc6b1ff17162b83b53699175def74b28467968b4f3f2cba578c11` / `40427da1f4e5a2d18a971f25c3a81ccaac48314b81d16b2e1cc4f409142ba345`. | root/creative-synthesis-next-2026-08-03 |
+| `degree_four_support5_degree21_sparse_rank_scout_20260803.out` | [PROVED + FINITE-EXACT; THM-3323] | The support-five degree-21 Macaulay map has exact characteristic-zero rank `10980` and quotient dimension `1670`: a universal Hilbert/Koszul ceiling is attained by a guarded maximal minor with determinant `19 mod 101`, repeated in rank at 103.  The slice cannot exclude a projective zero; degree 29 is only the first degree not ruled out by the formal count.  Script/output SHA-256: `43f6b338fae6237d72499341457bc7bc0ceb3036d4c776a2c26058dcb7b414d9` / `47414caed573abf3344c9cfbb0f668f9d7ba9b867f4dd0a1e70be6498c746824`. | root/creative-synthesis-next-2026-08-03 |
+| `tournament_deletion_response_gram_order_join_compiler_20260803.out` | [PROVED + VERIFIED-EXACT; THM-3324] | The full two-coordinate marked-deletion Gram closes under ordered join.  Its final `F` block is sharply necessary at order six; the full interface still forgets SCC order.  In the `P+/-zN` basis every Gram channel has an explicit product-sum, with identical-factor form `k Gamma u^(k-1)`.  Script/output/semantic SHA-256: `eb6a315b732aff147a178b5840724df949288e9dee20e84d2bb9c49f9a88816f` / `08b6e2dc752830943c699517aa600610cbc084f72f7d5eb53b8601e8218556fe` / `e4e973e83afebe69d28f7da009a4cb5e75c87c53d2d7668b0b24b71666f42fe8`. | root/creative-synthesis-next-2026-08-03 |
+| `lrc14_j7_k3_z216_fourth_prefix_independent_audit_20260803.out` | [INDEPENDENTLY VERIFIED-EXACT; THM-3320] | An independently reconstructed engine agrees with all ten canonical comparison classes for the fourth projected `k=3,z1=216` cost prefix: rows `141,133,219,359`; screen `230=172+58+0`; integral supports `55/1/2`; affine supports `55/3`; gaps `182,182,510`; both hostile controls; and ledger/wall/families `373153/349/29`.  The discrepancy set is empty.  The two apparent integral rank-three packets form one exact `S4` coordinate orbit, suggesting capacity-signature caching for the next nineteen-row family.  Projected-atlas scope only; LRC(14) remains open.  Script/output/semantic SHA-256: `bd4dac8af105dfd81c544fade471c3e296b31bbeb6bf0587824d97d46e9bef36` / `db2a54804501d5bfc0fe30d8fc9fd6ad361668fa94a7a5dcf85985f845a0e209` / `1ecc946ac1eaf9731b16b377ada123e3bb38437736a5897b6644fb415c587a35`. | root/second-creative-jacobian-lrc-2026-08-03 |
+| `lrc14_j7_k3_z216_fourth_intrinsic_ruler_prefix_weighted_multicover_probe_20260803.out` | [INDEPENDENTLY VERIFIED-EXACT WEIGHTED SIDECAR TO THM-3320; SCOPED] | A separately derived weighted-multicover sidecar sharing the inherited ray/status engine agrees on the prefix rows `141,133,219,359`, screen `230=172+58+0`, ledger/wall/families `373153/349/29`, both hostile controls, and all three nontrivial support-two minima.  It distinguishes tail support from integral layer mass: the two half-affine circuits have layer mass three but an exact zero-constant repeated-tail form, gauge-equal on the feasible face; the third has gap `510`.  It does not rerun the 32 distinct empty-tail systems used to certify the full support taxonomy, so full independence remains supplied by the preceding audit.  Projected-atlas scope only; LRC(14) remains open.  Script/output/semantic SHA-256: `f69e7e6991caedd572f6438034f3866074bacba22851e547085190464a1c98f0` / `5ed39fd402f76c2d9017af80f21c8d51cb38e617224336eaf762be8c51de5a53` / `666458d6122a66a7615a2855a1b0dcf18fb778e1451b44c064bab04726d81b05`. | root/creative-passports-ii-2026-08-03 |
+| `lrc_composite_even_flat_crt_interior_collapse_20260803.out` | [PROVED + FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3325] | For every odd prime `p`, the normalized even-coordinate flat modulo `2p` has `(2p)^(p-1)-(2p-1)^(p-1)` right-boundary blockers but only the zero full open-cell blocker.  Unique-protector cells restore the parity information lost at the boundary: half-turn danger arrows are exactly `j->j/2,3j/2` when valid and strictly lower `nu_2`.  At `n=14`, exact meet-in-the-middle enumeration checks all `14^6` vectors and separates `2,702,727` boundary blockers from the single full blocker.  The physical speed/residue lift remains open.  Script/output SHA-256: `848ed70743a97048b18123801f6c4309b7e8d7829b9bc1df31e49088a31bd3c9` / `b3f46e1abc5bbe0ee02c8731480b3ffb3b9dd23a45d260ebb66622431bf7610d`. | root/second-creative-jacobian-lrc-2026-08-03 |
+| `jc_linear_z_jet_torsion_response_trichotomy_20260803.out` | [PROVED + GENERIC-SYMBOLIC + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3326] | Every gradient-unimodular `P=f(x)+g(x)z` over characteristic zero has an exact unit-response trichotomy: constant `g` kills `[1]`; one geometric root gives annihilator `((P-f(a))^(d-1))`, a length-`d` canonical divergence class, and a marked inverse-coordinate jet passport; at least two roots make `[1]` generate a free `K[P]`-submodule because `dx/g` has no rational primitive.  A smooth two-root Bezout family shows the obstruction is not gradient singularity.  This refines an already closed linear-in-`z` Keller stratum and does not close JC(2).  Script/output SHA-256: `f1ef6ddf8c3e4fa4ab488e582eeb715335f8b1747c4f8bf918c677e6d72fee0b` / `9c559b93894d4f1c00127ab36c6cb2e916104b58f9d73c73a275e2751cd4aa0f`. | root/second-creative-jacobian-lrc-2026-08-03 |
+| `gaussian_farey_pythagorean_triangular_thm3333.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3333] | Gaussian squaring sends primitive projective lattice rays to canonical raw Pythagorean null points with Lorentz pairing `2 det^2`, so pairing two is exactly Farey adjacency on that image.  Triangular polarization is the same Lorentz form; its four sign potentials give the inradius and signed exradii, and the polygonal hierarchy has edge coefficient `2(s-2)` and null value `(4-s)r`.  Integer and Kelvin-square gauges make respectively the Farey edge and THM-2056 sufficient gate constant.  For an unscaled ordered Euclid lift the parameter graph pair has rank `r`; for every positive integral right triple the triangle-side pair has rank `2r^2`; clique filling kills both.  The audit checks `253,828` ray pairs, `1,423` faces, `5,692` fixed-owner updates, `435` Euclid rows, five graph/clique controls, and scale/quotient hostiles.  Owner switches, phase, clocks and global exit remain open; no LRC row closes.  Script/output SHA-256: `ddeb800a881fdf3576d3d03d269ced2b486fabe8bc48594416a7c343531441df` / `7e8eaabb73fc3f86b3099d3b43aa3c3da925fb24a3081e7611a9faddccebaf79`. | death-star-2026-08-08-arithmetic-triangular-topology; independent arithmetic/topology audits |
+
+| `berggren_parabolic_gaussian_torsor_thm3334.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3334] | The consecutive-parameter Berggren U-spine is a fixed-cusp Farey fan with parabolic quadratic growth and one universal `cos(A)=8/9` descendant angle. Equal odd hypotenuse parents form Gaussian factor-choice torsors `F_2^r/<1>`; their ranks are unbounded on the spine, with first affine-V4 fibre `c=1105` and explicit ancestry/XOR matchings. XOR is an edge colour, not a canonical tournament. Script/output SHA-256: `bc201467b685fc0ba3654b17726ddbaae403a4389cbcf7259613e47d3366063a` / `3c2416ecb78c1b25a744a1cc70b1ed2eafa9fcb0552a628f298590ce2b23403c`. | codex-2026-08-12-berggren-spine-collision-torsor |
+| `square_triangular_pell_markov_pythagorean_thm3335.out` | [PROVED + VERIFIED-EXACT + CITED CANNONBALL CLASSIFICATION / INDEPENDENT HOSTILE AUDIT PASSED; THM-3335] | Square-triangular solutions are exactly consecutive-parameter primitive Pythagorean triples with square even leg; a half-Hadamard map compiles them to the fixed-two Markov branch. They select an arithmetic skew-EW candidate subsequence but prove no design existence. Seven labelled LRC one-tail planes have exact maxima `1/j`, `j=7,...,13`, while six share the compressed Gaussian/Kelvin/owner tuple, proving labelled clock placement is essential. Script/output SHA-256: `9f543e1f319405ace4d33de5d950a1947b919469eed3e71ca06fcb33fb69f9b7` / `02011cccf205a9f88965f1988591a42d63d0c327a824d1c6da2611ddf42b6ba2`. | codex-2026-08-12-pythagorean-pell-synthesis |
+| `primitive_gaussian_content_curvature_thm3336.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3336] | Primitive Gaussian multiplication is a raw norm/Lorentz similitude, while primitive reduction carries an exact multiplicative content cocycle `d_s(m,n)=gcd(m+hn,N)` with `h^2=-1 mod N`. One weighted image Farey face reconstructs its endpoint contents, lattice index, and multiplier norm from three edge labels; exact Brahmagupta, parity-normalized triple, Vieta, and radius-matrix laws agree. Per-column contents reverse the THM-2056 sufficient gate on four lawful saturated positive decks, but compare different planes and do not decide LRC safety. The audit checks `130,944` faces, `110,592` cocycle triples, CRT/divisor witnesses, eight hostiles, and exact maximin controls. Script/output SHA-256: `a63d60669e11cd22ee0ef7afd619e54885308ce55d452a95e7131d19263e881f` / `74cad2e39423f3f558d03f3be0b91e1d6102cf3106b6e2686c6d6f6f0a0a5709`. | codex-2026-08-12-primitive-gaussian-content-curvature; independent arithmetic audit |
+| `gaussian_content_curved_farey_thm3336.out` | [INDEPENDENT VERIFIED-EXACT COMPANION; THM-3336] | Signed primitive multiplication has torsion `C8`; modulo units, `tau` and the split-prime charges `lambda_p` give the exact associate-group `H^1` coordinates, while odd content is their cancellation coboundary. Fixed-hypotenuse XOR directions have folded weights but multiplication becomes a section-dependent source groupoid after conjugation. Script/output SHA-256: `70d9d105ba30eae75262d564fa40319432d515be54817701656110260d35f0cc` / `29247ef153043b0298414557e190d443ce20e4403ac87c8e2adaf823f88428e2`. | codex-2026-08-12 charge/Boolean hostile audit |
+| `fibonacci_berggren_three_ray_owner_thm3339.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY STRUCTURAL-AUDITED; THM-3339] | Consecutive Fibonacci spinors occupy three interleaved exact Berggren rays. Cassini orientation orders the three `K4` matching channels, while the induced isolated six-edge swap is not an `S4` relabelling. A calibrated affine-V4 cocycle transports a moving owner, but no static origin preserves the signed Pythagorean current; its signatures instead decode the missing translation. Script/output SHA-256: `094fc254dcb7965791e59247a98f60a337725b40d169db6f3862c1da5943149b` / `88c5f44971df12bbd61f84925f408a253450095ee2de23b5a617efde1e4ecdfa`. | codex-2026-08-12-fibonacci-berggren-branch-transplant |
+| `u_spine_square_triangular_torsors_thm3341.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3341] | On the Berggren U-spine, square hypotenuses form one negative-Pell orbit, triangular plane scalars form two norm-17 orbits, and the other square/triangular intersections are empty. Consecutive square roots are fixed-two Markov coordinates compiled by square-triangular rows. Gaussian self-squaring gives a state-dependent sparse depth transplant, not a branch homomorphism; Boolean equal-hypotenuse ranks remain unbounded inside the selector. Script/output SHA-256: `4d67cc02b8929b257c7aaca4bec2edefa4d23533191be92042af963fb1d3ffd7` / `9739622dad5e57108d966d0aa41cb1949974bfe78e4169bba0f4beba562fcbc2`. | codex-2026-08-12-u-spine-square-triangular-intersections |
+| `prime_xor_ancestry_groupoid_thm3345.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3345] | Exact endpoint paths lift prime-XOR matchings to a flat source-dependent Berggren groupoid and kill ambient-tree holonomy. At `c=1105` the matching costs are `{8,27}`, `{5,24}`, `{26,9}`; the eight-parent `c=99905` census reaches cost `238`. The infinite prime-5 transplant `U^(25s) -> DD U^(s-1) ADD` proves simultaneous unbounded Boolean rank, depth dispersion, and path cost, and is rational on that unary sublanguage; global uniform transduction remains open. Script/output SHA-256: `41157d468658f2836af3a22435959d515ab230866099b93311fe261139bf07f8` / `a1735c1cd9a503d9db74c35b04318ce56a770592b9f8429bdac8b6b0e78b17f2`. | codex-2026-08-12-prime-xor-ancestry-groupoid; independent finite, scale, and infinite audits |
+| `u_spine_prime_toggle_atlas_thm3346.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3346] | For `z_t=(t+1)+it`, shared U-spine prime powers split exactly between `gcd(C_r,s-r)` and `gcd(C_r,r+s+1)`. Fixed-grade roots form an explicit CRT prime-toggle cube; filling commuting squares after conjugation leaves `H_1=Z/2`, weighted combinatorial systole `log N`, and explicit free `H_2`. Square-triangular Pell rows compile two fixed-grade parents to adjacent square-depth spinors and occur at unbounded toggle rank. Modular roots retain only `N`-primary content, ancestry kills the torsion class, and no LRC row closes. Script/output SHA-256: `c65c85bedc1e9ab74aab2b71c26bec7ca06f3e0dd0f3cb9f21a9f8e328846eab` / `e9652fbf1a0f1afbfbdea020354bd85ffdbbec79b0326e99349ba1ecc528dd27`. | codex-2026-08-12-u-spine-prime-toggle-atlas; independent arithmetic/topology/inheritance audits |
+| `u_spine_signed_clock_gram_thm3347.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3347] | Hensel-branch features make the U-spine signed log-content ratio an exact PSD Gram kernel with norm `log C_t`. At fixed grade, conjugation is antipodal: `|Lambda|` is PSD and the folded metric CND universally only through rank three; `N=32045` gives the first literal rank-four hostile. Even tensor powers give an exact Fourier-rank filtration; the squared/projector kernel is lossless and low-rank, while `cosh(tau Lambda)` is strictly PD and reconstructs both complementary contents. The tautological unit-sphere bundle retains the conjugation cover; no LRC row closes. Script/output SHA-256: `c0048e61640598f88e3992579215030c3087c1664d1d07986455546eabe8c01d` / `9dc5417ae300384f837f983f80f0bf656fb5ea16ed1b06fa339c53d19495632e`. | codex-2026-08-12-u-spine-prime-clock-gram; independent arithmetic/topology/inheritance audits |
+| `gaussian_spinor_congruence_surface_probe_20260812.out` | [FINITE-EXACT; PROVISIONAL SURFACE CANDIDATE] | For `p=3,5,7,11,13`, the graph on `(F_p^2-{0})/{+-1}` with `det^2=1` edges and all graph triangles is a connected orientable closed surface with degree `p`, two faces per edge, and every link `C_p`; genera are `0,0,3,26,50`. At `p=13`, the existing 84-state frame carrier gains `546` edges, `364` faces, six disjoint `W14` wheels, and 78 directed Paley rim arcs. Base-triangle lifts split `182` zero/`182` double; residue/Kelvin and one-tail hostiles block an LRC transfer. No all-prime or modular-curve identification is claimed. Script/output SHA-256: `d1f6f26f581ec6d88607f292a662851f68d26102f489665f68fd548c1f3add90` / `e59f71b1269319a7ee3163077d304d423b247e9ac8e5beb608a95beb4f3f6749`. | codex-2026-08-12 finite spinor-surface wildcard |
+| `jc_linear_z_generic_puncture_response_thm3348.out` | [PROVED + FINITE-EXACT HOSTILE-AUDITED; THM-3348] | For every `P=f(x)+g(x)z` over characteristic zero, the generic Hamiltonian-response cokernel is the de Rham `H^1` of the affine line punctured at the roots of `g`, hence has rank `deg(rad(g))`; the explicit classes `[g x^j/rad(g)]` give a free `K[P]`-lattice.  The unit observer `[1]` maps to `-dx/g` and can miss channels.  For `g=lambda(x-a)^d`, its exact annihilator without gradient-unimodularity is `((P-f(a))^ceil((d-1)/min(d,ord_a(f-f(a)))))`.  Six exact residue-matrix controls and 51 sharp valuation controls pass.  This completes THM-3326's generic response object but does not add a JC(2) chart.  Script/output SHA-256: `105bed99614bde959db73c2d3b7efb3927e94b9eb234db74717f73886520f4f6` / `5137ba9a2d33adb4e33f2d9823ef5f8e7e471230587b0e690fa0e622acd4a4de`. | root/lrc-math-2026-08-12 |
+| `lrc14_j7_reflected_low_two_star_half_limit_all_dilations_thm3349.out` | [PROVED + FINITE-EXACT + VERIFIED-EXACT; THM-3349] | On all 649 upper-median reflected bodies, every one of the 11,856 all-nine-low ordered primitive rays has a maximum-homogeneous-limit two-star edge closing at every common dilation.  The sharp slab-shear plus midpoint-variation bound reduces 140,711 selected body/edge/raw-channel groups to only 42 exceptional heads and 66 exact scale checks, all positive; the weakest half-limit margin is `553321691/3504897823680`.  Together with the exact 7,694,544-row limit/debt and scale-one census, this closes the entire all-nine-low dilation atlas, including the current 561 residual bodies.  It does not close high-edge assignments, disconnected scale components, the whole reflected branch, or LRC(14).  Selector script/output SHA-256: `cd8b08087f0f7e1e0c0c7d0be673629c7c2702c170c5c1e771e1d76df1d3cd1c` / `cda9854e4222408a4a3f4e73218e9044126a992187db6047274614a6f01c98c6`; theorem script/output SHA-256: `6271192c37cdfe6360da993a487005fa648ff1de910539f7e17819464e146b79` / `14838fc79bc4b6062bafddd5d36300bbee3e8d11eac5e2ed867026edc03b9d71`. | root/lrc-math-2026-08-12 |
+| `lrc14_connected_low_full_tree_atlas_thm3350.out` | [PROVED + FINITE-EXACT + VERIFIED-EXACT; THM-3350 ATLAS] | Two complete exact enumerators agree on `305,909` unlabelled connected-low primitive six-level shapes (`220,254,480` labelled rays), low-edge histogram `5:171119,...,14:2`, maximum height `7776`, and exactly two one-high-edge shapes.  The hostile row `(1,3,9,27,108,432)` has zero low-tree limit and zero physical low-tree credit at the upper-median cell, proving that the complete/high tree is the required object.  Script/output SHA-256: `8020b953084b19940845349980a83547a5d73bbd2e96f3cc45556402b015bb67` / `75aac002408daa90c63f6706b909fab6aab0fb50f4d728626282d6ffef34607b`. | root/lrc-math-2026-08-12 |
+| `lrc14_connected_low_dense_full_tree_all_dilations_thm3350.out` | [PROVED + FINITE-EXACT + VERIFIED-EXACT; THM-3350 DENSE] | Complete-graph maximum trees close both one-high-edge shapes on every one of `649*720*2=934,560` body/labelling assignments and every common dilation.  The all-channel midpoint/shear tail leaves only 227 literal rational heads, all positive; the weakest margin is `1359521303047/13562237063235`.  The universal rank-debt maximum is `186636088362/11773143757375<2/105`.  Script/output SHA-256: `a44755f9cbc4f9ae91cd465ea6773744eb964988f6adf9733d28ec19e6d643b3` / `22803a615cc75a836c359d6a6db3f19beef79642e344042b9bcdbe4bed893cd9`. | root/lrc-math-2026-08-12 |
+| `lrc14_connected_low_uniform_high_forest_tail_thm3350.out` | [PROVED + FINITE-EXACT + VERIFIED-EXACT; THM-3350 TAIL] | On all other `305,907` connected-low shapes, a maximum positive-gain high forest plus the all-channel multiwrap midpoint bound gives a body- and labelling-uniform physical tail by common scale 11.  The exact threshold histogram is `1:101280,2:159228,3:36631,4:7204,5:1046,6:175,7:329,8:7,11:7`; `261,254` unlabelled shape-scale heads remain before body/label compression.  Script/output SHA-256: `78daaf73966d283c0c0bafa1c0975684e6167d2ef6375a3abeece4e00cdc87f9` / `2d409089c5ceb6e9ab7d3ae8aa99bc21a711fc98944e72f1da5daa31874270fa`. | root/lrc-math-2026-08-12 |
+| `lrc14_j7_k3_z216_sixteen_family_prefix_translated_two_high_closure_scout_20260812.out` | [PROVED ANALYTIC MECHANISMS + FINITE-EXACT PROJECTED ATLAS; THM-3351] | The first sixteen complete post-THM-3320 intrinsic-cost families, 236 rows, have empty necessary projected screens.  The exact screen is `227986=109375+118093+518`; `6126` one-high terminals close by located torsion, and 21 enlarged two-high cases close by 3 common-modulus, 15 translation-uniform weighted-band, and 3 denominator-two measure certificates.  Ledger/wall/families move `373153/349/29 -> 372917/113/13`; cap remains 216 and next is `gcd72/L720720`.  Projected-only scope.  Script/output SHA-256: `cfb020bfc6636a52f1eaf55f82a925e70c11c90da7f87f36b0bd77ece1ec6a62` / `a88646fbd28d807a0cc9671c509c4424056a539b49d04a2076ba17de57ef5ee4`. | root/lrc-math-2026-08-12 |
+| `lrc14_j7_k3_z216_L720720_one_high_translated_residue_thm3361.out` | [PROVED ANALYTIC MECHANISM + FINITE-EXACT PROJECTED ATLAS; THM-3361] | The three `gcd72/L720720` rows have empty necessary projected screens.  Their exact screen is `16900=8947+7234+719`; `216<70981` and three positive duplicate-two-high gaps force exactly one high, after which all `820` cases satisfy `|C mod d|>ceil(d/7)`.  A direct located-torsion route independently finds 758 order-two and 62 order-three terminals.  Ledger/wall/families move `372917/113/13 -> 372914/110/12`; cap remains 216.  Projected-only scope.  Script/output SHA-256: `52d70825de6199182c6a8dc3c2674cb0f6f92cfdec8a2b49e22c478307fc3285` / `22732fcf2ed2d094834dbbafa9893129856de52922892881f485e2e2b34cdede`. | codex-2026-08-14 L720720 translated-residue closure |
+| `lrc14_connected_low_all_heads_universal_forest_thm3352.out` | [PROVED + FINITE-EXACT + VERIFIED-EXACT; THM-3352] | Universal exact physical minima over all `4,044` feasible body/endpoint contexts and `4,148` high channel-scale types yield a maximum high-forest certificate on every one of the `261,254` finite heads left by THM-3350, with zero failures.  The weakest margin is `1017482276391320181594/73150827741949428345875`.  Hence all `220,254,480` labelled connected-low primitive rays close at every common dilation on all `649` upper-median bodies.  Compiler/output SHA-256: `aebfe98ab72f7eb0dc1718dfb17529e5b3f9288c6ed97d57f048bf3b29281f19` / `048251e4aa79c3005eba677b1123514d64f474fefd00fe0d9c70d1da2692a961`; every argmin is independently reference-audited.  THM-3355 subsequently closes the disconnected case; LRC(14) remains open. | root/lrc-math-2026-08-12 |
+| `lrc14_disconnected_low_affine_tail_kps_s171.out` | [PROVED + FINITE-EXACT + VERIFIED-EXACT; THM-3360] | The repaired Dirichlet-affine route proves the stronger uniform physical high-pair floor `1/294`, including THM-3355's four centered-grid horn lanes. Its 22,890 rows and 17,206 limit triples give 1,359,274 exact rational limits, minimum `709/48048` and gap `1273/112112`; the effective `O(1/n)` lemma, admissibility gate `9|c|<=p`, edgewise many-turn threshold `p>=273`, and 239,233,858 literal exact masses discharge all 1,808,310 ray/context incidences with zero failures. Ordinary and optimized replays match. Wrapper/compiler/output SHA-256: `6c3d0d704b79813b25dd4da832bd047dd0c62304797533ffca5a919d5625285d` / `0804e5067a0bbaa3c96f6f3d69915b7baf55a4a8a6b4a35792ec0b4b9ed75e64` / `f711b71da9f410847fb6d8fa65893f1e4502fe17152d52e80ab7432483db2f5d`. This is an independent pairwise strengthening, not a proof of arbitrary-residue `k<=1` or LRC(14). | kps-S171; admissibility-repaired affine limit/tail certificate |
+| `lrc14_d14_complement_clock_terminal_thm3363.out` | [PROVED + VERIFIED-EXACT + CITED-INPUT; THM-3363] | For the canonical one-aligned/six-drift row `E={1,2,3,4,6,12}`, `L=168`, `D=14`, the exact support is `S_14={1,...,12}` and `Y_14(alpha)=[1/14,13/14]\D_(14alpha)`. Any projected six-comb cover would make `D_1,D_(14alpha),D_(b_1),...,D_(b_6)` cover the circle, contradicting the published nine-runner theorem at `1/9>1/14`. This uniformly removes all 26 denominator shapes with no numerator-height cutoff and changes the `k=1` row/occurrence ledgers to `27,239` / `38,954,725,590,734`. Script/output SHA-256: `b3069105298192bf0ebae590ae16ca2cc73d5f238e4fc6079730f8df32419fef` / `78df70987b3495d103fe42709cf7fcb8794afe43540088f929bc6be802cf8f01`. | codex-major-frontiers-2026-08-14; complement-clock completion |
+| `cyclotomic_boolean_clocks_berggren_t4_xor_thm3364.out` | [PROVED ANALYTIC STRUCTURE + VERIFIED-EXACT; THM-3364] | Ultimately periodic subsets modulo finite startup are exactly clopens of `Zhat`; their finite cyclotomic transforms are convolution idempotents that recover Boolean operations, cyclic phase, least eventual period, the periodic Dirichlet tail and harmonic finite part.  The Fibonacci/Berggren ancestry residue and Cassini parity factor into six CRT phase states.  Separately, every Berggren parent plus its three children is a labelled transitive `T4`, with reset/XOR sidecar `L->0`, `M->epsilon xor 1`, `R->1`; its two mod-five depth-count clocks have equal residue/scar but quarter-phases `+i/4,-i/4`.  Exact checks cover 2,046 words, 1,398,100 ordered-pair consequences, 88,573 local chambers and the `c=65` global-tie hostile.  This does not recover arbitrary subsets, tree words, owners, global tournament arcs, LRC current or JC flux. Script/output SHA-256: `0bf40f7736ca65da2704f0f932b223a5946ca75275bc260b4aa8ee84718ad293` / `f4b06bd63509e23b390f1133c0bd2a1442c709b8f9cdbe4a04a5bdcff95cbecc`. | codex-2026-08-14 cyclotomic Boolean phase and local Berggren T4 |
+| `fibonacci_ray_t4_mod3_projection_thm3379.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3379] | On THM-3339's three normalized Fibonacci/Berggren rays, THM-3364's local labelled-`T4` bit is `epsilon(k)=1` iff `k=1 mod 3`.  More strongly, the six Farey orders quotient by reversal to their median channels, with `R0/R1/R2 <-> a/b/c`, `epsilon=1_[median=b]`, and Cassini parity distinguishing the reversed pair.  The support `{4,7,10,...}` has density `1/3`, scar `5/18`, exact `Q(omega)` phase, and harmonic constant `gamma/3+pi/(6sqrt(3))+log(3)/6-1`.  Equal-depth, equal-count and equal-terminal-letter hostiles block a full-tree extension.  Exact checks cover 6,120 branch identities, 603 ray indices, 88,573 tree nodes and normal/optimized replay. Script/output SHA-256: `803065a6ce419554b04403b13537889547da53bd1e30aa35edc5e5caca549ae8` / `d3cf7be59fe988171b73184b9cf26974b26bdfbcd1e50bbb3d40075a7d666778`. | codex-2026-08-14 Fibonacci-ray median projection; independent word-order/Fourier/harmonic audit |
+| `fibonacci_farey_mod3_q15_four_state_probe_20260814.out` | [PROOF-COMPLETE ELEMENTARY FINITE-QUOTIENT/DENSITY CANDIDATE + VERIFIED-EXACT; UNNUMBERED] | Projectivized Fibonacci vectors have period four in `P^1(F3)` and, after pointing, are equivariantly the q=15 unit-sign cycle `1->2->4->7->1`; inversion is the reflection sending each speed to its blocked unit pair.  Reduced Berggren branches act as permutations of orders `3,4,3` generating `S4`; their four-state transition matrix has characteristic polynomial `(X-3)(X+1)(X^2+3)`, giving density and ternary-heap harmonic coefficient `1/4` per state.  Mod-two oriented Farey frames (six) times mod-three lines (four) form an exact 24-state quotient of all 144 `SL2(Z/6)` elements, fibre size six.  Eight determinant-section tournaments form one switching packet and no tournament is invariant under the four-cycle.  Farey converse, word, owner, phase and current are lost. Script/output/semantic LF-normalized SHA-256: `6ad743f478420641aae9078bcdc83b4f9eb19b037bb90f640b92b1e5933e6295` / `803c848ed775b2b1278fecfa1340d2f8f634abaaa2a23ea3e1f24abf76c57e48` / `f111020b7aebaa3b4108800fe981923e77befc586c8521818cd8aa8600c87baf`. | codex-2026-08-14 four/six/24-state bridge; dependency-label repair 2026-08-15 |
+| `fibonacci_ray_dual_index_harmonic_bifurcation_thm3382.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3382] | The three Fibonacci/Berggren rays have strictly interlacing ternary-heap addresses `7(9^r-1)/8`, `(15*9^r-7)/8`, `(33*9^r-9)/8`, common recurrence `x_(r+2)=10x_(r+1)-9x_r`, rational OGFs and sparse Mahler equations.  The flipped fibre has time support `{3r+4}` of density `1/3` and divergent harmonic mass, but heap support `{3,36,333,...}` of density zero and finite Lambert mass; depth gives all odd integers but identifies `R0/R1`.  The full heap `T4` bit has an exact six-state 3-kernel, density `1/2`, and divergent harmonic mass.  Thus C-finite value support, automaticity and harmonic class require an index-map sidecar.  Exact checks cover 265,720 heap addresses, 2,403 ray formulas and 1,594,320 kernel transitions. Script/output/semantic SHA-256: `1049d46e642e6d7f4640e625ba5fe1eb6330c34dc0a5ee34e8a96885fb1429ae` / `e3217b7857d26ba13f9b6d490cf8141fcc95f690b11b1e3064b08380d7c6d060` / `67e8bf54060f0269d1d47e9b22c0928da7d0c1377ee0deba55f95d98be7a0b6a`. | codex-2026-08-14 dual-index harmonic bifurcation; independent language/Dirichlet/kernel audit |
+| `lrc14_disconnected_weighted_horn_tree_closure_thm3355.out` | [PROVED + FINITE-EXACT + VERIFIED-EXACT; THM-3355] | A centered primitive-grid lower bound proves its analytic edge envelope at `1/294` on every disconnected-low high channel except four oriented scale-one analytic horns; THM-3360 later proves the actual physical floor on those four lanes as well. The coefficient-positive tail covers `15,632` lane/parity/endpoint polynomials; the finite head covers `3,065,046` analytic gates and `6,144,244` exact masses with zero failures and minimum `92/7645`. Deleting the analytic horns from the 202 complete-multipartite cross graphs gives component histogram `1:150,2:51,5:1`; exact debt bounds close the two-component cases and the unique exceptional `K_(1,5)`. Together with THM-3352 this closes all 561 residual reflected bodies in the declared six-distinct-level `k=1` lane, not arbitrary `k<=1`, projected `k=2,3`, the rung, physical entry, or LRC(14). Script/output SHA-256: `78975824a16471cd6aad7194443f292773a9af08c748d945733768d64c2116dd` / `1f18288cd8c2886f85b0a1839e1cb0737d9141a8de0e543e68a28ef6d7e9c565`. | codex-major-frontiers-2026-08-12; weighted horn-tree closure |
+| `lrc14_disconnected_low_geometry_verify_20260812.out` | [PROVED STRUCTURAL + VERIFIED-EXACT FRONTIER] | The disconnected intrinsic-low graph has exactly `36,520` realizable unlabelled component-shape profiles: recursive factor-`>6` separation realizes every formal multiset and exact reconstruction has zero mismatches.  Its cross graph is complete multipartite and has an explicit five-edge spanning tree; the homogeneous credit gap is `1121969414539/35319431272125`.  A primitive-oscillation lemma gives the physical floor `23/4655>1/294` whenever `q>=8p`.  Script/output SHA-256: `871d08736ab6907c7b95c0e1c9bbb62467200309039c961a82eb44bfec11fada` / `949e1269e101921bebf623232f1e0e11576d83f0b6baa2140004a2138cd0a53c`. | root/lrc-math-2026-08-12; realizability hostile-audit repair |
+| `lrc14_disconnected_large_ruler_floor_20260812.out` | [PROVED ANALYTIC + VERIFIED-EXACT FRONTIER] | On all `1,514` feasible contexts with `L>=4592`, every primitive high channel `P<Q<8P` has physical overlap at least `1/294` for every dilation.  The monotone envelope closes `P>=4`; all nineteen `P<4` channels close analytically at `g=1`, with `28,766` literal exact controls and weakest literal margin `349997/61905522`.  Script/output SHA-256: `29138d28a83e83b8e5f9d5077e71cefe7402c0514cdac605ddf8f401c17c55c9` / `54fb8d62469dc36d4362ec6850126859d4fccce4fce75dfc02fbdab3d1cd9b94`. | codex-2026-08-12 large-ruler hostile-audit repair |
+| `lrc14_disconnected_non35_g4_tail_20260812.out` | [PROVED ANALYTIC REDUCTION + VERIFIED-EXACT FINITE RESIDUAL] | On all `2,530` small-ruler ordered contexts, every primitive high channel `P<Q<8P` other than `3:5` has physical overlap at least `1/294` for every common dilation `g>=4`.  The linked phase floor and midpoint envelope leave `118` channel-scale rows; all `298,540` literal exact masses pass, with weakest margin `1354081/141260826`.  This does not close `3:5`, `g=1,2,3`, or the disconnected branch.  Script/output SHA-256: `d8ab54707f939e4e7d2bc3029e5b355b32c923a1ab1bc3329f5d8c5adadc2373` / `5506170d5dc8c63ace1a90ec28cc08b53ebbe31f493ead1d7a2dc0a18db45739`. | root/lrc-math-2026-08-12; corrected scope audit |
+| `lrc14_disconnected_low_physical_pair_floor_frontier_kps_s170.out` | [PROVED ANALYTIC REDUCTIONS + FINITE-EXACT; OPEN FLOOR] | A universal physical high-edge floor `1/294` would close every disconnected-low six-word because its five-edge high tree beats exact debt by `570672686921/494472037809750`.  Interval discrepancy proves the floor whenever `5(Lq-f)>=36L(p+1)`; in the complementary bounded-ratio band, the exact all-channel shear bound proves it whenever `gcd(p,q)>=19`.  Thus only gcd `1..18` small-ratio horns remain.  The exact `4,044`-context census through `p,q<=80` has no failure and minimum `158/46397=1/294+55/13640718` at `(336,174,12,3;3,5)`; a low-channel control has mass zero.  This is not the universal floor or LRC(14). Script/output SHA-256: `e910a0f84b31cd68fd0f79b6aefe64df02f467a7ea90d8221b2778f73590cd40` / `6e5890afbc676f58bccbcb3c4942056baddf9effcfec9e4a76be63e4a7e16740`. | kps-S170 |
+| `lrc14_disconnected_non35_g4_tail_20260812.out` | [PROVED ANALYTIC REDUCTION + VERIFIED-EXACT FINITE RESIDUAL] | On all `2,530` small-ruler ordered contexts, every primitive high channel `P<Q<8P` other than `3:5` has physical overlap at least `1/294` for every common dilation `g>=4`.  The linked phase floor and midpoint envelope leave `118` channel-scale rows; all `298,540` literal exact masses pass, with weakest margin `1354081/141260826`.  This does not close `g=1,2,3` or the disconnected branch.  Script/output SHA-256: `4ce280189a47b0bb56d2b57efb0839ed0a2be1f3ad38b9354a147a451b8546dd` / `5506170d5dc8c63ace1a90ec28cc08b53ebbe31f493ead1d7a2dc0a18db45739`. | root/lrc-math-2026-08-12 |
+| `lrc14_disconnected_35_small_ruler_symbolic_20260812.out` | [PROVED AFFINE-RESIDUE REDUCTION + VERIFIED-EXACT] | On all `2,530` small-ruler ordered contexts, the physical `3:5` channel has overlap at least `1/294` for every common dilation `g>=1`.  Exact stabilization and quadratic minimization cover `56,191` affine residue classes; the maximum stabilization point is `g=134`, every cleared margin is positive, and the weakest context is `(L,j,e,f)=(336,174,12,3)`.  Ordinary and optimized replays are byte-identical.  Script/output SHA-256: `73cb4f0b76c4101ba60bd6b0cf4043c88c70864d90d2df3193f23d6e850aaa84` / `89f6b255a0164e23ce856d7c9a50bf4febbeba30d08d343f40ce43dc5a2ce1bf`. | root/lrc-math-2026-08-12 |
+| `lrc14_generalized_dirichlet_reduction_20260812.out` | [PROVED ANALYTIC REDUCTION + VERIFIED-EXACT LEDGER; RESIDUAL OPEN] | For arbitrary body-safe high channels `p<q<8p`, a full-turn convolution identity gives one-tooth oscillation `<=L/(7w)` and derivative variation `<=4L/w`, repairing the false cap-two height carryover.  An eight-block Dirichlet argument proves every many-turn raw edge with `p>=264` exceeds `Dmax/5`; the few-turn case has `1<=|c|<=46` and lies on exactly `22,890` nonzero-resonance affine rays.  The finite raw head `p<264` is now closed by the later head-263 certificate; exact raywise tail certificates remain OPEN.  Script/output SHA-256: `134e8ff753b56a2df0e46d153541fef6c5ee837d1d2c5b6677ebb5edd12c6f48` / `72dc6b361de9899e3d3d5d8393315636524a425e539b5044660b6d03543f186f`. | root/lrc-math-2026-08-12 |
+| `lrc14_disconnected_low_physical_pair_floor_frontier_kps_s170.out` | [PROVED ANALYTIC REDUCTIONS + FINITE-EXACT; OPEN FLOOR] | A universal physical high-edge floor `1/294` would close every disconnected-low six-word because its five-edge high tree beats exact debt by `570672686921/494472037809750`.  Interval discrepancy proves the floor whenever `5(Lq-f)>=36L(p+1)`; in the complementary bounded-ratio band, the exact all-channel shear bound proves it whenever `gcd(p,q)>=19`.  Thus only gcd `1..18` small-ratio horns remain.  The exact `4,044`-context census through `p,q<=80` has no failure and minimum `158/46397=1/294+55/13640718` at `(336,174,12,3;3,5)`; a low-channel control has mass zero.  This is not the universal floor or LRC(14). Script/output SHA-256: `e910a0f84b31cd68fd0f79b6aefe64df02f467a7ea90d8221b2778f73590cd40` / `6e5890afbc676f58bccbcb3c4942056baddf9effcfec9e4a76be63e4a7e16740`. | kps-S170 |
+| `lrc14_disconnected_head263_exact_scan_20260812.out` | [FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED; RAW HEAD CLOSED] | For `g=1,2,3`, every coprime high channel `P<Q<8P`, `P+Q>=8`, `gP<264`, and every one of the 2,530 small-ruler physical contexts has exact overlap strictly above `Dmax/5`.  The integer-only C scan covers 201,377 channels and 509,483,810 masses with zero failures; all 201,377 reported argmins are independently checked by the literal-audited reference engine, 220 channels receive full-context controls, and a separate 20,241-row hostile bank passes.  The unique weakest row is `g=1,(P,Q)=(3,5),(L,j,e,f)=(336,174,12,3)`, mass `158/46397`, margin `49340690507272/210091750350356875`.  This closes the finite `p<264` gate, not the affine tails or LRC(14).  Scanner/output SHA-256: `498ef114fbf7b3d54e62de4556cd0f669b0300f882d61d16c39f1566f5efb23f` / `44befca1fff5c832d52658b221f070930d683f621dbfe8d1ce612911c72d9cb5`. | root/lrc-math-2026-08-12 |
+| `lrc14_disconnected_low_finite_head_20260812.out` | [INDEPENDENT FINITE-EXACT NON-`3:5` AUDIT] | A disjoint C++/Python compiler proves all `509,476,220` non-`3:5` rows in the same raw head exceed `1/294`. A downward-rounded dyadic midpoint screen clears `498,526,403` rows, and an independent `__int128` floor-moment engine evaluates the residual plus a minimum-certifying band. Its exact minimum is `92/7645` at `(g,P,Q;L,j,e,f)=(1,4,5;168,90,12,6)`, with margin `19403/2247630`; 99 controls agree with the canonical Python engine and literal clipped intervals. This is independent support for the primary all-channel head-263 certificate, not a tail result. Wrapper/compiler/output SHA-256: `07dcd9a00de5a6b57f19107f4f27ee36a01478fa1622c4cd1fba784d3af5d10a` / `d7d6e97a760a2c03e124aa24c1f7f3adaec52f19491dd4ce5a5fa54e3e2af151` / `eb050e5993bf9c793fb0a718108a5451a0284f59680a9f40778b88fab2365b13`. | independent screened compiler |
+| `primitive_affine_determinant_shells_thm3356.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3356] | Primitive affine rays split into exact parabolic determinant-shell residue/content orbits and tame CRT prime-toggle atlases. On all `14,168` incoming primitive rays, two fixed homogeneous resultants bound the U-spine content channels with sharp split-prime rank five; a literal physical-tail CRT witness realizes all five. Only `1,166` rows admit a coherent integral shell gate, with `188` deep-content collapses, and a norm-85 hostile changes the LRC carrier cutoff. No physical tail closes. Script/output SHA-256: `3754e3514aea8f5d5c32c49fe54f192817d20e2c49dec8dc92c3b51e8676e0fe` / `0859734a5a44b602cfcdf5ed291987e3e0f2552f8872831c2115dba1e6cdb55b`. | codex-2026-08-14-affine-determinant-shells; independent shell, resultant, gate, and replay audits |
+| `admissible_composite_parabolic_compiler_thm3358.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3358] | Every admissible odd grade has a centered Hensel-normal atlas with `2^k phi(N)` exact-grade residues, and every residue has an explicit fixed-prefix/unary/fixed-suffix Berggren compiler. The jet gauge gives the intrinsic first-normal unit bundle; unitary divisors compile the oriented allocation star, while partial prime powers, determinant charge, parity, and ancestry cost give sharp stopping boundaries. The harmonic coefficient of any periodic label set is its residue count divided by `N^2`, but this scalar loses the prime toggles, normal units, and word. Script/output SHA-256: `9d56f18fa79502363228f824aa50e5406d6d72825807d73b3a2fd756e7f57e7b` / `bd7f7c765267a2fed591b682350b257e0b3e0b5eb2b4ea01b2c469df36fff99c`. | codex-2026-08-14 composite compiler; independent arithmetic, word-order, affine-boundary, and replay audits |
+| `modular_cfinite_harmonic_supports_thm3359.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3359] | Every modular index support of an integer C-finite sequence is ultimately periodic; its harmonic pole is the rational cycle density `delta`, while weak and strict multiplicative deletion scars have logarithmic coefficient `delta-delta^2/2`. Exact dual-path audits cover all 64 labelled `T4` tournaments and 512 normalized cut cases over moduli `2..12` (`5,632` state audits, `1,051,776` recurrence windows), all 256 complete two-state ternary DFA languages (`2,816` state audits), `59,136` singleton residue filters, Fibonacci/Berggren/tie/transient hostiles, and the THM-3356 modulus-1105 shell-clock `K4`. Unary accepted length sets fit the theorem; ternary address-value sets and the value support of the C-finite sequence `n^2` need not be periodic and can have finite harmonic mass. Script/output SHA-256: `afb46cf743af9f4f1d0353c896d9d92f1306d466f367385a8a6d388c8f43a1cf` / `66caf6683b005772a3401cc472ccaea11b3af1c1bbb6f0a7d49ead33ee06c9af`. | codex-2026-08-14 modular harmonic supports; independent asymptotic and typing audit |
+| `factorial_vandermonde_all_power_benchmark_thm3365.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3365] | The Vieta Jacobian is the alternating Vandermonde cubic up to sign. Under `L(x^a y^b z^c)=a!b!c!`, every odd power vanishes and `L(J^(2m))=((2m)!)^2(3m)!/m!`; the simplex moment is the same numerator divided by `(6m+2)!`. The exponent sign vector is Graver but not a circuit and all bouquets are singleton, so toric relation data retain neither the alternating coefficients nor the factorial observer. The nonzero second moment `24` makes this an FC(3) detector, not a counterexample or a proof of FC(3). Script/output SHA-256: `c289457d09d65548d33eda9005bbe9c10d21298ef9c57ae71954e2e8392c5a97` / `03c9304caa4adc96201e6ca22d7d47f0247484f21a0196fbfee2f42606bcb97d`. | codex-2026-08-14 FC3 Vieta/Vandermonde benchmark; independent algebra, normalization, toric, and hostile audits |
+| `lrc14_disconnected_affine_ray_quotient_audit_20260812.out` | [FINITE-EXACT RAY/CUTOFF AUDIT; REPAIRED BY MISTAKE-377; THM-3355 SIDECAR] | Dividing every solvable `(d,a,c)` witness by `gcd(d,a,c)` sends the `22,890` formal Dirichlet rays onto `14,168` primitive carrier rays, preserving the carrier and making the old ray a residue subsequence. Exact strict carrier arithmetic gives uniform cutoff `p=14,913`; below it there are `18,930,273` relevant primitive-ray occurrences. Enforcing the many-turn theorem's omitted short-rotation hypothesis `9|c|<=p` leaves the honest residual `8,079,264` (not the superseded `8,013,156`). This proves the quotient and finite workload only; the carrier inequalities and physical census remain separate gates. Script/output SHA-256: `4234d9f7860540d50e162ee75d57084b83f34033a7ab0d1f70f4f138f93f6d4c` / `ea34e1d98b39f11d9efec601374bf10f8a723c4b87e552fa9afd39ab06e8adb4`. | codex-major-frontiers-2026-08-12; independent routing audit |
+| `split_prime_parabolic_transplants_thm3353.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3353] | For every prime `p=1 mod 4`, an odd-cusp Euclidean compiler gives two explicit `p^2`-spaced unary U-spine sublanguages whose Berggren addresses realize the `p`-coordinate edge of the fixed-hypotenuse parent torsor modulo unit/global-conjugation gauge.  The factor occurs with valuation exactly one, the two gates are the complementary roots of `2t^2+2t+1 mod p`, and each fixed-prime branch has unbounded Boolean rank and ancestry path/depth dispersion.  The primary checks `15,792` rows; independent Gaussian division checks `5,128` further rows and an independent cusp BFS checks `8,156` coprime odd pairs.  No automaton uniform in `p`, all-source fibre action, LRC current, or JC flux follows. Script/output SHA-256: `49c1da9fa3fdda4686dda9000b1fb2c68d33e50f07263f159695de362df25dd8` / `0f314f40163d1703b4e03fdf8217eca4843dd847f05bc4df158a9fbfb8e00667`. | codex-2026-08-12-split-prime-parabolic-transplants; independent arithmetic, Gaussian-division, and cusp-uniqueness audits |
+| `d5_typed_h1_no_go_thm3354.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3354] | The proposed direct D5 transport is type-obstructed: the LRC class is `F13`-valued while `C91` is only its mapping-torus carrier; Berggren-tree endpoint charges are exact; and every direct coefficient homomorphism between the odd LRC groups and `S3`, `V4`/`mu2`, or characteristic-zero response groups is zero.  Integral `theta_int=[1]` detects a polynomial mate iff it vanishes, but localization can kill `theta_gen` while vertical torsion survives (`P=x+x^2z`, `D_P(1/x)=1`, `Ann(theta_int)=(P)`).  The typed comparison cospan is definitional bookkeeping, not a theorem transfer.  Exact controls enumerate all finite Hom rows, 13 maps `C13->C91`, twelve length-91 skew orbits, graph Betti numbers, weighted stars `(4,2)/(27,0)`, and the localization hostile. Script/output SHA-256: `b0b86426cedd58ca3e23ff46e9c8af7fe8504d0dcffb0a16c16dc9cf3fa02a48` / `a6d340d8870ecccc0cdca5cf20dbfdbfcea997be7b85243ca7b5dce761035cb9`. | codex-2026-08-12 D5 carrier/no-go synthesis; independent hostile typing and replay audit |
+| `amm12592_crossfrontier_20260812_exact_vertex_and_golden_cell.out` | [PROVED STRUCTURAL LEMMA + FINITE-EXACT HOSTILE] | The halved sparse AMM junk-flow polytope is nonintegral already at `R=8`: a feasible vertex has 20 denominator-103 coordinates, while 42 active integer constraints have determinant `1648=16*103`. Thus generic LP-vertex rounding and total unimodularity are unavailable even though integer witnesses also exist. At `R=512`, the golden slope lies in the exact Farey profile cell `[534/893,119/199)`, whose minimal-denominator interior rational `653/1092` produces the identical degree word; the closed form is an all-scale entropy rate, not a finite coefficient-field obstruction. No `R=512` integer witness or AMM bound follows. Script/output SHA-256: `6d8dbeb7ebeabc1b75a73e2891141f1a64424a7a2ef49d779036cecd38cfcfb2` / `3ccb35fa96ebb313b1993482d98cc8eabcf9806022e9989e1eece597807c33de`. | kps-S169 cross-frontier hostile audit |
+| `lrc14_k1_body_complement_clock_scan_kps_s172.out` | [FINITE-EXACT + INDEPENDENTLY AUDITED; THM-3366 SIDECAR, STRUCTURALLY CLASSIFIED BY THM-3387] | The first exact body-complement scout closes `15,393` raw `k=1` support rows and `3,659,255,462,265` denominator-shape occurrences over clocks `1..14`.  THM-3387 now proves that its key set is exactly the cyclic Boolean sheet-cover atlas and reproduces every least-completion profile; this is no longer a black-box set-cover total.  THM-3366/S173 supersede its census breadth, so these counts are not additive. | kps-S172; complement-clock discovery scout; THM-3387 exact identification |
+| `lrc14_k1_universal_complement_clock_scan_kps_s173.out` | [FINITE-EXACT + INDEPENDENTLY AUDITED; THM-3366 K1 COMPANION] | Over all `27,240` raw `k=1` support rows and clocks `1..14`, exact strict-endpoint set cover closes `19,273` rows and `5,116,993,586,195` occurrences.  An independent event sweep and exhaustive subset union reproduce the census; the stored hardened run pins dependency, totals, histograms and semantic hash. Script/output LF-normalized SHA-256: `65f1e5983b6d9ee4faf0d74f276c20821f85031f33a100d61c03942da3a8971b` / `80d37ede35c05d7b95779be31a4bef487066869af3c40c1f5f923707df3fa5cf`. | kps-S173; specialized audit companion |
+| `lrc14_allk_universal_complement_clock_scan_kps_s174.out` | [PROVED COMPILER + FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3366] | The pointwise compiler turns an `r`-clock cover of unsupported quotient cells into at most `7+r` global clocks (`8+r` for `k=0`), so cited LRC through twelve clocks closes `r<=5` (`r<=4`). Pool `1..14` closes raw rows `17,561/19,273/19,198/19,053` for `k=0/1/2/3`; pool `1..28` gains only `14/28/28/28`.  An independent exhaustive-subset engine reproduces every pool-14 sector, occurrence count and least-size histogram and supplies strict-endpoint, grid-ownership and insufficient-budget hostiles.  These are overlapping support-row terminals, not physical realizability or LRC(14). Script/output LF-normalized SHA-256: `372f1b0d2bd8c1cc453080e9ab55880480352c5277a9a216739a7262d198efba` / `1104900cd805a2af05e3c7252b7d7bacd417b36b0f015a90d1976b6913fc91c5`. | kps-S174; all-sector compiler; independent codex-2026-08-14 audit |
+| `lrc14_allk_complement_clock_independent_audit_20260814.out` | [FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3366 AUDIT] | A solver-independent exhaustive enumeration of all clock subsets through size five rebuilds `11,180` strict-endpoint/open-atom targets over `251,536` body/divisor rows and reproduces all seven pool-14 input, terminal, occurrence and least-cover-size profiles exactly.  Independent divisor--Mobius weights pass 280 brute controls.  Hostiles show midpoint-only loses 16 endpoint bits, omitted `D`-grid ownership loses 20 bits, and the budgets five (`k>=1`) and four (`k=0`) are attained.  It audits the raw unified census, not refined-ledger composition. Script/output LF-normalized SHA-256: `a43610abcb1d591f4b606677e3e6a9a32897b38fa2fd591a281ee8c4dc07d823` / `31c096e528a148cd717f4d9c7485c93cdec6175b33b83bae9d2be627249d743c`. | codex-2026-08-14 independent all-sector exact audit |
+| `lrc14_k2_refined_complement_clock_composition_kps_s175.out` | [FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3366] | Exact keywise intersection with the current post-`d=6` `k=2` ledger removes `298` live rows and `71,575,318` occurrences, leaving `4,056` rows and `200,069,517,203` occurrences.  An independent exhaustive union over all clock subsets of size at most five reproduces all `19,198` raw terminals and the exact live intersection; only three `(D,c)` shape components disappear. Script/output LF-normalized SHA-256: `414b3777cc44f2e059d5bc4258ab555fc055de8c0f8b3ebfd99ce0c90c7da14c` / `5fe0c922cf89754a9d557f3d535ab65e71995fef17fd91f123cf5673dcfa6dfd`. | kps-S175; refined non-subtractive composition |
+| `lrc14_k3_refined_complement_clock_composition_kps_s176.out` | [FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3366] | Exact keywise intersection with the final one-spike `k=3` ledger removes only seven live rows and `7,648` occurrences, leaving `1,897` rows and `2,548,893,834` occurrences.  The hits are one family `{2,6,8,10,14} union {u}` for odd `u<=13`, all at `D=L/2` and all in the `c=3` slice.  An independent current-lcm/primal-coupling reconstruction reproduces the exact intersection; wrong row keys and naïve subtraction fail.  This sparse overlap redirects the late frontier from larger undirected clock pools toward the rigid-core defect. Script/output LF-normalized SHA-256: `27e4bff52705189bf8ff73db42d76d4e2fc94c44330d295f166f8d4217cb1804` / `4cb8f95113123007af9fb5a1f58b3b5373dd4637615b50be7168c6bf578b696b`. | kps-S176; refined k3 composition; independent codex-2026-08-14 audit |
+| `lrc14_k3_refined_complement_clock_independent_audit_20260814.out` | [FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3366 K3 AUDIT] | An exhaustive pool-14 subset engine and an independent literal current-lcm DP with primal Boolean-coupling vertices reconstruct the `19,053` raw terminals and the `1,904` final one-spike rows.  Exact `(body,D)` intersection again deletes seven rows and `7,648` occurrences, all in `c=3`, leaving `1,897` / `2,548,893,834`.  Body-only, divisor-only and `(L,D)` keys produce `1,904/1,880/33` hits, while raw, hit-only and double subtraction all give wrong occurrence totals; the `1,897` survivors mean only failure of this finite pool certificate. Script/output LF-normalized SHA-256: `1204bff675273efb73241cbc511e84dd2cbc11bae4ce5dcc5caa258928f1064f` / `0bf0d3b3c6b530ed3b37b3cf3d6c9dd38edebf331e2f6c7fcbcca1741a5e15c0`. | codex-2026-08-14 independent refined-k3 keywise audit |
+| `tournament_skew_deletion_response_order_join_thm3369.out` | [PROVED + VERIFIED-EXACT; THM-3369] | The intrinsic skew contraction `Omega_T=R_T(A-A^T)R_T^T` of the marked two-coordinate deletion deck obeys `Omega(w,z)^T=-Omega(z,w)` and has first response `q_T=n*s_T-z*s_T'`. Its ordered-join law is two THM-3324 `H`-conjugates plus an antisymmetric cross-factor outer product; the arbitrary-factor formula is an ordered sum of transformed `q` wedges. It distinguishes `K1 triangleright C3` from the reverse, which have equal full symmetric `(s,Gamma)` interfaces, but does not recover full SCC order or chronology. Exact audits cover `1,099` labelled tournaments, `1,589` relabels, `2,553` factor pairs and `339` factor triples. Script/output/semantic SHA-256: `a8472c3189542e172a48802b2663cee02c434e2e1089248e7a19a3c59813e6c0` / `bf009893390dd865c751ad8713c3c22f16eaede24b2092146b87fd8bf9ee83b6` / `cd70e45bc435acb281084bdee703dcf36e7b53b6877003b8260a5ff40671f12e`. | root/repository-archaeology-2026-08-14 |
+| `berggren_two_cube_norm_collision_kps_s177.out` | [PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED; THM-3370] | For `Q_r=4r(r+1)+3=(2r+1)^2+2`, every primitive Eisenstein cofactor of an integer representation `Q_r=x^3+y^3` is `3^epsilon` times primes `1` or `19 mod 24`; the exact depth filter has 15 classes mod 63.  The first distinct-positive intersection is `13,712,211=107^3+232^3=Q_1851`, and exactly five occur for `1<=x<y<=5000`.  The fixed Pell fibre `d=x+y=11`, multiplied by `23+4sqrt(33)`, gives infinitely many signed-cube intersections beginning `Q_31=16^3+(-5)^3`; its positive-infinitude residual is subsequently closed by THM-3375's moving-sum ray.  The native Gaussian carrier `C_r` is coprime to `Q_r`, so its prime-toggle labels do not transfer. Script/output LF-normalized SHA-256: `e0321576b71764fb65aa15cfd843869a9846b7bea1310d7cd6de8faed0cfc665` / `8d61cd5dd4255ad2bd58f4bbc7172b7fb98cbe97c2943e09be31774aea11d60a`. | kps-S177; Berggren/two-cube norm collision; positive continuation THM-3375 |
+| `gmc_laguerre_pf_strict_reciprocal_beta_gap_thm3079.out` + `gmc_newton_pf_thm3079_independent_audit.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3079] | A finite PF-infinity row filter with positive constant coefficient preserves reversed strict total positivity of the reciprocal-Gamma kernel on its positive shifted strip.  Falling-factorial coefficients of a positive negative-root polynomial are PF-infinity under the interlacing update `C -> (z+r)C+zC'`.  Hence every strict integer shape mesh with terminal prefix `-1` has the checkerboard generalized-Hankel sign whenever `alpha_0+u_min+v_min>M`.  The independent Fraction/Leibniz audit reconstructs five Newton families, `15,018` Toeplitz minors, `7,088` generalized minors across generic and multi-edge controls, and the sharp type of below-strip failure `a=1/2,C=1+3z,F_0=-1/2`.  Nonintegral gaps, terminal prefixes below `-1`, and the shallow strip remain open.  Primary script/output SHA-256: `9971f45a464c7f2fcd6a4c086a278d095f2b9eb8fb14e692497b961ba79527e5` / `64b1800ec7fe672ebc268389408ac24694d5436d8a1484fc84af6e25e8fa16b7`; independent script/output/semantic SHA-256: `57e2e7333db66f596429f2f428284ec6e3a84d7dcdc8302436a8b73b980585f2` / `ce94015d6dc7fc140a565ce152b71c46f1f10b1428dac8ad4d7a8f5eaa6cae34` / `7c413b0b7d5c568f77e795c74150b91337621ab018801bff8450721dfa0cfaeb`. | codex-gmc-strict-prefix-hostile-2026-08-01; independent root/repository-archaeology-2026-08-14 |
+| `tournament_quadratic_signature_refutation_thm300.out` | [REFUTED + FINITE-EXACT; THM-300] | The conjectured `n-2` negative directions first fail at `n=9`, whose exact inertia is `(20+,8-,0)` rather than `(*,7-,0)`.  Rational block congruence locates the first failed implication: the seven-tile new-hypotenuse Schur complement has inertia `(5+,2-)`, whereas the `n=7,8` layers add only one negative direction.  Full rank survives exactly on the tested range `6<=n<=12`; the pattern `negative=n-1` is only a finite probe for `9<=n<=12`.  The self-contained companion uses only one-/two-flip integer Hamiltonian-path DPs and rational congruence.  Script/output/semantic SHA-256: `a7ec43cae1680a6850c6aab9d58ebb831de06a44ffbc6dc15aff98329f072269` / `fe05c45a0c64e4cf56570ab1f30ddad70cd80108bef638da02f54d642aa1da45` / `60fc4bca9300e5fd220aec78c59e0381f549019ad622b735c0fa235bd15ced7b`. | root/repository-archaeology-2026-08-14; MISTAKE-379 |
+| `paley_all_cycle_lengths_design_thm309.out` | [PROVED + VERIFIED-EXACT REPAIR; THM-309] | The square-affine Paley automorphism subgroup acts sharply transitively on unordered pairs, repairing the false full-AGL/2-transitivity proof and strengthening pair balance to the multiset of simple directed `k`-cycles for every `3<=k<=p`, including even `k`.  Thus `lambda_k=c_k C(k,2)/C(p,2)`; this is neither ordered-pair balance nor uniform support multiplicity.  Exact enumeration checks all `k=3..7` for `p=7,11` and the existing 5-cycle formulas for `p=7,11,19,23`.  A nearby S24e trace table is quarantined because `tr(A^k)/k` counts repeated-vertex closed walks beyond the short-cycle range.  Script/output/semantic SHA-256: `40182a73db81a1ce9991eaa2fb7d4fbb5593f4b79430be19e491c35cfe9f3730` / `478d2d54446b2b70c0a208bb66b915a9515b759feec2ca56acccd4b80032c94e` / `81e1de44977eb1757a0bb6fe2a9e9cb75a010b7e53b493ee4e49147f117fc5c4`. | root/repository-archaeology-2026-08-14; MISTAKE-378 |
+| `amm12592_r8_integer_entry_section_kps_s178.out` | [PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED; THM-3371] | The exact `R=8,D0=0` sparse polytope has the integer point `y0=(6,-3,2,1)`, `y1=y2=(-1,0,0,0,0)`, later rows zero.  Its first feed-free junk state is `(-2,0,0,0,0)`, satisfies THM-3332 `F1--F3` and the finite `F4` budget, and captures in one clamp.  It shares only 8 active rows of rank 7 with the denominator-103 vertex; 37 hostile active rows become strict, so the positive mechanism is an entry section rather than that vertex face.  At `R=512`, targeting the first-feed-free cone reduces the sufficient integer search from 234,117 to 44,750 variables and 89,146 causal inequalities; no witness is yet produced. Script/output LF-normalized SHA-256: `2c3e86a23e137d1349763e9cb631fde6ba01caaef1cc11e661ee3c53d31fc9a9` / `f492e5cbf60a82a61be8d11f0c3bc72cf391d54b6ba1405f4f42f00fe7e5e0cd`. | kps-S178; AMM integer entry-section compiler; independent exact block/active-lattice audit |
+| `amm12592_r8_slack_kernel_locality_kps_s180.out` | [PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED; THM-3373] | Augmenting all 114 displayed `R=8` inequalities by slacks turns `103(I-F)` between the denominator-103 vertex and THM-3371 integer point into a 156-coordinate integer kernel displacement.  Exact integer Farkas certificates exclude every conformal decomposition whose `y`-moves use at most four consecutive causal rows, even over the reals; twelve integer atoms supported on windows of width at most five decompose the displacement exactly.  Thus this fixed carrier has conformal locality width exactly five.  An independent audit rebuilt the carrier and certificates and checked all `2^12` atom subsets, so every atom ordering gives a feasible monotone atom-step path.  It is not a full Graver-basis theorem or an `R=512` transfer. Script/output/semantic LF-normalized SHA-256: `745fd7bbe1b1acbac915e9b068f9ac7931e6705466711005f42375c946663e9c` / `b75817fe24a1f587aea298863b12b90d5880ea94186d788f3dffcd6b42923c2f` / `75b989bd93a9f96f521809926fc44972a5e525504d111dc97c4af33d8689e8a5`. | kps-S180; typed toric/slack locality threshold; independent exact carrier/Farkas/all-subset audit |
+| `amm12592_r512_ruleA_causal_repair_horizon_kps_s181.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; THM-3374] | Exact replay gives the `R=512,D0=0` rule-A row-107 fatal input constant with 277 bits.  For two degree-`d` Lucas blocks, Vandermonde gives the universal coefficient bound `abs([x^s](Delta-Delta'))<=2^(s+1)C(d,s)`.  Causal unrolling yields five-row capacity `3,478,916,701,028` and `C_57<N<=C_58`; therefore every admissible prefix surviving row 107 must differ from rule A by row 49, and no change confined to rows 102--106 can be a last-minute repair.  The length-58 inequality is inconclusive, not a construction.  An independent audit rederived the coefficient bound, recurrence indexing, and exact 57/58 threshold. Script/output LF-normalized SHA-256: `e2c1a18fe35d74cd445deef549f6d3eda8f87b4a472d340b809f29e3f1935a1d` / `8faf5284d478ce1bef1fe23a04c06084ad1221c63ac259855e33207faaf75569`. | kps-S181; exact causal light-cone obstruction; independent off-by-one audit |
+| `berggren_positive_two_cube_pell_ray_kps_s181.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED WITH SCOPE REPAIR; THM-3375] | The norm-one unit `7775+312sqrt(621)` and seed `5059+203sqrt(621)`, restricted to fifth powers, preserve `29|h` and compile an explicit moving-sum family with `d=841u^2+2`, `e=uW`, `a=21866u^3+81u`.  Exact identities give `x^3+y^3=a^2+2=Q_r`, while `sqrt(621)<W/h<=5059/203<29` keeps every point strictly positive.  The first ray member is `2899^3+38312^3=Q_3750302`; thus positive infinitude is proved.  Fixed-sum positivity is finite, the primitive norm form has discriminant `-8`, and local solubility of the ambient equation at every prime is iff the depth lies in the 15 classes mod 63.  The distinguished orbit itself has scars `r mod63 in {38,51,60}` and `r=2 mod5`; it does not exhaust the ambient local classes. Script/output LF-normalized SHA-256: `f01b96a8db812da88bbec974f58f17a5d1b794cdd5168617892ae2457a6f81d0` / `ec04036ad35e463a04210179bed61a54f280e54db4f0642ffc5e315f9f888332`. | kps-S181; moving-sum Pell ray; independent family and exceptional-prime audit; ambient/orbit scope repair |
+| `berggren_positive_cube_slope_atlas_29_kps_s182.out` | [PROVED + FINITE-EXACT + VERIFIED-EXACT; THM-3376, INDEPENDENT AUDIT PENDING] | In the primitive parity-correct reduced-seed universe `3<=n<=29`, exactly 47 slopes occur.  Exhaustive modular certificates at `p=3,5,7,11,13,23` exclude 45, leaving precisely `(m,n)=(14,23),(26,29)`.  The latter is THM-3375; the former has an explicit positive odd seed on `W^2-44965u^2=676` and an odd/even norm-one unit, yielding a second infinite positive two-cube ray.  Its first displayed depth has 64 digits, explaining why low-height scans missed it.  The two limiting chamber ratios are exactly distinct. Script/output LF-normalized SHA-256: `7ec10b47139f10117a9f80155ac040ac864bb329ea5687ac1c890bec27529d30` / `0e5660b462b6f656b8cf09e26e5f6826e74fe626535cb8188fa3fd0f16fa4a44`. | kps-S182; finite slope obstruction atlas and second positive Pell ray |
+| `tournament_multiaffine_deletion_transform_skew_current_thm3372.out` | [PROVED + VERIFIED-EXACT; THM-3372] | The multiaffine transform `calD_T=sum_X H(T-X) product_(v in X)(y_v-1)` is the OCF packing enumerator by uncovered vertex set.  Its diagonal `D_T` has nonnegative coefficients, `D_T^(k)=k! sum_(|X|=k)D_(T-X)`, and `D_(X triangleright Y)=D_XD_Y`.  The first two deletion levels give `H(2B2+B1)-B1^2=H^2 Var(n-|U(S)|)>=0`, with equality exactly for transitive tournaments.  The scalar exterior current `xi=d(z)(A-A^T)d(w)^T` has a closed join law because `sum_vD_(T-v)=D'`; it sends `K1 triangleright C3` and its reverse to `+/-6(w^3-z^3)` although both have `D=y^4+2y`.  Self-converse tournaments force `xi=0`, and order-five masks `8,10` give the first exact `(D,xi)` collision while their marked decks differ.  Audits cover `1,099` labelled tournaments, `6,504` derivative cells, and `2,553` ordered factor pairs.  Script/output/semantic SHA-256: `8cbd74312c199af4d86fb3ae13823fa5f9e99776ce4ebc8c425845ceb32e439f` / `b800a2b6bdcb25d6c75ebfe9e921cb08533695fad30850260cdcf2c6687a1d96` / `c66025a0fa9e9e36bc8f9e2576f95998ff6c3e6035eaa871f97c8997dbea7688`. | root/repository-archaeology-2026-08-14 |
+| `tournament_path_colour_deletion_compiler_skew_current_thm3377.out` | [PROVED + VERIFIED-EXACT; THM-3377] | The complete symmetric subset-deletion sums `F_T(a,t)=sum_X Q_(T-X)(t)a^|X|` of THM-3166's path-colour polynomial multiply under ordered join.  Their deletion derivative is the summed marked first response, the colour-one face is exactly `D_T(1+a)` from THM-3372, and `(-1)^nF_T(-a,-m)` has nonnegative coefficients for every integer `m>=1`.  Contracting marked compiler responses against `A-A^T` gives a closed four-variable skew current; its scalar slice sends `K1 triangleright C3` and the reverse to `+/-6zw(w^2-z^2)`.  Strong order-six masks `16,83` share `(Q,psi)` but have different first-deletion jets and acquire different currents after adjoining one sink, proving the jet is load-bearing.  Audits cover `1,099` labelled tournaments, `169,330` negative-colour deletion cells, and `2,553` ordered factor pairs.  Script/output/semantic SHA-256: `e524ced0394c8796407914d283b90c87b6ec5549b4a3b1134710660c83d4a202` / `00c2749ac7cbaad38e14f72a22642955f75e28c7e612c8f5834f5577dd6bcbbd` / `4403a78a56ee1c57dcb0e64865318e4f09187b26fa6a83697f852308d8e612ba`. | root/repository-archaeology-second-pass-2026-08-14 |
+| `lrc14_j7_k3_z216_gcd24_L129360_row94_one_high_torsion_thm3378.out` | [PROVED ANALYTIC MECHANISM + FINITE-EXACT; THM-3378] | The first row of the post-THM-3361 `gcd24/L129360` family, row `94` with `E=(1,3,8,10,11,14)`, has an empty necessary projected screen.  Its `571` states split `292+195+84`; the strict high gate and positive duplicate-permitting two-high gap force exactly one high in all 84 residual passports.  Independent searches find fixed-safe cell differences of effective order two in 80 cases and order three in four, too widely phase-separated for a translated strict-open one-seventh danger band.  The projected ledger moves `372914->372913` and wall rows `110->109`; twelve rows of the same family, all 12 families, cap 216, and LRC(14) remain open.  Script/output/semantic SHA-256: `62769c8024ccd3f85a71b858e65f909a216e4ea85a7bca2bfb5fd0aa61a43a73` / `26db8dc95acac0afe179aedce04543150755860215cd506b55c09cf0c872c37a` / `436c5160c5e9d3dcaa0f4f3dc4104450670a67582ab5e375c8751dc0ea82c93f`. | root/repository-archaeology-second-pass-2026-08-14 |
+| `tournament_deletion_layer_fugacity_witness_thm3380.out` + small-order/C census outputs | [PROVED ALGEBRA + VERIFIED-EXACT + FINITE-EXACT; THM-3380] | The Hamiltonian deletion-card histogram `M=sum_X t^|X|[H(T-X)]` is a multiplicative-monoid semiring compiler for ordered join, and augmentation is `Dham(1+t)`.  Its fibre equality with `(Gamma,Dham)` first fails at order eight: `3,328` versus `3,325` profiles, exactly three four-class spectral fibres split, even though the first has an identical full marked spectral deck.  `(M,xi)` has one order-eight collision, the proved self-converse palindrome `K1 C3 C3 K1` versus `C3 K1 K1 C3`.  The formal packing fugacity is determined by `Dham` through order eight; at order nine exactly `b_333` is new, splitting 17 of 91,780 `Dham` fibres among all 191,536 classes.  Python/C/output/semantic SHA-256: `e3f318421c7bec2b20329099cdf5b0bda54a988fbd46778bfbcd153439a006c2` / `8ca2f4e6e98ec232796cf8813215b3e096d0f419227213c45fa281ae5e9f0644` / `e7c5a0e069329c588053b92894e215965780639e1e3eb6f9f3e719d1ab615d25` / `27de65f5a1f51b3d0405822829ed141da461c60018d48023dc007e7c0ebb24bb` / `7a5a3605c6a0d8f47c9119564181f5ab603f9cf2eb0a13c244b8a13c78eda80f` / `f1e12cae71100526b0311e178306348dd4aeed3e356e595415d6cabe703087de`. | root/repository-archaeology-second-pass-2026-08-14 |
+| `lrc14_reflected_residue_phase_stability_thm3381.out` | [PROVED ANALYTIC LEMMA + VERIFIED-EXACT + INDEPENDENTLY AUDITED; THM-3381] | Drift perturbation `z->z+h` transports the untruncated reflected danger comb by `phi_h(u)=(zu-Delta)/(z+h)`, `Delta=hj-mL`.  The clipped symmetric difference is at most `min(1,4(|Delta|+|h|)(1+L/z)/L)`, yielding the frozen-tree loss `sum_i(deg_T(i)+1)sigma_i`.  The canonical pair `(492,836)` has overlap `6/209`, but the one-unit move `492->491` makes it zero with phase jump `13/28`, refuting residue-blind extension of THM-3360.  A distinct `h=28,Delta=0` packet retains a strict coarse margin, proving the repaired chamber nonvacuous.  This does not close arbitrary residues, arbitrary `k=1`, entry, or LRC(14).  Script/output SHA-256: `fedaa46451ef1582e9d6a472e4996380ad08060810c1cf2642c4b9121ce3f383` / `b41ef513589888543c3899ab0e11b684bbd0f3075f802c88adbdab09d223e4ef`. | selective recovery from `origin/codex/lrc-math-20260812@7386032013`; independent root audit |
+| `lrc14_q_fibre_complement_clock_thm3385.out` | [PROVED ANALYTIC IDENTITY + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3385] | Under `pi_q(x)=qx`, a transverse speed `u` blocks at most `gcd(u,q) ceil((q/gcd(u,q))/7)` sheets.  If the summed capacity is below `q`, the body-safe image is exactly the complement of the divided core; on `L=14 lcm(F),D=L/q`, the unsupported open cells are the core danger union minus the `D`-grid.  This gives 6,420 structural body/divisor certificates, accounting for rows `6,273/6,420/6,420/6,420` in raw sectors `k=0/1/2/3`, and explains all seven refined `k=3` hits and `7,648` occurrences as one half-even family.  Capacity equality is not an iff; `q=4,6` are Boolean sheet-cover hypergraphs, not tournaments. Script/output/semantic LF-normalized SHA-256: `8d3add2104ca91e89017ae643f573c8c5f6b45a4fdfecd9d65c16f48fd51b356` / `5b7349e13e36e8424346aa2c50f26f760f766a161f046ca09ad7bcd6e4d665b4` / `76345873bbfbe37fde097e9a23e92744fb376ad0eb94d7f0eb1ff33c5f7223de`. | codex-2026-08-14 q-fibre compiler; independent proof and downward-recurrence census audit |
+| `lrc14_exact_cyclic_sheet_cover_atlas_thm3387.out` | [PROVED ANALYTIC POINTWISE/GRID CRITERIA + FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED AFTER MISTAKE-382; THM-3387] | For `F=qC union U`, the safe image is `(T minus A_C) minus B_q(U)`.  Pointwise equality is `B_q(U) subset A_C`; core coverage of open quotient cells is universally the weaker `B_q(U) minus A_C subset Gamma_D`.  The endpoint-only hostile `(4,5,8,9,10,18),q=2` separates them, while no exception occurs in the literal `[14]` atlas.  Exact sweep classifies `15,393/23,569` body-degree rows, exactly S172; `15,381` have no transverse cover and twelve are core rescues.  At `q=2`, cover edges satisfy `u+v>7 gcd(u,v)` and noncover components are the `(3,5)` lattices `r3^i5^j` of harmonic mass `15/(8r)`. Script/output/semantic LF-normalized SHA-256: `9b0b46874a569d674b937b37cf74a8985fca2b77e3e480a75fb4924ea602f25a` / `b4d9ce439bab4501bfd5e2cf13eb0b0e3685b7364f30e43b7d5ca9138d25cb5c` / `de40f9da0f3b335d0de52bad0c75f586c15508cdf4d94b082d2f69c1098e5bc8`. | codex-2026-08-14 exact Boolean-fibre atlas; independent endpoint/S172/lattice audit |
+| `lrc14_q3_phase_triangle_clutter_thm3388.out` | [PROVED ANALYTIC PHASE CLOSURE + FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3388] | For three sheets, the cover obstruction is a 3-uniform clutter.  Pair gaps lie in `P(u,v)={p congruent uv mod 3gcd(u,v):14|p|<3(u+v)}`; a triple covers iff cyclic gaps satisfy `wp+uq+vr=0`, the vanishing normalized `H^1(C3;Q)` class.  The literal pool has `48` cover edges inside `82` pairwise-feasible triangles and independence profile `(1,10,45,72,38,6,0,...)`; `585` globally safe plus three core-rescued rows give exactly the q=3 atlas total `588`.  The `{1,4,5}<7,11,13>` orbit separates `3^d` words from `C(d+2,2)` support and has harmonic mass `29029/14400`. Script/output/semantic LF-normalized SHA-256: `5323346310a9a6b188caa0131b177b2ae8e23c7113808cda8955f89828e62154` / `5a32319fb8a91b476d292da292ae3cc9933f5f94aad7eb0e834f49e52252c535` / `082e97aa25d8019ba7de49c0a76333c7a3a221dd19cb4bc3e8d5b43ef9a42216`. | codex-2026-08-14 q3 phase cochain; independent 47,905-triple/CRT/atlas/harmonic audit |
+| `lrc14_q4_typed_cover_clutter_thm3389.out` | [PROVED ANALYTIC COMPLETE-COCHAIN CRITERION + FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3389] | Odd speeds block singleton sheets and `2 mod 4` speeds block antipodal pairs, so minimal covers have typed partitions `2+2`, `2+1+1`, or `1+1+1+1`.  Affine pair gaps glue iff their complete rational cochain has zero triangle circulation.  The literal clutter has `36` edges with rank profile `(2:4,3:15,4:17)` and independence profile `(1,11,51,118,123,44,3,0,...)`; `3I5+3I4+I3=619` reproduces every exact q=4 atlas row with no core rescue.  Pair tests fail at ranks three and four. Script/output/semantic LF-normalized SHA-256: `cd963c20ff47c9840222c6bfd95088e3d649ac90edd518353c0f64f4f5ec9bfd` / `45459e60a69bea9d7e99746fb1b1ad8dc8f79506bb27eb7f287f887c38270adc` / `5e19b6e083e8b1faf6c1a082c6e321f148b2e5ff85bf93aa1d15c92542bf87b2`. | codex-2026-08-14 q4 typed cochain; independent blocker/CRT/Helly/event/harmonic audit |
+| `four_bit_pairwise_independent_fourier_cone_thm3396.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3396] | Every unbiased pairwise-independent law on four Rademacher bits has the unique atom formula `2^-4(1+q(x)(d+a dot x))`; exact nonnegativity is the pair of parity-class bounds `max_(q=+1)|a dot x|<=1+d`, `max_(q=-1)|a dot x|<=1-d`.  The moment polytope is the polar of the odd 5-demicube, with vertices `+-e_i` and the 16 even sign vectors divided by three and f-vector `(26,120,160,80,16)`; its sharp absolute functional norm is `max(linf,l1/3)`.  The vertices are exactly 10 uniform H8-type and 16 H12-type OA packets, so every law is their convex mixture. Repeated convolution has exact chi-square `sum_i a_i^(2r)+d^(2r)` and either mixes exponentially or is one of the 10 fixed/period-two signed half-cubes.  Exact sidecars at `N=48,120,896` pass; the last omits two atoms, lies in the relative interior of their triangular-bipyramid ridge, and has distinct exact block decompositions `448+224+224` and `224+336+336`.  Independent raw-signword/Fourier/OA/convolution and separate support-function, edge-incidence, and 896-face audits reproduce the result.  This is local four-column realizability, not Hadamard completion or a Grothendieck bound. Script/output/semantic SHA-256: `43bc4e9bdc99bf0723ace6d124128a00fd8f89bd43e8738cf7b4bb8ce2139bcc` / `47bc7bda869b6b5ce799fee770e8ca56dc1fbbcb1c9a33145678d411f3edfa0b` / `3b23fb3d84c1d191c975384b3a789779311e19f5136e346743786679d97acc8e`. | root-2608-sign-puzzle-2026-08-14; independent paper11158 audit; demicube-polar extension |
+| `lrc14_q6_typed_cover_clutter_probe_20260814.out` | [FINITE-EXACT PROBE; SUPERSEDED AS CURRENT STRUCTURAL SOURCE BY THM-3395] | Under `Z/6 ~= Z/2 x Z/3`, blockers are cells, binary fibres of size two, or ternary fibres of size three.  The `2 x 3` grid has exactly `23` irredundant block covers.  Independent event and affine-cochain routes agree on `39` literal minimal edges with rank profile `(3:3,4:29,5:7)` and independence profile `(1,12,66,217,441,515,304,76,5,0,...)`; `2I5+I4=1,471` globally safe plus seven core-rescued rows give the q=6 atlas total `1,478`.  THM-3395 now proves the uniform typed-cochain criterion and exact quotient-face reductions; this artifact remains an independent convergence audit.  No refined decrement. Script/output/semantic LF-normalized SHA-256: `e16ae18816b0620dde6ae05db01846ce49a37c292c7cccc76532ec2fc9c728d6` / `3628260d408258b1f9ad385c23c4d4bdea8cf0c7bad65f02dbbff9dc0e5de889` / `c329b80567995d2ce6110b5e216695b99faa062d04cb70fdfa5bc0db7edc8019`. | codex-2026-08-14 q6 CRT fibre-product probe |
+| `lrc14_q5_singleton_cover_clutter_probe_20260814.out` | [FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED CONVERGENCE ARTIFACT; THM-3395 IS CURRENT STRUCTURAL SOURCE] | The independent q=5 event/cochain route reproduces `231` rank-five edges, profile `(1,12,66,220,495,561,268,45,1,0,...)`, unique independent eight-set `{1,2,3,6,7,12,13,14}`, and `1,617+2=1,619` exact rows.  A fresh audit checked `104,832` beyond-literal assignments and the two rescue-specific wrong-core leaks.  Distinct q=5 labels cannot be tangent, so strict and closed full-cover edge sets coincide.  The robust order `(13,16,18,19,17)` has all ten pair fibres of sizes at least three but no complete cochain. Script/output/semantic LF-normalized SHA-256: `96b5addc012546b051987d623eff01581f6616219228524f9465be63f09776a0` / `83a76d6d04be5a7721d070f923612c9f034ed3dac72b5f84636d8632796facfe` / `8e76f915ddb63c6e126d57b2e82cfe8e7a3d60835db85059cd3d2c94a2e963c7`. | codex-2026-08-14 q5 convergence; independent blocker/CRT/Helly/event/endpoint audit |
+| `lrc14_small_sheet_typed_cover_star_cochain_thm3395.out` | [PROVED ANALYTIC q<=7 TYPED-COVER CRITERION + FINITE-EXACT + INDEPENDENTLY EVENT- AND PROOF-AUDITED; THM-3395] | Below eight sheets a firing speed blocks exactly one multiplication-kernel coset.  A family covers iff its typed cosets cover `Z/qZ` and the affine integer pair-gap fibres contain one closed complete cochain, equivalently a compatible star; generalized CRT and strict interval geometry turn that sidecar into one common source phase.  The q=5 clutter has 231 rank-five edges and profile `(1,12,66,220,495,561,268,45,1,0,...)`; q=6 has 39 edges of ranks `(3:3,4:29,5:7)` and profile `(1,12,66,217,441,515,304,76,5,0,...)`.  Their global-safe/core-rescue decompositions are `1617+2=1619` and `1471+7=1478`; q=7 contributes `2079+0`.  The exact companion agrees with THM-3387's independent event sweep on all 6,540 relevant literal subsets and freezes q=5/q=6 closure hostiles plus the strict q=7/q=8 boundary.  Chernikov arXiv:2608.13291v1 is typed-witness motivation only; no SOP, refined-ledger, or LRC consequence follows. Script/output/semantic LF-normalized SHA-256: `0953401d98d62fd3118bd4a7bbeb50bd43a459a04dc120578ca6af355cada067` / `f7ed05e16fdd3660741aa8a79600cf9920bbebd8087c8d25a252ecca0dbc1ce5` / `a47bf86457583259aa3712bfd5ca849328a7fa7b2db8e194345a910abb6610c1`. | root-2608-compatibility-obstruction-2026-08-14; independent event, q6 convergence, CRT/Helly, and line audits |
+| `lrc14_core_rescue_collar_atoms_probe_20260814.out` | [FINITE-EXACT STRUCTURAL SIDECAR; UNNUMBERED] | Four cyclic collar atoms generate all twelve q<=7 core rescues: q=3 `{8,11,13}` on odd sixths and q=6 `{3,8,11,13}` on all sixths share radial collar `(2/231,1/112)`; two q=5 atoms have collars `(9/770,1/84)` and `(1/245,1/168)`.  Exact boundary owners explain every endpoint.  The q=3-to-q=6 branch transplant fills the even-sixth translate.  Q=6 extensions `{1,5,7,9,10,14}` are inert, while `2,4` leak through the strict core boundary `1/84`; the generated split `3+2+7=12` equals the complete THM-3387 ledger.  No new row. Script/output/semantic LF-normalized SHA-256: `b02bc72b6adfee0cabe8f7893f1f0ca372f529154b26f7ddcbf1812e43be87f9` / `191abd2c7928452f661bff83d4dfd48937ecfc3d842e37377991df511519d54b` / `3a1d4bba94086d82c12c94225fc0403be165cc6e7bb5245fde07d4bc60d7c022`. | codex-2026-08-14 exact rescue-cell anatomy |
+| `lrc_general_finite_mode_sheet_cover_cochain_thm3398.out` | [PROVED ANALYTIC ALL-q EXACT MODE/COCHAIN IFF + EXACT DILATION LAW + FINITE-EXACT LOCAL q<=29 AND PAIR/GLOBAL q<=11 + INDEPENDENTLY AUDITED; THM-3398] | For `g=(u,q),m=q/g`, an owner has `m ceil(m/7)` selected consecutive phase-block modes.  A length-`s` mode has centre residue `h=-g(2r+s-1) mod 2q`, width `w=q-7g(s-1)>0`, source radius `w/(14qu)`, and means at least that block fires.  A selected mode family is simultaneously realizable as a full sheet cover iff its blocks cover and its exact pair fibres `p_ij mod 2q gcd(u_i,u_j)` contain one triangle-closed complete cochain; generalized CRT and real Helly effectivize it.  Unique short unwrapping resolves cyclic wrap, `m=1` is included, and the q<=7 result now has no owner-count restriction.  Pure dilation `(q,u,t)->(dq,du,t/d)` preserves the mode bank and scales cochains by `d^2`.  Exact controls include the q=8 zero tie/nonclosure hostile and a new q=9 `3+2+2+2` zero-tie partition at `t=5/6`; rank-bounded q=8--15 artifacts recover the first domino/trimode regimes, and an independent full-subset audit supplies the true later-rank clutters.  The companion checks 42,328 modes and 47,200 phase cells through q=29, plus 40,187 pair lattices and bounded global covers through q=11.  No ledger decrement or LRC(14). Script/output/semantic LF-normalized SHA-256: `82929cbf6903701533c1b1f6ebed143e5c8f9edc570dfe2895cf8db70e478da9` / `ab25331039813f8c83626a66d0d0d8157e8b3826a76fccc690452a2cdad3169b` / `b6d3663a25b45b732d4acc597dc2772a5adfd9860934dab7a26c4174f268f6ff`. | root-2608-q8-multiblocker-2026-08-14; MISTAKE-383 dependency/scope repair 2026-08-15 |
+| `lrc14_q8_domino_mode_clutter_probe_20260814.out` | [FINITE-EXACT RANK-AT-MOST-FIVE PROBE + ANALYTIC MODE-COCHAIN CANDIDATE; UNNUMBERED] | Q=8 is the first multi-class blocker: an odd owner has singleton modes of radius `1/(14u)` and adjacent-domino modes of radius `1/(112u)`; gcd-two and gcd-four owners have pair and quadruple modes.  Independent event and cochain routes agree on the `32` minimal edges through rank five, of ranks `(4:15,5:17)`; the displayed long profile is explicitly the profile generated by those low-rank edges, not the full physical profile.  All `135` unsafe five-sets leak outside core clock one, giving exactly `1,152` rows.  The full audit below adds six rank-six edges without changing `I_5`. Script/output/semantic LF-normalized SHA-256: `3e523a2ff8cbd6329782347c56fae2d8519a161c3d127697ca452f3891890b9c` / `0f5a421205bc559c8f12dce8462b4d570fcffba0e602740d1ea66c52cd84d045` / `5051166544008df0a96c50e8fc2c293e4e35b6192974417abe9a487a547d98f4`. | codex-2026-08-14 q8 finite-mode transition; MISTAKE-383 repair |
+| `lrc14_q8_q14_finite_mode_clutter_probe_20260814.out` | [FINITE-EXACT LITERAL RANK-AT-MOST-FIVE RECONSTRUCTION + PROVISIONAL ANALYTIC FINITE-MODE COCHAIN CANDIDATE; UNNUMBERED] | Consecutive cyclic witness modes with centre `h/(2qu)`, width `w/(14qu)`, and cochain `p_ij=2q u_i u_j(x_i-x_j)` reconstruct the literal q=8--14 obstruction slices through rank five.  Low-rank edge counts are `(32,22,18,0,8,0,0)` and exact `I_5` row counts are `(1152,1205,1269,1287,1271,1287,1287)`; every unsafe five-set leaks outside core clock one.  Pure dilation explains the q4-to-q8, q5-to-q10, and q6-to-q12 edges.  Higher-rank physical edges are left to the full audit below. Script/output/semantic LF-normalized SHA-256: `e4afeeef7ea6dc2b9b64d3085390b0b6cc53a461dd9bde817c473688dca136f3` / `2fdede2a04ad2b9ccdfbae8b597ecbf82ad71274fe6ba0c221abd7635aed140f` / `66a69a30c49b72ff8ecbf7de94f495025518e04b73969f2d970debeb6f113023`. | codex-2026-08-14 q8--14 finite-mode reconstruction; MISTAKE-383 repair |
+| `lrc15_first_effective_triphase_mode_probe_20260814.out` | [FINITE-EXACT RANK-AT-MOST-SIX BOUNDARY MODEL + ANALYTIC PRIVATE-SHEET HOSTILE; UNNUMBERED] | Q=15 has no cover on `{1,...,14}` through rank five and exactly `157` rank-six minimal edges; `155` require at least one three-phase mode.  For the fixed edge `{1,2,3,4,5,7}`, independent all-witness minimization confirms that all four unit owners must use trimodes; this is not a claim about every q=15 cover, since two rank-six edges are domino-sufficient.  The unit quotient is the four-cycle `1->2->4->7->1`, not a tournament.  The displayed long profile is generated by rank-at-most-six edges; the full audit adds 16 rank-seven and six rank-eight edges. Script/output/semantic LF-normalized SHA-256: `751aff937e422a6d09e7e89677ded2f40ce7c9b72c12191078d691cbc4316c33` / `258ced868f662355b890ad0cc486f6375d96c04eb0f226a723974d0b79d95b8d` / `bae0a83a2ca7f19906309b1bab951bd9e4dac241e3a3103726da3bb8099e1eb8`. | codex-2026-08-14 first effective triphase boundary; MISTAKE-383 repair |
+| `lrc_q8_q15_full_physical_clutter_audit_20260815.out` | [FINITE-EXACT INDEPENDENT FULL-UNIVERSE AUDIT; UNNUMBERED] | A mode- and cochain-independent exact boundary/open-cell bitset route checks every one of the `2^13` or `2^14` literal subsets.  True minimal-edge rank profiles are q8 `(4:15,5:17,6:6)`, q9 `(4:9,5:13,6:54,7:2)`, q10 `(5:18,6:70,7:4)`, q11 `(6:23,7:91,8:9)`, q12 `(4:1,5:7,6:17,7:14)`, q13 `(7:22,8:29,9:2)`, q14 `(7:3,8:60,9:9)`, q15 `(6:157,7:16,8:6)`.  It repairs only the old global-looking labels: every intended low-rank count, `I_5`, no-rescue result, mode theorem check, and LRC ledger statement survives. Script/output/semantic LF-normalized SHA-256: `e54b77eeae05484cbbfacd904e850815f7e78a5e3306f21ad87a68ffbfae9e2e` / `8b8cc6f45ab8b14b0ba26afb29748ccf3bc08f4f103581ba9afd7167391e8008` / `2baecf15b57ac7adcfaf41342d74cf12eba363a6d0726566e67eabfcf78b0d22`. | codex-2026-08-15 MISTAKE-383 full-clutter repair and independent convergence audit |
+| `lrc_mobile_common_centre_crt_rank_probe_20260815.out` | [PROVED-ELEMENTARY GENERAL FIXED-ZERO CRT UPPER CONSTRUCTION + FINITE-EXACT q=15--28 MOBILE COMMON-CENTRE MINIMA ON OWNERS 1..14; INDEPENDENTLY AUDITED; UNNUMBERED THM-3401 COMPLEMENT] | THM-3401 proves fixed-zero ranks `(6,5,8,5,9,6,8,7,11,6,11,8,10,8)`.  Allowing selected mode lattices to share arbitrary `c`, while retaining zero cochain, gives capped mobile ranks `(6,4,8,4,9,6,8,6,6,6,7,8,9,8)`.  Every cover-capable capped centre has twist `qc mod 1` in `{0,1/2}`, and all strict improvements `{16,18,22,23,25,27}` occur only at half twist; q16/q18 are dilation transplants and q23 has a capacity-sharp rank-six perfect partition.  The cap is essential: exact q25 rank-six and q27 rank-four witnesses use owners above 14.  At q15, 156 of 157 physical rank-six edges lie in the mobile slice; the unique exception `(1,7,8,9,11,13)` requires nonzero affine drift, with displayed witness `L1=50,Linf=6` not claimed minimal.  Counts are explicitly maximalized-mode counts, not literal selected-mode counts.  All mobile pair observables tie, so the four/six carriers are block clutters, not tournaments.  No core rescue, ledger decrement, or LRC(14) claim. Script/output/semantic LF-normalized SHA-256: `dd157efbd3bd7da34b75cba7f30fb55cfa0381bb6a74ece7abade7f4a2c439fa` / `b874f11a8f81604e8bfefe01a6437bfd10a21b909c3ee3e37d0c8a714528594f` / `a9a06cdc130ec2eb1d8292166fd1e4ca27f16b4b0a3210821b7c976d2464a467`. | codex-2026-08-15 MISTAKE-384 fixed/mobile gauge separation; independent direct-formula and owner-cap audit |
+| `lrc_all_owner_halfgrid_physical_chart_probe_20260815.out` | [PROVED-ELEMENTARY ALL-q SYNCHRONIZED HALF-GRID PHYSICAL DIVISOR-CHART REDUCTION + EXACT q=15--28 RANKS + THREE INFINITE EXACT RANK FAMILIES + EXACT EVEN QUADRATIC LEAKAGE LADDER; VERIFIED-EXACT INDEPENDENTLY AUDITED; MISTAKE-389 REPAIR; NOT A ZERO-MODE-COCHAIN THEOREM] | At a physical time `c` satisfying `2quc in Z` for every active owner, reducing `qc=a/b` and using `b|2u` sends every exact danger set, up to an affine sheet permutation and unit owner reindex, to `O(q,g):v(1+g ell) mod q` for odd `g`, or `E(q,g):v(1+2g ell) mod 2q`, with `g` a proper divisor of `q`.  The exact half-grid ranks for q15--28 are `(3,2,8,2,9,2,3,2,6,2,5,2,3,2)`; universal block capacity proves all lower bounds except q17/q19, where common-centre-plus-disjoint-pairs anatomy forces ranks 8/9.  Divisor pullbacks prove half-grid rank `2` for every even `q>=8`, rank `3` for every odd `3|q,q>=9`, and rank `5` for every odd `5|q,3 not|q,q>=25`; their eventual support has density and harmonic residue `11/15`.  MISTAKE-389 retracts the original zero-cochain interpretation and owner-cap comparison: at q15, `c=1/150,U=(5,40,50)` partitions the sheets but has THM-3405 scalar/gcd `(a,g)=(1,5)`, so it is not a common mode centre.  Its unique containing mode centres `(0,1/120,1/150)` have exact cochain `(-50,-50,100)` and norms `(200,100)`, freezing a positive-drift hostile.  More strongly, for every even `q>=8` and odd `1<=a<q/7`, the same even/odd rank-two partition at `c=a/q^2`, with owners `(q/2,q(q-1)/2)`, has unique mode centres `(0,a/[q(q-1)])`, exact cochain `P=-a q^2/2`, and THM-3405 scalar/gauge `(a,q/2)`, so none is zero-cochain; the chart erases a linearly growing scalar fibre and its quadratic tariff.  Normalization audits cover every admissible affine row q15--28; two independent cover solvers agree; 361 divisor-family instances and 4,482 leakage instances through q500 pass normal and optimized execution.  Script/output/semantic LF-normalized SHA-256: `318705d41da80a69e1aa00f40c52d1677eaadaa00d57ea92bdafe108bc7087ab` / `eadc3096a83e866f4ed077696b38d678ee77d1b078106ed3367de73ba0375d58` / `97d17ab3b16bb595b4cf765e30365b0afe37d916a1eaf3291dd635212471e578`. | codex-2026-08-15 MISTAKE-389 half-grid/mode-centre separation; exact capacity/pair/leakage proof and independent normalization/cover/divisor-family audits |
+| `jc_c3_two_pole_first_key_lattice_thm3074.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; THM-3074] | Every tame residue-degree-one coordinate-line C3 escape with one or two source poles starts with a primitive binomial toric relation.  The first key has depth `1<=ell<=D`; equality pays the Keller coefficient, while strict depth forces a second resonance.  Uncancelled detection lies in `hZ+ellZ`, but the exact `h=2,ell=4` packet shows later cancellation can expose value three off that first lattice.  No full value-semigroup, arbitrary-Jelonek, or JC(2) claim follows. Script/output SHA-256: `5bfc52f67d25e9c53dd2d951ecd4ae6e20fb03a21bc0bbfefb110defda2db757` / `2b760bdb62b8a81bd67fd408da83f40127112788f983b3b639b20b48094225d4`. | recovered from `origin/codex/jc-resolvent-bridge-20260801`; independent line/replay audit 2026-08-14 |
+| `jc_c3_finite_toric_key_tower_thm3080.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; THM-3080] | In the normalized full field `K=C(x,y)` with `C(M_0,R_0)=K`, each strict toric cancellation spends depth exactly, updates `B_next=B-e`, and sends the complementary value to `gcd(g,e)`.  The tower terminates, its depths partition the initial budget, and the terminal lattice is primitive.  Full-field generation is load-bearing: `M=1+us^2,R=s^2` gives terminal gcd two in the proper index-two subfield.  The keys remain completed-field Laurent keys, not polynomial MacLane keys. Script/output SHA-256: `f813fefec6e81ff1ba2db767a9699929f1d9fab0d5514e1c9da1c742cc7072a9` / `9a07e8b2fc7292044b1e6e0d837a6f7d6fb4db003f1a16772d319f6bc975b907`. | recovered branch candidate; independent hypothesis/sign audit 2026-08-14 |
+| `jc_terminal_toric_residue_decoder_thm3081.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; THM-3081] | At the primitive terminal stage, a Bezout value-one coordinate and `Theta=Z^g/R^e` recover the residue line: `C(theta)=C(u)`, so `theta` is Mobius.  The target/prefactor ratio is a monomial times one squared linear form, and every strict-stage gcd is exactly the order of a discarded root torsor.  A primitive root chooses a packetwise torsor trivialization, not a canonical global section.  Polynomial globalization and three-view synchronization remain open. Script/output SHA-256: `46d63117fe376e13d534707453824db2e8578e52aba7106ee9e30981431bee46` / `6e25871afd87df7c0057871a8ab4aacf740455454757d665b45f7343f94bcd09`. | recovered branch candidate; independent line/replay audit 2026-08-14 |
+| `jc_terminal_monomial_cone_polynomiality_fork_thm3383.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; THM-3383] | For normalized coprime terminal data, residue-coordinate recovery and rational target decoding coincide at `|g-ae|=1`.  The sign polynomializes exactly one target.  The full rational initial ring is the cyclic invariant hypersurface `C[V,X,Y]/(XY-(1+cV)^e)`; its target-polynomial slice is `C[u,ut,y^e]` or `C[t,ut,y^e]`.  No polynomial target automorphism repairs the missing coordinate.  For `e=3` this is the THM-2690 cubic normal-crossing algebra, but no physical resolvent identification is asserted.  Triangular source changes turn one terminal packet into depth words `(2g,e)` and `(g,g,e)`, so depth composition is gauge-dependent. Script/output/semantic SHA-256: `b72a196e7fda4a2de33df26e1f26f06f654908a9eb42f453e210728559ad4b10` / `514af913271c9fa283bf7c969f9166730a3a187e93880b65d9a480c8966f2abc` / `883e0b685f2cac9c329b3181e5af86009cd5425d3ebe5d3252f065ac92254dd0`. | root/jc2-other-angles-2026-08-14; independent module/normalization audit |
+| `jc_torsor_effectivity_boundary_probe_20260814.out` | [PROVED ELEMENTARY FAMILY-SPECIFIC FILTRATION/VALUATION LAWS + VERIFIED-EXACT; UNNUMBERED] | In THM-3383's two orientations, the polynomial and missing decoded targets have the uniform form `s=x^e v^(d+1)`, `m=x^(-e)v^(-d)`, and `m^q f(v)` is polynomial iff `v^(dq)(1+cv)^(eq)` divides `f`; the cyclic torsor dies on `C[x,y]` while both boundary orders survive.  In THM-2655's non-Keller `V4` cover the invariant ratios `(d/a,d/b,d/c)=(yz/x,xz/y,xy/z)` have valuation matrix `J-2I`, determinant four and Smith form `(1,2,2)`, exactly the class relation lattice.  Every Kummer/class element dies upstairs and every pair/triple product is polynomial, yet each ratio retains one distinct pole.  This supplies an effectivity hostile for reserved THM-3397, not an `A4/S4`, G1, or JC(2) exclusion. Script/output/semantic LF-normalized SHA-256: `37ccdce40a0483f520e47f5bb8c95fcc7e33a4efc439ab2de077c5035a8ac559` / `29c8e94eddda860a06805af071dd18356f4c4e5133ba4c0c27f1d93092fc32dc` / `90e478b47b925203d81978048dcc25d76b97258bbc413982016db7a13d594a18`. | codex-2026-08-14 torsor/effectivity hostiles |
+| `jc_linear_z_divergence_minpoly_collision_thm3386.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; THM-3386] | For gradient-unimodular `P=f(x)+g(x)z`, the canonical Bezout-divergence class has annihilator `chi(P)`, where `chi` is the minimal polynomial of `f mod g` on `K[x]/(g)`.  Geometrically `chi=product_b(T-b)^max(m_alpha)`: roots sharing one `f`-value combine by maximum multiplicity, not the summed multiplicity of the characteristic polynomial/resultant.  Six exact controls include equal/unequal collisions and a nonsplit rational case.  The class is pure vertical torsion even where THM-3326's unit response is free; this is integral response anatomy, not a new JC(2) case. Script/output/semantic SHA-256: `64ddfbc48ffb87c164cda417b6ec910eebc32f01aa21a641be966e903570824f` / `b52c74e1bbe4e6a678750c7c254fa7447871665bf5b900e6a05b73bab1bdb872` / `ed688bbc5be56e9e10e43f3ae80d37d4c83d62ef6e547622ef47e23b71b3504f`. | root/jc2-other-angles-2026-08-14; independent proof/script audit |
+| `jc_torsor_effective_boundary_thm3397.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; THM-3397] | A divisorial pole survives every finite dominant normal pullback because each height-one order is multiplied by a positive ramification index.  In the cyclic terminal initial ring `R_e=k[v,X,Y]/(XY-(1+cv)^e)`, the missing coordinate `w=X^-1v^-m` has exact coefficient-denominator filtration `{h in k[v]:hw^q is polynomial}=(v^(mq)(1+cv)^(eq))`.  Its two negative boundary orders survive the polynomial cyclic cover even though the cover kills `Cl(R_e)=Z/e` and is etale-locally split.  On the sharp `V4` quotient `k[a,b,c,d]/(d^2-abc)`, the three nonzero two-torsion classes satisfy the full `C3` compatibility relation and die simultaneously on `k[x,y,z]`, yet every nonzero constant combination of `1/a,1/b,1/c` has a separated pole; the invariant sum pulls back to `x^-2+y^-2+z^-2`.  Thus class/torsor killing does not imply polynomial effectivity; no quartic or JC(2) branch closes. Script/output/semantic SHA-256: `dbb402ba0fc1bfd9ae02f7997ffe5ee13b860cc255430da5e5f1a26de85e3179` / `6befc8ec076622ff99eb4fe2848f9226b28c5798a38d49e9a08a7e9e750ab26d` / `a63ab86be7767bc5e160c13d4b0d5e228ef347dc27ee502849c75f2627d0f09f`. | root/jc-effectivity-next-2026-08-14; boundary-principal-part proof, finite-pullback lemma, and independent audit |
+| `all_iterate_commuting_completion_norm_bound_thm3390.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; THM-3390] | For `c>=2`, a uniformly bounded all-power defect family `E_n=cV^*Q^{*n}V-T^{*n}` commuting with `T`, where `V` is isometric and `Q` contractive, forces `||T||<=c`.  Bounded defects first make `T` power bounded and justify the telescoping tail.  The exact controls verify sharp `T=cJ_2` bilateral-shift unitary dilations, the minimal `Q=0,T=3J_2` noncommuting hostile, the scalar unbounded-defect hostile, and the raw-compression first-commutator wall.  The `c=2` mechanism is inspired by Lorist--Schwenninger arXiv:2608.03841v1, cited strictly as a recent preprint; no complete-Crouzeix, FC(3), JC(2), or LRC consequence follows. Script/output/semantic SHA-256: `8d5b315015a6a2cfdfabd156c79a684c811b6db468cf9c3ad70c4e4ca96f7d20` / `08f1f377a07b894cd77809624ef3971ae8265e77f2a25bd223ecb247bff3b148` / `ad59ba4dea8c755a57c1947ff114593e383caf8597ec185497b4c952f4969c88`. | root-2608-crouzeix-puzzle-2026-08-14; independent recurrence/sign/tail/dilation/hostile audit |
+| `discounted_norming_orbit_commutator_flux_tariff_thm3400.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; THM-3400] | For the same uniformly bounded all-iterate completion, full commutation is stronger than the telescope needs.  Contracting the two exact commutators against one norming vector gives leakage `L_n`; if `||T||=kappa>c`, its discounted sum must satisfy `Lambda>=kappa(kappa-c)`.  Hence `Lambda<=epsilon` gives the optimal robust bound `(c+sqrt(c^2+4epsilon))/2`.  The family `T=kappa J_2,Q=J_2` attains equality for every epsilon; `T=sJ_2` gives strictly favorable leakage without commutation, while a nonnormal involution has bounded all-iterate defects and exact leakage `kappa^2+1`.  A scalar finite-prefix hostile keeps the infinite uniform tail load-bearing.  No Crouzeix completion or external preprint claim follows. Script/output/semantic SHA-256: `778784e967ee26d5973dec01f9ed87c048da99589183103aec3b655a53203a82` / `14b74082e9dc653f15b5e7d08a9bbb3c8518d06ea97eab26cd800144e195a2db` / `6cfccf40aefd4df5b0dc41c8a6c17a16ae39e36adb1581121cfae0349b79f6dc`. | root-2608-crouzeix-puzzle-2026-08-15; independent immutable-file proof/replay/hash/semantic/AST/routing/hostile audit complete |
+| `lrc_centered_transverse_sheet_cover_rank_thm3401.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; THM-3401] | At fixed source centre zero and for every `15<=q<=28`, a unit owner covers exactly zero and one unit sign-pair, while a nonunit owner covers exactly the kernel `m Z/qZ`, `m=q/gcd(u,q)<=14`.  The two tasks separate, giving the sharp rank `r_0(q)=phi(q)/2+#{p prime:p|q,p<q}` and table `(6,5,8,5,9,6,8,7,11,6,11,8,10,8)`.  Prime sheets force one owner of quotient order `p`; speeds `q/p` and one inverse owner per unit sign-pair attain equality.  The canonical q15 edge is `{1,2,3,4,5,7}`.  Strictness makes q14 uncoverable and excludes `+-2` at q28; at q29 the extra `+-2` phases turn the unit sign quotient into one multiplication-by-two `C14`, with minimum edge-cover/literal rank seven versus the obsolete formula's fourteen.  A self-contained standard-library verifier checks all 328 instances of the general quotient-block identity `D=pi_m^(-1)(a^(-1)R_m)` for q14--29, classifies all 287 in-range residue owners, checks 122 construction/irredundancy consequences, and independently exhausts 9,828 literal set-cover subsets.  The all-q five-base rank-at-most-six converse is explicitly OPEN.  After MISTAKE-384 this is explicitly the fixed-zero sub-slice, not the whole zero-cochain locus; no LRC(14) decrement follows. Script/output/semantic LF-normalized SHA-256: `fff146868de4b1ec5993ed404fca4200e8e3eac47a7cb902ff51d559eef228e0` / `12f2cf337c982068c8cfa0cb351a2772f05e55c1be18df4d0414f9a7251327dd` / `41c31d22b1a1b6fa3637d129fad3a311565d21bf45ad9f322bd550d595c157cd`. | root-2608-centered-sheet-rank-2026-08-15; exact arithmetic proof plus independent type/strict-boundary/cycle/replay/hash-seed audit; MISTAKE-384 scope repair |
+| `lrc_atomized_sheet_cover_constructive_locus_thm3402.out` | [PROVED + FINITE-EXACT + INDEPENDENTLY PROOF/EVENT-AUDITED; THM-3402] | For every sheet number, a full cover is equivalent to a cover by owner-labelled kernel-coset atoms whose complete affine gap cochain is exact and whose lifted open intervals meet. Repeated atoms of one owner are retained until gluing and then compress exactly to one consecutive phase mode; a base-star stores the complete cochain. The theorem reconstructs the full constructive source-time locus and keeps q-divisible core owners and the body-relative `B_q(U) subset A_C`, `B_q(U)-A_C subset Gamma_D` sidecars typed. Primary and independent engines check 407,566 and 50,063 atom tuples, strict endpoint hostiles, repeated-owner positives, q=6 correlation controls, and current MISTAKE-383 scope. It gives no ledger decrement or LRC(14). Primary script/output/semantic SHA-256: `b969212a5bfc918098a8e9366c14d6bbaa24729f90a5e8ea6d18e62f3e255bea` / `20a1ca6aec5a74f1cdc10227025429a6924d54d7d042d9b108ed573faa31a017` / `39aade82ac505a78e51d779e500acfc1d1b916c5350632311e9274b727e55aec`; independent audit script/output/semantic: `e346798c975d6980d5488e9089956ffd3e55de8919d11042008c60737b8f7131` / `5435b9463795b6f39163876e266c8d9bb7c0e98cdc06d2c15cc316290ac54396` / `bb394b88aa71ebe9a892c370a071227a3e016adb8d550163efc73dba70995ddc`. | root-2608-crouzeix-puzzle-2026-08-15; recovered branch mechanism with current clutter correction and two independent implementations |
+| `hadamard_core_descent_thm3403.out` | [PROVED + VERIFIED-EXACT + THM-3394 DEPENDENT COROLLARY; THM-3403] | Every normalized Hadamard matrix of order `4m` descends to a symmetric `2-(4m-1,2m,m)` binary design core `B` with `BB^T=m(I+J)`, exact binary maxdet `2m^(2m)`, inverse `-K^T/(2m)`, uniform cofactor magnitude, and one-bit determinant tariff `(2m-1)m^(2m-1)`. For odd `m`, both binary core matroids are the single full circuit and there are no closed quadruples beyond the sharp `H_4` boundary. For squarefree `m`, the standard Smith profiles of `H` and `B` follow self-containedly; every odd `p||m` gives a self-dual `[4m,2m]_p` row code. THM-3394's twelve prime quarter-orders therefore attain binary maxdet at predecessor orders `667,...,1963` and inherit all tiers. Normal/-O replay and independent algebra/Smith/parity/code audit pass. Script/output SHA-256: `4f75f8be55840747790d29f54bbf9d202a445dcbaf09c09bca38f385d01c4894` / `0a428ad558077b95f76724cd51f68d0a50a06b14a66400d50a4b37b1240e6322`. | root-2608-crouzeix-puzzle-2026-08-15; universal core descent plus twelve finite existence specializations |
+| `jc_factorized_danielewski_principal_parts_thm3404.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF-AUDITED; THM-3404] | For `R=k[v,X,Y]/(XY-F)` with aggregated factorization `F=c product_i f_i^(e_i)`, the exact oriented boundary module is `R_X/R=direct_sum_(q>=1)X^-q k[v]/(F^q)`, canonically split into CRT jet arms `k[v]/f_i^(qe_i)`. Thus `X^-q h` is regular iff `F^q|h`, and every homogeneous pole `b(v)X^-a` has a degree-one-generated clearing filtration `I_n=J^n`; principal-part classes retain cancellations invisible to separate valuations. The class group is `Z^r/Z(e_i)`. Finite dominant normal covers inject the old principal-part obstruction and kill only torsion divisor classes, so a finite normal factorial cover exists iff `r<=1`; the canonical common-root cover kills precisely cyclic torsion while sending packet degree `q` to `Nq`. Over `C`, a finite polynomial-plane cover of this type forces the one-factor pure-power model, not a new JC(2) case. Script/output/semantic SHA-256: `0a7a0c0372b1195bb61c4a9018169ef38977f97a4a78e045bee4fbae84b3cf10` / `d87195850315223f794ad3776301d3449f731fbdd11cbb0f19d64a3e48ce67ec` / `6459529a71a434aa0856d38d3d21bd11314a05dec449773331aac907543690c9`. | root-2608-q8-multiblocker-2026-08-15; factor/characteristic/cover/cancellation hostile audit |
+| `lrc_common_centre_gcd_boolean_twist_thm3405.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; THM-3405] | A vanishing THM-3398 mode cochain contracts to one scalar centre word `h_i=a(u_i/d) mod 2q`. Common sheet translation quotients `a` by `2d`, while the intrinsic mode divisibilities force `gcd(q,d)|a`; hence every prescribed active family has only the fixed-zero and order-two half-twist gauge classes. Up to common relabelling its exact cover test uses only `c_0=0` and `c_1=gcd(q,d)/(2qd)`, with every named active danger set required nonempty. Ambient pools must first choose a subfamily and recompute its gcd: exact q8 empty-owner and q9 gcd-change hostiles make both quantifiers sharp. The theorem concerns zero complete cochains, not arbitrary physical common-time covers, and gives no LRC decrement. Script/output/semantic SHA-256: `02d789a3f209a3a418ce234f7d124c99976c933efbb8a01d78ab3738e737686c` / `969e84720a05f48a6e9e03be971d9a63cc684e43f6eeae659a67c608bdd2e55b` / `8cf22bc02893c04f54c4ac7d70121b26b94e71fc0a596604421a42421fb54ab6`. | root-2608-crouzeix-puzzle-2026-08-15; exact arithmetic proof plus independent 9,360-cell half-grid and 1,327-family quantifier/parity/strict-endpoint audit |
+| `jc_affine_modification_transgression_thm3406.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVATION-AUDITED; THM-3406] | For `P=f(x)+g(x)z`, the polynomial plane is the affine modification `R=B[I/g]` of `B=K[P,x]=K[x,t]`, with `t=P-f` and `I=(g,t)`.  Its exact localized principal-part filtration is `Q_q=B/I^q`, transitions are multiplication by `g`, `Pi=colim Q_q`, and `Q_q/Q_(q-1)=B/(g,t^q)`; aggregated factors of `g` give CRT triangular jet arms.  In characteristic zero with `(P_x,g)=1`, the localized Bezout class satisfies `Dbar(eta)=0`; the injective connecting homomorphism, not `Dbar`, sends `eta` to the integral divergence class `mu`, identifying both cyclic modules with `K[T]/chi`.  The class has exact depth two, and the minimal polynomial `psi` modulo `rad(g)` gives the generally nonsplit support/thickness sequence `0 -> K[T]/(chi/psi) -> K[T]/chi -> K[T]/psi -> 0`.  Mixed `gt`, radical, duplicate-arm, and Frobenius hostiles are sharp.  No new JC(2) case follows. Script/output/semantic SHA-256: `ead69cdc09f73f0f4d897f9f381c21ee9fa19a908455f2884018f8416fd98723` / `ce508e7ab787e9ee385c9c335b789652ae8415fc45f8b6e30d81f75763720049` / `065f584f197ff000d9f42175ffa858de223ee42551b19d996a54da37cfcb88f7`. | root-2608-jc-affine-modification-2026-08-15; q8 derivation independently reconstructed with coefficient/complex/CRT/characteristic hostile audit |
+| `hadamard_core_multitoggle_response_thm3407.out` | [PROVED + VERIFIED-EXACT + THM-3394 DEPENDENT FINITE COROLLARY + INDEPENDENTLY AUDITED; THM-3407] | For any normalized order-`4m` Hadamard core, every distinct sparse toggle set has exact support compilers `det(I-DL^T/(2m))=det(I-L^TD/(2m))`, event compiler `det(I-Q/(2m))`, and a complete Boolean-Mobius packet of signed core minors. Two toggles have exactly the positive/negative plaquette shells with universal multiplicities. At three toggles, pair data determines the minor for odd plaquette parity, while one directed-cycle bit splits the two even-parity shells; all 64 abstract sign states and frozen order-8/12/20 pair-data hostiles pass. Rank-one rectangles obey `rho=1-2ab/N`, hence `ab<=N`; equality gives universal row/column swaps and closed-quadruple trades. A self-contained energy proof gives the sharp labelled Hadamard-core Hamming distance `N=4m`. Odd-quarter full circuits forbid closed quadruples but do not classify higher shells. Paley orders 4/8/12/20 pass direct/event/two-support and all-512-window Mobius controls; the pinned order-668 specialization has shell counts `49,555,629,432 / 49,407,259,284` and a `2x334` equality trade. Classical trade/switching context is cited without novelty claim. Script/output/semantic SHA-256: `83f38703b126cdc9bf9358bce20803ed890a1f19d685c7644e909c1a8df45e90` / `46b6b6176a23ebb0554c0359315f5584227576c753b5e3e1d1f6cc8ce1f1d31f` / `6333b6b8292916e6917b9d04c82bb7b4bf86d6fe2c9dfda45acfce5e3eb98a09`. | hadamard-multitoggle-2026-08-15; independent nonsymmetric H8 and Paley H4/H12 determinant/Mobius/shell/trade audit clean |
+| `lrc_fixed_zero_additive_order_duality_thm3408.out` | [PROVED STRUCTURAL + COMPUTER-ASSISTED PROVED FINITE ARITHMETIC + FINITE-EXACT q<=20000 + INDEPENDENTLY AUDITED; THM-3408] | At fixed source centre zero, quotient order `m` covers the exact fraction `alpha(m/gcd(m,q/n))` of every additive-order-`n` sheet stratum, and every family descends losslessly to the lcm of its quotient orders. An exact fractional-cover dual plus finite arithmetic shows any base-free cover by at most six owners must use order `22,33,44,46,50,or102`; exact rational saddle certificates exclude all 15,985 base-free `15<=q<=20000`, with sharp owner mass `4/25` on the 78 multiples of 102. This is not an all-q, mobile-centre, arbitrary-cochain, physical-time, or LRC(14) theorem. Script/output/semantic SHA-256: `d95d459078a8cf3be5a61c34a8b6b46aaa20e3269726f35b8a4cfc94b28d5be6` / `c2d55d60d646ea77891a44333cf7390534b7824cc085e0b441affc1bff570605` / `ab976baf418e2610aee1558eb249a160998426812fa96dddbc83b5a4a528541e`. | root-2608-crouzeix-puzzle-2026-08-15; independent fibre/cutoff/DFS/shared-prime/LP-type audit clean |
+| `lrc_q15_exceptional_positive_cochain_tariff_thm3409.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; THM-3409] | The unique q15 rank-six physical edge outside the capped zero-cochain slice, `U=(1,7,8,9,11,13)`, has exactly 30 physical cover cells, all strict-open of width `1/3696` and total measure `5/616`. Every cell has one maximal selected-mode partition. Common sheet translation gives two free 15-packet orbits exchanged by physical time reversal, with complete cochains `p` and `-p`. Every realization has exact complete tariff `(L1,Linf,L2^2)=(50,6,206)`; among all 1,296 reconstructing spanning trees the sharp tariff is `(10,3)`, attained by the owner-seven star. Thus the old witness norms are minima, but their unsigned values forget the two orbit states. There is no LRC decrement or uniform all-edge claim. Script/output/semantic SHA-256: `1d8528e187fa2804a61e3632dac4bb546473dd7c1e93749f6236f9ccb30f8243` / `ef1a0fa0f17411046f77c3c90fbe71009c6cddb14a91ae1df647e1a8ff2e1b20` / `80ecee351d7648a6a4c00f879a649d8fd4dbe87119929e5a5ded72d693c9859d`. | root-2608-crouzeix-puzzle-2026-08-15; independent no-import event/reversal/cochain/tariff/hash audit clean |
+| `hadamard_pairwise_independent_toggle_filter_thm3411.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF/REPLAY-AUDITED; THM-3411] | Averaging any four distinct candidate core toggles against an unbiased pairwise-independent sign law annihilates every determinant interaction of degree at most two.  The surviving response is the exact pairing of the four cubic and one quartic law moments with four signed `3x3` minors and one signed `4x4` minor.  THM-3396's demicube-polar geometry gives the sharp norm `max(linf,l1/3)`, attained by finite H8/H12 orthogonal arrays, and proves blindness iff all five high minors vanish.  Exact controls reconstruct all 26 OA vertices, exhaust 29,400 nonattacking order-eight packets (504 blind), audit 7,920 order-twelve packets, and separate the indispensable three- and four-minor sidecars.  This is an exact four-toggle expectation filter, not Hadamard completion or an existence/Grothendieck/Crouzeix transfer. Script/output/semantic SHA-256: `376c8d5bf5a9f68672bd680ea5df367b5eb752fb30228b2154abdfc37e4d3415` / `10fdb3d5cce9fd98e64b8ea78087ec4e66d06097a1c52af0bf518de0388ee93b` / `e702bae75e08cb5bba1e103a5eeb20f21ba540b3300edea9010f9f9c3bad9e02`. | root-2608-crouzeix-puzzle-2026-08-15; combined independent Walsh/demicube/hostile/replay/hash audit clean |
+| `jc_hamiltonian_prufer_torsion_thm3412.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVATION-AUDITED; THM-3412] | For characteristic-zero gradient-unimodular `P=f(x)+g(x)z`, the full differential on the affine-modification level `Q_q=B/(g,t)^q` is `nabla_q=g(f' partial_t-partial_x)+qg'`.  Its graded map is multiplication by `qg'`, while the actual finite cycle module is noncanonically `K[x]/gcd(g,g')^q`; over an algebraic closure it has one block of length `q(e_alpha-1)` per root, retaining collided roots separately.  Transitions give one Pruefer arm per root and zero maps on finite cokernels, so these arms are exactly the `K[P]`-torsion of `C_P`, with noncanonical split `C_P~=K[P]^(deg rad(g)) direct-sum K[x,gcd(g,g')^-1]/K[x]`.  Taking the kernel after the associated graded overcounts by `(q-1)deg(gcd(g,g'))`.  One-root, distinct, equal/unequal collision, and nonsplit controls pass; no JC(2) conclusion follows. Script/output/semantic SHA-256: `53954576637df1baf77bcd04308ca580a6b68e34800ce35a1d65d733aca08738` / `ea87ad0e7265499cfe9e38f50822415af61a3672e810d41db4c46c07d18511fe` / `88110e08603773bebcfd88e2fe224badfa014bf3950d12800e5f5fd65007c3ae`. | root-2608-jc-principal-part-persistence-2026-08-15; independent recurrence/descent/response/invariant/replay/hash audit clean |
+| `hadamard_strength_k_toggle_filtration_thm3413.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF/REPLAY-AUDITED; THM-3413] | For any `t` distinct Hadamard-core toggle positions and any strength-`k` Rademacher law, the normalized determinant bias is exactly its high-character moment packet paired with the upper Boolean-zeta transform of the signed event minors of orders greater than `k`.  One finite parity halfcube for each high character detects its coefficient, and Boolean inversion recovers every high minor; hence universal blindness is equivalent to vanishing of all signed minors above order `k`, even when selected rows or columns repeat.  Coordinatewise convolution raises every surviving moment to a power, so the response is an exact C-finite exponential sum; equal moment eigenvalues merge minor responses, while parity halfcubes are the sharp fixed/period-two boundary.  The companion checks abstract transform/inversion through `t=8`, all 697,004 parity-halfcube character moments through `t=9`, every one of the 511 nonempty position sets in the Paley order-four core by direct determinants, five larger Paley controls, the THM-3411 regression, and a four-eigenvalue order-four recurrence.  This is an exact OA interaction filtration, not OA/Hadamard completion or an existence/bound transfer. Script/output/semantic SHA-256: `dbdf97d32e4114abfd71393791ac8b956d4f1e46eef9a98ec14532107dd0a1a6` / `55bbcec2736c72dbcadac16450fe326317971990693ab47e91676b3e51ec4172` / `0db6229ea8922fb2f9c570103dd8aff7e30da424bcc196f29de19b54e2cab329`. | root-2608-crouzeix-puzzle-2026-08-15; combined independent zeta/converse/repetition/convolution/replay/hash audit clean |
+| `lrc_fixed_zero_six_owner_base_classification_thm3414.out` | [PROVED STRUCTURAL + COMPUTER-ASSISTED PROVED GLOBAL FINITE-PROFILE ATLAS + INDEPENDENTLY AUDITED; THM-3414] | For every `q>=2`, a fixed-source-centre-zero transverse cover by at most six cyclic-sheet owners exists iff one of `15,16,18,20,24` divides `q`.  The reverse implication is genuinely all-q: THM-3408's exhaustive exceptional order set feeds a finite-companion lemma `m=e gcd(m,d)|ed`, so exact profiles on strata `S_(q/d)` reduce arbitrary companion orders to finite rows plus the generic `7/44` bound.  Exact Fraction certificates prune 155 of 368 exceptional pairs, close 172 H-anchor groups and 9 exceptional-family groups, and a direct proper-divisor witness closes all 14,940 residual six-exceptional-owner multisets with worst minimum `1/2`; the smallest rational atlas margin is `13/6160`.  The five positive base covers pull back under dilation.  This is fixed-zero only, not an arbitrary common-centre, mobile-centre, physical-time, or LRC(14) theorem. Script/output/semantic/certificate SHA-256: `57147225890f0d99fd9c0f13d70992dca2ef6113e34554bdff0b6df68f9e63e4` / `48d2c34af30912f0d09cf34aad0a2e1e9d67fa6f781dc4383f06b2cab8369d91` / `681e1b1f8066b54970ed791f14867df708e9808c8a66dce034002f0404e66b3f` / `bc080056351c09c2a68eb27ac7574db3d273fe8de85e7509c1bcc3497e34fe25`. | root-2608-crouzeix-puzzle-2026-08-15; independent all-m/stratum/pair-loop/H-anchor/multiset/padding/dilation/scope audit plus normal/-O replay clean |
+| `hadamard_exchangeable_krawtchouk_shell_thm3417.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF/REPLAY-AUDITED; THM-3417] | For `t` distinct Hadamard-core toggle positions, averaging the determinant response on every fixed Hamming-weight shell is exactly the normalized binary Krawtchouk transform of the cardinality sums `A_s=sum_(|T|=s)C_T`.  Orthogonality recovers every `A_s`; a second triangular finite-difference inverse recovers every aggregate signed-minor shell `P_j=sum_(|S|=j)M_S`.  Symmetrized parity halfcubes give finite exchangeable strength-`k` detectors, so radial universal blindness is equivalent to `A_s=0` above `k`, equivalently `P_j=0` above `k`, but is strictly weaker than labelled blindness: an H8 packet has cancelling high responses `+/-1/128`.  Internal fixed shells converge under coordinatewise convolution to the alternating total-parity halfcube, and central Krawtchouk moments converge degreewise to probabilists' Hermite polynomials; this is only a chaos-basis parallel to arXiv:2608.11158v2, not a Grothendieck bound.  Exact controls check 819 orthogonality identities, both inverses through `t=9`, 90 symmetrized parity laws, all 511 H4 position sets, H4/H8 loss hostiles, H8 convolution, H12, duplicate-position XOR failure, and low Hermite formulas. Script/output/semantic SHA-256: `f5c2a4f4c3917d25bbcca078ccbb28348c8e512d7724a626d8c61099db90ba4c` / `d8753c02e75d4987cc74dc7cb28f0838d0d1715760a6da30f88d9342e0c4f2d5` / `d2471a54b365e186d605bdc5640434219013efe1cff787a18fbf66989c4e355b`. | hadamard-krawtchouk-shell-2026-08-15; independent immutable-file audit clean |

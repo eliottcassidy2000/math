@@ -1,0 +1,25 @@
+HADAMARD CORE DESCENT THM-3403: EXACT CONTROLS
+PIN 01-canon/theorems/THM-3394-twelve-formerly-missing-hadamard-orders-through-2000.md 63e3e841b609f2e9a38bbaa13dbbd665d6c05d7594fdb92351653207c3cadf86
+PIN 04-computation/hadamard_twelve_order_bank_thm3394.py 7ae931b3cf268550287bd0621b9b85b8ea167126fadfb90d57b5106d0f82fb2d
+PIN 04-computation/hadamard_twelve_order_signword_thm3394.b85 68f7ceebb67005bf1b968171f7e6897cc33bde68adbd63f14bd45edfeb7b3f06
+PIN 05-knowledge/results/hadamard_twelve_order_bank_thm3394.out d8efee90947015a7e6fc28a1685cc3d378357a85e1d4814953b32b17c5cd76a9
+Paley-I N=4 m=1 rank2(B)=2 closed=(1,1) detB=2 toggle=1 SNF(B)=(1^2,2) SNF(H)=(1,2^2,4)
+Paley-I N=8 m=2 rank2(B)=3 closed=(14,14) detB=32 toggle=24 SNF(B)=(1^3,2^3,4) SNF(H)=(1,2^3,4^3,8)
+Paley-I N=12 m=3 rank2(B)=10 closed=(0,0) detB=1458 toggle=1215 SNF(B)=(1^5,3^5,6) SNF(H)=(1,2^5,6^5,12)
+Paley-I N=20 m=5 rank2(B)=18 closed=(0,0) detB=19531250 toggle=17578125 SNF(B)=(1^9,5^9,10) SNF(H)=(1,2^9,10^9,20)
+HOSTILES N=4 closed=(1,1); N=8 rank2(B)=3 closed=(14,14)
+HOSTILE Sylvester N=16 SNF=(1,2^4,4^6,8^4,16), not standard
+THM-3394 N=668 m=167: D01(667)=2*167^334; Smith/code/full-circuit tiers APPLY
+THM-3394 N=716 m=179: D01(715)=2*179^358; Smith/code/full-circuit tiers APPLY
+THM-3394 N=892 m=223: D01(891)=2*223^446; Smith/code/full-circuit tiers APPLY
+THM-3394 N=1132 m=283: D01(1131)=2*283^566; Smith/code/full-circuit tiers APPLY
+THM-3394 N=1244 m=311: D01(1243)=2*311^622; Smith/code/full-circuit tiers APPLY
+THM-3394 N=1388 m=347: D01(1387)=2*347^694; Smith/code/full-circuit tiers APPLY
+THM-3394 N=1436 m=359: D01(1435)=2*359^718; Smith/code/full-circuit tiers APPLY
+THM-3394 N=1676 m=419: D01(1675)=2*419^838; Smith/code/full-circuit tiers APPLY
+THM-3394 N=1772 m=443: D01(1771)=2*443^886; Smith/code/full-circuit tiers APPLY
+THM-3394 N=1916 m=479: D01(1915)=2*479^958; Smith/code/full-circuit tiers APPLY
+THM-3394 N=1948 m=487: D01(1947)=2*487^974; Smith/code/full-circuit tiers APPLY
+THM-3394 N=1964 m=491: D01(1963)=2*491^982; Smith/code/full-circuit tiers APPLY
+FINITE CONTROLS ONLY; UNIVERSAL CLAIMS USE THE SELF-CONTAINED PROOF
+ALL CHECKS PASSED

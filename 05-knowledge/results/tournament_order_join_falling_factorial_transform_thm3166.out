@@ -1,0 +1,21 @@
+TOURNAMENT ORDER-JOIN FALLING-FACTORIAL TRANSFORM -- THM-3166 EXACT COMPANION
+status=PROVED+VERIFIED-EXACT;direct subset Hamilton-path/path-cover engine
+labelled_tournament_controls=1099;orders=1..5;transform_inverse=PASS;endpoint=PASS
+negative_colour_reciprocity_controls=7693;m=1..7;positive_binomial_sum=PASS
+negative_colour_inverse_controls=1099;Q(-1..-n)_to_backward_distribution=PASS
+SCC_factorization_controls=1099;full_profile_transform_product=PASS
+ordered_join_controls=5625;all ordered pairs of 75 labelled tournaments through order 4
+join_kernel=sum_k binom(a,k)binom(b,k)k!*x^(a+b-k);direct_profiles=PASS
+Laguerre_basis_controls=210;a<=b<=20;kernel=a!*x^b*L_a^(b-a)(-x)
+repeated_join_closed_form_controls=4275;75 seeds;r=1..5;all depths=PASS
+transform=Q_T(t)=sum_d pc_T(d)*(t)_d;Q_(A join B)=Q_A*Q_B
+negative_reciprocity=(-1)^n*Q_T(-m)=sum_pi binom(m+b_T(pi),n);m>=1
+negative_endpoint=Q_T(-1)=(-1)^n*H(T);negative_values_recover_full_backward_jet
+inverse=pc_T(d)=Delta^d Q_T(0)/d!;H(T)=Q_T(1)
+repeated=pc_(A^join r)(d)=1/d!*sum_j(-1)^(d-j)binom(d,j)Q_A(j)^r
+hostile_order_loss=K1_join_C3 and C3_join_K1 share profile (0, 3, 9, 6, 1)
+cyclic_boundary=Q_transitive3=(0, 0, 0, 1);Q_C3=(0, 2, 0, 1)
+scope=order-join/SCC chains;not cyclic substitution;not arbitrary tournament complexity collapse
+reproduction=python3 04-computation/tournament_order_join_falling_factorial_transform_thm3166.py
+source_sha256=5d38326311fc8fea8976f105348b131a106b7d0f2b912b50937f969152d310fd
+all_exact_controls=PASS

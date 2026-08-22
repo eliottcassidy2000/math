@@ -1,0 +1,14 @@
+THM-3341 VERIFIED-EXACT
+direct_search_t=0..1000000
+C_square_t=[0, 3, 20, 119, 696, 4059, 23660, 137903, 803760]
+C_triangular_t=[0]; Q_square_t=[]
+Q_triangular_t=[0, 6, 23, 221, 798, 7524, 27125, 255611, 921468]
+C_square_formula=t=(P_2k+P_(2k+1)-1)/2; sqrt=P_(2k+1)
+square_triangular_compiler=(M-,M+); adjacent_C_square_indices=(t-,t+)
+cannonball_alignment=(h,2R,N)=(24,70,49)
+gaussian_transplant_U_depths=[2, 19, 118, 695, 4058, 23659, 137902, 803759, 4684658]
+first_multi_square_fibre=t696; sqrt=985=5*197; parent_count=2
+c696_words=U^695 | UUUUUDADUDDU
+Q_triangular_norm17_seeds=(t,nu)=(0,2),(6,18); nu=2 mod16
+Q_triangular_grade_controls=[(6, 85, {5: 1, 17: 1}, 2), (23, 1105, {5: 1, 13: 1, 17: 1}, 4), (221, 98125, {5: 4, 157: 1}, 2)]
+ALL CHECKS PASSED

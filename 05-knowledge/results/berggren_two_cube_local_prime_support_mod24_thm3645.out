@@ -1,0 +1,14 @@
+== THM-3645 two-cube local-prime support and mod-24 cones ==
+support=(U=n-m,V=2m-n,T=2m+n);4m^2-n^2=V*T
+odd_prime_conditions=p|nV:(6/p)=1;p|T:(-2/p)=1;off_support:automatic
+p3_condition=m=n!=0(mod3);p2_condition=automatic
+complete_screen_rule=screen_limit>=n sees n,V,T/3 prime support
+n401=(candidates:8195,survivors:104,digest:2b1e24ba10e59deac190e1b4d20a0afe3792c138ecc84e06fa22e1671448ff8e)
+n997=(candidates:50507,survivors:481,digest:2e2fac8805cfe1fc62493d8d6c0254d7df2d078ec053eda0ac1aeba2b6e20ff0)
+residue_pairs=((5, 23), (23, 5));V_histogram={5: 238, 23: 243}
+first_new_denominator=431;local_431=((218, 431), (230, 431), (266, 431), (290, 431), (314, 431), (374, 431), (398, 431), (410, 431))
+fixed_screen_997_first_escape=(512, 1019);UVT=(507, 5, 2043);hidden_obstruction=1019
+semantic_sha256=3844db20b97ae505d83bd2131daabb9eec87bbfcdb725258f188299624e0b4b4
+CHECKS=1507224
+status=PROVED LOCAL-ALGEBRA + FINITE-EXACT;mod-prime screen only
+scope=no p-adic sufficiency,no Pell-orbit sufficiency,no infinite admissible-slope family

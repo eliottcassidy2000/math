@@ -1,0 +1,8 @@
+THM-3428 rough maximal-order finite boundary
+status=FINITE_EXACT_INDEPENDENT_BOUNDARY;all_odd_Q_lt512_spf_gt7;all_full_order_coeff_reps;at_most7;duplicate_masks_retained_by_coefficient;no_mixed_orders;no_LRC14_decrement
+universe=(moduli,composites,first,last)=(116, 23, 11, 509)
+search_counts=(scalar_feasible_profiles,nodes,branches,coefficient_cells,accidental_mask_duplicates)=(249, 26333, 646035, 29042, 9)
+positive_support_and_minimal_witnesses=((11, 6, ((6, 1, (1, 2, 3, 5, 13, 15)),)), (13, 7, ((7, 1, (1, 2, 3, 5, 15, 17, 19)),)), (23, 6, ((6, 1, (2, 7, 9, 11, 29, 31)),)), (29, 7, ((7, 1, (2, 5, 7, 9, 33, 35, 39)), (7, 2, (2, 5, 7, 8, 9, 11, 39)), (7, 3, (2, 5, 6, 7, 18, 33, 35)), (7, 4, (2, 5, 6, 7, 8, 11, 18)), (7, 5, (2, 6, 8, 10, 11, 18, 37)), (7, 6, (2, 5, 6, 8, 14, 18, 24)), (7, 7, (2, 8, 10, 12, 14, 18, 26)))))
+selected_hostiles=(Q,spf,even_coeffs,even_masks,odd_coeffs,odd_masks,even_size,odd_size,L,minrank)=((31, 31, 15, 15, 15, 15, 5, 4, 3, None), (121, 11, 55, 55, 55, 55, 17, 18, 17, None), (143, 11, 60, 60, 60, 60, 21, 20, 19, None), (169, 13, 78, 78, 78, 78, 25, 24, 23, None), (323, 17, 144, 144, 144, 144, 47, 46, 45, None), (493, 17, 224, 224, 224, 224, 71, 70, 69, None), (509, 509, 254, 254, 254, 254, 73, 72, 71, None))
+semantic_sha256=b61db8412c1a45419cb4be595f75c802461472f24525b017b3d50d01af9f35ef
+scope=finite_boundary_for_THM3428_only;analytic_Q_ge512_theorem_separate;support_11,13,23,29_has_full_order_minranks_6,7,6,7;no_composite_positive;composite_mixed_order_rank7_open

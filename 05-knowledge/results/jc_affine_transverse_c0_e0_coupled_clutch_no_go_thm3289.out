@@ -1,0 +1,15 @@
+affine transverse C0-E0 coupled clutch critical no-go scout
+dependency_hash_checks=6
+localized=raw-R2=(Vp*y/2)*R1;resultant=V^3*K40;unique_degree97=128*C*V^6*d*k^2;affine_lead=128*d^2*k^2*V_lead^6
+T_boundary_rows=((3, 8), (4, 11), (5, 14), (6, 17));lead=16*m*(m-1)/(m-2)*v^3*(k-A_prime*c);gate=finite_clutch
+S_q3=(8/3)*v1^2*(2c-k)*(6c*v1^2+3k*v1^2+4v2);live_k=-2c-4v2/(3v1^2)
+S_q4_slope=(128/3)*v1^2*(3c*v1^2+v2);slope_zero=>k=2c=>finite_clutch_failure;live_d=(15v1^3-18v1v3+16v2^2-30c^2v1^4-10cv1^2v2)/(30v1^3)
+S_post_walls=(deg(q5_num),deg(q6_num))=(3,4)
+case=4111;S_degrees=(slope,q5core,q5full,q6)=(1,2,3,4);PRS_full=((4, 3), (3, 2), (2, 1), (1, 0));PRS_live=((4, 2), (2, 1), (1, 0));gcds=(0,0,0);wall_digest=92c368a8101e6ccebc69c4961bda10b41a85dd3f367bdbfeb7ee04747421c319
+case=4111;control=(C,Eprime)=(1+x,1);finite_gate=unit_mod_ST;degrees=(K,boundary,H)=(97,44,53);H_squarefree_boundary_disjoint=1;control_digest=ae98818930edc795b9a7a73a957ddf2f2e70dee40695bb3ea489c9a8c16780d4
+case=3211;S_degrees=(slope,q5core,q5full,q6)=(1,2,3,4);PRS_full=((4, 3), (3, 2), (2, 1), (1, 0));PRS_live=((4, 2), (2, 1), (1, 0));gcds=(0,0,0);wall_digest=f7268035c556bfdc85afd670405986ddbe6839d2ddfb3a13900cba2baabc901a
+case=3211;control=(C,Eprime)=(1+x,1);finite_gate=unit_mod_ST;degrees=(K,boundary,H)=(97,44,53);H_squarefree_boundary_disjoint=1;control_digest=621f57adfa31900c88fa44d0443d9baf81d199a201a4b9963d99914d134b1d21
+case_digests=(('92c368a8101e6ccebc69c4961bda10b41a85dd3f367bdbfeb7ee04747421c319', 'ae98818930edc795b9a7a73a957ddf2f2e70dee40695bb3ea489c9a8c16780d4'), ('f7268035c556bfdc85afd670405986ddbe6839d2ddfb3a13900cba2baabc901a', '621f57adfa31900c88fa44d0443d9baf81d199a201a4b9963d99914d134b1d21'))
+consequence=d*k!=0_and_finite_gate_passes=>degH=53,ord_S(H)<=3,no_T_escape,off_owner_multiplicity>=50
+scope=all_affine_C0_E0_with_B=1;d=0_inherited_THM3212;k=0_inherited_THM3279;not_inverse_cover_not_JC2
+source_ast=(assert_nodes=0,float_literals=0)

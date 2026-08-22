@@ -1,0 +1,23 @@
+RULE-B R=512 D0=5 [cellwise-none] start
+  i=   0 d= 311 sig1=    1 headbits=   1 maxbits= 507 junkbits= 489 ov0=0 ov1=0 t=    0.1s
+  i=  32 d= 330 sig1=    5 headbits=   1 maxbits= 502 junkbits= 441 ov0=0 ov1=0 t=    3.2s
+  i=  64 d= 349 sig1=   13 headbits=   1 maxbits= 425 junkbits= 356 ov0=0 ov1=0 t=    6.3s
+  i=  96 d= 368 sig1=   13 headbits=   1 maxbits= 274 junkbits= 223 ov0=0 ov1=0 t=    9.7s
+  i= 128 d= 387 sig1=   13 headbits=   1 maxbits= 113 junkbits=  98 ov0=0 ov1=0 t=   12.8s
+  i= 160 d= 406 sig1=   45 headbits=   1 maxbits=  49 junkbits=  44 ov0=0 ov1=0 t=   16.6s
+  i= 192 d= 425 sig1=   77 headbits=   1 maxbits=  29 junkbits=  28 ov0=0 ov1=0 t=   20.7s
+  i= 224 d= 445 sig1=  109 headbits=   1 maxbits=  22 junkbits=  21 ov0=0 ov1=0 t=   25.4s
+  i= 256 d= 464 sig1=  141 headbits=   1 maxbits=  14 junkbits=  14 ov0=0 ov1=0 t=   30.8s
+  i= 288 d= 483 sig1=  173 headbits=   1 maxbits=   6 junkbits=   6 ov0=0 ov1=0 t=   36.8s
+  i= 320 d= 502 sig1=  189 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=   43.4s
+  i= 352 d= 521 sig1=  157 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=   50.6s
+  i= 384 d= 540 sig1=  125 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=   58.6s
+  i= 416 d= 559 sig1=   93 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=   66.8s
+  i= 448 d= 579 sig1=   61 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=   76.5s
+  i= 480 d= 598 sig1=   29 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=   87.0s
+  i= 509 d= 615 sig1=    0 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=   97.8s
+  i= 510 d= 616 sig1=   -1 headbits=   1 maxbits=   1 junkbits=   0 ov0=0 ov1=0 t=   98.2s
+  i= 511 d= 616 sig1=    0 headbits=   0 maxbits=   0 junkbits=   0 ov0=0 ov1=0 t=   98.5s
+RULE-B R=512 D0=5 [cellwise-none] CLOSED VERIFIED: {'closed': True, 'adm': True, 'identity': True, 'profile_ok': True, 'elapsed': 197.4}
+witness: /tmp/math-wt-boxeph-multifront/04-computation/amm12592_witness_R512_ruleB_D0_5_boxeph.json
+trace: /tmp/math-wt-boxeph-multifront/05-knowledge/results/amm12592_ruleB_trace_R512_D0_5_cellwise-none_boxeph.json

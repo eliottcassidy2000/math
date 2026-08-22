@@ -1,0 +1,41 @@
+{
+ "stage": "witness4",
+ "pass": 17,
+ "fail": 0,
+ "fails": [],
+ "text": [
+  "==========================================================================",
+  "STAGE witness4 -- (256, D0=0) desc1 witness: FOURTH implementation",
+  "==========================================================================",
+  "  [PASS] sha256 matches record 5950bd42...  -- 5950bd4287d499221609bfaf (181762 bytes)",
+  "  [PASS] R = 256, D0 = 0  -- 256 0",
+  "  [PASS] witness declares profile floor_gamma_star(R+i)+D0; recomputed fresh per-n (binary search on 5^m <=> phi^(2n))  -- d_0=153 d_255=305",
+  "  [PASS] profile increments in {0,1} (Beatty word)",
+  "  [PASS] main-term closed form: sum_t (C(d-1,t)-C(d-1,t-1)) x^(d-t)(1-x)^t == 2x-1 for ALL 152 distinct degrees",
+  "  [PASS] last-row main term: -sum_t C(d,t) x^(d-t)(1-x)^t == -1  -- d=305",
+  "  [PASS] all 58837 cells admissible: |delta_t| <= C(d_i,t)",
+  "  [PASS] all cells parity delta_t == C(d_i,t) (mod 2)",
+  "  [PASS] transportation point f = (C-delta)/2 integer in [0, C] everywhere  -- boundary-saturated 4973 (8.45%)",
+  "  [PASS] cell count == 58837  -- 58837",
+  "  [PASS] boundary-saturated count == 4973 (E3/prior-referee value)  -- 4973",
+  "  [PASS] EPOCH IDENTITY sum_i x^i Delta_i == (1-x)^(R-1): coefficient-exact (main closed form + sparse corrections; my own poly arithmetic)",
+  "  [PASS] identity at x = 2, definition-level (all 256 rows, every cell)",
+  "  [PASS] identity at x = 3, definition-level (all 256 rows, every cell)",
+  "  [PASS] identity at x = -1, definition-level (all 256 rows, every cell)",
+  "  [PASS] identity at x = 5, definition-level (all 256 rows, every cell)",
+  "  [PASS] identity at x = -7, definition-level (all 256 rows, every cell)"
+ ],
+ "extra": {
+  "sha256": "5950bd4287d499221609bfaf7f42b6200637a1ede108c9086173a6b41fb60709",
+  "ncells": 58837,
+  "nsat": 4973,
+  "points": [
+   2,
+   3,
+   -1,
+   5,
+   -7
+  ],
+  "points_ok": true
+ }
+}

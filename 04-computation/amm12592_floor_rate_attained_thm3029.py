@@ -1,6 +1,6 @@
 """Referee for THM-3029: the gamma* floor profile CLOSES at R = 8, 16, 32."""
-import sys
-sys.path.insert(0, '/tmp/math-wt-coinC2/04-computation')
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # repo 04-computation (was a deleted session worktree)
 import amm12592_gamma35_beam_deathstar as beam
 from liftrate import prof, lift_block, admissible, epoch_identity, eff
 from gammac import gamma_c, GSTAR

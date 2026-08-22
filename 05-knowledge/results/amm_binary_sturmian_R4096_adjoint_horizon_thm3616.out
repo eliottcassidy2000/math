@@ -1,0 +1,14 @@
+== THM-3616 AMM binary-Sturmian R=4096 adjoint horizon ==
+THM3601_sha256_lf=theorem:e7574bd0a2fbd75d71c9fbb4dcdfc9eef9023a0cc5dcbae3c2c1e2fc0be0447d|script:071db60cd42ce1d1fff7c693e2b2baeeb782046cd93169401636022da06b0205|output:51caae743b5fa55a4c30840baf83232ddd62626c16607179c2e1b9f129d79dc8
+R2048_control=D0:37|death:508|first_negative:196|q:195|profile:(1261, 1565, 2485)
+R2048_boundary=signs:(+,-)|bits:(1211, 1212)|sha256:f38b3838b74bc6ab557fd6919efcb42901350073745abd16d95d9f4fe7d2ab95|active_cells:48828
+R4096_result=D0:88|death:1014|first_negative:383|q:382|profile:(2537, 3143, 4986)
+R4096_boundary=signs:(+,-)|bits:(2452, 2448)|sha256:b92b6be9ea381a4a1789f02765a561bd93b115235351aa60432ad9e50d6cc728|active_cells:199396|active_sha256:fb837984d57ac02681619ae75c9c00a53918f85a9b7bf0517b21dec5682c2d64
+top_distance_controls=R2048_scan:682/width:683|R4096_scan:1365/width:1366
+golden_discrepancy=q/R-phi^-2/4=(-577+256*sqrt(5))/2048<0|square_gap:5249
+monotone_finite_scale_golden_sharpening=FAILS|abs_error_R4096-abs_error_R2048=1/512>0
+semantic_sha256=4cd0b160559ea7b6820b90f7ccb204d76206d3271517b6e6afa06e5dce6a5d9a
+script_sha256_lf=c6753be05870700747aadb3f43e41a24e80f84f37b79e07fe70960f71a9e864a
+status=FINITE-EXACT+VERIFIED-EXACT;compressed positive-integer adjoint wall
+scope=R2048/D0=37 control and R4096/D0=88 fixed Rule A;no alternative feasibility/asymptotic limit/uniform extractor/Cstar
+PASS

@@ -1,0 +1,26 @@
+THM-3478 FACTORIAL DUAL SEVEN-EXIT BLOCK CLOSURE EXACT AUDIT
+fixed_dependencies=factorial_seven_exit_first_flag_2400_thm3201.py:1cf067eb3cc8da29e51ee8f560f4100fb66a4b9684a2da8b1f7ef14d380e4171;factorial_seven_exit_first_flag_2400_independent_audit_thm3201.py:afe3ec56c7efe99ff4a09c1af856b4e144312d48ec45e729d063a5fd83b0f0b0
+divisor_dependencies=factorial_all_divisor_digit_pair_compiler_thm3475.py:834d0913eb5cd5b15684c7fb88af60e42d2a6ef36feb821e261c0498f55027ab;factorial_all_divisor_digit_pair_compiler_independent_audit_thm3475.py:9330ca1b991b9d5875779b9975fc88701ab36855a6527e1865e821e6cd3ea665
+fixed_mode=both implementations_completed=('primary', 'independent')
+fixed_universe=2501<=d<=2600 all seven-exit residuals after ordered filters
+exit_order=(d prime,d-1 prime_power,d-2 prime,d-3 prime,d-4 prime,d-5 prime,d-6 prime)
+fixed_counts=(89, 78, 69, 60, 52, 44, 38) residual_count=38 residuals=(2501, 2502, 2510, 2511, 2512, 2513, 2514, 2515, 2516, 2517, 2518, 2519, 2520, 2528, 2529, 2530, 2538, 2564, 2565, 2566, 2567, 2568, 2569, 2570, 2571, 2572, 2573, 2574, 2575, 2576, 2577, 2578, 2586, 2587, 2588, 2589, 2590, 2600)
+fixed_bank=(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47) chunks=((2501, 2516), (2517, 2565), (2566, 2575), (2576, 2600)) workers=4
+fixed_schema=tuple((d,tuple((prime,sorted_post_intersection),...)),...)
+fixed_serialization=json.dumps(payload,separators=(',',':'),sort_keys=True).encode('ascii')
+fixed_chunk_semantic_sha256=('d8ddf55e638c503d653927422899c4bddc381ac2bdcc0c53c9248bf161679da6', 'f3575666ce9261b9186bbfe6bcc961dcd1600c484fe36e35e310084c45e99b32', 'e58d91f4c2637b0555e079f5abc47703049f29e2c7e9258f792157d4df77e1cb', '8ec99dd199f66f764a163e8fb52d562b151a939a124e5a1efc8c4c6404fe95f2')
+fixed_global_semantic_sha256=28bdc29a6dadfc941ccab7b8eddafd77bd6bbcec9a2574455d4ba3a6dd439b9f
+fixed_killers=((2501, 5), (2502, 5), (2510, 11), (2511, 7), (2512, 7), (2513, 3), (2514, 7), (2515, 3), (2516, 7), (2517, 3), (2518, 7), (2519, 3), (2520, 7), (2528, 7), (2529, 3), (2530, 7), (2538, 13), (2564, 13), (2565, 2), (2566, 13), (2567, 3), (2568, 17), (2569, 2), (2570, 13), (2571, 3), (2572, 17), (2573, 3), (2574, 13), (2575, 3), (2576, 13), (2577, 2), (2578, 13), (2586, 13), (2587, 3), (2588, 13), (2589, 3), (2590, 13), (2600, 7))
+fixed_killer_histogram=((2, 3), (3, 11), (5, 2), (7, 9), (11, 1), (13, 10), (17, 2)) survivors=()
+fixed_positive_controls=(('independent', 'planted(v+1) and planted(v), degree 1 retained'), ('primary', 'planted (v+1) and v factors retain degree one'))
+fixed_status=FINITE-EXACT dual coefficient replay; not a structural all-height theorem
+extension_universe=d=2601..2606 all six are seven-exit residuals
+extension_schema=tuple((d,tuple((p,tuple((slope_num,slope_den,capacity),...),sorted_post),...),sorted_final),...)
+extension_serialization=json.dumps(payload,separators=(',',':'),sort_keys=True).encode('ascii')
+extension_dual_formula_records_agree=True semantic_sha256=602f0fac54c487114457683a3264d2a095a7f048f9a0b3769332d3ead0e61289
+extension_killers=((2601, 13), (2602, 17), (2603, 1301), (2604, 137), (2605, 7)) survivor_boundary=((2606, (521, 1042, 1563, 2084)),)
+extension_status=PROVED THM-3475 compiler + FINITE-EXACT six-row application
+consequence=every exact {0,1,2} quadratic window 1<=r<=2603 is nonzero in at least one slot
+first_unclosed_by_this_block=r=2604 d=2606 divisor_degrees=(521,1042,1563,2084)
+reference_runtime=primary_about_6300s;independent_about_4020s;each_4_workers;extension_under_1s_on_session_host
+STATUS=PASS

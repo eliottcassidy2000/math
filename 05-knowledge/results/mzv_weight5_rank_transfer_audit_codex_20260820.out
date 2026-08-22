@@ -1,0 +1,18 @@
+Zagier recurrence / Hoffman {2,3}-word counts PASS through weight 24
+d_0,...,d_12 = [1, 0, 1, 1, 1, 2, 2, 3, 4, 5, 7, 9, 12]
+weight-five Hoffman words = [(2, 3), (3, 2)]
+predicted dimensions after quotienting by zeta(2), weights 0..12 = [1, 0, 0, 1, 0, 1, 1, 1, 2, 2, 3, 4, 5]
+in particular, the weight-five finite/symmetric quotient has dimension 1, not 2
+weight-five change determinant = 5/2
+cleared integral Smith factors = [1, 10]; only lattice primes 2 and 5 occur
+reported exceptional candidate p0=543606522303979 is prime
+p0 cannot come from the canonical weight-five 2x2 basis change
+certified announced denominator-p0 gap = [4.738833008693742176712550537213042682727453320921831978906795922e-17 +/- 4.95e-81]
+this excludes exactly one denominator-p0 rational, not rationality
+single-exception Smith hostile PASS: Q-rank 2, mod-p0 rank 1
+
+TYPE CONCLUSION
+classical d_5=2 iff zeta(5)/(zeta(2)zeta(3)) is irrational
+formal/motivic rank 2 supplies the source; real period injectivity is the missing map
+finite/symmetric and p-adic realizations kill the zeta(2)zeta(3) column
+a mod-p exceptional-prime theorem alone supplies neither the real period map nor its injectivity

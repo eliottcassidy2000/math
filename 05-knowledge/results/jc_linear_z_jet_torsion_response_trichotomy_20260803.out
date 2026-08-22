@@ -1,0 +1,20 @@
+Linear-in-z jet torsion and rational-primitive trichotomy audit
+scope=GENERIC-SYMBOLIC_plus_FINITE-EXACT_HOSTILES;not_JC2_closure
+python=3.13.14
+sympy=1.14.0
+assertion_nodes=0;float_literals=0
+symbolic r=2 phi=a*x**2 + x: F=1; mu_rep=6*(a + z)
+symbolic r=3 phi=a*x**2 + x: F=-2*(T*a - 1); mu_rep=2*(-2*a**2*x + 5*a + 6*x*z)
+symbolic r=4 phi=a*x**2 + x: F=3*(3*T**2*a**2 - T*a + 1); mu_rep=2*(4*a**3*x**2 - 4*a**2*x + 7*a + 10*x**2*z)
+symbolic r=5 phi=a*x**3 + x: F=-4*(2*T**2*a - 1); mu_rep=3*x*(-3*a**2*x**2 + 8*a + 10*x**2*z)
+hostile r=2 lambda=-3 phi=5*x**4 - 3*x**2 + 2*x: F=1
+hostile r=3 lambda=2 phi=-2*x**3 + 4*x**2 - x: F=-2*(4*T - 1)
+hostile r=4 lambda=-2 phi=2*x**6 - 5*x**3 + x**2 + 3*x: F=(11*T**2 - 3*T + 27)/9
+hostile r=5 lambda=3 phi=-4*x**4 + 3*x**3 - x**2 + 2*x: F=-(T + 2)*(7*T**2 + 4*T - 16)/8
+hostile r=6 lambda=-1 phi=x**8 + 7*x**5 + 5*x**2 - 2*x: F=5*(22099*T**4 - 5000*T**3 + 1200*T**2 - 320*T + 256)/256
+hostile r=7 lambda=4 phi=-x**6 + 3*x**4 - 2*x**3 + x: F=-6*(175*T**5 - 40*T**4 + 9*T**3 - 4*T**2 - 1)
+multi-root r=2 s=2 lambda=1 a=1: mu_rep=2*z*(10*x**2 + 10*x + 3);residues=(-2,2)
+multi-root r=2 s=3 lambda=-2 a=3: mu_rep=-12*z*(3*x + 1)*(45*x**2 + 12*x + 1);residues=(9/2,-9/2)
+multi-root r=4 s=2 lambda=5 a=-1: mu_rep=10*x**2*z*(21*x**2 - 28*x + 10);residues=(4/5,-4/5)
+source_lf_sha256=f1ef6ddf8c3e4fa4ab488e582eeb715335f8b1747c4f8bf918c677e6d72fee0b
+PASS: 4 symbolic families, 6 exact hostile jets, and 3 multi-root rows

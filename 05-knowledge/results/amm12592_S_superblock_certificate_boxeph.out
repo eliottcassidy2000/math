@@ -1,0 +1,18 @@
+[PASS] R=128 D0=4  i0=31 d=99 m=7 |j0|=96 (=d-3)  k_end=48 (junk 33, debt 48, budget 95)  capture<=79 (actual 79, pred 79)  freeze slacks {'d1_extreme': None, 'd1_mate': 7, 'd0': 4}  SB margin 58 bits  (0.0s)
+[PASS] R=128 D0=8  i0=28 d=101 m=7 |j0|=100 (=d-1)  k_end=50 (junk 35, debt 50, budget 98)  capture<=78 (actual 78, pred 78)  freeze slacks {'d1_extreme': None, 'd1_mate': 6, 'd0': 4}  SB margin 60 bits  (0.0s)
+[PASS] R=256 D0=8  i0=60 d=196 m=12 |j0|=186 (=d-10)  k_end=93 (junk 72, debt 93, budget 194)  capture<=153 (actual 153, pred 153)  freeze slacks {'d1_extreme': 8, 'd1_mate': 3, 'd0': None}  SB margin 124 bits  (0.0s)
+[PASS] R=256 D0=16  i0=55 d=201 m=12 |j0|=190 (=d-11)  k_end=95 (junk 75, debt 95, budget 199)  capture<=150 (actual 150, pred 150)  freeze slacks {'d1_extreme': 8, 'd1_mate': 3, 'd0': None}  SB margin 128 bits  (0.0s)
+[PASS] R=512 D0=16  i0=120 d=393 m=18 |j0|=394 (=d+1)  k_end=197 (junk 151, debt 197, budget 390)  capture<=317 (actual 317, pred 317)  freeze slacks {'d1_extreme': 11, 'd1_mate': 5, 'd0': None}  SB margin 280 bits  (0.0s)
+[PASS] R=512 D0=32  i0=110 d=403 m=18 |j0|=406 (=d+3)  k_end=203 (junk 154, debt 203, budget 400)  capture<=313 (actual 313, pred 313)  freeze slacks {'d1_extreme': 9, 'd1_mate': 4, 'd0': None}  SB margin 288 bits  (0.0s)
+[PASS] R=1024 D0=32  i0=238 d=786 m=27 |j0|=772 (=d-14)  k_end=386 (junk 306, debt 386, budget 784)  capture<=624 (actual 624, pred 624)  freeze slacks {'d1_extreme': 9, 'd1_mate': 3, 'd0': None}  SB margin 603 bits  (0.0s)
+[PASS] R=1024 D0=64  i0=218 d=806 m=28 |j0|=796 (=d-10)  k_end=398 (junk 313, debt 398, budget 804)  capture<=616 (actual 616, pred 616)  freeze slacks {'d1_extreme': 16, 'd1_mate': 8, 'd0': None}  SB margin 621 bits  (0.0s)
+[PASS] R=2048 D0=64  i0=476 d=1573 m=39 |j0|=1570 (=d-3)  k_end=785 (junk 616, debt 785, budget 1570)  capture<=1261 (actual 1261, pred 1261)  freeze slacks {'d1_extreme': None, 'd1_mate': 10, 'd0': 6}  SB margin 1292 bits  (0.2s)
+[PASS] R=2048 D0=128  i0=436 d=1613 m=39 |j0|=1602 (=d-11)  k_end=801 (junk 633, debt 801, budget 1610)  capture<=1237 (actual 1237, pred 1237)  freeze slacks {'d1_extreme': 11, 'd1_mate': 5, 'd0': 4}  SB margin 1329 bits  (0.2s)
+[PASS] R=4096 D0=128  i0=951 d=3146 m=57 |j0|=3136 (=d-10)  k_end=1568 (junk 1238, debt 1568, budget 3143)  capture<=2519 (actual 2519, pred 2519)  freeze slacks {'d1_extreme': 12, 'd1_mate': 5, 'd0': 5}  SB margin 2708 bits  (1.3s)
+[PASS] R=4096 D0=256  i0=871 d=3226 m=58 |j0|=3230 (=d+4)  k_end=1615 (junk 1267, debt 1615, budget 3223)  capture<=2486 (actual 2486, pred 2486)  freeze slacks {'d1_extreme': 12, 'd1_mate': 6, 'd0': 5}  SB margin 2780 bits  (1.4s)
+[PASS] R=8192 D0=256  i0=1902 d=6292 m=81 |j0|=6276 (=d-16)  k_end=3138 (junk 2475, debt 3138, budget 6288)  capture<=5040 (actual 5040, pred 5040)  freeze slacks {'d1_extreme': 13, 'd1_mate': 6, 'd0': 5}  SB margin 5632 bits  (6.6s)
+[PASS] R=8192 D0=512  i0=1741 d=6451 m=83 |j0|=6446 (=d-5)  k_end=3223 (junk 2538, debt 3223, budget 6449)  capture<=4964 (actual 4964, pred 4964)  freeze slacks {'d1_extreme': 14, 'd1_mate': 6, 'd0': None}  SB margin 5777 bits  (6.8s)
+[PASS] R=16384 D0=512  i0=3802 d=12582 m=118 |j0|=12576 (=d-6)  k_end=6288 (junk 4958, debt 6288, budget 12580)  capture<=10090 (actual 10090, pred 10090)  freeze slacks {'d1_extreme': 18, 'd1_mate': 10, 'd0': None}  SB margin 11573 bits  (44.0s)
+[PASS] R=16384 D0=1024  i0=3482 d=12903 m=119 |j0|=12910 (=d+7)  k_end=6455 (junk 5082, debt 6455, budget 12900)  capture<=9937 (actual 9937, pred 9937)  freeze slacks {'d1_extreme': 13, 'd1_mate': 6, 'd0': None}  SB margin 11878 bits  (44.1s)
+
+16/16 certificates PASS -> /tmp/math-wt-boxeph-multifront/05-knowledge/results/amm12592_S_superblock_certificate_boxeph.json

@@ -1,0 +1,6 @@
+LRC H HIGH-CHANNEL FLOOR -- INDEPENDENT HOSTILE AUDIT
+literal_arc_controls=11448
+finite_universe=6<=p<q<=300;high_level_pairs=22168;edge_orientation_checks=399024;exception_checks=118
+moment_recursion_hostile_controls=50000
+exceptional_ray_formula_controls=1000;sharp_g2=2030/280393
+semantic_sha256=eaa51b19811f3be99f56df50a059776f8cb6df5d54dbca73d1297e7ae3632813

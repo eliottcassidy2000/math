@@ -9,66 +9,1930 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-356 (2026-08-02, THM-3252/3253 Beukers specialization) -- functional nonsplitting was confused with an ordinary independent differential system
+## MISTAKE-440 (2026-08-21, first THM-3682 draft) -- moving a current-scale pure-word role inside a target-fixed delayed word
 
-- **What was claimed:** THM-3252 and THM-3253 proved that their non-pure
-  affine-coordinate cubic/binomial periods avoid `0` and `1/2`.  The argument
-  first proved that the selected scalar period packet `F` or `G` is not in the
-  rational span of the endpoint exponentials, observed that the full augmented
-  primitive system is ordinary at `s=1`, and then invoked Beukers Corollary 1.4.
-- **First failed implication:** Beukers requires the linearly independent
-  functions to occur in a homogeneous first-order system ordinary at the
-  specialization point.  The full primitive vector is ordinary but may be
-  functionally dependent; the selected independent list containing `F` or `G`
-  was not shown derivative-closed.  Passing from the former to a basis for the
-  latter may create an apparent singularity at one.  The minimal warning is
-  `(s-1,exp(s))`: the pair is independent over `Qbar(s)`, but its first value
-  vanishes, and the minimal scalar equation for `s-1` is singular at one.
-- **Repair / strongest survivor:** THM-3252/3253 are downgraded to **PROVED
-  STRUCTURAL + VERIFIED-EXACT / PERIOD-VALUE EXCLUSION CONDITIONAL**.  Their
-  exact primitive connections, critical-value spectra, rational splitting
-  criteria, collision audits, Bessel/Frobenius coordinate mismatch, and
-  functional nonsplitting all survive.  Their remaining gate is an independent
-  derivative-closed E-function basis ordinary at one containing the scalar
-  packet and required exponentials, or an equivalent regular specialization
-  theorem for the full relation module.
-- **Scope audit:** THM-3250 and THM-3251 are unaffected: their surviving
-  primitive blocks together with the distinct exponentials are proved jointly
-  independent and already form the displayed derivative-closed system with
-  denominator `s`.  THM-3116, THM-3202, and both the rank-deficient and
-  full-rank branches of THM-3203 likewise explicitly prove independence of the
-  exact displayed system vector before applying Beukers; the full-rank theorem
-  already records and avoids this very apparent-singularity shortcut.
-- **Subsequent discharge:** THM-3280 proves the non-pure cyclic module simple
-  with scalar endomorphism ring for `3<=d<=9`.  It classifies the marked
-  packets as independent or proportional copies; exact splitting makes a
-  proportional difference a constant critical-exponential particular.  This
-  constructs the required independent ordinary vector, restores every cubic,
-  and proves affine-binomial period exclusion through degree nine.  The
-  correction remains active for `d>=10`.
+- **What failed:** the first role-to-target leak draft wrote the original
+  THM-2365 successor row as `S(s,0)=int w_s(y)d(y-s/13)dy` by treating the
+  redundant danger factor of a pure terminal word as a present factor.
+- **Minimal witness / first failed implication:** the actual handoff has
+  `F_(s,0)(x)=E_(s,0)(x)Q(Rx)` with `13|R`.  Its word factor transforms as
+  `d(Rc_a x-Rs/13)=d(Rc_a x)`, so the target action fixes it exactly.  The
+  pushforward contains `d(Ry)`, not `d(y-s/13)`.  Thus the forced
+  factor-coloured role mode does not type the original delayed target row.
+- **Repair / strongest survivor:** the normalized Fourier reverse-triangle
+  tariff, `121 rho^2/2028` role floor, sharp cancellation hostile, and
+  `1/2028`, `1/26364` energy invoices are correct.  THM-3682 now realizes
+  them on an explicitly constructed current-scale present-`Q` auxiliary
+  table.  Transport to the original handoff requires a target/word-action
+  intertwiner or Bockstein sidecar.  The reusable warning is: a factor may be
+  movable before transport but neutral after a clock divisible by the target
+  modulus; always type the scale before composing character actions.
 
-## MISTAKE-354 (2026-08-02, THM-3210 located-scale quantifier bridge) -- analytic monotonicity was transferred to a selected-cell exact overlap
+## MISTAKE-439 (2026-08-21, THM-3676 audit) -- disjointness from the blind space was mislabeled as the sharp detector premise
 
-- **What was claimed:** the first pre-routing version of
-  `THM-3210-reflected-midratio-primitive-floor-and-g6-closure` checked the
-  `150` nonpositive analytic invoices by an exact body-safe-cell scan only at
-  gcd scale `g=6`, then invoked monotonicity in `g` to claim all larger
-  scales.
-- **First failed implication:** the proved monotonicity belongs to the
-  *analytic lower invoice*: its one-sided perturbation loss and singleton
-  debt decrease with `g`.  A maximizing physical cell can change with `g`,
-  and no monotonicity theorem was proved for that cell's exact full-tooth
-  overlap.  Thus the scale-six checks alone established only the base slices
-  of those `150` rows.
-- **Repair / strongest survivor:** for each exceptional row, compute its first
-  scale `g_0` at which the analytic invoice is positive; exact-scan every
-  integer `6<=g<g_0`, and use analytic monotonicity only for `g>=g_0`.  The
-  transition histogram is `7:96, 8:26, 9:12, 10:9, 11:5, 12:1, 13:1`, giving
-  `258` finite bridge rows.  Every bridge row is positive, and the independent
-  integer/promoted interval engines agree on all `23,808` tested cells.
-  Normal and optimized replays byte-match.  The repaired theorem therefore
-  retains the uniform `g>=6` conclusion and the residual `gcd(m,Q)<=5`, but
-  explicitly assumes no selected-cell overlap monotonicity.
+- **What failed:** the first THM-3676 draft called
+  `supp(mu) intersection W=empty` the sharp cross-source phase-cone
+  alternative.
+- **Minimal witness / first failed implication:** a positive measure such as
+  `delta_0+delta_(e_j)` meets the nonzero-sum hostile `{0}` but has mass
+  outside it and is detected by the other source family.  Likewise
+  `delta_1+delta_(e_j)` meets the zero-sum scalar line without being confined
+  to it.
+- **Repair / strongest survivor:** under a common strict phase cone, the
+  exact premise is only `supp(mu) not subset W`, where `W={0}` or
+  `W=span(1)`.  The cross-source intersections and eight-chart theorem were
+  correct.  Source switching was also retyped as two packet families over
+  one fixed labelled residue kernel.
+- **Reusable rule:** when a contradiction says every support point lies in
+  a hostile subspace, negate containment, not intersection.
+
+## MISTAKE-438 (2026-08-21, THM-3674 audit) -- the zero three-site mask was left inside a Rayleigh quotient
+
+- **What failed:** the first THM-3674 draft stated
+  `Var(S)>=|Delta|^2/(kappa p^2)` for every pair of displacements, while its
+  own collision table included `kappa=0` at `a=b=0`.
+- **Minimal witness / first failed implication:** when `a=b=0`, the combined
+  mask and defect are both zero.  The displayed right side is `0/0`, not a
+  defined zero bound.
+- **Repair / strongest survivor:** require the combined mask to be nonzero
+  before dividing by its squared norm; the zero-mask case is vacuous.  The
+  exact drift decomposition, sharp lawful constant, all nonzero-mask equality
+  cases, and the distinct-site LRC tariff passed exhaustive hostile checks.
+- **Reusable rule:** every norm or Rayleigh quotient needs an explicit
+  nonzero-vector domain, even when the degenerate numerator vanishes too.
+
+## MISTAKE-437 (2026-08-21, THM-3671 audit) -- termwise unit support was conflated with a nonzero grouped phase-cone measure
+
+- **What failed:** the first THM-3671 draft described the blind-space theorem
+  as ranging over all owner-pivot packets without fixing the selected source,
+  allowed a formally zero measure, used an ambiguous “open half-plane,” and
+  treated THM-2325/2331's termwise all-unit address bank as the grouped
+  residue-measure support needed by the pushforward argument.
+- **Minimal witness / first failed implication:** changing the selected source
+  changes the blind source line, so two such fixed-source intersections may
+  already meet only at zero.  The zero measure has every pushforward zero.
+  Also `1,-1` lie in an affine open half-plane such as `Im(z)<1` but cancel;
+  only a strict half-plane through the origin forbids cancellation.
+- **Repair / strongest survivor:** for one fixed selected source and target
+  pair, the exact all-packet intersection and four-chart reduction pass.  For
+  a nonzero grouped measure whose nonzero coefficients satisfy
+  `Re(exp(-i theta)z)>0`, all-coordinate-unit support forces a nonzero target
+  pushforward off the scalar-sum-zero branch.  Neither nonzero grouped support
+  nor this common phase cone is currently known for the LRC current.
+- **Reusable rule:** a term bank is not its grouped coefficient measure, and
+  a geometric cone prevents cancellation only when it is pointed at the
+  origin.  State the grouping map, nonzero premise, and fixed ambient stratum
+  before applying support-intersection arguments.
+
+## MISTAKE-436 (2026-08-21, THM-3670 audit) -- a raw boundary jump was substituted for a signed successor-mass defect
+
+- **What failed:** the first THM-3670 draft advertised its successor-mass
+  gate for every owner-pivot packet and said that any boundary-jump
+  discrepancy obstructed the rigid thirteen-number configuration.
+- **Minimal witness / first failed implication:** the THM-2365 successor
+  blocker must be one of the two target blockers; selecting it as the source
+  leaves the theorem's two-dimensional target quotient.  Independently,
+  `f_0=1_[0,1/2)`, `f_A=1_[1/2,1)`, and `f_B=1_[1/4,3/4)` have a nontrivial
+  boundary-jump combination but
+  `integral(f_0+f_A-2f_B)=0`.  Jumps can cancel after signed integration.
+- **Repair / strongest survivor:** restrict to THM-2365 strata whose
+  successor blocker lies in the target pair.  A boundary or valuation
+  calculation is sufficient only if it proves a nonzero signed successor
+  integral or directly contradicts the thirteen-number equations.  The core
+  implication, the rank-11 system on thirteen masses, and the resulting
+  two-dimensional recirculation locus all passed independent hostile audit.
+- **Reusable rule:** when a detector is defined by an integral, local support
+  or jump asymmetry is not itself the detector.  Push the local witness
+  through every projection and signed integration before claiming survival.
+
+## MISTAKE-435 (2026-08-21, THM-3667 audit) -- a frequency-dependent phase was mistaken for spectral conjugacy
+
+- **What failed:** the first THM-3667 draft correctly proved that swapping the
+  two positive weights preserves every Fourier-multiplier magnitude, then
+  incorrectly transferred the thirteen eigenvalue collisions from one
+  maximin orientation to the other and advertised a conditioning-versus-
+  rigidity tradeoff.
+- **Minimal witness / first failed implication:** the exact identity is
+  `lambda_(1-a)(-u,v-u)=zeta^u lambda_a(u,v)`.  The factor `zeta^u` depends on
+  the frequency.  It preserves singular values but not equality of complex
+  eigenvalues and is not a conjugacy; already the two traces are `169a` and
+  `169(1-a)`.  An exact `Phi_13` reduction gives 143 singletons plus thirteen
+  doubles for `(a,b)=(a_*,b_*)`, but 169 singletons for the swapped optimizer.
+- **Repair / strongest survivor:** the maximin weights, frame constants and
+  magnitude equality cases survive.  The stronger repaired result is that
+  optimal conditioning and full simple-spectrum rigidity coexist in the
+  swapped orientation.  The exceptional real collision weights in `0<b<1`
+  form the finite chord-ratio set
+  `{sin(r*pi/13)/sin(s*pi/13):1<=r<s<=6}`.
+- **Reusable rule:** an identity of the form `lambda'(phi(q))=c(q)lambda(q)`
+  transports norm/frame data only.  Before transferring eigenvalue
+  multiplicities, centralizers or conjugacy, prove that `c(q)` is constant or
+  perform a second exact spectrum census.
+
+## MISTAKE-434 (2026-08-21, Cohn repair-cycle transfer) -- parity was substituted for multiplier holonomy
+
+- **What failed:** factorial rescaling turns the interior recurrence in the
+  Cohn repair path into an alternating `d_i=-d_(i-1)` chain.  The first draft
+  then closed this flattened chain cyclically and treated the usual odd/even
+  kernel of `I+S_n` as if it were a cyclic Cohn repair.
+- **Minimal witness / first failed implication:** rescaling is not periodic.
+  For weighted cyclic equations `alpha_i c_i+c_(i-1)=0`, the determinant is
+  `product(alpha_i)-(-1)^n`.  The Cohn seam retains weights
+  `2,3,...,n+1`, so its determinant is `(n+1)!-(-1)^n`, nonzero for every
+  `n`; even support does not close it.
+- **Repair / strongest survivor:** odd/even rectangle rigidity remains a
+  valid support filter.  A coefficient cycle must additionally carry signed
+  multiplier holonomy `(-1)^n`; the smallest even rational positive control
+  has reciprocal gains `2,1/2`.  THM-3653 and its companion separate these
+  two predicates explicitly.
+- **Reusable rule:** a gauge that flattens a transport equation on a path need
+  not descend through a quotient seam.  Before cyclically identifying support
+  endpoints, retain edge weights and test the exact product holonomy.
+
+## MISTAKE-433 (2026-08-21, THM-3639 namespace race) -- a pre-push ID check did not survive a concurrent reservation
+
+- **What failed:** the Berggren denominator-401 package checked that
+  `THM-3639` was free and pushed a reservation, but another session reserved
+  the same YAML identifier under a different filename during the subsequent
+  fetch/rebase/push window.  Git could merge the two paths, so the mathematical
+  files landed with a duplicate theorem ID.
+- **Minimal witness / first failed implication:** commit `a25a2ee6d` reserved
+  `THM-3639` for the Russell-cylinder universal stable debt before the cube
+  reservation commit `34289e968` reached `origin/main`.  Filename uniqueness
+  therefore did not imply YAML-ID uniqueness on the rebased tree.
+- **Repair / strongest survivor:** the complete cube theorem, companion, and
+  transcript were moved to the then-free `THM-3640`; the three obsolete cube
+  paths carrying `3639` were removed in commit `4d49fa05a`.  Semantic digest
+  `879a912b...c1836374` and every mathematical count are unchanged.  The
+  Russell-cylinder `THM-3639` remains the sole owner of that identifier.
+- **Reusable rule:** reserve scarce IDs in a tiny checkpoint and, after every
+  rebase, recheck both filenames and YAML IDs on the exact candidate tree
+  immediately before committing.  If the remote acquired the ID, renumber
+  before pushing; an earlier availability check is not a concurrency lock.
+- **Same-day recurrence / sparse repair:** the same race recurred while
+  reserving the AMM threshold as `THM-3642`: root commit `b645cbbcd` acquired
+  that ID between checks, while the already-started push of `dac6e6da8`
+  completed despite a late interrupt.  The first renumber checkpoint added
+  `THM-3644` but, because the stale path was skip-worktree in the sparse
+  checkout, did not delete the duplicate.  After explicitly materializing the
+  path, commit `fe8a7a4fe` removed it; the Russell-cylinder theorem is again
+  the sole `THM-3642`.  Strengthened rule: after interrupting any push, fetch
+  and inspect `origin/main` rather than assuming cancellation; in sparse
+  worktrees, verify deletions in the index and finish with `git grep` for the
+  YAML ID on the pushed tree.
+
+## MISTAKE-432 (2026-08-21, THM-3592 support classification) -- simultaneous reversal was not a regularity symmetry
+
+- **What failed:** the first THM-3592 proof classified three-point sumsets
+  modulo simultaneous reversal, but audited only the canonical hook and
+  Euclidean representatives.  Although reversal preserves the additive fibre
+  pattern, it changes the absolute weights and therefore the divisibility
+  floor `Sigma^ceil(-u/2)|f`; it is not a symmetry of Danielewski regularity.
+- **Minimal witness / first failed implication:** the omitted hook
+  `(d,d;2d,d)` has fibre word
+  `00;10;01+20;02+11;12+21;22`.  Its `21=(1,-2)` arm gate survives every
+  singleton test for all `d>=3`, so the canonical-hook census cannot be
+  transported through reversal.
+- **Repair / strongest survivor:** THM-3592 now audits the reflected hook and
+  both reflected Euclidean families separately.  The hook survivor is killed
+  by the exact arm-order mismatch `(2d-1)ell != (2d+2)ell-1`; the reflected
+  Euclidean rows die by rectangle and singleton gates.  The companion now
+  includes all three orientations and the universal seven-piece support floor
+  survives, pending a second independent hostile audit.
+- **Reusable rule:** quotient a finite support atlas only by symmetries that
+  preserve every downstream side condition.  If the target uses signed
+  weights, divisibility floors, or boundary regularity, replay every
+  reversal-sensitive orbit representative before claiming exhaustiveness.
+
+## MISTAKE-431 (2026-08-21, THM-3579 degree-operator lemma) -- the constant/constant zero boundary was omitted
+
+- **What failed:** the first statement of THM-3579's degree-rigid operator
+  lemma quantified over all nonzero polynomials `H,u` and then asserted
+  `deg E_H(u)=deg J_H(u)=deg H+deg u-1` with nonzero leading coefficient.
+- **Minimal witness / first failed implication:** `H=u=1` gives
+  `E_H(u)=J_H(u)=0`, while the displayed degree is `-1` and there is no
+  nonzero leading coefficient.
+- **Repair / strongest survivor:** require `deg H+deg u>0`.  Every use in the
+  proof has `deg H>=deg Sigma>=2` (or a nonzero arm-divisible companion), so
+  all five scalar-row exclusions and the equal-step `3x3` theorem are
+  unchanged.  An independent audit accepted every load-bearing valuation,
+  support, first-integral, and coprimality step after this one-line repair.
+- **Reusable rule:** before applying a leading-term degree formula for a
+  differential operator, split off the constant/constant zero image even
+  when later applications automatically have positive degree.
+
+## MISTAKE-430 (2026-08-20, THM-3569 promotion suffix) -- the audited universal theorem retained its provisional scope block
+
+- **What failed:** after THM-3569 was promoted to an independently audited
+  theorem for every squarefree `Sigma` of degree at least two, Section 5
+  still labeled that universal statement `PENDING AUDIT` and called only the
+  old specialization `Sigma=b(b+4)` proved.
+- **Repair / strongest survivor:** replace the stale block by the proved
+  universal scope.  The support-collision proof, exact companion, hashes,
+  open `3x3`/`2x4` boundary, and all mathematical claims are unchanged.
+- **Reusable rule:** promotion audits must search scope tables and fenced
+  status summaries as well as frontmatter and final paragraphs; stale truth
+  labels can survive inside a theorem even when its proof was correctly
+  generalized.
+
+## MISTAKE-429 (2026-08-20, THM-3574 certificate bookkeeping) -- the intermediate quotient inherited the final quotient's term count
+
+- **What failed:** the first THM-3574 proof said that the intermediate
+  core-cofactor quotient `B_H` had 152 expanded terms.  An independent
+  recomputation found 54; 152 is the term count of the final Bezout quotient
+  `C_H=V(F)B_H/4`.
+- **Repair / strongest survivor:** the companion now gates all three counts:
+  8 for the linear-unit quotient, 54 for the core-cofactor quotient, and 152
+  for the final inverse certificate.  Both divisibilities and the universal
+  nonconstant-unit theorem are unchanged.  The proof also now spells out the
+  smoothness, dominance, and generic-cubic argument that sends source
+  reducibility into THM-3573's Pell compiler.
+- **Reusable rule:** when one certificate is obtained by multiplying another,
+  record and verify their sizes separately; a valid divisibility does not
+  make its intermediate and final expanded quotients interchangeable.
+
+## MISTAKE-428 (2026-08-20, THM-3571 irreducibility case split) -- vanishing quadratic `a` coefficients did not force `deg_a(phi)=0`
+
+- **What failed:** the first THM-3571 proof said that `A=B=0` in the
+  collision-compatible quadratic
+  `phi=Aa^2+Bab+Cb^2+Da+Eb+D/4-A/16` forces `deg_a(phi)=0`.  It forgot the
+  surviving linear term `Da`.
+- **Minimal witness / first failed implication:**
+  `phi=a+b^2+1/4` has `A=B=0`, is genuinely quadratic, contains the collision
+  value, and has `deg_a(phi)=1`, not zero.
+- **Repair / strongest survivor:** the Euler and discriminant proof was
+  unaffected.  For irreducibility, split the residual cell by `D`.  If
+  `D!=0`, THM-3565 would require `-2h(b)^3=D`; hence `h` is constant and the
+  entire reducible row is affine, contradicting the `b^2` term.  If `D=0`,
+  THM-3564 applies at `deg_a(phi)=0`.  More generally, when `A=0` and
+  `(B,D)!=(0,0)`, comparison of `Bb+D=-2h^3` again forces `h` constant and
+  excludes every genuinely quadratic row.  THM-3571 survives unchanged.
+- **Reusable rule:** determine a partial degree from every coefficient of
+  that variable, including lower-degree terms; a vanished top homogeneous
+  block does not by itself put a polynomial on the degree-zero face.
+
+## MISTAKE-427 (2026-08-18, degree-passport scope) -- the first survivor of a weaker sieve was called globally admissible
+
+- **What failed:** the first synthesis called the four height-`105` cells
+  surviving the Appelgate--Onishi/Nagata, Moh, and 2014 gcd filters the first
+  “globally admissible” degree cells.  That wording omitted the stronger
+  cited 2022 sub-`125` degree-pair classification.
+- **Minimal witness / first failed implication:** the 2022 list leaves only
+  `(72,108)` (and its transpose) below height `125`, so every height-`105`
+  cell in the weaker screen is excluded.
+- **Repair / strongest survivor:** retain the height-`105` enumeration only
+  as a finite hostile validating the weaker filter stack.  The current cited
+  passport has first reduced pair `(72,108)`.  Its consequences move the
+  row-dominant torus boundary from `(84,105)` to the first not-yet-excluded
+  `(100,125)` box and move the width-three mixed-Catalan coefficient cap from
+  `102` to at least `105`.
+- **Reusable rule:** every “first admissible” computation must name the exact
+  inherited filter set.  When a stronger classification is imported, keep
+  the old frontier only as a labeled hostile, never as the live global floor.
+
+## MISTAKE-426 (2026-08-18, THM-3555 status suffix) -- a second promoted proof retained its reserved-stub disclaimer
+
+- **What failed:** THM-3555 was promoted to `PROVED + VERIFIED-EXACT` with a
+  full affine-equivalence proof and companion, but the old reservation suffix
+  still claimed that no theorem, proof, or dependency was asserted.
+- **Repair / strongest survivor:** remove the stale suffix.  The universal
+  cubic marked-root normal form, discriminant calculation, and fixed-
+  ramification-line no-go are unchanged.
+- **Reusable rule:** the promotion audit in MISTAKE-425 is now triggered by a
+  second independent instance; search the full body for reservation language
+  before every status promotion, including the final paragraph after scope.
+
+## MISTAKE-425 (2026-08-18, THM-3554 status suffix) -- a promoted proof retained its reserved-stub disclaimer
+
+- **What failed:** THM-3554 was promoted to `PROVED + VERIFIED-EXACT` with a
+  complete proof and replay, but its former reservation paragraph remained at
+  the very end and incorrectly said that no theorem, proof, or dependency was
+  asserted.
+- **Repair / strongest survivor:** remove only the stale reservation suffix.
+  The proved punctured-Kummer normal form, its exact quadratic filling
+  obstruction, and all stated scope boundaries are unchanged.
+- **Reusable rule:** when promoting a reserved theorem, search the entire body
+  for `RESERVED`, `stub`, and old no-claim language; frontmatter promotion alone
+  does not make the truth surface internally consistent.
+## MISTAKE-424 (2026-08-18, THM-3554 image typing) -- a punctured Kummer cover's geometric image was called its untyped scheme/rational image
+
+- **What failed:** the first promoted THM-3554 said without qualification
+  that the image of the collision surface in the target plane was exactly
+  `U=D(beta^2-16alpha)`.  This conflated the morphism's topological/geometric-
+  point image with its scheme-theoretic image in `A^2` and its image on
+  `k`-rational points.
+- **Minimal witness / first failed implication:** over `Q`, the target point
+  `(alpha,beta)=(-1/8,0)` lies in `U(Q)` because `delta=2`, but a preimage
+  would require `s^2=delta/4=1/2`.  Thus it is not in the rational-point
+  image.  Conversely, the scheme-theoretic image in the ambient `A^2` is all
+  of `A^2`, because the topological image `U` is dense.
+- **Repair / strongest survivor:** `S->U` is finite etale and surjective, so
+  its topological image and its image on algebraically closed points are
+  exactly `U`.  State the ambient scheme-theoretic closure and rational-point
+  square-class qualification separately.  The Kummer normal form, deck
+  collision, and no-etale-filling valuation proof are unchanged; the latter
+  in fact holds over every field of characteristic different from two.
+- **Reusable rule:** for a nonproper or punctured morphism, always type
+  “image” as topological, scheme-theoretic, geometric-point, or rational-
+  point image.  These need not agree.
+
+## MISTAKE-423 (2026-08-18, provisional THM-3546 scope) -- rational-point graph containment was silently treated as a polynomial identity
+
+- **What failed:** the first THM-3546 wording said that `F(Graph(h))` lies in
+  `Graph(g)` over an arbitrary field, then inferred that the straightened
+  normal component is divisible by the graph variable.  This is sound for
+  graph-subscheme containment, but set-theoretic containment on `k`-rational
+  points is weaker over finite fields.
+- **Minimal witness / first failed implication:** over `F_q`,
+  `F(x,z)=(z,x^q-x)` has determinant one and sends every rational point of
+  `z=0` to `(0,0)`, yet its straightened normal polynomial is `x^q-x`, not a
+  multiple of `z`; the induced rational-point map is constant.
+- **Repair / strongest survivor:** require
+  `F_w(x,h(x))=g(F_y(x,h(x)))` in `k[x]`, equivalently scheme-theoretic graph
+  containment or containment on all geometric points.  Then the normal
+  component is `rA`, the determinant factors as `det Jf * A(x,0)`, and both
+  factors are units.  Over an infinite field, containment on all rational
+  points already implies the identity.
+- **Reusable rule:** over finite fields, equality on rational points is not a
+  polynomial identity.  State subscheme containment or audit the vanishing
+  ideal before using divisibility.
+
+## MISTAKE-422 (2026-08-18, THM-3025 notation collision) -- the subleading Jacobian was mistaken for the Keller constant
+
+- **What failed:** THM-3025 relabelled the multiplier in THM-3016's
+  rigidity identity as `J = Jac(P,Q) in k*`.  In THM-3016 the displayed
+  multiplier is instead the homogeneous subleading form
+  `j = Jac(H,Q_(m-1))`, which may vanish.  Thus the original step
+  `j Jac(W,H)=0 => Jac(W,H)=0` was unjustified, and the companion script's
+  opening prose repeated the same collision.
+- **First failed implication:** the zero branch `j=0` makes the product
+  identity tautological, so it supplies no information about `W` by division.
+  This is a proof-text error rather than a counterexample to the conclusion.
+- **Repair / strongest survivor:** split on `j`.  If `j!=0`, THM-3016's
+  common-form and coprime-degree argument gives `W=0` whenever `H` has at
+  least two distinct roots.  If `j=0`, then `Q_(m-1)!=0` would make `H` and
+  `Q_(m-1)` powers of a common form of degree dividing both `g` and `m-1`;
+  since `g|m`, that degree is one and `H` has only one root.  Hence for
+  `K>=2`, `Q_(m-1)=0`.  The subleading Keller equation then gives
+  `Jac(P_(n-1),H)=0`, and the same `gcd(g,n-1)=1` argument forces
+  `P_(n-1)=0`.  Therefore `W=0` survives in both branches.  THM-3025 and its
+  replay now use distinct names `J0=Jac(P,Q)` and
+  `j=Jac(H,Q_(m-1))`; no division by `j` occurs in the zero branch.
+- **Reusable rule:** never reuse the full-Jacobian symbol for a homogeneous
+  coefficient or response row.  Before dividing a named Jacobian, expand its
+  arguments and degree and audit the zero branch explicitly.
+
+## MISTAKE-421 (2026-08-16, THM-3540 proof gate) -- etaleness was used as a coordinate-projection derivative test
+
+- **What failed:** the first THM-3540 proof said the inverse `x`-core
+  derivative `d=E'(X)` was nonzero because the predecessor cover is etale.
+  Etaleness separates full source points, but two distinct fibre points may
+  still share one displayed coordinate, so it does not by itself make an
+  `x`-eliminant squarefree at that coordinate.
+- **Minimal witness / first failed implication:** any etale finite fibre with
+  two points having the same `x`-projection defeats the implication.  No
+  THM-3540 conclusion fails: its independent normalization-axis calculation
+  gives `d|_(lambda=0)=4` exactly, proving that `d` is a nonzero rational
+  function before the discriminant square-class division.
+- **Repair / reusable rule:** distinguish separability of the full finite
+  algebra from separability of a chosen coordinate eliminant.  Gate division
+  by a coordinate derivative with a primitive-coordinate theorem or one
+  exact nonidentity witness; here the axis witness supplies the latter.
+
+## MISTAKE-420 (2026-08-16, provisional THM-3534 scope) -- relative rank-two H1 collapse was overextended past the endpoint-retaining coefficient space
+
+- **What failed:** the provisional THM-3534 draft correctly computed
+  `dim H^1(C4;V_rel,C)=1` for the two-dimensional relative response plane,
+  then said the frozen data supplied no two-dimensional chamber-faithful
+  cohomology.  That conclusion silently fixed the coefficient-space
+  dimension while quantifying over all response spaces.
+- **Minimal witness / first failed implication:** the already computed
+  three-space `V_ext=S+I` is chamber-stable and satisfies
+  `V_ext=I direct_sum E_6=S direct_sum E_6`.  Chamber swaps `i_+,i_-`
+  and fixes `D_(6,*)`, so `rank(C_ext-I)=1` and
+  `dim H^1(C4;V_ext,C_ext)=3-1=2`.  The two invariant directions are the
+  relative line `i_++i_-` and the pure endpoint line `D_(6,*)`.
+- **Repair / strongest survivor:** no **two-dimensional coefficient
+  representation** carrying the descended chamber action has two-dimensional
+  twisted H1; its invariant rank is one.  The unique minimal
+  endpoint-retaining ambient has coefficient dimension three and formal H1
+  dimension two.  One class is endpoint-only, the all-child Q10 core pairs
+  only with the relative summand, and the same-copy closure edge is still
+  absent, so neither formal group is a physical word-current or D5 flux.
+- **Reusable rule:** when a cohomology dimension is used as a no-go, state
+  both the base complex and coefficient representation.  Quotienting a
+  sidecar can lower the invariant rank; restore the minimal extension and
+  recompute before quantifying over all carriers.
+
+## MISTAKE-419 (2026-08-16, THM-3532 promotion gate) -- target postcomposition was called conjugacy, and optimized replay erased the certificate
+
+- **What failed:** historical W1/W2 prose called
+  `W_i=T_i o F` a tame conjugate and treated the pulled coordinate-core
+  discriminants as evidence that the fixed raw self-iterate tower should
+  transport without moving its packet chart.  A target postcomposition has no
+  compensating source factor `T_i^(-1)` and is not the self-map conjugate
+  `T_i o F o T_i^(-1)`.  Separately, the first THM-3532 companion put every
+  truth-bearing gate in a Python `assert`; `python -O` erased all of them, so
+  matching normal and optimized stdout did not certify optimized execution.
+- **Minimal witness / first failed implication:** exact evaluation gives
+  `W_1^2(0,0,-1)=(1,-3,0)` but `T_1F^2(0,0,-1)=(0,0,-2)`, and
+  `W_2^2(-1,0,0)=(62,4,0)` but `T_2F^2(-1,0,0)=(-2,0,0)`.
+  The transformed boundaries also leave the standard packet chart: their
+  five-extremum vectors are `(6,-1,-5,2,-8)` and
+  `(1,-8,-16,8,-40)`, versus `(1,-1,-5,2,-8)` for `L`.
+- **Repair / strongest survivor:** THM-3532 proves exact one-step covariance
+  for every two-sided polynomial equivalence and full all-level covariance for
+  every honest conjugate `phi o F o phi^(-1)`, with the five weights moved to
+  the `phi^(-1)` coordinate chart.  W1/W2 retain their exact one-step boundary,
+  norm, finite-divisor, discriminant, and literal-coordinate-core identities.
+  Their honest controls `T_i o F o T_i^(-1)` inherit the complete tower.  The
+  repaired companion uses explicit `require`/raise gates; normal and `-O`
+  executions are byte-identical to each other and the stored transcript.
+- **Reusable rule:** for `G=tau F sigma`, write
+  `G^2=tau F(sigma tau)F sigma` before transporting an iteration theorem.
+  Left/right equivalence transports one fibre square; conjugacy, or a separately
+  proved intertwiner for the inserted `sigma tau`, is required for a tower.
+  Never use an optimized replay as a validity gate until executable `assert`
+  statements have been excluded from every truth-bearing path.
+
+## MISTAKE-418 (2026-08-16, Fibonacci angle-language sidecar) -- raw Fibonacci slope was mistaken for the canonically normalized primitive Berggren slope
+
+- **What failed:** the provisional Berggren angle-language reflection said
+  every consecutive-Fibonacci slope `F_k/F_(k+1)` for `k>=2` gives a
+  D-obtuse primitive Euclid triple because the raw ratio is at least `1/2`.
+  This skipped the THM-3339 odd/odd normalization.
+- **Minimal witness / first failed implication:** at `k=4`, the raw pair is
+  `(F_4,F_5)=(3,5)`, but both entries are odd.  The primitive normalization
+  is `T(3,5)=((5-3)/2,(5+3)/2)=(1,4)`, whose slope `1/4` lies below the
+  U-obtuse wall `alpha=(sqrt(145)-9)/8`.  Normalization is not
+  slope-preserving.  More generally it is required exactly when
+  `k=1 mod 3`, and the normalized slope `(n-m)/(n+m)<=1/3<alpha`.
+- **Repair / strongest survivor:** the canonical Fibonacci three-ray locus
+  has exact chamber word `D,D,U` periodically for `k=2,3,...`; it is sparse
+  in both obtuse angle languages.  The wall cycles, CDF returns, count
+  recurrences, `16/41,9/41,16/41` densities, regular languages, harmonic
+  asymptotics, and signed-`C4` theorem are unchanged.  A raw Fibonacci
+  projective cycle may still be used only when explicitly typed as the raw
+  recurrence quotient rather than the normalized Berggren node.
+- **Reusable rule:** before transporting a recurrence on Euclid parameters
+  into the primitive Pythagorean/Berggren tree, apply the parity-content
+  normalization and recompute every slope-dependent predicate.
+
+## MISTAKE-417 (2026-08-16, U_full owner-node common-base spectrum) -- full Fourier support of a delta-cell lift was mistaken for genuine two-coordinate mixing
+
+- **What failed:** the first checkpoint of the owner-node source/endpoint
+  coupling reported `(91,1,6,12,72)` raw support and `(72,0,0,0,72)` after
+  output ANOVA as though the actual `U_full` integrand had retained a
+  load-bearing seven-cell coordinate.
+- **Minimal witness / first failed implication:** `U_full` contains the owner
+  factor `||13t||<1/14`.  Under the exact desheeting
+  `t=(y+u)/13`, it becomes `||y||<1/14`, which is precisely
+  `cell_0`.  All 2,197 character rows therefore have cell support
+  `(2197,0,0,0,0,0,0)`, and the inverse table has exact form
+  `delta_0(ell)R(t)` and rank one.  Its ANOVA is the separable outer product
+  `(delta_0-1/7)(R-mean R)`.  A delta vector has all seven Fourier modes, so
+  full mixed *support* does not imply nonseparable cell/residue interaction.
+- **Repair / strongest survivor:** the common-base product, literal guard
+  controls, pointwise-zero same-root hostile, thirteen-class profile, and
+  nonzero `(1,0,6)` role bridge survive.  The seven-cell spectral-closure
+  interpretation is withdrawn.  A future candidate must show at least two
+  occupied cells and matrix rank at least two, or use a refiner not implied by
+  the endpoint owner factor, before a mixed-mode census is evidentiary.
+- **Reusable rule:** before reading multidimensional Fourier support, compute
+  coordinate support and tensor rank.  Centering a separable boundary delta
+  can populate every formal mixed frequency without creating a coupled
+  observable.
+
+## MISTAKE-416 (2026-08-16, historical outside Keller family) -- an unstored prose description was promoted as an explicit verified family
+
+- **What failed:** the Keller file
+  `THM-1605-infinite-family-extent-vs-mechanism.md` labelled the historically
+  reported maps `E_m` verified and asserted that `m=2` was the fixed sporadic
+  map, even though the repository retained no coordinate definition, source
+  artifact, or higher-member replay.  Its companion checked only the fixed
+  map and the arithmetic identity `2m-1=1+2(m-1)`.
+- **Minimal witness / first failed implication:** targeted searches of the
+  current canon, computations, results, reflections, and retained source
+  references find no literal `E_m` formula.  The nearest lawful explicit odd
+  family is THM-3448's cyclic weighted subfamily, reindexed by `ell=2m-3` in
+  THM-3517.  Its first-coordinate degrees are exactly `7,17,27,...`, which
+  disagree with the old THM-1605 prose string `7,13,26,43,64,...`.  Therefore
+  the numerical `m=2` overlap cannot identify the higher constructions.
+- **Repair / strongest survivor:** THM-1605 is now a partially verified
+  historical record.  The fixed map's degree, determinant, three-point fibre,
+  and THM-1350's conditional `1+2k` involution-orbit mechanism survive.
+  THM-3517 supplies a disjoint explicit `m=3` test with full formula,
+  `S5` monodromy, three coordinate quintics, and exact Jelonek components;
+  it makes no claim to recover the unstored family.
+- **Reusable rule:** a numerical degree/fibre synopsis is not a mathematical
+  object.  Before extending a named family, require a literal formula or a
+  citable source, instantiate the first new parameter, and compare an
+  invariant finer than the overlapping base case.
+
+## MISTAKE-415 (2026-08-16, fixed Keller norm-face extrapolation) -- the exposed pole pair is not a closed scalar recurrence
+
+- **What failed:** the pinned values `e=1,7,43` and exposed factors
+  `m=0,3,15` suggested `e_next=6e+1` and `m_next=2e+1`, hence the first
+  untested pair `(259,87)` for `G=L^43N(J)`.  This treated the visible
+  `(e,m)` data as though the norm read only the exposed face.
+- **Minimal witness / first failed implication:** exact extraction from the
+  canonical `66,146`-term `J` ledger gives
+  `min(i-k)=-43` with face `y^99z^43` and
+  `min(i-j-2k)=-185` with face
+  `y^99z^28(y^2+27z)^10(y^2+108z)^5`.  The inverse-chart linear and
+  quadratic edges therefore give
+  `e_next=43-(-43)-(-185)=271` and `m_next=99`, not `(259,87)`.
+- **Repair / strongest survivor:** THM-3506 proves the five-face one-step
+  transform `(e,m)->(7e-2m,3e-2m)`.  It is derived from the inverse chart and
+  resultant geometry, and it gives the exact fixed-map pair `(271,99)` plus
+  `v_L(N(G))=-271`.  All-level iteration remains conditional on renewal of
+  the `z`-top and `gamma=i-j-5k` faces.
+- **Reusable rule:** a Newton face observed on divergent sheets need not be a
+  state variable closed under norm.  Before extrapolating, include every
+  inverse-branch valuation, test each complete initial form in its residual
+  algebra, and separately test the finite sheet.
+
+## MISTAKE-414 (2026-08-16, provisional THM-3497 pole terminology) -- a normalized polar coefficient is not an analytic residue
+
+- **What failed:** the provisional fixed-drift Berggren note called
+  `lim_(x->1/3)(1-3x)F(x)=17/96` and
+  `lim_(x->-1/3)(1+3x)F(x)=-1/96` the residues at the two dominant poles.
+- **Minimal witness / first failed implication:** if
+  `F(x)=A/(1-lambda*x)`, then the displayed normalized polar coefficient is
+  `A`, whereas the analytic residue at `x=1/lambda` is `-A/lambda`.  Here the
+  actual residues are `-17/288` at `1/3` and `-1/288` at `-1/3`, not the two
+  numbers printed in the provisional note.
+- **Repair / strongest survivor:** THM-3497 names the two defining limits
+  normalized polar coefficients.  Their coefficient asymptotic
+  `(17/96)3^n-(1/96)(-3)^n+O(3^(n/2))`, the parity densities, and logarithmic
+  density `17/96` are unchanged.
+- **Reusable rule:** whenever a generating-function pole is summarized by a
+  coefficient, print the defining limit.  Convert to an analytic residue only
+  after dividing by the derivative of the vanishing denominator factor.
+
+## MISTAKE-413 (2026-08-16, provisional THM-3494 discriminant unit) -- an odd branch divisor does not determine the full field square class up to constants
+
+- **What failed:** after proving `D_n=u_n B_n` with `u_n in k^*`, the
+  provisional statement wrote `[D_n]=[B_n]` in `K^*/K^{*2}`.  This silently
+  killed the constant square class `[u_n]`; only divisor parity is insensitive
+  to a nonzero constant unit.
+- **Minimal witness / first failed implication:** the theorem's own cubic row
+  has `D_3=-B_3`.  Over `Q`, `-1` is not a square, so
+  `[D_3]=[-B_3]!=[B_3]`, even though `B_3` is exactly the unique reduced odd
+  branch divisor.  The quartic scalar `-1/16` has the same negative unit
+  class; the fifth-degree displayed scalar is a rational square.
+- **Repair / strongest survivor:** every primitive coordinate eliminant has
+  square class `[D_n]=[u_nB_n]`, because its trace-form index and raw
+  normalization contribute squares.  The unique odd divisor carrier remains
+  `B_n`.  THM-3494 now distinguishes the full field square class from its
+  image after quotienting constant units and was repaired before promotion.
+  THM-3498 supplies a second load-bearing check: the complete level-four
+  ledger gives `[Delta_4]=[2G]`, not `[G]`; the factor `[2]` survives both the
+  cubic norm and old-`L` cancellation.
+- **Reusable rule:** a UFD factorization controls valuations, not unit square
+  classes.  Whenever a discriminant is normalized "up to scalar," retain that
+  scalar before making a claim in `K^*/K^{*2}`; discard it only in an explicitly
+  unit-quotiented divisor group.
+
+## MISTAKE-412 (2026-08-16, provisional THM-3494 XOR and hash typing) -- an exact volume coboundary need not be edgewise square-trivial
+
+- **What failed:** the provisional THM-3494 tournament paragraph labelled
+  `g_ij=v_j/v_i` and then said that passage to square class, or to the bit
+  recording square versus nonsquare, sends every edge to zero.  It also
+  labelled the primary output hash as LF-normalized although the pinned value
+  was the raw Windows-CRLF replay hash.
+- **Minimal witness / first failed implication:** over `Q`, vertex volumes
+  `(1,2,6)` give exact edge ratios `(g_12,g_23,g_13)=(2,3,6)`.  All three are
+  nonsquares, so their square classes are nonzero and the naive bits
+  `(1,1,1)` violate `b_12 XOR b_23=b_13`, even though
+  `g_12 g_23=g_13`.  The square/nonsquare indicator is not a character on a
+  square-class group of rank greater than one.  Separately, the raw CRLF hash
+  `723798b4...83f4` normalizes to the stored LF hash
+  `6402ddf6...fb1f`.
+- **Repair / strongest survivor:** the unsquared classes obey the exact
+  coboundary law `[g_ij]=[v_j]-[v_i]` in `K^*/K^{*2}` and may be nonzero
+  edgewise.  Every chosen character `K^*/K^{*2}->F_2` gives a lawful XOR
+  coboundary, while the discriminant ratios `g_ij^2` are individually
+  square-trivial.  Thus the common discriminant square class, zero graph
+  `H^1` class, and unsquared index sidecar all survive.  THM-3494 was repaired
+  before promotion, and its frontmatter now pins LF-normalized bytes.
+- **Reusable rule:** distinguish an exact multiplicative cochain, its full
+  square-class image, a selected binary character, and the non-homomorphic
+  predicate "is nonsquare."  Normalize line endings before naming a hash
+  basis rather than inferring the basis from replay equality.
+
+## MISTAKE-411 (2026-08-15, provisional THM-3481 Walsh scope) -- odd support gives full Walsh spectrum only beyond the one-variable cube
+
+- **What failed:** the first provisional summary applied THM-3481's full
+  Walsh-support conclusion to every odd innovative terminal profile.
+- **Minimal witness / first failed implication:** at depth `k=3`, the phase
+  cycle has size `P_k=2`, so the innovation cube has one variable.  Its exact
+  terminal row has weight one and maximal ANF degree one, but one of its two
+  Walsh coefficients is zero.  Odd truth-table support makes all Walsh
+  coefficients `2 mod 4` only when the cube size is divisible by four.
+- **Repair / strongest survivor:** every odd innovative terminal profile has
+  maximal ANF degree and uses every innovation variable.  Full nonzero Walsh
+  support and the `2 mod 4` law hold when `log_2(P_k)>=2`; `k=3` is the sharp
+  boundary.  The YAML summary, theorem statement, and hostile scope were
+  repaired before promotion.
+- **Reusable rule:** when a parity argument subtracts twice an odd signed sum
+  from the ambient cube size, audit the smallest cube separately before
+  turning a stable congruence into a universal spectral claim.
+
+## MISTAKE-409 (2026-08-15, 7x13 private-support sidecar) -- zero absolute H1 flux was mistaken for weighted spectral singularity
+
+- **What failed:** the first private-support reflection correctly proved that
+  every owner-potential edge current is a coboundary, but its closing sentence
+  then said spectral closure required a non-coboundary weighting.  The graph
+  cohomology quotient and the signed matrix-tree determinant are different
+  target predicates; the latter does not descend to `H^1`.
+- **Minimal witness / first failed implication:** at `k=1`, the canonical
+  private-count potential is `(4,2,4,4,8,4,4,4)`.  Its edge gradient pairs
+  zero with all six cycles, while the two tetrahedral tree sums and bridge
+  weight are `-64`, `-136`, and `-4`, giving determinant `-34816`.  Thus
+  “coboundary, therefore spectrally singular” is false.
+- **Repair / strongest survivor:** THM-3482 derives all three
+  residue-class determinant factorizations and proves they are nonzero for
+  every `k>=1`.  Holonomy remains necessary for a nonzero **absolute H1
+  class**, not for this owner-order weighted determinant.  The original
+  `7x13` incidence rank, six-dimensional cycle space, and coboundary no-go all
+  remain valid.
+- **Audit correction:** the first THM-3482 draft wrote
+  `<c,w_k>=<Bc,f_k>` with `Bc in Q^7` but the displayed `f_k in Q^8`.  The
+  typed identity uses the hub-gauged representative
+  `fbar_k=(f_(k,i)-f_(k,5))_(i!=5)` and reads
+  `<c,w_k>=<Bc,fbar_k>=0`; equivalently one may pair `B_full c` with `f_k`.
+  This repairs notation only, not the cycle-vanishing or determinant claims.
+- **Reusable rule:** after quotienting out exact objects, do not assume a
+  different nonlinear observable factors through that quotient.  Write the
+  actual target map and hostile-test it on a canonical exact element before
+  promoting a quotient obstruction to a spectral obstruction.
+
+## MISTAKE-408 (2026-08-15, concurrent theorem reservations) -- a stale namespace check allowed duplicate theorem IDs
+
+- **What failed:** commit `958234d4b` first published `THM-3479` as the
+  relation-current two-transplant reservation.  The later Rule-30 commit
+  `a0a5fe066`, prepared against a stale view of `origin/main`, independently
+  created another `THM-3479`.  Both were honest empty stubs, but the second
+  publication made the YAML theorem identifier nonunique.
+- **Minimal witness / first failed implication:** the next fetched tree
+  contained both
+  `THM-3479-literal-half-twist-relation-current-two-transplant-certificate.md`
+  and `THM-3479-rule30-cyclic-arc-norm-rank-and-marked-innovation-spectrum.md`.
+  A negative scan of one stale checkout was therefore not a lock across the
+  concurrent fetch/push window.
+- **Repair / strongest survivor:** the earlier relation-current reservation
+  keeps `THM-3479`; the Rule 30 cyclic-arc candidate is renumbered to
+  `THM-3481` before any theorem promotion or proved dependency is added.  Its
+  companion `THM-3480` reservation is unchanged; no mathematical claim is
+  affected.
+- **Second exact recurrence:** commit `01f394823` published the private-count
+  gradient `THM-3482` reservation first; the later factorial commit
+  `b79304f74` independently published a second empty `THM-3482`.  The former
+  keeps its ID and the still-empty factorial stub moves to the globally
+  scanned `THM-3483`.  This recurrence occurred even after a full remote-tip
+  pre-scan: a scan is an observation, not a lock, and uniqueness must be
+  repeated after every expansion rebase as well as every reservation rebase.
+- **Third exact recurrence:** commit `bb86eb0a2` published the Rule-30 dyadic
+  wrap reservation as `THM-3493`; `7aa9908e72` then published a weighted-lift
+  `THM-3493`, and `2e2dc346bd` published a third empty `THM-3493` after its
+  pre-push command printed the collision but failed to gate the following
+  rebase and push.  The first keeps `3493`; the weighted atlas moves to `3494`
+  and the fixed-map Keller stub to `3495` before proof attachment.  A printed
+  diagnostic is not a safety gate: the command must exit on a collision hit.
+- **Reusable rule:** immediately re-fetch and repeat both YAML-ID and filename
+  searches after any reservation or expansion rebase and before pushing.
+  If two reservations still race, publication order keeps the earlier ID and
+  the later empty stub moves.
+
+## MISTAKE-407 (2026-08-15, THM-3472 layer transport) -- owner doubling was falsely called augmented-primitive and even nonbijectivity was mistaken for a cover boundary
+
+- **What failed:** the provisional THM-3472 proof observed
+  `gcd(Q,2S)=gcd(Q,S)` for odd `Q` and concluded that doubling a primitive
+  fixed-zero owner family produced a primitive half-twist family.  THM-3415's
+  half-layer gate is instead the augmented condition
+  `gcd(2Q,r_1,...,r_k)=1`; an all-even doubled family fails that gate.  The
+  proof also treated failure of `ell -> 2ell+1` to be bijective at even `Q`
+  as a boundary for cover transport rather than only for conjugacy.
+- **Minimal witness / first failed implication:** at `Q=15`, the primitive
+  fixed-zero cover `S=(1,2,3,4,5,7)` has `gcd(15,S)=1`, but its valid doubled
+  literal half cover `(2,4,6,8,10,14)` has
+  `gcd(30,2S)=2`.  Thus “preserves primitivity” was the first false
+  implication.  At `Q=8`, owner `s=4` occupies only even fixed-zero sheets
+  and doubles to the empty self-opposite half owner; this destroys a mask
+  conjugacy but it cannot help cover the odd image sheets.
+- **Repair / strongest survivor:** the exact one-way identity
+  `B_Q(2s)(ell)=Z_Q(s)(2ell+1 mod Q)` holds for every `Q`.  A fixed-zero
+  family covering all sheets therefore covers the entire image of the affine
+  map; when `Q` is even, the self-opposite `s=Q/2` is empty on that image and
+  may be deleted.  The result is an ordinary transverse literal half cover
+  with no more owners, which is all the rank comparison needs.  Deriving the
+  active-gcd divisor interface explicitly from THM-3405 (and matching
+  THM-3415's divisor minimum) then proves the stronger equality
+  `rho_ZMC(q)=rho_H(q)` for every `q>=2`.  Augmented primitivity and even-sheet
+  invertibility are not preserved.
+- **Reusable rule:** distinguish a cover transport from an isomorphism of
+  typed primitive presentations.  Before declaring a parity obstruction,
+  identify the actual image, check whether discarded masks meet it, and ask
+  whether the target theorem needs bijectivity, cardinality equality, or only
+  a cover of no larger size.
+
+## MISTAKE-406 (2026-08-15, THM-3469 rank typing) -- literal half-twist rank was silently used as full zero-cochain rank
+
+- **What failed:** the provisional THM-3469 proof used THM-3455's cap-seven
+  literal half-twist rank `rho_H` as a lower bound for the full zero-mode-
+  cochain rank `rho_ZMC`, which also ranges over the fixed-zero layer and
+  proper-divisor ancestry.  The numerical rank word was correct, but the type
+  conversion needed a proof.
+- **First unsupported implication:** “THM-3455's cap-seven atom sieve makes
+  the eight-owner upper bound exact” does not follow until a hypothetical
+  fixed-zero cover on every odd divisor is transported into the classified
+  half layer.
+- **Repair / strongest survivor:** for odd `Q`, the sheet map
+  `phi(ell)=2ell+1 mod Q` is bijective and
+  `B_Q(2s)(ell)=Z_Q(s)(phi(ell))`, because
+  `dist_(2Q)(2a,0)=2 dist_Q(a,0)`.  After canonical sign representatives are
+  chosen, every fixed-zero `k`-cover becomes a half-twist `k`-cover.  Every
+  divisor of the odd family `42k-3` is odd, so THM-3405 divisor descent plus
+  THM-3455's atom sieve gives the required full `rho_ZMC` lower bound.  The
+  exact rank-4/6/7/8 law survives.
+- **Reusable rule:** never identify a layer-specific rank with a global rank
+  merely because all displayed witnesses use that layer.  Give an explicit
+  conjugacy or audit every omitted layer and every divisor.  The oddness of
+  `Q` makes this transport a literal sheet conjugacy.  MISTAKE-407 later
+  strengthens the rank theorem: multiplication by two is not a sheet
+  permutation at even modulus, but one-way cover transport still survives.
+
+## MISTAKE-405 (2026-08-15, THM-3464 q=123 ancestry) -- a primitive mixed-order witness was mistaken for noninheritance
+
+- **What failed:** the provisional THM-3464 package correctly found a
+  primitive full-modulus rank-eight witness at `q=123`, with quotient-order
+  profile `3^1,41^3,123^4`, but then said that rank eight was not inherited
+  from a proper divisor.  Primitivity of one realization does not exclude a
+  second realization with nontrivial active gcd.
+- **Minimal witness / first failed implication:** at `Q=41`,
+  `(3,5,11,19,28,33,37,39)` is an exact primitive half-twist eight-cover,
+  while the independently audited cap-seven exclusion proves it is minimal.
+  Its threefold pullback
+  `(9,15,33,57,84,99,111,117)` covers at `q=123` with active gcd three.
+  The first false implication was “this displayed q=123 witness is primitive
+  and mixes divisor orders, therefore the rank cannot also descend from
+  q=41.”
+- **Repair / strongest survivor:** `rho_ZMC(41)=rho_ZMC(123)=8`.  The q=123
+  grade has **coexisting** inherited and primitive realizations: the pullback
+  from q=41 and the distinct mixed-order active-gcd-one packet
+  `(1,40,42,81,82,83,117,122)`.  All q123/q227 lower bounds, witnesses,
+  centres, widths, multiplicities, the first-seven U-spine rank word, and the
+  square-root hostile survive unchanged.
+- **Reusable rule:** a primitive representative proves existence in the full
+  divisor layer, not uniqueness of ancestry.  Before declaring a grade
+  noninherited, search every proper divisor at the same rank and pull each
+  positive witness back.  Record “primitive versus inherited” as realization
+  types that may coexist, not mutually exclusive rank labels.
+
+## MISTAKE-404 (2026-08-15, THM-3453/3455 half-twist scope) -- a fixed common mode centre was discarded with the arbitrary-centre problem
+
+- **What failed:** THM-3453 correctly classified the literal half-twist masks
+  `B_(q,r)`, but its status, statement, companion transcript, and closing scope
+  said that the witnesses provided no common physical time.  THM-3455
+  inherited that wording and said its positive spine labels realized neither a
+  common time nor a zero-mode cochain.  Those sentences conflated failure to
+  classify arbitrary centres with failure of the centre already built into
+  the literal half twist.
+- **Minimal witness / first failed implication:** directly from the two
+  definitions,
+  `B_(q,r)=D_(q,r)(1/(2q))`.  At this source centre the containing THM-3398
+  mode has `h=r mod 2q`; taking `n=0` in its centre lattice gives
+  `x=(n+h/(2q))/r=1/(2q)`.  Thus every labelled literal cover has one common
+  physical centre and identically zero complete mode cochain.  The `q=11`
+  witness `(1,2,3,5,7,9)` is already an exact six-owner partition at that
+  centre.  The first failed implication was “the bare rank word forgets the
+  owner/mode sidecar, therefore no common time exists.”
+- **Repair / strongest survivor:** THM-3453 now states the fixed-half-twist
+  realization explicitly and distinguishes it from the still-unclassified
+  arbitrary-centre problem.  THM-3455 says that each positive rank grade has
+  such a realization after a witness is reattached, while its compressed
+  periodic word still forgets the owners and widths.  The projective wedge at
+  this centre collapses: `A_i=r_i` and `P_ij=0`.  Hence no nonzero current,
+  endpoint relation, decrement, spectral closure, or LRC(14) conclusion is
+  gained.  All cap-seven support, rank, density, and Fibonacci calculations
+  remain unchanged.
+- **Reusable rule:** when a quotient object is defined by evaluation at a
+  named phase, separate “the phase is not retained by the compressed
+  invariant” from “no realizing phase exists.”  Before denying a physical
+  lift, substitute the defining phase and then check the selected-mode centre
+  lattice; only after that ask which current or endpoint data were lost.
+
+## MISTAKE-402 (2026-08-15, THM-3454 spine-index/depth and replay typing) -- a shifted branch index was called rooted depth and raw newline bytes were overclaimed
+
+- **What failed:** THM-3454 repeatedly called the parameter `t` in
+  `P_t=U^(t-1)(3,4,5)` a rooted depth, and it said normal, optimized, and
+  stored transcripts agreed byte for byte without naming newline
+  normalization.
+- **Minimal witnesses / first failed implications:** `P_1=(3,4,5)` is the
+  root at depth zero, so `t` is the spine index and its rooted depth is `t-1`.
+  Consequently the marked index seam `c_12=x_0` becomes `c_12=h_0+1` for
+  rooted depths `h_i=x_i-1`, and the homogeneous recurrence becomes
+  `h_2=h_0+h_1+1`.  Independently, Windows stdout uses CRLF while the stored
+  artifact uses LF, so their raw bytes need not agree.
+- **Repair / strongest survivor:** all Fibonacci selections are now typed as
+  spine indices `F_n`, at rooted depths `F_n-1`.  The theorem records both
+  the homogeneous index recurrence and its affine rooted-depth form.  Every
+  metric identity, six-cost level, Pell classification, recurrence mode, and
+  semantic output is unchanged because differences erase the shift.  Replay
+  equality is asserted only after LF normalization.
+- **Reusable rule:** whenever a ray is parameterized by
+  `P_t=M^(t-t_0)P_(t_0)`, declare the index/depth shift before transporting an
+  absolute recurrence.  Difference invariants survive affine shifts;
+  homogeneous recurrences generally do not.  State the exact normalization
+  basis for every byte-equality claim.
+## MISTAKE-403 (2026-08-15, THM-3456 Rule 30 source scope) -- a citation was scoped below its actual use and an active prize listing was paraphrased as a literal openness statement
+
+- **What failed:** the provisional THM-3456 frontmatter said Wolfram's 2019
+  announcement was used only for the prize statements and local rule, while
+  the theorem also cited its sideways two-column discussion.  The companion
+  Rule 30 reflection separately cited the announcement's reported finite-size
+  observations.  The theorem then said the official page itself stated that
+  the problems remained open, although its literal evidence is an active prize
+  listing and an ongoing submission rule.
+- **Minimal witness / first failed implication:** THM-3456 Sections 2 and 7
+  attribute the sideways mechanism to the announcement, and the companion
+  reflection's finite-size paragraph makes the separate historical use.  On
+  2026-08-15 the official page listed all three prizes
+  and accepted submissions until a satisfactory solution is achieved, but
+  did not contain the literal sentence “these problems are open.”
+- **Repair / strongest survivor:** the two sources now have separate entries.
+  The 2019 announcement is cited for the questions, Boolean rule, sideways
+  discussion, and historical finite observations; the current page is cited
+  for dated prize status only.  The repository treats the questions as open
+  on that evidence and says explicitly that this is an inference.  No
+  mathematical claim, exact artifact, or no-go implication changed.
+- **Reusable rule:** a citation's declared import scope must cover every
+  mechanism later attributed to it.  When a current web page supplies status
+  by an active listing rather than a declarative sentence, record the check
+  date and distinguish the page's literal content from the repository's
+  inference.
+## MISTAKE-400 (2026-08-15, provisional theorem status routing) -- an unrecognized provisional token exposed an audit-pending theorem as established canon
+
+- **What failed:** the packaged THM-3452 frontmatter began `PROVISIONAL /
+  AUDIT REQUIRED + VERIFIED-EXACT COMPANION`.  The bounded-startup router does
+  not recognize `PROVISIONAL` as a status token, so it skipped that word,
+  selected the later recognized token `VERIFIED`, and placed the unpromoted
+  theorem under `Established canon`.
+- **Minimal witness / first failed implication:** an exact
+  `agents/start_session.py --topic "THM-3452 unequal-depth noncommuting Hensel"`
+  replay printed `[VERIFIED]` in the established-canon group even though the
+  theorem body and results index both said that independent audit and explicit
+  promotion were still required.  Provisional prose did not itself keep the
+  file outside the proof graph.
+- **Repair / strongest survivor:** the independent immutable-file audit found
+  the mathematics, controls, replays, dependencies, hashes, and scope clean,
+  so THM-3452 was explicitly promoted and now begins with the recognized token
+  `PROVED`.  Its proof body, script, output, and frozen hashes did not change.
+  Had promotion not been authorized, the correct audit-pending status would
+  have begun `RESERVED / PROVISIONAL ...`.
+- **Reusable rule:** every audit-pending theorem status must begin with the
+  recognized token `RESERVED`; never place an unrecognized provisional label
+  before `VERIFIED-EXACT`.  Before and after promotion, run a topic-specific
+  bounded-startup replay and inspect the actual canon/candidate group, not
+  only the human-readable status sentence.
+## MISTAKE-401 (2026-08-15, refined exact-six transcript portability) -- native path separators defeated byte-for-byte replay
+
+- **What failed:** the refined exact-six SCC sidecar serialized dependency
+  paths with `str(Path)`.  Its stored transcript used POSIX `/`, while a fresh
+  Windows replay printed `\\`, contradicting the stated cross-platform
+  byte-for-byte reproduction even though every graph count agreed.
+- **Minimal witness / first failed implication:** on Windows the fresh and
+  stored LF hashes were respectively
+  `2930d926be17346497d6371d5238726d1130d06c6b44b7cdd8435c5468a269b3`
+  and
+  `cebb631596ca3cb04d95a39fa7a6edfdd8dea6bf89be96d1f751d5392b812496`;
+  replacing only printed `\\` by `/` made the transcripts identical.
+- **Repair / strongest survivor:** dependency paths now use `.as_posix()`,
+  the stored transcript is refreshed, and the verdict explicitly says
+  `k2_body_quotient`.  The exact weights, SCCs, engine hash, and semantic hash
+  `d3be3507...bed31` are unchanged.
+- **Reusable rule:** deterministic outputs must serialize paths with an
+  explicit platform-independent convention.  LF normalization alone does not
+  normalize directory separators, and semantic agreement does not justify a
+  byte-identical replay claim.
+## MISTAKE-399 (2026-08-15, concurrent theorem reservation race) -- filename merges did not protect a shared semantic ID
+
+- **What failed:** THM-3448 was absent when the weighted-Keller boundary
+  theorem was first checked and locally reserved, but another clean session
+  reserved the same YAML ID for the noncommuting Hensel theorem before the
+  next fetch.  Because the filenames differed, rebase had no textual conflict
+  and the duplicate IDs were briefly pushed together.
+- **Minimal witness / first failed implication:** after commit `8504e472e`,
+  both `THM-3448-noncommuting-smooth-hensel-heisenberg-orbit-law.md` and
+  `THM-3448-weighted-keller-cyclic-jelonek-inertia-family.md` declared
+  `id: THM-3448`.  “Free before local editing” did not imply “free at push.”
+- **Repair / strongest survivor:** after both sessions' corrective commits
+  were inspected together, the already-pushed Keller reservation keeps
+  THM-3448 and the Hensel reservation takes THM-3449.  The mathematical
+  content is unaffected, and Git history preserves the collision lineage.
+- **Reusable rule:** immediately before pushing a reservation, fetch and
+  recheck the intended YAML ID against the fetched remote tree—not merely the
+  working tree—and explicitly audit duplicate IDs after every conflict-free
+  rebase, since filename-level merging cannot detect semantic ID collisions.
+  Once a collision is shared, inspect the other session's corrective commit
+  before choosing a successor; two independent “move to the next ID” repairs
+  can collide again.
+
+## MISTAKE-398 (2026-08-15, THM-3446 group and alignment typing) -- a direct product was called a free product, and a sharp universal bound was called every packet's exact level
+
+- **What failed:** the provisional THM-3446 truth surfaces called the finite
+  abelian exponent group a "free product," imposed `r<=d` even though the
+  displayed dependent hostile used two generators on `A^1`, and called
+  `M+1` the unqualified exact detection level.
+- **Minimal witnesses / first failed implications:** `C_3*C_3` is infinite,
+  whereas the equal-depth two-generator fibre uses `C_3 x C_3` of order
+  nine.  The `A^1` hostile has `r=2>d=1`.  Conversely, at depths `(1,1,3)`
+  two identical shallow translations already give a stabilizer at level
+  three, before the universal alignment level `M+1=4`.
+- **Repair / strongest survivor:** the group is the direct product
+  `prod_i Z/p^(a-c_i)Z`, acting freely under pointwise independence.  The
+  ambient statement allows arbitrary `r>=1`; independence itself forces
+  `r<=d`.  Every dependence produces a stabilizer by `M+1`, and the
+  `(1,2)` delayed hostile shows that bound is sharp, but some relations appear
+  earlier.  The mixed-depth carry proof, orbit invoice, transitivity test,
+  and exact artifacts are unchanged.
+- **Reusable rule:** distinguish algebraic coproducts from freely acting
+  groups, and distinguish a sharp universal detection bound from the first
+  failure time of each individual packet.
+
+## MISTAKE-397 (2026-08-15, THM-3437 Prüfer-limit semantics) -- the Tate module was called the Prüfer arm
+
+- **What failed:** the promoted synthesis described the inverse limit of the
+  selected `Tor_1` packets as recovering the divisible Prüfer channel.  Under
+  the chain maps induced by `R_(q+1)->R_q`, however, the transition on kernels
+  is multiplication by `lambda`, not the canonical inclusion.
+- **Minimal witness / first failed implication:** for
+  `Pr_lambda=A[lambda^(-1)]/A`, the inverse system
+  `Pr_lambda[lambda^(q+1)] --lambda--> Pr_lambda[lambda^q]` has limit
+  `K'[[lambda]]`, a torsion-free complete Tate module.  It cannot be the
+  divisible torsion module `Pr_lambda`.  The first failed implication was
+  identifying two different transition systems merely because their finite
+  stages are the same kernels.
+- **Repair / strongest survivor:** the inverse limit recovers the selected
+  arm's Tate module and hence its presence bit.  The canonical inclusions
+  `Pr_lambda[lambda^q] -> Pr_lambda[lambda^(q+1)]` instead have direct limit
+  `Pr_lambda`.  The finite Tor formulas, Euler cancellation, Mittag--Leffler
+  statement, and filtration-loss boundary are unchanged; THM-3437 now records
+  both limits explicitly.
+- **Reusable rule:** a tower is its objects plus its arrows.  Before naming a
+  limit, write the induced transition map and compare algebraic type (torsion,
+  divisibility, completeness), not just finite-stage ranks.
+
+## MISTAKE-396 (2026-08-15, Keller degree-spectrum inheritance) -- a public all-degree family was ignored by later open verdicts
+
+- **What failed:** THM-1330, THM-2465, HYP-9027, and HYP-9030 continued to say
+  that degrees `4` through `7`, global G1, and even-degree Keller maps were
+  open or conjecturally impossible.  Yet THM-1300's maintained attribution
+  amendment already named the public weighted-lift family and its explicit
+  quartic witness.
+- **Minimal witness / first failed implication:** the polynomial 2-jet map
+  `G` in THM-3438 has `det JG=-6`, generic degree four, and
+  `G(1,0,0)=G(-1,0,2)`.  Thus `4 in KDeg(3)` immediately refutes
+  `KDeg(3)={3^k}`, the claimed global-open G1 verdict, and the proposed
+  all-shape odd-degree lens.  The failure was inheritance/search discipline,
+  not a subtle implication inside the older local exclusions.
+- **Repair / strongest survivor:** the weighted-lift inverse equation proves
+  `KDeg(m)={1,3,4,5,...}` for every `m>=3`; this classifies degree values only.
+  Its two-root incidence proves `S_n` monodromy and an explicit atom in every
+  grade, while compositions populate exactly grades `ab` with `a,b>=3`.
+  The monoid law, no-degree-two theorem, ternary `F` subfamily, local G1
+  exclusions, and z-affine order-`{1,3}` problem survive.  Classification of
+  arbitrary maps in mixed grades still requires monodromy/intermediate fields.
+- **Reusable rule:** before declaring a realization gap, search maintained
+  theorem amendments as well as filenames and hypotheses.  Separate
+  classification of numerical degree values from classification of maps in a
+  degree grade.
+
+## MISTAKE-395 (2026-08-15, exact-six truncated minimum) -- a depth-six sentinel was labelled as pool-14 infeasibility
+
+- **What failed:** the first exact-six mutation reflection said that the
+  companion computed the unrestricted minimum over all subsets of
+  `{1,...,14}` and labelled the `None` histogram bucket “no pool-14 cover.”
+  The solver deliberately searches only depths zero through six.
+- **Minimal witness / first failed implication:** for
+  `F=(1,2,4,6,9,10)` and `D=1260`, the strict target has no cover by at most
+  six pool clocks, but `(1,2,3,5,8,9,10)` covers it with seven.  Thus this row
+  lies in the old `None` bucket although its exact pool-14 minimum is seven.
+- **Repair / strongest survivor:** read `None` as “no cover by at most six
+  (`>6` or uncovered).”  The companion now prints that scope and checks the
+  seven-clock hostile exactly.  The depth-one through depth-six counts, every
+  exact-six completion, the full mutation relation, both SCCs, and the typed
+  `7+6=13` stopping boundary are unchanged.
+- **Reusable rule:** a capped-search sentinel records failure within its
+  searched budget, not global infeasibility.  Freeze a first-outside-budget
+  positive control whenever a finite depth cap is load-bearing.
+
+## MISTAKE-394 (2026-08-15, Fibonacci--Berggren 17-adic torsor scope) -- a parameter norm-square was misnamed and the tied root entered a `T6` support claim
+
+- **What failed:** the local-`T4` gate called `m^2+n^2` the “hypotenuse
+  squared,” although it is the squared Euclidean norm of the parameter and
+  the hypotenuse itself of its Euclid triple.  Separately, the periodic-support
+  paragraph allowed an unspecified Fibonacci base index and then said that a
+  labelled `T6` was frozen along every resulting support.
+- **Minimal witnesses / first failed implications:** for `(m,n)=(1,2)`, the
+  Euclid triple is `(3,4,5)`, so `m^2+n^2=5`, not the squared hypotenuse `25`.
+  For the support claim, take `n_0=2`, `a=1`, and `J={0}`.  The support
+  contains the root window `W_2=(1,1,2,3)`, whose edge products tie at `2`
+  and `3`; the reflection itself correctly declares that no `T6` exists
+  there.
+- **Repair / strongest survivor:** call the `T4` observable the parameter
+  norm-square, equivalently the Euclid-triple hypotenuse.  For the pure
+  periodic realization choose `n_0` in `{3,...,11}`; these nine indices
+  represent every line of the square base cycle, lie in the first period,
+  and are all in the tie-free `T6` domain.  Changing to any other compatible
+  base lift is exactly the already-recorded translation gauge.  The general
+  Hensel lemma, both Legendre cycles, all finite rows, affine hostile, Boolean
+  identities, harmonic density, tournament loss, hashes, and no-LRC boundary
+  are unchanged.
+- **Reusable rule:** distinguish a parameter's norm-square from the square
+  of the derived object's norm, and intersect a periodic carrier with the
+  declared tie-free domain before claiming that its tournament state is
+  constant.
+
+## MISTAKE-393 (2026-08-15, THM-3435 covering degree/sign scope) -- a componentwise bijection was assigned to the grid union
+
+- **What failed:** the proof said that the degree-`d` circle map sends all `d`
+  small arcs *bijectively* to the widened arc.  It also quantified the partner
+  law modulo `4R` while excluding only `r=R` from its empty sign class.
+- **Minimal witnesses / first failed implications:** already at `d=2`, both
+  inverse-image arcs map bijectively onto the target, so the map on their
+  union is two-to-one rather than one-to-one.  For `Q=2R`, the residue
+  `r=3R` is sign-equivalent to the excluded residue `R`; it is empty and
+  satisfies `2R-r=r modulo 4R`, so it is not a complementary pair of two
+  owners.  The fibre criterion and partner identities themselves remain
+  true.
+- **Repair / strongest survivor:** each inverse-image component maps
+  bijectively and the whole union maps with degree `d`; a fixed grid orbit
+  therefore has a unique selected point exactly under the stated widened-arc
+  condition.  In the two-sheet paragraph, choose the canonical odd sign
+  representative `0<r<2R` and exclude `r=R`.  Equations `(4)--(11)`, every
+  endpoint/carry/Boolean consequence, both companions, and the census survive.
+- **Reusable rule:** record the degree when passing from several inverse-image
+  components to one target arc, and state whether coefficient quantifiers are
+  on residues or on sign orbits before calling a partner pair distinct.
+
+## MISTAKE-392 (2026-08-15, refined dyadic auxiliary capacity) -- a full-order half-block bound was applied to arbitrary transverse pullbacks
+
+- **What failed:** the first exact-six mutation reflection called
+  `ceil(3822/7)=546` the one-half-clock capacity on the two residual k=2
+  dyadic rows.  That scalar bounds a full-order interval block; it does not
+  bound a lower-order mask pulled back to `3822` sheets.
+- **Minimal witness / first failed implication:** at `Q=3822`, residue
+  `r=2548` has quotient order `Q/gcd(Q,r)=3`.  Its strict half-twist block is
+  the pullback of the nonempty order-three block and has `1274` sheets, so
+  `1274>546`.  The first failed implication was “the ambient modulus controls
+  every block size” instead of descending to the owner's quotient order.
+- **Repair / strongest survivor:** exact enumeration of every transverse
+  residue modulo `2Q` gives maximum block size `1274`, attained by the stated
+  order-three residue.  The two unsupported targets have sizes `1530` and
+  `1560`, so neither can be covered by one auxiliary block even under the
+  repaired sharp capacity.  The refined six-pool counts, zero dyadic-hit
+  verdict, and absence of any LRC(14) terminal are unchanged.  The exact
+  repair is reproduced by
+  `lrc14_refined_six_pool_dyadic_stopping_audit_20260815.py`.
+- **Reusable rule:** for a half-twist residue of quotient order `m`, charge
+  the order-`m` block and its `Q/m` pullback multiplicity.  Never substitute
+  `ceil(Q/7)` for an arbitrary transverse capacity without proving full
+  order.
+
+## MISTAKE-391 (2026-08-15, zero-cochain rank artifact) -- the indexed output hash did not name the committed transcript
+
+- **What failed:** the results index recorded LF-normalized output SHA-256
+  `582b901b...4085e6` for
+  `lrc_unrestricted_zero_mode_cochain_rank_probe_20260815.out`, but that hash
+  does not equal the committed file.
+- **Minimal witness / first failed implication:** direct hashing of the
+  committed `6,745` LF bytes gives
+  `52684d84bba6076c760285937e29cfd4a81c998324d6a9019e2919d4f764ab5d`.
+  Fresh normal and optimized replays are byte-identical after LF
+  normalization and give that same hash.
+- **Repair / strongest survivor:** replace only the stale index hash with
+  `52684d84...764ab5d`.  The source hash, semantic digest
+  `233c092a...30c7e`, theorem statements, witnesses, and every audit result
+  are unchanged.
+- **Reusable rule:** never copy an output hash from working notes.  Hash the
+  committed path and an independent fresh replay in both normal and
+  optimized modes before publishing the artifact tuple.
+
+## MISTAKE-390 (2026-08-15, zero-cochain divisor ancestry) -- two lift lemmas were stated beyond their used cover scope
+
+- **What failed:** the first divisor-ancestry reflection said without a
+  cardinality qualifier that residues `r_1,...,r_s mod M` have positive
+  gcd-one lifts iff `gcd(M,r_1,...,r_s)=1`, and called
+  `gcd(V)=1` equivalent to `lcm_i(Q/gcd(Q,v_i))=Q` for fixed literal owners.
+- **Minimal witnesses / first failed implications:** for the singleton
+  `(M,r)=(5,2)`, the augmented gcd is one but every positive lift is
+  `2 mod 5` and no one-element family has gcd one.  For fixed
+  `Q=5,V=(2,4)`, both quotient orders are five and their lcm is five, while
+  `gcd(V)=2`.  Thus both reverse implications fail as literally written.
+- **Repair / strongest survivor:** every transverse strict full cover uses at
+  least two nonfull blocks.  In that `s>=2` scope, the CRT avoidance proof
+  gives gcd-one positive lifts exactly when the augmented gcd is one.
+  Primitive literal gcd one always **implies** the quotient-order lcm is `Q`;
+  that is the only direction used by the rank floor and rank-four
+  classification.  The finite Boolean gate, q15--28 ranks, universal floor
+  four, and `rho_ZMC(q)=4 iff 8|q or 9|q` are unchanged.  An independent
+  rare-coordinate branch-and-bound census through `Q=500` found no rank at
+  most three and only the primitive half-twist positives `Q=8,9` at rank
+  four.
+- **Reusable rule:** distinguish literal integer gcd, gcd modulo the finite
+  owner modulus, and existence of a gcd-one lift.  State the number of
+  selected types before promoting a modular gcd condition to an iff.
+
+## MISTAKE-389 (2026-08-15, all-owner divisor-chart probe) -- a synchronized half-grid physical time was mistaken for a common mode centre
+
+- **What failed:** the first all-owner divisor-chart draft correctly derived
+  the necessary condition `2quc in Z` for every owner at a common THM-3398
+  mode centre, but then treated that condition as sufficient.  Its exact
+  `direct_mask` computation evaluates danger sets at the physical time `c`;
+  it does not prove that `c` is the centre of each selected consecutive mode.
+  Consequently the draft falsely labelled its ranks as zero-mode-cochain
+  ranks and compared them with the capped mobile common-centre atlas.
+- **Minimal witness / first failed implication:** at `q=15,c=1/150`, owners
+  `(5,40,50)` have exact danger sets equal to the three residue classes modulo
+  three, so they partition all sheets and satisfy `2quc in Z`.  Their active
+  gcd is `d=5`; writing `a=2qdc` and `g=gcd(q,d)` gives `(a,g)=(1,5)`.
+  THM-3405 proves that a zero mode cochain requires `g|a`, so this physical
+  half-grid partition is not a common-mode-centre certificate.  Equivalently,
+  owner five has half-grid residue `h=1`, while the THM-3398 mode formula
+  requires `gcd(15,5)=5` to divide `h`.  The first failed implication was
+  “`2quc` integral implies `c` belongs to the mode-centre lattice.”  The
+  unique containing mode centres are `(0,1/120,1/150)` and their exact
+  THM-3398 pair cochain is `(-50,-50,100)`, with norms `(L1,Linf)=(200,100)`;
+  the failure is positive drift, not an endpoint ambiguity.
+- **Repair / strongest survivor:** THM-3405 supplies the missing mode
+  divisibility and proves the genuine zero-cochain gauge has at most the two
+  classes `a=0,g mod 2g`.  The divisor-chart artifact is renamed and typed as
+  a **synchronized half-grid physical-time** theorem.  Its affine
+  normalization, exact q15--28 ranks
+  `(3,2,8,2,9,2,3,2,6,2,5,2,3,2)`, capacity bounds, and infinite exact
+  half-grid families of ranks two/three/five survive.  The claimed
+  zero-cochain ranks, comparison with the owner-14 mobile ranks, finite
+  “saving” support, and corresponding harmonic weights are withdrawn.  No
+  LRC row or ledger count ever followed.  A subsequent exact reconstruction
+  strengthens the surviving separation: on every even `q>=8`, the same
+  even/odd rank-two partition at `c=a/q^2`, for odd `1<=a<q/7`, has unique
+  containing-mode cochain `P=-a q^2/2` and THM-3405 scalar/gauge
+  `(a,q/2)`.  Thus the quotient can hide a whole quadratic positive-drift
+  ladder, not merely the isolated q15 hostile.  Applying the corrected gauge
+  and retaining the primitive owner-gcd sidecar gives the genuine
+  unrestricted positive-transverse zero-cochain ranks
+  `(6,4,8,4,9,5,8,6,6,4,6,7,4,7)` for q15--28.  Their proof is the divisor
+  minimum over primitive fixed/half-twist covers, not a reinterpretation of
+  the physical chart minima.
+- **Reusable rule:** an interval containing a physical time is not centred at
+  that time.  After deriving a half-grid integrality condition, separately
+  verify the mode-residue divisibility (or the full centre-lattice formula)
+  before setting the affine mode cochain to zero.
+
+## MISTAKE-384 (2026-08-15, THM-3401 scope prose) -- fixed source centre zero was identified with the entire zero-cochain locus
+
+- **What failed:** THM-3401's precise statement and proof correctly compute
+  the cover rank at physical source time `t=0`, but its status and final scope
+  sentence called this “equivalently the zero-cochain slice.”  In THM-3398,
+  `p_ij=0` says that the selected centre lifts are equal to one common
+  rational `c`; it does not force the surviving additive gauge `c` to vanish.
+- **Minimal witness / first failed implication:** at `q=16`, owners
+  `(2,6,10,14)` have selected blocks
+  `(0,7,8,15)`, `(2,5,10,13)`, `(1,6,9,14)`, and `(3,4,11,12)` at common
+  centre `c=1/32`.  They partition all sheets and every affine cochain value
+  is zero, so the mobile zero-cochain rank is four.  THM-3401 proves the
+  fixed-zero rank is five.  Translating `c` to zero would shift a common
+  sheet label by `qc=1/2`, which is not a permutation of `Z/16Z`.
+- **Repair / strongest survivor:** THM-3401 is now consistently labelled a
+  **fixed-source-centre-zero** theorem, a proper sub-slice of the zero-cochain
+  locus.  Its statement, classification, ranks, boundary theorems, script,
+  output, and semantic digest are unchanged.  The independent mobile
+  common-centre atlas on owners `1,...,14` gives ranks
+  `(6,4,8,4,9,6,8,6,6,6,7,8,9,8)` for `q=15,...,28`, strictly below the
+  fixed-zero ranks exactly at `{16,18,22,23,25,27}`.
+- **Reusable rule:** a vanishing difference cochain kills relative
+  coordinates, not a common additive gauge.  Before normalizing that gauge,
+  verify that the induced translation acts on the retained labelled fibre;
+  here it is a common cyclic sheet relabelling only when `qc` is integral.
+
+## MISTAKE-388 (2026-08-15, THM-451 skew-tower Smith status) -- a theorem for the ambient matrix class was left labelled as a tower conjecture
+
+- **What failed:** THM-451 correctly computed the flat Smith form of the
+  skew-doubling tower at orders 16 and 32, but labelled its continuation
+  conjectural beyond order 32.  The classification step searched the tower
+  internally and missed a theorem for every skew-Hadamard matrix.
+- **First failed implication:** THM-447 already proves that every tower level
+  is skew-Hadamard.  Michael--Wallis (1998), reproved as Theorem 2.4 of
+  Hacioglu--Keman (2014), proves that every skew-Hadamard matrix of order
+  `4m` has Smith form
+  `(1,2^(2m-1),(2m)^(2m-1),4m)`.  Thus the displayed THM-451 formula was
+  true, but its `CONJECTURED` status was false immediately after its own
+  ambient-class identification.
+- **Repair / strongest survivor:** THM-451 now marks the Smith law
+  **CITED/PROVED** at every tower order.  Its binary rank law is likewise
+  all-level through THM-482's `d^+` code theorem.  The finite Hadamard
+  equivalence, chirality, Hall-class, density, and transform computations are
+  unchanged.  The HYP-2361 half-life question must seek a different invariant;
+  neither Smith form nor binary rank can be the order-128 failure.
+- **Reusable rule:** after recognizing an object as a standard ambient class,
+  search the class theorem before promoting a few computed instances to a
+  conjecture.  A correct formula can still carry a false epistemic status.
+
+## MISTAKE-383 (2026-08-15, q=8--15 finite-mode probes) -- a rank-bounded edge list was used to print a global-looking profile
+
+- **What failed:** the q=8 and q=8--14 probes enumerated minimal physical
+  covers only through rank five, and the q=15 probe only through rank six,
+  but their output fields said `minimal_edges` and `independence_profile`
+  without the cutoff.  The latter profiles were those generated by the
+  truncated edge lists, not the true full physical independence profiles.
+- **Minimal witness / first failed implication:** at q=8,
+  `(1,3,5,11,13,14)` covers all eight sheets at source `17/504` and every
+  five-subset is noncovering.  Thus q=8 has six additional rank-six minimal
+  edges and true `I_6=1217`, not the truncated profile's `1223`.  At q=11
+  there are 23 rank-six edges despite the rank-at-most-five list being empty;
+  q=15 also has 16 rank-seven and six rank-eight edges beyond its 157
+  rank-six edges.
+- **Repair / strongest survivor:** the original outputs now explicitly say
+  `minimal_edges_through_rank5` / `rank6` and
+  `profile_generated_by_rank_le5_edges` / `rank_le6_edges`.  An independent
+  exact boundary-and-open-cell bitset audit of every literal subset computes
+  the full q=8--15 clutters.  All intended low-rank counts, every `I_5`
+  value, all no-rescue statements, the 155 q=15 triphase-required rank-six
+  edges, and the finite-mode/cochain formulas survive unchanged.
+- **Reusable rule:** an independence profile is global only when every rank
+  has been searched, or when a proved rank bound excludes later minimal
+  edges.  Otherwise name both the edge cutoff and the fact that the displayed
+  profile is generated by that truncated clutter.
+
+## MISTAKE-382 (2026-08-14, THM-3387 canonical grid iff) -- openness does not remove endpoint-only sheet covers
+
+- **What failed:** THM-3387 correctly proved the pointwise image identity
+  and the universal aligned-grid identity, but then claimed that the core
+  clocks cover the unsupported open cells iff every transverse full cover is
+  pointwise core-dangerous.  The inference used only that the two danger
+  unions are open and silently discarded the removed grid.
+- **Minimal witness / first failed implication:** for
+  `F=(4,5,8,9,10,18)`, `q=2`, `C=(2,4,5,9)`, `U=(5,9)`, and
+  `(L,D)=(5040,2520)`, the only core-safe transverse full covers are
+  `{3/14,11/14}`, both on the removed `D`-grid.  The core therefore covers
+  every unsupported open cell although the pointwise safe image omits those
+  two base points.  Open sets can differ at a point when another open union
+  covers both punctured sides by an endpoint handoff.
+- **Repair / strongest survivor:** universally, core-cell completion is
+  equivalent to `B_q(U) minus A_C` being contained in the `D`-grid, whereas
+  pointwise image equality is equivalent to `B_q(U) subset A_C`.  The literal
+  `F subset {1,...,14}` atlas has no endpoint-only exceptions: its core clocks
+  are at most seven, and an opposite strict-boundary handoff by distinct
+  clocks `c,d` would force `14 | c+d`, impossible when `c+d<=13`.  All
+  `15,393` atlas rows, the twelve core rescues, every sector/occurrence count,
+  the S172 key identification, the q=2 gcd graph, and the harmonic lattice
+  formulas survive unchanged and were independently replayed.
+- **Reusable rule:** after deleting a finite boundary grid, distinguish
+  equality of open-cell words from equality of the underlying point sets.
+  The exact sidecar is the residual set on the deleted grid; openness alone
+  does not reconstruct it.
+
+## MISTAKE-381 (2026-08-14, THM-3366 artifact pins) -- escaped text was normalized instead of line endings
+
+- **What failed:** four THM-3366 companion-script hashes were advertised as
+  LF-normalized, but the shell recipe replaced the literal four-byte source
+  text `\r\n` by `\n` instead of replacing byte pair `13,10` by byte
+  `10`.  The resulting values therefore described modified Python source,
+  not an end-of-line normalization.
+- **Minimal witness / first failed implication:** the refined `k=3` source
+  has LF line endings already, so true LF normalization leaves its hash
+  `27e4bff5...` unchanged; the advertised `127ef53b...` appears exactly when
+  literal backslash-`r`-backslash-`n` inside the source is rewritten.  The
+  same mechanism produced the stale primary, `k=1`, and `k=2` pins.
+- **Repair / strongest survivor:** the four true LF hashes are now pinned by
+  prefixes `372f1b0d`, `65f1e598`, `414b3777`, and `27e4bff5`.  The scripts,
+  stored outputs, semantic decisions, and THM-3366 mathematics were
+  unchanged; independent all-sector and refined-`k=3` audits replayed the
+  exact claims and diagnosed the metadata-only failure.
+- **Reusable rule:** normalize actual bytes (`0d 0a -> 0a`) or use a checked
+  in-script byte hash.  A quoting-sensitive shell literal is not a valid
+  artifact pin unless a hostile file containing both CRLF and literal
+  `\r\n` has distinguished the two operations.
+
+## MISTAKE-380 (2026-08-14, THM-101 surplus interpretation) -- a cycle kernel was identified with homology after omitting the next boundary
+
+- **What failed:** THM-101 and three exploratory `beta2_*` companions said
+  that `s=dim(Omega_3)-dim(Z_2)` becomes `beta_3` when `beta_2=0`.
+  They silently replaced `dim ker(d_3)` by `beta_3` and omitted
+  `im(d_4)`.
+- **Minimal witness / first failed implication:** at `n=5`, tournament
+  `bits=0` has `dim Omega_3=5`, `dim Z_2=4`, `rk(d_4)=1`, and
+  `beta_2=beta_3=0`.  Hence `s=1`, not `beta_3=0`; the surplus kernel is
+  filled from dimension four.
+- **Repair / strongest survivor:** every chain complex satisfies
+  `s=rk(d_4)+beta_3-beta_2`.  Under THM-101's verified `beta_2=0`
+  conclusion, `s=dim ker(d_3)=rk(d_4)+beta_3`; thus `s=0` still implies
+  injectivity and `beta_3=0`, while `s=k` gives only
+  `beta_3=k-rk(d_4)`.  The DT+cancellation filling computation and the
+  `beta_2=0` conclusion are unchanged.
+- **Reusable rule:** a kernel is homology only after quotienting the next
+  boundary.  In dimension `p`, retain `rk(d_(p+1))` whenever a chain-rank
+  statistic is translated into `beta_p`.
+
+## MISTAKE-379 (2026-08-14, THM-300 quadratic signature) -- the first untested staircase layer contributes two negative directions
+
+- **What failed:** finite evidence through `n=8` was extrapolated to the
+  conjecture that the quadratic coefficient matrix has exactly `n-2`
+  negative eigenvalues for every `n>=5`.  The same statement also called
+  the matrix full-rank at `n=5` despite its displayed nullity one.
+- **Minimal witness / first failed implication:** exact one-/two-flip
+  Hamiltonian-path DPs and rational symmetric congruence give inertia
+  `(20+,8-,0)` at `n=9`, versus the claimed seven negative directions.
+  In the THM-299 old/new block split, the seven-tile hypotenuse Schur
+  complement has inertia `(5+,2-)`; the preceding `n=7,8` layers each
+  contributed only one negative direction.
+- **Repair / strongest survivor:** mark THM-300 `REFUTED`.  Exact finite
+  evidence retains full rank for `6<=n<=12`, the old negative count for
+  `5<=n<=8`, and the new pattern `negative=n-1` only for `9<=n<=12`.
+  The latter remains OPEN beyond the audited range.
+- **Reusable rule:** when a nested matrix family suggests constant inertia
+  increment, audit the exact new-layer Schur complement at the first
+  untested size; boundary concentration of eigenvectors does not fix its
+  inertia.
+
+## MISTAKE-378 (2026-08-14, THM-309 Paley cycle design) -- ordered 2-transitivity and trace moments were both overclaimed
+
+- **What failed:** THM-309's proof called the full affine group an
+  automorphism group and invoked 2-transitivity.  Nonsquare multipliers
+  reverse the Paley orientation.  A nearby S24e artifact also used
+  `tr(A^k)/k` as the simple-cycle count beyond its valid short-length range,
+  thereby counting repeated-vertex closed walks as cycles (for example it
+  reported `318` instead of `24` simple 7-cycles in `P_7`).
+- **First failed implication:** the theorem asks for equal incidence of
+  **unordered** vertex pairs, so ordered-pair 2-transitivity was unnecessary.
+  Separately, a closed walk ceases to be forced simple once its length permits
+  repeated directed subcycles; trace data cannot be inserted as `c_k` there.
+- **Repair / strongest survivor:** the square-affine subgroup
+  `{x -> ax+b : a square}` has order `p(p-1)/2` and acts sharply
+  transitively on unordered pairs because exactly one of slopes `a,-a` is a
+  square for `p=3 mod 4`.  It preserves every simple directed cycle, so the
+  cycle multiset is a `2-(p,k,lambda_k)` design for **all** `3<=k<=p`, even
+  as well as odd, with `lambda_k=c_k C(k,2)/C(p,2)`.  The old 5-cycle counts
+  and 3-incidence analysis survive; the S24e long trace-count conservation
+  table is quarantined.
+- **Reusable rule:** match the group action to the incidence being balanced,
+  and distinguish closed walks, primitive necklaces, and simple cycles before
+  transferring a trace formula.
+
+## MISTAKE-377 (2026-08-12, disconnected affine-ray workload) -- a many-turn skip omitted its short-rotation hypothesis
+
+- **What failed:** the first affine-ray quotient audit and provisional carrier
+  scanner applied the Dirichlet many-turn inequality whenever its displayed
+  turn statistic was at least five.  The proved estimate also requires the
+  short-rotation hypothesis `9|c|<=p`; neither analytic skip tested it.
+- **Minimal witness / first failed implication:** at physical pair
+  `(p,q)=(264,302)` and body-safe context `(L,j,e,f)=(168,90,2,1)`, the
+  lawful witness `(d,a,c)=(7,1,2)` has fewer than five turns.  The unrelated
+  witness `(8,1,40)` passes the provisional turn test but violates
+  `9|c|<=p`, so it caused an uncertified skip.  The exact physical mass
+  `4591428/225009725` is above `Dmax/5`; the error is routing, not a physical
+  counterexample.
+- **Repair / strongest survivor:** require `9|c|<=p` at both the universal
+  and contextwise gates.  The primitive quotient `22890 -> 14168`, carrier
+  chambers, and strict cutoff `14913` are unchanged.  The honest residual
+  occurrence count is `8,079,264`, not `8,013,156`.  Grouping all lawful
+  witnesses by physical `(p,q)` remains valid.
+- **Reusable rule:** when several affine witnesses represent one physical
+  pair, a witness may route that pair through an analytic theorem only after
+  satisfying every hypothesis of that theorem.  A stronger-looking statistic
+  cannot import a missing scale regime from another witness.
+
+## MISTAKE-376 (2026-08-12, disconnected-low frontier routing) -- navigation advertised two reductions absent from its proof package
+
+- **What failed:** the incoming LRC proof-map headline said the primitive
+  `3:5` lane was closed at every dilation and that a repaired Dirichlet
+  reduction left exactly `22,890` affine rays. Its attached theorem note and
+  scripts instead exclude `3:5`, prove only the non-`3:5` `g>=4` cone, and
+  contain no compiler or derivation of the `22,890` count.
+- **First failed implication:** a result anticipated by concurrent work is not
+  inherited evidence. The proof router cannot outrank the exact artifacts it
+  routes to, especially when their declared universe expressly omits the lane.
+- **Repair / strongest survivor:** retain the proved `36,520` component-profile
+  count, complete-multipartite five-edge tree, `q>=8p` physical floor, and
+  non-`3:5` moderate-ratio `g>=4` closure. Restore `3:5` at arbitrary dilation
+  and all other small-ruler `g<=3` channels to OPEN. Treat the proposed
+  `p>=264`/`22,890` reduction as exploratory until its proof and compiler land.
+- **Reusable rule:** a navigation merge must be audited against the universe
+  and exclusions in the routed artifact; never let an anticipated sequel
+  enter the current headline before its certificate.
+- **Superseding evidence (later 2026-08-12):** commit `365f6b8bd` subsequently
+  supplied the two artifacts that were absent at this checkpoint.  The exact
+  symbolic compiler now proves the `3:5` lane at every dilation on all 2,530
+  small-ruler contexts, and the generalized Dirichlet companion proves the
+  `p>=264` reduction and enumerates the 22,890 nonzero-resonance affine cover.
+  This does not make the earlier routing lawful retroactively, and it does not
+  certify the remaining affine rays or finite raw head; it supersedes only
+  the two "artifact absent" status statements above.
+
+## MISTAKE-375 (2026-08-12, THM-3352 integration) -- stale dependency pins made both exact replays fail before their audits
+
+- **What failed:** the collision-safe integration of THM-3350/3352 retained
+  the pre-integration SHA-256
+  `32587f0b965de7da1096e0f817cee46429ed2842495790cb9d489a21d2ed24c4`
+  in both THM-3352 replay scripts, although the integrated THM-3350 tail
+  script, both theorem front matters, and the results index consistently use
+  `78daaf73966d283c0c0bafa1c0975684e6167d2ef6375a3abeece4e00cdc87f9`.
+  The argmin replay also retained the pre-integration reference-engine hash
+  `b125427d...` instead of the declared integrated hash `da941a42...`.
+- **Minimal witness / first failed implication:** invoking
+  `lrc14_connected_low_all_heads_universal_forest_thm3352.py --limit 1`
+  raised `RuntimeError(('tail hash', ...))` before constructing even one
+  context.  The independent argmin replay failed first at that tail pin and,
+  after it was repaired, at the stale reference-engine pin.  This was a
+  reproducibility regression, not a counterexample to any overlap or forest
+  inequality.
+- **Repair / strongest survivor:** update only the three dependency pins to
+  the already-declared LF-normalized hashes.  The repaired one-channel compiler
+  reaches its partial semantic output, and the argmin replay reaches its
+  canonical inventory `(4044,261254,4148)`.  The mass engine, expected
+  semantic digests, theorem statements, and mathematical dependencies are
+  unchanged.
+- **Reusable rule:** after integrating a proof family across branches, audit
+  reverse dependency pins, not only each file's own front matter.  A theorem
+  can have internally consistent declared hashes while downstream replay
+  scripts still pin an obsolete parent blob.
+
+## MISTAKE-374 (2026-08-12, provisional THM-3354 response row) -- localization vanishing was mistaken for an integral polynomial mate
+
+- **What failed:** the provisional D5 comparison record placed the unit
+  observer `theta=[1]` on THM-3348's generic de Rham site while asserting the
+  integral biconditional `polynomial mate iff theta=0`. This silently treated
+  localization as conservative.
+- **Minimal witness / first failed implication:** for
+  `P=x+x^2z`,
+  `D_P=(1+2xz)partial_z-x^2 partial_x`. In the localization at `x`, the
+  rational primitive `Q=1/x` gives `D_P(Q)=1`, so the generic image
+  `theta_gen` vanishes. But THM-3348's exact one-root formula gives
+  `Ann_(K[P])(theta_int)=(P)`, hence `theta_int!=0` in
+  `K[x,z]/D_P(K[x,z])` and no polynomial mate exists.
+- **Repair / strongest survivor:** split the response into the integral record
+  `(K[P] subset R,C_P,theta_int)`, where the mate biconditional is exact, and
+  the generic record `(Spec K(P)[x,g^(-1)],H^1_dR,theta_gen)`, where a mate
+  implies vanishing but the converse fails. The direct coefficient-map no-go
+  of THM-3354 survives; its comparison cospan is explicitly definitional.
+- **Reusable rule:** after localization, distinguish a necessary generic
+  obstruction from an integral existence criterion. Record the kernel of the
+  localization map--here vertical `K[P]`-torsion--before transferring an iff.
+
+## MISTAKE-373 (2026-08-12, THM-3353 raw Gaussian toggle) -- a parent-torsor edge was stated on gauge-dependent lifts
+
+- **What failed:** the provisional THM-3353 candidate said its rational
+  Gaussian rotation changed exactly the local factor above `p` on the
+  displayed signed Gaussian lift.
+- **Minimal witness / first failed implication:** at `p=5,X=A,s=1`,
+  `(2+i)(16+5i)=27+26i` is sent to
+  `(2+i)(16-5i)=37+6i`.  Conjugating only the `5`-factor instead gives
+  `(2-i)(16+5i)=37-6i`, the global conjugate of the displayed target.
+- **Repair / strongest survivor:** on
+  `X_C~=F_2^omega(C)/<1>`, the two outputs define exactly the same
+  `p`-coordinate edge; raw lifts may differ by unit and global-conjugation
+  gauges, which complement every allocation bit.  The compiler, exact
+  addresses, valuation one, complementary roots, fixed-`p` transducers, and
+  arbitrary-rank/dispersion theorem all survive with this quotient typing.
+- **Reusable rule:** a one-prime allocation statement belongs on the parent
+  Boolean torsor unless a signed associate and global-conjugation section have
+  both been fixed.  Test a literal factorization before promoting a raw-lift
+  claim.
+
+## MISTAKE-372 (2026-08-12, projected `z1=216` two-high closure) -- a safe cell address was mistaken for a safe projected section
+
+- **What failed:** an exploratory terminal counted cells whose distinguished
+  grid point was safe for two high drifts and inferred that the whole aligned
+  projected completion was obstructed.  A second shortcut used
+  `(Z/2Z)^*={1}` to identify two denominator-two safe-cell sets.
+- **Minimal witness / first failed implication:** every cell address `c` has
+  projected coordinate `phi_L(c/L)=0`, and `0` belongs to every aligned danger
+  set.  Thus safety of the address in the centered drift coordinate is fully
+  compatible with projected containment.  For denominator two the unit is
+  fixed, but the local slope `h+1/2` still depends on the ray height, so two
+  safe sets need not coincide.
+- **Repair / strongest survivor:** retain the local coordinate `y`.  For a
+  fixed-safe multiset `C`, maximize weighted cell multiplicity over every unit
+  and every translated open cyclic interval of length `d/7`; if
+  `sum_i m_C^tr(d_i)>(r-1)|C|`, inclusion--exclusion supplies a cell safe from
+  all `r` highs at each `y`, hence the full projected section.  The three
+  denominator-two equality cases instead use a measure bound: one high removes
+  at most `2/7`, so two leave at least `3/7>36/91`.  The repaired exact theorem
+  is THM-3351; no point-only artifact was promoted.
+- **Reusable rule:** projection statements require a witness on every local
+  fibre, not a favorable section origin.  A unit-orbit collapse fixes residues,
+  not affine slopes; retain translations and multiplicities until the target
+  predicate has been proved.
+
+## MISTAKE-371 (2026-08-12, THM-3346 modular/full content scope) -- one sufficient fixed-grade condition was stated as necessary
+
+- **What failed:** the first promoted form of
+  [THM-3346](theorems/THM-3346-u-spine-prime-toggle-root-atlas-and-conjugation-monodromy.md)
+  said its selected `N`-primary channels could equal the full Gaussian
+  contents only in the literal specialization `N=C_r` with `N|C_s`.
+- **Minimal witness / first failed implication:** take `N=5,r=3,s=6`.
+  Then `(C_r,C_s)=(25,85)`, while both selected and full channel pairs are
+  `(1,5)` even though `N!=C_r`.  The smallest actual modular/full mismatch is
+  `N=5,r=3,s=21`, where the pairs are `(1,5)` and `(1,25)`.
+- **Repair / strongest survivor:** for every `r,s in R_N`, each signed
+  channel satisfies `delta_pm=gcd(N,d_pm)`.  Because the two channel pairs are coprime and have
+  products `N` and `gcd(C_r,C_s)`, respectively, they agree coordinatewise
+  iff `gcd(C_r,C_s)=N`.  The fixed-grade condition is sufficient, not
+  necessary.  The root cube, Hensel clocks, conjugation monodromy, metric,
+  Pell compiler, and every other conclusion of THM-3346 are unchanged.
+- **Reusable rule:** when a theorem identifies the primary part of an
+  invariant, equality with the full invariant is controlled by absence of
+  extra common factors, not by equality of one ambient object with the
+  selected modulus.
+
+## MISTAKE-370 (2026-08-12, THM-3336 primitive matrix extension) -- primitive-entry matrices were treated as a composition class
+
+- **What failed:** the first promoted Section 9 introduced `d_A,mu_A` under
+  the hypothesis that the four entries of `A` have gcd one, then stated the
+  matrix composition cocycle without declaring its larger codomain.  Read as
+  closure of the declared class, this is false; it also invites the false
+  inference that the scalar-free effective determinant grades composition.
+- **Minimal witness / first failed implication:** with
+  `A=B=[1 -1;1 1]`, both factors have entry-content one and determinant two,
+  but `AB=[0 -2;2 0]` has entry-content two.  After scalar removal the
+  effective degrees are `Delta(A)=Delta(B)=2` and `Delta(AB)=1`, not four.
+- **Repair / strongest survivor:** define `d_M,mu_M` on every nonsingular
+  integral matrix.  Then
+  `d_(ML)(u)=d_L(u)d_M(mu_L(u))` and
+  `mu_M(mu_L(u))=mu_(ML)(u)` are exact.  Reserve entry-content one for the
+  Smith/range conclusions; for `g=cont(M)`, primitive normalization obeys
+  `mu_M=mu_(M/g)` and has objectwise effective degree
+  `Delta(M)=|det M|/g^2`.  All Gaussian, Farey-face, Vieta, Boolean-groupoid,
+  and determinant-gate conclusions of THM-3336 survive with this typing.
+- **Reusable rule:** after dividing every output by a content, test both
+  closure of the normalized class and multiplicativity of the proposed
+  degree.  A content cocycle can preserve the action while destroying a
+  monoid grading.
+
+## MISTAKE-369 (2026-08-12, THM-3341 U-spine Pell synthesis) -- an unoriented Markov branch and shared Pell field were overcompressed
+
+- **What failed:** the first promoted form of
+  [THM-3341](theorems/THM-3341-u-spine-square-hypotenuse-transplant-and-triangular-plane-torsors.md)
+  said every ordered positive fixed-two Markov solution had the displayed
+  positive inverse, called five negative intersection rows “four,” and let
+  its typed-carrier language obscure that the negative-Pell, Pell-8, and
+  norm-17 equations all live in `Q(sqrt(2))`.
+- **Minimal witnesses / first failed implication:** `(2,5,1)` is an ordered
+  positive Markov solution but the unoriented formula gives `R=-1`;
+  `(2,1,1)` gives the algebraic boundary `R=N=0`, not a positive
+  square-triangular row.  Also `sqrt(8)=2sqrt(2)` and
+  `17+6sqrt(8)=(3+2sqrt(2))^2` directly refute any different-field reading.
+- **Repair / strongest survivor:** modulo swapping the two non-two Markov
+  coordinates, orient uniquely as `1<=M_-<=M_+`; equality `(1,1)` is the
+  boundary and strict inequality is exactly the positive selector.  The
+  three recurrences share `Q(sqrt(2))` and its unit, but occupy different
+  norm/parity cosets and preserve different typed predicates.  Every infinite
+  classification, Gaussian branch transplant, Boolean-fibre theorem, and
+  norm-17 orbit in THM-3341 survives unchanged.
+- **Reusable rule:** normalize unordered Diophantine coordinates and isolate
+  zero/degenerate seeds before writing an inverse.  Distinct norm equations
+  or typed orbits inside one quadratic field are not distinct fields.
+
+## MISTAKE-368 (2026-08-12, AMM 12592 endpoint rigidity) -- nonattainment at slope one was confused with a strict gap above the infimum
+
+- **What failed:** the Szegő endpoint reflection and several downstream
+  syntheses inferred `C*>1` from the fact that no exactly fair extractor has
+  a bounded-additive deadline `T(n)<=n+D`.  The archived Lane B draft also
+  proved the stronger per-extractor statement `T(n)-n != o(n)`, but this was
+  cited under a nonexistent `THM-2967` and was not on the canonical truth
+  surface.
+- **Why it was wrong:** nonattainment of an endpoint does not separate an
+  infimum from that endpoint.  Different extractors could have deadlines
+  `T_epsilon(n)<=(1+epsilon)n+D_epsilon` for every `epsilon>0` even though no
+  single extractor has sublinear excess.  The toy feasible-slope set
+  `(1,2]` already has infimum one without containing one.  No compactness or
+  uniform positive lower bound was supplied to exchange these quantifiers.
+- **Repair / strongest survivor:**
+  [THM-3342](theorems/THM-3342-sublinear-deadline-excess-is-impossible-for-fair-critical-run-extractors.md)
+  now canonizes the full valid Lane B result: every fixed feasible deadline
+  obeys `limsup (T(n)-n)/n>0`.  Its Pólya--Carlson/Fatou/Kronecker proof is
+  stronger than the bounded-alphabet Szegő proof, but still gives no positive
+  constant uniform over extractors.  Thus the general-class infimum `C*`
+  remains open with only `C*>=1`; the slope-one endpoint and all
+  `n+o(n)` envelopes are unattainable.  Balanced-block lower bounds in
+  THM-3009 are unaffected.
+- **Reusable rule:** before turning an impossibility at a boundary parameter
+  into a strict infimum inequality, exhibit either a uniform quantitative
+  gap or a compactness/closure theorem.  Always write which object is fixed
+  before taking a limit.
+
+## MISTAKE-367 (2026-08-12, THM-1880 Chebyshev--Pell frame) -- the coupled recurrence transposed its even and odd outputs
+
+- **What failed:** [THM-1880, the a/b functional frame](theorems/THM-1880-the-a-b-functional-frame-chebyshev-pell-companions.md)
+  stated
+  `E_n=E_(n-1)+x O_(n-1)` and
+  `O_n=O_(n-1)+x E_(n-1)`, and its status incorrectly said that this
+  displayed recurrence had zero symbolic residual.
+- **Minimal witness / first failed implication:** from the defining forms,
+  `E_1=x`, `O_1=1`, and `E_2=x^2+1`.  The old first recurrence instead gives
+  `E_2=2x`.  Thus the printed formula fails already at `n=2`; a historical
+  verification claim did not match the expression canonized.
+- **Repair / strongest survivor:** direct multiplication of
+  `E_n+O_n=(x+1)^n` and `E_n-O_n=(x-1)^n` gives the corrected crossed system
+
+  ```text
+  E_n=x E_(n-1)+O_(n-1),
+  O_n=E_(n-1)+x O_(n-1).
+  ```
+
+  [THM-2142, the half-angle bridge](theorems/THM-2142-the-half-angle-bridge-ab-monoid-is-the-ctu-cyclotomic-skeleton.md)
+  had already recorded this correction; THM-1880 now agrees with it.  The
+  defining closed forms, Pell identity, cotangent roots, and triangular
+  coefficient remain valid.
+- **Reusable rule:** when a later theorem explicitly corrects a live proved
+  theorem, repair the original truth surface as well.  A verifier label such
+  as “residual zero” is not evidence unless the frozen expression is the one
+  printed in the theorem.
+
+## MISTAKE-366 (2026-08-03, THM-3321 Hesse-torus normalization) -- noncovariance of one named torus was promoted to a classification of all continuous normalizations
+
+- **What failed:** THM-3321 correctly showed that the formal Hesse torus
+  `z -> tz, zbar -> t^(-1)zbar` gives different weights to nonzero pure terms
+  of `M_3`, but then said that only global projective scaling was a lawful
+  continuous coefficient normalization.
+- **Why it was wrong:** the weight check refutes covariance of that particular
+  `C^*` action.  It does not classify every continuous automorphism of the
+  moment ideal or rule out an unrelated symmetry.  Failure of a proposed
+  action is not a universal symmetry classification.
+- **Repair:** THM-3321 now says exactly that the Hesse torus supplies no second
+  normalization.  Projective scaling is established and used, without a
+  classification of all continuous moment symmetries.  The five homogeneous
+  Macaulay certificates, projective support-`<=4`
+  exclusion, and all exact computations are unchanged.
+- **Reusable rule:** state a symmetry negative with the same quantifier as the
+  action tested.  To classify all normalizations, compute the automorphism
+  object rather than extrapolating from one failed carrier action.
+
+## MISTAKE-365 (2026-08-03, THM-3319 base/deck type collision) -- a completed base section was identified with its rank-two quadratic cover
+
+- **What failed:** THM-3319 reused `R_2` for both the localized gradient cubic
+  and the constant coefficient of a quadratic subresultant, then said that
+  the quadratic cover's completion was the formal section `(12)`.  Its prose
+  also placed a first-order resultant tangent check next to an all-orders
+  persistence claim without displaying the scheme-theoretic identity.
+- **Why it was wrong:** `(12)` parameterizes the completed base germ
+  `Spf A_i[[h_d,h_k]]`; the deck is a separate rank-two algebra obtained by
+  adjoining a root of the surviving quadratic.  Vanishing of two first
+  derivatives alone does not imply that a resultant vanishes identically on
+  the germ.
+- **Repair:** `R_2` is reserved for the gradient cubic and the quadratic
+  constant is now `R_2^(0)`.  The theorem distinguishes the base completion
+  from `R_i[t]/(S_2(-t))` and inserts the unit-scaled subresultant identity
+
+  ```text
+  P_2b^2-Q_2ab+R_2^(0)a^2=u Res_y(R_1,R_2).
+  ```
+
+  On `a=b=0` this proves all-order resultant vanishing; the unit-leading
+  nonzero quadratic row then gives gcd degree exactly two.  The etale germ,
+  connected cover, gradient obstruction, status, and scope are unchanged.
+- **Reusable rule:** never identify a parameterizing base section with a
+  finite cover over it.  Track algebra rank and type explicitly, and use an
+  all-orders identity rather than tangent vanishing for scheme-theoretic
+  persistence.
+
+## MISTAKE-364 (2026-08-03, cyclic-quartic support-five Macaulay target) -- a dimensionally impossible degree-21 full-rank certificate was proposed as the next proof test
+
+- **What failed:** the first THM-3321 boundary paragraph and its synthesis
+  proposed full column rank of the five-variable degree-21 Macaulay map for
+  `M_3,M_6,...,M_21` as the next support-five emptiness certificate.  The map
+  has `13,972` rows and `12,650` columns, which made full rank look plausible.
+- **Why it was wrong:** row count ignores universal syzygies.  The first five
+  forms have degrees `3,6,9,12,15`; the complete-intersection Hilbert
+  coefficient in degree `21` is `1705`, a lower bound for the quotient by any
+  five such forms in five variables.  `M_18 R_3` removes at most `34`, not
+  `35`, dimensions because the `M_3 M_18` Koszul overlap is already zero in
+  the quotient, and `M_21` removes at most one.  Thus every such map has
+  quotient dimension at least `1670` and rank at most `10980`.  Full degree-21
+  rank is impossible independently of the Hesse coefficients.
+- **Repair:** THM-3321's support-`<=4` theorem is unchanged, but its open
+  support-five boundary now records the rank bound.  The formal product has
+  coefficient `39` at degree `28` and first becomes nonpositive at degree
+  `29`; the raw degree-29 map is `66,486 x 40,920`.  Degree 29 is only the
+  first candidate not excluded by this count, not a generic-Hilbert-series
+  theorem.  Projective emptiness needs a sufficient-degree certificate or a
+  different saturation/chart argument.
+- **Reusable rule:** before budgeting a Macaulay rank computation, compute the
+  Hilbert/Koszul lower bound.  More rows than columns do not imply that full
+  column rank is algebraically possible.
+
+## MISTAKE-363 (2026-08-03, simplex moments mod p) -- a modular reduction silently corrupted every moment because the prime divided the factorial denominator
+
+- **What failed:** while searching the degree-four cyclic eigenspace on
+  `Delta_2` for a homogeneous-Factorial-Conjecture counterexample, an
+  exploratory cascade reduced the uniform-simplex moment
+  `<s_1^a s_2^b s_3^c> = 2 a! b! c! / (D+2)!` modulo small primes `p = 7, 13`.
+  It reported `743` surviving points of `P^4(F_7)` at the very first condition
+  and identical survivor counts at `m = 3, 6, 9`, which is not how a cascade of
+  independent conditions behaves.
+- **Why it was wrong:** the test polynomials have barycentric degree up to 4,
+  so `<g^m>` involves monomials of total degree `D = 4m` and denominators
+  `(4m+2)!`.  For `p = 7` already `(4*3+2)! = 14!` is divisible by `7`, so the
+  denominator is `0 mod p`, the naive `pow(den, p-2, p)` returns `0`, and every
+  moment silently becomes garbage.  Sixteen distinct moment denominators
+  through degree 12 die at `p = 7`.  No exception is raised; the run simply
+  produces confident nonsense.
+- **Repair:** the reduction is sound only when `p > D + 2`, i.e. `p > 4m + 2`.
+  `THM-3310` enforces this with an explicit `require`, refuses to invert zero,
+  and records the thresholds `m = 3, 6, 9, 12, 15, 18 -> p >= 19, 31, 43, 61,
+  67, 79`.  The published modular certificate in `THM-3300` was audited against
+  this and is unaffected: it uses barycentric degree 3 with `m <= 9`, so
+  denominators are at most `29!` against `p = 10^9 + 9`.
+- **Genus, and where else it can recur:** any reduction of a rational
+  combinatorial constant -- simplex or sphere moments, Beta and multinomial
+  weights, Bernstein coefficients -- must check that the prime exceeds every
+  factorial in the denominator.  Prefer a prime far larger than the maximal
+  degree, and make the inverse routine fail loudly on zero rather than return
+  it.
+
+## MISTAKE-362 (2026-08-03, exceptional quadratic geometric count) -- a relative two-point fibre was reported as the total geometric base change
+
+- **What failed:** the first frozen output and reflection for the affine-`c`
+  exceptional quadratic printed `geometric_points=2` and said that the
+  degree-72 closed point becomes two points over an algebraic closure, without
+  specifying the base field.
+- **Why it was wrong:** the quadratic algebra `B_i/A_i` has relative degree
+  two, but `A_i/K_i` has degree `36`.  After fixing one geometric embedding of
+  `A_i`, the relative fibre has two directions exchanged by `C_2`; after base
+  change from `K_i` to an algebraic closure, all `36` base embeddings split,
+  giving `72` geometric points in `36` conjugate pairs.
+- **Repair:** the transcript now records both
+  `relative_geometric_fibre_points=2` and
+  `total_geometric_points_over_K=72`; the reflection and synthesis use
+  fibrewise deck language.  The irreducibility, nonsquare norm certificates,
+  degree `2/72`, lack of an `A_i`-rational direction, and first-normal
+  nonstationarity are unchanged.  Reusable rule: every geometric-point count
+  must name the field being algebraically closed.
+
+## MISTAKE-361 (2026-08-03, THM-3024 general-class floor promotion) -- a truncation-edge Hall cut was read as a cross-shell floor
+
+- **What failed:** THM-3024 promoted the balanced-block archimedean floor
+  `C*_block >= log_5(5 phi^2)` to ALL exactly fair AMM 12592 extractors via a
+  forward-routing transportation model, citing (G1) an aggregate Hall-cut sign
+  flip at golden and (G3) numeric equality of degree-resolved and per-shell
+  cuts. The cited script computed only per-shell continuum (ARCH) margins in
+  floats; no cross-shell cut was ever computed. In exact arithmetic, within
+  the theorem's own model (forward routing at preserved absolute degree),
+  every tail cut with a deeper shell available is satisfied for ANY
+  `gamma > 0`: at fixed degree `d`, demand `binom(m-1,d)` is outrun by supply
+  exponentially. Independently confirmed twice (audit agent + orchestrator):
+  at `gamma = 71/125 < gamma*`, the genuine per-shell deficit `2^242` at
+  `(m,d) = (256,155)` is absorbed by shell `512` with `~2^128` room. The
+  reported binding cuts were truncation-edge artifacts — the deepest
+  windowed shell's own per-shell constraint, i.e. the balanced-block floor
+  read back circularly.
+- **Why it was wrong:** an aggregated Hall cut is only as strong as the
+  model's routing bound. With an unbounded forward window the relaxation has
+  no floor at all, so the "most generous possible degree mobility" reading
+  inverts the logic: generosity destroys the cut rather than validating it.
+- **Correct framing:** the general-class `C*` floor is OPEN again. Surviving:
+  balanced-block `C* > 1.5970` exact through `m = 4096` and the asymptotic
+  block/checkpoint barrier `log_5(5 phi^2)` modulo one unwritten Stirling
+  transfer lemma (THM-3009 sec 10.3); THM-3027's tangency collapse, now
+  scan-free in the floor direction (concavity + gamma-monotonicity upgrades).
+  The missing ingredient for a general floor is a DEADLINE-BOUNDED routing
+  window derived from the extractor axioms — the pathwise deadline is exactly
+  what the transportation relaxation forgot. Audit with exact certificates:
+  `05-knowledge/results/amm12592-golden-floor-audit-boxeph.md`.
+
+## MISTAKE-360 (2026-08-02, THM-3214 offset-six application) -- canonical PRS rows were identified literally with unnormalized iterates
+
+- **What failed:** the first promoted wording of THM-3214 equation `(25)`
+  identified the raw second pivot and connection literally with
+  `P_2(r,a)` and `P_1(s,r)`.  The fraction-free operator is homogeneous:
+  rescaling an earlier row propagates accumulated unit powers into later
+  iterates.  The displayed `r,s` in THM-3192 are canonical renormalized PRS
+  rows, not the unnormalized iterates of THM-3214 equation `(7)`.
+- **Why it did not invalidate the theorem:** the accumulated factors are
+  `p`-units on the stated `p>=197` range.  They neither change the `H,J,K`
+  chart ideals nor the `2,4,5` jet-locality budget, and the universal locality
+  and Catalan sharpness statements never use the mistaken literal equality.
+- **Repair:** state `(25)` after the standard `p`-unit row renormalizations and
+  display the raw scales
+  `rho_2=U_H^2P_2(r,a)` and `chi_2=U_H^3U_JP_1(s,r)`, then identify the
+  normalized coordinates by their generated ideals and jet orders.  Equality
+  of principal ideals is not equality of raw representatives.  Catalan
+  sharpness is universal pseudo-division sharpness, not necessity inside the
+  thinner factorial-moment family.
+
+## MISTAKE-359 (2026-08-02, THM-3183 top-jet evidence) -- an exact symbolic helper admitted a float and constructed two truncated rows without their predecessors
+
+- **What failed:** THM-3183's maintained companion described its offset-six
+  top-jet calculation as exact, but the codimension-zero branch formed
+  `1/1` with Python division and therefore introduced `Float(1.0)`.  The same
+  helper constructed the unused lower entries `R[0],S[0],S[1]` after replacing
+  unavailable predecessor coefficients by zero.  For example, at `p=5` its
+  displayed internal `R[0]` was `1428382771200`, whereas direct multinomial
+  expansion gives `-36838416384000`.
+- **Why it did not invalidate the theorem:** the asserted and independently
+  audited THM-3183 identities use only the leading entries `R[3]` and `S[2]`.
+  Those entries require no omitted predecessor, agree with direct integer
+  expansion, and still factor by the stated `H` and `J`.  No proved matrix,
+  Smith, continuant, wall, or PRS-leading formula changes.
+- **Repair:** use an explicit SymPy `Rational` factorial normalization, allow
+  exact negative factorial shifts relative to `(2p)!`, extend `A,B,R` far
+  enough that every constructed row has its true predecessor, and compare all
+  66 resulting `A/B/R/S` entries directly with integer multinomial sums at
+  `p=5,7,11`.  The reusable rule is that an unused symbolic row is still part
+  of the evidence surface: either construct it lawfully or do not construct
+  it, and never infer exactness merely because a `1.0` coefficient is
+  mathematically integral.
+
+## MISTAKE-358 (2026-08-02, THM-3169 stale post-QED status) -- a promoted theorem retained its candidate disclaimer
+
+- **What failed:** THM-3169's frontmatter and audit record correctly marked the
+  depth-six certificate `PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED`, but its final line still said
+  `QED (candidate pending independent audit)`.
+- **Why:** the promotion changed the maintained theorem status without removing
+  the provisional EOF suffix.  That contradiction is especially harmful here
+  because the exact depth-seven successor uses THM-3169 as its immediate
+  dependency.
+- **Repair:** replace the stale suffix by plain `QED.`.  No mathematical claim,
+  dependency, script, output, or hash changes.
+
+## MISTAKE-357 (2026-08-02, THM-3163 stale post-QED status) -- a promoted theorem retained its candidate disclaimer
+
+- **What failed:** THM-3163's frontmatter and headline were correctly promoted
+  to `PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED`, but its final
+  line still said `QED (candidate pending independent audit)`.
+- **Why:** the promotion patch updated the maintained status surfaces but
+  missed the provisional suffix at EOF.  The contradiction could make later
+  consumers treat an audited theorem as unavailable even though its proof and
+  exact evidence were already accepted.
+- **Repair:** replace the stale suffix by plain `QED.`.  No mathematical claim,
+  dependency, script, output, or hash changes.
+
+## MISTAKE-356 (2026-08-02, THM-3162/3164/3167 live reservation races) -- non-atomic repairs can collide again
+
+- **What failed:** the depth-six selector non-resurrection session reserved
+  `THM-3162` from a fresh snapshot, but the unrelated falling-factorial
+  order-join session had already added its `THM-3162` file to `main` 51 seconds
+  earlier.  The crossed pushes left two distinct files with the same YAML ID.
+- **Why:** a fetch-and-scan reservation is not atomic.  The selector stub was
+  mathematically honest but chronologically second, so its namespace claim
+  was invalid under the first-on-`main` rule.
+- **Failed first repair:** both sessions independently reacted to the
+  `THM-3162` collision by choosing `THM-3164`.  The proved order-join packet's
+  repair landed first; the selector repair arrived 12 minutes later and
+  recreated the duplicate under a new number.
+- **Second failed repair:** a later fresh scan made `THM-3167` appear free, but
+  an already-pushed inverse-different repair owned that ID in newer remote
+  history.  The selector packet had not yet been pushed under this name.
+- **Final repair:** the already audited order-join theorem keeps `THM-3164`,
+  and the inverse-different theorem keeps `THM-3167`.  The later selector
+  packet is coherently renamed to `THM-3169`, including theorem, script,
+  output, hashes, and headings, before its proof is promoted.  This is a
+  namespace repair only; none of the theorems' mathematics changes.
+
+## MISTAKE-355 (2026-08-02, THM-3159 candidate audit) -- losing the odd reflected-pole sign turned the zero-face system into an unrelated quartic gcd
+
+- **What failed:** the first THM-3159 candidate converted a partial fraction
+  written with denominator `(beta*t-1)^3` to the normalized pole
+  `(1-beta*t)^3` without the required minus sign.  Solving that incorrectly
+  signed `F_2=F_3=0` system produced a quartic numerator `N` and the
+  degree-`q+2` test polynomial `x^2(x-1)U(x)-N(x)`.
+- **Why it was load-bearing:** exact coprimality of that quartic transform did
+  not imply coprimality of the actual two endpoint faces.  Re-expanding the
+  partial fractions gives
+  `(beta*t-1)^(-3)=-(1-beta*t)^(-3)` and changes the solved values to
+  `U(alpha)=-1/(2alpha)` and
+  `U(1-alpha)=-1/[2(1-alpha)]`.  Thus the lawful transformed polynomial is
+  `P(x)=2xU(x)+1`, of degree `q`, not the old quartic expression.
+- **Repair / strongest survivor:** at `q=249727`, a fresh exact FLINT gcd and
+  extended-gcd verification give `gcd(P(x),P(1-x))=1`; the singular charts
+  `alpha=0,1,1/2` are checked separately.  THM-3159 therefore survives, but
+  its theorem text, script, transcript, and hashes were replaced before
+  promotion.  The old candidate SHA `67450bdb4` is not a proved dependency.
+- **Reusable rule:** when normalizing partial fractions, parity is data.
+  Convert every pole denominator before collecting residues, and audit the
+  solved linear system against a direct finite-field face evaluation before
+  launching a large resultant or gcd computation.
+
+## MISTAKE-354 (2026-08-02, THM-3155 selector-barcode scope audit) -- treating abstract terminal-law realization as a substantive sequential obstruction
+
+- **What failed:** THM-3155's scope said that an arbitrary law on legal
+  unordered pole prefixes need not be the stopping distribution of a
+  sequential pole-removal process.  Without further restrictions on the
+  transition kernel, that statement is false.
+- **Why:** for any finite terminal law, sample the terminal labelled subset and
+  reveal a uniformly random ordering.  Conditional probabilities given the
+  current prefix depend only on that prefix, so they define a state-dependent
+  one-letter-at-a-time Markov chain with exactly the prescribed terminal law.
+  Equal-value symmetrization descends to unordered multiplicity states.
+- **Repair:** THM-3155 now distinguishes automatic abstract Markov realization
+  from the missing value-only, prescribed-hazard, selector-current-compatible,
+  or original-response-compatible transport.  THM-3163 records the exact
+  posterior kernel, its proof, and the labelled lift of THM-3158's law.  No
+  barcode, Hasse-positivity, NC2, or GMC conclusion changed.
+
 ## MISTAKE-353 (2026-08-02, reflected two-star replay) -- a semantic-preserving upstream normalization silently invalidated raw dependency pins
 
 - **What failed:** the all-`649`-body upper-median two-star referee stopped at
@@ -90,33 +1954,6 @@ Format per entry:
   A downstream exact proof must pin the whole current source/output chain and
   be replayed after any byte-level refresh; matching an old semantic payload
   is a conclusion of the replay, never a substitute for it.
-## MISTAKE-355 (2026-08-02, THM-3260 Cantor-window audit) -- an unlisted coupled carry state was hidden inside an asserted digit induction
-
-- **What was done:** the first THM-3260 proof said that `18` low ternary
-  digit triples, “for each incoming bit,” proved the thickened Cantor-window
-  valuation lemma.  It did not define the simultaneous state or display its
-  transition invariant, even though the proof couples the carry from doubling
-  `j`, the carry from adding the doubled word to `N-k-j`, and the deficit in
-  the Cantor decomposition.  The bounded checks of `6,412,320` terms did not
-  repair that unbounded proof gap.
-- **First failed implication:** a finite list of low digits is not an induction
-  until every outgoing carry is part of the next state and a potential is
-  shown nonincreasing.  The original prose therefore did not justify its
-  strict `k>0` claim, despite all tested instances being correct.
-- **Repair / strongest survivor:** the repaired proof uses the explicit
-  twelve states `(rho,d,g)` with `rho in {0,1,2}` and `d,g in {0,1}`, and
-  potential `H=0` for `rho=0`, `H=rho-d-g` otherwise.  All `216` valid local
-  transitions satisfy
-  `beta-gamma-2(d'+g')+H(next)<=H(now)`; the theorem displays the twelve row
-  maxima and the companion verifies every transition.  Kummer then gives the
-  stronger symbolic bounds
-  `2v_3 C(N-k,j)>=j-k` and
-  `2v_3 C(N-1-k,j)>=j-k-1`.  Finally
-  `2v_3(D^k/k!)-k=2(v_3(D)-1)k+s_3(k)>0` for every `k>0`, which proves the
-  required strict face separation.  THM-3260's conclusion survives, but only
-  via this explicit state certificate.  Its Cartier recurrences are now also
-  stated coefficientwise, with all twelve contractions and both Cantor final
-  digits displayed.
 
 ## MISTAKE-352 (2026-08-02, modular free-factor synthesis) -- an invariant cyclic substitution was called a `C3` action, and the four-point torsor was mistaken for a faithful modular carrier
 
@@ -172,41 +2009,41 @@ Format per entry:
   history.  If a collision appears, inspect the two add commits, keep the
   first-on-`main` ID fixed, and move only the later reservation.  Repeat the
   global ID check after the repair lands; do not move both sides speculatively.
-  Later local integrations on a host unable to push honored those allocations
-  and a further first-on-remote `THM-3140` reservation: the distinct even
-  factorial, pure-`C3` resolvent, real FC quadratic, and complex FC quadratic
-  packages moved to `THM-3200`--`THM-3203`, respectively, while the prime,
-  forest, common-simple-zero, and tournament results reverted to their
-  first-on-`origin/main` IDs `3131`--`3134`.
   Run the collision check as a separate hard gate: never append `|| true` and
   then continue to commit in the same shell command.
 
 ## MISTAKE-350 (2026-08-02, factorial-conjecture type audit) -- indexing SFC by slot count and restricting FC to homogeneous polynomials
 
-- **What was claimed:** THM-3018 advertised a maximum-modulus Laplace proof
-  for every homogeneous slice, called that slice full `FC(n)`, and elsewhere
-  used `SFC(N)` when `N` counted monomial slots rather than ambient variables.
-- **First analytic failure:** at an interior maximum of `|g|`, rotating the
-  value to the positive real axis need not kill the imaginary linear phase.
-  The local model `A+i b w-cw^2` contributes
-  `exp(mA-mb^2/(4c))`, not automatically `exp(mA)`.  Reading exponential
-  type from the already-vanishing moments is circular.  Compactness alone
-  therefore supplies no no-cancellation theorem.
-- **First type failure / minimal witnesses:** original `FC(m)` quantifies over
-  every polynomial in `m` variables; `1+x` has no single homogeneous degree,
-  so the polar Gamma identity cannot be a full-FC equivalence.  Original
-  `SFC(m)` also indexes ambient dimension, while `N(f)` separately records
-  support size and window length.  Thus `1+x+x^2` is a three-slot restriction
-  of `SFC(1)`, whereas `1+x+y+z` is an ambient `SFC(3)` input.
-- **Repair / strongest survivors:** THM-3018 sections 1--4a retain the exact
-  exponential integral, homogeneous simplex/Bernstein dictionary, scoped arc
-  and degree-three results, and the `C3` selection rule.  Section 4b is
-  `AUDIT-REQUIRED / UNPROVED`; write `HFC(n)` for the homogeneous subclass.
-  Retype univariate exact work as an `N`-slot restriction of `SFC(1)`; its
-  computations survive.  THM-3116's inhomogeneous flat-top Gamma-ratio
-  theorem is independent and does not repair the nonflat Laplace gap.
-- **Rule:** record `(ambient dimension m, support size N(f))`, and never pass
-  from a homogeneous polar slice to full FC without a power-preserving map.
+- **What was claimed:** THM-3018 defined `FC(m)` only for homogeneous
+  polynomials and promoted its simplex polar reduction as an equivalence for
+  the full Factorial Conjecture.  A separate univariate lane then wrote
+  `SFC(N)` when `N` was the number of monomial slots, so in particular a
+  three-term polynomial in one variable was repeatedly called `SFC(3)`.
+- **First failed implication / minimal typed witnesses:** in Edo--van den
+  Essen, arXiv:1304.3956v2, Definition 2.1 and Conjecture 2.4 quantify
+  `FC(m)` over **every** polynomial in `m` variables.  The legal input
+  `1+x` has no single homogeneous degree and hence no single radial Gamma
+  factor, so the homogeneous polar identity cannot be a global equivalence.
+  Definition 2.7 and Conjecture 2.8 likewise use `m` for ambient variable
+  dimension and `N(f)` separately for the number of nonzero monomials and
+  the length of each shifted window.  Thus `1+x+x^2` is a three-slot slice
+  of `SFC(1)`, while `1+x+y+z` is an ambient `SFC(3)` input with a
+  four-moment window.
+- **Repair / strongest survivors:** THM-3018 now states only the proved
+  exponential-integral identity and the exact **homogeneous-subclass**
+  simplex/Bernstein dictionary; its claimed all-homogeneous Laplace closure
+  remains `AUDIT-REQUIRED` because of the already recorded oscillatory-saddle
+  gap.  The univariate exact results are retyped as `N`-slot restrictions of
+  `SFC(1)`; their polynomial systems, Macaulay certificates, resultants, and
+  finite ranges are unchanged.  Historical filenames and output labels such
+  as `sfc3_*` are provenance only and must be read through this correction.
+  Full `FC(3)` and ambient `SFC(3)` remain open.
+- **Rule:** always record the pair `(ambient dimension m, support size N(f))`.
+  Never use the same index for both, and never pass from a homogeneous polar
+  slice to the full nonhomogeneous conjecture without a map that preserves
+  all powers of the factorial functional.  When a short label is needed,
+  write `SlotSFC_1(N)` for the `N`-monomial restriction inside ambient
+  `SFC(1)`.
 
 ## MISTAKE-349 (2026-08-02, THM-3101 post-promotion module audit) -- treating a normal-variable lower quotient as a finite base algebra
 
@@ -265,30 +2102,17 @@ Format per entry:
   Thus the admissible assignment `q_0=2,q_1=1` lies in the cap-two interval
   but in neither asserted lane.  Exhausting every channel *inside* each lane
   did not prove that the lanes cover every assignment.
-- **Initial repair / strongest survivor:** the cap-`3` half-cone claim was
-  quarantined, and the promoted one, three-quarter, and two-thirds refinements
-  became `AUDIT-REQUIRED` until an assignment-level orientation cover could be
-  proved.  The last unaffected assembled cone was the full-interval cap-`7/4`
-  theorem `D>=6, 3m>=4D`, leaving `561` bodies with
-  `D>=6,1<=m<4D/3`.  Future split tails must assert a disjunction on the
-  original level assignment, not merely enumerate two oriented channel lists.
-- **Promoted repair (2026-08-02):** the cap-`5/2` repair uses adjacent closed
-  intervals on one fixed physical pair, recomputes the CSP and both ordered
-  controls, and proves `D>=6,3m>=2D`.  The stronger cap-`3` repair recomputes
-  all `561` residual bodies and couples a lane `[u,v]` to the forced lower
-  bound `m>=ceil(alpha s/3)`, where `alpha=1/v` below one, `u` above one, and
-  `1` across one.  Fixed-pair interval chains cover the two acyclic hostile
-  bodies; an inverse-pair low-lane 2-cycle covers the third.  All `253`
-  constrained policies, `3,062` ordered controls, `35` tail lanes, and `1,600`
-  heads replay exactly.  Thus the reflected sufficient-family theorem now
-  proves `D>=6,2m>=D`, and its remaining wedge is
-  `561` bodies with `D>=6,1<=m<D/2`.  The original faulty sources remain
-  audit-required correction-lineage controls; their conclusions are
-  superseded by the repaired referees.
-  THM-3135 later proves why a simpler repair cannot work for the hostile body
-  H: its eligible standard single-pair uniform lanes form a DAG.  The promoted
-  cap-3 referee survives because its assignment-complete atlas uses
-  lane-conditioned and multi-pair cycles outside that restricted class.
+- **Repair / strongest survivor:** the cap-`3` half-cone claim is quarantined,
+  and the promoted one, three-quarter, and two-thirds refinements are
+  `AUDIT-REQUIRED` until an assignment-level orientation cover is proved.
+  The last unaffected assembled cone is the full-interval cap-`7/4` theorem
+  `D>=6, 3m>=4D`; hence the current proved reflected certificate-failure wedge
+  is `561` bodies with `D>=6,1<=m<4D/3`.  Future split tails must assert a
+  disjunction on the original level assignment, not merely enumerate two
+  oriented channel lists.  THM-3135 later supplies exactly that disjunction
+  for `H2` at caps `7/3` and `5/2` by keeping one pair fixed and using both
+  halves; it also proves that the eligible standard single-pair uniform lanes
+  for `H` form a DAG, so the global cone claims remain `AUDIT-REQUIRED`.
 
 ## MISTAKE-346 (2026-08-01, concurrent THM-3063 reservations) -- two distinct results acquired the same new theorem ID
 
@@ -749,13 +2573,17 @@ Format per entry:
   now exclude the certificate basis and every magnitude derived from its
   arbitrary normalization.  The cap-`1656` lineage uses this canonical
   boundary throughout.
-- **Projected-k3 follow-through audit (2026-08-02):** THM-3078's worker field
-  `row[21]` still hashed a solver-selected dual and contradiction magnitude;
-  THM-3102/3106/3109/3111 and the first THM-3113 candidate inherited complete
-  worker rows.  Their state, Farkas, terminal, carrier, ledger, and cap
-  mathematics survives.  The repaired descendants verify every returned dual
-  but hash only `tuple(row[:19])` plus basis-invariant branch counts; the old
-  THM-3078 digest is a noncanonical artifact, not a dependency.
+- **Projected-k3 follow-through audit (2026-08-02):** THM-3078 appended an
+  exact-audit digest as worker field `row[21]`, but that digest itself hashed
+  the solver-selected certificate and contradiction magnitude.  THM-3102,
+  THM-3106, THM-3109, THM-3111, and the first THM-3113 candidate then hashed
+  or imported the complete worker rows.  Their state, Farkas, terminal,
+  carrier, ledger, and cap mathematics survives.  The repaired descendant
+  chain still rebuilds and exactly checks every returned dual, but screen and
+  semantic digests bind only `tuple(row[:19])` plus the basis-invariant
+  direct/legacy branch counts.  THM-3078's historical semantic hash remains a
+  noncanonical evidence artifact and is never inherited by the repaired
+  descendants.
 - **Rule:** a proof search may use a noncanonical optimizer witness, but a
   reproducibility digest must bind canonical problem data or a separately
   canonicalized certificate, not an arbitrary valid basis or a scalar derived

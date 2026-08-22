@@ -1,0 +1,29 @@
+THM-3334 exact audit
+matrix: (U-I)^3=0, (U-I)^2!=0, Lorentz U/A/D=PASS
+cusp fan: s=(1,1) fixed; u_(n+1)=u_n+s; every {s,u_n,u_(n+1)} is Farey
+spine: U^n formula and Q=a^2+2=2c+1=2b+3 checked n=0..500
+boundary: U(1,0,1)=(3,4,5); primitive fixed null=(0,1,1), Euclidean norm^2=2
+angles: 1314 primitive rows through m=80; acute/U-obtuse/D-obtuse=92/498/724
+angles: cos(A)=8/9 universally; every audited U-spine row is D-obtuse
+fixed hypotenuse: 5000 odd c rows through 10000; 1073 nonempty Gaussian torsors
+Boolean record ladder (omega,t,c,primes):
+  (1, 1, 5, (5,))
+  (2, 6, 85, (5, 17))
+  (3, 23, 1105, (5, 13, 17))
+  (4, 223, 99905, (5, 13, 29, 53))
+  (5, 1081, 2339285, (5, 13, 17, 29, 73))
+  (6, 12131, 294346585, (5, 13, 17, 41, 73, 89))
+first spine collision: t=6, c=85, fibre=C2
+first spine affine-V4 fibre: t=23, c=1105=5*13*17
+global scalar hostile: c=65 (Q=131) already has two represented parents
+ancestry c=85: (13,84,85)->UUUUU; (77,36,85)->AD
+ancestry c=1105: (47,1104,1105)->U^22; (817,744,1105)->UDUA; (943,576,1105)->DAUD; (1073,264,1105)->DADDD
+prime-XOR matching p=5: odd-leg pairs=((47, 1073), (817, 943))
+prime-XOR matching p=13: odd-leg pairs=((47, 817), (943, 1073))
+prime-XOR matching p=17: odd-leg pairs=((47, 943), (817, 1073))
+affine-V4 tournament control: 0/64 translation-invariant orientations
+CRT: 5 split-prime sets and four lifts each PASS; 3 mod 4 hostiles PASS
+Fibonacci: U boxes=(1,t,t+1,2t+1); true golden path intersects at t=1,2 only
+Fibonacci parity: U-step has 2-cycle; golden step has 3-cycle including odd/odd
+scope hostiles: Q=13 does not reconstruct; Q=a_b sends one Farey edge to determinant 8
+ALL CHECKS PASSED

@@ -1,0 +1,17 @@
+THM-3186 FULL EXTERIOR CONTINUANT PATH CONVOLUTION EXACT CONTROL
+abstract_direct_product_checks=7
+cleared_order3_visibility_recurrence_checks=5
+normalized_factorial_continuant_checks=7
+normalized_ogf_differential_coefficient_checks=8
+continuant_matching_counts=(1, 1, 2, 3, 5, 8, 13)
+boundary_visible_coefficients=(0,-c_(n+1)beta_n)
+length3_exit_polynomial=c_(n+1)u_(n+2)+c_(n+2)alpha_(n+1)
+factorial_hostile=(n=1,d=5,v=4/105,Delta=5/21)
+hostile_path_contributions=(2000/147,-2000/147)
+hostile_visibility=(V2=-100/21,V3=0)
+hostile_V3_zero_but_transverse_chart_nonzero=PASS
+hostile_local_11adic_profiles=all_unimodular
+same_smith_positive_control=(n=1,d=5,v=1,V3=115140_unit)
+hostile_positive_scalar_exterior_support_patterns=identical
+scope=bare_scalar_exterior_tail_not_PRS_or_GMC_closure
+ALL EXACT CHECKS PASSED

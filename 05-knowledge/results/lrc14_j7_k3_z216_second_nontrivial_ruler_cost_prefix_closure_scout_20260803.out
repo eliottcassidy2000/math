@@ -1,0 +1,22 @@
+LRC14 projected-k3 z216 second nontrivial ruler cost-prefix closure
+dependency=first_prefix:e3718e71d2f46ea691e269aaf7e05c292b930c4d6a9b6d6d89a835bc38df75fe/6dba76e65300371399376aede7e79b9a6fa865b6ebb58475a14ef8e262328be1/44f7e8cf786ed428297f3f389214cab7c0b28158a856be63806a3394e594158f;THM3281_source:430dee7ba03e0d5c9ae0df72ac512500de4f7056cb4663d1c8468bfb93a49bfe
+universe=z1:216;atlas_rows:480;wall:447;order:33;prior_closed:105;live_wall:375;live_families:36;row_sha256:53db9e1d3df2cf2b0398847682d909da81705e43a53ae2553d102fd152337649;live_sha256:d080f2f34cff4d1115ff492beffdc941ce9d34b3f98431a8f4356d48b5e310b2;rank_sha256:139717dbfdfeceaf25ff7b71465815f4eac19145d03cd8c97b36f6df9c246bc5
+rank=1;cost:609840;rows:1;gcd:72;L:27720;indices:134
+rank=2;cost:655200;rows:1;gcd:72;L:32760;indices:121
+rank=3;cost:1361808;rows:16;gcd:72;L:3528;indices:17,27,46,56,79,89,126,138,205,248,258,286,298,347,376,425
+rank=4;cost:1729728;rows:1;gcd:72;L:72072;indices:157
+rank=5;cost:2121504;rows:3;gcd:24;L:25872;indices:53,293,357
+selection=cost_ordered_complete_family_prefix_through_second_non_singleton;families:3;rows:18;indices:134,121,17,27,46,56,79,89,126,138,205,248,258,286,298,347,376,425;cost:2626848;packet_sha256:ca9f2d6ed1b342e04ebfaf0230764b471143b64bb94b185b123068c121ba4559
+family=gcd72/L27720;rows:1;cost:609840;states:29;crude:28;status:1;residual:0
+family=gcd72/L32760;rows:1;cost:655200;states:95;crude:79;status:16;residual:0
+family=gcd72/L3528;rows:16;cost:1361808;states:626;crude:372;status:254;residual:0
+selected_screen=states:750;crude:479;status:271;residual:0;direct_farkas:0;legacy_farkas:271;screen_sha256:1f626e370c995d088b279173eaefa04ea1e7bf4c893dfff135228a636d47e86d;residual_sha256:2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+status_taxonomy=coordinate_union:248;zero_reduced_union:1;two_fan:11;weighted_core:11;union_certificates:264;zero_reduced_certificates:1;fan_certificates:11;exact_Farkas_checked:271;by_row:((134, (0, 0, 0, 1)), (121, (15, 0, 0, 1)), (17, (12, 0, 0, 1)), (27, (16, 0, 0, 2)), (46, (0, 0, 0, 0)), (56, (23, 0, 0, 1)), (79, (0, 0, 0, 0)), (89, (0, 0, 0, 0)), (126, (0, 0, 0, 0)), (138, (89, 1, 5, 3)), (205, (3, 0, 0, 0)), (248, (0, 0, 0, 0)), (258, (0, 0, 0, 0)), (286, (2, 0, 0, 0)), (298, (81, 0, 6, 2)), (347, (3, 0, 0, 0)), (376, (0, 0, 0, 0)), (425, (4, 0, 0, 0)));taxonomy_sha256:4cccaba60ecab8fae74a13c74b515d4c3cb92e4692d7f741de8622ac10b1834b;weighted_core_sha256:6e75e3c6cd9809ccc4b56c4829bee183c92f4a3328d1bcb1ca2a6a1f3d642ebc
+taxonomy_mechanism=coordinate_union_uses_tail_demand_greater_than_the_sum_of_named_marginals;zero_reduced_union_first_deletes_patterns_forced_off_by_a_zero_marginal;two_fan_uses_B_union_A_intersection_C_union_D_with_upper_bound_mB_plus_min_mA_mC_plus_mD;weighted_core_retains_exact_multirow_Farkas_checks
+consequence=ledger:373179-18=373161;z216_wall:375-18=357;order:0;cap:216
+direction=empty_exact_upper_relaxations_exclude_the_selected_projected_wall_rows;screen_feasibility_is_not_used_as_a_converse_and_family_cost_is_only_a_work_order_not_a_safety_invariant
+hostiles=the_pinned_first_prefix_replays_a_35_status_positive_control_an_8_residual_negative_control_and_a_rejected_negative_Farkas_multiplier;this_continuation_preserves_all_filters_and_checks_every_one_of_271_duals_exactly
+stopping_boundary=357_z216_wall_rows_in_33_families_remain;next_cost_prefix_is_gcd72_L72072_singleton_then_gcd24_L25872_three_row_family
+scope=projected_k3_z216_necessary_wall_rows_only;no_terminal_probe_divisor_action_common_carrier_phase_physical_cover_arbitrary_k_le_1_rung_or_LRC14_claim
+semantic_sha256=a73b57558c5fd74736fa9551c72f94d20b2c053ef7b8f36c27222ae993f8dcd8
+all_exact_controls=PASS

@@ -1,0 +1,12 @@
+ELLIPTIC_MESTRE_SIX_TUPLE_SIDECAR_RULE30_SCOUT_20260821
+status=PROVED_SYMBOLIC_IDENTITY+FINITE_EXACT_CONTROLS;no_rank_claim
+dependency_sha256=8b9a6d029419079f5507d3b153fc43af760e846ddbc93d199392ff4da81640ec
+identity=[x^5](g^2-p(x-t)p(x+t))=-12*t^2*(2*c1-c3*c4)
+universe=Q;for_t_nonzero:degree_remainder_le_4_iff_e1=0_and_2*e5=e2*e3
+icarm_curve_211_mestre_fermigier_control=((348,-600,-216,492,876,-900),'2326/23',0,0,4,12,True,True,'a50a5c3c688a227a8be338d34a6660931a5fdc498ad65cf07496bb499d6baacf')
+rule30_symmetric_sampler=((1,7,25,-1,-7,-25),'2',0,0,4,12,True,True,'18a29c083b2f75894e5e20d15a43810c741369c1d2fb86bf00aa4d3921527af5')
+zero_sum_hostile=((25,71,135,149,221,-601),'11',0,15889582604000,5,12,True,True,'285aaf9a5125a47175b83f5161bfed1655811ae9e255dc0e053cb8955dc02007')
+semantic_sha256=e063ec2542da92a7470cf3a7c3097eb78a628b661af274d14e825dbc25413c25
+scope=quartic_and_twelve_base_abscissae_only;no_independence;no_rank_enrichment
+reproduce=python3_or_python3_-O_04-computation/elliptic_mestre_six_tuple_sidecar_rule30_scout_codex_20260821.py
+ALL CHECKS PASSED

@@ -2,7 +2,7 @@
 id: THM-3074
 title: "C3 two-pole binomial cancellation and first key-form depth lattice"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let a polynomial
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Let a polynomial
   planar Keller pair have a tame ramification-index-three, residue-degree-one
   valuation over the target coordinate line t=0.  If both affine source
   coordinates have poles p,q>=1, their first wedge coefficient must vanish;
@@ -38,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3074 -- two-pole C3 escape starts a toric key-form tower
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Inheritance and result
 
@@ -420,7 +420,8 @@ first lattice dZ   ==>   full polynomial value semigroup lies in dZ.       (43)
 
 ## 9. Exact verification and boundary
 
-The companion script checks symbolically:
+The companion script, replayed byte-identically under normal and optimized
+Python during an independent line audit, checks symbolically:
 
 - the two-pole wedge coefficient `(6)`;
 - the two unimodular Bezout charts, including noncoprime orders and `r=0`;
@@ -442,12 +443,3 @@ depth, and first-detection constraints.  It does not prove that the key-form
 tower terminates, that later values remain in the first lattice, that an
 arbitrary Jelonek curve can be polynomially straightened, or that `C3`,
 `A4/S4`, or the planar Jacobian conjecture is excluded.
-
-An independent audit rederived both exponent-matrix determinants and their
-values, including the one-pole boundary `r=0`; recomputed the logarithmic
-wedge and the three cases `ell<D`, `ell=D`, and `ell>D`; and checked that
-the definition of first-key detection is precisely the noncancellation
-hypothesis needed for the lattice conclusion.  It also replayed both local
-symplectic controls and ordinary/optimized/stored output byte-for-byte.  The
-strict-depth control confirms that `(27)` is not a full value-semigroup
-statement.

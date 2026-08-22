@@ -1,0 +1,10 @@
+THM-3167 inverse-different three-gate and full marked-pair jet hostile
+target_shear_covariance=q_preserved_exactly
+supplied_companion_q=r^-1*f_T+(r^3-r^-1)*(T^3-t) mod f
+physical_packet=(r^-3,r,r,r); total_product=1; pointed_ratio=r^4
+shifted_resultant=(r^4-1)^3
+full_marked_pair_jet_checks=16 N_range=1..16
+target_differential_jet_checks=80 order_total<=3 N_range=1..8
+constant_field_hostile=f=T^4-u;b=v*T^3/u;q=f_T/(4u);Jac=4u
+punctured_positive_control=f=T^4-u;b=4v*T^3;q=f_T;Jac=1
+scope=local_rational_split_cover_not_connected_polynomial_A2

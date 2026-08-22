@@ -1,0 +1,20 @@
+THM-3622 exact companion -- one-observable graph closure and normalization
+status=proved, verified exact, and independently hostile-audited
+SECTION source compiler and graph coordinates
+PASS source_gates=7 Q=(E-Z^2)/4=q
+SECTION saturated four-relation presentation
+PASS presentation_gates=13 ideal=(naive_graph_equations):Q^infinity
+SECTION exact image and boundary lines
+PASS boundary_gates=16 Z_Q=0=L0_union_Linfinity image=Z_minus_Linfinity
+SECTION singular locus and tangent debt
+PASS tangent_gates=10 Sing(Z)=L0 target_tangent_dim=3 source_plane_dim=2
+SECTION exact smooth normalization
+PASS normalization_gates=21 T=S[d] finite_birational_smooth_hence_normalization
+SECTION normalization arms and normalization-open source
+PASS arm_gates=31 present=N1 missing=N0,Nminus2 polar_x=N0+Nminus2
+SECTION exact Linfinity DVR identities and valuations
+PASS local_gates=12 v(Z,Q,E,B+4,x)=(1,2,2,2,-1)
+SECTION nonfiniteness and hygiene
+PASS nonfinite_hygiene_gates=5 x_not_integral_over_S finite_maps_would_be_closed
+PASS total_exact_gates=115
+RESULT PASS -- proved theorem algebra verified and independently hostile-audited

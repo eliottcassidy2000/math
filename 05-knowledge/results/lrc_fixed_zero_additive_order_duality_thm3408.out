@@ -1,0 +1,21 @@
+THM-3408 FIXED-ZERO ADDITIVE-ORDER DUALITY EXACT COMPANION
+source_sha256_lf=d95d459078a8cf3be5a61c34a8b6b46aaa20e3269726f35b8a4cfc94b28d5be6
+status=PROVED structural laws plus FINITE-EXACT arithmetic and q<=20000 game census
+scope=fixed source centre zero; transverse cyclic-sheet owners; no mobile-centre or LRC14 closure
+literal_density_checks=32493;equal_fibre_checks=2954;mode_pullback_checks=7140;lcm_family_checks=12042
+score_cutoff_4_25=count_1710,max_30030;score_cutoff_7_44=count_1829,max_39270
+B_over_4_25=(21, 22, 26, 28, 33, 35, 39, 42, 44, 46, 50, 52, 56, 57, 63, 65, 70, 74, 76, 77, 78, 84, 91, 99, 102, 104, 114, 117, 130, 143, 156, 186, 190)
+H_strict_over_1_6=((22, Fraction(1, 5)), (33, Fraction(1, 5)), (44, Fraction(1, 5)), (46, Fraction(2, 11)), (50, Fraction(1, 5)), (102, Fraction(3, 16)))
+E_equal_1_6=(21, 26, 28, 35, 39, 42, 52, 56, 57, 63, 65, 70, 74, 76, 77, 78, 84, 91, 99, 104, 114, 117, 130, 143, 156, 186, 190)
+outside_B_alpha_max=7/44;equality_moduli=(115, 184, 276)
+prime_loss_buckets=((7, (21, 28, 35, 42, 56, 63, 70, 77, 84, 91)), (11, (77, 99, 143)), (13, (26, 39, 52, 65, 78, 91, 104, 117, 130, 143, 156)), (19, (57, 76, 114, 190)), (31, (186,)), (37, (74,)))
+q21_rank=8;search_subsets=255;unit_modes=(1, 2, 4, 5, 8, 10);missing=(3, 6, 7, 9, 12, 14, 15, 18)
+q22_rank=7;search_subsets=127;witness=(1, 2, 3, 5, 7, 9, 11);kernel_orders=(11,2)
+q102_game_value=4/25;sheet_weights=((6, Fraction(1, 25)), (34, Fraction(4, 25)), (51, Fraction(4, 25)), (102, Fraction(16, 25)));owner_weights=((2, Fraction(7, 150)), (3, Fraction(7, 150)), (17, Fraction(4, 25)), (102, Fraction(56, 75)))
+q102_active_owners=(2, 3, 17, 102);q102_tight_sheet_orders=(6, 34, 51, 102)
+finite_scan=q15..20000_base_free;moduli=15985;largest_game_dimension=47;max_value=4/25;six_owner_margin=1/150
+finite_scan_equality_count=78;equality_iff_102_divides_q=YES;equality_first_last=(102,19788)
+finite_scan_sheet_support_total=59210;owner_support_total=44447;certificate_digest=82d049eae078dd411291b2841fb088fd03fc1e7d399a45c02094bb624e41f749
+corridor=any_base_free_fixed_zero_cover_by_at_most_six_owners_uses_order_in_(22,33,44,46,50,102)
+semantic_sha256=ab976baf418e2610aee1558eb249a160998426812fa96dddbc83b5a4a528541e
+verdict=PASS

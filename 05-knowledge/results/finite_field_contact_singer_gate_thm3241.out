@@ -1,0 +1,17 @@
+dependency_thm3232_sha256=dcf42b70cad1bc940aaeea13d7d0a4b981678b8d6ca87e828b06624c242d77a3
+dependency_thm3234_sha256=ef77a1f8fce16eb851eb38d5110a61ab73aa693f2d0ee9e11a912aa4fc302c87
+assert_nodes=0,float_literals=0
+prescribed_contact_realizations=8
+p13_stratum=x2-2,alpha=[1,2],H=[1,10]
+alpha_matrix=1,4;2,1
+alpha_order=168,norm=[6],norm_order=12
+deformation_atlas=169,nonzero_exact_contact=168,intertwining_checks=169
+heisenberg_moduli_pullback_checks=371293
+singer_prime_gates=2,3,7
+singer_gate_residues=[11];[8];[9,11]
+singer_gate_resultants=4,12,8
+beta=alpha^49=[0,7],H_beta=[10]
+beta_order=24,beta_norm=[6],punctured_orbits=7
+hierarchy=unit_then_algebra-generator_then-multiplicative-Singer
+scope=algebraic-contact-carrier-not-lawful-LRC-owner-packet-map
+all_exact_checks=PASS

@@ -1,0 +1,42 @@
+THM-3345 VERIFIED-EXACT
+berggren_tree_nodes_through_99905=15904
+vertices(bit,depth,word,odd_leg):
+  000: depth=4, word=DAUD, odd_leg=943
+  100: depth=4, word=UDUA, odd_leg=817
+  010: depth=5, word=DADDD, odd_leg=1073
+  001: depth=22, word=U^22, odd_leg=47
+c85_positive_control_distance=7
+prime_matchings(weight,source,target,lcp,distance,abs_depth_jump,path):
+  p=5, K=(5, 221), 000->100, lcp=0, distance=8, jump=0, path=D^-1 U^-1 A^-1 D^-1 U D U A
+  p=5, K=(5, 221), 010->001, lcp=0, distance=27, jump=17, path=D^-3 A^-1 D^-1 U^22
+  p=13, K=(13, 85), 000->010, lcp=2, distance=5, jump=1, path=D^-1 U^-1 D^3
+  p=13, K=(13, 85), 100->001, lcp=1, distance=24, jump=18, path=A^-1 U^-1 D^-1 U^21
+  p=17, K=(17, 65), 000->001, lcp=0, distance=26, jump=18, path=D^-1 U^-1 A^-1 D^-1 U^22
+  p=17, K=(17, 65), 100->010, lcp=0, distance=9, jump=1, path=A^-1 U^-1 D^-1 U^-1 D A D^3
+matching_costs={5: ((8, 0), (27, 17)), 13: ((5, 1), (24, 18)), 17: ((26, 18), (9, 1))}
+directed_involutions=12; affine_square_checks=24
+closed_walk_holonomy_checks=60; all_identity=True
+frozen_basepoint_V4_defects(first,second,target,length,path):
+  (5, 13, 17, 39, 'D^-1 U^-1 A^-1 D^-1 U D U A D^-1 U^-1 D^3 U^-22 D A U D')
+  (5, 17, 13, 39, 'D^-1 U^-1 A^-1 D^-1 U D U A D^-1 U^-1 A^-1 D^-1 U^22 D^-3 U D')
+  (13, 17, 5, 37, 'D^-1 U^-1 D^2 U^-1 A^-1 D^-1 U^22 A^-1 U^-1 D^-1 U^-1 D A U D')
+rooted_tree_automorphism_controls=3/3 blocked_by_depth
+colour_only_path_controls=3/3 blocked_by_distinct_labels
+c99905_vertices(bit,depth,word,odd_leg):
+  0000: depth=13, word=DAUUUUUUUUDDD, odd_leg=96033
+  0001: depth=8, word=DADDDUDA, odd_leg=67137
+  0010: depth=15, word=AUUUUUUUUUUUAUU, odd_leg=32193
+  0011: depth=6, word=AUAAAA, odd_leg=70623
+  0100: depth=11, word=UUUUAUUUUDU, odd_leg=48063
+  0101: depth=28, word=UUUUUUDDDDDDDDDDDDDDDDDDDDDD, odd_leg=99807
+  0110: depth=25, word=UUUUUUUUUUUUUUUUUUUUUUAAD, odd_leg=89823
+  0111: depth=222, word=U^222, odd_leg=447
+c99905_direction_weights={'0001': (53, 1885), '0010': (29, 3445), '0011': (65, 1537), '0100': (13, 7685), '0101': (145, 689), '0110': (265, 377), '0111': (5, 19981)}
+c99905_direction_costs={'0001': (17, 17, 31, 203), '0010': (28, 14, 28, 238), '0011': (19, 23, 225, 41), '0100': (24, 36, 40, 228), '0101': (41, 19, 237, 31), '0110': (38, 230, 26, 34), '0111': (235, 33, 43, 17)}
+c99905_direction_jumps={'0001': (5, 9, 17, 197), '0010': (2, 2, 14, 194), '0011': (7, 7, 211, 3), '0100': (2, 20, 10, 216), '0101': (15, 3, 207, 19), '0110': (12, 214, 4, 22), '0111': (209, 17, 13, 5)}
+c99905_involutions=56; affine_square_checks=336
+c99905_rooted_automorphism_controls=7/7 blocked_by_depth
+c99905_colour_only_path_controls=7/7 blocked_by_source_dispersion
+prime5_infinite_family_checks=1..2000; max_depth_jump=47996; max_path_cost=52004
+prime5_rank_CRT_controls=[(1, 301, 325), (2, 4851, 5525), (3, 4851, 160225), (4, 2888901, 5928325), (5, 85885451, 243061325)]
+ALL CHECKS PASSED

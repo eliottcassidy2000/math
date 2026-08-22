@@ -1,0 +1,25 @@
+THM-3269 SCALE-INVARIANT WEIGHTED BISPANNING EXACT AUDIT
+dependency_hash_checks=12
+assert_nodes=0,float_literals=0
+reset_link=(11 states,23 blocked edges),core=(V12,E22)
+clutch_strength=max_U_over_L,orientation_and_positive_row_scale_invariant
+strength_range=(12654135326210/11849988963879,66479967673052544/306432210196733)
+strength_bank_sha256=c7b8441f54bd893f33f1767db913da0d40f392f20d74f6d177782a0490dc911a
+bispanning_charts=(4960 unordered,9920 ordered)
+unique_minimum_tree=((2, 13), (2, 17), (2, 19), (2, 21), (3, 11), (3, 16), (7, 22), (10, 11), (16, 17), (18, 19), (21, 22))
+canonical_complement=((2, 10), (3, 22), (7, 18), (10, 16), (10, 22), (11, 13), (13, 18), (13, 22), (16, 21), (17, 22), (19, 22))
+second_over_best=111771229679330735594490655/106891942612503954628585203
+intrinsic_C2_image_over_best=719636186849558063/684759823142197440,strict_ordered_rank=4
+canonical_tree=(Aut1,center17,radius4,diameter8,leaves=(7,10,13,18))
+critical_root_directions=(to2:class53470,gcd2;to16:class55507,gcd1,inverse4891)
+canonical_full_Jac_vertex_order=(17, 16, 18, 13, 11, 22, 19, 10, 7, 21, 2, 3)
+canonical_C12_rank_label=((2, 10), (3, 11), (7, 8), (10, 7), (11, 4), (13, 3), (16, 1), (17, 0), (18, 2), (19, 6), (21, 9), (22, 5))
+canonical_J12_phase=((2, 10), (3, 10), (7, 7), (10, 10), (11, 4), (13, 4), (16, 1), (17, 0), (18, 1), (19, 4), (21, 8), (22, 1))
+norm_phase_to_edge_sampler=(Q=-I_on_dim11,48x11_rank11,abstract_only)
+canonical_six_edge_sampler=((1, (16, 17)), (2, (2, 21)), (3, (18, 19)), (4, (11, 17)), (5, (21, 22)), (6, (7, 22)))
+canonical_11_orientations=((1, 17, 16), (2, 21, 2), (3, 18, 19), (4, 17, 11), (5, 21, 22), (6, 7, 22), (7, 22, 21), (8, 11, 17), (9, 19, 18), (10, 2, 21), (11, 16, 17)),det=-1
+incidence_determinants=(1, -1),transition_det=-1
+canonical_transition_sha256=93f9ae1643ad9606f15826d8f1d3809fd0b04ce1d74c11d92d354edbdd737d4f
+abstract_THM3260_sidecars=both_removed;rank_compression_not_group_or_physical_intertwiner
+scope=canonical_abstract_C12_bridge,no_owner_phase,no_C7_carrier,no_LRC_or_GMC_decrement
+all_exact_checks=PASS

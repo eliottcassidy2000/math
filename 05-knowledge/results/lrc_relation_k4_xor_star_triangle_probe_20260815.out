@@ -1,0 +1,16 @@
+LRC NINE-SLOT K4/V4 XOR STAR-TRIANGLE FINITE-EXACT SIDECAR
+STATUS: FINITE-EXACT STRUCTURAL COMPONENT OF PROVED THM-3479; INDEPENDENTLY AUDITED
+SOURCE_HASHES: (('THM-3479', 'PROVED-STRUCTURAL-AUDITED', '025998551e3cdf3c6e4db5c0a4f208dd32f6845970fd4729d4a276035e0fdfeb'), ('ROLE-CHART-SIDECAR', 'FINITE-EXACT', '207c65ca235ea5647e346027d424264e8abbcf27c5f574b5901cca13611d7e03'))
+SECURITY: ('NO_ASSERT_AST', ('__future__', 'ast', 'functools', 'hashlib', 'itertools', 'json', 'math', 'pathlib'), ('__import__', 'compile', 'eval', 'exec'))
+K4_EDGE_MODEL: c1/q2, c2/q3, c3/q4 are the three opposite-edge pairs; c-triple is a star and q234-triple its complementary triangle
+AXIS_MODEL: H,q1,q5 label the three perfect-matching/XOR-difference classes
+S4_RELATION_STABILIZER: (24, 4, 6); stabilizer is the translation V4
+NONTRIVIAL_V4_CHARACTER_TABLE: ((1, 1, -1, -1), (1, -1, 1, -1), (1, -1, -1, 1))
+REPRESENTATION_SPLIT: six edge slots = three invariant pair sums plus one copy of each nontrivial V4 character; H/q1/q5 add three invariant axes
+PAIRING_CENSUS: ('U_full', ((-14, 2066, 742533), (0, 1, 1), 'TRIANGLE'), 6, ('TRIANGLE',), 21477024492, 190132999980, 4, (12, 12, 12), (13, 2197, 742586), (27, 53, 131))
+PAIRING_CENSUS: ('U_clock', ((-655166, -656336, 81141), (0, 0, 1), 'STAR'), 6, ('STAR',), 34890791625731592, 37920256217350720, 8, (8, 8, 8), (65, 2197, 742586), (655231, 658533, 661445))
+PAIRING_CENSUS: ('U_q27', ((25648, 7598382, 18279864576), (1, 1, 1), 'STAR'), 6, ('STAR',), 3431657725180173187776, 3799929927503911348224, 1728, (12, 12, 12), (28405, 7599423, 18279868269), (1041, 2757, 3693))
+PAIRING_CENSUS: ('U_q51', ((65779, 7191885, 30105545898), (1, 1, 1), 'STAR'), 6, ('STAR',), 13712095338776997559110, 14418826895929626193100, 10, (12, 12, 12), (70993, 7199569, 30105550319), (4421, 5214, 7684))
+INTERLACING_HOSTILE: (('TRIANGLE', 'STAR', 'STAR', 'STAR', 'TRIANGLE', 'STAR'), (-8, 24, 24, 216, -40, 120))
+SEMANTIC_SHA256: 904764346382212e617f2bc15bb95e235af42c0cf1e79131842ced17e39538c8
+VERDICT: U_full is pairing-robust TRIANGLE type while U_clock and both CRT lifts are pairing-robust STAR type; this is an exact K4/XOR selector invariant correlated with, but not proved to cause, the two-transplant split and it supplies no tournament orientation or physical endpoint current

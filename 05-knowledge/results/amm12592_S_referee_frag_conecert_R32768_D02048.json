@@ -1,0 +1,17 @@
+{
+ "stage": "conecert_R32768_D02048",
+ "pass": 4,
+ "fail": 0,
+ "fails": [],
+ "text": [
+  "==========================================================================",
+  "STAGE conecert -- my S-cone-fc certificate re-derivation R=32768 D0=2048",
+  "==========================================================================",
+  "  snapshot=E1 -> {\"i_fc\": 6967, \"d\": 25809, \"m\": 167, \"a0\": 25798, \"drain\": 12899, \"Tmax\": 12988, \"T_worst_t\": 2, \"capture_ub\": 19955, \"F4\": true, \"budget_margin\": 12811}",
+  "  [PASS] my certificate == stored fcscan (i_fc,d,m,a0,drain,Tmax,ub) [E1 snap]  -- i_fc=6967 ub=19955",
+  "  [PASS] certificate bound >= actual capture, F4 holds [E1]  -- 19955 >= 19865",
+  "  snapshot=mine -> {\"i_fc\": 6967, \"d\": 25809, \"m\": 167, \"a0\": 25798, \"drain\": 12899, \"Tmax\": 12988, \"T_worst_t\": 2, \"capture_ub\": 19955, \"F4\": true, \"budget_margin\": 12811}",
+  "  [PASS] my certificate == stored fcscan (i_fc,d,m,a0,drain,Tmax,ub) [mine snap]  -- i_fc=6967 ub=19955",
+  "  [PASS] certificate bound >= actual capture, F4 holds [mine]  -- 19955 >= 19865"
+ ]
+}

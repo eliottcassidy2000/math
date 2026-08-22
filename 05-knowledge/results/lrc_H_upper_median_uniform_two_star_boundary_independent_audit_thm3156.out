@@ -1,0 +1,20 @@
+LRC H UNIFORM TWO-STAR BOUNDARY -- THM-3156 INDEPENDENT AUDIT
+status=INDEPENDENTLY HOSTILE-AUDITED;direct modular arcs;full 16-state matching DP
+main_witness_rows=95;all exact gain/debt/margin rows reconstructed
+brute_controls=(6, 7);mask_controls=(6, 7, 12, 13, 37, 62, 100)
+integer_strip_controls=6900;ordered_distinct_labels=30;p=1..20;p<=q<=2p
+periodic_ray_controls=g=1..100;direct_equals_closed_form;strictly_increasing
+ray_difference_polynomials=((8568, 1045030896, 900867744, 0, 0), (140399280, 1325337552, 1220927904, 0, 0), (-35086464, 972509328, 1007554464, 0, 0));positive_for_all_g>=1
+ray_floor=I2:2030/280393>1/140
+phase_blind_zero_witness=(136, 119, 102, 103, 101, 100);edge_floors=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1));debt=656518999793763784/2839155148366624716475
+global_exact_minimum=2942257539652583/320491868062929255@D=6,levels=(6, 9, 12, 11, 8, 7)
+smallest_conservative_9S_floor=85295963189446@D=24;rounding_direction=PASS
+dependency_audit=main imports only proved reflected arc engine;unproved one-cone/scout absent
+scope=fixed reflected H packet,D=6..100,m=D;not arbitrary D;not physical LRC14
+reproduction=python3 04-computation/lrc_H_upper_median_uniform_two_star_boundary_independent_audit_thm3156.py
+main_sha256=0f8e87a4f00b1af78aeee2a8d2160e31830a9e464b01e6abef28a7be02395454
+main_output_sha256=c477a863d8cd211984343e891a4924d1173040b40e81c7db2f75820a443b788d
+main_data_semantic_sha256=3d86198c361d1d62322489b37be3b759bcc7a8ac6efdff22858a1f619cb7fbae
+normal_vs_python_O=BYTE_IDENTICAL
+source_sha256=066885479414ba9dce6bad0fb39d0567a3592502c2bf78f151bbad1558dd7a6a
+all_independent_controls=PASS

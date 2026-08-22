@@ -1,0 +1,20 @@
+THM-3612 exact companion -- proved even-fold collision-jet gate
+status=verified exact controls plus independent hostile audit; all-regular proof is formal-jet driven
+SECTION compiler, Russell relation, and collision
+PASS compiler_and_collision_gates=10 smooth_derivative=-4
+SECTION closed fold, non-graph involution, and residue sign
+PASS fold_geometry_gates=32 residue=3dx^dt generic_sheet_degree=2
+SECTION universal common-cotangent first-jet gate
+PASS first_jet_symbolic=20 hostile_rows=54 unique_escape=9/2
+SECTION exceptional Hessian solution and cubic second difference
+PASS exceptional_hessian_rank=5 cubic_coefficients=20 second_jet_hostiles=81 invariant=-16(2r+27)/3
+SECTION sharp Qstar first-order survivor
+PASS Qstar_survivor_gates=8 vertical=(-141,147,-141)
+SECTION doubly tuned Qdag second-order survivor
+PASS Qdag_second_order_survivor_gates=7 higher_jet_nonzero=TRUE
+SECTION affine closure and coordinate-plane positive controls
+PASS affine_and_positive_controls=7 x0_jac=-4 q0_jac=3
+SECTION source AST gate
+PASS ast_assertion_nodes=0
+CHECKS=241
+RESULT=PASS

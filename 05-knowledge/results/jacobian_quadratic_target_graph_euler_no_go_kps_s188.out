@@ -1,0 +1,29 @@
+THM-3571 quadratic target-graph Euler audit
+G=q2*b^2+q1*b+q0; 256*disc_b(G)=delta_tilde
+chi(D_phi)=2-rho(delta_tilde)-nu
+chi(X_phi)=-1+2*rho(delta_tilde)+2*nu-rho(f_tilde)
+constant-delta Groebner basis: ['A', 'C**2']
+two-root multiplicity atlas (m,n,verdict,basis):
+(1, 1, 'EMPTY', ('1',))
+(1, 2, 'EMPTY', ('1',))
+(1, 3, 'EMPTY', ('1',))
+(1, 4, 'EMPTY', ('1',))
+(1, 5, 'EMPTY', ('1',))
+(1, 6, 'EMPTY', ('1',))
+(1, 7, 'EMPTY', ('1',))
+(2, 2, 'AFFINE', ('p*z - 1', 'A', 'C'))
+(2, 3, 'EMPTY', ('1',))
+(2, 4, 'AFFINE', ('-C*p + 4*C*z', 'p*z - 1', '7*A + 144*C', 'C**2', 'C*p**2 - 4*C'))
+(2, 5, 'EMPTY', ('1',))
+(2, 6, 'EMPTY', ('1',))
+(3, 3, 'EMPTY', ('1',))
+(3, 4, 'EMPTY', ('1',))
+(3, 5, 'EMPTY', ('1',))
+(4, 4, 'EMPTY', ('1',))
+controls (name,rho_delta,nu,rho_f,chi_D,chi_X):
+('pure-C', 3, 1, 3, -2, 4)
+('generic-11100', 8, 3, 5, -9, 16)
+('generic-12345', 8, 3, 5, -9, 16)
+genuine quadratic consequence: rho(delta_tilde)>=3, nu>=1, rho(f_tilde)<=5
+therefore chi(X_phi)>=2; no complete quadratic pullback is A2
+all active truth gates passed

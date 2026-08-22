@@ -1,0 +1,8 @@
+rough_composite_controls=12
+control_records=Q533:spf13:r1:k38:odd(1, 89, 133):E240:O240;Q589:spf19:r1:k42:odd(1, 147, 293):E270:O270;Q689:spf13:r3:k49:odd(1, 115, 229):E312:O312;Q703:spf19:r3:k50:odd(1, 117, 235):E324:O324;Q551:spf19:r5:k39:odd(1, 137, 275):E252:O252;Q649:spf11:r5:k46:odd(1, 163, 323):E290:O290;Q527:spf17:r9:k37:odd(1, 131, 263):E240:O240;Q583:spf11:r9:k41:odd(1, 97, 195):E260:O260;Q529:spf23:r11:k37:odd(1, 133, 263):E253:O253;Q697:spf17:r11:k49:odd(1, 175, 347):E320:O320;Q517:spf11:r13:k36:odd(1, 129, 257):E230:O230;Q559:spf13:r13:k39:odd(1, 93, 187):E252:O252
+even_shortest_gap_cells=1988
+finite_rough_boundary=(116, 112, ((11, 6), (13, 7), (23, 6), (29, 7)), 4735)
+small_positive_boundary=(29, (1, 5, 7, 8, 12, 13, 22))
+lower_quotient_order_scope_hostile=(513, (1, 57, 285, 342, 399), (513, 9, 9, 3, 9))
+semantic_sha256=4e81e4be4ef811b910a12537432dae02202d8e3913ea8b28633a1bc71615d3f9
+rough_maximal_order_rank7_exclusion=PASS

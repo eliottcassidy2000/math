@@ -1,0 +1,27 @@
+LRC U_FULL OWNER-BOUNDARY K4xF13 ENDPOINT FACTORIZATION INDEPENDENT AUDIT
+status=FINITE-EXACT INDEPENDENT AUDIT; endpoint factorization only; LRC(14) OPEN
+candidate_commit=e92508714abec0f054e033ef933e04b61ae3f1e1; imported_candidate_code=False
+parent_dependency=lrc_half_twist_relation_current_bridge_thm3479.py:ad2a620cdc238f28e3384698b2c612f38cdf2566bd56b76d1cbabcc03107ec0b
+embedding=(prime=572252886246508880869,root=279936,order=81750412320929840124)
+owner_support=(literal=[0,1/2)U(13/2,7),interval_representative=[0,1/2)U[13/2,7),singleton_difference=13 left endpoints r=13/2)
+guard_partition=(39=13*3 atoms; chambers=[0,1),[1,6),[6,7); r=1 middle, r=6 right in half-open engine convention)
+guard_danger_arcs=(('left', (0, 1, 12)), ('middle', (0, 1, 11, 12)), ('right', (0, 11, 12)))
+owner_gate=(26 active left/right atoms; all 13 middle atoms empty before Fourier contraction)
+unguarded_interval_counts_by_alpha=(531398, 541349, 556004, 554331, 546963, 550023, 539135, 539135, 550023, 546963, 554331, 556004, 541349) total=7107008
+atom_split_interval_counts_by_alpha=(531398, 541470, 556125, 554452, 547084, 550144, 539256, 539256, 550144, 547084, 554452, 556125, 541470) total=7108460
+nonempty_atom_tables_by_alpha=(334, 334, 333, 334, 333, 334, 334, 334, 334, 333, 334, 333, 334) total=4338
+direct_guarded_controls=(pairs=((0, 0), (0, 1), (1, 0), (6, 6), (12, 0), (12, 12)),tau_each=13,count=78,sha256=3eb5be8485d32bfff3ddae1bc393c389cd47389f30f3351eb0435523f5c121fa)
+frozen_bank_reconstruction=(size=2197,sha256=1fabc5cfdbaa1455e10cd6bf9264488133616a7b0ff381623d729b4b4bfa9682)
+inverse_values=((q_H,320618948602619577408),(q_q5,503604956476841920373),bridge=389266878372286537904)
+abstract_guard_pair_kernels=(H_nonzero=1521,q5_nonzero=1521)/1521
+drift_bucket_support=(52/117 exactly; (left/right)^2 x F13; all H,q5,bridge supported buckets nonzero)
+bucket_hashes=(H=c5bb013836492665e766a0423a71c45983f5226b99b2ea74ad7f53e33c2a8629,q5=933c6f0b768f22ee993dc02af171d3b731e0c1ab3acd7120bed157a491a29ec9,bridge=553cfe7289b0556a19a8bcd1a0382dc1372545358feac62e5229adca315f8a26)
+K4xF13_table=(rank=4,corner_sha256=c651f1deb71258001213c32b812005fb1f07b3a834fbe0526feb5b9c1c54435a,walsh_sha256=6f8ce43a58c5c05552fa4a815c955e10873ed3535ba8cb436284fe4ad18d996c)
+Walsh_channels=(names=('constant', 'left', 'right', 'mixed'),drift_support=(13, 13, 13, 13),Fourier_support=(13, 13, 13, 13),spectrum_sha256=ef4c512d3e0444cce1cacee42ebbbb2d2edef7bd866517814484d1e8e921eaa9)
+K4_scope=four F2^2 chamber-pair states are vertices of an undirected complete carrier; no intrinsic pairwise orientation, hence no tournament
+guard_equality_hostiles=(('same_sheet', 324498447313453607031), ('same_chamber', 341590019311254368788), ('same_guard_atom', 50212089322152546627)); none reconstructs the frozen bridge
+pairing_scope=AX and BY atoms are multiplied by Cartesian product; no common (y,u,v,a,b,e') stalk, root, owner, word, source, horizon, or support predicate from THM-2471
+nonconsequence=no ancestry/bispectrum realization, physical current, grouped C(a;X,m), all-unit B(q), scalar-row exclusion, or LRC(14)
+security_ast=(5843, ())
+semantic_sha256=d52c9f0a56c14a83e1e6b175c7b725314c99f09d44509bc8582847a5857f7da6
+STATUS=PASS

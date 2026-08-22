@@ -1,0 +1,16 @@
+THM-3471 RULE 30 MOTZKIN STRIP/CARRY EXACT AUDIT
+strip_universe=targets_t=2..512; direct_sources_s=0..259; ternary_coefficients_n=0..512
+strip_source_words=alpha0=1[d>=2],alpha1=1[d>=2_even],alpha2=1[d>=1_odd]
+strip_identities=R0+R1+R2=0;B+R2=1[t>=3_odd];transport_q_first_jet=R1
+backbone_B_prefix_t2..65=0100010101000100010001010100010101000101010001000100010101000100
+strip_R0_prefix_t2..65=0001110011100001111000110001110011100011000111100001110011100001
+strip_R1_prefix_t2..65=0000110011110000111100110000110011110011000011110000110011110000
+strip_R2_prefix_t2..65=0001000000010001000100000001000000010000000100010001000000010001
+transport_first_jet_prefix_t2..65=0000110011110000111100110000110011110011000011110000110011110000
+innovation_lift_bits_eps1..30=101101101000001100000001101010
+innovative_carries_k_variables_weight_degree_walshzeros=[(1, 0, 1, 0, 0), (3, 1, 1, 1, 1), (4, 2, 3, 2, 0), (6, 3, 5, 3, 0), (7, 4, 11, 4, 0), (9, 5, 21, 5, 0), (15, 6, 41, 6, 0), (16, 7, 93, 7, 0), (24, 8, 187, 8, 0), (25, 9, 381, 9, 0), (27, 10, 757, 10, 0), (29, 11, 1533, 11, 0)]
+marked_arc_universe=k=2..30
+center_word_c2..c30=01110011000101100100111010111
+marked_innovation_word=111001111001
+scope=FINITE-EXACT; no Rule30 prize conclusion
+ALL CHECKS PASSED

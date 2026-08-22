@@ -1,0 +1,19 @@
+THM-3607 exact companion -- proved rank-two projection formal rigidity
+status=finite exact controls; all-degree completion argument is proof-driven
+SECTION compiler identities and mixed arm normal form
+PASS compiler_and_arm_gates=7 determinant=-3
+SECTION rank-two row-space trichotomy and easy projection faces
+PASS rank_two_matrices=624 fixedC=156 BC=36 mixed=432 easy_face_gates=14
+SECTION normalized mixed determinant-to-transport-PDE sign
+PASS transport_identity_rows=6 abstract_sign=plus3
+SECTION x=0 boundary ODE and formal first-coefficient gate
+PASS boundary_degree_rows=9 formal_rows=64 unique_polynomial_formal_branch=Z=t
+SECTION explicit formal arm-completion inverse
+PASS completion_inverse_gates=4 derivative_at_R1=9 coefficient_ring=C[a]
+SECTION ordinary initial-form degree-seven gate
+PASS initial_degree_rows=26 monomial_rows=429 survivors=degrees_divisible_by_7
+SECTION complete collision-preserving quadratic hostile
+PASS quadratic_collision_constraints=2 decisive_coefficients=x17q3,x13q7,x13q3 terminal=-81/2
+SECTION sharp punctured rational endpoint and pole
+PASS sharp_endpoint_gates=18 determinant=3t pole_order=1 collision_rows=3
+SUMMARY exact_checks=1812 all_passed=True

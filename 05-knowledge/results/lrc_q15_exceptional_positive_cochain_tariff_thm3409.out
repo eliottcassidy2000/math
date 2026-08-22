@@ -1,0 +1,15 @@
+THM-3409 Q15 EXCEPTIONAL POSITIVE-COCHAIN RIGIDITY AND TARIFF
+source_sha256_lf=1d8528e187fa2804a61e3632dac4bb546473dd7c1e93749f6236f9ccb30f8243
+dependency_sha256_lf=(('THM-3398', '01901da2bb382184cfe4466550afe79255598f580f00a761fc32731a52ec9378'), ('THM-3398-script', '82929cbf6903701533c1b1f6ebed143e5c8f9edc570dfe2895cf8db70e478da9'), ('THM-3398-output', 'ab25331039813f8c83626a66d0d0d8157e8b3826a76fccc690452a2cdad3169b'), ('THM-3405', 'd3e7dbeeb85c6f897bd9e31270bd0b6602ae4feac3b46a45eb5ce23ae5d24fe0'), ('mobile-boundary-script', 'dd157efbd3bd7da34b75cba7f30fb55cfa0381bb6a74ece7abade7f4a2c439fa'), ('mobile-boundary-output', 'b874f11a8f81604e8bfefe01a6437bfd10a21b909c3ee3e37d0c8a714528594f'), ('full-physical-script', 'e54b77eeae05484cbbfacd904e850815f7e78a5e3306f21ad87a68ffbfae9e2e'), ('full-physical-output', '8b8cc6f45ab8b14b0ba26afb29748ccf3bc08f4f103581ba9afd7167391e8008'))
+status=PROVED exact event-cell classification plus VERIFIED-EXACT companion;independently_audited
+edge=q15:(1, 7, 8, 9, 11, 13);inherited_boundary=unique_rank6_physical_edge_outside_capped_zero_cochain_slice
+event_universe=(scale,boundaries,samples,interval_checks)=(15135120,1260,2520,579600)
+cover_locus=(open_cells,boundary_covers,width_histogram,total_measure)=(30,0,((Fraction(1, 3696), 30),),5/616)
+selected_packets=30;all_maximal_exact_partitions=YES;packet_sha256=7531de7ee5fd238f8af5cb484afdd9d6c01f40a09e1f586ff0935f74205c0b53;cell_sha256=4f0f7cd5ac7d313bcccfb789ff5a512aee5ce4e1c44fc322ea5a9d450ba990af
+translation_orbits=(canonical_blocks,lex_pair_cochain,count,measure)=((((0, 1), (5, 7), (8, 10, 12), (4, 9, 14), (2, 6, 13), (3, 11)), (2, 2, 3, 3, 4, -2, 3, -1, 2, 6, 2, 6, -6, -3, 5), 15, Fraction(5, 1232)), (((0, 1), (9, 11), (4, 6, 8), (2, 7, 12), (3, 10, 14), (5, 13)), (-2, -2, -3, -3, -4, 2, -3, 1, -2, -6, -2, -6, 6, 3, -5), 15, Fraction(5, 1232)))
+time_reversal=t_to_minus_t_and_ell_to_minus_ell;canonical_representative_map=ell_to_1_minus_ell;cochain_sign_flip=YES
+complete_tariff=(L1,Linf,L2_squared)_histogram=(((50, 6, 206), 30),)
+spanning_tree_tariff=(tree_count,minL1,minL1_count,minLinf,minLinf_count,owner7_star_edges,owner7_star_values)=(1296, 10, 15, 3, 104, ((0, 1), (1, 2), (1, 3), (1, 4), (1, 5)), (2, -2, 3, -1, 2))
+scope=fixed_edge_and_owner_order;one_selected_mode_per_distinct_owner;strict_open_physical_cover;no_LRC14_decrement;not_a_uniform_all_edges_tariff
+semantic_sha256=80ecee351d7648a6a4c00f879a649d8fd4dbe87119929e5a5ded72d693c9859d
+verdict=PASS

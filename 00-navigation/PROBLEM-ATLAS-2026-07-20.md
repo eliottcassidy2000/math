@@ -21,9 +21,9 @@ as results land; date-stamp edits.
   resolvent √−L with pointwise χ(−L) law 0/8316, explicit Jelonek quartic
   {L=0} = cusp {P³+E²=0} — A₂ at both ends (THM-1310, THM-1335); master
   identities (map ≡ two lines); Chebyshev modulus m = essential-class invariant;
-  trisection reading; radical inverse ⟹ ABEL-RUFFINI slice: all known
-  counterexamples radical-invertible, an A₅ quintic would be the first
-  non-radical map (THM-1345); trace-polynomiality/centroid + propagation to F∘F;
+  trisection reading; radical inverse for the sporadic tower (THM-1345), now
+  superseded globally by THM-3438's explicit non-radical `S_5` weighted atom;
+  trace-polynomiality/centroid + propagation to F∘F;
   Smith selection rule (klein-S325: deg 2 impossible; d=3 ⟹ S₃; d=4 ⟹ A₄/S₄
   only; dihedral iff odd); surjectivity (mac-mini THM-1315); engine trichotomy
   (THM-1340); TRAP/Druzkowski strata, +1 = Yagzhev X (THM-1320/1325); ghost
@@ -34,10 +34,10 @@ as results land; date-stamp edits.
   orientation cover of the fiber 3-tournament, Rédei sign = disc character
   (opus-S418).
 - **SHARPEST OPEN:** the SEED CONJECTURE (unique deg-3 seed mod Aut×Aut) and the
-  REALIZATION PROGRAM (T1549): which (degree, monodromy) pairs occur — d=4
-  (A₄/S₄) needs the 2-JET architecture (z-quadratic; my order-{1,3} evidence);
-  d=5 A₅ = the first Abel–Ruffini-obstructed Keller map (ties to Kakeya K(A₅)
-  and Pisano-60, HYP-8145).
+  REALIZATION PROGRAM (T1549): THM-3438 now realizes `S_d` in every degree
+  `d>=3`, including z-quadratic `S_4` and non-radical `S_5`; classification
+  of other groups such as `A_4/A_5`, equivalence classes, and constrained
+  z-affine/planar strata remains open.
 - **NEXT:** the 2-jet design equations at d=4 (one hard session; solver
   patterns ready); Lean certification package v3 (masters + 108a²L + section +
   traces + det/collisions — plausibly the first formal analysis of any JC

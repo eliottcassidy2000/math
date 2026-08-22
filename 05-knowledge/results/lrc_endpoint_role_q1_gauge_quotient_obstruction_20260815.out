@@ -1,0 +1,26 @@
+THM-2334 endpoint-to-role q1-gauge quotient obstruction
+script=04-computation/lrc_endpoint_role_q1_gauge_quotient_obstruction_20260815.py
+output=05-knowledge/results/lrc_endpoint_role_q1_gauge_quotient_obstruction_20260815.out
+pins=(('THM-2334-PROVED', 'c80f7bb3d31274a02f046fa6cea3b36cd56c62be611936ca32ee723881cd3899'), ('THM-3479-PROVED', '025998551e3cdf3c6e4db5c0a4f208dd32f6845970fd4729d4a276035e0fdfeb'), ('THM-3479-COMPANION', 'ad2a620cdc238f28e3384698b2c612f38cdf2566bd56b76d1cbabcc03107ec0b'), ('ROLE-CHART-SIDECAR', '207c65ca235ea5647e346027d424264e8abbcf27c5f574b5901cca13611d7e03'), ('U_FULL-REFINED-BANK-SCRIPT', 'ee2105742abee578a9c41ff7ec954a07ada324fccc2c643429e7ac6e6e6f8fc2'), ('U_FULL-REFINED-BANK-OUTPUT', '10a98351cc59615a5b6d2b8f555e0936d1a39566d9906127edc2b0fbc3918e73'))
+STATUS=FINITE-EXACT QUOTIENT/BACK-MAP COMPONENT OF PROVED THM-3479; INDEPENDENTLY AUDITED
+GAMMA_TYPE=gamma_w: Ghat_w=L_w^perp/<w> -> cyclotomic endpoint-current scalars
+A_TYPE=A_w: G_w=K_w/L_w -> cyclotomic unrestricted relation-residue aggregates; A is the normalized inverse DFT of gamma
+RELATION_ADDRESS_TYPE=a in Lambda(w)=ker(w:Z^9->Z); C(a;X,m) is one grouped exact-address coefficient and is not computed here
+COORDINATE_RESPONSE_CANDIDATE=P_i=A_w([e_i-(w_i/w_q1)e_q1]); gamma(e_i) would be ill-typed
+packet_ranks=(full,remove_guard)=(('U_full', 6, 5), ('U_clock', 6, 5))
+coarse_coordinate_profiles=(('U_full', (('c1', (0, 0)), ('c2', (1, 0)), ('c3', (0, 1)), ('H', (1, 0)), ('q2', (1, 12)), ('q3', (1, 0)), ('q4', (1, 0)), ('q5', (1, 0)))), ('U_clock', (('c1', (0, 0)), ('c2', (1, 0)), ('c3', (0, 1)), ('H', (1, 0)), ('q2', (1, 12)), ('q3', (1, 0)), ('q4', (1, 0)), ('q5', (1, 0)))))
+fixed_relation_classes=(coarse,refined)=(('U_full', (1, 0), (1, 0, 6)), ('U_clock', (1, 0), (1, 0, 6)))
+role_charts=72 forced_bridge=(4, 6) labels=(H,q5)
+COARSE_VERDICT=[r_H]=[r_q5], hence P_H=P_q5 for every A_w and all 72 weighted tree determinants vanish identically
+coarse_synthetic_zero_determinants=(('U_full', 72, 72), ('U_clock', 72, 72))
+single_row_removal_separation_census=(('U_full', (('c1', False), ('H', True), ('q1', False), ('q2', False), ('q3', False), ('q4', False))), ('U_clock', (('c1', False), ('H', True), ('q1', False), ('q2', False), ('q3', False), ('q4', False))))
+MINIMAL_REFINEMENT=among the six named one-row deletions, only deleting the H-labelled owner-packet row separates the bridge; the Boolean guard_safe factors remain; add character e_H; quotient dimension 3; twist bank size 2197
+refined_coordinate_profiles=(('U_full', (('c1', (0, 0, 0)), ('c2', (1, 0, 0)), ('c3', (0, 1, 0)), ('H', (1, 0, 1)), ('q2', (1, 12, 0)), ('q3', (1, 0, 0)), ('q4', (1, 0, 0)), ('q5', (1, 0, 0)))), ('U_clock', (('c1', (0, 0, 0)), ('c2', (1, 0, 0)), ('c3', (0, 1, 0)), ('H', (1, 0, 1)), ('q2', (1, 12, 0)), ('q3', (1, 0, 0)), ('q4', (1, 0, 0)), ('q5', (1, 0, 0)))))
+refined_synthetic_positive_controls=(('U_full', (2, 64000, 18, 32, 40)), ('U_clock', (2, 64000, 18, 32, 40)))
+COMPLETED_U_FULL_REFINEMENT=the pinned 2197-twist bank, normalized inverse DFT at five distinct role classes, coarse fibre-sum back-map, and graph census give nonzero bridge and both K4 factors in all 72 labelled charts
+MISSING_EXACT_DATA=the U_clock refined bank and a proof that the U_full edge differences are a lawful physical common-ancestry current
+PHYSICAL_CURRENT_TYPE=an actual Boolean/common-ancestry endpoint or THM-2512 response observable; neither gamma, A, nor a synthetic graph gradient supplies it
+NONCONSEQUENCES=no grouped C(a;X,m) nonvanishing, all-91-unit B(q), ancestry, bispectrum, scalar-row exclusion, or LRC(14)
+semantic_sha256=fe9fe2d4b1d98aba3b60e1a7f6823bcccabed04d7a319f3eb20c83d25c799422
+security_ast_nodes_and_forbidden=(3968, ())
+VERDICT=the canonical coarse THM-2334 target response cannot power the role determinant; one extra guard character gives the dimension-minimal named repair, realized exactly for U_full but not upgraded to a physical current

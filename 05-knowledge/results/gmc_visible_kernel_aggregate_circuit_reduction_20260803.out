@@ -1,0 +1,26 @@
+VISIBLE-KERNEL AGGREGATE CIRCUIT REDUCTION FINITE-EXACT AUDIT
+status=FINITE-EXACT;structural_derivation_not_full_lattice_enumeration
+dependency_hashes=BEGIN
+da47f9db80558343bd6442196c65150417241acbed65385b876ca09a66f0490f  04-computation/gmc_selector_paired_half_transfer_partial_scout_20260803.py
+ef276b6a99a3ec1ac59d5cc352a3aa9a50fa64440a6615695d684a68a6683208  05-knowledge/results/gmc_selector_paired_half_transfer_partial_scout_20260803.out
+fd9c4feaa9a39db14c754a3ff7267ad5f71e2cd71953119c07df53fafb96bab6  01-canon/theorems/THM-3305-single-edge-visible-zero-mode-and-rank-two-resolvent-update.md
+75a7afacc5056976efff5686b3afe44534e8c64f1e2a9fee18d26b1c70f03e52  04-computation/gmc_multi_edge_visible_kernel_bordered_resolvent_independent_audit_20260803.py
+ce7f9239b9ba68813ceb919662458b1c2ec32dea98d41507edab341a5417f651  05-knowledge/results/gmc_multi_edge_visible_kernel_bordered_resolvent_independent_audit_20260803.out
+dependency_hashes=END
+selector_block_shape=(14, 12);small_labels=((2, 'Q+4'), (11, 'Q+1'), (11, 'Q+2'), (11, 'Q+4'), (11, 'Q+5'), (16, 'Q+1'), (18, 'Q+1'), (18, 'Q+2'), (18, 'Q+4'), (18, 'Q+5'), (22, 'Q+1'), (22, 'Q+2'), (22, 'Q+4'), (22, 'Q+5'));full_labels=((3, 'Q-8'), (3, 'Q-1'), (7, 'Q-7'), (10, 'Q-8'), (10, 'Q-1'), (13, 'Q-8'), (13, 'Q-1'), (17, 'Q-8'), (17, 'Q-1'), (19, 'Q-1'), (21, 'Q-8'), (21, 'Q-1'))
+column_reduction=b=0;j*a1=0;a4=e*x;w*c1+D=0;A+(p-q)*x=0;(1-s)*x+r*C=0;(1-u)*x=0;C+(1-v)*x=0;observer_sum=x+A+C+D
+full_side_invisibility=Q8=E16+E11Q1-E11Q2;nonQ8=E11Q4+E22Q1+E2-p*E11Q2;PASS
+case_w=1=singleton_persistent_via_x=A=C=0,D_nonzero;case_w=0=requires_x_nonzero,u=1,1-s=r*(1-v),q-p+v_nonzero
+singleton_fixed_direction=annihilated_by_all_10_remaining_edge_deltas;all_superset_zero_masses_at_least_3/5
+reduced_boolean_hostile_cases=64;visible_cases=10;minimal_reduced_supports=(('p', 'r', 'u'), ('p', 's', 'u'), ('q', 'r', 'u'), ('q', 's', 'u'), ('s', 'u', 'v'))
+circuit=((2, 10), (13, 18), (17, 22));mass=12/35;sum=12;norm=420;support=(((2, 'Q+4'), -12), ((11, 'Q+1'), 4), ((11, 'Q+2'), 4), ((11, 'Q+5'), 4), ((18, 'Q+1'), 3), ((18, 'Q+2'), 3), ((18, 'Q+4'), 3), ((18, 'Q+5'), 3), ((22, 'Q+1'), -4), ((22, 'Q+2'), -4), ((22, 'Q+4'), 12), ((22, 'Q+5'), -4))
+circuit=((2, 10), (13, 22), (17, 22));mass=12/35;sum=12;norm=420;support=(((2, 'Q+4'), -12), ((11, 'Q+1'), 4), ((11, 'Q+2'), 4), ((11, 'Q+5'), 4), ((18, 'Q+1'), 3), ((18, 'Q+2'), 3), ((18, 'Q+4'), 3), ((18, 'Q+5'), 3), ((22, 'Q+1'), -4), ((22, 'Q+2'), -4), ((22, 'Q+4'), 12), ((22, 'Q+5'), -4))
+circuit=((7, 18),);mass=3/5;sum=3;norm=15;support=(((18, 'Q+1'), -3), ((18, 'Q+2'), 1), ((18, 'Q+4'), 1), ((18, 'Q+5'), 1), ((22, 'Q+1'), 1), ((22, 'Q+2'), 1), ((22, 'Q+5'), 1))
+circuit=((10, 22), (13, 18), (17, 22));mass=12/35;sum=12;norm=420;support=(((2, 'Q+4'), 12), ((11, 'Q+1'), 4), ((11, 'Q+2'), 4), ((11, 'Q+5'), 4), ((18, 'Q+1'), -3), ((18, 'Q+2'), -3), ((18, 'Q+4'), -3), ((18, 'Q+5'), -3), ((22, 'Q+1'), 4), ((22, 'Q+2'), 4), ((22, 'Q+4'), -12), ((22, 'Q+5'), 4))
+circuit=((10, 22), (13, 22), (17, 22));mass=12/35;sum=12;norm=420;support=(((2, 'Q+4'), 12), ((11, 'Q+1'), 4), ((11, 'Q+2'), 4), ((11, 'Q+5'), 4), ((18, 'Q+1'), -3), ((18, 'Q+2'), -3), ((18, 'Q+4'), -3), ((18, 'Q+5'), -3), ((22, 'Q+1'), 4), ((22, 'Q+2'), 4), ((22, 'Q+4'), -12), ((22, 'Q+5'), 4))
+circuit=((13, 22), (17, 22), (19, 22));mass=3/7;sum=3;norm=21;support=(((2, 'Q+4'), 3), ((22, 'Q+1'), 1), ((22, 'Q+2'), 1), ((22, 'Q+4'), -3), ((22, 'Q+5'), 1))
+mechanism=origin_in_affine_hull_of_active_small_row_neighborhood_vectors;minimal_optional_edge_support_is_an_edge_parameter_origin_affine_circuit
+preserved=exact_static_zero_visibility_and_primitive_projection_direction;lost=walk_chronology_response_dynamics_and_general_graph_asymptotics
+scope=static_symmetric_relation_walks_only;no_tournament_no_FC_GMC_or_LRC_consequence_no_bit_complexity_claim
+source_ast=(assert_nodes=0,float_literals=0)
+ALL EXACT CHECKS PASSED

@@ -1,0 +1,21 @@
+{
+ "R256_D016": {
+  "R": 256,
+  "D0": 16,
+  "n_blocks": 256,
+  "admissible_all": true,
+  "adm_bad": [],
+  "identity": true,
+  "unit_ok": true
+ },
+ "R512_D032": {
+  "R": 512,
+  "D0": 32,
+  "n_blocks": 512,
+  "admissible_all": true,
+  "adm_bad": [],
+  "identity": true,
+  "unit_ok": true
+ },
+ "ALL_PASS": true
+}

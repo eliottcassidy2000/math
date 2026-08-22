@@ -1,0 +1,17 @@
+THM-3279 AFFINE TRANSVERSE INDEPENDENT HOSTILE AUDIT
+dependency_hash_checks=6;primary_script_output_hashes=PASS;theorem_status_not_pinned
+source_ast=(primary_assert0_float0,audit_assert0_float0)
+localization=raw_minus_R2=+(Vprime*y/2)*R1;gradient_ideal_on_V_nonzero=PASS
+universal=Sylvester6x6;Res=V^2*F40;specialized=V^3*K20
+affine_degree=96;unique_top=32*A_lead^2*V_lead^5*d^3
+T_rows=((3, 8), (4, 11), (5, 14), (6, 17));lead=32*m*(m-1)/(m-2)^2*c*v^3
+S_walls=(c=-2*v2/(3*v1^2),d=(45*v1^3-54*v1*v3+28*v2^2)/(90*v1^3))
+S_fifth=-32*v2*(315*v1^3*v2+360*v1^2*v4-414*v1*v2*v3+148*v2^3)/(315*v1^2)
+case=4111 custom_Q[u]/q=(v1,v2,R,c,d_nonzero);unit_C_mod_ST;deg_K_H=96_52;ordS_H=2;gcd_H_T=1
+case=4111 residual_digest=c07d66a389368e57ff32cdcc1c10f134951a0f2008ed65b707033d8ea8844e8e;field_certificate_sha256=7d8399988cb5d8475a11dcf1288ca1a49e1c8bc409cbf4990cbd5072ca9bb550
+case=3211 custom_Q[u]/q=(v1,v2,R,c,d_nonzero);unit_C_mod_ST;deg_K_H=96_52;ordS_H=2;gcd_H_T=1
+case=3211 residual_digest=41228f21741350a603d05efd59a11ec6157d5d0fb17b6b77f03f360cd81e78ad;field_certificate_sha256=403af707e9b5450635b893cfb2ac32f445f38f224873fe19006be233694c0c80
+consequence=at_most_2_of_52_residual_units_on_S_and_none_on_T;off_owner_multiplicity_at_least_50
+constant_C_lane=inherited_THM3212;nonconstant_C_meeting_g_has_explicit_(alpha,0)_critical_point
+scope=B1_constant_E0_affine_C0_only;resultant_multiplicity_not_distinct_points;no_inverse_cover_no_JC2
+all_independent_checks=PASS

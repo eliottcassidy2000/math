@@ -1,0 +1,12 @@
+THM-3406 AFFINE-MODIFICATION TRANSGRESSION AUDIT
+affine_power_filtration=PASS comparisons=4026 transitions=4026 length_cells=30 crt_cells=150
+graded_quotient=PASS Q_q/Q_(q-1)=B/(g,t^q)
+transgression=PASS Dbar_eta=0 delta_eta=mu delta_injective=char0
+case=one_root degree_g=2 arms=1 chi=["0","0","1"] psi=["0","1"] thickness=["0","1"] ann_tests=81
+case=equal_collision degree_g=4 arms=2 chi=["1","-2","1"] psi=["-1","1"] thickness=["-1","1"] ann_tests=81
+case=unequal_collision degree_g=5 arms=2 chi=["-1","3","-3","1"] psi=["-1","1"] thickness=["1","-2","1"] ann_tests=243
+case=nonsplit_Q degree_g=4 arms=1 chi=["1","0","2","0","1"] psi=["1","0","1"] thickness=["1","0","1"] ann_tests=729
+case=distinct_values degree_g=5 arms=2 chi=["0","0","-1","3","-3","1"] psi=["0","-1","1"] thickness=["0","1","-2","1"] ann_tests=2187
+support_thickness=PASS exact_sequence=K[T]/(chi/psi)->K[T]/chi->K[T]/psi
+hostiles=PASS q2_mixed=1 radical=1 duplicate_arm=1 characteristic_p=4
+semantic_sha256=065f584f197ff000d9f42175ffa858de223ee42551b19d996a54da37cfcb88f7

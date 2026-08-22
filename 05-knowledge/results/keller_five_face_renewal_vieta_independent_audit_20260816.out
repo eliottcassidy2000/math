@@ -1,0 +1,14 @@
+Fixed Keller five-face renewal: independent Vieta audit
+status=EXACT_ALGEBRAIC_PROOF_COMPANION;scope=conditional_face_transform
+proof=('unique_shared_endpoint=max_k_intersection_min_gamma=x^a*z^b', 'a=2e-4m/3;b=2e-2m/3;h=a-3b=-4e+2m/3', 'top_chart_product_q=2/(27A^2C)', 'gamma_chart_product_q=2/D', 'output_top=x^(2eprime-4mprime/3)z^(2eprime-2mprime/3)', 'output_gamma=z^eprime*D^(eprime-2mprime/3)', 'c_gamma_prime=(-1)^(3b)*2^h*c^3', 'c_top_prime=27^(eprime-2mprime/3)*c_gamma_prime')
+fixed_orbit_and_scalars=(((1, 0), (7, 3), (43, 15), (271, 99), (1699, 615), (10663, 3867)), ('G_from_J', 'sign=1;v2=-117;v3=513', 'sign=1;v2=-117;v3=1128', -162, 0), ('R5_from_G', 'sign=1;v2=-1369;v3=3384', 'sign=1;v2=-1369;v3=7251', -1018, 2), ('R6_from_R5', 'sign=1;v2=-10493;v3=21753', 'sign=1;v2=-10493;v3=46008', -6386, 1))
+admissible_bank=e_1_through_300;rows=15250;h_nonzero_mod3=10167;ledger_sha256=34c1e47cc496b42db20c21994feaa5c38bdfbe655fca53a6107800072f233d1b
+split_prime_controls=((109, 43, 15, -162, 0, 108, 108), (109, 271, 99, -1018, 2, 64, 74), (109, 1699, 615, -6386, 1, 46, 102), (127, 43, 15, -162, 0, 16, 4), (127, 271, 99, -1018, 2, 32, 82), (127, 1699, 615, -6386, 1, 2, 70), (163, 43, 15, -162, 0, 1, 1), (163, 271, 99, -1018, 2, 115, 64), (163, 1699, 615, -6386, 1, 77, 25));split_sha256=5369fb8f1d0cf80cbfc41679d78307ea513211207959fdc57bc4df53f3e20c46
+hostile=branchwise_q^h_is_not_root_independent_for_G_or_R5_but_product_Vieta_closes
+hostile=omitting_nonmonic_leading_coefficient_fails_A_C_D_exponents_in_every_nonzero_bank_row
+boundary=('requires_complete_A(e,m)_input_faces', 'requires_Q=L^e*N(P)_polynomial', 'proves_face_propagation_not_next_polynomiality', 'no_image_prime_degree243_all_level_arbitrary_map_JC_or_LRC_claim')
+semantic_sha256=7468b48f87fab27aacf77af954ea5b63189eb8ba22ec1402b9df57d6d1378375
+script_sha256_lf=e2651175dbe4ef21553c5d4a7949ac5ba19ddb50d31183cce322d9cc74f34770
+reproducibility=no_assert_truth_gates;integer_fraction_and_split_prime_routes;no_randomness;no_elapsed_fields
+commands=python -B 04-computation/keller_five_face_renewal_vieta_independent_audit_20260816.py;python -B -O 04-computation/keller_five_face_renewal_vieta_independent_audit_20260816.py
+PASS

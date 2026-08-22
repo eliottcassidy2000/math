@@ -1,0 +1,18 @@
+== fixed Keller level-six degree-729 recursive-tuple probe ==
+support_sha256=4039b4081c9f0d95b197d2e3a7581c66433382e53dac3b95fa2526c3a4ba4f2e
+prime=733; target=(1, 1, 1); tower_dimensions=(3, 9, 27, 81, 243)
+unit_gate_columns=(level,dimension,Norm(L),Norm(cubic_derivative),Norm(y_denominator),Norm(x^3))
+unit_gate_ledger=((1, 3, 25, 593, 330, 455), (2, 9, 663, 178, 54, 347), (3, 27, 172, 118, 287, 557), (4, 81, 192, 42, 634, 44), (5, 243, 511, 85, 465, 723))
+five inverse graph identities: PASS; every listed chart/derivative gate is a unit
+sixth_core_terminal_L_norm=364
+relative_polynomial_degree_ledger=(3, 9, 27, 81, 243, 729)
+sixth_core_norm_degree=729; derivative_gcd_degree=0
+recursive_scalar_checks=((0, 438), (1, 696), (2, 491), (729, 331), (730, 74), (731, 17), (732, 607))
+flat_243x243_determinant_check=(730,74)
+hostiles=(constant_sign_zero=295,truncated_at_730=549)
+factor_degree_exponent_ledger=((3, 1), (3, 1), (3, 1), (3, 1), (3, 1), (3, 1), (3, 1), (6, 1), (6, 1), (6, 1), (6, 1), (6, 1), (9, 1), (9, 1), (9, 1), (9, 1), (9, 1), (9, 1), (9, 1), (9, 1), (9, 1), (12, 1), (12, 1), (12, 1), (12, 1), (12, 1), (12, 1), (12, 1), (18, 1), (18, 1), (24, 1), (24, 1), (24, 1), (24, 1), (27, 1), (27, 1), (27, 1), (27, 1), (27, 1), (36, 1), (48, 1), (162, 1))
+ascending_coefficient_sha256=7aba23e306b00b14b8c60c34f9762ba8b35aecac111065058dfe9d4b3f1ecd51
+semantic_sha256=8009c86f1c8f290829df2ba8332dc2b09929b08cbd55376f48a13acd8c2c427c
+FINITE-EXACT candidate verdict: full degree 729 and squarefree on one lawful good fibre
+scope: fixed-map generic sixth x-eliminant degree/separability candidate only; no R6/R7 image, irreducibility, all-level, arbitrary-map, or general JC claim
+all exact checks passed

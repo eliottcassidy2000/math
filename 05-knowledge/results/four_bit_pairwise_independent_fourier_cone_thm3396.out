@@ -1,0 +1,16 @@
+THM-3396 FOUR-BIT PAIRWISE-INDEPENDENT FOURIER-CONE AUDIT
+rational_half_grid=3125 feasible=61 facet_iff=PASS
+binary_atom_subsets=65535 pairwise_laws=11 support_histogram=8:10,16:1
+odd_5_demicube_polar_vertices=26 f_vector=26,120,160,80,16
+polar_absolute_support=max(linf,l1/3) grid=3125 PASS
+polar_vertex_OA_orbits=H8:10,H12:16
+coordinatewise_convolution_pairs=121 moment_product=PASS
+convolution_mixing_checks=366 tv_sharp_checks=120 nonmixing_signed_halfcubes=10
+puzzle_OA=48 cubic=-16,-8,0,0 quartic=-8 even_margin=1/3 odd_margin=2/3
+puzzle_OA=120 cubic=0,0,-8,8 quartic=24 even_margin=16/15 odd_margin=2/3
+puzzle_OA=896 cubic=-224,0,0,-224 quartic=448 even_margin=1 odd_margin=0
+puzzle_896_face=triangular_bipyramid vertices=5 edges=9 facets=6 active_atoms=2
+puzzle_896_vertex_decompositions=H8(448,224,224)=H8/H12(224,336,336)
+one_parity_only_hostile=PASS
+quadratic_hypothesis_hostile=PASS
+semantic_sha256=3b23fb3d84c1d191c975384b3a789779311e19f5136e346743786679d97acc8e

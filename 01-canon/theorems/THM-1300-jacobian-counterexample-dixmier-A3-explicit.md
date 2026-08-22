@@ -11,11 +11,14 @@ status: >
   the Dixmier conjecture is FALSE for A_n, n ≥ 3, constructively. VERIFIED-EXACT —
   the ℂ*-equivariance and the orbit-branch collision law. PROVENANCE — the map is
   owner-supplied (2026-07-19); two independent in-repo verifications (this file;
-  kind-pasteur S128c97); literature/web search finds no public source yet.
+  kind-pasteur S128c97).  The exact map and later weighted-lift family are now
+  public on jacobianfun.org and its linked repository; use the byte-zero
+  correction below for attribution.
   OPEN at the bottom of the tower: JC₂, DC₁, DC₂ are NOT decided by this.
 source: death-star-2026-07-19-S59m (HYP-8075; owner prompt). Concurrent: kind-pasteur S128c97 (HYP-8070 — verification, σ-equivariance, Groebner degree, mod-p statistics).
 depends_on: []
 related:
+  - THM-3438-weighted-lift-keller-degree-spectrum
   - HYP-8075 (this session), HYP-8070 (kind-pasteur's complementary streams)
   - 07-reflections/jacobian-dixmier-through-the-repos-eyes-deathstar-S59m.md
 scripts:

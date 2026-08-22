@@ -1,0 +1,56 @@
+{
+ "artifact": "amm12592_witness_R1024_ruleB_D0_15_boxeph.json (201 MB, NOT committed: exceeds GitHub limits)",
+ "sha256_of_canonical_file": "f9e84e840d4694b8a035ee146358b1b58e541337924c05c20be5aadf77889b6f",
+ "meta": {
+  "R": 1024,
+  "D0": 15,
+  "profile": [
+   627,
+   627,
+   628,
+   629,
+   629,
+   630,
+   630,
+   631,
+   "..."
+  ],
+  "floor_profile": [
+   612,
+   612,
+   613,
+   614,
+   614,
+   615,
+   615,
+   616,
+   "..."
+  ],
+  "verified": true,
+  "ballot_trajectory": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   "..."
+  ],
+  "source": "rule B ballot-scheduled (cellwise-tent-k1), d_i = exact_floor(gamma*(R+i)) + 15"
+ },
+ "profile_head": [
+  627,
+  627,
+  628,
+  629,
+  629,
+  630,
+  630,
+  631
+ ],
+ "profile_len": 1024,
+ "reproduction": "deterministic: python3 04-computation/amm12592_ruleB_ballot_scheduled_boxeph.py (R=1024 ladder mode, D0=15) regenerates the witness byte-identically; verify with amm12592_r128_independent_referee_boxeph.py machinery (exact Fib/Lucas floor tests).",
+ "consequence": "epoch [1024,2047] closes at floor+15 => T(n) <= n+1+floor(gamma* n)+15 for n <= 2047"
+}

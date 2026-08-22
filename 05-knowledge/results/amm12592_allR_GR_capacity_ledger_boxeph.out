@@ -1,0 +1,274 @@
+==========================================================================================
+R = 8, D0 = 0   (profile d_i = floor(gamma*(R+i)) + D0)
+==========================================================================================
+  k | sign |m_k| bits | best single cap bits @row | winsum bits | single-OK | winsum-OK
+     2 | +1 |      4 |      1 @ i=0    |        2 | False | False
+     3 | -1 |      4 |      3 @ i=1    |        3 | False | False
+     4 | +1 |      1 |      3 @ i=2    |        4 |  True |  True
+  VERDICT V1 (every k single-row placeable): False
+  VERDICT V2 (every k window-sum placeable, private caps): False
+  tightest window margin: k = 2, winsum/|m_k| ~ 2^-2
+  head: pure-p demand c = R/2-1 = 3 markers (rows with gamma_i(1) = -1)
+  correction demand -N_u p^u q: u=1..5, N_1 = 3, N_2 = 2, max N = 3
+    u = 1: demand N_u = 3, total private cap over rows i<u = 1  NEEDS CARRIES
+    u = 2: demand N_u = 2, total private cap over rows i<u = 4  OK
+    u = 3: demand N_u = 2, total private cap over rows i<u = 7  OK
+==========================================================================================
+R = 16, D0 = 0   (profile d_i = floor(gamma*(R+i)) + D0)
+==========================================================================================
+  k | sign |m_k| bits | best single cap bits @row | winsum bits | single-OK | winsum-OK
+     2 | +1 |      6 |      1 @ i=0    |        2 | False | False
+     3 | -1 |      8 |      4 @ i=0    |        5 | False | False
+     4 | +1 |      9 |      5 @ i=0    |        7 | False | False
+     5 | -1 |      9 |      7 @ i=0    |        8 | False | False
+     6 | +1 |      8 |      7 @ i=1    |        9 | False |  True
+     7 | -1 |      6 |      7 @ i=3    |        8 |  True |  True
+     8 | +1 |      1 |      8 @ i=4    |        9 |  True |  True
+  VERDICT V1 (every k single-row placeable): False
+  VERDICT V2 (every k window-sum placeable, private caps): False
+  tightest window margin: k = 2, winsum/|m_k| ~ 2^-4
+  head: pure-p demand c = R/2-1 = 7 markers (rows with gamma_i(1) = -1)
+  correction demand -N_u p^u q: u=1..13, N_1 = 7, N_2 = 6, max N = 7
+    u = 1: demand N_u = 7, total private cap over rows i<u = 1  NEEDS CARRIES
+    u = 2: demand N_u = 6, total private cap over rows i<u = 4  NEEDS CARRIES
+    u = 3: demand N_u = 6, total private cap over rows i<u = 9  OK
+==========================================================================================
+R = 32, D0 = 0   (profile d_i = floor(gamma*(R+i)) + D0)
+==========================================================================================
+  k | sign |m_k| bits | best single cap bits @row | winsum bits | single-OK | winsum-OK
+     2 | +1 |      8 |      1 @ i=0    |        2 | False | False
+     3 | -1 |     11 |      4 @ i=0    |        5 | False | False
+     4 | +1 |     14 |      6 @ i=0    |        7 | False | False
+     5 | -1 |     16 |      8 @ i=0    |        9 | False | False
+     6 | +1 |     18 |     10 @ i=0    |       11 | False | False
+     7 | -1 |     19 |     12 @ i=0    |       13 | False | False
+     8 | +1 |     19 |     13 @ i=0    |       15 | False | False
+     9 | -1 |     20 |     15 @ i=0    |       16 | False | False
+    10 | +1 |     19 |     16 @ i=0    |       18 | False | False
+    11 | -1 |     19 |     17 @ i=2    |       18 | False | False
+    12 | +1 |     17 |     17 @ i=3    |       18 | False |  True
+    13 | -1 |     15 |     17 @ i=4    |       19 |  True |  True
+    14 | +1 |     12 |     19 @ i=5    |       20 |  True |  True
+    15 | -1 |      8 |     18 @ i=7    |       19 |  True |  True
+    16 | +1 |      1 |     19 @ i=8    |       20 |  True |  True
+  VERDICT V1 (every k single-row placeable): False
+  VERDICT V2 (every k window-sum placeable, private caps): False
+  tightest window margin: k = 4, winsum/|m_k| ~ 2^-7
+  head: pure-p demand c = R/2-1 = 15 markers (rows with gamma_i(1) = -1)
+  correction demand -N_u p^u q: u=1..29, N_1 = 15, N_2 = 14, max N = 15
+    u = 1: demand N_u = 15, total private cap over rows i<u = 1  NEEDS CARRIES
+    u = 2: demand N_u = 14, total private cap over rows i<u = 4  NEEDS CARRIES
+    u = 3: demand N_u = 14, total private cap over rows i<u = 10  NEEDS CARRIES
+==========================================================================================
+R = 64, D0 = 0   (profile d_i = floor(gamma*(R+i)) + D0)
+==========================================================================================
+  k | sign |m_k| bits | best single cap bits @row | winsum bits | single-OK | winsum-OK
+     2 | +1 |     10 |      1 @ i=0    |        2 | False | False
+     3 | -1 |     15 |      4 @ i=0    |        5 | False | False
+     4 | +1 |     18 |      6 @ i=0    |        7 | False | False
+     5 | -1 |     22 |      8 @ i=0    |        9 | False | False
+     6 | +1 |     25 |     10 @ i=0    |       11 | False | False
+     7 | -1 |     28 |     12 @ i=0    |       13 | False | False
+     8 | +1 |     30 |     14 @ i=0    |       15 | False | False
+     9 | -1 |     32 |     16 @ i=0    |       17 | False | False
+    10 | +1 |     34 |     18 @ i=0    |       19 | False | False
+    11 | -1 |     36 |     20 @ i=0    |       21 | False | False
+    12 | +1 |     37 |     22 @ i=0    |       23 | False | False
+    13 | -1 |     39 |     24 @ i=0    |       25 | False | False
+    14 | +1 |     40 |     26 @ i=0    |       27 | False | False
+    15 | -1 |     40 |     28 @ i=0    |       29 | False | False
+    16 | +1 |     41 |     29 @ i=0    |       30 | False | False
+    17 | -1 |     41 |     31 @ i=0    |       32 | False | False
+    18 | +1 |     41 |     33 @ i=0    |       34 | False | False
+    19 | -1 |     41 |     35 @ i=0    |       36 | False | False
+    20 | +1 |     41 |     35 @ i=1    |       36 | False | False
+    21 | -1 |     40 |     35 @ i=2    |       37 | False | False
+    22 | +1 |     39 |     37 @ i=3    |       38 | False | False
+    23 | -1 |     38 |     37 @ i=5    |       38 | False |  True
+    24 | +1 |     36 |     37 @ i=6    |       39 |  True |  True
+    26 | +1 |     32 |     39 @ i=8    |       40 |  True |  True
+    28 | +1 |     25 |     39 @ i=11   |       40 |  True |  True
+    30 | +1 |     16 |     41 @ i=13   |       42 |  True |  True
+    32 | +1 |      1 |     40 @ i=16   |       41 |  True |  True
+  VERDICT V1 (every k single-row placeable): False
+  VERDICT V2 (every k window-sum placeable, private caps): False
+  tightest window margin: k = 7, winsum/|m_k| ~ 2^-15
+  head: pure-p demand c = R/2-1 = 31 markers (rows with gamma_i(1) = -1)
+  correction demand -N_u p^u q: u=1..61, N_1 = 31, N_2 = 30, max N = 31
+    u = 1: demand N_u = 31, total private cap over rows i<u = 1  NEEDS CARRIES
+    u = 2: demand N_u = 30, total private cap over rows i<u = 4  NEEDS CARRIES
+    u = 3: demand N_u = 30, total private cap over rows i<u = 10  NEEDS CARRIES
+==========================================================================================
+R = 128, D0 = 0   (profile d_i = floor(gamma*(R+i)) + D0)
+==========================================================================================
+  k | sign |m_k| bits | best single cap bits @row | winsum bits | single-OK | winsum-OK
+     2 | +1 |     12 |      1 @ i=0    |        2 | False | False
+     3 | -1 |     18 |      4 @ i=0    |        5 | False | False
+     4 | +1 |     23 |      6 @ i=0    |        7 | False | False
+     5 | -1 |     27 |      8 @ i=0    |        9 | False | False
+     6 | +1 |     31 |     10 @ i=0    |       11 | False | False
+     7 | -1 |     35 |     12 @ i=0    |       13 | False | False
+     8 | +1 |     39 |     14 @ i=0    |       15 | False | False
+     9 | -1 |     43 |     16 @ i=0    |       17 | False | False
+    10 | +1 |     46 |     18 @ i=0    |       19 | False | False
+    11 | -1 |     49 |     20 @ i=0    |       21 | False | False
+    12 | +1 |     52 |     22 @ i=0    |       23 | False | False
+    13 | -1 |     55 |     24 @ i=0    |       25 | False | False
+    14 | +1 |     58 |     26 @ i=0    |       27 | False | False
+    15 | -1 |     60 |     28 @ i=0    |       29 | False | False
+    16 | +1 |     63 |     30 @ i=0    |       31 | False | False
+    17 | -1 |     65 |     32 @ i=0    |       33 | False | False
+    18 | +1 |     67 |     34 @ i=0    |       35 | False | False
+    19 | -1 |     69 |     36 @ i=0    |       37 | False | False
+    20 | +1 |     71 |     38 @ i=0    |       39 | False | False
+    21 | -1 |     73 |     40 @ i=0    |       41 | False | False
+    22 | +1 |     74 |     42 @ i=0    |       43 | False | False
+    23 | -1 |     76 |     44 @ i=0    |       45 | False | False
+    24 | +1 |     77 |     46 @ i=0    |       47 | False | False
+    25 | -1 |     79 |     48 @ i=0    |       49 | False | False
+    26 | +1 |     80 |     50 @ i=0    |       51 | False | False
+    27 | -1 |     81 |     52 @ i=0    |       53 | False | False
+    28 | +1 |     82 |     54 @ i=0    |       55 | False | False
+    29 | -1 |     83 |     56 @ i=0    |       57 | False | False
+    30 | +1 |     83 |     57 @ i=0    |       58 | False | False
+    31 | -1 |     84 |     59 @ i=0    |       60 | False | False
+    32 | +1 |     85 |     61 @ i=0    |       62 | False | False
+    33 | -1 |     85 |     63 @ i=0    |       64 | False | False
+    34 | +1 |     85 |     65 @ i=0    |       66 | False | False
+    35 | -1 |     85 |     67 @ i=0    |       68 | False | False
+    36 | +1 |     85 |     69 @ i=0    |       70 | False | False
+    37 | -1 |     85 |     70 @ i=0    |       72 | False | False
+    38 | +1 |     85 |     72 @ i=0    |       73 | False | False
+    39 | -1 |     84 |     73 @ i=1    |       74 | False | False
+    40 | +1 |     84 |     73 @ i=2    |       75 | False | False
+    41 | -1 |     83 |     74 @ i=3    |       76 | False | False
+    42 | +1 |     82 |     75 @ i=5    |       76 | False | False
+    43 | -1 |     82 |     76 @ i=6    |       77 | False | False
+    44 | +1 |     80 |     76 @ i=7    |       77 | False | False
+    45 | -1 |     79 |     76 @ i=8    |       78 | False | False
+    46 | +1 |     78 |     77 @ i=10   |       78 | False |  True
+    48 | +1 |     74 |     78 @ i=12   |       80 |  True |  True
+    52 | +1 |     65 |     80 @ i=17   |       81 |  True |  True
+    56 | +1 |     52 |     82 @ i=22   |       83 |  True |  True
+    60 | +1 |     33 |     83 @ i=27   |       84 |  True |  True
+    64 | +1 |      1 |     84 @ i=32   |       85 |  True |  True
+  VERDICT V1 (every k single-row placeable): False
+  VERDICT V2 (every k window-sum placeable, private caps): False
+  tightest window margin: k = 16, winsum/|m_k| ~ 2^-32
+  head: pure-p demand c = R/2-1 = 63 markers (rows with gamma_i(1) = -1)
+  correction demand -N_u p^u q: u=1..125, N_1 = 63, N_2 = 62, max N = 63
+    u = 1: demand N_u = 63, total private cap over rows i<u = 1  NEEDS CARRIES
+    u = 2: demand N_u = 62, total private cap over rows i<u = 4  NEEDS CARRIES
+    u = 3: demand N_u = 62, total private cap over rows i<u = 10  NEEDS CARRIES
+==========================================================================================
+R = 256, D0 = 0   (profile d_i = floor(gamma*(R+i)) + D0)
+==========================================================================================
+  k | sign |m_k| bits | best single cap bits @row | winsum bits | single-OK | winsum-OK
+     2 | +1 |     14 |      1 @ i=0    |        2 | False | False
+     3 | -1 |     21 |      4 @ i=0    |        5 | False | False
+     4 | +1 |     27 |      6 @ i=0    |        7 | False | False
+     5 | -1 |     32 |      8 @ i=0    |        9 | False | False
+     6 | +1 |     38 |     10 @ i=0    |       11 | False | False
+     7 | -1 |     43 |     12 @ i=0    |       13 | False | False
+     8 | +1 |     48 |     14 @ i=0    |       15 | False | False
+     9 | -1 |     52 |     16 @ i=0    |       17 | False | False
+    10 | +1 |     57 |     18 @ i=0    |       19 | False | False
+    11 | -1 |     61 |     20 @ i=0    |       21 | False | False
+    12 | +1 |     66 |     22 @ i=0    |       23 | False | False
+    13 | -1 |     70 |     24 @ i=0    |       25 | False | False
+    14 | +1 |     74 |     26 @ i=0    |       27 | False | False
+    15 | -1 |     77 |     28 @ i=0    |       29 | False | False
+    16 | +1 |     81 |     30 @ i=0    |       31 | False | False
+    17 | -1 |     85 |     32 @ i=0    |       33 | False | False
+    18 | +1 |     88 |     34 @ i=0    |       35 | False | False
+    19 | -1 |     92 |     36 @ i=0    |       37 | False | False
+    20 | +1 |     95 |     38 @ i=0    |       39 | False | False
+    21 | -1 |     98 |     40 @ i=0    |       41 | False | False
+    22 | +1 |    101 |     42 @ i=0    |       43 | False | False
+    23 | -1 |    104 |     44 @ i=0    |       45 | False | False
+    24 | +1 |    107 |     46 @ i=0    |       47 | False | False
+    25 | -1 |    110 |     48 @ i=0    |       49 | False | False
+    26 | +1 |    113 |     50 @ i=0    |       51 | False | False
+    27 | -1 |    116 |     52 @ i=0    |       53 | False | False
+    28 | +1 |    119 |     54 @ i=0    |       55 | False | False
+    29 | -1 |    121 |     56 @ i=0    |       57 | False | False
+    30 | +1 |    124 |     58 @ i=0    |       59 | False | False
+    31 | -1 |    126 |     60 @ i=0    |       61 | False | False
+    32 | +1 |    129 |     62 @ i=0    |       63 | False | False
+    33 | -1 |    131 |     64 @ i=0    |       65 | False | False
+    34 | +1 |    133 |     66 @ i=0    |       67 | False | False
+    35 | -1 |    135 |     68 @ i=0    |       69 | False | False
+    36 | +1 |    137 |     70 @ i=0    |       71 | False | False
+    37 | -1 |    139 |     72 @ i=0    |       73 | False | False
+    38 | +1 |    141 |     74 @ i=0    |       75 | False | False
+    39 | -1 |    143 |     76 @ i=0    |       77 | False | False
+    40 | +1 |    145 |     78 @ i=0    |       79 | False | False
+    41 | -1 |    147 |     80 @ i=0    |       81 | False | False
+    42 | +1 |    149 |     82 @ i=0    |       83 | False | False
+    43 | -1 |    150 |     84 @ i=0    |       85 | False | False
+    44 | +1 |    152 |     86 @ i=0    |       87 | False | False
+    45 | -1 |    154 |     88 @ i=0    |       89 | False | False
+    46 | +1 |    155 |     90 @ i=0    |       91 | False | False
+    47 | -1 |    157 |     92 @ i=0    |       93 | False | False
+    48 | +1 |    158 |     94 @ i=0    |       95 | False | False
+    49 | -1 |    159 |     96 @ i=0    |       97 | False | False
+    50 | +1 |    161 |     98 @ i=0    |       99 | False | False
+    51 | -1 |    162 |    100 @ i=0    |      101 | False | False
+    52 | +1 |    163 |    102 @ i=0    |      103 | False | False
+    53 | -1 |    164 |    104 @ i=0    |      105 | False | False
+    54 | +1 |    165 |    106 @ i=0    |      107 | False | False
+    55 | -1 |    166 |    108 @ i=0    |      109 | False | False
+    56 | +1 |    167 |    110 @ i=0    |      111 | False | False
+    57 | -1 |    168 |    112 @ i=0    |      113 | False | False
+    58 | +1 |    169 |    113 @ i=0    |      115 | False | False
+    59 | -1 |    169 |    115 @ i=0    |      116 | False | False
+    60 | +1 |    170 |    117 @ i=0    |      118 | False | False
+    61 | -1 |    171 |    119 @ i=0    |      120 | False | False
+    62 | +1 |    171 |    121 @ i=0    |      122 | False | False
+    63 | -1 |    172 |    123 @ i=0    |      124 | False | False
+    64 | +1 |    172 |    125 @ i=0    |      126 | False | False
+    65 | -1 |    173 |    127 @ i=0    |      128 | False | False
+    66 | +1 |    173 |    129 @ i=0    |      130 | False | False
+    67 | -1 |    173 |    131 @ i=0    |      132 | False | False
+    68 | +1 |    173 |    133 @ i=0    |      134 | False | False
+    69 | -1 |    174 |    135 @ i=0    |      136 | False | False
+    70 | +1 |    174 |    137 @ i=0    |      138 | False | False
+    71 | -1 |    174 |    139 @ i=0    |      140 | False | False
+    72 | +1 |    174 |    141 @ i=0    |      142 | False | False
+    73 | -1 |    173 |    142 @ i=0    |      144 | False | False
+    74 | +1 |    173 |    144 @ i=0    |      145 | False | False
+    75 | -1 |    173 |    146 @ i=0    |      147 | False | False
+    76 | +1 |    173 |    148 @ i=0    |      149 | False | False
+    77 | -1 |    172 |    149 @ i=0    |      150 | False | False
+    78 | +1 |    172 |    150 @ i=2    |      151 | False | False
+    79 | -1 |    172 |    150 @ i=3    |      151 | False | False
+    80 | +1 |    171 |    151 @ i=4    |      152 | False | False
+    81 | -1 |    170 |    151 @ i=5    |      153 | False | False
+    82 | +1 |    170 |    152 @ i=7    |      153 | False | False
+    83 | -1 |    169 |    152 @ i=8    |      154 | False | False
+    84 | +1 |    168 |    153 @ i=9    |      155 | False | False
+    85 | -1 |    167 |    154 @ i=10   |      156 | False | False
+    86 | +1 |    166 |    155 @ i=12   |      156 | False | False
+    87 | -1 |    165 |    155 @ i=13   |      156 | False | False
+    88 | +1 |    164 |    156 @ i=14   |      157 | False | False
+    89 | -1 |    163 |    157 @ i=15   |      158 | False | False
+    90 | +1 |    161 |    157 @ i=17   |      158 | False | False
+    91 | -1 |    160 |    157 @ i=18   |      159 | False | False
+    92 | +1 |    158 |    158 @ i=19   |      160 | False |  True
+    96 | +1 |    152 |    160 @ i=24   |      162 |  True |  True
+   104 | +1 |    133 |    164 @ i=34   |      166 |  True |  True
+   112 | +1 |    107 |    167 @ i=44   |      168 |  True |  True
+   120 | +1 |     68 |    170 @ i=54   |      171 |  True |  True
+   128 | +1 |      1 |    172 @ i=64   |      173 |  True |  True
+  VERDICT V1 (every k single-row placeable): False
+  VERDICT V2 (every k window-sum placeable, private caps): False
+  tightest window margin: k = 32, winsum/|m_k| ~ 2^-66
+  head: pure-p demand c = R/2-1 = 127 markers (rows with gamma_i(1) = -1)
+  correction demand -N_u p^u q: u=1..253, N_1 = 127, N_2 = 126, max N = 127
+    u = 1: demand N_u = 127, total private cap over rows i<u = 1  NEEDS CARRIES
+    u = 2: demand N_u = 126, total private cap over rows i<u = 4  NEEDS CARRIES
+    u = 3: demand N_u = 126, total private cap over rows i<u = 10  NEEDS CARRIES
+
+NOTE: V1/V2 are about PRIVATE per-atom capacity without cross-row
+cancellation.  V2 = True for all k would make an explicit split-only
+construction plausible; False marks exactly where carries are mandatory.

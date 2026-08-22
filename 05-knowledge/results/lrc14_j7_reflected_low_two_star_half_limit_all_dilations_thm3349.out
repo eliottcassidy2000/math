@@ -1,0 +1,10 @@
+LRC14 reflected low-two-star selected half-limit all-dilations audit
+status=PROVED analytic midpoint bound + VERIFIED-EXACT finite head
+bodies=649;rays=11856;assignments=7694544
+selected_groups=140711
+tail_threshold_hist=((2, 140669), (3, 29), (4, 7), (5, 4), (6, 1), (9, 1))
+exception_groups=42;head_checks=66;failures=0
+max_threshold_row=(9, (1, 2, 3, 4, 6, 12), 168, 90, (1, 5), 6, 1, Fraction(29, 1470), 2, 12, 1, 6, 1, -70)
+weakest_head_row=(Fraction(553321691, 3504897823680), (2, 4, 6, 9, 11, 12), 5544, 2970, (0, 5), 12, 9, 2, Fraction(174636, 553172005), Fraction(1, 3168), 3)
+head_semantic_sha256=fd0b48f6975a38ca271106c75f97b9ea9a43d6348ede29289a2438b860d544b0
+conclusion=every selected pair has I_s>=I_infinity/2 for every integer s>=2

@@ -1,0 +1,12 @@
+THM-3465 NONREAL CYCLIC-CHARACTER KELLER RIGIDITY EXACT CONTROL
+quartic_bracket_support=10 coefficient_table=PASS
+binary_form_bracket_formula=PASS degrees=1..7
+finite_rotation_character_star_disjoint=PASS orders=3..16 degrees=1..24 checks=2688
+C3_character_convention=PASS degrees=1..24
+Jac_xy(z,w)=-3*sqrt(3)*I
+normalized_triangle_average_w3=1/10
+linear_control_A=2 + 3*I real_J=-39*sqrt(3)/2 third_moment=-23/5 + 9*I/10
+hostiles=independent_mate_bracket_-1; C2_odd_shear_J_1
+twisted_kernel_hostile=(0, 0, 32 + 80*I, 8)
+semantic_sha256=91d4afcb83b4fa6e0ca54da2946b6afd6db335888ffc9199c1351f2080811db6
+STATUS=PASS

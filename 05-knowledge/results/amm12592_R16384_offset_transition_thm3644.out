@@ -1,0 +1,12 @@
+== THM-3644 AMM R=16384 exact offset transition ==
+source_pins=engine:8887080fc6e30760efa4a0ba76218ec97676cc717c6e76ccefbaeec6c73684ad;floor_referee:c679d5c1546160acb9ea5a71c5365178737ef2af5ba36a01eafdb1759c58aa75
+scan=offsets:401..416;rows:16;sha256:56640dafae5f05d891c2d6243c875be618d989006cdc5655df58348638955801
+transition=401..412:DIE;413..416:CLOSED;OPEN_RESIDUAL:0
+adjacent=412:DIE@4116,overflow_bits:9920,minus2:2179,T6b:4036;413:CLOSED@10116,minus2:8191,T6b:4038
+small_live_controls=((4, 'DIE', 121, 310, 382, 615, 56, 110, 292), (5, 'CLOSED', 312, 311, 497, 616, 255, 112, None), (14, 'DIE', 250, 626, 775, 1238, 132, 230, 599), (15, 'CLOSED', 639, 627, 1009, 1239, 511, 232, None))
+independent_fmpz_adjacent=PASS;stable_fields_byte_equal
+archive_transcript_segment_sha256=aaec1a93c67fdad94a6a56bd9fa96edabfd1693945b84aec022db53a5d4b7ab5
+semantic_sha256=d7d96200feff9a6e453da08f6716fb60d34ab2f8f1cd53998c5bcd0af5a92df4
+CHECKS=61
+status=FINITE-EXACT ARCHIVED SCAN + LIVE CONTROLS;fixed Rule-A policy only
+scope=local bracket transition;no global D0 monotonicity or AMM bound

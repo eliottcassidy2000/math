@@ -1,0 +1,2761 @@
+{
+ "G3pre": [
+  {
+   "R": 512,
+   "D0": 4,
+   "outcome": {
+    "DIE": 121
+   },
+   "first_interior_defect": {
+    "row": 10,
+    "cells": [
+     205,
+     206
+    ],
+    "front": 207
+   },
+   "first_front_advance": {
+    "row": 2,
+    "new_front": 201
+   },
+   "rows": [
+    {
+     "i": 1,
+     "d": 310,
+     "front": 199,
+     "ndefects": 0,
+     "fda_sgnbits": 286
+    },
+    {
+     "i": 2,
+     "d": 311,
+     "front": 201,
+     "ndefects": 0,
+     "fda_sgnbits": -284
+    },
+    {
+     "i": 3,
+     "d": 311,
+     "front": 201,
+     "ndefects": 0,
+     "fda_sgnbits": 287
+    },
+    {
+     "i": 4,
+     "d": 312,
+     "front": 202,
+     "ndefects": 0,
+     "fda_sgnbits": 286
+    },
+    {
+     "i": 5,
+     "d": 313,
+     "front": 203,
+     "ndefects": 0,
+     "fda_sgnbits": 288
+    },
+    {
+     "i": 6,
+     "d": 313,
+     "front": 202,
+     "ndefects": 0,
+     "fda_sgnbits": 287
+    },
+    {
+     "i": 7,
+     "d": 314,
+     "front": 204,
+     "ndefects": 0,
+     "fda_sgnbits": -288
+    },
+    {
+     "i": 8,
+     "d": 314,
+     "front": 203,
+     "ndefects": 0,
+     "fda_sgnbits": 286
+    },
+    {
+     "i": 9,
+     "d": 315,
+     "front": 205,
+     "ndefects": 0,
+     "fda_sgnbits": -290
+    },
+    {
+     "i": 10,
+     "d": 316,
+     "front": 207,
+     "ndefects": 2,
+     "fda_sgnbits": -289
+    },
+    {
+     "i": 11,
+     "d": 316,
+     "front": 208,
+     "ndefects": 4,
+     "fda_sgnbits": -286
+    },
+    {
+     "i": 12,
+     "d": 317,
+     "front": 209,
+     "ndefects": 5,
+     "fda_sgnbits": 288
+    },
+    {
+     "i": 13,
+     "d": 317,
+     "front": 209,
+     "ndefects": 4,
+     "fda_sgnbits": 279
+    },
+    {
+     "i": 14,
+     "d": 318,
+     "front": 211,
+     "ndefects": 6,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 15,
+     "d": 319,
+     "front": 213,
+     "ndefects": 8,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 16,
+     "d": 319,
+     "front": 214,
+     "ndefects": 9,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 17,
+     "d": 320,
+     "front": 216,
+     "ndefects": 10,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 18,
+     "d": 320,
+     "front": 217,
+     "ndefects": 11,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 19,
+     "d": 321,
+     "front": 219,
+     "ndefects": 12,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 20,
+     "d": 322,
+     "front": 221,
+     "ndefects": 14,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 21,
+     "d": 322,
+     "front": 222,
+     "ndefects": 14,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 22,
+     "d": 323,
+     "front": 224,
+     "ndefects": 16,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 23,
+     "d": 323,
+     "front": 225,
+     "ndefects": 17,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 24,
+     "d": 324,
+     "front": 227,
+     "ndefects": 19,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 25,
+     "d": 325,
+     "front": 229,
+     "ndefects": 20,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 26,
+     "d": 325,
+     "front": 230,
+     "ndefects": 21,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 27,
+     "d": 326,
+     "front": 232,
+     "ndefects": 23,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 28,
+     "d": 326,
+     "front": 233,
+     "ndefects": 24,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 29,
+     "d": 327,
+     "front": 235,
+     "ndefects": 25,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 30,
+     "d": 328,
+     "front": 237,
+     "ndefects": 27,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 31,
+     "d": 328,
+     "front": 238,
+     "ndefects": 28,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 32,
+     "d": 329,
+     "front": 240,
+     "ndefects": 30,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 33,
+     "d": 329,
+     "front": 241,
+     "ndefects": 31,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 34,
+     "d": 330,
+     "front": 243,
+     "ndefects": 32,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 35,
+     "d": 331,
+     "front": 245,
+     "ndefects": 34,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 36,
+     "d": 331,
+     "front": 246,
+     "ndefects": 35,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 37,
+     "d": 332,
+     "front": 248,
+     "ndefects": 37,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 38,
+     "d": 332,
+     "front": 249,
+     "ndefects": 38,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 39,
+     "d": 333,
+     "front": 251,
+     "ndefects": 39,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 40,
+     "d": 334,
+     "front": 253,
+     "ndefects": 41,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 41,
+     "d": 334,
+     "front": 254,
+     "ndefects": 42,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 42,
+     "d": 335,
+     "front": 256,
+     "ndefects": 44,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 43,
+     "d": 335,
+     "front": 257,
+     "ndefects": 45,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 44,
+     "d": 336,
+     "front": 259,
+     "ndefects": 47,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 45,
+     "d": 337,
+     "front": 261,
+     "ndefects": 48,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 46,
+     "d": 337,
+     "front": 262,
+     "ndefects": 49,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 47,
+     "d": 338,
+     "front": 264,
+     "ndefects": 51,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 48,
+     "d": 338,
+     "front": 265,
+     "ndefects": 52,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 49,
+     "d": 339,
+     "front": 267,
+     "ndefects": 54,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 50,
+     "d": 340,
+     "front": 269,
+     "ndefects": 55,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 51,
+     "d": 340,
+     "front": 270,
+     "ndefects": 56,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 52,
+     "d": 341,
+     "front": 272,
+     "ndefects": 58,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 53,
+     "d": 341,
+     "front": 273,
+     "ndefects": 59,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 54,
+     "d": 342,
+     "front": 275,
+     "ndefects": 61,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 55,
+     "d": 343,
+     "front": 277,
+     "ndefects": 62,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 56,
+     "d": 343,
+     "front": 278,
+     "ndefects": 63,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 57,
+     "d": 344,
+     "front": 280,
+     "ndefects": 65,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 58,
+     "d": 344,
+     "front": 281,
+     "ndefects": 66,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 59,
+     "d": 345,
+     "front": 283,
+     "ndefects": 68,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 60,
+     "d": 346,
+     "front": 285,
+     "ndefects": 70,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 70,
+     "d": 352,
+     "front": 301,
+     "ndefects": 84,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 80,
+     "d": 358,
+     "front": 317,
+     "ndefects": 100,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 90,
+     "d": 363,
+     "front": 332,
+     "ndefects": 115,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 100,
+     "d": 369,
+     "front": 348,
+     "ndefects": 130,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 110,
+     "d": 375,
+     "front": 364,
+     "ndefects": 151,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 120,
+     "d": 381,
+     "front": 380,
+     "ndefects": 171,
+     "fda_sgnbits": -292
+    }
+   ]
+  },
+  {
+   "R": 512,
+   "D0": 5,
+   "outcome": {
+    "CLOSED_capture": 312
+   },
+   "first_interior_defect": {
+    "row": 70,
+    "cells": [
+     102
+    ],
+    "front": 103
+   },
+   "first_front_advance": {
+    "row": 2,
+    "new_front": 200
+   },
+   "rows": [
+    {
+     "i": 1,
+     "d": 311,
+     "front": 198,
+     "ndefects": 0,
+     "fda_sgnbits": 288
+    },
+    {
+     "i": 2,
+     "d": 312,
+     "front": 200,
+     "ndefects": 0,
+     "fda_sgnbits": -285
+    },
+    {
+     "i": 3,
+     "d": 312,
+     "front": 200,
+     "ndefects": 0,
+     "fda_sgnbits": 289
+    },
+    {
+     "i": 4,
+     "d": 313,
+     "front": 201,
+     "ndefects": 0,
+     "fda_sgnbits": 289
+    },
+    {
+     "i": 5,
+     "d": 314,
+     "front": 201,
+     "ndefects": 0,
+     "fda_sgnbits": 291
+    },
+    {
+     "i": 6,
+     "d": 314,
+     "front": 201,
+     "ndefects": 0,
+     "fda_sgnbits": 291
+    },
+    {
+     "i": 7,
+     "d": 315,
+     "front": 201,
+     "ndefects": 0,
+     "fda_sgnbits": 289
+    },
+    {
+     "i": 8,
+     "d": 315,
+     "front": 202,
+     "ndefects": 0,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 9,
+     "d": 316,
+     "front": 202,
+     "ndefects": 0,
+     "fda_sgnbits": 288
+    },
+    {
+     "i": 10,
+     "d": 317,
+     "front": 204,
+     "ndefects": 0,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 11,
+     "d": 317,
+     "front": 203,
+     "ndefects": 0,
+     "fda_sgnbits": 289
+    },
+    {
+     "i": 12,
+     "d": 318,
+     "front": 203,
+     "ndefects": 0,
+     "fda_sgnbits": 294
+    },
+    {
+     "i": 13,
+     "d": 318,
+     "front": 204,
+     "ndefects": 0,
+     "fda_sgnbits": -292
+    },
+    {
+     "i": 14,
+     "d": 319,
+     "front": 202,
+     "ndefects": 0,
+     "fda_sgnbits": 295
+    },
+    {
+     "i": 15,
+     "d": 320,
+     "front": 201,
+     "ndefects": 0,
+     "fda_sgnbits": 297
+    },
+    {
+     "i": 16,
+     "d": 320,
+     "front": 200,
+     "ndefects": 0,
+     "fda_sgnbits": 300
+    },
+    {
+     "i": 17,
+     "d": 321,
+     "front": 200,
+     "ndefects": 0,
+     "fda_sgnbits": 300
+    },
+    {
+     "i": 18,
+     "d": 321,
+     "front": 199,
+     "ndefects": 0,
+     "fda_sgnbits": 302
+    },
+    {
+     "i": 19,
+     "d": 322,
+     "front": 199,
+     "ndefects": 0,
+     "fda_sgnbits": 303
+    },
+    {
+     "i": 20,
+     "d": 323,
+     "front": 197,
+     "ndefects": 0,
+     "fda_sgnbits": 305
+    },
+    {
+     "i": 21,
+     "d": 323,
+     "front": 196,
+     "ndefects": 0,
+     "fda_sgnbits": 307
+    },
+    {
+     "i": 22,
+     "d": 324,
+     "front": 195,
+     "ndefects": 0,
+     "fda_sgnbits": 308
+    },
+    {
+     "i": 23,
+     "d": 324,
+     "front": 194,
+     "ndefects": 0,
+     "fda_sgnbits": 309
+    },
+    {
+     "i": 24,
+     "d": 325,
+     "front": 193,
+     "ndefects": 0,
+     "fda_sgnbits": 310
+    },
+    {
+     "i": 25,
+     "d": 326,
+     "front": 191,
+     "ndefects": 0,
+     "fda_sgnbits": 313
+    },
+    {
+     "i": 26,
+     "d": 326,
+     "front": 190,
+     "ndefects": 0,
+     "fda_sgnbits": 315
+    },
+    {
+     "i": 27,
+     "d": 327,
+     "front": 188,
+     "ndefects": 0,
+     "fda_sgnbits": 316
+    },
+    {
+     "i": 28,
+     "d": 327,
+     "front": 187,
+     "ndefects": 0,
+     "fda_sgnbits": 317
+    },
+    {
+     "i": 29,
+     "d": 328,
+     "front": 185,
+     "ndefects": 0,
+     "fda_sgnbits": 318
+    },
+    {
+     "i": 30,
+     "d": 329,
+     "front": 182,
+     "ndefects": 0,
+     "fda_sgnbits": 321
+    },
+    {
+     "i": 31,
+     "d": 329,
+     "front": 181,
+     "ndefects": 0,
+     "fda_sgnbits": 322
+    },
+    {
+     "i": 32,
+     "d": 330,
+     "front": 178,
+     "ndefects": 0,
+     "fda_sgnbits": 323
+    },
+    {
+     "i": 33,
+     "d": 330,
+     "front": 178,
+     "ndefects": 0,
+     "fda_sgnbits": 323
+    },
+    {
+     "i": 34,
+     "d": 331,
+     "front": 175,
+     "ndefects": 0,
+     "fda_sgnbits": 325
+    },
+    {
+     "i": 35,
+     "d": 332,
+     "front": 172,
+     "ndefects": 0,
+     "fda_sgnbits": 327
+    },
+    {
+     "i": 36,
+     "d": 332,
+     "front": 172,
+     "ndefects": 0,
+     "fda_sgnbits": 327
+    },
+    {
+     "i": 37,
+     "d": 333,
+     "front": 169,
+     "ndefects": 0,
+     "fda_sgnbits": 329
+    },
+    {
+     "i": 38,
+     "d": 333,
+     "front": 168,
+     "ndefects": 0,
+     "fda_sgnbits": 329
+    },
+    {
+     "i": 39,
+     "d": 334,
+     "front": 165,
+     "ndefects": 0,
+     "fda_sgnbits": 330
+    },
+    {
+     "i": 40,
+     "d": 335,
+     "front": 162,
+     "ndefects": 0,
+     "fda_sgnbits": 331
+    },
+    {
+     "i": 41,
+     "d": 335,
+     "front": 161,
+     "ndefects": 0,
+     "fda_sgnbits": 330
+    },
+    {
+     "i": 42,
+     "d": 336,
+     "front": 159,
+     "ndefects": 0,
+     "fda_sgnbits": 331
+    },
+    {
+     "i": 43,
+     "d": 336,
+     "front": 158,
+     "ndefects": 0,
+     "fda_sgnbits": 331
+    },
+    {
+     "i": 44,
+     "d": 337,
+     "front": 155,
+     "ndefects": 0,
+     "fda_sgnbits": 332
+    },
+    {
+     "i": 45,
+     "d": 338,
+     "front": 152,
+     "ndefects": 0,
+     "fda_sgnbits": 333
+    },
+    {
+     "i": 46,
+     "d": 338,
+     "front": 151,
+     "ndefects": 0,
+     "fda_sgnbits": 331
+    },
+    {
+     "i": 47,
+     "d": 339,
+     "front": 148,
+     "ndefects": 0,
+     "fda_sgnbits": 332
+    },
+    {
+     "i": 48,
+     "d": 339,
+     "front": 148,
+     "ndefects": 0,
+     "fda_sgnbits": 331
+    },
+    {
+     "i": 49,
+     "d": 340,
+     "front": 144,
+     "ndefects": 0,
+     "fda_sgnbits": 333
+    },
+    {
+     "i": 50,
+     "d": 341,
+     "front": 142,
+     "ndefects": 0,
+     "fda_sgnbits": 332
+    },
+    {
+     "i": 51,
+     "d": 341,
+     "front": 141,
+     "ndefects": 0,
+     "fda_sgnbits": 331
+    },
+    {
+     "i": 52,
+     "d": 342,
+     "front": 137,
+     "ndefects": 0,
+     "fda_sgnbits": 331
+    },
+    {
+     "i": 53,
+     "d": 342,
+     "front": 138,
+     "ndefects": 0,
+     "fda_sgnbits": -325
+    },
+    {
+     "i": 54,
+     "d": 343,
+     "front": 134,
+     "ndefects": 0,
+     "fda_sgnbits": 331
+    },
+    {
+     "i": 55,
+     "d": 344,
+     "front": 132,
+     "ndefects": 0,
+     "fda_sgnbits": 329
+    },
+    {
+     "i": 56,
+     "d": 344,
+     "front": 131,
+     "ndefects": 0,
+     "fda_sgnbits": 327
+    },
+    {
+     "i": 57,
+     "d": 345,
+     "front": 127,
+     "ndefects": 0,
+     "fda_sgnbits": 328
+    },
+    {
+     "i": 58,
+     "d": 345,
+     "front": 126,
+     "ndefects": 0,
+     "fda_sgnbits": 322
+    },
+    {
+     "i": 59,
+     "d": 346,
+     "front": 124,
+     "ndefects": 0,
+     "fda_sgnbits": 325
+    },
+    {
+     "i": 60,
+     "d": 347,
+     "front": 122,
+     "ndefects": 0,
+     "fda_sgnbits": 324
+    },
+    {
+     "i": 70,
+     "d": 353,
+     "front": 103,
+     "ndefects": 1,
+     "fda_sgnbits": 308
+    },
+    {
+     "i": 80,
+     "d": 359,
+     "front": 84,
+     "ndefects": 2,
+     "fda_sgnbits": 285
+    },
+    {
+     "i": 90,
+     "d": 364,
+     "front": 66,
+     "ndefects": 3,
+     "fda_sgnbits": 250
+    },
+    {
+     "i": 100,
+     "d": 370,
+     "front": 50,
+     "ndefects": 5,
+     "fda_sgnbits": 214
+    },
+    {
+     "i": 110,
+     "d": 376,
+     "front": 35,
+     "ndefects": 10,
+     "fda_sgnbits": 172
+    },
+    {
+     "i": 120,
+     "d": 382,
+     "front": 23,
+     "ndefects": 16,
+     "fda_sgnbits": 131
+    },
+    {
+     "i": 130,
+     "d": 388,
+     "front": 16,
+     "ndefects": 16,
+     "fda_sgnbits": 99
+    },
+    {
+     "i": 140,
+     "d": 394,
+     "front": 10,
+     "ndefects": 10,
+     "fda_sgnbits": 71
+    },
+    {
+     "i": 150,
+     "d": 400,
+     "front": 8,
+     "ndefects": 8,
+     "fda_sgnbits": 61
+    },
+    {
+     "i": 160,
+     "d": 406,
+     "front": 6,
+     "ndefects": 6,
+     "fda_sgnbits": 50
+    },
+    {
+     "i": 170,
+     "d": 412,
+     "front": 4,
+     "ndefects": 4,
+     "fda_sgnbits": 44
+    },
+    {
+     "i": 180,
+     "d": 418,
+     "front": 4,
+     "ndefects": 4,
+     "fda_sgnbits": 38
+    },
+    {
+     "i": 190,
+     "d": 424,
+     "front": 3,
+     "ndefects": 3,
+     "fda_sgnbits": 32
+    },
+    {
+     "i": 200,
+     "d": 430,
+     "front": 3,
+     "ndefects": 3,
+     "fda_sgnbits": 32
+    },
+    {
+     "i": 210,
+     "d": 436,
+     "front": 2,
+     "ndefects": 2,
+     "fda_sgnbits": 25
+    },
+    {
+     "i": 220,
+     "d": 442,
+     "front": 2,
+     "ndefects": 2,
+     "fda_sgnbits": 25
+    },
+    {
+     "i": 230,
+     "d": 448,
+     "front": 2,
+     "ndefects": 2,
+     "fda_sgnbits": 25
+    },
+    {
+     "i": 240,
+     "d": 454,
+     "front": 1,
+     "ndefects": 1,
+     "fda_sgnbits": 18
+    },
+    {
+     "i": 250,
+     "d": 460,
+     "front": 1,
+     "ndefects": 1,
+     "fda_sgnbits": 18
+    },
+    {
+     "i": 260,
+     "d": 466,
+     "front": 1,
+     "ndefects": 1,
+     "fda_sgnbits": 18
+    },
+    {
+     "i": 270,
+     "d": 472,
+     "front": 1,
+     "ndefects": 1,
+     "fda_sgnbits": 18
+    },
+    {
+     "i": 280,
+     "d": 478,
+     "front": 0,
+     "ndefects": 0,
+     "fda_sgnbits": 10
+    },
+    {
+     "i": 290,
+     "d": 484,
+     "front": 0,
+     "ndefects": 0,
+     "fda_sgnbits": 18
+    },
+    {
+     "i": 300,
+     "d": 490,
+     "front": 0,
+     "ndefects": 0,
+     "fda_sgnbits": 18
+    },
+    {
+     "i": 310,
+     "d": 496,
+     "front": 0,
+     "ndefects": 0,
+     "fda_sgnbits": 18
+    }
+   ]
+  },
+  {
+   "R": 1024,
+   "D0": 14,
+   "outcome": {
+    "DIE": 250
+   },
+   "first_interior_defect": {
+    "row": 15,
+    "cells": [
+     401,
+     402
+    ],
+    "front": 403
+   },
+   "first_front_advance": {
+    "row": 9,
+    "new_front": 399
+   },
+   "rows": [
+    {
+     "i": 1,
+     "d": 626,
+     "front": 395,
+     "ndefects": 0,
+     "fda_sgnbits": 589
+    },
+    {
+     "i": 2,
+     "d": 627,
+     "front": 396,
+     "ndefects": 0,
+     "fda_sgnbits": 584
+    },
+    {
+     "i": 3,
+     "d": 628,
+     "front": 397,
+     "ndefects": 0,
+     "fda_sgnbits": 589
+    },
+    {
+     "i": 4,
+     "d": 628,
+     "front": 397,
+     "ndefects": 0,
+     "fda_sgnbits": 591
+    },
+    {
+     "i": 5,
+     "d": 629,
+     "front": 398,
+     "ndefects": 0,
+     "fda_sgnbits": 591
+    },
+    {
+     "i": 6,
+     "d": 629,
+     "front": 398,
+     "ndefects": 0,
+     "fda_sgnbits": 591
+    },
+    {
+     "i": 7,
+     "d": 630,
+     "front": 399,
+     "ndefects": 0,
+     "fda_sgnbits": 591
+    },
+    {
+     "i": 8,
+     "d": 631,
+     "front": 398,
+     "ndefects": 0,
+     "fda_sgnbits": 593
+    },
+    {
+     "i": 9,
+     "d": 631,
+     "front": 399,
+     "ndefects": 0,
+     "fda_sgnbits": -593
+    },
+    {
+     "i": 10,
+     "d": 632,
+     "front": 399,
+     "ndefects": 0,
+     "fda_sgnbits": 592
+    },
+    {
+     "i": 11,
+     "d": 632,
+     "front": 400,
+     "ndefects": 0,
+     "fda_sgnbits": -594
+    },
+    {
+     "i": 12,
+     "d": 633,
+     "front": 400,
+     "ndefects": 0,
+     "fda_sgnbits": 592
+    },
+    {
+     "i": 13,
+     "d": 634,
+     "front": 402,
+     "ndefects": 0,
+     "fda_sgnbits": -596
+    },
+    {
+     "i": 14,
+     "d": 634,
+     "front": 403,
+     "ndefects": 0,
+     "fda_sgnbits": -594
+    },
+    {
+     "i": 15,
+     "d": 635,
+     "front": 403,
+     "ndefects": 2,
+     "fda_sgnbits": 594
+    },
+    {
+     "i": 16,
+     "d": 635,
+     "front": 403,
+     "ndefects": 3,
+     "fda_sgnbits": 594
+    },
+    {
+     "i": 17,
+     "d": 636,
+     "front": 404,
+     "ndefects": 2,
+     "fda_sgnbits": 596
+    },
+    {
+     "i": 18,
+     "d": 637,
+     "front": 406,
+     "ndefects": 4,
+     "fda_sgnbits": -597
+    },
+    {
+     "i": 19,
+     "d": 637,
+     "front": 407,
+     "ndefects": 6,
+     "fda_sgnbits": -596
+    },
+    {
+     "i": 20,
+     "d": 638,
+     "front": 408,
+     "ndefects": 5,
+     "fda_sgnbits": 594
+    },
+    {
+     "i": 21,
+     "d": 638,
+     "front": 409,
+     "ndefects": 7,
+     "fda_sgnbits": -600
+    },
+    {
+     "i": 22,
+     "d": 639,
+     "front": 411,
+     "ndefects": 7,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 23,
+     "d": 640,
+     "front": 413,
+     "ndefects": 9,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 24,
+     "d": 640,
+     "front": 414,
+     "ndefects": 9,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 25,
+     "d": 641,
+     "front": 416,
+     "ndefects": 11,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 26,
+     "d": 641,
+     "front": 417,
+     "ndefects": 12,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 27,
+     "d": 642,
+     "front": 419,
+     "ndefects": 14,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 28,
+     "d": 643,
+     "front": 421,
+     "ndefects": 15,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 29,
+     "d": 643,
+     "front": 422,
+     "ndefects": 16,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 30,
+     "d": 644,
+     "front": 424,
+     "ndefects": 18,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 31,
+     "d": 644,
+     "front": 425,
+     "ndefects": 19,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 32,
+     "d": 645,
+     "front": 427,
+     "ndefects": 20,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 33,
+     "d": 646,
+     "front": 429,
+     "ndefects": 22,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 34,
+     "d": 646,
+     "front": 430,
+     "ndefects": 23,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 35,
+     "d": 647,
+     "front": 432,
+     "ndefects": 25,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 36,
+     "d": 647,
+     "front": 433,
+     "ndefects": 25,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 37,
+     "d": 648,
+     "front": 435,
+     "ndefects": 27,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 38,
+     "d": 649,
+     "front": 437,
+     "ndefects": 29,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 39,
+     "d": 649,
+     "front": 438,
+     "ndefects": 30,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 40,
+     "d": 650,
+     "front": 440,
+     "ndefects": 32,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 41,
+     "d": 650,
+     "front": 441,
+     "ndefects": 32,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 42,
+     "d": 651,
+     "front": 443,
+     "ndefects": 34,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 43,
+     "d": 652,
+     "front": 445,
+     "ndefects": 36,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 44,
+     "d": 652,
+     "front": 446,
+     "ndefects": 37,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 45,
+     "d": 653,
+     "front": 448,
+     "ndefects": 39,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 46,
+     "d": 653,
+     "front": 449,
+     "ndefects": 39,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 47,
+     "d": 654,
+     "front": 451,
+     "ndefects": 41,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 48,
+     "d": 655,
+     "front": 453,
+     "ndefects": 43,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 49,
+     "d": 655,
+     "front": 454,
+     "ndefects": 44,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 50,
+     "d": 656,
+     "front": 456,
+     "ndefects": 46,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 51,
+     "d": 656,
+     "front": 457,
+     "ndefects": 47,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 52,
+     "d": 657,
+     "front": 459,
+     "ndefects": 48,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 53,
+     "d": 658,
+     "front": 461,
+     "ndefects": 50,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 54,
+     "d": 658,
+     "front": 462,
+     "ndefects": 51,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 55,
+     "d": 659,
+     "front": 464,
+     "ndefects": 53,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 56,
+     "d": 659,
+     "front": 465,
+     "ndefects": 54,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 57,
+     "d": 660,
+     "front": 467,
+     "ndefects": 55,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 58,
+     "d": 661,
+     "front": 469,
+     "ndefects": 57,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 59,
+     "d": 661,
+     "front": 470,
+     "ndefects": 58,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 60,
+     "d": 662,
+     "front": 472,
+     "ndefects": 60,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 70,
+     "d": 668,
+     "front": 488,
+     "ndefects": 74,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 80,
+     "d": 674,
+     "front": 504,
+     "ndefects": 89,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 90,
+     "d": 680,
+     "front": 520,
+     "ndefects": 103,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 100,
+     "d": 686,
+     "front": 536,
+     "ndefects": 117,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 110,
+     "d": 692,
+     "front": 552,
+     "ndefects": 132,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 120,
+     "d": 698,
+     "front": 568,
+     "ndefects": 146,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 130,
+     "d": 704,
+     "front": 584,
+     "ndefects": 161,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 140,
+     "d": 710,
+     "front": 600,
+     "ndefects": 175,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 150,
+     "d": 716,
+     "front": 616,
+     "ndefects": 191,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 160,
+     "d": 722,
+     "front": 632,
+     "ndefects": 206,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 170,
+     "d": 727,
+     "front": 647,
+     "ndefects": 221,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 180,
+     "d": 733,
+     "front": 663,
+     "ndefects": 235,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 190,
+     "d": 739,
+     "front": 679,
+     "ndefects": 251,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 200,
+     "d": 745,
+     "front": 695,
+     "ndefects": 266,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 210,
+     "d": 751,
+     "front": 711,
+     "ndefects": 286,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 220,
+     "d": 757,
+     "front": 727,
+     "ndefects": 303,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 230,
+     "d": 763,
+     "front": 743,
+     "ndefects": 322,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 240,
+     "d": 769,
+     "front": 759,
+     "ndefects": 343,
+     "fda_sgnbits": -599
+    },
+    {
+     "i": 250,
+     "d": 775,
+     "front": 775,
+     "ndefects": 360,
+     "fda_sgnbits": -599
+    }
+   ]
+  },
+  {
+   "R": 1024,
+   "D0": 15,
+   "outcome": {
+    "CLOSED_capture": 639
+   },
+   "first_interior_defect": {
+    "row": 139,
+    "cells": [
+     202
+    ],
+    "front": 203
+   },
+   "first_front_advance": {
+    "row": 9,
+    "new_front": 398
+   },
+   "rows": [
+    {
+     "i": 1,
+     "d": 627,
+     "front": 394,
+     "ndefects": 0,
+     "fda_sgnbits": 591
+    },
+    {
+     "i": 2,
+     "d": 628,
+     "front": 395,
+     "ndefects": 0,
+     "fda_sgnbits": 587
+    },
+    {
+     "i": 3,
+     "d": 629,
+     "front": 396,
+     "ndefects": 0,
+     "fda_sgnbits": 591
+    },
+    {
+     "i": 4,
+     "d": 629,
+     "front": 396,
+     "ndefects": 0,
+     "fda_sgnbits": 593
+    },
+    {
+     "i": 5,
+     "d": 630,
+     "front": 397,
+     "ndefects": 0,
+     "fda_sgnbits": 593
+    },
+    {
+     "i": 6,
+     "d": 630,
+     "front": 397,
+     "ndefects": 0,
+     "fda_sgnbits": 594
+    },
+    {
+     "i": 7,
+     "d": 631,
+     "front": 398,
+     "ndefects": 0,
+     "fda_sgnbits": 594
+    },
+    {
+     "i": 8,
+     "d": 632,
+     "front": 397,
+     "ndefects": 0,
+     "fda_sgnbits": 595
+    },
+    {
+     "i": 9,
+     "d": 632,
+     "front": 398,
+     "ndefects": 0,
+     "fda_sgnbits": -593
+    },
+    {
+     "i": 10,
+     "d": 633,
+     "front": 398,
+     "ndefects": 0,
+     "fda_sgnbits": 596
+    },
+    {
+     "i": 11,
+     "d": 633,
+     "front": 399,
+     "ndefects": 0,
+     "fda_sgnbits": -592
+    },
+    {
+     "i": 12,
+     "d": 634,
+     "front": 399,
+     "ndefects": 0,
+     "fda_sgnbits": 597
+    },
+    {
+     "i": 13,
+     "d": 635,
+     "front": 401,
+     "ndefects": 0,
+     "fda_sgnbits": -595
+    },
+    {
+     "i": 14,
+     "d": 635,
+     "front": 400,
+     "ndefects": 0,
+     "fda_sgnbits": 597
+    },
+    {
+     "i": 15,
+     "d": 636,
+     "front": 400,
+     "ndefects": 0,
+     "fda_sgnbits": 598
+    },
+    {
+     "i": 16,
+     "d": 636,
+     "front": 399,
+     "ndefects": 0,
+     "fda_sgnbits": 597
+    },
+    {
+     "i": 17,
+     "d": 637,
+     "front": 401,
+     "ndefects": 0,
+     "fda_sgnbits": -597
+    },
+    {
+     "i": 18,
+     "d": 638,
+     "front": 399,
+     "ndefects": 0,
+     "fda_sgnbits": 601
+    },
+    {
+     "i": 19,
+     "d": 638,
+     "front": 398,
+     "ndefects": 0,
+     "fda_sgnbits": 602
+    },
+    {
+     "i": 20,
+     "d": 639,
+     "front": 400,
+     "ndefects": 0,
+     "fda_sgnbits": -602
+    },
+    {
+     "i": 21,
+     "d": 639,
+     "front": 399,
+     "ndefects": 0,
+     "fda_sgnbits": 603
+    },
+    {
+     "i": 22,
+     "d": 640,
+     "front": 399,
+     "ndefects": 0,
+     "fda_sgnbits": 605
+    },
+    {
+     "i": 23,
+     "d": 641,
+     "front": 398,
+     "ndefects": 0,
+     "fda_sgnbits": 606
+    },
+    {
+     "i": 24,
+     "d": 641,
+     "front": 397,
+     "ndefects": 0,
+     "fda_sgnbits": 608
+    },
+    {
+     "i": 25,
+     "d": 642,
+     "front": 397,
+     "ndefects": 0,
+     "fda_sgnbits": 607
+    },
+    {
+     "i": 26,
+     "d": 642,
+     "front": 397,
+     "ndefects": 0,
+     "fda_sgnbits": 607
+    },
+    {
+     "i": 27,
+     "d": 643,
+     "front": 397,
+     "ndefects": 0,
+     "fda_sgnbits": 610
+    },
+    {
+     "i": 28,
+     "d": 644,
+     "front": 396,
+     "ndefects": 0,
+     "fda_sgnbits": 612
+    },
+    {
+     "i": 29,
+     "d": 644,
+     "front": 395,
+     "ndefects": 0,
+     "fda_sgnbits": 614
+    },
+    {
+     "i": 30,
+     "d": 645,
+     "front": 395,
+     "ndefects": 0,
+     "fda_sgnbits": 614
+    },
+    {
+     "i": 31,
+     "d": 645,
+     "front": 394,
+     "ndefects": 0,
+     "fda_sgnbits": 615
+    },
+    {
+     "i": 32,
+     "d": 646,
+     "front": 394,
+     "ndefects": 0,
+     "fda_sgnbits": 616
+    },
+    {
+     "i": 33,
+     "d": 647,
+     "front": 392,
+     "ndefects": 0,
+     "fda_sgnbits": 619
+    },
+    {
+     "i": 34,
+     "d": 647,
+     "front": 392,
+     "ndefects": 0,
+     "fda_sgnbits": 618
+    },
+    {
+     "i": 35,
+     "d": 648,
+     "front": 391,
+     "ndefects": 0,
+     "fda_sgnbits": 621
+    },
+    {
+     "i": 36,
+     "d": 648,
+     "front": 391,
+     "ndefects": 0,
+     "fda_sgnbits": 622
+    },
+    {
+     "i": 37,
+     "d": 649,
+     "front": 390,
+     "ndefects": 0,
+     "fda_sgnbits": 623
+    },
+    {
+     "i": 38,
+     "d": 650,
+     "front": 388,
+     "ndefects": 0,
+     "fda_sgnbits": 625
+    },
+    {
+     "i": 39,
+     "d": 650,
+     "front": 387,
+     "ndefects": 0,
+     "fda_sgnbits": 627
+    },
+    {
+     "i": 40,
+     "d": 651,
+     "front": 387,
+     "ndefects": 0,
+     "fda_sgnbits": 628
+    },
+    {
+     "i": 41,
+     "d": 651,
+     "front": 386,
+     "ndefects": 0,
+     "fda_sgnbits": 629
+    },
+    {
+     "i": 42,
+     "d": 652,
+     "front": 384,
+     "ndefects": 0,
+     "fda_sgnbits": 630
+    },
+    {
+     "i": 43,
+     "d": 653,
+     "front": 382,
+     "ndefects": 0,
+     "fda_sgnbits": 632
+    },
+    {
+     "i": 44,
+     "d": 653,
+     "front": 381,
+     "ndefects": 0,
+     "fda_sgnbits": 633
+    },
+    {
+     "i": 45,
+     "d": 654,
+     "front": 380,
+     "ndefects": 0,
+     "fda_sgnbits": 635
+    },
+    {
+     "i": 46,
+     "d": 654,
+     "front": 380,
+     "ndefects": 0,
+     "fda_sgnbits": 636
+    },
+    {
+     "i": 47,
+     "d": 655,
+     "front": 378,
+     "ndefects": 0,
+     "fda_sgnbits": 638
+    },
+    {
+     "i": 48,
+     "d": 656,
+     "front": 376,
+     "ndefects": 0,
+     "fda_sgnbits": 640
+    },
+    {
+     "i": 49,
+     "d": 656,
+     "front": 375,
+     "ndefects": 0,
+     "fda_sgnbits": 641
+    },
+    {
+     "i": 50,
+     "d": 657,
+     "front": 373,
+     "ndefects": 0,
+     "fda_sgnbits": 642
+    },
+    {
+     "i": 51,
+     "d": 657,
+     "front": 372,
+     "ndefects": 0,
+     "fda_sgnbits": 643
+    },
+    {
+     "i": 52,
+     "d": 658,
+     "front": 370,
+     "ndefects": 0,
+     "fda_sgnbits": 644
+    },
+    {
+     "i": 53,
+     "d": 659,
+     "front": 368,
+     "ndefects": 0,
+     "fda_sgnbits": 646
+    },
+    {
+     "i": 54,
+     "d": 659,
+     "front": 367,
+     "ndefects": 0,
+     "fda_sgnbits": 647
+    },
+    {
+     "i": 55,
+     "d": 660,
+     "front": 365,
+     "ndefects": 0,
+     "fda_sgnbits": 649
+    },
+    {
+     "i": 56,
+     "d": 660,
+     "front": 364,
+     "ndefects": 0,
+     "fda_sgnbits": 649
+    },
+    {
+     "i": 57,
+     "d": 661,
+     "front": 362,
+     "ndefects": 0,
+     "fda_sgnbits": 651
+    },
+    {
+     "i": 58,
+     "d": 662,
+     "front": 360,
+     "ndefects": 0,
+     "fda_sgnbits": 653
+    },
+    {
+     "i": 59,
+     "d": 662,
+     "front": 359,
+     "ndefects": 0,
+     "fda_sgnbits": 654
+    },
+    {
+     "i": 60,
+     "d": 663,
+     "front": 357,
+     "ndefects": 0,
+     "fda_sgnbits": 655
+    },
+    {
+     "i": 70,
+     "d": 669,
+     "front": 338,
+     "ndefects": 0,
+     "fda_sgnbits": 664
+    },
+    {
+     "i": 80,
+     "d": 675,
+     "front": 318,
+     "ndefects": 0,
+     "fda_sgnbits": 669
+    },
+    {
+     "i": 90,
+     "d": 681,
+     "front": 298,
+     "ndefects": 0,
+     "fda_sgnbits": 670
+    },
+    {
+     "i": 100,
+     "d": 687,
+     "front": 278,
+     "ndefects": 0,
+     "fda_sgnbits": 666
+    },
+    {
+     "i": 110,
+     "d": 693,
+     "front": 258,
+     "ndefects": 0,
+     "fda_sgnbits": 658
+    },
+    {
+     "i": 120,
+     "d": 699,
+     "front": 238,
+     "ndefects": 0,
+     "fda_sgnbits": 646
+    },
+    {
+     "i": 130,
+     "d": 705,
+     "front": 218,
+     "ndefects": 0,
+     "fda_sgnbits": 629
+    },
+    {
+     "i": 140,
+     "d": 711,
+     "front": 199,
+     "ndefects": 1,
+     "fda_sgnbits": 612
+    },
+    {
+     "i": 150,
+     "d": 717,
+     "front": 180,
+     "ndefects": 2,
+     "fda_sgnbits": 588
+    },
+    {
+     "i": 160,
+     "d": 723,
+     "front": 162,
+     "ndefects": 4,
+     "fda_sgnbits": 558
+    },
+    {
+     "i": 170,
+     "d": 728,
+     "front": 144,
+     "ndefects": 3,
+     "fda_sgnbits": 520
+    },
+    {
+     "i": 180,
+     "d": 734,
+     "front": 125,
+     "ndefects": 4,
+     "fda_sgnbits": 484
+    },
+    {
+     "i": 190,
+     "d": 740,
+     "front": 107,
+     "ndefects": 4,
+     "fda_sgnbits": 445
+    },
+    {
+     "i": 200,
+     "d": 746,
+     "front": 91,
+     "ndefects": 8,
+     "fda_sgnbits": 404
+    },
+    {
+     "i": 210,
+     "d": 752,
+     "front": 75,
+     "ndefects": 10,
+     "fda_sgnbits": 355
+    },
+    {
+     "i": 220,
+     "d": 758,
+     "front": 60,
+     "ndefects": 13,
+     "fda_sgnbits": 307
+    },
+    {
+     "i": 230,
+     "d": 764,
+     "front": 46,
+     "ndefects": 17,
+     "fda_sgnbits": 256
+    },
+    {
+     "i": 240,
+     "d": 770,
+     "front": 34,
+     "ndefects": 23,
+     "fda_sgnbits": 207
+    },
+    {
+     "i": 250,
+     "d": 776,
+     "front": 26,
+     "ndefects": 26,
+     "fda_sgnbits": 167
+    },
+    {
+     "i": 260,
+     "d": 782,
+     "front": 20,
+     "ndefects": 20,
+     "fda_sgnbits": 137
+    },
+    {
+     "i": 270,
+     "d": 788,
+     "front": 15,
+     "ndefects": 15,
+     "fda_sgnbits": 116
+    },
+    {
+     "i": 280,
+     "d": 794,
+     "front": 12,
+     "ndefects": 12,
+     "fda_sgnbits": 94
+    },
+    {
+     "i": 290,
+     "d": 800,
+     "front": 10,
+     "ndefects": 10,
+     "fda_sgnbits": 82
+    },
+    {
+     "i": 300,
+     "d": 806,
+     "front": 8,
+     "ndefects": 8,
+     "fda_sgnbits": 70
+    },
+    {
+     "i": 310,
+     "d": 812,
+     "front": 7,
+     "ndefects": 7,
+     "fda_sgnbits": 63
+    },
+    {
+     "i": 320,
+     "d": 818,
+     "front": 6,
+     "ndefects": 6,
+     "fda_sgnbits": 57
+    },
+    {
+     "i": 330,
+     "d": 824,
+     "front": 5,
+     "ndefects": 5,
+     "fda_sgnbits": 50
+    },
+    {
+     "i": 340,
+     "d": 830,
+     "front": 5,
+     "ndefects": 5,
+     "fda_sgnbits": 50
+    },
+    {
+     "i": 350,
+     "d": 836,
+     "front": 4,
+     "ndefects": 4,
+     "fda_sgnbits": 43
+    },
+    {
+     "i": 360,
+     "d": 842,
+     "front": 4,
+     "ndefects": 4,
+     "fda_sgnbits": 43
+    },
+    {
+     "i": 370,
+     "d": 848,
+     "front": 3,
+     "ndefects": 3,
+     "fda_sgnbits": 50
+    },
+    {
+     "i": 380,
+     "d": 854,
+     "front": 3,
+     "ndefects": 3,
+     "fda_sgnbits": 43
+    },
+    {
+     "i": 390,
+     "d": 860,
+     "front": 3,
+     "ndefects": 3,
+     "fda_sgnbits": 43
+    },
+    {
+     "i": 400,
+     "d": 866,
+     "front": 3,
+     "ndefects": 3,
+     "fda_sgnbits": 43
+    },
+    {
+     "i": 410,
+     "d": 872,
+     "front": 2,
+     "ndefects": 2,
+     "fda_sgnbits": 36
+    },
+    {
+     "i": 420,
+     "d": 878,
+     "front": 2,
+     "ndefects": 2,
+     "fda_sgnbits": 36
+    },
+    {
+     "i": 430,
+     "d": 884,
+     "front": 2,
+     "ndefects": 2,
+     "fda_sgnbits": 36
+    },
+    {
+     "i": 440,
+     "d": 890,
+     "front": 2,
+     "ndefects": 2,
+     "fda_sgnbits": 36
+    },
+    {
+     "i": 450,
+     "d": 896,
+     "front": 2,
+     "ndefects": 2,
+     "fda_sgnbits": 36
+    },
+    {
+     "i": 460,
+     "d": 902,
+     "front": 2,
+     "ndefects": 2,
+     "fda_sgnbits": 36
+    },
+    {
+     "i": 470,
+     "d": 908,
+     "front": 1,
+     "ndefects": 1,
+     "fda_sgnbits": 36
+    },
+    {
+     "i": 480,
+     "d": 914,
+     "front": 1,
+     "ndefects": 1,
+     "fda_sgnbits": 28
+    },
+    {
+     "i": 490,
+     "d": 920,
+     "front": 1,
+     "ndefects": 1,
+     "fda_sgnbits": 28
+    },
+    {
+     "i": 500,
+     "d": 926,
+     "front": 1,
+     "ndefects": 1,
+     "fda_sgnbits": 28
+    },
+    {
+     "i": 510,
+     "d": 932,
+     "front": 1,
+     "ndefects": 1,
+     "fda_sgnbits": 28
+    },
+    {
+     "i": 520,
+     "d": 938,
+     "front": 1,
+     "ndefects": 1,
+     "fda_sgnbits": 29
+    },
+    {
+     "i": 530,
+     "d": 944,
+     "front": 1,
+     "ndefects": 1,
+     "fda_sgnbits": 29
+    },
+    {
+     "i": 540,
+     "d": 950,
+     "front": 1,
+     "ndefects": 1,
+     "fda_sgnbits": 29
+    },
+    {
+     "i": 550,
+     "d": 956,
+     "front": 1,
+     "ndefects": 1,
+     "fda_sgnbits": 29
+    },
+    {
+     "i": 560,
+     "d": 962,
+     "front": 0,
+     "ndefects": 0,
+     "fda_sgnbits": 20
+    },
+    {
+     "i": 570,
+     "d": 968,
+     "front": 0,
+     "ndefects": 0,
+     "fda_sgnbits": 20
+    },
+    {
+     "i": 580,
+     "d": 974,
+     "front": 0,
+     "ndefects": 0,
+     "fda_sgnbits": 20
+    },
+    {
+     "i": 590,
+     "d": 980,
+     "front": 0,
+     "ndefects": 0,
+     "fda_sgnbits": 20
+    },
+    {
+     "i": 600,
+     "d": 986,
+     "front": 0,
+     "ndefects": 0,
+     "fda_sgnbits": 20
+    },
+    {
+     "i": 610,
+     "d": 992,
+     "front": 0,
+     "ndefects": 0,
+     "fda_sgnbits": 20
+    },
+    {
+     "i": 620,
+     "d": 998,
+     "front": 0,
+     "ndefects": 0,
+     "fda_sgnbits": 20
+    },
+    {
+     "i": 630,
+     "d": 1004,
+     "front": 0,
+     "ndefects": 0,
+     "fda_sgnbits": 20
+    }
+   ]
+  }
+ ],
+ "G1": {
+  "identity_trials": 400,
+  "zero_sum_trials": 400,
+  "defect_mass_L1_trials": 400,
+  "ratio_law": [
+   {
+    "rho": 2,
+    "delta": 0,
+    "interior_multiplier_exact": true
+   },
+   {
+    "rho": 2,
+    "delta": 1,
+    "interior_multiplier_exact": true
+   },
+   {
+    "rho": 3,
+    "delta": 0,
+    "interior_multiplier_exact": true
+   },
+   {
+    "rho": 3,
+    "delta": 1,
+    "interior_multiplier_exact": true
+   },
+   {
+    "rho": 4,
+    "delta": 0,
+    "interior_multiplier_exact": true
+   },
+   {
+    "rho": 4,
+    "delta": 1,
+    "interior_multiplier_exact": true
+   },
+   {
+    "rho": 5,
+    "delta": 0,
+    "interior_multiplier_exact": true
+   },
+   {
+    "rho": 5,
+    "delta": 1,
+    "interior_multiplier_exact": true
+   }
+  ],
+  "naive_envelope_counterexample": {
+   "a": "M on even cells, 0 on odd; M=100, N=8",
+   "first_violations": [
+    [
+     1,
+     200,
+     100
+    ],
+    [
+     2,
+     200,
+     0
+    ],
+    [
+     3,
+     200,
+     0
+    ],
+    [
+     4,
+     200,
+     0
+    ]
+   ],
+   "verdict": "naive claim FALSE (hazard record)"
+  }
+ },
+ "G2": [
+  {
+   "R": 256,
+   "D0": 0,
+   "d": 153,
+   "front": 101,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 53,
+   "last_sub2_cell": 52,
+   "first_super2_cell": 53,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 100,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    101
+   ]
+  },
+  {
+   "R": 256,
+   "D0": 1,
+   "d": 154,
+   "front": 100,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 55,
+   "last_sub2_cell": 54,
+   "first_super2_cell": 55,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 99,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    100
+   ]
+  },
+  {
+   "R": 512,
+   "D0": 0,
+   "d": 306,
+   "front": 204,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 103,
+   "last_sub2_cell": 103,
+   "first_super2_cell": 104,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 203,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    204
+   ]
+  },
+  {
+   "R": 512,
+   "D0": 5,
+   "d": 311,
+   "front": 199,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 113,
+   "last_sub2_cell": 112,
+   "first_super2_cell": 113,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 198,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    199
+   ]
+  },
+  {
+   "R": 1024,
+   "D0": 0,
+   "d": 612,
+   "front": 410,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 203,
+   "last_sub2_cell": 203,
+   "first_super2_cell": 204,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 409,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    410
+   ]
+  },
+  {
+   "R": 1024,
+   "D0": 15,
+   "d": 627,
+   "front": 395,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 233,
+   "last_sub2_cell": 232,
+   "first_super2_cell": 233,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 394,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    395
+   ]
+  },
+  {
+   "R": 2048,
+   "D0": 38,
+   "d": 1262,
+   "front": 784,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 479,
+   "last_sub2_cell": 478,
+   "first_super2_cell": 479,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 783,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    784
+   ]
+  },
+  {
+   "R": 4096,
+   "D0": 89,
+   "d": 2538,
+   "front": 1556,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 983,
+   "last_sub2_cell": 982,
+   "first_super2_cell": 983,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 1555,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    1556
+   ]
+  },
+  {
+   "R": 8192,
+   "D0": 192,
+   "d": 5090,
+   "front": 3100,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 1991,
+   "last_sub2_cell": 1990,
+   "first_super2_cell": 1991,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 3099,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    3100
+   ]
+  }
+ ]
+}

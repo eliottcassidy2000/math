@@ -1,0 +1,11 @@
+RULE 30 INWARD-SLACK CARTIER EXACT AUDIT
+ballistic_faces=omega4:z^4/(1+zq) omega5:0 omega6:z^6/(1+zq)
+tail_monic_targets=4..192 degree=t-4 top3_for_t>=6=[1,0,1]
+global_jet_staircase=orders_0..96 ord_z(J_j)=j+4 leading=1
+parity_cartier_targets=4..128 J_2j=h0_j+h1_j J_(2j+1)=h1_j valuation=exact
+source_cycles_u3..12=preperiods_[1,0,1,0,0,1,0,0,0,0]_periods_[4,8,8,16,32,32,64,64,64,64] state_return=exact
+source_taylor_orders=0..255 residue_classes=64 ord_z_range=[3,12] unique_shallow_owner=exact
+green_crosscheck_exponents=0..160 central_coefficients=0..512 exact
+hostiles=t6:1+q^2 t9:1+q+q^3+q^5 scalar_cancellation=exact
+scope=FINITE-EXACT audit of universal proofs; no Rule 30 prize, density theorem, or unrestricted complexity lower bound
+ALL CHECKS PASSED

@@ -1,0 +1,13 @@
+RULE30_SIGNALIZER_SELECTED_RAY_BANK_20260821
+status=PROVED_BOUNDED_GAP_RECOVERY+FINITE-EXACT_BANK;no_finite_graph;no_rule30_prize
+dependency_sha256=2ce110f0b8e9c71c3d298aaf07e8e6c02b70d33e5671bc763f3f3b490caa5445
+physical_universe=s_0..s_22;count=23;depth=4
+separator_counts=((1, 0), (2, 0), (3, 104))
+minimum_bank_size=3;lexicographic_bank=(0, 1, 2);three_ray_banks=104
+physical_records=(m,gap,ray_outputs)=((0,2,(3,6,13)),(1,1,(3,8,1)),(2,2,(9,4,7)),(3,1,(7,0,5)),(4,2,(7,2,13)),(5,6,(5,12,7)),(6,1,(13,2,3)),(7,8,(7,14,5)),(8,1,(9,14,7)),(9,2,(11,6,1)),(10,2,(9,12,15)),(11,5,(5,12,3)),(12,2,(7,6,1)),(13,1,(1,6,7)),(14,2,(3,6,1)),(15,2,(7,14,1)),(16,2,(13,0,7)),(17,5,(15,6,5)),(18,1,(1,14,15)),(19,2,(15,6,9)),(20,3,(9,0,7)),(21,1,(13,14,15)),(22,3,(1,8,11)))
+selected_bank_hostile=(('CA',(7,10,1),3,(13,2,3)),('CCAC',(7,10,1),10,(9,4,7)))
+full_portrait_hostiles=((4,'CBC','AAAACBC',(6,8),'fb71573ada925487f355cb3b4cf9e5e4a123e0eb90ba0c9a9ede5d670bc87ba9'),(5,'AACAAACC','CAAACAAC',(6,5),'d79af63716f2477d25288314c9228396c7e9f04ca78fceb7765eb2054209c574'))
+adaptive_recoveries=((4,'CA','CCAC',3,('exact','overflow'),10,(3,14),(10,14)),(4,'CBC','AAAACBC',6,('exact','overflow'),8,(6,12),(8,12)),(5,'AACAAACC','CAAACAAC',5,('overflow','exact'),6,(6,11),(5,11)))
+semantic_sha256=a9b7d65627409baa3d35e1a3ec537d26eac76d6796efd2aa3e5114981eb95e84
+interpretation=frozen_separator_not_operation_closed;depth_D_plus_gap_budget_recovers_exact_transition_or_overflow
+ALL CHECKS PASSED

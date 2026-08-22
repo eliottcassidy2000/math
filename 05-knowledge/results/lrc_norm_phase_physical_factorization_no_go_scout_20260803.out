@@ -1,0 +1,20 @@
+LRC norm-phase physical factorization boundary exact scout
+dependency_hash_checks=18,dependency_replay=THM3246_PASS,stored_companions_3246_3252_3253_3255=PASS
+assert_nodes=0,float_literals=0,typed_contract_clause_checks=10
+singer_field=F13[u]/(u^2-2),alpha=(1,2),orbit=168,Norm(alpha)=6,phase=exponent_mod12
+factorization_ladder=full_q_plus_chosen_norm:C12_exact;projective_[q]:C2_parity_exact;determinant_v:trivial
+primitive_gauges=8064,projective_fibre_checks=112896,each_fibre=6_phases_each_twice
+canonical_projective_phase_supports={0,2,4,6,8,10}*7+{1,3,5,7,9,11}*7
+endpoint_determinant_fibres=13,states_each=2184,phase_counts_each=12*182
+projective_direction_plus_det_fibres=182,states_each=156,phase_counts_each=6*26
+negative_seam=one_per_C12_phase+12_distinct_projective_directions_in_every_8064_gauges
+canonical_seam_phase_to_line=0:0,1:1,2:2,3:3,4:4,5:5,6:8,7:9,8:10,9:11,10:12,11:13;missing_lines=6,7
+translation_(1,0)_nonzero_transitions=167;phase_preserving=13;each_nonzero_phase_difference=14
+translation_hostiles=alpha^0=(1,0)->(2,0)=alpha^70:phase_0_to_10;alpha^1=(1,2)->(2,2)=alpha^40:phase_1_to_4_parity_break
+nonzero_translations=168;nonzero_to_nonzero_transitions=28056;phase_preserving=2184;each_nonzero_phase_difference=2352
+nearest_physical_source=THM2791_same_ancestry_partial_rail_sheet_germ;nearest_current=THM3247_J_q(R)=P_(R+q)Q_R
+first_missing_field=allocated_full_increment_q_and_endpoint_origin_R_on_the_same_literal_ancestry_sheet
+additional_phase_sidecar=chosen_F169_Singer_structure_or_equivalent_absolute_norm_gauge;projective_direction_is_insufficient
+map_status=pinned_nearest_contracts_leave_owner_to_endpoint_intertwiner_OPEN;no_commutative_physical_square_constructed
+scope=finite_exact_abstract_factorization_and_selected_type_audit;no_physical_owner_current,row_exclusion,or_LRC14_decrement
+all_exact_checks=PASS

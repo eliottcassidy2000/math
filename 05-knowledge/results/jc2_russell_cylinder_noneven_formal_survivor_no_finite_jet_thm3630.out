@@ -1,0 +1,22 @@
+THM-3630 exact companion -- proved non-even formal survivor
+status=formal decomposable-pair survivor and no uniform finite jet bound; audit=HOSTILE-PASS
+SECTION exact common curve and transverse slopes
+PASS common_curve=exact c_x=3 lambda=(-3/(4g^3),u/3,3/(4g^3)) exceptional_u=plusminus9/4
+PASS formal_gluing=Vandermonde normal_degrees_all m0_boundary=4
+SECTION direct Newton interpolation and decomposable pullback
+PASS Newton=D21_D31_in_cR D321_regular restrictions=A1_A2_A3 decomposable_pair=(F,w) pullback=12
+PASS terminal_control=tangent_constant_11178 exact_constant_10449 gap=729
+SECTION Hermite polynomial finite survivors
+PASS matched_order=2 polynomial_degree=8 N=2 shape=18x30 rank=15 augmented=15
+PASS matched_order=3 polynomial_degree=11 N=4 shape=45x105 rank=40 augmented=40
+PASS matched_order=4 polynomial_degree=14 N=6 shape=84x252 rank=77 augmented=77
+PASS matched_order=5 polynomial_degree=17 N=8 shape=135x495 rank=126 augmented=126
+SECTION hostile Q_h one-side repairs
+PASS Q_h N=6 shape=84x252 rank=77 augmented=78 hostile_failure=reproduced
+PASS Q_[4] N=6 shape=84x252 rank=77 augmented=77
+PASS Q_[4] N=7 shape=108x360 rank=100 augmented=100
+PASS Q_[5] N=8 shape=135x495 rank=126 augmented=126
+SECTION source AST gate
+PASS ast_assertion_nodes=0
+CHECKS=147
+RESULT=PASS

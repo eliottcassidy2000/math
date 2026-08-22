@@ -1,0 +1,11 @@
+universe=homogeneous degree-5 S3-sign eigenspace on Delta_2
+normal_form=Vandermonde*(A*e1^2+B*e2)
+odd_moments=zero by transposition sign
+I2=(165*A^2+66*A*B+7*B^2)/277200
+I4=(71060*A^4+53295*A^3*B+15675*A^2*B^2+2123*A*B^3+111*B^4)/29875045200
+primitive_resultant=846709600
+infinity_chart=(7,111)
+consequence=no nonzero sign quintic kills both surviving moments m=2,4
+routes=sparse factorial-Dirichlet numerator + direct iterated triangle integral
+controls=gcd-self positive; transposition sign; three-cycle invariance
+payload_sha256=39c6e3fd164e3b24c07d05c1f71cc867263c96be86ac9d5228aee59be6aae256

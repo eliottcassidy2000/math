@@ -1,0 +1,15 @@
+RULE30_VAN_DER_PUT_HAAR_AUTOMATON_THM3512
+status PROVED_VERIFIED_EXACT_INDEPENDENTLY_AUDITED
+width 25 period 512 innovation_prefix (1, 3, 4, 6, 7, 9, 15, 16, 24, 25)
+gaps (2, 1, 2, 1, 2, 6, 1, 8, 1) heights (0, 1, 1, 2, 2, 3, 8, 8, 15, 15)
+van_der_put_checks 1023 fixed_projection_checks 3756 derivative_checks 720
+haar_checks 288 block_checks 624 detail_checks 624 volkenborn_checks 160
+projective_checks 288 recurrence_checks 288 precision_tariffs 8 quotient_nonclosure_checks 7 scalar_hostiles 256
+state_image_checks 24 fiber_checks 360 no111_state_bounds 24
+depth24_invoice (24, 9, 512, 32768) exact_floor_bound 256
+quasisymmetry_controls 9 45
+physical_units (25, 6403, 1607) G2_mod256 133
+mahler_hostile (3, 12, 12, 6)
+control_sha256 f96a921c9fffe39c3288a7f0a1857abca7544eb628a3994b2864b79e51f99ccb
+epsilon_prefix 1011011010000011000000011
+ALL CHECKS PASSED

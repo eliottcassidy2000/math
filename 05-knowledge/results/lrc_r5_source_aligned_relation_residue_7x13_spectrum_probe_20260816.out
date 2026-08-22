@@ -1,0 +1,21 @@
+== r=5 source-aligned refined-residue 7 x 13 spectrum probe ==
+dependencies=((source,22c5c748392817ccc36889a007c65bd5f44b26c10638df6f6aac48e917547f41,31e9e90c63053944b590195555be07ccbf84fd4c7abc2101de6a2a3562202de6),(endpoint,fe8fba15e1389711ac569e118a31efbca550c90d69bc95c4d5804f4f2fc73f11,f496b9da968f091b11d27137acdd21c4351785943c45b0e7783fce95b5915df0))
+split_embedding=(prime=572252886246508880869,zeta7=353818603057943120846,zeta13=505438565698892403012)
+seven_cells=exact_half_open_partition; masses=(42548128262640, 42548128262640, 42548128262640, 42548128262640, 42548128262640, 42548128262640, 42548128262640)
+source_cell_tensor=(pair_support=362/1521,entry_support=5150/138411,sha256=39d7a0b4e5b2d8b85631d682ed1967091e44dc41e17b33a77e7184d3dc93e0cf)
+cell_marginal_recovery=all 39x39x13 source-aligned common-offset entries: PASS
+target_refined_(1,0,t)_pair_bank_sha256=c28119c8b54f47e5b7a46f1508fbba604b0e3997eaadb05b03ad28edd9aed468
+residue_owner_marginal_recovery=all 13x13 prior profiles: PASS
+refined_residue_raw_spectrum_shapes_(total,dc,F7axis,F13axis,mixed)=((91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72), (91, 1, 6, 12, 72))
+fixed_relation_refined_class=(1,0,6); endpoint_total=225010624370142818572
+fixed_relation_owner_marginal=(46205031809059160986, 521685741740425125819, 322873700432346840316, 282724801483324127022, 331829099837529843688, 260295280174885139954, 234627007903017400843, 326892324942410583876, 120836393180900983861, 378602754724321789415, 110154739161650508621, 361915264916995704147, 262504842983395584878)
+fixed_relation_raw_7x13_spectrum_shape=(91, 1, 6, 12, 72)
+fixed_relation_cell_owner_ANOVA_spectrum_shape=(72, 0, 0, 0, 72)
+fixed_relation_endpoint_pair_ANOVA_spectrum_shape=(91, 1, 6, 12, 72)
+fixed_relation_mixed_witness_(h=1,k=1)=218019411785559321795
+hostile_erasure_shapes=(cell_erased=(13, 1, 0, 12, 0),owner_erased=(7, 1, 6, 0, 0))
+coordinate_bank_sha256=989dafc220a6d09aeacfce4af0e9a4fe13eedacc79fa66032ea39bc107fd8efb
+spectrum_bank_sha256=5f173227c5e203309f61bdfd9d47cc64a3b49ae8f14abd0f7bfc469eda278533
+semantic_sha256=cd55336bb1dfe5f37f020c242c4bca5b7c6be339ec57e95d69e10bbe68d9dbaa
+scope=finite-exact source-time 7x13 simple-kernel spectrum; preintegrated AX/BY residue pushforward, not exact C(a;X,m),physical current,THM-2512 bridge,row exclusion,LRC(14)
+all exact checks passed

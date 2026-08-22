@@ -1,0 +1,12 @@
+THM-3231 exact simple-pivot exceptional-square carry
+dependency_pin=THM-3223
+symbolic_row_coefficients=5 constant_and_linear_w0_terms=0 PASS
+exceptional_formula_controls=5 PASS
+toeplitz_4x4_determinants=5 quotient_tail_convolutions=5 PASS
+normal_cone_constant=t0*P1(E(Sw,t),Sw) third_quotient_jet=PASS
+p43_jet_lengths=13,11,9,7,5,3,1
+p43_constant_valuations=0,0,0,1,0,2
+p43_row4_mod43=0,24,20,16,3 row5_mod43=23,12,1
+p43_units=w0_over_43:36 exceptional:39 row6_over_43^2:19
+mod43_terminal_row_lifts_to_second_order_unit=PASS
+scope=exceptional_pivot_carry_not_full_prs_or_root_selector

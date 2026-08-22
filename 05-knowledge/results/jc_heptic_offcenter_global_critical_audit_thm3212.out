@@ -1,0 +1,73 @@
+universal_symbolic_resultant_identity=PASS
+begin_passport=(4,1,1,1)
+built_passport=(4,1,1,1) degree_V=16 degree_A=8
+built_resultant=(4,1,1,1) degree=96
+removed_g_factor=(4,1,1,1):5->91
+removed_g_factor=(4,1,1,1):5->86
+removed_g_factor=(4,1,1,1):5->81
+removed_g_factor=(4,1,1,1):4->77
+removed_g_factor=(4,1,1,1):4->73
+removed_g_factor=(4,1,1,1):4->69
+removed_g_factor=(4,1,1,1):4->65
+removed_g_factor=(4,1,1,1):4->61
+removed_g_factor=(4,1,1,1):1->60
+removed_g_factor=(4,1,1,1):1->59
+removed_g_factor=(4,1,1,1):1->58
+removed_g_factor=(4,1,1,1):1->57
+removed_g_factor=(4,1,1,1):1->56
+removed_g_factor=(4,1,1,1):1->55
+removed_g_factor=(4,1,1,1):1->54
+removed_g_factor=(4,1,1,1):1->53
+removed_g_factor=(4,1,1,1):1->52
+finished_saturation=(4,1,1,1)
+passport=(4,1,1,1)
+degree_V=16 degree_A=8 degree_g=5
+raw_saturated_resultant_degree=96
+successive_g_gcd_degrees=(5, 5, 5, 4, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+forced_boundary_factor=S^3*T^8*x^9*(x-1)^0
+away_from_g_resultant_degree=52
+away_from_g_resultant_derivative_gcd_degree=0
+squarefree_good_reduction=(p=113,u=85,degree=52)
+away_from_g_resultant_sha256=693ed1fc7e01eb82f54ec029b5a92fc1a5f6dacf9634368c335717ef3de015bc
+away_from_g_resultant_lc=(Fraction(81951318553800801408849358583753942971479750573411507553151969977417473, 262144000000000000000000000000000000000000000000000000000000000000), Fraction(24470912664025394843813194499285526373423633320677506131711376947203797, 65536000000000000000000000000000000000000000000000000000000000000), Fraction(440574721071134107748082554858101253976429852522434284398463829112277, 2621440000000000000000000000000000000000000000000000000000000000))
+gcd_away_resultant_with_V=1
+nearby_control=(B=1,C0=1,E0=x)
+nearby_local_Delta=1-A_src_prime_is_unit_mod_g
+nearby_away_resultant_degree=52
+nearby_away_resultant_sha256=b4941e0a8b568d0a0637fb92ad4c5e84547ac839f75930c86c7a0fd77ca1ec2c
+nearby_away_resultant_squarefree_good_reduction=PASS
+begin_passport=(3,2,1,1)
+built_passport=(3,2,1,1) degree_V=16 degree_A=8
+built_resultant=(3,2,1,1) degree=96
+removed_g_factor=(3,2,1,1):5->91
+removed_g_factor=(3,2,1,1):5->86
+removed_g_factor=(3,2,1,1):5->81
+removed_g_factor=(3,2,1,1):4->77
+removed_g_factor=(3,2,1,1):4->73
+removed_g_factor=(3,2,1,1):4->69
+removed_g_factor=(3,2,1,1):4->65
+removed_g_factor=(3,2,1,1):4->61
+removed_g_factor=(3,2,1,1):2->59
+removed_g_factor=(3,2,1,1):2->57
+removed_g_factor=(3,2,1,1):2->55
+removed_g_factor=(3,2,1,1):1->54
+removed_g_factor=(3,2,1,1):1->53
+removed_g_factor=(3,2,1,1):1->52
+finished_saturation=(3,2,1,1)
+passport=(3,2,1,1)
+degree_V=16 degree_A=8 degree_g=5
+raw_saturated_resultant_degree=96
+successive_g_gcd_degrees=(5, 5, 5, 4, 4, 4, 4, 4, 2, 2, 2, 1, 1, 1)
+forced_boundary_factor=S^3*T^8*x^6*(x-1)^3
+away_from_g_resultant_degree=52
+away_from_g_resultant_derivative_gcd_degree=0
+squarefree_good_reduction=(p=101,u=64,degree=52)
+away_from_g_resultant_sha256=9728fcc417f5a432c6233f8e2d8813695bf96bfa42554dbd9ff1a441ce2d545a
+away_from_g_resultant_lc=(Fraction(130375726047085538830779402527362781971252829651, 2703864574375502950215699413336064), Fraction(1116989500203444906673093760875018610814223505, 337983071796937868776962426667008), Fraction(-35443008075327603353026044108395373025945816375, 450644095729250491702616568889344))
+gcd_away_resultant_with_V=1
+nearby_control=(B=1,C0=1,E0=x)
+nearby_local_Delta=1-A_src_prime_is_unit_mod_g
+nearby_away_resultant_degree=52
+nearby_away_resultant_sha256=6ab367a3715faae6bcc79fce031885f499c6f7644e8139e8fa9e14494133616b
+nearby_away_resultant_squarefree_good_reduction=PASS
+FAILED_CHECKS=NONE

@@ -1,0 +1,23 @@
+== fixed Keller R5 finite-sheet recursive norm gate ==
+H raw sha256=5a9459b3149e500c1b00b67bd804aa7e607de06bf4610c7cdf5fa26d41d74ce9; terms=361; degrees=(14, 21, 12)
+point q=(2,5/6,-7/8); F(q)=(2/27,1,1); L(F(q))=0; L(q)=241465/1728
+primary route: four cubic algebras, descending to L
+independent route: three cubic algebras, evaluating frozen H directly
+p=101: R5(q)=74; explicit-H flat norm=49; wrong-H-normalization control=60
+  (L,N(L),N^2(L),N^3(L),N^4(L))=(16, 12, 72, 9, 49)
+  l_ledger: (base_dim,Norm(L),Norm(S),Norm(disc),source_sha12)=[(1, 16, 78, 56, '5b085ca8499c'), (3, 12, 2, 41, '8cfa9d209b2b'), (9, 72, 36, 10, '52bd5cc49497'), (27, 9, 9, 13, '8c77f9163547')]
+  h_ledger: (base_dim,Norm(L),Norm(S),Norm(disc),source_sha12)=[(1, 16, 78, 56, '5b085ca8499c'), (3, 12, 2, 41, '8cfa9d209b2b'), (9, 72, 36, 10, '52bd5cc49497')]
+p=103: R5(q)=36; explicit-H flat norm=87; wrong-H-normalization control=91
+  (L,N(L),N^2(L),N^3(L),N^4(L))=(12, 53, 22, 85, 76)
+  l_ledger: (base_dim,Norm(L),Norm(S),Norm(disc),source_sha12)=[(1, 12, 72, 91, 'bf292895feda'), (3, 53, 5, 60, '761594faf412'), (9, 22, 1, 79, '5d09fd4ad38b'), (27, 85, 82, 68, '24072442bded')]
+  h_ledger: (base_dim,Norm(L),Norm(S),Norm(disc),source_sha12)=[(1, 12, 72, 91, 'bf292895feda'), (3, 53, 5, 60, '761594faf412'), (9, 22, 1, 79, '5d09fd4ad38b')]
+p=107: R5(q)=88; explicit-H flat norm=20; wrong-H-normalization control=96
+  (L,N(L),N^2(L),N^3(L),N^4(L))=(38, 45, 28, 3, 17)
+  l_ledger: (base_dim,Norm(L),Norm(S),Norm(disc),source_sha12)=[(1, 38, 86, 14, 'c3389340279f'), (3, 45, 105, 34, '8cf50b0b689e'), (9, 28, 31, 100, 'd13b5907e38b'), (27, 3, 95, 82, '79fdf431b788')]
+  h_ledger: (base_dim,Norm(L),Norm(S),Norm(disc),source_sha12)=[(1, 38, 86, 14, 'c3389340279f'), (3, 45, 105, 34, '8cf50b0b689e'), (9, 28, 31, 100, 'd13b5907e38b')]
+semantic sha256=e4610844c8bd506211662c792f27d5bac2529f9d62d63762aaf39e498c4b8707
+finite-sheet verdict: R5(2,5/6,-7/8) != 0 over Q
+consequence: v_L(N(R5))=-1699 and L^1699*N(R5) is polynomial and coprime to L
+next exposed face: in_max-lambda(L^1699*N(R5))=C*x^10663*(3*x*z-2*y)^3867, C!=0
+scope: fixed map/old-L gate only; renewal, fifth image, degree 243, and general JC remain open
+all exact checks passed

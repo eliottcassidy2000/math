@@ -23,6 +23,13 @@ status: >
   gamma*(b) = log(phi)/log((b+phi)/phi); b = 2 is special only because
   (2+phi)/phi = sqrt 5 exactly, so the golden constant is NOT an artifact of
   the binary alphabet and is NOT evidence of Fibonacci substructure.
+  AUDIT UPGRADES 2026-08-03 (boxeph audit, same file as THM-3009 note):
+  tangency collapse re-derived independently (residuals identically 0);
+  inner sigma-concavity PROVED symbolically (d2psi/dsigma2 < 0) and
+  dpsi/dgamma = -(1+sigma)log(1-rho) > 0 PROVED, making the FLOOR direction
+  scan-free; sigma* interiority upgraded to an exact certificate via the
+  rational bracket of gamma*. The Laplace/Stirling rate passage remains the
+  single assumed analytic step (self-declared below).
 source: klein-S428
 depends_on:
   - THM-3002

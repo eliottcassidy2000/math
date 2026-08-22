@@ -5,7 +5,8 @@
 HYP-2389 / OPEN-Q-058 (the tournament Barba problem, mac-mini-2026-06-10-S2).
 **Companions:** THM-472 (ceiling — proves the upper context), THM-468 (d(T) invariant),
 THM-447/448 (skew-Sylvester doubling / DRT Mersenne tower), HYP-2405 (even sibling).
-**External anchors:** Tao optimization-constants repo C23a (smallest open Hadamard order 668);
+**External anchors:** Tao optimization-constants repo C23a (historically the smallest open
+Hadamard order was 668; THM-3393 now supplies an explicit certificate);
 the n ≡ 1 mod 4 problem is absent from the literature (Cameron Problem 104 thread, Armario's
 skew papers, and Klanderman–Montee–Piotrowski–Rice–Shader LAA 2024 all treat det(S), which
 vanishes for odd n, not det(I+S); OEIS negative for 1,2,4,16,32,160,512,…).

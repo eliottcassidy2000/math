@@ -1,0 +1,8 @@
+THM-3167 independent branch and regular-representation audit
+companion_CRT_values=(r^3*t,-3u*y^2/r)
+direct_forward_Jacobians=(r^-3,r); total_product=1
+CRT_q_branch_scales=(r^3,r^-1) relative_to_f_T
+regular_representation_shifted_norm=(r^4-1)^3
+finite_jet_checks=32 N_range=1..32
+polynomial_constant_field_hostile_direct_Jac=4u;inverse_det=1/(4u)
+independent_audit=PASS

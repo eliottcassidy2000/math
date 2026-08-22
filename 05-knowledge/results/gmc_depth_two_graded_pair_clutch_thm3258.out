@@ -1,0 +1,15 @@
+THM-3258 DEPTH-TWO GRADED PAIR CLUTCH EXACT AUDIT
+dependency_hash_checks=6
+assert_nodes=0,float_literals=0
+direct_exact_states_reconstructed=67
+reset_link_states=11,depth_two_states=55,target_counts=(3*1,52*2)
+first_link_surviving_pairs=((2, 7), (3, 9), (7, 14), (11, 17), (11, 21), (12, 13), (12, 19), (14, 19))
+exact_first_link_gap_bank=(((2, 7), (Fraction(221630501005, 672431853909), Fraction(1, 1))), ((3, 9), (Fraction(1, 8), Fraction(5576212, 26946933))), ((7, 14), (Fraction(1, 55), Fraction(21657540264, 221630501005))), ((11, 17), (Fraction(554766960, 270430481), Fraction(28, 9))), ((11, 21), (Fraction(453787039, 270430481), Fraction(3, 1))), ((12, 13), (Fraction(1420574831, 3464404479), None)), ((12, 19), (Fraction(38075529020, 3464404479), None)), ((14, 19), (Fraction(351232551587, 161618731130), Fraction(133113695, 47074217))))
+raw_target_envelope_cells=(14, 15, 14, 15, 15, 18, 14, 4),total=109
+compressed_affine_Farkas_circuits=(3,2,2,2,2,1,1,1),total=14
+circuit_support_histogram=((3,2),(4,12)),all_weights_positive,all_constants_negative
+circuit_certificate_sha256=6e0cbf932f99cea022dcf9fa81bbaa2adec0f6251e27b5a72fcbd32aca6a9263
+simple_pair_(12,13)_weights=(4452809708057982010202880, 4277107928796831, 371631008),constant=-9167765286556241877685416
+all_31_covering_pairs_reset_distance_graded_positive_gauge=IMPOSSIBLE_by_depth<=2
+scope=support_(1,3)_bank_I2_lawful_rows_Q_monotone_edges_two-row_grading_only
+all_exact_checks=PASS

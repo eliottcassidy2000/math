@@ -1,0 +1,22 @@
+UNIT-CYCLE STRONG-DEPHASING GIRTH CONTROL
+convention=K=-i[H,-], H_(g-1,0)=z, H_(0,g-1)=z^-1
+raw_word=A_m=B D^(m-2) C
+C3: lower_words_phase_blind=True; parity=odd:sine/oriented/skew; rank_base=2
+C3: base_matrix=[[0, -3, 3], [3, 0, -3], [-3, 3, 0]]
+C3: wilson_factor=-I*(z - 1/z)
+C4: lower_words_phase_blind=True; parity=even:cosine/reciprocal/symmetric; rank_base=3
+C4: base_matrix=[[2, -4, 6, -4], [-4, 2, -4, 6], [6, -4, 2, -4], [-4, 6, -4, 2]]
+C4: wilson_factor=z - 2 + 1/z
+C5: lower_words_phase_blind=True; parity=odd:sine/oriented/skew; rank_base=4
+C5: base_matrix=[[0, -5, 10, -10, 5], [5, 0, -5, 10, -10], [-10, 5, 0, -5, 10], [10, -10, 5, 0, -5], [-5, 10, -10, 5, 0]]
+C5: wilson_factor=I*(z - 1/z)
+C6: lower_words_phase_blind=True; parity=even:cosine/reciprocal/symmetric; rank_base=5
+C6: base_matrix=[[2, -6, 15, -20, 15, -6], [-6, 2, -6, 15, -20, 15], [15, -6, 2, -6, 15, -20], [-20, 15, -6, 2, -6, 15], [15, -20, 15, -6, 2, -6], [-6, 15, -20, 15, -6, 2]]
+C6: wilson_factor=-z + 2 - 1/z
+weighted_C4_delta=R*(z+z^-1-2)*(I-S)^4; R=r0*r1*r2*r3
+K2,2_readout=Delta_A4_00=4*(Re(ad*conj(bc))-|abcd|)
+det_reconstruction=|ad|^2+|bc|^2-2|abcd|-Delta_A4_00/2
+P6_tree_control=phase_blind_for_A2_through_A8
+C5_plus_chord_0-2=marked_phase_blind_at_A3_nonzero_at_A4
+VERDICT=formal Wilson data first occurs at raw length g on chordless C_g
+SLOW_ORDER=Gamma^(-(g-2)) after leading-rate time normalization

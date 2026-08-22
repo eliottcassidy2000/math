@@ -1,0 +1,20 @@
+FC3 THM-3244 two-row decision-policy compiler beach audit
+dependency_hash_checks=2
+assert_nodes=0,float_literals=0
+exclusive_classes=(row2_only=304,row10_only=103),primitive_thresholds=16
+axis_tree_depth_profile=(0:IMPOSSIBLE,1:IMPOSSIBLE,2:IMPOSSIBLE,3:IMPOSSIBLE,4:IMPOSSIBLE,5:15_leaves)
+axis_tree_global_minimum_leaves=15
+axis_tree=(coord,threshold,true,false)=(8, 0, (7, 0, (3, 0, 10, (6, 0, (4, 1, 10, 2), (5, 0, 10, 2))), 2), (5, 1, (1, 1, (2, 0, (4, 1, 2, 10), 10), 10), (2, 1, (4, 1, 10, 2), (2, 2, (3, 1, 2, 10), 2))))
+axis_tree_sha256=ffc3b544a9b2afabc480bfd76862a7176aa9f23bb44618367b351d425b76b8a7
+full_bank_assignment=(row2=1955,row10=2363),unavailable_choices=0
+canonical_least_coordinate_routes=4318/4318,exact_Q_distance=PASS
+canonical_route_length_histogram=((1, 11), (2, 55), (3, 169), (4, 365), (5, 598), (6, 775), (7, 810), (8, 685), (9, 467), (10, 250), (11, 101), (12, 28), (13, 4))
+canonical_chart_switch_histogram=((0, 553), (1, 3158), (2, 387), (3, 220))
+continuation_classes=(chart=296,unsigned_coordinate=4002,chart_plus_coordinate=4318,signed_edit=4319)
+unique_chart_coordinate_collision=((2, 3, 3), (1, 1, 2, 3, 3))
+policy_independent_parikh_lower_bounds=(unsigned_coordinate=1536,signed_edit=4319)
+distance_enumerator=(1+2z+z^2+z^3)(1+z+z^2+z^3)(1+z+z^2)(1+2z)^2(1+z)^3-z^8
+distance_coefficients=(1, 11, 55, 169, 365, 598, 775, 810, 685, 467, 250, 101, 28, 4)
+canonical_trace_sha256=af21eac7596d12079952136ea13c708209045b46cc00679a8d879ec4c5e8b93d
+typed_scope=optimal_axis_threshold_chart_classifier; signed operation trace remains injective; no FC3 closure
+all_exact_checks=PASS

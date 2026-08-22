@@ -1,0 +1,13 @@
+THM-3372 MULTIAFFINE DELETION TRANSFORM AND SKEW CURRENT
+labelled_tournaments=1099;multiaffine_OCF=PASS;taylor_deletion_cells=6504
+variance_cells=1099;zero_exactly_transitive=153;sharp_C3_delta=18
+order4_D_types=y4:24,y4+2y:16,y4+4y:24;middle_type_xi_sign_split=8+8
+xi_nonzero_labelled_orders_1_to_5=0,0,0,16,320
+D_xi_cross_iso_collision_orders_1_to_5=0,0,0,0,1
+ordered_join_pair_cells=2553;D_product=PASS;xi_law=PASS
+sharp_hostile_D=(0, 2, 0, 0, 1);forward_xi=(((0, 3), 6), ((3, 0), -6));reverse=-forward
+loss_hostile_masks=8,10;common_D=(2, 0, 6, 0, 0, 1);common_xi=0;marked_deletion_types_differ=((0, 0, 0, 0, 1), (0, 0, 0, 0, 1), (0, 4, 0, 0, 1), (0, 4, 0, 0, 1), (0, 4, 0, 0, 1))!=((0, 0, 0, 0, 1), (0, 2, 0, 0, 1), (0, 2, 0, 0, 1), (0, 4, 0, 0, 1), (0, 4, 0, 0, 1))
+semantic_sha256=c66025a0fa9e9e36bc8f9e2576f95998ff6c3e6035eaa871f97c8997dbea7688
+truth_gates=integer_HP_DP+literal_multiaffine_OCF+all_derivatives
+scope=orders_1_to_5;ordered_factor_total_at_most_6;no_injectivity_claim
+all_exact_controls=PASS

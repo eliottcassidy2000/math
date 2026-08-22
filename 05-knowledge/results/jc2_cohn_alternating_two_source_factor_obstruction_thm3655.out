@@ -1,0 +1,11 @@
+== THM-3655 Cohn alternating two-source-factor obstruction ==
+determinants=(C:1,plus_minus:1,minus_plus:1)
+orders=('C E_+(w) E_-(u)', 'C E_-(u) E_+(w)')
+formula_digests={'plus_minus': '85a8245359489a00d9851965ca05ed417de797e0991fd7848a92f261897a8473', 'minus_plus': 'c2fc9195f3c645ae343230060fdf247bfe7830bbd49e226107143a3e2a476f63'}
+boundary_gates=(A_congruence,bottom_y_jets,top_x_jets,D_congruence)=PASS
+hostile_bank=12;pairs_per_order=144;zero_row_counts={'plus_minus': [0, 0], 'minus_plus': [0, 0]}
+proof_gates=('pm_top:y-leading log-derivative contradiction;w=0 gives x*u_y=1', 'pm_bottom:x-leading product derivative contradiction;u=0 gives y=2y mod y^2', 'mp_top:y-leading product derivative contradiction;w=0 gives x*u_y=1', 'mp_bottom:x-leading log-derivative contradiction;u=0 gives y^2*w_x=y')
+semantic_sha256=d1f05c8841156820f7ab6573e16315995dfbd197dc2e02e403f27179dc7298e7
+CHECKS=303
+status=SYMBOLIC-EXACT COMPANION;UNIVERSAL DEGREE PROOF IN THEOREM
+scope=no longer words/all non-elementary classes/Keller pair/JC2

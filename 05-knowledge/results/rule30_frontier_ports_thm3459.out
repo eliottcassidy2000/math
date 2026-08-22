@@ -1,0 +1,12 @@
+THM-3459 EXACT AUDIT
+truth_table=00011110
+trace_horizons=0..8 uniform_fibre=2^T codec_roundtrip=0..6
+open_blocks=width1..10 fibre4; iterates=width1..5 depth1..3 fibre4^depth
+single_seed_hostiles: rule90=1,0^infinity rule60=rule150=1^infinity
+mask_families_ground3_owners1..6=299592
+q6_partition_masks=({0,3},{1,4},{2,5})
+truth_lift_factorial_moments_0..8=[1, 0, 6, 78, 17520, 4101240, 1820865600, 1258990326720, 1299375422755200]
+anf_lift_factorial_moments_0..10=[1, 4, 26, 270, 4416, 109560, 3908160, 190330560, 12135070080, 980556917760, 97894823443200]
+anf_normalized_u_0..10=[1, 4, 13, 45, 184, 913, 5428, 37764, 300969, 2702152, 26977189]
+periodic_all_one_preimages_n1..12={1: 0, 2: 0, 3: 3, 4: 0, 5: 0, 6: 3, 7: 0, 8: 0, 9: 3, 10: 0, 11: 0, 12: 3}
+ALL CHECKS PASSED

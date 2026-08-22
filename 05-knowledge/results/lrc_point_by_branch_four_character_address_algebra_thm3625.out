@@ -1,0 +1,15 @@
+== THM-3625 point-by-branch four-character address algebra ==
+field=(p=755373809845391722745761,branches=13,points=6,zeta13=266737884585332483769981)
+parent_sha256_lf={'theorem': '652b9628a256de9d4970294bc6185e8503464d94e34666ca0b6a971d7b367ec5', 'script': '25a37a623f1d955f2e0b6723e0ab103bac32c9ccfabc1d0d9146123be0f6b7c7', 'output': '493cf285d16881fbb7018724b47f44dbcbc183b984aa7602c30043628d0a5f40'}
+address=(ranks=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6),span=4,commutators=((0, 169),),product_span=4)
+fourier=(ranks=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6),span=4)
+symmetry=(all_symmetric=True,reversal_covariance=((12, 12, False), (12, 12, True)))
+algebra=(generator=('address', 3),minimal_coefficients_mod_p=(1, 533256819274739474231000, 157450021680728426647686, 613479327941808322893771, 64677205047035279561501),eigenvalues=(189500145028362740071369, 380076640875614845827929, 565142856996729319560976, 598144967360728788546009))
+module=(multiplicities=(2, 1, 1, 2),K_intersections=(1, 0, 0, 1),PQ_intersections=(2, 0, 0, 2))
+flags=(K_invariant=True,PQ_invariant=True,PQ=E0+E3,K_not_kernel_or_image=True)
+digests=(address=20afa4a3d65e92f7c343710f7e1b9ac163c55fa93ee3d4aa54fde76b347645e0,fourier=d66be14669f799d2ff227f32ad804c62e002e9faee7e74cb23d53811e8c507e6,K=065ca6f0d61df266a5e55aab3d50e03f35ddc37a156373eabf6ec6c04cc8015f,PQ=8d2da40cf11f96dd7edfb042ac9d7c87b20eed8596cc3b3de673979e43020936,fourier_power=567b9d289ac73e4da5b9cba6cfbd7001ecfd89d744726c238a00dcc0461162af)
+semantic_sha256=89d69b3eb2dff06f7ebc236d90be73555c397b39542a155e79786370884c06df
+script_sha256_lf=b32b985e2817f135dcc6d19f8f675d3d174e7f1b2a81bd14848d5424fabaf6ad
+CHECKS=39
+scope=static pinned finite field; no chronology/current/row/characteristic-zero/LRC14
+RESULT=PASS

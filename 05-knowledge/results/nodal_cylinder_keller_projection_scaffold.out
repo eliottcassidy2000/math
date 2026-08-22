@@ -1,0 +1,19 @@
+NODAL-CYLINDER KELLER-PROJECTION SCAFFOLD
+source_packet=(u,X=t^2-1,Y=t(t^2-1))
+image_relation=Y^2-X^2(X+1)
+collision=(u,1)~(u,-1); differential_rank_two=True
+normal_multiplier=X; multiplier_in_image_Jacobian_ideal=True
+descended_unit_minor_certificate=True
+closed_ambient_two_form_certificate=True
+displayed_closed_certificate_polynomial_potential_realizable=False
+degree108_u_support_by_target_cap={35: [], 36: [0], 37: [0, 1], 38: [0, 1, 2, 3]}
+first_face_admissible_cap=38
+first_exact_resonant_one_scale_cap=38
+reduced_source_degree_pair=(72,108)
+leading_forms=(t^35(t+lambda*u))^2,(t^35(t+lambda*u))^3
+collision_first_jet_repaired=True
+boundary_line_restriction_noninjective=True
+four_point_fibre=((u,t)=(+/-1,+/-1))->(0,0)
+displayed_scaffold_has_injective_horizontal_line=True
+displayed_scaffold_Keller=False
+VERDICT=typed open correction cell, not a counterexample

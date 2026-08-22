@@ -1,0 +1,19 @@
+THM-3467 ADAPTIVE DIVISOR EXTENSION d=2502 DUAL EXACT AUDIT
+primary=factorial_seven_exit_first_flag_2400_thm3201.py sha256=1cf067eb3cc8da29e51ee8f560f4100fb66a4b9684a2da8b1f7ef14d380e4171
+independent=factorial_seven_exit_first_flag_2400_independent_audit_thm3201.py sha256=afe3ec56c7efe99ff4a09c1af856b4e144312d48ec45e729d063a5fd83b0f0b0
+universe=single seven-exit residual d=2502; rows=(F,G,E); places=(2,3,5,41,61)
+factorization_invoice=((2502, ((2, 1), (3, 2), (139, 1))), (2501, ((41, 1), (61, 1))), (2500, ((2, 2), (5, 4))), (2499, ((3, 1), (7, 2), (17, 1))), (2498, ((2, 1), (1249, 1))), (2497, ((11, 1), (227, 1))), (2496, ((2, 6), (3, 1), (13, 1))))
+degrees=(2500, 2501, 2499) dual_polynomials_equal=True
+p41_raw_profiles=((0, ((0, 1, 20), (2, 41, 779), (84, 1681, 1681), (1, 20, 20))), (0, ((2, 41, 820), (84, 1681, 1681))), (0, ((1, 21, 21), (2, 41, 779), (84, 1681, 1681), (1, 18, 18))))
+p61_raw_profiles=((0, ((0, 1, 30), (2, 61, 1830), (11, 320, 640))), (0, ((2, 61, 1830), (1, 30, 30), (22, 641, 641))), (0, ((1, 31, 31), (2, 61, 1830), (21, 610, 610), (1, 28, 28))))
+p41_common_blocks=((2, 41, 779, 41), (84, 1681, 1681, 1681))
+p61_common_blocks=((2, 61, 1830, 61),)
+p41_positive_degrees=(41, 82, 123, 164, 205, 246, 287, 328, 369, 410, 451, 492, 533, 574, 615, 656, 697, 738, 779, 1681, 1722, 1763, 1804, 1845, 1886, 1927, 1968, 2009, 2050, 2091, 2132, 2173, 2214, 2255, 2296, 2337, 2378, 2419, 2460)
+p61_positive_degrees=(61, 122, 183, 244, 305, 366, 427, 488, 549, 610, 671, 732, 793, 854, 915, 976, 1037, 1098, 1159, 1220, 1281, 1342, 1403, 1464, 1525, 1586, 1647, 1708, 1769, 1830)
+hostile_reset_2_3_trace_sizes=(30,30,1) survivor=(61,)
+adaptive_divisor_trace_sizes=(30,0) survivor=()
+fixed_2_3_5_counts=((2, 2499), (3, 223), (5, 0))
+controls=dual raw profiles/local degrees; planted(v+1),planted(v) retain degree 1
+semantic_sha256=c767afd684dbf63910db607a742c530ed9f03a8d61c97b6e2e4dd5cb22bddf98
+consequence=with THM-3201 and d=2501, every exact quadratic {0,1,2} window 1<=r<=2500 has a nonzero moment
+STATUS=PASS

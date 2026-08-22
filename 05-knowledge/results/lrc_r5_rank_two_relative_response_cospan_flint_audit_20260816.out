@@ -1,0 +1,12 @@
+== independent FLINT audit: r5 rank-two relative response cospan ==
+engine=python-flint.fmpz_mod_mat;certificate_sha256=472925c638de7ac90b1a7880184766f2e8acec0f8291e2c46cf747b37cd46712;prime=755373809845391722745761
+parent_block_ranks=(11, 11, 12, 12, 11, 11);constant_mode_quotient_ranks=(0, 0, 0, 0, 0, 0);D_seams=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+middle_support=26;D_S_E_direct_sum=(5, 2, 3, 5)
+dual_contraction=(rank=2,source_union_rank=3,intersection_dimensions=(1, 1))
+minimal_endpoint_sidecar=(r0=6,source_plus_line_rank=3)
+marked_coordinates=((194124906132980974193833, 56688580149000751581631, 404323792951742926212914), (56688580149000751581631, 194124906132980974193833, 404323792951742926212914));det=58994564309246164003190
+twisted_boundary_rank=1;twisted_H1_dimension=1;arc_stable_middle_rank=13;arc_stable_middle_dual=0
+semantic_sha256=f1dfa230027e7fd8f48c7eb7bac2034d0188ee61a4ce6f24d2579860cf532020
+verdict=ACCEPT exact digit-cycle/rank/intersection/transition/twisted-H1 claims by independent algebra engine
+scope=finite exact good-reduction matrix audit only;no physical current,no D5 flux,no LRC14
+PASS

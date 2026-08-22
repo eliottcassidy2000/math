@@ -1,0 +1,10 @@
+RULE 30 TRANSVERSE-JET BARRIER EXACT AUDIT
+depth_four_source_period=01000111 support_residues=[1,5,6,7]_mod_8
+power_family_m_M_t_low_slack=[(5, 32, 50, 1), (6, 64, 90, 9), (7, 128, 170, 25), (8, 256, 330, 57), (9, 512, 650, 121), (10, 1024, 1290, 249), (11, 2048, 2570, 505)]
+first_live_jet_orders=[32, 64, 128, 256, 512, 1024, 2048]
+pascal_lucas_moduli=[2, 4, 8, 16, 32, 64, 128, 256] matrix_inverse=exact tensor_factorization=exact
+ballistic_ramification_packets=645 ord_slack=2*ord_distance even_odd_atlas=exact
+symbolic_kernel=P=X^2+(1+U)X+U^2; P(U,W_(1+epsilon))=epsilon*U*W+epsilon^2*W^2
+boundary_source=(X*P)/(1+X^2) exact
+scope=FINITE-EXACT audit of universal proofs; no Rule 30 prize, general-time lower bound, or fixed-seed density conclusion
+ALL CHECKS PASSED

@@ -1,0 +1,7 @@
+C4 STRONG-DEPHASING FLUX CONTROL
+convention=K=-i[H,-], unit C4 hoppings, Wilson phase z on edge 3->0
+A3_zero=True
+delta=z+z^-1-2=2(cos(Phi)-1)
+phase_matrix=[[2, -4, 6, -4], [-4, 2, -4, 6], [6, -4, 2, -4], [-4, 6, -4, 2]]
+row_sums=[0, 0, 0, 0]
+VERDICT=phase first appears in the fourth Schur-walk coefficient

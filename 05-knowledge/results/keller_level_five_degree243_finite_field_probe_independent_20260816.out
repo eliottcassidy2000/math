@@ -1,0 +1,12 @@
+== fixed Keller level-five degree-243 finite-field probe ==
+support_sha256=4039b4081c9f0d95b197d2e3a7581c66433382e53dac3b95fa2526c3a4ba4f2e
+prime=251; target=(1, 1, 1); tower_dimensions=(3, 9, 27, 81)
+four inverse graphs: PASS; all inverse-chart denominators and cubic derivatives are units
+fifth_core_norm=degree 243; derivative_gcd_degree=0
+flat_81x81_determinant_checks=((0, 179), (244, 143), (249, 220))
+hostiles=(243_node_interpolation_fails_at_243=True,constant_sign_zero=72)
+ascending_coefficient_sha256=912f32ec0b9b375d9db2ba71d7fdf224456c86862871ae0f8f92bac5038f00ab
+semantic_sha256=1397fb3a3173e8dfbe867f4fe4c2d527ef33da3c94fb60fcb227f8c60b9d15b7
+finite-field verdict: full degree 243 and squarefree
+scope: generic fifth x-eliminant degree/separability witness only; no image prime, irreducibility, R5 identity, all-level, or general JC claim
+all exact checks passed

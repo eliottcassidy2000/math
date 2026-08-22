@@ -1,0 +1,18 @@
+Q15 FIRST EFFECTIVE THREE-PHASE MODE EXACT PROBE
+source_sha256_lf=751aff937e422a6d09e7e89677ded2f40ce7c9b72c12191078d691cbc4316c33
+dependency_sha256_lf=(('q8-q14-script', 'e4afeeef7ea6dc2b9b64d3085390b0b6cc53a461dd9bde817c473688dca136f3'), ('q8-q14-output', '2fdede2a04ad2b9ccdfbae8b597ecbf82ad71274fe6ba0c221abd7635aed140f'))
+status=FINITE-EXACT q15 rank<=6 boundary model plus analytic private-sheet hostile;unnumbered_and_not_canon
+vertices=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14);cover_counts_rank1_to_6=(0, 0, 0, 0, 0, 157)
+minimal_edges_through_rank6=157;rank_le6_profile=((6,157),);edge_sha256=cc2eba81d46e6ae4e2f3705fc74b9705527200a5d89b393c8aabcff6f9d1fc6d
+gcd_profile=(((3, 1, 1, 1, 1, 1), 1), ((5, 3, 1, 1, 1, 1), 156))
+profile_generated_by_rank_le6_edges=(1, 14, 91, 364, 1001, 2002, 2846, 2784, 1814, 748, 176, 18, 0, 0, 0)
+triphase_required=155;domino_sufficient=((1, 6, 7, 10, 11, 13), (1, 7, 10, 11, 12, 13))
+canonical_edge=(1, 2, 3, 4, 5, 7);ordered=(5, 3, 1, 2, 4, 7);blocks=((0, 3, 6, 9, 12), (0, 5, 10), (0, 1, 14), (0, 7, 8), (0, 4, 11), (0, 2, 13))
+canonical_mode_profile=(1,1,3,3,3,3);all_centres_h=0;all_15_cochain_gaps=0
+crt_partition=ker(5)Uker(3)=zero_divisors;four_triphases_minus_zero=unit_sign_pairs
+unit_sign_quotient=(Z/15Z)^x/{+-1}=(1,2,4,7);times2_cycle=(1,2,4,7,1)
+hostile=each_coprime_triphase_has_two_private_unit_sheets;every_domino_subblock_loses_one;no_size<=2_mode_cover
+boundary=q<=14_has_only_singleton_or_domino_witness_modes;q15_first_local_and_rank6_effective_triphase
+scope=q15_rank_le6_boundary;q15_has_no_rank<=5_cover_and_no_q_divisible_literal_speed;higher_rank_physical_clutter_not_enumerated;not_a_T3387_body_row;no_LRC14_consequence
+semantic_sha256=bae0a83a2ca7f19906309b1bab951bd9e4dac241e3a3103726da3bb8099e1eb8
+verdict=PASS

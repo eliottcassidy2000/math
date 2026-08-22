@@ -1,0 +1,9 @@
+LRC14 REFLECTED-RESIDUE PHASE/STABILITY AUDIT
+target 186636088362/58865718786875
+hostile {'L': 168, 'j': 90, 'canonical': (492, 836), 'perturbed': (491, 836), 'canonical_overlap': Fraction(6, 209), 'perturbed_overlap': Fraction(0, 1), 'phase_jump': Fraction(13, 28), 'canonical_single': Fraction(6, 41), 'perturbed_single': Fraction(59, 491), 'second_single': Fraction(30, 209)}
+positive {'body': (1, 2, 3, 8, 9, 14), 'L': 7056, 'j': 3780, 'levels': (3, 3, 3, 5, 5, 5), 'tree': ((1, 4), (1, 5), (0, 5), (2, 3), (0, 3)), 'margin': Fraction(71440713312252560278, 527394888495258135905), 'perturbed_vertex': 0, 'h': 28, 'delta': 0, 'eta': Fraction(1, 252), 'sigma': Fraction(67424, 16616095), 'sigma_bound': Fraction(28223, 1333521), 'exact_stability_floor': Fraction(2041646828324165638790, 16560199498751105467417), 'coarse_stability_floor': Fraction(113864784228062404699, 1582184665485774407715), 'actual_moved_margin': Fraction(1585980049263141094, 11735389638648206265)}
+map=B_(z+h)=phi_h(B_z), phi_h(u)=(z*u-Delta)/(z+h), Delta=h*j-m*L
+L1_bound=sigma_i<=min(1,4*eta_i*(1+L/z_i)), eta_i=(abs(Delta_i)+abs(h_i))/L
+tree_bound=M_prime>=M-sum_i(deg_T(i)+1)*sigma_i
+conclusion=arbitrary-residue pair floor REFUTED; phase-aware frozen-tree chamber PROVED
+status=PASS

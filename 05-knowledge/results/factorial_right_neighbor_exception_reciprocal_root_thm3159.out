@@ -1,0 +1,11 @@
+q=249727 prime=1
+degrees=U:249726,P:249727,Pstar:249727
+zero_faces_F2_F3=(25306, 112210)
+repeated_faces_F2_F3=(191906, 38381)
+midpoint_A3_A2=(156079, 124864)
+newton_A3=0,2/249722
+newton_A2=0,2/249724
+reciprocal_gcd=degree:0,bezout:1
+reciprocal_chart_P_0_1_half=(1, 199114, 230661)
+small_transform_controls=5:0,7:0,11:0,13:0,17:0,19:0,23:0,29:0,31:0,37:0,41:0,43:0,47:0
+THM3159_CHECKS_PASSED

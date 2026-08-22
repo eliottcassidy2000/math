@@ -21,6 +21,33 @@ output: 05-knowledge/results/amm12592_artanh_certificate_decode_deathstar.out
 
 # HYP-9061 -- the minimal C in the critical-run deadline T(n) <= Cn + D
 
+> **MAJOR UPDATE 2026-08-03 (boxeph) — the general-class golden floor is
+> DEMOTED; the bracket is re-opened from below.** A hostile audit
+> (MISTAKE-361; `05-knowledge/results/amm12592-golden-floor-audit-boxeph.md`)
+> refutes THM-3024's promotion `C*_general = log_5(5 phi^2)` *within its own
+> transportation model*: with forward routing at preserved absolute degree
+> and an unbounded window, every tail cut with a deeper shell available is
+> satisfied for ANY `gamma > 0` (exact, independently confirmed twice), so
+> the model yields no general floor at all and the reported binding cuts
+> were truncation-edge artifacts. Current honest state:
+> `C = log_5(5 phi^2)` attained for ALL n <= 255 exactly and for all
+> n <= 2047 with additive slack <= 16 (THM-3029/3302/3329/3330; exact slack
+> thresholds D0*(R) = 0,1,5,15,38,89,192,[401..416] for R = 128..16384 —
+> LINEAR growth for the plain rule, eps_inf ~ 0.025, so the golden route
+> needs the bulk alternation rule; Y-box/Lucas-diagonal structure proved);
+> balanced-block-class
+> floor `C*_block > 1.5970` exact (THM-3009, audit-hardened, ladder to
+> m = 4096, certified rational bracket
+> `115939/193882 < gamma* < 105183/175895`); GENERAL-class floor OPEN —
+> even `C* = 3/2` is not currently excluded for non-block rules. The repair
+> needs a deadline-bounded routing window derived from the extractor axioms:
+> the pathwise deadline is exactly what the transportation relaxation
+> forgot. Note the symmetry of failure: the construction side's obstruction
+> is combinatorial redistribution (THM-3026), the floor side's gap is
+> unbounded redistribution — the SAME missing ingredient seen from both
+> sides, cf. the integrality-gap framing in
+> `05-knowledge/results/amm12592-epoch-closure-nonnegative-transportation-form-boxeph.md`.
+
 > **MAJOR UPDATE 2026-07-31 (opus, THM-3007/3006) — "every known rule has
 > `C=2`" is OBSOLETE.** THM-3007: a composition-balanced block `[N,N+l)`
 > exists iff `N` and `N+l` are both powers of two, so the dyadic shell

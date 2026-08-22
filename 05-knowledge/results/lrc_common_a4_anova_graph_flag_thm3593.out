@@ -1,0 +1,15 @@
+== THM-3593 LRC common A4 ANOVA graph flag ==
+field=(prime=755373809845391722745761,state=4,relation=13,ambient=52)
+parent_sha256_lf=dad78dd317a25958f42b3df44f395d4da344330b07ea4f5041a7e838e46dd0e8
+component_ranks={'raw': 4, 'constant': 1, 'state': 2, 'relation': 4, 'interaction': 4, 'additive': 4, 'state_side': 2, 'relation_side': 4}
+component_digests={'raw': '1d9293d05fa3551b785a1537e78bc8be585fcc43dbb5172036c9b32546ca8560', 'constant': 'a29ec8f53318e8d984e6f2ab4d7bfe6d26c6a4523dea113576347d350cf4b9f4', 'state': '8ade1771d2e173068be16e186ea588bea3afbeccdb37b6e15da0133bf41f21c8', 'relation': 'c92171956f95eeb8cbfd53bad43299c55b3278270a33bea4b3baf26f236a3412', 'interaction': '0cfa2e3330f92ab59fd183e5664715c490a702df2ad74491a8180793cae4a21e', 'additive': '3e7a63217755ab17e3dc5cfbbb9d8cc6e4efdf721cecd532814574764777152a', 'state_side': '2d82d5adbb3c5a71035ab622e36e51e2a6a701a941a9f6f31ca308b8de13d17c', 'relation_side': '0c9bccb7f9a354cf316d7ea8be0bf12e6d7007ce25ac69926f95c1527a6ea0c3'}
+stack_ranks={'raw_additive': 8, 'raw_interaction': 8, 'additive_interaction': 8, 'additive_pure_state': 7, 'additive_state_only': 8, 'additive_pure_relation': 14, 'additive_relation_only': 15}
+intersection_dimensions={'raw_additive': 0, 'raw_interaction': 0, 'additive_pure_state': 0, 'additive_state_only': 0, 'additive_pure_relation': 2, 'additive_relation_only': 2}
+graph_stack_equal=True;graph_stack_sha256=9f4ec33d31337b0100a55871f6284443c6e5cfc0f5133a1493f807d563670821
+flag=raw4_graph(additive4,interaction4);additive4_graph(relation4,state_correction2)
+pure_relation_kernel_dimension=2;pure_state_intersection_dimension=0
+semantic_sha256=44d2d062a447eb68fc58b33eee8d23fb8092e1829534fb7c4f9e9f082e037f76
+script_sha256_lf=3ee8486833d539599a4c8add304172b72929c69f3859e9cc1ce22e3018199516
+status=FINITE-EXACT+VERIFIED-EXACT over the pinned prime
+scope=static ANOVA flag;not chronology/current/entry/characteristic-zero/LRC14
+PASS

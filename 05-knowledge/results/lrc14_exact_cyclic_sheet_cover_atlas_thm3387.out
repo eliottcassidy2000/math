@@ -1,0 +1,25 @@
+THM-3387 EXACT CYCLIC SHEET-COVER ATLAS
+source_sha256_lf=9b0b46874a569d674b937b37cf74a8985fca2b77e3e480a75fb4924ea602f25a
+dependency_sha256_lf=(('THM-3385', 'f22f36c898ffd508e65210ccae720ce185c9bd5c6bff606d7caa018c1caa8db7'), ('THM-3385-script', '8d3add2104ca91e89017ae643f573c8c5f6b45a4fdfecd9d65c16f48fd51b356'), ('THM-3385-output', '5b7349e13e36e8424346aa2c50f26f760f766a161f046ca09ad7bcd6e4d665b4'), ('THM-3366-allk-audit', '31c096e528a148cd717f4d9c7485c93cdec6175b33b83bae9d2be627249d743c'), ('THM-3366-S172-output', '94b0f25f0c61bbfc3d8acf6abfbda5856475c69f90aed24ba2de8738cc7a59bf'))
+status=FINITE-EXACT literal atlas plus PROVED pointwise/grid criteria and q2 gcd graph;independently_hostile_audited_after_MISTAKE-382
+pointwise_iff=every_full_transverse_sheet_cover_lies_inside_descended_core_danger
+universal_grid_iff=B_q(U)\A_C_is_subset_of_Gamma_D
+literal_endpoint_only_exceptions=0;endpoint_hostile=((4, 5, 8, 9, 10, 18), 2, (2, 4, 5, 9), (5, 9), 5040, 2520, (Fraction(3, 14), Fraction(11, 14)))
+candidate_body_degree_rows=23569;exact_rows=15393;failed_rows=8176
+global_transverse_rows=15381;core_rescued_rows=12;capacity_subclass=6420
+q_histogram=((2, 252), (3, 588), (4, 619), (5, 1619), (6, 1478), (7, 2079), (8, 1152), (9, 1205), (10, 1269), (11, 1287), (12, 1271), (13, 1287), (14, 1287))
+structural_rows_k0_to_k6=(15246, 15393, 15393, 15393, 2735, 1104, 291)
+structural_occurrences_k0_to_k6=(93732978513930, 3659255462265, 133947094813, 4445930697, 15952450, 154344, 291)
+s172_exact_identification=size_histogram:((1, 12658), (2, 2029), (3, 409), (4, 150), (5, 147));occurrence_histogram:((1, 3427329787389), (2, 182339009252), (3, 35772924216), (4, 1643011511), (5, 12170729897))
+q2_pair_edge=left+right>7*gcd(left,right);relation=symmetric_not_tournament
+q2_pair_checks=4950;literal_independent_sets=((1,), (3,), (5,), (7,), (9,), (11,), (13,), (1, 3), (1, 5), (3, 9))
+q2_noncover_components=r*3^i*5^j,gcd(r,15)=1;harmonic_mass=15/(8r);checks=4445
+q2_depth_profiles=vertices:d+1,words:2^d,multiplicity:C(d,i),H_d=(5/3^d-3/5^d)/(2r),W_d=(8/15)^d/r;shell_checks=600
+q2_exact_rows=252=147_single_transverse+105_two_transverse;new_beyond_capacity=105
+core_rescue_records=(((1, 3, 6, 8, 11, 13), 48048, 8008, 6, (1,), (1, 3, 8, 11, 13)), ((3, 5, 6, 8, 11, 13), 240240, 40040, 6, (1,), (3, 5, 8, 11, 13)), ((3, 6, 7, 8, 11, 13), 336336, 56056, 6, (1,), (3, 7, 8, 11, 13)), ((3, 6, 8, 9, 11, 13), 144144, 48048, 3, (1, 2, 3), (8, 11, 13)), ((3, 6, 8, 9, 11, 13), 144144, 24024, 6, (1,), (3, 8, 9, 11, 13)), ((3, 6, 8, 10, 11, 13), 240240, 40040, 6, (1,), (3, 8, 10, 11, 13)), ((3, 6, 8, 11, 12, 13), 48048, 16016, 3, (1, 2, 4), (8, 11, 13)), ((3, 6, 8, 11, 12, 13), 48048, 8008, 6, (1, 2), (3, 8, 11, 13)), ((3, 6, 8, 11, 13, 14), 336336, 56056, 6, (1,), (3, 8, 11, 13, 14)), ((5, 6, 11, 12, 13, 14), 840840, 168168, 5, (1,), (6, 11, 12, 13, 14)), ((6, 8, 9, 11, 12, 13), 144144, 48048, 3, (2, 3, 4), (8, 11, 13)), ((7, 9, 10, 11, 12, 13), 2522520, 504504, 5, (2,), (7, 9, 11, 12, 13)))
+strictness_hostile=q7,u1,y1/2:strict_blocks_0,closed_blocks_2
+capacity_hostile=q2:{1,3}_survives,{1,9}_covers;sum_capacity_equal
+typing=Boolean_sheet_hypergraph;grid_owner_retained;counts_are_subclass_not_additive
+scope=no_refined_ledger_decrement,no_physical_tail_realization,no_LRC14
+semantic_sha256=de40f9da0f3b335d0de52bad0c75f586c15508cdf4d94b082d2f69c1098e5bc8
+verdict=PASS

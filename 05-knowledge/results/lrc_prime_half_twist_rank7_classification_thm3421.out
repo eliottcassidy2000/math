@@ -1,0 +1,9 @@
+THM-3421 exact prime half-twist rank-seven companion
+ratio_graph=(D_size=24,vertices=25,edges=84,triangles=60,colour_sizes=(1, 12, 12),max_false_numerator=217)
+ratio_complement_hostiles_and_thresholds=(((547, 1, 77, 24), (541, 9, 77, 24), (557, 11, 79, 24), (587, 13, 83, 24)), ((2, 464), (4, 480), (6, 496), (8, 512)))
+finite_bank=(primes=96,scalar_profiles=197,positive_profiles=12,support=(11, 13, 23, 29))
+positive_scalar_profiles=((11, 2, (1, 2), (1, 2, 3, 4, 5)), (13, 1, (1,), (1, 2, 3, 4, 5, 6)), (23, 1, (1,), (1, 2, 3, 4, 5, 10)), (23, 2, (1, 2), (1, 5, 7, 9, 11)), (23, 3, (1, 2, 6), (7, 8, 9, 11)), (29, 1, (1,), (4, 5, 6, 7, 9, 10)), (29, 2, (1, 4), (5, 7, 9, 10, 11)), (29, 3, (1, 3, 9), (4, 5, 6, 7)), (29, 4, (1, 3, 4, 9), (5, 7, 11)), (29, 5, (1, 3, 4, 5, 9), (8, 11)), (29, 6, (1, 3, 4, 7, 9, 12), (5,)), (29, 7, (1, 4, 5, 6, 7, 9, 13), ()))
+literal_positive_atoms=((11, (1, 2, 3, 5, 7, 9), (2, 1, 2, 2, 2, 2), ((1, 11),), 0), (13, (1, 2, 3, 5, 7, 9, 11), (2, 1, 2, 2, 2, 2, 2), ((1, 13),), 0), (23, (1, 4, 5, 7, 9, 11), (4, 3, 4, 4, 4, 4), ((1, 23),), 0), (29, (1, 5, 7, 8, 12, 13, 22), (4, 4, 4, 5, 5, 4, 5), ((1, 28), (3, 1)), 2))
+even_prime_control=(2, (0, 0, 0))
+scope=literal prime half-twist cap7 iff p in {11,13,23,29}; exact half ranks 6,7,6,7 respectively; composite rank7 and LRC14 remain open
+semantic_sha256=f0c7ceb122e90fd3792d72e80a205a6c4bd823cfb5b04064764b95ddc9d9471d

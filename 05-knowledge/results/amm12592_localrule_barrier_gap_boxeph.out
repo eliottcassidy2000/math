@@ -1,0 +1,171 @@
+
+### amm12592_localrule_barrier_gap_boxeph.py mode=A  2026-08-04 00:46:46
+==========================================================================
+STAGE A -- record check + transportation integer point at (256, D0=0)
+==========================================================================
+  [PASS] witness file sha256 matches D1 ledger  -- 5950bd4287d49922
+  [PASS] hostile referee verify_witness (adm + identity + ballot laws) ALL-PASS  -- {'ok': True, 'adm': True, 'identity': True}
+  [PASS] f = (C(d,t)-delta)/2 integer and in [0, C(d,t)] at ALL 58837 cells  -- boundary-saturated cells: 4973 (8.45%)
+    x= 2 : sum x^i F_i = 256 bits ; T_R = 256 bits ; equal=True
+    x= 3 : sum x^i F_i = 404 bits ; T_R = 404 bits ; equal=True
+    x=-1 : sum x^i F_i = 255 bits ; T_R = 255 bits ; equal=True
+  [PASS] (**) transportation identity holds at x = 2, 3, -1 exactly (with adm+identity above => integer point of the (**) polytope)
+  [CONFIRMED: the transportation polytope at the EXACT FLOOR profile d_i = floor(g(256+i)) (D0 = 0) contains an INTEGER point; LP relaxation feasible a fortiori. The stale reading 'D0*(256) = 1 for every method' is corrected by the record.]
+### done mode=A fails=0 elapsed=4.2s
+
+### amm12592_localrule_barrier_gap_boxeph.py mode=B  2026-08-04 00:47:02
+==========================================================================
+STAGE B -- exact certificates: L1 complementarity, L2 front marginality, L3 depth-rate law, taper table
+==========================================================================
+  [PASS] L1 (t2-1)+F0 = d on 21/21 grid points (PROVED: algebra; certified)
+  [PASS] L2 C(R-2-F0,d-F0) = C(d,F0) = (box width)/2 on 21/21 (PROVED: R-2-F0 = d, d-F0 = 2d-R+2 = d-F0 sym; certified)
+  [PASS] L3 (A_{t-1}/A_t)/(C(d,t-1)/C(d,t)) = (R-1-t)/t at 8 depths, 21/21 (PROVED: telescoping binomial ratios; certified)
+  taper table (front-cell full load / box width; overflow/width):
+    R=  128 D0=   0 : w_F0/width = 0.745098  overflow/width = 0.087203
+    R=  128 D0=   1 : w_F0/width = 0.720000  overflow/width = 0.083636
+    R=  128 D0=   4 : w_F0/width = 0.638298  overflow/width = 0.063298
+    R=  256 D0=   0 : w_F0/width = 0.745098  overflow/width = 0.084967
+    R=  256 D0=   1 : w_F0/width = 0.732673  overflow/width = 0.083323
+    R=  256 D0=   8 : w_F0/width = 0.638298  overflow/width = 0.060658
+    R=  512 D0=   0 : w_F0/width = 0.751220  overflow/width = 0.084553
+    R=  512 D0=   1 : w_F0/width = 0.745098  overflow/width = 0.083860
+    R=  512 D0=  16 : w_F0/width = 0.645503  overflow/width = 0.061652
+    R= 1024 D0=   0 : w_F0/width = 0.754258  overflow/width = 0.084323
+    R= 1024 D0=   1 : w_F0/width = 0.751220  overflow/width = 0.084009
+    R= 1024 D0=  32 : w_F0/width = 0.649077  overflow/width = 0.062120
+    R= 2048 D0=   0 : w_F0/width = 0.755772  overflow/width = 0.084203
+    R= 2048 D0=   1 : w_F0/width = 0.754258  overflow/width = 0.084054
+    R= 2048 D0=  64 : w_F0/width = 0.650856  overflow/width = 0.062347
+    R= 4096 D0=   0 : w_F0/width = 0.755772  overflow/width = 0.084069
+    R= 4096 D0=   1 : w_F0/width = 0.755015  overflow/width = 0.083995
+    R= 4096 D0= 128 : w_F0/width = 0.650856  overflow/width = 0.062187
+    R= 8192 D0=   0 : w_F0/width = 0.756149  overflow/width = 0.084038
+    R= 8192 D0=   1 : w_F0/width = 0.755772  overflow/width = 0.084002
+    R= 8192 D0= 256 : w_F0/width = 0.651301  overflow/width = 0.062244
+  boundary-layer rate g/(1-g) in (1.4874828, 1.4874887)  [certified sandwich]
+### done mode=B fails=0 elapsed=0.7s
+
+### amm12592_localrule_barrier_gap_boxeph.py mode=C  2026-08-04 00:47:29
+==========================================================================
+STAGE C -- D1 rule class at R=512, D0=0..3: exact outcomes (rule negatives are NOT epoch evidence)
+==========================================================================
+  R=512 D0=0 asc       -> DIE@1        (0.0s)
+  R=512 D0=0 desc      -> DIE@108      (0.2s)
+  R=512 D0=0 desc1     -> DIE@109      (0.3s)
+  R=512 D0=0 desc2     -> DIE@108      (0.2s)
+  R=512 D0=0 desc3     -> DIE@108      (0.2s)
+  R=512 D0=0 descnv    -> DIE@107      (0.2s)
+  R=512 D0=0 descw128  -> DIE@108      (0.2s)
+  R=512 D0=0 descw32   -> DIE@108      (0.2s)
+  R=512 D0=0 descw512  -> DIE@108      (0.2s)
+  R=512 D0=0 fill      -> DIE@107      (0.2s)
+  R=512 D0=0 fill15    -> DIE@107      (0.2s)
+  R=512 D0=0 plain     -> DIE@107      (0.1s)
+  R=512 D0=0 tr15      -> DIE@107      (0.3s)
+  R=512 D0=0 tr15g48   -> DIE@107      (0.2s)
+  R=512 D0=0 tr43      -> DIE@107      (0.2s)
+  R=512 D0=0 tr54      -> DIE@107      (0.2s)
+  R=512 D0=0 tr74      -> DIE@107      (0.2s)
+  R=512 D0=0 train     -> DIE@107      (0.3s)
+  R=512 D0=0 train16   -> DIE@107      (0.2s)
+  R=512 D0=0 train3    -> DIE@107      (0.3s)
+  R=512 D0=0 trainv2   -> DIE@109      (0.2s)
+  R=512 D0=1 asc       -> DIE@1        (0.0s)
+  R=512 D0=1 desc      -> DIE@111      (0.2s)
+  R=512 D0=1 desc1     -> DIE@111      (0.3s)
+  R=512 D0=1 desc2     -> DIE@111      (0.2s)
+  R=512 D0=1 desc3     -> DIE@111      (0.2s)
+  R=512 D0=1 descnv    -> DIE@111      (0.2s)
+  R=512 D0=1 descw128  -> DIE@111      (0.2s)
+  R=512 D0=1 descw32   -> DIE@111      (0.1s)
+  R=512 D0=1 descw512  -> DIE@111      (0.2s)
+  R=512 D0=1 fill      -> DIE@111      (0.2s)
+  R=512 D0=1 fill15    -> DIE@111      (0.2s)
+  R=512 D0=1 plain     -> DIE@110      (0.1s)
+  R=512 D0=1 tr15      -> DIE@111      (0.2s)
+  R=512 D0=1 tr15g48   -> DIE@111      (0.2s)
+  R=512 D0=1 tr43      -> DIE@111      (0.2s)
+  R=512 D0=1 tr54      -> DIE@111      (0.2s)
+  R=512 D0=1 tr74      -> DIE@111      (0.2s)
+  R=512 D0=1 train     -> DIE@111      (0.2s)
+  R=512 D0=1 train16   -> DIE@111      (0.2s)
+  R=512 D0=1 train3    -> DIE@111      (0.2s)
+  R=512 D0=1 trainv2   -> DIE@111      (0.2s)
+  R=512 D0=2 asc       -> DIE@1        (0.0s)
+  R=512 D0=2 desc      -> DIE@113      (0.2s)
+  R=512 D0=2 desc1     -> DIE@113      (0.2s)
+  R=512 D0=2 desc2     -> DIE@113      (0.2s)
+  R=512 D0=2 desc3     -> DIE@113      (0.2s)
+  R=512 D0=2 descnv    -> DIE@113      (0.2s)
+  R=512 D0=2 descw128  -> DIE@113      (0.2s)
+  R=512 D0=2 descw32   -> DIE@113      (0.2s)
+  R=512 D0=2 descw512  -> DIE@113      (0.2s)
+  R=512 D0=2 fill      -> DIE@114      (0.2s)
+  R=512 D0=2 fill15    -> DIE@113      (0.2s)
+  R=512 D0=2 plain     -> DIE@113      (0.1s)
+  R=512 D0=2 tr15      -> DIE@113      (0.2s)
+  R=512 D0=2 tr15g48   -> DIE@113      (0.2s)
+  R=512 D0=2 tr43      -> DIE@113      (0.2s)
+  R=512 D0=2 tr54      -> DIE@113      (0.2s)
+  R=512 D0=2 tr74      -> DIE@113      (0.2s)
+  R=512 D0=2 train     -> DIE@113      (0.2s)
+  R=512 D0=2 train16   -> DIE@113      (0.2s)
+  R=512 D0=2 train3    -> DIE@113      (0.2s)
+  R=512 D0=2 trainv2   -> DIE@113      (0.2s)
+  R=512 D0=3 asc       -> DIE@1        (0.0s)
+  R=512 D0=3 desc      -> DIE@117      (0.2s)
+  R=512 D0=3 desc1     -> DIE@117      (0.2s)
+  R=512 D0=3 desc2     -> DIE@117      (0.2s)
+  R=512 D0=3 desc3     -> DIE@117      (0.2s)
+  R=512 D0=3 descnv    -> DIE@116      (0.2s)
+  R=512 D0=3 descw128  -> DIE@117      (0.2s)
+  R=512 D0=3 descw32   -> DIE@117      (0.2s)
+  R=512 D0=3 descw512  -> DIE@117      (0.2s)
+  R=512 D0=3 fill      -> DIE@124      (0.2s)
+  R=512 D0=3 fill15    -> DIE@123      (0.2s)
+  R=512 D0=3 plain     -> DIE@116      (0.1s)
+  R=512 D0=3 tr15      -> DIE@119      (0.2s)
+  R=512 D0=3 tr15g48   -> DIE@119      (0.2s)
+  R=512 D0=3 tr43      -> DIE@118      (0.2s)
+  R=512 D0=3 tr54      -> DIE@118      (0.2s)
+  R=512 D0=3 tr74      -> DIE@121      (0.2s)
+  R=512 D0=3 train     -> DIE@170      (0.4s)
+  R=512 D0=3 train16   -> DIE@174      (0.3s)
+  R=512 D0=3 train3    -> DIE@115      (0.2s)
+  R=512 D0=3 trainv2   -> DIE@170      (0.3s)
+  closures found at D0<=3: NONE
+### done mode=C fails=0 elapsed=16.4s
+
+### amm12592_localrule_barrier_gap_boxeph.py mode=D  2026-08-04 00:48:01
+==========================================================================
+STAGE D -- beam over cross-row action schedules (alphabet: plain,desc,desc1,descnv,tr15,tr43,tr54,tr74,train16,fill15,desc2,desc3; width 24)
+==========================================================================
+  control 256 D0=0 : {"status": "ALL_DIE", "row": 97, "elapsed": 9.747788667678833, "stats": {"deaths": 144, "rows_done": 96, "peak_states": 93}}
+  beam 512 D0=0 : {"status": "ALL_DIE", "row": 107, "elapsed": 54.66378474235535, "stats": {"deaths": 288, "rows_done": 106, "peak_states": 172}}
+
+### amm12592_localrule_barrier_gap_boxeph.py mode=D  2026-08-04 00:51:16
+==========================================================================
+STAGE D -- beam over cross-row action schedules (alphabet: plain,desc,desc1,descnv,tr15,tr43,tr54,tr74,train16,fill15,desc2,desc3; width 24)
+==========================================================================
+  control 256 D0=0 : {"status": "CLOSED", "capture_row": 153, "elapsed": 9.174136400222778, "stats": {"deaths": 84, "rows_done": 153, "peak_states": 149, "pure_alive": 5}}
+  beam 512 D0=0 : {"status": "ALL_DIE", "row": 109, "elapsed": 53.43374967575073, "stats": {"deaths": 300, "rows_done": 108, "peak_states": 226, "pure_alive": 0}}
+  beam 512 D0=1 : {"status": "ALL_DIE", "row": 111, "elapsed": 53.57211709022522, "stats": {"deaths": 312, "rows_done": 110, "peak_states": 267, "pure_alive": 0}}
+  beam 512 D0=2 : {"status": "ALL_DIE", "row": 113, "elapsed": 54.391403675079346, "stats": {"deaths": 312, "rows_done": 112, "peak_states": 288, "pure_alive": 0}}
+  beam 512 D0=3 : {"status": "ALL_DIE", "row": 202, "elapsed": 84.3956651687622, "stats": {"deaths": 312, "rows_done": 201, "peak_states": 261, "pure_alive": 0}}
+### done mode=D fails=0 elapsed=255.0s
+
+ANNOTATION (2026-08-04): the FIRST stage-D block above (control ALL_DIE@97,
+beam 512 D0=0 ALL_DIE@107) is the initial beam WITHOUT protected pure lanes:
+its score function pruned the known (256,0) desc1 winner -- kept on record as
+a live demonstration that search negatives are score artifacts.  The run was
+killed and rerun with protected pure lanes (every pure rule in the alphabet
+survives ranking by construction) + two-key ranking; the SECOND block is the
+one of record: control (256,0) CLOSED@153; (512, D0=0/1/2/3) ALL_DIE at rows
+109/111/113/202 (best pure-rule deaths 107/111?/113?/174; at D0=3 cross-row
+mixing gains 28 rows over every pure rule and still dies -- G3 no-return).
+No feasibility conclusion is drawn from any of these negatives.
+CORRECTION to the annotation: exact best pure-rule death rows at R=512 from
+the stage-C ledger are 109 (desc1/trainv2), 111 (19 rules), 114 (fill),
+174 (train16) at D0 = 0/1/2/3.  The beam alphabet excludes 'fill'; its
+D0=2 death row 114 slightly outlives the beam's 113.  Beam gains over its
+own 12-action alphabet: +0/+0/+0/+28 rows at D0 = 0/1/2/3.

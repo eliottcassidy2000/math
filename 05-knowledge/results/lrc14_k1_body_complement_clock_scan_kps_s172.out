@@ -1,0 +1,14 @@
+LRC14 K=1 BODY-COMPLEMENT CLOCK SCOUT
+status=FINITE-EXACT + INDEPENDENTLY AUDITED support-level sufficient terminals
+input_rows=27240;closed_rows=15393;remaining_rows=11847
+completion_size_histogram=((1, 12658), (2, 2029), (3, 409), (4, 150), (5, 147))
+input_occurrences=38954725590760;closed_occurrences=3659255462265;remaining_occurrences=35295470128495
+occurrence_size_histogram=((1, 3427329787389), (2, 182339009252), (3, 35772924216), (4, 1643011511), (5, 12170729897))
+support_dependency_sha256=778842c0e8e7172835ca6ae673fb6156f212d4296e672bce4e7cc2815195bf1a
+semantic_sha256=a362aebeb3615dabd308c8fe4c6cffc8af501089192d286a0a7772e8ae474b15
+source_lf_sha256=bdb2001cf22f7e92884e895b0095021e42e8f1febd9adbf779b250a2f6c53507
+ordinary_optimized_full_stdout_sha256=a28a4143f8d4151952a186fa484a251c13392b521a7fec36bcd0de34415551f3
+independent_controls=event_sweep_support;strict_open_interval_union;divisor_poset_recursion
+thm3363_overlap_rows=1;thm3363_overlap_occurrences=26
+incremental_beyond_thm3363_rows=15392;incremental_beyond_thm3363_occurrences=3659255462239
+verdict=PASS

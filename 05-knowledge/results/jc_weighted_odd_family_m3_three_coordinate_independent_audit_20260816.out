@@ -1,0 +1,16 @@
+WEIGHTED ODD-FAMILY M3 THREE-COORDINATE INDEPENDENT AUDIT
+status=VERIFIED-EXACT independent FLINT reconstruction; explicit THM-3448 cyclic subfamily only
+candidate_imported=False; sympy_imported=False
+map=(term_counts=(28, 25, 3),degrees=(17, 16, 4),jacobian=1,hashes=('01c6c9d962c66bab431ff42f55062a6c1d4f91762002ff73c0fe1fd14bea57a1', 'e61a42ed722980bcf4e121a1a893bfe1fb67e3cc51409e23a5f64aac26b2f77f', 'd2146188cbaaaac3d33b121d9800a49aebad5d84449f27a21fbd377d9b063e7e'))
+inverse=(T=w^5 - w^4 + w*P - Q,branch_sha256=71dc7c97764eaf08b005c35ce60e4576e5edcc83a5d0f86328ce2d4d3a49f40e)
+coordinate_row=('x', '1', 17, 10, (5, 5, 4, 5), 'f87f18f30f3d96d608b5c00b782320aa913008fc956247c269f5d64eac727d65', 17, 6, (6, 6), '9c793ac55f302a53713f9d6559eea0a9fcc2ac559dd539e595500207c63cde10', 10, '580f96c990cec73828be9a4a1cfd969016e21ffacfcba7ed2bc79994ed140ebc')
+coordinate_row=('y', '1', 29, 10, (5, 5, 4, 5), '36ab976ebf5830c9af1c51f8dab5aa7b71054e3b6670cc082c0a7514a2873436', 26, 6, (6, 6), '8e76afe528328bcca40f49bf5ef10ee64b33fb27c759046336bda31a26fe64c4', 10, '882a5ad8fa76f575fd8c2a3ac374bfb74d25052cea425abe9f2f99cc79d5d26b')
+coordinate_row=('z', '-1/7776', 191, 15, (5, 15, 12, 10), 'b1ca9211c75046e9fab474e4fb842b8fdfe384d820b6efe73436add8af852b75', 268, 26, (26, 22), '1191484cf4a2a0c87ec7994f56ff368444ce72184f21f46d042ea16838e97e5b', 20, 'd2ea53ca388a5ee3b4b0f87fb9ab2bf76f6ab11b0486fc8d500779cc9d42fae7')
+pullback=(D5=C^4*L5,L5_stats=(7, 8, (4, 5, 4), '1557f5747f0df337384f864227850aafb7264236c1c5283e98f9eaca698d4e8e'))
+finite_separator=(field=F_31,target=(26, 23, 1),P=23,Q=26,roots=(8, 9, 12, 16, 18),rows=((28, 29, 19, 8, 10), (10, 12, 15, 9, 28), (7, 3, 13, 12, 9), (11, 30, 11, 16, 17), (6, 23, 0, 18, 26)),vandermonde_xyz=(28, 14, 1))
+hostile=flat base-field view has eliminant (X-P)^5 and zero discriminant
+consequence=independent exact audit of the 191-term z quintic, 268-term index core, and common [D5]=[L5] coordinate class
+boundary=V(C) remains genuine sign-blind C3 Jelonek data inherited from THM-3448; no historical-family identity, arbitrary Keller, JC2, or LRC claim
+security_ast=(3191,assert_free=True)
+semantic_sha256=bd208dad9732439dfa14a794ef54dbfe57d66360f5f5a39b26353ffb82b6bba3
+STATUS=PASS

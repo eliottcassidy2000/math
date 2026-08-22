@@ -1,0 +1,20 @@
+THM-3463 EXACT AUDIT
+mealy_states=A:(A,B),B:(C,B)sigma,C:(A,B)sigma
+direct_local_rule_vs_packed_rows_t=0..128
+mealy_vs_phi_all_words_width=1..11
+mealy_sections_n=1..80 suffix_compiler_n=1..512
+center_prefix_t0..63=1101110011000101100100111010111001110101011000011001010110101011
+collision_duhamel_t=0..80 dyadic_current_checks=127
+periods_w1..30=[1, 2, 2, 4, 8, 8, 16, 32, 32, 64, 64, 64, 64, 64, 64, 128, 256, 256, 256, 256, 256, 256, 256, 256, 512, 1024, 1024, 2048, 2048, 4096]
+lift_bits_eps1..36=101101101000001100000001101010000101
+period_exponents_E1..30=[0, 1, 1, 2, 3, 3, 4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 8, 8, 8, 8, 8, 8, 8, 8, 9, 10, 10, 11, 11, 12]
+arrival_atlas_cap30=(innovations,period)=(12, 4096)
+anf_full_degrees_n1..8=[2, 3, 5, 7, 9, 11, 13, 15]
+marker_sets_n1..8=[(0, 1), (-1, 1, 2), (-2, 0, 2, 3), (-3, -1, 1, 3, 4), (-4, -2, 0, 2, 4, 5), (-5, -3, -1, 1, 3, 5, 6), (-6, -4, -2, 0, 2, 4, 6, 7), (-7, -5, -3, -1, 1, 3, 5, 7, 8)]
+scalar_nonclosure=(Sp,Sq,intersection_parities)=('010', '100', 1, 0)
+kernel_length16_distinct=25830 positive_index_length15_distinct=20794
+dyadic_length12_distinct=4096
+independent_mirror_center_agreement_t=0..131071
+center_sha256_0..262143=75be8407c265798fa046baa3ba0f9336e4cbe27bff0be21aeba3e87a7681bea4
+center_sha256_0..393215=7a7debfac229950122dd4272ce7e183fb724fa4298ed96fc3b5ca49023346733
+ALL CHECKS PASSED

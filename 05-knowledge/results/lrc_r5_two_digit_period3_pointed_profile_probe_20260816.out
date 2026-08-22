@@ -1,0 +1,22 @@
+== r=5 two-digit period-three pointed-profile probe ==
+independent_source_gate=(sha256=dd2f48375fc38b419babdd0ed13365fb56918829a663270c4b23d56635d6e097,cells=33,owner_visible=16,masked_cell_sha256=56fe6e86a6d49ae4d7bdb0cdde5a5b70b0b2d8364c06dc7c22c7d8fafa3df4f5): PASS
+pointed_states=((0, 0), (1, 0), (1, 6), (3, 6), (3, 12), (2, 12))
+profile_r1_conditional_ranks_by_r0=(6, 3, 3, 4, 3, 3, 4, 3, 3, 4, 3, 3, 6)
+support_conditional_ranks_by_r0=(3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3)
+global_address_profile_ranks_(weighted,support)=(12,3)
+digit_classes=((1, 4, 7, 10), (2, 5, 8, 11), (3, 6, 9), (0, 12));class_union_ranks=(3, 3, 6, 10)
+class_pair_union_ranks=((3, 3, 6, 10), (3, 3, 6, 10), (6, 6, 6, 12), (10, 10, 12, 10))
+reflection_record_order=(rank,rank_with_reflection,plus_rank,minus_rank)
+reflection_records_(interior_nonmultiple,interior_multiple,boundary,global)=((3, 3, 2, 1), (6, 6, 3, 3), (10, 10, 5, 5), (12, 12, 6, 6))
+slice_reflection_records_(r0_6,r0_3_union_r0_9)=((4, 4, 2, 2), (5, 5, 3, 2))
+flag_ledger=((3, 6, 10, 12), (4, 4, 4), (5, 5, 5), (7, 7), (10, 12, 6), (9, 9), (11, 10, 11))
+state_projection_ranks_(L,M,B,G)=((1, 2, 1, 2), (1, 3, 1, 3), (3, 3, 3, 3), (3, 4, 3, 4))
+translation_by_3_orbit=(0, 3, 6, 9, 12, 2, 5, 8, 11, 1, 4, 7, 10)
+translation_by_3_ranks_(profile,endpoint)=((6, 4, 4, 4, 6, 3, 3, 3, 3, 3, 3, 3, 3),(4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3)): NONCONSTANT
+typed_pointed_reflection=(5, 4, 3, 2, 1, 0): PASS
+digests_(weighted,support)=('f7d1ac1bba79a25b232dd4f0539b9a236f047b5224e49050a44c70f4d2544b68', '6fd60baa0f82c5f234164b2869cb369468fcbcf128e995603c49e5c07ed7ea68')
+parent_profile_digests=('05ef41955d8967dbf4c67beb940cf17200fbcdf36a017914daa23cf21c647d36', '88be69a27cd4bbceba8814876c77ce2a4a2555e0e92de292eb46b34a62a20c31')
+semantic_sha256=0d5798935986c13b1aa70fc1db7abac162994dabaf7dd3ab5f323ffeb1d1d63e
+endpoint_conditional_ranks=(4, 3, 3, 4, 3, 3, 4, 3, 3, 4, 3, 3, 4);profile_to_endpoint_rank_drop=(2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2)
+endpoint_address_rank=4;profile_address_rank=12;endpoint_projection_drop=8
+scope=owner-visible endpoint-admissible nested-window profiles only;no endpoint sweep,character bank,relation inversion,or physical current

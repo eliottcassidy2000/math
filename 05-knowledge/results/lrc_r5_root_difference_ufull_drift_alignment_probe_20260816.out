@@ -1,0 +1,22 @@
+R5 ROOT-DIFFERENCE TO U_FULL DRIFT ALIGNMENT PROBE
+status=FINITE-EXACT typed-coordinate comparison; LRC(14) OPEN
+dependency_parent=113793a41d39e8ac1ad3d745b9c9238cba92721805a379ee4378a000bacca33c
+field=(prime=572252886246508880869,zeta7=353818603057943120846,zeta13=505438565698892403012)
+typed_alignment=one common regular-torsor gauge gives endpoint d=b-a equal to a collision-root difference; source convention s=u-q differs only by an allowed sign
+shift_table_support=72/91; same_root_column_zero=PASS
+source_spectral_support=91/91; unit_septimal_modes=(0, 1, 2, 3, 4, 5, 6)
+source_row_rank=6; theta_resolved_row_rank=8
+owner_phase_row_ranks=(k0=6,k1=6,k1_minus_k0=6,union=9)
+whole_projective_system=(6, 24, 4, 0)
+affine_torsor_systems=((1, (6, 24, 4, 0)), (2, (6, 24, 4, 0)), (3, (6, 24, 4, 0)), (4, (6, 24, 4, 0)), (5, (6, 24, 4, 0)), (6, (6, 24, 4, 0)), (7, (6, 24, 4, 0)), (8, (6, 24, 4, 0)), (9, (6, 24, 4, 0)), (10, (6, 24, 4, 0)), (11, (6, 24, 4, 0)), (12, (6, 24, 4, 0)))
+theta_resolved_projective_system=(8, 32, 52, 0)
+theta_resolved_affine_systems=((1, (8, 32, 52, 0)), (2, (8, 32, 52, 0)), (3, (8, 32, 52, 0)), (4, (8, 32, 52, 0)), (5, (8, 32, 52, 0)), (6, (8, 32, 52, 0)), (7, (8, 32, 52, 0)), (8, (8, 32, 52, 0)), (9, (8, 32, 52, 0)), (10, (8, 32, 52, 0)), (11, (8, 32, 52, 0)), (12, (8, 32, 52, 0)))
+owner_phase_projective_systems={'k0': (6, 24, 4, 0), 'k1': (6, 24, 4, 0), 'k1_minus_k0': (6, 24, 4, 0), 'k0_union_k1': (9, 36, 20, 0)}
+owner_phase_union_affine_systems=((1, (9, 36, 20, 0)), (2, (9, 36, 20, 0)), (3, (9, 36, 20, 0)), (4, (9, 36, 20, 0)), (5, (9, 36, 20, 0)), (6, (9, 36, 20, 0)), (7, (9, 36, 20, 0)), (8, (9, 36, 20, 0)), (9, (9, 36, 20, 0)), (10, (9, 36, 20, 0)), (11, (9, 36, 20, 0)), (12, (9, 36, 20, 0)))
+folded_selected_systems=(((0, 0, 0), (0, 1, 2, 3), (4, 16, 0, 0)), ((0, 0, 1), (0, 1, 2, 4), (4, 16, 0, 0)), ((0, 1, 0), (0, 1, 5, 3), (4, 16, 0, 0)), ((0, 1, 1), (0, 1, 5, 4), (4, 16, 0, 0)), ((1, 0, 0), (0, 6, 2, 3), (4, 16, 0, 0)), ((1, 0, 1), (0, 6, 2, 4), (4, 16, 0, 0)), ((1, 1, 0), (0, 6, 5, 3), (4, 16, 0, 0)), ((1, 1, 1), (0, 6, 5, 4), (4, 16, 0, 0)))
+all_mode_allocation_census=(2401, 0, 0, (4,))
+projective_tuple_fields=(source_rank,equation_rank,nullity,excess_beyond_source_annihilators)
+shift_table_sha256=ad63d008da3dfa8525db7ef4e724cf6e3a971b3f6efa3d6da9791fbd8003ed91
+semantic_sha256=a954aa6ac96fa0a4e7b77e84473971c8444393409d61ca251b2c31de1b27779f
+nonconsequence=abstract root/sheet torsor alignment only; no chamber support map, common U_full ancestry, physical current, H1 flux, row exclusion, or LRC(14)
+STATUS=PASS

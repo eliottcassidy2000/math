@@ -1,0 +1,21 @@
+Q5 SINGLETON COVER-CLUTTER EXACT PROBE
+source_sha256_lf=96b5addc012546b051987d623eff01581f6616219228524f9465be63f09776a0
+dependency_sha256_lf=(('THM-3387', 'c540255a185efb54c67035d69f3fbd94f4c1ad3e30c4e31738a8800e81198613'), ('THM-3387-script', '9b0b46874a569d674b937b37cf74a8985fca2b77e3e480a75fb4924ea602f25a'), ('THM-3387-output', 'b4d9ce439bab4501bfd5e2cf13eb0b0e3685b7364f30e43b7d5ca9138d25cb5c'))
+status=FINITE-EXACT plus INDEPENDENTLY HOSTILE-AUDITED q5 convergence artifact;THM3395_is_current_structural_source
+blocker_species=gcd(u,5)=1:singleton;inclusion_minimal_full_cover_rank=5
+cochain=p_ij=5u_i u_j(x_i-x_j);p_ij==(k_j-k_i)u_i u_j_mod_5gcd;14|p_ij|<5(u_i+u_j);zero_triangle_circulation
+literal_vertices=(1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14);minimal_edges=231;rank_profile=((5, 231),)
+edge_degrees=((1, 109), (2, 83), (3, 76), (4, 84), (6, 69), (7, 103), (8, 105), (9, 110), (11, 117), (12, 92), (13, 96), (14, 111))
+independence_profile=(1, 12, 66, 220, 495, 561, 268, 45, 1, 0, 0, 0, 0)
+unique_independent_eight=(1, 2, 3, 6, 7, 12, 13, 14)
+positive_control=subset:(1, 2, 3, 4, 7),order:(1, 4, 2, 3, 7),cochain:((0, 1, -1), (0, 2, -1), (0, 3, -1), (0, 4, -2), (1, 2, -2), (1, 3, -1), (1, 4, -1), (2, 3, 1), (2, 4, 3), (3, 4, 1))
+pairwise_feasible_nonedge=subset:(1,2,3,4,9),order:(1, 4, 2, 3, 9),forced_star:((-1,), (-1,), (-1,), (1,)),forced_p_14:13,legal_p_14:(-2, 3)
+robust_pairwise_nonedge=order:(13, 16, 18, 19, 17),pair_fibre_cardinalities:(4, 4, 5, 4, 3, 5, 5, 6, 5, 5),no_ordering_covers
+strict_closed_full_cover_edges_coincide=PROVED:no_distinct_q5_sheet_labels_can_be_tangent_mod5
+rescue_specific_controls=q5a_wrong_core2_leaks_at_109/9240;q5b_wrong_core1_leaks_at_93/980
+q5_body_candidates=2079;global_transverse_rows=1617;exact_rows=1619;core_rescues=(((1,), (6, 11, 12, 13, 14)), ((2,), (7, 9, 11, 12, 13)))
+body_identity=2I5+I4=2*561+495=1617;two_core_rescues_give_1619
+typing=prime_singleton_rank5_clutter_plus_complete_affine_K5_cochain;not_tournament
+scope=independent_q5_convergence_audit_for_T3387_and_T3395;no_new_refined_decrement,no_LRC14
+semantic_sha256=8e76f915ddb63c6e126d57b2e82cfe8e7a3d60835db85059cd3d2c94a2e963c7
+verdict=PASS

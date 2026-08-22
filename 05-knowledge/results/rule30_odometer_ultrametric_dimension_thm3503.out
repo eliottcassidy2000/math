@@ -1,0 +1,7 @@
+period_tower widths=1..24 orbit_cells=2665
+innovation_prefix=1,3,4,6,7,9,15,16,24
+exact_metric_checks=32640
+covering_count_cells=2665
+scalar_hostiles horizon=4096 sparse=12 dense=2730
+scalar_hostile_sha256=91c797500d4b5a8f198651aa1163cbe6342c0f9a871b831be494d90c75d4ac2f
+ALL CHECKS PASSED

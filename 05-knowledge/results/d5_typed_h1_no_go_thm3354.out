@@ -1,0 +1,8 @@
+D5 TYPED H1 NO-GO -- EXACT FINITE CONTROLS
+hom_counts (n,Cn_to_S3,S3_to_Cn,Cn_to_V4,V4_to_Cn,Cn_to_C2,C2_to_Cn) [(13, 1, 1, 1, 1, 1, 1), (91, 1, 1, 1, 1, 1, 1)]
+C13_to_C91 homs 13 embeddings 12 all_C7_projection_zero True
+mapping_torus nonzero_a 12 orbit_lengths [91]
+graph_h1 tree 0 cycle7 1 holonomy_7a_nonzero True
+weighted_star D4_det_nullity (4, 2) odd_det_nullity (27, 0)
+localization_hostile P=x+x^2z D_P(1/x)=1 Ann_K[P](theta_int)=(P)^1
+PASS

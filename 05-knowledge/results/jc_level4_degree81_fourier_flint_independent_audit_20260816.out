@@ -1,0 +1,9 @@
+== independent F_101 level-four Fourier/FLINT audit ==
+target=(1, 1, 1); regular-matrix dimensions=(3,9,27)
+inverse graphs and all leading/derivative/chart units: PASS
+100-point multiplicative Fourier inversion: degrees 82..99 vanish; degree=81
+unused X=0 determinant and all-point Horner controls: PASS
+FLINT derivative gcd=1; the 81-root norm-product is squarefree
+ascending-coefficient sha256=1c05c0fd5ee48fc2dd030aebdb9ad6ddd8185fb933eb91e7e39ff553424ef5a7
+scope: a good-reduction genericity witness, not a factorization or image theorem for G
+all independent exact checks passed

@@ -1,0 +1,19 @@
+THM-3468 RULE 30 RADIAL/INNOVATION/CARRIER EXACT AUDIT
+center_generators=right_edge,left_edge agreement_t=0..262143
+center_sha256_0..262143=75be8407c265798fa046baa3ba0f9336e4cbe27bff0be21aeba3e87a7681bea4
+green_recurrence_universe=m=0..127,e=0..128 H1_n=0..4095 shell_d=0..80
+green_H1_prefix_n0..31=01000101010001000100010101000101
+radial_restart_center_t=2..80
+innovation_lift_bits_eps1..30=101101101000001100000001101010
+innovation_110_rows_k_p_qweight_tweight=[(5, 8, 6, 3), (8, 32, 24, 16), (17, 256, 192, 128), (26, 1024, 768, 516)]
+cone_cylinder_cases_K_q=[(4, 8), (8, 32), (12, 64), (16, 256)]
+padded_query_anf_degrees_m2..18=[2, 3, 4, 4, 6, 7, 8, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18]
+padded_query_depths_m2..18=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+standard_positive_query_depths_m5..16=[4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+ordinary_hankel_sizes=[16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192]
+ordinary_hankel_ranks_gf2=[15, 31, 64, 128, 255, 511, 1023, 2047, 4096, 8192]
+lookup18_low_high_ranks_gf2=[2, 4, 8, 16, 32, 64, 128, 256, 510, 256, 128, 64, 32, 16, 8, 4, 2]
+lookup18_central_rank_det_mod3=(512, 1)
+lookup18_standard_rank_rows_columns_gf2=(256, 256, 512)
+scope=FINITE-EXACT; no Rule30 prize conclusion
+ALL CHECKS PASSED

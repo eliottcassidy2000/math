@@ -1,0 +1,13 @@
+THM-3356 PRIMITIVE AFFINE DETERMINANT-SHELL AUDIT
+formal_rows 22890 primitive_rows 14168 by_d (644, 644, 1288, 1288, 2576, 1288, 3864, 2576)
+shell_lorentz_gcd_resultant_checks 566720
+low_unit_farey_orbits 17 u_spine_parallel_rows 736
+potential_split_rank_distribution ((0, 25), (1, 229), (2, 4214), (3, 7168), (4, 2371), (5, 161))
+normalization_fibre_depth_distribution ((1, 12236), (2, 1512), (3, 112), (4, 182), (5, 28), (6, 14), (7, 14), (8, 70))
+coherent_shell_gate_rows 1166 by_prime ((5, 909), (13, 135), (17, 68), (29, 24), (37, 14), (41, 16)) simple_deep (978, 188)
+rank5_witness (14426006, 28851968) channels (3961, 3965) common 15705365
+norm85_toggle_carrier_cutoffs (1898, 1682)
+unramified_root_atlases 5022 allocation_checks 13236 ordered_root_pairs 39240
+coherent_gaussian_gate_primes 11 checks 82400
+semantic_sha256 d356a53ce4b237c7a809d207f2d6ed5cbadfd82228568620f062af60c4d2f6af
+status=ALL EXACT CHECKS PASSED; no LRC physical-tail closure claimed

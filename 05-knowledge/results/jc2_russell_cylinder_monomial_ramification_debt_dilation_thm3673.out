@@ -1,0 +1,16 @@
+THM-3673 exact companion -- monomial ramification debt dilation
+status=PROVED VERIFIED-EXACT PENDING-INDEPENDENT-HOSTILE-AUDIT
+PASS symbolic_character_decimation=A_(Kell+1),BC_(Kell),orders_(0,K,2K)
+PASS Q6_k=2_scale=1_two_form_monomials=105 forced_lambda_J4=365888/6561
+PASS Qstar_k=2_scale=1_two_form_monomials=105 forced_lambda_J4=5440/81
+PASS Q6_k=3_scale=1_two_form_monomials=252 forced_lambda_J6=365888/6561
+PASS Qstar_k=3_scale=1_two_form_monomials=252 forced_lambda_J6=5440/81
+PASS Q6_k=4_scale=1_two_form_monomials=495 forced_lambda_J8=365888/6561
+PASS Qstar_k=4_scale=1_two_form_monomials=495 forced_lambda_J8=5440/81
+PASS Q6_k=5_scale=1_two_form_monomials=858 forced_lambda_J10=365888/6561
+PASS Qstar_k=5_scale=1_two_form_monomials=858 forced_lambda_J10=5440/81
+PASS Q6_k=3_scale=2_two_form_monomials=252 forced_lambda_J6=1463552/6561
+PASS Qstar_k=4_scale=-3/5_two_form_monomials=495 forced_lambda_J8=1088/45
+PASS hostile_k=1_N=2_lower_rank=13_augmented_rank=14_relation=NONE
+CHECKS=4202
+RESULT=PASS

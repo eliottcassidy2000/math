@@ -1,0 +1,19 @@
+== r=5 Boolean-square x inverse-owner-branch x relation probe ==
+parent=(sha256=c7bbd2d82ed067914f39253ac52ce32f9e179a859fb55a421bd2b390f707d881,semantic=bae28345b0b1aea35b244bfbf04123414f0c8fbf9eeca98e39d2b94dd6d107ec)
+coordinate=r_owner=a mod 13 on X_(u,a);construction=13^4 fold then r_owner window then collision-root window
+source_decomposition=(upper_fold_pieces=72,owner_window_pieces=(12, 5, 5, 6, 5, 5, 7, 5, 5, 6, 5, 5, 12),joint_boundaries=34,branch_masses=(44560361824598469720, 40510923881424796800, 40504424654832678540, 40515633830289749040, 40509264504422553840, 40513136384094454080, 40479588474296582520, 40513136384094454080, 40509264504422553840, 40515633830289749040, 40504424654832678540, 40510923881424796800, 44560361824598469720),digest=9e2a61ea8ec00830aa93ec4daa42574a9179f5aa80a09e3388dd9af0964f4cb1)
+reflection=(base y->1-y,collision_root u->12-u,owner_branch r->12-r,state->state_XOR_2): PASS
+field=(prime=755373809845391722745761,root=148035889,zeta13=266737884585332483769981)
+work_counts=(7107008, 7108460, 1200462, 186244, 186244);state_counts=(300115, 300116, 300115, 300116);branch_counts=(186244, 186244, 186244, 186244, 186244, 186244, 186244, 186244, 186244, 186244, 186244, 186244, 186244);literal_controls=((0, 0, 0), (1, 0, 6), (6, 6, 12)): PASS
+marginals=(branch_sum->audited_Boolean_square,flat_branch_same_parent): PASS;same_root=0
+flattening_ranks_(state,owner_branch,relation)=(actual,flat)=((4, 4, 6), (4, 1, 4))
+three_way_ANOVA_flattening_ranks=((3, 4, 6), (0, 0, 0))
+support_census_order=(total,empty,relation,branch,branch_relation,state,state_relation,state_branch,triple)
+spectral_censuses=(actual,flat)=((676, 1, 12, 12, 144, 3, 36, 36, 432), (52, 1, 12, 0, 0, 3, 36, 0, 0))
+three_way_ANOVA_spectral_censuses=((432, 0, 0, 0, 0, 0, 0, 0, 432), (0, 0, 0, 0, 0, 0, 0, 0, 0))
+fixed_relation=(1,0,6);records_(rank,three_way_slice_rank,row_support,digest)=((4, 3, (13, 13, 13, 13), '7652ac0fbca27c3a41181d04e9bea962f4159b04ccc43befe3d2783af89be4a4'), (1, 0, (13, 13, 13, 13), 'be782cc3ee60d8d4bc008f21a9f308731a29e180bc83d7041ff87c47eb532729'))
+digests=(gamma,tensor,flat,spectra,ANOVA,ANOVA_spectra)=('344fc6f451922bfdd071cfa800444929e34e575a71344b17624cc0e73d7d9e72', '2a195fac7fbd60a4bbd2597bf34baf87302ead16c7c0e8c67c0667b0d320dfba', '8959d6734c5049dc58a6bc1ef702d20b839bed45e5d80321161a232ed367a228', ('d6d261c661a622ae315f3b713db02c23250eafbf20a38237f479f74ff99f61b0', '5209d2df83b48c3da26ed542054680bf39496125c2fe01aeb57617c451bcb907'), ('0dca6acb11ce79478f690b509223db0ddd521aed95d8ddca7fc3cfca9e28c387', '197447345f85eb9bcafa5ca23a56870cb07d8ba0635314ff498abf7f9ab9d5bc'), ('f2a19b58b81112fc6ec56571ebf36658731dcc026c27bfd1311ed8422742330d', '197447345f85eb9bcafa5ca23a56870cb07d8ba0635314ff498abf7f9ab9d5bc'))
+semantic_sha256=f43e9fb0937ae93c54c2ac0aeb1257dfd8741f9cef32ef4bf2a5f3dd2cf06388
+status=FINITE-EXACT canonical inverse-owner-branch crossing candidate on one owner base
+scope=r_owner is last inverse digit only;not deep label,not full inverse ancestry,not exact C(a;X,m),not chronology,not physical current,no row exclusion,no LRC(14)
+all exact checks passed

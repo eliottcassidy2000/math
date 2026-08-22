@@ -1,0 +1,9 @@
+THM-3494 independent weighted discriminant atlas audit
+engine=python-flint-0.9.0;ring=Q[w,P,Q,C,X,Y,Z]
+degree_row=(3, -1, 5, '37562bfd2b6d06cedcfabcb4b4904db42f503f410ffa86a6534c6b24e6d7697e', ('x', 3, 8, 3, 'ce9f8dadb0528fed1a40d9aa8425acc51d23e5b2c59ee0c61919e3bb0d49c454', '(1, [(9*P - 27*Q - 2, 2), (C, 6)])'), ('y', 3, 6, 3, '1c9df71a6e89eb7f8040074a60bceceafc7e298505f69789f2c5707774785acb', '(729, [(Q, 2), (C, 6)])'), 'flat=(X-P)^n;disc=0')
+degree_row=(4, -1/16, 9, '62c7064c3132534306fa01216b99211a1a1bd5651226758277fa12edab971978', ('x', 4, 16, 6, 'e4cf75a510e1bc6ca40b2c692ec80845fa20385918cfc8a25509d314ccbc6b36', '(1/268435456, [(32*P^3 + 192*P^2*Q - 441*P^2 + 384*P*Q^2 + 1152*P*Q - 594*P + 256*Q^3 + 1152*Q^2 + 1728*Q + 135, 2), (C, 12)])'), ('y', 4, 16, 6, 'a0ce0c6d577e9982d2f88ffb7ba1a861d1628e31e0b428b92e731a00488f19c1', '(1/268435456, [(32*P^3 + 192*P^2*Q + 35*P^2 + 384*P*Q^2 + 640*P*Q + 256*Q^3 + 640*Q^2 + 500*Q, 2), (C, 12)])'), 'flat=(X-P)^n;disc=0')
+cubic_z_row=('z', 3, 44, 6, 'b45429234347865c0b4c372bccccaea692692c57ae1409290c8eca3205be1a00', '(729/64, [(288*P^7 - 864*P^6*Q + 224*P^6 - 2376*P^5*Q - 56*P^5 + 5832*P^4*Q^2 - 720*P^4*Q - 5832*P^3*Q^3 + 5508*P^3*Q^2 + 134*P^3*Q - 8748*P^2*Q^3 + 1134*P^2*Q^2 - 4374*P*Q^3 - 81*P*Q^2 - 729*Q^3, 2), (C, 12)])')
+unit_hostile=('n3:D=-B3_over_Q', 'square_class=[-B3]_not_[B3]', 'odd_divisor_carrier=B3')
+xor_hostile=('volumes=(1,2,6)', 'g=(2,3,6)', 'naive_nonsquare_bits=(1,1,1)_not_XOR', 'v2_character_bits=(1,0,1)_is_XOR', 'discriminant_ratios=(4,9,36)_square_zero')
+verdict=PASS_with_unit_and_XOR_scope_repairs;all_degree_proof_audited_separately
+semantic_sha256=270c5b6217007b864fd3b99bb548bc55a5d26ff109c30126c1a9553c820a112f

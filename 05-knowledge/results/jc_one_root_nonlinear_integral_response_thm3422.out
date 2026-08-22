@@ -1,0 +1,36 @@
+ONE-ROOT NONLINEAR INTEGRAL RESPONSE -- EXACT REFEREE
+direct monomial relations checked: 34504
+direct lambda-torsion endpoint identities checked: 280
+direct unit-observer primitives checked: 50
+orbit transition formulas checked: 30576
+lambda-arrow/break formulas checked: 30576
+finite torsion-thickness formulas checked: 2268
+simple-root free-arrow controls checked: 1260
+split-root repeated-boundary packets checked: 21060
+split-root special-fiber character dimensions checked: 126360
+
+classification over K[lambda]
+e=1: every sector is K[lambda]
+e>1, d | s(e-1): K[lambda] direct-sum K[lambda,lambda^-1]/K[lambda]
+e>1, d does not divide s(e-1): K[lambda,lambda^-1]
+number of Pruefer-bearing target characters: gcd(d,e-1)
+selected-sector torsion length at z^d-depth k: k(e-1)+s(e-1)/d
+
+d=2, e=1: sectors=['free', 'free']; prufer target weights=[]; Ann([1])=0
+d=2, e=2: sectors=['laurent', 'free+prufer']; prufer target weights=[1]; Ann([1])=0
+d=2, e=3: sectors=['free+prufer', 'free+prufer']; prufer target weights=[0, 1]; Ann([1])=lambda^1
+d=4, e=3: sectors=['laurent', 'free+prufer', 'laurent', 'free+prufer']; prufer target weights=[1, 3]; Ann([1])=0
+d=3, e=7: sectors=['free+prufer', 'free+prufer', 'free+prufer']; prufer target weights=[0, 1, 2]; Ann([1])=lambda^2
+d=6, e=5: sectors=['laurent', 'laurent', 'free+prufer', 'laurent', 'laurent', 'free+prufer']; prufer target weights=[2, 5]; Ann([1])=0
+
+generic rank control: every displayed summand has K(lambda)-rank one
+localization loss: every Pruefer arm dies, while every Laurent/free line survives
+
+split-root first-window theorem (chosen root repeated)
+dim C_(s-1)/(P-beta_i)C_(s-1) is N for trivial Kummer monodromy, N-1 otherwise
+monodromy exponents: e_i-1 at the chosen root and e_j at every other root
+d=4, multiplicities=(3, 1), chosen=0: special exponents=(2, 1), components=1, dim C_s/(P-beta_i)C_s=[1, 1, 1, 2]
+d=4, multiplicities=(3, 2), chosen=0: special exponents=(2, 2), components=2, dim C_s/(P-beta_i)C_s=[1, 2, 1, 2]
+d=6, multiplicities=(5, 3, 2), chosen=0: special exponents=(4, 3, 2), components=1, dim C_s/(P-beta_i)C_s=[2, 2, 2, 2, 2, 3]
+hostile: (d;e_i,e_j)=(4;3,1), s=2 is locally resonant but globally nontrivial
+warning: a first-window dimension is not a global direct-sum or Pruefer-arm theorem

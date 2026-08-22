@@ -1,0 +1,8 @@
+== THM-3679 p-adic scalar-seam exact controls ==
+single_source_smith=((6, (7, (1, 1, 1, 1, 1, 1, 1), 2)), (7, (7, (1, 1, 1, 1, 1, 1, 1), 2)), (8, (7, (1, 1, 1, 1, 1, 1, 1), 2)))
+two_source_smith=(((6, 7), (8, (1, 1, 1, 1, 1, 1, 1, 1), 1)), ((6, 8), (8, (1, 1, 1, 1, 1, 1, 1, 1), 1)), ((7, 8), (8, (1, 1, 1, 1, 1, 1, 1, 1), 1)))
+three_source_smith=(8, (1, 1, 1, 1, 1, 1, 1, 1), 1)
+finite_ring_ledger_p3=((1, 15), (2, 135), (3, 1215), (4, 10935));cases=12651
+semantic_sha256=7afb7edb68614deebafcf4d544ffa6c4e28be94ed1b656ddb269aead70b5fb77
+CHECKS=13007
+RESULT=PASS;scope=finite-ring controls, not an LRC current lift

@@ -1,0 +1,35 @@
+THM-3244 exact reset Rips/non-Morse order certificate
+dependency_hash_checks=2
+assert_nodes=0,float_literals=0
+state_bank=4319,rank_certificate_sha256=ac7aeaf94958c04034137dbbffaf18f494485446421ad9006b6657a15b3487d7
+one_pole_nonreset_local_maxima=32
+lawful_row_cover_sizes=(4127, 4215, 4094, 4113, 4208, 4154, 4137, 4039, 4211, 4014, 4211, 4157, 4039, 4218, 3963, 4207, 4146, 4224, 4154, 4038, 4143, 4227)
+lawful_row2_row10_split=(4215,4014,3911,304,103,0)
+lawful_two_row_covering_pairs=31
+best_single_lawful_row_cover=4227_of_4318
+row_cover_certificate_sha256=cf8a66dce650ea90fbdc6333fc571506c9bb9d626a9dc2f7ccdaedd2e7ab6cdb
+row2_row10_one_pole_selector_routes_in_exact_Q_distance=PASS
+row2_row10_overlap_common_direction_histogram=((0, 3453), (1, 294), (2, 113), (3, 45), (4, 6))
+row2_row10_switch_histogram=((0, 716), (1, 3600), (2, 2))
+row2_row10_fixed_routes=(534, 182),sharp_states=((1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 7, 8), (2, 2, 3, 3, 4, 4, 5, 5, 6, 7, 8))
+row2_only_graph=(vertices=304,components=29,edges=603,cycle_rank=328)
+row10_only_graph=(vertices=103,components=6,edges=179,cycle_rank=82)
+overlap_graph=(vertices=3911,components=1,edges=18554,cycle_rank=14644)
+direction_certificate_sha256=2253c0f3b59b57966f9b2357f46c7d396fb8803b9f63bf285cbc9f105ef5388c
+constant_blend_trap_A=(0,427168643821/3372018372666225],state=(2, 2, 2, 3, 3, 4, 5, 5, 6, 7, 8)
+constant_blend_trap_B=[44548722230872990/295146673301558860624447,infinity),state=(1, 3, 3, 4, 5)
+no_constant_positive_row2_row10_blend=PASS,two_states_sharp=PASS
+reset_monotone_escape_histogram=((1, 4231), (2, 45), (3, 23), (4, 10), (5, 1), (6, 2), (7, 2), (8, 2), (9, 1), (10, 1))
+reset_monotone_sink_spectrum_radius1_to10=(88, 43, 20, 10, 9, 7, 5, 3, 2, 1)
+sharp_radius10_trap=(1, 1, 1, 1, 2, 2, 2, 3, 3, 4)
+far_states_radius_gt10=133
+two_hubs=((3,), (1, 1, 2, 2, 3, 3, 4, 5, 6, 7, 8))
+two_hub_cover_low_high_overlap=(36, 127, 30)
+max_single_hub_cover=127_of_133,two_hubs_minimal=PASS
+two_jump_radius10_monotone_routing=4319/4319
+one_pole_superlevel_H0=(births=33,finite_bars=32,max_components=19)
+largest_rank_persistence_bar=(2096, (1,), 1, (1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 8), 2097)
+low_hub_and_radius10_trap_bars=((581, (3,), 16, (1, 3), 597), (484, (1, 1, 1, 1, 2, 2, 2, 3, 3, 4), 12, (1, 1, 1, 2, 2, 2, 3, 3, 4), 496))
+merge_tree_sha256=6f6aeb54bb02aa89cc063396f25c7883dc254c7c97339f1459d1c6125ba65ce2
+scope=fixed_THM3238_bank_state_dependent_row_selector_not_one_dual_or_simplicial_contraction
+all_exact_checks=PASS

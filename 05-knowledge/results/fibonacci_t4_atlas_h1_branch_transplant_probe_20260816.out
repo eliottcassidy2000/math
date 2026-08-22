@@ -1,0 +1,18 @@
+FIBONACCI 24-STATE T4 ATLAS / H1 BRANCH TRANSPLANT EXACT PROBE
+STATUS: VERIFIED-EXACT STRUCTURAL SIDECAR TO PROVED THM-3487 + INDEPENDENTLY AUDITED
+SCRIPT: 04-computation/fibonacci_t4_atlas_h1_branch_transplant_probe_20260816.py
+OUTPUT: 05-knowledge/results/fibonacci_t4_atlas_h1_branch_transplant_probe_20260816.out
+PINS: (('THM-2622', 'ffcbd93f19d0b669c53501216c0c790ff60faf041907e75d1ab0512a4e492844'), ('THM-3339-script', '094fc254dcb7965791e59247a98f60a337725b40d169db6f3862c1da5943149b'), ('frame-line-output', '803c848ed775b2b1278fecfa1340d2f8f634abaaa2a23ea3e1f24abf76c57e48'))
+T4_ATLAS: (owner,(d1,d2,d3))->(owner,owner+d1,owner+d2,owner+d3) bijects 4*6 owner-order states with all 24 total orders, hence all labelled transitive tournaments on V4
+LAWFUL_CONNECTION: each moving affine owner step transports the ranked T4 positionwise; six-step holonomy=id; cycle_type=6^4
+BASE_PRESERVING_TRANSPLANTS_BY_H1_CLASS: (((0, 0), 0), ((1, 0), 8), ((0, 1), 8), ((1, 1), 8))
+NONZERO_TRANSPLANT: for each h in {p,q,r}, exactly 8 point gauges extend uniquely to a closed base-preserving T4-atlas conjugacy; the repaired owner holonomy is translation by h and cycle_type=12^2
+ZERO_CLASS_OBSTRUCTION: no point gauge conjugates projective return G^2=(02)(13) to identity; hence the lawful closed-section owner bundle admits zero base-preserving frame-line transplants
+GAUGE_PARTITION: the 24 initial identifications split 8+8+8 by which projective perfect matching G^2 is sent to which XOR direction
+TRANSLATION_COCHAIN_EXHAUSTION: all 4^6=4096 cochains; ((((0, 0), (6, 6, 6, 6), 4), 1024), (((1, 0), (12, 12), 0), 1024), (((0, 1), (12, 12), 0), 1024), (((1, 1), (12, 12), 0), 1024))
+LINEAR_RETURN_HOSTILE: return_linear_part=swap; fixed_sections=2; cycle_type=(6, 6, 12); outside the pure-translation H1 classifier
+STATIC_RELABELING_NO_GO: S4 element orders=(1, 2, 3, 4); full shifts have orders 6 or 12, so no single K4 vertex permutation induces the connection, although every edge step is affine
+TYPING: this is a genuine atlas of transitive T4 tournaments with a time-dependent affine connection; it is not a T6 on the six base states and gives no global Berggren-tree or physical-current transport
+SEMANTIC_SHA256: 3e19be5a6d7679656f4e476ea1cb5a3bd5944a190bab860c43a8ecbd034d8176
+SECURITY_AST_NODES_AND_FORBIDDEN: (2892, ())
+VERDICT: the branch transplant exists exactly after choosing a nonzero H1 seam class and one of eight compatible point gauges; the same datum that creates the T4-atlas conjugacy forbids every closed owner section

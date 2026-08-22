@@ -103,6 +103,15 @@ with `56` missed cells.  Exact scans through support `3` and the full
 normalized `2`-torsion cube found no full blocker; in that cube, the above
 coordinate-6 half-turn is the unique best near-blocker.
 
+The 2026-08-03 global classification completes the previously open search.
+For `n=14`, a one-hot encoding of the full `11368`-candidate system is UNSAT
+after fixing `v_1=0` and excluding zero; ungauged enumeration finds exactly
+the `14` scalar ramps.  A separate four-bit encoding, independent cell
+reconstruction, and two different SAT backends reproduce the classification.
+Both encodings also prove the analogous normalized `n=15` system UNSAT.
+These are **FINITE-EXACT** statements about the residue-cell systems.  They do
+not supply the speed-to-residue lift, endpoint handling, or LRC(14).
+
 ## Interpretation
 
 The scalar ramp identity is the finite cell version of THM-358.  If
@@ -129,8 +138,9 @@ ramifications, and only then classify genuinely non-scalar vectors.
 2. Separate unit scalar ramps from nonunit ramps in the lifted prime-grid
    variables and map the nonunit cases to the endpoint/divisibility descent.
 3. Enumerate all non-scalar full blockers for `n=14` by exact SAT/backtracking,
-   not just local search.  S371 has completed the radius-1 and radius-2
-   scalar-neighborhood scan; a global search remains open.
+   not just local search.  **Done:** two independent encodings find none, and
+   an ungauged enumeration finds exactly the 14 scalar ramps.  The same
+   normalized conclusion is finite-exact for `n=15`.
 4. For the best `n=14` near-blocker, list the `56` missed cells and search for
    a short mixed-threshold or endpoint-pressure certificate.  S371 lists the
    cells and identifies them as unique scalar-protection cells.
@@ -151,3 +161,7 @@ ramifications, and only then classify genuinely non-scalar vectors.
 - HYP-1817 and `04-computation/lonely_runner_k13_microstaircase_s363.py`.
 - Sungkawichai and Trakulthongchai, `arXiv:2604.23906`.
 - Jensen, `arXiv:2605.27941`.
+- `04-computation/lrc14_microstaircase_scalar_ramp_sat_classification_opus_20260803.py`.
+- `05-knowledge/results/lrc14_microstaircase_scalar_ramp_sat_classification_opus_20260803.out`.
+- `04-computation/lrc14_microstaircase_binary_audit_microstaircase_audit_agent.py`.
+- `05-knowledge/results/lrc14_microstaircase_binary_audit_microstaircase_audit_agent.out`.

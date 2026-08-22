@@ -1,8 +1,12 @@
 # THM-309: 5-Cycle Design in Paley Tournaments
 
-**Status:** PROVED (verified computationally for p = 7, 11, 19, 23)
+**Status:** PROVED; SYMMETRY PROOF REPAIRED AND EXTENDED TO ALL CYCLE LENGTHS
+**Verified computationally:** p = 7, 11, 19, 23 for k = 5; p = 7, 11
+for every 3 <= k <= 7
 **Found by:** opus-2026-04-05-S28
 **Verified in:** `04-computation/five_cycle_designs_s28.py`, `cycle_design_formulas_s28.py`
+**Repair companion:** `04-computation/paley_all_cycle_lengths_design_thm309.py`
+with output `05-knowledge/results/paley_all_cycle_lengths_design_thm309.out`
 
 ## Statement
 
@@ -16,11 +20,43 @@ The total count of directed 5-cycles is:
 
 **c₅ = p(p²-1)(p-2)(p-3)/160**
 
+Here cycles are counted modulo cyclic rotation, and their vertex sets are
+blocks with multiplicity when one support carries several directed cycles.
+
+More generally, for every `3<=k<=p`, the multiset of simple directed
+`k`-cycles is a **2-(p,k,lambda_k) design**, where, if `c_k` is their total
+number,
+
+**lambda_k = c_k C(k,2)/C(p,2).**
+
 ## Proof Sketch
 
-Since Aut(P_p) ≅ AGL(1, F_p) is 2-transitive on vertices, the directed 5-cycles (being invariant under automorphisms) automatically form a 2-design. The parameter λ₅ follows from counting: λ₅ = c₅ × C(5,2) / C(p,2) = c₅ × 10 / (p(p-1)/2).
+The required symmetry is on **unordered pairs**, not ordered pairs.  Let
+
+```text
+G={x -> ax+b : a is a nonzero square in F_p, b in F_p}.
+```
+
+Every element of `G` preserves the Paley orientation.  The group has order
+`p(p-1)/2`, exactly the number of unordered vertex pairs.  Given source pair
+`{x,y}` and target pair `{u,v}`, one of
+`(v-u)/(y-x)` and its negative is a square, and exactly one is: `-1` is a
+nonsquare because `p=3 mod 4`.  Choosing that ordering supplies the unique
+square-affine map between the pairs.  Thus `G` acts sharply transitively on
+unordered pairs.
+
+The multiset of simple directed `k`-cycles is invariant under `G`.  Every
+unordered pair therefore has the same cycle incidence, proving the all-`k`
+2-design statement.  Double-counting `(cycle, contained pair)` gives
+`lambda_k=c_k C(k,2)/C(p,2)` and hence the displayed `lambda_5`.
 
 The formula for c₅ comes from the Jacobi sum evaluation: the number of directed 5-cycles through a fixed vertex is c₅ × 5/p, and this equals a sum of Legendre symbol products over 4-tuples of field elements, which evaluates to the given closed form via the Hasse-Davenport relation.
+
+The earlier proof incorrectly identified the automorphism group with the full
+`AGL(1,F_p)` and invoked 2-transitivity.  Nonsquare multipliers reverse the
+tournament, so that premise is false.  The sharp unordered-pair action above
+is the precise repair and is also why even cycle lengths require no new
+character-sum identity once their total counts are known.
 
 ## Relation to 3-Cycle Design
 
@@ -48,6 +84,20 @@ At p = 7, the 5-cycles have extraordinary additional structure:
 - Each complement pair (the 2 vertices NOT in a 5-cycle) appears exactly 2 times
 
 At p ≥ 11, the 5-cycles form only a 2-design (the 3-design and 4-design properties fail).
+
+## Exact repair audit
+
+The repair companion enumerates simple cycles modulo rotation without floating
+point or third-party packages.  It checks the sharp unordered-pair orbit for
+`p=7,11,19,23`, all lengths `3..7` for `p=7,11`, and the existing 5-cycle
+formulas for all four primes.  Ordinary and optimized runs byte-match the
+stored transcript.  Script/output/semantic SHA-256 are
+`40182a73db81a1ce9991eaa2fb7d4fbb5593f4b79430be19e491c35cfe9f3730`,
+`478d2d54446b2b70c0a208bb66b915a9515b759feec2ca56acccd4b80032c94e`,
+and `81e1de44977eb1757a0bb6fe2a9e9cb75a010b7e53b493ee4e49147f117fc5c4`.
+
+This is an unordered-pair multidesign statement.  It does not assert uniform
+incidence on ordered pairs or uniform multiplicity on every `k`-vertex support.
 
 ## Non-Paley Comparison
 

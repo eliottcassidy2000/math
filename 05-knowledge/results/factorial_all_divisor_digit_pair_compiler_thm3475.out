@@ -1,0 +1,22 @@
+THM-3475 FACTORIAL ALL-DIVISOR DIGIT PAIR COMPILER EXACT AUDIT
+dependencies=factorial_multiplace_newton_degree_barcode_thm3152.py:f804d3996abe4df981dbf7db877af4aeca9218df64b0ac382af876a3cdca15a0;factorial_predecessor_digital_skeleton_audit_thm3161.py:0a9da30ffd1462bc2f6ca3d62ad4e7d71b82afe02099931542928105704fd318
+odd_universe=3<=N<=160 every odd prime p|N pairs=209
+odd_recurrences=PASS anchor_Z_units=PASS actual_suffix_hulls=PASS
+odd_semantic_sha256=1fe62de92a499ecaa9eefd4aaca90ae77330f4857fd33103f15f9b848c116142
+binary_universe=even 2<=N<=200 cells=100
+binary_parity_Z=PASS odd_anchor_hulls=PASS zero_coefficients=((4, 2),)
+binary_semantic_sha256=c1a56e649a584069678c9e275a8a28b69d80e359f27cbc64aef36f078daaeed8
+pair_ledgers=309 digit_vs_actual_blocks_and_degrees=PASS
+pair_semantic_sha256=02915c06dcb6569bbd7a19193e38b964a4e35320ec3368ff6177958492d5c202
+census_universe=38 seven-exit residuals 2501<=d<=2600
+census_schema=(d,((p,((str_slope,cap,den),...),post_count,preview),...),final_degrees)
+census_preview=full_sorted_tuple_if_count<=30_else_(first12,last12)
+census_serialization=json.dumps(tuple(records),separators=(',',':'),sort_keys=True).encode('ascii')
+census_closed=33 survivors=((2516, (503, 1006, 1509, 2012)), (2564, (466, 699, 1165, 1631, 1864, 2097, 2330)), (2571, (2056,)), (2576, (103, 206, 309, 412, 515, 618, 721, 824, 927, 1030, 1133, 1236, 1339, 1442, 1545, 1648, 1751, 1854, 1957, 2060, 2163, 2266, 2369, 2472)), (2586, (47, 141, 188, 235, 282, 329, 2209, 2256, 2303, 2350, 2397, 2444, 2491, 2538)))
+census_semantic_sha256=27c1c59959a58054a3420d0fed7944da7a3ce480ad91a00e9e753862af83efc7 independent_sha256=e019eb61019620cfaffa8b5bb5769e8d171f08fb5ffeb2153f209c0128d42115
+hostile_unclipped_N6_p3_G_hull=((0, 0), (3, 2), (6, 5)) pair_blocks=(('2/3', 3, 3),)
+hostile_nondivisor_N5_p3_binomial=(actual,predicted)=(1, 0)
+hostile_raised_prefix_raw=((0, 0), (1, 0), (4, 2), (5, 4)) raised=((0, 2), (1, 0), (4, 2), (5, 4)) suffix_preserved=PASS
+positive_controls=planted(v+1,v)_degree_one_retained
+semantic_sha256=886f2bcd66711a44668b003717dd4f39643fc0e9cb0b694708b8670eeaf21499
+STATUS=PASS

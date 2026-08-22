@@ -1,0 +1,12 @@
+Cyclic weighted Keller family: all-grade z-primitivity remainder
+status=EXACT_SYMBOLIC_PROOF_COMPANION;scope=THM3448_cyclic_family
+symbolic=(lambda_gamma2,lambda_wgamma,lambda_gamma3,lambda_H_ell)=('-P*n**2 + 2*P*n + 1', '1', 'P**2*n**3 - 3*P**2*n**2 + 3*P**2*n - 4*P*n + 6*P + 4*Q*n - 4*Q + 1', '(2*P**2*ell**3 + 6*P**2*ell**2 + 6*P**2*ell + 4*P**2 + 4*P*ell**2 + P*ell - 2*P + 8*Q*ell + 8*Q)/2')
+direct_remainder_samples=((1, 3, 2, '3*P*(6*P + 1)/2', '8a2aa623e222c0b53b16f3d5f15b2dd7d1601a5bf0d046c59c6c46331b5a037f'), (2, 4, 3, '4*(7*P**2 + 2*P + 3*Q)', 'd3cd1f721885f710e453d4ae67f91aad8be25ecfc51745d57898fc066c0d33aa'), (3, 5, 4, '(130*P**2 + 37*P + 32*Q)/2', 'f305b6cc6cf5d6c94cfb0ba3c4410e2d64a753d6c2c8057b2979196a756c93aa'), (5, 7, 6, '(434*P**2 + 103*P + 48*Q)/2', '1d33ee9cdd81bc563319bf501759e5ed011859f259d002bcd0a169f7742b7065'), (9, 11, 10, '(2002*P**2 + 331*P + 80*Q)/2', 'f610a3a1396a4c3380d10246848264b9c4e99a87b1bb95fea0b8c968902c88a5'), (17, 19, 18, '(11666*P**2 + 1171*P + 144*Q)/2', 'c01509d4eb43832acb0619ac65d545004941586176a07b4e25c4449bd91f55c9'), (30, 32, 31, '2*(14896*P**2 + 907*P + 62*Q)', 'f30192ac46ae76426cccd7c9cf3f9bbf02c9dc9128af1ddca2af4cd76342a2ba'))
+direct_remainder_range=ell_1_through_30;ledger_sha256=0e25044c272b258773cb0c5ce3f668d0d5cda9549a04d8444ddb1b741cab6455
+hostile=P=Q=0_makes_every_tested_remainder_zero;generic_polynomial_nonvanishing_is_required
+verdict=('for_every_ell>=2_the_z_numerator_remainder_has_exact_degree_n-1', 'therefore_z_is_not_in_the_target_base_field', 'S_n_point_stabilizer_maximality_then_gives_K(z)=K(w)', 'ell=1_is_checked_separately_and_is_also_primitive', 'all_x_y_z_views_in_the_cyclic_weighted_family_share_the_inverse_discriminant_square_class', 'for_odd_ell=2m-3_the_even_C_discriminant_order_still_misses_the_effective_C_component', 'no_historical_E_m_identification;no_map_classification;no_JC2_or_LRC_consequence')
+semantic_sha256=6f06d5042a944f817b23e5bc43e3d70f74098ed4640e20eb95a638bec575cbf0
+script_sha256_lf=0c74f0546444ef28265800e89bbcd0c1161eadfdd75599b6707428c22853424b
+reproducibility=no_assert_truth_gates;all_checks_survive_python_O;no_randomness;no_elapsed_fields
+commands=python -B 04-computation/jc_weighted_cyclic_z_primitivity_all_m_probe_20260816.py;python -B -O 04-computation/jc_weighted_cyclic_z_primitivity_all_m_probe_20260816.py
+PASS

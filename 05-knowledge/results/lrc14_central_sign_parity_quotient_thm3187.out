@@ -1,0 +1,13 @@
+THM-3187 central-sign parity quotient exact control
+pauli_center=-I4
+monomial_parity_checks=495
+tensor_basis_checks=341
+symmetric_basis_checks=70
+exterior_basis_checks=16
+exterior_degree_dimension_central_sign=((0, 1, 1), (1, 4, -1), (2, 6, 1), (3, 4, -1), (4, 1, 1))
+hermitian_gram_central_sign=+1
+jointly_coshifted_correlation_sign=+1
+fixed_reference_correlation_sign=-1
+multidegree_checks=36
+scope=parity_necessity_not_physical_edge_or_LRC_closure
+all_exact_checks=PASS

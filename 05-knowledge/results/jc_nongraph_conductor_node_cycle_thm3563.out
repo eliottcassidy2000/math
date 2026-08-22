@@ -1,0 +1,7 @@
+THM-3563 exact node-cycle controls
+universe=QQ(c,kappa,epsilon,h0)/(epsilon^2+3,h0^3-8*epsilon*c); characteristic_zero; c*kappa!=0
+laurent_even_packet=A,B,d; double_curve=K; special_points=6; source_nodes=3
+primitive_even_term=24*c^2/h^4; forced_odd_difference=16*kappa*c^2/h^3
+node_pairs=(0,5),(1,2),(3,4); inverse_cube_signs=+,-,+
+cycle_consequence=3*r=0; hostile_minor_certificate=unit_but_nonclosed
+truth_gates=45; status=PROVED_VERIFIED_EXACT_INDEPENDENTLY_AUDITED

@@ -2,10 +2,20 @@
 id: HYP-9031
 title: "The D5 dictionary: LRC word-current and JC flux as explicit H^1 classes -- anti-parallel quantifiers, twin orientation sidecars"
 status: >
-  OPEN (a typed cross-domain GRAMMAR with explicit classes on both
-  sides, three falsifiable predictions, and named hostile controls --
-  NOT a reduction; per the bridge discipline this file names map,
-  preserved predicate, loss, sidecar, and cheapest test for each entry).
+  OPEN only as a typed cross-domain GRAMMAR. The former direct-map reading is
+  REFUTED: THM-2542 constructs an F13-valued graph-Cech class, while C91 is
+  its mapping-torus carrier length, not a mixed Z/91 coefficient class.
+  Berggren ancestry has zero graph H1, and the odd LRC coefficients admit no
+  nonzero homomorphism to or from the JC S3, V4, or characteristic-zero
+  response carriers. THM-3354 proves the direct-map no-go and records the
+  corrected comparison cospan as DEFINITIONAL bookkeeping. THM-3431 now
+  proves a secondary refinement: a deck-group H1 transgression on the LRC
+  side and a vertical local-H1 injection on the selected one-root JC side,
+  with zero additive cross-maps. THM-3496 adds one sharply marked
+  coefficient-changing exception: the graph seam maps isomorphically to the
+  mu_13 Kummer line of an algebraically closed punctured normal slice and
+  commutes with degree pullback, but it stops before additive flux and every
+  physical/Keller predicate. This file is NOT a reduction.
 source: opus-2026-07-26 (successor to the shape-confirmation in
   07-reflections/spectral-vs-geometric-rank-why-LRC-stays-open-and-JC-fell-opus-20260726.md)
 related:
@@ -13,10 +23,72 @@ related:
   - THM-2504-endpoint-tournament-no-go-and-root-chart-holonomy
   - THM-2337 / THM-2356 / THM-2334 (word-current, Bockstein, 169 twists)
   - THM-2389 / THM-2406 / THM-2463 / THM-2468 (flux, pole-descent, square lifts)
+  - THM-3496-marked-graph-kummer-degree-square-and-finite-coefficient-frobenius-flux-extinction
   - HYP-9030-keller-degree-semigroup
 ---
 
 # HYP-9031 -- the D5 dictionary, written out
+
+## TYPE CORRECTION -- 2026-08-12
+
+The historical proposal below overidentified objects which merely share an
+obstruction/realization grammar. The current typed facts are:
+
+- THM-2542 proves [g]=7a in H^1(C_7^graph;F_13). Its skew product is one
+  cycle of length 91, but that orbit length does not supply a nonzero C7
+  coefficient or a primitive mixed Z/91 class.
+- THM-3336's Gaussian charges live on the multiplication group. Their pullback
+  to Berggren endpoint paths is a coboundary because the ancestry graph is a
+  tree (THM-3345).
+- The sporadic S3 Galois-closure torsor, quartic V4/mu2 Kummer plane, and
+  Hamiltonian response/de Rham module are three different JC carriers. None
+  is a common "JC flux" object.
+- Every coefficient homomorphism between C13 or C91 and S3 or V4 is trivial
+  in both directions; the same holds between those finite odd groups and the
+  additive characteristic-zero response module.
+
+Therefore there is no unmarked map between the original geometric sites and
+no additive LRC-class-to-Hamiltonian-flux map in the present canon.  THM-3496
+does construct a marked coefficient-changing map to the selected divisor's
+`mu_13` normal Kummer line; its algebraically closed unit-root hypothesis,
+oriented uniformizer, deck generator, and exponent-one normalization are all
+load-bearing.  The broader lawful survivor is a **typed comparison cospan** recording site,
+coefficient object, distinguished class/observer, target predicate, lost
+information, missing realization sidecar, and quantifier. The historical
+same-H1 wording below is retained only for provenance and must not be cited as
+current truth. THM-3354 gives the proved direct-map no-go, the integral versus
+generic response split, and the exact hostile controls. THM-3431 proves the
+strongest current secondary replacement: chart holonomy transgresses to the
+degree-13 cover primitive's deck defect, a selected one-root JC observer
+embeds as `[lambda^(-q)]` in vertical local cohomology, and the two classes
+still admit no nonzero additive map in either direction. Their shared
+DeathBar record is explicitly lossy and has no universal-property claim.
+
+## 2026-08-16 refinement -- the marked normal Kummer line is reachable
+
+[THM-3496](../../01-canon/theorems/THM-3496-marked-graph-kummer-degree-square-and-finite-coefficient-frobenius-flux-extinction.md)
+proves the normalized map
+
+```text
+[g] |-> (sum_i g_i)[y^13=lambda]
+```
+
+from the oriented seven-chart graph line to the `mu_13` Kummer line of one
+oriented punctured formal normal slice.  Degree-`k` graph pullback matches
+`lambda=t^k`; degree thirteen kills and degree fourteen restores both sides.
+This is not a reversal of THM-3354: changing coefficients to `mu_13` and
+marking the normal parameter creates a new correspondence object.  There are
+twelve nonzero unmarked scalar choices, and over `Q((lambda))` unit classes
+such as `[2]` make the full Kummer group larger than the valuation line.
+
+The same theorem sharpens the target obstruction.  For `P=x+x^2z`, the
+nonzero characteristic-zero unit response becomes exact over `Z/13^r` for
+every finite `r`.  This is finite-coefficient extinction, not a universal
+Bockstein or derived-completion no-go.  The physical word-current-to-chart
+arrow and the Kummer-to-additive-flux arrow both remain open/blocked in their
+previous precise senses.
+
+## Historical proposal -- superseded as a direct map
 
 Agent D5 (opus reflection, 2026-07-26) predicted that the two hardest
 live frontiers are the *same* `H^1`-shape with different coefficient

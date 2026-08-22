@@ -1,0 +1,9 @@
+{
+ "R": 256,
+ "D0": 1,
+ "err_dyn": "CLOSED",
+ "witness_equal": true,
+ "parity_fires": 0,
+ "match": true,
+ "trace_rows": 256
+}

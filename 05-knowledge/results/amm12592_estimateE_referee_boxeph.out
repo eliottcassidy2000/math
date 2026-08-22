@@ -1,0 +1,378 @@
+AMM 12592 -- ESTIMATE-E ENDGAME HOSTILE REFEREE (boxeph, 2026-08-03)
+Referee of lanes D1 (bulk-rule sweep), D2 (E-lin theorem), D3 (golden bound).
+Script: 04-computation/amm12592_estimateE_referee_boxeph.py
+Ledger: 05-knowledge/results/amm12592_estimateE_referee_ledger_boxeph.json
+Stages in order: quick, witD2, wit1024, wit2048a, wit2048b, wit4096,
+proofs, g3x+fix1.  FINAL REPORT + canon paragraph at the end.
+(Note: two [REFUTED] lines inside stage 'proofs' are resolved in stage
+g3x/fix1 -- eps_phi was this referee's own arithmetic slip, corrected;
+the G3 seeded rows are the band-truncation finding, diagnosed in g3x.)
+
+==============================================================================
+STAGE quick -- D1 witness files: sha256, reconstruction, fresh streaming verification (R=256 desc1 D0=0, R=512 tr15 D0=4) + negative control + cross-check vs prior referee
+==============================================================================
+  [PASS] sha256(amm12592_witness_R256_bulk_desc1_D0_0_boxeph.json) matches D1 ledger  -- 5950bd4287d49922
+  [PASS] sha256(amm12592_witness_R512_bulk_tr15_D0_4_boxeph.json) matches D1 ledger  -- 311975f69412f09e
+  [PASS] sha256(amm12592_witness_R1024_bulk_desc_D0_14_boxeph.json) matches D1 ledger  -- 81391349e842d808
+  [PASS] W-adm [R256 desc1 D0=0] all 256 blocks in Lucas box + parity
+  [PASS] W-id  [R256 desc1 D0=0] epoch identity == (1-x)^(R-1) (fresh streaming t-substitution)
+  [PASS] W-x2  [R256 desc1 D0=0] identity at x=2 exact
+  [PASS] W-unit[R256 desc1 D0=0] Delta_i(1) = +-1 every row
+  [PASS] W-traj[R256 desc1 D0=0] ballot trajectory legal, ends 0
+  [PASS] W-debt[R256 desc1 D0=0] ballot debt = (R-2)/2 = 127  -- got 127
+      [R256 desc1 D0=0] ok=True  (0.1s)
+  [CONFIRMED] D1 NEW RECORD: R=256 closes at D0=0 (desc1) -- witness verifies
+  [PASS] W-adm [R512 tr15 D0=4] all 512 blocks in Lucas box + parity
+  [PASS] W-id  [R512 tr15 D0=4] epoch identity == (1-x)^(R-1) (fresh streaming t-substitution)
+  [PASS] W-x2  [R512 tr15 D0=4] identity at x=2 exact
+  [PASS] W-unit[R512 tr15 D0=4] Delta_i(1) = +-1 every row
+  [PASS] W-traj[R512 tr15 D0=4] ballot trajectory legal, ends 0
+  [PASS] W-debt[R512 tr15 D0=4] ballot debt = (R-2)/2 = 255  -- got 255
+      [R512 tr15 D0=4] ok=True  (0.6s)
+  [CONFIRMED] D1 NEW RECORD: R=512 closes at D0=4 (tr15) -- witness verifies
+  [PASS] negative control: +2 in-box corruption caught by fresh identity check
+  [PASS] cross-check: prior referee verify_witness agrees on R256 desc1 (ok=True)
+  [PASS] fresh floor engine: defining inequalities on hostile grid incl. 4095/16384/32767
+quick done; FAILS so far: ['W-id  [NEGCTRL] epoch identity == (1-x)^(R-1) (fresh streaming t-substitution)', 'W-x2  [NEGCTRL] identity at x=2 exact']
+
+==============================================================================
+STAGE witD2 -- D2 linear-slack closures (256,16) and (512,32): reconstruct via certified engine, verify with FRESH verifier (3rd independent check after engine asserts + C7)
+==============================================================================
+  [PASS] W-adm [R256 ruleA D0=16 (eps=1/16)] all 256 blocks in Lucas box + parity
+  [PASS] W-id  [R256 ruleA D0=16 (eps=1/16)] epoch identity == (1-x)^(R-1) (fresh streaming t-substitution)
+  [PASS] W-x2  [R256 ruleA D0=16 (eps=1/16)] identity at x=2 exact
+  [PASS] W-unit[R256 ruleA D0=16 (eps=1/16)] Delta_i(1) = +-1 every row
+  [PASS] W-traj[R256 ruleA D0=16 (eps=1/16)] ballot trajectory legal, ends 0
+  [PASS] W-debt[R256 ruleA D0=16 (eps=1/16)] ballot debt = (R-2)/2 = 127  -- got 127
+      [R256 ruleA D0=16 (eps=1/16)] ok=True  (0.1s)
+  [CONFIRMED] D2 sweep closure (R=256, D0=16) is a genuine witness
+  [PASS] W-adm [R512 ruleA D0=32 (eps=1/16)] all 512 blocks in Lucas box + parity
+  [PASS] W-id  [R512 ruleA D0=32 (eps=1/16)] epoch identity == (1-x)^(R-1) (fresh streaming t-substitution)
+  [PASS] W-x2  [R512 ruleA D0=32 (eps=1/16)] identity at x=2 exact
+  [PASS] W-unit[R512 ruleA D0=32 (eps=1/16)] Delta_i(1) = +-1 every row
+  [PASS] W-traj[R512 ruleA D0=32 (eps=1/16)] ballot trajectory legal, ends 0
+  [PASS] W-debt[R512 ruleA D0=32 (eps=1/16)] ballot debt = (R-2)/2 = 255  -- got 255
+      [R512 ruleA D0=32 (eps=1/16)] ok=True  (0.5s)
+  [CONFIRMED] D2 sweep closure (R=512, D0=32) is a genuine witness
+witD2 done; FAILS: none
+
+==============================================================================
+STAGE wit1024 -- R=1024 desc D0=14 (D1 record): full fresh streaming verification
+==============================================================================
+  [PASS] W-adm [R1024 desc D0=14] all 1024 blocks in Lucas box + parity
+  [PASS] W-id  [R1024 desc D0=14] epoch identity == (1-x)^(R-1) (fresh streaming t-substitution)
+  [PASS] W-x2  [R1024 desc D0=14] identity at x=2 exact
+  [PASS] W-unit[R1024 desc D0=14] Delta_i(1) = +-1 every row
+  [PASS] W-traj[R1024 desc D0=14] ballot trajectory legal, ends 0
+  [PASS] W-debt[R1024 desc D0=14] ballot debt = (R-2)/2 = 511  -- got 511
+      [R1024 desc D0=14] ok=True  (3.1s)
+  [CONFIRMED] D1 NEW RECORD: R=1024 closes at D0=14 (desc) => attainment constant 14 for n <= 2047 rests on a fully verified witness
+wit1024 done; FAILS: none
+
+==============================================================================
+STAGE wit2048a -- BIG-R END-TO-END: rerun desc1 R=2048 D0=36 (D1 record, previously spot-checked only), rebuild all 2048 blocks, full fresh streaming verification
+==============================================================================
+  [PASS] desc1 R=2048 D0=36 rerun reproduces D1 ledger (CLOSED@1271, debt 1023, spots pass)  -- 5s
+  [PASS] W-adm [R2048 desc1 D0=36] all 2048 blocks in Lucas box + parity
+  [PASS] W-id  [R2048 desc1 D0=36] epoch identity == (1-x)^(R-1) (fresh streaming t-substitution)
+  [PASS] W-x2  [R2048 desc1 D0=36] identity at x=2 exact
+  [PASS] W-unit[R2048 desc1 D0=36] Delta_i(1) = +-1 every row
+  [PASS] W-traj[R2048 desc1 D0=36] ballot trajectory legal, ends 0
+  [PASS] W-debt[R2048 desc1 D0=36] ballot debt = (R-2)/2 = 1023  -- got 1023
+      [R2048 desc1 D0=36] ok=True  (21.8s)
+  [CONFIRMED] D1 NEW RECORD: R=2048 closes at D0=36 (desc1) -- now FULLY verified (not just spots)
+wit2048a done; FAILS: none
+
+==============================================================================
+STAGE wit2048b -- BIG-R END-TO-END for D2's sweep: plain rule A R=2048 D0=128 (eps=1/16), full fresh streaming verification
+==============================================================================
+  [PASS] rule A R=2048 D0=128 rerun reproduces D2 sweep (CLOSED@1237, debt 1023)  -- 2s
+  [PASS] W-adm [R2048 ruleA D0=128] all 2048 blocks in Lucas box + parity
+  [PASS] W-id  [R2048 ruleA D0=128] epoch identity == (1-x)^(R-1) (fresh streaming t-substitution)
+  [PASS] W-x2  [R2048 ruleA D0=128] identity at x=2 exact
+  [PASS] W-unit[R2048 ruleA D0=128] Delta_i(1) = +-1 every row
+  [PASS] W-traj[R2048 ruleA D0=128] ballot trajectory legal, ends 0
+  [PASS] W-debt[R2048 ruleA D0=128] ballot debt = (R-2)/2 = 1023  -- got 1023
+      [R2048 ruleA D0=128] ok=True  (23.4s)
+  [CONFIRMED] D2 sweep at R=2048 eps=1/16 is a genuine witness (first full verification of a D2 closure beyond R=512)
+wit2048b done; FAILS: none
+
+==============================================================================
+STAGE wit4096 -- R=4096: desc1 D0=87 (D1 record) AND plain D0=89 (growth-table record): rebuild + full fresh verification
+==============================================================================
+  [PASS] desc1 R=4096 D0=87 rerun reproduces D1 ledger (CLOSED@2537, debt 2047, spots pass)  -- 35s
+  [PASS] W-adm [R4096 desc1 D0=87] all 4096 blocks in Lucas box + parity
+  [PASS] W-id  [R4096 desc1 D0=87] epoch identity == (1-x)^(R-1) (fresh streaming t-substitution)
+  [PASS] W-x2  [R4096 desc1 D0=87] identity at x=2 exact
+  [PASS] W-unit[R4096 desc1 D0=87] Delta_i(1) = +-1 every row
+  [PASS] W-traj[R4096 desc1 D0=87] ballot trajectory legal, ends 0
+  [PASS] W-debt[R4096 desc1 D0=87] ballot debt = (R-2)/2 = 2047  -- got 2047
+      [R4096 desc1 D0=87] ok=True  (174.1s)
+  [CONFIRMED] D1 NEW RECORD: R=4096 closes at D0=87 (desc1) -- now FULLY verified
+  [PASS] plain R=4096 D0=89 rerun reproduces growth table (CLOSED@2537, debt 2047)  -- 16s
+  [PASS] W-adm [R4096 ruleA D0=89] all 4096 blocks in Lucas box + parity
+  [PASS] W-id  [R4096 ruleA D0=89] epoch identity == (1-x)^(R-1) (fresh streaming t-substitution)
+  [PASS] W-x2  [R4096 ruleA D0=89] identity at x=2 exact
+  [PASS] W-unit[R4096 ruleA D0=89] Delta_i(1) = +-1 every row
+  [PASS] W-traj[R4096 ruleA D0=89] ballot trajectory legal, ends 0
+  [PASS] W-debt[R4096 ruleA D0=89] ballot debt = (R-2)/2 = 2047  -- got 2047
+      [R4096 ruleA D0=89] ok=True  (168.3s)
+  [CONFIRMED] growth-law table: plain D0*(4096) = 89 close-side now FULLY verified (prior referee's open obligation at 4096 discharged)
+wit4096 done; FAILS: none
+
+==============================================================================
+STAGE proofs -- adversarial re-derivation of every PROVED claim of D2 (A/B/C) and D3 (G1/G2/G3/L*)
+==============================================================================
+
+-- D2 Theorem A (LIFT)
+  [CONFIRMED] Theorem A algebra: lift delta'_k = delta_k + delta_(k-1) stays in box, keeps parity, keeps the polynomial (400 random blocks, d <= 40)
+  [CONFIRMED] Theorem A on data: R=128 ruleB D0=0 witness lifted +1 verifies at profile D0=1 (fresh verifier)
+  [CONFIRMED] Theorem A on data: R=128 ruleB D0=0 witness lifted +3 verifies at profile D0=3 (fresh verifier)
+
+-- D2 Theorem B (i_feed, eps*, survival)
+  [CONFIRMED] Theorem B(B1): i_feed = floor((R(1-g)-D0)/(1+g)) == brute Beatty scan on 75 hostile points incl. non-dyadic R
+  [NOTE] i_feed definition audit (engine last-fed-row vs D2 formula): {'R128_D00': (32, 32), 'R128_D08': (27, 27), 'R256_D016': (54, 54), 'R512_D032': (109, 108), 'R512_D00': (107, 128)}
+  [CONFIRMED] FINDING: the engine's true last fed row equals D2's i_feed + 1 whenever the (delta=1) second feed branch fires past it (transient note sec.7 uses the smaller d_i+i+1 <= R-1 convention). Theorem B's inequality chain is proved for rows <= i_feed(D2) only; the extra fed row is NOT covered by the survival statement as worded ('before the feed stops'), though at eps >= 1/32 the T6b bound clears it with Theta(R) margin, so nothing downstream breaks  -- offsets last_fed - i_feed: {'R128_D00': 0, 'R128_D08': 0, 'R256_D016': 0, 'R512_D032': 1, 'R512_D00': -21}
+  [CONFIRMED] Theorem B(B2) reduction: (2g-1)R + 2D0 >= (R(1-g)-D0)/(1+g) <=> D0(3+2g) >= 2R(1-g-g^2) (300 random rational g, exact Fractions)
+  [CONFIRMED] eps* = 2(1-g-g^2)/(3+2g) in (0.0211736, 0.0211747), < 1/32  (exact Fractions from the g-sandwich)  -- eps* in (0.0211736514, 0.0211746593)
+  [CONFIRMED] g sandwich: 627035/2^20 < g < 627036/2^20 = 156759/262144 (fresh 5^a vs phi^(2M) integer test, M = 2^20)
+  [REFUTED  ] constant ordering eps_phi = 1/phi - g < eps* (exact sqrt5 + g sandwiches)  -- eps_phi <= 0.520046814 < 0.021173651
+  [CONFIRMED] window claims: d_0 in (R/2, 2R/3) at D0=ceil(R/32) for ALL 27 <= R < 4000; at ceil(R/16) for ALL 162 <= R < 4000 (exact floor)  -- sub-27 exceptions: [4, 6, 7, 9, 12]
+  [CONFIRMED] Theorem B instantiated: 2d_0 - R + 2 > i_feed + 1 (one PAST the extra fed row) at eps = 1/32, 1/16, all dyadic R = 128..32768
+
+-- D2 Theorem C (one-step lemmas)
+  [CONFIRMED] C-A binomial ratio identities (3 laws, 500 random (d,t))
+  [CONFIRMED] C-N negativity invariance (300 random negative junk one-steps, plain clamp)
+  [CONFIRMED] C-A cap-ratio damping inequality (exact Fractions, all overflowing interior cells)
+  [CONFIRMED] C-F front freeze (hypotheses => support does not advance)
+
+-- D3 Lemma G1 (alternation-transport calculus)
+  [CONFIRMED] G1-a transport identity (400 random, both kernels)
+  [CONFIRMED] G1-c zero-sum law
+  [CONFIRMED] G1-c defect-mass law L1 = 2 x one-signed mass
+  [CONFIRMED] G1-d ratio law |(K*j)_c| = (rho-1)^(1+delta) a_c (rho = 2..5, both kernels); rho = 2 marginal for (1,2,1)
+  [CONFIRMED] G1-e counterexample: |j| <= M (const) but |K*j| = 2M interior >> |D^2 M| = 0 -- naive envelope lemma is FALSE as D3 records
+
+-- D3 Lemma G2 (initial data: sign/support/convexity/crossover)
+  [CONFIRMED] G2 at (512,5),(1024,15),(2048,38) + NON-DYADIC even control (1000,0): support EXACTLY [0,R-2-d0], signs (-1)^(d-t), zero concave cells, single ratio-2 flip within 1 cell of t2 = 2d-R+3  -- [(512, 5, True, True, 0, 112, 113, 113), (1024, 15, True, True, 0, 232, 233, 233), (2048, 38, True, True, 0, 478, 479, 479), (1000, 0, True, True, 0, 196, 197, 197)]
+  [NOTE] odd-R control (1001,0): support = [0,400], R-2-d = 401 -- boundary cell in-box (G2/T4b odd-R branch; dyadic epochs unaffected)
+
+-- D3 Lemma G3 (super-pair death certificate), via FRESH plain replay + FRESH chain
+  [CONFIRMED] fresh plain replay reproduces all 7 canonical outcomes (die 61/121/250, close 81/159/312/639) -- 4th independent implementation agrees
+  [REFUTED  ] G3 (512,4): FRESH noseed chain validates at row 15 predicting death 121 EXACTLY (and not at row 14); FRESH seeded chain (every admissible continuation) validates at row 25 predicting 121  -- {'noseed_valid': True, 'noseed_pred': 121, 'noseed_prev_invalid': False, 'seeded_valid': False, 'seeded_pred': None, 'seeded_prev_invalid': True}
+  [REFUTED  ] G3 (1024,14): FRESH noseed chain validates at row 21 predicting death 250 EXACTLY (and not at row 20); FRESH seeded chain (every admissible continuation) validates at row 42 predicting 250  -- {'noseed_valid': True, 'noseed_pred': 250, 'noseed_prev_invalid': False, 'seeded_valid': False, 'seeded_pred': None, 'seeded_prev_invalid': True}
+  [CONFIRMED] G3 hostile control (512,5) CLOSED: same-sign front pair with min > Theta' fires on ZERO rows (fresh scan)  -- outcome {'status': 'CLOSED', 'capture_row': 312}
+
+-- D3 tau = 2/3 threshold
+  [CONFIRMED] L*(d) - ceil(2d/3) in {0,1} at 7 degrees (fresh)  -- [(60, 40, 0), (100, 67, 0), (153, 102, 0), (306, 204, 0), (612, 408, 0), (1262, 842, 0), (2538, 1692, 0)]
+
+-- D2 Theorem D / conditional-bound arithmetic
+  [CONFIRMED] conditional bounds: 1 + g + 1/16 < 435287/262144 = 1.66049 and 1 + g + 1/32 < 427095/262144 = 1.62924 (given the verified g sandwich)
+
+proofs done; FAILS: none
+
+==============================================================================
+STAGE g3x -- G3 seeded-chain audit: band truncation vs the note's full-layer F3 majorant
+==============================================================================
+  [CONFIRMED] (512,4): reproducing D3's CODE (band-truncated psi): seeded chain validates at row 25 predicting 121 -- discrepancy with the full-layer run is exactly the band truncation  -- valid=True pred=121
+  [CONFIRMED] (512,4): with the note's FULL-layer F3 majorant the seeded chain first validates at row (46, 121) (death still predicted exactly)  -- (46, 121)
+  [CONFIRMED] (1024,14): reproducing D3's CODE (band-truncated psi): seeded chain validates at row 42 predicting 250 -- discrepancy with the full-layer run is exactly the band truncation  -- valid=True pred=250
+  [CONFIRMED] (1024,14): with the note's FULL-layer F3 majorant the seeded chain first validates at row (95, 250) (death still predicted exactly)  -- (95, 250)
+  [NOTE] VERDICT G3: the noseed (NI-class) certificates are fully confirmed; the 'every admissible continuation' seeded certificates in D3's ledger use a band-truncated psi that does NOT implement the note's F3 recursion -- the full-layer majorant validates only later (see rows above).  G3 the THEOREM is sound (full-layer psi); the ledger's seeded validation ROWS and psi-margin values are artifacts of the truncation and must be restated from the full-layer runs.
+g3x done; FAILS: none
+==============================================================================
+STAGE fix1 -- corrected eps_phi ordering; ledger-count audits; plain (2048,38) closure via the FRESH replay (4th implementation)
+==============================================================================
+  [CONFIRMED] constant ordering eps_phi = 1/phi - g < eps* < 1/32 (exact sqrt5 + g sandwiches; fixes referee's own first-pass arithmetic slip)  -- eps_phi in (0.020045860, 0.020046814), eps*_lo = 0.021173651
+  [CONFIRMED] D2 sweep ledger: 23 runs (16 primary eps=1/32,1/16 dyadic 128..16384 + 7 probes), ALL CLOSED, debt (R-2)/2 exact in every record  -- 23 records, 16 primary
+  [CONFIRMED] D2 feed-end certificates: 16/16 records all six N/C/W/F/D/DL flags true (D2 note sec. 7 says '14/14' -- typo for 16/16, JSON is authoritative)
+  [CONFIRMED] D3 G3 ledger: 6 death certificates + 5 controls present; controls fire on zero rows
+  [NOTE] D1 table cell 'desc1 @ R=128 D0=0' has NO desc1 run in the D1 ledger (.out has tr15/plain only at 128) -- immaterial to best-of-family (plain closes at 0) but the cell is unevidenced.
+  [NOTE] transient-theorem note sec. 7 gives i_feed(128,0) = 31 via the d_i+i+1 <= R-1 convention; the certified engine actually feeds at row 32 (first branch d_i+i <= R-1) and can feed once more at i_feed+1 via the delta=1 band (seen at (512,32): row 109). D2's formula matches the first branch; both notes should adopt 'last fed row <= i_feed + 1' as the safe convention.
+  [CONFIRMED] fresh replay (4th implementation): plain R=2048 D0=38 CLOSED at capture 1271, debt 1023 -- pins D0*(2048) = 38 close-side independently  -- {'status': 'CLOSED', 'capture_row': 1271}, minus2=1023, 1s
+fix1 done; FAILS: none
+
+==============================================================================
+FINAL REPORT -- Estimate-E endgame hostile referee (boxeph, 2026-08-03)
+Script: 04-computation/amm12592_estimateE_referee_boxeph.py
+Ledger: 05-knowledge/results/amm12592_estimateE_referee_ledger_boxeph.json
+==============================================================================
+
+A. WITNESS VERDICTS (all checks by a FRESH streaming verifier: own
+   Lucas/Fibonacci exact floor, own box+parity admissibility, own
+   t = (1-x)/x identity engine in level order with O(M) memory, own x=2
+   spot, ballot laws; negative control caught; cross-checked against the
+   prior referee implementation on R=256):
+
+   ALL-PASS (10/10 full verifications, 0 failures):
+   - D1 R=256  desc1 D0=0   (file sha 5950bd42... matches)   NEW RECORD
+   - D1 R=512  tr15  D0=4   (file sha 311975f6... matches)   NEW RECORD
+   - D1 R=1024 desc  D0=14  (file sha 81391349... matches)   NEW RECORD
+   - D2 R=256  ruleA D0=16  (eps = 1/16, reconstructed)
+   - D2 R=512  ruleA D0=32  (eps = 1/16, reconstructed)
+   - NEW big-R end-to-end (rerun + full block reconstruction + full
+     polynomial identity -- these four had only x=2/x=3/debt spots or
+     nothing before):
+       R=2048 desc1 D0=36 (CLOSED@1271 reproduced; verified in 22s)
+       R=2048 ruleA D0=128 (CLOSED@1237 reproduced)
+       R=4096 desc1 D0=87 (CLOSED@2537 reproduced)
+       R=4096 ruleA D0=89 (CLOSED@2537 reproduced)
+     This discharges the prior referee's open re-verification obligation
+     at R = 2048 and 4096.  Still trace+spot-level only: 8192 and 16384
+     closures (plain D0=192, 416; desc1 D0<=188).
+   - FRESH 4th implementation of the plain junk flow reproduces
+     die 61/121/250 (256,0)/(512,4)/(1024,14) and close 81/159/312/639/1271
+     (128,0)/(256,1)/(512,5)/(1024,15)/(2048,38) with exact debt: the
+     plain D0* table entries at 512/1024/2048 are now pinned by FOUR
+     independent implementations on both sides (die side at 2048 by three).
+
+B. PROOF AUDITS -- D2 (E-lin theorem):
+   - Theorem A (LIFT): CONFIRMED.  Algebra re-proved on 400 random blocks;
+     data check on an INDEPENDENT instance (R=128 ruleB D0=0 lifted +1/+3,
+     full fresh verification).
+   - Theorem B: CONFIRMED with one off-by-one FINDING.  i_feed formula ==
+     brute Beatty scan on 75 hostile points (incl. non-dyadic R);
+     reduction identity and eps* = 2(1-g-g^2)/(3+2g) in
+     (0.0211736, 0.0211747) < 1/32 exact from the (fresh re-certified)
+     g-sandwich at M = 2^20; ordering eps_phi = 1/phi - g in
+     (0.0200459, 0.0200468) < eps* exact; window claims (R >= 27 at
+     eps = 1/32, R >= 162 at 1/16) exhaustively re-checked to R = 4000.
+     FINDING (minor, wording): "i_feed = the last fed row" is not exact --
+     the delta=1 second feed branch can fire at i_feed + 1 (observed:
+     (512,32) feeds at row 109 = i_feed+1), and the transient note's sec. 7
+     convention (i_feed(128,0) = 31) disagrees with its own engine (feeds
+     at 32).  Theorem B's proved range is rows <= i_feed; re-instantiated
+     here as 2d_0 - R + 2 > i_feed + 1 at eps = 1/32, 1/16 for all dyadic
+     R = 128..32768, so the survival conclusion covers the true feed phase
+     with margin.  No downstream impact.
+   - Theorem C: CONFIRMED (3 binomial ratio identities; C-N / C-A / C-F
+     randomized exact one-step certificates, 300 trials).  C-N is specific
+     to the nearest-point clamp (rule A) -- fine as used.
+   - Ledgers: 23/23 sweep runs CLOSED with debt (R-2)/2 exact; feed-end
+     certificates 16/16 all-flags-true (the note's "14/14" in sec. 7 is a
+     typo).  Conditional arithmetic C* <= 1+g+1/16 < 435287/262144 and
+     C* <= 1+g+1/32 < 427095/262144: exact.
+   - Hypothesis S: correctly labeled open.  The R=32768 eps=1/16 probe
+     DIED (process gone) at row ~384 of ~20200 (1.9%) with the closure
+     signature (gap 11003 > initial 10518 and rising) -- no evidence either
+     way; S remains verified exactly for dyadic 128 <= R <= 16384 only.
+
+C. PROOF AUDITS -- D3 (golden transient bound):
+   - G1 (alternation-transport calculus): CONFIRMED -- transport identity,
+     zero-sum, defect-mass L1 law (400 fresh random trials each), ratio law
+     (rho-1)^(1+delta) exact with rho = 2 marginal, and the counterexample
+     refuting the task-brief envelope lemma reproduced.
+   - G2: CONFIRMED at (512,5), (1024,15), (2048,38) + a NON-DYADIC even
+     control (1000,0): initial junk support EXACTLY [0, R-2-d_0], signs
+     (-1)^(d-t), additive convexity at every interior cell, and a SINGLE
+     ratio-2 flip exactly at t_2 = 2d - R + 3 in all four grids.  Odd-R
+     control (1001,0): support is [0, R-3-d_0] (boundary cell in-box, the
+     known T4b odd branch) -- G2's statements need the even-R (dyadic)
+     qualifier they implicitly carry.
+   - G3: the THEOREM's logic (F1 sign forcing, F2 one-directionality, F3
+     full-layer majorant, forced-diagonal induction, exact death row
+     i_0 + gap) is sound, and the NI-class (noseed) certificates are
+     CONFIRMED bit-exactly by fresh chains from a fresh replay: valid at
+     rows 15/21 for (512,4)/(1024,14), predicting deaths 121/250 EXACTLY,
+     106/229 rows in advance.  Hostile control (512,5) re-confirmed (the
+     precondition fires on zero rows through capture).
+     SUBSTANTIVE FINDING: the ledger's SEEDED ("every admissible
+     continuation") certificates do NOT implement the note's F3 recursion:
+     the code truncates psi to a ~2-cell band above the front (band top
+     advancing at kernel speed from an empty start), whereas an admissible
+     adversary can inject junk up to box width at ANY layer cell each row
+     (u != w at a zero-load in-box cell), and such mass falls back onto the
+     front pair at 1+delta offsets/row.  Re-running the chains with the
+     note's own FULL-layer majorant: the seeded certificates STILL validate
+     and STILL predict the death rows exactly, but first at rows 46/95
+     (~0.09R), not 25/42 (~0.04R).  Consequence: G3's headline stands;
+     the ledger's seeded validation rows, its "psi stays 3-8 bits below the
+     pair" margins, and D3 sec. 5's "no-return window 2..21 rows after
+     first-super" are band-truncation artifacts and must be restated from
+     full-layer runs (no-return for the full T2-licensed class is certified
+     from ~0.09R at these scales; the NI-class rows are as published).
+   - L*(d) - ceil(2d/3) in {0,1}: CONFIRMED at 7 degrees to d = 2538.
+   - The G3-precondition margin table (order parameter m/Theta') and the
+     6/6 + 5/5 ledger counts: schema-checked; (512,4) state at row 15
+     (d=319, L=213, gap=106, m_bits=theta_bits=292) reproduced exactly.
+
+D. PROOF AUDITS -- D1 (bulk rule sweep):
+   - All three referee-verified witnesses re-verified (sec. A); the D0*
+     table's die/close pins at 512/1024/2048 corroborated by the fresh
+     replay (plain) and by full verification of the desc1/tr15 closures.
+   - Deaths of bulk variants and the 4096/8192 pins rest on the sweep
+     engine (regression-certified against the certified fast engine at 4
+     configs) -- not independently re-implemented here; rule-class
+     negatives are not epoch statements (hazard honored by D1).
+   - FINDING (minor): the table cell "desc1 @ R=128 -> D0*=0" has no desc1
+     run in the ledger (tr15/plain only); immaterial (plain closes at 0).
+   - The 12/12 super-block separation and first-super rows: taken from
+     D1's block ledgers (schema-checked); consistent with D3's
+     defect-birth dichotomy independently reproduced here via G2/G3.
+
+E. PENDING RUNS (status at referee close):
+   - desc1 R=16384 D0=400: killed by its 5400s timeout at row ~3900 of a
+     pure 1/row march (gap 4012 -> 231 by row 3840, dawdle 59); T9'/G3
+     forced-march projection: DEATH at row 4071.  desc1 therefore almost
+     certainly does NOT close 16384 at 400 (where plain dies at 4055):
+     D1's "absolute gain grows (>= 4 at 8192)" reading is NOT supported at
+     16384; on present evidence the desc1 gain at 16384 on this probe is 0.
+     (Not certified: the run must be re-launched with a larger budget to
+     pin the death row.)
+   - plain R=32768 D0=2048: process dead at row ~384; inconclusive.
+
+F. CANON-READY STATUS PARAGRAPH: see below (final text).
+
+CHECKER FAILURES ACROSS ALL STAGES: NONE (two deliberate negative-control
+failures excluded by design; one first-pass arithmetic slip in the
+referee's OWN eps_phi sandwich was found and fixed in stage fix1 --
+recorded per hazard discipline).
+
+CANON-READY STATUS PARAGRAPH (Estimate-E endgame, post D1/D2/D3 + hostile
+referee, 2026-08-03):
+
+Hostile referee (fresh floor engine, fresh streaming t-substitution identity
+checker, fresh 4th implementation of the plain junk flow) confirms the three
+lanes with two corrections and no failures.  BEST UNCONDITIONAL C* BOUND:
+unchanged -- C* <= 2 (the submission envelope T(n) <= max(n+1, 2n-2); even
+max(n+1, 2n-3) for n >= 5).  No lane produced a new unconditional C* bound;
+the sharpest proved conditional chain is C* <= 1 + gamma* + eps under
+Hypothesis S(eps) (post-feed autonomous collapse), with S verified exactly
+for all dyadic 128 <= R <= 16384 at eps = 1/32 and 1/16: in particular
+C* <= 1 + gamma* + 1/32 < 427095/262144 = 1.6292382 under S(1/32), where
+every other link -- LIFT (profile monotonicity), feed-phase survival for
+D0 >= eps* R with the new closed-form constant eps* = 2(1-gamma*-gamma*^2)/
+(3+2gamma*) in (0.0211736, 0.0211747), the post-feed one-step lemmas, and
+the THM-3329 assembly -- is proved and referee-re-derived (one off-by-one in
+the "last fed row" convention found and absorbed: the delta=1 feed band can
+fire at i_feed+1; the survival bound clears i_feed+1 at eps >= 1/32 for all
+dyadic R <= 32768 checked).  FINITE ATTAINMENT (unconditional): T(n) <=
+n + 1 + floor(gamma* n) + 14 for all critical n <= 2047, now resting on
+fully verified witnesses -- R=1024 desc D0=14, R=512 tr15 D0=4, R=256 desc1
+D0=0 all ALL-PASS under the fresh referee, as are new full end-to-end
+verifications at R=2048 (desc1 D0=36, plain D0=128) and R=4096 (desc1
+D0=87, plain D0=89), discharging the prior referee's 2048/4096 obligation
+(8192/16384 closures remain engine+spot-level).  EMPIRICAL D0* CURVES
+(exact, die/close-pinned): plain rule A 0/1/5/15/38/89/192/[401,416] at
+R = 128..16384 (D0*/R -> ~0.025); best local bulk rule (desc1/tr15)
+0/0/4/14/36/87/<=188 through R = 8192 -- both linear-signature; the desc1
+16384 D0=400 probe was killed ~80 rows short of its projected death (pure
+1/row march, projected row 4071), so the bulk family's absolute gain is NOT
+established to grow at 16384 and no o(R)-slack rule exists in the swept
+class.  WHAT REMAINS for C* <= log_5(5 phi^2) = 1 + gamma*: exactly two
+precisely-stated open statements -- (GG) an admissible cross-row schedule at
+o(R) slack keeping every same-sign front pair below the G3 super-pair
+threshold through the feed phase, and (S') the post-feed collapse (= S);
+everything else (T1-T9' skeleton, G1 alternation calculus with defect-mass
+budget, G2 initial-data laws with the ratio-2 crossover at t_2 = 2d-R+3,
+the G3 super-pair death theorem, endgame drain/debt, assembly) is proved or
+at-least-twice machine-verified.  Referee corrections of record: (i) D3's
+seeded G3 certificates ("every admissible continuation") truncate the F3
+layer majorant to a ~2-cell band; with the note's own full-layer majorant
+they still validate and still predict the death rows exactly (121/250), but
+first at rows ~0.09R (46/95), not ~0.04R (25/42) -- the theorem stands, the
+published seeded rows/psi-margins and the "no-return window 2..21 rows"
+claim must be restated; (ii) D2's feed-end ledger is 16/16 (note says
+14/14); (iii) D1's "desc1 @ 128 -> 0" table cell has no run behind it
+(immaterial); (iv) S(1/16) at R = 32768 remains open -- the probe died at
+1.9% (closure signature, inconclusive).

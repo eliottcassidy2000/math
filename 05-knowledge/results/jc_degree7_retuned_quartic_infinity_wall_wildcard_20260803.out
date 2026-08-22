@@ -1,0 +1,12 @@
+degree-seven retuned quartic infinity-wall wildcard
+dependency_hash_checks=14
+universal_top_jet=wall_c99=wall_c98=0;wall_c97=-2*a^11*(a*Kappa+4*r1*s-8*r);old_s_c97=16*a^11*r;retuned_c96=-a^12*(Rho+8*r*Lambda/a)/r1;quartic_c95=-3*a^12*Sigma/(8*Lambda)
+accessory_case=4111 Lambda_norm=12448544/30625 Sigma_norm=-157881139404422797328384/28722900390625 r_star_norm=2796986463061/2489708800000 s_star_norm=-15118672709/6224272000 degree=51 H_sha256=3c2ac8e2cbd13ee2568f2565bd780e2b0b8bb11facad583cc4b626e1f2265626
+accessory_case=3211 Lambda_norm=-42471424/275625 Sigma_norm=64559323245631953174528/28722900390625 r_star_norm=8958651810434375/82564448256 s_star_norm=-1836115611739609375/14090999169024 degree=51 H_sha256=2808b49be3b3ac590efdd39e1015da59e620d45b11bd103271e21e82bdf6d499
+finite_case=4111 good_reduction=(p=113,u=85) (t_star,s_star,r_star)=(85,103,91) controls=(degree,gcd_B_boundary,gcd_H_boundary,gcd_H_Hprime,h51)=(51, 0, 0, 0, 41)
+finite_case=3211 good_reduction=(p=101,u=64) (t_star,s_star,r_star)=(89,87,55) controls=(degree,gcd_B_boundary,gcd_H_boundary,gcd_H_Hprime,h51)=(51, 0, 0, 0, 9)
+quartic_law=w^4~-128*Lambda*delta/(3*a*Sigma)=-64*Lambda*epsilon/(3*Sigma)
+local_inertia=one_4_cycle_on_four_escaping_critical_roots;sign=odd
+remaining_critical_points=51;branchwise_Keller_cofactor=NOT_SUPPLIED
+scope=critical-resultant-strict-transform-not-polynomial-inverse-cover-not-JC2
+source_ast=(assert_nodes=0,float_literals=0)

@@ -1,0 +1,12 @@
+THM-3583 exact control
+support rows: 192 = 8*8*3; collision profile [1,1,2,2,2]
+placements: L/B/U only; scalar complements present in every row
+arm gate: only R=2 or T=2 can survive
+R=2 ladders: balanced/lower/upper PASS for T,k<=8
+R=2 hidden gcd-five upper rows: k=[3, 8]; extraction arithmetic PASS
+T=2 balanced arm valuations: R<=64, local orders<=8 PASS
+T=2 hidden gcd-four lower rows: k=[2, 4, 6, 8]; square-root normalization PASS
+T=2 lower/upper factor identities: k=2..8 PASS
+exact consequence: a two-piece output forces the mate to have >=5 pieces
+scope: total >=7 only in the two-piece sector; the 3x3 six-piece cell remains open
+PASS

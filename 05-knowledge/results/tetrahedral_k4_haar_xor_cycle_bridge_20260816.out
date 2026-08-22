@@ -1,0 +1,13 @@
+== tetrahedral K4 Haar/XOR cycle bridge ==
+vertices=((0, 0), (0, 1), (1, 0), (1, 1)); edges=((0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3))
+Omega^T Omega=4I-J; Walsh and primitive square-cycle bases are orthogonal
+frequency=(0, 1); character=(1, -1, 1, -1); equal-sign matching=((0, 2), (1, 3)); complementary cycle=(1, 0, -1, 1, 0, 1)
+frequency=(1, 0); character=(1, 1, -1, -1); equal-sign matching=((0, 1), (2, 3)); complementary cycle=(0, -1, 1, 1, -1, 0)
+frequency=(1, 1); character=(1, -1, -1, 1); equal-sign matching=((0, 3), (1, 2)); complementary cycle=(-1, 1, 0, 0, -1, 1)
+2x2 row/column marginal rank over F13=3; kernel=<character_(1,1)>
+S4 -> S3 on three Haar/matching lines; image=6; kernel=4=V4
+cut plus primitive-Haar-cycle determinant=32; lattice index=32
+score plus three Haar holonomies reconstructs tournaments=64/64
+tournament score/Haar ledger sha256=8da9354e69971ab3e27b54564567ce3f431721c77412480b667f655d93c55e85
+scope: exact representation bridge only; no actual U_full address map, physical current, row exclusion, or LRC(14)
+all exact checks passed

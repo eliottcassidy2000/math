@@ -1,0 +1,6 @@
+[PASS] g sandwich 627035/2^20 < g < 627036/2^20
+[PASS] eps=1/32 eta=1/32: fixed point Delta_bar=0.01158 contraction=0.364 gamma_max=1.1046 min (K - k*) over 2^9..2^40 = 45
+[PASS] eps=1/32 eta=3/64: fixed point Delta_bar=0.02405 contraction=0.524 gamma_max=1.1046 min (K - k*) over 2^9..2^40 = 35
+[PASS] eps=1/16 eta=1/32: fixed point Delta_bar=0.01154 contraction=0.363 gamma_max=1.1020 min (K - k*) over 2^9..2^40 = 45
+[PASS] eps=1/16 eta=3/64: fixed point Delta_bar=0.02395 contraction=0.522 gamma_max=1.1020 min (K - k*) over 2^9..2^40 = 34
+OVERALL: ALL-PASS

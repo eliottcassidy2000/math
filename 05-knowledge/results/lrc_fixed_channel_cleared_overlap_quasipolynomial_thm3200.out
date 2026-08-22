@@ -1,0 +1,18 @@
+FIXED-CHANNEL CELL-90 DILATION QUASIPOLYNOMIAL AUDIT -- THM-3200
+engine_lf_sha256=d73273a4cf4b88bea2890e001166d96cb07dd9b61f3a248ff1538ec44579796a;audit_max=1200
+case=sharp_6_to_1;lane=(6,1);primitive=(3,5);cross=27;period_bound=27;exact_period=3;degree=2;stable_g_max=54;head_checks=26;formula_checks=1199;recurrence_checks=1190
+coefficients=leading:4284,linear:-2520,constant_classes:3,constant_range:-336..84;poly_sha256=ee45dbe47d56660dc02f4b6706f12cd83a42bc63cdfcf3623604fad85a6799b0
+mass_limit=17/1680;one_over_g=(Fraction(-8213, 1411200),);mass_eventually_constant=NO;mass_rational_ogf=NO
+exact_polynomials=((0, (Fraction(4284, 1), Fraction(-2520, 1), Fraction(0, 1))), (1, (Fraction(4284, 1), Fraction(-2520, 1), Fraction(-336, 1))), (2, (Fraction(4284, 1), Fraction(-2520, 1), Fraction(84, 1))))
+case=reverse_1_to_6;lane=(1,6);primitive=(3,5);cross=-13;period_bound=13;exact_period=1;degree=2;stable_g_max=26;head_checks=12;formula_checks=1199;recurrence_checks=1196
+coefficients=leading:12096,linear:-24,constant_classes:1,constant_range:0..0;poly_sha256=e1ffddfa05cd39798fd8575c426badea20ed872d631f31bd2505302c12cbc8d9
+mass_limit=1/35;one_over_g=(Fraction(1, 4900),);mass_eventually_constant=NO;mass_rational_ogf=NO
+exact_polynomials=((0, (Fraction(12096, 1), Fraction(-24, 1), Fraction(0, 1))),)
+case=label12_12_to_1;lane=(12,1);primitive=(3,5);cross=57;period_bound=57;exact_period=19;degree=2;stable_g_max=114;head_checks=56;formula_checks=1199;recurrence_checks=1142
+coefficients=leading:149184/19,linear:5664/19,constant_classes:19,constant_range:-7788/19..26460/19;poly_sha256=48a1fe726d28da42e69fab344f04b157d80bbafaa13d4655efc7c36b40e3ad44
+mass_limit=37/1995;one_over_g=(Fraction(103, 88200),);mass_eventually_constant=NO;mass_rational_ogf=NO
+case=label12_1_to_12;lane=(1,12);primitive=(3,5);cross=-31;period_bound=31;exact_period=1;degree=2;stable_g_max=62;head_checks=30;formula_checks=1199;recurrence_checks=1196
+coefficients=leading:7644,linear:-72,constant_classes:1,constant_range:0..0;poly_sha256=ea6d8d1da3b035b8f94e516b5f5dc013a59eba3eab490c8047ee0b94b6390073
+mass_limit=13/720;one_over_g=(Fraction(1571, 12700800),);mass_eventually_constant=NO;mass_rational_ogf=NO
+exact_polynomials=((0, (Fraction(7644, 1), Fraction(-72, 1), Fraction(0, 1))),)
+semantic_sha256=336cb683431abb810394dbd32ca502404ba251cc5531ed1eacf8d96c9284a765

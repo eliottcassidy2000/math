@@ -1,0 +1,33 @@
+D5 MARKED KUMMER NORMAL-SLICE / FROBENIUS FLUX NO-GO
+STATUS: FINITE-EXACT original sidecar; repaired canon scope in THM-3496
+
+SOURCE H1
+  rank(delta_C7)=6; dim H1=1
+  canonical g=(1,...,1): Hol(g)=7 mod 13
+  C91 primitive deck defect chi(tau)=7
+  all target Kummer exponents occur: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+MARKED COMMUTING SQUARE
+  Phi_lambda([g]) = Hol(g) * kappa_lambda
+  checked cover degree k vs lambda->lambda^k for 1<=k<=200
+  k=13: 0 (both die)
+  k=14: 7 (both return)
+  orientation reversal sends 7 -> 6
+
+FIRST LOSS
+  pole order is not additive: xi and -xi both map to kappa, sum maps to 2*kappa
+  depths 1 and 14 have the same Kummer exponent but different JC arm lengths
+
+MINIMAL FLUX HOSTILE: P=x+x^2*z
+  h=-x^-2+2*z/x; D(h)=6*z
+  [P*h]=[-x^-1]; delta([P*h])=[-1]
+  Q13=sum_{j=0}^{11}(-1)^j*x^j*z^(j+1)
+  D(Q13)=1-13*(x*z)^12 over Z
+  D(Q13)=1 over F13, so the flux class [1] dies after coefficient matching
+  Q13-x^-1=-P^12/x^13 over F13, an explicit Frobenius localized constant
+  odd-prime telescope checked at [3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43]
+  [1]=13^r*[(x*z)^(13^r-1)] in the integral cokernel; r=1,2,3 checked
+  consequence: finite Z/13^r coefficient shadows vanish; derived completion unadjudicated
+  characteristic-zero recurrence has nonzero terminal obstruction for every finite N
+
+SEMANTIC_SHA256=8b347e4b65b8a07e4ce040775733b7b1e2161280cc241629dc6d50d21a50881c

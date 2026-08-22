@@ -1,0 +1,16 @@
+TOURNAMENT ORDER-JOIN FALLING-FACTORIAL TRANSFORM -- THM-3166 INDEPENDENT AUDIT
+status=INDEPENDENTLY HOSTILE-AUDITED;permutation-cut profile engine;no main import
+permutation_profile_controls=1099;all labelled tournaments orders 1..5
+negative_colour_reciprocity_controls=7693;m=1..7;direct_backward_distribution=PASS
+negative_colour_inverse_controls=1099;triangular_recovery=PASS
+direct_join_controls=761;all total-order<=6 plus 256 selected order-8 joins
+falling_basis_controls=528;ordinary-power identity through a<=b<=32
+fixed_depth_exponential_controls=94;five seeds;direct convolution=PASS
+order_loss_hostile=profiles_equal:(0, 3, 9, 6, 1);scores=(1, 1, 1, 3)!=(0, 2, 2, 2)
+cyclic_hostile=Q_T3(j)=(0,1,8,27);Q_C3(j)=(0,3,12,33);product law restricted to order-join
+main_token_audit=1099 tournaments;7693 negative values;1099 negative inverses;5625 joins;4275 repeated controls;PASS
+main_sha256=5d38326311fc8fea8976f105348b131a106b7d0f2b912b50937f969152d310fd
+main_output_sha256=55f31dbf60b23184d69167a26d39fad192a3230bb2163cc046c8b12df3885eff
+normal_vs_python_O=BYTE_IDENTICAL
+source_sha256=c87ea635307dd20b9c4f3f318cc6f588464b3ef4c75da7d534c838eb4c034aee
+all_independent_controls=PASS

@@ -1,0 +1,131 @@
+# NUMERICAL-SCOUT / NO VERDICT
+# Recorded on 2026-08-18. Timings and floating candidates are environment-specific.
+# Exact-input and CSR-pattern hashes identify the constructed models; they do not
+# turn any floating solver result into a rational or integer certificate.
+# Environment: Windows 11; CPython 3.13.14; NumPy 2.3.2; SciPy 1.16.1;
+# embedded HiGHS 1.8.0; CVXPY 1.9.2; Clarabel 0.11.1.
+
+=== RUN 1 ===
+command=python 04-computation/amm12592_entry_cone_solver_boundary_numerical_scout_kps_s184.py 32 0 --exact-rule-a-control
+banner=NUMERICAL-SCOUT/NO-VERDICT
+environment=python:3.13.14;implementation:CPython;platform:Windows-11-10.0.26100-SP0;numpy:2.3.2;scipy:1.16.1;highs:1.8.0;cvxpy:1.9.2;clarabel:0.11.1
+model=R:32;D0:0;zero_entry:False;delay:0;first_feed_free_row:9;entry_i:9;entry_degree:24;vars:189;inequalities:379;nnz:1213
+exact_input_sha256=842fc045c8a04b959e47d0bb1a12f092f2eec9a5513cb54df6388a87e58a4813;csr_pattern_sha256=44c3818100b4d8765bcc65a5446a2fcd81ee600f714583febd27fb1b476d2d26
+scale_range=variable:[19,69459159859];row:[19,202782538581]
+build_elapsed_s=0.040
+exact_rule_a_survives_to_entry=True
+exact_entry_cone=F1:True;F2:True;F3:True;support_max:2;F2_margin:5;F3_min_margin:68
+floating_embedding_of_exact_control=scaled_max_violation:5.9674487573602164e-16;reconstructed_native_row_violation:2.3198048815231687e-08;reconstructed_native_bound_violation:0.0000000000000000e+00
+control_interpretation=exact_integer_F1_F2_F3_check_is_authoritative
+scope=NUMERICAL_SCOUT_NO_VERDICT_NO_RATIONAL_POINT_NO_INTEGER_WITNESS_NO_INFEASIBILITY_CERTIFICATE_NO_AMM_CLOSURE
+exit_code=0
+=== RUN 2 ===
+command=python 04-computation/amm12592_entry_cone_solver_boundary_numerical_scout_kps_s184.py 32 0 --solver highs --time-limit 60
+banner=NUMERICAL-SCOUT/NO-VERDICT
+environment=python:3.13.14;implementation:CPython;platform:Windows-11-10.0.26100-SP0;numpy:2.3.2;scipy:1.16.1;highs:1.8.0;cvxpy:1.9.2;clarabel:0.11.1
+model=R:32;D0:0;zero_entry:False;delay:0;first_feed_free_row:9;entry_i:9;entry_degree:24;vars:189;inequalities:379;nnz:1213
+exact_input_sha256=842fc045c8a04b959e47d0bb1a12f092f2eec9a5513cb54df6388a87e58a4813;csr_pattern_sha256=44c3818100b4d8765bcc65a5446a2fcd81ee600f714583febd27fb1b476d2d26
+scale_range=variable:[19,69459159859];row:[19,202782538581]
+build_elapsed_s=0.042
+solver_report=solver:highs;presolve:False;status:0;reported_candidate:True;message:'Optimization terminated successfully. (HiGHS Status 7: Optimal)';elapsed_s:0.047
+candidate_scaled=row_violation:8.4908351321265500e-08;bound_violation:0.0000000000000000e+00;max_violation:8.4908351321265500e-08;passes_requested_tol:False
+candidate_reconstructed_native=row_violation:3.0389999736370414e+03;bound_violation:0.0000000000000000e+00;entry_positive_violation:0.0000000000000000e+00;entry_forced_zero_violation:0.0000000000000000e+00
+candidate_entry=scaled_min:-1.0864858201854912e-07;scaled_max:0.0000000000000000e+00;native_min:-1.7759999880193454e+03;native_max:0.0000000000000000e+00;native_nonzero_gt_1e-7:1
+interpretation=solver_status_and_floating_residuals_only;scaled_tolerance_does_not_pull_back_to_an_exact_native_certificate
+scope=NUMERICAL_SCOUT_NO_VERDICT_NO_RATIONAL_POINT_NO_INTEGER_WITNESS_NO_INFEASIBILITY_CERTIFICATE_NO_AMM_CLOSURE
+exit_code=0
+=== RUN 3 ===
+command=python 04-computation/amm12592_entry_cone_solver_boundary_numerical_scout_kps_s184.py 32 0 --solver highs --presolve --time-limit 60
+banner=NUMERICAL-SCOUT/NO-VERDICT
+environment=python:3.13.14;implementation:CPython;platform:Windows-11-10.0.26100-SP0;numpy:2.3.2;scipy:1.16.1;highs:1.8.0;cvxpy:1.9.2;clarabel:0.11.1
+model=R:32;D0:0;zero_entry:False;delay:0;first_feed_free_row:9;entry_i:9;entry_degree:24;vars:189;inequalities:379;nnz:1213
+exact_input_sha256=842fc045c8a04b959e47d0bb1a12f092f2eec9a5513cb54df6388a87e58a4813;csr_pattern_sha256=44c3818100b4d8765bcc65a5446a2fcd81ee600f714583febd27fb1b476d2d26
+scale_range=variable:[19,69459159859];row:[19,202782538581]
+build_elapsed_s=0.042
+solver_report=solver:highs;presolve:True;status:2;reported_candidate:False;message:'The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)';elapsed_s:0.045
+candidate_diagnostics=none
+interpretation=solver_status_and_floating_residuals_only;scaled_tolerance_does_not_pull_back_to_an_exact_native_certificate
+scope=NUMERICAL_SCOUT_NO_VERDICT_NO_RATIONAL_POINT_NO_INTEGER_WITNESS_NO_INFEASIBILITY_CERTIFICATE_NO_AMM_CLOSURE
+exit_code=0
+=== RUN 4 ===
+command=python 04-computation/amm12592_entry_cone_solver_boundary_numerical_scout_kps_s184.py 32 0 --solver clarabel --time-limit 60
+banner=NUMERICAL-SCOUT/NO-VERDICT
+environment=python:3.13.14;implementation:CPython;platform:Windows-11-10.0.26100-SP0;numpy:2.3.2;scipy:1.16.1;highs:1.8.0;cvxpy:1.9.2;clarabel:0.11.1
+model=R:32;D0:0;zero_entry:False;delay:0;first_feed_free_row:9;entry_i:9;entry_degree:24;vars:189;inequalities:379;nnz:1213
+exact_input_sha256=842fc045c8a04b959e47d0bb1a12f092f2eec9a5513cb54df6388a87e58a4813;csr_pattern_sha256=44c3818100b4d8765bcc65a5446a2fcd81ee600f714583febd27fb1b476d2d26
+scale_range=variable:[19,69459159859];row:[19,202782538581]
+build_elapsed_s=0.039
+solver_report=solver:clarabel;presolve:False;status:optimal;reported_candidate:True;message:'optimal';elapsed_s:0.780
+candidate_scaled=row_violation:0.0000000000000000e+00;bound_violation:5.6383316874078005e-12;max_violation:5.6383316874078005e-12;passes_requested_tol:True
+candidate_reconstructed_native=row_violation:0.0000000000000000e+00;bound_violation:1.1120635513529471e-04;entry_positive_violation:0.0000000000000000e+00;entry_forced_zero_violation:1.1120635513529471e-04
+candidate_entry=scaled_min:-2.5482403315730433e-05;scaled_max:-5.6383316874078005e-12;native_min:-2.4022157202670150e+05;native_max:-1.1120635513529471e-04;native_nonzero_gt_1e-7:23
+interpretation=solver_status_and_floating_residuals_only;scaled_tolerance_does_not_pull_back_to_an_exact_native_certificate
+scope=NUMERICAL_SCOUT_NO_VERDICT_NO_RATIONAL_POINT_NO_INTEGER_WITNESS_NO_INFEASIBILITY_CERTIFICATE_NO_AMM_CLOSURE
+exit_code=0
+=== RUN 5 ===
+command=python 04-computation/amm12592_entry_cone_solver_boundary_numerical_scout_kps_s184.py 512 0 --solver highs --presolve --time-limit 60
+banner=NUMERICAL-SCOUT/NO-VERDICT
+environment=python:3.13.14;implementation:CPython;platform:Windows-11-10.0.26100-SP0;numpy:2.3.2;scipy:1.16.1;highs:1.8.0;cvxpy:1.9.2;clarabel:0.11.1
+model=R:512;D0:0;zero_entry:False;delay:0;first_feed_free_row:130;entry_i:130;entry_degree:383;vars:44750;inequalities:89528;nnz:320095
+exact_input_sha256=f4bc6a3150e082f584cef832d96dd5a1351a5a0abec52f7d977214a416dbf6ad;csr_pattern_sha256=d3206a5a559c57a633b87ab64c164ab9e0286250b0a457b49aa3a050f863a23b
+scale_range=variable:[306,41196199755072869274034912535352992104476313979710691258211404055996542918610124515403473589301301510418115111050428844038949198296013204966715214562195761675367197287894204926438557969563845590534087858038508];row:[306,123397209772345897230313297642589684402012033634467666330983685316153523725071042981803857543502025657545131985188336329069851905678626376440325203025810047196077408062248563470287380989379172646243714620534896]
+build_elapsed_s=0.880
+solver_report=solver:highs;presolve:True;status:2;reported_candidate:False;message:'The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)';elapsed_s:1.058
+candidate_diagnostics=none
+interpretation=solver_status_and_floating_residuals_only;scaled_tolerance_does_not_pull_back_to_an_exact_native_certificate
+scope=NUMERICAL_SCOUT_NO_VERDICT_NO_RATIONAL_POINT_NO_INTEGER_WITNESS_NO_INFEASIBILITY_CERTIFICATE_NO_AMM_CLOSURE
+exit_code=0
+=== RUN 6 ===
+command=python 04-computation/amm12592_entry_cone_solver_boundary_numerical_scout_kps_s184.py 512 0 --solver highs --time-limit 60
+banner=NUMERICAL-SCOUT/NO-VERDICT
+environment=python:3.13.14;implementation:CPython;platform:Windows-11-10.0.26100-SP0;numpy:2.3.2;scipy:1.16.1;highs:1.8.0;cvxpy:1.9.2;clarabel:0.11.1
+model=R:512;D0:0;zero_entry:False;delay:0;first_feed_free_row:130;entry_i:130;entry_degree:383;vars:44750;inequalities:89528;nnz:320095
+exact_input_sha256=f4bc6a3150e082f584cef832d96dd5a1351a5a0abec52f7d977214a416dbf6ad;csr_pattern_sha256=d3206a5a559c57a633b87ab64c164ab9e0286250b0a457b49aa3a050f863a23b
+scale_range=variable:[306,41196199755072869274034912535352992104476313979710691258211404055996542918610124515403473589301301510418115111050428844038949198296013204966715214562195761675367197287894204926438557969563845590534087858038508];row:[306,123397209772345897230313297642589684402012033634467666330983685316153523725071042981803857543502025657545131985188336329069851905678626376440325203025810047196077408062248563470287380989379172646243714620534896]
+build_elapsed_s=0.853
+solver_report=solver:highs;presolve:False;status:4;reported_candidate:False;message:'(HiGHS Status 0: Not Set)';elapsed_s:6.540
+candidate_diagnostics=none
+interpretation=solver_status_and_floating_residuals_only;scaled_tolerance_does_not_pull_back_to_an_exact_native_certificate
+scope=NUMERICAL_SCOUT_NO_VERDICT_NO_RATIONAL_POINT_NO_INTEGER_WITNESS_NO_INFEASIBILITY_CERTIFICATE_NO_AMM_CLOSURE
+exit_code=0
+=== RUN 7 ===
+command=python 04-computation/amm12592_entry_cone_solver_boundary_numerical_scout_kps_s184.py 512 0 --solver clarabel --time-limit 120
+banner=NUMERICAL-SCOUT/NO-VERDICT
+environment=python:3.13.14;implementation:CPython;platform:Windows-11-10.0.26100-SP0;numpy:2.3.2;scipy:1.16.1;highs:1.8.0;cvxpy:1.9.2;clarabel:0.11.1
+model=R:512;D0:0;zero_entry:False;delay:0;first_feed_free_row:130;entry_i:130;entry_degree:383;vars:44750;inequalities:89528;nnz:320095
+exact_input_sha256=f4bc6a3150e082f584cef832d96dd5a1351a5a0abec52f7d977214a416dbf6ad;csr_pattern_sha256=d3206a5a559c57a633b87ab64c164ab9e0286250b0a457b49aa3a050f863a23b
+scale_range=variable:[306,41196199755072869274034912535352992104476313979710691258211404055996542918610124515403473589301301510418115111050428844038949198296013204966715214562195761675367197287894204926438557969563845590534087858038508];row:[306,123397209772345897230313297642589684402012033634467666330983685316153523725071042981803857543502025657545131985188336329069851905678626376440325203025810047196077408062248563470287380989379172646243714620534896]
+build_elapsed_s=0.785
+solver_report=solver:clarabel;presolve:False;status:optimal;reported_candidate:True;message:'optimal';elapsed_s:14.765
+candidate_scaled=row_violation:1.2336500599334715e-13;bound_violation:1.2044790838977805e-13;max_violation:1.2336500599334715e-13;passes_requested_tol:True
+candidate_reconstructed_native=row_violation:4.3537483337501083e+192;bound_violation:1.9098438678497814e+195;entry_positive_violation:1.9098438678497814e+195;entry_forced_zero_violation:3.4877167832069695e+111
+candidate_entry=scaled_min:-5.4779453905691583e-15;scaled_max:1.2044790838977805e-13;native_min:-6.4921464739542535e+129;native_max:1.9098438678497814e+195;native_nonzero_gt_1e-7:383
+interpretation=solver_status_and_floating_residuals_only;scaled_tolerance_does_not_pull_back_to_an_exact_native_certificate
+scope=NUMERICAL_SCOUT_NO_VERDICT_NO_RATIONAL_POINT_NO_INTEGER_WITNESS_NO_INFEASIBILITY_CERTIFICATE_NO_AMM_CLOSURE
+exit_code=0
+=== RUN 8 ===
+command=python 04-computation/amm12592_entry_cone_solver_boundary_numerical_scout_kps_s184.py 512 0 --solver clarabel --zero-entry --time-limit 120
+banner=NUMERICAL-SCOUT/NO-VERDICT
+environment=python:3.13.14;implementation:CPython;platform:Windows-11-10.0.26100-SP0;numpy:2.3.2;scipy:1.16.1;highs:1.8.0;cvxpy:1.9.2;clarabel:0.11.1
+model=R:512;D0:0;zero_entry:True;delay:0;first_feed_free_row:130;entry_i:130;entry_degree:383;vars:44750;inequalities:89146;nnz:319332
+exact_input_sha256=475526e40e783bcd55b361f698fcdac4a0097b5e28bf08eacc4b6ad8fcda0b0e;csr_pattern_sha256=709a49f4551c758219d55d74bcfa6e1424a2c0ea451379037f58571c099d0415
+scale_range=variable:[306,41196199755072869274034912535352992104476313979710691258211404055996542918610124515403473589301301510418115111050428844038949198296013204966715214562195761675367197287894204926438557969563845590534087858038508];row:[306,41196199755072869274034912535352992104476313979710691258211404055996542918610124515403473589301301510418115111050428844038949198296013204966715214562195761675367197287894204926438557969563845590534087858038508]
+build_elapsed_s=0.794
+solver_report=solver:clarabel;presolve:False;status:optimal;reported_candidate:True;message:'optimal';elapsed_s:15.552
+candidate_scaled=row_violation:1.5988468967564410e-13;bound_violation:7.4338217888483159e-14;max_violation:1.5988468967564410e-13;passes_requested_tol:True
+candidate_reconstructed_native=row_violation:5.9086128247067518e+191;bound_violation:5.9086128235790936e+191;entry_positive_violation:5.9086128235790936e+191;entry_forced_zero_violation:5.9086128235790936e+191
+candidate_entry=scaled_min:-7.4338217888483159e-14;scaled_max:6.8487620462096120e-14;native_min:-9.9300572050040928e+189;native_max:5.9086128235790936e+191;native_nonzero_gt_1e-7:383
+interpretation=solver_status_and_floating_residuals_only;scaled_tolerance_does_not_pull_back_to_an_exact_native_certificate
+scope=NUMERICAL_SCOUT_NO_VERDICT_NO_RATIONAL_POINT_NO_INTEGER_WITNESS_NO_INFEASIBILITY_CERTIFICATE_NO_AMM_CLOSURE
+exit_code=0
+=== RUN 9 ===
+command=python 04-computation/amm12592_entry_cone_solver_boundary_numerical_scout_kps_s184.py 512 0 --exact-rule-a-control
+banner=NUMERICAL-SCOUT/NO-VERDICT
+environment=python:3.13.14;implementation:CPython;platform:Windows-11-10.0.26100-SP0;numpy:2.3.2;scipy:1.16.1;highs:1.8.0;cvxpy:1.9.2;clarabel:0.11.1
+model=R:512;D0:0;zero_entry:False;delay:0;first_feed_free_row:130;entry_i:130;entry_degree:383;vars:44750;inequalities:89528;nnz:320095
+exact_input_sha256=f4bc6a3150e082f584cef832d96dd5a1351a5a0abec52f7d977214a416dbf6ad;csr_pattern_sha256=d3206a5a559c57a633b87ab64c164ab9e0286250b0a457b49aa3a050f863a23b
+scale_range=variable:[306,41196199755072869274034912535352992104476313979710691258211404055996542918610124515403473589301301510418115111050428844038949198296013204966715214562195761675367197287894204926438557969563845590534087858038508];row:[306,123397209772345897230313297642589684402012033634467666330983685316153523725071042981803857543502025657545131985188336329069851905678626376440325203025810047196077408062248563470287380989379172646243714620534896]
+build_elapsed_s=0.887
+exact_rule_a_survives_to_entry=False;reason=rule A dies at row=107; forced_top_residual=-199181334599768561751691151979867147451295075845970943582846950031770442839710071820
+scope=NUMERICAL_SCOUT_NO_VERDICT_NO_RATIONAL_POINT_NO_INTEGER_WITNESS_NO_INFEASIBILITY_CERTIFICATE_NO_AMM_CLOSURE
+exit_code=0

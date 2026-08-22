@@ -1,8 +1,10 @@
 # THM-451 — The Skew Tower's Hadamard Chirality: equivalent to Sylvester through order 8, then lands in the unique transpose-split pair at 16
 
 **Status:** VERIFIED with exact certificates (explicit monomial witnesses; exhaustive
-backtracking searches that TERMINATED; three independent equivalence invariants). SNF closed
-form CONJECTURED for n ≥ 64. Adversarially re-verified (`verify_D_equivalence_kps1.out`).
+backtracking searches that TERMINATED; three independent equivalence invariants). The SNF
+closed form is CITED/PROVED for every tower level by THM-447 plus the general
+Michael--Wallis skew-Hadamard theorem; the binary-rank law is PROVED for every level by
+THM-482. Adversarially re-verified (`verify_D_equivalence_kps1.out`).
 **Source:** kind-pasteur-2026-06-09-S1 (branch D + verifier).
 **Related:** THM-447/448, THM-454(6) (op-asymmetry of D — the same chirality at tournament level).
 
@@ -31,13 +33,22 @@ doubling (THM-450(6)), H(D(T)) ≠ H(D(T^op)) in 50/74 classes (THM-454(6)), and
 are never self-converse past level 7 (THM-448). Transposing the Hadamard matrix = op on the
 tournament; the doubling breaks that symmetry and the Hadamard classification SEES it.
 
-## (3) Structure invariants (closed forms, conjectured beyond 32)
+## (3) Structure invariants (closed forms)
 
 ```
-SNF(skew_n)  = (1, 2^{n/2−1}, (n/2)^{n/2−1}, n)      "flat"  [verified n=16,32]
+SNF(skew_n)  = (1, 2^{n/2−1}, (n/2)^{n/2−1}, n)      "flat"  [CITED/PROVED all n>=4]
 SNF(sylv_n)  = 2^j with multiplicity C(log2 n, j)     "binomial"
-GF(2)-rank((S+J)/2):  skew = n/2 (maximal growth)  vs  Sylvester = log2(n) + 1 (minimal)
+GF(2)-rank((S+J)/2):  skew = n/2 (PROVED all tower levels)  vs  Sylvester = log2(n) + 1
 ```
+
+For the first line, THM-447 proves that the recursion stays skew-Hadamard.
+Michael--Wallis, *Skew-Hadamard Matrices and the Smith Normal Form*, Designs,
+Codes and Cryptography 13 (1998), 173--176, proves the displayed standard
+Smith form for every skew-Hadamard matrix; Hacioglu--Keman, Theorem 2.4,
+supplies a short published reproof.  THM-482 identifies the tower binary code
+with `d_n^+`, giving the second all-level tower law.  MISTAKE-388 records the
+former conjectural-status error.  These ambient theorems do not change the
+finite equivalence or chirality verdicts above.
 
 ## (4) Walsh-domain density paradox
 

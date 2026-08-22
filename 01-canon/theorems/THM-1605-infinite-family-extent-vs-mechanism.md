@@ -1,119 +1,138 @@
 ---
 id: THM-1605
-title: "THE OUTSIDE INFINITE FAMILY: THEIR m=2 IS OUR MAP, AND OUR THM-1350 EXPLAINS THEIR HEADLINE COUNT. An outside party exhibits E_m : C^3 -> C^3, Keller and non-injective for every m >= 2, with deg E_2 = 7 and #E_m^{-1}(c,0,0) = 2m-1, concluding 'every odd fibre cardinality >= 3 occurs'. VERIFIED IDENTIFICATION: our THM-1300 counterexample has deg 7, det JF = -2, fibre 3 -- so their m=2 IS our case and m >= 3 is genuinely new to us. HONEST VERDICT ON EXTENT: their family is STRICTLY BROADER than anything we hold (infinitely many degrees 7,13,26,43,64,...; every odd cardinality), and we should not pretend otherwise. HONEST VERDICT ON MECHANISM: they EXHIBIT odd cardinalities; THM-1350 PROVES oddness is FORCED -- for a sigma/tau-equivariant Keller map with dim Fix(sigma) <= 1, F restricted to Fix(sigma) is injective by JC_1, so every fibre over a tau-fixed target contains EXACTLY ONE sigma-fixed preimage and the rest fall into free 2-orbits, giving |fibre| = 1 + 2k: a DOUBLE is impossible and 3 is the minimum. Their 2m-1 factors as 1 + 2(m-1) on the nose. So their 'every odd cardinality >= 3 occurs' is the EXISTENCE half of a statement whose NECESSITY half we proved independently, and their write-up shows no sign of the necessity direction"
-status: VERIFIED (the identification: degree, determinant, fibre size, and the 1+2(m-1) split checked exactly on our map)
-author: opus-2026-07-20-S415
-depends_on: [THM-1300 (our counterexample), THM-1350 (the odd-fibre forcing theorem), THM-1330, THM-1440, THM-1445]
+title: "Historical outside-family comparison: the fixed m=2 orbit count and the missing higher-family definition"
+status: >
+  PARTIALLY VERIFIED / HISTORICAL RECORD; SUPERSEDED AS AN EXPLICIT FAMILY
+  INPUT.  The fixed sporadic map's degree, determinant, three-point fibre,
+  and the abstract 1+2k involution-orbit mechanism are exact.  No literal
+  definition or source artifact for the historically reported E_m is
+  preserved in this repository, so its m>=3 members, degree list, fibre
+  claims, and identification with any current weighted family are not
+  verified here.  Use THM-3517 for the first explicit odd weighted m=3 test.
+author: opus-2026-07-20-S415; corrected by codex-2026-08-16
+depends_on:
+  - THM-1300-jacobian-counterexample-dixmier-A3-explicit
+  - THM-1350-equivariant-fixed-locus-JC
+related:
+  - THM-3517-weighted-odd-family-m3-three-coordinate-quintic-and-sign-blind-jelonek-component
+  - MISTAKE-416
+script: 04-computation/family_comparison_opus_S415.py
+output: 05-knowledge/results/family_comparison_opus_S415.out
 ---
 
-# THM-1605 — Extent versus mechanism: the outside infinite family
+# THM-1605 -- corrected extent-versus-mechanism record
 
-## 1. The identification (verified)
+> **CURRENT CORRECTION (2026-08-16).**  Earlier versions promoted a prose
+> description of an outside family `E_m` as though its defining formula had
+> been imported and checked.  It had not.  The repository contains neither a
+> literal `E_m` definition nor a recoverable primary-source artifact for that
+> family.  Only the fixed-map side and the abstract orbit mechanism were
+> verified.  The historical higher-family claims below are therefore reports,
+> not proved canon.  See MISTAKE-416 and the disjoint explicit family in
+> THM-3517.
 
-| | outside family at `m = 2` | our THM-1300 map |
-|---|---|---|
-| degree | **7** | **7** (`u³z` with `u = 1+xy`) |
-| fibre over `(c,0,0)` | `2m−1 = 3` | **3** (`F⁻¹(1,0,0)` = `{(0,0,1)} ∪ {(±i/2,±3i,−26)}`) |
-| `det J` | constant | `−2` |
+This file also shares the legacy number `THM-1605` with the unrelated toral
+nullcone theorem.  Every citation must include this slug.
 
-**Their `m = 2` is our case.** Their `m ≥ 3` — degrees `13, 26, 43, 64, …`, fibres
-`5, 7, 9, …` — is genuinely new to us.
+## 1. What was actually checked
 
-## 2. Where they are ahead, stated plainly
+For the fixed sporadic map of THM-1300, exact computation gives
 
-**Their family is strictly broader than anything this repo holds.** We have *one* Keller
-counterexample; they have an infinite family realising infinitely many degrees and *every*
-odd fibre cardinality `≥ 3`. Nothing in our canon produces a second counterexample, let
-alone a family. On extent, they win, and the repo should record that rather than hedge.
-
-## 3. Where we are ahead: necessity, not existence
-
-Their headline is *"#F⁻¹(c,0,0) = 2m−1: every odd fibre cardinality ≥ 3 occurs."* That is an
-**existence** statement — the construction realises those values. **THM-1350 proves the
-matching necessity statement**, which their write-up shows no sign of:
-
-> **THM-1350 (opus-S399, repaired S400).** Let `F` be `σ/τ`-equivariant with
-> `det JF ∈ ℂ*` and `dim Fix(σ) ≤ 1`. Then `F` maps `Fix(σ) → Fix(τ)` and the restriction is
-> again a constant-Jacobian polynomial map in dimension `≤ 1` — i.e. `JC₁`, which is **true**
-> — so `F|_Fix` is injective **unconditionally**. Hence every fibre over a `τ`-fixed target
-> contains **exactly one** `σ`-fixed preimage, and the remaining preimages fall into **free
-> `σ`-orbits of size 2**. Therefore
-> ```
-> |fibre| = 1 + 2k :  ODD.  A collision can never be a DOUBLE.  The minimum is a TRIPLE.
-> ```
-
-**Their count factors on the nose:**
-
-```
-2m − 1  =  1 + 2(m−1)   =   one σ-fixed preimage  +  (m−1) free σ-orbits
+```text
+ordinary map degree = 7,
+det JF = -2,
+F^(-1)(1,0,0)
+ = {(0,0,1),(i/2,3i,-26),(-i/2,-3i,-26)}.             (1)
 ```
 
-So the *shape* of their result is predicted by ours. They show every odd value **is
-attained**; we show **no even value can be**. Those are the two halves of one theorem, and
-only one of them is a construction.
+More generally, over the target `(a,0,0)`, the selected fibre coordinate
+obeys
 
-**Verified on `m = 2`.** Over the `τ`-fixed target `(a,0,0)` the fibre cubic (THM-1440) is
-`16a·x³ + 4x = 4x(4ax²+1)`, with roots
-
-```
-x = 0          <- the σ-fixed sheet (σ = (−x,−y,z)); it is the point (0,0,a), since F(0,0,z) = (z,0,0)
-x = ± i/(2√a)  <- a single free σ-orbit
+```text
+16a x^3+4x=4x(4ax^2+1),                              (2)
 ```
 
-`1 + 2·1 = 3 = 2m−1` at `m = 2`. Exactly the predicted split.
+so the roots are
 
-## 4. The specific example that carries the extra structure
+```text
+x=0,              x=+-i/(2 sqrt(a)).                 (3)
+```
 
-Take our `m = 2` map and ask what can be said about it that the family write-up does not say
-about any of its members:
+For the involution `sigma(x,y,z)=(-x,-y,z)`, (3) is one fixed point plus one
+free two-orbit.  This proves the fixed numerical split
 
-1. **The fibre is the root set of an explicit cubic** whose leading coefficient *is* the
-   Jelonek polynomial:
-   ```
-   P(x) = L·x³ + (4 − 3bc)·x − 2c ,   L = 27a²c² − 18abc + 16a + b³c − b²
-   ```
-   `L = 0` is exactly where sheets escape to infinity (THM-1440 §1, cross-validated against
-   THM-1330's independently derived `−L|_{c=0} = b² − 16a`).
-2. **The Jelonek set is Zariski's 1929 three-cuspidal quartic**, zero nodes — the worst
-   rational quartic, not merely non-nodal — with monodromy `S₃` and self-normalising
-   stabiliser (THM-1330/1375). "Non-injective" is the coarse fact; *which* degeneration
-   occurs is this.
-3. **Two sheets are lost over `{L = 0}`, not one**: the fibre drops `3 → 1`, surviving root
-   `x = 2c/(4−3bc)` (THM-1440 §2b).
-4. **Reflection = torus.** The meridian monodromy around the Jelonek quartic *equals* the
-   `λ = −1` torus involution — and by THM-1445-A this holds for **any** `σ/τ`-equivariant
-   degree-3 Keller map, because `σ` is linear so it permutes the two escaping sheets, and it
-   cannot fix both (that would be two `σ`-fixed points, contradicting THM-1350). *An
-   involution cannot fix two things when it is only allowed to fix one.*
+```text
+3=1+2.                                                (4)
+```
 
-Item 4 is the sharpest contrast: it is a statement about **every** member of their family at
-`m = 2`-type degree, derived with no construction at all.
+The companion script checks only these fixed-map facts and the arithmetic
+identity `2m-1=1+2(m-1)`.  It does not instantiate or verify an outside map
+for any `m>=3`.
 
-## 5. A concrete prediction for their family
+## 2. The proved mechanism that survives
 
-If each `E_m` is `σ/τ`-equivariant with `dim Fix(σ) ≤ 1` — which its `(t = 1+xy, p = x²h)`
-coordinates strongly suggest — then THM-1350 forces, for every `m`:
+THM-1350 is independent of any proposed family formula.  If a Keller map is
+`sigma/tau`-equivariant and `dim Fix(sigma)<=1`, then its restriction from
+`Fix(sigma)` to `Fix(tau)` is a constant-Jacobian map in dimension at most
+one.  `JC(1)` makes that restriction injective.  Therefore a fibre over a
+`tau`-fixed target has at most one `sigma`-fixed point, and all remaining
+points occur in free two-orbits.  Whenever exactly one fixed point is present,
 
-- the `2m−1` preimages split as **1 `σ`-fixed + (m−1) free `σ`-orbits**;
-- `σ` acts on the fibre as a product of **exactly `m−1` disjoint transpositions**, fixing one
-  sheet;
-- consequently, at a `τ`-fixed simple Jelonek point where exactly two sheets escape, the
-  meridian monodromy is a **transposition inside one of those orbits** (THM-1445-A).
+```text
+|fibre|=1+2k.                                         (5)
+```
 
-None of this requires their construction; all of it is testable against it. **That is the
-form our advantage takes: we cannot build their family, but we can predict its fibre
-combinatorics before looking.**
+This is a necessity theorem under its stated equivariance and fixed-locus
+hypotheses.  It does not construct a map with every odd fibre cardinality,
+and those hypotheses must be checked separately for any candidate family.
 
-## 6. Verdict
+## 3. What remains only a historical report
 
-- **Extent:** theirs, decisively. Infinite family vs our single map.
-- **Mechanism:** ours. Necessity of oddness, the `1 + 2k` split, the Jelonek singularity
-  type, the monodromy identification — none of which follows from having a construction.
-- **Not in competition:** their `m = 2` *is* our map. The right reading is that they extended
-  the object and we explained it; the two results compose.
+The old session prose attributed the following data to an outside family:
 
-## Verification
+```text
+E_m:C^3->C^3,       m>=2,
+generic/fixed fibre count 2m-1,
+reported ordinary degrees 7,13,26,43,64,... .         (6)
+```
 
-`04-computation/family_comparison_opus_S415.py` — degree, determinant, and fibre of our map;
-the `1 + 2(m−1)` factorisation; the `τ`-fixed fibre roots `{0, ±i/(2√a)}` exhibiting the
-one-fixed-plus-one-free-orbit split. Output in `05-knowledge/results/`.
+It also stated that its `m=2` member was the fixed sporadic map.  In the
+current repository, none of the following is available:
+
+- a coordinate formula for `E_m`;
+- a source citation or retained source file containing that formula;
+- an exact `m=3` determinant, eliminant, or fibre replay; or
+- a conjugacy exhibiting literal equality with the fixed map.
+
+Accordingly, (6), the all-odd existence claim, and the map identification are
+not proved dependencies.  The numerical coincidence at `m=2` is evidence of
+the historical comparison, not a reconstruction of the missing object.
+
+## 4. The explicit replacement test is a distinct family
+
+THM-3438 and THM-3448 contain a literal weighted construction.  THM-3517
+reindexes its cyclic subfamily by `ell=2m-3` and calls it `E_m^cyc`.  It has
+
+```text
+generic degree 2m-1,
+ordinary coordinate degrees (10m-13,10m-14,4),
+global monodromy S_(2m-1).                             (7)
+```
+
+At `m=3`, THM-3517 computes all three coordinate quintics and the exact
+Jelonek set.  But (7) begins `7,17,27,...` in its first coordinate, which
+does not match the degree string in (6).  This disagreement is a decisive
+typing barrier: `E_m^cyc` is a lawful explicit test family, not a recovered
+formula for the historical `E_m`.
+
+## 5. Safe citation rule
+
+This file may be cited for exactly two things:
+
+1. the fixed sporadic calculation (1)--(4); and
+2. the conditional involution-orbit grammar (5), through THM-1350.
+
+It may not be cited for an explicit infinite family, a verified `m>=3`
+member, a degree classification, a map classification, or a `JC(2)` claim.
+Use THM-3517 for the explicit weighted odd family and retain its stated
+monodromy and effectivity boundaries.

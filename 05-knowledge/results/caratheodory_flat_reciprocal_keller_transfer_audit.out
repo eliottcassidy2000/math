@@ -1,0 +1,38 @@
+source=https://x.com/__alpoge__/status/2089971359921156203
+source_correction=arXiv:2608.19068 is unrelated (Brendle--Hung, S2xS2 curvature)
+[PROVED/SYMBOLIC] seed spinor
+D=f_xx-f_yy=cos(2x)+(6/5)cos(2y)-(1/2)cos(4y)
+C=2f_xy=2cos(x)cos(y)
+min_R2 (D^2+C^2)=49/2500; hence min |f_barwbarw|=7/200
+seed phase has winding zero on every closed plane loop
+[PROVED/SYMBOLIC] polynomial Hessian spinor gate
+q_+ q_-=(Delta H)^2-4 det(Hess H)
+circle Laurent support for deg(q)<=D lies in [-D,D], so |wind(q)|<=D
+therefore a degree-d Hessian carrier has |line-index|<=(d-2)/2
+matching index 1+k/2 requires d>=k+4 (necessary, not sufficient)
+[PROVED/SYMBOLIC over Q] quadratic-u conductor-square nodal cell
+universe: deg_u(h,k,z,w)<=2; conductor order<=2; no coefficient-height cap
+ordered-field gates force h2=k2=0, then h1=k1=0, then z2=w2=0
+[X^3 u^12]O=-54(h2^4+6h2^2k2^2+k2^4)
+[X^3 u^8]O=-54(h1^4+6h1^2k1^2+k1^4) after h2=k2=0
+[X^3 u^6]O=-24(z2^2+w2^2) after h1=k1=h2=k2=0
+successive square gates force w1=-3h0k0, z1=-3(h0^2+k0^2)/2,
+w0=-3h0/4, z0=-3k0/4
+terminal residual [X^2 u^0](E-1)=-87/32
+controls: generic first-layer solve PASS; p->p+1 hostile REJECTED
+period cross-check: closed coefficient pairing == direct exact t-moments
+period defect=2(4h0^2+4h0k0+64k0^3u+28k0^2-35)/35
+period on the collapsed cell forces k0=0, h0^2=35/4: no Q-point
+scope: definite quartics/sums of squares use Q/order; no complex no-go claimed
+[FINITE-NUMERICAL] k=2 circle audit, N=131072 equally spaced samples
+tensor: 4Q=(g_xx-g_yy)-2i g_xy+4 bar(z)(g_x-i g_y)/(1+|z|^2)
+radius spherical_wind min|4Q_sph| max_phase_step euclidean_wind min|4Q_euc|
+ 0.3  -4 4.049408919521e+03 1.959312058774e-01  -4 4.083520978927e+03
+ 0.5  -4 1.695184492667e+03 1.063792603916e-01  -4 1.750132984240e+03
+ 1.0  -4 4.729959105625e+02 5.988648549588e-02  -4 4.815059090788e+02
+ 2.0  -4 6.656254371920e+01 3.133184946203e-02  -4 5.483533413510e+01
+ 5.0  -4 2.155920205668e+00 1.148904095561e-02  -6 1.081087751004e-01
+10.0  -4 1.390042023902e-01 6.261181849557e-03  -6 3.845003996065e-02
+positive control exp(-4i theta): PASS; hostile cos(theta) zero-crossing: REJECTED
+line-index convention is -wind(Q)/2, hence sampled spherical line index=2
+scope: mesh nonvanishing only; unique global umbilic and convexity are NOT proved here

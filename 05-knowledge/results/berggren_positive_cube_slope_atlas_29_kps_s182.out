@@ -1,0 +1,13 @@
+BERGGREN POSITIVE-CUBE SLOPE ATLAS THROUGH 29
+status=PROVED+FINITE-EXACT+VERIFIED-EXACT
+universe=primitive_slopes;3<=n<=29;n_odd;m_even;n/2<m<n;gcd(m,n)=1
+candidate_count=47;modularly_excluded=45;survivors=[(14,23),(26,29)]
+obstruction_counts=p3:35,p5:2,p7:3,p11:2,p13:2,p23:1
+atlas_semantic_sha256=587ff3dcea04cc34ea53115bba4985d00e86e3b129f49e2b67f73ca7f3bef511
+ray_14_23=Pell(W^2-44965u^2=676);seed=(16715091502370452792679,78826357654129385469);first_r=1813711014853445365774251238977913323291598894943013194651502886;first_x=2302290678332599157988107845344339684655411;first_y=984700897345246967397057762882950552473960
+ray_26_29=Pell(W^2-522261u^2=2692);seed=(5059,7);continuation=THM3375
+both_units=norm_one_with_odd_scalar_even_radical;both_positive_orbits=infinite
+limiting_chamber_ratios=distinct
+ray_semantic_sha256=8f82b804a924daa6b24783eef1c5ecc03c7cf6f167c0a7ab30b4f685bd2827d3
+boundary=finite_slope_atlas_only_through_n29;explicit_seeds_not_claimed_minimal;no_counting_asymptotic_or_other_frontier_transfer
+source_lf_sha256=7ec10b47139f10117a9f80155ac040ac864bb329ea5687ac1c890bec27529d30

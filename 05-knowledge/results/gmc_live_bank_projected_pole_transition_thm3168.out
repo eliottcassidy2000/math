@@ -1,0 +1,15 @@
+THM-3168 live-bank projected pole transition wall
+poles=(8, 7, 6, 5, 5, 4, 4, 3, 3, 2, 2, 2, 1, 1, 1, 1)
+empty_through_depth3_states=135
+depth1_pair_counts_M1_M8=(9, 9, 9, 9, 9, 8, 8, 8)
+depth1_kernel_dimensions_N5_N6=((3, 1), (3, 1), (3, 1), (3, 1), (3, 1), (2, 0), (2, 0), (2, 0))
+depth1_rank_profile_repeated_M1_M5=((6,6),(8,8),7x(9,9))
+depth1_rank_profile_singleton_M6_M8=((6,6),8x(8,8))
+depth2_N5_rows=((1, 42, 6, 6, 12), (2, 42, 6, 6, 12), (3, 41, 6, 6, 12), (4, 41, 6, 6, 12), (5, 41, 6, 6, 12), (6, 34, 6, 6, 12), (7, 34, 6, 6, 12), (8, 34, 6, 6, 12))
+witness_pairs=(((), (1,)), ((1,), (1, 1)), ((2,), (1, 2)), ((3,), (1, 3)), ((4,), (1, 4)), ((5,), (1, 5)), ((1, 1), (1, 1, 1)))
+witness_normalizers=(1440, 720, 1440, 720, 1440, 720, 720)
+witness_determinant=-3821168719915360450560
+witness_determinant_factorization=((2, 11), (3, 6), (5, 1), (7, 1), (11, 1), (37, 1), (877, 1), (204869207, 1))
+witness_child_minus_parent_top=(-1, -2, -1, -2, -1, -2, -2)
+scope=finite_projected_linear_span_not_positive_or_Markov_transition
+all_exact_checks=PASS

@@ -2,8 +2,10 @@
 id: THM-3081
 title: "Terminal toric residue-parameter Mobius rigidity and autonomous decoder"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  In the normalized
   residue-degree-one target-coordinate-line scope inherited from THM-3074,
+  assume C(M_0,R_0)=C(x,y) and that C(u) maps isomorphically onto the
+  residue field.  At
   at the primitive terminal stage of THM-3080 choose A g+B e=1 and set
   S=R^A Z^B, Theta=Z^g/R^e.  Then w(S)=1 and the residue theta of Theta
   generates the full residue field: C(u)=C(theta).  Consequently theta is a
@@ -21,13 +23,6 @@ status: >
   arbitrary-Jelonek straightening, full C3, A4/S4, or JC(2) exclusion is
   asserted.
 source: codex-jc-resolvent-bridge-2026-08-01
-audit: >
-  Root independently rederived the determinant-one terminal chart, both
-  residue-field inclusions and the degree-one rational-map argument; checked
-  the rho-gauge cancellation, Mobius square law, strict-stage mu_d kernel,
-  and three-view scope; and replayed normal and optimized execution
-  byte-for-byte against the stored output.  Python compilation, hashes,
-  dependency typing, and the stated non-consequences all passed.
 depends_on:
   - THM-3080-c3-finite-toric-key-tower-depth-partition-and-gcd-descent
 related:
@@ -43,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3081 -- the terminal key recovers the residue coordinate
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Inheritance and new object
 
@@ -79,6 +74,17 @@ The residue parameter throughout is the actual coordinate-line parameter
 over other coefficient fields, but the identification `P=u`, the residue
 field equality `C(u)`, and the Mobius conclusion below do **not** straighten
 an arbitrary Jelonek component.
+
+More literally, the inherited hypotheses are
+
+```text
+K=C(x,y),            w(K*)=Z,            C(M_0,R_0)=K,
+C(u) -> kappa(w) is an isomorphism.                         (0)
+```
+
+Every strict toric change is unimodular, so the terminal pair still
+generates `K`.  Both full-field generation and the displayed residue-field
+isomorphism are used in Section 3.
 
 ## 2. A terminal value-one/residue chart
 
@@ -352,8 +358,8 @@ Hence it is a degree-`d` torus isogeny with exact kernel
 mu_d x {1}.                                             (33)
 ```
 
-Retaining `c` rather than only `C` selects a section of this root torsor and
-makes the next key
+Retaining `c` rather than only `C` chooses a lift, equivalently a
+trivialization of this root torsor over the packet, and makes the next key
 
 ```text
 Z^alpha-c R^beta                                        (34)
@@ -363,6 +369,9 @@ well typed.  This is the rank-two signed-character version of
 [THM-3077](THM-3077-pointed-norm-relative-line-lift-and-relation-carry-obstruction.md):
 a nonprimitive norm plus a complement loses finite diagonal torsion, while a
 pointed primitive root restores it.
+
+This choice is not a canonical global section of the torsor; changing the
+primitive root acts by the kernel `mu_d` in `(33)`.
 
 Along the key tower the torsor order is
 
@@ -463,7 +472,8 @@ in `(42)`.
 
 ## 9. Exact evidence and boundary
 
-The companion checks:
+The companion, replayed byte-identically under normal and optimized Python
+during an independent line audit, checks:
 
 - every primitive terminal Bezout chart and leading exponent decoder for
   coprime `1<=g,e<=24` and a hostile exponent box;
@@ -471,15 +481,6 @@ The companion checks:
 - the affine and reciprocal-affine residue decoders in `(37),(39),(41)`;
 - the exact autonomous ODE `(24)` on both multistage packets; and
 - all displayed `rho`, `theta`, target, and prefactor constants.
-
-An independent hostile audit rederived the terminal exponent matrix and its
-inverse, the two residue-field inclusions in `(15)`, the degree-one conclusion
-in `(18)`, and the gauge-covariant cancellation leading to `(25b)`.  It also
-checked the determinant-`d` torus isogeny and exact `mu_d` kernel in
-`(31)--(33)`, while keeping the additive-tomography/multiplicative-root scope
-separation in Section 8.  Fresh normal and optimized runs were byte-identical
-to the stored transcript; Python compilation and the recorded SHA-256 hashes
-passed.
 
 Reproduce with
 

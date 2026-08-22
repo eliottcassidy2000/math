@@ -1,0 +1,16 @@
+THM-3490 FULL FOURIER-DIRICHLET RESIDUE TOMOGRAPHY COMPANION
+STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
+SCRIPT: 04-computation/periodic_polynomial_fourier_dirichlet_residue_tomography_thm3490.py
+OUTPUT: 05-knowledge/results/periodic_polynomial_fourier_dirichlet_residue_tomography_thm3490.out
+PINS: (('THM-3485', '814ad59925079c9c69c3b90ea1ee7947dbf01ec1c8855bb760fdd6dc5098fafc'), ('THM-3486', 'de79c50df490f550897d494391d1572d71a35f6f8a54d2cb72fb92c5a55a35ad'))
+SPLIT_FIELD: F_2521; primitive_generator=17; periods=1..9
+CONTROL_PACKETS: 82; Fourier inversion and predicted-vs-Berlekamp-Massey recurrence all exact
+ALTERNATING_HOSTILE: residue_degree_profile=(-1, 4); trivial top residue=0; nontrivial top residue=1
+PERIOD_REFINEMENT_HOSTILE: period4_profile=(-1, -1, 0, -1); period2_and_period4_characteristic_equal=True
+THM3484_TERNARY: residue_degree_profile=(7, 6, 6); recurrence_order=22; top_residue_row=((-16384 mod 2521),0,0)
+FINITE_PREFIX_HOSTILE: seven changed initial terms leave the suffix residue packet and tail recurrence unchanged; the transform does not recover transients
+INFORMATION_ORDER: the labelled residue table recovers every lane coefficient; the minimal recurrence retains only the highest nonzero residue in each character row and cannot recover the table
+SCOPE: periodic-polynomial tails only; character gauge and declared period retained; no graph, tournament, ancestry, LRC-current, or Jacobian-flux semantics
+SEMANTIC_SHA256: 39daa9a75e84e0fcb28141fa9079c3f616c9aa5d0689934cc239b4d911fc713e
+SECURITY_AST_NODES_AND_FORBIDDEN: (2966, ())
+VERDICT: every Fourier/Jordan rung is one twisted Dirichlet pole residue; ordinary harmonic mass is only the top trivial entry, and recurrence is a lossy support-depth projection of the full residue table

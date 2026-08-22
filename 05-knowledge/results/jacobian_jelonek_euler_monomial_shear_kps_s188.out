@@ -1,0 +1,20 @@
+THM-3560 Jelonek--Euler monomial-shear audit
+universal discriminant: 4*(4+3*lambda*q)^3, q=b^(m+1)
+normalization: s^2=4+3*lambda*b^(m+1), with (b,s)=(0,-2) removed
+m n genus infinity chi(D) chi(e) chi(preimage)
+1 2 0 2 -1 2 3
+2 3 1 1 -2 3 4
+3 4 1 2 -3 4 5
+4 5 2 1 -4 5 6
+5 6 2 2 -5 6 7
+6 7 3 1 -6 7 8
+7 8 3 2 -7 8 9
+8 9 4 1 -8 9 10
+9 10 4 2 -9 10 11
+10 11 5 1 -10 11 12
+11 12 5 2 -11 12 13
+12 13 6 1 -12 13 14
+formula: chi(D)=-m, chi(e)=m+1, chi(F^-1(T_m))=m+2
+core cubic root valuations at a=infinity: (-2+3k,k,0), unique minimum for every k in Z
+verdict: pullback irreducible; no coordinate factor in any monomial shear
+all active truth gates passed

@@ -1,0 +1,18 @@
+FIRST-WITT HENSEL--PLUECKER COVARIANCE EXACT CONTROL
+frame_control=omega:93,det:74,transformed:14,wall:0
+delta_3=116 factorization={2: 2, 29: 1}
+delta_4=586672128 factorization={2: 11, 3: 2, 7: 1, 4547: 1}
+delta_5=2246282972173187481600 factorization={2: 16, 3: 7, 5: 2, 11: 2, 20747: 1, 249721: 1}
+delta_6=44965855750876894470144533873830133760000 factorization={2: 47, 3: 15, 5: 4, 7: 1, 139: 1, 3767: 1, 12041: 1, 807241: 1}
+s=3 p=29 root=28 A_over_p=19 B_over_p=24 A_derivative=6 B_derivative=1 omega=20 z_A=21 z_B=5
+s=4 p=7 root=5 A_over_p=3 B_over_p=5 A_derivative=3 B_derivative=3 omega=1 z_A=6 z_B=3
+s=4 p=4547 root=3243 A_over_p=2552 B_over_p=3588 A_derivative=4280 B_derivative=1741 omega=3739 z_A=3671 z_B=3132
+s=5 p=11 root=2 A_over_p=10 B_over_p=6 A_derivative=4 B_derivative=4 omega=5 z_A=3 z_B=4
+s=5 p=20747 root=5645 A_over_p=6993 B_over_p=17070 A_derivative=8474 B_derivative=18464 omega=7075 z_A=13673 z_B=8568
+s=5 p=249721 root=222768 A_over_p=129614 B_over_p=136893 A_derivative=167574 B_derivative=84554 omega=39549 z_A=155348 z_B=15040
+s=6 p=139 root=113 A_over_p=16 B_over_p=34 A_derivative=32 B_derivative=28 omega=55 z_A=69 z_B=108
+s=6 p=3767 root=1641 A_over_p=1566 B_over_p=2007 A_derivative=2749 B_derivative=2460 omega=131 z_A=2466 z_B=1042
+s=6 p=12041 root=9004 A_over_p=6042 B_over_p=5530 A_derivative=1522 B_derivative=7790 omega=10951 z_A=1515 z_B=463
+s=6 p=807241 root=22489 A_over_p=341729 B_over_p=683313 A_derivative=364516 B_derivative=409175 omega=439007 z_A=414823 z_B=557512
+exception_count=10 all_omega_nonzero=True
+ALL EXACT CHECKS PASSED

@@ -1,0 +1,13 @@
+TOURNAMENT HALF-GRID RECIPROCITY -- THM-3181 EXACT COMPANION
+status=PROVED+VERIFIED-EXACT;no_canonical_runtime_imports=true;direct-permutation-engine
+universe=all labelled tournaments n=1..5;count=1099
+Q_parity_checks=8792;Q(-m)=(-1)^n Q(m);m=1..8;PASS
+positive_binomial_checks=8792;Q(m)=sum_b A(b)binom(m+b,n);PASS
+rational_GF_checks=8792;sum_m Q(m)x^m=x B_T(x)/(1-x)^(n+1);PASS
+worpitzky_integration_checks=8792;Delta Q(m)=a_(m-1);PASS
+half_grid_recoveries=1099;ceil(n/2)_values_recover_full_A;PASS
+SCC_order_hostile=K1_join_C3_vs_C3_join_K1;score_sequences_differ;A_distributions_equal;PASS
+SCC_positive_control=C3_join_C3;Q_jet_product_plus_half_inversion=direct_A;PASS
+repeated_join_direct_tail_checks=40;total_order<=8;k<=4;PASS
+C3_k3_roots=(3, 12, 33);annihilator_multiplicities=(3,2,1);order=6;PASS
+K1_k3_Eulerian_boundary_r3_to_r10=[1, 11, 66, 302, 1191, 4293, 14608, 47840];PASS

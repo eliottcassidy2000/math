@@ -1,0 +1,20 @@
+R=32 D0=0 vars=856 inequalities=1810 nnz=6088 d0=19 dlast=37 build_s=0.009
+A_range=[-1.000000e+00,1.000000e+00] b_range=[-6.078431e-01,6.078431e-01]
+status=optimal success=True value=0.0 elapsed_s=0.039
+max_checked_violation=1.3339403736273162e-13 max_abs_scaled_variable=1.0011978779751391e+00
+scope=NUMERICAL_REAL_LP_FEASIBILITY_NOT_RATIONAL_CERTIFICATE_NOT_INTEGER_WITNESS_NOT_AMM_CLOSURE
+R=128 D0=0 vars=14441 inequalities=29288 nnz=103746 d0=76 dlast=152 build_s=0.081
+A_range=[-1.000000e+00,1.000000e+00] b_range=[-3.878521e-01,3.878521e-01]
+status=optimal success=True value=0.0 elapsed_s=2.633
+max_checked_violation=8.2372080265233955e-12 max_abs_scaled_variable=1.0006041240069437e+00
+scope=NUMERICAL_REAL_LP_FEASIBILITY_NOT_RATIONAL_CERTIFICATE_NOT_INTEGER_WITNESS_NOT_AMM_CLOSURE
+R=256 D0=0 vars=58276 inequalities=117366 nnz=418814 d0=153 dlast=305 build_s=0.432
+A_range=[-1.000000e+00,1.000000e+00] b_range=[-6.234719e-01,6.234719e-01]
+status=optimal success=True value=0.0 elapsed_s=10.826
+max_checked_violation=7.5911036522102960e-13 max_abs_scaled_variable=1.0016553302183790e+00
+scope=NUMERICAL_REAL_LP_FEASIBILITY_NOT_RATIONAL_CERTIFICATE_NOT_INTEGER_WITNESS_NOT_AMM_CLOSURE
+R=512 D0=0 vars=234117 inequalities=469866 nnz=1683470 d0=306 dlast=611 build_s=3.333
+A_range=[-1.000000e+00,1.000000e+00] b_range=[-6.246944e-01,6.246944e-01]
+status=optimal success=True value=0.0 elapsed_s=61.885
+max_checked_violation=1.9560256828940940e-13 max_abs_scaled_variable=1.0006755525461430e+00
+scope=NUMERICAL_REAL_LP_FEASIBILITY_NOT_RATIONAL_CERTIFICATE_NOT_INTEGER_WITNESS_NOT_AMM_CLOSURE

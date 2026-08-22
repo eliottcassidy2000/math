@@ -1,0 +1,9 @@
+thm3237_dependency_sha256=92518f258afeca233e90790fa2f713fcfd375c295271ff85dc4c5c66c0057d81
+universal_top_jet=c99=-16*t^4*v^3*(a*t-v);wall_c98=0;wall_c97=-2*v^6*(kappa+4*a*s*v15)/a^4;tuned_c96=-v^5*tau/(a^4*v15)
+accessory_case=4111 r1_norm=-1024/175 K_norm=23328/30625 R_norm=58451308942336/937890625 s_star_norm=-250047/32768000 degree=52 H_sha256=b60d1ad6b3cb40c733a56730cb0cacac6609c6be62b61839e6ff670a87f1de7a
+accessory_case=3211 r1_norm=-69632/525 K_norm=-2147586048/30625 R_norm=122694886932611072/8441015625 s_star_norm=-173456171875/35651584 degree=52 H_sha256=a2c6f8d0b3b2097382d4e55ddb64664d3899206ce1024f7ff0d1c4f3c6b99676
+finite_case=4111 good_reduction=(p=113,u=85) (t_star,s_star)=(85,65) controls=(degree,gcd_B_boundary,gcd_H_boundary,gcd_H_Hprime,h52)=(52, 0, 0, 0, 64)
+finite_case=3211 good_reduction=(p=101,u=64) (t_star,s_star)=(89,73) controls=(degree,gcd_B_boundary,gcd_H_boundary,gcd_H_Hprime,h52)=(52, 0, 0, 0, 91)
+cubic_law=w^3~-16*r1*delta/(a*R)=-8*r1*epsilon/R
+local_inertia=one_3_cycle_on_the_three_escaping_critical_roots
+source_ast=(assert_nodes=0,float_literals=0)

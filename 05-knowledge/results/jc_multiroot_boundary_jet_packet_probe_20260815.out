@@ -1,0 +1,15 @@
+MULTIROOT BOUNDARY-JET PACKET -- EXACT RESEARCH PROBE
+lambda=yH / D(lambda)=0 factor checks: 6
+D-stable CRT ideal checks: 12
+vertical finite-Neumann inverse checks: 28
+horizontal formal-gauge identities: 35
+explicit q=2 extension coefficient checks: 7
+wrap sigma=d gauge identities: 10
+special-fibre graph H0/H1 ranks: 126576
+derived Artin jet packet instances: 506304
+selected rank-N packets: 21686
+unselected rank-(N-1) packets: 104890
+nonsplit/wrap descent controls: 80
+named q=2 blocked hostile: (d,sigma;e1,e2)=(4,2;3,1)
+named nonsplit hostile over Q: g=(x^2+1)^3, (d,sigma)=(2,1)
+BOUNDARY-JET N/N-1 PACKET VERIFIED ON DECLARED GRID

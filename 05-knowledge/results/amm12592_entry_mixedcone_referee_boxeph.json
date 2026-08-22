@@ -1,0 +1,28 @@
+{
+ "EN_D_decoupling": {
+  "trials": 600,
+  "pass": 600,
+  "all_pass": true
+ },
+ "EN_M_monotone": {
+  "trials": 600,
+  "pass": 600,
+  "all_pass": true
+ },
+ "EN_C_mixedcone_step": {
+  "trials": 600,
+  "pass": 600,
+  "all_pass": true
+ },
+ "EN_G_growthlaw": {
+  "trials": 600,
+  "pass": 600,
+  "all_pass": true
+ },
+ "EN_DR_capdrift": {
+  "trials": 600,
+  "pass": 600,
+  "all_pass": true
+ },
+ "ALL": true
+}

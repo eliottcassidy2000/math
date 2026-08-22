@@ -1,0 +1,20 @@
+== tetrahedral K4 representation atlas ==
+sets: vertices=4 edges=6 perfect_matchings=3 opposite_faces=4 tournaments=64
+cut_plus_opposite_face_cycle determinant=-16; odd-characteristic H1 action faithful of order 24
+matching action: S4 -> S3 onto; kernel cycle types=1^4 plus 3*(2^2)
+S4 class table: class,size,matching_class,H1_trace,affine_bits
+((1, 1, 1, 1), 1, (1, 1, 1), 3, (0,))
+((1, 1, 2), 6, (1, 2), -1, (1,))
+((2, 2), 3, (1, 1, 1), -1, (0,))
+((1, 3), 8, (3,), 0, ())
+((4,), 6, (1, 2), 1, (1,))
+Berggren: A,C are fixed-vertex 3-cycles with matching 3-cycles; B is a 4-cycle with matching reflection
+T4 orbit table: size,score_sequence,cyclic_faces,score_vector,face_vector,representative
+(8, (3, 1, 1, 1), 1, (3, -1, -1, -1), (-3, 1, 1, 1), (-1, -1, -1, -1, 1, -1))
+(8, (2, 2, 2, 0), 1, (1, 1, -3, 1), (1, 1, -3, 1), (-1, -1, 1, -1, -1, 1))
+(24, (3, 2, 1, 0), 0, (3, 1, -1, -3), (-1, 1, -1, 1), (-1, -1, -1, -1, -1, -1))
+(24, (2, 2, 1, 1), 2, (1, 1, -1, -1), (-1, 3, -3, 1), (-1, -1, 1, -1, -1, -1))
+labelled tournament score/face ledger sha256=0e3878081e5cfd5ee63a24e85554605e1f06c5dcb54d389cb8c29634e2a4a2df
+score plus opposite-face circulation reconstructs every labelled tournament; lattice index=16
+scope: finite representation atlas only; no physical current, LRC row exclusion, or JC consequence
+all exact checks passed

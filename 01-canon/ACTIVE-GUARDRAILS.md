@@ -7,7 +7,7 @@
 1. **Chronology is not truth.** Logs, broadcasts, and reflections can contain a claim and its refutation minutes apart. Resolve status through corrections and repaired canon.
 2. **IDs can collide.** Cite `ID + slug/path`; check frontmatter, current indexes, and remote history before reserving or following a number.
 3. **Keep logical direction visible.** Mark necessary, sufficient, iff, reduction, finite-exact, heuristic, and reserved statements distinctly.
-4. **A quotient owes a loss ledger.** Record source, target, map, preserved predicate, forgotten coordinate, restoration sidecar, and hostile test.
+4. **A quotient owes a loss ledger.** Record source, target, map, preserved/lost data, restoration sidecar, and hostile. Entrywise absolute values and antipodal metric folding need not preserve PSD or negative type (THM-3347, rank-four `N=32045`).
 
 ## Lonely Runner
 
@@ -94,8 +94,9 @@
     nodes do not imply a Paley/regular wall.
 31. **No global de-factorialization.** MISTAKE-215; THM-2040 is retired. The
     THM-2022 mechanism is prime-local initial-form normalization.
-32. **THM-2033 is special-matrix scope.** Its determinant identity does not
-    replace the general scalar Wick moment.
+32. **Support algebra is not its observer.** THM-2033 is special-matrix scope;
+    its determinant does not replace scalar Wick moments. Bare toric/bouquet
+    data retain neither signs nor factorial weights (THM-3365).
 33. **Distinguish legacy endpoints from the front door.** `nc2_of_dvdK1` and
     `gmc2_of_dvdK1` still expose `DvdK1`, but root-imported `GMC2Main.gmc2`
     now discharges the crux unconditionally and kernel-purely. HYP-8930's
@@ -167,8 +168,7 @@
 58. **Restricted kernels are not full JC(2).** MISTAKE-237/THM-2801: full
     `SIC(n>=2)` is false, but Zhao's cubic/Hessian sectors remain open.  Do not
     reverse SIC-to-JC, confuse operator `E_n` with scalar `F_n`, or erase `SIC(1)`.
-59. **THM-1330 is a necessary atlas, not a classification.** MISTAKE-236;
-    inverse realization and irreducible Keller seeds remain open.
+59. **THM-1330 is an atlas, not a classification.** MISTAKE-236.  THM-3438 gives an irreducible `S_n` weighted seed in every degree `n>=3`; inverse realization and arbitrary-map classification remain open.
 60. **THM-2071 closes the quadratic-fiber locus, not JC(2).** It makes the
     reduced complement fiber-linear; THM-2084's cubic floor is also a source-
     fiber statement, not generic degree, Jelonek geometry, VC(4), or JC(2).

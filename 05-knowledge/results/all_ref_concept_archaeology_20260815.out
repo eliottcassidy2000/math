@@ -1,0 +1,86 @@
+ALL-REF CONCEPT ARCHAEOLOGY INVENTORY
+============================================================================
+inventory_mode=frozen_manifest
+ref_manifest=all_ref_concept_archaeology_20260815.refs
+main_ref=origin/main
+main_sha=5f038660851946647afee993fb3fea850cc80b7d
+head_sha_at_capture=5f038660851946647afee993fb3fea850cc80b7d
+
+BRANCH / REMOTE-TRACKING UNIVERSE
+raw_ref_entries=194
+symbolic_ref_entries=1
+nonsymbolic_refs=193
+refs_with_commits_outside_main=175
+unique_commits_outside_main=4697
+unique_paths_touched_outside_main=19583
+touched_paths_absent_from_main=2362
+absent_research_paths=836
+
+ALL GIT REFS (INCLUDES PRIVATE STASH)
+unique_commits_outside_main=4704
+unique_paths_touched_outside_main=19719
+touched_paths_absent_from_main=2490
+extra_commits_beyond_branch_universe=7
+extra_absent_paths_beyond_branch_universe=128
+
+ABSENT RESEARCH-PATH MOTIF CENSUS (FILENAME ROUTING ONLY)
+continuation_transfer: 17
+    04-computation/abc_recurrence_tricks_s716.py
+    04-computation/lrc_largeowner_crt_automaton_s581.py
+    04-computation/temperature_ladder_transfer_spectrum_s720.py
+    04-computation/transfer_spectrum_zoo_s721.py
+    05-knowledge/hypotheses/HYP-2110-lrc-largeowner-crt-residue-automaton.md
+    05-knowledge/hypotheses/HYP-2115-lrc-largeowner-crt-residue-automaton.md
+    05-knowledge/hypotheses/HYP-2360-triangle-recursion-temperature-ladder-pfaffian-translator.md
+    05-knowledge/hypotheses/HYP-2364-abc-recurrence-IE-and-C-finiteness-tricks.md
+    ... 9 more
+polarized_correlation: 5
+    04-computation/autocorrelation_operator_lens_s714.py
+    05-knowledge/hypotheses/HYP-2355-autocorrelation-operator-unification.md
+    05-knowledge/results/autocorrelation_operator_lens_s714.out
+    07-reflections/everything-was-one-linear-program-s621.md
+    07-reflections/the-autocorrelation-operator-is-the-master-object-s714.md
+event_flow_first_passage: 17
+    04-computation/friendliness_chart_png_s647.py
+    04-computation/friendliness_chart_s647.png
+    04-computation/friendliness_chart_s647.py
+    04-computation/friendliness_chart_s647.svg
+    04-computation/friendliness_survival_s647.png
+    04-computation/friendliness_survival_s647.py
+    04-computation/friendliness_survival_s647.svg
+    04-computation/friendliness_unit_distance_link_s648.py
+    ... 9 more
+valuation_unit_log: 8
+    01-canon/theorems/THM-445-lrc-momentum-twistor-discrete-log.md
+    04-computation/lrc14_divisor_lattice_s710.py
+    04-computation/lrc_momentum_twistor_s718.py
+    05-knowledge/hypotheses/HYP-2376-unit-distance-momentum-twistor.md
+    05-knowledge/results/lrc14_divisor_lattice_s710.out
+    05-knowledge/results/lrc_momentum_twistor_s718.out
+    07-reflections/lrc-divisor-lattice-is-the-cover-poset-s710.md
+    07-reflections/the-lrc-momentum-twistor-is-the-discrete-log-s718.md
+interaction_cross_effect: 1
+    05-knowledge/hypotheses/HYP-2329-pfaffian-dictionary-triangle-inclusion-exclusion.md
+dual_certificate: 8
+    04-computation/delsarte_lp_everything_s621.py
+    04-computation/krawtchouk_normalization_n14_s620.py
+    04-computation/ternary_krawtchouk_n14_3structure_s622.py
+    05-knowledge/hypotheses/HYP-2210-krawtchouk-normalization-of-the-lonely-measure.md
+    05-knowledge/hypotheses/HYP-2215-the-one-delsarte-lp-unifying-everything.md
+    05-knowledge/hypotheses/HYP-2225-the-2-to-3-dictionary-ternary-krawtchouk.md
+    06-writeups/the-one-delsarte-lp-s621.md
+    07-reflections/everything-was-one-linear-program-s621.md
+paths_matching_multiple_motifs=1
+
+CONTROLS
+positive_absent=True  05-knowledge/hypotheses/HYP-2355-autocorrelation-operator-unification.md
+positive_absent=True  05-knowledge/hypotheses/HYP-2381-transfer-spectrum-ledger-temperature-frozen-parity.md
+positive_absent=True  01-canon/theorems/THM-445-lrc-momentum-twistor-discrete-log.md
+positive_absent=True  07-reflections/lrc-nowhere-zero-flow-attack-s521.md
+positive_absent=True  05-knowledge/hypotheses/HYP-2325-friendliness-never-lonely-yet-first-passage.md
+hostile_current_present=True  01-canon/theorems/THM-2355-component-deletion-gram-and-twist-energy-phase-transport.md
+hostile_current_absent=False  01-canon/theorems/THM-2355-component-deletion-gram-and-twist-energy-phase-transport.md
+
+INTERPRETATION GUARDRAIL
+A path or motif hit proves only historical reachability and current absence.
+Truth/status/novelty require a manual audit against current canon and MISTAKES.md.

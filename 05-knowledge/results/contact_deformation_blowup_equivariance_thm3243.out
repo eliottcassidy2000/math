@@ -1,0 +1,11 @@
+THM-3243 exact companion
+dependency_hashes=3 assert_nodes=0 float_literals=0
+p=3 point_orbit=9 point_stabilizer=3 vertical_flags=9 nonvertical_flags=27
+p=5 point_orbit=25 point_stabilizer=5 vertical_flags=25 nonvertical_flags=125
+p=7 point_orbit=49 point_stabilizer=7 vertical_flags=49 nonvertical_flags=343
+p=13 point_orbit=169 point_stabilizer=13 vertical_flags=169 nonvertical_flags=2197
+p13_gl2=26208 generators=3 directions=14 flag_stabilizer=1872
+p13_centre_ideal_checks=10 centre_points=169 rational_flags=2366
+p13_singer_order=168 projective_order=14 radial_scalar=6 radial_order=12
+p13_contact_classes=169 delayed=1 exact=168 helper=(1,10) contact=(1,2)
+THM-3243 PASS

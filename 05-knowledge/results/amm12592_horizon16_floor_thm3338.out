@@ -1,0 +1,14 @@
+status=THM-3338_VERIFIED_EXACT
+deadline_vector_T1_to_T15=2,3,4,5,15,7,8,9,10,11,12,13,14,15,16
+floor_hits=(1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+donor_n5_counts_side0=(1, 9, 19, 25, 10, 0, 0, 9, 9, 0)
+donor_n5_counts_side1=(1, 0, 27, 84, 126, 116, 58, 15, 0, 0)
+layer_heads={1: 8, 2: 60, 3: 280, 4: 910, 5: 2184, 6: 4004, 7: 5720, 8: 6435, 9: 5720, 10: 4004, 11: 2184, 12: 910, 13: 280, 14: 60, 15: 8}
+shell_1_doubled_deficit=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shell_2_3_doubled_deficit=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shell_4_5_6_7_doubled_deficit=(0, 4, 2, -8, -16, -14, -6, 0, 6, 14, 14, 2, -6, -4, 0)
+shell_8_9_10_11_12_13_14_15_doubled_deficit=(0, -4, -2, 8, 16, 14, 6, 0, -6, -14, -14, -2, 6, 4, 0)
+target=(1-p^16-(1-p)^16)/2
+checksum_prefix_control=PASS
+causality=PASS
+source_sha256=01fbcab5f1d3406fbad837a4c22e2e07c7116402dfc154be8b38225191449f9f

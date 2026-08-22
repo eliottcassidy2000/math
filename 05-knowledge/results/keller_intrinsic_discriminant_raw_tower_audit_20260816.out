@@ -1,0 +1,11 @@
+== fixed Keller intrinsic discriminant raw-tower audit ==
+matrix=((7, -2), (3, -2));det=-8;rows_0_to_9=((1, 0), (7, 3), (43, 15), (271, 99), (1699, 615), (10663, 3867), (66907, 24255), (419839, 152211), (2634451, 955095), (16530967, 5993163))
+all_clearing_exponents_e_n_are_odd=PASS through n=31;symbolic parity recursion e'=e mod 2
+trace_discriminant_recursion=d_(n+1)=Norm(d_n)*d_1 with odd block degree 3^n
+raw_class_induction=d_n=[(-1)^n P_(n-1)];residual_L_exponent=1-e_(n-1) is even
+raw_named_scalar_invoices=((0, 'L', 0), (1, 'H', 6), (2, 'J', 53), (3, 'G', 159), (4, 'R5', 477), (5, 'R6', 1431))
+known_intrinsic_classes=((1, 0, 0, '-L'), (2, 1, 6, 'H'), (3, 2, 53, '-2J'), (4, 3, 159, '2G'), (5, 4, 477, '-2R5'), (6, 5, 1431, '2R6'))
+hostiles=even clearing leaves L;even block loses outer class;rescaling by 2 changes class;literal coordinate can be nonprimitive
+semantic_sha256=9ccc7adc713ebf30e69af6456e212b94f4a43da4cec6215f730c58cc00ecfe46
+scope=basis-independent function-field trace discriminant;no simultaneous fixed primitive coordinate,exact positive multiplicities,arbitrary-map,or general JC claim
+all exact checks passed

@@ -1,0 +1,19 @@
+== independent hostile audit: r=5/U_full Boolean square ==
+parent=(script_sha256=72e819f1cae92e8969516dc79215e683c538e80da64c9e989e2c5115aebb5304,semantic=88d4be52bcb16a52ab2656ff0c0b6bf70e33a2174652ee7e1df62376426f24e6)
+physical_gray_path=(states=(('0', '1/28', (0,)), ('1/28', '13/28', (0, 6)), ('13/28', '15/28', (6,)), ('15/28', '27/28', (6, 12)), ('27/28', '1', (12,))),toggle_word=(6, 0, 12, 6),measure_vector=(1, 12, 2, 12, 1)/28)
+hierarchy=abstract_nontrivial_cuts=6;physical_states=5;globally_absent={0,12};OWNER_excludes_only_realized_center={6}
+abstract_cut_census_(missing,one_way,two_way)={(1, 2, 0)};no_both_way_edges=PASS
+owner_square=(labels=((0, 0), (0, 1), (1, 0), (1, 1)),subsets=((0,), (0, 6), (12,), (6, 12)),measures=(345867129050087785140, 345867129050087785140, 345867129050087785140, 345867129050087785140),complement_XOR3=(3, 2, 1, 0))
+source_profile_sha256=2de29f9be7fd16ceb4be5d15f7a71aa3d09f2907ec39f7af0b2017eadf3c18d2;same_root_pointwise_zero=PASS
+literal_guard_controls=((0, 0, 0), (0, 1, 6), (1, 0, 6), (6, 6, 12), (12, 12, 0)): PASS;parent_marginal=PASS
+work_counts=(7107008, 7108460, 1200462, 186244, 186244);state_segment_counts=(300115, 300116, 300115, 300116)
+coordinate_ranks_(coupled,erased,ANOVA)=(4, 4, 3)
+spectral_shapes_(total,dc,V4axis,F13axis,mixed)=(coupled=(52, 1, 3, 12, 36),erased=(52, 1, 3, 12, 36),ANOVA=(36, 0, 0, 0, 36))
+bit_marginals_(left_right,single_double)=((2, (26, 1, 1, 12, 12), '43450c53365624033ec2c098fb52812934d94de5daf1c3396d4e59b2e03bc680', 'd48f20b5fe98a19bcfd20a55781dce268a3127a7fc76e8d6752f1c5f656ee896'), (2, (26, 1, 1, 12, 12), 'daebb6ead49585eba1e118db3333af16179388a3d987bd626c2f151e3980db6d', '051da2cd94ed11bf9fb4fb708a1d15b8206a3a26729f35b5dc4f68609ef5efa6'))
+fixed_(1,0,6)=(state_profile=(79866518267205440406168, 310652419985144092895775, 367085997033220164935953, 315468006625786970755333),Walsh=(317699132065964946247468, 576205898534886264436774, 463338744438734120356418, 472969917720019876075534))
+comparison_digests=('8b8f2a2785b084e1578ba0512e4577ab79fd674b84b588fbdb8186f2009242c2', 'cedec6b55700ec2854b426a4f35c73549d720af2d8a34b065a7d16cdaa57f8b5', '5f4b9609faaa5f148d112a7cde5cfba0ab2c1385b4c53ea9c4bcfc6e93d106fc', '518a002b724438f3a604732576000d61d19b03498dadcb39df32e9f1de4a5a8f', '84f9cbc7352413a13f517f7d2bcb90ef6fd5af5c8cbed9d3bebe8e870da25cb1', '1ce6928765e5433f064086a6ca945810e00878b9a8ce436dfc3c5bb369920b2b', 'bbb69d0cc29652284cb51c292a5e9de71d8c5809dcfd5e73f4c3bf5f991544d6')
+semantic_sha256=af0d543232869e82ee8d0191478ba7a833954cb19b387dedb6fb6f44a6fa272c
+verdict=ACCEPT genuine rank4 Boolean-square x F13 mixed candidate; REJECT six-cut physical-support wording
+next_minimal_sidecar=inverse_owner_branch r_owner=a mod 13 on the current U leg; canonical THM-2471 Boolean sheet, cheaper than grouped exact C(a;X,m)
+scope=no exact C(a;X,m),no source/arrival identification,no U_clock chronology,no uniform rows,no row exclusion,no LRC(14)
+all exact hostile checks passed

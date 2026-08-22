@@ -1,0 +1,15 @@
+THM-3565 resonant linear-a target-graph factor audit
+branch I: phi=-2*a/(27*u^3)+(b-6*u)/(9*u^2)
+branch II normalized Groebner basis:
+-(p**2 - 6*p - 8*q)/8
+(p - 12)*(p - 6)*(p + 6)
+branch II candidates (p,q,R): [(12, 9, 0), (6, 0, 0), (-6, 9, 54)]
+only coprime candidate: phi=16*a/b^3-4/b, not polynomial in b
+polynomial descent: u=1/(3*h), h in C[b] nonzero
+factor family: phi=-2*h^3*a+b*h^2-2*h
+core linear factor: (3*a*h^2-b*h+1)*x-h
+residual discriminant: -(6*a*h^2-3*b*h+4)^2*(12*a^2*h^2-4*a*b*h+16*a-b^2)
+for polynomial h, the residual quadratic is irreducible
+source pullback factor: x-(1+x*y)*h(F2)
+collision-compatible degree<=2 rows: h=2 and h=-2, exactly the affine Kummer pair
+all active truth gates passed

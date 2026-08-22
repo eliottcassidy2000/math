@@ -1,0 +1,29 @@
+THM-3609 THREE-BY-FOUR SIZE-NINE EULER-FACTOR NONENTRY
+thm3606_theorem_sha256_lf=c9b99569cafa1c2b14dbc065e1c66d24ce97d3e1bd2d388e616da2f5ad5510c4
+thm3606_script_sha256_lf=9d558f5637c5cc3573214fe00817bd6acb4c749b85a9046644e2390bd1d0ad91
+thm3606_output_sha256_lf=58b1160bd8831139fc5a6d4eb5102c876df4b47a823293080413c8f6c3f995b4
+thm3606_four_entries_sha256=cb8cc9644ade674c106d4d08714ee792f235dd9026cbce9db04a9b3de1ae13ae
+canonical_words=W072,W073,W141,W149;cone_count=2;each_rank=3;each_dimension=2
+left_cone=(a+t,a,a,t,2a);W072:t>a;W073:a>t
+right_cone=(a,a+t,2a,t,a);W141:a>t;W149:t>a
+left_weights=p:(1-a-t,1,a+1);q:(-a-2,-2,t-2,2a+t-2)
+right_weights=p:(-a-2,-2,a+t-2);q:(1-2a-t,1-t,1,a+1)
+left_singleton_components=-:{P0,Q0,Q1};+:{P1,P2,Q2,Q3}
+left_negative_magnitudes=P0:a+t-1,Q0:a+2,Q1:2
+left_positive_magnitudes=P1:1,P2:a+1,Q2:t-2,Q3:2a+t-2
+right_singleton_components=-:{P0,P1,Q0,Q1};+:{P2,Q2,Q3}
+right_negative_magnitudes=P0:a+2,P1:2,Q0:2a+t-1,Q1:t-1
+right_positive_magnitudes=P2:a+t-2,Q2:1,Q3:a+1
+gcd_gate=negative_d_in_{1,2};positive_d=1;d=2_iff_a_even_and_t_odd
+arm_gate=unique_anchor_R=2;other_R=a+2>=3;forces_d=2,ord_beta(h)=1,ord_beta(k)=0
+left_collision_factors=02=10:E[AN(t-2)rho*h^(rho-1)k^(t-3)-LB*eta*h^(eta-1)];11=20:-E[LC+MB(a+1)eta*h^(eta-1)k^a];03=21:E[AT*sigma*rho*h^(rho-1)k^(sigma-1)-MC(a+1)k^a]
+right_collision_factors=02=20:E[AN*eta*h^(eta-1)-MB*R*rho*h^(rho-1)k^(R-1)];03=12:E[AT(a+1)eta*h^(eta-1)k^a+LN];13=21:E[LT(a+1)k^a-MC*R*omega*h^(omega-1)k^(R-1)]
+definitions=E:k*h'+2*h*k';left:rho=(a+t-1)/2,eta=(a+2)/2,sigma=2a+t-2;right:eta=(a+2)/2,rho=(2a+t-1)/2,omega=(t-1)/2,R=a+t-2
+reversal_pairs=W072<->W149,W073<->W141;cell_map:(i,j)->(2-i,3-j);orientation:+-<->-+
+scalar_equations=left:-E[...]=1;right:E[...]=1
+euler_degree=deg(h)+deg(k)-1>=1;leading_multiplier=deg(h)+2deg(k)>0;E_nonunit=1
+semantic_sha256=904bf1347832e0f193bf2325092f03af59d1ade2f6a7684fc7227d532d2d7a4d
+script_sha256_lf=7fdab86fe3b98275ad5a58f7ef52556d74497d3207e2782b281903d054c63044
+boundary=finite-field-free characteristic-zero polynomial identity;eliminates only W072,W073,W141,W149
+status=PROVED+EXACT+OPTIMIZATION-SAFE;four residual size-nine schemes impossible
+PASS

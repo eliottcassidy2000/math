@@ -1,0 +1,21 @@
+THM-3487 TWO FIBONACCI 24-STATE BUNDLES EXACT COMPANION
+STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
+SCRIPT: 04-computation/fibonacci_two_24_state_bundle_obstruction_thm3487.py
+OUTPUT: 05-knowledge/results/fibonacci_two_24_state_bundle_obstruction_thm3487.out
+PINS: (('THM-3339-script', '094fc254dcb7965791e59247a98f60a337725b40d169db6f3862c1da5943149b'), ('THM-3339-output', '88c5f44971df12bbd61f84925f408a253450095ee2de23b5a617efde1e4ecdfa'), ('frame-line-script', '6ad743f478420641aae9078bcdc83b4f9eb19b037bb90f640b92b1e5933e6295'), ('frame-line-output', '803c848ed775b2b1278fecfa1340d2f8f634abaaa2a23ea3e1f24abf76c57e48'))
+RESIDUE_ORDERS: (((0, 1), (1, 1), (1, 0)), ((0, 1), (1, 0), (1, 1)), ((1, 0), (0, 1), (1, 1)), ((1, 0), (1, 1), (0, 1)), ((1, 1), (1, 0), (0, 1)), ((1, 1), (0, 1), (1, 0)))
+OWNER_SECTION_AND_DRIFT: owners=((0, 0), (1, 0), (1, 0), (1, 1), (0, 1), (0, 1)); drift=((1, 0), (0, 0), (0, 1), (1, 0), (0, 0), (0, 1))
+MOVING_FRAME_LINEAR_STEPS: (((1, 0), (1, 1)), ((0, 1), (1, 0)), ((1, 1), (0, 1)), ((1, 0), (1, 1)), ((0, 1), (1, 0)), ((1, 1), (0, 1)))
+MOVING_FRAME_AFFINE_STEPS: ((((1, 0), (1, 1)), (1, 0)), (((0, 1), (1, 0)), (1, 1)), (((1, 1), (0, 1)), (0, 1)), (((1, 0), (1, 1)), (1, 1)), (((0, 1), (1, 0)), (1, 1)), (((1, 1), (0, 1)), (1, 1)))
+FRAME_LINE_SHIFT_CYCLES: (12, 12); sixth_power_fixed_points=0
+AFFINE_OWNER_SHIFT_CYCLES: (6, 6, 6, 6); sixth_power_fixed_points=24
+ONE_STEP_VERDICT: no equivariant bijection; cycle types 12^2 and 6^4 differ
+TWO_STEP_SURVIVOR: frame_shift_squared has cycles=(6, 6, 6, 6); abstract_conjugacies=31104; no base-order-preserving conjugacy
+NONZERO_HOLONOMY_REPAIRS: (((1, 0), (12, 12), 288), ((0, 1), (12, 12), 288), ((1, 1), (12, 12), 288)); abstract_conjugacies_each=288
+PROJECTIVE_TO_AFFINE_SIDECAR: G=(1, 2, 3, 0); G_squared=(2, 3, 0, 1); point_identifications_by_nonzero_owner_direction=(((1, 0), 8), ((0, 1), 8), ((1, 1), 8))
+REPAIR_TARIFF: every nonzero V4 seam holonomy matches the 12^2 cycle type but sends the proved closing owner to owner+h; G^2 selects a projective matching, while choosing its owner direction is exactly the missing channel-matching gauge
+HARMONIC_UNIFORM_ADDRESS_GRADES: under a declared uniform 24-state enumeration, one-step frame/nonzero-holonomy invariant unions have coefficients in {0,1/2,1}; one-step owner/two-step-frame unions have coefficients in {0,1/4,1/2,3/4,1}; this is not a single-orbit time average
+TYPING: six states are orders of three matching channels, not six T6 vertices; four states are P1(F3) lines versus affine V4 owners; neither fibre is an intrinsic tournament
+SEMANTIC_SHA256: 9c338ec5eebe1f93326ae12c00f37da58382fa2084339adbd1de422e7d05d70e
+SECURITY_AST_NODES_AND_FORBIDDEN: (3149, ())
+VERDICT: equal cardinality 6*4 does not give the missing transplant; the exact obstruction is sixth-step holonomy, and the minimal cycle repair is a projective-to-affine matching-gauge sidecar that destroys the proved closed owner section

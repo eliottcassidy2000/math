@@ -1,0 +1,3 @@
+  [PASS] sigma_i = E_{R-2-i} + 2 T_{i+1} on amm12592_floor_witness_R16_ruleB_boxeph.json (i = 0..14)
+  [PASS] sigma_i = E_{R-2-i} + 2 T_{i+1} on amm12592_witness_R128_ruleB_D0_0_boxeph.json (i = 0..126)
+  => Rule A attractor (sigma ~ E-shape) == y-tail smallness, exactly.

@@ -1,0 +1,71 @@
+=== amm12592_r128_endgame_algebra_boxeph.py: canonical output (2026-08-03) ===
+
+== SELFTEST: endgame algebra ==
+dual formula b_m = sum_j s_j C(d-j,m): PASS
+band identity C(e+1, m-k) for k < da (grid of (da,e)): PASS
+e=0 DP vs brute force at (5,5): agree=60 (pos=30 neg=30) PASS
+e=1 sandwich at (5,6): feasible=30 constructed=30 missed-by-sandwich=0 methods={'dp-dfs': 29, 'dp-downgrade-lift': 1} necessity=PASS
+== SELFTEST PASSED ==
+
+== R64 CHECK: S_2 on the real witness endgame + full pipeline ==
+sigma_61 (= Delta_62 + x Delta_63): deg=1 L1=2  degrees=(75,75) e=0
+absorb2_solve: SUCCESS via dp-e0; pair verifies=True
+spliced full witness verifies: admissible=True identity=True
+full R=64 pipeline (l1deg beam 400 + S_2 completion):
+  -> SOLVED-C1(dp-e0)
+  pipeline witness: admissible=True identity=True
+== R64 CHECK PASSED ==
+
+== EXACT RE-VERIFICATION of R=128 witness JSONs present ==
+amm12592_floor_witness_R128_direct.json: admissible=True identity=True max box saturation=1.000e+00
+amm12592_floor_witness_R128_lp.json: admissible=True identity=True max box saturation=1.000e+00
+amm12592_floor_witness_R128_rule_boxeph.json: admissible=True identity=True max box saturation=1.000e+00
+
+=== R=128 HUNT LEDGER (all endgame refutations are exact certificates; ===
+=== search negatives are NOT infeasibility evidence, THM-3029)          ===
+--- huntA: rank=l1deg beam=400 ctrl=2 span=2 a2_from=64 prefilter=1200 seed=None rand_frac=0.0 c2=(3,6)
+  -> exhausted (C1+C2, 15680 C2 leaves)
+  absorb2 method hits: {}  unknown(relaxed-pass, unconstructed): 0
+--- huntB: rank=a2 beam=400 ctrl=2 span=2 a2_from=64 prefilter=1200 seed=None rand_frac=0.0 c2=(3,6)
+  -> exhausted (C1+C2, 34400 C2 leaves)
+  absorb2 method hits: {}  unknown(relaxed-pass, unconstructed): 0
+--- huntC: rank=a2 beam=800 ctrl=2 span=2 a2_from=90 prefilter=3000 seed=None rand_frac=0.0 c2=(3,6)
+  -> exhausted (C1+C2, 68800 C2 leaves)
+  absorb2 method hits: {}  unknown(relaxed-pass, unconstructed): 0
+--- huntD: rank=l1deg beam=800 ctrl=2 span=2 a2_from=64 prefilter=1200 seed=20260803 rand_frac=0.25 c2=(3,6)
+  -> exhausted (C1+C2, 33088 C2 leaves)
+  absorb2 method hits: {}  unknown(relaxed-pass, unconstructed): 0
+--- huntE: rank=l1deg beam=400 ctrl=2 span=2 a2_from=64 prefilter=1200 seed=None rand_frac=0.0 c2=(3,6)
+  -> died at row 116
+  absorb2 method hits: {}  unknown(relaxed-pass, unconstructed): 0
+--- huntF: rank=l1deg beam=600 ctrl=2 span=2 a2_from=64 prefilter=1200 seed=None rand_frac=0.0 c2=(3,6)
+--- huntG: rank=l1deg beam=600 ctrl=2 span=2 a2_from=64 prefilter=1200 seed=None rand_frac=0.0 c2=(3,6)
+  -> exhausted (C1+C2, 15600 C2 leaves)
+  absorb2 method hits: {}  unknown(relaxed-pass, unconstructed): 0
+--- huntH: rank=a2 beam=600 ctrl=2 span=2 a2_from=90 prefilter=2000 seed=None rand_frac=0.0 c2=(3,6)
+  -> exhausted (C1+C2, 15600 C2 leaves)
+  absorb2 method hits: {}  unknown(relaxed-pass, unconstructed): 0
+
+=== full-scale positive controls (absorb2_solve on synthetic true pairs) ===
+(151,152): 12/12 reconstructed (dp-dfs); (151,151): 8/8 (complete regime)
+
+flag clarifications (not in older log headers):
+  huntE = l1deg 400 + eprune(necessity)            -> died row 116 (E not steerable)
+  huntF = l1deg 600 + eprune + ebranch + ecap 12   -> killed (corridor-fat states, L1 ~ 1e70)
+  huntG = l1deg 600 + eprune + ebranch (necessity) -> exhausted; terminal states 100% |E|<=2 but L1 ~ 2e72
+  huntH = a2(90) 600 + eprune + ebranch            -> exhausted; same fatness pathology
+terminal-state anatomy (deficit vs (151,152), exact):
+  huntA: E in [-36,-22], 0 E-viable, min def 974, gaps {m=0: 22, m=1: 952} (best)
+  huntB: min def 8, slim L1=236, E=-10, gap {m=0: 8} ONLY (E-wall is the whole obstruction)
+  huntD: 147/800 E-viable, min def 482 (fat)
+  huntC: 261/800 E-viable spontaneously, min def 42030, gaps {m=1: 26, m=2: 42004} (wall ladder)
+
+--- huntI: rank=a2(64) beam=1200 prefilter=3600 + ebranch (no eprune)
+  -> exhausted (C1+C2, 31200 C2 leaves); unknown: 0
+  terminal anatomy: beam captured by fat low-deficit family (L1 ~ 1.9e72,
+  def ~ 1.97e63, E in [26..]); a2 overflow term misranks while deg >> db+1.
+FINAL: 9/9 hunts exhausted with exact certificates, 0 unknowns anywhere.
+R=128 closed independently by concurrent angles (direct/lp/rule witnesses,
+re-verified above).  See amm12592-r128-endgame-algebra-boxeph.md for the
+S_L algebra, soundness arguments, E-wall/wall-ladder diagnosis, and the
+identified top-coefficient control surface.

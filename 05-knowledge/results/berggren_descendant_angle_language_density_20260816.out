@@ -1,0 +1,18 @@
+BERGGREN DESCENDANT-ANGLE LANGUAGE / DENSITY EXACT AUDIT
+source_sha256_lf=f7d3eb39285751f7be0db083ceff050f8347dddfefe43c0efe8b3ab6d6108f45
+status=PROOF_COMPLETE_ELEMENTARY_CANDIDATE+VERIFIED_EXACT;not_yet_canon
+walls=alpha=(sqrt(145)-9)/8;beta=(sqrt(145)-8)/9
+inverse_wall_itineraries=alpha:BABB;beta:BCBB
+four_step_cdf_returns=alpha:(Fraction(32, 81), Fraction(-1, 81));beta:(Fraction(50, 81), Fraction(-1, 81))
+phase_carrier=oriented_C4_with_two_missing_antipodal_pairs;edge_signs=(-,+,-,-);holonomy=-1;H1_F2=nonzero;rotation_invariant_tournament_completions=0_of_4
+count_recursions=U[n+4]=32*3^n-U[n];A[n+4]=18*3^n-A[n];D[n+4]=32*3^n-D[n]
+ordinary_generating_functions=U=(z+z^2-2z^3+2z^4)/((1-3z)(1+z^4));A=(z-z^2)/((1-3z)(1+z^4));D=(1-2z+2z^3-z^4)/((1-3z)(1+z^4))
+level_densities_U_acute_D=(Fraction(16, 41), Fraction(9, 41), Fraction(16, 41))
+residual_period8=((-16, -9, 25), (-7, 14, -7), (20, 1, -21), (-22, 3, 19), (16, 9, -25), (7, -14, 7), (-20, -1, 21), (22, -3, -19))
+direct_tree_depth=10;distinct_nodes=88573;counts=((0, 0, 0, 1), (1, 1, 1, 1), (2, 4, 2, 3), (3, 10, 6, 11), (4, 32, 18, 31), (5, 95, 53, 95), (6, 284, 160, 285), (7, 854, 480, 853), (8, 2560, 1440, 2561), (9, 7681, 4321, 7681), (10, 23044, 12962, 23043))
+uniform_prefix_bank=121;four_step_suffix_checks=484
+language=regular_by_periodic_wall_itinerary;shortlex_discrepancy=O(log_N)_proof_side
+harmonic=each_shortlex_type_has_logarithmic_coefficient_equal_to_its_density
+scope=no_RXTX_tensor_map_no_tournament_current_no_LRC_or_JC_consequence
+semantic_sha256=acc0170636f7ce47b074214c116930ea6728fa3ea96314cc622e41f83966b2ec
+verdict=PASS

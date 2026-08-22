@@ -1,0 +1,10 @@
+THM-3466 FACTORIAL FACE STOKES AND KELLER BOUNDARY CURRENT EXACT CONTROL
+orthant_face_checks=26 dimensions=3 codimensions=0..3 powers=1..5
+quadrant_keller_flux_checks=128 controls=identity,triangular
+triangle_boundary_checks=48 controls=identity,triangular,equilateral n=1..4
+identity_J=1 moments_I0_I1_I2_I3=(1/2, 1/6 + I/6, I/12, 0)
+triangular_J=1 moments_I0_I1_I2_I3=(1/2, 1/6 + I/4, -1/15 + 11*I/60, -17/140 + 43*I/840)
+equilateral_J=3*sqrt(3)/2 moments_I0_I1_I2_I3=(1/2, 0, 0, 1/20)
+equilateral_dbar_responses_n2_n3_n4=(0, 0, -3*sqrt(3)*I/5)
+semantic_sha256=e925107c9d9a14f7434ada9c2195e761cae97861f76930402aa37ac81afb9527
+STATUS=PASS

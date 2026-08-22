@@ -1,0 +1,10 @@
+Prime rank-seven remaining half-twist classes scout
+dependency_sha256_lf=(('THM-3420', '5f307c906c054850f2589b2e9fb7c0e902b3571747a6c61ebc2c2f2628212b2f'), ('THM-3420-script', 'f95aaf081ccd5c92cb7474104f242623bba9246bdc19eb04ce8da81f3c4e2af6'), ('THM-3420-output', '22740907984a9e64e75208c0a01ce0222fd844dfe65826685ff11e64274ef959'), ('THM-3416-primary-solver', 'ed7672fd75b7c5ede23c0b7752e06849faa9c693d18e0639eee5b39f17d03a21'))
+status=FINITE_EXACT primes_p29_p500_classes_1,9,11_mod14_half_twist_cap7;NO_all_prime_theorem;no_LRC14_decrement
+scan_counts=(primes,raw,unique,maximal,nodes,branches)=(43, 22060, 11030, 11030, 137209, 138587)
+positives=(p,residues,(even_blocks,sizes,multiplicity_hist,xor_defect))=((29, (1, 5, 7, 8, 12, 13, 22), (3, (4, 4, 4, 5, 5, 4, 5), ((1, 28), (3, 1)), 0)),)
+negative_primes=(37, 43, 53, 67, 71, 79, 107, 109, 113, 127, 137, 149, 151, 163, 179, 191, 193, 197, 211, 233, 239, 263, 277, 281, 317, 331, 337, 347, 359, 373, 379, 389, 401, 421, 431, 443, 449, 457, 463, 487, 491, 499)
+hostile_controls=(p,class,nodes,branches)=((37, 9, 1433, 1975), (43, 1, 1415, 1596), (53, 11, 1032, 1064), (211, 1, 1404, 1410), (499, 9, 8340, 8378))
+event_sha256=6111e8a3484a1775999f58ce355d4cecaf34d7f7af40f7d76dbda9a9ec964f49
+semantic_sha256=ee528fc41630c7a9146fe62c5976fbf5421c3c4f427de07d2d7a6e8b9e777959
+scope=THM3420_live_prime_half_classes_only;finite_boundary_500;generic_exact_augmented_solver;fixed_zero_and_other_classes_not_rescanned;LRC14_open

@@ -1,0 +1,82 @@
+==============================================================================
+PART 1: closed form TV(Bin(2,x),Bin(2,y)) = |x-y| (1+|x+y-1|)
+==============================================================================
+[PASS] factor k=2:  x^2-y^2            == d*s
+[PASS] factor k=1:  x(1-x)-y(1-y)      == d*(1-s)
+[PASS] factor k=0:  (1-x)^2-(1-y)^2    == -d*(2-s)
+[PASS] region  sgn(d)=+1, s<=1 :  (1/2)(|A2|+2|A1|+|A0|) == |d|(1+|s-1|)
+[PASS] region  sgn(d)=+1, s>=1 :  (1/2)(|A2|+2|A1|+|A0|) == |d|(1+|s-1|)
+[PASS] region  sgn(d)=-1, s<=1 :  (1/2)(|A2|+2|A1|+|A0|) == |d|(1+|s-1|)
+[PASS] region  sgn(d)=-1, s>=1 :  (1/2)(|A2|+2|A1|+|A0|) == |d|(1+|s-1|)
+[PASS] exact Fraction grid 33x33 (step 1/32): definition == closed form (0 mismatches)
+
+==============================================================================
+PART 2: fusion inequality  TV(Bin(2,pbar),Bin(2,qbar)) <= d1+d2-d1*d2
+==============================================================================
+[PASS] LHS invariant under sigma (block swap)
+[PASS] RHS invariant under sigma (block swap)
+[PASS] LHS invariant under pi    (p<->q swap)
+[PASS] RHS invariant under pi    (p<->q swap)
+[PASS] LHS invariant under kappa (complement)
+[PASS] RHS invariant under kappa (complement)
+[PASS] action of sigma on (d1,d2,S) as claimed
+[PASS] action of pi on (d1,d2,S) as claimed
+[PASS] action of kappa on (d1,d2,S) as claimed
+[PASS] all 8 open sign/branch regions reachable to canonical {B, A} (uncovered: [])
+       (boundaries d_i=0, S=1 lie in region closures; the canonical
+        certificates below are weak inequalities on CLOSED regions,
+        so the union of closures covers the whole box.)
+       Inside case A, sigma*pi maps (d1,d2)=(a,-b) -> (b,-a) with S
+       fixed, so WLOG a >= b there (checked: sigma,pi actions above).
+[PASS] case B parametrization: pbar-qbar == (t1+t2)/2
+[PASS] case B parametrization: pbar+qbar == c1+c2+(t1+t2)/2
+[PASS] case B certificate identity: RHS - LHS == (t1+t2)(c1+c2)/2 + (t1-t2)^2/4
+       both certificate terms are products/squares of nonnegative
+       quantities (c_i,t_i >= 0), hence RHS-LHS >= 0 on case B.
+       AM-GM reading: 1+|S-1| = 2-S <= 2-(t1+t2)/2, so LHS <=
+       (T)(2-T/2)/2 = T - T^2/4 <= T - t1*t2 with T=t1+t2 (AM-GM).
+[PASS] case A parametrization: pbar-qbar == (a-b)/2
+[PASS] case A parametrization: pbar+qbar == u+v+(a+b)/2
+[PASS] case A certificate identity: RHS - LHS == b(1-a) + b + (a-b)(u+v)/2 + (a-b)(a+b)/4
+       terms nonnegative on case A: b>=0; 1-a>=0 since a=p1-q1<=1;
+       a-b>=0 by the WLOG; u,v>=0; a+b>=0.  Hence RHS-LHS >= 0.
+
+==============================================================================
+PART 3: equality face -- symbolic + exhaustive exact grid scan
+==============================================================================
+Symbolic equality analysis (certificates are sums of nonnegative terms,
+so equality forces every term to vanish):
+  case A: b=0, then (a-b)(a+b)/4 = a^2/4 = 0 forces a=0  => only d1=d2=0.
+  case B: (t1-t2)^2=0 and (t1+t2)(c1+c2)=0
+          => t1=t2=0 (c1,c2 free)   [the diagonal p_i=q_i, both sides 0], or
+          => t1=t2=t, c1=c2=0       [p1=p2=t, q1=q2=0].
+Pulling {p1=p2=t, q1=q2=0} back through G = <sigma,pi,kappa> gives exactly
+F1..F4; the diagonal is G-invariant and gives F0.
+[PASS] equality on F1: p1=p2=t, q1=q2=0  (LHS==RHS identically)
+[PASS] equality on F2: p1=p2=1, q1=q2=t  (LHS==RHS identically)
+[PASS] equality on F3: p1=p2=0, q1=q2=t  (LHS==RHS identically)
+[PASS] equality on F4: q1=q2=1, p1=p2=t  (LHS==RHS identically)
+[PASS] dense grid 17^4 = 83521 pts (step 1/16): ZERO violations (0 found)
+[PASS] dense grid: closed form == raw definition at every fused pair (0 mismatches)
+[PASS] dense grid: equality points (351) == predicted rigid face points (351), pointwise both directions (0 mismatches)
+[PASS] random hostile scan 20000 pts (denominators <= 64): zero violations (0 found), all 3 equality hits on the rigid face (0 off-face)
+
+==============================================================================
+PART 4: transfer probe numbers (AMM 12592 lane, HYP-9061 sec 2e)
+==============================================================================
+q_A = 896/2181  (~0.410821)
+q_B = 2974400/11821757  (~0.251604)
+delta = |q_A - q_B| = 4105127872/25783252017  (~0.159217)
+TV(Bin(2,q_A), Bin(2,q_B)) = 141573722928218785664/664776084572134568289  (~0.212965)
+fusion RHS at p_i=q_A, q_i=q_B: 1-(1-delta)^2 = 194835018126102587264/664776084572134568289  (~0.293084)
+[PASS] lemma instance at the certificate biases holds (sanity, exact)
+These are dimensionless O(1) rationals with NO n-dependence and no
+valuation content: the lane's rate inequality (27) couples an archimedean
+log-rate against 2-adic leading terms (s_A=7 vs s_B=6 misalignment); TV of
+Bin(2,.) is invariant under outcome relabeling and blind to denominators
+and 2-adic valuations of leaf probabilities.  See the note for the
+six-field NO TRANSFER verdict.
+
+==============================================================================
+OVERALL: ALL CHECKS PASS
+==============================================================================

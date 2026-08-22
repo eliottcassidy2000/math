@@ -1,0 +1,22 @@
+== U_full desheeted common-residual base probe ==
+dependencies=((endpoint,f89be10c65bb77270199f9399b155d5a2c82c0da121b3e8589fe3c1f7e9824fc),(point_hostile,d1182de4d777bab20a8d423cf942151ac3149014b67d9c34883cbce37a7b0a9f))
+map=91t=7a+r -> (sheet=a,base=y=r/7=13t-a); t=(y+a)/13
+frequency_descent=(target_B=742586=13^2*4394,base_frequency=57122)
+split_embedding=(prime=572252886246508880869,zeta7=353818603057943120846,zeta13=505438565698892403012)
+work_counts=(unguarded_intervals,mapped_intervals,active_segments,q_active_segments)=(7107008, 7108460, 1199656, 186244)
+literal_guarded_profile_controls=((0, 0, 0), (0, 1, 6), (1, 0, 6), (6, 6, 12), (12, 12, 0)): PASS
+same_sheet_point_gamma_sha256=771545a5cb1f0f03459b8d351de668ad950ece5fcb985fa61d599d643de3303f; inherited_point_recovery=PASS
+gamma_sha256=(full=c16e6c4e82b73aced92f5d9ab61779d535263deed17a9caa90fce0ca6c947dcf,cross_sheet=f02e10902bd8cc5ec9b588f059c7ebb72eac14b5f9ee46f6055f2f2ee0a530c6)
+same_sheet_inverse=((q_H,633668780131603861),(q_q5,405160484437854840264),bridge=167726070588785644466)
+cross_sheet_inverse=((q_H,95149748277639510265),(q_q5,291433430760196195223),bridge=375969203763952195911)
+full_common_residual_inverse=((q_H,95783417057771114126),(q_q5,124341028951542154618),bridge=543695274352737840377)
+sector_reconstruction=(same+cross=full): PASS
+cell_x_refined_residue_spectrum_shapes_(total,dc,F7axis,F13axis,mixed)=(full=(91, 1, 6, 12, 72),same=(91, 1, 6, 12, 72),cross=(91, 1, 6, 12, 72))
+full_cell_residue_ANOVA_spectrum_shape=(72, 0, 0, 0, 72)
+fixed_relation_class=(1,0,6); seven_cell_profile=(289814661037836286866, 0, 0, 0, 0, 0, 0)
+fixed_relation_F7_spectrum=(289814661037836286866, 289814661037836286866, 289814661037836286866, 289814661037836286866, 289814661037836286866, 289814661037836286866, 289814661037836286866)
+table_sha256=(full=64adfc3850b8a8924546a75e051116aa10e3a62661ca409175aad174a9ebb926,same=b80423dad8b155bd02e79d98c981ec3ada15934d91cb72ebacc385ded6b7ed6d,cross=50d44c5db5cea5842ceada123d06c54f0221561d08744c83eaf3aebd55f2420c)
+spectrum_sha256=(full=398a2c2ccb57714aa9d735d3bca4f24c2212396a8be9e2bd07e8e4ec57b6c05a,same=17e08d5c0a5d107bad1d9828e754ed197d2737ee4dc7c1fcbfdeccb410992f72,cross=14c5490ee52e4283848290feee3b0995a44791fee30a9aaef6ad2a945b9442e8)
+semantic_sha256=97694f50b071dbf875802223dd894d7e1df86ef65a194c22d588505c59eea507
+scope=actual U_full endpoint integrands on one desheeted base with seven cells; no THM-2471 collision/horizons/source packet,exact C(a;X,m),chronology,row exclusion,LRC(14)
+all exact checks passed

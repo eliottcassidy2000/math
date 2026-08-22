@@ -1,0 +1,15 @@
+== THM-3585 common A4 channel plane and centering complement ==
+field=(prime=755373809845391722745761,V=4,relation_modulus=13,target_dimension=52)
+parent_script_sha256_lf=('3dab580e479e4ba7ac8801c1e5d8523018e0b3dc1c2176c072e7c609033eb6c8', '1188df8aa2a7a84c1e8ada5fc3cc8d3b839ece70298b94f1d94c9d440caa88f3')
+dependency_parent_sha256=('ae1cf021ea23f325eeded42ff1dea8df903d837b1d7ab551289d62f7ab7a0348', '592aa0bce31f2da5d5e2ddff7f3ffe6f1398f3a07b5ce927e0d97c9fe309ae3b', 'ae1cf021ea23f325eeded42ff1dea8df903d837b1d7ab551289d62f7ab7a0348')
+parent_reconstruction_sha256=('53eb6e618d0669bdb27841a1800c46e32456bb6c6d3698c590ae0d5e68822033', 'fd1b837d9de3e4f9e586d29b69ed6726364ce97535d2e48f441c6ccd694250de', '9d0aa6823ed9bb83b338350d9da3d86c52e552a844b4334e3571bf2393f04cd1', '53e1d8e6de69dcd1cf5740acce7b245f7d9a388cfa2b27da4aefb00f3075df14')
+raw=(source_rows=17,two_current_rows=169,ranks_source_two_stack=(4, 4, 4),intersection=4,equal=True,canonical_rref_sha256=1d9293d05fa3551b785a1537e78bc8be585fcc43dbb5172036c9b32546ca8560)
+centered=(source_rows=17,two_current_rows=169,ranks_source_two_stack=(4, 4, 4),intersection=4,equal=True,canonical_rref_sha256=0cfa2e3330f92ab59fd183e5664715c490a702df2ad74491a8180793cae4a21e)
+raw_plus_centered=(source_stack,two_current_stack,all_stack)=(8, 8, 8);intersection=0;canonical_rref_sha256=9f4ec33d31337b0100a55871f6284443c6e5cfc0f5133a1493f807d563670821
+two_current_four_way_matches_centered=(four_way_rank,stack_rank)=(4, 4): PASS
+semantic_sha256=861d4d95fd834e62cec842a5fc548e779554b17c79fabcf79cf7338e9db29848
+script_sha256_lf=dad78dd317a25958f42b3df44f395d4da344330b07ea4f5041a7e838e46dd0e8
+status=PROVED + FINITE-EXACT + VERIFIED-EXACT over the pinned prime
+scope=static finite-field identity only;not chronology;not current;not physical entry;not row exclusion;not characteristic-zero lift;not LRC(14)
+commands=python -B 04-computation/lrc_common_a4_channel_plane_centering_complement_thm3585.py;python -B -O 04-computation/lrc_common_a4_channel_plane_centering_complement_thm3585.py
+PASS

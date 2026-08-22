@@ -1,0 +1,51 @@
+inventory contexts 4044 heads 261254 channels 4148 scale_hist ((1, 204627), (2, 45399), (3, 8768), (4, 1564), (5, 518), (6, 343), (7, 14), (8, 7), (9, 7), (10, 7))
+context_semantic 9f7c7f24f81c409c09becfa921aa53387e5093710657bd3e5a0e935ecf4ea6c2
+channel_progress 100 of 4148
+channel_progress 200 of 4148
+channel_progress 300 of 4148
+channel_progress 400 of 4148
+channel_progress 500 of 4148
+channel_progress 600 of 4148
+channel_progress 700 of 4148
+channel_progress 800 of 4148
+channel_progress 900 of 4148
+channel_progress 1000 of 4148
+channel_progress 1100 of 4148
+channel_progress 1200 of 4148
+channel_progress 1300 of 4148
+channel_progress 1400 of 4148
+channel_progress 1500 of 4148
+channel_progress 1600 of 4148
+channel_progress 1700 of 4148
+channel_progress 1800 of 4148
+channel_progress 1900 of 4148
+channel_progress 2000 of 4148
+channel_progress 2100 of 4148
+channel_progress 2200 of 4148
+channel_progress 2300 of 4148
+channel_progress 2400 of 4148
+channel_progress 2500 of 4148
+channel_progress 2600 of 4148
+channel_progress 2700 of 4148
+channel_progress 2800 of 4148
+channel_progress 2900 of 4148
+channel_progress 3000 of 4148
+channel_progress 3100 of 4148
+channel_progress 3200 of 4148
+channel_progress 3300 of 4148
+channel_progress 3400 of 4148
+channel_progress 3500 of 4148
+channel_progress 3600 of 4148
+channel_progress 3700 of 4148
+channel_progress 3800 of 4148
+channel_progress 3900 of 4148
+channel_progress 4000 of 4148
+channel_progress 4100 of 4148
+channel_semantic 40472e196369baf0db300d96c028c2b7f78836bf8a06373b2170d4769ee9eff4
+forest_size_hist ((2, 48), (3, 576), (4, 6110), (5, 254520))
+failures 0 weakest (Fraction(1017482276391320181594, 73150827741949428345875), (2, 3, 4, 6, 12, 24), 1, Fraction(924612948, 31066820065), ((Fraction(3276, 183455), (1, 5, 3, 1, 8)), (Fraction(2016, 169343), (0, 5, 2, 1, 12))))
+failure_scale_hist ()
+first_failures ()
+outcome_semantic c84b550ace3ce3f0433227ad3587c92d674037a1b5f37531f27075742e038a9d
+status=PROVED universal physical lower forest + VERIFIED-EXACT finite atlases
+conclusion=all connected-low primitive common-dilation rays close at every scale on all 649 upper-median bodies and all labellings

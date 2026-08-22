@@ -1,0 +1,19 @@
+R5 COMMON-ANCESTRY GUARD-ATOM/ROOT-DRIFT -- INDEPENDENT AUDIT
+status=ACCEPT_SCOPED_FINITE_EXACT; support/spectral capacity only; LRC(14) OPEN
+dependencies=(thm2594=09c43af0a0a56c7a0833bbfd13ed6a96bc5a7a3718aa1bc6b77a144bde101a06,candidate=83f1fa49ac4d02e21a1d76fed169d101715a6620342714ed05b9172ae967a730,candidate_output=7727571722f69a9c59af0183c50c8bae0b7944d6acb7bbb1b3c0e9bd02d54565)
+pre_fold_partition=(atoms=39,grid=297836897838480,input_pieces=(120234, 57072),nonempty_groups=(21, 20),pointwise_recombination=PASS)
+linked_atom_root_tensor=(atom_pair_support=420/1521,root_support=12/13,s0=0)
+service_anchor=(value=48602521488933856/1996669193081744181,equals_169I5=True)
+gauge_iff=(truth_table=28561/28561,equation=a-u=b-q_iff_s=-d,offset_marginals=PASS)
+gauge_support=(full=72/117,active=48/52,opposite_orientation=72/117,active_mask=F13_star)
+K4_rank=(rational=4,split_primes=((547, 4), (911, 4), (1093, 4), (2003, 4), (2549, 4)))
+k0_Walsh=(raw_support=(12, 12, 12, 12),zero_mode_nonzero=(1, 0, 0, 1),exact_drift_spectral_support=(13, 12, 12, 13))
+owner_nonzero_modes_exact_support=((13, 13, 13, 13),);all_12=(13,13,13,13)=PASS
+split_prime_coordinate_certificate_masks=((0, 2), (30, 4), (31, 670))
+owner_K4_exact_rank_certificates=(count=13,prime_histogram=((547, 13), (911, 0), (1093, 0), (2003, 0), (2549, 0)),digest=6e2d583ad100bf26490f74be358c078761c67a194131e9b5c89964c0690171b4)
+pair_level_common_gauge_offset_sha256=e4d0d4fa674e1f54496e613f7a3e1f057af033fa8992322a5f414ea176e1c3d4
+gauge_defect_mass_support=13/13
+semantic_sha256=ad81e945207703956f5d6ec300430d562c9f98a9ec8788011119a4857ab34e01
+typing=the same rational 39-atom partition is evaluated separately on linked X and Y before P_13^5; no one-point identification or endpoint diagonal
+scope=no equality with frozen U_full endpoint weights, no q_H-q5 bridge value, physical current, grouped coefficient, row exclusion, or LRC(14)
+STATUS=PASS

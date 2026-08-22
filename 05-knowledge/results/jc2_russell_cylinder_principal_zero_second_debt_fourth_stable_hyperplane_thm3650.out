@@ -1,0 +1,23 @@
+THM-3650 exact companion -- principal fourth hyperplane
+status=PROVED VERIFIED-EXACT INDEPENDENTLY HOSTILE-AUDITED
+SECTION principal zero-second-debt jet plane
+PASS principal_ordinary=A*B!=0 curvature=A*rminus+B*rplus=-243
+SECTION full universal endpoint identity
+PASS symbolic_two_form_basis=105 degree_five_invisible=63
+SECTION fourth-debt hyperplane
+PASS lambda_J4=-2*N4/(243*B) zero_iff_N4=0
+PASS N4_independent_of_rzero_kzero_and_affine_in_endpoint_thirds
+SECTION exact polynomial controls
+PASS Q6_debt=365888/6561 Qstar_debt=5440/81
+PASS Qh_Q9_simultaneous_zero_second_and_fourth_debt
+PASS beta_debt=-64*(520beta^2+1688beta-5717)/6561
+PASS beta_roots=-211/130_plusminus_99sqrt94/260
+PASS uniform_degree11_control_specializes_to_Qh Hermite_rank=12
+SECTION actual local Q9 fourth-value control
+PASS Q9_actual_local_J0twojet_J2onejet_J1=J3=0_J4values=0
+PASS Q9_F4_linear_kills_lambda_zero_tangent_plane_vector
+SECTION source AST and scope gates
+PASS ast_assertion_nodes=0
+PASS scope=principal_ordinary_retained_quotient_only_no_global_pair_JC2_OPEN
+CHECKS=212
+RESULT=PASS

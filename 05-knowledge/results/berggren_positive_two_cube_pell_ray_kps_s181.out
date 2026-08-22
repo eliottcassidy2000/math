@@ -1,0 +1,18 @@
+BERGGREN POSITIVE TWO-CUBE PELL RAY
+status=PROVED+VERIFIED-EXACT
+epsilon=7775+312*sqrt(621);norm=1
+epsilon5_scalar_digits=21;epsilon5_radical_digits=20;epsilon5_mod29=(28,0)
+seed=5059+203*sqrt(621);norm=2692;h_div29=true
+pell=W^2-522261*u^2=2692;h=29*u
+compiler=d=841*u^2+2;e=u*W;a=21866*u^3+81*u;q=568516*u^4+2860*u^2+1
+identities=a^2+2=d*q;4*q-d^2=3*e^2;verified_coefficientwise=true
+first=j=0;r=3750302;x=38312;y=2899;a=7500605;Q=56259075366027
+positivity=0<e<d;ratio_proof=sqrt(621)<W/h<=5059/203<29
+limit=e/d->sqrt(621)/29<1;family_growth=exponential
+local_depth_classes_mod63=[2, 4, 10, 11, 16, 24, 25, 31, 37, 38, 46, 51, 52, 58, 60];count=15;density=5/21
+ambient_local_sieve=mod7_and_mod9_are_the_complete_p_adic_cube_sum_obstruction_for_Q_r
+distinguished_orbit_scar=period_mod63=24;r_mod63=[38, 51, 60];r_mod5=[2];epsilon5_mod11=(1,0)
+form_compiler=primitive_[d,2a,q]_has_discriminant_-8_and_class_number_one
+first8_semantic_sha256=08f7f7eb37bc75a1d691368b09d3011defdcaa60230dd54f928a8bffc8e23afc
+boundary=no_asymptotic_for_all_positive_intersections;no_fixed_d_positive_infinite_orbit;no_LRC_FC_JC_or_AMM_consequence
+source_lf_sha256=f01b96a8db812da88bbec974f58f17a5d1b794cdd5168617892ae2457a6f81d0

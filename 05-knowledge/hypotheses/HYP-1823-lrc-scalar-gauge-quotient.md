@@ -1,6 +1,6 @@
 ---
 id: HYP-1823
-status: EXPLORATORY
+status: FINITE-EXACT
 source: codex-2026-05-31-S367
 related:
   - THM-363
@@ -38,6 +38,29 @@ s v_i + floor(14 {i alpha}) notin {0,13} mod 14
 for all `i=1,...,13`.
 
 ## Evidence
+
+The full finite statement is now discharged.  The 2026-08-03 primary
+classifier rebuilds all `812` open-cell patterns, uses one-hot residue
+variables, and encodes every one of the `11368` `(shift,cell)` candidates.
+After the exact gauge `v_1=0`, the clause excluding the zero vector is UNSAT
+in both CaDiCaL 1.9.5 and Glucose 4.  An ungauged all-model enumeration finds
+exactly `14` models, with scalar multipliers `0,...,13`, and no nonscalar
+model.
+
+An independent implementation does not import the classifier or S364/S371.
+It reconstructs `813` distinct rational breakpoints and `812` atomic open
+intervals, samples two interior points in every interval, encodes residues by
+four Boolean bits plus audited equality atoms, and uses the exact reflection
+
+```text
+(s,b) -> (-s,13-b)
+```
+
+to retain seven representative shifts.  MiniSat22 and Lingeling both return
+UNSAT for a normalized nonzero blocker, and a separate MiniSat22 ungauged
+enumeration again finds exactly the `14` scalar ramps.  Thus the statement of
+this file is **FINITE-EXACT**.  This is a finite residue-cell theorem, not a
+lift from actual speed tuples and not LRC(14).
 
 The S367 script builds the exact `n=14` cell system with `812` alpha patterns
 and `11368` candidate `(s, cell)` pairs.  It checks that adding a scalar ramp
@@ -110,9 +133,10 @@ Dirichlet-equality spine, and every other class has a micro-staircase witness.
    than an exceptional family.
 2. Turn the exact `2`-torsion scan into a human-readable interval proof, using
    the coordinate-6 extremal and its eight mirror cells as the hard case.
-3. Build a branch-and-bound certificate for all normalized vectors, ordering
-   coordinates by distance from the scalar line and pruning once a target
-   stencil interval is forced.
+3. Build a global exact certificate for all normalized vectors.  **Done by
+   two independent SAT encodings:** one-hot/full-shift and four-bit/reflected-
+   shift.  A compact human certificate remains desirable but is no longer
+   needed for the finite-exact status.
 4. Split shifts into units, `s=7`, and even nonunits.  Route nonunit behavior
    to quotient descent; use unit shifts to force a positive-margin cell.
 5. Compare the resulting quotient classes with the initial bad sets
@@ -132,3 +156,7 @@ Dirichlet-equality spine, and every other class has a micro-staircase witness.
 - HYP-1828
 - HYP-1832
 - HYP-1833
+- `04-computation/lrc14_microstaircase_scalar_ramp_sat_classification_opus_20260803.py`
+- `05-knowledge/results/lrc14_microstaircase_scalar_ramp_sat_classification_opus_20260803.out`
+- `04-computation/lrc14_microstaircase_binary_audit_microstaircase_audit_agent.py`
+- `05-knowledge/results/lrc14_microstaircase_binary_audit_microstaircase_audit_agent.out`

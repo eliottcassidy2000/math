@@ -1,0 +1,9 @@
+FACTORIAL ADAPTIVE RHO BOUNDARY THROUGH d=10000 HASH GATE
+artifacts=(('04-computation/factorial_adaptive_rho_block_6000.py', 'b65edcf2870714ca57456b8297afdd05284a09b302ec4b84d2e57829520c94d1'), ('04-computation/factorial_adaptive_rho_block_6000_independent_audit.py', 'd416cb2955fd745394cf1043ac8c2eba28a6a97beb264dd9cbe9919ed8c96724'), ('04-computation/factorial_adaptive_rho_block_10000.py', '105e62698d0c3cf0066a100e9d205a5c1f1c31e64cfdba0dc2fe23decd8f0eba'), ('05-knowledge/results/factorial_adaptive_rho_block_6000.out', 'ab629edc04e31d1889741688897bfe60f5249df60b64116391217393962b1ddf'), ('05-knowledge/results/factorial_adaptive_rho_block_6000_independent_audit.out', '8d6adbcaa14c85d022f726db97a80a7bafc1288505ccde720b3f5fbf6ee2a922'), ('05-knowledge/results/factorial_adaptive_rho_block_10000.out', '18b131aed2f380b1c1bace8beeb8488ced0e24599f4b7484d66a14e5869c0d22'))
+block_semantic_sha256=((4001, 6000, '7f8ab74ae9fae027f32fd7eabaf0338c217319e274594bd603859a1bbcca28bd'), (6001, 10000, 'd90179fdebd48dd82cd368b957c9602fbd287774287de0fecb73b4a84dca69f3'))
+combined_basis=json.dumps(block_semantics,separators=(',',':'),sort_keys=True).encode('ascii')
+combined_semantic_sha256=4a364bbafdfef0dc6d905063c9570b987e00eca2506506b8160ce24e453878bf
+d6001=(divisor_packet_size=59,rho_p7_post=(5152,),rho_killer=11,p2_inadmissible_and_skipped)
+d6518_hostile=(divisor_packet=(3087,3430,4802,5145,5488,5831);p11_post=(5831,);p13,p17,p19_retain;p23_inadmissible;p29_gap=(5669,5887)_kills_5831)
+consequence=FINITE-EXACT closure through d=10000, equivalently r<=9998; no arbitrary-support FC/SFC consequence
+STATUS=PASS

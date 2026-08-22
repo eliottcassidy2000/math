@@ -1,0 +1,21 @@
+finite-exact partial affine-c critical-section degeneracy scout
+dependency_hash_checks=4
+generic=(deg_C(K),deg_C(a),deg_C(b))=(2,0,1);subresultants=(3,3,2,1,0);Res_y=V^3*K40;R1_y_lead=4;rows_used_only_up_to_common_field_units=1
+case=4111;H_bidegree=(c:2,x:53);a_degree=36;a_irreducible=1;b=(b0+c*b1);b1_unit_mod_a=1;cstar_degree=24;H_mod_a=H2*(c-cstar)^2;H2_unit_mod_a=1
+case=4111;degeneracy_D_degree=36;D_squarefree_irreducible=1;Res_x(a,H)=field_unit*D^2;Res_x(a,b)=field_unit*D;gcd(a,H)!=1_iff_D(c)=0;on_D=(a,b)=(0,0)_so_projective_selector_has_base_locus;base_Jacobian_det=a_prime*b1_is_a_unit=1;quadratic_subresultant_nonzero_pattern=(1, 1, 1);generic_y_gcd_degree_on_D=2
+case=4111;boundary_parameter_degree=6;boundary_factor_profile=(1,1,1,1,2);finite_gate_degree=5;finite_factor_profile=(1,1,1,2);boundary=field_unit*finite_gate*live_q3_S_wall;gcd(D,boundary*finite)=1
+case=4111;S_walls=finite(k=2C_S)|live_q3|exceptional_q4;exceptional_q4_is_exact_midpoint_of_finite_and_live_q3;exceptional_not_boundary_or_finite_root=1;D_avoids_all_three=1
+case=4111;D_incidence_derivative_gcd_degrees=(36, 0)
+case=4111;repeated_H_symbolic_c_eliminant_x_degree=191;a_factor_order=2;residual_x_degree=119;D_incidence_exact_x_multiplicity=2;full_residual_parameter_discriminant_not_claimed
+case=4111;rational_scan=max(abs(p),q)<=12;reduced_parameters=183;includes=(1,1/2);good_residue_embeddings=((1013, 29), (1019, 22), (1031, 33));embedding_use=(183, 0, 0);boundary_or_finite_gate_hits=[('-2', (0, 1, 1)), ('-3/2', (0, 1, 1))];failures=(D,modular_H_Hprime_certificate)=0
+case=4111;digests={'D': 'd2b1a4307d903a4873d86a5d1b4764f0b4056bbe3810dc77cd2338c41a510215', 'boundary': '2d92a3ab24798afa7c25b21860902b7762cfccabd580802f9414711703fadcfc', 'finite': '2cdbdfee4220ee6f21761c8bd17ba68e1032e9899037a3bf9b57af458c9872b4', 'live': '7e30dfaba63a345f7f92109c6a3a0df51764ab6cbdd3bcb921a4b007af937524', 'cclass': '2cab20bdd322521e6a4309a2c854cdefcb0022767bc449499bf8a4827136d031'}
+case=3211;H_bidegree=(c:2,x:53);a_degree=36;a_irreducible=1;b=(b0+c*b1);b1_unit_mod_a=1;cstar_degree=24;H_mod_a=H2*(c-cstar)^2;H2_unit_mod_a=1
+case=3211;degeneracy_D_degree=36;D_squarefree_irreducible=1;Res_x(a,H)=field_unit*D^2;Res_x(a,b)=field_unit*D;gcd(a,H)!=1_iff_D(c)=0;on_D=(a,b)=(0,0)_so_projective_selector_has_base_locus;base_Jacobian_det=a_prime*b1_is_a_unit=1;quadratic_subresultant_nonzero_pattern=(1, 1, 1);generic_y_gcd_degree_on_D=2
+case=3211;boundary_parameter_degree=6;boundary_factor_profile=(1,1,1,1,2);finite_gate_degree=5;finite_factor_profile=(1,1,1,2);boundary=field_unit*finite_gate*live_q3_S_wall;gcd(D,boundary*finite)=1
+case=3211;S_walls=finite(k=2C_S)|live_q3|exceptional_q4;exceptional_q4_is_exact_midpoint_of_finite_and_live_q3;exceptional_not_boundary_or_finite_root=1;D_avoids_all_three=1
+case=3211;D_incidence_derivative_gcd_degrees=(36, 0)
+case=3211;repeated_H_symbolic_c_eliminant_x_degree=191;a_factor_order=2;residual_x_degree=119;D_incidence_exact_x_multiplicity=2;full_residual_parameter_discriminant_not_claimed
+case=3211;rational_scan=max(abs(p),q)<=12;reduced_parameters=183;includes=(1,1/2);good_residue_embeddings=((1013, 121), (1019, 39), (1021, 239));embedding_use=(183, 0, 0);boundary_or_finite_gate_hits=[('-2', (0, 1, 1)), ('-3/2', (0, 1, 1))];failures=(D,modular_H_Hprime_certificate)=0
+case=3211;digests={'D': '7d843359be408b76f51d88d808b8ebb6c1a63c8b9f4273dc2d34e078e040b8ad', 'boundary': '895dd22395834a1a037f7a646abfa4e8c97396b4aba7dfdac33b8974f28ebaec', 'finite': 'fc4c97ddf8522caead685c01a8af6a60cad6e88e41d10bb8662ef3177dbaf37f', 'live': '62828a1361ac027bec86de80c954d7bde2f3c9ba00a81c6c459e783d5f5949c1', 'cclass': 'f1e4a546b447a3f84a96dcc8488d4f32583818a54080329d275610d3fc9c7705'}
+scope=FINITE-EXACT_PARTIAL_exact_D_and_wall_loci_plus_bounded_rational_scan;full_repeated_H_parameter_discriminant_not_claimed;no_inverse_cover_not_JC2
+source_ast=(assert_nodes=0,float_literals=0)

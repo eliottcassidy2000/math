@@ -1,0 +1,10 @@
+== Berggren/Fibonacci dihedral reflection cospan ==
+berggren_factorization=A^2=B^2=I;B*A=U;A*U*A=U^-1;B=((-1, -2, 2), (-2, -1, 2), (-2, -2, 3))
+berggren_dynamics=parabolic;(U-I)^3=0!=(U-I)^2;q_values=(11, 27, 51, 83, 123, 171, 227, 291, 363)
+berggren_farey_ray=('1/2', '2/3', '3/4', '4/5', '5/6', '6/7', '7/8', '8/9', '9/10')
+fibonacci_factorization=A^2=B^2=-I_in_GL2;B*A=Q^2_in_GL2;A,B_are_involutions_in_PGL2
+fibonacci_dynamics=hyperbolic;trace(Q^2)=3;farey_ray=('1/2', '3/5', '8/13', '21/34', '55/89', '144/233', '377/610', '987/1597', '2584/4181')
+cycle_tournament_hostile=vertices=4;cycle_pairs=4;missing_pairs=2;tournament_completions=4;rotation_invariant_completions=0
+cycle_tournament_hostile=vertices=6;cycle_pairs=6;missing_pairs=9;tournament_completions=512;rotation_invariant_completions=0
+semantic_sha256=2ed27bf257b908ab33b5ad5909f46d2b171b0b1b14e2f31cf2205ea6e2825114
+status=VERIFIED-EXACT MATRIX/FAREY/TOURNAMENT COSPAN;no Keller identification or LRC current

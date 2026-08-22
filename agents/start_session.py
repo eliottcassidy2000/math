@@ -316,6 +316,48 @@ def file_status(relative: str) -> str:
     return min(matches)[2] if matches else "UNLABELLED"
 
 
+def fixed_string_files(variant: str, trees: tuple[str, ...]) -> set[str]:
+    """Return tracked and untracked working-tree files containing ``variant``.
+
+    ``rg --files-with-matches`` rereads the complete artifact corpus once per
+    query variant.  On Windows that turns the bounded-startup smoke into a
+    many-minute I/O sweep.  ``git grep`` searches tracked working-tree bytes
+    through Git's index; only the much smaller untracked set then needs direct
+    inspection.  Fall back to the old ripgrep route when Git is unavailable.
+    """
+    matched: set[str] = set()
+    tracked = run("git", "grep", "-l", "-i", "-F", "-e", variant, "--", *trees)
+    if tracked.returncode not in (0, 1):
+        files = run(
+            "rg", "--files-with-matches", "--fixed-strings", "--ignore-case",
+            "--", variant, *trees
+        )
+        if files.returncode in (0, 1):
+            matched.update(
+                relative.replace("\\", "/") for relative in files.stdout.splitlines()
+            )
+        return matched
+    matched.update(
+        relative.replace("\\", "/") for relative in tracked.stdout.splitlines()
+    )
+
+    untracked = run("git", "ls-files", "--others", "--exclude-standard", "--", *trees)
+    if untracked.returncode != 0:
+        return matched
+    needle = variant.casefold()
+    for relative in untracked.stdout.splitlines():
+        path = REPO / relative
+        if not path.is_file():
+            continue
+        try:
+            payload = path.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            continue
+        if needle in payload.casefold():
+            matched.add(relative.replace("\\", "/"))
+    return matched
+
+
 def scored_files(
     terms: list[tuple[str, int]], trees: tuple[str, ...]
 ) -> tuple[dict[str, tuple[int, int]], set[str]]:
@@ -324,14 +366,7 @@ def scored_files(
     for term, weight in terms:
         matched_paths: set[str] = set()
         for variant in literal_variants(term):
-            files = run(
-                "rg", "--files-with-matches", "--fixed-strings", "--ignore-case",
-                "--", variant, *trees
-            )
-            if files.returncode in (0, 1):
-                matched_paths.update(
-                    relative.replace("\\", "/") for relative in files.stdout.splitlines()
-                )
+            matched_paths.update(fixed_string_files(variant, trees))
         for relative in matched_paths:
             score, count = scores.get(relative, (0, 0))
             filename = Path(relative).name.casefold()

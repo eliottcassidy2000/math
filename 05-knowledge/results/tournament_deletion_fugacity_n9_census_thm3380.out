@@ -1,0 +1,9 @@
+classes=191536
+D: distinct=91780 nontrivial_fibers=89218 colliding_classes=188974 largest=24
+D_b333: distinct=91797 nontrivial_fibers=89234 colliding_classes=188973 largest=24
+D_fibers_split_by_b333=17
+stream_digest_fnv_mix=d5fc03160227e8d1
+first_split_indices=12985,22461
+left_bits=111111001111001110101110101111111111 full=161*x+9*x^3
+right_bits=111001011111110111001111011010111111 full=157*x+10*x^3
+common_D=(394,656,664,304,262,0,50,0,0,1)

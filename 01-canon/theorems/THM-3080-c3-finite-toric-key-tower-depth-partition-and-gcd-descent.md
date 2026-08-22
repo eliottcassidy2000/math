@@ -2,8 +2,10 @@
 id: THM-3080
 title: "C3 finite toric key-tower depth partition and gcd descent"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In a completed
-  residue-degree-one divisorial field, suppose a nonzero two-form has a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Let K=C(x,y) carry a
+  normalized residue-degree-one divisorial valuation w with w(K*)=Z, and
+  suppose the initial toric coordinates generate the full field,
+  C(M_0,R_0)=K.  If a nonzero two-form has a
   toric presentation Omega=U_i dlog(M_i) wedge dlog(R_i), where M_i has
   constant nonzero residue, R_i has positive value g_i, and Omega is the
   inverse Keller form above a tame target parameter of ramification index E.
@@ -37,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3080 -- the C3 toric Jacobian tower has a finite depth budget
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. The missing step after the first key
 
@@ -66,8 +68,23 @@ MacLane axioms, or algebraization on `A^2`.
 
 ## 2. Abstract ramified toric stage
 
-Work in characteristic zero with coefficient field `C(u)` and uniformizer
-`s`.  Let a tame target parameter satisfy
+Work in characteristic zero in the completed divisorial field of
+
+```text
+K=C(x,y),                    w(K*)=Z,                    (0)
+```
+
+with coefficient field `C(u)` and uniformizer `s`.  Require at stage zero
+
+```text
+C(M_0,R_0)=K.                                            (0a)
+```
+
+The unimodular transformations below preserve this full-field equality.
+This condition is load bearing; algebraic independence alone would allow a
+proper finite-index subfield and would not imply terminal primitivity.
+
+Let a tame target parameter satisfy
 
 ```text
 t=tau(u)s^E+O(s^(E+1)),              E>=1,
@@ -81,8 +98,8 @@ Omega:=dx wedge dy=kappa^(-1)du wedge dt
  =E kappa^(-1)tau s^(E-1)du wedge ds+O(s^E).              (2)
 ```
 
-Suppose at some stage `i` there are algebraically independent field
-coordinates `M_i,R_i` and a nonzero prefactor `U_i` such that
+Suppose at some stage `i` there are full-field coordinates `M_i,R_i`, so
+`C(M_i,R_i)=K`, and a nonzero prefactor `U_i` such that
 
 ```text
 Omega=U_i dlog(M_i) wedge dlog(R_i),                     (3)
@@ -346,6 +363,19 @@ an obstruction: early resonant ratios are constant and permit off-lattice
 values after cancellation; the terminal ratio is nonconstant and makes the
 last lattice monomially injective.
 
+The full-field hypothesis in `(0a)` cannot be weakened to algebraic
+independence.  In `C(u)(s)`, the proper-subfield packet
+
+```text
+M=1+u s^2,              R=s^2,              U=M
+```
+
+has `U dlog(M) wedge dlog(R)=du wedge d(s^2)` and terminal data
+`(E,g,e)=(2,2,2)`.  Its gcd is two because
+`C(M,R)=C(u,s^2)` is the index-two subfield, rather than the full normalized
+field `C(u,s)`.  This exact hostile isolates the missing hypothesis without
+touching the `C3` specialization, whose unimodular charts generate `K`.
+
 ## 6. Coordinate-line C3 specialization
 
 For the `C3` branches of THM-3074, take `E=3`.  Its initial unimodular chart
@@ -505,7 +535,8 @@ cross-chart physical intertwiner is supplied here.
 
 ## 9. Exact evidence and boundary
 
-The companion checks:
+The companion, replayed byte-identically under normal and optimized Python
+during an independent line audit, checks:
 
 - every Bezout sign, logarithmic wedge, and gcd update for
   `1<=g_i,e_i<=24`;
@@ -515,18 +546,6 @@ The companion checks:
 - the exact one- and two-stage controls inherited from THM-3074;
 - the new three-stage identities `(46)--(48)`; and
 - the telescoping prefactors at every stage of that packet.
-
-An independent audit rederived the wedge orientation from `(Z_i,R_i)` to
-`(M_(i+1),R_(i+1))`, the exponent budget `B_i=E-sigma_i`, and the exact key
-value `lcm(g_i,e_i)+e_(i+1)`.  It checked that algebraic independence makes
-`M_(i+1)-1` nonzero of finite completed-field value, and that at the terminal
-stage the least-weight Laurent coefficient is a nonzero Laurent polynomial
-in the nonconstant parameter `theta^(-1)`.  Thus normalization of the full
-divisorial value group really forces `gcd(g_N,e_N)=1`; this conclusion is not
-being inferred merely from the first lattice.  The one-, two-, and
-three-stage packets were also recomputed symbolically.  Ordinary Python,
-optimized Python, and the stored transcript agree byte-for-byte at the pinned
-hashes.
 
 Reproduce with
 

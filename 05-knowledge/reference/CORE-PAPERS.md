@@ -1,23 +1,25 @@
 # Core papers: imported results, consumers, and guardrails
 
-> **Freshness:** primary records checked **2026-07-21**.  An arXiv version in
-> this file is the version visible on that date; recheck entries marked
-> **PREPRINT**, **RADAR**, or **SEMINAR ONLY** before making a priority or
-> state-of-the-art claim.
+> **Freshness:** sources were checked **2026-07-21** unless dated later.
+> Recheck **PREPRINT**, **RADAR**, and **SEMINAR ONLY** before priority claims.
 
-This is a role map, not a general bibliography.  Read an entry to learn exactly
-what this repository imports from a source, where that input is consumed, and
-what the source does **not** establish.  Repository theorem numbers collide in
-places, so the links below, not a bare `THM-N`, are the canonical addresses.
+This maps imported claims, consumers, and exclusions.  Because IDs can
+collide, links—not bare IDs—are canonical.
 
 ## Fast frontier snapshot
 
-- **LRC:** fourteen runners (thirteen nonzero speeds) remains open; the April 2026 computation reaches twelve nonzero speeds.
-- **Gaussian/Image moments:** [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md) gives GMC `true through 2 / false from 3`; [THM-2801](../../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md) gives SIC `true at 1 / false from 2`, without settling its JC-bearing restrictions.
-- **Tournament attribution:** arXiv:2412.10572 is Irving--Omar, arXiv:2307.05569 Grinberg--Stanley, and arXiv:2406.09697 Klanderman--Montee--Piotrowski--Rice--Shader.
-- **Unsplittable flows:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture; the cost-free `d_max` and planar cost-preserving `2d_max` theorems remain intact.
-- **Reciprocal sequences:** separate support from indexed multiplicity; external figurate formulas do not supply the repo's Abel--Dini/support-Dirichlet extensions.
-- **Jacobian/Dixmier/Poisson:** THM-1300 refutes `JC(n)` for `n>=3`; `JC(2)`, `DC(1)`, and `DC(2)` remain open. THM-2071 closes quadratic-fiber pencil cells only; THM-2044 separately refutes the two-pair Poisson conjecture.
+- **LRC:** fourteen runners is open; April 2026 reaches twelve nonzero speeds.
+- **Moments:** [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md) gives GMC exactly through 2; [THM-2801](../../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md) gives SIC only at 1; JC-bearing restrictions remain.
+- **Tournament citations:** 2412.10572 Irving--Omar; 2307.05569 Grinberg--Stanley; 2406.09697 Klanderman et al.
+- **Flows:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes the exact-cost conjecture; cost-free `d_max` and planar `2d_max` survive.
+- **Reciprocals:** support differs from indexed multiplicity; figurate formulas omit repo extensions.
+- **JC/DC:** THM-1300 refutes `JC(n>=3)`; `JC(2),DC(1),DC(2)` are open. THM-2071 is local; THM-2044 refutes the two-pair Poisson claim.
+
+## Rule 30
+
+- **Sources/status:** [announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/); [active prizes](https://rule30prize.org/) checked 2026-08-15; openness is repo inference.
+- **Imported:** [Rowland](https://doi.org/10.25088/ComplexSystems.16.3.239) gives `v_m`; [Christol et al.](https://www.numdam.org/articles/10.24033/bsmf.1926/) applies only to [THM-3471](../../01-canon/theorems/THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum.md) finite sums.
+- **Repo frontier:** [3516](../../01-canon/theorems/THM-3516-rule30-marked-van-der-put-carry-and-power-section-bridge.md).  No prize/priority claim.
 
 ## Lonely Runner Conjecture
 
@@ -209,27 +211,28 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
 
 ### Lee — *Lonely runners in real life: Sharp bounds for time-dependent velocities*
 
-- **Primary / freshness:** [arXiv:2607.16082v1](https://arxiv.org/abs/2607.16082), submitted 2026-07-17. **RADAR / PREPRINT v1.**
-- **Imported role:** proves the sharp `2^(-n+1)` extreme-runner guarantee for ordered time-dependent velocities with divergent relative displacement, while intermediate runners can stay close forever.
-- **Boundary:** no theorem depends on it; it stress-tests linear-flow assumptions but proves nothing about constant-velocity LRC(14), `1/14`, integer spectra, or finite checking.
+- **RADAR / PREPRINT v1:** [arXiv:2607.16082v1](https://arxiv.org/abs/2607.16082) proves the sharp `2^(-n+1)` extreme-runner guarantee for ordered time-dependent velocities with divergent relative displacement.  No theorem depends on it, and it proves nothing about constant-velocity LRC(14), `1/14`, integer spectra, or finite checking.
 
 ## Jacobian, Dixmier, and Poisson
 
 ### July 2026 explicit dimension-three Jacobian certificate — public announcement, no paper
 
-- **Primary / freshness:** [original public announcement](https://x.com/__alpoge__/status/2079028340955197566),
-  2026-07-19, and [exact displayed map and certificate](https://jacobianfun.org/jacobian-explained).
-  **ANNOUNCEMENT ONLY:** no stable paper or peer review was located by 2026-07-21;
-  do not infer discovery credit beyond the primary wording.
-- **Imported role:** the displayed map has constant Jacobian determinant `-2`
-  and an explicit triple collision, so it refutes `JC(3)` and, by padding,
-  `JC(n)` for all `n>=3`.
-- **Repo consumer:** [THM-1300](../../01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md)
-  independently checks both identities exactly and records the downstream Weyl
-  and equivariant anatomy.
-- **Does not prove:** `JC(2)`, `DC(1)`, or `DC(2)`.  Verification, provenance,
-  publication, and priority are separate claims; use THM-1300's byte-zero
-  correction before repeating any historical attribution in its body.
+- **Sources/status:** [announcement](https://x.com/__alpoge__/status/2079028340955197566), [map](https://jacobianfun.org/jacobian-explained), [weighted lift](https://github.com/algal/jacobianfun/blob/main/RESEARCH.md); not a paper or peer review.
+- **Imported/boundary:** the determinant-`-2` triple collision refutes `JC(n)` for `n>=3`; [THM-1300](../../01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md) and [THM-3438](../../01-canon/theorems/THM-3438-weighted-lift-keller-degree-spectrum.md) verify the map/spectrum.  No `JC(2)` or Dixmier conclusion follows.
+
+### Nagata / Shastri / Guccione--Guccione--Horruitiner--Valqui — planar degree and infinity gates
+
+- **Primary/imported:** Nagata's corrected [Theorem 7.3](https://repository.kulib.kyoto-u.ac.jp/server/api/core/bitstreams/9ef8e868-5526-4830-b19f-543c0af09e7c/content) gives `Omega(deg R)>=3` for every counterexample-pencil member; Shastri's [criterion](https://doi.org/10.18910/6794) forces two top-form roots; [arXiv:2204.14178v1](https://arxiv.org/abs/2204.14178) gives reduced height `>=108`, only `(72,108)` below `125`.
+- **Consumer/boundary:** [THM-3550](../../01-canon/theorems/THM-3550-prime-degree-exclusion-and-pencil-height-eight-floor.md) supplies an independent elementary floor.  None proves `JC(2)`, existence of `(72,108)`, or height `125`.
+
+### Gwozdziewicz / Lang — injective lines and Newton similarity
+
+- **CITED:** [Gwozdziewicz, Thm. 1.1](https://arxiv.org/abs/alg-geom/9305008) makes a planar Keller map injective on one line an automorphism.  [Lang](https://doi.org/10.1016/0022-4049(91)90128-O) proves that, when both degrees exceed one, their origin-augmented Newton polygons scale by the degree ratio.  Necessary only.
+
+### Jelonek--Lasoń — quantitative nonproperness-set uniruledness
+
+- **CITED:** [arXiv:1411.5011v2](https://arxiv.org/abs/1411.5011), *Manuscripta Math.* **156** (2018), [DOI](https://doi.org/10.1007/s00229-017-0965-0): a generically finite degree-`d` map's nonproperness set is covered by polynomial curves of degree `<=d-1`; planar components are rational.
+- **Boundary:** finite collision/conductor curves are different loci, so THM-3556's genus-two pair curve is no contradiction; withdrawn arXiv:2011.03472 is not imported.
 
 ### Belov--Kanel--Kontsevich — *The Jacobian Conjecture is stably equivalent to the Dixmier Conjecture*
 
@@ -294,6 +297,15 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   `NC2 -> GMC(2) -> JC(2)` chain, or full JC(2) from the binary homogeneous
   calculation. VC(4), planar Jelonek/leading-form descent, and Newton/Lame
   descent remain separate programs.
+- **In-repo GVC(3) witness (2026-08-03, provenance UNKNOWN):** a supplied
+  homogeneous `Lambda = Delta^6` witness (`Delta = 4 d_x d_y + d_t^2`,
+  `P = A C^2` deg 12, `Q = x^2`) is FINITE-EXACT through `m = 4` with exact
+  nonvanishing constants and tight exponent; absent from indexed literature
+  after documented search, plausibly a homogeneous lift of Long's GMC(3)
+  example via `E[f] = (e^{Delta/2}f)(0)`; dimension-minimal if the all-`m`
+  induction holds (de Bondt proved homogeneous-operator GVC in 2 variables).
+  See `05-knowledge/results/gvc3-delta6-counterexample-verification-boxeph.md`
+  and `gvc-tv-provenance-hunt-boxeph.md`.
 
 ### Lee--Li — *On the two-dimensional Jacobian conjecture: Magnus' formula revisited, IV*
 
@@ -512,98 +524,85 @@ THM-2191 uses prime-decomposition cancellation and the four-ball crossing metric
 
 ## Arrangements and tournament games
 
-### De Concini--Procesi — *On the geometry of toric arrangements*
-
-- **Primary / freshness:** [arXiv:math/0505351v4](https://arxiv.org/abs/math/0505351),
-  revised 2005-06-08.
-- **Imported role:** defines a toric arrangement as a finite family of
-  codimension-one subtori or their cosets and computes complement cohomology.
-  It supplies the standard object against which HYP-8830's LRC terminology is
-  audited.
-- **Repo consumer:** the
-  [corrected phase-height reflection](../../07-reflections/orlik-solomon-is-a-repo-wide-pattern-toric-arrangements-are-the-lrc-lens-boxeph-S209.md).
-- **Does not prove:** that the infinite Fourier annihilator
-  `{k:k.v=0}` is a layer poset, that a thickened safe set is an ordinary
-  complement, or that complement cohomology retains LRC height, wall side,
-  owner, sign, or deletion data.
-
-### Moci — *A Tutte polynomial for toric arrangements*
-
-- **Primary / freshness:** [arXiv:0911.4823v5](https://arxiv.org/abs/0911.4823),
-  revised 2010-11-09; final journal version in *Transactions of the AMS*.
-- **Imported role:** introduces the multiplicity Tutte polynomial, proves
-  deletion--restriction and positivity, and obtains characteristic and
-  Poincare polynomials of a toric arrangement as specializations.
-- **Repo consumer:** corrected HYP-8830 and MISTAKE-224.
-- **Does not prove:** that the cutoff statistic `N_R`,
-  [THM-1820's sinc-weighted Fourier series](../../01-canon/theorems/THM-1820-lrc-is-a-moment-nullcone-problem-relation-lattice-pairing.md),
-  or an LRCMod count is an arithmetic Tutte or
-  Mobius specialization. A finite character list and its actual layers must be
-  stated first.
-
-### Stanley — *Hyperplane Arrangements, Interval Orders and Trees*
-
-- **Primary / freshness:** [author-hosted survey PDF](https://math.mit.edu/~rstan/papers/nas.pdf),
-  version dated 1995-12-01.
-- **Imported role:** records the braid characteristic polynomial and its `n!`
-  real chambers, and the Shi formulas
-  `chi(q)=q(q-n)^(n-1)` and `r=(n+1)^(n-1)`. These are the exact classical
-  controls replayed in the corrected S209 computation.
-- **Repo consumer:** corrected HYP-8830, MISTAKE-224, and the
-  [S209 arrangement reflection](../../07-reflections/orlik-solomon-is-a-repo-wide-pattern-toric-arrangements-are-the-lrc-lens-boxeph-S209.md).
-- **Does not prove:** that Shi walls are LRC safety walls, that braid
-  cohomology is a per-tournament invariant, or that finite-field arrangement
-  counts solve the LRC(14) AP-core extraction problem.
-
-### Fisher--Ryan — *Tournament games and positive tournaments*
-
-- **Primary / freshness:** [DOI 10.1002/jgt.3190190208](https://doi.org/10.1002/jgt.3190190208),
-  *Journal of Graph Theory* **19** (1995), 217--236.
-- **Imported role:** the tournament game has a unique optimal strategy with
-  odd-cardinality support. The repo's elementary parity reading restores the
-  essential second coordinate: an even principal tournament payoff block is
-  nonsingular modulo two.
-- **Repo consumer:** the
-  [corrected antisymmetry reflection](../../07-reflections/antisymmetry-is-the-hinge-tori-odd-functions-saddles-and-tournaments-boxeph-S210.md).
-- **Does not prove:** that pure optimum is equivalent to transitivity, that
-  every intransitive tournament has recurrent replicator dynamics, or that a
-  game saddle is a Morse saddle. Pure optimum means a Condorcet winner.
+Detailed source/import/guardrail records for De Concini--Procesi, Moci,
+Stanley (arrangement surveys), and Fisher--Ryan are preserved verbatim in the
+[arrangements/games sidecar](CORE-PAPERS-ARRANGEMENTS-GAMES.md). All four are
+consumed by corrected reflections (S209/S210, MISTAKE-223/224 lineage): toric
+arrangements and Shi/braid counts are audit controls, not LRC carriers, and a
+tournament-game pure optimum means a Condorcet winner, not transitivity.
 
 ## Reciprocal integer sequences
 
-### Downey--Ong--Sellers — *Beyond the Basel Problem: Sums of Reciprocals of Figurate Numbers*
+Detailed records for Downey--Ong--Sellers (figurate telescoping seeds) and
+Applegate--Pol--Sloane (toothpick automaton) are preserved verbatim in the
+[reciprocal-sequences sidecar](CORE-PAPERS-RECIPROCAL-SEQUENCES.md). They seed
+THM-2000/THM-2005's support surfaces; neither proves the support-versus-
+multiplicity collision law or the Abel--Stieltjes/Dini criterion.
 
-- **Primary / freshness:** [author-hosted preprint](https://www.d.umn.edu/~jsellers/downey_ong_sellers_cmj_preprint.pdf),
-  [archived copy](https://web.archive.org/web/20130529032918/http://www.math.psu.edu/sellersj/downey_ong_sellers_cmj_preprint.pdf),
-  *College Mathematics Journal* **39** (2008), 391--394,
-  [JSTOR 27646686](https://www.jstor.org/stable/27646686).
-- **Imported role:** supplies the classical telescoping program and exact
-  reciprocal sums for figurate-number families, including the triangular
-  identity `sum 1/T_n=2`.  These are the seed rows for the repo's polygonal,
-  simplex, digamma, and trigamma mass surfaces.
-- **Repo consumers:**
-  [THM-2000 support-harmonic/figurate surface](../../01-canon/theorems/THM-2000-support-harmonic-abel-dini-figurate-surface.md),
-  [THM-2005 support-Dirichlet atlas](../../01-canon/theorems/THM-2005-support-dirichlet-automatic-tournament-atlas.md).
-- **Does not prove:** the repo's support-versus-multiplicity collision law,
-  Abel--Stieltjes/Dini iff criterion, iterated Bertrand boundary, full
-  support-Dirichlet profile, or tournament reciprocal atlas.
+## Pythagorean trees and square-pyramidal intersections
 
-### Applegate--Pol--Sloane — *The Toothpick Sequence and Other Sequences from Cellular Automata*
+The primary-source records for Berggren descendant geometry, fixed-hypotenuse
+fibres, and Bennett's global cannonball classification are in the
+[Pythagorean sidecar](CORE-PAPERS-PYTHAGOREAN.md).  THM-3334 imports the first
+two interfaces; THM-3335 uses the cannonball classification only to make one
+Pell-selector intersection global.  None of these sources supplies an LRC,
+tournament, Jacobian, or skew-EW construction.
 
-- **Primary / freshness:** [arXiv:1004.3036v2](https://arxiv.org/abs/1004.3036),
-  *Congressus Numerantium* **206** (2010), 157--191.
-- **Imported role:** develops the toothpick cellular automaton and its dyadic
-  recurrences and product-like generating functions.  The repo uses the exact
-  A139250 formula as an automatic-sequence test case and as a model for
-  operation-generated tournament-adjacent sequences.
-- **Repo consumers:**
-  [THM-2000](../../01-canon/theorems/THM-2000-support-harmonic-abel-dini-figurate-surface.md),
-  [toothpick bridge tangent](../../00-navigation/TANGENTS.md),
-  [Perron/toothpick experiment](../../04-computation/perron_toothpick_klein_S315.py).
-- **Does not prove:** convergence or a closed form for the support reciprocal
-  mass, a tournament interpretation, or novelty of any repo-generated
-  sequence.  Cellular-automaton multiplicities must still be collapsed before
-  applying the support-harmonic lens.
+## Unstable homotopy
+
+Ivanov--Mikhailov--Wu ([arXiv:1506.00952](https://arxiv.org/abs/1506.00952),
+*HHA* **18** (2016) 337--344; `pi_n(S^2)` nontrivial for `n>=2`) is recorded in
+the [homotopy sidecar](CORE-PAPERS-HOMOTOPY.md); repo consumers THM-3204/3205
+(continuant gate, odd-primary lambda-algebra engine). It does not prove any
+new homotopy group, `p=2` statement, or LRC/GMC consequence.
+
+## Probability and extraction
+
+### Kontorovich — *TV Homogenization Inequalities*
+
+- **Primary / freshness:** [arXiv:2601.04079v3](https://arxiv.org/abs/2601.04079),
+  submitted 2026-01, revised 2026-02. **PREPRINT.**
+- **Imported role:** homogenization (each Bernoulli parameter mapped to the
+  block mean) reduces TV distance up to a universal constant. Lemma 1.4
+  PROVES `delta_N <= 2(delta_I + delta_J)` for a block partition; the
+  product form `delta_N <= delta_I + delta_J - delta_I delta_J` is the
+  paper's stated CONJECTURE ("no pathway" via its methods). The repo PROVES
+  that conjecture's first case (`|I|=|J|=1`, i.e. `n=2`) by an exact
+  positivity certificate, with the equality face characterized — see
+  `05-knowledge/results/tv-fusion-homogenization-lemma-boxeph.md`.
+- **Does not prove:** the product-form conjecture beyond `n=2` (OPEN); any
+  AMM 12592 deadline bound (transfer refuted in the repo note); "rigid face"
+  is repo/user terminology, not the paper's.
+- **Repo consumer:** [THM-3291](../../01-canon/theorems/THM-3291-two-block-tv-homogenization-rigidity.md)
+  proves the `n=2` case from a box constraint plus AM-GM and classifies the
+  equality locus; its 62 nontrivial equality points are boxeph's 351 minus the
+  degenerate faces, an exact two-implementation cross-confirmation.
+
+### Zhao's GVC in three variables — the supplied object, and its dictionary
+
+- **Provenance UNRESOLVED — do not cite.**  The three-variable object
+  `rho=t^2+xy`, `A=rho+x^2`, `C=(rho^3-t^2A^2)/x`, `P=AC^2`, `Q=x^2`,
+  `Delta=4d_x d_y+d_t^2` was supplied with the identifier `arXiv:2606.17854`.
+  That identifier resolves to Ajwani--Gajjala--Raman--Ray, *Counterexamples to
+  Wegner's Conjecture for Rectangles* (cs.CG), which contains none of it.  The
+  mathematics is correct; the source is unknown.  Attach no priority claim.
+- **Dictionary (reusable).**  For a nondegenerate quadratic form `rho` with
+  Laplacian `Delta` and `L(f)=(exp(Delta/2)f)(0)`, a degree-`2k` form has
+  `L(f)=Delta^k f/(2^k k!)`.  So a *Generalized Vanishing Conjecture* statement
+  about `Delta^j` in `n` variables **is** a *Gaussian Moments Conjecture*
+  statement in `n` variables; they are not separate lanes.  Zhao's equivalence
+  with the Jacobian Conjecture is for `j=1` only, so no statement about powers
+  of `Delta` touches `JC`, `JC(2)`, or THM-1435's VC-witness bracket.
+- **Repo consumers:** boxeph's FINITE-EXACT instance verification
+  (`05-knowledge/results/gvc3-delta6-counterexample-verification-boxeph.md`)
+  and [THM-3290](../../01-canon/theorems/THM-3290-archimedes-flatness-and-the-gmc3-gvc3-counterexample-family.md),
+  which proves both all-`m` statements that verification left open and
+  generalizes them to an infinite family.
+
+## August 2026 preprint intake
+
+[August 14 intake](CORE-PAPERS-INTAKE-2026-08-14.md): four preprints + Rule 30;
+headlines **CITED**; proved consumers THM-3390/3392/3395/3396/3456/3458/3459.
 
 ## Maintenance rule
 

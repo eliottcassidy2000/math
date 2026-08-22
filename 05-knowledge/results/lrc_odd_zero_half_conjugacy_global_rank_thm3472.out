@@ -1,0 +1,20 @@
+THM-3472 EXACT DETERMINISTIC COMPANION
+STATUS: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
+DEPENDENCY: THM-3405 d3e7dbeeb85c6f897bd9e31270bd0b6602ae4feac3b46a45eb5ce23ae5d24fe0 01-canon/theorems/THM-3405-common-centre-gcd-gauge-and-boolean-half-twist.md
+DEPENDENCY: THM-3415 de8d2f615695070dc75cad38ad4a9c22308d8bf900cd6f9a69cd2003f815a14d 01-canon/theorems/THM-3415-zero-mode-cochain-global-rank-five-support.md
+DEPENDENCY: THM-3453 a4444813a2b24aa55613eef5f4cc0538ca0148f16297dff46f80d723f1beb247 01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md
+SECURITY_IMPORTS: __future__,ast,fractions,hashlib,itertools,json,math,pathlib,sys
+UNIVERSAL_TRANSPORT: B_Q(2s)(ell)=Z_Q(s)(2ell+1 mod Q) for every Q; self-opposite even owner deleted
+GLOBAL_CONSEQUENCE_CANDIDATE: rho_ZMC(q)=rho_H(q) for every q>=2
+ALL_MODULUS_TRANSPORT_Q2_TO401: {'rows': 40200, 'odd_rows': 20100, 'even_rows': 20100, 'cells': 10766900, 'empty_self_opposite': 200, 'digest': '3405151ea290a3724b8fc4ef419c3216789d3e8f1593264a49f630517dfb3ff4', 'q15_augmented_hostile': ((1, 2, 3, 4, 5, 7), (2, 4, 6, 8, 10, 14), 1, 2), 'q8_image': (1, 3, 5, 7)}
+DIVISOR_INTERFACE_Q2_TO80: {'q_max': 80, 'rows': 118072, 'cells': 6478224, 'digest': '98fe0dedb72963aab691506b5c4e65f309c43a8454ab61e47a1713d9785d5276'}
+DILATION_BASE_Q2_TO101_SCALES_2_3_5: {'rows': 15150, 'cells': 3434000, 'digest': 'bc8cad0fceb4beb24d4d9a4336ac9563019c3aa900a9c1d2b76013671b619832'}
+ALL_CAP7_ATOMS: {4: (8, 9), 5: (10, 12), 6: (11, 15, 23, 25), 7: (13, 14, 29, 38, 51, 68, 148)}
+ALL_CAP7_MINIMAL_PERIOD: 14362718970600
+ALL_WEIGHTED_CRT_STATES: 9216
+ALL_PERIOD_COUNTS_4_5_6_7_GT7: ((4, 3191715326800), (5, 1276686130720), (6, 1734627895000), (7, 1531452347040), (8, 6628237271040))
+ALL_NATURAL_AND_HARMONIC_COEFFICIENTS: ((4, '2/9'), (5, '4/45'), (6, '25/207'), (7, '165741596/1554406815'), (8, '717341696/1554406815'))
+ALL_MINIMAL_PERIOD_WITNESSES: ((2, 4, 8, 7181359485304, 4), (3, 3, 8, 4787572990203, 4), (5, 5, 8, 2872543794125, 6), (7, 2, 8, 2051816995802, 7), (11, 2, 8, 1305701724602, 6), (13, 5, 8, 1104824536205, 7), (17, 6, 8, 844865821806, 7), (19, 38, 7, 755932577438, 8), (23, 1, 8, 624466042201, 6), (29, 29, 7, 495266171429, 8), (37, 148, 7, 388181593948, 8))
+ODD_SUBATLAS_PERIOD_STATES_COUNTS: (729664650, 576, ((0, 364832325), (4, 40536925), (5, 0), (6, 64859080), (7, 31171360), (8, 228264960)))
+SEMANTIC_SHA256: 116818fa2bbc5a0cada41b425f08c4b7afb9a3051e17d804463f002b1027d81a
+VERDICT: repaired all-modulus rank equality candidate and exact cap-seven harmonic atlas; augmented primitivity, endpoint current, and LRC(14) do not follow

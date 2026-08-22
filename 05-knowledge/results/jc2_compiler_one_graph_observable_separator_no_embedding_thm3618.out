@@ -1,0 +1,22 @@
+THM-3618 exact companion -- proved one-graph-observable separator classification
+status=proved, verified exact, and independently hostile-audited
+SECTION compiler ring, normal surface, and two-observable identity
+PASS compiler_and_surface_gates=10 surface=smooth two_observables=recover_q
+SECTION generic inverse and complete special-fibre controls
+PASS generic_inverse_gates=8 special_fibre_gates=16 image_puncture=(-4,0,0)
+SECTION off-diagonal conic and excluded-pair algebra
+PASS off_diagonal_identities=4 excluded_pair_gates=12 deleted_p=0,-1,-3,-4
+SECTION weight monomial normal forms and parity
+PASS weight_rows=242 nonnegative=36 negative_even=45 negative_odd=40
+SECTION positive-odd cyclic obstruction controls
+PASS cyclic_root_gates=5 positive_odd_controls=20 tested_w=1..19
+SECTION negative-odd survivor divided differences
+PASS negative_survivor_rows=36 tested_m=1..12 Q=-2(p+3)^(2m-1)
+SECTION integer-power telescope filter and hostile specializations
+PASS power_filter_base=3 positive_hostiles=24 negative_hostiles=23 sole_exponent=-1
+SECTION D=0 puncture obstruction and e-power boundary
+PASS puncture_gates=26 separator_traces_in=C[u] x_trace=u^-1
+SECTION fibrewise separator powers and THM-3614 exceptional graph
+PASS fibre_power_rows=36 tested_m=1..12 exceptional_h=-z+n_is_m1
+PASS total_exact_gates=467
+RESULT PASS -- proved and independently hostile-audited

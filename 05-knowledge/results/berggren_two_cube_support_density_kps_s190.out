@@ -1,0 +1,8 @@
+== two-cube mod-prime support density probe ==
+coordinates=U:n-m;V:2m-n;T:2m+n;support=n*V*T
+gate=p|nV:(6/p)=1;p|T,p!=3:(-2/p)=1;p3:m=n!=0
+records=(N,candidates,p3_eligible,survivors):((401, 8195, 2053, 104), (997, 50507, 12654, 481), (1999, 202713, 50741, 1668), (4999, 1266692, 316812, 8941), (9999, 5065838, 1266211, 31859), (19999, 20264681, 5066584, 114230), (49999, 126652918, 31664297, 633416))
+semantic_sha256=d5b737f9ff05eacce32e610848cb388dd21f328f7732e4322bff61fa10e32f59
+CHECKS=6
+status=FINITE-EXACT STRUCTURAL CENSUS
+scope=N<=49999;mod-prime gate only;no p-adic/Pell/global/asymptotic claim

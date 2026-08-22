@@ -1,0 +1,15 @@
+THM-3598 exact companion
+SECTION all-exponent rational-exact composite channel
+PASS 28 all-exponent family identities
+SECTION all-arm arm-pole specialization
+PASS 31 all-arm, critical-arm, and A13 controls
+SECTION formal graph-linear residue classifier
+PASS 341 residue, primitive, square, hostile, and parity gates
+SECTION positive primitive torsor and arm/residual debt
+PASS 37 primitive-pole and residual-fibre controls
+SECTION shallow negative-channel field trace
+PASS 160 trace, negative-graph, and one-root controls
+SECTION sharp exponent-one boundary
+PASS exponent one has a logarithmic, not rational, primitive
+CHECKS=599
+RESULT=PASS

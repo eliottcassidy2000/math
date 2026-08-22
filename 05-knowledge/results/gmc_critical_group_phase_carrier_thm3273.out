@@ -1,0 +1,17 @@
+THM-3273 CRITICAL-GROUP PHASE CARRIER EXACT AUDIT
+dependency_hash_checks=6
+assert_nodes=0,float_literals=0
+core_critical_group=Z/74748=Z/12xZ/6229
+reset_critical_group=Z/74748
+full_critical_group=Z/4xZ/12xZ/113184,order=5432832
+critical_primary_boundary=no_7_torsion,no_13_torsion
+C131_automorphism_boundary=order13_exists,no_nontrivial_affine_element_preserves_11class_vertex_image
+relative_boundary_snf=(1,1),relative_H1=Z^6,saturated
+relative_C2_signature=(5,1),C7_reflection_augmentation=(3,3)
+primitive_adjugate_row=(12951, 7527, 2466, 8883, 7593, 6369, 14988, 34229, 4932, 5961, 9313)
+C12_vertex_image=(6 classes,multiplicities 3,3,3,1,1,1)
+C12_pair_differences=all12,core_edge_differences=all_except_4_8
+delayed_phase_repair=((11,17)->8,(11,21)->4),Aug_sampler_rank=10_to_11
+graph_C2_on_C12=multiplication_by_5
+scope=relative_phase_carrier_only,no_vertex_torsor,no_absolute_marker
+all_exact_checks=PASS

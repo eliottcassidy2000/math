@@ -1,0 +1,64 @@
+THM-3457 EXACT DETERMINISTIC COMPANION
+status=PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
+arithmetic=stdlib Fraction/integer only; every gate uses explicit exceptions
+dependency=01-canon/theorems/THM-3454-fibonacci-selected-u-spine-farey-lorentz-isometry-and-one-tie-edge-order.md
+dependency_lf_sha256=2f55187055b8158f5a99fd154df14beec5c2b6e7a0a4f65bc5995d495be7d058
+edge_labels=01,12,23,02,13,03
+equality_forms=a-b,b-c,a-c,a-b-c,c-a-b
+comparison_partition=dynamic:6,universal:9
+strata_certificate=sign_vectors:243,candidate_intersections:9,feasible:25,infeasible:218
+atlas_census=strict:10,one_tie:10,two_tie:4,maximal_tie:1
+ATLAS_BEGIN
+S1|strict|gaps=(1, 2, 4)|normalized=(1/7,2/7,4/7)|signs=(-,-,-,-,+)|signature=01 < 12 < 02 < 23 < 13 < 03|reverse=S1r|missing=0|arcs=15|extensions=1
+S1r|strict|gaps=(4, 2, 1)|normalized=(4/7,2/7,1/7)|signs=(+,+,+,+,-)|signature=23 < 12 < 13 < 01 < 02 < 03|reverse=S1|missing=0|arcs=15|extensions=1
+S2|strict|gaps=(2, 3, 4)|normalized=(2/9,1/3,4/9)|signs=(-,-,-,-,-)|signature=01 < 12 < 23 < 02 < 13 < 03|reverse=S2r|missing=0|arcs=15|extensions=1
+S2r|strict|gaps=(4, 3, 2)|normalized=(4/9,1/3,2/9)|signs=(+,+,+,-,-)|signature=23 < 12 < 01 < 13 < 02 < 03|reverse=S2|missing=0|arcs=15|extensions=1
+S3|strict|gaps=(1, 3, 2)|normalized=(1/6,1/2,1/3)|signs=(-,+,-,-,-)|signature=01 < 23 < 12 < 02 < 13 < 03|reverse=S3r|missing=0|arcs=15|extensions=1
+S3r|strict|gaps=(2, 3, 1)|normalized=(1/3,1/2,1/6)|signs=(-,+,+,-,-)|signature=23 < 01 < 12 < 13 < 02 < 03|reverse=S3|missing=0|arcs=15|extensions=1
+S4|strict|gaps=(2, 1, 4)|normalized=(2/7,1/7,4/7)|signs=(+,-,-,-,+)|signature=12 < 01 < 02 < 23 < 13 < 03|reverse=S4r|missing=0|arcs=15|extensions=1
+S4r|strict|gaps=(4, 1, 2)|normalized=(4/7,1/7,2/7)|signs=(+,-,+,+,-)|signature=12 < 23 < 13 < 01 < 02 < 03|reverse=S4|missing=0|arcs=15|extensions=1
+S5|strict|gaps=(3, 2, 4)|normalized=(1/3,2/9,4/9)|signs=(+,-,-,-,-)|signature=12 < 01 < 23 < 02 < 13 < 03|reverse=S5r|missing=0|arcs=15|extensions=1
+S5r|strict|gaps=(4, 2, 3)|normalized=(4/9,2/9,1/3)|signs=(+,-,+,-,-)|signature=12 < 23 < 01 < 13 < 02 < 03|reverse=S5|missing=0|arcs=15|extensions=1
+T1|one_tie|gaps=(1, 2, 3)|normalized=(1/6,1/3,1/2)|signs=(-,-,-,-,0)|signature=01 < 12 < 23=02 < 13 < 03|reverse=T1r|missing=1|arcs=14|extensions=2
+T1r|one_tie|gaps=(3, 2, 1)|normalized=(1/2,1/3,1/6)|signs=(+,+,+,0,-)|signature=23 < 12 < 01=13 < 02 < 03|reverse=T1|missing=1|arcs=14|extensions=2
+T2|one_tie|gaps=(2, 1, 3)|normalized=(1/3,1/6,1/2)|signs=(+,-,-,-,0)|signature=12 < 01 < 23=02 < 13 < 03|reverse=T2r|missing=1|arcs=14|extensions=2
+T2r|one_tie|gaps=(3, 1, 2)|normalized=(1/2,1/6,1/3)|signs=(+,-,+,0,-)|signature=12 < 23 < 01=13 < 02 < 03|reverse=T2|missing=1|arcs=14|extensions=2
+T3|one_tie|gaps=(2, 2, 1)|normalized=(2/5,2/5,1/5)|signs=(0,+,+,-,-)|signature=23 < 01=12 < 13 < 02 < 03|reverse=T3r|missing=1|arcs=14|extensions=2
+T3r|one_tie|gaps=(1, 2, 2)|normalized=(1/5,2/5,2/5)|signs=(-,0,-,-,-)|signature=01 < 12=23 < 02 < 13 < 03|reverse=T3|missing=1|arcs=14|extensions=2
+T4|one_tie|gaps=(2, 2, 3)|normalized=(2/7,2/7,3/7)|signs=(0,-,-,-,-)|signature=01=12 < 23 < 02 < 13 < 03|reverse=T4r|missing=1|arcs=14|extensions=2
+T4r|one_tie|gaps=(3, 2, 2)|normalized=(3/7,2/7,2/7)|signs=(+,0,+,-,-)|signature=12=23 < 01 < 13 < 02 < 03|reverse=T4|missing=1|arcs=14|extensions=2
+T5|one_tie|gaps=(1, 1, 3)|normalized=(1/5,1/5,3/5)|signs=(0,-,-,-,+)|signature=01=12 < 02 < 23 < 13 < 03|reverse=T5r|missing=1|arcs=14|extensions=2
+T5r|one_tie|gaps=(3, 1, 1)|normalized=(3/5,1/5,1/5)|signs=(+,0,+,+,-)|signature=12=23 < 13 < 01 < 02 < 03|reverse=T5|missing=1|arcs=14|extensions=2
+D1|two_tie|gaps=(1, 1, 2)|normalized=(1/4,1/4,1/2)|signs=(0,-,-,-,0)|signature=01=12 < 23=02 < 13 < 03|reverse=D1r|missing=2|arcs=13|extensions=4
+D1r|two_tie|gaps=(2, 1, 1)|normalized=(1/2,1/4,1/4)|signs=(+,0,+,0,-)|signature=12=23 < 01=13 < 02 < 03|reverse=D1|missing=2|arcs=13|extensions=4
+D2|two_tie|gaps=(1, 2, 1)|normalized=(1/4,1/2,1/4)|signs=(-,+,0,-,-)|signature=01=23 < 12 < 02=13 < 03|reverse=D2|missing=2|arcs=13|extensions=4
+D3|two_tie|gaps=(2, 1, 2)|normalized=(2/5,1/5,2/5)|signs=(+,-,0,-,-)|signature=12 < 01=23 < 02=13 < 03|reverse=D3|missing=2|arcs=13|extensions=4
+M|maximal_tie|gaps=(1, 1, 1)|normalized=(1/3,1/3,1/3)|signs=(0,0,0,-,-)|signature=01=12=23 < 02=13 < 03|reverse=M|missing=4|arcs=11|extensions=12
+ATLAS_END
+reversal_orbits=14;fixed=3;category_orbits=strict:5,one_tie:5,two_tie:3,maximal_tie:1
+s4_no_further_collapse=proved_by_exact_slice_intersections_and_diameter_stabilizer
+s4_arbitrary_labelled_signatures=300=11*24+3*12
+S4_REPRESENTATIVES_BEGIN
+S1|orbit=24|stabilizer=1|signature=01 < 12 < 02 < 23 < 13 < 03
+S2|orbit=24|stabilizer=1|signature=01 < 12 < 23 < 02 < 13 < 03
+S3|orbit=24|stabilizer=1|signature=01 < 23 < 12 < 02 < 13 < 03
+S4|orbit=24|stabilizer=1|signature=12 < 01 < 02 < 23 < 13 < 03
+S5|orbit=24|stabilizer=1|signature=12 < 01 < 23 < 02 < 13 < 03
+T1|orbit=24|stabilizer=1|signature=01 < 12 < 23=02 < 13 < 03
+T2|orbit=24|stabilizer=1|signature=12 < 01 < 23=02 < 13 < 03
+T3|orbit=24|stabilizer=1|signature=23 < 01=12 < 13 < 02 < 03
+T4|orbit=24|stabilizer=1|signature=01=12 < 23 < 02 < 13 < 03
+T5|orbit=24|stabilizer=1|signature=01=12 < 02 < 23 < 13 < 03
+D1|orbit=24|stabilizer=1|signature=01=12 < 23=02 < 13 < 03
+D2|orbit=12|stabilizer=2|signature=01=23 < 12 < 02=13 < 03
+D3|orbit=12|stabilizer=2|signature=12 < 01=23 < 02=13 < 03
+M|orbit=12|stabilizer=2|signature=01=12=23 < 02=13 < 03
+S4_REPRESENTATIVES_END
+tie_metrics=strict:(missing0,arcs15,extensions1);one_tie:(1,14,2);two_tie:(2,13,4);maximal_tie:(4,11,12)
+centred_gram_gate=25/25:rank1;G=-H*D_squared*H/2=(Hx)(Hx)^T;distance_pairs=150/150
+arxiv_2505_09814_boundary=XX^T_typing_only;not_an_atlas_dependency_or_proof
+fibonacci_wall=k>=4:gaps=(F[k-2],F[k-1],F[k]),c=a+b,a<b,row=T1
+fibonacci_boundary=k=3:gaps=(1,1,2),row=D1
+non_fibonacci_hostile=gaps=(1,3,4),row=T1,cassini_pell=5
+semantic_sha256=a04174188df0edc25bef47c3f67dd5309f28e835519e4efbfa26e3df03c2cb0a
+VERDICT=PASS: exact 25-row atlas, 14 reversal/S4 classes, and 300 labelled signatures certified

@@ -1,0 +1,16 @@
+THM-3610 exact companion -- proved full linear-projection gate
+status=finite exact controls; all-degree formal and one-line steps are proof-driven
+SECTION compiler and four Russell arm-coordinate identities
+PASS compiler_and_four_coordinate_gates=11 determinant=-3
+SECTION abstract r=1 determinant identities
+PASS abstract_determinants=4
+SECTION direct source transport identities
+PASS direct_transport_gates=24
+SECTION x=0 boundary equations and formal coefficient invoice
+PASS boundary_degree_rows=24 formal_rows=152
+SECTION complete {-1,0,1} rank-two row-space census
+PASS rank_two_matrices=6240 r0=3888 r1=2304 r2=48 r1_fixedC=576 r1_Y=432 r1_Smixed=1296
+SECTION collision, line injectivity, and collision-losing controls
+PASS collision_rows=24 line_reconstruction=2 positive_plane_controls=3
+CHECKS=15028
+RESULT=PASS

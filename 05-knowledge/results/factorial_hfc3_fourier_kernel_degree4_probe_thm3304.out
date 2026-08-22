@@ -1,0 +1,11 @@
+kernel_EGF=1/(1-u^3-v^3-3*u*v)
+simplex_moment=<a^r*b^s>=2*r!*s!/(r+s+2)!*[u^r*v^s]kernel_EGF
+selection=zero iff r-s is nonzero mod 3; otherwise strictly positive
+degree4_basis_on_e1=1=(b,a^2,a*b^2,b^4,a^3*b)
+phase_obstruction=the cubic moment has strictly positive coefficients; a null vector needs coefficient phase diameter at least pi/3
+modular_prime=103; omega=46
+degree4_term_counts=(M3:35,M6:210,M9:715,M12:1820,M15:3874)
+degree4_forms_sha256=42fb0c17ba4a3c7b3726181ce9941eee4fa11d01b0b2a1fead6823e1ef621658
+degree4_projective_elimination=OPEN; no elimination certificate claimed
+controls=25x25 selection box; hostile (1,0); balanced (1,1); independent M3 rehomogenization scale 36
+payload_sha256=6a4c46b6b199717d3cae27f15eb0805542463f1745f2eed49c19d68b485ec281

@@ -1,0 +1,11 @@
+HOOK SOLVER R=128 beam=2000 ctrl=2 span=2 rank=l1deg (exact caps prune + attractor hook)
+  ride feasibility: sign +1 rideable from row 0, sign -1 from row 0 (of 128)
+  row   0: kept=    4 bestdeg=126 bestL1=168924678844171432443777716099766351655 t=   0.0s
+  row   5: kept=   60 bestdeg=121 bestL1=120514773887421208248932405161452770982 t=   0.2s
+  row  10: kept= 1559 bestdeg=116 bestL1=2871276540998663784966394268828797489 t=   4.3s
+  row  15: kept= 2000 bestdeg=111 bestL1=578914448544865439198377992226406 t=  32.9s
+  row  20: kept= 2000 bestdeg=106 bestL1=212151977875767547008600009 t=  68.1s
+  row  25: kept= 2000 bestdeg=101 bestL1=13579774320635408903280 t= 105.5s
+  row  30: kept= 2000 bestdeg= 96 bestL1=3312852146380407827955 t= 143.9s
+  row  35: kept= 2000 bestdeg= 96 bestL1=15764463280102159518 t= 197.4s
+  row  40: kept= 2000 bestdeg= 99 bestL1=246860905656051819 t= 253.4s

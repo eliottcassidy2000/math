@@ -163,6 +163,12 @@ at `n=2^(r+1)-2`), the exact optimum `T(n)=n+1` is now settled for every odd
 `n` and every `n=2^(r+1)-2`; the first undetermined value is
 `T(4) in {5,6}`.
 
+**Later supersession.** The final sentence records the frontier when this
+theorem was proved. THM-3337 subsequently gave `T_opt(4)=5`, and THM-3340
+proved `T_opt(n)=n+1` for every positive integer `n`. The shell-balanced
+enumeration and its two Pareto points remain valid exactly in their stated
+class.
+
 ## 5. Scope
 
 This is a `D`-improvement, not a `C`-improvement: the slope stays `2` (worst

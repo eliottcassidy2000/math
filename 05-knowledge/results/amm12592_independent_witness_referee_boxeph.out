@@ -1,0 +1,225 @@
+==============================================================================
+AMM 12592 -- INDEPENDENT HOSTILE-REFEREE WITNESS VERIFICATION (boxeph)
+checker re-implemented from THM-3002 (*) + THM-3026 admissibility;
+floor profile computed EXACTLY via 5^d <= phi^(2m) Lucas/Fibonacci tests
+==============================================================================
+
+-- A0  exact-floor engine self-checks
+  [PASS] A0.1 gamma* digits: floor(10^5 g*) = 59798, floor(10^6 g*) = 597987
+  [PASS] A0.2 floor engine agrees with direct high-precision check m<=256
+  [PASS] A0.3 backbone cells represent 2x-1 exactly at every degree d <= 79
+  [PASS] A0.4 full box [-C(d,k)]_k represents the constant -1 (d <= 79)
+
+==============================================================================
+PART A  --  witness verification (independent checker)
+==============================================================================
+
+-- witness: R8 (THM-3029 combined file)
+  [PASS] A1 [R8 (THM-3029 combined file)] profile == exact gamma* floor profile, D0=0
+  [PASS] A2 [R8 (THM-3029 combined file)] all 8 blocks admissible (capacity+parity)
+  [PASS] A3 [R8 (THM-3029 combined file)] epoch identity sum_i x^i Delta_i == (1-x)^(R-1) exact
+  [PASS] A4 [R8 (THM-3029 combined file)] forced unit delta_(i,0) = +-1 every row (THM-3026 (F))
+      effective rate max_i d_i/(R+i) = 7/12 = 0.583333
+
+-- witness: R16 (THM-3029 combined file)
+  [PASS] A1 [R16 (THM-3029 combined file)] profile == exact gamma* floor profile, D0=0
+  [PASS] A2 [R16 (THM-3029 combined file)] all 16 blocks admissible (capacity+parity)
+  [PASS] A3 [R16 (THM-3029 combined file)] epoch identity sum_i x^i Delta_i == (1-x)^(R-1) exact
+  [PASS] A4 [R16 (THM-3029 combined file)] forced unit delta_(i,0) = +-1 every row (THM-3026 (F))
+      effective rate max_i d_i/(R+i) = 16/27 = 0.592593
+
+-- witness: R32 (THM-3029 combined file)
+  [PASS] A1 [R32 (THM-3029 combined file)] profile == exact gamma* floor profile, D0=0
+  [PASS] A2 [R32 (THM-3029 combined file)] all 32 blocks admissible (capacity+parity)
+  [PASS] A3 [R32 (THM-3029 combined file)] epoch identity sum_i x^i Delta_i == (1-x)^(R-1) exact
+  [PASS] A4 [R32 (THM-3029 combined file)] forced unit delta_(i,0) = +-1 every row (THM-3026 (F))
+      effective rate max_i d_i/(R+i) = 37/62 = 0.596774
+
+-- witness: R64 DIRECT (beam lane, amm12592_floor_witness_R64.json)
+  [PASS] A1 [R64 DIRECT (beam lane, amm12592_floor_witness_R64.json)] profile == exact gamma* floor profile, D0=0
+  [PASS] A2 [R64 DIRECT (beam lane, amm12592_floor_witness_R64.json)] all 64 blocks admissible (capacity+parity)
+  [PASS] A3 [R64 DIRECT (beam lane, amm12592_floor_witness_R64.json)] epoch identity sum_i x^i Delta_i == (1-x)^(R-1) exact
+  [PASS] A4 [R64 DIRECT (beam lane, amm12592_floor_witness_R64.json)] forced unit delta_(i,0) = +-1 every row (THM-3026 (F))
+      effective rate max_i d_i/(R+i) = 58/97 = 0.597938
+
+-- witness: R64 BOXEPH (doubling map, amm12592_floor_witness_R64_boxeph.json)
+  [PASS] A1 [R64 BOXEPH (doubling map, amm12592_floor_witness_R64_boxeph.json)] profile == exact gamma* floor profile, D0=0
+  [PASS] A2 [R64 BOXEPH (doubling map, amm12592_floor_witness_R64_boxeph.json)] all 64 blocks admissible (capacity+parity)
+  [PASS] A3 [R64 BOXEPH (doubling map, amm12592_floor_witness_R64_boxeph.json)] epoch identity sum_i x^i Delta_i == (1-x)^(R-1) exact
+  [PASS] A4 [R64 BOXEPH (doubling map, amm12592_floor_witness_R64_boxeph.json)] forced unit delta_(i,0) = +-1 every row (THM-3026 (F))
+      effective rate max_i d_i/(R+i) = 58/97 = 0.597938
+  [PASS] A5 two R=64 witnesses share the exact floor profile
+  [PASS] A6 two R=64 witnesses are DISTINCT solutions (independent evidence)  -- 64 of 64 rows differ
+  [PASS] A7 R=64 effective rate = 58/97 (both witnesses), < gamma* < 3/5
+
+-- A8  negative controls (checker must catch deliberate corruptions)
+  [PASS] A8.1 +1 corruption caught by parity test
+  [PASS] A8.2 +2 corruption caught by identity test
+  [PASS] A8.3 over-capacity corruption caught by capacity test
+
+==============================================================================
+PART B  --  adversarial audit of the attack lanes' structural claims
+==============================================================================
+
+-- B1  'Delta_{R-1} = -1 (full box)' and tail rows 'p-q, p-q' -- claimed
+   by the doubling lane for 'EVERY floor witness'; audited on all five:
+  [CONFIRMED] B1 [R8 (THM-3029 combined file)] last block = full box -1
+  [CONFIRMED] B1 [R8 (THM-3029 combined file)] rows R-3, R-2 are exactly p-q
+  [CONFIRMED] B1 [R16 (THM-3029 combined file)] last block = full box -1
+  [CONFIRMED] B1 [R16 (THM-3029 combined file)] rows R-3, R-2 are exactly p-q
+  [CONFIRMED] B1 [R32 (THM-3029 combined file)] last block = full box -1
+  [CONFIRMED] B1 [R32 (THM-3029 combined file)] rows R-3, R-2 are exactly p-q
+  [CONFIRMED] B1 [R64 DIRECT (beam lane, amm12592_floor_witness_R64.json)] last block = full box -1
+  [CONFIRMED] B1 [R64 DIRECT (beam lane, amm12592_floor_witness_R64.json)] rows R-3, R-2 are exactly p-q
+  [REFUTED  ] B1 [R64 BOXEPH (doubling map, amm12592_floor_witness_R64_boxeph.json)] last block = full box -1  -- 48 of 76 cells deviate
+  [REFUTED  ] B1 [R64 BOXEPH (doubling map, amm12592_floor_witness_R64_boxeph.json)] rows R-3, R-2 are exactly p-q
+
+-- B2  'c_i even in every cell' -- TRUE but TAUTOLOGICAL given admissibility
+   proof: delta_k == C(d,k) (mod 2) and backbone_k = C(d-1,k)-C(d-1,k-1)
+          == C(d-1,k)+C(d-1,k-1) = C(d,k) (mod 2), so delta_k - backbone_k
+          is even for EVERY admissible block; no structure is discovered.
+  [PASS] B2 evenness of c holds for 300 RANDOM admissible blocks (tautology confirmed)
+
+-- B3  slimness ledger max|c| over mid rows (the SUBSTANTIVE content)
+   R8 (THM-3029 combined file)                                max|c| = 8                            (max box coeff 7.00e+01, ratio 1.14e-01)
+  [CONFIRMED] B3 [R=8] max|c| matches doubling lane's claim 8
+   R16 (THM-3029 combined file)                               max|c| = 3432                         (max box coeff 4.86e+04, ratio 7.06e-02)
+  [CONFIRMED] B3 [R=16] max|c| matches doubling lane's claim 3432
+   R32 (THM-3029 combined file)                               max|c| = 184756                       (max box coeff 1.77e+10, ratio 1.05e-05)
+  [CONFIRMED] B3 [R=32] max|c| matches doubling lane's claim 184756
+   R64 DIRECT (beam lane, amm12592_floor_witness_R64.json)    max|c| = 3665248281885181068          (max box coeff 3.45e+21, ratio 1.06e-03)
+   R64 BOXEPH (doubling map, amm12592_floor_witness_R64_boxep max|c| = 3400359520022008934936       (max box coeff 3.45e+21, ratio 9.87e-01)
+  [CONFIRMED] B4 doubling lane's R=64 output is FAT as claimed (max|c| = 3.4e21 scale)
+   >>> COORDINATION FINDING: R=64 DIRECT witness max|c| = 3665248281885181068 (3.67e+18)
+   >>> vs BOXEPH doubling output max|c| = 3.40e+21; slimmer by factor 927.7
+
+-- B5  reduced identity qC = p^R + q^R - p(p-q): CORRECT but a TAUTOLOGY
+   derivation: with c_i := Delta_i - (2x-1) (1<=i<=R-2), c_{R-1} := Delta_{R-1}+1,
+   C := Delta_0 + sum_{i>=1} x^i c_i, the epoch identity is EQUIVALENT to
+   q C = q^R + x^R - x(2x-1); it adds no information beyond A3.
+  [PASS] B5 [R8 (THM-3029 combined file)] qC == p^R + q^R - p(p-q) exact
+  [PASS] B5 [R16 (THM-3029 combined file)] qC == p^R + q^R - p(p-q) exact
+  [PASS] B5 [R32 (THM-3029 combined file)] qC == p^R + q^R - p(p-q) exact
+  [PASS] B5 [R64 DIRECT (beam lane, amm12592_floor_witness_R64.json)] qC == p^R + q^R - p(p-q) exact
+  [PASS] B5 [R64 BOXEPH (doubling map, amm12592_floor_witness_R64_boxeph.json)] qC == p^R + q^R - p(p-q) exact
+
+-- B6  reduced doubling algebra -- verified as an UNCONDITIONAL identity
+  [PASS] B6 [R=4] C_2R = qC_R^2 + 2p(p-q)C_R - p(p-q)(3p+q) - 2p^R q^(R-1)
+  [PASS] B6 [R=8] C_2R = qC_R^2 + 2p(p-q)C_R - p(p-q)(3p+q) - 2p^R q^(R-1)
+  [PASS] B6 [R=16] C_2R = qC_R^2 + 2p(p-q)C_R - p(p-q)(3p+q) - 2p^R q^(R-1)
+  [PASS] B6 [R=32] C_2R = qC_R^2 + 2p(p-q)C_R - p(p-q)(3p+q) - 2p^R q^(R-1)
+  [PASS] B6 [R=64] C_2R = qC_R^2 + 2p(p-q)C_R - p(p-q)(3p+q) - 2p^R q^(R-1)
+
+-- B7  Lucas facts
+  [PASS] B7 [R=8] p^R + q^R = L_R(pq) (Lucas polynomial in pq)
+  [PASS] B7 [R=16] p^R + q^R = L_R(pq) (Lucas polynomial in pq)
+  [PASS] B7 [R=32] p^R + q^R = L_R(pq) (Lucas polynomial in pq)
+  [PASS] B7 [R=64] p^R + q^R = L_R(pq) (Lucas polynomial in pq)
+  [PASS] B7 Fibonacci mass sum_m C(R-m,m) = F_{R+1} for R <= 64
+  [PASS] B7 (note) TRUE Lucas coefficient mass is L_R, not F_{R+1}: check R<=64
+
+-- B8  endgame attractor E_m = -1 + x + ... + x^m
+  [PASS] B8 recurrence E_m - (2x-1) = x E_{m-1} for m <= 60
+   R8 (THM-3029 combined file)                                attractor entry row = 3, stays = True, sigma_(R-1) = 0: True
+  [CONFIRMED] B8 [R8 (THM-3029 combined file)] residual enters E_m attractor and stays to 0
+  [CONFIRMED] B8 [R=8] entry row matches doubling lane's claim (3)
+   R16 (THM-3029 combined file)                               attractor entry row = 8, stays = True, sigma_(R-1) = 0: True
+  [CONFIRMED] B8 [R16 (THM-3029 combined file)] residual enters E_m attractor and stays to 0
+  [CONFIRMED] B8 [R=16] entry row matches doubling lane's claim (8)
+   R32 (THM-3029 combined file)                               attractor entry row = 28, stays = True, sigma_(R-1) = 0: True
+  [CONFIRMED] B8 [R32 (THM-3029 combined file)] residual enters E_m attractor and stays to 0
+  [CONFIRMED] B8 [R=32] entry row matches doubling lane's claim (28)
+   R64 DIRECT (beam lane, amm12592_floor_witness_R64.json)    attractor entry row = 54, stays = True, sigma_(R-1) = 0: True
+  [CONFIRMED] B8 [R64 DIRECT (beam lane, amm12592_floor_witness_R64.json)] residual enters E_m attractor and stays to 0
+   R64 BOXEPH (doubling map, amm12592_floor_witness_R64_boxep attractor entry row = None, stays = True, sigma_(R-1) = 0: True
+  [REFUTED  ] B8 [R64 BOXEPH (doubling map, amm12592_floor_witness_R64_boxeph.json)] residual enters E_m attractor and stays to 0
+
+-- B9  floor superadditivity at gamma* ('degrees fit at ANY rate')
+   proof: floor(a) + floor(b) <= floor(a+b) with a+b exactly additive in i;
+   exact numerical confirmation over all pairs, R = 8..64:
+  [PASS] B9 d_i(R) + d_i'(R) <= d_(i+i')(2R) for all pairs, R = 8,16,32,64
+
+-- B10 profile monotonicity (M) -- HOSTILE lift tests (THM-3029 sec 1)
+  [PASS] B10 R=8 lift (uniform +1): admissible + identity + polynomials unchanged
+  [PASS] B10 R=8 lift (uniform +5): admissible + identity + polynomials unchanged
+  [PASS] B10 R=8 lift (NON-uniform lift to the 3/5 profile): admissible + identity + polynomials unchanged
+
+-- B11 refuted / unsupported claims (audit verdicts, no computation)
+   B11.a REFUTED (attribution): doubling lane's 'every beam configuration
+         (width 250-900, ctrl 2-3, span 2-3) fails this profile at the final
+         row' and 'first ever / produced NOT by search'.  The DIRECT lane's
+         witness file records provenance 'deterministic beam, rank l1deg,
+         beam 400, ctrl 2, span 2 + exhaustive 2-row completion' and IS a
+         beam product; it verifies (A1-A4).  The universal negative only
+         covered the committed solver's ranking family -- itself an instance
+         of the THM-3029 beam-negative hazard.  Mathematical content of
+         both lanes is unaffected: R = 64 closes either way, twice over.
+   B11.b NOT ESTABLISHED: 'the map closes iff input is SLIM'.  Only the
+         directions 'slim seeds closed (3 cases)' and 'one fat input failed'
+         were observed; no iff is proved.  Downgrade to observation.
+   B11.c NOT AUDITED HERE: 'D0(2R) >= 2 D0(R) + O(log R)' (asymptotic claim,
+         no finite certificate offered).  Treat as heuristic.
+   B11.d CONFIRMED (proof): per-epoch slack D0(R) = o(R) suffices for
+         C* <= 1 + gamma*: T(m) = m + 1 + floor(gamma* m) + D0(R(m)) and
+         D0(R(m)) <= eps m for all large m, finitely many epochs absorbed
+         into the additive constant D; G5-1 assembly is per-epoch.
+   B11.e REFUTED AS UNIVERSAL (hostile case = the doubling lane's OWN R=64
+         output): 'EVERY floor witness is backbone + corrections' with full-box
+         last row and attractor entry FAILS on amm12592_floor_witness_R64_
+         boxeph.json -- last block deviates from the full box in 48/76 cells,
+         rows R-3/R-2 are not p-q, and the residual NEVER enters the E_m
+         attractor (B1/B8).  The witness itself is still VALID (A1-A4).
+         The structure DOES hold on all four SLIM witnesses (R=8/16/32 and
+         the direct R=64, attractor entry rows 3/8/28/54), so the corrected
+         statement is: backbone tail + attractor entry is an observed
+         property of SLIM witnesses, not of floor witnesses as such --
+         consistent with, and sharpening, the lane's own slim/fat dichotomy.
+         Also: 'c_i even' is a tautology of admissibility (B2) and the
+         reduced identity is equivalent to the epoch identity (B5); the
+         only substantive backbone content is SLIMNESS (B3).
+
+==============================================================================
+PART C  --  standing bound and dependency chain
+==============================================================================
+  [PASS] C1 base rows m=1..7: gamma=1/2 degrees floor(m/2) <= floor(gamma* m)
+  [PASS] C2 epochs R = 8, 16, 32, 64 all verified closed at the exact gamma* floor profile, D0 = 0 (Part A)
+
+VALIDITY LEDGER: 54 checks, 0 failures
+CLAIM-AUDIT LEDGER: 22 prior-agent claims audited, 19 CONFIRMED, 3 REFUTED
+refuted claims (findings, not referee failures):
+   - B1 [R64 BOXEPH (doubling map, amm12592_floor_witness_R64_boxeph.json)] last block = full box -1
+   - B1 [R64 BOXEPH (doubling map, amm12592_floor_witness_R64_boxeph.json)] rows R-3, R-2 are exactly p-q
+   - B8 [R64 BOXEPH (doubling map, amm12592_floor_witness_R64_boxeph.json)] residual enters E_m attractor and stays to 0
+ALL INDEPENDENT-REFEREE VALIDITY CHECKS PASSED
+
+VERDICT (canon-ready):
+  R = 64 IS CLOSED at the exact gamma* floor profile d_i = floor(gamma*(64+i)),
+  D0 = 0, H = 1, by TWO independently produced, distinct witnesses (direct beam
+  lane; deterministic carve-and-carry doubling map), both re-verified here by a
+  from-the-theorem-statements checker with an exact algebraic (Lucas/Fibonacci)
+  floor, negative controls included.
+
+NEW STANDING BOUND:
+  C = 1 + gamma* = log_5(5 phi^2) = 1.5979874356654402...  is ATTAINED for all
+  critical values n <= 127, with T(n) = n + 1 + floor(gamma* n) for 8 <= n <= 127
+  and T(n) = n + 1 + floor(n/2) <= n + 1 + floor(gamma* n) for n <= 7; i.e.
+  T(n) <= (1 + gamma*) n + 1 on the whole range.  This extends THM-3029 (A)
+  (n <= 63) by one epoch and SUPERSEDES C <= 8/5 (THM-3002 5b) on n <= 127.
+
+DEPENDENCY CHAIN:
+  THM-2966 (spine normal form; deadline T(m) = m + 1 + d_m)
+    -> THM-3002 (G5-1 assembly of base [1,7] + per-epoch closures; H = 1
+       reduction to representation problem (*); base + [8,15] at gamma = 1/2)
+    -> THM-3026 (admissibility = Lucas box capacity + parity; (M)/(L) lifting)
+    -> THM-3029 (A) (floor profile closes at R = 8, 16, 32; witnesses re-verified
+       here, Part A) + profile monotonicity (M) for the base-row envelope C1
+    -> THIS REFEREE: R = 64 floor closure, two distinct witnesses, Part A
+    -> matching lower bound: archimedean floor THM-3009/THM-3017/THM-3024
+       (C >= 1 + gamma* for the class; NOT re-verified here -- cited).
+  OPEN: R = 128 and all-R (which would give C* = log_5(5 phi^2) exactly).
+  NEXT DECISIVE TEST (sharpened by B3): the DIRECT R = 64 witness is ~928x
+  slimmer in cells than the doubling map's output (box-saturation 1.1e-3 vs
+  0.99), has the full backbone tail and attractor entry (row 54), i.e. it IS
+  a candidate 'witness-grade slim' seed; feed IT to the carve-and-carry map
+  for 64 -> 128 before designing any new slimming pass.
+

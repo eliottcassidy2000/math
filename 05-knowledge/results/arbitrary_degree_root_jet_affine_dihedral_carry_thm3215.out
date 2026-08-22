@@ -1,0 +1,20 @@
+dependency_thm3206_sha256=6b355bcf8c0098824fb51f3e2019bdfce355924ba5c680266b2a0907b49f672a
+universal_two_jet_square=J(f)^2=(fprime^2-2*f*fsecond)I
+factorial_quadratic_conjugacy=P_x^-1*F(s,v)*P_x=J_x(q)
+arbitrary_degree_simple_root_checks=48
+symbolic_affine_dihedral_words=1..8
+flat_transition_cocycle=T_jk*T_ij=T_ik
+coordinate_change_checks=2612
+pair_shear=Omega2=fsecond*gprime-gsecond*fprime
+factorial_common_root_pair_checks=2450
+factorial_nontrivial_order_p_checks=2184
+factorial_common_root_word_checks=24660
+heterogeneous_scalar_four_word_rows=[(1, 0, 6, 0), (6, 2, 3, 6), (5, 3, 5, 4), (3, 5, 2, 5)]
+heterogeneous_scalar_four_word_matrix=((5, 0), (0, 5))
+padic_first_carry_checks=5
+higher_jet_hostile=(u,u+u^3):same_two_jet_scalar_return
+multiple_root_hostile=u^2:rank1_nilpotent_not_reflection
+infinity_boundary=separate_homogeneous_chart_required
+sympy_float_atoms=0
+scope=common_selected_simple_root_local_jet_not_global_root_selector_or_GMC2
+all_exact_checks=PASS

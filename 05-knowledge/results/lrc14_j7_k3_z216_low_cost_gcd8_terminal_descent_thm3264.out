@@ -1,0 +1,16 @@
+LRC14 THM3264 projected-k3 z216 low-cost gcd8 terminal descent
+engine=THM3139_source:92e1c22088998d37db89020ac1ebbb7d1ee17e3539152ab205f8b0cd92532e36;output:4f0ae623d0134406f83f466c0a9f1353525a992acb8ee82c2e92f2f0537f32c5;semantic:1eb7e8faefafe41fd6f6cbc108ba09295dbcbb7fe8016d7ec0cbdc258adf358a
+dependency=THM3261_source:308f57b090ea9586c92905d9113b79063ef2105c3e7ed4c90c7406d15400d376;output:d7dae9cd7e8f0305824b30a2b8683abe6d7d8c9bd0509a0d84026322fd65344c;semantic:b6f83cd9cc405b4e5006ecfbd8ddfb25c115d7a55c270abc55d8d3b2a97b9a18
+atlas=sha256:cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda;rows:6060
+layer=z1:216;rows:480;wall:447;order:33;row_sha256:53db9e1d3df2cf2b0398847682d909da81705e43a53ae2553d102fd152337649;strata:((8, 19), (18, 1), (24, 135), (36, 15), (72, 310))
+selection=gcd:8;cost_limit:2000000;selected:(8, 23, 39, 57, 64, 66, 115, 142, 150, 152, 197, 272, 277, 300, 304, 306, 338);excluded:(238, 370);cost:12050080
+screen=rows:17;states:1746;crude:832;status:895;residual:19;direct_farkas:0;legacy_farkas:895;screen_sha256:7ad0a1a8036fefa37a9035d2d2b319206b170dcbea2f7f86b7cef96cd7c1b3f1
+residual=bodies:((64, (1, 2, 8, 10, 11, 14), 8), (152, (1, 4, 8, 10, 13, 14), 9), (197, (1, 5, 8, 10, 13, 14), 2));masks:19;residual_sha256:ae75d7b0f6947dbc51dfacaa8b34dea9d2c985b04014eb09ac923ae720a0452d;quotient:((8,19),)
+terminal=rows:3;masks:19;zero_high_hostiles:19;one_high_cases:28;low_label_sets:12;coarse:28;exact:0;maxgap:0;failures:0;minimum_slack:5;positive_two_high_gap:3;closed:3
+gaps:((64, '945034906/306786044565'), (152, '35479656293/19991919811500'), (197, '368677303/146893907160'));semantic_sha256:9328d556544c230503b6860ea27958d71bfa3f8af7816d02d350da360e92acac
+direction=the_exact_screens_and_complete_one_high_terminal_banks_are_upper_relaxations;their_exclusion_closes_all_17_selected_rows
+modular_boundary=every_residual_is_top_q8_in_a_four_point_divisor_chain_but_no_iterated_C2_action_common_carrier_or_parity_tower_is_constructed
+consequence=ledger:373283-17=373266;projected_k3_cap:z1<=216;remaining_z216:462=429wall+33order
+scope=17_low_cost_gcd8_rows_only;the_two_high_cost_gcd8_rows_and_all_other_z216_strata_remain_open;no_physical_cover_k_le_1_rung_or_LRC14_claim
+semantic_sha256=64604458a454f7da3468b07ec5697a6dd62ac4413625a92dbd8e8ffff15e1a7e
+all_exact_controls=PASS

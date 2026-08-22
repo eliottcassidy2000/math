@@ -1,0 +1,11 @@
+THM-3435 dyadic fibre-grid decomposition -- exact companion
+dependency_sha256_lf=(('THM-3416', '42a9309145de51d1bb6fca0b7c1945302ff37a63a3183e1dfed838c07118e8bf'), ('THM-3434', '52a5a5caed75ad48ab35ce287c15f6cece074c88dddda2b87329792a3df70af7'))
+status=VERIFIED_EXACT_CONTROLS_FOR_ELEMENTARY_ALL_MODULUS_FIBRE_IDENTITY;FINITE_EXACT_even_target_free_Q2_Q362;no_all_q_even_rank7_classification;no_LRC14_cut
+identity_universe=(Q_max,mask_rows,fibre_rows,low_grid_rows,dense_grid_rows,deepest_rows)=(160, 25599, 1812487, 1795559, 16928, 16911)
+two_sheet_partner_audit=(rows,cells)=(5700, 1159000)
+Q7_naive_descent_hostile_visible_sheets=(3,)
+even_atom_controls=(Q,residues,orders,sizes,multiplicity_hist)=((14, (1, 3, 4, 5, 9, 11, 13), (7, 14, 14, 14, 14, 14, 14), (2, 2, 2, 2, 2, 2, 2), ((1, 14),)), (38, (1, 9, 17, 20, 21, 29, 37), (19, 38, 38, 38, 38, 38, 38), (6, 6, 6, 6, 6, 6, 6), ((1, 34), (2, 4))), (68, (8, 11, 23, 24, 45, 56, 57), (17, 17, 17, 68, 68, 68, 68), (12, 10, 10, 12, 10, 12, 10), ((1, 64), (3, 4))), (148, (8, 33, 41, 100, 107, 115, 140), (37, 37, 37, 148, 148, 148, 148), (20, 22, 22, 24, 22, 22, 24), ((1, 140), (2, 8))))
+finite_census=(atoms,global_positive_target_free,primitive_negative_rows,pullback_rows,known_base_row_count,counts,event_sha256,next_unresolved_boundary)=((14, 38, 68, 148), (14, 28, 38, 42, 68, 76, 98, 114, 148, 196, 238, 266, 294), (2, 4, 6, 34, 62, 74, 82, 86, 94, 106, 118, 122, 124, 134, 142, 146, 158, 164, 166, 172, 178, 186, 188, 194, 202, 206, 212, 214, 218, 222, 226, 236, 244, 246, 254, 258, 262, 268, 274, 278, 282, 284, 292, 298, 302, 314, 316, 318, 326, 332, 334, 346, 354, 356, 358, 362), (28, 42, 76, 98, 114, 196, 238, 266, 294), 112, (60, 23856, 11900, 11801, 1799207, 1834885, 35738), '880ef7bd8f7c9fcf2573f843d75b1e1857856d73b470e702f809bb313bd10dab', 366)
+semantic_sha256=35dfbba192b4b17b72cda5a019692a9af5ee1ce406f3ca4a7d7ff551fe349096
+script_sha256_lf=d301f0cc802b311e578109a571e85e1ecf1e81a20efdd688bc4c91b8dc6c530d
+scope=literal_transverse_half_twist_masks;dyadic_base_projection_retains_grid_support_and_fibre_count_but_loses_selected_cosets;Q362_finite_only;Q366_not_run;LRC14_open

@@ -1,0 +1,213 @@
+TOURNAMENT SUBSET / DECK HIERARCHY EXACT SCOUT
+==============================================================================
+status=FINITE-EXACT universe=all labelled ordinary tournaments n<=6
+truth_gates=require() active_in_normal_and_python_-O
+
+A. Labelled universe and isomorphism quotient
+  n=1 labelled=1 classes=1 orbit_sizes={1: 1} aut_sizes={1: 1}
+  n=2 labelled=2 classes=1 orbit_sizes={2: 1} aut_sizes={1: 1}
+  n=3 labelled=8 classes=2 orbit_sizes={2: 1, 6: 1} aut_sizes={1: 1, 3: 1}
+  n=4 labelled=64 classes=4 orbit_sizes={8: 2, 24: 2} aut_sizes={1: 2, 3: 2}
+  n=5 labelled=1024 classes=12 orbit_sizes={24: 1, 40: 4, 120: 7} aut_sizes={1: 7, 3: 4, 5: 1}
+  n=6 labelled=32768 classes=56 orbit_sizes={80: 1, 144: 2, 240: 12, 720: 41} aut_sizes={1: 41, 3: 12, 5: 2, 9: 1}
+  identity_control_counts={'labelled_tournaments': 33867, 'triangle_checks': 33864, 'four_card_checks': 33856, 'profile_level_checks': 134280}
+
+B. Type-column legends
+  k=3 unrooted: u0=0x0/score(0, 1, 2); u1=0x2/score(1, 1, 1)
+  k=3 rooted:   r0=0x0/u0/root_out0; r1=0x1/u0/root_out1; r2=0x2/u1/root_out1; r3=0x3/u0/root_out2
+  k=4 unrooted: u0=0x0/score(0, 1, 2, 3); u1=0x2/score(1, 1, 1, 3); u2=0x4/score(1, 1, 2, 2); u3=0x5/score(0, 2, 2, 2)
+  k=4 rooted:   r0=0x0/u0/root_out0; r1=0x1/u0/root_out1; r2=0x2/u1/root_out1; r3=0x3/u0/root_out2; r4=0x4/u2/root_out1; r5=0x5/u3/root_out2; r6=0x6/u2/root_out2; r7=0x7/u0/root_out3; r8=0x10/u3/root_out0; r9=0x11/u2/root_out1; r10=0x13/u2/root_out2; r11=0x17/u1/root_out3
+
+C. Reconstruction collisions under richer unlabelled summaries
+  fields: buckets/max/collision_buckets/collision_classes/first_witness/converse
+  n=3 classes=2
+    G0_c3                                    2/ 1/ 0/ 0 witness=() converse=False
+    G1_score                                 2/ 1/ 0/ 0 witness=() converse=False
+    G2_score_proper_profiles                 2/ 1/ 0/ 0 witness=() converse=False
+    G2F_maximal_flag_type_sequences          1/ 2/ 1/ 2 witness=('0x0', '0x2') converse=False
+    G3_plus_incidence_ranks                  2/ 1/ 0/ 0 witness=() converse=False
+    L1_plus_triangle_vertex_multiset         2/ 1/ 0/ 0 witness=() converse=False
+    L2_plus_unpaired_square_multiset         2/ 1/ 0/ 0 witness=() converse=False
+    L3_paired_triangle_square_rows           2/ 1/ 0/ 0 witness=() converse=False
+    D1_deleted_profile_multisets             2/ 1/ 0/ 0 witness=() converse=False
+    D2_paired_deleted_profile_rows           2/ 1/ 0/ 0 witness=() converse=False
+    D3_full_vertex_deck                      1/ 2/ 1/ 2 witness=('0x0', '0x2') converse=False
+    D4_deck_plus_unpaired_score              2/ 1/ 0/ 0 witness=() converse=False
+    D5_paired_card_outdegree                 2/ 1/ 0/ 0 witness=() converse=False
+    D6_paired_card_triangle                  2/ 1/ 0/ 0 witness=() converse=False
+    D7_paired_card_all_local                 2/ 1/ 0/ 0 witness=() converse=False
+  n=4 classes=4
+    G0_c3                                    3/ 2/ 1/ 2 witness=('0x2', '0x5') converse=True
+    G1_score                                 4/ 1/ 0/ 0 witness=() converse=False
+    G2_score_proper_profiles                 4/ 1/ 0/ 0 witness=() converse=False
+    G2F_maximal_flag_type_sequences          3/ 2/ 1/ 2 witness=('0x2', '0x5') converse=True
+    G3_plus_incidence_ranks                  4/ 1/ 0/ 0 witness=() converse=False
+    L1_plus_triangle_vertex_multiset         4/ 1/ 0/ 0 witness=() converse=False
+    L2_plus_unpaired_square_multiset         4/ 1/ 0/ 0 witness=() converse=False
+    L3_paired_triangle_square_rows           4/ 1/ 0/ 0 witness=() converse=False
+    D1_deleted_profile_multisets             4/ 1/ 0/ 0 witness=() converse=False
+    D2_paired_deleted_profile_rows           4/ 1/ 0/ 0 witness=() converse=False
+    D3_full_vertex_deck                      3/ 2/ 1/ 2 witness=('0x2', '0x5') converse=True
+    D4_deck_plus_unpaired_score              4/ 1/ 0/ 0 witness=() converse=False
+    D5_paired_card_outdegree                 4/ 1/ 0/ 0 witness=() converse=False
+    D6_paired_card_triangle                  4/ 1/ 0/ 0 witness=() converse=False
+    D7_paired_card_all_local                 4/ 1/ 0/ 0 witness=() converse=False
+  n=5 classes=12
+    G0_c3                                    6/ 3/ 4/10 witness=('0x2', '0x5') converse=False
+    G1_score                                 9/ 3/ 2/ 5 witness=('0x8', '0xa') converse=False
+    G2_score_proper_profiles                11/ 2/ 1/ 2 witness=('0x28', '0x29') converse=False
+    G2F_maximal_flag_type_sequences         11/ 2/ 1/ 2 witness=('0x28', '0x29') converse=False
+    G3_plus_incidence_ranks                 12/ 1/ 0/ 0 witness=() converse=False
+    L1_plus_triangle_vertex_multiset        12/ 1/ 0/ 0 witness=() converse=False
+    L2_plus_unpaired_square_multiset        12/ 1/ 0/ 0 witness=() converse=False
+    L3_paired_triangle_square_rows          12/ 1/ 0/ 0 witness=() converse=False
+    D1_deleted_profile_multisets            11/ 2/ 1/ 2 witness=('0x28', '0x29') converse=False
+    D2_paired_deleted_profile_rows          11/ 2/ 1/ 2 witness=('0x28', '0x29') converse=False
+    D3_full_vertex_deck                     11/ 2/ 1/ 2 witness=('0x28', '0x29') converse=False
+    D4_deck_plus_unpaired_score             11/ 2/ 1/ 2 witness=('0x28', '0x29') converse=False
+    D5_paired_card_outdegree                12/ 1/ 0/ 0 witness=() converse=False
+    D6_paired_card_triangle                 12/ 1/ 0/ 0 witness=() converse=False
+    D7_paired_card_all_local                12/ 1/ 0/ 0 witness=() converse=False
+  n=6 classes=56
+    G0_c3                                    9/12/ 8/55 witness=('0x2', '0x5') converse=False
+    G1_score                                22/12/11/45 witness=('0x8', '0xa') converse=False
+    G2_score_proper_profiles                52/ 2/ 4/ 8 witness=('0x18', '0x1c') converse=True
+    G2F_maximal_flag_type_sequences         52/ 2/ 4/ 8 witness=('0x18', '0x1c') converse=True
+    G3_plus_incidence_ranks                 52/ 2/ 4/ 8 witness=('0x18', '0x1c') converse=True
+    L1_plus_triangle_vertex_multiset        56/ 1/ 0/ 0 witness=() converse=False
+    L2_plus_unpaired_square_multiset        56/ 1/ 0/ 0 witness=() converse=False
+    L3_paired_triangle_square_rows          56/ 1/ 0/ 0 witness=() converse=False
+    D1_deleted_profile_multisets            52/ 2/ 4/ 8 witness=('0x18', '0x1c') converse=True
+    D2_paired_deleted_profile_rows          52/ 2/ 4/ 8 witness=('0x18', '0x1c') converse=True
+    D3_full_vertex_deck                     52/ 2/ 4/ 8 witness=('0x18', '0x1c') converse=True
+    D4_deck_plus_unpaired_score             52/ 2/ 4/ 8 witness=('0x18', '0x1c') converse=True
+    D5_paired_card_outdegree                56/ 1/ 0/ 0 witness=() converse=False
+    D6_paired_card_triangle                 56/ 1/ 0/ 0 witness=() converse=False
+    D7_paired_card_all_local                56/ 1/ 0/ 0 witness=() converse=False
+
+C2. Separate proper-k profiles versus their joint and flag-glued forms
+  n=4
+    separate_k=3 buckets=3 max=2 collision_buckets=1 witness=('0x2', '0x5')
+    joint_all_proper buckets=3 collision_buckets=1 flag_glued buckets=3 collision_buckets=1
+  n=5
+    separate_k=3 buckets=6 max=3 collision_buckets=4 witness=('0x2', '0x5')
+    separate_k=4 buckets=11 max=2 collision_buckets=1 witness=('0x28', '0x29')
+    joint_all_proper buckets=11 collision_buckets=1 flag_glued buckets=11 collision_buckets=1
+  n=6
+    separate_k=3 buckets=9 max=12 collision_buckets=8 witness=('0x2', '0x5')
+    separate_k=4 buckets=36 max=7 collision_buckets=12 witness=('0x12', '0x16')
+    separate_k=5 buckets=52 max=2 collision_buckets=4 witness=('0x18', '0x1c')
+    joint_all_proper buckets=52 collision_buckets=4 flag_glued buckets=52 collision_buckets=4
+
+D. Full-deck collision anatomy
+  n=3 collision_pairs=1
+    {'pair': ('0x0', '0x2'), 'converse': False, 'score_equal': False, 'proper_profiles_equal': True, 'triangle_rows_equal': False, 'square_rows_equal': True, 'paired_local_equal': False, 'paired_card_degree_separates': True}
+  n=4 collision_pairs=1
+    {'pair': ('0x2', '0x5'), 'converse': True, 'score_equal': False, 'proper_profiles_equal': True, 'triangle_rows_equal': False, 'square_rows_equal': False, 'paired_local_equal': False, 'paired_card_degree_separates': True}
+  n=5 collision_pairs=1
+    {'pair': ('0x28', '0x29'), 'converse': False, 'score_equal': True, 'proper_profiles_equal': True, 'triangle_rows_equal': False, 'square_rows_equal': False, 'paired_local_equal': False, 'paired_card_degree_separates': True}
+  n=6 collision_pairs=4
+    {'pair': ('0x18', '0x1c'), 'converse': True, 'score_equal': True, 'proper_profiles_equal': True, 'triangle_rows_equal': False, 'square_rows_equal': False, 'paired_local_equal': False, 'paired_card_degree_separates': True}
+    {'pair': ('0x92', '0x95'), 'converse': True, 'score_equal': True, 'proper_profiles_equal': True, 'triangle_rows_equal': False, 'square_rows_equal': False, 'paired_local_equal': False, 'paired_card_degree_separates': True}
+    {'pair': ('0xb1', '0xb5'), 'converse': True, 'score_equal': True, 'proper_profiles_equal': True, 'triangle_rows_equal': False, 'square_rows_equal': False, 'paired_local_equal': False, 'paired_card_degree_separates': True}
+    {'pair': ('0x158', '0x159'), 'converse': True, 'score_equal': True, 'proper_profiles_equal': True, 'triangle_rows_equal': False, 'square_rows_equal': False, 'paired_local_equal': False, 'paired_card_degree_separates': True}
+
+E. Incidence/deletion rank atlas
+  distribution key=(rank_Q,rank_F2_inc,rank_F2_del,rank_Q_rooted,rank_F2_rooted)
+  n=4 k=3 distribution={(1, 1, 1, 3, 2): 1, (2, 2, 2, 2, 2): 2, (2, 2, 2, 3, 3): 1}
+  n=5 k=3 distribution={(1, 0, 0, 3, 2): 1, (1, 1, 0, 1, 1): 1, (2, 0, 0, 4, 2): 1, (2, 1, 0, 4, 3): 1, (2, 1, 1, 3, 1): 1, (2, 1, 1, 3, 2): 3, (2, 1, 1, 4, 3): 4}
+  n=5 k=4 distribution={(1, 0, 1, 1, 1): 1, (1, 0, 1, 4, 2): 1, (2, 1, 2, 3, 3): 2, (2, 1, 2, 5, 4): 1, (2, 1, 2, 5, 5): 1, (3, 2, 3, 3, 3): 2, (3, 2, 3, 5, 4): 3, (4, 3, 4, 5, 5): 1}
+  n=6 k=3 distribution={(1, 0, 0, 2, 1): 2, (1, 0, 0, 3, 1): 1, (1, 1, 1, 2, 1): 1, (2, 0, 0, 4, 1): 2, (2, 1, 1, 2, 1): 2, (2, 1, 1, 3, 2): 3, (2, 1, 1, 4, 1): 2, (2, 1, 1, 4, 2): 43}
+  n=6 k=4 distribution={(1, 0, 1, 2, 2): 2, (1, 0, 1, 4, 2): 1, (2, 1, 1, 2, 2): 3, (2, 1, 1, 4, 3): 2, (2, 1, 2, 5, 5): 1, (2, 1, 2, 6, 4): 1, (2, 1, 2, 6, 6): 2, (3, 1, 2, 6, 4): 4, (3, 2, 2, 4, 3): 2, (3, 2, 2, 4, 4): 2, (3, 2, 2, 6, 6): 2, (3, 2, 3, 4, 3): 2, (3, 2, 3, 6, 5): 2, (3, 2, 3, 6, 6): 8, (4, 1, 2, 6, 4): 1, (4, 1, 2, 6, 5): 1, (4, 2, 3, 6, 4): 1, (4, 2, 3, 6, 6): 5, (4, 3, 3, 4, 4): 2, (4, 3, 3, 6, 5): 2, (4, 3, 3, 6, 6): 10}
+  F2_rank_difference_hist={(5, 3, 1, 0): 2, (5, 4, 0, 1): 2, (5, 4, 1, 2): 4, (5, 4, 2, 3): 5, (5, 4, 3, 4): 1, (6, 4, 0, 1): 3, (6, 4, 1, 2): 10, (6, 4, 2, 3): 18}
+  first_F2_rank_difference_witness=(5, 3, '0x8', 1, 0)
+
+E2. Odd inclusion / Kneser exact inverse and ranks
+  W_{r,r+1}, after complementing columns, is A[S,R]=1[S cap R=empty].
+  Proposed B[S,R]=(-1)^|S cap R|/((r+1) C(r,|S cap R|)).
+  {'r': 1, 'n': 3, 'size': 3, 'AB_by_intersection_j=0..r': (Fraction(0, 1), Fraction(1, 1)), 'inverse_values_j=0..r': (Fraction(1, 2), Fraction(-1, 2)), 'Q_rank': 3, 'F2_rank': 2, 'F2_nullity': 1, 'spectrum': ((2, 1), (-1, 2))}
+  {'r': 2, 'n': 5, 'size': 10, 'AB_by_intersection_j=0..r': (Fraction(0, 1), Fraction(0, 1), Fraction(1, 1)), 'inverse_values_j=0..r': (Fraction(1, 3), Fraction(-1, 6), Fraction(1, 3)), 'Q_rank': 10, 'F2_rank': 6, 'F2_nullity': 4, 'spectrum': ((3, 1), (-2, 4), (1, 5))}
+  {'r': 3, 'n': 7, 'size': 35, 'AB_by_intersection_j=0..r': (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 1)), 'inverse_values_j=0..r': (Fraction(1, 4), Fraction(-1, 12), Fraction(1, 12), Fraction(-1, 4)), 'Q_rank': 35, 'F2_rank': 20, 'F2_nullity': 15, 'spectrum': ((4, 1), (-3, 6), (2, 14), (-1, 14))}
+  {'r': 4, 'n': 9, 'size': 126, 'AB_by_intersection_j=0..r': (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 1)), 'inverse_values_j=0..r': (Fraction(1, 5), Fraction(-1, 20), Fraction(1, 30), Fraction(-1, 20), Fraction(1, 5)), 'Q_rank': 126, 'F2_rank': 70, 'F2_nullity': 56, 'spectrum': ((5, 1), (-4, 8), (3, 27), (-2, 48), (1, 42))}
+  {'r': 5, 'n': 11, 'size': 462, 'AB_by_intersection_j=0..r': (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 1)), 'inverse_values_j=0..r': (Fraction(1, 6), Fraction(-1, 30), Fraction(1, 60), Fraction(-1, 60), Fraction(1, 30), Fraction(-1, 6)), 'Q_rank': 462, 'F2_rank': 252, 'F2_nullity': 210, 'spectrum': ((6, 1), (-5, 10), (4, 44), (-3, 110), (2, 165), (-1, 132))}
+  {'r': 6, 'n': 13, 'size': 1716, 'AB_by_intersection_j=0..r': (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 1)), 'inverse_values_j=0..r': (Fraction(1, 7), Fraction(-1, 42), Fraction(1, 105), Fraction(-1, 140), Fraction(1, 105), Fraction(-1, 42), Fraction(1, 7)), 'Q_rank': 1716, 'F2_rank': 924, 'F2_nullity': 792, 'spectrum': ((7, 1), (-6, 12), (5, 65), (-4, 208), (3, 429), (-2, 572), (1, 429))}
+  n=7,r=3 specialization: B intersection values=(1/4,-1/12,1/12,-1/4),
+  spectrum=((4,1),(-3,6),(2,14),(-1,14)), Q-rank=35, F2-rank=20/nullity=15.
+
+E3. Four-card q/chirality decomposition
+  four_type_classifier_(q,h)->type_index={(0, 0): 0, (1, -1): 3, (1, 1): 1, (2, 0): 2}
+  n=4 chirality_hist={-1: 1, 0: 2, 1: 1} c4_hist={0: 3, 1: 1} score_determines_chirality=True
+  n=5 chirality_hist={-2: 2, 0: 8, 2: 2} c4_hist={0: 4, 1: 2, 2: 1, 3: 3, 4: 1, 5: 1} score_determines_chirality=True
+  n=6 chirality_hist={-5: 1, -4: 4, -3: 3, -1: 8, 0: 24, 1: 8, 3: 3, 4: 4, 5: 1} c4_hist={0: 6, 1: 3, 2: 2, 3: 7, 4: 4, 5: 4, 6: 8, 7: 7, 8: 2, 9: 9, 10: 2, 12: 2} score_determines_chirality=True
+  targeted_n7={'family': 'all 64 one-observer extensions of the 8 n=6 full-deck-collision representatives', 'objects': 512, 'distinct_scores': 19, 'chirality_hist': {-8: 2, -6: 6, -2: 90, 0: 316, 2: 90, 6: 6, 8: 2}, 'c4_hist': {6: 4, 7: 4, 8: 2, 9: 10, 10: 12, 11: 26, 12: 22, 13: 32, 14: 44, 15: 64, 16: 44, 17: 52, 18: 46, 19: 54, 20: 24, 21: 38, 22: 16, 23: 8, 24: 8, 26: 2}}
+
+E4. Exact equivariant alternating local-rule optimization
+  Rule bit order is the listed canonical d-tournament representatives; canonicalizing
+  permutation parity is well-defined because every checked tournament automorphism is even.
+  d=4 {'d': 4, 'rule_reps': (0, 2, 4, 5), 'rules': 16, 'edge_tournaments': 1024, 'descriptor_types': 782, 'intrinsically_inconsistent_edges': 800, 'count_histogram': {24: 8, 64: 4, 104: 2, 144: 2}, 'best_count': 144, 'best_probability': Fraction(9, 64), 'best_rules': (7, 8)}
+  d=5 {'d': 5, 'rule_reps': (0, 2, 4, 5, 8, 9, 10, 11, 12, 40, 41, 76), 'rules': 4096, 'edge_tournaments': 32768, 'descriptor_types': 25864, 'intrinsically_inconsistent_edges': 25680, 'count_histogram': {0: 318, 80: 232, 144: 460, 224: 436, 288: 294, 320: 108, 368: 208, 384: 164, 464: 188, 480: 116, 560: 48, 608: 108, 624: 104, 704: 104, 768: 108, 800: 52, 848: 40, 864: 176, 944: 192, 1040: 12, 1088: 52, 1104: 72, 1184: 56, 1280: 16, 1328: 12, 1344: 24, 1424: 24, 1440: 50, 1520: 20, 1568: 16, 1584: 4, 1664: 12, 1728: 74, 1760: 4, 1808: 44, 1824: 20, 1904: 12, 1920: 12, 2048: 4, 2208: 20, 2240: 12, 2288: 8, 2480: 4, 2528: 12, 2768: 4, 2880: 14, 2960: 4, 3168: 14, 3248: 4, 4320: 2, 4608: 2}, 'best_count': 4608, 'best_probability': Fraction(9, 64), 'best_rules': (1415, 2680)}
+  d=5_oriented_two_graph_gate={'seed': 10, 'switching_relabel_orbit': 4608, 'equals_best_success_set': True, 'triangle_flux_stabilizer_order': 5, 'ordinary_iso_reps': (10, 21, 81, 140, 147, 148, 313, 314), 'ordinary_aut_orders': (1, 1, 1, 5, 1, 1, 1, 5)}
+  d=5_pfaffian_formula_gate={'checked_labelled_5_tournaments': 1024, 'rhs_hist': {-4: 512, 4: 512}, 'formula': '4f=sum_v (-1)^v Pf(H^(v))-product_edges(x_ij)', 'fourier_support': (('0xcf', 256, 6), ('0xf9', 256, 6), ('0x12f', -256, 6), ('0x175', -256, 6), ('0x1ba', 256, 6), ('0x1d6', -256, 6), ('0x21f', 256, 6), ('0x273', 256, 6), ('0x2bc', 256, 6), ('0x2e6', -256, 6), ('0x35c', 256, 6), ('0x36a', -256, 6), ('0x393', 256, 6), ('0x3a5', 256, 6), ('0x3c9', 256, 6), ('0x3ff', -256, 10)), 'fourier_coefficients': 'numerator/1024, hence each displayed +/-256 is +/-1/4', 'support_summary': '15 degree-6 bowties plus degree-10 full edge parity'}
+  apex_lift_recursion_gate={'checked_(T,v)_pairs': 5120, 'f4_rule': 8, 'f4_rep_signs': (-1, -1, -1, 1), 'f5_rule': 1415, 'ratio_by_apex_0..4': (-1, 1, -1, 1, -1), 'identity': 'f5(T)=(-1)^(v+1) f4(apex-normalized T-v)'}
+  recursive_density_gate={'normalized_U_checked': 1024, 'directed_f4_U': 144, 'directed_f5_apex_lifts': 144, 'success_sets_equal': True, 'density': Fraction(9, 64), 'f5_switching_pairs_checked': 16384, 'f5_switching_failures': 0, 'universal_next_apex_lift_possible': False}
+  Both optima are exactly 9/64 and have exactly two globally-negative rules.
+  The d=5 success set is exactly the seed-10 vertex-switch/S6 orbit, giving an explicit
+  oriented-two-graph bridge.  Any external c5 interpretation or novelty claim remains unaudited.
+
+E5. Flat oriented-two-graph fields and uniform rank-3 GP
+  {'n': 5, 'flat_fields': 64, 'uniform_rank3_GP': 24, 'factorial_(n-1)': 24}
+  {'n': 6, 'flat_fields': 1024, 'uniform_rank3_GP': 120, 'factorial_(n-1)': 120}
+  {'n': 7, 'flat_fields': 32768, 'uniform_rank3_GP': 720, 'factorial_(n-1)': 720}
+  {'hostile': 'n=5 ascending chi all +1 except chi_135=-1', 'GP_holds': False, 'failure_pivots_zero_based': ((0, (1, 1, 1)), (4, (1, 1, 1)))}
+  Counts 24,120,720=(n-1)! suggest circular-order fields; that classification is not claimed.
+
+F. Exact identities and mechanisms
+  I1 c3(T)=C(n,3)-sum_v C(d+(v),2); global triangle count adds no score data.
+  I2 rooted triangle row v=(C(d,2), d(n-1-d)-c_v, C(n-1-d,2), c_v).
+  I3 for each induced k-type vector p and vertex v: A_v + D_v = p,
+     sum_v A_v=k p, sum_v D_v=(n-k)p (A=containing incidence, D=deleted profile).
+  I4 over Q, rowspace(A)=rowspace(D), hence ranks agree exactly for 0<k<n.
+     Over F2 ranks differ by at most one; if n even and k odd they agree.
+  I5 the full deck determines every proper induced-type profile by Kelly double counting.
+     It also determines paired (card,c3-loss), so c3-loss is not a genuine boundary repair.
+  I6 card + missing-vertex outdegree is a genuine marked-boundary coordinate; it resolves
+     every isomorphism collision checked through n=6, while deck + unpaired scores does not.
+  I7 every four-card is classified by (q,h): q=#cyclic triangle faces in {0,1,2},
+     h=#universal sources-#universal sinks in {-1,0,1}.  With D=sum_v[
+     C(d+(v),3)-C(d-(v),3)] and C4=#q=2 cards,
+     N_plus=((n-3)C3-2C4+D)/2 and N_minus=((n-3)C3-2C4-D)/2,
+     and N0=C(n,4)-(n-3)C3+C4.  Thus chirality is variable but score-determined;
+     the directed Hamiltonian C4 count is the only new scalar in the four-profile.
+  I8 complementing W_{r,r+1} gives KG(2r+1,r), and the displayed intersection-kernel
+     is its exact rational inverse.  The check is exhaustive over all intersection classes
+     for r=1..6; the checked finite F2 ranks equal C(2r,r).
+  I9 the unmarked maximal proper-flag type-sequence distribution is exactly deck-equivalent:
+     partition flags by their omitted last vertex to derive it from the full deck; conversely
+     the terminal (n-1)-type in each sequence recovers every card multiplicity.  Therefore
+     unmarked flag gluing cannot repair a deck collision; a boundary/card mark is essential.
+  I10 exhaustive local-rule optimization gives 144/1024=4608/32768=9/64 for d=4,5.
+      At d=5 the 4608 successful edge tournaments are exactly one switching/relabel orbit
+      with seed 10 and stabilizer order 5; this is finite-exact, not a literature-priority claim.
+  I11 rule 1415 is not an opaque table: on every labelled five-tournament its sign is
+      one quarter of an alternating sum of five triangle-flux Pfaffians minus full edge parity.
+      Its exact Fourier support is 15 degree-six bowties plus the degree-ten parity monomial.
+  I12 the d=5 rule is the unique alternating apex lift of d=4 rule 8 in the checked convention:
+      after switching any apex v to dominate, f5(T)=(-1)^(v+1) f4(T-v).
+  I13 among normalized flat triangle fields, the uniform rank-3 GP counts at n=5,6,7 are
+      24,120,720=(n-1)!; the one-flipped chi_135 hostile fails at pivots 1 and 5.
+  I14 after switching a labelled six-tournament so vertex 5 dominates, its f5-directed
+      boundary condition is equivalent, for each of all 1024 remaining U, to U being
+      f4-directed.  The common success set has size 144, so 9/64 inherits exactly.
+      Rule f5 is invariant under all 16384 distinct labelled cut checks.  A universal next
+      apex lift is obstructed in this recursion because 144<1024; no general nonexistence
+      theorem for other d=6 rules is claimed.
+
+G. Scope and hostile boundary
+  The transitive T3 and cyclic C3 share the same ordinary two-vertex deletion deck:
+  reconstruction failure begins at n=3.  At n=6 the four full-deck collision pairs
+  are converse pairs and survive score, all proper subset profiles, card-internal
+  profile losses, and unpaired boundary multisets; pairing card with boundary
+  outdegree separates them.  This is finite evidence only: no all-n reconstruction
+  theorem is claimed, and no n=7 exhaustive census is imported into this result.
+
+ALL REQUIRE GATES PASSED

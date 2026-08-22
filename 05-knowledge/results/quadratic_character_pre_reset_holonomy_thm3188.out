@@ -1,0 +1,9 @@
+QUADRATIC-CHARACTER PRE-RESET HOLONOMY EXACT CONTROL
+closed_continuant_formula_checks=13
+unit_holonomy_parameter_checks=880
+discriminant_wall_parameter_checks=68
+full_block_exterior_flag_checks=300
+homogeneous_holonomy=-chi(Delta)*[[1,0],[-1,1]]
+determinant_wedge_fixed=1
+wall_homogeneous_rank=0
+ALL EXACT CHECKS PASSED

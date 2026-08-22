@@ -1,0 +1,47 @@
+THM-2594 R=5 THETA CONTRACTION -- INDEPENDENT AUDIT
+status=ACCEPT_NARROW_REALIZED_CANDIDATE_CONTRACTION
+primary_lf_sha256=09c43af0a0a56c7a0833bbfd13ed6a96bc5a7a3718aa1bc6b77a144bde101a06
+stored_lf_sha256=bef4ee9a18ff3e2f455bad66a95252dd9989b2f60953e26e8ea0c2dc6ae7f5df
+replay_semantic_sha256=184c159dd4aedb02b38b2029846b9e88f301fcc63dd163682bbabddc438b825e
+historical_commit=c04aca388
+historical_primary_lf_sha256=aa03adf52f72379ede708e2040925b088548a7cc05fa999e54078e1a8e06e9e1
+historical_stored_lf_sha256=6cf260afdfc41e0e560adf294b2cf31b50148a67bbb4b4085195bce9c43dd149
+historical_replay_semantic_sha256=d13f0b23768b74d41d4696c6e79e1597ff6e1e8accded7b504897f47245bbb46
+historical_normal_replay=PASS
+historical_optimized_replay=PASS
+historical_stored_replay=PASS
+historical_causal_wording=SUPERSEDED_BY_MISTAKE_295
+normal_replay=PASS
+optimized_replay=PASS
+stored_replay=PASS
+common_denominator=6939029398456584394954868880
+decisive_denominator=631451675259549179940893068080
+decisive_nonzero=True
+decisive_reduced_sha256=98bd415a9621a19f692528faa8b5ca320c84bbccba191d95a6ea49de9f655395
+decisive_nonzero_coordinates=59/72
+split_prime_values=(295, 213, 380, 1405, 883)
+primitive_nonzero=5184/5184
+primitive_bundle_sha256=c695826d15bfec0867bf17ebc77e2fe3c8ba87cbab841f6d0752d63b6a25f75a
+primitive_nonzero_coordinate_floor=36/72
+fibrewise_interaction_nonzero=34/169
+fibrewise_by_shift=(0, 3, 3, 3, 3, 3, 2, 2, 3, 3, 3, 3, 3)
+same_stalk_fraction_checks=3380
+deep_window_checks=65
+owner_node=13*w_u-y=u_in_Z
+deep_node=c3*X_u_a-2*(y+u)/13=2*a_in_Z
+word_node=13^6*X_u_a-y=u+13*a_in_Z
+linked_nodes_not_one_circle_point=PASS
+h1_beta_zero=PASS_ZERO
+h2_constant_column=PASS_ZERO
+h3_fixed_absolute_root_raw_nonzero=18/91
+h3_fixed_absolute_root_centred_nonzero=91/91
+h3_fixed_absolute_root_decisive_nonzero=True
+h3_fixed_absolute_root_primitive_nonzero=5184/5184
+h3_fixed_absolute_root_bundle_sha256=fba3895e684d14285e448556904621c9357e6b72ac6f84104ed228fc745e2217
+h3_fixed_absolute_root_coordinate_floor=56/72
+causal_slaving_uniqueness=REFUTED_BY_H3
+thm2512_generic_bridge=NOT_PROVED
+thm2449_one_point_response=NOT_PROVED
+physical_current=NOT_PROVED
+row_exclusion=0
+lrc14=OPEN

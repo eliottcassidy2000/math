@@ -1,0 +1,20 @@
+LRC14 projected-k3 z216 third intrinsic-ruler prefix multicover closure
+dependency=two_prefix_audit:d3581bc937597270558a77c0a02398a4cfd368306f5a302be01240cdb4cef7c3/e035531d0af15998a8a07d083042ff2486c80c7fdd729d902922179409d1725a/4bb4eca9949eb4f07b618f9e49bbb5de63492364a29a4a5abfc84a6acf105e11;multicover_compiler:e7462eabab773133688079141708d2377742e2d6f9a9480089666956f472020c/f83d7ca1a3e2557330ec7ed655dc756cef21d6abdb52326d3623563c2abc407d/bd7ac011d960afe7c4566ac9c17e9df3d8c2cf710e6023a715cb6a6d1ce1408d
+universe=z1:216;atlas_rows:480;wall:447;order:33;prior_prefix_rows:23;live_wall:357;live_families:33
+queue_head:((1729728, 1, 72, 72072, (157,)), (2121504, 3, 24, 25872, (53, 293, 357)), (2293200, 1, 24, 76440, (141,)));membership_and_complete_family_reconstruction:PASS;strict_cost_boundary:PASS
+selection=families:2;rows:4;indices:(157, 53, 293, 357);cost:3851232;packet_sha256:8a74873435634932fdf284a3fb7fee26c4558140f0b46fd611dda56aff0c47d1
+family=gcd72/L72072;rows:1;indices:(157,);cost:1729728;states:111;crude:93;status:18;residual:0
+family=gcd24/L25872;rows:3;indices:(53, 293, 357);cost:2121504;states:312;crude:196;status:116;residual:0
+selected_screen=states:423;crude:289;status:134;residual:0;direct_farkas:0;legacy_farkas:134;by_row:((157, (111, 93, 18, 0), ((1, 17), (2, 1))), (53, (27, 17, 10, 0), ((1, 10),)), (293, (14, 9, 5, 0), ((1, 5),)), (357, (271, 170, 101, 0), ((1, 101),)));screen_sha256:17bd632e09975d5a84d4e5f8667023eb9c1b9de21c8ae16f639612ff3d380e74
+multicover_taxonomy=layer_counts:((1, 133), (2, 1));old_to_layer:(('coordinate_union', ((1, 128),)), ('two_fan', ((1, 3),)), ('weighted_core', ((2, 1),)), ('zero_reduced_union', ((1, 2),)));unique_instances:74;instance_multiplicities:((1, 51), (2, 14), (3, 2), (4, 2), (5, 2), (6, 1), (11, 1), (14, 1));status_sha256:3cbc8e6f2888b2852ac65cf643755fdf2bdbeaac7c751d4f55fbdb72c13732a6
+two_layer_circuit=(157, (99, 616, 1001, 8008), 9009, (1365, 1287, 1287, 1287), ((0, 99), (1, 1338), (2, 2382), (3, 1992), (4, 2874), (5, 324)), (2, 8, 3, 8, 8, 8, 8, 8, 3, 8, 4, 8, 8, 8, 8, 8), (3, 4), (2, 1, 2, 1), 510, (0, 1, 2, 4, 8, 10), True, None);all_singleton_tail_supports_exactly_feasible:3;minimality_sha256:63b359ee5534803576136a31418d2c2152bf60e0202fb4fef07c154a6382da90
+multicover_mechanism=sum_of_selected_nested_tail_indicators_is_pointwise_bounded_by_a_zero_constant_nonnegative_integral_coordinate_form;one_common_status_table_then_forces_tail_demand_sum_at_most_weighted_marginal_sum
+hostile=row64_counts:(115, 50, 57, 8);all_57_status_kills_one_layer;first_residual_has_exact_common_table:PASS;no_multicover_contradiction:PASS;hostile_sha256:afc67bd8bd482be01bf2a3b1f9e83e44b6fa244d54b42fd856eba42ef3e4b823
+arity_control=row138_divisors:(18, 49, 196, 882);certificate:((1, 4, 5), (1, 3, 1, 1), 11);compiler_reaches_genuine_three_layer_support:PASS
+consequence=ledger:373161-4=373157;z216_wall:357-4=353;families:33-2=31;order:0;cap:216
+stopping_boundary=remaining_wall:353;remaining_families:31;next_head:((2293200, 1, 24, 76440, (141,)), (2629536, 3, 24, 30576, (133, 219, 359)), (3400992, 19, 72, 7056, (21, 49, 62, 92, 129, 148, 202, 203, 212, 254, 262, 290, 303, 343, 344, 352, 387, 428, 465)))
+direction=empty_exact_necessary_upper_screen_excludes_each_selected_projected_wall_row;screen_feasibility_is_not_a_converse_and_intrinsic_cost_is_only_a_work_order
+scope=projected_k3_z216_necessary_atlas_only;no_physical_speed_entry_endpoint_owner_phase_current_arbitrary_k_le_1_rung_or_LRC14_claim
+truth_gates=assert_nodes:0;float_literals:0
+semantic_sha256=4d8547f53b287d82bb725cd6b3ed78c390ba03a37a3dcb3ab76ac98389e045a3
+all_exact_controls=PASS
