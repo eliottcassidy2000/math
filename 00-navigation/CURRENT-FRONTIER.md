@@ -359,14 +359,8 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   pays one Cardano line, while THM-3874/3877 use scalar units and `Cl=Z` to
   exclude degree-three/four sole-simple-branch fields.  THM-3879 uniquely
   attains two places; THM-3882 forbids one-place rational duals.
-  THM-3884/3886/3894 force `ceil(n/2)` equality-seam gauge jets and a parity
-  passport; THM-3896 closes the first open even terminal `n=4`.
-  THM-3885/3895/3897 close the **entire polynomial `f=0` residual lane** via
-  `deg_y T<=2` and Pell/parity gates.  For `f!=0`, THM-3899 proves
-  `deg_y T>=deg_y f` and a two-color equal-degree norm; lower responses,
-  off-equality degrees, a Keller atlas, and `JC(2)` remain OPEN.
-  THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
-  polynomial termination.
+  THM-3884--3902 close `n=4` and polynomial `f=0`, giving initial `f!=0`
+  passports; deeper responses and `JC(2)` remain OPEN.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
   self-identifying immersed arm, THM-3846 its formal first jets, and THM-3849
   only visible conductor contact.  THM-3856/3861/3867/3871 close normal
