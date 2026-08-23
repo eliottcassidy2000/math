@@ -1,0 +1,20 @@
+AUDIT PASS
+DIVISOR_IDENTITY dual_line=2*base_fibre+ramification
+IFF one_place iff genus=0,projection_degree=1,base=(d-1)p
+IMMERSED_CLASSIFICATION one_place iff smooth_conic_boundary
+PACKET 6A2+4A1 -> genus0,dual_degree4,stationary_weight0 -> no_one_place_line
+THM3879 C=0 has base=(1,1),ramification=(1,1),dual_pullback=(3,3)
+STRICT_EXTENSION same criterion holds for every normalization genus; one-place forces genus0
+NONIMMERSED_CORRECTION reduced_dual_line=2*base+ramification-common_tangent_base
+SHARP_HOSTILE [S*T^(d-1):T^d:S^d] realizes a one-place dual line after nonimmersion for all d>=3
+MONOMIAL_ROWS 4959
+MONOMIAL_ONE_SUPPORT_ROWS 58
+RH_SURVIVORS [(0, 1)]
+SECTION_GATES boundary 190
+SECTION_GATES divisor 24795
+SECTION_GATES factorization 49
+SECTION_GATES pluecker 10
+SECTION_GATES riemann_hurwitz 841
+SECTION_GATES thm3879 14
+SEMANTIC_SHA256 f577f0ff2345f79c0ac654713fa0325376def81ea79c7857a75f37777bae7b5f
+GATES 25899

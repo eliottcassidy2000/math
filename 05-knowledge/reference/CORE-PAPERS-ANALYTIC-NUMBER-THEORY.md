@@ -57,3 +57,16 @@
   both certified fields find no finite-Gabor amplitude covariance and the
   outer semantic co-support is empty.  Raw Gram rank is likewise blind to the
   AMM integer-capacity obstruction.
+
+## Williams — *Mertens' Theorem for Arithmetic Progressions*
+
+- **Primary:** [author-hosted Journal of Number Theory scan](https://people.math.carleton.ca/~williams/papers/pdf/057.pdf),
+  K. S. Williams, *Journal of Number Theory* **6** (1974), 353--359,
+  [DOI 10.1016/0022-314X(74)90032-8](https://doi.org/10.1016/0022-314X(74)90032-8).
+- **Imported role:** the fixed-modulus Mertens product asymptotic for the two
+  reduced residue classes modulo three, including existence and positivity of
+  their constants.  [THM-3793](../../01-canon/theorems/THM-3793-inert-prime-sum-all-scale-two-cube-singleton.md)
+  combines this cited input with an exact finite Bernoulli normalization to
+  obtain its explicit two-cube weighted-support liminf constant.
+- **Does not prove:** a two-cube support asymptotic, collision law, or any
+  uniformity in a varying modulus.

@@ -1,0 +1,10 @@
+JC2_RANK_TWO_AFFINE_SLOPE_PRIMARY_20260823
+status=PROVED_DEGREE_OBSTRUCTION;JC2_OPEN
+coefficient_degree_caps=F4:7,F3:7,F2:6,F1:5,F0:4
+nonconstant_degree_rule=degS=4degf+7
+constant_edge=x3y4_coefficient=243*c^4
+degree_rows=((1,11,10),(100,407,307))
+control_rows=((0,1,11),(1,1,11),(2,2,15),(3,3,19))
+semantic_sha256=dcfd5de0a7eab5e173868bec8de0ec10b9557a2794ad2cded04d6a069a5d12c7
+gates=223
+ALL CHECKS PASSED

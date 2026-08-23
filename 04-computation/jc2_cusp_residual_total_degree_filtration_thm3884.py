@@ -6,10 +6,13 @@ from __future__ import annotations
 import ast
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 import sympy as sp
 
+
+sys.stdout.reconfigure(newline="\n")
 
 CHECKS = 0
 

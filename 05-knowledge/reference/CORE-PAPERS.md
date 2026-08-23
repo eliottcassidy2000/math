@@ -542,22 +542,22 @@ consumed by corrected reflections (S209/S210, MISTAKE-223/224 lineage): toric
 arrangements and Shi/braid counts are audit controls, not LRC carriers, and a
 tournament-game pure optimum means a Condorcet winner, not transitivity.
 
+## Analytic number theory
+
+Williams' fixed-modulus Mertens theorem, THM-3793's exact import, and its
+no-support-asymptotic guardrail are recorded in the [analytic-number-theory sidecar](CORE-PAPERS-ANALYTIC-NUMBER-THEORY.md).
+
 ## Reciprocal integer sequences
 
-Detailed records for Downey--Ong--Sellers (figurate telescoping seeds) and
-Applegate--Pol--Sloane (toothpick automaton) are preserved verbatim in the
-[reciprocal-sequences sidecar](CORE-PAPERS-RECIPROCAL-SEQUENCES.md). They seed
-THM-2000/THM-2005's support surfaces; neither proves the support-versus-
-multiplicity collision law or the Abel--Stieltjes/Dini criterion.
+The [reciprocal-sequences sidecar](CORE-PAPERS-RECIPROCAL-SEQUENCES.md) records
+the figurate/toothpick sources used by THM-2000/2005; neither proves the
+support--multiplicity collision law or Abel--Stieltjes/Dini criterion.
 
 ## Pythagorean trees and square-pyramidal intersections
 
-The primary-source records for Berggren descendant geometry, fixed-hypotenuse
-fibres, and Bennett's global cannonball classification are in the
-[Pythagorean sidecar](CORE-PAPERS-PYTHAGOREAN.md).  THM-3334 imports the first
-two interfaces; THM-3335 uses the cannonball classification only to make one
-Pell-selector intersection global.  None of these sources supplies an LRC,
-tournament, Jacobian, or skew-EW construction.
+The [Pythagorean sidecar](CORE-PAPERS-PYTHAGOREAN.md) records Berggren,
+fixed-hypotenuse, and Bennett imports used by THM-3334/3335; none supplies an
+LRC, tournament, Jacobian, or skew-EW construction.
 
 ## Unstable homotopy
 

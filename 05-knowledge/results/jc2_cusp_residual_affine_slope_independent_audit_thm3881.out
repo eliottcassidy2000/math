@@ -1,0 +1,13 @@
+AUDIT=THM-3881-SECTION-7
+BASE=de787fd3a
+T_ZERO_FACTOR=PASS;S=L^2*H;two-H-forms-agree
+T_ZERO_STRONG=PASS;square-iff-f=0;address-condition-unnecessary
+AFFINE_SLOPE=PASS;T=h*f;deg(h)<=1;square-iff-f=0
+NONCONSTANT_TOP=H:4n+5;S_affine_h:4n+7
+CONSTANT_TOP=H:xy4-coeff-3c4;S_affine_h:x3y4-coeff-243c4
+FIELD_SCOPE=any-field-char-not-3;algebraic-closure-unused
+CHAR3=degree-parity-proof-fails;no-counterexample-claimed
+SECTION_GATES=T0:17;affine_h:25;factor:4;scope:6
+SEMANTIC_SHA256=dac48c5176e15c79596f6319609d8bfbc94425a049d1fd2f51a9c49256fdce5c
+CHECKS=52
+RESULT=PASS

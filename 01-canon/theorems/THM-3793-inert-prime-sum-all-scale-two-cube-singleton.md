@@ -2,7 +2,7 @@
 id: THM-3793
 title: "Inert pair sums with cube-free primitive quotient force two-cube singleton fibres"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let x<y be
+  PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let x<y be
   positive, g=gcd(x,y), d=x+y, and s=d/g.  If every prime divisor of d is
   congruent to 2 modulo 3 and every v_p(s) is at most two, then x^3+y^3 has
   exactly one positive distinct two-cube representation.  Arbitrary inert
@@ -14,10 +14,12 @@ status: >
   real power of log log X.  Allowing the product order to vary pointwise as
   floor((log log X)/2) further gives liminf log H(X)/log log X>=1/2,
   equivalently H(X)>=(log X)^(1/2-epsilon) eventually for every epsilon>0.
-  Summing disjoint singleton layers over a mesoscopic band gives the
-  quantitative strengthening liminf H(X)*sqrt(log log X)/sqrt(log X) at
-  least (7/20)*exp(-C_P)*sqrt(2/3)=5.191674379270439...e-4.
-  No support asymptotic follows.  The finite LRC address sidecar is injective
+  Summing disjoint singleton layers and applying their exact Bernoulli
+  Euler-product normalization, together with Williams' fixed-modulus Mertens
+  theorem, gives liminf H(X)*sqrt(log log X)/sqrt(log X) at least
+  (2/5)*sqrt(2/3)*E_32=0.25659588..., where
+  E_32=(2/3)sqrt(2e^gamma Q_32/(3L(1,chi_-3))).  No support asymptotic follows.
+  The finite LRC address sidecar is injective
   but has no loneliness consequence.
 source: root / cross_frontier_live_scout inert-prime all-scale lane, 2026-08-23
 audit: >
@@ -46,13 +48,20 @@ audit: >
   checked complete singleton fibres and cross-order disjointness, and sharpened
   the provisional one-standard-deviation Poisson window to an almost-full
   lower tail.  Its independent implementation passes 40,751 active gates;
-  normal, optimized, and frozen transcripts agree.
+  normal, optimized, and frozen transcripts agree.  A fifth import-independent
+  audit checked the Bernoulli normalization, the Williams fixed-modulus
+  import, the prime-two invoice, both Euler-product constant routes, the
+  floor-sensitive all-real-X cutoff, and the no-asymptotic scope.  Its 162
+  gates and the 57-gate primary companion pass normally and under `-O` and
+  byte-match their LF-frozen outputs.
 depends_on:
   - THM-463-two-cube-representations-are-a-divisor-property-on-the-split-axis
   - THM-3730-positive-distinct-two-cube-support-abscissa
 related:
   - THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction
   - THM-3818-scaled-inert-cubeclass-support-two-pair-packet
+references:
+  - "K. S. Williams, Mertens' Theorem for Arithmetic Progressions, Journal of Number Theory 6 (1974), 353--359, DOI 10.1016/0022-314X(74)90032-8."
 script: 04-computation/two_cube_inert_cubefree_singleton_thm3793.py
 output: 05-knowledge/results/two_cube_inert_cubefree_singleton_thm3793.out
 script_sha256: fecde0faf77e919a4d643d2ebede6822fb5b2749b481d2691e43a913a0a84fe9
@@ -77,12 +86,22 @@ mesoscopic_independent_output: 05-knowledge/results/two_cube_mesoscopic_order_ba
 mesoscopic_independent_script_sha256: 481ae96c0d1e9d1c3a6ca8e1a1a15586910d1e5a0facebc46788bb56a7b45fc9
 mesoscopic_independent_output_sha256: 20a44c04b1a380307ca90bab735a702d913b9e3679fdfed72a10c7f3849038ca
 mesoscopic_independent_semantic_sha256: 67bc3dce58951879389161248f3b315a0c5286006c3f9fb0803ec30b5be76856
+euler_product_script: 04-computation/two_cube_euler_product_band_thm3793.py
+euler_product_output: 05-knowledge/results/two_cube_euler_product_band_thm3793.out
+euler_product_script_sha256: a4bd1a16d175ae54b4fa37d0bca01ad629b5c0be69dd08bde0fea4d79e6722d1
+euler_product_output_sha256: 6f613bbb4d1a02a9b3780bd2993f88b9ea18f433d5fdf51815888670ed7836d9
+euler_product_semantic_sha256: 03aa2a3ea85bfde3b79259df72629eb4afc80262fd29d5085a8e0134a09b35f0
+euler_product_independent_script: 04-computation/two_cube_euler_product_band_independent_audit_thm3793.py
+euler_product_independent_output: 05-knowledge/results/two_cube_euler_product_band_independent_audit_thm3793.out
+euler_product_independent_script_sha256: 9c92c5edd51a63aa813c1acd4df20d3d3cfd1118072d6be8341dc7ff3644f2e4
+euler_product_independent_output_sha256: a1ec2c7d19eebdc4b221086cc5b198d69998b3863dc5710b1c5b19b3eced8a6b
+euler_product_independent_semantic_sha256: 4336db14f755ee34c345e7697182764c15ed2aeadbf0c455ed6c7e604fee7d54
 hash_basis: raw LF bytes
 ---
 
 # THM-3793 -- inert primitive pair sums give all-scale singleton fibres
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The theorem
+**PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The theorem
 below strengthens the singleton subfamily in THM-3730.  It is an arithmetic
 support theorem, not an LRC theorem or a support asymptotic.
 
@@ -251,6 +270,41 @@ H(X) >= (c_band-o(1))sqrt(log X/log log X).          (6i)
 
 No optimality is asserted for `c_band`; it is the explicit constant supplied
 by the present inert-prime singleton construction.
+
+### Native Euler-product sharpening
+
+The finite sum in `(6g)` has an exact Bernoulli normalization which captures
+asymptotically the entire elementary-symmetric mass.  Define
+
+```text
+Q_32=product_(p=2 mod 3)(1-1/p^2),
+L(1,chi_-3)=pi/(3sqrt(3)),
+E_32=lim_(Z->infinity)(log Z)^(-1/2)
+       product_(5<=p<=Z,p=2 mod 3)(1+1/p).             (6j)
+```
+
+Williams' fixed-modulus Mertens theorem for arithmetic progressions proves
+that this limit exists and is positive.  The exact constant identity is
+
+```text
+E_32=(2/3)sqrt(2e^gamma Q_32/[3L(1,chi_-3)]).          (6k)
+```
+
+Here `Q_32` includes `p=2`, while the product defining `E_32` begins at five;
+the factor `2/3` is the complete invoice for that omitted prime.  Then
+
+```text
+liminf_(X->infinity)
+ H(X)sqrt(log log X)/sqrt(log X)
+ >=(2/5)sqrt(2/3)E_32
+ =0.25659588... .                                      (6l)
+```
+
+This supersedes the explicit constant in `(6h)` but uses the cited Williams
+asymptotic.  Since the unweighted support count `C(X)` satisfies `C(X)>=H(X)`
+for `X>=1`, the same normalized liminf lower bound holds trivially for
+`C(X)`.  Neither statement is a support-count asymptotic, residue, or
+collision-tax law.
 
 ## 2. Proof of the singleton theorem
 
@@ -572,6 +626,108 @@ Combining `(28)--(30)` proves `(6h)` and `(6i)`.  Any cutoff displacement
 `h(L)` with `sqrt(L)<<h(L)<<L` gives the same limiting constant; the exponent
 `2/3` is a convenient explicit choice.
 
+For the sharper `(6l)`, normalize all elementary layers at once by
+
+```text
+E(Z)=product_(p in P(Z))(1+1/p).                         (31)
+```
+
+Let `N_Z` be the sum of independent Bernoulli variables with
+`Prob(X_p=1)=1/(p+1)`.  For every subset `S` of `P(Z)`, independence gives
+
+```text
+Prob(selected set=S)
+ =E(Z)^(-1)product_(p in S)1/p.
+```
+
+Therefore, exactly at every finite cutoff,
+
+```text
+E(Z)Prob(N_Z=j)=e_j(Z),
+E(Z)Prob(1<=N_Z<=J)=sum_(1<=j<=J)e_j(Z).              (32)
+```
+
+This is a normalization identity, not an independence assertion about cube
+representations.  Its moments are
+
+```text
+mu_Z=sum_(p in P(Z))1/(p+1),
+Var(N_Z)=sum p/(p+1)^2<=mu_Z.                           (33)
+```
+
+Williams' fixed-modulus theorem gives
+
+```text
+E(Z)=E_32 sqrt(log Z)(1+o(1)).                          (34)
+```
+
+Moreover `log(1+1/p)-1/(p+1)=O(p^(-2))`, so
+
+```text
+mu_Z=(1/2)log log Z+O(1),
+Var(N_Z)=O(log log Z).                                  (35)
+```
+
+For every sufficiently large real `X`, put
+
+```text
+L=log log X,
+J=floor(L/2-(1/2)log L+L^(2/3)),
+Z=X^(1/(3J)).                                           (36)
+```
+
+Then `J>=1`, `Z>=11`, and `Z^(3J)=X` exactly.  If `theta` is the floor error,
+
+```text
+J-(1/2)log log Z
+ =L^(2/3)+(1/2)log(3J/L)-theta,
+0<=theta<1.                                             (37)
+```
+
+Thus `J-mu_Z=L^(2/3)+O(1)`.  Chebyshev and `(33)--(35)` give
+
+```text
+Prob(N_Z>J)=O(L^(-1/3)),
+Prob(N_Z=0)=E(Z)^(-1)=o(1).                             (38)
+```
+
+Equations `(32),(38)` show that the layers `1,...,J` contain
+`E(Z)(1-o(1))` of the full product.  Apply the pointwise finite inequality
+`(6g)` and use `(34),(36)`:
+
+```text
+E(Z)sqrt(L)/sqrt(log X)
+ ->E_32 sqrt(L/(3J))
+ ->E_32 sqrt(2/3).                                     (39)
+```
+
+This proves `(6l)` for all real `X`, not merely along a subsequence.
+
+For completeness, write
+
+```text
+P_i(Z)=product_(p<=Z,p=i mod 3)(1-1/p),
+C_i=lim sqrt(log Z)P_i(Z),                  i=1,2.
+```
+
+Williams supplies positive `C_i`.  Ordinary Mertens with the prime three
+separated, and the prime-ordered Euler product for `chi_-3`, give
+
+```text
+C_1C_2=(3/2)e^(-gamma),
+L(1,chi_-3)=C_2/(C_1Q_32).                              (40)
+```
+
+Finally
+
+```text
+E(Z)=(2/3)Q(Z)/P_2(Z),
+Q(Z)=product_(p<=Z,p=2 mod 3)(1-1/p^2).                 (41)
+```
+
+Solving `(40)--(41)` proves `(6k)`.  The prefactor `2/3` is forced because
+`Q(Z)/P_2(Z)` includes the factor `1+1/2=3/2` which `(31)` omits.
+
 ## 5. Exact boundary hostiles
 
 The split-prime condition cannot be discarded:
@@ -652,6 +808,10 @@ python -B 04-computation/two_cube_mesoscopic_order_band_thm3793.py
 python -B -O 04-computation/two_cube_mesoscopic_order_band_thm3793.py
 python -B 04-computation/two_cube_mesoscopic_order_band_independent_audit_thm3793.py
 python -B -O 04-computation/two_cube_mesoscopic_order_band_independent_audit_thm3793.py
+python -B 04-computation/two_cube_euler_product_band_thm3793.py
+python -B -O 04-computation/two_cube_euler_product_band_thm3793.py
+python -B 04-computation/two_cube_euler_product_band_independent_audit_thm3793.py
+python -B -O 04-computation/two_cube_euler_product_band_independent_audit_thm3793.py
 ```
 
 and compare with
@@ -662,6 +822,8 @@ and compare with
 05-knowledge/results/two_cube_all_fixed_prime_product_amplification_independent_audit_thm3793.out
 05-knowledge/results/two_cube_mesoscopic_order_band_thm3793.out
 05-knowledge/results/two_cube_mesoscopic_order_band_independent_audit_thm3793.out
+05-knowledge/results/two_cube_euler_product_band_thm3793.out
+05-knowledge/results/two_cube_euler_product_band_independent_audit_thm3793.out
 ```
 
 The normal and optimized streams line-normalize exactly to the frozen
@@ -680,6 +842,14 @@ e32535c2fa1efb95c0ad5252387edfb0ac5f1d3a5073b042b3388a1971d40964
   two_cube_all_fixed_prime_product_amplification_independent_audit_thm3793.py
 bc0fafc4ae54c9af3edc167e54bd0934a3c8678ac8d812121a3607316c870bcc
   two_cube_all_fixed_prime_product_amplification_independent_audit_thm3793.out
+a4bd1a16d175ae54b4fa37d0bca01ad629b5c0be69dd08bde0fea4d79e6722d1
+  two_cube_euler_product_band_thm3793.py
+6f613bbb4d1a02a9b3780bd2993f88b9ea18f433d5fdf51815888670ed7836d9
+  two_cube_euler_product_band_thm3793.out
+9c92c5edd51a63aa813c1acd4df20d3d3cfd1118072d6be8341dc7ff3644f2e4
+  two_cube_euler_product_band_independent_audit_thm3793.py
+a1ec2c7d19eebdc4b221086cc5b198d69998b3863dc5710b1c5b19b3eced8a6b
+  two_cube_euler_product_band_independent_audit_thm3793.out
 ```
 
 The proof, not the finite range, carries the all-scale quantifier.

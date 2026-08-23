@@ -5,43 +5,49 @@ status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In
   the complete THM-3881 residual equation, every square survivor with
   nonconstant f satisfies deg T >= deg f+1.  At equality, the highest form is
-  243*x^3*f_n^2*((y^2-15x^2)f_n+xT_m)^2; its odd x-valuation forces this form
+  243*x^3*f_n^2*((y^2-15x^2)f_n+xT_m)^2; its odd total degree forces this form
   to vanish.  Hence x divides f_n and the leading pair lies in the exact
   (K,-a) lift-gauge direction.  This filters the all-degree search but does
   not prove termination or solve the remaining square equation.
 source: jc_quartic_c3_construct / post-THM-3881 residual-degree filtration, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit reconstructed
-  the fourteen-cell degree table, checked every strict comparison including
-  the `n=1` boundary, and rederived the equality top factor.  It verified the
-  odd prime-`x` valuation after arbitrary `x` factors in both remaining
-  squares, the coprime divisibility step, address preservation, and the
-  explicit warning that gauge peeling need not preserve square survival.
-  The companion freezes all fourteen
-  nonzero coefficient-degree cells, verifies the all-n strict inequalities,
-  factors the equality leading form, checks gcd(x,y^2-15x^2)=1, and verifies
-  that the full gauge vector preserves the module address.  Normal and
-  optimized runs byte-match the frozen transcript.
+  TWO INDEPENDENT HOSTILE AUDITS PASS (root and
+  root/thm3884_filtration_audit, 2026-08-23).  The first reconstructed the
+  fourteen-cell table, all strict comparisons, prime-x parity, divisibility,
+  address preservation, and residual non-invariance.  A second SymPy-free
+  sparse-Z reconstruction checked all fourteen cells, every all-n gap, the
+  equality factor and complete homogeneous seam kernel through n=12,
+  address preservation, residual non-invariance, and small-prime boundaries.
+  The latter proves the strict integral-domain, characteristic-not-three
+  scope and the nonconstant affine-slope corollary.  Its 408 gates and the
+  canonical 62 gates pass normally and under `-O`, byte-matching their frozen
+  LF outputs after the canonical Windows newline repair.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
 related:
   - THM-3872-three-cusp-polarization-branches-and-minimal-affine-square-residual-gate
 script: 04-computation/jc2_cusp_residual_total_degree_filtration_thm3884.py
 output: 05-knowledge/results/jc2_cusp_residual_total_degree_filtration_thm3884.out
-script_sha256: bb889185b1c27ba751680d506cb37f14f942e202e8f800a88624864f0e3c8092
+script_sha256: 6e349424d60e346cabb2127c21a977e4c8c26bdf8012975869ecc3ec43c70075
 output_sha256: 0f4366c1dd234735cafad0722f97c383f084b24f7d7ced65dfcd5e1e7d25249c
 semantic_sha256: 0345dc2a0b92899d33c99658ba565f31aaf613cdbca3494b85c1f255171400d1
+independent_script: 04-computation/jc2_cusp_residual_total_degree_filtration_independent_audit_thm3884.py
+independent_output: 05-knowledge/results/jc2_cusp_residual_total_degree_filtration_independent_audit_thm3884.out
+independent_script_sha256: 90c13270fc342ad2d90042583bfb26a7bafa41c8209f10ad81b3e928befe2fec
+independent_output_sha256: adfb7ab1a492f66d9d8a3951d385ec6bb6d08edc348357e916a019fd5001aac1
+independent_semantic_sha256: f682161d1510c758bc5a978c11a89d55e402fd488d5930d1c0f93c4f4dbb7293
 hash_basis: raw LF bytes
 ---
 
 # THM-3884 -- total degree exposes the leading lift gauge
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
-Work over an algebraically closed field `k` of characteristic zero.  Retain
+Let `R` be an integral domain of characteristic different from three and put
+`D=R[x,y]`.  Retain
 the THM-3881 notation
 
 ```text
-D=k[x,y],        a=x+1,                    L=9x+4,
+a=x+1,                    L=9x+4,
 K=y^2-15x^2-15x-4,                         P=aL^2,
 Delta=a^3L^2-K^2,                           r=aT+Kf,
 A=KT+aPf.                                                   (1)
@@ -53,11 +59,14 @@ and let `S(T,f)` be its exact residual
 S=L^4+2(3A+3P+r^2)L^2f+(8A+6P+3r^2)(Pf^2-T^2).             (2)
 ```
 
-The admissible module still has the address condition
+The THM-3881 admissible module has the address condition
 
 ```text
 T(0,0)=4f(0,0).                                             (3)
 ```
+
+The degree filtration below does not use `(3)`; it holds for every polynomial
+pair `(T,f)` over `D`.
 
 Suppose `f` is nonconstant and `S(T,f)` is a square in `D`.  Put
 
@@ -94,8 +103,8 @@ THM-3881 lift gauge `(K,-a)`.
 
 ## 1. The complete coefficient-degree packet
 
-Regard `(2)` as a polynomial in `T,f` over `D`.  For every nonzero cell
-`T^i f^j`, the total degree of its coefficient is as follows:
+Regard `(2)` first as a polynomial in `T,f` over `Z[x,y]`.  Its fourteen
+universal nonzero cells have the following coefficient degrees:
 
 ```text
 (i,j):degree
@@ -115,7 +124,9 @@ The four highest-coefficient identities behind the proof are
 ```
 
 No omitted cell can compete with the degree comparisons below; `(9)` is the
-complete universe.
+complete integral universe.  After base change to `R`, the table remains an
+upper-bound packet.  The load-bearing `f^4` coefficient and the degree-five
+part of `Delta` retain their displayed degrees because `3!=0` in `R`.
 
 ## 2. The region `m<=n` has odd top degree
 
@@ -134,7 +145,7 @@ is explicitly
 243x^3 K_2^2 f_n^4,                                        (12)
 ```
 
-and is nonzero in the domain `k[x,y]`.  In particular `deg S=4n+7` is odd,
+and is nonzero in the domain `D`.  In particular `deg S=4n+7` is odd,
 whereas a nonzero polynomial square has even total degree.  This contradiction
 proves `(5)`.
 
@@ -161,18 +172,29 @@ S_{4n+7}
  =243x^3f_n^2(K_2f_n+xT_m)^2.                              (15)
 ```
 
-If the last parenthesis is nonzero, its valuation at the prime `x` is
+If the last parenthesis is nonzero, `(15)` is a nonzero homogeneous form of
+odd total degree `4n+7`.  It cannot be the highest form of a square.  Therefore
+`(15)` must vanish.  Since `f_n!=0`, the domain property gives `(7)`.  Reduce
+that identity modulo the prime ideal `(x)`.  It becomes
+`y^2f_n(0,y)=0` in the domain `R[y]`, so `f_n(0,y)=0` and `x|f_n`.  Writing
+`f_n=xq_{n-1}` in `(7)` gives `T_m=-K_2q_{n-1}`, proving `(8)` without a UFD
+or algebraic-closure hypothesis.
+
+## 4. Affine-slope corollary and exact recursive boundary
+
+As an immediate nonconstant corollary, take `T=hf` with `deg h<=1`.  If `h`
+is constant, then `m<=n`, contradicting `(5)`.  If `h` has degree one, then
+`m=n+1`, and `(7)` would say
 
 ```text
-3+2v_x(f_n)+2v_x(K_2f_n+xT_m),                             (16)
+(K_2+xh_1)f_n=0,                                          (16)
 ```
 
-which is odd.  Hence `(15)` is not a square in the UFD `k[x,y]`.  But the
-highest homogeneous form of a polynomial square must itself be a square.
-Therefore `(15)` must vanish.  Since `f_n!=0`, the domain property gives
-`(7)`.  Coprimality `gcd(x,K_2)=1` then proves `(8)`.
-
-## 4. Recursive interpretation and exact boundary
+where `h_1` is the leading linear form of `h`.  The first factor has `y^2`
+coefficient one and is nonzero, so the domain property gives a contradiction.
+Thus no nonconstant affine-slope lane contains a square survivor.  THM-3881's
+direct affine calculation is still needed for the nonzero constant-`f` edge;
+quadratic slopes start in the open region `m=n+2`.
 
 The THM-3881 gauge acts by
 
@@ -203,12 +225,18 @@ The theorem leaves two live regions:
 Constant `f`, alternate square/cube lifts, a Keller atlas, and JC(2) are also
 outside the claim.
 
+Characteristic three is a genuine boundary of this proof: there `L=1` and
+the load-bearing `f^4` cell vanishes.  No characteristic-three counterexample
+is asserted.
+
 Reproduce the exact packet with
 
 ```bash
 python3 04-computation/jc2_cusp_residual_total_degree_filtration_thm3884.py
 python3 -O 04-computation/jc2_cusp_residual_total_degree_filtration_thm3884.py
+python3 04-computation/jc2_cusp_residual_total_degree_filtration_independent_audit_thm3884.py
+python3 -O 04-computation/jc2_cusp_residual_total_degree_filtration_independent_audit_thm3884.py
 ```
 
-Both streams must byte-match
-`05-knowledge/results/jc2_cusp_residual_total_degree_filtration_thm3884.out`.
+Each normal/optimized pair must byte-match its frozen output in
+`05-knowledge/results/`.

@@ -9,8 +9,9 @@ status: >
   Delta-multiple ambiguity in its mixed lift, contracts exactly to a rank-two
   polynomial pair (T,f).  Its coefficient matrix has determinant Delta and
   its sidecars are L^2 f and P f^2-T^2.  The full theorem proves that
-  the full T=0 square lane has only f=0.  The general arbitrary-degree
-  equation, a Keller atlas, and JC(2) remain OPEN.
+  the full T=0 lane and every affine-slope lane T=hf with deg h<=1 have
+  the unique square survivor (T,f)=(0,0).  The general arbitrary-degree
+  equation, quadratic and higher slopes, a Keller atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3872 polynomial-coefficient lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS for Sections 1--6 and the original scope
@@ -18,10 +19,12 @@ audit: >
   realization, converse address parametrization, determinant uniqueness,
   both sidecars, transport, Mason arm, L square class, normal/-O replay, and
   frozen hashes all passed.  A focused follow-up audit rederived Section 7's
-  two factorizations, checked the strict degree gaps at `deg f=1`, the unique
-  nonzero odd-degree leading form, removal of `L^2` in the UFD, and the
-  constant edge.  Normal and optimized runs byte-match the amended 35-gate
-  output.
+  two factorizations, checked every constant/nonconstant edge without using
+  the address condition, and independently proved the affine-slope extension
+  `T=hf`, `deg h<=1`.  Its 52-gate audit and the 223-gate primary companion
+  pass normally and under `-O`, byte-match their frozen outputs, and isolate
+  characteristic three and `deg h=2` as proof boundaries rather than
+  counterexamples.
 depends_on:
   - THM-3854-integrated-three-cusp-quintic-s5-natural-completion-obstruction
   - THM-3869-three-cusp-square-residual-cardano-line-ramification
@@ -30,9 +33,19 @@ related:
   - THM-3874-three-cusp-quadratic-k3-affine-class-group
 script: 04-computation/jc2_cusp_ideal_residual_transport_matrix_factorization_thm3881.py
 output: 05-knowledge/results/jc2_cusp_ideal_residual_transport_matrix_factorization_thm3881.out
-script_sha256: cd82714cba56e22175a5c295a922baa3e4c6ab93129971edd2200b9037bf8183
+script_sha256: 0445ca182f8bf809b352f6ba31fd91ae1bfc84118e168cc44d7de1cf64e880ad
 output_sha256: b486419fc5047e279d56b89e8b22d56bb8840c641d5bc13a324358ff02071757
 semantic_sha256: 7e5ecbb745d9ac184eb602dbcd09bc84cc44847926d887148ace4984e34ceb87
+affine_script: 04-computation/jc2_cusp_residual_affine_slope_thm3881.py
+affine_output: 05-knowledge/results/jc2_cusp_residual_affine_slope_thm3881.out
+affine_script_sha256: 7966a6b010a85e2941e5ad7a36a54fcf2c7b3fcc78d69257fe972b636d80790e
+affine_output_sha256: 116dbf17d57098d32e88c49947d89a157f08af3c1be264fa5b421afa82f2f420
+affine_semantic_sha256: dcfd5de0a7eab5e173868bec8de0ec10b9557a2794ad2cded04d6a069a5d12c7
+affine_independent_script: 04-computation/jc2_cusp_residual_affine_slope_independent_audit_thm3881.py
+affine_independent_output: 05-knowledge/results/jc2_cusp_residual_affine_slope_independent_audit_thm3881.out
+affine_independent_script_sha256: bd8b5fb4e3de70f18e57fed84a3ee6f7ded77511cf989e850e33ebc835b6a182
+affine_independent_output_sha256: daf1dc441798e761385c5cc791d0fc3703fc54f03b467b51b3d332b5e5c3cdcd
+affine_independent_semantic_sha256: dac48c5176e15c79596f6319609d8bfbc94425a049d1fd2f51a9c49256fdce5c
 hash_basis: raw LF bytes
 ---
 
@@ -313,11 +326,10 @@ Since `k[y]` is a UFD and `k` is algebraically closed, a square survivor must
 have `q(-4/9,y)=0` or `q(-4/9,y)` itself a square.  Conditions `(26),(29)` do
 not yet close the case `q=aq_1`; that branch remains part of `(22)`.
 
-## 7. The full `T=0` lane is empty
+## 7. The full `T=0` lane has one square survivor
 
 There is also an all-degree consequence not visible in the constant slice.
-Set `T=0`.  The address condition `(14)` forces `f(0,0)=0`, while `(13)`
-becomes
+Set `T=0`; then `(13)` becomes
 
 ```text
 r=Kf,                         A=aPf.                       (30)
@@ -332,9 +344,8 @@ H_f=L^2(1+af)^3(1+3af)-Delta f^3(2+3af)
    =L^2(1+2af)^3+K^2f^3(2+3af).                          (31)
 ```
 
-If `S(0,f)` is a square in `D`, then `H_f` is a square because `L^2` already
-is one.  Suppose `f` is nonconstant of total degree `n>=1`.  In the second
-form of `(31)`, the term
+Suppose `f` is nonconstant of total degree `n>=1`.  In the second form of
+`(31)`, the term
 
 ```text
 3aK^2f^4                                                     (32)
@@ -343,40 +354,100 @@ form of `(31)`, the term
 has degree exactly `4n+5`.  It is the unique term of that degree: the full
 first summand has degree at most `3n+5`, and the remaining term `2K^2f^3`
 has degree `3n+4`.  Since `n>=1`, both bounds are strictly below `4n+5`.
-The leading form in `(32)` is nonzero in the domain `D`, so
+Its leading form is
 
 ```text
-deg H_f=4n+5,                                               (33)
+3x(y^2-15x^2)^2 f_n^4,
 ```
 
-which is odd.  A nonzero polynomial square has even total degree.  This is a
-contradiction.
+which is nonzero in the domain `D`.  Thus `deg H_f=4n+5` is odd, so `H_f`
+and equivalently `S(0,f)=L^2H_f` cannot be squares.
 
-If `n=0`, then `f` is constant, and the address condition `f(0,0)=0` forces
-`f=0`.  Therefore the full lane closes:
+The address condition is not needed at the constant edge.  If `f=c!=0`, the
+degree-five homogeneous part of `H_c` is
 
 ```text
-T=0 and S(T,f) square  ==>  f=0.                           (34)
+648c^3x^5+3c^4x(y^2-15x^2)^2.                             (33)
 ```
 
-No residual `f=Delta h` case remains.
+Its `xy^4` coefficient is `3c^4`, so it is nonzero and `deg H_c=5`.
+Finally `f=0` gives `H_f=L^2` and `S(0,0)=L^4`.  Hence
 
-## 8. Exact scope
+```text
+S(0,f) is a square  iff  f=0.                              (34)
+```
+
+This degree proof works over every integral-domain coefficient ring of
+characteristic different from three.  No algebraic closure or UFD
+factorization is needed.  Characteristic three is a genuine boundary of this
+argument: the displayed top coefficients vanish, but no characteristic-three
+square counterexample is claimed.
+
+## 8. Every affine-slope lane `T=hf`, `deg h<=1`, closes
+
+Let `h` be affine-linear and set
+
+```text
+T=hf,       R=ah+K,       M=Kh+aP,       N=P-h^2.          (35)
+```
+
+Then `r=Rf`, `A=Mf`, and exact expansion of `(21)` gives
+
+```text
+S(hf,f)=L^4+6PL^2f+6(ML^2+PN)f^2
+        +2(R^2L^2+4MN)f^3+3R^2Nf^4.                       (36)
+```
+
+Write `h=h_1+h_0`, with `h_1` homogeneous linear, and put
+`K_2=y^2-15x^2`.  The load-bearing leading forms are
+
+```text
+R_2=K_2+xh_1,          N_3=81x^3,          M_4=81x^4.     (37)
+```
+
+The coefficient rows of `f,f^2,f^3,f^4` in `(36)` have degrees at most
+`5,6,7,7`.  Since the `y^2` coefficient of `R_2` is one, none of the
+load-bearing forms can vanish.  If `deg f=n>=1`, the unique leading form is
+
+```text
+243x^3(K_2+xh_1)^2 f_n^4,                                 (38)
+```
+
+of odd degree `4n+7`; the lower rows have degrees at most
+`3n+7,2n+6,n+5,4`.  If `f=c!=0`, the two tied degree-seven rows have
+`x^3y^4` coefficient `243c^4`, so they cannot cancel.  Conversely `f=0`
+forces `T=0` and gives `S=L^4`.  Therefore, without any address condition,
+
+```text
+deg h<=1 and T=hf:
+S(T,f) is a square  iff  (T,f)=(0,0).                      (39)
+```
+
+This applies a fortiori to the address module `E`.  At `deg h=2` the `f^4`
+coefficient has degree ten rather than seven, so this odd-degree mechanism
+stops.  That is a proof-boundary witness, not a square solution.
+
+## 9. Exact scope
 
 This theorem proves the universal identity, the complete presentation of all
 coefficient and lift choices, the matrix factorization, the norm sidecars,
-the pure-gauge arm obstruction, and the complete `T=0` closure.  It does
-**not** prove that `(22)` has no higher-degree solutions.  In particular,
-pairs with `T!=0`, pairs with `q=aq_1`, alternate square/cube lifts outside
-the displayed additive grammar, a polynomial-plane Keller atlas, and JC(2)
-remain **OPEN**.
+the pure-gauge arm obstruction, the complete `T=0` closure, and every
+affine-slope lane `T=hf` with `deg h<=1`.  It does **not** prove that `(22)`
+has no higher-degree solutions.  In particular, arbitrary pairs with
+`T!=0`, quadratic and higher slopes, pairs with `q=aq_1`, alternate
+square/cube lifts outside the displayed additive grammar, a polynomial-plane
+Keller atlas, and JC(2) remain **OPEN**.
 
 Reproduce the exact packet with
 
 ```bash
 python3 04-computation/jc2_cusp_ideal_residual_transport_matrix_factorization_thm3881.py
 python3 -O 04-computation/jc2_cusp_ideal_residual_transport_matrix_factorization_thm3881.py
+python3 04-computation/jc2_cusp_residual_affine_slope_thm3881.py
+python3 -O 04-computation/jc2_cusp_residual_affine_slope_thm3881.py
+python3 04-computation/jc2_cusp_residual_affine_slope_independent_audit_thm3881.py
+python3 -O 04-computation/jc2_cusp_residual_affine_slope_independent_audit_thm3881.py
 ```
 
-Both runs must byte-match
-`05-knowledge/results/jc2_cusp_ideal_residual_transport_matrix_factorization_thm3881.out`.
+Each normal/optimized pair must byte-match the corresponding frozen output in
+`05-knowledge/results/`.

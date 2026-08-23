@@ -1,0 +1,14 @@
+THM3884_INDEPENDENT_HOSTILE_AUDIT_20260823
+verdict=PASS_WITH_STRICT_SCOPE_AND_PORTABILITY_CORRECTION
+coefficient_degree_cells=14;independent_sparse_Z_expansion=PASS
+degree_floor=nonconstant_square_implies_degT_at_least_degf_plus_1
+equality_factor=243*x^3*f_n^2*(K2*f_n+x*T_m)^2
+equality_kernel=f_n=x*q;T_m=-K2*q
+kernel_rows=((1, 4, 1), (12, 15, 12))
+prime_rows=((2, 4, 7, 5), (5, 14, 7, 5), (7, 14, 7, 5), (11, 14, 7, 5), (13, 14, 7, 5))
+scope_extension=integral_domains_characteristic_not_3
+affine_corollary=nonconstant_deg_h_at_most_1_closed;constant_f_requires_direct_edge
+gauge_invariance_or_termination=NOT_CLAIMED
+semantic_sha256=f682161d1510c758bc5a978c11a89d55e402fd488d5930d1c0f93c4f4dbb7293
+gates=408
+ALL CHECKS PASSED

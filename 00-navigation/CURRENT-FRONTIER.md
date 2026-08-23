@@ -266,12 +266,10 @@ THM-3359 gives periodic modular supports; THM-2352 gives the q-adic plateau.
 [THM-3510](../01-canon/theorems/THM-3510-binary-shortlex-equal-level-count-log-density-boundary.md) is sharp: equal counts allow two densities or none.
 [THM-3730](../01-canon/theorems/THM-3730-positive-distinct-two-cube-support-abscissa.md)
 gives indexed abscissa `2/3`.  THM-3793/3825 give an inert-scale singleton
-family and decoder. Fixed inert-prime product orders make `H` dominate every
-fixed power of `log log X`; varying one order gives exponent `1/2`.  The
-independently audited mesoscopic sum through `J_+` is quantitative:
-`liminf H(X)sqrt(log log X)/sqrt(log X)` is at least
-`(7/20)e^(-C_P)sqrt(2/3)=5.191674379270439...e-4`.  This is still no support
-asymptotic or residue.
+family and decoder. Fixed orders beat every power of `log log X`; Williams'
+fixed-modulus Mertens theorem plus the exact Bernoulli layer normalization gives
+`liminf H(X)sqrt(log log X)/sqrt(log X)>=0.25659588...`.  This is still no
+support asymptotic or residue.
 
 ### Established landmarks
 
@@ -334,8 +332,8 @@ asymptotic or residue.
   excludes finite-spatial cycles. THM-3804 gives all Smith forms; THM-3824
   gives fixed-division and one-shell parity tariffs, same-scale separation,
   and the all-shell stabilizer as the response kernel (zero at odd core).  A
-  The finite routed-query audit recovers the next `(0,1,2)` bank from two
-  necessary off-ray chains.  THM-3511's audited all-depth addendum proves
+  The routed-query audit recovers `(0,1,2)` from two necessary off-ray chains.
+  THM-3511's all-depth addendum proves
   ambient active words send every even ray onto the odd half, so the least
   literal two-stage bank has `2^(D+B-1)+B+2` points (`134/256` at `D=B=4`).
   Bounded physical recursion, adaptive/projective chronology and every prize
@@ -353,17 +351,16 @@ asymptotic or residue.
   polynomial transverse quotients; THM-3870 closes vertical/reverse graphs,
   and THM-3873/3876 classify the first parabola and every two-exponent
   monomial descent (`M<=2`).  THM-3880 closes node/A2 marked-root descent;
-  THM-3883 gives the arbitrary reduced-curve iff: sign above `A=0`, common
-  nonzero root residues, and `z^3` descent at zero roots.  Existence of the
-  normalization root and the other discriminant components remain open.
+  THM-3883's arbitrary reduced-curve iff retains `A=0` sign, common nonzero
+  residues and zero-root `z^3`.  Root existence and other components are open.
   THM-3851 is a unit-rich torus.  For THM-3854's one-place three-cusp front,
-  THM-3864/3872 close the constant cusp-ideal span; THM-3881 contracts all
-  polynomial coefficients and gauges to a rank-two norm and closes `T=0`.
-  Audit-pending THM-3884 forces `deg T>=deg f+1` and a leading gauge at
-  equality; THM-3885's `f=0` lane is only reserved.  THM-3869 pays one Cardano
-  line; THM-3874/3877 exclude low-degree sole-simple-branch fields.  THM-3879
-  recovers `C3` but costs two places, and THM-3882 forbids one-place charts
-  throughout the `6A2+4A1` sextic packet.
+  THM-3864/3872 close constants; THM-3881 contracts all coefficients/gauges
+  to a rank-two norm and closes `T=0` plus `T=hf`, `deg h<=1`.  Audited
+  THM-3884 forces `deg T>=deg f+1` with leading gauge at equality; THM-3885
+  `f=0` is reserved.
+  THM-3874/3877 exclude low-degree sole-simple-branch fields.  THM-3879
+  recovers `C3` at two places; THM-3882 forces the smooth-conic boundary for
+  every immersed one-place dual and forbids one-place `6A2+4A1` charts.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a

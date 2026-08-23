@@ -1,14 +1,16 @@
 ---
 id: THM-3882
-title: "Rational-dual one-place Wronskian projection criterion"
+title: "Immersed-dual one-place Wronskian projection criterion"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For
-  an everywhere-immersed rational plane curve, a line section of its dual
+  an everywhere-immersed plane normalization of arbitrary genus, a line section of its dual
   has divisor twice the base fibre of the corresponding point projection
   plus that projection's ramification divisor.  One-point support occurs
-  exactly when the projection has degree one and its base fibre is a single
-  point of multiplicity d-1.  Immersion therefore forbids one-place lines
-  for every primal degree d>=3.  Consequently no irreducible sextic with
+  exactly when genus zero is forced, the projection has degree one, and its
+  base fibre is a single point of multiplicity d-1.  Immersion therefore
+  leaves only the smooth-conic boundary.  Without immersion the exact reduced
+  formula subtracts the common tangent-base divisor, and a sharp family shows
+  one-place lines in every degree.  Consequently no irreducible sextic with
   exactly six A2 cusps and four A1 nodes has an affine chart with A1
   normalization.  This closes an equisingularity architecture, not JC(2).
 source: root / post-THM-3879 dual-Wronskian reframe, 2026-08-23
@@ -24,7 +26,11 @@ audit: >
   projection degree, and checks the local immersion boundary.  The exact
   companion verifies the Wronskian factorization, every degree ledger through
   d=40, the Pluecker packet, and the THM-3879 node/projection specialization.
-  Normal and optimized runs byte-match the frozen transcript.
+  Normal and optimized runs byte-match the frozen transcript.  A second,
+  import-independent 25,899-gate audit proves the arbitrary-genus extension,
+  the corrected nonimmersed formula `2D+Ram-E_nu`, the all-degree sharp
+  hostile, and a separate degree/reflexivity check of dual immersion.  Its
+  normal and optimized streams also byte-match the frozen output.
 depends_on:
   - THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff
 related:
@@ -35,43 +41,49 @@ output: 05-knowledge/results/jc2_rational_dual_one_place_wronskian_projection_cr
 script_sha256: 94374be74db4c08049d18a06316f53a342b20340bdd3dcdee12d1810bb060854
 output_sha256: 8c9fa0ede45e359ea08a928506ba227662ce32d8825c9b9f1cc3d392f0d6438b
 semantic_sha256: 6452278a5afd71f244134a6871e247195c6af4f80f641c1b05c7f6b6dd6b8fc2
+second_independent_script: 04-computation/jc2_rational_dual_one_place_wronskian_second_independent_audit_thm3882.py
+second_independent_output: 05-knowledge/results/jc2_rational_dual_one_place_wronskian_second_independent_audit_thm3882.out
+second_independent_script_sha256: d4de70e66c98d7e342adddc77d0c4461e04ee638de2fe272732b34c4f79a4943
+second_independent_output_sha256: 47dedac2d6b134eaf03419261c36aadd60b90384496ee54557a3082cd7a58ce9
+second_independent_semantic_sha256: f577f0ff2345f79c0ac654713fa0325376def81ea79c7857a75f37777bae7b5f
 hash_basis: raw LF bytes
 ---
 
-# THM-3882 -- a one-place dual line is a degree-one projection
+# THM-3882 -- an immersed one-place dual line is a degree-one projection
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Let
 
 ```text
-nu:P1 -> C subset P2                                           (1)
+nu:X -> C subset P2                                           (1)
 ```
 
-be the normalization of a nonlinear rational plane curve of degree `d>=2`.
-Assume that `nu` is an immersion at every normalization point.  Let
-`nu_dual:P1 -> C_dual` be the tangent-line map.
+be the normalization of an irreducible nonlinear plane curve of degree
+`d>=2`, where the smooth projective curve `X` has genus `q`.  Assume that
+`nu` is an immersion at every normalization point, and write
+`nu_dual:X -> C_dual` for its tangent-line map.
 
 For a point `P in P2`, write `H_P` for the line in the dual plane whose
 points are the lines through `P`.  Choose two independent linear forms
-`L_0,L_1` vanishing at `P`.  Their pullbacks are degree-`d` binary forms.
-Factor their complete common base divisor:
+`L_0,L_1` vanishing at `P`.  Their pullbacks are sections of
+`L=nu^*O_P2(1)`.  Factor their complete common base divisor:
 
 ```text
-L_0 o nu = g x,              L_1 o nu = g y,
-D_P=div(g),                  m=deg D_P,
-gcd(x,y)=1,                  e=d-m.                            (2)
+L_0 o nu = h x,              L_1 o nu = h y,
+D_P=div(h),                  m=deg D_P,
+e=deg L(-D_P)=d-m.                                           (2)
 ```
 
 Then `[x:y]` is the resolved projection from `P`, a morphism
 
 ```text
-phi_P:P1 -> P1                     of degree e,                (3)
+phi_P:X -> P1                        of degree e,              (3)
 ```
 
 and the exact divisor identity is
 
 ```text
-(nu_dual)^* H_P = 2D_P + Ram(phi_P).                           (4)
+(nu_dual)^* H_P = 2D_P + Ram(phi_P).                          (4)
 ```
 
 In particular,
@@ -79,13 +91,14 @@ In particular,
 ```text
 supp((nu_dual)^*H_P)={p}
 iff
-D_P=(d-1)p and deg(phi_P)=1.                                  (5)
+q=0,  D_P=(d-1)p,  and deg(phi_P)=1.                          (5)
 ```
 
 Because `nu` is immersive, a base fibre supported at one point has
-coefficient one there.  Thus `(5)` can occur only for `d=2`.  For every
-`d>=3`, every line on the dual curve meets its normalization in at least two
-support points.
+coefficient one there.  Thus `(5)` forces `d=2`: one-place support itself
+forces rationality, and the smooth conic is the unique positive boundary.
+For every immersed plane normalization of degree `d>=3`, every line on the
+dual curve meets its normalization in at least two support points.
 
 ## 1. A dual line is a projection Wronskian
 
@@ -97,10 +110,11 @@ parameter `t`, its pullback is therefore the Wronskian
 W_P=X Y'-Y X'.                                                 (6)
 ```
 
-With `X=gx` and `Y=gy`, the derivative of `g` cancels exactly:
+In a local trivialization write `X=hx` and `Y=hy`.  The derivative of `h`
+cancels exactly:
 
 ```text
-W(gx,gy)=g^2 W(x,y).                                          (7)
+W(hx,hy)=h^2 W(x,y).                                          (7)
 ```
 
 The zero divisor of the coprime Wronskian `W(x,y)` is precisely the
@@ -109,33 +123,32 @@ globally.  It also explains the otherwise easy-to-miss factor two on the
 fibre over `P`.
 
 Immersion is the exact hypothesis which prevents a further cancellation.
-The three tangent coordinates have degree `2d-2`; at a nonimmersed
-normalization address they acquire a common factor, and the reduced dual
-map divides it out.  No such common tangent factor exists here.
+The three tangent coordinates are sections of `L^2 tensor K_X`; at a
+nonimmersed normalization address they acquire a common factor, and the
+reduced dual map divides it out.  No such common tangent factor exists here.
 
 The degree ledger is consequently
 
 ```text
 deg(2D_P)+deg Ram(phi_P)
- =2m+(2e-2)
- =2d-2
+ =2m+(2e+2q-2)
+ =2d+2q-2
  =deg (nu_dual)^*H_P.                                        (8)
 ```
 
 ## 2. Riemann--Hurwitz makes the criterion exact
 
 Suppose the left side of `(5)` is supported at one point `p`.  Both effective
-summands in `(4)` must then be supported at `p`.  If `e>=2`, Riemann--Hurwitz
-gives
+summands in `(4)` must then be supported at `p`.  Riemann--Hurwitz gives
 
 ```text
-deg Ram(phi_P)=2e-2,                                          (9)
+deg Ram(phi_P)=2e+2q-2,                                       (9)
 ```
 
-whereas the ramification coefficient at one point is at most `e-1`.  Since
-`2e-2>e-1`, a degree-`e` self-map of `P1` cannot have all its ramification at
-one point.  Hence `e=1`, the ramification divisor vanishes, and `(2)` gives
-`m=d-1`.  The support assumption then says `D_P=(d-1)p`.
+whereas the ramification coefficient at one point is at most `e-1`.  Hence
+`2e+2q-2<=e-1`, or `e+2q-1<=0`.  With `e>=1` and `q>=0`, the unique possibility
+is `(q,e)=(0,1)`.  The ramification divisor vanishes, `(2)` gives `m=d-1`,
+and the support assumption says `D_P=(d-1)p`.
 
 Conversely, if `D_P=(d-1)p`, then `e=1`, so `(4)` is simply
 
@@ -143,7 +156,8 @@ Conversely, if `D_P=(d-1)p`, then `e=1`, so `(4)` is simply
 (nu_dual)^*H_P=2(d-1)p.                                      (10)
 ```
 
-This proves `(5)`.  Finally, when the fibre of `nu` over `P` has only the
+This proves `(5)`, including the fact that rationality is a conclusion rather
+than a hypothesis.  Finally, when the fibre of `nu` over `P` has only the
 address `p`, immersion says that at least one of the two local coordinates
 through `P` has a nonzero first derivative.  Thus the common vanishing order
 in `(2)` is one.  Equality `d-1=1` forces `d=2`.  The conic/tangent-line case
@@ -203,7 +217,46 @@ exactly the pullback `2S^3T^3` found in THM-3879.  The line's two-place
 optimality is therefore not an accidental sparse coefficient pattern: its
 two node branches each carry one base unit twice and one ramification unit.
 
-## 5. Counterexample-search consequence and scope
+## 5. Exact nonimmersion correction and sharp boundary
+
+If `nu` is only generically immersive, let `E_nu` be the common base divisor
+of its three unreduced tangent coordinates.  Cancelling that divisor to form
+the reduced dual map changes `(4)` to the exact identity
+
+```text
+(nu_dual,reduced)^*H_P=2D_P+Ram(phi_P)-E_nu.               (16)
+```
+
+The subtraction is effective coordinatewise because `E_nu` divides every
+tangent coordinate.  Thus the immersion hypothesis is structural, not a
+technical convenience.  It has a sharp hostile in every degree.  For `d>=2`,
+put
+
+```text
+nu_d([S:T])=[S T^(d-1):T^d:S^d].                           (17)
+```
+
+This map is birational onto a degree-`d` curve because `X/Y=S/T` on the dense
+torus.  Its raw tangent coordinates are
+
+```text
+(-d^2 S^(d-1)T^(d-1), d(d-1)S^dT^(d-2), dT^(2d-2)).       (18)
+```
+
+They share `T^(d-2)`.  After cancellation, the third coordinate is `dT^d`,
+so its corresponding dual line is supported at one address.  The divisor
+ledger is
+
+```text
+D_P=(d-1)[T=0],  Ram(phi_P)=0,  E_nu=(d-2)[T=0],
+2D_P+Ram-E_nu=d[T=0].                                      (19)
+```
+
+The local branch `[u^(d-1):u^d:1]` is immersive only for `d=2`; for every
+`d>=3` this is exactly the forbidden nonimmersion.  Formula `(16)`, rather
+than `(4)`, is therefore the correct boundary statement.
+
+## 6. Counterexample-search consequence and scope
 
 This theorem constructs no Keller map and proves no case of `JC(2)`.  It
 does remove a full geometric architecture from the search: varying the
@@ -213,7 +266,7 @@ never repair the one-place defect.
 There are now only three honest ways around this obstruction:
 
 1. make the primal normalization nonimmersive, so a common tangent factor is
-   cancelled from `(7)`;
+   cancelled as in `(16)`;
 2. change the dual/singularity packet, necessarily paying a different
    Pluecker and Cardano divisor ledger; or
 3. abandon the dual construction and build the one-place branch directly.
@@ -226,6 +279,8 @@ Run
 ```text
 python3 04-computation/jc2_rational_dual_one_place_wronskian_projection_criterion_thm3882.py
 python3 -O 04-computation/jc2_rational_dual_one_place_wronskian_projection_criterion_thm3882.py
+python3 04-computation/jc2_rational_dual_one_place_wronskian_second_independent_audit_thm3882.py
+python3 -O 04-computation/jc2_rational_dual_one_place_wronskian_second_independent_audit_thm3882.py
 ```
 
-and compare both streams byte-for-byte with the frozen output.
+and compare each normal/optimized pair byte-for-byte with its frozen output.
