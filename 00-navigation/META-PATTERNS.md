@@ -135,7 +135,7 @@ current fills every cell and every admissible parabolic sector.
 
 ## Test a clutch on isotypic blocks, not by holonomy alone
 
-**Trigger/action:** for a proposed gain/Cech repair, write invariant `Pi`, charged `Q`, and compute `Q C Pi`; central or arm-blind holonomy can twist a line while this block stays zero, so seek unequal marked-arm gain or a lawful reference swap. **Boundary:** scalar clutching may orient existing charge, not create it. **Evidence:** THM-2750's `C3` gate and repairs, THM-2743/2746's marked `S4`/`A4` models, and THM-2749's auxiliary `C13` unit.
+**Trigger/action:** for a proposed gain/Cech repair, write invariant `Pi`, charged `Q`, and compute `Q C Pi`; central or arm-blind holonomy can twist a line while this block stays zero, so seek unequal marked-arm gain or a lawful reference swap. **Boundary:** scalar clutching may orient existing charge; it cannot create charge from the invariant sector. **Evidence:** THM-2750's `C3` gate and repairs, THM-2743/2746's marked `S4`/`A4` models, and THM-2749's auxiliary `C13` unit.
 
 ## The same representation is not the same carrier
 
@@ -284,9 +284,9 @@ generators on the object and its dual.  Before ranking `e(n)` as `n`, pull each
 generator through the rank and label it affine, polynomial, finite-state,
 decoding-dependent, or not closed. **Mechanism:** a pulled-back law makes the
 rank structural; otherwise the ordinal is only a scheduler.
-**Counterindication/evidence:** if the operation exits the carrier or the
-target needs gaps, weights, ancestry, cancellation, or fibre components, keep
-the native value and a sidecar.  THM-3756,
+**Counterindication/evidence:** if the operation exits the carrier or the rank
+makes needed gaps, weights, ancestry, cancellation, or fibre components
+nonlocal or unrecoverable, retain a decoder and those coordinates as sidecars.  THM-3756,
 `odd-square-ordinal-berggren-affine-descent`, THM-3382,
 `fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses`,
 and THM-3758, `quadratic-radial-carrier-rational-exact-split-fibre-nonentry`,

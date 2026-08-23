@@ -428,18 +428,19 @@ Two proved, independently audited JC near-misses arrived on `origin/main`
 during this session.  They do not identify JC objects with Pythagorean ones;
 they test the same quotient discipline on different native operations.
 
-| incoming proof | proposed natural coordinate | preserved predicate / operation | destroyed information | required sidecar / cheapest hostile |
+| incoming proof | candidate scalar / natural coordinate | preserved predicate / operation | destroyed information | required sidecar / cheapest hostile |
 |---|---|---|---|---|
 | THM-3757, `pell-chebyshev-three-charge-hyperelliptic-obstruction-tower` | Chebyshev construction depth `n` | order in the tower and the recurrence-driven Pell/transport construction | the actual profile divisor, generic-fibre degree/genus, and the class of `dz/Y` | retain `(psi_n,Delta_n,div(dz/Y))`; compare the two nonzero residues at `n=1` with the nonzero holomorphic class at `n>=2` |
-| THM-3758, `quadratic-radial-carrier-rational-exact-split-fibre-nonentry` | target value `L=Q`, or an ordinal assigned to target fibres | the fixed-`L` Hamiltonian derivative and complete rational primitive torsor | the two components of `Q=0` and the sign of the primitive's principal part on each | retain the component-labelled principal-part vector; the exact hostile is `(-c a0/(2a1),+c a0/(2a1))`, while a target-only correction adds the same entry to both |
+| THM-3758, `quadratic-radial-carrier-rational-exact-split-fibre-nonentry` | scalar quotient `L=Q`; no lawful natural rank yet, though oriented exceptional components can be numbered | the fixed-`L` Hamiltonian derivative and complete rational primitive torsor | the two components of `Q=0`, their principal-part coefficients, and the action of correction channels | retain the component-labelled principal-part vector; the exact hostile is `(-c a0/(2a1),+c a0/(2a1))`, while a target-only correction adds the same entry to both |
 
 The first row says that `n` is a lawful construction scheduler, but not an
 obstruction invariant: the obstruction changes type between depth one and
 the positive-genus tail.  The second is a sharper quotient failure.  Generic
 fibre integration survives scalarization by `L`, yet global polynomial
-regularity lives in a signed fibre over one value.  Merely ranking those two
-components `1,2` still loses the sign; the component ordinal must carry a
-divisor coefficient.
+regularity lives in a signed fibre over one value, so no natural rank follows
+from `L` alone.  With an orientation fixed, numbering its components `1,2`
+need not lose sign; it still omits each principal-part coefficient and the
+available correction action, which must travel as sidecars.
 
 ## Procedural task generator
 
