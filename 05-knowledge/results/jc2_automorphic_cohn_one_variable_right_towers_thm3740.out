@@ -1,0 +1,9 @@
+theorem=THM-3740-automorphic-Cohn-one-variable-right-shear-towers
+scope=all_depths_r>=1;compatible_lower_Eplus_and_upper_Eminus_exposures
+sharp_gate=lower_forces_v_X=0;upper_forces_u_T=0
+transport=Y=X+B(T)_and_V=T+C(X)_with_unique_triangular_ODEs
+inheritance=source_automorphic_images_of_THM3734;no_polynomial_mates
+tested_depths=1..8;hostile_systems=120;exceptional_systems=48
+semantic_sha256=e3fc3fd4f99bda017d984a968d2d543d8292f779a0745a99681285cdb7b01cff
+CHECKS=1147
+RESULT=PASS

@@ -2,7 +2,7 @@
 id: THM-3738
 title: "Opposite-charge radial-profile critical-point obstruction"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.  Over an algebraically
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over an algebraically
   closed characteristic-zero field, let phi(0)psi(0) be nonzero.  The
   polynomial Q=X phi(XT)+T psi(XT) has no critical point if and only if phi
   and psi are both constant.  Thus every genuinely nonlinear mixture of the
@@ -12,10 +12,11 @@ status: >
   point, including unequal depths.  The proof is uniform in both degrees.
 source: root + jc_sparse_direct_search / 2026-08-22
 audit: >
-  PENDING.  The depth-one resultant was independently derived before the
-  all-degree eliminant/gcd proof.  A final hostile audit of the written
-  degenerate-root argument, field assumptions, scope boundary, hashes, and
-  transcript is still required.
+  PASS.  An independent audit rederived both partial derivatives, the torus
+  matrix and its determinant, the degree/gcd and root-multiplicity count, the
+  nonaxis kernel and common scaling, the Nullstellensatz/field scope, and the
+  unequal-depth THM-3734 consequence.  Normal, optimized, and frozen output
+  agree; script/output/semantic hashes and CHECKS=2580 match.
 depends_on: []
 related:
   - THM-3716-monomial-broughton-hamiltonian-obstruction-family
@@ -31,7 +32,7 @@ hash_basis: raw LF bytes
 
 # THM-3738 -- opposite radial charges cannot be mixed smoothly
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.**  THM-3734 exposes
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  THM-3734 exposes
 two large families of nonsingular noncoordinate polynomials carrying charges
 `+1` and `-1`.  The most direct counterexample design is to superpose the two
 charges, hoping that their Hamiltonian top edges cancel.  They do not reach
@@ -121,7 +122,11 @@ leading coefficient is `(n+1)lead(P)`.  Therefore
 deg[C/gcd(C,P)]=s>=1.                                 (10)
 ```
 
-Over the algebraically closed field, `(10)` has a root `z_0` for which
+More precisely, if `alpha!=0` is a root of `P` of multiplicity `m`, then
+`ord_alpha(C)=m-1`: in `C=P+zP'`, the second summand has that exact order and
+cannot cancel with the first.  Hence division by `gcd(C,P)` removes every
+root lying on `P`.  Over the algebraically closed field, the positive-degree
+quotient in `(10)` therefore has a root `z_0` for which
 
 ```text
 C(z_0)=0,                         P(z_0)!=0.            (11)
