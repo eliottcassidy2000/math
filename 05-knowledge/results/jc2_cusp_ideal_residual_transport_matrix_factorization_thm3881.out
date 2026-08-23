@@ -5,8 +5,8 @@ contracted_pair_rank=2;matrix_determinant=delta
 sidecars=C=L^2*f;B=P*f^2-T^2
 delta_lift_gauge=(T,f)+(K,-a)*q
 pure_gauge_survivor_requires=a_divides_q
-T_zero_square_survivor_requires=delta_divides_f
+T_zero_square_survivor_requires=f_zero
 arbitrary_polynomial_coefficient_square_equation=OPEN
-semantic_sha256=caf4c90420a069eb6e8ef6d55439d888e31e636818d885821e32373af7c78a4a
-CHECKS=39
+semantic_sha256=7e5ecbb745d9ac184eb602dbcd09bc84cc44847926d887148ace4984e34ceb87
+CHECKS=35
 RESULT=PASS

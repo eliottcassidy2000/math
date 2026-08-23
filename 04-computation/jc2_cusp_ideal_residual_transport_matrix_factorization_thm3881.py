@@ -199,8 +199,8 @@ zero(
 )
 
 
-# The entire T=0 lane has a branch-factor form.  The theorem combines this
-# identity with the normalization UFD and a constant Pell factorization.
+# The entire T=0 lane has two equivalent branch-factor forms.  The second has
+# a unique odd-degree top term for every nonconstant F.
 F = sp.symbols("F")
 r_F = K * F
 A_F = a * P * F
@@ -213,29 +213,19 @@ T_zero_inner = sp.expand(
     L**2 * (1 + a * F) ** 3 * (1 + 3 * a * F)
     - delta * F**3 * (2 + 3 * a * F)
 )
+T_zero_inner_degree_form = sp.expand(
+    L**2 * (1 + 2 * a * F) ** 3
+    + K**2 * F**3 * (2 + 3 * a * F)
+)
 zero(T_zero_residual - L**2 * T_zero_inner,
      "T-zero branch-factor residual")
+zero(T_zero_inner - T_zero_inner_degree_form,
+     "T-zero odd-degree factor form")
 zero(
     (P + 2 * A_F + r_F**2) ** 3
     - (Q + 3 * r_F * P + 3 * r_F * A_F + r_F**3) ** 2
     - delta * T_zero_residual,
     "T-zero direct residual reconstruction",
-)
-z, U, V = sp.symbols("z U V")
-zero(3 * (1 + z) - (1 + 3 * z) - 2,
-     "T-zero coprime-factor Bezout constant")
-zero((V - sp.sqrt(3) * U) * (V + sp.sqrt(3) * U) - (V**2 - 3 * U**2),
-     "T-zero Pell factorization")
-zero(delta.subs(x, -1) + (y**2 - 4) ** 2,
-     "delta is not divisible by a")
-t_norm = sp.symbols("t_norm")
-x_norm = t_norm**4 - 2 * t_norm**2
-y_norm = 3 * t_norm**5 - 5 * t_norm**3
-zero(delta.subs({x: x_norm, y: y_norm}), "normalization lies on delta")
-gate(
-    (x_norm.subs(t_norm, 0), y_norm.subs(t_norm, 0), a.subs(x, x_norm).subs(t_norm, 0))
-    == (0, 0, 1),
-    "T-zero address fixes z at zero",
 )
 
 
@@ -246,7 +236,7 @@ semantic = {
     "matrix": "[[a,K],[K,aP]] has determinant delta",
     "sidecars": "C=L2f;B=Pf2-T2",
     "gauge": "(T,f)->(T+Kq,f-aq);r fixed;A->A-delta*q",
-    "T_zero": "square survivor forces delta divides f by branch Pell factorization",
+    "T_zero": "odd total degree forces every square survivor to have f=0",
     "scope": "arbitrary polynomial T,f quartic square equation remains open",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
@@ -264,7 +254,7 @@ print("contracted_pair_rank=2;matrix_determinant=delta")
 print("sidecars=C=L^2*f;B=P*f^2-T^2")
 print("delta_lift_gauge=(T,f)+(K,-a)*q")
 print("pure_gauge_survivor_requires=a_divides_q")
-print("T_zero_square_survivor_requires=delta_divides_f")
+print("T_zero_square_survivor_requires=f_zero")
 print("arbitrary_polynomial_coefficient_square_equation=OPEN")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")

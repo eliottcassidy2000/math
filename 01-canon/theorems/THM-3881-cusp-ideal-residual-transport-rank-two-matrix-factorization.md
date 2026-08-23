@@ -10,7 +10,7 @@ status: >
   Delta-multiple ambiguity in its mixed lift, contracts exactly to a rank-two
   polynomial pair (T,f).  Its coefficient matrix has determinant Delta and
   its sidecars are L^2 f and P f^2-T^2.  The provisional extension proves that
-  on T=0 every square survivor has Delta|f.  The general arbitrary-degree
+  the full T=0 square lane has only f=0.  The general arbitrary-degree
   equation, a Keller atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3872 polynomial-coefficient lane, 2026-08-23
 audit: >
@@ -19,10 +19,10 @@ audit: >
   realization, converse address parametrization, determinant uniqueness,
   both sidecars, transport, Mason arm, L square class, normal/-O replay, and
   frozen hashes all passed.  Section 7 is a later PROVISIONAL strengthening:
-  the companion now verifies its T=0 branch/Pell factorization in a total of
-  39 active gates, but an independent focused audit must still recheck the
-  normalization-UFD proof that Delta|f.  Normal and optimized runs must
-  byte-match the amended frozen output.
+  the companion now verifies two equivalent T=0 factorizations in a total of
+  35 active gates, but an independent focused audit must still recheck the
+  unique odd-degree top term and the constant edge.  Normal and optimized runs
+  must byte-match the amended frozen output.
 depends_on:
   - THM-3854-integrated-three-cusp-quintic-s5-natural-completion-obstruction
   - THM-3869-three-cusp-square-residual-cardano-line-ramification
@@ -31,9 +31,9 @@ related:
   - THM-3874-three-cusp-quadratic-k3-affine-class-group
 script: 04-computation/jc2_cusp_ideal_residual_transport_matrix_factorization_thm3881.py
 output: 05-knowledge/results/jc2_cusp_ideal_residual_transport_matrix_factorization_thm3881.out
-script_sha256: 79fb07abd963c8ae83cb7bac617f7f97c8e245211455af5ab4fec03ef4d45c92
-output_sha256: 45d32ba6f3678d32a5c536d8014ea54715082d51f3078eab2c55ecf820aa5741
-semantic_sha256: caf4c90420a069eb6e8ef6d55439d888e31e636818d885821e32373af7c78a4a
+script_sha256: cd82714cba56e22175a5c295a922baa3e4c6ab93129971edd2200b9037bf8183
+output_sha256: b486419fc5047e279d56b89e8b22d56bb8840c641d5bc13a324358ff02071757
+semantic_sha256: 7e5ecbb745d9ac184eb602dbcd09bc84cc44847926d887148ace4984e34ceb87
 hash_basis: raw LF bytes
 ---
 
@@ -315,7 +315,7 @@ Since `k[y]` is a UFD and `k` is algebraically closed, a square survivor must
 have `q(-4/9,y)=0` or `q(-4/9,y)` itself a square.  Conditions `(26),(29)` do
 not yet close the case `q=aq_1`; that branch remains part of `(22)`.
 
-## 7. The full `T=0` lane is branch-trivial
+## 7. The full `T=0` lane is empty
 
 There is also an all-degree consequence not visible in the constant slice.
 Set `T=0`.  The address condition `(14)` forces `f(0,0)=0`, while `(13)`
@@ -325,66 +325,53 @@ becomes
 r=Kf,                         A=aPf.                       (30)
 ```
 
-Exact simplification of `(21)` gives
+Exact simplification of `(21)`, followed by `(6)`, gives two equivalent
+forms
 
 ```text
 S(0,f)=L^2 H_f,
-H_f=L^2(1+af)^3(1+3af)-Delta f^3(2+3af).                 (31)
+H_f=L^2(1+af)^3(1+3af)-Delta f^3(2+3af)
+   =L^2(1+2af)^3+K^2f^3(2+3af).                          (31)
 ```
 
 If `S(0,f)` is a square in `D`, then `H_f` is a square because `L^2` already
-is one.  Restrict `(31)` to the normalization `k[t]` of `Delta=0` and put
-`z=a(t)f(t)`.  After removing the square `L(t)^2`, one obtains
+is one.  Suppose `f` is nonconstant of total degree `n>=1`.  In the second
+form of `(31)`, the term
 
 ```text
-(1+z)^3(1+3z) is a square in k[t].                        (32)
+3aK^2f^4                                                     (32)
 ```
 
-The factors `1+z` and `1+3z` are coprime: three times the first minus the
-second is the unit `2`.  Unique factorization therefore gives, after absorbing
-square constants in the algebraically closed field,
+has degree exactly `4n+5`.  It is the unique term of that degree: the full
+first summand has degree at most `3n+5`, and the remaining term `2K^2f^3`
+has degree `3n+4`.  Since `n>=1`, both bounds are strictly below `4n+5`.
+The leading form in `(32)` is nonzero in the domain `D`, so
 
 ```text
-1+z=u^2,                       1+3z=v^2.                  (33)
+deg H_f=4n+5,                                               (33)
 ```
 
-Consequently
+which is odd.  A nonzero polynomial square has even total degree.  This is a
+contradiction.
+
+If `n=0`, then `f` is constant, and the address condition `f(0,0)=0` forces
+`f=0`.  Therefore the full lane closes:
 
 ```text
-v^2-3u^2=-2,
-(v-sqrt(3)u)(v+sqrt(3)u)=-2.                              (34)
+T=0 and S(T,f) square  ==>  f=0.                           (34)
 ```
 
-Both factors in `(34)` are units of `k[t]`, so `u,v`, and hence `z`, are
-constant.  At the normalization address `t=0` one has `(x,y,a)=(0,0,1)` and
-`f(0,0)=0`; thus `z=0` identically.  It follows that `af` lies in the kernel
-of `D -> k[t]`, namely `(Delta)` by THM-3854.  The polynomial `Delta` is
-irreducible, and
-
-```text
-Delta mod a=-(y^2-4)^2 !=0,                               (35)
-```
-
-so `gcd(Delta,a)=1`.  Therefore
-
-```text
-T=0 and S(T,f) square  ==>  Delta divides f.              (36)
-```
-
-In particular, no nonzero `T=0` representative with `deg f<5` survives.  If
-`f=Delta h`, then both `r=KDelta h` and `A=aPDelta h` vanish on the branch;
-the lane supplies no new normalization representative.  Whether a nonzero
-such pair can still improve the global polynomial lift is left open.
+No residual `f=Delta h` case remains.
 
 ## 8. Exact scope
 
 This theorem proves the universal identity, the complete presentation of all
 coefficient and lift choices, the matrix factorization, the norm sidecars,
-the pure-gauge arm obstruction, and the `T=0` divisibility collapse.  It does
+the pure-gauge arm obstruction, and the complete `T=0` closure.  It does
 **not** prove that `(22)` has no higher-degree solutions.  In particular,
-pairs with `T!=0`, the residual `f=Delta h` lift lane, pairs with `q=aq_1`,
-alternate square/cube lifts outside the displayed additive grammar, a
-polynomial-plane Keller atlas, and JC(2) remain **OPEN**.
+pairs with `T!=0`, pairs with `q=aq_1`, alternate square/cube lifts outside
+the displayed additive grammar, a polynomial-plane Keller atlas, and JC(2)
+remain **OPEN**.
 
 Reproduce the exact packet with
 
