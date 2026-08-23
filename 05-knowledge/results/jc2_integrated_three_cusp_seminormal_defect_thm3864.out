@@ -1,0 +1,10 @@
+theorem=THM-3864-integrated-three-cusp-conductor-seminormal-three-direction-gate
+conductor_degree=12;conductor=EXACT
+node_conditions=3;cusp_derivative_conditions=3;seminormal_defect_dimension=3
+derivative_coordinate_determinant=-8000;third_direction=EXPLICIT
+third_square_cube_descent=YES;canonical_residual_square=NO
+minimum_degree_parity_preserving_mixed_lift_square=NONE
+general_mixed_and_higher_lifts=OPEN
+semantic_sha256=9e3a477c32e500d32a82d6e20e2e81f61bac30282efd8d417f619103f89d998f
+CHECKS=36
+RESULT=PASS
