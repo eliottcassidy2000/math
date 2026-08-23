@@ -17,8 +17,8 @@ audit: >
   resultant, all four parameter strata, forbidden-boundary values, fixed
   projective u-degrees, and denominator-free source/critical reconstruction
   were independently rederived.  The 34 active gates pass normally and
-  under Python -O, both runs byte-match the frozen transcript, raw script
-  and output hashes match, and the agent-facing documentation check passes.
+  under Python -O, both runs LF-normalize exactly to the frozen transcript;
+  declared raw-LF script and output hashes match, and documentation checks pass.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
 related:
@@ -189,4 +189,4 @@ with nonconstant `g` or `h`, higher `z`-normal powers, different arm
 profiles, and rational mates with poles are not covered.  The exact
 companion named in the metadata checks `(5)--(16)`, including independently
 specialized resultants on both axes and at the origin.  Normal and optimized
-executions byte-match the frozen 34-gate transcript.  **QED.**
+executions LF-normalize exactly to the frozen 34-gate transcript.  **QED.**

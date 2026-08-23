@@ -19,8 +19,8 @@ audit: >
   ring, the maximal etale locus, and the exact rank-four invariant-unit
   lattice were independently rederived.  All Delone--Faddeev signs, index
   and trace determinants, the rational packet, S3 branch data, and retained
-  companions pass.  Normal and optimized runs byte-match the frozen output,
-  all hashes match, and the sole wording repair distinguishes a deleted ray
+  companions pass.  Normal and optimized runs LF-normalize exactly to the
+  frozen output, all declared raw-LF hashes match, and the sole wording repair distinguishes a deleted ray
   downstairs from its linear equation being a unit only on the mu_3 cover.
 depends_on: []
 related:
@@ -293,5 +293,5 @@ a planar Jacobian counterexample.  A survivor must break the cone grading
 
 The exact companion named in the metadata verifies `(3)--(9)`,
 `(18)--(27)`, the degree-three field law, and the four-dimensional lattice
-index.  Normal and optimized executions byte-match the frozen transcript.
+index.  Normal and optimized executions LF-normalize exactly to the frozen transcript.
 **QED.**

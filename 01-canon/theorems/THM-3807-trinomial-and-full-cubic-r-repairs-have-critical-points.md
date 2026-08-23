@@ -23,8 +23,8 @@ audit: >
   source reconstruction, and Casimir implication were rederived symbolically.
   An independently assembled fixed-degree Sylvester determinant reproduces
   the universal resultant.  The deterministic companion has 51 active gates;
-  normal and optimized runs byte-match the frozen transcript and the
-  recorded raw hashes match.  The audit independently checked the support
+  normal and optimized runs LF-normalize exactly to the frozen transcript
+  and the declared raw-LF hashes match.  The audit independently checked the support
   partition, both branch exhaustions, all exceptional specializations,
   coprime resultants, multiplicity-safe boundary implication, and finite
   reconstruction.  The generic quotient/remainder common denominator is
@@ -368,4 +368,5 @@ Degree at least four, mixed `z^2h(e)+r g(e)` corrections, other arm
 profiles, and rational mates with poles remain open.  The exact companion
 named in the metadata verifies `(4)--(39)`, both specialized divisions, the two coprime
 resultants, support-drop seams, and reconstruction with 51 active gates.
-Normal and optimized executions byte-match the frozen transcript.  **QED.**
+Normal and optimized executions LF-normalize exactly to the frozen transcript.
+**QED.**

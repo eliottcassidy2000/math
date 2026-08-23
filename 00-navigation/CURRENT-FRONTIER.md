@@ -342,38 +342,36 @@ support asymptotic or residue.
   affine/homogeneous/`2x2` no-gos. THM-3787/3796/3798 close low support,
   every one-collision `2x4`, common steps one--three, and their output swaps;
   common step four and disjoint collision chains survive. THM-3790/3792/
-  3795/3799/3800/3803/3805/3806 show the forced nodal carrier, every
+  3795/3799/3800/3803/3805/3806/3809 show the forced nodal carrier, every
   r-independent correction, every monomial, degree-at-most-two `r g(e)`,
-  every binomial cubic `r g(e)`, and the sharp torus-escaping carrier are
-  critical (the last at exactly fourteen points).
+  every binomial cubic `r g(e)`, the constant `r+z^2` mixed cell, and the
+  sharp torus-escaping carrier are critical (the last at fourteen points).
   THM-3791/3797/3802 identify the finite-etale resonant jet, its confluent
   modification-tree boundary, and the actual plane-chart law
   `H^2_dR=E/k`; a contact tree without charts constructs nothing. THM-3794
   excludes degree-two etale maps under constant units. Audited THM-3801 forces
   a nonmonogenic `S3` completion with one companion per branch; the nodal arm
-  is not a discriminant component. THM-3807/3808/3809 are RESERVED full-cubic,
-  binary-unit, and smallest-mixed gates. Full cubics, higher degree, mixed
-  corrections, poles/supports, branch curves, unrestricted
+  is not a discriminant component. Audited THM-3808 makes every squarefree
+  homogeneous-linear cubic a third-Veronese cone whose etale open has
+  rank-4 units. THM-3807/3810 are full-cubic and affine-mixed proof
+  candidates awaiting hostile audit. Higher degree, mixed `deg g>=2` or
+  nonconstant `h`, poles/supports, branch curves, unrestricted
   `C[A,d]^2`, `JC(2)`, and `DC(2)` remain OPEN.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
-- **Planar source fibres:** THM-2063/THM-2084--2247 and THM-2262/2297--2480
-  (including THM-2371/THM-2376) close the stated affine-through-
-  degree-eighteen strata; THM-2671/2683/2692 empty the inherited nonsplit
-  degree-22 support branch.  THM-2719--2781 close every reduced split-sheet
-  exact-square-prefix terminal degree `M=4k-2`, but the sharp terminal
-  certificate does not supply chart entry.  On the genuine nonsplit deck,
-  THM-2784--2831 reduce to `F=VG^2`, a first-order passport, and close only the
-  displayed simple-pole/cyclic residuals; nonzero passport parameters and
-  global entry remain open.  THM-2799--3151 finish the named accessory,
-  sextic, heptic, resonant, and balanced `(D,D)` cells with floor `N>=4D`.
-  THM-3167/3172 separate diagonal, constant-field, and owner gates; THM-3212--
-  3289 close the stated constant/affine `B,C,E` lanes.  THM-3306's degree-36
-  square discriminant has only FINITE-EXACT blow-up sidecars; THM-3309--3437
-  give clutch, transport, sparse, character, Prüfer, and Artin-jet controls,
-  not a section or cross-problem transfer.  The newer surface-factor chain is
-  routed above: THM-3806 closes binomial cubic `r g(e)`; full cubics, higher
-  degree, mixed corrections, arbitrary mates, and branches away from the
-  nodal curve are OPEN with `JC(2)` and `DC(2)`.
+- **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
+  THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692
+  empty the inherited nonsplit degree-22 branch. THM-2719--2781 close every
+  reduced split-sheet exact-square terminal `M=4k-2`, not chart entry.
+  THM-2784--2831 give `F=VG^2`, a first-order passport, and only the displayed
+  simple-pole/cyclic no-gos; nonzero passports and global entry stay open.
+  THM-2799--3151 close named accessory/resonant/balanced cells with `N>=4D`;
+  THM-3167/3172 retain diagonal/field/owner gates. THM-3212--3437 close named
+  `B,C,E`, clutch, transport, sparse, character, Prüfer, and Artin-jet lanes,
+  but no section/transfer; THM-3306 sidecars are FINITE-EXACT only.
+  The newer surface-factor chain is
+  routed above: THM-3806/3809 close binomial cubic and constant mixed cells;
+  THM-3807/3810 await audits. Higher degree/nonconstant mixed corrections,
+  arbitrary mates, and off-nodal branches remain OPEN with `JC(2),DC(2)`.
 - **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
   all `2665` residuals in `7395` rows (`2384` divisor, `281` rho).
   `d=6518` needs `p=29`, refuting `p<=23`. FINITE-EXACT at `d=10001`:
@@ -406,6 +404,7 @@ The most reusable current bridges are not literal object identifications:
 | Actual atlas / resonance | THM-3791/3797/3802 | `H^2_dR=E/k` keeps the resonant coefficient; lower contacts and the affine cover are not recovered. |
 | Reversible address | THM-3743/3793 | Inert cube sums index 5,855 pair ratios but lose the full LRC semantic packet. |
 | Amplitude lattice | THM-3804 | Free defects plus one carry decide lifts, not projective closure or center chronology. |
+| `Z/3` deletion lattice | THM-3785/3790/3808 | Visible `1+2` principalizes; deleting class-one rays yields `ker(sum mod 3)` units, not a surface map. |
 | HFC--JC boundary | THM-3303/3328 | Null moments force collision; cone overlap gives a double sheet, otherwise retain anti-tangent/vertex-cone data. |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Finite observer / recurrence | THM-3171/3172/3180/3181 | Is it invertible, a refuter, or only an address; which sidecar makes termination lawful? |

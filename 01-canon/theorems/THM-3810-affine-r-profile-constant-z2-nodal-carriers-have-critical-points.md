@@ -18,8 +18,8 @@ audit: >
   coefficient comparisons, separately recomputed h=0 seam, fixed
   quartic/cubic u-degrees, and denominator-free critical reconstruction were
   independently rederived.  The 26 active gates pass normally and under
-  Python -O, both runs byte-match the frozen transcript, raw hashes match,
-  and the agent-facing documentation check passes.
+  Python -O; both runs LF-normalize exactly to the frozen transcript, the
+  declared raw-LF hashes match, and documentation checks pass.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
 related:
@@ -209,5 +209,5 @@ nonlinearity begins at `deg g>=3`.  The slope still organizes the equations,
 but a new sidecar is needed to control that denominator divisor and the
 extra `e`-branches.  The exact companion named in the
 metadata checks `(5)--(20)`, including the specialized `h=0` resultant and
-all reconstruction identities.  Normal and optimized executions byte-match
-the frozen 26-gate transcript.  **QED.**
+all reconstruction identities.  Normal and optimized executions LF-normalize
+exactly to the frozen 26-gate transcript.  **QED.**
