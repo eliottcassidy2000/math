@@ -84,7 +84,7 @@
     `boundary Delta^12`; do not infer endpoint emptiness or export the cap.
 27g. **Copies are not common atoms.** THM-2806 has bare-only `D3`/empty `M`; THM-2818's positive copies fail native/source/endpoint sidecars. Neither pays THM-2772.
 27h. **A generator-valued endpoint germ is not a physical allocation action.** THM-2825/2859 lack the source carrier and `C13` action needed to turn their missing-corner or decorated-arrow data into a row exclusion; neither implies LRC(14).
-27i. **Successor quotients lose inequivalent coordinates.** Mass is not address; offset sums can hide `D_H>0`; denominator splits lose cancellation; fixed 13-adic depth fails. THM-3672/3713 controls are non-cover: retain offset, word, owner, phase, and cover semantics.
+27i. **Successor quotients lose coordinates.** Mass is not address; offset sums can hide `D_H>0`; denominator splits lose cancellation; 13-adic depth fails. THM-3672/3713 controls are non-cover: retain offset, word, owner, phase, and cover semantics.
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211/THM-2631;
