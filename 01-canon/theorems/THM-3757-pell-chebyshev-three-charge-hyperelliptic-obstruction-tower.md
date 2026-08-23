@@ -2,7 +2,7 @@
 id: THM-3757
 title: "Pell-Chebyshev three-charge hyperelliptic obstruction tower"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.  Over an algebraically
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over an algebraically
   closed characteristic-zero field, an explicit Chebyshev tower of
   three-charge polynomials Q_n=X+chi_n(XT)+T psi_n(XT), n>=1, has no critical
   point.  Its torus critical resultant is exactly -psi_n, and every root of
@@ -13,11 +13,12 @@ status: >
   counterexample-component obstruction tower, not a counterexample to JC(2).
 source: root + jc_quartic_c3_construct / 2026-08-23
 audit: >
-  PENDING.  The Chebyshev transport, Pell identity, eliminant, absorbed-root
-  smoothness, hyperelliptic model, squarefreeness, and genus/residue split
-  have been internally rederived.  Normal, optimized, and frozen output
-  agree; script/output/semantic hashes and CHECKS=167 match.  An independent
-  hostile review of the generic-fibre exactness argument remains due.
+  PASS.  An independent hostile audit rederived the Chebyshev quotient and
+  transport identities, Pell sign, exact resultant, absorbed-root and axis
+  smoothness, generic-function-field equality and squarefreeness, Jacobian
+  sign, positive-genus holomorphic obstruction, and conic infinity residues.
+  Normal, optimized, and frozen output agree; script/output/semantic hashes
+  and CHECKS=167 match.
 depends_on: []
 related:
   - THM-3551-one-ray-planar-jacobian-mate-no-go
@@ -33,7 +34,7 @@ hash_basis: raw LF bytes
 
 # THM-3757 -- Pell cancellation buys smoothness but exposes hyperelliptic debt
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.**  THM-3741 proves
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  THM-3741 proves
 that two opposite radial charges cannot produce a planar Keller pair.  Adding
 a charge-zero profile changes the critical equation from a derivative into a
 polynomial Pell expression.  The construction below solves that smoothness
