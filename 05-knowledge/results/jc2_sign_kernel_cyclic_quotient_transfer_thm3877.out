@@ -1,0 +1,9 @@
+theorem=THM-3877-sign-kernel-transfer-through-torsion-free-quadratic-resolvent
+simple_inertia=transposition;after_sign_base_change=trivial
+kummer_gate=A_units_mod_p_zero+Cl_p_torsion_zero=>no_Cp_quotient
+degree3=H_C3;degree4=H_nonperfect;sole_simple_branch=NONE_under_gate
+THM3874_specialization=degree3_and_degree4_three_cusp_sole_branch_NONE
+sharp_boundary=degree2_H_trivial;S5_H_A5_perfect
+semantic_sha256=5f7d99f84623a015d9c0a537e84ac24148b14081e1dd08e59f9ae97287bbac40
+CHECKS=37
+RESULT=PASS
