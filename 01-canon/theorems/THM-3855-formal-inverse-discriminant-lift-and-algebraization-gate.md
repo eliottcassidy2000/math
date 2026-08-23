@@ -2,8 +2,8 @@
 id: THM-3855
 title: "Formal inverse-discriminant lift and algebraization gate"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  At the THM-3808 rational four-ray packet, the four coefficient
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  At the THM-3808
+  rational four-ray packet, the four coefficient
   gradients of the binary-cubic discriminant form a basis of all homogeneous
   cubics.  More strongly, the two base-coordinate gradients form a cubic
   complete intersection with socle degree four.  Hence every discriminant
@@ -15,14 +15,20 @@ status: >
   global etale open, and a Keller atlas remain open.
 source: root / inverse binary-cubic discriminant lane, 2026-08-23
 audit: >
-  SELF-HOSTILE EXACT CANDIDATE.  The proof computes the complete coefficient
+  INDEPENDENT HOSTILE AUDIT PASS (jc_quartic_c3_construct, 2026-08-23).  The
+  audit independently rederived the coefficient
   gradient matrix, whose determinant is 640000, identifies its ideal with
   `(A,C)^3`, and gives a homogeneous right-inverse recursion.  It also checks
   the base-gradient resultant, complete-intersection degree-five determinant,
   explicit tangent-identity quadratic correction, and a second homogeneous
   right-equivalence recursion.  The companion replays both lifts through
-  total degree twelve, with nonzero degree-thirteen residuals, and contains no
-  Python asserts.  Independent hostile audit remains.
+  total degree twelve, with nonzero degree-thirteen residuals, and contains
+  no Python asserts.  The independent audit also checked the
+  degree safety of every nonlinear recursion term, the one-place
+  parametrization, all height-one index-zero normality cases, henselian
+  connectedness, the nonsquare/S3 step, and the index nonunit gate.  Normal
+  and optimized runs byte-match the frozen 99-gate transcript and both
+  recorded hashes.
 depends_on:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
 related:
@@ -37,8 +43,8 @@ hash_basis: raw LF bytes
 
 # THM-3855 -- the one-place inverse discriminant has no formal obstruction
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of
 characteristic zero.  Put
 
 ```text
@@ -379,5 +385,4 @@ python3 04-computation/jc2_formal_inverse_discriminant_lift_thm3855.py
 python3 -O 04-computation/jc2_formal_inverse_discriminant_lift_thm3855.py
 ```
 
-Both modes byte-match the frozen 99-gate transcript.  **QED candidate,
-pending independent hostile audit.**
+Both modes byte-match the frozen 99-gate transcript.  **QED.**
