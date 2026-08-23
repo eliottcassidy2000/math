@@ -2,30 +2,33 @@
 id: THM-3874
 title: "Three-cusp quadratic K3 and its affine class group"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE AWAITING AUDIT OF STRENGTHENING.  The
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The
   THM-3854 three-cusp quadratic resolvent has an elliptic K3 model with
   fibres I6, I3, I4, I2, and III*.  Its Mordell--Weil group is C2 and its
   Neron--Severi discriminant has absolute value 72.  An explicit
   boundary-plus-ADE quotient, not the discriminant alone, gives affine class
   group Z and scalar units.  Hence the affine resolvent has no connected
   codimension-one-unramified cyclic cubic cover, and no normal finite-flat
-  cubic over the plane can have the three-cusp quintic as its sole simple
-  branch divisor.  This closes that alternative cubic-order lane, not JC(2).
+  cubic or transitive quartic over the plane can have the three-cusp
+  quintic as its sole simple branch divisor.  This closes those C3-resolvent
+  lanes, not JC(2).
 source: jc_quartic_c3_construct / post-THM-3869 elliptic-K3 lane, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (jc_sparse_direct_search, 2026-08-23).  The
+  INDEPENDENT HOSTILE AUDIT PASS (jc_sparse_direct_search and root,
+  2026-08-23).  The
   audit independently rederived all five Kodaira fibres, the K3/Mordell--Weil
   packet, each local UV model and finite-exceptional label, the complete
   boundary exact sequence, the primitive 3d+2e torsion-section relation, the
-  unit norm argument, and the Kummer/S3 sole-branch implication.  Normal and
-  optimized runs byte-match the frozen output.  A subsequent provisional
-  strengthening freezes the full 20-by-21 boundary presentation: its Smith
-  form has twenty unit invariant factors and one free column.  That addendum
-  awaits the parent hostile audit before status promotion.
+  unit norm argument, and the Kummer/S3 sole-branch implication.  The root
+  strengthening audit separately reconstructed the full 20-by-21 boundary
+  presentation, including every killed generator and the doubled E7 weight;
+  its Smith form has twenty unit invariant factors and one free column.
+  Normal and optimized runs byte-match the frozen output.
 depends_on:
   - THM-3854-integrated-three-cusp-quintic-s5-natural-completion-obstruction
   - THM-3869-three-cusp-square-residual-cardano-line-ramification
 related:
+  - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3862-russell-finite-completion-nonmonogenic-branch-contract
   - THM-3864-integrated-three-cusp-conductor-seminormal-three-direction-gate
@@ -40,7 +43,7 @@ hash_basis: raw LF bytes
 
 # THM-3874 -- the affine boundary kills the K3 three-primary packet
 
-**PROVED + VERIFIED-EXACT CANDIDATE AWAITING AUDIT OF STRENGTHENING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Retain
 the irreducible three-cusp quintic
 
@@ -75,6 +78,10 @@ and `Q` has no nontrivial connected cyclic cubic cover which is unramified
 at every codimension-one point.  Consequently there is no normal finite-flat
 cubic domain over `k[x,y]` whose field-discriminant divisor is exactly the
 reduced divisor `V(Delta)`.
+
+The same obstruction excludes every transitive quartic field over
+`k(x,y)` whose sole tame field-discriminant divisor is the same reduced
+`V(Delta)` with simple transposition inertia.
 
 The mechanism is load-bearing.  The projective K3 has nonzero three-primary
 discriminant data; one cannot infer `(4)` from its Neron--Severi determinant.
@@ -340,45 +347,71 @@ Z^2/<(3,2)> ~= Z.                                           (34)
 Equations `(29)-(34)` prove the class-group statement in `(3)` and locate
 precisely where the two projective three-primary classes disappear.
 
+As a presentation-level hostile check, order the generators as
+
+```text
+O,F; alpha_1,...,alpha_5; A2_1,A2_2;
+beta_1,beta_2,beta_3; A1; E7_1,...,E7_7; T.                (35)
+```
+
+Take the doubled torsion-section relation
+
+```text
+2T-2O-4F+2omega_3(A5)+2omega_2(A3)+2omega(E7)=0            (36)
+```
+
+together with the nineteen coordinate relations killing exactly the
+boundary and affine exceptional generators listed above.  The resulting
+`20`-by-`21` integer matrix has rank `20` and Smith diagonal
+
+```text
+1,1,...,1                                                    (20 times). (37)
+```
+
+Thus the full quotient has one free generator and no hidden torsion.  This
+independently rules out a quotient loss in the shorter calculation `(33)`.
+
 ## 5. Units
 
 Every element of `A` has a unique form
 
 ```text
-r+s w,                         r,s in k[x,y].                (35)
+r+s w,                         r,s in k[x,y].                (38)
 ```
 
 If it is a unit, its quadratic norm is a unit of the base:
 
 ```text
-r^2-s^2 Delta in k^*.                                       (36)
+r^2-s^2 Delta in k^*.                                       (39)
 ```
 
 If `s!=0` and `r=0`, the norm is already nonconstant.  If both are nonzero,
-the two nonconstant terms in `(36)` have total degrees
+the two nonconstant terms in `(39)` have total degrees
 
 ```text
-2 deg r,                         2 deg s+5,                  (37)
+2 deg r,                         2 deg s+5,                  (40)
 ```
 
 because `Delta` has odd total degree five.  These degrees have opposite
-parity and cannot cancel.  Thus `(36)` cannot be constant.  Hence `s=0`,
+parity and cannot cancel.  Thus `(39)` cannot be constant.  Hence `s=0`,
 and then `r^2 in k^*` forces `r in k^*`.  This proves `A^*=k^*`.
 
-## 6. No unramified `C3` layer and no sole-branch cubic
+## 6. No unramified cyclic layer and no degree-three or degree-four sole branch
 
-Because `k` is algebraically closed, it contains the cube roots of unity and
-every scalar is a cube.  A cyclic cubic extension of `Frac(A)` unramified at
-all height-one valuations has a Kummer representative `gamma` with
+Fix any integer `n>=2`.  Because `k` is algebraically closed, it contains
+the `n`th roots of unity and every scalar is an `n`th power.  A cyclic
+degree-`n` extension of `Frac(A)` unramified at all height-one valuations has
+a Kummer representative `gamma` with
 
 ```text
-div(gamma)=3D.                                               (38)
+div(gamma)=nD.                                               (41)
 ```
 
-The class of `D` lies in `Cl(A)[3]`.  By `(3)-(4)` it is principal; after
-dividing `gamma` by a cube, one obtains a unit.  The unit is scalar and hence
-again a cube.  Thus the Kummer class is trivial, proving the cyclic-cover
-claim.
+The class of `D` lies in `Cl(A)[n]`.  By `(3)` it is principal; after
+dividing `gamma` by an `n`th power, one obtains a unit.  The unit is scalar
+and hence again an `n`th power.  Thus the Kummer class is trivial.  There is
+no nontrivial connected cyclic extension of any degree which is unramified
+at every height-one valuation of `A`.
 
 Finally suppose a normal finite-flat cubic domain over `k[x,y]` had sole
 field-discriminant divisor `V(Delta)` with multiplicity one.  Its generic
@@ -389,6 +422,60 @@ absorbed by this quadratic layer, so the remaining `C3` layer is unramified;
 away from `Delta` there is no inertia by hypothesis.  This is the forbidden
 cover of the preceding paragraph.  Therefore no such normal cubic exists.
 
+More generally, let `M/k(x,y)` be a finite normal closure with transitive
+permutation group `G`, assume that every codimension-one inertia group is
+generated by a transposition and that `V(Delta)` is the sole branch divisor,
+and put
+
+```text
+H=G intersection A_n.                                       (42)
+```
+
+The sign quadratic subfield is `k(x,y)(sqrt(Delta))=Frac(A)`.  After this
+base change, every transposition inertia disappears because its intersection
+with `H` is trivial.  Therefore every quotient of `H` is unramified at all
+height-one valuations of `A`.  If `H` has a nontrivial cyclic quotient, the
+preceding Kummer argument contradicts `(3)` and the scalar-unit result.
+
+For degrees three and four this closes every transitive possibility.  In
+degree three the nonsquare discriminant forces `G=S3`.  In degree four the
+transitive groups are `S4,A4,D4,V4,C4`; the nonsquare discriminant excludes
+`A4,V4`, while `C4` contains no transposition and cannot realize the stated
+simple inertia.  For the remaining cases
+
+```text
+G=S3:  H=C3,
+G=S4:  H=A4 and H/V4=C3,
+G=D4:  H=V4 and H has a C2 quotient.                       (43)
+```
+
+Thus no transitive cubic or quartic field has sole simple branch `Delta`.
+The mechanism stops sharply at the next full symmetric group: `A5` is
+perfect.  This explains why the natural `S5` completion in THM-3854 survives
+the sign/cyclic-quotient test even though it fails for its separate monodromy
+and atlas reasons.  Higher transitive groups with perfect `H` are outside
+this corollary.
+
+There is a useful presentation-independent strengthening.  Suppose an
+irreducible depressed cubic has
+
+```text
+f=T^3-3PT+2Q,             P^3-Q^2=Delta H_0^2,
+gcd(H_0,Delta)=1.                                           (44)
+```
+
+For a prime `p|H_0`, the field-discriminant exponent has even parity because
+passing from the displayed order to the maximal order changes a discriminant
+by a square.  In a tame cubic extension the only ramified generic
+decomposition types are `(2,1)`, of discriminant exponent one, and total
+ramification `(3)`, of exponent two.  Hence every `p|H_0` is either unramified
+or totally ramified in the normalized cubic field.  They cannot all be
+unramified, because that would give the sole-branch cubic just excluded.
+Thus at least one irreducible factor of `H_0` necessarily survives as a totally
+ramified cubic payment.  THM-3869 realizes this boundary with
+`H_0=(9x+4)^2` at the displayed-order level and total ramification over the
+line `9x+4=0` after normalization.
+
 THM-3869 shows the equality boundary sharply: its explicit nonmonogenic
 normal cubic pays the extra line `9x+4`, and its cyclic layer ramifies over
 both primes above that line.  THM-3874 proves that some extra divisorial debt
@@ -397,10 +484,11 @@ displayed Cardano representative.
 
 ## 7. Scope and reproduction
 
-This theorem closes the alternative normal cubic-order lane for the exact
-THM-3854 three-cusp branch.  It does not exclude higher-degree completions,
-different branch curves, nonnormal orders before normalization, or any
-general planar Keller map.  In particular `JC(2)` remains open.
+This theorem closes every normal degree-three and degree-four sole-simple-
+branch lane for the exact THM-3854 three-cusp curve.  It does not exclude
+higher-degree completions, different branch curves, nonnormal orders before
+normalization, or any general planar Keller map.  In particular `JC(2)`
+remains open.
 
 Run
 
