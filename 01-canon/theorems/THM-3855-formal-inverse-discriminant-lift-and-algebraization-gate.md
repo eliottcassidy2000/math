@@ -48,6 +48,10 @@ audit: >
   through total degree twelve, checks the gauge action through degree eight,
   and contains no Python asserts.  Normal and optimized runs byte-match the
   frozen 115-gate transcript and both recorded hashes.
+  A separate strengthened base-right-equivalence audit has 368 gates and
+  independently checks the
+  complete-intersection Hilbert function, fixed six-identity recursion,
+  tangent-map inverse and polynomial base-orbit no-go.
 depends_on:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
   - THM-3853-quadratic-depth-inverse-discriminant-one-place-gluing-obstruction
@@ -61,6 +65,11 @@ independent_audit_output: 05-knowledge/results/jc2_formal_inverse_discriminant_l
 independent_audit_script_sha256: ff37c33f6d1417184399e669adc3e25f90561d75b1af4f4288a1badade2dc216
 independent_audit_output_sha256: 1d5b355e7576b8376a276747b29c1bb2074f6ac5690e812e6c5d1ed80c7ebe21
 independent_audit_semantic_sha256: 586228efe890015d8d3e0d99eebf9996db0539033da109538a8ef95f9b374dc1
+right_equivalence_audit_script: 04-computation/jc2_formal_inverse_discriminant_right_equivalence_independent_audit_thm3855.py
+right_equivalence_audit_output: 05-knowledge/results/jc2_formal_inverse_discriminant_right_equivalence_independent_audit_thm3855.out
+right_equivalence_audit_script_sha256: 2059a1c9448f77f3dacd328027a1f0850b860a00e8bfcdf59079570ae907c734
+right_equivalence_audit_output_sha256: ee3cbc9eb601af59514f2e7e16d079689eab5cea0758457638e2275f163b94c9
+right_equivalence_audit_semantic_sha256: 44e6ae4de23de3a4fcf7384c73cbd4712a762c2b185b39775cb1e8032d8f250f
 hash_basis: raw LF bytes
 ---
 
@@ -514,11 +523,16 @@ python3 04-computation/jc2_formal_inverse_discriminant_lift_thm3855.py
 python3 -O 04-computation/jc2_formal_inverse_discriminant_lift_thm3855.py
 python3 04-computation/jc2_formal_inverse_discriminant_lift_independent_audit_thm3855.py
 python3 -O 04-computation/jc2_formal_inverse_discriminant_lift_independent_audit_thm3855.py
+python3 04-computation/jc2_formal_inverse_discriminant_right_equivalence_independent_audit_thm3855.py
+python3 -O 04-computation/jc2_formal_inverse_discriminant_right_equivalence_independent_audit_thm3855.py
 ```
 
 The primary modes byte-match the strengthened frozen 115-gate transcript.
 The independent 173-gate RREF recursion lifts the target through degree
 twelve and a dense target through degree nine, while independently recovering
 every audited formal-order gate.  Its normal and optimized runs byte-match
-its frozen output.  **QED for the independently audited core; Section 3 is a
-candidate pending independent hostile audit.**
+its frozen output.  The separate 368-gate hostile audit of the base
+right-equivalence extension also passes in normal and optimized modes.
+**QED for the independently audited core; Section 3 is a candidate pending
+an independent hostile audit of its additional coefficient-level `SL2`
+gauge.**

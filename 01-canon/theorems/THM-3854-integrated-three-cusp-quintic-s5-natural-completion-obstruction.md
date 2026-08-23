@@ -30,7 +30,10 @@ audit: >
   exact discriminant constant, the all-degree constant-bracket arm factor,
   two good-prime cycle types, and both seminormal residual quotients.  Normal
   and optimized runs byte-match the frozen 55-gate transcript and both
-  recorded hashes.
+  recorded hashes.  A second 74-gate audit recovers the complete singular
+  scheme directly, computes the specialized Galois group by an exact
+  number-field algorithm, checks A5 perfection, proves the seminormal
+  elements proper, and reconstructs the derivative-ideal arm obstruction.
 related:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
@@ -42,6 +45,11 @@ output: 05-knowledge/results/jc2_integrated_three_cusp_quintic_s5_thm3854.out
 script_sha256: ffe82ca9bd4c147b685d75b16bfa94e18269b143fc9cbe629f5edf227538ae5e
 output_sha256: 0a4598e2f042a08afd7b1d046c3cea2bc345e48fc6282980e1d2f265a619847e
 semantic_sha256: 1f9a5b7d00f3883d38bd65c8a2f0546b5627e7a341cd29560e4f80993fc92f24
+independent_audit_script: 04-computation/jc2_integrated_three_cusp_quintic_s5_independent_audit_thm3854.py
+independent_audit_output: 05-knowledge/results/jc2_integrated_three_cusp_quintic_s5_independent_audit_thm3854.out
+independent_audit_script_sha256: 218b7f99ce8ab062bcc4fa1d20db0f9262a9991d365ab55e8284acfd65ab45b2
+independent_audit_output_sha256: d720392427c5837100ce9bcdff939147aa8a304c7188e5528187179c74676f5c
+independent_audit_semantic_sha256: e6b1f10501fb4bf74f8b7e8c92037e68016e1feadb45501d5ed1b6fad2f6e8ae
 hash_basis: raw LF bytes
 ---
 
@@ -436,6 +444,8 @@ Run
 ```bash
 python3 04-computation/jc2_integrated_three_cusp_quintic_s5_thm3854.py
 python3 -O 04-computation/jc2_integrated_three_cusp_quintic_s5_thm3854.py
+python3 04-computation/jc2_integrated_three_cusp_quintic_s5_independent_audit_thm3854.py
+python3 -O 04-computation/jc2_integrated_three_cusp_quintic_s5_independent_audit_thm3854.py
 ```
 
 and compare both outputs byte-for-byte with
@@ -444,6 +454,10 @@ The companion uses exact integer/rational polynomial arithmetic.  The two
 finite-field reductions are good-prime Frobenius witnesses inside an exact
 characteristic-zero specialization argument; they are not used as rank
 proxies or evidence for `Cl(Q)`.
+
+The independent companion performs 74 exact gates by direct resultants,
+singular-ideal elimination and an exact specialization Galois computation.
+Its normal and optimized streams byte-match the frozen output.
 
 No planar Keller counterexample, cubic completion, class-group computation,
 or general obstruction to one-place branch curves is claimed.

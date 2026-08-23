@@ -25,16 +25,29 @@ audit: >
   the excluded axis boundary, and both nonconstant and THM-3852 collision
   controls.  Normal and optimized runs byte-match the frozen 27-gate
   transcript and both recorded hashes.
+  A second independent hostile audit (root, 2026-08-23) rederived the
+  classification without using the primary checker, parametrized every
+  square-discriminant companion, classified the complete constant boundary
+  q=2s (including repetition of the marked graph), checked the excluded axis,
+  and separated the fixed-nonzero-product Laurent sheet from this polynomial
+  graph grammar.  Its assertion-free 43-gate transcript byte-matches under
+  normal, optimized, and frozen replay.
 related:
   - THM-3842-nonlinear-cubic-tower-trace-shift-eightfold-base-change
   - THM-3850-nonconstant-cubic-profile-irreducible-branch-puncture-formula
   - THM-3852-affine-two-variable-cubic-profile-line-factor-companion-no-go
+  - THM-3851-reciprocal-cubic-discriminant-toric-root-sheet
 script: 04-computation/jc2_marked_root_polynomial_graph_companion_thm3859.py
 output: 05-knowledge/results/jc2_marked_root_polynomial_graph_companion_thm3859.out
 script_sha256: f9ecaa52173f8d1f941332f82132c0fb52ea16a71e173cee18ea516702c5b0a4
 output_sha256: c598ffa7afbcde842ee0ec353d4f05ea9c3a711dcca4b8b8c27fbd809694cf33
 semantic_sha256: a22900e32db67db55945db2bae117c0fb6b1141ca1eb1f296d89fdcdc1d9e442
 hash_basis: raw LF bytes
+independent_script: 04-computation/jc2_marked_root_polynomial_graph_companion_independent_audit_thm3859.py
+independent_output: 05-knowledge/results/jc2_marked_root_polynomial_graph_companion_independent_audit_thm3859.out
+independent_script_sha256: 473cf6ffddcb8a4632c0d1ab398d92b89ad9287782d4da4dc4cc4cde1a0a8d9a
+independent_output_sha256: e8145be241a0750d34f68f29a9f3c92769a48ee63e0200e8f7ae124a88bdc6f6
+independent_semantic_sha256: 7478af841a342c046c64b903fbfbfc55fd98d7a225721147f5dfa9f29fb46987
 ---
 
 # THM-3859 -- marked-root graphs force a punctured companion
@@ -313,16 +326,48 @@ H=LK/18,                        D=(A-3)^4.                       (28)
 Thus the smooth two-place conic from THM-3852 is precisely the canonical
 `G_m` factor `(24)` in the square-discriminant marked-root chart.
 
+The entire constant-profile boundary is just as rigid.  Put `s=a` and
+`q=d`, with `a,d in k`.  Then
+
+```text
+D=27(3+A(d+4a))(1+A(3d-4a))^3.                                (29)
+```
+
+The two odd-multiplicity linear flanks have the same root exactly when
+`d=2a`; the case where both are constant is `a=d=0` and is already included.
+Thus the constant companion is reducible exactly when `q=2s`.  On this
+complete square boundary,
+
+```text
+H=(6Aa^2-C+6a)(12A^2a^2-8AC+12Aa-9).                         (30)
+```
+
+The first factor is `-F`, so the total branch repeats the marked graph, and
+the second is the canonical `G_m` component.  Constants with `d!=2a` lie in
+the irreducible case.
+
 The excluded axis boundary is also explicit: `A=0` is a branch component
 exactly when
 
 ```text
-b(0,C)=C^2/6.                                                    (29)
+b(0,C)=C^2/6.                                                    (31)
 ```
 
 It is not a graph over `A` and is not covered by this theorem.  Likewise a
 general graph profile has `Q=Q(A,C)` in `(5)`; allowing genuine `C`
 dependence is the next open transverse operation.
+
+This boundary is disjoint from the fixed-nonzero-product toric root sheet of
+THM-3851.  A root of `T^3-UT^2+VT-c` with `c!=0` satisfies
+
+```text
+V=cT^(-1)-T^2+UT,                                               (32)
+```
+
+so its sheet is a Laurent graph with source `A1 x G_m`, not a polynomial
+graph with source `A1`.  At `c=0` the pole disappears only because the cubic
+becomes reducible.  Hence the toric sheet neither evades this theorem nor
+fills its genuinely `C`-dependent transverse direction.
 
 ## 6. Exact replay
 
@@ -331,9 +376,14 @@ Run
 ```bash
 python3 04-computation/jc2_marked_root_polynomial_graph_companion_thm3859.py
 python3 -O 04-computation/jc2_marked_root_polynomial_graph_companion_thm3859.py
+python3 04-computation/jc2_marked_root_polynomial_graph_companion_independent_audit_thm3859.py
+python3 -O 04-computation/jc2_marked_root_polynomial_graph_companion_independent_audit_thm3859.py
 ```
 
-Both commands must byte-match
+The first two commands must byte-match
 `05-knowledge/results/jc2_marked_root_polynomial_graph_companion_thm3859.out`.
-The assertion-free companion performs 27 exact structural and hostile gates.
-The raw-LF SHA-256 hashes are recorded in the metadata.
+The latter two must byte-match
+`05-knowledge/results/jc2_marked_root_polynomial_graph_companion_independent_audit_thm3859.out`.
+The assertion-free companions perform respectively 27 and 43 exact
+structural and hostile gates.  Their raw-LF SHA-256 hashes are recorded in
+the metadata.

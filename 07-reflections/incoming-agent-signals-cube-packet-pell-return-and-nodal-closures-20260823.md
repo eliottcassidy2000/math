@@ -923,6 +923,13 @@ THM-3852 classifies every affine two-variable profile whose branch contains
 a line and proves that a residual component still has at least two missing
 normalization places.  The hostile rows `tau=-4/27` (coalesced infinity
 quadratic) and `tau=1/54` (doubled line) both preserve two distinct supports.
+THM-3859 carries the same loss through its all-degree polynomial marked-root
+graph grammar: an irreducible companion has a finite pole plus infinity, and
+a reducible companion contains a canonical `G_m`.  On the complete constant
+boundary it is reducible exactly when the two profile constants have ratio
+two, where the companion repeats the graph.  The fixed-nonzero-product torus
+is disjoint from this grammar; setting the product to zero removes its Laurent
+pole only by making the cubic reducible.
 
 THM-3851 exposes a more surprising tradeoff.  Its tricuspidal quartic gains
 the desired rank-two class group `(Z/3)^2`, but no line cuts the normalization
@@ -945,6 +952,16 @@ scaling returns to product one.  Its `G_m` normalization cannot be affinely
 reparametrized into the provisional inverse-discriminant lane's one-place
 `A1` target, because their unit groups differ.  This locates the escape in a
 genuinely variable index-form/content sidecar, not another coefficient chart.
+
+THM-3854 supplies the complementary one-place warning.  Its rational quintic
+has three cusps, three nodes and one smooth infinity place, but its tautological
+polynomial completion has geometric monodromy `S5`; after adjoining the
+discriminant square root the kernel is perfect `A5`, so no cyclic cubic
+quotient survives.  Two explicit seminormal square/cube descents also leave
+nonsquare residuals, and the derivative ideal `t(t^2-1)` forbids the curve as
+an interior Keller arm at every normal degree.  One-place geometry is thus
+necessary but still does not select cubic monodromy or the correct source
+immersion.
 
 THM-3855 supplies the complementary positive formal result.  At the rational
 four-ray row, the four coefficient gradients of the binary-cubic
