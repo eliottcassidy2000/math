@@ -24,8 +24,8 @@ related:
   - THM-3788-dubouloz-palka-standard-chart-containment-obstruction
 script: 04-computation/jc2_cubic_pseudoplane_arm_nodal_gate_thm3790.py
 output: 05-knowledge/results/jc2_cubic_pseudoplane_arm_nodal_gate_thm3790.out
-script_sha256: b750cc8de53138236ca96a1a9eb908134db14f103f1b69263181ab6111a29dd6
-output_sha256: 167fc18402653016dc59bc4c859258ee17b6642c6dab87833f2688bb0db6f4a3
+script_sha256: 6f2614075c19fff1a08653cda993a996feb93c69a587aa8c684065918d197829
+output_sha256: f3a3aff4c8e7503786bebfdb98d6033aef21a3a7f29f504e439d87285c559f81
 hash_basis: raw LF bytes
 ---
 
@@ -201,6 +201,50 @@ nonzero.  Hence no polynomial correction of only the second output can
 repair `(16)`; a live construction must change the carrier itself and must
 retain the nodal arm data plus the normal Bezout sidecar.
 
-The exact companion named in the metadata verifies `(8),(14)--(19)` and
+## 5. Every node forces a residual divisor
+
+There is a further global sidecar even before choosing higher jets.  For a
+hypothetical Darboux pair whose arm restriction is the normalized nodal
+profile `(14)`, let
+
+```text
+Delta(A,C)=C^2-A(A-1)^2.                                                  (20)
+```
+
+This is the irreducible equation of the nodal cubic.  Substituting `(7)`
+and using `(8)` gives, independently of the chosen Bezout completion,
+
+```text
+Delta(A,C)=-z(e^2-1)/(3c^3) mod I^2.                                    (21)
+```
+
+Indeed, the coefficient of `z` is
+
+```text
+(e^2-1)[2e b_1-(3e^2-1)a_1]=-(e^2-1)/(3c^3).                            (22)
+```
+
+Thus the pullback divisor of the nodal cubic contains `L` reduced at its
+generic point, but at each of the two preimages `e=+/-1` of the node it has
+another local branch.  This is also forced directly by etaleness: locally
+the Darboux morphism is an isomorphism and the inverse image of a node has
+two transverse branches.  Globally write
+
+```text
+div(Delta(A,C))=L+D.                                                       (23)
+```
+
+The residual effective divisor `D` is nonempty, meets `L` at both nodal
+preimages (possibly through different global components), and satisfies
+
+```text
+[D]=-[L]=2[L] in Pic(Y)=Z/3.                                              (24)
+```
+
+So a construction cannot specify only a noninjective arm parametrization:
+it must simultaneously build the residual class-two curve that realizes
+the other local branch at every collision.
+
+The exact companion named in the metadata verifies `(8),(14)--(22)` and
 the critical equations over `Q(c)`.  **QED, conditional only on independent
 hostile audit.**

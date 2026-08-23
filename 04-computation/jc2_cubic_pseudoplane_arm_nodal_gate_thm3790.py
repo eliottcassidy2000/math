@@ -38,6 +38,12 @@ assert sp.gcd(sp.diff(a0, t), sp.diff(b0, t)) == 1
 assert_zero(a0.subs(t, 1) - a0.subs(t, -1))
 assert_zero(b0.subs(t, 1) - b0.subs(t, -1))
 
+# Universal first-normal coefficient of the pulled-back nodal equation.
+delta_normal = sp.factor(
+    2 * b0 * b1 - (a0 - 1) * (3 * a0 - 1) * a1
+)
+assert_zero(delta_normal + (t**2 - 1) / (3 * c**3))
+
 # The smallest global lift and its exact failed bracket.
 A = e**2 - z / (3 * c**3)
 C = e**3 - e - e * z / (2 * c**3)
@@ -67,6 +73,7 @@ assert sp.gcd(crit_poly, sp.diff(crit_poly, zeta)) == 1
 print("THM3790_ARM_QUOTIENT B/I^2=C[e,z]/(z^2); r=0 because c^3*r=z^3-r^2*e")
 print(f"THM3790_BEZOUT {bezout}")
 print("THM3790_NODAL gcd(2*t,3*t^2-1)=1; gamma(1)=gamma(-1)=(1,0)")
+print(f"THM3790_NODAL_NORMAL_COEFFICIENT {delta_normal}")
 print(f"THM3790_LIFTED_BRACKET {lifted}")
 print("THM3790_CRITICAL_POLY 8*zeta^7+9*c^15; squarefree=YES; count=7")
 print("THM3790_CRITICAL_POINT r=2*zeta^3/c^3; e=-c^6/(4*zeta^3)")
