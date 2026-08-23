@@ -1,0 +1,26 @@
+THM3847_AUDIT PASS
+COMPLETION Spec(S_beta)=A2_(C,Z), hence smooth and normal
+IRREDUCIBILITY linear-in-A unit certificate plus irreducible C=0 control
+FINITE_FLAT_RANK 3
+MAP_A -(2*C - Z)*(6*B - 2*C*Z + Z**2)/(4*B**2)
+MAP_JACOBIAN (6*B + 4*C**2 - 8*C*Z + 3*Z**2)/(4*B**2)
+BRANCH -27*A**2*B**2 - 54*A*B*C + 8*A*C**3 - 54*B + 9*C**2
+BRANCH_NORMALIZATION W^2+2*C^2=9*beta = G_m
+BRANCH_INFINITY_PLACES 2
+RAMIFICATION 6*B + 4*C**2 - 8*C*Z + 3*Z**2
+COMPANION 24*B - 8*C*Z + 3*Z**2
+BRANCH_PULLBACK Delta=-(different^2*companion)/(16*beta^2)
+INDEX A*X**3 + 2*B*Y**3 - 2*C*X*Y**2 + 3*X**2*Y
+INDEX_REPRESENTS_ONE (X,Y)=(0,(2*beta)^(-1/3))
+ETALE_UNIT 6*B + 4*C**2 - 8*C*Z + 3*Z**2
+HOSTILE_BETA_ZERO Z*(2*C - Z)**2
+HOSTILE_PROFILE_SINGULAR_LINE C=Z=0
+HOSTILE_PROFILE_RESIDUAL_NORMALIZATION P1 minus {0,-rho/2,infinity}
+THM3841_CONNECTION G_m has no dominant polynomial A1 curve, so the branch passport is still nonplanar
+THM3843_CONNECTION normalization map preserves C and is injective on points; it cannot be the forced self-identifying Russell arm
+THM3844_CONNECTION the ramification root is -1/2-9*beta/(2*U^2): two cusp addresses fold to one depressed cusp
+THM3846_CONNECTION next move is a higher-normal algebraizing seed, not another constant monogenic resummation
+SEMANTIC_SHA256 059627d56fc2db92842a9753b038eef51cf873a125c025cabc26b8c8ee3266b6
+PRIMARY_SCRIPT_SHA256 158de2197bc9e0c9d68923864b42792549cccb1f4357129f72c2567d46c5ae02
+PRIMARY_OUTPUT_SHA256 1477e231edf1a8e5bd60e1b647b98adada8d27252ff7fe8afaefe6d4778d5f3e
+GATES 54

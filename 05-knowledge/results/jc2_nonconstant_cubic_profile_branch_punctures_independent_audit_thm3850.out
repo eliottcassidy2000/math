@@ -1,0 +1,17 @@
+THM3850_INDEPENDENT_AUDIT PASS
+CONJUGATE_PRODUCT -972*q**2*(-6*q + x**2)
+LOCAL_MULTIPLICITY_ROWS [(1, 2, -9/8), (2, 4, -9/8), (3, 6, -9/8), (4, 8, -9/8), (5, 10, -9/8), (6, 12, -9/8), (7, 14, -9/8), (8, 16, -9/8)]
+PROFILE_ROWS [('simple', 1, 2, 0, 3), ('double', 1, 2, 0, 3), ('mixed', 2, 5, 2, 3), ('three_roots', 3, 3, 1, 4), ('uneven', 3, 7, 3, 4)]
+REPEATED_L_CONTROL L=(C-1)^2(C+1); all finite discriminant points retained
+SQUARE_L_HOSTILE_FACTORS 2
+DEGREE_ONE_BONUS beta=-9*kappa^2/8 gives A1 plus G_m; all other beta!=0 are irreducible
+DEGREE_ONE_COMPONENT_MEETING C=9*kappa/4, A=-2/(3*kappa)
+MINIMAL_CONIC_PARAMETER C=9/(T^2+2), V=9T/(T^2+2)
+MINIMAL_A_PARAMETER -(T**3*eta + 6*T**2 + 4)/(6*(T**2 + 2))
+MINIMAL_DELETED_PARAMETERS T=infinity and the two roots of T^2+2
+PRIMITIVE_REDUCIBLE_FACTOR Delta=-(E_u*E_v)/3; components k[C,u^-1], k[C,v^-1]
+VERTICAL_AUDIT_ROWS [(1, 2, 2, 1), (2, 4, 3, 2), (2, 4, 4, 2), (3, 4, 3, 3), (2, 6, 3, 2), (2, 8, 3, 2), (2, 14, 3, 2)]
+ALL_PROFILE_CONCLUSION at least one component has at least two punctures
+AUDIT_VERDICT all-profile mathematics passes; repair H_b/projective-completion notation and 'the first' wording
+SEMANTIC_SHA256 5953ab831249731e5f4aa8d2ce8b00c44bfee934b1a1c16ddc4b3c8a1efddded
+GATES 199

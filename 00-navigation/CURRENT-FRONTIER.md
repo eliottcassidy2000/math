@@ -344,10 +344,14 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   dominant plane map by its three-puncture Jelonek component, and THM-3845
   gives an independent total-degree contradiction.  THM-3842 identifies it
   as an eightfold base change of the rational cubic tower.  THM-3847's
-  two-puncture (`G_m`) deformation and THM-3844's one-place two-cusp quartic
-  also fail: each cubic order is globally monogenic, so deleting ramification
-  creates a nonconstant unit.  In THM-3844 the two local cusp classes
-  globalize but fold onto one `Z/3` direction; cusp count is not torsion rank.
+  two-puncture (`G_m`) deformation fails both live gates: its completion is
+  literally `A2_(C,Z)` and globally monogenic, so deleting ramification makes
+  the different a nonconstant unit; its ramification normalization is also
+  not polynomially uniruled, so THM-3841 blocks a plane atlas independently.
+  Its normalization is injective with two cusp images, not the
+  self-identifying Russell arm required by THM-3843.  THM-3844's one-place
+  two-cusp quartic also remains globally monogenic; its two local cusp classes
+  fold onto one `Z/3` direction, so cusp count is not torsion rank.
   THM-3850 closes every nonconstant one-variable profile `b(C)`: at least one
   branch component has two places.  THM-3851 attains torsion `(Z/3)^2`, but
   proves every chart of its tricuspidal quartic has at least two places.

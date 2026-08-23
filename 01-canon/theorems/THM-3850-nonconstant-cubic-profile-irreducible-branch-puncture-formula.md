@@ -22,6 +22,11 @@ audit: >
   distinct normalization point over `C=infinity`, even if projective branches
   collide.  Normal and optimized runs byte-match the frozen 47-gate
   transcript and both hashes.
+  A second 199-gate audit uses the conjugate-numerator identity
+  `N_-N_+=-972b^2(C^2-6b)` to prove exact cancellation at roots of `b`,
+  reconstructs both Laurent denominator graphs, exhausts all
+  origin-vanishing valuation rows, and classifies both degree-one reducible
+  loci.  Its normal, optimized, and frozen streams agree.
 related:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
@@ -32,6 +37,11 @@ output: 05-knowledge/results/jc2_nonconstant_cubic_profile_branch_punctures_thm3
 script_sha256: b5b673c26ba0fc7c32faa0ad6e4936feaec2a1680e04a8531953ba5f1eb21cde
 output_sha256: 767e4102e8b45d3a9f952ad3beddb28074d1f781e78cca0217d5a2572b932be3
 semantic_sha256: 951ceb8509eff3102902aa0e9a077a7a95b415fb55c08018c0936ddfed1aa4aa
+independent_audit_script: 04-computation/jc2_nonconstant_cubic_profile_branch_punctures_independent_audit_thm3850.py
+independent_audit_output: 05-knowledge/results/jc2_nonconstant_cubic_profile_branch_punctures_independent_audit_thm3850.out
+independent_audit_script_sha256: 18c953d3fe6feedd289f791b87f074c92ba9f730caf714f2c756fd1e54ea8bd0
+independent_audit_output_sha256: a975972b402b1885f89673a0a8bc9ffc44d48e9d1be352bb0a6a6400310edadb
+independent_audit_semantic_sha256: 5953ab831249731e5f4aa8d2ce8b00c44bfee934b1a1c16ddc4b3c8a1efddded
 hash_basis: raw LF bytes
 ---
 
@@ -75,18 +85,19 @@ r=deg ell,                    s=deg rad(b),                      (6)
 ```
 
 where scalar square factors are absorbed into `h` and
-`rad(b)=b/gcd(b,b')` up to a nonzero scalar.  Then `r>=1`, the smooth
-projective normalization of `Gamma_b` is the smooth projective completion of
-the hyperelliptic affine model
+`rad(b)=b/gcd(b,b')` up to a nonzero scalar.  Then `r>=1`.  Let `H_b` be the
+hyperelliptic affine model
 
 ```text
 H_b: W^2=ell(C),                                                 (7)
 ```
 
-and the **affine normalization** of `(4)` is exactly
+and let `Hbar_b` denote its smooth projective completion.  This is the smooth
+projective normalization of `Gamma_b`, and the **affine normalization** of
+`(4)` is exactly
 
 ```text
-Gamma_b^nu=H_b minus D_b,                                       (8)
+Gamma_b^nu=Hbar_b minus D_b,                                    (8)
 
 |D_b|=s+nu_infinity,
 
@@ -95,11 +106,11 @@ nu_infinity = 1  if r is odd,
 ```
 
 More precisely, `D_b` contains one point over each distinct root of `b` and
-all points of `H_b` over `C=infinity`; there are no other deleted points.
+all points of `Hbar_b` over `C=infinity`; there are no other deleted points.
 Its projective genus is
 
 ```text
-g(H_b)=floor((r-1)/2).                                          (10)
+g(Hbar_b)=floor((r-1)/2).                                       (10)
 ```
 
 Because `b` is nonconstant and `(4)` is irreducible,
@@ -112,7 +123,8 @@ so `|D_b|>=2`.  In particular no irreducible nonconstant-profile branch has
 affine normalization `A1`; it cannot itself be a polynomially parametrized
 Jelonek component.
 
-At the first reducible boundary, `b=kappa C` with `kappa in k*`, the reduced
+At an explicit minimal-degree reducible boundary, `b=kappa C` with
+`kappa in k*`, the reduced
 branch is the disjoint union of
 
 ```text
@@ -176,7 +188,7 @@ Since `w=hW`, equations `(5)`, `(7)`, and `(16)` identify the function field
 of `Gamma_b` with `k(C)(W)`, `W^2=ell`.  Taking the smooth projective model
 gives `(7)` and the standard hyperelliptic genus formula `(10)`.
 
-The fibre of `C:H_b->P1` over infinity has one point when `r` is odd and two
+The fibre of `C:Hbar_b->P1` over infinity has one point when `r` is odd and two
 points when `r` is even.  In the even case the two leading square roots are
 distinct because `k` is algebraically closed and the leading coefficient of
 `ell` is nonzero.  Every such point is absent from the affine normalization:
@@ -213,9 +225,21 @@ so the unique finite point is
 A=-9/(8c),                     partial_A Delta_b=8c^3!=0.          (20)
 ```
 
+This cancellation is exact even when `c` is a multiple root of `b`.  Put
+`B=8C^3-54Cb`, choose `z^2=-8L`, and let `N_-=B-Lz`, `N_+=B+Lz` be the two
+quadratic numerators.  Directly,
+
+```text
+N_-N_+=B^2+8L^3=-972b^2(C^2-6b).                       (20a)
+```
+
+At `c`, the cancelling sheet has `z=-4c`, while the conjugate numerator is
+`16c^3!=0`.  Hence the cancelling numerator has order exactly
+`2 ord_c(b)`, precisely cancelling the denominator `b^2` in (16).
+
 It is already smooth and has exactly one normalization preimage.  Therefore
 each **distinct** root of `b`, independent of its multiplicity, deletes
-exactly one point of `H_b`.
+exactly one point of `Hbar_b`.
 
 Formula `(16)` has no finite pole away from `b=0`.  Roots of `h` or `ell`
 may be finite ramification or singular-resolution points of the quadratic
@@ -223,7 +247,7 @@ model `(15)`, but their denominator in `(16)` is a unit, so they remain in
 the affine normalization.  Consequently the points in Sections 2 and 3 are
 all the deleted points, proving the exact formula `(8)`--`(9)`.
 
-## 4. The minimal reducible profile
+## 4. An explicit minimal-degree reducible profile
 
 Set `b=kappa C`, `kappa in k*`.  Exact factorization gives
 
@@ -361,6 +385,11 @@ In every row of `(36)`,
 ord_C(d_2)=2m-nu>0.                                              (38)
 ```
 
+Moreover `d_2=-27C^(2m-nu)a(C)^2` is a nonzero polynomial, so `Z=0` is not a
+divisor component of (37).  The reduced component chosen below therefore has
+a nonempty affine part and is the closure of an irreducible component of
+`H=0`.
+
 Therefore the residual projective closure contains
 
 ```text
@@ -403,6 +432,28 @@ b=C^3+1:        s=3, deg ell=3,       |D_b|=3+1=4.                 (40)
 The middle row checks that multiplicity of a profile root does not inflate
 the puncture count; only `rad(b)` appears.
 
+The complete degree-one boundary is also exact.  For
+`b=kappa C+beta`, `kappa!=0`,
+
+```text
+beta=0:             A1 plus (P1 minus three points),
+beta=-9kappa^2/8:   A1 plus G_m,
+all other beta!=0:  one irreducible three-puncture branch.        (41)
+```
+
+Indeed `disc_C(9b-2C^2)=9(9kappa^2+8beta)`.  At the second reducible value,
+
+```text
+Delta_b=-(2187/64)F_1F_2,
+F_1=kappa^2A-(8/27)C+(4/3)kappa,
+F_2=A((8/9)C-kappa)^2+(8/9)C-(4/3)kappa.              (42)
+```
+
+The first factor is an affine-line graph.  With `d=(8/9)C-kappa`, the second
+has ring `k[d,(d)^(-1)]`, because its equation gives
+`d(3/kappa)(1+Ad)=1`; it is exactly `G_m`.  Thus (21) is an explicit
+minimal-degree boundary, not the unique degree-one reducible profile.
+
 The assertion-free exact companion verifies the universal discriminants,
 the two local numerator values `(18)`, the smooth finite point `(19)`--`(20)`,
 all three controls `(40)`, and the full minimal factorization and conic
@@ -410,6 +461,10 @@ normalization `(21)`--`(25)`, the factorization `(28)`, the affine-line
 positive control `(33)`--`(34)`, and every valuation row in `(36)`--`(38)`.
 It has 47 active gates; normal and optimized replay must byte-match the
 frozen transcript.
+The independent companion proves (20a), rebuilds both denominator graphs,
+audits every row of (36), and verifies the complete degree-one split
+(41)--(42) in 199 active gates.  Its normal, optimized and frozen streams
+agree.
 
 This theorem does not assert that every branch component is nonpolynomial:
 `(12)` and `(34)` show the contrary.  It proves that at least one component
@@ -423,4 +478,6 @@ Reproduction:
 ```bash
 python3 04-computation/jc2_nonconstant_cubic_profile_branch_punctures_thm3850.py
 python3 -O 04-computation/jc2_nonconstant_cubic_profile_branch_punctures_thm3850.py
+python3 04-computation/jc2_nonconstant_cubic_profile_branch_punctures_independent_audit_thm3850.py
+python3 -O 04-computation/jc2_nonconstant_cubic_profile_branch_punctures_independent_audit_thm3850.py
 ```

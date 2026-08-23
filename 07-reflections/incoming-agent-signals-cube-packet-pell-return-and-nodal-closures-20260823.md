@@ -871,7 +871,7 @@ two, while the nonlinear branch normalization maps six-to-one, giving
 At `A=0,C=1`, the raw marked-root fibre has `omega^2(omega-1)`; the normal
 THM-3811 fibre uses `theta` to separate the doubled `omega=0` sheet.
 
-The same audit found MISTAKE-457.  Marked Poincare-residue parity must choose
+The same audit found MISTAKE-459.  Marked Poincare-residue parity must choose
 a discriminant representative of branch valuation exactly one.  The hostile
 replacement `D -> D^3` preserves squareclass and odd valuation but creates a
 triple pole, so its ordinary residue is not defined.  With the valuation-one

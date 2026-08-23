@@ -23,7 +23,7 @@ audit: >
   branch normalization, six-point cusp fibre, complete ramification divisor,
   and both symplectic branch residues.  Normal, optimized, and frozen
   transcripts agree.  A later signal-extension audit (root /
-  probe_3842_bridge) repaired MISTAKE-457 by normalizing residue
+  probe_3842_bridge) repaired MISTAKE-459 by normalizing residue
   representatives to branch valuation one.  It also proved that the
   coefficient map is finite, reconciled its degree as `2*1+6=8`, and exposed
   the raw nonnormal ring pullback at `A=0,C=1`; none changes the field
@@ -345,7 +345,7 @@ unit in the branch function field.  Consequently the divisor of `eta` modulo
 two on the branch normalization is an invariant of the **marked** symplectic
 cubic packet.  The valuation-one normalization is essential: replacing `D`
 by `D^3` preserves its squareclass and odd valuation but creates a triple pole,
-for which the ordinary residue above is not defined (MISTAKE-457).
+for which the ordinary residue above is not defined (MISTAKE-459).
 
 For the tower cusp `D_0=8p^3-27u^2`, `(20)` gives
 

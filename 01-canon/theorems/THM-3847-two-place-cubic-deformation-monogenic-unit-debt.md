@@ -5,7 +5,8 @@ status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A constant-profile
   deformation of the depressed
   cubic tower has irreducible branch normalization G_m (exactly two places at
-  infinity), but its normal finite-flat cubic order is globally monogenic:
+  infinity), and its completion is literally the source plane `k[C,Z]`, but
+  its normal finite-flat cubic order is globally monogenic:
   the binary index form represents 1.  Consequently every affine etale open
   has a nonconstant unit and cannot be an affine plane.  This is a design
   obstruction for one cubic grammar, not a planar Jacobian theorem.
@@ -18,16 +19,31 @@ audit: >
   normality argument, the binary index form and monogenic scaling, and the
   different-unit obstruction on an arbitrary affine etale open.  Normal and
   optimized runs byte-match the frozen 55-gate transcript and both hashes.
+  A second independent audit solved the source equation for `A`, factored the
+  pulled-back branch as the different squared times its simple companion,
+  reconstructed the index form in the power basis, and exhibited the branch
+  as `G_m` with an injective two-cusp normalization.  It also found three
+  punctures on the cheap nonconstant residual.  All 54 gates agree under
+  normal, optimized, and frozen replay.
 related:
   - THM-3774-three-component-rational-keller-cover-tower
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
   - THM-3842-nonlinear-cubic-tower-trace-shift-eightfold-base-change
+  - THM-3843-russell-pseudoplane-arm-self-identification-and-cusp-budget
+  - THM-3844-two-cusp-polynomial-branch-quadratic-resolvent-design-gate
+  - THM-3846-formal-arm-darboux-lift-and-algebraization-gate
+  - THM-3850-nonconstant-cubic-profile-irreducible-branch-puncture-formula
 script: 04-computation/jc2_two_place_cubic_monogenic_unit_debt_thm3847.py
 output: 05-knowledge/results/jc2_two_place_cubic_monogenic_unit_debt_thm3847.out
 script_sha256: 158de2197bc9e0c9d68923864b42792549cccb1f4357129f72c2567d46c5ae02
 output_sha256: 1477e231edf1a8e5bd60e1b647b98adada8d27252ff7fe8afaefe6d4778d5f3e
 semantic_sha256: 6d701c096e1ade10032cca623f6ae0f0723918ccbbc48c7f22ef66fecff128c1
+independent_script: 04-computation/jc2_two_place_cubic_monogenic_unit_debt_independent_audit_thm3847.py
+independent_output: 05-knowledge/results/jc2_two_place_cubic_monogenic_unit_debt_independent_audit_thm3847.out
+independent_script_sha256: 5cbf00010e6eada0931b33e7f1aa40c6b324eda939c6ea0f5305a89c7ca376ea
+independent_output_sha256: 77beda7ba28fa8dff1eb3b59d3ca7de067a92a6b895c3d3ed2653b067b60f703
+independent_semantic_sha256: 059627d56fc2db92842a9753b038eef51cf873a125c025cabc26b8c8ee3266b6
 hash_basis: raw LF bytes
 ---
 
@@ -218,6 +234,49 @@ The left side is `1`; the index term is a nonnegative even integer.  It must
 vanish.  Thus the order is integrally closed at every height-one prime over
 the branch.  Serre's `R1+S2` criterion proves that `S_beta` is normal.
 
+### 3.1 Independent source-plane and branch-pullback closure
+
+There is a shorter global description.  Equation (8) is linear in `A` with
+unit coefficient `-4 beta^2`, so solving it gives
+
+```text
+A={Z^3-4CZ^2+(4C^2+6 beta)Z-12 beta C}/{4 beta^2},       (18a)
+S_beta isomorphic to k[C,Z].                              (18b)
+```
+
+Thus the completion is literally a smooth affine plane.  Its polynomial map
+to `A2_(A,C)` has Jacobian
+
+```text
+partial A/partial Z=G_beta'(Z)/(4 beta^2).                (18c)
+```
+
+On this source plane the branch equation factors exactly as
+
+```text
+Delta_beta(A(C,Z),C)
+ =-G_beta'(Z)^2(3Z^2-8CZ+24 beta)/(16 beta^2).             (18d)
+```
+
+The square is the ramified sheet and the last quadratic is its simple
+companion.  If `rho^2=-2` and `U=W+rho C` on the normalization (5), then
+
+```text
+U(W-rho C)=9 beta.                                        (18e)
+```
+
+This is an explicit Laurent coordinate: the affine normalization is `G_m`
+and its projective completion deletes exactly two points.  Formula (16) is
+pointwise injective.  Away from `L=0`, `(A,C)` recovers `W`; at `L=0`, the
+conic forces `W=0`.  Its two singular images are therefore cusps rather than
+the finite self-identification required of a Russell arm by THM-3843.
+
+Consequently the constant-profile construction fails two independent plane-
+atlas gates.  Its different becomes the nonconstant unit (21) after deleting
+ramification, while its `G_m` ramification normalization also triggers the
+THM-3841 deleted-divisor/Jelonek obstruction.  A viable replacement must
+repair both the unit/index debt and the polynomially-uniruled branch passport.
+
 ## 4. The index represents one
 
 For `theta=Xt+Yz`, take the determinant of `(1,theta,theta^2)` in the basis
@@ -251,7 +310,7 @@ a scalar: if it were in `k`, then `(21)` would give a quadratic equation for
 affine etale open has the nonconstant unit `(21)`, proving `(7)`.  This is
 the exact algebraic debt paired with the improved branch passport.
 
-## 5. Why a nonconstant profile remains only a design signal
+## 5. Why the cheap nonconstant profile also fails
 
 The depressed-cubic identity `(3)`--`(4)` continues formally if `beta` is
 replaced by a polynomial profile `b(C)`, and the index calculation `(6)`
@@ -283,9 +342,18 @@ Delta_b=-(C/3)(4A^2C^3+4A^2C^2+A^2C
 ```
 
 Thus the same tuning that lowers the visible radicand introduces an extra
-branch component and makes the index value noninvertible.  Nonconstant
-profiles remain a legitimate construction lane, but `(24)` alone proves no
-uniform one-place or two-place theorem.
+branch component and makes the index value noninvertible.  Independently,
+the residual factor in (25) has normalization `P1` minus three points: after
+writing `C=V^2` and choosing `rho^2=-2`, its map is
+
+```text
+A(V)=-3(V+rho)/(2V(V+rho/2)^2),                            (25a)
+```
+
+with missing parameters `0,-rho/2,infinity`.  The later THM-3850 proves the
+uniform statement that every nonconstant one-variable profile has at least
+one nonpolynomial branch component.  The present example is its cheap hostile
+control, not a remaining construction lane.
 
 ## 6. Exact replay and scope
 
@@ -294,6 +362,10 @@ the complete multiplication table and all 27 associativity triples, both
 characteristic polynomials, both discriminants, the index identity, the
 different, and the hostile profile `(23)`--`(25)`.  It has 55 active gates;
 normal and optimized replay must byte-match the frozen transcript.
+The independent companion starts instead from the source-plane map (18a),
+proves (18b)--(18e), reconstructs the index form in the power basis, and
+checks the three-puncture hostile (25a) in 54 active gates.  Normal,
+optimized, and frozen outputs agree.
 
 This theorem concerns one explicit normal cubic completion.  It does not
 exclude nonmonogenic cubic completions, nonconstant-profile deformations,
@@ -305,4 +377,6 @@ Reproduction:
 ```bash
 python3 04-computation/jc2_two_place_cubic_monogenic_unit_debt_thm3847.py
 python3 -O 04-computation/jc2_two_place_cubic_monogenic_unit_debt_thm3847.py
+python3 04-computation/jc2_two_place_cubic_monogenic_unit_debt_independent_audit_thm3847.py
+python3 -O 04-computation/jc2_two_place_cubic_monogenic_unit_debt_independent_audit_thm3847.py
 ```
