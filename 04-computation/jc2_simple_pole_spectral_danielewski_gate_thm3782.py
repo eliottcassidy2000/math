@@ -39,6 +39,21 @@ x, y = sp.symbols("x y")
 
 spectral_rows = []
 
+# Product rule behind automatic component constancy.  Modulo an irreducible
+# factor D of a reduced U=DH, the Keller identity J(U,V)=U forces J(D,V)=0.
+Dfun = sp.Function("D")(x, y)
+Hfun = sp.Function("H")(x, y)
+Vfun = sp.Function("V")(x, y)
+gate(
+    sp.simplify(
+        jac(Dfun * Hfun, Vfun, x, y)
+        - Dfun * jac(Hfun, Vfun, x, y)
+        - Hfun * jac(Dfun, Vfun, x, y)
+    )
+    == 0,
+    "automatic-spectrum product Jacobian",
+)
+
 # Universal target-field algebra for one through six distinct values.
 for arm_count in range(1, 7):
     roots = tuple(sp.Integer(2 * j - arm_count) for j in range(arm_count))
@@ -157,6 +172,7 @@ gate(sp.cancel(V_tower.subs(y, -1 / x)) == 0,
 
 semantic_rows = (
     "hypotheses:R=k[x,y];U_reduced;J(U,P)=1;V=UP_in_R;no_horizontal_poles",
+    "automatic_spectrum:J(D_iH_i,V)=U_forces_J(D_i,V)=0;constants_equal_k",
     "spectrum:V_mod_D_i=lambda_i;Lambda=distinct_values;Phi=product(z-lambda)",
     "completion:E=Phi(V)/U_in_R;relation=UE=Phi(V)",
     "brackets:{U,V}=U;{U,E}=Phi'(V);{V,E}=E;target_etale",
@@ -178,7 +194,7 @@ gate(
 print("theorem=THM-3782-simple-pole-spectral-Danielewski-gate")
 print("field=algebraically_closed_characteristic_zero;de_Rham_consequence_over_C")
 print("hypotheses=U_reduced;J(U,P)=1;V=UP_polynomial;no_horizontal_poles")
-print("component_spectrum=finite_constant_values_Lambda")
+print("component_spectrum=automatic_finite_constant_values_Lambda")
 print("completion=Phi(z)=product_(lambda_in_Lambda)(z-lambda);E=Phi(V)/U")
 print("surface=D_Phi=k[U,V,E]/(UE-Phi(V));smooth_exponent_one")
 print("brackets={U,V}=U;{U,E}=Phi'(V);{V,E}=E;map=etale")

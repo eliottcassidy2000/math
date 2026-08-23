@@ -1,7 +1,7 @@
 theorem=THM-3782-simple-pole-spectral-Danielewski-gate
 field=algebraically_closed_characteristic_zero;de_Rham_consequence_over_C
 hypotheses=U_reduced;J(U,P)=1;V=UP_polynomial;no_horizontal_poles
-component_spectrum=finite_constant_values_Lambda
+component_spectrum=automatic_finite_constant_values_Lambda
 completion=Phi(z)=product_(lambda_in_Lambda)(z-lambda);E=Phi(V)/U
 surface=D_Phi=k[U,V,E]/(UE-Phi(V));smooth_exponent_one
 brackets={U,V}=U;{U,E}=Phi'(V);{V,E}=E;map=etale
@@ -13,7 +13,7 @@ nonreduced_boundary=Phi(V)_pays_only_rad(U)
 horizontal_boundary=UP_nonpolynomial_if_uncleared_pole
 spectral_controls_h=1,2,3,4,5,6
 packet_sha256=3a5f2ae5de4bab3234fa3d8e708876b621750c89d2fb6ff3fa4ccc6cf9fda22b
-semantic_sha256=a5639021b35f372b9ac0cf4a8546fb9de9b49e74705d79bcf373b4e49d4d2a33
-CHECKS=63
+semantic_sha256=12e3dccda5c9f9413862e1bd9110e59b97302ce7201f656e40d5831ca40a73a0
+CHECKS=64
 NO_CLAIM=automatic_codim1_surjectivity_or_planar_Jacobian_counterexample
 RESULT=PASS

@@ -3,9 +3,9 @@ id: THM-3782
 title: "Simple-pole spectral Danielewski completion and target-field gate"
 status: >
   PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  A reduced
-  planar rational Keller seed whose poles are cleared by U and whose
-  log-canonical blowdown V=UP has finitely many constant values on the
-  components of U=0 admits a canonical polynomial completion
+  planar rational Keller seed whose poles are cleared by U automatically
+  has a finite constant component spectrum for its log-canonical blowdown
+  V=UP, and admits a canonical polynomial completion
   E=Phi(V)/U.  Its complete relation and Poisson laws are those of a smooth
   exponent-one Danielewski surface.  One spectral value gives an actual
   polynomial mate.  Two or more values give the nonexact logarithmic
@@ -16,13 +16,14 @@ status: >
   automatic conclusion.
 source: root + jc_quartic_c3_construct / THM-3779 abstraction, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The exact companion checks the universal
+  SELF-AUDITED PROOF CANDIDATE.  The exact companion checks the product
+  Jacobian identity behind automatic component constancy, the universal
   relation, three Poisson laws, squarefree Bezout/unit-minor certificate for
   one through six spectral values, the synchronized polynomial-mate branch,
   a two-value failed-surjectivity/Darboux hostile, the nonreduced and
   horizontal-pole boundaries, and THM-3779's m=2 positive control.  Normal
-  and optimized replay and independent audit of the conditional DVR descent
-  and THM-3600 typing remain due.
+  and optimized replay and independent audit of the tangent-constant-field,
+  conditional DVR-descent, and THM-3600 steps remain due.
 depends_on:
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
 related:
@@ -31,9 +32,9 @@ related:
   - THM-3777-three-component-tower-reciprocal-payment-horizontal-divisor-transfer
 script: 04-computation/jc2_simple_pole_spectral_danielewski_gate_thm3782.py
 output: 05-knowledge/results/jc2_simple_pole_spectral_danielewski_gate_thm3782.out
-script_sha256: a098efc3eded6d0133566fd6449536c27030d9dd66b40d32d5f9d0894142cf14
-output_sha256: 674aae9412d77f464e5a7b930bf480cb1dcbed0fe1633b61a7dc533a0136dc8f
-semantic_sha256: a5639021b35f372b9ac0cf4a8546fb9de9b49e74705d79bcf373b4e49d4d2a33
+script_sha256: f166248449b5735e4f21b4ffc2fa5abcfa44673941646ad017d6cb55c5379836
+output_sha256: 93900416967c17e500242e2fe3dab1c1144d3c9132bca272f65ce603a9262abc
+semantic_sha256: 12e3dccda5c9f9413862e1bd9110e59b97302ce7201f656e40d5831ca40a73a0
 hash_basis: raw LF bytes
 ---
 
@@ -72,11 +73,36 @@ Suppose:
    V:=UP lies in R;                                      (4)
    ```
 
-4. for each component `D_i=0`, the class of `V` in `R/(D_i)` is a scalar
+The constant component spectrum is then automatic.  Put `H_i=U/D_i`.
+From `(3),(4)`,
 
-   ```text
-   V=lambda_i mod D_i,                 lambda_i in k.   (5)
-   ```
+```text
+J(U,V)=U.                                              (4a)
+```
+
+Reducing
+
+```text
+J(D_i H_i,V)=D_i J(H_i,V)+H_i J(D_i,V)=D_i H_i        (4b)
+```
+
+modulo `D_i` gives `J(D_i,V)=0` in the domain `R/(D_i)`, because
+reducedness makes the class of `H_i` nonzero.  On the irreducible geometric
+curve `D_i=0`, the tangent derivation
+
+```text
+delta_i=(D_i)_y partial_x-(D_i)_x partial_y           (4c)
+```
+
+is nonzero on the function field `k(D_i)` and kills the class of `V`.
+In characteristic zero the constant field of a nonzero derivation on a
+one-variable function field has transcendence degree zero over `k`; since
+`k` is algebraically closed, it equals `k`.  Hence the coordinate-ring
+class itself is a scalar:
+
+```text
+V=lambda_i mod D_i,                 lambda_i in k.     (5)
+```
 
 Let `Lambda` be the set of distinct values among the `lambda_i`, put
 `h=|Lambda|>=1`, and define the squarefree spectral polynomial
@@ -112,13 +138,13 @@ This is the canonical polynomial observable missed by looking only at
 UE=Phi(V).                                             (10)
 ```
 
-Indeed `(3),(4)` imply
+Equation `(4a)` makes `U,V` algebraically independent, and
 
 ```text
-J(U,V)=U,                                              (11)
+k(U,V)=k(U,P),                 trdeg_k k(U,V)=2.       (11)
 ```
 
-so `U,V` are algebraically independent.  Hence the map
+Hence the map
 
 ```text
 D_Phi:=k[u,v,e]/(ue-Phi(v)) -> R,
@@ -362,6 +388,7 @@ exponent one.
 The companion checks the universal algebra and unit-minor Bezout identities
 for `h=1,...,6`, plus every hostile and positive control in Section 5.
 Normal and optimized executions must byte-match the frozen transcript before
-promotion.  The theorem does not assert that `(5)` or `(24)` is automatic,
-and it proves no positive-characteristic analogue or planar Jacobian
-counterexample.  **QED, conditional only on independent hostile audit.**
+promotion.  The theorem proves `(5)` but does not assert that the
+codimension-one coverage condition `(24)` is automatic, and it proves no
+positive-characteristic analogue or planar Jacobian counterexample.  **QED,
+conditional only on independent hostile audit.**
