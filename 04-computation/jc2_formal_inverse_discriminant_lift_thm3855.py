@@ -212,6 +212,105 @@ gate(
 gate(homogeneous(base_error, 13) != 0,
      "right-equivalence degree-thirteen hostile remains after truncation")
 
+# The coefficient germ itself is formally rigid under tangent base changes
+# and SL2 changes of the binary variables.  We use the infinitesimal action
+# e=X*d/dY, f=Y*d/dX, h=X*d/dX-Y*d/dY.
+X, Y = sp.symbols("X Y")
+binary_form = A * X**3 + C * X**2 * Y + 7 * A * X * Y**2 - 3 * A * Y**3
+
+
+def binary_coefficient_vector(form: sp.Expr) -> sp.Matrix:
+    polynomial = sp.Poly(sp.expand(form), X, Y)
+    return sp.Matrix(
+        [polynomial.coeff_monomial(monomial)
+         for monomial in (X**3, X**2 * Y, X * Y**2, Y**3)]
+    )
+
+
+v_A = sp.Matrix([1, 0, 7, -3])
+v_C = sp.Matrix([0, 1, 0, 0])
+sl2_e = binary_coefficient_vector(X * sp.diff(binary_form, Y))
+sl2_f = binary_coefficient_vector(Y * sp.diff(binary_form, X))
+sl2_h = binary_coefficient_vector(
+    X * sp.diff(binary_form, X) - Y * sp.diff(binary_form, Y)
+)
+gate(sl2_e == sp.Matrix([C, 14 * A, -9 * A, 0]), "SL2 e action")
+gate(sl2_f == sp.Matrix([0, 3 * A, 2 * C, 7 * A]), "SL2 f action")
+gate(sl2_h == sp.Matrix([3 * A, C, -7 * A, 9 * A]), "SL2 h action")
+
+
+def coefficient_quotient(vector: sp.Matrix) -> sp.Matrix:
+    """Quotient coefficient space by the two base-coordinate directions."""
+
+    return sp.Matrix([vector[2] - 7 * vector[0], vector[3] + 3 * vector[0]])
+
+
+gate(coefficient_quotient(v_A) == sp.zeros(2, 1), "A base direction kernel")
+gate(coefficient_quotient(v_C) == sp.zeros(2, 1), "C base direction kernel")
+gauge_matrix = sp.Matrix.hstack(
+    coefficient_quotient(sl2_e),
+    coefficient_quotient(sl2_f),
+    coefficient_quotient(sl2_h),
+)
+expected_gauge_matrix = sp.Matrix(
+    [[-9 * A - 7 * C, 2 * C, -28 * A], [3 * C, 7 * A, 18 * A]]
+)
+gate(gauge_matrix == expected_gauge_matrix, "quotient SL2 action matrix")
+
+gauge_minors = [
+    sp.expand(gauge_matrix[:, [left, right]].det())
+    for left, right in ((0, 1), (0, 2), (1, 2))
+]
+expected_gauge_minors = [
+    -63 * A**2 - 49 * A * C - 6 * C**2,
+    -162 * A**2 - 42 * A * C,
+    196 * A**2 + 36 * A * C,
+]
+gate(gauge_minors == expected_gauge_minors, "quotient SL2 maximal minors")
+minor_coefficient_matrix = sp.Matrix(
+    [
+        [sp.Poly(minor, A, C).coeff_monomial(monomial) for minor in gauge_minors]
+        for monomial in (A**2, A * C, C**2)
+    ]
+)
+gate(minor_coefficient_matrix.det() == -14400,
+     "quotient SL2 minors span the square maximal ideal")
+minor_groebner = sp.groebner(gauge_minors, A, C, order="grevlex")
+gate(
+    [sp.Poly(polynomial, A, C).monic().as_expr()
+     for polynomial in minor_groebner.polys]
+    == [A**2, A * C, C**2],
+    "quotient SL2 Fitting ideal is (A,C)^2",
+)
+
+# Finite homogeneous controls for the all-degree Fitting-annihilator proof.
+for total_degree in range(2, 9):
+    source_monomials = tuple(
+        A**i * C ** (total_degree - 1 - i) for i in range(total_degree)
+    )
+    target_monomials = tuple(
+        A**i * C ** (total_degree - i) for i in range(total_degree + 1)
+    )
+    columns = [
+        sp.expand(gauge_matrix[:, column] * monomial)
+        for column in range(3)
+        for monomial in source_monomials
+    ]
+    homogeneous_gauge_matrix = sp.Matrix(
+        [
+            [
+                sp.Poly(column[component], A, C).coeff_monomial(monomial)
+                for column in columns
+            ]
+            for component in range(2)
+            for monomial in target_monomials
+        ]
+    )
+    gate(
+        homogeneous_gauge_matrix.rank() == 2 * (total_degree + 1),
+        f"quotient SL2 action surjective in degree {total_degree}",
+    )
+
 
 def right_inverse(form: sp.Expr, degree: int) -> list[sp.Expr]:
     """Lift a homogeneous degree-`degree` form through the cubic gradients."""
@@ -295,6 +394,9 @@ semantic = {
     "base_gradient_resultant": "36864000000*C^9",
     "base_jacobian_ideal": "complete intersection containing (A,C)^5",
     "right_equivalence": "tangent-identity formal base automorphism",
+    "coefficient_rigidity": "formal base automorphism times SL2 gauge",
+    "gauge_fitting_ideal": "(A,C)^2",
+    "gauge_minor_det": -14400,
     "target": "Delta0+C^5",
     "formal_lift": "all m-adic orders; corrections begin in degree 2",
     "finite_replay": "degrees 5 through 12; first residual degree 13",
@@ -313,6 +415,8 @@ print("theorem=THM-3855-formal-inverse-discriminant-lift-and-algebraization-gate
 print("base=(A,C,7A,-3A);gradient_det=640000;gradient_ideal=(A,C)^3")
 print("base_gradient_resultant=36864000000*C^9;base_jacobian_CI_contains=(A,C)^5")
 print("right_equivalence=tangent_identity_formal_base_automorphism")
+print("coefficient_rigidity=formal_base_change_times_SL2_gauge")
+print("gauge_quotient_minors_generate=(A,C)^2;minor_coefficient_det=-14400")
 print(
     "base_first_correction="
     "alpha2=(-1722409941/16000000)A^2+(3586046429/72000000)AC+(1/12)C^2;"
