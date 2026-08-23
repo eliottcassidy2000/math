@@ -171,9 +171,9 @@ L=V(r,z) ~= A1_e                                      (15)
 ```
 
 has one lift.  In particular `phi` is quasi-finite.  Since both source and
-target are smooth surfaces, full differential rank plus the equal local
-dimensions gives flatness by miracle flatness; hence `phi` is etale.  Its
-generic degree is exactly three:
+target are smooth surfaces, quasi-finiteness supplies equality of the local
+dimensions, and miracle flatness gives flatness.  Full differential rank then
+makes `phi` etale.  Its generic degree is exactly three:
 
 ```text
 k(x,y)=k(R,Z)(x),                 x^3=R,              (16)
@@ -314,6 +314,10 @@ On `r!=0`, its inverse form is
 omega=dr wedge dz/(3r^2),              phi^*omega=dx wedge dy.         (25)
 ```
 
+The bracket packet is a nowhere-vanishing global bivector on the smooth
+surface, so its inverse extends `(25)` to a global regular two-form; the
+displayed denominator does not signal a pole on the arm.
+
 Unlike the exponent-one multiarm completion of THM-3779, this form is
 exact.  Give `(r,z,e)` weights
 
@@ -449,7 +453,9 @@ a+b+d=-2,                                                (42)
 {A_a,C_b}=0,                    {A_(a+d),C_(b+d)}=0.    (43)
 ```
 
-After subtracting irrelevant constants, the low weights are both negative:
+After subtracting irrelevant constants, if a pure weight-zero component
+disappears then the support shrinks to an already-excluded homogeneous-output
+or smaller-support case.  Otherwise the low weights are both negative:
 opposite-sign homogeneous functions cannot commute, while a weight-zero
 profile commuting with a nonzero weight is constant.  Gaps `d=1,2` die
 directly at a root of `h`; when `d=2`, the only residual endpoint has both
@@ -524,7 +530,8 @@ and the surface equation becomes
 
 Unless `a=b=0`, one of the two choices of `lambda` from `(50)` has nonzero
 coefficient in `(51)`, and algebraic closedness supplies a critical point.
-When `a=b=0`, equations `(42)` and `(6)` are incompatible, so `e` is smooth.
+When `a=b=0`, equations `(49)` together with `(6)` are incompatible, so `e`
+is smooth.
 Therefore the smooth affine-linear carriers, up to scale and translation,
 are exactly
 
@@ -539,7 +546,8 @@ The first family has a rational mate:
 ```
 
 Moreover `k(r,z)=k(z+lambda r,r)`, so every rational mate is
-`1/(3r)+H(z+lambda r)`.  None is polynomial in `B`.  On the source,
+`1/(3r)+H(z+lambda r)` with `H in k(z+lambda r)`.  None is polynomial in
+`B`.  On the source,
 
 ```text
 z+lambda r=x(c+lambda x^2+x^3y),                     (54)
@@ -566,10 +574,11 @@ so Riemann--Hurwitz gives genus one.  On this curve
 ```
 
 is a nonzero holomorphic differential: it has order zero at both finite
-branch points and at infinity.  If `{e,H}=1`, then `(49)=dH` on the generic
-fibre, impossible because a nonconstant rational function has a pole and
-its differential cannot be holomorphic.  Scaling does not change the
-obstruction.  Thus no affine-linear carrier has a polynomial Darboux mate.
+branch points and at infinity.  If `{e,H}=1`, then
+`dH=-dr/(9z^2)` on the generic fibre, impossible because a nonconstant
+rational function has a pole and its differential cannot be holomorphic.
+Scaling does not change the obstruction.  Thus no affine-linear carrier has
+a polynomial Darboux mate.
 
 ## 8. The exact remaining Darboux floor
 
