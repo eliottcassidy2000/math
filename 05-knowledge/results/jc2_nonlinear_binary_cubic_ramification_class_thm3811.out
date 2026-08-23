@@ -1,0 +1,9 @@
+theorem=THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
+units=U*/S*=kernel(Z^ramification->Cl(S))
+packet=(A,C,7A,C^2-3A);normal_nonmonogenic_squarefree_S3
+branch=one_irreducible_rational_E;four_vertex_preimages=-2,-1,0,3
+companion=one_explicit_simple_root_C-2Aq
+norm_gate=affine_exponent1_Groebner_[1];higher_order_degree_floor=2n-1
+open=class_E_infinite_order+S_units_constant+etale_complement_affine
+CHECKS=72
+semantic_sha256=583470aeadabb6be8a80609612756c969f44de29722a5115f746a3e2b098c963
