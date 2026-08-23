@@ -1,0 +1,14 @@
+experiment=LRC14-negative-Pell-three-adic-depth-sieve
+classification=PROVED-LEMMA;VERIFIED-EXACT
+orbit=Xk_Yk_equals_matrix_2_3_1_2_power_k_times_1_1
+value=Qk_equals_Yk2_minus_1_over_8_equals_T_Nk
+valuation=k_3j_minus_1_or_3j:1_plus_v3j;k_3j_plus_1:0
+cube_scale=v3g_r_positive_implies_v3j_equals_3r_minus_1
+mod9_Q_period=0,1,6,3,1,3,6,1,0
+two_cube_allowed_k_mod9=0,1,4,7,8;three_free=1,4,7
+million_shell=16_positive_nodes;three_free_candidates=6;known_hit_k=4
+hostile_control_depths=1001
+scope=necessary_address_sieve_only;no_LRC14_consequence
+CHECKS=2015
+semantic_sha256=1be906c5d8617afb65f330fa461beab31d1af774aa6889952e0cb391726ff407
+RESULT PASS

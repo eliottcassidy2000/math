@@ -79,6 +79,8 @@ elim_A = sp.factor(sp.resultant(F1, F2, C) / -27)
 equal("degree_eight_eliminant", sp.degree(elim_A, A), 8)
 equal("degree_eight_lead", sp.LC(sp.Poly(elim_A, A), A), 11907)
 nonzero("generic_finiteness", J)
+equal("coefficient_degree_reconciliation", 2 * 1 + 6, 8)
+equal("raw_marked_fibre_collapse", f.subs({A: 0, C: 1}), T**2 * (T - 1))
 
 # THM-3811's branch normalization and the tower-cusp normalization.
 R = (q - 3) * (q + 1) * (q + 2)
@@ -105,9 +107,10 @@ nonzero("critical_avoids_zero_fibre", sp.resultant(H7, q * R * (3 * q**2 - 7), q
 nonzero("critical_avoids_pole_fibre", sp.resultant(H7, 3 * q**2 + 7, q))
 equal("riemann_hurwitz_total", 3 + sp.degree(H7, q), 2 * 6 - 2)
 
-# The marked symplectic branch-residue passport.  Multiplying a discriminant
-# representative by a square changes the residue by a square, so the odd
-# part of its divisor on the branch normalization is invariant.
+# The marked symplectic branch-residue passport.  After normalizing a
+# discriminant representative to branch valuation one, multiplying it by the
+# square of a valuation-zero unit changes the residue by a square unit.  Thus
+# the odd part of its divisor on the branch normalization is invariant.
 Delta_C = sp.diff(Delta, C)
 eta_nonlinear = sp.factor(sp.diff(Aq, q) / Delta_C.subs({A: Aq, C: Cq}))
 eta_nonlinear_expected = (3 * q**2 + 7) ** 4 / (
@@ -136,21 +139,27 @@ print("THM3842_INDEX_SQUARE", "disc(f)=A^2*Delta=4*(8*p^3-27*u^2)")
 print("THM3842_COEFFICIENT_JACOBIAN", J)
 print("THM3842_CONIC_POLE_DIVISOR", "4*infinity_plus+4*infinity_minus")
 print("THM3842_COEFFICIENT_FIELD_DEGREE", 8)
+print("THM3842_COEFFICIENT_MAP", "finite_degree_8;cusp_pullback_degree=2*1+6")
+print("THM3842_RING_LEVEL", "raw_R_tau_nonnormal;S_normalization;A0C1_collapsed_double_root")
 print("THM3842_BRANCH_PARAMETER", r)
 print("THM3842_BRANCH_ZERO_PACKET", "q=0,3,-1,-2,+sqrt(7/3),-sqrt(7/3)")
 print("THM3842_BRANCH_INFINITY_PACKET", "three points of index 2")
 print("THM3842_BRANCH_OTHER_RAMIFICATION", "seven simple critical points")
 print("THM3842_TOWER_RESIDUE_PARITY", "zero")
 print("THM3842_NONLINEAR_RESIDUE_PARITY", sp.factor(q * R))
+print("THM3842_RESIDUE_NORMALIZATION", "branch_valuation_one;D_to_D3_is_not_an_ordinary_residue")
 print("THM3842_SCOPE", "exact marked pullback; no planar Keller map and no unmarked birational classification")
 semantic_packet = (
     "trace-shift m2 tower",
     "index square A^2",
     "coefficient field degree 8",
+    "finite coefficient map with cusp degree 2*1+6",
+    "raw marked-root ring is nonnormal at A=0,C=1",
     "branch normalization degree 6",
     "zero fibre 4+1+1",
     "ramification 2+2+2 plus seven simple",
     "marked residue parity 0 versus q(q-3)(q+1)(q+2)",
+    "residue representative normalized to branch valuation one",
     "no planar Keller or unmarked birational conclusion",
 )
 print("SEMANTIC_SHA256", hashlib.sha256(repr(semantic_packet).encode()).hexdigest())

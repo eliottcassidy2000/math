@@ -5,12 +5,15 @@ THM3842_INDEX_SQUARE disc(f)=A^2*Delta=4*(8*p^3-27*u^2)
 THM3842_COEFFICIENT_JACOBIAN A*(42*A**2*C - 49*A**2 - 9*A*C + 2*C**3)/6
 THM3842_CONIC_POLE_DIVISOR 4*infinity_plus+4*infinity_minus
 THM3842_COEFFICIENT_FIELD_DEGREE 8
+THM3842_COEFFICIENT_MAP finite_degree_8;cusp_pullback_degree=2*1+6
+THM3842_RING_LEVEL raw_R_tau_nonnormal;S_normalization;A0C1_collapsed_double_root
 THM3842_BRANCH_PARAMETER -q*(q - 3)*(q + 1)*(q + 2)*(3*q**2 - 7)/(3*(3*q**2 + 7)**2)
 THM3842_BRANCH_ZERO_PACKET q=0,3,-1,-2,+sqrt(7/3),-sqrt(7/3)
 THM3842_BRANCH_INFINITY_PACKET three points of index 2
 THM3842_BRANCH_OTHER_RAMIFICATION seven simple critical points
 THM3842_TOWER_RESIDUE_PARITY zero
 THM3842_NONLINEAR_RESIDUE_PARITY q*(q - 3)*(q + 1)*(q + 2)
+THM3842_RESIDUE_NORMALIZATION branch_valuation_one;D_to_D3_is_not_an_ordinary_residue
 THM3842_SCOPE exact marked pullback; no planar Keller map and no unmarked birational classification
-SEMANTIC_SHA256 3563db0c00aace1986b657cfd455e267e252fd1b200b738f9bcd1dd1be50e99d
-CHECKS 29
+SEMANTIC_SHA256 a338304482333268dee7f5e0dd3e4cc4ef484a885c3a0a3db604c3a0e095a217
+CHECKS 31

@@ -1,5 +1,50 @@
 # Script Results Index
 
+- `jc2_deleted_ramification_three_puncture_jelonek_nonentry_thm3841.py` ->
+  matching `.out` [THM-3841 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  A deleted completion divisor forces its irreducible
+  discriminant into any plane composite's Jelonek set; here that component
+  normalizes to `P1` minus three points and is not polynomially uniruled.
+  Hence no dominant `A2 -> U` exists for this surface.  `CHECKS=32`.
+  Script/output/semantic SHA-256:
+  `f1e7e2a51633119b81efc1d13c875aa07a92222471c81e58e04d2523747a0c87` /
+  `ea3dc03bd168768236e8cd036d49463709cc0e0ac0dc5b3ae6a649e8cb36f043` /
+  `9964f46981085706bb9dd2508c6a6c473ee09d2b9410eaf0c50a4c76e6440b29`.
+
+- `jc2_nonlinear_cubic_tower_trace_shift_thm3842.py` -> matching `.out`
+  [THM-3842 PROVED + VERIFIED-EXACT + TWICE INDEPENDENTLY HOSTILE-AUDITED,
+  with MISTAKE-457 repair].  The nonlinear marked cubic is the normalized
+  degree-eight coefficient pullback of the `m=2` rational tower.  The cusp
+  pullback splits as `2V(A)+V(Delta)`, with degree reconciliation `2*1+6=8`;
+  the raw marked-root ring is not the normalized affine pullback.  Residue
+  parity is defined after normalizing the branch equation to valuation one.
+  `CHECKS=31`.  Script/output/semantic SHA-256:
+  `fed1f5d85eb3affe72591f2596fe244ac510df8360d5a625109d12a20a90a980` /
+  `c5f232615531d8464110e246d04e29046c632fb71af659928ad3454127b4b2e6` /
+  `a338304482333268dee7f5e0dd3e4cc4ef484a885c3a0a3db604c3a0e095a217`.
+
+- `jc2_cubic_pseudoplane_constant_tower_bichromatic_r2z_thm3839.py` ->
+  matching `.out` [THM-3839 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Distinct top colors force exact `8/7` and optional `8/5`
+  Kummer towers plus a factor-cofactor first integral; when the common tower
+  polynomial is constant, two color jets and the terminal degree split exclude
+  every polynomial arm profile.  Nonconstant towers remain open. `CHECKS=67`.
+  Script/output/semantic SHA-256:
+  `dbfcc8082ef36a2686eba2fc2fdd896628348c6a21d13a783f20bc1678edcd0e` /
+  `ddd9e81a83faa6b9bb181a100d86aa645aec2ed62ba8b26eacac3efc804490bc` /
+  `9150cf81c49c17d3d44dc7973b9c41183f1cc7fd7ef5a77b11ea287ce270ba09`.
+
+- `lrc14_negative_pell_three_adic_depth_sieve_20260823.py` -> matching
+  `.out` [PROVED LEMMA + VERIFIED-EXACT].  On the complete negative-Pell orbit,
+  `v3(Q_(3j-1))=v3(Q_(3j))=1+v3(j)` and `v3(Q_(3j+1))=0`.  The resulting
+  cube-scale and mod-nine sieves leave six of sixteen positive million-shell
+  nodes on the 3-free carrier; the known hit has depth four.  This is a
+  necessary address filter only.  `CHECKS=2015`.  Script/output/semantic
+  SHA-256:
+  `f2b4afc9e6c8491f7105d2de2bd8f2d5259fb674e1bc39a9970537eea436ae05` /
+  `f60042e9b76cf5d8b60888b2a696db71fb4c22ebccb279666ce40f112ae0a34e` /
+  `1be906c5d8617afb65f330fa461beab31d1af774aa6889952e0cb391726ff407`.
+
 - `jc2_nonlinear_cubic_keller_atlas_degree_contradiction_thm3845.py` ->
   matching `.out` [THM-3845 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  For the THM-3811 surface, `P=CS` and
@@ -15,11 +60,12 @@
 
 - `jc2_forced_cubic_two_arm_jelonek_passport_thm3840.py` -> matching `.out`
   [THM-3840 PROVED CONDITIONAL IMPLICATION + VERIFIED-EXACT + INDEPENDENTLY
-  HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3845].  A hypothetical atlas would
+  HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3841/3845].  A hypothetical atlas would
   force the origin and one of three explicit smooth cubic-branch points into
   its Jelonek set.  Exact arm base change makes the row unit nonconstant; its
-  boundary poles give the two valuations.  THM-3845 proves no such atlas
-  exists, so this is a counterfactual passport, not an existence result.
+  boundary poles give the two valuations.  THM-3841 proves the stronger
+  no-dominance result and THM-3845 independently closes the etale degree
+  packet, so this is a counterfactual passport, not an existence result.
   `CHECKS=22`.  Script/output/semantic SHA-256:
   `d6373cc0e8440c54d324e18f1f335e1fb106e9ee31cb2faba6a130b7b37f4bb1` /
   `f3d244cda5dd83cbb2a969452baa3864a15d5205d8aba2ec91cbb8b4cefadb7e` /

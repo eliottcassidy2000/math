@@ -22,7 +22,12 @@ audit: >
   index-square discriminant, coefficient Jacobian, conic degree-eight gate,
   branch normalization, six-point cusp fibre, complete ramification divisor,
   and both symplectic branch residues.  Normal, optimized, and frozen
-  transcripts agree.
+  transcripts agree.  A later signal-extension audit (root /
+  probe_3842_bridge) repaired MISTAKE-457 by normalizing residue
+  representatives to branch valuation one.  It also proved that the
+  coefficient map is finite, reconciled its degree as `2*1+6=8`, and exposed
+  the raw nonnormal ring pullback at `A=0,C=1`; none changes the field
+  extension or the displayed residue formulas.
 depends_on:
   - THM-3774-three-component-rational-keller-cover-tower
   - THM-3779-three-component-tower-maximal-danielewski-polynomial-observable
@@ -33,9 +38,9 @@ related:
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
 script: 04-computation/jc2_nonlinear_cubic_tower_trace_shift_thm3842.py
 output: 05-knowledge/results/jc2_nonlinear_cubic_tower_trace_shift_thm3842.out
-script_sha256: e533936c65be6016c0e4c4978eaa5e60e1d65e188ef682fac1676a11b1190bbb
-output_sha256: 7be2849017b42a2d53c42b7ffe0e4cf618e71be7ee79b8e1a9b0d4d33578f6d0
-semantic_sha256: 3563db0c00aace1986b657cfd455e267e252fd1b200b738f9bcd1dd1be50e99d
+script_sha256: fed1f5d85eb3affe72591f2596fe244ac510df8360d5a625109d12a20a90a980
+output_sha256: c5f232615531d8464110e246d04e29046c632fb71af659928ad3454127b4b2e6
+semantic_sha256: a338304482333268dee7f5e0dd3e4cc4ef484a885c3a0a3db604c3a0e095a217
 hash_basis: raw LF bytes
 ---
 
@@ -93,9 +98,10 @@ M=K L_0,
 [M:L_0]=8.                                                       (7)
 ```
 
-Thus `L_0/K_0` is literally the `m=2` THM-3774 cubic tower, and the
-THM-3811 cubic is its degree-eight scalar extension.  The square `A^2` in
-`(5)` is the marked-root index square; it is not a new ramification
+Thus `L_0/K_0` is literally the `m=2` THM-3774 cubic tower at the function-
+field level, and the THM-3811 cubic is its degree-eight scalar extension
+followed by normalization on the affine model.  The square `A^2` in `(5)` is
+the marked-root index square; it is not a new cubic-field ramification
 component.
 
 ## 1. The trace shift and index square are exact
@@ -187,6 +193,26 @@ This is exactly `[K:K_0]=8`.  As a hostile algebraic control, eliminating
 coefficient `11907`; `(16)` proves that no eliminant factor was being counted
 extraneously.
 
+The constant nonzero leading coefficient supplies more than generic
+finiteness.  After division by `11907`, the eliminant is monic over `k[p,u]`,
+so `A` is integral over `k[p,u]`; equation `C^2=21A^2+6p` then makes `C`
+integral as well.  Therefore
+
+```text
+Phi:A2_(A,C) -> A2_(p,u) is finite of degree eight.              (17a)
+```
+
+Scheme-theoretically, `(5)` reads
+
+```text
+Phi^* V(8p^3-27u^2)=2 V(A)+V(Delta).                            (17b)
+```
+
+On `A=0`, the induced normalization parameter is `r=-C/3`, a degree-one
+map carrying multiplicity two.  On `Delta`, Section 3 gives degree six.
+Thus `2*1+6=8`, independently reconciling the coefficient degree with the
+index-square divisor.
+
 THM-3811 proves that `(2)` is irreducible over `K`.  Equation `(4)` is
 therefore irreducible over `K`, and a fortiori over its smaller coefficient
 field `K_0`.  Thus `L_0` in `(6)` is a cubic field, it is linearly disjoint
@@ -198,6 +224,24 @@ generates exactly `K_0`; it cannot recover `A,C`, whose joint field has index
 eight over `K_0`.  The exact matching `(3)` therefore cannot be upgraded to
 a target transformation.  A construction that uses the nonlinear packet
 must retain an eight-sheet coefficient sidecar.
+
+There is a load-bearing ring-level boundary.  If `R=k[A,C]`, then
+
+```text
+B=R[tau]=R[omega]=R direct_sum R*omega direct_sum A*R*theta,
+S=R direct_sum R*omega direct_sum R*theta=normalization(B).       (17c)
+```
+
+At `A=0,C=1`, the raw marked-root polynomial is
+`omega^2(omega-1)`, whereas the `S`-fibre satisfies
+
+```text
+omega^2=omega,       omega*theta=0,       theta^2=omega-1,
+```
+
+and is reduced etale with three points; `theta` separates the two collapsed
+`omega=0` sheets.  Hence the theorem asserts a field pullback and its
+normalization, never an equality of the raw affine source rings.
 
 ## 3. Six branch addresses collapse to the tower cusp
 
@@ -288,16 +332,20 @@ punctures at infinity used by THM-3841.
 
 There is also an obstruction that does not merely count coefficient fields.
 For a symplectic function field with a cubic discriminant squareclass and a
-chosen odd discriminant valuation, take the Poincare residue
+chosen discriminant valuation, first choose a representative `D` satisfying
+`v_Gamma(D)=1`, and take the Poincare residue
 
 ```text
 eta=Res_Gamma(symplectic_form/discriminant).                      (28)
 ```
 
-Changing the discriminant representative by a square multiplies `eta` by a
-square in the branch function field.  Consequently the divisor of `eta`
-modulo two on the branch normalization is an invariant of the **marked**
-symplectic cubic packet.
+Any two valuation-one representatives in the same squareclass differ by the
+square of a valuation-zero unit.  Their residues therefore differ by a square
+unit in the branch function field.  Consequently the divisor of `eta` modulo
+two on the branch normalization is an invariant of the **marked** symplectic
+cubic packet.  The valuation-one normalization is essential: replacing `D`
+by `D^3` preserves its squareclass and odd valuation but creates a triple pole,
+for which the ordinary residue above is not defined (MISTAKE-457).
 
 For the tower cusp `D_0=8p^3-27u^2`, `(20)` gives
 
@@ -340,8 +388,8 @@ Jacobian are two faces of the same lost branch address.
 
 ## 5. Construction consequences and boundaries
 
-1. **THM-3779 remains fully in force inside the tower target field.**  For
-   the original `m=2` rational tower, all source polynomials lying in
+1. **Over `k=C`, THM-3779 remains fully in force inside the tower target
+   field.**  For the original `m=2` rational tower, all source polynomials lying in
    `k(p,u)` form its exponent-one Danielewski observable and contain no
    Darboux pair.  Arbitrary rational target words still lie in `K_0` and
    cannot access the eightfold sidecar `(A,C)`.

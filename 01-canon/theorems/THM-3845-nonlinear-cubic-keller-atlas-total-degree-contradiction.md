@@ -7,6 +7,9 @@ status: >
   exists.  The THM-3836 factor identity and Keller cofactor are inconsistent
   in all three total-degree orders deg(h)>deg(k), deg(k)>deg(h), and equality.
   This closes this candidate surface only; it does not prove JC(2).
+  THM-3841 independently proves the stronger absence of every dominant plane
+  morphism by a deleted-divisor/Jelonek argument; the present proof remains an
+  elementary etale-only degree mechanism.
 source: root + audit_thm3838 / incoming factor-cofactor degree-trichotomy lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (root / audit_thm3838, 2026-08-23).  The
@@ -22,6 +25,8 @@ depends_on:
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
   - THM-3836-cubic-factor-cofactor-darboux-packet
 related:
+  - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
+  - THM-3842-nonlinear-cubic-tower-trace-shift-eightfold-base-change
   - THM-3835-polynomial-marked-root-ratio-nonentry
   - THM-3838-root-ratio-numerator-denominator-degree-five-floor
   - THM-3840-forced-cubic-two-arm-jelonek-passport

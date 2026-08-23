@@ -338,6 +338,11 @@ real power of `log log X`. This is still no support asymptotic or residue.
   entire discriminant into the Jelonek set of any plane composite, whereas
   its normalization is `P1` minus three points and cannot be polynomially
   uniruled.  In fact no dominant `A2 -> U` exists, even without etaleness.
+  THM-3842 identifies its marked cubic as the normalized finite degree-eight
+  coefficient pullback of the `m=2` rational tower, with cusp divisor split
+  `2V(A)+V(Delta)` and a load-bearing ring-normalization sidecar.  THM-3845
+  independently excludes etale atlases by the elementary THM-3836 total-degree
+  trichotomy; neither result extends this closure to other surfaces.
   THM-3827/3831 give both primitive row-genus floors `>=3`, explicit
   genus-three hyperelliptic equality sidecars (row poles `2/1` only at
   equality), and the saturated three-cubic/two-quadratic spectral atlas.

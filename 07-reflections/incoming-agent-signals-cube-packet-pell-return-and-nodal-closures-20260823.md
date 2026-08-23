@@ -319,6 +319,78 @@ remain genuinely transverse even after the cap is enlarged.  The conclusion
 is **FINITE-EXACT** only; it neither proves global uniqueness nor restores the
 eleven runners, owner, phase, or arrival data.
 
+The incoming request to treat that singleton as a signal, rather than an
+answer, gives an all-depth result.  Write
+
+```text
+A=[[2,3],[1,2]],       (X_k,Y_k)^t=A^k(1,1)^t,
+Q_k=(Y_k^2-1)/8=T_(N_k).
+```
+
+Then for every `j>=1`, **PROVED**,
+
+```text
+v_3(Q_(3j-1))=v_3(Q_(3j))=1+v_3(j),
+v_3(Q_(3j+1))=0.                                      (3-adic Pell law)
+```
+
+Indeed
+
+```text
+A^3=-I+3C,                 C=[[9,15],[5,9]].
+```
+
+For `B=I-3C`, an integral vector `w`, and a coordinate functional `ell` with
+`ell(Cw)` nonzero modulo three, the binomial expansion gives
+
+```text
+v_3(ell(B^j w-w))=1+v_3(j).
+```
+
+The first term is `-3j ell(Cw)`.  Every term of order `m>=2` has valuation at
+least `m+v_3(binomial(j,m))>=v_3(j)+2`, using
+`v_3(binomial(j,m))>=v_3(j)-v_3(m)`.  Apply this to `(1,1)` and
+`A^-1(1,1)=(-1,1)`; the relevant coordinates of `Cw` are respectively `14`
+and `4`, both units modulo three.  Squaring `Y_k` does not change the exact
+valuation because the companion factor is a three-adic unit.  In the third
+congruence class `Y_(3j+1)` is divisible by three, so `Y_(3j+1)^2-1` is not.
+
+Consequently a THM-3818 address
+
+```text
+g^3(a^3+b^3)=Q_k,              3 does not divide a^3+b^3,
+```
+
+must satisfy one of two exact necessary alternatives:
+
+```text
+3 does not divide g:       k=1 mod 3;
+r=v_3(g)>=1:               k in {3j-1,3j}, v_3(j)=3r-1.
+```
+
+There is also an all-depth mod-nine sidecar.  The state modulo `72` has period
+`36`, and its four nine-step blocks give
+
+```text
+Q_k mod 9 = (0,1,6,3,1,3,6,1,0).
+```
+
+Since two cubes modulo nine sum only to `{0,1,2,7,8}`, any two-cube equality
+forces `k mod 9` into `{0,1,4,7,8}`; on the 3-free carrier only
+`{1,4,7}` survive.  Thus the sixteen positive million-shell nodes shrink to
+six before any cube search, and `(9,13;76,132)` lies at `k=4`.  The
+assertion-free
+[`lrc14_negative_pell_three_adic_depth_sieve_20260823.py`](../04-computation/lrc14_negative_pell_three_adic_depth_sieve_20260823.py)
+replays the finite-state proof and checks the valuation law through 1,001
+depths.  The hostile `k=1`, where `Q_1=1<1^3+2^3`, proves that this is only a
+necessary sieve.  It retains Pell depth and common-cube scale but still loses
+the other runners, owner, phase, and loneliness.
+
+This also sharpens the Khinchin lesson.  The scalar mean of a continued-
+fraction digit word cannot recover the residue class or the valuation of its
+Pell depth.  The ordered word together with its matrix cocycle can: here the
+three-step block `A^3=-I+3C` is exactly the missing sidecar.
+
 Incoming THM-3833 asks what a global Diophantine height principle would see
 here.  Conditional on ABC, every primitive `m=a^3+b^3` satisfies a radical
 floor whose exponent approaches `1/3`; fixed hyperbolic Fermat--Catalan
@@ -547,7 +619,8 @@ condition.  The intrinsic divisor `h=0` is `G_m`; etale pullback therefore
 leaves a nonconstant unit on every plane-arm component.  This kills `h` as a
 coordinate, every `h=xy-1` standard big cell, the hyperbolic-unit first row,
 and the first Cohn row.  Nonstandard multi-ended arms were still open at this
-stage; THM-3845 later closes the whole surface.
+stage; THM-3845 later excludes every etale atlas by degrees, and THM-3841
+strengthens this to every dominant plane morphism.
 
 THM-3821 closes the first `rz^2` extension of THM-3814.  Its audited
 normal-form descent forces a common Kummer parameter and either a generic
@@ -579,7 +652,8 @@ nonfinite and has signed Euler sheet debt `8d-1`; its finite envelope also has
 at least two boundary primes.  By itself this did not obstruct a nonproper
 dominant atlas, and it does not identify signed Euler debt with the separate
 unweighted divisorial debt.  THM-3845 later closes that remaining atlas by a
-different degree mechanism.
+different degree mechanism; THM-3841 then supplies the stronger deleted-
+divisor obstruction to arbitrary plane domination.
 
 THM-3826 has now promoted the exact support-cell census in the first pure
 sextic row.  On the cubic/seventh-power cover it saturates all `22` exact
@@ -759,9 +833,52 @@ T_a=(-2/[a(7a^2+3)],-1/a^2),        3a^3+7a^2+1=0.
 
 The second point is a smooth nontriple discriminant value with normalization
 parameter `1/a`; the three possible `T_a` are distinct.  This implication is
-independently audited but has an **EMPTY ANTECEDENT BY THM-3845**.  Its
+independently audited but has an **EMPTY ANTECEDENT BY THM-3841/3845**.  Its
 survivor is the operation “two Laurent arms -> two boundary valuations,”
 which may be reusable when another surface survives its degree packet.
+
+The next incoming theorem outflanks even that elementary closure.  THM-3841
+starts with the deleted ramification valuation `v_E(A/D)=-1`.  Any dominant
+`A2 -> U` would extend it to a source-infinite valuation, forcing the whole
+irreducible discriminant into the composite's Jelonek set.  Its affine
+normalization is
+
+```text
+P1 minus {infinity and the two roots of 3q^2+7}.
+```
+
+Jelonek--Lason polynomial uniruledness would then require a dominant
+polynomial `A1` curve on this three-punctured normalization, impossible
+because the inverse of `3q^2+7` would have to remain a polynomial unit.
+Thus no dominant plane morphism exists at all.  THM-3845 survives as an
+independent, citation-free, etale-only factor/cofactor proof and as a reusable
+degree trichotomy; THM-3841 is the stronger conclusion for this surface.
+
+THM-3842 then makes the discarded surface useful again as a comparison
+object.  The trace shift `tau=omega-C/3` gives the `m=2` tower cubic
+
+```text
+tau^3-2p tau+2u=0,
+p=(C^2-21A^2)/6,
+u=(81A^3-27A^2C^2+63A^2C-2C^3)/54,
+4(8p^3-27u^2)=A^2 Delta.
+```
+
+The coefficient map is finite of degree eight.  The cusp pulls back as
+`2V(A)+V(Delta)`: the index component maps with degree one and multiplicity
+two, while the nonlinear branch normalization maps six-to-one, giving
+`2*1+6=8`.  This is a normalized field pullback, not a literal ring pullback.
+At `A=0,C=1`, the raw marked-root fibre has `omega^2(omega-1)`; the normal
+THM-3811 fibre uses `theta` to separate the doubled `omega=0` sheet.
+
+The same audit found MISTAKE-457.  Marked Poincare-residue parity must choose
+a discriminant representative of branch valuation exactly one.  The hostile
+replacement `D -> D^3` preserves squareclass and odd valuation but creates a
+triple pole, so its ordinary residue is not defined.  With the valuation-one
+normalization, the tower residue has even divisor and the nonlinear residue
+has odd packet `q(q-3)(q+1)(q+2)` exactly as claimed.  This is the general
+lesson from the bridge: field, normalized ring, affine boundary, and marked
+residue are four separate layers.
 
 On the local nodal side, THM-3828 closes `L=T-lambda S=0`.  THM-3829 follows
 the incoming `L!=0` signal all the way through
@@ -796,7 +913,9 @@ that separation.
 - The flatness lane advances: its support-two branch now has a reversible
   scale/facet/word packet and an exact residue-cover sidecar.
 - The ordered-word lane advances: the Pell selector has a first-return cocycle
-  and a Möbius semiconjugacy on its exact maximum.
+  and a Möbius semiconjugacy on its exact maximum.  On the negative-Pell
+  successor orbit, the three-step matrix block also recovers exact 3-adic
+  depth and the common-cube scale gate.
 - The prime-colour lane advances arithmetically: 3-adic label valuation can
   expose square parity and finite triangular hits.  Those valuations are
   address digits, not continued-fraction digits or a metric law.
@@ -821,7 +940,7 @@ pair; only the ambient residue sidecar tests a target LRC phase.
 | finite primitive pair | rational cube class | ratio inside the 5,855-row atlas | physical scale | include cube dilation; test all rational-cube collisions |
 | inert cube atlas | square/triangular tests | exact shell and address subatlases | arrival, owner, and Pell-return membership | separate sum shells from address values; exhaustive discriminant scan |
 | 3-free cube base | multiply by `3^kappa` or `3^(2kappa+epsilon)` | square parity; 31 isolated fundamental Pell points; unique `(9,13)` cross-sheet successor | gauge-independent labels, arrival, and global successor closure | decode exponent in the chosen gauge; keep fixed-sheet Pell powers separate from label multiplication |
-| negative-Pell successor orbit | `X^2-3Y^2=-2` plus two-cube test | complete finite census through pair sum `10^6`; unique `(9,13;76,132)` | global uniqueness, LRC owner/phase, asymptotics | recurrence-first enumeration plus independent pair-first control; square hit `(56,65)` is a separate fibre |
+| negative-Pell successor orbit | `X^2-3Y^2=-2` plus two-cube test | all-depth 3-adic depth law; finite census through pair sum `10^6`; unique `(9,13;76,132)` | global uniqueness, LRC owner/phase, asymptotics | retain depth and `v_3(g)`; mod-nine sieve and pair-first control; square hit `(56,65)` is a separate fibre |
 | primitive two-cube packet | ABC radicalization, conditionally | height/support exponent tending to `1/3` | valuation depth/colour, scale, other runners | normalize first; compare with THM-3825 decoder and the constant-radical scale family |
 | cube class plus physical address | `(g,p,q)` decoder | common dilation | representations outside atlas | taxicab hostile |
 | selected support-two relation | covector/facets and THM-778 word | first chosen width, pair clocks, ties | other runners, off-lattice phase | eleven residues modulo `g(p+q)` |
@@ -835,7 +954,8 @@ pair; only the ambient residue sidecar tests a target LRC phase.
 | first `r^2z^2` row | `X,Y`, proportional/misaligned/one-sided split | complete displayed grammar is impossible | higher canonical slots | recompute the next top bucket; no target-swap shortcut |
 | sparse sextic support | cubic/seventh-power cover and four remainder rows | all 22 support-`<=3` cells | four-term and denser cells | top-five census on every four-term torus cell |
 | source quadratic sheets | mod-seven residual values | discriminant factor `R W^2` | source label on `W=0` | retain collision slope `W`; audit degree-drop divisors |
-| nonlinear cubic surface | compact Euler integration | finite/proper atlas obstruction and signed debt `8d-1` | location of escaping sheets | later superseded as frontier by the all-atlas degree contradiction |
+| nonlinear cubic surface | deleted ramification valuation -> Jelonek component | no dominant plane morphism because the branch normalization is three-punctured | every other completion and general `JC(2)` | polynomial-uniruledness test; independent THM-3845 factor/cofactor degree proof |
+| nonlinear marked cubic | trace shift to the `m=2` rational tower | finite coefficient degree eight; cusp divisor `2V(A)+V(Delta)`; six-address branch map | raw affine ring, eight-sheet address, unmarked equivalence | normalize the ring; retain index and valuation-one residue sidecars; hostile fibre `A=0,C=1` |
 | dual factors `h=p(g),k=q(ell)` | two primitive generic fibres | both genera `>=3`; target row-pole parity `2/1` at equality | total source boundary | conditional degree-five floor; valid but no longer a construction lane |
 | spectral slope `h=ak` | actual root chart `T[J^-1]` | two quadratic minus arms versus three cubic `G_m` pairs | source coverage of both target arms | retain the unordered sign idempotent and test both cubic addresses |
 | root ratio `z=h/k` | triangular rational map `(z,C)->(A,C)` | `A_z=1/(kr)`; every projective row direction retains a denominator | divisors `k=0,r=0,Cs=0` | homogenize before degrees; “triangular” is not figurate arithmetic |
@@ -864,6 +984,13 @@ pair; only the ambient residue sidecar tests a target LRC phase.
   is not triangular; the negative-Pell successor hit `(9,13)` is triangular
   but not square.  A classical-number label does not transfer across these
   fibres merely because both are quadratic Diophantine predicates.
+- Negative-Pell depth `k=1` has the correct 3-free valuation and mod-nine
+  address but `Q_1=1<1^3+2^3`; the new depth law is necessary, not sufficient.
+- In THM-3842, `D^3` has the same discriminant squareclass as a simple branch
+  equation `D` but gives a triple pole, not an ordinary Poincare residue.
+  Separately, at `A=0,C=1` the raw marked-root fibre has a double root while
+  the normalized cubic fibre is reduced.  Squareclass, field pullback, and
+  affine normalization are distinct data.
 - At `ord_0(v)=0`, the `Pg` block ties the old THM-3821 leading-order forcing;
   only the full `r^2z` bucket supplies the missing divisibility.  Endpoint
   valuations cannot be inherited from a positive-order stratum.

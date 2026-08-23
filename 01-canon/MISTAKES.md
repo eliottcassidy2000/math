@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-459 (2026-08-23, promoted THM-3842 residue audit) -- an odd discriminant representative was not normalized to a simple branch equation
+
+- **What failed:** the promoted marked-residue paragraph said that replacing
+  a discriminant representative by any square multiple changes
+  `Res(Omega/D)` by a square on the branch.  It allowed every representative
+  of odd branch valuation, although the ordinary Poincare residue used in the
+  proof is defined for a simple pole.
+- **Minimal witness / first failed implication:** `D^3=D*(D)^2` has the same
+  squareclass as a local branch equation `D` and still has odd valuation, but
+  `Omega/D^3` has a triple pole.  The multiplying square is not a branch unit,
+  so it cannot be restricted to the branch and the displayed ordinary residue
+  comparison is undefined.
+- **Repair / strongest survivor:** first choose a representative with
+  `v_Gamma(D)=1`.  Any two such representatives in the same squareclass differ
+  by the square of a valuation-zero unit, so the divisor parity of
+  `Res_Gamma(Omega/D)` is well-defined.  THM-3842's actual representatives
+  `8p^3-27u^2` and `Delta` both have valuation one, and both exact residue
+  formulas and their parity obstruction are unchanged.  The theorem now also
+  distinguishes the raw nonnormal ring pullback from its normalization.
+- **Reusable rule:** a squareclass fixes valuation only modulo two, whereas a
+  Poincare residue needs pole order exactly one.  Normalize the valuation
+  before restricting square multipliers to a divisor.
+
 ## MISTAKE-458 (2026-08-23, concurrent theorem reservation) -- two unrelated empty stubs reserved THM-3846
 
 - **What failed:** the formal-arm Darboux-lift lane and the rational-base

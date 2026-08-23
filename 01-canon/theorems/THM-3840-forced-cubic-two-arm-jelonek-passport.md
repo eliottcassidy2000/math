@@ -3,12 +3,13 @@ id: THM-3840
 title: "A nonlinear cubic plane atlas forces an origin/branch Jelonek pair"
 status: >
   PROVED CONDITIONAL IMPLICATION + VERIFIED-EXACT + INDEPENDENTLY
-  HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3845.  If a polynomial Keller
+  HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3841/3845.  If a polynomial Keller
   atlas of the THM-3811 surface existed, its nonproper-value set would contain
   the target origin and at least one of three explicit smooth cubic-branch
   values.  THM-3836 supplies both exact etale arm base changes; a pole of
-  their nonconstant row unit gives the two escaping valuations.  THM-3845
-  subsequently proves that no such atlas exists.
+  their nonconstant row unit gives the two escaping valuations.  THM-3841
+  subsequently excludes every dominant plane morphism, while THM-3845 gives
+  an independent etale-only degree contradiction.
 source: jc_quartic_c3_construct / cubic two-arm nonproper-value lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (root / audit_thm3840, 2026-08-23).  The
@@ -19,7 +20,7 @@ audit: >
   all slope resultants, both arm limits, discriminant incidence and
   smoothness, exclusion of triple roots, branch-normalization values, the
   companion Vieta packet, and pairwise distinctness of the three candidates.
-  Normal and optimized runs byte-match the frozen transcript.  THM-3845
+  Normal and optimized runs byte-match the frozen transcript.  THM-3841/3845
   makes the antecedent empty, so this is a counterfactual passport rather
   than an existence result.
 depends_on:
@@ -42,7 +43,7 @@ hash_basis: raw LF bytes
 # THM-3840 -- the forced two-arm fibre gives a Jelonek pair
 
 **PROVED CONDITIONAL IMPLICATION + VERIFIED-EXACT + INDEPENDENTLY
-HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3845.**  Work over an algebraically
+HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3841/3845.**  Work over an algebraically
 closed field `K` of characteristic zero.
 Let
 
@@ -208,4 +209,4 @@ Thus the three candidates are pairwise distinct.
 Conditionally, the theorem ties the mandatory bichromatic fibre to the
 precise `S_3` branch/companion-sheet transition.  It supplies a counterfactual
 two-value passport, not an actual polynomial atlas, the full nonproper curve,
-or a Jacobian counterexample.  THM-3845 closes the antecedent.  **QED.**
+or a Jacobian counterexample.  THM-3841/3845 close the antecedent.  **QED.**
