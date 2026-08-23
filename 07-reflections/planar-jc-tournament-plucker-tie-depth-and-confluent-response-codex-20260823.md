@@ -3,9 +3,11 @@
 **Session status (2026-08-23).**  The five-vertex skew-gain identities and the
 equality-seam three-case law below are **PROVED algebraically,
 VERIFIED-EXACT, and INDEPENDENTLY AUDITED** as necessary statements.  The
-two-arm `f=0` closure through total degree six is **FINITE-EXACT and
-independently replayed**.  The companion scripts have normal/optimized byte
-matching as their reproducibility gate.  During the session,
+two-arm `f=0` closure through total degree six is now canonized as
+[THM-3893](../01-canon/theorems/THM-3893-cusp-residual-f-zero-two-arm-degree-six-closure.md),
+with status **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**.  The
+companion scripts have normal/optimized byte matching as their reproducibility
+gate.  During the session,
 [THM-3886](../01-canon/theorems/THM-3886-cusp-residual-equality-seam-second-layer-trichotomy.md)
 was independently promoted on `origin/main` as a proof candidate.  This
 session then completed the requested hostile audit: the tie-depth theorem
@@ -290,7 +292,7 @@ closes every `f=0` candidate through total degree three.  A forgotten
 deletion/intersection idea gives a genuinely new three-degree extension on the
 zero branch of both exact arms.
 
-**Finite-exact lemma.**  Let
+**Theorem (THM-3893).**  Let
 
 ```text
 S(T,0)=L^4-6aL^2T^2-8KT^3-3a^2T^4,

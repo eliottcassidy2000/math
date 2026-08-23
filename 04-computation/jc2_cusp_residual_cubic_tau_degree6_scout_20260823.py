@@ -149,6 +149,7 @@ semantic = {
     "decisive": "r^4, q^4-6p^2r^2, p^5+16p^2r+16pq^2+448r^3/5",
     "global": "f=0 plus both zero arms plus degT<=6 forces T=0",
     "boundary": "degree>=7 remains open; JC2 open",
+    "status": "THM3893 proved verified exact independently hostile-audited",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -164,7 +165,7 @@ print("cubic_tau_field_zeros=p=q=r=0")
 print("saturation_or_candidate_coefficient_division=NONE")
 print("f_zero_both_arms_zero_degT_at_most_6=T_ZERO")
 print("first_possible_two_zero_arm_survivor_degree=7")
-print("canon_status=FINITE_EXACT_SCOUT_NOT_PROMOTED")
+print("THM3893_status=PROVED_VERIFIED_EXACT_INDEPENDENTLY_HOSTILE_AUDITED")
 print("JC2_status=OPEN")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")
