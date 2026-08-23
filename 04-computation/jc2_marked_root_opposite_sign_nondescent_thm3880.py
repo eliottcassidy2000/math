@@ -54,6 +54,23 @@ zero("plus_opposite_sign_jump", num_plus.subs(z, -z) - num_plus + 2 * z**3)
 zero("minus_opposite_sign_jump", num_minus.subs(z, -z) - num_minus - 2 * z**3)
 nonzero("jump_polynomial_nonzero", 2 * z**3)
 
+# Exact finite pole criterion above A=0.  The relation
+# (z-1)(z+1)=(2/3)AC cancels A^2 precisely at the matching sign.
+plus_regular = sp.Rational(2, 9) * C**2 * (2 * z + 1) / (z + 1) ** 2
+minus_regular = -sp.Rational(2, 9) * C**2 * (2 * z - 1) / (z - 1) ** 2
+zero(
+    "plus_matching_sign_cancellation",
+    num_plus
+    - (A**2 * plus_regular).subs(A**2 * C**2, sp.Rational(9, 4) * (z**2 - 1) ** 2),
+)
+zero(
+    "minus_matching_sign_cancellation",
+    num_minus
+    - (A**2 * minus_regular).subs(A**2 * C**2, sp.Rational(9, 4) * (z**2 - 1) ** 2),
+)
+zero("plus_wrong_sign_unit_numerator", num_plus.subs(z, -1) + 2)
+zero("minus_wrong_sign_unit_numerator", num_minus.subs(z, 1) + 2)
+
 # Complete ordinary-node/A2-cusp descent checks.  At a node on A=0,
 # Delta=0 forces B=C^2/6 on every branch; away from A=0 the displayed
 # forced formula is already a single-valued expression in A,C,z.
@@ -127,10 +144,12 @@ print("THM3880_MINUS", "A^2B-=-(z+1)^2(2z-1)/2")
 print("THM3880_JUMP", "B_epsilon(-z)-B_epsilon(z)=-2epsilon*z^3/A^2 when A!=0")
 print("THM3880_A0", "use u equality;opposite z=+/-1 still impossible")
 print("THM3880_Z0", "silent genuine boundary;2AC+3=0,b=2C^2/9 is positive")
+print("THM3880_POLE_PLUS", "B+ regular above A=0 iff z=+1 there")
+print("THM3880_POLE_MINUS", "B- regular above A=0 iff z=-1 there")
 print("THM3880_NODE_IFF", "regular B descends at a node iff root signs are not opposite nonzero")
 print("THM3880_A2", "same-sign forced B automatically has zero cusp derivative")
-print("THM3880_GLOBAL_IFF", "for ordinary-node/A2 curves,regular extension descends iff no opposite node")
-print("THM3880_OPEN", "regular-extension pole gate and higher singularity jets remain open")
+print("THM3880_GLOBAL_IFF", "fixed epsilon carrier iff z=epsilon over A=0 and z matches at every node")
+print("THM3880_OPEN", "higher singularities,no normalization root,projective companion remain open")
 print("THM3880_THM3876", "eta collision is exactly z->-z and recovers its jump")
 semantic_packet = (
     "intrinsic marked-root square section on normalization",
@@ -140,8 +159,10 @@ semantic_packet = (
     "explicit carrier jump away from A zero",
     "z zero genuine hyperbola boundary",
     "same-sign ordinary nodes and A2 cusp jets automatically descend",
-    "full nodal-cuspidal iff under regular extension",
-    "pole gate and higher conductor jets open",
+    "exact matching-sign cancellation above A zero",
+    "wrong sign gives a pole of twice the A order",
+    "full fixed-sign nodal-cuspidal carrier iff",
+    "higher conductor jets and projective geometry open",
     "THM3876 primitive-root collision as exact specialization",
 )
 print("SEMANTIC_SHA256", hashlib.sha256(repr(semantic_packet).encode()).hexdigest())

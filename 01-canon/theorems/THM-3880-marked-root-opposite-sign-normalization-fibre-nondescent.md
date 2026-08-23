@@ -1,23 +1,25 @@
 ---
 id: THM-3880
-title: "Marked-root descent is exactly sign matching on nodal-cuspidal normalizations"
+title: "Marked-root carriers on nodal-cuspidal curves are exactly the matching-sign packets"
 status: >
   PROVISIONAL STRENGTHENING CANDIDATE + VERIFIED-EXACT; awaiting independent
-  hostile audit of the full iff.  Universally, opposite nonzero marked-root
-  signs over one normalization fibre obstruct every polynomial carrier.
-  More sharply, if the forced rational carrier extends regularly and the
-  plane curve has only ordinary nodes and A2 cusps, it descends if and only
-  if no node fibre has opposite nonzero signs.  Same-sign node values and
-  every A2 derivative condition are automatic, including points on A=0.
-  The regular-extension pole gate and higher singularity jets remain open.
+  hostile audit of the final iff.  Universally, opposite nonzero marked-root
+  signs over one normalization fibre obstruct every polynomial carrier.  On
+  a plane curve with only ordinary nodes and A2 cusps, the sign-epsilon
+  carrier exists exactly when z=epsilon over every point above A=0 and the
+  two z-values agree at every node.  The first condition is the exact finite
+  pole criterion; same-sign node values and every A2 derivative condition
+  are automatic.  Only higher singularities, absence of a normalization
+  square root, and subsequent projective-companion geometry remain open.
 source: jc_sparse_direct_search / post-THM-3876 intrinsic sign-monodromy abstraction, 2026-08-23
 audit: >
   STRENGTHENING SELF-AUDITED; independent hostile audit pending.  The
   assertion-free symbolic companion checks the cusp identity, both
-  global-sign carrier formulas and their exact jumps, same-sign node values,
-  the A=0 node value, both A2 derivative seams, the THM-3876 specialization,
-  and positive z=0/A=0 controls.  Normal and optimized runs byte-match the
-  frozen 19-gate transcript.  The local-to-global iff uses the standard
+  global-sign carrier formulas and their exact jumps, both matching-sign
+  cancellations and wrong-sign unit numerators above A=0, the A=0 node
+  value, both A2 derivative seams, the THM-3876 specialization, and positive
+  z=0/A=0 controls.  Normal and optimized runs byte-match the frozen 23-gate
+  transcript.  The local-to-global iff uses the standard
   completed local rings of an ordinary node and an A2 cusp; no finite census
   substitutes for that proof.
 related:
@@ -26,9 +28,9 @@ related:
   - THM-3876-monomial-marked-root-normalization-nondescent
 script: 04-computation/jc2_marked_root_opposite_sign_nondescent_thm3880.py
 output: 05-knowledge/results/jc2_marked_root_opposite_sign_nondescent_thm3880.out
-script_sha256: a29bb6710571357da18afc0abd05eae80f70ef536295860622376b4b7c98389e
-output_sha256: 44f8bd1022260ee5c8ae760be91e3a4e07be43df5f4cac69d14cc3bb4f02e28f
-semantic_sha256: 47182169c96e351ac2cbf7f476be52b554ab1abe596639afb59121af10112006
+script_sha256: 593e513d4386dd6c040738ef717e4d2b2f5f686615f76e385631d4f2d5a16612
+output_sha256: a1a8b9cd690fd71243ac240e48581ba5279872ab62289649a8e4b86988d913a4
+semantic_sha256: ec36cdf85275d21d6e2cc5b2b152ab0eec146f5f70324e7055d4fcaf7c713b1a
 hash_basis: raw LF bytes
 ---
 
@@ -70,32 +72,40 @@ nu(p)=nu(q),                 z(q)=-z(p),                 z(p)!=0, (5)
 
 then no polynomial `b(A,C)` with `Delta_b|_Gamma=0` exists.
 
-### Complete ordinary-node/A2 criterion under regular extension
+### Complete ordinary-node/A2 carrier criterion
 
 Assume additionally that `A` is not the zero function, every singularity of
 `Gamma` is an ordinary node or an `A2` cusp, and fix
-`epsilon in {+1,-1}`.  On `A!=0`, define the forced rational carrier
+`epsilon in {+1,-1}`.  Then a polynomial `b_epsilon(A,C)` satisfying
 
 ```text
-B_epsilon=(epsilon z^3-1-AC)/A^2 in k(X).                      (6)
+Delta_(b_epsilon)|_Gamma=0,
+1+AC+A^2b_epsilon=epsilon z^3 on X                          (6a)
 ```
 
-Suppose `(6)` extends to a regular function `B_epsilon in O(X)`.  Then
+exists if and only if both exact sign conditions hold:
 
 ```text
-B_epsilon in O(Gamma)
- iff
-no ordinary-node fibre {p,q} has z(q)=-z(p)!=0.                (7)
+(A0)  z(p)=epsilon for every p in X with A(p)=0;
+
+(N)   z(p)=z(q) for the two addresses over every ordinary node. (6b)
 ```
 
-Because `Gamma` is affine in the `(A,C)`-plane, membership on the left means
-exactly that `B_epsilon` is the restriction of some polynomial `b(A,C)`;
-that lift automatically satisfies `Delta_b|_Gamma=0`.
+On `A!=0`, the necessarily unique normalization value is the rational
+function
 
-The hypotheses in the second statement are load-bearing.  The theorem does
-not prove that `(6)` has no poles, and singularities beyond nodes and `A2`
-cusps can impose higher conductor jets.  Those are now the two precise open
-directions.
+```text
+B_epsilon=(epsilon z^3-1-AC)/A^2 in k(X).                    (6c)
+```
+
+Condition `(A0)` is exactly the assertion that `(6c)` extends regularly over
+the finite zero fibre of `A`; it is not an extra assumed pole gate.
+Condition `(N)` is equivalently the absence of an opposite nonzero sign at
+every node, because both values square to the same `P`.
+
+The singularity and square-root hypotheses are load-bearing.  Singularities
+beyond nodes and `A2` cusps can impose higher conductor jets, and a curve on
+which `P` has no regular normalization square root is outside this theorem.
 
 ## 1. One global sign on an integral normalization
 
@@ -120,16 +130,18 @@ u=epsilon z^3,                         epsilon in {+1,-1}.      (9)
 
 This is not a sign chosen independently on each branch.
 
-Conversely, under the regular-extension hypothesis `(6)`, equation `(9)`
-holds on the dense open set `A!=0` and hence on all of `X`.  Substitution in
-`(8)` gives `A^2 Delta_B=0`.  Since `A` is a nonzero function in the domain,
+Conversely, suppose condition `(A0)` holds.  Section 3 proves directly that
+the rational function `(6c)` then extends to `B_epsilon in O(X)`.  Its
+defining equation `(9)` holds on the dense open set `A!=0` and hence on all
+of `X`.  Substitution in `(8)` gives `A^2 Delta_B=0`.  Since `A` is a
+nonzero function in the domain,
 
 ```text
 Delta_B=0 in O(X).                                             (10)
 ```
 
-Thus every regular extension in the second statement is already a genuine
-normalization-level discriminant solution.
+Thus the exact pole condition `(A0)` produces a genuine normalization-level
+discriminant solution; regular extension is a conclusion, not a hypothesis.
 
 There is also an intrinsic recovery of the square root from a putative
 carrier.  If `P` is not the zero function, then `z_b=u/P in k(X)` satisfies
@@ -167,10 +179,10 @@ nonzero `u`-values.  A denominator-based proof would miss this seam.
 
 If `Gamma` itself is the vertical line `A=0`, then `z^2=1` in the domain
 `O(X)`, so `z` is globally `+1` or globally `-1`; `(5)` cannot occur.  This
-trivial smooth boundary is outside `(6)` only because division by `A^2` is
+trivial smooth boundary is outside `(6c)` only because division by `A^2` is
 unnecessary there.
 
-## 3. Exact forced values away from A=0
+## 3. Exact forced values and the complete finite pole gate
 
 Since
 
@@ -178,7 +190,7 @@ Since
 AC=(3/2)(z^2-1),                                               (14)
 ```
 
-the two signs in `(6)` have the factored forms
+the two signs in `(6c)` have the factored forms
 
 ```text
 A^2B_+(z)= (z-1)^2(2z+1)/2,                                   (15)
@@ -193,8 +205,36 @@ B_epsilon(-z)-B_epsilon(z)
  =-2 epsilon z^3/A^2.                                         (17)
 ```
 
-This is the explicit nonzero jump when `Az!=0`; Section 2 is its regular
-extension across `A=0`.
+This is the explicit nonzero jump when `Az!=0`; the denominator-free
+argument in Section 2 is the corresponding obstruction at `A=0`.
+
+Now let `p in X` satisfy `A(p)=0`.  Then `P(p)=1`, so `z(p)=+1` or `-1`.
+The matching sign cancels the entire denominator.  Indeed
+
+```text
+(z-1)(z+1)=(2/3)AC,                                           (17a)
+
+B_+=(2/9)C^2(2z+1)/(z+1)^2          near a point with z=+1,  (17b)
+
+B_-=-(2/9)C^2(2z-1)/(z-1)^2         near a point with z=-1.  (17c)
+```
+
+The displayed denominators are units at the indicated signs, so these are
+regular regardless of the orders of `A` and `C`.  At the wrong sign, the
+numerator in `(15)` or `(16)` specializes to the unit `-2`; consequently
+`B_epsilon` has a pole of exact order `2 ord_p(A)`.  Since `(6c)` has no
+possible finite denominator away from `A=0`, this proves
+
+```text
+B_epsilon in O(X)
+ iff
+z(p)=epsilon for every p above A=0.                            (17d)
+```
+
+Condition `(A0)` is also necessary directly from any carrier: at `A=0`,
+one has `u=1`, while `(9)` gives `u=epsilon z^3` and `z^2=1`.  Hence
+`z=epsilon`.  Equations `(17a)--(17d)` prove that the finite pole gate is
+both necessary and sufficient.
 
 ## 4. Local conductor conditions for nodes and A2 cusps
 
@@ -219,8 +259,8 @@ length, a regular function in `S` belongs to `R` exactly when it passes
 ## 5. Same-sign node values are automatic
 
 Consider an ordinary node with normalization addresses `p,q`.  Since
-`z(p)^2=z(q)^2=P(nu(p))`, their root values are equal or opposite.  If the
-forbidden case in `(7)` does not occur, then
+`z(p)^2=z(q)^2=P(nu(p))`, their root values are equal or opposite.  Condition
+`(N)` in `(6b)` says exactly that
 
 ```text
 z(p)=z(q)                                                       (20)
@@ -228,14 +268,14 @@ z(p)=z(q)                                                       (20)
 
 (including the common value zero).
 
-If the node has `A!=0`, formula `(6)` and equality of `A,C,z` immediately
+If the node has `A!=0`, formula `(6c)` and equality of `A,C,z` immediately
 give
 
 ```text
 B_epsilon(p)=B_epsilon(q).                                    (21)
 ```
 
-If the node lies on `A=0`, use `(10)` rather than `(6)`.  Specializing the
+If the node lies on `A=0`, use `(10)` rather than `(6c)`.  Specializing the
 original discriminant gives
 
 ```text
@@ -261,7 +301,7 @@ First suppose `A(p)!=0`.  Differentiate `z^2=P`:
 2zz'=(2/3)(A'C+AC')=0.                                        (24)
 ```
 
-Differentiate the numerator identity in `(6)`:
+Differentiate the numerator identity in `(6c)`:
 
 ```text
 2AA'B+A^2B'=3 epsilon z^2z'-A'C-AC'.                          (25)
@@ -285,9 +325,11 @@ directly.  On substituting `A=A'=C'=0`, every term vanishes except
 
 Thus `(26)` also holds on the `A=0` seam.  Every cusp passes `(19)`.
 
-Sections 5--6 prove the sufficiency direction of `(7)`.  The necessity
-direction is Section 2, applied to a polynomial representative of any
-element of `R`.  This completes the iff.
+Under `(A0)`, Section 3 first makes `B_epsilon` regular.  Sections 5--6 then
+show that condition `(N)` places it in `R`.  Conversely, any polynomial
+carrier satisfies `(A0)` by Section 3 and `(N)` by Section 2.  Since every
+element of the affine coordinate ring `R` has a polynomial representative
+in `k[A,C]`, this completes the iff `(6a)--(6b)`.
 
 ## 7. Sharp z=0 and A=0 controls
 
@@ -363,15 +405,18 @@ python3 -O 04-computation/jc2_marked_root_opposite_sign_nondescent_thm3880.py
 
 and compare both streams byte-for-byte with the frozen output.  The exact
 companion checks the universal identities and jumps, both node seams, both
-cusp derivative seams, `(29)--(30)`, and the THM-3876 specialization.
+cusp derivative seams, both exact pole cancellations and wrong-sign units,
+`(29)--(30)`, and the THM-3876 specialization.
 
-The theorem converts the former broad same-sign uncertainty into two exact
-frontiers:
+The theorem closes both finite sign descent and the finite pole gate for
+ordinary-node/A2 curves.  The remaining frontiers are different in kind:
 
-1. **regular-extension/pole gate:** decide when the rational function `(6)`
-   has no pole at any finite normalization point, especially above `A=0`;
-2. **higher conductor jets:** for singularities worse than `A2`, determine
+1. **higher conductor jets:** for singularities worse than `A2`, determine
    whether the marked identities force all missing Taylor coefficients.
+2. **root existence and projective geometry:** treat curves for which `P`
+   has no regular normalization square root, and determine whether the
+   remaining discriminant components have polynomial normalizations after a
+   carrier passes the affine test.
 
-For ordinary nodes and `A2` cusps, once regularity is known, there is no
-additional hidden conductor obstruction beyond the sign packet `(7)`.
+For ordinary nodes and `A2` cusps, there is no hidden conductor or finite
+regularity obstruction beyond the two sign conditions `(A0)` and `(N)`.
