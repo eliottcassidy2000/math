@@ -156,6 +156,14 @@ infinite z-adic expansions of global elements of B.                           (8
 
 Thus normal degree four is the first remaining polynomial cell.
 
+A second hostile audit reaches the same closure by a genuinely different
+route: after a determinant-one target shear, irreducible-prime valuations in
+the lower buckets exclude nonconstant `(3,2)` Kummer factors, while the
+constant factor gives `J=(KB+d)B'`, never a nonzero scalar.  Agreement between
+that local-DVR proof and the global `X=beta/h` pole proof is strong evidence
+that the degree-three boundary is structural rather than an artifact of one
+normal form.
+
 ## 4. The square gate is not higher-normal invariant
 
 For a constant nonzero Wronskian `W=w`, take a rational function `phi(z)`

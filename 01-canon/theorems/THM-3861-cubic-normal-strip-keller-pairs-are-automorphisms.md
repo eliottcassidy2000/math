@@ -25,6 +25,12 @@ audit: >
   scalar-root-free control, local DVR and constant-h edges, degenerate (3,1)
   controls, and the sharp rational bracket -3/16 hostile.  Normal and
   optimized executions of both companions byte-match their frozen LF outputs.
+  A second independent 17,524-gate audit rebuilds the proof from the six
+  buckets without using the first audit.  Its determinant-one target shear
+  gives a different local-DVR exclusion of every nonconstant `(3,2)` factor;
+  the constant edge reduces to `J=(KB+d)B'`.  It checks 14,064 valuation
+  profiles, both target charts, every zero edge, the explicit inverse and the
+  sharp rational hostile.  Normal and optimized replay again byte-match.
 depends_on:
   - THM-3856-quadratic-normal-strip-keller-pairs-are-automorphisms
 related:
@@ -42,6 +48,11 @@ independent_output: 05-knowledge/results/jc2_cubic_normal_strip_keller_independe
 independent_script_sha256: 3c658af035d67b6fa7d230a3985147e5ee29e39476c3cb94b845c191fe1cca44
 independent_output_sha256: 858e6f8aca4a38a24724a29aa0e9df30161109337a11c6edf2792757027443d9
 independent_semantic_sha256: 7862efeee48d97b47b7c6c55fab9a3ad83d2d137815b8b71a3f2eab10e5724b5
+second_independent_script: 04-computation/jc2_cubic_normal_strip_keller_second_hostile_audit_thm3861.py
+second_independent_output: 05-knowledge/results/jc2_cubic_normal_strip_keller_second_hostile_audit_thm3861.out
+second_independent_script_sha256: d5adf63924d63f326c2e25767e01f70bb732b977783375f391d41812fd4e75d6
+second_independent_output_sha256: e9f4acf4f82118729ba2ebdc4067cbc199d732b7d8c38153706a08cbb56f1e82
+second_independent_semantic_sha256: e286e5276ec64f1e06a4f8aa187edd2cbef8fdfefb14acf47da602d95d0eb44c
 hash_basis: raw LF bytes
 ---
 
@@ -364,9 +375,11 @@ python3 -B 04-computation/jc2_cubic_normal_strip_keller_thm3861.py
 python3 -B -O 04-computation/jc2_cubic_normal_strip_keller_thm3861.py
 python3 -B 04-computation/jc2_cubic_normal_strip_keller_independent_audit_thm3861.py
 python3 -B -O 04-computation/jc2_cubic_normal_strip_keller_independent_audit_thm3861.py
+python3 -B 04-computation/jc2_cubic_normal_strip_keller_second_hostile_audit_thm3861.py
+python3 -B -O 04-computation/jc2_cubic_normal_strip_keller_second_hostile_audit_thm3861.py
 ```
 
 Each primary execution must byte-match
-`05-knowledge/results/jc2_cubic_normal_strip_keller_thm3861.out`; each
-independent execution must byte-match
-`05-knowledge/results/jc2_cubic_normal_strip_keller_independent_audit_thm3861.out`.
+`05-knowledge/results/jc2_cubic_normal_strip_keller_thm3861.out`; the two
+independent pairs must byte-match their corresponding independent-audit
+outputs.
