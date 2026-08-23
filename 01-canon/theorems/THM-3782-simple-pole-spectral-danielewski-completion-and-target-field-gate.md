@@ -209,7 +209,9 @@ an affine plane because `(10)` eliminates `V=UE+lambda`.
 This is the exact synchronized-residue branch of THM-3770: a single value
 does not merely avoid an obstruction; it explicitly supplies the polynomial
 mate.  The formula is sharp and requires neither surjectivity nor an
-intersection theorem.
+intersection theorem.  In particular, if the reduced polynomial `U` is
+irreducible, then its spectrum has one value and every rational Keller mate
+with `UP` polynomial repairs immediately to the polynomial mate `(18)`.
 
 ## 3. Two or more values force the exponent-one class
 
