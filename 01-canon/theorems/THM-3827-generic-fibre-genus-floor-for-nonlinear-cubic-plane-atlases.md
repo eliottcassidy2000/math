@@ -2,10 +2,8 @@
 id: THM-3827
 title: "Dual generic-fibre genus floors for nonlinear cubic plane atlases"
 status: >
-  DUAL GENUS FLOORS AND THE SIX-MEMBER REDUCIBILITY GATE PROVED + CITED +
-  VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  THE SECOND G_M ARM AND
-  BICHROMATIC PASSPORT ARE PROVISIONAL PROOF CANDIDATES + VERIFIED-EXACT,
-  PENDING INDEPENDENT HOSTILE AUDIT.  For the generative closed-polynomial
+  PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the
+  generative closed-polynomial
   factors h=p(g) and k=q(ell) of both pulled-back THM-3811 row functions, the
   smooth projective geometric generic fibres of g and ell each have genus at
   least three.  At equality they are respectively isomorphic after base
@@ -37,8 +35,13 @@ audit: >
   squarefree genus-three/one-infinity sidecar, both algebraic and
   transcendental branches, Riemann--Hurwitz, equality, normal and optimized
   replay, and the frozen hashes at commit 85eb0017c6.  The second intrinsic
-  G_m arm and the strengthened component-sign passport are self-audited and
-  await an independent pass.  The exact companion verifies the
+  G_m arm and the strengthened component-sign passport received a further
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23): it
+  checked quotient generation and both inverse maps on k=0, the original
+  cubic laws, reduced base change and componentwise nonconstancy, the h-adic
+  lift, all pullback gcds, full prime multiplicity allocation, recovery of
+  whole members even for nonreduced monochromatic fibres, and the formal
+  grading through algebraic independence.  The exact companion verifies the
   monic degree-eight sidecar, a squarefree hostile fibre, the full generic
   discriminant, stability under a nonconstant Stein composition, the
   genus-three count, every excluded Riemann--Hurwitz genus, and reduced-arm
@@ -64,11 +67,8 @@ hash_basis: raw LF bytes
 
 # THM-3827 -- both row fibrations of a plane atlas need genus at least three
 
-**DUAL GENUS FLOORS AND SIX-MEMBER REDUCIBILITY PROVED + CITED +
-VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; SECOND G_M ARM AND
-BICHROMATIC PASSPORT PROVISIONAL PROOF CANDIDATES + VERIFIED-EXACT, PENDING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `K` of
-characteristic zero.  Put
+**PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work
+over an algebraically closed field `K` of characteristic zero.  Put
 
 ```text
 R=K[x,y],                 L=K(x,y).                              (1)
@@ -444,7 +444,5 @@ The generative-polynomial existence and uniqueness used here are **CITED**,
 not reproved by the exact companion.  They make the independently audited
 dual claims `(19)` and `(34)` unconditional for every dominant etale plane
 atlas over the stated field.  The second intrinsic arm `(30)` and the
-bichromatic strengthening `(24)` are new provisional refinements pending an
-independent hostile pass.  No planar Jacobian counterexample is claimed.
-**QED for the dual genus floors and reducibility gate; the two sharpenings
-remain subject to independent hostile audit.**
+bichromatic strengthening `(24)` are independently audited as well.  No
+planar Jacobian counterexample is claimed.  **QED.**
