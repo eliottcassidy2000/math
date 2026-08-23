@@ -325,49 +325,33 @@ real power of `log log X`. This is still no support asymptotic or residue.
   gives fixed-division and one-shell parity tariffs, same-scale separation,
   and the all-shell stabilizer as the response kernel (zero at odd core).
   Adaptive/projective chronology and every prize remain OPEN.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  The older audited
-  chain THM-3543--3782 supplies degree/height floors and closes the named
-  Nagata/GGHV, Cohn, radial, Pell, simple-pole, low-support and target-word
-  cells; it does not close interacting Cohn factors, `J_3+`, arbitrary
-  supports, or arbitrary polynomial pairs.  THM-3783/3785 are the two live
-  pseudo-plane models; THM-3787--3821 close their displayed sparse rows,
-  while denser sextics, higher rows, poles and off-nodal branches survive.
-  THM-3811's nonlinear nonmonogenic `S3` surface
-  `U=Spec S[A/D,omega/D]` was the sharp construction anchor, but THM-3841
-  now closes it in all degree: the deleted ramification valuation forces the
-  entire discriminant into the Jelonek set of any plane composite, whereas
-  its normalization is `P1` minus three points and cannot be polynomially
-  uniruled.  In fact no dominant `A2 -> U` exists, even without etaleness.
-  THM-3842 identifies its marked cubic as the normalized finite degree-eight
-  coefficient pullback of the `m=2` rational tower, with cusp divisor split
-  `2V(A)+V(Delta)` and a load-bearing ring-normalization sidecar.  THM-3845
-  independently excludes etale atlases by the elementary THM-3836 total-degree
-  trichotomy; neither result extends this closure to other surfaces.
-  THM-3827/3831 give both primitive row-genus floors `>=3`, explicit
-  genus-three hyperelliptic equality sidecars (row poles `2/1` only at
-  equality), and the saturated three-cubic/two-quadratic spectral atlas.
-  THM-3832/3835 prove the marked ratio `z=h/k` is birational but genuinely
-  rational, in reduced form, after every constant `PGL2` row change; `k=0`
-  is an exact `G_m` simple-pole arm.
-  THM-3836 is the current all-degree core:
-  `P=3h^3+7h^2k+k^3=CS`, `(C,S)=1`, and
-  `kJ(h,C)-hJ(k,C)=lambda P`; some cubic pencil member must split into
-  nonempty comaximal factors reaching both Laurent arms.  THM-3838 adds
-  `deg h,deg k>=5`.  THM-3830 and THM-3837 close the intersecting cross and
-  the first comaximal line--hyperbola selector through quadratic corrections.
-  THM-3840's two forced endpoints are the local shadow of THM-3841's full
-  component.  The surviving positive anchor is THM-3785's one-place Russell
-  pseudo-plane: a Darboux pair there would pull back to a counterexample of
-  field degree divisible by three and at least nine.  THM-3843 forces its arm
-  restriction to be a noninjective immersed normalization of a one-place
-  singular Jelonek component.  THM-3846 proves every unimodular first jet
-  lifts formally, but global compatibility forces nonzero normal Wronskian
-  and `Frac(B)=k(s,z)` makes the canonical linear-normal square gate
-  nonsquare.  Only a genuinely different higher-normal algebraization can
-  survive.  THM-3839 closes only its constant-`v`, bichromatic first `r^2z`
-  tower; nonconstant towers, aligned colors and unrestricted multigraded
-  pairs remain.  Any new deleted-divisor completion must first pass the
-  polynomial-uniruled/one-place gate.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  THM-3543--3782 close
+  the named Nagata/GGHV, Cohn, radial, Pell, simple-pole and low-support cells,
+  not arbitrary pairs.  THM-3827/3831 impose primitive row genus `>=3`;
+  THM-3836 is the alternate all-degree core
+  `P=3h^3+7h^2k+k^3=CS`, `(C,S)=1`,
+  `kJ(h,C)-hJ(k,C)=lambda P`, with a required comaximal pencil split;
+  THM-3838 gives `deg h,deg k>=5`.
+  The former sharp `S3` anchor THM-3811 is closed twice: THM-3841 proves no
+  dominant plane map by its three-puncture Jelonek component, and THM-3845
+  gives an independent total-degree contradiction.  THM-3842 identifies it
+  as an eightfold base change of the rational cubic tower.  THM-3847's
+  two-puncture (`G_m`) deformation and THM-3844's one-place two-cusp quartic
+  also fail: each cubic order is globally monogenic, so deleting ramification
+  creates a nonconstant unit.  In THM-3844 the two local cusp classes
+  globalize but fold onto one `Z/3` direction; cusp count is not torsion rank.
+  Thus every new deleted-divisor completion must pass both the one-place
+  polynomial-uniruled gate and the constant-unit/nonmonogenic gate.
+  The positive anchor is THM-3785's one-place Russell pseudo-plane; a Darboux
+  pair there would yield a counterexample of field degree divisible by three
+  and at least nine.  THM-3843 forces its arm to be a noninjective immersed
+  normalization.  THM-3846 gives every unimodular first jet a formal lift,
+  while nonzero normal Wronskian makes the canonical resummation nonrational.
+  THM-3849 identifies the missing collision coordinate: its conductor
+  polynomial records exactly where the residual class `2[L]` meets the arm,
+  with degree twice the weighted collision graph.  The live target is a
+  genuinely higher-normal algebraization satisfying this contact graph;
+  THM-3839 excludes only one constant bichromatic tower.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692

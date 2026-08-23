@@ -2,14 +2,22 @@
 id: THM-3847
 title: "Two-place cubic deformation and monogenic unit debt"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  A constant-profile deformation of the depressed
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A constant-profile
+  deformation of the depressed
   cubic tower has irreducible branch normalization G_m (exactly two places at
   infinity), but its normal finite-flat cubic order is globally monogenic:
   the binary index form represents 1.  Consequently every affine etale open
   has a nonconstant unit and cannot be an affine plane.  This is a design
   obstruction for one cubic grammar, not a planar Jacobian theorem.
 source: jc_sparse_direct_search / nonlinear cubic and rational-tower comparison lane, 2026-08-23
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc_quartic_c3_construct and root /
+  jc-cohn3709, 2026-08-23).  The audits checked monic-specialization
+  irreducibility, the finite birational conic normalization and its two
+  projective punctures, every height-one case in the discriminant-index
+  normality argument, the binary index form and monogenic scaling, and the
+  different-unit obstruction on an arbitrary affine etale open.  Normal and
+  optimized runs byte-match the frozen 55-gate transcript and both hashes.
 related:
   - THM-3774-three-component-rational-keller-cover-tower
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
@@ -25,8 +33,8 @@ hash_basis: raw LF bytes
 
 # THM-3847 -- two places are compatible with the branch, but not with the index
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of
 characteristic zero.  Fix `beta in k*`, put `R=k[A,C]`, and define
 
 ```text
