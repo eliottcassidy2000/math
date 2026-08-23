@@ -1,0 +1,12 @@
+audit=F12_F13_common_raw_reset_confluence
+graph=states:239;edges:568;sinks:6;max_depth:7
+outdegree=0:6,1:41,2:85,3:75,4:28,5:4
+debt=0:6,1:29,2:57,3:64,4:48,5:26,6:8,7:1
+basins=39,20,40,20,80,40
+path_histogram=1:47,2:51,3:17,4:17,6:41,12:17,20:17,24:14,60:7,120:9,360:1,840:1
+chronology=192_states_nonunique;unique_max_(4,3,0,0,0):840_directed_reset_histories
+response=hostile_raw_normalizing_edge_has_no_common_inherited_named_row_or_raw_magnitude_certificate
+scope=raw_graph_only;certificate_chronology_FC3_HFC3_SFC3_not_implied
+semantic_sha256=de8e59e5e9d9aaf898f4599613214291c5ecbd0c080127eaaf31880a585c3a1b
+GATES=2873
+RESULT=PASS_CANON_READY

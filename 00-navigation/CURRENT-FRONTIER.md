@@ -167,7 +167,10 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   every length-two path.  Identity rows have five full edges and one positive
   three-edge 12-row corridor, refuting a universal identity no-subatlas claim.
   Injective upset size plus dynamic root transport preserves that corridor
-  and kills magnitude matching; the core survivor is only an `S`-half without root 17.
+  and kills magnitude matching; the core survivor is only an `S`-half without
+  root 17.  The common raw reset relation is terminating and confluent to six
+  normal forms, but 192 states have multiple histories (maximum 840), and the
+  hostile normalizing edge retains neither named-row nor raw-magnitude data.
   Other gauges/faces, cross-face routing, `FC(3)`, and `SFC(3)` remain OPEN.
 
 ### Live work

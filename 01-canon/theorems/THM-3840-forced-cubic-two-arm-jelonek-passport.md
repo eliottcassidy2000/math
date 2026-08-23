@@ -29,6 +29,7 @@ depends_on:
 related:
   - THM-3832-nonlinear-cubic-root-ratio-triangular-birational-chart
   - THM-3578-zariski-main-boundary-rank-and-sheet-debt
+  - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
   - THM-3845-nonlinear-cubic-keller-atlas-total-degree-contradiction
 script: 04-computation/jc2_forced_cubic_two_arm_jelonek_passport_thm3840.py
 output: 05-knowledge/results/jc2_forced_cubic_two_arm_jelonek_passport_thm3840.out
@@ -79,10 +80,10 @@ beta=2a/(7a^2-1).                                                (5)
 ```
 
 The three possible points `T_a` are pairwise distinct and all differ from
-`O`.  The theorem forces `O` and at least **one** of them; it does not force
-all three or identify the whole Jelonek curve.  This is a proved implication
-from the hypothetical atlas packet.  THM-3845 proves that its antecedent is
-false, so it produces no actual map `F` or realized Jelonek pair.
+`O`.  The arm argument below isolates `O` and at least **one** `T_a`.
+Independently, THM-3841 upgrades the same hypothetical atlas to
+`V(Delta)` contained in `S_F`, hence conditionally forces all three `T_a`; THM-3845
+proves the antecedent empty, so no actual map `F` or Jelonek pair is realized.
 
 ## 1. The two source curves carry a nonconstant unit
 

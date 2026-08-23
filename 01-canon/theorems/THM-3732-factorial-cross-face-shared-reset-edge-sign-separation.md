@@ -15,8 +15,12 @@ status: >
   injective on all 22 rows: retaining it and transporting root multiplicity
   lawfully preserves that corridor, while requiring equal upset size kills
   every raw-magnitude edge.  A rooted-core restriction has two five-row
-  S-half corridors but omits the F-half and canonical root 17.  No FC(3),
-  HFC(3), or invertibility result follows.
+  S-half corridors but omits the F-half and canonical root 17.  The common
+  raw-state reset relation is a debt-graded terminating and confluent rewrite
+  system: its six basin sizes are 39,20,40,20,80,40 and its maximum depth is
+  seven.  Exactly 192 states have multiple directed normalization histories;
+  the unique maximum is 840 histories at count state (4,3,0,0,0), not a
+  unique reset chronology.  No FC(3), HFC(3), or invertibility result follows.
 source: root + lrc14-cover-defect-bridge / 2026-08-22
 audit: >
   PASS after narrowing an overbroad torsor claim.  An independent
@@ -30,7 +34,17 @@ audit: >
   additional reconstructions audit native bank cells, upset sizes,
   provenance, dynamic root transport, and the THM-3278 core restriction;
   they agree on both surviving corridors and every first obstruction.
-  Normal and optimized streams byte-match all frozen transcripts.
+  A 2,732-gate primary reconstruction derives both face profiles, their
+  common reset graph, and the hostile response fibres from the hash-pinned
+  THM-3238 coefficient source.  It verifies strict debt descent, normal-form
+  invariance on every edge, and a unique diamond join for every immediate
+  fork.  A 2,873-gate independent implementation never imports the primary:
+  it rebuilds the partition upsets, intersects the two L1-reset graphs,
+  computes reachable sinks and path counts recursively, and rederives the
+  hostile response deltas.  Both paths reproduce all 239 states, 568 edges,
+  six basins, the complete debt and path histograms, 192 states with
+  nonunique chronology, and the unique 840-history state.  Normal, optimized,
+  and frozen-module streams byte-match all frozen transcripts.
 depends_on:
   - THM-3238-complete-physical-product-gamma-bank-unique-reset-stitch
   - THM-3286-three-face-availability-helly-defect-and-binary-origin-width
@@ -64,6 +78,18 @@ root_bank_sidecar_audit_script: 04-computation/fc_cross_face_root_bank_sidecar_i
 root_bank_sidecar_audit_output: 05-knowledge/results/fc_cross_face_root_bank_sidecar_independent_audit_thm3732.out
 root_bank_sidecar_audit_script_sha256: 0ef0a9ae3fb827471745ec53fc3b476d0fbdf4e8697cc53badb12a5fa2d38f92
 root_bank_sidecar_audit_output_sha256: 871c7c902e30809d2f1dad174d5d90ef3f83d8b61701c6239f73a8c95f832b67
+normal_form_script: 04-computation/fc_common_reset_confluent_normal_form_thm3732.py
+normal_form_output: 05-knowledge/results/fc_common_reset_confluent_normal_form_thm3732.out
+normal_form_script_sha256: e24b49dce9d8a99b318f5344339df63f743fac0c5bfaec7f9b3365f8e47e7e19
+normal_form_output_sha256: 768292c46cfd2d4caf0bd670f7e6509e7d85494e4dfedc96ddfa2d5ce0c521aa
+normal_form_semantic_sha256: 9a336b51450224d76c4b179542ccc1aaa635388c76c51ddbe84215210acb06bc
+normal_form_coefficient_source: 04-computation/gmc_complete_physical_bank_unique_reset_thm3238.py
+normal_form_coefficient_source_sha256: 201e7348cc4f1e7fe4cfd51cfda42db85b8943d8d33f2d9080f20df562ecccaa
+normal_form_independent_audit_script: 04-computation/fc_common_reset_confluent_normal_form_independent_audit_thm3732.py
+normal_form_independent_audit_output: 05-knowledge/results/fc_common_reset_confluent_normal_form_independent_audit_thm3732.out
+normal_form_independent_audit_script_sha256: 49675c0e0a41559a53b5883c3ec50d5dfcd42d1336fae4bdb9a1a9f7a25d16e6
+normal_form_independent_audit_output_sha256: c2e23048d804976dd71290ca37f7826bb06cfd6600a11fa57952e34505253930
+normal_form_independent_semantic_sha256: de8e59e5e9d9aaf898f4599613214291c5ecbd0c080127eaaf31880a585c3a1b
 hash_basis: raw LF bytes
 ---
 
@@ -377,7 +403,107 @@ No maintained map sends a product-Gamma state/row/face to a labelled
 boundary point, primitive constant, or sheet.  Therefore no reset/HFC
 cocycle identification is typed.
 
-## 9. Scope and reproduction
+## 9. Common raw-reset normal forms
+
+Write a common physical state in count coordinates
+
+```text
+c=(c1,c2,c3,c4,c5)
+ in [0,4] x [0,3] x [0,2] x [0,1] x [0,1],
+c!=(0,0,0,0,0).                                      (21)
+```
+
+The common directed moves are exactly (13).  Define the root-one debt and
+total debt by
+
+```text
+d1(c1)=1                       if c1=0,
+       max(c1-1,0)             otherwise,
+
+D(c)=d1(c1)+[c2=3]+[c3=0]+[c4=0]+[c5=0].             (22)
+```
+
+Every common reset edge lowers `D` by exactly one.  Hence the graph is a
+finite graded DAG, with debt distribution
+
+```text
+D:state count
+0:6, 1:29, 2:57, 3:64, 4:48, 5:26, 6:8, 7:1.        (23)
+```
+
+Its normal-form map is
+
+```text
+NF(c1,c2,c3,c4,c5)
+ =(1, 2 if c2=3 else c2,
+      1 if c3=0 else c3, 1, 1).                       (24)
+```
+
+For every edge `c->c'`, one has `NF(c)=NF(c')`.  Every immediate fork changes
+two distinct coordinates; applying the other coordinate move on each branch
+gives the same join.  Thus every state reaches exactly one raw normal form,
+and the common raw reset relation is terminating and confluent.  The six
+normal forms are
+
+```text
+(1,c2,c3,1,1),       c2 in {0,1,2}, c3 in {1,2}.      (25)
+```
+
+In the order `(c2,c3)=(0,1),(0,2),(1,1),(1,2),(2,1),(2,2)`, their basin
+sizes are
+
+```text
+39, 20, 40, 20, 80, 40.                              (26)
+```
+
+The subtraction from `40` to `39` in the first basin is exactly the excluded
+empty count vector.
+
+Let `a=d1(c1)` and
+
+```text
+b=[c2=3]+[c3=0]+[c4=0]+[c5=0].
+```
+
+The `a` root-one moves have a fixed internal order, while the `b` labelled
+one-shot moves may be permuted and interleaved.  Therefore the number of
+directed reset histories from `c` to `NF(c)` is
+
+```text
+P(c)=(a+b)!/a!.
+
+P:state count
+1:47, 2:51, 3:17, 4:17, 6:41, 12:17,
+20:17, 24:14, 60:7, 120:9, 360:1, 840:1.             (27)
+```
+
+Exactly `192` states have `P(c)>1`.  The unique maximum is
+
+```text
+c=(4,3,0,0,0),       P(c)=7!/3!=840.
+```
+
+These are `840` distinct directed reset histories ending at one raw normal
+form.  Confluence does not identify their edge orders and does not assert a
+unique reset chronology.
+
+The hostile source `(3,4,5)`, or count state `(0,0,1,1,1)`, has the unique
+common edge to its raw normal form `(1,3,4,5)`.  The primary computation
+derives the strict-positive fibres (5) from the hash-pinned THM-3238
+coefficient source, rather than supplying them as literals; the independent
+audit separately reconstructs every partition upset and obtains the same
+fibres.  They are disjoint, and the inherited raw-gauge equal-positive-
+magnitude relation is empty as in (7).  Thus even a unique raw normalizing
+edge supplies no common certificate in the inherited named-row identity or
+equal-raw-magnitude relations.
+
+This is confluence only after forgetting face-specific response rows, raw
+response magnitudes, witnesses, and path history.  It neither contradicts
+the positive identity corridor (16) nor excludes arbitrary relabellings,
+imposed bijections, variable groupoids, or richer history sidecars.  It gives
+no `FC(3)`, `HFC(3)`, `SFC(3)`, positivity, GMC, or invertibility result.
+
+## 10. Scope and reproduction
 
 The theorem proves no `FC(3)`, `HFC(3)`, `SFC(3)`, GMC, positivity, or
 polynomial-invertibility conclusion.
@@ -397,6 +523,10 @@ python3 -B 04-computation/fc_cross_face_root_bank_sidecar_census_thm3732.py
 python3 -B -O 04-computation/fc_cross_face_root_bank_sidecar_census_thm3732.py
 python3 -B 04-computation/fc_cross_face_root_bank_sidecar_independent_audit_thm3732.py
 python3 -B -O 04-computation/fc_cross_face_root_bank_sidecar_independent_audit_thm3732.py
+python3 -B 04-computation/fc_common_reset_confluent_normal_form_thm3732.py
+python3 -B -O 04-computation/fc_common_reset_confluent_normal_form_thm3732.py
+python3 -B 04-computation/fc_common_reset_confluent_normal_form_independent_audit_thm3732.py
+python3 -B -O 04-computation/fc_common_reset_confluent_normal_form_independent_audit_thm3732.py
 ```
 
 Each normal/optimized pair must agree byte for byte with its frozen

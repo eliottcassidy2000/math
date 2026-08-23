@@ -1,0 +1,12 @@
+probe=F12_F13_common_reset_confluent_normal_forms
+graph=states:239;edges:568;sinks:6;max_depth:7
+outdegree=0:6,1:41,2:85,3:75,4:28,5:4
+debt=0:6,1:29,2:57,3:64,4:48,5:26,6:8,7:1
+basins=39,20,40,20,80,40
+path_histogram=1:47,2:51,3:17,4:17,6:41,12:17,20:17,24:14,60:7,120:9,360:1,840:1
+chronology=192_states_nonunique;unique_max_(4,3,0,0,0):840_directed_reset_histories
+boundary=raw_state_confluence_supplies_no_common_inherited_named_row_or_raw_magnitude_certificate
+scope=two_named_I2_faces;FC3_HFC3_SFC3_OPEN
+semantic_sha256=9a336b51450224d76c4b179542ccc1aaa635388c76c51ddbe84215210acb06bc
+GATES=2732
+PASS
