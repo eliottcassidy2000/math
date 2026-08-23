@@ -2,7 +2,7 @@
 id: THM-3805
 title: "Quadratic R-repairs of nodal carriers have critical points"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  On the c=1
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the c=1
   cubic pseudo-plane, every canonical nodal carrier
   A=e^2-z/3+r(b_0+b_1e+b_2e^2) has a critical point.  In the genuine
   quadratic case, the degree-fourteen residual resultant cannot have all
@@ -13,14 +13,14 @@ status: >
   remain open.
 source: jc_zero_debt_lift / quadratic-r boundary-divisibility lane, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The universal P/Q reduction, residual
-  resultant, logarithmic-divisibility necessity, full polynomial remainder,
-  E13--E10 branch contradiction, projective-root finiteness, excluded
-  denominator values, source reconstruction, and lower-degree inheritance
-  were checked separately.  Exhaustive finite-field scans are retained only
-  as hostile controls.  The companion has 37 active gates; normal and
-  optimized runs byte-match the frozen transcript.  Independent hostile
-  audit remains due.
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The universal P/Q
+  reduction, degree-fourteen residual resultant, repeated-root-safe
+  divisibility necessity, exact quotient and full remainder, E13--E10
+  two-branch contradiction, homogeneous finite-root seam, denominator
+  exclusions, source reconstruction, and lower-degree inheritance were
+  independently rederived.  Finite-field scans remain hostile controls only.
+  The companion has 37 active gates; normal and optimized runs byte-match
+  the frozen transcript and all recorded hashes match.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3792-pure-first-normal-nodal-carriers-have-critical-points
@@ -39,7 +39,7 @@ hash_basis: raw LF bytes
 
 # THM-3805 -- every quadratic r-repair remains critical
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over
 an algebraically closed field `k` of characteristic zero.  On the `c=1`
 member of the THM-3785 cubic pseudo-plane put
 
@@ -257,5 +257,4 @@ open.  The companion named in the metadata checks `(5)--(26)` and the full
 remainder.  Exhaustive scans of the divisibility system over `F_5`, `F_7`,
 and `F_11` find no survivors, but these are hostile controls only and play
 no role in the characteristic-zero proof.  Normal and optimized executions
-byte-match the frozen 37-gate transcript.  **QED, conditional only on
-independent hostile audit.**
+byte-match the frozen 37-gate transcript.  **QED.**
