@@ -2,22 +2,24 @@
 id: THM-3727
 title: "W004 dual scalar-13 ternary Kummer nonentry"
 status: >
-  PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.  Every W004
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every W004
   placement in the named all-scale family with weights
   P=(-n-2,-2,2n-2), Q=(1-4n,1-3n,1-2n,1) and scalar fibre 13+22 is
   Darboux-empty in the y=0 collision ring.  Its endpoint gcd divides 9, and
   the end rows create a negative-charge Kummer sheet that is nonpolynomial
   except at n=2; the remaining scale is differentially incompatible.  This
-  is not proved canon until audit promotion, and it does not close all of
-  W004, the full 3x4 cell, general quartic C3 data, or JC(2).
+  does not close all of W004, the full 3x4 cell, general quartic C3 data, or
+  JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The exact companion checks the W004 fibre
+  INDEPENDENTLY HOSTILE-AUDITED.  The exact companion checks the W004 fibre
   word, singleton arithmetic in every residue modulo 9, both end-row
   transports, the negative-charge split, the complete n=2 middle-row Cramer
   system and compatibility polynomial, and the n=1 boundary.  Normal and
-  optimized runs byte-match the frozen transcript.  Independent hostile
-  audit remains open.
+  optimized runs byte-match the frozen transcript.  An independent
+  derivation checked every sign and constant, the rational-function UFD
+  step for delta=1,3,9, negative-charge coprimality, every n=2 Cramer term,
+  and the n=1 reduction.
 depends_on:
   - THM-3583-universal-exponent-two-two-by-four-weight-darboux-nonentry
   - THM-3603-three-by-four-support-collision-cone-and-fibre-cut-atlas
@@ -35,8 +37,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3727 -- the dual W004 ternary Kummer family is empty
 
-**PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.**  Work over
-`C` in the THM-3696 collision ring.  Put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over `C`
+in the THM-3696 collision ring.  Put
 
 ```text
 h=1-b^2,
@@ -146,8 +148,9 @@ U=v^delta,                    F=Bv^2,          B!=0,   (13)
 
 for a nonconstant polynomial `v`.  Indeed, coprimality of `delta` and `2`
 first forces every prime valuation of `U` to be divisible by `delta`, and
-then forces the displayed valuation of `F`.  Equations `(10)` and `(12)`
-now read
+then forces `ord_p(F)>=0` at every finite prime and the displayed valuation
+of `F`; hence the initially rational `F` is the polynomial `Bv^2`.
+Equations `(10)` and `(12)` now read
 
 ```text
 Pi=Av^(5-2n)+Bv^2.                                    (14)
@@ -242,5 +245,4 @@ python3 -B 04-computation/jacobian_y0_w004_dual_scalar13_ternary_kummer_thm3727.
 python3 -B -O 04-computation/jacobian_y0_w004_dual_scalar13_ternary_kummer_thm3727.py
 ```
 
-Both commands must agree byte for byte with the frozen transcript.  Audit
-promotion is required before this proof candidate enters proved canon.
+Both commands must agree byte for byte with the frozen transcript.  **QED.**
