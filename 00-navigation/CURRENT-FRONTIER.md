@@ -57,14 +57,16 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `l1` norm at most `356`.  A minimal row is Graver; support two has `19,314`
   reduced ratios, while higher support is a bounded multiway partition.
   THM-2052's rank-twelve branch is already terminal; in rank eleven the row
-  either raises rank with an explicit cap or lies short inside the star. It preserves no
-  owner, phase, sign partition, or arrival and is not sufficient for LRC(14).
+  either raises rank with an explicit cap or lies short inside the star.
   THM-3793/[3825](../01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md)
-  decode the `5,855` inert ratios/scales; THM-3818 restores selected
-  facets/word and a lattice cover.  Its tags have square parity and 31 Pell
-  points.  FINITE-EXACT, `(9,13;76,132)` remains the unique tripling edge
-  through pair sum `10^6` (independent control `5000`).  This is arithmetic
-  only; off-lattice arrival and row exclusion remain open.
+  decode the `5,855` inert ratios/scales; THM-3818 adds `456,690` supports,
+  `913,380` orientations and the pair-sum grid.  Its tags have square parity
+  and 31 Pell points.  Its
+  rows are graphic: rank eleven forces decoder disconnection; connected
+  incidence gives `max n_i<=355^12`.  FINITE-EXACT,
+  `(9,13;76,132)` remains the unique tripling edge through pair sum `10^6`
+  (independent control `5000`).  This is arithmetic only: no owner, off-grid
+  arrival, row exclusion or loneliness follows.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves

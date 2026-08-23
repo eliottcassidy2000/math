@@ -12,8 +12,11 @@ status: >
   safety mask on the pair-sum time lattice.  There are 456,690 unoriented
   supports and 913,380 oriented assignments.  The support-two covector lies
   inside the rank-eleven bounded-relation span and cannot be its twelfth rank
-  increment.  This is an all-scale address theorem, not an LRC exclusion: the
-  grid can be empty while an off-grid loneliness time exists.
+  increment.  The full decoder-row matroid is exactly graphic: rank eleven
+  forces a disconnected pair graph, while connected incidence gives the sharp
+  finite bound max(n_i)<=355^12.  Common exposed facets obey a separate
+  two-level orientation law.  This is an all-scale address theorem, not an LRC
+  exclusion: the grid can be empty while an off-grid loneliness time exists.
 source: root + lrc_reversible_address / incoming-signal extension, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (thm3791-hostile-audit, 2026-08-23).  The
@@ -27,7 +30,13 @@ audit: >
   A separate factor/scan audit proves all 5,855 rational-cube classes distinct,
   checks 17,137,585 pairs, and retains taxicab and arrival hostiles.  A
   17,596-gate sidecar finds one square, eight triangular and no
-  square-triangular primitive addresses.  Normal/-O/frozen streams agree.
+  square-triangular primitive addresses.  Normal/-O/frozen streams agree for
+  both packet companions and the arithmetic sidecars.
+  A graphic-matroid extension then checks the diagonal incidence equivalence,
+  all 5,855 ratios, 245,220 projective ratio triangles, 46,136 full-decoder
+  triangle circuits, every subset of a mixed five-speed hostile, the sharp
+  thirteen-vertex path, and independent rank/facet controls.  Its 36,461,514
+  active requirements agree under normal, optimized, and frozen replay.
 depends_on:
   - THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction
   - THM-3793-inert-prime-sum-all-scale-two-cube-singleton
@@ -57,6 +66,11 @@ square_triangular_output: 05-knowledge/results/lrc14_cubeclass_square_triangular
 square_triangular_script_sha256: 0050033a2782e0adf4ab86aaca74db43b7e879caf48efdc0f2fcb7da31a9e963
 square_triangular_output_sha256: 673a764dd14e1b06c549a80cf72e747376d0fba6d28f17da3ac778335f3f9b15
 square_triangular_semantic_sha256: e80c76bcbbf9a83c6cb87983ababe96906c1160581aaee8079b6325051eb1e53
+graphic_script: 04-computation/lrc14_cube_covector_graphic_matroid_extension_thm3818.py
+graphic_output: 05-knowledge/results/lrc14_cube_covector_graphic_matroid_extension_thm3818.out
+graphic_script_sha256: 1abba30659a81b8524b5417ff1c7c2a7915a042b365efead087a838c4c8d9497
+graphic_output_sha256: 6c985414db35c3ba05f20d6e800eba5efa2f394a4826ccb772e30d7c119be64e
+graphic_semantic_sha256: c98a37e4f7bf777bf6c3027bdcf4f6bc20daa83226f382132bf68f9b3ac9165d
 hash_basis: raw LF bytes
 ---
 
@@ -225,13 +239,153 @@ show the two first failed mechanisms when the inert and exponent conditions
 are dropped.  No converse or classification outside the stated packet is
 claimed.
 
-## 6. Exact verification and scope
+## 6. The full decoder system has a weighted graphic matroid
+
+Form the full decoder graph `G_dec(n)` on the thirteen labels: `{i,j}` is an
+edge exactly when the reduced ratio and actual gcd scale satisfy Section 1,
+so the complete packet exists for that pair.  Orient every edge from its
+smaller to its larger speed.  For an edge put
+
+```text
+g_ij=gcd(n_i,n_j),       ell_ij=lcm(n_i,n_j),
+a_ij=(n_j/g_ij)e_i-(n_i/g_ij)e_j.                    (15a)
+```
+
+Let `Delta_n=diag(n_1,...,n_13)`.  Directly,
+
+```text
+a_ij Delta_n=ell_ij(e_i-e_j).                         (15b)
+```
+
+All diagonal entries and row scales are nonzero.  Right multiplication by
+`Delta_n` and row rescaling are invertible over `Q`, so for every selected
+edge set `E`, including isolated labels in the component count,
+
+```text
+rank_Q span{a_e:e in E}=13-c(G),
+{a_e:e in E} is independent iff E is a forest.       (15c)
+```
+
+The minimal dependencies are exactly simple cycles.  Traverse such a cycle,
+let `epsilon_e=+/-1` compare its traversal with the lower-to-higher gauge,
+and put `L=lcm_e ell_e`.  Its explicit circuit is
+
+```text
+sum_(e in cycle) epsilon_e (L/ell_e)a_e=0.            (15d)
+```
+
+Dividing the coefficients by their gcd gives the primitive circuit.
+Reversing a packet orientation changes only a row sign and cannot add rank.
+
+### 6.1 Component shapes and the sharp connected terminal
+
+For a connected decoder component `C` with `t` vertices, put
+`g_C=gcd(n_i:i in C)`.  Every primitive edge coefficient is at most `355`.
+Choose a spanning tree.  Deleting one column from its weighted incidence
+matrix gives by leaf elimination a product of `t-1` edge coefficients; its
+signed maximal minors generate the primitive one-dimensional kernel.  Hence
+
+```text
+max_(i in C) n_i/g_C <=355^(t-1).                     (15e)
+```
+
+For a primitive connected graph on all thirteen labels this is
+
+```text
+max_i n_i <=355^12
+ =4006270200351760530820556640625.                    (15f)
+```
+
+The bound is sharp inside the decoder class.  The unique ratio with a
+coefficient `355` is `(1,355)`, and its sum `356=2^2*89` is admissible.
+Thus
+
+```text
+(1,355,355^2,...,355^12)                              (15g)
+```
+
+has decoder graph exactly the consecutive path and attains `(15f)`.
+Conversely, equality forces all selected cofactor entries to be `355`, hence
+every tree edge to have ratio `1:355`.  Distinct speeds force one vertex at
+each depth, so the tree is the path `(15g)`, up to label permutation and
+common allowed inert scale.
+
+Every decoder row belongs to THM-2052's `W`.  Therefore
+
+```text
+dim W=11  ==>  G_dec(n) is disconnected.              (15h)
+```
+
+If the decoder rows themselves span dimension eleven, `(15c)` gives exactly
+two components.  A further edge inside a component is a cycle dependency;
+an edge joining them would give rank twelve.  Conversely, a connected graph
+already supplies twelve independent rows and enters the finite rank-twelve
+terminal, now with the direct bound `(15f)`.  No row in that box is excluded
+here.
+
+### 6.2 Facet orientation is independent of row rank
+
+For every selected edge, its maximizing face fixes the smaller-speed cube
+coordinate at `13/14` and the larger-speed coordinate at `1/14`.  Hence
+
+```text
+intersection_(e in E) F_e^+ is nonempty
+iff no label occurs with both signs
+iff the lower-to-higher orientation has no directed path of length two.
+                                                               (15i)
+```
+
+For nonempty compatible `E`, all incident coordinates are fixed and all
+others are free.  Projection is injective on this direction space because
+the positive vector `n` has a nonzero fixed coordinate.  Therefore
+
+```text
+dim intersection_(e in E) F_e^+=13-|V(E)|.           (15j)
+```
+
+The same holds for minimizing faces.  A cycle is compatible precisely when
+it is even and its speeds alternate local minima and maxima; every triangle
+circuit is incompatible.  Rank and facets are genuinely orthogonal:
+
+```text
+speeds (2,3,8), edges (2,3),(3,8):
+  independent forest, but no common maximizing face;
+
+speeds (1,2,3,9), edges (1,3),(2,3),(2,9),(1,9):
+  rank three with a common dimension-nine face,
+  6a_13-3a_23+a_29-2a_19=0.                          (15k)
+```
+
+### 6.3 Exact triangle census
+
+The `5,855` primitive ratios contain exactly `245,220` sorted projective
+triples whose three pair ratios remain in the atlas.  Requiring all three
+actual gcd scales to have only inert prime divisors leaves exactly `46,136`
+full-decoder triangle circuits.  The unique smallest by maximum speed and
+then total speed is
+
+```text
+(2,3,8),                 4a_23+a_38-3a_28=0.          (15l)
+```
+
+This is the first literal mechanism by which repeated cube-addressed rows
+fail to add rank.  The graph forgets cube values, pair-sum grids, owner,
+arrival, cross-component scale coupling, off-grid time, and loneliness.
+The next test is to apply genuine support-three relations to the component
+quotient while retaining its two-level facet state.
+
+## 7. Exact verification and scope
 
 The companion independently enumerates every coprime `p<q`, `p+q<=356`,
 checks complete coordinate fibres and the divisor decoder, and reconstructs
 all 156 oriented covectors for every admissible ratio.  It also tests arbitrary
 inert powers in 32 scale controls and compares (11) with direct rational
 evaluation.  Normal and `python -O` streams match the frozen output.
+The graphic companion checks all `5,855` ratios, every ratio pair, all
+`46,136` full-decoder triangle circuits, all edge subsets of a mixed
+five-speed hostile, the diagonal incidence law, facet compatibility, and the
+sharp thirteen-vertex path in `36,461,514` active requirements.  Its normal,
+optimized, and frozen streams also agree.
 
 The rational-class extension independently factors and scans every primitive
 cube sum, then exhausts all `17,137,585` unordered ratio pairs and scaled
@@ -243,13 +397,13 @@ The precise connection ledger is
 
 ```text
 source:      support-two Graver branch of THM-3743
-target:      scaled singleton two-cube fibre plus pair-sum time grid
-map:         (row,pair) -> (M,a,D,ambient residues mod D)
-preserved:   scale, primitive ratio, placement, facets, exact grid safety
-destroyed:   ambient quotients, other relations, off-grid times, loneliness
+target:      cube fibre, pair-sum grid, weighted graph and oriented faces
+map:         pair packet -> (M,a,D,residues) -> a diag(n)
+preserved:   scale, ratio, placement, grid, row matroid, circuits, facets
+destroyed:   ambient quotients, cross-component scale, off-grid loneliness
 sidecar:     full speed row and owner/phase chronology for any LRC use
-next test:   classify their internal incidence in rank-eleven star spaces
-             and attach owner/phase sidecars; no rank increment follows.   (15)
+next test:   couple decoder components by genuine support-three relations
+             while retaining facet/owner/phase state.                    (16)
 ```
 
 In particular, (3) supplies no exclusion of a hypothetical LRC(14)
@@ -258,7 +412,8 @@ also a sharp rank boundary.  The covector `a` has support two and
 `||a||_1<=356`; THM-3743, Section 4, therefore puts it automatically inside
 THM-2052's bounded-relation span `W`.  A cube-addressed row can refine the
 internal rank-eleven code, but it can never be the outside-`W` twelfth
-relation that triggers the rank-twelve finite terminal.  Thus the next test
-is to classify which rank-eleven star spaces contain which of the `5,855`
-ratios and whether the retained facet/owner sidecars prune those internal
-states—not merely to count another relation.  **QED.**
+relation that triggers the rank-twelve finite terminal.  Section 6 now
+classifies all support-two incidence: an unresolved rank-eleven decoder graph
+has at least two components, exactly two when its rows span eleven.  The live
+problem is their relative scale and coupling by genuine higher-support rows,
+together with owner/phase arrival—not another support-two count.  **QED.**
