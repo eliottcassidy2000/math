@@ -2,14 +2,13 @@
 id: THM-3881
 title: "Cusp-ideal residual transport and its rank-two matrix factorization"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED BASE; PROVISIONAL
-  T=0 COROLLARY AWAITING FOCUSED AUDIT.  A universal two-sidecar identity
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A universal two-sidecar identity
   transports the discriminant residual under every additive square/cube lift.
   At the THM-3869 three-cusp square point, every polynomial-coefficient
   addition from the full cusp-value-zero ideal, together with every
   Delta-multiple ambiguity in its mixed lift, contracts exactly to a rank-two
   polynomial pair (T,f).  Its coefficient matrix has determinant Delta and
-  its sidecars are L^2 f and P f^2-T^2.  The provisional extension proves that
+  its sidecars are L^2 f and P f^2-T^2.  The full theorem proves that
   the full T=0 square lane has only f=0.  The general arbitrary-degree
   equation, a Keller atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3872 polynomial-coefficient lane, 2026-08-23
@@ -18,11 +17,11 @@ audit: >
   (jc_quartic_c3_construct, 2026-08-23): syzygy completeness/signs, every-lift
   realization, converse address parametrization, determinant uniqueness,
   both sidecars, transport, Mason arm, L square class, normal/-O replay, and
-  frozen hashes all passed.  Section 7 is a later PROVISIONAL strengthening:
-  the companion now verifies two equivalent T=0 factorizations in a total of
-  35 active gates, but an independent focused audit must still recheck the
-  unique odd-degree top term and the constant edge.  Normal and optimized runs
-  must byte-match the amended frozen output.
+  frozen hashes all passed.  A focused follow-up audit rederived Section 7's
+  two factorizations, checked the strict degree gaps at `deg f=1`, the unique
+  nonzero odd-degree leading form, removal of `L^2` in the UFD, and the
+  constant edge.  Normal and optimized runs byte-match the amended 35-gate
+  output.
 depends_on:
   - THM-3854-integrated-three-cusp-quintic-s5-natural-completion-obstruction
   - THM-3869-three-cusp-square-residual-cardano-line-ramification
@@ -39,8 +38,7 @@ hash_basis: raw LF bytes
 
 # THM-3881 -- the omitted ideal is a rank-two norm problem
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED BASE; PROVISIONAL
-`T=0` COROLLARY AWAITING FOCUSED AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Write
 `D=k[x,y]`.  The theorem has two layers:
 
