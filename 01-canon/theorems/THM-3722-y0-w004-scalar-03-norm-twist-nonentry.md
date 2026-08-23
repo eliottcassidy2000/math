@@ -11,12 +11,13 @@ status: >
   general quartic C3 data, or JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
-  SELF-AUDITED.  The exact companion checks the W004 fibre word, upper
-  transport, quadratic primitive, shifted norm, zero-shift systems in every
-  residue modulo 7, exceptional n=5 determinant/scalar, n=2 compatibility,
-  and n=1 Euler boundary.  The coprime-power and pullback lemmas are proved in
-  the text.  Normal and optimized runs byte-match the frozen transcript.
-  Independent hostile audit remains open.
+  INDEPENDENTLY HOSTILE-AUDITED.  The exact companion checks the W004 fibre
+  word, upper transport, quadratic primitive, shifted norm, zero-shift
+  systems in every residue modulo 7, exceptional n=5 determinant/scalar, n=2
+  compatibility, and n=1 Euler boundary.  An independent derivation checked
+  every sign, constant, UFD/coprime-power step, Laurent exponent, determinant,
+  pullback, degree floor, and exceptional-scale identity.  Normal and
+  optimized runs byte-match the frozen transcript.
 depends_on:
   - THM-3603-three-by-four-support-collision-cone-and-fibre-cut-atlas
   - THM-3606-exponent-two-three-by-four-scalar-singleton-gate-atlas
