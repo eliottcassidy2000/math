@@ -1,0 +1,15 @@
+JC2_SEXTIC_COMPOSITE_FRONTIER_INDEPENDENT_AUDIT
+status=FINITE_EXACT_AUDIT;PRIMARY_SCOUT_CONFIRMED;NOT_SEXTIC_THEOREM;JC2_OPEN
+top_gcd_packets={1: (6, 1), 2: (3, 1), 3: (2, 1), 4: (3, 2), 5: (6, 5)};shears=j1,j2,j3
+packets=RADIAL_HOMOTOPY_REDERIVATION_PASS;(6,4)_two_conserved;(6,5)_two_conserved+x1_nonclosed
+face64_ratios=A:1/16,K2:3/4,K1:3/32,F0:-3/8;laurent_F0=-10
+face64=SUPPORT(-2,0,1);ARTIN_LENGTH6;NONREDUCED;BRACKET_CERTIFICATE_PASS
+jet64=PRIMITIVE_SIMPLE_POLE_ONLY;D=F=I=0;u=O(t^2);Y=O(t^4)
+face65_ratios=A:1/125,F3:6/25,F2:3/125,F1:-6/125,F0:-6/125;laurent=(-10,-11)
+face65=GREVLEX_QUOTIENT_DIM14;MX_SQUAREFREE;F1_UNIT;F0_UNIT;terminal_sha256=0e3c6807f6d25f289fd3e1116a59d4aa01749e838efd6e6a901a051df7eab4ef
+face65_unit_determinant_sha256=24d2c3f3b4cdaffd86867adf708a16b1fc407ab824056a8d750baf97bb21059a
+missing_nonprincipal_dominant_ties=(6,4):4,(6,5):11
+scope_open=regular_shift+higher_pole+nonprincipal_fans+unit_infinity+zero_carriers+descent_integrality
+semantic_sha256=0d29dbb7ec60f03f29988c6ae6236f01e74f6657f9ff5ac561a9c68d04fc55d2
+GATES=244
+RESULT=PASS

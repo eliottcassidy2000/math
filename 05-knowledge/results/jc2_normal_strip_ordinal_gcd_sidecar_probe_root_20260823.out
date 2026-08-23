@@ -1,0 +1,18 @@
+JC2 NORMAL-STRIP ORDINAL/GCD SIDECAR PROBE
+signed_triangular_centered_checks=36009
+odd_square_ordinal_checks=2000
+triangular_task_address_checks=4950; max_rank=4950
+complete_graph_conductor_alignment_checks=99; cells_through_N=edges(K_N)=T(N-1)
+shared_pythagorean_address_checks=820; rank8=(5,2):odd_root_gcd=3:Pythagorean_hole:JC_genuine_quintic
+ufd_valuation_ray_checks=25914570
+target_shear_criterion_checks=1770
+top_bucket_polynomial_checks=760
+sextic_cell=rank11:j1:gcd1:ray(6, 1):shear6:status=shear_to_depth_le_5
+sextic_cell=rank12:j2:gcd2:ray(3, 1):shear3:status=shear_to_depth_le_5
+sextic_cell=rank13:j3:gcd3:ray(2, 1):shear2:status=shear_to_depth_le_5
+sextic_cell=rank14:j4:gcd2:ray(3, 2):shearNone:status=genuine_sextic
+sextic_cell=rank15:j5:gcd1:ray(6, 5):shearNone:status=genuine_sextic
+ordinal_successor_hostile=rank13:(6,3):shear -> rank14:(6,4):genuine
+genuine_row_counts_n2_to_30={2: 0, 3: 1, 4: 1, 5: 3, 6: 2, 7: 5, 8: 4, 9: 6, 10: 6, 11: 9, 12: 6, 13: 11, 14: 10, 15: 11, 16: 11, 17: 15, 18: 12, 19: 17, 20: 14, 21: 17, 22: 18, 23: 21, 24: 16, 25: 22, 26: 22, 27: 23, 28: 22, 29: 27, 30: 22}
+semantic_sha256=dc1fb2f76a1eafd90a4b7ca95ca93579b6d06d7f54130e2cd171c8418c44341a
+PASS

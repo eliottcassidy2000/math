@@ -1,0 +1,16 @@
+JC2_FILTERED_KERNEL_PRINCIPAL_PART_CONNECTION_SCOUT
+status=VERIFIED_EXACT_SCOUT;NO_SEXTIC_THEOREM;JC2_OPEN
+thm3412=actual_dim4_blocks[4];graded_dim4_blocks[3, 1];liftable_dim2;deficit2
+thm3871=arms_local_dimension1;P=476/25;T=321/50
+thm3871_terminal_resultant=3171942400000=2^23*5^5*11^2
+sextic=twelve_buckets;upper_z5_to_z11_blind_to_exact_z4_extension_hostile
+thm3404=simple_CRT_cancellation_PASS;double_factor_jet_packet=(0,-1,0,1)
+crt_verdict=DIRECT_ON_IDENTIFIED_SUSPENSION_OR_DVR;PROPOSED_FOR_SEXTIC_NORMAL_STRIP
+common_infinity=A1_graphs_same_point+tangent;contacts_G2_G3=3,G2_G4=4
+ordinal_rank=r3_collides_(5,12,13)_with_(15,8,17);scheduler_only
+ordinal_address8=pythagorean_(r,s)=(5,2)_gcd3_HOLE;jc_(n,j)=(5,2)_residue=3R/8_GENUINE
+hadamard_literal_transfer=REFUTED_same_index_Jacobian_wedge_nonzero
+scope=filtered_kernel_and_principal_part_sidecar_tasks_only;JC2_OPEN
+semantic_sha256=5ee23101bf80816dfebfb07a25e8376e9901b8cbc9df512c0de3b9bce93d9a29
+GATES=57
+RESULT=PASS

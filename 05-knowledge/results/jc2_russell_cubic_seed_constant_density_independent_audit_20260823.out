@@ -1,0 +1,16 @@
+JC2_RUSSELL_CUBIC_SEED_CONSTANT_DENSITY_INDEPENDENT_AUDIT
+status=FINITE-EXACT+INDEPENDENT-AUDIT;AFFINE_CELLS_EMPTY;JC2_OPEN
+arm_action=TAYLOR_DERIVED;det_M=1;fresh_residuals=ALL_MOVABLE
+determinant_cocycle=VERIFIED_SYMBOLICALLY
+quotient_predicate_witness=IDENTITY_NONCONSTANT;CATALAN_REPRESENTATIVE_CONSTANT
+raw_affine_matrices=E1_FULL_RANK;E2_FULL_RANK
+raw_affine_solution=p=3/4;q=9u/8;r=-9/8;s=-27u/16
+raw_affine_first_debt=E3=135/16
+reversion_coefficients=c2=-3/4;c3=9/8;c4=-135/64
+monic_recovery=u_CUBIC;x_CUBIC
+section_free_cascade=h4=h3=h2=h1=h0=0;E3=135/16
+pole_effectivity=ord_t(u*x^3)=-4;ord_t(x^3)=-3;AFFINE_CORRECTIONS_ZERO
+scope=NO_RATIONAL_CLASSIFICATION;NO_NEW_POLE_CHART;NO_KELLER_MAP
+semantic_sha256=62b5bbf8a6906ce830a14d3dd17dca368d2b888aeb30a86310cde367374863f3
+CHECKS=66
+RESULT=PASS
