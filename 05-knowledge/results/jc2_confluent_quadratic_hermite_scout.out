@@ -1,0 +1,12 @@
+scout=confluent_quadratic_higher_pole_hermite
+parameters=b=(5+-sqrt(-15))/20; q=(T-1)(T-b)
+spectrum=Q(0)=Q(1)=0;Q(b)=ell!=0
+singular_completion=F^3Z=(W-F^2)W(W-ell);Sing_line=(F,W)=0
+normalization=u=W(W-ell)/F;one_A1_point
+new_quotients=M=W(W-ell)/F^2;N=M(M+ell)/F
+smooth_model=k[F,W,M,N,Z];three_plane_charts
+image=smooth_model_minus_root1_origin_and_rootb_origin
+poisson={F,N}=(2W-ell)(2M+ell);boundary_units=ell^2,-ell^2
+derham=resonant_vector_(1,0,0)_mod_constants;no_Darboux_pair
+CHECKS=112
+semantic_sha256=f2c7f95b532e3be227a1bef021a14376d8c47de447de9090658d63c2c893d6b8
