@@ -1,0 +1,41 @@
+=== Quotient-lattice dual and width audit ===
+Primitive speed vectors checked: 15.
+Pair/triple dual relations checked: 210.
+Projected cube vertices checked: 9228.
+For every audited a in Z^k intersect n^perp:
+  <a, projection(x)> = <a, x>,
+  width_a(Z(n)) = ((k-1)/(k+1)) ||a||_1.
+
+=== Explicit LRC(14) consequence ===
+Using Flt(d) <= sqrt((d+1)(2d+1)/6) d^(3/2):
+  Flt(12) <= sqrt(93600) = 60 sqrt(26).
+The LRC(14) zonotope side length is 12/14 = 6/7, so a counterexample would force
+  (6/7)||a||_1 <= 60 sqrt(26), hence ||a||_1 <= 70 sqrt(26) < 357.
+Exact integer consequence: some nonzero a in Z^13 with a dot n = 0 has ||a||_1 <= 356.
+
+=== Minimal-width Graver split ===
+Choose an l1-minimal nonzero speed relation; it is conformally indecomposable (a Graver element).
+If it has support two, its primitive coefficients are the reduced speed pair and their sum is <=356.
+Unordered distinct coprime pair ratios with numerator+denominator<=356: 19314.
+The other branch is genuinely higher: for speeds (3,4,5), the shortest relation is
+  (1,-2,1), of l1 norm 4, while every pair relation is longer.
+
+=== Join with the THM-2052 rank-eleven atlas ===
+All nonzero ambient vectors with l1 norm <=356: 1978967793896659449022201064 (a finite upper universe).
+Let W be THM-2052's support-at-most-three, height-91^6 relation span.
+If dim(W)=11 and the flatness relation a is outside W, then rank becomes 12.
+Hadamard on eleven sparse rows plus a gives the primitive speed cap
+  max(n_i) <= 296721347184071259951513500572385227832063299530012809732642802018052529730741866571256016315918699080945038248181476620474893833141605.
+If a lies in W, the unresolved rank-eleven code itself contains a nonzero l1-at-most-356 vector.
+
+=== Safe hostile control: arithmetic progression ===
+Speeds (1,2,...,13) have relation (1,-2,1,0,...,0), ||a||_1=4, width=24/7.
+They are nevertheless a valid boundary instance at t=1/14.
+Therefore a short flatness relation is necessary for a counterexample, not sufficient.
+
+=== Scope verdict ===
+This exact audit supports a conditional/cited reduction only:
+  counterexample => lattice-free projected zonotope => one relation with l1 norm <=356.
+It does not preserve support, sign pattern, endpoint owner, or semantic arrival.
+THM-3743 remains RESERVED / UNPROVED and is not used here.
+CHECKS=18076

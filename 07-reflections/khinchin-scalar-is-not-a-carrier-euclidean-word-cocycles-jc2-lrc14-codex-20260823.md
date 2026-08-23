@@ -1,25 +1,36 @@
 # Khinchin's scalar is not a carrier: the shared survivor is an ordered Euclidean word with a cocycle
 
-**Status.** **CITED** for Khinchin's almost-everywhere theorem and the
+**Status.** **CITED** for Khinchin's almost-everywhere theorem, Khinchin's
+Flatness Theorem, the lonely-runner polyhedron/zonotope equivalence, the
+explicit general flatness bound used below, and the
 Chapovskyi--Kozachok--Petravchuk low-entry-degree decomposition;
 **PROVED** for the rational finite-mean ambiguity, the infinite centered-tie
-hostile, the closed midpoint-phase formula, and the cyclic multiplier
-determinant; **FINITE-EXACT** for the declared bounded censuses;
+hostile, the closed midpoint-phase formula, the cyclic multiplier determinant,
+the projected-lattice dual identity, the exact zonotope width formula, and the
+resulting dimension-twelve coefficient arithmetic; **FINITE-EXACT** for the
+declared bounded censuses;
 **SYNTHESIS / METHOD CONNECTION** for the common Euclidean-word-plus-cocycle
-architecture; **OPEN** for LRC(14), JC(2), any map between them, semantic LRC
-arrival, and every two-interacting-polynomial-factor Cohn cell not already
-closed by the cited canon.
+architecture and the flatness/Graver/relation-code join; **OPEN** for LRC(14),
+JC(2), any map between them, semantic LRC arrival, iterated flatness with
+ambient coefficient control, and every two-interacting-polynomial-factor Cohn
+cell not already closed by the cited canon.
 
 The user phrase “Kinchin's content” is interpreted here as **Khinchin's
 constant and the continued-fraction digit content it measures**.  No theorem
 depends on this interpretation beyond the explicitly typed metric statement.
+There is a second relevant interpretation: **Khinchin's Flatness Theorem**.
+Section 11 audits that orthogonal lane independently and does not use the
+reserved THM-3743 namespace.
 
 Exact companion:
 
 - [`04-computation/jc_lrc_khinchin_continuant_sidecar_probe_20260823.py`](../04-computation/jc_lrc_khinchin_continuant_sidecar_probe_20260823.py);
-- [`05-knowledge/results/jc_lrc_khinchin_continuant_sidecar_probe_20260823.out`](../05-knowledge/results/jc_lrc_khinchin_continuant_sidecar_probe_20260823.out).
+- [`05-knowledge/results/jc_lrc_khinchin_continuant_sidecar_probe_20260823.out`](../05-knowledge/results/jc_lrc_khinchin_continuant_sidecar_probe_20260823.out);
+- [`04-computation/lrc14_khinchin_flatness_relation_audit_20260823.py`](../04-computation/lrc14_khinchin_flatness_relation_audit_20260823.py);
+- [`05-knowledge/results/lrc14_khinchin_flatness_relation_audit_20260823.out`](../05-knowledge/results/lrc14_khinchin_flatness_relation_audit_20260823.out).
 
-The companion has `34,310` exact gates.  Normal and optimized runs agree.
+The companions have `34,310` and `18,076` exact gates.  Normal and optimized
+runs agree in both cases.
 
 ## 1. Inheritance pass
 
@@ -392,27 +403,270 @@ better irrational approximant.  It is signed owner/root/word gluing.
 - **JC(2): OPEN.** The next Cohn grammar needs genuinely interacting polynomial
   factors or a different non-elementary core.
 
-## 11. Session accounting
+## 11. Second Khinchin lane: flatness gives a short relation, not loneliness
+
+The name “Khinchin” points to a second, genuinely relevant theorem.  The
+lonely-runner polyhedron of
+[Beck--Hosten--Schymura](https://arxiv.org/abs/1606.01783) and the zonotopal
+flatness program of
+[Henze--Malikiosis](https://arxiv.org/abs/1609.01939) turn a hypothetical
+counterexample into a lattice-free convex body.  This lane is orthogonal to
+the continued-fraction scalar lane: it produces a dual integer relation rather
+than a digit statistic.
+
+The exact coefficient below uses the explicit general bound recorded by
+[Averkov--Hofscheier--Nill](https://arxiv.org/abs/1911.03511):
+
+```text
+Flt(d) <= sqrt((d+1)(2d+1)/6) d^(3/2).               (21)
+```
+
+The lonely-runner zonotope is centrally symmetric up to translation, so
+Banaszczyk's symmetric-body theorem gives a better asymptotic order
+`O(d log d)`.  The audited sources do not supply a usable explicit constant at
+`d=12`, so `(21)` is used for the rigorous numerical cap.  The cap is not
+claimed optimal.
+
+### 11.1 Exact quotient lattice, dual, and width
+
+Let `n=(n_1,...,n_13)` be a primitive vector of distinct positive speeds, put
+
+```text
+V = n^perp,
+pi : R^13 -> V                 orthogonal projection,
+Lambda = pi(Z^13),
+Z(n) = pi([1/14,13/14]^13).                           (22)
+```
+
+The Beck--Hosten--Schymura equivalence says that `n` is a lonely-runner
+instance exactly when
+
+```text
+Z(n) intersect Lambda != empty.                       (23)
+```
+
+Thus a hypothetical LRC(14) counterexample makes the **closed** zonotope
+point-free, not merely interior-point-free.  This is more than the boundary
+convention needed by flatness.
+
+The dual lattice has a particularly clean native description:
+
+```text
+Lambda^* = Z^13 intersect n^perp.                     (24)
+```
+
+Indeed, if `a in V`, then `<a,pi(z)>=<a,z>`.  Requiring this pairing to be an
+integer for every `z in Z^13`, and testing the standard basis vectors, is
+equivalent to `a in Z^13`; membership in `V` is exactly `a dot n=0`.
+Therefore the flat direction is not an abstract quotient covector.  It is an
+ordinary integer speed relation.
+
+For `a in Lambda^*`, projection preserves the pairing, and independent
+endpoint choice in the cube gives
+
+```text
+width_a Z(n)
+ = (13/14-1/14) sum_i |a_i|
+ = (6/7)||a||_1.                                      (25)
+```
+
+This is the decisive exact calculation.  If `Z(n)` is lattice-free,
+Khinchin's Flatness Theorem supplies nonzero `a in Lambda^*` with
+
+```text
+(6/7)||a||_1 <= Flt(12).                              (26)
+```
+
+Using `(21)`,
+
+```text
+Flt(12)^2 <= ((13)(25)/6) 12^3 = 93600,
+Flt(12) <= 60 sqrt(26),
+||a||_1 <= 70 sqrt(26) < 357.                         (27)
+```
+
+Hence the exact integer survivor is
+
+```text
+hypothetical LRC(14) counterexample
+  => some nonzero a in Z^13 satisfies
+     a dot n=0 and ||a||_1<=356.                      (28)
+```
+
+Statement `(28)` is **CITED + PROVED ALGEBRA**, not a promoted theorem in this
+session.  THM-3743 remains **RESERVED / UNPROVED EMPTY STUB** and has no
+mathematical force.
+
+### 11.2 The minimal flat direction is a Graver relation
+
+Because `(25)` makes width proportional to `l1`, choose `a` with minimum
+`l1` norm among all nonzero speed relations.  It is conformally
+indecomposable: if `a=b+c` with nonzero kernel vectors `b,c` in the same
+orthant and coordinatewise dominated by `a`, then
+
+```text
+||a||_1=||b||_1+||c||_1,
+```
+
+contradicting minimality.  Thus `a` is a Graver element of the one-row speed
+matrix.  This gives an exact branch that connects the two Khinchin lanes.
+
+**Pair branch.** If `a` has support two on speeds `n_i,n_j`, primitiveness
+forces, up to sign,
+
+```text
+(a_i,a_j)=(n_j/g,-n_i/g),       g=gcd(n_i,n_j),
+||a||_1=(n_i+n_j)/g<=356.                             (29)
+```
+
+There are only `19,314` unordered distinct coprime ratios with reduced
+numerator plus denominator at most `356`.  This is a finite pair-ratio atlas.
+Each ratio can be routed through THM-778's exact centered-Christoffel word and
+midpoint cocycle.  The earlier no-go still applies: the finite Khinchin digit
+mean is not enough, and owner/root/arrival sidecars remain mandatory.
+
+**Genuine higher branch.** If support is at least three, `(28)` is a bounded
+primitive partition identity with total coefficient mass at most `356`.
+This cannot be forced into pairwise Euclidean words without losing the
+multiway cancellation.  The exact hostile `3-2(4)+5=0` shows why: for speeds
+`(3,4,5)`, `(1,-2,1)` has `l1` norm `4`, while every pair relation is longer.
+This branch belongs with the Fourier/relation-code canon, not Tournament
+Analysis and not scalar continued fractions.
+
+### 11.3 Comparison with current relation canon
+
+The new certificate is numerically small but semantically different from the
+proved relation alternatives.
+
+- [THM-2051](../01-canon/theorems/THM-2051-fejer-bv-small-relation-alternative-for-lrc14.md)
+  gives a support-three-to-five relation of coefficient height at most `2^20`
+  for a counterexample.  It controls support but has a much larger height.
+- [THM-2052](../01-canon/theorems/THM-2052-finite-height-forces-high-rank-bounded-relation-code.md)
+  gives at least eleven independent support-at-most-three relations of height
+  `Q=91^6`, conditional through THM-763.  It controls rank and support; `(28)`
+  gives only one row but controls its total `l1` mass.
+- [THM-2169](../01-canon/theorems/THM-2169-bounded-relation-on-every-lrc-deletion.md)
+  gives a height-`1247` relation on every deletion under the zero-safe
+  premise.  Choosing `i` in the support of the flatness relation makes the
+  `i`-deletion row automatically independent of `a`, because its `i`th
+  coordinate is zero while `a_i` is not.  Thus flatness plus THM-2169 gives a
+  global rank-two packet, but not the rank needed for closure.
+- THM-2179 and THM-2274 have smaller coefficients in stronger-radius or
+  scalar-profile scopes.  They are not general replacements for `(28)`.
+
+These statements are incomparable.  The correct join tracks a relation code
+with three separate grades: rank, support, and coefficient norm.
+
+### 11.4 Exact join with the rank-eleven two-anchor stars
+
+Let `W` be THM-2052's rational span of support-at-most-three, height-`Q`
+relations, where `Q=91^6`.  If `dim W=12`, THM-2052 is already in its finite
+terminal.  Suppose `dim W=11`, and let `a` be the flatness relation.
+
+```text
+a notin W
+  => dim span(W,a)=12
+  => the primitive speed row is a cofactor vector;    (30)
+
+a in W
+  => the unresolved rank-eleven code itself contains
+     a nonzero vector of l1 norm at most 356.          (31)
+```
+
+In branch `(30)`, choose eleven independent rows of `W`.  Each has Euclidean
+norm at most `sqrt(3)Q`, while `||a||_2<=356`.  Hadamard gives the explicit
+mixed terminal
+
+```text
+max_i n_i
+ <= floor(356 * 3^(11/2) * Q^11).                    (32)
+```
+
+The companion prints the exact `135`-digit integer.  This replaces one huge
+`sqrt(3)Q` factor in the all-THM-2052 cofactor terminal by `356`.
+
+Equivalently, on a fixed two-anchor star, substituting the star formulas into
+`a dot n=0` either produces a new linear equation that fixes the projective
+anchor slope, or vanishes because `a` was already in the star's relation
+space.  Since there are only
+
+```text
+sum_(s=1)^13 2^s C(13,s) C(356,s)
+ = 1978967793896659449022201064                      (33)
+```
+
+nonzero ambient integer vectors of `l1` norm at most `356`, `(30)` is a
+finite, if enormous, atlas-pruning operation.  The real unresolved branch is
+`(31)`: classify rank-eleven star relation spaces that already contain a very
+short dense Graver vector.
+
+### 11.5 Loss ledger, hostile, and next experiment
+
+The connection is now fully typed.
+
+```text
+source:      lattice-free projected lonely-runner zonotope
+target:      integer speed-relation lattice
+map:         minimum lattice-width covector
+preserved:   counterexample => one bounded exact resonance
+destroyed:   support, sign partition, endpoint owner, root/word, arrival
+sidecars:    THM-778 in the pair branch; THM-2052/2169 in the higher branch
+hostile:     speeds (1,2,...,13) have (1,-2,1,0,...), width 24/7,
+             yet are safely lonely at the boundary time t=1/14.             (34)
+```
+
+So a short relation is necessary, never sufficient.  The cheapest next exact
+test is not to enumerate all `(33)` vectors blindly.  It is to traverse the
+existing two-anchor star templates and ask whether their rank-eleven row
+spaces contain an `l1`-at-most-`356` Graver vector.  A negative answer forces
+the mixed rank-twelve terminal `(32)`; a positive answer exposes a bounded
+partition identity that can be tested against owner-labelled endpoint and
+Fourier activation data.
+
+Flatness can in principle be iterated on integer affine slices, which remain
+lattice-free.  What fails after the first pull is the simple ambient formula
+`width=(6/7)||a||_1`: slice covectors are defined modulo previous directions,
+and the sliced zonotope no longer has independent cube endpoints.  An
+iterated program therefore needs a quotient-gauge sidecar controlling lifted
+ambient coefficient norm.  Without that sidecar, claiming twelve bounded
+independent relations from repeated flatness would be an overreach.
+
+There is no present JC theorem here.  A planar polynomial's Newton polygon is
+a lattice polytope containing its support lattice points, not a lattice-free
+body, and “flatness” of commuting Jacobian vector fields is a different
+predicate.  Khinchin flatness is therefore an LRC geometry-of-numbers lane;
+the lawful JC connection remains the ordered polynomial continuant plus
+holonomy/curl sidecars of Sections 6--9.
+
+## 12. Session accounting
 
 **Direct progress.** An exact infinite no-go family and bounded census show
 that finite Khinchin content cannot determine even the LRC pair tie predicate;
-the same scalar fails the JC holonomy test.
+the same scalar fails the JC holonomy test.  Independently, the
+Khinchin-flatness lane gives the exact cited reduction `(28)`: a hypothetical
+counterexample has an integer speed relation of `l1` norm at most `356`.
 
 **Indirect / niche progress.** The incoming THM-3736/3740 results identify the
 first live Cohn grammar after classical continued-fraction tails: at least two
 interacting polynomial factors, modulo already closed cells.
 
-**Connections created.** The lawful common object is an ordered Euclidean
-word plus a target-specific cocycle.  The connection has an explicit source,
-map, preserved predicate, loss ledger, sidecars, and hostile tests.
+**Connections created.** The lawful continued-fraction object is an ordered
+Euclidean word plus a target-specific cocycle.  The flatness direction adds a
+second exact bridge: its minimum-width covector is a Graver relation, splitting
+into a finite THM-778 pair atlas or a genuine bounded multi-speed partition;
+against THM-2052 it either supplies rank twelve or a short vector inside the
+rank-eleven code.
 
 **Claims refuted or narrowed.** Khinchin's constant is not a proof-facing LRC
 or JC invariant; rational finite means are not intrinsic, and canonical means
 remain nonfaithful.
 
-**Reusable artifacts.** Exact companion and frozen transcript; two primary
-sources audited and linked here without expanding the bounded startup router.
+**Reusable artifacts.** Two exact companions and frozen transcripts; five
+primary sources audited and linked here without expanding the bounded startup
+router.
 
-**Honest remaining frontier.** Attach exact Euclidean addresses to semantic
-LRC arrival, or classify the first genuinely interacting polynomial Cohn
-words.  Do not spend another session optimizing the scalar Khinchin statistic.
+**Honest remaining frontier.** Test the two-anchor star spaces for an
+`l1`-at-most-`356` Graver vector and connect any survivor to owner-labelled
+arrival; independently classify the first genuinely interacting polynomial
+Cohn words.  Do not spend another session optimizing the scalar Khinchin
+statistic.
