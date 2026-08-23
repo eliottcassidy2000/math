@@ -13,8 +13,10 @@ status: >
   the alleged unit through a nonunit endpoint Wronskian.  The two arithmetic
   buckets are proved separately; no false h/u reflection is used.  Hence
   every counterexample survivor in R needs at least three active weights in
-  each output.  Three-by-three noncentered supports, JC(2), and arbitrary
-  quartic C3 data remain OPEN.
+  each output.  Separately, the graded Poisson embedding of R into the
+  exponent-two Danielewski ring lets THM-3583/3592 raise the inherited floor
+  to seven total active weights; JC(2) and arbitrary quartic C3 data remain
+  OPEN.
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
   PASS -- root independently rederived the nonarithmetic centralizer case,
@@ -25,6 +27,8 @@ depends_on:
   - THM-3686-y0-collision-normalization-and-bracket-anatomy
   - THM-3691-y0-collision-ring-two-weight-darboux-no-go
 related:
+  - THM-3583-universal-exponent-two-two-by-four-weight-darboux-nonentry
+  - THM-3592-universal-exponent-two-three-by-three-weight-darboux-nonentry
   - THM-3692-ordinary-two-by-three-shift-root-peeling
 script: 04-computation/jacobian_y0_two_by_three_weight_no_go_thm3693.py
 output: 05-knowledge/results/jacobian_y0_two_by_three_weight_no_go_thm3693.out
@@ -337,9 +341,19 @@ Therefore any Darboux pair in the collision ring must satisfy
 ```
 
 Such a pair would still identify the THM-3686 collision and refute `JC(2)`.
-The theorem eliminates the entire two-by-three grading frontier, not all
-three-by-three supports.  In particular noncentered `3x3`, larger supports,
-general quartic `C3` incidence data, and `JC(2)` remain open.
+The direct argument eliminates the entire two-by-three grading frontier.
+There is also a stronger inherited conclusion which does not depend on that
+argument: under the graded Poisson embedding
+
+```text
+R=C[3e,2ce,bc] subset C[b,c,e]/(c^2e-(1-b^2)),          (29)
+```
+
+THM-3583 excludes `2x4` and THM-3592 excludes every `3x3` cell.  Their
+seven-piece floor therefore applies to `R`; the first unexcluded partitions
+are `2x5`, `3x4`, and their transposes.  The present theorem remains useful
+as a direct collision-ring mechanism, but it is not the source of that
+stronger floor.  General quartic `C3` incidence data and `JC(2)` remain open.
 
 ## 6. Exact reproduction
 
