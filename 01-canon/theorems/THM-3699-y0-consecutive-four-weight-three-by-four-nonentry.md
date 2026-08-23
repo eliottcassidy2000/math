@@ -2,7 +2,8 @@
 id: THM-3699
 title: "Consecutive four-weight three-by-four nonentry and a two-weight adjunction gate"
 status: >
-  PROVED + VERIFIED-EXACT.  In the y=0 collision ring, no Darboux pair can
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the y=0
+  collision ring, no Darboux pair can
   have reduced grading supports of sizes 3 and 4 when both supports lie in
   the consecutive window {-2,-1,0,1}.  Three missing-weight cases collapse
   on a singleton bucket.  In the fourth, same-sign endpoint commutation
@@ -13,10 +14,12 @@ status: >
   support words, higher-dimensional adjunctions, and JC(2) remain OPEN.
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
-  SELF-AUDITED.  The exact companion enumerates every bucket in all four
-  support cases and checks the differential identities, module factors, and
-  support-count/shear logic.  Normal and optimized runs byte-match the stored
-  transcript.  Independent hostile audit remains welcome.
+  PASS.  The independent hostile audit checked all four bucket tables, both
+  zero/nonzero singleton derivative gates, the strict-opposite product
+  derivative, the endpoint logarithmic derivative and common-square upgrade,
+  the common arm factor in all three scalar addresses, and the exact scope of
+  the one-dimensional Darboux shear.  Normal and optimized companion runs
+  byte-match the stored transcript.
 depends_on:
   - THM-3695-y0-collision-ring-danielewski-embedding-and-seven-piece-floor
   - THM-3696-y0-collision-ring-three-branch-conductor-and-graded-modules
@@ -33,9 +36,9 @@ hash_basis: LF-normalized bytes
 
 # THM-3699 -- the conductor-natural consecutive `3 x 4` word is empty
 
-**PROVED + VERIFIED-EXACT.**  This closes one natural all-degree slice of the
-first support cell left by THM-3695.  The proof is structural rather than a
-bounded coefficient search.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This closes one
+natural all-degree slice of the first support cell left by THM-3695.  The
+proof is structural rather than a bounded coefficient search.
 
 All rings are over `C`.  Retain the graded embedding of THM-3695/3696
 
