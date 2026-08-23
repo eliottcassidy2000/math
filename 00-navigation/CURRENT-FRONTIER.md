@@ -353,10 +353,16 @@ real power of `log log X`. This is still no support asymptotic or residue.
   THM-3840's two forced endpoints are the local shadow of THM-3841's full
   component.  The surviving positive anchor is THM-3785's one-place Russell
   pseudo-plane: a Darboux pair there would pull back to a counterexample of
-  field degree divisible by three and at least nine.  THM-3839 closes only
-  its constant-`v`, bichromatic first `r^2z` tower; nonconstant towers,
-  aligned colors and unrestricted multigraded pairs remain.  Any new deleted-
-  divisor completion must first pass the polynomial-uniruled/one-place gate.
+  field degree divisible by three and at least nine.  THM-3843 forces its arm
+  restriction to be a noninjective immersed normalization of a one-place
+  singular Jelonek component.  THM-3846 proves every unimodular first jet
+  lifts formally, but global compatibility forces nonzero normal Wronskian
+  and `Frac(B)=k(s,z)` makes the canonical linear-normal square gate
+  nonsquare.  Only a genuinely different higher-normal algebraization can
+  survive.  THM-3839 closes only its constant-`v`, bichromatic first `r^2z`
+  tower; nonconstant towers, aligned colors and unrestricted multigraded
+  pairs remain.  Any new deleted-divisor completion must first pass the
+  polynomial-uniruled/one-place gate.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692

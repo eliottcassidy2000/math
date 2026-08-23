@@ -2,7 +2,7 @@
 id: THM-3846
 title: "Every unimodular Russell arm jet has a formal Darboux lift, with an exact algebraization gate"
 status: >
-  PROOF CANDIDATE + VERIFIED-EXACT, PENDING INDEPENDENT HOSTILE AUDIT.  The
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The
   completed triple arm of the THM-3785 Russell pseudo-plane has an explicit
   canonical coordinate s=e/[3(c^3+er)] with {z,s}=1.  Every polynomial arm
   immersion together with a unimodular normal Bezout row extends by a closed
@@ -16,34 +16,44 @@ status: >
   global polynomial Darboux pairs remain OPEN.
 source: root / completed Russell pseudo-plane arm and algebraization lane, 2026-08-23
 audit: >
-  SELF-HOSTILE EXACT CANDIDATE.  The proof uses the relative formal implicit
+  INDEPENDENT HOSTILE AUDIT PASS (root / audit_thm3840, 2026-08-23).  The
+  proof uses the relative formal implicit
   function theorem, checks both directions of the explicit (e,r)<->(s,z)
   coordinate change, derives the canonical bracket without dividing by z,
   and constructs the universal lift from a quadratic formal ODE.  The
   deterministic companion verifies the surface and Poisson identities,
   inverse coordinate formulas, generic Bezout/Jacobian calculation, Catalan
   truncations through order ten, the nodal Wronskian, and the Laurent-prime
-  square obstruction.  Normal and optimized runs byte-match the frozen
-  transcript.  Independent hostile audit remains.
+  square obstruction.  A separate implementation rederives the atlas and
+  Poisson packet, the arm Bezout identity, both completed-coordinate
+  directions, Catalan truncations through order twelve, the Wronskian-zero
+  injectivity implication, and the universal degree-one square obstruction
+  in k(s)[z].  It includes a nodal immersed-normalization positive control.
+  Normal and optimized runs byte-match both frozen transcripts.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3790-cubic-pseudoplane-arm-nodal-immersion-gate
+  - THM-3843-russell-arm-birational-immersion-and-forced-self-identification
 related:
   - THM-3792-pure-first-normal-nodal-carriers-have-critical-points
   - THM-3812-nodal-arm-coefficient-second-normal-profile-nonentry
   - THM-3839-constant-tower-bichromatic-r2z-profile-nonentry
-  - THM-3843-russell-arm-birational-immersion-and-forced-self-identification
 script: 04-computation/jc2_russell_formal_arm_darboux_algebraization_thm3846.py
 output: 05-knowledge/results/jc2_russell_formal_arm_darboux_algebraization_thm3846.out
 script_sha256: b0d2a0c52461b413bb6763563306c53ea3569ced7dc6c20a2dc1fb6fa3aa3300
 output_sha256: 5445e1a7a54f097cb03d06736910d0240bb48c3329b3db9ce21558fb1b1afca9
 semantic_sha256: cb744130f854c584aa536d307aeba139b5cb2df9be96ea0e206781210b758e83
+independent_audit_script: 04-computation/jc2_russell_formal_arm_darboux_algebraization_independent_audit_thm3846.py
+independent_audit_output: 05-knowledge/results/jc2_russell_formal_arm_darboux_algebraization_independent_audit_thm3846.out
+independent_audit_script_sha256: 04c0bcf4b7714025eeb00b722881f4b6d4a621a80268dd5d4fb0aef879b3d027
+independent_audit_output_sha256: d7b40cd548827ba06d90e49355e32ba9aa86c730a36d35de5b18e37af93d9e90
+independent_semantic_sha256: dc466f9dea54e13ca3842ecc991f05a8108a94f03794ff649cc661d7bb9b5803
 hash_basis: raw LF bytes
 ---
 
 # THM-3846 -- the arm has no formal obstruction, only algebraization debt
 
-**PROOF CANDIDATE + VERIFIED-EXACT, PENDING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Let `k` be a field of characteristic zero, fix `c in k*`, and put
 
 ```text
@@ -338,5 +348,13 @@ opposite-arm pole `s` concretely.  A genuine counterexample on `Y` must use a
 genuinely higher-normal seed whose resummation cancels these debts inside
 `B`; repeating finite sparse rows without tracking the resummed normal
 coordinate cannot decide that problem.  No such algebraization is
-constructed here, and `JC(2)` remains open.  **QED, pending independent
-hostile audit.**
+constructed here, and `JC(2)` remains open.  **QED.**
+
+## 4. Reproduction
+
+```bash
+python3 -B 04-computation/jc2_russell_formal_arm_darboux_algebraization_thm3846.py
+python3 -B -O 04-computation/jc2_russell_formal_arm_darboux_algebraization_thm3846.py
+python3 -B 04-computation/jc2_russell_formal_arm_darboux_algebraization_independent_audit_thm3846.py
+python3 -B -O 04-computation/jc2_russell_formal_arm_darboux_algebraization_independent_audit_thm3846.py
+```
