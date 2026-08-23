@@ -1,0 +1,14 @@
+theorem=THM-3805-quadratic-r-repairs-of-nodal-carriers-have-critical-points
+surface=r^2e-z^3+r;c=1;field=algebraically_closed_characteristic_zero
+carrier=A=e^2-z/3+r*(b0+b1e+b2e^2)
+new_case=b2!=0;degree_le_1_inherited=THM-3803
+resultant=Res_u(P,Q)=e^4*g^3*H;deg_H=14;LC_H=8503056*b2^3
+boundary_criterion=all_H_roots_in_V(e*g)_implies_H_divides_e*g*Hprime
+branch_one=2b1+b2^2=0;E11=80
+branch_two=6b1+b2^2=0;b0=b2^3/12;27b2^7+32=0;E10=40b2^2/3
+recovery=r=u/e;z=9g*u*(u+1)/(e*(1+2u))
+open=degree_ge_3_g;mixed_z2_r;different_arm_profile;Darboux_pair
+finite_field_scan_sha256=74af4adca36abf47a8a900c97db36e7aa69c5778855abaa1c5ab18f96b4c5b47
+semantic_sha256=777f813d0d8f54910c09c04bd5b57a499b49a60a8e00d473225ab8951813b02e
+CHECKS=37
+RESULT=PASS
