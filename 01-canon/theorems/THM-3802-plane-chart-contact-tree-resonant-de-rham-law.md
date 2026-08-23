@@ -2,7 +2,7 @@
 id: THM-3802
 title: "Plane-chart contact-tree resonant de Rham law"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  Any smooth
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Any smooth
   affine surface equipped with an actual finite plane-chart cover whose
   nontrivial intersections are the same punctured f-chart and whose leaf
   coordinates satisfy w=beta_i(f)+f^n a_i has H1_dR=0 and
@@ -13,14 +13,14 @@ status: >
   decorative contact tree alone.
 source: jc_sparse_direct_search / THM-3791--3797 atlas abstraction, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The proof types the actual open cover,
-  transition orientation, regular chart inverses, full Cech--de Rham rows,
-  finite-etale descent variant, equality boundary, and Darboux consequence.
-  The exact companion checks transitions and every nonresonant primitive for
-  n=1..6, simplex incidence ranks through eight leaves, common-translation
-  invariance, exact constant-resonance controls, and the THM-3791, THM-3789,
-  and THM-3797 specializations.  Normal and optimized runs byte-match the
-  frozen transcript.  Independent hostile audit remains due.
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  Actual-cover
+  sufficiency, density and extension of the form, transition orientation,
+  every Cech--de Rham bidegree, survival of the truncated q=1 simplex row,
+  exactness iff, Darboux typing, coordinate invariance, and finite-etale
+  descent were independently rederived.  The h=1 seam and the singular and
+  normal confluent intermediates were checked as hostiles.  Normal and
+  optimized runs byte-match the frozen transcript, all hashes match, and
+  documentation checks pass.
 related:
   - THM-3791-moving-root-danielewski-resonant-jet-de-rham-law
   - THM-3797-confluent-quadratic-hermite-jet-completion-no-go
@@ -34,7 +34,7 @@ hash_basis: raw LF bytes
 
 # THM-3802 -- the resonant coefficient is an invariant of the actual leaf atlas
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  The
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The
 hypersurface in THM-3791 and the iterated affine modification in THM-3797 look
 different globally, but their proofs use the same smaller object: a finite
 cover by planes whose deleted-arm overlaps are one common punctured chart.
@@ -326,5 +326,4 @@ not suffice:
 
 These guards are load-bearing: changing the cover changes the Cech incidence
 complex and can change both `H^2` and the equality criterion.  Subject to the
-actual-atlas hypotheses, however, `(8)` is universal.  **QED, conditional only
-on independent hostile audit.**
+actual-atlas hypotheses, however, `(8)` is universal.  **QED.**
