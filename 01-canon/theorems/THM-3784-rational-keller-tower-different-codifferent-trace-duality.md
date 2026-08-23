@@ -2,25 +2,27 @@
 id: THM-3784
 title: "Rational Keller tower different, codifferent, norm, and trace duality"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  In the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the
   THM-3774 degree-(m+1) tower, the reciprocal boundary unit is exactly
   g=-f_m'(t)/m and the source coordinate x=1/g is a generator of the trace
   codifferent.  The norm of g is, up to the proved sign and scalar, the
-  irreducible cuspidal discriminant.  The polynomial codifferent ladder
+  irreducible branch discriminant, cuspidal exactly when m>=2.  The
+  polynomial codifferent ladder
   x,tx,...,t^m x has trace packet (0,...,0,-m) and a constant unit pairing
   determinant.  This unifies the axis pole, branch curve, and sheetwise
   trace cancellation.  The trace-zero repair lane remains open; no
   polynomial Keller pair or JC(2) counterexample is claimed.
 source: jc_zero_debt_lift / different-codifferent reframe, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  Resultant and multiplication-matrix norm
-  calculations agree for m=1,...,10; companion-matrix traces, recurrences,
-  inverse norms, and codifferent pairing determinants are exact in the
-  symbolic target variables.  Direct source typing is checked for
-  m=1,...,8.  The symbolic all-m derivative identity is exact, and normal
-  and optimized runs byte-match the frozen transcript.  Independent hostile
-  audit remains due, especially for the trace-codifferent module equality
-  and global sign conventions.
+  INDEPENDENT HOSTILE AUDIT by jc_sparse_direct_search.  The derivative and
+  reciprocal-Jacobian signs, Lagrange trace packet, recurrence, full
+  trace-codifferent module equality, anti-triangular determinant sign and
+  unit claim, discriminant/norm signs, and the m=1 and m=2 boundary cases
+  were rederived independently.  Resultant and multiplication-matrix norm
+  calculations agree for m=1,...,10; direct source typing is checked for
+  m=1,...,8.  Normal, optimized, and frozen runs agree byte for byte, and
+  the recorded hashes match.  The audit repaired the scope wording: the
+  irreducible branch curve is smooth for m=1 and cuspidal for m>=2.
 depends_on:
   - THM-3774-three-component-rational-keller-cover-tower
   - THM-3780-rational-keller-tower-all-affine-plane-fillings-obstruction
@@ -37,13 +39,13 @@ hash_basis: raw LF bytes
 
 # THM-3784 -- the axis pole is the inverse different
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  Three
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Three
 features of the rational Keller tower that initially look unrelated are one
 algebraic object:
 
 ```text
 axis pole x,
-cuspidal branch discriminant,
+branch discriminant (cuspidal for m>=2),
 trace cancellation across the m+1 sheets.                              (1)
 ```
 
@@ -236,7 +238,7 @@ proving `(5)`.  In this monogenic hypersurface, `(24)` is also the Kähler
 different: `Omega_(S/B_0)` has presentation by the single relation
 `f_m'(t)dt=0`, so its zeroth Fitting ideal is `(f_m'(t))=(g)`.
 
-## 4. The norm of the different is the cusp
+## 4. The norm of the different is the branch curve
 
 Put `n=m+1`.  Since `f_m` is monic,
 
@@ -267,13 +269,22 @@ and the power of `m` is `m-(m+1)=-1`.  This proves the
 first formula in `(7)`; the second follows from `x=g^(-1)`.
 
 Thus the branch divisor is literally the norm divisor of the different.
+At the quadratic-cover boundary `m=1`, it is the smooth parabola
+
+```text
+D_1=4U-P^2,
+g=P-2t,
+N(g)=4U-P^2,
+(Tr(x),Tr(tx))=(0,-1).                                (29)
+```
+
 For the cubic centerpiece `m=2`, the packet reads
 
 ```text
 f_2=t^3-2Pt+2U,
 g=P-(3/2)t^2=-f_2'(t)/2,
 N(g)=(8P^3-27U^2)/2,
-(Tr(x),Tr(tx),Tr(t^2x))=(0,0,-2).                     (29)
+(Tr(x),Tr(tx),Tr(t^2x))=(0,0,-2).                     (30)
 ```
 
 The same `A_2` cusp that detects non-Galois branching therefore measures the
