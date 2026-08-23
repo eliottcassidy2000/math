@@ -2,16 +2,21 @@
 id: THM-3771
 title: "Arbitrary-profile cubic radial-carrier log-canonical nonentry"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT HOSTILE AUDIT.
-  For every nonzero radial profile u and every nonzero polynomial phi of
-  degree at most two, the family U=Xu(XT), W=U+3XT+r, Q=U phi(W) has a
-  birational log-canonical chart and an explicit complete rational-mate
-  torsor.  The candidate below proves an exact smoothness criterion and
-  claims that a polynomial mate exists precisely on the boundary where
-  both u and phi are constant.  It has no canonical force until the proof,
-  boundary atlas, exact companion, and metadata are independently audited.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  nonzero radial profile u and every nonzero polynomial phi of degree at
+  most two, the family U=Xu(XT), W=U+3XT+r, Q=U phi(W) has a birational
+  log-canonical chart and an explicit complete rational-mate torsor.  Its
+  smoothness criterion is exact, and a polynomial mate exists precisely on
+  the boundary where both u and phi are constant.  Otherwise the distinct
+  zero-fibre W-addresses cannot be equalized by a target-only correction.
 source: root + jc_sparse_direct_search / 2026-08-23
-audit: PENDING INDEPENDENT HOSTILE AUDIT.
+audit: >
+  PASS.  Independent hostile audit rederived repeated-phi necessity through
+  the birational inverse, the exact Hamiltonian constant field k(Q),
+  occurrence and reducedness of every zero-fibre address, the DVR principal
+  coefficients, address distinctness, and both constant-profile boundaries.
+  Normal and optimized runs byte-match the frozen transcript; script,
+  output, and semantic hashes and CHECKS=86 match; documentation passes.
 depends_on: []
 related:
   - THM-3551-one-ray-planar-jacobian-mate-no-go
@@ -29,9 +34,8 @@ hash_basis: raw LF bytes
 
 # THM-3771 -- arbitrary radial dressing reaches a vertical-address wall
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT HOSTILE
-AUDIT.**  This file is self-contained.  In particular, it does not use the
-presently reserved THM-3770.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This file is
+self-contained.  In particular, it does not use THM-3770.
 
 Let `k` be an algebraically closed field of characteristic zero.  Choose
 
@@ -70,8 +74,10 @@ Here a nonzero constant is squarefree.  Under `(3)`, for every
 2. every rational solution of `J(P,Q)=lambda` is uniquely of the form
 
    ```text
-   P=P0+H(Q),                    H in k(Q);                (5)
+   P=P0+H(Q),                    H in k(t);                (5)
    ```
+
+   Here `t` is an indeterminate, so `H(Q)` denotes evaluation in the target.
 
 3. a polynomial solution exists if and only if both `u` and `phi` are
    constant.  On that boundary `Q` is a nonzero multiple of `X`.
@@ -220,7 +226,7 @@ each profile; `u(0)!=0` separates `r` from the `u`-addresses;
 ```
 
 At the generic point of a component with address `w_D in S`, `(4)` has
-simple `1/Q` principal coefficient
+potential simple `1/Q` principal coefficient
 
 ```text
 -lambda w_D/3.                                         (19)
@@ -270,4 +276,4 @@ classify arbitrary triples `A,B,C` in `(6)`, and it does not prove the planar
 Jacobian conjecture.  Its constructive message is instead exact: arbitrary
 radial freedom in `u` preserves rational integrability, but it creates one
 new zero-fibre address per root, moving a polynomial mate farther away rather
-than closer.  **QED, conditional on independent hostile audit.**
+than closer.  **QED.**
