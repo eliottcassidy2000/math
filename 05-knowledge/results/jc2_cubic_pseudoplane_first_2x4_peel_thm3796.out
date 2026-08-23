@@ -1,0 +1,12 @@
+CANDIDATE=cubic-pseudoplane-first-2x4-peel
+UNIFORM=exactly_one_collision_2x4_empty;output_swap_4x2_empty
+HOSTILE_BOX_ONE_COLLISION_CELLS=35843;SIGN_SURVIVORS=0
+GRAMMAR=collisions_are_length_r_edges;two_edges=3chain_or_2pairs;three_edges=4term_AP
+AP_d1_SIGN_ROWS={1: (), 2: ((-1, -3),), 3: ()};CLOSED=Delta^2
+AP_d2_SIGN_ROWS={2: ((-1, -3),), 4: ((-1, -5),), 6: ((-2, -6),)};CLOSED=lower_Delta^2,central_Delta^2,upper_Delta
+OPEN_CONTROL_AP_d3={3: ((-2, -3), (-1, -4)), 6: ((-2, -6), (-1, -7)), 9: ()}
+OPEN_CONTROL_DISJOINT_r4={4: ((-3, -3),), 5: ()}
+NEXT_OPEN=>=2_collisions_except_AP_d<=2;noncentral_or_nonAP_3x3
+SEMANTIC_SHA256=8a23e174422c538f1d5553336e2d7b5b585aa547739c656470cf72b7915c6087
+CHECKS=658881
+RESULT=PASS
