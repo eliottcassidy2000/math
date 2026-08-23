@@ -1,0 +1,12 @@
+theorem=THM-3777-three-component-tower-reciprocal-payment-horizontal-divisor-transfer
+scope=all_integer_m_at_least_1;opposite_start_three_target_shears
+rational_keller=J(P,U)=-1;cover=t^(m+1)-mPt+mU
+vertical_packet=(1,0,0);paid_packet=(0,-1,-1)
+nonconstant_middle=vertical_pole_at_infinity_or_horizontal_H_rho
+constant_middle=third_shear_restores_x_axis_pole
+profile_checks=8;gcd_checks=8;source_jacobian_checks=4
+horizontal_controls=12;infinity_controls=3;constant_controls=4
+degree_cells=49;branches=21,27,1
+semantic_sha256=b02db6cb6a9dd59f4b67313f2352f83bc1cca1d2a1392d4b42c025a69a4d16bb
+CHECKS=181
+RESULT=PASS
