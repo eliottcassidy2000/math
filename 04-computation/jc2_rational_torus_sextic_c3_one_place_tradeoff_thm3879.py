@@ -215,6 +215,120 @@ equal("infinite_one_place_system", sp.linsolve(
 ), sp.FiniteSet((0, 0, 0, 0)))
 equal("two_place_boundary", dual_C, 2 * S**3 * T**3)
 
+# Classify every pullback supported at two normalization points.  The line
+# span has coefficient vector in T-degree order
+# (-a+b,0,-3b,2c,3a,0,-2a+4b).
+line_coefficients = tuple(
+    sp.Poly(line_pullback, S, T).coeff_monomial(S ** (6 - degree) * T**degree)
+    for degree in range(7)
+)
+equal(
+    "line_coefficient_packet",
+    line_coefficients,
+    (-la + lb, 0, -3 * lb, 2 * lc, 3 * la, 0, -2 * la + 4 * lb),
+)
+
+# If both support points are finite and nonzero, the missing S^5*T and
+# S*T^5 rows give a 2-by-2 system in their addresses.  Its determinant is
+# nonzero except at the balanced multiplicity m=3.  A zero address is
+# already killed by the first row.
+equal(
+    "finite_two_point_determinants",
+    tuple(m**2 - (6 - m) ** 2 for m in range(1, 6)),
+    (-24, -12, 0, 12, 24),
+)
+root_r, root_s = sp.symbols("root_r root_s")
+finite_two_point_rows = tuple(
+    (
+        sp.Poly(
+            (S - root_r * T) ** m * (S - root_s * T) ** (6 - m),
+            S,
+            T,
+        ).coeff_monomial(S**5 * T),
+        sp.Poly(
+            (S - root_r * T) ** m * (S - root_s * T) ** (6 - m),
+            S,
+            T,
+        ).coeff_monomial(S * T**5),
+    )
+    for m in range(1, 6)
+)
+equal(
+    "finite_two_point_missing_rows",
+    finite_two_point_rows,
+    tuple(
+        (
+            -m * root_r - (6 - m) * root_s,
+            sp.expand(
+                -root_r ** (m - 1) * root_s ** (5 - m)
+                * (m * root_s + (6 - m) * root_r)
+            ),
+        )
+        for m in range(1, 6)
+    ),
+)
+equal(
+    "finite_zero_address_first_rows",
+    tuple(
+        (
+            finite_two_point_rows[m - 1][0].subs(root_s, 0) / root_r,
+            finite_two_point_rows[m - 1][0].subs(root_r, 0) / root_s,
+        )
+        for m in range(1, 6)
+    ),
+    ((-1, -5), (-2, -4), (-3, -3), (-4, -2), (-5, -1)),
+)
+z = sp.symbols("z")
+balanced_finite_gb = sp.groebner(
+    [z**2 - z + 1, z**2 - 2 * z + 4], z, order="lex"
+)
+equal(
+    "balanced_finite_two_point_system",
+    [poly.as_expr() for poly in balanced_finite_gb.polys],
+    [sp.Integer(1)],
+)
+
+# With one point at T=0, multiplicities 1 and 5 hit the two forbidden rows
+# immediately.  For m=2,3,4 the S*T^5 row forces the finite address r to
+# zero.  Exact coefficient matching leaves only m=3 and the line C=0.
+one_infinite_rows = tuple(
+    (
+        sp.Poly(T**m * (S - r * T) ** (6 - m), S, T).coeff_monomial(S**5 * T),
+        sp.Poly(T**m * (S - r * T) ** (6 - m), S, T).coeff_monomial(S * T**5),
+    )
+    for m in range(1, 6)
+)
+equal(
+    "one_infinite_forbidden_rows",
+    one_infinite_rows,
+    ((1, 5 * r**4), (0, -4 * r**3), (0, 3 * r**2), (0, -2 * r), (0, 1)),
+)
+pure_two_place_solutions = {}
+for multiplicity in (2, 3, 4):
+    equations = sp.Poly(
+        line_pullback - kap * S ** (6 - multiplicity) * T**multiplicity,
+        S,
+        T,
+    ).coeffs()
+    pure_two_place_solutions[multiplicity] = sp.linsolve(
+        equations, (la, lb, lc, kap)
+    )
+equal(
+    "two_place_multiplicity_two",
+    pure_two_place_solutions[2],
+    sp.FiniteSet((0, 0, 0, 0)),
+)
+equal(
+    "two_place_multiplicity_three",
+    pure_two_place_solutions[3],
+    sp.FiniteSet((0, 0, kap / 2, kap)),
+)
+equal(
+    "two_place_multiplicity_four",
+    pure_two_place_solutions[4],
+    sp.FiniteSet((0, 0, 0, 0)),
+)
+
 print("THM3879_PARAM", "[-(S2-T2)^2(S2+2T2):(S2-2T2)^2(S2+T2):2S3T3]")
 print("THM3879_TORUS", "F=4Q2^3-27Q3^2;Q2_pull=3H^2;Q3_pull=2H^3")
 print("THM3879_SINGULARITIES", "6A2(inner torus intersections)+4A1(outer nodes);genus=0")
@@ -222,6 +336,7 @@ print("THM3879_CUBIC", "U^3-Q2*U-Q3 irreducible;disc=F;Galois=S3")
 print("THM3879_COMPLETION", "normal monogenic cubic;singular locus=four isolated points")
 print("THM3879_KUMMER", "Norm(rho*Q3+w)=4Q2^3;rho^2=27;w^2=27Q3^2-4Q2^3")
 print("THM3879_ONE_PLACE", "no line pulls back to a sixth power;line C=0 gives exactly two places")
+print("THM3879_TWO_PLACE", "unique line C=0;multiplicity packet (3,3);every other line >=3 places")
 print("THM3879_SCOPE", "explicit embedded torus sextic near miss;JC2 remains open")
 semantic = (
     "dual trinodal rational sextic",
@@ -229,6 +344,7 @@ semantic = (
     "explicit connected S3 cubic and unramified C3 Kummer layer",
     "normal monogenic completion with isolated singularities",
     "all projective one-place charts excluded",
+    "C=0 is the unique two-place line and has multiplicities three plus three",
     "C3 gluing versus one-place infinity tradeoff",
 )
 print("SEMANTIC_SHA256", hashlib.sha256(repr(semantic).encode()).hexdigest())

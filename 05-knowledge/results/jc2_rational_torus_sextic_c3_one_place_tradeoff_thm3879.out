@@ -5,6 +5,7 @@ THM3879_CUBIC U^3-Q2*U-Q3 irreducible;disc=F;Galois=S3
 THM3879_COMPLETION normal monogenic cubic;singular locus=four isolated points
 THM3879_KUMMER Norm(rho*Q3+w)=4Q2^3;rho^2=27;w^2=27Q3^2-4Q2^3
 THM3879_ONE_PLACE no line pulls back to a sixth power;line C=0 gives exactly two places
+THM3879_TWO_PLACE unique line C=0;multiplicity packet (3,3);every other line >=3 places
 THM3879_SCOPE explicit embedded torus sextic near miss;JC2 remains open
-SEMANTIC_SHA256 892b5f28dbe930f764abf25c72b663b36bd23b84519728380ec5894cbe3adb01
-CHECKS 47
+SEMANTIC_SHA256 6d22fb06956f2d3102e26d643b49c89c071ea7b74d6aea2dbea664fff12942b0
+CHECKS 56

@@ -2,13 +2,15 @@
 id: THM-3879
 title: "Rational torus sextic C3 packet and one-place tradeoff"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  An
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED CORE; UNIQUE
+  TWO-PLACE STRENGTHENING AWAITING HOSTILE AUDIT.  An
   explicit rational sextic, obtained as the dual of a trinodal quartic, has
   exactly six A2 cusps and four A1 nodes and admits a torus equation
   4Q2^3-27Q3^2=0.  Its irreducible Cardano cubic supplies a connected
   codimension-one-unramified C3 layer over the quadratic resolvent, exactly
   the global packet absent from THM-3874.  No projective line leaves one
-  normalization place; the best line leaves two.  This is a sharp
+  normalization place; the unique best line is C=0 and leaves two, while
+  every other line leaves at least three.  This is a sharp
   counterexample laboratory, not a planar Jacobian counterexample.
 source: root / post-THM-3874 global-cusp-gluing reframe, 2026-08-23
 audit: >
@@ -22,7 +24,10 @@ audit: >
   inverse, complete singular Groebner packet, inner transversality, outer
   Hessian gates, Cardano discriminant and irreducibility gate, Kummer norm,
   and the saturated sixth-power line systems.  Normal and optimized runs
-  byte-match the frozen transcript.
+  byte-match the frozen transcript.  A subsequent verified-exact
+  strengthening classifies every two-supported binary-sextic pullback and
+  proves that C=0 is the unique two-place line; that addendum awaits a new
+  hostile audit before full status promotion.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
 related:
@@ -30,15 +35,16 @@ related:
   - THM-3874-three-cusp-quadratic-k3-affine-class-group
 script: 04-computation/jc2_rational_torus_sextic_c3_one_place_tradeoff_thm3879.py
 output: 05-knowledge/results/jc2_rational_torus_sextic_c3_one_place_tradeoff_thm3879.out
-script_sha256: e3ee7cd5cba7e9653602463ee4220071b5e5e93fbe28404468ccf1eaea4994bc
-output_sha256: d868045804a4d9b2ed08a49f499729660dd64503abb7945c774c82f9cd1048f8
-semantic_sha256: 892b5f28dbe930f764abf25c72b663b36bd23b84519728380ec5894cbe3adb01
+script_sha256: c064e8c5d5eb74003e4014ef62236c8fa5c0e5d1c075ae3977a5fe106452df64
+output_sha256: 83dc894ef7a74ebe8f0e50ebc8843f64c8d4e930921f84ae0479b4c0d64a3c44
+semantic_sha256: 6d22fb06956f2d3102e26d643b49c89c071ea7b74d6aea2dbea664fff12942b0
 hash_basis: raw LF bytes
 ---
 
 # THM-3879 -- the missing C3 packet exists, but it costs the one-place chart
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED CORE; UNIQUE
+TWO-PLACE STRENGTHENING AWAITING HOSTILE AUDIT.**
 Work over an algebraically closed field `k` of characteristic zero.  Put
 
 ```text
@@ -333,6 +339,65 @@ identical.  Hence the one-place line system is empty.
 By `(6)`, the line `C=0` has support exactly `{S=0,T=0}`.  The minimum number
 of normalization places at infinity is therefore two.  This proves the
 claimed sharp projective-line tradeoff.
+
+### 5.1 The two-place line is unique
+
+There is no second line attaining the minimum.  Suppose first that the two
+support points are both finite and distinct.  For some `1<=m<=5`, their
+pullback has the form
+
+```text
+kappa(S-rT)^m(S-sT)^(6-m),           r!=s.                  (30)
+```
+
+The `S^5T` row of `(30)` is
+
+```text
+-kappa(mr+(6-m)s),                                          (31)
+```
+
+while, when `rs!=0`, the `ST^5` row is a nonzero monomial times
+
+```text
+ms+(6-m)r.                                                  (32)
+```
+
+Both rows vanish in `(28)`.  If one of `r,s` is zero, `(31)` is already
+nonzero.  Otherwise the determinant of `(31)-(32)` is `12(m-3)`, so the only
+surviving multiplicity is `m=3`, with `s=-r`.  Put `z=r^2`.  Then `(30)` is
+`kappa(S^2-zT^2)^3`.  Matching its `S^6,S^4T^2,S^2T^4,T^6` rows against
+`aA+bB+cC` forces simultaneously
+
+```text
+z^2-z+1=0,                    z^2-2z+4=0.                  (33)
+```
+
+Their difference forces `z=3`, which satisfies neither system.  Thus two
+finite support points are impossible.
+
+It remains to put one support point at `T=0`.  The pullback is
+
+```text
+kappa T^m(S-rT)^(6-m),                  1<=m<=5.            (34)
+```
+
+The missing `S^5T` and `ST^5` rows exclude `m=1,5`; for `m=2,3,4` the
+`ST^5` row is respectively
+
+```text
+-4kappa r^3,                 3kappa r^2,                 -2kappa r. (35)
+```
+
+Hence `r=0`.  Matching the remaining pure monomial against `(28)` gives no
+nonzero line for `m=2,4`; for `m=3` it gives exactly
+
+```text
+a=b=0,                       2c=kappa.                     (36)
+```
+
+Therefore `C=0` is the unique projective line with two-place pullback, and
+its multiplicity packet is `(3,3)`.  Every other line leaves at least three
+normalization places.
 
 Nor can a nonlinear polynomial change of affine target coordinates repair a
 chosen chart.  Such a change is an isomorphism of affine curves, hence lifts
