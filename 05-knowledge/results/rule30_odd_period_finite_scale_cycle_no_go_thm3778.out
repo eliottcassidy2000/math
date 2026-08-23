@@ -1,0 +1,19 @@
+RULE30_TWO_SCALE_PERIOD3_INDEPENDENT_AUDIT_20260823
+status=PROVED_ALGEBRAIC_CLASSIFICATION+FINITE_EXACT_HOSTILES;NO_PRIZE
+product_law_controls=odd_periods_1_3_5;p_to_minus_p_squared
+orientation_control=period5_h13_twisted_lift_exact
+even_boundary=n2_product_law_fails;det_T2=0
+normalization_hostile=odd_A_1_1_3_has_sibling_valuations_1_2_2
+ordinary_locus=isolated_lambda4_point+open_lambda1_P1
+ordinary_boundary=beta*(alpha-beta)*(alpha+beta)=0
+primitive_holonomy=three_eigenlines;each_has_zero_amplitude
+physical_eigenvalue_gate=v2(lambda)=d_m+d_mplus1>=2
+only_survivor=lambda4;forced_gaps=(1,1);canonically_forbidden
+finite_field_hostiles=((5,4),(7,6),(11,10),(13,12))
+fixed_profile_unification=r1_h1_T1;r2_h3eq1_T_h2_T_h
+fixed_spectra=((5,'(lambda-2)*(lambda-1)*(lambda+1)*(lambda**2+1)'),(7,'(lambda-2)*(lambda-1)**2*(lambda**2+lambda+1)**2'))
+general_cycle_geometry=finite_union_of_open_projective_eigenspaces;no_elliptic
+odd_period_determinants=((1,2,1),(3,-2,1),(5,-2,1),(7,2,1),(9,2,1),(11,-2,1),(13,-2,1),(15,2,1))
+general_physical_conclusion=no_exact_finite_scale_cycle_in_this_odd_period_scheme
+semantic_sha256=71adc0d815681eddae05c5bc7c74087820b7fbe83e6c324d0d4fbc7c7a391022
+RESULT: PASS_MATHEMATICS_WITH_STATUS_AND_REPLAY_REPAIRS

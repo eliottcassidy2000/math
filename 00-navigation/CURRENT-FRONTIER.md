@@ -310,74 +310,30 @@ gives no support asymptotic/residue; only the indexed coefficient is known.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
-- **Rule 30:** THM-3502/3511/3512/3516. THM-3511's finite three-ray portrait is injective but not a first-return congruence; depth `D+B` returns the bounded-gap successor or honest overflow.  A FINITE-EXACT period-three two-scale classification leaves one rational projective curve plus `(-1,-1,-1)`, but the curve fails the odd-unit valuation gate and the constant point repeats forbidden gap one.  Mealy realization is not reached; periods at least five and every prize remain OPEN.
+- **Rule 30:** THM-3502/3511/3512/3516 retain the exact compiler, cocycle,
+  depth, owner, and carry boundaries. [THM-3778](../01-canon/theorems/THM-3778-rule30-odd-period-finite-scale-cycle-projective-profile-no-go.md)
+  makes every saturated odd-period finite scale-cycle a union of open
+  projective eigenspaces and excludes physical `Q_2` realizations. Nonclosing
+  profiles, marked sidecars, Mealy closure, bounded gaps, center/density/
+  balance, and every prize remain OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT
   (MISTAKE-205); THM-3544/50 and cited Nagata/GGHV force composite degree
-  `>=6`, height `>=8`, and reduced height `>=108` (only `(72,108)<125`).
-  THM-3543--3617 close the recorded low-width/ray/shear/toric/graph sectors;
-  wider cells stay OPEN. THM-3618--3642 give fibre/fold, rank/jet, and
-  `J_2/J_4` debt gates. THM-3677--3687 reduce the retained six-jet screen to
-  four quartic roots lifted only through actual-ring `J_0=1`; `J_1,J_2` stay
-  open. THM-3685--3728 close W002/W003/W007/W008, scalar-charge `y=0`
-  W004 slices, and alternating two-left/two-right Cohn cells; residual
-  W004--W006 remain live. THM-3736/3740 close constant
-  `SL_2` exposure and the one-variable right-shear tower. Live Cohn words need
-  interacting polynomial factors with curls and holonomy.
-  [THM-3745](../01-canon/theorems/THM-3745-monomial-plane-branch-conductor-triangular-pell-selector.md)
-  proves the triangular conductor/Pell selector, but its `(72,108)` shadow has
-  Jacobian zero. Higher-degree debt,
-  nonordinary/nonquadratic folds, two-output mixing, quartic `C3`, and
-  unrestricted `C[A,d]^2` remain OPEN (MISTAKE-416).
-  (MISTAKE-205); THM-3544/50 force composite degree `>=6`, height `>=8`, and
-  Nagata/GGHV give reduced height `>=108` (only `(72,108)<125`).
-  THM-3543--3617 close the recorded collision, ray, cyclic, low-width, shear,
-  toric, graph, rational, multiarm and Russell sectors (THM-3592 repaired);
-  wider cells stay OPEN. THM-3618/22 classify fibre separators and their graph
-  closure; THM-3619/23 close all even folds. Non-even THM-3627 closes one
-  polynomial, THM-3630 denies a uniform jet bound, THM-3632 blocks its
-  algebraization, and THM-3634/35 give the rank gates, retained jet plane,
-  and an actual `t=0` witness. On minimal `Q_1`, THM-3637--39 force universal
-  nonzero `J_2` debt in every retained
-  rank-one/two `J_0=1` cell. THM-3641 exposes ordinary curvature zero-debt
-  planes; THM-3642 realizes one by an exact `Q_6` lift through `J_2`, then
-  forces nonzero `J_4` debt for `Q_6,Q_*`. THM-3677 cuts the complete
-  degree-at-most-eight principal zero-second-debt plane by one rational
-  zero-fourth-debt parabola. THM-3678/3680 lift its rational point
-  `Q_dagger` through the actual target-ring equations `J_0=1,J_1=J_2=0`,
-  but THM-3681 closes every continuation at universal order six. Pending-
-  audit THM-3683 leaves only four quartic roots after the retained six-jet
-  screen; THM-3687/3688 lift all four through actual-ring
-  `J_0=1,J_1=J_2=0` (THM-3688 is pending independent hostile audit).
-  `J_3,J_4`, all-order/global-pair/Keller conclusions remain open; THM-3737 is
-  only RESERVED. THM-3684 blocks one-coordinate mates. THM-3685--3735 give
-  the `y=0` output, first `3x4`, and cap `>=22`: W002/W003/W007/W008 are empty;
-  THM-3722/24/27/28/3733/3735/3739 close the named stabilized families;
-  audited THM-3728 closes the final anchor-20 stabilized tail.  This is not
-  all of W004: exceptional W004 placements and W005/6 remain live.
-  THM-3709/3719 and THM-3721/23/25 close named Cohn cells; THM-3734/3736
-  classify all polynomial exposed-left closures over every constant right
-  `SL2` matrix and exclude polynomial mates. THM-3740 extends this to one
-  polynomial right shear: every survivor is an integrable source translate
-  of the same no-mate towers.  A Cohn escape now needs at least two interacting
-  polynomial factors or a different core.  Audited THM-3741 closes the full
-  radial two-charge ansatz. THM-3754 closes every component affine in one
-  source variable; source-foliation degrees two and three were already closed,
-  so the honest general boundary begins at degree four.  THM-3755 closes the
-  composite-monomial tower, THM-3757 the smooth Pell--Chebyshev variable-flank
-  tower, THM-3758 a rational-exact split-fibre family, and audited THM-3759 the
-  central-product constant-flank slice.  Audited THM-3765 classifies the full
-  normalized `X+chi(XT)+T psi(XT)` ansatz: rational mates occur on one explicit
-  boundary and polynomial mates only when linear.  These structured closures
-  leave arbitrary quartics, a varying `+1` flank, nonradial supports, and the
-  reserved vertical-equalizer/cubic-carrier THM-3770/3771 programs open.
-  THM-3716 proves the monomial Broughton family.
-  Higher-degree zero-debt polynomials, continuation of the four THM-3683 folds,
-  THM-3641's excluded nonordinary tangent collisions, nonquadratic folds, and
-  THM-3629's genuinely two-output-mixed `H'(0)!=0` pairs remain OPEN. A
-  positive global pair here pulls back to a noninjective Keller map and
-  refutes `JC(2)`. THM-3564--78
-  cover factor/nodal obstructions; `A4/S4` cubic is blocked, quartic `C3` OPEN
-  (MISTAKE-416), and unrestricted `C[A,d]^2` remains equivalent to `JC(2)`.
+  `>=6`, height `>=8`, and reduced height `>=108`. THM-3543--3642 close the
+  recorded low-width/ray/shear/toric/graph and fibre/fold/jet sectors.
+  THM-3687/3688 reach actual-ring `J_0,J_1,J_2`; the latter audit and
+  `J_3+`/globalization remain open. THM-3737's one-functional gate awaits audit.
+  THM-3685--3739 close W002/3/7/8 and stabilized W004; exceptional W004 and
+  W005/6 remain. THM-3736/3740 close constant- and one-polynomial-right Cohn
+  exposures, not interacting factors. THM-3741/3754--3759/3765/3771/3772
+  close the named radial/flank/Pell/split-fibre/cubic-carrier ansatzes.
+  THM-3770 gives the principal-part/component-spectrum equalizer. THM-3773
+  blocks all birational target words on the quadratic cover over `C`; THM-3774
+  gives degree-`m+1` three-component covers (an `S3` cusp at `m=2`) and no
+  birational escape for its quadratic row. THM-3775--3777 type the stated
+  sheet/short-shear gates. A counterexample still needs a synchronized
+  nonbirational spectrum or a different construction. Arbitrary quartics,
+  nonordinary folds, interacting Cohn factors, longer non-Galois operations,
+  unrestricted `C[A,d]^2`, `JC(2)`, and `DC(2)` remain OPEN.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2247 close the affine-through-
   quartic and terminal-through-fourteen strata; THM-2262/2297--2480, including

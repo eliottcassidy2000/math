@@ -1,10 +1,9 @@
 # Selectors, rooted sidecars, and operation congruence across open frontiers
 
 **Session date:** 2026-08-22--23
-**Status:** synthesis of PROVED THM-3728--3731, FINITE-EXACT THM-3732,
-incoming independently audited PROVED THM-3733--3736/3739/3740/3741,
-THM-3743/3754--3759/3765, and PROVED + VERIFIED-EXACT THM-3688 pending an
-independent hostile audit,
+**Status:** synthesis of PROVED/audited THM-3728--3731, FINITE-EXACT
+THM-3732, PROVED/audited THM-3741--3743/3754--3759/3765/3770--3778, and
+PROVED + VERIFIED-EXACT THM-3688/3737 pending independent hostile audits,
 together with canonical PROVED implications and named hostile controls. Every
 cross-frontier comparison is methodological; no object-level reduction is
 claimed.  LRC(14), JC(2), FC(3)/HFC(3), the strong tournament inequality, and
@@ -81,12 +80,13 @@ THM-3688 uses a different kind of exact compiler: an Apéry gap quotient turns
 the exceptional quartic actual-ring `J_1,J_2` lift into a finite square solve,
 with the omitted coordinate checked separately.  It is PROVED + VERIFIED-EXACT
 but still pending independent hostile audit; `J_3+`, globalization, and JC(2)
-remain open.  Pending-audit THM-3741 extends THM-3738 across the axis boundary:
+remain open.  Audited THM-3741 extends THM-3738 across the axis boundary:
 it classifies every nonsingular two-charge radial component and proves that
 only the linear class has a polynomial mate.  Third-charge and nonradial
 sectors remain.  Its `XT` charge has no typed map to the W004 collision-row
-charge, despite the shared word “charge.”  THM-3737/3742/3743 are only
-reserved namespaces.
+charge, despite the shared word “charge.”  THM-3737 is proved but pending an
+independent audit; THM-3742 is an audited wrong-torsor Pell clock, and
+THM-3743 is the audited flatness/Graver relation reduction.
 
 ## Second incoming integration: flatness, ordinals, radial profiles, and Rule 30
 
@@ -112,17 +112,29 @@ infinite Euler repair tail; THM-3765 instead reads rational exactness from the
 generic hyperelliptic time form and leaves one explicit nonlinear rational
 boundary, still with no polynomial mate.  Together with THM-3755/3757/3758
 they close structured quartic/radial slices, not arbitrary quartics or JC(2).
-The live design axes are a varying positive flank, genuinely nonradial
-supports, and the vertical-principal-part gate rather than another scalar
-resultant.
+THM-3771/3772 then close arbitrary-profile cubic radial dressing and the full
+variable-two-flank three-charge ansatz.  THM-3770 identifies the exact
+vertical principal-part equalizer; THM-3774 supplies a genuinely nonradial
+three-component rational cover tower, while THM-3776/3777 type two short
+target-word failures.  The live design axis is now a synchronized
+nonbirational log-canonical spectrum or a construction outside these product,
+radial, and short-word gates.
 
-Finally, the Rule 30 period-three projective map supplies an exact
-operation-congruence test.  Algebraically, `R^2(g)=g` is one rational curve
-with involution `t -> -t` plus a constant point.  The marked amplitude
-holonomy is essential, but every curve point fails the physical odd-unit
-valuation gate and the constant point repeats forbidden gap one.  Returning
-under the quotient operation is therefore weaker than realization by the
-named Rule 30 seed.  Periods at least five and every prize remain open.
+The target-operation audit also gained a sharp invariant hierarchy.  A
+component packet modulo the scalar diagonal is complete only for fixed-target
+shears.  Birational two-target operations preserve instead the field degree
+`[k(X,T):k(P,Q)]`: degree two blocks every such escape over `C`, whereas the
+degree-one THM-3771 control has an explicit rational symplectic inverse despite
+two unequal nonzero residues.  Thus THM-3776 cannot be promoted from its
+natural length-two/three orientation to an all-map theorem.
+
+Finally, THM-3778 turns the Rule 30 period-three calculation into an exact
+all-odd-period finite-cycle theorem.  For every finite scale-cycle length the
+saturated algebraic locus is a union of opens in projective eigenspaces, so
+this ansatz never produces an elliptic component.  Over `Q_2`, the determinant
+valuation forces the constant amplitude and consecutive unit gaps, excluded
+by THM-3512.  Spatially nonperiodic or nonclosing profiles, nonlinear marked
+sidecars, and every prize remain open.
 
 ## Euclidean address versus coefficient transport on the 182 skeleton
 
@@ -325,16 +337,17 @@ unlike the retired tournament/1729 numerical resemblance.
    rather than imposing an arbitrary torsor.
 4. **JC:** move beyond the now-closed stabilized W004 tail without exporting
    its row gauges to exceptional W004 or W005/6.  In the Cohn lane test two
-   interacting right factors; the normalized third-charge radial component
-   is now closed, so component design must vary the positive flank, become
-   genuinely nonradial, or pay the vertical principal-part equalizer.
+   interacting right factors.  The variable-flank radial and nonradial
+   three-component rational-cover towers are now typed; seek a nonbirational
+   log-canonical pair whose component spectrum actually synchronizes, or a
+   longer operation that escapes the proved horizontal/short-word gates.
 5. **Two cubes:** the inert-prime family now proves logarithmic lower growth
    with coefficient `kappa`; determine whether the rest of the support changes
    that order, or obtain a genuine asymptotic for `C(X)`.  Neither a full
    support coefficient nor a collision-tax asymptotic is known.
-6. **Rule 30:** classify the saturated period-five two-scale holonomy, then
-   apply odd-unit/common-gap filters before attempting Mealy owners.  Period
-   three is now an exact no-go, not evidence for a prize statement.
+6. **Rule 30:** leave exact odd-period finite projective scale-cycles, now
+   closed by THM-3778.  Test nonclosing evolution or a predicate-preserving
+   nonlinear owner/carry sidecar before attempting Mealy realization.
 
 Apply the gates demanded by the proposed consumer: the stabilizer gate for an
 equivariant single-valued selector, the seam/invertibility gate for an atlas or

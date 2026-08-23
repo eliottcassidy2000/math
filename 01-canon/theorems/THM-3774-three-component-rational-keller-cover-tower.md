@@ -10,8 +10,10 @@ status: >
   discriminant.  The log-canonical blowdown W=UP is polynomial and has
   component spectrum (1,0,0), so the complete rational-mate torsor contains
   no polynomial mate.  At m=2 the cover is an irreducible non-Galois cubic
-  with S3 closure and A2 cuspidal discriminant.  This is a rational Keller
-  near miss, not a polynomial Keller map or a planar Jacobian counterexample.
+  with S3 closure and A2 cuspidal discriminant.  Over C, the quadratic row
+  m=1 cannot be polynomialized by any birational rational symplectic target
+  change.  This is a rational Keller near miss, not a polynomial Keller map
+  or a planar Jacobian counterexample.
 source: root + jc_zero_debt_lift / nonradial equalizer and cover-tower session, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT by root.  The all-m chart cancellation, unique
@@ -19,18 +21,25 @@ audit: >
   smooth disjoint component decomposition, spectrum and complete rational
   torsor, monic-specialization proof of the degree, trinomial discriminant,
   generic transposition inertia, and cubic S3/cusp conclusion were all
-  rederived by hand.  Normal, optimized, and frozen exact transcripts agree.
+  rederived by hand.  A second independent sidecar confirms the m=1 row,
+  exponent-three uniqueness, quadratic deck, all-target corollary over C,
+  and the degree-one unrestricted-target hostile boundary.  Normal,
+  optimized, and frozen exact transcripts agree.
 depends_on:
   - THM-3770-vertical-principal-part-equalizer-and-log-canonical-dressing-gate
+  - THM-3773-quadratic-rational-keller-cover-degree-and-target-word-nonpolynomialization
 related:
   - THM-3758-quadratic-radial-carrier-rational-exact-split-fibre-nonentry
   - THM-3772-variable-flank-three-charge-rational-exact-classification
-  - THM-3773-quadratic-rational-keller-cover-degree-and-target-word-nonpolynomialization
 script: 04-computation/jc2_three_component_rational_keller_cover_tower_thm3774.py
 output: 05-knowledge/results/jc2_three_component_rational_keller_cover_tower_thm3774.out
 script_sha256: b1a60faee125b9d3a82a220026c26623ce4a546f0de6d4feef9b075c988e96de
 output_sha256: dd8ce3d9d2a5253652693d61e09350ae8c7b05a7f9741872da31b04c9fa909ff
 semantic_sha256: 7afa16470c6cb9f0cdc68c83c258dae8dd6223f80b42f5f6717cef38ab489b96
+secondary_script: 04-computation/jc2_vertical_spectrum_cover_degree_target_word_triage_20260823.py
+secondary_output: 05-knowledge/results/jc2_vertical_spectrum_cover_degree_target_word_triage_20260823.out
+secondary_script_sha256: cad0e12f1796496d0cd4664637aeb075961dd99a189c655e0ac1a9cc17d6dccc
+secondary_output_sha256: d83f1e8453f23b5651d1bd582276e950d6e961dc46ad832288d9414e3ab647f3
 hash_basis: raw LF bytes
 ---
 
@@ -375,6 +384,30 @@ the lost regularity survives exactly as `(4)`.  Two of three critical
 components already collapse to `(0,0)`, while the axis maps to `(0,1)`.
 Equalizing that last address without making `U` critical would, by THM-3770,
 turn `(W-c)/U` into an actual polynomial Keller mate.
+
+### 5.1 The quadratic row has no birational target escape over C
+
+Restrict now to `k=C` and `m=1`.  Equation `(6)` gives
+
+```text
+[C(x,y):C(U,P)]=2.                                    (35)
+```
+
+Let `(R,S)` be any birational rational target change with
+`C(R,S)=C(p,q)` and `J_(p,q)(R,S)` a nonzero constant.  Substitution at
+`(U,P)` preserves the generated subfield and hence the index in `(35)`.
+If both substituted outputs were polynomials, the chain rule would make them
+a planar Keller pair of function-field degree two.  THM-3773, through the
+quadratic Galois Keller theorem recorded in THM-1330, excludes such a pair
+over `C`.  Therefore no birational rational symplectic target map can
+polynomialize the quadratic row.  In particular no finite alternating word
+of rational target shears, in either starting orientation or at any length,
+can do so.
+
+This conclusion is deliberately confined to `m=1` and `C`.  For `m>=2` the
+extension is non-Galois, so the degree-two exclusion is unavailable; the
+vertical no-mate result `(32)` remains valid over every algebraically closed
+characteristic-zero field.
 
 ## 6. Sharp boundaries and scope
 

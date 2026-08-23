@@ -1,8 +1,8 @@
 # Exact two-scale period-three Rule 30 profile no-go
 
-**Status:** **FINITE-EXACT** algebraic classification and scoped physical
-no-go; research surface rather than canon.  The full Rule 30 frontier and all prize problems
-remain **OPEN**.
+**Status:** **PROVED algebraic consequence + VERIFIED-EXACT controls**, now
+subsumed by canonical THM-3778.  The full Rule 30 frontier and every prize
+problem remain **OPEN**.
 
 The inherited inputs are THM-3511
 (`01-canon/theorems/THM-3511-rule30-orbit-signalizer-gap-renormalization-and-shallow-portrait-hostile.md`),
@@ -188,6 +188,10 @@ All amplitude and sibling-sum coordinates are nonzero exactly when
 beta!=0,                    alpha!=+-beta.             (17)
 ```
 
+This homogeneous boundary is authoritative.  Multiplying the rational
+saturation factors after substituting the `t`-parametrization cancels zeros
+against poles and simplifies spuriously; it is not a boundary test.
+
 Putting `t=alpha/beta` yields (2), and (16) changes `t` to `-t`.  Therefore
 `R(g(t))=g(-t)` and `R^2(g(t))=g(t)`.  The first image is projectively equal
 to the source only at `t=0` within the saturated chart.  This proves the
@@ -293,8 +297,9 @@ t=2:  g=(2/3,-1/2,3),       R(g)=(-2,3/2,1/3),        (23)
 
 all three primitive-holonomy eigenvectors, the period-one residue gate, and
 the physical parity obstruction on every residue modulo 16.  Normal and
-optimized outputs are identical to the frozen output.  These finite checks
-audit the formulas; Sections 1--5 prove the stated quantifiers.
+optimized outputs agree; their line-normalized content equals the LF frozen
+output.  These finite checks audit the formulas; Sections 1--5 prove the
+stated quantifiers.
 
 Raw working-tree byte SHA-256 hashes are
 
@@ -307,20 +312,23 @@ Raw working-tree byte SHA-256 hashes are
 
 ## 7. Strict scope and next frontier
 
-**Research classification closed:** exact saturated two-scale cycles at odd
-periods one and three, including cubic amplitude holonomy and the physical
-odd-unit/common-gap gate.  This remains a finite-exact reflection rather than
-a canonical theorem.
+**Canonically closed by THM-3778:** every exact finite scale-cycle at every
+odd spatial period in this cyclic projective-profile ansatz.  Algebraically,
+each locus is a finite union of opens in projective eigenspaces, so increasing
+the period or cycle length cannot create an elliptic component here.
+Physically, the determinant-valuation invoice leaves only constant amplitudes
+and consecutive unit gaps, which THM-3512 excludes.
 
-**FINITE-EXACT:** the companion's symbolic identities, rational control, and
-mod-16 hostile.
+**VERIFIED-EXACT:** this companion's period-three symbolic identities,
+rational control, and mod-16 hostile; THM-3778 has an independent general
+odd-period companion.
 
-**OPEN:** periods five and higher under two-scale cycling; noncyclic marked
-profiles; adaptive overflow states; actual finite signalizer closure;
-bounded innovation gaps; center nonperiodicity, density, and balance; every
-Rule 30 prize question.
+**OPEN:** spatially nonperiodic profiles, nonclosing or infinite scale
+evolution, genuinely nonlinear marked sidecars, adaptive overflow states,
+actual finite signalizer closure, bounded innovation gaps, center
+nonperiodicity, density, balance, and every Rule 30 prize question.
 
-The next cheapest algebraic target is `M_h=T_(h^2)T_h` at period five with
-`h^3=1`, followed by odd-unit valuation filters.  An elliptic interpretation
-is warranted only if its saturated eigenvalue locus ceases to be a union of
-projective linear spaces; any survivor must still pass the Mealy-owner gate.
+The next lawful algebraic target must leave this linearized finite-cycle
+scheme: add a predicate-preserving nonlinear owner/carry sidecar, study a
+nonclosing scale evolution, or change the carrier.  Any survivor must still
+pass the physical normalization and Mealy-owner gates.

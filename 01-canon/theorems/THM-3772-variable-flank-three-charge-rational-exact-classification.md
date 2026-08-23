@@ -259,7 +259,7 @@ P=c(aX-bT)/(2ab)                                      (22)
 ```
 
 is a polynomial mate.  This completes the mixed classification without
-using the pending general equalizer theorem THM-3770.
+using the general equalizer theorem THM-3770.
 
 ## 4. Pure flanks are rational-exact but vertically unequalized
 
