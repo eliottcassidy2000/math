@@ -1,0 +1,13 @@
+theorem=THM-3828-proportional-second-row-r2z2-profile-nonentry
+surface=r^2e-z^3+r;c=1;field=algebraically_closed_characteristic_zero
+ansatz=THM3821_plus_r2z2_XY
+branch=X_nonzero;Y=lambdaX;T=lambdaS
+N_nonzero=10_5_4_3_ladder_then_fixed_base_terminal
+root_gate=address_2lambda_over_3;next_resonance_one_half
+confluent_gate=lambda_zero_first_integral_impossible
+N_zero=arm_linear_remainder_6beta_nonzero
+open_branch=L_nonzero_10_over_7_tower_not_closed
+scope=proportional_aligned_second_row_no_go_only
+semantic_sha256=170613b16552465adbb4e26734b0f50828b1e77e8c123d59ab2e2c80e38dfeb1
+CHECKS=43
+RESULT=PASS
