@@ -29,9 +29,9 @@ related:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
 script: 04-computation/jc2_nonlinear_cubic_positive_filtration_units_thm3816.py
 output: 05-knowledge/results/jc2_nonlinear_cubic_positive_filtration_units_thm3816.out
-script_sha256: 1d9857c4c4d3c286e8db0c2a7f7249fe0772c354d1156d83c5388d4695bd9cbf
-output_sha256: 7d0efe436f8a68dd16bb9dfc3dd1a72e60c024679a4e12d86bc636d8c934f2f9
-semantic_sha256: e2f1240dd5688353bbebf41640e92f13f5592acdc4653a0bf52e1e48a364ea15
+script_sha256: d31291759b7531721791bf3873844210995db3f984600087f30544a63d717a83
+output_sha256: 1126a8bb8c5cad02b60e71e7ca19d4b6630a09aee9468729139b3965c9055d73
+semantic_sha256: b62a34519893c5b767a0184a003498fca4d2f08562e45b36e8b7bd0be2f7f606
 independent_script: 04-computation/jc2_nonlinear_cubic_positive_filtration_units_independent_audit_thm3816.py
 independent_output: 05-knowledge/results/jc2_nonlinear_cubic_positive_filtration_units_independent_audit_thm3816.out
 independent_script_sha256: 451d7423da40098af363cfba1b8bcdbe402fc3277e678bfcdf462565cb9693d8
@@ -155,7 +155,7 @@ for nonzero `u,v in S`.  If `uv=1`, equations `(5),(12)` and nonnegativity
 force `deg(u)=deg(v)=0`.  Thus `u,v in k`; conversely every nonzero scalar is
 a unit.  This proves `(3)`.
 
-## 4. Exact effect on THM-3811
+## 4. Exact effect and separation from the strengthened THM-3811
 
 No normality, algebraic closure, discriminant calculation, or bounded norm
 search enters the proof.  For the normal characteristic-zero surface of

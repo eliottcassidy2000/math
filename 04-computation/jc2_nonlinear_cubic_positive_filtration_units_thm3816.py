@@ -162,7 +162,7 @@ semantic = {
     "graded_cubic": "T^3+7A^2T+3A^3-A^2C^2",
     "irreducibility": "reciprocal Eisenstein at A",
     "conclusion": "gr(S) domain, degrees add, F0=k, hence S*=k*",
-    "remaining": "order of [E] and affineness of Xbar\\E remain open",
+    "separation": "the filtration does not compute [E] or affineness; strengthened THM-3811 closes them by root charts and Nagata localization",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True,
                            separators=(",", ":")).encode()
@@ -173,6 +173,6 @@ print("filtration=wt(A,C,omega,theta)=(2,1,2,2);F0=k")
 print("gr_cubic=T3+7A2T+3A3-A2C2")
 print("irreducible=reciprocal_Eisenstein_at_prime_A")
 print("conclusion=associated_graded_domain;S_units=k_units")
-print("remaining=class_E_order+affineness")
+print("separate=class_E_order+affineness_closed_in_strengthened_THM3811_not_by_filtration")
 print(f"CHECKS={CHECKS}")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")

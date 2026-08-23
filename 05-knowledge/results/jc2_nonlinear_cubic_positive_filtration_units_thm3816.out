@@ -4,6 +4,6 @@ filtration=wt(A,C,omega,theta)=(2,1,2,2);F0=k
 gr_cubic=T3+7A2T+3A3-A2C2
 irreducible=reciprocal_Eisenstein_at_prime_A
 conclusion=associated_graded_domain;S_units=k_units
-remaining=class_E_order+affineness
+separate=class_E_order+affineness_closed_in_strengthened_THM3811_not_by_filtration
 CHECKS=58
-semantic_sha256=e2f1240dd5688353bbebf41640e92f13f5592acdc4653a0bf52e1e48a364ea15
+semantic_sha256=b62a34519893c5b767a0184a003498fca4d2f08562e45b36e8b7bd0be2f7f606
