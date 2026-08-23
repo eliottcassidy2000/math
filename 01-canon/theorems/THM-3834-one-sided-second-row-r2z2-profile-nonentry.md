@@ -2,7 +2,7 @@
 id: THM-3834
 title: "One-sided second-row R2Z2 profiles do not enter the cubic pseudo-plane Darboux packet"
 status: >
-  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  In the first
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the first
   canonical r^2z^2 extension of THM-3821, the remaining one-sided top
   orientation X=0,Y!=0 admits no Darboux pair.  If the preceding first-row
   profile S is nonzero, the 10/7 tower and complete T integral leave an
@@ -15,7 +15,13 @@ status: >
   the general planar Jacobian problem remain OPEN.
 source: jc_zero_debt_lift / cubic-pseudoplane second-row profile lane, 2026-08-23
 audit: >
-  PENDING INDEPENDENT HOSTILE AUDIT.  The deterministic companion has 40
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
+  The audit rederived both logarithmic-valuation towers, checked the retained
+  fixed-charge term, completeness of the T integrals, every origin-order
+  comparison, the two half-integral resonances, the terminal constant-w
+  reduction, and the exhaustive X/Y/L case split with THM-3821/3828/3829.
+  Normal and optimized runs byte-match the frozen transcript and both raw
+  hashes agree.  The deterministic companion has 40
   active gates checking the Poisson Casimir, monic canonical reduction,
   arm and top buckets, the nonzero-S 10/7 tower, complete T integral, full
   r4 source and symbolic odd origin coefficient, six hostile origin-degree
@@ -41,8 +47,8 @@ hash_basis: raw LF bytes
 
 # THM-3834 -- the one-sided second row is empty
 
-**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  Let `k` be
-an algebraically closed field of characteristic zero and put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k` be an
+algebraically closed field of characteristic zero and put
 
 ```text
 B=k[r,z,e]/(r^2e-z^3+r),
