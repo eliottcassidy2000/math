@@ -2,8 +2,8 @@
 id: THM-3873
 title: "The first non-graph triangular parabola forces a projective companion"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  The first genuinely non-graph polynomial A1
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A first genuinely
+  non-graph polynomial A1
   branch in the marked-root universe has normalization
   (A,C)=(r^2,6(r+r^4)).  For every polynomial transverse quotient, a unique
   formal-profile first mismatch produces a distinct reduced companion whose
@@ -12,12 +12,16 @@ status: >
   has a nonzero perfect-square leading coefficient.
 source: jc_sparse_direct_search / post-THM-3866--3870 non-graph A1 frontier, 2026-08-23
 audit: >
-  SELF-AUDITED exact proof candidate.  The assertion-free companion checks
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit reconstructed
+  the marked profile in the normalization UFD; checked that formal monic
+  division is valid by even/odd T-adic remainder separation; rederived the
+  N=0 signs and all N>=1 degree regimes; and verified that the selected
+  reduced factor has positive T-degree and is neither vertical nor the
+  marked parabola.  The assertion-free companion checks
   the triangular normalization and inverse, fixed-coordinate non-graph
   seams, formal quotient coefficients q_0,...,q_6, the exceptional N=0
   residual, and every degree regime around d=N-1 for N=1,...,6.  Normal and
-  optimized runs byte-match the frozen 244-gate transcript.  Independent
-  hostile audit is still required before promotion.
+  optimized runs byte-match the frozen 244-gate transcript.
 related:
   - THM-3866-all-polynomial-graph-branches-force-projective-companion
   - THM-3870-vertical-axis-polynomial-profile-first-mismatch-companion
@@ -31,8 +35,7 @@ hash_basis: raw LF bytes
 
 # THM-3873 -- the first non-graph A1 branch has no polynomial escape
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an algebraically closed field `k` of
 characteristic zero.  Put
 
 ```text
@@ -341,7 +344,9 @@ F^h=AZ^2-T^2                                                     (37)
 ```
 
 has value `-1` at `P_0`.  Nor is it a boundary component.  Hence `Xi`
-dominates the `A`-line.
+dominates the `A`-line.  Explicitly, a selected factor of `T`-degree zero
+would lie in `k[A]`; over the algebraically closed field, its closure could
+pass through `A=0` only if it were the already excluded factor `A`.
 
 Normalize the closure of `Xi` in `P1_A x P1_T`.  A point over `P_0` is
 absent from the affine normalization because `T/Z` has a pole.  Surjectivity
