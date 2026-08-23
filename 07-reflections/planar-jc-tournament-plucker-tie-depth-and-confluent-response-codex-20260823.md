@@ -5,11 +5,15 @@ equality-seam three-case law below are **PROVED algebraically,
 VERIFIED-EXACT, and INDEPENDENTLY AUDITED** as necessary statements.  The
 two-arm `f=0` closure through total degree six is **FINITE-EXACT and
 independently replayed**.  The companion scripts have normal/optimized byte
-matching as their reproducibility gate.  This note does **not** promote
-[THM-3886](../01-canon/theorems/THM-3886-cusp-residual-equality-seam-second-layer-trichotomy.md),
-which remains a `RESERVED / UNPROVED EMPTY STUB` owned by an earlier
-reservation.  None of these results proves `JC(2)`; the planar Jacobian
-conjecture remains **OPEN**.
+matching as their reproducibility gate.  During the session,
+[THM-3886](../01-canon/theorems/THM-3886-cusp-residual-equality-seam-second-layer-trichotomy.md)
+was independently promoted on `origin/main` as a proof candidate.  This
+session then completed the requested hostile audit: the tie-depth theorem
+independently verifies its leading filtration envelope and stable range, while
+separate full homogeneous replays verify both exceptional `n=1,2` closures.
+THM-3886 is now `PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED`.
+None of these results proves `JC(2)`; the planar Jacobian conjecture remains
+**OPEN**.
 
 Companion:
 
@@ -232,16 +236,50 @@ Over a non-algebraically-closed characteristic-zero field, `(9)` and `(11)`
 retain scalar squareclasses.  Characteristic zero is also needed so that
 `216` and `243` do not vanish.
 
+### Incoming THM-3886 is the first-response specialization
+
+The concurrently promoted THM-3886 writes the next edge symbol as
+
+```text
+R=r_(n+1)=K_2f_(n-1)+xT_n-y^2q.                           (12)
+```
+
+If `R!=0`, then `t=n+1`, so the comparison governing the three cases becomes
+
+```text
+2t-(n+4)=n-2.                                             (13)
+```
+
+This identifies all three of its regimes without a new degree table:
+
+- `n>=3` is supercritical, hence impossible unless `R=0`.  Reducing `R=0`
+  modulo `x` and using `gcd(x,K_2)=1` gives
+  `f_(n-1)=q+xp` and `T_n=-K_2p+15xq`, exactly THM-3886's second gauge jet.
+- `n=2` is the critical case `(11)`, with `q=xu^2` and
+  `R=rho x^3u`.  A separate full-universe replay in this session verifies
+  `v_x(S_12)=8` with `[x^8y^4]S_12=-648u^6`, followed by
+  `v_x(S_11)=3` with `[x^3y^8]S_11=8u^6`.  The equations
+  `S_12=g_6^2`, `S_11=2g_6g_5` are incompatible, for both Kummer signs.
+- `n=1` is subcritical and only says that the constant `q` is a square up to
+  scalar, which is automatic over `k`.  The independent square-root replay
+  then forces successively `c=q`, `v=0`, and `u=15q`, leaving the constant
+  pure gauge `(T,f)=(-Kq,aq)`.  THM-3881's divisibility gate `a|q` excludes it.
+
+Thus the scout audits the complete leading trichotomy and stable-range
+two-jet conclusion, and the separate homogeneous replays discharge both
+exceptional obligations.  This is the independent hostile audit recorded in
+the promoted THM-3886 status.
+
 This is a sharp new necessary trichotomy, but not a closure theorem.  In the
 critical case the next degree already depends on
 
 ```text
 8(A_(n+4)B_(2n+2)+A_(n+3)B_(2n+3))
-+3(r_t^2B_(2n+2)+2r_t r_(t-1)B_(2n+3)),                  (12)
++3(r_t^2B_(2n+2)+2r_t r_(t-1)B_(2n+3)),                  (14)
 ```
 
 which is the first marked response after the tied leading edge.  Formula
-`(12)` is where the THM-3377 lesson becomes literal: the scalar leading
+`(14)` is where the THM-3377 lesson becomes literal: the scalar leading
 response has vanished, so its first jet is load-bearing.
 
 ## 4. Niche result: both exact arms close the `f=0` lane through degree six
@@ -262,7 +300,7 @@ T(0,0)=0.
 If `S(T,0)` is a square,
 
 ```text
-T(-1,y)=0,              T(-4/9,y)=0,                     (13)
+T(-1,y)=0,              T(-4/9,y)=0,                     (15)
 deg T<=6,
 ```
 
@@ -272,32 +310,32 @@ then `T=0`.
 substitution yields
 
 ```text
-S=L^3 [ L(1-6a^3H^2-3a^6H^4)-8a^3KH^3 ].                (14)
+S=L^3 [ L(1-6a^3H^2-3a^6H^4)-8a^3KH^3 ].                (16)
 ```
 
 Modulo `L`, the bracket is
 
 ```text
--8(5/9)^3(y^2-8/27)(H mod L)^3.                          (15)
+-8(5/9)^3(y^2-8/27)(H mod L)^3.                          (17)
 ```
 
-If `L` did not divide `H`, `(14)` would have odd `L`-valuation three.  Hence
+If `L` did not divide `H`, `(16)` would have odd `L`-valuation three.  Hence
 `H=LH_1` and
 
 ```text
-T=aL^2H_1,              H_1(0,0)=0.                      (16)
+T=aL^2H_1,              H_1(0,0)=0.                      (18)
 ```
 
 Since `deg(aL^2)=3`, the degree-six universe has `deg H_1<=3`.  At `x=0`, put
 
 ```text
-T(0,y)=tau,               tau=py+qy^2+ry^3.              (17)
+T(0,y)=tau,               tau=py+qy^2+ry^3.              (19)
 ```
 
 The specialized residual is
 
 ```text
-F=256-96tau^2-8(y^2-4)tau^3-3tau^4.                      (18)
+F=256-96tau^2-8(y^2-4)tau^3-3tau^4.                      (20)
 ```
 
 After choosing the sign of a square root, write
@@ -313,14 +351,14 @@ seven through twelve have an exact 15-element grevlex Groebner basis containing
 ```text
 r^4,
 q^4-6p^2r^2,
-p^5+16p^2r+16pq^2+(448/5)r^3.                             (19)
+p^5+16p^2r+16pq^2+(448/5)r^3.                             (21)
 ```
 
 There is no saturation or division by `p,q,r`.  At every field-valued zero,
-`(19)` gives successively `r=0`, `q=0`, and `p=0`.  Hence `H_1(0,y)=0` and
+`(21)` gives successively `r=0`, `q=0`, and `p=0`.  Hence `H_1(0,y)=0` and
 
 ```text
-H_1=xJ,                  deg J<=2.                        (20)
+H_1=xJ,                  deg J<=2.                        (22)
 ```
 
 Now split by `d=deg_y J`.
@@ -338,10 +376,10 @@ Now split by `d=deg_y J`.
 
   ```text
   t_2=[y^2]T=baL^2x,
-  [y^8]S=-t_2^3(8+3a^2t_2).                              (21)
+  [y^8]S=-t_2^3(8+3a^2t_2).                              (23)
   ```
 
-  At the prime `a=x+1`, `v_a(t_2)=1`, while the second factor in `(21)` is
+  At the prime `a=x+1`, `v_a(t_2)=1`, while the second factor in `(23)` is
   `8 mod a`.  Thus the leading `y` coefficient has odd `a`-valuation three
   and cannot be a square in `k[x]`.
 
@@ -352,6 +390,17 @@ has unique odd `y`-degree five, and the remaining `T` is univariate.
 
 Consequently the first possible nonzero zero/zero-arm candidate has
 `deg T>=7`, equivalently `deg H_1>=4`.  The degree-seven cell is open.
+
+The concurrent
+[THM-3888](../01-canon/theorems/THM-3888-f-zero-equianharmonic-jacobian-and-two-section-integrality.md)
+reframes the generic `f=0` quartic as a rank-six rational elliptic surface
+with a two-boundary-section integrality problem.  The lemma here is a
+complementary finite-degree **descent** checkpoint: generic Mordell--Weil
+geometry does not see simultaneous evaluation at `a=0` and `L=0`, whereas
+those two labelled fibres plus the first `L`-adic response close every global
+polynomial point through degree six.  An effective elliptic height argument
+should carry these evaluation maps as sidecars rather than expecting generic
+two-section integrality alone to enforce `k[x,y]` descent.
 
 ## 5. Wildcard: confluence, not a tournament, at the sextic cusp
 
@@ -366,7 +415,7 @@ no collection of geometric branches to orient.  In `m/m^2`,
 
 ```text
 (alpha u+beta v)^2
-  = alpha^2u^2+2alpha beta uv                 mod m^3.    (22)
+  = alpha^2u^2+2alpha beta uv                 mod m^3.    (24)
 ```
 
 Thus `kv` is the unique square-null tangent line.  But the named complementary
@@ -374,7 +423,7 @@ coordinate `ku` is not intrinsic: for `t!=1/2`,
 
 ```text
 u -> u+tv,
-v -> (1-2t)v-(t/4)u^2                                    (23)
+v -> (1-2t)v-(t/4)u^2                                    (25)
 ```
 
 preserves all three defining relations and has invertible tangent determinant
@@ -402,7 +451,7 @@ coefficient level:
 
 ```text
 [x^w]Jac(P,Q)
-  = sum_(u+v=w+(1,1)) det(u,v) p_u q_v.                   (24)
+  = sum_(u+v=w+(1,1)) det(u,v) p_u q_v.                   (26)
 ```
 
 An edge list alone misses the four-exponent, three-perfect-matching Plucker
@@ -412,19 +461,21 @@ proof.
 
 ## 6. Generated next tasks
 
-1. **Reserved-canon reconciliation.**  Give the owner of THM-3886 the exact
-   companion and independent audit; promote only after checking their intended
-   statement and dependency graph.
-2. **Critical first jet.**  Expand `(12)` in the normal form `(11)` and test
-   whether its UFD parity produces a fourth obstruction or a recursive square
-   carrier.  This is the cheapest decisive continuation of the breakthrough.
-3. **Subcritical parametrization.**  Substitute `q=s^2` into the full residual,
+1. **Stable third gauge jet.**  For `n>=3`, impose the two-jet alignment
+   following `(13)`, expand the first surviving part of `(14)`, and test
+   whether the same tie-depth mechanism forces a third jet or exposes a
+   genuine transverse square carrier.
+2. **Subcritical parametrization.**  Substitute `q=s^2` into the full residual,
    retain `r` rather than gauge-peeling it away, and compute the first degree at
    which `A` transport debt reappears.
-4. **Degree-seven two-arm cell.**  Put `H_1` quartic in `(16)`.  The `x=0`
+3. **Degree-seven elliptic/descent cell.**  Put `H_1` quartic in `(18)`.  The `x=0`
    specialization now has degree four, while mixed `y^3`/`y^4` channels can
-   tie rather than die by a unique odd degree.  Retain the full bivariate
-   `(a,L)`-adic response instead of growing a fixed arm-jet bank.
+   tie rather than die by a unique odd degree.  Express the same shell in
+   THM-3888's elliptic coordinates and retain the full bivariate `(a,L)`-adic
+   response instead of growing a fixed arm-jet bank.
+4. **Off-equality degree region.**  Rebuild the seven-macro-term degree ledger
+   for `deg T>=deg f+2`, using the weighted gain star to identify the first
+   genuine tie rather than applying another coarse total-degree maximum.
 5. **Confluent sextic response.**  Build the Macaulay dual on the displayed
    six-element basis, then compute tangent space, cokernel, first nonzero
    obstruction order, and the fixed descent character.  A scalar resultant is

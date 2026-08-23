@@ -2,7 +2,7 @@
 id: THM-3886
 title: "Cusp residual equality-seam second-layer trichotomy"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.  On
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On
   the THM-3884 equality seam, the next filtration layers have three exact
   regimes.  For deg f>=3 they force a second full lift-gauge jet.  For
   deg f=2 the first collision leaves one Kummer-twisted symbol, but the next
@@ -13,15 +13,17 @@ status: >
   or termination is claimed.
 source: jc_quartic_c3_construct / post-THM-3884 second-layer filtration, 2026-08-23
 audit: >
-  PROVISIONAL EXACT PROOF CANDIDATE.  The companion verifies the filtered
-  residual and degree collisions, both universal next-symbol formulas, the
-  Kummer UFD normal form and its next-layer x-adic contradiction, and the
-  degree-one square-root remainders through the exact pure-gauge endpoint.
-  Normal and optimized runs must byte-match the frozen transcript.
-  Independent audit must recheck the n=1 homogeneous recursion, the n=2
-  parameterization and consecutive x-adic orders, n>=3 collision exhaustion,
-  and the warning that peeling a gauge jet does not preserve the square
-  equation.
+  INDEPENDENT HOSTILE AUDIT PASS (tournament-jc-breakthrough, 2026-08-23).
+  The audit rederived the five-vertex Plucker gain packet and the complete
+  tie-depth degree envelope, independently proving the n>=3 collision
+  exhaustion and second gauge jet.  It parametrized every lower homogeneous
+  component at n=2, reproduced v_x(S_12)=8 and v_x(S_11)=3 with their unique
+  nonzero coefficients for both Kummer signs, and replayed the n=1
+  square-root recursion through the forbidden constant pure gauge without
+  dividing by a candidate coefficient.  It also rechecked the associated-
+  graded-only scope and the non-invariance of square survival under gauge
+  peeling.  Normal and optimized companion runs byte-match the frozen
+  transcript.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
   - THM-3884-cusp-residual-total-degree-leading-gauge-filtration
@@ -37,7 +39,7 @@ hash_basis: raw LF bytes
 
 # THM-3886 -- the equality seam closes in degrees one and two
 
-**PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Use the
 THM-3881 notation
 

@@ -6,8 +6,8 @@ tie_depth_subcritical=NECESSARY_n_odd_and_q_square
 tie_depth_critical=NECESSARY_q=x*s^2;r_t=rho*x^3*s;rho^2=-216
 f_zero_both_arms_zero_degT_at_most_5=T_ZERO
 sextic_named_u_v_tournament=REFUTED_BY_COORDINATE_SLIDE
-THM3886_status=RESERVED_NOT_PROMOTED
+THM3886_status=PROVED_VERIFIED_EXACT_INDEPENDENTLY_HOSTILE_AUDITED
 JC2_status=OPEN
-semantic_sha256=9a5602bd5e4801a34495b48e6de1e816fda5f17dd13c43fb5c78e3dcd427c7ff
+semantic_sha256=d1efd0b11f3f6ff0dec3218ea3ccc0efd1c5b612ca0fc54eb1ac261ec9756e68
 CHECKS=119
 RESULT=PASS

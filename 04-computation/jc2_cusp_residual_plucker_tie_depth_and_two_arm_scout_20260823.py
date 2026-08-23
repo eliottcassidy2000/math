@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Exact scout for the planar-JC Plucker tie depth and two-arm f=0 lane.
 
-This is a research companion, not a promotion of the reserved THM-3886 stub.
-It verifies the exact skew-gain packet behind THM-3881, the proposed
-second-layer leading-degree trichotomy on the THM-3884 equality seam, a new
+This research companion independently verifies the exact skew-gain packet
+behind THM-3881 and the leading tie-depth envelope underlying the subsequently
+promoted THM-3886 proof candidate.  It also verifies a new
 degree-five closure in the zero/zero-arm f=0 sector, and a hostile check
 showing why the sextic cusp cannot use the named u/v coordinates as an
 intrinsic ordinary tournament.
@@ -297,7 +297,7 @@ semantic = {
     },
     "niche": "f=0, both exact arms zero, degT<=5 implies T=0",
     "wildcard": "sextic named u/v tangent pair is coordinate-dependent; ordinary tournament rejected",
-    "scope": "necessary laws and finite cells only; THM3886 remains reserved; JC2 open",
+    "scope": "necessary laws and finite cells only; THM3886 exceptional closures separately hostile-audited; JC2 open",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -315,7 +315,7 @@ print("tie_depth_subcritical=NECESSARY_n_odd_and_q_square")
 print("tie_depth_critical=NECESSARY_q=x*s^2;r_t=rho*x^3*s;rho^2=-216")
 print("f_zero_both_arms_zero_degT_at_most_5=T_ZERO")
 print("sextic_named_u_v_tournament=REFUTED_BY_COORDINATE_SLIDE")
-print("THM3886_status=RESERVED_NOT_PROMOTED")
+print("THM3886_status=PROVED_VERIFIED_EXACT_INDEPENDENTLY_HOSTILE_AUDITED")
 print("JC2_status=OPEN")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")
