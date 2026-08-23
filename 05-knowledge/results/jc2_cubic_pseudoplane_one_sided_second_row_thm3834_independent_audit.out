@@ -1,0 +1,8 @@
+audit=THM-3834-independent-hostile-checker
+orientation=ordered_direct;swap_not_in_fixed_charge_slice
+S_nonzero=UFD_10_7;gamma_zero_nonzero;denominator_free_r4;d0_and_repeated_root_unit
+S_zero=shifted_5_2;unshifted_negative_control;W_p_g_zero_nonzero;terminal
+partition=THM3821+THM3828+THM3829+THM3834;fixed_ansatz_only
+semantic_sha256=4e1cd11a1566e8fdce91a29d457b9fd12994cb3c5cf619a241e44c61d94eccc8
+CHECKS=101
+RESULT=PASS

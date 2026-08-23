@@ -1,0 +1,11 @@
+audit=two_cube_all_fixed_prime_product_amplification
+candidate_sha256=3b6b8f4118ad4b383328cab7d5adf551fd43dda26e7d65adb4b6870acd47bd2a
+finite_rows=7;finite_values=644;primitive=467;nonprimitive=177
+collision_cases=25;banks=empty_through_four;orders=1..6
+boundary=j1_separate;j2_exact;exponent2_safe;exponent3_hostile
+liminf_constant=2/(5*2^j*j!);fixed_j_before_X_limit
+growth=for_each_real_R:H(X)/(loglogX)^R_to_infinity
+scope=no_support_asymptotic_or_residue
+semantic_sha256=ae6aa4dd88588a96cf9f4e4a4ebbce62ac4c51c27d8ce1c8c2cb117563028082
+GATES=5402
+RESULT=PASS;J1_EMPTY_BANK_FORMULA_REPAIRED

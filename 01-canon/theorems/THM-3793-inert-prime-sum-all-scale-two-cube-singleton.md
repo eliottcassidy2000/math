@@ -8,8 +8,11 @@ status: >
   exactly one positive distinct two-cube representation.  Arbitrary inert
   prime powers may occur in the common scale g.  An explicit two-prime
   subfamily gives H(Z^6)>=(A(Z)^2-B(Z))/5 and
-  liminf H(X)/(log log X)^2>=1/20.  The finite LRC address sidecar is
-  injective but has no loneliness consequence.
+  liminf H(X)/(log log X)^2>=1/20.  More generally, products of every fixed
+  number j of distinct inert primes give liminf
+  H(X)/(log log X)^j>=2/(5*2^j*j!); therefore H(X) dominates every fixed
+  real power of log log X.  No support asymptotic follows.  The finite LRC
+  address sidecar is injective but has no loneliness consequence.
 source: root / cross_frontier_live_scout inert-prime all-scale lane, 2026-08-23
 audit: >
   INDEPENDENTLY HOSTILE-AUDITED by root, 2026-08-23.  The audit rederived the
@@ -19,7 +22,14 @@ audit: >
   and retained split-prime and exponent-three hostiles.  MISTAKE-450's
   downstream terminology repair now reports 456,690 unoriented supports and
   913,380 oriented assignments separately.  The assertion-free companion
-  passes normally and under optimization against its frozen transcript.
+  passes normally and under optimization against its frozen transcript.  A
+  second hostile audit independently checked the all-fixed-order product
+  amplification, including primitive/nonprimitive shells, empty and
+  undersized prime banks, ordered collision union bounds, the j=1 endpoint,
+  exact liminf constants and exponent-three hostile.  It caught and repaired
+  the provisional undefined 0*B*A^(-1) display at j=1.  The repaired primary
+  and independent companions have 14,452 and 5,402 active gates; normal,
+  optimized and frozen streams agree after LF normalization.
 depends_on:
   - THM-463-two-cube-representations-are-a-divisor-property-on-the-split-axis
   - THM-3730-positive-distinct-two-cube-support-abscissa
@@ -30,6 +40,16 @@ script: 04-computation/two_cube_inert_cubefree_singleton_thm3793.py
 output: 05-knowledge/results/two_cube_inert_cubefree_singleton_thm3793.out
 script_sha256: fecde0faf77e919a4d643d2ebede6822fb5b2749b481d2691e43a913a0a84fe9
 output_sha256: e40beb9a11f934846dbb44938f443462b14d40fb1fd09af3b89ceeb97e15230c
+amplification_script: 04-computation/two_cube_all_fixed_prime_product_amplification_thm3793.py
+amplification_output: 05-knowledge/results/two_cube_all_fixed_prime_product_amplification_thm3793.out
+amplification_script_sha256: 3b6b8f4118ad4b383328cab7d5adf551fd43dda26e7d65adb4b6870acd47bd2a
+amplification_output_sha256: 413ebb4f472d98c691d536c9df2f025066efea4e24c0d245c323c172acb2de54
+amplification_semantic_sha256: 083431ef666f4c7a8435da7015cf19671d17e62108f95d89455252283aeb4d41
+amplification_independent_script: 04-computation/two_cube_all_fixed_prime_product_amplification_independent_audit_thm3793.py
+amplification_independent_output: 05-knowledge/results/two_cube_all_fixed_prime_product_amplification_independent_audit_thm3793.out
+amplification_independent_script_sha256: e32535c2fa1efb95c0ad5252387edfb0ac5f1d3a5073b042b3388a1971d40964
+amplification_independent_output_sha256: bc0fafc4ae54c9af3edc167e54bd0934a3c8678ac8d812121a3607316c870bcc
+amplification_independent_semantic_sha256: ae6aa4dd88588a96cf9f4e4a4ebbce62ac4c51c27d8ce1c8c2cb117563028082
 hash_basis: raw LF bytes
 ---
 
@@ -122,6 +142,38 @@ liminf_(X->infinity) H(X)/(log log X)^2 >= 1/20.      (6)
 
 This is a lower bound from an explicit singleton subfamily.  It asserts no
 support counting asymptotic, pole, residue, or collision-tax asymptotic.
+
+### All fixed orders
+
+For each fixed integer `j>=1`, let `e_j(Z)` be the degree-`j` elementary
+symmetric sum of the numbers `1/p`, for `p in P(Z)`.  Then
+
+```text
+H(Z^(3j)) >= (2/5)e_j(Z).                             (6a)
+```
+
+For `j=1` this reads `H(Z^3)>=(2/5)A(Z)`.  For `j>=2`,
+
+```text
+H(Z^(3j))
+ >=2/(5j!)[A(Z)^j-C(j,2)B(Z)A(Z)^(j-2)].             (6b)
+```
+
+Consequently
+
+```text
+liminf_(X->infinity) H(X)/(log log X)^j
+ >=2/(5*2^j*j!)                                      (6c)
+```
+
+for every fixed integer `j>=1`.  In particular, for every fixed real `R`,
+
+```text
+H(X)/(log log X)^R -> infinity.                       (6d)
+```
+
+The quantifier is pointwise in `R`; no choice `j=j(X)` or uniform-in-`j`
+claim is made.
 
 ## 2. Proof of the singleton theorem
 
@@ -288,7 +340,50 @@ so the lower bound for `A(Z)` in (4) is nonnegative and may be squared.
 Substitution into (16), followed by `B(Z)<1/4`, proves (5).  Dividing by
 `(log log X)^2` and taking the lower limit gives (6).
 
-## 4. Exact boundary hostiles
+## 4. Proof of the all-fixed-order amplification
+
+Choose an unordered set of `j` distinct primes from `P(Z)` and put
+
+```text
+d=product_(p in S)p.
+```
+
+For every `1<=x<d/2`, its common scale is `g=gcd(x,d)` and its primitive
+pair sum is `d/g`, which is squarefree with only inert prime divisors.
+The singleton theorem applies.  It makes every value in the row distinct
+and also makes rows from different prime products disjoint.  Moreover
+
+```text
+x^3+(d-x)^3<d^3<=Z^(3j),
+sum_(1<=x<d/2)(x^3+(d-x)^3)^(-2/3)
+ >(d-1)/(2d^2)>=2/(5d).                               (17)
+```
+
+Summing `(17)` over unordered prime sets proves `(6a)`.  Expand `A^j` as
+the mass of all ordered `j`-tuples.  The distinct tuples have mass `j!e_j`.
+For each pair of positions, the collision mass is `BA^(j-2)`; the union
+bound therefore gives, for `j>=2`,
+
+```text
+j!e_j>=A^j-C(j,2)BA^(j-2),                            (18)
+```
+
+which proves `(6b)`.  The separate `j=1` identity avoids any formal
+`0*B*A^(-1)` at an empty prime bank.
+
+Fix `j`, put `Z=X^(1/(3j))`, and use
+
+```text
+log log Z=log log X-log(3j),
+A(Z)>=1/2 log log Z-C_P,          B(Z)<1/4.           (19)
+```
+
+The collision correction in `(18)` is
+`A^j[1-C(j,2)B/A^2]`, whose bracket tends to one.  This proves `(6c)`.
+Given a fixed real `R`, choose a fixed integer `j>R` before taking the
+limit; `(6c)` then proves `(6d)`.
+
+## 5. Exact boundary hostiles
 
 The split-prime condition cannot be discarded:
 
@@ -316,7 +411,7 @@ The theorem's condition is sufficient, not necessary.  It makes no converse
 claim and does not classify representations when `3`, a split prime, or an
 inert exponent at least three enters the primitive pair-sum.
 
-## 5. Finite support-two LRC address sidecar
+## 6. Finite support-two LRC address sidecar
 
 This paragraph is a typed finite corollary, not an LRC theorem.  THM-3743's
 support-two branch has `19,314` unordered coprime coefficient ratios
@@ -335,7 +430,7 @@ recovers `(a,b)`, hence its ordered Christoffel word.  It does **not** preserve
 the other speeds, gcd scale, owner, phase, arrival, or the loneliness
 predicate.  It excludes no LRC(14) row.
 
-## 6. Exact verification
+## 7. Exact verification
 
 The assertion-free companion performs three complementary finite views:
 
@@ -350,27 +445,46 @@ The assertion-free companion performs three complementary finite views:
    three hostiles, the complete `l1<=356` LRC ratio census, and exact rational
    ordered/unordered identities through inert primes at most `5000`.
 
+The all-fixed-order primary and independent companions additionally check
+the symmetric collision inequality, empty and undersized banks, complete
+small primitive and nonprimitive fibres, the height conversion, every
+constant through `j=12`, and the exponent-three hostile.
+
 Run
 
 ```text
 python -B 04-computation/two_cube_inert_cubefree_singleton_thm3793.py
-python -B -O .scratch/cross_frontier_live_scout_20260823/two_cube_inert_cubefree_singleton_probe.py
+python -B -O 04-computation/two_cube_inert_cubefree_singleton_thm3793.py
+python -B 04-computation/two_cube_all_fixed_prime_product_amplification_thm3793.py
+python -B -O 04-computation/two_cube_all_fixed_prime_product_amplification_thm3793.py
+python -B 04-computation/two_cube_all_fixed_prime_product_amplification_independent_audit_thm3793.py
+python -B -O 04-computation/two_cube_all_fixed_prime_product_amplification_independent_audit_thm3793.py
 ```
 
 and compare with
 
 ```text
 05-knowledge/results/two_cube_inert_cubefree_singleton_thm3793.out
+05-knowledge/results/two_cube_all_fixed_prime_product_amplification_thm3793.out
+05-knowledge/results/two_cube_all_fixed_prime_product_amplification_independent_audit_thm3793.out
 ```
 
 The normal and optimized streams line-normalize exactly to the frozen
 transcript.  Raw SHA-256 of the stored files:
 
 ```text
-4b5e7052d0698a86e43aab4f6c99619aa6014abe2315456122ce02ba6db1adea
+fecde0faf77e919a4d643d2ebede6822fb5b2749b481d2691e43a913a0a84fe9
   two_cube_inert_cubefree_singleton_thm3793.py
-3c4d8cd4d375ea823bc6649ce79730ff4e78b04179884034a1c82d13cd37459a
+e40beb9a11f934846dbb44938f443462b14d40fb1fd09af3b89ceeb97e15230c
   two_cube_inert_cubefree_singleton_thm3793.out
+3b6b8f4118ad4b383328cab7d5adf551fd43dda26e7d65adb4b6870acd47bd2a
+  two_cube_all_fixed_prime_product_amplification_thm3793.py
+413ebb4f472d98c691d536c9df2f025066efea4e24c0d245c323c172acb2de54
+  two_cube_all_fixed_prime_product_amplification_thm3793.out
+e32535c2fa1efb95c0ad5252387edfb0ac5f1d3a5073b042b3388a1971d40964
+  two_cube_all_fixed_prime_product_amplification_independent_audit_thm3793.py
+bc0fafc4ae54c9af3edc167e54bd0934a3c8678ac8d812121a3607316c870bcc
+  two_cube_all_fixed_prime_product_amplification_independent_audit_thm3793.out
 ```
 
 The proof, not the finite range, carries the all-scale quantifier.

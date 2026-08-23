@@ -1,4 +1,4 @@
-# Current Mathematical Frontier
+# Current Frontier
 
 **Rolling state — 2026-08-23.** Links are proof sources; composition and residuals live here. Statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**, **REFUTED**, **SUPERSEDED**.
 
@@ -19,9 +19,8 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
   and ledger; THM-2148/2168 reach scalar `5+3`.  THM-2054 decorrelates
   recorded margins at `H=2^19`, subject to MISTAKE-080/082's shape-specific
   tori.  THM-1252--1274 saturate six-comb arguments, leaving endpoint/child
-  transport as the live move.
-  Routes: THM-2081, THM-2082, THM-2083, THM-2085/2087, THM-2085, THM-2086,
-  THM-2088, THM-2089, THM-2090, THM-2092.
+  transport as the live move. Routes: THM-2081, THM-2082, THM-2083,
+  THM-2085, THM-2086, THM-2085/2087, THM-2088, THM-2089, THM-2090, THM-2092.
 
 ### Exact live obligation
 
@@ -35,16 +34,13 @@ mode/cochain laws. THM-3414--3416 give ZMC rank-4/5/6 bases; THM-3425 gives
 primitive cap-six support; [THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md)
 allows 15-atom cap-seven support only at zero current.
 
-Newest exact interface: THM-3665--3674 and THM-3701/3705/3706/3710/3713/3718.
-It supplies rank-12 charts, bulk/endpoint tariff, deep-colour defects, both
-detectors, and an excluded-target selector; canonical owner/root/word transport
-and semantic arrival remain missing (MISTAKE-281/300/310/313); THM-2363/THM-2368
-do not recover the `28,393` semantic roots.  On the thirty-chart control,
-ordered Euclidean words plus a basepointed grid coboundary reconstruct the
-coefficient/jet/residual packet, but stripping exits support and increments
-remain chart-dependent.  THM-3731 proves that `Q` indexes
-165 valuation orbits; repeated orbits obstruct a valuation-only equivariant
-owner, while pairwise-distinct positive coefficients repair that narrow defect.
+THM-3665--3674 and THM-3701/3705/3706/3710/3713/3718 supply rank-12 charts,
+tariffs, detectors and a selector. Owner/root/word transport and semantic
+arrival remain missing (MISTAKE-281/300/310/313); the thirty-chart Euclidean
+word/coboundary reconstructs one packet, but stripping is chart-dependent.
+THM-2363/THM-2368 do not recover the `28,393` semantic roots.
+THM-3731 gives 165 valuation orbits: repeats obstruct a valuation-only owner;
+pairwise-distinct positive coefficients repair only that narrow defect.
 [THM-3743](../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md)
 adds `l1<=356` but needs slice/owner sidecars; [THM-3742](../01-canon/theorems/THM-3742-square-triangular-pell-mod13-central-sign-projective-cycle.md)
 is a wrong-torsor Pell `C14`; [THM-3744](../01-canon/theorems/THM-3744-pell-prefix-loneliness-constant-carry-exact-formula.md)
@@ -61,9 +57,12 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-3793/[3825](../01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md)
   decode the `5,855` inert ratios/scales; THM-3818 adds `456,690` supports,
   `913,380` orientations and the pair-sum grid.  Its tags have square parity
-  and 31 Pell points.  Its
-  rows are graphic: rank eleven forces decoder disconnection; connected
-  incidence gives `max n_i<=355^12`.  FINITE-EXACT,
+  and 31 Pell points.  Its rows are graphic: connected incidence gives
+  `max n_i<=355^12`, while rank-eleven incidence has exactly two components.
+  If the full height-`91^6` code stays rank eleven, every crossing row is
+  forbidden, every internal pair is bounded, and packets recover both scales
+  unless one component is a singleton, where an exact congruence fibre remains.
+  FINITE-EXACT,
   `(9,13;76,132)` remains the unique tripling edge through pair sum `10^6`
   (independent control `5000`).  This is arithmetic only: no owner, off-grid
   arrival, row exclusion or loneliness follows.
@@ -86,11 +85,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   scans; AP13 and its lift share germs but not maxima.
 - THM-2058 preserves every fixed lift depth but escapes at `47/113`;
   finite jets/Farey rays fail.
-- THM-3333/3334/3336/3339/3341/3345--3347 type the Gaussian/Farey/Pell
-  U-spine, root cube, Gram, and ancestry. THM-3353/3358 compile lanes;
-  THM-3356/3357 give shells/Horn. THM-3359/3454/3455/3457 give periodic mass
-  and static `U`-ray metric/rank/preorder. Origin, content, unit, owner/phase,
-  and time remain sidecars; no global transduction, LRC row, or JC flux.
+- THM-3333--3347 and THM-3353--3457 type the Gaussian/Farey/Pell spine,
+  compilers, shells, periodic mass and static ray order. Origin, content,
+  owner/phase and time remain sidecars; no global transduction or LRC row.
 - THM-3459 detects mask overlap, but the `q=6` control pair has identical
   masks; the star cochain remains.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
@@ -258,16 +255,17 @@ THM-3359 gives periodic modular supports; THM-2352 gives the q-adic plateau.
 [THM-3510](../01-canon/theorems/THM-3510-binary-shortlex-equal-level-count-log-density-boundary.md) is sharp: equal counts allow two densities or none.
 [THM-3730](../01-canon/theorems/THM-3730-positive-distinct-two-cube-support-abscissa.md)
 gives indexed abscissa `2/3`.  THM-3793/3825 give an inert-scale singleton
-family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
+family and decoder. Products of every fixed number `j` of distinct inert
+primes give
+`liminf H(X)/(log log X)^j>=2/(5*2^j*j!)`; hence `H` dominates every fixed
+real power of `log log X`. This is still no support asymptotic or residue.
 
 ### Established landmarks
 
-- Hostile-audited [THM-2433](../01-canon/theorems/THM-2433-operation-fibre-deletion-incidence-and-startup-scar.md) gives the finite-hole Burnside calculus: additive scar stabilizes at three lost pairs; multiplication propagates along `4N,6N`; transitive closures, four exceptional covers, and artificial twin-centre atom `12` are exact. Chain difference and divisor Möbius inversion are analogues, not Stirling.
+- Hostile-audited [THM-2433](../01-canon/theorems/THM-2433-operation-fibre-deletion-incidence-and-startup-scar.md) gives finite-hole Burnside calculus: exact additive/multiplicative scars, covers and twin-centre atom `12`; chain difference and divisor Möbius are analogues, not Stirling.
 - Hostile-audited [THM-2438](../01-canon/theorems/THM-2438-poisson-newton-ternary-half-and-harmonic-divisor-incidence.md)
-  gives the exact Poisson--Newton EGF conjugacy. Central-binomial Newton
-  coefficients are central trinomials, the two Pascal halves become ternary
-  walks, and reciprocal support is limiting mean divisor incidence/fibre scar.
-  Abel--Dini/Bertrand is the boundary; Cauchy and Dirichlet convolution differ.
+  gives exact Poisson--Newton conjugacy, ternary Pascal walks and limiting
+  divisor-incidence scar; Abel--Dini/Bertrand is the boundary.
 - [THM-3359](../01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md)
   gives periodic modular C-finite supports, harmonic residue `delta=h/p`, and
   scar `delta-delta^2/2`; [THM-3364](../01-canon/theorems/THM-3364-cyclotomic-boolean-clocks-berggren-t4-xor-and-crt-phase.md)
@@ -313,12 +311,9 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
 ## Other active portfolio
 
 - **AMM:** THM-3588 forces `R=512` departures by `(35,38,39,42,44)`.
-  At `R=32768`, observer-retaining FINITE-EXACT Rule-A gives
-  `854:DIE@8246`, `855:CLOSED@20238`, `856:CLOSED@20233`; 32,830-gate
-  normal/`-O` and small `-O0/-O3` controls match. Thus `854/855` is a
-  one-step local fixed-Rule-A transition.
-  No monotonicity in `D0`, global feasibility, or value of `C*` follows;
-  those remain OPEN.
+  At `R=32768`, FINITE-EXACT Rule-A gives `854:DIE@8246`,
+  `855:CLOSED@20238`, `856:CLOSED@20233`; thus `854/855` is a one-step local
+  transition. No `D0` monotonicity, global feasibility or `C*` value follows.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
@@ -344,7 +339,8 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
   genus-three hyperelliptic equality sidecars (row poles `2/1` only at
   equality), and the saturated three-cubic/two-quadratic spectral atlas.
   THM-3832/3835 prove the marked ratio `z=h/k` is birational but genuinely
-  rational, in reduced form, after every constant `PGL2` row change.
+  rational, in reduced form, after every constant `PGL2` row change; `k=0`
+  is an exact `G_m` simple-pole arm.
   THM-3836 is the current all-degree core:
   `P=3h^3+7h^2k+k^3=CS`, `(C,S)=1`, and
   `kJ(h,C)-hJ(k,C)=lambda P`; some cubic pencil member must split into
@@ -371,18 +367,12 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
   but no section/transfer; THM-3306 sidecars are FINITE-EXACT only.
 - **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
   all `2665` residuals in `7395` rows (`2384` divisor, `281` rho).
-  `d=6518` needs `p=29`, refuting `p<=23`. FINITE-EXACT at `d=10001`:
-  divisor-2 survivors miss divisor-5 barcode `{3125,6250}`; all seven exits
-  fail, without a general-`d` claim.
-  THM-3182/3185/3188/3191 give the prime reset, thickness and Clifford laws;
-  THM-3210 blocks monotone stairs. THM-3249--3314 leave endpoint ancestry and
-  positivity OPEN. THM-3303/3328 split constant-J into sheet/cone data;
-  THM-3465/3470 close pure nonreal characters and one mixed moment-five shear.
-  General support `5` and mixed cells remain OPEN. THM-3466's length-two Krylov
-  clutch need not separate; THM-3732's `F12/F13` seam fails on two edges, though
-  identity rows retain one corridor. HFC-null needs orientation/basepoint; no
-  bridge joins them. THM-3357/3365/3362 are controls; HFC(3), FC(3), `JC(2)`
-  and arbitrary faces remain OPEN.
+  `d=6518` needs `p=29`; the FINITE-EXACT `d=10001` barcode has no general-`d`
+  force. THM-3182--3314 give reset/thickness/Clifford and sheet/cone data but
+  leave endpoint ancestry/positivity. THM-3465/3470 close named character/shear
+  cells; support `5` and mixed cells remain OPEN. THM-3466 need not separate;
+  THM-3732's `F12/F13` seam fails on two edges. HFC-null still needs an
+  orientation/basepoint; HFC(3), FC(3), `JC(2)` and arbitrary faces remain OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
@@ -407,7 +397,7 @@ Reusable bridges (not literal object identifications):
 | Bulk / boundary / null | THM-2058 | Large-prime grids are strict; tight support uses finitely many level-14 clocks; subthreshold packets vanish. |
 | Operation-response | tournament/sequence/FC/Rule 30 | THM-3315/3322/3324 give walks and Gram; THM-3732/3511 require seam and next-operation congruence tests. |
 | Actual atlas / resonance | THM-3791/3797/3802 | `H^2_dR=E/k` keeps the resonant coefficient; lower contacts and the affine cover are not recovered. |
-| Reversible address | THM-3743/3793/3825 | Inert-scale tagged cube decoder; full LRC semantics lost. |
+| Reversible address | THM-3743/3793/3818/3825 | Cube packets recover a two-component scale quotient except for an exact singleton congruence fibre; owner/arrival/loneliness are still lost. |
 | Amplitude lattice | THM-3804/3824 | Lift and fixed-division tariffs, not adaptive/projective chronology. |
 | `Z/3` deletion lattice | THM-3785/3790/3808 | Visible `1+2` principalizes; deleting class-one rays yields `ker(sum mod 3)` units, not a surface map. |
 | Positive filtration | THM-3816 | Domain `gr` and `F_0=k` force `S*=k*`; complement units need divisor classes, and affineness is separate. |

@@ -1,0 +1,8 @@
+THM-3818 TWO-COMPONENT QUOTIENT / PACKET-FIBRE EXACT PROBE
+Q=567869252041
+B=322475487413604782665681
+two_nontrivial={"component_sizes":[2,11],"decoder_edges":25,"decoder_rank":11,"dominance_bound":3407215512246,"max_pair_heights":[3,40],"recovered_scales":[1,4398046511104],"row":[1,3,4398046511104,13194139533312,17592186044416,39582418599936,43980465111040,70368744177664,83562883710976,96757023244288,105553116266496,145135534866432,175921860444160],"row_sum":796046418509828,"safe_time":"1/14"}
+singleton={"component_sizes":[1,12],"decoder_edges":29,"decoder_rank":11,"dominance_tail_count":14077914720208,"main_component_sum":5592405,"packet_lcm":22906142720,"singleton_pair":[4763632550625148929,4763632573531291649],"singleton_residue":9906946049}
+slope_control={"coefficient_height":3,"crossing_rows":1008,"positive_reduced_slopes":95,"realized_rows_at_scale_2_3":12}
+requirements=1742
+semantic_sha256=3c937069964a6e2134e7da6c6009d1b3b71eecdbc2d5260807ea34bffe69ab3b

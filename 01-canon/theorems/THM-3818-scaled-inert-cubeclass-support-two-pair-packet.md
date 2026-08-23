@@ -15,8 +15,13 @@ status: >
   increment.  The full decoder-row matroid is exactly graphic: rank eleven
   forces a disconnected pair graph, while connected incidence gives the sharp
   finite bound max(n_i)<=355^12.  Common exposed facets obey a separate
-  two-level orientation law.  This is an all-scale address theorem, not an LRC
-  exclusion: the grid can be empty while an off-grid loneliness time exists.
+  two-level orientation law.  In the exact two-component rank-eleven branch,
+  the orthogonal integer lattice has two scale coordinates; if the full
+  height-91^6 support-three code still has rank eleven, every bounded crossing
+  row is forbidden and every internal pair has height at most 91^6.  Full
+  packets recover both scales unless one component is a singleton.  This is
+  an all-scale address theorem, not an LRC exclusion: the grid can be empty
+  while an off-grid loneliness time exists.
 source: root + lrc_reversible_address / incoming-signal extension, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (thm3791-hostile-audit, 2026-08-23).  The
@@ -37,9 +42,14 @@ audit: >
   triangle circuits, every subset of a mixed five-speed hostile, the sharp
   thirteen-vertex path, and independent rank/facet controls.  Its 36,461,514
   active requirements agree under normal, optimized, and frozen replay.
+  The two-component extension adds 1,742 assertion-free exact requirements:
+  it checks the quotient slope atlas, a safe 2+11 row with both scales
+  recovered, and a 12+1 singleton packet fibre of size 14,077,914,720,208.
+  Normal, optimized, and frozen streams agree.
 depends_on:
   - THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction
   - THM-3793-inert-prime-sum-all-scale-two-cube-singleton
+  - THM-2052-finite-height-forces-high-rank-bounded-relation-code
 related:
   - THM-778-centered-christoffel-endpoint-skew-product
 script: 04-computation/lrc14_scaled_inert_cubeclass_pair_packet_thm3818.py
@@ -71,6 +81,11 @@ graphic_output: 05-knowledge/results/lrc14_cube_covector_graphic_matroid_extensi
 graphic_script_sha256: 1abba30659a81b8524b5417ff1c7c2a7915a042b365efead087a838c4c8d9497
 graphic_output_sha256: 6c985414db35c3ba05f20d6e800eba5efa2f394a4826ccb772e30d7c119be64e
 graphic_semantic_sha256: c98a37e4f7bf777bf6c3027bdcf4f6bc20daa83226f382132bf68f9b3ac9165d
+two_component_script: 04-computation/lrc14_two_component_decoder_quotient_extension_thm3818.py
+two_component_output: 05-knowledge/results/lrc14_two_component_decoder_quotient_extension_thm3818.out
+two_component_script_sha256: 2ce52b1a45c3c4416e367f8177b288f7f9dc7ac651bf58ee036137e17f2208b2
+two_component_output_sha256: df4b1c86df9f9871997c41bc9d236429d0ca61fae4125bfe0ce51bfff78004e6
+two_component_semantic_sha256: 3c937069964a6e2134e7da6c6009d1b3b71eecdbc2d5260807ea34bffe69ab3b
 hash_basis: raw LF bytes
 ---
 
@@ -371,10 +386,128 @@ then total speed is
 This is the first literal mechanism by which repeated cube-addressed rows
 fail to add rank.  The graph forgets cube values, pair-sum grids, owner,
 arrival, cross-component scale coupling, off-grid time, and loneliness.
-The next test is to apply genuine support-three relations to the component
-quotient while retaining its two-level facet state.
+
+### 6.4 The exact two-component quotient
+
+Put
+
+```text
+Q=91^6=567869252041,             B=Q^2.               (15m)
+```
+
+Assume that the decoder rows have rank eleven, so their graph has exactly
+two connected components `I,J`.  Write the primitive component shapes as
+`u=(u_i)_(i in I)` and `v=(v_j)_(j in J)`.  Then the full integral
+orthogonal lattice is
+
+```text
+V_dec^perp intersect Z^13
+  ={s u direct-sum t v : s,t in Z}.                   (15n)
+```
+
+Indeed, the internal edge rows force each component restriction to be a
+rational multiple of its primitive positive kernel vector, and Gauss's
+lemma makes the two multiples integral.  Thus the positive primitive speed
+rows in this lattice are exactly those with `s,t>0` and `gcd(s,t)=1`.
+
+Let `W=W_(Q,3)(n)`.  In the counterexample box `sum_i n_i<=B`, THM-2052
+gives `dim W>=11`, while `V_dec` is an eleven-dimensional subspace of `W`.
+There are therefore only two cases:
+
+```text
+dim W=12:  the rank-twelve finite terminal;
+dim W=11:  W=V_dec.                                  (15o)
+```
+
+In the second case, let `c` be any support-at-most-three row of height at
+most `Q` that meets both components, and put
+
+```text
+P_c=sum_(i in I)c_i u_i,       R_c=sum_(j in J)c_j v_j.
+```
+
+Neither partial sum can vanish: with at most three occupied coordinates,
+vanishing on both sides would force a nonzero one-coordinate relation on
+one component.  Hence
+
+```text
+c dot (s u direct-sum t v)=0
+  iff s P_c+t R_c=0
+  iff s/t=-R_c/P_c.                                  (15p)
+```
+
+Every such crossing row lies outside `V_dec`, so none occurs in the
+unresolved `dim W=11` branch.  Equivalently, the projective scale `s:t`
+avoids the finite atlas of slopes in (15p).  Applying THM-2052's guaranteed
+triple relation to two labels in one component and one in the other now
+forces the outside coefficient to vanish.  Consequently every same-component
+primitive pair has height at most `Q`:
+
+```text
+max(u_i/gcd(u_i,u_i'),u_i'/gcd(u_i,u_i'))<=Q,
+max(v_j/gcd(v_j,v_j'),v_j'/gcd(v_j,v_j'))<=Q.         (15q)
+```
+
+Thus every mixed pigeonhole triple degenerates to an internal pair relation;
+this is why bounded support-three rows cannot add rank without entering the
+terminal.
+
+The complete cube packets sharpen the remaining quotient.  Connected edge
+covectors recover each primitive component shape.  If both components have
+at least two vertices, one packet modulus `D_ii'` and one `D_jj'` recover
+the two scales exactly:
+
+```text
+s=D_ii'/(u_i+u_i'),             t=D_jj'/(v_j+v_j').   (15r)
+```
+
+This reconstructs the speed row, but not owner/phase arrival or loneliness.
+If one component is a singleton, no packet has an internal modulus there;
+the other packets see its speed only through congruences modulo
+
+```text
+L=lcm{D_e:e is an edge of the nonsingleton component}. (15s)
+```
+
+This loss is real.  The two-nontrivial-component row with
+
+```text
+u=(1,3),
+v=(1,3,4,9,10,16,19,22,24,33,40),
+(s,t)=(1,2^42)                                      (15t)
+```
+
+has decoder component sizes `2+11`, `W=V_dec`, sum
+`796046418509828`, and both scales are packet-recoverable, yet it is lonely
+at `t=1/14`.  For the singleton hostile, take the twelve-vertex shape
+
+```text
+(1,4,...,4^11),          L=22906142720.              (15u)
+```
+
+The singleton speeds
+
+```text
+4763632550625148929,     4763632573531291649          (15v)
+```
+
+give identical complete labelled packet collections.  Below `B`, the same
+dominance-preserving packet fibre contains exactly `14,077,914,720,208`
+positive candidates.  The component quotient is therefore arithmetically
+rigid precisely when neither component is a singleton; even then it is not
+an LRC certificate.
 
 ## 7. Exact verification and scope
+
+Replay the new quotient extension with
+
+```text
+python -B 04-computation/lrc14_two_component_decoder_quotient_extension_thm3818.py
+python -B -O 04-computation/lrc14_two_component_decoder_quotient_extension_thm3818.py
+```
+
+and compare after LF normalization with
+`05-knowledge/results/lrc14_two_component_decoder_quotient_extension_thm3818.out`.
 
 The companion independently enumerates every coprime `p<q`, `p+q<=356`,
 checks complete coordinate fibres and the divisor decoder, and reconstructs
@@ -386,6 +519,10 @@ The graphic companion checks all `5,855` ratios, every ratio pair, all
 five-speed hostile, the diagonal incidence law, facet compatibility, and the
 sharp thirteen-vertex path in `36,461,514` active requirements.  Its normal,
 optimized, and frozen streams also agree.
+The two-component companion checks the integral quotient, crossing-slope
+atlas, bounded pair-clique consequence, a safe `2+11` row with both scales
+recovered, and the exact `12+1` singleton fibre in `1,742` active
+requirements.  Its normal, optimized, and frozen streams agree as well.
 
 The rational-class extension independently factors and scans every primitive
 cube sum, then exhausts all `17,137,585` unordered ratio pairs and scaled
@@ -402,8 +539,8 @@ map:         pair packet -> (M,a,D,residues) -> a diag(n)
 preserved:   scale, ratio, placement, grid, row matroid, circuits, facets
 destroyed:   ambient quotients, cross-component scale, off-grid loneliness
 sidecar:     full speed row and owner/phase chronology for any LRC use
-next test:   couple decoder components by genuine support-three relations
-             while retaining facet/owner/phase state.                    (16)
+next test:   classify the finite forbidden crossing-slope atlas together
+             with facet/owner/phase arrival; packets alone are exhausted. (16)
 ```
 
 In particular, (3) supplies no exclusion of a hypothetical LRC(14)
@@ -414,6 +551,9 @@ THM-2052's bounded-relation span `W`.  A cube-addressed row can refine the
 internal rank-eleven code, but it can never be the outside-`W` twelfth
 relation that triggers the rank-twelve finite terminal.  Section 6 now
 classifies all support-two incidence: an unresolved rank-eleven decoder graph
-has at least two components, exactly two when its rows span eleven.  The live
-problem is their relative scale and coupling by genuine higher-support rows,
-together with owner/phase arrival—not another support-two count.  **QED.**
+has at least two components, exactly two when its rows span eleven.  In that
+two-component branch, bounded crossing rows are exactly a finite forbidden
+slope atlas, all internal pairs are already bounded, and the full packet
+either recovers both scales or retains the exact singleton congruence fibre.
+The live problem is the crossing-slope complement together with owner/phase
+arrival—not another support-two count.  **QED.**

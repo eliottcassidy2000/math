@@ -20,16 +20,20 @@ audit: >
   fixed-charge term, completeness of the T integrals, every origin-order
   comparison, the two half-integral resonances, the terminal constant-w
   reduction, and the exhaustive X/Y/L case split with THM-3821/3828/3829.
-  Normal and optimized runs byte-match the frozen transcript and both raw
-  hashes agree.  The deterministic companion has 40
+  A second, independently written 101-gate checker reconstructs the bracket
+  from the scalar bivector, checks target-orientation asymmetry,
+  denominator-free branch identities, d=0 and repeated-root units, zero and
+  nonzero integration constants, all W/p/g seams, and the four-part fixed
+  ansatz partition.  Normal and optimized runs match the frozen transcripts
+  after LF normalization; stored-file raw hashes agree.  The deterministic
+  companion has 40
   active gates checking the Poisson Casimir, monic canonical reduction,
   arm and top buckets, the nonzero-S 10/7 tower, complete T integral, full
   r4 source and symbolic odd origin coefficient, six hostile origin-degree
   controls, the corrected S=0 shifted 5/2 law including its fixed-charge
   term, the exact r4 particular and homogeneous equation, both half-integral
   p/g resonances, the r3z2 constant-w equation, the constant arm, and the
-  final nonzero r3z monomial.  Normal and optimized runs byte-match the
-  frozen transcript.  No finite-field inference is used.
+  final nonzero r3z monomial.  No finite-field inference is used.
 depends_on:
   - THM-3821-cubic-pseudoplane-rz2-odd-ladder-terminal-riccati-gate
   - THM-3828-proportional-second-row-r2z2-profile-nonentry
@@ -42,6 +46,11 @@ output: 05-knowledge/results/jc2_cubic_pseudoplane_one_sided_second_row_thm3834.
 script_sha256: 81263a14587121c55ba6d64acecbe220a48e2c9c709943fb127f935fc5f5288e
 output_sha256: 596bc49f2c32318cfb4ffe903193a8fec1c4351bd1b9b820ffb2fda205bd5302
 semantic_sha256: 5d2a2b84131e0bc6e879f13a5b8b2410540aefdafd5d37752d04d480baef94d6
+independent_script: 04-computation/jc2_cubic_pseudoplane_one_sided_second_row_thm3834_independent_audit.py
+independent_output: 05-knowledge/results/jc2_cubic_pseudoplane_one_sided_second_row_thm3834_independent_audit.out
+independent_script_sha256: 2dce29e9f73086b532a08b4d38828d1ab1b65b0bebd3c34cf2e7222150e9497c
+independent_output_sha256: 5f914c2d03ca12013c4df3632839cc222dcaa2c73c79aab3c1bec78688d07a76
+independent_semantic_sha256: 4e1cd11a1566e8fdce91a29d457b9fd12994cb3c5cf619a241e44c61d94eccc8
 hash_basis: raw LF bytes
 ---
 
@@ -326,12 +335,15 @@ Run
 ```bash
 python3 04-computation/jc2_cubic_pseudoplane_one_sided_second_row_thm3834.py
 python3 -O 04-computation/jc2_cubic_pseudoplane_one_sided_second_row_thm3834.py
+python3 04-computation/jc2_cubic_pseudoplane_one_sided_second_row_thm3834_independent_audit.py
+python3 -O 04-computation/jc2_cubic_pseudoplane_one_sided_second_row_thm3834_independent_audit.py
 ```
 
-Both executions must byte-match
+After LF normalization, both executions must match
 
 ```text
 05-knowledge/results/jc2_cubic_pseudoplane_one_sided_second_row_thm3834.out
+05-knowledge/results/jc2_cubic_pseudoplane_one_sided_second_row_thm3834_independent_audit.out
 ```
 
 The companion uses exact SymPy identities.  It has no random or finite-field

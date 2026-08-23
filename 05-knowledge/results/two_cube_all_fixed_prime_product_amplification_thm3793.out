@@ -1,0 +1,11 @@
+probe=two_cube_all_fixed_prime_product_amplification
+finite_prime_bank=[5, 11, 17, 23];rows=14;values=4792
+symmetric_bank=inert_primes_through_997:86;orders=1..8
+bound_j1=H(Z^3)>=(2/5)*A(Z)
+bound_j_ge_2=H(Z^(3j))>=(2/(5*j!))*(A(Z)^j-C(j,2)B(Z)A(Z)^(j-2))
+asymptotic=for_every_fixed_j>=1:liminf_H(X)/(loglogX)^j>=2/(5*2^j*j!)
+growth=H(X)_dominates_every_fixed_power_of_loglogX
+scope=singleton_subfamily_lower_bound_only;support_asymptotic_and_residue_OPEN
+semantic_sha256=083431ef666f4c7a8435da7015cf19671d17e62108f95d89455252283aeb4d41
+GATES=14452
+PASS
