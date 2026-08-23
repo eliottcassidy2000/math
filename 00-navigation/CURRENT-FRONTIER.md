@@ -331,10 +331,12 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
   supports, or arbitrary polynomial pairs.  THM-3783/3785 are the two live
   pseudo-plane models; THM-3787--3821 close their displayed sparse rows,
   while denser sextics, higher rows, poles and off-nodal branches survive.
-  The sharp construction anchor is THM-3811's nonlinear nonmonogenic `S3`
-  surface `U=Spec S[A/D,omega/D]`, with `U*=K*`, `Pic(U)=Z^2`, one rational
-  ramification curve and an etale degree-three target map.  THM-3823 excludes
-  finite/proper plane atlases over `C`, so any atlas must be nonproper.
+  THM-3811's nonlinear nonmonogenic `S3` surface
+  `U=Spec S[A/D,omega/D]` was the sharp construction anchor, but THM-3841
+  now closes it in all degree: the deleted ramification valuation forces the
+  entire discriminant into the Jelonek set of any plane composite, whereas
+  its normalization is `P1` minus three points and cannot be polynomially
+  uniruled.  In fact no dominant `A2 -> U` exists, even without etaleness.
   THM-3827/3831 give both primitive row-genus floors `>=3`, explicit
   genus-three hyperelliptic equality sidecars (row poles `2/1` only at
   equality), and the saturated three-cubic/two-quadratic spectral atlas.
@@ -346,11 +348,13 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
   nonempty comaximal factors reaching both Laurent arms.  THM-3838 adds
   `deg h,deg k>=5`.  THM-3830 and THM-3837 close the intersecting cross and
   the first comaximal line--hyperbola selector through quadratic corrections.
-  THM-3840 forces the target origin and one explicit smooth discriminant
-  endpoint into the Jelonek set.  The live construction problem is to solve
-  the factor/cofactor, divisibility and Keller equations with a genuinely
-  nonpolynomial ratio and nonstandard high-genus disconnected pencil; the
-  nonconstant-tower `r^2z` lane and unrestricted component geometries remain.
+  THM-3840's two forced endpoints are the local shadow of THM-3841's full
+  component.  The surviving positive anchor is THM-3785's one-place Russell
+  pseudo-plane: a Darboux pair there would pull back to a counterexample of
+  field degree divisible by three and at least nine.  THM-3839 closes only
+  its constant-`v`, bichromatic first `r^2z` tower; nonconstant towers,
+  aligned colors and unrestricted multigraded pairs remain.  Any new deleted-
+  divisor completion must first pass the polynomial-uniruled/one-place gate.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692

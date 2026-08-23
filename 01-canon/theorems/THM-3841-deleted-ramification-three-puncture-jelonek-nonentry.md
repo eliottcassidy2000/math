@@ -2,8 +2,8 @@
 id: THM-3841
 title: "A deleted ramification divisor with a three-puncture branch forbids plane domination"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  A reusable valuation lemma says that if a normal finite completion
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A reusable
+  valuation lemma says that if a normal finite completion
   deletes a prime divisor E, then every dominant generically finite plane
   morphism to the complement forces the image of E to be a component of the
   composite's Jelonek set.  For the THM-3811 nonlinear cubic surface this
@@ -14,12 +14,17 @@ status: >
   is all-degree and does not prove JC(2) outside this completion.
 source: root + jc_quartic_c3_construct / deleted-divisor valuation and Jelonek lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The human proof checks extension of the
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn3709, 2026-08-23).  The
+  audit rederived extension of the
   divisorial valuation through the finite source-field extension, uniqueness
   of centers on the separated completion, the valuative nonproperness
-  implication, purity/component typing, normalization lifting, and the
-  polynomial-uniruledness contradiction.  The deterministic companion
-  verifies irreducibility and squarefreeness of Delta, the discriminant and
+  implication, component typing, normalization lifting, and the
+  polynomial-uniruledness contradiction.  It also repaired two presentation
+  gaps: absolute irreducibility now follows geometrically from the
+  basepoint-free degree-six birational parametrization, and arbitrary
+  characteristic-zero ground fields are handled by explicit finite-coefficient
+  descent to C rather than an unexpanded Lefschetz slogan.  The deterministic
+  companion verifies rational irreducibility and squarefreeness of Delta, the discriminant and
   different norm, the exact rational parametrization and inverse, the
   basepoint-free projective normalization map, its two projective infinity
   points and three normalization punctures, and the negative valuation
@@ -43,8 +48,8 @@ hash_basis: raw LF bytes
 
 # THM-3841 -- a deleted three-puncture branch cannot come from the plane
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**  Work over an algebraically closed field `K` of characteristic zero.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `K` of characteristic zero.
 Let `Xbar=Spec S`, `E`, and
 
 ```text
@@ -210,8 +215,14 @@ It has no base point.  At `v=0` its middle coordinate is nonzero, while at
 Res_q(G,R)=6460!=0.                                             (16)
 ```
 
-Equations `(13)--(14)` make `(15)` finite birational, hence it is the
-normalization map.  The affine target chart is the last coordinate nonzero.
+The three coordinates in `(15)` are basepoint-free forms of degree six.
+Consequently the pullback of a general line has degree six.  Equation `(14)`
+makes `(15)` generically one-to-one onto its image, so that image is an
+irreducible projective curve of degree six.  The degree-six homogenization of
+`Delta` vanishes on the image; it must therefore be the image equation up to
+a scalar.  This proves absolute irreducibility as well as showing that `(15)`
+is the normalization map.  The affine target chart is the last coordinate
+nonzero.
 Its inverse image is therefore
 
 ```text
@@ -239,12 +250,18 @@ point.
 
 ## 4. Polynomial uniruledness gives the contradiction
 
-Jelonek--Lason prove that the nonproperness set of a generically finite
-polynomial map from affine space is covered by polynomial curves; their
-Theorem 3.2 gives a degree bound, and the characteristic-zero statement
-extends from `C` to every algebraically closed `K` by the Lefschetz
-principle.  Choose a general point of the component `(11)`, away from all
-other components of `S_F`.  A nonconstant polynomial curve through it must
+Jelonek--Lason prove over `C` that the nonproperness set of a generically
+finite polynomial map from affine space is covered by polynomial curves;
+their Theorem 3.2 gives a degree bound.  For general algebraically closed
+`K` of characteristic zero, all coefficients of a hypothetical `psi`, the
+surface equations, and a nonzero Jacobian minor certifying dominance lie in
+a finitely generated extension `K_0/Q`.  Embed `K_0` into `C` and base-change.
+The same polynomial identities and nonzero minor give a dominant complex
+morphism to the same deleted completion, so the complex contradiction below
+already excludes the original `psi`.  We may therefore work over `C`.
+
+Choose a general point of the component `(11)`, away from all other
+components of `S_F`.  A nonconstant polynomial curve through it must
 lie in `V(Delta)` and, since both are curves, is dominant.
 
 The normal source `A1` lifts this map through the normalization `(17)`.  On
@@ -273,5 +290,4 @@ The proof closes the nonlinear THM-3811 cubic completion in all degree.  It
 does not use THM-3838's degree-five floor, does not classify other cubic
 completions, and does not prove the planar Jacobian conjecture.  The reusable
 design rule is sharper: a deleted completion divisor can support a plane
-atlas only if its image is a polynomially uniruled affine curve.  **QED,
-pending independent hostile audit.**
+atlas only if its image is a polynomially uniruled affine curve.  **QED.**
