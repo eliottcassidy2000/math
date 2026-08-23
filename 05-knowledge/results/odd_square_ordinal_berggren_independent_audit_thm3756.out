@@ -1,0 +1,14 @@
+source=independent_Euclid_pairs+standard_3x3_Berggren_matrices
+ordered_root_and_swap_hostile=PASS
+euclid_pairs_n_lt_1200=291604
+matrix_affine_child_checks=874812
+shells_r_le_1999=(1619385, ((2, 3, 1), (3, 5, 2), (4, 7, 3), (5, 9, 3), (6, 11, 5), (7, 13, 6), (8, 15, 4), (9, 17, 8), (10, 19, 9), (11, 21, 6), (12, 23, 11), (13, 25, 10), (14, 27, 9), (15, 29, 14), (16, 31, 15), (17, 33, 10), (18, 35, 12), (19, 37, 18), (20, 39, 12), (21, 41, 20), (22, 43, 21), (23, 45, 12), (24, 47, 23), (25, 49, 21), (26, 51, 16), (27, 53, 26), (28, 55, 20), (29, 57, 18), (30, 59, 29)))
+cone_r_le_1200=((('L', 239800), ('M', 119800), ('R', 359400), ('root', 400)), 719000)
+inverse_boundaries_s_le_9999=PASS
+fixed_content_tree_controls=((1, 9841), (3, 9841), (5, 9841), (9, 9841), (15, 9841), (101, 9841), (9999, 9841))
+ambient_address_interval=(1, 719400, 719400)
+selected_address_interval=(1, 1619385, 1619385)
+heap_through_depth_10=(88573, 0, 88572)
+scope_hostiles=rank_collision;child_signature_loss;scale_2_outside
+semantic_sha256=225c873c16d34d1757116971858608ddbfb0ba7842bd66ab836160e4bb07b424
+RESULT=PROMOTE;ARTIFACT=THM-3756_INDEPENDENT_AUDIT

@@ -1,15 +1,22 @@
 ---
 id: THM-3732
-title: "Factorial cross-face shared-reset-edge sign separation"
+title: "Factorial cross-face shared-reset sign separation and relation census"
 status: >
   FINITE-EXACT + INDEPENDENTLY AUDITED.  In the two named bank-I2 charts
   F12/F13, the smallest shared hostile state has one common reset-directed
   edge, but the strict-positive named-row fibres on that edge are disjoint
   and have no equal positive increment in the inherited raw 22-row gauge.
   Its endpoint has no common next reset edge and the positive fibre sizes
-  differ.  The full 239-state common graph has 568 edges and six sinks.
-  This excludes the inherited fixed-fibre named-row/common-edge Cech torsor
-  model only; it proves no FC(3), HFC(3), or invertibility result.
+  differ.  On the full 239-state/568-edge graph, the raw equal-positive-
+  magnitude relation is empty on 567 edges, is a non-full singleton on the
+  last, and never persists for two edges.  The identity relation instead has
+  five full edges and one three-edge constant 12-row corridor, so a universal
+  identity no-subatlas claim is false.  The native upset-size field is
+  injective on all 22 rows: retaining it and transporting root multiplicity
+  lawfully preserves that corridor, while requiring equal upset size kills
+  every raw-magnitude edge.  A rooted-core restriction has two five-row
+  S-half corridors but omits the F-half and canonical root 17.  No FC(3),
+  HFC(3), or invertibility result follows.
 source: root + lrc14-cover-defect-bridge / 2026-08-22
 audit: >
   PASS after narrowing an overbroad torsor claim.  An independent
@@ -17,8 +24,13 @@ audit: >
   partition/upset implementation, and direct L1 reset descent.  It reproduces
   both local fibres, all raw signs, the empty equal-increment relation, all
   239 states, 568 edges, the outdegree histogram, six sinks, and the separate
-  HFC boundary-current control.  Normal and optimized streams byte-match all
-  frozen transcripts.
+  HFC boundary-current control.  Two further independent paths census every
+  edge relation and all 1,132 length-two paths, agreeing on semantic digests,
+  the positive identity corridor, and the unique magnitude singleton.  Two
+  additional reconstructions audit native bank cells, upset sizes,
+  provenance, dynamic root transport, and the THM-3278 core restriction;
+  they agree on both surviving corridors and every first obstruction.
+  Normal and optimized streams byte-match all frozen transcripts.
 depends_on:
   - THM-3238-complete-physical-product-gamma-bank-unique-reset-stitch
   - THM-3286-three-face-availability-helly-defect-and-binary-origin-width
@@ -36,6 +48,22 @@ independent_audit_script: 04-computation/fc_cross_face_shared_reset_edge_indepen
 independent_audit_output: 05-knowledge/results/fc_cross_face_shared_reset_edge_independent_audit_thm3732.out
 independent_audit_script_sha256: 3bee90374c6665166e1ba833f11b605f94b580b92bec79e644be8b1f46033133
 independent_audit_output_sha256: 3567968730a68d1b3a30df339a03993739aff7fa5e929ed7667a578d1ae1940f
+relation_census_script: 04-computation/fc_cross_face_all_edge_relation_census_thm3732.py
+relation_census_output: 05-knowledge/results/fc_cross_face_all_edge_relation_census_thm3732.out
+relation_census_script_sha256: 9f77e5b657b5ec9b43e59e70034b5174e03ecb68a138390597c091bb60c5277f
+relation_census_output_sha256: c5daf525bc8d507924506a9cb92cf7a0031596b09fb61a7103bf440abd061fb6
+relation_census_independent_audit_script: 04-computation/fc_cross_face_all_edge_relation_census_independent_audit_thm3732.py
+relation_census_independent_audit_output: 05-knowledge/results/fc_cross_face_all_edge_relation_census_independent_audit_thm3732.out
+relation_census_independent_audit_script_sha256: fc107f2cfacfaba24b9de844833d727beaea4141fb07939a534c41e9c7f1fd83
+relation_census_independent_audit_output_sha256: d0512097264f54d248a9d6a6ad02a8015d9f2efdef9235d0ab5fdbde1b0773b2
+root_bank_sidecar_script: 04-computation/fc_cross_face_root_bank_sidecar_census_thm3732.py
+root_bank_sidecar_output: 05-knowledge/results/fc_cross_face_root_bank_sidecar_census_thm3732.out
+root_bank_sidecar_script_sha256: 0866556283dd41a7f65a717e9048f955e39796dd6cf5ac4834a24be4a57ec607
+root_bank_sidecar_output_sha256: ab71d215a36ff350daf80b57fc8c3d6fd29be9ad38ed1d2693bbccc78bb73fca
+root_bank_sidecar_audit_script: 04-computation/fc_cross_face_root_bank_sidecar_independent_audit_thm3732.py
+root_bank_sidecar_audit_output: 05-knowledge/results/fc_cross_face_root_bank_sidecar_independent_audit_thm3732.out
+root_bank_sidecar_audit_script_sha256: 0ef0a9ae3fb827471745ec53fc3b476d0fbdf4e8697cc53badb12a5fa2d38f92
+root_bank_sidecar_audit_output_sha256: 871c7c902e30809d2f1dad174d5d90ef3f83d8b61701c6239f73a8c95f832b67
 hash_basis: raw LF bytes
 ---
 
@@ -212,7 +240,116 @@ finite sets, an imposed regular group action, a variable groupoid/torsor, or
 an enriched relation carrying history or magnitude.  None of those
 structures is supplied by the inherited bank.
 
-## 6. HFC boundary primitive is a different positive control
+It is also not a claim that every subgraph lacks an identity-row atlas.  The
+complete census below contains an exact positive corridor.
+
+## 6. Complete all-edge relation census
+
+For every common edge `e`, retain the source/target state and define
+
+```text
+R_id(e) ={(i,i):i in W_12(e) intersect W_13(e)},
+R_mag(e)={(i,j):Delta_i^12(e)=Delta_j^13(e)>0}.       (14)
+```
+
+Named rows give the only inherited temporal update.  Thus on a directed
+length-two path `(e,e')`, a fixed pair persists exactly when it lies in
+`R(e) intersect R(e')`; allowing the row to change would require a new typed
+history sidecar.
+
+The exact universe has `239` states, `568` common edges, `1,132` directed
+length-two paths, and six sinks.  The complete edge histogram for `|R_id|` is
+
+```text
+0:82, 1:105, 2:40, 3:61, 4:36, 5:28, 6:57,
+7:31, 8:39, 9:36, 10:20, 11:27, 12:6.                (15)
+```
+
+Only five edges have `W_12(e)=W_13(e)` and hence a full identity bijection.
+Three form the unique multi-edge constant full-fibre corridor
+
+```text
+(1,1,1,1,2,2,2,3,4,5) -> (1,1,1,2,2,2,3,4,5)
+ -> (1,1,2,2,2,3,4,5) -> (1,2,2,2,3,4,5),           (16)
+```
+
+with the fixed 12-row fibre
+
+```text
+{1,2,5,8,9,11,12,14,15,16,18,22}.                   (17)
+```
+
+Equivalently, root-1 multiplicity falls `4->3->2->1` while the multiplicities
+of roots `2,3,4,5` remain `(3,1,1,1)`.  Exactly two length-two paths retain
+this full relation.  This positive control refutes a universal named-row
+identity no-subatlas claim.
+
+By contrast, `R_mag` is empty on 567 edges.  Its only nonempty value is
+
+```text
+(1,1,1,3,3,4,5) -> (1,1,3,3,4,5),
+R_mag={(15,1)},       Delta_15^12=Delta_1^13=1440,    (18)
+```
+
+inside `12 x 12` positive fibres, so it is not a full transition.  All 1,132
+length-two intersections are empty.  Hence the inherited raw-gauge magnitude
+model has neither a full edge nor a chronological subatlas.  Arbitrary row
+rescaling, relabelling, enriched history, other faces/banks, and cumulative
+two-step equality are outside this statement.
+
+The two independent implementations agree on edge-relation digest
+`0d924494e3a689db3f818418d6696eb349ed20eb1de6cc1876448f464a6a6327`
+and length-two digest
+`2af1486303b7d5332d7e4911aedbd6a16157086f751d9b894be0985ab11a49aa`.
+
+## 7. Native root/bank sidecars
+
+For a common edge, retain its moved root, direction, source/target
+multiplicity, and bank `I2`.  For row `i`, let `d_i` be its partition degree
+and `u_i` the cardinality of the selected partition upset.  These are native
+certificate fields, not imposed row weights.
+
+All 22 values `u_i` are distinct.  Consequently `(named row,u_i)` is an
+intrinsic re-encoding, not a quotient that invents row-changing transitions.
+Along the corridor (16), the root-1 multiplicity updates lawfully as
+
+```text
+4->3, 3->2, 2->1.
+```
+
+Retaining `(named row,u_i)` and this dynamic root tag preserves all three
+full edges and the same two constant-full length-two windows.  Requiring the
+complete source/target multiplicity tag to be literally equal on consecutive
+edges would instead kill all 1,132 paths; that is a frozen-tag typing error.
+
+The sole raw-magnitude pair (18) gives the sharper obstruction ladder:
+
+```text
+row 15: degree 5, upset size 5, nonprincipal,
+row  1: degree 5, upset size 1, inherited.             (19)
+```
+
+Thus root plus degree retains the first singleton edge, and root multiplicity
+even has a lawful `3->2->1` continuation, but the next edge has empty
+`R_mag`.  Equal upset size, bank cell, or provenance kills the singleton on
+the first edge.  Over all 568 edges, the equal-upset-size raw-magnitude
+relation is empty; every dynamically typed length-two magnitude intersection
+is empty.
+
+Restricting identity rows to THM-3278's core gives 24 full edges and ten
+constant-full length-two paths, four after dynamic fixed-root compatibility.
+The surviving three-edge carriers are exactly two corridors on
+
+```text
+S={2,11,16,18,22}.                                    (20)
+```
+
+They contain no row of `F={3,7,10,13,17,19,21}` and not the canonical root
+17.  Hence they are legitimate five-row S-half subatlases, not full rooted
+core transitions.  No maintained map sends these rows and root updates to a
+boundary point, orientation, primitive basepoint, sheet, or Krylov class.
+
+## 8. HFC boundary primitive is a different positive control
 
 Under the HFC-null-candidate premise of THM-3466, local primitives of
 `g^2 d(conjugate g)` on labelled oriented boundary edges differ by additive
@@ -240,7 +377,7 @@ No maintained map sends a product-Gamma state/row/face to a labelled
 boundary point, primitive constant, or sheet.  Therefore no reset/HFC
 cocycle identification is typed.
 
-## 7. Scope and reproduction
+## 9. Scope and reproduction
 
 The theorem proves no `FC(3)`, `HFC(3)`, `SFC(3)`, GMC, positivity, or
 polynomial-invertibility conclusion.
@@ -252,6 +389,14 @@ python3 -B 04-computation/hfc_boundary_primitive_cocycle_control_thm3732.py
 python3 -B -O 04-computation/hfc_boundary_primitive_cocycle_control_thm3732.py
 python3 -B 04-computation/fc_cross_face_shared_reset_edge_independent_audit_thm3732.py
 python3 -B -O 04-computation/fc_cross_face_shared_reset_edge_independent_audit_thm3732.py
+python3 -B 04-computation/fc_cross_face_all_edge_relation_census_thm3732.py
+python3 -B -O 04-computation/fc_cross_face_all_edge_relation_census_thm3732.py
+python3 -B 04-computation/fc_cross_face_all_edge_relation_census_independent_audit_thm3732.py
+python3 -B -O 04-computation/fc_cross_face_all_edge_relation_census_independent_audit_thm3732.py
+python3 -B 04-computation/fc_cross_face_root_bank_sidecar_census_thm3732.py
+python3 -B -O 04-computation/fc_cross_face_root_bank_sidecar_census_thm3732.py
+python3 -B 04-computation/fc_cross_face_root_bank_sidecar_independent_audit_thm3732.py
+python3 -B -O 04-computation/fc_cross_face_root_bank_sidecar_independent_audit_thm3732.py
 ```
 
 Each normal/optimized pair must agree byte for byte with its frozen

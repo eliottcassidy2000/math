@@ -7,8 +7,9 @@ status: >
   address 12 are Darboux-empty in the y=0 collision ring.  In the (-2,1)
   orientation, endpoint transport forces second-order arm vanishing; in the
   (1,-2) orientation it forces an uncancellable negative bivariate charge.
-  This does not close the distinct anchor-20 family, all of W004, the full
-  3x4 cell, general quartic C3 data, or JC(2).
+  This does not subsume the distinct anchor-20 family proved independently
+  in THM-3728, close all of W004, the full 3x4 cell, general quartic C3 data,
+  or JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
   INDEPENDENTLY HOSTILE-AUDITED.  The exact companion checks both absolute
@@ -243,10 +244,10 @@ the second, impossible by THM-3583.
 ## 5. Scope and reproduction
 
 Sections 1--4 close both named W004 scalar-`12+20` families in `(3)` at
-every scale.  The distinct anchor-`20` family reserved at THM-3728 is not a
-dependency and is not claimed here.  Other W004 placements, W005--W006,
-arbitrary `3 x 4` supports, unrestricted quartic C3/cofactor data, and
-`JC(2)` remain open.
+every scale.  The distinct anchor-`20` family is proved independently in
+THM-3728; it is neither a dependency nor a consequence of this theorem.
+Other W004 placements, W005--W006, arbitrary `3 x 4` supports, unrestricted
+quartic C3/cofactor data, and `JC(2)` remain open.
 
 Run
 

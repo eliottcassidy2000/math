@@ -274,3 +274,8 @@ scope statement did not yet use THM-3739; the current consequence in Section
 5 has precedence: combining either proof with that audited census closes the
 stabilized W004 tail, while the larger W004 and JC(2) frontiers remain open.
 
+The alternative fraction-field normalization is not a source automorphism or
+a chart-transport theorem: its upper rows must repay every denominator.
+THM-3733 closes two different placements on the same scalar fibre `12+20`,
+at persistent arm address `12` rather than this theorem's anchor `20`; the
+shared fibre word does not transport either proof.

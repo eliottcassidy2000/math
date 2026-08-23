@@ -1,0 +1,11 @@
+THM-3743 independent arithmetic referee
+flatness_square=93600
+relation_square=127400
+relation_cap=356
+reduced_pair_ratio_count=19314
+coordinate_support_times_unordered_ratio_count=1506492
+ambient_l1_vector_count=1978967793896659449022201064
+triple_minimizers=((-1, 2, -1), (1, -2, 1))
+ap_boundary_minimum=1/14
+hadamard_cap=296721347184071259951513500572385227832063299530012809732642802018052529730741866571256016315918699080945038248181476620474893833141605
+ALL CHECKS PASSED;ARTIFACT=THM-3743_INDEPENDENT_AUDIT

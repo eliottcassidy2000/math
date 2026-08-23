@@ -92,8 +92,8 @@
 29. **Tournament dominance is sufficient, not iff.** MISTAKE-212.
 30. **Vandermonde nodes are not tournament scores.** MISTAKE-214; repeated
     nodes do not imply a Paley/regular wall.
-31. **No global de-factorialization or automatic reset torsor.** THM-2022 is prime-local; THM-3732 only excludes the inherited fixed-fibre named-row/common-edge model on `F12/F13`.
-    Arbitrary relabellings/groupoids, enriched relations, other banks, FC(3), HFC(3), and the separate HFC null-candidate primitive remain outside its scope.
+31. **No global de-factorialization or automatic reset torsor.** THM-2022 is prime-local. In THM-3732's named `F12/F13` gauge, raw equal magnitude has no full edge or length-two persistence, but identity rows retain a three-edge 12-row corridor.
+    Native upset size plus lawful root transport preserves that corridor and kills magnitude matching; the rooted-core survivor is only an `S`-half without root 17.  Arbitrary gauges/groupoids, other banks, FC(3), HFC(3), and the separate HFC primitive remain outside scope.
 32. **Support algebra is not its observer.** THM-2033 is special-matrix scope;
     its determinant does not replace scalar Wick moments. Bare toric/bouquet
     data retain neither signs nor factorial weights (THM-3365).
@@ -126,7 +126,7 @@
 39. **The invariant lattice is exact only through `n<=6`.** THM-1966 adds an
     independent signed coordinate at `n=7`.
 40. **`H>=disc` remains open; rooted response needs its root.** THM-1950 reduces to strong tournaments; THM-3729 is covariant under `(K,u)->(DKD,Du)`.
-    Its sign-root deletion average does not control fixed `u=1`, and unsigned induced-subtournament square energy fails at order five.
+    Its switching-class Hamiltonian mean dominates the even and odd energy means separately, but no mean comparison controls fixed `u=1` in a fixed representative; unsigned induced-subtournament square energy fails at order five.
 41. **Do not manufacture tournaments from ties.** Without an intrinsic binary
     relation and honest tie semantics, use the actual carrier. THM-2221's
     pinned-context observable is a symmetric cut semimetric plus core kernel.
@@ -143,8 +143,8 @@
 
 46. **Support is not an indexed multiset.** MISTAKE-209 and THM-2000/2005;
     repetitions contribute a collision tax.
-47. **Density zero does not imply reciprocal convergence or a critical coefficient.** Use Abel--Dini/Bertrand; THM-3730 proves both positive two-cube series diverge at the boundary,
-    but only the indexed lattice series has a coefficient. The inert-prime singleton family gives no support asymptotic, pole, or residue.
+47. **Density zero does not imply reciprocal convergence or a critical coefficient.** Use Abel--Dini/Bertrand; THM-3730 proves both positive two-cube series diverge at the boundary and gives the support lower bound `H(X)>=kappa log log X-6.3745826010...`,
+    but only the indexed lattice series has a coefficient.  The quantitative inert-prime singleton subfamily gives no full-support asymptotic, pole, or residue.
 48. **Finite prefixes and proxy supports are not all-`n` laws.** MISTAKE-219;
     freeze support, offsets, profile, and quantified tail.
 49. **No OEIS match is not novelty.** A search miss proves no new sequence.
@@ -183,6 +183,7 @@
 66. **Invariant Kummer vanishing is not total vanishing.** THM-2686 gives
     `H^1(R_reg,mu_ell)^Q=0` in coprime degree; at `(2,C3)` it removes trivial
     lines but permits standard planes.  Nonvanishing is only the abstract `A4` carrier gate; test units/`Cl[2]` and retain actual versus abstract torsors. THM-2704's split even-Faber genus `89` is generic and all-one, not uniform: an exceptional rational member must gain at least `89` delta, become reducible/nonflat, or leave the chart, and the eleven odd seeds are absent. THM-3728's W004 charge gauge is fraction-field and row-derived only; it gives no W005/shear/JC transport.
+67. **Gate-specific JC closures do not compose automatically.** THM-3688 reaches actual `J_0,J_1,J_2` only and is pending hostile audit; THM-3740 closes one-variable right-shear Cohn exposures, not interacting right factors. Pending-audit THM-3741 classifies `Q=X phi(XT)+T psi(XT)` over algebraically closed characteristic zero, leaving third-charge/nonradial sectors. THM-3737/3742/3743 are RESERVED; none proves `JC(2)`.
 
 ## Promotion checklist
 Audit types, quantifiers, symmetries, direction, quotient loss, hostiles,

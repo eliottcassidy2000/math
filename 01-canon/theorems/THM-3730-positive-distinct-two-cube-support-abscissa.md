@@ -7,7 +7,10 @@ status: >
   kappa X^(2/3)+O(X^(1/3)).  Both the indexed and deduplicated Dirichlet
   series have abscissa 2/3 and diverge at the boundary.  Every split of every
   prime p=2 mod 3 into two positive unequal summands gives a singleton
-  representation fibre; this supplies the deduplicated critical mass.
+  representation fibre; this supplies the deduplicated critical mass.  If
+  H(X) is the deduplicated critical partial sum, then explicitly
+  H(X)>=kappa log log X-6.3745826010... for X>=e^3, and each inert-prime
+  row has mass 2 kappa/p+O(p^(-2)) with displayed one-sided errors.
   No support asymptotic, support residue, or general fibre classification is
   claimed.
 source: root + lrc14-cover-defect-bridge / 2026-08-22
@@ -20,8 +23,11 @@ audit: >
   for all 12,494 targets through p<=800 and cross-prime injectivity for all
   387,587 values.  It also checks primitive reduction and the non-cube-free
   hostile 71*7^4=16^3+55^3.  The earlier cube-free sieve is verified but is
-  not load-bearing.  Normal and optimized streams byte-match every frozen
-  transcript.
+  not load-bearing.  A quantitative companion checks the exact Taylor lower
+  polynomial, both Riemann bounds, all inert primes through 20,000, and
+  cross-prime disjointness through p<=5,000; an independent symbolic referee
+  rechecked the all-scale Chebyshev/Euler-product argument.  Normal and
+  optimized streams byte-match every frozen transcript.
 depends_on:
   - THM-463-two-cube-representations-are-a-divisor-property-on-the-split-axis
 related:
@@ -38,6 +44,10 @@ independent_audit_script: 04-computation/two_cube_inert_prime_boundary_independe
 independent_audit_output: 05-knowledge/results/two_cube_inert_prime_boundary_independent_audit_thm3730.out
 independent_audit_script_sha256: 533cce2de4b32d4da664cef62455a5f6e8ab0c5cd28c5cc6cfa309d39da36886
 independent_audit_output_sha256: 238f6a20a3bd2fc864e1a5111978d89fb04e93c3074edc42fb6381d1983c2dc5
+quantitative_script: 04-computation/two_cube_quantitative_critical_mass_thm3730.py
+quantitative_output: 05-knowledge/results/two_cube_quantitative_critical_mass_thm3730.out
+quantitative_script_sha256: 747fe721120d60742ba7e456f518e0975fdb84127729b9b820e151fe13502463
+quantitative_output_sha256: c37b3fc90fa164cbaad406d07b7839dd350007dc52194dd7d52c3cf0aed2aabc
 hash_basis: raw LF bytes
 ---
 
@@ -255,12 +265,83 @@ D(2/3)
 This proves (3).  More explicitly, the left side truncated at `X` is at
 least the first sum in (15) over `p<=X^(1/3)`.
 
-## 6. Collision tax, density, and scope
+## 6. Quantitative critical mass
+
+Define the deduplicated critical partial sum and one inert-prime row by
+
+```text
+H(X)=sum_(m<=X,m in C_+)m^(-2/3),
+S_p=sum_(1<=x<p/2)(x^3+(p-x)^3)^(-2/3).              (16)
+```
+
+Put `t=x/p`,
+
+```text
+g(t)=(1-3t+3t^2)^(-2/3),
+I=integral_0^(1/2)g(t)dt=2 kappa.                    (17)
+```
+
+The last identity has a geometric explanation.  In homogeneous coordinates
+`(u,v)=(dt,d(1-t))`, whose Jacobian is `d`, the first-quadrant region
+`u^3+v^3<=1` has area
+`(1/2) integral_0^1 g(t)dt=I`.  THM-3730's `kappa` is half this area.
+Since `g` increases on `[0,1/2]`, right-sum comparison, including the omitted
+half mesh at the endpoint, gives the explicit row estimate
+
+```text
+2kappa/p-2^(1/3)/p^2 <= S_p
+ <=2kappa/p+(2^(4/3)-1)/p^2.                         (18)
+```
+
+There is also a useful uniform lower bound.  With `u=3t(1-t)`, retain four
+positive terms of `(1-u)^(-2/3)` and sum the resulting polynomial exactly:
+
+```text
+p S_p>=A_3(p)
+ =(p-1)(201p^5+75p^4+33p^3+33p^2+40p+40)/(252p^6),
+A_3'(p)=(63p^5+42p^4-14p^2+120)/(126p^7)>0,
+A_3(5)=6478/9375>2/3.                                (19)
+```
+
+Thus `S_p>=6478/(9375p)` for every inert prime `p>=5`.  Section 4 proves
+that all entries within and between these rows are distinct singleton
+fibres, while `m_p(x)<p^3`; hence every row with `p<=X^(1/3)` occurs in
+`H(X)`.
+
+For completeness, the elementary Euler-product argument can be made
+quantitative without a prime number theorem.  For `Y>=e`, Chebyshev's
+`theta(t)<=4(log 2)t`, hence `pi(t)<=7t/log t`, combined with (14) gives
+
+```text
+sum_(5<=p<=Y,p=2 mod 3)1/p >=(1/2)log log Y-C_P,
+C_P=14/e+1/2+(log 3+2/9)/2.                          (20)
+```
+
+One direct derivation sets `s=1+1/log Y`: the Euler product and
+`1/2<=L(s,chi)<=2` give
+`sum_(p=2 mod 3)p^(-s)>=(log(1/(s-1))-log 3-2/9)/2`, while partial
+summation with the displayed Chebyshev bound makes the tail beyond `Y` at
+most `14/e`; removing `p=2` yields (20).
+
+Summing the lower half of (18), using
+`sum_(p>=5)p^(-2)<1/4`, and taking `Y=X^(1/3)` proves, for `X>=e^3`,
+
+```text
+H(X)>=kappa log log X-C_X,                            (21)
+C_X=kappa log 3+2kappa C_P+2^(1/3)/4
+   =6.3745826010....
+```
+
+The repeated constant `kappa` comes from the angular integral (17).  Equation
+(21) is a lower bound for the constructed singleton subfamily, not an
+asymptotic or critical residue for the full support.
+
+## 7. Collision tax, density, and scope
 
 For `Re(s)>2/3`, THM-2000's exact support/multiplicity split is
 
 ```text
-F(s)=D(s)+sum_m (r_+(m)-1)_+ m^(-s).                  (16)
+F(s)=D(s)+sum_m (r_+(m)-1)_+ m^(-s).                  (22)
 ```
 
 The first nonzero tax is
@@ -272,7 +353,7 @@ collision-tax asymptotic, or general taxicab fibres.
 The bound `C(X)=O(X^(2/3))` gives natural density zero.
 Since `D(1)<infinity`, its logarithmic density is also zero.
 
-## 7. Reproduction
+## 8. Reproduction
 
 ```bash
 python3 -B 04-computation/two_cube_support_abscissa_thm3730.py
@@ -281,6 +362,8 @@ python3 -B 04-computation/two_cube_inert_prime_boundary_thm3730.py
 python3 -B -O 04-computation/two_cube_inert_prime_boundary_thm3730.py
 python3 -B 04-computation/two_cube_inert_prime_boundary_independent_audit_thm3730.py
 python3 -B -O 04-computation/two_cube_inert_prime_boundary_independent_audit_thm3730.py
+python3 -B 04-computation/two_cube_quantitative_critical_mass_thm3730.py
+python3 -B -O 04-computation/two_cube_quantitative_critical_mass_thm3730.py
 ```
 
 Each normal/optimized pair must agree byte for byte with its frozen

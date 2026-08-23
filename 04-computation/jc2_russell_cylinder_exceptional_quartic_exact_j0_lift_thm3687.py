@@ -8,10 +8,15 @@ entry of that square is rebuilt in K=Q[a]/(F(a)), expanded in the power basis
 import hashlib
 import importlib.util
 from pathlib import Path
+import sys
 
 import sympy as sp
 from flint import fmpq, fmpq_mat
 from sympy.polys.rings import ring
+
+
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
 
 
 PROBE_PATH = Path("04-computation/jc2_russell_cylinder_exceptional_quartic_modular_lift_thm3687.py")

@@ -39,7 +39,10 @@ Newest exact interface: THM-3665--3674 and THM-3701/3705/3706/3710/3713/3718.
 It supplies rank-12 charts, bulk/endpoint tariff, deep-colour defects, both
 detectors, and an excluded-target selector; canonical owner/root/word transport
 and semantic arrival remain missing (MISTAKE-281/300/310/313); THM-2363/THM-2368
-do not recover the `28,393` semantic roots.  THM-3731 proves that `Q` indexes
+do not recover the `28,393` semantic roots.  On the thirty-chart control,
+ordered Euclidean words plus a basepointed grid coboundary reconstruct the
+coefficient/jet/residual packet, but stripping exits support and increments
+remain chart-dependent.  THM-3731 proves that `Q` indexes
 165 valuation orbits; repeated orbits obstruct a valuation-only equivariant
 owner, while pairwise-distinct positive coefficients repair that narrow defect.
 [THM-3743](../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md)
@@ -140,10 +143,13 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   carries, PRS charts, selected-root jets, contact flags, and face-blind
   localization.  THM-3238 closes one `4,319`-state reset bank for `D>=14`, not
   the physical carrier or other faces.  THM-3286 gives the named-face Helly
-  defect; THM-3732 sharpens its `F12/F13` seam to disjoint ten-row fibres, no
-  common next edge, and a `239/568/six-sink` graph.  This excludes only the
-  inherited fixed-fibre model: cross-face routing, `FC(3)`, and `SFC(3)` remain
-  OPEN.
+  defect. THM-3732's `F12/F13` graph has `239/568/six-sink`; the raw equal-
+  magnitude relation is empty on 567 edges, non-full on one, and absent on
+  every length-two path.  Identity rows have five full edges and one positive
+  three-edge 12-row corridor, refuting a universal identity no-subatlas claim.
+  Injective upset size plus dynamic root transport preserves that corridor
+  and kills magnitude matching; the core survivor is only an `S`-half without root 17.
+  Other gauges/faces, cross-face routing, `FC(3)`, and `SFC(3)` remain OPEN.
 
 ### Live work
 
@@ -184,8 +190,12 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 
 ### Live work and limits
 
-- [THM-1950](../01-canon/theorems/THM-1950-h-ge-disc-reduced-to-strongly-connected.md) reduces `H >= disc` to strongly connected tournaments and verifies finite
-  cases; it remains open. THM-3729 makes its base `H>=max(E_even,E_odd(1))`, proves `sum_(S odd)p_u(S)^2=det(I+K)u^T(I+K)^(-1)u`, and for `n>=2` proves `avg_u E_odd(u)=1/2 sum_v disc(T-v)`; the average misses the fixed root, and unsigned subpath-square energy fails at order five.
+- [THM-1950](../01-canon/theorems/THM-1950-h-ge-disc-reduced-to-strongly-connected.md)
+  reduces `H >= disc` to strongly connected tournaments and verifies finite
+  cases; it remains open.  THM-3729 makes its base
+  `H>=max(E_even,E_odd(1))` and proves the rooted response/deletion average.
+  Across a switching class `avg H=n!/2^(n-1)` dominates the even/odd means
+  separately, but not one fixed root/representative; raw squares fail at five.
 - THM-3315/3322/3324 compile switched walks, moments, joins and response Gram.
   THM-3359/3364 give periodic/cyclotomic `T4`; THM-3379 its Fibonacci median
   quotient. THM-3369/3372/3377 give skew/deletion currents; THM-3380 locates
@@ -221,7 +231,11 @@ indexed multiplicity  = D_A(z) + collision tax.
 THM-3359 gives periodic modular supports; THM-2352 gives the q-adic plateau.
 [THM-3499](../01-canon/theorems/THM-3499-regular-shortlex-languages-have-logarithmic-density.md) proves regular shortlex density;
 [THM-3510](../01-canon/theorems/THM-3510-binary-shortlex-equal-level-count-log-density-boundary.md) is sharp: equal counts allow two densities or none.
-[THM-3730](../01-canon/theorems/THM-3730-positive-distinct-two-cube-support-abscissa.md) gives `R(X)=kappa X^(2/3)+O(X^(1/3))`; indexed/support series both have abscissa `2/3` and diverge via inert-prime singleton fibres. Only the indexed critical coefficient is known; no support asymptotic/residue is proved.
+[THM-3730](../01-canon/theorems/THM-3730-positive-distinct-two-cube-support-abscissa.md)
+gives the indexed asymptotic and abscissa `2/3`; both series diverge.
+Inert-prime rows are `2kappa/p+O(p^-2)` and give
+`H(X)>=kappa log log X-6.3745826010...` for `X>=e^3`.  This subfamily bound
+gives no support asymptotic/residue; only the indexed coefficient is known.
 
 ### Established landmarks
 
@@ -307,6 +321,48 @@ THM-3359 gives periodic modular supports; THM-2352 gives the q-adic plateau.
   Jacobian zero. Higher-degree debt,
   nonordinary/nonquadratic folds, two-output mixing, quartic `C3`, and
   unrestricted `C[A,d]^2` remain OPEN (MISTAKE-416).
+  (MISTAKE-205); THM-3544/50 force composite degree `>=6`, height `>=8`, and
+  Nagata/GGHV give reduced height `>=108` (only `(72,108)<125`).
+  THM-3543--3617 close the recorded collision, ray, cyclic, low-width, shear,
+  toric, graph, rational, multiarm and Russell sectors (THM-3592 repaired);
+  wider cells stay OPEN. THM-3618/22 classify fibre separators and their graph
+  closure; THM-3619/23 close all even folds. Non-even THM-3627 closes one
+  polynomial, THM-3630 denies a uniform jet bound, THM-3632 blocks its
+  algebraization, and THM-3634/35 give the rank gates, retained jet plane,
+  and an actual `t=0` witness. On minimal `Q_1`, THM-3637--39 force universal
+  nonzero `J_2` debt in every retained
+  rank-one/two `J_0=1` cell. THM-3641 exposes ordinary curvature zero-debt
+  planes; THM-3642 realizes one by an exact `Q_6` lift through `J_2`, then
+  forces nonzero `J_4` debt for `Q_6,Q_*`. THM-3677 cuts the complete
+  degree-at-most-eight principal zero-second-debt plane by one rational
+  zero-fourth-debt parabola. THM-3678/3680 lift its rational point
+  `Q_dagger` through the actual target-ring equations `J_0=1,J_1=J_2=0`,
+  but THM-3681 closes every continuation at universal order six. Pending-
+  audit THM-3683 leaves only four quartic roots after the retained six-jet
+  screen; THM-3687/3688 lift all four through actual-ring
+  `J_0=1,J_1=J_2=0` (THM-3688 is pending independent hostile audit).
+  `J_3,J_4`, all-order/global-pair/Keller conclusions remain open; THM-3737 is
+  only RESERVED. THM-3684 blocks one-coordinate mates. THM-3685--3735 give
+  the `y=0` output, first `3x4`, and cap `>=22`: W002/W003/W007/W008 are empty;
+  THM-3722/24/27/28/3733/3735/3739 close the named stabilized families;
+  audited THM-3728 closes the final anchor-20 stabilized tail.  This is not
+  all of W004: exceptional W004 placements and W005/6 remain live.
+  THM-3709/3719 and THM-3721/23/25 close named Cohn cells; THM-3734/3736
+  classify all polynomial exposed-left closures over every constant right
+  `SL2` matrix and exclude polynomial mates. THM-3740 extends this to one
+  polynomial right shear: every survivor is an integrable source translate
+  of the same no-mate towers.  A Cohn escape now needs at least two interacting
+  polynomial factors or a different core.  Pending-audit THM-3741 classifies
+  the full radial two-charge ansatz and leaves only its linear members with
+  polynomial mates; third-charge and nonradial sectors remain. THM-3716 proves
+  the monomial Broughton family.
+  Higher-degree zero-debt polynomials, continuation of the four THM-3683 folds,
+  THM-3641's excluded nonordinary tangent collisions, nonquadratic folds, and
+  THM-3629's genuinely two-output-mixed `H'(0)!=0` pairs remain OPEN. A
+  positive global pair here pulls back to a noninjective Keller map and
+  refutes `JC(2)`. THM-3564--78
+  cover factor/nodal obstructions; `A4/S4` cubic is blocked, quartic `C3` OPEN
+  (MISTAKE-416), and unrestricted `C[A,d]^2` remains equivalent to `JC(2)`.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2247 close the affine-through-
   quartic and terminal-through-fourteen strata; THM-2262/2297--2480, including
@@ -349,7 +405,7 @@ THM-3359 gives periodic modular supports; THM-2352 gives the q-adic plateau.
   `d=6518` needs `p=29`, refuting `p<=23`; `d=10001` is untested.
   THM-3182/3185/3188/3191 give the three-state prime reset, carried thickness and exterior/Clifford laws; THM-3210 still blocks a monotone staircase. THM-3249--3314 give the face atlas and show endpoint ancestry/positivity remain OPEN.
   THM-3303/3328 split constant-J into sheet/cone data; THM-3465 closes pure nonreal characters, and THM-3470 closes one mixed triangular shear at moment five. General support `5` and mixed cells remain OPEN.
-  THM-3466's HFC+constant-J current is a length-two Krylov block whose clutch need not separate; THM-3732 instead finds the inherited `F12/F13` named-row seam empty on a common edge, while the HFC-null primitive needs orientation/basepoint for zero holonomy. No bridge map joins them. THM-3357/3365/3362 give controls; HFC(3), FC(3), `JC(2)` and arbitrary faces remain OPEN.
+  THM-3466's HFC+constant-J current is a length-two Krylov block whose clutch need not separate; THM-3732's inherited `F12/F13` raw-magnitude seam never composes for two edges, although identity rows retain one exact corridor. The HFC-null primitive instead needs orientation/basepoint for zero holonomy. No bridge map joins them. THM-3357/3365/3362 give controls; HFC(3), FC(3), `JC(2)` and arbitrary faces remain OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
