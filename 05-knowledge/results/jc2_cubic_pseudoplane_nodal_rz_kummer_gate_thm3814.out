@@ -1,0 +1,14 @@
+theorem=THM-3814-nodal-rz-kummer-profile-degree-gate
+surface=r^2e-z^3+r;c=1;field=algebraically_closed_characteristic_zero
+ansatz=THM3812_plus_rz*p(e),rz*q(e)
+top=p*qprime-q*pprime=0
+symmetric=q=lambda*p;W=kappa-lambda*f;p=alpha*e^3*v^5;W=beta*e^2*v^4
+asymmetric=p0_qnonzero_forces_f0=0_but_arm_forces_f0=1/12
+constant_v=lambda^2=-3/4;beta=-lambda/4;alpha=-4/5;delta=3lambda/16;final_r0=1/4
+linear_v=arm_two_remainders_plus_rank5_compatibility_have_unit_ideal
+survivor=deg_v>=2;deg_p>=13;deg_W>=10
+open=degree_at_least_two_Kummer_tower;higher_canonical_coefficients
+semantic_sha256=2b2e0156b8d0dfb6cfd14c1f0cbd48d13ac79addff056e419f50c41ff5cda77c
+linear_packet_sha256=152e5055ee6f451dbbe4aedd2f3f9944ea685a2c7ef463c5760855ce4f7058ee
+CHECKS=40
+RESULT=PASS
