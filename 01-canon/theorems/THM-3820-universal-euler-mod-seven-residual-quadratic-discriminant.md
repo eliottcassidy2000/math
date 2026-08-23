@@ -29,7 +29,6 @@ audit: >
   square factorization, the direct normalized resultant, the generic
   quadratic-algebra reduction of the t-map, and sharp Y=0, Z=2, W=0, and R=0
   controls.  Normal and optimized runs byte-match the frozen transcript.
-  Independent hostile audit is pending.
 depends_on: []
 related:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
