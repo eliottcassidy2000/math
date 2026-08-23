@@ -1,0 +1,26 @@
+MIXED ANCHORED STEP-THREE SUPPORT AUDIT
+AFFINE-LINEAR CONTROL j=0,1 (now inside THM-3803)
+r*g correction weights: [0, 3]
+mandatory nodal anchor weights: [-6, 1]
+actual carrier weights: [-6, 0, 1, 3]
+pure projected 2x4 bucket histogram: [(0, 1), (3, 2), (6, 2), (9, 2), (12, 1)]
+actual mixed 4x4 bucket histogram: [(-6, 1), (-3, 1), (0, 2), (1, 1), (3, 3), (4, 1), (6, 2), (7, 1), (9, 2), (10, 1), (12, 1)]
+possible scalar rows (relative collision q, mate base b): [(0, -2), (3, -5), (6, -8), (9, -11)]
+row q=0, b=-2: singleton hostile total=-5, e^2[-6] with mate k=1[1]
+row q=3, b=-5: singleton hostile total=-4, f0*z[1] with mate k=0[-5]
+row q=6, b=-8: singleton hostile total=-7, f0*z[1] with mate k=0[-8]
+row q=9, b=-11: singleton hostile total=-10, f0*z[1] with mate k=0[-11]
+NEXT LIVE QUADRATIC CONTROL j=1,2
+r*g correction weights: [-3, 0]
+mandatory nodal anchor weights: [-6, 1]
+actual carrier weights: [-6, -3, 0, 1]
+pure projected 2x4 bucket histogram: [(-3, 1), (0, 2), (3, 2), (6, 2), (9, 1)]
+actual mixed 4x4 bucket histogram: [(-6, 1), (-3, 2), (0, 3), (1, 1), (3, 3), (4, 1), (6, 2), (7, 1), (9, 1), (10, 1)]
+possible scalar rows (relative collision q, mate base b): [(-3, 1), (0, -2), (3, -5), (6, -8)]
+row q=-3, b=1: singleton hostile total=-5, e^2[-6] with mate k=0[1]
+row q=0, b=-2: singleton hostile total=-1, f0*z[1] with mate k=0[-2]
+row q=3, b=-5: singleton hostile total=-4, f0*z[1] with mate k=0[-5]
+row q=6, b=-8: singleton hostile total=-7, f0*z[1] with mate k=0[-8]
+VERDICT: all eight minimal mixed rows fail the singleton opposite-sign gate.
+MAP/LOSS: forgetting e^2 and f0*z recovers the pure step-3 2x4 grammar but does not preserve bracket buckets.
+STATUS FIREWALL: THM-3798 and THM-3803 are audited but do not consume forgotten anchors; THM-3805 remains reserved.

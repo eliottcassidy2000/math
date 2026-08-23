@@ -1,0 +1,15 @@
+LRC SUPPORT-TWO / TWO-CUBE ADDRESS AUDIT
+THM-3743 ratio universe: 19314
+admissible inert exponent<=2 sums: 94
+admissible ratio addresses: 5855
+labelled coordinate-pair addresses: 456690
+largest audited address value: 44738876
+all admissible address fibres singleton in complete positive-pair universe: yes
+all-ratio collision values inside cap: 28
+first canonical collision: 1729 -> [(1, 12), (9, 10)]
+nonprimitive admissible pairs through sum 1000: 57829
+nonprimitive singleton failures through sum 1000: 0
+sharp boundary: 515375=(54,71)=(15,80), with 54+71=5^3
+split-prime hostile: 1729=(1,12)=(9,10), sums 13 and 19
+VERDICT: exact bounded reversible address; loneliness, owner, phase, and the other eleven speeds are lost.
+STATUS FIREWALL: bounded corroboration of a strict subcase of proved THM-3793; no LRC consequence.

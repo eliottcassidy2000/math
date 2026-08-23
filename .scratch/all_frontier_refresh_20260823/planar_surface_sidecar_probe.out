@@ -1,0 +1,14 @@
+PLANAR SURFACE SIDECAR AUDIT
+moving-root family Sigma(c,b): b*(b - c**2*lam - 1)
+identical jets through order 1 for lambda=0,1: (0, 1)
+resonant vectors at order 2: lambda=0 -> (0, 0); lambda=1 -> (0, 1)
+THM-3791 finite-etale control: the resonant universal Hensel jet changes the de Rham class.
+second-normal carrier family: alpha*z**2 + e**2 - z/3
+alpha!=0 critical point: e=0, z=1/(6 alpha), r=1/(216 alpha^3)
+alpha=0 canonical critical equation: 8*zz**7 + 9=0
+THM-3795 positive control: this z^2 direction lies inside the now-closed r-independent cell.
+cubic cover: -3*t*z + z**3 + 2=0
+discriminant: 108*(t - 1)*(t**2 + t + 1)
+branch fibre at t=1: (z - 1)**2*(z + 2); derivative at simple sheet z=-2 is 9
+THM-3794 boundary: degree three can retain an unramified sheet above the branch divisor.
+STATUS FIREWALL: exact scoped probes only; r-coupled mixed normal corrections, cubic etale constant-unit surfaces, JC(2), and DC(2) remain open.

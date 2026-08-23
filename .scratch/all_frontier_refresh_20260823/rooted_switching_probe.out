@@ -1,0 +1,11 @@
+ROOTED SWITCHING / OWNER HOSTILE
+minimal searched order: n=6
+separation strength: same H and disc
+switch signs D: (1, 1, -1, 1, 1, -1)
+shared discriminant: 2
+first:  H=29, E_odd(1)=6, arcs=[(1, 2), (1, 5), (2, 4), (3, 1), (3, 2), (3, 4), (4, 1), (4, 5), (4, 6), (5, 2), (5, 3), (6, 1), (6, 2), (6, 3), (6, 5)]
+second: H=29, E_odd(1)=4, arcs=[(1, 2), (1, 3), (1, 5), (1, 6), (2, 3), (2, 4), (2, 6), (3, 5), (4, 1), (4, 3), (4, 5), (5, 2), (5, 6), (6, 3), (6, 4)]
+covariant check E_odd(K,D1)=E_odd(DKD,1): 4
+independent odd-subset Pfaffian-square reconstruction: pass
+VERDICT: the unrooted switching data do not determine the fixed-root response.
+BOUNDARY: this is a finite exact observer hostile, not a proof of H>=disc or any LRC/FC claim.
