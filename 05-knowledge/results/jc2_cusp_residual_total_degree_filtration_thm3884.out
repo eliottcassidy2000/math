@@ -1,0 +1,10 @@
+theorem=THM-3884-cusp-residual-total-degree-leading-gauge-filtration
+coefficient_degree_cells=14
+nonconstant_f_square_survivor_requires=degT_at_least_degf_plus_1
+equality_top=243*x^3*f_n^2*(K2*f_n+x*T_m)^2
+equality_survivor_requires=f_n=x*q;T_m=-K2*q
+leading_direction=THM3881_gauge_(K,-a)
+gauge_square_invariance_or_termination=NOT_CLAIMED
+semantic_sha256=0345dc2a0b92899d33c99658ba565f31aaf613cdbca3494b85c1f255171400d1
+CHECKS=62
+RESULT=PASS
