@@ -4,10 +4,13 @@ equality_seam=leading_edge_tie_omega(g_top,v_top)=0
 tie_depth_supercritical=IMPOSSIBLE_ODD_X_VALUATION
 tie_depth_subcritical=NECESSARY_n_odd_and_q_square
 tie_depth_critical=NECESSARY_q=x*s^2;r_t=rho*x^3*s;rho^2=-216
+iterated_equality_gauge_jets=ceil(n/2)
+terminal_parity=odd:q0_square;even:critical_q0=x*s^2
 f_zero_both_arms_zero_degT_at_most_5=T_ZERO
 sextic_named_u_v_tournament=REFUTED_BY_COORDINATE_SLIDE
 THM3886_status=PROVED_VERIFIED_EXACT_INDEPENDENTLY_HOSTILE_AUDITED
+THM3894_status=RESERVED;half_depth_packet=PROVED_ALGEBRA
 JC2_status=OPEN
-semantic_sha256=d1efd0b11f3f6ff0dec3218ea3ccc0efd1c5b612ca0fc54eb1ac261ec9756e68
-CHECKS=119
+semantic_sha256=16b4a071fa50e03312923ecb9e0a6f69eeffd5b7f29e220b288fa1511906d6bf
+CHECKS=1188
 RESULT=PASS

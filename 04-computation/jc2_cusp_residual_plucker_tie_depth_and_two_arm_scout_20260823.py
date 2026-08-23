@@ -3,7 +3,8 @@
 
 This research companion independently verifies the exact skew-gain packet
 behind THM-3881 and the leading tie-depth envelope underlying the subsequently
-promoted THM-3886 proof candidate.  It also verifies a new
+promoted THM-3886 theorem.  It iterates that envelope to the half-depth gauge
+staircase intended for the separately reserved THM-3894.  It also verifies a new
 degree-five closure in the zero/zero-arm f=0 sector, and a hostile check
 showing why the sextic cusp cannot use the named u/v coordinates as an
 intrinsic ordinary tournament.
@@ -189,6 +190,62 @@ tie_top = sp.expand(
 zero(tie_top.subs(rho**2, -216), "critical normal form cancels top degree")
 
 
+# The same depth comparison iterates.  After j leading gauge components have
+# been removed, the gauge-invariant edge r has degree at most n+2-j.  A
+# nonzero top component is supercritical exactly when n>2j, and then the odd
+# x-valuation forces one more gauge component.  The all-n proof is the affine
+# identity below; the loop is a hostile boundary check for both parities.
+j = sp.symbols("j", integer=True)
+zero(2 * (n + 2 - j) - (n + 4) - (n - 2 * j),
+     "iterated depth comparison n-2j")
+for nn in range(3, 65):
+    jet_count = (nn + 1) // 2
+    for jj in range(1, jet_count):
+        gate(nn > 2 * jj, f"forced gauge extension n={nn},j={jj}")
+    terminal_bound = nn + 2 - jet_count
+    if nn % 2:
+        gate(2 * terminal_bound < nn + 4,
+             f"odd terminal is subcritical n={nn}")
+    else:
+        gate(2 * terminal_bound == nn + 4,
+             f"even terminal is critical n={nn}")
+
+# Freeze the general homogeneous components of the exact gauge pair
+# (-K*W,a*W).  Here q_i has degree n-1-i; indices below zero are zero.
+qjets = sp.symbols("q0:7")
+K1 = -15 * x
+K0 = -4
+
+
+def qjet(index: int) -> sp.Expr:
+    return qjets[index] if 0 <= index < len(qjets) else sp.Integer(0)
+
+
+for index in range(len(qjets)):
+    f_component = x * qjet(index) + qjet(index - 1)
+    T_component = (
+        -K2 * qjet(index)
+        - K1 * qjet(index - 1)
+        - K0 * qjet(index - 2)
+    )
+    expected_T_component = (
+        -K2 * qjet(index)
+        + 15 * x * qjet(index - 1)
+        + 4 * qjet(index - 2)
+    )
+    zero(T_component - expected_T_component,
+         f"gauge component recurrence {index}")
+    # The degree-(n+2-index) component of a*T+K*f cancels exactly.
+    residual_component = sp.expand(
+        x * T_component
+        + (-K2 * qjet(index - 1) - K1 * qjet(index - 2) - K0 * qjet(index - 3))
+        + K2 * f_component
+        + K1 * (x * qjet(index - 1) + qjet(index - 2))
+        + K0 * (x * qjet(index - 2) + qjet(index - 3))
+    )
+    zero(residual_component, f"gauge component kills r layer {index}")
+
+
 # ---------------------------------------------------------------------------
 # 3. Forgotten two-arm deletion closes the zero/zero f=0 sector through d=5.
 # ---------------------------------------------------------------------------
@@ -295,6 +352,7 @@ semantic = {
         "2t<n+4": "n odd and q is a square up to scalar",
         "2t=n+4": "q=x*s^2 and r_t=rho*x^3*s with rho^2=-216",
     },
+    "iteration": "every equality survivor n>=3 has ceil(n/2) leading gauge jets; odd terminal square, even terminal Kummer",
     "niche": "f=0, both exact arms zero, degT<=5 implies T=0",
     "wildcard": "sextic named u/v tangent pair is coordinate-dependent; ordinary tournament rejected",
     "scope": "necessary laws and finite cells only; THM3886 exceptional closures separately hostile-audited; JC2 open",
@@ -313,9 +371,12 @@ print("equality_seam=leading_edge_tie_omega(g_top,v_top)=0")
 print("tie_depth_supercritical=IMPOSSIBLE_ODD_X_VALUATION")
 print("tie_depth_subcritical=NECESSARY_n_odd_and_q_square")
 print("tie_depth_critical=NECESSARY_q=x*s^2;r_t=rho*x^3*s;rho^2=-216")
+print("iterated_equality_gauge_jets=ceil(n/2)")
+print("terminal_parity=odd:q0_square;even:critical_q0=x*s^2")
 print("f_zero_both_arms_zero_degT_at_most_5=T_ZERO")
 print("sextic_named_u_v_tournament=REFUTED_BY_COORDINATE_SLIDE")
 print("THM3886_status=PROVED_VERIFIED_EXACT_INDEPENDENTLY_HOSTILE_AUDITED")
+print("THM3894_status=RESERVED;half_depth_packet=PROVED_ALGEBRA")
 print("JC2_status=OPEN")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")

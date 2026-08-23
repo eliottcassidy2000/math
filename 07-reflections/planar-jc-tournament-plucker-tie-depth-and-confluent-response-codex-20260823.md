@@ -272,6 +272,92 @@ two-jet conclusion, and the separate homogeneous replays discharge both
 exceptional obligations.  This is the independent hostile audit recorded in
 the promoted THM-3886 status.
 
+### Half-depth gauge staircase: the incoming signal iterates
+
+The same argument does not stop at two jets.  This is an independently proved
+and hostile-audited algebraic packet for the currently
+`RESERVED / UNPROVED EMPTY STUB`
+[THM-3894](../01-canon/theorems/THM-3894-cusp-residual-all-degree-gauge-kummer-parity-filtration.md);
+the reserved file is not promoted here.
+
+Let `q_i` be homogeneous of degree `n-1-i` and put
+
+```text
+W_j=q_0+...+q_(j-1),
+Ttilde_j=T+K W_j,              ftilde_j=f-a W_j.
+```
+
+The first equality-seam jet is `W_1=q_0=q`.  Suppose after `j>=1` jets
+
+```text
+deg Ttilde_j<=n+1-j,           deg ftilde_j<=n-j.
+```
+
+Gauge invariance gives
+
+```text
+r=a Ttilde_j+K ftilde_j,
+deg r<=n+2-j.
+```
+
+No square equation is asserted for `(Ttilde_j,ftilde_j)`.  Every use of the
+tie-depth law is on the original square residual, with its original `q_0`,
+`A_top`, and `B_top`; only the invariant edge `r` is computed through the
+gauge-subtracted pair.
+
+If its top component is nonzero, then `t=n+2-j`, and the tie-depth comparison
+is exactly
+
+```text
+2t-(n+4)=n-2j.
+```
+
+Whenever `n>2j`, this is the impossible supercritical regime.  Hence the top
+component vanishes:
+
+```text
+x(Ttilde_j)_(n+1-j)+K_2(ftilde_j)_(n-j)=0.
+```
+
+Since `gcd(x,K_2)=1`, there is a homogeneous `q_j` with
+
+```text
+(ftilde_j)_(n-j)=xq_j,
+(Ttilde_j)_(n+1-j)=-K_2q_j.
+```
+
+Here later `q_j` are allowed to be zero; “homogeneous” includes that nominal
+graded component.
+
+Adding `q_j` to `W_j` produces the next full gauge jet.  Induction forces
+
+```text
+J=ceil(n/2)
+```
+
+leading jets for every equality-seam survivor with `n>=3`.  Explicitly, with
+negative-index `q_i` interpreted as zero,
+
+```text
+f_(n-i)=xq_i+q_(i-1),
+T_(n+1-i)=-K_2q_i+15xq_(i-1)+4q_(i-2),   0<=i<J.
+```
+
+The terminal parity passport is forced rather than guessed:
+
+- for odd `n`, the terminal bound is strictly subcritical, so `q_0` is a
+  square up to scalar;
+- for even `n`, a subcritical terminal would require `n` odd and is therefore
+  impossible.  The terminal edge must have degree `n/2+2` and be critical:
+  `q_0=xs^2`, `r_top=rho x^3s`, `rho^2=-216`.
+
+This is the natural-number encoding promised by the tournament analogy: the
+discrete address is the number of consecutive zero Plucker responses before
+the terminal parity carrier, namely `ceil(n/2)`.  The exact companion freezes
+the recurrence and all odd/even boundary inequalities through 1,188 active
+gates.  It remains an associated-graded classification; it does not make
+gauge peeling preserve the square equation.
+
 This is a sharp new necessary trichotomy, but not a closure theorem.  In the
 critical case the next degree already depends on
 
@@ -463,13 +549,13 @@ proof.
 
 ## 6. Generated next tasks
 
-1. **Stable third gauge jet.**  For `n>=3`, impose the two-jet alignment
-   following `(13)`, expand the first surviving part of `(14)`, and test
-   whether the same tie-depth mechanism forces a third jet or exposes a
-   genuine transverse square carrier.
-2. **Subcritical parametrization.**  Substitute `q=s^2` into the full residual,
-   retain `r` rather than gauge-peeling it away, and compute the first degree at
-   which `A` transport debt reappears.
+1. **Even terminal Kummer lift.**  After the forced half-depth staircase,
+   parameterize the terminal `q_0=xs^2`, `r_top=rho x^3s` for `n=4,6`.
+   Test whether THM-3886's consecutive-valuation contradiction at `n=2`
+   scales or whether a genuine higher Kummer carrier first appears.
+2. **Odd terminal square lift.**  Substitute `q_0=s^2` after all forced jets,
+   retain `r` rather than gauge-peeling it away, and locate the first degree at
+   which the `A` transport debt becomes a transverse obstruction.
 3. **Degree-seven elliptic/descent cell.**  Put `H_1` quartic in `(18)`.  The `x=0`
    specialization now has degree four, while mixed `y^3`/`y^4` channels can
    tie rather than die by a unique odd degree.  Express the same shell in
