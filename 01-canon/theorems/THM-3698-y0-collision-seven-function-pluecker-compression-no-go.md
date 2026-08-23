@@ -199,8 +199,9 @@ This prevents a large but uninformative computation: adjoining one target
 monomial to `(2)` can never work, regardless of its degree or coefficients.
 The first meaningful compression test must add at least two distinct new
 grading weights, or one genuinely nonhomogeneous function carrying at least
-two new weights.  The live support shapes remain `2 x 5` and `3 x 4`; this
-theorem neither closes them nor constructs a counterexample.
+two new weights.  By THM-3695's repaired coordinatewise floor, the first live
+support shape is `3 x 4`; this theorem neither closes it nor constructs a
+counterexample.
 
 ## Reproduction
 
