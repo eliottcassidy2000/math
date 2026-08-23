@@ -1,0 +1,8 @@
+theorem=THM-3886-cusp-residual-equality-seam-second-layer-trichotomy
+n_ge_3=second_full_gauge_jet
+n_eq_2=Kummer_twist_q=x*u^2;R=epsilon*x^3*u;epsilon^2=-216
+n_eq_1=no_square_survivor_via_constant_pure_gauge
+gauge_peeling_square_invariance=NOT_CLAIMED
+semantic_sha256=5c2bfe4c8480d58600120ca0268d4082ad734429f719060440072993ea9115d0
+CHECKS=30
+RESULT=PASS
