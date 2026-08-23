@@ -25,7 +25,12 @@ audit: >
   perturbation, and 141 exact first-mismatch gates for N=0,...,4 in the
   d<N, d=N, and d>N regimes, including the resonant leading square.  Normal
   and optimized runs byte-match the frozen 141-gate transcript and both
-  recorded hashes.
+  recorded hashes.  A separate 453-gate independent checker reconstructs the
+  formal quotient for zero, constant and nonconstant graph profiles, audits
+  the two-step completion-to-polynomial divisibility descent, and exercises
+  fibrewise and special-top cancellations omitted from the primary grid.  Its
+  repeated-total hostile has `Delta=-F^2G` with the distinct companion
+  `G~=G_m`.  Normal, optimized and frozen transcripts byte-match.
 related:
   - THM-3859-marked-root-polynomial-graph-companion-puncture-obstruction
   - THM-3863-finite-binomial-hensel-peels-force-projective-companion-contact
@@ -34,6 +39,12 @@ output: 05-knowledge/results/jc2_all_polynomial_graph_first_mismatch_thm3866.out
 script_sha256: c099664f9108c2a35b74213a0bf3c5ed53d5ddfe161bad2d321a90b42caeef15
 output_sha256: 1377d14c155c9c2131366b044b0fe3c1d27f90350443f4887b4c0f7b3986f946
 semantic_sha256: 759fa0f273f8340f83a648ce992b5018b8a61c5d19559532611001567d36fd7c
+independent_audit_script: 04-computation/jc2_all_polynomial_graph_first_mismatch_independent_audit_thm3866.py
+independent_audit_output: 05-knowledge/results/jc2_all_polynomial_graph_first_mismatch_independent_audit_thm3866.out
+independent_audit_script_sha256: a43d48c860f6ccc7cff4670b2faa97544d6702b7e6e78c426ad29ef951765dff
+independent_audit_output_sha256: e3572ff1499939d308b0ffecadd2cf625804dee97306327a8e8ef70841c454b0
+independent_audit_semantic_sha256: 44c2dcd32765728b70180debeb973e63c6745145782ca955006460b1e815438b
+audited_proof_body_sha256: a60cbf21b92bf844f9cbdfe695f7d28157f3cb38d9e4bac834be5224516ae3ed
 hash_basis: raw LF bytes
 ---
 
@@ -410,10 +421,13 @@ Run
 ```bash
 python3 04-computation/jc2_all_polynomial_graph_first_mismatch_thm3866.py
 python3 -O 04-computation/jc2_all_polynomial_graph_first_mismatch_thm3866.py
+python3 -B 04-computation/jc2_all_polynomial_graph_first_mismatch_independent_audit_thm3866.py
+python3 -B -O 04-computation/jc2_all_polynomial_graph_first_mismatch_independent_audit_thm3866.py
 ```
 
-Both commands must byte-match
+The first two commands must byte-match
 `05-knowledge/results/jc2_all_polynomial_graph_first_mismatch_thm3866.out`.
+The latter two must byte-match the independent-audit output.
 The assertion-free companion performs 141 gates.  Its finite universe is
 generic `s(A)`-jets through order four and, in a hostile fixed graph, every
 regime `d=N-1,N,N+1,N+2` for `N=0,...,4`.  The all-degree proof is

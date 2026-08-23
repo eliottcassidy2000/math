@@ -347,8 +347,10 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   Jelonek gate and THM-3845's degree contradiction; THM-3842 identifies its
   eightfold tower base change.  THM-3847's `G_m` deformation is monogenic and
   non-uniruled; THM-3844 is one-place but monogenic.  THM-3850/3852 close the
-  one-variable and affine-line profiles, and THM-3859 extends the punctured
-  companion gate through all polynomial marked-root graphs.  THM-3851's
+  one-variable and affine-line profiles; THM-3859 classifies polynomial
+  marked roots, and THM-3866 extends the punctured-companion gate to arbitrary
+  polynomial transverse quotients.  The vertical axis and nongraph `A1`
+  components remain separate lanes.  THM-3851's
   `(Z/3)^2` closure is a unit-rich torus, while THM-3854's one-place
   three-cusp front has `S5` monodromy and no cubic quotient or interior-arm
   entry.  Alternative constant-unit nonmonogenic cubic orders remain open.

@@ -51,7 +51,15 @@ audit: >
   A separate strengthened base-right-equivalence audit has 368 gates and
   independently checks the
   complete-intersection Hilbert function, fixed six-identity recursion,
-  tangent-map inverse and polynomial base-orbit no-go.
+  tangent-map inverse and polynomial base-orbit no-go.  A dedicated
+  independent 343-gate coefficient-rigidity audit derives the row-action
+  signs from literal SL2 substitutions, proves the base quotient kernel,
+  supplies generalized-adjugate certificates for every maximal minor, and
+  constructs an all-degree right inverse from the degree-two determinant
+  14400.  It executes the nonlinear base/gauge orbit recursion on a dense
+  coefficient germ through degree five, audits every cross-term degree and
+  the infinite m-adic group limit, and byte-matches in normal, optimized and
+  frozen modes.
 depends_on:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
   - THM-3853-quadratic-depth-inverse-discriminant-one-place-gluing-obstruction
@@ -70,6 +78,11 @@ right_equivalence_audit_output: 05-knowledge/results/jc2_formal_inverse_discrimi
 right_equivalence_audit_script_sha256: 2059a1c9448f77f3dacd328027a1f0850b860a00e8bfcdf59079570ae907c734
 right_equivalence_audit_output_sha256: ee3cbc9eb601af59514f2e7e16d079689eab5cea0758457638e2275f163b94c9
 right_equivalence_audit_semantic_sha256: 44e6ae4de23de3a4fcf7384c73cbd4712a762c2b185b39775cb1e8032d8f250f
+coefficient_rigidity_audit_script: 04-computation/jc2_formal_coefficient_rigidity_independent_audit_thm3855.py
+coefficient_rigidity_audit_output: 05-knowledge/results/jc2_formal_coefficient_rigidity_independent_audit_thm3855.out
+coefficient_rigidity_audit_script_sha256: ea987c7e8d7bdc9a024cae4d4896af7afda05e3348f8115e69ac7b797172f306
+coefficient_rigidity_audit_output_sha256: f2a9324bdb11ca8b37677793a7f6eed792bcf3fbb190c9fd6c0a116e671d0a0e
+coefficient_rigidity_audit_semantic_sha256: 19eaacb687ee440c07950c3de051b5876a612f7d31b42688d02ca0d11165903a
 hash_basis: raw LF bytes
 ---
 
@@ -360,6 +373,11 @@ tangent-identity `phi` in `N_(n-1)f_1` also costs degree `n+1`.  Thus the
 correction does not disturb any completed order.  The infinite compositions
 converge `m`-adically and prove `(4a)--(4c)`.
 
+For completeness, the cross term between the new `N_(n-1)` and the previous
+`G-I in m`, followed by the linear row `f_1`, has degree at least
+`(n-1)+1+1=n+1`; simultaneous new base/gauge products have degree at least
+`2n-1`.  These exhaust the remaining semidirect-action terms.
+
 This is the decisive scope statement.  Formal inverse-discriminant lifting
 does not construct a new local cubic algebra at all.  Any polynomial survivor
 must be a polynomial coefficient row whose formal base and `SL2` gauges do
@@ -525,6 +543,8 @@ python3 04-computation/jc2_formal_inverse_discriminant_lift_independent_audit_th
 python3 -O 04-computation/jc2_formal_inverse_discriminant_lift_independent_audit_thm3855.py
 python3 04-computation/jc2_formal_inverse_discriminant_right_equivalence_independent_audit_thm3855.py
 python3 -O 04-computation/jc2_formal_inverse_discriminant_right_equivalence_independent_audit_thm3855.py
+python3 -B 04-computation/jc2_formal_coefficient_rigidity_independent_audit_thm3855.py
+python3 -B -O 04-computation/jc2_formal_coefficient_rigidity_independent_audit_thm3855.py
 ```
 
 The primary modes byte-match the strengthened frozen 115-gate transcript.
@@ -533,6 +553,5 @@ twelve and a dense target through degree nine, while independently recovering
 every audited formal-order gate.  Its normal and optimized runs byte-match
 its frozen output.  The separate 368-gate hostile audit of the base
 right-equivalence extension also passes in normal and optimized modes.
-**QED for the independently audited core; Section 3 is a candidate pending
-an independent hostile audit of its additional coefficient-level `SL2`
-gauge.**
+The dedicated 343-gate audit independently closes Section 3 and its
+coefficient-level `SL2` gauge.  **QED.**

@@ -931,6 +931,17 @@ two, where the companion repeats the graph.  The fixed-nonzero-product torus
 is disjoint from this grammar; setting the product to zero removes its Laurent
 pole only by making the cubic reducible.
 
+THM-3866 removes the remaining `Q=q(A)` restriction.  It compares an
+arbitrary polynomial transverse quotient with the unique formal binomial
+quotient at the first `A`-adic mismatch.  Below, above, and at the resonant
+`C`-degree, the residual has strictly larger generic than special-fibre
+degree; the resonance is an exact nonzero square.  Projective contact at
+`A=0,C=infinity` therefore selects a distinct reduced companion with another
+missing point above `A=infinity`.  Polynomial graph branches are now closed
+in this carrier.  The separately reserved THM-3870 lane asks for the analogous
+first-mismatch proof on the vertical axis; until independent audit, it remains
+a proof candidate rather than part of the graph theorem.
+
 THM-3851 exposes a more surprising tradeoff.  Its tricuspidal quartic gains
 the desired rank-two class group `(Z/3)^2`, but no line cuts the normalization
 at one place.  Fourier coordinates identify the same quartic with
