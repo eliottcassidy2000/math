@@ -1,0 +1,13 @@
+RULE30_ADAPTIVE_QUERY_CLOSURE_20260823
+status=FINITE-EXACT;literal_point-query_model;no_rule30_prize
+dependency_sha256=2ce110f0b8e9c71c3d298aaf07e8e6c02b70d33e5671bc763f3f3b490caa5445
+target_depth=4;gap_budget=4;source_depth=8;target_rays=(0, 1, 2)
+static_closure_rows=((1,5,(0,2,4),16,19,5,((0,'BABC'),(2,'AAC'),(4,'B'))),(2,6,(0,2,4,8),32,36,6,((0,'BBBAA'),(2,'ACBAB'),(4,'AAB'),(8,'ACA'))),(3,7,(0,2,4,8,16),64,69,9,((0,'BBBAA'),(2,'ACBAB'),(4,'ABBCA'),(8,'ACA'),(16,'BBBBCA'))),(4,8,(0,2,4,8,16,32),128,134,10,((0,'BAABAB'),(2,'ACBAB'),(4,'ABBCA'),(8,'AAAAACA'),(16,'CABCBAC'),(32,'ABBACBC'))),(5,9,(0,2,4,8,16,32,64),256,263,11,((0,'BAABAB'),(2,'ACBAB'),(4,'ABBCA'),(8,'AAAAACA'),(16,'CABCBAC'),(32,'BBBBBBB'),(64,'CABABBB'))),(6,10,(0,2,4,8,16,32,64,128),512,520,13,((0,'CBACBCA'),(2,'ABABAABBB'),(4,'ABBCA'),(8,'BBCAABC'),(16,'CABCBAC'),(32,'BBBBBBB'),(64,'BAABBBCA'),(128,'ABAAAAABC'))))
+ambient_words=active_length_1_to_9:14762;distinct_depth_8_permutations=14762;exact=13853;overflow=909
+zero_only_hostile=('ACBAAC','ACBCAA',1,((11,4,5),1,(0,187,26)),(13,12,15),(13,0,7))
+omit_ray_one_hostile=('BBBBAC','BBCBAB',4,((9,8,3),4,(0,137,80),(32,41,112)),(5,10,7),(5,0,7))
+omit_ray_two_hostile=('ABCAACAA','ABCCACAC',1,((5,6,11),1,(0,181,18),(2,43,32)),(9,0,3),(9,0,11))
+inherited_bank_hostile=(('CA',(7,10,1),3,(13,2,3)),('CCAC',(7,10,1),10,(9,4,7)))
+semantic_sha256=0608bc5298aa7855dabb4784dd56df3c2df6cba06a7bfe0e2a60b754f1a3ca63
+interpretation=static_literal_composition_saturates_odd_half;adaptive_zero_chain_plus_two_off_ray_routed_chains_is_exact;each_off_ray_chain_has_a_finite_hostile_when_omitted
+ALL CHECKS PASSED

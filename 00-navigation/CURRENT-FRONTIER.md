@@ -333,8 +333,12 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
 - **Rule 30:** THM-3502/3511/3512/3516 retain compiler/owner/carry; THM-3778
   excludes finite-spatial cycles. THM-3804 gives all Smith forms; THM-3824
   gives fixed-division and one-shell parity tariffs, same-scale separation,
-  and the all-shell stabilizer as the response kernel (zero at odd core).
-  Adaptive/projective chronology and every prize remain OPEN.
+  and the all-shell stabilizer as the response kernel (zero at odd core).  A
+  FINITE-EXACT `D=B=4` routed-query audit recovers the next `(0,1,2)` bank
+  from two off-ray chains, each necessary in its declared deletion family;
+  literal static two-stage closure instead needs `134/256` coordinates.
+  Bounded physical recursion, adaptive/projective chronology and every prize
+  remain OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  THM-3543--3782 close
   named cells, not arbitrary pairs.  THM-3827/3831 impose primitive-row genus
   `>=3`; THM-3836 retains the all-degree core `P=3h^3+7h^2k+k^3=CS` with a
