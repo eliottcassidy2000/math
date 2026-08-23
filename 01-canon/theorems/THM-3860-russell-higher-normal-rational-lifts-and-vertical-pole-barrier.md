@@ -2,12 +2,13 @@
 id: THM-3860
 title: "Russell higher-normal rational lifts and the vertical pole barrier"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-  PENDING.  Formal Darboux coefficients in the completed Russell arm obey
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Formal Darboux
+  coefficients in the completed Russell arm obey
   an exact one-equation recursion whose free summand is tangent to the arm.
   When the first-normal Wronskian is a nonzero constant, every rational
-  normal coordinate depending only on z has a unique vertical-affine
-  companion and gives an exact rational Darboux lift.  The minimal nodal
+  normal coordinate depending only on z forces one vertical-affine slope,
+  with a free translation in k(z), and gives an exact rational Darboux lift.
+  The minimal nodal
   packet therefore crosses THM-3846's canonical square-root rationality
   gate.  Nevertheless, for that nodal packet, every member of the complete
   vertical rational subclass has a divisorial pole on the Russell surface.  This is not an
@@ -15,13 +16,17 @@ status: >
   nor to arbitrary global Darboux pairs, and no JC(2) conclusion is claimed.
 source: root / higher_normal_lift / Russell higher-normal algebraization lane, 2026-08-23
 audit: >
-  PROVISIONAL exact companion verifies the formal coefficient convolution,
-  the affine solution torsor, the first two forced recursion rows, the
-  arbitrary vertical rational Jacobian identity, preservation of the arm
-  and first normal jet, the explicit nodal rational pair, its named prime
-  pole, and the one-root exceptional-family jet contradiction.  Normal and
-  optimized executions byte-match the frozen transcript.  A logically
-  independent proof and implementation have not yet been supplied.
+  INDEPENDENT HOSTILE AUDIT PASS (root and rule30_tariff_audit, 2026-08-23).
+  The proof and a separate implementation rederive the full convolution and
+  tangent torsor, classify the vertical slope modulo its k(z)-translation,
+  preserve all prescribed jets, verify the nodal pair and Laurent-prime pole,
+  and prove the rational-function lemma through the polynomial edge,
+  arbitrary pole multiplicities, and the single-pole exceptional family.
+  The audit exhausts all 66 pole-multiplicity profiles through degree eight,
+  all relative pole orders of f, and pole multiplicities one through eight.
+  It also caught and repaired the distinction between a unique slope and a
+  nonunique translation.  Normal and optimized runs byte-match both frozen
+  LF transcripts.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3846-formal-arm-darboux-lift-and-algebraization-gate
@@ -29,18 +34,24 @@ related:
   - THM-3790-cubic-pseudoplane-arm-nodal-immersion-gate
   - THM-3843-russell-arm-birational-immersion-and-forced-self-identification
   - THM-3849-russell-arm-conductor-polynomial-and-residual-contact-graph
+  - THM-3856-quadratic-normal-strip-keller-pairs-are-automorphisms
 script: 04-computation/jc2_russell_higher_normal_rational_lifts_thm3860.py
 output: 05-knowledge/results/jc2_russell_higher_normal_rational_lifts_thm3860.out
 script_sha256: c8b13abed6a8a421f7a1bb1b079b02d6852fba88a254f7e944d1b8f8594a64cd
 output_sha256: b11751a10ca63b1666a6b289bd864b4a1e5037672344244e98a96d452b1715f3
 semantic_sha256: 971c46a940d02c8240765f6ac7d622615b24f4e4cc273ee28038317ec3b2816f
+independent_audit_script: 04-computation/jc2_russell_higher_normal_rational_lifts_independent_audit_thm3860.py
+independent_audit_output: 05-knowledge/results/jc2_russell_higher_normal_rational_lifts_independent_audit_thm3860.out
+independent_audit_script_sha256: 4c70ff1e86c33e598f8092e61574cc0759eb792bc4d06239e843c5625bd0f26e
+independent_audit_output_sha256: 0304dece6fa70b04ae6ce05d5b01578480e6aeda8f796781f18bf493b82f2ea3
+independent_semantic_sha256: af2a80c84fc8ea7e70043c82b6ec8677886caca57c697f7eee91cc392110a897
 hash_basis: raw LF bytes
 ---
 
 # THM-3860 -- rational higher-normal lifts exist, but the vertical class has poles
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-PENDING.**  Let `k` be an algebraically closed field of characteristic zero.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k` be an
+algebraically closed field of characteristic zero.
 Fix `c in k*` and retain the THM-3785 Russell surface and its completed arm:
 
 ```text
@@ -56,7 +67,8 @@ The result has four parts.
    coefficient affine recursion.  Its only freedom at each new order is a
    multiple of the arm tangent.
 2. If the first-normal Wronskian is a constant `w`, every rational choice
-   `Z=phi(z)` has a unique vertical-affine exact correction
+   `Z=phi(z)` forces a unique vertical slope `S_s=L(z)`; its exact
+   vertical-affine corrections form the translation torsor
    `S=L(z)s+f(z)`.
 3. For the minimal nodal packet, a Mobius choice of `phi` gives an exact
    rational Darboux pair in `Frac(B)` with the same arm and first normal jet
@@ -416,20 +428,25 @@ same arm Bezout law and, locally, the same conductor/contact coefficient as
 THM-3849.  What it cannot do is extend that local packet across the whole
 Russell surface.
 
-The cheapest genuinely new construction must therefore leave the declared
-class by taking `Z_s != 0`.  For a precomposition tangent to the identity,
+Within this seed-precomposition strategy, the cheapest genuinely new
+coordinate must therefore leave the declared class by taking `Z_s != 0`.
+Choosing a different higher-normal seed is another escape not treated here.
+For a precomposition tangent to the identity,
 the density equation `(13),(16)` forces the coefficient of `z^2` in `Z` to
 be the constant `-w/2`, so the first possible `s`-dependent term is at order
 `z^3`.  This is a design boundary, not an existence assertion.  Arbitrary
 higher-normal algebraization and the planar Jacobian conjecture remain open.
-**QED, pending independent audit.**
+**QED.**
 
 ## 5. Reproduction
 
 ```bash
 python3 -B 04-computation/jc2_russell_higher_normal_rational_lifts_thm3860.py
 python3 -B -O 04-computation/jc2_russell_higher_normal_rational_lifts_thm3860.py
+python3 -B 04-computation/jc2_russell_higher_normal_rational_lifts_independent_audit_thm3860.py
+python3 -B -O 04-computation/jc2_russell_higher_normal_rational_lifts_independent_audit_thm3860.py
 ```
 
-Both executions must byte-match
-`05-knowledge/results/jc2_russell_higher_normal_rational_lifts_thm3860.out`.
+The first two executions must byte-match
+`05-knowledge/results/jc2_russell_higher_normal_rational_lifts_thm3860.out`;
+the last two must byte-match the corresponding independent-audit output.
