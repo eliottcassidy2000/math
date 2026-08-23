@@ -2,7 +2,7 @@
 id: THM-3779
 title: "Three-component tower maximal Danielewski polynomial observable"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
   m>=2 in the THM-3774 rational Keller tower, V=UP and the newly recognized
   E=P(V-1) are polynomial, and the complete intersection of the rational
   target field with the source polynomial ring is the smooth exponent-one
@@ -15,14 +15,12 @@ status: >
   cover has S4 monodromy and its cubic resolvent realizes the V4 quotient.
 source: root + jc_quartic_c3_construct / target-field observable search, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The exact companion verifies E's source
-  formula, the relation and all three Poisson minors for m=1,...,8, the
-  two arm parametrizations, finite-root recovery identities, critical
-  double-root residual degrees, the m=1 inverse-discriminant hostile, and
-  the m=2/m=3 discriminants, branch factorizations, cubic resolvent, scaled
-  polynomial resolvent, and logarithmic chart transition.  Normal and
-  optimized replay and an independent audit of the image/DVR argument are
-  still required before status promotion.
+  PASS.  An independent audit rederived the exact m>=2 image, bad-double-root
+  residual argument, both arm parametrizations and omitted origin, etale
+  height-one-DVR descent, exponent-one Danielewski bracket and de Rham
+  obstruction, sharp m=1 hostile, and the m=2/m=3 Galois-resolvent claims.
+  Normal and optimized executions byte-match the frozen transcript; script,
+  output, and semantic hashes agree and the documentation gate passes.
 depends_on:
   - THM-3774-three-component-rational-keller-cover-tower
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
@@ -39,7 +37,7 @@ hash_basis: raw LF bytes
 
 # THM-3779 -- the full polynomial target-field observable is Danielewski
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  This
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This
 theorem closes the complete rational target-field route for the first
 non-Galois members of THM-3774.  It does not construct a planar Jacobian
 counterexample and says nothing about polynomial functions outside the
@@ -450,9 +448,8 @@ and `(24)` proves that `U,V,E` exhaust all of them.
 The companion named in the metadata checks `(4)--(9),(15)--(20)` for
 `m=1,...,8`, including the critical double-root quotient of degree `m-1`.
 It checks the hostile identity `(26)`, all formulas `(33)--(42)`, the
-standard two-arm coordinate change, and the logarithmic transition.  The
-normal and optimized runs must byte-match the frozen transcript before
-promotion.
+standard two-arm coordinate change, and the logarithmic transition.  Normal
+and optimized runs byte-match the frozen transcript.
 
 The theorem proves:
 
@@ -463,4 +460,4 @@ The theorem proves:
 
 It proves no statement about polynomial pairs using functions outside
 `k(U,P)`, no planar Jacobian counterexample, and no positive-characteristic
-analogue.  **QED, conditional only on independent hostile audit.**
+analogue.  **QED.**
