@@ -19,8 +19,8 @@ audit: >
   two-branch contradiction, homogeneous finite-root seam, denominator
   exclusions, source reconstruction, and lower-degree inheritance were
   independently rederived.  Finite-field scans remain hostile controls only.
-  The companion has 37 active gates; normal and optimized runs byte-match
-  the frozen transcript and all recorded hashes match.
+  The companion has 37 active gates; normal and optimized runs LF-normalize
+  exactly to the frozen transcript and all declared raw-LF hashes match.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3792-pure-first-normal-nodal-carriers-have-critical-points
@@ -257,4 +257,4 @@ open.  The companion named in the metadata checks `(5)--(26)` and the full
 remainder.  Exhaustive scans of the divisibility system over `F_5`, `F_7`,
 and `F_11` find no survivors, but these are hostile controls only and play
 no role in the characteristic-zero proof.  Normal and optimized executions
-byte-match the frozen 37-gate transcript.  **QED.**
+LF-normalize exactly to the frozen 37-gate transcript.  **QED.**

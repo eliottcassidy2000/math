@@ -342,17 +342,18 @@ support asymptotic or residue.
   affine/homogeneous/`2x2` no-gos. THM-3787/3796/3798 close low support,
   every one-collision `2x4`, common steps one--three, and their output swaps;
   common step four and disjoint collision chains survive. THM-3790/3792/
-  3795/3799/3800/3803/3805 show the forced nodal carrier, every r-independent
-  correction, every monomial and degree-at-most-two `r g(e)`, and the sharp
-  torus-escaping carrier are critical (the last at exactly fourteen points).
+  3795/3799/3800/3803/3805/3806 show the forced nodal carrier, every
+  r-independent correction, every monomial, degree-at-most-two `r g(e)`,
+  every binomial cubic `r g(e)`, and the sharp torus-escaping carrier are
+  critical (the last at exactly fourteen points).
   THM-3791/3797/3802 identify the finite-etale resonant jet, its confluent
   modification-tree boundary, and the actual plane-chart law
   `H^2_dR=E/k`; a contact tree without charts constructs nothing. THM-3794
   excludes degree-two etale maps under constant units. Audited THM-3801 forces
-  a nonmonogenic `S3` cubic completion with one visible companion per branch;
-  the nodal arm cannot itself be a discriminant component. THM-3806's
-  binomial cubic repair is RESERVED. Other degree-at-least-three or mixed
-  corrections, poles/supports, cubic branch curves, unrestricted
+  a nonmonogenic `S3` completion with one companion per branch; the nodal arm
+  is not a discriminant component. THM-3807/3808/3809 are RESERVED full-cubic,
+  binary-unit, and smallest-mixed gates. Full cubics, higher degree, mixed
+  corrections, poles/supports, branch curves, unrestricted
   `C[A,d]^2`, `JC(2)`, and `DC(2)` remain OPEN.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2247 and THM-2262/2297--2480
@@ -370,9 +371,9 @@ support asymptotic or residue.
   square discriminant has only FINITE-EXACT blow-up sidecars; THM-3309--3437
   give clutch, transport, sparse, character, Prüfer, and Artin-jet controls,
   not a section or cross-problem transfer.  The newer surface-factor chain is
-  routed above: THM-3805 closes quadratic `r g(e)`; degree-at-least-three and
-  mixed corrections, arbitrary mates, and cubic branches away from the nodal
-  curve are OPEN with `JC(2)` and `DC(2)`.
+  routed above: THM-3806 closes binomial cubic `r g(e)`; full cubics, higher
+  degree, mixed corrections, arbitrary mates, and branches away from the
+  nodal curve are OPEN with `JC(2)` and `DC(2)`.
 - **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
   all `2665` residuals in `7395` rows (`2384` divisor, `281` rho).
   `d=6518` needs `p=29`, refuting `p<=23`. FINITE-EXACT at `d=10001`:

@@ -17,8 +17,8 @@ audit: >
   nonzero K values, set-theoretic exhaustiveness, general-c triangular
   Groebner basis, squarefreeness, discriminant, transverse minor, and exact
   reduced length fourteen were independently rederived.  The c=1 replay
-  agrees; normal and optimized runs byte-match the frozen transcript, all
-  hashes match, and documentation checks pass.
+  agrees; normal and optimized runs LF-normalize exactly to the frozen
+  transcript, all declared raw-LF hashes match, and documentation checks pass.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3795-r-independent-quadratic-normal-nodal-carriers-have-critical-points
@@ -203,4 +203,4 @@ The deterministic companion named in the metadata checks `(7)--(18)`, the
 two explicit branches modulo `sqrt(3)^2=3`, both general-`c` and `c=1`
 Groebner bases, the discriminant, transverse minor, and correction scope
 with 36 active assertion-free gates.  Normal and optimized executions
-byte-match the frozen transcript.  **QED.**
+LF-normalize exactly to the frozen transcript.  **QED.**

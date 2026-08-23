@@ -19,8 +19,8 @@ audit: >
   exactness iff, Darboux typing, coordinate invariance, and finite-etale
   descent were independently rederived.  The h=1 seam and the singular and
   normal confluent intermediates were checked as hostiles.  Normal and
-  optimized runs byte-match the frozen transcript, all hashes match, and
-  documentation checks pass.
+  optimized runs LF-normalize exactly to the frozen transcript, all declared
+  raw-LF hashes match, and documentation checks pass.
 related:
   - THM-3791-moving-root-danielewski-resonant-jet-de-rham-law
   - THM-3797-confluent-quadratic-hermite-jet-completion-no-go

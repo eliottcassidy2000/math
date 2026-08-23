@@ -20,8 +20,8 @@ audit: >
   S3 resolvent, nodal residue-degree ledger, and Picard scope were
   independently rederived.  The Veronese hostile is genuinely normal,
   finite free, nonmonogenic, cyclic, and disqualified by total ramification.
-  Normal and optimized runs byte-match the frozen transcript, all hashes
-  match, and documentation checks pass.
+  Normal and optimized runs LF-normalize exactly to the frozen transcript;
+  all declared raw-LF artifact hashes match, and documentation checks pass.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3790-cubic-pseudoplane-arm-nodal-immersion-gate
@@ -369,5 +369,5 @@ constant-unit companion-sheet law.
 
 The exact companion named in the metadata verifies `(15)--(17)`, the
 ramified/companion specialization, `(33)--(35)`, and the nodal normalization
-identities.  Normal and optimized executions byte-match the frozen
-transcript.  **QED.**
+identities.  Normal and optimized executions LF-normalize exactly to the
+frozen transcript.  **QED.**

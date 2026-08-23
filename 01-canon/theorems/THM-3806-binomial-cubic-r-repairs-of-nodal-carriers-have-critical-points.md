@@ -19,8 +19,8 @@ audit: >
   universal P/Q resultant, all generic and exceptional degrees and leading
   coefficients, localized Euclidean divisions, decisive remainder
   coefficients, Hamiltonian signs, denominator exclusions, and explicit
-  source reconstruction.  Normal and optimized runs byte-match the frozen
-  transcript.  The audit re-derived the boundary-support divisibility with
+  source reconstruction.  Normal and optimized runs LF-normalize exactly to
+  the frozen transcript.  The audit re-derived the boundary-support divisibility with
   multiplicities, checked every localization and exceptional specialization,
   verified that the quartic Q excludes a root at infinity, replayed the
   source/critical reconstruction, ran normal and optimized companions against
@@ -271,5 +271,5 @@ monomials, `deg g>=4`, simultaneous `z^2h(e)+r g(e)` corrections, other
 arm profiles, and rational mates with poles remain open.  The exact
 companion named in the metadata checks `(7)--(27)`, every generic and
 exceptional division, the allowed denominator rings, and all reconstruction
-identities.  Normal and optimized executions byte-match the frozen 46-gate
-transcript.  **QED.**
+identities.  Normal and optimized executions LF-normalize exactly to the
+frozen 46-gate transcript.  **QED.**

@@ -19,8 +19,8 @@ audit: >
   contradiction, the h_0=h_1=0 seam, and the fixed-degree projective
   specialization when P drops degree: Q remains quartic and is nonzero at the
   unique point at infinity.  The deterministic companion has 279 active gates;
-  normal and optimized runs byte-match the frozen transcript, whose raw hashes
-  match the metadata.
+  normal and optimized runs LF-normalize exactly to the frozen transcript,
+  whose declared raw-LF hashes match the metadata.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3790-cubic-pseudoplane-arm-nodal-immersion-gate
@@ -183,5 +183,5 @@ The theorem closes all affine-linear `g`, not quadratic or higher
 nonmonomial repairs, mixed `r`/`z^2` corrections, or a different nodal arm
 profile.  The deterministic companion verifies `(3)--(16)`, the entire
 coefficient table, and 81 exact specialized controls with 279 active gates.
-Normal and optimized executions byte-match the frozen transcript.
+Normal and optimized executions LF-normalize exactly to the frozen transcript.
 **QED.**
