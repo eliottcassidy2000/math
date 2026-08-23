@@ -1,0 +1,15 @@
+THM3853_BASE_PACKET (A,C,7A,-3A)
+THM3853_BASE_DISCRIMINANT -A*(5*A + C)*(17*A - 3*C)*(19*A + 4*C)
+THM3853_C_NORMALIZATION_D -t*(5*t + 1)*(17*t - 3)*(19*t + 4)
+THM3853_SUM_NORMALIZATION_D -t*(4*t + 1)*(15*t + 4)*(20*t - 3)
+THM3853_C_TARGET_SCALAR -4*u11
+THM3853_SUM_TARGET_SCALAR -4*u11
+THM3853_C_EQUATIONS 29
+THM3853_SUM_EQUATIONS 29
+THM3853_C_SATURATED_GROEBNER [1]
+THM3853_SUM_SATURATED_GROEBNER [1]
+THM3853_ZERO_CONTROL lambda=0 survives at q_a=q_b=q_c=q_d=0
+THM3853_ACTIVE_CONTROL q_d=C^2 gives lambda=-4 but leaves mixed degree-five and degree-six debt
+THM3853_SCOPE no homogeneous-quadratic perturbation realizes either named one-place target
+SEMANTIC_SHA256 69a0700ffd7dde6653d1ebdc37d3fdefd70a60c176d41c1352b3783c8d566845
+CHECKS 96
