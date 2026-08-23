@@ -2,7 +2,7 @@
 id: THM-3736
 title: "Automorphic Cohn complete constant SL2 polynomial exposure classification"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.  For an arbitrary
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For an arbitrary
   constant R in SL2 and an arbitrary polynomial exposed left parameter h,
   every closed row of M0R is classified.  Constant h gives exactly the
   two-sheet Broughton locus of THM-3726.  A nonconstant lower closure forces
@@ -13,9 +13,12 @@ status: >
   a polynomial Jacobian mate, so no final opposite left shear completes it.
 source: root + jc_sparse_direct_search / 2026-08-22
 audit: >
-  PENDING.  The triangular gauges were independently discovered and checked
-  at depths 1--6.  The written valuation descent, Jordan boundary, all-scope
-  quantifiers, and exact transcript still require a final hostile audit.
+  PASS.  An independent audit rederived both raw PDEs and their unique
+  highest-degree layers, both valuation descents, both exceptional Jordan
+  operators, all four triangular-gauge cancellations and potentials, the
+  r=1/r>=2 boundary, and the arbitrary-mate syzygy consequence.  It found no
+  lower-degree or zero-entry leak.  Normal, optimized, and frozen output
+  agree; script/output/semantic hashes and CHECKS=1436 match.
 depends_on:
   - THM-3726-automorphic-cohn-constant-sl2-orbit-broughton-classification
   - THM-3734-automorphic-cohn-diagonal-binomial-divided-power-towers
@@ -34,7 +37,7 @@ hash_basis: raw LF bytes
 
 # THM-3736 -- the whole constant right orbit is now closed
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.**  THM-3726
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  THM-3726
 classified constant exposed parameters over every constant right-`SL_2`
 matrix.  THM-3734 then found genuinely polynomial closures on diagonal
 slices.  The apparent remaining problem—nonconstant exposed parameters over

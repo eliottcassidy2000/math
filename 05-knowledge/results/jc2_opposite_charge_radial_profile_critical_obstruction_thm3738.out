@@ -1,0 +1,11 @@
+theorem=THM-3738-opposite-charge-radial-profile-critical-obstruction
+scope=algebraically_closed_characteristic_zero;phi(0)psi(0)!=0
+classification=Q=Xphi(XT)+Tpsi(XT)_nonsingular_iff_phi,psi_constant
+eliminant=det_torus_critical_matrix=(z_phi_psi)prime
+mechanism=degree_gcd_count_forces_off-product_root_with_nonaxis_kernel
+degree_two_grid=2496/2496_critical
+linear_controls=16_nonsingular
+binomial_pairs=36_critical
+semantic_sha256=4dc770e42f6183fa8a571016c2b1f29cc428000f2b2d2dc7b4511d1e7d8e89e6
+CHECKS=2580
+RESULT=PASS
