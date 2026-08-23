@@ -2,8 +2,8 @@
 id: THM-3852
 title: "Affine two-variable cubic profiles: every line has a nonpolynomial companion"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  Affine profiles b(A,C) whose depressed-cubic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Affine profiles
+  b(A,C) whose depressed-cubic
   branch contains an affine line are classified completely.  After a
   diagonal symplectic normalization, the nonvertical locus is one
   transverse parameter.  Its residual component always has normalization
@@ -11,12 +11,17 @@ status: >
   nonreduced line-collision parameter.
 source: jc_sparse_direct_search / two-variable cubic-profile escape lane, 2026-08-23
 audit: >
-  SELF-AUDITED exact proof candidate.  The companion verifies the complete
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn3709, 2026-08-23).  The
+  audit rederived both complete line coefficient ideals, the symplectic
+  scaling, the residual factorization, and the unique repeated-line
+  parameter.  It separately checked the localization normalization at
+  `tau=0`, irreducibility via exhaustive second-line elimination, distinct
+  infinity supports even at the quadratic double root, and smoothness and
+  two-place normalization of the collision conic.  The companion verifies the complete
   vertical and nonvertical coefficient ideals, the symplectic rescaling,
   the residual factorization, the unique second-line parameter, the
   infinity packet, and the smooth collision conic.  Normal and optimized
-  runs byte-match the frozen 39-gate transcript.  Independent hostile audit
-  is still required before promotion.
+  runs byte-match the frozen 39-gate transcript and both hashes.
 related:
   - THM-3847-two-place-cubic-deformation-monogenic-unit-debt
   - THM-3850-nonconstant-cubic-profile-irreducible-branch-puncture-formula
@@ -30,8 +35,8 @@ hash_basis: raw LF bytes
 
 # THM-3852 -- every affine-profile line has a bad companion
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of
 characteristic zero.  For an affine profile
 
 ```text
