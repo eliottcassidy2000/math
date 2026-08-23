@@ -2,8 +2,8 @@
 id: THM-3863
 title: "Finite binomial Hensel peels force projective companion contact"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  The unique formal binomial lift of the cusp
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The unique formal
+  binomial lift of the cusp
   admits a polynomial marked-graph quotient coefficient by coefficient, but
   every finite truncation leaves an exact residual C-degree drop N over
   A=0.  A reduced component through that projective contact dominates the
@@ -11,12 +11,18 @@ status: >
   distinct point over A=infinity.
 source: jc_sparse_direct_search / THM-3859--THM-3860 Newton-edge synthesis, 2026-08-23
 audit: >
-  SELF-AUDITED exact proof candidate.  The companion constructs the quotient
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit checked formal
+  division by the monic marked graph, the all-N degree and leading-coefficient
+  recurrence, coprimality of A and F, and the exact A-adic residual order.
+  It also checked the C-homogenized special fibre with multiplicities and the
+  reduced-factor argument: the selected factor is neither vertical nor a
+  boundary component, so its normalized closure has distinct missing points
+  over finite A=0,C=infinity and over A=infinity.  The companion constructs the quotient
   recurrence and replays N=1 through N=6, checking every Euclidean remainder,
   coefficient degree and leading term, A-adic factorization, residual degree
   drop, exact projective Z^N contact, and the normalized N=2 control.  Normal
   and optimized runs byte-match the frozen 96-gate transcript.  Independent
-  hostile audit is still required before promotion.
+  transcript and both recorded hashes.
 related:
   - THM-3859-marked-root-polynomial-graph-companion-puncture-obstruction
   - THM-3860-russell-higher-normal-rational-lifts-and-vertical-pole-barrier
@@ -30,9 +36,8 @@ hash_basis: raw LF bytes
 
 # THM-3863 -- every finite binomial peel leaves projective contact
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
-characteristic zero.  Put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  Put
 
 ```text
 P=1+(2/3)AC,
