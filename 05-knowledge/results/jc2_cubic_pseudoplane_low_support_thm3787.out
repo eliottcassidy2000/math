@@ -1,0 +1,15 @@
+theorem=THM-3787-cubic-pseudoplane-complete-low-support-darboux-nonentry
+surface=R^2E-Z^3+c^3R;weights=(3,1,-3);bracket_shift=2
+homogeneous=B_u=x^u*w^rho*Delta^ceil_negative_thirds*k[w^3]
+collision_counts=common_ap:16,diagonal:424,lower:452,none:10064,upper:276
+irregular_controls=diagonal:208,lower:236,upper:120
+lower_resonances=31;first=[(4, 2), (7, 3), (10, 4), (13, 5)]
+upper_resonances=31;first=[(5, 4), (8, 6), (11, 8), (14, 10)]
+exception_controls=lower:4465,upper:4371
+three_by_three_integration_rows=91
+closed=all_2x3_and_3x2;central_common_AP_3x3
+open=2x4;noncentral_or_non_AP_3x3;arbitrary_Darboux
+packet_sha256=576f0895f2f9cc4252970d86c3cd10f2e11aa6bc1dca72d6fd565f572062fed0
+semantic_sha256=3ad9952bfea2c2d9a51723cbcff23ecbf7d1d166d7a09c568f4cc675344f6fe7
+CHECKS=32225
+RESULT=PASS
