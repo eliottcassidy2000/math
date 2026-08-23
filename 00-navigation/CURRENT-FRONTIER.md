@@ -35,12 +35,12 @@ mode/cochain laws. THM-3414--3416 give ZMC rank-4/5/6 bases; THM-3425 gives
 primitive cap-six support; [THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md)
 allows 15-atom cap-seven support only at zero current.
 
-The newest exact interface is THM-3665--3674 and THM-3701/3705/3706/3710/3713.
+Newest exact interface: THM-3665--3674 and THM-3701/3705/3706/3710/3713.
 THM-3701 gives a rank-12 successor gate with equal scalar **mass** null-line and
 six minimal charts. THM-3705 gives the bulk/endpoint tariff; THM-3706 rules out
 fixed 13-adic depth. THM-3710 finds the `(14j+/-1)/182` endpoint skeleton, but
 its two support parts nearly cancel, so support splitting loses the leak.
-THM-3713 retains `u=r-t` with complete detectors. A lawful hostile has constant
+THM-3713 retains `u=r-t` with full detectors. A hostile has constant
 successor marginal but `D_H=E_dt=4/169`; any rational local defect reaches all
 twelve deep colors. Its typed non-cover control has offsets
 `{1,2,10,11,12}`, signs `++---`. The cover obligation is an owner-typed defect

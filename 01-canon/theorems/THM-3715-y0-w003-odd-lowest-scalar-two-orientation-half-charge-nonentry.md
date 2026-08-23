@@ -11,11 +11,14 @@ status: >
   of W003, the full 3x4 cell, or JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
-  SELF-AUDITED.  The exact companion reconstructs the post-parity
-  actual-support census, preserves the n=3 two-arm merger, verifies both
-  all-odd-scale upper-row integrations, and checks every monomial charge and
-  the full scalar factorizations.  Normal and optimized runs byte-match the
-  frozen transcript.  Independent hostile audit remains open.
+  INDEPENDENTLY HOSTILE-AUDITED.  The exact companion reconstructs the
+  post-parity actual-support census, preserves the n=3 two-arm merger,
+  verifies both all-odd-scale upper-row integrations, and checks every
+  monomial charge and the full scalar factorizations.  An independent
+  derivation checked the census, merger, exhaustive integration constants,
+  every coefficient and sign, the exchanged half-charge laws, both scalar
+  factorizations, and the Euler nonunit degree.  Normal and optimized runs
+  byte-match the frozen transcript.
 depends_on:
   - THM-3603-three-by-four-support-collision-cone-and-fibre-cut-atlas
   - THM-3606-exponent-two-three-by-four-scalar-singleton-gate-atlas
