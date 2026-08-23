@@ -45,7 +45,7 @@ related:
   - THM-3874-three-cusp-quadratic-k3-affine-class-group
 script: 04-computation/jc2_three_cusp_polarization_branches_thm3872.py
 output: 05-knowledge/results/jc2_three_cusp_polarization_branches_thm3872.out
-script_sha256: ccc01d00f16f021f808bff0b6201a305c22fd3a96a1f638494e68600e7877a53
+script_sha256: aa41f0e16941806db376b5467dc56e8afa96f1508874637c11628f197df30dc0
 output_sha256: 7a94c8b43527961378c7f03bab377c584df3262deafb428196eb56052636239c
 semantic_sha256: f3a13ca8c79e4e782fee246a3231531ea22caadbaf2924048348e63beb4dae7a
 hash_basis: raw LF bytes

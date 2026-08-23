@@ -349,11 +349,16 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   non-uniruled; THM-3844 is one-place but monogenic.  THM-3850/3852 close the
   one-variable and affine-line profiles; THM-3859 classifies polynomial
   marked roots, and THM-3866 extends the punctured-companion gate to arbitrary
-  polynomial transverse quotients; THM-3870 closes the vertical axis and
-  reverse polynomial graphs.  Nongraph `A1` components remain.  THM-3851's
-  `(Z/3)^2` closure is a unit-rich torus, while THM-3854's one-place
-  three-cusp front has `S5` monodromy and no cubic quotient or interior-arm
-  entry.  Alternative constant-unit nonmonogenic cubic orders remain open.
+  polynomial transverse quotients; THM-3870 closes vertical/reverse graphs,
+  and THM-3873/3876 classify the first parabola and every two-exponent
+  monomial descent (`M<=2`).  THM-3880 makes opposite marked-root sign exact
+  after regular extension on node/A2 curves; poles and worse jets remain.
+  THM-3851 is a unit-rich torus.  For THM-3854's one-place three-cusp front,
+  THM-3864/3872 close eight polarizations, seven minimal slices and the full
+  constant cusp-ideal span; polynomial coefficients remain open.  THM-3869
+  pays one Cardano line, while THM-3874/3877 use scalar units and `Cl=Z` to
+  exclude degree-three/four sole-simple-branch fields.  Audit-pending
+  THM-3879 recovers the missing `C3` packet but sharply costs two places.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a

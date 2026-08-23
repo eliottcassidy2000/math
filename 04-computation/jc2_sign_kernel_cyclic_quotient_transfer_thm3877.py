@@ -6,6 +6,7 @@ from __future__ import annotations
 import ast
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 from sympy import Matrix
@@ -18,6 +19,7 @@ from sympy.combinatorics.named_groups import (
 from sympy.combinatorics.perm_groups import PermutationGroup
 from sympy.combinatorics.permutations import Permutation
 
+sys.stdout.reconfigure(newline="\n")
 
 CHECKS = 0
 

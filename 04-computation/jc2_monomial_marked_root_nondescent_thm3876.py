@@ -15,9 +15,11 @@ from __future__ import annotations
 
 import hashlib
 import math
+import sys
 
 import sympy as sp
 
+sys.stdout.reconfigure(newline="\n")
 
 r, zeta, eta, U, A, C, b = sp.symbols("r zeta eta U A C b")
 CHECKS = 0

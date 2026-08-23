@@ -27,7 +27,14 @@ audit: >
   z=0/A=0 controls.  Normal and optimized runs byte-match the frozen 23-gate
   transcript.  The local-to-global iff uses the standard
   completed local rings of an ordinary node and an A2 cusp; no finite census
-  substitutes for that proof.
+  substitutes for that proof.  A second 9,776-gate audit rederived the
+  domain-level global-sign lemma without normality or dimension assumptions,
+  checked the undivided A=0 seam and z=0 control, proved the node and A2
+  completed-local membership criteria, and verified that the marked
+  identities force same-sign node values and both cusp derivative seams.  A
+  separate cyclotomic audit checked 691 coprime THM-3876 specializations and
+  showed that every off-diagonal monomial collision is an opposite nonzero
+  sign collision.  Its normal and optimized transcripts byte-match.
 related:
   - THM-3859-marked-root-polynomial-graph-companion-puncture-obstruction
   - THM-3864-integrated-three-cusp-conductor-seminormal-three-direction-gate
@@ -37,13 +44,19 @@ output: 05-knowledge/results/jc2_marked_root_opposite_sign_nondescent_thm3880.ou
 script_sha256: 593e513d4386dd6c040738ef717e4d2b2f5f686615f76e385631d4f2d5a16612
 output_sha256: a1a8b9cd690fd71243ac240e48581ba5279872ab62289649a8e4b86988d913a4
 semantic_sha256: ec36cdf85275d21d6e2cc5b2b152ab0eec146f5f70324e7055d4fcaf7c713b1a
+independent_script: 04-computation/jc2_marked_root_sign_conductor_independent_audit_thm3880.py
+independent_output: 05-knowledge/results/jc2_marked_root_sign_conductor_independent_audit_thm3880.out
+independent_script_sha256: f246e0764f21d3a713626812f5e000307f8b73b351b747f61d34ee47957f7415
+independent_output_sha256: 71fc8361ad2d85b5fe4ad489eebfd63eb56cb414bb65bb2dff89550d6522c902
+independent_semantic_sha256: dc240b53a024816e5d70b9a767b197970c04cede034d12422bb060a7f27768ac
 hash_basis: raw LF bytes
 ---
 
 # THM-3880 -- the marked-root sign and conductor theorem
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an algebraically closed field `k` of
-characteristic zero.  For `b in k[A,C]`, put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  For `b in k[A,C]`,
+put
 
 ```text
 Delta_b=-27A^2b^2+8AC^3-54ACb+9C^2-54b,                       (1)
@@ -76,6 +89,14 @@ nu(p)=nu(q),                 z(q)=-z(p),                 z(p)!=0, (5)
 ```
 
 then no polynomial `b(A,C)` with `Delta_b|_Gamma=0` exists.
+
+This half is dimension-free.  More generally, let `T` be any integral
+algebra over a field of characteristic different from `2,3`, and let
+`A,C,B,z in T` satisfy `z^2=P` and `Delta_B=0`.  Then one global sign has
+`u=+z^3` or `u=-z^3`.  Therefore the same opposite-nonzero-sign fibre
+contradiction applies whenever `A,C,B` descend from a common base.  Curve
+normality and the stronger field assumptions enter only the conductor iff
+below.
 
 ### Complete ordinary-node/A2 carrier criterion
 
@@ -399,6 +420,11 @@ B(zeta r)-B(r)=-2r^(2N)(eta-1)^3/(eta+1),                     (34)
 
 the THM-3876 primitive-root difference.
 
+The independent audit strengthens the comparison: for every off-diagonal
+collision in the full two-exponent monomial family, not merely the chosen
+primitive witness, the coordinate equality forces `(32)` for the resulting
+`eta`; hence `(33)` is always an opposite nonzero sign pair.
+
 ## 9. Exact replay and remaining frontier
 
 Run
@@ -406,6 +432,8 @@ Run
 ```text
 python3 04-computation/jc2_marked_root_opposite_sign_nondescent_thm3880.py
 python3 -O 04-computation/jc2_marked_root_opposite_sign_nondescent_thm3880.py
+python3 -B 04-computation/jc2_marked_root_sign_conductor_independent_audit_thm3880.py
+python3 -B -O 04-computation/jc2_marked_root_sign_conductor_independent_audit_thm3880.py
 ```
 
 and compare both streams byte-for-byte with the frozen output.  The exact

@@ -35,7 +35,7 @@ related:
   - THM-3874-three-cusp-quadratic-k3-affine-class-group
 script: 04-computation/jc2_rational_torus_sextic_c3_one_place_tradeoff_thm3879.py
 output: 05-knowledge/results/jc2_rational_torus_sextic_c3_one_place_tradeoff_thm3879.out
-script_sha256: c064e8c5d5eb74003e4014ef62236c8fa5c0e5d1c075ae3977a5fe106452df64
+script_sha256: 432d7efa8279d4bb7fcde612aa5d28f98446c1f5e24ac4f448c9ed83f31d7912
 output_sha256: 83dc894ef7a74ebe8f0e50ebc8843f64c8d4e930921f84ae0479b4c0d64a3c44
 semantic_sha256: 6d22fb06956f2d3102e26d643b49c89c071ea7b74d6aea2dbea664fff12942b0
 hash_basis: raw LF bytes

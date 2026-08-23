@@ -27,7 +27,7 @@ related:
   - THM-3873-first-nongraph-triangular-parabola-companion
 script: 04-computation/jc2_monomial_marked_root_nondescent_thm3876.py
 output: 05-knowledge/results/jc2_monomial_marked_root_nondescent_thm3876.out
-script_sha256: c2a24c7e56d4c7229691d405fe2b787e528d4aa0b6f8390b51dffc36b5a1eac0
+script_sha256: d5d8b4aea098ee0542f1b92db72fefec247fb7635a34fec732a42b2b0973d5d3
 output_sha256: f6aa41443f728bddbc4c916adfbd00f04ec8db0365f172d7b3e478670411a894
 semantic_sha256: 41b2b480c79ba8182ec5c9531e31eb2d27187cd46eea3dd8e037d8814ae45ffa
 hash_basis: raw LF bytes

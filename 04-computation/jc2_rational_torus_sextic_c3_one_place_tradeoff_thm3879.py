@@ -10,9 +10,11 @@ system empty.
 from __future__ import annotations
 
 import hashlib
+import sys
 
 import sympy as sp
 
+sys.stdout.reconfigure(newline="\n")
 
 S, T = sp.symbols("S T")
 A, B, C, U = sp.symbols("A B C U")

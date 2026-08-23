@@ -34,7 +34,7 @@ related:
   - THM-3869-three-cusp-square-residual-cardano-line-ramification
 script: 04-computation/jc2_sign_kernel_cyclic_quotient_transfer_thm3877.py
 output: 05-knowledge/results/jc2_sign_kernel_cyclic_quotient_transfer_thm3877.out
-script_sha256: 2b0f8b43d6d415e382404246d9b00ff604f8ae08928ce99e6ed07f83cb19d4dc
+script_sha256: cff07a4c16b9ccaf2587b691d6b179104f193e6c7d2a2570fb08ab3559225814
 output_sha256: b8dd1bf05cc59218248b9b4a05f2312d1f1b8d59ac1c8c19e5e5a9655e6378ba
 semantic_sha256: 5f7d99f84623a015d9c0a537e84ac24148b14081e1dd08e59f9ae97287bbac40
 hash_basis: raw LF bytes

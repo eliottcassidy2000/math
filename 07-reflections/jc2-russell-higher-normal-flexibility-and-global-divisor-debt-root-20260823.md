@@ -512,9 +512,9 @@ discriminant recursion of THM-3855.  Ask for a common obstruction language in
 terms of height-one valuations of the first finite truncation whose local
 formal correction is surjective.  Do not identify their moduli spaces or
 transfer a theorem; retain the normal-coordinate versus coefficient-gradient
-sidecar.  Incoming THM-3872 is still a proof candidate awaiting hostile audit,
-so none of its conclusions enters the proof graph.  Its useful procedural
-signal is narrower: quotient cosmetic additions by the entire ideal
+sidecar.  At the time of this reflection THM-3872 was still audit-pending; it
+has since been independently hostile-audited and promoted.  Its useful
+procedural signal remains: quotient cosmetic additions by the entire ideal
 vanishing at the marked addresses before choosing a minimal affine section,
 then record the residual left by that section.  Applied to `(Q1)`, this says
 the cubic-seed task must carry the full zero-jet addition ideal alongside the
