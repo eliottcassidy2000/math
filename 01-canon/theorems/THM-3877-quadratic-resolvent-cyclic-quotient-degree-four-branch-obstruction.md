@@ -2,7 +2,7 @@
 id: THM-3877
 title: "Sign-kernel transfer through a torsion-free quadratic resolvent"
 status: >
-  PROVED CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.  For a finite
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a finite
   separable field extension with sole reduced field-discriminant divisor of
   multiplicity one, the normal-closure inertia is a transposition.  The
   discriminant quadratic base change absorbs that inertia.  If the normalized
@@ -14,14 +14,18 @@ status: >
   theorem is a transfer obstruction, not a construction and not JC(2).
 source: jc_quartic_c3_construct / post-THM-3874 sign-kernel lane, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE.  The proof is field- and presentation-
-  independent.  The exact companion verifies the tame permutation-conductor
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit rederived the
+  permutation-representation Artin conductor of a non-Galois field, used
+  faithfulness of the normal-closure action to turn conductor one into a
+  literal order-two transposition, and checked inertia intersection after the
+  sign base change.  It independently verified the Krull divisor/Kummer
+  argument for every prime, the perfect-kernel conclusion, and the complete
+  degree-three/four quantifiers, including the C4 and A5 boundaries.  The
+  proof is field- and presentation-independent.  The exact companion verifies the tame permutation-conductor
   test, all degree-three and degree-four sign kernels, their cyclic
   abelianizations, the absence of transpositions in the regular C4 action,
-  and the perfect A5 equality boundary.  Independent audit must recheck the
-  passage from field discriminant exponent one to normal-closure inertia,
-  inertia after the sign base change, the Krull/Kummer divisor argument, and
-  all quantifiers in the degree-three/four specialization.
+  and the perfect A5 equality boundary.  Normal and optimized runs byte-match
+  the frozen transcript.
 depends_on:
   - THM-3874-three-cusp-quadratic-k3-affine-class-group
 related:
@@ -38,7 +42,7 @@ hash_basis: raw LF bytes
 
 # THM-3877 -- the sign cover transfers simple branch into an unramified kernel
 
-**PROVED CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.**  Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
 algebraically closed field `k` of characteristic zero.  The core statement is
 valid over any normal affine `k`-domain; no polynomial presentation of the
 cover is required.
