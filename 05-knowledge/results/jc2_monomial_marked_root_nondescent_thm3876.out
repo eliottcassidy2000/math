@@ -1,12 +1,14 @@
-THM3876_TOWER A=t^m,C=6t(1+t^(m+1)),B=2t^2(3+4t^(m+1))
-THM3876_NORMALIZATION k[t^m,t+t^(m+2)] has normalization k[t]
-THM3876_COLLISION zeta^m=1,U=t^(m+1)=-1/(zeta+1)
-THM3876_SAME_TARGET (A,C)(zeta*t)=(A,C)(t)
-THM3876_DIFFERENT_MARK B(zeta*t)-B(t)=-2t^2(zeta-1)^3/(zeta+1)!=0
-THM3876_M1 forward graph;THM3866
-THM3876_M2 triangular parabola;THM3873
+THM3876_REDUCTION g=gcd(m,n);r=t^g;M=m/g;N=n/g;gcd(M,N)=1
+THM3876_TOWER A=r^M,C=6r^N(1+r^(M+N)),B=2r^(2N)(3+4r^(M+N))
+THM3876_NORMALIZATION k[r^M,r^N+r^(M+2N)] has normalization k[r]
+THM3876_COLLISION eta=zeta^N,U=r^(M+N)=-1/(eta+1)
+THM3876_SAME_TARGET (A,C)(zeta*r)=(A,C)(r)
+THM3876_DIFFERENT_MARK B(zeta*r)-B(r)=-2r^(2N)(eta-1)^3/(eta+1)!=0
+THM3876_M1 A=r;forced B descends
+THM3876_M2 N odd;S=C/6-A^(N+1)=r^N;forced B descends
 THM3876_MGE3 forced B does not descend;no polynomial carrier profile
-THM3876_REPLAY_UNIVERSE universal identity;primitive roots m=3..20
-THM3876_SCOPE monomial marked-root tower only;general singular A1 normalization open
-SEMANTIC_SHA256 b42121616115392fe501a51994d7e489a1431d62acc20ac5373dbc43b42962df
-CHECKS 82
+THM3876_IFF forced marked value descends iff reduced exponent M<=2
+THM3876_REPLAY_UNIVERSE universal identities;M<=16,N<=12;coprime_Mge3_pairs=102
+THM3876_SCOPE two-exponent monomial marked-root tower only;general singular A1 normalization open
+SEMANTIC_SHA256 41b2b480c79ba8182ec5c9531e31eb2d27187cd46eea3dd8e037d8814ae45ffa
+CHECKS 361
