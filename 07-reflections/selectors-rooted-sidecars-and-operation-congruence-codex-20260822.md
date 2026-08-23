@@ -293,9 +293,11 @@ one sheet escapes on `V(r,z)`.  The symplectic form is exact, so the old
 logarithmic obstruction genuinely vanishes; nevertheless any Darboux pair
 would be nonbirational on the surface and induce even source degree at least
 four.  Homogeneous supports, every `2x2` cell, and one aligned `2x3`
-orientation are excluded.  Thus missing a divisor is a mechanism, not a
-minor surjectivity blemish, but it grants a sharply typed search surface
-rather than a counterexample.
+orientation are excluded.  THM-3786's independently audited pair-sum/hub
+census further proves that every irregular `2x3` or `3x2` placement is empty.
+Only common-step arithmetic-progression placements survive that sparse gate.
+Thus missing a divisor is a mechanism, not a minor surjectivity blemish, but
+it grants a sharply typed search surface rather than a counterexample.
 
 Changing the source chart is a different operation.  THM-3780 proves that
 every normal etale model carrying the same pair `(U,P)` must contain the
@@ -330,20 +332,53 @@ base-field Darboux mate.  This independently audited corollary forces a live
 mixed construction to pay for a genuinely nonbase mate (or use a leg with
 nonzero trace); it does not control arbitrary pairs outside `K_0`.
 
+The first exact nonbase test now separates exterior image from
+decomposability.  For `m=2`, let `W2` be the span of degree-one and degree-two
+words in `(R0,R1,R2,U,V,E)`.  It has source dimension 24 and already contains
+
+```text
+1=V-(3/2)R2-R0 E+(3/2)R2 V.                          (D2)
+```
+
+Thus the correct exterior space is `Lambda^2(W2/Q)`, of dimension 253.  The
+bracket map has nonconstant/full ranks `111/112` and an exact constant
+preimage, but the sparse certificate has skew rank six and nonzero
+four-Pfaffian `30`: it is a sum of at least three brackets, not one pair.
+Exact ranks exclude either leg lying in the linear span, and all 441
+normalized one-correction slices fail.  The remaining Darboux question is a
+42-variable rank-two/Pluecker intersection and is **OPEN**.  Component values,
+trace, and axis valuation are complementary here: `(D2)` equalizes all three
+components and is trace-consistent even though none of those sidecars alone
+detects decomposability.
+
 | operation | exact obstruction | information destroyed | remaining lane |
 |---|---|---|---|
 | target-only shear | THM-3770 principal coefficients must equalize | component address after scalar collapse | synchronized nonbirational spectrum |
 | rational target-field word | THM-3782/3779 logarithmic class with divisor coverage | source functions outside `k(U,P)` | codimension-one noncoverage/extra observables |
 | birational source filling of the same pair | THM-3780 nonconstant global unit | freedom to alter the pair | replace a target or leave its field |
-| exponent-two sparse support | THM-3781 closes all scalar-centred `3x3` AP cells | noncentral/gapped support geometry | irregular `2x3`, `3x3`, or larger supports |
+| exponent-two sparse support | THM-3781 closes scalar-centred `3x3` AP; THM-3786 closes irregular `2x3` | noncentral/gapped support geometry | common-step `2x3`, noncentral `3x3`, or larger supports |
 | codifferent trace cancellation | THM-3784 gives `(D)`, not a bracket | sheet and component labels | bracket the trace-zero rungs with nonbase observables |
+| linear third-order pole | THM-3785 audited `S(3,3,1)` pseudo-plane | other pole orders and nonlinear carriers | test nonlinear multigraded Darboux pairs |
 
 This ladder changes the cheapest counterexample probe.  A new simple-pole
 seed should first report its spectrum and target-divisor coverage; a proposed
 source rechart must report its units; a trace cancellation must report exact
 pairwise brackets and axis valuations.  At the quadratic boundary, the next
-honest probe is the decomposable Darboux locus in the still-open irregular
-`2x3` support cells on the explicit THM-3783 surface.
+honest probe is the decomposable Darboux locus in the still-open common-step
+`2x3` support cells on the explicit THM-3783 surface.  The new third-order
+seed has a different exact completion,
+
+```text
+k[x,y] intersection k(F,P)
+ =k[r,z,e]/(r^2e-z^3+c^3r),                           (D'')
+```
+
+with a surjective nonfinite etale cubic atlas, `Pic=Z/3`, exact symplectic
+form, and source field-degree floor at least six.  THM-3785 closes its
+birational, affine-carrier, homogeneous, and `2x2` entrances.  Two hostile
+audits identify the surface with Dubouloz--Palka `S(3,3,1)` and retain its
+nonstandard deck character; arbitrary nonlinear multigraded Darboux pairs
+remain open.
 
 ## Rooted Pfaffians: an exact sidecar and deletion law
 
@@ -429,9 +464,11 @@ unlike the retired tournament/1729 numerical resemblance.
 4. **JC:** simple-pole target-field words and same-pair source fillings now
    have separate terminal gates.  Test codimension-one noncoverage with its
    extra observables, noncentral/gapped/larger supports beyond THM-3781,
-   irregular `2x3` cells on THM-3783's exact quadratic surface, or exact
-   brackets between THM-3784's trace-zero rungs and nonbase observables. Also
-   retain exceptional W004/W005/6 and interacting-right-factor Cohn lanes.
+   common-step `2x3` cells on THM-3783's exact quadratic surface, or exact
+   saturation of THM-3784's 42-variable quadratic Pluecker chart, stratified
+   by component restrictions, highest degree, and axis valuation.
+   Probe THM-3785's nonlinear multigraded pseudo-plane pairs; retain
+   exceptional W004/W005/6 and interacting Cohn lanes.
 5. **Two cubes:** the inert-prime family now proves logarithmic lower growth
    with coefficient `kappa`; determine whether the rest of the support changes
    that order, or obtain a genuine asymptotic for `C(X)`.  Neither a full

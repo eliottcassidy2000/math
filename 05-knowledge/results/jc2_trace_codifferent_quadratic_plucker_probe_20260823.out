@@ -1,0 +1,72 @@
+PYTHON=3.13.14
+SYMPY=1.14.0
+FIELD=QQ (component statements interpreted over characteristic zero)
+W1 m=2: dim=6 wedges=15 monomials=90 rank_nonconstant=15 rank_with_constant=15 pure_constant_possible=False
+W1 m=2 generator sidecars:
+  R0: target=NO trace=0 ord_x=1 components[X,A,B]=[0,x,-1/z**2]
+  R1: target=NO trace=0 ord_x=3 components[X,A,B]=[0,0,-1/z]
+  R2: target=NO trace=-2 ord_x=5 components[X,A,B]=[0,0,-1]
+  U: target=YES trace=3*U ord_x=1 components[X,A,B]=[0,0,0]
+  V: target=YES trace=3*V ord_x=0 components[X,A,B]=[1,0,0]
+  E: target=YES trace=3*E ord_x=0 components[X,A,B]=[y,-1/x,-z**2/2]
+W1 m=3: dim=7 wedges=21 monomials=166 rank_nonconstant=20 rank_with_constant=20 pure_constant_possible=False
+W1 m=3 generator sidecars:
+  R0: target=NO trace=0 ord_x=1 components[X,A,B]=[0,x,-1/z**3]
+  R1: target=NO trace=0 ord_x=3 components[X,A,B]=[0,0,-1/z**2]
+  R2: target=NO trace=0 ord_x=5 components[X,A,B]=[0,0,-1/z]
+  R3: target=NO trace=-3 ord_x=7 components[X,A,B]=[0,0,-1]
+  U: target=YES trace=4*U ord_x=1 components[X,A,B]=[0,0,0]
+  V: target=YES trace=4*V ord_x=0 components[X,A,B]=[1,0,0]
+  E: target=YES trace=4*E ord_x=0 components[X,A,B]=[y,-1/x,-z**3/3]
+W1 m=3 sole kernel: J(R1,R2)-(1/3)J(R0,R3)=0
+W2 raw=27 source_dim=24 pivot_omissions=['R1*R1', 'R2*U', 'V*V']
+W2 constant identity: 1=V-(3/2)R2-R0*E+(3/2)R2*V
+W2 constant identity component values [X,A,B]=[1,1,1]
+W2 membership ranks: W=24, W+<1>=24, W+<y>=25
+PLUCKER_SPACE=W2/QQ dim=23 wedges=253
+W2 SOURCE BASIS SIDECARS:
+W2_INTERSECT_k(U,P)=span{1,U,V,E,U^2,UV,UE,VE,E^2} dim=9
+  R0: target=False trace=0 ord_x=1 components[X,A,B]=[0,x,-1/z**2]
+  R1: target=False trace=0 ord_x=3 components[X,A,B]=[0,0,-1/z]
+  R2: target=False trace=-2 ord_x=5 components[X,A,B]=[0,0,-1]
+  U: target=True trace=3*u0 ord_x=1 components[X,A,B]=[0,0,0]
+  V: target=True trace=3*p0*u0 ord_x=0 components[X,A,B]=[1,0,0]
+  E: target=True trace=3*p0*(p0*u0 - 1) ord_x=0 components[X,A,B]=[y,-1/x,-z**2/2]
+  R0*R0: target=False trace=12*p0/(8*p0**3 - 27*u0**2) ord_x=2 components[X,A,B]=[0,x**2,z**(-4)]
+  R0*R1: target=False trace=18*u0/(8*p0**3 - 27*u0**2) ord_x=4 components[X,A,B]=[0,0,z**(-3)]
+  R0*R2: target=False trace=8*p0**2/(8*p0**3 - 27*u0**2) ord_x=6 components[X,A,B]=[0,0,z**(-2)]
+  R0*U: target=False trace=0 ord_x=2 components[X,A,B]=[0,0,0]
+  R0*V: target=False trace=0 ord_x=1 components[X,A,B]=[0,0,0]
+  R0*E: target=False trace=0 ord_x=1 components[X,A,B]=[0,-1,1/2]
+  R1*R2: target=False trace=12*p0*u0/(8*p0**3 - 27*u0**2) ord_x=8 components[X,A,B]=[0,0,1/z]
+  R1*U: target=False trace=0 ord_x=4 components[X,A,B]=[0,0,0]
+  R1*V: target=False trace=0 ord_x=3 components[X,A,B]=[0,0,0]
+  R1*E: target=False trace=0 ord_x=3 components[X,A,B]=[0,0,z/2]
+  R2*R2: target=False trace=4*(4*p0**3 - 9*u0**2)/(8*p0**3 - 27*u0**2) ord_x=10 components[X,A,B]=[0,0,1]
+  R2*V: target=False trace=-2*p0*u0 ord_x=5 components[X,A,B]=[0,0,0]
+  R2*E: target=False trace=-2*p0*(p0*u0 - 1) ord_x=5 components[X,A,B]=[0,0,z**2/2]
+  U*U: target=True trace=3*u0**2 ord_x=2 components[X,A,B]=[0,0,0]
+  U*V: target=True trace=3*p0*u0**2 ord_x=1 components[X,A,B]=[0,0,0]
+  U*E: target=True trace=3*p0*u0*(p0*u0 - 1) ord_x=1 components[X,A,B]=[0,0,0]
+  V*E: target=True trace=3*p0**2*u0*(p0*u0 - 1) ord_x=0 components[X,A,B]=[y,0,0]
+  E*E: target=True trace=3*p0**2*(p0*u0 - 1)**2 ord_x=0 components[X,A,B]=[y**2,x**(-2),z**4/4]
+W1x(W2/QQ): rank_nonconstant=56 rank_with_constant=56 pure_constant_possible=False
+Lambda2(W2/QQ): rank_nonconstant=111 rank_with_constant=112 coefficient_monomials=621 max_total_degree=91 constant_fibre_affine_dim=141
+EXTERIOR_CERTIFICATE:
+  1*J(R0,E)
+  9/2*J(R0,R1*U)
+  18*J(R0,R2*E)
+  -30*J(R1,R1*E)
+  45/8*J(R1,U*U)
+  9/2*J(R0*R1,U*V)
+  =1
+EXTERIOR_CERTIFICATE_SKEW_RANK=6
+HOSTILE_PFAFFIAN indices=[R0,R1,E,R1*E] value=30
+AXIS_LOCAL_PAIR=(U,E): J=2V-1; component values [X,A,B]=[1,-1,-1]
+AXIS_LOCAL_PAIR target=[True,True] trace=[3U,3E] ord_x=[1,0]
+NORMALIZED_PLUCKER_CHART: variables=42 four_pfaffians=8855
+ONE_CORRECTION_SLICES=441 survivors=0
+POSITIVE_CONTROL=adjoin_y: J(R0,y)=1 skew_rank=2
+FULL_W2_RANK2_INTERSECTION=OPEN
+FIRST_UNRESOLVED_CASE=both legs require genuinely quadratic content; the exact affine constant fibre has dimension 141, while the normalized rank-two chart has 42 variables.
+CHECKS=23

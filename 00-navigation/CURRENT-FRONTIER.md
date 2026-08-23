@@ -325,20 +325,19 @@ gives no support asymptotic/residue; only the indexed coefficient is known.
   interacting Cohn factors. THM-3741/3754--3759/3765/3771/3772 close the named
   radial/flank/Pell/split/cubic ansatzes. THM-3770 gives the equalizer and
   dressing no-go; THM-3773--3777 type the rational covers and short gates.
-  THM-3779 identifies the full `m>=2` target-field intersection/no-Darboux
-  gate, and THM-3780 forbids same-pair affine-plane filling. THM-3782 makes
-  simple-pole spectra automatic: one value repairs; multiple values, plus
-  divisor coverage over `C`, exclude all target-field words. THM-3781 closes
-  every scalar-centred `3x3` arithmetic-progression exponent-two cell, for
-  arbitrary steps. THM-3783 computes the complete `m=1` intersection as the
-  smooth surface `r^3g=z^2-r/4`: exact symplectic form, even source-degree
-  floor `>=4`, and homogeneous/`2x2`/one aligned `2x3` no-gos, but other
-  `2x3` cells and arbitrary Darboux pairs stay open. THM-3784 gives audited
-  trace-zero codifferent rungs outside the target field and excludes any
-  nonzero base-field bracket with them; nonbase mixed brackets are open.
-  Codimension-one noncoverage, noncentral/gapped/larger supports,
-  higher poles, altered pairs, arbitrary quartics, unrestricted
-  `C[A,d]^2`, `JC(2)`, and `DC(2)` remain OPEN.
+  THM-3779/3780 close the `m>=2` target field and same-pair filling; THM-3782
+  makes simple-pole spectra automatic and, with divisor coverage, closes all
+  target words. THM-3781 closes every scalar-centred `3x3` AP cell. THM-3783
+  computes the `m=1` surface `r^3g=z^2-r/4`, degree floor `>=4`, and sparse
+  no-gos; THM-3786 closes its irregular `2x3`/`3x2` cells, leaving common-step
+  cells and arbitrary pairs. THM-3784's trace-zero rungs have no nonzero
+  base-field bracket. Its `m=2` probe closes linear-leg and
+  one-correction slices but leaves the full rank-two intersection open.
+  THM-3785 (audited)
+  computes the linear third-pole surface `r^2e=z^3-c^3r`, cubic atlas,
+  `Pic=Z/3`, degree floor `>=6`, and affine/homogeneous/`2x2` no-gos. Other
+  higher poles/supports, altered pairs/quartics, unrestricted `C[A,d]^2`,
+  `JC(2)`, and `DC(2)` remain OPEN.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2247 close the affine-through-
   quartic and terminal-through-fourteen strata; THM-2262/2297--2480, including

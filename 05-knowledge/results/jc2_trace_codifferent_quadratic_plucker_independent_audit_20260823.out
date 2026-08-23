@@ -1,0 +1,9 @@
+raw_count 27 source_rank 24
+constant_relation 1
+quotient_basis_size 23 names ['R0', 'R1', 'R2', 'U', 'E', 'R0*R0', 'R0*R1', 'R0*R2', 'R0*U', 'R0*V', 'R0*E', 'R1*R2', 'R1*U', 'R1*V', 'R1*E', 'R2*R2', 'R2*V', 'R2*E', 'U*U', 'U*V', 'U*E', 'V*E', 'E*E']
+exterior_shape (202, 253) rank_nonconstant 111 rank_full 112
+affine_fibre_dimension 141
+particular_rank 6 particular_support [('R0^E', 1), ('R0^R1*U', 9/2), ('R0^R2*E', 18), ('R1^R1*E', -30), ('R1^U*U', 45/8), ('R0*R1^U*V', 9/2)]
+fixed_x_rank 21 fixed_x_augmented_rank 22
+positive_control_Jxy 1
+quadratic_relaxation_prime 1009 rows 10152 span_rank_before_target 8178 ambient 8855 target_independent False target_remainder_terms 0

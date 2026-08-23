@@ -24,7 +24,11 @@ audit: >
   [-64,64] and gaps [1,18], every surviving zero-weight family, the
   negative-arm exit, the upper synchronized identity, and the central
   reduction to equal-gap two-by-two support.  Normal, optimized, frozen,
-  and independently replayed outputs agree byte for byte.
+  and independently replayed outputs agree byte for byte.  A separate
+  cross-corner proof derives the sharper collision alternative
+  `d=e=f or d=e+f` and kills the second case at one sign-changing hub; its
+  optimization-safe replay has 2,397,670 active gates and preserves the
+  common-step lane as a positive boundary control.
 depends_on:
   - THM-3783-quadratic-tower-etale-surface-maximal-polynomial-observable
 related:
@@ -34,6 +38,10 @@ output: 05-knowledge/results/jc2_quadratic_etale_surface_irregular_two_by_three_
 script_sha256: 4fcc6e552fc79a252018555e9ae8b341cdec117006adcefda97795be4c2d0be2
 output_sha256: 5461057220838202cd7a92f5a947efbb7cbcb65f0fde8dc0de502564cc886764
 semantic_sha256: 917995306a060c8d6c27869d549ceb6cb6fa8538c72b5374ada5aa6636a2493c
+independent_audit_script: 04-computation/jc2_quadratic_surface_irregular_2x3_cross_corner_audit_20260823.py
+independent_audit_output: 05-knowledge/results/jc2_quadratic_surface_irregular_2x3_cross_corner_audit_20260823.out
+independent_audit_script_sha256: 3a25d7788793714b4365471c615de7056138cc11b02d4b225abe897712a75245
+independent_audit_output_sha256: 17e9e2b4f3a3c60bf2a281bfb46c8adf674f58b405f2cb5fea4bc16f87adadd2
 hash_basis: raw LF bytes
 ---
 
