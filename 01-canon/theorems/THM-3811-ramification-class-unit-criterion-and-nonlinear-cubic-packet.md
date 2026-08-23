@@ -2,9 +2,8 @@
 id: THM-3811
 title: "Ramification class unit criterion and nonlinear cubic packet"
 status: >
-  PROVED + VERIFIED-EXACT, with the original packet INDEPENDENTLY
-  HOSTILE-AUDITED and the strengthened class/affineness closure PENDING
-  independent audit.  Units on the maximal etale open of
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Units on the
+  maximal etale open of
   a normal finite completion are controlled exactly by integer relations
   among the deleted ramification classes.  The nonlinear Delone--Faddeev
   packet (a,b,c,d)=(A,C,7A,C^2-3A) is a normal nonmonogenic S3 cubic with a
@@ -29,9 +28,13 @@ audit: >
   the A=1 irreducibility specialization valid, audited the codimension-one
   maximal-order argument and rational branch coverage, and replayed all 72
   exact gates in normal and optimized mode against the frozen output and raw
-  hashes.  This audit predates and does not cover the strengthened exact
-  class-group computation, two-root chart, or affine-complement proof below;
-  those clauses are PENDING independent hostile audit.
+  hashes.  A second independent hostile audit (jc_sparse_direct_search,
+  2026-08-23) rederived the complete six-prime Nagata lattice and unit
+  kernel, the two A=0 primes and primitive boundary class, both different
+  valuations, the affine-complement Bezout inverse, the q/r chart coverage,
+  and the Picard quotient.  It replayed all 94 exact gates in normal and
+  optimized mode against the frozen output and raw hashes.  No repair was
+  found; the plane-atlas clause remains deliberately OPEN.
 depends_on: []
 related:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
@@ -47,8 +50,8 @@ hash_basis: raw LF bytes
 
 # THM-3811 -- constant units are a ramification-class problem
 
-**PROVED + VERIFIED-EXACT; strengthened closure PENDING independent hostile
-audit.**  Let `k` be algebraically closed of characteristic zero.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k` be
+algebraically closed of characteristic zero.
 
 ## 1. The exact deleted-divisor unit criterion
 
@@ -516,7 +519,10 @@ Spec T[J^-1]       and       Spec T_1[D^-1]                      (54)
 
 are the ramified-root and companion-root affine charts covering `U`; their
 intersection is the `A!=0` root chart.  This is the required companion
-sidecar that the single `q`-coordinate destroyed.
+sidecar that the single `q`-coordinate destroyed.  More precisely, `q` has
+its only missing codimension-one valuation at `P_1`, while `r` has its only
+missing codimension-one valuation at `P_0`; inverting the displayed
+Jacobians removes their common exceptional vertex and ramification curve.
 
 The map `U -> A2_(A,C)` is etale of generic degree three.  Its image omits
 the square-zero origin and the two nonzero triple-root values.  On the branch
