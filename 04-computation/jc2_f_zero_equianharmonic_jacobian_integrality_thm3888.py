@@ -233,9 +233,13 @@ for numerator_power in range(5):
         )
 gate(len(rational_root_candidates) == 15, "all constant-T candidates exhausted")
 
-# At deg_y(u)=0 the finite inverse chart forces u^3=a^3 and v=+/-K.
-# Only u=a has nonzero inverse denominator; the two signs are exactly the
-# finite T=0 point and the descent-hostile point already checked above.
+# At deg_y(u)=0 there are six integral Weierstrass sections u=zeta*a,
+# v=+/-K.  For zeta=1 the signs are the finite T=0 point and the hostile
+# point.  At a nontrivial cube root, the minus sign is a deleted boundary
+# section.  The plus sign lies in an alternate inverse chart: its nonzero
+# quartic preimage has a genuine K denominator and is therefore not
+# polynomial in y.  This distinction is the hostile control preventing an
+# incorrect identification of "integral Weierstrass" with "affine quartic".
 zero(
     normalized_denominator.subs(uvar, a) - 3 * a**2,
     "finite cube-root address denominator",
@@ -247,6 +251,36 @@ zero(
     + L**2,
     "finite base section G",
 )
+zeta = sp.symbols("zeta")
+
+
+def reduce_zeta(expression: sp.Expr) -> sp.Expr:
+    numerator = sp.together(expression).as_numer_denom()[0]
+    return sp.Poly(numerator, zeta).rem(sp.Poly(zeta**2 + zeta + 1, zeta)).as_expr()
+
+
+s_alt = 1 + 2 * zeta
+zero(reduce_zeta(s_alt**2 + 3), "alternate cube-root square-root address")
+zero(
+    reduce_zeta(normalized_denominator.subs(uvar, zeta * a)),
+    "alternate cube-root inverse denominator",
+)
+G_alt_formal = a * s_alt * T**2 - L**2
+alternate_residual = sp.expand(G_alt_formal**2 - quartic)
+zero(
+    reduce_zeta(
+        alternate_residual
+        + 2 * T**2 * (-4 * K * T + a * L**2 * (s_alt - 3))
+    ),
+    "alternate-chart quartic preimage factorization",
+)
+T_alt = a * L**2 * (s_alt - 3) / (4 * K)
+G_alt = sp.cancel(G_alt_formal.subs(T, T_alt))
+zero(
+    reduce_zeta(G_alt**2 - quartic.subs(T, T_alt)),
+    "alternate-chart rational preimage",
+)
+gate(sp.Poly(K, y).degree() == 2, "alternate-chart K denominator is nonconstant")
 
 # Exact factor polarization of the two T=0 branches.
 H = 3 * a**2 * T**2 + 8 * K * T + 6 * a * L**2
@@ -313,7 +347,7 @@ semantic = {
     "boundary": "div(T)=O+P0-Qplus-Qminus;Qplus+Qminus=P0",
     "factor": "v2=K2+L2(u3-a3);T=(v-K)/(u2+au+a2)",
     "hostile": "T=-2K/(3a2) is polynomial in y but fails x-integrality/address",
-    "integral_shell": "polynomial u,v,T gives only (u,v)=(a,+/-K)",
+    "integral_shell": "six constant-u sections; exactly base and hostile give polynomial quartic points",
     "surface": "generic y-fibres II^4+IV;rational;geometric MW rank6 torsion0",
     "scope": "two-section S-integrality and x-integral descent remain open",
 }
@@ -335,7 +369,9 @@ print(
     "constant_T_candidate_gcds="
     + ",".join(f"({i},{j}):{gcd_value}" for i, j, gcd_value in rational_root_candidates)
 )
-print("integral_Weierstrass_shell=exactly_base_and_x_pole_hostile")
+print("integral_Weierstrass_shell=six_constant_u_sections")
+print("polynomial_quartic_points_in_shell=exactly_base_and_x_pole_hostile")
+print("alternate_chart_preimage=T=aL^2(s-3)/(4K),not_polynomial_y")
 print("generic_fibres=II,II,II,II,IV")
 print("geometric_MW=rank_6_torsion_0")
 print("polynomial_lane=two_section_S_integrality_plus_x_descent_OPEN")

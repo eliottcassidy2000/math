@@ -13,9 +13,10 @@ status: >
   only for sections factoring through the original affine quartic chart.
   An explicit nonzero k(x)[y] point proves that x-integral descent and the
   origin address are load-bearing.  Within the integral Weierstrass-coordinate
-  shell, the only finite sections are the second T=0 section and one explicit
-  x-polar hostile section.  Every other section has a genuine Weierstrass
-  denominator.
+  shell, there are six constant-u sections; exactly two give polynomial
+  points of the chosen affine quartic chart, namely the second T=0 section
+  and one explicit x-polar hostile section.  Every other polynomial quartic
+  point has a genuine Weierstrass denominator.
   Effective two-section S-integral enumeration, x-integral descent, a Keller
   atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3885 elliptic reframe, 2026-08-23
@@ -28,7 +29,8 @@ audit: >
   generic squarefree y-discriminant, short-Weierstrass discriminant, infinity
   minimalization, IV component addresses, the normalized cubic-factor chart,
   the explicit descent-hostile point, the 3-division polynomial, and the
-  fifteen-case constant-T rational-root exhaustion in 63 active gates.
+  fifteen-case constant-T rational-root exhaustion and all four
+  alternate/boundary constant-u sections in 68 active gates.
   Normal and optimized runs
   must byte-match the frozen
   output.  Independent audit must recheck extension to smooth projective
@@ -45,9 +47,9 @@ related:
   - THM-3886-cusp-residual-equality-seam-second-layer-trichotomy
 script: 04-computation/jc2_f_zero_equianharmonic_jacobian_integrality_thm3888.py
 output: 05-knowledge/results/jc2_f_zero_equianharmonic_jacobian_integrality_thm3888.out
-script_sha256: 1c68340175ec4d7e4693e537b7f953fe7aeff1b1bb189da98e33dea6ec4e2dfc
-output_sha256: 4f8f156d58081f0009ba9e19a7bff4e9c6b42b45f7b77889fcfc11043b481a8c
-semantic_sha256: 7235619178abfbcff737fc2ce44fce3d97396ef3004febd706fdbc4763ed7e60
+script_sha256: 329598af4a09c2ff3aa37db65ef176975f4df218d48c2c4f6ecd74e30ec04e47
+output_sha256: b612c4f412c2610197aa70c57aee52879ec3fd021610e60982caa91c07913203
+semantic_sha256: 9a50da8fdffac4a46ca3d9074d86f2e1c85943a5150792ec486c41a2c062fbb6
 hash_basis: raw LF bytes
 ---
 
@@ -179,7 +181,7 @@ denominators and `(9d)` must be replaced by its valuation form.  This is why
 the first integral height shell is the cheapest exact computation, but not
 the whole problem.
 
-### 2.2. The entire integral Weierstrass shell consists of two points
+### 2.2. The integral Weierstrass shell has six points, only two affine
 
 The first height-shell computation admits an all-degree proof.  Suppose
 
@@ -237,24 +239,47 @@ product is zero and
 u^3=a^3,                         v=+K or -K.               (9j)
 ```
 
-Write `u=zeta*a`, where `zeta^3=1`.  For either nontrivial cube root the
-inverse denominator is
-
-```text
-u^2+au+a^2=a^2(zeta^2+zeta+1)=0,                         (9k)
-```
-
-so the point belongs to a boundary/alternate inverse chart.  The finite
-inverse chart has only `u=a`.  Its two signs give exactly
+Write `u=zeta*a`, where `zeta^3=1`.  The choice `zeta=1` gives the two
+polynomial quartic points
 
 ```text
 (u,v)=(a,K):       (T,G)=(0,-L^2),
-(u,v)=(a,-K):      (T,G)=(T_*,G_*).                      (9l)
+(u,v)=(a,-K):      (T,G)=(T_*,G_*).                      (9k)
 ```
 
-Consequently `(9l)` is the **complete integral-Weierstrass shell**.  Every
-other section has a denominator in `u` or `v`; cancellation through `(9b)`
-is now the genuinely remaining height problem.
+There are four further integral Weierstrass sections, and they must not be
+discarded by dividing the inverse denominator.  For either nontrivial cube
+root,
+
+```text
+u^2+au+a^2=a^2(zeta^2+zeta+1)=0,                         (9l)
+```
+
+For `v=-K` these are exactly the deleted sections `Q_+,Q_-`.  For `v=+K`
+both numerator and denominator of `(9b)` vanish.  Put
+
+```text
+s=1+2zeta,                         s^2=-3.
+```
+
+Then `X_0=as`, so an affine quartic preimage would have
+`G=asT^2-L^2`.  Exact substitution in `(2)` gives
+
+```text
+G^2-q(T)=-2T^2(-4KT+aL^2(s-3)).                          (9m)
+```
+
+The nonzero preimage is therefore
+
+```text
+T=aL^2(s-3)/(4K),                                        (9n)
+```
+
+which is not in `k(x)[y]`.  Thus the complete integral-Weierstrass shell has
+six sections: two chosen-chart polynomial residual points, two deleted
+boundary sections, and two alternate-chart rational points.  Consequently
+every **other polynomial quartic point** has a denominator in `u` or `v`;
+cancellation through `(9b)` is now the genuinely remaining height problem.
 
 ## 3. The four marked sections and the divisor of `T`
 
@@ -499,7 +524,7 @@ quartic coefficient Groebner basis.  It is:
 
 1. compute an explicit Mordell--Weil basis for the `II^4+IV` rational
    elliptic surface and express `Q_+,Q_-,P_0` in that basis;
-2. use `(9l)` as the completed integral-coordinate base case and enumerate
+2. use `(9k)-(9n)` as the completed integral-coordinate base case and enumerate
    the first rational-coordinate denominator shell, subject to no finite
    intersection with `Q_+ union Q_-` and the `IV` address `(31)-(32)`;
 3. apply the inverse denominator test
