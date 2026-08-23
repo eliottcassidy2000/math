@@ -1,0 +1,10 @@
+theorem=THM-3702-universal-equal-step-three-by-four-Danielewski-nonentry
+supports=P:-5,-2,1;Q:-5,-2,1,4;bucket_sizes=1,2,3,3,2,1
+endpoint_peel=g=lambda*f;t=mu*r^4
+adjacent_rows=q-lambda*p=kappa*k^2;f=alpha*k^5;s=4mu*p*r^3+nu*r
+middle_row=k^4*d_db(5alpha(nu-lambda)kr+20alpha*mu*kpr^3-2kappa*p/k^2)
+arm_gate=ord(k)>=1=>ord(p),ord(q)>=2=>scalar_row_vanishes
+controls=source_bracket:PASS;common_power:PASS;arm_jets:PASS
+semantic_sha256=6bf3f14b9e3617d015a55e1ae8c138fc858b71938a2dc142e9c55cb70a0b190b
+CHECKS=19
+RESULT=PASS
