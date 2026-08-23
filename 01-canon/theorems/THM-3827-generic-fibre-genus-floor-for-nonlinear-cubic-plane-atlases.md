@@ -2,9 +2,8 @@
 id: THM-3827
 title: "Dual generic-fibre genus floors for nonlinear cubic plane atlases"
 status: >
-  PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, WITH THE
-  CANONICAL SCHEME-DISCONNECTION SHARPENING A PROVISIONAL VERIFIED-EXACT PROOF
-  CANDIDATE PENDING INDEPENDENT HOSTILE AUDIT.  For the generative closed-polynomial
+  PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the
+  generative closed-polynomial
   factors h=p(g) and k=q(ell) of both pulled-back THM-3811 row functions, the
   smooth projective geometric generic fibres of g and ell each have genus at
   least three.  At equality they are respectively isomorphic after base
@@ -43,8 +42,12 @@ audit: >
   lift, all pullback gcds, full prime multiplicity allocation, recovery of
   whole members even for nonreduced monochromatic fibres, and the formal
   grading through algebraic independence.  The final CRT upgrade from
-  bichromatic prime components to a canonical disconnected fibre scheme is
-  self-audited pending an independent pass.  The exact companion verifies the
+  bichromatic prime components to a canonical disconnected fibre scheme
+  received an INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary,
+  2026-08-23): the audit checked invertibility of kB_3 on the full possibly
+  nonreduced quotient, orthogonal idempotents, the zero kernel and CRT
+  surjectivity, and nontriviality of both factors from the two generic signs.
+  The exact companion verifies the
   monic degree-eight sidecar, a squarefree hostile fibre, the full generic
   discriminant, stability under a nonconstant Stein composition, the
   genus-three count, every excluded Riemann--Hurwitz genus, and reduced-arm
@@ -70,10 +73,8 @@ hash_basis: raw LF bytes
 
 # THM-3827 -- both row fibrations of a plane atlas need genus at least three
 
-**PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; CANONICAL
-SCHEME-DISCONNECTION SHARPENING PROVISIONAL + VERIFIED-EXACT, PENDING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `K` of
-characteristic zero.  Put
+**PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work
+over an algebraically closed field `K` of characteristic zero.  Put
 
 ```text
 R=K[x,y],                 L=K(x,y).                              (1)
@@ -476,7 +477,6 @@ The generative-polynomial existence and uniqueness used here are **CITED**,
 not reproved by the exact companion.  They make the independently audited
 dual claims `(19)` and `(34)` unconditional for every dominant etale plane
 atlas over the stated field.  The second intrinsic arm `(30)` and the
-bichromatic strengthening `(24)` are independently audited as well.  The
-canonical nontrivial CRT decomposition `(28c)` is the only new provisional
-sharpening.  No planar Jacobian counterexample is claimed.  **QED, with
-`(28c)` subject to independent hostile audit.**
+bichromatic strengthening `(24)` and canonical nontrivial CRT decomposition
+`(28c)` are independently audited as well.  No planar Jacobian counterexample
+is claimed.  **QED.**
