@@ -15,7 +15,7 @@ status: >
   classes, or JC(2).
 source: root / 2026-08-22
 audit: >
-  SELF-AUDITED; independent hostile audit requested.  The exact companion
+  INDEPENDENTLY HOSTILE-AUDITED.  The exact companion
   reconstructs the Cohn normalization, all four closure gates, both full
   triangular survivor formulas, the charge-coordinate homogeneous kernels,
   the forbidden Laurent layer, and the inherited Broughton debt.  An
@@ -406,7 +406,8 @@ is
 (2+z)F'+F=-1                         if r=-1.           (44)
 ```
 
-For `r<0`, the highest coefficient in `(43)` is multiplied by
+If `r>-1`, no term can produce the `X^(-1)` right side.  If `r<-1`, the
+highest coefficient in `(43)` is multiplied by
 `deg(F)-r`, so `F=0`.  Equation `(44)` has the unique polynomial solution
 `F=-1`.  But an honest source monomial with Laurent exponent
 `i-j=-1` has `j=i+1>=1`; its contribution is divisible by `z`.  Thus the

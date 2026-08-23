@@ -1,0 +1,12 @@
+theorem=THM-3723-automorphic-Cohn-C3-complete-two-right-nonentry
+right_word=E_+(v)E_-(u);nonzero_polynomials
+nonconstant_gate=either_parameter_nonconstant_prevents_first_closure
+constant_resonance=uv=-1
+projective_law=R^3=-I;R^2-R+I=0
+closed_gradient=Q=L+L^2S;J(L,S)=1
+remaining_debts=6S,6vS;Broughton_cokernel_nonzero
+hostile_constant_cells=200
+hostile_nonconstant_cells=110;degree_h<=6
+semantic_sha256=3d3b50d3a9a571026aaf5819c258d3879367b3d29fd991fda52db4070262902b
+CHECKS=351
+RESULT=PASS
