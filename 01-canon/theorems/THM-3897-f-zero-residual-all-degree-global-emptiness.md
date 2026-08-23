@@ -12,17 +12,14 @@ status: >
   a polynomial-plane Keller atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3895 three-channel descent, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (2026-08-23).  A structurally separate
-  companion rederives the THM-3895 quartic covariant, 1,596-row degree
-  ledger, four exact square ideals, and osculating a^(-3) pole before
-  auditing the present three-channel descent.  It rechecks UFD parity,
-  the unit-factor polynomial Pell argument, every zero-leading alternative,
-  the sole use of T(0,0)=0, and the hostile rational k(x)[y] point in 1,719
-  active gates.  Normal and optimized runs are byte-identical.  The primary
-  companion checks every residual
-  leading coefficient, the Pell factorization, the constant-channel origin
-  value, and the rational-x hostile point in 15 active gates.  Normal and
-  optimized runs byte-match the frozen output.
+  INDEPENDENT HOSTILE AUDIT PASS (2026-08-23). A separate 1,719-gate companion
+  rederives the THM-3895 covariant and degree ledger, then checks UFD parity,
+  every zero-leading alternative, the sole origin-address use and the generic
+  rational hostile. It also gives an orthogonal root-colour/second-response
+  proof of the quadratic channel with a sharp split-colour hostile. The
+  15-gate primary checks all residual leaders and Pell factorization; normal,
+  optimized and frozen streams match. THM-3895 was independently promoted at
+  commit 44c79bd581.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
   - THM-3885-cusp-residual-f-zero-arm-dichotomy-and-quadratic-closure

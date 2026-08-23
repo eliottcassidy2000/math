@@ -1,0 +1,12 @@
+theorem=THM-3899-nonzero-sidecar-y-degree-tariff
+strict_tariff=deg_y_T_must_be_at_least_deg_y_f
+dominant_term_m_lt_n=3aL2K2f4
+dominance_rows=15
+equality_colors=(h-du)(h+du)=3aL2v2
+equianharmonic_coordinate=d=2lambda-1
+shifted_colors=1+lambda,2-lambda
+positive_control=equality_leading_norm_is_nonempty
+remaining=lower_coefficients_and_actual_square_OPEN
+semantic_sha256=306a6a9a487506858d1461b95d35cec4e69bdd8d152a4d3a9465407fc6cb5af2
+CHECKS=28
+RESULT=PASS

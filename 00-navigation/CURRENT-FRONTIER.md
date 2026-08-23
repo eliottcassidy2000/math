@@ -345,21 +345,18 @@ asymptotic or residue.
   transverse, graph and monomial cells.  THM-3880/3883 isolate sign, residue
   and zero-root-cube invoices; poles, worse jets and root existence remain.
   THM-3851 is a unit-rich torus.  For THM-3854's one-place three-cusp front,
-  THM-3864/3872 close constants; THM-3881 contracts all coefficients/gauges
-  to a rank-two norm and closes `T=0` plus `T=hf`, `deg h<=1`.  THM-3884
-  forces `deg T>=deg f+1` with leading gauge at equality.  THM-3885 classifies
-  both `f=0` arms and closes total degree four; THM-3895 forces `deg_y T<=2`,
-  and independently audited THM-3897 closes the entire addressed polynomial
-  `f=0` lane.  For nonconstant `f`, THM-3886 closes equality degrees one and
-  two, THM-3894 gives the all-degree associated-graded gauge--Kummer parity
-  passport, and THM-3896 closes its degree-four equality cell.  Gauge peeling,
-  the remaining `f!=0` lanes, a Keller atlas, and JC(2) remain OPEN.
-  THM-3890 excludes irreducible one-point quintic normal cubic covers via
-  `Cl=Z/Z5`; degree-six, reducible and nonnormal routes remain.  THM-3891
-  closes quadratic `C^8` carriers and squarefree pencils for `n>=3`; THM-3892
-  classifies pure-power polynomial `GL_2` carriers for `n>=2`.
-  THM-3874/3877 exclude low-degree sole-simple-branch fields; THM-3879 reaches
-  two places and THM-3882 forces the immersed one-place smooth-conic boundary.
+  THM-3864/3872 close the constant cusp-ideal span; THM-3881 closes `T=0`.
+  THM-3874/3877 exclude degree-three/four sole-simple-branch fields;
+  THM-3879 reaches two places and THM-3882 forbids one-place rational duals.
+  THM-3884/3886/3894 force equality-seam gauge jets and a parity passport;
+  THM-3896 closes `n=4`. THM-3885/3895/3897 close the entire polynomial
+  `f=0` lane; THM-3900 independently classifies its generic `k(x)[y]` roots.
+  For `f!=0`, THM-3899 proves `deg_y T>=deg_y f` and leading colors;
+  THM-3901 gives the strict-degree response fan and THM-3902 the equality
+  two-jet law. These are necessary passports with positive lifts, not closure.
+  THM-3890 gives a quintic `Cl=Z/Z5` obstruction; THM-3891/3892 classify
+  quadratic and pure-power polynomial `GL_2` carriers. Remaining responses,
+  a Keller atlas and `JC(2)` are OPEN.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
