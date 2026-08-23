@@ -35,9 +35,14 @@ related:
   - THM-3865-one-place-inverse-discriminant-resolvent-class-group
 script: 04-computation/jc2_three_cusp_elliptic_k3_class_group_thm3874.py
 output: 05-knowledge/results/jc2_three_cusp_elliptic_k3_class_group_thm3874.out
-script_sha256: dd90fbbba3d86aee3a58df5de1d41ee9fd31ffe5527ce35ea70b9e2cee7e6da1
+script_sha256: 51d25dba324ed2bc463a8c883fbb4ab0764b6f8229de3b4fccb87bd203ebb9c9
 output_sha256: 0bfe2125e864b668bf965e9605cc27990cafbd7394315698781eca2cba234672
 semantic_sha256: b135b50909a3ddb57590882e77ce5f7e94e4c034adc5b8b660be01d2b691d09c
+independent_script: 04-computation/jc2_three_cusp_k3_full_presentation_independent_audit_thm3874.py
+independent_output: 05-knowledge/results/jc2_three_cusp_k3_full_presentation_independent_audit_thm3874.out
+independent_script_sha256: da9b3f2332a1af5c3ace7e52d2a7fe721a4fb8002da45a4c98c5f46910b5e304
+independent_output_sha256: b6efcdc41d8b91d263f77172cf559c9cbf3b59513138c1b417f75f78bdfebe32
+independent_semantic_sha256: 05cbdee71f26718a7e571ff9c3630b9b8f4f642e23df4018f0629861cabef9bc
 hash_basis: raw LF bytes
 ---
 
@@ -495,6 +500,8 @@ Run
 ```bash
 python3 04-computation/jc2_three_cusp_elliptic_k3_class_group_thm3874.py
 python3 -O 04-computation/jc2_three_cusp_elliptic_k3_class_group_thm3874.py
+python3 -B 04-computation/jc2_three_cusp_k3_full_presentation_independent_audit_thm3874.py
+python3 -B -O 04-computation/jc2_three_cusp_k3_full_presentation_independent_audit_thm3874.py
 ```
 
 and compare both streams byte-for-byte with

@@ -37,7 +37,7 @@ related:
   - THM-3865-one-place-inverse-discriminant-resolvent-class-group
 script: 04-computation/jc2_three_cusp_cardano_line_ramification_thm3869.py
 output: 05-knowledge/results/jc2_three_cusp_cardano_line_ramification_thm3869.out
-script_sha256: 1b358656590c5983e3aa968d3cdc19c63a652bf588ffb8cf9301aadfb497b980
+script_sha256: 0c7b7c75030c1f84c705e14785b3f2ef6c422fff10a12bacf8212f967a9f8e4d
 output_sha256: 8f4b36e6dbf8ff9fd3ad77e18f6ed74f8ee6dfdd20279a4c9ad8cc14da4642a2
 semantic_sha256: 3ba97aae53c83071a76d456a738b5eee13a93b2ea14de112aa4e959db8f8af25
 hash_basis: raw LF bytes

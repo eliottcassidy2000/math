@@ -370,13 +370,13 @@ Thus the unique minimal square does not remove the extra Cardano
 ramification: it merely converts the order discriminant factor `(9x+4)^4`
 to the genuine field-discriminant factor `(9x+4)^2`.
 
-The provisional THM-3874 K3/class-group candidate gives the global version of
-this warning: its calculation `Cl(Q)=Z` would rule out every connected cyclic
+The proved and independently audited THM-3874 K3/class-group theorem gives the
+global version of this warning: `Cl(Q)=Z` rules out every connected cyclic
 cubic cover of the quadratic resolvent which is unramified in codimension one.
-Thus, once independently audited, it implies that **any** future representative
-from the omitted `J`-directions must pay some extra divisor, not merely that
-the minimal affine section pays `9x+4`.  This paragraph inherits THM-3874's
-provisional status and is not used in the proof above.
+Thus **any** future representative from the omitted `J`-directions must pay
+some extra divisor, not merely that the minimal affine section pays `9x+4`.
+This consequence does not close the omitted mixed or polynomial
+`J`-directions themselves, and it is not used in the proof above.
 
 ## 8. The three first `J`-generator rays do not deform the square
 

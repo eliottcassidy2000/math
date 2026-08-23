@@ -9,9 +9,12 @@ Reproduction:
 from __future__ import annotations
 
 import hashlib
+import sys
 
 import sympy as sp
 from sympy.matrices.normalforms import smith_normal_form
+
+sys.stdout.reconfigure(newline="\n")
 
 
 a, x, y, w, X, Y, u = sp.symbols("a x y w X Y u")

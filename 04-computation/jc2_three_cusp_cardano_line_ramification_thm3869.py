@@ -9,8 +9,11 @@ Reproduction:
 from __future__ import annotations
 
 import hashlib
+import sys
 
 import sympy as sp
+
+sys.stdout.reconfigure(newline="\n")
 
 
 x, y, t, T, Z, u, v, s = sp.symbols("x y t T Z u v s")
