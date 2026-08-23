@@ -38,10 +38,11 @@ audit: >
   square-triangular primitive addresses.  Normal/-O/frozen streams agree for
   both packet companions and the arithmetic sidecars.
   A graphic-matroid extension then checks the diagonal incidence equivalence,
-  all 5,855 ratios, 245,220 projective ratio triangles, 46,136 full-decoder
-  triangle circuits, every subset of a mixed five-speed hostile, the sharp
-  thirteen-vertex path, and independent rank/facet controls.  Its 36,461,514
-  active requirements agree under normal, optimized, and frozen replay.
+  all 5,855 ratios, all 245,220 all-scale decoder triangle circuits, the
+  46,136-circuit all-inert table-free subatlas, every subset of a mixed
+  five-speed hostile, the sharp thirteen-vertex path, and independent
+  rank/facet controls.  Its 38,454,450 active requirements agree under normal,
+  optimized, and frozen replay.  MISTAKE-460 records the repaired scope seam.
   The two-component extension adds 1,742 assertion-free exact requirements:
   it checks the quotient slope atlas, a safe 2+11 row with both scales
   recovered, and a 12+1 singleton packet fibre of size 14,077,914,720,208.
@@ -78,9 +79,9 @@ square_triangular_output_sha256: 673a764dd14e1b06c549a80cf72e747376d0fba6d28f17d
 square_triangular_semantic_sha256: e80c76bcbbf9a83c6cb87983ababe96906c1160581aaee8079b6325051eb1e53
 graphic_script: 04-computation/lrc14_cube_covector_graphic_matroid_extension_thm3818.py
 graphic_output: 05-knowledge/results/lrc14_cube_covector_graphic_matroid_extension_thm3818.out
-graphic_script_sha256: 1abba30659a81b8524b5417ff1c7c2a7915a042b365efead087a838c4c8d9497
-graphic_output_sha256: 6c985414db35c3ba05f20d6e800eba5efa2f394a4826ccb772e30d7c119be64e
-graphic_semantic_sha256: c98a37e4f7bf777bf6c3027bdcf4f6bc20daa83226f382132bf68f9b3ac9165d
+graphic_script_sha256: fff66681d76be06e906a54cd394e9150687d4d04b38ada5fac1047e8ce8ba6b9
+graphic_output_sha256: 3b379c5ee59dd1da85c1ec84c53da48e8d0cd2630d367c25c08af49d4dc3d6ff
+graphic_semantic_sha256: ea89fb90944ad2073703463a9474234ad486c0eb99713a3ada35448b5fe121cf
 two_component_script: 04-computation/lrc14_two_component_decoder_quotient_extension_thm3818.py
 two_component_output: 05-knowledge/results/lrc14_two_component_decoder_quotient_extension_thm3818.out
 two_component_script_sha256: 2ce52b1a45c3c4416e367f8177b288f7f9dc7ac651bf58ee036137e17f2208b2
@@ -323,7 +324,7 @@ has decoder graph exactly the consecutive path and attains `(15f)`.
 Conversely, equality forces all selected cofactor entries to be `355`, hence
 every tree edge to have ratio `1:355`.  Distinct speeds force one vertex at
 each depth, so the tree is the path `(15g)`, up to label permutation and
-common allowed inert scale.
+common positive scale.
 
 Every decoder row belongs to THM-2052's `W`.  Therefore
 
@@ -374,10 +375,19 @@ speeds (1,2,3,9), edges (1,3),(2,3),(2,9),(1,9):
 ### 6.3 Exact triangle census
 
 The `5,855` primitive ratios contain exactly `245,220` sorted projective
-triples whose three pair ratios remain in the atlas.  Requiring all three
+triples whose three pair ratios remain in the atlas.  Every one is a triangle
+circuit in the full all-scale decoder graph of Section 6.  Requiring all three
 actual gcd scales to have only inert prime divisors leaves exactly `46,136`
-full-decoder triangle circuits.  The unique smallest by maximum speed and
-then total speed is
+circuits in the stronger table-free subbranch of Section 2.  The distinction
+is real: `(1,3,9)` is an all-scale decoder triangle, including the scale-three
+edge `(3,9)`, and
+
+```text
+3a_13+a_39-a_19=0,                                      (15l-)
+```
+
+but that edge is absent from the all-inert table-free subbranch.  The unique
+smallest all-scale triangle by maximum speed and then total speed is
 
 ```text
 (2,3,8),                 4a_23+a_38-3a_28=0.          (15l)
@@ -515,9 +525,10 @@ all 156 oriented covectors for every admissible ratio.  It also tests arbitrary
 inert powers in 32 scale controls and compares (11) with direct rational
 evaluation.  Normal and `python -O` streams match the frozen output.
 The graphic companion checks all `5,855` ratios, every ratio pair, all
-`46,136` full-decoder triangle circuits, all edge subsets of a mixed
-five-speed hostile, the diagonal incidence law, facet compatibility, and the
-sharp thirteen-vertex path in `36,461,514` active requirements.  Its normal,
+`245,220` all-scale decoder triangle circuits, the `46,136` all-inert
+table-free subcount, all edge subsets of a mixed five-speed hostile, the
+diagonal incidence law, facet compatibility, and the sharp thirteen-vertex
+path in `38,454,450` active requirements.  Its normal,
 optimized, and frozen streams also agree.
 The two-component companion checks the integral quotient, crossing-slope
 atlas, bounded pair-clique consequence, a safe `2+11` row with both scales

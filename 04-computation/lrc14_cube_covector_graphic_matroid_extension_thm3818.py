@@ -57,7 +57,7 @@ def admissible_sum(total: int) -> bool:
 
 
 def inert_scale(scale: int) -> bool:
-    """THM-3818 permits arbitrary exponents but only inert prime divisors."""
+    """The stronger table-free decoder requires only inert prime divisors."""
     return all(prime % 3 == 2 for prime in factor(scale))
 
 
@@ -97,7 +97,6 @@ def decoder_edges(speeds: tuple[int, ...], ratio_set: set[tuple[int, int]]) -> t
         for i in range(len(speeds))
         for j in range(i + 1, len(speeds))
         if reduced_pair(speeds[i], speeds[j]) in ratio_set
-        and inert_scale(math.gcd(speeds[i], speeds[j]))
     )
 
 
@@ -151,8 +150,8 @@ def main() -> None:
     # other two ratios belong to the atlas, and their quotient must belong to
     # it as well.  Each unordered pair below represents exactly one sorted
     # projective triple.
-    ratio_triangle_types = 0
-    decoder_triangle_types = 0
+    full_decoder_triangle_types = 0
+    all_inert_triangle_types = 0
     triangle_circuit_gates = 0
     best_triangle_key: tuple[int, int, tuple[int, int, int]] | None = None
     best_triangle_multiplicity = 0
@@ -165,7 +164,7 @@ def main() -> None:
             if quotient not in ratio_set:
                 continue
 
-            ratio_triangle_types += 1
+            full_decoder_triangle_types += 1
 
             denominator_lcm = math.lcm(p, u)
             raw = (denominator_lcm, q * (denominator_lcm // p), v * (denominator_lcm // u))
@@ -178,12 +177,6 @@ def main() -> None:
                 all(reduced_pair(a, b) in ratio_set for a, b in ((x, y), (y, z), (x, z))),
                 ("triangle atlas closure", triple),
             )
-            if not all(
-                inert_scale(math.gcd(a, b)) for a, b in ((x, y), (y, z), (x, z))
-            ):
-                continue
-            decoder_triangle_types += 1
-
             # The weighted graphic circuit is explicit.  If ell_uv is the
             # pair lcm and L their lcm around the cycle, then
             # (L/ell_xy)a_xy+(L/ell_yz)a_yz-(L/ell_xz)a_xz=0.
@@ -205,6 +198,11 @@ def main() -> None:
             require(circuit == (0, 0, 0), ("triangle circuit", triple, circuit))
             triangle_circuit_gates += 1
 
+            if all(
+                inert_scale(math.gcd(a, b)) for a, b in ((x, y), (y, z), (x, z))
+            ):
+                all_inert_triangle_types += 1
+
             key = (max(triple), sum(triple), triple)
             if best_triangle_key is None or key < best_triangle_key:
                 best_triangle_key = key
@@ -212,8 +210,14 @@ def main() -> None:
             elif key == best_triangle_key:
                 best_triangle_multiplicity += 1
 
-    require(ratio_triangle_types == 245220, ("ratio triangle projective census", ratio_triangle_types))
-    require(decoder_triangle_types == 46136, ("full decoder triangle census", decoder_triangle_types))
+    require(
+        full_decoder_triangle_types == 245220,
+        ("all-scale decoder triangle census", full_decoder_triangle_types),
+    )
+    require(
+        all_inert_triangle_types == 46136,
+        ("all-inert table-free triangle census", all_inert_triangle_types),
+    )
     require(best_triangle_key == (8, 13, (2, 3, 8)), ("minimal triangle", best_triangle_key))
     require(best_triangle_multiplicity == 1, ("minimal triangle uniqueness", best_triangle_multiplicity))
 
@@ -221,7 +225,7 @@ def main() -> None:
     # This independently checks the graphic rank law and the orientation law.
     control_speeds = (1, 2, 3, 8, 9)
     control_edges = decoder_edges(control_speeds, ratio_set)
-    require(len(control_edges) == 7, ("control edge count", control_edges))
+    require(len(control_edges) == 8, ("control edge count", control_edges))
     subset_rank_gates = 0
     compatible_subsets = 0
     for mask in range(1 << len(control_edges)):
@@ -295,8 +299,8 @@ def main() -> None:
         "ratios": len(ratios),
         "max_q": max_q,
         "max_q_ratios": max_q_ratios,
-        "ratio_triangle_types": ratio_triangle_types,
-        "decoder_triangle_types": decoder_triangle_types,
+        "full_decoder_triangle_types": full_decoder_triangle_types,
+        "all_inert_triangle_types": all_inert_triangle_types,
         "minimal_triangle": best_triangle_key,
         "control_edges": control_edges,
         "control_subsets": 1 << len(control_edges),
@@ -322,14 +326,14 @@ def main() -> None:
     print("forest_hostile=edges_(2,3),(3,8)_independent_but_common_max_face_empty")
     print("cycle_hostile=edges_(1,3),(2,3),(2,9),(1,9)_dependent_but_common_max_face_nonempty_dimension_9")
     print(f"decoder_ratios={len(ratios)}")
-    print(f"ratio_level_projective_triangles={ratio_triangle_types}")
-    print(f"simultaneous_full_decoder_triangle_circuits={decoder_triangle_types}")
+    print(f"all_scale_full_decoder_triangle_circuits={full_decoder_triangle_types}")
+    print(f"all_inert_table_free_triangle_circuits={all_inert_triangle_types}")
     print("unique_smallest_triangle_by_max_then_sum=(2,3,8);max=8;sum=13")
     print(f"triangle_circuit_gates={triangle_circuit_gates}")
     print(f"control_subset_rank_orientation_gates={subset_rank_gates}")
     print(f"control_compatible_subsets={compatible_subsets}/{1 << len(control_edges)}")
     print(f"diagonal_equivalence_gates={diagonal_gates}")
-    print("finite_universe=all_5855_ratios;all_C(5855,2)_ratio_pairs;full_inert_scale_filter;all_control_edge_subsets")
+    print("finite_universe=all_5855_ratios;all_C(5855,2)_ratio_pairs;all_scale_graph;all_inert_table_free_subcount;all_control_edge_subsets")
     print(f"active_require_gates={CHECKS}")
     print(f"semantic_sha256={semantic}")
     print("scope=internal_relation_matroid+facet_incidence+height_terminal_not_loneliness_or_arrival")

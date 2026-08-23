@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-460 (2026-08-23, THM-3818 graphic-extension audit) -- an inert-scale subcount was called the full all-scale decoder census
+
+- **What failed:** THM-3818 correctly permits arbitrary common scale through
+  its finite rational-cube-class decoder, but the first graphic companion
+  silently filtered every edge by the stronger all-inert condition used only
+  by the table-free singleton decoder.  It then called the resulting `46,136`
+  triangle types the full decoder circuits.
+- **Minimal witness / first failed implication:** all three reduced ratios of
+  `(1,3,9)` lie in the finite atlas.  Its edge `(3,9)` has common scale three,
+  so the all-scale packet `756=3^3(1^3+3^3)` is valid although the inert-scale
+  filter rejects it.  The omitted circuit is
+  `3a_13+a_39-a_19=0`.
+- **Repair / strongest survivor:** the row matroid remains exactly graphic for
+  arbitrary scale.  There are `245,220` all-scale projective triangle circuits;
+  `46,136` is retained as the exact all-inert table-free subcount.  The repaired
+  companion verifies every all-scale circuit and exhausts all subsets of a
+  mixed five-speed control with the scale-three edge restored.
+- **Reusable rule:** when a theorem offers both a finite-atlas decoder and a
+  stronger table-free decoder, name every census by the decoder actually used;
+  do not let an implementation filter narrow a quantified graph definition.
+
 ## MISTAKE-459 (2026-08-23, promoted THM-3842 residue audit) -- an odd discriminant representative was not normalized to a simple branch equation
 
 - **What failed:** the promoted marked-residue paragraph said that replacing
@@ -44,9 +65,10 @@ Format per entry:
   both declared YAML `id: THM-3846`.  Reserving an ID in one concurrent
   checkout did not reserve it globally against a later concurrent commit.
 - **Repair / strongest survivor:** the earlier formal-arm reservation retains
-  THM-3846.  The lonely-runner reservation moves to the fresh ID THM-3848.
-  Both remain `RESERVED / UNPROVED EMPTY STUB`; neither enters the proved
-  dependency graph.
+  THM-3846 and has since been developed into a `PROOF CANDIDATE +
+  VERIFIED-EXACT` file pending independent hostile audit.  The lonely-runner
+  reservation moves to the fresh ID THM-3848 and remains a
+  `RESERVED / UNPROVED EMPTY STUB`.  Neither is a proved dependency.
 - **Reusable rule:** immediately before committing a reservation, recheck the
   filename, YAML ID, indexes, and current remote history.  After integrating
   concurrent commits, rerun the uniqueness audit even when every individual
@@ -250,9 +272,9 @@ Format per entry:
 - **Repeated incident / repair (2026-08-23):** `c10dcde982` reserved the Russell
   formal-arm lift as `THM-3846`; `cee6cf1207` then independently reserved an
   LRC prefix-tree stub under the same ID.  The Russell reservation had priority
-  and was promoted; the later empty LRC stub is preserved under free
-  `THM-3848`.  Again, different slugs made the Git merge conflict-free while
-  the theorem namespace was not.
+  and later became a proof candidate, not a proved theorem; the empty LRC stub
+  is preserved under free `THM-3848`.  Again, different slugs made the Git
+  merge conflict-free while the theorem namespace was not.
 
 ## MISTAKE-448 (2026-08-23, THM-3798 candidate audit) -- canceling by a proposed divisor and multiplying back is a vacuous divisibility gate
 
