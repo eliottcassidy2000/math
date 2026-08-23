@@ -1,0 +1,12 @@
+prime=137;root=44;restriction_rank=287;gaps=89;candidate_conductor=170;active_equals_pivots=True
+prime=137;root=82;restriction_rank=287;gaps=89;candidate_conductor=170;active_equals_pivots=True
+prime=137;root=92;restriction_rank=287;gaps=89;candidate_conductor=170;active_equals_pivots=True
+prime=137;root=134;restriction_rank=287;gaps=89;candidate_conductor=170;active_equals_pivots=True
+prime=163;root=32;restriction_rank=287;gaps=89;candidate_conductor=170;active_equals_pivots=True
+prime=163;root=95;restriction_rank=287;gaps=89;candidate_conductor=170;active_equals_pivots=True
+prime=163;root=109;restriction_rank=287;gaps=89;candidate_conductor=170;active_equals_pivots=True
+prime=163;root=150;restriction_rank=287;gaps=89;candidate_conductor=170;active_equals_pivots=True
+pivot_hash=8fdc045de885e4a3f17b40cd93e99f36b5ddcf07012d801e35687ce74c5576cd
+gap_hash=0b7c480df6c67445d1acc0c016d81935f121d0aa0c0306c27508e7ab5d97daf4
+scope=FINITE_FIELD_ONLY;characteristic_zero_conductor=OPEN
+RESULT=PASS
