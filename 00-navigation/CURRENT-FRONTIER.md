@@ -356,22 +356,15 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   entry.  Alternative constant-unit nonmonogenic cubic orders remain open.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
-  The positive anchor is THM-3785's Russell pseudo-plane: a Darboux pair would
-  give field degree divisible by three and at least nine.  THM-3843 forces a
-  self-identifying immersed arm; THM-3846 gives all formal first-jet lifts;
-  THM-3849's conductor records visible contact, not deleted sheets.
-  THM-3856/3861/3867/3871 close polynomial normal strips through transverse
-  degree five, leaving degree six first; at depth five an arms-only modulus is
-  killed by two conserved penultimate buckets.  THM-3860 crosses the canonical
-  square gate rationally; THM-3868 then excludes every rational precomposition
-  of that fixed nodal seed by its monic-recovery/different-unit trap, including
-  mixed `Z_s!=0`.  An independently verified FINITE-EXACT affine-quadratic
-  seed scout finds one genuine nonintegral recovery locus, but its boundary
-  Jacobian is nonconstant and no Keller composite results.  A higher seed or
-  nonrational control remains live.  THM-3862
-  proves any hypothetical finite completion flat and globally nonmonogenic,
-  with `A1` branches at one common infinity; at degree three the arm cannot
-  itself branch.  THM-3839 excludes only one constant tower.
+  Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
+  self-identifying immersed arm, THM-3846 its formal first jets, and THM-3849
+  only visible conductor contact.  THM-3856/3861/3867/3871 close normal
+  `z`-depth through five; degree six is first, with two non-arm quintic buckets
+  decisive.  THM-3860 escapes the square rationally, but THM-3868 blocks
+  rational fixed-seed precomposition.  A FINITE-EXACT alternative has
+  nonconstant Jacobian: no Keller map.  THM-3862 makes any finite completion
+  flat and nonmonogenic, with `A1` branches at common infinity; at `d=3` the
+  arm is not a branch.  THM-3839 excludes only one constant tower.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692
