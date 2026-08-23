@@ -2,8 +2,8 @@
 id: THM-3870
 title: "Vertical-axis polynomial profiles force a projective companion"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  The vertical line A=0 is a component of the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The vertical line
+  A=0 is a component of the
   depressed-cubic branch exactly for b=C^2/6+A Q(A,C).  For every polynomial
   Q, comparison with the unique formal binomial profile at the first A-adic
   mismatch produces a distinct reduced companion whose affine normalization
@@ -13,13 +13,18 @@ status: >
   affine graphs over A.
 source: jc_sparse_direct_search / vertical first-mismatch completion of THM-3866, 2026-08-23
 audit: >
-  SELF-AUDITED exact proof candidate.  The assertion-free companion checks
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit rederived the
+  binomial indexing and exact quadratic response, including N=0; checked all
+  three degree regimes and the noncancellation of the resonant square;
+  verified that a factor selected at finite A and infinite C has positive
+  C-degree and therefore dominates the A-line; and separately reconstructed
+  the reverse-graph UFD argument, including its unit boundary.  The
+  assertion-free companion checks
   the vertical classification, the universal nonlinear response, the exact
   truncation residuals for N=0,...,5, and every degree regime
   d=0,N+1,N+2,N+3,N+4, including the resonant square.  It also checks the
   nonvertical reverse-graph affine boundary.  Normal and optimized runs
-  byte-match the frozen 206-gate transcript.  Independent hostile audit is
-  still required before promotion.
+  byte-match the frozen 206-gate transcript.
 related:
   - THM-3859-marked-root-polynomial-graph-companion-puncture-obstruction
   - THM-3863-finite-binomial-hensel-peels-force-projective-companion-contact
@@ -34,8 +39,7 @@ hash_basis: raw LF bytes
 
 # THM-3870 -- the vertical axis has no polynomial escape
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an algebraically closed field `k` of
 characteristic zero.  For `b=b(A,C) in k[A,C]`, put
 
 ```text
@@ -282,7 +286,9 @@ where the `G_i` are distinct irreducibles.  Homogenizing each factor at its
 actual `C`-degree shows that at least one reduced component
 `Xi=V(G_i)` has projective closure through `P_0`.  It is not vertical by
 `(18)`, and it is not a component contained in `Z=0`, because `G_i` is an
-affine polynomial homogenized at its actual degree.  Hence `Xi` dominates
+affine polynomial homogenized at its actual degree.  In fact `G_i` has
+positive `C`-degree: a degree-zero irreducible factor vanishing at `A=0`
+would be `A` up to a unit, already excluded by `(18)`.  Hence `Xi` dominates
 the `A`-line and is distinct from `L=V(A)`.
 
 Close `Xi` in `P1_A x P1_C` and normalize.  A point `p_0` above `(29)` is
@@ -350,8 +356,7 @@ forward-graph first-mismatch proof.  Equations `(31)--(37)` also show that
 there is no separate high-degree reverse-graph family: every such graph is
 vertical or invertibly forward.
 
-After an independent audit promotes this theorem, the exact remaining
-branch-design frontier in the depressed-cubic carrier is
+The exact remaining branch-design frontier in the depressed-cubic carrier is
 
 ```text
 - polynomial A1 components that are not graphs over either coordinate;
