@@ -2,7 +2,7 @@
 id: THM-3884
 title: "Cusp residual total-degree and leading-gauge filtration"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.  In
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In
   the complete THM-3881 residual equation, every square survivor with
   nonconstant f satisfies deg T >= deg f+1.  At equality, the highest form is
   243*x^3*f_n^2*((y^2-15x^2)f_n+xT_m)^2; its odd x-valuation forces this form
@@ -11,13 +11,17 @@ status: >
   not prove termination or solve the remaining square equation.
 source: jc_quartic_c3_construct / post-THM-3881 residual-degree filtration, 2026-08-23
 audit: >
-  PROVISIONAL EXACT PROOF CANDIDATE.  The companion freezes all fourteen
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit reconstructed
+  the fourteen-cell degree table, checked every strict comparison including
+  the `n=1` boundary, and rederived the equality top factor.  It verified the
+  odd prime-`x` valuation after arbitrary `x` factors in both remaining
+  squares, the coprime divisibility step, address preservation, and the
+  explicit warning that gauge peeling need not preserve square survival.
+  The companion freezes all fourteen
   nonzero coefficient-degree cells, verifies the all-n strict inequalities,
   factors the equality leading form, checks gcd(x,y^2-15x^2)=1, and verifies
   that the full gauge vector preserves the module address.  Normal and
-  optimized runs must byte-match the frozen transcript.  Independent audit
-  must recheck the prime-x nonsquare argument, every possible top-degree
-  cancellation, and the precise non-invariance warning.
+  optimized runs byte-match the frozen transcript.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
 related:
@@ -32,7 +36,7 @@ hash_basis: raw LF bytes
 
 # THM-3884 -- total degree exposes the leading lift gauge
 
-**PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Retain
 the THM-3881 notation
 
