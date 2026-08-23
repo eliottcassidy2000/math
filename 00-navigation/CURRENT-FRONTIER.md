@@ -355,18 +355,18 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   after regular extension on node/A2 curves; poles and worse jets remain.
   THM-3851 is a unit-rich torus.  For THM-3854's one-place three-cusp front,
   THM-3864/3872 close eight polarizations, seven minimal slices and the full
-  constant cusp-ideal span; polynomial coefficients remain open.  THM-3869
+  constant cusp-ideal span; THM-3881 closes its rank-two `T=0` lane.  THM-3869
   pays one Cardano line, while THM-3874/3877 use scalar units and `Cl=Z` to
-  exclude degree-three/four sole-simple-branch fields.  THM-3879's audited
-  `C3` core costs two places; uniqueness awaits audit.
+  exclude degree-three/four sole-simple-branch fields.  THM-3879 uniquely
+  attains two places; THM-3882 forbids one-place rational duals.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
   self-identifying immersed arm, THM-3846 its formal first jets, and THM-3849
   only visible conductor contact.  THM-3856/3861/3867/3871 close normal
-  `z`-depth through five.  FINITE-EXACT audits shear `(6,1)--(6,3)`, kill the
-  principal `(6,5)` face, and leave a nonreduced `(6,4)` cusp; other
-  channels remain open.  A cubic quotient audit needs a determinant cocycle
+  `z`-depth through five.  FINITE-EXACT audits shear `(6,1)--(6,3)`, kill
+  principal `(6,5)`, and leave nonreduced `(6,4)`; all else is open.  A cubic
+  quotient audit needs a determinant cocycle
   and empties its affine cell; rational corrections remain open.
   THM-3860/3868 bound rational square escape and fixed-seed precomposition.
   THM-3862 makes any finite completion

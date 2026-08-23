@@ -11,13 +11,11 @@ THM-3868, THM-3871, THM-3872, and THM-3874 are used only at their current
 proved scope.  The new computational companions in this session are
 **FINITE-EXACT SCOUTS**, not theorem dependencies; the cubic and sextic main
 packets additionally have independent finite-exact audits.  During the
-session THM-3877 and THM-3880 were promoted to **PROVED + VERIFIED-EXACT +
-INDEPENDENTLY HOSTILE-AUDITED**, and the core of THM-3879 received that status
-while its unique-two-place strengthening still awaits hostile audit.  They
-enter below only as typed task-generating signal.  THM-3881 advanced from an
-empty reservation to a **PROVED + VERIFIED-EXACT CANDIDATE AWAITING
-INDEPENDENT HOSTILE AUDIT**; none of its candidate conclusions is used as a
-proved dependency.
+session THM-3877, THM-3879, THM-3880, THM-3881, and THM-3882 were promoted to
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**.  They enter below
+only at their typed scopes: THM-3881 still leaves its general arbitrary-degree
+norm equation open, and THM-3882 closes a rational-dual architecture rather
+than `JC(2)`.
 
 ## 1. Outcome first
 
@@ -477,25 +475,26 @@ surface is the Russell surface.
 Promoted THM-3872 validates the operation “quotient cosmetic additions by
 the entire vanishing ideal before selecting a representative.”  The cubic
 calculation applies that discipline to a different source-addition module
-and finds transitivity.  Candidate THM-3881 now contracts a different full
-cusp-ideal lift to a rank-two pair and one norm equation.  That is strong
-signal for the rank-two hidden-control task below, but its surface, residual,
-and matrix factorization have not been identified with the Russell seed.
-The cheapest lawful test is to search for an actual intertwiner from the
-Russell source-addition module to its two-coordinate norm pair.  No claim from
-THM-3881 enters this session as a proved dependency.
+and finds transitivity.  THM-3881 now proves that a different full cusp-ideal
+lift contracts to a rank-two pair and one norm equation, and closes its
+`T=0` square lane.  That is strong signal for the rank-two hidden-control task
+below, but its surface, residual, and matrix factorization have not been
+identified with the Russell seed.  The cheapest lawful test is an actual
+intertwiner from the Russell source-addition module to its two-coordinate
+norm pair; without one, no conclusion transfers.
 
 ### Incoming place and sign packets
 
-The proved core of THM-3879 supplies a rational sextic discriminant curve
-whose connected `C3` layer costs at least two normalization places at
-infinity.  The sextic normal-strip packet is a coefficient-space boundary
-problem, not that discriminant curve.  The only preserved predicate at
-present is the need to count normalization places before declaring a
-one-place completion.  A decisive future test is to eliminate the surviving
-`(6,4)` strict-transform equations, normalize the resulting curve if one is
-obtained, and count its infinity places; until then the shared degree six
-transfers no obstruction.
+THM-3879 supplies a rational sextic discriminant curve whose connected `C3`
+layer has a unique best two-place line and no one-place line.  THM-3882
+explains the obstruction intrinsically for every everywhere-immersed rational
+dual: a line divisor is twice a projection base fibre plus its ramification,
+so one-place support is impossible in primal degree at least three.  The
+sextic normal-strip packet is a coefficient-space boundary problem, not a
+proved rational dual curve.  A decisive future test is to eliminate and
+normalize the surviving `(6,4)` boundary, then determine whether a dual
+projection model exists.  Until that source--target map is constructed,
+THM-3882 transfers no sextic-strip obstruction.
 
 THM-3880 gives an exact matching-sign carrier criterion on nodal--cuspidal
 curves.  The quadratic extension in `(6,4)` has its own involution
@@ -558,13 +557,12 @@ must be a regression test for any cross-problem task generator.
 
 ### Incoming-signal audit
 
-Consume THM-3877 and THM-3880 only at their promoted scopes and the audited
-core of THM-3879 separately from its pending unique-two-place strengthening.
-Use them to generate, respectively, a global sign-kernel audit for any finite
-cover, a descent-character table for `(6,4)`, and a normalization-place count
-for any eliminated sextic boundary curve.  Keep THM-3881 quarantined as a
-candidate until independent hostile audit, while testing whether its
-rank-two norm grammar admits a literal Russell-seed intertwiner.
+Consume THM-3877--3882 only at their promoted scopes.  Use them to generate a
+global sign-kernel audit for any finite cover, a descent-character table for
+`(6,4)`, a normalization-place/dual-projection test for any eliminated sextic
+boundary curve, and a literal-intertwiner search from the Russell seed to
+THM-3881's rank-two norm grammar.  The last search is necessary because
+theorem status on one surface does not identify modules on another.
 
 ## 11. Root companion reproduction
 
