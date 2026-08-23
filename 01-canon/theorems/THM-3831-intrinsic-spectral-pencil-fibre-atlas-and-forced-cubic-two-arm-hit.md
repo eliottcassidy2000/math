@@ -26,9 +26,13 @@ audit: >
   laws, both lift laws, the SL2 law, and the different in the universal cubic
   product and the quadratic Laurent chart; verifies comaximality; and labels
   both cubic components and the quadratic component by the normalized
-  discriminant root.  Normal and optimized replay agree with the frozen
-  output.  Normal and optimized runs byte-match the frozen transcript and the
-  raw hashes agree.
+  discriminant root.  A second independent 97-gate coupled audit with
+  THM-3832 rederives both quotient presentations and all signs, includes the
+  actual D=0 points by dense extension in reduced Laurent domains, verifies
+  1/k=Aq/z-2C and the density law, and identifies C=0 versus s=0 as the two
+  chart-boundary cancellations.  Normal and optimized replays agree with all
+  frozen outputs after LF normalization; stored-file raw hashes agree with
+  the metadata below.
 depends_on:
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -40,6 +44,11 @@ output: 05-knowledge/results/jc2_intrinsic_spectral_pencil_fibre_atlas_thm3831.o
 script_sha256: 9d307f8e9089962aca7cb3af1d1db35cf671c2b64afc7ded67785f74bf67631d
 output_sha256: 92fd33bb830f81293206762b4965e33a66f3084e36ec60f244bfe0bb1f9b7722
 semantic_sha256: 990a421380ed0135caf5d8b99630c2fedc2610dc4f0f34bb073eafe9c800f9ae
+coupled_independent_script: 04-computation/jc2_intrinsic_spectral_root_ratio_coupled_independent_audit_thm3831_3832.py
+coupled_independent_output: 05-knowledge/results/jc2_intrinsic_spectral_root_ratio_coupled_independent_audit_thm3831_3832.out
+coupled_independent_script_sha256: 1aea7122a640016a849fcdca9db9a5a65027d85f93506f21e37221d285b34b5c
+coupled_independent_output_sha256: 0f763e385dd1453f95bc3d608b3dabdc5f53d5242b2698d3e912663e0344de52
+coupled_independent_semantic_sha256: 63165de89614ea75d8f81145d370f614c8d32a71413b5cc740bcdec20ed9e6a3
 hash_basis: raw LF bytes
 ---
 

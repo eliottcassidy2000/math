@@ -1,0 +1,12 @@
+audit=THM-3831-THM-3832-coupled-independent-hostile
+verdict=PASS
+primary_replay=THM3831:34;THM3832:25;normal==optimized==frozen
+quotients=quadratic:Gm;cubic:Gm_minus_disjoint_union_Gm_plus
+signs=quadratic:minus;cubic_C0:minus;cubic_C_minus_a^-2:plus
+boundary=D_nonzero_dense_on_each_reduced_component;D0_points_included
+chart=A*r=z*C*(1+z^2*C);inverse_k=A*q/z-2*C=C*s/r
+density=partial_z_A=C*s/r^2=1/(k*r)
+spectral_coupling=minus_resolves_C0;plus_resolves_s0
+scope=polynomial_atlas_reducible_h_and_JC2_OPEN
+GATES=97
+semantic_sha256=63165de89614ea75d8f81145d370f614c8d32a71413b5cc740bcdec20ed9e6a3

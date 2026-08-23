@@ -23,7 +23,11 @@ audit: >
   three Delone--Faddeev multiplication laws, characteristic cubic, different,
   SL2 determinant and both lift laws from the chart; verifies both birational
   directions, the factored target derivative, the source-chain Jacobian law,
-  and the two cancellation addresses over every cubic spectral root.
+  and the two cancellation addresses over every cubic spectral root.  A
+  second independent 97-gate coupled audit rederives the quotient atlas and
+  signs, checks the actual D=0 points, proves 1/k=Aq/z-2C=Cs/r, and verifies
+  that the minus and plus cubic arms resolve the C=0 and s=0 denominator
+  factors respectively.  Replays agree after LF normalization.
 depends_on:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3831-intrinsic-spectral-pencil-fibre-atlas-and-forced-cubic-two-arm-hit
@@ -35,6 +39,11 @@ output: 05-knowledge/results/jc2_nonlinear_cubic_root_ratio_chart_thm3832.out
 script_sha256: 3e21279f5d1deac6960d6d3a7b17d9b8d7accfb9428120b518627192737c5460
 output_sha256: c3aafc9a27ae4daea7c82ec9811a8dcfdeee6bec56093857d225092be7846c52
 semantic_sha256: a5445ccd279daadc45016d001be9b28233c0c8c306e11b2e10a752e9a1179853
+coupled_independent_script: 04-computation/jc2_intrinsic_spectral_root_ratio_coupled_independent_audit_thm3831_3832.py
+coupled_independent_output: 05-knowledge/results/jc2_intrinsic_spectral_root_ratio_coupled_independent_audit_thm3831_3832.out
+coupled_independent_script_sha256: 1aea7122a640016a849fcdca9db9a5a65027d85f93506f21e37221d285b34b5c
+coupled_independent_output_sha256: 0f763e385dd1453f95bc3d608b3dabdc5f53d5242b2698d3e912663e0344de52
+coupled_independent_semantic_sha256: 63165de89614ea75d8f81145d370f614c8d32a71413b5cc740bcdec20ed9e6a3
 hash_basis: raw LF bytes
 ---
 
@@ -176,6 +185,17 @@ Thus the pole `r=0` has exactly the two cancellation addresses
 ```text
 C=0,                         C=-1/alpha^2.                  (16)
 ```
+
+They cancel different factors of the reconstructed row denominator.  At a
+cubic root, `b(alpha)=-q(alpha)`, so
+
+```text
+C=0:             s=q(alpha) is a unit,
+C=-1/alpha^2:    s=0 and C is a unit.                    (16a)
+```
+
+THM-3831 identifies these as the minus and plus intrinsic components,
+respectively.
 
 These are the only possible cancellation addresses visible in this rational
 chart.  THM-3831 independently proves that they are the two actual intrinsic

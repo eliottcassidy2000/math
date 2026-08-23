@@ -12,8 +12,9 @@ status: >
   bucket then has an unavoidable first local term at every nonzero v-root
   and an odd 2d+1 origin term otherwise.  Combined with the independently
   audited aligned closure THM-3828, this excludes every X!=0 pair in the
-  fixed r^2z^2 second-row ansatz.  The one-sided orientation X=0,Y!=0 and
-  higher canonical slots remain OPEN.
+  fixed r^2z^2 second-row ansatz.  THM-3834 separately closes the one-sided
+  orientation X=0,Y!=0, so the displayed ansatz is now empty; higher
+  canonical slots remain OPEN.
 source: jc_zero_debt_lift / cubic-pseudoplane second-row profile lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
@@ -25,21 +26,26 @@ audit: >
   final local coefficients.  Normal and optimized runs byte-match the
   frozen transcript and the raw hashes agree.  A second root audit repaired
   the recorded survivor at the origin: (20) also gives R(0)!=0 when v is a
-  constant, a fact not supplied by gcd(R,v)=1 alone.  The deterministic companion
-  has 58
+  constant, a fact not supplied by gcd(R,v)=1 alone.  A further independent
+  165-gate companion checks
+  the complete UFD tower, zero and nonzero integration constants, repeated
+  roots, the origin-order-zero seam, every competing p/g term, all four N/H
+  branches, and polynomiality of the terminal remainders.  Normal and
+  optimized runs match their frozen transcripts after LF normalization; the
+  stored raw hashes agree.  The deterministic companion has 58
   active gates checking the Poisson Casimir, monic canonical reduction,
   arm and top Wronskian buckets, exact 10/7 tower and r5 integration, the
   full pretyped r4 source polynomial and both local valuation families,
   the r4 root payment, the zero/nonzero N and H branches, the p and g
   lower-bound differential blocks at nonzero roots and the origin, all
   four N/H terminal specializations, polynomiality of every terminal
-  remainder, and both final leading coefficients.  Normal and optimized
-  runs byte-match the frozen transcript.  No finite-field inference is
-  used.
+  remainder, and both final leading coefficients.  No finite-field inference
+  is used.
 depends_on:
   - THM-3828-proportional-second-row-r2z2-profile-nonentry
 related:
   - THM-3821-cubic-pseudoplane-rz2-odd-ladder-terminal-riccati-gate
+  - THM-3834-one-sided-second-row-r2z2-profile-nonentry
   - THM-3814-nodal-rz-kummer-profile-degree-gate
   - THM-3811-nodal-arm-bezout-law-for-cubic-pseudoplane-darboux-pairs
 script: 04-computation/jc2_cubic_pseudoplane_misaligned_second_row_thm3829.py
@@ -47,6 +53,11 @@ output: 05-knowledge/results/jc2_cubic_pseudoplane_misaligned_second_row_thm3829
 script_sha256: 27b15411a51ad8e6facf1dfa39c724c278a5a9811d7898c88a529935881fed67
 output_sha256: d728949c7f9f331a80f64b446e4b6c3f84bb5f5899cac1c68a46a4edb88549be
 semantic_sha256: d045d251b2f0016d9909c329a37a8d30c8e4b7c50d0fef84e9000f53012fe8c6
+independent_script: 04-computation/jc2_cubic_pseudoplane_misaligned_second_row_thm3829_independent_audit.py
+independent_output: 05-knowledge/results/jc2_cubic_pseudoplane_misaligned_second_row_thm3829_independent_audit.out
+independent_script_sha256: 166cdd87bc76a40d722c7bd9b810f251820ea3dc2816ce4876aca879fa0f44ed
+independent_output_sha256: c5d3a4ecde25c5de1481d03436e4f47ce4b9c3dcb79177998a0628e985f6af54
+independent_semantic_sha256: b4c300858c19da530518142b0ab4dcc3a195ccf6c656fcc47dcbcb976633c810
 hash_basis: raw LF bytes
 ---
 
@@ -89,9 +100,10 @@ Consequently, THM-3828 and this theorem together exclude every Darboux pair
 with `X!=0` in (2): the top bucket first forces `Y=lambda X`; THM-3828 closes
 `L=0`, and (4) closes `L!=0`.
 
-The statement is only about the displayed fixed ansatz.  It does **not**
-exclude the one-sided top orientation `X=0,Y!=0`, any further canonical slot,
-or a planar Jacobian counterexample by another profile.
+The statement itself is only about the displayed `X!=0` branch.  THM-3834
+separately excludes the one-sided top orientation `X=0,Y!=0`.  Neither theorem
+excludes a further canonical slot or a planar Jacobian counterexample by
+another profile.
 
 ## 1. Exact canonical buckets
 
@@ -401,15 +413,10 @@ including all four `N/H` zero seams.  Together, the two theorems show:
 fixed ansatz (2) + X!=0  ==>  no Darboux pair.           (39)
 ```
 
-The first genuinely live orientation in this profile grammar is now the
-one-sided branch
-
-```text
-X=0,                 Y!=0,                               (40)
-```
-
-or else a higher canonical slot whose top bucket changes (5).  Neither is
-covered here.  In particular (39) is an ansatz obstruction, not a theorem
+THM-3834 now closes the formerly live one-sided branch `X=0,Y!=0`, while
+THM-3821 closes `X=Y=0`.  Thus the next design layer is a higher canonical
+slot whose top bucket changes `(5)`, a different carrier, or a different
+surface.  In particular `(39)` is an ansatz obstruction, not a theorem
 against planar Jacobian counterexamples in general.
 
 ## 7. Reproducibility
@@ -421,7 +428,7 @@ python3 04-computation/jc2_cubic_pseudoplane_misaligned_second_row_thm3829.py
 python3 -O 04-computation/jc2_cubic_pseudoplane_misaligned_second_row_thm3829.py
 ```
 
-Both executions must byte-match
+After LF normalization, both executions must match
 
 ```text
 05-knowledge/results/jc2_cubic_pseudoplane_misaligned_second_row_thm3829.out

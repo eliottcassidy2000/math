@@ -1,0 +1,10 @@
+audit=THM-3829-independent-local-orders
+result=PASS
+tower=UFD_10_7_complete
+integration=gamma_zero_nonzero+formal_M_zero
+orders=p_g_all_competitors_termwise
+hostiles=repeated_nonzero_root+origin_d0+repeated_origin
+branches=N0_N1_x_H0_H1
+scope=X_nonzero_fixed_second_row_only
+semantic_sha256=b4c300858c19da530518142b0ab4dcc3a195ccf6c656fcc47dcbcb976633c810
+GATES=165
