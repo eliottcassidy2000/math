@@ -1,0 +1,12 @@
+theorem=THM-3821-cubic-pseudoplane-rz2-odd-ladder-terminal-riccati-gate
+surface=r^2e-z^3+r;c=1;field=algebraically_closed_characteristic_zero
+ansatz=THM3814_plus_rz2*S(e),rz2*T(e)
+top=S_nonzero;T=muS;S=alpha_e4_v7;K=beta_e2_v4
+generic=P=delta_e3_v5;p=e2_v3_U;Q=(5delta/7alpha)e_v_U+(eta_alpha/beta)e2_v3
+generic_payment=28alpha_beta_f=5delta_U2_at_nonzero_v_roots
+degenerate=P0;Q=theta_e2_v3;p=e_v_U
+degenerate_payment=4beta_f+3theta_U=0_at_nonzero_v_roots
+scope=necessary_anatomy_only;existence_and_full_rz2_closure_open
+semantic_sha256=2050305b57636553904a0674dfaad50bc5f9bf34955b505e63edacc5c156920f
+CHECKS=42
+RESULT=PASS
