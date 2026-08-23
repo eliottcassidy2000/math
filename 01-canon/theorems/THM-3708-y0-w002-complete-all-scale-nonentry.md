@@ -12,13 +12,14 @@ status: >
   JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
-  SELF-AUDITED.  The exact companion independently enumerates actual supports
-  rather than anchor labels, checks the n=2,3 mergers and all stable families,
-  and verifies every generic residue branch, exceptional identity, sign,
-  Euler factor, and triple-to-scalar transfer.  Normal and optimized runs
-  byte-match the frozen transcript.  Family E, including its generic transfer
-  and exceptional n=2 peel, has passed an independent hostile audit; the whole
-  theorem still awaits independent hostile audit.
+  INDEPENDENTLY HOSTILE-AUDITED.  The exact companion independently enumerates
+  actual supports rather than anchor labels, checks the n=2,3 mergers and all
+  stable families, and verifies every generic residue branch, exceptional
+  identity, sign, Euler factor, and triple-to-scalar transfer.  Normal and
+  optimized runs byte-match the frozen transcript.  Independent derivations
+  checked the census, every C/D integration, both E transfer branches, and the
+  nonunit conclusions.  The audit caught and repaired the false intermediate
+  inference logged as MISTAKE-443; no theorem conclusion changed.
 depends_on:
   - THM-3603-three-by-four-additive-support-collision-cone-and-fibre-cut-atlas
   - THM-3606-exponent-two-three-by-four-scalar-singleton-gate-atlas
@@ -329,10 +330,16 @@ deg(H'K+delta HK')=deg H+deg K-1>=2,                  (31)
 
 with nonzero leading multiplier `deg H+delta deg K`.
 
-In the exceptional cases `H=KJ`.  Since `gcd(b,h)=1`, the divisibilities
-`h|H` and `b|K` imply `h|J`.  Thus `J'K+2JK'` has degree
-`deg J+deg K-1>=2` and nonzero leading multiplier `deg J+2deg K`.  None of
-the factors in `(9),(14),(17),(26),(29)` is a unit.
+In the exceptional cases `H=KJ`.  Here `h|H` gives `deg H>=2`, while the
+positive weight-one coefficient gives `b|K`, so `K` is nonconstant.  Hence
+
+```text
+deg(J'K+2JK')=deg J+deg K-1=deg H-1>=1,              (32)
+```
+
+with nonzero leading multiplier `deg J+2deg K`.  This argument deliberately
+does not divide `h|H` through `K`: the positive module allows `K` itself to
+contain `h`.  None of the factors in `(9),(14),(17),(26),(29)` is a unit.
 
 ## 7. Frontier and reproduction
 

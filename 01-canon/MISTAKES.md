@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-443 (2026-08-22, THM-3708 audit) -- coprimality with one forced divisor does not let a different divisor cancel through a product
+
+- **What failed:** in the exceptional W002 branches, the first proof wrote
+  `H=KJ`, `h|H`, `b|K`, and `gcd(b,h)=1`, then concluded `h|J`.
+- **Minimal witness / first failed implication:** the positive coefficient
+  module forces only `b|K`; it does not forbid `h|K`.  For example,
+  `K=b^2h` is allowed and `H=K` has `h|H` with `J=1`.  Coprimality of `b`
+  and `h` controls the displayed forced factor `b`, not every factor of `K`.
+- **Repair / strongest survivor:** the needed Euler factor is still a
+  nonunit without that divisibility claim.  Since `h|H`, `deg H>=2`; since
+  `b|K`, `K` is nonconstant.  Therefore
+  `deg(J'K+2JK')=deg H-1>=1`, with nonzero leading coefficient multiplier
+  `deg J+2deg K`.  THM-3708's exceptional branches and complete W002
+  nonentry are unchanged.
+- **Reusable rule:** from `a|xy`, `c|x`, and `gcd(a,c)=1`, do not infer
+  `a|y` unless one also knows `gcd(a,x)=1`; module membership may force one
+  divisor while permitting additional shared divisors.
+
 ## MISTAKE-442 (2026-08-22, THM-3693 consequence) -- a two-by-three rectangle was promoted to a per-output three-weight floor
 
 - **What failed:** THM-3693 correctly proved that no Darboux pair has one
