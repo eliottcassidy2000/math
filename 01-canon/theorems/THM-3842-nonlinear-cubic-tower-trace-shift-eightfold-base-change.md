@@ -2,8 +2,8 @@
 id: THM-3842
 title: "Nonlinear cubic packet as an eightfold trace-shift pullback of the rational Keller tower"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  The THM-3811 marked cubic becomes the m=2 THM-3774 trinomial after
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The THM-3811
+  marked cubic becomes the m=2 THM-3774 trinomial after
   its unique trace shift.  Its tower-coefficient subfield has exact index
   eight, the marked-root discriminant is A^2 times the intrinsic
   discriminant, and the nonlinear branch normalization maps six-to-one to
@@ -13,11 +13,16 @@ status: >
   packets.  No plane atlas or Jacobian counterexample is constructed.
 source: jc_sparse_direct_search / cubic-packet pullback session, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The companion verifies the trace shift,
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn3709, 2026-08-23).  The
+  audit rederived the conic pole-divisor degree, checked irreducibility after
+  scalar extension and the resulting linear disjointness, counted every zero,
+  pole, and critical point of the degree-six normalization map, and recomputed
+  both residue squareclasses including their parity at infinity.  The
+  companion verifies the trace shift,
   index-square discriminant, coefficient Jacobian, conic degree-eight gate,
   branch normalization, six-point cusp fibre, complete ramification divisor,
   and both symplectic branch residues.  Normal, optimized, and frozen
-  transcripts agree.  Independent hostile audit remains.
+  transcripts agree.
 depends_on:
   - THM-3774-three-component-rational-keller-cover-tower
   - THM-3779-three-component-tower-maximal-danielewski-polynomial-observable
@@ -25,6 +30,7 @@ depends_on:
 related:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3840-forced-cubic-two-arm-jelonek-passport
+  - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
 script: 04-computation/jc2_nonlinear_cubic_tower_trace_shift_thm3842.py
 output: 05-knowledge/results/jc2_nonlinear_cubic_tower_trace_shift_thm3842.out
 script_sha256: e533936c65be6016c0e4c4978eaa5e60e1d65e188ef682fac1676a11b1190bbb
@@ -35,8 +41,8 @@ hash_basis: raw LF bytes
 
 # THM-3842 -- the nonlinear cubic is an eightfold pullback of the rational tower
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**  Work over an algebraically closed field `k` of characteristic zero.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.
 The theorem identifies an exact common cubic beneath two apparently different
 Jacobian-construction lanes.  The identification is a finite base change, not
 a target coordinate change; its lost eight-sheet address is load-bearing.
@@ -274,8 +280,9 @@ the simple root `-2r` still supplies a source point.  Only `r=0` loses the
 companion as well.  After the nonlinear base change, that one cusp address
 has the six preimages `(22)`: THM-3811's etale surface omits precisely their
 three target groupings `(A,C)=(0,0)` and `(23)`.  The base change therefore
-does not create an unexplained new defect; it resolves one cusp puncture into
-the exact three-puncture nonlinear passport.
+does not create an unexplained new defect; it resolves one cusp value into
+the exact three-value omitted packet.  These are not the three normalization
+punctures at infinity used by THM-3841.
 
 ## 4. A marked symplectic residue distinguishes the affine packets
 
@@ -338,9 +345,11 @@ Jacobian are two faces of the same lost branch address.
    `k(p,u)` form its exponent-one Danielewski observable and contain no
    Darboux pair.  Arbitrary rational target words still lie in `K_0` and
    cannot access the eightfold sidecar `(A,C)`.
-2. **This is not an atlas no-go.**  A hypothetical plane atlas of the
-   THM-3811 surface works after adjoining the degree-eight coefficient
-   field.  THM-3779 says nothing about polynomial functions outside `K_0`.
+2. **This theorem alone is not an atlas no-go.**  THM-3779 says nothing about
+   polynomial functions outside `K_0`; the degree-eight sidecar is exactly
+   what prevents that transfer.  Independently, the later THM-3841 excludes
+   every dominant plane atlas of the THM-3811 surface by its deleted-divisor
+   Jelonek obstruction.
 3. **The component spectrum is affine-model data.**  THM-3774's vertical
    spectrum `(1,0,0)` is not transported merely by the field base change.
    The honest transported object is the cubic extension plus the index,
@@ -359,4 +368,4 @@ packet are not merely analogous `S_3` cubics.  They are one cubic separated
 by an eight-sheet coefficient extension, an index square, and a six-address
 branch collapse.  Any future deformation that tries to transfer the tower's
 rational Keller cancellation must explicitly transport those three
-sidecars.  **QED, pending independent hostile audit.**
+sidecars.  **QED.**
