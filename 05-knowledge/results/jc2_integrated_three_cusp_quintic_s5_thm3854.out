@@ -1,0 +1,10 @@
+theorem=THM-3854-integrated-three-cusp-quintic-s5-natural-completion-obstruction
+branch=integrated_three_cusp_quintic;finite_singularities=3A2_plus_3A1
+infinity_places=1;infinity_smooth=YES;line_contact=5
+natural_completion_degree=5;discriminant_constant=-64800000
+generic_group=S5;discriminant_kernel=A5;cyclic_cubic_quotient=NONE
+seminormal_cubic_controls=2;nonsquare_residuals=2
+quadratic_resolvent_class_group_3_torsion=OPEN
+semantic_sha256=13b07d9f8b90e586f1d280e9c5a530594175fa66f25314413fc5a88b851b7bd2
+CHECKS=52
+RESULT=PASS
