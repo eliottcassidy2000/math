@@ -1,0 +1,11 @@
+theorem=THM-3844-two-cusp-polynomial-branch-quadratic-resolvent-design-gate
+branch=quartic;normalization=A1;infinity_places=1
+finite_singularities=2A2_plus_A1
+quadratic_resolvent_affine_class_group=Z_plus_Z3
+root_boundary_configurations=360;torsion_order=3_uniform
+cusp_pullback=p_X_minus_Y;q_half_X2_plus_Y
+cubic=globally_monogenic;deleted_different_nonconstant_unit
+scope=design_hostile_no_plane_atlas_no_JC_counterexample
+semantic_sha256=70efbb25eb7dfb096a1f582148a2c234586ec72dfc22f02976df5c133cc90e99
+CHECKS=1859
+RESULT=PASS
