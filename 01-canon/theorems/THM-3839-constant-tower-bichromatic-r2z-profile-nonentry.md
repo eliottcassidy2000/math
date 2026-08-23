@@ -2,7 +2,7 @@
 id: THM-3839
 title: "Constant-tower bichromatic R2Z profiles do not enter the cubic pseudo-plane Darboux packet"
 status: >
-  PROOF CANDIDATE + VERIFIED-EXACT, PENDING INDEPENDENT HOSTILE AUDIT.  In
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In
   the first r^2z extension of the cubic pseudo-plane canonical packet,
   suppose the preceding first-row rz^2 profile and the new first-row r^2z
   profile are nonzero.  If the two top Wronskians have distinct target colors
@@ -16,7 +16,8 @@ status: >
   problem remain OPEN.
 source: jc_zero_debt_lift / first-higher-canonical-slot lane, 2026-08-23
 audit: >
-  SELF-HOSTILE EXACT CANDIDATE.  An initial beta=1 proof was rejected after
+  INDEPENDENT HOSTILE AUDIT PASS (jc-cohn3709, 2026-08-23).  An initial
+  beta=1 proof was rejected after
   restoring the constant tower scalar exposed three nonlinear scaling
   seams.  The repaired companion keeps beta=b!=0 and checks the seams and
   the resulting all-b equations directly against the unreduced Poisson
@@ -24,8 +25,12 @@ audit: >
   reduction, both top Wronskians, the 8/7 and optional 8/5 valuation laws,
   the complete factor-cofactor integral, the arm, every raw constant-tower
   bucket with b retained, the two tail-independent color jets, all terminal
-  degree cases, and fixed degree 3--6 hostile replays.  Normal and optimized
-  runs byte-match the frozen transcript.  Independent hostile audit remains.
+  degree cases, and fixed degree 3--6 hostile replays.  The independent audit
+  rederived the primewise valuation solutions (including the e-prime shifts),
+  checked all three restored-b scaling seams against the raw buckets, verified
+  that division by e occurs only in k(e), and checked that the G_0 and R terms
+  lie strictly below degree 2d+3 for every d>=3.  Normal and optimized runs
+  byte-match the frozen transcript.
 depends_on:
   - THM-3821-cubic-pseudoplane-rz2-odd-ladder-terminal-riccati-gate
 related:
@@ -43,7 +48,7 @@ hash_basis: raw LF bytes
 
 # THM-3839 -- the constant bichromatic `r^2z` tower is empty
 
-**PROOF CANDIDATE + VERIFIED-EXACT, PENDING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Let `k` be an algebraically closed field of characteristic zero and put
 
 ```text
