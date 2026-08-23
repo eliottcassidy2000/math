@@ -1,0 +1,33 @@
+GRAVER RATIO / PRIME-COLOUR ADDRESS PROBE
+universe=coprime 1<=a<b, a+b<=356
+full_nodes=19314; shell_formula=(1/2)sum_{s=3}^356phi(s)
+dense_full_address=1..19314
+stern_brocot_root=(1,2); prefix_closed=yes; max_depth=353; deepest=[(1, 355)]
+tree_label_address=128*heap+k; count=1506492; checks=4519476
+tree_label_operations: L(A)=2A-k, R(A)=2A-k+128; scale remains a sidecar
+full_child_edges_inside=L:12877,R:6436
+cube_distinct_values=19286; fibre_histogram={1: 19258, 2: 28}
+cube_collision_values=28; collision_excess=28
+collision_inert_profiles={'inert_free': 26, 'nontrivial_inert': 2}
+first_cube_collisions=[(1729, [(1, 12), (9, 10)]), (20683, [(10, 27), (19, 24)]), (40033, [(9, 34), (16, 33)]), (149389, [(8, 53), (29, 50)]), (195841, [(9, 58), (22, 57)]), (327763, [(30, 67), (51, 58)]), (443889, [(17, 76), (38, 73)]), (684019, [(51, 82), (64, 75)]), (704977, [(2, 89), (41, 86)]), (1845649, [(42, 121), (49, 120)])]
+admissible_shells=94; selected_nodes=5855
+dense_selected_address=1..5855
+selected_cube_values=5855; split_cofactor_prime_factor_checks=10508
+labelled_prime3_addresses=456690; label_decode_checks=913380
+labelled_address=3^k*g^3*(a^3+b^3), 0<=k<78; v_3 recovers the labelled pair
+inert_scales_through_100=[1, 2, 4, 5, 8, 10, 11, 16, 17, 20, 22, 23, 25, 29, 32, 34, 40, 41, 44, 46, 47, 50, 53, 55, 58, 59, 64, 68, 71, 80, 82, 83, 85, 88, 89, 92, 94, 100]; scaled_decoder_checks=444980
+decoder: v_p(m)=3*v_p(g)+v_p(s) on p=2 mod 3; quotient=scale, remainder=shell
+decoder: q=split-prime part; delta^2=(4q-s^2)/3; (a,b)=((s-delta)/2,(s+delta)/2)
+selected_parent_edges=1526; selected_forest_roots=4329
+selected_child_profile={0: 4507, 1: 1170, 2: 178}
+selected_unbounded_child_profile={0: 3434, 1: 1906, 2: 515}
+selected_branch_landings_inside=L:1025,R:501
+selected_branch_landings_unbounded=L:1452,R:1484
+largest_selected_components=[(7, (42, 65), 5), (7, (35, 48), 4), (7, (11, 60), 4), (7, (8, 21), 5), (7, (5, 12), 4), (6, (60, 77), 3), (6, (53, 60), 4), (6, (38, 63), 4), (6, (33, 98), 4), (6, (30, 77), 5)]
+hostile_branch=(1,4) shell5 -> shells6,9; neither admissible
+hostile_scalar=1729=(1,12)=(9,10); cube value is not a full-atlas address
+hostile_scale=7*(1,4): 22295; split scale is entangled with the Eisenstein cofactor
+hostile_exponent=515375: primitive shell 125=5^3; valuation remainder erases the shell
+hostile_AP=(1,...,13) is safe at t=1/14 but has 30 selected ratio placements, 27 with inert scale
+active_checks=6188404
+RESULT PASS

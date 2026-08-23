@@ -1,0 +1,21 @@
+RULE30_FIXED_DIVISION_TARIFF_INDEPENDENT_AUDIT_THM3824
+status=PASS;formula_proved_subject_to_fixed-exponent_scope
+method=full_Tn_power_column_HNF+coordinate_action+Smith_unimodular_kernel_lattices
+definitions=K=L_intersect_Tn^(-1)(2^eL);J=L_intersect_Tn^(-1)(2^eZ^n)
+e=0=all_three_quotients_trivial
+e>=1,r<v2(n):L/K=(Z/2^e)^(d/2);J=K
+e>=1,r>=v2(n):L/K=(Z/2^e)^(d-1)+Z/2^(e-1)
+odd_integrality=L/J=(Z/2^e)^(d-1)+Z/2^max(e-s-1,0)
+odd_carry=J/K=Z/2^min(s,e-1);Z/1_omitted
+direct_image_lattice_cases=162
+direct_tariff_filtration_cases=1134
+exhaustive_definition_cases=586
+exhaustive_definition_residues=213052
+exhaustive_nontrivial_carry_cases=228
+boundary_counts={"core_boundary": 126, "e0": 162, "n1": 63, "post_core": 896, "pre_core": 112, "r0": 126}
+universe=1<=n<=18;0<=r<=8;0<=e<=6;exhaustive_when_2^(e*rank)<=4096
+scope_hostile=n=2,r=0,e=1;x=(1,1);delta=(2,0)_in_K;x+delta=(3,1)
+scope_hostile_exact_gaps=1_then_2;K_does_not_preserve_exact-e_strata
+scope_repair=K_is_maximal_for_fixed_N_e_on_the_2^e-divisibility_domain_only
+semantic_sha256=5e28eecc3d2178fa35d9993e209b1a12ae76d7b00355b6f58e6d61c0ed655827
+PASS

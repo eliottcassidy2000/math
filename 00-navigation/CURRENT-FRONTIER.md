@@ -59,9 +59,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-2052's rank-twelve branch is already terminal; in rank eleven the row
   either raises rank with an explicit cap or lies short inside the star. It preserves no
   owner, phase, sign partition, or arrival and is not sufficient for LRC(14).
-  THM-3793 reversibly addresses `5,855` inert support-two ratios by
-  `(a,b)->a^3+b^3` (`456,690` placements), but loses scale, other runners,
-  owner, phase, arrival, and loneliness.
+  THM-3793/[3825](../01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md)
+  decode `5,855` inert ratios, scale and tags; full LRC semantics are lost and THM-3818 is RESERVED.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
@@ -245,11 +244,8 @@ THM-3359 gives periodic modular supports; THM-2352 gives the q-adic plateau.
 [THM-3499](../01-canon/theorems/THM-3499-regular-shortlex-languages-have-logarithmic-density.md) proves regular shortlex density;
 [THM-3510](../01-canon/theorems/THM-3510-binary-shortlex-equal-level-count-log-density-boundary.md) is sharp: equal counts allow two densities or none.
 [THM-3730](../01-canon/theorems/THM-3730-positive-distinct-two-cube-support-abscissa.md)
-gives the indexed asymptotic and abscissa `2/3`.  THM-3793 proves a value is
-a singleton whenever every prime of the pair sum is inert and only its
-primitive quotient is cube-free; arbitrary inert powers may occur in the
-common scale.  It yields `liminf H(X)/(log log X)^2>=1/20`, but no full
-support asymptotic or residue.
+gives indexed abscissa `2/3`.  THM-3793/3825 give an inert-scale singleton
+family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
 
 ### Established landmarks
 
@@ -313,14 +309,10 @@ support asymptotic or residue.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
-- **Rule 30:** THM-3502/3511/3512/3516 retain the exact compiler, cocycle,
-  depth, owner, and carry boundaries. THM-3778 excludes saturated odd-period
-  finite scale-cycles and physical `Q_2` realizations.
-  [THM-3804](../01-canon/theorems/THM-3804-rule30-all-period-amplitude-lattice-smith-law.md)
-  gives the all-period image: for `n=2^a m`, rank `d=n/2^min(a,r)`, free
-  defect `n-d`, and one cyclic factor `2^(r-min(a,r))`. Hence physical
-  profiles have no dyadic spatial period or finite-spatial exact scale-cycle.
-  Integral lift, owner, chronology, overflow and every prize remain OPEN.
+- **Rule 30:** THM-3502/3511/3512/3516 retain compiler/owner/carry; THM-3778
+  excludes finite-spatial cycles. THM-3804 gives all Smith forms; THM-3824
+  gives fixed-division tariffs and phase separation. Adaptive/projective
+  chronology and every prize remain OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT;
   Nagata/GGHV and THM-3543--3642 give degree/height floors and
   low-sector closures. Audited THM-3687/3688 reach `J_0,J_1,J_2`;
@@ -410,8 +402,8 @@ The most reusable current bridges are not literal object identifications:
 | Bulk / boundary / null | THM-2058 | Large-prime grids are strict; tight support uses finitely many level-14 clocks; subthreshold packets vanish. |
 | Operation-response | tournament/sequence/FC/Rule 30 | THM-3315/3322/3324 give walks and Gram; THM-3732/3511 require seam and next-operation congruence tests. |
 | Actual atlas / resonance | THM-3791/3797/3802 | `H^2_dR=E/k` keeps the resonant coefficient; lower contacts and the affine cover are not recovered. |
-| Reversible address | THM-3743/3793 | Inert cube sums index 5,855 pair ratios but lose the full LRC semantic packet. |
-| Amplitude lattice | THM-3804 | Free defects plus one carry decide lifts, not projective closure or center chronology. |
+| Reversible address | THM-3743/3793/3825 | Inert-scale tagged cube decoder; full LRC semantics lost. |
+| Amplitude lattice | THM-3804/3824 | Lift and fixed-division tariffs, not adaptive/projective chronology. |
 | `Z/3` deletion lattice | THM-3785/3790/3808 | Visible `1+2` principalizes; deleting class-one rays yields `ker(sum mod 3)` units, not a surface map. |
 | Positive filtration | THM-3816 | Domain `gr` and `F_0=k` force `S*=k*`; complement units need divisor classes, and affineness is separate. |
 | HFC--JC boundary | THM-3303/3328 | Null moments force collision; cone overlap gives a double sheet, otherwise retain anti-tangent/vertex-cone data. |

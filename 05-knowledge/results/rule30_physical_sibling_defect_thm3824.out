@@ -1,0 +1,12 @@
+RULE30_PHYSICAL_SIBLING_DEFECT_THM3824
+status=PROVED_MONOTONICITY+FINITE-EXACT_CONTROL;no_finite_state;all_rule30_prizes_open
+universe=0<=m<=8;0<=t<=4096-2^(m+1);1<=r<=10
+exact_free_collisions=0
+smith_collisions=0
+tariff_realizations=0
+strict_monotonicity_checks=35842
+scale_records=({'m':0,'gap':2,'phases':4095,'distinct_free':4095,'repeated_free':0,'smith_collisions':0,'tariff_realizations':0},{'m':1,'gap':1,'phases':4093,'distinct_free':4093,'repeated_free':0,'smith_collisions':0,'tariff_realizations':0},{'m':2,'gap':2,'phases':4089,'distinct_free':4089,'repeated_free':0,'smith_collisions':0,'tariff_realizations':0},{'m':3,'gap':1,'phases':4081,'distinct_free':4081,'repeated_free':0,'smith_collisions':0,'tariff_realizations':0},{'m':4,'gap':2,'phases':4065,'distinct_free':4065,'repeated_free':0,'smith_collisions':0,'tariff_realizations':0},{'m':5,'gap':6,'phases':4033,'distinct_free':4033,'repeated_free':0,'smith_collisions':0,'tariff_realizations':0},{'m':6,'gap':1,'phases':3969,'distinct_free':3969,'repeated_free':0,'smith_collisions':0,'tariff_realizations':0},{'m':7,'gap':8,'phases':3841,'distinct_free':3841,'repeated_free':0,'smith_collisions':0,'tariff_realizations':0},{'m':8,'gap':1,'phases':3585,'distinct_free':3585,'repeated_free':0,'smith_collisions':0,'tariff_realizations':0})
+first_tariff_realizations=()
+mechanism=top_bits_2t_and_2t-1_force_disjoint_delta_magnitude_intervals
+semantic_sha256=da1d7d9cdec2c3798749fe314eec1443739c27055bf2883ae25e99e14d6c336b
+PASS

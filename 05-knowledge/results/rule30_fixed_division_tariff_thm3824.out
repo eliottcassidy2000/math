@@ -1,0 +1,20 @@
+RULE30_FIXED_DIVISION_TARIFF_THM3824
+status=PROVED_FORMULA+VERIFIED_EXACT;all_rule30_prizes_open
+variables=n>=1;r>=0;e>=0;L=T_n^r*Z^n;K=L_intersect_T_n^(-1)(2^e*L)
+e=0:K=L;total_integrality_carry_tariffs_trivial
+e>=1,r<v2(n):L/K=(Z/2^e)^(d/2),d=n/2^r;all_integrality,no_carry
+e>=1,r>=v2(n):L/K=(Z/2^e)^(d-1) direct_sum Z/2^(e-1),d=oddpart(n)
+odd_core_integrality=(Z/2^e)^(d-1) direct_sum Z/2^max(e-s-1,0),s=r-v2(n)
+odd_core_post_integrality_carry=Z/2^min(s,e-1)
+convention=Z/1_is_trivial
+effective_smith_checks=40
+odd_power_smith_checks=48
+odd_power_image_kernel_checks=1296
+all_period_tariff_checks=3960
+universe=1<=d<=40;odd_d<=15,power<=6;1<=n<=40;0<=r<=10;0<=e<=8
+minimal_hostile=n=2,r=3,e=2,delta=(4,4),normalized_response=(2,2),tariff=Z/2
+gap_one_one_core=trivial_tariff
+exact_gap_scope_hostile=n=2,r=0,e=1,x=(1,1),delta=(2,0)_in_K,y=(3,1),gaps=1_vs_2
+scope=K_is_maximal_for_fixed_N_e_on_divisibility_domain_not_for_exact_gap_stratum
+semantic_sha256=0b828b42cd0a674b57d09a015a9a87f60f84e37a0b1e6ae3308128c19e2e62c5
+PASS

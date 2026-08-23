@@ -1,0 +1,20 @@
+INERT CUBE DECODER HOSTILE AUDIT
+universe=coprime 1<=a<b, a+b<=356
+admissible_shells=94; selected_pairs=5855
+primitive_values=5855; inert_scales_through_100=38
+least_carrier_value=28 from pair=(1, 3)
+ramified_shell_loss=9=(1^3+2^3); decoder rejects v3>0
+ramified_scale_label_alias=756: (label=0,g=3) equals (label=3,g=1) on pair (1,3)
+least_ramified_shell_singleton_failure=4104=(2,16)=(9,15); shell=9=3^2
+least_split_scale_loss=9604=7^3*(1^3+3^3); decoder rejects
+least_split_scale_singleton_failure=41343640=(86,344)=(197,323); g=86=2*43, shell=5
+least_exponent_cap_decoder_loss=152=3^3+5^3; primitive shell=8=2^3
+least_high_exponent_singleton_failure=65728=(12,40)=(31,33); shell=64=2^6
+least_exact_exponent_three_failure=515375=(15,80)=(54,71); shell=125=5^3
+orientation_collision=address 28 for labelled speeds (1,3) and (3,1) on labels {1,2}
+covector_sign_classes=(3,-1) versus (1,-3)
+unoriented_labelled_count=456690
+oriented_labelled_count=913380; repaired_channel=2*kappa+epsilon
+coordinate_gauge_example=28 on {1,2} maps to 252 on {2,3} under a relabelling
+active_checks=2066834
+RESULT PASS
