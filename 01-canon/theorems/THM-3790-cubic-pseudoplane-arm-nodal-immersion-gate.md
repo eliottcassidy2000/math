@@ -19,7 +19,7 @@ audit: >
   seven-point critical family exhaustive by equality with a triangular
   Groebner ideal.  It also verified the universal nodal normal coefficient
   and residual Picard-class argument.  The companion was hardened from
-  Python assertions to 29 active gates plus an AST assertion audit.  Normal
+  Python assertions to 32 active gates plus an AST assertion audit.  Normal
   and optimized runs byte-match the frozen transcript.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
@@ -29,8 +29,8 @@ external:
   - "Gwozdziewicz, Injectivity on one line, arXiv:alg-geom/9305008, Theorem 1.1."
 script: 04-computation/jc2_cubic_pseudoplane_arm_nodal_gate_thm3790.py
 output: 05-knowledge/results/jc2_cubic_pseudoplane_arm_nodal_gate_thm3790.out
-script_sha256: c92b9a44ad0d5517208c43723a3e6efdaf32fd4117bc49770ed9c7752c566ca4
-output_sha256: a0dfe4102f75cff037e12a8ed85a6fd74d7d58b12efb1321f85ced4ef31b38a7
+script_sha256: d6cbd4b83fbc46a8914bbc63cadf9f679b87b74566ea185909df900ed5e2573d
+output_sha256: abe3b659d56097d402c27ff169f84d53afa0f2c57efc465617243a08570e0434
 hash_basis: raw LF bytes
 ---
 

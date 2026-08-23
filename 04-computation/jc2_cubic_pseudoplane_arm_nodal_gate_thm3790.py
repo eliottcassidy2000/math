@@ -112,6 +112,11 @@ zero(lifted - expected, "lifted nodal bracket")
 
 # Critical equations and the seven-point family.
 critical = [sp.factor(bracket(A, q)) for q in variables]
+critical_factor = c**3 + 2 * r * e
+zero(critical[0] - (r**2 / c**3 - 18 * e * z**2),
+     "critical r equation")
+zero(critical[1] + 6 * e * critical_factor, "critical z equation")
+zero(critical[2] + critical_factor / c**3, "critical e equation")
 crit_poly = 8 * zeta**7 + 9 * c**15
 r0 = 2 * zeta**3 / c**3
 e0 = -c**6 / (4 * zeta**3)
