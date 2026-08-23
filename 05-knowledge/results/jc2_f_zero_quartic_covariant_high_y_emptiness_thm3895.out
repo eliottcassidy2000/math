@@ -4,8 +4,9 @@ shifted_fibres=two_coprime_quartic_colours
 degree_ladder=n3:Bdeg3,n4:Bdeg2,n5:Bdeg1,n6:Bdeg0
 square_ideal_bases=d0:[b0];d1:[b0,b1];d2:[b0,b1,b2];d3:[b0,b1,b2,b3]
 positive_control=B0,K^2(8K^2-9)^2
+independent_arm_audit=osculating_y4_a_minus_3_pole
 conclusion=deg_y(T)_at_most_2
 remaining=T=t2(x)y^2+t1(x)y+t0(x)
-semantic_sha256=b2c261b027357a48476f9c9d827d6068fcbc9ee483b633b3eeb27aa6a2c801df
-CHECKS=43
+semantic_sha256=a233879e5dfa59593314aaf07a31d1890028398f1d485c6380d8ecb608c7c08e
+CHECKS=55
 RESULT=PASS

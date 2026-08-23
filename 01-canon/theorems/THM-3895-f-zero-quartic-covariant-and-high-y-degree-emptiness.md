@@ -2,8 +2,8 @@
 id: THM-3895
 title: "F-zero quartic covariant and high-y-degree emptiness"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  Every polynomial square in the THM-3885 f=0
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every polynomial
+  square in the THM-3885 f=0
   residual has y-degree at most two.  A high-degree square canonically
   produces a degree-four covariant Z.  The candidate T must divide two
   coprime shifted fibres of Z and its remaining quadratic discriminant
@@ -13,16 +13,19 @@ status: >
   polynomial-plane Keller atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3888 elliptic denominator compression, 2026-08-23
 audit: >
-  SELF-AUDITED EXACT PROOF CANDIDATE.  The companion verifies the quartic
+  INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23 by a separate osculating-root
+  proof.  The audit rederived the a=0 arm divisibility, verified the exact
+  factorization (G-G_0)(G+G_0), and found an uncancellable a^(-3) pole in
+  [y^4]G_0 for every putative degree-three-through-six survivor.  This proof
+  does not use the normalized Groebner ideals and treats both arm constants
+  and both square-root signs uniformly.  The companion verifies the quartic
   covariant relation, its two-colour divisor identity, the normalized
   quadratic discriminant, the complete degree ladder, and the four exact
   square-root ideals over Q(f).  Their reduced grevlex bases are respectively
   [b0], [b0,b1], [b0,b1,b2], and [b0,b1,b2,b3].  It separately checks the
   linear-row terminal factors, the constant-row parity obstruction, and the
-  B=0 positive square in 43 active gates.  Normal and optimized runs must
-  byte-match the frozen output.  Independent audit must recheck the choice
-  of equianharmonic sign, every degree comparison, the algebraic
-  normalization A0=1, transcendence of f, and the exact Groebner bases.
+  B=0 positive square and the independent osculating identity in 55 active
+  gates.  Normal and optimized runs must byte-match the frozen output.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
   - THM-3885-cusp-residual-f-zero-arm-dichotomy-and-quadratic-closure
@@ -31,17 +34,16 @@ related:
   - THM-3893-cusp-residual-f-zero-two-arm-degree-six-closure
 script: 04-computation/jc2_f_zero_quartic_covariant_high_y_emptiness_thm3895.py
 output: 05-knowledge/results/jc2_f_zero_quartic_covariant_high_y_emptiness_thm3895.out
-script_sha256: 64be7ed6b4c77b91a40e0861be7cd34bef16dbbd5e548613f581a5b8e13e66ed
-output_sha256: 8e2aadf3d944ffc1dd3daa3add7f950efbf783e919c2d67060737e15a2386a56
-semantic_sha256: b2c261b027357a48476f9c9d827d6068fcbc9ee483b633b3eeb27aa6a2c801df
+script_sha256: b2e9a174cad4e09f4ad212881fcdf0f98dedb4d3bbb3eaadaa372158db48c8a8
+output_sha256: d951d877193474e46b377649ae9d06afbf031eceffc8acf02c754c75f64c24f0
+semantic_sha256: a233879e5dfa59593314aaf07a31d1890028398f1d485c6380d8ecb608c7c08e
 hash_basis: raw LF bytes
 ---
 
 # THM-3895 -- the f-zero residual has only three y-channels
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**  Work over an algebraically closed field `k` of
-characteristic zero.  Retain
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  Retain
 
 ```text
 a=x+1,                 L=9x+4,
@@ -289,7 +291,62 @@ positive control:
 But `(17)` requires `b` to have degree exactly `6-n`, hence to be nonzero.
 This contradiction closes all four rows in `(18)` and proves `(3)`.
 
-## 5. Exact boundary and next computation
+## 5. Independent forgotten-arm audit: one coefficient is enough
+
+There is a second proof of the degree cutoff which neither uses `(20)` nor
+the four Groebner bases.  It explains why the global `a=0` arm is the
+load-bearing coordinate.
+
+Choose `s^2=-3` with sign fixed by
+
+```text
+lc_y(G)=s*a*lc_y(T)^2,
+```
+
+and put
+
+```text
+C=8K^2-9a^3L^2,
+G_0=s(aT^2+4KT/(3a)-C/(9a^3)).                           (27)
+```
+
+Exact expansion gives the osculating identity
+
+```text
+(G-G_0)(G+G_0)
+ =(C^2+27a^6L^4-24a^2KCT)/(27a^6).                      (28)
+```
+
+If `d=deg_y T>2`, the right side has exact degree `d+6`, while the sign
+choice makes `G+G_0` have degree `2d`.  Therefore
+
+```text
+deg_y(G-G_0)=6-d.                                        (29)
+```
+
+This excludes `d>6`; for `3<=d<=6`, the difference has degree at most three.
+
+The THM-3885 `a=0` arm says `T(-1,y)` is constant.  Hence, on writing
+
+```text
+T=sum_i t_i(x)y^i,
+```
+
+one has `a|t_i` for every `i>=1`.  Equation `(29)` gives
+`[y^4]G=[y^4]G_0`, but `(27)` gives
+
+```text
+[y^4]G_0/s
+ =a sum_(i+j=4)t_i t_j
+   +4(t_2-Ft_4)/(3a)-8/(9a^3).                           (30)
+```
+
+The first two terms lie in `k[x]`; the last has exact `a`-valuation `-3`.
+It cannot be the polynomial coefficient `[y^4]G`.  This contradiction proves
+the same cutoff independently, uniformly across both arm constants and both
+square-root signs.  The origin address and the `L=0` arm are not used.
+
+## 6. Exact boundary and next computation
 
 The proof does **not** say that every polynomial residual square is the base
 point.  It says that every survivor lies in the three-channel universe `(4)`.
@@ -298,7 +355,7 @@ The generic hostile point `(5)` occupies its quadratic channel but fails
 satisfy THM-3885's `a=0` arm dichotomy, the `L=0` root polarization, and
 
 ```text
-T(0,0)=0.                                                  (27)
+T(0,0)=0.                                                  (31)
 ```
 
 The cheapest decisive successor is therefore the full quadratic-y
