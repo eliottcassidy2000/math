@@ -1,0 +1,13 @@
+THM-3699 exact support audit
+window = (-2, -1, 0, 1)
+three-support cases = 4
+support (-2, -1, 0): decisive bucket 2 = ((0, 1),); scalar = ((-2, 1), (-1, 0), (0, -1))
+support (-2, -1, 1): decisive bucket 2 = ((1, 0),); scalar = ((-2, 1), (-1, 0), (1, -2))
+support (-2, 0, 1): decisive bucket 1 = ((0, 0), (1, -1)); scalar = ((-2, 1), (0, -1), (1, -2))
+support (-1, 0, 1): decisive bucket -2 = ((-1, -2),); scalar = ((-1, 0), (0, -1), (1, -2))
+singleton differential identities = PASS
+endpoint common-square identity = PASS
+three scalar addresses have common arm factor h = PASS
+four-window profiles after THM-3695 = ((3, 4), (4, 3), (4, 4))
+one-dimensional -1 component shears 4x4 to <=4x3 = PASS
+ALL CHECKS PASSED
