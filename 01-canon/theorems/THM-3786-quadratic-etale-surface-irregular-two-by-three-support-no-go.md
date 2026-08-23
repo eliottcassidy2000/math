@@ -2,7 +2,7 @@
 id: THM-3786
 title: "Quadratic etale surface irregular two-by-three Euler-support no-go"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the
   THM-3783 quadratic etale surface, every Darboux pair with two Euler
   weights in one output and three in the other must have common-step
   arithmetic-progression supports.  All irregular two-by-three cells are
@@ -13,14 +13,18 @@ status: >
   open except for THM-3783's already-proved aligned orientation.
 source: jc_sparse_direct_search / contribution-bucket hub peel, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The pair-sum census is exact for all
-  positive gaps.  The companion independently checks 4,096 bounded gap
+  INDEPENDENTLY HOSTILE-AUDITED by root, 2026-08-23.  The pair-sum census
+  and all three collision families were reconstructed independently,
+  including the constant/nonconstant hub split and every zero-weight
+  boundary.  The audit repaired one overstatement: weight-zero homogeneous
+  elements need not be scalar, but a weight-zero element commuting with a
+  nonzero-weight component is scalar, which is exactly what every use needs.
+  The companion independently checks 4,096 bounded gap
   triples, a necessary constant/nonconstant commutation atlas over weights
   [-64,64] and gaps [1,18], every surviving zero-weight family, the
   negative-arm exit, the upper synchronized identity, and the central
-  reduction to equal-gap two-by-two support.  Normal, optimized, and frozen
-  outputs agree byte for byte.  Independent hostile audit remains due,
-  especially for the all-degree hub-lemma case split.
+  reduction to equal-gap two-by-two support.  Normal, optimized, frozen,
+  and independently replayed outputs agree byte for byte.
 depends_on:
   - THM-3783-quadratic-tower-etale-surface-maximal-polynomial-observable
 related:
@@ -35,7 +39,7 @@ hash_basis: raw LF bytes
 
 # THM-3786 -- irregular two-by-three supports have a commuting hub
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  The
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The
 complete two-by-two no-go in THM-3783 leaves two-by-three Euler support as
 the first sparse construction lane on the smooth surface
 
@@ -87,8 +91,9 @@ p(-s)=(-1)^u p(s),
 ```
 
 Thus a negative-weight profile is nonconstant and vanishes at `s=+/-1`.
-A constant profile is possible only in an even nonnegative weight; at
-weight zero it is a global scalar.
+A constant profile is possible only in an even nonnegative weight.  A
+weight-zero homogeneous element can be nonconstant, but if it commutes
+with any nonzero-weight homogeneous element then it is a global scalar.
 
 For profiles `p,q`, put
 
@@ -323,4 +328,4 @@ equal-gap reduction exactly.  The finite atlas is a hostile control, not the
 universality proof; the all-degree proof is Sections 2--6.
 
 Common-step AP cells remain open here, apart from THM-3783's named aligned
-orientation.  **QED, conditional only on independent hostile audit.**
+orientation.  **QED.**
