@@ -1,0 +1,17 @@
+THM3871_QUINTIC_NORMAL_STRIP_INDEPENDENT_HOSTILE_AUDIT
+status=PASS_PROOF+VERIFIED_EXACT;JC2_OPEN
+ten_buckets=coefficient_convolution+direct_specialization_PASS
+top_direction=constant_SL2;Kummer_h5_hj_j1_to_j4_PASS
+degree_drops=j0_contradiction+j1_shear+j2+j3_packets_PASS
+row_5_2=all_integrations+local_residue_3R/8+infinity_PASS
+row_5_3=P_conserved+one_form;resultant=441_PASS
+row_5_4=P_and_T_conserved+one_form+W_pole_unit_zero_identically_zero_PASS
+row_5_4_resultant=3171942400000=2^23*5^5*11^2_PASS
+arms_only_hostile=X1_Y3/10_Z-23/10;P=476/25;T=321/50_PASS
+valuation_profiles=2704;Kummer_points=24
+dominance_52=272;tie_profiles_53=600;dominance_54=12288
+DVR_controls=18;nonclosed_characteristic_zero_PASS
+scope=polynomial_transverse_degree_at_most_5_only;rational_and_infinite_open
+semantic_sha256=0aeeb394abbde44ccb1ef7a3fe3051a802d3d00125f6eaf2c56cea904f88fd09
+GATES=16006
+RESULT=PASS

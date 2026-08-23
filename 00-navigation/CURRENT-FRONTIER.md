@@ -360,11 +360,15 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   give field degree divisible by three and at least nine.  THM-3843 forces a
   self-identifying immersed arm; THM-3846 gives all formal first-jet lifts;
   THM-3849's conductor records visible contact, not deleted sheets.
-  THM-3856/3861/3867 close polynomial normal strips through transverse degree
-  four, leaving degree five first.  THM-3860 crosses the canonical square gate
-  rationally; THM-3868 then excludes every rational precomposition of that
-  fixed nodal seed by its monic-recovery/different-unit trap, including mixed
-  `Z_s!=0`.  A different seed or nonrational control remains live.  THM-3862
+  THM-3856/3861/3867/3871 close polynomial normal strips through transverse
+  degree five, leaving degree six first; at depth five an arms-only modulus is
+  killed by two conserved penultimate buckets.  THM-3860 crosses the canonical
+  square gate rationally; THM-3868 then excludes every rational precomposition
+  of that fixed nodal seed by its monic-recovery/different-unit trap, including
+  mixed `Z_s!=0`.  An independently verified FINITE-EXACT affine-quadratic
+  seed scout finds one genuine nonintegral recovery locus, but its boundary
+  Jacobian is nonconstant and no Keller composite results.  A higher seed or
+  nonrational control remains live.  THM-3862
   proves any hypothetical finite completion flat and globally nonmonogenic,
   with `A1` branches at one common infinity; at degree three the arm cannot
   itself branch.  THM-3839 excludes only one constant tower.

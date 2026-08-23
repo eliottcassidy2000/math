@@ -1,8 +1,10 @@
 # Russell higher-normal flexibility and global divisor debt
 
-**Status (2026-08-23): THM-3856, THM-3860, THM-3861, THM-3867, and THM-3868
-are PROVED + VERIFIED-EXACT + independently hostile-audited; THM-3862 is
-PROVED + CITED + independently proof-audited.  JC(2) remains OPEN.**
+**Status (2026-08-23): THM-3856, THM-3860, THM-3861, THM-3867, THM-3868,
+and THM-3871 are PROVED + VERIFIED-EXACT + independently hostile-audited;
+THM-3862 is PROVED + CITED + independently proof-audited.  The alternative
+quadratic-seed computation is an independently verified FINITE-EXACT scout,
+not a theorem or Keller construction.  JC(2) remains OPEN.**
 
 This session began from the apparent algebraization wall in THM-3846: every
 unimodular arm jet lifts formally, but the canonical common-normal
@@ -43,10 +45,10 @@ The session board was:
 | cubic factor packet | tower divisor `v` and factor-cofactor law | exact support equations | intrinsic identification with `kappa` |
 
 Every useful pull in the session changed at least two board entries.  The
-quartic normal classification closed the first three nontrivial
-representation cells; the rational lift exposed the missing divisor
-coordinate; the
-completion contract showed why `kappa` alone cannot pay that divisor.
+bounded normal classifications through quintic depth closed four successive
+nontrivial representation cells; the rational lift exposed the missing
+divisor coordinate; the completion contract showed why `kappa` alone cannot
+pay that divisor.
 
 ## 2. The formal lift space is an affine tangent torsor
 
@@ -92,7 +94,7 @@ analogy, not a map between the two moduli problems: the Russell recursion is
 symplectic and normal-adic, while the other is a discriminant inverse problem
 in the target maximal ideal.
 
-## 3. Polynomial normal depth through four closes completely
+## 3. Polynomial normal depth through five closes completely
 
 THM-3856 classifies every pair `A,C in k[s,z]` with
 
@@ -163,16 +165,39 @@ three channels leaves respectively the nonzero quartic-arm residues
 `-RB^2/(9Q^2)` or `-Rg^4/3`.  Constant `h` makes the final polynomial product
 a unit and is also impossible.  Thus the genuine `(4,3)` row is empty.
 
+THM-3871 closes quintic depth.  Its genuinely new rows begin from the
+root-free UFD packet
+
+```text
+(w,c_j)=(R h^5,Q h^j),                  j=2,3,4.             (C4)
+```
+
+The `(5,2)` row has an unavoidable local arm residue `3R/8`.  The `(5,3)`
+row acquires one conserved polynomial and a constant one-form; after the only
+possible balanced scaling, arm cancellation and the conserved equation have
+resultant `441`.  The `(5,4)` row acquires two conserved polynomials.  Its
+`W`-pole, unit, finite-zero, identically-zero, and constant-scale channels are
+all exhaustive, and the balanced arm/conserved system has resultant
+
+```text
+3171942400000 = 2^23*5^5*11^2.                             (C5)
+```
+
+This extra conserved data is load-bearing.  The point
+`(X,Y,Z)=(1,3/10,-23/10)` cancels both leading arm equations, so an arms-only
+analysis has a genuine false positive; the two conserved residuals are
+`476/25` and `321/50`.  Thus degree five is the first depth at which the
+leading divisor picture alone loses the theorem.
+
 The boundary is exact.  These theorems do not treat:
 
 ```text
-one coordinate of z-degree >4;
-both coordinates of z-degree 5;
+one or both coordinates of z-degree >=6;
 rational functions in (s,z);
 infinite z-adic expansions of global elements of B.                           (8)
 ```
 
-Thus normal degree five is the first remaining polynomial cell.
+Thus normal degree six is the first remaining bounded polynomial cell.
 
 A second hostile audit reaches the same closure by a genuinely different
 route: after a determinant-one target shear, irreducible-prime valuations in
@@ -262,6 +287,60 @@ seed whose hidden-control recovery is not monic**, or a nonrational control
 with a separate normalization audit.  Merely adding mixed tangent gauge to
 the same seed is now closed.
 
+The first alternative-seed scout now identifies exactly how monic recovery
+can fail without pretending that failure is Keller.  In normalized controls
+`x=Z/(3c^3)`, `u=3c^3S`, consider the complete affine-`p,q` quadratic cell
+
+```text
+A=u^2-x+p(u)x^2,
+C=u^3-u-(3/2)ux+q(u)x^2.                                  (Q1)
+```
+
+If `R(u;A,C)` is the Sylvester eliminant and
+
+```text
+L=(3/2)p(u)u-q(u),
+M=q(u)(u^2-A)-p(u)(u^3-u-C),                              (Q2)
+```
+
+then exact elimination gives
+
+```text
+pR=pM^2+LM+(u^2-A)L^2,             R_u|_(Q1)=L D,          (Q3)
+```
+
+where `D=J_(x,u)(A,C)`.  Every affine stratum has scalar leading coefficient
+except one: for `e!=0`,
+
+```text
+p=-4e^2,                  q=-4e^2u+e,                       (Q4)
+```
+
+the degree-three recovery coefficient is
+`e(16e^2(A-1)-1)/2`.  This is genuine nonintegrality, not merely a bad
+primitive element.  The symplectic pole chart
+
+```text
+u=1/t,
+x=1/(2et)-1/(8e^2)-t/(4e)+v t^2
+```
+
+makes `A,C` polynomial while `u,x` both have valuation `-1`.  But on `t=0`
+the seed Jacobian is `16e^2v`, not a unit constant.  Thus the scout finds the
+first exact escape from THM-3868's monic-recovery trap and simultaneously
+explains why it is not a Keller construction.
+
+A distinct family
+`p=alpha(u-u0)`, `q=(3/2)alpha u0(u-u0)` keeps `u` and
+`w=alpha(u-u0)x` integral while `x` may pole.  Its two boundary differents are
+`(3X+2)/2` and `(3X-2)/2`.  The conditional Keller identity
+`D{u,X}=2w-1` becomes a useful divisor/unit test only after proving that a
+source component realizes the full `X`-line; that missing geometric step is
+why no contradiction is claimed.  Finally, the statement that quadratic
+corrections are “gauge” is only a unique formal normal-coordinate 2-jet: it
+need not be symplectic or an automorphism, and exact equality already leaves
+a cubic `C` residual and a quartic `A` residual.
+
 ## 5. Proved finite-completion contract
 
 THM-3862 records the following conditional consequences of a hypothetical
@@ -341,31 +420,34 @@ asked to be effective simultaneously at every global divisor.
 
 ## 7. Generated task portfolio
 
-### Anchor -- break fixed-seed monic recovery
+### Anchor -- impose constant density on the first nonintegral seed
 
-THM-3868 shows that arbitrary mixed tangent gauge does not escape the fixed
-nodal seed: regular outputs recover the controls integrally, and the
-power-basis derivative is the forbidden density unit.  Parameterize the
-smallest alternative seeds with the same arm and first-normal packet, eliminate
-one hidden control, and classify the first point at which either
+The affine-quadratic scout exhausts the first alternative-seed cell.  Its
+unique nonintegral locus `(Q4)` pays for recovery failure with the nonconstant
+boundary Jacobian `16e^2v`.  The next task is therefore not another quadratic
+coefficient search.  Quotient by the unique formal normal-coordinate 2-jet,
+retain the first genuine cubic residuals, and solve simultaneously for
 
 ```text
-recovery ceases to be monic, or seed Jacobian != power-basis derivative.   (17)
+hidden-control nonintegrality,          D in k*,
+and effectivity at every pole divisor.                                (17)
 ```
 
-The cheap hostile is a seed differing only by a target automorphism, which
-preserves the trap.  A positive signal must exhibit a genuine loss of
-integrality while retaining an exact density control; a changed formula alone
-is not enough.
+The cheapest bounded cell adds affine-in-`u` coefficients of `x^3` to `(Q1)`
+and recomputes both the eliminant leading divisor and the full Jacobian.  A
+positive signal must keep the pole chart while making `D` constant.  If that
+cell is empty, move to a seed with two integral sidecars and nonmonogenic
+recovery rather than changing primitive element again.
 
-### Niche -- classify quintic polynomial normal depth
+### Niche -- classify sextic polynomial normal depth
 
-THM-3867 closes `deg_z<=4`, so `deg_z=5` is the first polynomial cell.  Derive
-all ten Jacobian buckets without bounding the `s`-degrees, remove every
-target-shear row, and isolate the genuine `(5,4)` Kummer packet.  The quartic
-proof needed simultaneous regularity of two arm coefficients; at depth five
-three leading pole channels can tie, so the decisive object is their complete
-initial-form ideal rather than another one-coordinate valuation.
+THM-3871 closes `deg_z<=5`, so `deg_z=6` is the first bounded polynomial
+cell.  Derive all twelve Jacobian buckets without bounding the `s`-degrees,
+remove target-shear rows, and classify the genuine `(6,j)` packets.  The
+quintic false positive proves that arms and top Kummer equations are no longer
+a sufficient state: every conserved penultimate bucket and both original arm
+coefficients must stay in the packet.  The cheapest hostile deletes one such
+bucket and should be required to manufacture a spurious cancellation family.
 
 ### Geometry -- build a nonmonogenic all-`A1` branch completion
 
@@ -429,10 +511,14 @@ sidecar.
 
 The session did not construct a global Darboux pair and did not prove or
 disprove JC(2).  It did prove the complete polynomial classification through
-transverse degree four, a rational higher-normal lift, the all-rational
+transverse degree five, a rational higher-normal lift, the all-rational
 precomposition barrier for its fixed nodal seed, and the nonmonogenic
-finite-completion branch contract.  The old square obstruction survived only
-in its exact canonical class; the stronger invariant is the fixed seed's
-monic recovery/different-unit trap.  The next honest frontiers are an
-alternative seed or nonrational control, while the orthogonal bounded
-polynomial frontier begins at transverse degree five.
+finite-completion branch contract.  It also isolated, at FINITE-EXACT scout
+scope, the unique affine-quadratic locus where hidden-control integrality
+genuinely fails; the same pole chart shows its Jacobian is nonconstant, so it
+is not a Keller construction.  The old square obstruction survived only in
+its exact canonical class; the stronger invariant is the interaction among
+recovery monicity, the different, and every boundary divisor.  The next
+honest anchor begins with genuine cubic seed residuals or nonmonogenic hidden
+coordinates, while the orthogonal bounded polynomial frontier begins at
+transverse degree six.

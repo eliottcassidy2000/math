@@ -1,5 +1,40 @@
 # Script Results Index
 
+- `jc2_quintic_normal_strip_keller_thm3871.py` -> matching `.out`
+  [THM-3871 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Every
+  characteristic-zero polynomial Keller pair in `k[s,z]` with both transverse
+  degrees at most five is a polynomial automorphism.  The `(5,1)` row shears
+  to THM-3867; exact local and infinity analyses empty `(5,2)`, `(5,3)`, and
+  `(5,4)`.  Degree five first admits an arms-only cancellation modulus, but
+  two conserved penultimate buckets leave residuals `476/25` and `321/50`.
+  The decisive resultants are `441` and `2^23*5^5*11^2`; degree six is the
+  first unclassified bounded strip.  Primary/independent checks: `209/16006`.
+  Script/output/semantic SHA-256:
+  `c110f2d6a1a9e8ae240cb73a6f3ccd13ca132e7793b9a33a85c66a79b27fd83c` /
+  `f6552fb01d1bcf590b38320953b23b895928466971f3f50049d50fb69ea1107f` /
+  `fbdb1b1b7e784350f14f41a88aa5e890112a2f248cd2b9fade51288e50e8ce85`;
+  independent hashes are recorded in THM-3871.
+
+- `jc2_russell_alternative_quadratic_seed_recovery_scout_20260823.py` and
+  independent audit -> matching `.out`s [INDEPENDENTLY VERIFIED FINITE-EXACT
+  SCOUT; NO KELLER COMPOSITE; JC(2) OPEN].  For
+  `A=u^2-x+p(u)x^2`, `C=u^3-u-3ux/2+q(u)x^2` with affine `p,q`, exact
+  Sylvester elimination classifies every monicity stratum.  The unique
+  hidden-`u` failure has `p=-4e^2`, `q=-4e^2u+e`, `e!=0`, and recovery leading
+  divisor `16e^2(A-1)-1`; a symplectic pole chart proves `u` nonintegral over
+  `k[A,C]`.  Its boundary seed Jacobian is `16e^2v`, not a constant.  A
+  distinct family keeps `u` and a sidecar `w` integral while `x` may pole,
+  leaving only a conditional divisor/unit test.  “Quadratic gauge” here is a
+  unique formal normal-coordinate 2-jet, not an automorphism.  Checks:
+  `67/71`.  Primary script/output/semantic SHA-256:
+  `9a88c103b75de28836552558c38fbf91fccb3f50cc9c969bad06d69d58087db2` /
+  `408fb33e7eb564270b4e945d425e7c90ca4b53ec77518d9b6a1eaca0d1c27299` /
+  `25f3533cc42bd6d59eba1aedc72d3ce59bd64747af1d9f2e9397ad82f98d9995`;
+  independent script/output/semantic SHA-256:
+  `22efc414625142423991f1631d89cc6f3b7ad40ed76889a704220bba1a0bd882` /
+  `584a46448a4d15e4b2a341ea90d132ba2e573fd7c1a9dfc7843e016921e0548a` /
+  `b0d6eb8d9caa4d16ab59e4377acdd63fb2122aea13064796dd2d03883cdeb8c5`.
+
 - `jc2_russell_fixed_nodal_seed_rational_precomposition_barrier_thm3868.py`
   -> matching `.out` [THM-3868 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  For the fixed nodal seed, regularity of a rational
@@ -19,7 +54,7 @@
   degrees at most four is a polynomial automorphism.  The `(4,1)` and `(4,2)`
   cells shear to THM-3861; every pole/zero/identically-zero channel of the
   depressed `(4,3)` Kummer packet leaves a nonzero quartic-arm residue.  Thus
-  transverse degree five is the first remaining polynomial strip.
+  degree five was the next bounded strip; THM-3871 now closes it as well.
   Primary/independent checks: `78/4872`.  Script/output/semantic SHA-256:
   `37b6fa92c3063f281eef2d2cb3075d1dfd3400c700365d21dffedf71bf2d06d1` /
   `966a1da1b5d20847b3d2aac2be087814d29c12efa9cca4cf305966b0f7402b91` /

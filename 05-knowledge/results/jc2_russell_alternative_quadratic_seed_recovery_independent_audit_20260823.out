@@ -1,0 +1,12 @@
+JC2_RUSSELL_ALTERNATIVE_QUADRATIC_SEED_RECOVERY_INDEPENDENT_AUDIT
+status=INDEPENDENTLY_VERIFIED_FINITE_EXACT;SCOUT_SCOPE;JC2_OPEN
+elimination=4x4_SYLVESTER;pR=pM^2+LM+UL^2;R_u=L*D_on_seed
+affine_classification=EXHAUSTIVE_OVER_CHAR0
+exception=a=d=-4e^2;hidden_u_nonintegral_by_t_adic_valuation
+hidden_u_boundary=A_constant;C_affine;D=16e^2*v_generically_nonzero
+x_only=u_and_w_integral;x_poles;boundary_D=(3X+2)/2,(3X-2)/2
+boundary_scope=NONCONSTANT_RESIDUES+CONDITIONAL_BRACKET;NO_JC_CONCLUSION
+gauge=UNIQUE_QUADRATIC_JET;L0_EXACT_FACTOR;MOBIUS_EXACT_FACTOR
+semantic_sha256=b0d6eb8d9caa4d16ab59e4377acdd63fb2122aea13064796dd2d03883cdeb8c5
+CHECKS=71
+RESULT=PASS
