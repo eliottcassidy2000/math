@@ -2,7 +2,7 @@
 id: THM-3754
 title: "Affine-variable smoothness and Jacobian-mate Euclidean descent"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.  Over an algebraically
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over an algebraically
   closed characteristic-zero field, the nonsingular polynomials
   Q=f(X)+Tg(X) are classified exactly by the constant boundaries or, for
   nonconstant g, by the condition that every root of g is multiple and no
@@ -14,10 +14,12 @@ status: >
   sidecar; X+X^2+X^3T is the first nonradial pure-power example.
 source: root + jc_sparse_direct_search / 2026-08-23
 audit: >
-  PENDING.  The rootwise criterion and all-degree Euclidean descent were
-  independently derived, but the integrated theorem text still awaits a
-  hostile reviewer.  Normal, optimized, and frozen output agree;
-  script/output/semantic hashes and CHECKS=6622 match.
+  PASS.  An independent hostile audit checked every rootwise smoothness case,
+  both constant boundaries, the radical/gcd reformulation, the top-T sign,
+  constants of k(X), strict power-subtraction descent, terminal equation,
+  Euclidean source gauge, and the first nonlinear residue example.  Normal,
+  optimized, and frozen output agree; script/output/semantic hashes and
+  CHECKS=6622 match.
 depends_on: []
 related:
   - THM-3716-monomial-broughton-hamiltonian-obstruction-family
@@ -32,7 +34,7 @@ hash_basis: raw LF bytes
 
 # THM-3754 -- affine-variable components descend by their own powers
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.**  After THM-3741
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  After THM-3741
 closes every radial two-charge component, the smallest nonradial perturbation
 is to keep one source variable affine but let its coefficient and constant
 term vary independently.  This larger class is still completely rigid, for
