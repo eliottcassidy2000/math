@@ -1,0 +1,12 @@
+theorem=THM-3758-quadratic-radial-carrier-rational-exact-split-fibre
+scope=algebraically_closed_characteristic_zero;four_parameter_family
+geometry=smooth_reducible_noncoordinate;delta_nonzero
+rational_mate=explicit_complete_primitive_torsor
+polynomial_mate=none_by_opposite_zero_fibre_principal_parts
+mechanism=quadratic_generic_fibre_exactness_then_vertical_split
+smooth_controls=5;rational_controls=5;mate_obstructions=52;rank_gap_min=1
+boundaries=delta_zero_torus_critical;a0_zero_axis_critical
+normalized=X-2*X^2*T-X^3*T+X^4*T^2;total_degree=6
+semantic_sha256=ca31fa26678b1998450d1006a90fbcfe319096ad6b6fbc17f2006acc64fc7ecb
+CHECKS=87
+RESULT=PASS
