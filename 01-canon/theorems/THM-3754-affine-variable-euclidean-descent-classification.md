@@ -2,8 +2,9 @@
 id: THM-3754
 title: "Affine-variable smoothness and Jacobian-mate Euclidean descent"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over an algebraically
-  closed characteristic-zero field, the nonsingular polynomials
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED INHERITED
+  SYNTHESIS/REFINEMENT.  Over an algebraically closed characteristic-zero
+  field, the nonsingular polynomials
   Q=f(X)+Tg(X) are classified exactly by the constant boundaries or, for
   nonconstant g, by the condition that every root of g is multiple and no
   root of g is a root of f'.  A polynomial Jacobian mate exists exactly when
@@ -11,7 +12,9 @@ status: >
   every nonconstant g a top-T logarithmic-derivative equation and subtraction
   of powers of Q descend any hypothetical mate to the impossible equation
   g p'=c.  Euclidean division makes f mod g the retained source-shear
-  sidecar; X+X^2+X^3T is the first nonradial pure-power example.
+  sidecar; X+X^2+X^3T is the first nonradial pure-power example.  This
+  concisely repackages THM-2063, THM-3326, and THM-3406; it is not a newly
+  closed JC stratum.
 source: root + jc_sparse_direct_search / 2026-08-23
 audit: >
   PASS.  An independent hostile audit checked every rootwise smoothness case,
@@ -19,8 +22,13 @@ audit: >
   constants of k(X), strict power-subtraction descent, terminal equation,
   Euclidean source gauge, and the first nonlinear residue example.  Normal,
   optimized, and frozen output agree; script/output/semantic hashes and
-  CHECKS=6622 match.
-depends_on: []
+  CHECKS=6622 match.  The audit also checked the inheritance boundary against
+  THM-2063, THM-3326, and THM-3406; the concise field-uniform proof and exact
+  controls refine their presentation rather than claim a new stratum.
+depends_on:
+  - THM-2063-one-fiber-linear-planar-keller-pairs
+  - THM-3326-linear-in-z-unit-response-trichotomy-and-jet-torsion
+  - THM-3406-affine-modification-power-jets-and-principal-part-transgression
 related:
   - THM-3716-monomial-broughton-hamiltonian-obstruction-family
   - THM-3741-radial-two-charge-keller-component-classification
@@ -34,13 +42,20 @@ hash_basis: raw LF bytes
 
 # THM-3754 -- affine-variable components descend by their own powers
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  After THM-3741
-closes every radial two-charge component, the smallest nonradial perturbation
-is to keep one source variable affine but let its coefficient and constant
-term vary independently.  This larger class is still completely rigid, for
-a different reason: powers of the component itself form the exact kernel
-needed to eliminate the highest affine-variable degree of a prospective
-mate.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED INHERITED
+SYNTHESIS/REFINEMENT.**  THM-2063 already closes full Keller pairs with an
+output affine in a source direction; THM-3326 gives the same rootwise
+smoothness and unit-response boundary; and THM-3406 records the corresponding
+affine-modification filtration and residue sidecars.  The value here is a
+short field-uniform synthesis: it puts the smoothness classification, direct
+power-subtraction descent, Euclidean residue gauge, and exhaustive exact
+controls on one surface.  It does **not** close a new JC stratum.
+
+After THM-3741 closes every radial two-charge component, this inherited class
+is still a useful boundary: keeping one source variable affine while letting
+its coefficient and constant term vary independently remains completely
+rigid.  Powers of the component itself form the exact kernel needed to
+eliminate the highest affine-variable degree of a prospective mate.
 
 Let `k` be an algebraically closed field of characteristic zero, take
 `f,g in k[X]`, and put
@@ -75,6 +90,9 @@ family is empty as a planar Jacobian-counterexample search space.
 
 ## 2. Smoothness is a rootwise vertical-fibre test
 
+This is the concise algebraically closed form of THM-3326's root-support
+trichotomy.
+
 The gradient is
 
 ```text
@@ -100,6 +118,10 @@ is the first divisibility in `(3)`; the second condition in `(3)` is the
 remaining avoidance statement.
 
 ## 3. The highest T-row is an exact logarithmic derivative
+
+This is THM-2063's coefficient descent written directly for the chosen
+component and over an arbitrary algebraically closed characteristic-zero
+field; the proof is retained here to make the synthesis self-contained.
 
 The no-mate result is stronger than the smoothness theorem: it holds for
 every nonconstant `g`, whether or not `(1)` is nonsingular.  Suppose toward a
@@ -163,6 +185,9 @@ the lower rows of `P`; it quotients them successively by powers of the very
 component whose Hamiltonian derivation is being inverted.
 
 ## 4. Euclidean residue is the missing sidecar
+
+This elementary gauge is the source-coordinate shadow of THM-3406's fuller
+affine-modification and principal-parts sidecar.
 
 Divide
 
