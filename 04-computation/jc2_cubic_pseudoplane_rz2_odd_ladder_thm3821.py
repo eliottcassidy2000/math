@@ -771,6 +771,163 @@ zero(
 gate(beta != 0, "degenerate v=e obstruction is nonzero")
 
 
+# All-degree closure.  The r2z bucket sees the terminal payments one order
+# earlier than every other summand at a nonzero root.  Work in a differential
+# polynomial presentation so that the root-leading coordinates are checked
+# without specializing the multiplicity.
+vv, vd, uu, ud, ff, fd, gg, gd = sp.symbols(
+    "vv vd uu ud ff fd gg gd"
+)
+differential_symbols = {
+    v: vv,
+    sp.diff(v, e): vd,
+    U: uu,
+    sp.diff(U, e): ud,
+    f: ff,
+    sp.diff(f, e): fd,
+    g: gg,
+    sp.diff(g, e): gd,
+}
+
+generic_all_r2z = bucket_r2z.subs(
+    {
+        f: f,
+        kap: mu * f + K_tower,
+        S: S_tower,
+        T: mu * S_tower,
+        p: p_odd,
+        q: mu * p_odd + P_tower,
+        g: g,
+        h: mu * g + Q_odd,
+    }
+).doit()
+generic_root_coordinate = sp.expand(
+    generic_all_r2z.xreplace(differential_symbols)
+).subs(vv, 0)
+zero(
+    generic_root_coordinate
+    - sp.Rational(60, 7) * delta / alpha * e**2 * ff * uu * vd,
+    "generic r2z root-leading coordinate",
+)
+
+degenerate_all_r2z = bucket_r2z.subs(
+    {
+        f: f,
+        kap: mu * f + K_tower,
+        S: S_tower,
+        T: mu * S_tower,
+        p: p_skip,
+        q: mu * p_skip,
+        g: g,
+        h: mu * g + Q_tower,
+    }
+).doit()
+degenerate_differential = sp.expand(
+    degenerate_all_r2z.xreplace(differential_symbols)
+)
+degenerate_root_coordinate = degenerate_differential.subs(vv, 0)
+zero(
+    degenerate_root_coordinate - e**2 * (3 * e - 2 * mu) * uu * vd,
+    "degenerate r2z first root address",
+)
+
+# At the only possible nonzero address rho=2mu/3, the next coefficient for a
+# root vv=x^m*u is (3/2)rho^2*u*U*(2m-5).  The first term below is the first
+# derivative of the vanished vd coefficient; the second is the vv coefficient.
+degenerate_address_next = (
+    3 * rho**2 * root_order
+    - rho * (6 * rho + sp.Rational(3, 2) * rho)
+)
+zero(
+    degenerate_address_next
+    - sp.Rational(3, 2) * rho**2 * (2 * root_order - 5),
+    "degenerate addressed-root next coefficient",
+)
+gate(
+    sp.solve(sp.Eq(2 * root_order, 5), root_order) == [],
+    "positive integral root multiplicity misses address resonance",
+)
+
+# Once nonzero roots have been excluded, algebraic closure makes v=c*e^d.
+# The generic origin calculation uses only the displayed first jets: every
+# tower correction has strictly higher e-order for d>=1.
+f0_all, f1_all, g0_all, g1_all = sp.symbols(
+    "f0_all f1_all g0_all g1_all"
+)
+f_jet = f0_all + f1_all * e
+g_jet = g0_all + g1_all * e
+generic_origin_profiles = {
+    f: f_jet,
+    kap: mu * f_jet,
+    S: 0,
+    T: 0,
+    p: 0,
+    q: 0,
+    g: g_jet,
+    h: mu * g_jet,
+}
+generic_origin_r2 = bucket_r2.subs(generic_origin_profiles).doit().subs(e, 0)
+generic_origin_z2 = bucket_z2.subs(generic_origin_profiles).doit().subs(e, 0)
+zero(generic_origin_r2 - mu * g0_all,
+     "generic monomial origin r2 jet")
+zero(
+    generic_origin_z2 + 3 * f0_all + mu * f1_all + 9 * g0_all,
+    "generic monomial origin z2 jet",
+)
+zero(
+    generic_origin_z2.subs(
+        {
+            f0_all: sp.Rational(1, 12),
+            f1_all: -mu / 6,
+            g0_all: 0,
+        }
+    )
+    - (mu**2 / 6 - sp.Rational(1, 4)),
+    "generic nonzero-mu origin law",
+)
+
+# If a,b are the roots of D, their ratio q satisfies the displayed trace
+# relation.  At mu^2=3/2 this is q^2+4q+1=0; its two complex roots are real
+# and neither is one of the only possible real roots of unity, +/-1.
+q_ratio, mu_square = sp.symbols("q_ratio mu_square")
+ratio_trace = -(sp.Rational(4, 3) * mu_square + 2)
+zero(
+    ratio_trace.subs(mu_square, sp.Rational(3, 2)) + 4,
+    "generic D-root ratio trace",
+)
+ratio_polynomial = q_ratio**2 + 4 * q_ratio + 1
+gate(ratio_polynomial.subs(q_ratio, 1) != 0,
+     "D-root ratio is not the real root of unity +1")
+gate(ratio_polynomial.subs(q_ratio, -1) != 0,
+     "D-root ratio is not the real root of unity -1")
+
+# In the degenerate monomial branch the terminal law fixes U(0), while r2z
+# has an earlier nonzero mu-leading coefficient.  The mu=0 seam is instead
+# killed directly by the arm: its two D-roots are opposite and the exponent
+# 3+4d is odd.
+monomial_degree = sp.symbols("monomial_degree", integer=True, positive=True)
+U0_all = sp.symbols("U0_all")
+degenerate_terminal_origin = (
+    2 * beta * (8 * monomial_degree + 4) * sp.Rational(1, 12)
+    + 3 * theta * (4 * monomial_degree + 2) * U0_all
+)
+zero(
+    degenerate_terminal_origin
+    - sp.Rational(2, 3)
+    * (2 * monomial_degree + 1)
+    * (beta + 9 * theta * U0_all),
+    "degenerate monomial terminal origin payment",
+)
+degenerate_r2z_origin = -mu * (2 * monomial_degree + 1) * U0_all
+zero(
+    degenerate_r2z_origin.subs(U0_all, -beta / (9 * theta))
+    - mu * beta * (2 * monomial_degree + 1) / (9 * theta),
+    "degenerate monomial r2z contradiction",
+)
+gate(sp.Mod(3 + 4 * monomial_degree, 2) == 1,
+     "mu-zero arm exponent is odd")
+
+
 semantic = {
     "ansatz": "THM3814 plus rz2*S(e),rz2*T(e)",
     "top": "S!=0;T=mu*S;K=kappa-mu*f=beta*e^2*v^4;S=alpha*e^4*v^7",
@@ -780,7 +937,8 @@ semantic = {
     "degenerate_terminal": "linear law;nonzero roots pay 4beta f+3theta U=0",
     "constant_v": "empty in both generic and degenerate terminal branches",
     "linear_v": "empty in both generic and degenerate terminal branches",
-    "scope": "necessary anatomy only;existence and full rz2 closure open",
+    "all_degree": "nonzero roots killed by r2z;confluent monomial towers killed by origin jets and arm root ratio",
+    "scope": "complete no-go for the full first rz2 extension;no planar-JC claim beyond this ansatz",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -798,7 +956,8 @@ print("degenerate=P0;Q=theta_e2_v3;p=e_v_U")
 print("degenerate_payment=4beta_f+3theta_U=0_at_nonzero_v_roots")
 print("constant_v=empty_in_generic_and_degenerate_branches")
 print("linear_v=empty_in_generic_and_degenerate_branches")
-print("scope=necessary_anatomy_only;existence_and_full_rz2_closure_open")
+print("all_degree=nonzero_roots_and_confluent_monomial_towers_empty")
+print("scope=complete_first_rz2_extension_no_go;no_broader_planar_JC_claim")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")
 print("RESULT=PASS")

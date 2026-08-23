@@ -1,27 +1,29 @@
 ---
 id: THM-3821
-title: "Cubic pseudo-plane RZ2 profiles enter an odd ladder"
+title: "The first RZ2 extension on the cubic pseudo-plane has no Darboux pair"
 status: >
   RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  Any Darboux pair in the first rz^2 extension
-  of THM-3814 must enter one of two exact Kummer anatomies.  The generic
-  branch has the odd exponent ladder 7,5,3,1 and ends in a Riccati square
-  payment; the P=0 branch has the skip ladder 7,3,1 and ends in a linear
-  payment.  All one-sided and zero-terminal top branches are empty, and the
-  common Kummer parameter has degree at least two.  This is a necessary
-  top-branch classification, not an existence theorem, a complete rz^2
-  no-go, or a planar-JC counterexample claim.
+  INDEPENDENT HOSTILE AUDIT.  The complete first rz^2 extension of the
+  THM-3814 canonical nodal profile admits no Darboux pair.  A hypothetical
+  pair must enter one of two exact Kummer anatomies: the generic odd ladder
+  7,5,3,1 with a Riccati square payment, or the P=0 skip ladder 7,3,1 with a
+  linear payment.  The next r^2z bucket excludes every nonzero Kummer root;
+  the remaining confluent monomial towers fail by the origin jets and the
+  quadratic-arm root ratio.  This is a complete no-go for the stated ansatz,
+  not for arbitrary profiles on the surface and not a planar-JC theorem.
 source: jc_zero_debt_lift / cubic-pseudoplane rz2 odd-ladder lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The deterministic companion has 58 active
+  PROVISIONAL EXACT CANDIDATE.  The deterministic companion has 71 active
   gates checking the Poisson Casimir and signs, unique monic reduction, six
   descending source buckets, the asymmetric 7/4 contradiction, all 7/4,
   7/5, and 7/3 valuation families, the integrated polynomial relation, the
   generic and degenerate local valuation transfers, both terminal laws, and
   their square/linear nonzero-root payments, and the independent generic
-  and degenerate constant- and linear-tower contradictions, including the
-  confluent root recomputations.  Normal/-O/frozen/hash/docs replay and
-  independent proof rederivation are required before promotion.
+  and degenerate constant- and linear-tower contradictions.  The final gates
+  independently check the all-degree r^2z root coordinates, the half-integral
+  degenerate resonance, the generic origin jets and D-root ratio, and the
+  degenerate monomial terminal/origin conflict.  Normal/-O/frozen/hash/docs
+  replay and independent proof rederivation are required before promotion.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3814-nodal-rz-kummer-profile-degree-gate
@@ -31,13 +33,13 @@ related:
   - THM-3813-quartic-r-repairs-of-nodal-carriers-have-critical-points
 script: 04-computation/jc2_cubic_pseudoplane_rz2_odd_ladder_thm3821.py
 output: 05-knowledge/results/jc2_cubic_pseudoplane_rz2_odd_ladder_thm3821.out
-script_sha256: 1c645632860e000f59ad801103c9c410a5a1a3e17cdb7bc763c50d4474590e2f
-output_sha256: 0efa5c61331e744660d0e157db539ba24e8e4b1f74160650a10fc88eaaa0b679
-semantic_sha256: 547bea40c3cce8bc03a8d82f5bd96ffcd93313adcc654509317467ecfb2cb5f2
+script_sha256: 2657617a1c3540f8ac892ad6cd455008b7e523d83932505f0046868c75d6eb4a
+output_sha256: 31f3fdd684832d0076e5142721a78025424c862a19a6c77f48168f04597dce6a
+semantic_sha256: f73ecf90a4c8fc5a77ce7471c54f8a6eccc0a4c542d7b95ca7fcd5b63fc3c4d7
 hash_basis: raw LF bytes
 ---
 
-# THM-3821 -- the RZ2 layer exposes the 7-5-3-1 ladder
+# THM-3821 -- the first RZ2 layer is empty
 
 **RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
 INDEPENDENT HOSTILE AUDIT.**  Let `k` be an algebraically closed field of
@@ -55,14 +57,17 @@ A=e^2-z/3+r g+z^2 f+rz p+rz^2 S,
 C=e^3-e-ez/2+r h+z^2 kappa+rz q+rz^2 T.              (2)
 ```
 
-Suppose
+There are no such profiles for which
 
 ```text
 {A,C}=1.                                               (3)
 ```
 
-Then there are `mu in k`, nonzero `alpha,beta in k`, and a polynomial
-`v in k[e]` of degree at least two such that, on writing
+In particular, this complete first `rz^2` extension of the THM-3814 profile
+contains no Darboux pair.
+
+Assume the contrary.  Sections 1--5 force `mu in k`, nonzero `alpha,beta in
+k`, and a polynomial `v in k[e]` such that, on writing
 
 ```text
 K=kappa-mu f,
@@ -80,7 +85,7 @@ K=beta e^2v^4,
 D f=2eK-1/12.                                         (5)
 ```
 
-Moreover exactly one of the following necessary branches occurs.
+Exactly one of the following intermediate branches occurs.
 
 ### Generic branch: `P!=0`
 
@@ -115,8 +120,8 @@ every nonzero root `rho` of `v`,
 4beta f(rho)+3theta U(rho)=0.                          (9)
 ```
 
-These conclusions are necessary only.  The theorem neither constructs nor
-excludes solutions of the remaining terminal laws.
+Sections 6--8 exclude both branches for every polynomial `v`, completing the
+contradiction.
 
 ## 1. The descending canonical buckets
 
@@ -477,7 +482,120 @@ The first forces `U_0=0`.  The arm constant remainder is
 so the second coefficient in `(50)` becomes `6beta!=0`.  This closes the
 last linear case.  Together with Section 6 it proves `deg v>=2`.
 
-## 8. Scope and exact controls
+## 8. The next bucket closes every remaining degree
+
+The preceding constant and linear computations are useful independent hostile
+controls, but the untouched `r^2z` bucket gives an all-degree closure.
+
+### 8.1 Generic branch
+
+After `(5)--(6)`, direct reduction of that bucket modulo `v` is
+
+```text
+[r^2z] = (60delta/(7alpha)) e^2 f U v'        modulo (v). (52)
+```
+
+Let `rho!=0` be a root of `v` of multiplicity `m`, and write
+`v=(e-rho)^m u` with `u(rho)!=0`.  Its coefficient of order `m-1` is
+
+```text
+(60delta/(7alpha)) rho^2 f(rho)U(rho)m u(rho).        (53)
+```
+
+The arm identity `(28)` makes `f(rho)` nonzero, and the square payment `(7)`
+then makes `U(rho)` nonzero.  Thus `(53)` cannot vanish.  The generic branch
+has no nonzero root of `v`.
+
+Since `k` is algebraically closed, `v=c e^d`.  Section 6 excludes `d=0`, so
+take `d>=1` and absorb `c` into the nonzero tower constants.  Put
+
+```text
+N=3+4d,
+D=3e^2-2mu e-1,
+D f=2beta e^N-1/12.                                  (54)
+```
+
+If `mu=0`, the two roots of `D` are opposite.  Polynomial divisibility in
+`(54)` would require their `N`th powers to agree, impossible because `N` is
+odd.
+
+Suppose `mu!=0`.  Every tower correction beyond `f,g` has sufficiently high
+origin order that the next two canonical buckets give
+
+```text
+[r^2]|e=0=mu g(0),
+[z^2]|e=0=-3f(0)-mu f'(0)-9g(0).                     (55)
+```
+
+The constant and linear jets of `(54)` are
+
+```text
+f(0)=1/12,                  f'(0)=-mu/6.              (56)
+```
+
+Equations `(55)--(56)` force `g(0)=0` and then
+
+```text
+mu^2=3/2.                                             (57)
+```
+
+Let `a,b` be the roots of `D`.  They are distinct and nonzero, with
+`a+b=2mu/3` and `ab=-1/3`.  Evaluating `(54)` at both roots forces
+`a^N=b^N`, so `q=a/b` is a root of unity.  On the other hand,
+
+```text
+q+q^(-1)=(a^2+b^2)/(ab)=-(4mu^2/3+2)=-4.             (58)
+```
+
+Hence `q^2+4q+1=0`.  Under a complex embedding its two roots are real, while
+the only real roots of unity are `+1,-1`; neither satisfies this quadratic.
+This contradiction closes the generic branch.
+
+### 8.2 Degenerate branch
+
+In the branch `(8)`, reduction of the same bucket modulo `v` is
+
+```text
+[r^2z] = e^2(3e-2mu)U v'                    modulo (v). (59)
+```
+
+At a nonzero root `rho` the linear payment `(9)` and `(28)` make `U(rho)`
+nonzero.  The order-`m-1` coefficient in `(59)` first forces
+
+```text
+3rho-2mu=0.                                           (60)
+```
+
+This apparent address is not a survivor.  Expand the full bucket one order
+farther at `(60)`.  Its coefficient of `(e-rho)^m` is exactly
+
+```text
+(3/2)rho^2 U(rho)u(rho)(2m-5).                        (61)
+```
+
+All nonlinear `v` terms begin at order at least `3m-1>m`.  Since `m` is a
+positive integer, `2m-5` is nonzero, contradicting `(61)`.  Thus the
+degenerate branch also has no nonzero root of `v`.
+
+Again write `v=c e^d`.  Section 6 handles `d=0`; absorb `c` and take `d>=1`.
+The coefficient of `e^d` in the terminal law `(38)` is
+
+```text
+(2/3)(2d+1)(beta+9theta U(0))=0,                      (62)
+```
+
+so `U(0)=-beta/(9theta)!=0`.  If `mu!=0`, the coefficient of `e^(d+1)` in
+the `r^2z` bucket is
+
+```text
+-mu(2d+1)U(0),                                        (63)
+```
+
+which is nonzero.  If `mu=0`, the opposite-root/odd-exponent contradiction
+from `(54)` applies unchanged.  This closes the degenerate branch and proves
+the asserted nonexistence.
+
+## 9. Scope and exact controls
 
 The theorem identifies the smallest new information that the `rz^2` layer
 can carry.  THM-3814 failed because a fourth-power forcing arrived one
@@ -485,22 +603,29 @@ valuation step before every fifth-power correction.  Here the successive
 top buckets force the debt-paying ladder
 
 ```text
-v^7 -> v^5 -> v^3 -> v                               (52)
+v^7 -> v^5 -> v^3 -> v                               (64)
 ```
 
 in the generic branch, with a precisely typed `e^4,e^3,e^2,e` companion.
-The terminal square `(7)` is the new sidecar absent from the `rz` profile.
-The degenerate branch deletes the `v^5` rung but retains a linear payment.
+The terminal square `(7)` is the new sidecar absent from the `rz` profile,
+but `(52)` shows why it cannot pay: the next bucket differentiates the common
+root one order too early.  In the degenerate branch, the apparent address
+`rho=2mu/3` is destroyed one order later by the half-integral resonance
+`m=5/2`.  The final obstruction is therefore not merely a bounded-degree
+failure; it is the incompatibility between integral divisor multiplicities
+and the odd Kummer ladder.
 
-Neither `(32)` nor `(38)` has been solved together with the lower canonical
-buckets.  Therefore this result is not an existence theorem and does not
-close `(2)`.  It says exactly where a positive construction must live and
-which local component spectra it must synchronize.
+This theorem closes exactly the eight-profile ansatz `(2)`.  It does not
+exclude arbitrary polynomial pairs on `B`, a second `rz^j` layer, a different
+arm immersion, or a planar-JC counterexample by another mechanism.
 
 The companion named in the metadata recomputes the full arbitrary-function
 bracket, freezes all six source buckets, checks every Kummer valuation
 family, verifies the integrated relation `(24)`, reconstructs both terminal
 laws from the actual `r^3` coefficient, checks the local payment
 coefficients `(33),(39)`, and replays both constant-tower contradictions
-`(42)--(43)` and every separated linear-root gate `(45)--(51)`.  It uses no
-finite-field or bounded-degree inference.  **QED.**
+`(42)--(43)` and every separated linear-root gate `(45)--(51)`.  Its final
+all-degree block independently checks `(52),(59)`, the addressed coefficient
+`(61)`, the origin jets `(55)--(57)`, the quadratic root-ratio law `(58)`,
+and the monomial payment conflict `(62)--(63)`.  It uses no finite-field or
+bounded-degree inference.  **QED.**
