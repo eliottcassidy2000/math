@@ -16,7 +16,7 @@ source: root + jc_sparse_direct_search / 2026-08-23
 audit: PENDING INDEPENDENT HOSTILE AUDIT.
 depends_on: []
 related:
-  - THM-3774-three-component-nonradial-conic-rational-keller-near-miss
+  - THM-3774-three-component-rational-keller-cover-tower
   - THM-3776-unequal-vertical-residue-three-target-shear-nonpolynomialization
 script: 04-computation/jc2_three_component_horizontal_divisor_transfer_thm3777.py
 output: 05-knowledge/results/jc2_three_component_horizontal_divisor_transfer_thm3777.out
@@ -29,8 +29,7 @@ hash_basis: raw LF bytes
 # THM-3777 -- paying one vertical component creates a horizontal invoice
 
 **RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT HOSTILE
-AUDIT.**  The proof is self-contained and does not use the presently
-reserved THM-3774.
+AUDIT.**  The proof is self-contained and does not depend on THM-3774.
 
 Let `k` be an algebraically closed field of characteristic zero and let
 `m>=1` be an integer.  In `k[x,y]` define
