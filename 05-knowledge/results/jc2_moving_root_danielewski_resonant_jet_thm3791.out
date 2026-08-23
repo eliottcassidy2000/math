@@ -1,0 +1,10 @@
+theorem=THM-3791-moving-root-danielewski-resonant-jet-de-rham-law
+surface=c^n*e=gamma*product_i(b-beta_i(c));beta_i(0)_distinct
+atlas=Ui=A2_(c,ai);ai=(b-beta_i(c))/c^n;multi_overlap=D(c)
+transition=aj-ai=(beta_i-beta_j)c^(-n)
+resonance=r_i=coefficient_[c^(n-1)]beta_i(c)
+derham=H2=k^h/k*1;[omega]=[r];exact_iff_r_constant
+darboux=nonconstant_r_implies_no_pair
+controls=n1_fixed_obstructed;n_ge_2_fixed_exact;THM3789_r=(1,0,...,0)
+CHECKS=217
+semantic_sha256=b9001a41ef04a39c2ca6579adddf940932ee92d546ec666bf407a47058401c39
