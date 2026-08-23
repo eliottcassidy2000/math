@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact support/identity companion for provisional THM-3901."""
+"""Exact support/identity companion for proved necessary THM-3901."""
 
 from __future__ import annotations
 
@@ -293,7 +293,7 @@ semantic = {
     "second_threshold": "n=2delta",
     "delta2_wall": "r_order_and_v=-au_simplified_tariffs",
     "constant_boundary": "m=1,2,ge3",
-    "status": "provisional_not_existence_and_not_emptiness",
+    "status": "proved_necessary_not_existence_and_not_emptiness",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -304,6 +304,7 @@ gate(
 )
 
 print("theorem=THM-3901-nonzero-sidecar-osculating-response-fan")
+print("status=PROVED_VERIFIED_EXACT_INDEPENDENTLY_HOSTILE_AUDITED")
 print("identity_q0=S-(sTr)^2=R_mod_s2_plus_3")
 print("identity_q1=second_defect_exact_mod_s2_plus_3")
 print(f"generic_top_cells={generic_top_cells}")

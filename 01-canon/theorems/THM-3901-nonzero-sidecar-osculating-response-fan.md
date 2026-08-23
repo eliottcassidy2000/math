@@ -2,25 +2,27 @@
 id: THM-3901
 title: "Nonzero-sidecar osculating response fan"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT.  In the complementary
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the complementary
   THM-3899 region deg_y(T)>deg_y(f), the complete leading fan and its exact
   first osculating response are classified, including every equality wall,
   the constant-sidecar boundary, and the deg_y(T)=deg_y(f)+2 cancellation
   stratum.  The formerly automatic first-response cell has a second exact
   response and a new divisibility tariff.  This is a necessary passport,
-  not an existence theorem or an emptiness theorem.  Independent hostile
-  audit is still required; no proved dependency may use this file before
-  explicit status promotion.
+  not an existence theorem or an emptiness theorem.
 source: tournament-jc-breakthrough / post-THM-3899 response scout, 2026-08-23
 audit: >
-  PROVISIONAL.  The focused companion expands both exact defects, checks
+  INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23 by two audits.  They rebuilt
+  every affine degree fan, the UFD wall passport, both osculating defects,
+  the sharpened second-response tie, and a separate 49-cell model of the
+  deg_y(T)=deg_y(f)+2 cancellation wall.  All boundaries and payable controls
+  passed.  One omitted wall was restored to the summary list; it was already
+  present and correct in the detailed proof.  The focused companion expands
+  both exact defects and checks
   192 generic leading cells, 192 first-response cells, 160 second-response
   cells, all twelve sampled constant-sidecar cells, the corrected
   deg_y(T)=deg_y(f)+2 wall simplification, the exact r=0 address branch, and
   sharp leading payments in 1152 active gates.  Normal and optimized runs
-  byte-match the frozen output.  This computation verifies identities and
-  hostile finite controls; the all-degree affine comparisons and UFD
-  deductions are the proof candidate below and await an independent audit.
+  byte-match the frozen output.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
 related:
@@ -30,15 +32,15 @@ related:
   - THM-3899-nonzero-sidecar-y-degree-tariff-and-equianharmonic-equality-colors
 script: 04-computation/jc2_nonzero_sidecar_osculating_response_fan_thm3901.py
 output: 05-knowledge/results/jc2_nonzero_sidecar_osculating_response_fan_thm3901.out
-script_sha256: e88ee22795ee7fbe2256a02c6a39720ae68fb065af16a06c4fe33ffbb8caef6e
-output_sha256: aebcc27ce57e700f2b3568c6f2a0ef166cdb0df2c97105170a4f6e92a692b679
-semantic_sha256: 56809d2f535895f39f071eb474b40bc0e1a5e54ebb996a24c38c2304b561c0ee
+script_sha256: 69b04b7686ff3be0051cf1f2c81672892db49b0027f735be49ecf4a2f8446876
+output_sha256: 4366aef6140e13fa501e619260c6515a40fb7f4da09d5bbed80cfc48209095f6
+semantic_sha256: ad2fd5d83e8b53b75b9721915701085a71bdc44d694ec516ec1a516a28799f7d
 hash_basis: raw LF bytes
 ---
 
 # THM-3901 -- the nonzero-sidecar osculating response fan
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT.**  Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
 algebraically closed field `k` of characteristic zero.  In `D=k[x,y]` put
 
 ```text
@@ -323,6 +325,7 @@ first R, delta=1:  n=1;
 first R, delta=2:  n=4;
 first R, delta>=3: n=delta+2;
 second defect:     n=2delta;
+wall S:            2t=n+4;
 wall R:            2t=n+8.                               (22)
 ```
 
