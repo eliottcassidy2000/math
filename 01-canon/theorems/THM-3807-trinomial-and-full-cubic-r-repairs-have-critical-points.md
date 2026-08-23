@@ -2,7 +2,7 @@
 id: THM-3807
 title: "Trinomial and full cubic R-repairs have critical points"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  On the c=1
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the c=1
   cubic pseudo-plane, every canonical nodal carrier
   A=e^2-z/3+r sum_(i=0)^3 b_i e^i whose profile has at least three nonzero
   coefficients has a critical point.  For b_3 outside {0,1}, the
@@ -10,19 +10,26 @@ status: >
   surviving parameter seam has support two.  At b_3=1 the residual degree
   drops to fifteen or eleven, and separately recomputed divisions are still
   contradictory.  Thus no trinomial or full cubic r-repair has a regular
-  Darboux mate.  Support at most two, degree at least four, and mixed
-  corrections are outside this theorem.
+  Darboux mate.  Support at most two is outside this theorem but already
+  closed by THM-3799 and THM-3806; together with THM-3805, the canon now
+  closes every polynomial r-profile of degree at most three.  Degree at
+  least four and mixed corrections remain open.
 source: jc_sparse_direct_search / full-cubic logarithmic-resultant lane, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The universal P/Q resultant, all generic
+  INDEPENDENT HOSTILE AUDIT PASS (jc-cohn-boundary, 2026-08-23).  The
+  universal P/Q resultant, all generic
   remainder factors, both b_3=1 degree drops, exact coprime resultants,
   support-two seams, homogeneous finite-root gate, excluded denominators,
   source reconstruction, and Casimir implication were rederived symbolically.
   An independently assembled fixed-degree Sylvester determinant reproduces
   the universal resultant.  The deterministic companion has 51 active gates;
-  normal and optimized runs
-  byte-match the frozen transcript and the recorded raw hashes match.
-  Independent hostile audit remains due.
+  normal and optimized runs byte-match the frozen transcript and the
+  recorded raw hashes match.  The audit independently checked the support
+  partition, both branch exhaustions, all exceptional specializations,
+  coprime resultants, multiplicity-safe boundary implication, and finite
+  reconstruction.  The generic quotient/remainder common denominator is
+  4(t-1)^3; the t=1 denominators are b_2 and 531441b_0^6 on the two cells,
+  all invertible under their stated hypotheses.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3805-quadratic-r-repairs-of-nodal-carriers-have-critical-points
@@ -39,7 +46,7 @@ hash_basis: raw LF bytes
 
 # THM-3807 -- every cubic profile of support at least three remains critical
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over
 an algebraically closed field `k` of characteristic zero.  On the `c=1`
 member of the THM-3785 cubic pseudo-plane put
 
@@ -348,11 +355,17 @@ vanish.  The surface Casimir identity
 and `K_0!=0` kill the remaining component.  Hence `(37)` is an actual
 critical point.
 
-The theorem closes precisely the cubic profiles with at least three nonzero
-coefficients.  Support at most two is deliberately not inferred here; degree
-at least four, mixed `z^2h(e)+r g(e)` corrections, other arm profiles, and
-rational mates with poles remain open.  The exact companion named in the
-metadata verifies `(4)--(39)`, both specialized divisions, the two coprime
+The theorem itself closes precisely the cubic profiles with at least three
+nonzero coefficients.  Combining THM-3792 (the zero profile), THM-3799
+(monomials), THM-3805 (degree at most two), THM-3806 (cubic binomials), and
+this theorem gives the useful synthesis
+
+```text
+deg g<=3  ==>  e^2-z/3+r g(e) has a critical point.   (40)
+```
+
+Degree at least four, mixed `z^2h(e)+r g(e)` corrections, other arm
+profiles, and rational mates with poles remain open.  The exact companion
+named in the metadata verifies `(4)--(39)`, both specialized divisions, the two coprime
 resultants, support-drop seams, and reconstruction with 51 active gates.
-Normal and optimized executions byte-match the frozen transcript.
-**QED, conditional only on independent hostile audit.**
+Normal and optimized executions byte-match the frozen transcript.  **QED.**
