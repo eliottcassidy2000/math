@@ -178,6 +178,25 @@ check(J_norm.rank() == 1, "normalization A1 point singular")
 check(sp.diff(A_norm, w).subs(p0) == L, "normalization eliminates w locally")
 check(C_norm == u**2 - f * (w - L) * (z + u), "normalization A1 equation")
 
+# The first nonfinite affine modification B0[M] is already smooth, although
+# it still collapses the two confluent source components.  Its saturated
+# three-relation presentation has a constant nonzero Jacobian minor on each
+# special-fibre line.
+C1_r1 = f**2 * m - w * (w - L)
+C1_r2 = f * z - (w - f**2) * m
+C1_r3 = (w - L) * (f * m + z) - f * m**2
+C1_axis = {f: 0, w: 0, z: 0}
+C1_critical = {f: 0, w: L, m: 0}
+C1_axis_minor = sp.Matrix(
+    [[sp.diff(R, V).subs(C1_axis) for V in (w, z)] for R in (C1_r1, C1_r3)]
+).det()
+C1_critical_minor = sp.Matrix(
+    [[sp.diff(R, V).subs(C1_critical) for V in (w, m)] for R in (C1_r1, C1_r2)]
+).det()
+check(sp.expand(C1_axis_minor + L**2) == 0, "first modification axis smooth")
+check(sp.expand(C1_critical_minor - L**2) == 0,
+      "first modification critical arm smooth")
+
 
 # Saturated presentation of the final two-step affine modification
 # R=k[f,w,m,n,z].
