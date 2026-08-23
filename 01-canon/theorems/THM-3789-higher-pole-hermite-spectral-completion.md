@@ -25,7 +25,8 @@ audit: >
   and cubic positive controls, all boundary constants, critical residuals,
   and the degree-one missing-divisor witness.  Normal and optimized runs
   byte-match the frozen transcript.  Independent hostile audit remains due.
-depends_on: []
+depends_on:
+  - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
 related:
   - THM-3782-simple-pole-spectral-danielewski-completion-and-target-field-gate
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
