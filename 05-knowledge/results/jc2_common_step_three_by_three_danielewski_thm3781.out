@@ -1,0 +1,9 @@
+theorem=THM-3781-common-step-three-by-three-danielewski-darboux-nonentry
+surface=exponent_two_squarefree_Danielewski
+step=3;placements_up_to_swap=2
+case_I=-4,-1,2_x_-3,0,3;exit=polynomial_Mobius_forces_zero_weight_constant
+case_II=-5,-2,1_x_-2,1,4;exit=cubic_denominator_cannot_divide_linear_numerator
+scalar_equation=never_reached
+semantic_sha256=34f8df9c6b069bd5f36939f38109908fde5ab2d4dd7374b019445add3e400982
+CHECKS=80
+RESULT=PASS
