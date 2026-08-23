@@ -1,0 +1,9 @@
+theorem=THM-3734-automorphic-Cohn-diagonal-binomial-towers
+scope=all_integer_depths_r>=1;paired_lower_and_upper_diagonal_SL2_slices
+first_stage=closed_unimodular_gradients_with_divided_power_potentials
+second_stage=charge_reduction_and_unique_top_edge_exclude_polynomial_mates
+formal_limit=exp(2XT)_and_-exp(-2XT)_kernels
+tested_depths=1..12
+semantic_sha256=bd170c83f89be6a626f759285b19a220da42c4eb9f2132876327309de8226ee2
+CHECKS=1098
+RESULT=PASS
