@@ -1,0 +1,11 @@
+W004 scalar-12 anchor-20 normalized scout
+family=P(1-3n,1-2n,1);Q(-2,n-2,2n-2,4n-2);scalar=12+20
+THM3613_even_tail_rejection=True
+odd_n_ge_3_middle_pullback_plus_euler_contradiction=True
+n1_product_derivative_contradiction=True
+post_THM3722_and_new_small_residual_counts={1: 0, 2: 6, 3: 7}
+post_THM3722_and_new_tail_residual_counts_by_parity={0: 6, 1: 8}
+hostile_W005_reversal_not_transported=True
+hostile_generic_target_shear_weight_count=10
+scope=one_named_W004_family_only;W004_residuals_and_W005_W006_remain
+ALL CHECKS PASSED

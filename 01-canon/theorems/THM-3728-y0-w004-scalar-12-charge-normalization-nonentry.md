@@ -19,11 +19,15 @@ audit: >
   rational-field inference, both Kummer sheets, the n=1 root and derivative
   collapse, the even-scale parity gate including n=2, and the stabilized-tail
   census dependency.  Normal and optimized runs byte-match the frozen
-  transcript; the recorded hashes match.
+  transcript; the recorded hashes match.  A second exact charge-gauge proof
+  independently reaches the same contradiction through the pullback identity
+  `C[b] intersect C(U)=C[U]`; its companion also passes normal/optimized/frozen
+  replay.
 depends_on:
   - THM-3606-exponent-two-three-by-four-scalar-singleton-gate-atlas
   - THM-3613-three-by-four-size-seven-ray-parity-gate
   - THM-3696-y0-collision-ring-three-branch-conductor-and-graded-modules
+  - THM-3720-y0-w003-final-family-charge-coordinate-closure
 related:
   - THM-3722-y0-w004-scalar-03-norm-twist-nonentry
   - THM-3724-y0-w004-scalar-13-kummer-twist-nonentry
@@ -35,6 +39,10 @@ script: 04-computation/jacobian_y0_w004_scalar12_anchor20_charge_normalization_t
 output: 05-knowledge/results/jacobian_y0_w004_scalar12_anchor20_charge_normalization_thm3728.out
 script_sha256: 6d23c9f025acede93f7d5aab76fa9af66c71af832804199e6c4ed6cce73be282
 output_sha256: cf19f17f4a86d9cbde1571fdb3e92e7168d500894149348156ac38b374a005d3
+alternative_script: 04-computation/jacobian_y0_w004_scalar12_charge_normalization_thm3728.py
+alternative_output: 05-knowledge/results/jacobian_y0_w004_scalar12_charge_normalization_thm3728.out
+alternative_script_sha256: 5da96ee4522134f0934b80270cc6f3d71b3fddc62254dbe217c54d3832039703
+alternative_output_sha256: 01aca3a3a11b44940474a07c17b62798e7718c2b09a89850e5a76929f21c83aa
 hash_basis: LF-normalized bytes
 ---
 
@@ -236,3 +244,33 @@ python3 -B -O 04-computation/jacobian_y0_w004_scalar12_anchor20_charge_normaliza
 ```
 
 Both commands must agree byte for byte with the frozen transcript.
+
+## 6. Independent charge-gauge proof surface
+
+A second all-degree derivation starts from the same weights but normalizes
+
+```text
+U=HK^2,                         Pi=K^(2n-1) f1.
+```
+
+The two upper zero rows repay every denominator in this fraction-field gauge.
+For odd `n>=3`, the middle row forces `Pi in C(U)`; THM-3720's exact
+pullback identity then upgrades this to `Pi in C[U]`.  The lowest row has
+the invertible diagonal operator
+
+```text
+-2U partial_U +(2n-1),
+```
+
+so it uniquely determines `Pi` as a two-term polynomial.  Returning to the
+middle row produces a nonzero highest term of degree `3(3n-1)/2-1`, which
+cannot equal its constant first integral.  Its `n=1` boundary instead makes
+a product of two active nonconstant polynomials constant.  Even `n` is the
+same inherited parity rejection.
+
+This proof is algebraically independent of Sections 1--4's Kummer-sheet
+argument and is frozen in the alternative companion above.  Its older local
+scope statement did not yet use THM-3739; the current consequence in Section
+5 has precedence: combining either proof with that audited census closes the
+stabilized W004 tail, while the larger W004 and JC(2) frontiers remain open.
+

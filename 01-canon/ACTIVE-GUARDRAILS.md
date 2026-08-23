@@ -84,7 +84,7 @@
     `boundary Delta^12`; do not infer endpoint emptiness or export the cap.
 27g. **Copies are not common atoms.** THM-2806 has bare-only `D3`/empty `M`; THM-2818's positive copies fail native/source/endpoint sidecars. Neither pays THM-2772.
 27h. **A generator-valued endpoint germ is not a physical allocation action.** THM-2825/2859 lack the source carrier and `C13` action needed to turn their missing-corner or decorated-arrow data into a row exclusion; neither implies LRC(14).
-27i. **Successor quotients lose coordinates.** Mass is not address; offset sums hide drift; denominator splits lose cancellation; fixed 13-adic depth fails. THM-3718's cover-derived atom/selector is adaptive, not a canonical semantic owner or arrival.
+27i. **Successor quotients lose coordinates.** THM-3731 lets pairwise-distinct positive coefficients choose a blocker-relabeling-equivariant, common-positive-dilation-invariant owner label; the labelled valuation lift cannot choose one of two minimum-depth owners on its 15 tied orbits, and THM-3718 still lacks owner-supported drift, word/root transport and arrival.
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211/THM-2631;
@@ -92,8 +92,8 @@
 29. **Tournament dominance is sufficient, not iff.** MISTAKE-212.
 30. **Vandermonde nodes are not tournament scores.** MISTAKE-214; repeated
     nodes do not imply a Paley/regular wall.
-31. **No global de-factorialization.** MISTAKE-215; THM-2040 is retired. The
-    THM-2022 mechanism is prime-local initial-form normalization.
+31. **No global de-factorialization or automatic reset torsor.** THM-2022 is prime-local; THM-3732 only excludes the inherited fixed-fibre named-row/common-edge model on `F12/F13`.
+    Arbitrary relabellings/groupoids, enriched relations, other banks, FC(3), HFC(3), and the separate HFC null-candidate primitive remain outside its scope.
 32. **Support algebra is not its observer.** THM-2033 is special-matrix scope;
     its determinant does not replace scalar Wick moments. Bare toric/bouquet
     data retain neither signs nor factorial weights (THM-3365).
@@ -125,8 +125,8 @@
     sign gauge and label dependence.
 39. **The invariant lattice is exact only through `n<=6`.** THM-1966 adds an
     independent signed coordinate at `n=7`.
-40. **`H>=disc` remains open.** THM-1950 reduces to strong tournaments and
-    verifies finite cases only.
+40. **`H>=disc` remains open; rooted response needs its root.** THM-1950 reduces to strong tournaments; THM-3729 is covariant under `(K,u)->(DKD,Du)`.
+    Its sign-root deletion average does not control fixed `u=1`, and unsigned induced-subtournament square energy fails at order five.
 41. **Do not manufacture tournaments from ties.** Without an intrinsic binary
     relation and honest tie semantics, use the actual carrier. THM-2221's
     pinned-context observable is a symmetric cut semimetric plus core kernel.
@@ -143,8 +143,8 @@
 
 46. **Support is not an indexed multiset.** MISTAKE-209 and THM-2000/2005;
     repetitions contribute a collision tax.
-47. **Density zero does not imply reciprocal convergence.** Use the
-    Abel--Dini/Bertrand boundary through iterated logarithms.
+47. **Density zero does not imply reciprocal convergence or a critical coefficient.** Use Abel--Dini/Bertrand; THM-3730 proves both positive two-cube series diverge at the boundary,
+    but only the indexed lattice series has a coefficient. The inert-prime singleton family gives no support asymptotic, pole, or residue.
 48. **Finite prefixes and proxy supports are not all-`n` laws.** MISTAKE-219;
     freeze support, offsets, profile, and quantified tail.
 49. **No OEIS match is not novelty.** A search miss proves no new sequence.
@@ -182,7 +182,7 @@
 65. **The actual THM-1310 field is excluded only as an exact `S4` resolvent.** THM-2681 identifies its full normalization on `g!=0` with `G_m x A^2`, whose procyclic etale fundamental group has no `V4` quotient. This survives polynomial target automorphisms or an explicit base-ring identification, not arbitrary birational transport. Shared `-L`, cusp/Jelonek, odd-valuation shadows, unrelated `S3` fields, and the quartic `A4` branch remain open.
 66. **Invariant Kummer vanishing is not total vanishing.** THM-2686 gives
     `H^1(R_reg,mu_ell)^Q=0` in coprime degree; at `(2,C3)` it removes trivial
-    lines but permits standard planes.  Nonvanishing is only the abstract `A4` carrier gate; test units/`Cl[2]` and retain actual versus abstract torsors. THM-2704's split even-Faber genus `89` is generic and all-one, not uniform: an exceptional rational member must gain at least `89` delta, become reducible/nonflat, or leave the chart, and the eleven odd seeds are absent.
+    lines but permits standard planes.  Nonvanishing is only the abstract `A4` carrier gate; test units/`Cl[2]` and retain actual versus abstract torsors. THM-2704's split even-Faber genus `89` is generic and all-one, not uniform: an exceptional rational member must gain at least `89` delta, become reducible/nonflat, or leave the chart, and the eleven odd seeds are absent. THM-3728's W004 charge gauge is fraction-field and row-derived only; it gives no W005/shear/JC transport.
 
 ## Promotion checklist
 Audit types, quantifiers, symmetries, direction, quotient loss, hostiles,

@@ -1,0 +1,10 @@
+independent two-cube boundary referee probe
+prime_limit=5000
+inert_prime_count=337
+strict_cube_free_minimum_margin=8602
+direct_root_lifting_checks=15
+complete_singleton_targets=12494
+first_non_cube_free_singleton=(71,16,55,2401)
+all_x_cross_prime_values=387587
+semantic_sha256=77b40ea5137968ffde2d8050d6a9f0ced19534229f2302671d425ef1c706f793
+ALL CHECKS PASSED

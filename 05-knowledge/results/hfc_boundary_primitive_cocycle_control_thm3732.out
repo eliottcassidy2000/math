@@ -1,0 +1,8 @@
+vertices=((Fraction(-1, 1), Fraction(-1, 1)), (Fraction(2, 1), Fraction(-1, 1)), (Fraction(-1, 1), Fraction(2, 1)))
+edge_primitive_increments=((Fraction(0, 1), Fraction(-3, 1)), (Fraction(-3, 1), Fraction(3, 1)), (Fraction(3, 1), Fraction(0, 1)))
+transition_constants=((Fraction(0, 1), Fraction(-3, 1)), (Fraction(-3, 1), Fraction(3, 1)), (Fraction(3, 1), Fraction(0, 1)))
+global_basepoint_offsets=((Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(-3, 1)), (Fraction(-3, 1), Fraction(0, 1)))
+cocycle_holonomy=(Fraction(0, 1), Fraction(0, 1))
+record_digest=3c04ce79361150c38abbc95e22823eb4a580646368c8a44f24f2aa93113572ef
+typed_scope=identity_constant_J_map;centred_rational_triangle;single_g_squared_boundary_current_closure;not_full_HFC
+all_exact_checks=PASS

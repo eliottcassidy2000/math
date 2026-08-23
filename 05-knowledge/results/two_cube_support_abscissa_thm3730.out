@@ -1,0 +1,22 @@
+== positive distinct two-cube support / indexed-fibre probe ==
+area_constant=0.441659687571363
+critical_residue=0.294439791714242
+X=1e03 indexed=34 ratio=0.340000000000 boundary_error=-1.016596876
+X=1e04 indexed=187 ratio=0.402879287036 boundary_error=-0.835498402
+X=1e05 indexed=912 ratio=0.423312901625 boundary_error=-0.851582368
+X=1e06 indexed=4318 ratio=0.431800000000 boundary_error=-0.985968757
+X=1e07 indexed=20310 ratio=0.437565685545 boundary_error=-0.882025999
+X=1e08 indexed=94743 ratio=0.439758050863 boundary_error=-0.882661571
+X=1e09 indexed=440728 ratio=0.440728000000 boundary_error=-0.931687571
+X=1e10 indexed=2048089 ratio=0.441247398987 boundary_error=-0.888248828
+X=1e11 indexed=9511106 ratio=0.441466434049 boundary_error=-0.897003391
+X=1e12 indexed=44156809 ratio=0.441568090000 boundary_error=-0.915975714
+X=1e13 indexed=204981044 ratio=0.441618271993 boundary_error=-0.892271597
+X=1e14 indexed=951484969 ratio=0.441640200746 boundary_error=-0.904498306
+X=1e15 indexed=4416506328 ratio=0.441650632800 boundary_error=-0.905477136
+bounded_universe=1..2000000 indexed=6889 support=6825 collision_tax=64 collisions=64 max_mult=2
+first_collisions=[(1729, 2), (4104, 2), (13832, 2), (20683, 2), (32832, 2), (39312, 2), (40033, 2), (46683, 2), (64232, 2), (65728, 2), (110656, 2), (110808, 2)]
+harmonic_prefix_multiset=0.375099825946574 support=0.373903893897358 collision=0.001195932049216
+good_divisors_1729=[(13, 1, 12), (19, 9, 10)]
+semantic_sha256=d8e624c259109b2ea361c94e4e11f42ce7ebbfcbdd7bbf54f4ae113ed90ace75
+ALL GATES PASS

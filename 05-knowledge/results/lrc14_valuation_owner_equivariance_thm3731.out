@@ -1,0 +1,18 @@
+LRC14 semantic-arrival owner equivariance probe
+status=PASS
+valuation_quotient_rows=165
+strict_rows=150 repeated_rows=15
+labelled_profiles=945 S3_orbits=165
+deterministic_owner_orbits_pass=150 fail=15
+first_failure_profile=(1, 1, 5) admissible=(0, 1) stabilizer_swap=(1, 0, 2)
+set_valued_owner_equivariance=PASS marked_lift_size=990
+coefficient_samples=990 coefficient_key_equivariance=PASS
+coefficient_source=THM-2367-equation-20-noncover-hostile-representatives
+repeated_labelled_profiles_resolved_by_sidecar=45
+coefficient_key=argmin_i(nu13(c_i),c_i)
+complete_atoms=128 unique_source_atom=(0, 0, 0, 0, 0, 1, 0)
+owner_drift=0
+nonowner_drift=21/742586
+aggregate_drift=21/742586
+aggregate_positive_owner_zero_interface_hostile=PASS
+scope=no scalar-cover row excluded; no semantic arrival proved

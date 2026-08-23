@@ -127,7 +127,10 @@ current fills every cell and every admissible parabolic sector.
 
 ## Controlled forgetting and unlabeled quotients require a sidecar
 
-**Trigger/action:** for `q:X->Y`, inspect `X times_Y X`: paths lift exactly when seams are diagonal; retain off-diagonal conflicts and, for an action `rho`, `ker(q)/(ker(q) intersect ker(rho))`. **Boundary:** minimality depends on the law/path/category, and a kernel is gauge only if every consumer kills it. **Evidence:** exact-six, THM-3450/3452/3454, MISTAKE-310/401.
+**Trigger/action:** for `q:X->Y`, inspect `X times_Y X`; separate off-diagonal seams and retain `ker(q)/(ker(q) intersect ker(rho))` for an action `rho`.
+For a `G`-equivariant choice field `A`, test `A(x)^(Stab_G(x))!=empty`; otherwise retain a marked/set-valued fibre. Before Cech/torsor language require a nonempty invertible composable predicate-preserving seam.
+If an observer feeds another operation, use the native-operation card below: frozen-bank injectivity is not congruence. **Caution:** “minimal” is consumer-relative; set-valued/relation-valued targets need no section/torsor.
+**Evidence:** exact-six, THM-3450/3452/3454/3731/3732, MISTAKE-310/401.
 
 ## Test whether a central extension changes the base signature
 
@@ -351,7 +354,8 @@ A positive left inverse, order-reflecting quotient, or target factorization disc
 
 ## Audit and close sections under their next native operation
 
-**Trigger/action:** apply the next target operation before scalarizing; retain moving labels/cocycles and target-preserving affine/relative coordinates. Pre-scalar defects live in co-support, transition cones, base ideals or circuits and can yield a stopping reason or low-rank update. **Caution:** fibres need not glue: require a basepoint and lawful composition; walks are not chronology. **Evidence:** THM-2292/3144/2658/3156/3285--3324.
+**Trigger/action:** apply the next target operation before scalarizing; retain moving labels/cocycles, test observer equality for congruence, and give every sidecar a typed update. Adaptive overflow is honest when no uniform finite observer is proved.
+Pre-scalar co-support/transition/circuit defects can stop or update the route. **Caution:** require lawful composition/basepoint; walks are not chronology. **Evidence:** THM-2292/3144/2658/3156/3285--3324/3511/3732.
 
 ## Exteriorize a commutative response against the lost relation
 

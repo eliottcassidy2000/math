@@ -38,6 +38,7 @@ related:
   - THM-2305-canonical-blocker-word-handoff-hypergraph
   - THM-2367-septimal-root-averaging-graft-and-cover-alignment
   - THM-2461-temporal-blocker-word-cocycle-and-diagonal-polarized-repair-boundary
+  - THM-3731-lrc14-valuation-owner-equivariance-and-semantic-packet-boundary
 script: 04-computation/lrc_complete_atom_orbit_selector_bridge_thm3718.py
 output: 05-knowledge/results/lrc_complete_atom_orbit_selector_bridge_thm3718.out
 script_sha256: e2b09c343ae9f3859d7367dab51e003c5fb73da83042943d95dceee31bc1ab2f
@@ -50,7 +51,7 @@ hash_basis: raw LF bytes
 **PROVED + VERIFIED COMPOSITION.**  This theorem closes an abstract
 nonvanishing question left visible by THM-3713, but only after an adaptive
 complete-atom selection.  It does not identify that atom with the canonical
-semantic owner, word, repair, or arrival packet.
+exclusive-owner atom or an owner-supported word/root/arrival packet.
 
 ## 1. Exact inherited universe
 
@@ -279,16 +280,18 @@ hypothetical cover realization on the 165-row frontier
 What (18) deliberately does not retain is:
 
 - a row-independent atom, target, magnitude, address, or late clock;
-- the canonical exclusive owner or THM-2305 semantic word/repair label;
+- owner support on the canonical exclusive-owner atom, or the THM-2305
+  semantic word/repair label;
 - a common physical root section or the physical guard orientation;
 - positive charge at the excluded target, hence semantic arrival;
 - the old marked triangle or the all-nine-coordinate unit projector.
 
 Thus the pure abstract nonvanishing half of THM-3713's target is discharged
 on an adaptively selected complete atom.  The live theorem is now a
-transport/typing statement: carry one such selector defect to the canonical
-owner/root/word packet, or give the excluded target a lawful positive
-arrival meaning, without losing its target character and deep residue.
+transport/typing statement: couple one such selector defect to the canonical
+owner-supported temporal/root packet, or give the excluded target a lawful
+positive arrival meaning, without losing its target character and deep
+residue.
 
 No scalar row is removed, and LRC(14) remains open.
 

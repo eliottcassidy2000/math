@@ -1,0 +1,5 @@
+exhaustive_counts=((2, 2), (3, 8), (4, 64))
+n2_boundary_records=((2, Fraction(2, 1), Fraction(1, 1), Fraction(1, 1), (Fraction(1, 1), Fraction(1, 1)), Fraction(1, 1), Fraction(1, 1)), (2, Fraction(2, 1), Fraction(1, 1), Fraction(1, 1), (Fraction(1, 1), Fraction(1, 1)), Fraction(1, 1), Fraction(1, 1)))
+five_vertex_hostile=(5, Fraction(32, 1), Fraction(2, 1), Fraction(7, 4), (Fraction(8, 1), Fraction(8, 1), Fraction(16, 1), Fraction(16, 1), Fraction(8, 1)), Fraction(7, 2), Fraction(11, 4))
+semantic_sha256=504aa6532d1b1e5abafc60ffbd9de76433c1893f417a1a3a6dd74099d8cf93b3
+all_independent_deletion_checks=PASS
