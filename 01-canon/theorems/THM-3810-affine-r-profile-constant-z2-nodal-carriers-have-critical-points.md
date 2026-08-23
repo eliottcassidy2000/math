@@ -203,8 +203,11 @@ A=e^2-z/3+r g(e)+z^2h(e)                             (21)
 ```
 
 with `deg g>=2` or nonconstant `h(e)`.  In that range `C_r=0` is no longer
-linear in `e`; the slope still organizes the equations, but a new sidecar is
-needed to control the extra `e`-branches.  The exact companion named in the
+uniformly denominator-free: for quadratic `g`, it remains linear in `e`
+but its leading coefficient is the moving factor `1+a_2r`, while genuine
+nonlinearity begins at `deg g>=3`.  The slope still organizes the equations,
+but a new sidecar is needed to control that denominator divisor and the
+extra `e`-branches.  The exact companion named in the
 metadata checks `(5)--(20)`, including the specialized `h=0` resultant and
 all reconstruction identities.  Normal and optimized executions byte-match
 the frozen 26-gate transcript.  **QED.**
