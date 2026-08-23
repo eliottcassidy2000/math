@@ -2,8 +2,8 @@
 id: THM-3773
 title: "Quadratic rational Keller-cover degree and target-word nonpolynomialization"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.  Every rational Keller
-  pair in THM-3758 generates an index-two subfield of k(X,T).  Its primitive
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED over C.  Every
+  rational Keller pair in THM-3758 generates an index-two subfield of C(X,T).  Its primitive
   therefore defines a genuine quadratic rational cover, not a birational
   coordinate in disguise.  Any birational rational target change preserves
   that index; if the change is symplectic and both outputs become polynomial,
@@ -12,11 +12,12 @@ status: >
   family.  This closes a construction escape, not planar JC(2).
 source: root + jc_sparse_direct_search / planar-Jacobian alternating-rational-shear session, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The quadratic minimal equation, both nested
-  discriminants, field recovery, normalized control, and target-shear field
-  invariance have been checked symbolically and by hand.  The degree-two
-  Keller exclusion is the Campbell theorem recorded in THM-1330.  Independent
-  hostile audit remains due.
+  INDEPENDENT HOSTILE AUDIT by jc_quartic_c3_construct.  The quadratic minimal
+  equation, both nested discriminants, field recovery, normalized control,
+  and target-shear field invariance were rederived independently.  Normal,
+  optimized, and frozen exact transcripts agree.  The base field is restricted
+  to C so the final degree-two Keller exclusion has exactly the scope of the
+  Campbell theorem recorded in THM-1330.
 depends_on:
   - THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule
   - THM-3758-quadratic-radial-carrier-rational-exact-split-fibre-nonentry
@@ -33,15 +34,15 @@ hash_basis: raw LF bytes
 
 # THM-3773 -- the quadratic rational near miss cannot be polynomialized
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.**  THM-3758 pays the
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED over `C`.**
+THM-3758 pays the
 generic time-form debt but fails a one-step target shear because two
 components have opposite principal parts.  Alternating rational shears might
 seem able to trade that divisor debt between the two outputs.  They cannot:
 the rational pair already has irreducible cover degree two, and every
 birational target word preserves it.
 
-Let `k` be an algebraically closed field of characteristic zero.  Retain all
-of THM-3758's admissible parameters
+Work over `k=C`.  Retain all of THM-3758's admissible parameters
 
 ```text
 a0,a1,beta in k*,               gamma in k,

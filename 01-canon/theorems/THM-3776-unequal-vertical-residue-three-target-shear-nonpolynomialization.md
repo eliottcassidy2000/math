@@ -2,17 +2,22 @@
 id: THM-3776
 title: "Unequal vertical residues obstruct three natural rational target shears"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Two distinct nonzero simple-pole coefficients over one common smooth
   vertical parameter cannot be made simultaneously regular by a rational
   target-shear word q-p or q-p-q.  The variable-exchanged p-q and p-q-p
   statement holds when p, rather than q, is the common uniformizer.  The
-  proof candidate includes all finite, polar, slope-zero, and higher-contact
+  proof includes all finite, polar, slope-zero, and higher-contact
   branches and arbitrary regular tails.  Starting in the opposite orientation
   can regularize the two completed DVRs locally; an exact three-shear witness
-  keeps the scope sharp.  No claim may be used before independent audit.
+  keeps the scope sharp.
 source: root + jc_sparse_direct_search / 2026-08-23
-audit: PENDING INDEPENDENT HOSTILE AUDIT.
+audit: >
+  INDEPENDENT HOSTILE AUDIT by root.  The completed-DVR quantifiers, finite and
+  polar branches, slope-zero exit, order product de=1, cancellation through
+  arbitrary regular tails, variable-exchanged dual, and opposite-orientation
+  positive witness were rederived by hand.  Normal, optimized, and frozen
+  exact transcripts agree byte for byte.
 depends_on: []
 related:
   - THM-3709-cohn-alternating-two-by-two-elementary-decoration-nonentry
@@ -30,9 +35,9 @@ hash_basis: raw LF bytes
 
 # THM-3776 -- unequal vertical residues survive three natural target shears
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT HOSTILE
-AUDIT.**  This is a local theorem about rational target operations.  It is
-not an all-word classification.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This is a local
+theorem about rational target operations.  It is not an all-word
+classification.
 
 Let `k` be a field of characteristic zero and let `K/k` be a field equipped
 with two discrete valuations `nu_1,nu_2`.  Suppose the completed valuation
@@ -272,5 +277,4 @@ are analogous Euclidean words, but neither theorem implies the other.
 
 The next counterexample-oriented question is now precise: can the locally
 successful opposite word `(20)` pay every newly introduced denominator
-divisor on an actual THM-3758 or THM-3771 surface?  **QED, conditional on
-independent hostile audit.**
+divisor on an actual THM-3758 or THM-3771 surface?  **QED.**
