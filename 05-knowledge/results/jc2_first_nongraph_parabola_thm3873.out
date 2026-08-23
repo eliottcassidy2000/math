@@ -1,0 +1,11 @@
+THM3873_NORMALIZATION A=r^2, C=6(r+r^4), T=C/6-A^2=r
+THM3873_BRANCH F=A-T^2, b0=6A+8A^2T, b=b0+FQ(A,T)
+THM3873_FORMAL Q_*=sum q_j(T)A^j, deg q_j=j, lc=-beta_j6^(j+2)
+THM3873_FIRST_MISMATCH Q=Q_<N+A^N H, H(0,T)!=q_N(T)
+THM3873_RESIDUAL S=R_N-54u_NH-27A^(N+2)F H^2
+THM3873_DEGREES N>=1 threshold d=N-1; N=0 is exceptional
+THM3873_RESONANCE lc=27A^N(gamma_(N-1)+A lc(H))^2 !=0
+THM3873_REPLAY_UNIVERSE q_0..q_6; N=0..6; d near N-1
+THM3873_SCOPE first fixed-coordinate non-graph A1; higher triangular depth open
+SEMANTIC_SHA256 9edbf07d9ffd0ac57f86bf28012d5a83e56959f8740453e17b34d02b5a5ce275
+CHECKS 244
