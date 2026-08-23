@@ -1,0 +1,10 @@
+THM3874_FIBRES I6(a=0),I3(a=1),I4(L=0),I2(M=0),III*(infinity)
+THM3874_K3 Euler=24;rho=20;MW_rank=0;MW_tors=C2
+THM3874_NS Triv index2;abs_disc_NS=72;3-primary not zero before quotient
+THM3874_AFFINE_QUOTIENT survivors d=alpha3,e=beta2;relation 3d+2e=0
+THM3874_CLASS_GROUP Cl(Q)=Z;Cl(Q)[3]=0;units=k*
+THM3874_C3 connected codimension-one-unramified C3 layer=NONE
+THM3874_CUBIC normal finite-flat cubic with sole simple branch Delta=NONE
+THM3874_SCOPE three-cusp quadratic resolvent only;JC2 remains open
+SEMANTIC_SHA256 b135b50909a3ddb57590882e77ce5f7e94e4c034adc5b8b660be01d2b691d09c
+CHECKS 34
