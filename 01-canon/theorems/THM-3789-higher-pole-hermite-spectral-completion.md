@@ -2,7 +2,7 @@
 id: THM-3789
 title: "Higher-pole Hermite spectral completion"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
   squarefree polynomial q of degree d>=2 whose normalized primitive Q of q^2
   has pairwise distinct values at 0 and the roots of q, the rational Keller
   pair F=xq(t), P=Q(t)/F^3, t=x^2(1+xy), has an explicit smooth Hermite
@@ -17,14 +17,12 @@ status: >
   closed as a planar Jacobian-counterexample lane.
 source: jc_quartic_c3_construct / higher-pole Hermite-completion lane, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The proof checks every UFD valuation,
-  boundary restriction, residual-sheet count, Poisson sign, etale minor,
-  image stratum, height-one DVR descent, moving-arm Cech--de Rham residue,
-  and the degree-one hostile boundary.
-  The exact companion verifies the formal gradient packet, exact quadratic
-  and cubic positive controls, all boundary constants, critical residuals,
-  and the degree-one missing-divisor witness.  Normal and optimized runs
-  byte-match the frozen transcript.  Independent hostile audit remains due.
+  INDEPENDENTLY HOSTILE-AUDITED by jc_sparse_direct_search, 2026-08-23.
+  The audit independently reconstructed the UFD polynomiality, residual-sheet
+  exact image, etale height-one descent, Picard computation, moving-arm plane
+  charts, Cech--de Rham residue class, no-Darboux consequence, and the d=1
+  missing-divisor hostile.  It replayed the exact companion normally and with
+  optimization; both executions byte-match the frozen transcript and hashes.
 depends_on:
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
 related:
@@ -40,7 +38,7 @@ hash_basis: raw LF bytes
 
 # THM-3789 -- higher poles admit an all-degree Hermite completion
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  This
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This
 theorem identifies a new infinite family of smooth polynomial target-field
 completions.  It does not give a polynomial Keller pair or a planar Jacobian
 counterexample.  Instead, it computes the complete polynomial part of an
@@ -559,4 +557,4 @@ Repeated roots or colliding critical values require a confluent, higher-jet
 Hermite completion and are **OPEN**.  For the distinct-critical family proved
 here, however, `(44),(45)` close every Darboux support and target-field degree.
 No planar Jacobian counterexample can arise from this completed family.
-**QED, conditional only on independent hostile audit.**
+**QED.**
