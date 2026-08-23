@@ -2,24 +2,28 @@
 id: THM-3813
 title: "Quartic R-repairs of nodal carriers have critical points"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  On the c=1 cubic pseudo-plane, every canonical
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the c=1
+  cubic pseudo-plane, every canonical
   nodal carrier A=e^2-z/3+r sum_(i=0)^4 b_i e^i has a critical point.  In the
   genuine quartic case, the degree-twenty-two residual resultant cannot be
   supported on e*g=0: after passing to the intrinsic weight-zero parameters,
   the first seven logarithmic-remainder coefficients have two incompatible
   Groebner normal forms.  This closes every pure-r profile of degree at most
-  four, but not degree at least five or mixed corrections.  The candidate is
-  not a proved dependency until independent audit promotion.
+  four, but not degree at least five or mixed corrections.
 source: jc_sparse_direct_search / quartic logarithmic-divisibility lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The deterministic companion derives the
+  INDEPENDENT HOSTILE AUDIT PASS (jc-cohn-boundary, 2026-08-23).  The
+  deterministic companion derives the
   universal Hamiltonian reduction and resultant, degree and leading
   coefficient, the localized Euclidean quotient, all seven invariant
   remainder equations, the 28-element exact Groebner basis, both incompatible
   normal forms, repeated-root and sparse hostile controls, projective
-  finite-root gate, and source reconstruction.  Normal and optimized runs
-  byte-match the frozen transcript.  Independent hostile audit is pending.
+  finite-root gate, and source reconstruction.  The audit independently
+  checked the b_4-localized quotient denominator, every Laurent power and
+  primitive back-substitution, the exact invariant universe, the use of
+  normal forms after evaluation, the T!=0 localization, the incompatible
+  cross-product, and every projective reconstruction seam.  Normal and
+  optimized runs byte-match the frozen transcript and raw hashes.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3799-monomial-r-repairs-of-nodal-carriers-have-critical-points
@@ -39,8 +43,7 @@ hash_basis: raw LF bytes
 
 # THM-3813 -- every quartic r-repair remains critical
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an algebraically closed field `k` of
 characteristic zero.  On the `c=1` member of the THM-3785 cubic pseudo-plane
 put
 
@@ -308,9 +311,9 @@ so `d=0`: it is a repeated-root seam, not an exceptional simple arm.  The
 global seven-coefficient calculation above includes that seam automatically;
 no local squarefreeness assumption enters the proof.
 
-Together with THM-3799, THM-3805, THM-3806, and THM-3807, this candidate
+Together with THM-3799, THM-3805, THM-3806, and THM-3807, this theorem
 closes every pure `r g(e)` carrier with `deg g<=4`.  It does **not** address
 degree at least five, mixed `z^2h(e)+r g(e)` corrections, another pseudo-plane
 arm profile, or the existence of arbitrary planar Keller maps.  The exact
 companion has 429 active gates; normal and optimized executions byte-match
-the frozen transcript.  **QED, subject to independent hostile audit.**
+the frozen transcript.  **QED.**
