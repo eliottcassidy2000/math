@@ -26,7 +26,7 @@ related:
   - THM-3876-monomial-marked-root-normalization-nondescent
 script: 04-computation/jc2_marked_root_opposite_sign_nondescent_thm3880.py
 output: 05-knowledge/results/jc2_marked_root_opposite_sign_nondescent_thm3880.out
-script_sha256: cca8a8d35d9e00ff3af6ffef08e8410d124fc84b025d74e8f260476e7c5cf506
+script_sha256: a29bb6710571357da18afc0abd05eae80f70ef536295860622376b4b7c98389e
 output_sha256: 44f8bd1022260ee5c8ae760be91e3a4e07be43df5f4cac69d14cc3bb4f02e28f
 semantic_sha256: 47182169c96e351ac2cbf7f476be52b554ab1abe596639afb59121af10112006
 hash_basis: raw LF bytes
