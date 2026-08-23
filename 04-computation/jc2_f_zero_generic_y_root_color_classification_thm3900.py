@@ -337,7 +337,7 @@ gate(
 )
 
 print("theorem=THM-3900-f-zero-generic-y-root-color-classification")
-print("status=RESERVED_PROVISIONAL_PROOF_CANDIDATE_VERIFIED_EXACT_AWAITING_INDEPENDENT_HOSTILE_AUDIT")
+print("status=PROVED_VERIFIED_EXACT_INDEPENDENTLY_HOSTILE_AUDITED")
 print("dependency=THM-3895_generic_y_cutoff")
 print("normalized_equation=g^2=1-6u^2-8zu^3-3u^4")
 print("same_color=T_star")

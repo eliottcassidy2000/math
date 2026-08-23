@@ -1,5 +1,5 @@
 theorem=THM-3900-f-zero-generic-y-root-color-classification
-status=RESERVED_PROVISIONAL_PROOF_CANDIDATE_VERIFIED_EXACT_AWAITING_INDEPENDENT_HOSTILE_AUDIT
+status=PROVED_VERIFIED_EXACT_INDEPENDENTLY_HOSTILE_AUDITED
 dependency=THM-3895_generic_y_cutoff
 normalized_equation=g^2=1-6u^2-8zu^3-3u^4
 same_color=T_star

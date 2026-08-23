@@ -2,8 +2,7 @@
 id: THM-3900
 title: "F-zero generic y-polynomial root-color response classification"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit of the assembled candidate.  Over k(x)[y], the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over k(x)[y], the
   complete THM-3881 f=0 square chart has only the two T-coordinates T=0 and
   T=-2K/(3a^2).  After the proved THM-3895 y-degree cutoff, quadratic T is
   classified by the intrinsic colors G=+/-L^2 at its roots.  Same-color
@@ -14,17 +13,17 @@ status: >
   No elliptic-surface or Mordell--Weil claim is used.
 source: tournament-jc-breakthrough / post-THM-3895 root-response scout, 2026-08-23
 audit: >
-  SELF-AUDITED PROVISIONAL CANDIDATE, preceded by an independent hostile
-  derivation of the mathematical packet.  The focused exact companion
+  INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23.  The audit independently
+  rederived the root-multiplicity split, same-color hostile, split-color
+  Hermite response and actual-family exclusion, linear boundary, and all
+  fifteen constant-T rational-root cells without using elliptic claims.  A
+  separate assembled-file replay then matched normal, optimized, and frozen
+  outputs.  The focused exact companion
   verifies the normalization, both known solutions, the same-color scalar
   equation, all split Hermite responses, the complete split response ideal,
   the sharp split hostile, the actual-family mismatch, the linear odd-degree
   obstruction, and all fifteen constant-T rational-root coefficient gcds in
   47 active gates.  Normal and optimized runs byte-match the frozen output.
-  A final independent audit of this assembled file must recheck the generic
-  scope of the THM-3895 cutoff, exhaustion of root multiplicities and colors,
-  the Hermite interpolation quotient, and the rational-root theorem before
-  status promotion.
 depends_on:
   - THM-3895-f-zero-quartic-covariant-and-high-y-degree-emptiness
 related:
@@ -33,16 +32,15 @@ related:
   - THM-3897-f-zero-residual-all-degree-global-emptiness
 script: 04-computation/jc2_f_zero_generic_y_root_color_classification_thm3900.py
 output: 05-knowledge/results/jc2_f_zero_generic_y_root_color_classification_thm3900.out
-script_sha256: 366059dda300d6ec657592bd0708399bda365b0762f8777b1ec9fcaa216fcd95
-output_sha256: 1778b9b63eff819ec289279a930f6f3889a53826e110c0efe459391e6ffd8525
+script_sha256: 648b289bd8390d316153990d5792406f020f7a8daeab114e8587aa4ed16db816
+output_sha256: 10947fab0f29e61d5cef2871a6329f8469ee1ff57a6534cae69b5b8a7a032aef
 semantic_sha256: 9e63b16c78b79eb2033b94d78951be2662d27a73c66bf43131f1c64e75d39638
 hash_basis: raw LF bytes
 ---
 
 # THM-3900 -- the generic f-zero chart has two T-coordinates
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit of the assembled candidate.**  Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
 algebraically closed field `k` of characteristic zero.  Put
 
 ```text
@@ -57,7 +55,7 @@ Consider the complete generic `f=0` square equation
 G^2=L^4-6aL^2T^2-8KT^3-3a^2T^4,          T,G in C[y].     (2)
 ```
 
-The provisional classification is
+The classification is
 
 ```text
 T=0,                         G=+/-L^2,                    (3)
@@ -321,8 +319,8 @@ of `(33)` solves `(32)`.  This closes every nonzero constant.
 ## 5. Exhaustion, dependencies, and scope
 
 The alternatives quadratic, linear, nonzero constant, and zero constant
-exhaust `(8)`.  Sections 2--4 therefore prove the provisional classification
-`(3),(4)` once the THM-3895 cutoff is imported.
+exhaust `(8)`.  Sections 2--4 therefore prove the classification `(3),(4)`
+once the THM-3895 cutoff is imported.
 
 The proof depends only on:
 
