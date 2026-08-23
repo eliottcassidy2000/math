@@ -2,7 +2,7 @@
 id: THM-3772
 title: "Variable-flank three-charge rational-exact classification"
 status: >
-  PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.  Over an
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over an
   algebraically closed characteristic-zero field, every smooth polynomial
   Q=XA(XT)+chi(XT)+TB(XT) with a rational constant-Jacobian mate is either
   linear, a pure one-flank rational-exact near miss, or one of two dual
@@ -10,17 +10,20 @@ status: >
   equivalent to chi=h+gz and AB=p+g^2z/4 with p nonzero.  Every nonlinear
   case fails polynomial regularity by an explicit vertical principal-part
   mismatch.  Thus a polynomial mate exists exactly when Q is linear.  This
-  does not prove JC(2), and the result has no canonical force before
-  independent audit promotion.
+  does not prove JC(2).
 source: root + jc_quartic_c3_construct / 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The exact companion verifies the universal
+  PASS.  The exact companion verifies the universal
   generic quadratic equation and Jacobian sign, repeated-root eliminant,
   both mixed factorizations and rational primitives, sharp singular and
   split-fibre boundaries, pure-flank primitives and smoothness boundaries,
   all 729 linear-profile triples by direct Groebner smoothness, and bounded
-  polynomial-mate hostiles.  Normal and optimized runs byte-match the frozen
-  transcript; independent hostile audit remains open.
+  polynomial-mate hostiles.  Independent hostile audit rederived the
+  function-field reconstruction, zero-eliminant critical point, generic
+  squarefreeness and constant field, differential degree obstruction,
+  coefficient descent, both mixed smoothness and split-fibre signs, and both
+  pure-flank residue and vertical-divisor arguments.  Normal and optimized
+  runs byte-match the frozen transcript and both hashes match.
 depends_on: []
 related:
   - THM-3551-one-ray-planar-jacobian-mate-no-go
@@ -37,7 +40,7 @@ hash_basis: raw LF bytes
 
 # THM-3772 -- varying both flanks still leaves a vertical invoice
 
-**PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.**  THM-3765
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  THM-3765
 fixes the positive Euler flank to `X`.  The present theorem varies both
 flanks and closes the resulting full three-consecutive-charge radial ansatz.
 The generic fibre sees only the product of the two flank profiles.  Polynomial
@@ -309,8 +312,7 @@ B(0)!=0,                    gcd(B,B')=1.               (27)
 
 It has a polynomial mate exactly when `B` is constant.  Finally, if both
 flanks vanish, `Q=chi(XT)` is critical at the origin and never enters the
-smooth classification.  Sections 1--4 prove the theorem.  **QED conditional
-on audit promotion.**
+smooth classification.  Sections 1--4 prove the theorem.  **QED.**
 
 ## 5. Exact controls and the design consequence
 
