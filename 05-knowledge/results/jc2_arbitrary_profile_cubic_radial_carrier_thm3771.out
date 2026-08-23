@@ -1,0 +1,12 @@
+theorem=THM-3771-arbitrary-profile-cubic-radial-carrier-log-canonical-nonentry
+scope=algebraically_closed_characteristic_zero;nonzero_u;nonzero_deg_phi_at_most_2
+chart=birational_log_canonical;J(U,W)=3U
+smoothness=exact_squarefree_axis_and_address_avoidance_criterion
+rational_mates=complete_torsor_-lambda*W/(3Q)+k(Q)
+polynomial_mate=iff_u_and_phi_are_both_constant
+smooth_controls=6;rational_controls=6;address_counts=4,5,3,2,1,3
+boundary_controls=5;mate_obstructions=9;rank_gap_min=1
+normalized=u=1+z;r=3;phi=W^2-5;total_degree=9
+semantic_sha256=fa1f0e9b4ffef79f16e86a6aff42eb5bf7a779e211b9d820ee212a9aa82fc6ac
+CHECKS=86
+RESULT=PASS
