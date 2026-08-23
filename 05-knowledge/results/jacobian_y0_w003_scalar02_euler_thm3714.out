@@ -1,0 +1,9 @@
+THM-3714 exact W003 scalar-fibre-02 audit
+post-parity actual placements n=1,n=2,n>=3 = 0,1,2
+family A generic delta=gcd(n-1,3) Euler identities PASS
+family B generic delta=gcd(n-1,3) Euler identities PASS
+family A n=2 K|H exceptional Euler identity PASS
+charge law = every arm monomial H^p K^q has q+2=delta*p
+Euler factors = H'K+delta HK' or J'K+2JK'
+scope = complete W003 scalar fibre 02+11 in both orientations
+ALL CHECKS PASSED
