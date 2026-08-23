@@ -13,8 +13,9 @@ status: >
   exact label-parity/orientation bit on the unique square primitive address,
   while triangularity cuts out 31 states in either gauge.  Those states are
   fundamental points on two Pell sheets and never return to the pure-3
-  ordinate under a later positive Pell power.  These are fixed label-order
-  gauges, not LRC(14) certificates.  The separately proved
+  ordinate under a later positive Pell power.  Independently, prime-index
+  colour transfer embeds every positive integer tag into the inert common
+  scale.  These are fixed gauges, not LRC(14) certificates.  The separately proved
   THM-3818 recovers arbitrary scale inside the finite atlas and adds the
   selected facet, word, and residue-lattice packet.
 source: root + lrc_graver_address + cube_decoder_audit / incoming-signal extension session, 2026-08-23
@@ -36,7 +37,8 @@ audit: >
   rebuilt the atlas with `sympy.factorint`, rescanned every tag with `gmpy2`,
   verified all 31 fundamental solutions by an earlier-ordinate search, audited
   the Lucas no-return proof and the negative-Pell successor, and found no scope
-  or transcript discrepancy.
+  or transcript discrepancy.  A further 25,621-gate companion checks the
+  arbitrary prime-index tag transfer through 500 tags and four scales.
 depends_on:
   - THM-463-two-cube-representations-are-a-divisor-property-on-the-split-axis
   - THM-3793-inert-prime-sum-all-scale-two-cube-singleton
@@ -52,6 +54,11 @@ tag_sidecar_output: 05-knowledge/results/lrc14_prime_colour_square_triangular_ta
 tag_sidecar_script_sha256: e6e4f82e90a727b73ba9621f602eea03ab79bbe204303a372605b6c7525ecdc6
 tag_sidecar_output_sha256: 8386c3c30dd106cb7b7a70c6bfccf906e025dd01f422d5e3cb2cd37f40c25d49
 tag_sidecar_semantic_sha256: 57d484bf6f5e9c84ac174206bf48564c222e4646965c060bbbcdd540ade621db
+arbitrary_tag_script: 04-computation/two_cube_prime_colour_valuation_decoder_thm3825.py
+arbitrary_tag_output: 05-knowledge/results/two_cube_prime_colour_valuation_decoder_thm3825.out
+arbitrary_tag_script_sha256: fefea12394370026c95375a397c79d4994a89990e3be07dda1f4081deb166f1f
+arbitrary_tag_output_sha256: 1222d3636528eedb7e0ac847871eb57fc149facd43055b9cb0e41dfe6b7d3d12
+arbitrary_tag_semantic_sha256: 682b20f10b8dcb1e432e3fb8505a23a8834d88a0be3beadd2c998b536e858e34
 hash_basis: raw LF bytes
 ---
 
@@ -334,6 +341,28 @@ by the 3-adic label operation.  The full 31-row list is frozen in the sidecar
 output.  None of these tagged addresses is square.  These are
 **FINITE-EXACT** arithmetic subatlases, with no loneliness, arrival, or bad-row
 consequence.
+
+### 2.2 Arbitrary positive tags in the inert scale
+
+Let `pi_1<pi_2<...` be all primes and `lambda_1<lambda_2<...` all primes
+congruent to `2 mod 3`.  Transfer prime exponents by
+
+```text
+Enc(t)=product_i lambda_i^v_(pi_i)(t).                (18j)
+```
+
+This is a computable monoid isomorphism from the positive integers to the
+inert-supported integers.  On the fixed primitive pair `(1,4)`,
+
+```text
+Address(t)=65 Enc(t)^3
+          =Enc(t)^3+(4Enc(t))^3.                     (18k)
+```
+
+The valuation decoder recovers `Enc(t)`, shell `5`, cofactor `13`, and the
+pair `(1,4)`; inverse prime-index transfer recovers `t`.  THM-3793 makes
+every `(18k)` a singleton two-cube value.  This resizes the state and is not
+a tag recovered from an arbitrary pre-existing runner row.
 
 ## 3. Sharp losses and relation to the larger packet
 

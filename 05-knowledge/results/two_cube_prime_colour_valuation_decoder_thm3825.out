@@ -1,0 +1,14 @@
+object=THM-3825-prime-colour-valuation-two-cube-decoder
+universe=p<q;gcd=1;s=p+q<=356;inert-shell-exponents<=2;inert-scale
+admissible_shells=94
+admissible_ratios=5855
+all_scale_replays=23420
+decoder=v_ell(M)=3*v_ell(g)+v_ell(s);quotient=g;remainder=s
+square_test=Delta=(4Q-s^2)/3;pair=(s-sqrtDelta,s+sqrtDelta)/2
+accepted_values_through_20000=94
+tagged_addresses=500
+shared_prime_control=5^7=>scale_5^2,shell_5
+hostiles=1729:split-shell;515375:exponent-three;22295:split-scale
+CHECKS=25621
+semantic_sha256=682b20f10b8dcb1e432e3fb8505a23a8834d88a0be3beadd2c998b536e858e34
+RESULT=PASS
