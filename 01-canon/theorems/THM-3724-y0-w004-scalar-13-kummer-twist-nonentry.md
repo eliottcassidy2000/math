@@ -2,22 +2,23 @@
 id: THM-3724
 title: "W004 scalar-13 Kummer-twist nonentry"
 status: >
-  PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.  Every W004
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every W004
   placement in the named all-scale family with weights
   P=(1-3n,1-2n,1), Q=(-2n-2,-n-2,-2,2n-2) and scalar fibre 13+22 is
   Darboux-empty in the y=0 collision ring.  The end rows create a Kummer
   power twist; the two middle rows are differentially incompatible on both
-  its zero and nonzero sheets.  This is not proved canon until audit
-  promotion, and it does not close all of W004, the full 3x4 cell, general
-  quartic C3 data, or JC(2).
+  its zero and nonzero sheets.  This does not close all of W004, the full
+  3x4 cell, general quartic C3 data, or JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The exact companion checks the W004 fibre
+  INDEPENDENTLY HOSTILE-AUDITED.  The exact companion checks the W004 fibre
   word, singleton arithmetic in every residue modulo 8, both transport
-  identities, the zero-sheet Cramer compatibility, the nonzero Kummer-sheet
-  determinant and three-term compatibility numerator, and the n=1 boundary.
-  Normal and optimized runs byte-match the frozen transcript.  Independent
-  hostile audit remains open.
+  identities, the zero-sheet Cramer compatibility including the surviving
+  n=2 and n=3 coefficients, the nonzero Kummer-sheet determinant and exact
+  three-term compatibility numerator, and the n=1 boundary.  An independent
+  derivation checked every sign, constant, UFD normalization (including
+  delta=1), Cramer step, exceptional-scale exit, and the 3x3 reduction.
+  Normal and optimized runs byte-match the frozen transcript.
 depends_on:
   - THM-3592-universal-exponent-two-three-by-three-weight-darboux-nonentry
   - THM-3603-three-by-four-support-collision-cone-and-fibre-cut-atlas
@@ -35,8 +36,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3724 -- a complete W004 Kummer-twist family is empty
 
-**PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.**  Work over
-`C` in the THM-3696 collision ring.  Put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over `C`
+in the THM-3696 collision ring.  Put
 
 ```text
 h=1-b^2,
@@ -251,5 +252,4 @@ python3 -B 04-computation/jacobian_y0_w004_scalar13_kummer_twist_thm3724.py
 python3 -B -O 04-computation/jacobian_y0_w004_scalar13_kummer_twist_thm3724.py
 ```
 
-Both commands must agree byte for byte with the frozen transcript.  Audit
-promotion is required before this proof candidate enters proved canon.
+Both commands must agree byte for byte with the frozen transcript.  **QED.**
