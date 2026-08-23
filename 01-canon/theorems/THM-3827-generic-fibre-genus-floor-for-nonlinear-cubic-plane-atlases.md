@@ -9,14 +9,18 @@ status: >
   to the explicit THM-3822 hyperelliptic sidecar after base change.  Existence
   and uniqueness up to affine change of g, and the equivalence with relative
   algebraic closedness of K(g), are cited from Arzhantsev--Petravchuk rather
-  than reproved.  No Jacobian counterexample is constructed.
+  than reproved.  Independently, among h=0 and five explicit fixed-slope
+  members h-alpha_i*k=0 of the intrinsic pencil, at least one is reducible.
+  No Jacobian counterexample is constructed.
 source: jc_quartic_c3_construct / generic-fibre genus reframe, 2026-08-23
 audit: >
-  SELF-AUDITED proof candidate.  The 15-gate exact companion verifies the
+  SELF-AUDITED proof candidate.  The 22-gate exact companion verifies the
   monic degree-eight sidecar, a squarefree hostile fibre, the full generic
   discriminant, stability under a nonconstant Stein composition, the
   genus-three count, every excluded Riemann--Hurwitz genus, and reduced-arm
-  controls.  Normal and optimized replay agree with the frozen output.
+  controls, the second completed square, the five distinct pencil slopes,
+  and both terminal subset obstructions.  Normal and optimized replay agree
+  with the frozen output.
   Independent audit of the cited generative-factor import, the
   relative-constant-field step, and the special-fibre quantifiers is still
   required before promotion to PROVED.
@@ -29,9 +33,9 @@ citation:
   - "Arzhantsev--Petravchuk, Closed and Irreducible Polynomials in Several Variables, arXiv:math/0608157v2, Proposition 1, Lemma 3, and Corollary 1."
 script: 04-computation/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.py
 output: 05-knowledge/results/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.out
-script_sha256: 2099f48f0ce9130b148a16399bf68e5456d4c591ceb39616fdf1b503ea7d0e16
-output_sha256: e0834bf9c475c7efe931b99ec8ced249bd4171a376e52a87f8175e3391645dee
-semantic_sha256: c4d9e4cbbbf605b3e308ddabe61263070b1fc8bfdfb894fa9f826217f68eb38a
+script_sha256: 82290ea8abca925913393c950e28dc920c20517ad8156a6aca5b74342efb3516
+output_sha256: f25dcb0dc688e67e8ce5b8e3e5eba71da7df5bc7290ffe2210fd07e4f5435450
+semantic_sha256: 42bfbc4e18afc0ff86b28847525f1c9f5504331abdf1061f323c79b0d31043bd
 hash_basis: raw LF bytes
 ---
 
@@ -212,7 +216,7 @@ k=q(alpha),                                                     (18)
 a scalar.  This contradicts the nonconstant-unit conclusion following
 `(15)`.  Hence `(17)` holds.
 
-## 5. Equality boundary and exact scope
+## 5. Genus equality boundary
 
 The theorem replaces the vague phrase "multi-ended arm" by a sharper
 birational condition:
@@ -227,6 +231,88 @@ excluded in one argument.  At the first surviving value `gamma=3`, the
 generic fibre must be geometrically isomorphic to the explicit
 hyperelliptic curve `(7)`.  If the map has degree `d>=2`, `(6)` already
 forces `gamma>=2d+1>=5`.
+
+## 6. A six-member reducible-fibre packet
+
+The same square sidecar has a second exact completion.  Put
+
+```text
+A_5=(7h^2+3k^2)(3h^3+7h^2k+k^3),
+B_3=(h+k)(2h+k)(3h-k).                                         (20)
+```
+
+Direct expansion gives
+
+```text
+H(h,k)=(kB_3)^2+4h^2A_5.                                      (21)
+```
+
+First note that the pulled-back `h,k` are algebraically independent.  In
+the intrinsic ring, `h` is not a unit because `V_U(h)=G_m`.  If
+`7h^2+3k^2=0`, algebraic closedness and the determinant-one law would give
+`k=lambda h` and then `1=h(lambda C-m)`, a contradiction.  Thus the
+THM-3822 quadratic in `D` makes `D` algebraic over `K(h,k)`.  Its linear
+reconstruction formulas then put `C,m,A,omega,theta` in an algebraic
+extension of `K(h,k)`.  Since `K(U)` has transcendence degree two, so does
+`K(h,k)`.  Dominance of the plane atlas preserves this independence.
+
+Consider the six pencil members
+
+```text
+h=0,                  h-alpha_i k=0  (1<=i<=5),                 (22)
+```
+
+where the `alpha_i` are the roots of
+
+```text
+a(z)=(7z^2+3)(3z^3+7z^2+1).                                   (23)
+```
+
+They are five distinct finite slopes: `disc(a)=353831803500!=0`.
+At least one member in `(22)` is reducible in `K[x,y]`.
+
+Suppose otherwise.  In particular `h` is irreducible.  Modulo `(h)`, the
+arm law makes `k` a unit and `B_3=-k^3`, so `kB_3=-k^4` is a unit.  From
+`w^2=H(h,k)` and `(21)`, one of `w-kB_3,w+kB_3` vanishes modulo `h`.
+Changing the sign of `w` if necessary and taking one more `h`-adic residue
+gives
+
+```text
+w-kB_3=2h^2d,                A_5=d(kB_3+h^2d)                  (24)
+```
+
+for some `d in K[x,y]`.  Indeed, after writing `w-kB_3=hc`, cancellation
+in `(w-kB_3)(w+kB_3)=4h^2A_5` and reduction modulo `h` force `h|c`;
+division by the unit `2` gives `(24)`.
+
+Over `K`, equation `(23)` factors `A_5` into the five pairwise distinct
+linear binary forms `h-alpha_i k`.  By the assumed irreducibility of their
+pullbacks, UFD factorization in `K[x,y]` and `(24)` make `d`, up to a scalar,
+the product of a subset of these five forms.  Let its size be `r`.
+
+The formal grading in the algebraically independent pair `(h,k)` turns
+`A_5=d kB_3+h^2d^2` into degrees
+
+```text
+5 on the left,                 r+4 and 2r+2 on the right.       (25)
+```
+
+Every `r` except `1,2` has an unmatched extreme degree.  For `r=1`, the
+degree-five part would force `A_5=d kB_3`, but
+
+```text
+Res_z(A_5(z,1),(kB_3)(z,1))=-31298700!=0,                      (26)
+```
+
+and `A_5(1,0)=21`, so `kB_3` shares no projective linear factor with `A_5`.
+For `r=2`, the degree-six part would force `h^2d=-kB_3`, impossible because
+`gcd(h^2,kB_3)=1`.  This contradiction proves the reducible-fibre claim.
+
+Thus the surviving construction lane is narrower than a generic high-genus
+pencil: it must also allocate components at one of six fixed spectral
+members before solving the second-row and Keller equations.
+
+## 7. Exact scope
 
 The generative-polynomial existence and uniqueness used here are **CITED**,
 not reproved by the exact companion.  They make `(19)` unconditional for

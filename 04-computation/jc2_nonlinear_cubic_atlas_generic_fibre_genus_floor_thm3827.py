@@ -73,6 +73,38 @@ for genus_source in (0, 1, 2):
     check(2 * genus_source - 2 < 2 * genus_target - 2,
           f"Riemann--Hurwitz excludes source genus {genus_source}")
 
+# A second completed square turns the atlas pencil into a five-slope
+# reducibility gate.
+h, k = sp.symbols("h k")
+H_hk = H.subs({T: h, Z: k})
+A_pencil = (7 * h**2 + 3 * k**2) * (3 * h**3 + 7 * h**2 * k + k**3)
+B_pencil = (h + k) * (2 * h + k) * (3 * h - k)
+same(H_hk, (k * B_pencil) ** 2 + 4 * h**2 * A_pencil,
+     "five-slope completed square")
+
+z = sp.symbols("z")
+A_affine = sp.expand(A_pencil.subs({h: z, k: 1}))
+check(sp.degree(A_affine, z) == 5, "pencil packet has five finite slopes")
+check(sp.discriminant(A_affine, z) == 353831803500,
+      "five pencil slopes are distinct")
+check(A_pencil.subs({h: 1, k: 0}) == 21,
+      "pencil packet has no root at the k-zero point")
+check(sp.resultant(A_affine, sp.expand((k * B_pencil).subs({h: z, k: 1})), z)
+      == -31298700,
+      "size-one subset cannot have the kB complement")
+check(sp.gcd(sp.Poly(h**2, h, k), sp.Poly(k * B_pencil, h, k)).total_degree() == 0,
+      "size-two cancellation cannot make h squared divide kB")
+
+# If d has homogeneous degree r in A=d(kB+h^2d), all r except 1 and 2
+# have an unmatched extreme degree before coefficient arithmetic begins.
+possible_subset_sizes = []
+for r in range(6):
+    degrees = (r + 4, 2 * r + 2)
+    if max(degrees) == 5 or degrees[0] == degrees[1]:
+        possible_subset_sizes.append(r)
+check(possible_subset_sizes == [1, 2],
+      "only subset sizes one and two survive degree screening")
+
 # Exact squarefree/non-squarefree special-fibre controls for h=p(g).
 p_squarefree = (x - 1) * (x + 2)
 p_repeated = (x - 1) ** 2 * (x + 2)
@@ -92,6 +124,7 @@ semantic = {
     "mechanism": "a nonconstant k gives a curve map; Riemann-Hurwitz excludes generic-fibre genus <=2",
     "intersection": "K[x,y] intersect K(g)=K[g] by a denominator-root valuation",
     "arm": "etale pullback makes p(g) squarefree and k nonconstant on every component",
+    "pencil": "one of h=0 or the five fibres h-alpha_i*k=0 must be reducible",
     "scope": "generative closed factor existence is CITED, not computational; no JC counterexample",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
@@ -103,6 +136,7 @@ print("closed_polynomial=K(g)_relatively_algebraically_closed_in_K(x,y)")
 print("obstruction=generic_fibre_genus_0_1_2_impossible")
 print("intersection=K[x,y]_intersect_K(g)=K[g]")
 print("boundary=p(g)_squarefree;each_arm_component_requires_nonconstant_k")
+print("pencil=reducible_fibre_among_h_and_five_fixed_slopes")
 print("stein_factor=existence_CITED_not_computational")
 print("scope=no_JC_counterexample")
 print(f"CHECKS={CHECKS}")
