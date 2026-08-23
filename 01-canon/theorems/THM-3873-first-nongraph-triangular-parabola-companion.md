@@ -1,11 +1,11 @@
 ---
-id: THM-3872
+id: THM-3873
 title: "The first non-graph triangular parabola forces a projective companion"
 status: RESERVED / UNPROVED EMPTY STUB
 source: jc_sparse_direct_search / post-THM-3866--3870 non-graph A1 frontier, 2026-08-23
 ---
 
-# THM-3872 -- reserved
+# THM-3873 -- reserved
 
 **RESERVED / UNPROVED EMPTY STUB.**  This namespace is reserved for the
 all-degree transverse closure of the first genuinely non-graph marked-root
