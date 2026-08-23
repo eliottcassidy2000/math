@@ -1,0 +1,9 @@
+THM-3724 exact W004 scalar-13 Kummer-twist audit
+fibre word = 00|01+10|02+11|12+20|03+21|13+22|23
+weights = P(1-3n,1-2n,1), Q(-2n-2,-n-2,-2,2n-2)
+delta residues n mod 8 = 1,2,1,8,1,2,1,4
+end transports = upper primitive + Kummer power law verified
+zero sheet = two-power derivative incompatibility verified
+nonzero sheet = three-power compatibility numerator verified
+boundary = n=2,n=3 coefficient exits and n=1 deletion verified
+scope = complete named W004 scalar fibre 13+22, all scales
