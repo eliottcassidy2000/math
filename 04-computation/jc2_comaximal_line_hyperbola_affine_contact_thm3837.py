@@ -197,56 +197,111 @@ same_mod_root(coefficient_X5, -U * L_v / 3,
 same(L_v - L_u, 140 * alpha**2 + 307 * alpha - 93,
      "cross-difference of forced second-contact values")
 
-# FINITE-EXACT hostile scout only: all quadratic q,D over F_11 at alpha=1.
-qv2 = sp.symbols("Q0:6")
-dv2 = sp.symbols("D0:6")
-variables2 = qv2 + dv2
-
-
-def quadratic_profile(coefficients: tuple[sp.Symbol, ...], xx: sp.Expr,
-                      yy: sp.Expr) -> sp.Expr:
-    monomials = (1, xx, yy, xx**2, xx * yy, yy**2)
-    return sp.expand(sum(c0 * mon for c0, mon in zip(coefficients, monomials)))
-
-
-def mod11_coefficients(expression: sp.Expr, variable: sp.Symbol) -> list[sp.Expr]:
-    return [sp.Poly(coefficient, *variables2, modulus=11).as_expr()
-            for _, coefficient in sp.Poly(sp.expand(expression), variable).terms()]
-
-
-q_u2 = quadratic_profile(qv2, x_u, y_u)
-D_u2 = quadratic_profile(dv2, x_u, y_u)
-k_u2 = sp.expand(x_u - v_u + f_u * q_u2)
-h_u2 = sp.expand(k_u2 + f_u)
-d_u2 = sp.expand(-x_u**2 + f_u * D_u2)
-E_u2_full = residual(h_u2, k_u2, d_u2)
-
-q_v2 = quadratic_profile(qv2, x_v, y_v)
-D_v2 = quadratic_profile(dv2, x_v, y_v)
-k_v2 = sp.expand(x_v - v_v + f_v * q_v2)
-h_v2 = sp.expand(k_v2 + f_v)
-d_v2 = sp.expand(-x_v**2 + f_v * D_v2)
-E_v2_full = residual(h_v2, k_v2, d_v2)
-
-finite_equations: list[sp.Expr] = []
-for order in (1, 2):
-    finite_equations.extend(mod11_coefficients(
-        sp.expand(E_u2_full).coeff(epsilon, order), Y))
-    v_coefficient = sp.together(
-        sp.expand(E_v2_full).coeff(epsilon, order)
-    ).as_numer_denom()[0]
-    finite_equations.extend(mod11_coefficients(v_coefficient, X))
-
-finite_basis = sp.groebner(
-    finite_equations,
-    *variables2,
-    modulus=11,
-    order="grevlex",
-    method="f5b",
+# Exact characteristic-zero quadratic extension.  Use the universal Taylor
+# coefficient of the selector residual to avoid a bounded Groebner inference.
+qxx, qxy, qyy, dxx, dxy, dyy = sp.symbols(
+    "qxx qxy qyy dxx dxy dyy"
 )
-check(len(finite_basis.polys) == 1
-      and finite_basis.polys[0].as_expr() == 1,
-      "quadratic mod-11 first-two-contact ideal is the unit ideal")
+tau = sp.symbols("tau")
+K0, K1, K2 = sp.symbols("K0 K1 K2")
+Delta1, Delta2 = sp.symbols("Delta1 Delta2")
+T0, T1, T2 = sp.symbols("T0 T1 T2")
+k_taylor = K0 + K1 * tau + K2 * tau**2
+delta_taylor = Delta1 * tau + Delta2 * tau**2
+h_taylor = alpha * k_taylor + delta_taylor
+d_taylor = T0 + T1 * tau + T2 * tau**2
+E_taylor = residual(h_taylor, k_taylor, d_taylor)
+universal_first = sp.Poly(E_taylor, tau).coeff_monomial(tau)
+universal_second = sp.Poly(E_taylor, tau).coeff_monomial(tau**2)
+
+# Jets in the selected-line chart x=tau, y=Y.
+quad_q_u0 = q0 + qy * Y + qyy * Y**2
+quad_q_u1 = qx + qxy * Y
+quad_D_u0 = d0 + dy * Y + dyy * Y**2
+quad_D_u1 = dx + dxy * Y
+quad_u_jets = {
+    K0: 1,
+    K1: 1 - Y - quad_q_u0,
+    K2: -quad_q_u1 + Y * quad_q_u0,
+    Delta1: -1,
+    Delta2: Y,
+    T0: 0,
+    T1: -quad_D_u0,
+    T2: mu + Y * quad_D_u0 - quad_D_u1,
+}
+quadratic_u1 = universal_first.subs(quad_u_jets)
+quadratic_u2 = universal_second.subs(quad_u_jets)
+same_mod_root(quadratic_u1, -Q * (quad_D_u0 + rho),
+              "complete quadratic selected-line first contact")
+
+# Jets in the hyperbola chart v=tau, x=X, y=(1+tau)/X.
+quad_q_v0 = (q0 + qx * X + qy / X + qxx * X**2
+             + qxy + qyy / X**2)
+quad_q_v1 = qy / X + qxy + 2 * qyy / X**2
+quad_D_v0 = (d0 + dx * X + dy / X + dxx * X**2
+             + dxy + dyy / X**2)
+quad_D_v1 = dy / X + dxy + 2 * dyy / X**2
+quad_v_jets = {
+    K0: X,
+    K1: -1 + X * quad_q_v0,
+    K2: X * quad_q_v1,
+    Delta1: X,
+    Delta2: 0,
+    T0: mu * X**2,
+    T1: X * quad_D_v0,
+    T2: X * quad_D_v1,
+}
+quadratic_v1 = universal_first.subs(quad_v_jets)
+quadratic_v2 = universal_second.subs(quad_v_jets)
+expected_quadratic_v1 = X**5 * (
+    aprime
+    - mu * (
+        2 * B * X * quad_q_v0 - 2 * B
+        + X * (Bprime - 2 * B * inverse_alpha)
+        + alpha**2 * quad_D_v0
+    )
+)
+same_mod_root(quadratic_v1, expected_quadratic_v1,
+              "complete quadratic hyperbola first contact")
+
+q0_quadratic = q0_forced - qxy
+qx_quadratic = reduce_alpha(-alpha**2 * dxx * inverse_B / 2)
+qy_quadratic = reduce_alpha(
+    1 + alpha - alpha**2 * dxy * inverse_B / 2
+)
+quadratic_first_contact = {
+    qxx: 0,
+    qyy: 0,
+    d0: -rho,
+    dy: 0,
+    dyy: 0,
+    qx: qx_quadratic,
+    qy: qy_quadratic,
+    q0: q0_quadratic,
+}
+same_mod_root(quadratic_u1.subs(quadratic_first_contact), 0,
+              "quadratic first system kills the line contact")
+same_mod_root(quadratic_v1.subs(quadratic_first_contact), 0,
+              "quadratic first system kills the hyperbola contact")
+
+quadratic_u2_forced = quadratic_u2.subs(quadratic_first_contact)
+same_mod_root(quadratic_u2_forced, -Q * (dxy * Y + L_u),
+              "quadratic selected second contact peels d_xy then L_u")
+quadratic_v2_forced = reduce_alpha(
+    quadratic_v2.subs(quadratic_first_contact)
+)
+quadratic_v2_poly = sp.Poly(quadratic_v2_forced, X)
+coefficient_X8 = quadratic_v2_poly.coeff_monomial(X**8)
+same_mod_root(coefficient_X8, alpha**2 * dxx**2 / 4,
+              "quadratic hyperbola X^8 contact peels d_xx")
+quadratic_peel = {dxy: 0, dxx: 0}
+coefficient_X5_quadratic = sp.Poly(
+    quadratic_v2_forced.subs(quadratic_peel), X
+).coeff_monomial(X**5)
+same_mod_root(coefficient_X5_quadratic, -U * L_v / 3,
+              "quadratic hyperbola X^5 contact is the same L_v")
+check(sp.diff(coefficient_X5_quadratic, qxy) == 0,
+      "the remaining q_xy parameter cannot repair the terminal contact")
 
 source = Path(__file__).read_text(encoding="utf-8")
 check(not any(isinstance(node, ast.Assert) for node in ast.walk(ast.parse(source))),
@@ -254,11 +309,10 @@ check(not any(isinstance(node, ast.Assert) for node in ast.walk(ast.parse(source
 
 semantic = {
     "ansatz": "n=1; u=x; v=xy-1; k=x-v+uv*q; h=alpha*k+uv; d=-b(alpha)x^2/alpha^2+uv*D",
-    "profiles": "q,D affine over the cubic number field",
-    "first_contact": "qx=0,qy=1+alpha,dy=0,d0=-rprime,q0 determined by dx",
+    "profiles": "q,D of total degree at most two over the cubic number field",
+    "first_contact": "four parameters dx,dxx,dxy,qxy survive",
     "correction": "on v=0, k_f=q-1/x, not q",
-    "second_contact": "line forces L_u=0; hyperbola forces L_v=0; resultant=-5817545",
-    "finite_scout": "degree<=2 q,D at alpha=1 over F11 has unit first-two-contact ideal; characteristic-zero quadratic cell OPEN",
+    "second_contact": "dxy=dxx=0, then line forces L_u=0 and hyperbola forces L_v=0; resultant=-5817545",
     "scope": "selector equation only; remaining intrinsic row and planar Jacobian OPEN",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
@@ -267,9 +321,9 @@ print("theorem=THM-3837-comaximal-line-hyperbola-affine-bichromatic-contact-none
 print("fibre=u=x;v=xy-1;gcd(u,v)=1")
 print("row=k=x-v+uv*q;determinant_completion=exact")
 print("selector=d=-b(alpha)*x^2/alpha^2+uv*D")
-print("first_contact=one_parameter_survives;corrected_k_f=q-1/x")
-print("second_contact=L_u_and_L_v_incompatible;resultant=-5817545")
-print("quadratic_scout=GF11_alpha1_degree2_first_two_contacts_unit;CHAR0_OPEN")
-print("scope=n1_affine_qD_only;second_row_and_Jacobian_OPEN")
+print("first_contact=four_parameters_survive;corrected_k_f=q-1/x")
+print("second_contact=d_xy=d_xx=0_then_L_u_L_v_incompatible;resultant=-5817545")
+print("quadratic=characteristic_zero_exact;no_modular_inference")
+print("scope=n1_total_degree_at_most2_qD_only;second_row_and_Jacobian_OPEN")
 print(f"CHECKS={CHECKS}")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
