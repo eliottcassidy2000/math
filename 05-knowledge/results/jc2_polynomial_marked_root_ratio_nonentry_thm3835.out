@@ -1,0 +1,12 @@
+theorem=THM-3835-polynomial-marked-root-ratio-nonentry
+ratio=z=h/k_polynomial_forces_k_scalar
+sidecar=H(h,k)=w^2;deg_T_H=7
+odd_part=H(T,c)_never_linear_times_square_for_c_nonzero
+certificate=exact_bilinear_coefficient_Groebner_[1]
+mechanism=two_odd_roots_give_squares_with_nonzero_constant_difference
+conclusion=h,k_scalar_and_target_map_nondominant
+boundary=c=0_is_linear_times_square_but_forbidden_by_SL2
+scope=all_degree;genuinely_rational_root_ratio_required
+semantic_sha256=02fdbd5deb402cfb98842cf84318b6088f0a7d100d66cbf10004d8a8362f3b3b
+CHECKS=9
+RESULT=PASS
