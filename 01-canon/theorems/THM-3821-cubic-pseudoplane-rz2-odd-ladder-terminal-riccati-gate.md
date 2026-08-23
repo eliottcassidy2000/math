@@ -7,17 +7,19 @@ status: >
   of THM-3814 must enter one of two exact Kummer anatomies.  The generic
   branch has the odd exponent ladder 7,5,3,1 and ends in a Riccati square
   payment; the P=0 branch has the skip ladder 7,3,1 and ends in a linear
-  payment.  All one-sided and zero-terminal top branches are empty.  This
-  is a necessary top-branch classification, not an existence theorem, a
-  complete rz^2 no-go, or a planar-JC counterexample claim.
+  payment.  All one-sided and zero-terminal top branches are empty, and the
+  common Kummer parameter must be nonconstant.  This is a necessary
+  top-branch classification, not an existence theorem, a complete rz^2
+  no-go, or a planar-JC counterexample claim.
 source: jc_zero_debt_lift / cubic-pseudoplane rz2 odd-ladder lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The deterministic companion has 42 active
+  PROVISIONAL EXACT CANDIDATE.  The deterministic companion has 46 active
   gates checking the Poisson Casimir and signs, unique monic reduction, six
   descending source buckets, the asymmetric 7/4 contradiction, all 7/4,
   7/5, and 7/3 valuation families, the integrated polynomial relation, the
   generic and degenerate local valuation transfers, both terminal laws, and
-  their square/linear nonzero-root payments.  Normal/-O/frozen/hash/docs
+  their square/linear nonzero-root payments, and the independent generic
+  and degenerate constant-tower contradictions.  Normal/-O/frozen/hash/docs
   replay and independent proof rederivation are required before promotion.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
@@ -28,9 +30,9 @@ related:
   - THM-3813-quartic-r-repairs-of-nodal-carriers-have-critical-points
 script: 04-computation/jc2_cubic_pseudoplane_rz2_odd_ladder_thm3821.py
 output: 05-knowledge/results/jc2_cubic_pseudoplane_rz2_odd_ladder_thm3821.out
-script_sha256: 3aa4b4689fa943b0719d9495593606302b69e948b2ed4722837001037254da30
-output_sha256: a646d357d321d3d92d5fa60b8aca563bcf65ae74c48ba0d5de3c5405c52349d5
-semantic_sha256: 2050305b57636553904a0674dfaad50bc5f9bf34955b505e63edacc5c156920f
+script_sha256: a43c03b0aeacbc9422cbd9f5248f87c3cccadd52ad5aea473ef7234b99373d1e
+output_sha256: 7d2d1ce8e91e76df9bc7ed90df3b09e69e5d9054d5e3f7d2848b9f41fd07cf69
+semantic_sha256: e32d280719d0be2daf6d0d5315ffb3cc8633894a3a26578bb85d0c9a83fd1783
 hash_basis: raw LF bytes
 ---
 
@@ -58,7 +60,7 @@ Suppose
 {A,C}=1.                                               (3)
 ```
 
-Then there are `mu in k`, nonzero `alpha,beta in k`, and a nonzero
+Then there are `mu in k`, nonzero `alpha,beta in k`, and a nonconstant
 `v in k[e]` such that, on writing
 
 ```text
@@ -361,7 +363,44 @@ At a nonzero root `rho`, its order-`m-1` coefficient is
 
 which proves the linear payment `(9)`.
 
-## 6. Scope and exact controls
+## 6. The common tower parameter is nonconstant
+
+It remains to exclude a constant `v`.  Absorb its nonzero value into the
+three tower constants.  The arm equation in `(5)` is then
+
+```text
+(3e^2-2mu e-1)f=2beta e^3-1/12.                       (40)
+```
+
+Exact division by the displayed quadratic forces
+
+```text
+4mu^2+3=0,                  beta=-mu/4,
+f=1/12-mu e/6.                                         (41)
+```
+
+In the generic branch, substitute `(41)` and `(6)` into the next untouched
+coefficient.  Its origin value is
+
+```text
+[e^0]([r^2z^2]({A,C}-1)/e^3)=5delta/2 !=0,            (42)
+```
+
+contradicting `(3)`.
+
+In the degenerate branch, put `U_0=U(0)`.  The same coefficient and then
+the terminal `r^3` coefficient give
+
+```text
+[e^0]([r^2z^2]/e^3)=-6mu U_0,
+[e^0]([r^3]/e^3)=18theta U_0-mu/2.                    (43)
+```
+
+The first identity forces `U_0=0`, since `(41)` makes `mu!=0`; the second
+then leaves `-mu/2!=0`.  Thus constant `v` is impossible in both branches,
+as asserted in the theorem statement.
+
+## 7. Scope and exact controls
 
 The theorem identifies the smallest new information that the `rz^2` layer
 can carry.  THM-3814 failed because a fourth-power forcing arrived one
@@ -369,7 +408,7 @@ valuation step before every fifth-power correction.  Here the successive
 top buckets force the debt-paying ladder
 
 ```text
-v^7 -> v^5 -> v^3 -> v                               (40)
+v^7 -> v^5 -> v^3 -> v                               (44)
 ```
 
 in the generic branch, with a precisely typed `e^4,e^3,e^2,e` companion.
@@ -384,6 +423,6 @@ which local component spectra it must synchronize.
 The companion named in the metadata recomputes the full arbitrary-function
 bracket, freezes all six source buckets, checks every Kummer valuation
 family, verifies the integrated relation `(24)`, reconstructs both terminal
-laws from the actual `r^3` coefficient, and checks the local payment
-coefficients `(33),(39)`.  It uses no finite-field or bounded-degree
-inference.  **QED.**
+laws from the actual `r^3` coefficient, checks the local payment
+coefficients `(33),(39)`, and replays both constant-tower contradictions
+`(42)--(43)`.  It uses no finite-field or bounded-degree inference.  **QED.**

@@ -89,6 +89,7 @@ bucket_r4 = normal_poly.coeff_monomial(r**4)
 bucket_r3z2 = normal_poly.coeff_monomial(r**3 * z**2)
 bucket_r3z = normal_poly.coeff_monomial(r**3 * z)
 bucket_r3 = normal_poly.coeff_monomial(r**3)
+bucket_r2z2 = normal_poly.coeff_monomial(r**2 * z**2)
 
 expected_z = (36 * e**2 * f - 24 * e * kap - 12 * f + 1) / 2
 expected_r5 = -21 * e**2 * (-S * sp.diff(T, e) + T * sp.diff(S, e))
@@ -512,6 +513,95 @@ zero(
 )
 
 
+# Constant-v hostile closure in both branches.  The arm division first
+# forces the same quadratic parameter law as THM-3814; the next untouched
+# bucket then gives an immediate contradiction.
+def reduce_mu_law(expression: sp.Expr) -> sp.Expr:
+    numerator, denominator = sp.fraction(sp.cancel(expression))
+    if sp.diff(denominator, mu) != 0:
+        raise RuntimeError("mu-law reduction acquired a mu denominator")
+    return sp.cancel(sp.rem(numerator, 4 * mu**2 + 3, mu) / denominator)
+
+
+f_constant_v = sp.Rational(1, 12) - mu * e / 6
+K_constant_v = -mu * e**2 / 4
+S_constant_v = alpha * e**4
+U_constant = sp.Function("U_constant")(e)
+
+p_generic_constant = e**2 * U_constant
+P_generic_constant = delta * e**3
+Q_generic_constant = (
+    sp.Rational(5, 7) * delta / alpha * e * U_constant
+    - 4 * eta * alpha / mu * e**2
+)
+generic_constant_r2z2 = bucket_r2z2.subs(
+    {
+        f: f_constant_v,
+        kap: mu * f_constant_v + K_constant_v,
+        S: S_constant_v,
+        T: mu * S_constant_v,
+        p: p_generic_constant,
+        q: mu * p_generic_constant + P_generic_constant,
+        h: mu * g + Q_generic_constant,
+    }
+).doit()
+generic_constant_obstruction = reduce_mu_law(
+    sp.cancel(generic_constant_r2z2 / e**3).subs(e, 0)
+)
+zero(
+    generic_constant_obstruction - sp.Rational(5, 2) * delta,
+    "generic constant-v r2z2 obstruction",
+)
+
+p_skip_constant = e * U_constant
+Q_skip_constant = theta * e**2
+skip_constant_r2z2 = bucket_r2z2.subs(
+    {
+        f: f_constant_v,
+        kap: mu * f_constant_v + K_constant_v,
+        S: S_constant_v,
+        T: mu * S_constant_v,
+        p: p_skip_constant,
+        q: mu * p_skip_constant,
+        h: mu * g + Q_skip_constant,
+    }
+).doit()
+skip_constant_r3 = bucket_r3.subs(
+    {
+        f: f_constant_v,
+        kap: mu * f_constant_v + K_constant_v,
+        S: S_constant_v,
+        T: mu * S_constant_v,
+        p: p_skip_constant,
+        q: mu * p_skip_constant,
+        h: mu * g + Q_skip_constant,
+    }
+).doit()
+U0 = sp.symbols("U0")
+skip_constant_r2z2_origin = reduce_mu_law(
+    sp.cancel(skip_constant_r2z2 / e**3)
+    .subs(e, 0)
+    .subs(U_constant.subs(e, 0), U0)
+)
+skip_constant_r3_origin = reduce_mu_law(
+    sp.cancel(skip_constant_r3 / e**3)
+    .subs(e, 0)
+    .subs(U_constant.subs(e, 0), U0)
+)
+zero(
+    skip_constant_r2z2_origin + 6 * mu * U0,
+    "degenerate constant-v r2z2 origin equation",
+)
+zero(
+    skip_constant_r3_origin - (18 * theta * U0 - mu / 2),
+    "degenerate constant-v r3 origin equation",
+)
+gate(
+    sp.resultant(4 * mu**2 + 3, -mu / 2, mu) != 0,
+    "degenerate constant-v arm and terminal contradiction",
+)
+
+
 semantic = {
     "ansatz": "THM3814 plus rz2*S(e),rz2*T(e)",
     "top": "S!=0;T=mu*S;K=kappa-mu*f=beta*e^2*v^4;S=alpha*e^4*v^7",
@@ -519,6 +609,7 @@ semantic = {
     "generic_terminal": "Riccati law;nonzero roots pay 28alpha beta f=5delta U^2",
     "degenerate": "P=0;Q=theta*e^2*v^3;p=e*v*U",
     "degenerate_terminal": "linear law;nonzero roots pay 4beta f+3theta U=0",
+    "constant_v": "empty in both generic and degenerate terminal branches",
     "scope": "necessary anatomy only;existence and full rz2 closure open",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
@@ -535,6 +626,7 @@ print("generic=P=delta_e3_v5;p=e2_v3_U;Q=(5delta/7alpha)e_v_U+(eta_alpha/beta)e2
 print("generic_payment=28alpha_beta_f=5delta_U2_at_nonzero_v_roots")
 print("degenerate=P0;Q=theta_e2_v3;p=e_v_U")
 print("degenerate_payment=4beta_f+3theta_U=0_at_nonzero_v_roots")
+print("constant_v=empty_in_generic_and_degenerate_branches")
 print("scope=necessary_anatomy_only;existence_and_full_rz2_closure_open")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")

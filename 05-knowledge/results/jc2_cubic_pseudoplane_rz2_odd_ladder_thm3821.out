@@ -6,7 +6,8 @@ generic=P=delta_e3_v5;p=e2_v3_U;Q=(5delta/7alpha)e_v_U+(eta_alpha/beta)e2_v3
 generic_payment=28alpha_beta_f=5delta_U2_at_nonzero_v_roots
 degenerate=P0;Q=theta_e2_v3;p=e_v_U
 degenerate_payment=4beta_f+3theta_U=0_at_nonzero_v_roots
+constant_v=empty_in_generic_and_degenerate_branches
 scope=necessary_anatomy_only;existence_and_full_rz2_closure_open
-semantic_sha256=2050305b57636553904a0674dfaad50bc5f9bf34955b505e63edacc5c156920f
-CHECKS=42
+semantic_sha256=e32d280719d0be2daf6d0d5315ffb3cc8633894a3a26578bb85d0c9a83fd1783
+CHECKS=46
 RESULT=PASS
