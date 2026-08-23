@@ -2,7 +2,7 @@
 id: THM-3788
 title: "Dubouloz--Palka factorizations cross every standard plane chart"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  Every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every
   alpha-zero Dubouloz--Palka etale endomorphism of S(3,3,1), including every
   allowed degree 6N+3 and every source/target automorphic translate, factors
   through the universal cover with image crossing at least two components of
@@ -12,16 +12,19 @@ status: >
   maps; nonstandard plane opens and non-equivariant maps remain open.
 source: jc_sparse_direct_search / pseudo-plane chart-entry lane, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  Equations (8)--(10) are imported exactly
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  Equations (8)--(10)
+  were checked against the primary text of Dubouloz--Palka, and the standard
+  chart inverse, actual t=1 and R2-root fibres, triple valuations, N=0 seam,
+  and full target-automorphism argument were rederived.  The exact
+  consequence of essential uniqueness of the ruling is now written out in
+  Section 4.  Equations (8)--(10) are imported exactly
   from Dubouloz--Palka, arXiv:1701.01425, Theorem D and Lemma 5.1.  The proof
   checks every standard component, the N=0 boundary, all simple R2 roots,
   contact multiplicities, and source/target automorphism scope.  The exact
   companion verifies the degree packet through N=512, the genuine N=0
   cyclotomic control, pairwise separability resultants, the component-choice
   census, and hostile endpoint/simple-contact deletions.  Normal and optimized
-  runs byte-match the frozen transcript.  Independent hostile audit remains
-  due, especially for the standard-chart definition, the t=1 address, and
-  the target-automorphism permutation argument.
+  runs byte-match the frozen transcript.
 depends_on: []
 related:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
@@ -37,7 +40,7 @@ hash_basis: raw LF bytes
 
 # THM-3788 -- the known pseudo-plane counterexamples cannot enter one standard plane chart
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  This
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This
 theorem isolates a precise failure of the most direct attempt to turn the
 known generalized-Jacobian counterexamples on the cubic pseudo-plane into a
 counterexample on the affine plane.  Their lift to the universal cover is
@@ -277,9 +280,13 @@ Precomposing `j` by any automorphism of `B` does not change its image.  For
 the target, the affine ruling `X:T -> A1` is essentially unique because the
 Danielewski exponent is `3>1`; this is the uniqueness statement immediately
 following Flenner--Zaidenberg's Theorem 1.1.  Hence every automorphism of `T`
-preserves the unique reducible fibre `X=0` and permutes its three irreducible
-components `L_omega`.  From definition `(6)`, it therefore permutes the
-three standard charts.
+gives a ruling `X o Phi` with the same general fibres, so `X o Phi=h(X)`.
+A general fibre of `X o Phi` is connected, forcing `deg h=1`; and its
+reducible fibre is the inverse image of `X=0`, forcing the translation term
+of `h` to vanish because `X` has only one reducible fibre.  Thus every
+automorphism preserves `X=0` and permutes its three irreducible components
+`L_omega`.  From definition `(6)`, it therefore permutes the three standard
+charts.
 
 If `Phi in Aut(T)` and `sigma in Aut(B)` satisfied
 
@@ -312,8 +319,8 @@ Darboux without changing injectivity.  A hypothetical containment in `U_1`
 would therefore also fail its arm gate.  This is a second proof route and is
 not used in the Shabat degree argument above.
 Moreover `Theta_P` sends `q` to `q+P(X)`, so it preserves the linear arm
-restriction.  THM-3790 is still pending its own independent hostile audit;
-the present theorem does not depend on its status.
+restriction.  THM-3790 is independently hostile-audited, but the present
+theorem does not depend on it.
 
 ## 5. Consequence and exact boundary
 
