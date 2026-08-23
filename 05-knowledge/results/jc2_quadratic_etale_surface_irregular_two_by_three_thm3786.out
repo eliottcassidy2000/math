@@ -1,0 +1,17 @@
+theorem=THM-3786-quadratic-etale-surface-irregular-two-by-three-support-no-go
+field=algebraically_closed_characteristic_zero
+surface=r^3*g=z^2-r/4;weights_r_z_g=2,1,-4;bracket_degree=3
+supports=F:{a,a+d};G:{b,b+e,b+e+f};d,e,f>0
+collision_relations=d=e_or_d=f_or_d=e+f;double_collision_iff_d=e=f
+collision_counts=central:120,common_step:16,lower:240,none:3480,upper:240
+atlas_range=weights[-64,64];gaps[1,18]
+atlas_counts=central_constant_hub_to_2x2:333,central_zero_Ftop:81,central_zero_Gtop:1,lower_boundary:2,upper_synchronized:17,upper_zero_Ftop:442,upper_zero_Gtop:34
+hub_lemma=nonconstant_sign_sync_with_zero_constant_exception;constant_hub_typed
+lower_exit=two_weight_zero_boundaries_then_negative_arm_vanishing
+upper_exit=homogeneous_boundaries_or_-2_-1_full_synchronization
+central_exit=homogeneous_boundaries_or_constant_hub_deletes_to_2x2
+open_boundary=common_step_AP_d=e=f_only
+packet_sha256=7c36449baa7b60d0fa5a853de739ab5299ecac8333fb88d6747bcc873c6a8e4a
+semantic_sha256=917995306a060c8d6c27869d549ceb6cb6fa8538c72b5374ada5aa6636a2493c
+CHECKS=12635
+RESULT=PASS
