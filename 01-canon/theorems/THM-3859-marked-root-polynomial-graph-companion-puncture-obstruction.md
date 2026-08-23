@@ -96,9 +96,12 @@ points.  More sharply:
   component isomorphic to `G_m`, hence exactly `P1 minus {0,infinity}`.
 
 Repeated roots of the discriminant may make fibres singular or make the two
-components meet nontransversely, but they do not create a repeated global
-component: the generic discriminant is nonzero.  The two cases above are
-exhaustive.
+components of the **quadratic companion `H_(s,q)`** meet nontransversely, but
+they do not create a repeated irreducible factor inside `H_(s,q)`: its
+generic discriminant is nonzero.  The two companion cases above are
+exhaustive.  The total branch `Delta_b=F H_(s,q)` can still repeat the marked
+graph when `F` also divides `H_(s,q)`; the zero control `(25)` does exactly
+this and is not being excluded.
 
 Consequently a polynomial graph branch in the one-variable transverse
 grammar `(5)--(6)` never occurs without a nonpolynomial companion.  The
