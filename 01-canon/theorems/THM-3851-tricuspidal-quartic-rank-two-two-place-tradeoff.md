@@ -2,8 +2,8 @@
 id: THM-3851
 title: "The tricuspidal quartic trades rank-two resolvent torsion for two places at infinity"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  The parametrized tricuspidal quartic has a smooth
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The parametrized
+  tricuspidal quartic has a smooth
   bitangent whose complement has exactly two normalization places at
   infinity.  Its split-boundary quadratic-resolvent surface has constant
   units and class group (Z/3)^2, with a rank-two local cusp-address map and
@@ -13,6 +13,16 @@ status: >
   the two-place branch hostile to a deleted-ramification plane atlas.  No
   cubic completion, Keller atlas, or Jacobian counterexample is claimed.
 source: jc_zero_debt_lift / one-place S3 completion design lane, 2026-08-23
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn3709, 2026-08-23).  The audit
+  rederived the birational normalization and all three A2 packets; checked
+  the two distinct smooth bitangent contacts and both finite and infinite
+  cases of the fourth-power line test; traced the weak degree-two del Pezzo,
+  split-boundary, affine class-group, and unit exact sequences; and checked
+  the uniform E7 quotient, local rank-two map, deck anti-action, and Kummer
+  identification.  It also verified that the Jelonek conclusion in Section
+  6 remains explicitly conditional on a deleted ramification completion.
+  Normal and optimized runs byte-match the frozen 763-gate transcript.
 depends_on:
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
 related:
@@ -28,8 +38,8 @@ hash_basis: raw LF bytes
 
 # THM-3851 -- rank two costs the one-place branch
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of
 characteristic zero.  Consider the basepoint-free map
 
 ```text
@@ -387,4 +397,5 @@ address map, and deck inversion.  It reports 763 active exact gates.
 The weak-del-Pezzo resolution and class-group quotient `(20)-(22)` are the
 human geometric bridge.  The lattice census is exhaustive finite exact
 evidence after that bridge, not a computational proof of the bridge itself.
-Independent hostile audit is required before promotion.  **QED candidate.**
+The independent hostile audit rechecked each bridge before promotion.
+**QED.**
