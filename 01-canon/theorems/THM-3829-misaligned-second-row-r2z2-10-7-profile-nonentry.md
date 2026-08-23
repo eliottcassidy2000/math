@@ -2,7 +2,7 @@
 id: THM-3829
 title: "Misaligned second-row R2Z2 10/7 profiles do not enter the cubic pseudo-plane Darboux packet"
 status: >
-  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  In the first
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the first
   canonical second-row extension of THM-3821, suppose the nonzero r^2z^2
   profile X in the first coordinate has its necessarily proportional mate
   Y=lambda X, but the preceding rz^2 profiles are misaligned:
@@ -16,7 +16,15 @@ status: >
   higher canonical slots remain OPEN.
 source: jc_zero_debt_lift / cubic-pseudoplane second-row profile lane, 2026-08-23
 audit: >
-  PENDING INDEPENDENT HOSTILE AUDIT.  The deterministic companion has 58
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
+  The audit checked completeness of the S integral; every nonzero-root and
+  origin comparison in the cancellation-safe r4 source, including zero
+  orders and the tied payment; the global M=e v^2R factorization; the full
+  non-p and non-g order floors in every zero/nonzero branch; the p/g
+  resonance bounds; polynomiality of all terminal remainders; and both
+  final local coefficients.  Normal and optimized runs byte-match the
+  frozen transcript and the raw hashes agree.  The deterministic companion
+  has 58
   active gates checking the Poisson Casimir, monic canonical reduction,
   arm and top Wronskian buckets, exact 10/7 tower and r5 integration, the
   full pretyped r4 source polynomial and both local valuation families,
@@ -42,8 +50,8 @@ hash_basis: raw LF bytes
 
 # THM-3829 -- the misaligned 10/7 row is also empty
 
-**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  Let `k` be
-an algebraically closed field of characteristic zero and put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k` be an
+algebraically closed field of characteristic zero and put
 
 ```text
 B=k[r,z,e]/(r^2e-z^3+r),
