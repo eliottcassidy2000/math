@@ -2,8 +2,8 @@
 id: THM-3897
 title: "F-zero residual all-degree global emptiness"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  Using the now-proved THM-3895 high-y-degree
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Using the
+  now-proved THM-3895 high-y-degree
   input, the complete polynomial f=0 residual lane consists only of the
   base point T=0.  The quadratic-y
   channel collapses by a polynomial Pell/unit argument, the linear-y
@@ -12,12 +12,14 @@ status: >
   a polynomial-plane Keller atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3895 three-channel descent, 2026-08-23
 audit: >
-  SELF-AUDITED EXACT PROOF CANDIDATE.  The companion checks every residual
+  INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23.  The audit rechecked the UFD
+  parity and unit-factor argument, every zero-leading alternative, and the
+  origin-address use.  It also supplied an orthogonal normalized root-colour
+  and second-response proof of the quadratic channel, with a sharp
+  split-colour hostile outside the actual family.  The companion checks every residual
   leading coefficient, the Pell factorization, the constant-channel origin
   value, and the rational-x hostile point in 15 active gates.  Normal and
-  optimized runs byte-match the frozen output.  Independent audit must
-  recheck the UFD parity step, all zero-leading alternatives, and the use of
-  the address T(0,0)=0.  The inherited THM-3895 high-y-degree theorem was
+  optimized runs byte-match the frozen output.  The inherited THM-3895 high-y-degree theorem was
   promoted after independent hostile audit at commit 44c79bd581.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
@@ -35,8 +37,7 @@ hash_basis: raw LF bytes
 
 # THM-3897 -- the polynomial f-zero residual has only its base point
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**  Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
 algebraically closed field `k` of characteristic zero.  Put
 
 ```text
