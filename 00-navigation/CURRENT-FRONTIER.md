@@ -266,12 +266,12 @@ THM-3359 gives periodic modular supports; THM-2352 gives the q-adic plateau.
 [THM-3510](../01-canon/theorems/THM-3510-binary-shortlex-equal-level-count-log-density-boundary.md) is sharp: equal counts allow two densities or none.
 [THM-3730](../01-canon/theorems/THM-3730-positive-distinct-two-cube-support-abscissa.md)
 gives indexed abscissa `2/3`.  THM-3793/3825 give an inert-scale singleton
-family and decoder. Products of every fixed number `j` of distinct inert
-primes give
-`liminf H(X)/(log log X)^j>=2/(5*2^j*j!)`; hence `H` dominates every fixed
-real power of `log log X`.  Varying `j` pointwise strengthens this to
-`liminf log H(X)/log log X>=1/2`, or `H(X)>=(log X)^(1/2-epsilon)` eventually
-for every `epsilon>0`.  This is still no support asymptotic or residue.
+family and decoder. Fixed inert-prime product orders make `H` dominate every
+fixed power of `log log X`; varying one order gives exponent `1/2`.  The
+independently audited mesoscopic sum through `J_+` is quantitative:
+`liminf H(X)sqrt(log log X)/sqrt(log X)` is at least
+`(7/20)e^(-C_P)sqrt(2/3)=5.191674379270439...e-4`.  This is still no support
+asymptotic or residue.
 
 ### Established landmarks
 
@@ -334,9 +334,10 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   excludes finite-spatial cycles. THM-3804 gives all Smith forms; THM-3824
   gives fixed-division and one-shell parity tariffs, same-scale separation,
   and the all-shell stabilizer as the response kernel (zero at odd core).  A
-  FINITE-EXACT `D=B=4` routed-query audit recovers the next `(0,1,2)` bank
-  from two off-ray chains, each necessary in its declared deletion family;
-  literal static two-stage closure instead needs `134/256` coordinates.
+  The finite routed-query audit recovers the next `(0,1,2)` bank from two
+  necessary off-ray chains.  THM-3511's audited all-depth addendum proves
+  ambient active words send every even ray onto the odd half, so the least
+  literal two-stage bank has `2^(D+B-1)+B+2` points (`134/256` at `D=B=4`).
   Bounded physical recursion, adaptive/projective chronology and every prize
   remain OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  THM-3543--3782 close

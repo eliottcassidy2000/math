@@ -1,0 +1,13 @@
+RULE30_UNIVERSAL_STATIC_CLOSURE_PRIMARY_20260823
+status=PROVED_GROUP_LEMMA_PLUS_FINITE_EXACT_AUDIT;no_rule30_prize
+dependency_sha256=2ce110f0b8e9c71c3d298aaf07e8e6c02b70d33e5671bc763f3f3b490caa5445
+wreath_identity=A|0=A;(B^-1*A*B)|0=B;root_stabilizer=true
+section_depths=2..16;section_gates=131068
+orbit_depths=1..16;orbit_gates=1966082
+orbit_eccentricities_from_zero=((1,1),(2,3),(3,4),(4,7),(5,7),(6,9),(7,11),(8,12),(9,14),(10,16),(11,17),(12,18),(13,20),(14,21),(15,23),(16,24))
+single_generator_zero_cycles=((1,1,2),(2,1,2),(3,1,4),(4,1,8),(5,1,8),(6,1,16),(7,1,32),(8,1,32),(9,1,64),(10,1,64),(11,1,64),(12,1,64),(13,1,64),(14,1,64),(15,1,128),(16,1,256))
+closure_formula=2^(D+B-1)+B+2;D>=2;B>=1
+closure_sample_D5=((5,1,6,3,35),(5,2,7,4,68),(5,3,8,5,133),(5,4,9,6,262),(5,5,10,7,519),(5,6,11,8,1032),(5,7,12,9,2057),(5,8,13,10,4106))
+semantic_sha256=7b7b977eedf82a3798015e9e0d6be50f07ac0efd33b01bc6696b0be2a2a55a8d
+interpretation=positive_AB_monoid_is_level_transitive_on_every_finite_level;active_images_of_each_even_input_are_exactly_the_odd_half;literal_static_two_stage_query_closure_is_exponential
+ALL CHECKS PASSED

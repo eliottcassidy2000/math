@@ -14,6 +14,9 @@ status: >
   real power of log log X.  Allowing the product order to vary pointwise as
   floor((log log X)/2) further gives liminf log H(X)/log log X>=1/2,
   equivalently H(X)>=(log X)^(1/2-epsilon) eventually for every epsilon>0.
+  Summing disjoint singleton layers over a mesoscopic band gives the
+  quantitative strengthening liminf H(X)*sqrt(log log X)/sqrt(log X) at
+  least (7/20)*exp(-C_P)*sqrt(2/3)=5.191674379270439...e-4.
   No support asymptotic follows.  The finite LRC address sidecar is injective
   but has no loneliness consequence.
 source: root / cross_frontier_live_scout inert-prime all-scale lane, 2026-08-23
@@ -39,6 +42,11 @@ audit: >
   applies the finite collision and height inequalities directly at
   j=floor((log log X)/2), obtains a positive bracket tending to 7/8, and then
   uses Stirling.  It never passes a varying j through the fixed-j limit.
+  A fourth independent hostile audit proved the mesoscopic all-order band,
+  checked complete singleton fibres and cross-order disjointness, and sharpened
+  the provisional one-standard-deviation Poisson window to an almost-full
+  lower tail.  Its independent implementation passes 40,751 active gates;
+  normal, optimized, and frozen transcripts agree.
 depends_on:
   - THM-463-two-cube-representations-are-a-divisor-property-on-the-split-axis
   - THM-3730-positive-distinct-two-cube-support-abscissa
@@ -59,6 +67,16 @@ amplification_independent_output: 05-knowledge/results/two_cube_all_fixed_prime_
 amplification_independent_script_sha256: e32535c2fa1efb95c0ad5252387edfb0ac5f1d3a5073b042b3388a1971d40964
 amplification_independent_output_sha256: bc0fafc4ae54c9af3edc167e54bd0934a3c8678ac8d812121a3607316c870bcc
 amplification_independent_semantic_sha256: ae6aa4dd88588a96cf9f4e4a4ebbce62ac4c51c27d8ce1c8c2cb117563028082
+mesoscopic_script: 04-computation/two_cube_mesoscopic_order_band_thm3793.py
+mesoscopic_output: 05-knowledge/results/two_cube_mesoscopic_order_band_thm3793.out
+mesoscopic_script_sha256: c1671fa0c81777271118038a968b0dc8f2a427906797b216707416d6f5b0520f
+mesoscopic_output_sha256: 2bc454bbd4d10a7258b689d0658a6da44feef24be915328973bb005bf79ab9e0
+mesoscopic_semantic_sha256: 959b7df811dd0da85873c9d8a2357e1a773b298bf8b9618239e62f4c0557a841
+mesoscopic_independent_script: 04-computation/two_cube_mesoscopic_order_band_independent_audit_thm3793.py
+mesoscopic_independent_output: 05-knowledge/results/two_cube_mesoscopic_order_band_independent_audit_thm3793.out
+mesoscopic_independent_script_sha256: 481ae96c0d1e9d1c3a6ca8e1a1a15586910d1e5a0facebc46788bb56a7b45fc9
+mesoscopic_independent_output_sha256: 20a44c04b1a380307ca90bab735a702d913b9e3679fdfed72a10c7f3849038ca
+mesoscopic_independent_semantic_sha256: 67bc3dce58951879389161248f3b315a0c5286006c3f9fb0803ec30b5be76856
 hash_basis: raw LF bytes
 ---
 
@@ -204,6 +222,35 @@ finite symmetric-sum inequality at a varying order; it does not substitute
 `j=j(X)` into the fixed-`j` limit `(6c)`.  It remains only a lower bound for
 the deduplicated critical mass and gives no support asymptotic or critical
 coefficient.
+
+### Mesoscopic all-order quantitative amplification
+
+For every real `Z>=11` and integer `J>=1`, the disjoint singleton layers may
+be summed before taking a limit:
+
+```text
+H(Z^(3J)) >= (2/5) sum_(1<=j<=J) e_j(Z).             (6g)
+```
+
+With natural logarithms and the constant `C_P` from `(4)`, this implies
+
+```text
+liminf_(X->infinity)
+  H(X) sqrt(log log X)/sqrt(log X)
+ >= c_band,
+
+c_band=(7/20)exp(-C_P)sqrt(2/3)
+      =5.191674379270439...*10^(-4).                 (6h)
+```
+
+Equivalently,
+
+```text
+H(X) >= (c_band-o(1))sqrt(log X/log log X).          (6i)
+```
+
+No optimality is asserted for `c_band`; it is the explicit constant supplied
+by the present inert-prime singleton construction.
 
 ## 2. Proof of the singleton theorem
 
@@ -455,6 +502,76 @@ This proves `(6e)`.  For each `epsilon>0`, the definition of the lower limit
 gives `(6f)` eventually.  Conversely, `(6f)` for every positive `epsilon`
 and then `epsilon` tending to zero recovers `(6e)`.
 
+To prove the stronger `(6g)--(6i)`, first sum `(17)` over every unordered
+prime set of every order `1<=j<=J`.  Global singleton uniqueness makes all
+rows disjoint even across different orders, and the common height bound is
+`Z^(3J)`.  This proves `(6g)`.
+
+Put
+
+```text
+L=log log X,
+J_+=floor(L/2-(1/2)log L+L^(2/3)),
+Z=X^(1/(3J_+)),
+a=(1/2)[L-log(3J_+)]-C_P,
+delta_L=1-J_+^2/(8a^2).                              (24)
+```
+
+For example, the elementary floor bounds already give, for `L>=10^6`,
+
+```text
+L/2<J_+<=0.51L,        0.49L<=a<L/2,
+J_+/a<sqrt(8),         delta_L>0.                    (25)
+```
+
+Writing the floor error as
+
+```text
+theta_L=L/2-(1/2)log L+L^(2/3)-J_+ in [0,1),
+```
+
+gives the exact identity
+
+```text
+J_+-a=L^(2/3)+(1/2)log(3J_+/L)+C_P-theta_L.          (26)
+```
+
+Thus `J_+/a->1`, `delta_L->7/8`, and
+`(J_+-a)/sqrt(a)->infinity`.  Apply `(18)` with `A=A(Z)>=a` and
+`B=B(Z)<1/4`.  On the positive range `(25)`, the lower polynomial in `A` is
+monotone, so every `2<=j<=J_+` satisfies
+
+```text
+e_j(Z)>=delta_L a^j/j!.                              (27)
+```
+
+If `N_a` is a Poisson random variable with mean `a`, `(6g)` and `(27)` give
+
+```text
+H(X)>=(2/5)delta_L e^a Prob(2<=N_a<=J_+).             (28)
+```
+
+This Poisson law is only the exponential-series identity for the right side
+of `(27)`, not a Bernoulli model for the Euler product.  Chebyshev's inequality
+and `(26)` show
+
+```text
+Prob(N_a>J_+)<=a/(J_+-a)^2 ->0,
+Prob(N_a<=1)=e^(-a)(1+a)->0.                          (29)
+```
+
+Finally, the exact height conversion is
+
+```text
+e^a sqrt(L)/sqrt(log X)
+ =exp(-C_P)sqrt(L/(3J_+))
+ ->exp(-C_P)sqrt(2/3).                                (30)
+```
+
+Combining `(28)--(30)` proves `(6h)` and `(6i)`.  Any cutoff displacement
+`h(L)` with `sqrt(L)<<h(L)<<L` gives the same limiting constant; the exponent
+`2/3` is a convenient explicit choice.
+
 ## 5. Exact boundary hostiles
 
 The split-prime condition cannot be discarded:
@@ -531,6 +648,10 @@ python -B 04-computation/two_cube_all_fixed_prime_product_amplification_thm3793.
 python -B -O 04-computation/two_cube_all_fixed_prime_product_amplification_thm3793.py
 python -B 04-computation/two_cube_all_fixed_prime_product_amplification_independent_audit_thm3793.py
 python -B -O 04-computation/two_cube_all_fixed_prime_product_amplification_independent_audit_thm3793.py
+python -B 04-computation/two_cube_mesoscopic_order_band_thm3793.py
+python -B -O 04-computation/two_cube_mesoscopic_order_band_thm3793.py
+python -B 04-computation/two_cube_mesoscopic_order_band_independent_audit_thm3793.py
+python -B -O 04-computation/two_cube_mesoscopic_order_band_independent_audit_thm3793.py
 ```
 
 and compare with
@@ -539,6 +660,8 @@ and compare with
 05-knowledge/results/two_cube_inert_cubefree_singleton_thm3793.out
 05-knowledge/results/two_cube_all_fixed_prime_product_amplification_thm3793.out
 05-knowledge/results/two_cube_all_fixed_prime_product_amplification_independent_audit_thm3793.out
+05-knowledge/results/two_cube_mesoscopic_order_band_thm3793.out
+05-knowledge/results/two_cube_mesoscopic_order_band_independent_audit_thm3793.out
 ```
 
 The normal and optimized streams line-normalize exactly to the frozen

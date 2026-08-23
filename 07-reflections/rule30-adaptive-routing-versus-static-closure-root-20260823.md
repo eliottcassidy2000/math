@@ -1,9 +1,11 @@
 # Rule 30 adaptive routing versus static closure
 
-**Status (2026-08-23): FINITE-EXACT stopping boundary.**  This note records a
-bounded observer computation downstream of THM-3511 and THM-3824.  It proves
-no bounded first-return gap, physical signalizer recurrence, finite graph,
-center-column statement, balance statement, or prediction lower bound.
+**Status (2026-08-23): PROVED ambient static-closure theorem plus FINITE-EXACT
+adaptive audit.**  The bounded routed-observer computation is now paired with
+an all-depth theorem: the least literal uniform two-stage point bank contains
+the whole odd half.  This still proves no bounded first-return gap, physical
+signalizer recurrence, finite graph, center-column statement, balance
+statement, or prediction lower bound.
 
 ## Inheritance and question
 
@@ -57,16 +59,25 @@ X_B={0,2,4,...,2^(B+1)}.                                       (3)
 ```
 
 A literal nonadaptive two-stage point-query bank must retain `pi` on `X_B`
-and on every possible routed address `pi(x)`.  Finite Mealy-orbit BFS shows
-that, for each `x in X_B` and each tested `1<=B<=6` with `D=4`, active
-words send `x` onto the entire odd half.  Hence the literal static closure is
+and on every possible routed address `pi(x)`.  The wreath recursion contains
+the self-replication certificate
+
+```text
+A|_0=A,                    (B^(-1)AB)|_0=B.
+```
+
+Hence the root stabilizer surjects by sections onto `<A,B>`, so this group is
+level-transitive.  On each finite level the positive monoid has the same
+orbits, and active words send every even ray onto exactly the entire odd half.
+Therefore, for every `D>=2,B>=1`, the literal static closure is
 
 ```text
 S_B=X_B union {all odd depth-(D+B) rays},
 |S_B|=2^(D+B-1)+B+2.                                           (4)
 ```
 
-The exact sizes are `19,36,69,134,263,520`.  At the central test
+The earlier finite sizes `19,36,69,134,263,520` are instances of this theorem.
+At the central test
 `B=4,H=8`, static closure consumes `134` of `256` coordinates.  The routed
 observer avoids this cost because it asks the second query only after its
 state-dependent address is known.
@@ -79,12 +90,13 @@ indispensable sidecar is the routed intermediate address `pi(x)`.
 
 ## Boundary and next pull
 
-The finite computation does not show that the physical signalizer path
-realizes either hostile pair, that the odd-half orbit statement holds for all
-budgets, or that two chains are optimal against a richer Mealy-state
-representation.  The first live question is whether `pi(x)` itself has a
-bounded recursive carry/section description along the physical path.  Such a
-recursion could retain adaptive closure without storing half a portrait.
+The all-depth proof ranges over ambient active words, not the physical
+signalizer path, and its minimality is only for literal point banks.  It does
+not show that the physical path realizes either hostile pair or that two
+chains are optimal against a richer Mealy-state representation.  The first
+live question remains whether `pi(x)` itself has a bounded recursive
+carry/section description along the physical path.  Such a recursion could
+retain adaptive closure without storing half a portrait.
 
 Exact artifacts:
 
@@ -97,3 +109,12 @@ semantic SHA256 0608bc5298aa7855dabb4784dd56df3c2df6cba06a7bfe0e2a60b754f1a3ca63
 ```
 
 Normal and optimized runs byte-match the frozen LF output.
+
+The universal addendum and its import-free hostile audit are canonical at
+
+```text
+04-computation/rule30_universal_static_closure_thm3511.py
+05-knowledge/results/rule30_universal_static_closure_thm3511.out
+04-computation/rule30_universal_static_closure_independent_audit_thm3511.py
+05-knowledge/results/rule30_universal_static_closure_independent_audit_thm3511.out
+```

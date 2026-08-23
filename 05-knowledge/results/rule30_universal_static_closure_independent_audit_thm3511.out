@@ -1,0 +1,7 @@
+RULE30_UNIVERSAL_STATIC_CLOSURE_INDEPENDENT_20260823
+status=INDEPENDENT_FINITE_EXACT_AUDIT;direct_wreath_recursion
+depths=1..14;starts=105
+zero_eccentricities=((1,1),(2,3),(3,4),(4,7),(5,7),(6,9),(7,11),(8,12),(9,14),(10,16),(11,17),(12,18),(13,20),(14,21))
+identity=(B^-1*A*B)|0=B;positive_AB_orbit=full_level
+semantic_sha256=2654e5dd189e0bc70eedc82fdc9a57b810af0122c47314606042e2d96296a613
+ALL CHECKS PASSED
