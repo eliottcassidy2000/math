@@ -289,12 +289,18 @@ a2_triple += wedge(2, d0 * K**2, -1, b0 * H2)
 a2_scalar = wedge(-4, a * H2**4, 3, e0 * K**3)
 a2_scalar += wedge(-2, a2_arm, 1, a2_mate)
 a2_euler = Jp * K + 2 * J * Kp
+a2_quotient = sp.cancel(a2_scalar / a2_euler)
+a2_denominator = sp.denom(a2_quotient)
+require(
+    not any(
+        a2_denominator.has(variable)
+        for variable in (J, K, Jp, Kp, H, Hp)
+    ),
+    "family A n=2 Euler quotient is polynomial in source variables",
+)
 zero(a2_top, "family A n=2 top")
 zero(a2_triple, "family A n=2 triple")
-zero(
-    a2_scalar - a2_euler * sp.cancel(a2_scalar / a2_euler),
-    "family A n=2 Euler",
-)
+zero(a2_scalar - a2_euler * a2_quotient, "family A n=2 Euler")
 
 
 print("THM-3714 exact W003 scalar-fibre-02 audit")

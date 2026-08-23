@@ -11,11 +11,14 @@ status: >
   not all of W003, the full 3x4 cell, or JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
-  SELF-AUDITED.  The exact companion reconstructs the post-parity
-  actual-support census on the named fibre, checks both generic integrations
-  in all three gcd residue branches, verifies the charge and nonlinear-wedge
-  identities, and checks the exceptional n=2 peel.  Normal and optimized runs
-  byte-match the frozen transcript.  Independent hostile audit remains open.
+  INDEPENDENTLY HOSTILE-AUDITED.  The exact companion reconstructs the
+  post-parity actual-support census on the named fibre, checks both generic
+  integrations in all three gcd residue branches, verifies the charge and
+  nonlinear-wedge identities, and checks the exceptional n=2 peel.  An
+  independent derivation checked every coefficient, sign, integration
+  constant, polynomiality boundary, Euler quotient, and nonunit degree.  It
+  also prompted an explicit source-variable denominator check in the
+  exceptional companion.  Normal and optimized runs byte-match the transcript.
 depends_on:
   - THM-3603-three-by-four-support-collision-cone-and-fibre-cut-atlas
   - THM-3606-exponent-two-three-by-four-scalar-singleton-gate-atlas
@@ -26,7 +29,7 @@ related:
   - THM-3712-y0-w007-complete-all-scale-arm-transport-nonentry
 script: 04-computation/jacobian_y0_w003_scalar02_euler_thm3714.py
 output: 05-knowledge/results/jacobian_y0_w003_scalar02_euler_thm3714.out
-script_sha256: b91a594f3734aac39b9324dbde72be8a24bdfc78c0d5772996185411aea9f4fa
+script_sha256: 6e6b312fd4badf931ce1d978fca9b78fd4ac59c1a21ea2ed429c0da02d92fb8b
 output_sha256: 8f36643788358195faf7070b3d50f89e45d458ad3aa342a3965d9f52cc3349d9
 hash_basis: LF-normalized bytes
 ---
