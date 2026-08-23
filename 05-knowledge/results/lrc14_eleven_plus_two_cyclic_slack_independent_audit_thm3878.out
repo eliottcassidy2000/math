@@ -1,0 +1,16 @@
+LRC14_REMAINING_CYCLIC_INTERVAL_INDEPENDENT_AUDIT_20260823
+method=periodic_open_interval_union+strict_overlap+shifted_intersection+half_period_quotient
+atlas=5855;odd_scale2_residual=1650
+scale1_max_beta=29/196;pairs=((1, 28),);K_le_1=5445
+scale2_max_beta=2/63;pairs=((1, 9),);K_le_1=1649
+scale2_unique_K_gt_1=((1, 9, '4/3'),)
+control_1_3=('1/7', 3, '5/21', '0', 0, '0')
+control_1_5=('1/7', 5, '9/35', '0', 0, '0')
+control_1_9=('1/7', 9, '17/63', '2/63', 2, '4/63')
+control_1_355=('1/7', 305, '659/2485', '2/2485', 50, '20/497')
+control_3_7=('1/21', 9, '13/49', '1/49', 2, '2/49')
+control_175_181=('353/221725', 305, '13/49', '349/221725', 50, '2/49')
+THM3743_join=saturated_by_internal_pair_relation_on_every_atlas_row;zero_seam_deletions
+semantic_sha256=8c0f573d0f2ac275c3877fe32d4d74176b0058c9417ce7322c4428d73c1e02ad
+gates=9718655
+STATUS=PASS

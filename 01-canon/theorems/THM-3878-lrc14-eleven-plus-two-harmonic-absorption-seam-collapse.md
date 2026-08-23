@@ -2,11 +2,15 @@
 id: THM-3878
 title: "LRC(14) eleven-plus-two seams collapse by harmonic absorption"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In THM-3818's
+  PROVED RELATIVE TO CITED LRCUpTo13 + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED.  In THM-3818's
   exact rank-eleven two-component 11+2 branch, THM-668 harmonic absorption
   closes every seam of scale at least three and every scale-two seam with an
   even pair coordinate.  Exact two-lift geometry closes (1,3,2).  The
-  necessary ledger falls from 52,692 to 7,505; LRC(14) remains open.
+  unconditional necessary ledger falls from 52,692 to 7,505.  In the extra
+  relative-scale slice t>=U, cyclic slack and one auxiliary LRC(13) witness
+  leave only 58 certificate survivors.  The t<U slice is untouched beyond
+  explicit ratio inequalities, and LRC(14) remains open.
 source: root / THM-3818 cyclic seam and THM-668 dispatch join, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS.  A separate 93,524-gate checker rebuilds
@@ -17,9 +21,15 @@ audit: >
   (1,3), and the final 7,505 necessary triples.  It also proves the (3,7,2)
   control has maximum 1/10 and connected decoder graph, so it is only a
   pair-selector hostile.  Normal, optimized and frozen streams byte-match.
+  Two further exact implementations compute cyclic obstruction-component
+  widths and the conditional t>=U deletion ledger by wall-cell topology and
+  by periodic real-line open unions.  They agree on all 5,855 pairs, the
+  5,445+1,649 base closures, 353 auxiliary closures, the final ordered list of
+  58 certificate survivors, and the (1,9,2) multiplier hostile.
 depends_on:
   - THM-3818-scaled-inert-cubeclass-support-two-pair-packet
   - THM-668-detuned-harmonic-dispatch
+  - LRCUpTo13
 related:
   - THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction
 script: 04-computation/lrc14_eleven_plus_two_harmonic_absorption_seam_collapse_thm3878.py
@@ -32,12 +42,37 @@ independent_audit_output: 05-knowledge/results/lrc14_eleven_plus_two_harmonic_ab
 independent_audit_script_sha256: b9760e34de5779e5ccf328b12058feb1769965c0e7d614b5fd89f779141a9143
 independent_audit_output_sha256: 6dfca0670072ca39c6cba48e895cc79abcb4548b17223989518bbd7c657450a3
 independent_audit_semantic_sha256: 22bffbd1a61a3e19596408c6c73bc1db6562896c3e314e327b285e35dfe73b86
+cyclic_slack_script: 04-computation/lrc14_eleven_plus_two_cyclic_slack_thm3878.py
+cyclic_slack_output: 05-knowledge/results/lrc14_eleven_plus_two_cyclic_slack_thm3878.out
+cyclic_slack_script_sha256: 28566aa72801afef9486fcd5731d4e16e44275f26b63a37a36e6a553712fc04b
+cyclic_slack_output_sha256: 64b6159df9e3ba159b0e6b3ad5558aeb6627f9016b8991b18c1f8b79b8e62806
+cyclic_slack_semantic_sha256: 2466ab9a4400ecd20d3cb9c3bc01c18e01d9cc27ca99185387f9d88ab3ecd2aa
+cyclic_slack_independent_script: 04-computation/lrc14_eleven_plus_two_cyclic_slack_independent_audit_thm3878.py
+cyclic_slack_independent_output: 05-knowledge/results/lrc14_eleven_plus_two_cyclic_slack_independent_audit_thm3878.out
+cyclic_slack_independent_script_sha256: db4fec19bc886df766d108c9f30da4085208b8c2a3f58329484da0bedb181b94
+cyclic_slack_independent_output_sha256: bc423d3d6c161398f420ae5c14169788c6dff07d4ba586b2e096ae70e0ef668b
+cyclic_slack_independent_semantic_sha256: 8c0f573d0f2ac275c3877fe32d4d74176b0058c9417ce7322c4428d73c1e02ad
+scale1_deletion_script: 04-computation/lrc14_eleven_plus_two_scale1_deletion_thm3878.py
+scale1_deletion_output: 05-knowledge/results/lrc14_eleven_plus_two_scale1_deletion_thm3878.out
+scale1_deletion_script_sha256: dd1f2de9b8f77ac657be98f10c523d46e2c1af4c6b992215aa7c25bc3f42e149
+scale1_deletion_output_sha256: a2c2fec59aa1f72f7247dce22e28a1d3776c57f8151d94724d1da6a66ab09502
+scale1_deletion_semantic_sha256: 7401b4cbd68d3c2263e4f07f1921e1ec6e8b6e8b1b681cc0cc6315c262745a74
+full_slack_independent_script: 04-computation/lrc14_eleven_plus_two_cyclic_slack_full_independent_audit_thm3878.py
+full_slack_independent_output: 05-knowledge/results/lrc14_eleven_plus_two_cyclic_slack_full_independent_audit_thm3878.out
+full_slack_independent_script_sha256: 408f539b3b0b71b13d0ffa31f06314fe5dcfd303a8cc3d4da1d077a2fcec878b
+full_slack_independent_output_sha256: f20c8bf9af7b8376e73aade595348693b40b818efa0131b97dcb17fa48b95726
+full_slack_independent_semantic_sha256: 70647b52896622718cd39ba148c4afd80bf6193c847488d5487b4fa2de4014a1
+scale2_auxiliary_hostile_script: 04-computation/lrc14_eleven_plus_two_scale2_auxiliary_hostile_thm3878.py
+scale2_auxiliary_hostile_output: 05-knowledge/results/lrc14_eleven_plus_two_scale2_auxiliary_hostile_thm3878.out
+scale2_auxiliary_hostile_script_sha256: 27dc43dd5400de8e042f591f2972e53974791299b053eab43077536e9260a6d2
+scale2_auxiliary_hostile_output_sha256: 4cecdda5661618801d2f82a6cdec6264331b094296dd6b8fb73446bd8f11e21b
 hash_basis: raw LF bytes
 ---
 
 # THM-3878 -- harmonic absorption collapses the 11+2 seam ledger
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This is a
+**PROVED RELATIVE TO CITED LRCUpTo13 + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**  This is a
 bounded theorem inside THM-3818's exact oriented rank-eleven two-component
 branch.  It proves no statement about other component shapes, physical entry,
 owner/arrival, or arbitrary 14-runner rows.  In particular, **LRC(14) remains
@@ -165,6 +200,153 @@ combined exact residual                            7,505
 The census is **FINITE-EXACT**; the absorption implication and odd-pair
 criterion are proved for all tuples in their stated symbolic scopes.
 
+## Relative-scale cyclic-slack theorem
+
+The residual ledger admits a much sharper filtration when the relative scale
+is retained.  Put `U=max_i u_i` and
+
+```text
+A_pq=D_p union D_q,             D_w={z in R/Z: ||wz||<1/14}.
+```
+
+Let `beta_1(p,q)` be the maximum circular component length of `A_pq`.  For
+odd `p,q`, let `C_pq` be the image under `w=2z` of
+
+```text
+A_pq intersect (A_pq-1/2),
+```
+
+which is half-periodic, and let `beta_2(p,q)` be its maximum component
+length.  Every hypothetical counterexample in the branch of the bounded
+theorem obeys
+
+```text
+s=1:                 t < 42 beta_1(p,q) U,
+s=2, p,q odd:        t < 42 beta_2(p,q) U.               (5)
+```
+
+Indeed, cited `LRCUpTo13` applied to the eleven speeds `u` supplies `y_0`
+with clearance at least `1/12`.  The clearance is `U`-Lipschitz, so the
+closed interval of radius
+
+```text
+(1/12-1/14)/U=1/(84U)
+```
+
+about `y_0` keeps every `u_i` at clearance at least `1/14`.  Its length is
+`1/(42U)`.  If `s=1` and the full row were a counterexample, its image under
+`w=ty` would be a compact connected subset of the open set `A_pq`, hence
+would fit strictly inside one component.  This gives the first inequality
+in (5).  If `s=2`, coprimality makes `t` odd.  The two actual times `y/2`
+and `(y+1)/2` present pair phases `z=ty/2` and `z+1/2`; both must be bad.
+Passing to `w=2z=ty` gives the second inequality by the same argument.
+
+Two exact constructions of these open sets agree on every atlas pair.  The
+first uses rational wall cells and joins adjacent active cells only across an
+active wall.  The second constructs periodic open intervals on the real
+line, merges only strict overlaps, intersects the shifted copy, and then
+takes the half-period quotient.  They give
+
+```text
+max beta_1 = 29/196, uniquely at (1,28);
+42 beta_1<=1 for 5,445 of 5,855 scale-one pairs;
+
+max beta_2 = 2/63, uniquely at (1,9);
+42 beta_2<=1 for 1,649 of 1,650 residual scale-two pairs. (6)
+```
+
+Consequently, in the additional slice
+
+```text
+t>=U,                                                        (7)
+```
+
+(5)--(6) close `5,445` scale-one types and all residual
+scale-two types except `(s,p,q)=(2,1,9)`.
+
+### One-auxiliary deletion certificate
+
+For any positive integer `a`, apply cited `LRCUpTo13` to the twelve-speed
+pack
+
+```text
+u union {at}.
+```
+
+Under (7), its largest speed is `at`; a `1/13` witness therefore has a
+closed `1/14`-safe interval of length `1/(91at)`.  Under `w=ty`, the image
+has length `1/(91a)`.  A counterexample would force that image into a
+component of
+
+```text
+A_pq intersect {w: ||aw||>=1/14}.                         (8)
+```
+
+For `a=p` or `a=q`, this is a genuine deletion witness: the chosen pair
+runner joins the twelve-speed pack and the other pair runner must cover the
+whole safe interval.  Exact component lengths in (8) close another `353` of
+the `410` scale-one pairs left by (6).
+
+For completeness, every positive `a` was tested on the final 57 pairs.  The
+search is finite symbolically: if a pair-danger component has length `beta`
+and `a>13/(7 beta)`, it contains a complete auxiliary-safe cell of length
+`6/(7a)>1/(91a)`, so that `a` cannot satisfy the strict component cut.  The
+largest necessary finite cutoff is `78`.  No arbitrary one-auxiliary choice
+closes any of the final 57 types.
+
+For the scale-two exception `(1,9)`, the quotient obstruction is exactly
+
+```text
+(2/21,8/63) union (55/63,19/21),
+```
+
+with both components of length `2/63`.  Thus (5) leaves only
+
+```text
+U<=t<4U/3.                                                 (9)
+```
+
+Every auxiliary multiplier `1<=a<=58` fails the component cut.  For
+`a>=59`, each obstruction arc contains a complete auxiliary-safe cell of
+length `6/(7a)`, proving that no larger multiplier can help either.
+
+The exact conditional ledger is therefore
+
+```text
+unconditional THM-3878 residual                       7,505
+t>=U base cyclic-slack closures                       7,094
+additional scale-one deletion closures                  353
+conditional one-auxiliary certificate survivors           58
+  scale one                                                57
+  scale two                                      (2,1,9)     1
+```
+
+The ordered survivor-list SHA-256 is
+
+```text
+34ffd609ed76d287cf7379c697cc060633345459ea321a896cd0f4c30a6255ec.
+```
+
+The word *survivor* refers to this certificate family, not to LRC.  Outside
+the extra slice (7), the unconditional ledger remains `7,505`; the region
+`t<U` is untouched except for the strict inequalities (5).
+
+### Flatness sidecar saturation
+
+THM-3743 supplies no further scale cut here.  Every atlas pair already has
+the internal primitive relation `(q,-p)` of norm `p+q<=356`.  In the direct
+sum decoder space, a relation supported on both components conformally
+decomposes into its two component restrictions, so every Graver element is
+component-supported and carries no information about `s:t`.  The first
+failed implication is therefore
+
+```text
+one short internal relation  -/->  a crossing relation or a scale bound.
+```
+
+A separately forced crossing relation could still rank-raise, but the bare
+THM-3743 sidecar deletes zero seams from this atlas.
+
 ## Minimal hostile and controls
 
 The first atlas pair for which the universal two-branch selector fails is
@@ -229,10 +411,15 @@ typed selector/sidecar architecture.
 
 ## Remaining frontier
 
-The bounded result leaves exactly:
+Unconditionally, the bounded result leaves exactly:
 
 - all `5,855` scale-one triples, where no cyclic branch orbit exists; and
 - `1,650` odd-coordinate scale-two triples beginning with `(3,7,2)`.
+
+Inside `t>=U`, the cyclic-slack and one-auxiliary theorem leaves the 58
+certificate survivors above.  The exceptional `(2,1,9)` row survives every
+scalar auxiliary multiplier, while the 57 scale-one rows survive every such
+single-auxiliary component cut.  Neither statement asserts non-loneliness.
 
 The hostile shows that the latter require information about which points of
 `G(u)` are available, or an owner/arrival sidecar; pair geometry alone cannot
@@ -248,6 +435,16 @@ python3 -B 04-computation/lrc14_eleven_plus_two_harmonic_absorption_seam_collaps
 python3 -B -O 04-computation/lrc14_eleven_plus_two_harmonic_absorption_seam_collapse_thm3878.py
 python3 -B 04-computation/lrc14_eleven_plus_two_harmonic_absorption_seam_collapse_independent_audit_thm3878.py
 python3 -B -O 04-computation/lrc14_eleven_plus_two_harmonic_absorption_seam_collapse_independent_audit_thm3878.py
+python3 -B 04-computation/lrc14_eleven_plus_two_cyclic_slack_thm3878.py
+python3 -B -O 04-computation/lrc14_eleven_plus_two_cyclic_slack_thm3878.py
+python3 -B 04-computation/lrc14_eleven_plus_two_cyclic_slack_independent_audit_thm3878.py
+python3 -B -O 04-computation/lrc14_eleven_plus_two_cyclic_slack_independent_audit_thm3878.py
+python3 -B 04-computation/lrc14_eleven_plus_two_scale1_deletion_thm3878.py
+python3 -B -O 04-computation/lrc14_eleven_plus_two_scale1_deletion_thm3878.py
+python3 -B 04-computation/lrc14_eleven_plus_two_cyclic_slack_full_independent_audit_thm3878.py
+python3 -B -O 04-computation/lrc14_eleven_plus_two_cyclic_slack_full_independent_audit_thm3878.py
+python3 -B 04-computation/lrc14_eleven_plus_two_scale2_auxiliary_hostile_thm3878.py
+python3 -B -O 04-computation/lrc14_eleven_plus_two_scale2_auxiliary_hostile_thm3878.py
 ```
 
 The 96,102-gate primary companion independently builds the atlas and seam
@@ -255,4 +452,8 @@ union twice and checks all 1,651 odd pairs by exact rational wall cells.  The
 93,524-gate audit uses different atlas, divisor-count, modular-inverse and
 pair-sum-event routes.  Normal and optimized executions byte-match their
 raw-LF frozen outputs.  The finite census controls the ledger; the absorption
-and odd-pair arguments above prove their stated symbolic scopes.  **QED.**
+and odd-pair arguments above prove their stated symbolic scopes.  The two
+cyclic-slack implementations and their two deletion ledgers are
+structurally independent in interval representation; all normal, optimized,
+and frozen streams also byte-match.  Their finite counts support only the
+explicit conditional implications above.  **QED.**

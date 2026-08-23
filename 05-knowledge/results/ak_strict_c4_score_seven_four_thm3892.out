@@ -1,0 +1,11 @@
+AK_STRICT_C4_7_OVER_4_PRIMARY_20260823
+status=PROVED_FINITE_EXACT_STRICT_CELL;NO_ARITHMETIC_KAKEYA_CLAIM
+dims=(2,2);m=4;r=3;n=4;t=0;score=7/4
+raw_slopes=(h:4,left:-1,right:3,seeds:-3,1,37/10)
+trace=((D,),(A,B,C));round_ranks=(7,6,0);p=(0,3)
+first_raw_coefficients=(-6, -14, 21, -6, -15, 35, -2);first_target=12*d_D
+physical_deletion_traces=(('hAD', ()), ('hBC', ()), ('vAB', ()), ('vDC', ()), ('seedA', ()), ('seedB', ()), ('seedC', ()))
+hostile=loose_bank_has_8_rows_for_paid_cost_7;strict_proof_uses_exactly_7
+semantic_sha256=1359b2f2924587642590d7fc2756546c0912cc6a4c62ed323e8aa63d40421544
+gates=36
+ALL CHECKS PASSED

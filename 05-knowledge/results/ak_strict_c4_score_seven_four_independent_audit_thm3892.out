@@ -1,0 +1,10 @@
+AK_STRICT_C4_7_OVER_4_INDEPENDENT_AUDIT_20260823
+status=INDEPENDENT_PASS;STRICT_2x2_OPTIMUM_7_OVER_4
+raw_coordinate_trace=((D,),(A,B,C));raw_rank=7;terminal_rank=6
+first_raw_combination=(-6,-14,21,-6,-15,35,-2)->6*(1,-1)_D
+two_seed_cases=60;support_families=60;rank_possible=0
+generic_rank_pairs=(((4, 2), 4), ((4, 3), 8), ((5, 2), 30), ((5, 3), 4), ((6, 2), 14))
+hostile=loose_unpaid_extra_row_changes_trace_to_one_round
+semantic_sha256=d1e21eca692789bcbe00f3a232ef0e1bb7cee890f24123a9145f6fc9e4248888
+gates=15
+ALL CHECKS PASSED

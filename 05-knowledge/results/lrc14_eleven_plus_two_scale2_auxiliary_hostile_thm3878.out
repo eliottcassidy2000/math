@@ -1,0 +1,6 @@
+AUXILIARY_RUNNER_SEARCH_20260823
+pair=(1, 9);tested_a=1..58;winners=();best_a=1;best_gamma=2/63;best_a_gamma=2/63;components=2;measure=4/63
+a_ge_59_stopping=each_2/63_obstruction_arc_contains_full_6/(7a)_auxiliary_safe_cell
+consequence=no_single_auxiliary_multiplier_closes_(1,9)_via_LRC13_slack_in_t>=U_slice
+gates=4698
+STATUS=PASS

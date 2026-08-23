@@ -91,12 +91,27 @@ interesting improvement.  This is a structural boundary, not the
 Arithmetic--Kakeya target: a finite forcing record is not automatically a
 universal lower bound, and the previously used rule-(1) is unsound.
 
+[THM-3892](../01-canon/theorems/THM-3892-arithmetic-kakeya-strict-two-by-two-cyclic-score-seven-four.md)
+now classifies the first constructible strict cycle completely.  The exact
+`[2,2]` optimum is `7/4`: three seeds attain it, while a symbolic audit of all
+`10*6=60` two-seed/firing-pair families finds no required rank pair `(6,4)`.
+The seven paid rows fire `D` and then `A,B,C`; the loose rule adds an eighth
+uncharged row and changes the trace.  This is a theorem about one public
+forcing cell, not an Arithmetic--Kakeya bound.
+
 The closest LRC analogy is not “runners are graph vertices.”  It is that
 connected obstruction intervals and their cyclic translates must glue after
 pairwise widths have been computed.  A pair can be locally hard while a third
 deletion closes the row, or locally easy while orbit chronology prevents the
 same certificate from serving every translate.  The lawful vertices may be
 gaps, sections, boundaries, or proof obligations rather than runners.
+
+That distinction became quantitative in THM-3878.  In the extra slice
+`t>=U`, exact connected-component widths close `5,445` scale-one and `1,649`
+scale-two types; a lawful one-auxiliary LRC(13) selector closes 353 more.
+The method leaves 58 certificate survivors, not 58 counterexamples.  The
+unrestricted `t<U` ledger remains unchanged, and `(2,1,9)` survives every
+scalar auxiliary multiplier.
 
 The cycle lesson is thus typed:
 
@@ -114,9 +129,10 @@ merely enlarging a forest bank.
 Several apparently negative examples are method hostiles, not conjecture
 counterexamples.
 
-- The LRC packet `(p,q,s)=(3,7,2)` survives the pair-only absorption test.  It
-  is not an LRC equality case; it says the pair statistic omitted another
-  runner or scale coordinate.
+- The LRC packet `(p,q,s)=(3,7,2)` survives the pair-only absorption test,
+  while `(s,p,q)=(2,1,9)` survives every scalar auxiliary multiplier in
+  `t>=U`.  Neither is an LRC equality case; each identifies a missing runner,
+  scale, owner, or arrival coordinate.
 - At factorial `d=9996`, the inherited barcodes stop before the polynomial
   row does.  The missing coordinate is the response to the next prime.
 - In the Jacobian normal-strip program, a formal inverse can be unique while
@@ -185,11 +201,13 @@ remaining task is nonlinear interpolation between those two boundary
 sections.
 
 [THM-3886](../01-canon/theorems/THM-3886-cusp-residual-equality-seam-second-layer-trichotomy.md)
-is presently a **PROVISIONAL VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT
-AUDIT**.  It predicts that the next equality layer closes `deg f=1`, leaves a
-Kummer symbol at `deg f=2`, and forces a second gauge jet for `deg f>=3`.
-It must not enter the proved dependency graph until its homogeneous recursion,
-unit absorption, collision exhaustion, and non-invariance warning are audited.
+is now **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**.  The audit
+caught a hidden address specialization in the original proof and kept the
+constant free.  The `deg f=2` Kummer symbol still dies by consecutive
+`x`-orders `8` and `3`; `deg f=1` dies at a new address-free degree-five
+obstruction; and `deg f>=3` forces a second gauge jet.  The explicit hostile
+`(0,0)->(K,-a)` proves that gauge peeling does not preserve squareness, so the
+stable range is still an associated-graded result, not a descent algorithm.
 
 Finally,
 [THM-3879](../01-canon/theorems/THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff.md)
@@ -291,9 +309,9 @@ They do not share states, probability, chronology, or a reduction.
 | Source | Target | Map | Preserved predicate | Destroyed information | Needed sidecar | Cheapest decisive test |
 |---|---|---|---|---|---|---|
 | Factorial coefficient row | divisor/rho barcode | evaluate selected primes/residues | named necessary vanishing tests | response at the next prime | surviving polynomial row | first ordered adaptive killer at `d=9996` |
-| LRC support-two packet | lower-rank row | choose multiplier and absorb a divisible runner | exact divisibility and lower-rank hypothesis | other runners, relative scale, arrival | owner plus deletion witness | test every residual pair under one-extra deletion |
-| AK forcing graph | score certificate | add a sound forcing row | declared rule consequences | second-round cycle debt | oriented cycle incidence | triangle versus forest boundary |
-| JC residual | associated graded seam | take top homogeneous forms | leading cancellation | lower `Delta` residual debt | next filtered bucket / Rees coordinate | THM-3886 second-layer lift |
+| LRC support-two packet | lower-rank row | choose multiplier and absorb/add one runner | exact divisibility or LRC(13) safe interval | other runners, relative scale, arrival | owner plus component interval | 58 `t>=U` certificate survivors |
+| AK forcing graph | score certificate | add a sound forcing row | declared rule consequences | second-round cycle debt | oriented cycle incidence | strict `[2,2]` optimum `7/4` |
+| JC residual | associated graded seam | take top homogeneous forms | leading cancellation | lower `Delta` residual debt | next filtered bucket / Rees coordinate | address-free THM-3886 audit |
 | Rational dual | reduced dual curve | cancel common tangent factor | reduced tangent map | nonimmersion multiplicity | `E_nu` tangent-base divisor | `[ST^(d-1):T^d:S^d]` |
 | Rule 30 words | selected ray image | positive affine-word action | complete static orbit | physical chronology and owner | routed gap/depth state | same selected output, different successor |
 | Two-cube prime subsets | critical mass | singleton row plus Euler normalization | weight and disjointness inside the family | collisions outside the family | representation fibre | split-prime and exponent-three hostiles |
@@ -304,17 +322,18 @@ objects cannot be transported merely because the same word is used.
 
 ## 8. Ranked next work
 
-1. **LRC anchor:** turn connected interval widths into a deletion-complete
-   scale atlas; record the exact rows that survive relative scale `t>=U` and
-   keep the unrestricted `t<U` region separate.
-2. **Jacobian anchor:** independently audit THM-3886; then lift the quadratic
-   Kummer symbol or produce its minimal hostile.  In parallel, attack the
-   nonlinear `f=0` interpolation using the two exact boundary sections.
+1. **LRC anchor:** attack the 58 `t>=U` certificate survivors with two
+   auxiliaries or an owner/arrival sidecar, while keeping the unrestricted
+   `t<U` region separate.  The scale-two row `(2,1,9)` is the first hostile.
+2. **Jacobian anchor:** for `deg f>=3`, test whether a third gauge jet is
+   forced without assuming gauge invariance.  In parallel, attack nonlinear
+   `f=0` interpolation using the two exact boundary sections.
 3. **Nonmonogenic niche:** search binary cubic index forms, retaining the
    determinant cocycle and the normalization place divisor.  The common-zero
    coefficient gate is sufficient but pays a large singularity tariff.
-4. **AK niche:** enumerate intrinsic sound cycles at `k>=2` and compare them
-   with the forest floor before expanding the row bank.
+4. **AK niche:** move from the exact strict `[2,2]` optimum to the smallest
+   larger `k=2` cell; search for a genuine score below `7/4` with the same
+   seven-row/loose-row hostile controls.
 5. **Factorial wildcard:** learn a local rule predicting the first adaptive
    prime from the residual polynomial, while keeping `d=9996` and `d=6518`
    as hostile controls.

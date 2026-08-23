@@ -66,8 +66,10 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   partial LRC implication: `s lambda(v)>=1` gives a common safe time.  The
   `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
   candidates; the powers-of-four fibre has none.  In the `11+2` branch,
-  THM-3878 leaves `7,505` necessary triples: `5,855` at `s=1` and `1,650`
-  odd pairs at `s=2`.  Owner and arrival remain open.
+  THM-3878 leaves `7,505` unconditional necessary triples.  Only in `t>=U`,
+  exact cyclic slack plus one auxiliary LRC(13) witness leaves 58 certificate
+  survivors: 57 at `s=1` and `(s,p,q)=(2,1,9)`.  The `t<U` slice, owner and
+  arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
   FINITE-EXACT,
@@ -357,8 +359,9 @@ support asymptotic or residue.
   THM-3864/3872 close constants; THM-3881 contracts all coefficients/gauges
   to a rank-two norm and closes `T=0` plus `T=hf`, `deg h<=1`.  THM-3884
   forces `deg T>=deg f+1` with leading gauge at equality.  THM-3885 closes
-  the `f=0`, `deg T<=3` cell and classifies two arms.  Audit-pending THM-3886
-  gives the equality-seam `n=1,2,>=3` second-layer trichotomy.
+  the `f=0`, `deg T<=3` cell and classifies two arms.  Independently audited
+  THM-3886 closes the address-free equality seam for `deg f=1,2` and forces a
+  second gauge jet for `deg f>=3`; repeated peeling remains open.
   THM-3874/3877 exclude low-degree sole-simple-branch fields.  THM-3879
   recovers `C3` at two places; THM-3882 forces the smooth-conic boundary for
   every immersed one-place dual and forbids one-place `6A2+4A1` charts.
@@ -400,10 +403,10 @@ support asymptotic or residue.
 
 ### Arithmetic-Kakeya forcing certificates
 
-**OPEN:** record/target `1.67513/1.675`. THM-3875: normalized `k=1`
-forests score `>=2`; a five-row triangle makes cycles necessary for `5/3`.
-Rule-(1) is unsound; finite records prove no bound. Next: cyclic `k>=2`
-search (`ak_forcing_engine.py`).
+**OPEN:** record/target `1.67513/1.675`. THM-3875 gives the `k=1` forest floor
+`2`; THM-3892 proves the strict `[2,2]` cyclic-cell optimum `7/4` by a
+60-family audit.  This local cell, the `5/3` graph hostile, and unsound loose
+rule-(1) prove no Arithmetic--Kakeya bound.  Next: larger strict `k=2` cells.
 
 ## Cross-domain connection discipline
 

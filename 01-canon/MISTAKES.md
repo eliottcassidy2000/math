@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-461 (2026-08-23, THM-3886 independent audit) -- an address-free theorem proof silently fixed the constant by an address condition
+
+- **What failed:** THM-3886's formal equality-seam hypotheses did not impose
+  the THM-3881 address, but its exceptional-cell proof wrote `T_0=4b` for
+  `deg f=2` and `T_0=4c` for `deg f=1`.  The exact companion consequently
+  verified a narrower addressed slice while the prose claimed the full
+  constant-term universe.
+- **Minimal witness / first failed implication:** an arbitrary constant
+  `w=T_0` is invisible to the leading equality symbol, so the displayed
+  parameterizations do not force `w=4f(0,0)`.  Equality of the top filtered
+  layers does not recover the discarded address coordinate.
+- **Repair / strongest survivor:** retain `w` freely.  In degree two, the
+  minimum `x`-orders `8` and `3` and their nonzero witnesses are independent
+  of `w`.  In degree one, the published remainders still force
+  `c=q,v=0,u=15q`; writing `e=w-4q`, the square-root recursion continues
+  polynomially through degree six and fails at degree five on the nonzero
+  term `(243q/2)xy^2(y^2-30x^2)`, independent of `e`.  Thus the stated
+  address-free closure is true and stronger than the original proof route.
+- **Reusable rule:** an associated-graded equality does not reconstruct an
+  affine address.  Keep every lower constant free until a coefficient
+  equation kills it, and make the independent audit range over that free
+  coordinate rather than replaying the proof's chosen section.
+
 ## MISTAKE-460 (2026-08-23, THM-3818 graphic-extension audit) -- an inert-scale subcount was called the full all-scale decoder census
 
 - **What failed:** THM-3818 correctly permits arbitrary common scale through
