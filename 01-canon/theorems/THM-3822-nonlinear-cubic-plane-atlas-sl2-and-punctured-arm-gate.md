@@ -32,7 +32,9 @@ audit: >
   and its square-zero binary cubic, the G_m arm quotient, standard-cell and
   hyperbolic specializations, squarefreeness, the genus-three boundary, and
   the first Cohn row.  Normal and optimized replay agree with the frozen
-  output and raw hashes.
+  output and raw hashes.  A separate 11,707-gate finite sidecar rejects all
+  5,832 named shifted/inverse triple-Cohn words at each of two exact fibres;
+  that bounded scout is not used in the all-degree proof.
 depends_on:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
 related:
@@ -320,6 +322,14 @@ Several formerly separate failures are now instances of the same gate.
 
   has determinant one but lies on the hyperbolic arm `(31)`.  The direct
   specialization `x=0` is the nonsquare `P(4t^2)`.
+* The separate companion
+  `04-computation/jc2_nonlinear_cubic_atlas_shifted_triple_cohn_scout_thm3822.py`
+  exhausts the `5,832` ordered words
+  `C(x+a,y+b)^epsilon C(x+c,y+d)^eta C(x+e,y+f)^zeta`, with every shift in
+  `{-1,0,1}` and every exponent in `{+1,-1}`.  Over `GF(1009)`, both fibres
+  `y=2,3` independently give an odd-degree or derivative-gcd nonsquare
+  certificate for every word.  This is **FINITE-EXACT** evidence only: it is
+  not an all-word Cohn closure and is not a dependency of `(31)`.
 
 What remains is now sharper.  A plane atlas, if one exists, needs all of:
 
