@@ -2,8 +2,8 @@
 id: THM-3866
 title: "All polynomial graph branches force a projective companion"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  Every polynomial graph component of the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every polynomial
+  graph component of the
   depressed-cubic branch, with an arbitrary polynomial transverse quotient
   Q(A,C), has a distinct reduced companion whose affine normalization misses
   at least two projective points.  The proof compares Q with the unique
@@ -12,12 +12,20 @@ status: >
   resonance has a nonzero perfect-square leading coefficient.
 source: jc_sparse_direct_search / first-mismatch completion of THM-3859 and THM-3863, 2026-08-23
 audit: >
-  SELF-AUDITED exact proof candidate.  The companion checks generic
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit rederived the
+  marked-root classification and checked completed monic division against
+  the coefficient recursion for arbitrary polynomial s(A).  It verified the
+  formal-to-polynomial A^N F divisibility, exact nonlinear response, every
+  degree regime including N=0, T=0, and the d=N square resonance.  It also
+  followed the factorization with multiplicities: the selected reduced
+  factor through finite-base C-infinity is neither vertical, the marked
+  graph, nor boundary, and its normalized closure has a distinct point over
+  A-infinity.  The companion checks generic
   polynomial s(A)-jets through order four, the universal nonlinear profile
   perturbation, and 141 exact first-mismatch gates for N=0,...,4 in the
   d<N, d=N, and d>N regimes, including the resonant leading square.  Normal
-  and optimized runs byte-match the frozen transcript.  Independent hostile
-  audit is still required before promotion.
+  and optimized runs byte-match the frozen 141-gate transcript and both
+  recorded hashes.
 related:
   - THM-3859-marked-root-polynomial-graph-companion-puncture-obstruction
   - THM-3863-finite-binomial-hensel-peels-force-projective-companion-contact
@@ -31,9 +39,9 @@ hash_basis: raw LF bytes
 
 # THM-3866 -- every polynomial graph has a projective companion
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
-characteristic zero.  For `b=b(A,C) in k[A,C]`, put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  For
+`b=b(A,C) in k[A,C]`, put
 
 ```text
 Delta_b=-27A^2b^2+8AC^3-54ACb+9C^2-54b.                         (1)
