@@ -1,0 +1,10 @@
+THM-3712 exact W007 completion audit
+fibre word = 00|01|02+10|03+11+20|12+21|13+22|23
+inherited placement counts n=1,2,3,>=4 = 2,4,6,8
+post-parity actual placements n<=2,n=3,n>=4 = 0,3,4
+n=3 actual-support merger = C=D with both arm addresses retained
+families A,B = one-row H^2 arm transport
+family C = triple polynomiality then lower-row H^2 transport
+family D = triple-row H^2 transport
+scope = complete W007 ray in the y=0 collision ring
+ALL CHECKS PASSED
