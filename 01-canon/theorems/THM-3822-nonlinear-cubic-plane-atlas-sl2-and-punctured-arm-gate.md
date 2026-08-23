@@ -1,6 +1,6 @@
 ---
 id: THM-3822
-title: "Nonlinear cubic plane atlases have an SL2 and punctured-arm gate"
+title: "Nonlinear cubic plane atlases have SL2, punctured-arm and three-shear gates"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every dominant
   etale plane atlas of the THM-3811
@@ -10,9 +10,10 @@ status: >
   plane pullback has a nonconstant unit and at least two places at infinity.
   Consequently h cannot be a coordinate, and no atlas with h=xy-1 exists,
   for any polynomial companion k.  This closes the standard elementary
-  big cell, every hyperbolic-unit first row, and the first Cohn row.  It
-  does not close nonstandard multi-ended arms and does not construct a
-  Jacobian counterexample.
+  big cell, every hyperbolic-unit first row, the first Cohn row, and the
+  three-shear word E_-(p)E_+(s)E_-(t).  The opposite three-shear ordering,
+  nonstandard multi-ended arms and arbitrary SL2 words remain open; no
+  Jacobian counterexample is constructed.
 source: root / nonlinear-cubic source-atlas and Cohn-word lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc_quartic_c3_construct, 2026-08-23).
@@ -24,20 +25,18 @@ audit: >
   component.  It then rederived the squarefree genus-three fibre,
   properness/Riemann--Hurwitz obstruction, the Laurent proof of
   K[x,y] intersect K(xy)=K[xy], and every edge of the Pell R=0 reduced-ratio
-  argument.  No proof or scope repair was found.  A second independent
-  post-promotion audit reproduced the D-quadratic by a distinct elimination,
-  checked the UFD square step and parasitic-component scope, constructed the
-  two inverse maps B/(h)<->K[k_0,k_0^-1], and rederived the genus-three,
-  Laurent-intersection, hyperbolic, first-Cohn, and R=0 arguments.  It found no
-  repair.  The 37-gate exact
-  companion verifies the
+  argument.  No proof or scope repair was found.  A third independent audit
+  supplied a global Bezout reconstruction and the new all-degree three-shear
+  no-go; its 57-gate assertion-free companion identifies the opposite word
+  as the exact stopping boundary.  The 37-gate primary companion verifies the
   cubic-order reductions, SL2 determinant, two intrinsic lift laws,
   reconstruction of all three cubic relations and the different, the
   intrinsic D-quadratic, both discriminant identities, the Pell completion
   and its square-zero binary cubic, the G_m arm quotient, standard-cell and
   hyperbolic specializations, squarefreeness, the genus-three boundary, and
-  the first Cohn row.  Normal and optimized replay agree with the frozen
-  output and raw hashes.  A separate 11,707-gate finite sidecar rejects all
+  the first Cohn row.  Normal and optimized replay of both exact companions
+  agrees with frozen outputs and raw hashes.  A separate 11,707-gate finite
+  sidecar rejects all
   5,832 named shifted/inverse triple-Cohn words at each of two exact fibres;
   that bounded scout is not used in the all-degree proof.
 depends_on:
@@ -51,6 +50,11 @@ output: 05-knowledge/results/jc2_nonlinear_cubic_atlas_sl2_gate_thm3822.out
 script_sha256: 92604dd1388491e656644c4a072c1259c9c9677588b224522cad7d9f11d60b2a
 output_sha256: 5db8d4ae4b8a6d2251f248aa341cc7d1e7cbbd5b2515d0bb70bbe0697a163f34
 semantic_sha256: a83ceddd81bf567a58c457b82978bec96f49297823c4b2374083fd96f3efc6f7
+independent_script: 04-computation/jc2_nonlinear_cubic_atlas_sl2_gate_thm3822_independent_audit.py
+independent_output: 05-knowledge/results/jc2_nonlinear_cubic_atlas_sl2_gate_thm3822_independent_audit.out
+independent_script_sha256: 94baac42cbfe175fcb1258c6b44996a8923be1cc02ce5436084663c5cd94574b
+independent_output_sha256: c10923533e7bbe7cad08333f8f5b84bd381e6bba4c59c0a1a236f0da85bd78ef
+independent_semantic_sha256: 7e3c86c844053ee7ad044ae698b04985a75a2059967a3a6198b2104271508eaf
 hash_basis: raw LF bytes
 ---
 
@@ -110,6 +114,25 @@ reconstructs its different `D`.  This is an exact reconstruction on the
 dense `D!=0` graph.  No sufficiency assertion about possible parasitic
 components over `D=0` is needed below: every actual map `(2)` already comes
 from `B` and hence satisfies `(3)--(6)`.
+
+The denominator reconstruction is in fact global on the intrinsic row.  Put
+
+```text
+Q=3k_0^2+7h^2,                  R=h(14k_0+9h),
+N=1+2Ck_0,                     S_0=k_0m+3hC^2.
+```
+
+The exact identities
+
+```text
+196hQ-3(14k_0-9h)R=1615h^3,
+(1615k_0+882h)Q+(-189k_0-686h)R=4845k_0^3
+```
+
+together with `(Ck_0-hm)^5=1` produce polynomials `U,V` on the determinant-
+one row with `UQ+VR=1`.  Equations `(5)--(6)` therefore give
+`D=UN+VS_0`, a polynomial in the four row entries, with no hidden denominator
+stratum.
 
 Since `U -> A2_(A,C)` is etale, `(2)` is etale exactly when its composite
 has unit Jacobian.  In polynomial coordinates this is
@@ -327,6 +350,33 @@ Several formerly separate failures are now instances of the same gate.
 
   has determinant one but lies on the hyperbolic arm `(31)`.  The direct
   specialization `x=0` is the nonsquare `P(4t^2)`.
+* In the matrix convention `(4)`, consider the three-shear word
+
+  ```text
+  E_-(p)E_+(s)E_-(t)
+   =[[1+st,          s],
+     [p+(1+ps)t, 1+ps]].                                      (32a)
+  ```
+
+  Thus `k_0=1+st` and `h=s`.  If `s` is nonconstant, every component of
+  `V(s)` has `k_0=1`, contradicting the nonconstant-unit condition `(23)`.
+  If `s=s_0` is constant, the intrinsic compatibility becomes a nonzero
+  relation `F_s0(p,t)=0`: for `s_0!=0` its `p^2t^2` coefficient is
+  `3s_0^5`, while `F_0=p+t`.  The global reconstruction above then puts all
+  target coordinates in a ring of transcendence degree at most one, so the
+  map cannot dominate.  Hence this whole word is excluded in all degrees.
+* The reversed word is the exact boundary of that proof:
+
+  ```text
+  E_+(p)E_-(s)E_+(t)
+   =[[1+ps, p+t+pst],
+     [s,       1+st]].                                       (32b)
+  ```
+
+  Here `k_0(1+st)=1 mod h`, so the arm can carry a nonconstant unit.  Its
+  compatibility law is one relation in three parameters, and neither the
+  arm nor dimension gate closes it.  This is a stopping reason, not evidence
+  for an atlas.
 * The separate companion
   `04-computation/jc2_nonlinear_cubic_atlas_shifted_triple_cohn_scout_thm3822.py`
   exhausts the `5,832` ordered words
@@ -351,8 +401,9 @@ The highest-value constructive lane at that stage was therefore not another boun
 coefficient search in `(A,C)`.  It is the classification or construction
 of **nonstandard punctured plane arms** equipped with a unit and a rational
 map to the genus-three fibration `(28)`, followed by the second-row and
-Jacobian lifts.  Interacting non-elementary Cohn words are a concrete source
-of such arms, but the standard and single-hyperbola grammars are closed.
+Jacobian lifts.  The open word `(32b)` and interacting non-elementary Cohn
+words are concrete sources of such arms, but the standard, single-hyperbola,
+and `(32a)` grammars are closed.
 
 THM-3845 subsequently proves that no polynomial plane atlas of this `U`
 exists.  The conditional `SL_2` and arm packet above remains valid and useful;

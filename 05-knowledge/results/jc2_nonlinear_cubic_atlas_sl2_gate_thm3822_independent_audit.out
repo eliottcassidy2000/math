@@ -1,0 +1,14 @@
+object=THM-3822-independent-hostile-audit
+verdict=PASS
+intrinsic=GLOBAL_BEZOUT_RECONSTRUCTION_AND_TWO_CHART_DOMAIN_PASS
+origin_main=DENOMINATOR_SQUARE;PELL;GM_ARM;GENUS3_HYPERBOLIC_GATE_PASS
+arm=NECESSARY_CONGRUENCE_PASS;HOSTILE_CONFIRMS_PSI_LOAD_BEARING
+forward_discriminant=84*s**7 + 232*s**6 + 120*s**5 + 161*s**4 - 12*s**3 - 2*s**2 + 1
+two_shear_status=CURRENT_THEOREM_COROLLARY_CHECKS_ONLY
+opposite_relation=p**4*s**3 + 3*p**3*s**2 - 4*p**2*s**3 + 3*p**2*s - 6*p*s**3 - 15*p*s**2 + p + 7*s**3 - 9*s**2 - 11*s
+length_three_extension=NO_DOMINANT_ATLAS;ARM_CONSTANT_IF_s_NONCONSTANT;TRDEG_AT_MOST_ONE_IF_s_CONSTANT
+length_three_hostile=s=0,p=-t_gives_identity_with_nonconstant_word_parameters
+opposite_length_three_stop=K3*(1+s*t)=1_mod_H3;NONCONSTANT_ARM_UNIT_POSSIBLE
+scope=OPPOSITE_LENGTH_THREE;ARBITRARY_SL2;LONGER_ATLASES_REMAIN_OPEN
+CHECKS=57
+semantic_sha256=7e3c86c844053ee7ad044ae698b04985a75a2059967a3a6198b2104271508eaf

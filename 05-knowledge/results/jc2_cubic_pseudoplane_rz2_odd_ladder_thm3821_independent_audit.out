@@ -1,0 +1,10 @@
+audit=THM-3821-rz2-odd-ladder-independent-hostile-audit
+verdict=FAIL_AS_WRITTEN_REPAIRED_COMPLETE_NO_GO
+first_failure=origin_d0_gP_shares_order_3_with_fK_forcing
+repair=d0_generic_empty_via_r3_e1_or_r2z2_e3
+extension=r2z2_eliminates_nonzero_roots_then_pure_origin_towers
+repaired_result=complete_rz2_profile_no_go
+scope=no_planar_JC_claim
+semantic_sha256=9925e6d03f32f6d7c920687e404152c56b4d7acad00e8b0290c75c48d689e30e
+GATES=108
+RESULT=PASS
