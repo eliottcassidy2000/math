@@ -1,0 +1,17 @@
+theorem=THM-3820-universal-euler-mod-seven-residual-quadratic-discriminant
+universal_resultant=Res_u(P,Q)=G^3*e^4*H
+euler_chart=G:e^3Y;D:e^2(Y+Z);t:e^7
+layers=H_after_euler_has_e_degrees_3,10,17
+F=-(Y+2Z)-729*t*(Z-4)*K+2125764*t^2*Y^3*(Z-2)^2
+K=Z*(Y+Z)^2+4*(2-Z)*(Y+2Z)
+R=(Y+Z)^2-8Z+16
+W=(Y+Z)*(Z-4)^2+4Y*(Z-2)
+discriminant=Disc_t(F)=3^12*R*W^2
+source=Disc_u(P/e^3)=R;Disc_u(P)=e^6*R_after_euler
+collision=W_is_t_map_slope_up_to_a_unit_on_generic_source_quadratic
+boundaries=Y0_arm_continuation;Z2_degree_drop;W0_sheet_identification;R0_source_collision
+open=degree_ge_6_pure_r;mixed_carriers;Darboux_pair
+identity_packet_sha256=06ba9416b096a2df7b1a1530d6f554c62743495b5f3249b5bb959ffee764a00f
+semantic_sha256=69696307c3a9767468ba2e738b92b423e9ac23af514d28433b3da79f1cc38d00
+CHECKS=35
+RESULT=PASS
