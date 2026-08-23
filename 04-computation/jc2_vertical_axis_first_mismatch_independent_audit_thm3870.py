@@ -308,4 +308,3 @@ if "--verify-frozen" in sys.argv:
         raise SystemExit("FAIL frozen transcript mismatch")
 
 sys.stdout.write(output)
-
