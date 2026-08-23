@@ -2,7 +2,8 @@
 id: THM-3726
 title: "Automorphic Cohn constant SL2 orbit Broughton classification"
 status: >
-  PROVED + VERIFIED-EXACT.  Let R=[a,b;c,d] be any constant SL2 matrix.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let
+  R=[a,b;c,d] be any constant SL2 matrix.
   A constant combination of either row of M0R with the other can be closed
   only on the two-sheet locus (2a-d)^2=1, with an explicit typed linear
   compatibility condition.  Every such closed row is exactly L+L^2S in
@@ -13,7 +14,10 @@ status: >
   outside the theorem.
 source: root / 2026-08-22
 audit: >
-  SELF-AUDITED; independent hostile audit requested.  The exact companion
+  PASS.  An independent audit rederived both raw curl systems and their
+  resultant, both epsilon-sheet parametrizations, both Jacobian-one source
+  changes, the potential gradients, the debt signs, and degenerate typed
+  boundaries.  The exact companion
   checks both raw closure systems and their discriminant resultant, universal
   parametrizations of both sheets and orientations, both Broughton potentials
   and debts, all 180 integer SL2 matrices in the [-4,4] box, and finite
@@ -26,7 +30,7 @@ depends_on:
 related:
   - THM-3721-automorphic-cohn-one-right-shear-nonentry
   - THM-3723-automorphic-cohn-c3-two-right-resonance
-  - THM-3725-automorphic-cohn-hyperbolic-two-right-resonance
+  - THM-3725-automorphic-cohn-opposite-two-right-hyperbolic-resonance-nonentry
 script: 04-computation/jc2_automorphic_cohn_constant_sl2_orbit_thm3726.py
 output: 05-knowledge/results/jc2_automorphic_cohn_constant_sl2_orbit_thm3726.out
 script_sha256: af6430f5c767b620451f197bc42686a6b20f663b7698702d9d55dabfaef1daa1

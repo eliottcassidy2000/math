@@ -2,7 +2,8 @@
 id: THM-3725
 title: "Automorphic Cohn opposite two-right hyperbolic resonance nonentry"
 status: >
-  PROVED + VERIFIED-EXACT.  For arbitrary nonzero polynomial parameters
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For arbitrary
+  nonzero polynomial parameters
   u,v, neither alternating two-left decoration of M0 E_-(u)E_+(v) is a
   Jacobian matrix.  If either right parameter is nonconstant, leading-form
   curl kernels prevent the first row closure.  In the constant cell a row
@@ -12,7 +13,10 @@ status: >
   the opposite nonidentity two-right order, not longer words or JC(2).
 source: jc-sparse-direct-search / 2026-08-22
 audit: >
-  SELF-AUDITED; independent hostile audit requested.  The exact companion
+  PASS.  An independent audit rederived the exact row decomposition, all
+  three nonconstant leading-kernel regimes, both positive-degree
+  left-parameter valuation descents, the constant resonance, trace-four
+  Pell law, shared Broughton potential, and both debt signs.  The exact companion
   checks the arbitrary-polynomial exposed curls, both constant
   classifications, the trace-four/Pell matrix law and diagonal gauge, the
   Broughton source coordinates and both remaining debts, 110 nonconstant
