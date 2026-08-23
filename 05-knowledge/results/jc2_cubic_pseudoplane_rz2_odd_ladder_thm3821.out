@@ -11,5 +11,5 @@ linear_v=empty_in_generic_and_degenerate_branches
 all_degree=nonzero_roots_and_confluent_monomial_towers_empty
 scope=complete_first_rz2_extension_no_go;no_broader_planar_JC_claim
 semantic_sha256=f73ecf90a4c8fc5a77ce7471c54f8a6eccc0a4c542d7b95ca7fcd5b63fc3c4d7
-CHECKS=71
+CHECKS=72
 RESULT=PASS

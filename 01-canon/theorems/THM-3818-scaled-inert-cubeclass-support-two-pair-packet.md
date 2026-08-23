@@ -10,6 +10,8 @@ status: >
   placement.  If the entire physical pair sum is all-inert, the address is
   also unique among unrestricted positive two-cube representations.  Eleven
   ambient residues give an exact pair-sum-lattice covering reduction.  A
+  separate classical-number sidecar finds one square, eight triangular, and
+  no square-triangular primitive cube addresses in the atlas.  A
   taxicab hostile blocks unrestricted decoding, and two rows with the same
   unique minimum relation block every pair-local semantic-arrival claim.  No
   LRC(14) row is excluded.
@@ -30,7 +32,9 @@ audit: >
   independently written companion checks 456,690 labelled placements, an
   unrestricted sum-divisor decoder on 32 all-inert scale controls, the exact
   full residue schedule, and split/exponent/off-grid hostiles in 2,764,096
-  active gates.
+  active gates.  A third assertion-free 17,596-gate sidecar, prompted by an
+  independent connection audit, exhausts the square and triangular shells,
+  addresses, and capped Pell intersection without adding an LRC predicate.
 depends_on:
   - THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction
   - THM-3793-inert-prime-sum-all-scale-two-cube-singleton
@@ -47,6 +51,11 @@ independent_output: 05-knowledge/results/lrc14_scaled_inert_cubeclass_pair_packe
 independent_script_sha256: 0bb6b60238335695addce0010182f5222da4c4a86c6f59912bd0f36123d063ca
 independent_output_sha256: 37aa867d653d7123435f9841cdc772c3cd71c289162006f80aeb6079a17ad7bc
 independent_semantic_sha256: 86c481b03158ba3cb7024ef8739fde640be331d9856ce5d4fc0c1b3b4fcc06cb
+square_triangular_script: 04-computation/lrc14_cubeclass_square_triangular_sidecar_thm3818.py
+square_triangular_output: 05-knowledge/results/lrc14_cubeclass_square_triangular_sidecar_thm3818.out
+square_triangular_script_sha256: 0050033a2782e0adf4ab86aaca74db43b7e879caf48efdc0f2fcb7da31a9e963
+square_triangular_output_sha256: 673a764dd14e1b06c549a80cf72e747376d0fba6d28f17da3ac778335f3f9b15
+square_triangular_semantic_sha256: e80c76bcbbf9a83c6cb87983ababe96906c1160581aaee8079b6325051eb1e53
 hash_basis: raw LF bytes
 ---
 
@@ -160,6 +169,62 @@ The first is
 
 Thus the largest cube divisor of an address is not automatically its physical
 gcd scale.  The primitive row must be decoded before the scale is read.
+
+### 2.1 Exact square and triangular subatlases
+
+The classic square/triangular probes split into two distinct questions.  First
+ask whether the pair sum `p+q` lies on a square or triangular shell.  In the
+atlas `(1)`, the exact shell lists and row counts are
+
+```text
+square sums:       4,25,100,121,289,       222 primitive pairs;
+triangular sums:   10,55,253,               132 primitive pairs.   (11a)
+```
+
+These shells are only schedulers.  The stronger question is whether the cube
+address itself is square or triangular.  Since
+
+```text
+p^3+q^3=(p+q)(p^2-pq+q^2),
+gcd(p+q,p^2-pq+q^2)=1                                 (11b)
+```
+
+on `(1)`—the gcd can only divide `3`, which never divides an admissible
+sum—a square address requires both factors in `(11b)` to be squares.  The
+finite atlas contains exactly one:
+
+```text
+56^3+65^3=121*3721=671^2.                             (11c)
+```
+
+It contains exactly eight triangular addresses:
+
+```text
+(p,q;N) =
+ (1,3;T_7),       (9,13;T_76),      (37,45;T_532),
+ (21,73;T_892),   (37,63;T_775),    (6,109;T_1609),
+ (37,150;T_2617), (46,159;T_2869).                    (11d)
+```
+
+None of `(11d)` is square, and `(11c)` is not triangular, so the atlas has no
+square-triangular cube address.  By contrast, THM-3819's capped
+square-triangular/Pell compiler pairs are
+
+```text
+(1,5), (5,29), (29,169),                              (11e)
+```
+
+and their intersection with `(1)` is exactly `(5,29)`.  At that merged row,
+
+```text
+m_2=9,       T_(m_2-1)=T_8=36=6^2,
+C(13,2)=T_12=78,       5^3+29^3=24514.                (11f)
+```
+
+Thus the square-triangular selector, the triangular labelled-placement count,
+and the cube address meet at one exact arithmetic row, but they remain
+different operations.  Equations `(11a)--(11f)` are **FINITE-EXACT** sidecars;
+none is a loneliness or arrival predicate.
 
 ## 3. All-scale injectivity and the decoder
 
@@ -470,6 +535,8 @@ python3 -B 04-computation/lrc14_scaled_inert_cubeclass_pair_packet_thm3818.py
 python3 -B -O 04-computation/lrc14_scaled_inert_cubeclass_pair_packet_thm3818.py
 python3 -B 04-computation/lrc14_scaled_inert_cubeclass_pair_packet_independent_audit_thm3818.py
 python3 -B -O 04-computation/lrc14_scaled_inert_cubeclass_pair_packet_independent_audit_thm3818.py
+python3 -B 04-computation/lrc14_cubeclass_square_triangular_sidecar_thm3818.py
+python3 -B -O 04-computation/lrc14_cubeclass_square_triangular_sidecar_thm3818.py
 ```
 
 Both streams reproduce
@@ -482,7 +549,8 @@ byte for byte, with the independent commands reproducing the correspondingly
 named independent transcript.  The companions check `1,775,955` and
 `2,764,096` active gates without Python assertions.  The proof of Sections
 3--9 is algebraic conditional on the exact finite separation in Sections 1--2
-and on the cited THM-778 decoder.
+and on the cited THM-778 decoder.  The square/triangular commands reproduce
+their separately named transcript in `17,596` active gates.
 
 An independent implementation generated the 94 admissible sums
 multiplicatively, enumerated the 5,855 ratios, and tested all `17,137,585`

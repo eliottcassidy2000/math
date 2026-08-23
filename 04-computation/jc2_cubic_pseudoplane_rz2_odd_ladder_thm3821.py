@@ -245,9 +245,10 @@ zero(
     "generic rational integration has polynomial typing",
 )
 
-# The equality of the forcing and R-square orders has the unique solutions
-# ord_rho(R)=ord_rho(v) and ord_0(R)=ord_0(v)+1.  The coefficient-resonance
-# values lie strictly above those matches and cannot hide a lower term.
+# At a nonzero root the forcing/R-square order match is unique.  At the
+# origin it is likewise exact when ord_0(v)>0.  When v(0)!=0 a later Pg
+# contribution can tie the forcing, so the full r2z bucket supplies the
+# separate boundary gate below.
 R_order = sp.symbols("R_order", integer=True, nonnegative=True)
 root_order = sp.symbols("root_order", integer=True, positive=True)
 zero(
@@ -260,16 +261,43 @@ zero(
 )
 gate(3 * root_order > root_order, "nonzero-root resonance is above match")
 zero_order = sp.symbols("zero_order", integer=True, nonnegative=True)
+positive_zero_order = sp.symbols(
+    "positive_zero_order", integer=True, positive=True
+)
 zero(
     sp.solve(
-        sp.Eq(1 + 2 * zero_order + 2 * R_order, 3 + 4 * zero_order),
+        sp.Eq(
+            1 + 2 * positive_zero_order + 2 * R_order,
+            3 + 4 * positive_zero_order,
+        ),
         R_order,
     )[0]
-    - (zero_order + 1),
-    "origin R valuation match",
+    - (positive_zero_order + 1),
+    "positive-origin-order R valuation match",
 )
-gate(3 * zero_order + 2 > zero_order + 1,
-     "origin resonance is above match")
+gate(3 * positive_zero_order + 2 > positive_zero_order + 1,
+     "positive-origin-order resonance is above match")
+
+# If ord_0(v)=0, the r3 order comparison proves only ord_0(R)>=1: for
+# larger R-order a Pg term can join the f,K forcing at order three.  The
+# actual next canonical bucket removes that seam without a division.
+R0 = sp.symbols("R0")
+generic_origin_r2z = sp.expand(
+    bucket_r2z.subs(
+        {
+            kap: mu * f + K_tower,
+            S: S_tower,
+            T: mu * S_tower,
+            p: p_typed,
+            q: mu * p_typed + P_tower,
+            h: mu * g + Q_integrated,
+        }
+    ).doit()
+).subs(e, 0).subs({f.subs(e, 0): sp.Rational(1, 12), R.subs(e, 0): R0})
+zero(
+    generic_origin_r2z + sp.Rational(5, 14) * delta * R0 / alpha,
+    "generic d=0 full-r2z origin gate",
+)
 
 U = sp.Function("U")(e)
 p_odd = e**2 * v**3 * U
@@ -676,9 +704,11 @@ zero(
     "degenerate linear-v addressed arm obstruction",
 )
 
-# Generic confluent root tau=0.  The arm linear remainder and the z2
-# origin bucket demand two coprime polynomials in x=mu^2.
+# Generic confluent root tau=0.  Keep g(e) arbitrary through evaluation;
+# the arm linear remainder and the resulting origin buckets demand two
+# coprime polynomials in x=mu^2.
 g0 = sp.symbols("g0")
+g_generic_zero = sp.Function("g_generic_zero")(e)
 generic_zero_profiles = {
     f: f_linear.subs(tau, 0),
     kap: mu * f_linear.subs(tau, 0) + K_linear.subs(tau, 0),
@@ -686,13 +716,17 @@ generic_zero_profiles = {
     T: mu * S_linear.subs(tau, 0),
     p: p_generic_linear.subs(tau, 0),
     q: (mu * p_generic_linear + P_generic_linear).subs(tau, 0),
-    g: g0,
-    h: (mu * g_linear + Q_generic_linear).subs(
-        {tau: 0, g_linear: g0}
-    ),
+    g: g_generic_zero,
+    h: (mu * g_generic_zero + Q_generic_linear).subs(tau, 0),
 }
-generic_zero_r2_origin = bucket_r2.subs(generic_zero_profiles).doit().subs(e, 0)
-generic_zero_z2_origin = bucket_z2.subs(generic_zero_profiles).doit().subs(e, 0)
+generic_zero_r2_origin = (
+    bucket_r2.subs(generic_zero_profiles).doit().subs(e, 0)
+    .subs(g_generic_zero.subs(e, 0), g0)
+)
+generic_zero_z2_origin = (
+    bucket_z2.subs(generic_zero_profiles).doit().subs(e, 0)
+    .subs(g_generic_zero.subs(e, 0), g0)
+)
 zero(generic_zero_r2_origin - mu * g0,
      "generic v=e r2 origin forces g0=0")
 zero(

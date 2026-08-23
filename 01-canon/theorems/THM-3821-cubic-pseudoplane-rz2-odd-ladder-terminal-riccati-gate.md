@@ -3,38 +3,34 @@ id: THM-3821
 title: "The first RZ2 extension on the cubic pseudo-plane has no Darboux pair"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The complete
-  first rz^2 extension of the
-  THM-3814 canonical nodal profile admits no Darboux pair.  A hypothetical
+  first rz^2 extension of the THM-3814 canonical nodal profile admits no
+  Darboux pair.  A hypothetical
   pair must enter one of two exact Kummer anatomies: the generic odd ladder
   7,5,3,1 with a Riccati square payment, or the P=0 skip ladder 7,3,1 with a
   linear payment.  The next r^2z bucket excludes every nonzero Kummer root;
   the remaining confluent monomial towers fail by the origin jets and the
-  quadratic-arm root ratio.  This is a complete no-go for the stated ansatz,
-  not for arbitrary profiles on the surface and not a planar-JC theorem.
+  quadratic-arm root ratio.  At the intermediate top step S=0 is impossible,
+  while T=0 remains allowed through mu=0 before the later contradiction.
+  This is a complete no-go for the stated ansatz, not for arbitrary profiles
+  on the surface and not a planar-JC theorem.
 source: jc_zero_debt_lift / cubic-pseudoplane rz2 odd-ladder lane, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
-  The audit rederived the Poisson signs and monic normal form, every Kummer
-  valuation family, the generic integration/divisibility step, and the
-  local valuation transfers that produce the 7-5-3-1 and 7-3-1 ladders.
-  It independently expanded the full r^2z differential polynomial at the
-  degenerate address: its v coefficient is exactly
-  -15 rho^2 U/2 and its v' coefficient has derivative 3 rho^2, giving the
-  impossible resonance m=5/2 with no hidden order-m term.  The generic
-  root payment, both monomial origin jets, the odd opposite-root seam, and
-  the algebraic root-of-unity contradiction q+q^-1=-4 were checked
-  separately.  No proof or scope repair was found.  The deterministic
-  companion has 71 active
-  gates checking the Poisson Casimir and signs, unique monic reduction, six
-  descending source buckets, the asymmetric 7/4 contradiction, all 7/4,
-  7/5, and 7/3 valuation families, the integrated polynomial relation, the
-  generic and degenerate local valuation transfers, both terminal laws, and
-  their square/linear nonzero-root payments, and the independent generic
-  and degenerate constant- and linear-tower contradictions.  The final gates
-  independently check the all-degree r^2z root coordinates, the half-integral
-  degenerate resonance, the generic origin jets and D-root ratio, and the
-  degenerate monomial terminal/origin conflict.  Normal and optimized runs
-  byte-match the frozen output and raw hashes.
+  INDEPENDENT HOSTILE AUDITS PASS AFTER REPAIR (root / jc-cohn-boundary and
+  root post-promotion, 2026-08-23).  The audits rederived the Poisson signs,
+  monic normal form, every Kummer valuation family, both terminal laws, and
+  the constant, linear, nonzero-root, and monomial closures.  A post-promotion
+  audit found one endpoint seam: the claimed exact
+  origin valuation for R fails when ord_0(v)=0 because the Pg block can tie
+  the forcing.  The repaired proof uses the full r^2z origin bucket to force
+  R(0)=0; exact equality remains valid when ord_0(v)>0.  It also repaired the
+  one-sided wording because T=mu*S permits mu=0, and retained arbitrary g(e)
+  through the confluent-root evaluation.  Independently, the all-degree audit
+  expanded the full degenerate r^2z polynomial, obtained the impossible
+  half-integral resonance m=5/2, and checked the generic root payment, origin
+  jets, odd opposite-root seam, and root-of-unity contradiction.  The repaired
+  deterministic companion checks all of these gates without inactive Python
+  asserts; normal and optimized runs byte-match the frozen output and raw
+  hashes recorded below.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3814-nodal-rz-kummer-profile-degree-gate
@@ -44,8 +40,8 @@ related:
   - THM-3813-quartic-r-repairs-of-nodal-carriers-have-critical-points
 script: 04-computation/jc2_cubic_pseudoplane_rz2_odd_ladder_thm3821.py
 output: 05-knowledge/results/jc2_cubic_pseudoplane_rz2_odd_ladder_thm3821.out
-script_sha256: 2657617a1c3540f8ac892ad6cd455008b7e523d83932505f0046868c75d6eb4a
-output_sha256: 31f3fdd684832d0076e5142721a78025424c862a19a6c77f48168f04597dce6a
+script_sha256: a4567cd4bdd37df9a2db260d9c00e1275211ef1735690591a7511f458a269e18
+output_sha256: 22eaf1a707edb91974c83c9f2c11a53f551468a1d3b805c2715ae79558910852
 semantic_sha256: f73ecf90a4c8fc5a77ce7471c54f8a6eccc0a4c542d7b95ca7fcd5b63fc3c4d7
 hash_basis: raw LF bytes
 ---
@@ -168,7 +164,7 @@ The next three descending coefficients are
 The exact companion also freezes the longer `r^3z` and `r^3` buckets from
 which Sections 3--5 descend.
 
-## 2. The top profile is necessarily two-sided
+## 2. The new `S` profile is necessarily nonzero
 
 Suppose `S=0`.  If `T=0`, equation `(2)` is the complete profile excluded
 by THM-3814.  If `T!=0`, equation `(14)` becomes
@@ -189,8 +185,9 @@ with nonzero constants.  This contradicts `f(0)=1/12`.  Hence `S!=0`.
 
 Equation `(13)` and the characteristic-zero constant-field fact now give
 `T=mu S`.  With `K` as in `(4)`, equation `(12)` becomes the last identity
-in `(5)`.  The polynomial `K` cannot vanish: otherwise the nonconstant
-quadratic `D` times `f` would be `-1/12`.
+in `(5)`.  This relation does not force `mu!=0`; the boundary `T=0` remains
+available when `mu=0`.  The polynomial `K` cannot vanish: otherwise the
+nonconstant quadratic `D` times `f` would be `-1/12`.
 
 Substitution in `(14)` gives
 
@@ -281,13 +278,19 @@ ord_rho(R)=m.                                         (29)
 ```
 
 At the origin, write `d=ord_0(v)` and `a=ord_0(R)`.  Here `f(0)=1/12`.
-The two corresponding orders are `3+4d` and `1+2d+2a`; the possible
-coefficient resonance `a=3d+2` lies strictly above their unique matching
-value.  Therefore
+When `d>0`, the two corresponding orders are `3+4d` and `1+2d+2a`;
+the possible coefficient resonance `a=3d+2` lies strictly above their
+unique matching value, so `a=d+1`.  When `d=0`, a later `Pg` term can tie
+the forcing at order three, and that order comparison alone is not exact.
+The next full canonical bucket instead gives
 
 ```text
-ord_0(R)=d+1.                                         (30)
+[r^2z]({A,C}-1)|_(e=0)=-5delta R(0)/(14alpha),
+
+ord_0(R)>=d+1,       with equality when d>0.           (30)
 ```
+
+Thus `R(0)=0` in the remaining `d=0` case.
 
 Because `k` is algebraically closed, `(29)--(30)` imply
 
@@ -295,8 +298,10 @@ Because `k` is algebraically closed, `(29)--(30)` imply
 R=evU                                                  (31)
 ```
 
-for a polynomial `U`.  The zero polynomial is excluded by the same
-earliest-order forcing.  Equations `(25)--(26),(31)` are exactly `(6)`.
+for a polynomial `U`.  Once Sections 6--7 exclude constant `v`, either a
+nonzero root and `(29)` or a positive origin order and the exact part of
+`(30)` forces `R`, hence `U`, to be nonzero.  Equations
+`(25)--(26),(31)` are exactly `(6)`.
 
 ## 4. The generic terminal square payment
 

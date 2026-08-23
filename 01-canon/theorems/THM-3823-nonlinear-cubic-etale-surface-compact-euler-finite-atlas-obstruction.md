@@ -12,22 +12,26 @@ status: >
   a planar Jacobian counterexample.
 source: root / nonlinear-cubic Euler-atlas obstruction lane, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (jc_sparse_direct_search, 2026-08-23).
-  The audit independently reconstructed the normalization as P1 minus two
+  TWO INDEPENDENT HOSTILE AUDITS PASS (jc_sparse_direct_search and root,
+  2026-08-23).  The audits independently reconstructed the normalization as
+  P1 minus two
   denominator roots and infinity, checked pole orders and absence of
   cancellations, and used uniqueness of the double/triple root to verify
-  that only q=-2,-1,0,3 are identified.  It checked the two singleton
+  that only q=-2,-1,0,3 are identified.  They checked the two singleton
   nonzero triple fibres and the exact three-sheet/simple-companion
   stratification, obtaining chi_c(U)=8.  The finite-cover contradiction and
   both THM-3578 consequences were rederived with their proper/nonproper and
-  signed-Euler qualifications intact.  No repair was found.  The 16-gate
-  exact companion checks the
+  signed-Euler qualifications intact.  A direct singular-locus elimination
+  separately recovered exactly the origin and two triple-root targets and
+  confirmed that signed Euler debt is not the unweighted divisorial debt.
+  No repair was found.  The 16-gate exact companion checks the
   rational branch normalization, all three normalization punctures, the
   four distinct origin preimages, the two affine nonorigin triple-root
   parameters, and the complete compact-Euler ledger.  The proof separately
   checks the projection strata against THM-3811 and the boundary-rank and
   Euler-debt consequences against THM-3578.  Normal and optimized replay
-  byte-match the frozen output and raw hashes.
+  byte-match the frozen output, both raw hashes match, and the script has no
+  inactive Python assert.
 depends_on:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3578-zariski-main-boundary-rank-and-sheet-debt

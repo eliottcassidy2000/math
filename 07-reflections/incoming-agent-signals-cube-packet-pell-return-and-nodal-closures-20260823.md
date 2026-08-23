@@ -23,16 +23,18 @@ audit its boundary instead of reproducing its headline.  Four signals survived:
    Berggren branching, standardized conductor growth, the exact Pell-prefix
    loneliness observer, and the inert cube atlas.
 
-A later pull added three more JC signals.  Audited
+A later pull added five more audited JC signals.  Audited
 [THM-3817](../01-canon/theorems/THM-3817-quintic-r-repairs-of-nodal-carriers-have-critical-points.md)
 closes pure-`r` profiles through degree five;
 [THM-3820](../01-canon/theorems/THM-3820-universal-euler-mod-seven-residual-quadratic-discriminant.md)
 identifies the coefficient-free mod-seven residual double cover; and
 [THM-3822](../01-canon/theorems/THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate.md)
 turns the nonlinear cubic atlas problem into a constrained polynomial `SL_2`
-completion with a punctured-arm obstruction.  The `rz^2` odd ladder in
+completion with a punctured-arm obstruction.  The `rz^2` odd ladder in audited
 [THM-3821](../01-canon/theorems/THM-3821-cubic-pseudoplane-rz2-odd-ladder-terminal-riccati-gate.md)
-remains a provisional candidate pending the audit recorded below.
+classifies its necessary top branches, while
+[THM-3823](../01-canon/theorems/THM-3823-nonlinear-cubic-etale-surface-compact-euler-finite-atlas-obstruction.md)
+rules out finite and proper plane atlases of the nonlinear cubic surface.
 
 The two conjectures remain open.  The gain is an exact operation ledger and one
 especially dense merged row, not a proof by analogy.
@@ -89,6 +91,8 @@ The board changed in three important ways.
 - The square-triangular selector is not closed under one Berggren edge, but it
   is closed under a state-dependent first-return cocycle.  This is the correct
   operation column.
+- Square/triangular membership splits again at the cube atlas: pair-sum shells,
+  cube-address values, and Pell return nodes are three different predicates.
 - The JC and LRC observers fail at different layers for the same structural
   reason: injectivity on a chosen section is not injectivity on the ambient
   object.  Evaluation forgets polynomial geometry; a selected pair forgets the
@@ -131,6 +135,24 @@ active gates.  This yields the sharper scope split:
 The equalities `1729=1^3+12^3=9^3+10^3` and
 `515375=15^3+80^3=54^3+71^3` expose the split-prime and primitive
 exponent-three boundaries.
+
+An incoming audit then asked the classical-number question at the correct two
+levels.  The assertion-free
+[`lrc14_cubeclass_square_triangular_sidecar_thm3818.py`](../04-computation/lrc14_cubeclass_square_triangular_sidecar_thm3818.py)
+finds square pair-sum shells `4,25,100,121,289` carrying `222` ratios and
+triangular shells `10,55,253` carrying `132`.  These shell counts do not decide
+the address value.  On the actual cube sums it finds exactly
+
+```text
+56^3+65^3=671^2,
+eight triangular addresses,
+zero square-triangular addresses.
+```
+
+The factorization `(p^3+q^3)=(p+q)(p^2-pq+q^2)` has coprime factors on this
+atlas, explaining why the unique square address requires two simultaneous
+square payments.  The eight triangular equalities are a finite census, not a
+Pell closure or a loneliness statistic.
 
 Consequently
 
@@ -249,6 +271,7 @@ Only `(5,29)` has an all-inert cube-free sum.  At this row all four lanes meet:
 
 ```text
 support pair              (a,b)=(5,29),       a+b=34
+labelled pair slots       C(13,2)=T_12=78
 cube address              5^3+29^3=24514
 Pell state                (x,q)=(17,6),       T_8=6^2=36
 negative-Pell state       (g,h)=(29,41)
@@ -343,19 +366,45 @@ leaves a nonconstant unit on every plane-arm component.  This kills `h` as a
 coordinate, every `h=xy-1` standard big cell, the hyperbolic-unit first row,
 and the first Cohn row.  Nonstandard multi-ended arms remain open.
 
-THM-3821 tests the first `rz^2` extension of THM-3814.  Its provisional
+THM-3821 tests the first `rz^2` extension of THM-3814.  Its audited
 normal-form descent forces a common Kummer parameter and either a generic
 `7,5,3,1` ladder ending in a Riccati square payment or a degenerate `7,3,1`
-ladder ending in a linear payment.  Incoming follow-up has already removed
-constant and linear Kummer parameters, so the candidate now requires degree at
-least two.  Until the independent hostile audit finishes, this is a routed
-necessary anatomy, not a proved dependency and not a complete no-go.
+ladder ending in a linear payment.  Constant and linear Kummer parameters are
+empty, so every survivor has degree at least two.  The hostile audit caught the
+confluent `ord_0(v)=0` seam: the `Pg` block can tie the alleged uniquely
+earliest forcing.  The full next `r^2z` bucket instead forces `R(0)=0`, exactly
+the divisibility needed for the same ladder.  The audit also retained the
+sharp `mu=0,T=0` boundary; only `S=0` is excluded.  This is now a proved
+necessary anatomy, not a complete no-go.
+
+THM-3823 adds a topological invoice to THM-3822's algebraic and arm invoices.
+The branch normalization is `P1` minus three points, four normalization values
+are identified at the origin, and the degree-three projection has fibre counts
+`3/1/0` on its three natural strata.  Consequently
+
+```text
+chi_c(Gamma)=-4,              chi_c(U)=8.
+```
+
+A finite etale plane atlas would force `1=8d`, so every surviving atlas is
+nonfinite and has signed Euler sheet debt `8d-1`; its finite envelope also has
+at least two boundary primes.  This does not obstruct the nonproper dominant
+etale atlas needed by the open Jacobian lane, and it does not identify signed
+Euler debt with the separate unweighted divisorial debt.
+
+Two later reservations are useful only as route signals.
+[THM-3826](../01-canon/theorems/THM-3826-three-term-sextic-r-repairs-of-nodal-carriers-have-critical-points.md)
+asks for an exact support-cell census in the first pure sextic row, and
+[THM-3827](../01-canon/theorems/THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases.md)
+asks whether an explicit polynomial Stein factor turns THM-3822's genus-three
+sidecar into a generic-fibre floor.  Both remain **RESERVED / UNPROVED** here;
+neither is a dependency.
 
 The live JC lanes are consequently more precise: pure `r` degree at least six,
-the degree-at-least-two terminal laws in the provisional `rz^2` ladder,
+the degree-at-least-two terminal laws in the proved necessary `rz^2` ladder,
 nonconstant `z^2` profiles outside the closed canonical packets, and
-nonstandard multi-ended `SL_2` arms.  Another quadratic or quintic elimination
-would duplicate closed terrain.
+nonproper multi-ended `SL_2` arms capable of paying all three invoices.
+Another quadratic or quintic elimination would duplicate closed terrain.
 
 ## 7. Khinchin content after the extension
 
@@ -380,6 +429,7 @@ pair; only the ambient residue sidecar tests a target LRC phase.
 | source | target and map | preserved predicate/operation | destroyed information | needed sidecar / cheapest decisive test |
 |---|---|---|---|---|
 | finite primitive pair | rational cube class | ratio inside the 5,855-row atlas | physical scale | include cube dilation; test all rational-cube collisions |
+| inert cube atlas | square/triangular tests | exact shell and address subatlases | arrival, owner, and Pell-return membership | separate sum shells from address values; exhaustive discriminant scan |
 | cube class plus physical address | `(g,p,q)` decoder | common dilation | representations outside atlas | taxicab hostile |
 | selected support-two relation | covector/facets and THM-778 word | first chosen width, pair clocks, ties | other runners, off-lattice phase | eleven residues modulo `g(p+q)` |
 | canonical polynomial Pell tower | evaluated `(g,h)` then `(x,q)` | index, norms, recurrences | polynomial profile, roots, critical resultant | retain full `G_n,H_n,psi_n`; perturb inside evaluation kernel |
@@ -390,6 +440,7 @@ pair; only the ambient residue sidecar tests a target LRC phase.
 | nodal coefficient ansatz | root valuations/resultants | nonexistence in stated profile | larger coefficient support | change coefficient type before enlarging elimination |
 | source quadratic sheets | mod-seven residual values | discriminant factor `R W^2` | source label on `W=0` | retain collision slope `W`; audit degree-drop divisors |
 | nonlinear cubic atlas | intrinsic polynomial `SL_2` row | determinant and cubic lift laws | coverage/properness at punctured arms | genus-three square sidecar plus every arm component |
+| nonlinear cubic surface | compact Euler integration | finite/proper atlas obstruction and signed debt `8d-1` | location and positivity of escaping sheets | finite-envelope boundary primes plus an explicit nonproperness passport |
 
 ## 9. Hostiles that set the exact boundary
 
@@ -431,7 +482,7 @@ The cheapest high-value next tests are:
 - if that cover succeeds, search continuously between adjacent `1/34` phases
   before claiming a bad row;
 - on the JC side, move directly to a nonconstant `z^2` profile or a cubic mixed
-  profile, the degree-six pure-`r` residual, or THM-3821's degree-at-least-two
+  profile, THM-3826's still-reserved sextic census, or THM-3821's degree-at-least-two
   terminal laws, and retain the full polynomial tower—evaluation at `z=2` is
   only a hostile control;
 - test whether the variable return cocycle acts on any owner-labelled Pell
@@ -442,4 +493,5 @@ The cheapest high-value next tests are:
 
 No current result excludes an LRC(14) row or constructs a planar Keller
 counterexample.  The precise advance is a better packet, a lawful return
-operation, two audited scope repairs, and one concrete 29-residue next target.
+operation, two audited scope repairs, an audited necessary `rz^2` anatomy, a
+finite-atlas obstruction, and one concrete 29-residue next target.

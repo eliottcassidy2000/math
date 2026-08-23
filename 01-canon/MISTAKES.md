@@ -9,6 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-451 (2026-08-23, THM-3821 candidate audit) -- a generic valuation match was extended across a confluent endpoint
+
+- **What failed:** the provisional `rz^2` ladder proof asserted
+  `ord_0(R)=ord_0(v)+1` for every origin multiplicity and described both
+  one-sided top profiles as empty.
+- **Minimal witness / first failed implication:** when `ord_0(v)=0` and
+  `ord_0(R)>1`, the `Pg` block joins the `f,K` forcing at order three, so the
+  forcing is not uniquely earliest.  Separately, `T=mu*S` permits
+  `mu=0,T=0`; only `S=0` was excluded.
+- **Repair / survivor:** for positive `ord_0(v)` the exact valuation equality
+  remains valid.  At multiplicity zero the full next bucket gives
+  `[r^2z]|_(e=0)=-5 delta R(0)/(14 alpha)`, hence `e|R`; together with the
+  nonzero-root valuations this still proves `R=evU`.  THM-3821 now says
+  exactly that `S` is nonzero and promotes the repaired 59-gate necessary
+  classification.
+- **Reusable rule:** a leading-order comparison proved on a positive-order
+  stratum must be recomputed when that order becomes zero; later blocks can
+  tie exactly at a confluent endpoint.  Also test proportionality constants
+  at zero before translating a relation into “two-sidedness.”
+
 ## MISTAKE-450 (2026-08-23, THM-3820 promoted-scope audit) -- a discriminant square factor was overread on its zero and degree-drop seams
 
 - **What failed:** the promoted prose called `W` exactly the sheet-collision

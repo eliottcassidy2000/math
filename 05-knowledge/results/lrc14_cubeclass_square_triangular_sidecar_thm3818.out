@@ -1,0 +1,13 @@
+theorem=THM-3818-square-triangular-cube-address-sidecar
+universe=admissible_sums:94;primitive_pairs:5855
+square_sum_shells=4,25,100,121,289;rows=222
+triangular_sum_shells=10,55,253;rows=132
+square_addresses=(56,65;sqrt=671);count=1
+triangular_addresses=(1,3;T_7);(9,13;T_76);(37,45;T_532);(21,73;T_892);(37,63;T_775);(6,109;T_1609);(37,150;T_2617);(46,159;T_2869)
+square_triangular_addresses=none
+pell_cap_pairs=(1,5),(5,29),(29,169);atlas_intersection=(5,29)
+classic_join=T_8=36=6^2;T_12=78;cube_address_5_29=24514
+scope=finite_arithmetic_sidecar_only;no_LRC14_row_excluded
+semantic_sha256=e80c76bcbbf9a83c6cb87983ababe96906c1160581aaee8079b6325051eb1e53
+CHECKS=17596
+RESULT=PASS

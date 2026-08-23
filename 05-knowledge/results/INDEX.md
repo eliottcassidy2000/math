@@ -1,5 +1,33 @@
 # Script Results Index
 
+- `jc2_nonlinear_cubic_compact_euler_thm3823.py` -> matching `.out`
+  [THM-3823 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  The THM-3811 etale surface has `chi_c(U)=8`: its branch normalization has
+  three punctures and Euler characteristic `-1`, the four-to-one origin
+  identification gives `chi_c(Gamma)=-4`, and the projection has `3/1/0`
+  sheets on the off-branch/ordinary-branch/three-exception strata.  Hence no
+  finite or proper etale atlas `A2_C -> U` exists; every surviving atlas is
+  nonfinite, has signed Euler debt `8d-1`, and needs at least two boundary
+  primes.  Nonproper dominant atlases remain open.  `CHECKS=16`.
+  Script/output/semantic SHA-256:
+  `922a051268b065a01d91a363ceba0d15f177373b49a432339f2e9638edacfc67` /
+  `5038865427aa0e2d9babf3710d8748af9a76ac2b36e291b607c1cde94a8f467b` /
+  `6a93d704366b10d18382510a566f79e308d9ec390fafdb65e5ebac55e89aecae`.
+
+- `jc2_cubic_pseudoplane_rz2_odd_ladder_thm3821.py` -> matching `.out`
+  [THM-3821 PROVED NECESSARY CLASSIFICATION + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  The first `rz^2` extension of THM-3814 forces either the
+  `7,5,3,1` Kummer ladder with a terminal Riccati square payment or the
+  `7,3,1` skip ladder with a linear payment.  The `S=0`, zero-terminal,
+  constant-parameter, and linear-parameter branches are empty, so the common
+  parameter has degree at least two; `T=0` remains possible through `mu=0`.
+  A post-candidate audit repaired the confluent `ord_0(v)=0` seam using the
+  full `r^2z` bucket.  Existence and the full `rz^2` no-go remain open.
+  `CHECKS=59`.  Script/output/semantic SHA-256:
+  `77532b0a60025c23ae49f7df1c60123fa9671de581472900ca6fb134d4777850` /
+  `0be46adc58708a0c5aa6debf57226da2083a288c571626135f9102c3ae930cdc` /
+  `547bea40c3cce8bc03a8d82f5bd96ffcd93313adcc654509317467ecfb2cb5f2`.
+
 - `jc2_universal_euler_mod7_residual_quadratic_thm3820.py` -> matching `.out`
   [THM-3820 PROVED + VERIFIED-EXACT + TWICE INDEPENDENTLY HOSTILE-AUDITED].
   The coefficient-free pure-`r` critical resultant has only Euler layers
@@ -62,6 +90,20 @@
   `0bb6b60238335695addce0010182f5222da4c4a86c6f59912bd0f36123d063ca` /
   `37aa867d653d7123435f9841cdc772c3cd71c289162006f80aeb6079a17ad7bc` /
   `86c481b03158ba3cb7024ef8739fde640be331d9856ce5d4fc0c1b3b4fcc06cb`.
+
+- `lrc14_cubeclass_square_triangular_sidecar_thm3818.py` -> matching `.out`
+  [THM-3818 FINITE-EXACT CLASSICAL-NUMBER SIDECAR + VERIFIED-EXACT].  Among
+  the 5,855 cube-address rows, square pair-sum shells are
+  `4,25,100,121,289` (222 ratios) and triangular shells are `10,55,253`
+  (132 ratios).  Exactly one cube address is square,
+  `56^3+65^3=671^2`; exactly eight are triangular; none is
+  square-triangular.  The capped Pell pairs meet the inert atlas only at
+  `(5,29)`, where `T_8=36=6^2`, `C(13,2)=T_12=78`, and the cube address is
+  `24514`.  These are arithmetic sidecars, not loneliness predicates.
+  `CHECKS=17596`.  Script/output/semantic SHA-256:
+  `0050033a2782e0adf4ab86aaca74db43b7e879caf48efdc0f2fcb7da31a9e963` /
+  `673a764dd14e1b06c549a80cf72e747376d0fba6d28f17da3ac778335f3f9b15` /
+  `e80c76bcbbf9a83c6cb87983ababe96906c1160581aaee8079b6325051eb1e53`.
 
 - `chebyshev_pell_berggren_conductor_staircase_thm3819.py` -> matching `.out`
   [THM-3819 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  After
