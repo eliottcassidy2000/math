@@ -249,6 +249,120 @@ zero(
     "projective-line zero-L third-direction boundary",
 )
 
+# The second canonical projective line, spanned by h_even and h_odd.
+U, V, zeta = sp.symbols("U V zeta")
+P_even_odd = 81 * x**2 * y + 137 * x * y + 56 * y
+P_odd = -648 * x**3 - 720 * x**2 + 81 * x * y**2 - 200 * x + 49 * y**2
+Q_even_even_odd = (
+    -891 * x**3 * y
+    - 1183 * x**2 * y
+    + 81 * x * y**3
+    - 392 * x * y
+    + 56 * y**3
+)
+Q_even_odd_odd = (
+    4536 * x**4
+    + 5040 * x**3
+    - 1539 * x**2 * y**2
+    + 1400 * x**2
+    - 1247 * x * y**2
+    + 81 * y**4
+    - 256 * y**2
+)
+Q_odd = (
+    6561 * x**4 * y
+    + 17010 * x**3 * y
+    + 18009 * x**2 * y
+    + 243 * x * y**3
+    + 8760 * x * y
+    + 143 * y**3
+    + 1600 * y
+)
+P_even_odd_line = sp.expand(
+    U**2 * P_even + 2 * U * V * P_even_odd + V**2 * P_odd
+)
+Q_even_odd_line = sp.expand(
+    U**3 * Q_even
+    + 3 * U**2 * V * Q_even_even_odd
+    + 3 * U * V**2 * Q_even_odd_odd
+    + V**3 * Q_odd
+)
+h_even_odd_line = U * h_even + V * h_odd
+zero(P_even_odd_line.subs({x: x_t, y: y_t}) - h_even_odd_line**2,
+     "even-odd line square descent")
+zero(Q_even_odd_line.subs({x: x_t, y: y_t}) - h_even_odd_line**3,
+     "even-odd line cube descent")
+even_odd_residual, even_odd_remainder = sp.div(
+    sp.expand(P_even_odd_line**3 - Q_even_odd_line**2), delta, x, y
+)
+zero(even_odd_remainder, "even-odd line residual divisibility")
+
+# On V!=0, homogeneity lets us set V=1 and zeta=(U/V)^2.  The y=0
+# specialization is a quartic G_zeta(x).
+even_odd_y_zero = sp.Poly(even_odd_residual.subs({y: 0, V: 1}), U)
+gate(all(exponent[0] % 2 == 0 for exponent, _ in even_odd_y_zero.terms()),
+     "even-odd y-zero specialization uses U squared")
+quartic_zeta = sp.expand(
+    sum(
+        coefficient * zeta ** (exponent[0] // 2)
+        for exponent, coefficient in even_odd_y_zero.terms()
+    )
+)
+expected_quartic_zeta = sp.expand(
+    (6561 * zeta**3 - 157464 * zeta**2 + 1259712 * zeta - 3359232) * x**4
+    + (3888 * zeta**3 - 108864 * zeta**2 - 124416 * zeta - 7464960) * x**3
+    + (-9576 * zeta**2 - 1304640 * zeta - 6220800) * x**2
+    + (-470400 * zeta - 2304000) * x
+    - 320000
+)
+zero(quartic_zeta - expected_quartic_zeta,
+     "even-odd exact specialized quartic")
+
+square_a, square_b, square_c = sp.symbols("square_a square_b square_c")
+square_difference = sp.Poly(
+    quartic_zeta - (square_a * x**2 + square_b * x + square_c) ** 2,
+    x,
+)
+square_equations = [
+    square_difference.coeff_monomial(x**degree) for degree in range(5)
+]
+square_groebner = sp.groebner(
+    square_equations, square_a, square_b, square_c, zeta, order="lex"
+)
+expected_square_groebner = sp.groebner(
+    [
+        400 * square_a + 243 * square_c * zeta - 1296 * square_c,
+        200 * square_b - 147 * square_c * zeta - 720 * square_c,
+        square_c**2 + 320000,
+        zeta**2,
+    ],
+    square_a,
+    square_b,
+    square_c,
+    zeta,
+    order="lex",
+)
+gate(square_groebner == expected_square_groebner,
+     "even-odd quartic square coefficient ideal")
+
+odd_residual_core = (
+    41472 * x**2
+    + 6561 * x * y**2
+    + 46080 * x
+    + 3888 * y**2
+    + 12800
+)
+zero(
+    even_odd_residual.subs(U, 0)
+    + V**6 * (9 * x + 5) ** 2 * odd_residual_core,
+    "even-odd h2 endpoint residual",
+)
+zero(
+    even_odd_residual.subs(V, 0)
+    - U**6 * (6561 * x**4 + 3888 * x**3 - 512 * y**2),
+    "even-odd h1 endpoint residual",
+)
+
 semantic = {
     "conductor": "t2(t2-1)2(3t2-5)(9t4-18t2+4);exact",
     "seminormalization": "three node equalities;branch adds three cusp derivatives",
@@ -256,7 +370,8 @@ semantic = {
     "third_direction": "t3(t2-1)(3t2-5)(9t4+24t2-38);square/cube descent",
     "bounded_no_go": "minimum-degree parity-preserving delta lifts have no square residual",
     "projective_line": "all canonical L*h1+N*h3 residuals nonsquare",
-    "scope": "general mixed/higher lifts and h2-containing combinations open",
+    "second_line": "all canonical U*h1+V*h2 residuals nonsquare",
+    "scope": "general mixed/higher lifts and h2-h3/full-plane combinations open",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -273,7 +388,8 @@ print("derivative_coordinate_determinant=-8000;third_direction=EXPLICIT")
 print("third_square_cube_descent=YES;canonical_residual_square=NO")
 print("minimum_degree_parity_preserving_mixed_lift_square=NONE")
 print("canonical_projective_line_h1_h3_square_residual=NONE")
-print("general_mixed_higher_and_h2_containing_lifts=OPEN")
+print("canonical_projective_line_h1_h2_square_residual=NONE")
+print("general_mixed_higher_and_h2_h3_full_plane_lifts=OPEN")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")
 print("RESULT=PASS")

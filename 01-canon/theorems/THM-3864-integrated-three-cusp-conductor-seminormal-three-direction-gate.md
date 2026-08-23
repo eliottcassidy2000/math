@@ -2,16 +2,19 @@
 id: THM-3864
 title: "The integrated three-cusp front has a three-dimensional seminormal defect"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The conductor of
-  the THM-3854 integrated
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED CORE; PROVISIONAL
+  VERIFIED-EXACT SECOND-LINE STRENGTHENING AWAITING INDEPENDENT AUDIT.  The
+  conductor of the THM-3854 integrated
   quintic has double zeros at its three cusp addresses and simple zeros at
   all six node addresses.  Its seminormalization retains exactly the three
   node-pair gluing conditions, and the quotient by the branch ring is
   three-dimensional with cusp derivatives as coordinates.  A previously
   missing third square/cube-descent direction is explicit.  Its canonical
   depressed-cubic residual and every minimum-degree parity-preserving lift
-  remain nonsquare.  General mixed/higher lifts and combinations of all
-  three directions remain OPEN.
+  remain nonsquare.  The audited core closes the canonical `<h_1,h_3>` line;
+  the provisional strengthening closes `<h_1,h_2>` by an exact specialized
+  quartic square ideal.  General mixed/higher lifts, `<h_2,h_3>`, and the
+  projective-plane interior remain OPEN.
 source: jc_zero_debt_lift / integrated-cusp alternative cubic-order lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit checked that
@@ -29,8 +32,12 @@ audit: >
   descent, its residual factor, and the complete bounded parity-preserving
   lift coefficients.  It also verifies the symbolic factorization and both
   boundary specializations for the complete canonical projective line
-  spanned by the first and third directions.  Normal and optimized runs must
-  byte-match the frozen 43-gate transcript and both recorded hashes.
+  spanned by the first and third directions.  The new provisional section
+  additionally verifies every cross descent on `<h_1,h_2>`, its specialized
+  quartic, the complete square-coefficient Groebner basis, and both
+  endpoints.  Normal and optimized runs must byte-match the frozen
+  transcript.  Independent hostile audit is required only for this new
+  second-line strengthening.
 depends_on:
   - THM-3854-integrated-three-cusp-quintic-s5-natural-completion-obstruction
 related:
@@ -38,16 +45,17 @@ related:
   - THM-3855-formal-inverse-discriminant-lift-and-algebraization-gate
 script: 04-computation/jc2_integrated_three_cusp_seminormal_defect_thm3864.py
 output: 05-knowledge/results/jc2_integrated_three_cusp_seminormal_defect_thm3864.out
-script_sha256: 54eb6c52cc20ececfa2276652302ead0915e229827a7fa9202f6e3ce6767d53a
-output_sha256: cf82e8730d0bf2b92d37848a8b85904640ecd6798aaa09f1c5596ea0bdfe3233
-semantic_sha256: 95b1e2f252fb6639bf80132696cddf95a4bb88d7137f85690b1248ee0d28806c
+script_sha256: b0a3d3fb6804db5445e2414bfd1ee0d0b53a6da86b8fe468d8d7fd0d45581cb2
+output_sha256: 71a35831d408b123e6dbbec7a1c899056c8d584bbc217a0f3cea178c938323bd
+semantic_sha256: 03a59be34df363c1a050bcc5a0ff65a72c67651d9d9e76d36726ce6b10b828fc
 hash_basis: raw LF bytes
 ---
 
 # THM-3864 -- all three seminormal cusp directions
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
-algebraically closed field `k` of characteristic zero.  Retain the
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED CORE, WITH A
+PROVISIONAL SECOND-LINE STRENGTHENING.**  Work over an algebraically closed
+field `k` of characteristic zero.  Retain the
 normalization of THM-3854,
 
 ```text
@@ -354,15 +362,86 @@ N^6y^6 C_3.                                                   (36)
 The scalar and `y^6` are squares, whereas `C_3` is nonsquare by Section 4.
 This handles the projective endpoint and completes the line uniformly.
 
-## 7. Scope and next exact search
+## 7. Provisional strengthening: the canonical `h_1,h_2` line
+
+**PROVISIONAL + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**  The
+second coordinate line also closes.  Besides the endpoint descents from
+THM-3854, the cross terms are
+
+```text
+P_12=81x^2y+137xy+56y,                                       (37)
+
+Q_112=-891x^3y-1183x^2y+81xy^3-392xy+56y^3,
+
+Q_122=4536x^4+5040x^3-1539x^2y^2+1400x^2
+      -1247xy^2+81y^4-256y^2.                                (38)
+```
+
+They pull back to `h_1h_2`, `h_1^2h_2`, and `h_1h_2^2`.  Hence the
+canonical descents for `[U:V] in P1(k)` are
+
+```text
+P_(U,V)=U^2P_1+2UVP_12+V^2P_2,
+Q_(U,V)=U^3Q_1+3U^2VQ_112+3UV^2Q_122+V^3Q_2.                 (39)
+```
+
+Let `R_(U,V)=(P_(U,V)^3-Q_(U,V)^2)/Delta`.  On `V!=0`, scale to
+`V=1` and put `zeta=U^2`.  The specialization at `y=0` is the quartic
+
+```text
+G_zeta(x)=
+ (6561zeta^3-157464zeta^2+1259712zeta-3359232)x^4
++(3888zeta^3-108864zeta^2-124416zeta-7464960)x^3
++(-9576zeta^2-1304640zeta-6220800)x^2
++(-470400zeta-2304000)x-320000.                              (40)
+```
+
+If `R_(U,V)` were a square in `k(x,y)`, the UFD argument used in Section 6
+would make it a polynomial square up to a constant, and the constant is a
+square in `k`.  Since `(40)` is never zero, it would have the form
+
+```text
+G_zeta(x)=(A_2x^2+B_1x+C_0)^2.                               (41)
+```
+
+Coefficient comparison in `(41)` has the following reduced lexicographic
+Groebner basis:
+
+```text
+400A_2+243C_0zeta-1296C_0,
+200B_1-147C_0zeta-720C_0,
+C_0^2+320000,
+zeta^2.                                                       (42)
+```
+
+Thus `zeta=0`, so `U=0`.  This endpoint is the pure `h_2` residual
+
+```text
+-(9x+5)^2
+ (41472x^2+6561xy^2+46080x+3888y^2+12800),                  (43)
+```
+
+which is nonsquare: after removing the displayed square, the remaining
+factor has `y`-degree two, no linear `y` term, and nonzero `y^2` and
+constant parts.  If `V=0`, one is at the pure `h_1` residual
+
+```text
+6561x^4+3888x^3-512y^2,                                     (44)
+```
+
+nonsquare by the same argument.  Therefore every point of the canonical
+`<h_1,h_2>` projective line has nonsquare residual, subject only to the
+pending independent audit of this section.
+
+## 8. Scope and next exact search
 
 The result converts the seminormal boundary problem from an incomplete
 two-direction scout to a complete three-dimensional defect space.  It does
 **not** classify binary cubic orders with discriminant `Delta`.  The first
 live searches are:
 
-1. linear combinations involving `h_2`, including the two remaining
-   coordinate lines and the interior of the full projective plane;
+1. the remaining `<h_2,h_3>` coordinate line and the interior of the full
+   projective plane;
 2. parity-breaking representatives of the same boundary elements;
 3. representatives above total degrees five and seven; and
 4. the all-orders algebraization mechanism of THM-3855 applied to this
