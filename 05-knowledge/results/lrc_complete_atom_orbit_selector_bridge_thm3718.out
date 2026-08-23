@@ -1,0 +1,11 @@
+bridge_identity=PASS
+target_masks_checked=3
+root_indices_checked=12
+target_cells_checked=169
+bare_drift_floor=D0/16384
+bare_max_edge_sq_floor=sin(pi/13)^2*D0/8192
+bare_max_three_site_sq_floor=sin(pi/13)^4*D0/1024
+selector_edge_sq_floor=sin(pi/13)^2*D0/4333568
+selector_three_site_sq_floor=sin(pi/13)^4*D0/541696
+word_selector_edge_sq_floor=mu(Q)^2*sin(pi/13)^2*D0/17334272
+word_selector_three_site_sq_floor=mu(Q)^2*sin(pi/13)^4*D0/2166784
