@@ -2,7 +2,7 @@
 id: THM-3755
 title: "Composite-monomial generic-fibre residue obstruction"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.  Let m>=2 and
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let m>=2 and
   Q=X+F(X^mT), where F(0)=0.  Every such Q is nonsingular.  It is a
   coordinate exactly when F=0.  If deg F>=2, its generic-fibre response
   differential has a nonzero residue, so Q has no rational Jacobian mate.
@@ -11,16 +11,15 @@ status: >
   multi-charge components but no planar Keller pair.
 source: root + jc_sparse_direct_search / 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The generic-fibre chart, residue sign,
-  differential-field kernel, linear rational primitive, polynomial descent,
-  smoothness identity, and reducible-fibre certificate have been rederived.
-  The exact companion checks the residue formula, nonlinear invariant,
-  boundary mates, a three-charge hostile, and bounded polynomial-mate
-  systems.  Normal and optimized output agree with the frozen transcript;
-  independent hostile audit remains due.
+  PASS.  An independent hostile audit rederived the monomial-chart chain
+  rule, higher-pole residue sign, generic-root implication, exact
+  ker(D_F^r), nonlinear polynomial-unit contradiction, complete linear and
+  zero-profile rational mates, polynomial top-T descent, axis smoothness,
+  and reducible-fibre certificate.  Normal, optimized, and frozen output
+  agree; script/output/semantic hashes and CHECKS=595 match.
 depends_on: []
 related:
-  - THM-3551-one-invariant-ray-and-residue-planar-jacobian-mate-no-go
+  - THM-3551-one-ray-planar-jacobian-mate-no-go
   - THM-3598-danielewski-rational-exact-polar-graph-family-and-classification
   - THM-3716-monomial-broughton-hamiltonian-obstruction-family
   - THM-3741-radial-two-charge-keller-component-classification
@@ -35,7 +34,7 @@ hash_basis: raw LF bytes
 
 # THM-3755 -- the missing thickened ray is residue-obstructed
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.**  THM-3551 closes
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  THM-3551 closes
 the additive one-invariant family `x+h(x^p y^q)` rationally at `p=q=1` and
 polynomially for primitive `q>=2`.  The missing primitive exponent boundary
 is `q=1,p=m>=2`.  It behaves differently at its linear edge, but it too is
