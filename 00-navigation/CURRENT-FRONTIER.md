@@ -348,9 +348,13 @@ support asymptotic or residue.
   excludes degree-two etale maps under constant units. THM-3801 forces a
   nonmonogenic `S3` completion; THM-3808's homogeneous packet is a Veronese
   cone with rank-4 open units. THM-3811's nonlinear packet instead has one
-  rational ramification curve and an exact class/unit test; THM-3816 proves
-  `S*=k*`. Open: `[E]` order, complement affineness, pure `r` degree `>=5`,
-  mixed degree `>=3`/nonconstant `h`, poles, unrestricted pairs and `JC/DC(2)`.
+  rational ramification curve, `S*=k*`, `Cl(S)=Z^3`, primitive ramification
+  class, and the explicit affine etale complement
+  `U=Spec S[A/D,omega/D]` with `U*=k*` and `Pic(U)=Z^2`; THM-3816 gives an
+  independent positive-filtration proof of `S*=k*`.  The Picard group rules
+  out both `U=A2` and the THM-3785 pseudo-plane.  Open: construct or obstruct
+  a dominant polynomial etale atlas `A2 -> U`; pure `r` degree `>=5`, mixed
+  degree `>=3`/nonconstant `h`, poles, unrestricted pairs and `JC/DC(2)`.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692
