@@ -2,8 +2,8 @@
 id: THM-3880
 title: "Marked-root carriers on nodal-cuspidal curves are exactly the matching-sign packets"
 status: >
-  PROVISIONAL STRENGTHENING CANDIDATE + VERIFIED-EXACT; awaiting independent
-  hostile audit of the final iff.  Universally, opposite nonzero marked-root
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Universally,
+  opposite nonzero marked-root
   signs over one normalization fibre obstruct every polynomial carrier.  On
   a plane curve with only ordinary nodes and A2 cusps, the sign-epsilon
   carrier exists exactly when z=epsilon over every point above A=0 and the
@@ -13,7 +13,13 @@ status: >
   square root, and subsequent projective-companion geometry remain open.
 source: jc_sparse_direct_search / post-THM-3876 intrinsic sign-monodromy abstraction, 2026-08-23
 audit: >
-  STRENGTHENING SELF-AUDITED; independent hostile audit pending.  The
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit rederived the
+  global-sign factorization in the normalization domain, the exact matching-
+  sign cancellation and wrong-sign pole order at every zero of A, and the
+  completed-local conductor criteria for both ordinary nodes and A2 cusps.
+  It checked the vertical and identically-zero-P boundaries, finite-
+  normalization/completion globalization, and the equivalence between
+  coordinate-ring membership and a polynomial representative.  The
   assertion-free symbolic companion checks the cusp identity, both
   global-sign carrier formulas and their exact jumps, both matching-sign
   cancellations and wrong-sign unit numerators above A=0, the A=0 node
@@ -36,8 +42,7 @@ hash_basis: raw LF bytes
 
 # THM-3880 -- the marked-root sign and conductor theorem
 
-**PROVISIONAL STRENGTHENING CANDIDATE + VERIFIED-EXACT; awaiting independent
-hostile audit.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an algebraically closed field `k` of
 characteristic zero.  For `b in k[A,C]`, put
 
 ```text
