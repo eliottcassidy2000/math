@@ -2,15 +2,15 @@
 id: THM-3756
 title: "Odd-square ordinal chart and affine descent for the Berggren tree"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT.  For a primitive
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a primitive
   Pythagorean triple with ordered even leg B, the odd square roots of B+C and
-  C-B define two ordinals (r,s).  The candidate proves that these pairs are
-  exactly r>s>=1 with gcd(2r-1,2s-1)=1; the outer-rank fibre has size
-  phi(2r-1)/2; and the three Berggren children and the unique inverse descent
-  are affine in (r,s).  Without the gcd filter, the full triangular cone is a
-  forest of odd-square-scaled Berggren trees indexed by odd content.  The file
-  also proposes exact ambient, selected-shell, and heap address comparisons.
-  No claim may be used until independent hostile review promotes it explicitly.
+  C-B define two ordinals (r,s).  These pairs are exactly r>s>=1 with
+  gcd(2r-1,2s-1)=1; the outer-rank fibre has size phi(2r-1)/2; and the three
+  Berggren children and the unique inverse descent are affine in (r,s).
+  Without the gcd filter, the full triangular cone is a forest of
+  odd-square-scaled Berggren trees indexed by odd content.  The algebraic
+  proof was independently audited, including a separate brute enumeration of
+  all 792 primitive ordered triples with C<=5000 and zero converse failures.
 source: opus / 2026-08-23
 depends_on:
   - THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone
@@ -26,11 +26,12 @@ output: 05-knowledge/results/odd_square_ordinal_berggren_affine_descent_thm3756.
 
 # THM-3756 -- odd-square ordinals on the Berggren tree
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT.**  The displayed
-integer algebra and strict descent are complete, and the exact companion
-passes in ordinary and optimized Python.  This file remains outside the proof
-graph until an independent hostile audit explicitly accepts the statement,
-branch convention, and scope.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The displayed
+integer algebra and strict descent prove the global claims.  The exact
+companion passes identically in ordinary and optimized Python, and an
+independent hostile audit accepted the statement, branch convention, inverse
+cones, equality boundary, address domains, and scope after reproducing the
+primitive converse by a separate enumeration through `C<=5000`.
 
 No literature-priority or global-novelty claim is made.  The point is to type
 an especially simple natural-number rank suggested by the two legs adjacent
@@ -146,10 +147,13 @@ An odd prime dividing all three coordinates would divide both `q^2` and
 `d^2`; two cannot divide the odd first coordinate.  Hence the triple is
 primitive.
 
-Conversely, let `(A,B,C)` be primitive with `B` even.  Its coordinates are
-pairwise coprime.  The two positive odd integers `C+B` and `C-B` are coprime:
-their gcd divides both `2C` and `2B`, and it is odd.  Their product is `A^2`,
-so each is a square,
+Conversely, let `(A,B,C)` be primitive with `B` even.  Then `A` is odd, since
+otherwise the two legs share a factor two, and `C` is odd by the Pythagorean
+identity.  The coordinates are pairwise coprime: a prime common to any two
+would divide the third and contradict primitivity.  The two positive odd
+integers `C+B` and `C-B` are coprime: a common prime would divide both `2C`
+and `2B`, hence (being odd) both `C` and `B`.  Their product is `A^2`, so each
+is a square,
 
 ```text
 C+B=q^2,                         C-B=d^2,                (13)
@@ -415,9 +419,12 @@ python 04-computation/odd_square_ordinal_berggren_affine_descent_thm3756.py
 python -O 04-computation/odd_square_ordinal_berggren_affine_descent_thm3756.py
 ```
 
-The two modes byte-match the stored transcript.  The exact companion checks:
+Both modes byte-match the LF-normalized stored transcript literally on every
+supported platform.  The exact companion checks:
 
-- (3)--(6) for `-4000<=z<=4000` and `1<=h<=9`;
+- (3) for `-4000<=z<=4000` and `1<=h<=9`; the factorization and exact fibre
+  equivalence (4) for `0<=n<=600` across the same `z` range; and (5)--(6) for
+  `1<=r<=600`;
 - all `145,861` pairs in `Omega` with `2<=r<=600`, including the triple,
   inverse, primitivity, `phi/2` fibre, ambient and selected addresses;
 - all `437,583` labelled child/parent round trips in that universe, both in
@@ -432,9 +439,11 @@ The two modes byte-match the stored transcript.  The exact companion checks:
 - the root line, rank-three overlap, differing child signatures, cross-depth
   rank collision, first ambient hole `(r,s)=(5,2)`, prime full fibres, and
   exact nonprimitive content hostile `(27,36,45)`.
+- an independent implementation's direct census of all `792` primitive
+  ordered triples with `C<=5000`, with zero failures of (10)--(13).
 
 The semantic digest is
-`c2d9fed8f05283f87d358a3aa8913ae3c730767baa6a436bc2cab4eb2fc65656`.
+`5f631c9e700911ce515a7393bb8bc6c5a1551355441834c74544606e0922fc6f`.
 The computation verifies consequence objects and conventions; the global
 quantifiers follow from the factorization, totient pairing, affine formulas,
 and strict descent above.

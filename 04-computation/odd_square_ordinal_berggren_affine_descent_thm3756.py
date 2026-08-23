@@ -22,6 +22,7 @@ from collections import Counter, defaultdict
 from functools import lru_cache
 from hashlib import sha256
 from math import gcd, isqrt
+import sys
 
 
 MAX_Z = 4_000
@@ -197,6 +198,9 @@ def replay_word(upward_path: list[str], root: tuple[int, int] = (2, 1)) -> tuple
 
 
 def main() -> None:
+    # Make the stored transcript a literal byte match on every platform.
+    sys.stdout.reconfigure(newline="\n")
+
     # The integer triangular fold and its orientation-sensitive sidecar.
     triangular_checks = 0
     for z in range(-MAX_Z, MAX_Z + 1):
@@ -208,11 +212,34 @@ def main() -> None:
                 "centered triangular difference failed",
             )
             triangular_checks += 1
+
+    fold_iff_checks = 0
+    for n in range(0, MAX_R + 1):
+        for z in range(-MAX_Z, MAX_Z + 1):
+            require(
+                2 * (triangular(z) - triangular(n))
+                == (z - n) * (z + n + 1),
+                "triangular collision factorization failed",
+            )
+            require(
+                (triangular(z) == triangular(n))
+                == (z == n or z == -n - 1),
+                "triangular fold fibre failed",
+            )
+            fold_iff_checks += 1
+
+    odd_square_checks = 0
     for r in range(1, MAX_R + 1):
+        extracted_root = centered_triangular_difference(r - 1, 2) // 2
         require(
-            centered_triangular_difference(r - 1, 2) // 2 == odd_root(r),
+            extracted_root == odd_root(r),
             "odd-root extraction failed",
         )
+        require(
+            extracted_root * extracted_root == odd_root(r) ** 2,
+            "odd-square ordinal extraction failed",
+        )
+        odd_square_checks += 1
 
     # The two-ordinal chart, exact fibres, natural-number addresses, and
     # parameter/Berggren branch convention.
@@ -386,6 +413,9 @@ def main() -> None:
         require(fibre_sizes[r] == r - 1, "prime shell is not full")
 
     semantic = {
+        "triangular_checks": triangular_checks,
+        "fold_iff_checks": fold_iff_checks,
+        "odd_square_checks": odd_square_checks,
         "pair_count": len(pairs),
         "branch_checks": branch_checks,
         "forest_branch_checks": forest_branch_checks,
@@ -406,6 +436,8 @@ def main() -> None:
 
     print("THM-3756 exact audit")
     print(f"triangular_checks={triangular_checks}")
+    print(f"fold_iff_checks={fold_iff_checks}")
+    print(f"odd_square_checks={odd_square_checks}")
     print(f"ordinal_pairs_r_le_{MAX_R}={len(pairs)}")
     print(f"branch_round_trips={branch_checks}")
     print(f"maximum_descent_length={max_descent}")

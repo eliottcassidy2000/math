@@ -1,0 +1,18 @@
+ORDINAL ENCODING OPERATION PROBE
+integer_quadratic_centered_checks=148230
+periodic_kernel_hostile_checks=148230
+graded_graph_laplacian_checks=247860
+affine_width_layered_address_checks=979650
+lrc_profile_rank=1..165
+lrc_centered_profile_checks=99
+lrc_ordinal_successor_hostile=4:(4,5) -> 5:(1,6)
+lrc_repeated_first_lane=[1, 5, 10, 16, 23, 31, 40, 50, 61, 73, 86, 100, 115, 131, 148]
+triangular_flux=4L+2A; hostile=5*delta_1-3*delta_2 -> 0
+odd_rank_product_checks=51200; star(r,s)=2rs-r-s+1
+ternary_walk_address_checks=30603; shells_end_at_squares
+ternary_walk_hostile=(+1,-1) versus (-1,+1): same endpoint, different prefix
+monomial_rank_landing_checks=67456
+poisson_raw_channels=[((1, 0), 2), ((0, 1), 2), ((1, 0), -2), ((0, 1), -2)]
+poisson_aggregated=[((0, 1), 0), ((1, 0), 0)]
+semantic_sha256=7a9920d83f94b98cd962d8418fb390ca37a4c001604f2887153b65f3fe20b60e
+PASS
