@@ -2,7 +2,7 @@
 id: THM-3783
 title: "Quadratic tower etale-surface maximal polynomial observable"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  In the m=1
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the m=1
   boundary of the THM-3774 rational Keller tower, the complete polynomial
   intersection with the rational target field is the smooth surface
   r^3g=z^2-r/4.  The source affine plane maps onto it etale with generic
@@ -16,14 +16,16 @@ status: >
   Other two-by-three cells and arbitrary Darboux pairs remain open.
 source: jc_sparse_direct_search / THM-3779 quadratic-boundary continuation, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The exact companion verifies the rational
-  Keller seed, all generator/field identities, the hypersurface relation,
-  old Danielewski sub-observables, all Poisson minors, smooth and etale unit
-  ideals, inverse and arm charts, deck invariance, Euler primitive, an
-  explicit locally nilpotent derivation, the two natural Broughton profiles,
-  a 32-monomial hostile packet, and ten instances of the universal aligned
-  two-by-three transport identity.  Normal/optimized/frozen replay and an
-  independent proof audit remain required before promotion.
+  TWO INDEPENDENT HOSTILE AUDITS PASSED (root and jc_zero_debt_lift,
+  2026-08-23).  The audits rederived
+  the generator and field identities, smoothness, surjective nonfinite
+  etaleness, height-one DVR descent for the full intersection, the unique
+  doubled arm and Picard class, units, LND kernel, global Euler primitive,
+  degree floor, homogeneous anatomy, complete two-by-two sign/factor cases,
+  and the aligned two-by-three transport factor.  The Broughton dependencies
+  and degree-two Galois gate were checked against their proved scopes.
+  Normal and optimized runs byte-match the hardened frozen output; all
+  three raw hashes and 94 active gates agree.
 depends_on:
   - THM-3774-three-component-rational-keller-cover-tower
   - THM-3716-monomial-broughton-hamiltonian-obstruction-family
@@ -41,7 +43,7 @@ hash_basis: raw LF bytes
 
 # THM-3783 -- the quadratic boundary is a smooth etale surface
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  This
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This
 theorem computes the sharp `m=1` exception left open by THM-3779.  It does
 not construct a planar Jacobian counterexample.  It does isolate a new exact
 surface on which such a counterexample could live.
@@ -569,5 +571,4 @@ The theorem proves:
 
 It proves neither `ML(S)=k[r]`, nor a complete `2 by 3` classification, nor
 the existence or nonexistence of an arbitrary Darboux pair on `Y`, nor a
-planar Jacobian counterexample.  **QED, conditional only on independent
-hostile audit.**
+planar Jacobian counterexample.  **QED.**
