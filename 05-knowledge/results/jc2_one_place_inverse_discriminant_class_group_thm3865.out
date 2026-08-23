@@ -1,0 +1,10 @@
+THM3865_TARGET Delta0+lambda*C^5
+THM3865_NORMALIZATION C=-D(t)/lambda,A=t*C;four origins;one infinity
+THM3865_UFD_CHART S_C=k[t,y,(y^2-D(t))^-1]
+THM3865_SPECIAL_FIBRE (W-mu*A^2)(W+mu*A^2),mu^2=-1615
+THM3865_NAGATA Cl(S)=Z^2/<(1,1)>=Z;units=k*
+THM3865_THREE_TORSION NONE
+THM3865_GLOBAL_CUBIC normal finite-flat S3 algebra with this discriminant=NONE
+THM3865_SCOPE exact target only; other one-place discriminants and JC2 remain open
+SEMANTIC_SHA256 e5eada378322bce324045b8af7a5ea7880bb41fbc3981c2cb417ba837c24eef1
+CHECKS 20
