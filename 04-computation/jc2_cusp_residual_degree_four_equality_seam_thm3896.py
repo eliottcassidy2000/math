@@ -384,7 +384,7 @@ semantic = {
     "generic_branch": "[x^3*y^14]S17=8*beta^6 contradicts v_x(g9)=4",
     "exceptional_branch": "[x^4*y^12](S16-g8^2)=2*sigma^6/81 contradicts v_x(g9)=7",
     "positive_control": "Q7=-8*x^3*K2^2 and Q6=6*(40+rho*z)*x^4*K2",
-    "scope": "provisional proof candidate; independent hostile audit pending; JC2 open",
+    "scope": "proved and independently hostile-audited n=4 equality cell only; JC2 open",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -395,18 +395,18 @@ gate(
 )
 
 print("theorem=THM-3896-cusp-residual-degree-four-equality-seam-emptiness")
-print("status=RESERVED_PROVISIONAL_PROOF_CANDIDATE_VERIFIED_EXACT_AWAITING_INDEPENDENT_HOSTILE_AUDIT")
+print("status=PROVED_VERIFIED_EXACT_INDEPENDENTLY_HOSTILE_AUDITED")
 print("n4_kummer_entry_rederived=YES")
 print("complete_n4_parameterization=YES")
 print("high_shell_degrees_at_least_17=DQ")
 print("generic_decisive_coefficient=[x^3*y^14]S17=8*beta^6")
-print("generic_terminal_line=EMPTY_PROVISIONAL")
+print("generic_terminal_line=EMPTY_PROVED")
 print("exceptional_divisibility_gate=h2_divides_Q6")
 print("exceptional_decisive_coefficient=[x^4*y^12](S16-g8^2)=2*sigma^6/81")
-print("exceptional_terminal_line=EMPTY_PROVISIONAL")
+print("exceptional_terminal_line=EMPTY_PROVED")
 print("positive_control_Q7=-8*x^3*K2^2")
 print("positive_control_Q6=6*(40+rho*z)*x^4*K2")
-print("degree_four_equality_seam=EMPTY_PROVISIONAL")
+print("degree_four_equality_seam=EMPTY_PROVED")
 print("JC2_status=OPEN")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")

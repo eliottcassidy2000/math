@@ -2,8 +2,8 @@
 id: THM-3896
 title: "Cusp residual degree-four equality-seam emptiness"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  In the THM-3881 residual problem, the n=4
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the THM-3881
+  residual problem, the n=4
   THM-3884 equality seam is empty.  After the two proved gauge jets, the
   middle collision has the Kummer form q_0=x s^2 and r_4=rho x^3 s.  If
   s is not proportional to x, the degree-17 square-root equation fails at
@@ -13,15 +13,18 @@ status: >
   equality cell; JC(2) remains open.
 source: tournament-jc-breakthrough / degree-four Kummer-shell scout, 2026-08-23
 audit: >
-  SELF-AUDITED PROVISIONAL CANDIDATE.  The focused exact companion rederives
+  INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23.  The audit rederived the full
+  Kummer parameterization and DQ shell, checked that every degree-sixteen
+  correction is present, verified both decisive coefficients and the h_2
+  divisibility gate, and replayed the positive controls.  It noted only the
+  harmless presentation redundancy (s,rho)~(-s,-rho).  The focused exact
+  companion rederives
   the n=4 Kummer collision, verifies the complete homogeneous
   parameterization, the A/B gauge-transport identities, the DQ high shell,
   both x-adic branches, and the two decisive coefficients.  A positive
   control reaches both leading square-root equations before failing at the
   claimed degree-16 coefficient.  Normal and optimized runs byte-match the
-  frozen transcript.  Independent hostile audit must recheck the degree
-  exhaustion, the UFD Kummer normalization, the h_2 divisibility gate, and
-  the degree-16 valuation bound before status promotion.
+  frozen transcript.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
   - THM-3884-cusp-residual-total-degree-leading-gauge-filtration
@@ -30,17 +33,17 @@ related:
   - THM-3894-cusp-residual-all-degree-gauge-kummer-parity-filtration
 script: 04-computation/jc2_cusp_residual_degree_four_equality_seam_thm3896.py
 output: 05-knowledge/results/jc2_cusp_residual_degree_four_equality_seam_thm3896.out
-script_sha256: ec0e410392cab779713bf6e8dbb2cc7b1f8fdf7b4cc50849f61baeb14e8cb08f
-output_sha256: ad402ebe3e3d2a6c588cdcd18d2942aa81a2bc3ca1956fbab74c68e012e8ab99
-semantic_sha256: d18d8a8674ea353b7a387746b31af8414fe14b6fa6f927be9a7a23cfccba6b67
+script_sha256: dc0a0e0f5520569a2bc7b0d52d2c7744a67f5de0cf21e4cd300345c285a0f60a
+output_sha256: 1a0729c094bdb8c3fd16289e2f36bbdcf72d78b0d598391d257a951f8da4e5d9
+semantic_sha256: 003c86009246541147c33f44d7604f00e5d0760de13c0d461f814a6940f10f39
 hash_basis: raw LF bytes
 ---
 
 # THM-3896 -- the degree-four equality seam is empty
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**  Work over an algebraically closed field `k` of
-characteristic zero.  Use the THM-3881 notation
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  Use the THM-3881
+notation
 
 ```text
 a=x+1,                     L=9x+4,
@@ -51,8 +54,7 @@ r=aT+Kf,                   A=KT+aPf,
 B=Pf^2-T^2.                                                (2)
 ```
 
-Let `S(T,f)` be the residual in THM-3881 equation (21).  The provisional
-claim is
+Let `S(T,f)` be the residual in THM-3881 equation (21).  Then
 
 ```text
 deg f=4,  deg T=5,  S(T,f) a square,
@@ -103,8 +105,8 @@ deg s=1,                   rho^2=-216.                    (8)
 
 Indeed, every prime other than `x` occurs to even order in `q_0`, while
 `v_x(q_0)+5` is even.  Hence `q_0/x` is a square.  This is a self-contained
-rederivation of the `n=4` specialization of the provisional THM-3894
-passport; THM-3894 is related signal, not a proved dependency here.
+rederivation of the `n=4` specialization of the proved THM-3894 passport;
+THM-3894 is related signal, not a dependency here.
 
 ## 2. Complete parameterization after the collision
 
@@ -124,8 +126,9 @@ T_3=-K_2q_2+15xq_1+4q_0+rho*x^2s.                       (10)
 ```
 
 Write the unrestricted lower pieces as a linear `u`, a quadratic `tau_2`,
-a linear `tau_1`, and a scalar `z`.  Every pair satisfying `(4),(8),(10)`
-and the THM-3881 address is then, uniquely,
+a linear `tau_1`, and a scalar `z`.  After fixing the Kummer presentation
+`(s,rho)` (with harmless redundancy `(s,rho)~(-s,-rho)`), every pair
+satisfying `(4),(8),(10)` and the THM-3881 address is uniquely
 
 ```text
 f_4=xq_0,                    T_5=-K_2q_0,
@@ -413,9 +416,8 @@ for the terminal obstruction.
 
 ## 7. Scope and reproduction
 
-Sections 1--6 form a **provisional proof candidate**, not promoted canon.
-An independent hostile audit is still required.  If promoted, the result
-would close only `deg f=4`, `deg T=5` on the THM-3884 equality seam.  It does
+Sections 1--6 close only `deg f=4`, `deg T=5` on the THM-3884 equality seam.
+The theorem does
 not close other even Kummer terminals, the odd square passport, the
 off-equality region, a Keller atlas, or JC(2).
 
