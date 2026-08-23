@@ -1,0 +1,11 @@
+THM3880_IDENTITY A^2Delta=27(P^3-u^2);P=1+(2/3)AC
+THM3880_MARKED_ROOT z^2=P;carrier forces one global sign u=epsilon*z^3
+THM3880_PLUS A^2B+=(z-1)^2(2z+1)/2
+THM3880_MINUS A^2B-=-(z+1)^2(2z-1)/2
+THM3880_JUMP B_epsilon(-z)-B_epsilon(z)=-2epsilon*z^3/A^2 when A!=0
+THM3880_A0 use u equality;opposite z=+/-1 still impossible
+THM3880_Z0 silent genuine boundary;2AC+3=0,b=2C^2/9 is positive
+THM3880_SAME_SIGN point-value test silent;conductor-jet descent remains open
+THM3880_THM3876 eta collision is exactly z->-z and recovers its jump
+SEMANTIC_SHA256 e6c43877736a4ee1c1451f8670aabc51ebdde5397278fc8de1ab8aaaa3c10ea2
+CHECKS 14
