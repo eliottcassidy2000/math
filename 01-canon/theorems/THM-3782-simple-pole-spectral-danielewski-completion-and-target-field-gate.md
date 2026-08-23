@@ -2,7 +2,7 @@
 id: THM-3782
 title: "Simple-pole spectral Danielewski completion and target-field gate"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  A reduced
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A reduced
   planar rational Keller seed whose poles are cleared by U automatically
   has a finite constant component spectrum for its log-canonical blowdown
   V=UP, and admits a canonical polynomial completion
@@ -16,14 +16,16 @@ status: >
   automatic conclusion.
 source: root + jc_quartic_c3_construct / THM-3779 abstraction, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The exact companion checks the product
-  Jacobian identity behind automatic component constancy, the universal
-  relation, three Poisson laws, squarefree Bezout/unit-minor certificate for
-  one through six spectral values, the synchronized polynomial-mate branch,
-  a two-value failed-surjectivity/Darboux hostile, the nonreduced and
-  horizontal-pole boundaries, and THM-3779's m=2 positive control.  Normal
-  and optimized replay and independent audit of the tangent-constant-field,
-  conditional DVR-descent, and THM-3600 steps remain due.
+  INDEPENDENT HOSTILE AUDIT PASSED (jc_zero_debt_lift, 2026-08-23).  The
+  audit rederived automatic component constancy, including nonvanishing of
+  the tangent derivation and its exact constant field; the spectral
+  divisibility, injection, Poisson laws, and etale minor certificate; the
+  one-value repair; the THM-3600 logarithmic de Rham obstruction; and the
+  conditional height-one descent.  In the last step, codimension-one image
+  coverage supplies a source DVR above every target DVR and etaleness gives
+  ramification index one, so valuations agree on the target field.  Every
+  hostile boundary remains load-bearing.  Normal and optimized runs
+  byte-match the frozen 64-gate transcript and both raw hashes match.
 depends_on:
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
 related:
@@ -40,7 +42,7 @@ hash_basis: raw LF bytes
 
 # THM-3782 -- simple poles canonically complete to exponent one
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  This is
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This is
 the abstract mechanism exposed by THM-3779.  It separates an unconditional
 spectral completion from a conditional maximal-intersection theorem.  It
 constructs no planar Jacobian counterexample.
@@ -389,8 +391,7 @@ exponent one.
 
 The companion checks the universal algebra and unit-minor Bezout identities
 for `h=1,...,6`, plus every hostile and positive control in Section 5.
-Normal and optimized executions must byte-match the frozen transcript before
-promotion.  The theorem proves `(5)` but does not assert that the
+Normal and optimized executions byte-match the frozen transcript.  The
+theorem proves `(5)` but does not assert that the
 codimension-one coverage condition `(24)` is automatic, and it proves no
-positive-characteristic analogue or planar Jacobian counterexample.  **QED,
-conditional only on independent hostile audit.**
+positive-characteristic analogue or planar Jacobian counterexample.  **QED.**
