@@ -359,18 +359,12 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   pays one Cardano line, while THM-3874/3877 use scalar units and `Cl=Z` to
   exclude degree-three/four sole-simple-branch fields.  THM-3879 uniquely
   attains two places; THM-3882 forbids one-place rational duals.
-  THM-3884/3886/3894 give the residual equality seam an all-degree
-  lift-gauge filtration: every survivor has `ceil(n/2)` aligned jets and an
-  odd-square/even-Kummer terminal passport.  THM-3896 then closes the first
-  open even terminal `n=4` by incompatible `x`-adic square-root responses.
-  Orthogonally, THM-3885/3895/3897 now close the **entire polynomial `f=0`
-  residual lane**: a quartic covariant forces `deg_y T<=2`, a polynomial
-  Pell/unit gate kills the quadratic channel, and odd/missing coefficients
-  kill the rest.  Thus every remaining residual survivor has `f!=0`.
-  THM-3899 proves its first global tariff `deg_y T>=deg_y f`; on positive
-  equality the leading square is a two-color equianharmonic norm with odd
-  `a=x+1` color parity.  Lower response jets, `deg_y T>deg_y f`, off-equality
-  total degrees, a Keller atlas, and `JC(2)` remain OPEN.
+  THM-3884/3886/3894 force `ceil(n/2)` equality-seam gauge jets and a parity
+  passport; THM-3896 closes the first open even terminal `n=4`.
+  THM-3885/3895/3897 close the **entire polynomial `f=0` residual lane** via
+  `deg_y T<=2` and Pell/parity gates.  For `f!=0`, THM-3899 proves
+  `deg_y T>=deg_y f` and a two-color equal-degree norm; lower responses,
+  off-equality degrees, a Keller atlas, and `JC(2)` remain OPEN.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
