@@ -1,0 +1,15 @@
+theorem=THM-3890-universal-quintic-common-zero-resolvent-class-group-dichotomy
+tangent_case=L_divides_H4=>delta_reducible
+nontangent_chart=S_L=k[t,y,(y^2-D(t))^-1]
+nonsquare_D_class_group=Z
+square_D_valuation_matrix=[[3,-2],[-2,3]]
+square_D_class_group=Z/5
+three_torsion=NONE
+units=k*
+normal_finite_flat_cubic_with_this_discriminant=NONE
+common_zero_one_place_quintic_normal_cubic=NONE
+degree_six_plus=OPEN
+unit_ideal_nonmonogenic=OPEN
+semantic_sha256=b07d58be28a8d1ab2a06b38310aed8e5228c5744cb64a47c8f9b4003cc30025d
+CHECKS=35
+RESULT=PASS
