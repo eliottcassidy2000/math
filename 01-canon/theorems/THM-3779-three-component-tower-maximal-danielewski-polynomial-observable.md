@@ -6,7 +6,7 @@ status: >
   m>=2 in the THM-3774 rational Keller tower, V=UP and the newly recognized
   E=P(V-1) are polynomial, and the complete intersection of the rational
   target field with the source polynomial ring is the smooth exponent-one
-  Danielewski ring k[U,V,E]/(UE-V(V-1)).  The induced unramified map has
+  Danielewski ring k[U,V,E]/(UE-V(V-1)).  The induced etale map has
   exact image the surface minus one point.  Over C the nonzero logarithmic
   symplectic class excludes every Darboux pair in this maximal observable,
   hence excludes every polynomial Keller pair obtained by any rational
@@ -112,7 +112,7 @@ is a domain of dimension two, while its image has fraction field
 `k(U,V)=k(U,P)` of transcendence degree two.  Hence `(6)` is the complete
 relation among the three observables.
 
-## 2. A smooth unramified target
+## 2. A smooth etale target
 
 The three source Jacobian minors are
 
@@ -135,8 +135,9 @@ The same identity proves that `Y` is smooth: its gradient
 phi_m:A2_(x,y) -> Y,          (x,y) |-> (U,V,E),       (10)
 ```
 
-is everywhere unramified, hence locally quasi-finite.  It is dominant and
-has generic degree `m+1` by `(2)`.
+is etale: source and target are smooth surfaces and the displayed minors
+make its differential an isomorphism at every point.  In particular it is
+locally quasi-finite.  It is dominant and has generic degree `m+1` by `(2)`.
 
 ## 3. The exact image for m>=2
 
@@ -250,11 +251,12 @@ R_m=k[x,y] intersection K.                            (22)
 The inclusion `D subset R_m` follows from `(5)--(7)`.  For the converse,
 take `F in R_m` and a height-one prime `q` of the normal ring `D`.
 Its generic point is not the omitted codimension-two point `o`, so `(21)`
-and local quasi-finiteness supply a height-one prime `r` of `k[x,y]`
-mapping dominantly to `q`.  If `pi_q` is a uniformizer, then
+and etaleness supply a height-one prime `r` of `k[x,y]` mapping dominantly
+to `q`; etaleness preserves its height.  The induced extension of DVRs is
+unramified, so if `pi_q` is a uniformizer, then
 
 ```text
-ord_r(F)=e(r/q) ord_q(F),             e(r/q)>0.        (23)
+ord_r(F)=ord_q(F).                                      (23)
 ```
 
 The left side is nonnegative because `F` is a source polynomial.  Hence
