@@ -2,8 +2,8 @@
 id: THM-3843
 title: "Russell-arm Darboux restrictions are immersed normalizations and forced Jelonek components"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Every Darboux pair on the THM-3785 Russell pseudo-plane restricts
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every Darboux
+  pair on the THM-3785 Russell pseudo-plane restricts
   to a finite birational normalization with nowhere-vanishing differential
   on its unique multiple arm.  The explicit
   cubic plane atlas identifies that arm with a source line.  If the arm map
@@ -14,16 +14,20 @@ status: >
   arbitrary Darboux pair remains open.
 source: root + jc_quartic_c3_construct / Russell pseudo-plane arm lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The human proof audits the intrinsic arm jet,
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn3709, 2026-08-23).  The audit
+  rederived the intrinsic arm jet,
   polynomial Luroth step, finiteness and normalization, source-line transfer,
   field-degree tower, Gwozdziewicz hypothesis, singularity conclusion, and
   Jelonek-component transfer.  This strengthens THM-3790 from differential
   nonvanishing and noninjectivity to an exact normalization statement.
   The companion verifies the Russell relation and Poisson packet, exact line
   to arm isomorphism, universal derivative Bezout identity, common-parameter
-  derivative hostile, and a nodal birational-immersion positive control.
-  Normal and optimized replay agree with the frozen transcript; independent
-  hostile audit remains.
+  derivative hostile, and a nodal birational-immersion positive control.  It
+  also checks the unique pole place and its unique extension in the
+  polynomial-Luroth step, the finite normalization inference, the exact
+  field-degree tower, and an explicit Laurent escaping arc over every arm
+  point for the Jelonek transfer.  Normal and optimized replay agree with the
+  frozen transcript.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3790-cubic-pseudoplane-arm-nodal-immersion-gate
@@ -44,8 +48,8 @@ hash_basis: raw LF bytes
 
 # THM-3843 -- the Russell arm must self-identify
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**  Work over an algebraically closed field `K` of characteristic zero,
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `K` of characteristic zero,
 fix `c in K*`, and let
 
 ```text
@@ -240,8 +244,23 @@ self-identification, not a cuspidal failure of the arm differential.
 ## 4. The self-identified curve is a forced Jelonek component
 
 The cubic atlas `(16)` is nonproper over every point of `L`: one Kummer lift
-stays finite and the other two escape.  Composing an escaping curve with the
-regular morphism `(P,Q)` shows
+stays finite and the other two escape.  This can be seen without a properness
+slogan.  Fix `(0,0,e_0) in L`, choose a nontrivial cube root of unity `xi`,
+and put
+
+```text
+w(t)=xi c+[e_0/(3xi^2c^2)]t^3,
+x=t,                    y=(w(t)-c)/t^3.                         (20a)
+```
+
+As `t->0`, the source Laurent arc escapes because `y` has a pole, while
+`r=t^3 ->0`, `z=tw(t)->0`, and
+
+```text
+e=(w(t)^3-c^3)/t^3 -> e_0.                                    (20b)
+```
+
+Composing this arc with the regular morphism `(P,Q)` shows
 
 ```text
 Gamma is contained in S_F.                                     (21)
@@ -268,5 +287,4 @@ embedding is being assumed.
 Thus the first surviving Russell-pseudo-plane counterexample cell has an
 exact geometric obligation beyond degree and Euler support: its unique arm
 must be drawn as the immersed normalization of a noninjective polynomial
-curve inside the target Jelonek set.  **QED, pending independent hostile
-audit.**
+curve inside the target Jelonek set.  **QED.**
