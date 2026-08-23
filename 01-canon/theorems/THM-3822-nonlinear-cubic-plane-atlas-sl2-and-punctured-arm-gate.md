@@ -27,8 +27,10 @@ audit: >
   K[x,y] intersect K(xy)=K[xy], and every edge of the Pell R=0 reduced-ratio
   argument.  No proof or scope repair was found.  A third independent audit
   supplied a global Bezout reconstruction and the new all-degree three-shear
-  no-go; its 57-gate assertion-free companion identifies the opposite word
-  as the exact stopping boundary.  The 37-gate primary companion verifies the
+  no-go; its 60-gate assertion-free companion identifies the opposite word
+  as the exact stopping boundary and proves that every dominant survivor
+  needs all three word parameters nonconstant.  The 37-gate primary companion
+  verifies the
   cubic-order reductions, SL2 determinant, two intrinsic lift laws,
   reconstruction of all three cubic relations and the different, the
   intrinsic D-quadratic, both discriminant identities, the Pell completion
@@ -52,9 +54,9 @@ output_sha256: 5db8d4ae4b8a6d2251f248aa341cc7d1e7cbbd5b2515d0bb70bbe0697a163f34
 semantic_sha256: a83ceddd81bf567a58c457b82978bec96f49297823c4b2374083fd96f3efc6f7
 independent_script: 04-computation/jc2_nonlinear_cubic_atlas_sl2_gate_thm3822_independent_audit.py
 independent_output: 05-knowledge/results/jc2_nonlinear_cubic_atlas_sl2_gate_thm3822_independent_audit.out
-independent_script_sha256: 94baac42cbfe175fcb1258c6b44996a8923be1cc02ce5436084663c5cd94574b
-independent_output_sha256: c10923533e7bbe7cad08333f8f5b84bd381e6bba4c59c0a1a236f0da85bd78ef
-independent_semantic_sha256: 7e3c86c844053ee7ad044ae698b04985a75a2059967a3a6198b2104271508eaf
+independent_script_sha256: 84eb23974c969965c22be3b1b46cb08ce3f6e0ae73c68fbe9ccede07eec4d4db
+independent_output_sha256: ec5618e0d7a13267e14999b5ab94d3a28e1297e60a9ff810ead77faeec221346
+independent_semantic_sha256: 52f65af540f897767e5a417d84720f1ccb98d503394960ef36f8d610c1c47b13
 hash_basis: raw LF bytes
 ---
 
@@ -376,7 +378,10 @@ Several formerly separate failures are now instances of the same gate.
   Here `k_0(1+st)=1 mod h`, so the arm can carry a nonconstant unit.  Its
   compatibility law is one relation in three parameters, and neither the
   arm nor dimension gate closes it.  This is a stopping reason, not evidence
-  for an atlas.
+  for an atlas.  Exact coefficient-content gates show that fixing any one of
+  `p,s,t` to a scalar leaves a nonzero relation in the other two, hence a
+  transcendence-degree-at-most-one image.  A dominant survivor therefore
+  needs all three parameters nonconstant.
 * The separate companion
   `04-computation/jc2_nonlinear_cubic_atlas_shifted_triple_cohn_scout_thm3822.py`
   exhausts the `5,832` ordered words

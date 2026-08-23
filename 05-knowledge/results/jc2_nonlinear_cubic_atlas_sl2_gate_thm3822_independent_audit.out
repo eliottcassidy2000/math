@@ -9,6 +9,7 @@ opposite_relation=p**4*s**3 + 3*p**3*s**2 - 4*p**2*s**3 + 3*p**2*s - 6*p*s**3 - 
 length_three_extension=NO_DOMINANT_ATLAS;ARM_CONSTANT_IF_s_NONCONSTANT;TRDEG_AT_MOST_ONE_IF_s_CONSTANT
 length_three_hostile=s=0,p=-t_gives_identity_with_nonconstant_word_parameters
 opposite_length_three_stop=K3*(1+s*t)=1_mod_H3;NONCONSTANT_ARM_UNIT_POSSIBLE
+opposite_constant_gate=p_s_t_all_required_nonconstant
 scope=OPPOSITE_LENGTH_THREE;ARBITRARY_SL2;LONGER_ATLASES_REMAIN_OPEN
-CHECKS=57
-semantic_sha256=7e3c86c844053ee7ad044ae698b04985a75a2059967a3a6198b2104271508eaf
+CHECKS=60
+semantic_sha256=52f65af540f897767e5a417d84720f1ccb98d503394960ef36f8d610c1c47b13

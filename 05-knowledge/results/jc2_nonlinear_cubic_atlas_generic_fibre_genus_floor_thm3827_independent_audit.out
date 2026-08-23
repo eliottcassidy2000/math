@@ -1,0 +1,11 @@
+theorem=THM-3827-current-dual-genus-and-bichromatic-passport
+method=independent_55_point_exact_sylvester_determinant_identity
+dual=degree7_squarefree_hyperelliptic_genus3
+infinity_parity=h_sidecar_2;k_sidecar_1
+dichotomy=transcendental_map_or_polynomial_dependence
+opposite_arm=B_mod_k_is_Laurent_Gm
+multiplicity=prime_valuations_force_full_whole_member_allocation
+hostile_nonreduced=(h-alpha*k)=(1+x*y)^2_exact_multiplicity_2
+status=PASS
+CHECKS=202
+semantic_sha256=e459cc359bb059ae476e9026876034949988d3c4856ebb58e0f69890e0f76e79

@@ -31,7 +31,7 @@ audit: >
   the five-slope strengthening it separately checked algebraic independence
   of h,k from the intrinsic D-quadratic, the second-order h-adic lift,
   pairwise coprimality of the five pencil members, and both surviving subset
-  degrees.  No quantifier or scope repair was needed.  INDEPENDENT HOSTILE
+  degrees.  No mathematical scope repair was needed.  INDEPENDENT HOSTILE
   AUDIT PASS for the dual genus floor (jc_sparse_direct_search, 2026-08-23):
   it checked survival of the degree-seven discriminant after q(ell), the
   squarefree genus-three/one-infinity sidecar, both algebraic and
@@ -49,7 +49,14 @@ audit: >
   2026-08-23): the audit checked invertibility of kB_3 on the full possibly
   nonreduced quotient, orthogonal idempotents, the zero kernel and CRT
   surjectivity, and nontriviality of both factors from the two generic signs.
-  The exact companion verifies the
+  A final 202-gate independent
+  audit (thm3827-dual-genus-audit, 2026-08-23) rebuilt the dual discriminant
+  from 55 custom Sylvester determinants, tested a nonreduced spectral member,
+  confirmed full prime-multiplicity allocation, and separately passed that
+  CRT upgrade.  It made one editorial
+  quantifier repair: the second branch of the Section 1 "exactly one"
+  dichotomy now explicitly says k is not in K[g] and names the map induced by
+  (k,w).  No consequence changed.  The exact companion verifies the
   monic degree-eight sidecar, a squarefree hostile fibre, the full generic
   discriminant, stability under a nonconstant Stein composition, the
   genus-three count, every excluded Riemann--Hurwitz genus, and reduced-arm
@@ -76,6 +83,11 @@ output: 05-knowledge/results/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor
 script_sha256: 68f72c16eb15534f8e7a2599644599fcc09152cf50e0fbcbb714498522c3183e
 output_sha256: cd94624fe1171b3f4db4c6cbe4ddbef1d40aa8851ac1455f8f225e5723a3476c
 semantic_sha256: 80f9319cff0304a799f66aefa5a960a5023325bfedc8914bdab6214537a92b1f
+independent_script: 04-computation/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827_independent_audit.py
+independent_output: 05-knowledge/results/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827_independent_audit.out
+independent_script_sha256: 627fc740b820edf7f96dddf97d25f9ea0c2cd03f5d94d1e3e66b39cce3c91a2a
+independent_output_sha256: de761f94f131989e3106f4cc8e547a82c40840628ff0a0d2273fccb8300334ab
+independent_semantic_sha256: e459cc359bb059ae476e9026876034949988d3c4856ebb58e0f69890e0f76e79
 hash_basis: raw LF bytes
 ---
 
@@ -127,8 +139,9 @@ Then exactly one of the following holds:
 
 ```text
 (a) k in K[g]; or
-(b) gamma>=3, and over an algebraic closure of K(g) there is a
-    nonconstant map Gamma_g -> C_h of degree d satisfying
+(b) k notin K[g], gamma>=3, and the point (k,w) induces over an
+    algebraic closure of K(g) a nonconstant map Gamma_g -> C_h
+    of degree d satisfying
 
         2gamma-2 = 4d + ramification_degree,                    (6)
 

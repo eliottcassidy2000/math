@@ -320,6 +320,20 @@ opposite_long_equation = sp.factor(-psi.subs({
 require(sp.Poly(opposite_long_equation, t).degree() == 5,
         "opposite length-three target relation is nontrivial but dimensional")
 
+# No parameter of the surviving word can be constant in a dominant image.
+# Treat the other two as independent variables: content one means that no
+# scalar specialization makes the compatibility relation tautological.
+for constant_parameter, other_parameters, label in (
+    (p, (s, t), "p"),
+    (s, (p, t), "s"),
+    (t, (p, s), "t"),
+):
+    coefficient_content = sp.gcd_list(
+        sp.Poly(opposite_long_equation, *other_parameters).coeffs()
+    )
+    require(coefficient_content == 1,
+            f"opposite length-three constant-{label} slice is nontrivial")
+
 source = Path(__file__).read_text(encoding="utf-8")
 require(not any(isinstance(node, ast.Assert)
                 for node in ast.walk(ast.parse(source))),
@@ -332,6 +346,7 @@ semantic = {
     "two_shear": "both orientations are consistency corollaries of the current arm/square theorem, not new results",
     "length_three_extension": "in the transposed convention Eplus-Eminus-Eplus has H=s and K=1+st; nonconstant s violates the nonconstant-unit arm gate, while constant s leaves a nonzero relation in p,t and cannot dominate",
     "opposite_length_three_stop": "in the origin convention Eplus-Eminus-Eplus has K(1+st)=1 mod H, so its arm can carry a nonconstant unit and the new proof does not close it",
+    "opposite_constant_gate": "constant p, s, or t leaves a nonzero relation in the other two parameters, so every dominant survivor needs all three nonconstant",
     "scope": "opposite three-shear orientation, arbitrary polynomial SL2 atlases, and longer interacting words remain open",
 }
 semantic_hash = hashlib.sha256(
@@ -349,6 +364,7 @@ print(f"opposite_relation={opposite_equation}")
 print("length_three_extension=NO_DOMINANT_ATLAS;ARM_CONSTANT_IF_s_NONCONSTANT;TRDEG_AT_MOST_ONE_IF_s_CONSTANT")
 print("length_three_hostile=s=0,p=-t_gives_identity_with_nonconstant_word_parameters")
 print("opposite_length_three_stop=K3*(1+s*t)=1_mod_H3;NONCONSTANT_ARM_UNIT_POSSIBLE")
+print("opposite_constant_gate=p_s_t_all_required_nonconstant")
 print("scope=OPPOSITE_LENGTH_THREE;ARBITRARY_SL2;LONGER_ATLASES_REMAIN_OPEN")
 print(f"CHECKS={CHECKS}")
 print(f"semantic_sha256={semantic_hash}")

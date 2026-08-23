@@ -10,9 +10,10 @@ status: >
   the oriented labelled runner pair and opposite exposed facets, and the
   thirteen ambient residues modulo the pair sum recover exactly the 1/14-
   safety mask on the pair-sum time lattice.  There are 456,690 unoriented
-  supports and 913,380 oriented assignments.  This is an all-scale address
-  theorem, not an LRC exclusion: the grid can be empty while an off-grid
-  loneliness time exists.
+  supports and 913,380 oriented assignments.  The support-two covector lies
+  inside the rank-eleven bounded-relation span and cannot be its twelfth rank
+  increment.  This is an all-scale address theorem, not an LRC exclusion: the
+  grid can be empty while an off-grid loneliness time exists.
 source: root + lrc_reversible_address / incoming-signal extension, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (thm3791-hostile-audit, 2026-08-23).  The
@@ -247,8 +248,17 @@ map:         (row,pair) -> (M,a,D,ambient residues mod D)
 preserved:   scale, primitive ratio, placement, facets, exact grid safety
 destroyed:   ambient quotients, other relations, off-grid times, loneliness
 sidecar:     full speed row and owner/phase chronology for any LRC use
-next test:   intersect the 5,855 ratios with rank-eleven star spaces.       (15)
+next test:   classify their internal incidence in rank-eleven star spaces
+             and attach owner/phase sidecars; no rank increment follows.   (15)
 ```
 
 In particular, (3) supplies no exclusion of a hypothetical LRC(14)
-counterexample and proves no case of the Lonely Runner Conjecture.  **QED.**
+counterexample and proves no case of the Lonely Runner Conjecture.  There is
+also a sharp rank boundary.  The covector `a` has support two and
+`||a||_1<=356`; THM-3743, Section 4, therefore puts it automatically inside
+THM-2052's bounded-relation span `W`.  A cube-addressed row can refine the
+internal rank-eleven code, but it can never be the outside-`W` twelfth
+relation that triggers the rank-twelve finite terminal.  Thus the next test
+is to classify which rank-eleven star spaces contain which of the `5,855`
+ratios and whether the retained facet/owner sidecars prune those internal
+states—not merely to count another relation.  **QED.**

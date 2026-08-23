@@ -31,7 +31,7 @@ depends_on:
   - THM-3821-cubic-pseudoplane-rz2-odd-ladder-terminal-riccati-gate
 related:
   - THM-3814-nodal-rz-kummer-profile-degree-gate
-  - THM-3811-nodal-arm-bezout-law-for-cubic-pseudoplane-darboux-pairs
+  - THM-3812-nodal-arm-coefficient-second-normal-profile-nonentry
 script: 04-computation/jc2_cubic_pseudoplane_proportional_second_row_thm3828.py
 output: 05-knowledge/results/jc2_cubic_pseudoplane_proportional_second_row_thm3828.out
 script_sha256: 4987fa7ba479b256dca27eb8d2cb051f4c54c62af54612783243da879b88f03e
