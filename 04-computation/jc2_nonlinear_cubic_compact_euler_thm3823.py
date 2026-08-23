@@ -102,6 +102,7 @@ semantic = {
     "surface": "chi_c(U)=3*5-7=8",
     "finite": "no finite etale A2_C->U_C",
     "atlas_debt": "generic degree d forces signed Euler debt 8d-1",
+    "later": "THM-3841 excludes the remaining nonfinite polynomial atlas",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 source = Path(__file__).read_text(encoding="utf-8")
@@ -116,7 +117,7 @@ print("projection_strata=off_branch:chi5_times3;simple_branch:chi-7_times1")
 print("surface=chi_c(U_C)=8")
 print("finite_atlas=no_finite_etale_A2_C_to_U_C")
 print("quasifinite_atlas=generic_degree_d_has_signed_Euler_debt_8d-1")
-print("open=nonfinite_dominant_etale_plane_atlas")
+print("later=nonfinite_plane_atlas_excluded_by_THM3841")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")
 print("RESULT=PASS")

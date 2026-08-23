@@ -30,10 +30,11 @@ depends_on:
 related:
   - THM-3835-polynomial-marked-root-ratio-nonentry
   - THM-3836-cubic-factor-cofactor-darboux-packet
+  - THM-3841-nonlinear-cubic-keller-atlas-total-degree-contradiction
 script: 04-computation/jc2_root_ratio_degree_five_floor_thm3838.py
 output: 05-knowledge/results/jc2_root_ratio_degree_five_floor_thm3838.out
-script_sha256: 48ba84f2ebd51c51e3136878a932c7c26584159d645b1e3e82ada064fefc6dd7
-output_sha256: 48bef28b33ee6d8138e0a02cae306ccd5c3255263fd98d37a596da13ea798197
+script_sha256: 57fbf881e33ca4fb4d2b8ae08f349b1fb46763239232919480a4648f7a875c90
+output_sha256: 879cf74bdcf2017ac127156ba1182909c2f21452a5b96e0f67b9fc19f5a36d8c
 semantic_sha256: 86617f87ada99bc0e1b51334b244b406172f646a4dd4c7375369e598ed9bb233
 hash_basis: raw LF bytes
 ---
@@ -69,8 +70,9 @@ the reduced marked-root ratio
 z=h/k.                                                            (4)
 ```
 
-No support restriction is used.  Degree five and the existence of the atlas
-remain open.
+No support restriction is used.  This conditional degree-five boundary is
+sharp only as a statement of the inherited genus mechanism; THM-3841 later
+excludes atlas existence by the independent factor/cofactor degree packet.
 
 ## 1. The inherited dual primitive fibrations
 
@@ -144,8 +146,8 @@ which makes `Gamma_g` hyperelliptic.
 The same argument applied to `k=q(ell)` uses the degree-seven sidecar and
 excludes `deg k=4`.  Together with the coarse floor this proves `(2)`.
 
-The result sharpens THM-3835: not only must `z=h/k` retain a genuine
+The result sharpens THM-3835 conditionally: not only must `z=h/k` retain a genuine
 denominator, but both entries of its reduced presentation begin at degree
-five.  It does not yet classify the degree-five plane models or solve the
-factor/cofactor and Keller equations of THM-3836.  No Jacobian counterexample
-is claimed.  **QED.**
+five.  Its former degree-five construction frontier is **SUPERSEDED** by
+THM-3841, which shows that no degree can solve the THM-3836 Keller packet.
+No Jacobian counterexample is claimed.  **QED.**

@@ -1,5 +1,76 @@
 # Script Results Index
 
+- `jc2_nonlinear_cubic_keller_atlas_degree_contradiction_thm3841.py` ->
+  matching `.out` [THM-3841 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  For the THM-3811 surface, `P=CS` and
+  `k Jac(h,C)-h Jac(k,C)=lambda P` are inconsistent in all three total-degree
+  orders.  Unequal degrees force either `deg C<0` or a cofactor deficit; equal
+  degrees force simultaneously `deg C<=deg h` and `deg C>=deg h+2`.
+  Therefore this nonlinear cubic surface has no dominant etale polynomial
+  plane atlas.  This excludes one candidate surface, not `JC(2)`.  `CHECKS=15`.
+  Script/output/semantic SHA-256:
+  `f44b407d81bf0059ebfde1e7669f4f7fcb637f51162c6a9838be1b9d1789e6b9` /
+  `d0a74b7eaafc0f9a89981bd20af23a98e5d1041ca27ac8e097456b6cff5a821c` /
+  `db743214723ec651d2828740145b62e94d51516c17bc6c94737e2404109a229e`.
+
+- `jc2_forced_cubic_two_arm_jelonek_passport_thm3840.py` -> matching `.out`
+  [THM-3840 PROVED CONDITIONAL IMPLICATION + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3841].  A hypothetical atlas would
+  force the origin and one of three explicit smooth cubic-branch points into
+  its Jelonek set.  Exact arm base change makes the row unit nonconstant; its
+  boundary poles give the two valuations.  THM-3841 proves no such atlas
+  exists, so this is a counterfactual passport, not an existence result.
+  `CHECKS=22`.  Script/output/semantic SHA-256:
+  `d6373cc0e8440c54d324e18f1f335e1fb106e9ee31cb2faba6a130b7b37f4bb1` /
+  `f3d244cda5dd83cbb2a969452baa3864a15d5205d8aba2ec91cbb8b4cefadb7e` /
+  `84a8336b2cb9389e40fd5db70a8caa7f4a5a05b5828aa159e37dee87f994d492`.
+
+- `jc2_cubic_factor_cofactor_darboux_packet_thm3836.py` -> matching `.out`
+  [THM-3836 PROVED + VERIFIED-EXACT + TWICE INDEPENDENTLY
+  HOSTILE-AUDITED].  Every hypothetical atlas has `P=CS`, a Darboux
+  cofactor, and a cubic pencil member split comaximally between both intrinsic
+  `G_m` arms.  The two factors are the exact smooth reduced etale base
+  changes; each irreducible component has degree at least two, so the member
+  has degree at least four, with equality exactly two disjoint `G_m` conics.
+  THM-3841 later makes the atlas antecedent impossible.  `CHECKS=28`.
+  Script/output/semantic SHA-256:
+  `692f6caec2b3398da6ebb7cfd33f475178557375db25b29aa75d7aa3ad0d423e` /
+  `212befa0196033325c42f1f11eaa2fd94b79bc8b54be8f173ed7861a896ec0b4` /
+  `2aaac6405fb5979bb64afd6dc6548c66bf8e457e87728a7d9282e11cbd85071a`.
+
+- `jc2_comaximal_line_hyperbola_affine_contact_thm3837.py` -> matching `.out`
+  [THM-3837 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  In the
+  displayed line--hyperbola selector ansatz, no total-degree-at-most-two
+  profiles satisfy the bichromatic equation: first contact leaves four
+  scalars, then second contact forces incompatible linear forms with
+  resultant `-5817545`.  Its line has constant boundary unit, so this is a
+  selector/contact laboratory rather than an etale arm pullback.  `CHECKS=34`.
+  Script/output/semantic SHA-256:
+  `74b8dd003383be9737bccf263ec76a276d8713bf07f76260cb5f4c336652c560` /
+  `4c446eb2f9c43bb787c0d520fe3a2bc82081f3088be86340fe44f5de6108861f` /
+  `6ece9fdb67e87d101d673126f289824b5131a5da993cdd3b4569a178c87bec77`.
+
+- `jc2_root_ratio_degree_five_floor_thm3838.py` -> matching `.out`
+  [THM-3838 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Under
+  the hypothetical atlas, each reduced root-ratio entry has degree at least
+  five: equality four would make the same genus-three curve both a smooth
+  plane quartic and hyperelliptic.  The result remains valid conditionally,
+  but THM-3841 supersedes degree five as a construction frontier.  `CHECKS=12`.
+  Script/output/semantic SHA-256:
+  `57fbf881e33ca4fb4d2b8ae08f349b1fb46763239232919480a4648f7a875c90` /
+  `879cf74bdcf2017ac127156ba1182909c2f21452a5b96e0f67b9fc19f5a36d8c` /
+  `86617f87ada99bc0e1b51334b244b406172f646a4dd4c7375369e598ed9bb233`.
+
+- `abc_cube_hyperbolic_task_atlas_thm3833.py` -> matching `.out` [THM-3833
+  PROVED CONDITIONAL IMPLICATION + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Assuming ABC, primitive two-cube values have radical
+  exponent floor tending to `1/3`, and each fixed primitive hyperbolic
+  Fermat--Catalan signature has finitely many solutions.  ABC remains open;
+  no disputed IUT implication is imported, and no LRC(14) or JC consequence
+  follows.  `active_checks=154,651`.  Script/output SHA-256:
+  `8a25f6cf0bf979adbfe81095fdbb0f873eed1856594c803e64d517433f72e660` /
+  `d6b0aa913ef95ebd199ff535c3460b702ad34d9e2183eeea72dddaed57b5af61`.
+
 - `jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.py` ->
   matching `.out` [THM-3827 PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  The generative factorizations `h=p(g)` and `k=q(ell)`
@@ -48,7 +119,9 @@
   `K[x,y]`.  The surviving rational branch has the denominator-free passport
   `CS=R`, the reconstruction laws
   `DS=k^2+Ch^2`, `AS=h(k^2+Ch^2)`, `omega S=k(k^2+Ch^2)`, and
-  `k Jac(h,C)-h Jac(k,C)=lambda R`, retaining `k=0`.  `CHECKS=25`.
+  `k Jac(h,C)-h Jac(k,C)=lambda R`, retaining `k=0`.  THM-3841 later proves
+  the Keller subpacket inconsistent; the dominance-only denominator result
+  remains broader.  `CHECKS=25`.
   Script/output/semantic SHA-256:
   `884f087731f9ab751c49d236e149002d2f26eefe5fab0f4f6858af4f0fcd6007` /
   `a70cf307e867a3f73b029f400b9bbf04a49c910bd19ca80b6bd29abffdbda77c` /
@@ -162,11 +235,12 @@
   sheets on the off-branch/ordinary-branch/three-exception strata.  Hence no
   finite or proper etale atlas `A2_C -> U` exists; every surviving atlas is
   nonfinite, has signed Euler debt `8d-1`, and needs at least two boundary
-  primes.  Nonproper dominant atlases remain open.  `CHECKS=16`.
+  primes.  THM-3841 later excludes the nonfinite atlas by a different degree
+  mechanism.  `CHECKS=16`.
   Script/output/semantic SHA-256:
-  `922a051268b065a01d91a363ceba0d15f177373b49a432339f2e9638edacfc67` /
-  `5038865427aa0e2d9babf3710d8748af9a76ac2b36e291b607c1cde94a8f467b` /
-  `6a93d704366b10d18382510a566f79e308d9ec390fafdb65e5ebac55e89aecae`.
+  `713e7a925e4ae42852dc22c5db766510ff0cca74ce6487e224bc883c1659c5e5` /
+  `ff8f7c8ac1d35b46a4a4f237e3f36c1024fcb9f26a5fa0a782dff16b555e204a` /
+  `ecf52db47db9533b4bf1eec5c23bea5a0e2a91e33a21e6c941863e0cba937cfe`.
 
 - `jc2_cubic_pseudoplane_rz2_odd_ladder_thm3821.py` -> matching `.out`
   [THM-3821 PROVED COMPLETE FIRST-`rz^2` NO-GO + VERIFIED-EXACT +

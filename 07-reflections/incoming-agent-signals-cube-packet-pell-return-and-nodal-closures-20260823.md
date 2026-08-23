@@ -74,6 +74,32 @@ negative-Pell-first census now proves, **FINITE-EXACT**, that the same
 through `a+b<=5,000`.  This is a much larger finite uniqueness statement, not
 an asymptotic theorem and not an LRC(14) exclusion.
 
+The final incoming wave changed the JC conclusion qualitatively.  Audited
+[THM-3836](../01-canon/theorems/THM-3836-cubic-factor-cofactor-darboux-packet.md)
+forces an exact factor/cofactor packet and a mixed cubic fibre; audited
+[THM-3838](../01-canon/theorems/THM-3838-root-ratio-numerator-denominator-degree-five-floor.md)
+forces both reduced row degrees to be at least five; and audited
+[THM-3837](../01-canon/theorems/THM-3837-comaximal-line-hyperbola-affine-bichromatic-contact-nonentry.md)
+closes the first quadratic comaximal contact laboratory.  Treating the
+degree-five theorem as signal rather than a terminal produced the stronger
+[THM-3841](../01-canon/theorems/THM-3841-nonlinear-cubic-keller-atlas-total-degree-contradiction.md):
+the factor and cofactor degrees contradict one another in every degree order.
+Thus the THM-3811 nonlinear cubic surface has no polynomial plane atlas.
+This closes that candidate surface, not `JC(2)`.
+
+Audited [THM-3840](../01-canon/theorems/THM-3840-forced-cubic-two-arm-jelonek-passport.md)
+retains a useful counterfactual shadow: the two arm units would force the
+origin and one explicit smooth branch value into the Jelonek set.  THM-3841
+makes its antecedent empty, so it is a transport lemma for future surfaces,
+not evidence that such a map exists.
+
+The concurrent [THM-3833](../01-canon/theorems/THM-3833-abc-conditional-cube-radical-and-hyperbolic-power-finiteness.md)
+was used as an arithmetic boundary signal.  Conditional on ABC it gives a
+two-cube radical floor tending to exponent `1/3`, but its radicalization loses
+the scale, labels, eleven other runners, phase, and owner retained by the
+exact cube decoder.  ABC remains open, and no disputed IUT implication is
+used here.
+
 The two conjectures remain open.  The gain is an exact operation ledger and one
 especially dense merged row, not a proof by analogy.
 
@@ -145,12 +171,11 @@ The board changed in seven important ways.
   degree-six pure-`r` carriers with at most three monomials are now closed.
   The next local JC objects are a genuinely higher canonical slot and
   four-term sextic cells, not more tests of the eliminated profiles.
-- A surviving nonlinear-cubic plane atlas must now be nonproper, have
-  two primitive generic-fibre genera at least three, map to the two opposite-
-  parity row sidecars (with two/one row-coordinate pole places at equality),
-  and either split `h` or hit both disjoint `G_m` arms of one of three cubic
-  spectral fibres, in addition to its signed Euler debt and the two-prime
-  boundary requirement on every finite envelope.
+- Before the final degree pull, a hypothetical nonlinear-cubic atlas had
+  accumulated dual genus, Euler, boundary, and two-arm debts.  THM-3836 makes
+  the two arms exact smooth base changes and forces component degree at least
+  two.  THM-3841 then shows that its factor/cofactor degrees are inconsistent;
+  no polynomial atlas of this surface survives.
 - The root ratio `z=h/k` gives a triangular **rational-map** chart and a
   weighted Jacobian density.  Its name has no demonstrated connection to
   polygonal triangular numbers; the authentic figurate-number lane remains
@@ -293,6 +318,23 @@ hit `56^3+65^3=671^2` is a sharp hostile: it is not triangular, while
 remain genuinely transverse even after the cap is enlarged.  The conclusion
 is **FINITE-EXACT** only; it neither proves global uniqueness nor restores the
 eleven runners, owner, phase, or arrival data.
+
+Incoming THM-3833 asks what a global Diophantine height principle would see
+here.  Conditional on ABC, every primitive `m=a^3+b^3` satisfies a radical
+floor whose exponent approaches `1/3`; fixed hyperbolic Fermat--Catalan
+signatures are conditionally finite.  Neither conclusion prunes the present
+finite LRC row list effectively: the ABC constant is unknown, radicalization
+forgets valuation depths and the common-cube scale, and a cube packet forgets
+the other eleven speeds.  The family
+
+```text
+(2^t)^3+(3*2^t)^3=28*8^t,             rad(28*8^t)=14
+```
+
+is the exact scale hostile.  Thus the useful connection is a division of
+labour—ABC would bound primitive height versus support, while THM-3825 decodes
+colours, valuations, and scale on its special carrier—not a transfer to
+loneliness or to the negative-Pell singleton.
 
 Consequently
 
@@ -504,7 +546,8 @@ together with two cubic lift laws and a genus-three square-discriminant
 condition.  The intrinsic divisor `h=0` is `G_m`; etale pullback therefore
 leaves a nonconstant unit on every plane-arm component.  This kills `h` as a
 coordinate, every `h=xy-1` standard big cell, the hyperbolic-unit first row,
-and the first Cohn row.  Nonstandard multi-ended arms remain open.
+and the first Cohn row.  Nonstandard multi-ended arms were still open at this
+stage; THM-3841 later closes the whole surface.
 
 THM-3821 closes the first `rz^2` extension of THM-3814.  Its audited
 normal-form descent forces a common Kummer parameter and either a generic
@@ -533,9 +576,10 @@ chi_c(Gamma)=-4,              chi_c(U)=8.
 
 A finite etale plane atlas would force `1=8d`, so every surviving atlas is
 nonfinite and has signed Euler sheet debt `8d-1`; its finite envelope also has
-at least two boundary primes.  This does not obstruct the nonproper dominant
-etale atlas needed by the open Jacobian lane, and it does not identify signed
-Euler debt with the separate unweighted divisorial debt.
+at least two boundary primes.  By itself this did not obstruct a nonproper
+dominant atlas, and it does not identify signed Euler debt with the separate
+unweighted divisorial debt.  THM-3841 later closes that remaining atlas by a
+different degree mechanism.
 
 THM-3826 has now promoted the exact support-cell census in the first pure
 sextic row.  On the cubic/seventh-power cover it saturates all `22` exact
@@ -589,7 +633,11 @@ model is therefore comaximal, for example `u=x`, `v=xy-1`, not another
 intersecting cross.  With `f=uv`, `k=1`, `h=a+f`, the CRT seed
 `d_0=-b(a)xy/a^2` has the required two residues; the remaining sidecar
 equation is one explicit quadratic equation for a lift `d=d_0+fe`.  This is
-an exact next probe, not a constructed atlas.
+an exact selector probe, not a constructed atlas.  The later exact
+base-change audit shows why it was only a probe: its line component is `A1`
+and carries constant `k`, whereas an etale pullback of `G_m` needs a
+nonconstant unit.  The first topology-compatible model is instead the
+comaximal conic pair `xy-1,xy-2`, both copies of `G_m` with unit `x`.
 
 THM-3832 exposes the same geometry in the rational root ratio `z=h/k`.  Put
 
@@ -636,7 +684,84 @@ k Jac(h,C)-h Jac(k,C)=lambda R.
 
 This is the correct next system because it retains the `k=0` divisor that
 the triangular chart cancels and exposes the three polynomial divisibility
-obligations needed to reconstruct `D,A,omega`.
+obligations needed to reconstruct `D,A,omega`.  It was the correct system to
+test; it does not survive the final degree audit.
+
+THM-3836 performs the missing component allocation.  Put
+
+```text
+P=3h^3+7h^2k+k^3,       Q=7h^2+3k^2,
+B=6h^3+7h^2k-k^3,       S=Ch^2Q-kB.
+```
+
+Every hypothetical Keller atlas satisfies
+
+```text
+P=CS,
+delta(C):=k Jac(h,C)-h Jac(k,C)=lambda P.
+```
+
+Moreover `(C,S)=1`, and some cubic pencil member
+`p=h-ak=uv` splits between both sides.  The strengthened audit proves the
+scheme identities `(p,C)=(u)` and `(p,S)=(v)`.  Hence both factors are exact
+smooth reduced etale base changes of the two `G_m` arms.  Every irreducible
+component has degree at least two; `deg p>=4`, with equality exactly two
+disjoint smooth `G_m` conics.  This removes both the reducible-`h` escape and
+the line--hyperbola model as actual atlas geometry.
+
+THM-3837 nevertheless closes that line--hyperbola **contact laboratory**
+through total degree two.  First normal contact leaves four scalar
+parameters; second contact kills both genuinely quadratic `D` directions and
+forces two incompatible values of `d_x`, certified by resultant `-5817545`.
+Its value is methodological: two independent normal charts are needed even
+after the CRT boundary is correct.
+
+THM-3838 then says that, under the hypothetical atlas, both `h` and `k` have
+degree at least five.  The genus floor first gives four; equality would make
+the same genus-three curve a smooth plane quartic and a hyperelliptic curve.
+That theorem is valid, but its degree-five construction frontier is
+superseded by the following stronger pull.
+
+For THM-3841 set `a=deg h`, `b=deg k`, `c=deg C`.  The factor law is
+
+```text
+C^2h^2Q=CkB+P.                                                (degree law)
+```
+
+If `a>b`, degrees force `c=b-a<0`.  If `b>a`, they force
+`c=2(b-a)`, but then
+
+```text
+deg delta(C)<=a+b+c-2=3b-a-2<3b=deg P.
+```
+
+If `a=b=d`, the degree law forces cancellation in `Q`.  Writing
+`Q=7(h-beta k)(h+beta k)` with `beta^2=-3/7`, the conjugate factor gives
+`deg Q>=d`; hence `c<=d`.  But
+
+```text
+Res(7z^2+3,3z^3+7z^2+1)=1615
+```
+
+keeps `deg P=3d`, and the cofactor equation forces `c>=d+2`.  Thus all three
+degree orders are impossible.  The nonlinear cubic surface is no longer a
+live JC construction lane.  The reusable object is the factor/cofactor
+degree trichotomy, to be tested on other candidate surfaces.
+
+THM-3840 records what the now-impossible atlas would have forced at infinity.
+A pole of the nonconstant `k` on the two exact arm base changes has target
+limits
+
+```text
+O=(0,0),
+T_a=(-2/[a(7a^2+3)],-1/a^2),        3a^3+7a^2+1=0.
+```
+
+The second point is a smooth nontriple discriminant value with normalization
+parameter `1/a`; the three possible `T_a` are distinct.  This implication is
+independently audited but has an **EMPTY ANTECEDENT BY THM-3841**.  Its
+survivor is the operation “two Laurent arms -> two boundary valuations,”
+which may be reusable when another surface survives its degree packet.
 
 On the local nodal side, THM-3828 closes `L=T-lambda S=0`.  THM-3829 follows
 the incoming `L!=0` signal all the way through
@@ -657,11 +782,10 @@ constant, and the terminal row is `-60ae^3`.  Thus THM-3821/3828/3829/3834
 empty the whole displayed first `r^2z^2` grammar, including `X=0,Y!=0`.
 
 The live JC lanes are consequently: four-or-more-term sextics and degree at
-least seven in the pure-`r` lane; genuinely higher canonical rows; rational
-root-ratio polynomialization and its denominator-free form; and a nonproper
-atlas capable of paying the dual-genus, Euler, boundary, and cubic two-arm
-passport.  Another elimination inside the displayed second row or an intersecting cross would
-duplicate closed terrain.
+least seven in the pure-`r` lane; genuinely higher canonical rows; other
+candidate surfaces; and abstraction of the factor/cofactor degree
+trichotomy.  More elimination inside the displayed second row, this closed
+nonlinear cubic surface, or an intersecting cross would duplicate dead terrain.
 
 ## 7. Khinchin content after the extension
 
@@ -676,6 +800,10 @@ that separation.
 - The prime-colour lane advances arithmetically: 3-adic label valuation can
   expose square parity and finite triangular hits.  Those valuations are
   address digits, not continued-fraction digits or a metric law.
+- The ABC lane, conditionally, constrains primitive height versus radical
+  support.  It neither supplies typical continued-fraction digits nor
+  preserves the Khinchin-flatness owner/phase packet; common-cube scaling is
+  its explicit kernel.
 - The metric digit-content lane does not advance.  The silver/Pell word is a
   deterministic quadratic orbit, and the new triangular-tripling edge is a
   second deterministic quadratic orbit for `sqrt(3)`.  Neither is typical
@@ -694,6 +822,7 @@ pair; only the ambient residue sidecar tests a target LRC phase.
 | inert cube atlas | square/triangular tests | exact shell and address subatlases | arrival, owner, and Pell-return membership | separate sum shells from address values; exhaustive discriminant scan |
 | 3-free cube base | multiply by `3^kappa` or `3^(2kappa+epsilon)` | square parity; 31 isolated fundamental Pell points; unique `(9,13)` cross-sheet successor | gauge-independent labels, arrival, and global successor closure | decode exponent in the chosen gauge; keep fixed-sheet Pell powers separate from label multiplication |
 | negative-Pell successor orbit | `X^2-3Y^2=-2` plus two-cube test | complete finite census through pair sum `10^6`; unique `(9,13;76,132)` | global uniqueness, LRC owner/phase, asymptotics | recurrence-first enumeration plus independent pair-first control; square hit `(56,65)` is a separate fibre |
+| primitive two-cube packet | ABC radicalization, conditionally | height/support exponent tending to `1/3` | valuation depth/colour, scale, other runners | normalize first; compare with THM-3825 decoder and the constant-radical scale family |
 | cube class plus physical address | `(g,p,q)` decoder | common dilation | representations outside atlas | taxicab hostile |
 | selected support-two relation | covector/facets and THM-778 word | first chosen width, pair clocks, ties | other runners, off-lattice phase | eleven residues modulo `g(p+q)` |
 | canonical polynomial Pell tower | evaluated `(g,h)` then `(x,q)` | index, norms, recurrences | polynomial profile, roots, critical resultant | retain full `G_n,H_n,psi_n`; perturb inside evaluation kernel |
@@ -706,11 +835,12 @@ pair; only the ambient residue sidecar tests a target LRC phase.
 | first `r^2z^2` row | `X,Y`, proportional/misaligned/one-sided split | complete displayed grammar is impossible | higher canonical slots | recompute the next top bucket; no target-swap shortcut |
 | sparse sextic support | cubic/seventh-power cover and four remainder rows | all 22 support-`<=3` cells | four-term and denser cells | top-five census on every four-term torus cell |
 | source quadratic sheets | mod-seven residual values | discriminant factor `R W^2` | source label on `W=0` | retain collision slope `W`; audit degree-drop divisors |
-| nonlinear cubic atlas | intrinsic polynomial `SL_2` row | determinant and cubic lift laws | coverage/properness at punctured arms | genus-three square sidecar plus every arm component |
-| nonlinear cubic surface | compact Euler integration | finite/proper atlas obstruction and signed debt `8d-1` | location and positivity of escaping sheets | finite-envelope boundary primes plus an explicit nonproperness passport |
-| dual factors `h=p(g),k=q(ell)` | two primitive generic fibres | both genera `>=3`; target row-pole parity `2/1` transfers at equality | total source boundary and cross-fibration compatibility | combine both sidecars with the nonproper Euler/boundary passport |
+| nonlinear cubic surface | compact Euler integration | finite/proper atlas obstruction and signed debt `8d-1` | location of escaping sheets | later superseded as frontier by the all-atlas degree contradiction |
+| dual factors `h=p(g),k=q(ell)` | two primitive generic fibres | both genera `>=3`; target row-pole parity `2/1` at equality | total source boundary | conditional degree-five floor; valid but no longer a construction lane |
 | spectral slope `h=ak` | actual root chart `T[J^-1]` | two quadratic minus arms versus three cubic `G_m` pairs | source coverage of both target arms | retain the unordered sign idempotent and test both cubic addresses |
-| root ratio `z=h/k` | triangular rational map `(z,C)->(A,C)` | `A_z=1/(kr)`; every projective row direction retains a denominator | divisors `k=0,r=0,Cs=0` | use `CS=R` and the homogeneous area law; “triangular” is not figurate arithmetic |
+| root ratio `z=h/k` | triangular rational map `(z,C)->(A,C)` | `A_z=1/(kr)`; every projective row direction retains a denominator | divisors `k=0,r=0,Cs=0` | homogenize before degrees; “triangular” is not figurate arithmetic |
+| homogeneous root packet | `P=CS`, `delta(C)=lambda P` | exact component allocation and Keller cofactor | none needed for total-degree comparison | three degree orders contradict; THM-3811 atlas excluded, `JC(2)` untouched |
+| two exact Laurent arm base changes | poles of `k` on smooth completions | counterfactual Jelonek values `O,T_a` | actual existence (antecedent empty) | reuse only on a future surface that first survives its degree packet |
 
 ## 9. Hostiles that set the exact boundary
 
@@ -746,13 +876,17 @@ pair; only the ambient residue sidecar tests a target LRC phase.
 - For THM-3827, knowing that one spectral fibre is reducible is weaker than the
   actual passport: unless `h` splits, one cubic fibre must hit both disjoint
   square-root arms.  The intersecting cross in THM-3830 is the sharp hostile.
+- The comaximal line--hyperbola pair passes the CRT selector boundary but its
+  line has only scalar units, so it cannot be an etale base change of a
+  `G_m` arm.  Algebraic contact compatibility does not certify the topology
+  of a source component.
 - THM-3832 is “triangular” in the differential-matrix sense only.  Treating
   its powers `z^2` as square-number data or its name as a triangular-number
   bridge would erase the chart denominators without adding an arithmetic map.
 
 ## 10. New research moves and next pulls
 
-Six reusable ideas survived.
+Eight reusable ideas survived.
 
 1. **Separated quotient plus compatible scale action can become a decoder.**
    A quotient invariant is not automatically lossy: if its primitive classes
@@ -786,6 +920,12 @@ Six reusable ideas survived.
    actual chart.**  THM-3831's formulas were right, but only `T[J^-1]` proved
    that no parasitic `D=0` component survived.  Saturation is a mathematical
    predicate, not an implementation detail.
+8. **After accumulating passports, compare their native degrees before adding
+   another sidecar.**  THM-3836 and THM-3838 looked like sharper necessary
+   conditions; their factor/cofactor degree comparison instead made the whole
+   candidate impossible.  The trigger is two exact identities sharing the
+   same top forms; the counterindication is an uncontrolled leading
+   cancellation, which must be split and factored explicitly.
 
 The cheapest high-value next tests are:
 
@@ -797,14 +937,12 @@ The cheapest high-value next tests are:
   four-term sextic cells, or derive the top bucket of a genuinely higher
   canonical slot; retain the full polynomial tower—evaluation at `z=2` is
   only a hostile control;
-- on the global JC side, combine both genus-three sidecars, their opposite
-  row-coordinate pole parity, the cubic two-arm incidence, the `SL_2` lift
-  laws, and Euler/boundary debt into one explicit nonproper-atlas system;
-- test THM-3830's live comaximal replacement `x(xy-1)` by reducing its lift
-  equation for `d=d_0+x(xy-1)e`; intersecting crosses are already closed;
-- attack the proved THM-3835 homogeneous system `CS=R` plus
-  `k Jac(h,C)-h Jac(k,C)=lambda R`, retaining the `k=0` divisor and both
-  cubic cancellation addresses rather than returning to polynomial `z`;
+- abstract THM-3841's degree trichotomy: identify which other candidate
+  surfaces yield a factor `P=CS` and a Darboux cofactor whose top degrees are
+  incompatible, with an explicit equal-degree cancellation factor;
+- keep the conic pair `xy-1,xy-2` only as the sharp geometry control for
+  future surfaces; the THM-3811 atlas itself is closed, and the
+  line--hyperbola cell is already topology-ineligible;
 - turn the completed million-shell negative-Pell census into a modular orbit
   sieve: classify residue periods for which a Pell target can be a sum of two
   positive cubes, keeping `(9,13)` as the positive control and the square hit
@@ -815,11 +953,11 @@ The cheapest high-value next tests are:
   dilation satisfy the same decoder schema, always with an explicit
   out-of-atlas collision probe.
 
-No current result excludes an LRC(14) row or constructs a planar Keller
-counterexample.  The precise advance is a better cube/facet packet, a lawful
+No current result excludes an LRC(14) row, proves `JC(2)`, or constructs a
+planar Keller counterexample.  The precise advance is a better cube/facet packet, a lawful
 Pell return operation, an exact square/triangular label subatlas, a repaired
 complete first-`rz^2` no-go, a sparse-sextic boundary, an aligned-second-row
 closure of the complete displayed first `r^2z^2` row, a saturated cubic two-arm/root-
-ratio atlas passport with a proved denominator and reconstruction gate, a
-million-shell negative-Pell/two-cube singleton, and one concrete 29-residue
-next target.
+ratio atlas passport whose factor/cofactor degree law now excludes the entire
+THM-3811 surface, a million-shell negative-Pell/two-cube singleton, an
+ABC-conditional radical boundary, and one concrete 29-residue next target.

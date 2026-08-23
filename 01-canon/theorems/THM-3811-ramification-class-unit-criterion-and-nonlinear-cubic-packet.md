@@ -12,8 +12,9 @@ status: >
   has S*=k*, Cl(S)=Z^3, the ramification class is primitive, and its etale
   complement is the explicit affine surface
   Spec S[A/D,omega/D], with units k* and Picard group Z^2.  This surface is
-  not the THM-3785 pseudo-plane.  Constructing or obstructing a polynomial
-  plane atlas remains OPEN; no Jacobian counterexample is claimed.
+  not the THM-3785 pseudo-plane.  The original plane-atlas question is
+  subsequently REFUTED for this surface by THM-3841.  No general Jacobian
+  counterexample or proof is claimed.
 source: jc_quartic_c3_construct / nonlinear binary-index design lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc-cohn-boundary, 2026-08-23).  The
@@ -34,12 +35,14 @@ audit: >
   valuations, the affine-complement Bezout inverse, the q/r chart coverage,
   and the Picard quotient.  It replayed all 94 exact gates in normal and
   optimized mode against the frozen output and raw hashes.  No repair was
-  found; the plane-atlas clause remains deliberately OPEN.
+  found; that audit did not address the plane-atlas clause, which is
+  subsequently closed by THM-3841.
 depends_on: []
 related:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
+  - THM-3841-nonlinear-cubic-keller-atlas-total-degree-contradiction
 script: 04-computation/jc2_nonlinear_binary_cubic_ramification_class_thm3811.py
 output: 05-knowledge/results/jc2_nonlinear_binary_cubic_ramification_class_thm3811.out
 script_sha256: 1b5f6ecf9a928222683ebd71e8d2c1221b5d6496a1b3a18ec8af53c4aafe5c11
@@ -543,7 +546,8 @@ out a nontrivial dominant etale morphism
 psi:A2_(x,y) -> U.                                                (56)
 ```
 
-Indeed `psi^*:Pic(U)->Pic(A2)=0` may kill the whole free lattice.  If a
+Indeed `psi^*:Pic(U)->Pic(A2)=0` may kill the whole free lattice.  At the
+stage of this theorem, if a
 polynomial map `(56)` with the needed codimension-one coverage is found,
 then `(A o psi,C o psi)` is a planar Keller map whose finite completion is
 the cubic algebra `(8)`.  Conversely, an obstruction to every such atlas
@@ -551,12 +555,11 @@ would close this construction lane without changing the positive affine
 surface theorem.
 
 ```text
-OPEN-3811:
-  construct a polynomial dominant etale plane atlas (56), with the
-  codimension-one coverage needed by the completion, or prove that none
-  exists.                                                         (57)
+SUPERSEDED-OPEN-3811:
+  THM-3841 proves that no polynomial dominant etale plane atlas (56) exists.
+                                                                    (57)
 ```
 
-Thus the class, constant-unit, and affineness gates are closed.  The only
-remaining counterexample gate is the source-plane realization.  **QED for
-`(2)--(55)`; `(56),(57)` remain OPEN.**
+Thus the class, constant-unit, and affineness gates are closed.  The
+source-plane realization question left here is subsequently closed by
+THM-3841.  **QED for `(2)--(55)`; `(56),(57)` are SUPERSEDED.**

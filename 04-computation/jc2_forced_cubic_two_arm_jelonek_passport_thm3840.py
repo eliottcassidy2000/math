@@ -118,6 +118,7 @@ semantic = {
     "companion": "surviving root ratio beta=2a/(7a^2-1)",
     "distinct": "the three candidate T_a are pairwise distinct and nonzero",
     "scope": "O and at least one of the three T_a are forced nonproper values",
+    "later": "THM-3841 proves the atlas antecedent empty",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -133,7 +134,7 @@ print("triple=excluded;resultant=5245")
 print("companion=root_ratio_beta=2a/(7a^2-1)")
 print("distinct=three_T_a_pairwise_distinct_and_all_nonzero")
 print("mechanism=nonconstant_unit_k_has_boundary_pole_on_each_forced_arm")
-print("scope=two_points_forced_not_all_three_T_a;atlas_still_OPEN")
+print("scope=conditional_two_point_passport;empty_antecedent_by_THM3841")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")
 print("RESULT=PASS")

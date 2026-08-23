@@ -9,7 +9,10 @@ status: >
   components of the three cubic pencil members.  A differentiated-determinant
   argument excludes every allocation by whole pencil members, so at least
   one cubic fibre has nonempty comaximal factors mapping to both intrinsic
-  G_m arms.  This removes THM-3831's irreducible-h hypothesis in all degree.
+  G_m arms.  Their ideals are the exact etale base changes of those arms;
+  every irreducible factor has degree at least two, so the pencil member has
+  degree at least four.  Equality is two disjoint smooth G_m conics.  This
+  removes THM-3831's irreducible-h hypothesis in all degree.
 source: root + jc_quartic_c3_construct / homogeneous root-ratio and component-selection lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
@@ -22,7 +25,9 @@ audit: >
   companion verifies P=C*S from the
   triangular chart, the cleared Keller cofactor, all spectral resultants and
   arm values, the three Euler/cofactor identities, boundary monomials, and
-  characteristic-zero multipliers.
+  characteristic-zero multipliers.  A second independent hostile audit
+  (root / audit_thm3836) proved the exact base-change ideals, smoothness,
+  reducedness, component-degree floor, and equality classification.
 depends_on:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3831-intrinsic-spectral-pencil-fibre-atlas-and-forced-cubic-two-arm-hit
@@ -31,11 +36,13 @@ related:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
   - THM-3835-polynomial-marked-root-ratio-nonentry
   - THM-3830-coordinate-cross-bichromatic-split-nonentry
+  - THM-3837-comaximal-line-hyperbola-affine-bichromatic-contact-nonentry
+  - THM-3841-nonlinear-cubic-keller-atlas-total-degree-contradiction
 script: 04-computation/jc2_cubic_factor_cofactor_darboux_packet_thm3836.py
 output: 05-knowledge/results/jc2_cubic_factor_cofactor_darboux_packet_thm3836.out
-script_sha256: 6840bc5f036a31682fb02c2ccba7823e4af6a979f552ac11ed3899a5966fdacc
-output_sha256: 071492c5ac22b6d09d7dbf5398d276b017519adf0b574080756e1b4d006be6ba
-semantic_sha256: 44ce5b96085a18506392a28066bb939767cadfac817e806ec424a69c7626ef19
+script_sha256: 692f6caec2b3398da6ebb7cfd33f475178557375db25b29aa75d7aa3ad0d423e
+output_sha256: 212befa0196033325c42f1f11eaa2fd94b79bc8b54be8f173ed7861a896ec0b4
+semantic_sha256: 2aaac6405fb5979bb64afd6dc6548c66bf8e457e87728a7d9282e11cbd85071a
 hash_basis: raw LF bytes
 ---
 
@@ -109,7 +116,15 @@ v_i=0  ->  U_i^+: C=-1/a_i^2.                                  (11)
 
 These are the two intrinsic `G_m` arms of THM-3831.  Thus every Keller atlas,
 including the reducible-`h` branch, must meet both arms of some cubic
-spectral fibre.  No degree or support bound is used.
+spectral fibre.  The two schemes are smooth and reduced, every irreducible
+component has degree at least two, and
+
+```text
+deg(h-a_i k)>=4.                                              (11a)
+```
+
+Equality in `(11a)` consists of two disjoint smooth affine conics, each
+isomorphic to `G_m`.  No degree or support bound is assumed.
 
 ## 1. Clearing the triangular chart
 
@@ -233,12 +248,47 @@ nonunit and nonconstant in `B`; dominance of `(1)` makes `B -> R` injective,
 so its pullback cannot be a scalar unit.  The contradiction proves that some
 `p_i` is not monochromatic.
 
-## 4. Exact arm labels and scope
+## 4. Exact base-change ideals and the component-degree floor
 
 For that `i`, let `u_i` be the product of the factors assigned to `C` and
 `v_i` the product assigned to `S`, retaining multiplicities.  Both are
 nonconstant, and a common zero would give `C=S=0`; hence `(u_i,v_i)=R` and
 the CRT gives the scheme decomposition `(10)`.
+
+Absorb scalar units and write
+
+```text
+p_i=u_i v_i,              C=u_i C_0,             S=v_i S_0.   (25a)
+```
+
+If a maximal ideal contained both `v_i,C_0`, it would contain both `C,S`,
+contrary to `(C,S)=R`; similarly for `u_i,S_0`.  Hence
+
+```text
+(v_i,C_0)=R,              (u_i,S_0)=R,                        (25b)
+(p_i,C)=(u_i),            (p_i,S)=(v_i).                      (25c)
+```
+
+The ideals `(25c)` say scheme-theoretically that `V(u_i)` and `V(v_i)` are
+the exact base changes of the two intrinsic arms.  Etale base change makes
+them smooth and reduced; in particular `u_i,v_i,p_i` are squarefree.  Every
+irreducible component maps nonconstantly to its target `G_m`, since an etale
+map is quasi-finite.  The pulled-back Laurent coordinate `k` is consequently
+a nonconstant unit on every component.
+
+No component can be a line: its coordinate ring would be `K[t]`, whose only
+units are scalars.  Thus every irreducible factor of both `u_i` and `v_i` has
+degree at least two.  Both sides are nonempty, which proves `(11a)`.
+
+If equality holds, `u_i` and `v_i` are irreducible quadratics.  Their
+projective closures are smooth conics.  Each affine conic has a nonconstant
+unit, so its boundary cannot be a single point; Bezout with the line at
+infinity gives exactly two distinct boundary points.  Over `K` it is
+therefore `P^1` minus two points, hence `G_m`.  Comaximality makes the two
+conics disjoint.  The pair `xy-1,xy-2` shows that this geometric degree floor
+is sharp before the global factor/cofactor equations are imposed.
+
+## 5. Exact arm labels and scope
 
 On `p_i=0`, the determinant reads
 
@@ -257,7 +307,10 @@ Thus `S=0` gives `C=-1/a_i^2`, proving `(11)` with the exact signs.  Since
 `psi` is etale, each nonempty source component maps nontrivially into the
 corresponding intrinsic Laurent arm.
 
-This closes the monochromatic and reducible-`h` escape routes, but it does
-not construct or exclude the required comaximal factorization, second-row
-solution, or polynomial plane atlas.  No Jacobian counterexample is claimed.
+This closes the monochromatic, reducible-`h`, and linear-component escape
+routes.  THM-3837 independently closes its line--hyperbola selector model;
+the sharp uneliminated geometry before the remaining equations is
+conic--conic.  THM-3841 subsequently combines this theorem's global packet
+with total-degree arithmetic to exclude the full polynomial plane atlas.
+No general Jacobian counterexample or proof is claimed.
 **QED.**

@@ -336,7 +336,7 @@ Several formerly separate failures are now instances of the same gate.
   certificate for every word.  This is **FINITE-EXACT** evidence only: it is
   not an all-word Cohn closure and is not a dependency of `(31)`.
 
-What remains is now sharper.  A plane atlas, if one exists, needs all of:
+At this theorem's stage, a plane atlas, if one existed, needed all of:
 
 ```text
 (i)   a genuinely multi-ended, non-coordinate plane curve h=0;
@@ -347,11 +347,15 @@ What remains is now sharper.  A plane atlas, if one exists, needs all of:
 (vi)  the codimension-one coverage required by THM-3811.         (33)
 ```
 
-The highest-value constructive lane is therefore not another bounded
+The highest-value constructive lane at that stage was therefore not another bounded
 coefficient search in `(A,C)`.  It is the classification or construction
 of **nonstandard punctured plane arms** equipped with a unit and a rational
 map to the genus-three fibration `(28)`, followed by the second-row and
 Jacobian lifts.  Interacting non-elementary Cohn words are a concrete source
 of such arms, but the standard and single-hyperbola grammars are closed.
+
+THM-3841 subsequently proves that no polynomial plane atlas of this `U`
+exists.  The conditional `SL_2` and arm packet above remains valid and useful;
+its former construction lane is **SUPERSEDED**.
 
 No planar Jacobian counterexample is claimed.  **QED.**

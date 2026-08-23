@@ -366,10 +366,6 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
   THM-3167/3172 retain diagonal/field/owner gates. THM-3212--3437 close named
   `B,C,E`, clutch, transport, sparse, character, Prüfer, and Artin-jet lanes,
   but no section/transfer; THM-3306 sidecars are FINITE-EXACT only.
-  Surface chain: PROVED pure `r<=5`, sparse sextic support `<=3`, constant-
-  `z^2` mixed `deg(g)<=2`, arbitrary-arm pair no-go, all-degree `rz`, and first
-  `rz^2`, plus THM-3828/3829/3834's next fixed row.  OPEN denser sextics/degree
-  `>=7`, mixed/higher rows, arbitrary mates and off-nodal branches.
 - **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
   all `2665` residuals in `7395` rows (`2384` divisor, `281` rho).
   `d=6518` needs `p=29`, refuting `p<=23`. FINITE-EXACT at `d=10001`:

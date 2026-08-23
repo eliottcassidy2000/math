@@ -114,7 +114,7 @@ semantic = {
     "obstruction": "whole-member allocation gives Euler cofactor and differentiated determinant contradiction",
     "conclusion": "some cubic pencil member has nonempty comaximal minus and plus factors",
     "arms": "C=0 and C=-1/alpha^2",
-    "scope": "all degree; atlas existence remains open",
+    "scope": "all-degree conditional packet; atlas later excluded by THM-3841",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -130,7 +130,7 @@ print("allocation=irreducible_components_select_C_or_S")
 print("monochromatic=all_three_whole_member_allocations_impossible")
 print("forced=one_cubic_fibre_has_nonempty_comaximal_minus_plus_factors")
 print("arms=minus:C=0;plus:C=-1/alpha^2")
-print("scope=all_degree;reducible_h_alternative_closed;atlas_OPEN")
+print("scope=all_degree_conditional_packet;atlas_excluded_by_THM3841")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")
 print("RESULT=PASS")

@@ -8,8 +8,9 @@ status: >
   A2_C -> U exists.  Every dominant etale plane atlas is necessarily
   nonfinite; if its generic degree is d, its exact signed Euler sheet debt is
   8d-1, and its finite envelope has at least two divisorial boundary primes.
-  This does not obstruct a nonproper dominant etale atlas and does not claim
-  a planar Jacobian counterexample.
+  This Euler argument alone does not obstruct a nonproper dominant atlas;
+  THM-3841 subsequently excludes every polynomial plane atlas of this
+  surface.  No general planar Jacobian claim follows.
 source: root / nonlinear-cubic Euler-atlas obstruction lane, 2026-08-23
 audit: >
   TWO INDEPENDENT HOSTILE AUDITS PASS (jc_sparse_direct_search and root,
@@ -38,11 +39,12 @@ depends_on:
 related:
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
+  - THM-3841-nonlinear-cubic-keller-atlas-total-degree-contradiction
 script: 04-computation/jc2_nonlinear_cubic_compact_euler_thm3823.py
 output: 05-knowledge/results/jc2_nonlinear_cubic_compact_euler_thm3823.out
-script_sha256: 922a051268b065a01d91a363ceba0d15f177373b49a432339f2e9638edacfc67
-output_sha256: 5038865427aa0e2d9babf3710d8748af9a76ac2b36e291b607c1cde94a8f467b
-semantic_sha256: 6a93d704366b10d18382510a566f79e308d9ec390fafdb65e5ebac55e89aecae
+script_sha256: 713e7a925e4ae42852dc22c5db766510ff0cca74ce6487e224bc883c1659c5e5
+output_sha256: ff8f7c8ac1d35b46a4a4f237e3f36c1024fcb9f26a5fa0a782dff16b555e204a
+semantic_sha256: ecf52db47db9533b4bf1eec5c23bea5a0e2a91e33a21e6c941863e0cba937cfe
 hash_basis: raw LF bytes
 ---
 
@@ -230,6 +232,6 @@ Both executions must byte-match
 ```
 
 The companion reports `CHECKS=16` and `RESULT=PASS`.  It contains no inactive
-Python `assert`.  The theorem rules out finite or proper plane atlases only;
-the nonfinite dominant etale case, and hence the planar Jacobian
-counterexample lane, remains **OPEN**.  **QED.**
+Python `assert`.  This Euler mechanism rules out finite or proper plane
+atlases only; THM-3841 later excludes the nonfinite case by an independent
+degree argument.  **QED.**

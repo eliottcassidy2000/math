@@ -1,0 +1,12 @@
+theorem=THM-3841-nonlinear-cubic-keller-atlas-total-degree-contradiction
+classification=PROVED;VERIFIED-EXACT;INDEPENDENTLY-HOSTILE-AUDITED
+packet=C2h2Q_equals_CkB_plus_P;deltaC_equals_lambdaP
+h_gt_k=identity_forces_c_equals_b_minus_a_lt_0
+k_gt_h=identity_forces_c_equals_2b_minus_2a;cofactor_deficit=a_plus_2
+equal_degree=Q_conjugate_floor_forces_c_le_d;cofactor_forces_c_ge_d_plus_2
+resultants=Res(Q,P):1615;Res(Q,B):6460
+degree_hostile=1_le_a_b_c_le_60;triples=216000;survivors=0
+scope=specific_THM3811_surface_only;JC2_OPEN
+CHECKS=15
+semantic_sha256=db743214723ec651d2828740145b62e94d51516c17bc6c94737e2404109a229e
+RESULT PASS

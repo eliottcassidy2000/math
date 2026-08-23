@@ -35,6 +35,7 @@ related:
   - THM-3831-intrinsic-spectral-pencil-fibre-atlas-and-forced-cubic-two-arm-hit
   - THM-3832-nonlinear-cubic-root-ratio-triangular-birational-chart
   - THM-3836-cubic-factor-cofactor-darboux-packet
+  - THM-3841-nonlinear-cubic-keller-atlas-total-degree-contradiction
 script: 04-computation/jc2_comaximal_line_hyperbola_affine_contact_thm3837.py
 output: 05-knowledge/results/jc2_comaximal_line_hyperbola_affine_contact_thm3837.out
 script_sha256: 74b8dd003383be9737bccf263ec76a276d8713bf07f76260cb5f4c336652c560
@@ -139,7 +140,13 @@ kB_3+h^2d=x^4(B+alpha^2mu)=0.                              (12)
 
 Hence `(6)` holds identically on both components before any interior
 coefficient is solved.  This is the minimal escape from THM-3830's
-intersecting coordinate cross.
+intersecting coordinate cross **inside the selector equation**.
+
+It is not a live etale-atlas cell.  The line `u=0` is `A1` and `(8)` makes
+`k=1` there.  THM-3831/3836 identify an actual arm component as an etale base
+change of `G_m`, carrying the nonconstant Laurent unit `k`; `K[A1]` has only
+scalar units.  Thus the line--hyperbola pair is a sign-CRT/contact laboratory,
+not compatible source geometry for the full atlas.
 
 The cubic identities needed below are
 
@@ -272,7 +279,9 @@ coefficient, but it cannot change `(21)--(27)`.  Thus no saturation,
 generic-nonzero assumption, or finite-field inference is hidden in the
 closure.
 
-The theorem leaves open cubic and higher profiles, other boundary units
-`k|_(v=0)=x^n`, other comaximal component pairs, the remaining intrinsic `D`
-and second-row laws, and the planar Keller equation.  No Jacobian
-counterexample is claimed.  **QED.**
+Within this laboratory the theorem leaves cubic and higher profiles, other
+boundary units, and other comaximal component pairs untreated.  The nearest
+topology-compatible control is the double hyperbola `xy-1,xy-2`; its first
+normal contact already forces a quadratic correction.  THM-3841 separately
+excludes the full THM-3811 polynomial atlas in all degrees.  No general
+Jacobian counterexample or proof is claimed.  **QED.**

@@ -2,29 +2,26 @@
 id: THM-3840
 title: "A nonlinear cubic plane atlas forces an origin/branch Jelonek pair"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every polynomial
-  Keller atlas of the THM-3811 surface has the
-  target origin and at least one of three explicit smooth cubic-branch values
-  in its nonproper-value set.  THM-3836 supplies both Laurent arms; the row
-  unit k is nonconstant on each etale source component, and a pole on its
-  smooth completion gives the two escaping valuations.  The branch
-  normalization parameter and surviving companion root are exact.
+  PROVED CONDITIONAL IMPLICATION + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3841.  If a polynomial Keller
+  atlas of the THM-3811 surface existed, its nonproper-value set would contain
+  the target origin and at least one of three explicit smooth cubic-branch
+  values.  THM-3836 supplies both exact etale arm base changes; a pole of
+  their nonconstant row unit gives the two escaping valuations.  THM-3841
+  subsequently proves that no such atlas exists.
 source: jc_quartic_c3_construct / cubic two-arm nonproper-value lane, 2026-08-23
 audit: >
-  INDEPENDENTLY HOSTILE-AUDITED by root on 2026-08-23.  The audit typed each
-  source curve as an irreducible component of the etale base change of a
-  smooth intrinsic Laurent arm, so the restriction is etale and open and its
-  pulled-back unit k is genuinely nonconstant.  It checked that a pole on the
-  normalized projective completion cannot acquire an affine source center,
-  while both target functions do acquire the stated centers, giving a valid
-  valuative Jelonek witness for the generically finite Keller map.  The arm
-  formulas were rederived from the repaired saturated THM-3831 chart.  The
-  companion verifies all slope resultants,
-  both arm limits, discriminant incidence and smoothness, exclusion of triple
-  roots, branch-normalization values, the companion Vieta packet, and
-  pairwise distinctness of the three candidates.  The curve-completion and
-  valuative nonproperness argument is human proof.  Normal and optimized runs
-  byte-match the frozen transcript.
+  INDEPENDENT HOSTILE AUDIT PASS (root / audit_thm3840, 2026-08-23).  The
+  audit used THM-3836's exact ideals (p_i,C)=(u_i), (p_i,S)=(v_i) to justify
+  etale base change component by component, checked nonconstancy of k,
+  projective completion, the source-infinite pole valuation, and the
+  point-specific valuative nonproperness implication.  The companion verifies
+  all slope resultants, both arm limits, discriminant incidence and
+  smoothness, exclusion of triple roots, branch-normalization values, the
+  companion Vieta packet, and pairwise distinctness of the three candidates.
+  Normal and optimized runs byte-match the frozen transcript.  THM-3841
+  makes the antecedent empty, so this is a counterfactual passport rather
+  than an existence result.
 depends_on:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3831-intrinsic-spectral-pencil-fibre-atlas-and-forced-cubic-two-arm-hit
@@ -32,18 +29,20 @@ depends_on:
 related:
   - THM-3832-nonlinear-cubic-root-ratio-triangular-birational-chart
   - THM-3578-zariski-main-boundary-rank-and-sheet-debt
+  - THM-3841-nonlinear-cubic-keller-atlas-total-degree-contradiction
 script: 04-computation/jc2_forced_cubic_two_arm_jelonek_passport_thm3840.py
 output: 05-knowledge/results/jc2_forced_cubic_two_arm_jelonek_passport_thm3840.out
-script_sha256: 82b821f1201e2ec2acdd6d77ce92a74b29c7eae5a3868603b25d0dea46baea39
-output_sha256: 99a71f761cc2eee49b26d0c468974de40d33c2d331509876626acdb76d448310
-semantic_sha256: fb59cb14b46a4edafbe622a82ab9c7d42b5af615d160a4b249ddbbd28f5017b9
+script_sha256: d6373cc0e8440c54d324e18f1f335e1fb106e9ee31cb2faba6a130b7b37f4bb1
+output_sha256: f3d244cda5dd83cbb2a969452baa3864a15d5205d8aba2ec91cbb8b4cefadb7e
+semantic_sha256: 84a8336b2cb9389e40fd5db70a8caa7f4a5a05b5828aa159e37dee87f994d492
 hash_basis: raw LF bytes
 ---
 
 # THM-3840 -- the forced two-arm fibre gives a Jelonek pair
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
-algebraically closed field `K` of characteristic zero.
+**PROVED CONDITIONAL IMPLICATION + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3841.**  Work over an algebraically
+closed field `K` of characteristic zero.
 Let
 
 ```text
@@ -81,14 +80,20 @@ beta=2a/(7a^2-1).                                                (5)
 
 The three possible points `T_a` are pairwise distinct and all differ from
 `O`.  The theorem forces `O` and at least **one** of them; it does not force
-all three or identify the whole Jelonek curve.
+all three or identify the whole Jelonek curve.  This is a proved implication
+from the hypothetical atlas packet.  THM-3841 proves that its antecedent is
+false, so it produces no actual map `F` or realized Jelonek pair.
 
 ## 1. The two source curves carry a nonconstant unit
 
-THM-3836 supplies a root `a` of `(3)` for which the pulled-back cubic pencil
-member `h-ak=0` has nonempty comaximal minus and plus factors.  Choose an
-irreducible source curve `E^-` on the minus side and `E^+` on the plus side.
-THM-3831 identifies their intrinsic targets as
+THM-3836 supplies a root `a` of `(3)` and exact base-change ideals
+
+```text
+(h-ak,C)=(u),                    (h-ak,S)=(v),                  (5a)
+```
+
+for nonempty comaximal minus and plus schemes.  THM-3831 identifies their
+intrinsic targets as
 
 ```text
 U_a^-: C=0,
@@ -97,10 +102,11 @@ U_a^+: C=-1/a^2,                                                (6)
 
 with each arm isomorphic to `G_m` using the intrinsic function `k`.
 
-Base-changing `psi` to either smooth intrinsic arm gives a smooth etale
-source curve, whose irreducible components are open and closed.  Thus the
-restriction to either chosen component is etale over that arm.  A nonempty
-etale morphism of curves has open one-dimensional image.  Consequently
+Thus `V(u)` and `V(v)` are literal etale base changes of the two smooth arms.
+They are smooth and reduced, and each irreducible component is open-and-closed.
+Choose components `E^-` and `E^+`; their restrictions are etale.  Since etale
+maps are quasi-finite, neither one-dimensional component can map constantly.
+Consequently
 
 ```text
 k|_(E^-), k|_(E^+) are nonconstant units.                        (7)
@@ -198,7 +204,7 @@ Res_Z(r(Z),r(-Z))=216!=0.                                       (16)
 
 Thus the three candidates are pairwise distinct.
 
-The theorem ties the mandatory bichromatic fibre to the precise `S_3`
-branch/companion-sheet transition.  It supplies two forced nonproper values,
-not a polynomial atlas, not the full nonproper curve, and not a Jacobian
-counterexample.  **QED.**
+Conditionally, the theorem ties the mandatory bichromatic fibre to the
+precise `S_3` branch/companion-sheet transition.  It supplies a counterfactual
+two-value passport, not an actual polynomial atlas, the full nonproper curve,
+or a Jacobian counterexample.  THM-3841 closes the antecedent.  **QED.**
