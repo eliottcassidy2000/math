@@ -467,6 +467,83 @@ gate(
 )
 
 
+# The all-degree closure is local and simpler than the linear hostile.  At a
+# nonzero root of v, only the first jets of v and f affect the leading term
+# of the forcing.  If every root is zero, algebraic closure makes v a pure
+# power of e and the origin first jet closes the remaining branch.
+local_x = sp.symbols("local_x")
+root_multiplicity = sp.symbols(
+    "root_multiplicity", integer=True, positive=True
+)
+rho, local_unit, local_f0, local_f1 = sp.symbols(
+    "rho local_unit local_f0 local_f1", nonzero=True
+)
+local_e = rho + local_x
+local_v = local_x**root_multiplicity * local_unit
+local_W = beta * local_e**2 * local_v**4
+local_f = local_f0 + local_f1 * local_x
+local_forcing = sp.factor(
+    4
+    * local_e**2
+    * (
+        local_W * sp.diff(local_f, local_x)
+        - local_f * sp.diff(local_W, local_x)
+    )
+)
+local_lead = sp.limit(
+    sp.powsimp(
+        local_forcing / local_x ** (4 * root_multiplicity - 1),
+        force=True,
+    ),
+    local_x,
+    0,
+)
+zero(
+    local_lead
+    + 16
+    * beta
+    * local_f0
+    * root_multiplicity
+    * rho**4
+    * local_unit**4,
+    "nonzero-root forcing leading coefficient",
+)
+gate(
+    4 * root_multiplicity - 1 < 5 * root_multiplicity - 1,
+    "nonzero-root valuation gap",
+)
+
+zero_multiplicity = sp.symbols(
+    "zero_multiplicity", integer=True, positive=True
+)
+zero_W = beta * local_x ** (2 + 4 * zero_multiplicity)
+zero_f = sp.Rational(1, 12) + local_f1 * local_x
+zero_forcing = sp.factor(
+    4
+    * local_x**2
+    * (
+        zero_W * sp.diff(zero_f, local_x)
+        - zero_f * sp.diff(zero_W, local_x)
+    )
+)
+zero_lead = sp.limit(
+    sp.powsimp(
+        zero_forcing / local_x ** (3 + 4 * zero_multiplicity),
+        force=True,
+    ),
+    local_x,
+    0,
+)
+zero(
+    zero_lead + beta * (2 + 4 * zero_multiplicity) / 3,
+    "origin pure-power forcing leading coefficient",
+)
+gate(
+    3 + 4 * zero_multiplicity < 3 + 5 * zero_multiplicity,
+    "origin pure-power valuation gap",
+)
+
+
 semantic = {
     "ansatz": "THM3812 plus rz*p(e),rz*q(e);c=1",
     "top": "pqprime-qpprime=0",
@@ -474,8 +551,9 @@ semantic = {
     "asymmetric": "p=0,q!=0 forces f=e^2*beta*v^4, contradicting f(0)=1/12",
     "constant_v": "lambda^2=-3/4;beta=-lambda/4;alpha=-4/5;delta=3lambda/16;final r coefficient=1/4",
     "linear_v": "two arm remainders plus rank-five compatibility have unit ideal",
-    "survivor": "deg(v)>=2;deg(p)>=13;deg(W)>=10",
-    "open": "degree-at-least-two Kummer tower and higher canonical coefficients",
+    "all_degree": "nonzero roots have order gap 4m-1<5m-1;pure e^d has 3+4d<3+5d",
+    "survivor": "none within the exact rz-profile ansatz",
+    "open": "higher canonical coefficients",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 linear_packet_blob = json.dumps(
@@ -499,8 +577,9 @@ print("symmetric=q=lambda*p;W=kappa-lambda*f;p=alpha*e^3*v^5;W=beta*e^2*v^4")
 print("asymmetric=p0_qnonzero_forces_f0=0_but_arm_forces_f0=1/12")
 print("constant_v=lambda^2=-3/4;beta=-lambda/4;alpha=-4/5;delta=3lambda/16;final_r0=1/4")
 print("linear_v=arm_two_remainders_plus_rank5_compatibility_have_unit_ideal")
-print("survivor=deg_v>=2;deg_p>=13;deg_W>=10")
-print("open=degree_at_least_two_Kummer_tower;higher_canonical_coefficients")
+print("all_degree=nonzero_root_4m-1_vs_5m-1;pure_e^d_3+4d_vs_3+5d")
+print("survivor=none_within_exact_rz_profile_ansatz")
+print("open=higher_canonical_coefficients")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"linear_packet_sha256={hashlib.sha256(linear_packet_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")

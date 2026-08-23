@@ -6,9 +6,10 @@ symmetric=q=lambda*p;W=kappa-lambda*f;p=alpha*e^3*v^5;W=beta*e^2*v^4
 asymmetric=p0_qnonzero_forces_f0=0_but_arm_forces_f0=1/12
 constant_v=lambda^2=-3/4;beta=-lambda/4;alpha=-4/5;delta=3lambda/16;final_r0=1/4
 linear_v=arm_two_remainders_plus_rank5_compatibility_have_unit_ideal
-survivor=deg_v>=2;deg_p>=13;deg_W>=10
-open=degree_at_least_two_Kummer_tower;higher_canonical_coefficients
-semantic_sha256=2b2e0156b8d0dfb6cfd14c1f0cbd48d13ac79addff056e419f50c41ff5cda77c
+all_degree=nonzero_root_4m-1_vs_5m-1;pure_e^d_3+4d_vs_3+5d
+survivor=none_within_exact_rz_profile_ansatz
+open=higher_canonical_coefficients
+semantic_sha256=93f4511b995aec57406202ed542a539f8c2d357489ee4c87fd35822f1161b619
 linear_packet_sha256=152e5055ee6f451dbbe4aedd2f3f9944ea685a2c7ef463c5760855ce4f7058ee
-CHECKS=40
+CHECKS=44
 RESULT=PASS
