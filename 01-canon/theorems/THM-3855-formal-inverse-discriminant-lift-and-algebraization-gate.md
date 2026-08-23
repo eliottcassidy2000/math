@@ -5,29 +5,33 @@ status: >
   PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
   AUDIT.  At the THM-3808 rational four-ray packet, the four coefficient
   gradients of the binary-cubic discriminant form a basis of all homogeneous
-  cubics.  Hence every discriminant deformation beginning in total degree
-  five has an all-orders formal coefficient lift with fixed linear part.
-  The one-place THM-3853 deformation therefore has a connected normal
-  nonmonogenic formal S3 cubic completion.  Polynomial algebraization,
-  constant units on a global etale open, and a Keller atlas remain open.
+  cubics.  More strongly, the two base-coordinate gradients form a cubic
+  complete intersection with socle degree four.  Hence every discriminant
+  deformation beginning in total degree five is formally right-equivalent
+  to the four-line packet by a tangent-identity base automorphism.  The
+  one-place THM-3853 deformation therefore has a connected normal
+  nonmonogenic formal S3 cubic completion, explicitly the base-changed
+  completion of THM-3808.  Polynomial algebraization, constant units on a
+  global etale open, and a Keller atlas remain open.
 source: root / inverse binary-cubic discriminant lane, 2026-08-23
 audit: >
   SELF-HOSTILE EXACT CANDIDATE.  The proof computes the complete coefficient
   gradient matrix, whose determinant is 640000, identifies its ideal with
-  `(A,C)^3`, and gives a homogeneous right-inverse recursion.  The companion
-  replays the one-place target through total degree twelve, verifies the
-  explicit first quadratic correction and a nonzero degree-thirteen residual
-  for that truncation, and contains no Python asserts.  Normal and optimized
-  runs byte-match the frozen transcript.  Independent hostile audit remains.
+  `(A,C)^3`, and gives a homogeneous right-inverse recursion.  It also checks
+  the base-gradient resultant, complete-intersection degree-five determinant,
+  explicit tangent-identity quadratic correction, and a second homogeneous
+  right-equivalence recursion.  The companion replays both lifts through
+  total degree twelve, with nonzero degree-thirteen residuals, and contains no
+  Python asserts.  Independent hostile audit remains.
 depends_on:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
 related:
   - THM-3853-quadratic-depth-inverse-discriminant-one-place-gluing-obstruction
 script: 04-computation/jc2_formal_inverse_discriminant_lift_thm3855.py
 output: 05-knowledge/results/jc2_formal_inverse_discriminant_lift_thm3855.out
-script_sha256: 1634b5a16fc5addcde2245f378ea7b7c7e65ea2e297a8b70aef9989a57c28b65
-output_sha256: 28b97d014ee1ca4bb4df873c0dd064b37c3dbb7b681184ef7af26d6ba4dd585a
-semantic_sha256: 264a006df84eaac70a48a6a6836809ad52a29d772be4e312703e910bb370eb46
+script_sha256: 79be066d6e7ddd459ce3d7d3e9d81c041cbf0804561013691a73aed27c546874
+output_sha256: bcbff3d657957c1e2e242621388618ccb2d9734308a1535e6a47f07b9803fc99
+semantic_sha256: d8ba779da7618b29472ca255bb717a3a2c833559223d41e0404360aa47eb2b6e
 hash_basis: raw LF bytes
 ---
 
@@ -61,7 +65,23 @@ Delta_0=Disc(f_1)
 ```
 
 The inverse-discriminant map at `(3)` is formally surjective with a
-three-degree shift:
+three-degree shift.  More strongly, it is surjective through changes of the
+two base coordinates: for every `Phi in m^5 Rhat`, there is a
+tangent-identity formal automorphism
+
+```text
+phi=(P,Q),             P=A mod m^2,              Q=C mod m^2,  (4a)
+
+Delta_0(P,Q)=Delta_0(A,C)+Phi.                                 (4b)
+```
+
+Consequently, taking
+
+```text
+f_phi=(P,Q,7P,-3P)                                             (4c)
+```
+
+already gives the following coefficient lift:
 
 > For every `Phi in m^5 Rhat`, there is an
 > `eta=(eta_a,eta_b,eta_c,eta_d) in (m^2 Rhat)^4` such that
@@ -77,9 +97,10 @@ delta_lambda=Delta_0+lambda C^5                                 (6)
 ```
 
 from THM-3853 has an exact formal binary-cubic lift with fixed linear part.
-The corresponding Delone--Faddeev algebra over `Rhat` is a connected normal
-rank-three domain, is globally nonmonogenic over `Rhat`, and has generic
-Galois closure `S3`.
+The Delone--Faddeev algebra of the specific row `(4c)` over `Rhat` is a
+connected normal rank-three domain, is globally nonmonogenic over `Rhat`,
+and has generic Galois closure `S3`.  It is the completed THM-3808 algebra
+after the base automorphism `phi`, not a new completed singularity type.
 
 For completeness, the one-place assertion in `(6)` is visible without using
 the inverse-discriminant calculation.  On `C!=0`, put `t=A/C` and
@@ -108,7 +129,99 @@ does not exist.  Corrections of degree at least three, finite termination,
 the unit group of a global deleted-ramification open, and any planar Keller
 map remain open.
 
-## 1. The coefficient gradients span every cubic
+## 1. The base Jacobian is a cubic complete intersection
+
+Differentiate `(4)` in the base coordinates.  One obtains
+
+```text
+Delta_A=-2(3230A^3+567A^2C-49AC^2-6C^3),
+Delta_C=-2A(189A^2-49AC-18C^2).                               (6c)
+```
+
+These two cubics are coprime.  The exact resultant and the first square
+homogeneous multiplication determinant are
+
+```text
+Res_A(Delta_A,Delta_C)=36864000000 C^9,
+
+det[(R_2)^2 --(Delta_A,Delta_C)--> R_5]=-36864000000.          (6d)
+```
+
+Thus `(Delta_A,Delta_C)` is a homogeneous complete intersection of type
+`(3,3)`.  Its quotient has Hilbert series
+
+```text
+(1-z^3)^2/(1-z)^2=(1+z+z^2)^2,                                (6e)
+```
+
+so its socle degree is four and
+
+```text
+m^5 subset (Delta_A,Delta_C).                                  (6f)
+```
+
+Multiplying `(6f)` by arbitrary homogeneous forms gives a surjection
+
+```text
+(R_(n-3))^2 -> R_n,
+(alpha,beta) |-> Delta_A alpha+Delta_C beta                    (6g)
+```
+
+for every `n>=5`.  For the target `C^5`, the unique first quadratic pair is
+
+```text
+alpha_2=-(1722409941/16000000)A^2
+        +(3586046429/72000000)AC+(1/12)C^2,
+
+beta_2= (26492305283/14400000)A^2
+        -(2460621541/48000000)AC
+        -(1211682143/72000000)C^2,                             (6h)
+
+Delta_A alpha_2+Delta_C beta_2=C^5.
+```
+
+The large constants are not structural; `(6d)`--`(6f)` are.  They say that
+the ordinary four-line singularity is four-determined under formal right
+equivalence.
+
+## 2. Homogeneous recursion gives formal right-equivalence
+
+Write `Phi=sum_(n>=5)Phi_n`.  Suppose a tangent-identity pair `(P,Q)` has
+been chosen so that `(4b)` holds through degree `n-1`, and let `E_n` be the
+remaining homogeneous degree-`n` error.  By `(6g)`, choose
+
+```text
+(alpha_(n-3),beta_(n-3)) in (R_(n-3))^2,
+Delta_A alpha_(n-3)+Delta_C beta_(n-3)=-E_n.                   (6i)
+```
+
+Replace `(P,Q)` by `(P+alpha_(n-3),Q+beta_(n-3))`.  At degree `n`, the
+change is exactly the left side of `(6i)`.  Replacing the derivative at the
+identity by the derivative at the current tangent-identity pair costs one
+additional degree, and every quadratic Taylor term costs at least one more
+degree when `n>=5`.  Thus no lower equation is disturbed.  Completeness of
+`Rhat` gives `(4a)`--`(4b)`, and its identity linear part makes `phi` an
+automorphism.
+
+This sharpens the geometric typing.  The global polynomial curve `(6)` is
+irreducible and has affine normalization `A1`, but its completed germ at the
+origin is an ordinary four-branch point.  The formal automorphism identifies
+that germ with the completed union of the four lines `(4)`; it does not
+identify the global curves.
+
+Nor can this particular formal solution terminate as a polynomial base
+map.  If `P,Q in k[A,C]` have the identity linear part, then
+
+```text
+Delta_0(P,Q)=P(Q+5P)(4Q+19P)(3Q-17P)                           (6j)
+```
+
+is a product of four nonconstant polynomials with distinct linear parts.
+It cannot equal the irreducible `delta_lambda`.  Hence any eventual
+polynomial coefficient lift must leave the base-change orbit and become a
+genuine four-coefficient deformation.
+
+## 3. The coefficient gradients span every cubic
 
 Differentiate `(2)` with respect to `(a,b,c,d)` and evaluate at `(3)`.  In
 the ordered monomial basis
@@ -148,7 +261,7 @@ by arbitrary forms gives a surjection
 
 for every `n>=3`.
 
-## 2. Homogeneous recursion proves the formal lift
+## 4. An independent coefficient recursion proves the formal lift
 
 Write `Phi=sum_(n>=5) Phi_n` by total degree.  Suppose corrections have been
 chosen so that `(5)` is true through degree `n-1`, and let `E_n in R_n` be
@@ -187,7 +300,22 @@ uses a fixed monomial right inverse of `(8)` to continue through degree
 twelve.  The degree-thirteen error of that finite truncation is nonzero, as
 it should be: only the infinite recursion has been proved exact.
 
-## 3. The formal cubic passes the index, normality, and S3 gates
+## 5. The formal cubic passes the index, normality, and S3 gates
+
+For the coordinate lift `(4c)`, these properties can first be read by
+inheritance.  Let `S_0` be the completion at the vertex of the normal
+third-Veronese cubic algebra in THM-3808.  Base change along the automorphism
+`phi` gives
+
+```text
+S_phi=S_0 completed_tensor_(Rhat,phi) Rhat.                     (13a)
+```
+
+Because `phi` is an automorphism, `(13a)` is the same completed algebra with
+its base coordinates relabelled.  In particular it is a normal local domain,
+and its generic cubic and index packet are inherited.  The intrinsic argument
+below independently checks the same conclusion and applies to any formal
+coefficient lift with discriminant `(6)` and coefficients in `m`.
 
 The binary index form of the Delone--Faddeev algebra is
 
@@ -225,7 +353,7 @@ Finally, `(6)` is not a square in `Frac(Rhat)` because each of its four
 height-one factors has odd valuation.  The connected generic cubic therefore
 has nonsquare discriminant and Galois closure `S3`.
 
-## 4. Exact boundary and next construction step
+## 6. Exact boundary and next construction step
 
 The formal packet now passes four gates simultaneously:
 
@@ -251,5 +379,5 @@ python3 04-computation/jc2_formal_inverse_discriminant_lift_thm3855.py
 python3 -O 04-computation/jc2_formal_inverse_discriminant_lift_thm3855.py
 ```
 
-Both modes byte-match the frozen 60-gate transcript.  **QED candidate,
+Both modes byte-match the frozen 99-gate transcript.  **QED candidate,
 pending independent hostile audit.**

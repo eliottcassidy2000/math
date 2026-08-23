@@ -1,10 +1,13 @@
 theorem=THM-3855-formal-inverse-discriminant-lift-and-algebraization-gate
 base=(A,C,7A,-3A);gradient_det=640000;gradient_ideal=(A,C)^3
+base_gradient_resultant=36864000000*C^9;base_jacobian_CI_contains=(A,C)^5
+right_equivalence=tangent_identity_formal_base_automorphism
+base_first_correction=alpha2=(-1722409941/16000000)A^2+(3586046429/72000000)AC+(1/12)C^2;beta2=(26492305283/14400000)A^2-(2460621541/48000000)AC-(1211682143/72000000)C^2
 target=Delta0+C^5;formal_lift=ALL_ORDERS
 first_correction=C^2*(91449/40000,151263/40000,-194481/20000,-1/4)
 finite_replay=through_degree_12;first_truncation_residual_degree=13
 index=coefficients_remain_in_(A,C);unit_value=NONE
 scope=formal_only;polynomial_algebraization_and_connected_Keller_surface_OPEN
-semantic_sha256=264a006df84eaac70a48a6a6836809ad52a29d772be4e312703e910bb370eb46
-CHECKS=60
+semantic_sha256=d8ba779da7618b29472ca255bb717a3a2c833559223d41e0404360aa47eb2b6e
+CHECKS=99
 RESULT=PASS

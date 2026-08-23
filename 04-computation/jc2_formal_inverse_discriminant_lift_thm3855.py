@@ -95,6 +95,123 @@ gate(
     "gradient ideal is the cube of the maximal ideal",
 )
 
+# Stronger mechanism: the target is already formally right-equivalent to the
+# four-line discriminant by a tangent-identity change of the base variables.
+Delta_A = sp.expand(sp.diff(Delta0, A))
+Delta_C = sp.expand(sp.diff(Delta0, C))
+expected_Delta_A = -2 * (
+    3230 * A**3 + 567 * A**2 * C - 49 * A * C**2 - 6 * C**3
+)
+expected_Delta_C = -2 * A * (189 * A**2 - 49 * A * C - 18 * C**2)
+zero(Delta_A - expected_Delta_A, "base A-gradient")
+zero(Delta_C - expected_Delta_C, "base C-gradient")
+gate(sp.Poly(sp.gcd(Delta_A, Delta_C), A, C).monic().as_expr() == 1,
+     "base gradients are coprime")
+gate(
+    sp.factor(sp.resultant(Delta_A, Delta_C, A)) == 36864000000 * C**9,
+    "base-gradient resultant",
+)
+
+quadratic_monomials = (A**2, A * C, C**2)
+quintic_monomials = tuple(A**i * C ** (5 - i) for i in range(6))
+base_columns = [
+    sp.expand(gradient * monomial)
+    for gradient in (Delta_A, Delta_C)
+    for monomial in quadratic_monomials
+]
+base_degree_five_matrix = sp.Matrix(
+    [
+        [sp.Poly(column, A, C).coeff_monomial(monomial) for column in base_columns]
+        for monomial in quintic_monomials
+    ]
+)
+gate(base_degree_five_matrix.det() == -36864000000,
+     "base-gradient degree-five determinant")
+base_groebner = sp.groebner([Delta_A, Delta_C], A, C, order="grevlex")
+for monomial in quintic_monomials:
+    zero(base_groebner.reduce(monomial)[1], "base Jacobian ideal contains m^5")
+
+alpha_2 = (
+    -sp.Rational(1722409941, 16000000) * A**2
+    + sp.Rational(3586046429, 72000000) * A * C
+    + sp.Rational(1, 12) * C**2
+)
+beta_2 = (
+    sp.Rational(26492305283, 14400000) * A**2
+    - sp.Rational(2460621541, 48000000) * A * C
+    - sp.Rational(1211682143, 72000000) * C**2
+)
+zero(Delta_A * alpha_2 + Delta_C * beta_2 - C**5,
+     "displayed tangent-identity quadratic correction")
+
+
+def base_right_inverse(form: sp.Expr, degree: int) -> tuple[sp.Expr, sp.Expr]:
+    """Deterministic lift of a homogeneous form through (Delta_A,Delta_C)."""
+
+    source_degree = degree - 3
+    source_monomials = tuple(
+        A**i * C ** (source_degree - i) for i in range(source_degree + 1)
+    )
+    target_monomials = tuple(A**i * C ** (degree - i) for i in range(degree + 1))
+    columns = [
+        sp.expand(gradient * monomial)
+        for gradient in (Delta_A, Delta_C)
+        for monomial in source_monomials
+    ]
+    matrix = sp.Matrix(
+        [
+            [sp.Poly(column, A, C).coeff_monomial(monomial) for column in columns]
+            for monomial in target_monomials
+        ]
+    )
+    vector = sp.Matrix(
+        [sp.Poly(sp.expand(form), A, C).coeff_monomial(monomial)
+         for monomial in target_monomials]
+    )
+    _, pivots = matrix.rref()
+    gate(len(pivots) == degree + 1, "base right-inverse full row rank")
+    pivot_matrix = matrix[:, list(pivots)]
+    pivot_solution = pivot_matrix.inv() * vector
+    solution = [sp.S.Zero] * len(columns)
+    for pivot, value in zip(pivots, pivot_solution):
+        solution[pivot] = value
+    width = len(source_monomials)
+    alpha = sp.expand(sum(solution[i] * source_monomials[i] for i in range(width)))
+    beta = sp.expand(
+        sum(solution[width + i] * source_monomials[i] for i in range(width))
+    )
+    zero(Delta_A * alpha + Delta_C * beta - form,
+         "base homogeneous right inverse")
+    return alpha, beta
+
+
+# A finite replay of the formal coordinate recursion.  The first step is
+# unique and equals the displayed quadratic pair above.
+P, Q = A, C
+first_base_correction = None
+for total_degree in range(5, 13):
+    current = homogeneous(Delta0.subs({A: P, C: Q}, simultaneous=True), total_degree)
+    wanted = C**5 if total_degree == 5 else sp.S.Zero
+    correction = base_right_inverse(wanted - current, total_degree)
+    P = sp.expand(P + correction[0])
+    Q = sp.expand(Q + correction[1])
+    zero(
+        homogeneous(Delta0.subs({A: P, C: Q}, simultaneous=True), total_degree)
+        - wanted,
+        f"formal right-equivalence recursion through degree {total_degree}",
+    )
+    if total_degree == 5:
+        first_base_correction = correction
+gate(first_base_correction == (alpha_2, beta_2),
+     "first base correction is the displayed unique solution")
+base_error = sp.expand(Delta0.subs({A: P, C: Q}, simultaneous=True) - (Delta0 + C**5))
+gate(
+    all(homogeneous(base_error, degree) == 0 for degree in range(0, 13)),
+    "truncated right-equivalence has no error through degree twelve",
+)
+gate(homogeneous(base_error, 13) != 0,
+     "right-equivalence degree-thirteen hostile remains after truncation")
+
 
 def right_inverse(form: sp.Expr, degree: int) -> list[sp.Expr]:
     """Lift a homogeneous degree-`degree` form through the cubic gradients."""
@@ -175,6 +292,9 @@ semantic = {
     "base_packet": "(A,C,7A,-3A)",
     "gradient_matrix_det": 640000,
     "gradient_ideal": "(A,C)^3",
+    "base_gradient_resultant": "36864000000*C^9",
+    "base_jacobian_ideal": "complete intersection containing (A,C)^5",
+    "right_equivalence": "tangent-identity formal base automorphism",
     "target": "Delta0+C^5",
     "formal_lift": "all m-adic orders; corrections begin in degree 2",
     "finite_replay": "degrees 5 through 12; first residual degree 13",
@@ -191,6 +311,14 @@ gate(
 
 print("theorem=THM-3855-formal-inverse-discriminant-lift-and-algebraization-gate")
 print("base=(A,C,7A,-3A);gradient_det=640000;gradient_ideal=(A,C)^3")
+print("base_gradient_resultant=36864000000*C^9;base_jacobian_CI_contains=(A,C)^5")
+print("right_equivalence=tangent_identity_formal_base_automorphism")
+print(
+    "base_first_correction="
+    "alpha2=(-1722409941/16000000)A^2+(3586046429/72000000)AC+(1/12)C^2;"
+    "beta2=(26492305283/14400000)A^2-(2460621541/48000000)AC-"
+    "(1211682143/72000000)C^2"
+)
 print("target=Delta0+C^5;formal_lift=ALL_ORDERS")
 print("first_correction=C^2*(91449/40000,151263/40000,-194481/20000,-1/4)")
 print("finite_replay=through_degree_12;first_truncation_residual_degree=13")
