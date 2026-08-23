@@ -564,6 +564,13 @@ boundary curve, and a literal-intertwiner search from the Russell seed to
 THM-3881's rank-two norm grammar.  The last search is necessary because
 theorem status on one surface does not identify modules on another.
 
+Incoming THM-3884 is only a **RESERVED / UNPROVED EMPTY STUB** for a
+total-degree filtration of that norm equation.  Its useful procedural signal
+is already testable: when an actual filtration is proposed, compare
+`gr(ker)` with `ker(gr)` and retain the lower transport equations, using the
+THM-3412 deficit as the hostile template.  The reservation itself proves no
+filtration, lift, or residual obstruction.
+
 ## 11. Root companion reproduction
 
 Run
