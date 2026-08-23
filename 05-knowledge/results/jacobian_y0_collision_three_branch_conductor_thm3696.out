@@ -1,0 +1,13 @@
+theorem=THM-3696-y0-collision-three-branch-conductor
+weight_zero=R0=C[X,Y];X=b*(1-b^2);Y=b^2*(1-b^2);relation=X^4-X^2Y+Y^3
+normalization=C[b];triple_branches=b=-1,0,1
+R0_membership=equal_values_and_fprime(-1)+4*fprime(0)+fprime(1)=0
+conductor=b^2*(1-b^2)^2*C[b]
+modules=r>=0:b^rR0;r=-1:h(R0+bR0);r=-2m:h^m(R0+hR0);r=-(2m+1),m>=1:h^(m+1)C[b]
+hostile_module_window=-10..6;degree_cap=18;rows=((-10, 8, 'negative_even:h^m(R0+hR0)'), (-9, 9, 'negative_odd:h^(m+1)C[b]'), (-8, 10, 'negative_even:h^m(R0+hR0)'), (-7, 11, 'negative_odd:h^(m+1)C[b]'), (-6, 12, 'negative_even:h^m(R0+hR0)'), (-5, 13, 'negative_odd:h^(m+1)C[b]'), (-4, 14, 'negative_even:h^m(R0+hR0)'), (-3, 15, 'negative_odd:h^(m+1)C[b]'), (-2, 16, 'negative_even:h^m(R0+hR0)'), (-1, 16, 'minus1:h(R0+bR0)'), (0, 16, 'positive:b^rR0'), (1, 15, 'positive:b^rR0'), (2, 14, 'positive:b^rR0'), (3, 13, 'positive:b^rR0'), (4, 12, 'positive:b^rR0'), (5, 11, 'positive:b^rR0'), (6, 10, 'positive:b^rR0'))
+global_conductor_R_in_D=zero;mechanism=unbounded_positive_b_adic_order
+poisson_closure=false;witness={3e,2ce}=-12be_notin_R
+scalar_law=arms_only(-2,1)_and_synchronized;center_only(-2,1)_or(-1,0)
+semantic_sha256=1f945a5a19f95e2bf2824af05ba2d2a14523cd828eb7da950cde4bb0c9e6bfb9
+CHECKS=57
+RESULT=PASS
