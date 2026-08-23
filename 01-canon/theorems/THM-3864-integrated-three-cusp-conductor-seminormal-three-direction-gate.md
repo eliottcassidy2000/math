@@ -2,8 +2,7 @@
 id: THM-3864
 title: "The integrated three-cusp front has a three-dimensional seminormal defect"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED CORE; PROVISIONAL
-  VERIFIED-EXACT CANONICAL-PLANE STRENGTHENING AWAITING INDEPENDENT AUDIT.  The
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The
   conductor of the THM-3854 integrated
   quintic has double zeros at its three cusp addresses and simple zeros at
   all six node addresses.  Its seminormalization retains exactly the three
@@ -12,7 +11,7 @@ status: >
   missing third square/cube-descent direction is explicit.  Its canonical
   depressed-cubic residual and every minimum-degree parity-preserving lift
   remain nonsquare.  The audited core closes the canonical `<h_1,h_3>` line;
-  the provisional strengthenings close `<h_1,h_2>` by an exact specialized
+  the audited strengthenings close `<h_1,h_2>` by an exact specialized
   quartic square ideal, `<h_2,h_3>` by an exact odd-valuation factorization,
   and the full canonical projective plane by an odd-degree/exceptional-conic
   stratification.  This is a statement about the fixed canonical
@@ -36,16 +35,20 @@ audit: >
   descent, its residual factor, and the complete bounded parity-preserving
   lift coefficients.  It also verifies the symbolic factorization and both
   boundary specializations for the complete canonical projective line
-  spanned by the first and third directions.  The new provisional section
-  additionally verifies every cross descent on `<h_1,h_2>`, its specialized
+  spanned by the first and third directions.  The companion additionally
+  verifies every cross descent on `<h_1,h_2>`, its specialized
   quartic, the complete square-coefficient Groebner basis, and both
-  endpoints.  The provisional extension also verifies the `<h_2,h_3>` cross
+  endpoints.  It also verifies the `<h_2,h_3>` cross
   descents, its boundary factorization including the coincident-root seam,
   the missing three-way cubic descent, the full-plane odd leading term, and
   the exceptional-conic square-coefficient Groebner basis.  Finally it
   verifies the noncanonical same-defect square-residual hostile control.
   Normal and optimized runs must byte-match the frozen transcript.
-  Independent hostile audit is required only for Sections 7-9.
+  The independent audit of Sections 7-9 separately checked that the three
+  projective coordinate lines and the generic/exceptional-conic interior
+  exhaust projective coefficient space; rederived the odd-valuation and
+  odd-degree obstructions; and read the reduced Groebner bases as pointwise
+  contradictions over an algebraically closed characteristic-zero field.
 depends_on:
   - THM-3854-integrated-three-cusp-quintic-s5-natural-completion-obstruction
 related:
@@ -61,8 +64,7 @@ hash_basis: raw LF bytes
 
 # THM-3864 -- all three seminormal cusp directions
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED CORE, WITH A
-PROVISIONAL CANONICAL-PLANE STRENGTHENING.**  Work over an algebraically closed
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an algebraically closed
 field `k` of characteristic zero.  Retain the
 normalization of THM-3854,
 
@@ -106,8 +108,8 @@ minimum-total-degree parity-preserving change of its two polynomial lifts
 makes the residual a square, and no canonical element on the entire
 projective line spanned by `h_1,h_3` has square residual.
 
-The audited statements above are deliberately bounded.  Sections 7-9 give a
-provisional exact strengthening: for the displayed representatives and their
+The statements above are deliberately bounded.  Sections 7-9 prove that for
+the displayed representatives and their
 displayed square/cube descents, the entire canonical projective plane
 `P(span(h_1,h_2,h_3))` has nonsquare residual.  This is **not** intrinsic to a
 class in `S/R`: Section 9 exhibits a noncanonical representative of `[h_1]`
@@ -374,9 +376,9 @@ N^6y^6 C_3.                                                   (36)
 The scalar and `y^6` are squares, whereas `C_3` is nonsquare by Section 4.
 This handles the projective endpoint and completes the line uniformly.
 
-## 7. Provisional strengthening: the canonical `h_1,h_2` line
+## 7. The canonical `h_1,h_2` line
 
-**PROVISIONAL + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**  The
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The
 second coordinate line also closes.  Besides the endpoint descents from
 THM-3854, the cross terms are
 
@@ -442,12 +444,11 @@ constant parts.  If `V=0`, one is at the pure `h_1` residual
 ```
 
 nonsquare by the same argument.  Therefore every point of the canonical
-`<h_1,h_2>` projective line has nonsquare residual, subject only to the
-pending independent audit of this section.
+`<h_1,h_2>` projective line has nonsquare residual.
 
-## 8. Provisional strengthening: the canonical `h_2,h_3` line
+## 8. The canonical `h_2,h_3` line
 
-**PROVISIONAL + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**  The
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The
 third coordinate line has the cross descents
 
 ```text
@@ -491,9 +492,9 @@ At `N=0`, the residual is `-M^6(9x+5)^2` times the nonsquare core in `(43)`.
 At `M=0`, it is `N^6y^6C_3`, nonsquare by Section 4.  These endpoint checks
 complete the canonical `<h_2,h_3>` line.
 
-## 9. Provisional strengthening: the full canonical defect plane
+## 9. The full canonical defect plane
 
-**PROVISIONAL + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**  The
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The
 one remaining cubic cross descent is
 
 ```text
@@ -583,8 +584,8 @@ counterexample.
 ## 10. Scope and next exact search
 
 The audited core converts the seminormal boundary problem from an incomplete
-two-direction scout to a complete three-dimensional defect space.  The
-provisional Sections 7-9 close every **canonical** combination, but `(54)-(56)`
+two-direction scout to a complete three-dimensional defect space.  Sections
+7-9 close every **canonical** combination, but `(54)-(56)`
 show that representative changes are mathematically essential.  This theorem
 does **not** classify binary cubic orders with discriminant `Delta`.
 
