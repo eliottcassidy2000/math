@@ -247,6 +247,12 @@ Format per entry:
   concurrently reserved different files as `THM-3823`; the latter
   prime-colour empty stub was moved to free `THM-3825` in `37bc86bdcb`.
   No proved claim depended on either stub, and both reserved lanes survive.
+- **Repeated incident / repair (2026-08-23):** `c10dcde982` reserved the Russell
+  formal-arm lift as `THM-3846`; `cee6cf1207` then independently reserved an
+  LRC prefix-tree stub under the same ID.  The Russell reservation had priority
+  and was promoted; the later empty LRC stub is preserved under free
+  `THM-3848`.  Again, different slugs made the Git merge conflict-free while
+  the theorem namespace was not.
 
 ## MISTAKE-448 (2026-08-23, THM-3798 candidate audit) -- canceling by a proposed divisor and multiplying back is a vacuous divisibility gate
 
