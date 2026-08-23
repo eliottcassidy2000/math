@@ -1,0 +1,9 @@
+theorem=THM-3726-automorphic-Cohn-constant-SL2-orbit-classification
+scope=arbitrary_R_in_SL2(k);constant_exposed_left_parameter
+closure_locus=(2a-d)^2=1_with_typed_linear_compatibility
+normal_form=Q=L+L^2S;J(L,S)=1
+remaining_debts=lower:6S;top:-6S;Broughton_nonentry
+hostile_integer_matrices=180;closed_rows=74
+semantic_sha256=a9efb6a1de61faaad9d40407dcc091f89647b392029001c7fda25d2acf2905c7
+CHECKS=247
+RESULT=PASS
