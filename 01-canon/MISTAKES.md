@@ -9,6 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-458 (2026-08-23, concurrent theorem reservation) -- two unrelated empty stubs reserved THM-3846
+
+- **What failed:** the formal-arm Darboux-lift lane and the rational-base
+  prefix-atom lonely-runner lane independently reserved the same theorem ID.
+  Both files were honest empty stubs, but the shared namespace was no longer
+  injective.
+- **Minimal witness / first failed implication:** the two distinct files
+  `THM-3846-formal-arm-darboux-lift-and-algebraization-gate.md` and
+  `THM-3846-rational-base-prefix-atom-tree-and-lonely-runner-separation.md`
+  both declared YAML `id: THM-3846`.  Reserving an ID in one concurrent
+  checkout did not reserve it globally against a later concurrent commit.
+- **Repair / strongest survivor:** the earlier formal-arm reservation retains
+  THM-3846.  The lonely-runner reservation moves to the fresh ID THM-3848.
+  Both remain `RESERVED / UNPROVED EMPTY STUB`; neither enters the proved
+  dependency graph.
+- **Reusable rule:** immediately before committing a reservation, recheck the
+  filename, YAML ID, indexes, and current remote history.  After integrating
+  concurrent commits, rerun the uniqueness audit even when every individual
+  stub was honestly labeled.
+
 ## MISTAKE-457 (2026-08-23, THM-3818 candidate audit) -- an unoriented support census was reported as oriented labelled assignments
 
 - **What failed:** the provisional scaled-cube packet multiplied its `5,855`
