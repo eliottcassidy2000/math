@@ -1,0 +1,10 @@
+theorem=THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
+sidecar=monic_squarefree_degree8_hyperelliptic_genus3
+hostile_fibre=T=-1;gcd(P,Pprime)=1
+closed_polynomial=K(g)_relatively_algebraically_closed_in_K(x,y)
+obstruction=generic_fibre_genus_0_1_2_impossible
+intersection=K[x,y]_intersect_K(g)=K[g]
+boundary=p(g)_squarefree;each_arm_component_requires_nonconstant_k
+scope=no_universal_Stein_factor_claim;no_JC_counterexample
+CHECKS=15
+semantic_sha256=fe01574799af6d0f72d21666698aaca59722261dbcbf8491ed758a6c0e196c7f
