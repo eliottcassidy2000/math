@@ -2,7 +2,7 @@
 id: THM-3775
 title: "Quadratic anti-invariant vertical residue gate"
 status: >
-  PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.  For a smooth
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a smooth
   planar polynomial with complete rational Hamiltonian torsor and a quadratic
   generic-fibre model, the canonical response primitive is anti-invariant
   under the sheet involution.  At every reduced, component-exhaustive
@@ -12,15 +12,16 @@ status: >
   has such a model, a polynomial mate exists exactly when the canonical
   anti-invariant primitive is already polynomial.  The result recovers the
   vertical obstructions in THM-3758, THM-3765, and THM-3772, but makes no
-  unproved higher-cyclic claim and has no canonical force before audit.
+  unproved higher-cyclic claim.
 source: root + jc_quartic_c3_construct / 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The exact companion verifies the universal
-  anti-commutation signs in a generic quadratic algebra, the diagonal/sign
-  component decomposition, split and nonsplit controls, the exhaustive
-  special-fibre factorizations and signs for THM-3765/3772, and THM-3758's
-  separate two-component sign vector.  Normal and optimized runs byte-match
-  the frozen transcript; independent hostile audit remains open.
+  PASS.  An independent audit rederived the component quotient and
+  equalizer, the generic quadratic anti-commutation signs, the complete
+  rational torsor and unique anti-invariant representative, the nonsplit
+  and split leading-packet obstruction, and the global height-one-DVR
+  equivalence.  It independently checked the THM-3765/3772 signs and
+  THM-3758 collapsed-branch guard.  Normal and optimized runs byte-match the
+  frozen transcript and all hashes agree.
 depends_on:
   - THM-3770-vertical-principal-part-equalizer-and-log-canonical-dressing-gate
 related:
@@ -37,7 +38,7 @@ hash_basis: raw LF bytes
 
 # THM-3775 -- target shears see the trivial sheet representation only
 
-**PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.**  The opposite
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The opposite
 principal coefficients in the recent rational-exact near misses are not
 coincidental signs.  They are the nontrivial character of a quadratic sheet
 involution.  A target shear is constant on every component over one target
