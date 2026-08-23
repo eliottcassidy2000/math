@@ -1,4 +1,4 @@
-theorem=THM-3841-nonlinear-cubic-keller-atlas-total-degree-contradiction
+theorem=THM-3843-nonlinear-cubic-keller-atlas-total-degree-contradiction
 classification=PROVED;VERIFIED-EXACT;INDEPENDENTLY-HOSTILE-AUDITED
 packet=C2h2Q_equals_CkB_plus_P;deltaC_equals_lambdaP
 h_gt_k=identity_forces_c_equals_b_minus_a_lt_0

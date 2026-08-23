@@ -30,7 +30,7 @@ depends_on:
 related:
   - THM-3835-polynomial-marked-root-ratio-nonentry
   - THM-3836-cubic-factor-cofactor-darboux-packet
-  - THM-3841-nonlinear-cubic-keller-atlas-total-degree-contradiction
+  - THM-3843-nonlinear-cubic-keller-atlas-total-degree-contradiction
 script: 04-computation/jc2_root_ratio_degree_five_floor_thm3838.py
 output: 05-knowledge/results/jc2_root_ratio_degree_five_floor_thm3838.out
 script_sha256: 57fbf881e33ca4fb4d2b8ae08f349b1fb46763239232919480a4648f7a875c90
@@ -71,7 +71,7 @@ z=h/k.                                                            (4)
 ```
 
 No support restriction is used.  This conditional degree-five boundary is
-sharp only as a statement of the inherited genus mechanism; THM-3841 later
+sharp only as a statement of the inherited genus mechanism; THM-3843 later
 excludes atlas existence by the independent factor/cofactor degree packet.
 
 ## 1. The inherited dual primitive fibrations
@@ -149,5 +149,5 @@ excludes `deg k=4`.  Together with the coarse floor this proves `(2)`.
 The result sharpens THM-3835 conditionally: not only must `z=h/k` retain a genuine
 denominator, but both entries of its reduced presentation begin at degree
 five.  Its former degree-five construction frontier is **SUPERSEDED** by
-THM-3841, which shows that no degree can solve the THM-3836 Keller packet.
+THM-3843, which shows that no degree can solve the THM-3836 Keller packet.
 No Jacobian counterexample is claimed.  **QED.**
