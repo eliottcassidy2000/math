@@ -220,16 +220,15 @@ collide, links—not bare IDs—are canonical.
 
 ## Jacobian, Dixmier, and Poisson
 
+### Miyanishi -- affine pseudo-planes and the canonical-trivial exception
+
+- **Primary/imported:** Miyanishi [arXiv:1504.07179](https://arxiv.org/abs/1504.07179), Lemma 2.5.2, constructs the affine-plane Galois pseudo-cover; Theorem 2.5.10 excludes type `(d,n,r)` with `r!=2` from mapping etale to `A2` via `Pic(X)=Z/d`, `K_X~(r-2)F_0`.
+- **Consumer/boundary:** [THM-3785](../../01-canon/theorems/THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable.md) explicitly realizes the `d=3,r=2` exception.  The source does not exclude its Darboux pairs or prove `JC(2)`.
+
 ### Gao / Shaska / Meng--Yang — the 2026 Jacobian boundary
 
-- Gao [arXiv:2608.00222v1](https://arxiv.org/abs/2608.00222) gives the
-  tangent-sweep counterexamples in every dimension `>2`;
-  [THM-1300](../../01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md)/[3438](../../01-canon/theorems/THM-3438-weighted-lift-keller-degree-spectrum.md)
-  verify the repo's degree-four map/lift.
-- Shaska [arXiv:2607.20210v2](https://arxiv.org/abs/2607.20210) excludes all
-  planar equivariant signatures; THM-3686/3691 are analogues.
-- Meng--Yang [arXiv:2607.22198v2](https://arxiv.org/abs/2607.22198) leaves only
-  `JC(2)` and `HC(4)`, with `HC(4) => JC(2)`; no planar/Dixmier conclusion.
+- Gao [arXiv:2608.00222v1](https://arxiv.org/abs/2608.00222) gives tangent-sweep counterexamples in dimensions `>2`; [THM-1300](../../01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md)/3438 verify the degree-four map/lift.
+- Shaska [arXiv:2607.20210v2](https://arxiv.org/abs/2607.20210) excludes planar equivariant signatures (THM-3686/3691 are analogues); Meng--Yang [arXiv:2607.22198v2](https://arxiv.org/abs/2607.22198) leaves only `JC(2)` and `HC(4)`, with `HC(4) => JC(2)`.
 
 ### Nagata / Shastri / Guccione--Guccione--Horruitiner--Valqui — planar degree and infinity gates
 

@@ -1,0 +1,14 @@
+theorem=THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
+seed=F=x(t+c),P=1/(3x^3),J(F,P)=1
+surface=R^2E-Z^3+c^3R=0
+source=R=x^3;Z=x(c+x^3y);E=3c^2y+3cx^3y^2+x^6y^3
+poisson={R,Z}:3R^2;{R,E}:9Z^2;{Z,E}:3c^3+6RE
+atlas=surjective_etale_generic_degree_3_boundary_degree_1
+intersection=k[x,y]_cap_k(F,P)=k[R,Z,E]/relation
+units=k*;Pic=Z/3;div(R)=3L
+affine=smooth_carriers_Z+lambdaR_and_E;no_affine_polynomial_mate
+homogeneous=unique_possible_weight_pair_(1,-3)_has_positive_degree
+two_by_two=complete_endpoint_power_and_degree_nonentry
+darboux_floor=surface_degree_at_least_2;source_field_degree_multiple_of_3_at_least_6
+CHECKS=4090
+semantic_sha256=a0ff1432a148cfa5fe716ca86694feaaf37a06c169fa4dad6842ab26d1178976
