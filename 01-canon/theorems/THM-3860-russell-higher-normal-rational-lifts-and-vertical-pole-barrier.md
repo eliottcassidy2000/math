@@ -1,15 +1,435 @@
 ---
 id: THM-3860
 title: "Russell higher-normal rational lifts and the vertical pole barrier"
-status: RESERVED / UNPROVED EMPTY STUB
+status: >
+  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
+  PENDING.  Formal Darboux coefficients in the completed Russell arm obey
+  an exact one-equation recursion whose free summand is tangent to the arm.
+  When the first-normal Wronskian is a nonzero constant, every rational
+  normal coordinate depending only on z has a unique vertical-affine
+  companion and gives an exact rational Darboux lift.  The minimal nodal
+  packet therefore crosses THM-3846's canonical square-root rationality
+  gate.  Nevertheless, for that nodal packet, every member of the complete
+  vertical rational subclass has a divisorial pole on the Russell surface.  This is not an
+  obstruction to formal lifts with genuinely s-dependent normal coordinate,
+  nor to arbitrary global Darboux pairs, and no JC(2) conclusion is claimed.
 source: root / higher_normal_lift / Russell higher-normal algebraization lane, 2026-08-23
+audit: >
+  PROVISIONAL exact companion verifies the formal coefficient convolution,
+  the affine solution torsor, the first two forced recursion rows, the
+  arbitrary vertical rational Jacobian identity, preservation of the arm
+  and first normal jet, the explicit nodal rational pair, its named prime
+  pole, and the one-root exceptional-family jet contradiction.  Normal and
+  optimized executions byte-match the frozen transcript.  A logically
+  independent proof and implementation have not yet been supplied.
+depends_on:
+  - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
+  - THM-3846-formal-arm-darboux-lift-and-algebraization-gate
+related:
+  - THM-3790-cubic-pseudoplane-arm-nodal-immersion-gate
+  - THM-3843-russell-arm-birational-immersion-and-forced-self-identification
+  - THM-3849-russell-arm-conductor-polynomial-and-residual-contact-graph
+script: 04-computation/jc2_russell_higher_normal_rational_lifts_thm3860.py
+output: 05-knowledge/results/jc2_russell_higher_normal_rational_lifts_thm3860.out
+script_sha256: c8b13abed6a8a421f7a1bb1b079b02d6852fba88a254f7e944d1b8f8594a64cd
+output_sha256: b11751a10ca63b1666a6b289bd864b4a1e5037672344244e98a96d452b1715f3
+semantic_sha256: 971c46a940d02c8240765f6ac7d622615b24f4e4cc273ee28038317ec3b2816f
+hash_basis: raw LF bytes
 ---
 
-# THM-3860 -- reserved
+# THM-3860 -- rational higher-normal lifts exist, but the vertical class has poles
 
-**RESERVED / UNPROVED EMPTY STUB.**  This namespace is reserved for a
-proposed coefficient recursion for arbitrary formal Russell-arm Darboux
-lifts, an exact rational higher-normal family that crosses the canonical
-square-root gate, and a pole obstruction for its vertical-affine subclass.
-No mathematical claim is made by this file, and it has no proved
-dependencies until the proof candidate is written and independently audited.
+**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
+PENDING.**  Let `k` be an algebraically closed field of characteristic zero.
+Fix `c in k*` and retain the THM-3785 Russell surface and its completed arm:
+
+```text
+B=k[r,z,e]/(r^2e-z^3+c^3r),               I=(r,z),              (1)
+Bhat=k[s][[z]],                            {z,s}=1,
+s=e/[3(c^3+er)],
+e=3c^3s+9s^2z^3,                          r=z^3/(c^3+3sz^3).    (2)
+```
+
+The result has four parts.
+
+1. Every admissible formal arm packet has an explicit coefficient-by-
+   coefficient affine recursion.  Its only freedom at each new order is a
+   multiple of the arm tangent.
+2. If the first-normal Wronskian is a constant `w`, every rational choice
+   `Z=phi(z)` has a unique vertical-affine exact correction
+   `S=L(z)s+f(z)`.
+3. For the minimal nodal packet, a Mobius choice of `phi` gives an exact
+   rational Darboux pair in `Frac(B)` with the same arm and first normal jet
+   as THM-3846, although the canonical linear-normal lift is nonrational.
+4. After specializing to the minimal nodal packet, no rational lift in the
+   complete `Z=phi(z)` subclass is regular on `Y`: a finite height-one
+   divisor forces a pole of the quadratic carrier.
+
+Parts 2--4 concern a precisely declared subclass.  They do not exclude a
+precomposition with `Z_s != 0`; the first such term can begin at normal order
+three.  They also do not exclude a different global pair in `B`.
+
+## 1. The full formal coefficient recursion
+
+Let
+
+```text
+A=sum_(n>=0) a_n(s)z^n,                 C=sum_(n>=0) b_n(s)z^n. (3)
+```
+
+Since the bracket in `(2)` is the ordinary Jacobian in coordinate order
+`(z,s)`, the coefficient of `z^m` is
+
+```text
+[z^m]{A,C}
+ =sum_(i+j=m+1) [i a_i b_j'-j a_i' b_j].                     (4)
+```
+
+The arm and first-normal condition is therefore exactly
+
+```text
+a_1b_0'-a_0'b_1=1.                                           (5)
+```
+
+For `m>=1`, define the already-known interior contribution
+
+```text
+R_m=sum_(i=1)^m
+       [i a_i b_(m+1-i)'-(m+1-i)a_i'b_(m+1-i)].              (6)
+```
+
+Then the `z^m` Darboux equation is
+
+```text
+a_(m+1)b_0'-a_0'b_(m+1)=-R_m/(m+1).                          (7)
+```
+
+Identity `(5)` says that `(a_0',b_0')` is a unimodular row.  Consequently
+all polynomial solutions of `(7)` are
+
+```text
+(a_(m+1),b_(m+1))
+ =-R_m/(m+1)(a_1,b_1)+tau_m(s)(a_0',b_0'),
+tau_m in k[s].                                                (8)
+```
+
+Indeed the first summand has the required determinant by `(5)`, while the
+kernel of `(u,v) |-> ub_0'-a_0'v` is generated by `(a_0',b_0')`.  This is
+also exhaustive in the derivative edge cases because unimodularity, rather
+than division by one chosen derivative, proves the kernel statement.
+
+Starting from any packet satisfying `(5)`, equation `(8)` recursively
+constructs a formal Darboux pair for every sequence of tangent gauges
+`tau_m`.  Thus there is no finite-order formal obstruction.  The first row
+beyond THM-3846's linear-normal ansatz is especially informative.  Put
+
+```text
+W=a_1b_1'-a_1'b_1.                                           (9)
+```
+
+Then
+
+```text
+(a_2,b_2)=-(W/2)(a_1,b_1)+tau_1(a_0',b_0').                  (10)
+```
+
+The normal projection `-W(a_1,b_1)/2` is forced, but its tangent summand is
+free.  That tangent summand is precisely the coordinate omitted by the
+canonical linear-normal resummation.
+
+## 2. The complete rational subclass with `Z=phi(z)`
+
+Take polynomials `a,b,alpha,beta in k[s]` satisfying
+
+```text
+alpha b'-a'beta=1,                  W=alpha beta'-alpha'beta=w in k*. (11)
+```
+
+In independent variables `(Z,S)`, the linear-normal seed
+
+```text
+A_0=a(S)+alpha(S)Z,                 C_0=b(S)+beta(S)Z          (12)
+```
+
+has Jacobian
+
+```text
+J_(Z,S)(A_0,C_0)=1+wZ.                                      (13)
+```
+
+Let `phi,f in k(z)` be rational functions regular at zero and suppose
+
+```text
+phi(0)=0,        phi'(0)=1,        phi''(0)=-w,
+f(0)=f'(0)=0.                                               (14)
+```
+
+Define
+
+```text
+Z=phi(z),
+L(z)=1/[(1+w phi(z))phi'(z)],
+S=L(z)s+f(z).                                                (15)
+```
+
+Then
+
+```text
+J_(z,s)(Z,S)=phi'L=1/(1+wZ),                                (16)
+```
+
+so the composite pair
+
+```text
+A=a(S)+alpha(S)Z,                 C=b(S)+beta(S)Z             (17)
+```
+
+satisfies exactly
+
+```text
+{A,C}=1.                                                       (18)
+```
+
+in `k(s,z)=Frac(B)`.  Conversely, once `Z=phi(z)` is fixed, equation
+`(18)` forces `S_s=L(z)`, so every rational solution in this vertical class
+has exactly the affine form `(15)` for some `f(z)`.  Thus `(15)` is a
+classification, not one convenient subfamily.
+
+The jet conditions are also exact.  Equations `(14)--(15)` give
+
+```text
+L(0)=1,                       L'(0)=-(w+phi''(0))=0,
+Z=z mod z^2,                  S=s mod z^2.                    (19)
+```
+
+Therefore `(17)` has arm restriction `(a,b)` and first-normal row
+`(alpha,beta)`.  No tangent change has been hidden in those prescribed
+jets.
+
+One useful rational choice is
+
+```text
+phi(z)=z/(1+wz/2),
+L(z)=(1+wz/2)^3/(1+3wz/2),                  f=0.              (20)
+```
+
+Its expansions begin
+
+```text
+Z=z-(w/2)z^2+(w^2/4)z^3+...,
+S=s+(3sw^2/4)z^2-sw^3z^3+...,                               (21)
+```
+
+so `(10)` has the nonzero higher-normal gauge
+
+```text
+tau_1=3sw^2/4.                                                (22)
+```
+
+This is the first explicit mechanism by which the tangent freedom changes
+the infinite resummation without changing the arm or first normal row.
+
+## 3. An exact rational lift of the minimal nodal packet
+
+Use the THM-3846 nodal data in the canonical parameter `s`:
+
+```text
+a=9c^6s^2,                  b=27c^9s^3-3c^3s,
+alpha=-1/(3c^3),            beta=-3s/2,
+w=1/(2c^3).                                                   (23)
+```
+
+They satisfy `(11)`.  Put
+
+```text
+h=1+z/(4c^3),                    g=1+3z/(4c^3),
+Z=z/h,                           S=s h^3/g.                    (24)
+```
+
+Equations `(17)` become
+
+```text
+A=9c^6s^2 h^6/g^2-z/(3c^3h),
+C=27c^9s^3 h^9/g^3-3c^3s h^2.                                (25)
+```
+
+Direct differentiation, or `(13),(16)`, gives
+
+```text
+{A,C}=1.                                                       (26)
+```
+
+The pair belongs to `Frac(B)^2`, has nodal arm
+
+```text
+(A,C)|_(z=0)=(9c^6s^2,27c^9s^3-3c^3s),                       (27)
+```
+
+and has first normal row `(alpha,beta)`.  For the same data, THM-3846's
+choice `S=s` forces the nonrational Hensel coordinate
+
+```text
+2c^3(sqrt(1+z/c^3)-1).                                       (28)
+```
+
+Thus the squareclass obstruction in THM-3846 is exact for its displayed
+linear-normal lift but is not invariant under higher-normal tangent
+correction.  Equation `(25)` crosses the rationality gate; it does not cross
+the regularity gate.
+
+For a concrete pole, take
+
+```text
+D_h=V(z+4c^3) subset Y.                                      (29)
+```
+
+It is a prime divisor because
+
+```text
+B/(z+4c^3)
+ ~=k[r,e]/(r^2e+c^3r+64c^9)
+ ~=k[r,r^(-1)].                                               (30)
+```
+
+Along `D_h`, the functions `s` and `g` are regular, `h` is a uniformizer,
+and the first summand of `A` in `(25)` vanishes to order six.  Its second
+summand has order `-1`.  Hence
+
+```text
+ord_(D_h)(A)=-1,                    (A,C) notin B^2.            (31)
+```
+
+This named pole is already enough to reject the explicit rational control.
+
+## 4. Every rational vertical nodal lift has a divisorial pole
+
+After specializing `(17)` to the nodal data `(23)`, the pole is unavoidable
+throughout the complete subclass `(15)`, although its location can change.
+We first prove a one-variable lemma.
+
+**Lemma.**  Let `w in k*`, and let `phi in k(z)` be regular at zero with
+
+```text
+phi(0)=0,                  phi'(0)=1,                 phi''(0)=-w. (32)
+```
+
+There is a finite `z_0 in k*` at which `phi` is regular and
+
+```text
+(1+wphi(z_0))phi'(z_0)=0.                                (33)
+```
+
+To prove the lemma, suppose otherwise.  The rational function
+
+```text
+R=phi+1/w                                                     (34)
+```
+
+then has no finite zero, while `phi'=R'` has no finite zero away from the
+poles of `R`.  Write `R=P/Q` in reduced form.  Algebraic closedness and the
+absence of finite zeros make `P` a nonzero constant, so
+
+```text
+R=gamma/Q(z).                                                 (35)
+```
+
+The polynomial `Q` is nonconstant because `phi'(0)=1`.  Every root of `Q'`
+must be a root of `Q`.  If `Q` has degree `d` and `rho` distinct roots, the
+roots shared by `Q,Q'`, with multiplicity, have total degree `d-rho`, while
+`Q'` has degree `d-1`.  Hence `rho=1` and
+
+```text
+Q=Q(0)(1+az)^d,                    d>=1.                       (36)
+```
+
+Since `R(0)=1/w`, equations `(34)--(36)` give
+
+```text
+phi=(1/w)[(1+az)^(-d)-1].                                    (37)
+```
+
+The first derivative in `(32)` forces `a=-w/d`; the second is then
+
+```text
+phi''(0)=w(d+1)/d.                                            (38)
+```
+
+Comparing `(38)` with `(32)` gives `2d+1=0`, impossible for a positive
+integer in characteristic zero.  This proves the lemma, including the
+possibilities that `phi` has poles, that `phi'` has multiple zeros, and that
+the two factors in `(33)` vanish together.
+
+Now apply the lemma to any pair `(15),(17)` with the nodal data `(23)`.  At
+the prime divisor
+
+```text
+D_0=V(z-z_0),                                                 (39)
+```
+
+the coordinate `Z=phi(z)` is regular while `L` has a pole.  The divisor is
+prime and reduced:
+
+```text
+B/(z-z_0)
+ ~=k[r,e]/(r^2e+c^3r-z_0^3)
+ ~=k[r,r^(-1)],                                               (40)
+```
+
+and the arm parameter restricts to the nonconstant regular Laurent
+function
+
+```text
+s=1/(3r)-c^3/(3z_0^3).                                       (41)
+```
+
+If `f` is regular at `D_0`, the leading polar coefficient of
+`S=Ls+f` is a nonzero scalar multiple of the nonconstant function `(41)`.
+If `f` has a pole of a different order, the term of larger pole order
+survives.  If the orders agree, the leading coefficient is
+
+```text
+ell s+mu,                       ell in k*, mu in k,             (42)
+```
+
+which is nonzero in `k(r)`.  Thus in every case
+
+```text
+ord_(D_0)(S)<0.                                                (43)
+```
+
+The first nodal coordinate is
+
+```text
+A=9c^6S^2-Z/(3c^3).                                          (44)
+```
+
+Since `Z` is regular at `D_0`, its second term cannot cancel the leading
+even-order pole of the first.  Therefore
+
+```text
+ord_(D_0)(A)=2ord_(D_0)(S)<0.                                (45)
+```
+
+This proves the vertical-family barrier.  It is a divisorial effectivity
+failure, not another formal failure.  The rational family satisfies the
+same arm Bezout law and, locally, the same conductor/contact coefficient as
+THM-3849.  What it cannot do is extend that local packet across the whole
+Russell surface.
+
+The cheapest genuinely new construction must therefore leave the declared
+class by taking `Z_s != 0`.  For a precomposition tangent to the identity,
+the density equation `(13),(16)` forces the coefficient of `z^2` in `Z` to
+be the constant `-w/2`, so the first possible `s`-dependent term is at order
+`z^3`.  This is a design boundary, not an existence assertion.  Arbitrary
+higher-normal algebraization and the planar Jacobian conjecture remain open.
+**QED, pending independent audit.**
+
+## 5. Reproduction
+
+```bash
+python3 -B 04-computation/jc2_russell_higher_normal_rational_lifts_thm3860.py
+python3 -B -O 04-computation/jc2_russell_higher_normal_rational_lifts_thm3860.py
+```
+
+Both executions must byte-match
+`05-knowledge/results/jc2_russell_higher_normal_rational_lifts_thm3860.out`.
