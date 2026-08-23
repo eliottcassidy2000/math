@@ -2,8 +2,8 @@
 id: THM-3826
 title: "At-most-three-term sextic R-repairs of nodal carriers have critical points"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  On the c=1 cubic pseudo-plane, every pure-r
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the c=1
+  cubic pseudo-plane, every pure-r
   carrier A=e^2-z/3+r g(e) with deg(g)=6 and at most three nonzero monomials
   has a critical point.  On the first full seven-residue cover b_6=s^3,
   T=s^7, boundary-only support would force one of twenty-two exact support
@@ -12,7 +12,15 @@ status: >
   sextic or all-degree conclusion is claimed.
 source: jc_sparse_direct_search / first full-seven-residue sextic lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The deterministic companion independently
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
+  The audit checked the multiplicity-safe boundary implication, the exact
+  Euclidean quotient and remainder degree, surjectivity and support
+  preservation on the cubic/seventh-power cover, the complete torus
+  saturation universe, the repeated-root and four-term hostile controls,
+  and every denominator and finite-root exclusion in the critical-point
+  reconstruction.  Normal and optimized runs byte-match the frozen
+  transcript and the raw hashes agree.  The deterministic companion
+  independently
   expands THM-3820's universal residual, verifies degree thirty-two and its
   leading coefficient, certifies the primitive degree-six logarithmic
   quotient with denominator 15625 b_6^5, constructs the finite cubic cover,
@@ -21,8 +29,6 @@ audit: >
   saturation, verifies the minimal killing-row table and every previous-row
   hostile survivor, includes a repeated-root control and a genuine four-term
   top-four survivor, and replays the finite-root critical reconstruction.
-  Normal and optimized runs byte-match the frozen transcript.  Independent
-  hostile audit is pending.
 depends_on:
   - THM-3820-universal-euler-mod-seven-residual-quadratic-discriminant
 related:
@@ -39,9 +45,8 @@ hash_basis: raw LF bytes
 
 # THM-3826 -- every three-term sextic r-repair remains critical
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
-characteristic zero.  On
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  On
 
 ```text
 Y=Spec k[r,z,e]/(r^2e-z^3+r)
