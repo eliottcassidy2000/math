@@ -234,8 +234,9 @@ The latter two parameters never vanish.  Sections 3.1 and 3.2 prove
 phi_m(A2)=Y minus {o}                       for every m>=2. (21)
 ```
 
-This is a set-theoretic statement on geometric points, and hence a
-scheme-theoretic surjectivity statement over the displayed open target.
+This is geometric-point surjectivity, hence topological surjectivity after
+base change, over the displayed open target.  That is the exact strength
+used in the generic-point/DVR argument below.
 
 ## 4. Exact polynomial intersection
 
