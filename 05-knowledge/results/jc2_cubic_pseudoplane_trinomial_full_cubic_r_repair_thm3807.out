@@ -1,0 +1,11 @@
+theorem=THM-3807-trinomial-and-full-cubic-r-repairs-have-critical-points
+surface=r^2e-z^3+r;c=1;field=algebraically_closed_characteristic_zero
+carrier=A=e^2-z/3+r*(b0+b1e+b2e^2+b3e^3);support_at_least_3
+generic=b3_notin_0,1;degree_H=17;branches=A_or_B;only_t2_boundary_is_binomial
+drop=b3=1;b2_nonzero_degree15;b2_zero_degree11;both_empty
+boundary_criterion=all_H_roots_in_V(e*g)_implies_H_divides_e*g*Hprime
+recovery=r=u/e;z=9g*u*(u+1)/(e*(1+2u))
+open=support_at_most_2_separate;degree_ge_4;mixed_corrections;rational_poles
+semantic_sha256=692b1c1f9c260b8d9154b85d386afb82b6b4acff87093a41b533430c7dae92a7
+CHECKS=51
+RESULT=PASS
