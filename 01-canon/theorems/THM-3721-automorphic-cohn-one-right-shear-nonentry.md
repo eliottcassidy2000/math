@@ -2,7 +2,8 @@
 id: THM-3721
 title: "Automorphic Cohn single-right-shear nonentry"
 status: >
-  PROVED + VERIFIED-EXACT.  A polynomial-ring automorphic image of Cohn's
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A polynomial-ring
+  automorphic image of Cohn's
   non-elementary matrix has an infinite-dimensional family of elementary
   decorations in which one row really is a gradient.  Nevertheless, after
   either one arbitrary upper or one arbitrary lower right shear and either

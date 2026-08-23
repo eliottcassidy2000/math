@@ -2,7 +2,7 @@
 id: THM-3723
 title: "Automorphic Cohn complete E-plus/E-minus two-right nonentry"
 status: >
-  PROVED + VERIFIED-EXACT.  For arbitrary nonzero polynomial parameters
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For arbitrary nonzero polynomial parameters
   u,v, neither alternating two-left decoration of M0 E_+(v)E_-(u) is a
   Jacobian matrix.  If either right parameter is nonconstant, leading-form
   directional-curl gates prevent the first row closure.  In the remaining
@@ -12,7 +12,10 @@ status: >
   nonidentity two-right order, not E_-(u)E_+(v), longer words, or JC(2).
 source: root + jc-sparse-direct-search / 2026-08-22
 audit: >
-  SELF-AUDITED; independent hostile audit requested.  The exact companion
+  PASS.  An independent audit rederived all three nonconstant leading-form
+  regimes, the positive-degree left-parameter valuation descent, both
+  constant curls and their classification, the projective C3 relation, the
+  common Broughton potential, and both complementary debt signs.  The exact companion
   checks the arbitrary-polynomial exposed curls, both constant
   classifications, R^3=-I and R^2-R+I=0, the Broughton source coordinates
   and both remaining debts, 110 nonconstant and 200 constant hostile cells,
