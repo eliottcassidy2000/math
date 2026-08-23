@@ -1,0 +1,11 @@
+THM3860_HOSTILE_AUDIT PASS_WITH_WORDING_REPAIR
+FORMAL_RECURSION convolution rows 0..7; nodal through 6; both derivative edges
+VERTICAL_CLASSIFICATION S_s=L unique; S=L*s+f with f free
+UNIQUENESS_REPAIR companion is not unique; only vertical slope is unique
+NODAL_RATIONAL_PAIR Jacobian one; arm and first jet exact
+RUSSELL_DIVISORS surface smooth; z=z0 nonzero gives prime G_m fibre
+NAMED_POLE z=-4c^3; ord(A)=-1
+VERTICAL_BARRIER all rational phi(z),f(z); finite divisorial pole
+SCOPE no obstruction to s-dependent Z, general formal/polynomial lifts, or JC(2)
+SEMANTIC_SHA256 a6a758bb7f6f5c4e3089e5a05a98d9f7003b85f8f9ff82c16a9db2ec391c9dfd
+GATES 100

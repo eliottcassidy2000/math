@@ -26,7 +26,12 @@ audit: >
   all relative pole orders of f, and pole multiplicities one through eight.
   It also caught and repaired the distinction between a unique slope and a
   nonunique translation.  Normal and optimized runs byte-match both frozen
-  LF transcripts.
+  LF transcripts.  A second independent 100-gate hostile audit separately
+  reconstructs eight convolution rows and derivative-edge packets, exhibits
+  two distinct companions with identical prescribed jets, checks Russell
+  smoothness and every nonzero constant-z prime fibre, and proves equal-order
+  pole cancellation impossible from the nonconstant residue of s.  Its
+  normal and optimized transcripts also byte-match frozen LF bytes.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3846-formal-arm-darboux-lift-and-algebraization-gate
@@ -45,6 +50,11 @@ independent_audit_output: 05-knowledge/results/jc2_russell_higher_normal_rationa
 independent_audit_script_sha256: 4c70ff1e86c33e598f8092e61574cc0759eb792bc4d06239e843c5625bd0f26e
 independent_audit_output_sha256: 0304dece6fa70b04ae6ce05d5b01578480e6aeda8f796781f18bf493b82f2ea3
 independent_semantic_sha256: af2a80c84fc8ea7e70043c82b6ec8677886caca57c697f7eee91cc392110a897
+second_independent_script: 04-computation/jc2_russell_higher_normal_rational_lifts_second_independent_audit_thm3860.py
+second_independent_output: 05-knowledge/results/jc2_russell_higher_normal_rational_lifts_second_independent_audit_thm3860.out
+second_independent_script_sha256: 6ee6021ccadedcdcba143942057cffa4aa38a013c5fcf679079d7e15b5ad61c2
+second_independent_output_sha256: d7e2be82d9dc95a5cb086b9e8f8634c0e28442e6ea35a7fc796a58e2bc6bf4df
+second_independent_semantic_sha256: a6a758bb7f6f5c4e3089e5a05a98d9f7003b85f8f9ff82c16a9db2ec391c9dfd
 hash_basis: raw LF bytes
 ---
 
@@ -445,8 +455,11 @@ python3 -B 04-computation/jc2_russell_higher_normal_rational_lifts_thm3860.py
 python3 -B -O 04-computation/jc2_russell_higher_normal_rational_lifts_thm3860.py
 python3 -B 04-computation/jc2_russell_higher_normal_rational_lifts_independent_audit_thm3860.py
 python3 -B -O 04-computation/jc2_russell_higher_normal_rational_lifts_independent_audit_thm3860.py
+python3 -B 04-computation/jc2_russell_higher_normal_rational_lifts_second_independent_audit_thm3860.py
+python3 -B -O 04-computation/jc2_russell_higher_normal_rational_lifts_second_independent_audit_thm3860.py
 ```
 
 The first two executions must byte-match
 `05-knowledge/results/jc2_russell_higher_normal_rational_lifts_thm3860.out`;
-the last two must byte-match the corresponding independent-audit output.
+the next two must byte-match the first independent-audit output, and the last
+two must byte-match the second independent-audit output.
