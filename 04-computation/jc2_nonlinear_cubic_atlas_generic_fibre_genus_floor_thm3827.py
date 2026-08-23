@@ -92,7 +92,7 @@ semantic = {
     "mechanism": "a nonconstant k gives a curve map; Riemann-Hurwitz excludes generic-fibre genus <=2",
     "intersection": "K[x,y] intersect K(g)=K[g] by a denominator-root valuation",
     "arm": "etale pullback makes p(g) squarefree and k nonconstant on every component",
-    "scope": "no universal polynomial Stein-factor existence claim; no JC counterexample",
+    "scope": "generative closed factor existence is CITED, not computational; no JC counterexample",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -103,6 +103,7 @@ print("closed_polynomial=K(g)_relatively_algebraically_closed_in_K(x,y)")
 print("obstruction=generic_fibre_genus_0_1_2_impossible")
 print("intersection=K[x,y]_intersect_K(g)=K[g]")
 print("boundary=p(g)_squarefree;each_arm_component_requires_nonconstant_k")
-print("scope=no_universal_Stein_factor_claim;no_JC_counterexample")
+print("stein_factor=existence_CITED_not_computational")
+print("scope=no_JC_counterexample")
 print(f"CHECKS={CHECKS}")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")

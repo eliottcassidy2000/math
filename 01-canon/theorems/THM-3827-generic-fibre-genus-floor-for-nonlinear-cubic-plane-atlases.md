@@ -3,14 +3,13 @@ id: THM-3827
 title: "Generic-fibre genus floor for nonlinear cubic plane atlases"
 status: >
   PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-  AUDIT.  Let h=p(g) be the pulled-back THM-3811 arm function, where g is
-  a closed polynomial: K(g) is relatively algebraically closed in K(x,y).
-  If a dominant etale plane atlas exists, the smooth projective geometric
-  generic fibre of g has genus at least three.  In genus three it must be
-  isomorphic to the explicit THM-3822 hyperelliptic sidecar after base
-  change.  The theorem assumes the displayed closed-polynomial factor; it
-  does not assert a universal polynomial Stein-factor theorem and does not
-  construct a Jacobian counterexample.
+  AUDIT.  For the generative closed-polynomial factor h=p(g) of the
+  pulled-back THM-3811 arm function, the smooth projective geometric generic
+  fibre of g has genus at least three.  In genus three it must be isomorphic
+  to the explicit THM-3822 hyperelliptic sidecar after base change.  Existence
+  and uniqueness up to affine change of g, and the equivalence with relative
+  algebraic closedness of K(g), are cited from Arzhantsev--Petravchuk rather
+  than reproved.  No Jacobian counterexample is constructed.
 source: jc_quartic_c3_construct / generic-fibre genus reframe, 2026-08-23
 audit: >
   SELF-AUDITED proof candidate.  The 15-gate exact companion verifies the
@@ -18,18 +17,21 @@ audit: >
   discriminant, stability under a nonconstant Stein composition, the
   genus-three count, every excluded Riemann--Hurwitz genus, and reduced-arm
   controls.  Normal and optimized replay agree with the frozen output.
-  Independent audit of the relative-constant-field and special-fibre
-  quantifiers is still required before promotion to PROVED.
+  Independent audit of the cited generative-factor import, the
+  relative-constant-field step, and the special-fibre quantifiers is still
+  required before promotion to PROVED.
 depends_on:
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
 related:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
+citation:
+  - "Arzhantsev--Petravchuk, Closed and Irreducible Polynomials in Several Variables, arXiv:math/0608157v2, Proposition 1, Lemma 3, and Corollary 1."
 script: 04-computation/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.py
 output: 05-knowledge/results/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.out
-script_sha256: 5e91767d38f4e7ff0f4f31b00293e61b1e9b5daee2af65482c25dd46f2c7cd31
-output_sha256: 662991a4bcdd2e59488253127ccb262f286b293be61b8896be7fb1902398759f
-semantic_sha256: fe01574799af6d0f72d21666698aaca59722261dbcbf8491ed758a6c0e196c7f
+script_sha256: 2099f48f0ce9130b148a16399bf68e5456d4c591ceb39616fdf1b503ea7d0e16
+output_sha256: e0834bf9c475c7efe931b99ec8ced249bd4171a376e52a87f8175e3391645dee
+semantic_sha256: c4d9e4cbbbf605b3e308ddabe61263070b1fc8bfdfb894fa9f826217f68eb38a
 hash_basis: raw LF bytes
 ---
 
@@ -180,14 +182,16 @@ V_U(h)=G_m,                                                     (15)
 and says that every irreducible component of the etale base change
 `V_A2(h)` carries `k` as a nonconstant unit.
 
-Assume the actual pulled-back polynomial admits a displayed factorization
+Arzhantsev--Petravchuk, Proposition 1 and Corollary 1, prove that the actual
+nonconstant pulled-back polynomial has a generative factorization
 
 ```text
 h=p(g)                                                          (16)
 ```
 
-with `g` closed in the precise sense `(3)`.  Then the genus `gamma` of the
-primitive generic fibre of `g` satisfies
+with `g` closed; this factor is unique up to affine change.  Their Lemma 3
+identifies closedness with the precise relative-field condition `(3)`.
+Therefore the genus `gamma` of the primitive generic fibre of `g` satisfies
 
 ```text
 gamma>=3.                                                       (17)
@@ -224,9 +228,9 @@ generic fibre must be geometrically isomorphic to the explicit
 hyperelliptic curve `(7)`.  If the map has degree `d>=2`, `(6)` already
 forces `gamma>=2d+1>=5`.
 
-The qualification in `(19)` is load-bearing.  This theorem does **not**
-prove that every polynomial `h` has a polynomial decomposition `h=p(g)`
-whose `g` satisfies `(3)`.  It applies whenever such a closed polynomial
-factor is supplied, including the important case that `h` itself is
-closed (`p(S)=S`).  No planar Jacobian counterexample is claimed.  **QED,
-subject to independent hostile audit.**
+The generative-polynomial existence and uniqueness used here are **CITED**,
+not reproved by the exact companion.  They make `(19)` unconditional for
+every dominant etale plane atlas over the stated field, while the function-
+field argument of Sections 1--4 is self-contained once `h=p(g)` and `(3)`
+are supplied.  No planar Jacobian counterexample is claimed.  **QED, subject
+to independent hostile audit.**
