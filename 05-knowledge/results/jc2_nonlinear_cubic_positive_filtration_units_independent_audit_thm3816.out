@@ -1,0 +1,8 @@
+audit=THM-3816-positive-filtration-units
+verdict=PASS_MATHEMATICS
+filtration=multiplicative_split_free
+generic_localization=irreducible_cubic_field
+eisenstein_scope=all_fields_k
+unit_inference=gr_domain_plus_F0_equals_k
+GATES=54
+semantic_sha256=6bbbca4096d6b1bdc387fbe57b973cba6f4a1b7dd97e1f018d2336888bd3bd8c
