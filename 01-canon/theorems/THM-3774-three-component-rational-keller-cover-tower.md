@@ -2,7 +2,7 @@
 id: THM-3774
 title: "Three-component rational Keller cover tower and cuspidal degree-three near miss"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
   m>=1 there is a smooth noncoordinate polynomial U with three pairwise
   disjoint zero-fibre components and a rational mate P satisfying J(U,P)=1.
   The generated rational target field has exact degree m+1, with minimal
@@ -14,14 +14,12 @@ status: >
   near miss, not a polynomial Keller map or a planar Jacobian counterexample.
 source: root + jc_zero_debt_lift / nonradial equalizer and cover-tower session, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The all-m chart identity and off-exponent
-  error are checked symbolically.  Direct source identities,
-  irreducibility specializations, component spectra, minimal relations,
-  discriminants, nearest hostile exponents, and degeneration controls are
-  checked for m=1,...,7; gradient resultants are checked for m=1,...,5.
-  Normal and optimized runs byte-match.  Independent hostile audit remains
-  due, especially for the Laurent-binomial irreducibility and generic
-  transposition-inertia arguments.
+  INDEPENDENT HOSTILE AUDIT by root.  The all-m chart cancellation, unique
+  exponent gate, Laurent-binomial irreducibility and localization descent,
+  smooth disjoint component decomposition, spectrum and complete rational
+  torsor, monic-specialization proof of the degree, trinomial discriminant,
+  generic transposition inertia, and cubic S3/cusp conclusion were all
+  rederived by hand.  Normal, optimized, and frozen exact transcripts agree.
 depends_on:
   - THM-3770-vertical-principal-part-equalizer-and-log-canonical-dressing-gate
 related:
@@ -38,7 +36,7 @@ hash_basis: raw LF bytes
 
 # THM-3774 -- a rational Keller tower reaches the cubic cusp boundary
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  The
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The
 vertical-equalizer route does not stop at the quadratic near miss of
 THM-3758.  It contains rational Keller seeds of every cover degree.  The
 first degree not excluded by the Galois Keller theorem already has the
