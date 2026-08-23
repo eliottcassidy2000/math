@@ -1,0 +1,13 @@
+theorem=THM-3812-nodal-arm-coefficient-second-normal-profile-nonentry
+surface=r^2e-z^3+c^3r;c_nonzero;field=algebraically_closed_characteristic_zero
+ansatz=A=e^2-z/(3c^3)+r*g(e)+z^2*f(e);C=e^3-e-ez/(2c^3)+r*h(e)+z^2*k(e)
+normal_form=free_k[r,e]_basis_1,z,z^2
+z_bucket=(3e^2-1)f-2ek=-1/(12c^6)
+r3_bucket=f*kprime-k*fprime=0
+contradiction=proportional_profiles_force_nonconstant_factor_to_be_a_unit
+scope=arm_dependent_r_z2_profiles_only;r_in_I3;rz_in_I4
+next=rz_profile_or_higher_canonical_coefficient
+bounded_sha256=694f774518b3b484f1ec5be22160b1d4e27f76eed03e555cab1ad0c1c613de26
+semantic_sha256=fa9ebcecfa1bdfc74b02412ae611a38810b261949c27c010ae742aded1f2e1d2
+CHECKS=26
+RESULT=PASS
