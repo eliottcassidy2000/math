@@ -28,9 +28,9 @@ audit: >
   expanded the full degenerate r^2z polynomial, obtained the impossible
   half-integral resonance m=5/2, and checked the generic root payment, origin
   jets, odd opposite-root seam, and root-of-unity contradiction.  The repaired
-  deterministic companion checks all of these gates without inactive Python
-  asserts; normal and optimized runs byte-match the frozen output and raw
-  hashes recorded below.
+  deterministic companion checks all of these in 72 active gates without
+  inactive Python asserts; normal and optimized runs byte-match the frozen
+  output and raw hashes recorded below.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3814-nodal-rz-kummer-profile-degree-gate

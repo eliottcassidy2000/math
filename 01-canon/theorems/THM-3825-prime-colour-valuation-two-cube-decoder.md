@@ -9,8 +9,14 @@ status: >
   Eisenstein cofactor.  One square test then recovers the coprime cube pair.
   Multiplication by an inert cube is the native scale law.  A 3-adic tag
   gives unordered and orientation-refined natural-number addresses for the
-  5,855 support-two ratios.  These are fixed label-order gauges, not LRC(14)
-  certificates; THM-3818's facet and residue packet remains RESERVED.
+  5,855 support-two ratios.  On those tagged atlases, squarehood reads an
+  exact label-parity/orientation bit on the unique square primitive address,
+  while triangularity cuts out 31 states in either gauge.  Those states are
+  fundamental points on two Pell sheets and never return to the pure-3
+  ordinate under a later positive Pell power.  These are fixed label-order
+  gauges, not LRC(14) certificates.  The separately proved
+  THM-3818 recovers arbitrary scale inside the finite atlas and adds the
+  selected facet, word, and residue-lattice packet.
 source: root + lrc_graver_address + cube_decoder_audit / incoming-signal extension session, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (cube_decoder_audit, 2026-08-23).  The audit
@@ -19,7 +25,18 @@ audit: >
   tag, and froze ramified-prime, split-scale, exponent-three, relabelling,
   and singleton-failure boundaries.  The assertion-free companion has
   2,066,834 active gates; normal and optimized raw LF streams match its
-  frozen transcript.
+  frozen transcript.  A separate assertion-free 1,382,012-gate classical-
+  number sidecar exhausts all 456,690 unordered and 913,380 oriented tags,
+  proves the square parity rules, finds the two exact 31-state triangular
+  censuses, and rewrites them as fundamental points on two Pell discriminant
+  sheets whose later positive powers exit the pure-3 ordinate.  It also finds
+  the unique triangular label-successor edge and checks that no tagged address
+  is square-triangular.  Normal and optimized runs byte-match its frozen
+  output.  An independent tag-sidecar audit (tag_sidecar_audit, 2026-08-23)
+  rebuilt the atlas with `sympy.factorint`, rescanned every tag with `gmpy2`,
+  verified all 31 fundamental solutions by an earlier-ordinate search, audited
+  the Lucas no-return proof and the negative-Pell successor, and found no scope
+  or transcript discrepancy.
 depends_on:
   - THM-463-two-cube-representations-are-a-divisor-property-on-the-split-axis
   - THM-3793-inert-prime-sum-all-scale-two-cube-singleton
@@ -30,6 +47,11 @@ script: 04-computation/two_cube_prime_colour_decoder_thm3825.py
 output: 05-knowledge/results/two_cube_prime_colour_decoder_thm3825.out
 script_sha256: a3e2a1950a2c684e55cbb2c15ff3f8ea90d2b7dad042a589c077dc6ef27e971e
 output_sha256: e002a15b000ad8bd00011da54ac5b1b5b4f18ffdca20f68af66f5e44970b9e8b
+tag_sidecar_script: 04-computation/lrc14_prime_colour_square_triangular_tags_thm3825.py
+tag_sidecar_output: 05-knowledge/results/lrc14_prime_colour_square_triangular_tags_thm3825.out
+tag_sidecar_script_sha256: e6e4f82e90a727b73ba9621f602eea03ab79bbe204303a372605b6c7525ecdc6
+tag_sidecar_output_sha256: 8386c3c30dd106cb7b7a70c6bfccf906e025dd01f422d5e3cb2cd37f40c25d49
+tag_sidecar_semantic_sha256: 57d484bf6f5e9c84ac174206bf48564c222e4646965c060bbbcdd540ade621db
 hash_basis: raw LF bytes
 ---
 
@@ -196,7 +218,124 @@ Thus the arithmetic address carries inert dilation exactly.  Dense ordinal
 successor and Stern--Brocot branching are different operations and are not
 asserted to descend through `(14)` or `(16)`.
 
-## 3. Sharp losses and the reserved larger packet
+### 2.1 Square and triangular behaviour of the label operation
+
+The incoming label construction itself has a classical-number signature.
+Every primitive base `m=a^3+b^3` in this atlas is 3-free.  THM-3818's
+independent classical-number sidecar proves that exactly one primitive base is
+a square:
+
+```text
+56^3+65^3=671^2.                                     (18a)
+```
+
+Consequently coprimality of `3` and `m` turns squarehood into an exact parity
+test.  Across all unordered tags `(14)`,
+
+```text
+A_un is square iff (a,b)=(56,65) and kappa is even,   (18b)
+```
+
+giving `39` square states.  Across the oriented tags `(16)`,
+
+```text
+A_or is square iff (a,b)=(56,65) and epsilon=0,       (18c)
+```
+
+giving `78` square states.  Thus, only on the unique square primitive fibre,
+ordinary squarehood reads the orientation bit from the oriented address.  It
+does not decode orientation on any other fibre.
+
+Triangularity behaves differently.  Exhaust the declared tag universes by the
+integer discriminant test
+
+```text
+3^ell m=T_N  iff  1+8*3^ell*m=(2N+1)^2.              (18d)
+```
+
+Split `ell=2r+eta`, with `eta in {0,1}`, and put
+`X=2N+1,Y=3^r`.  Then `(18d)` is exactly the two-sheet Pell equation
+
+```text
+X^2-8*3^eta*m Y^2=1,             Y=3^r.              (18e)
+```
+
+For the oriented tag, `(r,eta)=(kappa,epsilon)`: the orientation bit selects
+the discriminant `8m` or `24m`, while the coordinate label constrains the Pell
+`Y`-coordinate to a pure power of three.  For the unordered tag, the same
+split applies to the parity of its single label exponent.  This is an exact
+reframing of the finite scan, not a claim that the pure-3 solutions are closed
+under Pell multiplication.
+
+In fact, continued-fraction reduction proves that all `31` displayed points
+are the **fundamental** positive solutions on their respective Pell sheets.
+There is a general no-return reason.  Write their positive Pell powers as
+
+```text
+X_n+Y_n sqrt(D)=(X+Y sqrt(D))^n,
+Y_n=Y U_(n-1)(X),                                     (18f)
+```
+
+where `U_0=1,U_1=2X,U_(j+1)=2XU_j-U_(j-1)`.  For every `n>=2`, the factor
+`U_(n-1)(X)` is not a power of three:
+
+- if `n` is even, it is even;
+- if `n` is odd and `3|X`, it is `(-1)^((n-1)/2) mod 3`;
+- if `n` is odd, `3` divides neither `X` nor `n`, then
+  `X=+1` or `-1 mod 3` gives `U_(n-1)(X)=n mod 3`; and
+- in the remaining case `3|n`, the Lucas divisibility law makes
+  `U_2(X)=4X^2-1` divide `U_(n-1)(X)` (immediate from the factorization of
+  `(t^n-t^(-n))/(t-t^(-1))` when `3|n`).  If `U_2(X)` were a power of three,
+  its coprime factors `2X-1,2X+1` would be powers of three differing by two,
+  forcing `X=1`, whereas every displayed point has `X>1`.
+
+Because `Y` itself is a power of three, `(18f)` proves that no later positive
+Pell point has a pure-3 ordinate.  In particular the next one has
+`Y_2=2XY`, the immediate exit checked by the companion.  Thus the tag-selected
+triangular points are isolated in their fixed Pell cyclic groups, not a return
+suborbit.
+
+There are exactly `31` triangular unordered tags and exactly `31` triangular
+oriented tags.  In both scans the numerical exponent/base hits coincide and
+have exponent histogram
+
+```text
+ell:       0  1  2  3  4  5  6
+count:     8  9  7  3  1  2  1.                     (18g)
+```
+
+Exactly one numerical hit has its immediate label successor in the same
+triangular census:
+
+```text
+9^3+13^3=T_76,             3(9^3+13^3)=T_132.        (18h)
+```
+
+This is the fourth nontrivial point on the classical triangular-tripling
+torsor.  Indeed
+
+```text
+T_M=3T_N  iff  (2M+1)^2-3(2N+1)^2=-2,                (18i)
+```
+
+and `(M,N)=(132,76)` gives `265^2-3*153^2=-2`.  Multiplication by
+`2+sqrt(3)` generates the positive chain from `(5,3)`, corresponding to
+`(M,N)=(2,1)`.  The uniqueness in `(18h)` is only inside the finite tag
+atlas.  Its combinatorial meaning depends on gauge: `ell:0->1` moves from
+unordered label `kappa=0` to `kappa=1`, but on the oriented address it keeps
+`kappa=0` and flips `epsilon:0->1`.
+
+This equality of counts is not equality of labelled states: in `(14)` the
+exponent is `ell=kappa`, whereas in `(16)` it decodes as
+`kappa=floor(ell/2), epsilon=ell mod 2`.  The oriented triangular set splits
+`17/14` between `epsilon=0/1`.  The eight `ell=0` hits are precisely the
+primitive triangular cube addresses of THM-3818; the remaining 23 are created
+by the 3-adic label operation.  The full 31-row list is frozen in the sidecar
+output.  None of these tagged addresses is square.  These are
+**FINITE-EXACT** arithmetic subatlases, with no loneliness, arrival, or bad-row
+consequence.
+
+## 3. Sharp losses and relation to the larger packet
 
 The first orientation hostile is already
 
@@ -231,10 +370,15 @@ and the first failure with primitive exponent exactly three is
 515375=15^3+80^3=54^3+71^3,      shell 125=5^3.      (22)
 ```
 
-THM-3818 remains **RESERVED / UNPROVED**.  Even the oriented arithmetic tag
-does not reconstruct the ambient residue schedule, endpoint owner, root,
-phase, arrival, other eleven speeds, or a loneliness predicate.  No exposed
-facet or complete pair-sum covering theorem is smuggled into this result.
+THM-3818 is separately **PROVED**.  It uses finite cube-class separation to
+handle arbitrary positive common scale inside the atlas and, after a selected
+labelled placement, recovers the support-two covector, exposed facets,
+THM-778 word, and an exact ambient pair-sum-lattice covering test.  THM-3825
+instead gives a table-free factorization decoder under the stricter inert-scale
+hypothesis.  Even its oriented arithmetic tag does not reconstruct the
+off-lattice residue schedule, endpoint owner, root, phase, arrival, other
+eleven speeds, or a loneliness predicate.  Neither theorem excludes an
+LRC(14) row.
 
 ## 4. Exact verification
 
@@ -255,3 +399,13 @@ python3 -B -O 04-computation/two_cube_prime_colour_decoder_thm3825.py
 
 Both raw LF streams equal
 `05-knowledge/results/two_cube_prime_colour_decoder_thm3825.out`.
+
+The square/triangular tag sidecar is reproduced by
+
+```bash
+python3 -B 04-computation/lrc14_prime_colour_square_triangular_tags_thm3825.py
+python3 -B -O 04-computation/lrc14_prime_colour_square_triangular_tags_thm3825.py
+```
+
+Both streams equal
+`05-knowledge/results/lrc14_prime_colour_square_triangular_tags_thm3825.out`.

@@ -1,5 +1,59 @@
 # Script Results Index
 
+- `jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.py` ->
+  matching `.out` [THM-3827 PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  For a generative factorization `h=p(g)` of the pulled-back
+  arm function, the primitive generic fibre of `g` has genus at least three;
+  at genus three it is geometrically the explicit THM-3822 hyperelliptic
+  sidecar.  At least one of `h=0` and five fixed-slope pencil members is
+  reducible.  This narrows every surviving nonproper atlas but constructs none.
+  `CHECKS=22`.  Script/output/semantic SHA-256:
+  `82290ea8abca925913393c950e28dc920c20517ad8156a6aca5b74342efb3516` /
+  `f25dcb0dc688e67e8ce5b8e3e5eba71da7df5bc7290ffe2210fd07e4f5435450` /
+  `42bfbc4e18afc0ff86b28847525f1c9f5504331abdf1061f323c79b0d31043bd`.
+
+- `jc2_cubic_pseudoplane_three_term_sextic_r_repair_thm3826.py` -> matching
+  `.out` [THM-3826 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Every degree-six pure-`r` carrier with at most three nonzero monomials is
+  critical.  Four invariant remainder rows empty all 22 exact support cells;
+  an independent specialization-first audit found the same five
+  three-row survivors and their common fourth-row exit.  A genuine four-term
+  cell survives the four-row mechanism, so denser sextics remain open.
+  `CHECKS=320`.  Script/output/semantic SHA-256:
+  `e798664c9f4bba92f35631e50e533168f2c73803d269cc253a3ea6623853f688` /
+  `e8e1af9c950fcdebc88f4cdb6099fe499ad3fc2f1d761d476fb119de9d2c5cdb` /
+  `6a8d50a5a0019c7ac29597f69d4939588cdf77c20a469153000937b7a7367e6e`.
+
+- `two_cube_prime_colour_decoder_thm3825.py` -> matching `.out` [THM-3825
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Inert valuations
+  modulo three recover common inert scale and the primitive inert/cube-free
+  shell; split valuations and one square test recover the pair.  Its 78- and
+  156-channel 3-adic tags encode unordered and oriented labelled placements,
+  with explicit ramified, split-scale, exponent-three, and relabelling losses.
+  THM-3818 separately handles arbitrary scale inside the finite atlas and the
+  selected facet/residue packet.  `active_checks=2,066,834`.  Script/output
+  SHA-256:
+  `a3e2a1950a2c684e55cbb2c15ff3f8ea90d2b7dad042a589c077dc6ef27e971e` /
+  `e002a15b000ad8bd00011da54ac5b1b5b4f18ffdca20f68af66f5e44970b9e8b`.
+
+- `lrc14_prime_colour_square_triangular_tags_thm3825.py` -> matching `.out`
+  [THM-3825 FINITE-EXACT CLASSICAL-NUMBER TAG SIDECAR + VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED].
+  The unique square primitive base makes squarehood equivalent to even
+  unordered label exponent (39 states) or orientation bit zero (78 states).
+  Exactly 31 tags are triangular in either gauge, with 17/14 oriented-bit
+  split; the orientation bit selects Pell discriminant `8m` or `24m` and the
+  label forces a pure-3 Pell coordinate.  All 31 are fundamental Pell points;
+  a Lucas-factor argument excludes pure-3 ordinate at every later positive
+  power.  The unique triangular label-successor is
+  `T_76 -> 3T_76=T_132` on pair `(9,13)`, a point of
+  `X^2-3Y^2=-2`; it decodes differently in the two gauges.  No tag is
+  square-triangular and no LRC row is excluded.  `CHECKS=1,382,012`.
+  Script/output/semantic SHA-256:
+  `e6e4f82e90a727b73ba9621f602eea03ab79bbe204303a372605b6c7525ecdc6` /
+  `8386c3c30dd106cb7b7a70c6bfccf906e025dd01f422d5e3cb2cd37f40c25d49` /
+  `57d484bf6f5e9c84ac174206bf48564c222e4646965c060bbbcdd540ade621db`.
+
 - `jc2_nonlinear_cubic_compact_euler_thm3823.py` -> matching `.out`
   [THM-3823 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   The THM-3811 etale surface has `chi_c(U)=8`: its branch normalization has
@@ -15,18 +69,18 @@
   `6a93d704366b10d18382510a566f79e308d9ec390fafdb65e5ebac55e89aecae`.
 
 - `jc2_cubic_pseudoplane_rz2_odd_ladder_thm3821.py` -> matching `.out`
-  [THM-3821 PROVED NECESSARY CLASSIFICATION + VERIFIED-EXACT + INDEPENDENTLY
-  HOSTILE-AUDITED].  The first `rz^2` extension of THM-3814 forces either the
-  `7,5,3,1` Kummer ladder with a terminal Riccati square payment or the
-  `7,3,1` skip ladder with a linear payment.  The `S=0`, zero-terminal,
-  constant-parameter, and linear-parameter branches are empty, so the common
-  parameter has degree at least two; `T=0` remains possible through `mu=0`.
-  A post-candidate audit repaired the confluent `ord_0(v)=0` seam using the
-  full `r^2z` bucket.  Existence and the full `rz^2` no-go remain open.
-  `CHECKS=59`.  Script/output/semantic SHA-256:
-  `77532b0a60025c23ae49f7df1c60123fa9671de581472900ca6fb134d4777850` /
-  `0be46adc58708a0c5aa6debf57226da2083a288c571626135f9102c3ae930cdc` /
-  `547bea40c3cce8bc03a8d82f5bd96ffcd93313adcc654509317467ecfb2cb5f2`.
+  [THM-3821 PROVED COMPLETE FIRST-`rz^2` NO-GO + VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED].  The two forced Kummer ladders end in
+  square and linear payments.  The next `r^2z` bucket kills generic nonzero
+  roots directly and degenerate nonzero roots through the impossible
+  `m=5/2` resonance.  The remaining monomial towers fail by opposite-root,
+  origin-jet/root-ratio, and origin-payment gates.  The repaired endpoint
+  proof uses the full bucket at `ord_0(v)=0` and retains `T=0` through `mu=0`.
+  This closes only the stated eight-profile ansatz.  `CHECKS=72`.
+  Script/output/semantic SHA-256:
+  `a4567cd4bdd37df9a2db260d9c00e1275211ef1735690591a7511f458a269e18` /
+  `22eaf1a707edb91974c83c9f2c11a53f551468a1d3b805c2715ae79558910852` /
+  `f73ecf90a4c8fc5a77ce7471c54f8a6eccc0a4c542d7b95ca7fcd5b63fc3c4d7`.
 
 - `jc2_universal_euler_mod7_residual_quadratic_thm3820.py` -> matching `.out`
   [THM-3820 PROVED + VERIFIED-EXACT + TWICE INDEPENDENTLY HOSTILE-AUDITED].

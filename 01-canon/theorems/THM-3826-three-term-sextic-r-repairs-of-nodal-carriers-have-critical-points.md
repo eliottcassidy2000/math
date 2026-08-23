@@ -29,6 +29,15 @@ audit: >
   saturation, verifies the minimal killing-row table and every previous-row
   hostile survivor, includes a repeated-root control and a genuine four-term
   top-four survivor, and replays the finite-root critical reconstruction.
+  A second specialization-first cross-check (lrc_reversible_address plus
+  sextic_cell_crosscheck, 2026-08-23) independently recovered the same 22-cell
+  universe and the five first-three-row survivors
+  `{0},{3},{0,3},{1,3},{3,5}`; in each survivor row 28 forces `T=0`.  Its
+  census digest is
+  `c88a530caf6b16f552da5886bd86c1f01f3cdd5bb2814d843394442df6a4f4a8`.
+  The sharp `{3,5}` control
+  `g=e^3-(125/16)e^5-(125/16)e^6` kills rows 31--29 but has nonzero row 28,
+  confirming the minimal-row rather than merely final-ideal claim.
 depends_on:
   - THM-3820-universal-euler-mod-seven-residual-quadratic-discriminant
 related:

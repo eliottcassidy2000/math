@@ -1,0 +1,16 @@
+theorem=THM-3825-prime-colour-square-triangular-tag-sidecar
+universe=primitive_pairs:5855;unordered_channels:78;oriented_channels:156
+square_unordered=pair:(56,65);kappa_even;count=39
+square_oriented=pair:(56,65);epsilon=0;count=78
+triangular_shared_exponent_hits=(1,3;e=0;T_7);(2,3;e=1;T_14);(1,10;e=1;T_77);(2,9;e=1;T_66);(3,8;e=2;T_98);(9,13;e=0;T_76);(9,13;e=1;T_132);(5,18;e=5;T_1701);(10,13;e=1;T_138);(3,43;e=2;T_1196);(13,33;e=2;T_828);(8,45;e=1;T_741);(7,52;e=4;T_4778);(33,38;e=2;T_1278);(37,45;e=0;T_532);(39,46;e=1;T_969);(41,44;e=2;T_1665);(21,73;e=0;T_892);(37,63;e=0;T_775);(39,68;e=1;T_1497);(6,109;e=0;T_1609);(9,136;e=1;T_3885);(66,113;e=3;T_9666);(37,150;e=0;T_2617);(46,159;e=0;T_2869);(101,113;e=3;T_11556);(25,264;e=2;T_18206);(2,293;e=5;T_110565);(106,189;e=3;T_20709);(53,258;e=6;T_158921);(5,314;e=2;T_23606)
+triangular_counts=unordered:31;oriented:31
+triangular_exponent_histogram=0:8,1:9,2:7,3:3,4:1,5:2,6:1
+oriented_triangular_bits=epsilon0:17;epsilon1:14
+triangular_pell_sheets=X^2-8*3^epsilon*m*Y^2=1;Y=3^kappa
+triangular_pell_fundamental_hits=31;next_Y=2XY;pure3_returns_at_next_step=none
+triangular_label_successor=(9,13;e:0->1;T_76->T_132);count=1;negative_pell=265^2-3*153^2=-2
+square_triangular_tagged_addresses=none
+scope=finite_arithmetic_tag_sidecar_only;no_LRC14_row_excluded
+semantic_sha256=57d484bf6f5e9c84ac174206bf48564c222e4646965c060bbbcdd540ade621db
+CHECKS=1382012
+RESULT=PASS

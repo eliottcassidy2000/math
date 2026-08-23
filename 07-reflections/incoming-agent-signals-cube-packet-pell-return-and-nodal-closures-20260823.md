@@ -32,9 +32,20 @@ identifies the coefficient-free mod-seven residual double cover; and
 turns the nonlinear cubic atlas problem into a constrained polynomial `SL_2`
 completion with a punctured-arm obstruction.  The `rz^2` odd ladder in audited
 [THM-3821](../01-canon/theorems/THM-3821-cubic-pseudoplane-rz2-odd-ladder-terminal-riccati-gate.md)
-classifies its necessary top branches, while
+now closes the complete first extension, while
 [THM-3823](../01-canon/theorems/THM-3823-nonlinear-cubic-etale-surface-compact-euler-finite-atlas-obstruction.md)
 rules out finite and proper plane atlases of the nonlinear cubic surface.
+
+The newest incoming wave was treated as an operation prompt rather than a
+headline to repeat.  [THM-3825](../01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md)
+prompted an exact square/triangular audit of its 3-adic label operation;
+[THM-3826](../01-canon/theorems/THM-3826-three-term-sextic-r-repairs-of-nodal-carriers-have-critical-points.md)
+shifted the pure-`r` boundary from degree six to four-term sextics and was
+independently reconstructed cell by cell; and
+[THM-3827](../01-canon/theorems/THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases.md)
+turned the open nonproper-atlas lane into a genus-and-reducible-fibre
+passport.  These extensions changed the next questions without changing the
+status of either conjecture.
 
 The two conjectures remain open.  The gain is an exact operation ledger and one
 especially dense merged row, not a proof by analogy.
@@ -84,7 +95,7 @@ Seven concepts stayed live:
 6. standardized conductor modules versus actual branch rings; and
 7. polynomial nodal profiles, critical loci, and valuation gaps.
 
-The board changed in three important ways.
+The board changed in seven important ways.
 
 - Cube classes stopped being merely a scalar address once the common dilation
   action was included.  They recover scale **inside a separated finite atlas**.
@@ -93,10 +104,20 @@ The board changed in three important ways.
   operation column.
 - Square/triangular membership splits again at the cube atlas: pair-sum shells,
   cube-address values, and Pell return nodes are three different predicates.
+- The 3-adic label is a genuine arithmetic operation: squarehood becomes
+  parity on the unique square fibre, whereas triangularity produces a
+  separate 31-state finite subatlas in each label gauge.
 - The JC and LRC observers fail at different layers for the same structural
   reason: injectivity on a chosen section is not injectivity on the ambient
   object.  Evaluation forgets polynomial geometry; a selected pair forgets the
   other eleven runners and does not prove its own minimality.
+- The first `rz^2` row and all degree-six pure-`r` carriers with at most three
+  monomials are now closed.  The next local JC objects are a second `rz^j` row
+  and four-term sextic cells, not more tests of the eliminated profiles.
+- A surviving nonlinear-cubic plane atlas must now be nonproper, have
+  primitive generic-fibre genus at least three, and spend reducibility on one
+  of six fixed pencil members, in addition to its signed Euler debt and the
+  two-prime boundary requirement on every finite envelope.
 
 ## 3. THM-3818: the support-two address regains scale
 
@@ -153,6 +174,61 @@ The factorization `(p^3+q^3)=(p+q)(p^2-pq+q^2)` has coprime factors on this
 atlas, explaining why the unique square address requires two simultaneous
 square payments.  The eight triangular equalities are a finite census, not a
 Pell closure or a loneliness statistic.
+
+THM-3825 then supplied a new operation on the same bases: multiply by the
+3-adic label `3^kappa` for an unordered placement, or by
+`3^(2kappa+epsilon)` for an oriented one.  The exact
+[`lrc14_prime_colour_square_triangular_tags_thm3825.py`](../04-computation/lrc14_prime_colour_square_triangular_tags_thm3825.py)
+sidecar exhausts all `456,690` unordered and `913,380` oriented tags.  Because
+every base is 3-free, the unique square fibre turns multiplication into a
+parity decoder:
+
+```text
+unordered square  iff (p,q)=(56,65) and kappa is even: 39 states;
+oriented square   iff (p,q)=(56,65) and epsilon=0:     78 states.
+```
+
+Triangularity is not a parity law.  There are exactly `31` triangular states
+in either gauge, with numerical 3-adic exponent histogram
+`8,9,7,3,1,2,1` on exponents `0,...,6`.  Eight are the old primitive
+triangular addresses and 23 are created by labelling.  The identical counts
+hide different decoded states: the exponent means `kappa` in the unordered
+gauge but `(floor(ell/2),ell mod 2)` in the oriented gauge.  This is a useful
+warning that an arithmetic operation can preserve a value predicate while
+changing the combinatorial meaning of its digits.
+
+There is also a precise Pell reframe.  If `ell=2r+eta`, triangularity of
+`3^ell m` is equivalent, with `X=2N+1` and `Y=3^r`, to
+
+```text
+X^2-8*3^eta*mY^2=1.
+```
+
+For the oriented tag, `(r,eta)=(kappa,epsilon)`: orientation chooses the
+`8m`/`24m` discriminant sheet and the label requires a pure-3 `Y`-coordinate.
+All 31 hits are the fundamental positive points on their sheets.  Squaring the
+fundamental unit gives `Y_2=2XY`, so every one exits the pure-3 sidecar at the
+very next Pell step.  In fact `Y_n/Y=U_(n-1)(X)` and a parity/mod-3/Lucas-
+divisibility argument proves that `U_(n-1)(X)` is never a power of three for
+`n>=2`.  Thus no later positive group power returns either.  This is the sharp
+contrast with THM-3819: its selected Pell family is return-closed after a
+state-dependent cocycle, whereas the tag-selected triangular points are
+isolated by the pure-power sidecar.
+
+There is nevertheless one cross-sheet edge.  The pair `(9,13)` is the unique
+base in the finite census with consecutive exponents:
+
+```text
+9^3+13^3=T_76,             3T_76=T_132,
+265^2-3*153^2=-2.
+```
+
+The last equation is the negative-Pell torsor for `T_M=3T_N`, generated by
+`2+sqrt(3)`.  In the unordered gauge this multiplication moves to the next
+label pair; in the oriented gauge it flips the orientation bit on the same
+pair.  So fixed-sheet Pell multiplication has no return, while the external
+label operation has exactly one finite cross-sheet successor.  Conflating
+those operations would erase the main structure.
 
 Consequently
 
@@ -320,10 +396,10 @@ through different resultants.  A concurrent third derivation also reached the
 same boundary, so the useful signal was not another certificate: the quadratic
 mixed cell is saturated.
 
-The next JC work should therefore change a native operation or coefficient
-type.  The live lanes are nonconstant `z^2` profiles, cubic-and-higher mixed
-`r` profiles, poles, or interactions between already nontrivial factors.  The
-Pell evaluation cannot help with the missing polynomial geometry: replacing
+This first redirected JC work toward a changed native operation or coefficient
+type.  The later incoming wave closes two of those apparent exits, but the
+principle survives.  The Pell evaluation cannot help with the missing
+polynomial geometry: replacing
 `G_1=4z-3` by `5z-5` preserves the evaluated pair `(5,7)` but destroys the
 polynomial Pell identity.  This hostile is exactly why THM-3819 calls only the
 post-evaluation integer coordinate change lossless.
@@ -331,9 +407,9 @@ post-evaluation integer coordinate change lossless.
 ### 6.1 The second incoming wave
 
 THM-3817 removes one apparent next move: a pure-`r` profile of degree five is
-also critical.  The first unclosed pure-`r` degree is now six, and
-THM-3820 explains why its universal resultant has a much smaller arithmetic
-shadow than its expanded coefficients suggest.  After
+also critical.  Degree six is the first new row, and THM-3820 explains why its
+universal resultant has a much smaller arithmetic shadow than its expanded
+coefficients suggest.  After
 
 ```text
 G=e^3Y,             D=e^2(Y+Z),             t=e^7,
@@ -366,16 +442,21 @@ leaves a nonconstant unit on every plane-arm component.  This kills `h` as a
 coordinate, every `h=xy-1` standard big cell, the hyperbolic-unit first row,
 and the first Cohn row.  Nonstandard multi-ended arms remain open.
 
-THM-3821 tests the first `rz^2` extension of THM-3814.  Its audited
+THM-3821 closes the first `rz^2` extension of THM-3814.  Its audited
 normal-form descent forces a common Kummer parameter and either a generic
 `7,5,3,1` ladder ending in a Riccati square payment or a degenerate `7,3,1`
-ladder ending in a linear payment.  Constant and linear Kummer parameters are
-empty, so every survivor has degree at least two.  The hostile audit caught the
-confluent `ord_0(v)=0` seam: the `Pg` block can tie the alleged uniquely
-earliest forcing.  The full next `r^2z` bucket instead forces `R(0)=0`, exactly
-the divisibility needed for the same ladder.  The audit also retained the
-sharp `mu=0,T=0` boundary; only `S=0` is excluded.  This is now a proved
-necessary anatomy, not a complete no-go.
+ladder ending in a linear payment.  The hostile audit caught the confluent
+`ord_0(v)=0` seam: the `Pg` block can tie the alleged uniquely earliest
+forcing.  The full next `r^2z` bucket instead forces `R(0)=0`, exactly the
+divisibility needed for the same ladder; it also preserves the sharp
+`mu=0,T=0` boundary, since only `S=0` is excluded.  Continuing with that same
+bucket removes generic nonzero roots directly; in the degenerate branch, an
+apparent root address dies one order later at the impossible multiplicity
+`m=5/2`.  The remaining monomial towers fail by opposite-root and
+origin-jet/root-ratio gates in the generic branch, and by origin payment or the
+opposite-root odd-exponent gate in the degenerate branch.  The repaired
+72-gate result is therefore a complete no-go for this eight-profile ansatz,
+not for arbitrary pairs or a second `rz^j` row.
 
 THM-3823 adds a topological invoice to THM-3822's algebraic and arm invoices.
 The branch normalization is `P1` minus three points, four normalization values
@@ -392,19 +473,35 @@ at least two boundary primes.  This does not obstruct the nonproper dominant
 etale atlas needed by the open Jacobian lane, and it does not identify signed
 Euler debt with the separate unweighted divisorial debt.
 
-Two later reservations are useful only as route signals.
-[THM-3826](../01-canon/theorems/THM-3826-three-term-sextic-r-repairs-of-nodal-carriers-have-critical-points.md)
-asks for an exact support-cell census in the first pure sextic row, and
-[THM-3827](../01-canon/theorems/THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases.md)
-asks whether an explicit polynomial Stein factor turns THM-3822's genus-three
-sidecar into a generic-fibre floor.  Both remain **RESERVED / UNPROVED** here;
-neither is a dependency.
+THM-3826 has now promoted the exact support-cell census in the first pure
+sextic row.  On the cubic/seventh-power cover it saturates all `22` exact
+cells with at most two lower coefficients; the first four invariant remainder
+rows make every ideal `[1]`.  A separate specialization-first reconstruction
+found the same five survivors after rows 31--29,
+`{0},{3},{0,3},{1,3},{3,5}`, and row 28 forces `T=0` in all five.  The sharp
+`{3,5}` profile kills precisely the first three rows.  A genuine four-term
+cell `{0,1,4,6}` survives all four and only its next row is known to kill it,
+so the new boundary is four-term sextics rather than “degree six” wholesale.
 
-The live JC lanes are consequently more precise: pure `r` degree at least six,
-the degree-at-least-two terminal laws in the proved necessary `rz^2` ladder,
-nonconstant `z^2` profiles outside the closed canonical packets, and
-nonproper multi-ended `SL_2` arms capable of paying all three invoices.
-Another quadratic or quintic elimination would duplicate closed terrain.
+THM-3827 likewise promotes the generic-fibre reframe.  Write the pulled-back
+arm polynomial as its cited generative factorization `h=p(g)`.  The explicit
+degree-eight square sidecar yields a nonconstant map from the primitive generic
+fibre of `g` to a genus-three hyperelliptic curve; Riemann--Hurwitz forces genus
+at least three, with birational equality at genus three.  A second factorization
+of the same square proves that at least one of `h=0` and five fixed-slope pencil
+members is reducible.  Together with THM-3823, any surviving atlas is
+nonproper, has signed Euler-integral debt `8d-1`, has at least two boundary
+primes in every finite envelope, has primitive generic-fibre genus at least
+three for its generative closed coordinate `g`, and spends reducibility in
+that six-member packet.  This is an obstruction passport, not a construction
+or a proof of JC(2).
+
+The live JC lanes are consequently more precise: four-or-more-term sextics and
+degree at least seven in the pure-`r` lane, a second or higher `rz^j` layer,
+nonconstant `z^2` profiles outside the closed packets, and nonproper
+multi-ended `SL_2` arms capable of paying the full passport.  THM-3828 is only
+a reserved second-row namespace.  Another quadratic, quintic, or first-`rz^2`
+elimination would duplicate closed terrain.
 
 ## 7. Khinchin content after the extension
 
@@ -416,9 +513,14 @@ that separation.
   scale/facet/word packet and an exact residue-cover sidecar.
 - The ordered-word lane advances: the Pell selector has a first-return cocycle
   and a Möbius semiconjugacy on its exact maximum.
+- The prime-colour lane advances arithmetically: 3-adic label valuation can
+  expose square parity and finite triangular hits.  Those valuations are
+  address digits, not continued-fraction digits or a metric law.
 - The metric digit-content lane does not advance.  The silver/Pell word is a
-  deterministic quadratic orbit, not typical continued-fraction data, and no
-  almost-everywhere scalar recovers the return, carry, or owner packets.
+  deterministic quadratic orbit, and the new triangular-tripling edge is a
+  second deterministic quadratic orbit for `sqrt(3)`.  Neither is typical
+  continued-fraction data, and no almost-everywhere scalar recovers the return,
+  carry, or owner packets.
 
 Thus “Khinchin content” remains plural.  The geometry-of-numbers theorem
 produces a short relation; the continued-fraction word decodes a selected
@@ -430,6 +532,7 @@ pair; only the ambient residue sidecar tests a target LRC phase.
 |---|---|---|---|---|
 | finite primitive pair | rational cube class | ratio inside the 5,855-row atlas | physical scale | include cube dilation; test all rational-cube collisions |
 | inert cube atlas | square/triangular tests | exact shell and address subatlases | arrival, owner, and Pell-return membership | separate sum shells from address values; exhaustive discriminant scan |
+| 3-free cube base | multiply by `3^kappa` or `3^(2kappa+epsilon)` | square parity; 31 isolated fundamental Pell points; unique `(9,13)` cross-sheet successor | gauge-independent labels, arrival, and global successor closure | decode exponent in the chosen gauge; keep fixed-sheet Pell powers separate from label multiplication |
 | cube class plus physical address | `(g,p,q)` decoder | common dilation | representations outside atlas | taxicab hostile |
 | selected support-two relation | covector/facets and THM-778 word | first chosen width, pair clocks, ties | other runners, off-lattice phase | eleven residues modulo `g(p+q)` |
 | canonical polynomial Pell tower | evaluated `(g,h)` then `(x,q)` | index, norms, recurrences | polynomial profile, roots, critical resultant | retain full `G_n,H_n,psi_n`; perturb inside evaluation kernel |
@@ -438,9 +541,12 @@ pair; only the ambient residue sidecar tests a target LRC phase.
 | marked Pell channel | LRC scalar maximum | exact Möbius half-step | speeds, residues, carries, owner | full prefix/carry packet plus channel bit |
 | inert merged row `(5,29)` | pair-sum lattice | 29-class safe set | off-lattice witness and global arrival | cover by eleven labelled danger sets |
 | nodal coefficient ansatz | root valuations/resultants | nonexistence in stated profile | larger coefficient support | change coefficient type before enlarging elimination |
+| first `rz^2` profile | odd Kummer ladder then full `r^2z` bucket | complete no-go for its eight profiles | second `rz^j` layer and arbitrary mates | retain endpoint bucket, integral multiplicity, and origin jets |
+| sparse sextic support | cubic/seventh-power cover and four remainder rows | all 22 support-`<=3` cells | four-term and denser cells | top-five census on every four-term torus cell |
 | source quadratic sheets | mod-seven residual values | discriminant factor `R W^2` | source label on `W=0` | retain collision slope `W`; audit degree-drop divisors |
 | nonlinear cubic atlas | intrinsic polynomial `SL_2` row | determinant and cubic lift laws | coverage/properness at punctured arms | genus-three square sidecar plus every arm component |
 | nonlinear cubic surface | compact Euler integration | finite/proper atlas obstruction and signed debt `8d-1` | location and positivity of escaping sheets | finite-envelope boundary primes plus an explicit nonproperness passport |
+| generative factor `h=p(g)` | primitive generic fibre | genus `>=3` and reducibility among six pencil members | an atlas construction and second-row solution | build or exclude a nonproper high-genus passport |
 
 ## 9. Hostiles that set the exact boundary
 
@@ -457,10 +563,18 @@ pair; only the ambient residue sidecar tests a target LRC phase.
   though their standardized defect modules form an append staircase.
 - `M({1,2})=M({1,2,5})=1/3` shows that the scalar optimum does not determine a
   carry or owner packet.
+- A triangular value `3^ell(p^3+q^3)` decodes `ell` as an unordered label in
+  one gauge and as label-plus-orientation in the other.  Equality of the two
+  31-state counts does not identify the labelled states.
+- At `ord_0(v)=0`, the `Pg` block ties the old THM-3821 leading-order forcing;
+  only the full `r^2z` bucket supplies the missing divisibility.  Endpoint
+  valuations cannot be inherited from a positive-order stratum.
+- The exact four-term sextic cell `{0,1,4,6}` survives all four rows that kill
+  every support-`<=3` cell.  Sparse saturation does not extrapolate by density.
 
 ## 10. New research moves and next pulls
 
-Three reusable ideas survived.
+Five reusable ideas survived.
 
 1. **Separated quotient plus compatible scale action can become a decoder.**
    A quotient invariant is not automatically lossy: if its primitive classes
@@ -474,6 +588,15 @@ Three reusable ideas survived.
    the selected section; then ask whether selection itself and the ambient
    object are recoverable.  THM-3818's minimality repair and THM-3819's
    evaluation repair are the two independent warnings.
+4. **Treat an incoming theorem as a boundary map.**  Extract its native
+   operation, sharp hostile, and first unproved adjacent cell.  The productive
+   extensions here were label multiplication after THM-3825, four-term support
+   after THM-3826, and a full atlas passport after THM-3827—not new proofs of
+   their already closed cores.
+5. **Type arithmetic digits by gauge.**  The same exponent can mean an
+   unordered label or a label-plus-orientation pair.  A numerical predicate
+   surviving the encoding does not imply that its decoded combinatorial state
+   survives.
 
 The cheapest high-value next tests are:
 
@@ -481,10 +604,17 @@ The cheapest high-value next tests are:
   test whether eleven danger residues can cover its explicit 29-class safe set;
 - if that cover succeeds, search continuously between adjacent `1/34` phases
   before claiming a bad row;
-- on the JC side, move directly to a nonconstant `z^2` profile or a cubic mixed
-  profile, THM-3826's still-reserved sextic census, or THM-3821's degree-at-least-two
-  terminal laws, and retain the full polynomial tower—evaluation at `z=2` is
-  only a hostile control;
+- on the local JC side, run a top-five invariant census over all genuine
+  four-term sextic cells, or enter THM-3828's second `rz^j` row without using
+  its empty reservation as a result; retain the full polynomial tower—
+  evaluation at `z=2` is only a hostile control;
+- on the global JC side, combine the `SL_2` lift laws, genus-three sidecar,
+  six-member reducible-fibre packet, and Euler/boundary debt into one explicit
+  nonproper-atlas feasibility system;
+- follow the negative-Pell chain `T_M=3T_N` and test when `T_N=a^3+b^3` has
+  inert/cube-free primitive sum; `(9,13;76,132)` is unique only in the
+  `a+b<=356` atlas, so an extended cap is the cheapest probe before seeking an
+  infinite intersection or finiteness theorem;
 - test whether the variable return cocycle acts on any owner-labelled Pell
   prefix packet beyond the scalar maximum; equality of maxima is not enough;
 - look for other finite atlases where a power-class quotient and a native
@@ -492,6 +622,7 @@ The cheapest high-value next tests are:
   out-of-atlas collision probe.
 
 No current result excludes an LRC(14) row or constructs a planar Keller
-counterexample.  The precise advance is a better packet, a lawful return
-operation, two audited scope repairs, an audited necessary `rz^2` anatomy, a
-finite-atlas obstruction, and one concrete 29-residue next target.
+counterexample.  The precise advance is a better cube/facet packet, a lawful
+Pell return operation, an exact square/triangular label subatlas, a repaired
+complete first-`rz^2` no-go, a sparse-sextic boundary, a genus/Euler atlas
+passport, and one concrete 29-residue next target.

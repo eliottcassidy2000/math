@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-452 (2026-08-23, concurrent THM-3825/3818 promotion) -- a related theorem's reservation status went stale
+
+- **What failed:** THM-3825 was promoted while THM-3818 was still an empty
+  reservation and correctly described its facet/residue packet as unproved.
+  A concurrent session then proved and audited THM-3818, but the old status
+  sentence survived the merge and falsely continued to call it
+  `RESERVED / UNPROVED`.
+- **First failed implication / repair:** a theorem file's mathematical proof
+  can remain valid while its prose about a related live namespace becomes
+  false.  THM-3825 now states the exact division of labour: it is the
+  table-free factorization decoder under inert common scale; proved THM-3818
+  handles arbitrary scale inside the finite atlas and recovers the selected
+  facet/word plus pair-sum-lattice packet.  Neither proves LRC(14).
+- **Reusable rule:** after rebasing concurrent promotions, audit every explicit
+  status word about linked theorems, not just dependency IDs and proof text.
+  `related` claims are temporally live even when the current theorem's algebra
+  is unchanged.
+
 ## MISTAKE-451 (2026-08-23, THM-3821 candidate audit) -- a generic valuation match was extended across a confluent endpoint
 
 - **What failed:** the provisional `rz^2` ladder proof asserted
@@ -22,8 +40,10 @@ Format per entry:
   remains valid.  At multiplicity zero the full next bucket gives
   `[r^2z]|_(e=0)=-5 delta R(0)/(14 alpha)`, hence `e|R`; together with the
   nonzero-root valuations this still proves `R=evU`.  THM-3821 now says
-  exactly that `S` is nonzero and promotes the repaired 59-gate necessary
-  classification.
+  exactly that `S` is nonzero.  The later all-degree `r^2z` calculation then
+  excludes the generic and degenerate towers, so the merged repaired
+  72-gate theorem is a complete no-go for the stated first-`rz^2` ansatz,
+  not merely a necessary classification.
 - **Reusable rule:** a leading-order comparison proved on a positive-order
   stratum must be recomputed when that order becomes zero; later blocks can
   tie exactly at a confluent endpoint.  Also test proportionality constants

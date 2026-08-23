@@ -63,7 +63,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   decode the `5,855` inert ratios and inert scales without a table;
   [THM-3818](../01-canon/theorems/THM-3818-scaled-inert-cubeclass-support-two-pair-packet.md)
   handles arbitrary scale inside the atlas and restores selected facets/word
-  plus a lattice cover. Off-lattice arrival and row exclusion remain open.
+  plus a lattice cover.  THM-3825's tags have square parity, 31 isolated Pell
+  points and one tripling edge, all arithmetic only.  Off-lattice arrival and
+  row exclusion remain open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
@@ -355,10 +357,12 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
   `U=Spec S[A/D,omega/D]` with `U*=k*` and `Pic(U)=Z^2`; THM-3816 gives an
   independent positive-filtration proof of `S*=k*`.  The Picard group rules
   out both `U=A2` and the THM-3785 pseudo-plane. THM-3817 proves pure `r<=5`;
-  THM-3814 closes all-degree `rz`. OPEN: nonproper atlases past THM-3822
-  (THM-3823 excludes finite/proper); pure `r>=6` (THM-3820 is structural),
-  mixed `>=3`/nonconstant `h`, solutions past THM-3821's necessary `rz^2`
-  ladder, poles, unrestricted pairs and `JC/DC(2)`.
+  THM-3814/3821 close all-degree `rz`/the first `rz^2`; THM-3826 closes pure
+  sextic support `<=3` (THM-3820 is structural).  Over `C`, THM-3823 excludes
+  finite/proper atlases; THM-3827 forces the generative coordinate's primitive
+  generic-fibre genus `>=3` plus reducibility among six pencil fibres.  OPEN:
+  nonproper atlases paying that passport, denser sextics/degree `>=7`, higher
+  `rz^j`, mixed `>=3`/nonconstant `h`, poles, unrestricted pairs and `JC/DC(2)`.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692
@@ -370,10 +374,10 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
   THM-3167/3172 retain diagonal/field/owner gates. THM-3212--3437 close named
   `B,C,E`, clutch, transport, sparse, character, Prüfer, and Artin-jet lanes,
   but no section/transfer; THM-3306 sidecars are FINITE-EXACT only.
-  Surface chain: PROVED pure `r<=5`, constant-`z^2` mixed `deg(g)<=2`,
-  arbitrary-arm pair no-go, and all-degree exact `rz`-profile no-go. OPEN pure
-  `r>=6`, mixed `>=3`/nonconstant `h`, `rz^2`/higher slots, arbitrary mates and
-  off-nodal branches; THM-3820 is structural, THM-3821 necessary anatomy only.
+  Surface chain: PROVED pure `r<=5`, sparse sextic support `<=3`, constant-
+  `z^2` mixed `deg(g)<=2`, arbitrary-arm pair no-go, all-degree `rz`, and first
+  `rz^2`.  OPEN denser sextics/degree `>=7`, mixed/nonconstant `h`, higher
+  `rz^j`, arbitrary mates and off-nodal branches; THM-3828 is only reserved.
 - **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
   all `2665` residuals in `7395` rows (`2384` divisor, `281` rho).
   `d=6518` needs `p=29`, refuting `p<=23`. FINITE-EXACT at `d=10001`:
