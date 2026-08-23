@@ -20,8 +20,10 @@ audit: >
   two-place normalization of the collision conic.  The companion verifies the complete
   vertical and nonvertical coefficient ideals, the symplectic rescaling,
   the residual factorization, the unique second-line parameter, the
-  infinity packet, and the smooth collision conic.  Normal and optimized
-  runs byte-match the frozen 39-gate transcript and both hashes.
+  infinity packet, and the smooth collision conic.  A distinct 78-gate
+  checker exhausts both line charts in different elimination orders and
+  independently rebuilds the vertical companions and hostile infinity
+  rows.  Normal and optimized runs byte-match both frozen transcripts.
 related:
   - THM-3847-two-place-cubic-deformation-monogenic-unit-debt
   - THM-3850-nonconstant-cubic-profile-irreducible-branch-puncture-formula
@@ -30,6 +32,11 @@ output: 05-knowledge/results/jc2_affine_two_variable_profile_line_companion_thm3
 script_sha256: e926174d1592121d758b0f54e88ee2d49cdf27149f1d7eb012f1ce86a67558f0
 output_sha256: 69002904c2d33d5d0979deefab8640c4dc16b08dddf9eb6a7fb37df30c4036c0
 semantic_sha256: 49dd5f040d11c421e395851164f3cf0a5974e460bdd00ce6df824d78ce662a02
+independent_audit_script: 04-computation/jc2_affine_two_variable_profile_line_companion_independent_audit_thm3852.py
+independent_audit_output: 05-knowledge/results/jc2_affine_two_variable_profile_line_companion_independent_audit_thm3852.out
+independent_audit_script_sha256: 60aae5129c08e16ab5d73946410211d665f4f76e99ec2ded2dcc145e9d7d0d91
+independent_audit_output_sha256: 825f6a747152246e19fda1a3608c9a9160ff05f5252e0f9d8e012aac07531b2e
+independent_audit_semantic_sha256: e41fc0f184f55d8ceb0c88cf05fa8efaa97080127cae4e9b2bb3548c0e552436
 hash_basis: raw LF bytes
 ---
 
@@ -311,10 +318,17 @@ Run
 ```bash
 python3 04-computation/jc2_affine_two_variable_profile_line_companion_thm3852.py
 python3 -O 04-computation/jc2_affine_two_variable_profile_line_companion_thm3852.py
+python3 04-computation/jc2_affine_two_variable_profile_line_companion_independent_audit_thm3852.py
+python3 -O 04-computation/jc2_affine_two_variable_profile_line_companion_independent_audit_thm3852.py
 ```
 
 Both commands must byte-match
 `05-knowledge/results/jc2_affine_two_variable_profile_line_companion_thm3852.out`.
 The assertion-free companion performs 39 exact gates, including equality of
 both coefficient ideals rather than only testing the displayed solutions.
-The raw-LF SHA-256 hashes are recorded in the metadata.
+The independent assertion-free companion performs 78 gates in different
+elimination orders, reconstructs the `tau=0` localization and vertical
+boundary without THM-3850, and explicitly preserves two infinity supports
+at `tau=-4/27` and `tau=1/54`.  Normal and optimized runs of both companions
+byte-match their frozen outputs.  The raw-LF SHA-256 hashes are recorded in
+the metadata.

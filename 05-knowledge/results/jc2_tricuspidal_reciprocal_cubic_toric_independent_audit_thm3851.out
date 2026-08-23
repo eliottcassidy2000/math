@@ -1,0 +1,15 @@
+THM3851_TORIC_BRIDGE_INDEPENDENT_AUDIT PASS
+FOURIER D(A+wB+w2C,A+w2B+wC,(A+B+C)/3)=9Delta_3;map invertible
+PARAMETER q=w2(p+w)/(p+w2) identifies the promoted normalization with (2q+q^-2,q^2+2q^-1)
+DISCRIMINANT disc(T^3-UT^2+VT-1)=D(U,V,1) by Sylvester determinant
+ROOT_SHEET k[U,V,T]/(f)=k[U,T,T^-1];finite free rank 3;T is a nonconstant unit
+DIFFERENT source Jacobian equals -f_T/T
+BRANCH normalization q->(2q+q^-2,q^2+2q^-1) is injective Gm;ramified only at q^3=1
+PLACES projective closure adds q=0 and q=infinity at two distinct smooth points
+ORDERED_ROOTS (x,y,(xy)^-1) in Gm^2;Vandermonde^2=D;log Jacobian=-Vandermonde
+QUOTIENT standard invariant-ring lemma gives Gm^2/S3=A2 and Gm^2/A3=(W^2=D)
+QUASI_ETALE A3 fixed locus consists of the three triple-root points
+OBSTRUCTION explicit root sheet and ordered-root cover are unit-rich, so neither admits a dominant A2 atlas
+SCOPE one explicit cyclic Kummer direction;no plane S3 completion,no Keller pair,no JC conclusion
+GATES 48
+SEMANTIC_SHA256 614126e3142de944089d842d7e4ac48c88242b570a899157e172b23a2f54f136

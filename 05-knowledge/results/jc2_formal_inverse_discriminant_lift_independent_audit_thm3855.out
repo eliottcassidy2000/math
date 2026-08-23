@@ -1,0 +1,12 @@
+THM3855_HOSTILE_AUDIT PASS
+GRADIENT_DETERMINANT 640000 =2^10*5^4
+FORMAL_SURJECTIVITY R_(n-3)^4 -> R_n full row rank for every n>=3
+INDEPENDENT_RECURSION RREF-pivot path; one-place through degree 12
+DENSE_TARGET_CONTROL all monomials in every degree 5..9
+SHARP_BOUNDARY fixed linear part cannot alter degree 4; corrections start degree 2
+ONE_PLACE_NORMALIZATION k[t], deg(A)=5, deg(C)=4, one point at infinity
+FORMAL_BRANCHES four distinct smooth height-one factors, each valuation 1
+ORDER_GATES finite-free S2 + DVR maximality; local special fibre; no unit index value
+EXCEPTIONS lambda=0 excluded; characteristics 2 and 5 excluded; polynomial termination open
+SEMANTIC_SHA256 586228efe890015d8d3e0d99eebf9996db0539033da109538a8ef95f9b374dc1
+GATES 173

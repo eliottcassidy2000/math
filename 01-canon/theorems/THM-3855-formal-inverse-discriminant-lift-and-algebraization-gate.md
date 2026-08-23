@@ -28,16 +28,28 @@ audit: >
   parametrization, all height-one index-zero normality cases, henselian
   connectedness, the nonsquare/S3 step, and the index nonunit gate.  Normal
   and optimized runs byte-match the frozen 99-gate transcript and both
-  recorded hashes.
+  recorded hashes.  A second independent 173-gate audit
+  (thm3855_hostile_audit) builds
+  every homogeneous coefficient multiplication map, solves independent RREF
+  pivot minors, lifts both the one-place target and a dense all-monomial
+  target, and rechecks normalization, branch, index, normality, connectedness
+  and S3 gates.  Together they isolate lambda=0, target order four,
+  characteristics 2 and 5, and finite termination as the genuine boundaries.
+  THM-3855 proves no arbitrary finite-degree coefficient obstruction;
+  THM-3853 supplies only the quadratic-depth exclusion.
 depends_on:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
-related:
   - THM-3853-quadratic-depth-inverse-discriminant-one-place-gluing-obstruction
 script: 04-computation/jc2_formal_inverse_discriminant_lift_thm3855.py
 output: 05-knowledge/results/jc2_formal_inverse_discriminant_lift_thm3855.out
 script_sha256: 79be066d6e7ddd459ce3d7d3e9d81c041cbf0804561013691a73aed27c546874
 output_sha256: bcbff3d657957c1e2e242621388618ccb2d9734308a1535e6a47f07b9803fc99
 semantic_sha256: d8ba779da7618b29472ca255bb717a3a2c833559223d41e0404360aa47eb2b6e
+independent_audit_script: 04-computation/jc2_formal_inverse_discriminant_lift_independent_audit_thm3855.py
+independent_audit_output: 05-knowledge/results/jc2_formal_inverse_discriminant_lift_independent_audit_thm3855.out
+independent_audit_script_sha256: ff37c33f6d1417184399e669adc3e25f90561d75b1af4f4288a1badade2dc216
+independent_audit_output_sha256: 1d5b355e7576b8376a276747b29c1bb2074f6ac5690e812e6c5d1ed80c7ebe21
+independent_audit_semantic_sha256: 586228efe890015d8d3e0d99eebf9996db0539033da109538a8ef95f9b374dc1
 hash_basis: raw LF bytes
 ---
 
@@ -102,7 +114,7 @@ In particular, for every `lambda in k*`, the irreducible one-place target
 delta_lambda=Delta_0+lambda C^5                                 (6)
 ```
 
-from THM-3853 has an exact formal binary-cubic lift with fixed linear part.
+has an exact formal binary-cubic lift with fixed linear part.
 The Delone--Faddeev algebra of the specific row `(4c)` over `Rhat` is a
 connected normal rank-three domain, is globally nonmonogenic over `Rhat`,
 and has generic Galois closure `S3`.  It is the completed THM-3808 algebra
@@ -129,11 +141,11 @@ parametrization has only `t=infinity` on its projective completion.  Thus
 infinity.  Its degree-four tangent cone is exactly the four distinct lines
 in `(4)`.
 
-This does **not** produce a polynomial cubic over `k[A,C]`.  THM-3853 proves
-that a lift consisting only of `(3)` plus homogeneous quadratic corrections
-does not exist.  Corrections of degree at least three, finite termination,
-the unit group of a global deleted-ramification open, and any planar Keller
-map remain open.
+This does **not** produce a polynomial cubic over `k[A,C]`.  THM-3853's
+independently audited saturated computation excludes a lift consisting only
+of `(3)` plus homogeneous quadratic corrections.  Finite termination from
+degree three onward, the unit group of a global deleted-ramification open,
+and any planar Keller map remain open.
 
 ## 1. The base Jacobian is a cubic complete intersection
 
@@ -371,8 +383,8 @@ generic S3 monodromy.                                           (17)
 ```
 
 The missing implication is algebraization.  A finite polynomial row would
-have to realize `(6)` exactly while retaining `(15)`; THM-3853 excludes only
-maximum coefficient degree two.  Degree-three and interacting higher-degree
+have to realize `(6)` exactly while retaining `(15)`.  THM-3853 excludes
+maximum coefficient degree two; degree-three and interacting higher-degree
 rows are the first live search.  Even after such a row is found, its maximal
 etale open must still have only scalar units and admit the required plane
 atlas.  Thus `(5)` is a positive local existence theorem and a sharp
@@ -383,6 +395,13 @@ Reproduction:
 ```bash
 python3 04-computation/jc2_formal_inverse_discriminant_lift_thm3855.py
 python3 -O 04-computation/jc2_formal_inverse_discriminant_lift_thm3855.py
+python3 04-computation/jc2_formal_inverse_discriminant_lift_independent_audit_thm3855.py
+python3 -O 04-computation/jc2_formal_inverse_discriminant_lift_independent_audit_thm3855.py
 ```
 
-Both modes byte-match the frozen 99-gate transcript.  **QED.**
+The primary modes byte-match the strengthened frozen 99-gate transcript.
+The independent 173-gate RREF recursion lifts the target through degree twelve and
+a dense target through degree nine, while independently recovering every
+formal-order gate above.  Its normal and optimized runs byte-match its
+frozen output.  The separate hostile audit of the right-equivalence extension
+also passes.  **QED.**

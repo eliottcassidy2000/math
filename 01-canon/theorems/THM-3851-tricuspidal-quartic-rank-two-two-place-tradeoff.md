@@ -22,17 +22,39 @@ audit: >
   the uniform E7 quotient, local rank-two map, deck anti-action, and Kummer
   identification.  It also verified that the Jelonek conclusion in Section
   6 remains explicitly conditional on a deleted ramification completion.
-  Normal and optimized runs byte-match the frozen 763-gate transcript.
+  Normal and optimized runs byte-match the frozen 763-gate transcript.  A
+  second independent audit identifies the exact reciprocal-cubic and
+  ordered-root torus completion.  Its 48-gate companion verifies the
+  Fourier and normalization changes, Sylvester discriminant, Laurent source,
+  different, branch injectivity, two missing places, Vandermonde square and
+  quotient diagram.  It corrects the scope: the ordinary toric S3 closure
+  exists, but it is unit-rich and is not the desired plane completion.
 depends_on:
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
 related:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3844-two-cusp-polynomial-branch-quadratic-resolvent-design-gate
+  - THM-3847-two-place-cubic-deformation-monogenic-unit-debt
 script: 04-computation/jc2_tricuspidal_quartic_rank_two_two_place_thm3851.py
 output: 05-knowledge/results/jc2_tricuspidal_quartic_rank_two_two_place_thm3851.out
 script_sha256: 2023e45b5e63bb3447347c0e78ffe134224b23ea4df0114b18a453722b880c10
 output_sha256: b3574cd466e4c2d635a852493d7a021f0ef3b5b6ef9666fb1e42e02f459e3ff6
 semantic_sha256: 5b5e5e17390dbd80042a334cf1f53d04fd548ec80520b4fc806a900d87874d2c
+toric_extension_script: 04-computation/jc2_tricuspidal_reciprocal_cubic_toric_extension_thm3851.py
+toric_extension_output: 05-knowledge/results/jc2_tricuspidal_reciprocal_cubic_toric_extension_thm3851.out
+toric_extension_script_sha256: 62b297e196fd56934e57c985e4cdedd861e1508b3f901e85c29972c60abc7cfd
+toric_extension_output_sha256: aaf9bf047eb068d3a1a814e2be9d862fe16e5d8e69ba73b3665389135cf7309c
+toric_extension_semantic_sha256: 3d1406b37d55dbb02630abd1de69a2c0175c936a44609d5471bb555196b8ad5f
+toric_independent_audit_script: 04-computation/jc2_tricuspidal_reciprocal_cubic_toric_independent_audit_thm3851.py
+toric_independent_audit_output: 05-knowledge/results/jc2_tricuspidal_reciprocal_cubic_toric_independent_audit_thm3851.out
+toric_independent_audit_script_sha256: 820ac69c385ff8a8a953cd7abf0541a44a1d7d35bc8b6fe48ec8743e8b82090c
+toric_independent_audit_output_sha256: 6e7b2b6aa67c994ba19cbb873a40bde93300581300fc7e339825391478bcfaf1
+toric_independent_audit_semantic_sha256: 614126e3142de944089d842d7e4ac48c88242b570a899157e172b23a2f54f136
+fixed_product_extension_script: 04-computation/jc2_fixed_nonzero_product_marked_root_extension_thm3851.py
+fixed_product_extension_output: 05-knowledge/results/jc2_fixed_nonzero_product_marked_root_extension_thm3851.out
+fixed_product_extension_script_sha256: ef681020058547340afd9e6bed8434b71e10ab4ca435d36e2f43b059213f0870
+fixed_product_extension_output_sha256: b33d145b2c65cc378622388b146cc3e1301d7b509574892b5b67ce86032c48ec
+fixed_product_extension_semantic_sha256: b40b22611b39e328749e52952b4e6eebe4f0543b69e4ee67d9975cf36f783780
 hash_basis: raw LF bytes
 ---
 
@@ -377,13 +399,159 @@ claim that `(4)` alone is such a cubic completion, nor that every rank-two
 torsion branch has two places.  It isolates the exact obstruction in the
 smallest quartic where the desired second torsion direction appears.
 
-## 7. Exact companion and audit boundary
+## 7. Reciprocal-cubic and toric completion
+
+Let `omega^2+omega+1=0`.  The invertible Fourier change
+
+```text
+U=A+omega B+omega^2 C,          V=A+omega^2 B+omega C,
+Z=(A+B+C)/3                                                     (35)
+```
+
+satisfies
+
+```text
+D(U,V,Z)=9Delta_3,
+D=U^2V^2-4(U^3+V^3)Z+18UVZ^2-27Z^4,                           (36)
+```
+
+and sends the bitangent `ell` to `Z=0`.  On the normalization, the
+Mobius coordinate
+
+```text
+q=omega^2(p+omega)/(p+omega^2)                                 (37)
+```
+
+identifies `(U/Z,V/Z)` with `(2q+q^(-2),q^2+2q^(-1))`; the two roots of
+the bitangent pullback become `q=0,infinity`.
+
+In the affine chart `Z=1`, equation `(36)` is exactly
+
+```text
+D(U,V,1)=disc_T(T^3-UT^2+VT-1).                               (38)
+```
+
+Writing the displayed cubic as `f(T)`, its root-sheet algebra is
+
+```text
+k[U,V,T]/(f)=k[U,T,T^(-1)],       V=T^(-1)-T^2+UT.             (39)
+```
+
+Indeed `T(T^2-UT+V)=1`.  The algebra is finite free of rank three over
+`k[U,V]`, but `T` is a nonconstant unit.  In `(U,T)` coordinates its
+Jacobian is `-f_T/T`.  On the ramification divisor the repeated root `q`
+gives precisely
+
+```text
+U=2q+q^(-2),                    V=q^2+2q^(-1).                 (40)
+```
+
+This map from `G_m` is injective.  If distinct `q,r` had equal images,
+cancellation would give `2q^2r^2=q+r` and `qr(q+r)=2`; hence
+`(qr)^3=1` and `(q+r)^2=4qr`, forcing `q=r`.  Its derivative vanishes
+only at `q^3=1`, the three cusp addresses.  Its projective closure adds
+`q=0,infinity` at the distinct smooth points `[1:0:0]` and `[0:1:0]`.
+Thus the reciprocal cubic independently recovers the exact two-place
+normalization debt.
+
+The ordered-root completion makes the group action explicit.  Put
+
+```text
+z=(xy)^(-1),
+U=x+y+z,             V=xy+x^(-1)+y^(-1),
+W=(x-y)(y-z)(z-x).                                             (41)
+```
+
+Then
+
+```text
+W^2=D(U,V,1),
+det d(U,V)/d(log x,log y)=-W.                                  (42)
+```
+
+The symmetric/alternating invariant theorem therefore gives the global
+affine quotients
+
+```text
+(G_m)^2/S3=A2_(U,V),
+(G_m)^2/A3=Spec k[U,V,W]/(W^2-D).                              (43)
+```
+
+The nontrivial `A3` fixed locus consists only of the three triple-root
+points, so over the regular quadratic resolvent this realizes one genuine
+cyclic Kummer direction.  It does not realize both independent classes in
+`(5)` at once.
+
+This is the ordinary ordered-root `S3` closure; it was therefore too strong
+to say that no `S3` closure exists.  What fails is the design target.  The
+root sheet has unit group `k^* T^Z` and the ordered-root torus has unit group
+`k^* x^Z y^Z`.  Any map from `A2` sends those character units to constants,
+so neither source admits a dominant plane atlas.  The construction is
+globally monogenic and unit-rich, supplies no Keller pair, and does not show
+that every other Kummer line in `(5)` has the same obstruction.
+
+The obstruction persists on the entire fixed-nonzero-product marked-root
+stratum.  For `c in k^*`, put
+
+```text
+f_c(T)=T^3-UT^2+VT-c,
+D_c=U^2V^2-4V^3-4cU^3+18cUV-27c^2.                            (44)
+```
+
+Then
+
+```text
+disc_T(f_c)=D_c,
+k[U,V,T]/(f_c)=k[U,T,T^(-1)],
+V=cT^(-1)-T^2+UT.                                             (45)
+```
+
+Its discriminant normalization is the injective map
+
+```text
+q |-> (2q+cq^(-2),q^2+2cq^(-1)),             q in G_m,       (46)
+```
+
+with cusps exactly at `q^3=c` and missing places `q=0,infinity`.  Choosing
+`gamma^3=c` and scaling
+
+```text
+(T,U,V)=(gamma tau,gamma u,gamma^2 v)                          (47)
+```
+
+reduces `(44)-(46)` to `(38)-(40)` and multiplies the discriminant by
+`gamma^6`.  Likewise, with `xyz=c`, the ordered-root source is again
+`(G_m)^2`, its Vandermonde squares to `D_c`, and its logarithmic Jacobian is
+minus that Vandermonde.  Thus varying a fixed nonzero root product creates
+no new modulus and never repairs the unit or two-place debt.
+
+As a hostile cross-control, the displayed target curve of the provisional
+inverse-discriminant lane has the independently checked parametrization
+
+```text
+D(t)=-t(5t+1)(17t-3)(19t+4),
+C=-D(t),                         A=-tD(t).                     (48)
+```
+
+Its normalization is `A1`, with degrees `(deg A,deg C)=(5,4)` and one place
+at infinity.  No affine reparametrization of the coefficient plane can turn
+the fixed-product branch into this target: `k[q,q^(-1)]` and `k[t]` have
+different unit groups.  This proves only the fixed-`c!=0` boundary of the
+reserved all-degree marked-root lane; variable or zero product remains open.
+
+## 8. Exact companions and audit boundary
 
 Reproduce with
 
 ```bash
 python3 04-computation/jc2_tricuspidal_quartic_rank_two_two_place_thm3851.py
 python3 -O 04-computation/jc2_tricuspidal_quartic_rank_two_two_place_thm3851.py
+python3 04-computation/jc2_tricuspidal_reciprocal_cubic_toric_extension_thm3851.py
+python3 -O 04-computation/jc2_tricuspidal_reciprocal_cubic_toric_extension_thm3851.py
+python3 04-computation/jc2_tricuspidal_reciprocal_cubic_toric_independent_audit_thm3851.py
+python3 -O 04-computation/jc2_tricuspidal_reciprocal_cubic_toric_independent_audit_thm3851.py
+python3 04-computation/jc2_fixed_nonzero_product_marked_root_extension_thm3851.py
+python3 -O 04-computation/jc2_fixed_nonzero_product_marked_root_extension_thm3851.py
 ```
 
 Both modes byte-match the frozen output.  The assertion-free companion checks
@@ -394,8 +562,11 @@ boundary-orthogonal `A2` systems, all 40 compatible `3A2` configurations and
 their Smith profiles, the explicit order-three relations, local rank-two
 address map, and deck inversion.  It reports 763 active exact gates.
 
-The weak-del-Pezzo resolution and class-group quotient `(20)-(22)` are the
-human geometric bridge.  The lattice census is exhaustive finite exact
-evidence after that bridge, not a computational proof of the bridge itself.
-The independent hostile audit rechecked each bridge before promotion.
+The 1,376-gate extension independently repeats the lattice census while
+deriving `(35)-(43)`; the separate 48-gate audit rederives the toric bridge
+without that census, and the 28-gate corollary checks `(44)-(48)`.  The
+weak-del-Pezzo resolution and class-group quotient
+`(20)-(22)` remain human geometric inputs.  The lattice census is exhaustive
+finite exact evidence after that bridge, not a computational proof of it.
+All normal, optimized, and frozen replays pass.
 **QED.**

@@ -1,0 +1,21 @@
+THM3851_TRICUSPIDAL_TRADEOFF_EXACT PASS
+CURVE U^2V^2-4(U^3+V^3)Z+18UVZ^2-27Z^4=0
+NORMALIZATION [s:t]->[t(2s^3+t^3):s(s^3+2t^3):s^2t^2]
+FOURIER_EQUIVALENCE U=A+wB+w^2C,V=A+w^2B+wC,Z=(A+B+C)/3;D=9Delta_3
+SINGULARITIES 3A2 at q^3=1
+SPLIT_BITANGENT Z=0 pulls back to s^2t^2 (two smooth places)
+NO_FOURFOLD_LINE every line pullback has support size at least two
+SHARP_HOSTILE cusp tangent U-V=0 pulls back to -(s-t)^3(s+t)
+RECIPROCAL_CUBIC disc(T^3-UT^2+VT-1)=delta and T is a global unit
+CUBIC_SOURCE Spec=k[U,T,T^-1]=A1_x_Gm (finite flat rank three over A2)
+ORDERED_ROOT_COVER (x,y,1/(xy)) in Gm^2;Vandermonde^2=delta
+RESOLVENT_DICTIONARY Gm^2/A3=Q and Gm^2/S3=A2 at function-field level
+E7_ROOTS 126;BOUNDARY_E6_ROOTS 72;A2_SYSTEMS 120;3A2_CONFIGS 40
+AFFINE_CLASS_GROUP every 3A2+split-boundary quotient has Smith 1,1,1,1,1,1,3,3
+AFFINE_UNITS k* because the two boundary classes are independent in Pic(S)
+LOCAL_RESTRICTION (Z/3)^2 injects into (Z/3)^3 as a full-support hyperplane
+EXPLICIT_LOCAL_GENERATORS (1,2,0),(1,0,2), hence x+y+z=0 after orientation
+LOCAL_NORMAL_HISTOGRAM (1, 1, 1):30,(1, 2, 1):10
+DECK_ACTION Geiser acts by inversion modulo the two boundary classes
+GATES 1376
+SEMANTIC_SHA256 3d1406b37d55dbb02630abd1de69a2c0175c936a44609d5471bb555196b8ad5f

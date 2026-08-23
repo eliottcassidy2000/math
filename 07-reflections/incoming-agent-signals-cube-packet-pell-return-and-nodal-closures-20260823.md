@@ -917,11 +917,53 @@ tower; two half-integral resonances force `p=g=0`, the next bucket makes `w`
 constant, and the terminal row is `-60ae^3`.  Thus THM-3821/3828/3829/3834
 empty the whole displayed first `r^2z^2` grammar, including `X=0,Y!=0`.
 
-The live JC lanes are consequently: four-or-more-term sextics and degree at
-least seven in the pure-`r` lane; genuinely higher canonical rows; other
-candidate surfaces; and abstraction of the factor/cofactor degree
-trichotomy.  More elimination inside the displayed second row, this closed
-nonlinear cubic surface, or an intersecting cross would duplicate dead terrain.
+The next incoming wave closes two tempting escapes.  THM-3850 proves that
+every nonconstant one-variable profile has a nonpolynomial branch component;
+THM-3852 classifies every affine two-variable profile whose branch contains
+a line and proves that a residual component still has at least two missing
+normalization places.  The hostile rows `tau=-4/27` (coalesced infinity
+quadratic) and `tau=1/54` (doubled line) both preserve two distinct supports.
+
+THM-3851 exposes a more surprising tradeoff.  Its tricuspidal quartic gains
+the desired rank-two class group `(Z/3)^2`, but no line cuts the normalization
+at one place.  Fourier coordinates identify the same quartic with
+
+```text
+disc_T(T^3-UT^2+VT-1)=0.
+```
+
+The root sheet is literally `A1 x G_m`, and the ordered-root closure is the
+torus `(G_m)^2`; the Vandermonde is both its logarithmic Jacobian and the
+quadratic-resolvent coordinate.  Thus the three `A2` cusp lattice and the
+type-`A2` root torus are not just analogous names: the Fourier/discriminant
+map realizes one of the two Kummer directions.  What it preserves is the
+discriminant and cyclic layer; what it destroys is the constant-unit plane
+source, since the characters `T`, then `x,y`, are unavoidable units.  The
+ordinary toric `S3` closure exists, but it is exactly the wrong completion.
+The same packet persists for every fixed nonzero root product: cube-root
+scaling returns to product one.  Its `G_m` normalization cannot be affinely
+reparametrized into the provisional inverse-discriminant lane's one-place
+`A1` target, because their unit groups differ.  This locates the escape in a
+genuinely variable index-form/content sidecar, not another coefficient chart.
+
+THM-3855 supplies the complementary positive formal result.  At the rational
+four-ray row, the four coefficient gradients of the binary-cubic
+discriminant have determinant `640000`, hence generate every homogeneous
+cubic.  Every target perturbation in `(A,C)^5` therefore has an all-orders
+formal coefficient lift.  For the one-place target this gives a connected
+normal nonmonogenic formal `S3` order.  The independent recursion survives a
+dense all-monomial target, so the mechanism is derivative surjectivity, not
+the favorable monomial `C^5`.  But it forgets finite termination, analytic
+convergence, global units and a plane atlas.  Together with the toric family,
+this shows why the branch discriminant alone is insufficient: the same
+branch-level success can sit above either unavoidable source characters or
+an index form whose coefficients remain in the maximal ideal.
+
+The live JC lanes are consequently four-or-more-term sextics, genuinely
+higher canonical rows and higher-normal inverse-discriminant lifts that keep
+their full coefficient sidecars.  More elimination inside the displayed
+second row, a one-variable profile, an affine profile containing a line, or
+the toric tricuspidal completion would duplicate closed terrain.
 
 ## 7. Khinchin content after the extension
 

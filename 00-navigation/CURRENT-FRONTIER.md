@@ -354,21 +354,20 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   self-identifying Russell arm required by THM-3843.  THM-3844's one-place
   two-cusp quartic also remains globally monogenic; its two local cusp classes
   fold onto one `Z/3` direction, so cusp count is not torsion rank.
-  THM-3850 closes every nonconstant one-variable profile `b(C)`: at least one
-  branch component has two places.  THM-3851 attains torsion `(Z/3)^2`, but
-  proves every chart of its tricuspidal quartic has at least two places.
-  A new completion must pass both the one-place polynomial-uniruled gate and
-  the constant-unit/nonmonogenic gate.
+  THM-3850 closes nonconstant one-variable profiles; THM-3852 closes affine
+  profiles containing a line: a companion has at least two places.  THM-3851
+  attains `(Z/3)^2`, but every chart has two places; its `S3` closure is the
+  unit-rich torus `(G_m)^2`, not a plane.  A replacement must be one-place,
+  constant-unit and nonmonogenic outside both grammars.
   The positive anchor is THM-3785's one-place Russell pseudo-plane; a Darboux
-  pair there would yield a counterexample of field degree divisible by three
-  and at least nine.  THM-3843 forces its arm to be a noninjective immersed
-  normalization.  THM-3846 gives every unimodular first jet a formal lift,
-  while nonzero normal Wronskian makes the canonical resummation nonrational.
-  THM-3849 identifies the missing collision coordinate: its conductor
-  polynomial records exactly where the residual class `2[L]` meets the arm,
-  with degree twice the weighted collision graph.  The live target is a
-  genuinely higher-normal algebraization satisfying this contact graph;
-  THM-3839 excludes only one constant bichromatic tower.
+  pair there would have field degree divisible by three and at least nine.
+  THM-3843 forces a noninjective immersed arm.  THM-3846 gives formal Darboux
+  lifts but a nonrational canonical resummation; THM-3855 gives all-orders
+  inverse-discriminant lifts past order five, including a formal connected
+  normal nonmonogenic `S3` order, but no polynomial termination.  THM-3849's
+  conductor records the residual `2[L]` collision graph.  The live target is
+  a higher-normal algebraization with that sidecar; THM-3839 excludes only
+  one constant bichromatic tower.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692

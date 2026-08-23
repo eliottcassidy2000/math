@@ -1,0 +1,16 @@
+FIXED_PRODUCT_MARKED_ROOT_SYNTHESIS PASS
+CUBIC f=T^3-UT^2+VT-c with c nonzero
+DISCRIMINANT U^2V^2-4V^3-4cU^3+18cUV-27c^2
+SOURCE k[U,V,T]/(f)=k[U,T,T^-1];V=cT^-1-T^2+UT
+UNIT T is a nonconstant global unit;the pole at T=0 is unavoidable for c nonzero
+BRANCH q->(2q+cq^-2,q^2+2cq^-1) is injective Gm
+CUSPS normalization ramifies exactly at q^3=c
+PLACES projective normalization adds exactly q=0 and q=infinity at distinct smooth points
+SCALING c=gamma^3 reduces the packet to THM-3851's reciprocal model
+ORDERED_ROOTS product c torus has Vandermonde^2=discriminant and log Jacobian=-Vandermonde
+CROSS_CONTROL incoming one-place target has A1 normalization of degrees (5,4),not Gm
+CONNECTION this closes only the fixed-nonzero-product stratum of reserved THM-3859
+SIDECAR discriminant forgets index-form unit representation and source character units
+SCOPE promotable scoped corollary;not the full THM-3859 classification and no JC conclusion
+GATES 28
+SEMANTIC_SHA256 b40b22611b39e328749e52952b4e6eebe4f0543b69e4ee67d9975cf36f783780

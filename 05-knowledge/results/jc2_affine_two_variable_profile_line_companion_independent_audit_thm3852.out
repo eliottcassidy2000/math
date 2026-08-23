@@ -1,0 +1,13 @@
+THM3852_HOSTILE_AUDIT PASS
+LINE_CHARTS A=mC+n and C=c complete
+NONVERTICAL_SOLUTION n!=0,m=n^2/6,e=-2/n^2,d=-4/(3n)
+FINITE_NONVERTICAL_HITS 0
+FINITE_VERTICAL_HITS 5
+NORMALIZED_TRANSVERSE tau=n^3*lambda/216
+ZERO_SEAM_RING k[C,1/(4C+1)]
+RESIDUAL_REDUCIBILITY tau=1/54 only; repeated original line
+HOSTILE_INFINITY tau=-4/27: P0 plus q=(16/9)(2A-3C)^2
+COLLISION_COMPANION smooth irreducible conic; two infinity supports
+VERTICAL_COMPANION kappa!=0: three punctures; kappa=0: two
+SEMANTIC_SHA256 e41fc0f184f55d8ceb0c88cf05fa8efaa97080127cae4e9b2bb3548c0e552436
+GATES 78
