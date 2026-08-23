@@ -2,10 +2,10 @@
 id: THM-3781
 title: "Complete scalar-centred three-by-three arithmetic-progression Danielewski Darboux nonentry"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVED; PENDING HOSTILE AUDIT OF
-  THE FULL GENERALIZATION.  On every exponent-two squarefree
-  Danielewski surface with at least two arms, no Darboux pair can have three
-  nonzero homogeneous weight pieces in each output, arithmetic-progression
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On every
+  exponent-two squarefree Danielewski surface with at least two arms, no
+  Darboux pair can have three nonzero homogeneous weight pieces in each
+  output, arithmetic-progression
   supports with arbitrary positive steps, and scalar-centred convolution.
   Unequal steps leave a forbidden lonely mixed-sign bracket.  For equal
   steps, endpoint gcds are unrestricted: algebraic roots of the two endpoint
@@ -15,16 +15,18 @@ status: >
   scalar-centred three-by-three AP census, not planar JC(2).
 source: root / planar-Jacobian Danielewski Darboux session, 2026-08-23
 audit: >
-  The d=3 specialization was independently hostile-audited by
-  jc_zero_debt_lift (2026-08-23, bfad661005), including support typing,
-  endpoint UFD laws, adjacent integrations, arm valuations, and terminal
-  degree exits.  The same auditor independently rederived both the all-d
-  radical equations/infinity case split and the unequal-step lonely-weight
-  reduction.  Exact-text and frozen-hash audit of the strengthened statement
-  remains pending.  The companion checks 2,470 unequal cells through step
-  20 (including 100 doubling hostiles) and every equal-step cell through
-  d=30 (including 135 nonprimitive endpoints), with 47,466 active gates
-  under normal and optimized Python.
+  INDEPENDENT HOSTILE AUDIT PASSED (jc_zero_debt_lift, 2026-08-23).  The
+  audit checked the canonical centre range, both lonely-weight collision
+  classifications (including the two oriented doubling seams), endpoint
+  UFD laws with arbitrary gcd, the finite radical extension and its exact
+  constant field, both adjacent integrations, and normalized valuations at
+  every place above infinity.  The D!=0,a>1, constant-numerator, a=1
+  cancellation, and zero-numerator branches are exhaustive and all
+  contradict the negative-middle membership invoice.  Normal and optimized
+  runs byte-match the frozen transcript; both raw hashes, 2,470 unequal
+  cells through step 20 (including 100 doubling hostiles), every equal-step
+  cell through d=30 (including 135 nonprimitive endpoints), and all 47,466
+  active gates match.
 depends_on:
   - THM-3572-squarefree-danielewski-affine-modification-and-two-bracket-collapse
 related:
@@ -40,9 +42,9 @@ hash_basis: raw LF bytes
 
 # THM-3781 -- every scalar-centred three-by-three AP cell is empty
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVED; PENDING HOSTILE AUDIT OF
-THE FULL GENERALIZATION.**  A lonely-weight argument closes unequal steps;
-a common endpoint-owner calculation closes equal steps.  The essential move
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  A
+lonely-weight argument closes unequal steps; a common endpoint-owner
+calculation closes equal steps.  The essential move
 in the latter case is to retain endpoint gcds by working temporarily in a
 finite algebraic extension of `C(b)`.
 
@@ -313,5 +315,4 @@ pair, beginning with `(d,a)=(4,2)`, as well as all larger common steps.
 This is the full scalar-centred three-by-three arithmetic-progression
 census.  A noncentral occurrence of scalar weight zero, genuinely gapped
 supports, and supports with at least four pieces remain open.  It constructs
-no Darboux pair and no planar Jacobian counterexample.  **QED, with the full
-exact-text hostile audit pending.**
+no Darboux pair and no planar Jacobian counterexample.  **QED.**
