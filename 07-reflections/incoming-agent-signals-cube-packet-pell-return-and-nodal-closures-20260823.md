@@ -386,6 +386,25 @@ depths.  The hostile `k=1`, where `Q_1=1<1^3+2^3`, proves that this is only a
 necessary sieve.  It retains Pell depth and common-cube scale but still loses
 the other runners, owner, phase, and loneliness.
 
+THM-3858 retains one more digit after dividing out that exact scale.  If
+`s=v_3(j)>=2` and `h=j/3^s`, then
+
+```text
+Q_(3j)/3^(s+1)==h,          Q_(3j-1)/3^(s+1)==-h  (mod 9).
+```
+
+Thus a scaled primitive two-cube address with `v_3(g)=r>=1` forces
+`s=3r-1` and `h mod 9 in {1,2,7,8}`; `4,5` are excluded, first at depths
+`107,108,134,135`.  A separate block-lift audit recovers the same signs from
+the stabilized matrix `(B^(3^s)-I)/3^(s+1) mod 9`.
+
+This is also the exact stopping boundary for the projected local target: a
+three-adic unit is a sum of two unrestricted `Z_3` cubes exactly in those four
+mod-nine classes.  It does not stop sieves that retain individual summand
+residues, labels, another place, positivity or global height.  The operation
+lesson is precise: quotienting by the common cube scale reveals one final
+target digit, but then target-only three-adic refinement is exhausted.
+
 This also sharpens the Khinchin lesson.  The scalar mean of a continued-
 fraction digit word cannot recover the residue class or the valuation of its
 Pell depth.  The ordered word together with its matrix cocycle can: here the

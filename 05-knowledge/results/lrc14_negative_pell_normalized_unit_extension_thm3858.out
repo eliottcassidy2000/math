@@ -1,0 +1,17 @@
+experiment=pell-depth-extension-and-thm3842-residue-audit
+classification=PROVED-LEMMA;VERIFIED-EXACT;INDEPENDENT-AUDIT
+residue_repair=valuation_one_required;square_multiplier_is_branch_unit
+tower_residue=-dr/(18r^2);parity=even
+nonlinear_residue_odd_packet=q(q-3)(q+1)(q+2)
+residue_effect=actual_representatives_unchanged;pullback_claims_unchanged
+pell_valuation=k_3j_minus_1_or_3j:1_plus_v3j;k_3j_plus_1:0
+normalized_unit=Q_3j:+u;Q_3j_minus_1:-u_mod9;s=v3j>=2
+cube_scale=s=3r-1;u_mod9_allowed=1,2,7,8;excluded=4,5
+first_excluded_depths=107,108,134,135
+three_adic_completion=mod9_is_final;all_survivors_are_Z3_two_cube_sums
+normalized_cases=540
+hostile_control_depths=4096
+scope=necessary_address_sieve_only;no_LRC14_or_JC2_consequence
+CHECKS=19218
+semantic_sha256=de96643f7b05fc26e9d804ff4abe21a37aa6d8d07f446e923560c32da0104d64
+RESULT PASS

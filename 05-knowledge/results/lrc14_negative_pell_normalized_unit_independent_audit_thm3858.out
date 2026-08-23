@@ -1,0 +1,17 @@
+experiment=negative-pell-normalized-unit-mod9-hostile-audit
+classification=PROVED-LEMMA;VERIFIED-EXACT;HOSTILE-AUDIT
+indexing=A_3j_uses_plus_seed;A_3j_minus_1_uses_inverse_minus_seed;global_sign_squares_out
+block_lift=E_s_mod9_equals_0_3__4_0_for_all_s_at_least_2
+normalized_congruence=Q_3j_over_3_splus1:+h;Q_3jminus1_over_3_splus1:-h_mod9
+scale_gate=s_equals_3r_minus_1;allowed_h_mod9=1,2,7,8;excluded=4,5
+first_excluded_depths=107,108,134,135
+local_iff=Z3_unit_two_cube_sum_iff_residue_mod9_in_1,2,7,8
+stopping_scope=unconstrained_Z3_existence_only_after_exact_scale_removal
+nonlocal_scope=prescribed_summand_data,positivity,global_integrality,other_places,and_runner_sidecars_not_closed
+block_cases=264
+offset_cases=240
+valuation_depth=1200
+local_targets=19680
+CHECKS=33234
+semantic_sha256=fa0d2ddf38d16ac88722ee94bfa52aa8490d291550f4420b87e9db844cb03fe7
+RESULT PASS

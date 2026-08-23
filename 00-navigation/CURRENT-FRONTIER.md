@@ -68,6 +68,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   candidates; the powers-of-four fibre has none.  The `11+2` branch leaves
   46,837 necessary seams for `2<=s<=355`, or 52,692 residual triples after
   adding scale one.  Those seams, owner and arrival remain open.
+  THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
+  `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
   FINITE-EXACT,
   `(9,13;76,132)` remains the unique tripling edge through pair sum `10^6`
   (independent control `5000`).
