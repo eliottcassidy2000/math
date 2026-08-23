@@ -2,7 +2,7 @@
 id: THM-3787
 title: "Cubic pseudo-plane complete low-support Darboux nonentry"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the
   THM-3785 cubic Russell pseudo-plane, every Darboux pair with two Euler
   weights in one output and three in the other is impossible, including the
   common-step arithmetic-progression cells.  Every common-step three-by-three
@@ -13,15 +13,19 @@ status: >
   no planar Jacobian counterexample is claimed.
 source: jc_zero_debt_lift / pseudo-plane Euler-support census, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The deterministic companion verifies the
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The sign/zero boundary,
+  every nominal-degree cancellation direction, the finite-radical extension
+  and every place above infinity, and both a=1 seams were rederived from the
+  displayed equations.  One overstrong sentence about constant profiles at
+  positive weights divisible by three was repaired; the scalar-bucket leading
+  coefficient is nonzero there as well, so the proof and theorem are
+  unchanged.  The deterministic companion verifies the
   complete two-by-three collision grammar, every bounded sign/zero seam as a
   hostile control, both common-step resonance identities and their exceptional
   leading-cancellation alternatives, the A=1 first-bucket ODE, the two
   resonant scalar factorizations, the three-by-three adjacent integrations,
   radical elimination, and the a=1 Wronskian formula.  Normal and optimized
-  runs byte-match the frozen transcript.  Independent hostile audit remains
-  due, especially for the finite-radical infinity argument and the two A=1
-  seams.
+  runs byte-match the frozen transcript.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
 related:
@@ -37,7 +41,7 @@ hash_basis: raw LF bytes
 
 # THM-3787 -- the cubic pseudo-plane has no low-support Darboux entrance
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  Let `k` be
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k` be
 an algebraically closed field of characteristic zero, let `c in k*`, and let
 
 ```text
@@ -248,8 +252,10 @@ P=q^(C/epsilon), Q=mu q^(D/epsilon).                 (20)
 
 Here `f,g` are the low endpoint profiles and `P,Q` the high endpoint
 profiles.  Write `kappa=deg p>0`, `eta=deg q>=0`, and `n=deg M`.
-When `T=0`, a scalar `M` is removable; hence an active middle component has
-`n>0`, so the scalar bracket below keeps its leading term.
+When `T=0`, a scalar `M` is removable, so then an active middle component has
+`n>0`.  If `T>0`, the profile may have `n=0` when the positive weight is
+divisible by three, but the scalar bracket still keeps its leading term: its
+leading coefficient contains the nonzero term `-T A kappa/delta`.
 The scalar bucket and the nonscalar double bucket force the two nominal
 degree equalities
 
@@ -479,5 +485,4 @@ degree divisible by three and at least six.
 The deterministic companion named in the metadata checks the bucket census,
 all small zero-weight controls, the resonance and exceptional-cancellation
 identities, both exact scalar factorizations, and the finite-radical
-integration/Wronskian packet.  **QED, conditional only on independent hostile
-audit.**
+integration/Wronskian packet.  **QED.**
