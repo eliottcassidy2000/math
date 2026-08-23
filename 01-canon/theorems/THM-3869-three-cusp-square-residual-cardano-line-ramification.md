@@ -8,7 +8,9 @@ status: >
   which is globally nonmonogenic, but its field discriminant still contains
   the line 9x+4 with multiplicity two.  Thus the construction passes the
   cubic-domain and nonmonogenic completion gates but remains ramified along
-  an extra affine-line component.  Trace shifts and every scalar change of
+  an extra affine-line component.  Deleting that unique totally ramified
+  divisor makes 9x+4 a nonconstant unit, so the etale locus has no dominant
+  polynomial-plane atlas.  Trace shifts and every scalar change of
   the two square/cube representatives fail to remove that component.
   Nonconstant coefficient changes, a Keller atlas, and JC(2) remain OPEN.
 source: jc_quartic_c3_construct / three-cusp inverse-discriminant lane, 2026-08-23
@@ -18,7 +20,9 @@ audit: >
   the order at every height-one prime and the finite-free S2 bridge; derived
   the corrected index determinant directly; typed both split-line Kummer
   valuations; and separately checked that the scalar-shift specialization
-  and coefficient cases exhaust all scalar pairs.  The companion verifies the Cardano and
+  and coefficient cases exhaust all scalar pairs.  It also used the local
+  fundamental equality to verify the nonconstant-unit atlas obstruction.
+  The companion verifies the Cardano and
   normalization identities, all 81 basis associators, the trace matrix and
   corrected binary index form, the local Eisenstein equation, the split
   quadratic-resolvent carrier, the complementary bicubic identity, trace
@@ -338,6 +342,20 @@ normalizations for the THM-3862 completion contract: `Delta` has affine
 normalization `A1` by THM-3854, and `ell=0` is a line.  Their projective
 closures share the unique point `[0:1:0]` at infinity.  The precise failure
 is the presence of the second component, not its curve type.
+
+There is a stronger atlas obstruction.  The fundamental equality at the
+generic point of `ell` is exhausted by the one prime `E` of ramification
+index three.  Hence
+
+```text
+div_O(ell)=3E.                                               (37a)
+```
+
+Let `U` be the maximal etale locus of `Spec O -> Spec B`.  It omits `E`, so
+`ell` restricts to a nonconstant unit on `U`.  A dominant morphism
+`A2 -> U` would pull that unit back to a scalar; its image would then lie in
+one level curve of `ell`, contradicting dominance.  Thus this completion
+cannot be the finite target completion of a polynomial-plane Keller atlas.
 
 ## 5. Global nonmonogenicity
 
