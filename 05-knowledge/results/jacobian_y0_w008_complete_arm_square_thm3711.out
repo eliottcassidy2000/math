@@ -1,0 +1,9 @@
+THM-3711 exact W008 completion audit
+fibre word = 00|10|01+20|02+11|03+12+21|13+22|23
+inherited placement counts n=1,2,3,>=4 = 0,2,4,6
+post-parity actual placements n=1,2,>=3 = 0,1,2
+family X live n>=2 = scalar triple; g1=H^2(kappa+gamma HK)
+family Y live n>=3 = scalar double; g2=H^2(lambda-eta HK)
+n=3 extra arm addresses already have negative coefficient H^2
+scope = complete W008 ray in the y=0 collision ring
+ALL CHECKS PASSED
