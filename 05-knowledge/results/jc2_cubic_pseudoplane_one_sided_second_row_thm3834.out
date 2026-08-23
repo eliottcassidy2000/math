@@ -1,0 +1,12 @@
+theorem=THM-3834-one-sided-second-row-r2z2-profile-nonentry
+surface=r^2e-z^3+r;c=1;field=algebraically_closed_characteristic_zero
+ansatz=THM3821_plus_r2z2_XY
+branch=X_zero;Y_nonzero
+arm=f_at_zero_one_twelfth
+S_nonzero=10_7_tower;complete_T_integral;r4_origin_odd_multiplier
+S_zero=shifted_5_2_Kummer;unique_T;p_g_half_resonance;w_constant;final_r3z
+corollary=full_fixed_r2z2_ansatz_empty_via_THM3821_3828_3829_3834
+scope=higher_slots_and_general_JC_open
+semantic_sha256=5d2a2b84131e0bc6e879f13a5b8b2410540aefdafd5d37752d04d480baef94d6
+CHECKS=40
+RESULT=PASS
