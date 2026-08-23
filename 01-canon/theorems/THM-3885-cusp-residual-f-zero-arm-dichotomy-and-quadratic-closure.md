@@ -1,14 +1,14 @@
 ---
 id: THM-3885
-title: "Cusp-residual f=0 arm dichotomy and quadratic closure"
+title: "Cusp-residual f=0 arm dichotomy and cubic closure"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In
-  the THM-3881 rank-two residual equation, the full f=0 lane has an exact arm
-  dichotomy: T(-1,y) is either zero or a constant c with c^3=-625/32.  Every
-  total-degree-at-most-two square pair in this lane is the base pair `T=0`.  At the independent
-  L=0 arm, all surviving square classes have an exact finite root-polarization
-  grammar.  Nonlinear T=c+(x+1)U with deg U>=2, a Keller atlas, and JC(2)
-  remain OPEN.
+  PROVED + VERIFIED-EXACT; AUDITED BASE + CUBIC STRENGTHENING AWAITING
+  FOCUSED HOSTILE AUDIT.  In the THM-3881 rank-two residual equation, the
+  full f=0 lane has an exact arm dichotomy: T(-1,y) is either zero or a
+  constant c with c^3=-625/32.  Every total-degree-at-most-three square pair
+  in this lane is the base pair `T=0`.  At the independent L=0 arm, all
+  surviving square classes have an exact finite root-polarization grammar.
+  Nonlinear T=c+(x+1)U with deg U>=3, a Keller atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3881 f=0 lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc_quartic_c3_construct, 2026-08-23).  The
@@ -17,11 +17,12 @@ audit: >
   missing-`y` square-root arguments in the quadratic cell.  It independently
   proved both UFD-parity directions and every unit/zero boundary in the
   `L=0` root-polarization grammar.  Here “empty” in the transcript means no
-  nonzero `T`; the base pair remains.  The companion verifies the f=0 residual,
-  both arm specializations, the complete constant square Groebner basis and
-  both positive controls, the quadratic address/odd-degree/one-color gates,
-  and the L=0 gcd extraction and root polarization in 20 active gates.  Normal
-  and optimized runs byte-match the frozen output.
+  nonzero `T`; the base pair remains.  CUBIC STRENGTHENING AWAITING FOCUSED
+  HOSTILE AUDIT: the new coefficient recursion, the `p=0` seam, the reduced
+  Groebner basis `<z,q^2>`, the affine `L=0` odd-degree gate, and the final
+  one-color reduction must be independently rechecked.  The amended companion
+  verifies these gates in addition to the audited base packet.  Normal and
+  optimized runs must byte-match the frozen output.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
 related:
@@ -29,15 +30,16 @@ related:
   - THM-3884-cusp-residual-total-degree-leading-gauge-filtration
 script: 04-computation/jc2_cusp_residual_f_zero_arm_quadratic_thm3885.py
 output: 05-knowledge/results/jc2_cusp_residual_f_zero_arm_quadratic_thm3885.out
-script_sha256: 004af773747738f3524935d076bdfebf5c07544b27a80b9021f52dd6ead74dab
-output_sha256: 1701d8a3fd4f850036651953c0cf74628e2b21f70241ec07996698832441374e
-semantic_sha256: 53ee84885a6a2415e44aca8523d1d2269eb1946016c58307ad151bcf2c98b1bf
+script_sha256: ec653744f276da842904249e93819f1f96ac870bcee9e578c143a6b089de056e
+output_sha256: a6c1af7024c6155abb649e23c169826e419f58f3d990e8165f4fc794e2b7eca0
+semantic_sha256: fa6375d39828c8eaf658b45830d8b4285472fab7043a03a1cbbab64ff35affd0
 hash_basis: raw LF bytes
 ---
 
-# THM-3885 -- the f-zero lane starts above quadratic degree
+# THM-3885 -- the f-zero lane starts above cubic degree
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT; AUDITED BASE + CUBIC STRENGTHENING AWAITING
+FOCUSED HOSTILE AUDIT.**
 Work over an algebraically closed field `k` of characteristic zero and retain
 the notation of THM-3881:
 
@@ -53,7 +55,7 @@ The address law becomes
 T(0,0)=0.                                                   (2)
 ```
 
-It closes all total degrees at most two and gives two all-degree boundary
+It closes all total degrees at most three and gives two all-degree boundary
 classifications.  It does not close the remaining nonlinear interpolation
 problem.
 
@@ -129,41 +131,104 @@ T=c+aU,                    U(0,0)=-c,                     (10)
 
 where `c` is one of the four values in `(8)`.
 
-## 3. Every quadratic cell has only the base point
+## 3. Every cubic cell has only the base point
 
-Assume `deg T<=2`.  By `(10)`, the quotient has degree at most one, so write
-
-```text
-T=c+a(px+qy-c).                                             (11)
-```
-
-The last constant is forced by `(2)`.  At `x=0`, equation `(11)` gives
-`T=qy`, and the specialization of `(3)` has degree at most five with
+Assume `deg T<=3`.  By `(10)`, the quotient has degree at most two.  Write its
+complete coefficient universe as
 
 ```text
-[y^5]S(0,y)=-8q^3.                                        (12)
+U=alpha x^2+beta xy+q y^2+gamma x+p y-c,
+T=c+aU.                                                     (11)
 ```
 
-If `q!=0`, the specialization has odd degree five and is not a square.  Hence
-`q=0`, so `T` depends only on `x`.  Now `(3)` has `y`-degree two, no linear
+The last constant is exactly the address `(2)`.  At `x=0`, put
+
+```text
+tau(y)=T(0,y)=p y+q y^2.                                   (12)
+```
+
+The specialized residual is
+
+```text
+S_0=256-96tau^2-8(y^2-4)tau^3-3tau^4.                     (13)
+```
+
+Suppose `S_0=G^2`.  Since `S_0(0)=256`, replace `G` by `-G` if necessary and
+write
+
+```text
+G=16+g_2y^2+g_3y^3+g_4y^4.                                (14)
+```
+
+There is no `y` term because `[y]S_0=0`.  Successive comparison in degrees
+two, three, and four uniquely gives
+
+```text
+g_2=-3p^2,
+g_3=p(p^2-6q),
+g_4=-(3/8)(p^4-8p^2q+8q^2).                               (15)
+```
+
+Put `z=p^2`.  The next three residual coefficients are
+
+```text
+[y^5](G^2-S_0)=-2p E_5,
+[y^6](G^2-S_0)=E_6/4,
+[y^7](G^2-S_0)=-(3/4)p E_7,                               (16)
+
+E_5=3z^2-24zq-4z+48q^2,
+E_6=13z^3-120z^2q+288zq^2+96zq-128q^3,
+E_7=z^3-14z^2q+56zq^2-64q^3-32q^2.                       (17)
+```
+
+If `p=0`, equation `[y^6]=0` reads `-32q^3=0`, so `q=0`.  If `p!=0`, all
+three `E_i` vanish.  Exact division over `Q[z,q]` gives the reduced basis
+
+```text
+Groebner(E_5,E_6,E_7; z,q, lex)=[z,q^2],                  (18)
+```
+
+contradicting `z=p^2!=0`.  Therefore `p=q=0` uniformly.
+
+It remains to remove the mixed coefficient.  At `L=0`, equation `(11)` is
+
+```text
+tau_L(y)=A+By,
+A=4c/9+80alpha/729-20gamma/81,
+B=-20beta/81.                                              (19)
+```
+
+By the exact arm identity of Section 4,
+
+```text
+S_L=-tau_L^3(8K_0+(25/27)tau_L).                          (20)
+```
+
+If `B!=0`, this has degree five and leading coefficient `-8B^3`, so it is
+not a square.  Thus `beta=0`.  For completeness, when `B=0` the arm is a
+square exactly at
+
+```text
+A=0  or  A=64/25.                                         (21)
+```
+
+We have now forced `T=T(x)`.  Globally `(3)` has `y`-degree two, no linear
 `y` coefficient, and
 
 ```text
-[y^2]S=-8T(x)^3,             S(0,0)=256.                  (13)
+[y^2]S=-8T(x)^3,             S(0,0)=256.                  (22)
 ```
 
 If it were a square, its root would have the form `U_0(x)+yU_1(x)`.  The
-missing linear term says `U_0U_1=0`; the nonzero constant part forces
-`U_0!=0`, so `U_1=0`.  Equation `(13)` then forces `T=0`.
-
-Thus
+missing linear term says `U_0U_1=0`; the nonzero origin value forces
+`U_0!=0`, so `U_1=0`.  Equation `(22)` then forces `T=0`.  Hence
 
 ```text
-f=0, deg T<=2, and S(T,0) square  ==>  T=0.               (14)
+f=0, deg T<=3, and S(T,0) square  ==>  T=0.               (23)
 ```
 
-This includes the affine constant-span cells of THM-3872 and closes the first
-new quadratic layer.
+This includes the affine constant-span cells of THM-3872 and closes both the
+quadratic layer and the first genuinely nonlinear cubic layer.
 
 ## 4. Exact root polarization at `L=0`
 
@@ -171,28 +236,28 @@ There is a second, independent boundary grammar.  Set
 
 ```text
 x=-4/9,                 a=5/9,
-K_0=y^2-8/27,           tau(y)=T(-4/9,y).                 (15)
+K_0=y^2-8/27,           tau(y)=T(-4/9,y).                 (24)
 ```
 
 Then
 
 ```text
-S=-tau^3(8K_0+(25/27)tau).                                (16)
+S=-tau^3(8K_0+(25/27)tau).                                (25)
 ```
 
 The zero polynomial `tau=0` is one solution.  Suppose `tau!=0`.  Normalize
 
 ```text
 d=gcd(tau,K_0),          tau=d sigma,
-K_0=de,                  gcd(sigma,e)=1.                  (17)
+K_0=de,                  gcd(sigma,e)=1.                  (26)
 ```
 
 Because `K_0` is squarefree, `d,e` are coprime squarefree complementary
-divisors.  Equation `(16)` is a square if and only if
+divisors.  Equation `(25)` is a square if and only if
 
 ```text
 sigma=u^2,
-8e+(25/27)u^2=v^2                                       (18)
+8e+(25/27)u^2=v^2                                       (27)
 ```
 
 for some `u,v in k[y]`.  Indeed, after removing the square `d^4`, the two
@@ -203,28 +268,28 @@ square in `k`.
 Put
 
 ```text
-gamma=5/(3sqrt(3)).                                       (19)
+gamma=5/(3sqrt(3)).                                       (28)
 ```
 
 The factors `v-gamma u` and `v+gamma u` are coprime: a common factor would
-divide `u,v`, then `e`, contrary to `gcd(u,e)=1`.  Thus `(18)` is equivalent
+divide `u,v`, then `e`, contrary to `gcd(u,e)=1`.  Thus `(27)` is equivalent
 to an ordered root partition
 
 ```text
 e=e_-e_+,                 gcd(e_-,e_+)=1,
 v-gamma u=lambda e_-,
-v+gamma u=8lambda^(-1)e_+,                               (20)
+v+gamma u=8lambda^(-1)e_+,                               (29)
 ```
 
 with `lambda in k^*`.  Explicitly,
 
 ```text
 u=(8lambda^(-1)e_+-lambda e_-)/(2gamma),
-tau=d u^2.                                                (21)
+tau=d u^2.                                                (30)
 ```
 
-Conversely every choice `(17),(20),(21)` makes `(16)` a square.  Since `K_0`
-has only two simple roots, `(17),(20)` give finitely many root-assignment
+Conversely every choice `(26),(29),(30)` makes `(25)` a square.  Since `K_0`
+has only two simple roots, `(26),(29)` give finitely many root-assignment
 shapes; only the nonzero scale `lambda` remains continuous.
 
 ## 5. Exact surviving problem
@@ -233,10 +298,10 @@ Any nonzero `f=0` square survivor must now have
 
 ```text
 T=c+aU,                   c=0 or c^3=-625/32,
-deg U>=2,                 U(0,0)=-c,                     (22)
+deg U>=3,                 U(0,0)=-c,                     (31)
 ```
 
-and its second-arm restriction must obey the polarization `(17)-(21)`.
+and its second-arm restriction must obey the polarization `(26)-(30)`.
 These conditions are necessary, not sufficient.  The nonlinear interpolation
 between the two arms, the general `T,f!=0` equation, a polynomial-plane Keller
 atlas, and JC(2) remain **OPEN**.
