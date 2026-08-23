@@ -33,8 +33,8 @@ related:
   - THM-3782-simple-pole-spectral-danielewski-completion-and-target-field-gate
 script: 04-computation/jc2_quadratic_tower_etale_surface_maximal_observable_thm3783.py
 output: 05-knowledge/results/jc2_quadratic_tower_etale_surface_maximal_observable_thm3783.out
-script_sha256: d0337978db2bf9ddc5c75f44847b295e65c5e3a62951ede628829ce7ea543e68
-output_sha256: af933dcd1dce73ac81219ddeee698e141c0a08fbad25efeec5b82803cff8c54e
+script_sha256: 772e78bcaba0bf459d9842716fc86ffa4a27991941da40b7fc4a3b96dd761068
+output_sha256: 515fa9c4e55dc117865410da4e92f74b0d50b4bba259a93f4c8622d9cadb7265
 semantic_sha256: 98d73f9751663c7d1ed2bcb73335ee71d956be9173d59d8864225c2e8defd170
 hash_basis: raw LF bytes
 ---
@@ -543,7 +543,8 @@ deg(p)+delta deg(q)>0.                                (59)
 
 A product of polynomials cannot be a nonzero scalar when one factor is
 nonconstant.  Thus `(53)` is empty.  The small seams `d=1,2,3` die directly
-from `(43),(44)`; the companion retains them as hostile controls.
+from `(43),(44)`; the companion separately checks the first integrated seam
+`d=3`.
 
 Literal output-swap gives the dual `3 by 2` orientation.  No claim is made
 for every aligned placement or for irregular `2 by 3` cells; these are the

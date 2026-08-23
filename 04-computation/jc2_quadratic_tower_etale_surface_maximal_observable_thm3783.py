@@ -196,12 +196,6 @@ def wronskian(weight_f: int, f: sp.Expr, weight_h: int, h: sp.Expr) -> sp.Expr:
 
 ap_rows = []
 
-# d=1: the top singleton has weights (1,-2), so nonzero commuting profiles
-# would have opposite signs.  d=2 has the same forbidden singleton after
-# the weight-zero endpoint is forced constant.
-gate((1 > 0 and -2 < 0), "AP d1 opposite-sign top singleton")
-gate((1 > 0 and -2 < 0), "AP d2 opposite-sign residual singleton")
-
 # d=3 is the first genuine integrated seam and already factors through the
 # nonconstant negative profile p.
 p3 = pp
@@ -222,7 +216,7 @@ factor3 = 2 * (lam - mu) * p3 * (
 )
 gate(other3 == 0, "AP d3 integrated bucket")
 gate(sp.simplify(scalar3 - factor3) == 0, "AP d3 scalar factor")
-ap_rows.append("d=1,2:opposite-sign-singleton;d=3:p-transport-factor")
+ap_rows.append("d=3:p-transport-factor")
 
 for Aweight in range(3, 13):
     delta = sp.gcd(Aweight, 4)
