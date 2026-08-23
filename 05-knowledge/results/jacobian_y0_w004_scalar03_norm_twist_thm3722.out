@@ -1,0 +1,10 @@
+THM-3722 exact W004 scalar-03 norm-twist audit
+placement = P(1-3n,1-2n,1), Q(-n-2,-2,n-2,3n-2), n>=1
+upper transport and quadratic norm primitive PASS
+nonzero-shift beta>=2 coprime-power obstruction encoded
+zero-shift negative Laurent exponent in all seven residues PASS
+n=5 beta=1 differential determinant and degree gate PASS
+n=2 pure norm/differential compatibility gate PASS
+n=1 proportional-row Euler contradiction PASS
+scope = complete named W004 scalar fibre 03+21, all scales
+ALL CHECKS PASSED
