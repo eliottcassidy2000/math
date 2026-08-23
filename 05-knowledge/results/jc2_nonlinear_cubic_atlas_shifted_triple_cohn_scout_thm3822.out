@@ -1,0 +1,10 @@
+theorem=THM-3822-finite-exact-shifted-triple-Cohn-sidecar
+scope=C(x+a,y+b)^eps;ordered_length=3;a,b=-1,0,1;eps=+-1
+field=GF(1009);specializations=y=2,3
+factors=18;words=5832
+rejection=odd_degree_or_derivative_gcd_below_half_degree
+both_fibres_reject=5832
+survivors=0
+scope_warning=FINITE-EXACT_NOT_ALL_WORDS_NOT_A_JC_THEOREM
+CHECKS=11707
+semantic_sha256=cc3309ae4d7a7e0c33076612463abab3e3e12607295279709f26bb5ea8611e6e
