@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — 2026-08-23.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
+**Rolling state — 2026-08-23.** Links are proof sources; composition and residuals live here. Statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -97,7 +97,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
 - **PROVED:** [THM-2022](../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md)
   proves NC2 and hence unrestricted GMC(2).
-- **REFUTED for higher dimensions:** GMC is false from dimension three; see [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md). THM-3290 gives the family/Archimedes boundary; THM-3300 identifies the factorial moment class with the `U(1)^n`-invariant Gaussian subproblem, not `FC=GMC`; THM-3301 supplies the no-eigenvector refutation. [THM-2801](../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md) gives `SIC(1)` true / `SIC(n>=2)` false, not `JC(2)`.
+- **REFUTED for `n>=3`:** GMC is false; see [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md). THM-3290 gives the family/Archimedes boundary, THM-3300 the `U(1)^n`-invariant Gaussian subproblem (not `FC=GMC`), and THM-3301 the no-eigenvector refutation. [THM-2801](../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md) gives `SIC(1)` true / `SIC(n>=2)` false, not `JC(2)`.
 - **FORMALIZATION COMPLETE:** `GMC2Main` exposes unconditional `dvdK1`, `nc2`,
   and `gmc2`, kernel-pure up to `propext`, choice, and quotient soundness;
   `singlePolyCrux_holds` discharges the legacy `DvdK1` premise.  THM-2101's
@@ -253,7 +253,7 @@ support asymptotic or residue.
 
 ### Established landmarks
 
-- Hostile-audited [THM-2433](../01-canon/theorems/THM-2433-operation-fibre-deletion-incidence-and-startup-scar.md) gives the finite-hole Burnside calculus. The additive scar stabilizes at three lost pairs, while multiplication propagates along `4N` and `6N`; internal transitive closures, four exceptional divisibility covers, and the unique artificial twin-centre atom `12` are exact. Chain difference and divisor Möbius inversion are analogues, not a Stirling identification.
+- Hostile-audited [THM-2433](../01-canon/theorems/THM-2433-operation-fibre-deletion-incidence-and-startup-scar.md) gives the finite-hole Burnside calculus: additive scar stabilizes at three lost pairs; multiplication propagates along `4N,6N`; transitive closures, four exceptional covers, and artificial twin-centre atom `12` are exact. Chain difference and divisor Möbius inversion are analogues, not Stirling.
 - Hostile-audited [THM-2438](../01-canon/theorems/THM-2438-poisson-newton-ternary-half-and-harmonic-divisor-incidence.md)
   gives the exact Poisson--Newton EGF conjugacy. Central-binomial Newton
   coefficients are central trinomials, the two Pascal halves become ternary
@@ -352,9 +352,11 @@ support asymptotic or residue.
   class, and the explicit affine etale complement
   `U=Spec S[A/D,omega/D]` with `U*=k*` and `Pic(U)=Z^2`; THM-3816 gives an
   independent positive-filtration proof of `S*=k*`.  The Picard group rules
-  out both `U=A2` and the THM-3785 pseudo-plane.  Open: construct or obstruct
-  a dominant polynomial etale atlas `A2 -> U`; pure `r` degree `>=5`, mixed
-  degree `>=3`/nonconstant `h`, poles, unrestricted pairs and `JC/DC(2)`.
+  out both `U=A2` and the THM-3785 pseudo-plane. THM-3817 proves pure `r<=5`;
+  THM-3814 closes the exact all-degree `rz` profile. OPEN: construct or obstruct
+  a dominant polynomial etale atlas `A2 -> U` (THM-3822 RESERVED), pure `r>=6`
+  (THM-3820 RESERVED), mixed `>=3`/nonconstant `h`, `rz^2`/higher slots
+  (THM-3821 RESERVED), poles, unrestricted pairs and `JC/DC(2)`.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692
@@ -366,18 +368,24 @@ support asymptotic or residue.
   THM-3167/3172 retain diagonal/field/owner gates. THM-3212--3437 close named
   `B,C,E`, clutch, transport, sparse, character, Prüfer, and Artin-jet lanes,
   but no section/transfer; THM-3306 sidecars are FINITE-EXACT only.
-  Surface chain (routed above): pure `r` through quartic and constant-`z^2`
-  mixed through quadratic `g` are closed; no pair stops at arbitrary `r/z^2`
-  profiles. Degree `>=5` pure, degree `>=3` mixed, nonconstant `h`, `rz`/higher
-  slots, arbitrary mates and off-nodal branches remain OPEN.
+  Surface chain: PROVED pure `r<=5`, constant-`z^2` mixed `deg(g)<=2`,
+  arbitrary-arm pair no-go, and all-degree exact `rz`-profile no-go. OPEN pure
+  `r>=6`, mixed `>=3`/nonconstant `h`, `rz^2`/higher slots, arbitrary mates and
+  off-nodal branches; THM-3820/3821 reserve the next two gates.
 - **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
   all `2665` residuals in `7395` rows (`2384` divisor, `281` rho).
   `d=6518` needs `p=29`, refuting `p<=23`. FINITE-EXACT at `d=10001`:
   divisor-2 survivors miss divisor-5 barcode `{3125,6250}`; all seven exits
   fail, without a general-`d` claim.
-  THM-3182/3185/3188/3191 give the three-state prime reset, carried thickness and exterior/Clifford laws; THM-3210 still blocks a monotone staircase. THM-3249--3314 give the face atlas and show endpoint ancestry/positivity remain OPEN.
-  THM-3303/3328 split constant-J into sheet/cone data; THM-3465 closes pure nonreal characters, and THM-3470 closes one mixed triangular shear at moment five. General support `5` and mixed cells remain OPEN.
-  THM-3466's HFC+constant-J current is a length-two Krylov block whose clutch need not separate; THM-3732's inherited `F12/F13` raw-magnitude seam never composes for two edges, although identity rows retain one exact corridor. The HFC-null primitive instead needs orientation/basepoint for zero holonomy. No bridge map joins them. THM-3357/3365/3362 give controls; HFC(3), FC(3), `JC(2)` and arbitrary faces remain OPEN.
+  THM-3182/3185/3188/3191 give the prime reset, thickness and Clifford laws;
+  THM-3210 blocks monotone stairs. THM-3249--3314 leave endpoint ancestry and
+  positivity OPEN. THM-3303/3328 split constant-J into sheet/cone data;
+  THM-3465/3470 close pure nonreal characters and one mixed moment-five shear.
+  General support `5` and mixed cells remain OPEN. THM-3466's length-two Krylov
+  clutch need not separate; THM-3732's `F12/F13` seam fails on two edges, though
+  identity rows retain one corridor. HFC-null needs orientation/basepoint; no
+  bridge joins them. THM-3357/3365/3362 are controls; HFC(3), FC(3), `JC(2)`
+  and arbitrary faces remain OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
@@ -385,9 +393,11 @@ support asymptotic or residue.
 
 **OPEN external benchmark; workbench live.** Human record `1.67513`, target
 `<=1.675`. FINITE-EXACT: rule-(1) is UNSOUND; floor `>=1`, k=1 path floor `2`
-(greedy caveat), records `13/7`, merge-free `7/4`, and `12/7` with
-identifications. Prefix+step and step+suffix algebras remain uncompiled.
-Workbench: `ak_forcing_engine.py`; next: sound `5/3`, compilation, k=1 proof.
+(greedy caveat), records `13/7`, merge-free `7/4`, and identified `12/7`.
+Axis reversal exactly equates merge-free pure prefix+step and step+suffix,
+preserving cost and forcing; identified/mixed cases remain uncompiled. The
+small same-H `(g,u)=(5,3)` cell has `0/31,656` certificates FINITE-EXACT, not a
+bound. Workbench: `ak_forcing_engine.py`; next: larger sound `5/3`, k=1 proof.
 
 ## Cross-domain connection discipline
 
@@ -403,6 +413,7 @@ The most reusable current bridges are not literal object identifications:
 | Reversible address | THM-3743/3793 | Inert cube sums index 5,855 pair ratios but lose the full LRC semantic packet. |
 | Amplitude lattice | THM-3804 | Free defects plus one carry decide lifts, not projective closure or center chronology. |
 | `Z/3` deletion lattice | THM-3785/3790/3808 | Visible `1+2` principalizes; deleting class-one rays yields `ker(sum mod 3)` units, not a surface map. |
+| Positive filtration | THM-3816 | Domain `gr` and `F_0=k` force `S*=k*`; complement units need divisor classes, and affineness is separate. |
 | HFC--JC boundary | THM-3303/3328 | Null moments force collision; cone overlap gives a double sheet, otherwise retain anti-tangent/vertex-cone data. |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Finite observer / recurrence | THM-3171/3172/3180/3181 | Is it invertible, a refuter, or only an address; which sidecar makes termination lawful? |
