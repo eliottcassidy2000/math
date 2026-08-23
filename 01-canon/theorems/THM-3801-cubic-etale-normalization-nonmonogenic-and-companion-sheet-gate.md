@@ -2,7 +2,7 @@
 id: THM-3801
 title: "Cubic etale normalization nonmonogenic and companion-sheet gate"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  A dominant
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A dominant
   degree-three etale map from a constant-unit normal affine surface to A2
   has a finite flat cubic normalization that is never globally monogenic.
   Every codimension-one branch has transposition type (2,1), squarefree
@@ -13,14 +13,15 @@ status: >
   degree-three normalization obstruction, not a general Darboux no-go.
 source: jc_quartic_c3_construct / cubic normalization lane, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The proof checks normalization-form Zariski
-  Main, finite-flat rank three, the trace-zero rank-two module and binary
-  index form, the monogenic different contradiction, every tame degree-three
-  DVR partition, the constant-unit visibility step, discriminant/resolvent
-  consequences, and the nodal residue-degree budget.  The exact companion
-  verifies the depressed-cubic trace, norm, discriminant and pullback
-  factorization; the nonmonogenic Veronese hostile; and the nodal
-  normalization packet.  Independent hostile audit remains due.
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  Normalization-form
+  Zariski Main, finite-flat rank three, trace splitting and Quillen--Suslin,
+  the binary index criterion, monogenic different contradiction, every tame
+  cubic DVR partition, constant-unit visibility, squarefree discriminant and
+  S3 resolvent, nodal residue-degree ledger, and Picard scope were
+  independently rederived.  The Veronese hostile is genuinely normal,
+  finite free, nonmonogenic, cyclic, and disqualified by total ramification.
+  Normal and optimized runs byte-match the frozen transcript, all hashes
+  match, and documentation checks pass.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3790-cubic-pseudoplane-arm-nodal-immersion-gate
@@ -37,7 +38,7 @@ hash_basis: raw LF bytes
 
 # THM-3801 -- a cubic survivor must be nonmonogenic with one companion per branch
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  Let `k` be
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k` be
 an algebraically closed field of characteristic zero.  Let `X=Spec B` be an
 integral normal affine surface with
 
@@ -246,7 +247,7 @@ unramified companion, violating `(1)` component by component.
 
 ## 4. The nodal arm curve consumes too many companion sheets
 
-Now specialize to the cubic pseudo-plane of THM-3785,
+Now specialize to `k=C` and the cubic pseudo-plane of THM-3785,
 
 ```text
 Y=Spec k[r,z,e]/(r^2e-z^3+c^3r),             c in k*,                (23)
@@ -369,4 +370,4 @@ constant-unit companion-sheet law.
 The exact companion named in the metadata verifies `(15)--(17)`, the
 ramified/companion specialization, `(33)--(35)`, and the nodal normalization
 identities.  Normal and optimized executions byte-match the frozen
-transcript.  **QED, conditional only on independent hostile audit.**
+transcript.  **QED.**
