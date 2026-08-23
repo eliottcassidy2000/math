@@ -2,7 +2,7 @@
 id: THM-3872
 title: "Three-cusp polarization branches and the minimal affine square-residual gate"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.  In
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In
   the THM-3864 seminormalization, simultaneous square/cube descent is exactly
   the product condition H(a)H'(a)=0 at each of the three cusp addresses.
   Hence the descent locus is the union of eight linear cusp-polarization
@@ -17,7 +17,15 @@ status: >
   and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3864 noncanonical representative lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT PROOF CANDIDATE.  The companion verifies the cusp-value
+  INDEPENDENT HOSTILE AUDIT PASS (jc_quartic_c3_construct, 2026-08-23).
+  The audit independently rederived the local square/cube iff, the selector
+  and derivative matrices, the exact R/J fibres and all eight strata, every
+  scaling boundary, and the necessity and sufficiency of all square
+  recurrences.  It also reconstructed J as the reduced three-point ideal and
+  checked the full constant span: the odd-degree splits force the sole seam,
+  while an independent sextic recurrence has x-adic obstructions at u=+/-6
+  and remainder gcd u^3 elsewhere.  This confirms the saturated unit ideal
+  without relying on the primary Groebner path.  The companion verifies the cusp-value
   selector and defect-derivative matrices, every mixed product descent, exact
   Delta divisibility for all searched families, the unique h_1-4(x+1)
   square, two unit sextic-square ideals on the d_0 branch, the complete
@@ -26,10 +34,9 @@ audit: >
   the normalization involution.  It also verifies the exact three-generator
   presentation of the cusp-value-zero ideal, all three mixed descents, and
   the three generator-ray obstructions, the full constant-span leading seam,
-  and its saturated sextic-square unit ideal.  Normal and optimized runs must
-  byte-match the frozen transcript.  Independent audit must recheck the local
-  iff, the R/J affine-fiber classification, the sufficiency of each square
-  recurrence, all scaling/boundary cases, and the exact constant-span scope.
+  and its saturated sextic-square unit ideal.  Normal and optimized runs
+  byte-match the frozen transcript; the polynomial-coefficient scope remains
+  explicitly open.
 depends_on:
   - THM-3864-integrated-three-cusp-conductor-seminormal-three-direction-gate
   - THM-3869-three-cusp-square-residual-cardano-line-ramification
@@ -46,7 +53,7 @@ hash_basis: raw LF bytes
 
 # THM-3872 -- eight cusp polarizations, one minimal square
 
-**PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Retain
 the THM-3854 normalization and the THM-3864 rings
 
