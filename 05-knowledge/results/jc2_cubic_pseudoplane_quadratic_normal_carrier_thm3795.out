@@ -1,0 +1,15 @@
+theorem=THM-3795-r-independent-quadratic-normal-nodal-carriers-have-critical-points
+surface=r^2e-z^3+c^3r;field=algebraically_closed_characteristic_zero;c!=0
+carrier=A=e^2+z*f(e)+z^2*h(e);f(0)!=0
+canonical_normal_form=k[r,e]+z*k[r,e]+z^2*k[r,e]
+critical_torus=K=c^3+2re=0;e=-c^6/(4z^3);r=2z^3/c^3
+laurent_residues=e2:2;zf:0;z2h:1_mod_3
+mandatory_terms=(-3c^12/8)z^-7;f(0)
+sharp_boundary=z^3e^3_collision;canonical_normal_form_is_r_coupled
+constant_r_hostile=c=1;all_b_nonzero;resultant_degree=8;constant=324
+open=nonconstant_r_coupled_coefficients;different_arm_profile;Darboux_pair
+support_sha256=4636ed14bbcb9d489f9afc16167694e8c455f62f0200ee03a5a60d524fbad537
+degree_sha256=ab779862a46caa4c441f37230be459d8f8a42c178b001a1683664b1ce8d129c2
+semantic_sha256=7c86c5fc372ca92cfa7b000b333dc38155131cd1c0166f3394e2b3144262a494
+CHECKS=3535
+RESULT=PASS
