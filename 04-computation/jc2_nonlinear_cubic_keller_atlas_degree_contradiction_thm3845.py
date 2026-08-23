@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-3843's all-degree atlas contradiction."""
+"""Exact companion for THM-3845's all-degree atlas contradiction."""
 
 from __future__ import annotations
 
@@ -116,7 +116,7 @@ semantic = {
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
-print("theorem=THM-3843-nonlinear-cubic-keller-atlas-total-degree-contradiction")
+print("theorem=THM-3845-nonlinear-cubic-keller-atlas-total-degree-contradiction")
 print("classification=PROVED;VERIFIED-EXACT;INDEPENDENTLY-HOSTILE-AUDITED")
 print("packet=C2h2Q_equals_CkB_plus_P;deltaC_equals_lambdaP")
 print("h_gt_k=identity_forces_c_equals_b_minus_a_lt_0")

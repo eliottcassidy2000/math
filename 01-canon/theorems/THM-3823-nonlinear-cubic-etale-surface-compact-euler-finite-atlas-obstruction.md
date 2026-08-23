@@ -9,7 +9,7 @@ status: >
   nonfinite; if its generic degree is d, its exact signed Euler sheet debt is
   8d-1, and its finite envelope has at least two divisorial boundary primes.
   This Euler argument alone does not obstruct a nonproper dominant atlas;
-  THM-3843 subsequently excludes every polynomial plane atlas of this
+  THM-3845 subsequently excludes every polynomial plane atlas of this
   surface.  No general planar Jacobian claim follows.
 source: root / nonlinear-cubic Euler-atlas obstruction lane, 2026-08-23
 audit: >
@@ -39,7 +39,7 @@ depends_on:
 related:
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
-  - THM-3843-nonlinear-cubic-keller-atlas-total-degree-contradiction
+  - THM-3845-nonlinear-cubic-keller-atlas-total-degree-contradiction
 script: 04-computation/jc2_nonlinear_cubic_compact_euler_thm3823.py
 output: 05-knowledge/results/jc2_nonlinear_cubic_compact_euler_thm3823.out
 script_sha256: 713e7a925e4ae42852dc22c5db766510ff0cca74ce6487e224bc883c1659c5e5
@@ -233,5 +233,5 @@ Both executions must byte-match
 
 The companion reports `CHECKS=16` and `RESULT=PASS`.  It contains no inactive
 Python `assert`.  This Euler mechanism rules out finite or proper plane
-atlases only; THM-3843 later excludes the nonfinite case by an independent
+atlases only; THM-3845 later excludes the nonfinite case by an independent
 degree argument.  **QED.**

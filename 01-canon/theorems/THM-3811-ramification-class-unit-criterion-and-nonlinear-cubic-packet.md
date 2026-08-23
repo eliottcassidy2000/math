@@ -13,7 +13,7 @@ status: >
   complement is the explicit affine surface
   Spec S[A/D,omega/D], with units k* and Picard group Z^2.  This surface is
   not the THM-3785 pseudo-plane.  The original plane-atlas question is
-  subsequently REFUTED for this surface by THM-3843.  No general Jacobian
+  subsequently REFUTED for this surface by THM-3845.  No general Jacobian
   counterexample or proof is claimed.
 source: jc_quartic_c3_construct / nonlinear binary-index design lane, 2026-08-23
 audit: >
@@ -36,13 +36,13 @@ audit: >
   and the Picard quotient.  It replayed all 94 exact gates in normal and
   optimized mode against the frozen output and raw hashes.  No repair was
   found; that audit did not address the plane-atlas clause, which is
-  subsequently closed by THM-3843.
+  subsequently closed by THM-3845.
 depends_on: []
 related:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
-  - THM-3843-nonlinear-cubic-keller-atlas-total-degree-contradiction
+  - THM-3845-nonlinear-cubic-keller-atlas-total-degree-contradiction
 script: 04-computation/jc2_nonlinear_binary_cubic_ramification_class_thm3811.py
 output: 05-knowledge/results/jc2_nonlinear_binary_cubic_ramification_class_thm3811.out
 script_sha256: 1b5f6ecf9a928222683ebd71e8d2c1221b5d6496a1b3a18ec8af53c4aafe5c11
@@ -556,10 +556,10 @@ surface theorem.
 
 ```text
 SUPERSEDED-OPEN-3811:
-  THM-3843 proves that no polynomial dominant etale plane atlas (56) exists.
+  THM-3845 proves that no polynomial dominant etale plane atlas (56) exists.
                                                                     (57)
 ```
 
 Thus the class, constant-unit, and affineness gates are closed.  The
 source-plane realization question left here is subsequently closed by
-THM-3843.  **QED for `(2)--(55)`; `(56),(57)` are SUPERSEDED.**
+THM-3845.  **QED for `(2)--(55)`; `(56),(57)` are SUPERSEDED.**

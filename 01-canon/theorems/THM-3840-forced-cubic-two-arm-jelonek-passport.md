@@ -3,11 +3,11 @@ id: THM-3840
 title: "A nonlinear cubic plane atlas forces an origin/branch Jelonek pair"
 status: >
   PROVED CONDITIONAL IMPLICATION + VERIFIED-EXACT + INDEPENDENTLY
-  HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3843.  If a polynomial Keller
+  HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3845.  If a polynomial Keller
   atlas of the THM-3811 surface existed, its nonproper-value set would contain
   the target origin and at least one of three explicit smooth cubic-branch
   values.  THM-3836 supplies both exact etale arm base changes; a pole of
-  their nonconstant row unit gives the two escaping valuations.  THM-3843
+  their nonconstant row unit gives the two escaping valuations.  THM-3845
   subsequently proves that no such atlas exists.
 source: jc_quartic_c3_construct / cubic two-arm nonproper-value lane, 2026-08-23
 audit: >
@@ -19,7 +19,7 @@ audit: >
   all slope resultants, both arm limits, discriminant incidence and
   smoothness, exclusion of triple roots, branch-normalization values, the
   companion Vieta packet, and pairwise distinctness of the three candidates.
-  Normal and optimized runs byte-match the frozen transcript.  THM-3843
+  Normal and optimized runs byte-match the frozen transcript.  THM-3845
   makes the antecedent empty, so this is a counterfactual passport rather
   than an existence result.
 depends_on:
@@ -29,7 +29,7 @@ depends_on:
 related:
   - THM-3832-nonlinear-cubic-root-ratio-triangular-birational-chart
   - THM-3578-zariski-main-boundary-rank-and-sheet-debt
-  - THM-3843-nonlinear-cubic-keller-atlas-total-degree-contradiction
+  - THM-3845-nonlinear-cubic-keller-atlas-total-degree-contradiction
 script: 04-computation/jc2_forced_cubic_two_arm_jelonek_passport_thm3840.py
 output: 05-knowledge/results/jc2_forced_cubic_two_arm_jelonek_passport_thm3840.out
 script_sha256: d6373cc0e8440c54d324e18f1f335e1fb106e9ee31cb2faba6a130b7b37f4bb1
@@ -41,7 +41,7 @@ hash_basis: raw LF bytes
 # THM-3840 -- the forced two-arm fibre gives a Jelonek pair
 
 **PROVED CONDITIONAL IMPLICATION + VERIFIED-EXACT + INDEPENDENTLY
-HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3843.**  Work over an algebraically
+HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3845.**  Work over an algebraically
 closed field `K` of characteristic zero.
 Let
 
@@ -81,7 +81,7 @@ beta=2a/(7a^2-1).                                                (5)
 The three possible points `T_a` are pairwise distinct and all differ from
 `O`.  The theorem forces `O` and at least **one** of them; it does not force
 all three or identify the whole Jelonek curve.  This is a proved implication
-from the hypothetical atlas packet.  THM-3843 proves that its antecedent is
+from the hypothetical atlas packet.  THM-3845 proves that its antecedent is
 false, so it produces no actual map `F` or realized Jelonek pair.
 
 ## 1. The two source curves carry a nonconstant unit
@@ -207,4 +207,4 @@ Thus the three candidates are pairwise distinct.
 Conditionally, the theorem ties the mandatory bichromatic fibre to the
 precise `S_3` branch/companion-sheet transition.  It supplies a counterfactual
 two-value passport, not an actual polynomial atlas, the full nonproper curve,
-or a Jacobian counterexample.  THM-3843 closes the antecedent.  **QED.**
+or a Jacobian counterexample.  THM-3845 closes the antecedent.  **QED.**

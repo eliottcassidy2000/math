@@ -82,14 +82,14 @@ forces both reduced row degrees to be at least five; and audited
 [THM-3837](../01-canon/theorems/THM-3837-comaximal-line-hyperbola-affine-bichromatic-contact-nonentry.md)
 closes the first quadratic comaximal contact laboratory.  Treating the
 degree-five theorem as signal rather than a terminal produced the stronger
-[THM-3843](../01-canon/theorems/THM-3843-nonlinear-cubic-keller-atlas-total-degree-contradiction.md):
+[THM-3845](../01-canon/theorems/THM-3845-nonlinear-cubic-keller-atlas-total-degree-contradiction.md):
 the factor and cofactor degrees contradict one another in every degree order.
 Thus the THM-3811 nonlinear cubic surface has no polynomial plane atlas.
 This closes that candidate surface, not `JC(2)`.
 
 Audited [THM-3840](../01-canon/theorems/THM-3840-forced-cubic-two-arm-jelonek-passport.md)
 retains a useful counterfactual shadow: the two arm units would force the
-origin and one explicit smooth branch value into the Jelonek set.  THM-3843
+origin and one explicit smooth branch value into the Jelonek set.  THM-3845
 makes its antecedent empty, so it is a transport lemma for future surfaces,
 not evidence that such a map exists.
 
@@ -174,7 +174,7 @@ The board changed in seven important ways.
 - Before the final degree pull, a hypothetical nonlinear-cubic atlas had
   accumulated dual genus, Euler, boundary, and two-arm debts.  THM-3836 makes
   the two arms exact smooth base changes and forces component degree at least
-  two.  THM-3843 then shows that its factor/cofactor degrees are inconsistent;
+  two.  THM-3845 then shows that its factor/cofactor degrees are inconsistent;
   no polynomial atlas of this surface survives.
 - The root ratio `z=h/k` gives a triangular **rational-map** chart and a
   weighted Jacobian density.  Its name has no demonstrated connection to
@@ -547,7 +547,7 @@ condition.  The intrinsic divisor `h=0` is `G_m`; etale pullback therefore
 leaves a nonconstant unit on every plane-arm component.  This kills `h` as a
 coordinate, every `h=xy-1` standard big cell, the hyperbolic-unit first row,
 and the first Cohn row.  Nonstandard multi-ended arms were still open at this
-stage; THM-3843 later closes the whole surface.
+stage; THM-3845 later closes the whole surface.
 
 THM-3821 closes the first `rz^2` extension of THM-3814.  Its audited
 normal-form descent forces a common Kummer parameter and either a generic
@@ -578,7 +578,7 @@ A finite etale plane atlas would force `1=8d`, so every surviving atlas is
 nonfinite and has signed Euler sheet debt `8d-1`; its finite envelope also has
 at least two boundary primes.  By itself this did not obstruct a nonproper
 dominant atlas, and it does not identify signed Euler debt with the separate
-unweighted divisorial debt.  THM-3843 later closes that remaining atlas by a
+unweighted divisorial debt.  THM-3845 later closes that remaining atlas by a
 different degree mechanism.
 
 THM-3826 has now promoted the exact support-cell census in the first pure
@@ -722,7 +722,7 @@ the same genus-three curve a smooth plane quartic and a hyperelliptic curve.
 That theorem is valid, but its degree-five construction frontier is
 superseded by the following stronger pull.
 
-For THM-3843 set `a=deg h`, `b=deg k`, `c=deg C`.  The factor law is
+For THM-3845 set `a=deg h`, `b=deg k`, `c=deg C`.  The factor law is
 
 ```text
 C^2h^2Q=CkB+P.                                                (degree law)
@@ -759,7 +759,7 @@ T_a=(-2/[a(7a^2+3)],-1/a^2),        3a^3+7a^2+1=0.
 
 The second point is a smooth nontriple discriminant value with normalization
 parameter `1/a`; the three possible `T_a` are distinct.  This implication is
-independently audited but has an **EMPTY ANTECEDENT BY THM-3843**.  Its
+independently audited but has an **EMPTY ANTECEDENT BY THM-3845**.  Its
 survivor is the operation “two Laurent arms -> two boundary valuations,”
 which may be reusable when another surface survives its degree packet.
 
@@ -937,7 +937,7 @@ The cheapest high-value next tests are:
   four-term sextic cells, or derive the top bucket of a genuinely higher
   canonical slot; retain the full polynomial tower—evaluation at `z=2` is
   only a hostile control;
-- abstract THM-3843's degree trichotomy: identify which other candidate
+- abstract THM-3845's degree trichotomy: identify which other candidate
   surfaces yield a factor `P=CS` and a Darboux cofactor whose top degrees are
   incompatible, with an explicit equal-degree cancellation factor;
 - keep the conic pair `xy-1,xy-2` only as the sharp geometry control for

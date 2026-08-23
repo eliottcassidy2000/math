@@ -354,7 +354,7 @@ map to the genus-three fibration `(28)`, followed by the second-row and
 Jacobian lifts.  Interacting non-elementary Cohn words are a concrete source
 of such arms, but the standard and single-hyperbola grammars are closed.
 
-THM-3843 subsequently proves that no polynomial plane atlas of this `U`
+THM-3845 subsequently proves that no polynomial plane atlas of this `U`
 exists.  The conditional `SL_2` and arm packet above remains valid and useful;
 its former construction lane is **SUPERSEDED**.
 

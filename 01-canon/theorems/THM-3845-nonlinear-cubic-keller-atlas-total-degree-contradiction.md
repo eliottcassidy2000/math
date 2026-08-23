@@ -1,5 +1,5 @@
 ---
-id: THM-3843
+id: THM-3845
 title: "The nonlinear cubic Keller atlas degree packet is inconsistent"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  No dominant etale
@@ -25,15 +25,15 @@ related:
   - THM-3835-polynomial-marked-root-ratio-nonentry
   - THM-3838-root-ratio-numerator-denominator-degree-five-floor
   - THM-3840-forced-cubic-two-arm-jelonek-passport
-script: 04-computation/jc2_nonlinear_cubic_keller_atlas_degree_contradiction_thm3843.py
-output: 05-knowledge/results/jc2_nonlinear_cubic_keller_atlas_degree_contradiction_thm3843.out
-script_sha256: a8bac4a4f391d74b83b47770f8d60c1a5e20aec54efc789ed767dfb1756e2e8b
-output_sha256: 406d49f29a932804a7a3f9596dc8fe298f72c3196dcf49efe4eeaed5bdbf9609
+script: 04-computation/jc2_nonlinear_cubic_keller_atlas_degree_contradiction_thm3845.py
+output: 05-knowledge/results/jc2_nonlinear_cubic_keller_atlas_degree_contradiction_thm3845.out
+script_sha256: 9e42beed289d90766081a089205640a21d3b73f8bd872f72d05156ff92b6d27c
+output_sha256: 2cdbf954063a7848ece88cdfcd131ad422540aa2f3ffbd0812e408336c535e1a
 semantic_sha256: db743214723ec651d2828740145b62e94d51516c17bc6c94737e2404109a229e
 hash_basis: raw LF bytes
 ---
 
-# THM-3843 -- the factor/cofactor degrees exclude every polynomial atlas
+# THM-3845 -- the factor/cofactor degrees exclude every polynomial atlas
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
 algebraically closed field `K` of characteristic zero.  There is no dominant

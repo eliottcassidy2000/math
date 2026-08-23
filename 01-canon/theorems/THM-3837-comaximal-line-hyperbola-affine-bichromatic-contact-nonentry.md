@@ -35,7 +35,7 @@ related:
   - THM-3831-intrinsic-spectral-pencil-fibre-atlas-and-forced-cubic-two-arm-hit
   - THM-3832-nonlinear-cubic-root-ratio-triangular-birational-chart
   - THM-3836-cubic-factor-cofactor-darboux-packet
-  - THM-3843-nonlinear-cubic-keller-atlas-total-degree-contradiction
+  - THM-3845-nonlinear-cubic-keller-atlas-total-degree-contradiction
 script: 04-computation/jc2_comaximal_line_hyperbola_affine_contact_thm3837.py
 output: 05-knowledge/results/jc2_comaximal_line_hyperbola_affine_contact_thm3837.out
 script_sha256: 74b8dd003383be9737bccf263ec76a276d8713bf07f76260cb5f4c336652c560
@@ -282,6 +282,6 @@ closure.
 Within this laboratory the theorem leaves cubic and higher profiles, other
 boundary units, and other comaximal component pairs untreated.  The nearest
 topology-compatible control is the double hyperbola `xy-1,xy-2`; its first
-normal contact already forces a quadratic correction.  THM-3843 separately
+normal contact already forces a quadratic correction.  THM-3845 separately
 excludes the full THM-3811 polynomial atlas in all degrees.  No general
 Jacobian counterexample or proof is claimed.  **QED.**

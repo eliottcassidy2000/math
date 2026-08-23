@@ -33,7 +33,7 @@ related:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
   - THM-3831-intrinsic-spectral-pencil-fibre-atlas-and-forced-cubic-two-arm-hit
-  - THM-3843-nonlinear-cubic-keller-atlas-total-degree-contradiction
+  - THM-3845-nonlinear-cubic-keller-atlas-total-degree-contradiction
 script: 04-computation/jc2_polynomial_marked_root_ratio_nonentry_thm3835.py
 output: 05-knowledge/results/jc2_polynomial_marked_root_ratio_nonentry_thm3835.out
 script_sha256: 884f087731f9ab751c49d236e149002d2f26eefe5fab0f4f6858af4f0fcd6007
@@ -202,7 +202,7 @@ k Jac(h,C)-h Jac(k,C)=lambda R,             lambda in K*.    (13)
 
 Together with `(2)`, equations `(10)--(13)` retain the `k=0` divisor erased
 by the affine coordinate `z`, as well as the divisibility obligations needed
-to reconstruct `A,omega,D`.  They are necessary conditions only.  THM-3843
+to reconstruct `A,omega,D`.  They are necessary conditions only.  THM-3845
 subsequently proves that the factor/area subpacket is already inconsistent
 for a dominant polynomial Keller atlas.  That later etale conclusion does
 not weaken this theorem's dominance-only denominator statement.  No planar

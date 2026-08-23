@@ -37,7 +37,7 @@ related:
   - THM-3835-polynomial-marked-root-ratio-nonentry
   - THM-3830-coordinate-cross-bichromatic-split-nonentry
   - THM-3837-comaximal-line-hyperbola-affine-bichromatic-contact-nonentry
-  - THM-3843-nonlinear-cubic-keller-atlas-total-degree-contradiction
+  - THM-3845-nonlinear-cubic-keller-atlas-total-degree-contradiction
 script: 04-computation/jc2_cubic_factor_cofactor_darboux_packet_thm3836.py
 output: 05-knowledge/results/jc2_cubic_factor_cofactor_darboux_packet_thm3836.out
 script_sha256: 692f6caec2b3398da6ebb7cfd33f475178557375db25b29aa75d7aa3ad0d423e
@@ -310,7 +310,7 @@ corresponding intrinsic Laurent arm.
 This closes the monochromatic, reducible-`h`, and linear-component escape
 routes.  THM-3837 independently closes its line--hyperbola selector model;
 the sharp uneliminated geometry before the remaining equations is
-conic--conic.  THM-3843 subsequently combines this theorem's global packet
+conic--conic.  THM-3845 subsequently combines this theorem's global packet
 with total-degree arithmetic to exclude the full polynomial plane atlas.
 No general Jacobian counterexample or proof is claimed.
 **QED.**

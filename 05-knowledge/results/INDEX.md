@@ -1,7 +1,7 @@
 # Script Results Index
 
-- `jc2_nonlinear_cubic_keller_atlas_degree_contradiction_thm3843.py` ->
-  matching `.out` [THM-3843 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+- `jc2_nonlinear_cubic_keller_atlas_degree_contradiction_thm3845.py` ->
+  matching `.out` [THM-3845 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  For the THM-3811 surface, `P=CS` and
   `k Jac(h,C)-h Jac(k,C)=lambda P` are inconsistent in all three total-degree
   orders.  Unequal degrees force either `deg C<0` or a cofactor deficit; equal
@@ -9,16 +9,16 @@
   Therefore this nonlinear cubic surface has no dominant etale polynomial
   plane atlas.  This excludes one candidate surface, not `JC(2)`.  `CHECKS=15`.
   Script/output/semantic SHA-256:
-  `a8bac4a4f391d74b83b47770f8d60c1a5e20aec54efc789ed767dfb1756e2e8b` /
-  `406d49f29a932804a7a3f9596dc8fe298f72c3196dcf49efe4eeaed5bdbf9609` /
+  `9e42beed289d90766081a089205640a21d3b73f8bd872f72d05156ff92b6d27c` /
+  `2cdbf954063a7848ece88cdfcd131ad422540aa2f3ffbd0812e408336c535e1a` /
   `db743214723ec651d2828740145b62e94d51516c17bc6c94737e2404109a229e`.
 
 - `jc2_forced_cubic_two_arm_jelonek_passport_thm3840.py` -> matching `.out`
   [THM-3840 PROVED CONDITIONAL IMPLICATION + VERIFIED-EXACT + INDEPENDENTLY
-  HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3843].  A hypothetical atlas would
+  HOSTILE-AUDITED; EMPTY ANTECEDENT BY THM-3845].  A hypothetical atlas would
   force the origin and one of three explicit smooth cubic-branch points into
   its Jelonek set.  Exact arm base change makes the row unit nonconstant; its
-  boundary poles give the two valuations.  THM-3843 proves no such atlas
+  boundary poles give the two valuations.  THM-3845 proves no such atlas
   exists, so this is a counterfactual passport, not an existence result.
   `CHECKS=22`.  Script/output/semantic SHA-256:
   `d6373cc0e8440c54d324e18f1f335e1fb106e9ee31cb2faba6a130b7b37f4bb1` /
@@ -32,7 +32,7 @@
   `G_m` arms.  The two factors are the exact smooth reduced etale base
   changes; each irreducible component has degree at least two, so the member
   has degree at least four, with equality exactly two disjoint `G_m` conics.
-  THM-3843 later makes the atlas antecedent impossible.  `CHECKS=28`.
+  THM-3845 later makes the atlas antecedent impossible.  `CHECKS=28`.
   Script/output/semantic SHA-256:
   `692f6caec2b3398da6ebb7cfd33f475178557375db25b29aa75d7aa3ad0d423e` /
   `212befa0196033325c42f1f11eaa2fd94b79bc8b54be8f173ed7861a896ec0b4` /
@@ -55,7 +55,7 @@
   the hypothetical atlas, each reduced root-ratio entry has degree at least
   five: equality four would make the same genus-three curve both a smooth
   plane quartic and hyperelliptic.  The result remains valid conditionally,
-  but THM-3843 supersedes degree five as a construction frontier.  `CHECKS=12`.
+  but THM-3845 supersedes degree five as a construction frontier.  `CHECKS=12`.
   Script/output/semantic SHA-256:
   `57fbf881e33ca4fb4d2b8ae08f349b1fb46763239232919480a4648f7a875c90` /
   `879cf74bdcf2017ac127156ba1182909c2f21452a5b96e0f67b9fc19f5a36d8c` /
@@ -119,7 +119,7 @@
   `K[x,y]`.  The surviving rational branch has the denominator-free passport
   `CS=R`, the reconstruction laws
   `DS=k^2+Ch^2`, `AS=h(k^2+Ch^2)`, `omega S=k(k^2+Ch^2)`, and
-  `k Jac(h,C)-h Jac(k,C)=lambda R`, retaining `k=0`.  THM-3843 later proves
+  `k Jac(h,C)-h Jac(k,C)=lambda R`, retaining `k=0`.  THM-3845 later proves
   the Keller subpacket inconsistent; the dominance-only denominator result
   remains broader.  `CHECKS=25`.
   Script/output/semantic SHA-256:
@@ -235,7 +235,7 @@
   sheets on the off-branch/ordinary-branch/three-exception strata.  Hence no
   finite or proper etale atlas `A2_C -> U` exists; every surviving atlas is
   nonfinite, has signed Euler debt `8d-1`, and needs at least two boundary
-  primes.  THM-3843 later excludes the nonfinite atlas by a different degree
+  primes.  THM-3845 later excludes the nonfinite atlas by a different degree
   mechanism.  `CHECKS=16`.
   Script/output/semantic SHA-256:
   `713e7a925e4ae42852dc22c5db766510ff0cca74ce6487e224bc883c1659c5e5` /
