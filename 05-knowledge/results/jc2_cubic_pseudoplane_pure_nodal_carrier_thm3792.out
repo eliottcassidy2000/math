@@ -1,0 +1,14 @@
+theorem=THM-3792-pure-first-normal-nodal-carriers-have-critical-points
+surface=r^2e-z^3+c^3r;field=algebraically_closed_characteristic_zero;c!=0
+carrier=A_f=e^2+z*f(e);f(0)!=0
+critical_sheet=K=c^3+2re=0
+critical_polynomial=G_f=c^6*(f-3e*fprime)^3+864e^7
+recovery=e=eta;r=-c^3/(2eta);z=6eta^2/(f-3eta*fprime)
+degree_control=m[0,256];deg_G=max(3m,7);3m_ne_7
+canonical_control=f=-1/(3c^3);8z^7+9c^15=0
+closed=all_polynomial_first_normal_Bezout_parameters
+open=I^2_corrections;different_arm_immersion;higher_boundary_bidegree
+degree_sha256=37978ab54b98dc9ad33a27cdcdb03600800fcbc2a20ab9654edefcf4e3c9e9ce
+semantic_sha256=10a84bf8ce701c2806bd60a64cf978ea335ad966ff5e525f59963443d6105d3e
+CHECKS=1556
+RESULT=PASS
