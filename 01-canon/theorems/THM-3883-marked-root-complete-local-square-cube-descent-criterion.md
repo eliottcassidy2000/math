@@ -2,8 +2,7 @@
 id: THM-3883
 title: "Marked-root carrier descent reduces locally to sign matching and one cube"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  For an arbitrary reduced irreducible affine
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For an arbitrary reduced irreducible affine
   plane curve with a regular normalization root z^2=1+(2/3)AC, a fixed-sign
   polynomial carrier exists exactly when: z has the chosen sign above A=0;
   all nonzero root residues agree on each singular fibre; and at every
@@ -14,13 +13,19 @@ status: >
   higher singularity.
 source: jc_sparse_direct_search / post-THM-3880 arbitrary-singularity endpoint, 2026-08-23
 audit: >
-  SELF-AUDITED proof candidate.  The assertion-free exact companion checks
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit rederived the
+  fixed-sign rational carrier, checked Hensel uniqueness in the possibly
+  multibranch completed local ring, proved the all-order `A^2` binomial
+  cancellation, and verified that the zero-root seam is equivalent exactly
+  to cube descent.  It also checked finite-normalization/completion
+  globalization, all smooth/vertical/unit boundaries, and both plane-branch
+  controls.  The assertion-free exact companion checks
   the cusp identity, the completed binomial quotient through order ten with
   every A-order nonnegative, the simple-root factorization, the zero-root
   carrier reduction, and the sharp k[[t^2,t^3]] / k[[t^2,t^5]] cube controls.
   Normal and optimized runs byte-match the frozen 43-gate transcript.  The
   all-order proof is the formal binomial series and Hensel uniqueness, not
-  the bounded replay.  Independent hostile audit remains required.
+  the bounded replay.
 depends_on:
   - THM-3880-marked-root-opposite-sign-normalization-fibre-nondescent
 related:
@@ -35,8 +40,7 @@ hash_basis: raw LF bytes
 
 # THM-3883 -- the complete-local sign/square/cube criterion
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an algebraically closed field `k` of
 characteristic zero.  Put
 
 ```text
