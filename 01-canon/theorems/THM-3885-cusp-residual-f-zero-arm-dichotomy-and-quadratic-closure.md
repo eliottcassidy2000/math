@@ -2,22 +2,26 @@
 id: THM-3885
 title: "Cusp-residual f=0 arm dichotomy and quadratic closure"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.  In
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In
   the THM-3881 rank-two residual equation, the full f=0 lane has an exact arm
   dichotomy: T(-1,y) is either zero or a constant c with c^3=-625/32.  Every
-  total-degree-at-most-two pair in this lane is empty.  At the independent
+  total-degree-at-most-two square pair in this lane is the base pair `T=0`.  At the independent
   L=0 arm, all surviving square classes have an exact finite root-polarization
   grammar.  Nonlinear T=c+(x+1)U with deg U>=2, a Keller atlas, and JC(2)
   remain OPEN.
 source: jc_zero_debt_lift / post-THM-3881 f=0 lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT PROOF CANDIDATE.  The companion verifies the f=0 residual,
+  INDEPENDENT HOSTILE AUDIT PASS (jc_quartic_c3_construct, 2026-08-23).  The
+  audit rederived the Mason common-degree/radical bound, exhausted every
+  constant edge with both positive controls, and checked the odd-degree and
+  missing-`y` square-root arguments in the quadratic cell.  It independently
+  proved both UFD-parity directions and every unit/zero boundary in the
+  `L=0` root-polarization grammar.  Here “empty” in the transcript means no
+  nonzero `T`; the base pair remains.  The companion verifies the f=0 residual,
   both arm specializations, the complete constant square Groebner basis and
   both positive controls, the quadratic address/odd-degree/one-color gates,
   and the L=0 gcd extraction and root polarization in 20 active gates.  Normal
-  and optimized runs must byte-match the frozen output.  Independent audit
-  must recheck the Mason degree bound, every constant boundary, the y-degree
-  square argument, and both directions of the L=0 classification.
+  and optimized runs byte-match the frozen output.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
 related:
@@ -33,7 +37,7 @@ hash_basis: raw LF bytes
 
 # THM-3885 -- the f-zero lane starts above quadratic degree
 
-**PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero and retain
 the notation of THM-3881:
 
@@ -125,7 +129,7 @@ T=c+aU,                    U(0,0)=-c,                     (10)
 
 where `c` is one of the four values in `(8)`.
 
-## 3. Every quadratic cell is empty
+## 3. Every quadratic cell has only the base point
 
 Assume `deg T<=2`.  By `(10)`, the quotient has degree at most one, so write
 
