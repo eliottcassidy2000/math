@@ -2,7 +2,7 @@
 id: THM-3734
 title: "Automorphic Cohn diagonal binomial divided-power towers"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.  On every diagonal
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On every diagonal
   constant right-SL2 slice of the automorphic Cohn matrix, all polynomial
   lower-row and upper-row closures are classified.  They occur in two paired
   integer-depth binomial towers (including their constant depth-one
@@ -14,11 +14,11 @@ status: >
   of the quantifier.
 source: root + jc_sparse_direct_search / 2026-08-22
 audit: >
-  PENDING.  Two independent derivations found the lower tower (with shifted
-  depth indices), and the second derivation also rederived the reflected
-  upper tower and the homogeneous charge equations.  A final hostile audit
-  of the written theorem, signs, exact transcript, and boundary scope is
-  still required before audit promotion.
+  PASS.  An independent audit rederived both unspecialized closure PDEs, both
+  forced-charge ODEs and top resonances, all four homogeneous-charge equations
+  and their negative exponents, the r=1 boundaries, and the cyclotomic fibre
+  count.  It found no hidden homogeneous additions.  Normal, optimized, and
+  frozen output agree; script/output/semantic hashes and CHECKS=1098 match.
 depends_on:
   - THM-3653-cohn-factorial-repair-and-weighted-rectangle-holonomy
 related:
@@ -37,7 +37,7 @@ hash_basis: raw LF bytes
 
 # THM-3734 -- the diagonal slice is exactly two finite binomial towers
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.**  The constant-
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The constant-
 parameter theorem THM-3726 leaves a deliberate boundary: a constant right
 matrix followed by a genuinely polynomial exposed left shear.  On the
 diagonal right orbit, that boundary is now complete.  Surprisingly, it is not
@@ -253,6 +253,13 @@ E_+(f)E_-(h)M_0R_a,             E_-(g)E_+(h)M_0R_a   (22)
 ```
 
 is a Jacobian matrix in the corresponding tower.
+
+This also excludes an arbitrary polynomial Jacobian mate, not only a mate
+presented as the displayed final shear.  Indeed `dQ` is unimodular.  If
+`J(P,Q)=1`, then the difference between `dP` and the untouched complementary
+row has determinant zero with `dQ`; coprimality of the two entries of `dQ`
+forces that difference to be `f dQ` for a polynomial `f`.  It would therefore
+solve `(17)` or `(20)`, which has just been proved impossible.
 
 ## 5. Cyclotomic fibres and the exponential limit
 

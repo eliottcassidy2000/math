@@ -1,0 +1,11 @@
+theorem=THM-3736-automorphic-Cohn-complete-constant-SL2-exposure
+scope=arbitrary_constant_R_in_SL2;arbitrary_polynomial_exposed_parameter
+reduction=constant_Broughton_locus_or_nonconstant_triangular_binomial_gauge
+nonconstant_lower=forces_c=0;nonconstant_upper=forces_b=0
+exceptional_2a+d=0=Jordan_nilpotent_nonclosure
+mate=none_in_every_classified_case
+hostile_integer_sl2_matrices=116
+valuation_cases=1020
+semantic_sha256=2792a981c87a992894cb4422a9d4b2313194ff49cd5ef6a6ed19d0cb99762c34
+CHECKS=1436
+RESULT=PASS
