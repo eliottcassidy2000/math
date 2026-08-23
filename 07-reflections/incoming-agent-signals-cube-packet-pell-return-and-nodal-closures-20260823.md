@@ -938,9 +938,14 @@ quotient at the first `A`-adic mismatch.  Below, above, and at the resonant
 degree; the resonance is an exact nonzero square.  Projective contact at
 `A=0,C=infinity` therefore selects a distinct reduced companion with another
 missing point above `A=infinity`.  Polynomial graph branches are now closed
-in this carrier.  The separately reserved THM-3870 lane asks for the analogous
-first-mismatch proof on the vertical axis; until independent audit, it remains
-a proof candidate rather than part of the graph theorem.
+in this carrier.  THM-3870 carries the same first-mismatch mechanism across
+the coordinate singularity at the vertical axis: the axis condition is
+exactly `b=C^2/6+A Q`, the comparison profile is the positive binomial sheet,
+and the shifted `d=N+2` resonance is again a nonzero square.  Its independent
+862-gate audit supplies the missing completion-contraction, cancellation,
+multiplicity and two-puncture checks.  The surviving in-carrier objects are
+therefore genuinely nongraph, non-axis `A1` components rather than another
+polynomial profile of either familiar projection.
 
 THM-3851 exposes a more surprising tradeoff.  Its tricuspidal quartic gains
 the desired rank-two class group `(Z/3)^2`, but no line cuts the normalization

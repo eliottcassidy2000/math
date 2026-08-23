@@ -349,8 +349,9 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   non-uniruled; THM-3844 is one-place but monogenic.  THM-3850/3852 close the
   one-variable and affine-line profiles; THM-3859 classifies polynomial
   marked roots, and THM-3866 extends the punctured-companion gate to arbitrary
-  polynomial transverse quotients.  The vertical axis and nongraph `A1`
-  components remain separate lanes.  THM-3851's
+  polynomial transverse quotients; THM-3870 closes the vertical-axis profile
+  by the analogous first-mismatch degree drop.  Nongraph `A1` components
+  remain the in-carrier lane.  THM-3851's
   `(Z/3)^2` closure is a unit-rich torus, while THM-3854's one-place
   three-cusp front has `S5` monodromy and no cubic quotient or interior-arm
   entry.  Alternative constant-unit nonmonogenic cubic orders remain open.

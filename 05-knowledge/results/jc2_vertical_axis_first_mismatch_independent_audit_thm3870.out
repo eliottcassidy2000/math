@@ -1,0 +1,11 @@
+THM3870_VERTICAL_FIRST_MISMATCH_HOSTILE_AUDIT PASS
+CLASSIFICATION A|Delta iff b=C^2/6+A*Q
+COMPARATOR unique positive-sign formal binomial branch
+FIRST_MISMATCH finite and unique for every polynomial Q
+DIVISIBILITY A^(N+1) completion-to-polynomial gate
+DEGREE_REGIMES lower / d=N+2 square / higher all strict
+CANCELLATION shared q_N leading terms explicitly tested
+FACTOR_GATE multiplicities retained; selected reduced factor dominates A
+PUNCTURES distinct missing points over A=0 and A=infinity
+SEMANTIC_SHA256 48aa2b48290aa53595bf9bbea0f0a7015fde2ea13515543cf62b6a941b857079
+GATES 862
