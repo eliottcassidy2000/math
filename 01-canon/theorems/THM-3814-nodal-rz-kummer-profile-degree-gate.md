@@ -2,8 +2,8 @@
 id: THM-3814
 title: "Nodal RZ profile repairs cannot be Darboux pairs"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  On the c=1 cubic pseudo-plane, no Darboux pair
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the c=1
+  cubic pseudo-plane, no Darboux pair
   with the normalized nodal arm jet can have all higher canonical terms
   confined to r g(e), z^2 f(e), and rz p(e) in the two outputs.  The top
   Wronskian first forces a 5/4 Kummer tower.  A nonzero root of its parameter
@@ -13,22 +13,28 @@ status: >
   arbitrary higher canonical coefficients and not the planar JC.
 source: jc_zero_debt_lift / nodal rz Kummer-tower lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The deterministic companion has 44 active
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The arbitrary-function
+  Poisson reduction, monic quotient normal form, three decisive buckets,
+  asymmetric branch, constant-field and UFD steps, complete constant tower,
+  and both local-order contradictions were rederived independently.  At a
+  nonzero root the audit checked that the arm identity itself excludes the
+  apparent D=0 denominator seam before computing the exact 4m-1 lead; at the
+  origin it checked f(0)=1/12 and the nonzero 3+4d lead.  The deterministic
+  companion has 44 active
   gates checking the Poisson signs, unique monic z-normal reduction, the
   arm, Wronskian, and r^2z^2 buckets, both Kummer valuation patterns, the
   asymmetric boundary, the complete constant-tower divisions and residual
   1/4, and both all-degree local leading coefficients and order gaps.  As an
   independent hostile control only, it also closes the linear tower through
   two arm remainders, a uniform rank-five compatibility, and an exact unit
-  ideal.  Normal/-O/frozen/hash/documentation replay is required before
-  audit promotion.
+  ideal.  Normal and optimized runs byte-match the frozen transcript, and
+  both raw artifact hashes match the metadata.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3812-nodal-arm-coefficient-second-normal-profile-nonentry
 related:
   - THM-3787-cubic-pseudoplane-complete-low-support-darboux-nonentry
   - THM-3790-cubic-pseudoplane-arm-nodal-immersion-gate
-  - THM-3811-nodal-arm-bezout-law-for-cubic-pseudoplane-darboux-pairs
   - THM-3813-quartic-r-repairs-of-nodal-carriers-have-critical-points
 script: 04-computation/jc2_cubic_pseudoplane_nodal_rz_kummer_gate_thm3814.py
 output: 05-knowledge/results/jc2_cubic_pseudoplane_nodal_rz_kummer_gate_thm3814.out
@@ -40,9 +46,8 @@ hash_basis: raw LF bytes
 
 # THM-3814 -- the first mixed nodal profile is still too small
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Let `k` be an algebraically closed field of
-characteristic zero and put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k` be an
+algebraically closed field of characteristic zero and put
 
 ```text
 B=k[r,z,e]/(r^2e-z^3+r),
