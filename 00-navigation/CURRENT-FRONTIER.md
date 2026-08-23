@@ -342,10 +342,10 @@ support asymptotic or residue.
   affine/homogeneous/`2x2` no-gos. THM-3787/3796/3798 close low support,
   every one-collision `2x4`, common steps one--three, and their output swaps;
   common step four and disjoint collision chains survive. THM-3790/3792/
-  3795/3799/3800/3803/3805/3806/3809 show the forced nodal carrier, every
-  r-independent correction, every monomial, degree-at-most-two `r g(e)`,
-  every binomial cubic `r g(e)`, the constant `r+z^2` mixed cell, and the
-  sharp torus-escaping carrier are critical (the last at fourteen points).
+  3795/3799/3800/3803/3805--3807/3809/3810 show the forced nodal carrier,
+  every r-independent correction and monomial, every polynomial `r g(e)` of
+  degree at most three, every affine-`g` plus constant-`z^2` mixed cell, and
+  the sharp torus-escaping carrier are critical (the last at fourteen points).
   THM-3791/3797/3802 identify the finite-etale resonant jet, its confluent
   modification-tree boundary, and the actual plane-chart law
   `H^2_dR=E/k`; a contact tree without charts constructs nothing. THM-3794
@@ -353,9 +353,8 @@ support asymptotic or residue.
   a nonmonogenic `S3` completion with one companion per branch; the nodal arm
   is not a discriminant component. Audited THM-3808 makes every squarefree
   homogeneous-linear cubic a third-Veronese cone whose etale open has
-  rank-4 units. THM-3807/3810 are full-cubic and affine-mixed proof
-  candidates awaiting hostile audit. Higher degree, mixed `deg g>=2` or
-  nonconstant `h`, poles/supports, branch curves, unrestricted
+  rank-4 units. Nonmonomial degree-at-least-four `r` profiles, mixed
+  `deg g>=2` or nonconstant `h`, poles/supports, branch curves, unrestricted
   `C[A,d]^2`, `JC(2)`, and `DC(2)` remain OPEN.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
@@ -369,9 +368,10 @@ support asymptotic or residue.
   `B,C,E`, clutch, transport, sparse, character, Prüfer, and Artin-jet lanes,
   but no section/transfer; THM-3306 sidecars are FINITE-EXACT only.
   The newer surface-factor chain is
-  routed above: THM-3806/3809 close binomial cubic and constant mixed cells;
-  THM-3807/3810 await audits. Higher degree/nonconstant mixed corrections,
-  arbitrary mates, and off-nodal branches remain OPEN with `JC(2),DC(2)`.
+  routed above: THM-3807/3810 close all cubic `r` profiles and affine-constant
+  mixed cells. Higher support at degree at least four, mixed quadratic-or-
+  higher `g`, nonconstant `h`, arbitrary mates, and off-nodal branches remain
+  OPEN with `JC(2),DC(2)`.
 - **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
   all `2665` residuals in `7395` rows (`2384` divisor, `281` rho).
   `d=6518` needs `p=29`, refuting `p<=23`. FINITE-EXACT at `d=10001`:
