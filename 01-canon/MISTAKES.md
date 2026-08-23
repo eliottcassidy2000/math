@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-448 (2026-08-23, THM-3798 candidate audit) -- canceling by a proposed divisor and multiplying back is a vacuous divisibility gate
+
+- **What failed:** the first scratch companion for the common-AP step-three
+  candidate set `Q=cancel(S/Delta^m)` and then checked
+  `S=Delta^m Q`.  That equality holds in the rational function field by
+  construction; it does not prove `Q` is polynomial and therefore does not
+  certify `Delta^m|S`.
+- **Minimal witness / first failed implication:** take `S=1` and a
+  nonconstant `Delta`.  Then `cancel(S/Delta)=1/Delta` and
+  `S=Delta cancel(S/Delta)`, although `Delta` does not divide `1`.
+  The failed implication was equality in `k(w)` => membership of the
+  quotient in `k[w]`.
+- **Repair:** every THM-3798 candidate divisor gate now displays an explicit
+  denominator-free quotient assembled from polynomial profiles and their
+  derivatives, checks the factor identity, and separately checks that the
+  quotient denominator is one.  The repaired companion also makes integration
+  constants arbitrary and tests their zero seams.  Its normal and optimized
+  executions match the repaired frozen transcript; an independent audit uses
+  separate first-jet factor and polynomial-remainder gates.
+- **Scope:** this was caught before theorem promotion, so no mathematical
+  statement was canonized falsely.  The proof's endpoint-power mechanism
+  survives.  Reusable rule: a CAS quotient is evidence for divisibility only
+  after polynomial-ring membership is certified independently of the
+  quotient identity.
+
 ## MISTAKE-447 (2026-08-23, THM-3790 optimized audit) -- a matching optimized transcript had erased every truth gate
 
 - **What failed:** the first THM-3790 companion put all ten truth-bearing
