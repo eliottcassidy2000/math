@@ -1,0 +1,35 @@
+=== Rational finite-mean ambiguity ===
+1/14=[0;14]=[0;13,1], with finite digit products 14 and 13.
+A rational finite Khinchin mean is convention-dependent before canonicalization.
+
+=== Infinite LRC endpoint hostile ===
+For every odd m>=3:
+  [0;1,2m]=2m/(2m+1) and [0;2,m]=m/(2m+1)
+  share length 2, digit product 2m, denominator 2m+1, and final midpoint phase 0;
+  the first centered pair has no tie, while the second has exactly one tie.
+Bounded replay: 300 exact gates for odd 3<=m<=101.
+
+=== Canonical bounded LRC census ===
+Reduced pairs with denominator<=200: 12231.
+Khinchin-length/product + denominator + final-phase groups mixing tie status: 1222.
+Minimal key (2, 6, 7, 0): [(2, (3, 2), 0), (3, (2, 3), 1), (6, (1, 6), 0)].
+
+=== Current 182-skeleton ordered-word collision ===
+43/182=[0;4,4,3,3] and 55/182=[0;3,3,4,4].
+They are distinct THM-3710 phases with the same length, product 144, and final phase 1.
+
+=== Constant continued-fraction tails in SL2 ===
+E_+(1)E_-(6)=((7, 1), (6, 1)); E_+(2)E_-(3)=((7, 2), (3, 1)).
+The same digit product gives different constant SL2 words; THM-3736 closes the whole constant-right orbit.
+
+=== JC cyclic multiplier holonomy ===
+Exhaustive alpha_i in {-3,-2,-1,1,2,3}, lengths 2..5: 9324 determinant gates.
+(2,1/2) closes, while (-2,1/2) has the same absolute geometric mean and does not.
+Factorial seams (2,3,...,n+1), 1<=n<=12: 24 exact gates, all nonclosing.
+
+=== Verdict ===
+Khinchin's constant is a typical asymptotic scalar for irrational digit products.
+The exact finite objects needed here are ordered continuants plus target-specific sidecars:
+  LRC: common scale, midpoint phase trace, tie blocks, owners, and semantic arrival;
+  JC: the exact constant/polynomial SL2 word, multiplier holonomy, curl, and charge sector.
+CHECKS=34310
