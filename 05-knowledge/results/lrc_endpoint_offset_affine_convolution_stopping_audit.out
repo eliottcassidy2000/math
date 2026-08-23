@@ -1,0 +1,14 @@
+charts=30
+ledger_sha256=6d740186d329b552298d6e8e38d319b61472c9d56f93de29c1edbf65e94d0715
+raw_offset_profiles_mod13=1
+raw_offset_profile_is_zero_mod13=True
+signed_endpoint_profiles_mod13=13
+endpoint_offset_partitions_equal_mod13=False
+exact_chart_variation_ranks_endpoint_offset_joint=(6, 5, 6)
+affine_reindexings_tested=12
+mod_1000003_all_alpha_linear_rank_pair=(26, 27)
+mod_1000003_all_alpha_affine_rank_pair=(27, 28)
+mod_1000033_all_alpha_linear_rank_pair=(26, 27)
+mod_1000033_all_alpha_affine_rank_pair=(27, 28)
+rational_twisted_convolution_exists=False
+rational_affine_twisted_convolution_exists=False
