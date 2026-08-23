@@ -357,17 +357,19 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   THM-3864/3872 close eight polarizations, seven minimal slices and the full
   constant cusp-ideal span; polynomial coefficients remain open.  THM-3869
   pays one Cardano line, while THM-3874/3877 use scalar units and `Cl=Z` to
-  exclude degree-three/four sole-simple-branch fields.  Audit-pending
-  THM-3879 recovers the missing `C3` packet but sharply costs two places.
+  exclude degree-three/four sole-simple-branch fields.  THM-3879's audited
+  `C3` core costs two places; uniqueness awaits audit.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
   self-identifying immersed arm, THM-3846 its formal first jets, and THM-3849
   only visible conductor contact.  THM-3856/3861/3867/3871 close normal
-  `z`-depth through five; degree six is first, with two non-arm quintic buckets
-  decisive.  THM-3860 escapes the square rationally, but THM-3868 blocks
-  rational fixed-seed precomposition.  A FINITE-EXACT alternative has
-  nonconstant Jacobian: no Keller map.  THM-3862 makes any finite completion
+  `z`-depth through five.  FINITE-EXACT audits shear `(6,1)--(6,3)`, kill the
+  principal `(6,5)` face, and leave a nonreduced `(6,4)` cusp; other
+  channels remain open.  A cubic quotient audit needs a determinant cocycle
+  and empties its affine cell; rational corrections remain open.
+  THM-3860/3868 bound rational square escape and fixed-seed precomposition.
+  THM-3862 makes any finite completion
   flat and nonmonogenic, with `A1` branches at common infinity; at `d=3` the
   arm is not a branch.  THM-3839 excludes only one constant tower.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
