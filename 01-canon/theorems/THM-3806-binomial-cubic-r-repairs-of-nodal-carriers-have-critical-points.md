@@ -2,7 +2,7 @@
 id: THM-3806
 title: "Binomial cubic R-repairs of nodal carriers have critical points"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  On the
   c=1 cubic pseudo-plane, every canonical nodal carrier
   A=e^2-z/3+r(mu e^j+lambda e^3), j in {0,1,2}, mu*lambda!=0, has a
   critical point.  Boundary-only support for the degree-seventeen residual
@@ -14,12 +14,17 @@ status: >
   higher degree, and mixed corrections remain open.
 source: jc_zero_debt_lift / cubic-binomial boundary-divisibility lane, 2026-08-23
 audit: >
-  PROOF CANDIDATE.  The exact companion has 46 active gates checking the
+  INDEPENDENT HOSTILE AUDIT PASS (jc-cohn-boundary, 2026-08-23).  The exact
+  companion has 46 active gates checking the
   universal P/Q resultant, all generic and exceptional degrees and leading
   coefficients, localized Euclidean divisions, decisive remainder
   coefficients, Hamiltonian signs, denominator exclusions, and explicit
   source reconstruction.  Normal and optimized runs byte-match the frozen
-  transcript.  Independent hostile audit remains required.
+  transcript.  The audit re-derived the boundary-support divisibility with
+  multiplicities, checked every localization and exceptional specialization,
+  verified that the quartic Q excludes a root at infinity, replayed the
+  source/critical reconstruction, ran normal and optimized companions against
+  the frozen output, and matched the recorded raw-byte hashes.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3799-monomial-r-repairs-of-nodal-carriers-have-critical-points
@@ -37,7 +42,7 @@ hash_basis: raw LF bytes
 
 # THM-3806 -- every binomial cubic r-repair remains critical
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.**  Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**  Work over
 an algebraically closed field `k` of characteristic zero.  On the `c=1`
 member of the THM-3785 cubic pseudo-plane put
 
