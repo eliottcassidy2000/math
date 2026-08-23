@@ -2,7 +2,7 @@
 id: THM-3741
 title: "Radial two-charge Keller-component classification"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.  Over an algebraically
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over an algebraically
   closed characteristic-zero field, every nonsingular polynomial
   Q=X phi(XT)+T psi(XT) is exactly a nonzero linear form, a squarefree
   single-charge profile nonvanishing at the origin, or one of the two mixed
@@ -12,10 +12,11 @@ status: >
   empty as a planar Jacobian-counterexample search space.
 source: root + jc_sparse_direct_search / 2026-08-22
 audit: >
-  PENDING.  The proof and exact companion have been internally rederived in
-  both charge orientations.  Normal, optimized, and frozen output agree;
-  script/output/semantic hashes and CHECKS=1126 match.  Independent hostile
-  review of the axis-valuation boundary and mate classification remains due.
+  PASS.  An independent hostile audit rederived the mixed-axis order boundary,
+  the root-multiplicity quotient and off-profile torus root, the pure-charge
+  squarefree criterion, both charge projections, the transfer of both mixed
+  flanks to THM-3716, and the explicit linear mates.  Normal, optimized, and
+  frozen output agree; script/output/semantic hashes and CHECKS=1126 match.
 depends_on:
   - THM-3716-monomial-broughton-hamiltonian-obstruction-family
   - THM-3738-opposite-charge-radial-profile-critical-point-obstruction
@@ -31,7 +32,7 @@ hash_basis: raw LF bytes
 
 # THM-3741 -- the full radial two-charge ansatz has no Keller pair
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.**  THM-3738 killed
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  THM-3738 killed
 the generic boundary where both radial profiles are nonzero at the origin.
 The excluded axes are not merely technical exceptions: they contain infinite
 families of nonsingular noncoordinates.  This theorem classifies all of them
