@@ -304,27 +304,23 @@ support asymptotic or residue.
 ## Other active portfolio
 
 - **AMM:** THM-3588 forces `R=512` departures by `(35,38,39,42,44)`.
-  At `R=32768`, independent FINITE-EXACT Rule-A replays close offsets `855`
-  and `856`, while the observer-elided exact state replay gives
-  `854:DIE@8246`.  Thus `854/855` is a one-step local fixed-Rule-A transition;
-  an optimized independent execution audit is live before theorem promotion.
+  At `R=32768`, observer-retaining FINITE-EXACT Rule-A gives
+  `854:DIE@8246`, `855:CLOSED@20238`, `856:CLOSED@20233`; 32,830-gate
+  normal/`-O` and small `-O0/-O3` controls match. Thus `854/855` is a
+  one-step local fixed-Rule-A transition.
   No monotonicity in `D0`, global feasibility, or value of `C*` follows;
   those remain OPEN.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** THM-3502/3511/3512/3516 retain the exact compiler, cocycle,
-  depth, owner, and carry boundaries. [THM-3778](../01-canon/theorems/THM-3778-rule30-odd-period-finite-scale-cycle-projective-profile-no-go.md)
-  makes every saturated odd-period finite scale-cycle a union of open
-  projective eigenspaces and excludes physical `Q_2` realizations.
+  depth, owner, and carry boundaries. THM-3778 excludes saturated odd-period
+  finite scale-cycles and physical `Q_2` realizations.
   [THM-3804](../01-canon/theorems/THM-3804-rule30-all-period-amplitude-lattice-smith-law.md)
   gives the all-period image: for `n=2^a m`, rank `d=n/2^min(a,r)`, free
-  defect `n-d`, and one cyclic factor `2^(r-min(a,r))`. Even projective
-  periods halve, so physical profiles have
-  no dyadic spatial period and no finite-spatial exact scale-cycle at any
-  declared period.  The integral lift, owner, gauge, chronology, and overflow
-  remain sidecars; center nonperiodicity, balance, complexity, and every
-  prize remain OPEN.
+  defect `n-d`, and one cyclic factor `2^(r-min(a,r))`. Hence physical
+  profiles have no dyadic spatial period or finite-spatial exact scale-cycle.
+  Integral lift, owner, chronology, overflow and every prize remain OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT;
   Nagata/GGHV and THM-3543--3642 give degree/height floors and
   low-sector closures. Audited THM-3687/3688 reach `J_0,J_1,J_2`;
@@ -342,20 +338,19 @@ support asymptotic or residue.
   affine/homogeneous/`2x2` no-gos. THM-3787/3796/3798 close low support,
   every one-collision `2x4`, common steps one--three, and their output swaps;
   common step four and disjoint collision chains survive. THM-3790/3792/
-  3795/3799/3800/3803/3805--3807/3809/3810 show the forced nodal carrier,
-  every r-independent correction and monomial, every polynomial `r g(e)` of
-  degree at most three, every affine-`g` plus constant-`z^2` mixed cell, and
-  the sharp torus-escaping carrier are critical (the last at fourteen points).
+  3795/3799/3800/3803/3805--3807/3809/3810/3813/3815 close: r-independent corrections, monomials, every
+  `r g(e)` through degree four, quadratic-`g` plus constant `z^2`, and the
+  sharp fourteen-critical-point carrier. THM-3812 also forbids a Darboux pair
+  confined to arbitrary arm-coefficient `r/z^2` profiles.
   THM-3791/3797/3802 identify the finite-etale resonant jet, its confluent
   modification-tree boundary, and the actual plane-chart law
   `H^2_dR=E/k`; a contact tree without charts constructs nothing. THM-3794
-  excludes degree-two etale maps under constant units. Audited THM-3801 forces
-  a nonmonogenic `S3` completion with one companion per branch; the nodal arm
-  is not a discriminant component. Audited THM-3808 makes every squarefree
-  homogeneous-linear cubic a third-Veronese cone whose etale open has
-  rank-4 units. Nonmonomial degree-at-least-four `r` profiles, mixed
-  `deg g>=2` or nonconstant `h`, poles/supports, branch curves, unrestricted
-  `C[A,d]^2`, `JC(2)`, and `DC(2)` remain OPEN.
+  excludes degree-two etale maps under constant units. THM-3801 forces a
+  nonmonogenic `S3` completion; THM-3808's homogeneous packet is a Veronese
+  cone with rank-4 open units. THM-3811's nonlinear packet instead has one
+  rational ramification curve and an exact class/unit test; THM-3816 proves
+  `S*=k*`. Open: `[E]` order, complement affineness, pure `r` degree `>=5`,
+  mixed degree `>=3`/nonconstant `h`, poles, unrestricted pairs and `JC/DC(2)`.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692
@@ -367,11 +362,10 @@ support asymptotic or residue.
   THM-3167/3172 retain diagonal/field/owner gates. THM-3212--3437 close named
   `B,C,E`, clutch, transport, sparse, character, Prüfer, and Artin-jet lanes,
   but no section/transfer; THM-3306 sidecars are FINITE-EXACT only.
-  The newer surface-factor chain is
-  routed above: THM-3807/3810 close all cubic `r` profiles and affine-constant
-  mixed cells. Higher support at degree at least four, mixed quadratic-or-
-  higher `g`, nonconstant `h`, arbitrary mates, and off-nodal branches remain
-  OPEN with `JC(2),DC(2)`.
+  Surface chain (routed above): pure `r` through quartic and constant-`z^2`
+  mixed through quadratic `g` are closed; no pair stops at arbitrary `r/z^2`
+  profiles. Degree `>=5` pure, degree `>=3` mixed, nonconstant `h`, `rz`/higher
+  slots, arbitrary mates and off-nodal branches remain OPEN.
 - **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
   all `2665` residuals in `7395` rows (`2384` divisor, `281` rho).
   `d=6518` needs `p=29`, refuting `p<=23`. FINITE-EXACT at `d=10001`:
