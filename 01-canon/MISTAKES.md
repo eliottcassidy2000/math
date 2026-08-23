@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-449 (2026-08-23, live reservation race) -- a conflict-free rebase was mistaken for a still-valid namespace check
+
+- **What failed:** a completed search found `THM-3803` free and a Rule 30
+  reservation was committed.  The first push was correctly rejected because
+  another agent had reserved a different `THM-3803` after that search.  The
+  retry fetched and displayed the incoming reservation, then chained
+  `rebase origin/main` directly to `push` without rerunning the ID gate.
+  Because the two files had different slugs, the rebase had no text conflict
+  and briefly pushed two frontmatter records with the same theorem ID.
+- **Minimal witness / first failed implication:** at commit `ac2a64986`,
+  `origin/main` contained both the affine-linear repair stub and the Rule 30
+  Smith-law stub with `id: THM-3803`.  The failed implication was
+  `conflict-free rebase => the pre-rebase namespace check is still valid`.
+  A namespace collision is semantic and need not create a Git conflict.
+- **Repair / strongest survivor:** the Rule 30 reservation was immediately
+  moved to unique `THM-3804`; the duplicate-ID count and `check_docs.py` were
+  rerun before the repair push.  The affine-linear `THM-3803` reservation and
+  the Rule 30 proof candidate both survived unchanged, and both were later
+  promoted under their unique IDs.
+- **Reusable rule:** a non-fast-forward rejection invalidates every prior
+  scarcity check.  After fetching and rebasing a reservation, stop and rerun
+  filename, YAML-ID, history, duplicate-count, and documentation gates before
+  pushing.  Never chain reservation rebase and push in one unchecked command.
+
 ## MISTAKE-448 (2026-08-23, THM-3798 candidate audit) -- canceling by a proposed divisor and multiplying back is a vacuous divisibility gate
 
 - **What failed:** the first scratch companion for the common-AP step-three
