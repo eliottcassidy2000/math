@@ -270,11 +270,13 @@ Btilde=k[x,w,e]/(x^3e-w^3+c^3),
 mu_3:(x,w,e) |-> (zeta x,zeta^(-1)w,e),               (24b)
 ```
 
-and the source plane is the chart `w=c+x^3y`.  The exponent and the opposite
-deck characters in `(24b)` do not literally match the standard type-`r=2`
-presentation.  Reconciling `(24b)` with Miyanishi's completion parameters is
-**OPEN**.  The citation is context, not a dependency; no step below uses an
-exact pseudo-plane type label.
+and the source plane maps into this normalization by the one-branch affine
+modification `w=c+x^3y`; it is not being identified with an open chart of
+`Spec(Btilde)`.  The exponent and the opposite deck characters in `(24b)` do
+not literally match the standard type-`r=2` presentation.  Reconciling
+`(24b)` with Miyanishi's completion parameters is **OPEN**.  The citation is
+context, not a dependency; no step below uses an exact pseudo-plane type
+label.
 
 ## 5. Poisson packet and the exact symplectic form
 
@@ -500,8 +502,8 @@ and the surface equation becomes
 (a-2lambda^3)r^2+c^3=0.                              (51)
 ```
 
-Unless `a=b=0`, one of the two choices of `lambda` from `(43)` has nonzero
-coefficient in `(44)`, and algebraic closedness supplies a critical point.
+Unless `a=b=0`, one of the two choices of `lambda` from `(50)` has nonzero
+coefficient in `(51)`, and algebraic closedness supplies a critical point.
 When `a=b=0`, equations `(42)` and `(6)` are incompatible, so `e` is smooth.
 Therefore the smooth affine-linear carriers, up to scale and translation,
 are exactly
