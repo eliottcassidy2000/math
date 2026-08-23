@@ -1,0 +1,10 @@
+theorem=THM-3837-comaximal-line-hyperbola-affine-bichromatic-contact-nonentry
+fibre=u=x;v=xy-1;gcd(u,v)=1
+row=k=x-v+uv*q;determinant_completion=exact
+selector=d=-b(alpha)*x^2/alpha^2+uv*D
+first_contact=one_parameter_survives;corrected_k_f=q-1/x
+second_contact=L_u_and_L_v_incompatible;resultant=-5817545
+quadratic_scout=GF11_alpha1_degree2_first_two_contacts_unit;CHAR0_OPEN
+scope=n1_affine_qD_only;second_row_and_Jacobian_OPEN
+CHECKS=27
+semantic_sha256=3f345677c44bb03fa61e660f7e3db26af85cb5407fee65e1213c099bb29b268c
