@@ -19,8 +19,9 @@ The user phrase “Kinchin's content” is interpreted here as **Khinchin's
 constant and the continued-fraction digit content it measures**.  No theorem
 depends on this interpretation beyond the explicitly typed metric statement.
 There is a second relevant interpretation: **Khinchin's Flatness Theorem**.
-Section 11 audits that orthogonal lane independently and does not use the
-reserved THM-3743 namespace.
+Section 11 audits that orthogonal lane independently; its result is now
+promoted as
+[THM-3743](../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md).
 
 Exact companion:
 
@@ -493,9 +494,9 @@ hypothetical LRC(14) counterexample
      a dot n=0 and ||a||_1<=356.                      (28)
 ```
 
-Statement `(28)` is **CITED + PROVED ALGEBRA**, not a promoted theorem in this
-session.  THM-3743 remains **RESERVED / UNPROVED EMPTY STUB** and has no
-mathematical force.
+Statement `(28)` is **CITED + PROVED ALGEBRA**.  Following this independent
+audit and a second exact replay, it was promoted as
+[THM-3743](../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md).
 
 ### 11.2 The minimal flat direction is a Graver relation
 

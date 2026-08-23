@@ -9,9 +9,10 @@ with projected lattice Lambda = Z^k | n^perp.  A counterexample makes Z(n)
 Lambda-free.  Khinchin's Flatness Theorem then supplies a nonzero dual-lattice
 direction of width at most Flt(k-1).
 
-This script verifies the exact quotient-lattice algebra, the width formula,
-and the explicit dimension-12 numerical consequence.  It does not prove the
-cited flatness theorem and does not promote reserved THM-3743.
+This independently written script verifies the exact quotient-lattice algebra,
+the width formula, and the explicit dimension-12 numerical consequence.  It
+does not prove the cited flatness theorem; its audited consequence is now
+promoted separately as THM-3743.
 """
 
 from __future__ import annotations
@@ -245,5 +246,5 @@ print("\n=== Scope verdict ===")
 print("This exact audit supports a conditional/cited reduction only:")
 print("  counterexample => lattice-free projected zonotope => one relation with l1 norm <=356.")
 print("It does not preserve support, sign pattern, endpoint owner, or semantic arrival.")
-print("THM-3743 remains RESERVED / UNPROVED and is not used here.")
+print("The audited reduction is promoted separately as THM-3743; this script does not prove the cited flatness theorem.")
 print(f"CHECKS={checks}")

@@ -1,0 +1,46 @@
+=== Pell and affine companion recurrences ===
+P_n and A_n checked through n=201; A_(n+2)=2A_(n+1)+A_n-1.
+
+=== Monotone candidate phases ===
+U_n=A_n/(P_n+1) decreases, with the sole adjacent tie U_2=U_3=1/3.
+
+=== All-length safe witness and global interval collapse ===
+For every N<=200 the phase delta_N is safe and the proof interval collapses to t=delta_N.
+The same displayed inequalities are symbolic in N; the computation is a hostile replay, not induction by sampling.
+
+=== Independent exact lower-envelope scan ===
+N= 1  M=    1/2  unique_half_circle_time=1/2
+N= 2  M=    1/3  unique_half_circle_time=1/3
+N= 3  M=    1/3  unique_half_circle_time=1/3
+N= 4  M=   4/13  unique_half_circle_time=4/13
+N= 5  M=   3/10  unique_half_circle_time=3/10
+N= 6  M=  21/71  unique_half_circle_time=21/71
+N= 7  M=   5/17  unique_half_circle_time=5/17
+N= 8  M=120/409  unique_half_circle_time=120/409
+N= 9  M=  17/58  unique_half_circle_time=17/58
+
+=== Odd square-triangular factorization ===
+ k   N=4k-1       M       N=4k+1       M       (a,s,x,b)
+ 1    3        1/3    5       3/10  (1,2,3,5)
+ 2    7       5/17    9      17/58  (5,12,17,29)
+ 3   11      29/99   13     99/338  (29,70,99,169)
+ 4   15    169/577   17   577/1970  (169,408,577,985)
+ 5   19   985/3363   21 3363/11482  (985,2378,3363,5741)
+ 6   23 5741/19601   25 19601/66922  (5741,13860,19601,33461)
+ 7   27 33461/114243   29 114243/390050  (33461,80782,114243,195025)
+ 8   31 195025/665857   33 665857/2273378  (195025,470832,665857,1136689)
+
+=== Closed symmetric distance profiles ===
+Both odd-index profile formulas checked for k=1,...,8 at every runner.
+
+=== The 13-speed square-triangular row and hostiles ===
+S_13=(P_1,...,P_13) has M=99/338 and profile numerators over 338:
+  99,140,157,164,167,168,169,168,167,164,157,140,99
+Replacing the central speed P_7=169 by 170 makes the proposed phase margin 35/169.
+Including P_0=0 forces the maximum to zero; neither hostile inherits the theorem.
+
+=== Scope ===
+The Pell word is the deterministic silver continued fraction with digit 2, not Khinchin-typical data.
+At N=13 the margin 99/338 is far above 1/14, so this is a structured safe family, not an LRC(14) frontier closure.
+No planar-Jacobian carrier or variable polynomial Cohn factor is produced.
+CHECKS=161773

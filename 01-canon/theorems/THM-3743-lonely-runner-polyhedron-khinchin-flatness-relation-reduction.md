@@ -8,39 +8,46 @@ status: >
   twelve-zonotope.  Its dual lattice is exactly the integer relation lattice,
   and the width in relation direction a is (6/7)||a||_1.  Khinchin flatness
   therefore forces a primitive nonzero speed relation with
-  ||a||_1<=(7/6)Flt(12); the classical explicit Flt(d)<=d^(5/2) bound gives
-  ||a||_1<=581.  The numerical cap is weaker than THM-2144's existing 367,
-  but the proof exposes a restricted centrally symmetric, thirteen-generator,
-  two-torsion-centred zonotope class and a recursive slice interface.  No
-  LRC(14) conclusion follows.
+  ||a||_1<=(7/6)Flt(12).  The explicit general estimate recorded by
+  Averkov--Hofscheier--Nill gives ||a||_1<=356, improving THM-2144's total
+  coefficient cap 367 by 11.  An l1-minimal choice is a Graver relation; its
+  support-two branch is a finite atlas of 19,314 reduced ratios, while its
+  higher-support branch is genuinely multiway.  No LRC(14) conclusion follows.
 source: root + lrc_khinchin_archaeology / 2026-08-23
 audit: >
   PASS.  An independent audit checked the primal quotient versus dual
   annihilator normalization, integral rather than Euclidean-unit width,
   full-dimensionality, the closed-boundary convention, primitive-line
-  saturation, the 581 floor, and comparison with THM-2051/2144/2164/2190.
-  Normal and optimized exact companions are byte-identical.
+  saturation, the exact 356 floor, the Graver split, and comparison with
+  THM-2051/2052/2144/2169.  Two independently written exact companions agree;
+  normal and optimized output is byte-identical.
 depends_on:
   - THM-2144-anisotropic-selberg-kraft-relation-box
 related:
   - THM-2051-fejer-bv-small-relation-alternative-for-lrc14
+  - THM-2052-finite-height-forces-high-rank-bounded-relation-code
   - THM-2164-relative-packet-rank-harvesting
+  - THM-2169-bounded-relation-on-every-lrc-deletion
   - THM-2190-basis-safe-floor-and-height-500-rank-six-harvest
   - THM-3718-lrc-complete-atom-orbit-defect-saturation-and-semantic-boundary
 script: 04-computation/lrc14_khinchin_flatness_relation_thm3743.py
 output: 05-knowledge/results/lrc14_khinchin_flatness_relation_thm3743.out
-script_sha256: 13aec7024ae297783f3cfc43d4d290a6ff515550dad6f03fc8bb3401661cbdaa
-output_sha256: 5d13bc9940ed8050a1f68e2e37c9dc271cbd422b094de27548b5b0786491712b
+script_sha256: 391cfe3b920c82bf5698d8f2e191111097b31c181c35c43aca4274826cce02e5
+output_sha256: b6902e00563091e2ec1de0bb5514d71e2a9f315b416dd5d8b77e0957fe409041
+secondary_script: 04-computation/lrc14_khinchin_flatness_relation_audit_20260823.py
+secondary_output: 05-knowledge/results/lrc14_khinchin_flatness_relation_audit_20260823.out
+secondary_script_sha256: 16358a45d3ee6fc6c4ad6a6fb5780e1cf37a245e17ea78a051794abea1a68397
+secondary_output_sha256: 7e657f35b943704a14b3557120482f8637fcac0b4e6d192db337bde9c33ba8bb
 hash_basis: raw LF bytes
 ---
 
 # THM-3743 -- an LRC(14) counterexample would be flat in an exact relation direction
 
 **PROVED FROM CITED INPUTS + VERIFIED-EXACT + INDEPENDENTLY
-HOSTILE-AUDITED.**  The cited inputs are the standard flatness theorem and
-its explicit classical bound.  The quotient-lattice identification, width
-formula, restricted body class, and comparison with the current LRC relation
-canon are proved here.
+HOSTILE-AUDITED.**  The cited inputs are the standard flatness theorem and the
+explicit general bound recorded by Averkov--Hofscheier--Nill.  The
+quotient-lattice identification, width formula, Graver split, restricted body
+class, and comparison with the current LRC relation canon are proved here.
 
 This is **Khinchin's geometry-of-numbers flatness theorem**.  It is not the
 metric continued-fraction theorem, Khinchin's constant, Khintchine
@@ -186,6 +193,11 @@ That alternate normalization would make `(11)` false.
 
 ## 4. Khinchin flatness forces a bounded relation
 
+The cited width convention, flatness theorem, and explicit estimate are pinned
+under
+[`CORE-PAPERS.md`](../../05-knowledge/reference/CORE-PAPERS.md#khinchin-flatness-and-an-explicit-general-bound);
+the quotient and coefficient algebra below are proved in-repo.
+
 Define `Flt(d)` as the supremal lattice width of a full-dimensional hollow
 convex body in dimension `d`, under the integral-dual normalization used in
 Section 3.  A body avoiding all lattice points, as in `(7)`, is in particular
@@ -206,26 +218,28 @@ There is primitive 0!=a in Z^13 with
 a.v=0,                  ||a||_1<=(7/6)Flt(12).         (14)
 ```
 
-The classical explicit estimate
+The explicit general estimate recorded by Averkov--Hofscheier--Nill is
 
 ```text
-Flt(d)<=d^(5/2)                                          (15)
+Flt(d)<=sqrt((d+1)(2d+1)/6) d^(3/2).                  (15)
 ```
 
-specializes to
+At `d=12`, this gives
 
 ```text
-||a||_1<=(7/6)12^(5/2)=336 sqrt(3)<582.
+Flt(12)^2<=((13)(25)/6)12^3=93600,
+Flt(12)<=60 sqrt(26),
+||a||_1<=70 sqrt(26)<357.
 ```
 
 Since the left side is integral,
 
 ```text
-||a||_1<=581.                                          (16)
+||a||_1<=356.                                          (16)
 ```
 
-This numerical specialization deliberately uses the simple published
-constant `(15)`, not an unspecified asymptotic improvement.
+This is an exact numerical consequence of the displayed published inequality,
+not an appeal to an unspecified asymptotic improvement.
 
 ## 5. What is new, and what current canon already does better
 
@@ -237,8 +251,9 @@ three bounded by `29` supplies a relation with
 ||a||_1<=10*28+3*29=367.                               (17)
 ```
 
-Thus `(16)` is numerically weaker than the existing explicit total-cap
-certificate.  It must not be advertised as a new coefficient record.
+Thus `(16)` improves the existing explicit total-coefficient cap by `11`.
+It does not improve THM-2051's sparse-support conclusion: the two statements
+control different grades of the relation code.
 
 The mechanisms are nevertheless orthogonal:
 
@@ -250,10 +265,62 @@ The mechanisms are nevertheless orthogonal:
   zonotope and therefore comes with a geometric slice and active-facet
   question, although `(14)` alone does not record those sidecars.
 
+### 5.1 The minimizing direction is a Graver relation
+
+Choose a nonzero relation `a` with minimum `l1` norm.  If it decomposed
+conformally as `a=b+c` with nonzero integer kernel vectors `b,c`, then
+
+```text
+||a||_1=||b||_1+||c||_1,
+```
+
+so both summands would be strictly shorter relations, a contradiction.  Thus
+`a` is conformally indecomposable: it is a Graver element of the one-row speed
+matrix.
+
+If its support is two, on speeds `v_i,v_j`, primitiveness forces, up to sign,
+
+```text
+(a_i,a_j)=(v_j/g,-v_i/g),      g=gcd(v_i,v_j),
+(v_i+v_j)/g<=356.                                  (18)
+```
+
+There are exactly `19,314` unordered distinct coprime positive ratios whose
+reduced numerator plus denominator is at most `356`.  This finite branch can
+be routed through THM-778's ordered continued-fraction word and its sidecars.
+
+The support-at-least-three branch is genuine rather than disguised pair
+arithmetic.  On speeds `(3,4,5)`, the relation `(1,-2,1)` has `l1=4`, smaller
+than every primitive pair relation on those speeds.  This branch is a bounded
+multiway partition identity and belongs with the relation-code/Fourier canon.
+
+### 5.2 Exact joins with the existing relation code
+
+The zero-safe premise of THM-2169 holds for a hypothetical counterexample.
+Choose an index `i` in the support of `a`.  The THM-2169 relation on the
+`i`-deletion has `i`th coordinate zero, whereas `a_i` is nonzero, so the two
+relations are independent.  Flatness therefore upgrades the deletion theorem
+to a global rank-two packet, but no further rank follows automatically.
+
+There is also a precise conditional join with THM-2052.  In its rank-eleven
+branch, let `W` be the rational span of the support-at-most-three,
+height-`91^6` relations.  Then
+
+```text
+a notin W  => rank(W+Qa)=12 and the cofactor terminal applies;
+a in W     => W itself contains a nonzero vector of l1 norm <=356.       (19)
+```
+
+In the first branch, Hadamard gives the explicit finite speed cap
+`floor(356*3^(11/2)*(91^6)^11)`.  The second branch is the real structural
+survivor: classify rank-eleven star relation spaces containing a short dense
+Graver vector.  This paragraph inherits every conditional dependency already
+declared by THM-2052; it is not an unconditional rank-eleven theorem.
+
 This suggests the restricted constant
 
 ```text
-Flt_zon,13,2tor(12)                                    (18)
+Flt_zon,13,2tor(12)                                    (20)
 ```
 
 obtained by taking the supremum only over centrally symmetric
@@ -261,10 +328,10 @@ twelve-zonotopes with at most thirteen generators and centre of order at most
 two modulo the lattice.  Tautologically
 
 ```text
-Flt_zon,13,2tor(12)<=Flt(12).                          (19)
+Flt_zon,13,2tor(12)<=Flt(12).                          (21)
 ```
 
-A useful improvement would be an explicit bound for `(18)` together with a
+A useful improvement would be an explicit bound for `(20)` together with a
 description of its minimizing direction and slice—not merely a smaller
 generic number.
 
@@ -274,14 +341,14 @@ Both
 
 ```text
 v_AP=(1,2,...,13),
-v_far=(1,2,...,12,5460)                                (20)
+v_far=(1,2,...,12,5460)                                (22)
 ```
 
 are primitive, distinct-speed rows and obey
 
 ```text
 (2,-1,0,...,0).v_AP=(2,-1,0,...,0).v_far=0,
-||(2,-1,0,...)||_1=3.                                  (21)
+||(2,-1,0,...)||_1=3.                                  (23)
 ```
 
 Their very different lonely-runner behaviour proves that neither `(14)`,
@@ -295,7 +362,7 @@ the packet
  slice intercept modulo lattice hyperplanes,
  induced slice lattice and remaining generators,
  affine translate / two-torsion centre,
- physical root, owner, phase, ties, and temporal word). (22)
+ physical root, owner, phase, ties, and temporal word). (24)
 ```
 
 The first five entries are geometric; the remaining entries are exactly the
@@ -305,7 +372,7 @@ occupancy.
 
 The best scoped next test is therefore not another relation census.  It is:
 
-1. compute or bound the restricted constant `(18)`;
+1. compute or bound the restricted constant `(20)`;
 2. classify the possible active-facet sign patterns at a minimizing direction;
 3. recurse on the induced eleven-dimensional lattice slice while retaining
    its translate; and
@@ -323,10 +390,13 @@ python3 -B 04-computation/lrc14_khinchin_flatness_relation_thm3743.py
 python3 -B -O 04-computation/lrc14_khinchin_flatness_relation_thm3743.py
 ```
 
-The companion checks the side length, exact corner widths on hostile signed
-directions, the integer floor `floor(336 sqrt(3))=581`, the AP/far-AP control
-relation, THM-2144's `367` comparison, and the two-torsion centre.  It does not
-claim to computationally prove the cited flatness theorem.
+The main companion checks the side length, exact corner widths on hostile
+signed directions, the exact floor `floor(70 sqrt(26))=356`, the AP/far-AP
+control, the `367` comparison, the `19,314` pair atlas, a genuine triple
+hostile, and the two-torsion centre.  The independently written secondary
+companion exhausts projected vertices in small dimensions and checks the
+rank-eleven/cofactor join.  Neither script claims to prove the cited flatness
+theorem.
 
 The result is a lawful geometry-of-numbers reduction and a new restricted
 flatness target.  It proves neither a recursive slice theorem nor LRC(14).

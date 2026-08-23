@@ -37,5 +37,5 @@ Therefore a short flatness relation is necessary for a counterexample, not suffi
 This exact audit supports a conditional/cited reduction only:
   counterexample => lattice-free projected zonotope => one relation with l1 norm <=356.
 It does not preserve support, sign pattern, endpoint owner, or semantic arrival.
-THM-3743 remains RESERVED / UNPROVED and is not used here.
+The audited reduction is promoted separately as THM-3743; this script does not prove the cited flatness theorem.
 CHECKS=18076

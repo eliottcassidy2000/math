@@ -14,13 +14,21 @@ The identity follows coordinatewise for every real box point; corners are hostil
 A hypothetical counterexample makes pi(B) a full-dimensional Lambda-free zonotope.
 Khinchin flatness therefore selects primitive 0!=a in Lambda* with
   (6/7)||a||_1 <= Flt(12), hence ||a||_1 <= (7/6)Flt(12).
-Using the explicit Flt(d)<=d^(5/2) input: floor(336*sqrt(3))=581.
+Using Flt(d)<=sqrt((d+1)(2d+1)/6)*d^(3/2):
+  Flt(12)<=60*sqrt(26), so ||a||_1<=70*sqrt(26)<357.
+Exact integer consequence: ||a||_1<=356.
 
 === Existing relation-canon comparison ===
 AP {1,...,13} and {1,...,12,5460} already have (2,-1,0,...), l1=3.
 THM-2144 forces a relation with l1<=3*29+10*28=367 on every zero-safe row.
-Thus the simple explicit flatness cap 581 is numerically weaker; its geometric direction is different.
+The flatness cap 356 improves that total-coefficient number by 11; its geometric direction is different.
 THM-2051 instead forces support 3..5 with coefficient height <=2^20: sparse but much taller.
+
+=== Minimal-width Graver split ===
+An l1-minimal relation is conformally indecomposable, hence a Graver element.
+Support two gives a reduced speed ratio with numerator+denominator<=356;
+there are 19314 unordered distinct coprime ratios in that atlas.
+The higher branch is genuine: (1,-2,1) on speeds (3,4,5) has l1=4 and beats every pair relation.
 
 === Restricted-zonotope sidecar ===
 pi(B) has 13 segment generators in dimension 12, is centrally symmetric,
@@ -30,4 +38,4 @@ The useful open constant is flatness for this restricted 13-generator, two-torsi
 === Semantic boundary ===
 The relation direction alone carries no active facets, slice intercept, root, owner, or temporal word.
 A recursive LRC gain needs those sidecars; neither relation existence nor small l1 proves loneliness.
-CHECKS=15
+CHECKS=21

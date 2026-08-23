@@ -2,9 +2,10 @@
 """Exact arithmetic companion for THM-3743.
 
 The cited input is Khinchin's flatness theorem.  This file verifies the full
-quotient-width algebra, the explicit d^(5/2) numerical specialization, and
-hostile comparisons with existing LRC(14) relation mechanisms.  It does not
-attempt to computationally prove the flatness theorem itself.
+quotient-width algebra, the explicit general numerical specialization, the
+Graver split, and hostile comparisons with existing LRC(14) relation
+mechanisms.  It does not attempt to computationally prove the flatness theorem
+itself.
 """
 
 from __future__ import annotations
@@ -71,12 +72,20 @@ print("A hypothetical counterexample makes pi(B) a full-dimensional Lambda-free 
 print("Khinchin flatness therefore selects primitive 0!=a in Lambda* with")
 print("  (6/7)||a||_1 <= Flt(12), hence ||a||_1 <= (7/6)Flt(12).")
 
-# The cited explicit inequality Flt(d)<=d^(5/2) gives
-# (7/6)*12^(5/2)=336*sqrt(3).  Its floor is checked without floats.
-require(581 * 581 < 336 * 336 * 3 < 582 * 582, "floor(336 sqrt(3))=581")
-explicit_l1_cap = 581
-checks += 1
-print("Using the explicit Flt(d)<=d^(5/2) input: floor(336*sqrt(3))=581.")
+# Averkov--Hofscheier--Nill record the explicit classical inequality
+# Flt(d)<=sqrt((d+1)(2d+1)/6)*d^(3/2).  At d=12 this squares to 93600;
+# after multiplying by 7/6 the relation bound is 70*sqrt(26).
+flatness_bound_squared = Fraction((dimension + 1) * (2 * dimension + 1), 6) * dimension**3
+relation_bound_squared = Fraction(7, 6) ** 2 * flatness_bound_squared
+require(flatness_bound_squared == 93600, "dimension-twelve flatness square")
+require(relation_bound_squared == 127400, "dimension-twelve relation square")
+explicit_l1_cap = isqrt(relation_bound_squared.numerator // relation_bound_squared.denominator)
+require(explicit_l1_cap == 356, "floor(70 sqrt(26))=356")
+require(explicit_l1_cap**2 < relation_bound_squared < (explicit_l1_cap + 1) ** 2, "sharp integer floor")
+checks += 4
+print("Using Flt(d)<=sqrt((d+1)(2d+1)/6)*d^(3/2):")
+print("  Flt(12)<=60*sqrt(26), so ||a||_1<=70*sqrt(26)<357.")
+print("Exact integer consequence: ||a||_1<=356.")
 
 
 print("\n=== Existing relation-canon comparison ===")
@@ -91,12 +100,36 @@ checks += 4
 
 selberg_caps = (29,) * 3 + (28,) * 10
 require(sum(selberg_caps) == 367, "THM-2144 total cap")
-require(sum(selberg_caps) < explicit_l1_cap, "existing total cap beats simple flatness numerical cap")
+require(explicit_l1_cap < sum(selberg_caps), "flatness improves the existing total cap")
 checks += 2
 print("AP {1,...,13} and {1,...,12,5460} already have (2,-1,0,...), l1=3.")
 print("THM-2144 forces a relation with l1<=3*29+10*28=367 on every zero-safe row.")
-print("Thus the simple explicit flatness cap 581 is numerically weaker; its geometric direction is different.")
+print("The flatness cap 356 improves that total-coefficient number by 11; its geometric direction is different.")
 print("THM-2051 instead forces support 3..5 with coefficient height <=2^20: sparse but much taller.")
+
+
+print("\n=== Minimal-width Graver split ===")
+coprime_pair_ratios = sum(
+    1
+    for first in range(1, explicit_l1_cap)
+    for second in range(first + 1, explicit_l1_cap + 1 - first)
+    if gcd(first, second) == 1
+)
+require(coprime_pair_ratios == 19314, "bounded coprime pair-ratio atlas")
+triple_speeds = (3, 4, 5)
+triple_relation = (1, -2, 1)
+pair_norms = []
+for first in range(3):
+    for second in range(first + 1, 3):
+        common = gcd(triple_speeds[first], triple_speeds[second])
+        pair_norms.append((triple_speeds[first] + triple_speeds[second]) // common)
+require(dot(triple_relation, triple_speeds) == 0, "genuine triple relation")
+require(l1(triple_relation) == 4 < min(pair_norms), "triple can beat every pair relation")
+checks += 3
+print("An l1-minimal relation is conformally indecomposable, hence a Graver element.")
+print("Support two gives a reduced speed ratio with numerator+denominator<=356;")
+print(f"there are {coprime_pair_ratios} unordered distinct coprime ratios in that atlas.")
+print("The higher branch is genuine: (1,-2,1) on speeds (3,4,5) has l1=4 and beats every pair relation.")
 
 
 print("\n=== Restricted-zonotope sidecar ===")

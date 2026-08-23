@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — 2026-08-22.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
+**Rolling state — 2026-08-23.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -36,18 +36,14 @@ primitive cap-six support; [THM-3453](../01-canon/theorems/THM-3453-global-liter
 allows 15-atom cap-seven support only at zero current.
 
 Newest exact interface: THM-3665--3674 and THM-3701/3705/3706/3710/3713/3718.
-THM-3701 gives a rank-12 successor gate with equal scalar **mass** null-line and
-six minimal charts. THM-3705 gives the bulk/endpoint tariff; THM-3706 rules out
-fixed 13-adic depth. THM-3710 finds the `(14j+/-1)/182` endpoint skeleton, but
-its two support parts nearly cancel, so support splitting loses the leak.
-THM-3713 retains `u=r-t` with full detectors. A hostile has constant
-successor marginal but `D_H=E_dt=4/169`; rational defects reach all deep
-colors. THM-3718 forces both detectors on an adaptive cover-derived atom and
-one literal excluded-target selector. The remaining obligation is canonical
-owner/root/word transport and semantic arrival. The mass line is not
-THM-3679's address diagonal. THM-3135--3524 supply sidecars, not this bridge;
-THM-2363/THM-2368 and THM-2417--2894 do not recover the `28,393` semantic roots
-or their gluing (MISTAKE-281/300/310/313). No cited result proves LRC(14).
+It supplies rank-12 charts, bulk/endpoint tariff, deep-colour defects, both
+detectors, and an excluded-target selector; canonical owner/root/word transport
+and semantic arrival remain missing (MISTAKE-281/300/310/313); THM-2363/THM-2368
+do not recover the `28,393` semantic roots.
+[THM-3743](../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md)
+adds `l1<=356` but needs slice/owner sidecars; [THM-3742](../01-canon/theorems/THM-3742-square-triangular-pell-mod13-central-sign-projective-cycle.md)
+is a wrong-torsor Pell `C14`; [THM-3744](../01-canon/theorems/THM-3744-pell-prefix-loneliness-constant-carry-exact-formula.md)
+is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
 ### Independent routes that remain live
 
@@ -339,37 +335,18 @@ is sharp: equal counts allow two densities or none.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** [3502](../01-canon/theorems/THM-3502-rule30-four-fifths-staircase-entropy-and-sixteen-fifths-compiler.md); [3511](../01-canon/theorems/THM-3511-rule30-orbit-signalizer-gap-renormalization-and-shallow-portrait-hostile.md); [3512](../01-canon/theorems/THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary.md); [3516](../01-canon/theorems/THM-3516-rule30-marked-van-der-put-carry-and-power-section-bridge.md). OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT
-  (MISTAKE-205); THM-3544/50 force composite degree `>=6`, height `>=8`, and
-  Nagata/GGHV give reduced height `>=108` (only `(72,108)<125`).
-  THM-3543--3617 close the recorded collision, ray, cyclic, low-width, shear,
-  toric, graph, rational, multiarm and Russell sectors (THM-3592 repaired);
-  wider cells stay OPEN. THM-3618/22 classify fibre separators and their graph
-  closure; THM-3619/23 close all even folds. Non-even THM-3627 closes one
-  polynomial, THM-3630 denies a uniform jet bound, THM-3632 blocks its
-  algebraization, and THM-3634/35 give the rank gates, retained jet plane,
-  and an actual `t=0` witness. On minimal `Q_1`, THM-3637--39 force universal
-  nonzero `J_2` debt in every retained
-  rank-one/two `J_0=1` cell. THM-3641 exposes ordinary curvature zero-debt
-  planes; THM-3642 realizes one by an exact `Q_6` lift through `J_2`, then
-  forces nonzero `J_4` debt for `Q_6,Q_*`. THM-3677 cuts the complete
-  degree-at-most-eight principal zero-second-debt plane by one rational
-  zero-fourth-debt parabola. THM-3678/3680 lift its rational point
-  `Q_dagger` through the actual target-ring equations `J_0=1,J_1=J_2=0`,
-  but THM-3681 closes every continuation at universal order six. Pending-
-  audit THM-3683 leaves only four quartic roots after the retained six-jet
-  screen; THM-3687 lifts all four through actual-ring `J_0=1`; `J_1,J_2` stay
-  open. THM-3684 blocks one-coordinate mates. THM-3685--3720 give the `y=0`
-  Danielewski weights/output, first `3x4`, and cap `>=22`: W002/W007/W008
-  and now W003 are empty; W004--W006 remain live. THM-3709/3719 close
-  every alternating two-left/two-right Cohn cell; THM-3716 proves the monomial
-  Broughton cokernel family. Longer Cohn words remain live.
-  Higher-degree zero-debt polynomials, continuation of the four THM-3683 folds,
-  THM-3641's excluded nonordinary tangent collisions, nonquadratic folds, and
-  THM-3629's genuinely two-output-mixed `H'(0)!=0` pairs remain OPEN. A
-  positive global pair here pulls back to a noninjective Keller map and
-  refutes `JC(2)`. THM-3564--78
-  cover factor/nodal obstructions; `A4/S4` cubic is blocked, quartic `C3` OPEN
-  (MISTAKE-416), and unrestricted `C[A,d]^2` remains equivalent to `JC(2)`.
+  (MISTAKE-205); THM-3544/50 and cited Nagata/GGHV force composite degree
+  `>=6`, height `>=8`, and reduced height `>=108` (only `(72,108)<125`).
+  THM-3543--3617 close the recorded low-width/ray/shear/toric/graph sectors;
+  wider cells stay OPEN. THM-3618--3642 give fibre/fold, rank/jet, and
+  `J_2/J_4` debt gates. THM-3677--3687 reduce the retained six-jet screen to
+  four quartic roots lifted only through actual-ring `J_0=1`; `J_1,J_2` stay
+  open. THM-3685--3720 close W002/W003/W007/W008 and alternating two-left/
+  two-right Cohn cells; W004--W006 remain live. THM-3736/3740 close constant
+  `SL_2` exposure and the one-variable right-shear tower. Live Cohn words need
+  interacting polynomial factors with curls and holonomy. Higher-degree debt,
+  nonordinary/nonquadratic folds, two-output mixing, quartic `C3`, and
+  unrestricted `C[A,d]^2` remain OPEN (MISTAKE-416).
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2247 close the affine-through-
   quartic and terminal-through-fourteen strata; THM-2262/2297--2480, including

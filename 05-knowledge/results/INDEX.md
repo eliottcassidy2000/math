@@ -14,12 +14,29 @@
 - `lrc14_khinchin_flatness_relation_thm3743.py` -> matching `.out`
   [THM-3743 PROVED FROM CITED INPUTS + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  Verifies the quotient-zonotope width
-  `(6/7)||a||_1`, the explicit flatness corollary `||a||_1<=581`, the
-  THM-2144 cap-367 comparison, hostile AP/far-AP controls, and the
-  thirteen-generator two-torsion-centred sidecar.  Normal/`-O` outputs agree,
-  `CHECKS=15`.  Script/output LF SHA-256:
-  `13aec7024ae297783f3cfc43d4d290a6ff515550dad6f03fc8bb3401661cbdaa` /
-  `5d13bc9940ed8050a1f68e2e37c9dc271cbd422b094de27548b5b0786491712b`.
+  `(6/7)||a||_1`, the explicit flatness corollary `||a||_1<=356`, its
+  improvement over THM-2144's total cap 367, the 19,314-ratio Graver split,
+  hostile AP/far-AP controls, and the thirteen-generator two-torsion-centred
+  sidecar.  Normal/`-O` outputs agree, `CHECKS=21`.  Script/output LF SHA-256:
+  `391cfe3b920c82bf5698d8f2e191111097b31c181c35c43aca4274826cce02e5` /
+  `b6902e00563091e2ec1de0bb5514d71e2a9f315b416dd5d8b77e0957fe409041`.
+  The independently written `lrc14_khinchin_flatness_relation_audit_20260823.py`
+  exhausts `9,228` projected vertices and checks the THM-2052 rank-eleven
+  join, `CHECKS=18076`; script/output hashes are
+  `16358a45d3ee6fc6c4ad6a6fb5780e1cf37a245e17ea78a051794abea1a68397` /
+  `7e657f35b943704a14b3557120482f8637fcac0b4e6d192db337bde9c33ba8bb`.
+
+- `pell_prefix_loneliness_constant_carry_thm3744.py` -> matching `.out`
+  [THM-3744 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Proves and replays the all-prefix formula
+  `M({P_1,...,P_N})=(P_N-P_(N-1)+1)/(2(P_N+1))`, the unique half-circle
+  maximizer, constant-carry residue packet, square-triangular `4k+/-1`
+  factorizations, and both closed profiles.  It checks the symbolic certificate
+  through `N=200`, independently exhausts all peak candidates through `N=9`,
+  and records the exact LRC(14)-sized control `M(S_13)=99/338`;
+  `CHECKS=161773`.  Script/output LF SHA-256:
+  `657aaf0a573a81588797e0c2d5984644901d81980ecc7a9f861e8f13e05c9860` /
+  `38cfd474d7b2c1c46c0b557969d710b2c53cfb423d11d307d83d736a9dd3934c`.
 
 - `jc_lrc_khinchin_continuant_sidecar_probe_20260823.py` -> matching `.out`
   [VERIFIED-EXACT HOSTILE SYNTHESIS].  Separates Khinchin's almost-everywhere
