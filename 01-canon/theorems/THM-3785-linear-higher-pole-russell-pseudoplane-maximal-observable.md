@@ -24,7 +24,9 @@ audit: >
   orders, and rational-mate formula.  Normal and optimized runs byte-match
   the frozen transcript.  Independent hostile audit remains due, especially
   for etale DVR descent, the Picard argument, the two-by-two exhaustion, and
-  the affine-carrier exhaustion.
+  the affine-carrier exhaustion.  An audit correction removed an unsupported
+  identification with Miyanishi's exact type parameter r=2; the integral
+  closure and its nonstandard deck character are now stated explicitly.
 depends_on: []
 related:
   - THM-3779-three-component-tower-maximal-danielewski-polynomial-observable
@@ -243,28 +245,36 @@ The triple class is the geometric shadow of the Kummer equation `x^3=R`.
 It survives even though `(12)` is everywhere etale because the other two
 sheets are nonproper at the arm.
 
-### 4.1 The classical exceptional pseudo-plane row
+### 4.1 Classical pseudo-plane context and an unresolved type sidecar
 
 The projection `r:Y -> A1` has general fibre `A1_z` and the unique multiple
-fibre `3L`: scheme-theoretically, setting `r=0` gives `z^3=0`.  Thus `Y` is
-the multiplicity-three, canonical-trivial exceptional affine pseudo-plane
-row (type `d=3,r=2` in Miyanishi's notation).  Miyanishi's
-arXiv:1504.07179, Lemma 2.5.2, constructs an `A2` Galois affine
-pseudo-cover abstractly for any such one-multiple-fibre rational homology
-plane; `(3),(12)--(16)` are an explicit cubic realization.
+fibre `3L`: scheme-theoretically, setting `r=0` gives `z^3=0`.  Miyanishi's
+arXiv:1504.07179, Lemma 2.5.2, gives the abstract affine-plane Galois
+pseudo-cover mechanism for rational homology planes with one multiple
+`A1` fibre.  Equations `(3),(12)--(16)` give an explicit cubic mechanism of
+that shape.
 
-The distinction is load-bearing.  Theorem 2.5.10 of the same source excludes
-etale morphisms from a pseudo-plane of type `(d,n,r)` to `A2` when `r!=2`,
-using
+Theorem 2.5.10 of the same source excludes etale morphisms from a
+pseudo-plane of its exact type `(d,n,r)` to `A2` when `r!=2`, using
 
 ```text
 Pic(Y)=Z/d,                     K_Y=(r-2)[L].          (24a)
 ```
 
-Our symplectic form below trivializes `K_Y`, so this surface lies precisely
-in the row that theorem deliberately leaves open.  The citation is context,
-not a dependency: all algebra, the source atlas, and the remaining Darboux
-gates here are proved directly.
+Our symplectic form below trivializes `K_Y`, so that canonical-class
+obstruction is silent here.  But the exact type parameter is **not** asserted.
+Indeed, the integral closure of `B` in the cubic source field is
+
+```text
+Btilde=k[x,w,e]/(x^3e-w^3+c^3),
+mu_3:(x,w,e) |-> (zeta x,zeta^(-1)w,e),               (24b)
+```
+
+and the source plane is the chart `w=c+x^3y`.  The exponent and the opposite
+deck characters in `(24b)` do not literally match the standard type-`r=2`
+presentation.  Reconciling `(24b)` with Miyanishi's completion parameters is
+**OPEN**.  The citation is context, not a dependency; no step below uses an
+exact pseudo-plane type label.
 
 ## 5. Poisson packet and the exact symplectic form
 
