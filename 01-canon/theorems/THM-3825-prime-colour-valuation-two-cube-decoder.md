@@ -1,5 +1,5 @@
 ---
-id: THM-3823
+id: THM-3825
 title: "Prime-colour valuations decode inert-scaled two-cube states"
 status: >
   RESERVED / UNPROVED EMPTY STUB.  Namespace reserved for the proposed
@@ -17,7 +17,7 @@ related:
   - THM-3818-scaled-inert-cubeclass-support-two-pair-packet
 ---
 
-# THM-3823 -- reserved prime-colour two-cube decoder namespace
+# THM-3825 -- reserved prime-colour two-cube decoder namespace
 
 **RESERVED / UNPROVED EMPTY STUB.**
 

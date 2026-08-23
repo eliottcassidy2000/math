@@ -2,8 +2,8 @@
 id: THM-3820
 title: "Universal Euler/mod-seven residual quadratic and source-P discriminant identity"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  The coefficient-free critical resultant for the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The
+  coefficient-free critical resultant for the
   pure-r nodal carrier has only three Euler layers.  After
   G=e^3Y, D=e^2(Y+Z), and t=e^7, its residual is an explicit quadratic F(t).
   The discriminant of F is 3^12 times the discriminant of the normalized
@@ -13,7 +13,17 @@ status: >
   close degree-at-least-six carriers or any Jacobian-conjecture case.
 source: jc_sparse_direct_search / universal residual discriminant lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The deterministic companion recomputes the
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
+  The audit rederived the Hamiltonian signs from the Poisson law, recovered
+  P from the z-component and Q independently from the z^2/z^3 compatibility,
+  and checked that G,D are genuinely coefficient-free variables before the
+  profile specialization.  It then audited both Sylvester paths, the
+  Euler/mod-seven substitution without division at e=0, the two source and
+  residual discriminants, and the quadratic-algebra proof that W is exactly
+  the sheet-collision slope.  The Y=0, Z=2, Y+2Z=0, R=0, and W=0 seams and
+  the splitting-field quantifiers were checked separately.  Raw hashes
+  match, and normal and optimized executions byte-match the frozen output.
+  The deterministic companion recomputes the
   universal Sylvester resultant, all twenty terms of H, the three
   mod-seven Euler layers, the normalized quadratic, both discriminants, the
   square factorization, the direct normalized resultant, the generic
@@ -35,8 +45,8 @@ hash_basis: raw LF bytes
 
 # THM-3820 -- the universal residual remembers the source double cover
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over a field `k` of characteristic zero.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over a
+field `k` of characteristic zero.
 Let `e,G,D,u` be independent variables and put
 
 ```text
