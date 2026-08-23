@@ -1,0 +1,16 @@
+theorem=THM-3799-monomial-r-repairs-of-nodal-carriers-have-critical-points
+surface=r^2e-z^3+r;c=1;field=algebraically_closed_characteristic_zero
+carrier=A=e^2-z/3+lambda*r*e^m;m>=0;lambda!=0
+critical_variables=e;u=re
+P=g*u^2-(1+2u)*(2e^3+u*e*gprime)
+Q=e^2*(1+2u)^3-729*g^3*u^2*(1+u)^2
+resultant=lambda^4*e^(4m+4)*J_m(e)
+root_gate=J_m(0)=1-2m;J_m_nonconstant
+boundary=u_notin_0,-1,-1/2;e*g*(1+2u)!=0
+recovery=r=u/e;z=9g*u*(u+1)/(e*(1+2u))
+exception=m=3;lambda=1;J=26244e^7-5
+open=nonmonomial_g;z2_r_mixed;different_arm_profile;Darboux_pair
+monomial_sha256=0dd214c136ef41dfdc458e9ae26344e99757b8215637da16dbebd32fbedc26e3
+semantic_sha256=ca95b96e54ab327ec3b4c52837b5b074a0134df23e135e7489af23efaa672ebf
+CHECKS=2336
+RESULT=PASS
