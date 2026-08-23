@@ -2,7 +2,7 @@
 id: THM-3811
 title: "Ramification class unit criterion and nonlinear cubic packet"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT, with one
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, with one
   explicitly OPEN decisive class gate.  Units on the maximal etale open of
   a normal finite completion are controlled exactly by integer relations
   among the deleted ramification classes.  The nonlinear Delone--Faddeev
@@ -14,14 +14,20 @@ status: >
   is claimed.
 source: jc_quartic_c3_construct / nonlinear binary-index design lane, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The divisor exact sequence, norm/companion
+  INDEPENDENT HOSTILE AUDIT PASS (jc-cohn-boundary, 2026-08-23).  The
+  divisor exact sequence, norm/companion
   torsion criterion, Delone--Faddeev signs, irreducibility and normality,
   squarefree discriminant, rational ramification normalization, four-branch
   vertex gluing, simple companion, and the bounded affine norm-Pell no-go
   were checked independently inside the proof.  The exact companion has a
   direct coefficient Groebner gate for the affine exponent-one norm cell.
-  Independent hostile audit remains due; the infinite-order class and
-  affineness gates are deliberately not promoted.
+  The audit rederived the normal-surface divisor sequence and both directions
+  of the norm criterion, checked that monicity plus integral closedness makes
+  the A=1 irreducibility specialization valid, audited the codimension-one
+  maximal-order argument and rational branch coverage, and replayed all 72
+  exact gates in normal and optimized mode against the frozen output and raw
+  hashes.  The infinite-order class, completion-unit, and affineness gates
+  remain deliberately OPEN.
 depends_on: []
 related:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
@@ -37,7 +43,7 @@ hash_basis: raw LF bytes
 
 # THM-3811 -- constant units are a ramification-class problem
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT; OPEN class
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; OPEN class
 gate.**  Let `k` be algebraically closed of characteristic zero.
 
 ## 1. The exact deleted-divisor unit criterion
@@ -159,8 +165,10 @@ The characteristic polynomial of `omega` is
 f(T)=T^3-CT^2+7A^2T+3A^3-A^2C^2.                                 (15)
 ```
 
-It is irreducible over `k(A,C)`.  Because it is monic, a generic
-factorization would specialize at `A=1`.  A root `v(C) in k(C)` of
+It is irreducible over `k(A,C)`.  Indeed, reducibility of a cubic would give
+a root in `k(A,C)`.  Since the polynomial is monic, that root is integral
+over the integrally closed UFD `k[A,C]`, hence belongs to `k[A,C]`; setting
+`A=1` would then give a root `v(C) in k[C]` of
 
 ```text
 v^3-Cv^2+7v+3-C^2=0                                               (16)
