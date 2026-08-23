@@ -9,8 +9,9 @@ status: >
   coprime shifted fibres of Z and its remaining quadratic discriminant
   reduces to one of four normalized square ideals.  Their exact reduced
   bases force the required sidecar to vanish, contradicting its degree.
-  Classification of the remaining quadratic-y coefficient functions, a
-  polynomial-plane Keller atlas, and JC(2) remain OPEN.
+  Independently audited THM-3897 now closes the remaining addressed
+  polynomial f=0 channels.  The f!=0 residual, a polynomial-plane Keller
+  atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3888 elliptic denominator compression, 2026-08-23
 audit: >
   INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23 by a separate osculating-root
@@ -32,6 +33,7 @@ depends_on:
 related:
   - THM-3888-f-zero-equianharmonic-jacobian-and-two-section-integrality
   - THM-3893-cusp-residual-f-zero-two-arm-degree-six-closure
+  - THM-3897-f-zero-residual-all-degree-global-emptiness
 script: 04-computation/jc2_f_zero_quartic_covariant_high_y_emptiness_thm3895.py
 output: 05-knowledge/results/jc2_f_zero_quartic_covariant_high_y_emptiness_thm3895.out
 script_sha256: b2e9a174cad4e09f4ad212881fcdf0f98dedb4d3bbb3eaadaa372158db48c8a8
@@ -69,8 +71,9 @@ shape
 T=t_2(x)y^2+t_1(x)y+t_0(x).                               (4)
 ```
 
-No bound on the three `x`-coefficient functions is inferred here.  In
-particular, `(3)` is a dimension reduction, not a Keller counterexample or a
+No bound on the three `x`-coefficient functions is inferred by this theorem
+alone.  Independently audited THM-3897 combines `(3)` with the address and
+closes all three channels.  Neither result is a Keller counterexample or a
 proof of `JC(2)`.
 
 ## 1. Inheritance and the missing object
@@ -346,10 +349,11 @@ It cannot be the polynomial coefficient `[y^4]G`.  This contradiction proves
 the same cutoff independently, uniformly across both arm constants and both
 square-root signs.  The origin address and the `L=0` arm are not used.
 
-## 6. Exact boundary and next computation
+## 6. Exact boundary and superseding closure
 
-The proof does **not** say that every polynomial residual square is the base
-point.  It says that every survivor lies in the three-channel universe `(4)`.
+This theorem alone does **not** say that every polynomial residual square is
+the base point.  It says that every survivor lies in the three-channel
+universe `(4)`.
 The generic hostile point `(5)` occupies its quadratic channel but fails
 `k[x,y]` descent and the origin address.  A global survivor must additionally
 satisfy THM-3885's `a=0` arm dichotomy, the `L=0` root polarization, and
@@ -358,11 +362,11 @@ satisfy THM-3885's `a=0` arm dichotomy, the `L=0` root polarization, and
 T(0,0)=0.                                                  (31)
 ```
 
-The cheapest decisive successor is therefore the full quadratic-y
-coefficient system over `k[x]`, split by the two arm addresses.  THM-3893
-already kills its simultaneous-zero sector through total degree six; `(3)`
-removes the purported high-y-degree escape but does not bound the remaining
-`x` degrees.
+THM-3897 is that decisive successor: its polynomial Pell/unit argument,
+odd-degree linear channel, and missing-coefficient origin argument prove
+that the addressed polynomial `f=0` universe contains only `T=0`.  Thus the
+remaining object-level frontier is genuinely `f!=0`; rescanning higher
+`x`-degrees inside `(4)` is no longer live work.
 
 Reproduce the exact covariant and square ideals with
 

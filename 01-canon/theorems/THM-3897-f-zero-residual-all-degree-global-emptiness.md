@@ -2,8 +2,8 @@
 id: THM-3897
 title: "F-zero residual all-degree global emptiness"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  Using the now-proved THM-3895 high-y-degree
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Using the
+  now-proved THM-3895 high-y-degree
   input, the complete polynomial f=0 residual lane consists only of the
   base point T=0.  The quadratic-y
   channel collapses by a polynomial Pell/unit argument, the linear-y
@@ -12,13 +12,17 @@ status: >
   a polynomial-plane Keller atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3895 three-channel descent, 2026-08-23
 audit: >
-  SELF-AUDITED EXACT PROOF CANDIDATE.  The companion checks every residual
+  INDEPENDENT HOSTILE AUDIT PASS (2026-08-23).  A structurally separate
+  companion rederives the THM-3895 quartic covariant, 1,596-row degree
+  ledger, four exact square ideals, and osculating a^(-3) pole before
+  auditing the present three-channel descent.  It rechecks UFD parity,
+  the unit-factor polynomial Pell argument, every zero-leading alternative,
+  the sole use of T(0,0)=0, and the hostile rational k(x)[y] point in 1,719
+  active gates.  Normal and optimized runs are byte-identical.  The primary
+  companion checks every residual
   leading coefficient, the Pell factorization, the constant-channel origin
   value, and the rational-x hostile point in 15 active gates.  Normal and
-  optimized runs byte-match the frozen output.  Independent audit must
-  recheck the UFD parity step, all zero-leading alternatives, and the use of
-  the address T(0,0)=0.  The inherited THM-3895 high-y-degree theorem was
-  promoted after independent hostile audit at commit 44c79bd581.
+  optimized runs byte-match the frozen output.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
   - THM-3885-cusp-residual-f-zero-arm-dichotomy-and-quadratic-closure
@@ -30,13 +34,17 @@ output: 05-knowledge/results/jc2_f_zero_all_degree_global_emptiness_thm3897.out
 script_sha256: c0a15aebe8542543c5cbad24f31d4bb3635a7a1ade31af1bd695619d554b7094
 output_sha256: af62022edb2bf93bee90dfc5676f310b457eea0c29ed72f14e873b55ab47648b
 semantic_sha256: 6d9be0bbf8c5242bf061d89a4bf2d18c42f81e373008006880946b07b4531240
+independent_audit_script: 04-computation/jc2_f_zero_all_degree_global_emptiness_independent_audit_thm3897.py
+independent_audit_output: 05-knowledge/results/jc2_f_zero_all_degree_global_emptiness_independent_audit_thm3897.out
+independent_audit_script_sha256: 0762969b2d2df3720f9ac9f27d0d5d7e730e05910f3cb766e03c5976e462c71b
+independent_audit_output_sha256: 69b9439abc5b6f4612bacf34c28f52d58b40ed1793c20158c33791770aae2035
+independent_audit_semantic_sha256: 79d829a2562577865b20d68f4ab1151bbf1656d3e7ef5ac25e0a345ada94b693
 hash_basis: raw LF bytes
 ---
 
 # THM-3897 -- the polynomial f-zero residual has only its base point
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**  Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
 algebraically closed field `k` of characteristic zero.  Put
 
 ```text
@@ -182,10 +190,13 @@ arm or denominator debt.
 ```bash
 python3 04-computation/jc2_f_zero_all_degree_global_emptiness_thm3897.py
 python3 -O 04-computation/jc2_f_zero_all_degree_global_emptiness_thm3897.py
+python3 04-computation/jc2_f_zero_all_degree_global_emptiness_independent_audit_thm3897.py
+python3 -O 04-computation/jc2_f_zero_all_degree_global_emptiness_independent_audit_thm3897.py
 ```
 
-Both runs must byte-match
-`05-knowledge/results/jc2_f_zero_all_degree_global_emptiness_thm3897.out`.
-The companion checks 15 active identities and boundary controls.  Its exact
-algebra supports the displayed formulas; the UFD and unit arguments above
-are the proof.
+Each normal/optimized pair must byte-match its corresponding frozen output
+in `05-knowledge/results/`.  The primary companion checks 15 active
+identities and boundary controls; the independent companion checks 1,719
+active gates and separately rebuilds the inherited high-y cutoff.  Their
+exact algebra supports the displayed formulas; the UFD and unit arguments
+above are the proof.

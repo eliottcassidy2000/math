@@ -24,9 +24,18 @@ Format per entry:
   upstream reservation landed did not reserve the identifier globally.
 - **Repair / strongest survivor:** upstream's earlier pure-power cubic result
   retains `THM-3892`; the complete strict-cell theorem, both exact companions,
-  both frozen transcripts, and all navigation links move together to
+  both frozen transcripts, and all navigation links first moved together to
   `THM-3896`.  No mathematical statement, hash-bearing file content, or
-  dependency edge changes.
+  dependency edge changed.
+- **Repeated incident:** before that repair could be pushed, a second fresh
+  remote wave reserved `THM-3896` for the degree-four equality-seam closure,
+  followed by `THM-3897` and `THM-3898`.  The strict-cell artifact family
+  therefore moved once more, atomically, to the newly checked free identifier
+  `THM-3899`.
+- **Second repeat:** the next fetch found a contemporaneous upstream
+  reservation of `THM-3899` for the nonzero-sidecar y-degree tariff.  The
+  strict-cell theorem and all four companions therefore moved together a
+  third time to the freshly checked free identifier `THM-3900`.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
   only before empty reservations; rename the whole artifact family together.

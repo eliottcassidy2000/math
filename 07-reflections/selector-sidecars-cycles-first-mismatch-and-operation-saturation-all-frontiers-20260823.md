@@ -91,7 +91,7 @@ interesting improvement.  This is a structural boundary, not the
 Arithmetic--Kakeya target: a finite forcing record is not automatically a
 universal lower bound, and the previously used rule-(1) is unsound.
 
-[THM-3896](../01-canon/theorems/THM-3896-arithmetic-kakeya-strict-two-by-two-cyclic-score-seven-four.md)
+[THM-3900](../01-canon/theorems/THM-3900-arithmetic-kakeya-strict-two-by-two-cyclic-score-seven-four.md)
 now classifies the first constructible strict cycle completely.  The exact
 `[2,2]` optimum is `7/4`: three seeds attain it, while a symbolic audit of all
 `10*6=60` two-seed/firing-pair families finds no required rank pair `(6,4)`.
@@ -195,10 +195,17 @@ gauge fixes one coordinate but changes the mixed lift by a `Delta`-multiple;
 peeling is bookkeeping, not descent.
 
 [THM-3885](../01-canon/theorems/THM-3885-cusp-residual-f-zero-arm-dichotomy-and-quadratic-closure.md)
-supplies the complementary axis: `f=0` is closed through cubic `T`, and the
-`a=0` and `L=0` arms have exact constant/root-polarization grammars.  The
-remaining task is nonlinear interpolation between those two boundary
-sections.
+supplies the complementary axis: `f=0` is closed through quartic `T` by two
+independent eliminations, and the `a=0` and `L=0` arms have exact
+constant/root-polarization grammars.  The bounded proof is now overtaken by
+[THM-3895](../01-canon/theorems/THM-3895-f-zero-quartic-covariant-and-high-y-degree-emptiness.md),
+whose quartic covariant proves `deg_y T<=2` in every total degree.  The next
+three-channel collapse in
+[THM-3897](../01-canon/theorems/THM-3897-f-zero-residual-all-degree-global-emptiness.md)
+is now independently hostile-audited: its polynomial-Pell argument, odd
+linear channel, and addressed constant channel prove `T=0` in all degrees.
+The bounded THM-3885 and THM-3893 closures are subsumed, while their arm and
+deletion mechanisms remain useful.
 
 [THM-3886](../01-canon/theorems/THM-3886-cusp-residual-equality-seam-second-layer-trichotomy.md)
 is now **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**.  The audit
@@ -208,6 +215,27 @@ constant free.  The `deg f=2` Kummer symbol still dies by consecutive
 obstruction; and `deg f>=3` forces a second gauge jet.  The explicit hostile
 `(0,0)->(K,-a)` proves that gauge peeling does not preserve squareness, so the
 stable range is still an associated-graded result, not a descent algorithm.
+
+[THM-3894](../01-canon/theorems/THM-3894-cusp-residual-all-degree-gauge-kummer-parity-filtration.md)
+does iterate the leading-symbol calculation lawfully without peeling the
+gauge.  Every equality-seam survivor aligns through `ceil(n/2)` jets and ends
+in one of two parity passports: an even-degree Kummer symbol `q_0=xu^2`, or
+an odd-degree square `q_0`.  A vertical completion of the Kummer passport is
+empty, but general lower `y`-dependent data remain.
+[THM-3896](../01-canon/theorems/THM-3896-cusp-residual-degree-four-equality-seam-emptiness.md)
+now closes the full degree-four equality cell after independent audit; the
+first open lifts are the odd degree-three passport and higher-degree
+nonconstant-sidecar cells.
+
+The carrier lane has also changed scale.  Independently audited THM-3891
+closes every quadratic `C^8` binary-cubic row and proves a sharp pencil lemma
+for all squarefree binary degrees `n>=3`; degree two has a one-support hostile.
+THM-3892 classifies every pure-power binary-cubic carrier as a polynomial
+`GL_2(k[t])` orbit, and its independent audit shows the orbit theorem itself
+extends to every binary degree `n>=2`.  The distinction is useful: constant
+discriminant controls the entire root cover, whereas pencil support measures
+branch values of a separate one-parameter perturbation.  The former survives
+at degree two precisely where the latter fails.
 
 Finally,
 [THM-3879](../01-canon/theorems/THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff.md)
@@ -325,12 +353,15 @@ objects cannot be transported merely because the same word is used.
 1. **LRC anchor:** attack the 58 `t>=U` certificate survivors with two
    auxiliaries or an owner/arrival sidecar, while keeping the unrestricted
    `t<U` region separate.  The scale-two row `(2,1,9)` is the first hostile.
-2. **Jacobian anchor:** for `deg f>=3`, test whether a third gauge jet is
-   forced without assuming gauge invariance.  In parallel, attack nonlinear
-   `f=0` interpolation using the two exact boundary sections.
-3. **Nonmonogenic niche:** search binary cubic index forms, retaining the
-   determinant cocycle and the normalization place divisor.  The common-zero
-   coefficient gate is sufficient but pays a large singularity tariff.
+2. **Jacobian anchor:** leave the now-closed `f=0` lane rather than rescan it.
+   On `f!=0`, develop THM-3899's y-degree tariff and two-colour equality
+   passport, then attack the first open odd degree-three lift without
+   assuming gauge invariance.
+3. **Nonmonogenic niche:** quotient the all-degree pure-power carrier by its
+   explicit polynomial `GL_2` word, then measure which lower perturbation and
+   central homogenizing layer survive.  Retain the determinant cocycle and
+   normalization-place divisor; source-binary equivalence is not a target
+   Keller transformation.
 4. **AK niche:** move from the exact strict `[2,2]` optimum to the smallest
    larger `k=2` cell; search for a genuine score below `7/4` with the same
    seven-row/loose-row hostile controls.

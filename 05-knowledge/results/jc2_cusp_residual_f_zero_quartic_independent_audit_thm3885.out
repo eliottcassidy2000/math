@@ -1,0 +1,12 @@
+THM3885_FZERO_QUARTIC_INDEPENDENT_AUDIT_20260823
+terminal_method=exact_Q_Macaulay_not_primary_Groebner
+terminal_sha256=bea3d688433770d922efaaedf373b680de6090cd93dcdd4bfabd24bf9058a5c7
+r4_certificate=rows:504,rank:495,nonzero:158,sha256:a22d28343e7e2e3b26cf25da5f60290aa721367911a80a49f81b991957effaa1
+r0_q4_certificate=rows:90,rank:82,nonzero:26,sha256:6f03d5034c185a508aeed21fae9ea984c00fc476dd84e61cc3fcea896b8b0725
+r0_p8_certificate=rows:90,rank:82,nonzero:24,sha256:bf4d865c76080fe3328f0d1ac3a4f6478043c23cd5bc557b8fab4eed1ffc84a8
+global_y_degrees=3,2,1,0_all_closed
+closed=f=0;addressed;deg_total_T<=4;unique_T=0
+promotion=JUSTIFIED
+semantic_sha256=3e5668be42d149467158e4c8ff2f833814e7e8a4dc9e795ff12ff397b047a392
+CHECKS=40
+RESULT=PASS
