@@ -18,8 +18,9 @@ audit: >
   quartic invariants and discriminant, the birational map and inverse, all
   four marked sections and their chord law, the T-divisor factorization, the
   generic squarefree y-discriminant, short-Weierstrass discriminant, infinity
-  minimalization, IV component addresses, and the 3-division polynomial in
-  29 active gates.  Normal and optimized runs must byte-match the frozen
+  minimalization, IV component addresses, the normalized cubic-factor chart,
+  and the 3-division polynomial in 36 active gates.  Normal and optimized runs
+  must byte-match the frozen
   output.  Independent audit must recheck extension to smooth projective
   models, the exact one-way integrality scope at bad fibres, rationality and
   Shioda--Tate inputs, torsion injection at IV, and the local intersection of
@@ -33,9 +34,9 @@ related:
   - THM-3886-cusp-residual-equality-seam-second-layer-trichotomy
 script: 04-computation/jc2_f_zero_equianharmonic_jacobian_integrality_thm3888.py
 output: 05-knowledge/results/jc2_f_zero_equianharmonic_jacobian_integrality_thm3888.out
-script_sha256: c0fa999e83e8ed3062d842ff39a0c4b20c80a9f7f286b1186b6fd1dc36cf8676
-output_sha256: 4b26d1194b8cad77d53acd7d42a08ddc35f907785c2592607eb24c5cfbb5f7a2
-semantic_sha256: b04048dea4c389b1f96995634ef2b930383984e02267a407ff79d1e0ff52b4ed
+script_sha256: 26a78269c1c9a86ddffad83638dc6cb67bc0beb089d7420d6b416afb8db21635
+output_sha256: a1615bddc33bef6e8008a76d94145ab459a4fc4c48344b5087888cf163ab9f77
+semantic_sha256: 35b441d1646b753f470ac4bfd61a7dccadc58f3625d2d5c1ad101fdaf96f65c3
 hash_basis: raw LF bytes
 ---
 
@@ -129,6 +130,42 @@ Equations `(5)-(9)` are inverse rational maps.  Since the generic quartic and
 `E` are smooth projective genus-one curves and `(T,G)=(0,L^2)` is rational,
 the map extends uniquely to an isomorphism of their smooth projective models,
 with this point chosen as the origin `O`.
+
+### 2.1. The normalized cubic factor--cofactor chart
+
+There is a more revealing scaling than `(7)`.  Put
+
+```text
+u=X/(4L^2),                         v=Y/(8L^2).             (9a)
+```
+
+Then `(8)` and its inverse become
+
+```text
+v^2=K^2+L^2(u^3-a^3),
+T=(v-K)/(u^2+au+a^2),
+G=(a+2u)T^2-L^2.                                          (9b)
+```
+
+Equivalently,
+
+```text
+(v-K)(v+K)=L^2(u-a)(u^2+au+a^2).                         (9c)
+```
+
+Thus the two deleted sections are the two nontrivial cube-root addresses of
+`u^3=a^3`, while `P_0` is the address `u=a`.  On any Weierstrass section for
+which `u,v in k(x)[y]`, the first inverse in `(9b)` is polynomial exactly when
+
+```text
+u^2+au+a^2 divides v-K in k(x)[y].                        (9d)
+```
+
+This literal divisibility statement is scoped to integral Weierstrass
+coordinates.  For a general Mordell--Weil section, `u,v` may have
+denominators and `(9d)` must be replaced by its valuation form.  This is why
+the first integral height shell is the cheapest exact computation, but not
+the whole problem.
 
 ## 3. The four marked sections and the divisor of `T`
 
@@ -349,8 +386,10 @@ quartic coefficient Groebner basis.  It is:
 
 1. compute an explicit Mordell--Weil basis for the `II^4+IV` rational
    elliptic surface and express `Q_+,Q_-,P_0` in that basis;
-2. enumerate the first height shells subject to no finite intersection with
-   `Q_+ union Q_-` and the `IV` address `(31)-(32)`;
+2. enumerate the first (polynomial `u,v`) height shell using the cubic
+   factor--cofactor identity `(9c)` and the exact divisibility `(9d)`, then
+   continue through rational-coordinate height shells subject to no finite
+   intersection with `Q_+ union Q_-` and the `IV` address `(31)-(32)`;
 3. apply the inverse denominator test
 
    ```text

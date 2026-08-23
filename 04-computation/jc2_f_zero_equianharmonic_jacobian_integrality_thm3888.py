@@ -89,6 +89,44 @@ zero(
     "scaled inverse recovers T",
 )
 
+# Natural factor-cofactor normalization.  On integral Weierstrass sections,
+# polynomial T is exactly the displayed cubic divisibility test.
+uvar, vvar = sp.symbols("uvar vvar")
+normalized_curve = vvar**2 - K**2 - L**2 * (uvar**3 - a**3)
+zero(
+    normalized_curve.subs({uvar: Xe / (4 * L**2), vvar: Ye / (8 * L**2)})
+    .together()
+    .as_numer_denom()[0]
+    .as_poly(G)
+    .rem(curve_equation)
+    .as_expr(),
+    "normalized cubic factor-cofactor curve",
+)
+normalized_denominator = uvar**2 + a * uvar + a**2
+zero(
+    inverse_denominator.subs(Xa, 4 * L**2 * uvar)
+    - 16 * L**4 * normalized_denominator,
+    "normalized inverse denominator",
+)
+zero(
+    (vvar - K) * (vvar + K)
+    - L**2 * (uvar - a) * normalized_denominator
+    - normalized_curve,
+    "normalized three-factor identity",
+)
+T_normalized = (vvar - K) / normalized_denominator
+zero(
+    T_inverse_scaled.subs({Xa: 4 * L**2 * uvar, Ya: 8 * L**2 * vvar})
+    - T_normalized,
+    "normalized T inverse",
+)
+zero(
+    (a + 2 * uvar) * T_normalized**2
+    - L**2
+    - ((a + (4 * L**2 * uvar) / (2 * L**2)) * T_normalized**2 - L**2),
+    "normalized G inverse",
+)
+
 # Marked sections and the group-law relation Q_+ + Q_- = P_0.
 s = sp.symbols("s")
 
@@ -108,6 +146,14 @@ zero(reduce_s(Y_boundary**2 - X_minus**3 + 64 * L**4 * Delta), "Q-minus on E")
 zero(Y_P0**2 - X_P0**3 + 64 * L**4 * Delta, "P-zero on E")
 zero(-(X_plus + X_minus) - X_P0, "horizontal chord x-coordinate")
 zero(-Y_boundary - Y_P0, "horizontal chord y-coordinate")
+zero(
+    reduce_s(X_plus / (4 * L**2) - a * (s - 1) / 2),
+    "Q-plus normalized cube-root address",
+)
+zero(
+    reduce_s(normalized_denominator.subs(uvar, a * (s - 1) / 2)),
+    "Q-plus normalized denominator root",
+)
 zero(
     reduce_s(inverse_denominator.subs(Xa, X_plus)),
     "inverse denominator vanishes at Q-plus",
@@ -180,6 +226,7 @@ semantic = {
     "quartic": "I=0,J=1728*L^4*Delta,disc=-110592*L^8*Delta^2",
     "jacobian": "Ye^2=Xe^3-64*L^4*Delta",
     "boundary": "div(T)=O+P0-Qplus-Qminus;Qplus+Qminus=P0",
+    "factor": "v2=K2+L2(u3-a3);T=(v-K)/(u2+au+a2)",
     "surface": "generic y-fibres II^4+IV;rational;geometric MW rank6 torsion0",
     "scope": "two-section S-integrality and x-integral descent remain open",
 }
@@ -194,6 +241,7 @@ gate(
 print("theorem=THM-3888-f-zero-equianharmonic-jacobian-and-two-section-integrality")
 print("binary_quartic_invariant=I_zero")
 print("jacobian=Y^2=X^3-64L^4Delta")
+print("normalized_factor=(v-K)(v+K)=L^2(u-a)(u^2+au+a^2)")
 print("generic_fibres=II,II,II,II,IV")
 print("geometric_MW=rank_6_torsion_0")
 print("polynomial_lane=two_section_S_integrality_plus_x_descent_OPEN")
