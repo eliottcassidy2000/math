@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-446 (2026-08-23, THM-3790 reservation repair) -- an empty reserved namespace was given a proved dependency
+
+- **What failed:** the initial `RESERVED / UNPROVED EMPTY STUB` for THM-3790
+  listed proved THM-3785 under `depends_on`, despite asserting that it had no
+  mathematical force before proof and audit.
+- **Minimal witness / first failed implication:** the frontmatter itself
+  simultaneously said “empty stub” and inserted the stub into the dependency
+  relation.  A proposed consumer lane is not yet a proved consumer.
+- **Repair / strongest survivor:** while THM-3790 remained an empty
+  reservation, THM-3785 and the adjacent reserved THM-3788 were retained only
+  under `related` and `depends_on` was emptied.  THM-3790 was subsequently
+  promoted to a proved theorem whose argument genuinely uses THM-3785, so that
+  proof edge is now restored.  The identifier and proposed arm-jet scope
+  survived the transition.
+- **Reusable rule:** an empty reserved namespace may route to proved or
+  proposed context only through `related`.  Add proved dependencies only when
+  an audited theorem promotion supplies an actual proof edge.
+
 ## MISTAKE-445 (2026-08-23, THM-3784 audit) -- the fixed top-basis coefficient was called the leading coefficient at lower degree
 
 - **What failed:** the first trace-duality draft correctly proved

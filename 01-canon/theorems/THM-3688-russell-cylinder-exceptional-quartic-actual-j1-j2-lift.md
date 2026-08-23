@@ -2,7 +2,7 @@
 id: THM-3688
 title: "Russell-cylinder exceptional-quartic actual-ring J1/J2 lift"
 status: >
-  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.  Over the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over the
   irreducible quartic field of THM-3683, the uniform actual-ring J0=1 lift of
   THM-3687 extends through the full polynomial identities J1=J2=0.  The
   THM-3703 Apéry module compiles target membership to an 89-gap quotient: a
@@ -12,13 +12,23 @@ status: >
   four complex embeddings are covered.  No J3, J4, all-order, global-pair,
   Keller-map, or JC(2) conclusion is claimed.
 source: jc_zero_debt_lift / exceptional-quartic gap-compiled coupled lift, 2026-08-22
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASSED (jc_radial_escape_probe, 2026-08-23).
+  The audit rederived irreducibility, squarefreeness, the exact discriminant
+  and all four root embeddings; the J0/J1/J2 coefficient laws; every licensed
+  division; actual-target-ring typing through the THM-3703 basis; and the
+  precise J3/globalization boundary.  It repaired only quotient-space,
+  matrix-solve, dependency-slug, and stopping-scope wording.  Independent
+  normal and optimized executions line-normalize to the frozen output and
+  the recorded script/output hashes.
 depends_on:
   - THM-3683-russell-cylinder-sixth-debt-quartic-on-the-zero-fourth-parabola
   - THM-3687-russell-cylinder-exceptional-quartic-actual-j0-lift
   - THM-3703-russell-cylinder-exceptional-quartic-sagbi-module
 related:
   - THM-3680-russell-cylinder-qdagger-coupled-stable-lift
-  - THM-3629-russell-cylinder-positive-global-pair-to-jc2-counterexample
+  - THM-3629-russell-cylinder-linear-vertical-fold-global-form-boundary
+  - THM-3737-russell-cylinder-exceptional-quartic-jacobian-image-hyperplane
 script: 04-computation/jc2_russell_cylinder_exceptional_quartic_exact_j1_j2_lift_thm3688.py
 output: 05-knowledge/results/jc2_russell_cylinder_exceptional_quartic_exact_j1_j2_lift_thm3688.out
 script_sha256: 02cd67446b18b3863bc3665d48a6c5cccda81c394f94b754d2b90b1597c53ba6
@@ -28,7 +38,7 @@ hash_basis: raw LF bytes
 
 # THM-3688 -- all four exceptional folds pass the actual `J_1,J_2` gate
 
-**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.**  The four
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The four
 sixth-debt folds of THM-3683 are not stopped by either of the next two full
 stable equations.  One exact certificate over their common quartic field
 constructs actual target-ring coefficients through order three.
@@ -106,11 +116,18 @@ Gamma=<18,21,30,71,83,124>.
 ```
 
 There are exactly `89` missing degrees, the largest is `169`, and every
-degree at least `170` occurs.  Descending against the monic basis defines the
-exact quotient remainder
+degree at least `170` occurs.  Put
 
 ```text
-rho:K[x]_(<=375) -> K[x]/S,             dim_K im(rho)=89. (9)
+S_(<=375)=S intersect K[x]_(<=375).
+```
+
+Descending against the monic basis defines the exact `K`-linear quotient
+remainder
+
+```text
+rho:K[x]_(<=375) -> K[x]_(<=375)/S_(<=375),
+                                      dim_K im(rho)=89. (9)
 ```
 
 The Bezout identity `(3)` turns every polynomial solution of `L_0(F,G)=h`
@@ -176,7 +193,8 @@ lc(A)=162 lc(E)lc(F_1) !=0.                              (16)
 
 Thus the directions `(13)` meet the high `J_2` rows `396,...,569`
 triangularly, with the same nonzero diagonal `(16)`.  More strongly, no
-matrix solve is needed.  If `(F_2^0,G_2^0)` is the base `J_1` solution, divide
+separate `174 by 174` transverse matrix solve is needed.  If
+`(F_2^0,G_2^0)` is the base `J_1` solution, divide
 
 ```text
 -(K_2+M(F_2^0,G_2^0)) by A.                             (17)
@@ -237,9 +255,11 @@ counterexample.  It does not prove
 - a counterexample to `JC(2)`.
 
 THM-3629 becomes applicable only after a positive **global** pair is
-constructed.  The next actual-ring task is to derive and solve the coupled
-`J_3,J_4` equations while retaining the gap compiler and the first-order
-kernel operator `(14)`.
+constructed.  THM-3737 subsequently reduces the `J_3` stage to the scalar
+gate `Lambda(D_3)=0`, but neither theorem proves that gate, constructs
+`F_4,G_4`, solves the dependent `J_4` gate, or supplies a coherent/global
+continuation.  The next actual-ring task is the coupled `J_3,J_4`
+continuation while retaining the gap compiler and operator `(14)`.
 
 ## 6. Reproduction
 

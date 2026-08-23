@@ -316,28 +316,22 @@ gives no support asymptotic/residue; only the indexed coefficient is known.
   projective eigenspaces and excludes physical `Q_2` realizations. Nonclosing
   profiles, marked sidecars, Mealy closure, bounded gaps, center/density/
   balance, and every prize remain OPEN.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT
-  (MISTAKE-205); THM-3544/50 and cited Nagata/GGHV force composite degree
-  `>=6`, height `>=8`, reduced height `>=108`; THM-3543--3642 close the named
-  low sectors. THM-3687/3688 reach `J_0,J_1,J_2` (audit live); `J_3+` stays
-  open, and THM-3737 awaits audit. THM-3685--3739 close W002/3/7/8 and
-  stabilized W004, not exceptional W004/W005/6; THM-3736/3740 do not reach
-  interacting Cohn factors. THM-3741/3754--3759/3765/3771/3772 close the named
-  radial/flank/Pell/split/cubic ansatzes. THM-3770 gives the equalizer and
-  dressing no-go; THM-3773--3777 type the rational covers and short gates.
-  THM-3779/3780 close the `m>=2` target field and same-pair filling; THM-3782
-  makes simple-pole spectra automatic and, with divisor coverage, closes all
-  target words. THM-3781 closes every scalar-centred `3x3` AP cell. THM-3783
-  computes the `m=1` surface `r^3g=z^2-r/4`, degree floor `>=4`, and sparse
-  no-gos; THM-3786 closes its irregular `2x3`/`3x2` cells, leaving common-step
-  cells and arbitrary pairs. THM-3784's trace-zero rungs have no nonzero
-  base-field bracket. Its `m=2` probe closes linear-leg and
-  one-correction slices but leaves the full rank-two intersection open.
-  THM-3785 (audited)
-  computes the linear third-pole surface `r^2e=z^3-c^3r`, cubic atlas,
-  `Pic=Z/3`, degree floor `>=6`, and affine/homogeneous/`2x2` no-gos. Other
-  higher poles/supports, altered pairs/quartics, unrestricted `C[A,d]^2`,
-  `JC(2)`, and `DC(2)` remain OPEN.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT;
+  Nagata/GGHV and THM-3543--3642 give the stated degree/height floors and
+  low-sector closures. Audited THM-3687/3688 reach `J_0,J_1,J_2`;
+  `J_3+` and THM-3737's audit remain. THM-3685--3739 close W002/3/7/8 and
+  stabilized W004, not exceptional W004/W005/6 or interacting Cohn factors.
+  THM-3741/3754--3759/3765/3771/3772 close the named radial/Pell/cubic lanes;
+  THM-3770--3780 type and close the stated rational target/filling operations.
+  THM-3782 closes covered simple-pole target words; THM-3781 closes every
+  scalar-centred `3x3` AP cell. THM-3783 gives the `m=1` surface
+  `r^3g=z^2-r/4` and degree floor `>=4`; THM-3786 closes its irregular
+  `2x3`/`3x2` cells, not common-step or arbitrary pairs. THM-3784's trace-zero
+  rungs have no nonzero base-field bracket; its `m=2` probe closes linear-leg
+  and one-correction slices, not the full rank-two intersection. Audited
+  THM-3785 gives `r^2e=z^3-c^3r`, `Pic=Z/3`, degree floor `>=6`, and
+  affine/homogeneous/`2x2` no-gos. Other poles/supports, altered pairs,
+  quartics, unrestricted `C[A,d]^2`, `JC(2)`, and `DC(2)` remain OPEN.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2247 close the affine-through-
   quartic and terminal-through-fourteen strata; THM-2262/2297--2480, including

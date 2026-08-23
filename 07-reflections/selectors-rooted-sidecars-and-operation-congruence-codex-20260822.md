@@ -3,7 +3,7 @@
 **Session date:** 2026-08-22--23
 **Status:** synthesis of PROVED/audited THM-3728--3731, FINITE-EXACT
 THM-3732, PROVED/audited THM-3741--3743/3754--3759/3765/3770--3778, and
-PROVED + VERIFIED-EXACT THM-3688/3737 pending independent hostile audits,
+audited THM-3688 plus PROVED + VERIFIED-EXACT THM-3737 pending hostile audit,
 together with canonical PROVED implications and named hostile controls. Every
 cross-frontier comparison is methodological; no object-level reduction is
 claimed.  LRC(14), JC(2), FC(3)/HFC(3), the strong tournament inequality, and
@@ -78,9 +78,11 @@ or THM-3730's divisor fibres.
 
 THM-3688 uses a different kind of exact compiler: an Apéry gap quotient turns
 the exceptional quartic actual-ring `J_1,J_2` lift into a finite square solve,
-with the omitted coordinate checked separately.  It is PROVED + VERIFIED-EXACT
-but still pending independent hostile audit; `J_3+`, globalization, and JC(2)
-remain open.  Audited THM-3741 extends THM-3738 across the axis boundary:
+with the omitted coordinate checked separately.  An independent four-root,
+denominator, and actual-ring audit now passes; normal/optimized/frozen exact
+replays agree.  THM-3737 reduces `J_3` to `Lambda(D_3)=0` but does not prove
+that gate, construct `F_4,G_4`, or globalize.  Audited THM-3741 extends
+THM-3738 across the axis boundary:
 it classifies every nonsingular two-charge radial component and proves that
 only the linear class has a polynomial mate.  Third-charge and nonradial
 sectors remain.  Its `XT` charge has no typed map to the W004 collision-row
