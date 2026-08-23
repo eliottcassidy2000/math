@@ -1,0 +1,10 @@
+THM3859_MARKED_ROOT z=1+2As,C=6s(1+As),b|F=2s^2(3+4As)
+THM3859_FACTOR Delta_b=F*H, F=C-6s(1+As)
+THM3859_COMPANION_LC 8A
+THM3859_COMPANION_DISC 27(Aq+4As+3)(3Aq-4As+1)^3
+THM3859_SPECIAL_FIBRE H(0,C)=9C-54q(0)+54s(0), disc(0)=81
+THM3859_IRREDUCIBLE one A=0 pole plus at least one A=infinity place
+THM3859_REDUCIBLE one graph factor plus one G_m factor
+THM3859_SCOPE s,q in k[A]; C-dependent transverse quotient remains open
+SEMANTIC_SHA256 a22900e32db67db55945db2bae117c0fb6b1141ca1eb1f296d89fdcdc1d9e442
+CHECKS 27
