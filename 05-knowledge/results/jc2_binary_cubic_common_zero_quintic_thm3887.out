@@ -1,0 +1,9 @@
+theorem=THM-3887-binary-cubic-common-zero-quintic-unibranch-obstruction
+finite_pencil_discriminant_contact_at_most=3
+fourth_power_tangent_cone=rank_one_coefficient_jet
+quintic_jet_divisor=ell^3
+common_zero_reduced_irreducible_unibranch_degree_floor=6
+multibranch_quintic=OPEN
+semantic_sha256=67b4b929172cefd97c23b2be58275980b27f39663b1969ee6a4c08b8369a45c5
+CHECKS=17
+RESULT=PASS
