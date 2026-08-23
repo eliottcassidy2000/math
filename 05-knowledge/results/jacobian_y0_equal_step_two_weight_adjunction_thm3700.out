@@ -1,0 +1,10 @@
+theorem=THM-3700-y0-equal-step-two-weight-adjunction-Pluecker-no-go
+span=THM3698_seven_functions_plus_A^2B,C^4;dimension=9;weights=-5,-2,1,4
+exterior_square=36;coefficient_rows=48;linear_rank=29;affine_dimension=7
+Pluecker_quadrics=126;unique_nonzero=106;substituted_Groebner=[1]
+hand_core=Delta0134=-17*(w18-2*w35)/56;Delta0136_at_w18=2w35=-7/24
+conclusion=one_bracket_EMPTY_in_this_nine_function_span
+controls=ambient_bracket:PASS;rational_three_bracket:PASS;collision_retained:PASS
+semantic_sha256=d6dd53b7cea5bbbe4b3babd0e992dfc3d2715dc6cd1069186c59ac27bab4206a
+CHECKS=67
+RESULT=PASS
