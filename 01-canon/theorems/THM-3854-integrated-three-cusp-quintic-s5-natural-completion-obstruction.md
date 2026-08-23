@@ -9,29 +9,32 @@ status: >
   ramification image of a finite polynomial-plane quintic whose generic
   geometric monodromy is S5.  Its discriminant quadratic layer has group A5
   and therefore no cyclic cubic quotient.  Two explicit seminormal
-  square/cube descents have nonsquare residual discriminants.  This only
-  obstructs the natural quintic completion: the three-torsion of the
-  quadratic-resolvent surface, alternative cubic orders, Keller atlases, and
-  JC(2) remain OPEN.
+  square/cube descents have nonsquare residual discriminants.  The cuspidal
+  normalization also cannot be the restriction of a Keller map to any
+  interior smooth source arm, in arbitrary normal degree.  These statements
+  still leave the three-torsion of the quadratic-resolvent surface,
+  alternative cubic orders, boundary/Jelonek realizations, Keller atlases,
+  and JC(2) OPEN.
 source: jc_zero_debt_lift / integrated cusp-front completion lane, 2026-08-23
 audit: >
   SELF-AUDITED exact proof candidate.  The companion verifies the
   normalization and rational inverse, complete collision packet, all cusp
   and node types, smooth fivefold infinity contact, polynomial quintic map,
-  exact discriminant constant, two good-prime cycle types, and both
-  seminormal residual quotients.  Normal and optimized runs must byte-match
-  the frozen transcript before promotion.  Independent hostile audit is
-  still required.
+  exact discriminant constant, the all-degree constant-bracket arm factor,
+  two good-prime cycle types, and both seminormal residual quotients.  Normal
+  and optimized runs must byte-match the frozen transcript before promotion.
+  Independent hostile audit is still required.
 related:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
   - THM-3844-two-cusp-polynomial-branch-quadratic-resolvent-design-gate
   - THM-3851-tricuspidal-quartic-rank-two-two-place-tradeoff
+  - THM-3856-quadratic-normal-strip-keller-pairs-are-automorphisms
 script: 04-computation/jc2_integrated_three_cusp_quintic_s5_thm3854.py
 output: 05-knowledge/results/jc2_integrated_three_cusp_quintic_s5_thm3854.out
-script_sha256: 7310e9bc0ee92f189aeb1c85d02b7e6d1d55d776243cde5bc009d439cdc5f010
-output_sha256: 85646eb9aee313b9f57cc4a1bf2027e86cc3eaa71dc3e088ba1cb5d1de46e26d
-semantic_sha256: 13b07d9f8b90e586f1d280e9c5a530594175fa66f25314413fc5a88b851b7bd2
+script_sha256: ffe82ca9bd4c147b685d75b16bfa94e18269b143fc9cbe629f5edf227538ae5e
+output_sha256: 0a4598e2f042a08afd7b1d046c3cea2bc345e48fc6282980e1d2f265a619847e
+semantic_sha256: 1f9a5b7d00f3883d38bd65c8a2f0546b5627e7a341cd29560e4f80993fc92f24
 hash_basis: raw LF bytes
 ---
 
@@ -76,6 +79,12 @@ The generic geometric Galois group of `(4)` is `S5`.  After adjoining
 nontrivial cyclic cubic quotient.  Thus the most immediate completion of
 this one-place three-cusp front supplies the wrong cover grammar for the
 desired `S3/C3` counterexample lane.
+
+There is an independent all-degree arm obstruction.  No polynomial pair on
+a smooth source graph `r=0` can both restrict to `(x(t),y(t))` and have
+nonzero constant Jacobian.  Thus this cuspidal normalization can occur only
+as boundary/Jelonek/discriminant data in a Keller design, not as an interior
+smooth Keller arm.
 
 This is an obstruction to **the natural quintic splitting field only**.  It
 does not compute `Cl(k[x,y,W]/(W^2-Delta))[3]`, exclude another binary-cubic
@@ -240,6 +249,42 @@ This attractive completion is not Keller: `(21)` vanishes along `(22)`.
 Deleting the ramification curve also makes its defining equation a
 nonconstant unit, the same basic deleted-different debt isolated throughout
 THM-3811 and THM-3841.
+
+### 3.1. All normal degrees fail for an interior arm
+
+The preceding failure is not repairable by simply adding higher powers of a
+normal coordinate while fixing the arm.  Let `A(t,r),C(t,r) in k[t,r]` be
+arbitrary and suppose
+
+```text
+A(t,0)=x(t),                         C(t,0)=y(t).               (23a)
+```
+
+Write
+
+```text
+alpha(t)=A_r(t,0),                   beta(t)=C_r(t,0).          (23b)
+```
+
+The constant `r`-coefficient of the bracket is necessarily
+
+```text
+J_(r,t)(A,C)|_(r=0)
+ =alpha(t)y'(t)-x'(t)beta(t)
+ =g(t)(15t alpha(t)-4 beta(t)).                                (23c)
+```
+
+Because `g=t(t^2-1)` is a nonunit, `(23c)` cannot equal an element of
+`k*`.  Terms of order `r^2` and higher do not enter this constant bucket, so
+the obstruction is independent of the normal degree and survives formal
+power-series corrections as well.
+
+Geometrically, the differential of an etale map cannot kill the nonzero
+tangent vector of a smooth source arm.  But `(x'(t),y'(t))=(0,0)` at all
+three cusp addresses.  This explains why the immersed, derivative-unimodular
+Russell arm of THM-3843 is a different object.  THM-3856's quadratic-strip
+classification becomes relevant only after replacing the cuspidal carrier;
+it is not a degree-three escape for `(1)`.
 
 ## 4. Exact `S5` monodromy
 

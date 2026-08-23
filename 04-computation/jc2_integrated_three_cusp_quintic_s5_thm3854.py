@@ -200,6 +200,26 @@ zero(sp.diff(y_map, T) + sp.Rational(15, 4) * (T**4 - 2 * T**2 - x),
 gate(sp.Poly(F, y).degree() == 1 and sp.Poly(F, y).LC() == 4,
      "quintic total ring is a polynomial plane")
 
+# The cuspidal normalization cannot instead be used as an interior smooth
+# arm of a Keller map.  For arbitrary first-normal coefficients alpha,beta,
+# the constant normal-bracket bucket remains divisible by g.
+alpha, beta = sp.symbols("alpha beta")
+arm_constant_bucket = alpha * sp.diff(y_T, T) - sp.diff(x_T, T) * beta
+zero(
+    arm_constant_bucket - g * (15 * T * alpha - 4 * beta),
+    "all-degree arm constant-bucket factor",
+)
+gate(
+    sp.gcd(sp.Poly(sp.diff(x_T, T), T), sp.Poly(sp.diff(y_T, T), T))
+    == sp.Poly(g, T),
+    "arm derivative ideal has nonunit gcd g",
+)
+gate(
+    [arm_constant_bucket.subs(T, address) for address in (0, 1, -1)]
+    == [0, 0, 0],
+    "constant bracket vanishes at every cusp address",
+)
+
 # Arithmetic specialization proving the generic S5 group.  At (-3,1),
 # reduction mod 29 is irreducible and reduction mod 67 has cycle pattern
 # 1+1+1+2.  Both primes are unramified.
@@ -293,6 +313,7 @@ semantic = {
     "singularities": "three A2 cusps plus three transverse A1 nodes",
     "completion": "F=3T5-10T3-15xT+4y;disc=-64800000*delta",
     "monodromy": "generic S5;over discriminant quadratic field A5;no C3 quotient",
+    "arm_gate": "cuspidal normalization has derivative gcd g;no interior Keller arm",
     "seminormal_controls": "two square/cube descents have nonsquare residual quotients",
     "scope": "natural quintic splitting field only;Cl(W2=delta)[3] open",
 }
@@ -309,6 +330,7 @@ print("branch=integrated_three_cusp_quintic;finite_singularities=3A2_plus_3A1")
 print("infinity_places=1;infinity_smooth=YES;line_contact=5")
 print("natural_completion_degree=5;discriminant_constant=-64800000")
 print("generic_group=S5;discriminant_kernel=A5;cyclic_cubic_quotient=NONE")
+print("interior_smooth_arm=IMPOSSIBLE;derivative_gcd=t(t^2-1)")
 print("seminormal_cubic_controls=2;nonsquare_residuals=2")
 print("quadratic_resolvent_class_group_3_torsion=OPEN")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
