@@ -2,8 +2,8 @@
 id: THM-3885
 title: "Cusp-residual f=0 arm dichotomy and cubic closure"
 status: >
-  PROVED + VERIFIED-EXACT; AUDITED BASE + CUBIC STRENGTHENING AWAITING
-  FOCUSED HOSTILE AUDIT.  In the THM-3881 rank-two residual equation, the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the THM-3881
+  rank-two residual equation, the
   full f=0 lane has an exact arm dichotomy: T(-1,y) is either zero or a
   constant c with c^3=-625/32.  Every total-degree-at-most-three square pair
   in this lane is the base pair `T=0`.  At the independent L=0 arm, all
@@ -17,12 +17,13 @@ audit: >
   missing-`y` square-root arguments in the quadratic cell.  It independently
   proved both UFD-parity directions and every unit/zero boundary in the
   `L=0` root-polarization grammar.  Here “empty” in the transcript means no
-  nonzero `T`; the base pair remains.  CUBIC STRENGTHENING AWAITING FOCUSED
-  HOSTILE AUDIT: the new coefficient recursion, the `p=0` seam, the reduced
-  Groebner basis `<z,q^2>`, the affine `L=0` odd-degree gate, and the final
-  one-color reduction must be independently rechecked.  The amended companion
-  verifies these gates in addition to the audited base packet.  Normal and
-  optimized runs must byte-match the frozen output.
+  nonzero `T`; the base pair remains.  INDEPENDENT CUBIC HOSTILE AUDIT PASS
+  (root, 2026-08-23): independently checked completeness of the quotient
+  `T=c+(x+1)U`, the degree-four square-root ansatz on `x=0`, every displayed
+  coefficient recurrence, the two seams `p=0` and `p!=0`, and the exact
+  reduced basis `<z,q^2>`.  The audit also rederived the odd degree-five
+  obstruction on `L=0` and the final missing-`y` one-color argument.  Normal
+  and optimized runs byte-match the frozen output.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
 related:
@@ -38,8 +39,7 @@ hash_basis: raw LF bytes
 
 # THM-3885 -- the f-zero lane starts above cubic degree
 
-**PROVED + VERIFIED-EXACT; AUDITED BASE + CUBIC STRENGTHENING AWAITING
-FOCUSED HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero and retain
 the notation of THM-3881:
 
