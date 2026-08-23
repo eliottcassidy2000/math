@@ -1,9 +1,10 @@
 # Selectors, rooted sidecars, and operation congruence across open frontiers
 
-**Session date:** 2026-08-22
+**Session date:** 2026-08-22--23
 **Status:** synthesis of PROVED THM-3728--3731, FINITE-EXACT THM-3732,
-incoming independently audited PROVED THM-3733--3736/3739/3740, and incoming
-PROVED + VERIFIED-EXACT THM-3688/3738/3741 pending independent audits,
+incoming independently audited PROVED THM-3733--3736/3739/3740/3741,
+THM-3743/3754--3759/3765, and PROVED + VERIFIED-EXACT THM-3688 pending an
+independent hostile audit,
 together with canonical PROVED implications and named hostile controls. Every
 cross-frontier comparison is methodological; no object-level reduction is
 claimed.  LRC(14), JC(2), FC(3)/HFC(3), the strong tournament inequality, and
@@ -86,6 +87,42 @@ only the linear class has a polynomial mate.  Third-charge and nonradial
 sectors remain.  Its `XT` charge has no typed map to the W004 collision-row
 charge, despite the shared word “charge.”  THM-3737/3742/3743 are only
 reserved namespaces.
+
+## Second incoming integration: flatness, ordinals, radial profiles, and Rule 30
+
+The new results separate four more uses of “coordinate.”  THM-3743's
+minimum-width covector is an exact integer speed relation of `l1` norm at
+most `356`; it is a necessary resonance, not a phase carrier.  Its
+support-two Pell/compiler intersection has only `(1,5),(5,29),(29,169)`, but
+every such row is already inside THM-2052's relation span and a safe Pell
+prefix contains all three.  The selector supplies an address refinement, not
+the missing rank increment or a loneliness predicate.
+
+THM-3756 gives the positive operation-compatible case.  The pair `(r,s)`
+losslessly records an ordered primitive Pythagorean triple and makes the
+Berggren children affine; the inverse is piecewise affine on three disjoint
+cones.  Projecting to the coarse odd-square ordinal `r` destroys ancestry,
+and the native repair is the second ordinal `s` (or a branch word).  Dropping
+coprimality retains odd-root content `g`, while the triple content is `g^2`.
+
+The Jacobian arrivals expose three different descent mechanisms.  THM-3754
+uses a finite source-variable filtration; THM-3759 proves its Hamiltonian
+kernel before showing that a constant-flank central profile forces an
+infinite Euler repair tail; THM-3765 instead reads rational exactness from the
+generic hyperelliptic time form and leaves one explicit nonlinear rational
+boundary, still with no polynomial mate.  Together with THM-3755/3757/3758
+they close structured quartic/radial slices, not arbitrary quartics or JC(2).
+The live design axes are a varying positive flank, genuinely nonradial
+supports, and the vertical-principal-part gate rather than another scalar
+resultant.
+
+Finally, the Rule 30 period-three projective map supplies an exact
+operation-congruence test.  Algebraically, `R^2(g)=g` is one rational curve
+with involution `t -> -t` plus a constant point.  The marked amplitude
+holonomy is essential, but every curve point fails the physical odd-unit
+valuation gate and the constant point repeats forbidden gap one.  Returning
+under the quotient operation is therefore weaker than realization by the
+named Rule 30 seed.  Periods at least five and every prize remain open.
 
 ## Euclidean address versus coefficient transport on the 182 skeleton
 
@@ -288,12 +325,16 @@ unlike the retired tournament/1729 numerical resemblance.
    rather than imposing an arbitrary torsor.
 4. **JC:** move beyond the now-closed stabilized W004 tail without exporting
    its row gauges to exceptional W004 or W005/6.  In the Cohn lane test two
-   interacting right factors; in component design add a third charge or
-   genuinely nonradial coupling.
+   interacting right factors; the normalized third-charge radial component
+   is now closed, so component design must vary the positive flank, become
+   genuinely nonradial, or pay the vertical principal-part equalizer.
 5. **Two cubes:** the inert-prime family now proves logarithmic lower growth
    with coefficient `kappa`; determine whether the rest of the support changes
    that order, or obtain a genuine asymptotic for `C(X)`.  Neither a full
    support coefficient nor a collision-tax asymptotic is known.
+6. **Rule 30:** classify the saturated period-five two-scale holonomy, then
+   apply odd-unit/common-gap filters before attempting Mealy owners.  Period
+   three is now an exact no-go, not evidence for a prize statement.
 
 Apply the gates demanded by the proposed consumer: the stabilizer gate for an
 equivariant single-valued selector, the seam/invertibility gate for an atlas or

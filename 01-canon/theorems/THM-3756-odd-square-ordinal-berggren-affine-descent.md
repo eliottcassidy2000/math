@@ -6,9 +6,10 @@ status: >
   Pythagorean triple with ordered even leg B, the odd square roots of B+C and
   C-B define two ordinals (r,s).  These pairs are exactly r>s>=1 with
   gcd(2r-1,2s-1)=1; the outer-rank fibre has size phi(2r-1)/2; and the three
-  Berggren children and the unique inverse descent are affine in (r,s).
+  Berggren children are affine in (r,s), while the unique inverse descent is
+  piecewise affine on three disjoint cones.
   Without the gcd filter, the full triangular cone is a forest of
-  odd-square-scaled Berggren trees indexed by odd content.  The algebraic
+  odd-square-scaled Berggren trees indexed by odd-root content.  The algebraic
   proof was independently audited, including a separate brute enumeration of
   all 792 primitive ordered triples with C<=5000 and zero converse failures.
 source: opus / 2026-08-23
@@ -25,6 +26,10 @@ output: 05-knowledge/results/odd_square_ordinal_berggren_affine_descent_thm3756.
 script_sha256: 9fed96e425c77fbc4f263a7980cb8dcb2de25cce00375ecb532c94b3b0d261b0
 output_sha256: 690f4020ba06f9d2ce8633bb48f2075d411177f76ba305ebd0f45a272f675e70
 semantic_sha256: 5f631c9e700911ce515a7393bb8bc6c5a1551355441834c74544606e0922fc6f
+independent_script: 04-computation/odd_square_ordinal_berggren_independent_audit_thm3756.py
+independent_output: 05-knowledge/results/odd_square_ordinal_berggren_independent_audit_thm3756.out
+independent_script_sha256: b5cffb683649ecf792805c06be42a191b90fc62fd97eaf55939560b1a93dcc7b
+independent_output_sha256: a511a5c533afabd7d393b1f2fe79b593a3a9ccba1e6d970921fdfb6a6e1c66bb
 hash_basis: raw LF bytes
 ---
 
@@ -167,7 +172,8 @@ for coprime positive odd `q>d`.  Solving (13) gives (9), while writing
 `q=2r-1,d=2s-1` gives the unique pair (10) in `Omega`.  QED
 
 There is a useful ambient content law.  If the coprimality condition in (7)
-is omitted and `g=gcd(2r-1,2s-1)`, the triple in (9) has exact content `g^2`.
+is omitted and `g=gcd(2r-1,2s-1)`, then `g` is the odd-root content and the
+triple in (9) has exact coordinate content `g^2`.
 After dividing by `g^2`, (12) is the primitive chart for the coprime odd pair.
 Section 6 proves more: every fixed-`g` locus is a complete copy of the
 primitive Berggren tree, rooted at `g^2(3,4,5)`.  Thus rejected primitive
@@ -356,7 +362,8 @@ In particular, `Omega` is the `g=1` component rooted at `(2,1)`.
 
 *Proof.*  The images of `L,M,R` in (24) satisfy respectively the three
 disjoint inequalities in (28), and solving the affine formulas gives the
-displayed parents.  Each inverse is one of the unimodular maps inverse to
+displayed parents.  On each cone the inverse is one of the unimodular affine
+maps inverse to
 (25), so it preserves the gcd of the two odd roots.  The inequalities make the new
 coordinates positive with first greater than second, and the parent first
 coordinate is strictly smaller.
@@ -400,8 +407,8 @@ primitive ordered triple
 
 It preserves the entire primitive triple, branch labels, and ancestry when
 both ordinals are kept.  Projecting to `r` preserves exactly the chosen odd-
-square shell and destroys the data witnessed in (31).  The smallest repair
-is `s`; a scalar repair is either (17), (19), or the heap address, chosen by
+square shell and destroys the data witnessed in (31).  The native missing
+coordinate is `s`; a scalar repair is either (17), (19), or the heap address, chosen by
 the operation the consumer needs.
 
 This does **not** supply an LRC owner, root in a relation plane, phase, clock,

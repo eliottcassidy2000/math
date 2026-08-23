@@ -19,16 +19,17 @@ The user phrase “Kinchin's content” is interpreted here as **Khinchin's
 constant and the continued-fraction digit content it measures**.  No theorem
 depends on this interpretation beyond the explicitly typed metric statement.
 There is a second relevant interpretation: **Khinchin's Flatness Theorem**.
-Section 11 audits that orthogonal lane independently; its result is now
-promoted as
-[THM-3743](../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md).
+Section 11 audits that orthogonal lane independently; its result has now been
+promoted as THM-3743 after a separate hostile audit.
 
 Exact companion:
 
 - [`04-computation/jc_lrc_khinchin_continuant_sidecar_probe_20260823.py`](../04-computation/jc_lrc_khinchin_continuant_sidecar_probe_20260823.py);
 - [`05-knowledge/results/jc_lrc_khinchin_continuant_sidecar_probe_20260823.out`](../05-knowledge/results/jc_lrc_khinchin_continuant_sidecar_probe_20260823.out);
 - [`04-computation/lrc14_khinchin_flatness_relation_audit_20260823.py`](../04-computation/lrc14_khinchin_flatness_relation_audit_20260823.py);
-- [`05-knowledge/results/lrc14_khinchin_flatness_relation_audit_20260823.out`](../05-knowledge/results/lrc14_khinchin_flatness_relation_audit_20260823.out).
+- [`05-knowledge/results/lrc14_khinchin_flatness_relation_audit_20260823.out`](../05-knowledge/results/lrc14_khinchin_flatness_relation_audit_20260823.out);
+- [`04-computation/lrc14_khinchin_flatness_relation_independent_audit_thm3743.py`](../04-computation/lrc14_khinchin_flatness_relation_independent_audit_thm3743.py);
+- [`04-computation/lrc182_euclidean_phase_grid_coboundary_probe_20260823.py`](../04-computation/lrc182_euclidean_phase_grid_coboundary_probe_20260823.py).
 
 The companions have `34,310` and `18,076` exact gates.  Normal and optimized
 runs agree in both cases.
@@ -216,6 +217,32 @@ on signed multiplicities at the exact phases.  The digit product and parity
 shadow therefore cannot replace the oriented coefficient vector.  This is a
 current-frontier instance of the general hostile, not merely an abstract
 small-denominator example.
+
+### 5.1 The ordered word addresses an exact grid coboundary
+
+The follow-up exact probe attaches the canonical ordered continued-fraction
+word and the full THM-778 midpoint trace to all `26` phases in the
+denominator-`182` skeleton.  On each of the `60` signed chart fibres, put
+
+```text
+omega(j)=c(j+1)-c(j),                    j in C_13.    (10a)
+```
+
+One integer basepoint together with `omega` reconstructs every signed
+coefficient, both corner deletions, all characteristic-`13` Hasse jets, and
+the exact endpoint residual.  The `30` typed charts factor to `13` complete
+integer profile classes.  This is a lossless finite normal form on the pinned
+bank, but not an Euclidean coefficient-descent theorem.
+
+The failure is structural.  Literal quotient stripping sends
+`43/182 -> 10/43` and `55/182 -> 17/55`, outside both the skeleton and every
+full chart counter.  Moreover the same local phase edge has increments
+`-721` and `-677` in charts `(0,1)` and `(0,3)`, while the phase `1/182` has
+coefficients `1280` and `1192` there.  Thus the word only addresses the
+coefficient cocycle; it does not generate it.  A chart/profile class,
+basepoint, absolute endpoint lift, and owner remain load-bearing.  This
+explains why the ordered-word survivor of Section 8 still does not reach
+semantic arrival.
 
 ## 6. Exact no-go III: literal continued-fraction tails are already closed in the Cohn constant orbit
 
@@ -494,9 +521,11 @@ hypothetical LRC(14) counterexample
      a dot n=0 and ||a||_1<=356.                      (28)
 ```
 
-Statement `(28)` is **CITED + PROVED ALGEBRA**.  Following this independent
-audit and a second exact replay, it was promoted as
+Statement `(28)` is now **CITED + PROVED ALGEBRA + VERIFIED-EXACT +
+INDEPENDENTLY HOSTILE-AUDITED** in
 [THM-3743](../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md).
+The implication remains only a necessary reduction and has no LRC(14)
+closure force.
 
 ### 11.2 The minimal flat direction is a Graver relation
 
@@ -573,6 +602,14 @@ a in W
   => the unresolved rank-eleven code itself contains
      a nonzero vector of l1 norm at most 356.          (31)
 ```
+
+The later Pell/flatness audit sharpens this dichotomy.  Every support-two or
+support-three row of `l1` norm at most `356` already has height below `91^6`
+and is one of THM-2052's generators, hence lies in `W`.  The outside-`W`
+rank-twelve branch can occur only at support at least four.  The exact
+square-triangular conductor compiler meets the support-two deck in
+`(1,5),(5,29),(29,169)`; all three are therefore inside-`W` refinements, and
+a safe Pell-prefix hostile contains them with maximum `99/338>1/14`.
 
 In branch `(30)`, choose eleven independent rows of `W`.  Each has Euclidean
 norm at most `sqrt(3)Q`, while `||a||_2<=356`.  Hadamard gives the explicit

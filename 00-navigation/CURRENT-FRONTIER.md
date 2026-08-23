@@ -52,6 +52,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
 ### Independent routes that remain live
 
+- **PROVED + CITED:** [THM-3743](../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md)
+  turns any hypothetical counterexample into an integer speed relation of
+  `l1` norm at most `356`.  A minimal row is Graver; support two has `19,314`
+  reduced ratios, while higher support is a bounded multiway partition.  With
+  THM-2052, the row either makes rank twelve with an explicit finite terminal
+  or already lies short inside the rank-eleven star space.  It preserves no
+  owner, phase, sign partition, or arrival and is not sufficient for LRC(14).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
@@ -303,7 +310,7 @@ gives no support asymptotic/residue; only the indexed coefficient is known.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
-- **Rule 30:** THM-3502/3511/3512/3516. THM-3511's finite three-ray portrait is injective but not a first-return congruence; depth `D+B` returns the bounded-gap successor or honest overflow. Prizes OPEN.
+- **Rule 30:** THM-3502/3511/3512/3516. THM-3511's finite three-ray portrait is injective but not a first-return congruence; depth `D+B` returns the bounded-gap successor or honest overflow.  A FINITE-EXACT period-three two-scale classification leaves one rational projective curve plus `(-1,-1,-1)`, but the curve fails the odd-unit valuation gate and the constant point repeats forbidden gap one.  Mealy realization is not reached; periods at least five and every prize remain OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT
   (MISTAKE-205); THM-3544/50 and cited Nagata/GGHV force composite degree
   `>=6`, height `>=8`, and reduced height `>=108` (only `(72,108)<125`).
@@ -352,10 +359,18 @@ gives no support asymptotic/residue; only the indexed coefficient is known.
   `SL2` matrix and exclude polynomial mates. THM-3740 extends this to one
   polynomial right shear: every survivor is an integrable source translate
   of the same no-mate towers.  A Cohn escape now needs at least two interacting
-  polynomial factors or a different core.  Pending-audit THM-3741 classifies
-  the full radial two-charge ansatz and leaves only its linear members with
-  polynomial mates; third-charge and nonradial sectors remain. THM-3716 proves
-  the monomial Broughton family.
+  polynomial factors or a different core.  Audited THM-3741 closes the full
+  radial two-charge ansatz. THM-3754 closes every component affine in one
+  source variable; source-foliation degrees two and three were already closed,
+  so the honest general boundary begins at degree four.  THM-3755 closes the
+  composite-monomial tower, THM-3757 the smooth Pell--Chebyshev variable-flank
+  tower, THM-3758 a rational-exact split-fibre family, and audited THM-3759 the
+  central-product constant-flank slice.  Audited THM-3765 classifies the full
+  normalized `X+chi(XT)+T psi(XT)` ansatz: rational mates occur on one explicit
+  boundary and polynomial mates only when linear.  These structured closures
+  leave arbitrary quartics, a varying `+1` flank, nonradial supports, and the
+  reserved vertical-equalizer/cubic-carrier THM-3770/3771 programs open.
+  THM-3716 proves the monomial Broughton family.
   Higher-degree zero-debt polynomials, continuation of the four THM-3683 folds,
   THM-3641's excluded nonordinary tangent collisions, nonquadratic folds, and
   THM-3629's genuinely two-output-mixed `H'(0)!=0` pairs remain OPEN. A
@@ -433,6 +448,8 @@ The most reusable current bridges are not literal object identifications:
 | Finite observer / recurrence | THM-3171/3172/3180/3181 | Is it invertible, a refuter, or only an address; which sidecar makes termination lawful? |
 | Continuation / min-plus kernel | Gordian profile; THM-840/853 | Which sidecar remains target-preserving under every future operation? |
 | Relation-cone carry atlas | THM-2196/2199 | Carry charts still need phase, SCC order, continuation, or JC residue/flux. |
+| Flatness covector / short relation | THM-3743 | Intersect the `l1<=356` Graver row with rank-eleven star spaces; owner, sign partition, phase and arrival are lost. |
+| Euclidean-addressed grid coboundary | THM-3710/778 finite control | Word plus basepoint reconstructs one pinned coefficient fibre, but stripping exits the bank and chart/absolute-lift/owner sidecars remain. |
 | Transverse-information tax | THM-2612/2615/2573 | Retain a pole, endpoint, or normal when a locus erases charge. |
 | Phase reconstruction | THM-3267/3269/3273/3277/3285 | Generator, sampler, backbone and one literal-ancestry horn are proved; endpoint origin/current and global action are absent. Not an LRC reduction. |
 | Integrality/support holes | THM-2200 | Holes can fill under powers while prime dilates die; retain coefficients and sidecars. |

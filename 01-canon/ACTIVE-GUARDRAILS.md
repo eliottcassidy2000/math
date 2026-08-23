@@ -1,6 +1,6 @@
 # Active Guardrails
 
-**Short hazard sheet — refreshed 2026-08-22.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
+**Short hazard sheet — refreshed 2026-08-23.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
 
 ## Universal
 
@@ -22,7 +22,7 @@
     location, endpoint, or child data repeats THM-1252--1274 extremals.
 11. **HYP-8815 is not a disproof characterization.** Primitive Cover14, `M<1/14`, and non-AP deletion are necessary; near-AP, anti-golden, CF, and autocorrelation claims remain heuristic. THM-731/2048 only prune.
 12. **Complete local coordinates need not be global carriers.** THM-2043/2050 require owner height and a global first-exit/magnitude/gluing sidecar.
-13. **The BONF5 middle is closed; relation branches are not.** THM-2051 forces a support-`3..5`, height-`2^20` relation; it does not classify its hyperplanes or the AP boundary.
+13. **The BONF5 middle is closed; relation branches are not.** THM-2051 forces a support-`3..5`, height-`2^20` relation; THM-3743 independently forces one Graver relation of `l1` norm at most `356`.  Neither classifies its hyperplanes, preserves owner/phase/arrival, or excludes the AP boundary.  Short relations are necessary, not sufficient.
 14. **A bad deck, disk, or Farey ray means uncertified—not unsafe.** THM-2053/2055/2056 are sufficient gates. Keep basis, non-hull runners, tie owners, clocks, pair sums, and endpoints. No Heegner form (MISTAKE-229).
 15. **THM-2057 closes two planes; THM-2059 joins packets.** CRT zero rejects one clock grid, not the row; no uniform selector follows.
 16. **THM-2058 is a carrier, not LRC(14).** It gives reduced-order packets, labelled transport, trichotomy, and one coprime interval per fixed cell; it does not discharge that interval.
@@ -183,7 +183,8 @@
 66. **Invariant Kummer vanishing is not total vanishing.** THM-2686 gives
     `H^1(R_reg,mu_ell)^Q=0` in coprime degree; at `(2,C3)` it removes trivial
     lines but permits standard planes.  Nonvanishing is only the abstract `A4` carrier gate; test units/`Cl[2]` and retain actual versus abstract torsors. THM-2704's split even-Faber genus `89` is generic and all-one, not uniform: an exceptional rational member must gain at least `89` delta, become reducible/nonflat, or leave the chart, and the eleven odd seeds are absent. THM-3728's W004 charge gauge is fraction-field and row-derived only; it gives no W005/shear/JC transport.
-67. **Gate-specific JC closures do not compose automatically.** THM-3688 reaches actual `J_0,J_1,J_2` only and is pending hostile audit; THM-3740 closes one-variable right-shear Cohn exposures, not interacting right factors. Pending-audit THM-3741 classifies `Q=X phi(XT)+T psi(XT)` over algebraically closed characteristic zero, leaving third-charge/nonradial sectors. THM-3737/3742/3743 are RESERVED; none proves `JC(2)`.
+67. **Gate-specific JC closures do not compose automatically.** THM-3688 reaches actual `J_0,J_1,J_2` only and is pending hostile audit; THM-3740 closes one-variable right-shear Cohn exposures, not interacting right factors. Audited THM-3741, THM-3754/3755/3757--3759, and THM-3765 close distinct affine-variable, radial, residue, split-fibre, and constant/variable-flank slices.  They do not close arbitrary quartics, a varying `+1` flank, nonradial supports, or interacting right factors. THM-3737/3742/3744/3745/3770/3771 are RESERVED; none proves `JC(2)`.
+68. **A two-scale Rule 30 profile no-go is not a prize theorem.** The finite-exact saturated period-three classification has one rational curve and one constant point; the former fails the physical `Q_2` unit/common-gap gate and the latter repeats gap one.  Periods at least five, noncyclic marked profiles, Mealy realization, signalizer closure, and every Rule 30 prize remain open.
 
 ## Promotion checklist
 Audit types, quantifiers, symmetries, direction, quotient loss, hostiles,
