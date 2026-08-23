@@ -1,0 +1,14 @@
+theorem=THM-3815-quadratic-r-profile-constant-z2-nodal-carriers-have-critical-points
+status=PROVED_VERIFIED_EXACT_INDEPENDENTLY_HOSTILE_AUDITED
+carrier=A=e2-z/3+r*(q*e2+b*e+c)+h*z2;all_q_b_c_h
+compression=source_first;e=(z2-u)/(u2z);p1_p2_quartic
+resultant=-729*z8*U;degree_z_U=16;terms=158;U0=144
+h_nonzero=z1_forces_d4;z2_E2;z3_forces_q0c0;z5_forces_b0;terminal=128z7L5
+h_zero=same_constant_cascade;terminal=128z7+144
+projective=p1_LC=Lz;u0_excluded;finite_common_root
+reconstruction=source_Cr_Ce_Cz_exact
+scope=no_nonconstant_h;no_deg_g_ge_3;no_rational_mates
+residual_sha256=28b077c0775d3603163dddd01d078ba18feee257205a41e53d300684cbbbc449
+semantic_sha256=2e90439d024488eefc6647b5a991d603276ed536a53e3fb5e3340fd27a565a2e
+CHECKS=39
+RESULT=PASS
