@@ -2,8 +2,8 @@
 id: THM-3838
 title: "The nonlinear cubic root ratio has numerator and denominator degree at least five"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  In every dominant plane atlas of the THM-3811 surface, both
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In every dominant
+  plane atlas of the THM-3811 surface, both
   intrinsic row entries h and k have total degree at least five.  THM-3827's
   dual genus-three floor first gives degree at least four; equality would
   make the primitive generic fibre both a smooth plane quartic and a
@@ -12,12 +12,18 @@ status: >
   z=h/k.
 source: jc_quartic_c3_construct / dual genus-floor degree boundary, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The companion verifies the plane-curve genus
+  INDEPENDENTLY HOSTILE-AUDITED by root on 2026-08-23.  The audit checked that
+  total degree composes exactly, that the generic projective plane-fibre genus
+  defect includes every affine and infinite singularity, that equality in the
+  primitive genus floor transfers through the forced linear outer polynomial,
+  and that adjunction makes a smooth plane quartic canonically embedded and
+  hence nonhyperelliptic.  Unimodularity gives the claimed reduced numerator
+  and denominator without cancellation.  The companion verifies the plane-curve genus
   table, the unique degree-four composition boundary, both sidecar degrees
   and squarefree controls, the genus-three values, opposite infinity parity,
   and canonical degrees.  The generative-polynomial and equality statements
   are inherited from independently audited THM-3827.  Normal and optimized
-  runs byte-match the frozen transcript; independent hostile audit remains.
+  runs byte-match the frozen transcript.
 depends_on:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -34,8 +40,8 @@ hash_basis: raw LF bytes
 
 # THM-3838 -- the reduced root ratio starts in degree five
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**  Work over an algebraically closed field `K` of characteristic zero.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `K` of characteristic zero.
 Let
 
 ```text
@@ -142,4 +148,4 @@ The result sharpens THM-3835: not only must `z=h/k` retain a genuine
 denominator, but both entries of its reduced presentation begin at degree
 five.  It does not yet classify the degree-five plane models or solve the
 factor/cofactor and Keller equations of THM-3836.  No Jacobian counterexample
-is claimed.  **QED, pending independent hostile audit.**
+is claimed.  **QED.**
