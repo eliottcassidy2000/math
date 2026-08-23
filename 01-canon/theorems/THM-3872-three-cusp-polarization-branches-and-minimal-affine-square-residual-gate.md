@@ -11,9 +11,10 @@ status: >
   resulting seven noncanonical minimal slices, the only nontrivial square
   residual is the THM-3869 representative h_1-4(x+1), whose residual is
   (9x+4)^4.  Its extra Cardano line remains genuinely ramified.  The three
-  natural generator rays of the omitted cusp-value-zero ideal produce no new
-  square.  Arbitrary combinations and higher-degree additions from that
-  ideal, alternative Delta-lifts, a Keller atlas, and JC(2) remain OPEN.
+  natural generators of the omitted cusp-value-zero ideal produce no new
+  square on their entire constant linear span.  Polynomial-coefficient and
+  higher additions from that ideal, alternative Delta-lifts, a Keller atlas,
+  and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3864 noncanonical representative lane, 2026-08-23
 audit: >
   PROVISIONAL EXACT PROOF CANDIDATE.  The companion verifies the cusp-value
@@ -24,10 +25,11 @@ audit: >
   two-cusp odd-degree ladders, the final plus/minus exceptional quartic, and
   the normalization involution.  It also verifies the exact three-generator
   presentation of the cusp-value-zero ideal, all three mixed descents, and
-  the three generator-ray obstructions.  Normal and optimized runs must
+  the three generator-ray obstructions, the full constant-span leading seam,
+  and its saturated sextic-square unit ideal.  Normal and optimized runs must
   byte-match the frozen transcript.  Independent audit must recheck the local
   iff, the R/J affine-fiber classification, the sufficiency of each square
-  recurrence, all scaling/boundary cases, and the exact generator-ray scope.
+  recurrence, all scaling/boundary cases, and the exact constant-span scope.
 depends_on:
   - THM-3864-integrated-three-cusp-conductor-seminormal-three-direction-gate
   - THM-3869-three-cusp-square-residual-cardano-line-ramification
@@ -36,9 +38,9 @@ related:
   - THM-3874-three-cusp-quadratic-k3-affine-class-group
 script: 04-computation/jc2_three_cusp_polarization_branches_thm3872.py
 output: 05-knowledge/results/jc2_three_cusp_polarization_branches_thm3872.out
-script_sha256: 076633418572f95df8ace09d2bd5f524d97d6359929f15bebe0b396f034ae6e7
-output_sha256: 1b3ac5eeb0c46ae39d38cf5b60bf7df667d1ccfb4a5f134b5dff6be6f76b2434
-semantic_sha256: 637a553ae7ffb18dc3721e709162fc72710f2f231d27468e2e45bac51909a580
+script_sha256: ccc01d00f16f021f808bff0b6201a305c22fd3a96a1f638494e68600e7877a53
+output_sha256: 7a94c8b43527961378c7f03bab377c584df3262deafb428196eb56052636239c
+semantic_sha256: f3a13ca8c79e4e782fee246a3231531ea22caadbaf2924048348e63beb4dae7a
 hash_basis: raw LF bytes
 ---
 
@@ -426,11 +428,54 @@ while `V=0` forces `lambda=0` through the displayed `y^2` coefficient.
 Thus every generator ray returns to the original square only at
 `lambda=0`.
 
-The theorem does **not** search nontrivial combinations
-`lambda_1j_1+lambda_2j_2+lambda_3j_3`, polynomial-coefficient/higher `J`
-additions, alternative lifts differing by multiples of `Delta`, or a
-polynomial-plane Keller atlas.  Those are the precise remaining
-noncanonical directions.  No Jacobian counterexample is claimed.
+### 8.1 The entire constant generator span is empty
+
+In fact the three rays interact without creating a hidden square.  Put
+
+```text
+r=uj_1+vj_2+wj_3,                  A=uA_1+vA_2+wA_3,        (40)
+```
+
+and use `(14)` with `h_*`, `r`, and `A`.  If `w=0`, the specialization at
+`x=0` has degree at most five, and its degree-five coefficient is
+
+```text
+[y^5]R(0,y)=-8v^3.                                          (41)
+```
+
+Thus `v!=0` gives odd degree, while `v=0` is exactly the already closed
+`j_1` ray.
+
+Suppose `w!=0`.  The `y=0` specialization has degree seven with
+
+```text
+[x^7]R(x,0)=243w^2(u^2+216w).                               (42)
+```
+
+Off the cancellation seam it is nonsquare by odd degree.  On the seam
+
+```text
+w=-u^2/216,
+```
+
+one necessarily has `u!=0`.  The parameter `v` disappears from the
+specialization, which becomes a sextic `F_u(x)`.  Compare it with
+`(B_3x^3+B_2x^2+B_1x+B_0)^2` and saturate by introducing `z` with
+`uz-1=0`.  The exact lexicographic Groebner basis of the seven coefficient
+rows together with `uz-1` is
+
+```text
+[1].                                                         (43)
+```
+
+Therefore no nonzero constant triple `(u,v,w)` deforms `(20)` to another
+square residual.
+
+The theorem does **not** search polynomial-coefficient combinations
+`f_1(x,y)j_1+f_2(x,y)j_2+f_3(x,y)j_3`, higher `J`-adic additions,
+alternative lifts differing by multiples of `Delta`, or a polynomial-plane
+Keller atlas.  Those are the precise remaining noncanonical directions.  No
+Jacobian counterexample is claimed.
 
 Reproduce the exact packet with
 

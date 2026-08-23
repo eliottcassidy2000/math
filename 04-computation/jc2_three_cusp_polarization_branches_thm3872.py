@@ -651,15 +651,87 @@ gate(R_j3_y_zero.degree() == 7, "j3 ray y-zero degree seven")
 zero(R_j3_y_zero.coeff_monomial(x**7) - 52488 * lam**3,
      "j3 ray odd leading coefficient")
 
+# The full constant span of the three generators also closes.  The j2
+# parameter disappears on y=0, leaving one cancellation seam; saturation by
+# u!=0 proves that even this seam cannot be a cubic square.
+u, v, w = sp.symbols("u v w")
+constant_j_addition = u * j1 + v * j2 + w * j3
+constant_j_mixed = u * A_j1 + v * A_j2 + w * A_j3
+constant_j_square = sp.expand(
+    P_star + 2 * constant_j_mixed + constant_j_addition**2
+)
+constant_j_cube = sp.expand(
+    Q_star
+    + 3 * constant_j_addition * P_star
+    + 3 * constant_j_addition * constant_j_mixed
+    + constant_j_addition**3
+)
+R_constant_j, constant_j_remainder = sp.div(
+    sp.expand(constant_j_square**3 - constant_j_cube**2), delta, x, y
+)
+zero(constant_j_remainder, "constant J-span residual divisibility")
+
+constant_j_w_zero_x = sp.Poly(R_constant_j.subs({w: 0, x: 0}), y)
+gate(constant_j_w_zero_x.degree() == 5,
+     "constant J-span w-zero specialization has degree at most five")
+zero(constant_j_w_zero_x.coeff_monomial(y**5) + 8 * v**3,
+     "constant J-span w-zero odd coefficient")
+zero(R_constant_j.subs({w: 0, v: 0}) - R_j1.subs(lam, u),
+     "constant J-span w-v-zero boundary")
+
+constant_j_y_zero = sp.Poly(R_constant_j.subs(y, 0), x)
+gate(constant_j_y_zero.degree() == 7, "constant J-span y-zero degree")
+zero(
+    constant_j_y_zero.coeff_monomial(x**7)
+    - 243 * w**2 * (u**2 + 216 * w),
+    "constant J-span odd leading coefficient",
+)
+constant_j_seam = sp.expand(
+    R_constant_j.subs({y: 0, w: -u**2 / sp.Integer(216)})
+)
+gate(not constant_j_seam.has(v), "constant J-span seam forgets j2 parameter")
+gate(sp.Poly(constant_j_seam, x).degree() == 6,
+     "constant J-span seam degree six")
+span3, span2, span1, span0, u_inverse = sp.symbols(
+    "span3 span2 span1 span0 u_inverse"
+)
+constant_span_square_difference = sp.Poly(
+    constant_j_seam - (span3 * x**3 + span2 * x**2 + span1 * x + span0) ** 2,
+    x,
+)
+constant_span_square_equations = [
+    sp.together(
+        constant_span_square_difference.coeff_monomial(x**degree)
+    ).as_numer_denom()[0]
+    for degree in range(7)
+]
+constant_span_square_groebner = sp.groebner(
+    [*constant_span_square_equations, u * u_inverse - 1],
+    span3,
+    span2,
+    span1,
+    span0,
+    u_inverse,
+    u,
+    order="lex",
+)
+gate(
+    constant_span_square_groebner
+    == sp.groebner(
+        [1], span3, span2, span1, span0, u_inverse, u, order="lex"
+    ),
+    "constant J-span cancellation seam has unit square ideal",
+)
+
 semantic = {
     "polarization": "H in S; H2,H3 in R iff H(a)H'(a)=0 at 0,+1,-1",
     "selectors": "e0=x+1;e+=(-2x-y)/4;e-=(-2x+y)/4;evaluation identity",
     "fibers": "fixed derivative class; values free exactly at zero derivative coordinates;mod J",
     "branches": "eight linear polarizations;seven noncanonical minimal affine slices",
     "square_search": "only nontrivial square is h1-4e0;residual=(9x+4)^4",
-    "J_rays": "x(x+1),y(x+1),y2+4x generate J;each individual ray has no new square",
+    "J_span": "x(x+1),y(x+1),y2+4x generate J;their full constant span has no new square",
     "ramification": "THM3869 leaves field discriminant Delta*(9x+4)^2",
-    "scope": "arbitrary combinations/higher-degree additions from J remain open",
+    "scope": "polynomial-coefficient and higher J additions remain open",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -676,8 +748,9 @@ print("minimal_noncanonical_branches=7")
 print("minimal_slice_nontrivial_square_residuals=1")
 print("unique_square_representative=h1-4*(x+1);residual=(9x+4)^4")
 print("cusp_value_zero_generator_rays=3;new_square_residuals=0")
+print("cusp_value_zero_constant_generator_span_new_square_residuals=0")
 print("extra_cardano_ramification_removed=NO")
-print("cusp_value_zero_ideal_combinations_and_higher_representatives=OPEN")
+print("cusp_value_zero_ideal_polynomial_coefficient_representatives=OPEN")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")
 print("RESULT=PASS")
