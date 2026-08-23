@@ -7,8 +7,8 @@ status: >
   collision ring at every scale n>=2.  An upper double produces a square law;
   the lower double then gives either a nonzero Euler factor or an impossible
   constant polynomial product.  The n=2 square boundary forces an H^2 arm.
-  This closes residual family C, not residual family D, all of W003, the full
-  3x4 cell, general quartic C3 data, or JC(2).
+  By itself this closes family C, not family D, all of W003, the full 3x4
+  cell, general quartic C3 data, or JC(2); THM-3720 later completes W003.
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
   INDEPENDENTLY HOSTILE-AUDITED.  The exact companion checks the W003 fibre
@@ -24,6 +24,7 @@ depends_on:
 related:
   - THM-3695-y0-collision-ring-danielewski-embedding-and-seven-piece-floor
   - THM-3714-y0-w003-scalar-fibre-02-two-orientation-euler-nonentry
+  - THM-3720-y0-w003-final-family-charge-coordinate-closure
 script: 04-computation/jacobian_y0_w003_scalar_triple_thm3717.py
 output: 05-knowledge/results/jacobian_y0_w003_scalar_triple_thm3717.out
 script_sha256: 8edf85fbbc02602fabef10edba28c591d275265d8ab94957571c8f97f815e639
@@ -235,15 +236,16 @@ P=(-n-2,-2,2n-2), Q=(1-2n,1-n,1,n+1), n>=2,
 scalar fibre 03+12+20.                                  (22)
 ```
 
-The only W003 family not yet closed is its family D:
+At this proof stage, the only W003 family still open was family D:
 
 ```text
 P=(1-3n,1-2n,1), Q=(-n-2,-2,n-2,2n-2), n>=3,
 scalar fibre 13+21.                                     (23)
 ```
 
-Thus this theorem does not yet close W003, arbitrary `3 x 4` supports,
-general quartic C3 data, or `JC(2)`.
+THM-3720 subsequently closes `(23)`, so W003 is now complete.  This theorem
+alone does not close arbitrary `3 x 4` supports, general quartic C3 data, or
+`JC(2)`.
 
 Run
 

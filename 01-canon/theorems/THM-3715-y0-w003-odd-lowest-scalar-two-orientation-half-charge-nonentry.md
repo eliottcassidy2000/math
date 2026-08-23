@@ -7,8 +7,8 @@ status: >
   Such placements occur only at odd n>=3: the two orientations merge into one
   actual support at n=3 and are distinct thereafter.  The upper rows impose a
   half-charge law on every hidden monomial, forcing the entire scalar row to
-  contain H'K+2HK'.  This closes the complete named scalar-fibre pair, not all
-  of W003, the full 3x4 cell, or JC(2).
+  contain H'K+2HK'.  By itself this closes the named scalar-fibre pair, not
+  all of W003, the full 3x4 cell, or JC(2); THM-3720 later completes W003.
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
   INDEPENDENTLY HOSTILE-AUDITED.  The exact companion reconstructs the
@@ -27,6 +27,8 @@ depends_on:
 related:
   - THM-3695-y0-collision-ring-danielewski-embedding-and-seven-piece-floor
   - THM-3714-y0-w003-scalar-fibre-02-two-orientation-euler-nonentry
+  - THM-3717-y0-w003-scalar-triple-square-law-euler-nonentry
+  - THM-3720-y0-w003-final-family-charge-coordinate-closure
 script: 04-computation/jacobian_y0_w003_odd_lowest_scalar_thm3715.py
 output: 05-knowledge/results/jacobian_y0_w003_odd_lowest_scalar_thm3715.out
 script_sha256: dba9fdc35256d78fefa5d81db9fa1f6f71e26e1e3ce25e098bae1762330f4999
@@ -192,9 +194,9 @@ scalar row, not merely one chosen anchor, is divisible by `E_2`.
 
 ## 5. Sharpened W003 frontier and scope
 
-This theorem closes the complete post-parity lowest-scalar pair.  Together
-with THM-3695 and THM-3714, only the following two W003 placement families
-remain:
+This theorem closes the complete post-parity lowest-scalar pair.  At this
+proof stage, THM-3695 and THM-3714 left exactly the following two W003
+placement families:
 
 ```text
 C: scalar 03+12+20,
@@ -204,8 +206,9 @@ D: scalar 13+21,
    P=(1-3n,1-2n,1), Q=(-n-2,-2,n-2,2n-2),      n>=3.  (20)
 ```
 
-This exact residual statement does not assert that C or D is nonempty as a
-Darboux system.  W003, W004--W006, arbitrary `3 x 4` supports, general
+This exact residual statement did not assert that C or D was nonempty as a
+Darboux system.  THM-3717 subsequently closes C and THM-3720 closes D, so
+W003 is now complete.  W004--W006, arbitrary `3 x 4` supports, general
 quartic C3 data, and `JC(2)` remain open.
 
 Run

@@ -358,9 +358,9 @@ is sharp: equal counts allow two densities or none.
   but THM-3681 closes every continuation at universal order six. Pending-
   audit THM-3683 leaves only four quartic roots after the retained six-jet
   screen; THM-3687 lifts all four through actual-ring `J_0=1`; `J_1,J_2` stay
-  open. THM-3684 blocks one-coordinate mates. THM-3685--3717 give the `y=0`
+  open. THM-3684 blocks one-coordinate mates. THM-3685--3720 give the `y=0`
   Danielewski weights/output, first `3x4`, and cap `>=22`: W002/W007/W008
-  are empty; only W003-D remains, with W004--W006 live. THM-3709/3719 close
+  and now W003 are empty; W004--W006 remain live. THM-3709/3719 close
   every alternating two-left/two-right Cohn cell; THM-3716 proves the monomial
   Broughton cokernel family. Longer Cohn words remain live.
   Higher-degree zero-debt polynomials, continuation of the four THM-3683 folds,
