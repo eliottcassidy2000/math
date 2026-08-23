@@ -1,0 +1,11 @@
+theorem=THM-3698-y0-seven-function-Pluecker-compression-no-go
+span=U:(C,BC^2,AC^3);V:(A,B^2,A^2C^2,ABC);dimension=7
+exterior_square=21;coefficient_rows=29;linear_rank=19;affine_dimension=2
+Pluecker_quadrics=35;substituted_Groebner=[1];one_bracket=EMPTY
+hand_certificate=minor01_01=17*b/56;minor01_03=(2304*b^2+343)/1176;rank1_impossible
+bipartite_3x4=rows:11,rank:10,affine_dimension:2;rank_one_pivot_charts=3/3_unit
+weights=1,-2;one_new_homogeneous_weight_gives_total_support<=6;THM-3695_excludes
+controls=ambient_bracket:PASS;rational_three_bracket_rank6:PASS;collision_retained:PASS
+semantic_sha256=0609e6e47d294e3ba7205ec80743860e41c771ab927aa3a3a671effaf1637e70
+CHECKS=55
+RESULT=PASS
