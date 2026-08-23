@@ -22,9 +22,8 @@ def gate(condition: bool, message: str) -> None:
 
 
 X, T, z, L = sp.symbols("X T z L")
-a0, a1, beta, gamma, kappa = sp.symbols(
-    "a0 a1 beta gamma kappa", nonzero=True
-)
+a0, a1, beta, kappa = sp.symbols("a0 a1 beta kappa", nonzero=True)
+gamma = sp.symbols("gamma")
 
 
 def jac(first: sp.Expr, second: sp.Expr) -> sp.Expr:

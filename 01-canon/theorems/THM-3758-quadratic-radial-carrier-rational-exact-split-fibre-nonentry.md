@@ -2,7 +2,7 @@
 id: THM-3758
 title: "Quadratic radial-carrier rational-exact split-fibre nonentry"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.  A four-parameter
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A four-parameter
   family Q=XA(XT)+X^2B(XT), with A linear, B'=beta A, and
   delta=2BA'-AB' a nonzero constant, consists of smooth reducible
   noncoordinates with explicit rational constant-Jacobian mates.  Every
@@ -12,24 +12,22 @@ status: >
   exact near-counterexample family, not a planar Keller pair.
 source: root + jc_sparse_direct_search / 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The smoothness Bezout identity, quadratic
-  generic-fibre equation, discriminant, rational primitive, constant field,
-  residual-divisor irreducibility, and both divisorial principal parts have
-  been derived symbolically and by hand.  The exact companion verifies the
-  universal identities, five parameter controls, two sharp singular
-  boundaries, and 52 full polynomial-mate systems.  Normal and optimized
-  output agree with the frozen transcript; independent hostile audit remains
-  due.
+  PASS.  An independent hostile audit rederived the smoothness Bezout
+  identity, quadratic generic-fibre equation and discriminant, exact rational
+  primitive, geometrically integral constant field, residual-divisor
+  irreducibility after localization, and the opposite signed principal parts.
+  Gamma is unrestricted in both theorem and companion.  Normal, optimized,
+  and frozen output agree; script/output/semantic hashes and CHECKS=87 match.
 depends_on: []
 related:
   - THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient
-  - THM-3551-one-invariant-ray-and-residue-planar-jacobian-mate-no-go
+  - THM-3551-one-ray-planar-jacobian-mate-no-go
   - THM-3598-danielewski-rational-exact-polar-graph-family-and-classification
   - THM-3754-affine-variable-euclidean-descent-classification
   - THM-3755-composite-monomial-generic-fibre-residue-obstruction
 script: 04-computation/jc2_quadratic_radial_carrier_split_fibre_thm3758.py
 output: 05-knowledge/results/jc2_quadratic_radial_carrier_split_fibre_thm3758.out
-script_sha256: 1ccc2d6c75675f41e93d5f9358d967a4bf766adb1062ce616ba06603e819ae95
+script_sha256: b9d0a9bd1de2237750ce760e3db47a4c6a03c1a4c584bcbb4a6c1ba3b6c19ec5
 output_sha256: 696b216444d3b373401f31d5865bf867de161b6cc191fdbd91817f9b28ac0a01
 semantic_sha256: ca31fa26678b1998450d1006a90fbcfe319096ad6b6fbc17f2006acc64fc7ecb
 hash_basis: raw LF bytes
@@ -37,7 +35,7 @@ hash_basis: raw LF bytes
 
 # THM-3758 -- rational exactness reaches a split-fibre wall
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.**  The residue
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The residue
 obstructions in THM-3551 and THM-3755 stop a rational primitive on the
 generic fibre.  The present family passes that gate: its Hamiltonian time
 form is rationally exact.  It still fails globally, because one primitive
