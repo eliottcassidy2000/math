@@ -240,10 +240,10 @@ collide, links—not bare IDs—are canonical.
 
 - **CITED:** [Gwozdziewicz, Thm. 1.1](https://arxiv.org/abs/alg-geom/9305008) makes a planar Keller map injective on one line an automorphism.  [Lang](https://doi.org/10.1016/0022-4049(91)90128-O) proves that, when both degrees exceed one, their origin-augmented Newton polygons scale by the degree ratio.  Necessary only.
 
-### Jelonek--Lasoń — quantitative nonproperness-set uniruledness
+### Jelonek--Lasoń / Nguyen Van Chau — planar nonproperness geometry
 
-- **CITED:** [arXiv:1411.5011v2](https://arxiv.org/abs/1411.5011), *Manuscripta Math.* **156** (2018), [DOI](https://doi.org/10.1007/s00229-017-0965-0): a generically finite degree-`d` map's nonproperness set is covered by polynomial curves of degree `<=d-1`; planar components are rational.
-- **Boundary:** finite collision/conductor curves are different loci, so THM-3556's genus-two pair curve is no contradiction; withdrawn arXiv:2011.03472 is not imported.
+- **CITED:** [Jelonek--Lasoń](https://arxiv.org/abs/1411.5011), *Manuscripta Math.* **156** (2018), prove that a generically finite degree-`d` map's nonproperness set is covered by polynomial curves of degree `<=d-1`.  [Nguyen Van Chau](https://arxiv.org/abs/math/0305088), *Ann. Polon. Math.* **84** (2004), [DOI](https://doi.org/10.4064/ap84-3-2), sharpens a nonempty planar Keller nonproperness set to a curve with one point at infinity.
+- **Boundary:** first prove that the generic image of an escaping divisor lies in the nonproperness set.  A finite collision, conductor, or branch curve alone does not qualify; withdrawn arXiv:2011.03472 is not imported.
 
 ### Belov--Kanel--Kontsevich — *The Jacobian Conjecture is stably equivalent to the Dixmier Conjecture*
 
