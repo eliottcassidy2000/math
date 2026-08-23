@@ -2,7 +2,7 @@
 id: THM-3696
 title: "Three-branch conductor and graded modules of the y=0 collision ring"
 status: >
-  PROVED + VERIFIED-EXACT.  In the Danielewski envelope
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the Danielewski envelope
   D=C[b,c,e]/(c^2e-(1-b^2)), the collision ring is the graded subalgebra
   R=C[e,ce,bc].  Its weight-zero ring is the ordinary triple curve
   R_0=C[b(1-b^2),b^2(1-b^2)], whose normalization C[b] glues b=-1,0,1
@@ -14,6 +14,13 @@ status: >
   (-2,1) and (-1,0) survive at b=0.  This constrains but does not close the
   remaining 2x5 and 3x4 Darboux cells or JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
+audit: >
+  PASS.  The independent audit checked the exact kernel and normalization,
+  ordinary triple tangents, value-and-jet iff reconstruction, conductor
+  converse, every semigroup boundary and Hermite module, the zero global
+  conductor and birational nonfinite consequence, the non-Poisson witness,
+  and all three-branch scalar evaluations.  It confirmed that the finite
+  hostile window is only a control and that the written proofs are all-degree.
 depends_on:
   - THM-3686-y0-collision-normalization-and-bracket-anatomy
 related:
@@ -29,7 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3696 -- the collision ring is a three-branch gluing inside its envelope
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 All rings are over `C`.  Put
 
