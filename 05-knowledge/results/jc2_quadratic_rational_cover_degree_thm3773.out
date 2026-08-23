@@ -1,0 +1,10 @@
+theorem=THM-3773-quadratic-rational-keller-cover-degree-and-target-word-nonpolynomialization
+scope=THM3758_full_admissible_parameter_family
+minimal_equation=quadratic_in_z_over_k(L,w)
+nested_discriminant=-256*beta*delta*L^2*(a1+2betaL)^4
+function_field_degree=2;extension=separable_Galois
+target_words=all_finite_birational_rational_symplectic_words_blocked
+parameter_controls=4
+semantic_sha256=4a402b0a241ee67bffd4ba721ac2624834fd53b4ee3cba7bfea901362f30affb
+CHECKS=27
+RESULT=PASS
