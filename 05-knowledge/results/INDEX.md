@@ -1,5 +1,46 @@
 # Script Results Index
 
+- `lrc14_scaled_inert_cubeclass_pair_packet_thm3818.py` -> matching `.out`
+  [THM-3818 PROVED ALGEBRA + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  The 5,855 inert primitive support-two sums under the
+  THM-3743 cap occupy distinct rational cube classes, so
+  `g^3(p^3+q^3)` recovers primitive ratio and positive scale inside the atlas.
+  Labelled placement of a selected minimal support-two row then recovers its
+  covector, exposed facets, and THM-778 word/tie packet.  Eleven ambient
+  residues give an exact iff for witnesses on the pair-sum lattice.  A
+  taxicab collision and a same-selected-pair/different-arrival hostile show
+  that unrestricted decoding without the physical all-inert condition,
+  off-lattice safety, semantic arrival, and an LRC(14) row exclusion do not
+  follow.  With that condition, THM-3793 and a sum-divisor decoder give
+  unrestricted two-cube uniqueness.  The primary companion has `1,775,955`
+  active gates; independent audits test all `17,137,585` unordered atlas pairs
+  and replay `2,764,096` placement/decoder/grid/hostile gates.  Primary
+  script/output LF SHA-256:
+  `e37ae5e8adf3414081e76d56eb01607172a6364703dca76b41ac096c9f6d77c3` /
+  `6199147668a19c0a2ed403b14d889caf65078c675068f000856202cb68a861a8`;
+  independent script/output/semantic:
+  `0bb6b60238335695addce0010182f5222da4c4a86c6f59912bd0f36123d063ca` /
+  `37aa867d653d7123435f9841cdc772c3cd71c289162006f80aeb6079a17ad7bc` /
+  `86c481b03158ba3cb7024ef8739fde640be331d9856ce5d4fc0c1b3b4fcc06cb`.
+
+- `chebyshev_pell_berggren_conductor_staircase_thm3819.py` -> matching `.out`
+  [THM-3819 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  After
+  evaluation of THM-3757's canonical tower at `z=2`, an invertible integer
+  coordinate change gives the square-triangular Pell state.  Consecutive
+  selected boundary nodes have state-dependent Berggren return times
+  `7,41,239,...`; each return appends that many summands to the standardized
+  THM-3745 conductor-defect shape and acts by two iterations of
+  `u -> 1/(4-2u)` on the THM-3744 scalar maximum.  Under `a+b<=356`, the
+  Pell/THM-3793 intersection is `(1,5),(5,29),(29,169)`, with only `(5,29)`
+  inert and cube address `24514`; its pair-sum lattice has the explicit
+  29-class safe set `Z/34Z minus {0,7,14,20,27}`.  Evaluation loses polynomial geometry,
+  actual conductor rings do not append, and scalar LRC data loses
+  carries/owners; no JC(2) or LRC(14) consequence follows.  `CHECKS=6982`.
+  Script/output/semantic LF SHA-256:
+  `3cc0a69a126711c325a03cf107b3bda2ea740018a88a1e4130ac821c6977f997` /
+  `7cb9237be31b773bb82620db608faeb4b7027e52be3684d2ab429d0fa7ba23b4` /
+  `7012073dd5917c62003333e0f600a84ec78a9255d00d851b3865db6c7155069f`.
+
 - `square_triangular_pell_mod13_projective_cycle_thm3742.py` -> matching
   `.out` [THM-3742 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   Interlaces the norm `+/-1` Pell families integrally; exhausts all twelve

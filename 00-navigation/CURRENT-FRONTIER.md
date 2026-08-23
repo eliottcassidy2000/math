@@ -60,7 +60,10 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   either raises rank with an explicit cap or lies short inside the star. It preserves no
   owner, phase, sign partition, or arrival and is not sufficient for LRC(14).
   THM-3793/[3825](../01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md)
-  decode `5,855` inert ratios, scale and tags; full LRC semantics are lost and THM-3818 is RESERVED.
+  decode the `5,855` inert ratios and inert scales without a table;
+  [THM-3818](../01-canon/theorems/THM-3818-scaled-inert-cubeclass-support-two-pair-packet.md)
+  handles arbitrary scale inside the atlas and restores selected facets/word
+  plus a lattice cover. Off-lattice arrival and row exclusion remain open.
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
@@ -337,7 +340,7 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
   affine/homogeneous/`2x2` no-gos. THM-3787/3796/3798 close low support,
   every one-collision `2x4`, common steps one--three, and their output swaps;
   common step four and disjoint collision chains survive. THM-3790/3792/
-  3795/3799/3800/3803/3805--3807/3809/3810/3813/3815 close: r-independent corrections, monomials, every
+  3795/3799/3800/3803/3805--3807/3809/3810/3813--3815 close: r-independent corrections, monomials, every
   `r g(e)` through degree four, quadratic-`g` plus constant `z^2`, and the
   sharp fourteen-critical-point carrier. THM-3812 also forbids a Darboux pair
   confined to arbitrary arm-coefficient `r/z^2` profiles.

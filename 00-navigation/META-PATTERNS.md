@@ -130,7 +130,8 @@ current fills every cell and every admissible parabolic sector.
 **Trigger/action:** for `q:X->Y`, inspect `X times_Y X`; separate off-diagonal seams and retain `ker(q)/(ker(q) intersect ker(rho))` for an action `rho`.
 For a `G`-equivariant choice field `A`, test `A(x)^(Stab_G(x))!=empty`; otherwise retain a marked/set-valued fibre. Before Cech/torsor language require a nonempty invertible composable predicate-preserving seam.
 If an observer feeds another operation, use the native-operation card below: frozen-bank injectivity is not congruence. **Caution:** “minimal” is consumer-relative; set-valued/relation-valued targets need no section/torsor.
-**Evidence:** exact-six, THM-3450/3452/3454/3731/3732, MISTAKE-310/401.
+**Evidence:** exact-six, THM-3450/3452/3454/3731/3732/3818/3819,
+MISTAKE-310/401.
 
 ## Test whether a central extension changes the base signature
 
@@ -292,8 +293,7 @@ makes needed gaps, weights, ancestry, cancellation, or fibre components
 nonlocal or unrecoverable, retain a decoder and those coordinates as sidecars.  THM-3756,
 `odd-square-ordinal-berggren-affine-descent`, THM-3382,
 `fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses`,
-and THM-3758, `quadratic-radial-carrier-rational-exact-split-fibre-nonentry`,
-supply distinct positive and hostile evidence.
+and THM-3758/3819 supply distinct positive and hostile evidence.
 
 ## Tournament Analysis must preserve content
 
