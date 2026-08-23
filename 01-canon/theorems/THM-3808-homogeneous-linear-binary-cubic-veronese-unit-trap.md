@@ -2,7 +2,7 @@
 id: THM-3808
 title: "Homogeneous linear binary cubic Veronese unit trap"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  A generic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A generic
   Delone--Faddeev cubic over k[A,C] whose four binary-cubic coefficients are
   homogeneous linear forms and whose discriminant is squarefree is forced
   to be the third-Veronese cone.  Its maximal etale open has a rank-four
@@ -13,14 +13,15 @@ status: >
   Jacobian counterexample.
 source: jc_quartic_c3_construct / binary-index design lane, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The proof checks the Delone--Faddeev sign
-  convention, squarefree-discriminant normality, the four-point
-  Riemann--Hurwitz calculation, reconstruction of the full O_P1(3) section
-  ring, the exact arrangement-complement invariant ring and its unit
-  lattice, and every branch/companion factor in the rational example.  The
-  exact companion verifies all polynomial identities, trace and index
-  determinants, parametrization, ramification, critical values, unit-lattice
-  basis, and boundary controls.  Independent hostile audit remains due.
+  INDEPENDENT HOSTILE AUDIT PASS (jc_sparse_direct_search, 2026-08-23).
+  Squarefree-discriminant maximality at every height-one DVR, S2 normality,
+  Riemann--Hurwitz genus zero, reconstruction of the full O_P1(3) section
+  ring, the maximal etale locus, and the exact rank-four invariant-unit
+  lattice were independently rederived.  All Delone--Faddeev signs, index
+  and trace determinants, the rational packet, S3 branch data, and retained
+  companions pass.  Normal and optimized runs byte-match the frozen output,
+  all hashes match, and the sole wording repair distinguishes a deleted ray
+  downstairs from its linear equation being a unit only on the mu_3 cover.
 depends_on: []
 related:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
@@ -35,7 +36,7 @@ hash_basis: raw LF bytes
 
 # THM-3808 -- the homogeneous-linear cubic construction is a Veronese unit trap
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  Let `k` be
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k` be
 an algebraically closed field of characteristic zero and put
 
 ```text
@@ -196,7 +197,8 @@ Finite invariants preserve units in both directions, proving `(7)`.
 
 There are two pieces in this rank-four obstruction.  The three ratios
 `ell_i/ell_0` give the usual unit lattice of `P1` minus four points.  The
-fourth unit is radial: `ell_0^3`.  In divisor language
+fourth unit is radial: `ell_0^3`.  In divisor language, using
+`Cl(S)=Pic(P1)/Z[O_P1(3)]=Z/3`,
 
 ```text
 Cl(S)=Z/3,                   div(ell_i^3)=3E_i,                     (16)
@@ -212,8 +214,9 @@ g_i(A,C)=ell_i^2 m_i,                                              (17)
 ```
 
 where `m_i` is a different line.  Distinct branch values ensure that no
-`m_i` is one of the deleted ramification lines.  On `U`, `ell_i` is a unit,
-so `(17)` becomes precisely the one reduced principal visible companion
+`m_i` is one of the deleted ramification lines.  The divisor `E_i` is
+deleted (equivalently, `ell_i` is a unit on the `mu_3` cover), so `(17)`
+restricts to precisely the one reduced principal visible companion on `U`
 required by THM-3801.  Thus companions survive; constant units do not.
 
 ## 4. A rational four-branch packet
@@ -291,4 +294,4 @@ a planar Jacobian counterexample.  A survivor must break the cone grading
 The exact companion named in the metadata verifies `(3)--(9)`,
 `(18)--(27)`, the degree-three field law, and the four-dimensional lattice
 index.  Normal and optimized executions byte-match the frozen transcript.
-**QED, conditional only on independent hostile audit.**
+**QED.**
