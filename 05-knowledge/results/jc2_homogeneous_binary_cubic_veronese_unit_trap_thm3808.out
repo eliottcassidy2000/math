@@ -1,0 +1,9 @@
+theorem=THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
+universal=linear_packet+squarefree+field=>third_Veronese_cone
+index=codim2_square_zero;no_unit_value
+packet=(A,C,7A,-3A);Delta=A(C+5A)(4C+19A)(3C-17A)
+branch=4_simple_transpositions;4_visible_principal_companions;S3
+etale_open_units=lattice_sum_mod3_zero;rank4
+outcome=sharp_positive_normalization_grammar_but_not_constant_unit_counterexample
+CHECKS=6673
+semantic_sha256=e2b8d32b332c278b697c28ce32f36babad76061cde9a587d2957fbb0ab140a69
