@@ -1,0 +1,11 @@
+THM-3704 exact W002 audit
+fibres = 00|01=10|02=11=20|12=21|03=22|13|23
+A n=1 gate = 00 zero/nonzero FAIL
+B n=1 gate = 00 zero/nonzero FAIL
+A n=2 gate = 13 zero/nonzero FAIL
+B n=2 singleton gate = PASS; Euler factor identity = PASS
+orientation A delta=1,2 integrated rows and scalar factors = PASS
+orientation B delta=1,2 integrated rows and scalar factors = PASS
+common factor = H'K + delta H K'; h|H and b|K make it nonunit
+scope = scalar fibre 01=10 in both orientations, not all W002 placements
+ALL CHECKS PASSED
