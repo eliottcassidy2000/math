@@ -1,0 +1,13 @@
+theorem=THM-3809-smallest-mixed-r-z2-nodal-carriers-have-critical-points
+surface=r^2e-z^3+r;c=1;field=algebraically_closed_characteristic_zero
+carrier=A=e^2-z/3+b*r+h*z^2;all_b_h
+compression=u=r/z;L=1-6hz;e=L*u^2/18
+equations=p1=18z^2-u^4Lz-18u;p2=81bz^2-u^3L^2z-9L
+resultant=729z^3(6hz-1)^3R
+R=59049b^4z^8+13122b^3z^6L-162bz^2L^3-8z^7L^5-9L^4
+generic=deg12;LC=62208h^5;R0=-9;R_L0=9b^4/(256h^8)
+axes=b0:S=48hz^8-8z^7-9;h0:deg8;origin:R=-8z^7-9
+recovery=r=uz;e=L*u^2/18;F=-zp1/18;Cr=0;Ce=p2/9;Cz=u^2p2/27
+semantic_sha256=d0b8cf13c5c1e68f0b1a76e19c36b444983ad9b95b389ec23a924c79a5c631f7
+CHECKS=34
+RESULT=PASS
