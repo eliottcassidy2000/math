@@ -1,0 +1,9 @@
+theorem=THM-3894-cusp-residual-all-degree-gauge-kummer-parity-filtration
+pre_middle=n_gt_2j_forces_next_full_gauge_jet
+even_passport=n_2m_forces_q0_x_times_square_and_Kummer_R
+odd_passport=n_2m_plus_1_forces_q0_square
+vertical_gauge_completion=no_nonzero_square_residual
+gauge_peeling_square_invariance=NOT_CLAIMED
+semantic_sha256=d8395de15e06826f7214f2ba22ef8c194543d56ff967145cc42126a4448af300
+CHECKS=491
+RESULT=PASS
