@@ -221,13 +221,27 @@ for number, expected in expected_recent.items():
 theorem_files = sorted((ROOT / "01-canon/theorems").glob("THM-*.md"))
 status_by_id: dict[str, str] = {}
 body_by_id: dict[str, str] = {}
+path_by_id: dict[str, str] = {}
+# The historical corpus contains documented legacy collisions.  The current
+# allocation epoch begins above all of them; enforce uniqueness there so a
+# raced reservation cannot silently overwrite the proof-graph dictionary.
+UNIQUE_THEOREM_ID_FLOOR = 3300
 for path in theorem_files:
     body = path.read_text(encoding="utf-8", errors="replace")
     match = re.search(r"^id:\s*(THM-\d+)\s*$", body, re.MULTILINE)
     if match:
         relative = path.relative_to(ROOT).as_posix()
-        status_by_id[match.group(1)] = file_status(relative)
-        body_by_id[match.group(1)] = body
+        theorem_id = match.group(1)
+        if theorem_id in path_by_id:
+            if int(theorem_id.removeprefix("THM-")) >= UNIQUE_THEOREM_ID_FLOOR:
+                fail(
+                    f"{theorem_id}: duplicate theorem ID in "
+                    f"{path_by_id[theorem_id]} and {relative}"
+                )
+            continue
+        path_by_id[theorem_id] = relative
+        status_by_id[theorem_id] = file_status(relative)
+        body_by_id[theorem_id] = body
 for theorem_id, status in status_by_id.items():
     if status != "PROVED":
         continue
