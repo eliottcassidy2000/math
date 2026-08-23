@@ -262,6 +262,18 @@ now closes the full degree-four equality cell after independent audit; the
 first open lifts are the odd degree-three passport and higher-degree
 nonconstant-sidecar cells.
 
+The y-degree filtration cuts across that total-degree picture.  THM-3899
+forces `deg_y T>=deg_y f`; THM-3901 and THM-3902 retain the strict-degree fan
+and the positive-equality two-jet response.  New
+[THM-3904](../01-canon/theorems/THM-3904-nonzero-sidecar-constant-y-seam-emptiness-and-primitive-equality-colors.md)
+closes their omitted x-only boundary without the source address.
+Its even quartic has only two exits: top-coefficient cancellation or zero
+quadratic discriminant.  Each exit would make coprime factors of consecutive
+degree both squares.  At positive degree the same UFD mechanism does not
+close: after removing `gcd(z,u)`, the two colors are `a*square` and `square`,
+but THM-3902 lifts the displayed jets.  Thus the gcd is a real response
+sidecar, while the next filtered coefficient remains the unpaid invoice.
+
 The carrier lane has also changed scale.  Independently audited THM-3891
 closes every quadratic `C^8` binary-cubic row and proves a sharp pencil lemma
 for all squarefree binary degrees `n>=3`; degree two has a one-support hostile.
@@ -404,7 +416,7 @@ They do not share states, probability, chronology, or a reduction.
 | Factorial coefficient row | divisor/rho barcode | evaluate selected primes/residues | named necessary vanishing tests | response at the next prime | surviving polynomial row | first ordered adaptive killer at `d=9996` |
 | LRC support-two packet | lower-rank row | choose multiplier and absorb/add one runner | exact divisibility or LRC(13) safe interval | other runners, relative scale, arrival | owner plus component interval | 58 `t>=U` certificate survivors |
 | AK forcing graph | score certificate | add a sound forcing row | declared rule consequences | second-round cycle debt | oriented cycle incidence | strict `[2,2]` optimum `7/4` |
-| JC residual | associated graded seam | take top homogeneous forms | leading cancellation | lower `Delta` residual debt | next filtered bucket / Rees coordinate | address-free THM-3886 audit |
+| JC residual | associated graded seam | take top homogeneous forms | leading cancellation | common color gcd and lower debt | primitive colors plus next bucket | first coefficient below THM-3902 |
 | Rational dual | reduced dual curve | cancel common tangent factor | reduced tangent map | nonimmersion multiplicity | `E_nu` tangent-base divisor | `[ST^(d-1):T^d:S^d]` |
 | Rule 30 words | selected ray image | positive affine-word action | complete static orbit | physical chronology and owner | routed gap/depth state | same selected output, different successor |
 | Two-cube prime subsets | critical mass | singleton row plus Euler normalization | weight and disjointness inside the family | collisions outside the family | representation fibre | split-prime and exponent-three hostiles |
@@ -418,10 +430,9 @@ objects cannot be transported merely because the same word is used.
 1. **LRC anchor:** attack the 58 `t>=U` certificate survivors with two
    auxiliaries or an owner/arrival sidecar, while keeping the unrestricted
    `t<U` region separate.  The scale-two row `(2,1,9)` is the first hostile.
-2. **Jacobian anchor:** leave the now-closed `f=0` lane rather than rescan it.
-   On `f!=0`, develop THM-3899's y-degree tariff and two-colour equality
-   passport, then attack the first open odd degree-three lift without
-   assuming gauge invariance.
+2. **Jacobian anchor:** leave `f=0` and the x-only lane closed.  Reduce the
+   first coefficient below THM-3902 simultaneously modulo both primitive
+   colors and their gcd; keep the odd total-degree-three lift as a hostile.
 3. **Nonmonogenic niche:** quotient the all-degree pure-power carrier by its
    explicit polynomial `GL_2` word, then measure which lower perturbation and
    central homogenizing layer survive.  Retain the determinant cocycle and

@@ -1,0 +1,13 @@
+THM3904_CONSTANT_Y_SEAM_INDEPENDENT_REFEREE
+status=PASS
+active_gates=734
+q_gt_p_degree_cases=54
+positive_tie_degree_cases=10
+valuation_passport_gates=513
+finite_field_prime=7
+finite_constant_y_pairs=2352
+finite_A2_zero_candidates=0
+finite_discriminant_zero_candidates=0
+hostile_leading_and_next_not_sufficient=[(1, 8, 0), (2, 12, 0)]
+semantic_sha256=b79a8f3123e1b2675d30da2620973e2482a341c1a4cf32948c0ca55448ed5e3d
+verdict=PROMOTION_READY_WITH_NECESSARY_ONLY_EQUALITY_SCOPE

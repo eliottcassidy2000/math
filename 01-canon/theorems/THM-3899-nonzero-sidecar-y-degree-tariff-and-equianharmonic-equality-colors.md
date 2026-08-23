@@ -7,8 +7,9 @@ status: >
   THM-3881 residual satisfies deg_y(T)>=deg_y(f).  On the positive common
   degree seam, its leading coefficients obey a two-color equianharmonic norm
   law over sqrt(-3), with an odd color parity at x+1.  This is a necessary
-  leading filtration, not an existence theorem; all lower coefficients, the
-  constant common-degree seam, a Keller atlas, and JC(2) remain OPEN.
+  leading filtration, not an existence theorem.  THM-3904 later closes the
+  x-only boundary; positive degrees, a Keller atlas, and JC(2)
+  remain OPEN.
 source: jc_zero_debt_lift / post-THM-3897 first live f-nonzero gate, 2026-08-23
 audit: >
   INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23.  The audit independently
@@ -25,6 +26,7 @@ depends_on:
 related:
   - THM-3897-f-zero-residual-all-degree-global-emptiness
   - THM-3898-equianharmonic-cube-cubic-order-a1-branch-euler-tariff
+  - THM-3904-nonzero-sidecar-constant-y-seam-emptiness-and-primitive-equality-colors
 script: 04-computation/jc2_nonzero_sidecar_y_degree_tariff_thm3899.py
 output: 05-knowledge/results/jc2_nonzero_sidecar_y_degree_tariff_thm3899.out
 script_sha256: afa3cc0f1a158253d884151dd91bcb2b1fa5509644bdeb22004ad7d34a48982b
@@ -207,11 +209,12 @@ y-coefficient.
 
 ## 5. Scope and next exact test
 
-This theorem proves only a necessary leading filtration.  It does not close
-the equality seam, the regimes `m>n`, or the constant seam `m=n=0`; it does
-not assert that the positive payment `(15)` extends to a square.  The
-cheapest decisive continuation is to substitute the two color allocations
-from `(7)` into the next two y-coefficients of `(3)` and test whether their
+This theorem itself proves only a necessary leading filtration.  THM-3904
+subsequently closes all `T,f in k[x]`, `f!=0`; THM-3901 and THM-3902 compute
+the strict and positive-equality response laws.  Positive equality and the
+regimes `m>n` remain open, and the payment `(15)` need not extend to a square.
+The next decisive test is to substitute the primitive color allocations into
+the first coefficient below THM-3902's two-jet window and test whether their
 odd `a`-valuation can be continued without introducing an additional
 denominator divisor.
 

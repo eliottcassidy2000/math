@@ -30,6 +30,7 @@ related:
   - THM-3895-f-zero-quartic-covariant-and-high-y-degree-emptiness
   - THM-3897-f-zero-residual-all-degree-global-emptiness
   - THM-3899-nonzero-sidecar-y-degree-tariff-and-equianharmonic-equality-colors
+  - THM-3904-nonzero-sidecar-constant-y-seam-emptiness-and-primitive-equality-colors
 script: 04-computation/jc2_nonzero_sidecar_osculating_response_fan_thm3901.py
 output: 05-knowledge/results/jc2_nonzero_sidecar_osculating_response_fan_thm3901.out
 script_sha256: 69b04b7686ff3be0051cf1f2c81672892db49b0027f735be49ecf4a2f8446876

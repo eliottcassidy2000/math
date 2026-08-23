@@ -351,8 +351,8 @@ asymptotic or residue.
   THM-3884/3886/3894 force equality-seam gauge jets and a parity passport;
   THM-3896 closes `n=4`. THM-3885/3895/3897 close the entire polynomial
   `f=0` lane; THM-3900 independently classifies its generic `k(x)[y]` roots.
-  For `f!=0`, THM-3899 proves `deg_y T>=deg_y f` and leading colors;
-  THM-3901 gives the strict-degree response fan and THM-3902 the equality
+  For `f!=0`, THM-3899 proves `deg_y T>=deg_y f` and leading colors, while
+  THM-3904 closes the x-only lane. THM-3901 gives the strict response fan and THM-3902 the equality
   two-jet law. These are necessary passports with positive lifts, not closure.
   THM-3890 gives a quintic `Cl=Z/Z5` obstruction; THM-3891/3892 classify
   quadratic and pure-power polynomial `GL_2` carriers. Remaining responses,

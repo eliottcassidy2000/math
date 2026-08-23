@@ -28,6 +28,7 @@ depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
 related:
   - THM-3899-nonzero-sidecar-y-degree-tariff-and-equianharmonic-equality-colors
+  - THM-3904-nonzero-sidecar-constant-y-seam-emptiness-and-primitive-equality-colors
   - THM-3377-path-colour-deletion-compiler-and-skew-current
   - THM-3380-hamiltonian-deletion-layer-monoid-semiring-and-small-order-boundaries
 script: 04-computation/jc2_nonzero_sidecar_equality_color_two_jet_response_thm3902.py
