@@ -1,0 +1,13 @@
+theorem=THM-3803-affine-linear-r-repairs-of-nodal-carriers-have-critical-points
+surface=r^2e-z^3+r;c=1;field=algebraically_closed_characteristic_zero
+carrier=A=e^2-z/3+r*(b0+b1*e);(b0,b1)!=(0,0)
+resultant=e^4*(b0+b1*e)^3*H(e);degree_H=11
+top_ratio=[e10]H/[e11]H=3*b0/b1
+origin_order=ord_0(H)<=2;boundary_only_would_force_ord_0(H)=8
+root=off_e*(b0+b1e)=0;common_u_finite;u_notin_0,-1,-1/2
+recovery=r=u/e;z=9g*u*(u+1)/(e*(1+2u))
+open=degree_at_least_2_nonmonomial_g;mixed_r_z2;different_arm_profile
+control_sha256=9c820d09cdbc9ebbac341252fddde9ae11a72c725d05db8f65949231f39431c8
+semantic_sha256=be48a034fe61375ec1c1617aa6a2bf469d96f9cb3f8bdf5c3f7d3f41070456e6
+CHECKS=279
+RESULT=PASS
