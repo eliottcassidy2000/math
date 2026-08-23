@@ -1,0 +1,10 @@
+LRC14_THM3818_DISPATCH_JOIN_INDEPENDENT_AUDIT_20260823
+status=PASS;scope=bounded_rank11_11+2_join;LRC14=OPEN
+counts=5855_atlas;46837_positive_seams;45186_dispatch_closed;1651_odd_s2;1_universal;7505_final_residual
+logic=s_divides_one_coordinate+primitive_pair+gcd(s,t)=1=>other_runner_is_detuned_with_complete_s_orbit
+geometry=self_terms_disjoint;cross_gap=1/(2pq);open_radius_sum=(p+q)/(14pq);universal_iff_p+q<=7
+hostile=(3,7,2),z=13/20;both_selected_clearances=1/20
+actual_row_control=M=1/10_at_1/20;decoder_components=1;not_a_rank11_two_component_example_and_not_an_LRC_hostile
+semantic_sha256=22bffbd1a61a3e19596408c6c73bc1db6562896c3e314e327b285e35dfe73b86
+gates=93524
+STATUS=PASS
