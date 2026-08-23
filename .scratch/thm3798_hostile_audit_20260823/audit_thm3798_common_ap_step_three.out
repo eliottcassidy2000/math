@@ -1,0 +1,11 @@
+AUDIT=THM3798-common-AP-step-three-hostile
+CANDIDATE_SHA256=6b6a1867ec9311bf108dea2147c39504e66fec78b92c62f0f302043c2db8dad4
+CANDIDATE_OUTPUT_SHA256=9c65319ccf272948767aa4083435299ad072ed660c1b7b62d592dcf464f0c522
+D3_ROWS=q3:[(-2,-3),(-1,-4)];q6:[(-2,-6),(-1,-7)];q9:[]
+D4_HOSTILE=q4:[(-3,-3),(-2,-4),(-1,-5)];q8:[(-3,-7),(-2,-8),(-1,-9)];q12:[(-3,-11)]
+FACTORS=q3(-2,-3):Delta^2;q3(-1,-4):Delta^2;q6(-2,-6):Delta_or_Delta^2;q6(-1,-7):Delta^2
+SEAMS=support_shrink,zero_weight,nu0,kap0,H0,Hnonzero,lambda_eq_mu,algebraically_closed_units,profile_modules,output_swap:PASS
+VALUATION_CASES=1940
+CHECKS=6105
+PROMOTION=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
+RESULT=PASS
