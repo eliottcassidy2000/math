@@ -1,0 +1,11 @@
+scout=jc2-cusp-residual-cubic-tau-degree6
+cubic_tau_residual_equations=6;grevlex_basis_size=15
+cubic_tau_field_zeros=p=q=r=0
+saturation_or_candidate_coefficient_division=NONE
+f_zero_both_arms_zero_degT_at_most_6=T_ZERO
+first_possible_two_zero_arm_survivor_degree=7
+canon_status=FINITE_EXACT_SCOUT_NOT_PROMOTED
+JC2_status=OPEN
+semantic_sha256=763339f48d6b450c21d2035941d3c19c60c76cb360e26be553d862dbd59481ff
+CHECKS=20
+RESULT=PASS

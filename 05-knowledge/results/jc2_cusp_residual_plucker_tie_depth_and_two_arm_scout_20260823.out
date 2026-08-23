@@ -1,0 +1,13 @@
+scout=jc2-cusp-residual-plucker-tie-depth-and-two-arm
+gain_graph_vertices=5;full_weighted_star_reconstructs_residual=YES
+equality_seam=leading_edge_tie_omega(g_top,v_top)=0
+tie_depth_supercritical=IMPOSSIBLE_ODD_X_VALUATION
+tie_depth_subcritical=NECESSARY_n_odd_and_q_square
+tie_depth_critical=NECESSARY_q=x*s^2;r_t=rho*x^3*s;rho^2=-216
+f_zero_both_arms_zero_degT_at_most_5=T_ZERO
+sextic_named_u_v_tournament=REFUTED_BY_COORDINATE_SLIDE
+THM3886_status=RESERVED_NOT_PROMOTED
+JC2_status=OPEN
+semantic_sha256=9a5602bd5e4801a34495b48e6de1e816fda5f17dd13c43fb5c78e3dcd427c7ff
+CHECKS=119
+RESULT=PASS
