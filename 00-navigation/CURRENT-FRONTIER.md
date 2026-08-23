@@ -340,12 +340,10 @@ is sharp: equal counts allow two densities or none.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT
   (MISTAKE-205); THM-3544/50 force composite degree `>=6`, height `>=8`, and
   Nagata/GGHV give reduced height `>=108` (only `(72,108)<125`).
-  THM-3543--60 close recorded collision/ray/cyclic/low-width/shear sectors
-  (`D>=7`/width `>=4` OPEN). THM-3561/69/83/84 and 3581/89--92 close the
-  `2x3`, `N=2` `2x4`, and equal-step/A13 `3x3` compiler cells;
-  wider cells stay OPEN. THM-3595/96/98/99 close separated/toric/graph/
-  shallow-negative/affine-rational channels; THM-3600/04 give multiarm
-  intersection/no-`A2` filling/floors; THM-3605/07/08/11/14/17 close
+  THM-3543--60 close collision/ray/cyclic/low-width/shear sectors; THM-3561/
+  69/83/84 and 3581/89--92 close `2x3` and exponent-two `2x4/3x3`
+  (THM-3592 repaired); wider cells stay OPEN. THM-3595--3604 close separated/
+  toric/graph/rational/multiarm channels; THM-3605/07/08/11/14/17 close
   Russell families. THM-3618/22 classify fibre separators and their graph
   closure; THM-3619/23 close all even folds. Non-even THM-3627 closes one
   polynomial, THM-3630 denies a uniform jet bound, THM-3632 blocks its
@@ -361,10 +359,10 @@ is sharp: equal counts allow two densities or none.
   but THM-3681 closes every continuation at universal order six. Pending-
   audit THM-3683 leaves only four quartic roots after the retained six-jet
   screen; THM-3687 lifts all four through actual-ring `J_0=1`; `J_1,J_2` stay
-  open. THM-3684 blocks one-coordinate mates. THM-3685/86/3691/3693/3695 put
-  the retained `y=0` ring in exponent-two Danielewski: degree `>=4`, at least
-  seven pieces, first cells `2x5/3x4`. Higher-degree
-  zero-debt polynomials, continuation of the four THM-3683 folds,
+  open. THM-3684 blocks one-coordinate mates. THM-3685--95 embed the `y=0`
+  ring in exponent-two Danielewski and give `>=3` weights/output, first `3x4`,
+  target-filtration cap `>=22`; one W003 placement family is closed.
+  Higher-degree zero-debt polynomials, continuation of the four THM-3683 folds,
   THM-3641's excluded nonordinary tangent collisions, nonquadratic folds, and
   THM-3629's genuinely two-output-mixed `H'(0)!=0` pairs remain OPEN. A
   positive global pair here pulls back to a noninjective Keller map and

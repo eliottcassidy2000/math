@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-442 (2026-08-22, THM-3693 consequence) -- a two-by-three rectangle was promoted to a per-output three-weight floor
+
+- **What failed:** THM-3693 correctly proved that no Darboux pair has one
+  output with at most two retained weights and the other with at most three,
+  but its status and conclusion then said that every survivor has at least
+  three weights in each output.
+- **Minimal witness / first failed implication:** the proved premise is
+  `min(s,t)<=2 and max(s,t)<=3 => impossible`.  It says nothing about the
+  count profile `(s,t)=(2,4)`, much less `(2,5)`.  No actual Darboux witness
+  is needed to refute the inference; `(2,4)` is the minimal uncovered logical
+  case.
+- **Repair / strongest survivor:** THM-3693 is narrowed to its exact `2 x 3`
+  rectangular nonentry theorem.  THM-3695 separately proves the desired
+  three-per-output floor using cited Gwozdziewicz on the two source lines and
+  the origin linear jet.  Its exact Danielewski embedding then imports
+  repaired THM-3592, closing `3 x 3` and leaving `3 x 4` as the first live
+  collision-ring support cell.
+- **Reusable rule:** from a forbidden finite rectangle in a two-parameter
+  support poset, infer only that rectangle.  To claim a coordinatewise floor,
+  close every infinite arm outside it or supply a separate monotone gate.
+
 ## MISTAKE-441 (2026-08-22, first THM-3684 draft) -- three named generator subalgebras were broadened to every one-direction output
 
 - **What failed:** the proof excludes a Jacobian mate for outputs in

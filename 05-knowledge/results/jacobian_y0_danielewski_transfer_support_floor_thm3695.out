@@ -1,0 +1,14 @@
+THM-3695 exact companion
+SECTION graded Poisson embedding
+PASS R=C[3e,2ce,cb] is graded inside the Poisson Danielewski algebra D_(1-b^2)
+SECTION collision, boundary lines, and linear jet
+PASS fixed collision; z=0 sees only C, x=0 only A, and the origin jet sees only A,C
+SECTION y=0 coefficient-module divisibility
+PASS 164 monomials: positive r carries b^r; retained zero carries b(1-b^2); negative -r carries (1-b^2)^ceil(-r/2)
+SECTION R-specific W003 three-by-four ray-family nonentry
+PASS all n>=2 in the W003 anchor-20 family: b=0 leaves a unique lowest term (126 exact controls through n=64)
+SECTION support and degree floors
+PASS line/jet gate gives >=3 weights per output; THM-3592 leaves first support cells 3x4 and 4x3
+PASS CITED reduced-height 108 plus source degrees (4,5,4) forces common target-filtration cap >=22
+CHECKS=754
+PASS

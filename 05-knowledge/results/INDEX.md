@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `jacobian_y0_danielewski_transfer_support_floor_thm3695.py` -> matching
+  `.out` [THM-3695 PROVED FROM CITED INPUTS + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  The collision ring is exactly the graded subalgebra
+  `C[3e,2ce,cb]` inside the Poisson ring `c^2e=1-b^2`.  Cited line rigidity,
+  the two coordinate lines, and the origin jet force at least three retained
+  weights in each output; repaired THM-3592 raises the total to seven and
+  leaves `3x4` first.  The cited reduced-height-108 gate forces common target-
+  filtration cap at least 22.  The extra `b=0` divisor closes the complete
+  W003 anchor-20 placement family: the ambient parity gate handles even scales and
+  an all-scale valuation proof kills every formerly live odd scale.  No
+  Darboux pair or `JC(2)` counterexample is constructed.  Normal/`-O` replay
+  matches.  Script/output LF SHA-256:
+  `28c30bf1733e2270e2339207a593c1856d7e10cd17e9756c0b454ddeb4949bfb` /
+  `e5a07fb645f73d626b0f5c100fe10c0db39df9b94ca2262f353b0167b3d5edf7`.
+
 - `jc2_cohn_parity_cycle_repair.py` -> matching `.out` [THM-3653 PROVED +
   FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED; Cohn non-elementarity CITED;
   recovery implication CONDITIONAL].  The determinant-one Cohn core has curl

@@ -11,8 +11,9 @@ status: >
   explicitly.  The global conductor R:D is zero, R is not Poisson-closed,
   and scalar brackets have a synchronized three-branch law: only weights
   (-2,1) survive at b=+-1, with equal values on both arms, while only
-  (-2,1) and (-1,0) survive at b=0.  This constrains but does not close the
-  remaining 2x5 and 3x4 Darboux cells or JC(2).
+  (-2,1) and (-1,0) survive at b=0.  Enhanced THM-3695 separately removes
+  the inherited 2x5 cell by a source-line/jet gate; this law constrains but
+  does not close the remaining 3x4 Darboux frontier or JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
   PASS.  The independent audit checked the exact kernel and normalization,
@@ -302,8 +303,9 @@ statements.  Consequently:
    contribute.
 
 This is an extra incidence sidecar beyond the universal Danielewski support
-theorems.  It acts directly on the first inherited open cells `2x5` and
-`3x4`, but no claim here closes either cell or proves `JC(2)`.
+theorems.  Enhanced THM-3695's source-line/jet gate separately removes the
+inherited `2x5` cell, so this law acts directly on the current first cell
+`3x4`; no claim here closes that full cell or proves `JC(2)`.
 
 ## 6. Exact reproduction
 

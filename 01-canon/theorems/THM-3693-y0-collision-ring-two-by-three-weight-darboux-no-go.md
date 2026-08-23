@@ -12,11 +12,11 @@ status: >
   one negative weight to be -2, and four explicit first-order ODEs factor
   the alleged unit through a nonunit endpoint Wronskian.  The two arithmetic
   buckets are proved separately; no false h/u reflection is used.  Hence
-  every counterexample survivor in R needs at least three active weights in
-  each output.  Separately, the graded Poisson embedding of R into the
-  exponent-two Danielewski ring lets THM-3583/3592 raise the inherited floor
-  to seven total active weights; JC(2) and arbitrary quartic C3 data remain
-  OPEN.
+  the entire rectangular support sector with one output of width at most two
+  and the other of width at most three is empty.  This theorem alone does not
+  exclude 2 x 4 or wider mates.  THM-3695 separately proves the stronger
+  three-per-output floor by an every-line/source-jet argument.  JC(2) and
+  arbitrary quartic C3 data remain OPEN.
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
   PASS -- root independently rederived the nonarithmetic centralizer case,
@@ -30,6 +30,7 @@ related:
   - THM-3583-universal-exponent-two-two-by-four-weight-darboux-nonentry
   - THM-3592-universal-exponent-two-three-by-three-weight-darboux-nonentry
   - THM-3692-ordinary-two-by-three-shift-root-peeling
+  - THM-3695-y0-collision-ring-danielewski-embedding-and-seven-piece-floor
 script: 04-computation/jacobian_y0_two_by_three_weight_no_go_thm3693.py
 output: 05-knowledge/results/jacobian_y0_two_by_three_weight_no_go_thm3693.out
 script_sha256: 9727857098803f3a615f8ab2ff7aad1aead11d724f8932332ca83898eeb08072
@@ -334,26 +335,22 @@ max(|supp_wt(P)|,|supp_wt(Q)|)<=3
               => {P,Q} notin C*.                       (27)
 ```
 
-Therefore any Darboux pair in the collision ring must satisfy
+This implication does **not** by itself prove that both supports have size at
+least three.  It leaves, for example, the count profiles `2 x 4`, `2 x 5`,
+and wider profiles untouched.  The former inference
 
 ```text
-|supp_wt(P)|>=3,                    |supp_wt(Q)|>=3.    (28)
+2 x 3 excluded  =>  |supp_wt(P)|,|supp_wt(Q)|>=3       (28)
 ```
 
-Such a pair would still identify the THM-3686 collision and refute `JC(2)`.
-The direct argument eliminates the entire two-by-three grading frontier.
-There is also a stronger inherited conclusion which does not depend on that
-argument: under the graded Poisson embedding
+failed at that first logical step.  THM-3695 now proves the conclusion on the
+right by a different all-degree every-line/source-jet argument and imports
+THM-3592 to close every `3 x 3` profile.  Consequently the current collision-
+ring frontier begins at `3 x 4` up to output exchange, but that stronger
+frontier is not a consequence of Sections 2--4 here.
 
-```text
-R=C[3e,2ce,bc] subset C[b,c,e]/(c^2e-(1-b^2)),          (29)
-```
-
-THM-3583 excludes `2x4` and THM-3592 excludes every `3x3` cell.  Their
-seven-piece floor therefore applies to `R`; the first unexcluded partitions
-are `2x5`, `3x4`, and their transposes.  The present theorem remains useful
-as a direct collision-ring mechanism, but it is not the source of that
-stronger floor.  General quartic `C3` incidence data and `JC(2)` remain open.
+Any such pair would still identify the THM-3686 collision and refute `JC(2)`.
+General quartic `C3` incidence data and `JC(2)` remain open.
 
 ## 6. Exact reproduction
 
