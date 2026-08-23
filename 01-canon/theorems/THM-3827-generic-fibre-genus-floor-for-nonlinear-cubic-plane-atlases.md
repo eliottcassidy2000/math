@@ -8,7 +8,9 @@ status: >
   smooth projective geometric generic fibres of g and ell each have genus at
   least three.  At equality they are respectively isomorphic after base
   change to explicit degree-eight and degree-seven THM-3822 hyperelliptic
-  sidecars, with two versus one points at infinity.  The new sharpenings give
+  sidecars; the corresponding row coordinates have two versus one pole
+  places.  This does not count every boundary point of the affine source
+  fibres.  The new sharpenings give
   V_U(k)=G_m as well as V_U(h)=G_m, and say that either h splits or one fixed
   spectral fibre is canonically disconnected into both square-root signs.
   Existence and uniqueness up to affine change of each generative factor,
@@ -55,7 +57,12 @@ audit: >
   complete k-zero Laurent parametrization and original cubic laws, the second
   completed square, the component-sign equation, the five distinct pencil
   slopes, and both terminal subset obstructions.  Normal and optimized replay
-  agree with the frozen output.
+  agree with the frozen output.  A root post-promotion scope audit repaired
+  one final overread: opposite pole parity belongs to the two sidecar row
+  coordinates.  At genus-three equality their pole places transfer through
+  the projective isomorphisms, but this is not the total affine-boundary count
+  of either source fibre; the dual genus floors and bichromatic packet are
+  unchanged.
 depends_on:
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
 related:
@@ -394,7 +401,7 @@ pencil: unless `h` itself splits, it must allocate components of both square-
 root signs inside one canonically disconnected fixed spectral member before
 solving the second-row and Keller equations.
 
-## 7. The opposite row has the same floor and opposite infinity parity
+## 7. The opposite row has the same floor and opposite sidecar parity
 
 There is first an intrinsic geometric reason that the opposite row is not a
 formal symmetry.  Set `k=0` in the actual THM-3811 ring `B`.  The three
@@ -467,9 +474,12 @@ component, contradicting the nonconstant-unit law following `(30)`.
 At equality, Riemann--Hurwitz again forces the map to have degree one, so
 the generic fibre is geometrically isomorphic to the odd sidecar.  The
 degree-eight sidecar from Sections 1--5 has two geometric points at infinity,
-whereas this degree-seven sidecar has one.  Thus a surviving atlas must carry
-two primitive high-genus fibrations with opposite infinity parity, not merely
-one complicated arm.
+whereas this degree-seven sidecar has one.  Thus, at the genus-three equality
+boundary, the induced row coordinates have respectively two and one pole
+places under the projective isomorphisms.  This is not a count of every
+boundary point in either affine source fibre.  In higher genus the theorem
+instead gives nonconstant maps to the two explicit sidecars, whose row
+coordinates have opposite pole parity; it does not identify source punctures.
 
 ## 8. Exact scope
 
@@ -479,4 +489,7 @@ dual claims `(19)` and `(34)` unconditional for every dominant etale plane
 atlas over the stated field.  The second intrinsic arm `(30)` and the
 bichromatic strengthening `(24)` and canonical nontrivial CRT decomposition
 `(28c)` are independently audited as well.  No planar Jacobian counterexample
-is claimed.  **QED.**
+is claimed.  A post-promotion scope audit repaired the final parity sentence:
+at genus-three equality the sidecar row-coordinate pole places transfer
+through the isomorphisms, not as total affine-boundary counts; in higher genus
+only maps to the opposite-parity target sidecars are supplied.  **QED.**

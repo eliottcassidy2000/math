@@ -359,10 +359,10 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
   out both `U=A2` and the THM-3785 pseudo-plane. THM-3817 proves pure `r<=5`;
   THM-3814/3821 close all-degree `rz`/the first `rz^2`; THM-3826 closes pure
   sextic support `<=3` (THM-3820 is structural).  Over `C`, THM-3823 excludes
-  finite/proper atlases; THM-3827 forces the generative coordinate's primitive
-  generic-fibre genus `>=3` plus reducibility among six pencil fibres.  OPEN:
-  nonproper atlases paying that passport, denser sextics/degree `>=7`, higher
-  `rz^j`, mixed `>=3`/nonconstant `h`, poles, unrestricted pairs and `JC/DC(2)`.
+  finite/proper atlases; THM-3827 forces dual genus `>=3`, equality row-pole
+  parity `2/1` and a split/bichromatic fibre; THM-3828 closes the aligned
+  second row.  OPEN: nonproper atlases paying that passport, denser sextics,
+  misaligned/one-sided/higher rows, poles, unrestricted pairs and `JC/DC(2)`.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692
@@ -376,8 +376,9 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
   but no section/transfer; THM-3306 sidecars are FINITE-EXACT only.
   Surface chain: PROVED pure `r<=5`, sparse sextic support `<=3`, constant-
   `z^2` mixed `deg(g)<=2`, arbitrary-arm pair no-go, all-degree `rz`, and first
-  `rz^2`.  OPEN denser sextics/degree `>=7`, mixed/nonconstant `h`, higher
-  `rz^j`, arbitrary mates and off-nodal branches; THM-3828 is only reserved.
+  `rz^2`, plus THM-3828's aligned second row.  OPEN denser sextics/degree `>=7`,
+  mixed or misaligned/one-sided/higher rows, arbitrary mates and off-nodal
+  branches; THM-3829 is only reserved.
 - **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
   all `2665` residuals in `7395` rows (`2384` divisor, `281` rho).
   `d=6518` needs `p=29`, refuting `p<=23`. FINITE-EXACT at `d=10001`:

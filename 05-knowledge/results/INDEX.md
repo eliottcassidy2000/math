@@ -2,15 +2,29 @@
 
 - `jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.py` ->
   matching `.out` [THM-3827 PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY
-  HOSTILE-AUDITED].  For a generative factorization `h=p(g)` of the pulled-back
-  arm function, the primitive generic fibre of `g` has genus at least three;
-  at genus three it is geometrically the explicit THM-3822 hyperelliptic
-  sidecar.  At least one of `h=0` and five fixed-slope pencil members is
-  reducible.  This narrows every surviving nonproper atlas but constructs none.
-  `CHECKS=22`.  Script/output/semantic SHA-256:
-  `82290ea8abca925913393c950e28dc920c20517ad8156a6aca5b74342efb3516` /
-  `f25dcb0dc688e67e8ce5b8e3e5eba71da7df5bc7290ffe2210fd07e4f5435450` /
-  `42bfbc4e18afc0ff86b28847525f1c9f5504331abdf1061f323c79b0d31043bd`.
+  HOSTILE-AUDITED].  The generative factorizations `h=p(g)` and `k=q(ell)`
+  have primitive generic-fibre genus at least three.  At equality the induced
+  row coordinates have respectively two/one pole places through the degree-
+  eight/seven sidecars; this is not a total affine-boundary count.  Both
+  intrinsic zero arms are `G_m`; either `h` splits or one of five fixed-slope
+  fibres is reducible and carries both square-root signs.
+  This dual bichromatic passport narrows every surviving atlas but constructs
+  none.  `CHECKS=36`.  Script/output/semantic SHA-256:
+  `dd6025305fd479c6118d57409e390ffa9751e15da533f465b50a998c59d45722` /
+  `a59b2c098e2cd115adb6da15dd711a4e6e2752c1d15b8ed5378bcc589012e86d` /
+  `d46b81bd79d27d7b4396f8f934dd773e694c0eb1a6384ffe03381e6934db7a29`.
+
+- `jc2_cubic_pseudoplane_proportional_second_row_thm3828.py` -> matching
+  `.out` [THM-3828 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  In the first second-row extension, `X!=0` forces `Y=lambda X`; if also
+  `T=lambda S`, no Darboux pair exists.  The `N!=0` branch enters a
+  `10,5,4,3` ladder and fails at a half-integral root address/first integral;
+  `N=0` fails arm division.  The misaligned `L=T-lambda S!=0` branch begins
+  with a new `10/7` tower and remains open, as do `X=0,Y!=0` and higher slots.
+  `CHECKS=43`.  Script/output/semantic SHA-256:
+  `4987fa7ba479b256dca27eb8d2cb051f4c54c62af54612783243da879b88f03e` /
+  `316bea85e4e71be29c25ab847f91d127e05a49b45404d0bc1edfb232283dd538` /
+  `170613b16552465adbb4e26734b0f50828b1e77e8c123d59ab2e2c80e38dfeb1`.
 
 - `jc2_cubic_pseudoplane_three_term_sextic_r_repair_thm3826.py` -> matching
   `.out` [THM-3826 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].

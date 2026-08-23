@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-453 (2026-08-23, THM-3827 dual-fibre audit) -- a target row-coordinate parity was mistaken for a source-boundary count
+
+- **What failed:** the promoted conclusion correctly proved two primitive
+  generic-fibre genus floors and identified the genus-three equality cases
+  with degree-eight/seven hyperelliptic sidecars, but its final sentence said
+  every surviving source pair itself had opposite infinity parity.  This also
+  conflated the pole places of one row coordinate with all boundary points of
+  the corresponding affine source fibre.
+- **First failed implication:** for source genus greater than three,
+  Riemann--Hurwitz supplies only nonconstant maps to the two genus-three
+  sidecars.  A finite cover can change the number of points above infinity;
+  the target's two-versus-one infinity count does not pull back unchanged.
+- **Repair / survivor:** both source genera are at least three.  The two target
+  sidecar row coordinates have respectively two and one pole places.  At
+  genus-three equality, the maps have degree one and transfer those two row
+  functions and their pole divisors; this still does **not** count the whole
+  affine source boundary, because the other source coordinates may have
+  additional poles.  In higher genus only maps to the opposite-parity target
+  sidecars are proved.  The second `G_m` arm and split/bichromatic fibre packet
+  are unaffected.
+- **Reusable rule:** an affine boundary is controlled by the pole divisors of
+  all coordinate functions, not by the compactification of one selected row
+  coordinate.  After a Riemann--Hurwitz floor, audit separately what transfers
+  at degree one, what survives at higher covering degree, and what was never a
+  total-boundary count.
+
 ## MISTAKE-452 (2026-08-23, concurrent THM-3825/3818 promotion) -- a related theorem's reservation status went stale
 
 - **What failed:** THM-3825 was promoted while THM-3818 was still an empty

@@ -43,9 +43,12 @@ prompted an exact square/triangular audit of its 3-adic label operation;
 shifted the pure-`r` boundary from degree six to four-term sextics and was
 independently reconstructed cell by cell; and
 [THM-3827](../01-canon/theorems/THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases.md)
-turned the open nonproper-atlas lane into a genus-and-reducible-fibre
-passport.  These extensions changed the next questions without changing the
-status of either conjecture.
+turned the open nonproper-atlas lane into a dual-genus, opposite-parity-
+sidecar, and bichromatic-fibre passport.  Finally,
+[THM-3828](../01-canon/theorems/THM-3828-proportional-second-row-r2z2-profile-nonentry.md)
+closed the aligned proportional second row and exposed a genuinely new
+misaligned `10/7` tower.  These extensions changed the next questions without
+changing the status of either conjecture.
 
 The two conjectures remain open.  The gain is an exact operation ledger and one
 especially dense merged row, not a proof by analogy.
@@ -112,12 +115,15 @@ The board changed in seven important ways.
   object.  Evaluation forgets polynomial geometry; a selected pair forgets the
   other eleven runners and does not prove its own minimality.
 - The first `rz^2` row and all degree-six pure-`r` carriers with at most three
-  monomials are now closed.  The next local JC objects are a second `rz^j` row
-  and four-term sextic cells, not more tests of the eliminated profiles.
+  monomials are now closed; so is the aligned proportional second row.  The
+  next local JC objects are its misaligned `10/7`/one-sided branches and
+  four-term sextic cells, not more tests of the eliminated profiles.
 - A surviving nonlinear-cubic plane atlas must now be nonproper, have
-  primitive generic-fibre genus at least three, and spend reducibility on one
-  of six fixed pencil members, in addition to its signed Euler debt and the
-  two-prime boundary requirement on every finite envelope.
+  two primitive generic-fibre genera at least three, map to the two opposite-
+  parity row sidecars (with two/one row-coordinate pole places at equality),
+  and either split `h` or spend both square-root signs on one of five
+  fixed fibres, in addition to its signed Euler debt and the two-prime boundary
+  requirement on every finite envelope.
 
 ## 3. THM-3818: the support-two address regains scale
 
@@ -483,25 +489,63 @@ found the same five survivors after rows 31--29,
 cell `{0,1,4,6}` survives all four and only its next row is known to kill it,
 so the new boundary is four-term sextics rather than “degree six” wholesale.
 
-THM-3827 likewise promotes the generic-fibre reframe.  Write the pulled-back
-arm polynomial as its cited generative factorization `h=p(g)`.  The explicit
-degree-eight square sidecar yields a nonconstant map from the primitive generic
-fibre of `g` to a genus-three hyperelliptic curve; Riemann--Hurwitz forces genus
-at least three, with birational equality at genus three.  A second factorization
-of the same square proves that at least one of `h=0` and five fixed-slope pencil
-members is reducible.  Together with THM-3823, any surviving atlas is
-nonproper, has signed Euler-integral debt `8d-1`, has at least two boundary
-primes in every finite envelope, has primitive generic-fibre genus at least
-three for its generative closed coordinate `g`, and spends reducibility in
-that six-member packet.  This is an obstruction passport, not a construction
-or a proof of JC(2).
+THM-3827 now makes the generic-fibre reframe genuinely two-sided.  Both
+intrinsic zero arms `V_U(h)` and `V_U(k)` are `G_m`.  For the cited generative
+factorizations
 
-The live JC lanes are consequently more precise: four-or-more-term sextics and
-degree at least seven in the pure-`r` lane, a second or higher `rz^j` layer,
-nonconstant `z^2` profiles outside the closed packets, and nonproper
-multi-ended `SL_2` arms capable of paying the full passport.  THM-3828 is only
-a reserved second-row namespace.  Another quadratic, quintic, or first-`rz^2`
-elimination would duplicate closed terrain.
+```text
+h=p(g),                       k=q(ell),
+```
+
+the primitive generic fibres of both closed coordinates have genus at least
+three.  At equality they are isomorphic after base change to the degree-eight
+and degree-seven hyperelliptic sidecars of the same square identity; the
+induced row coordinates therefore have respectively two and one pole places.
+That is not the number of all boundary points of either affine source fibre.
+The pencil invoice also
+strengthens: either `h` itself is reducible, or one of five fixed-slope members
+is reducible and **bichromatic**, with prime components carrying both signs of
+the square root.  Together with THM-3823, any surviving atlas is nonproper,
+has signed Euler-integral debt `8d-1`, has at least two boundary primes in
+every finite envelope, maps to opposite-parity row sidecars (with the row-pole
+counts transferring at equality), and pays the split/bichromatic invoice.  This is an obstruction
+passport, not a construction or a proof of JC(2).
+
+THM-3828 then enters the first genuine second row above THM-3821 by adding
+`r^2z^2` profiles `X,Y`.  For `X!=0`, the top Wronskian intrinsically forces
+`Y=lambda X`.  If the preceding row aligns as `T=lambda S`, the `N!=0`
+branch enters the exact `10,5,4,3` ladder and dies at a half-integral root
+address plus a confluent first integral; the separately recomputed `N=0`
+branch fails arm division.  The equality boundary is constructive: with
+
+```text
+L=T-lambda S !=0,
+X=alpha e^6w^10,             L=beta e^4w^7,
+```
+
+the new `10/7` tower remains **OPEN**.  So do `X=0,Y!=0` and further
+second-row slots.  Alignment is the killed operation; merely saying “the
+second row” would overstate the theorem.
+
+The independent audit isolates the first two exact successor buckets.  With
+`L!=0`, the next `r^5` condition is
+
+```text
+[r^5]/3 = -7e^2 L S' - 4e^2 M X' + 7e^2 S L' + 10e^2 X M'
+          -12e L X' + 4e M X + 18e X L' + 2L X = 0,
+```
+
+and the following `r^4z^2` bucket is `15e(2XN'-NX')=0`.  Thus the open
+`10/7` tower splits cleanly into `N=0` or `N=delta e^3w^5`; this is a
+concrete THM-3829 work item, not a result supplied by its reservation.
+
+The live JC lanes are consequently more precise: four-or-more-term sextics
+and degree at least seven in the pure-`r` lane; the misaligned `10/7`,
+one-sided, and higher second-row branches; nonconstant `z^2` profiles outside
+the closed packets; and nonproper multi-ended `SL_2` arms capable of paying
+the dual passport.  THM-3829 and THM-3830 are only reserved route signals.
+Another quadratic, quintic, first-`rz^2`, or aligned-second-row elimination
+would duplicate closed terrain.
 
 ## 7. Khinchin content after the extension
 
@@ -542,11 +586,12 @@ pair; only the ambient residue sidecar tests a target LRC phase.
 | inert merged row `(5,29)` | pair-sum lattice | 29-class safe set | off-lattice witness and global arrival | cover by eleven labelled danger sets |
 | nodal coefficient ansatz | root valuations/resultants | nonexistence in stated profile | larger coefficient support | change coefficient type before enlarging elimination |
 | first `rz^2` profile | odd Kummer ladder then full `r^2z` bucket | complete no-go for its eight profiles | second `rz^j` layer and arbitrary mates | retain endpoint bucket, integral multiplicity, and origin jets |
+| proportional second row | `Y=lambda X`, target difference `L=T-lambda S` | aligned `L=0` no-go | misaligned `10/7`, `X=0,Y!=0`, higher slots | retain `L` before any target shear; test the next canonical bucket |
 | sparse sextic support | cubic/seventh-power cover and four remainder rows | all 22 support-`<=3` cells | four-term and denser cells | top-five census on every four-term torus cell |
 | source quadratic sheets | mod-seven residual values | discriminant factor `R W^2` | source label on `W=0` | retain collision slope `W`; audit degree-drop divisors |
 | nonlinear cubic atlas | intrinsic polynomial `SL_2` row | determinant and cubic lift laws | coverage/properness at punctured arms | genus-three square sidecar plus every arm component |
 | nonlinear cubic surface | compact Euler integration | finite/proper atlas obstruction and signed debt `8d-1` | location and positivity of escaping sheets | finite-envelope boundary primes plus an explicit nonproperness passport |
-| generative factor `h=p(g)` | primitive generic fibre | genus `>=3` and reducibility among six pencil members | an atlas construction and second-row solution | build or exclude a nonproper high-genus passport |
+| dual factors `h=p(g),k=q(ell)` | two primitive generic fibres | both genera `>=3`; target row-pole parity `2/1` transfers at equality; split/bichromatic fibre | an atlas construction and cross-fibration compatibility | combine both sidecars with the nonproper Euler/boundary passport |
 
 ## 9. Hostiles that set the exact boundary
 
@@ -571,10 +616,16 @@ pair; only the ambient residue sidecar tests a target LRC phase.
   valuations cannot be inherited from a positive-order stratum.
 - The exact four-term sextic cell `{0,1,4,6}` survives all four rows that kill
   every support-`<=3` cell.  Sparse saturation does not extrapolate by density.
+- In THM-3828, `Y=lambda X` is forced but `T=lambda S` is not.  Setting the
+  target difference `L` to zero closes the branch; keeping `L!=0` creates the
+  new `10/7` tower.  A convenient target alignment is load-bearing data.
+- For THM-3827, knowing that one spectral fibre is reducible is weaker than the
+  actual passport: unless `h` splits, one fixed fibre needs components of both
+  square-root signs.  Component colour cannot be discarded after factor count.
 
 ## 10. New research moves and next pulls
 
-Five reusable ideas survived.
+Six reusable ideas survived.
 
 1. **Separated quotient plus compatible scale action can become a decoder.**
    A quotient invariant is not automatically lossy: if its primitive classes
@@ -591,12 +642,18 @@ Five reusable ideas survived.
 4. **Treat an incoming theorem as a boundary map.**  Extract its native
    operation, sharp hostile, and first unproved adjacent cell.  The productive
    extensions here were label multiplication after THM-3825, four-term support
-   after THM-3826, and a full atlas passport after THM-3827—not new proofs of
-   their already closed cores.
+   after THM-3826, the opposite arm after THM-3827, and the misaligned `10/7`
+   branch after THM-3828—not new proofs of their already closed cores.
 5. **Type arithmetic digits by gauge.**  The same exponent can mean an
    unordered label or a label-plus-orientation pair.  A numerical predicate
    surviving the encoding does not imply that its decoded combinatorial state
    survives.
+6. **Dualize a sidecar before inventing a new invariant.**  The same square
+   identity viewed in its other variable changed degree eight to seven,
+   produced opposite row-coordinate pole parity, and exposed a second `G_m`
+   arm.  The
+   dual can carry genuinely new row-coordinate pole geometry even when the
+   genus floor agrees; it does not by itself count the whole affine boundary.
 
 The cheapest high-value next tests are:
 
@@ -605,12 +662,18 @@ The cheapest high-value next tests are:
 - if that cover succeeds, search continuously between adjacent `1/34` phases
   before claiming a bad row;
 - on the local JC side, run a top-five invariant census over all genuine
-  four-term sextic cells, or enter THM-3828's second `rz^j` row without using
-  its empty reservation as a result; retain the full polynomial tower—
-  evaluation at `z=2` is only a hostile control;
-- on the global JC side, combine the `SL_2` lift laws, genus-three sidecar,
-  six-member reducible-fibre packet, and Euler/boundary debt into one explicit
-  nonproper-atlas feasibility system;
+  four-term sextic cells, or compute the next bucket on THM-3829's OPEN
+  misaligned `10/7` tower without using its empty reservation as a result;
+  retain the full polynomial tower—evaluation at `z=2` is only a hostile
+  control;
+- separately test the one-sided `X=0,Y!=0` second row; target swapping does
+  not preserve the fixed base terms automatically;
+- on the global JC side, combine both genus-three sidecars, their opposite
+  row-coordinate pole parity, the bichromatic component signs, the `SL_2` lift laws, and
+  Euler/boundary debt into one explicit nonproper-atlas feasibility system;
+- audit THM-3830's reserved coordinate-cross candidate by restricting the
+  two square-root signs separately to `x=0` and `y=0`; the stub itself proves
+  nothing;
 - follow the negative-Pell chain `T_M=3T_N` and test when `T_N=a^3+b^3` has
   inert/cube-free primitive sum; `(9,13;76,132)` is unique only in the
   `a+b<=356` atlas, so an extended cap is the cheapest probe before seeking an
@@ -624,5 +687,6 @@ The cheapest high-value next tests are:
 No current result excludes an LRC(14) row or constructs a planar Keller
 counterexample.  The precise advance is a better cube/facet packet, a lawful
 Pell return operation, an exact square/triangular label subatlas, a repaired
-complete first-`rz^2` no-go, a sparse-sextic boundary, a genus/Euler atlas
+complete first-`rz^2` no-go, a sparse-sextic boundary, an aligned-second-row
+closure with an OPEN `10/7` successor, a dual-genus/bichromatic/Euler atlas
 passport, and one concrete 29-residue next target.
