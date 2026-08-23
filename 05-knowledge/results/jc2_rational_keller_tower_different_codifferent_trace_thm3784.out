@@ -6,7 +6,7 @@ inverse_different=x=1/g=-m/f_m_prime(t)
 norm_g=(-1)^(m+1)*((m+1)^(m+1)*U^m-m^(m+1)*P^(m+1))/m
 norm_x=(-1)^(m+1)*m/((m+1)^(m+1)*U^m-m^(m+1)*P^(m+1))
 trace_packet=Tr(t^k*x)=0_for_0<=k<m;Tr(t^m*x)=-m
-coefficient_extraction=Tr(x*q(t))=-m*lc(q)_for_deg(q)<=m
+coefficient_extraction=Tr(x*q(t))=-m*[T^m]q(T)_for_deg(q)<=m
 codifferent=x*k[U,P,t];different=g*k[U,P,t]
 pairing_determinant=(-1)^((m+1)*(m+2)/2)*m^(m+1)
 geometric_identity=axis_pole_inverse_different;branch_cusp_norm_of_different
@@ -16,8 +16,8 @@ norm_controls=m1:-P**2 + 4*U,m2:(8*P**3 - 27*U**2)/2,m3:-(81*P**4 - 256*U**3)/3,
 trace_controls=m1:0,-1,m2:0,0,-2,m3:0,0,0,-3,m4:0,0,0,0,-4,m5:0,0,0,0,0,-5,m6:0,0,0,0,0,0,-6,m7:0,0,0,0,0,0,0,-7,m8:0,0,0,0,0,0,0,0,-8,m9:0,0,0,0,0,0,0,0,0,-9,m10:0,0,0,0,0,0,0,0,0,0,-10
 pairing_determinant_controls=m1:-1,m2:8,m3:81,m4:-1024,m5:-15625,m6:279936,m7:5764801,m8:-134217728,m9:-3486784401,m10:100000000000
 packet_sha256=7a9173175a2cd618e2f62e556461a94d98da0e7699bc4bdc9d2dd994b9713a73
-semantic_sha256=f3c7450cf9e2733919394572d1b18057ee976f6c2f6818203cdd8a6f73d61f7d
-CHECKS=335
+semantic_sha256=0eef4b9cab199a47048afb124b8a40f946314bfe4c0889500a5a18d9b7b011b1
+CHECKS=355
 OPEN_REPAIR=trace_zero_codifferent_combinations_across_sheets
 NO_CLAIM=polynomial_Keller_pair_or_planar_Jacobian_counterexample
 RESULT=PASS

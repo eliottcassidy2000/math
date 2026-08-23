@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-445 (2026-08-23, THM-3784 audit) -- the fixed top-basis coefficient was called the leading coefficient at lower degree
+
+- **What failed:** the first trace-duality draft correctly proved
+  `Tr(t^r x)=0` for `0<=r<m` and `Tr(t^m x)=-m`, but then stated
+  `Tr(xq(t))=-m lc(q)` for every polynomial of degree at most `m`.
+- **Minimal witness / first failed implication:** take `q=1`.  The proved
+  packet gives `Tr(x)=0`, whereas the displayed formula gives `-m`.  The
+  failed step was identifying the coefficient of the fixed power-basis top
+  `T^m` with the ordinary leading coefficient when `deg q<m`.
+- **Repair / strongest survivor:** the exact formula is
+  `Tr(xq(t))=-m[T^m]q(T)` for `deg q<=m`; it becomes the leading-coefficient
+  formula only at degree exactly `m`.  The different/codifferent equality,
+  pairing determinant, norm/discriminant signs, recurrence, and polynomial
+  trace-zero ladder all survive.  The companion now tests the symbolic
+  coefficient functional and freezes `q=1` as a hostile, raising its gate
+  count from `335` to `355`.
+- **Reusable rule:** a coefficient functional is relative to a declared
+  ambient basis and cutoff.  Never rename its top-slot coefficient as the
+  polynomial's leading coefficient without first proving the polynomial
+  actually reaches that slot.
+
 ## MISTAKE-444 (2026-08-23, concurrent theorem reservation) -- a yielded shell was mistaken for a completed namespace check
 
 - **What failed:** after fetching and rebasing a clean reservation worktree,

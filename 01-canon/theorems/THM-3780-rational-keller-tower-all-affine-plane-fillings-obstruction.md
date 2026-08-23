@@ -23,7 +23,7 @@ depends_on:
 related:
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
   - THM-3773-quadratic-rational-keller-cover-degree-and-target-word-nonpolynomialization
-  - THM-3779-three-component-tower-maximal-danielewski-observable
+  - THM-3779-three-component-tower-maximal-danielewski-polynomial-observable
 script: 04-computation/jc2_rational_keller_tower_all_affine_plane_fillings_thm3780.py
 output: 05-knowledge/results/jc2_rational_keller_tower_all_affine_plane_fillings_thm3780.out
 script_sha256: ce55cbd60a58a2e20ab741218a2ae6619653fb530603319b5a7015a2f6d48193

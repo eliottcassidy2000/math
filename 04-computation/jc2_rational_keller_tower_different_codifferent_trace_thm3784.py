@@ -87,6 +87,23 @@ for degree_parameter in range(1, 11):
     gate(traces[degree_parameter] == -degree_parameter,
          f"top trace coefficient m={degree_parameter}")
 
+    coefficients = sp.symbols(f"a0:{n}")
+    coefficient_functional = sp.expand(
+        sum(coefficients[power] * traces[power] for power in range(n))
+    )
+    gate(
+        sp.expand(
+            coefficient_functional
+            + degree_parameter * coefficients[degree_parameter]
+        )
+        == 0,
+        f"coefficient-of-T^m trace functional m={degree_parameter}",
+    )
+    gate(
+        traces[0] != -degree_parameter,
+        f"constant-polynomial hostile to leading-coefficient wording m={degree_parameter}",
+    )
+
     for power in range(n, 3 * n):
         recurrence = sp.factor(
             traces[power]
@@ -185,7 +202,7 @@ semantic_rows = (
     "norm_g=(-1)^(m+1)/m*((m+1)^(m+1)U^m-m^(m+1)P^(m+1))",
     "norm_x=reciprocal_branch_factor",
     "trace:Tr(t^k*x)=0_for_0<=k<m;Tr(t^m*x)=-m",
-    "coefficient_functional:Tr(x*q(t))=-m*leading_coefficient_for_deg_q<=m",
+    "coefficient_functional:Tr(x*q(t))=-m*coefficient_of_T^m_for_deg_q<=m",
     "codifferent:x*S=f_prime(t)^-1*S;different=g*S",
     "pairing_determinant=(-1)^((m+1)(m+2)/2)*m^(m+1)",
     "repair_lane:trace_zero_codifferent_rungs_open_no_counterexample_claim",
@@ -207,7 +224,7 @@ print("inverse_different=x=1/g=-m/f_m_prime(t)")
 print("norm_g=(-1)^(m+1)*((m+1)^(m+1)*U^m-m^(m+1)*P^(m+1))/m")
 print("norm_x=(-1)^(m+1)*m/((m+1)^(m+1)*U^m-m^(m+1)*P^(m+1))")
 print("trace_packet=Tr(t^k*x)=0_for_0<=k<m;Tr(t^m*x)=-m")
-print("coefficient_extraction=Tr(x*q(t))=-m*lc(q)_for_deg(q)<=m")
+print("coefficient_extraction=Tr(x*q(t))=-m*[T^m]q(T)_for_deg(q)<=m")
 print("codifferent=x*k[U,P,t];different=g*k[U,P,t]")
 print("pairing_determinant=(-1)^((m+1)*(m+2)/2)*m^(m+1)")
 print("geometric_identity=axis_pole_inverse_different;branch_cusp_norm_of_different")

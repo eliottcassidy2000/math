@@ -14,15 +14,19 @@ status: >
   polynomial Keller pair or JC(2) counterexample is claimed.
 source: jc_zero_debt_lift / different-codifferent reframe, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT by jc_sparse_direct_search.  The derivative and
-  reciprocal-Jacobian signs, Lagrange trace packet, recurrence, full
-  trace-codifferent module equality, anti-triangular determinant sign and
-  unit claim, discriminant/norm signs, and the m=1 and m=2 boundary cases
-  were rederived independently.  Resultant and multiplication-matrix norm
-  calculations agree for m=1,...,10; direct source typing is checked for
-  m=1,...,8.  Normal, optimized, and frozen runs agree byte for byte, and
-  the recorded hashes match.  The audit repaired the scope wording: the
-  irreducible branch curve is smooth for m=1 and cuspidal for m>=2.
+  TWO INDEPENDENT HOSTILE AUDITS, PASS AFTER REPAIR.  jc_sparse_direct_search
+  rederived the derivative and reciprocal-Jacobian signs, Lagrange trace
+  packet, recurrence, full trace-codifferent equality, pairing determinant,
+  norm/discriminant signs, and the m=1 and m=2 boundaries; it also repaired
+  the geometric scope to smooth branch curve for m=1 and cuspidal branch for
+  m>=2.  lrc14_cover_defect_bridge caught one false corollary: the original
+  equation (9) used lc(q) for deg(q)<=m, contradicted by q=1.  The repaired
+  statement extracts [T^m]q, MISTAKE-445 records the mechanism, and the
+  companion adds symbolic coefficient and constant-polynomial hostile gates
+  (355 total).  Resultant and multiplication-matrix calculations agree for
+  m=1,...,10, direct source typing is checked for m=1,...,8, and normal,
+  optimized, and fixed-hash transcripts LF-normalize exactly to the frozen
+  output.
 depends_on:
   - THM-3774-three-component-rational-keller-cover-tower
   - THM-3780-rational-keller-tower-all-affine-plane-fillings-obstruction
@@ -31,9 +35,9 @@ related:
   - THM-3783-quadratic-tower-etale-surface-maximal-polynomial-observable
 script: 04-computation/jc2_rational_keller_tower_different_codifferent_trace_thm3784.py
 output: 05-knowledge/results/jc2_rational_keller_tower_different_codifferent_trace_thm3784.out
-script_sha256: 8aaf279cbf32ac22dc7cf6c80ea46af99507b654bf4930cd3c548b3432e597b8
-output_sha256: a67027da9c7d7b5a53ab195804ce34aea01323ca2b922af9829671b5ac33cca6
-semantic_sha256: f3c7450cf9e2733919394572d1b18057ee976f6c2f6818203cdd8a6f73d61f7d
+script_sha256: efd84c6b59faad5b7c12f7adf82189df06f553c9412f7187ed1551b8d9b7d915
+output_sha256: d5893e3626fd7ab4195865e59ed4102c0a7051e900b8e711f654bd2723c1bdc0
+semantic_sha256: 0eef4b9cab199a47048afb124b8a40f946314bfe4c0889500a5a18d9b7b011b1
 hash_basis: raw LF bytes
 ---
 
@@ -105,7 +109,7 @@ Tr(t^m x)=-m.                                             (8)
 Equivalently, for every polynomial `q(T)` of degree at most `m`,
 
 ```text
-Tr(x q(t))=-m lc(q).                                    (9)
+Tr(x q(t))=-m [T^m]q(T).                                (9)
 ```
 
 The `B_0`-basis
@@ -174,8 +178,9 @@ sum_i t_i^m/f_m'(t_i)=1.                              (17)
 ```
 
 Multiplication by `-m` and `(4)` prove `(8)`.  Linearity proves `(9)`.
-Thus `-x/m` is the trace functional that extracts the leading coefficient
-in the power basis `(14)`.
+Thus `-x/m` is the trace functional that extracts the coefficient of `T^m`
+in the power basis `(14)`.  This is the ordinary leading coefficient only
+when `q` has degree exactly `m`; for example `q=1` correctly gives trace zero.
 
 For later powers, multiplying the relation `f_m(t)=0` by
 `t^(r-m-1)x` gives the exact recurrence
