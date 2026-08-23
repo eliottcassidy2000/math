@@ -2,22 +2,23 @@
 id: THM-3739
 title: "W004 scalar-01 tail-pair nonentry"
 status: >
-  PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.  Both W004
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Both W004
   all-scale tail placements with scalar fibre 01+10 are Darboux-empty in the
   y=0 collision ring.  Even scales die by the inherited singleton-parity
   gate.  At every odd scale, two zero rows turn the remaining coefficient
   into a Mobius first integral and then force the cube of a nonconstant
-  affine polynomial to be a monomial of incompatible degree.  This is not
-  proved canon until audit promotion and does not close all exceptional W004
-  placements, W005--W006, general quartic C3 data, or JC(2).
+  affine polynomial to be a monomial of incompatible degree.  This does not
+  close all exceptional W004 placements, W005--W006, general quartic C3 data,
+  or JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The exact companion reconstructs the W004
-  word, both absolute placements, the n=1 and even-scale inherited gates,
-  both endpoint gcd factorizations, all four transport signs, both pairs of
-  reduced differential rows in forty exact odd-scale controls, both first
-  integrals, and the final degree gaps.  Normal and optimized runs byte-match
-  the frozen transcript.  Independent hostile audit remains open.
+  INDEPENDENTLY HOSTILE-AUDITED.  A separate reconstruction checked both
+  endpoint gcd parametrizations, all four exhaustive transport ODEs, every
+  reduced-row sign and K-power, both Mobius first integrals, cancellation of
+  the nonzero pullback derivatives, and the final degree contradictions.  It
+  also checked the n=1/even inherited gates, the n=3 actual-support merger,
+  and the stabilized-tail ledger.  Normal and optimized runs byte-match the
+  frozen transcript and pinned hashes.  No repair was required.
 depends_on:
   - THM-3606-exponent-two-three-by-four-scalar-singleton-gate-atlas
   - THM-3613-three-by-four-size-seven-ray-parity-gate
@@ -35,8 +36,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3739 -- the lowest-scalar W004 tail pair is empty
 
-**PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.**  Work over
-`C` in the THM-3696 collision ring.  Put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over `C`
+in the THM-3696 collision ring.  Put
 
 ```text
 h=1-b^2,
@@ -235,5 +236,4 @@ python3 -B 04-computation/jacobian_y0_w004_scalar01_tail_pair_thm3739.py
 python3 -B -O 04-computation/jacobian_y0_w004_scalar01_tail_pair_thm3739.py
 ```
 
-Both commands must agree byte for byte with the frozen transcript.  Audit
-promotion is required before this proof candidate enters proved canon.
+Both commands agree byte for byte with the frozen transcript.  **QED.**
