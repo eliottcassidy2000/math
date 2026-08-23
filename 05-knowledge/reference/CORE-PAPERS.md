@@ -223,7 +223,8 @@ collide, links—not bare IDs—are canonical.
 ### Miyanishi -- affine pseudo-planes and the canonical-trivial exception
 
 - **Primary/imported:** Miyanishi [arXiv:1504.07179](https://arxiv.org/abs/1504.07179), Lemma 2.5.2, constructs the affine-plane Galois pseudo-cover; Theorem 2.5.10 excludes type `(d,n,r)` with `r!=2` from mapping etale to `A2` via `Pic(X)=Z/d`, `K_X~(r-2)F_0`.
-- **Consumer/boundary:** [THM-3785](../../01-canon/theorems/THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable.md) gives a canonical-trivial cubic pseudo-cover with a nonstandard deck character; its exact `(d,n,r)` type is OPEN.  Do not label it `r=2` or infer a Darboux-pair exclusion from this source.
+- **Modern character notation:** Dubouloz--Palka, [arXiv:1701.01425v2](https://arxiv.org/abs/1701.01425), equations (1.1), (2.5), and (5.1)--(5.2), distinguish `S(k,r,a)` by the deck character `a` and construct nonproper etale self-maps using Belyi--Shabat data.
+- **Consumer/boundary:** [THM-3785](../../01-canon/theorems/THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable.md) is exactly `S(3,3,1)`, with cover `X^3V=W^3-1` and deck weights `(1,0,-1)`.  It is not Miyanishi's older standard-character row, so do not label it old-type `r=2` or import Theorem 2.5.10 as a Darboux-pair exclusion.
 
 ### Gao / Shaska / Meng--Yang — the 2026 Jacobian boundary
 

@@ -2,7 +2,7 @@
 id: THM-3785
 title: "Linear higher-pole Russell pseudo-plane maximal polynomial observable"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  The
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The
   third-order rational Keller seed F=x(t+c), P=1/(3x^3) has complete
   polynomial target-field intersection equal to the smooth Russell--Miyanishi
   pseudo-plane R^2E=Z^3-c^3R.  The source affine plane is a surjective
@@ -15,16 +15,17 @@ status: >
   open, so no JC(2) counterexample is claimed.
 source: jc_quartic_c3_construct / higher-pole escape lane, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The exact companion verifies the rational
+  INDEPENDENTLY HOSTILE-AUDITED by jc_zero_debt_lift and root, 2026-08-23.
+  Both audits reconstructed the atlas/intersection, units and Picard group,
+  homogeneous modules, every two-by-two seam, affine-carrier/genus-one
+  gates, birational exit, and degree floor.  The exact companion verifies the rational
   Keller identity, both polynomial coordinate systems, hypersurface and
   field reconstruction, full Poisson packet, smooth and etale unit ideals,
   arm/off-arm inverse formulas, triple boundary valuation, 125 graded
   monomial profiles, homogeneous bracket formula, two-by-two endpoint-power
   and leading-degree laws, affine critical residual, genus-one differential
-  orders, and rational-mate formula.  Normal and optimized runs byte-match
-  the frozen transcript.  Independent hostile audit remains due, especially
-  for etale DVR descent, the Picard argument, the two-by-two exhaustion, and
-  the affine-carrier exhaustion.  An audit correction removed an unsupported
+  orders, and rational-mate formula.  Normal, optimized, frozen, and
+  independently replayed outputs byte-match.  An audit correction removed an unsupported
   identification with Miyanishi's exact type parameter r=2; the integral
   closure and its nonstandard deck character are now stated explicitly.
 depends_on: []
@@ -43,7 +44,7 @@ hash_basis: raw LF bytes
 
 # THM-3785 -- a third-order pole completes to a Russell pseudo-plane
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  This
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This
 theorem turns the first linear member of a higher-pole rational Keller family
 into an exact smooth target rather than another failed target shear.  It does
 not construct a planar Jacobian counterexample.  It identifies the complete
@@ -245,38 +246,56 @@ The triple class is the geometric shadow of the Kummer equation `x^3=R`.
 It survives even though `(12)` is everywhere etale because the other two
 sheets are nonproper at the arm.
 
-### 4.1 Classical pseudo-plane context and an unresolved type sidecar
+### 4.1 Exact modern pseudo-plane type and the deck-character sidecar
 
 The projection `r:Y -> A1` has general fibre `A1_z` and the unique multiple
-fibre `3L`: scheme-theoretically, setting `r=0` gives `z^3=0`.  Miyanishi's
-arXiv:1504.07179, Lemma 2.5.2, gives the abstract affine-plane Galois
-pseudo-cover mechanism for rational homology planes with one multiple
-`A1` fibre.  Equations `(3),(12)--(16)` give an explicit cubic mechanism of
-that shape.
-
-Theorem 2.5.10 of the same source excludes etale morphisms from a
-pseudo-plane of its exact type `(d,n,r)` to `A2` when `r!=2`, using
+fibre `3L`: scheme-theoretically, setting `r=0` gives `z^3=0`.  Normalize
 
 ```text
-Pic(Y)=Z/d,                     K_Y=(r-2)[L].          (24a)
+u=r,                 v=e/c^3,                 w=z/c.                 (24a)
+```
+
+Then `(6)` is
+
+```text
+u(1+uv)=w^3.                                                   (24b)
+```
+
+This is exactly Dubouloz--Palka's pseudo-plane `S(3,3,1)` in
+arXiv:1701.01425, equations (5.1)--(5.2).  Its finite universal cover and
+deck action are
+
+```text
+T=k[X,V,W]/(X^3V-W^3+1),
+mu_3:(X,V,W) |-> (zeta X,V,zeta^(-1)W),
+(u,v,w)=(X^3,V,XW).                                      (24c)
+```
+
+In the source coordinates, `X=x`, `V=E/c^3`, and
+`W=(c+x^3y)/c`.  Thus `(24c)` is also the integral closure of `B` in the
+cubic source field.  The action is free: a nontrivial fixed point would have
+`X=W=0`, contrary to its equation.  A weight-zero monomial reduces using
+`X^3=u`, `XW=w`, and `W^3=1+uv`, proving directly that `T^(mu_3)=B`.
+
+Miyanishi's arXiv:1504.07179, Lemma 2.5.2, gives the abstract affine-plane
+Galois pseudo-cover mechanism for rational homology planes with one multiple
+`A1` fibre.  Equations `(3),(12)--(16)` give the explicit one-branch affine
+atlas associated to `(24c)`.
+
+Theorem 2.5.10 of the same source excludes etale morphisms from a
+pseudo-plane of its exact older type `(d,n,r)` to `A2` when `r!=2`, using
+
+```text
+Pic(Y)=Z/d,                     K_Y=(r-2)[L].          (24d)
 ```
 
 Our symplectic form below trivializes `K_Y`, so that canonical-class
-obstruction is silent here.  But the exact type parameter is **not** asserted.
-Indeed, the integral closure of `B` in the cubic source field is
-
-```text
-Btilde=k[x,w,e]/(x^3e-w^3+c^3),
-mu_3:(x,w,e) |-> (zeta x,zeta^(-1)w,e),               (24b)
-```
-
-and the source plane maps into this normalization by the one-branch affine
-modification `w=c+x^3y`; it is not being identified with an open chart of
-`Spec(Btilde)`.  The exponent and the opposite deck characters in `(24b)` do
-not literally match the standard type-`r=2` presentation.  Reconciling
-`(24b)` with Miyanishi's completion parameters is **OPEN**.  The citation is
-context, not a dependency; no step below uses an exact pseudo-plane type
-label.
+obstruction is silent here.  There is no contradiction with `(24d)`: after
+rewriting Miyanishi's standard cover in the form `X^rV=W^d-1`, its deck
+character is `a=d-1`, whereas `(24c)` has `a=1`.  For `d=3` these are
+different pseudo-plane families.  The older `(d,n,r)` label suppresses this
+character and must not be applied to `S(3,3,1)`.  The citation is context,
+not a dependency; every intrinsic assertion here was proved directly.
 
 ## 5. Poisson packet and the exact symplectic form
 
@@ -592,5 +611,4 @@ source identity and bracket, smoothness and the unit-minor ideal over
 graded generator profiles, the exceptional homogeneous leading term, the
 two-by-two power and degree identities, the affine critical residual, and
 the genus-one differential orders.  Normal and optimized executions
-byte-match the frozen transcript.  **QED, conditional only on independent
-hostile audit.**
+byte-match the frozen transcript.  **QED.**
