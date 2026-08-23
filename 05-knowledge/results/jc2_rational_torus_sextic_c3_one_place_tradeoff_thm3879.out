@@ -1,0 +1,10 @@
+THM3879_PARAM [-(S2-T2)^2(S2+2T2):(S2-2T2)^2(S2+T2):2S3T3]
+THM3879_TORUS F=4Q2^3-27Q3^2;Q2_pull=3H^2;Q3_pull=2H^3
+THM3879_SINGULARITIES 6A2(inner torus intersections)+4A1(outer nodes);genus=0
+THM3879_CUBIC U^3-Q2*U-Q3 irreducible;disc=F;Galois=S3
+THM3879_COMPLETION normal monogenic cubic;singular locus=four isolated points
+THM3879_KUMMER Norm(rho*Q3+w)=4Q2^3;rho^2=27;w^2=27Q3^2-4Q2^3
+THM3879_ONE_PLACE no line pulls back to a sixth power;line C=0 gives exactly two places
+THM3879_SCOPE explicit embedded torus sextic near miss;JC2 remains open
+SEMANTIC_SHA256 892b5f28dbe930f764abf25c72b663b36bd23b84519728380ec5894cbe3adb01
+CHECKS 47
