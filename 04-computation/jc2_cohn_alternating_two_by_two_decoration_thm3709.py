@@ -157,6 +157,122 @@ for p, q in degree_pairs:
         ).hexdigest()
     )
 
+# The mixed boundary has exactly one nonconstant right parameter and one
+# nonzero scalar parameter.  In the two middle cases the leading row is a
+# scalar multiple pair, so the curl becomes a directional derivative.
+cc, dd = sp.symbols("cc dd", nonzero=True)
+for degree in range(1, 5):
+    lead = homogeneous_form(f"v{degree}_", degree)
+    lower = sp.symbols(f"vlow_{degree}")
+    value = lead + lower
+
+    mixed_cases = (
+        (
+            "plus-minus-w-constant",
+            sp.expand(C * eplus(cc) * eminus(value)),
+            (
+                (lead * x * (x + cc * y), 0),
+                (-lead * y * (x + cc * y), 0),
+            ),
+            lambda F: sp.diff(F, y),
+        ),
+        (
+            "plus-minus-u-constant",
+            sp.expand(C * eplus(value) * eminus(cc)),
+            (
+                (cc * x * y * lead, x * y * lead),
+                (-cc * y**2 * lead, -y**2 * lead),
+            ),
+            lambda F: cc * sp.diff(F, y) - sp.diff(F, x),
+        ),
+        (
+            "minus-plus-w-constant",
+            sp.expand(C * eminus(value) * eplus(cc)),
+            (
+                (x**2 * lead, cc * x**2 * lead),
+                (-x * y * lead, -cc * x * y * lead),
+            ),
+            lambda F: sp.diff(F, y) - cc * sp.diff(F, x),
+        ),
+        (
+            "minus-plus-u-constant",
+            sp.expand(C * eminus(cc) * eplus(value)),
+            (
+                (0, x * lead * (y + cc * x)),
+                (0, -y * lead * (y + cc * x)),
+            ),
+            lambda F: -sp.diff(F, x),
+        ),
+    )
+
+    for label, matrix, leading_rows, directional in mixed_cases:
+        matrix_rows = (row(matrix, 0), row(matrix, 1))
+        top_degree = degree + 2
+        for actual_row, expected_row in zip(matrix_rows, leading_rows):
+            for actual_entry, expected_entry in zip(actual_row, expected_row):
+                gate(
+                    sp.expand(homogeneous_part(actual_entry, top_degree) - expected_entry) == 0,
+                    f"{label} row lead",
+                )
+
+        # The first and fourth cases expose only one leading component.  The
+        # middle cases expose (cc*F,F) and (F,cc*F), respectively.  In all
+        # cases `scalar_part` is the F to which the displayed operator applies.
+        scalar_index = 1 if label in {
+            "plus-minus-u-constant",
+            "minus-plus-u-constant",
+        } else 0
+        scalar_parts = (
+            leading_rows[0][scalar_index],
+            leading_rows[1][scalar_index],
+        )
+        constant_scalars = (
+            sp.expand(scalar_parts[1] + dd * scalar_parts[0]),
+            sp.expand(scalar_parts[0] + dd * scalar_parts[1]),
+        )
+        constant_rows = (
+            (
+                sp.expand(matrix_rows[1][0] + dd * matrix_rows[0][0]),
+                sp.expand(matrix_rows[1][1] + dd * matrix_rows[0][1]),
+            ),
+            (
+                sp.expand(matrix_rows[0][0] + dd * matrix_rows[1][0]),
+                sp.expand(matrix_rows[0][1] + dd * matrix_rows[1][1]),
+            ),
+        )
+        for actual_row, scalar in zip(constant_rows, constant_scalars):
+            actual = homogeneous_part(curl(actual_row), degree + 1)
+            expected = sp.expand(directional(scalar))
+            gate(sp.expand(actual - expected) == 0, f"{label} constant-left curl")
+            gate(expected != 0, f"{label} constant-left generic lead vanished")
+
+        for left_degree in range(1, 5):
+            hm = homogeneous_form(f"hmix_{label}_{degree}_{left_degree}_", left_degree)
+            positive_rows = (
+                (
+                    sp.expand(matrix_rows[1][0] + hm * matrix_rows[0][0]),
+                    sp.expand(matrix_rows[1][1] + hm * matrix_rows[0][1]),
+                ),
+                (
+                    sp.expand(matrix_rows[0][0] + hm * matrix_rows[1][0]),
+                    sp.expand(matrix_rows[0][1] + hm * matrix_rows[1][1]),
+                ),
+            )
+            positive_scalars = (hm * scalar_parts[0], hm * scalar_parts[1])
+            for actual_row, scalar in zip(positive_rows, positive_scalars):
+                actual = homogeneous_part(curl(actual_row), degree + left_degree + 1)
+                expected = sp.expand(directional(scalar))
+                gate(sp.expand(actual - expected) == 0, f"{label} positive-left curl")
+                gate(expected != 0, f"{label} positive-left generic lead vanished")
+
+        semantic_rows.append(
+            f"mixed-{degree}-{label}:" + hashlib.sha256(
+                "|".join(
+                    sp.srepr(directional(scalar)) for scalar in constant_scalars
+                ).encode()
+            ).hexdigest()
+        )
+
 # Reconstruct both alternating left words on a nonlinear hostile pair and
 # verify the exposed row and preserved determinant directly.
 u_probe = x**3 + x * y + 2 * y + 1
@@ -188,9 +304,9 @@ semantic = hashlib.sha256("\n".join(semantic_rows).encode()).hexdigest()
 
 print("theorem=THM-3709-Cohn-alternating-two-by-two-decoration-nonentry")
 print("right_orders=E+(w)E-(u),E-(u)E+(w);left_orders=E+(f)E-(g),E-(g)E+(f)")
-print("right_parameters=arbitrary_nonconstant;left_parameters=arbitrary_polynomial")
-print("leading_obstructions=forced_y_derivative,forced_x_derivative")
-print("hostile_degree_grid=deg(u),deg(w):1..4;deg(left_lead):0..4;four_orders=PASS")
+print("right_parameters=nonzero_not_both_constant;left_parameters=arbitrary_polynomial")
+print("leading_obstructions=ordinary_or_directional_derivative_with_forced_linear_factor")
+print("hostile_degree_grid=both_nonconstant:1..4x1..4;mixed_nonzero_constant:1..4;deg(left_lead):0..4;four_orders=PASS")
 print("decorated_determinants=1;exposed_row_identities=PASS")
 print(f"semantic_sha256={semantic}")
 print(f"CHECKS={CHECKS}")

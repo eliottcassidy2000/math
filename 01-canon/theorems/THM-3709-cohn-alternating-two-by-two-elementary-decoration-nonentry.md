@@ -4,21 +4,21 @@ title: "Cohn alternating two-by-two elementary-decoration nonentry"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Let C be Cohn's non-elementary determinant-one matrix.  Decorate it by
-  either alternating pair of right elementary factors whose two parameters
-  are nonconstant polynomials, and by either alternating pair of left
-  elementary factors with arbitrary polynomial parameters.  The resulting matrix is
-  never a Jacobian matrix.  The highest curl is a nonzero x- or y-derivative
-  of a polynomial carrying a forced coordinate factor.  This closes the
-  complete positive-degree alternating two-by-two Cohn repair cell, not a
-  constant right boundary, longer reduced words, general non-elementary
-  classes, or JC(2).
+  either alternating pair of right elementary factors whose parameters are
+  nonzero and not both constant, and by either alternating pair of left
+  elementary factors with arbitrary polynomial parameters.  The resulting
+  matrix is never a Jacobian matrix.  The highest curl is a nonzero ordinary
+  or directional derivative of a polynomial carrying a forced linear factor.
+  This closes the complete nondegenerate alternating two-by-two Cohn repair
+  cell, not an identity shortening, an all-constant right word, longer reduced
+  words, general non-elementary classes, or JC(2).
 source: root / 2026-08-22
 audit: >
   PASS.  An independent audit rederived both right products, both exposed
-  left rows, and the arbitrary-degree leading forms.  It checked the constant
-  and positive-degree left-parameter split, proved that the opposite curl
-  component is strictly lower degree, verified the forced-coordinate
-  derivative cannot vanish, and checked the E_2/Wright counterexample
+  left rows, the arbitrary positive-degree leading forms, and all four mixed
+  nonzero-constant cases.  It checked the constant and positive-degree
+  left-parameter split, the ordinary- and directional-derivative kernels,
+  the strict opposite-component degree gap, and the E_2/Wright counterexample
   consequence without a normality assumption.
 depends_on:
   - THM-3652-wright-elementary-jacobian-criterion-reduced-word-reproof
@@ -27,9 +27,9 @@ related:
   - THM-3655-cohn-alternating-two-source-factor-row-obstruction
 script: 04-computation/jc2_cohn_alternating_two_by_two_decoration_thm3709.py
 output: 05-knowledge/results/jc2_cohn_alternating_two_by_two_decoration_thm3709.out
-script_sha256: b282ce1922759f6eeb4121e5f0e92ee58f9e7f0d567e10516b00f822db208010
-output_sha256: 2ea501226f9822fa67882dbbfe61c0771319502695ce92acb3fee6c9b33bc292
-semantic_sha256: 3487770566278b4fc17a8f95c14a80198255f747d14c0e475a9d2545a1ddda1e
+script_sha256: 091f88d5300f2b5597297815f13a51ee404ffdefb286ece253af3ce235f35976
+output_sha256: acc9653075a3a921f7a4a715afe9f25c64c2fe3cf776ba6e5ece329caa7db39b
+semantic_sha256: fe58dcea6ced0d07fff9785678be0aee1cdf4469be54c0b2de71937c70d5cb79
 hash_basis: raw LF bytes
 ---
 
@@ -41,7 +41,7 @@ THM-3655.  Elementary decoration preserves Cohn's nontrivial
 `SL_2/E_2` class.  Consequently, if a decorated matrix were the derivative
 of a polynomial map, its determinant would be one and Wright's criterion
 would certify that the map is not an automorphism: it would be a planar
-Jacobian counterexample.  The theorem rules out the entire positive-degree
+Jacobian counterexample.  The theorem rules out the entire nondegenerate
 alternating two-left/two-right cell of that construction grammar.
 
 Work over a characteristic-zero field `k`.  Put
@@ -53,7 +53,8 @@ C=[A B;G D],                                  det C=1,       (1)
 E_+(h)=[1 h;0 1],              E_-(h)=[1 0;h 1].       (2)
 ```
 
-Let `u,w in k[x,y]` be nonconstant, and write
+Let `u,w in k[x,y]` be nonzero and not both constant.  First suppose both are
+nonconstant, and write
 
 ```text
 p=deg u>=1,                q=deg w>=1,
@@ -74,7 +75,7 @@ R=E_+(w)E_-(u)       or       R=E_-(u)E_+(w).         (5)
 ```
 
 Thus all four alternating two-left/two-right orders are impossible whenever
-both right parameters are nonconstant, with no degree bound.
+the right word is nondegenerate in the stated sense, with no degree bound.
 
 ## 1. The row-combination gate
 
@@ -200,9 +201,58 @@ They are nonzero for the same reason.  Equations `(17)--(18)` prove `(8)`
 for the second right word.
 
 Combining `(7)--(8)` proves that every matrix in `(4)--(5)` has a nonclosed
-row, so none is a Jacobian matrix.
+row when both right parameters are nonconstant.
 
-## 4. Counterexample-search meaning and boundary
+## 4. A mixed nonzero-constant right word also fails
+
+It remains to allow exactly one of `u,w` to be constant.  The constant is
+nonzero by hypothesis.  Only the leading vector field changes.
+
+First take the right order `E_+(w)E_-(u)`.
+
+- If `w=c in k*` and `deg u=p>=1`, the leading first components of the two
+  rows are
+
+  ```text
+  u_p x(x+cy),                -u_p y(x+cy).            (19)
+  ```
+
+  Their second components have degree two.  For positive-degree `h`, the
+  leading curl is the `y`-derivative of `(19)` times `h_m`; for `h=d in k`,
+  it is the `y`-derivative of
+
+  ```text
+  u_p(x+cy)(-y+dx),           u_p(x+cy)(x-dy).         (20)
+  ```
+
+  None can vanish: a polynomial with zero `y`-derivative lies in `k[x]`,
+  whereas a nonzero polynomial in `k[x]` cannot be divisible by `x+cy`.
+
+- If `u=c in k*` and `deg w=q>=1`, each leading row is `(cF,F)`.  The two
+  positive-degree choices of `F` are
+
+  ```text
+  h_mxyw_q,                   -h_my^2w_q,              (21)
+  ```
+
+  and the constant-`h=d` choices are `yw_q(-y+dx)` and `yw_q(x-dy)`.
+  The leading curl is
+
+  ```text
+  (c partial_y-partial_x)F.                            (22)
+  ```
+
+  Its kernel is `k[y+cx]`.  No nonzero member of that kernel is divisible by
+  `x` or by `y`, while every displayed `F` is.  Hence `(22)` is nonzero.
+
+For the right order `E_-(u)E_+(w)`, exchange `x` with `y` and the two curl
+halves.  If `w=c in k*`, each leading row is `(F,cF)` and the operator is
+`partial_y-c partial_x`, whose kernel is `k[x+cy]`; the displayed factors
+carry `x`.  If `u=c in k*`, the leading second components carry `y+cx`, and
+their `x`-derivatives cannot vanish.  This proves `(8)` in all four mixed
+cases and completes the nondegenerate statement.
+
+## 5. Counterexample-search meaning and boundary
 
 Cohn's matrix is determinant one and non-elementary.  Multiplication by
 elementary matrices preserves both facts.  If all rows of one of the
@@ -213,10 +263,11 @@ the precise failed implication: two alternating right corrections cannot
 cancel the coordinate factor in the top curl, no matter how high either
 side's degree is.
 
-The theorem does **not** treat a constant right parameter, more than two
-elementary factors on either side, another non-elementary `SL_2/E_2` core,
-or `JC(2)`.  Its positive successor is therefore sharply typed: shorten a
-constant boundary by separate identities, or make the reduced word longer.
+The theorem does **not** treat a zero right parameter (an identity shortening),
+an all-constant right word, more than two elementary factors on either side,
+another non-elementary `SL_2/E_2` core, or `JC(2)`.  Its positive successor
+is therefore sharply typed: settle the constant/shortened boundary, or make
+the reduced word longer.
 
 Reproduce the exact leading-form audit with
 
@@ -226,5 +277,5 @@ python3 -B -O 04-computation/jc2_cohn_alternating_two_by_two_decoration_thm3709.
 ```
 
 The symbolic companion reconstructs all four products before extracting the
-leading pieces, and checks `(11)--(18)` on a hostile grid of independent
+leading pieces, and checks `(11)--(22)` on hostile grids of independent
 right and left degrees.  **QED.**
