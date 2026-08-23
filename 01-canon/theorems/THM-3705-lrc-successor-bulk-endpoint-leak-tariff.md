@@ -2,7 +2,8 @@
 id: THM-3705
 title: "LRC successor bulk-endpoint leak tariff"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT.  Every THM-3670 successor mass is
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Every
+  THM-3670 successor mass is
   exactly 13/7 times its plain marked mass minus a signed rational endpoint
   residual.  The centred danger primitive has sharp range [-3/49,3/49], so
   an r-interval-piece representation has endpoint leak at most 6r/(49C) at
@@ -14,6 +15,11 @@ status: >
   cover-specific signed endpoint cancellation remains open.  No LRC(14)
   conclusion is claimed.
 source: codex-lrc14-20260822 / endpoint primitive composed with THM-3701
+audit: >
+  PASS -- an independent reconstruction checked the primitive and its exact
+  sharp witness, interval identity and sign, scalar projection, both energy
+  denominators, every exact control distance, hashes, and normal/optimized
+  transcript identity after the scope was tied explicitly to THM-3701.
 depends_on:
   - THM-3701-lrc-radial-successor-mass-gate-and-star-frame
   - THM-3672-lrc-successor-mass-all-packet-positive-control
@@ -29,7 +35,8 @@ hash_basis: raw LF bytes
 
 # THM-3705 -- successor mass is bulk minus a signed endpoint leak
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT.**  THM-3701 reduced the live
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+THM-3701 reduced the live
 successor-mass failure locus to one scalar line.  This theorem separates the
 input to that gate into a geometric bulk vector and an exact boundary ledger.
 The resulting criterion is sufficient, not necessary, and does not yet
