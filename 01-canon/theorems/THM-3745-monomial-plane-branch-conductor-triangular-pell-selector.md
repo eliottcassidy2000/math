@@ -24,6 +24,7 @@ related:
   - THM-3586-nodal-cylinder-cap38-width-period-and-second-conductor-keller-gates
   - THM-3696-y0-collision-ring-three-branch-conductor-and-graded-modules
   - THM-3734-automorphic-cohn-diagonal-binomial-divided-power-towers
+  - THM-3770-vertical-principal-part-equalizer-and-log-canonical-dressing-gate
   - THM-3742-square-triangular-pell-mod13-central-sign-projective-cycle
   - THM-3744-pell-prefix-loneliness-constant-carry-exact-formula
 script: 04-computation/monomial_plane_conductor_triangular_pell_thm3745.py
@@ -289,26 +290,44 @@ length(B/c)=2delta=72.                                 (23)
 
 The cited sub-`125` classification leaves `(72,108)` as the only hypothetical
 reduced counterexample degree pair; no such pair is known to exist
-(THM-3586 and MISTAKE-427).  There is
-an exact syntactic shadow: `c=F^8B`; if `K=F^4`, then
+(THM-3586 and MISTAKE-427).  There is an exact syntactic leading-form shadow.
+In characteristic zero, homogenize
 
 ```text
-K^2=F^8 has degree 72,
-K^3=F^12 has degree 108.                               (24)
+H(X,Y)=X^9 F(Y/X).
 ```
 
-But `(24)` appends `F^12`; the conductor theorem selects only `F^8`.
+Then `c=F^8B`; if `K=H^4`, the two appended homogeneous forms satisfy
+
+```text
+K^2=H^8 has degree 72,
+K^3=H^12 has degree 108.                               (24)
+```
+
+But `(24)` appends `H^12`; the conductor theorem selects only `F^8` in the
+normalization ring.
 Normalization length, conductor colength, and polynomial map degree are
 different types.  Worse, the apparent pair is the hostile
 
 ```text
-V^2=U^3             for (U,V)=(F^8,F^12),             (25)
+V^2=U^3             for (U,V)=(H^8,H^12),             (25)
 ```
 
-so it is algebraically dependent and its two-variable Jacobian is zero, not
-one.  Generic degree-nine `F` has the same conductor lengths and no Keller
-data.  Thus `(72,108)` is an **exact near-miss leading-form shadow**, never a
-JC consequence.
+so the displayed pair is algebraically dependent and has Jacobian zero.  A
+zero top Jacobian is compatible with the leading forms of a Keller pair, so
+this excludes the displayed common-power pair, not every possible lower-term
+completion.
+
+The squarefree tangent cone itself also has a strict log-canonical nonentry.
+For separable `F`, write `H=prod_i H_i` over a splitting field.  If
+`J(H,W)=lambda H` with `lambda!=0`, reduction modulo each line `H_i` makes
+`W|_(H_i=0)` constant.  All lines meet at the origin, so all constants equal
+`W(0)` and squarefreeness gives `W-W(0)=HV`.  Cancellation then gives
+`J(H,V)=lambda`, impossible at the origin because `grad H(0)=0` for `m>=2`.
+This is the direct component-equalization boundary abstracted in THM-3770;
+it still does not exclude arbitrary inhomogeneous Keller leading forms.
+Thus `(72,108)` is an **exact near-miss leading-form shadow**, never a JC
+consequence.
 
 There is a second component-count near miss with
 [THM-3734](THM-3734-automorphic-cohn-diagonal-binomial-divided-power-towers.md)

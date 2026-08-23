@@ -349,7 +349,7 @@ saturated by THM-3736.
 | Pell prefix | LRC phase packet | `t=A_N/(P_N+1)` | all runners, order, carries | generality/extremality | perturb one speed; `169->170` fails |
 | square-triangular Pell row | phase factors | `(a,s,x,b)` | exact numerator/denominator | arbitrary LRC geometry | demand a factorization of the target statistic |
 | monomial-plane normalization | Pell conic | `delta=T_(m-1)=q^2` | scalar defect | `F`, branches, conductor | retain the full module/conductor packet |
-| degree-nine conductor | hypothetical JC degree cell | `36 -> (72,108)` | degree/common-power shadow | Keller pair, lower terms, Jacobian one | hostile `(F^8,F^12)` has Jacobian zero |
+| degree-nine conductor | hypothetical JC degree cell | homogenize `H`; `36 -> (H^8,H^12)` | degree/common-power/root directions | Keller pair, lower terms, Jacobian one | common-power pair has Jacobian zero; tangent cone fails component equalization |
 
 ## 9. Conductor theorem and the triangular/Pell selector
 
@@ -384,16 +384,21 @@ This map preserves only the scalar normalization defect.  It forgets `F`,
 branch labels and incidence, the conductor ideal, and multiplication.
 
 At `m=9`, `delta=36` and `length(B/conductor)=72`.  The cited sub-`125` JC
-classification leaves only the hypothetical degree pair `(72,108)`, and
-`F^8,F^12` have those degrees.  But `F^12` is appended rather than selected by
-the conductor, and
+classification leaves only the hypothetical degree pair `(72,108)`.  After
+homogenizing `H(X,Y)=X^9F(Y/X)`, the appended pair `H^8,H^12` has those total
+degrees.  But `H^12` is not selected by the conductor, and
 
 ```text
-(F^12)^2=(F^8)^3,
+(H^12)^2=(H^8)^3,
 ```
 
-so the apparent pair is algebraically dependent with Jacobian zero.  The
 `36,72,108` resonance is an exact leading-form shadow, not a Keller map.
+For separable `F`, the squarefree tangent cone `H` cannot enter even the
+log-canonical gate: `J(H,W)=lambda H` would force all component values of `W`
+to equal at the common origin, hence `W-W(0)=HV` and `J(H,V)=lambda`, which
+contradicts `grad H(0)=0`.  This direct argument is the component-equalization
+boundary isolated in THM-3770.  It rules out this homogeneous entry, not an
+arbitrary lower-term Keller completion.
 Likewise THM-3734's nine cyclotomic components are an axis plus eight disjoint
 hyperbolas, whereas the separable degree-nine conductor curve glues all nine
 branches at one point.  Component count survives; incidence does not.
@@ -414,6 +419,10 @@ branches at one point.  Component count survives; incidence does not.
   factorization of a target statistic, as in THM-3744/3745.
 - **Constant Pell matrix -> JC.** Stops at the complete THM-3736
   classification.  Strongest survivor: test interacting variable factors.
+- **Pell--Chebyshev radial profiles -> JC.** THM-3765 closes the normalized
+  three-consecutive-charge ansatz, including those profiles as hostile
+  controls.  The triangular-conductor Pell orbit supplies no missing mate;
+  the next radial design must vary the `+1` flank or leave `z=XT`.
 - **Pell prefix -> hard LRC frontier.** Stops because `M(S_13)=99/338`, far
   from `1/14`.  Strongest survivor: exact carry/owner laboratory.
 
@@ -429,11 +438,15 @@ branches at one point.  Component count survives; incidence does not.
    owner-aware LRC transducers.  Any transducer that cannot reconstruct its
    symmetric `N=13` packet is too lossy for the frontier.
 4. In JC, enumerate only the first unsaturated Cohn cells with two interacting
-   polynomial factors.  Gate in the order: exposure, both curls, determinant,
-   holonomy, then collision/infinity.
+   polynomial factors, or the post-THM-3765 radial cells that vary the `+1`
+   flank.  Gate in the order: exposure, both curls, determinant, holonomy,
+   then collision/infinity.
 5. Starting from proved `(32)`, ask whether its conductor filtration can enter
-   an actual bivariate Keller collision ring.  Reject any degree-only shadow
-   before lower terms, both curls, and Jacobian one are supplied.
+   an actual bivariate Keller collision ring.  First compute the actual-target
+   linearized Jacobian image and its cokernel, as in THM-3737's retained-value
+   hyperplane; do not substitute a SAGBI semigroup conductor for an unknown
+   global conductor.  Reject any degree-only shadow before lower terms, both
+   curls, and Jacobian one are supplied.
 6. For the mod-13 clock, test every candidate physical owner map against the
    central sign and THM-3713's two detectors before doing any larger modular
    census.
