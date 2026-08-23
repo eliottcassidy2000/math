@@ -2,9 +2,8 @@
 id: THM-3865
 title: "Every non-tangent fifth-degree inverse discriminant has torsion-free quadratic-resolvent class group"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED for L=C.  THE
-  ALL-NON-TANGENT-LINE STRENGTHENING IS PROVISIONAL + VERIFIED-EXACT,
-  AWAITING INDEPENDENT HOSTILE AUDIT.  For every nonzero lambda and every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  nonzero lambda and every
   linear L not proportional to one of the four tangent factors of Delta_0,
   the normal affine surface W^2=Delta_0+lambda L^5 has divisor class group
   Z.  Consequently it has no three-torsion and supports no connected normal
@@ -29,10 +28,12 @@ audit: >
   freezes the chart and inverse chart, irreducible localization divisor,
   special fibre, four-address normalization, and binary-cubic control.
   Normal and optimized replays byte-match the frozen 30-gate transcript and
-  both recorded hashes.  The coordinate-free strengthening repeats the same
-  proof in an arbitrary complementary pair (M,L), and the companion includes
-  L=A+C as an independent orientation.  That strengthening awaits
-  independent hostile audit.
+  both recorded hashes.  A second hostile audit of the coordinate-free
+  strengthening (jc_quartic_c3_construct, 2026-08-23) checked the tangent-line
+  criterion, degree and squarefreeness of D_L, normalization and infinity
+  place, both localization maps, the kappa sign, the two reduced primes, and
+  transfer of the Kummer argument.  The companion includes L=A+C as an
+  independent orientation.
 depends_on:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
   - THM-3853-quadratic-depth-inverse-discriminant-one-place-gluing-obstruction
@@ -50,10 +51,9 @@ hash_basis: raw LF bytes
 
 # THM-3865 -- the formal one-place lifts have a global class-group obstruction
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED for `L=C`; the
-all-non-tangent-line strengthening is PROVISIONAL + VERIFIED-EXACT awaiting
-independent hostile audit.**  Let `k` be an algebraically closed field of
-characteristic zero, let `lambda in k*`, and put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k` be an
+algebraically closed field of characteristic zero, let `lambda in k*`, and
+put
 
 ```text
 Delta_0=A(C+5A)(4C+19A)(3C-17A),
@@ -323,8 +323,7 @@ multiplicity one.  Nagata's sequence is therefore again
 two conclusions and the fact that the branch divisor is irreducible and
 generically reduced, so its tame-inertia/Kummer proof applies unchanged.
 This proves `(2)--(4)` and the cubic nonexistence for every non-tangent
-`L`, including both `L=C` and `L=A+C` from THM-3853.  **QED candidate for
-the all-line strengthening, pending independent hostile audit.**
+`L`, including both `L=C` and `L=A+C` from THM-3853.  **QED.**
 
 ## 6. Exact replay
 
