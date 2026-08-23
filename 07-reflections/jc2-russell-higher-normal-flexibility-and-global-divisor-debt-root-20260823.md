@@ -461,10 +461,17 @@ constant units on the etale open.                              (19)
 ```
 
 THM-3852 warns that one affine-line component is insufficient: its affine
-profile always carries a nonpolynomial companion.  Provisional THM-3853/3855
-instead provide a one-place formal inverse-discriminant laboratory.  The
-next decisive test is polynomial termination together with the index-form
-unit test, not another puncture count alone.
+profile always carries a nonpolynomial companion.  Incoming proved THM-3873
+extends that failure to the first fixed-coordinate non-graph triangular
+parabola: every polynomial transverse quotient forces a distinct reduced
+companion whose normalization omits at least two projective points.  Hence
+that marked-root family cannot satisfy the one-infinity condition in `(19)`.
+This is a map from one explicit branch profile to its discriminant companion,
+not a classification of all finite completions.  Provisional THM-3853/3855
+instead provide a one-place formal inverse-discriminant laboratory.  The next
+decisive test is polynomial termination together with the index-form unit
+test in a higher-triangular or non-profile branch, not another puncture count
+alone.
 
 ### Contact -- compare tower zeros with the conductor
 
@@ -505,7 +512,14 @@ discriminant recursion of THM-3855.  Ask for a common obstruction language in
 terms of height-one valuations of the first finite truncation whose local
 formal correction is surjective.  Do not identify their moduli spaces or
 transfer a theorem; retain the normal-coordinate versus coefficient-gradient
-sidecar.
+sidecar.  Incoming THM-3872 is still a proof candidate awaiting hostile audit,
+so none of its conclusions enters the proof graph.  Its useful procedural
+signal is narrower: quotient cosmetic additions by the entire ideal
+vanishing at the marked addresses before choosing a minimal affine section,
+then record the residual left by that section.  Applied to `(Q1)`, this says
+the cubic-seed task must carry the full zero-jet addition ideal alongside the
+chosen normal 2-jet; otherwise a “unique” residual may be an artifact of the
+section.
 
 ## 8. Stopping certificate
 
