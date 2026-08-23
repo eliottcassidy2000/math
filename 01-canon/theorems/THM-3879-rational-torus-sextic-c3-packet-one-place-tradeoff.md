@@ -2,8 +2,7 @@
 id: THM-3879
 title: "Rational torus sextic C3 packet and one-place tradeoff"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED CORE; UNIQUE
-  TWO-PLACE STRENGTHENING AWAITING HOSTILE AUDIT.  An
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  An
   explicit rational sextic, obtained as the dual of a trinodal quartic, has
   exactly six A2 cusps and four A1 nodes and admits a torus equation
   4Q2^3-27Q3^2=0.  Its irreducible Cardano cubic supplies a connected
@@ -24,10 +23,11 @@ audit: >
   inverse, complete singular Groebner packet, inner transversality, outer
   Hessian gates, Cardano discriminant and irreducibility gate, Kummer norm,
   and the saturated sixth-power line systems.  Normal and optimized runs
-  byte-match the frozen transcript.  A subsequent verified-exact
-  strengthening classifies every two-supported binary-sextic pullback and
-  proves that C=0 is the unique two-place line; that addendum awaits a new
-  hostile audit before full status promotion.
+  byte-match the frozen transcript.  A subsequent hostile audit (root,
+  2026-08-23) independently exhausted all two-root multiplicity patterns,
+  including zero and infinite addresses, rederived the balanced `(3,3)`
+  incompatibility, and verified that only `C=0` survives.  Normal and
+  optimized runs reproduce all 56 frozen gates.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
 related:
@@ -43,8 +43,7 @@ hash_basis: raw LF bytes
 
 # THM-3879 -- the missing C3 packet exists, but it costs the one-place chart
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED CORE; UNIQUE
-TWO-PLACE STRENGTHENING AWAITING HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Put
 
 ```text
