@@ -9,9 +9,11 @@ status: >
   irreducible branch discriminant, cuspidal exactly when m>=2.  The
   polynomial codifferent ladder
   x,tx,...,t^m x has trace packet (0,...,0,-m) and a constant unit pairing
-  determinant.  This unifies the axis pole, branch curve, and sheetwise
-  trace cancellation.  The trace-zero repair lane remains open; no
-  polynomial Keller pair or JC(2) counterexample is claimed.
+  determinant.  Its trace-zero hyperplane is stable under base-field
+  Hamiltonians, so no trace-zero rung can have a nonzero base-field bracket.
+  This unifies the axis pole, branch curve, and sheetwise trace cancellation.
+  Nonbase mixed brackets remain open; no polynomial Keller pair or JC(2)
+  counterexample is claimed.
 source: jc_zero_debt_lift / different-codifferent reframe, 2026-08-23
 audit: >
   TWO INDEPENDENT HOSTILE AUDITS, PASS AFTER REPAIR.  jc_sparse_direct_search
@@ -26,7 +28,8 @@ audit: >
   (355 total).  Resultant and multiplication-matrix calculations agree for
   m=1,...,10, direct source typing is checked for m=1,...,8, and normal,
   optimized, and fixed-hash transcripts LF-normalize exactly to the frozen
-  output.
+  output.  lrc_owner_fc_referee independently audited the trace/derivation
+  corollary and its nonzero-trace boundary.
 depends_on:
   - THM-3774-three-component-rational-keller-cover-tower
   - THM-3780-rational-keller-tower-all-affine-plane-fillings-obstruction
@@ -323,6 +326,37 @@ a Darboux relation.  It is instead the first exact mechanism in this tower
 that cancels across conjugate sheets while using polynomial functions outside
 the base target field.  Whether such rungs can be combined with non-base
 observables to repair the final axis address is **OPEN**.
+
+## 6. The trace-zero hyperplane has no base-field Darboux mate
+
+Put `K_0=k(U,P)`.  If `a in L` and `b in K_0`, the Hamiltonian derivation
+
+```text
+delta_b={-,b}:L -> L                                  (32)
+```
+
+is the unique extension of its restriction to `K_0`, because `L/K_0` is
+finite separable.  The standard trace/derivation identity therefore gives
+
+```text
+Tr({a,b})={Tr(a),b}.                                  (33)
+```
+
+If `Tr(a)=0` and `{a,b}=c in K_0`, equations `(33)` and characteristic zero
+give
+
+```text
+0=Tr(c)=(m+1)c,                 hence c=0.             (34)
+```
+
+Consequently every rung `t^r x`, `0<=r<m`, and every trace-zero
+`K_0`-linear combination of them has no nonzero base-field bracket and in
+particular no base-field Darboux mate.  This is stronger than merely saying
+that trace forgets the bracket, but it has a sharp boundary: if the proposed
+leg has nonzero trace, `(33)` becomes a genuine base Hamiltonian equation;
+if the mate lies outside `K_0`, the argument does not apply.  Thus a mixed
+codifferent construction must either use a non-trace-zero leg or pay for a
+genuinely nonbase mate.
 
 The exact companion verifies the discriminant and norm independently by
 resultants and multiplication matrices through `m=10`, the full trace packet

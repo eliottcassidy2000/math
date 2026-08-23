@@ -280,8 +280,22 @@ logarithmic symplectic form, hence no Darboux pair in that ring.  Transferring
 this obstruction to **every** polynomial in `k(U,P)` requires the separate
 codimension-one image-coverage sidecar.  THM-3779 supplies it for the
 THM-3774 tower when `m>=2`; its `m=1` boundary misses a divisor and gains the
-extra observable `x^2`.  Thus missing a divisor is a mechanism, not a minor
-surjectivity blemish.
+extra observable `x^2`.  THM-3783 now computes that exception completely:
+
+```text
+k[x,y] intersection k(U,P)
+ =k[r,z,g]/(r^3g-z^2+r/4),
+r=x^2, z=x/2+x^5y, g=y+x^4y^2.                       (B')
+```
+
+The source maps onto this smooth surface etale with generic degree two while
+one sheet escapes on `V(r,z)`.  The symplectic form is exact, so the old
+logarithmic obstruction genuinely vanishes; nevertheless any Darboux pair
+would be nonbirational on the surface and induce even source degree at least
+four.  Homogeneous supports, every `2x2` cell, and one aligned `2x3`
+orientation are excluded.  Thus missing a divisor is a mechanism, not a
+minor surjectivity blemish, but it grants a sharply typed search surface
+rather than a counterexample.
 
 Changing the source chart is a different operation.  THM-3780 proves that
 every normal etale model carrying the same pair `(U,P)` must contain the
@@ -303,22 +317,33 @@ Tr(t^r x)=0 (0<=r<m),       Tr(xq(t))=-m[T^m]q(T).    (D)
 The original word “leading” was false for `deg q<m`; `q=1` is the minimal
 hostile and MISTAKE-445 records the repair.  These rungs genuinely leave the
 base target field and cancel across sheets, but trace forgets the individual
-sheet, component valuation, and Poisson bracket.  They are therefore a new
-sidecar, not a Keller pair.
+sheet and component valuation.  There is nevertheless one exact bracket
+law.  For `a in L` and `b in K_0=k(U,P)`, separability makes the Hamiltonian
+derivation commute with field trace:
+
+```text
+Tr({a,b})={Tr(a),b}.                                  (D')
+```
+
+Hence `Tr(a)=0` and `{a,b} in K_0` force `{a,b}=0`.  A trace-zero rung has no
+base-field Darboux mate.  This independently audited corollary forces a live
+mixed construction to pay for a genuinely nonbase mate (or use a leg with
+nonzero trace); it does not control arbitrary pairs outside `K_0`.
 
 | operation | exact obstruction | information destroyed | remaining lane |
 |---|---|---|---|
 | target-only shear | THM-3770 principal coefficients must equalize | component address after scalar collapse | synchronized nonbirational spectrum |
 | rational target-field word | THM-3782/3779 logarithmic class with divisor coverage | source functions outside `k(U,P)` | codimension-one noncoverage/extra observables |
 | birational source filling of the same pair | THM-3780 nonconstant global unit | freedom to alter the pair | replace a target or leave its field |
-| higher-pole/higher-exponent completion | THM-3781 closes two common-step-three cells only | unequal/gapped support geometry | other exponent-two supports and higher multiplicity |
+| exponent-two sparse support | THM-3781 closes all scalar-centred `3x3` AP cells | noncentral/gapped support geometry | irregular `2x3`, `3x3`, or larger supports |
 | codifferent trace cancellation | THM-3784 gives `(D)`, not a bracket | sheet and component labels | bracket the trace-zero rungs with nonbase observables |
 
 This ladder changes the cheapest counterexample probe.  A new simple-pole
 seed should first report its spectrum and target-divisor coverage; a proposed
 source rechart must report its units; a trace cancellation must report exact
-pairwise brackets and axis valuations.  THM-3783 remains a reserved quadratic
-boundary namespace and contributes no proved step.
+pairwise brackets and axis valuations.  At the quadratic boundary, the next
+honest probe is the decomposable Darboux locus in the still-open irregular
+`2x3` support cells on the explicit THM-3783 surface.
 
 ## Rooted Pfaffians: an exact sidecar and deletion law
 
@@ -403,8 +428,9 @@ unlike the retired tournament/1729 numerical resemblance.
    rather than imposing an arbitrary torsor.
 4. **JC:** simple-pole target-field words and same-pair source fillings now
    have separate terminal gates.  Test codimension-one noncoverage with its
-   extra observables, higher-multiplicity supports beyond THM-3781, or exact
-   brackets between THM-3784's trace-zero rungs and nonbase observables.  Also
+   extra observables, noncentral/gapped/larger supports beyond THM-3781,
+   irregular `2x3` cells on THM-3783's exact quadratic surface, or exact
+   brackets between THM-3784's trace-zero rungs and nonbase observables. Also
    retain exceptional W004/W005/6 and interacting-right-factor Cohn lanes.
 5. **Two cubes:** the inert-prime family now proves logarithmic lower growth
    with coefficient `kappa`; determine whether the rest of the support changes

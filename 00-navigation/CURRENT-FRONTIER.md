@@ -329,11 +329,16 @@ gives no support asymptotic/residue; only the indexed coefficient is known.
   gate, and THM-3780 forbids same-pair affine-plane filling. THM-3782 makes
   simple-pole spectra automatic: one value repairs; multiple values, plus
   divisor coverage over `C`, exclude all target-field words. THM-3781 closes
-  only scalar-centred step-three exponent-two cells. THM-3784 gives audited
-  trace-zero codifferent rungs outside the target field; their brackets are
-  open. Codimension-one noncoverage, higher poles/supports, altered pairs,
-  arbitrary quartics, unrestricted `C[A,d]^2`, `JC(2)`, and `DC(2)` remain
-  OPEN; THM-3783 is RESERVED.
+  every scalar-centred `3x3` arithmetic-progression exponent-two cell, for
+  arbitrary steps. THM-3783 computes the complete `m=1` intersection as the
+  smooth surface `r^3g=z^2-r/4`: exact symplectic form, even source-degree
+  floor `>=4`, and homogeneous/`2x2`/one aligned `2x3` no-gos, but other
+  `2x3` cells and arbitrary Darboux pairs stay open. THM-3784 gives audited
+  trace-zero codifferent rungs outside the target field and excludes any
+  nonzero base-field bracket with them; nonbase mixed brackets are open.
+  Codimension-one noncoverage, noncentral/gapped/larger supports,
+  higher poles, altered pairs, arbitrary quartics, unrestricted
+  `C[A,d]^2`, `JC(2)`, and `DC(2)` remain OPEN.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2247 close the affine-through-
   quartic and terminal-through-fourteen strata; THM-2262/2297--2480, including
