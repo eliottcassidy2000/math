@@ -396,13 +396,14 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
 
 ### Arithmetic-Kakeya forcing certificates
 
-**OPEN external benchmark; workbench live.** Human record `1.67513`, target
-`<=1.675`. FINITE-EXACT: rule-(1) is UNSOUND; floor `>=1`, k=1 path floor `2`
-(greedy caveat), records `13/7`, merge-free `7/4`, and identified `12/7`.
-Axis reversal exactly equates merge-free pure prefix+step and step+suffix,
-preserving cost and forcing; identified/mixed cases remain uncompiled. The
-small same-H `(g,u)=(5,3)` cell has `0/31,656` certificates FINITE-EXACT, not a
-bound. Workbench: `ak_forcing_engine.py`; next: larger sound `5/3`, k=1 proof.
+**OPEN external benchmark; workbench live.** Record `1.67513`; target
+`<=1.675`. Rule-(1) is UNSOUND. THM-3875 proves score `>=2` for normalized
+`k=1` forest/path and adjacent-merge quotients; a five-row triangle makes
+cycles the first possible `5/3` mechanism. FINITE-EXACT:
+`13/7`, merge-free `7/4`, identified `12/7`, and `0/31,656` in the same-H
+`(5,3)` cell; none is a bound. Axis reversal preserves pure merge-free
+forcing/cost; mixed compilation is open. Workbench:
+`ak_forcing_engine.py`; next: sound cyclic `k>=2` search.
 
 ## Cross-domain connection discipline
 

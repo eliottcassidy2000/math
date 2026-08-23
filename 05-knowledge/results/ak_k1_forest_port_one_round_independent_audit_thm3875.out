@@ -1,0 +1,12 @@
+audit=independent_AK_k1_forest_barrier
+verdict=PASS
+arbitrary_forest_networks=370980
+arbitrary_forest_ports=1479080
+partial_first_rounds=264796
+successful_forests=37030
+direct_rational_port_checks=7226
+adjacent_merge_words=9841
+adjacent_merge_wildcard_cases=7812
+hostiles=vertical_label:excluded;simple_triangle:score_5/3_two_round
+scope=paid_row_semantics_only;no_private_verifier_or_AK_implication
+CHECKS=356943

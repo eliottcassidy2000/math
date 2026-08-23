@@ -1,0 +1,18 @@
+audit=AK_k1_forest_port_barrier
+verdict=PROVED_INTERNAL_REGIME+FINITE_EXACT_CONTROLS
+theorem=forest_port_spaces:0|nonvertical_line|Q2;closure_rounds<=1
+consequence=successful_forest:initial_rank=2u;paid_score>=2
+k1=verifiable_strict_and_loose_coincide;adjacent_merge_quotient_covered
+pinned_inputs=5
+finite_state_universe=networks:842105;rooted_ports:4166205;matrix_cross_checks:10380
+finite_outcomes=success:38027;partial:683506;stalled:120572;min_success_slack:0
+positive_path=u:6;paid:12;trace:((0, 1, 2, 3, 4, 5),)
+positive_wildcard=u:6;paid:12;trace:((0, 1, 3, 4, 5, 6),)
+positive_adjacent_merge=u:4;paid:8;trace:((0, 1, 2, 3),)
+hostile_vertical=score:1;trace:((0,),);excluded_by:a+b!=0
+hostile_cycle=score:5/3;trace:((0,), (1, 2));ranks:(5, 4);first_pair_rank_drop:1
+benchmark=external_record:1.67513;target:<=1.675;status:OPEN_UNCHANGED
+scope=no_k>=2_claim;no_arbitrary_quotient_claim;no_private_verifier_claim;no_AK_theorem
+semantic_sha256=0dfec8be45552f6f69416bd917c642f257b2ac8dc9418421c18992346156d3f0
+CHECKS=737080
+RESULT=PASS
