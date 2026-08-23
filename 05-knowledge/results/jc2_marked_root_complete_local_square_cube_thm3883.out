@@ -1,0 +1,10 @@
+THM3883_LOCAL_RING Rhat_x subset product_p k[[t_p]];test carrier completionwise
+THM3883_A0 z=epsilon gives completed binomial carrier sum_j>=2 beta_j A^(j-2)C^j
+THM3883_NONZERO common nonzero root residue descends by simple Hensel uniqueness
+THM3883_ZERO P=0 makes A a unit;carrier descends iff z^3 descends
+THM3883_IFF A0 matching + nonzero sign matching + zero-root cube descent
+THM3883_POSITIVE k[[t^2,t^3]]:z=t has z^2,z^3 in the branch ring
+THM3883_HOSTILE k[[t^2,t^5]]:z=t has z^2 in but z^3 out
+THM3883_SCOPE arbitrary reduced singularities;global square root assumed;projective companion open
+SEMANTIC_SHA256 f091ccb803702bc6b3bb6acec3ab700f705bf7f8017c36692093c7cbc181ceb0
+CHECKS 43
