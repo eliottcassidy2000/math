@@ -1,0 +1,12 @@
+theorem=THM-3695-y0-collision-danielewski-embedding
+ambient=D=C[beta,c,e]/(c^2*e-(1-beta^2));Sigma=1-beta^2;squarefree_degree=2
+embedding=beta->1-x^2*z;c->x;e->z*(2-x^2*z)
+poisson={beta,c}=c^2;{c,e}=2*beta;{beta,e}=-2*c*e
+collision_ring=R=C[A,B,C]=C[3e,2ce,beta*c] graded_subalgebra_of_D
+grading=wt(beta,c,e)=(0,1,-2);wt(A,B,C)=(-2,-1,1)
+retained_collision=(1,0),(-1,2)->(A,B,C)=(0,0,1)
+support_floor=7;dependencies=THM-3569,THM-3583,THM-3592
+first_unevaluated_partitions_up_to_swap=2x5,3x4
+semantic_sha256=9b078aaa8820dbb675927418be61aa2886f48da4045c67111bf70ec13f1cb058
+CHECKS=29
+RESULT=PASS

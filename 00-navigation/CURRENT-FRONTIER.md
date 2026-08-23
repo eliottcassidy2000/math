@@ -360,10 +360,10 @@ is sharp: equal counts allow two densities or none.
   `Q_dagger` through the actual target-ring equations `J_0=1,J_1=J_2=0`,
   but THM-3681 closes every continuation at universal order six. Pending-
   audit THM-3683 leaves only four quartic roots after the retained six-jet
-  screen; THM-3687 lifts all four uniformly through actual-ring `J_0=1`,
-  while `J_1,J_2` and higher continuation remain open. THM-3684 proves that no
-  nonconstant polynomial in one of `b,c,e` has a mate even in the full source
-  ring. THM-3685/86/3691/3693: degree `>=4`, `>=3` weights/output. Higher-degree
+  screen; THM-3687 lifts all four through actual-ring `J_0=1`; `J_1,J_2` stay
+  open. THM-3684 blocks one-coordinate mates. THM-3685/86/3691/3693/3695 put
+  the retained `y=0` ring in exponent-two Danielewski: degree `>=4`, at least
+  seven pieces, first cells `2x5/3x4`. Higher-degree
   zero-debt polynomials, continuation of the four THM-3683 folds,
   THM-3641's excluded nonordinary tangent collisions, nonquadratic folds, and
   THM-3629's genuinely two-output-mixed `H'(0)!=0` pairs remain OPEN. A
