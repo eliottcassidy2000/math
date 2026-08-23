@@ -2,7 +2,8 @@
 id: THM-3704
 title: "W002 lowest-double two-orientation all-scale nonentry in the y=0 collision ring"
 status: >
-  PROVED + VERIFIED-EXACT.  On the W002 support ray with gaps
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the W002
+  support ray with gaps
   (n,n;n,n,2n), the complete placement family whose scalar fibre is the
   lowest double 01=10 is empty in the y=0 collision ring, in both arm
   orientations and at every positive scale where the placement survives the
@@ -13,11 +14,13 @@ status: >
   the whole word W002, the whole 3x4 cell, or JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
-  SELF-AUDITED.  The exact companion verifies the W002 fibre word, both
-  small-scale singleton boundaries, both parity branches in each orientation,
-  all four integrated collision identities, both Euler factorizations, and
-  the exceptional active n=2 orientation.  Normal and optimized runs
-  byte-match the stored transcript.  Independent hostile audit remains open.
+  PASS.  The independent hostile audit rechecked both absolute placements,
+  every small-scale singleton exit, both negative common-power exponent
+  systems, the connected positive gcd-one components, and independently
+  derived all four rational-derivative integrations, including the active
+  n=2 branch.  It also checked module divisibility, Euler degree, and the
+  exact two-orientation scope.  Normal and optimized companion runs
+  byte-match the stored transcript.
 depends_on:
   - THM-3603-three-by-four-additive-support-collision-cone-and-fibre-cut-atlas
   - THM-3606-exponent-two-three-by-four-scalar-singleton-gate-atlas
@@ -34,9 +37,10 @@ hash_basis: LF-normalized bytes
 
 # THM-3704 -- the lowest scalar double on W002 has an Euler factor
 
-**PROVED + VERIFIED-EXACT.**  This is a collision-ring-specific all-scale
-closure inside the first `3 x 4` frontier.  It uses only three of the four
-multi-address equations: the unused row is not silently assumed.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This is a
+collision-ring-specific all-scale closure inside the first `3 x 4` frontier.
+It uses only three of the four multi-address equations: the unused row is not
+silently assumed.
 
 All rings are over `C`.  Use the THM-3696 presentation
 
