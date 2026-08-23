@@ -2,8 +2,8 @@
 id: THM-3850
 title: "Every nonconstant cubic profile has a nonpolynomial branch component"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  For every nonconstant polynomial profile b(C),
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  nonconstant polynomial profile b(C),
   at least one irreducible component of the depressed-cubic branch has
   affine normalization missing at least two projective points.  In the
   irreducible case the exact count is deg(rad b)+nu_infinity.  Primitive
@@ -12,6 +12,16 @@ status: >
   A-infinity corner.  Individual affine-line components can occur, but the
   whole branch packet never consists only of polynomial curves.
 source: jc_sparse_direct_search / nonlinear cubic profile and branch-normalization lane, 2026-08-23
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc_quartic_c3_construct and root /
+  jc-cohn3709, 2026-08-23).  The audits checked the primitive/irreducible
+  equivalence, exact finite punctures and infinity parity, the minimal
+  three-puncture residual, both primitive denominator graphs, and every
+  origin-vanishing valuation row.  In the last case they separately verified
+  that the component through `(C=0,A=infinity)` is nonvertical and acquires a
+  distinct normalization point over `C=infinity`, even if projective branches
+  collide.  Normal and optimized runs byte-match the frozen 47-gate
+  transcript and both hashes.
 related:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
@@ -27,8 +37,8 @@ hash_basis: raw LF bytes
 
 # THM-3850 -- every nonconstant profile has a bad branch component
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of
 characteristic zero.  Let `b=b(C) in k[C]` be nonzero and define
 
 ```text

@@ -343,8 +343,11 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   also fail: each cubic order is globally monogenic, so deleting ramification
   creates a nonconstant unit.  In THM-3844 the two local cusp classes
   globalize but fold onto one `Z/3` direction; cusp count is not torsion rank.
-  Thus every new deleted-divisor completion must pass both the one-place
-  polynomial-uniruled gate and the constant-unit/nonmonogenic gate.
+  THM-3850 closes every nonconstant one-variable profile `b(C)`: at least one
+  branch component has two places.  THM-3851 attains torsion `(Z/3)^2`, but
+  proves every chart of its tricuspidal quartic has at least two places.
+  A new completion must pass both the one-place polynomial-uniruled gate and
+  the constant-unit/nonmonogenic gate.
   The positive anchor is THM-3785's one-place Russell pseudo-plane; a Darboux
   pair there would yield a counterexample of field degree divisible by three
   and at least nine.  THM-3843 forces its arm to be a noninjective immersed
