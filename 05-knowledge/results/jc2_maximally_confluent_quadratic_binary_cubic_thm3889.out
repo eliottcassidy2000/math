@@ -1,0 +1,10 @@
+THM3889_INDEX all coefficients in (A,C);binary index form represents no unit
+THM3889_LEADING split quadratic row discriminant=C^8;one projective infinity point
+THM3889_DELTA delta!=0 gives distinct order-3 and order-5 infinity branches
+THM3889_GAMMA delta=0,gamma!=0 gives two branches in both eta seams
+THM3889_REDUCIBLE delta=gamma=0 forces C|Delta
+THM3889_CENSUS1 rows=65536 one_coordinate_lead=5890 primitive_edge=92 coordinate_divisible=92 irreducible_eligible=0
+THM3889_CENSUS2 rows=256 two_place=240 reducible=16
+THM3889_SCOPE all linear perturbations of normalized split C^8 leading row;other quadratic rows open
+SEMANTIC_SHA256 8cfd47a570c914882e86a317a26e77e211f1d7cf9ec4899a34aaaf488de1597a
+CHECKS 65675
