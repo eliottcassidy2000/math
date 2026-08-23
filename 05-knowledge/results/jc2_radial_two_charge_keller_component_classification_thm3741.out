@@ -1,0 +1,10 @@
+theorem=THM-3741-radial-two-charge-Keller-component-classification
+scope=algebraically_closed_characteristic_zero;arbitrary_phi,psi_in_k[z]
+nonsingular=linear_or_squarefree_pure_charge_or_n>=2_mixed_monomial_flank
+jacobian_mate=iff_Q_is_nonzero_linear
+mechanisms=torus_eliminant;axis_valuation;charge_antiderivative;THM3716
+degree_two_grid=728;nonsingular=48;predicted=48
+mixed_survivors=42;mate_obstructions=336;pure_controls=10
+semantic_sha256=25482d6fad2f12deffc6f12c41449ab0804d10a73cd2088b7a8cd029414f0077
+CHECKS=1126
+RESULT=PASS

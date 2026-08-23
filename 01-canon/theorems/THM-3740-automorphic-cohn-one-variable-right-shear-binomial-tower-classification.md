@@ -2,7 +2,7 @@
 id: THM-3740
 title: "Automorphic Cohn one-variable right-shear all-exposure classification"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.  For an arbitrary
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For an arbitrary
   diagonal constant right factor followed by one arbitrary polynomial upper
   right shear, every compatible lower-row closure is classified; dually,
   every compatible upper-row closure after one lower right shear is
@@ -17,15 +17,17 @@ status: >
   nonconstant depth-one sheet survive in each orientation.
 source: root + jc_sparse_direct_search / 2026-08-22
 audit: >
-  PENDING.  The formulas were independently derived and checked through
-  depth five with cubic right parameters.  The written all-degree mixed-
-  variable gates, exceptional transport branch, exact transcript, and scope
-  still require a final hostile audit.
+  PASS.  An independent audit rederived both compatible and both crossed raw
+  PDEs, every mixed-variable top-degree case, the p=m=1 edges, both negative
+  transport-resonance exclusions, both connection conjugacies and gradients,
+  every zero/constant/depth-one boundary, and the arbitrary-mate transfers.
+  Normal, optimized, and frozen output agree; script/output/semantic hashes
+  and CHECKS=1171 match.
 depends_on:
   - THM-3721-automorphic-cohn-one-right-shear-nonentry
   - THM-3734-automorphic-cohn-diagonal-binomial-divided-power-towers
-related:
   - THM-3736-automorphic-cohn-complete-constant-sl2-polynomial-exposure-classification
+related: []
 script: 04-computation/jc2_automorphic_cohn_one_variable_right_towers_thm3740.py
 output: 05-knowledge/results/jc2_automorphic_cohn_one_variable_right_towers_thm3740.out
 script_sha256: c800df5287182640b44dddebb07335408cd1166c09bc8e854e08c44f3e734df3
@@ -36,7 +38,7 @@ hash_basis: raw LF bytes
 
 # THM-3740 -- one-variable right shears transport the whole binomial tower
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.**  THM-3721 found a
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  THM-3721 found a
 one-variable survivor behind the first right-shear Cohn cell, but only its
 depth-one Broughton form was then visible.  THM-3734 reveals that it is the
 first member of a complete divided-power inheritance tower.  The right shear
