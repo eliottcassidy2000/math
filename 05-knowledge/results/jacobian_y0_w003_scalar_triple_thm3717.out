@@ -1,0 +1,9 @@
+THM-3717 exact W003 scalar-triple audit
+placement = P(-n-2,-2,2n-2), Q(1-2n,1-n,1,n+1), n>=2
+generic upper double and square primitive identities PASS
+generic lower Euler reduction in all five residue branches PASS
+n=3 middle singleton contradiction PASS
+n=4 degenerate-coefficient contradiction PASS
+n=2 square-arm scalar divisibility PASS
+scope = complete residual W003 family C, scalar fibre 03+12+20
+ALL CHECKS PASSED
