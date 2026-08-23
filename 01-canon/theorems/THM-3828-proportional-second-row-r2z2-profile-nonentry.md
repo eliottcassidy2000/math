@@ -2,8 +2,8 @@
 id: THM-3828
 title: "Proportional second-row R2Z2 profiles do not enter the cubic pseudo-plane Darboux packet"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  In the first canonical second-row extension of
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the first
+  canonical second-row extension of
   THM-3821, suppose the nonzero r^2z^2 profile X in the first coordinate and
   its mate Y are proportional, Y=lambda X, and the preceding rz^2 profiles
   are aligned in the same target direction, T=lambda S.  Then the pair is not
@@ -13,15 +13,20 @@ status: >
   OPEN, as do one-sided X=0,Y!=0 and further second-row slots.
 source: jc_zero_debt_lift / cubic-pseudoplane second-row profile lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The deterministic companion has 43 active
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
+  The audit independently checked the canonical-bucket typing, the
+  nonvanishing arm argument, both UFD valuation ladders, the optional H
+  rung and integrated S profile, the fixed-base terminal factor, both local
+  coefficients at a nonzero root, the origin and first-integral closure,
+  the separately recomputed N=0 branch, and the exact OPEN boundary.  Normal
+  and optimized runs byte-match the frozen transcript and the raw hashes
+  agree.  The deterministic companion has 43 active
   gates checking the Poisson Casimir, monic normal form, top Wronskian,
   seven descending canonical buckets, target-difference typing, the 5/2 and
   combined 10/5/4 valuation families, optional 10/3 rung, integrated S
   profile, full fixed-base terminal equation, nonzero-root address and
   half-integral next coefficient, confluent first integral, separately
   recomputed N=0 arm remainder, and the complementary OPEN 10/7 tower.
-  Normal/-O/frozen/hash/docs replay and independent proof rederivation are
-  required before promotion.
 depends_on:
   - THM-3821-cubic-pseudoplane-rz2-odd-ladder-terminal-riccati-gate
 related:
@@ -37,9 +42,8 @@ hash_basis: raw LF bytes
 
 # THM-3828 -- the proportional second row is empty
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Let `k` be an algebraically closed field of
-characteristic zero and put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k` be an
+algebraically closed field of characteristic zero and put
 
 ```text
 B=k[r,z,e]/(r^2e-z^3+r),
