@@ -11,11 +11,13 @@ status: >
   whole named word W008, not the full 3x4 cell or JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
-  SELF-AUDITED.  The exact companion reconstructs the W008 fibre word,
-  deduplicates actual supports, reproduces the inherited parity rejection,
-  and verifies both all-parameter differential integrations with their exact
-  constants and signs.  Normal and optimized runs byte-match the frozen
-  transcript.  Independent hostile audit remains open.
+  INDEPENDENTLY HOSTILE-AUDITED.  The exact companion reconstructs the W008
+  fibre word, deduplicates actual supports, reproduces the inherited parity
+  rejection, and verifies both all-parameter differential integrations with
+  their exact constants and signs.  An independent derivation checked the
+  post-parity census, UFD bases, both normalized ODEs, every live-scale and
+  exceptional arm address, coefficient-module divisibility, transcript, and
+  hashes.  Normal and optimized runs byte-match the frozen transcript.
 depends_on:
   - THM-3603-three-by-four-support-collision-cone-and-fibre-cut-atlas
   - THM-3606-exponent-two-three-by-four-scalar-singleton-gate-atlas
