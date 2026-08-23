@@ -1,0 +1,11 @@
+theorem=THM-3721-automorphic-Cohn-single-right-shear-nonentry
+normalized_core=M0=rotation*Cohn(X,2T);det=1;nonentry=inherited
+upper_bottom_survivor=v(T);Q=L+T*L^2;debt=6T
+upper_top_survivor=v=constant_nonzero;Q=(3/v)*(L+T*L^2);debt=-2vT
+lower_bottom_survivor=u(X);Q=X+X^2*(T+V);debt=6S+2(XV'-V)
+lower_top_survivor=NONE;obstruction=forbidden_X^-1_Laurent_layer
+nontriangular_gates=upper:v_X_nonzero;lower:u_T_nonzero
+hostile_nontriangular_cells=224;degree_h<=6
+semantic_sha256=8933ed6981486aa546d29f3b63b997a18452446cb296343c837a78e1c7fe9852
+CHECKS=920
+RESULT=PASS
