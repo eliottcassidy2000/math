@@ -2,7 +2,7 @@
 id: THM-3792
 title: "Pure first-normal nodal carriers have critical points"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the
   THM-3785 cubic pseudo-plane, every pure first-normal lift
   A_f=e^2+z f(e) of the quadratic coordinate of the minimal nodal arm
   immersion has a critical point whenever f(0) is nonzero.  In particular
@@ -13,15 +13,17 @@ status: >
   open, so no general Darboux obstruction or JC(2) conclusion is claimed.
 source: jc_zero_debt_lift / nodal carrier critical-locus elimination, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The proof derives all three Hamiltonian
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The three Hamiltonian
+  components, restriction to K=0, compatibility in both directions,
+  nonvanishing of H_f at a critical-polynomial root, actual point recovery,
+  all degree seams, and the exact scope modulo I^2 were rederived.  The
+  proof derives all three Hamiltonian
   equations, isolates the K=c^3+2re sheet, proves the critical polynomial is
   nonconstant in every degree (including the impossible f-3ef'=0 branch),
   and reconstructs r and z exactly at every root.  The deterministic
   companion checks those identities over Q(c), 257 degree controls, the
   forced Bezout constant, and the THM-3790 canonical seven-point boundary.
-  Normal and optimized runs byte-match the frozen transcript.  Independent
-  hostile audit remains due, especially for the compatibility equivalence
-  and the precise exclusion of only I^2-free lifts.
+  Normal and optimized runs byte-match the frozen transcript.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3790-cubic-pseudoplane-arm-nodal-immersion-gate
@@ -37,7 +39,7 @@ hash_basis: raw LF bytes
 
 # THM-3792 -- a first-normal nodal correction always has a critical point
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over
 an algebraically closed field `k` of characteristic zero, fix `c in k*`, and
 retain the smooth symplectic surface
 
@@ -223,5 +225,4 @@ proof that arbitrary nonlinear carriers or Darboux pairs on `Y` do not exist.
 
 The deterministic companion named in the metadata verifies `(9)--(20)`, the
 degree split through `m=256`, and the canonical seven-point specialization
-with active assertion-free gates.  **QED, conditional only on independent
-hostile audit.**
+with active assertion-free gates.  **QED.**
