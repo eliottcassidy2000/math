@@ -1,0 +1,10 @@
+theorem=THM-3897-f-zero-residual-all-degree-global-emptiness
+quadratic_y_gate=polynomial_Pell_units_force_u_zero
+linear_y_gate=odd_degree_five_forces_v_zero
+constant_y_gate=missing_linear_plus_origin_256_forces_w_zero
+conclusion=f_zero_implies_T_zero
+hostile_control=k(x)[y]_point_fails_descent_and_address
+remaining=f_nonzero_residual_lane_OPEN
+semantic_sha256=6d9be0bbf8c5242bf061d89a4bf2d18c42f81e373008006880946b07b4531240
+CHECKS=15
+RESULT=PASS
