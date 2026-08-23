@@ -11,12 +11,13 @@ status: >
   3x4 cell, general quartic C3 data, or JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
-  SELF-AUDITED.  The exact companion checks the W003 fibre word, the upper
-  integration, the middle square primitive, its logarithmic derivative, and
-  the lower Euler factor in every residue class modulo 5.  It separately
-  verifies the n=3 and n=4 coefficient boundaries and the n=2 square-arm
-  scalar factor.  Normal and optimized runs byte-match the frozen transcript.
-  Independent hostile audit remains open.
+  INDEPENDENTLY HOSTILE-AUDITED.  The exact companion checks the W003 fibre
+  word, upper integration, middle square primitive and logarithmic derivative,
+  and lower Euler factor in every residue class modulo 5.  An independent
+  derivation checked the singleton exponents, integration constant, every
+  sign, the n=3 and n=4 boundaries, exponent gap, and the n=2 UFD square-arm
+  and exact scalar factor.  Normal and optimized runs byte-match the frozen
+  transcript.
 depends_on:
   - THM-3696-y0-collision-ring-three-branch-conductor-and-graded-modules
   - THM-3715-y0-w003-odd-lowest-scalar-two-orientation-half-charge-nonentry
