@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-444 (2026-08-23, concurrent theorem reservation) -- a yielded shell was mistaken for a completed namespace check
+
+- **What failed:** after fetching and rebasing a clean reservation worktree,
+  one compound shell invocation was meant to search filenames, YAML IDs, and
+  history before reserving `THM-3758`.  The command reached its yield timeout,
+  but its returned session identifier was not inspected.  The absence of
+  search output was incorrectly treated as a completed negative search, and
+  a duplicate `THM-3758` stub was committed and pushed.
+- **Minimal witness / first failed implication:** commit `5b67d5031` was
+  already an ancestor of the fetched `origin/main` and contained
+  `THM-3758-quadratic-radial-carrier-rational-exact-split-fibre-nonentry.md`.
+  Therefore the collision was locally visible; this was not an unavoidable
+  post-check race.  The first failed implication was `no output yet => no
+  matching ID`.
+- **Repair / strongest survivor:** delete only the duplicate central-profile
+  stub, retain the earlier legitimate `THM-3758`, and reserve no replacement
+  until a completed command reports its exit code and `check_docs.py` passes
+  before commit.  The scratch central-profile proof candidate is unchanged
+  and remains unproved until it receives a unique namespace and promotion.
+- **Reusable rule:** never interpret silence from a yielded `exec_command` as
+  a completed check.  Surface and poll every session ID, and run the duplicate-
+  ID documentation gate before—not in the same mutation command as—the
+  reservation commit and push.
+
 ## MISTAKE-443 (2026-08-22, THM-3708 audit) -- coprimality with one forced divisor does not let a different divisor cancel through a product
 
 - **What failed:** in the exceptional W002 branches, the first proof wrote
