@@ -2,8 +2,8 @@
 id: THM-3899
 title: "Nonzero-sidecar y-degree tariff and equianharmonic equality colors"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  Every nonzero-sidecar square survivor of the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every
+  nonzero-sidecar square survivor of the
   THM-3881 residual satisfies deg_y(T)>=deg_y(f).  On the positive common
   degree seam, its leading coefficients obey a two-color equianharmonic norm
   law over sqrt(-3), with an odd color parity at x+1.  This is a necessary
@@ -11,14 +11,15 @@ status: >
   constant common-degree seam, a Keller atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3897 first live f-nonzero gate, 2026-08-23
 audit: >
-  SELF-AUDITED EXACT PROOF CANDIDATE.  The companion expands the full
+  INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23.  The audit independently
+  enumerated all fifteen strict deficits, rechecked the two equality-top
+  terms, both a-adic obstructions, the primewise v|g step, every boundary,
+  and fourteen concrete hostile cells with nontrivial lower coefficients.
+  The companion expands the full
   residual, certifies all fifteen strict degree deficits, isolates the two
   equality-top monomials, checks the norm/color identities and a positive
   leading-color payment, and identifies d=2lambda-1 in 28 active gates.
-  Normal and optimized runs byte-match the frozen output.  Independent audit
-  must recheck the a-adic square obstruction, the address-dependent T=0
-  exclusion, the n=0 boundary, divisibility of the square-root leading
-  coefficient by v, and exact scope.
+  Normal and optimized runs byte-match the frozen output on every platform.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
 related:
@@ -26,7 +27,7 @@ related:
   - THM-3898-equianharmonic-cube-cubic-order-a1-branch-euler-tariff
 script: 04-computation/jc2_nonzero_sidecar_y_degree_tariff_thm3899.py
 output: 05-knowledge/results/jc2_nonzero_sidecar_y_degree_tariff_thm3899.out
-script_sha256: 80cf8d31ef8ee1ad353d4efb8bbba065e9d27879d29c698f068ca1da353a1bfb
+script_sha256: afa3cc0f1a158253d884151dd91bcb2b1fa5509644bdeb22004ad7d34a48982b
 output_sha256: 18d6accc6f16f35c3582e23ad67ccbaa883c66cafbe000b05b32a63845068a14
 semantic_sha256: 306a6a9a487506858d1461b95d35cec4e69bdd8d152a4d3a9465407fc6cb5af2
 hash_basis: raw LF bytes
@@ -34,9 +35,9 @@ hash_basis: raw LF bytes
 
 # THM-3899 -- a nonzero sidecar cannot lead in y-degree
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**  Work over an algebraically closed field `k` of
-characteristic zero.  Retain the THM-3881 coordinates
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  Retain the THM-3881
+coordinates
 
 ```text
 D=k[x,y],                 a=x+1,

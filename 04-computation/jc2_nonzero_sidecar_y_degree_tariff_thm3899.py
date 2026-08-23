@@ -7,8 +7,13 @@ import ast
 import hashlib
 import json
 from pathlib import Path
+import sys
 
 import sympy as sp
+
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(newline="\n")
 
 
 CHECKS = 0
