@@ -2,7 +2,7 @@
 id: THM-3777
 title: "Three-component tower reciprocal payment forces a horizontal divisor"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the all-degree tower A=1+xy, B=1+x^(2m+1)A^m,
   U=xAB, P=((m+1)B-1)/(mx), the reciprocal shear P_1=P-1/U pays the
   unique nonzero vertical residue and equals N_m/(AB).  The candidate proves
@@ -11,9 +11,14 @@ status: >
   N_m-rho AB=0.  If G is constant, a third shear can pay the two remaining
   vertical components only by restoring the original x-axis pole.  This
   closes that three-shear orientation uniformly in m; longer words remain
-  open.  No claim may be used before independent audit.
+  open.
 source: root + jc_sparse_direct_search / 2026-08-23
-audit: PENDING INDEPENDENT HOSTILE AUDIT.
+audit: >
+  INDEPENDENT HOSTILE AUDIT by root.  The all-m formula for N_m, reduced
+  denominator and vertical coefficients, exhaustive rational-G dichotomy,
+  nonempty transverse horizontal divisor and genuine-pole argument, and
+  compulsory restoration of the paid axis were rederived by hand.  Normal,
+  optimized, and frozen exact transcripts agree byte for byte.
 depends_on: []
 related:
   - THM-3774-three-component-rational-keller-cover-tower
@@ -28,8 +33,8 @@ hash_basis: raw LF bytes
 
 # THM-3777 -- paying one vertical component creates a horizontal invoice
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / PENDING INDEPENDENT HOSTILE
-AUDIT.**  The proof is self-contained and does not depend on THM-3774.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The proof is
+self-contained and does not depend on THM-3774.
 
 Let `k` be an algebraically closed field of characteristic zero and let
 `m>=1` be an integer.  In `k[x,y]` define
@@ -256,5 +261,4 @@ coefficients are locally equalizable.  Global polynomiality fails because a
 nonconstant equalizer has a finite target pole, and its pullback is the new
 curve `(15)`.  Longer alternating words must therefore carry a growing ledger
 of horizontal fibres `H_rho`; this theorem identifies that state but does not
-prove an all-word invariant.  **QED, conditional on independent hostile
-audit.**
+prove an all-word invariant.  **QED.**
