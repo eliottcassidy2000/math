@@ -1,0 +1,11 @@
+s(14,183)=-91/1098
+-12*183*s(14,183)=182
+reciprocity_direct_controls=5
+typed_depth_examples=[(1, 1, 247, 2), (2, 8, 1521, 3), (3, 60, 10985, 4), (4, 1412, 257049, 5), (5, 10200, 1856465, 6), (6, 238688, 43441281, 7)]
+strict_valuation_123_examples=[(3, 1, 32955, 4), (4, 25, 771147, 5), (5, 12, 371293, 6), (6, 4237, 130323843, 7), (7, 2040, 62748517, 8), (8, 716065, 22024729467, 9)]
+cover14_deep_well_examples=[(1, 1, 260, 1, 1), (2, 7, 1352, 1, 1), (3, 72, 13182, 1, 1), (4, 1255, 228488, 1, 1), (5, 12240, 2227758, 1, 1), (6, 212167, 38614472, 1, 1)]
+cover14_all_rows_primitive_distinct_cover=True
+cover14_fixed_and_binding_dedekind_v13=1_at_every_listed_depth
+general_prime_controls=60
+general_rule=n=p+1,total_vp_unbounded,fixed_and_binding_dedekind_vp=1
+PASS
