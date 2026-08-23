@@ -1,0 +1,26 @@
+radial_rows=12 rank=12 nullity=1
+radial_spectrum=0^1,1^11,13^1
+radial_frame=dist2<=energy<=13*dist2
+forward_rows=30 rank=11 nullity=2
+forward_plus_reverse_rows=60 rank=12 nullity=1
+forward_plus_reverse_spectrum=0^1,21^5,29^5,45^1,65^1
+doubled_frame=21*dist2<=energy<=65*dist2
+sparse_frame_controls=2627
+legal_packets_per_fixed_radial_graft=20
+minimal_derangement_chart_banks=265
+derangement_star_transfer=max_joint_Q>=R_star/6
+control_all_12_radial_differences_nonzero=True
+control_strongest=A5-S0=-249094179/931187992280
+control_D_floor=20682636670561347/15240344288762454200781478400
+control_E_dt_floor=20682636670561347/198124475753911904610159219200
+old_best_D_floor=639147236236665754410121/592851968451044269265159441829849600
+improvement_ratio=804558061850433723167643/639147236236665754410121
+control_strongest_joint_chart=(5,0)
+control_joint_D_floor=360926324521774869394441/148212992112761067316289860457462400
+control_joint_E_dt_floor=360926324521774869394441/1926768897465893875111768185947011200
+bare_owner_hostile_units=(1, 7, 49, 343, 2401, 16807)
+bare_owner_hostile_blockers=(1529437, 139178767, 2140430257693)
+bare_owner_hostile_mass=33592320/524596891
+bare_owner_hostile_uncovered_mass=8398080/40353607
+bare_owner_hostile_scope=all_packets_not_delayed_not_cover
+PASS
