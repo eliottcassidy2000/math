@@ -35,16 +35,16 @@ mode/cochain laws. THM-3414--3416 give ZMC rank-4/5/6 bases; THM-3425 gives
 primitive cap-six support; [THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md)
 allows 15-atom cap-seven support only at zero current.
 
-Newest exact interface: THM-3665--3674 and THM-3701/3705/3706/3710/3713.
+Newest exact interface: THM-3665--3674 and THM-3701/3705/3706/3710/3713/3718.
 THM-3701 gives a rank-12 successor gate with equal scalar **mass** null-line and
 six minimal charts. THM-3705 gives the bulk/endpoint tariff; THM-3706 rules out
 fixed 13-adic depth. THM-3710 finds the `(14j+/-1)/182` endpoint skeleton, but
 its two support parts nearly cancel, so support splitting loses the leak.
 THM-3713 retains `u=r-t` with full detectors. A hostile has constant
-successor marginal but `D_H=E_dt=4/169`; any rational local defect reaches all
-twelve deep colors. Its typed non-cover control has offsets
-`{1,2,10,11,12}`, signs `++---`. The cover obligation is an owner-typed defect
-or circulant closure retaining word, owner and phase. The mass line is not
+successor marginal but `D_H=E_dt=4/169`; rational defects reach all deep
+colors. THM-3718 forces both detectors on an adaptive cover-derived atom and
+one literal excluded-target selector. The remaining obligation is canonical
+owner/root/word transport and semantic arrival. The mass line is not
 THM-3679's address diagonal. THM-3135--3524 supply sidecars, not this bridge;
 THM-2363/THM-2368 and THM-2417--2894 do not recover the `28,393` semantic roots
 or their gluing (MISTAKE-281/300/310/313). No cited result proves LRC(14).

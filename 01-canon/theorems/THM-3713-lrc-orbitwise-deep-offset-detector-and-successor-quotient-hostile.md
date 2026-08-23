@@ -37,6 +37,7 @@ related:
   - THM-3662-lrc-eleven-cell-exceptional-flux-and-high-digit-variation-gate
   - THM-3701-lrc-radial-successor-mass-gate-and-star-frame
   - THM-3710-lrc-successor-endpoint-182-skeleton-bad-prime-collapse
+  - THM-3718-lrc-complete-atom-orbit-defect-saturation-and-semantic-boundary
 script: 04-computation/lrc_orbitwise_deep_offset_detector_thm3713.py
 output: 05-knowledge/results/lrc_orbitwise_deep_offset_detector_thm3713.out
 script_sha256: 178c434f3d37b186d105495250f836c234668524d8dbb5275af5f12b6c2c4af2
@@ -445,19 +446,28 @@ the defect.  Neither representation retains by itself the endpoint owner,
 the delayed-word ancestry address, visible height, terminal phase, or the
 all-nine-coordinate `91`-unit projector.
 
-The resulting cover-specific target is precise:
+THM-3718 subsequently composes THM-2445/2452 with this theorem.  For any
+hypothetical scalar-cover realization among the current 165 rows, it forces
+both detector banks to fire on one adaptively selected complete matched
+Boolean atom, and transfers a defect to a literal
+occupied-to-excluded-target selector class.  That atom is not identified
+with the canonical exclusive owner, semantic word/repair, physical root
+section, or prescribed first-expiration clock.
+
+The resulting cover-specific target is therefore precise:
 
 ```text
 for a genuine scalar cover with an eligible low target,
-prove one lawful owner-pivot chart has a nonzero orbitwise edge or
-three-site defect, or close the circulant branch H(r,s,t)=G(r-t)
-by a separate cover-semantic argument.                             (29)
+transport one THM-3718 adaptive selector defect, target character and
+deep residue to the canonical owner/root/word packet, or independently
+force a defect in that canonical table (equivalently close its
+circulant branch) with the missing semantic sidecars.              (29)
 ```
 
 The five-colour typed control suggests that a signed offset-residue sidecar
-can be much smaller than the full `13^3` tensor.  It does not supply that
-sidecar uniformly on hypothetical covers, so (29) remains open and LRC(14)
-is not proved.
+can be much smaller than the full `13^3` tensor.  THM-3718 now supplies an
+adaptive cover-derived sidecar, but not the canonical semantic transport in
+(29), which remains open.  LRC(14) is not proved.
 
 The standard-library-only companion pins THM-3672 and its interval engine,
 checks the bounded hostile exactly, reconstructs all 390 typed coloured
