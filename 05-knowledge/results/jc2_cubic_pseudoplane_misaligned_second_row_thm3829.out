@@ -1,0 +1,14 @@
+theorem=THM-3829-misaligned-second-row-r2z2-10-7-profile-nonentry
+surface=r^2e-z^3+r;c=1;field=algebraically_closed_characteristic_zero
+ansatz=THM3821_plus_r2z2_XY
+branch=X_nonzero;Y=lambdaX;L=T-lambdaS_nonzero
+tower=X_alpha_e6_v10;L_beta_e4_v7
+r4_gate=M_e_v2_R;R_f_units_on_v_roots
+side_branches=N_zero_or_10_5;H_zero_or_10_3
+lower_bounds=p_e2_v3;g_e_v_when_N_nonzero
+terminal=universal_four_terms_plus_e2_v4_Psi
+root_gate=nonzero_root_unique_vprime;origin_odd_2d_plus_1
+scope=fixed_second_row_X_nonzero_closed_with_THM3828;one_sided_and_higher_open
+semantic_sha256=d045d251b2f0016d9909c329a37a8d30c8e4b7c50d0fef84e9000f53012fe8c6
+CHECKS=58
+RESULT=PASS
