@@ -26,6 +26,8 @@ depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
 related:
   - THM-3872-three-cusp-polarization-branches-and-minimal-affine-square-residual-gate
+  - THM-3885-cusp-residual-f-zero-arm-dichotomy-and-quadratic-closure
+  - THM-3886-cusp-residual-equality-seam-second-layer-trichotomy
 script: 04-computation/jc2_cusp_residual_total_degree_filtration_thm3884.py
 output: 05-knowledge/results/jc2_cusp_residual_total_degree_filtration_thm3884.out
 script_sha256: 6e349424d60e346cabb2127c21a977e4c8c26bdf8012975869ecc3ec43c70075

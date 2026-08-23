@@ -330,10 +330,10 @@ support asymptotic or residue.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** THM-3502/3511/3512/3516 retain compiler/owner/carry; THM-3778
   excludes finite-spatial cycles. THM-3804 gives all Smith forms; THM-3824
-  gives fixed-division and one-shell parity tariffs, same-scale separation,
-  and the all-shell stabilizer as the response kernel (zero at odd core).  A
-  The routed-query audit recovers `(0,1,2)` from two necessary off-ray chains.
-  THM-3511's all-depth addendum proves
+  gives fixed-division/one-shell tariffs, same-scale separation, and the
+  all-shell response kernel (zero at odd core).
+  A `D=B=4` audit recovers `(0,1,2)` from two off-ray chains.
+  THM-3511 proves
   ambient active words send every even ray onto the odd half, so the least
   literal two-stage bank has `2^(D+B-1)+B+2` points (`134/256` at `D=B=4`).
   Bounded physical recursion, adaptive/projective chronology and every prize
@@ -355,9 +355,10 @@ support asymptotic or residue.
   residues and zero-root `z^3`.  Root existence and other components are open.
   THM-3851 is a unit-rich torus.  For THM-3854's one-place three-cusp front,
   THM-3864/3872 close constants; THM-3881 contracts all coefficients/gauges
-  to a rank-two norm and closes `T=0` plus `T=hf`, `deg h<=1`.  Audited
-  THM-3884 forces `deg T>=deg f+1` with leading gauge at equality; THM-3885
-  `f=0` is reserved.
+  to a rank-two norm and closes `T=0` plus `T=hf`, `deg h<=1`.  THM-3884
+  forces `deg T>=deg f+1` with leading gauge at equality.  THM-3885 closes
+  the `f=0`, `deg T<=3` cell and classifies two arms.  Audit-pending THM-3886
+  gives the equality-seam `n=1,2,>=3` second-layer trichotomy.
   THM-3874/3877 exclude low-degree sole-simple-branch fields.  THM-3879
   recovers `C3` at two places; THM-3882 forces the smooth-conic boundary for
   every immersed one-place dual and forbids one-place `6A2+4A1` charts.
