@@ -3,23 +3,29 @@ id: THM-3853
 title: "Quadratic-depth inverse-discriminant one-place gluing obstruction"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Two explicit
-  irreducible discriminants have
-  affine normalization A1, glue the four simple rays of the rational
-  THM-3808 binary cubic at one affine point, and have one place at infinity.
-  Nevertheless neither discriminant is realized by any homogeneous
+  irreducible discriminants have affine normalization A1, glue the four
+  simple rays of the rational THM-3808 binary cubic at one affine point, and
+  have one place at infinity.  Neither is realized by any homogeneous
   quadratic perturbation of all four binary-cubic coefficients with the
-  linear packet fixed.  The exact saturated coefficient ideals are [1].
-  This is a bounded inverse-discriminant obstruction, not a cubic-cover or
-  planar-Jacobian theorem.
+  linear packet fixed, for any nonzero target scalar.  This is a bounded
+  inverse-discriminant obstruction, not a cubic-cover or planar-Jacobian
+  theorem.
 source: jc_quartic_c3_construct / inverse binary-cubic discriminant lane, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit checked the
+  TWO INDEPENDENT HOSTILE AUDITS PASS (root / pell_mod9_hostile_audit,
+  2026-08-23).  One checked the
   finite birational parametrizations, localization proof of irreducibility,
   four finite addresses and unique infinity place, and the GL2 endpoint
   criterion for unit representation.  It also inspected the full
   12-parameter coefficient universe, scalar elimination, nonzero
-  saturation, and both hostile controls.  Normal and optimized exact
-  Groebner replays byte-match the frozen 96-gate transcript and both hashes.
+  saturation, and both hostile controls.  The other rederived the
+  discriminant by a resultant, proved
+  both finite A1 normalizations and their four-origin/one-infinity geometry,
+  normalized every nonzero target scalar to one by the exact graded scaling
+  law, and obtained unit ideals in two reversed eleven-variable
+  presentations after forcing q_d[C^2]=-1/4.  It checked lambda=0, the
+  reducible L=A orientation, and q_d=C^2 as hostile controls.  Canonical and
+  independent normal and optimized replays byte-match their frozen outputs.
 depends_on:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
 related:
@@ -33,14 +39,19 @@ output: 05-knowledge/results/jc2_inverse_discriminant_quadratic_depth_thm3853.ou
 script_sha256: 2e5b4a240a4f81c793adc5cda1a3edc5da24056d5e49324e4617a1745be84bed
 output_sha256: f74d5652d24fa1b881d6da4ca0ac3cdcc5da144b42d5011e8c14b27f20c9c0a7
 semantic_sha256: 69a0700ffd7dde6653d1ebdc37d3fdefd70a60c176d41c1352b3783c8d566845
+independent_audit_script: 04-computation/jc2_inverse_discriminant_quadratic_depth_independent_audit_thm3853.py
+independent_audit_output: 05-knowledge/results/jc2_inverse_discriminant_quadratic_depth_independent_audit_thm3853.out
+independent_audit_script_sha256: 53a0a4db1d6c609c37eca22054baacb3311e3a46de3c2e551e0ff834bbda2f48
+independent_audit_output_sha256: 591de48427aee73b7b240c5315942a9d3734704627f3ac39bd18c49e3a030c18
+independent_audit_semantic_sha256: 9fea778c0c01c48fdcafd4571f471941313486462b7e33f55f41f2eadf2e0883
 hash_basis: raw LF bytes
 ---
 
 # THM-3853 -- the first one-place inverse discriminants do not terminate at quadratic depth
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
-algebraically closed field `k` of characteristic zero, and put `R=k[A,C]`.
-Start from the rational
+algebraically closed field `k` of characteristic zero, put `R=k[A,C]`, and
+start from the rational
 homogeneous-linear Delone--Faddeev packet of THM-3808,
 
 ```text
@@ -275,4 +286,12 @@ Reproduction:
 ```bash
 python3 04-computation/jc2_inverse_discriminant_quadratic_depth_thm3853.py
 python3 -O 04-computation/jc2_inverse_discriminant_quadratic_depth_thm3853.py
+python3 04-computation/jc2_inverse_discriminant_quadratic_depth_independent_audit_thm3853.py
+python3 -O 04-computation/jc2_inverse_discriminant_quadratic_depth_independent_audit_thm3853.py
 ```
+
+The independent 130-gate companion derives the discriminant from a
+resultant, reverses both elimination orders, normalizes every nonzero
+`lambda` to one, and reconstructs the two unit ideals after removing the
+forced `q_d[C^2]` coordinate.  Both companions agree in normal, optimized and
+frozen replay.  **QED.**

@@ -345,29 +345,24 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   The former sharp `S3` anchor THM-3811 is closed twice: THM-3841 proves no
   dominant plane map by its three-puncture Jelonek component, and THM-3845
   gives an independent total-degree contradiction.  THM-3842 identifies it
-  as an eightfold base change of the rational cubic tower.  THM-3847's
-  two-puncture (`G_m`) deformation fails both live gates: its completion is
-  literally `A2_(C,Z)` and globally monogenic, so deleting ramification makes
-  the different a nonconstant unit; its ramification normalization is also
-  not polynomially uniruled, so THM-3841 blocks a plane atlas independently.
-  Its normalization is injective with two cusp images, not the
-  self-identifying Russell arm required by THM-3843.  THM-3844's one-place
-  two-cusp quartic also remains globally monogenic; its two local cusp classes
-  fold onto one `Z/3` direction, so cusp count is not torsion rank.
+  as an eightfold base change of the rational cubic tower.  THM-3847's `G_m`
+  deformation has source `A2`, is monogenic with a different unit, and has an
+  injective non-uniruled branch rather than a Russell arm.  THM-3844's
+  one-place two-cusp quartic is also monogenic and has only one `Z/3` class.
   THM-3850 closes nonconstant one-variable profiles; THM-3852 closes affine
   profiles containing a line: a companion has at least two places.  THM-3851
   attains `(Z/3)^2`, but every chart has two places; its `S3` closure is the
   unit-rich torus `(G_m)^2`, not a plane.  A replacement must be one-place,
   constant-unit and nonmonogenic outside both grammars.
-  The positive anchor is THM-3785's one-place Russell pseudo-plane; a Darboux
-  pair there would have field degree divisible by three and at least nine.
-  THM-3843 forces a noninjective immersed arm.  THM-3846 gives formal Darboux
-  lifts but a nonrational canonical resummation; THM-3855 gives all-orders
-  inverse-discriminant lifts past order five, including a formal connected
-  normal nonmonogenic `S3` order, but no polynomial termination.  THM-3849's
-  conductor records the residual `2[L]` collision graph.  The live target is
-  a higher-normal algebraization with that sidecar; THM-3839 excludes only
-  one constant bichromatic tower.
+  THM-3856 eliminates every transverse-degree-at-most-two polynomial Keller
+  pair: all are automorphisms.  The positive anchor is THM-3785's one-place
+  Russell pseudo-plane, whose arm THM-3843 forces to be a noninjective
+  immersion.  THM-3846 gives formal Darboux lifts; THM-3853 excludes the first
+  one-place inverse discriminants at quadratic coefficient depth, whereas
+  THM-3855 lifts every order-five perturbation to a connected normal
+  nonmonogenic formal `S3` order; its stronger right-equivalence is under
+  audit.  Polynomial termination from degree three, THM-3849's conductor
+  sidecar, and a plane atlas remain live; THM-3839 excludes one constant tower.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692

@@ -959,6 +959,23 @@ this shows why the branch discriminant alone is insufficient: the same
 branch-level success can sit above either unavoidable source characters or
 an index form whose coefficients remain in the maximal ideal.
 
+The independently audited THM-3853 makes the finite/formal boundary sharp.
+For both `L=C` and `L=A+C`, all twelve homogeneous-quadratic coefficient
+parameters lead to a unit elimination ideal; no quadratic row realizes
+`Delta_0+lambda L^5` for `lambda!=0`.  This does not conflict with THM-3855:
+the formal recursion necessarily continues beyond its first quadratic term.
+The first live polynomial coefficient depth is three.
+
+An unrelated incoming classification, THM-3856, reaches the same numerical
+boundary in the Russell normal coordinate: every polynomial Keller pair of
+transverse degree at most two is an automorphism, so cubic normal depth is
+first live there too.  There is no map identifying binary-cubic coefficient
+degree with Russell transverse degree; the shared threshold is not a theorem
+bridge.  It is nevertheless a useful portfolio signal: two independently
+typed low-degree grammars now direct the next exact searches to cubic depth,
+with the index-form/content sidecar in one lane and the conductor/pole sidecar
+in the other.
+
 The live JC lanes are consequently four-or-more-term sextics, genuinely
 higher canonical rows and higher-normal inverse-discriminant lifts that keep
 their full coefficient sidecars.  More elimination inside the displayed
