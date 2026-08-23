@@ -1,0 +1,10 @@
+theorem=THM-3855-formal-inverse-discriminant-lift-and-algebraization-gate
+base=(A,C,7A,-3A);gradient_det=640000;gradient_ideal=(A,C)^3
+target=Delta0+C^5;formal_lift=ALL_ORDERS
+first_correction=C^2*(91449/40000,151263/40000,-194481/20000,-1/4)
+finite_replay=through_degree_12;first_truncation_residual_degree=13
+index=coefficients_remain_in_(A,C);unit_value=NONE
+scope=formal_only;polynomial_algebraization_and_connected_Keller_surface_OPEN
+semantic_sha256=264a006df84eaac70a48a6a6836809ad52a29d772be4e312703e910bb370eb46
+CHECKS=60
+RESULT=PASS
