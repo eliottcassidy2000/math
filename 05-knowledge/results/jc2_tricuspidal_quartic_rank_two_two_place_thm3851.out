@@ -1,0 +1,10 @@
+theorem=THM-3851-tricuspidal-quartic-rank-two-two-place-tradeoff
+branch=tricuspidal_quartic;finite_singularities=3A2
+chosen_bitangent_places=2;fourfold_line=NONE
+quadratic_resolvent_affine_class_group=Z3_plus_Z3
+root_boundary_configurations=40;smith_profile=1^6_3_3_uniform
+local_torsion_rank=2;deck_character=anti_invariant
+scope=rank_two_two_place_tradeoff_no_Keller_counterexample
+semantic_sha256=5b5e5e17390dbd80042a334cf1f53d04fd548ec80520b4fc806a900d87874d2c
+CHECKS=763
+RESULT=PASS
