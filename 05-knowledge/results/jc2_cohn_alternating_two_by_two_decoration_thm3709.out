@@ -1,9 +1,10 @@
 theorem=THM-3709-Cohn-alternating-two-by-two-decoration-nonentry
 right_orders=E+(w)E-(u),E-(u)E+(w);left_orders=E+(f)E-(g),E-(g)E+(f)
-right_parameters=nonzero_not_both_constant;left_parameters=arbitrary_polynomial
+right_parameters=both_nonzero;left_parameters=arbitrary_polynomial
 leading_obstructions=ordinary_or_directional_derivative_with_forced_linear_factor
-hostile_degree_grid=both_nonconstant:1..4x1..4;mixed_nonzero_constant:1..4;deg(left_lead):0..4;four_orders=PASS
+constant_right_resonance=broughton_X_plus_X2T;hamiltonian_cokernel=PASS
+hostile_degree_grid=both_nonconstant:1..4x1..4;mixed:1..4;constant_slope:1..6;hamiltonian:0..15;four_orders=PASS
 decorated_determinants=1;exposed_row_identities=PASS
-semantic_sha256=fe58dcea6ced0d07fff9785678be0aee1cdf4469be54c0b2de71937c70d5cb79
-CHECKS=1194
+semantic_sha256=3f6ba7550d4acdffcae88d4aaaa412f43266d121b76a90a77d765aee0d7c7ab8
+CHECKS=1502
 RESULT=PASS

@@ -5,21 +5,23 @@ status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Let C be Cohn's non-elementary determinant-one matrix.  Decorate it by
   either alternating pair of right elementary factors whose parameters are
-  nonzero and not both constant, and by either alternating pair of left
-  elementary factors with arbitrary polynomial parameters.  The resulting
-  matrix is never a Jacobian matrix.  The highest curl is a nonzero ordinary
-  or directional derivative of a polynomial carrying a forced linear factor.
-  This closes the complete nondegenerate alternating two-by-two Cohn repair
-  cell, not an identity shortening, an all-constant right word, longer reduced
-  words, general non-elementary classes, or JC(2).
+  both nonzero, and by either alternating pair of left elementary factors
+  with arbitrary polynomial parameters.  The resulting matrix is never a
+  Jacobian matrix.  Positive-degree right data die by an ordinary or
+  directional leading-curl obstruction.  The remaining constant resonance
+  is a linear form of the Broughton polynomial X+X^2 T, whose Hamiltonian
+  cokernel kills the second correction.  This closes the complete
+  nonidentity alternating two-by-two Cohn repair cell, not an identity
+  shortening, longer reduced words, general non-elementary classes, or JC(2).
 source: root / 2026-08-22
 audit: >
   PASS.  An independent audit rederived both right products, both exposed
-  left rows, the arbitrary positive-degree leading forms, and all four mixed
-  nonzero-constant cases.  It checked the constant and positive-degree
-  left-parameter split, the ordinary- and directional-derivative kernels,
-  the strict opposite-component degree gap, and the E_2/Wright counterexample
-  consequence without a normality assumption.
+  left rows, the arbitrary positive-degree leading forms, all four mixed
+  nonzero-constant cases, and the all-constant resonance.  It checked the
+  constant and positive-degree left-parameter split, the ordinary- and
+  directional-derivative kernels, the Broughton normal form and homogeneous
+  Hamiltonian-kernel descent, and the E_2/Wright counterexample consequence
+  without a normality assumption.
 depends_on:
   - THM-3652-wright-elementary-jacobian-criterion-reduced-word-reproof
   - THM-3653-cohn-factorial-repair-and-weighted-rectangle-holonomy
@@ -27,9 +29,9 @@ related:
   - THM-3655-cohn-alternating-two-source-factor-row-obstruction
 script: 04-computation/jc2_cohn_alternating_two_by_two_decoration_thm3709.py
 output: 05-knowledge/results/jc2_cohn_alternating_two_by_two_decoration_thm3709.out
-script_sha256: 091f88d5300f2b5597297815f13a51ee404ffdefb286ece253af3ce235f35976
-output_sha256: acc9653075a3a921f7a4a715afe9f25c64c2fe3cf776ba6e5ece329caa7db39b
-semantic_sha256: fe58dcea6ced0d07fff9785678be0aee1cdf4469be54c0b2de71937c70d5cb79
+script_sha256: 4ddf624d34b0503f33f0e29e30a60ce694f658ed6bccbcbb76deb68642fee14f
+output_sha256: 5bde3ec902181f77f9bf2d30a70e348b50917c37d3e19bded155ab44ec0caf52
+semantic_sha256: 3f6ba7550d4acdffcae88d4aaaa412f43266d121b76a90a77d765aee0d7c7ab8
 hash_basis: raw LF bytes
 ---
 
@@ -42,7 +44,7 @@ THM-3655.  Elementary decoration preserves Cohn's nontrivial
 of a polynomial map, its determinant would be one and Wright's criterion
 would certify that the map is not an automorphism: it would be a planar
 Jacobian counterexample.  The theorem rules out the entire nondegenerate
-alternating two-left/two-right cell of that construction grammar.
+alternating two-left/two-right cell with no identity right factor.
 
 Work over a characteristic-zero field `k`.  Put
 
@@ -53,8 +55,7 @@ C=[A B;G D],                                  det C=1,       (1)
 E_+(h)=[1 h;0 1],              E_-(h)=[1 0;h 1].       (2)
 ```
 
-Let `u,w in k[x,y]` be nonzero and not both constant.  First suppose both are
-nonconstant, and write
+Let `u,w in k[x,y]` be nonzero.  First suppose both are nonconstant, and write
 
 ```text
 p=deg u>=1,                q=deg w>=1,
@@ -75,7 +76,7 @@ R=E_+(w)E_-(u)       or       R=E_-(u)E_+(w).         (5)
 ```
 
 Thus all four alternating two-left/two-right orders are impossible whenever
-the right word is nondegenerate in the stated sense, with no degree bound.
+both right factors are nonidentity, with no degree bound.
 
 ## 1. The row-combination gate
 
@@ -250,9 +251,113 @@ halves.  If `w=c in k*`, each leading row is `(F,cF)` and the operator is
 `partial_y-c partial_x`, whose kernel is `k[x+cy]`; the displayed factors
 carry `x`.  If `u=c in k*`, the leading second components carry `y+cx`, and
 their `x`-derivatives cannot vanish.  This proves `(8)` in all four mixed
-cases and completes the nondegenerate statement.
+cases.
 
-## 5. Counterexample-search meaning and boundary
+## 5. The all-constant resonance is a Broughton obstruction
+
+It remains to take `u,w in k*`.  Both constant right words have the form
+
+```text
+R=[a b;c d] in SL_2(k),                b=w!=0, c=u!=0.    (23)
+```
+
+Put
+
+```text
+ell_1=ay+cx,                  ell_2=by+dx.                (24)
+```
+
+The quadratic leading rows of `N=CR` are
+
+```text
+x(ell_1,ell_2),              -y(ell_1,ell_2).             (25)
+```
+
+First expose `rho_2+h rho_1`.  If `deg h=m>=1`, write
+`h_m=x^m p(t)`, where `t=y/x` and `deg p<=m`.  Vanishing of its top curl
+would give
+
+```text
+[bt^2+(a+d)t+c]p'
+    =[(m+1)bt+(m+2)d-a]p.                                (26)
+```
+
+If `r=deg p`, comparison of the top powers of `t` in `(26)` gives
+`r=m+1`, impossible because `b!=0`.  Thus a closed exposed row forces
+`h=g in k`.  Its curl vanishes exactly when
+
+```text
+g(a-2d)=c,                         gb=d-2a.              (27)
+```
+
+These equations and `ad-bc=1` imply
+
+```text
+2(a-d)^2=1.                                                (28)
+```
+
+Away from `(28)`, even the exposed row cannot close.  At the resonance put
+
+```text
+s=a-d,       X=gx-y,       Y=(a-2d)x-by.                 (29)
+```
+
+Then `X,Y` are independent because `J(X,Y)=3s!=0`, and direct integration
+of the exposed row gives the potential
+
+```text
+Q=2sX+(1/3)X^2Y.                                         (30)
+```
+
+Thus the only survivor is, after a linear rescaling, the Broughton
+polynomial `X+X^2T`.  The complementary row `rho_1` has
+
+```text
+curl(rho_1)=Y.                                           (31)
+```
+
+If the remaining left parameter `f` closed `rho_1+f dQ`, exterior
+differentiation would therefore force
+
+```text
+J(f,Q)=Y.                                                (32)
+```
+
+Equation `(32)` has no polynomial solution.  Indeed, the cubic part is
+`Q_3=X^2Y/3`.  For a homogeneous polynomial `H`, expansion in monomials
+shows
+
+```text
+J(H,X^2Y)=0     iff     H is a scalar power of X^2Y.     (33)
+```
+
+More explicitly, `J(X^iY^j,X^2Y)=(i-2j)X^(i+1)Y^j`, up to the fixed
+nonzero coordinate determinant.  If `f_m` is the top homogeneous part of a
+hypothetical solution of `(32)`, degree comparison gives
+`J(f_m,Q_3)=0`.  Hence `m=3j` and `f_m=lambda Q_3^j`.  Subtracting
+`lambda Q^j` leaves `(32)` unchanged and strictly lowers the degree.
+Iterating reduces `f` to a constant, whose bracket with `Q` is zero,
+contradicting the nonzero right side `Y`.
+
+For the other exposed row, write `h_m=y^m p(x/y)`.  Since `c!=0`, the same
+top-coefficient comparison again forces `deg p=m+1`.  A constant `h=f`
+can close only when
+
+```text
+fc=a-2d,                         f(d-2a)=b,              (34)
+```
+
+which gives the same resonance `(28)`.  Now take
+
+```text
+X=x-fy,                 Y=cx+(2a-d)y.                  (35)
+```
+
+The exposed potential is again `(30)`, while the complementary row has curl
+`-Y`.  Its final correction would require `J(g,Q)=-Y`, excluded by the same
+descent.  This proves `(8)` for every all-constant nonzero right word.
+
+## 6. Counterexample-search meaning and boundary
 
 Cohn's matrix is determinant one and non-elementary.  Multiplication by
 elementary matrices preserves both facts.  If all rows of one of the
@@ -264,10 +369,9 @@ cancel the coordinate factor in the top curl, no matter how high either
 side's degree is.
 
 The theorem does **not** treat a zero right parameter (an identity shortening),
-an all-constant right word, more than two elementary factors on either side,
-another non-elementary `SL_2/E_2` core, or `JC(2)`.  Its positive successor
-is therefore sharply typed: settle the constant/shortened boundary, or make
-the reduced word longer.
+more than two elementary factors on either side, another non-elementary
+`SL_2/E_2` core, or `JC(2)`.  Its positive successor is therefore sharply
+typed: settle the shortened boundary, or make the reduced word longer.
 
 Reproduce the exact leading-form audit with
 
@@ -277,5 +381,6 @@ python3 -B -O 04-computation/jc2_cohn_alternating_two_by_two_decoration_thm3709.
 ```
 
 The symbolic companion reconstructs all four products before extracting the
-leading pieces, and checks `(11)--(22)` on hostile grids of independent
-right and left degrees.  **QED.**
+leading pieces, checks `(11)--(22)` on hostile grids of independent right and
+left degrees, and verifies `(23)--(35)` together with the Hamiltonian descent
+on a degree grid.  **QED.**

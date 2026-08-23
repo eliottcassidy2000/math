@@ -273,6 +273,193 @@ for degree in range(1, 5):
             ).hexdigest()
         )
 
+# All-constant nonzero right parameters reduce to a general constant
+# R=[[aa,bb],[rrc,dd0]] in SL_2 with bb,rrc nonzero.  The only possible
+# constant exposed-row repair is a Broughton-type resonance.
+aa, bb, rrc, dd0, gg, ff = sp.symbols(
+    "aa bb rrc dd0 gg ff", nonzero=True
+)
+R0 = sp.Matrix(((aa, bb), (rrc, dd0)))
+N0 = sp.expand(C * R0)
+rows0 = (row(N0, 0), row(N0, 1))
+ell1 = aa * y + rrc * x
+ell2 = bb * y + dd0 * x
+gate(
+    all(
+        sp.expand(actual - expected) == 0
+        for actual, expected in zip(
+            (homogeneous_part(entry, 2) for entry in rows0[0]),
+            (x * ell1, x * ell2),
+        )
+    ),
+    "constant R top row",
+)
+gate(
+    all(
+        sp.expand(actual - expected) == 0
+        for actual, expected in zip(
+            (homogeneous_part(entry, 2) for entry in rows0[1]),
+            (-y * ell1, -y * ell2),
+        )
+    ),
+    "constant R bottom row",
+)
+Y_lower = (aa - 2 * dd0) * x - bb * y
+Y_upper = rrc * x + (2 * aa - dd0) * y
+gate(sp.expand(curl(rows0[0]) - Y_lower) == 0, "constant R top curl")
+gate(sp.expand(curl(rows0[1]) + Y_upper) == 0, "constant R bottom curl")
+
+lower_constant_row = (
+    sp.expand(rows0[1][0] + gg * rows0[0][0]),
+    sp.expand(rows0[1][1] + gg * rows0[0][1]),
+)
+upper_constant_row = (
+    sp.expand(rows0[0][0] + ff * rows0[1][0]),
+    sp.expand(rows0[0][1] + ff * rows0[1][1]),
+)
+gate(
+    sp.expand(
+        homogeneous_part(curl(lower_constant_row), 1)
+        - ((gg * (aa - 2 * dd0) - rrc) * x
+           + (dd0 - 2 * aa - gg * bb) * y)
+    ) == 0,
+    "lower constant closure equations",
+)
+gate(
+    sp.expand(
+        homogeneous_part(curl(upper_constant_row), 1)
+        - ((aa - 2 * dd0 - ff * rrc) * x
+           + (ff * (dd0 - 2 * aa) - bb) * y)
+    ) == 0,
+    "upper constant closure equations",
+)
+
+# Check the two slope equations used to exclude every positive-degree
+# exposed coefficient when bb,rrc are nonzero.
+tt = sp.symbols("tt")
+for degree in range(1, 7):
+    pcoeff = sp.symbols(f"ptop_{degree}_0:{degree + 1}")
+    ptt = sum(pcoeff[index] * tt**index for index in range(degree + 1))
+    lower_slope = sp.expand(
+        (bb * tt**2 + (aa + dd0) * tt + rrc) * sp.diff(ptt, tt)
+        - ((degree + 1) * bb * tt + (degree + 2) * dd0 - aa) * ptt
+    )
+    upper_slope = sp.expand(
+        (rrc * tt**2 + (aa + dd0) * tt + bb) * sp.diff(ptt, tt)
+        - ((degree + 1) * rrc * tt + (degree + 2) * aa - dd0) * ptt
+    )
+    gate(
+        sp.expand(sp.Poly(lower_slope, tt).coeff_monomial(tt ** (degree + 1))
+                  + bb * pcoeff[degree]) == 0,
+        "lower slope top coefficient",
+    )
+    gate(
+        sp.expand(sp.Poly(upper_slope, tt).coeff_monomial(tt ** (degree + 1))
+                  + rrc * pcoeff[degree]) == 0,
+        "upper slope top coefficient",
+    )
+
+s0 = aa - dd0
+
+# Lower exposed-row resonance: substitute its two closure equations.
+lower_sub = {
+    bb: (dd0 - 2 * aa) / gg,
+    rrc: gg * (aa - 2 * dd0),
+}
+R_lower = sp.simplify(R0.subs(lower_sub))
+N_lower = sp.simplify(C * R_lower)
+lower_rows = (row(N_lower, 0), row(N_lower, 1))
+beta_lower = (
+    sp.expand(lower_rows[1][0] + gg * lower_rows[0][0]),
+    sp.expand(lower_rows[1][1] + gg * lower_rows[0][1]),
+)
+X_lower = gg * x - y
+Y_lower_res = (aa - 2 * dd0) * x - lower_sub[bb] * y
+Q_lower = sp.expand(2 * s0 * X_lower + X_lower**2 * Y_lower_res / 3)
+gate(sp.simplify(R_lower.det() - 2 * s0**2) == 0, "lower resonance determinant")
+gate(sp.expand(sp.diff(X_lower, x) * sp.diff(Y_lower_res, y)
+               - sp.diff(X_lower, y) * sp.diff(Y_lower_res, x) - 3 * s0) == 0,
+     "lower resonance coordinates")
+gate(sp.expand(beta_lower[0] - sp.diff(Q_lower, x)) == 0,
+     "lower Broughton potential x")
+gate(sp.expand(beta_lower[1] - sp.diff(Q_lower, y)) == 0,
+     "lower Broughton potential y")
+gate(sp.expand(curl(lower_rows[0]) - Y_lower_res) == 0,
+     "lower complementary curl")
+
+# Upper exposed-row resonance is the source/target-dual calculation.
+upper_sub = {
+    rrc: (aa - 2 * dd0) / ff,
+    bb: ff * (dd0 - 2 * aa),
+}
+R_upper = sp.simplify(R0.subs(upper_sub))
+N_upper = sp.simplify(C * R_upper)
+upper_rows = (row(N_upper, 0), row(N_upper, 1))
+beta_upper = (
+    sp.expand(upper_rows[0][0] + ff * upper_rows[1][0]),
+    sp.expand(upper_rows[0][1] + ff * upper_rows[1][1]),
+)
+X_upper = x - ff * y
+Y_upper_res = upper_sub[rrc] * x + (2 * aa - dd0) * y
+Q_upper = sp.expand(2 * s0 * X_upper + X_upper**2 * Y_upper_res / 3)
+gate(sp.simplify(R_upper.det() - 2 * s0**2) == 0, "upper resonance determinant")
+gate(sp.expand(sp.diff(X_upper, x) * sp.diff(Y_upper_res, y)
+               - sp.diff(X_upper, y) * sp.diff(Y_upper_res, x) - 3 * s0) == 0,
+     "upper resonance coordinates")
+gate(sp.expand(beta_upper[0] - sp.diff(Q_upper, x)) == 0,
+     "upper Broughton potential x")
+gate(sp.expand(beta_upper[1] - sp.diff(Q_upper, y)) == 0,
+     "upper Broughton potential y")
+gate(sp.expand(curl(upper_rows[1]) + Y_upper_res) == 0,
+     "upper complementary curl")
+
+# In normalized Broughton coordinates Q/(2s)=X+X^2T.  Its Hamiltonian
+# derivation kills every Q-power.  The homogeneous cubic kernel is exactly
+# the span of (X^2T)^j in each degree, which powers the degree descent.
+XX, TT = sp.symbols("XX TT")
+q_broughton = XX + XX**2 * TT
+
+
+def broughton_derivation(expr: sp.Expr) -> sp.Expr:
+    return sp.expand(
+        XX**2 * sp.diff(expr, XX)
+        - (1 + 2 * XX * TT) * sp.diff(expr, TT)
+    )
+
+
+for power in range(0, 8):
+    gate(broughton_derivation(q_broughton**power) == 0,
+         "Broughton kernel power")
+for total_degree in range(0, 16):
+    for j in range(total_degree + 1):
+        i = total_degree - j
+        monomial = XX**i * TT**j
+        cubic_bracket = sp.expand(
+            sp.diff(monomial, XX) * sp.diff(XX**2 * TT, TT)
+            - sp.diff(monomial, TT) * sp.diff(XX**2 * TT, XX)
+        )
+        gate(
+            sp.expand(cubic_bracket - (i - 2 * j) * XX ** (i + 1) * TT**j) == 0,
+            "homogeneous cubic kernel weight",
+        )
+        gate((cubic_bracket == 0) == (i == 2 * j),
+             "homogeneous cubic kernel support")
+
+semantic_rows.append(
+    "constant-resonance:" + hashlib.sha256(
+        "|".join(
+            sp.srepr(value)
+            for value in (
+                Q_lower,
+                Q_upper,
+                Y_lower_res,
+                Y_upper_res,
+                broughton_derivation(6 * TT),
+            )
+        ).encode()
+    ).hexdigest()
+)
+
 # Reconstruct both alternating left words on a nonlinear hostile pair and
 # verify the exposed row and preserved determinant directly.
 u_probe = x**3 + x * y + 2 * y + 1
@@ -304,9 +491,10 @@ semantic = hashlib.sha256("\n".join(semantic_rows).encode()).hexdigest()
 
 print("theorem=THM-3709-Cohn-alternating-two-by-two-decoration-nonentry")
 print("right_orders=E+(w)E-(u),E-(u)E+(w);left_orders=E+(f)E-(g),E-(g)E+(f)")
-print("right_parameters=nonzero_not_both_constant;left_parameters=arbitrary_polynomial")
+print("right_parameters=both_nonzero;left_parameters=arbitrary_polynomial")
 print("leading_obstructions=ordinary_or_directional_derivative_with_forced_linear_factor")
-print("hostile_degree_grid=both_nonconstant:1..4x1..4;mixed_nonzero_constant:1..4;deg(left_lead):0..4;four_orders=PASS")
+print("constant_right_resonance=broughton_X_plus_X2T;hamiltonian_cokernel=PASS")
+print("hostile_degree_grid=both_nonconstant:1..4x1..4;mixed:1..4;constant_slope:1..6;hamiltonian:0..15;four_orders=PASS")
 print("decorated_determinants=1;exposed_row_identities=PASS")
 print(f"semantic_sha256={semantic}")
 print(f"CHECKS={CHECKS}")
