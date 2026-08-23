@@ -1,0 +1,10 @@
+THM-3720 exact W003 final-family audit
+placement = P(1-3n,1-2n,1), Q(-n-2,-2,n-2,2n-2), n>=3
+triple primitive and two-term charge polynomial P(U) PASS
+middle/lowest 2x2 differential system in all seven residues PASS
+system determinant nonzero and Z rational in U PASS
+polynomial pullback gives Z in C[U]
+scalar = K^(delta-2) E_delta Phi(U)
+delta=7 divisibility and delta=1 degree gates PASS
+scope = final residual W003 family D; W003 is complete
+ALL CHECKS PASSED
