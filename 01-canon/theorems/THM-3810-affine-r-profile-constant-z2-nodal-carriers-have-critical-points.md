@@ -2,7 +2,7 @@
 id: THM-3810
 title: "Affine R-profile constant Z2 nodal carriers have critical points"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the
   c=1 cubic pseudo-plane, every carrier
   A=e^2-z/3+r(ae+b)+h z^2, for arbitrary a,b,h, has a critical point.
   The slope u=r/z again compresses criticality to a quartic and cubic.  If
@@ -12,12 +12,14 @@ status: >
   Hence no affine r-profile plus constant z^2 repair has a Darboux mate.
 source: jc-cohn-boundary / affine mixed-cell slope-resultant lane, 2026-08-23
 audit: >
-  PROOF CANDIDATE.  The exact companion has 26 active gates checking all
-  Hamiltonian signs, the Casimir syzygy, the compact affine-slope resultant,
-  every coefficient in the boundary-only contradiction, the h=0 seam,
-  fixed projective u-degrees, and denominator-free source/critical
-  reconstruction.  Normal and optimized runs byte-match the frozen
-  transcript.  Independent hostile audit remains required.
+  INDEPENDENT HOSTILE AUDIT PASS (jc_zero_debt_lift, 2026-08-23).  The
+  Hamiltonian packet, Casimir syzygy, affine slope compression, compact
+  residual resultant, pure-power boundary implication and all four decisive
+  coefficient comparisons, separately recomputed h=0 seam, fixed
+  quartic/cubic u-degrees, and denominator-free critical reconstruction were
+  independently rederived.  The 26 active gates pass normally and under
+  Python -O, both runs byte-match the frozen transcript, raw hashes match,
+  and the agent-facing documentation check passes.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
 related:
@@ -33,7 +35,7 @@ hash_basis: raw LF bytes
 
 # THM-3810 -- every affine-profile mixed carrier remains critical
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.**  Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over
 an algebraically closed field `k` of characteristic zero.  Retain the smooth
 symplectic `c=1` cubic pseudo-plane
 
