@@ -376,10 +376,11 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   THM-3167/3172 retain diagonal/field/owner gates. THM-3212--3437 close named
   `B,C,E`, clutch, transport, sparse, character, Prüfer, and Artin-jet lanes,
   but no section/transfer; THM-3306 sidecars are FINITE-EXACT only.
-- **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
-  all `2665` residuals in `7395` rows (`2384` divisor, `281` rho).
-  `d=6518` needs `p=29`; the FINITE-EXACT `d=10001` barcode has no general-`d`
-  force. THM-3182--3314 give reset/thickness/Clifford and sheet/cone data but
+- **Factorial:** THM-3483 closes exact-support quadratics through `r=10028`.
+  In `9980<=d<=10030`, `9/36/6` rows close by exit/divisor/rho; at `d=9996`
+  the divisor barcodes leave `3998` and `p=19` is the first ordered killer.
+  This refutes only barcode completeness; `d=6518` needs `p=29`.
+  THM-3182--3314 give reset/thickness/Clifford and sheet/cone data but
   leave endpoint ancestry/positivity. THM-3465/3470 close named character/shear
   cells; support `5` and mixed cells remain OPEN. THM-3466 need not separate;
   THM-3732's `F12/F13` seam fails on two edges. HFC-null still needs an

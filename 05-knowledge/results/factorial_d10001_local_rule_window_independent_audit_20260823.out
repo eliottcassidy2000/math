@@ -1,0 +1,16 @@
+FACTORIAL_D10001_LOCAL_RULE_INDEPENDENT_AUDIT_20260823
+status=FINITE-EXACT;candidate_computation=PASS;scope_wording=REPAIR
+universe=d=9980..10030;exact_support_degrees=1..d-2;orientation=F=A_(d-2)^d,G=A_(d-1)^d
+routes=(repeated-factor/streaming/bitset/recurrence;Kummer-carry/gift-wrap/set/literal-sum);imports_repository_modules=False
+direct_integer_controls=(3700, 276, 246, 30)
+counts=(51, 9, 42, 36, 6, 0);exit_histogram=(('d_minus_1_prime_power', 2), ('d_minus_2_prime', 1), ('d_minus_3_prime', 1), ('d_minus_4_prime', 1), ('d_minus_5_prime', 1), ('d_minus_6_prime', 1), ('d_prime', 2))
+rho_rows=((9982,11,(2218,6654)),(9986,3,(3994,5991)),(9988,7,(6658,)),(9994,11,(3331,6662)),(9996,19,(3998,)),(10030,7,(3343,6686)))
+anchor=(10001,'divisor',5,((2,((511,256,256),(1023,512,512),(2047,1024,1024),(16383,8192,8192)),9999,15,(256,512,768,1024,1280,1536,1792,8192,8448,8704,8960,9216,9472,9728,9984)),(5,((1562,3125,6250),),15,0,())),(),())
+hostile=(9996,'rho',19,((5,((2,5,10),(12,25,50),(62,125,250),(1562,3125,6250),(1,2,1250)),9994,4670,()),(1999,((2,1999,7996),),4670,1,(3998,))),((2,'divides_d',(),1,1,None),(3,'divides_d',(),1,1,None),(5,'admissible',((2,5,10),(12,25,50),(62,125,250),(1562,3125,6250),(1,2,1250)),1,1,None),(7,'divides_d',(),1,1,None),(11,'admissible',((0,1,5),(2,11,55),(24,121,605),(266,1331,6655),(533,2662,2662),(4,11,11)),1,1,None),(13,'inadmissible',(),1,1,('F',0,0)),(17,'divides_d',(),1,1,None),(19,'admissible',((2,19,171),(40,361,2888),(762,6859,6859)),1,0,None)),(3998,))
+hostile_full_bank_first_killer=19;admissible_killers=(19,23,29,31,37,41,43,47,59,61,67,73,79,83,89,97,101)
+route_record_equal=True;candidate_full_semantic_sha256=f2d02ba3f51d6dd5b47a0976c775b307a3b73b64e01affaecf198f349a635213;compact_audit_semantic_sha256=a26de54d7bf92d5c7e02820f9ca46d5a50ab24729e180a388781ddafe9dd4e2f
+stronger_finite_consequence=with_THM3483_r_le_9998,the_window_closes_all_exact-support_rows_through_d=10030,hence_r_le_10028
+scope_repair=refutes_completeness_of_the_THM3475_all-divisor_Newton-barcode_empty-intersection_criterion;does_not_refute_every_possible_divisor-place_argument
+p19_scope=first_admissible_killer_in_the_declared_ordered_prime_bank;not_a_uniqueness_claim
+gates=14772
+STATUS=PASS

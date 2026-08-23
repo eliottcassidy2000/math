@@ -17,8 +17,10 @@ status: >
   construction or arbitrary-support FC/SFC theorem.  Two further dual exact
   blocks close every row through d=10000: across 2606<=d<=10000, 4730/7395
   rows take inherited exits, divisor places close 2384/2665 residuals, and
-  admissible nondivisor residues close the remaining 281.  Thus the current
-  exact-support boundary is r<=9998; d=10001 is untested.
+  admissible nondivisor residues close the remaining 281.  A separately
+  audited 51-row window through d=10030 then closes 9 rows by inherited exits,
+  36 by divisor barcodes and 6 by admissible nondivisor barcodes.  Thus the
+  current exact-support boundary is r<=10028; d=10031 is untested.
 audit: >
   The residue congruence, extreme-vertex hull criterion, p=2 boundary, zero
   coefficients, slope-zero typing, and five large pair ledgers were
@@ -28,7 +30,11 @@ audit: >
   rho=0 hostile and exact empty intersections for all five former packets.
   Separate primary and self-contained block companions agree on the complete
   1395-row record through d=4000, including 20 inadmissible profiles that are
-  skipped rather than used.  Normal and optimized replays are byte-identical.
+  skipped rather than used.  A further independent window audit uses two
+  no-import formula routes and 3,700 direct coefficient controls.  It repairs
+  the scope of the d=9996 hostile: the THM-3475 all-divisor barcode
+  intersection is incomplete there, while p=19 is only the first admissible
+  killer in the declared bank.  Normal and optimized replays are byte-identical.
 source: root/factorial-jacobian-alternation/2026-08-15
 depends_on:
   - THM-3152-multi-place-newton-degree-barcode-and-euclidean-flag-census
@@ -78,6 +84,21 @@ extension_block_semantic_sha256:
   - 7f8ab74ae9fae027f32fd7eabaf0338c217319e274594bd603859a1bbcca28bd
   - d90179fdebd48dd82cd368b957c9602fbd287774287de0fecb73b4a84dca69f3
 extension_combined_semantic_sha256: 4a364bbafdfef0dc6d905063c9570b987e00eca2506506b8160ce24e453878bf
+window_scripts:
+  - 04-computation/factorial_d10001_local_rule_window_20260823.py
+  - 04-computation/factorial_d10001_local_rule_window_independent_audit_20260823.py
+window_outputs:
+  - 05-knowledge/results/factorial_d10001_local_rule_window_20260823.out
+  - 05-knowledge/results/factorial_d10001_local_rule_window_independent_audit_20260823.out
+window_script_sha256:
+  - 03af13ffa39a785c044c24ee589c4e156375ea21d87178e72c69651de4241ffe
+  - 6e467e8456d12d47d849d24bf7771ad330b1ec5a8e059b466c366650da443fe9
+window_output_sha256:
+  - ea7d26fea7a646e7c960938e0fc737d9c82a734df85edd125a2a8c9b61785263
+  - dc958efde34b5d4c5ea0270ab36336310dcc6a90b85c2501d3e86fdeeea8526d
+window_semantic_sha256:
+  - f2d02ba3f51d6dd5b47a0976c775b307a3b73b64e01affaecf198f349a635213
+  - a26de54d7bf92d5c7e02820f9ca46d5a50ab24729e180a388781ddafe9dd4e2f
 hash_basis: raw bytes
 ---
 
@@ -379,24 +400,40 @@ rho-inadmissible; the admissible `p=29` barcode has a gap from `5669` to
 `5887` and kills it.  Thus the earlier observed killer bound `p<=19` was only
 finite-range evidence, and even `p<=23` is false on the present range.
 
+A separate exact window covers `9980<=d<=10030`.  Its 51 rows split into
+9 inherited exits and 42 residuals; THM-3475 divisor barcodes close 36 and
+THM-3483 admissible nondivisor barcodes close the remaining 6.  No row
+survives.  The anchor `d=10001` closes by the intersection of its `p=2` and
+`p=5` divisor packets.  Five steps away, `d=9996` leaves degree `3998` after
+all THM-3475 divisor barcodes, and the first admissible killer in the ordered
+bank is `p=19`, by the exact gap
+
+```text
+3059 < 3998 < 6859.                                        (26d)
+```
+
+This refutes completeness of that specific all-divisor barcode criterion,
+not every possible divisor-place argument.  Later admissible primes also kill
+`3998`; no uniqueness claim for `p=19` is made.
+
 Consequently every exact-support quadratic window with
 
 ```text
-1<=r<=9998                                                   (26d)
+1<=r<=10028                                                  (26e)
 ```
 
 has a nonzero member among its factorial moments at exponents
 `r,r+1,r+2`.  This is a FINITE-EXACT application of the proved polygon
-compilers.  The next untested row is `d=10001`, or `r=9999`; it is not a known
+compilers.  The next untested row is `d=10031`, or `r=10029`; it is not a known
 survivor.
 
 Equivalently, if
 
 ```text
-L(t^m)=m!,                   q(t)=a+bt+ct^2,             (26e)
+L(t^m)=m!,                   q(t)=a+bt+ct^2,             (26f)
 ```
 
-with `abc!=0`, then for every `1<=r<=9998` the three values
+with `abc!=0`, then for every `1<=r<=10028` the three values
 `L(q^r),L(q^(r+1)),L(q^(r+2))` cannot all vanish.  This does not cover a
 missing coefficient, translated or arbitrary support, all of `SFC(1)`,
 `SFC(3)`, or `FC(3)`.
@@ -470,6 +507,15 @@ python3 04-computation/factorial_adaptive_rho_boundary_10000_gate.py
 python3 -O 04-computation/factorial_adaptive_rho_boundary_10000_gate.py
 ```
 
+The audited `d=10001` neighbourhood is reproduced by
+
+```bash
+python3 -B 04-computation/factorial_d10001_local_rule_window_20260823.py
+python3 -B -O 04-computation/factorial_d10001_local_rule_window_20260823.py
+python3 -B 04-computation/factorial_d10001_local_rule_window_independent_audit_20260823.py
+python3 -B -O 04-computation/factorial_d10001_local_rule_window_independent_audit_20260823.py
+```
+
 ## 7. Failure boundaries and information contract
 
 - The condition `p` not dividing `d` is load-bearing: (11) divides by `d^m`.
@@ -479,6 +525,9 @@ python3 -O 04-computation/factorial_adaptive_rho_boundary_10000_gate.py
   extra valuation nor the repaired hull.
 - A local degree address is necessary, not a factor.  Only an empty
   intersection proves coprimality.
+- Nonemptiness of every THM-3475 divisor barcode does not prove that all
+  conceivable divisor-place refinements fail; the `d=9996` hostile is scoped
+  to the displayed necessary-degree criterion.
 - Zero slope and coordinate-root capacity are different data.  The former is
   retained in (13), (14), and (17); the latter is zero in all five rows.
 - The result concerns the exact quadratic resonance pair.  It proves no
