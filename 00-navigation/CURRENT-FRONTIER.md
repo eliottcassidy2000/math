@@ -261,7 +261,9 @@ gives indexed abscissa `2/3`.  THM-3793/3825 give an inert-scale singleton
 family and decoder. Products of every fixed number `j` of distinct inert
 primes give
 `liminf H(X)/(log log X)^j>=2/(5*2^j*j!)`; hence `H` dominates every fixed
-real power of `log log X`. This is still no support asymptotic or residue.
+real power of `log log X`.  Varying `j` pointwise strengthens this to
+`liminf log H(X)/log log X>=1/2`, or `H(X)>=(log X)^(1/2-epsilon)` eventually
+for every `epsilon>0`.  This is still no support asymptotic or residue.
 
 ### Established landmarks
 

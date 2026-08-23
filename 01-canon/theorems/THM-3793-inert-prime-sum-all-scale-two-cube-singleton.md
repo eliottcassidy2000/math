@@ -11,8 +11,11 @@ status: >
   liminf H(X)/(log log X)^2>=1/20.  More generally, products of every fixed
   number j of distinct inert primes give liminf
   H(X)/(log log X)^j>=2/(5*2^j*j!); therefore H(X) dominates every fixed
-  real power of log log X.  No support asymptotic follows.  The finite LRC
-  address sidecar is injective but has no loneliness consequence.
+  real power of log log X.  Allowing the product order to vary pointwise as
+  floor((log log X)/2) further gives liminf log H(X)/log log X>=1/2,
+  equivalently H(X)>=(log X)^(1/2-epsilon) eventually for every epsilon>0.
+  No support asymptotic follows.  The finite LRC address sidecar is injective
+  but has no loneliness consequence.
 source: root / cross_frontier_live_scout inert-prime all-scale lane, 2026-08-23
 audit: >
   INDEPENDENTLY HOSTILE-AUDITED by root, 2026-08-23.  The audit rederived the
@@ -29,7 +32,13 @@ audit: >
   exact liminf constants and exponent-three hostile.  It caught and repaired
   the provisional undefined 0*B*A^(-1) display at j=1.  The repaired primary
   and independent companions have 14,452 and 5,402 active gates; normal,
-  optimized and frozen streams agree after LF normalization.
+  optimized and frozen streams agree after LF normalization.  A third
+  hostile audit checked the variable-order quantifiers.  It found that the
+  provisional draft's one-sided estimate for A(Z) did not justify two claimed
+  limit equalities.  The repaired proof uses an explicit lower proxy a_X,
+  applies the finite collision and height inequalities directly at
+  j=floor((log log X)/2), obtains a positive bracket tending to 7/8, and then
+  uses Stirling.  It never passes a varying j through the fixed-j limit.
 depends_on:
   - THM-463-two-cube-representations-are-a-divisor-property-on-the-split-axis
   - THM-3730-positive-distinct-two-cube-support-abscissa
@@ -172,8 +181,29 @@ for every fixed integer `j>=1`.  In particular, for every fixed real `R`,
 H(X)/(log log X)^R -> infinity.                       (6d)
 ```
 
-The quantifier is pointwise in `R`; no choice `j=j(X)` or uniform-in-`j`
-claim is made.
+The quantifier in `(6c)` is pointwise in `j`, and the derivation of `(6d)`
+chooses a fixed `j>R` before taking a limit.  The finite inequalities admit a
+separate variable-order consequence.
+
+### Variable-order logarithmic amplification
+
+The pointwise finite inequalities `(6a)--(6b)` also imply
+
+```text
+liminf_(X->infinity) log H(X)/log log X >= 1/2.       (6e)
+```
+
+Equivalently, for every `epsilon>0`,
+
+```text
+H(X)>=(log X)^(1/2-epsilon)                           (6f)
+```
+
+for all sufficiently large `X`, depending on `epsilon`.  This applies the
+finite symmetric-sum inequality at a varying order; it does not substitute
+`j=j(X)` into the fixed-`j` limit `(6c)`.  It remains only a lower bound for
+the deduplicated critical mass and gives no support asymptotic or critical
+coefficient.
 
 ## 2. Proof of the singleton theorem
 
@@ -382,6 +412,48 @@ The collision correction in `(18)` is
 `A^j[1-C(j,2)B/A^2]`, whose bracket tends to one.  This proves `(6c)`.
 Given a fixed real `R`, choose a fixed integer `j>R` before taking the
 limit; `(6c)` then proves `(6d)`.
+
+For `(6e)`, put
+
+```text
+L=log log X,             j=floor(L/2),
+Z=X^(1/(3j)),
+a_X=1/2[L-log(3j)]-C_P.                               (20)
+```
+
+For sufficiently large `X`, one has `j>=2`, `Z>=11`, and
+
+```text
+A(Z)>=a_X>0,             j/L->1/2,             a_X/j->1.
+```
+
+The ordered-tuple collision ratio satisfies
+
+```text
+q_X=C(j,2)B(Z)/A(Z)^2
+   <=j^2/(8a_X^2)->1/8.                                (21)
+```
+
+Hence `q_X<1` eventually.  Apply the pointwise finite inequalities
+`(6a)--(6b)` at this `j,Z`.  Since `Z^(3j)=X`,
+
+```text
+H(X)>=(2/(5j!))A(Z)^j(1-q_X)
+    >=(2/(5j!))a_X^j(1-j^2/(8a_X^2)).                 (22)
+```
+
+The last bracket tends to `7/8`.  Stirling's formula now gives
+
+```text
+log H(X)
+ >=j log a_X-log(j!)+O(1)
+ =j[1+log(a_X/j)]+o(L)
+ =(1/2+o(1))L.                                        (23)
+```
+
+This proves `(6e)`.  For each `epsilon>0`, the definition of the lower limit
+gives `(6f)` eventually.  Conversely, `(6f)` for every positive `epsilon`
+and then `epsilon` tending to zero recovers `(6e)`.
 
 ## 5. Exact boundary hostiles
 
