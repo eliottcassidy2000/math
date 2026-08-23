@@ -23,7 +23,12 @@ audit: >
   and squarefree controls, the genus-three values, opposite infinity parity,
   and canonical degrees.  The generative-polynomial and equality statements
   are inherited from independently audited THM-3827.  Normal and optimized
-  runs byte-match the frozen transcript.
+  runs byte-match the frozen transcript.  A second 86-gate assertion-free
+  audit independently checks all low-degree composition pairs, geometric
+  integrality of the primitive fibres, both fresh sidecar discriminants,
+  eight squarefree specializations, Riemann--Hurwitz equality, smooth-quartic
+  adjunction and the reduced-row gcd boundary.  Its normal, optimized, and
+  frozen streams agree.
 depends_on:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -36,6 +41,11 @@ output: 05-knowledge/results/jc2_root_ratio_degree_five_floor_thm3838.out
 script_sha256: 57fbf881e33ca4fb4d2b8ae08f349b1fb46763239232919480a4648f7a875c90
 output_sha256: 879cf74bdcf2017ac127156ba1182909c2f21452a5b96e0f67b9fc19f5a36d8c
 semantic_sha256: 86617f87ada99bc0e1b51334b244b406172f646a4dd4c7375369e598ed9bb233
+independent_script: 04-computation/jc2_root_ratio_degree_five_floor_thm3838_independent_audit.py
+independent_output: 05-knowledge/results/jc2_root_ratio_degree_five_floor_thm3838_independent_audit.out
+independent_script_sha256: 6e3db3b79f93298e66b1c8f163f4f23769e7a10c82598946a7f9903841ee44cd
+independent_output_sha256: b3379513fea43e52b453217629337c9a5ef20ffe3434bb569976b8fa5d9ce7ea
+independent_semantic_sha256: 72c35aadde4e70faaf34129526d66cde3c85f4b7c6b6ac17646bcf45f3581dce
 hash_basis: raw LF bytes
 ---
 

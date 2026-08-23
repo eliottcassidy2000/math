@@ -16,7 +16,7 @@ audit: >
   INDEPENDENTLY HOSTILE-AUDITED by root on 2026-08-23 after the earlier
   affine packet was independently audited by jc_quartic_c3_construct.  The
   audit rederived the full Laurent first-contact comparison, verified that
-  its six equations leave exactly d_x,d_xx,d_xy,q_xy, checked the universal
+  its eight scalar equations leave exactly d_x,d_xx,d_xy,q_xy, checked the universal
   second Taylor coefficient against both normal charts, and confirmed that
   the line Y and hyperbola X^8 coefficients kill d_xy and d_xx before the
   incompatible unit-multiplied L_u/L_v equations.  It also checked that the
@@ -27,7 +27,12 @@ audit: >
   completion, the CRT sign boundary, the complete quadratic first-contact
   normal form, the exact universal second Taylor coefficient, the forced
   d_xy=d_xx=0 peel, the two terminal linear forms, and all unit resultants.
-  Normal and optimized replay agree with the frozen transcript.
+  A second direct `K[t]/(t^3)` audit, without reusing the universal Taylor
+  implementation, independently checks comaximality, reduced components,
+  boundary units and signs, the exact SL2 completion, all eight first-contact
+  equations, both second-contact peels, and the terminal collision in 40
+  active gates.  Normal, optimized, and frozen replay agree for both
+  companions.
 depends_on:
   - THM-3830-coordinate-cross-bichromatic-split-nonentry
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -41,6 +46,11 @@ output: 05-knowledge/results/jc2_comaximal_line_hyperbola_affine_contact_thm3837
 script_sha256: 74b8dd003383be9737bccf263ec76a276d8713bf07f76260cb5f4c336652c560
 output_sha256: 4c446eb2f9c43bb787c0d520fe3a2bc82081f3088be86340fe44f5de6108861f
 semantic_sha256: 6ece9fdb67e87d101d673126f289824b5131a5da993cdd3b4569a178c87bec77
+independent_script: 04-computation/jc2_comaximal_line_hyperbola_affine_contact_thm3837_independent_audit.py
+independent_output: 05-knowledge/results/jc2_comaximal_line_hyperbola_affine_contact_thm3837_independent_audit.out
+independent_script_sha256: abbde925e1a6c0e466393b96f89e3e4500dc88dec6569bb75e9035045adb1262
+independent_output_sha256: 6bf3dd238ea5aeb7df1b3b7f85b49b2270cc82d8e28e35833754fb3367eb8af8
+independent_semantic_sha256: 9b04d43afb9c9ac34ec45a226bbe85c39b82d3e09684185d4a499af645f0c006
 hash_basis: raw LF bytes
 ---
 

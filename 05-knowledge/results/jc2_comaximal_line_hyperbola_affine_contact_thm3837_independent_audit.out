@@ -1,0 +1,9 @@
+audit=THM-3837-independent-direct-contact
+method=truncated_normal_ring_direct;universal_Taylor_not_reused
+comaximality=PASS;completion=PASS;boundary_signs=PASS
+first_contact=8_independent_equations;4_parameters_survive
+second_contact=dxy_then_dxx_then_incompatible_Lu_Lv
+resultants=1615,14535,-5817545
+scope=one_orientation;n1;boundary_units_1_x;degree_le_2;selector_only
+CHECKS=40
+semantic_sha256=9b04d43afb9c9ac34ec45a226bbe85c39b82d3e09684185d4a499af645f0c006
