@@ -2,24 +2,24 @@
 id: THM-3728
 title: "W004 scalar-12 anchor-20 charge-normalization nonentry"
 status: >
-  PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.  The W004
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The W004
   all-scale placement with scalar fibre 12+20 and arm anchor 20 is
   Darboux-empty in the y=0 collision ring.  Even scales die by the inherited
   parity gate.  At odd scales at least three, the zero rows normalize the
   last Kummer remainder into C(V), where its required odd valuation is
   impossible; the zero Kummer sheet has a noncancellable top coefficient.
   The exceptional scale n=1 collapses to a constant-product derivative.
-  This is not proved canon until audit promotion and does not close all
-  exceptional W004 placements, W005--W006, general quartic C3 data, or JC(2).
+  Together with the audited tail census, this closes the entire stabilized
+  W004 tail.  It does not close exceptional small-scale placements, W005--W006,
+  general quartic C3 data, or JC(2).
 source: root + lrc14-connection-miner + jc-quartic-c3-construction / 2026-08-22
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The exact companion reconstructs the W004
-  word and absolute placement, the even-scale common-base exponent, the n=1
-  primitives and derivative collapse, both generic upper transports, the
-  first Euler/Kummer row, the complete charge-normalized second-row factor,
-  the odd valuation obstruction, and the zero-sheet leading coefficient in
-  forty exact odd-scale controls.  Normal and optimized runs byte-match the
-  frozen transcript.  Independent hostile audit remains open.
+  PASS.  An independent hostile derivation checked the endpoint transports,
+  complete Euler/Kummer remainder, charge-normalized second-row factor,
+  rational-field inference, both Kummer sheets, the n=1 root and derivative
+  collapse, the even-scale parity gate including n=2, and the stabilized-tail
+  census dependency.  Normal and optimized runs byte-match the frozen
+  transcript; the recorded hashes match.
 depends_on:
   - THM-3606-exponent-two-three-by-four-scalar-singleton-gate-atlas
   - THM-3613-three-by-four-size-seven-ray-parity-gate
@@ -40,7 +40,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3728 -- the final stabilized W004 tail family is empty
 
-**PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.**  Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over
 `C` in the THM-3696 collision ring.  Put
 
 ```text
@@ -223,11 +223,10 @@ This closes `n=1`.
 
 THM-3739's audited tail census showed that `(3)` was the only stabilized
 W004 tail placement not already captured by THM-3722, THM-3724, THM-3727,
-THM-3733, THM-3735, and THM-3739.  Therefore, once this proof candidate is
-independently audited, the entire stabilized W004 tail is empty.  Exceptional
-small-scale schemes not belonging to the stabilized families, W005--W006,
-arbitrary `3 x 4` supports, unrestricted quartic C3/cofactor data, and
-`JC(2)` remain open.
+THM-3733, THM-3735, and THM-3739.  Therefore the entire stabilized W004 tail
+is empty.  Exceptional small-scale schemes not belonging to the stabilized
+families, W005--W006, arbitrary `3 x 4` supports, unrestricted quartic
+C3/cofactor data, and `JC(2)` remain open.
 
 Run
 
@@ -236,5 +235,4 @@ python3 -B 04-computation/jacobian_y0_w004_scalar12_anchor20_charge_normalizatio
 python3 -B -O 04-computation/jacobian_y0_w004_scalar12_anchor20_charge_normalization_thm3728.py
 ```
 
-Both commands must agree byte for byte with the frozen transcript.  Audit
-promotion is required before this proof candidate enters proved canon.
+Both commands must agree byte for byte with the frozen transcript.
