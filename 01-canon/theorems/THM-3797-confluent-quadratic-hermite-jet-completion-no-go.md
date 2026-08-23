@@ -2,7 +2,7 @@
 id: THM-3797
 title: "Confluent quadratic Hermite jet-completion no-go"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  The unique
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The unique
   quadratic collision Q(0)=Q(1) in the third-order Hermite carrier has an
   explicit two-step polynomial jet completion.  Its naive hypersurface is
   singular and its normalization is still nonfinal; adjoining M and then N
@@ -13,14 +13,16 @@ status: >
   so its symplectic form is not exact and it has no polynomial Darboux pair.
 source: jc_sparse_direct_search / confluent higher-pole Hermite lane, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The exact companion checks the quadratic
-  parameter locus and residual factors, both source-polynomial quotients,
-  the normalization packet, the six-relation saturation in both directions,
-  all three special-fibre arms and plane charts, the boundary Poisson units,
-  every chart transition, and the resonant Cech residue.  Normal and optimized
-  executions byte-match the frozen transcript.  The geometric image,
-  codimension-two DVR intersection, and de Rham consequence are proved below.
-  Independent hostile audit remains due.
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The collision locus,
+  residual noncritical roots, UFD boundary orders, quotient signs, exact
+  boundary constants, normalization and unique A1 point, six-relation
+  saturation, reduced three-arm fibre, chart inverses, Poisson signs,
+  two-point image complement, etale valuation descent, degree-five field
+  extension, and Cech--de Rham residue were independently rederived.  A
+  separate saturation/Jacobian calculation confirms that B0[u] is normal
+  with only the stated A1 singularity.  Normal and optimized executions
+  byte-match the frozen transcript, all hashes match, and documentation
+  checks pass.
 related:
   - THM-3789-higher-pole-hermite-spectral-completion
   - THM-3791-moving-root-danielewski-resonant-jet-de-rham-law
@@ -34,7 +36,7 @@ hash_basis: raw LF bytes
 
 # THM-3797 -- the confluent quadratic carrier needs two jets and still has no Darboux pair
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  This theorem
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem
 closes the first ramified spectral boundary left outside THM-3789 and
 THM-3791.  The collision does create new polynomial observables, and stopping
 at the normalization loses the decisive geometry.  After the complete
@@ -529,4 +531,4 @@ Only after the second jet `N` does one recover the smooth quasi-finite etale
 atlas needed for the exact intersection.  Confluence therefore creates real
 new polynomial structure, but it does not erase the moving-axis coefficient:
 the obstruction moves from a squarefree hypersurface to an iterated
-jet-completion tree.  **QED, conditional only on independent hostile audit.**
+jet-completion tree.  **QED.**
