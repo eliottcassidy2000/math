@@ -398,12 +398,14 @@ Therefore `C=0` is the unique projective line with two-place pullback, and
 its multiplicity packet is `(3,3)`.  Every other line leaves at least three
 normalization places.
 
-Nor can a nonlinear polynomial change of affine target coordinates repair a
-chosen chart.  Such a change is an isomorphism of affine curves, hence lifts
+Nor can a polynomial automorphism of the chosen affine target plane repair
+the chart.  Its restriction is an isomorphism of affine curves, hence lifts
 to an isomorphism of their normalizations and preserves the number of points
 missing from the smooth projective normalization.  Since every initial line
-chart misses at least two points, every polynomially equivalent affine-plane
-embedding obtained from it still has at least two places at infinity.
+chart misses at least two points, every embedding obtained from it by such an
+automorphism still has at least two places at infinity.  Noninvertible
+polynomial maps, Cremona transformations, and new birational re-embeddings
+are outside this invariance statement.
 
 ## 6. Scope and reproduction
 

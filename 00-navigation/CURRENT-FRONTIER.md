@@ -352,14 +352,18 @@ asymptotic or residue.
   marked roots, and THM-3866 extends the punctured-companion gate to arbitrary
   polynomial transverse quotients; THM-3870 closes vertical/reverse graphs,
   and THM-3873/3876 classify the first parabola and every two-exponent
-  monomial descent (`M<=2`).  THM-3880 makes opposite marked-root sign exact
-  after regular extension on node/A2 curves; poles and worse jets remain.
+  monomial descent (`M<=2`).  THM-3880 closes node/A2 marked-root descent;
+  THM-3883 gives the arbitrary reduced-curve iff: sign above `A=0`, common
+  nonzero root residues, and `z^3` descent at zero roots.  Existence of the
+  normalization root and the other discriminant components remain open.
   THM-3851 is a unit-rich torus.  For THM-3854's one-place three-cusp front,
-  THM-3864/3872 close eight polarizations, seven minimal slices and the full
-  constant cusp-ideal span; THM-3881 closes its rank-two `T=0` lane.  THM-3869
-  pays one Cardano line, while THM-3874/3877 use scalar units and `Cl=Z` to
-  exclude degree-three/four sole-simple-branch fields.  THM-3879 uniquely
-  attains two places; THM-3882 forbids one-place rational duals.
+  THM-3864/3872 close the constant cusp-ideal span; THM-3881 contracts all
+  polynomial coefficients and gauges to a rank-two norm and closes `T=0`.
+  Audit-pending THM-3884 forces `deg T>=deg f+1` and a leading gauge at
+  equality; THM-3885's `f=0` lane is only reserved.  THM-3869 pays one Cardano
+  line; THM-3874/3877 exclude low-degree sole-simple-branch fields.  THM-3879
+  recovers `C3` but costs two places, and THM-3882 forbids one-place charts
+  throughout the `6A2+4A1` sextic packet.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
