@@ -2,7 +2,7 @@
 id: THM-3882
 title: "Rational-dual one-place Wronskian projection criterion"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.  For
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For
   an everywhere-immersed rational plane curve, a line section of its dual
   has divisor twice the base fibre of the corresponding point projection
   plus that projection's ramification divisor.  One-point support occurs
@@ -13,13 +13,18 @@ status: >
   normalization.  This closes an equisingularity architecture, not JC(2).
 source: root / post-THM-3879 dual-Wronskian reframe, 2026-08-23
 audit: >
-  PROVISIONAL EXACT PROOF CANDIDATE.  The proof identifies the line pullback
+  INDEPENDENT HOSTILE AUDIT PASS (jc_quartic_c3_construct, 2026-08-23).  The
+  audit rederived the homogeneous tangent-map basepoint criterion, the exact
+  `2D+Ram` divisor identity, the Riemann--Hurwitz/local-index equivalence,
+  and the immersed one-address boundary.  It independently checked the
+  Pluecker/reflexivity inference for the full `6A2+4A1` packet and the
+  THM-3879 `(3,3)` node specialization.  The proof identifies the line pullback
   with the Wronskian of a point projection, factors its base divisor with
   multiplicity two, invokes Riemann--Hurwitz only after recording the exact
   projection degree, and checks the local immersion boundary.  The exact
   companion verifies the Wronskian factorization, every degree ledger through
   d=40, the Pluecker packet, and the THM-3879 node/projection specialization.
-  Normal and optimized runs must byte-match the frozen transcript.
+  Normal and optimized runs byte-match the frozen transcript.
 depends_on:
   - THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff
 related:
@@ -35,7 +40,7 @@ hash_basis: raw LF bytes
 
 # THM-3882 -- a one-place dual line is a degree-one projection
 
-**PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Let
 
 ```text
