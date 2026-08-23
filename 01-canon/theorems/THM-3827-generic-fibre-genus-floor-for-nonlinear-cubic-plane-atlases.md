@@ -1,39 +1,44 @@
 ---
 id: THM-3827
-title: "Generic-fibre genus floor for nonlinear cubic plane atlases"
+title: "Dual generic-fibre genus floors for nonlinear cubic plane atlases"
 status: >
-  PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the
-  generative closed-polynomial factor h=p(g) of the
-  pulled-back THM-3811 arm function, the smooth projective geometric generic
-  fibre of g has genus at least three.  In genus three it must be isomorphic
-  to the explicit THM-3822 hyperelliptic sidecar after base change.  Existence
-  and uniqueness up to affine change of g, and the equivalence with relative
-  algebraic closedness of K(g), are cited from Arzhantsev--Petravchuk rather
-  than reproved.  Independently, among h=0 and five explicit fixed-slope
-  members h-alpha_i*k=0 of the intrinsic pencil, at least one is reducible.
-  No Jacobian counterexample is constructed.
+  SECTIONS 1--6 PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; SECTION 7 PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT,
+  PENDING INDEPENDENT HOSTILE AUDIT.  For the generative closed-polynomial
+  factors h=p(g) and k=q(ell) of both pulled-back THM-3811 row functions, the
+  smooth projective geometric generic fibres of g and ell each have genus at
+  least three.  At equality they are respectively isomorphic after base
+  change to explicit degree-eight and degree-seven THM-3822 hyperelliptic
+  sidecars, with two versus one points at infinity.  The h-floor and the
+  six-member reducible-pencil theorem are independently audited; the dual
+  k-floor is the new pending-audit strengthening.  Existence and uniqueness
+  up to affine change of each generative factor, and the equivalence with
+  relative algebraic closedness, are cited from Arzhantsev--Petravchuk rather
+  than reproved.  No Jacobian counterexample is constructed.
 source: jc_quartic_c3_construct / generic-fibre genus reframe, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
-  The audit checked the cited source directly: Arzhantsev--Petravchuk
-  Proposition 1 and Corollary 1 give existence and affine uniqueness of a
-  generative closed polynomial, while Lemma 3 is exactly the required
-  relative-algebraic-closure equivalence.  Independently, it reconstructed
-  the regular generic curve, the function-field injection from a
-  nonconstant sidecar coordinate, proper extension and Riemann--Hurwitz,
-  the denominator-valuation proof of R intersect K(g)=K[g], and the reduced
-  special-fibre contradiction component by component.  For the five-slope
-  strengthening it separately checked algebraic independence of h,k from
-  the intrinsic D-quadratic, the second-order h-adic lift, pairwise
-  coprimality of the five pencil members, and both surviving subset degrees.
-  No quantifier or scope repair was needed.  The 22-gate exact companion
-  verifies the
+  INDEPENDENT HOSTILE AUDIT PASS for Sections 1--6 (root /
+  jc-cohn-boundary, 2026-08-23).  The audit checked the cited source directly:
+  Arzhantsev--Petravchuk Proposition 1 and Corollary 1 give existence and
+  affine uniqueness of a generative closed polynomial, while Lemma 3 is
+  exactly the required relative-algebraic-closure equivalence.  Independently,
+  it reconstructed the regular generic curve, the function-field injection
+  from a nonconstant sidecar coordinate, proper extension and
+  Riemann--Hurwitz, the denominator-valuation proof of R intersect K(g)=K[g],
+  and the reduced special-fibre contradiction component by component.  For
+  the five-slope strengthening it separately checked algebraic independence
+  of h,k from the intrinsic D-quadratic, the second-order h-adic lift,
+  pairwise coprimality of the five pencil members, and both surviving subset
+  degrees.  No quantifier or scope repair was needed.  Section 7 and its
+  opposite infinity parity are self-audited and await an independent hostile
+  audit.  The 27-gate exact companion verifies the
   monic degree-eight sidecar, a squarefree hostile fibre, the full generic
   discriminant, stability under a nonconstant Stein composition, the
   genus-three count, every excluded Riemann--Hurwitz genus, and reduced-arm
-  controls, the second completed square, the five distinct pencil slopes,
-  and both terminal subset obstructions.  Normal and optimized replay agree
-  with the frozen output and raw hashes.
+  controls, the opposite degree-seven sidecar and its full discriminant, the
+  second completed square, the five distinct pencil slopes, and both terminal
+  subset obstructions.  Normal and optimized replay agree with the frozen
+  output.
 depends_on:
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
 related:
@@ -43,16 +48,18 @@ citation:
   - "Arzhantsev--Petravchuk, Closed and Irreducible Polynomials in Several Variables, arXiv:math/0608157v2, Proposition 1, Lemma 3, and Corollary 1."
 script: 04-computation/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.py
 output: 05-knowledge/results/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.out
-script_sha256: 82290ea8abca925913393c950e28dc920c20517ad8156a6aca5b74342efb3516
-output_sha256: f25dcb0dc688e67e8ce5b8e3e5eba71da7df5bc7290ffe2210fd07e4f5435450
-semantic_sha256: 42bfbc4e18afc0ff86b28847525f1c9f5504331abdf1061f323c79b0d31043bd
+script_sha256: 91dcf6e4dfcbf0e4614366ef12f4629bb61f4ab19bc9d0e3612dfb3ab0cb017d
+output_sha256: 2e847adce39b2924e69bff8c41e801e0602dd4e3efef5f8e815d8ce4013aa747
+semantic_sha256: 2c10e963f11f4c65e68445c5e261702e6a213dea94211a649251c2c7697f2374
 hash_basis: raw LF bytes
 ---
 
-# THM-3827 -- a plane atlas needs generic-fibre genus at least three
+# THM-3827 -- both row fibrations of a plane atlas need genus at least three
 
-**PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work
-over an algebraically closed field `K` of characteristic zero.  Put
+**SECTIONS 1--6 PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED; SECTION 7 PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT,
+PENDING INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field
+`K` of characteristic zero.  Put
 
 ```text
 R=K[x,y],                 L=K(x,y).                              (1)
@@ -321,10 +328,58 @@ Thus the surviving construction lane is narrower than a generic high-genus
 pencil: it must also allocate components at one of six fixed spectral
 members before solving the second-row and Keller equations.
 
-## 7. Exact scope
+## 7. The opposite row has the same floor and opposite infinity parity
+
+Apply the same cited generative-factor theorem to the other pulled-back row
+entry:
+
+```text
+k=q(ell),                                                       (27)
+```
+
+where `ell in R` is closed and `q in K[S]` is nonconstant.  As a polynomial
+in its first argument, the sidecar has degree seven and constant leading
+coefficient `84`.  Its exact discriminant is
+
+```text
+Disc_T H(T,Z)=-683730534400 Z^43 J(Z),                          (28)
+
+J(Z)=6480000Z^8+1952190576Z^7-14515170152Z^6
+     +76957426508Z^5+405669771962Z^4-55140029819Z^3
+     -17308754768Z^2+1276289280Z+234420480.                    (29)
+```
+
+This is nonzero.  Since `q(ell)` is transcendental, the polynomial
+`H(T,q(ell))` is squarefree of degree seven in `T`; its smooth projective
+hyperelliptic curve has genus three and one geometric point at infinity.
+
+Let `Gamma_ell` be the smooth projective generic fibre of `ell`.  The point
+`(T,W)=(h,w)` on this odd sidecar gives exactly the dichotomy of Section 1:
+either `h` is transcendental over `K(ell)` and hence induces a nonconstant
+map from `Gamma_ell` to a genus-three curve, or `h` is algebraic over
+`K(ell)`.  In the second case, closedness of `ell` gives `h in K(ell)`, and
+the intersection argument `(13)` gives `h in K[ell]`.  But `(27)` then makes
+`h,k` algebraically dependent, contradicting the independence proved in
+Section 6.  Therefore
+
+```text
+genus(Gamma_ell)>=3.                                           (30)
+```
+
+At equality, Riemann--Hurwitz again forces the map to have degree one, so
+the generic fibre is geometrically isomorphic to the odd sidecar.  The
+degree-eight sidecar from Sections 1--5 has two geometric points at infinity,
+whereas this degree-seven sidecar has one.  Thus a surviving atlas must carry
+two primitive high-genus fibrations with opposite infinity parity, not merely
+one complicated arm.
+
+## 8. Exact scope
 
 The generative-polynomial existence and uniqueness used here are **CITED**,
-not reproved by the exact companion.  They make `(19)` unconditional for
-every dominant etale plane atlas over the stated field, while the function-
-field argument of Sections 1--4 is self-contained once `h=p(g)` and `(3)`
-are supplied.  No planar Jacobian counterexample is claimed.  **QED.**
+not reproved by the exact companion.  They make the independently audited
+claim `(19)` unconditional for every dominant etale plane atlas over the
+stated field.  The same cited theorem supplies the second factorization used
+by the provisional dual claim `(30)`; its function-field proof is
+self-contained after that import.  No planar Jacobian counterexample is
+claimed.  **QED for Sections 1--6; Section 7 remains subject to independent
+hostile audit.**

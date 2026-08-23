@@ -6,7 +6,8 @@ obstruction=generic_fibre_genus_0_1_2_impossible
 intersection=K[x,y]_intersect_K(g)=K[g]
 boundary=p(g)_squarefree;each_arm_component_requires_nonconstant_k
 pencil=reducible_fibre_among_h_and_five_fixed_slopes
+dual=both_row_fibrations_genus_at_least3;infinity_parity=2_vs_1
 stein_factor=existence_CITED_not_computational
 scope=no_JC_counterexample
-CHECKS=22
-semantic_sha256=42bfbc4e18afc0ff86b28847525f1c9f5504331abdf1061f323c79b0d31043bd
+CHECKS=27
+semantic_sha256=2c10e963f11f4c65e68445c5e261702e6a213dea94211a649251c2c7697f2374

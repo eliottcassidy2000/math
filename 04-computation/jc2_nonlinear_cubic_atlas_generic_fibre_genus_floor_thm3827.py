@@ -73,6 +73,24 @@ for genus_source in (0, 1, 2):
     check(2 * genus_source - 2 < 2 * genus_target - 2,
           f"Riemann--Hurwitz excludes source genus {genus_source}")
 
+# The opposite row direction is an odd degree-seven hyperelliptic sidecar.
+H_as_h = sp.Poly(H, T)
+check(H_as_h.degree() == 7, "dual sidecar has degree seven")
+check(H_as_h.LC() == 84, "dual sidecar has nonzero constant leading coefficient")
+Delta_dual = sp.factor(sp.discriminant(H, T))
+Delta_dual_factor = (
+    -683730534400 * Z**43
+    * (
+        6480000 * Z**8 + 1952190576 * Z**7 - 14515170152 * Z**6
+        + 76957426508 * Z**5 + 405669771962 * Z**4
+        - 55140029819 * Z**3 - 17308754768 * Z**2
+        + 1276289280 * Z + 234420480
+    )
+)
+same(Delta_dual, Delta_dual_factor, "exact dual discriminant factorization")
+check(Delta_dual != 0, "dual generic sidecar is squarefree")
+check((H_as_h.degree() - 1) // 2 == 3, "dual odd sidecar genus is three")
+
 # A second completed square turns the atlas pencil into a five-slope
 # reducibility gate.
 h, k = sp.symbols("h k")
@@ -125,6 +143,7 @@ semantic = {
     "intersection": "K[x,y] intersect K(g)=K[g] by a denominator-root valuation",
     "arm": "etale pullback makes p(g) squarefree and k nonconstant on every component",
     "pencil": "one of h=0 or the five fibres h-alpha_i*k=0 must be reducible",
+    "dual": "both generative row fibrations have genus at least three; equality has two versus one infinity places",
     "scope": "generative closed factor existence is CITED, not computational; no JC counterexample",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
@@ -137,6 +156,7 @@ print("obstruction=generic_fibre_genus_0_1_2_impossible")
 print("intersection=K[x,y]_intersect_K(g)=K[g]")
 print("boundary=p(g)_squarefree;each_arm_component_requires_nonconstant_k")
 print("pencil=reducible_fibre_among_h_and_five_fixed_slopes")
+print("dual=both_row_fibrations_genus_at_least3;infinity_parity=2_vs_1")
 print("stein_factor=existence_CITED_not_computational")
 print("scope=no_JC_counterexample")
 print(f"CHECKS={CHECKS}")
