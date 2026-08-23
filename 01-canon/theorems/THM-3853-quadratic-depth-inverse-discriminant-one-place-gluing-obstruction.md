@@ -2,8 +2,8 @@
 id: THM-3853
 title: "Quadratic-depth inverse-discriminant one-place gluing obstruction"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  Two explicit irreducible discriminants have
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Two explicit
+  irreducible discriminants have
   affine normalization A1, glue the four simple rays of the rational
   THM-3808 binary cubic at one affine point, and have one place at infinity.
   Nevertheless neither discriminant is realized by any homogeneous
@@ -12,6 +12,14 @@ status: >
   This is a bounded inverse-discriminant obstruction, not a cubic-cover or
   planar-Jacobian theorem.
 source: jc_quartic_c3_construct / inverse binary-cubic discriminant lane, 2026-08-23
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit checked the
+  finite birational parametrizations, localization proof of irreducibility,
+  four finite addresses and unique infinity place, and the GL2 endpoint
+  criterion for unit representation.  It also inspected the full
+  12-parameter coefficient universe, scalar elimination, nonzero
+  saturation, and both hostile controls.  Normal and optimized exact
+  Groebner replays byte-match the frozen 96-gate transcript and both hashes.
 depends_on:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
 related:
@@ -30,9 +38,9 @@ hash_basis: raw LF bytes
 
 # THM-3853 -- the first one-place inverse discriminants do not terminate at quadratic depth
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
-characteristic zero, and put `R=k[A,C]`.  Start from the rational
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero, and put `R=k[A,C]`.
+Start from the rational
 homogeneous-linear Delone--Faddeev packet of THM-3808,
 
 ```text

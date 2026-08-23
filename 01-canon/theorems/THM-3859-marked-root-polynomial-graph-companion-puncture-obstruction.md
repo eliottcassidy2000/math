@@ -2,8 +2,8 @@
 id: THM-3859
 title: "Marked-root polynomial graphs force a punctured companion"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  Every polynomial graph component of the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every polynomial
+  graph component of the
   depressed-cubic branch has an exact marked-root normal form.  When the
   transverse quotient depends only on the graph coordinate, the companion
   is a primitive quadratic: if irreducible it has a finite pole and an
@@ -12,13 +12,19 @@ status: >
   missing at least two projective points.
 source: jc_sparse_direct_search / post-THM-3852 marked-root graph lane, 2026-08-23
 audit: >
-  SELF-AUDITED exact proof candidate.  The companion verifies the cusp
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit rederived the
+  UFD square/cube classification and its divisibility at A=0, checked
+  primitivity and the square-discriminant dichotomy over k(A), and followed
+  both normalization-place arguments.  In particular, at the negative
+  special-fibre root C has a genuine pole, while in the reducible case the
+  factor with constant term 18 makes A a unit and has coordinate ring
+  k[A,A^(-1)].  Repeated discriminant roots do not repeat a global factor
+  because D(0)=81.  The companion verifies the cusp
   square/cube lift, universal factorization, explicit residual quadratic,
   discriminant flanks, special fibre, difference-of-squares factorization,
   the excluded axis boundary, and both nonconstant and THM-3852 collision
   controls.  Normal and optimized runs byte-match the frozen 27-gate
-  transcript.  Independent hostile audit
-  is still required before promotion.
+  transcript and both recorded hashes.
 related:
   - THM-3842-nonlinear-cubic-tower-trace-shift-eightfold-base-change
   - THM-3850-nonconstant-cubic-profile-irreducible-branch-puncture-formula
@@ -33,9 +39,9 @@ hash_basis: raw LF bytes
 
 # THM-3859 -- marked-root graphs force a punctured companion
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
-characteristic zero.  For any `b=b(A,C) in k[A,C]`, put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  For any
+`b=b(A,C) in k[A,C]`, put
 
 ```text
 p=3/2+AC,                         u=1+AC+A^2b,                    (1)

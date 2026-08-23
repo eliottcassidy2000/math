@@ -2,8 +2,8 @@
 id: THM-3854
 title: "The integrated three-cusp front is naturally an S5 quintic discriminant, not an S3 cubic"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  The integrated squarefree-cubic front is an
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The integrated
+  squarefree-cubic front is an
   irreducible rational quintic with three A2 cusps, three transverse A1
   nodes, and one smooth normalization place at infinity.  It is exactly the
   ramification image of a finite polynomial-plane quintic whose generic
@@ -17,13 +17,20 @@ status: >
   and JC(2) OPEN.
 source: jc_zero_debt_lift / integrated cusp-front completion lane, 2026-08-23
 audit: >
-  SELF-AUDITED exact proof candidate.  The companion verifies the
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit separately
+  checked the finite birational normalization, singularity exhaustion by
+  the collision resultant and genus count, the smooth unique infinity
+  place, the finite polynomial-plane quintic, and the discriminant identity.
+  It also checked that the two good specialization cycle types generate S5,
+  that nonsquareness over the algebraic closure forces geometric S5, that
+  A5 has no C3 quotient, and that both residual nonsquare arguments are
+  valid in the rational function field.  The companion verifies the
   normalization and rational inverse, complete collision packet, all cusp
   and node types, smooth fivefold infinity contact, polynomial quintic map,
   exact discriminant constant, the all-degree constant-bracket arm factor,
   two good-prime cycle types, and both seminormal residual quotients.  Normal
-  and optimized runs must byte-match the frozen transcript before promotion.
-  Independent hostile audit is still required.
+  and optimized runs byte-match the frozen 55-gate transcript and both
+  recorded hashes.
 related:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
@@ -40,9 +47,8 @@ hash_basis: raw LF bytes
 
 # THM-3854 -- the natural completion is quintic `S5`, not cubic `S3`
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
-characteristic zero.  Put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  Put
 
 ```text
 g(t)=t(t^2-1),
