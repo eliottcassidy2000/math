@@ -2,19 +2,24 @@
 id: THM-3835
 title: "A polynomial marked-root ratio cannot support the nonlinear cubic plane atlas"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For every dominant plane atlas of the THM-3811 surface, the marked
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  dominant plane atlas of the THM-3811 surface, the marked
   cubic-root ratio z=h/k is genuinely rational and nonpolynomial.  If z were
   polynomial, the SL2 determinant would make k scalar; the genus-three
   square sidecar then makes h scalar, contradicting dominance.  The result
   is all-degree and does not exclude a nonconstant denominator k.
 source: jc_quartic_c3_construct / triangular root-ratio polynomialization lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The companion verifies the degree-seven
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
+  The audit checked the uniform Groebner specialization over every
+  characteristic-zero algebraically closed extension, the odd-root parity
+  implication including a constant h endpoint, the pairwise-comaximal UFD
+  step, the constant-difference square argument, and both Q=0 and Q!=0 lift
+  endpoints.  Normal and optimized runs byte-match the frozen transcript and
+  both raw hashes agree.  The companion verifies the degree-seven
   sidecar, the determinant factorization, the constant-row lift, and an exact
   Groebner certificate [1] excluding H(T,c)=(T-a)S(T)^2 for every c!=0.
-  It retains c=0 as a hostile positive control.  Normal and optimized runs
-  byte-match the frozen transcript; independent hostile audit remains.
+  It retains c=0 as a hostile positive control.
 depends_on:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
@@ -31,8 +36,8 @@ hash_basis: raw LF bytes
 
 # THM-3835 -- the marked-root ratio must keep its denominator
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**  Work over an algebraically closed field `K` of characteristic zero.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `K` of characteristic zero.
 Let
 
 ```text
@@ -192,5 +197,4 @@ deliberately leaves the genuine construction lane
 z=h/k in K(x,y) but not in R,      k nonconstant.                 (18)
 ```
 
-No plane atlas and no Jacobian counterexample is constructed.  **QED,
-pending independent hostile audit.**
+No plane atlas and no Jacobian counterexample is constructed.  **QED.**
