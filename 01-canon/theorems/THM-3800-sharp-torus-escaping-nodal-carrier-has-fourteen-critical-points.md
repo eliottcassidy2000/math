@@ -2,8 +2,8 @@
 id: THM-3800
 title: "Sharp torus-escaping nodal carrier has fourteen critical points"
 status: >
-  PROVED + VERIFIED-EXACT + CORRECTION OF RESERVED DIRECTION + PENDING
-  INDEPENDENT HOSTILE AUDIT.  The THM-3795 sharp carrier
+  PROVED + VERIFIED-EXACT + CORRECTION OF RESERVED DIRECTION + INDEPENDENTLY
+  HOSTILE-AUDITED.  The THM-3795 sharp carrier
   A=e^2-z/(3c^3)+(4/c^6)z^3e^3 does escape the K=c^3+2re=0 torus, but it is
   not smooth: for every c!=0 it has exactly fourteen reduced critical
   points on two explicit K!=0 branches.  Therefore it has no regular
@@ -12,13 +12,13 @@ status: >
   mates with poles is made.
 source: root reserved mate-support lane / jc_zero_debt_lift carrier validity audit, 2026-08-23
 audit: >
-  SELF-AUDITED CORRECTION CANDIDATE.  The proof exhausts K=0 and K!=0,
-  solves both derivative equations, reconstructs the two r-branches over
-  seven e-roots, and checks reducedness by the triangular Groebner basis,
-  squarefree e-law, nonzero quadratic discriminant, and transverse z/e
-  minor.  A general-c exact computation and independent c=1 replay agree.
-  The companion has 36 active gates; normal and optimized runs byte-match
-  the frozen transcript.  Independent hostile audit remains due.
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The K=0 exclusion,
+  K!=0 derivative reduction, seven-root law, both explicit r-branches,
+  nonzero K values, set-theoretic exhaustiveness, general-c triangular
+  Groebner basis, squarefreeness, discriminant, transverse minor, and exact
+  reduced length fourteen were independently rederived.  The c=1 replay
+  agrees; normal and optimized runs byte-match the frozen transcript, all
+  hashes match, and documentation checks pass.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3795-r-independent-quadratic-normal-nodal-carriers-have-critical-points
@@ -35,8 +35,8 @@ hash_basis: raw LF bytes
 
 # THM-3800 -- the sharp torus escape is still a critical carrier
 
-**PROVED + VERIFIED-EXACT + CORRECTION OF RESERVED DIRECTION + PENDING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + CORRECTION OF RESERVED DIRECTION + INDEPENDENTLY
+HOSTILE-AUDITED.**  Work over an algebraically closed field `k` of
 characteristic zero, fix `c in k*`, and retain the smooth symplectic surface
 
 ```text
@@ -203,5 +203,4 @@ The deterministic companion named in the metadata checks `(7)--(18)`, the
 two explicit branches modulo `sqrt(3)^2=3`, both general-`c` and `c=1`
 Groebner bases, the discriminant, transverse minor, and correction scope
 with 36 active assertion-free gates.  Normal and optimized executions
-byte-match the frozen transcript.  **QED, conditional only on independent
-hostile audit.**
+byte-match the frozen transcript.  **QED.**
