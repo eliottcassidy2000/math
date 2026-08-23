@@ -2,7 +2,7 @@
 id: THM-3837
 title: "Quadratic corrections cannot realize the first comaximal line-hyperbola bichromatic fibre"
 status: >
-  PROOF CANDIDATE + VERIFIED-EXACT, PENDING INDEPENDENT HOSTILE AUDIT.  Fix a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Fix a
   cubic spectral root alpha.  In the n=1 disconnected ansatz u=x,
   v=xy-1, f=uv, k=x-v+fq, h=alpha k+f, and
   d=-b(alpha)x^2/alpha^2+fD, no total-degree-at-most-two profiles q,D
@@ -13,13 +13,20 @@ status: >
   counterexample is constructed.
 source: jc_sparse_direct_search / THM-3830 disconnected-fibre successor, 2026-08-23
 audit: >
-  Self-audited after correcting the hyperbola derivative to k_f=q-1/x.  The
-  deterministic companion checks comaximality, an explicit determinant-one
+  INDEPENDENTLY HOSTILE-AUDITED by root on 2026-08-23 after the earlier
+  affine packet was independently audited by jc_quartic_c3_construct.  The
+  audit rederived the full Laurent first-contact comparison, verified that
+  its six equations leave exactly d_x,d_xx,d_xy,q_xy, checked the universal
+  second Taylor coefficient against both normal charts, and confirmed that
+  the line Y and hyperbola X^8 coefficients kill d_xy and d_xx before the
+  incompatible unit-multiplied L_u/L_v equations.  It also checked that the
+  resultant argument works over every characteristic-zero field containing
+  any root alpha and that the statement remains confined to the displayed
+  selector cell.  The deterministic companion, corrected at the hyperbola
+  derivative k_f=q-1/x, checks comaximality, an explicit determinant-one
   completion, the CRT sign boundary, the complete quadratic first-contact
   normal form, the exact universal second Taylor coefficient, the forced
   d_xy=d_xx=0 peel, the two terminal linear forms, and all unit resultants.
-  The earlier affine proof was independently hostile-audited before this
-  strengthening; the new quadratic extension awaits independent audit.
   Normal and optimized replay agree with the frozen transcript.
 depends_on:
   - THM-3830-coordinate-cross-bichromatic-split-nonentry
@@ -27,6 +34,7 @@ depends_on:
 related:
   - THM-3831-intrinsic-spectral-pencil-fibre-atlas-and-forced-cubic-two-arm-hit
   - THM-3832-nonlinear-cubic-root-ratio-triangular-birational-chart
+  - THM-3836-cubic-factor-cofactor-darboux-packet
 script: 04-computation/jc2_comaximal_line_hyperbola_affine_contact_thm3837.py
 output: 05-knowledge/results/jc2_comaximal_line_hyperbola_affine_contact_thm3837.out
 script_sha256: 74b8dd003383be9737bccf263ec76a276d8713bf07f76260cb5f4c336652c560
@@ -37,7 +45,7 @@ hash_basis: raw LF bytes
 
 # THM-3837 -- the first disconnected fibre fails through quadratic contact
 
-**PROOF CANDIDATE + VERIFIED-EXACT, PENDING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over a field `K` of characteristic zero containing a root `alpha` of
 
 ```text
@@ -267,5 +275,4 @@ closure.
 The theorem leaves open cubic and higher profiles, other boundary units
 `k|_(v=0)=x^n`, other comaximal component pairs, the remaining intrinsic `D`
 and second-row laws, and the planar Keller equation.  No Jacobian
-counterexample is claimed.  **QED, pending independent hostile audit of the
-quadratic strengthening.**
+counterexample is claimed.  **QED.**
