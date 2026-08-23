@@ -1,11 +1,11 @@
 ---
-id: THM-3855
+id: THM-3856
 title: "Quadratic normal-strip Keller pairs are automorphisms"
 status: RESERVED / UNPROVED EMPTY STUB
 source: root / Russell higher-normal algebraization lane, 2026-08-23
 ---
 
-# THM-3855 -- reserved
+# THM-3856 -- reserved
 
 **RESERVED / UNPROVED EMPTY STUB.**  This namespace is reserved for the
 proposed classification of polynomial Keller pairs of transverse degree at
