@@ -1,0 +1,11 @@
+theorem=THM-3832-nonlinear-cubic-root-ratio-triangular-birational-chart
+chart=z=h/k=A/omega;coordinates=z,C
+target=A=z*C*(1+z^2*C)/r;C=C;r=3z^3+7z^2+1
+row=k=r/(C*s);h=z*k;s=z^2*(7z^2+3)*C-(6z^3+7z^2-1)
+density=Jac_zC(A,C)=C*s/r^2=1/(k*r)
+keller=Jac_xy(z,C)=lambda*k*r
+spectral=cubic_root_addresses_C=0,-1/alpha^2
+scope=rational_birational_chart_only;polynomial_atlas_and_JC2_OPEN
+semantic_sha256=a5445ccd279daadc45016d001be9b28233c0c8c306e11b2e10a752e9a1179853
+CHECKS=25
+RESULT=PASS
