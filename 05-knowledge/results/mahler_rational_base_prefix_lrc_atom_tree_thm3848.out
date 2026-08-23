@@ -1,0 +1,16 @@
+THM-3848 rational-base prefix / lonely-runner exact companion
+parameter_pairs=((3, 2), (5, 2), (4, 3), (5, 3), (5, 4))
+atom_profiles={(3, 2): (1, 3, 9, 27), (5, 2): (1, 5, 25, 125), (4, 3): (1, 4, 16, 64), (5, 3): (1, 5, 25, 125), (5, 4): (1, 5, 25, 125)}
+lonely_control_count=15
+three_halves_maximizers=[(1, ('1/5', '4/5')), (2, ('2/5', '3/5')), (3, ('1/5', '4/5')), (4, ('2/5', '3/5')), (5, ('1/5', '4/5'))]
+level_12_speeds=(4096, 6144, 9216, 13824, 20736, 31104, 46656, 69984, 104976, 157464, 236196, 354294, 531441)
+level_12_lrc_maximum=2/5; witness=2/5; adjacent_relation_l1=5
+level_12_safe_atom_count=531441; wall_grid=4353564672
+canonical_minus_two_fifths_residues_N1_to_N24=(0, 2, 6, 6, 6, 38, 102, 102, 102, 614, 1638, 1638, 1638, 9830, 26214, 26214, 26214, 157286, 419430, 419430, 419430, 2516582, 6710886, 6710886)
+denominator_19_horizons=[18, 36]
+radical_collision_mod_121=(U:55,V:0); U_margin=9/121
+safe_carry_counts_N0_to_N22=(1, 2, 3, 5, 8, 12, 18, 27, 40, 60, 90, 134, 201, 302, 452, 678, 1018, 1527, 2291, 3438, 5157, 7736, 11606)
+greedy_equality_prefix_36=101000001001001010000000001000000100
+safe_carry_depth4_residues=(0, 4, 5, 6, 8, 9, 13, 14)
+CHECKS=3083
+ALL CHECKS PASSED;ARTIFACT=THM-3848_RATIONAL_BASE_LRC_ATOM_TREE

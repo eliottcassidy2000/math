@@ -93,12 +93,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
+## Mahler `3/2`
+
+**OPEN.** [THM-3848 frontier and next task](MAHLER-THREE-HALVES-FRONTIER-2026-08-23.md).
+
 ## ABC-IUT
 
-**ABC OPEN; IUT-to-ABC CITED, not proved.**  See the [typed ledger](../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md).
-[THM-3833](../01-canon/theorems/THM-3833-abc-conditional-cube-radical-and-hyperbolic-power-finiteness.md)
-is conditional; its exact atlas is `19,314/5,855`.  It loses common scale and
-gives no LRC/JC transfer.
+**ABC OPEN; IUT-to-ABC CONTESTED.** [Ledger](../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md); THM-3833/3848 remain conditional.
 
 ## NC2 and Gaussian moments
 

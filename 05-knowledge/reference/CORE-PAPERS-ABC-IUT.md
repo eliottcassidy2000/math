@@ -19,9 +19,13 @@
 - **2026 formalization: PRELIMINARY RADAR.**  The author's April 2026 report
   describes skeletal early-stage work, not a completed public machine-checked
   proof.
-- **Repo consequence:** [THM-3833](../../01-canon/theorems/THM-3833-abc-conditional-cube-radical-and-hyperbolic-power-finiteness.md)
-  proves implications *from an explicitly assumed ABC schema*.  It does not
-  use IUT as an antecedent.
+- **Repo consequences:** [THM-3833](../../01-canon/theorems/THM-3833-abc-conditional-cube-radical-and-hyperbolic-power-finiteness.md)
+  and [THM-3848](../../01-canon/theorems/THM-3848-rational-base-prefix-atom-tree-and-lonely-runner-separation.md)
+  prove implications *from an explicitly assumed ABC schema*.  THM-3848
+  obtains a radical floor on odd `ceil(3a/2)` transitions and logarithmic
+  radical saturation for an explicit denominator-19 safe-prefix tower.  It
+  also proves exact even-run and LRC valuation hostiles.  Neither theorem uses
+  IUT as an antecedent.
 
 ## 1. The exact ABC interface
 
@@ -238,6 +242,7 @@ an explicit theorem link says otherwise.
 | THM-893 eroded-diamond twins | identical intrinsic shadow, distinct ambient frames | no intrinsic invariant separates literally equal shadows | ANALOGY / FRAME SIDECAR |
 | THM-2022 whole-face Frobenius | a whole packet plus carry sidecar survives a Frobenius operation | atomwise or vocabulary-only Kummer matching is invalid | ANALOGY / NO OBJECT MAP |
 | THM-3832 triangular root-ratio chart | a birational coordinate simplifies one operation while exposing denominator divisors | chart scalarization loses global polynomial regularity at its boundary | **PROVED in repo**; NO ABC/IUT TRANSFER |
+| THM-3848 Mahler/LRC separation | ABC applies to actual odd carry packets and denominator-cleared safe-prefix triples | arbitrary smooth even runs survive; radical twins lose valuation depth and phase | **CONDITIONAL ABC consumer + PROVED hostiles**; NO IUT/LRC CLOSURE |
 
 The most faithful shared design rule is:
 
@@ -357,5 +362,5 @@ test:         reverse the link or use equality after hull formation.    (15)
 
 This intake does not prove ABC, any IUT theorem, the contested
 `IUT III 3.11 -> 3.12` implication, Fermat--Catalan unconditionally, LRC(14),
-`JC(2)`, a two-cube support asymptotic, or a common theorem merely from shared
+Mahler's `3/2` problem, `JC(2)`, a two-cube support asymptotic, or a common theorem merely from shared
 words such as *Kummer*, *Frobenius*, *height*, *radial*, *colour*, or *copy*.

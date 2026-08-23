@@ -65,10 +65,11 @@ Format per entry:
   both declared YAML `id: THM-3846`.  Reserving an ID in one concurrent
   checkout did not reserve it globally against a later concurrent commit.
 - **Repair / strongest survivor:** the earlier formal-arm reservation retains
-  THM-3846 and has since been developed into a `PROOF CANDIDATE +
-  VERIFIED-EXACT` file pending independent hostile audit.  The lonely-runner
-  reservation moves to the fresh ID THM-3848 and remains a
-  `RESERVED / UNPROVED EMPTY STUB`.  Neither is a proved dependency.
+  THM-3846; the lonely-runner reservation moves to THM-3848.  At this
+  collision-repair checkpoint both remained `RESERVED / UNPROVED EMPTY STUB`
+  and neither entered the proved dependency graph.  Subsequent independent
+  audits promoted each under its distinct ID; their theorem files, not this
+  historical checkpoint, give current status.
 - **Reusable rule:** immediately before committing a reservation, recheck the
   filename, YAML ID, indexes, and current remote history.  After integrating
   concurrent commits, rerun the uniqueness audit even when every individual

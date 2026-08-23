@@ -44,6 +44,21 @@
   `f2b4afc9e6c8491f7105d2de2bd8f2d5259fb674e1bc39a9970537eea436ae05` /
   `f60042e9b76cf5d8b60888b2a696db71fb4c22ebccb279666ce40f112ae0a34e` /
   `1be906c5d8617afb65f330fa461beab31d1af774aa6889952e0cb391726ff407`.
+- `mahler_rational_base_prefix_lrc_atom_tree_thm3848.py` -> matching `.out`
+  [THM-3848 PROVED + VERIFIED-EXACT + INDEPENDENTLY PROOF-AUDITED, with a
+  CONDITIONAL ABC addendum].  For every coprime `p>q>=2`, the normalized
+  finite prefix carrier has `p^N` safe wall atoms, measure `q^(-(N+1))`, a
+  full `p`-ary reversible atom tree, and a saturated adjacent relation basis;
+  its mixed-power LRC maximum is `floor((p+q)/2)/(p+q)`.  The `3/2` level-12
+  row has thirteen speeds, exactly two maximizers, and `M=2/5`.  The distinct
+  formal safe-tail shift has renewal counts
+  `1,2,3,5,8,12,18,27,40,60,90,134,...`, entropy `log(3/2)`, dimension
+  `log_2(3/2)`, and is nonsofic; it is not the unknown Z-language.  Exact
+  denominator-19, even-run, orientation, and radical/valuation hostiles block
+  Mahler, ABC/IUT, and LRC(14) overreads.  `CHECKS=3,083`.  Script/output
+  SHA-256:
+  `4510dc9a122e5d22f1e1ed7134472b753cfd94740fcd93aa27e7d6880a961ab5` /
+  `3dfba51c1680e1d0ec94adb18cd604774f4ca441f3baa2551e5af7a9afe7d748`.
 
 - `jc2_nonlinear_cubic_keller_atlas_degree_contradiction_thm3845.py` ->
   matching `.out` [THM-3845 PROVED + VERIFIED-EXACT + INDEPENDENTLY
