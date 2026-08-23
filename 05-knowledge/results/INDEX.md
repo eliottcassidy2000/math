@@ -40,16 +40,19 @@
   `a5445ccd279daadc45016d001be9b28233c0c8c306e11b2e10a752e9a1179853`.
 
 - `jc2_polynomial_marked_root_ratio_nonentry_thm3835.py` -> matching `.out`
-  [THM-3835 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  [THM-3835 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, replacing
+  the MISTAKE-456 provisional sidecar proof].  The
   determinant-one row makes `h/k` reduced with exact denominator `k`; a
   polynomial ratio would make `k` a scalar and contradict dominance.  Neither
   the ratio nor any constant `PGL2` transform is polynomial or integral over
   `K[x,y]`.  The surviving rational branch has the denominator-free passport
-  `CS=R` and `k Jac(h,C)-h Jac(k,C)=lambda R`, retaining `k=0`.  `CHECKS=18`.
+  `CS=R`, the reconstruction laws
+  `DS=k^2+Ch^2`, `AS=h(k^2+Ch^2)`, `omega S=k(k^2+Ch^2)`, and
+  `k Jac(h,C)-h Jac(k,C)=lambda R`, retaining `k=0`.  `CHECKS=25`.
   Script/output/semantic SHA-256:
-  `a98cf391f4bca82e89f9a10d4b404325ebcd9c7d355a3ab96cac15384cd7cf0b` /
-  `3aa5626786e0498db37b2a7625c6cf4e5a4b37d0ea365c1e9a5a1f3e8e39286c` /
-  `436eb2336cafb2ead5cc67ffc4ae28050315804a2651bf8133be532d63884c2b`.
+  `884f087731f9ab751c49d236e149002d2f26eefe5fab0f4f6858af4f0fcd6007` /
+  `a70cf307e867a3f73b029f400b9bbf04a49c910bd19ca80b6bd29abffdbda77c` /
+  `7d1ad90998513133e4c8f017378a3bf35f978a564c9bd1b090ff6a5ae9b0fb9b`.
 
 - `jc2_coordinate_cross_bichromatic_split_thm3830.py` -> matching `.out`
   [THM-3830 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  A
@@ -71,6 +74,17 @@
   `27b15411a51ad8e6facf1dfa39c724c278a5a9811d7898c88a529935881fed67` /
   `d728949c7f9f331a80f64b446e4b6c3f84bb5f5899cac1c68a46a4edb88549be` /
   `d045d251b2f0016d9909c329a37a8d30c8e4b7c50d0fef84e9000f53012fe8c6`.
+
+- `jc2_cubic_pseudoplane_one_sided_second_row_thm3834.py` -> matching `.out`
+  [THM-3834 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  For
+  `X=0,Y!=0`, the `S!=0` 10/7 branch dies at an odd origin coefficient; the
+  `S=0` shifted 5/2 tower forces `p=g=0`, constant `w`, and a final nonzero
+  `-60ae^3`.  With THM-3821/3828/3829 this empties the complete displayed
+  first `r^2z^2` grammar; higher slots remain open.  `CHECKS=40`.
+  Script/output/semantic SHA-256:
+  `81263a14587121c55ba6d64acecbe220a48e2c9c709943fb127f935fc5f5288e` /
+  `596bc49f2c32318cfb4ffe903193a8fec1c4351bd1b9b820ffb2fda205bd5302` /
+  `5d2a2b84131e0bc6e879f13a5b8b2410540aefdafd5d37752d04d480baef94d6`.
 
 - `jc2_cubic_pseudoplane_proportional_second_row_thm3828.py` -> matching
   `.out` [THM-3828 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
@@ -125,6 +139,20 @@
   `e6e4f82e90a727b73ba9621f602eea03ab79bbe204303a372605b6c7525ecdc6` /
   `8386c3c30dd106cb7b7a70c6bfccf906e025dd01f422d5e3cb2cd37f40c25d49` /
   `57d484bf6f5e9c84ac174206bf48564c222e4646965c060bbbcdd540ade621db`.
+
+- `lrc14_negative_pell_two_cube_triangular_successor_extension_20260823.py`
+  -> matching `.out` [FINITE-EXACT].  The negative-Pell parametrization of
+  `T_M=3T_N` makes the search complete for all positive distinct `a<b` with
+  `a+b<=1,000,000`: among 17 relevant Pell nodes and 731,088 candidate cube
+  probes, the unique solution is
+  `9^3+13^3=T_76` and `3T_76=T_132`.  An independent pair-first scan checks
+  all 6,247,500 pairs through `a+b<=5,000`.  The square-tag hostile
+  `56^3+65^3=671^2` is not triangular, and the triangular successor is not a
+  square.  This is a finite address census, not an LRC(14) consequence.
+  `CHECKS=731,159`.  Script/output/semantic SHA-256:
+  `28d39e6bd814d6a7d814664b31bba5e421b22a414a46402abfbf716645a6c765` /
+  `6fa70b4b9ac1c0304f27928e25d9d73702b65b7a333fe07526414911a443ad8e` /
+  `305e2186adcd44689e6aa00e0a7a3e7fdda00edb9a1c0533f5eee5be35b13baf`.
 
 - `jc2_nonlinear_cubic_compact_euler_thm3823.py` -> matching `.out`
   [THM-3823 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].

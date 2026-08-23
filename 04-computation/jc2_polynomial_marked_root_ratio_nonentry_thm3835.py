@@ -36,12 +36,13 @@ s = z**2 * q * C - b
 same((C * k - m * h).subs(h, z * k), k * (C - m * z),
      "determinant factors through a polynomial root ratio")
 
-# A determinant-one row can have a polynomial ratio when dominance is absent.
+# A determinant-one row alone can have a polynomial ratio.  This is not
+# asserted to extend to a morphism into the nonlinear cubic surface.
 x, y = sp.symbols("x y")
 h_flat, k_flat, m_flat, C_flat = x, sp.Integer(1), sp.Integer(0), sp.Integer(1)
 same(C_flat * k_flat - m_flat * h_flat, 1,
-     "non-dominant polynomial-ratio hostile is unimodular")
-same(h_flat / k_flat, x, "non-dominant hostile has polynomial ratio")
+     "determinant-only polynomial-ratio hostile is unimodular")
+same(h_flat / k_flat, x, "determinant-only hostile has polynomial ratio")
 
 # A genuinely rational unimodular row shows that rationality itself survives.
 h_rat = x
@@ -72,6 +73,18 @@ same(sp.Poly(dependence, C).coeff_monomial(C**2), kappa * z**2 * q,
      "nonzero leading dependence coefficient")
 check(dependence != 0, "constant-k dependence relation is nonzero")
 
+# More generally, a scalar projective denominator c*h+d*k=kappa would give
+# r(cz+d)=kappa*C*s.  Its C^2 term rules this out directly, without importing
+# an etale-only algebraic-independence theorem.
+projective_dependence = sp.expand(r * (cc * z + dd) - kappa * C * s)
+check(sp.Poly(projective_dependence, C).degree() == 2,
+      "nonzero scalar projective denominator gives C-degree two")
+same(sp.Poly(projective_dependence, C).coeff_monomial(C**2),
+     -kappa * z**2 * q,
+     "projective scalar relation has nonzero C-square coefficient")
+same(projective_dependence.subs(kappa, 0), r * (cc * z + dd),
+     "zero scalar projective denominator reduces to cz+d=0")
+
 # Homogenize without losing the k=0 divisor.
 R = 3 * h**3 + 7 * h**2 * k + k**3
 S = C * h**2 * (7 * h**2 + 3 * k**2) - k * (
@@ -84,6 +97,24 @@ same(
     C * S - R,
     "chart law homogenizes to CS=R",
 )
+
+# The denominator-free chart also reconstructs D,A,omega.  Before imposing
+# CS=R, the discrepancy factors by (CS-R), so no cancellation is hidden.
+D_chart = C**2 * (1 + z**2 * C) * s / r**2
+D_hom = C**2 * (k**2 + C * h**2) * S / R**2
+same(D_chart.subs(z, h / k), D_hom,
+     "D chart homogenizes before imposing CS=R")
+same(
+    R**2 * (D_hom * S - (k**2 + C * h**2)),
+    (k**2 + C * h**2) * (C * S - R) * (C * S + R),
+    "DS reconstruction discrepancy is exactly divisible by CS-R",
+)
+same(h * (k**2 + C * h**2),
+     h * k**2 + C * h**3,
+     "A reconstruction numerator remains polynomial")
+same(k * (k**2 + C * h**2),
+     k**3 + C * h**2 * k,
+     "omega reconstruction numerator remains polynomial")
 
 # Chain-rule homogenization of Jac(z,C)=lambda*k*r.
 hx, hy, kx, ky, Cx, Cy, lam = sp.symbols("hx hy kx ky Cx Cy lam")
@@ -110,7 +141,7 @@ semantic = {
     "theorem": "a dominant plane map to U cannot have polynomial z=h/k",
     "denominator": "Ck-mh=1 makes h/k and every PGL2 transform retain an exact nonconstant denominator",
     "contradiction": "polynomial z makes k constant and forces a nonzero relation between the transcendence basis z,C",
-    "survivor": "CS=R and k*Jac(h,C)-h*Jac(k,C)=lambda*R retain the k=0 divisor",
+    "survivor": "CS=R; DS=k^2+Ch^2; AS=h(k^2+Ch^2); omegaS=k(k^2+Ch^2); and k*Jac(h,C)-h*Jac(k,C)=lambda*R retain the k=0 divisor",
     "scope": "dominance only; no atlas or Jacobian counterexample constructed",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
@@ -120,6 +151,7 @@ print("denominator=h_over_k_is_reduced;exact_denominator=k_up_to_scalar")
 print("polynomial_ratio=forces_k_constant_and_z_C_algebraically_dependent")
 print("projective_row=no_PGL2_transform_is_polynomial_or_integral")
 print("homogeneous_chart=CS_equals_R")
+print("homogeneous_reconstruction=DS_equals_k2_plus_Ch2;AS_equals_h_times_that;omegaS_equals_k_times_that")
 print("homogeneous_Keller=kJac_hC-hJac_kC_equals_lambda_R")
 print("boundary=k_zero_retained")
 print("scope=dominance_only;no_plane_atlas_or_JC2_constructed")

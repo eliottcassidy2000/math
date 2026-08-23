@@ -18,24 +18,26 @@ audit: >
   The audit reduced the proof to the polynomial-unit implication from the
   intrinsic Bezout row, checked dominance/injectivity and nonconstancy using
   the exact Laurent arm, and derived the symmetric, normality, and PGL2
-  strengthenings.  It separated the non-dominant constant-denominator
+  strengthenings.  It separated the determinant-only constant-denominator
   hostile and confirmed that neither etaleness nor characteristic-zero
   valuation arithmetic is load-bearing.  The deterministic companion checks the
-  determinant factorization, polynomial-unit boundary, non-dominant
+  determinant factorization, polynomial-unit boundary, determinant-only
   polynomial-ratio hostile, genuinely rational unimodular-row control,
   nonzero chart dependence relation, exact homogenizations of r and s, and
-  the denominator-free Jacobian chain.  Normal and optimized replay agree.
+  the denominator-free reconstruction/Jacobian chain.  This supersedes the provisional
+  square-sidecar valuation proof whose zero-polynomial branch was untyped;
+  see MISTAKE-456.  Normal and optimized replay agree.
 depends_on:
   - THM-3832-nonlinear-cubic-root-ratio-triangular-birational-chart
-  - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
 related:
+  - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
   - THM-3831-intrinsic-spectral-pencil-fibre-atlas-and-forced-cubic-two-arm-hit
 script: 04-computation/jc2_polynomial_marked_root_ratio_nonentry_thm3835.py
 output: 05-knowledge/results/jc2_polynomial_marked_root_ratio_nonentry_thm3835.out
-script_sha256: a98cf391f4bca82e89f9a10d4b404325ebcd9c7d355a3ab96cac15384cd7cf0b
-output_sha256: 3aa5626786e0498db37b2a7625c6cf4e5a4b37d0ea365c1e9a5a1f3e8e39286c
-semantic_sha256: 436eb2336cafb2ead5cc67ffc4ae28050315804a2651bf8133be532d63884c2b
+script_sha256: 884f087731f9ab751c49d236e149002d2f26eefe5fab0f4f6858af4f0fcd6007
+output_sha256: a70cf307e867a3f73b029f400b9bbf04a49c910bd19ca80b6bd29abffdbda77c
+semantic_sha256: 7d1ad90998513133e4c8f017378a3bf35f978a564c9bd1b090ff6a5ae9b0fb9b
 hash_basis: raw LF bytes
 ---
 
@@ -85,14 +87,15 @@ k(C-mz)=1.                                                     (3)
 
 Hence `k=kappa in K*`.
 
-The non-dominant hostile shows why the last hypothesis matters: the row
+The determinant-only hostile shows why the intrinsic row law is insufficient:
 
 ```text
 h=x,                    k=1,                    m=0, C=1
 ```
 
-satisfies `(2)` and has polynomial ratio `z=x`.  What fails is not the row
-law but dominance over the nonlinear cubic surface.
+satisfies `(2)` and has polynomial ratio `z=x`.  This row is not asserted to
+extend to a morphism into the nonlinear cubic surface; it isolates exactly the
+extra target-chart content used below.
 
 ## 2. The triangular chart makes the dominance contradiction explicit
 
@@ -141,11 +144,29 @@ zeta=(a h+b k)/(c h+d k),              ad-bc!=0.                (7)
 
 The two linear forms still generate the unit ideal because their constant
 coefficient matrix is invertible.  If `zeta` were polynomial, its denominator
-`c h+d k` would therefore be a scalar unit.  But THM-3827 proves that `h,k`
-are algebraically independent in every dominant plane pullback, so no nonzero
-constant linear combination of them is scalar.  Hence every `PGL_2(K)`
-transform `(7)` retains a genuine denominator.  This is a projective row
-statement, not invariance under a nonlinear target change.
+`c h+d k` would therefore be a scalar `kappa in K`.
+
+This last possibility can be excluded directly in the THM-3832 chart, without
+importing an etale hypothesis.  Since `h=zk`, the scalar equation is
+
+```text
+k(cz+d)=kappa.                                                (8)
+```
+
+If `kappa=0`, then `cz+d=0` in `K(z,C)`; the transcendence of `z` forces
+`c=d=0`, contradicting the invertibility in `(7)`.  If `kappa!=0`, substitute
+`k=r/(Cs)` into `(8)` to obtain
+
+```text
+r(z)(cz+d)=kappa C s(z,C).                                   (9)
+```
+
+The left side has `C`-degree zero, whereas the coefficient of `C^2` on the
+right is `kappa z^2(7z^2+3)`, which is nonzero in `K[z]`.  Since dominance
+injects the transcendence basis `z,C` into `K(x,y)`, `(9)` is impossible.
+Hence every `PGL_2(K)` transform `(7)` retains a genuine denominator.  By
+normality, none is integral either.  This is a projective row statement, not
+invariance under a nonlinear target change.
 
 ## 4. The denominator-free surviving system
 
@@ -154,18 +175,33 @@ with `z=h/k`:
 
 ```text
 R(h,k)=3h^3+7h^2k+k^3,
-S(h,k,C)=C h^2(7h^2+3k^2)-k(6h^3+7h^2k-k^3).                 (8)
+S(h,k,C)=C h^2(7h^2+3k^2)-k(6h^3+7h^2k-k^3).                (10)
 ```
 
-The chart polynomialization law and the THM-3832 weighted-area equation become
+The chart polynomialization law becomes
 
 ```text
-CS=R,                                                         (9)
-k Jac(h,C)-h Jac(k,C)=lambda R,             lambda in K*.    (10)
+CS=R.                                                        (11)
 ```
 
-Together with `(2)`, equations `(8)--(10)` retain the `k=0` divisor erased by
-the affine coordinate `z`.  They are necessary conditions only.  Solving
+It also clears all denominators in the THM-3832 reconstruction formulas.  If
+`A,omega,D` denote the intrinsic functions, then
+
+```text
+D S     = k^2+C h^2,
+A S     = h(k^2+C h^2),
+omega S = k(k^2+C h^2).                                    (12)
+```
+
+Finally the weighted-area equation becomes
+
+```text
+k Jac(h,C)-h Jac(k,C)=lambda R,             lambda in K*.    (13)
+```
+
+Together with `(2)`, equations `(10)--(13)` retain the `k=0` divisor erased
+by the affine coordinate `z`, as well as the divisibility obligations needed
+to reconstruct `A,omega,D`.  They are necessary conditions only.  Solving
 them, extending the remaining intrinsic generators polynomially, and meeting
 the cubic two-arm and nonproperness passports all remain open.  No planar
 Jacobian counterexample is claimed.  **QED.**

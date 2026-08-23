@@ -1,0 +1,15 @@
+experiment=LRC14-negative-Pell-two-cube-triangular-successor-extension
+classification=FINITE-EXACT
+universe=positive_distinct_a_lt_b;a_plus_b_le_1000000
+predicate=a3_plus_b3_equals_T_N;three_T_N_equals_T_M
+pell_equation=X2_minus_3Y2_equals_minus_2;X_equals_2M_plus_1;Y_equals_2N_plus_1
+pell_nodes=17;candidate_cube_probes=731088
+largest_retained_node=X:1934726305,Y:1117014753,N:558507376,M:967363152
+pell_hits=(a,b,N,M):(9,13,76,132)
+direct_control=a_plus_b_le_5000;pairs=6247500;same_unique_hit=1
+square_hostile=56^3+65^3=671^2;not_triangular
+tag_separation=triangular_successor_hit_is_not_square
+scope=finite_address_tag_only;no_LRC14_consequence
+CHECKS=731159
+semantic_sha256=305e2186adcd44689e6aa00e0a7a3e7fdda00edb9a1c0533f5eee5be35b13baf
+RESULT PASS

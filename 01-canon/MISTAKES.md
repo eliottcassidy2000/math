@@ -9,6 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-456 (2026-08-23, provisional THM-3835 audit) -- a square-sidecar valuation argument skipped its zero-polynomial branch
+
+- **What failed:** a provisional proof correctly made `k` scalar from a
+  polynomial ratio, then invoked odd-root valuations of `H(h,k)=w^2` to make
+  `h` scalar.  It did not first separate `H(h,k)=0`, where valuations of the
+  zero polynomial are undefined.  Its exact Groebner lemma was true but not
+  sufficient to license that omitted branch.
+- **First failed implication:** prime-by-prime parity of a nonzero square does
+  not apply when the polynomial being factored is identically zero.
+- **Repair / survivor:** no sidecar is needed.  From `h=zk` and
+  `Ck-mh=1`, the polynomial `k` is already a scalar unit; dominance then
+  contradicts the nonconstant intrinsic Laurent coordinate `k`.  Equivalently
+  the THM-3832 chart would force an algebraic relation between its birational
+  coordinates `z,C`.  The repaired THM-3835 also gives the exact reduced
+  denominator and all-`PGL_2` strengthening.  If the discarded sidecar proof
+  is ever reused, its zero branch first forces `h` to be a scalar root.
+- **Reusable rule:** valuation parity begins only after proving the element is
+  nonzero.  Before launching a sidecar or Groebner argument, test whether a
+  unit/dominance identity already closes the branch.
+
 ## MISTAKE-455 (2026-08-23, THM-3831 spectral-fibre audit) -- lift laws were used as a saturated affine-modification presentation at `D=0`
 
 - **What failed:** the first promoted proof solved the determinant and two
