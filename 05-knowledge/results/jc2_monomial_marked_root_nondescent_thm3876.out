@@ -1,0 +1,12 @@
+THM3876_TOWER A=t^m,C=6t(1+t^(m+1)),B=2t^2(3+4t^(m+1))
+THM3876_NORMALIZATION k[t^m,t+t^(m+2)] has normalization k[t]
+THM3876_COLLISION zeta^m=1,U=t^(m+1)=-1/(zeta+1)
+THM3876_SAME_TARGET (A,C)(zeta*t)=(A,C)(t)
+THM3876_DIFFERENT_MARK B(zeta*t)-B(t)=-2t^2(zeta-1)^3/(zeta+1)!=0
+THM3876_M1 forward graph;THM3866
+THM3876_M2 triangular parabola;THM3873
+THM3876_MGE3 forced B does not descend;no polynomial carrier profile
+THM3876_REPLAY_UNIVERSE universal identity;primitive roots m=3..20
+THM3876_SCOPE monomial marked-root tower only;general singular A1 normalization open
+SEMANTIC_SHA256 b42121616115392fe501a51994d7e489a1431d62acc20ac5373dbc43b42962df
+CHECKS 82
