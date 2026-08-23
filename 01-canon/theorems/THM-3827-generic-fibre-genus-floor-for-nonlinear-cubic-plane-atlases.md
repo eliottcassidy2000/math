@@ -2,15 +2,16 @@
 id: THM-3827
 title: "Dual generic-fibre genus floors for nonlinear cubic plane atlases"
 status: >
-  PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the
-  generative closed-polynomial
+  PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, WITH THE
+  CANONICAL SCHEME-DISCONNECTION SHARPENING A PROVISIONAL VERIFIED-EXACT PROOF
+  CANDIDATE PENDING INDEPENDENT HOSTILE AUDIT.  For the generative closed-polynomial
   factors h=p(g) and k=q(ell) of both pulled-back THM-3811 row functions, the
   smooth projective geometric generic fibres of g and ell each have genus at
   least three.  At equality they are respectively isomorphic after base
   change to explicit degree-eight and degree-seven THM-3822 hyperelliptic
   sidecars, with two versus one points at infinity.  The new sharpenings give
   V_U(k)=G_m as well as V_U(h)=G_m, and say that either h splits or one fixed
-  spectral fibre splits into components carrying both square-root signs.
+  spectral fibre is canonically disconnected into both square-root signs.
   Existence and uniqueness up to affine change of each generative factor,
   and the equivalence with relative algebraic closedness, are cited from
   Arzhantsev--Petravchuk rather than reproved.  No Jacobian counterexample is
@@ -41,7 +42,9 @@ audit: >
   cubic laws, reduced base change and componentwise nonconstancy, the h-adic
   lift, all pullback gcds, full prime multiplicity allocation, recovery of
   whole members even for nonreduced monochromatic fibres, and the formal
-  grading through algebraic independence.  The exact companion verifies the
+  grading through algebraic independence.  The final CRT upgrade from
+  bichromatic prime components to a canonical disconnected fibre scheme is
+  self-audited pending an independent pass.  The exact companion verifies the
   monic degree-eight sidecar, a squarefree hostile fibre, the full generic
   discriminant, stability under a nonconstant Stein composition, the
   genus-three count, every excluded Riemann--Hurwitz genus, and reduced-arm
@@ -59,16 +62,18 @@ citation:
   - "Arzhantsev--Petravchuk, Closed and Irreducible Polynomials in Several Variables, arXiv:math/0608157v2, Proposition 1, Lemma 3, and Corollary 1."
 script: 04-computation/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.py
 output: 05-knowledge/results/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.out
-script_sha256: dd6025305fd479c6118d57409e390ffa9751e15da533f465b50a998c59d45722
-output_sha256: a59b2c098e2cd115adb6da15dd711a4e6e2752c1d15b8ed5378bcc589012e86d
-semantic_sha256: d46b81bd79d27d7b4396f8f934dd773e694c0eb1a6384ffe03381e6934db7a29
+script_sha256: cc22fe6e3c026820ded9b0aa171c13e3ba6205c23c7ba8104f7760eba633b8e9
+output_sha256: 1d994fcd8eb65f7716c43ba65a2f3222cfb6b8c0e726a1d3dc26417e2514078f
+semantic_sha256: a9388b3182d2e4a45d065287ccdbaced48cec56a102dcd13c9392283d0592c48
 hash_basis: raw LF bytes
 ---
 
 # THM-3827 -- both row fibrations of a plane atlas need genus at least three
 
-**PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work
-over an algebraically closed field `K` of characteristic zero.  Put
+**PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; CANONICAL
+SCHEME-DISCONNECTION SHARPENING PROVISIONAL + VERIFIED-EXACT, PENDING
+INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `K` of
+characteristic zero.  Put
 
 ```text
 R=K[x,y],                 L=K(x,y).                              (1)
@@ -297,11 +302,12 @@ They are five distinct finite slopes: `disc(a)=353831803500!=0`.  The exact
 surviving passport is stronger than mere reducibility:
 
 ```text
-either h is reducible, or some h-alpha_i k is reducible and its prime
-components carry both signs w=+kB_3 and w=-kB_3 generically.             (24)
+either h is reducible, or for some i the scheme V(h-alpha_i k) is
+disconnected by a canonical nontrivial plus/minus idempotent product.    (24)
 ```
 
-Call the latter property **bichromatic**.  To prove `(24)`, suppose `h` is
+Its prime components carry both signs `w=+kB_3` and `w=-kB_3` generically;
+call this property **bichromatic**.  To prove `(24)`, suppose `h` is
 irreducible.  Modulo `(h)`, the arm law makes `k` a unit and `B_3=-k^3`, so
 `kB_3=-k^4` is a unit.  From `w^2=H(h,k)` and `(21)`, one of
 `w-kB_3,w+kB_3` vanishes modulo `h`.  Changing the sign of `w` if necessary
@@ -356,10 +362,36 @@ For `r_0=2`, the degree-six part would force `h^2d=-kB_3`, impossible because
 prime components of both signs, so it is reducible and bichromatic.  This
 proves `(24)` and, in particular, the earlier reducible-fibre claim.
 
+Here is the promised scheme-theoretic strengthening.  Put
+
+```text
+R_i=K[x,y]/(h-alpha_i k),          u_i=kB_3,          s_i=w/u_i. (28a)
+```
+
+The determinant identity becomes `k(C-alpha_i m)=1` in `R_i`.  Also none of
+the five `alpha_i` equals `-1,-1/2,1/3`, by the resultant `(28)`.  Therefore
+`u_i` is a unit even when `R_i` is nonreduced.  Equation `(21)` gives
+`s_i^2=1`, so
+
+```text
+e_i^+=(1+s_i)/2,              e_i^-=(1-s_i)/2                  (28b)
+```
+
+are complementary orthogonal idempotents and the Chinese remainder theorem
+gives the canonical product
+
+```text
+R_i = R_i/(s_i-1)  x  R_i/(s_i+1).                             (28c)
+```
+
+For the bichromatic fibre produced above, both factors are nonzero.  Thus its
+entire affine fibre scheme is disconnected, not merely reducible or split at
+the generic points.  This CRT conclusion is insensitive to nilpotents.
+
 Thus the surviving construction lane is narrower than a generic high-genus
 pencil: unless `h` itself splits, it must allocate components of both square-
-root signs inside one fixed spectral member before solving the second-row and
-Keller equations.
+root signs inside one canonically disconnected fixed spectral member before
+solving the second-row and Keller equations.
 
 ## 7. The opposite row has the same floor and opposite infinity parity
 
@@ -444,5 +476,7 @@ The generative-polynomial existence and uniqueness used here are **CITED**,
 not reproved by the exact companion.  They make the independently audited
 dual claims `(19)` and `(34)` unconditional for every dominant etale plane
 atlas over the stated field.  The second intrinsic arm `(30)` and the
-bichromatic strengthening `(24)` are independently audited as well.  No
-planar Jacobian counterexample is claimed.  **QED.**
+bichromatic strengthening `(24)` are independently audited as well.  The
+canonical nontrivial CRT decomposition `(28c)` is the only new provisional
+sharpening.  No planar Jacobian counterexample is claimed.  **QED, with
+`(28c)` subject to independent hostile audit.**
