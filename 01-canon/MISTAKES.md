@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-462 (2026-08-23, THM-3888 integral shell) -- simultaneous inverse integrality was mislabeled complete Weierstrass integrality
+
+- **What failed:** Section 2.2 assumed `u,v,T in overline{k(x)}[y]` but
+  concluded that all sections with polynomial Weierstrass coordinates `u,v`
+  were the six constant-`u` sections.  Polynomiality of the inverse `T` was a
+  real extra hypothesis, not a consequence of `u,v` being integral.
+- **Minimal witness / first failed implication:** put
+  `H=a^3L^2-F^2`, choose nonzero `R` satisfying
+  `-3R^4+8FR^3+6HR^2+H^2=0`, and set
+  `r^2=R`, `Z=9r+H/r^3`, `alpha^3=Z/L^2`.  Then
+  `u=alpha*y+r*alpha` and `v=y^2+(Z/2)y+3r^2` satisfy the normalized elliptic
+  equation with polynomial `u,v`, but the inverse `T` has numerator degree
+  one and denominator degree two.
+- **Repair / strongest survivor:** the six points are exactly the constant-`u`
+  sub-shell.  The proved simultaneous `u,v,T` polynomial shell still has only
+  the second `T=0` point and the `x`-polar hostile.  Hence every other
+  polynomial quartic point must have a `u` or `v` denominator; the nonlinear
+  `f=0` lane remains open.
+- **Reusable rule:** never call a Weierstrass-coordinate census complete when
+  the proof also assumes integrality after a rational inverse map.  Name the
+  source coordinates and every inverse denominator in the quantified shell.
+
 ## MISTAKE-461 (2026-08-23, THM-3886 independent audit) -- an address-free theorem proof silently fixed the constant by an address condition
 
 - **What failed:** THM-3886's formal equality-seam hypotheses did not impose

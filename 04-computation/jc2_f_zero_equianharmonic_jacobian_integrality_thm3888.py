@@ -347,7 +347,7 @@ semantic = {
     "boundary": "div(T)=O+P0-Qplus-Qminus;Qplus+Qminus=P0",
     "factor": "v2=K2+L2(u3-a3);T=(v-K)/(u2+au+a2)",
     "hostile": "T=-2K/(3a2) is polynomial in y but fails x-integrality/address",
-    "integral_shell": "six constant-u sections; exactly base and hostile give polynomial quartic points",
+    "integral_shell": "six constant-u sections; simultaneous u,v,T polynomial leaves base and hostile",
     "surface": "generic y-fibres II^4+IV;rational;geometric MW rank6 torsion0",
     "scope": "two-section S-integrality and x-integral descent remain open",
 }
@@ -369,7 +369,7 @@ print(
     "constant_T_candidate_gcds="
     + ",".join(f"({i},{j}):{gcd_value}" for i, j, gcd_value in rational_root_candidates)
 )
-print("integral_Weierstrass_shell=six_constant_u_sections")
+print("constant_u_integral_Weierstrass_subshell=six_sections")
 print("polynomial_quartic_points_in_shell=exactly_base_and_x_pole_hostile")
 print("alternate_chart_preimage=T=aL^2(s-3)/(4K),not_polynomial_y")
 print("generic_fibres=II,II,II,II,IV")

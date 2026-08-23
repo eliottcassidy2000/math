@@ -2,42 +2,30 @@
 id: THM-3888
 title: "F-zero equianharmonic Jacobian and two-section integrality"
 status: >
-  PROVED + INDEPENDENTLY HOSTILE-AUDITED BASE; FINAL EXACT-SHELL
-  STRENGTHENING AWAITING FOCUSED AUDIT.  The
-  THM-3881 f=0 square residual is a binary quartic with I=0 and an explicit
-  equianharmonic Jacobian.  Over the generic x-line its y-fibration is a
-  rational elliptic surface with fibres II,II,II,II,IV and geometric
-  Mordell--Weil group of rank six and trivial torsion.  Polynomial residual
-  squares give sections integral away from two explicitly marked boundary
-  sections whose sum is the second T=0 section.  The converse is asserted
-  only for sections factoring through the original affine quartic chart.
-  An explicit nonzero k(x)[y] point proves that x-integral descent and the
-  origin address are load-bearing.  Within the integral Weierstrass-coordinate
-  shell, there are six constant-u sections; exactly two give polynomial
-  points of the chosen affine quartic chart, namely the second T=0 section
-  and one explicit x-polar hostile section.  Every other polynomial quartic
-  point has a genuine Weierstrass denominator.
-  Effective two-section S-integral enumeration, x-integral descent, a Keller
-  atlas, and JC(2) remain OPEN.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED WITH REPAIRED
+  SHELL SCOPE.  The THM-3881 f=0 residual has an explicit equianharmonic
+  Jacobian and a rational elliptic surface with fibres II,II,II,II,IV,
+  geometric Mordell--Weil rank six and trivial torsion.  Its T-coordinate has
+  divisor O+P0-Q+-Q-.  The constant-u integral Weierstrass sub-shell has six
+  sections, but degree-one polynomial u,v sections already exist with
+  nonpolynomial inverse T.  The simultaneous u,v,T polynomial shell has only
+  the second T=0 section and one x-polar hostile.  Hence every other
+  polynomial quartic point has a genuine u/v denominator.  Effective
+  two-section integral enumeration, x-descent, a Keller atlas and JC(2)
+  remain OPEN.
 source: jc_zero_debt_lift / post-THM-3885 elliptic reframe, 2026-08-23
 audit: >
-  PROVED BASE WITH PROVISIONAL EXACT STRENGTHENING.  Independent hostile
-  audits passed the elliptic-surface packet at ce633e56c5 and the first
-  integral-height delta at 58b095278c.  The companion verifies the binary
-  quartic invariants and discriminant, the birational map and inverse, all
-  four marked sections and their chord law, the T-divisor factorization, the
-  generic squarefree y-discriminant, short-Weierstrass discriminant, infinity
-  minimalization, IV component addresses, the normalized cubic-factor chart,
-  the explicit descent-hostile point, the 3-division polynomial, and the
-  fifteen-case constant-T rational-root exhaustion and all four
-  alternate/boundary constant-u sections in 68 active gates.
-  Normal and optimized runs
-  must byte-match the frozen
-  output.  Independent audit must recheck extension to smooth projective
-  models, the exact one-way integrality scope at bad fibres, rationality and
-  Shioda--Tate inputs, torsion injection at IV, and the local intersection of
-  the two boundary sections.  The final low-height rational-root exhaustion
-  awaits a focused delta audit.
+  INDEPENDENT HOSTILE AUDIT PASS WITH SCOPE REPAIR.  The canonical companion
+  verifies the quartic invariants, birational maps, four marked sections,
+  T-divisor, elliptic-surface packet, normalized factor chart, descent
+  hostile, fifteen constant-T candidates and four alternate constant-u
+  sections.  A focused independent audit confirms every divisor order and
+  kills the fifteen candidates by two-divisor valuations.  It refutes only
+  the phrase “complete integral-Weierstrass shell” via an exact degree-one
+  polynomial u,v section whose inverse T has numerator degree one and
+  denominator degree two.  Renaming the six points as the constant-u
+  sub-shell preserves the simultaneous u,v,T theorem and its denominator
+  filter.  Normal, optimized and frozen streams byte-match.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
   - THM-3885-cusp-residual-f-zero-arm-dichotomy-and-quadratic-closure
@@ -47,16 +35,21 @@ related:
   - THM-3886-cusp-residual-equality-seam-second-layer-trichotomy
 script: 04-computation/jc2_f_zero_equianharmonic_jacobian_integrality_thm3888.py
 output: 05-knowledge/results/jc2_f_zero_equianharmonic_jacobian_integrality_thm3888.out
-script_sha256: 329598af4a09c2ff3aa37db65ef176975f4df218d48c2c4f6ecd74e30ec04e47
-output_sha256: b612c4f412c2610197aa70c57aee52879ec3fd021610e60982caa91c07913203
-semantic_sha256: 9a50da8fdffac4a46ca3d9074d86f2e1c85943a5150792ec486c41a2c062fbb6
+script_sha256: b8fa746d7b8182de507bb9c2ac55d4a64a6dfa7d5917da37ae9af9e1cc9e54dd
+output_sha256: 1f25d232031de9d8ace4a4154f9f27338729131284774226bd026d8eaa971f6d
+semantic_sha256: e569974cc14da11c468511c6f42b32ea32c3be7589ef7e2061c5f1612a89a23b
+independent_audit_script: 04-computation/jc2_f_zero_equianharmonic_jacobian_integrality_independent_audit_thm3888.py
+independent_audit_output: 05-knowledge/results/jc2_f_zero_equianharmonic_jacobian_integrality_independent_audit_thm3888.out
+independent_audit_script_sha256: 0dd3bb5c0e708ebd7ceff8eb1b60de858f8d2bec6c802a1dba8e3a854863be72
+independent_audit_output_sha256: 73604dd11ce987e79a264755639913977fbf4421b2047195d2fce57767033543
+independent_audit_semantic_sha256: 8714d316541ce45b67f51bb5925a7d66155780f4cd5b07de64d2adadebfa87c8
 hash_basis: raw LF bytes
 ---
 
 # THM-3888 -- the f-zero lane is a two-boundary-section problem
 
-**PROVED + INDEPENDENTLY HOSTILE-AUDITED BASE; FINAL EXACT-SHELL
-STRENGTHENING AWAITING FOCUSED AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED WITH REPAIRED
+SHELL SCOPE.**
 Work over an algebraically closed field `k` of characteristic zero.  Retain
 the THM-3881 notation
 
@@ -177,13 +170,13 @@ u^2+au+a^2 divides v-K in k(x)[y].                        (9d)
 
 This literal divisibility statement is scoped to integral Weierstrass
 coordinates.  For a general Mordell--Weil section, `u,v` may have
-denominators and `(9d)` must be replaced by its valuation form.  This is why
-the first integral height shell is the cheapest exact computation, but not
-the whole problem.
+denominators and `(9d)` must be replaced by its valuation form.  The first
+simultaneous inverse-integral shell is the cheapest exact computation, but
+not the whole problem.
 
-### 2.2. The integral Weierstrass shell has six points, only two affine
+### 2.2. The simultaneous `u,v,T` polynomial shell has two finite points
 
-The first height-shell computation admits an all-degree proof.  Suppose
+The simultaneous shell admits an all-degree proof.  Suppose
 
 ```text
 u,v in k(x)[y],              T=(v-K)/(u^2+au+a^2) in k(x)[y].   (9e)
@@ -275,11 +268,71 @@ The nonzero preimage is therefore
 T=aL^2(s-3)/(4K),                                        (9n)
 ```
 
-which is not in `k(x)[y]`.  Thus the complete integral-Weierstrass shell has
-six sections: two chosen-chart polynomial residual points, two deleted
-boundary sections, and two alternate-chart rational points.  Consequently
-every **other polynomial quartic point** has a denominator in `u` or `v`;
-cancellation through `(9b)` is now the genuinely remaining height problem.
+which is not in `k(x)[y]`.  Thus the **constant-`u`** integral Weierstrass
+sub-shell has six sections: two chosen-chart polynomial residual points, two
+deleted boundary sections, and two alternate-chart rational points.  Within
+the simultaneous shell `(9e)`, only the two points `(9k)` remain.
+
+Consequently every **other polynomial quartic point** has a denominator in
+`u` or `v`; cancellation through `(9b)` is the genuinely remaining height
+problem.  The six-point statement does not classify all sections with
+polynomial `u,v`, as the next hostile shows.
+
+### 2.3. Exact degree-one hostile to complete Weierstrass integrality
+
+Put `C=overline{k(x)}` and
+
+```text
+H=a^3L^2-F^2=x^3(9x+5)^2.
+```
+
+Choose a root `R in C` of
+
+```text
+-3R^4+8FR^3+6HR^2+H^2=0.                               (9o)
+```
+
+Since the constant term is `H^2`, `R!=0`.  Also
+
+```text
+P(-F/3)=-(F^2-3H)(F^2+H)/3 !=0,
+```
+
+so `R!=-F/3`.  Choose `r,alpha in C` with
+
+```text
+r^2=R,        Z=9r+H/r^3,        alpha^3=Z/L^2.
+```
+
+Equation `(9o)` is equivalent to
+
+```text
+Z^2-12rZ+24r^2+8F=0.                                   (9p)
+```
+
+If `Z=0`, `(9p)` would force `R=-F/3`; hence `Z,alpha` are nonzero.  Now set
+
+```text
+u=alpha*y+r*alpha,
+v=y^2+(Z/2)y+3r^2.                                     (9q)
+```
+
+Direct coefficient comparison using `(9p)` gives
+
+```text
+v^2=K^2+L^2(u^3-a^3).
+```
+
+Thus `(9q)` is an exact section with polynomial `u,v` and `deg_y(u)=1`, not
+one of the six constant-`u` sections.  But
+
+```text
+v-K=(Z/2)y+(3R+F)
+```
+
+has degree one while `u^2+au+a^2` has degree two.  Its inverse `T` is
+therefore nonpolynomial.  This refutes only the old word *complete*: it is a
+hostile control for Weierstrass integrality, not a polynomial quartic point.
 
 ## 3. The four marked sections and the divisor of `T`
 

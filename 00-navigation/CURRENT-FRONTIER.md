@@ -65,11 +65,10 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   THM-3818's audited cyclic-gluing sidecar now turns that quotient into a
   partial LRC implication: `s lambda(v)>=1` gives a common safe time.  The
   `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
-  candidates; the powers-of-four fibre has none.  In the `11+2` branch,
-  THM-3878 leaves `7,505` unconditional necessary triples.  Only in `t>=U`,
-  exact cyclic slack plus one auxiliary LRC(13) witness leaves 58 certificate
-  survivors: 57 at `s=1` and `(s,p,q)=(2,1,9)`.  The `t<U` slice, owner and
-  arrival remain open.
+  candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
+  `7,505` unconditionally; only in `t>=U`, cyclic slack plus one auxiliary
+  leaves 58 certificate survivors: 57 at `s=1` and `(s,p,q)=(2,1,9)`.
+  The `t<U` slice and owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
   FINITE-EXACT,
@@ -332,14 +331,10 @@ support asymptotic or residue.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** THM-3502/3511/3512/3516 retain compiler/owner/carry; THM-3778
   excludes finite-spatial cycles. THM-3804 gives all Smith forms; THM-3824
-  gives fixed-division/one-shell tariffs, same-scale separation, and the
-  all-shell response kernel (zero at odd core).
-  A `D=B=4` audit recovers `(0,1,2)` from two off-ray chains.
-  THM-3511 proves
-  ambient active words send every even ray onto the odd half, so the least
-  literal two-stage bank has `2^(D+B-1)+B+2` points (`134/256` at `D=B=4`).
-  Bounded physical recursion, adaptive/projective chronology and every prize
-  remain OPEN.
+  gives fixed/one-shell tariffs and the all-shell response kernel.  A
+  `D=B=4` audit recovers `(0,1,2)`.  THM-3511 maps every even ray onto the odd
+  half; the least literal bank has `2^(D+B-1)+B+2` points (`134/256` there).
+  Physical recursion, adaptive/projective chronology and every prize are OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  THM-3543--3782 close
   named cells, not arbitrary pairs.  THM-3827/3831 impose primitive-row genus
   `>=3`; THM-3836 retains the all-degree core `P=3h^3+7h^2k+k^3=CS` with a
@@ -359,9 +354,9 @@ support asymptotic or residue.
   THM-3864/3872 close constants; THM-3881 contracts all coefficients/gauges
   to a rank-two norm and closes `T=0` plus `T=hf`, `deg h<=1`.  THM-3884
   forces `deg T>=deg f+1` with leading gauge at equality.  THM-3885 closes
-  the `f=0`, `deg T<=3` cell and classifies two arms.  Independently audited
-  THM-3886 closes the address-free equality seam for `deg f=1,2` and forces a
-  second gauge jet for `deg f>=3`; repeated peeling remains open.
+  the `f=0`, `deg T<=3` cell and two arms.  Audited THM-3886 closes the
+  address-free equality seam for `deg f=1,2`; `deg f>=3` gets a second gauge
+  jet, but iteration is open.
   THM-3874/3877 exclude low-degree sole-simple-branch fields.  THM-3879
   recovers `C3` at two places; THM-3882 forces the smooth-conic boundary for
   every immersed one-place dual and forbids one-place `6A2+4A1` charts.
@@ -404,9 +399,9 @@ support asymptotic or residue.
 ### Arithmetic-Kakeya forcing certificates
 
 **OPEN:** record/target `1.67513/1.675`. THM-3875 gives the `k=1` forest floor
-`2`; THM-3892 proves the strict `[2,2]` cyclic-cell optimum `7/4` by a
-60-family audit.  This local cell, the `5/3` graph hostile, and unsound loose
-rule-(1) prove no Arithmetic--Kakeya bound.  Next: larger strict `k=2` cells.
+`2`; THM-3892 proves the strict `[2,2]` optimum `7/4` by 60-family audit.
+This cell, the `5/3` graph hostile and loose rule-(1) prove no AK bound.
+Next: larger strict `k=2` cells.
 
 ## Cross-domain connection discipline
 

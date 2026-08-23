@@ -1,0 +1,8 @@
+THM3885_FZERO_QUARTIC_CLOSURE_PRIMARY_20260823
+status=PROVED_VERIFIED_EXACT_CANDIDATE;INDEPENDENT_AUDIT_PENDING
+xzero_terminal_certificates=r^4;q^4-6*p^2*r^2;5*p^5+80*p^2*r+80*p*q^2+448*r^3
+closed=f=0;addressed;deg_total_T<=4;unique_T=0
+modular_rows=((7, 15), (11, 15), (101, 15))
+semantic_sha256=69985fa38bff0e91c5300b39345f82586990f337476117ae8359e469d8f792fc
+gates=142
+ALL CHECKS PASSED

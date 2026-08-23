@@ -8,7 +8,9 @@ status: >
   constant c with c^3=-625/32.  Every total-degree-at-most-three square pair
   in this lane is the base pair `T=0`.  At the independent L=0 arm, all
   surviving square classes have an exact finite root-polarization grammar.
-  Nonlinear T=c+(x+1)U with deg U>=3, a Keller atlas, and JC(2) remain OPEN.
+  A strict total-degree-four extension is a PROVED + VERIFIED-EXACT CANDIDATE
+  AWAITING INDEPENDENT AUDIT and is not yet a proved dependency.  Degrees at
+  least five, a Keller atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3881 f=0 lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc_quartic_c3_construct, 2026-08-23).  The
@@ -24,16 +26,25 @@ audit: >
   reduced basis `<z,q^2>`.  The audit also rederived the odd degree-five
   obstruction on `L=0` and the final missing-`y` one-color argument.  Normal
   and optimized runs byte-match the frozen output.
+  QUARTIC CANDIDATE SELF-AUDIT PASS: an exact characteristic-zero Groebner
+  computation and modular hostiles at 7, 11, and 101 close the addressed
+  total-degree-four cell.  This new step awaits a separate implementation.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
 related:
   - THM-3872-three-cusp-polarization-branches-and-minimal-affine-square-residual-gate
   - THM-3884-cusp-residual-total-degree-leading-gauge-filtration
+  - THM-3888-f-zero-equianharmonic-jacobian-and-two-section-integrality
 script: 04-computation/jc2_cusp_residual_f_zero_arm_quadratic_thm3885.py
 output: 05-knowledge/results/jc2_cusp_residual_f_zero_arm_quadratic_thm3885.out
 script_sha256: ec653744f276da842904249e93819f1f96ac870bcee9e578c143a6b089de056e
 output_sha256: a6c1af7024c6155abb649e23c169826e419f58f3d990e8165f4fc794e2b7eca0
 semantic_sha256: fa6375d39828c8eaf658b45830d8b4285472fab7043a03a1cbbab64ff35affd0
+quartic_candidate_script: 04-computation/jc2_cusp_residual_f_zero_quartic_candidate_thm3885.py
+quartic_candidate_output: 05-knowledge/results/jc2_cusp_residual_f_zero_quartic_candidate_thm3885.out
+quartic_candidate_script_sha256: bc33b8d6b6cd87f7baed5530152092aa2d2381dde5bb8b938a9ab75ec10765e8
+quartic_candidate_output_sha256: 87dd1b7f98335211a81a562de50c991e2f523877e527ee426e5f14725fd9bc00
+quartic_candidate_semantic_sha256: 69985fa38bff0e91c5300b39345f82586990f337476117ae8359e469d8f792fc
 hash_basis: raw LF bytes
 ---
 
@@ -230,6 +241,77 @@ f=0, deg T<=3, and S(T,0) square  ==>  T=0.               (23)
 This includes the affine constant-span cells of THM-3872 and closes both the
 quadratic layer and the first genuinely nonlinear cubic layer.
 
+### 3.1 Audit-pending quartic extension
+
+**PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT AUDIT.**  The same
+conclusion is supported at total degree four, but this addendum is not yet a
+proved dependency.  Assume `deg T<=4`.  Section 2 writes
+
+```text
+T=c+aU,                         deg U<=3.
+```
+
+At `x=0`, the address gives the complete restriction
+
+```text
+tau_0(y)=T(0,y)=p y+q y^2+r y^3.                         (23a)
+```
+
+The specialized residual is
+
+```text
+S_0=256-96tau_0^2-8(y^2-4)tau_0^3-3tau_0^4.             (23b)
+```
+
+Choose the square-root sign with constant term `16`.  Its coefficients
+through degree six are uniquely determined.  The remaining six coefficients
+generate an ideal in `Q[p,q,r]` whose exact grevlex Groebner basis reductions
+contain
+
+```text
+r^4,
+q^4-6p^2r^2,
+5p^5+80p^2r+80pq^2+448r^3.                              (23c)
+```
+
+In characteristic zero, `(23c)` forces `r=q=p=0`.  The companion performs
+the full rational calculation with active gates and separately retains the
+same three consequences modulo `7`, `11`, and `101` as hostile controls.
+
+It remains to remove the possible global `y`-degree despite the vanishing
+restriction `(23a)`.  The coefficient of `y^3` in `T=c+aU` is `ar`, so it is
+zero.  If `deg_y T=2`, its leading coefficient has the complete form
+
+```text
+b(a)=a(b_0+b_1a).
+```
+
+The `y^8` coefficient of the residual is
+
+```text
+-b(a)^3(8+3a^2b(a)).                                    (23d)
+```
+
+For `b_0!=0`, its `a`-valuation is the odd number three.  For `b_0=0` and
+`b_1!=0`, squarehood would force `8+3b_1a^4` to be a quadratic polynomial
+square; its degree-one and degree-three coefficients kill the middle root
+coefficient, after which the degree-two coefficient contradicts the nonzero
+end coefficients.  Hence `deg_y T=2` is impossible.
+
+If `deg_y T=1`, the unique top term is `-8b(a)^3y^5`, of odd degree.  If
+`T=t(a)` is nonzero, the residual has `y`-degree two and no linear term.  A
+square root would force its `y`-free part to vanish.  That cannot happen:
+for `deg t=0`, `L^4` is the unique degree-four term, while for
+`e=deg t>=1`, `-3a^2t^4` has unique degree `4e+2`.  Thus the candidate
+conclusion is
+
+```text
+f=0, T(0,0)=0, deg T<=4, S(T,0) square  ==>  T=0.        (23e)
+```
+
+Only the new Groebner step lacks an independent implementation.  Until that
+audit lands, the proved object-level boundary of THM-3885 remains `(23)`.
+
 ## 4. Exact root polarization at `L=0`
 
 There is a second, independent boundary grammar.  Set
@@ -302,7 +384,9 @@ deg U>=3,                 U(0,0)=-c,                     (31)
 ```
 
 and its second-arm restriction must obey the polarization `(26)-(30)`.
-These conditions are necessary, not sufficient.  The nonlinear interpolation
+If the audit-pending quartic addendum is promoted, `deg U>=3` strengthens to
+`deg U>=4`, equivalently `deg T>=5`; this is presently **CONDITIONAL** on its
+independent audit.  These conditions are necessary, not sufficient.  The nonlinear interpolation
 between the two arms, the general `T,f!=0` equation, a polynomial-plane Keller
 atlas, and JC(2) remain **OPEN**.
 
@@ -311,7 +395,10 @@ Reproduce the exact packet with
 ```bash
 python3 04-computation/jc2_cusp_residual_f_zero_arm_quadratic_thm3885.py
 python3 -O 04-computation/jc2_cusp_residual_f_zero_arm_quadratic_thm3885.py
+python3 04-computation/jc2_cusp_residual_f_zero_quartic_candidate_thm3885.py
+python3 -O 04-computation/jc2_cusp_residual_f_zero_quartic_candidate_thm3885.py
 ```
 
-Both runs must byte-match
-`05-knowledge/results/jc2_cusp_residual_f_zero_arm_quadratic_thm3885.out`.
+Each pair of runs must byte-match its corresponding frozen output in
+`05-knowledge/results/`.  The quartic stream is explicitly candidate-level
+until a separate implementation audits `(23c)`.
