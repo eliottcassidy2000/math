@@ -1,0 +1,8 @@
+theorem=THM-3885-cusp-residual-f-zero-arm-dichotomy-and-quadratic-closure
+a_zero_arm_values=c=0_or_c^3=-625/32
+f_zero_total_degree_at_most_two_survivors=0
+L_zero_boundary=root_polarization_of_squarefree_divisor
+nonlinear_f_zero_lane=OPEN
+semantic_sha256=53ee84885a6a2415e44aca8523d1d2269eb1946016c58307ad151bcf2c98b1bf
+CHECKS=20
+RESULT=PASS
