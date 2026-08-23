@@ -2,7 +2,7 @@
 id: THM-3790
 title: "Cubic pseudo-plane arm nodal-immersion gate"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  Every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every
   Darboux morphism on the THM-3785 surface restricts on its triple arm to
   a noninjective polynomial immersion.  Its first normal jets satisfy an
   exact Bezout determinant law.  Consequently neither boundary coordinate
@@ -12,26 +12,31 @@ status: >
   points and is not a Darboux pair.  Arbitrary Darboux pairs remain open.
 source: root / multiple-fibre arm and injective-line lane, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The conormal quotient and bracket law are
-  exact.  The noninjectivity step uses Gwozdziewicz's cited injective-line
-  theorem.  The deterministic companion checks the quotient-level Bezout
-  identity, nodal collision and immersion, full lifted bracket, surface
-  critical equations, and all seven critical points symbolically over
-  Q(c).  Normal and optimized runs byte-match the frozen transcript.
+  INDEPENDENT HOSTILE AUDIT PASS by jc_zero_debt_lift, 2026-08-23.  The audit
+  rederived the conormal quotient and Poisson reduction, checked
+  Gwozdziewicz's theorem against the primary source with all hypotheses
+  typed, reconstructed the quadratic-centre obstruction, and proved the
+  seven-point critical family exhaustive by equality with a triangular
+  Groebner ideal.  It also verified the universal nodal normal coefficient
+  and residual Picard-class argument.  The companion was hardened from
+  Python assertions to 29 active gates plus an AST assertion audit.  Normal
+  and optimized runs byte-match the frozen transcript.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
 related:
   - THM-3788-dubouloz-palka-standard-chart-containment-obstruction
+external:
+  - "Gwozdziewicz, Injectivity on one line, arXiv:alg-geom/9305008, Theorem 1.1."
 script: 04-computation/jc2_cubic_pseudoplane_arm_nodal_gate_thm3790.py
 output: 05-knowledge/results/jc2_cubic_pseudoplane_arm_nodal_gate_thm3790.out
-script_sha256: 6f2614075c19fff1a08653cda993a996feb93c69a587aa8c684065918d197829
-output_sha256: f3a3aff4c8e7503786bebfdb98d6033aef21a3a7f29f504e439d87285c559f81
+script_sha256: c92b9a44ad0d5517208c43723a3e6efdaf32fd4117bc49770ed9c7752c566ca4
+output_sha256: a0dfe4102f75cff037e12a8ed85a6fd74d7d58b12efb1321f85ced4ef31b38a7
 hash_basis: raw LF bytes
 ---
 
 # THM-3790 -- every live arm map is a nodal-type immersion
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over
 `C`, fix `c!=0`, and retain the THM-3785 smooth symplectic surface
 
 ```text
@@ -197,9 +202,18 @@ r=2zeta^3/c^3,                  e=-c^6/(4zeta^3).                        (19)
 
 These points lie on `(1)`, satisfy `c^3+2re=0`, and make all three brackets
 of `A_*` with `r,z,e` vanish.  The seven roots in `(18)` are distinct and
-nonzero.  Hence no polynomial correction of only the second output can
-repair `(16)`; a live construction must change the carrier itself and must
-retain the nodal arm data plus the normal Bezout sidecar.
+nonzero.  Conversely, the critical equations and the surface equation have
+the exact triangular Groebner basis, over `C(c)`,
+
+```text
+9c^9e-2z^4,                 c^3r-2z^3,
+8z^7+9c^15.                                                        (19a)
+```
+
+Thus there are no other critical points: `(18)--(19)` are exhaustive, not
+merely a displayed family.  Hence no polynomial correction of only the
+second output can repair `(16)`; a live construction must change the carrier
+itself and must retain the nodal arm data plus the normal Bezout sidecar.
 
 ## 5. Every node forces a residual divisor
 
@@ -245,6 +259,6 @@ So a construction cannot specify only a noninjective arm parametrization:
 it must simultaneously build the residual class-two curve that realizes
 the other local branch at every collision.
 
-The exact companion named in the metadata verifies `(8),(14)--(22)` and
-the critical equations over `Q(c)`.  **QED, conditional only on independent
-hostile audit.**
+The exact companion named in the metadata verifies `(6),(8),(14)--(22)`, the
+complete critical ideal over `Q(c)`, and the assertion-free optimized replay.
+**QED.**
