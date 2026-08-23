@@ -2,7 +2,7 @@
 id: THM-3887
 title: "Binary-cubic common-zero quintic unibranch obstruction"
 status: >
-  PROVED + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.  If all four
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  If all four
   coefficients of a binary cubic vanish at a plane point, its discriminant
   has multiplicity at least four there.  When the quartic tangent cone is a
   fourth power, the coefficient pencil has rank one and the quintic jet is
@@ -12,16 +12,21 @@ status: >
   zero, cubic-order realizability, Keller atlases, and JC(2) remain OPEN.
 source: root / binary-cubic index-form common-zero lane, 2026-08-23
 audit: >
-  SELF-AUDITED EXACT PROOF.  The two projective root-multiplicity cases for a
+  INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23.  The two projective
+  root-multiplicity cases for a
   singular binary cubic are reduced independently to `X^2Y` and `X^3`; their
   discriminant expansions bound finite pencil contact by two and three.
   The rank-one Taylor jet and the degree-five factor are checked symbolically.
-  Focused independent audit is still required before full promotion.  Normal
-  and optimized runs must byte-match the frozen output.
+  The audit independently replayed the contact calculation, rank-one
+  implication, Taylor divisibility, and all 17 assertion-free gates in normal
+  and optimized modes.  It also checked every quartic root partition and the
+  genus-six finite-address packet used by THM-3890.  Normal and optimized runs
+  must byte-match the frozen output.
 depends_on: []
 related:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3855-formal-inverse-discriminant-lift-and-algebraization-gate
+  - THM-3890-universal-quintic-common-zero-resolvent-class-group-dichotomy
 script: 04-computation/jc2_binary_cubic_common_zero_quintic_thm3887.py
 output: 05-knowledge/results/jc2_binary_cubic_common_zero_quintic_thm3887.out
 script_sha256: 5e6f79c63bc8d3cb565ba0b9b5f01dac0cdc0443bfb4959063daa1337844701a
@@ -32,7 +37,7 @@ hash_basis: raw LF bytes
 
 # THM-3887 -- a common-zero index gate cannot start with a unibranch quintic
 
-**PROVED + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Let `k` be an algebraically closed field of characteristic zero, put
 
