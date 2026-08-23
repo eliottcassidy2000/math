@@ -2,8 +2,8 @@
 id: THM-3902
 title: "Nonzero-sidecar equality-color two-jet response"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  On the positive equal y-degree seam of the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the positive
+  equal y-degree seam of the
   THM-3881 residual, the equianharmonic leading colors carry an exact
   two-jet marked-response law.  The term 2K^2L^2f^3 enters as a source at
   response depth n.  For n=1 its first response has exactly one less total
@@ -12,15 +12,18 @@ status: >
   and neither the equality seam nor JC(2) is closed.
 source: tournament-jc-breakthrough / post-THM-3899 marked-response scout, 2026-08-23
 audit: >
-  SELF-AUDITED PROVISIONAL CANDIDATE.  The focused exact companion expands
+  INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23.  A clean-room audit re-expanded
+  all residual support, checked unsampled degrees five and seven, rederived
+  the epsilon identity and denominator clearing, and substituted every
+  hostile and positive control directly into the original residual.  It
+  found no repair and confirmed the necessity-only scope.  The focused exact
+  companion expands
   the full THM-3881 residual, proves the all-degree support cutoff through
   two y-jets, verifies the epsilon and denominator-cleared color laws, and
   checks the a-valuation mechanism.  It includes zero-sidecar hostiles at
   n=1,2, zero-sidecar positive lifts for n>=3, and an address-compatible
   n=1 positive two-jet control.  Normal and optimized runs must byte-match
-  the frozen transcript.  Independent audit must recheck the support
-  exhaustion, formal division by V, polynomial sidecar clearing, and the
-  exact distinction between a two-jet lift and a square residual.
+  the frozen transcript.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
 related:
@@ -29,17 +32,17 @@ related:
   - THM-3380-hamiltonian-deletion-layer-monoid-semiring-and-small-order-boundaries
 script: 04-computation/jc2_nonzero_sidecar_equality_color_two_jet_response_thm3902.py
 output: 05-knowledge/results/jc2_nonzero_sidecar_equality_color_two_jet_response_thm3902.out
-script_sha256: e37e39b49a757efac8b8d7cfec9eda02eb944dbe3033e8222c27128c41cca526
-output_sha256: 210392b7b81a2b04d0c5252fea4852bb3410be02fd6cfca35f31a96126d7eb5b
+script_sha256: 59888120be81d756063207c2b2c6b5a992b3d663a43a0726dfe94865320168fa
+output_sha256: 5fc6788c03a486e86febea664ee1ccef6250ca9d7ea928fd8069f0564efe61df
 semantic_sha256: a92f4bcb59ddfe7488b0383916d4a11dc44a6f2fe6634e7b86cb821d9c8d8a5d
 hash_basis: raw LF bytes
 ---
 
 # THM-3902 -- the equality colors have a mandatory response jet
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**  Work over an algebraically closed field `k` of
-characteristic zero.  Use the THM-3881 coordinates
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  Use the THM-3881
+coordinates
 
 ```text
 D=k[x,y],                  a=x+1,

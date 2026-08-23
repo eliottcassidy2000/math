@@ -428,7 +428,7 @@ gate(
 )
 
 print("theorem=THM-3902-nonzero-sidecar-equality-color-two-jet-response")
-print("status=RESERVED_PROVISIONAL_PROOF_CANDIDATE_VERIFIED_EXACT_AWAITING_HOSTILE_AUDIT")
+print("status=PROVED_VERIFIED_EXACT_INDEPENDENTLY_HOSTILE_AUDITED")
 print("epsilon_response=Cminus*Cplus_mod_eps3_with_marked_source_2L2_eps^n_V")
 print("polynomial_sidecars=J1_vj1_and_J2_v2j2")
 print("n1_a_valuation=first_marked_response_deletes_one_total_a_order")
