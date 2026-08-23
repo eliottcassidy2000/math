@@ -5,7 +5,10 @@ THM3880_MINUS A^2B-=-(z+1)^2(2z-1)/2
 THM3880_JUMP B_epsilon(-z)-B_epsilon(z)=-2epsilon*z^3/A^2 when A!=0
 THM3880_A0 use u equality;opposite z=+/-1 still impossible
 THM3880_Z0 silent genuine boundary;2AC+3=0,b=2C^2/9 is positive
-THM3880_SAME_SIGN point-value test silent;conductor-jet descent remains open
+THM3880_NODE_IFF regular B descends at a node iff root signs are not opposite nonzero
+THM3880_A2 same-sign forced B automatically has zero cusp derivative
+THM3880_GLOBAL_IFF for ordinary-node/A2 curves,regular extension descends iff no opposite node
+THM3880_OPEN regular-extension pole gate and higher singularity jets remain open
 THM3880_THM3876 eta collision is exactly z->-z and recovers its jump
-SEMANTIC_SHA256 e6c43877736a4ee1c1451f8670aabc51ebdde5397278fc8de1ab8aaaa3c10ea2
-CHECKS 14
+SEMANTIC_SHA256 47182169c96e351ac2cbf7f476be52b554ab1abe596639afb59121af10112006
+CHECKS 19

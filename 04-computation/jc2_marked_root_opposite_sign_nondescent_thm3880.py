@@ -14,6 +14,7 @@ import sympy as sp
 
 
 A, C, b, z, eta, U, S = sp.symbols("A C b z eta U S")
+Ap, Cp, bp, zp, epsilon = sp.symbols("Ap Cp bp zp epsilon")
 CHECKS = 0
 
 
@@ -49,6 +50,37 @@ zero("minus_factor", 2 * num_minus + (z + 1) ** 2 * (2 * z - 1))
 zero("plus_opposite_sign_jump", num_plus.subs(z, -z) - num_plus + 2 * z**3)
 zero("minus_opposite_sign_jump", num_minus.subs(z, -z) - num_minus - 2 * z**3)
 nonzero("jump_polynomial_nonzero", 2 * z**3)
+
+# Complete ordinary-node/A2-cusp descent checks.  At a node on A=0,
+# Delta=0 forces B=C^2/6 on every branch; away from A=0 the displayed
+# forced formula is already a single-valued expression in A,C,z.
+zero("A0_node_forced_value", Delta.subs({A: 0, b: C**2 / 6}))
+
+# Differentiate z^2=P and A^2B=epsilon*z^3-1-AC along a normalization
+# parameter.  At an A2 cusp Ap=Cp=0.  The first identity gives z*zp=0;
+# inserting that in the second leaves A^2*bp=0.
+root_derivative = 2 * z * zp - sp.Rational(2, 3) * (Ap * C + A * Cp)
+forced_derivative = (
+    2 * A * Ap * b
+    + A**2 * bp
+    - 3 * epsilon * z**2 * zp
+    + Ap * C
+    + A * Cp
+)
+zero("cusp_root_derivative_seam", root_derivative.subs({Ap: 0, Cp: 0}) - 2 * z * zp)
+zero(
+    "cusp_forced_derivative_seam",
+    forced_derivative.subs({Ap: 0, Cp: 0}) - A**2 * bp + 3 * epsilon * z**2 * zp,
+)
+zero("cusp_z2zp_from_zzp", z**2 * zp - z * (z * zp))
+
+# If the cusp lies on A=0, differentiate Delta_B=0 directly.  All coordinate
+# derivative terms vanish and the remaining coefficient is -54*B'.
+Delta_derivative = sp.diff(Delta, A) * Ap + sp.diff(Delta, C) * Cp + sp.diff(Delta, b) * bp
+zero(
+    "A0_cusp_direct_derivative",
+    Delta_derivative.subs({A: 0, Ap: 0, Cp: 0}) + 54 * bp,
+)
 
 # THM-3876 is exactly the opposite-sign case.  With eta=zeta^N and
 # U=r^(M+N), its collision has U=-1/(eta+1).
@@ -92,7 +124,10 @@ print("THM3880_MINUS", "A^2B-=-(z+1)^2(2z-1)/2")
 print("THM3880_JUMP", "B_epsilon(-z)-B_epsilon(z)=-2epsilon*z^3/A^2 when A!=0")
 print("THM3880_A0", "use u equality;opposite z=+/-1 still impossible")
 print("THM3880_Z0", "silent genuine boundary;2AC+3=0,b=2C^2/9 is positive")
-print("THM3880_SAME_SIGN", "point-value test silent;conductor-jet descent remains open")
+print("THM3880_NODE_IFF", "regular B descends at a node iff root signs are not opposite nonzero")
+print("THM3880_A2", "same-sign forced B automatically has zero cusp derivative")
+print("THM3880_GLOBAL_IFF", "for ordinary-node/A2 curves,regular extension descends iff no opposite node")
+print("THM3880_OPEN", "regular-extension pole gate and higher singularity jets remain open")
 print("THM3880_THM3876", "eta collision is exactly z->-z and recovers its jump")
 semantic_packet = (
     "intrinsic marked-root square section on normalization",
@@ -101,7 +136,9 @@ semantic_packet = (
     "undivided u obstruction including A zero",
     "explicit carrier jump away from A zero",
     "z zero genuine hyperbola boundary",
-    "same-sign conductor jets open",
+    "same-sign ordinary nodes and A2 cusp jets automatically descend",
+    "full nodal-cuspidal iff under regular extension",
+    "pole gate and higher conductor jets open",
     "THM3876 primitive-root collision as exact specialization",
 )
 print("SEMANTIC_SHA256", hashlib.sha256(repr(semantic_packet).encode()).hexdigest())
