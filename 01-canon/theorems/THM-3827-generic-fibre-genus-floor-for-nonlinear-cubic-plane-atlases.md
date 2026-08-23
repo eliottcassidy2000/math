@@ -49,7 +49,7 @@ audit: >
   2026-08-23): the audit checked invertibility of kB_3 on the full possibly
   nonreduced quotient, orthogonal idempotents, the zero kernel and CRT
   surjectivity, and nontriviality of both factors from the two generic signs.
-  A final 202-gate independent
+  A final 207-gate independent
   audit (thm3827-dual-genus-audit, 2026-08-23) rebuilt the dual discriminant
   from 55 custom Sylvester determinants, tested a nonreduced spectral member,
   confirmed full prime-multiplicity allocation, and separately passed that
@@ -85,9 +85,9 @@ output_sha256: cd94624fe1171b3f4db4c6cbe4ddbef1d40aa8851ac1455f8f225e5723a3476c
 semantic_sha256: 80f9319cff0304a799f66aefa5a960a5023325bfedc8914bdab6214537a92b1f
 independent_script: 04-computation/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827_independent_audit.py
 independent_output: 05-knowledge/results/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827_independent_audit.out
-independent_script_sha256: 627fc740b820edf7f96dddf97d25f9ea0c2cd03f5d94d1e3e66b39cce3c91a2a
-independent_output_sha256: de761f94f131989e3106f4cc8e547a82c40840628ff0a0d2273fccb8300334ab
-independent_semantic_sha256: e459cc359bb059ae476e9026876034949988d3c4856ebb58e0f69890e0f76e79
+independent_script_sha256: f502a9dd8748e929e6af51c064bb758c3a730902bdb65b68c93fb3cc47f2429c
+independent_output_sha256: 5d9f9e874f54d1fff9512085d00a3b735ca82a19d5983a2818a38ab08022d865
+independent_semantic_sha256: 209b5fddb3659ae0e69f3f13e116e7e998de8eb72f6ff1b5176502090c2dd7e8
 hash_basis: raw LF bytes
 ---
 

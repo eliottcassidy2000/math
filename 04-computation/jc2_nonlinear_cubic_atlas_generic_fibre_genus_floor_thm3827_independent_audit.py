@@ -183,6 +183,24 @@ require(sp.denom(quot_nr) == 1, "nonreduced component occurs at least twice")
 require(sp.cancel(quot_nr.subs(yy, -1 / xx)) != 0,
         "nonreduced component occurs exactly twice")
 
+# Scheme-level CRT upgrade.  On a spectral quotient u=k*B3 is a unit and
+# sigma=w/u satisfies sigma^2=1.  Rebuild the complementary idempotents and
+# comaximal sign ideals without assuming that the quotient is reduced.
+sigma = sp.symbols("sigma")
+e_plus = (1 + sigma) / 2
+e_minus = (1 - sigma) / 2
+sigma_law = sigma**2 - 1
+require(sp.rem(e_plus + e_minus - 1, sigma_law, sigma) == 0,
+        "CRT sign idempotents sum to one")
+require(sp.rem(e_plus**2 - e_plus, sigma_law, sigma) == 0,
+        "CRT plus sign is idempotent")
+require(sp.rem(e_minus**2 - e_minus, sigma_law, sigma) == 0,
+        "CRT minus sign is idempotent")
+require(sp.rem(e_plus * e_minus, sigma_law, sigma) == 0,
+        "CRT sign idempotents are orthogonal")
+require(sp.gcd(sigma - 1, sigma + 1) == 1,
+        "CRT sign ideals are comaximal in characteristic zero")
+
 # If whole members are selected, d is homogeneous of their subset size.
 # Only sizes one and two survive the first degree comparison.
 surviving_sizes = []
@@ -211,6 +229,7 @@ semantic = {
     "opposite_arm": "B/(k)=K[C,C^-1] from the original cubic laws",
     "bichromatic": "prime valuations allocate full multiplicity; monochromatic means whole-member subset",
     "hostile_nonreduced": "h-alpha*k=(1+xy)^2 in a unimodular algebraically independent control",
+    "crt": "unit-normalized sign square gives complementary orthogonal idempotents even with nilpotents",
     "scope": "necessary atlas obstruction only; no Jacobian counterexample",
 }
 blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
@@ -223,6 +242,7 @@ print("dichotomy=transcendental_map_or_polynomial_dependence")
 print("opposite_arm=B_mod_k_is_Laurent_Gm")
 print("multiplicity=prime_valuations_force_full_whole_member_allocation")
 print("hostile_nonreduced=(h-alpha*k)=(1+x*y)^2_exact_multiplicity_2")
+print("crt=canonical_plus_minus_product_valid_for_nonreduced_fibre")
 print("status=PASS")
 print(f"CHECKS={CHECKS}")
 print(f"semantic_sha256={hashlib.sha256(blob).hexdigest()}")
