@@ -1,0 +1,9 @@
+THM-3715 exact odd W003 lowest-scalar audit
+post-parity actual placements = none for even n or n=1
+odd actual placements n=3,n>=5 = 1,2
+n=3 merger = O1=O2 with both arm addresses retained
+O1 and O2 upper-row integrations PASS
+half-charge laws in both scalar addresses PASS
+common scalar factor = H'K+2HK'
+scope = complete W003 scalar fibre 01+10
+ALL CHECKS PASSED
