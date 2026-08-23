@@ -1,0 +1,11 @@
+theorem=THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
+universal_transport_sidecars=2
+cusp_ideal_presentation_rank=3;syzygy_rank=2
+contracted_pair_rank=2;matrix_determinant=delta
+sidecars=C=L^2*f;B=P*f^2-T^2
+delta_lift_gauge=(T,f)+(K,-a)*q
+pure_gauge_survivor_requires=a_divides_q
+arbitrary_polynomial_coefficient_square_equation=OPEN
+semantic_sha256=4f369d3ca2bb65fa68654fd8ae6ba2193ad6ea6067c5c823ab67a1a2be342ac2
+CHECKS=32
+RESULT=PASS
