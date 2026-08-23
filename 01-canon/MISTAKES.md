@@ -70,6 +70,12 @@ Format per entry:
   and neither entered the proved dependency graph.  Subsequent independent
   audits promoted each under its distinct ID; their theorem files, not this
   historical checkpoint, give current status.
+- **Repeated incidents (2026-08-23):** concurrent commits next duplicated
+  `THM-3856` and `THM-3857`.  Commit priority keeps the quadratic normal-strip
+  stub at `3856` and the linear-Kummer reservation at `3857`; the later
+  negative-Pell and marked-root stubs move to `3858` and `3859`.  All four
+  files were explicitly reserved when repaired, so no proved dependency was
+  redirected.
 - **Reusable rule:** immediately before committing a reservation, recheck the
   filename, YAML ID, indexes, and current remote history.  After integrating
   concurrent commits, rerun the uniqueness audit even when every individual

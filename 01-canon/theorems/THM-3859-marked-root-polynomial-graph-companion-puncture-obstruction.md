@@ -1,11 +1,11 @@
 ---
-id: THM-3857
+id: THM-3859
 title: "Marked-root polynomial graph and companion puncture obstruction"
 status: RESERVED / UNPROVED EMPTY STUB
 source: jc_sparse_direct_search / post-THM-3852 marked-root graph lane, 2026-08-23
 ---
 
-# THM-3857 -- reserved
+# THM-3859 -- reserved
 
 **RESERVED / UNPROVED EMPTY STUB.**  This namespace is reserved for the
 proposed all-degree marked-root classification and companion-puncture theorem
