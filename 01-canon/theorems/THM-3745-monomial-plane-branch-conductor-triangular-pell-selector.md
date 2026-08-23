@@ -324,8 +324,9 @@ For separable `F`, write `H=prod_i H_i` over a splitting field.  If
 `W|_(H_i=0)` constant.  All lines meet at the origin, so all constants equal
 `W(0)` and squarefreeness gives `W-W(0)=HV`.  Cancellation then gives
 `J(H,V)=lambda`, impossible at the origin because `grad H(0)=0` for `m>=2`.
-This is the direct component-equalization boundary abstracted in THM-3770;
-it still does not exclude arbitrary inhomogeneous Keller leading forms.
+This is the direct component-equalization boundary abstracted in the now
+independently hostile-audited THM-3770; it still does not exclude arbitrary
+inhomogeneous Keller leading forms.
 Thus `(72,108)` is an **exact near-miss leading-form shadow**, never a JC
 consequence.
 

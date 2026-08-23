@@ -419,10 +419,15 @@ branches at one point.  Component count survives; incidence does not.
   factorization of a target statistic, as in THM-3744/3745.
 - **Constant Pell matrix -> JC.** Stops at the complete THM-3736
   classification.  Strongest survivor: test interacting variable factors.
-- **Pell--Chebyshev radial profiles -> JC.** THM-3765 closes the normalized
-  three-consecutive-charge ansatz, including those profiles as hostile
-  controls.  The triangular-conductor Pell orbit supplies no missing mate;
-  the next radial design must vary the `+1` flank or leave `z=XT`.
+- **Pell--Chebyshev/radial profiles -> JC.** THM-3765 closes the normalized
+  three-consecutive-charge ansatz, including Pell--Chebyshev profiles as
+  hostile controls; independently audited THM-3771 closes the separate cubic
+  radial-carrier dressing by its unequal zero-fibre addresses.  THM-3772 is
+  only a **PROVISIONAL proof candidate under audit**, but its exact evidence
+  says that varying both flanks still collapses to a one-product quotient.
+  The triangular-conductor Pell orbit supplies no missing mate.  Strongest
+  survivor: leave that quotient or add a response channel that distinguishes
+  vertical components.
 - **Pell prefix -> hard LRC frontier.** Stops because `M(S_13)=99/338`, far
   from `1/14`.  Strongest survivor: exact carry/owner laboratory.
 
@@ -438,9 +443,11 @@ branches at one point.  Component count survives; incidence does not.
    owner-aware LRC transducers.  Any transducer that cannot reconstruct its
    symmetric `N=13` packet is too lossy for the frontier.
 4. In JC, enumerate only the first unsaturated Cohn cells with two interacting
-   polynomial factors, or the post-THM-3765 radial cells that vary the `+1`
-   flank.  Gate in the order: exposure, both curls, determinant, holonomy,
-   then collision/infinity.
+   polynomial factors.  Do not re-enter the audited THM-3765/3771 radial
+   cells; keep THM-3772 conditional until independent promotion, then move
+   beyond its one-product quadratic quotient or add a component-address
+   response channel.  Gate in the order: exposure, both curls, determinant,
+   holonomy, then collision/infinity.
 5. Starting from proved `(32)`, ask whether its conductor filtration can enter
    an actual bivariate Keller collision ring.  First compute the actual-target
    linearized Jacobian image and its cokernel, as in THM-3737's retained-value
