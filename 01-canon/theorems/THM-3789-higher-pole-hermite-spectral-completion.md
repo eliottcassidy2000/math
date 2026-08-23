@@ -11,13 +11,16 @@ status: >
   k[x,y] intersect k(F,P).  The generic source degree is 2d+1.  Degree d=1
   is the sharp failure: a whole divisor is omitted and x^3 is an additional
   target-field polynomial, leading to THM-3785 instead.  The completed
-  surface has units k* and Picard group Z^d, so it has no birational Darboux
-  pair; any Darboux survivor has source field degree at least 2(2d+1).
+  surface has units k* and Picard group Z^d.  More decisively, its moving
+  axis arm gives a nonzero algebraic de Rham class, so it has no Darboux pair
+  at all.  The entire distinct-critical higher-pole family is therefore
+  closed as a planar Jacobian-counterexample lane.
 source: jc_quartic_c3_construct / higher-pole Hermite-completion lane, 2026-08-23
 audit: >
   SELF-AUDITED PROOF CANDIDATE.  The proof checks every UFD valuation,
   boundary restriction, residual-sheet count, Poisson sign, etale minor,
-  image stratum, height-one DVR descent, and the degree-one hostile boundary.
+  image stratum, height-one DVR descent, moving-arm Cech--de Rham residue,
+  and the degree-one hostile boundary.
   The exact companion verifies the formal gradient packet, exact quadratic
   and cubic positive controls, all boundary constants, critical residuals,
   and the degree-one missing-divisor witness.  Normal and optimized runs
@@ -28,9 +31,9 @@ related:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
 script: 04-computation/jc2_higher_pole_hermite_spectral_completion_thm3789.py
 output: 05-knowledge/results/jc2_higher_pole_hermite_spectral_completion_thm3789.out
-script_sha256: 025069f619e2fea562b2ff83bdafaaff7e31aa33ed2c5b7a4bf43e9a7de14f99
-output_sha256: 6a1119e919ac5277ca3b518a58e5c654af60e9ec35578dfb1fb4967cb14c80b5
-semantic_sha256: 02d47bc15c1604416a489fdf00495ebd3e76db58505395490c7916790bd179f3
+script_sha256: 131c23b59985fe86bf60356eef186be074a91250b3fe9bdc8fe978c8763c1bcc
+output_sha256: a530de749cc4a29329d76a4d1481ecc75ae22670faf7314bb531288e34c0ded1
+semantic_sha256: 58fde6b52fe4578249bc3413eed29dbf12a753077a39faeaacd0c8b7f1000e5a
 hash_basis: raw LF bytes
 ---
 
@@ -128,13 +131,13 @@ polynomial observable carried by the rational Keller target field.  Moreover,
 B*=k*,                 Pic(S)=Z^d.                              (11a)
 ```
 
-There is no birational Darboux pair in `B`.  If `{A,C}=1` in `B` and
-`e=[Frac(B):k(A,C)]`, then
+The inverse symplectic form has nonzero algebraic de Rham class:
 
 ```text
-e>=2,
-[k(x,y):k(A,C)]=(2d+1)e>=2(2d+1).                              (11b)
+[omega]!=0 in H^2_dR(S).                                       (11b)
 ```
+
+Consequently there are no `A,C in B` with `{A,C}=1`.
 
 ## 1. The rational Keller seed
 
@@ -338,7 +341,7 @@ has nonnegative order at every height-one prime of `B`.  The Krull
 intersection of the height-one DVRs of the normal domain `B` gives `G in B`.
 The reverse inclusion was established in Sections 1--2, proving `(11)`.
 
-### 5.1 Units, Picard group, and the birational exit
+### 5.1 Units, Picard group, and the birational preliminary
 
 The reduced divisor `f=0` is the disjoint-at-the-generic-point union of the
 `d+1` arm primes
@@ -372,28 +375,122 @@ Poisson packet `(24)` makes `S -> A2_(A,C)` etale and birational, hence an
 open immersion.  A divisorial complement would give a nonconstant unit on
 `S`, contradicting `(33c)`.  A codimension-two complement has global ring
 `k[A,C]` by normality; since `S` is affine, the open immersion must then be
-all of `A2`, contradicting `Pic(S)=Z^d`.  Therefore the target-field degree
-`e` of any Darboux pair is at least two.  Multiplying by `(31)` proves
-`(11b)`.
+all of `A2`, contradicting `Pic(S)=Z^d`.  Therefore a Darboux pair, if one
+existed, would have target-field degree at least two.  The next argument
+removes even that possibility.
+
+### 5.2 The moving-arm Cech--de Rham obstruction
+
+Factor the right side of `(21)` using the `d+1` polynomial root sections
+
+```text
+beta_0(f)=f^2,                 beta_i(f)=lambda_i (1<=i<=d),
+(w-f^2)Psi(w)=product_(i=0)^d (w-beta_i(f)).                    (34)
+```
+
+For each arm, retain it and delete the others:
+
+```text
+U_i=S \ union_(j!=i) L_j,
+a_i=[w-beta_i(f)]/f^3.                                        (35)
+```
+
+Put `Psi_i(f,w)=product_(j!=i)(w-beta_j(f))`.  On `U_i`, the two
+presentations
+
+```text
+a_i=[w-beta_i(f)]/f^3=z/Psi_i(f,w)                             (36)
+```
+
+show that `a_i` is regular.  They give mutually inverse plane coordinates
+
+```text
+U_i ~= A2_(f,a_i),
+w=beta_i(f)+f^3a_i,
+z=a_i Psi_i(f,beta_i(f)+f^3a_i).                               (37)
+```
+
+The `U_i` cover `S`, and every intersection of at least two distinct charts
+is
+
+```text
+D(f) ~= G_m,f x A1_w.                                         (38)
+```
+
+On `D(f)`, the inverse form of `(24)` is
+
+```text
+omega=df wedge dw/f^3.                                        (39)
+```
+
+Equation `(37)` extends it regularly over every chart and gives local
+primitives
+
+```text
+omega=df wedge da_i=d eta_i,                 eta_i=-a_i df.    (40)
+```
+
+On an overlap,
+
+```text
+eta_j-eta_i=[beta_j(f)-beta_i(f)]f^(-3)df.                     (41)
+```
+
+The coefficient of `df/f` in `(41)` is
+
+```text
+rho_j-rho_i,                 rho_i=[f^2]beta_i(f),
+(rho_0,rho_1,...,rho_d)=(1,0,...,0).                           (42)
+```
+
+This residue is the whole obstruction, not a heuristic local pole.  The
+cover `(37),(38)` has the same Cech--de Rham rows as the arm-plane cover in
+THM-3600:
+
+```text
+H^1_dR(U_i)=0,
+H^1_dR(U_i intersection U_j)=k[df/f].                          (43)
+```
+
+The edge residues `(rho_j-rho_i)` satisfy the triple-overlap cocycle law.
+The resulting degree-two class is the vertex vector `(rho_i)` modulo the
+constant vector, so
+
+```text
+H^2_dR(S) ~= k^(d+1)/k(1,...,1),
+[omega]=[(1,0,...,0)]!=0.                                    (44)
+```
+
+This explicitly distinguishes the global algebraic de Rham class from the
+fact that `(40)` supplies a primitive on every individual plane chart.
+
+Finally, if `{A,C}=1` in `B`, then the symplectic identity gives
+
+```text
+dA wedge dC=omega=d(A dC),                                    (45)
+```
+
+contradicting `(44)`.  Hence the completed surface has no Darboux pair in
+any degree or support.
 
 ## 6. The degree-one hostile is the sharp boundary
 
 Let instead `d=1`, so after scaling
 
 ```text
-q(T)=a(T-alpha),                 alpha!=0.                      (34)
+q(T)=a(T-alpha),                 alpha!=0.                      (46)
 ```
 
 At its sole critical value `lambda=Q(alpha)`, one has exactly
 
 ```text
-Q(T)-lambda=a^2(T-alpha)^3/3.                                  (35)
+Q(T)-lambda=a^2(T-alpha)^3/3.                                  (47)
 ```
 
 There is no residual factor in `(29)`.  Consequently the curve
 
 ```text
-w=lambda,                 z=0,                 f!=0             (36)
+w=lambda,                 z=0,                 f!=0             (48)
 ```
 
 on the putative completion has no source preimage: its only possible `t` is
@@ -402,45 +499,50 @@ divisor, so the height-one descent in Section 5 is invalid.  The missing
 polynomial is visible explicitly:
 
 ```text
-x^3=F^3/[3a(W-lambda)] in k(F,W).                              (37)
+x^3=F^3/[3a(W-lambda)] in k(F,W).                              (49)
 ```
 
 For `q=T+c`, retaining this Kummer coordinate and its first jet gives exactly
-the cubic pseudo-plane maximal intersection of THM-3785.  Thus the transition
-`d=1` to `d>=2` is structural: the two residual sheets in `(29)`, not merely a
-larger formula, repair codimension-one coverage.
+the cubic pseudo-plane maximal intersection of THM-3785, whose symplectic
+form is exact.  Thus the transition `d=1` to `d>=2` is structural: in degree
+one the putative surface still has the moving-arm class `(44)`, but it is not
+the maximal intersection because it misses a divisor.  The required Kummer
+filling changes the surface and kills that class.  In degree at least two,
+the residual sheets in `(29)` repair codimension-one coverage while the
+moving-arm residue survives and becomes a decisive global obstruction.
 
 ## 7. Exact quadratic control
 
 For the first genuinely completed case
 
 ```text
-q(T)=T^2+c,                 c!=0,                               (38)
+q(T)=T^2+c,                 c!=0,                               (50)
 Q(T)=T^5/5+2cT^3/3+c^2T,
-Psi(W)=W^2+64c^5/225.                                         (39)
+Psi(W)=W^2+64c^5/225.                                         (51)
 ```
 
 The two critical values are opposite and nonzero.  The surface and Poisson
 packet specialize to
 
 ```text
-F^3Y=(W-F^2)(W^2+64c^5/225),                                  (40)
+F^3Y=(W-F^2)(W^2+64c^5/225),                                  (52)
 
 {F,W}=F^3,
 {F,Y}=3W^2-2F^2W+64c^5/225,
-{W,Y}=3F^2Y+2F(W^2+64c^5/225).                                (41)
+{W,Y}=3F^2Y+2F(W^2+64c^5/225).                                (53)
 ```
 
 At a root `alpha^2=-c`, the boundary value is
 
 ```text
-Y=64alpha^9/(675x^3).                                         (42)
+Y=64alpha^9/(675x^3).                                         (54)
 ```
 
-The exact companion verifies polynomiality of `(6)`, `(40)--(42)`, the
+The exact companion verifies polynomiality of `(6)`, `(52)--(54)`, the
 abstract gradient signs, the quadratic and a cubic positive control, every
-critical residual degree, the exact image packets, and the degree-one hostile
-witness.  Normal and optimized executions byte-match the frozen transcript.
+critical residual degree, the exact image packets, the moving-arm Cech
+residue vector, and the degree-one hostile witness.  Normal and optimized
+executions byte-match the frozen transcript.
 
 ## 8. Scope and failure boundaries
 
@@ -453,9 +555,7 @@ The theorem needs all of the following:
 - `d>=2`, which supplies the residual good sheet `(29)`.
 
 Repeated roots or colliding critical values require a confluent, higher-jet
-Hermite completion and are **OPEN**.  The present result classifies a maximal
-polynomial target surface and closes its birational entrance, not every
-Darboux pair inside it.  Finding or excluding polynomial `A,C in B` with
-`{A,C}=1` and target-field degree at least two remains the new all-degree
-counterexample design problem.  **QED, conditional only on independent
-hostile audit.**
+Hermite completion and are **OPEN**.  For the distinct-critical family proved
+here, however, `(44),(45)` close every Darboux support and target-field degree.
+No planar Jacobian counterexample can arise from this completed family.
+**QED, conditional only on independent hostile audit.**

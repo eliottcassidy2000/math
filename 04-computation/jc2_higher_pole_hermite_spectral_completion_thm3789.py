@@ -192,9 +192,44 @@ for d in range(2, 9):
     check((d + 1) - relation.rank() == d, f"Pic quotient rank d={d}")
 
 
+# Moving-arm Cech--de Rham packet.  The roots of the target polynomial are
+# beta_0=f^2 and beta_i=lambda_i.  The local coordinates a_i make omega exact
+# chartwise, while their primitive differences retain the nonconstant f^2
+# coefficient vector modulo constants.
+lam_formal = sp.symbols("lam_formal")
+a0 = (w - f**2) / f**3
+ai = (w - lam_formal) / f**3
+same(ai - a0, (f**2 - lam_formal) / f**3, "moving-arm chart transition")
+primitive_difference = sp.expand(-(ai - a0))
+same(
+    primitive_difference,
+    (lam_formal - f**2) / f**3,
+    "moving-arm primitive coefficient",
+)
+check(sp.expand(primitive_difference).coeff(f, -1) == -1,
+      "moving-arm logarithmic residue")
+
+for d in range(2, 9):
+    rho = [1] + [0] * d
+    edges = {
+        (i, j): rho[j] - rho[i]
+        for i in range(d + 1)
+        for j in range(i + 1, d + 1)
+    }
+    check(any(value != 0 for value in edges.values()), f"de Rham edge nonzero d={d}")
+    for i in range(d + 1):
+        for j in range(i + 1, d + 1):
+            for k in range(j + 1, d + 1):
+                check(
+                    edges[(j, k)] - edges[(i, k)] + edges[(i, j)] == 0,
+                    f"de Rham triple cocycle d={d},{i},{j},{k}",
+                )
+    check(len(set(rho)) > 1, f"de Rham vertex nonconstant d={d}")
+
+
 semantic = {
     "boundary": "axis_all; each_critical_arm_punctured; exactly_d_missing_points",
-    "birational": "units=k*;Pic=Z^d;no_birational_Darboux;source_degree>=2(2d+1)",
+    "darboux": "moving_arm_residue_vector=(1,0,...,0)_mod_constants;H2_class_nonzero;no_Darboux_pair",
     "degree": "source_target_field_degree=2d+1",
     "hostile": "d=1_misses_divisor_and_x^3_is_extra_observable",
     "hypotheses": "q_squarefree; q(0)!=0; 0_and_all_Q(alpha_i)_pairwise_distinct; d>=2",
@@ -212,7 +247,8 @@ print("image=surface_minus_d_points_(0,lambda_i,0)")
 print("atlas=quasi_finite_etale_codimension_one_surjective")
 print("intersection=k[x,y]_cap_k(F,P)=k[F,W,Y]/relation")
 print("degree=2d+1")
-print("units=k*;Pic=Z^d;no_birational_Darboux;survivor_source_degree>=2(2d+1)")
+print("units=k*;Pic=Z^d")
+print("derham=moving_arm_residue_(1,0,...,0)_mod_constants;no_Darboux_pair")
 print("quadratic=F^3Y-(W-F^2)(W^2+64c^5/225)=0")
 print("hostile=d1_misses_divisor_and_retains_x^3")
 print(f"CHECKS={CHECKS}")
