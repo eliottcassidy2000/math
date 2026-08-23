@@ -2,19 +2,21 @@
 id: THM-3827
 title: "Dual generic-fibre genus floors for nonlinear cubic plane atlases"
 status: >
-  SECTIONS 1--6 PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY
-  HOSTILE-AUDITED; SECTION 7 PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT,
+  DUAL GENUS FLOORS AND THE SIX-MEMBER REDUCIBILITY GATE PROVED + CITED +
+  VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  THE SECOND G_M ARM AND
+  BICHROMATIC PASSPORT ARE PROVISIONAL PROOF CANDIDATES + VERIFIED-EXACT,
   PENDING INDEPENDENT HOSTILE AUDIT.  For the generative closed-polynomial
   factors h=p(g) and k=q(ell) of both pulled-back THM-3811 row functions, the
   smooth projective geometric generic fibres of g and ell each have genus at
   least three.  At equality they are respectively isomorphic after base
   change to explicit degree-eight and degree-seven THM-3822 hyperelliptic
-  sidecars, with two versus one points at infinity.  The h-floor and the
-  six-member reducible-pencil theorem are independently audited; the dual
-  k-floor is the new pending-audit strengthening.  Existence and uniqueness
-  up to affine change of each generative factor, and the equivalence with
-  relative algebraic closedness, are cited from Arzhantsev--Petravchuk rather
-  than reproved.  No Jacobian counterexample is constructed.
+  sidecars, with two versus one points at infinity.  The new sharpenings give
+  V_U(k)=G_m as well as V_U(h)=G_m, and say that either h splits or one fixed
+  spectral fibre splits into components carrying both square-root signs.
+  Existence and uniqueness up to affine change of each generative factor,
+  and the equivalence with relative algebraic closedness, are cited from
+  Arzhantsev--Petravchuk rather than reproved.  No Jacobian counterexample is
+  constructed.
 source: jc_quartic_c3_construct / generic-fibre genus reframe, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS for Sections 1--6 (root /
@@ -29,16 +31,22 @@ audit: >
   the five-slope strengthening it separately checked algebraic independence
   of h,k from the intrinsic D-quadratic, the second-order h-adic lift,
   pairwise coprimality of the five pencil members, and both surviving subset
-  degrees.  No quantifier or scope repair was needed.  Section 7 and its
-  opposite infinity parity are self-audited and await an independent hostile
-  audit.  The 27-gate exact companion verifies the
+  degrees.  No quantifier or scope repair was needed.  INDEPENDENT HOSTILE
+  AUDIT PASS for the dual genus floor (jc_sparse_direct_search, 2026-08-23):
+  it checked survival of the degree-seven discriminant after q(ell), the
+  squarefree genus-three/one-infinity sidecar, both algebraic and
+  transcendental branches, Riemann--Hurwitz, equality, normal and optimized
+  replay, and the frozen hashes at commit 85eb0017c6.  The second intrinsic
+  G_m arm and the strengthened component-sign passport are self-audited and
+  await an independent pass.  The exact companion verifies the
   monic degree-eight sidecar, a squarefree hostile fibre, the full generic
   discriminant, stability under a nonconstant Stein composition, the
   genus-three count, every excluded Riemann--Hurwitz genus, and reduced-arm
   controls, the opposite degree-seven sidecar and its full discriminant, the
-  second completed square, the five distinct pencil slopes, and both terminal
-  subset obstructions.  Normal and optimized replay agree with the frozen
-  output.
+  complete k-zero Laurent parametrization and original cubic laws, the second
+  completed square, the component-sign equation, the five distinct pencil
+  slopes, and both terminal subset obstructions.  Normal and optimized replay
+  agree with the frozen output.
 depends_on:
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
 related:
@@ -48,18 +56,19 @@ citation:
   - "Arzhantsev--Petravchuk, Closed and Irreducible Polynomials in Several Variables, arXiv:math/0608157v2, Proposition 1, Lemma 3, and Corollary 1."
 script: 04-computation/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.py
 output: 05-knowledge/results/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.out
-script_sha256: 91dcf6e4dfcbf0e4614366ef12f4629bb61f4ab19bc9d0e3612dfb3ab0cb017d
-output_sha256: 2e847adce39b2924e69bff8c41e801e0602dd4e3efef5f8e815d8ce4013aa747
-semantic_sha256: 2c10e963f11f4c65e68445c5e261702e6a213dea94211a649251c2c7697f2374
+script_sha256: dd6025305fd479c6118d57409e390ffa9751e15da533f465b50a998c59d45722
+output_sha256: a59b2c098e2cd115adb6da15dd711a4e6e2752c1d15b8ed5378bcc589012e86d
+semantic_sha256: d46b81bd79d27d7b4396f8f934dd773e694c0eb1a6384ffe03381e6934db7a29
 hash_basis: raw LF bytes
 ---
 
 # THM-3827 -- both row fibrations of a plane atlas need genus at least three
 
-**SECTIONS 1--6 PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY
-HOSTILE-AUDITED; SECTION 7 PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT,
-PENDING INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field
-`K` of characteristic zero.  Put
+**DUAL GENUS FLOORS AND SIX-MEMBER REDUCIBILITY PROVED + CITED +
+VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; SECOND G_M ARM AND
+BICHROMATIC PASSPORT PROVISIONAL PROOF CANDIDATES + VERIFIED-EXACT, PENDING
+INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `K` of
+characteristic zero.  Put
 
 ```text
 R=K[x,y],                 L=K(x,y).                              (1)
@@ -248,7 +257,7 @@ generic fibre must be geometrically isomorphic to the explicit
 hyperelliptic curve `(7)`.  If the map has degree `d>=2`, `(6)` already
 forces `gamma>=2d+1>=5`.
 
-## 6. A six-member reducible-fibre packet
+## 6. A six-member reducible-and-bichromatic packet
 
 The same square sidecar has a second exact completion.  Put
 
@@ -284,57 +293,107 @@ where the `alpha_i` are the roots of
 a(z)=(7z^2+3)(3z^3+7z^2+1).                                   (23)
 ```
 
-They are five distinct finite slopes: `disc(a)=353831803500!=0`.
-At least one member in `(22)` is reducible in `K[x,y]`.
-
-Suppose otherwise.  In particular `h` is irreducible.  Modulo `(h)`, the
-arm law makes `k` a unit and `B_3=-k^3`, so `kB_3=-k^4` is a unit.  From
-`w^2=H(h,k)` and `(21)`, one of `w-kB_3,w+kB_3` vanishes modulo `h`.
-Changing the sign of `w` if necessary and taking one more `h`-adic residue
-gives
+They are five distinct finite slopes: `disc(a)=353831803500!=0`.  The exact
+surviving passport is stronger than mere reducibility:
 
 ```text
-w-kB_3=2h^2d,                A_5=d(kB_3+h^2d)                  (24)
+either h is reducible, or some h-alpha_i k is reducible and its prime
+components carry both signs w=+kB_3 and w=-kB_3 generically.             (24)
+```
+
+Call the latter property **bichromatic**.  To prove `(24)`, suppose `h` is
+irreducible.  Modulo `(h)`, the arm law makes `k` a unit and `B_3=-k^3`, so
+`kB_3=-k^4` is a unit.  From `w^2=H(h,k)` and `(21)`, one of
+`w-kB_3,w+kB_3` vanishes modulo `h`.  Changing the sign of `w` if necessary
+and taking one more `h`-adic residue gives
+
+```text
+w-kB_3=2h^2d,                A_5=d(kB_3+h^2d)                  (25)
 ```
 
 for some `d in K[x,y]`.  Indeed, after writing `w-kB_3=hc`, cancellation
 in `(w-kB_3)(w+kB_3)=4h^2A_5` and reduction modulo `h` force `h|c`;
-division by the unit `2` gives `(24)`.
+division by the unit `2` gives `(25)`.
 
-Over `K`, equation `(23)` factors `A_5` into the five pairwise distinct
-linear binary forms `h-alpha_i k`.  By the assumed irreducibility of their
-pullbacks, UFD factorization in `K[x,y]` and `(24)` make `d`, up to a scalar,
-the product of a subset of these five forms.  Let its size be `r`.
+The determinant-one identity makes `gcd(h,k)=1`.  Hence any two distinct
+pencil members `h-alpha k`, including `h` and the three members occurring in
+`kB_3`, are coprime after pullback.  The exact resultant in `(28)` below and
+`A_5(1,0)=21` therefore show
+
+```text
+gcd(A_5,hkB_3)=1.                                               (26)
+```
+
+Let `r` now be a prime factor of one fixed member `h-alpha_i k`.  At its
+generic point, `h` and `kB_3` are units, while `(21)` gives exactly one of
+the signs `w=+kB_3` or `w=-kB_3`.  Taking the `r`-valuation in `(25)` shows
+that `d` contains the full multiplicity of `r` in `A_5` in the plus case,
+and contains no `r` in the minus case.
+
+If all five fixed-slope fibres were monochromatic, every prime component of
+each whole member would make the same choice.  Thus UFD factorization and
+`(25)` would make `d`, up to a scalar, the product of a subset of the five
+**whole members**, even when those members are reducible or nonreduced.  Let
+the size of this subset be `r_0`.
 
 The formal grading in the algebraically independent pair `(h,k)` turns
 `A_5=d kB_3+h^2d^2` into degrees
 
 ```text
-5 on the left,                 r+4 and 2r+2 on the right.       (25)
+5 on the left,              r_0+4 and 2r_0+2 on the right.      (27)
 ```
 
-Every `r` except `1,2` has an unmatched extreme degree.  For `r=1`, the
+Every `r_0` except `1,2` has an unmatched extreme degree.  For `r_0=1`, the
 degree-five part would force `A_5=d kB_3`, but
 
 ```text
-Res_z(A_5(z,1),(kB_3)(z,1))=-31298700!=0,                      (26)
+Res_z(A_5(z,1),(kB_3)(z,1))=-31298700!=0,                      (28)
 ```
 
 and `A_5(1,0)=21`, so `kB_3` shares no projective linear factor with `A_5`.
-For `r=2`, the degree-six part would force `h^2d=-kB_3`, impossible because
-`gcd(h^2,kB_3)=1`.  This contradiction proves the reducible-fibre claim.
+For `r_0=2`, the degree-six part would force `h^2d=-kB_3`, impossible because
+`gcd(h^2,kB_3)=1`.  Thus not all five fibres are monochromatic.  One contains
+prime components of both signs, so it is reducible and bichromatic.  This
+proves `(24)` and, in particular, the earlier reducible-fibre claim.
 
 Thus the surviving construction lane is narrower than a generic high-genus
-pencil: it must also allocate components at one of six fixed spectral
-members before solving the second-row and Keller equations.
+pencil: unless `h` itself splits, it must allocate components of both square-
+root signs inside one fixed spectral member before solving the second-row and
+Keller equations.
 
 ## 7. The opposite row has the same floor and opposite infinity parity
+
+There is first an intrinsic geometric reason that the opposite row is not a
+formal symmetry.  Set `k=0` in the actual THM-3811 ring `B`.  The three
+reconstruction identities `(3),(5),(6)` of THM-3822 force
+
+```text
+h=3/(7C^2),       m=-7C^2/3,       D=7C^4/9,                    (29)
+A=C^2/3,          omega=0,          theta=-7C^2/3.
+```
+
+Conversely these assignments satisfy all three original cubic multiplication
+laws, reconstruct the displayed nonzero `D`, and hence extend from `S` to
+`B=S[A/D,omega/D]`.  Moreover `hC^2=3/7` makes `C` a unit in `B/(k)`, and
+the formulas `(29)` express every generator of that quotient in
+`K[C,C^-1]`.  The two maps are inverse, so
+
+```text
+B/(k)=K[C,C^-1],                 V_U(k) isomorphic to G_m.       (30)
+```
+
+Thus an etale plane atlas pulls both intrinsic arms back etale.  On every
+component of `V(h)`, the function `k` is a nonconstant unit by THM-3822; on
+every component of `V(k)`, the function `C`, and hence
+`h=3/(7C^2)`, is a nonconstant unit.  This is the geometric source of the
+even/odd asymmetry below.  Nonconstancy here is automatic: an etale morphism
+from a curve component to `G_m` cannot have zero-dimensional image.
 
 Apply the same cited generative-factor theorem to the other pulled-back row
 entry:
 
 ```text
-k=q(ell),                                                       (27)
+k=q(ell),                                                       (31)
 ```
 
 where `ell in R` is closed and `q in K[S]` is nonconstant.  As a polynomial
@@ -342,11 +401,11 @@ in its first argument, the sidecar has degree seven and constant leading
 coefficient `84`.  Its exact discriminant is
 
 ```text
-Disc_T H(T,Z)=-683730534400 Z^43 J(Z),                          (28)
+Disc_T H(T,Z)=-683730534400 Z^43 J(Z),                          (32)
 
 J(Z)=6480000Z^8+1952190576Z^7-14515170152Z^6
      +76957426508Z^5+405669771962Z^4-55140029819Z^3
-     -17308754768Z^2+1276289280Z+234420480.                    (29)
+     -17308754768Z^2+1276289280Z+234420480.                    (33)
 ```
 
 This is nonzero.  Since `q(ell)` is transcendental, the polynomial
@@ -358,13 +417,19 @@ Let `Gamma_ell` be the smooth projective generic fibre of `ell`.  The point
 either `h` is transcendental over `K(ell)` and hence induces a nonconstant
 map from `Gamma_ell` to a genus-three curve, or `h` is algebraic over
 `K(ell)`.  In the second case, closedness of `ell` gives `h in K(ell)`, and
-the intersection argument `(13)` gives `h in K[ell]`.  But `(27)` then makes
+the intersection argument `(13)` gives `h in K[ell]`.  But `(31)` then makes
 `h,k` algebraically dependent, contradicting the independence proved in
 Section 6.  Therefore
 
 ```text
-genus(Gamma_ell)>=3.                                           (30)
+genus(Gamma_ell)>=3.                                           (34)
 ```
+
+There is also a componentwise proof of the algebraic branch that exactly
+mirrors Section 4.  Reducedness of the intrinsic divisor `(30)` and etale
+base change make `q(ell)` squarefree.  Choose a root `beta` of `q` and a
+component of `ell-beta`.  If `h in K[ell]`, then `h` is scalar on that
+component, contradicting the nonconstant-unit law following `(30)`.
 
 At equality, Riemann--Hurwitz again forces the map to have degree one, so
 the generic fibre is geometrically isomorphic to the odd sidecar.  The
@@ -377,9 +442,9 @@ one complicated arm.
 
 The generative-polynomial existence and uniqueness used here are **CITED**,
 not reproved by the exact companion.  They make the independently audited
-claim `(19)` unconditional for every dominant etale plane atlas over the
-stated field.  The same cited theorem supplies the second factorization used
-by the provisional dual claim `(30)`; its function-field proof is
-self-contained after that import.  No planar Jacobian counterexample is
-claimed.  **QED for Sections 1--6; Section 7 remains subject to independent
-hostile audit.**
+dual claims `(19)` and `(34)` unconditional for every dominant etale plane
+atlas over the stated field.  The second intrinsic arm `(30)` and the
+bichromatic strengthening `(24)` are new provisional refinements pending an
+independent hostile pass.  No planar Jacobian counterexample is claimed.
+**QED for the dual genus floors and reducibility gate; the two sharpenings
+remain subject to independent hostile audit.**

@@ -91,6 +91,32 @@ same(Delta_dual, Delta_dual_factor, "exact dual discriminant factorization")
 check(Delta_dual != 0, "dual generic sidecar is squarefree")
 check((H_as_h.degree() - 1) // 2 == 3, "dual odd sidecar genus is three")
 
+# The opposite intrinsic divisor k=0 is itself a punctured arm.  The values
+# below solve all three SL2/cubic reconstruction laws and the original three
+# Delone--Faddeev multiplication relations, not merely the eliminated square.
+c = sp.symbols("c", nonzero=True)
+h_k0 = sp.Rational(3, 7) / c**2
+m_k0 = -sp.Rational(7, 3) * c**2
+D_k0 = sp.Rational(7, 9) * c**4
+A_k0 = sp.Rational(1, 3) * c**2
+omega_k0 = sp.Integer(0)
+theta_k0 = -sp.Rational(7, 3) * c**2
+same(-m_k0 * h_k0, 1, "k-zero determinant-one law")
+same(7 * D_k0 * h_k0**2, 1, "k-zero first cubic reconstruction law")
+same(9 * h_k0**2 * D_k0, 3 * h_k0 * c**2,
+     "k-zero second cubic reconstruction law")
+same(c * omega_k0 - 3 * A_k0 * theta_k0 - 14 * A_k0**2, D_k0,
+     "k-zero different reconstruction")
+same(omega_k0**2, -7 * A_k0**2 + c * omega_k0 - A_k0 * theta_k0,
+     "k-zero omega-square law")
+same(omega_k0 * theta_k0, 3 * A_k0**2 - A_k0 * c**2,
+     "k-zero mixed law")
+same(theta_k0**2,
+     3 * A_k0 * c - c**3 + (c**2 - 3 * A_k0) * omega_k0
+     - 7 * A_k0 * theta_k0,
+     "k-zero theta-square law")
+same(h_k0 * c**2, sp.Rational(3, 7), "k-zero Laurent arm coordinate")
+
 # A second completed square turns the atlas pencil into a five-slope
 # reducibility gate.
 h, k = sp.symbols("h k")
@@ -99,6 +125,12 @@ A_pencil = (7 * h**2 + 3 * k**2) * (3 * h**3 + 7 * h**2 * k + k**3)
 B_pencil = (h + k) * (2 * h + k) * (3 * h - k)
 same(H_hk, (k * B_pencil) ** 2 + 4 * h**2 * A_pencil,
      "five-slope completed square")
+
+d = sp.symbols("d")
+w_coloured = k * B_pencil + 2 * h**2 * d
+same(w_coloured**2 - H_hk,
+     4 * h**2 * (d * (k * B_pencil + h**2 * d) - A_pencil),
+     "component-sign coloring is equivalent to the d-factor equation")
 
 z = sp.symbols("z")
 A_affine = sp.expand(A_pencil.subs({h: z, k: 1}))
@@ -141,8 +173,8 @@ semantic = {
     "sidecar": "W^2=H(p(g),Z), monic squarefree degree eight, geometric genus three",
     "mechanism": "a nonconstant k gives a curve map; Riemann-Hurwitz excludes generic-fibre genus <=2",
     "intersection": "K[x,y] intersect K(g)=K[g] by a denominator-root valuation",
-    "arm": "etale pullback makes p(g) squarefree and k nonconstant on every component",
-    "pencil": "one of h=0 or the five fibres h-alpha_i*k=0 must be reducible",
+    "arm": "both h=0 and k=0 are Gm; opposite row entry is nonconstant on every pullback component",
+    "pencil": "either h=0 is reducible or a fixed-slope fibre is reducible and carries both square-root signs",
     "dual": "both generative row fibrations have genus at least three; equality has two versus one infinity places",
     "scope": "generative closed factor existence is CITED, not computational; no JC counterexample",
 }
@@ -155,7 +187,8 @@ print("closed_polynomial=K(g)_relatively_algebraically_closed_in_K(x,y)")
 print("obstruction=generic_fibre_genus_0_1_2_impossible")
 print("intersection=K[x,y]_intersect_K(g)=K[g]")
 print("boundary=p(g)_squarefree;each_arm_component_requires_nonconstant_k")
-print("pencil=reducible_fibre_among_h_and_five_fixed_slopes")
+print("arms=h_zero_and_k_zero_are_both_Gm")
+print("pencil=h_reducible_or_fixed_slope_reducible_and_bichromatic")
 print("dual=both_row_fibrations_genus_at_least3;infinity_parity=2_vs_1")
 print("stein_factor=existence_CITED_not_computational")
 print("scope=no_JC_counterexample")
