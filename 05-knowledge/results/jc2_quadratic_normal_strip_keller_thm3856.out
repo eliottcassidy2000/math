@@ -1,0 +1,9 @@
+theorem=THM-3856-quadratic-normal-strip-keller-pairs-are-automorphisms
+ambient=k[s,z];bracket=Jac_(z,s)
+scope=both_transverse_degrees_at_most_two;lambda_nonzero
+classification=constant_target_GL2_then_triangular_quadratic_shear
+inverse=s_and_z_recovered_polynomially
+russell_gate=self_identifying_arm_requires_degree_at_least_three_or_nonpolynomial_strip_expansion
+semantic_sha256=02fce0fd2eea8d8ec75ee05bb8264d4bd82278d3f01db5c79ebf54e37ae3f82a
+CHECKS=43
+RESULT=PASS

@@ -1,0 +1,16 @@
+THM3856_QUADRATIC_NORMAL_STRIP_INDEPENDENT_AUDIT
+status=PASS_PROVED_CLASSIFICATION+VERIFIED_EXACT
+universe=char0;A_C_in_k[s,z];deg_z_each_at_most_2;Jac=lambda_nonzero
+coefficient_packet=E0_E1_E2_E3_complete
+top_cases=both_nonzero_proportional;one_sided_square;both_zero_linear
+zero_edges=gamma_zero_alpha_zero_beta_zero_explicitly_inconsistent
+reduction=target_shears_to_linear_normal_pair
+linear_endpoint=three_explicit_inverse_cases
+positive_controls=linear_3;quadratic_first_second_two_sided
+nodal_hostile=all_Bezout_rows;conductor=-(t^2-1);self_identifies_at_+-1
+nodal_groebner_caps=(H,D)=(0,0),(0,1),(1,1),(1,2),(2,2),(2,3);all_unit
+Catalan_quadratic_debt=-27w^2/8+27w^3/16
+scope=canonical_polynomial_strip_only;global_Russell_and_deg_z>=3_open
+semantic_sha256=e76ba373b48b84a69d24c2650ac5bd92fc697d39f7686928f9ab721a62ace210
+GATES=56
+RESULT=PASS
