@@ -90,6 +90,43 @@ gate(sp.simplify(
     - upper_formula.subs(A_symbol, a_symbol**2)
 ) == 0, "universal E-minus/upper closure PDE")
 
+# Crossed orientations on the one-variable right-data boundary.
+v_of_T = sp.Function("v_of_T")(T)
+u_of_X = sp.Function("u_of_X")(X)
+N_plus_cross = sp.expand(
+    M0 * D_symbol * sp.Matrix(((1, v_of_T), (0, 1)))
+)
+alpha_plus_cross = (N_plus_cross[0, 0], N_plus_cross[0, 1])
+beta_plus_cross = (N_plus_cross[1, 0], N_plus_cross[1, 1])
+upper_plus_cross = (
+    alpha_plus_cross[0] + h_function * beta_plus_cross[0],
+    alpha_plus_cross[1] + h_function * beta_plus_cross[1],
+)
+upper_cross_formula = U_A - A_symbol * v_of_T * (
+    (1 + 2 * X * T) * sp.diff(h_function, X) + 2 * T * h_function
+)
+gate(sp.simplify(
+    a_symbol * curl(upper_plus_cross)
+    - upper_cross_formula.subs(A_symbol, a_symbol**2)
+) == 0, "one-variable E-plus/upper crossed PDE")
+
+N_minus_cross = sp.expand(
+    M0 * D_symbol * sp.Matrix(((1, 0), (u_of_X, 1)))
+)
+alpha_minus_cross = (N_minus_cross[0, 0], N_minus_cross[0, 1])
+beta_minus_cross = (N_minus_cross[1, 0], N_minus_cross[1, 1])
+lower_minus_cross = (
+    beta_minus_cross[0] + h_function * alpha_minus_cross[0],
+    beta_minus_cross[1] + h_function * alpha_minus_cross[1],
+)
+lower_cross_formula = L_A + u_of_X * (
+    (2 * X * T - 1) * sp.diff(h_function, T) + 2 * X * h_function
+)
+gate(sp.simplify(
+    a_symbol * curl(lower_minus_cross)
+    - lower_cross_formula.subs(A_symbol, a_symbol**2)
+) == 0, "one-variable E-minus/lower crossed PDE")
+
 semantic_rows: list[str] = []
 right_profiles = (
     sp.Integer(0),
@@ -336,6 +373,51 @@ for resonance in range(0, 4):
              "upper exceptional transport hostile")
         exceptional_systems += 1
 
+# Exact crossed-orientation boundary controls.  Nonconstant one-variable
+# right data leave only the depth-one h=0 sheets; constants add precisely the
+# second THM-3726 sheet.
+cross_controls = 0
+for v in (T, 1 + T**2, -2 + T**3):
+    A = sp.Rational(1, 4)
+    a = sp.sqrt(A)
+    N = sp.expand(M0 * sp.diag(a, 1 / a) * sp.Matrix(((1, v), (0, 1))))
+    alpha = (N[0, 0], N[0, 1])
+    gate(curl(alpha) == 0, "nonconstant E-plus upper depth-one cross")
+    cross_controls += 1
+for u in (X, 1 + X**2, -2 + X**3):
+    A = sp.Integer(1)
+    a = sp.sqrt(A)
+    N = sp.expand(M0 * sp.diag(a, 1 / a) * sp.Matrix(((1, 0), (u, 1))))
+    beta = (N[1, 0], N[1, 1])
+    gate(curl(beta) == 0, "nonconstant E-minus lower depth-one cross")
+    cross_controls += 1
+for constant in (-3, -1, 1, 2):
+    # E-plus upper: A=1/4,h=0 and A=1,h=3/v.
+    for A, h in ((sp.Rational(1, 4), 0), (sp.Integer(1), sp.Rational(3, constant))):
+        a = sp.sqrt(A)
+        N = sp.expand(
+            M0 * sp.diag(a, 1 / a)
+            * sp.Matrix(((1, constant), (0, 1)))
+        )
+        alpha = (N[0, 0], N[0, 1])
+        beta = (N[1, 0], N[1, 1])
+        gate(curl((alpha[0] + h * beta[0], alpha[1] + h * beta[1])) == 0,
+             "constant E-plus upper crossed sheets")
+        cross_controls += 1
+    # E-minus lower: A=1,h=0 and A=1/4,h=3/(4u).
+    for A, h in ((sp.Integer(1), 0),
+                 (sp.Rational(1, 4), sp.Rational(3, 4 * constant))):
+        a = sp.sqrt(A)
+        N = sp.expand(
+            M0 * sp.diag(a, 1 / a)
+            * sp.Matrix(((1, 0), (constant, 1)))
+        )
+        alpha = (N[0, 0], N[0, 1])
+        beta = (N[1, 0], N[1, 1])
+        gate(curl((beta[0] + h * alpha[0], beta[1] + h * alpha[1])) == 0,
+             "constant E-minus lower crossed sheets")
+        cross_controls += 1
+
 source = Path(__file__).read_text(encoding="utf-8")
 gate(
     not any(isinstance(node, ast.Assert) for node in ast.walk(ast.parse(source))),
@@ -344,13 +426,16 @@ gate(
 
 semantic = hashlib.sha256("\n".join(semantic_rows).encode()).hexdigest()
 print("theorem=THM-3740-automorphic-Cohn-one-variable-right-shear-towers")
-print("scope=all_depths_r>=1;compatible_lower_Eplus_and_upper_Eminus_exposures")
+print(
+    "scope=arbitrary_right_parameters_in_compatible_exposures;"
+    "all_one_variable_crossed_exposures"
+)
 print("sharp_gate=lower_forces_v_X=0;upper_forces_u_T=0")
 print("transport=Y=X+B(T)_and_V=T+C(X)_with_unique_triangular_ODEs")
 print("inheritance=source_automorphic_images_of_THM3734;no_polynomial_mates")
 print(
     f"tested_depths=1..8;hostile_systems={hostile_systems};"
-    f"exceptional_systems={exceptional_systems}"
+    f"exceptional_systems={exceptional_systems};cross_controls={cross_controls}"
 )
 print(f"semantic_sha256={semantic}")
 print(f"CHECKS={CHECKS}")

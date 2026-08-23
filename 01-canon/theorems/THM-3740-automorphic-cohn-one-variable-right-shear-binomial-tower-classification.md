@@ -1,6 +1,6 @@
 ---
 id: THM-3740
-title: "Automorphic Cohn one-variable right-shear binomial-tower classification"
+title: "Automorphic Cohn one-variable right-shear all-exposure classification"
 status: >
   PROVED + VERIFIED-EXACT + PENDING INDEPENDENT AUDIT.  For an arbitrary
   diagonal constant right factor followed by one arbitrary polynomial upper
@@ -11,7 +11,10 @@ status: >
   nonlinear source translation, and closure occurs exactly on the paired
   integer-depth binomial slopes of THM-3734.  Exceptional negative transport
   resonances are empty.  Every survivor is source-automorphic to a THM-3734
-  potential and has no polynomial mate.
+  potential and has no polynomial mate.  On the resulting one-variable right
+  boundary, the crossed exposed rows are also completely classified: only
+  the zero-parameter diagonal tower, two constant Broughton sheets, and one
+  nonconstant depth-one sheet survive in each orientation.
 source: root + jc_sparse_direct_search / 2026-08-22
 audit: >
   PENDING.  The formulas were independently derived and checked through
@@ -25,8 +28,8 @@ related:
   - THM-3736-automorphic-cohn-complete-constant-sl2-polynomial-exposure-classification
 script: 04-computation/jc2_automorphic_cohn_one_variable_right_towers_thm3740.py
 output: 05-knowledge/results/jc2_automorphic_cohn_one_variable_right_towers_thm3740.out
-script_sha256: e28f51487eea07383f9e105bc5f5895acc3b5db22b0a772c32c28ecdb0c48aec
-output_sha256: d4c785531a55ed27f0eb5c0d2bb41ff22471e43626a08c0bb778e0ed78c06e49
+script_sha256: c800df5287182640b44dddebb07335408cd1166c09bc8e854e08c44f3e734df3
+output_sha256: e16347cfd6deb288df1847ef3a42644afe334b8756106ee2e23c69cfe4dd6764
 semantic_sha256: e3fc3fd4f99bda017d984a968d2d543d8292f779a0745a99681285cdb7b01cff
 hash_basis: raw LF bytes
 ---
@@ -118,11 +121,83 @@ Phi_r^U(z)=-r[1-(1-2z/r)^(r+1)]/[2(r+1)z].            (11)
 ```
 
 Neither potential `(6)` nor `(11)` has a polynomial Jacobian mate.  This
-theorem classifies the **compatible** lower exposure after `E_+` and upper
-exposure after `E_-`; it does not claim the two crossed orientations or words
-with two nonconstant right factors.
+classifies the compatible lower exposure after `E_+` and upper exposure after
+`E_-` for arbitrary bivariate right parameters.  The next section also
+classifies both crossed exposures once the right parameter is one-variable.
+Crossed exposures with genuinely bivariate right data and words with two
+nonconstant right factors remain outside the theorem.
 
-## 2. The full two-variable closure equations
+## 2. Both crossed one-variable exposures
+
+The compatible gate naturally leaves `v=v(T)` and `u=u(X)`.  On this whole
+one-variable boundary, the crossed rows have the following complete list.
+
+For `M_0D_aE_+(v(T))`, the upper row `alpha+h beta` is closed exactly as
+follows:
+
+```text
+v=0:                 the full diagonal upper tower of THM-3734;
+deg v>=1:            A=1/4, h=0;
+v=c in k*:           (A,h)=(1/4,0) or (1,3/c).        (C1)
+```
+
+For `M_0D_aE_-(u(X))`, the lower row `beta+h alpha` is closed exactly as
+follows:
+
+```text
+u=0:                 the full diagonal lower tower of THM-3734;
+deg u>=1:            A=1, h=0;
+u=c in k*:           (A,h)=(1,0) or (1/4,3/(4c)).     (C2)
+```
+
+To prove the nonconstant cases, their exact crossed equations are
+
+```text
+U_A(h)-Av[(1+2XT)h_X+2Th]=0,                          (C3)
+L_A(h)+u[(2XT-1)h_T+2Xh]=0.                           (C4)
+```
+
+If `p=deg_Tv>=1` and nonzero `h` has highest `T` coefficient `c_N(X)`, the
+unique degree-`p+N+1` coefficient of `(C3)` is
+
+```text
+-2A lead(v)[Xc_N'+c_N].                               (C5)
+```
+
+It would force `c_N=C/X`, impossible for a nonzero polynomial.  Hence `h=0`,
+and `(C3)` reduces to `2(4A-1)T=0`, giving `A=1/4`.  The dual top coefficient
+in `(C4)` is
+
+```text
+2 lead(u)[Tc_N'+c_N],                                 (C6)
+```
+
+so `h=0` and `2(A-1)X=0`, giving `A=1`.  When the right parameter is zero,
+THM-3734 applies; when it is a nonzero constant, THM-3736 rules out
+nonconstant `h` and the two raw THM-3726 equations give exactly the two
+displayed sheets.
+
+The nonconstant `h=0` potentials are still source images of depth-one
+Broughton components.  At `A=1/4`,
+
+```text
+Q=a^{-1}(XT^2-T)+4a integral(T^2v(T) dT)
+ =a^{-1}[(X+S(T))T^2-T],
+S(T)=T^{-2} integral(T^2v(T) dT) in Tk[T].             (C7)
+```
+
+At `A=1`, the dual potential is
+
+```text
+Q=a(X+X^2T)+a^{-1} integral(X^2u(X) dX)
+ =a[X+X^2(T+R(X))],
+R(X)=X^{-2} integral(X^2u(X) dX) in Xk[X].             (C8)
+```
+
+The source changes in `(C7)--(C8)` have Jacobian one, so these potentials
+have no mates by THM-3734.  The constant sheets have no mates by THM-3726.
+
+## 3. The full two-variable compatible closure equations
 
 Before any specialization of `u,v`, direct differentiation gives the lower
 equation for `(2)`:
@@ -150,7 +225,7 @@ A(1+2XT)h_T-X^2h_X+2(A-1)Xh+2(4A-1)T
 These identities retain arbitrary bivariate right parameters and every
 zero/constant boundary.
 
-## 3. Why lower closure forces `v_X=0`
+## 4. Why lower closure forces `v_X=0`
 
 Suppose `p=deg_X v>=1`; let `m=deg_Xh` when `h!=0`.  Coefficient comparison
 in `(12)` exhausts the following cases.
@@ -190,7 +265,7 @@ in `(12)` exhausts the following cases.
 
 Therefore every lower survivor has `v_X=0`, with no degree bound.
 
-## 4. The typed dual gate forces `u_T=0`
+## 5. The typed dual gate forces `u_T=0`
 
 Now suppose `p=deg_Tu>=1` in `(14)` and put `m=deg_Th`.  The same conclusion
 does not rely on an informal symmetry; the typed cases are:
@@ -217,7 +292,7 @@ does not rely on an informal symmetry; the typed cases are:
 
 Hence an upper survivor necessarily has `u_T=0`.
 
-## 5. The right shear is an integrable source connection
+## 6. The right shear is an integrable source connection
 
 Take `v=v(T)`.  The triangular Euler map
 
@@ -300,7 +375,7 @@ THM-3734 classifies the diagonal equations and excludes arbitrary polynomial
 mates.  Source automorphisms preserve mate existence, so every survivor here
 also has no mate.  **QED.**
 
-## 6. The inheritance ladder and remaining route
+## 7. The inheritance ladder and remaining route
 
 The formulas glue all earlier boundaries exactly.
 
@@ -331,4 +406,6 @@ The companion derives `(13)--(14)` symbolically; checks four right profiles,
 both raw gradients, both connection defects, and both source translations
 through depth eight; rejects 120 mixed-variable low-degree systems; and
 checks 48 exceptional negative-resonance systems plus 384 exact leading-ODE
-separations.  The displayed degree arguments carry the unbounded proof.
+separations.  It also derives both crossed PDEs and verifies 22 positive
+crossed boundary controls.  The displayed degree arguments carry the
+unbounded proof.
