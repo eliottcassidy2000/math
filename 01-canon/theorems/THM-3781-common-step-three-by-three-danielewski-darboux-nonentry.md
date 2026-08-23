@@ -1,27 +1,30 @@
 ---
 id: THM-3781
-title: "Scalar-centred common-step-three Danielewski Darboux nonentry"
+title: "Complete scalar-centred three-by-three arithmetic-progression Danielewski Darboux nonentry"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On every
-  exponent-two squarefree Danielewski surface with at least two arms, no
-  Darboux pair can have three nonconstant homogeneous weight pieces in each
-  output, common step three, and scalar-centred support.  Up to exchanging
-  the outputs only two support placements survive the endpoint signs.
-  Their adjacent-weight equations force, respectively, a polynomial Mobius
-  contradiction and a cubic-over-linear divisibility contradiction before
-  the scalar equation is reached.  This closes two complete three-by-three
-  cells, not planar JC(2).
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVED; PENDING HOSTILE AUDIT OF
+  THE FULL GENERALIZATION.  On every exponent-two squarefree
+  Danielewski surface with at least two arms, no Darboux pair can have three
+  nonzero homogeneous weight pieces in each output, arithmetic-progression
+  supports with arbitrary positive steps, and scalar-centred convolution.
+  Unequal steps leave a forbidden lonely mixed-sign bracket.  For equal
+  steps, endpoint gcds are unrestricted: algebraic roots of the two endpoint
+  owners make both adjacent equations integrable, and infinity contradicts
+  the negative middle membership invoice.  The independently audited
+  step-three theorem is a strict special case.  This closes the complete
+  scalar-centred three-by-three AP census, not planar JC(2).
 source: root / planar-Jacobian Danielewski Darboux session, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASSED (jc_zero_debt_lift, 2026-08-23).  The
-  audit independently checked the homogeneous-piece formula, endpoint sign
-  census, UFD power laws (including constant and zero-weight edge cases),
-  both adjacent-weight integrations, the Cell-I polynomial-Mobius degree
-  inference, and the Cell-II coprimality/divisibility/degree step.  In Cell
-  I the only possible polynomial quotient is constant, hence is removed by
-  scalar centering; in Cell II the cubic denominator is congruent to one
-  modulo every factor of k.  Normal and optimized executions byte-match the
-  frozen transcript; recorded raw hashes and the 80 exact gates match.
+  The d=3 specialization was independently hostile-audited by
+  jc_zero_debt_lift (2026-08-23, bfad661005), including support typing,
+  endpoint UFD laws, adjacent integrations, arm valuations, and terminal
+  degree exits.  The same auditor independently rederived both the all-d
+  radical equations/infinity case split and the unequal-step lonely-weight
+  reduction.  Exact-text and frozen-hash audit of the strengthened statement
+  remains pending.  The companion checks 2,470 unequal cells through step
+  20 (including 100 doubling hostiles) and every equal-step cell through
+  d=30 (including 135 nonprimitive endpoints), with 47,466 active gates
+  under normal and optimized Python.
 depends_on:
   - THM-3572-squarefree-danielewski-affine-modification-and-two-bracket-collapse
 related:
@@ -29,18 +32,19 @@ related:
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
 script: 04-computation/jc2_common_step_three_by_three_danielewski_thm3781.py
 output: 05-knowledge/results/jc2_common_step_three_by_three_danielewski_thm3781.out
-script_sha256: 893d3f5f701c2008c50270839dc0949451ee60804e0a212e968c14eb6fd1d2fc
-output_sha256: e8ac756513895f4d36676245d4e1e4c6f2fc30371f6c1965cf51f511960dffc0
-semantic_sha256: 34f8df9c6b069bd5f36939f38109908fde5ab2d4dd7374b019445add3e400982
+script_sha256: 066fab6dee42f56bb32eb3916e2f05c130059750cc27c30ed8de9c5a831495cb
+output_sha256: 44b00c69be0493b4f4e49f2eb6c0cc7cd10cfad7c43c8bfca14c248cc11dc425
+semantic_sha256: 0f8e172b3c6ebc8679753322e1c5b5ee717cc029bcaff517c6f87b2f1ca96073
 hash_basis: raw LF bytes
 ---
 
-# THM-3781 -- two complete three-by-three Darboux cells are empty
+# THM-3781 -- every scalar-centred three-by-three AP cell is empty
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The
-exponent-two Danielewski route first survives the known support census at
-three weight pieces in each output.  This theorem closes the next complete
-common-step family, rather than one symmetric representative.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVED; PENDING HOSTILE AUDIT OF
+THE FULL GENERALIZATION.**  A lonely-weight argument closes unequal steps;
+a common endpoint-owner calculation closes equal steps.  The essential move
+in the latter case is to retain endpoint gcds by working temporarily in a
+finite algebraic extension of `C(b)`.
 
 Work over `C`.  Let `Sigma in C[b]` be squarefree with at least two distinct
 roots, and put
@@ -57,180 +61,257 @@ Use the Poisson bracket and weights
 wt(b)=0,            wt(c)=1,             wt(e)=-2.     (2)
 ```
 
-The weight-`r` part is
+The weight-`r` part and homogeneous bracket are
 
 ```text
 (A_Sigma)_r={c^r f(b):
-  Sigma^ceil(-r/2) divides f when r<0}.                 (3)
-```
+  Sigma^ceil(-r/2) divides f when r<0},                 (3)
 
-For homogeneous pieces the exact coefficient rule is
-
-```text
 {c^r f,c^s g}=c^(r+s+1)(s f'g-r f g').                (4)
 ```
 
-Subtract constants from both proposed outputs.  Suppose each then has
-exactly three nonzero weight pieces, its weights form an arithmetic
-progression of step three, and the middle weights `p,q` obey
+Subtract constants from two proposed outputs.  Suppose that each remaining
+output has exactly three nonzero homogeneous pieces, its weight support is
+an arithmetic progression with positive step `r` or `s`, and the middle
+weights `p,q` satisfy
 
 ```text
 p+q+1=0.                                               (5)
 ```
 
-Thus output weight zero is the central coefficient of the support
-convolution.  The theorem says no such `P,Q` satisfy
+Thus scalar output weight zero is the central coefficient of the support
+convolution.  The theorem says that no such `P,Q` satisfy
 
 ```text
 {P,Q}=1.                                               (6)
 ```
 
-## 1. Only two support placements survive
+## 1. The complete support family and the unequal-step exit
 
 The extreme output weights occur once, so their brackets must vanish.  A
-negative and a positive homogeneous piece cannot have zero bracket.  Indeed,
-at a root of `Sigma`, write their coefficient orders as `A>0,B>=0`.  If
-`r<0<s`, the first surviving coefficient in `(4)` is
+negative and a positive homogeneous piece cannot have zero bracket: at a
+root of `Sigma`, if their coefficient orders are `R>0,S>=0`, then the first
+surviving coefficient in `(4)` is proportional to
 
 ```text
-sA-rB>0.                                               (7)
+sR-rS>0                 when r<0<s.                    (7)
 ```
 
-A zero-weight endpoint would force its coefficient to be constant and hence
-removable.  Consequently the two lower endpoints must both be negative and
-the two upper endpoints both positive.  With `(5)`, this leaves
+If one extreme has weight zero and the other does not, `(4)` instead forces
+the zero-weight coefficient to be constant, which was removed.  Hence both
+lower endpoints are negative and both upper endpoints are positive.
+
+After exchanging the outputs and negating one if needed to restore bracket
+`+1`, write
 
 ```text
-p in {-2,-1,0,1}.                                      (8)
+p=-a,       q=a-1,       1<=a<=min(s,r-1).            (8)
 ```
 
-Exchanging `P,Q` and, if necessary, negating one output to restore bracket
-`+1` identifies `p` with `q=-p-1`.  Hence only the following two cells
-remain:
+Every remaining support cell is therefore
 
 ```text
-I:   supp(P)=(-4,-1,2),       supp(Q)=(-3,0,3),
-II:  supp(P)=(-5,-2,1),       supp(Q)=(-2,1,4).         (9)
+supp(P)=(-a-r, -a, -a+r),
+supp(Q)=(a-1-s, a-1, a-1+s).                          (9)
 ```
 
-Both have output-weight multiplicities
+The nine output weights, before collisions, are
 
 ```text
-1,2,3,2,1  at weights  -6,-3,0,3,6.                  (10)
+ir+js,                  i,j in {-1,0,1}.              (10)
 ```
 
-## 2. Cell I forces its zero-weight piece to be constant
-
-Write
+Suppose first that `r!=s`.  Output weight `-r` comes only from the lower
+piece of `P` and middle piece of `Q`, except when
 
 ```text
-P=c^-4 f+c^-1 a+c^2 F,
-Q=c^-3 g+h+c^3 H.                                    (11)
+s=r  or  s=2r.                                        (11)
 ```
 
-The unique weight `-6` and `6` equations are
+If `a>1`, that unique pair has negative and positive weights, so its bracket
+cannot vanish by `(7)`.  If `a=1`, the second piece has weight zero; its
+coefficient is nonconstant because constants were removed, and `(4)` again
+makes the bracket nonzero.
+
+Likewise, output weight `+s` comes only from the middle piece of `P` and
+upper piece of `Q`, except when
 
 ```text
--3f'g+4fg'=0,                 3F'H-2FH'=0.            (12)
+r=s  or  r=2s.                                        (12)
 ```
 
-Unique factorization and coprime exponent pairs give
+This pair always has negative and positive weights, hence cannot bracket to
+zero.  An unequal pair of steps could evade the first lonely weight only by
+`s=2r` and the second only by `r=2s`; it cannot evade both.  Thus every
+unequal-step cell is empty before its endpoint equations are used.
+
+It remains to take
 
 ```text
-f=A k^4,       g=B k^3,       F=L ell^2,       H=M ell^3,              (13)
+r=s=d>=2,       1<=a<=d-1.                            (13)
 ```
 
-for nonzero constants `A,B,L,M` and nonzero polynomials `k,ell`.  The
-negative-weight membership conditions in `(3)` force `Sigma|k`, so `k` and
+Then `(9)` becomes
 
 ```text
-z=k ell                                                   (14)
+supp(P)=(-(d+a), -a, d-a),
+supp(Q)=(-(d-a+1), a-1, d+a-1),                       (14)
 ```
 
-are nonconstant.
+with multiplicities `1,2,3,2,1` at weights
+`-2d,-d,0,d,2d`.  There are `d-1` cells up to exchange.  No endpoint
+coprimality has been imposed.
 
-The output weights `-3` and `3` now reduce exactly to
+## 2. Endpoint owners, including nonprimitive exponents
+
+Abbreviate
 
 ```text
-(a/k)'=(4A/(3B))h',              (a ell)'=(2L/(3M))h'. (15)
+m=d+a,       n=d-a+1,       R=d-a,       S=d+a-1,
+u=gcd(m,n),  v=gcd(R,S).                               (15)
 ```
 
-After integration, for constants `C,D` and nonzero constants `lambda,mu`,
+Write the proposed pair as
 
 ```text
-a=k(lambda h+C),                 a ell=mu h+D.         (16)
+P=c^-m f+c^-a alpha+c^R F,
+Q=c^-n g+c^(a-1) beta+c^S H.                          (16)
 ```
 
-Eliminating `a` yields
+The endpoint equations at weights `-2d` and `2d` are
 
 ```text
-(lambda z-mu)h=D-Cz.                                  (17)
+-n f'g+m fg'=0,                 S F'H-R FH'=0.         (17)
 ```
 
-If `h` were nonconstant, the left side would have degree
-`deg(z)+deg(h)`, while the right side has degree at most `deg(z)`.  Thus `h`
-is constant.  But constants were subtracted before declaring the support,
-so the weight-zero piece disappears and `(11)` is not a three-by-three
-cell.  Cell I is empty.  Notice that the scalar weight equation was never
-used.
-
-## 3. Cell II creates an impossible cubic denominator
-
-Now write
+Unique factorization in `C[b]` gives nonzero constants `A,B,L,M` and
+polynomials `k,ell` such that
 
 ```text
-P=c^-5 f+c^-2 a+cF,
-Q=c^-2 g+ch+c^4 H.                                    (18)
+f=A k^(m/u),       g=B k^(n/u),
+F=L ell^(R/v),     H=M ell^(S/v).                     (18)
 ```
 
-The endpoint equations give
+The negative-weight membership invoices in `(3)` force every root of
+`Sigma` to divide `k`; in particular
 
 ```text
-f=A k^5,       g=B k^2,       F=L ell,       H=M ell^4.                (19)
+Sigma|k,                  deg(k)>0.                    (19)
 ```
 
-Again `(3)` forces `Sigma|k`, so `z=k ell` is nonconstant.  The two adjacent
-output equations integrate to
+Choose a finite algebraic function-field extension `E/C(b)` containing
+elements `K,N` with
 
 ```text
-a/k^2=lambda k h+C,               h/ell=mu a ell^2+D,                 (20)
+K^u=k,                    N^v=ell.                     (20)
+```
+
+Then `(18)` becomes
+
+```text
+f=A K^m,       g=B K^n,       F=L N^R,       H=M N^S. (21)
+```
+
+The derivation `d/db` extends uniquely to `E`.  Its constant field is `C`:
+it is algebraic over the constant field of `C(b)`, and `C` is algebraically
+closed.  This is the only fact needed from the radical extension.
+
+## 3. The two adjacent equations integrate uniformly
+
+At output weight `-d`, formula `(4)` and `(21)` give, after removing the
+nonzero factor `K^(d+1)`,
+
+```text
+A m (K^(a-1) beta)' - B n (alpha K^-a)'=0.             (22)
+```
+
+At output weight `d`, removing `N^(d-1)` gives
+
+```text
+M S (alpha N^a)' - L R (beta N^(-(a-1)))'=0.           (23)
+```
+
+Since the constants of `E` are `C`, these integrate to
+
+```text
+alpha/K^a=lambda K^(a-1) beta+C,
+beta/N^(a-1)=mu alpha N^a+D,                           (24)
 ```
 
 where
 
 ```text
-lambda=5A/(2B),                    mu=4M/L.             (21)
+lambda=A m/(B n),       mu=M S/(L R)                  (25)
 ```
 
-Substitution of the second equation into the first gives the entire
-obstruction in one line:
+are nonzero and `C,D in C`.  Put `Z=KN` and `nu=lambda mu`.  Eliminating
+`beta` produces the universal obstruction
 
 ```text
-a(1-lambda mu z^3)=k^2(lambda D z+C).                 (22)
+alpha(1-nu Z^(2a-1))
+  =K^a(lambda D Z^(a-1)+C).                           (26)
 ```
 
-The factor `1-lambda mu z^3` is coprime to `k`: modulo every factor of `k`
-it is one.  It must therefore divide `lambda D z+C`.  Its degree is
-`3deg(z)`, while the latter polynomial has degree at most `deg(z)`.  Hence
-the numerator is zero.  Nonconstancy of `z` forces `C=D=0`, after which
-`(22)` forces `a=0`, contradicting the declared middle weight.  Cell II is
-empty, again before the scalar equation.
+This equation contains no `d`; the common step has disappeared.
 
-## 4. What this adds and what remains
+## 4. Infinity contradicts the negative middle invoice
 
-THM-3572 closed the parity-compatible step-two cell
+Choose any place `w` of `E` above the infinite place of `C(b)`, and divide
+its pole order by the ramification index.  Denote the resulting normalized
+pole degrees of `K,N` by
 
 ```text
-(-3,-1,1) x (-2,0,2).                                 (23)
+kappa=deg(k)/u>0,             eta=deg(ell)/v>=0.       (27)
 ```
 
-The present theorem closes both inequivalent scalar-centred step-three cells
-uniformly for every squarefree multiarm polynomial `Sigma`.  The mechanism
-is new: step two ended in a common-factor contradiction, while step three
-turns the adjacent equations into a Mobius relation in Cell I and a
-cubic-over-linear divisibility in Cell II.
+Thus `Z` has pole degree `kappa+eta>0`, and the left factor
+`1-nu Z^(2a-1)` in `(26)` has pole degree
+`(2a-1)(kappa+eta)`.
 
-This is not a classification of all three-by-three supports.  Unequal step
-sizes, non-centred scalar placements, gapped supports, and common steps at
-least four remain open.  It constructs no Darboux pair and no planar
-Jacobian counterexample.  **QED.**
+If `D!=0` and `a>1`, the `D Z^(a-1)` term strictly dominates `C` at this
+place.  Comparing pole orders in `(26)` gives
+
+```text
+deg(alpha)+(2a-1)(kappa+eta)
+  =a kappa+(a-1)(kappa+eta),
+
+deg(alpha)=-a eta<=0.                                 (28)
+```
+
+If the surviving parenthesis on the right of `(26)` is a nonzero constant
+-- either `D=0,C!=0`, or `a=1,lambda D+C!=0` -- the same comparison gives
+
+```text
+deg(alpha)=-(a-1)kappa-(2a-1)eta<=0.                  (29)
+```
+
+If that parenthesis is zero, `(26)` forces `alpha=0`, because `Z` has a
+pole and hence `1-nu Z^(2a-1)` is not zero.
+
+Every case is impossible.  Indeed, `c^-a alpha` was declared a nonzero
+weight piece, and `(3)` requires
+
+```text
+Sigma^ceil(a/2) divides alpha.                         (30)
+```
+
+Consequently `deg(alpha)>0`, contradicting `(28)`, `(29)`, or
+`alpha=0`.  The scalar weight equation is never reached.
+
+## 5. Boundary and surviving route
+
+For `d=3`, `(14)` gives precisely the two previously audited cells
+
+```text
+(-4,-1,2) x (-3,0,3),
+(-5,-2,1) x (-2,1,4).                                 (31)
+```
+
+The new radical-owner argument also covers every nonprimitive endpoint
+pair, beginning with `(d,a)=(4,2)`, as well as all larger common steps.
+
+This is the full scalar-centred three-by-three arithmetic-progression
+census.  A noncentral occurrence of scalar weight zero, genuinely gapped
+supports, and supports with at least four pieces remain open.  It constructs
+no Darboux pair and no planar Jacobian counterexample.  **QED, with the full
+exact-text hostile audit pending.**
