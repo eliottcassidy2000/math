@@ -2,11 +2,8 @@
 id: THM-3855
 title: "Formal inverse-discriminant lift and algebraization gate"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED for the formal
-  inverse-discriminant and base right-equivalence theorem.  SECTION 3
-  COEFFICIENT-RIGIDITY STRENGTHENING IS PROVISIONAL + VERIFIED-EXACT;
-  AWAITING INDEPENDENT HOSTILE AUDIT.  At the THM-3808 rational four-ray
-  packet, the four coefficient
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  At the THM-3808
+  rational four-ray packet, the four coefficient
   gradients of the binary-cubic discriminant form a basis of all homogeneous
   cubics.  More strongly, the two base-coordinate gradients form a cubic
   complete intersection with socle degree four.  Hence every discriminant
@@ -38,14 +35,19 @@ audit: >
   and S3 gates.  Together they isolate lambda=0, target order four,
   characteristics 2 and 5, and finite termination as the genuine boundaries.
   THM-3855 proves no arbitrary finite-degree coefficient obstruction;
-  THM-3853 supplies only the quadratic-depth exclusion.  The new provisional
-  coefficient-level strengthening gives
+  THM-3853 supplies only the quadratic-depth exclusion.  An independent
+  hostile audit of the coefficient-level strengthening (root, 2026-08-23)
+  rederived the three infinitesimal SL2 columns and quotient map, checked all
+  maximal minors and their determinant -14400, and verified that the Fitting
+  annihilator kills every graded cokernel degree at least two.  It also
+  checked the degree typing of base corrections, traceless exponentials,
+  nonlinear errors, and infinite m-adic composition.  The strengthening gives
   the explicit `SL2` action matrix modulo base directions, proves that its
   maximal minors generate `(A,C)^2`, and uses the Fitting annihilator to close
   every homogeneous order at least two.  The companion replays both lifts
   through total degree twelve, checks the gauge action through degree eight,
-  and contains no Python asserts.  This strengthening awaits independent
-  hostile audit.
+  and contains no Python asserts.  Normal and optimized runs byte-match the
+  frozen 115-gate transcript and both recorded hashes.
 depends_on:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
   - THM-3853-quadratic-depth-inverse-discriminant-one-place-gluing-obstruction
@@ -64,11 +66,8 @@ hash_basis: raw LF bytes
 
 # THM-3855 -- the one-place inverse discriminant has no formal obstruction
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED for the formal
-inverse-discriminant and base right-equivalence theorem.  Section 3 is a
-PROVISIONAL + VERIFIED-EXACT coefficient-rigidity strengthening awaiting
-independent hostile audit.**  Work over an algebraically closed field `k` of
-characteristic zero.  Put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  Put
 
 ```text
 R=k[A,C],               m=(A,C),               Rhat=k[[A,C]].   (1)

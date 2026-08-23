@@ -2,8 +2,8 @@
 id: THM-3865
 title: "The one-place inverse discriminant has torsion-free quadratic-resolvent class group"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  For every nonzero lambda, the normal affine surface
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  nonzero lambda, the normal affine surface
   W^2=Delta_0+lambda C^5 has divisor class group Z.  Consequently it has no
   three-torsion and supports no connected normal finite-flat cubic algebra
   over k[A,C] with that discriminant.  This closes the exact global target
@@ -11,14 +11,23 @@ status: >
   inverse-discriminant or planar-Jacobian obstruction.
 source: root / inverse-discriminant global algebraization lane, 2026-08-23
 audit: >
-  SELF-HOSTILE EXACT CANDIDATE.  The proof uses the THM-3853 normalization
+  INDEPENDENT HOSTILE AUDIT PASS (jc_quartic_c3_construct, 2026-08-23).  The
+  audit independently checked normality from the immersive four-address
+  normalization, both directions of the factorial localization chart, the
+  irreducible localization divisor and its full unit group, and the two
+  reduced multiplicity-one primes over C.  It rederived the exact Nagata
+  sequence, with no hidden relation, and checked the decisive tame-local
+  step: discriminant exponent one gives transposition inertia, whose
+  intersection with A3 is trivial over the quadratic subfield.  It then
+  verified the Kummer/class-group/unit argument, including possible
+  unramified residue degree and codimension-two leakage.  The proof uses the THM-3853 normalization
   to establish normality, an explicit UFD chart after inverting C, the two
   reduced height-one primes over C, Nagata's localization sequence, and a
   codimension-one tame-inertia/Kummer descent.  The assertion-free companion
   freezes the chart and inverse chart, irreducible localization divisor,
   special fibre, four-address normalization, and binary-cubic control.
-  Normal and optimized replay must byte-match the frozen transcript before
-  promotion.  A logically independent audit is still required.
+  Normal and optimized replays byte-match the frozen 20-gate transcript and
+  both recorded hashes.
 depends_on:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
   - THM-3853-quadratic-depth-inverse-discriminant-one-place-gluing-obstruction
@@ -36,9 +45,9 @@ hash_basis: raw LF bytes
 
 # THM-3865 -- the formal one-place lift has a global class-group obstruction
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**  Let `k` be an algebraically closed field of characteristic zero,
-let `lambda in k*`, and put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k` be an
+algebraically closed field of characteristic zero, let `lambda in k*`, and
+put
 
 ```text
 Delta_0=A(C+5A)(4C+19A)(3C-17A),
@@ -235,8 +244,7 @@ that unit lies in `k*`, and algebraic closedness makes it a cube.  Equation
 This proves the global cubic nonexistence and closes the polynomial
 algebraization question for the targets `Delta_0+lambda C^5` in this
 orientation.  It does not turn the local formal obstruction into a general
-theorem about all one-place discriminants.  **QED candidate, pending
-independent hostile audit.**
+theorem about all one-place discriminants.  **QED.**
 
 ## 5. Exact replay
 
