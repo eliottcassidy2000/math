@@ -2,19 +2,21 @@
 id: THM-3876
 title: "Monomial marked-root profiles descend exactly at reduced exponent at most two"
 status: >
-  PROVISIONAL STRENGTHENING CANDIDATE + VERIFIED-EXACT; awaiting independent
-  hostile audit of the full two-exponent statement.  For positive exponents
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For positive exponents
   m,n, reduce by g=gcd(m,n) to coprime M=m/g,N=n/g.  The cubic cusp identity
   forces B=2r^(2N)(3+4r^(M+N)) on the normalization.  This value descends to
   k[r^M,r^N+r^(M+2N)] if and only if M<=2.  For M>=3 an explicit
   primitive-root pair has the same (A,C) and different B.  The already
-  audited N=1 specialization remains PROVED at commit efe40b465f; only the
-  stated strengthening awaits audit.
+  audited N=1 specialization is the first boundary of the uniform theorem.
 source: jc_sparse_direct_search / post-THM-3873 monomial normalization tower, 2026-08-23
 audit: >
-  STRENGTHENING SELF-AUDITED; independent hostile audit pending.  The N=1
-  base theorem received an independent hostile audit from root before the
-  strengthening.  The expanded assertion-free companion checks the
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit first proved
+  the N=1 theorem and then rederived the gcd reduction, finiteness and exact
+  normalization, the forced global sign and profile, both constructive
+  M=1,2 descents, and the primitive-root collision for every coprime M,N
+  with M>=3.  It checked that eta=zeta^N retains exact order M and that the
+  branch-ring address condition is used only in the necessary direction.
+  The expanded assertion-free companion checks the
   universal cusp and forced-profile identities, both M=1,2 descent
   boundaries for N<=12, and 102 coprime primitive-root hostiles with
   3<=M<=16 and 1<=N<=12.  Normal and optimized runs byte-match the frozen
@@ -33,8 +35,7 @@ hash_basis: raw LF bytes
 
 # THM-3876 -- the complete two-exponent monomial descent boundary
 
-**PROVISIONAL STRENGTHENING CANDIDATE + VERIFIED-EXACT; awaiting independent
-hostile audit.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an algebraically closed field `k` of
 characteristic zero.  Put
 
 ```text
