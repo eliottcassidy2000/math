@@ -310,12 +310,14 @@ sum_i [k(D_i):k(Gamma)] <=2.                                     (31)
 ```
 
 If a component in `(31)` has residue degree one, its normalization is an
-open subset of the affine-line normalization `A1 -> Gamma`; it is the second
-normalization sheet exchanging the two local nodal branches at `e=+/-1`.
-It is the whole affine line precisely when no point of that completion curve
-is deleted.  Thus `(31)`, not an unsupported claim that every affine line on
-`Y` is a ruling fibre, is the exact affine-line classification available
-from the cubic normalization.
+open subset of the affine-line normalization `A1 -> Gamma`.  At each of its
+intersections with `L` over `e=+/-1`, it realizes the local nodal branch
+opposite to the one carried by `L`; the two node points may be handled by
+different components of `D`.  Such a component is the whole affine line
+precisely when no point of its completion curve is deleted.  Thus `(31)`,
+not an unsupported claim that every affine line on `Y` is a ruling fibre,
+is the exact affine-line classification available from the cubic
+normalization.
 
 This excludes the natural attempt to use the nodal arm image itself as the
 simple branch curve of a degree-three completion.  It does not exclude a
