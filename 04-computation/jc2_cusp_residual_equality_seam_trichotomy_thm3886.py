@@ -105,6 +105,81 @@ zero(
     "n=2 Kummer normal form",
 )
 
+# The Kummer symbol cannot lift through the next two homogeneous equations.
+# Comparing R=epsilon*x^3*U for general linear f_1 and quadratic T_2 first
+# gives exactly the parameterization below.  Add the constant/address pieces,
+# expand, and reduce coefficients modulo epsilon^2+216.
+A2, b2, m2, rho2 = sp.symbols("A2 b2 m2 rho2")
+B2, C2, D2, E2 = sp.symbols("B2 C2 D2 E2")
+R2_general = sp.Poly(
+    sp.expand(
+        K2 * (A2 * x + B2 * y)
+        + x * (C2 * x**2 + D2 * x * y + E2 * y**2)
+        - y**2 * x * U**2
+        - epsilon * x**3 * U
+    ),
+    x,
+    y,
+)
+zero(R2_general.coeff_monomial(y**3) - B2,
+     "n=2 Kummer parameterization y3 row")
+zero(R2_general.coeff_monomial(x**2 * y) - (D2 - 15 * B2),
+     "n=2 Kummer parameterization x2y row")
+zero(R2_general.coeff_monomial(x**3) - (C2 - 15 * A2 - epsilon * U),
+     "n=2 Kummer parameterization x3 row")
+zero(R2_general.coeff_monomial(x * y**2) - (A2 + E2 - U**2),
+     "n=2 Kummer parameterization xy2 row")
+zero(
+    R2_general.as_expr().subs(
+        {B2: 0, D2: 0, C2: 15 * A2 + epsilon * U, E2: U**2 - A2}
+    ),
+    "n=2 Kummer parameterization reconstruction",
+)
+F2_kummer = h**2 * U**2 * x**2 + h * A2 * x + b2
+T2_kummer = (
+    -h**3 * U**2 * x * K2
+    + h**2 * ((U**2 - A2) * y**2 + (15 * A2 + epsilon * U) * x**2)
+    + h * (m2 * x + rho2 * y)
+    + 4 * b2
+)
+poly2_kummer = scaled_residual(2, F2_kummer, T2_kummer)
+
+
+def reduce_kummer(expression: sp.Expr) -> sp.Expr:
+    """Reduce exactly modulo epsilon^2+216."""
+    return sp.Poly(expression, epsilon).rem(
+        sp.Poly(epsilon**2 + 216, epsilon)
+    ).as_expr().expand()
+
+
+S13_kummer = reduce_kummer(poly2_kummer.coeff_monomial(h**13))
+S12_kummer = sp.Poly(
+    reduce_kummer(poly2_kummer.coeff_monomial(h**12)), x, y
+)
+S11_kummer = sp.Poly(
+    reduce_kummer(poly2_kummer.coeff_monomial(h**11)), x, y
+)
+zero(S13_kummer, "n=2 Kummer leading collision vanishes")
+zero(
+    S12_kummer.coeff_monomial(x**8 * y**4) + 648 * U**6,
+    "n=2 Kummer degree-twelve minimum-x coefficient",
+)
+zero(
+    S11_kummer.coeff_monomial(x**3 * y**8) - 8 * U**6,
+    "n=2 Kummer degree-eleven minimum-x coefficient",
+)
+gate(
+    min(monomial[0] for monomial, coefficient in S12_kummer.terms()
+        if coefficient != 0) == 8,
+    "n=2 Kummer degree-twelve exact x valuation",
+)
+gate(
+    min(monomial[0] for monomial, coefficient in S11_kummer.terms()
+        if coefficient != 0) == 3,
+    "n=2 Kummer degree-eleven exact x valuation",
+)
+gate(2 * 4 > 3, "n=2 square-root cross-term x-valuation contradiction")
+
 
 # n=1 exact homogeneous square-root recursion.  Since k is algebraically
 # closed, write q=z^2 and choose mu=162*sqrt(2)*z^3, so mu^2=52488*q^3.
@@ -176,7 +251,7 @@ gate(sp.rem(sp.Poly(q1, x), sp.Poly(a0, x)).as_expr() != 0,
 semantic = {
     "seam": "f_n=xq;T_nplus1=-K2q",
     "stable": "n>=3 forces R=0 and a second negative-gauge jet",
-    "quadratic": "n=2 forces q=xu2 and R=epsilon*x3*u, epsilon2=-216",
+    "quadratic": "n=2 Kummer symbol dies since vx(S12)=8 but vx(S11)=3",
     "linear": "n=1 square recursion reaches forbidden constant pure gauge",
     "scope": "associated graded only; peeling is not square-invariant",
 }
@@ -190,7 +265,7 @@ gate(
 
 print("theorem=THM-3886-cusp-residual-equality-seam-second-layer-trichotomy")
 print("n_ge_3=second_full_gauge_jet")
-print("n_eq_2=Kummer_twist_q=x*u^2;R=epsilon*x^3*u;epsilon^2=-216")
+print("n_eq_2=no_square_survivor_via_consecutive_x_valuations_8_then_3")
 print("n_eq_1=no_square_survivor_via_constant_pure_gauge")
 print("gauge_peeling_square_invariance=NOT_CLAIMED")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
