@@ -1,0 +1,17 @@
+theorem=THM-3826-three-term-sextic-r-repairs-have-critical-points
+surface=r^2e-z^3+r;c=1;field=algebraically_closed_characteristic_zero
+carrier=A=e^2-z/3+r*g(e);degree_g=6;support_g_at_most_3
+residual=degree_32;LC=53144100*b6^5
+quotient=degree_6;denominator=15625*b6^5;primitive_numerator
+cover=b6:s^3;C_i:b_i*s^(3-i);T:s^7_nonzero
+top_rows=31,30,29,28;laurent_powers=26,25,24,23
+cells=22=1_monomial+6_binomial+15_trinomial;all_saturated_bases=[1]
+minimal_row_counts=-:3;0:4;1:2;2:1;3:4;4:1;5:2;01:2;02:1;03:4;04:1;05:3;12:1;13:4;14:3;15:3;23:2;24:3;25:3;34:3;35:4;45:3
+repeated_control=g=e^4*(e-1)^2;top_values=30286,-1200098,4224804,-1419167251
+four_term_boundary=support_0146_survives_top4;row27_remainder=-911250*C4
+open=sextic_support_ge_4;degree_ge_7;mixed_carriers;Darboux_pair
+invariant_packet_sha256=0ac578f5fe1a7d8a92c775c133d2baa9535d8751e593f854312e9c6da52615c0
+saturated_basis_sha256=91cf91df66b02caf131d7adfd9c8d47254ceea50930a87e541a4bb1470bda9eb
+semantic_sha256=6a8d50a5a0019c7ac29597f69d4939588cdf77c20a469153000937b7a7367e6e
+CHECKS=320
+RESULT=PASS
