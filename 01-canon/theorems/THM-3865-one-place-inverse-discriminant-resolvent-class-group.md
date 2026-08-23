@@ -1,13 +1,15 @@
 ---
 id: THM-3865
-title: "The one-place inverse discriminant has torsion-free quadratic-resolvent class group"
+title: "Every non-tangent fifth-degree inverse discriminant has torsion-free quadratic-resolvent class group"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
-  nonzero lambda, the normal affine surface
-  W^2=Delta_0+lambda C^5 has divisor class group Z.  Consequently it has no
-  three-torsion and supports no connected normal finite-flat cubic algebra
-  over k[A,C] with that discriminant.  This closes the exact global target
-  whose formal lift was constructed in THM-3855; it is not a general
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED for L=C.  THE
+  ALL-NON-TANGENT-LINE STRENGTHENING IS PROVISIONAL + VERIFIED-EXACT,
+  AWAITING INDEPENDENT HOSTILE AUDIT.  For every nonzero lambda and every
+  linear L not proportional to one of the four tangent factors of Delta_0,
+  the normal affine surface W^2=Delta_0+lambda L^5 has divisor class group
+  Z.  Consequently it has no three-torsion and supports no connected normal
+  finite-flat cubic algebra over k[A,C] with that discriminant.  This closes
+  both THM-3853 targets and their full non-tangent family; it is not a general
   inverse-discriminant or planar-Jacobian obstruction.
 source: root / inverse-discriminant global algebraization lane, 2026-08-23
 audit: >
@@ -26,8 +28,11 @@ audit: >
   codimension-one tame-inertia/Kummer descent.  The assertion-free companion
   freezes the chart and inverse chart, irreducible localization divisor,
   special fibre, four-address normalization, and binary-cubic control.
-  Normal and optimized replays byte-match the frozen 20-gate transcript and
-  both recorded hashes.
+  Normal and optimized replays byte-match the frozen 30-gate transcript and
+  both recorded hashes.  The coordinate-free strengthening repeats the same
+  proof in an arbitrary complementary pair (M,L), and the companion includes
+  L=A+C as an independent orientation.  That strengthening awaits
+  independent hostile audit.
 depends_on:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
   - THM-3853-quadratic-depth-inverse-discriminant-one-place-gluing-obstruction
@@ -37,17 +42,18 @@ related:
   - THM-3851-tricuspidal-quartic-rank-two-two-place-tradeoff
 script: 04-computation/jc2_one_place_inverse_discriminant_class_group_thm3865.py
 output: 05-knowledge/results/jc2_one_place_inverse_discriminant_class_group_thm3865.out
-script_sha256: c6bdd650f4f53683775151b833eb2b124edf26f9b62600a12a9ebbcc537c56ef
-output_sha256: caa3d5eed59db9a746bec619fddcdc81337e4d32328c2c2119001033864b91d2
-semantic_sha256: e5eada378322bce324045b8af7a5ea7880bb41fbc3981c2cb417ba837c24eef1
+script_sha256: ce1dbc2de8815f95e4f822824e91e9229f2161676b73e4fe4bfb627ab1e317d3
+output_sha256: e8262877989c12ee98298bf67270ef085e1cf802293734ca83b15f7522c53f58
+semantic_sha256: 7c662f08ea830a5690d2b47f1e8057279521611080700778941e27b07d6e5648
 hash_basis: raw LF bytes
 ---
 
-# THM-3865 -- the formal one-place lift has a global class-group obstruction
+# THM-3865 -- the formal one-place lifts have a global class-group obstruction
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k` be an
-algebraically closed field of characteristic zero, let `lambda in k*`, and
-put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED for `L=C`; the
+all-non-tangent-line strengthening is PROVISIONAL + VERIFIED-EXACT awaiting
+independent hostile audit.**  Let `k` be an algebraically closed field of
+characteristic zero, let `lambda in k*`, and put
 
 ```text
 Delta_0=A(C+5A)(4C+19A)(3C-17A),
@@ -56,17 +62,28 @@ R=k[A,C],
 S=R[W]/(W^2-delta).                                           (1)
 ```
 
-Then `S` is a normal domain and
+More generally, let `L` be any nonzero linear form not proportional to one
+of
 
 ```text
-Cl(S) isomorphic to Z.                                       (2)
+A,                 C+5A,                 4C+19A,
+3C-17A.                                                     (1a)
 ```
 
-The two height-one primes
+Put `delta_(L,lambda)=Delta_0+lambda L^5` and
+`S_(L,lambda)=R[W]/(W^2-delta_(L,lambda))`.  Then every
+`S_(L,lambda)` is a normal domain and
 
 ```text
-P_+=(C,W-mu A^2),                 P_-=(C,W+mu A^2),
-mu^2=-1615,                                                   (3)
+Cl(S_(L,lambda)) isomorphic to Z.                            (2)
+```
+
+Choose a complementary linear coordinate `M` and define `kappa in k*` by
+`Delta_0(M,0)=kappa M^4`.  The two height-one primes
+
+```text
+P_+=(L,W-mu M^2),                 P_-=(L,W+mu M^2),
+mu^2=kappa,                                                   (3)
 ```
 
 generate the class group, with the sole relation
@@ -75,12 +92,13 @@ generate the class group, with the sole relation
 [P_+]+[P_-]=0.                                                (4)
 ```
 
-In particular `Cl(S)[3]=0` and `S*=k*`.
+In particular `Cl(S_(L,lambda))[3]=0` and `S_(L,lambda)*=k*`.
 
 Consequently there is no connected normal finite-flat rank-three
-`R`-algebra whose discriminant ideal is `(delta)`.  Equivalently, no
-polynomial binary-cubic row with discriminant a scalar multiple of `delta`
-can have a normal domain as its Delone--Faddeev algebra.
+`R`-algebra whose discriminant ideal is `(delta_(L,lambda))`.  Equivalently,
+no polynomial binary-cubic row with discriminant a scalar multiple of any
+member of this family can have a normal domain as its Delone--Faddeev
+algebra.
 
 This consequence is deliberately exact-target.  THM-3855 constructs a
 connected normal nonmonogenic `S3` cubic algebra after completing at
@@ -88,7 +106,10 @@ connected normal nonmonogenic `S3` cubic algebra after completing at
 locally gauge-equivalent to the THM-3808 packet.  The present theorem proves
 that this local cubic cannot algebraize over the whole affine target with
 the same discriminant.  Other one-place curves, nonnormal cubic orders,
-different linear packets, and planar Keller maps remain open.
+different tangent cones, and planar Keller maps remain open.
+
+Sections 1--4 give every detail for `L=C,M=A`, where `kappa=-1615`.
+Section 5 records why the proof is unchanged for arbitrary non-tangent `L`.
 
 ## 1. The branch and the quadratic surface are normal
 
@@ -244,9 +265,68 @@ that unit lies in `k*`, and algebraic closedness makes it a cube.  Equation
 This proves the global cubic nonexistence and closes the polynomial
 algebraization question for the targets `Delta_0+lambda C^5` in this
 orientation.  It does not turn the local formal obstruction into a general
-theorem about all one-place discriminants.  **QED.**
+theorem about all one-place discriminants.  **QED for `L=C`.**
 
-## 5. Exact replay
+## 5. Every non-tangent direction has the same two-prime chart
+
+Now choose any `L` satisfying `(1a)` and any complementary linear coordinate
+`M`.  Homogeneity gives
+
+```text
+Delta_0(M,L)=L^4 D_L(M/L),
+D_L(t)=Delta_0(t,1) in the (M,L) coordinates.                 (21)
+```
+
+The four distinct tangent factors of `Delta_0` become four distinct roots
+of `D_L`.  The non-tangency assumption is exactly what makes all four roots
+finite, or equivalently
+
+```text
+deg D_L=4,                       lc(D_L)=kappa!=0.             (22)
+```
+
+Thus every branch argument in Section 1 repeats with
+
+```text
+L=-D_L(t)/lambda,                       M=tL.                  (23)
+```
+
+In particular the curve is irreducible, has four distinct addresses over
+the origin and one place at infinity, and its quadratic double surface is a
+normal domain.
+
+After inverting `L`, put
+
+```text
+t=M/L,                       y=W/L^2,
+F_L=y^2-D_L(t).                                                (24)
+```
+
+The inverse chart is
+
+```text
+L=F_L/lambda,             M=tF_L/lambda,
+W=yF_L^2/lambda^2,                                           (25)
+```
+
+so `S_(L,lambda)[L^(-1)]=k[t,y,F_L^(-1)]` is again factorial
+with units `k*F_L^Z`.  At `L=0`,
+
+```text
+delta_(L,lambda)(M,0)=kappa M^4,
+W^2-kappa M^4=(W-mu M^2)(W+mu M^2),       mu^2=kappa.         (26)
+```
+
+These are the only two height-one primes over `L`, both reduced and of
+multiplicity one.  Nagata's sequence is therefore again
+`Z^2/<(1,1)>`, and the unit group is again `k*`.  Section 4 uses only these
+two conclusions and the fact that the branch divisor is irreducible and
+generically reduced, so its tame-inertia/Kummer proof applies unchanged.
+This proves `(2)--(4)` and the cubic nonexistence for every non-tangent
+`L`, including both `L=C` and `L=A+C` from THM-3853.  **QED candidate for
+the all-line strengthening, pending independent hostile audit.**
+
+## 6. Exact replay
 
 ```bash
 python3 04-computation/jc2_one_place_inverse_discriminant_class_group_thm3865.py

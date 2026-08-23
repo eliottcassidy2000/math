@@ -13,7 +13,7 @@ import hashlib
 import sympy as sp
 
 
-A, C, W, t, y, lam = sp.symbols("A C W t y lambda")
+A, C, W, t, y, ell, lam = sp.symbols("A C W t y ell lambda")
 CHECKS = 0
 
 
@@ -95,24 +95,73 @@ zero(
 )
 nonzero("two_prime_separation_characteristic_zero", 2 * A**2)
 
+# Independent non-tangent orientation L=A+C, M=A.  This freezes the
+# coordinate-free repetition used in the all-line strengthening.
+D_sum = sp.factor(
+    Delta0.subs({A: t * ell, C: (1 - t) * ell}, simultaneous=True) / ell**4
+)
+equal(
+    "sum_orientation_D",
+    D_sum,
+    -t * (4 * t + 1) * (15 * t + 4) * (20 * t - 3),
+)
+equal("sum_orientation_D_degree", sp.degree(D_sum, t), 4)
+nonzero("sum_orientation_D_squarefree", sp.discriminant(D_sum, t))
+
+delta_sum = sp.expand(Delta0 + lam * (A + C) ** 5)
+Lpar_sum = -D_sum / lam
+Apar_sum = t * Lpar_sum
+Cpar_sum = (1 - t) * Lpar_sum
+zero(
+    "sum_orientation_parametrization",
+    delta_sum.subs({A: Apar_sum, C: Cpar_sum}, simultaneous=True),
+)
+equal("sum_orientation_L_degree", sp.degree(Lpar_sum, t), 4)
+equal("sum_orientation_M_degree", sp.degree(Apar_sum, t), 5)
+equal("sum_orientation_derivative_gcd", sp.gcd(D_sum, sp.diff(D_sum, t)), 1)
+
+F_sum = sp.expand(y**2 - D_sum)
+Lback_sum = F_sum / lam
+Aback_sum = t * Lback_sum
+Cback_sum = (1 - t) * Lback_sum
+Wback_sum = y * Lback_sum**2
+surface_sum = sp.expand(W**2 - delta_sum)
+zero(
+    "sum_orientation_factorial_chart",
+    surface_sum.subs(
+        {A: Aback_sum, C: Cback_sum, W: Wback_sum}, simultaneous=True
+    ),
+)
+zero("sum_orientation_special_fibre", delta_sum.subs(C, -A) + 1200 * A**4)
+special_surface_sum = sp.expand(surface_sum.subs(C, -A))
+zero(
+    "sum_orientation_two_primes",
+    sp.expand(
+        special_surface_sum - (W - mu * A**2) * (W + mu * A**2)
+    ).subs(mu**2, -1200),
+)
+
 semantic_packet = (
-    "delta=Delta0+lambda*C^5 with four-address A1 normalization",
-    "normal quadratic resolvent S=k[A,C,W]/(W^2-delta)",
-    "S_C=k[t,y,(y^2-D(t))^-1] is factorial",
-    "two reduced height-one primes over C with div(C)=P_plus+P_minus",
-    "Nagata sequence gives Cl(S)=Z and S*=k*",
-    "Cl(S)[3]=0 kills every normal S3 cubic with discriminant delta",
+    "delta_L=Delta0+lambda*L^5 for every non-tangent linear L",
+    "four-address A1 normalization in complementary coordinates (M,L)",
+    "normal quadratic resolvent S_L=k[A,C,W]/(W^2-delta_L)",
+    "(S_L)_L=k[t,y,(y^2-D_L(t))^-1] is factorial",
+    "two reduced height-one primes over L with div(L)=P_plus+P_minus",
+    "Nagata sequence gives Cl(S_L)=Z and S_L*=k*",
+    "Cl(S_L)[3]=0 kills every normal S3 cubic with discriminant delta_L",
+    "independent controls L=C and L=A+C",
     "formal THM3855 cubic therefore does not globally algebraize",
 )
 semantic_sha = hashlib.sha256(repr(semantic_packet).encode()).hexdigest()
 
-print("THM3865_TARGET", "Delta0+lambda*C^5")
-print("THM3865_NORMALIZATION", "C=-D(t)/lambda,A=t*C;four origins;one infinity")
-print("THM3865_UFD_CHART", "S_C=k[t,y,(y^2-D(t))^-1]")
-print("THM3865_SPECIAL_FIBRE", "(W-mu*A^2)(W+mu*A^2),mu^2=-1615")
-print("THM3865_NAGATA", "Cl(S)=Z^2/<(1,1)>=Z;units=k*")
+print("THM3865_TARGET", "Delta0+lambda*L^5;every non-tangent linear L")
+print("THM3865_CONTROLS", "L=C and L=A+C")
+print("THM3865_NORMALIZATION", "L=-D_L(t)/lambda,M=t*L;four origins;one infinity")
+print("THM3865_UFD_CHART", "(S_L)_L=k[t,y,(y^2-D_L(t))^-1]")
+print("THM3865_SPECIAL_FIBRE", "(W-mu*M^2)(W+mu*M^2),mu^2=kappa")
+print("THM3865_NAGATA", "Cl(S_L)=Z^2/<(1,1)>=Z;units=k*")
 print("THM3865_THREE_TORSION", "NONE")
 print("THM3865_GLOBAL_CUBIC", "normal finite-flat S3 algebra with this discriminant=NONE")
-print("THM3865_SCOPE", "exact target only; other one-place discriminants and JC2 remain open")
+print("THM3865_SCOPE", "non-tangent fifth-degree family; other one-place discriminants and JC2 open")
 print("SEMANTIC_SHA256", semantic_sha)
 print("CHECKS", CHECKS)

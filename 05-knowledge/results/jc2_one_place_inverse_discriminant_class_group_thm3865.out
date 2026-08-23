@@ -1,10 +1,11 @@
-THM3865_TARGET Delta0+lambda*C^5
-THM3865_NORMALIZATION C=-D(t)/lambda,A=t*C;four origins;one infinity
-THM3865_UFD_CHART S_C=k[t,y,(y^2-D(t))^-1]
-THM3865_SPECIAL_FIBRE (W-mu*A^2)(W+mu*A^2),mu^2=-1615
-THM3865_NAGATA Cl(S)=Z^2/<(1,1)>=Z;units=k*
+THM3865_TARGET Delta0+lambda*L^5;every non-tangent linear L
+THM3865_CONTROLS L=C and L=A+C
+THM3865_NORMALIZATION L=-D_L(t)/lambda,M=t*L;four origins;one infinity
+THM3865_UFD_CHART (S_L)_L=k[t,y,(y^2-D_L(t))^-1]
+THM3865_SPECIAL_FIBRE (W-mu*M^2)(W+mu*M^2),mu^2=kappa
+THM3865_NAGATA Cl(S_L)=Z^2/<(1,1)>=Z;units=k*
 THM3865_THREE_TORSION NONE
 THM3865_GLOBAL_CUBIC normal finite-flat S3 algebra with this discriminant=NONE
-THM3865_SCOPE exact target only; other one-place discriminants and JC2 remain open
-SEMANTIC_SHA256 e5eada378322bce324045b8af7a5ea7880bb41fbc3981c2cb417ba837c24eef1
-CHECKS 20
+THM3865_SCOPE non-tangent fifth-degree family; other one-place discriminants and JC2 open
+SEMANTIC_SHA256 7c662f08ea830a5690d2b47f1e8057279521611080700778941e27b07d6e5648
+CHECKS 30
