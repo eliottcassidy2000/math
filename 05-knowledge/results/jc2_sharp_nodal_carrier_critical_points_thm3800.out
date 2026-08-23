@@ -1,0 +1,13 @@
+theorem=THM-3800-sharp-torus-escaping-nodal-carrier-has-fourteen-critical-points
+surface=r^2e-z^3+c^3r;field=algebraically_closed_characteristic_zero;c!=0
+carrier=A=e^2-z/(3c^3)+(4/c^6)z^3e^3
+failed_assumption=torus_escape_does_not_imply_smooth_carrier
+K0_control=A|K=-z/(3c^3);Hamiltonian_r=r^2/c^3
+critical_law=1296c^3e^7=1;z=-6c^3e^2;r=c^3(-1+/-1/sqrt(3))/(2e)
+critical_count=14;scheme=reduced
+K_values=+/-c^3/sqrt(3)
+c1_groebner=r^2+1296e^6r+216e^5;z+6e^2;e^7-1/1296
+consequence=no_regular_Darboux_mate;reserved_four_weight_support_lane_superseded
+semantic_sha256=b9b81fd0e16042bf6bab0b44fa00ca91d5591032af857bffe97385a8360ea679
+CHECKS=36
+RESULT=PASS
