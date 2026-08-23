@@ -1,5 +1,45 @@
 # Script Results Index
 
+- `jc2_universal_euler_mod7_residual_quadratic_thm3820.py` -> matching `.out`
+  [THM-3820 PROVED + VERIFIED-EXACT + TWICE INDEPENDENTLY HOSTILE-AUDITED].
+  The coefficient-free pure-`r` critical resultant has only Euler layers
+  `3,10,17`; after `G=e^3Y,D=e^2(Y+Z),t=e^7` it is quadratic in `t` with
+  `Disc_t(F)=3^12 R W^2`, where `R` is the source-quadratic discriminant.
+  On the degree-preserving nonzero locus, an explicit unit multiple of `W` is
+  the sheet-collision slope, so the discriminants have the same square class.
+  Globally only the polynomial identity persists: `W=0` and the constant
+  source polynomial at `(Y,Z)=(-8,4)` make that restriction sharp.  This is
+  structural, not a pure-degree-six closure.  `CHECKS=35`.
+  Script/output/semantic SHA-256:
+  `0db08ef96e17c8e861b01b460d73054c121a7229dd23f75c8c81a64351eb0861` /
+  `5a84b2bbe0c9e5c973c3b0105ba4acac2ee916bafdc97e0bf675c4e726aa2942` /
+  `69696307c3a9767468ba2e738b92b423e9ac23af514d28433b3da79f1cc38d00`.
+
+- `jc2_nonlinear_cubic_atlas_sl2_gate_thm3822.py` -> matching `.out`
+  [THM-3822 PROVED + VERIFIED-EXACT + TWICE INDEPENDENTLY HOSTILE-AUDITED].
+  Every dominant etale plane atlas of THM-3811's nonlinear cubic surface
+  yields a polynomial `SL_2` row, two cubic lift laws, and a genus-three
+  square-discriminant sidecar.  Since its intrinsic `h=0` arm is `G_m`, `h`
+  cannot be a coordinate and no atlas with `h=xy-1` exists; standard
+  elementary/hyperbolic rows and the first Cohn row close.  Nonstandard
+  multi-ended arms and the full atlas problem remain open.  `CHECKS=37`.
+  Script/output/semantic SHA-256:
+  `92604dd1388491e656644c4a072c1259c9c9677588b224522cad7d9f11d60b2a` /
+  `5db8d4ae4b8a6d2251f248aa341cc7d1e7cbbd5b2515d0bb70bbe0697a163f34` /
+  `a83ceddd81bf567a58c457b82978bec96f49297823c4b2374083fd96f3efc6f7`.
+
+- `jc2_cubic_pseudoplane_quintic_r_repair_thm3817.py` -> matching `.out`
+  [THM-3817 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Every
+  pure-`r` nodal carrier through degree five has a critical point.  In the
+  genuine quintic row a finite weight cover reduces the logarithmic remainder
+  to a triangular one-parameter resonance; its two final branches die by a
+  direct exit and an exact resultant-coprimality certificate.  Pure degree at
+  least six and mixed corrections remain open.  `CHECKS=1448`.
+  Script/output/semantic SHA-256:
+  `9df9627bfd2ae8be0ffdad2d8ff8f917fb2f35fda95fa4dbbfe5fb313f647110` /
+  `fd988b916a79e682a3c31d2c007d5821bb742fc30320019a1b14382504300c80` /
+  `2fa1efbadbfeff8ff24257948412e1db1f461851c15434949cae63fbd5c76f69`.
+
 - `lrc14_scaled_inert_cubeclass_pair_packet_thm3818.py` -> matching `.out`
   [THM-3818 PROVED ALGEBRA + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  The 5,855 inert primitive support-two sums under the

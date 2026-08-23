@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-450 (2026-08-23, THM-3820 promoted-scope audit) -- a discriminant square factor was overread on its zero and degree-drop seams
+
+- **What failed:** the promoted prose called `W` exactly the sheet-collision
+  slope and said the source and residual discriminants always have the same
+  nonsquare part.
+- **Minimal witness / first failed implication:** equation (12) makes the
+  slope an explicit invertible multiple of `W` only on the generic open set.
+  At the recorded `W=0,R!=0` hostile the residual discriminant is zero, so it
+  has no nonzero square class; on `Y+2Z=0`, the source equation can even become
+  constant at `(-8,4)`.  Thus `Disc_t(F)=3^12 R W^2` does not license an
+  all-fibre square-class or normalized-slope claim.
+- **Repair / survivor:** `W` defines the generic collision divisor, and the
+  two nonzero discriminants have the same square class only on the
+  degree-preserving `R W!=0` locus.  The global polynomial identity, all three
+  Euler layers, and the structural degree-six boundary remain proved.
+- **Reusable rule:** before interpreting a discriminant factorization, split
+  nonzero square-class, repeated-root, and degree-drop loci; a factor defines a
+  divisor without being a canonically normalized local coordinate.
+
 ## MISTAKE-449 (2026-08-23, live reservation race) -- a conflict-free rebase was mistaken for a still-valid namespace check
 
 - **What failed:** a completed search found `THM-3803` free and a Rule 30
@@ -32,6 +51,10 @@ Format per entry:
   scarcity check.  After fetching and rebasing a reservation, stop and rerun
   filename, YAML-ID, history, duplicate-count, and documentation gates before
   pushing.  Never chain reservation rebase and push in one unchecked command.
+- **Repeated incident / repair:** commits `ea3d43e45c` and `ee95ed1159`
+  concurrently reserved different files as `THM-3823`; the latter
+  prime-colour empty stub was moved to free `THM-3825` in `37bc86bdcb`.
+  No proved claim depended on either stub, and both reserved lanes survive.
 
 ## MISTAKE-448 (2026-08-23, THM-3798 candidate audit) -- canceling by a proposed divisor and multiplying back is a vacuous divisibility gate
 

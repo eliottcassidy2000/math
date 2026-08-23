@@ -7,9 +7,10 @@ status: >
   pure-r nodal carrier has only three Euler layers.  After
   G=e^3Y, D=e^2(Y+Z), and t=e^7, its residual is an explicit quadratic F(t).
   The discriminant of F is 3^12 times the discriminant of the normalized
-  source quadratic P times one exact square W^2.  Generically W is precisely
-  the collision slope of the rational map from the two source-u sheets to
-  their residual t-values.  This is a structural lemma only: it does not
+  source quadratic P times one exact square W^2.  Generically the displayed
+  invertible multiple of W is the collision slope of the rational map from
+  the two source-u sheets to their residual t-values, so W defines its
+  collision divisor.  This is a structural lemma only: it does not
   close degree-at-least-six carriers or any Jacobian-conjecture case.
 source: jc_sparse_direct_search / universal residual discriminant lane, 2026-08-23
 audit: >
@@ -19,10 +20,16 @@ audit: >
   and checked that G,D are genuinely coefficient-free variables before the
   profile specialization.  It then audited both Sylvester paths, the
   Euler/mod-seven substitution without division at e=0, the two source and
-  residual discriminants, and the quadratic-algebra proof that W is exactly
-  the sheet-collision slope.  The Y=0, Z=2, Y+2Z=0, R=0, and W=0 seams and
+  residual discriminants, and the quadratic-algebra proof that the displayed
+  unit multiple of W is the sheet-collision slope.  The Y=0, Z=2,
+  Y+2Z=0, R=0, and W=0 seams and
   the splitting-field quantifiers were checked separately.  Raw hashes
   match, and normal and optimized executions byte-match the frozen output.
+  A second independent post-promotion audit recomputed the 6-by-6 Sylvester
+  determinant and quotient slope, then repaired two geometric glosses: W
+  defines the generic collision divisor only up to the displayed unit, and
+  square-class language applies only on the nonzero degree-preserving locus.
+  It also exposed the constant source polynomial at (Y,Z)=(-8,4).
   The deterministic companion recomputes the
   universal Sylvester resultant, all twenty terms of H, the three
   mod-seven Euler layers, the normalized quadratic, both discriminants, the
@@ -126,9 +133,10 @@ coefficient of `phi` is
 [u] phi = (Y+2Z)W/(2916Y^3(Z-2)^2).                  (12)
 ```
 
-Thus `R=0` merges the two source sheets, whereas, away from the degree-drop
-divisors, `W=0` can keep the source sheets distinct while identifying their
-two `t`-values.
+Away from the degree-drop divisors, `R=0` merges the two source sheets, whereas
+`W=0` can keep the source sheets distinct while identifying their two
+`t`-values.  Formula `(12)` makes the collision slope an invertible multiple
+of `W` on the generic open set, rather than literally `W` in this chart.
 
 ## 1. Origin of the two source equations
 
@@ -280,8 +288,10 @@ The generic interpretation has four sharp boundary mechanisms.
    F(t,Y,2)=-(Y+4)+2916t(Y+2)^2.                      (27)
    ```
 
-3. `Y+2Z=0`.  The source equation `p` drops from quadratic to linear.  The
-   splitting-field statement therefore deliberately excludes this divisor.
+3. `Y+2Z=0`.  The source equation `p` drops from quadratic to degree at most
+   one; at `(Y,Z)=(-8,4)` it is the constant `-2` (with `R=0,W=-64`).  The
+   splitting-field and source-sheet statements therefore deliberately exclude
+   this divisor.
 
 4. `R=0` versus `W=0`.  For example,
 
@@ -304,11 +314,13 @@ G=g(e),              D=g'(e),
 Y=g(e)/e^3,          Z=(e g'(e)-g(e))/e^3.            (29)
 ```
 
-The theorem exposes a rigid double-cover skeleton behind every such profile:
-the source discriminant `R` and the residual discriminant have the same
-nonsquare part, while `W` measures loss under the compatibility map.  This is
-the likely reason the quartic and quintic logarithmic-remainder systems admit
-strong mod-seven normalizations.
+The theorem exposes a rigid double-cover skeleton behind every such profile.
+On the degree-preserving open set `(10)`, the two nonzero discriminants have
+the same square class, while `W` defines the compatibility-map collision
+divisor.  On `R W=0` or a degree-drop divisor, square-class language is not
+available; only the polynomial identity `(7)` persists.  This is the likely
+reason the quartic and quintic logarithmic-remainder systems admit strong
+mod-seven normalizations.
 
 It does **not** prove that a specialization of `H` has a root away from
 `e g(e)=0`.  In `(29)`, `Y,Z,t` are linked rational functions of the same

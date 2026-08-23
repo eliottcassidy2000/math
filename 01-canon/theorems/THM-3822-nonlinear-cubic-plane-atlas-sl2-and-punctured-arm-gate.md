@@ -24,7 +24,12 @@ audit: >
   component.  It then rederived the squarefree genus-three fibre,
   properness/Riemann--Hurwitz obstruction, the Laurent proof of
   K[x,y] intersect K(xy)=K[xy], and every edge of the Pell R=0 reduced-ratio
-  argument.  No proof or scope repair was found.  The 37-gate exact
+  argument.  No proof or scope repair was found.  A second independent
+  post-promotion audit reproduced the D-quadratic by a distinct elimination,
+  checked the UFD square step and parasitic-component scope, constructed the
+  two inverse maps B/(h)<->K[k_0,k_0^-1], and rederived the genus-three,
+  Laurent-intersection, hyperbolic, first-Cohn, and R=0 arguments.  It found no
+  repair.  The 37-gate exact
   companion verifies the
   cubic-order reductions, SL2 determinant, two intrinsic lift laws,
   reconstruction of all three cubic relations and the different, the

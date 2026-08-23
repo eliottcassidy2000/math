@@ -355,9 +355,9 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
   `U=Spec S[A/D,omega/D]` with `U*=k*` and `Pic(U)=Z^2`; THM-3816 gives an
   independent positive-filtration proof of `S*=k*`.  The Picard group rules
   out both `U=A2` and the THM-3785 pseudo-plane. THM-3817 proves pure `r<=5`;
-  THM-3814 closes the exact all-degree `rz` profile. OPEN: construct or obstruct
-  a dominant polynomial etale atlas `A2 -> U` (THM-3822 RESERVED), pure `r>=6`
-  (THM-3820 RESERVED), mixed `>=3`/nonconstant `h`, `rz^2`/higher slots
+  THM-3814 closes the exact all-degree `rz` profile. OPEN: atlases beyond
+  THM-3822's proved standard-arm no-gos; pure `r>=6` (THM-3820 is structural
+  only), mixed `>=3`/nonconstant `h`, `rz^2`/higher slots
   (THM-3821 RESERVED), poles, unrestricted pairs and `JC/DC(2)`.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
@@ -373,7 +373,7 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
   Surface chain: PROVED pure `r<=5`, constant-`z^2` mixed `deg(g)<=2`,
   arbitrary-arm pair no-go, and all-degree exact `rz`-profile no-go. OPEN pure
   `r>=6`, mixed `>=3`/nonconstant `h`, `rz^2`/higher slots, arbitrary mates and
-  off-nodal branches; THM-3820/3821 reserve the next two gates.
+  off-nodal branches; THM-3820 is structural and THM-3821 remains reserved.
 - **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
   all `2665` residuals in `7395` rows (`2384` divisor, `281` rho).
   `d=6518` needs `p=29`, refuting `p<=23`. FINITE-EXACT at `d=10001`:

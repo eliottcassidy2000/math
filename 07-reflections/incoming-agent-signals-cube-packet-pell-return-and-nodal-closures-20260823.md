@@ -9,7 +9,7 @@ This session treated concurrent work as mathematical signal: first determine
 what new operation or missing coordinate it exposes, then extend that object or
 audit its boundary instead of reproducing its headline.  Four signals survived:
 
-1. incoming [THM-3814](../01-canon/theorems/THM-3814-nodal-rz-profile-repairs-cannot-be-darboux-pairs.md)
+1. incoming [THM-3814](../01-canon/theorems/THM-3814-nodal-rz-kummer-profile-degree-gate.md)
    closes the full canonical `r/z^2/rz` arm-profile repair by a Kummer valuation
    gap;
 2. incoming [THM-3815](../01-canon/theorems/THM-3815-quadratic-r-profile-constant-z2-nodal-carriers-have-critical-points.md)
@@ -22,6 +22,17 @@ audit its boundary instead of reproducing its headline.  Four signals survived:
    pulls the square-triangular Pell selector through the next native operations:
    Berggren branching, standardized conductor growth, the exact Pell-prefix
    loneliness observer, and the inert cube atlas.
+
+A later pull added three more JC signals.  Audited
+[THM-3817](../01-canon/theorems/THM-3817-quintic-r-repairs-of-nodal-carriers-have-critical-points.md)
+closes pure-`r` profiles through degree five;
+[THM-3820](../01-canon/theorems/THM-3820-universal-euler-mod-seven-residual-quadratic-discriminant.md)
+identifies the coefficient-free mod-seven residual double cover; and
+[THM-3822](../01-canon/theorems/THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate.md)
+turns the nonlinear cubic atlas problem into a constrained polynomial `SL_2`
+completion with a punctured-arm obstruction.  The `rz^2` odd ladder in
+[THM-3821](../01-canon/theorems/THM-3821-cubic-pseudoplane-rz2-odd-ladder-terminal-riccati-gate.md)
+remains a provisional candidate pending the audit recorded below.
 
 The two conjectures remain open.  The gain is an exact operation ledger and one
 especially dense merged row, not a proof by analogy.
@@ -103,6 +114,23 @@ exponents modulo three and removal of the largest integral cube divisor.  An
 independent hostile audit instead generated the admissible sums
 multiplicatively and tested all `17,137,585` unordered pairs after gcd
 reduction.  It found no collision.
+
+The rebase itself supplied a second independently written companion under the
+same reserved filename.  Its distinct proof path was preserved rather than
+overwritten as
+[`lrc14_scaled_inert_cubeclass_pair_packet_independent_audit_thm3818.py`](../04-computation/lrc14_scaled_inert_cubeclass_pair_packet_independent_audit_thm3818.py).
+It checks `456,690` labelled placements, an unrestricted sum-divisor decoder
+on 32 all-inert physical scales, and the complete grid mask in `2,764,096`
+active gates.  This yields the sharper scope split:
+
+- arbitrary positive scale gives injectivity **inside** the finite cube-class
+  atlas; and
+- if every prime of the physical pair sum `g(p+q)` is `2 mod 3`, THM-3793
+  gives uniqueness among all positive distinct two-cube representations.
+
+The equalities `1729=1^3+12^3=9^3+10^3` and
+`515375=15^3+80^3=54^3+71^3` expose the split-prime and primitive
+exponent-three boundaries.
 
 Consequently
 
@@ -277,6 +305,58 @@ Pell evaluation cannot help with the missing polynomial geometry: replacing
 polynomial Pell identity.  This hostile is exactly why THM-3819 calls only the
 post-evaluation integer coordinate change lossless.
 
+### 6.1 The second incoming wave
+
+THM-3817 removes one apparent next move: a pure-`r` profile of degree five is
+also critical.  The first unclosed pure-`r` degree is now six, and
+THM-3820 explains why its universal resultant has a much smaller arithmetic
+shadow than its expanded coefficients suggest.  After
+
+```text
+G=e^3Y,             D=e^2(Y+Z),             t=e^7,
+```
+
+the residual has only three Euler layers and is a quadratic `F(t)`.  Its exact
+discriminant is
+
+```text
+Disc_t(F)=3^12 R W^2,
+```
+
+where `R` is the discriminant of the normalized source quadratic in `u` and
+an explicit invertible multiple of `W` is the slope lost when the two source
+sheets are sent to compatibility values; `W` defines the collision divisor.
+This is a useful cross-thread pattern with THM-3818: a quotient can
+decode only after the off-diagonal fibre seam is audited.  Cube classes need
+finite atlas separation; residual values need both `R!=0` and `W!=0`.
+
+THM-3822 moves the nonlinear cubic `U` lane from abstract class-group debt to
+an explicit source-plane packet.  Any dominant etale atlas supplies
+
+```text
+[k_0 h; m C] in SL_2(K[x,y])
+```
+
+together with two cubic lift laws and a genus-three square-discriminant
+condition.  The intrinsic divisor `h=0` is `G_m`; etale pullback therefore
+leaves a nonconstant unit on every plane-arm component.  This kills `h` as a
+coordinate, every `h=xy-1` standard big cell, the hyperbolic-unit first row,
+and the first Cohn row.  Nonstandard multi-ended arms remain open.
+
+THM-3821 tests the first `rz^2` extension of THM-3814.  Its provisional
+normal-form descent forces a common Kummer parameter and either a generic
+`7,5,3,1` ladder ending in a Riccati square payment or a degenerate `7,3,1`
+ladder ending in a linear payment.  Incoming follow-up has already removed
+constant and linear Kummer parameters, so the candidate now requires degree at
+least two.  Until the independent hostile audit finishes, this is a routed
+necessary anatomy, not a proved dependency and not a complete no-go.
+
+The live JC lanes are consequently more precise: pure `r` degree at least six,
+the degree-at-least-two terminal laws in the provisional `rz^2` ladder,
+nonconstant `z^2` profiles outside the closed canonical packets, and
+nonstandard multi-ended `SL_2` arms.  Another quadratic or quintic elimination
+would duplicate closed terrain.
+
 ## 7. Khinchin content after the extension
 
 The earlier synthesis separated Khinchin's metric continued-fraction theorem,
@@ -308,6 +388,8 @@ pair; only the ambient residue sidecar tests a target LRC phase.
 | marked Pell channel | LRC scalar maximum | exact Möbius half-step | speeds, residues, carries, owner | full prefix/carry packet plus channel bit |
 | inert merged row `(5,29)` | pair-sum lattice | 29-class safe set | off-lattice witness and global arrival | cover by eleven labelled danger sets |
 | nodal coefficient ansatz | root valuations/resultants | nonexistence in stated profile | larger coefficient support | change coefficient type before enlarging elimination |
+| source quadratic sheets | mod-seven residual values | discriminant factor `R W^2` | source label on `W=0` | retain collision slope `W`; audit degree-drop divisors |
+| nonlinear cubic atlas | intrinsic polynomial `SL_2` row | determinant and cubic lift laws | coverage/properness at punctured arms | genus-three square sidecar plus every arm component |
 
 ## 9. Hostiles that set the exact boundary
 
@@ -349,8 +431,9 @@ The cheapest high-value next tests are:
 - if that cover succeeds, search continuously between adjacent `1/34` phases
   before claiming a bad row;
 - on the JC side, move directly to a nonconstant `z^2` profile or a cubic mixed
-  `r` profile and retain the full polynomial tower—evaluation at `z=2` is only
-  a hostile control;
+  profile, the degree-six pure-`r` residual, or THM-3821's degree-at-least-two
+  terminal laws, and retain the full polynomial tower—evaluation at `z=2` is
+  only a hostile control;
 - test whether the variable return cocycle acts on any owner-labelled Pell
   prefix packet beyond the scalar maximum; equality of maxima is not enough;
 - look for other finite atlases where a power-class quotient and a native
