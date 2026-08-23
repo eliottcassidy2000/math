@@ -1,0 +1,12 @@
+theorem=THM-3840-forced-cubic-two-arm-jelonek-passport
+forced=origin_and_at_least_one_of_three_cubic_branch_values
+T_a=(-2/(a*(7a^2+3)),-1/a^2);r(a)=0
+branch=Delta(T_a)=0;Delta_C(T_a)!=0;q_normalization=1/a
+triple=excluded;resultant=5245
+companion=root_ratio_beta=2a/(7a^2-1)
+distinct=three_T_a_pairwise_distinct_and_all_nonzero
+mechanism=nonconstant_unit_k_has_boundary_pole_on_each_forced_arm
+scope=two_points_forced_not_all_three_T_a;atlas_still_OPEN
+semantic_sha256=fb59cb14b46a4edafbe622a82ab9c7d42b5af615d160a4b249ddbbd28f5017b9
+CHECKS=22
+RESULT=PASS
