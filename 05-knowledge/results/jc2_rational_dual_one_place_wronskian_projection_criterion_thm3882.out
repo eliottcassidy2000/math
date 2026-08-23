@@ -1,0 +1,10 @@
+THM3882_WRONSKIAN W(gx,gy)=g^2W(x,y)
+THM3882_DIVISOR dual-line pullback=2*point-projection base fibre+ramification
+THM3882_ONE_PLACE iff projection degree 1 and base fibre=(d-1)p
+THM3882_IMMERSED primal degree d>=3 forbids a one-place line on its dual
+THM3882_PACKET degree6 with 6A2+4A1 has genus0,dual degree4,inflection weight0
+THM3882_PACKET_NOGO every 6A2+4A1 sextic line leaves at least two normalization places
+THM3882_THM3879 C=0 is 2D+R=(3,3) over the two branches of primal node [0:0:1]
+THM3882_OPEN nonimmersed primal,changed packet,or nondual one-place construction
+SEMANTIC_SHA256 6452278a5afd71f244134a6871e247195c6af4f80f641c1b05c7f6b6dd6b8fc2
+CHECKS 1653
