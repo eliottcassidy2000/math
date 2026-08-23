@@ -1,0 +1,21 @@
+THM-3694 exact companion -- one-pure-x-Q normalized 2x3 closure
+systems=52922
+linear_exits=[('P1_low', 226), ('P2_low', 226), ('Q1_low', 108), ('Q2_low', 108), ('equal_P', 7782), ('equal_Q', 1813), ('inconsistent', 42447)]
+linear_exit_total=52710
+residual=212
+saturation_attempts=848
+saturation_skips=0
+unit_ideals=800
+unique_groebner_systems=448
+groebner_cache_hits=400
+nonunit=48
+nonunit_profiles=[((1, 2, (1, 1)), 32), ((3, 3, (18, 1, 1)), 16)]
+nonunit_dimensions=[('positive_dimensional', 16), ('zero_dimensional', 32)]
+unique_nonunit_basis_shapes=28
+forced_exponent_obstruction=4*q3x**2 - 8*q3x + 3
+forced_exponent_roots=1/2,3/2
+bounded_degree6=monomials:25,universe:180500,survivors:0
+controls=near_survivor_terminal:PASS,one_by_three_tame:PASS
+semantic_sha256=1148a4e75ef85db80d89cdcdf552d97f0321b9a330a30f08a3dc97015aca8adf
+CHECKS=67
+RESULT=PASS
