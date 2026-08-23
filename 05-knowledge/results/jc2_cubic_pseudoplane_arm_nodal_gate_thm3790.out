@@ -1,0 +1,8 @@
+THM3790_ARM_QUOTIENT B/I^2=C[e,z]/(z^2); r=0 because c^3*r=z^3-r^2*e
+THM3790_BEZOUT 1
+THM3790_NODAL gcd(2*t,3*t^2-1)=1; gamma(1)=gamma(-1)=(1,0)
+THM3790_LIFTED_BRACKET (c**3 + 2*e*r)*(2*c**3 + z)/(2*c**6)
+THM3790_CRITICAL_POLY 8*zeta^7+9*c^15; squarefree=YES; count=7
+THM3790_CRITICAL_POINT r=2*zeta^3/c^3; e=-c^6/(4*zeta^3)
+THM3790_CRITICAL_REMAINDERS surface=0 K=0 Dr=0 Dz=0 De=0
+THM3790_CHECKS OK

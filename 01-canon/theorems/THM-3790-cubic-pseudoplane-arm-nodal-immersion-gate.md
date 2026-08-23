@@ -2,22 +2,205 @@
 id: THM-3790
 title: "Cubic pseudo-plane arm nodal-immersion gate"
 status: >
-  RESERVED / UNPROVED EMPTY STUB.  Namespace reserved for the proposed
-  theorem that every Darboux morphism on the THM-3785 surface restricts on
-  its triple arm to a noninjective polynomial immersion, together with the
-  exact first-order Bezout law and minimal nodal boundary profile.  No claim
-  may be used before proof and independent hostile audit.
+  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  Every
+  Darboux morphism on the THM-3785 surface restricts on its triple arm to
+  a noninjective polynomial immersion.  Its first normal jets satisfy an
+  exact Bezout determinant law.  Consequently neither boundary coordinate
+  is constant or linear, the two degrees cannot both be quadratic, and the
+  first possible bidegree is (2,3).  The nodal cubic profile realizes that
+  boundary gate, but its canonical first-order lift has seven critical
+  points and is not a Darboux pair.  Arbitrary Darboux pairs remain open.
 source: root / multiple-fibre arm and injective-line lane, 2026-08-23
+audit: >
+  SELF-AUDITED PROOF CANDIDATE.  The conormal quotient and bracket law are
+  exact.  The noninjectivity step uses Gwozdziewicz's cited injective-line
+  theorem.  The deterministic companion checks the quotient-level Bezout
+  identity, nodal collision and immersion, full lifted bracket, surface
+  critical equations, and all seven critical points symbolically over
+  Q(c).  Normal and optimized runs byte-match the frozen transcript.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
 related:
   - THM-3788-dubouloz-palka-standard-chart-containment-obstruction
+script: 04-computation/jc2_cubic_pseudoplane_arm_nodal_gate_thm3790.py
+output: 05-knowledge/results/jc2_cubic_pseudoplane_arm_nodal_gate_thm3790.out
+script_sha256: b750cc8de53138236ca96a1a9eb908134db14f103f1b69263181ab6111a29dd6
+output_sha256: 167fc18402653016dc59bc4c859258ee17b6642c6dab87833f2688bb0db6f4a3
+hash_basis: raw LF bytes
 ---
 
-# THM-3790 -- reserved arm nodal-immersion namespace
+# THM-3790 -- every live arm map is a nodal-type immersion
 
-**RESERVED / UNPROVED EMPTY STUB.**
+**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  Work over
+`C`, fix `c!=0`, and retain the THM-3785 smooth symplectic surface
 
-This ID is reserved for the exact arm-jet obstruction and its minimal
-nodal hostile control.  It has no mathematical force until the proof and
-independent hostile audit are complete.
+```text
+Y=Spec B,                  B=C[r,z,e]/(r^2e-z^3+c^3r),                (1)
+```
+
+with
+
+```text
+{r,z}=3r^2,       {r,e}=9z^2,       {z,e}=3c^3+6re.                  (2)
+```
+
+Its triple arm is
+
+```text
+L=V(r,z)=Spec C[e].                                                   (3)
+```
+
+Suppose `A,C in B` satisfy `{A,C}=1`.  Write their restrictions as
+
+```text
+gamma(e)=(a_0(e),b_0(e))=(A|L,C|L): A1 -> A2.                        (4)
+```
+
+Then `gamma` is an immersion but is not injective.  In particular it must
+parametrize a singular rational plane curve by identifying at least two
+distinct arm points; a cusp is forbidden because the derivative never
+vanishes.
+
+## 1. The exact first-normal-jet law
+
+Let `I=(r,z)` be the ideal of `L`.  The surface relation gives
+
+```text
+c^3r=z^3-r^2e in I^2,                                                   (5)
+```
+
+so
+
+```text
+B/I^2 = C[e,z]/(z^2).                                                    (6)
+```
+
+There are unique polynomials `a_1,b_1` with
+
+```text
+A=a_0(e)+z a_1(e) mod I^2,
+C=b_0(e)+z b_1(e) mod I^2.                                              (7)
+```
+
+Modulo `I`, only `{z,e}=3c^3` survives from `(2)`.  Taking the bracket of
+`(7)` and using `{A,C}=1` gives the polynomial identity
+
+```text
+3c^3[a_1 b_0'-a_0' b_1]=1.                                             (8)
+```
+
+Thus `a_0'` and `b_0'` cannot vanish at the same point.  This proves that
+`gamma` is a polynomial immersion and records the exact normal sidecar that
+an arm parametrization must carry.  Merely guessing a singular rational
+curve is insufficient; its tangent row must admit the unimodular completion
+`(8)`.
+
+## 2. Injective arm images would prove too much
+
+Let
+
+```text
+phi:A2_(x,y) -> Y
+```
+
+be the cubic affine-plane atlas of THM-3785.  On the source line `x=0`,
+
+```text
+phi(0,y)=(0,0,3c^2y),                                                    (9)
+```
+
+so `phi` restricts to an isomorphism from that line onto `L`.  The pullback
+
+```text
+(A o phi,C o phi):A2 -> A2                                               (10)
+```
+
+is a polynomial Keller map.  If `gamma` were injective, `(10)` would be
+injective on the line `x=0`.  Gwozdziewicz's injective-line theorem then
+forces `(10)` to be a polynomial automorphism.  This is impossible: its
+function-field degree is the cubic atlas degree times the positive degree of
+`Y -> A2_(A,C)`, hence is divisible by three.  Therefore
+
+```text
+gamma is noninjective.                                                    (11)
+```
+
+This argument uses the actual consequence of line injectivity, not a
+heuristic about the nonproperness curve.
+
+## 3. The first possible boundary bidegree
+
+Neither `a_0` nor `b_0` can be constant.  If, say, `a_0` were constant,
+immersion would make `b_0'` nowhere zero; over `C` this forces `b_0` to be
+linear, making `gamma` injective.  A linear nonconstant coordinate also
+makes `gamma` injective.  Hence
+
+```text
+deg a_0>=2,                         deg b_0>=2.                          (12)
+```
+
+They cannot both be quadratic.  Complete their squares.  A collision
+`a_0(s)=a_0(t)` with `s!=t` forces `s+t` to be twice the centre of `a_0`;
+the same collision for `b_0` forces the two quadratic centres to coincide.
+Both derivatives then vanish at that centre, contradicting immersion.
+Consequently
+
+```text
+max(deg a_0,deg b_0)>=3,             deg a_0+deg b_0>=5.                (13)
+```
+
+The first unordered bidegree is `(2,3)`.  It is genuinely present at the
+arm-jet level:
+
+```text
+gamma_*(e)=(e^2,e^3-e).                                                   (14)
+```
+
+Its derivative `(2e,3e^2-1)` never vanishes simultaneously, while
+`gamma_*(1)=gamma_*(-1)=(1,0)`.  Thus the first live boundary geometry is a
+node, not another embedded line or a cusp.
+
+## 4. The canonical nodal lift fails globally
+
+For `(14)`, one Bezout completion in `(8)` is
+
+```text
+a_1=-1/(3c^3),                    b_1=-e/(2c^3).                         (15)
+```
+
+The resulting smallest global lifts are
+
+```text
+A_*=e^2-z/(3c^3),
+C_*=e^3-e-ez/(2c^3).                                                     (16)
+```
+
+Their bracket factors exactly as
+
+```text
+{A_*,C_*}=(c^3+2er)(2c^3+z)/(2c^6),                                    (17)
+```
+
+so the correct arm jet does not propagate to a Darboux pair.  More
+decisively, `A_*` has exactly seven displayed critical points.  For every
+root
+
+```text
+8zeta^7+9c^15=0,                                                         (18)
+```
+
+put
+
+```text
+r=2zeta^3/c^3,                  e=-c^6/(4zeta^3).                        (19)
+```
+
+These points lie on `(1)`, satisfy `c^3+2re=0`, and make all three brackets
+of `A_*` with `r,z,e` vanish.  The seven roots in `(18)` are distinct and
+nonzero.  Hence no polynomial correction of only the second output can
+repair `(16)`; a live construction must change the carrier itself and must
+retain the nodal arm data plus the normal Bezout sidecar.
+
+The exact companion named in the metadata verifies `(8),(14)--(19)` and
+the critical equations over `Q(c)`.  **QED, conditional only on independent
+hostile audit.**
