@@ -1,0 +1,9 @@
+theorem=THM-3830-coordinate-cross-bichromatic-split-nonentry
+slope_arithmetic=gcd(a,z*b)=1;resultant=93896100
+row=k=c+xy*q;h=alpha*k+xy;determinant_completion=exact
+restriction=unselected_axis_forces_nonzero_scalar_d
+conclusion=x_divides_d_iff_y_divides_d
+geometry=opposite_sign_components_must_be_disjoint
+scope=coordinate_cross_only;second_row_and_Jacobian_OPEN
+CHECKS=22
+semantic_sha256=3ce7d10d25f49bbebe1ce8e6d7530783fe7a1a5e9045ef9b37a3678d3213d2c5
