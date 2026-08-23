@@ -1,0 +1,11 @@
+THM3870_VERTICAL_IFF A|Delta_b iff b=C^2/6+A Q(A,C)
+THM3870_FORMAL_PROFILE Q_*=sum beta_(j+1) A^j C^(j+3)
+THM3870_FIRST_MISMATCH Q=Q_<N+A^N T, T(0,C)!=beta_(N+1)C^(N+3)
+THM3870_RESIDUAL S=R_N-54u_N T-27A^(N+3)T^2
+THM3870_DEGREES d<N+2:2N+4; d>N+2:2d; d=N+2:2N+4
+THM3870_RESONANCE lc=-27A^(N+1)(beta_N+A lc(T))^2 !=0
+THM3870_REVERSE_GRAPH A=h(C) is A=0 or invertible affine
+THM3870_REPLAY_UNIVERSE N=0..5; d=0,N+1,N+2,N+3,N+4
+THM3870_SCOPE vertical axis + reverse graphs; non-graph A1 remains open
+SEMANTIC_SHA256 9987de8723700c1944d67ebc50631afdab3952db4cc2bf8108f6ee5b562b90b0
+CHECKS 206
