@@ -35,7 +35,6 @@ depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3814-nodal-rz-kummer-profile-degree-gate
 related:
-  - THM-3811-nodal-arm-bezout-law-for-cubic-pseudoplane-darboux-pairs
   - THM-3812-nodal-arm-coefficient-second-normal-profile-nonentry
   - THM-3813-quartic-r-repairs-of-nodal-carriers-have-critical-points
 script: 04-computation/jc2_cubic_pseudoplane_rz2_odd_ladder_thm3821.py

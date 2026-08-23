@@ -1,0 +1,11 @@
+audit=THM3823_independent_compact_Euler_obstruction
+normalization=P1_minus_3;chi_c=-1
+branch=irreducible;origin_preimages_4;triple_values_2_unibranch;chi_c=-4
+finite_field_controls=good:[(11, 6, 2), (13, 10, 0), (23, 18, 2), (29, 26, 0), (31, 26, 2)];bad_hostiles:[(17, 29, 12), (19, 33, 14)]
+surface_strata=off_branch:3x5;visible_branch:1x(-7);omitted:0x3
+surface=chi_c_U=8
+finite_etale=excluded_all_positive_degrees;equation_1=8d_impossible
+nonfinite_control=D(x)_in_A2;chi_c_0_to_1;atlas_lane_open
+GATES=58
+semantic_sha256=14808b30725ffc7fcc363302dbe76e91e8ba073ed332d8d62802b17f30344b40
+RESULT=PASS

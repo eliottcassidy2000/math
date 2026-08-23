@@ -1,0 +1,10 @@
+theorem=THM3823_nonlinear_cubic_etale_surface_compact_Euler
+normalization=P1_minus_3;chi_c=-1
+branch=origin_preimages_4;triple_values_2_unibranch;chi_c=-4
+surface_strata=off_branch:3x5;visible_branch:1x(-7);omitted:0x3
+surface=chi_c_U=8
+finite_etale=no_A2_C_to_U_C_of_any_positive_degree
+scope=nonfinite_nonproper_dominant_etale_polynomial_atlas_open
+GATES=34
+semantic_sha256=e2fcbcad4c643b3a0e360789ef5ad169e0f5d43eefd5eb4546426b6df1ac5101
+RESULT=PASS

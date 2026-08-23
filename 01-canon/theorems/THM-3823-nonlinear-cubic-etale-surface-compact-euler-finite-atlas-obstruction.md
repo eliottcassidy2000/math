@@ -2,236 +2,270 @@
 id: THM-3823
 title: "Nonlinear cubic etale surface has compact Euler characteristic eight"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over C, the
-  THM-3811 affine etale surface U has compactly
-  supported Euler characteristic 8.  Hence no finite etale morphism
-  A2_C -> U exists.  Every dominant etale plane atlas is necessarily
-  nonfinite; if its generic degree is d, its exact signed Euler sheet debt is
-  8d-1, and its finite envelope has at least two divisorial boundary primes.
-  This Euler argument alone does not obstruct a nonproper dominant atlas;
-  THM-3845 subsequently excludes every polynomial plane atlas of this
-  surface.  No general planar Jacobian claim follows.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over C, the smooth
+  integral affine etale surface U=Spec S[A/D,omega/D] of THM-3811 has compactly
+  supported Euler characteristic 8.  Its branch normalization is P1 minus
+  three points and has Euler characteristic -1; four normalization points are
+  identified at the origin and the other two singular branch values are
+  unibranch, giving branch Euler characteristic -4.  Fibrewise deletion of
+  ramification gives chi_c(U)=3*5-7=8.  Hence no finite etale morphism
+  A2_C -> U exists.  This Euler mechanism alone leaves a nonfinite,
+  nonproper degree-d atlas with signed Euler sheet debt 8d-1 and at least two
+  divisorial boundary primes.  THM-3841 later excludes every dominant plane
+  morphism to this surface, while THM-3845 gives an independent Keller-degree
+  contradiction.  No general Jacobian claim follows.
 source: root / nonlinear-cubic Euler-atlas obstruction lane, 2026-08-23
 audit: >
-  TWO INDEPENDENT HOSTILE AUDITS PASS (jc_sparse_direct_search and root,
-  2026-08-23).  The audits independently reconstructed the normalization as
-  P1 minus two
-  denominator roots and infinity, checked pole orders and absence of
-  cancellations, and used uniqueness of the double/triple root to verify
-  that only q=-2,-1,0,3 are identified.  They checked the two singleton
-  nonzero triple fibres and the exact three-sheet/simple-companion
-  stratification, obtaining chi_c(U)=8.  The finite-cover contradiction and
-  both THM-3578 consequences were rederived with their proper/nonproper and
-  signed-Euler qualifications intact.  A direct singular-locus elimination
-  separately recovered exactly the origin and two triple-root targets and
-  confirmed that signed Euler debt is not the unweighted divisorial debt.
-  No repair was found.  The 16-gate exact companion checks the
-  rational branch normalization, all three normalization punctures, the
-  four distinct origin preimages, the two affine nonorigin triple-root
-  parameters, and the complete compact-Euler ledger.  The proof separately
-  checks the projection strata against THM-3811 and the boundary-rank and
-  Euler-debt consequences against THM-3578.  Normal and optimized replay
-  byte-match the frozen output, both raw hashes match, and the script has no
-  inactive Python assert.
+  THREE INDEPENDENT HOSTILE AUDITS PASS (jc_sparse_direct_search, root and
+  thm3791-hostile-audit, 2026-08-23).  The first audits reconstructed the
+  normalization, three punctures, four origin preimages, two unibranch triple
+  values, sheet stratification and signed Euler debt.  The strongest audit
+  independently rederived the
+  branch incidence, irreducibility, rational inverse, all normalization poles,
+  four vertex branches and tangent slopes, complete derivative pullbacks, two
+  unibranch triple values, companion collision locus, constructible fibre
+  strata, and universal finite-degree Euler obstruction were independently
+  rederived.  Good-reduction point counts and two bad-reduction hostiles were
+  retained as controls.  The audit caught and repaired a non-load-bearing
+  bounded-degree script gate; the canonical scripts now use universal integer
+  divisibility.  Primary and independent assertion-free companions have 34
+  and 58 active gates; the earlier 16-gate packet remains a hostile control.
+  Normal and optimized streams match frozen outputs after LF normalization.
 depends_on:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3578-zariski-main-boundary-rank-and-sheet-debt
 related:
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
+  - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
   - THM-3845-nonlinear-cubic-keller-atlas-total-degree-contradiction
-script: 04-computation/jc2_nonlinear_cubic_compact_euler_thm3823.py
-output: 05-knowledge/results/jc2_nonlinear_cubic_compact_euler_thm3823.out
-script_sha256: 713e7a925e4ae42852dc22c5db766510ff0cca74ce6487e224bc883c1659c5e5
-output_sha256: ff8f7c8ac1d35b46a4a4f237e3f36c1024fcb9f26a5fa0a782dff16b555e204a
-semantic_sha256: ecf52db47db9533b4bf1eec5c23bea5a0e2a91e33a21e6c941863e0cba937cfe
+script: 04-computation/jc2_nonlinear_cubic_etale_surface_euler_thm3823.py
+output: 05-knowledge/results/jc2_nonlinear_cubic_etale_surface_euler_thm3823.out
+script_sha256: 11922872c37d824cd22da0875bca48044afe7267f92ad2c67be3fd5d4088c815
+output_sha256: 1007441d08053e669ca299ca6022c6b2462682ef3fa54e1ebe08e3850fb64b30
+semantic_sha256: e2fcbcad4c643b3a0e360789ef5ad169e0f5d43eefd5eb4546426b6df1ac5101
+independent_script: 04-computation/jc2_nonlinear_cubic_etale_surface_euler_independent_audit_thm3823.py
+independent_output: 05-knowledge/results/jc2_nonlinear_cubic_etale_surface_euler_independent_audit_thm3823.out
+independent_script_sha256: 20a5587387ed15a9acef37755d732729415a64e9e55cb45757abe2b9ad60e2ad
+independent_output_sha256: 6da6f3e471778376d0b4d9f69c374bf847acaad5512d6eada588df08fdcfbf89
+independent_semantic_sha256: 14808b30725ffc7fcc363302dbe76e91e8ba073ed332d8d62802b17f30344b40
+compact_script: 04-computation/jc2_nonlinear_cubic_compact_euler_thm3823.py
+compact_output: 05-knowledge/results/jc2_nonlinear_cubic_compact_euler_thm3823.out
+compact_script_sha256: 713e7a925e4ae42852dc22c5db766510ff0cca74ce6487e224bc883c1659c5e5
+compact_output_sha256: ff8f7c8ac1d35b46a4a4f237e3f36c1024fcb9f26a5fa0a782dff16b555e204a
+compact_semantic_sha256: ecf52db47db9533b4bf1eec5c23bea5a0e2a91e33a21e6c941863e0cba937cfe
 hash_basis: raw LF bytes
 ---
 
-# THM-3823 -- the nonlinear cubic surface has Euler mass eight
+# THM-3823 -- compact Euler characteristic excludes finite plane atlases
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over `C`.
-Let
-
-```text
-pi:U -> A2_(A,C)                                                   (1)
-```
-
-be the smooth affine etale surface and degree-three quasi-finite projection
-constructed in THM-3811.  Then
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over the
+complex numbers.  Let
 
 ```text
-chi_c(U)=8.                                                        (2)
+Xbar=Spec S -> A2_(A,C),       E=ramification divisor,
+U=Xbar minus E=Spec S[A/D,omega/D]                       (1)
 ```
 
-In particular, there is no finite etale morphism `A2 -> U`.  More generally,
-every dominant etale morphism `psi:A2 -> U` is nonfinite.  If its generic
-degree is `d`, then
+be the normal finite cubic completion and smooth integral affine etale
+surface of THM-3811.  Then
 
 ```text
-d chi_c(U)-chi_c(A2)=8d-1                                         (3)
+chi_c(U(C))=8.                                           (2)
 ```
 
-is its exact signed Euler sheet debt in the sense of THM-3578, and every
-finite envelope of `psi` has at least two divisorial boundary primes.
+Consequently no finite etale morphism `A2_C -> U` exists.
 
-## 1. Euler characteristic of the branch
+## 1. The branch normalization
 
-THM-3811 parametrizes the irreducible discriminant curve `Gamma` by
+The discriminant branch `Gamma` of the cubic completion is parametrized by
 
 ```text
-R(q)=(q-3)(q+1)(q+2),
-A(q)=-2q^2R(q)/(3q^2+7)^2,
-C(q)=-qR(q)/(3q^2+7).                                             (4)
+R=(q-3)(q+1)(q+2),             D=3q^2+7,
+A(q)=-2q^2R/D^2,               C(q)=-qR/D.              (3)
 ```
 
-This is the normalization away from the explicitly audited singular fibre.
-Its affine normalization is
+For the explicit discriminant `Delta(A,C)`, the double-root incidence
+equations
 
 ```text
-Gamma_tilde = P1 minus ({3q^2+7=0} union {infinity}).              (5)
+A(q^3+7q+3)-C(C+q^2)=0,
+A(3q^2+7)-2Cq=0                                      (4)
 ```
 
-Indeed the quadratic `3q^2+7` has two distinct roots.  Neither numerator in
-`(4)` vanishes there, while `A` and `C` have poles of orders one and two at
-infinity.  Thus
+satisfy
 
 ```text
-chi_c(Gamma_tilde)=2-3=-1.                                        (6)
+Res_q((4))=-A Delta.                                    (5)
 ```
 
-Exactly four distinct normalization values
+Moreover `Res_q(D,q^3+7q+3)` is nonzero,
+`Delta(0,C)=-4C^5`, and `Delta` is one reduced irreducible factor.  Thus (3)
+covers the whole reduced irreducible branch, not merely one component.  On a
+dense open, the double root
 
 ```text
-q=-2,-1,0,3                                                       (7)
+T_double=A^2(27A-9C^2+7C)/(2(C^2-21A^2))               (6)
 ```
 
-map to the square-zero origin.  Away from that target, the double root of
-the cubic is unique; at a triple root, the root is again unique.  Hence
-there are no other identifications in the normalization map.  Identifying
-the four points `(7)` to one lowers compactly supported Euler characteristic
-by three.  The two cuspidal triple-root values are bijective normalization
-fibres and do not alter Euler characteristic.  Therefore
+satisfies `q=T_double/A`, giving the rational inverse.
+
+The two roots of `D` are distinct.  At each, `A(q),C(q)` have pole orders two
+and one, respectively; their numerators are coprime to `D`.  At infinity the
+pole orders are one and two.  These are all poles, so the affine normalization
+is
 
 ```text
-chi_c(Gamma)=-1-4+1=-4.                                           (8)
+Gamma_tilde=P1_C minus {two roots of D, infinity},
+chi_c(Gamma_tilde)=2-3=-1.                              (7)
 ```
 
-The exact companion verifies `(4)` directly against the discriminant of
-THM-3811, checks all puncture cancellations and degrees, and checks that the
-four origin parameters are squarefree.  It also verifies that
-`3q^2-7=0` gives two distinct affine parameters disjoint from `(7)` and
-from the normalization punctures; these are exactly the two nonzero
-triple-root values of THM-3811.
+## 2. Complete singular-preimage census
 
-## 2. The degree-three projection stratifies as 3 plus 1
-
-Over `A2 minus Gamma`, the finite cubic completion is etale of degree three,
-and removing the ramification divisor removes nothing.  Thus
+The four distinct parameters
 
 ```text
-chi_c(A2 minus Gamma)=1-(-4)=5,
-chi_c(pi^-1(A2 minus Gamma))=3*5=15.                              (9)
+q=-2,-1,0,3                                             (8)
 ```
 
-Over a nonexceptional point of `Gamma`, the double root lies on the deleted
-ramification divisor and the unique simple companion remains in `U`.  The
-companion therefore gives one sheet over
+map to the origin.  Their tangent slopes `C/A` are
 
 ```text
-Gamma^o=Gamma minus {origin, two triple-root values}.              (10)
+-19/4, -5, infinity, 17/3,                              (9)
 ```
 
-The fibre of `U` is empty at each of the three deleted target values: the
-origin has only the square-zero vertex, and each triple-root fibre has only
-the ramified root.  Consequently
+so they are four genuine normalization branches.
+
+Pulling the two branch derivatives back along (3) gives
 
 ```text
-chi_c(Gamma^o)=-4-3=-7,
-chi_c(U)=15+(-7)=8,                                               (11)
+Delta_A = 4q^3R^3(3q^2-7)^3(q^3+7q+3)/D^6,
+Delta_C =-4q^4R^3(3q^2-7)^3(q^3+21q+12)/D^7.           (10)
 ```
 
-which proves `(2)`.
-
-This calculation also explains why the answer is larger than the generic
-degree.  The branch itself has negative Euler characteristic: replacing the
-three generic sheets by one companion sheet over `Gamma^o` adds rather than
-subtracts Euler mass.
-
-## 3. Finite atlases are impossible
-
-If a finite etale morphism `f:A2 -> U` had degree `d>=1`, then over the
-complex topology it would be a finite covering.  Compactly supported Euler
-characteristic is multiplicative for finite coverings, so `(2)` would give
+The two terminal cubics in (10) are coprime, and the common numerator divisor
+is exactly
 
 ```text
-1=chi_c(A2)=d chi_c(U)=8d,                                       (12)
+q^3R^3(3q^2-7)^3.                                      (11)
 ```
 
-an impossibility.  A proper etale plane atlas is also impossible, since a
-proper quasi-finite morphism is finite.
-
-This is not a contradiction to the open source-plane problem.  A
-noninvertible Keller map is expected to be nonproper, and a dominant etale
-morphism of affine surfaces is only quasi-finite in general.
-
-## 4. Every surviving atlas has a large boundary invoice
-
-Let `psi:A2 -> U` be any dominant etale morphism of generic degree `d`.
-THM-3578 applies because `U` is a normal smooth affine surface.  Its
-constructible fibre-defect function
+It is coprime to `D`.  Hence (8) and the two roots of `3q^2-7` are every
+affine singular preimage.  The latter map to two distinct nonzero triple-root
+values.  At either one, `q=C/(3A)`, so each has exactly one normalization
+preimage and makes no Euler correction.  Only the four-to-one origin changes
+(7), by `4-1`.  Therefore
 
 ```text
-delta_psi(u)=d-#psi^-1(u)                                        (13)
+chi_c(Gamma)=-1-(4-1)=-4.                              (12)
 ```
 
-satisfies the exact Euler integral
+## 3. Fibrewise Euler integration
+
+On the normalization, the cubic factors as
 
 ```text
-integral_U delta_psi d chi_c
-  =d chi_c(U)-chi_c(A2)=8d-1.                                   (14)
+f(T)=(T-Aq)^2(T-(C-2Aq)).                               (13)
 ```
 
-This is a signed Euler-weighted identity, not a claim that every stratum
-contributes positively.  Separately, THM-3811 gives
+The gap between the simple companion and the ramified root is
 
 ```text
-Cl(U)=Pic(U)=Z^2.                                                 (15)
+(C-2Aq)-Aq=qR(3q^2-7)/D^2,                             (14)
 ```
 
-The Zariski-main boundary-rank inequality of THM-3578 therefore forces at
-least two irreducible divisorial boundary primes in every finite envelope of
-`psi`, and the sum of the generic divisorial sheet debts is at least two.
+and the derivative at the companion is the square of (14).  Thus the
+companion collides with the ramified point exactly at the origin and the two
+triple-root values.  Let `S_0` be this three-point set.
 
-Together with THM-3822, a hypothetical atlas must now pay three different
-invoices:
+The finite cubic completion has three points over `A2 minus Gamma`.  After
+deleting `E`, one simple companion remains over every point of
+`Gamma minus S_0`; all geometric points over `S_0` lie on `E`, so those fibres
+are empty.  The constructible strata and their contributions are therefore
 
 ```text
-geometric arm:  every component of h=0 carries a nonconstant unit;
-divisor class:  at least two finite-envelope boundary primes;
-Euler mass:     exact signed sheet debt 8d-1.                     (16)
+base stratum             chi_c(base)   fibre size   contribution
+A2 minus Gamma                 5            3             15
+Gamma minus S_0               -7            1             -7
+S_0                            3            0              0. (15)
 ```
 
-The useful constructive question is whether one nonproperness passport can
-pay all three invoices simultaneously.  Standard finite covers and standard
-hyperbolic arms cannot.
-
-## 5. Exact replay and scope
-
-Run
-
-```bash
-python3 04-computation/jc2_nonlinear_cubic_compact_euler_thm3823.py
-python3 -O 04-computation/jc2_nonlinear_cubic_compact_euler_thm3823.py
-```
-
-Both executions must byte-match
+Additivity and finite-cover multiplicativity on each stratum give
 
 ```text
-05-knowledge/results/jc2_nonlinear_cubic_compact_euler_thm3823.out
+chi_c(U)=15-7=8,                                         (16)
 ```
 
-The companion reports `CHECKS=16` and `RESULT=PASS`.  It contains no inactive
-Python `assert`.  This Euler mechanism rules out finite or proper plane
-atlases only; THM-3845 later excludes the nonfinite case by an independent
-degree argument.  **QED.**
+proving (2).
+
+## 4. Finite-atlas obstruction and exact boundary
+
+The surface `U` is integral and hence connected.  A nonempty finite etale
+morphism
+
+```text
+phi:A2_C -> U                                             (17)
+```
+
+has open-and-closed image, so it is surjective of a constant positive integer
+degree `d`.  On complex analytic spaces it is a finite covering, whence
+
+```text
+1=chi_c(A2_C)=d chi_c(U)=8d,                             (18)
+```
+
+impossible for every `d>=1`.
+
+Finiteness is load-bearing.  A dominant etale finite-type map is quasi-finite,
+but without properness sheets may escape at the boundary.  The nonfinite
+etale open immersion
+
+```text
+D(x)=G_m x A1 -> A2                                      (19)
+```
+
+has compact Euler characteristics `0` and `1`, so the finite-cover equation
+does not extend to the nonproper lane.  Therefore this Euler argument forces
+any dominant etale polynomial map `A2_C -> U` into the nonfinite, nonproper
+lane.  It does not itself obstruct that lane; THM-3841 and THM-3845 close it
+by independent later mechanisms.
+
+## 5. Every surviving atlas has two further boundary debts
+
+Let `psi:A2_C -> U` be a dominant etale morphism of generic degree `d`.  The
+constructible defect function
+
+```text
+delta_psi(u)=d-#psi^-1(u)                                      (20)
+```
+
+obeys THM-3578's exact compact-Euler integral.  Since `chi_c(U)=8`,
+
+```text
+integral_U delta_psi d chi_c=d chi_c(U)-chi_c(A2)=8d-1.        (21)
+```
+
+This is a signed Euler-weighted identity; it does not say every stratum has
+positive Euler contribution.  Independently, THM-3811 gives
+
+```text
+Cl(U)=Pic(U)=Z^2.                                               (22)
+```
+
+In the finite normalization supplied by Zariski Main, THM-3578 therefore
+forces at least two irreducible divisorial boundary primes, and the sum of
+the generic divisorial sheet debts is at least two.  A hypothetical atlas
+must simultaneously satisfy this class-group invoice, the Euler debt (21),
+and THM-3822's intrinsic `SL2`/punctured-arm equations.  These are necessary
+conditions for the surviving nonproper lane, not a contradiction.
+
+## 6. Verification
+
+The primary companion verifies (3)--(18) in 34 active gates.  The independent
+companion separately checks branch coverage and inverse, tangent branches,
+the complete singular divisor, two triple images, companion fibres, five good
+finite-field point-count controls, two bad-reduction hostiles, and the
+nonproper boundary in 58 active gates.  Both scripts are assertion-free and
+their normal and optimized streams equal the frozen outputs.  The additional
+16-gate `jc2_nonlinear_cubic_compact_euler_thm3823.py` companion separately
+replays the normalization and Euler ledger.  **QED.**

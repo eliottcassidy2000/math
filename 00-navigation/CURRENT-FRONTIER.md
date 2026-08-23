@@ -383,7 +383,7 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
-### Arithmetic-Kakeya forcing certificates (opened 2026-07-28, klein-S691)
+### Arithmetic-Kakeya forcing certificates
 
 **OPEN external benchmark; workbench live.** Human record `1.67513`, target
 `<=1.675`. FINITE-EXACT: rule-(1) is UNSOUND; floor `>=1`, k=1 path floor `2`
@@ -395,7 +395,7 @@ bound. Workbench: `ak_forcing_engine.py`; next: larger sound `5/3`, k=1 proof.
 
 ## Cross-domain connection discipline
 
-The most reusable current bridges are not literal object identifications:
+Reusable bridges (not literal object identifications):
 
 | Mechanism | Proven source | Legitimate transfer question |
 |---|---|---|
