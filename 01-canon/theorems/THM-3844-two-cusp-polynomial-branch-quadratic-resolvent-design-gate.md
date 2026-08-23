@@ -2,8 +2,8 @@
 id: THM-3844
 title: "A two-cusp polynomial branch globalizes one anti-invariant three-class, but folds back to a monogenic cubic"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  An irreducible polynomially normalized quartic with two
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  An irreducible
+  polynomially normalized quartic with two
   A2 cusps, one A1 node, and one place at infinity has quadratic-resolvent
   surface class group Z plus Z/3.  The three-class is primitive at both
   cusps, trivial at the node, and anti-invariant under the quadratic deck
@@ -13,6 +13,18 @@ status: >
   nonconstant unit.  Thus this exact one-place design has no dominant plane
   atlas and is not a Jacobian counterexample.
 source: jc_zero_debt_lift / one-place S3 completion design lane, 2026-08-23
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn3709, 2026-08-23).  The audit
+  rederived the normalization and conductor from the two cusp semigroups and
+  the two node branches; checked the smooth unique projective infinity and
+  split boundary; traced the standard weak degree-two del Pezzo resolution
+  through the affine class-group and unit exact sequences; and checked that
+  the E7 enumeration is used only after those geometric bridges.  It also
+  rederived the Geiser anti-action, the Kummer sequence on the regular locus,
+  the explicit Cardano identification, the height-one index-zero normality
+  argument, and the different-unit obstruction.  In particular, the proof
+  does not infer an S3 descent from anti-invariance alone.  Normal and
+  optimized runs byte-match the frozen 1,859-gate transcript.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
@@ -30,8 +42,8 @@ hash_basis: raw LF bytes
 
 # THM-3844 -- two cusps produce one three-class, not two
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of
 characteristic zero.  This theorem records a counterexample-design hostile,
 not a Keller map.
 
@@ -467,5 +479,5 @@ Section 2.  The 360-marking lattice consequences are finite exact evidence,
 not a replacement for those geometric bridges.  The normality/index argument
 for `(33)` and the Kummer exact-sequence argument `(36a)-(36b)` are
 theorem-level symbolic proofs and are not delegated to the companion.
-Independent hostile audit is still required before promotion to proved
-canon.  **QED candidate.**
+The independent hostile audit rechecked each of those bridges before
+promotion to proved canon.  **QED.**
