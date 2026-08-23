@@ -10,9 +10,10 @@ status: >
   defect class has an explicit affine representative classification.  In the
   resulting seven noncanonical minimal slices, the only nontrivial square
   residual is the THM-3869 representative h_1-4(x+1), whose residual is
-  (9x+4)^4.  Its extra Cardano line remains genuinely ramified.  Arbitrary
-  additions from the cusp-value-zero ideal, alternative Delta-lifts, a Keller
-  atlas, and JC(2) remain OPEN.
+  (9x+4)^4.  Its extra Cardano line remains genuinely ramified.  The three
+  natural generator rays of the omitted cusp-value-zero ideal produce no new
+  square.  Arbitrary combinations and higher-degree additions from that
+  ideal, alternative Delta-lifts, a Keller atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3864 noncanonical representative lane, 2026-08-23
 audit: >
   PROVISIONAL EXACT PROOF CANDIDATE.  The companion verifies the cusp-value
@@ -21,10 +22,12 @@ audit: >
   square, two unit sextic-square ideals on the d_0 branch, the complete
   two-parameter square recurrence and unit ideal on the d_+ branch, both
   two-cusp odd-degree ladders, the final plus/minus exceptional quartic, and
-  the normalization involution.  Normal and optimized runs must byte-match
-  the frozen transcript.  Independent audit must recheck the local iff, the
-  R/J affine-fiber classification, the sufficiency of each square recurrence,
-  all scaling/boundary cases, and the exact minimal-slice scope.
+  the normalization involution.  It also verifies the exact three-generator
+  presentation of the cusp-value-zero ideal, all three mixed descents, and
+  the three generator-ray obstructions.  Normal and optimized runs must
+  byte-match the frozen transcript.  Independent audit must recheck the local
+  iff, the R/J affine-fiber classification, the sufficiency of each square
+  recurrence, all scaling/boundary cases, and the exact generator-ray scope.
 depends_on:
   - THM-3864-integrated-three-cusp-conductor-seminormal-three-direction-gate
   - THM-3869-three-cusp-square-residual-cardano-line-ramification
@@ -33,9 +36,9 @@ related:
   - THM-3874-three-cusp-quadratic-k3-affine-class-group
 script: 04-computation/jc2_three_cusp_polarization_branches_thm3872.py
 output: 05-knowledge/results/jc2_three_cusp_polarization_branches_thm3872.out
-script_sha256: db60bf2949fa1079a3531724399a0e7c54b5216f12db42e33423f42e4369f252
-output_sha256: 7ef74dfaafd335a7cc6d95f8c004b3d9d2754c640debf7b2e87d5040bdfd056d
-semantic_sha256: b51c9eb2e70e9ca17f833f9a73928346d41b477b3b9bd1ad6240336513d19475
+script_sha256: 076633418572f95df8ace09d2bd5f524d97d6359929f15bebe0b396f034ae6e7
+output_sha256: 1b3ac5eeb0c46ae39d38cf5b60bf7df667d1ccfb4a5f134b5dff6be6f76b2434
+semantic_sha256: 637a553ae7ffb18dc3721e709162fc72710f2f231d27468e2e45bac51909a580
 hash_basis: raw LF bytes
 ---
 
@@ -373,9 +376,60 @@ from the omitted `J`-directions must pay some extra divisor, not merely that
 the minimal affine section pays `9x+4`.  This paragraph inherits THM-3874's
 provisional status and is not used in the proof above.
 
-The theorem does **not** search representatives `H+j`, `j in J`, does not
-search alternative lifts differing by multiples of `Delta`, and does not
-construct a polynomial-plane Keller atlas.  Those are the precise remaining
+## 8. The three first `J`-generator rays do not deform the square
+
+The ideal omitted by the finite quotient has the exact presentation
+
+```text
+J=(j_1,j_2,j_3)R,
+j_1=x(x+1),              j_2=y(x+1),              j_3=y^2+4x.       (35)
+```
+
+Indeed these polynomials have Groebner basis
+
+```text
+4x+y^2,                    xy+y,                    x^2+x,           (36)
+```
+
+so their quotient has basis `1,x,y`, dimension three, and the evaluation
+matrix `(8)` identifies it with the three reduced cusp points.  Thus `(35)`
+is the full cusp-value-zero ideal, not merely an annihilating subideal.
+
+The minimum mixed descents of `j_ih_*` are
+
+```text
+A_1=-15x^3-15x^2+xy^2-4x,
+A_2=-15x^2y-15xy+y^3-4y,
+A_3=81x^4+9x^3-44x^2+15xy^2-16x+4y^2.                     (37)
+```
+
+For each `i`, use the natural one-parameter lifts
+
+```text
+P_lambda=P_*+2lambda A_i+lambda^2j_i^2,
+Q_lambda=Q_*+3lambda j_iP_*+3lambda^2j_iA_i+lambda^3j_i^3. (38)
+```
+
+They pull back to `(h_*+lambda j_i)^2,(h_*+lambda j_i)^3`.  Exact division
+gives three immediate obstructions:
+
+```text
+i=1: deg_y R=2, [y]R=0, [y^2]R=-8lambda^3x^3, R(0,0)=256;
+i=2: [y^5]R(0,y)=-8lambda^3;
+i=3: [x^7]R(x,0)=52488lambda^3.                             (39)
+```
+
+For `i=2,3`, nonzero `lambda` gives an odd-degree nonzero specialization.
+For `i=1`, a square root would have the form `U(x)+yV(x)`.  Its missing
+linear `y` term forces `UV=0`; `U=0` contradicts the nonzero constant part,
+while `V=0` forces `lambda=0` through the displayed `y^2` coefficient.
+Thus every generator ray returns to the original square only at
+`lambda=0`.
+
+The theorem does **not** search nontrivial combinations
+`lambda_1j_1+lambda_2j_2+lambda_3j_3`, polynomial-coefficient/higher `J`
+additions, alternative lifts differing by multiples of `Delta`, or a
+polynomial-plane Keller atlas.  Those are the precise remaining
 noncanonical directions.  No Jacobian counterexample is claimed.
 
 Reproduce the exact packet with

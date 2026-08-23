@@ -4,8 +4,9 @@ defect_derivative_rank=3;cusp_value_selector_rank=3
 minimal_noncanonical_branches=7
 minimal_slice_nontrivial_square_residuals=1
 unique_square_representative=h1-4*(x+1);residual=(9x+4)^4
+cusp_value_zero_generator_rays=3;new_square_residuals=0
 extra_cardano_ramification_removed=NO
-cusp_value_zero_ideal_higher_representatives=OPEN
-semantic_sha256=b51c9eb2e70e9ca17f833f9a73928346d41b477b3b9bd1ad6240336513d19475
-CHECKS=44
+cusp_value_zero_ideal_combinations_and_higher_representatives=OPEN
+semantic_sha256=637a553ae7ffb18dc3721e709162fc72710f2f231d27468e2e45bac51909a580
+CHECKS=63
 RESULT=PASS

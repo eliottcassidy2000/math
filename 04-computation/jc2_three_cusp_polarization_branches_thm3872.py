@@ -572,14 +572,94 @@ gate(exceptional_square_groebner == sp.groebner(
 # Q=H^3, hence the zero residual rather than a cubic extension.
 gate(derivative_matrix.nullspace() == [], "all-zero derivative class is trivial")
 
+# First omitted J-adic layer.  These three polynomials generate the exact
+# ideal of the three cusp image points.  Along each individual generator ray
+# through the unique positive representative h*=h1-4e0, no new square occurs.
+j1 = x * (x + 1)
+j2 = y * (x + 1)
+j3 = y**2 + 4 * x
+j_groebner = sp.groebner([j1, j2, j3], y, x, order="lex")
+expected_j_groebner = sp.groebner(
+    [4 * x + y**2, x * y + y, x**2 + x], y, x, order="lex"
+)
+gate(j_groebner == expected_j_groebner, "exact cusp-value-zero ideal generators")
+zero(j_groebner.reduce(delta)[1], "branch equation belongs to cusp ideal")
+
+h_star = h1 - 4 * e0.subs({x: x_t, y: y_t})
+P_star = (x + 1) * (9 * x + 4) ** 2
+Q_star = (
+    y**2 - sp.Rational(1, 2) * (30 * x**2 + 30 * x + 8)
+) * (9 * x + 4) ** 2
+zero(P_star.subs({x: x_t, y: y_t}) - h_star**2,
+     "positive representative square descent")
+zero(Q_star.subs({x: x_t, y: y_t}) - h_star**3,
+     "positive representative cube descent")
+zero(P_star**3 - Q_star**2 - delta * (9 * x + 4) ** 4,
+     "positive representative square residual")
+
+A_j1 = -15 * x**3 - 15 * x**2 + x * y**2 - 4 * x
+A_j2 = -15 * x**2 * y - 15 * x * y + y**3 - 4 * y
+A_j3 = (
+    81 * x**4
+    + 9 * x**3
+    - 44 * x**2
+    + 15 * x * y**2
+    - 16 * x
+    + 4 * y**2
+)
+for index, (generator, mixed) in enumerate(
+    ((j1, A_j1), (j2, A_j2), (j3, A_j3)), start=1
+):
+    zero(
+        mixed.subs({x: x_t, y: y_t})
+        - generator.subs({x: x_t, y: y_t}) * h_star,
+        f"J-generator mixed descent {index}",
+    )
+
+
+def j_ray_residual(generator: sp.Expr, mixed: sp.Expr, parameter: sp.Symbol) -> sp.Expr:
+    square = sp.expand(P_star + 2 * parameter * mixed + parameter**2 * generator**2)
+    cube = sp.expand(
+        Q_star
+        + 3 * parameter * generator * P_star
+        + 3 * parameter**2 * generator * mixed
+        + parameter**3 * generator**3
+    )
+    quotient, remainder = sp.div(sp.expand(square**3 - cube**2), delta, x, y)
+    zero(remainder, "J-generator ray residual divisibility")
+    return sp.expand(quotient)
+
+
+lam = sp.symbols("lam")
+R_j1 = j_ray_residual(j1, A_j1, lam)
+R_j1_y = sp.Poly(R_j1, y)
+gate(R_j1_y.degree() == 2, "j1 ray y degree two")
+zero(R_j1_y.coeff_monomial(y), "j1 ray has no linear y term")
+zero(R_j1_y.coeff_monomial(y**2) + 8 * lam**3 * x**3,
+     "j1 ray unavoidable y-square coefficient")
+zero(R_j1.subs({x: 0, y: 0}) - 256, "j1 ray nonzero constant part")
+
+R_j2 = j_ray_residual(j2, A_j2, lam)
+R_j2_x_zero = sp.Poly(R_j2.subs(x, 0), y)
+gate(R_j2_x_zero.degree() == 5, "j2 ray x-zero degree five")
+zero(R_j2_x_zero.coeff_monomial(y**5) + 8 * lam**3,
+     "j2 ray odd leading coefficient")
+
+R_j3 = j_ray_residual(j3, A_j3, lam)
+R_j3_y_zero = sp.Poly(R_j3.subs(y, 0), x)
+gate(R_j3_y_zero.degree() == 7, "j3 ray y-zero degree seven")
+zero(R_j3_y_zero.coeff_monomial(x**7) - 52488 * lam**3,
+     "j3 ray odd leading coefficient")
+
 semantic = {
     "polarization": "H in S; H2,H3 in R iff H(a)H'(a)=0 at 0,+1,-1",
     "selectors": "e0=x+1;e+=(-2x-y)/4;e-=(-2x+y)/4;evaluation identity",
     "fibers": "fixed derivative class; values free exactly at zero derivative coordinates;mod J",
     "branches": "eight linear polarizations;seven noncanonical minimal affine slices",
     "square_search": "only nontrivial square is h1-4e0;residual=(9x+4)^4",
+    "J_rays": "x(x+1),y(x+1),y2+4x generate J;each individual ray has no new square",
     "ramification": "THM3869 leaves field discriminant Delta*(9x+4)^2",
-    "scope": "arbitrary additions from cusp-value-zero ideal J remain open",
+    "scope": "arbitrary combinations/higher-degree additions from J remain open",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -595,8 +675,9 @@ print("defect_derivative_rank=3;cusp_value_selector_rank=3")
 print("minimal_noncanonical_branches=7")
 print("minimal_slice_nontrivial_square_residuals=1")
 print("unique_square_representative=h1-4*(x+1);residual=(9x+4)^4")
+print("cusp_value_zero_generator_rays=3;new_square_residuals=0")
 print("extra_cardano_ramification_removed=NO")
-print("cusp_value_zero_ideal_higher_representatives=OPEN")
+print("cusp_value_zero_ideal_combinations_and_higher_representatives=OPEN")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")
 print("RESULT=PASS")
