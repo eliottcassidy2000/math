@@ -1,0 +1,11 @@
+theorem=THM-3772-variable-flank-three-charge-rational-exact-classification
+scope=algebraically_closed_characteristic_zero;arbitrary_A,B,chi_in_k[z]
+mixed_rational_mate=iff_chi=h+gz_and_AB=p+g^2*z/4_with_p_nonzero
+pure_rational_mate=iff_chi_constant_and_active_flank_smooth
+polynomial_mate=iff_Q_is_linear
+mechanisms=quadratic_time_form;factorization;vertical_principal_parts
+linear_profile_grid=729;smooth=48;rational_exact=48;mixed_squarefree=12
+pure_smooth_controls=14;pure_singular_controls=8;mate_obstructions=20
+semantic_sha256=44f6673c2b293374f21a4d888a85ff37747cd546b54c42c03854a91d4088c2bb
+CHECKS=121
+RESULT=PASS
