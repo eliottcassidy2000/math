@@ -58,6 +58,10 @@ Format per entry:
   reservation of `THM-3899` for the nonzero-sidecar y-degree tariff.  The
   strict-cell theorem and all four companions therefore moved together a
   third time to the freshly checked free identifier `THM-3900`.
+- **Third repeat:** before that repair reached the shared branch, upstream
+  promoted an independent response chain as `THM-3900--3902`.  The strict-cell
+  family therefore moved a fourth time, atomically, to freshly checked
+  `THM-3903`; its mathematics and hash-bearing companion bytes are unchanged.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
   only before empty reservations; rename the whole artifact family together.

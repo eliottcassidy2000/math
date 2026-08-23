@@ -1,5 +1,5 @@
 ---
-id: THM-3900
+id: THM-3903
 title: "Strict Arithmetic-Kakeya two-by-two cyclic cell has exact score optimum seven-fourths"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  In the public strict
@@ -20,20 +20,20 @@ audit: >
 depends_on:
   - THM-2850-paid-distinguished-coloop-round-budget-and-slope-grammar-rank-defect
   - THM-3875-arithmetic-kakeya-k1-forest-one-round-score-floor
-script: 04-computation/ak_strict_c4_score_seven_four_thm3900.py
-output: 05-knowledge/results/ak_strict_c4_score_seven_four_thm3900.out
+script: 04-computation/ak_strict_c4_score_seven_four_thm3903.py
+output: 05-knowledge/results/ak_strict_c4_score_seven_four_thm3903.out
 script_sha256: 71d0ef85a0fb023c8a01524efbf8bb7c93b120178105b6b31634ffa379502ba0
 output_sha256: e6fb8600aad22fed5a84809e9135b526807cf5e3c44deb670b820af75e5432cc
 semantic_sha256: 1359b2f2924587642590d7fc2756546c0912cc6a4c62ed323e8aa63d40421544
-independent_audit_script: 04-computation/ak_strict_c4_score_seven_four_independent_audit_thm3900.py
-independent_audit_output: 05-knowledge/results/ak_strict_c4_score_seven_four_independent_audit_thm3900.out
+independent_audit_script: 04-computation/ak_strict_c4_score_seven_four_independent_audit_thm3903.py
+independent_audit_output: 05-knowledge/results/ak_strict_c4_score_seven_four_independent_audit_thm3903.out
 independent_audit_script_sha256: 13a8d295499d22c9a998ed13dcd98e0a23fb8fef87b0ad6bd57ac88d2c8e5997
 independent_audit_output_sha256: 93b2804560df95c10690a76ee245db6148bbad4c21d2c1c4292ae55aed0e9760
 independent_audit_semantic_sha256: d1e21eca692789bcbe00f3a232ef0e1bb7cee890f24123a9145f6fc9e4248888
 hash_basis: raw LF bytes
 ---
 
-# THM-3900 -- the strict two-by-two cyclic optimum is `7/4`
+# THM-3903 -- the strict two-by-two cyclic optimum is `7/4`
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**  This theorem concerns
 only the repository's public strict/equal-suffix paid-row forcing semantics.
@@ -185,10 +185,10 @@ strict `k=2` rectangles, deeper products, and all compilation claims remain
 Run from the repository root:
 
 ```bash
-python3 -B 04-computation/ak_strict_c4_score_seven_four_thm3900.py
-python3 -B -O 04-computation/ak_strict_c4_score_seven_four_thm3900.py
-python3 -B 04-computation/ak_strict_c4_score_seven_four_independent_audit_thm3900.py
-python3 -B -O 04-computation/ak_strict_c4_score_seven_four_independent_audit_thm3900.py
+python3 -B 04-computation/ak_strict_c4_score_seven_four_thm3903.py
+python3 -B -O 04-computation/ak_strict_c4_score_seven_four_thm3903.py
+python3 -B 04-computation/ak_strict_c4_score_seven_four_independent_audit_thm3903.py
+python3 -B -O 04-computation/ak_strict_c4_score_seven_four_independent_audit_thm3903.py
 ```
 
 The primary companion verifies the strict witness, raw integral combination,
