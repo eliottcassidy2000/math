@@ -2,7 +2,7 @@
 id: THM-3812
 title: "Nodal arm-coefficient second-normal profiles cannot be Darboux pairs"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the
   cubic pseudo-plane, no Darboux pair with the normalized nodal arm jet can
   have all of its higher canonical coefficients confined to
   r g(e)+z^2 f(e) in each output.  Monic reduction in z makes the pure-z
@@ -13,12 +13,16 @@ status: >
   element of the arm ideal I^2.  The first omitted mixed coefficient is rz.
 source: jc_zero_debt_lift / nodal second-normal direct-slice lane, 2026-08-23
 audit: >
-  PROOF CANDIDATE.  The exact companion has 26 active gates checking the
+  INDEPENDENT HOSTILE AUDIT PASS (jc-cohn-boundary, 2026-08-23).  The exact
+  companion has 26 active gates checking the
   nodal first-normal Bezout row, Poisson/Casimir signs, monic canonical
   reduction, the pure-z and pure-r^3 coefficients, the Wronskian
   logarithmic derivative, all degree-at-most-eight hostile controls, and
-  the precise arm-ideal sidecar.  Normal and optimized runs byte-match the
-  frozen transcript.  Independent hostile audit remains required.
+  the precise arm-ideal sidecar.  The audit independently expanded the
+  arbitrary-function bracket, checked uniqueness of the monic z-normal
+  coefficients, rederived the Bezout/Wronskian contradiction including
+  kappa=0, and verified the I-adic typing r in I^3 and rz in I^4.  Normal and
+  optimized runs byte-match the frozen transcript and the raw hashes match.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3790-cubic-pseudoplane-arm-nodal-immersion-gate
@@ -36,7 +40,7 @@ hash_basis: raw LF bytes
 
 # THM-3812 -- the nodal pair cannot stop at arm-coefficient r/z2 profiles
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.**  Let `k`
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k`
 be a field of characteristic zero, fix `c in k*`, and put
 
 ```text
