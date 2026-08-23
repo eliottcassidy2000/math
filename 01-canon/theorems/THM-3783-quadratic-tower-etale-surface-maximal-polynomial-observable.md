@@ -9,8 +9,8 @@ status: >
   degree two and one sheet escaping along its unique multiple arm.  Its
   symplectic form is exact, its units are constant, and Pic is Z/2.  Thus
   the exponent-one obstruction of THM-3779 genuinely disappears, but every
-  Darboux pair would have to be nonbirational on the surface and would give
-  a planar Keller map of even degree at least four.  Neither homogeneous
+  Darboux pair has surface degree at least three by THM-3794 and would give
+  a planar Keller map of even degree at least six.  Neither homogeneous
   nor two-by-two Euler-weight supports can do this; one named aligned
   two-by-three orientation also has a universal transport-factor no-go.
   Other two-by-three cells and arbitrary Darboux pairs remain open.
@@ -30,6 +30,7 @@ depends_on:
   - THM-3774-three-component-rational-keller-cover-tower
   - THM-3716-monomial-broughton-hamiltonian-obstruction-family
   - THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule
+  - THM-3794-constant-unit-surfaces-have-no-quadratic-etale-plane-map
 related:
   - THM-3779-three-component-tower-maximal-danielewski-polynomial-observable
   - THM-3782-simple-pole-spectral-danielewski-completion-and-target-field-gate
@@ -333,14 +334,15 @@ give
 
 If `d=1`, the source extension would be quadratic and hence Galois.
 THM-1330's Galois Keller theorem would force invertibility and degree one,
-a contradiction.  Therefore every hypothetical Darboux pair in `S` obeys
+a contradiction.  THM-3794 excludes `d=2` directly on this constant-unit
+affine surface.  Therefore every hypothetical Darboux pair in `S` obeys
 
 ```text
-d>=2,                 [k(x,y):k(F,G)]>=4 and even.    (38)
+d>=3,                 [k(x,y):k(F,G)]>=6 and even.    (38)
 ```
 
-It must be nonbirational on `Y`; the simple degree-two target-change route
-is completely closed.
+It must have surface degree at least three; both the birational and quadratic
+target-change routes are completely closed.
 
 The three most visible component candidates already fail separately:
 

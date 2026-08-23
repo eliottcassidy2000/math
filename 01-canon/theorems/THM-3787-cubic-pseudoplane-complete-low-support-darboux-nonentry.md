@@ -480,7 +480,7 @@ shapes are therefore
 These are support-shape statements only.  They neither construct a Darboux
 pair on `(1)` nor prove that none exists.  By THM-3785, any actual survivor
 would still pull back through the cubic atlas to a planar Keller map of field
-degree divisible by three and at least six.
+degree divisible by three and at least nine, by THM-3794.
 
 The deterministic companion named in the metadata checks the bucket census,
 all small zero-weight controls, the resonance and exceptional-cancellation

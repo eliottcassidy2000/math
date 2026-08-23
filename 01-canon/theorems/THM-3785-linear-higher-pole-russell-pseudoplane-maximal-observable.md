@@ -10,8 +10,8 @@ status: >
   Picard group Z/3.  It has no birational or affine-carrier Darboux pair,
   and no Darboux pair supported on at most two Euler weights per output; any
   survivor is nonlinear and at least 2-by-3 multigraded, has target field
-  degree at least two, and would pull back to a planar Keller map of field
-  degree divisible by three and at least six.  Arbitrary Darboux pairs remain
+  degree at least three by THM-3794, and would pull back to a planar Keller
+  map of field degree divisible by three and at least nine.  Arbitrary Darboux pairs remain
   open, so no JC(2) counterexample is claimed.
 source: jc_quartic_c3_construct / higher-pole escape lane, 2026-08-23
 audit: >
@@ -28,7 +28,8 @@ audit: >
   independently replayed outputs byte-match.  An audit correction removed an unsupported
   identification with Miyanishi's exact type parameter r=2; the integral
   closure and its nonstandard deck character are now stated explicitly.
-depends_on: []
+depends_on:
+  - THM-3794-constant-unit-surfaces-have-no-quadratic-etale-plane-map
 related:
   - THM-3779-three-component-tower-maximal-danielewski-polynomial-observable
   - THM-3782-simple-pole-spectral-danielewski-completion-and-target-field-gate
@@ -586,17 +587,17 @@ is therefore finite.  Normal Hartogs extension gives the open set the same
 global functions as `A2`, and affineness would force `Y=A2`, contradicting
 `Pic(Y)=Z/3`.
 
-Consequently
+THM-3794 also excludes `d=2`, because `B^*=C^*`.  Consequently
 
 ```text
-d>=2.                                                 (58)
+d>=3.                                                 (58)
 ```
 
 The source atlas has degree three by `(16)`, so the pullback polynomial
 Keller pair would have function-field degree
 
 ```text
-[C(x,y):C(A,C)]=3d>=6.                                (59)
+[C(x,y):C(A,C)]=3d>=9.                                (59)
 ```
 
 Thus the exact first survivor is not another target shear or sparse

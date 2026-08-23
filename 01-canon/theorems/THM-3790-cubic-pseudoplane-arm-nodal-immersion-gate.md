@@ -9,7 +9,9 @@ status: >
   is constant or linear, the two degrees cannot both be quadratic, and the
   first possible bidegree is (2,3).  The nodal cubic profile realizes that
   boundary gate, but its canonical first-order lift has seven critical
-  points and is not a Darboux pair.  Arbitrary Darboux pairs remain open.
+  points and is not a Darboux pair.  By THM-3794 any surviving surface map
+  has degree at least three and pulls back to planar degree at least nine.
+  Arbitrary Darboux pairs remain open.
 source: root / multiple-fibre arm and injective-line lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS by jc_zero_debt_lift, 2026-08-23.  The audit
@@ -25,6 +27,7 @@ depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
 related:
   - THM-3788-dubouloz-palka-standard-chart-containment-obstruction
+  - THM-3794-constant-unit-surfaces-have-no-quadratic-etale-plane-map
 external:
   - "Gwozdziewicz, Injectivity on one line, arXiv:alg-geom/9305008, Theorem 1.1."
 script: 04-computation/jc2_cubic_pseudoplane_arm_nodal_gate_thm3790.py
@@ -124,7 +127,9 @@ is a polynomial Keller map.  If `gamma` were injective, `(10)` would be
 injective on the line `x=0`.  Gwozdziewicz's injective-line theorem then
 forces `(10)` to be a polynomial automorphism.  This is impossible: its
 function-field degree is the cubic atlas degree times the positive degree of
-`Y -> A2_(A,C)`, hence is divisible by three.  Therefore
+`Y -> A2_(A,C)`, hence is divisible by three.  THM-3785 and THM-3794 sharpen
+the two factors: the surface degree is at least three and the planar degree
+is at least nine.  Therefore
 
 ```text
 gamma is noninjective.                                                    (11)

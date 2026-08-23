@@ -2,7 +2,7 @@
 id: THM-3794
 title: "Constant-unit affine surfaces have no quadratic etale plane map"
 status: >
-  PROVED + PENDING INDEPENDENT HOSTILE AUDIT.  An integral affine surface
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED.  An integral affine surface
   over an algebraically closed field of characteristic zero whose only units
   are constants admits no dominant etale morphism to A2 of generic degree
   two.  The proof passes to the finite normalization, uses normal-surface
@@ -14,12 +14,17 @@ status: >
   respectively.
 source: root / quadratic-normalization branch-unit lane, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The normalization/open-immersion direction,
+  INDEPENDENT HOSTILE AUDIT PASS (jc_zero_debt_lift, 2026-08-23).  The audit
+  independently rederived the normalization inclusion and normalization-form
+  Zariski Main step; height and Cohen--Macaulay hypotheses for miracle
+  flatness; the trace-zero rank-one summand and Cayley--Hamilton quadratic
+  law; the entire non-etale fibre over h=0; and the branch-unit contradiction.
+  It also verified both degree-floor applications and the punctured squaring
+  hostile.  The normalization/open-immersion direction,
   local miracle-flatness hypotheses, trace-zero line summand, quadratic
   algebra law, entire ramification-fibre deletion, and unit pullback were
   checked separately.  The punctured squaring map is an exact hostile control
-  showing that nonconstant units are the missing coordinate.  Independent
-  hostile audit remains due.
+  showing that nonconstant units are the missing coordinate.
 depends_on: []
 related:
   - THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule
@@ -32,7 +37,7 @@ external:
 
 # THM-3794 -- constant units forbid quadratic etale maps to the plane
 
-**PROVED + PENDING INDEPENDENT HOSTILE AUDIT.**  Let `k` be algebraically
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k` be algebraically
 closed of characteristic zero, let `X=Spec B` be an integral affine surface
 with
 
@@ -191,5 +196,4 @@ surface degree two, regardless of the topology of its residual curve.
 
 The scheme-theoretic inputs are the normalization form of
 [Zariski's Main Theorem](https://stacks.math.columbia.edu/tag/05K0) and
-[miracle flatness](https://stacks.math.columbia.edu/tag/00R4).  **QED,
-conditional only on independent hostile audit.**
+[miracle flatness](https://stacks.math.columbia.edu/tag/00R4).  **QED.**
