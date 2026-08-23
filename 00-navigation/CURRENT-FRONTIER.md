@@ -324,45 +324,33 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
   excludes finite-spatial cycles. THM-3804 gives all Smith forms; THM-3824
   gives fixed-division tariffs and phase separation. Adaptive/projective
   chronology and every prize remain OPEN.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT;
-  Nagata/GGHV and THM-3543--3642 give degree/height floors and
-  low-sector closures. Audited THM-3687/3688 reach `J_0,J_1,J_2`;
-  `J_3+` and THM-3737's audit remain. THM-3685--3739 close W002/3/7/8 and
-  stabilized W004, not exceptional W004/W005/6 or interacting Cohn factors.
-  THM-3741/3754--3759/3765/3771/3772 close the named radial/Pell/cubic lanes;
-  THM-3770--3780 close rational target/filling operations.
-  THM-3782 closes covered simple-pole target words; THM-3781 closes every
-  scalar-centred `3x3` AP cell. THM-3783 gives the `m=1` surface
-  `r^3g=z^2-r/4` and degree floor `>=4`; THM-3786 closes its irregular
-  `2x3`/`3x2` cells, not common-step or arbitrary pairs. THM-3784's trace-zero
-  rungs have no nonzero base-field bracket; its `m=2` probe closes linear-leg
-  and one-correction slices, not the full rank-two intersection. Audited
-  THM-3785 gives `r^2e=z^3-c^3r`, `Pic=Z/3`, degree floor `>=6`, and
-  affine/homogeneous/`2x2` no-gos. THM-3787/3796/3798 close low support,
-  every one-collision `2x4`, common steps one--three, and their output swaps;
-  common step four and disjoint collision chains survive. THM-3790/3792/
-  3795/3799/3800/3803/3805--3807/3809/3810/3813--3815 close: r-independent corrections, monomials, every
-  `r g(e)` through degree four, quadratic-`g` plus constant `z^2`, and the
-  sharp fourteen-critical-point carrier. THM-3812 also forbids a Darboux pair
-  confined to arbitrary arm-coefficient `r/z^2` profiles.
-  THM-3791/3797/3802 identify the finite-etale resonant jet, its confluent
-  modification-tree boundary, and the actual plane-chart law
-  `H^2_dR=E/k`; a contact tree without charts constructs nothing. THM-3794
-  excludes degree-two etale maps under constant units. THM-3801 forces a
-  nonmonogenic `S3` completion; THM-3808's homogeneous packet is a Veronese
-  cone with rank-4 open units. THM-3811's nonlinear packet instead has one
-  rational ramification curve, `S*=k*`, `Cl(S)=Z^3`, primitive ramification
-  class, and the explicit affine etale complement
-  `U=Spec S[A/D,omega/D]` with `U*=k*` and `Pic(U)=Z^2`; THM-3816 gives an
-  independent positive-filtration proof of `S*=k*`.  The Picard group rules
-  out both `U=A2` and the THM-3785 pseudo-plane. THM-3817 proves pure `r<=5`;
-  THM-3814/3821 close all-degree `rz`/the first `rz^2`; THM-3826 closes pure
-  sextic support `<=3` (THM-3820 is structural).  Over `C`, THM-3823 excludes
-  finite/proper atlases. THM-3827/3831 force dual genus `>=3`, equality
-  row-pole parity `2/1`, and a two-arm cubic hit; THM-3832/3835 give the
-  root chart/denominator/reconstruction gates; THM-3821/3828/3829/3834 close
-  the displayed first `r^2z^2` grammar.  OPEN: nonproper atlases, denser sextics, higher rows,
-  poles, unrestricted pairs and `JC/DC(2)`; THM-3830 closes only a cross model.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  The older audited
+  chain THM-3543--3782 supplies degree/height floors and closes the named
+  Nagata/GGHV, Cohn, radial, Pell, simple-pole, low-support and target-word
+  cells; it does not close interacting Cohn factors, `J_3+`, arbitrary
+  supports, or arbitrary polynomial pairs.  THM-3783/3785 are the two live
+  pseudo-plane models; THM-3787--3821 close their displayed sparse rows,
+  while denser sextics, higher rows, poles and off-nodal branches survive.
+  The sharp construction anchor is THM-3811's nonlinear nonmonogenic `S3`
+  surface `U=Spec S[A/D,omega/D]`, with `U*=K*`, `Pic(U)=Z^2`, one rational
+  ramification curve and an etale degree-three target map.  THM-3823 excludes
+  finite/proper plane atlases over `C`, so any atlas must be nonproper.
+  THM-3827/3831 give both primitive row-genus floors `>=3`, explicit
+  genus-three hyperelliptic equality sidecars (row poles `2/1` only at
+  equality), and the saturated three-cubic/two-quadratic spectral atlas.
+  THM-3832/3835 prove the marked ratio `z=h/k` is birational but genuinely
+  rational, in reduced form, after every constant `PGL2` row change.
+  THM-3836 is the current all-degree core:
+  `P=3h^3+7h^2k+k^3=CS`, `(C,S)=1`, and
+  `kJ(h,C)-hJ(k,C)=lambda P`; some cubic pencil member must split into
+  nonempty comaximal factors reaching both Laurent arms.  THM-3838 adds
+  `deg h,deg k>=5`.  THM-3830 and THM-3837 close the intersecting cross and
+  the first comaximal line--hyperbola selector through quadratic corrections.
+  THM-3840 forces the target origin and one explicit smooth discriminant
+  endpoint into the Jelonek set.  The live construction problem is to solve
+  the factor/cofactor, divisibility and Keller equations with a genuinely
+  nonpolynomial ratio and nonstandard high-genus disconnected pencil; the
+  nonconstant-tower `r^2z` lane and unrestricted component geometries remain.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692

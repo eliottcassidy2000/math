@@ -2,8 +2,8 @@
 id: THM-3840
 title: "A nonlinear cubic plane atlas forces an origin/branch Jelonek pair"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Every polynomial Keller atlas of the THM-3811 surface has the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every polynomial
+  Keller atlas of the THM-3811 surface has the
   target origin and at least one of three explicit smooth cubic-branch values
   in its nonproper-value set.  THM-3836 supplies both Laurent arms; the row
   unit k is nonconstant on each etale source component, and a pole on its
@@ -11,12 +11,20 @@ status: >
   normalization parameter and surviving companion root are exact.
 source: jc_quartic_c3_construct / cubic two-arm nonproper-value lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The companion verifies all slope resultants,
+  INDEPENDENTLY HOSTILE-AUDITED by root on 2026-08-23.  The audit typed each
+  source curve as an irreducible component of the etale base change of a
+  smooth intrinsic Laurent arm, so the restriction is etale and open and its
+  pulled-back unit k is genuinely nonconstant.  It checked that a pole on the
+  normalized projective completion cannot acquire an affine source center,
+  while both target functions do acquire the stated centers, giving a valid
+  valuative Jelonek witness for the generically finite Keller map.  The arm
+  formulas were rederived from the repaired saturated THM-3831 chart.  The
+  companion verifies all slope resultants,
   both arm limits, discriminant incidence and smoothness, exclusion of triple
   roots, branch-normalization values, the companion Vieta packet, and
   pairwise distinctness of the three candidates.  The curve-completion and
   valuative nonproperness argument is human proof.  Normal and optimized runs
-  byte-match the frozen transcript; independent hostile audit remains.
+  byte-match the frozen transcript.
 depends_on:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3831-intrinsic-spectral-pencil-fibre-atlas-and-forced-cubic-two-arm-hit
@@ -34,8 +42,8 @@ hash_basis: raw LF bytes
 
 # THM-3840 -- the forced two-arm fibre gives a Jelonek pair
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**  Work over an algebraically closed field `K` of characteristic zero.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `K` of characteristic zero.
 Let
 
 ```text
@@ -89,9 +97,10 @@ U_a^+: C=-1/a^2,                                                (6)
 
 with each arm isomorphic to `G_m` using the intrinsic function `k`.
 
-The restriction of the etale morphism `psi` to either source component is
-again etale over the corresponding smooth arm.  A nonempty etale morphism of
-curves has open one-dimensional image.  Consequently
+Base-changing `psi` to either smooth intrinsic arm gives a smooth etale
+source curve, whose irreducible components are open and closed.  Thus the
+restriction to either chosen component is etale over that arm.  A nonempty
+etale morphism of curves has open one-dimensional image.  Consequently
 
 ```text
 k|_(E^-), k|_(E^+) are nonconstant units.                        (7)
@@ -192,4 +201,4 @@ Thus the three candidates are pairwise distinct.
 The theorem ties the mandatory bichromatic fibre to the precise `S_3`
 branch/companion-sheet transition.  It supplies two forced nonproper values,
 not a polynomial atlas, not the full nonproper curve, and not a Jacobian
-counterexample.  **QED, pending independent hostile audit.**
+counterexample.  **QED.**
