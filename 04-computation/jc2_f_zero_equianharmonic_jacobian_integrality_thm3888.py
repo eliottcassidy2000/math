@@ -163,6 +163,24 @@ zero(
     "inverse denominator vanishes at Q-minus",
 )
 
+# A genuine k(x)[y] polynomial point showing that x-integral descent and the
+# origin address are load-bearing, not cosmetic.
+T_hostile = -2 * K / (3 * a**2)
+G_hostile = 4 * K**2 / (3 * a**3) - L**2
+zero(
+    G_hostile**2 - quartic.subs(T, T_hostile),
+    "rational-x polynomial-y hostile square",
+)
+zero(
+    T_hostile - T_normalized.subs({uvar: a, vvar: -K}),
+    "hostile normalized section address",
+)
+zero(T_hostile.subs({x: 0, y: 0}) - sp.Rational(8, 3), "hostile origin failure")
+gate(
+    sp.cancel(a**2 * T_hostile).subs(x, -1) != 0,
+    "hostile has an a-zero pole",
+)
+
 # Exact factor polarization of the two T=0 branches.
 H = 3 * a**2 * T**2 + 8 * K * T + 6 * a * L**2
 zero((G - L**2) * (G + L**2) + T**2 * H - (G**2 - quartic), "T divisor factorization")
@@ -227,6 +245,8 @@ semantic = {
     "jacobian": "Ye^2=Xe^3-64*L^4*Delta",
     "boundary": "div(T)=O+P0-Qplus-Qminus;Qplus+Qminus=P0",
     "factor": "v2=K2+L2(u3-a3);T=(v-K)/(u2+au+a2)",
+    "hostile": "T=-2K/(3a2) is polynomial in y but fails x-integrality/address",
+    "integral_shell": "polynomial u,v,T forces deg_y(u) at most one",
     "surface": "generic y-fibres II^4+IV;rational;geometric MW rank6 torsion0",
     "scope": "two-section S-integrality and x-integral descent remain open",
 }
@@ -242,6 +262,8 @@ print("theorem=THM-3888-f-zero-equianharmonic-jacobian-and-two-section-integrali
 print("binary_quartic_invariant=I_zero")
 print("jacobian=Y^2=X^3-64L^4Delta")
 print("normalized_factor=(v-K)(v+K)=L^2(u-a)(u^2+au+a^2)")
+print("hostile_kxy=T=-2K/(3a^2),origin=8/3,a_zero_pole=yes")
+print("integral_Weierstrass_shell=deg_y(u)_at_most_1")
 print("generic_fibres=II,II,II,II,IV")
 print("geometric_MW=rank_6_torsion_0")
 print("polynomial_lane=two_section_S_integrality_plus_x_descent_OPEN")

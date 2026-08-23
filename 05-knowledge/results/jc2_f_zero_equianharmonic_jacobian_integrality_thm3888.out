@@ -2,9 +2,11 @@ theorem=THM-3888-f-zero-equianharmonic-jacobian-and-two-section-integrality
 binary_quartic_invariant=I_zero
 jacobian=Y^2=X^3-64L^4Delta
 normalized_factor=(v-K)(v+K)=L^2(u-a)(u^2+au+a^2)
+hostile_kxy=T=-2K/(3a^2),origin=8/3,a_zero_pole=yes
+integral_Weierstrass_shell=deg_y(u)_at_most_1
 generic_fibres=II,II,II,II,IV
 geometric_MW=rank_6_torsion_0
 polynomial_lane=two_section_S_integrality_plus_x_descent_OPEN
-semantic_sha256=35b441d1646b753f470ac4bfd61a7dccadc58f3625d2d5c1ad101fdaf96f65c3
-CHECKS=36
+semantic_sha256=c3bf6ca98856c178eb47e085321378b5e22e6c5797dc9573cd3aadfc6af11475
+CHECKS=40
 RESULT=PASS

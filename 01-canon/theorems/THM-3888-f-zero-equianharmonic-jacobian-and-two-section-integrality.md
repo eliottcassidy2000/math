@@ -10,6 +10,9 @@ status: >
   squares give sections integral away from two explicitly marked boundary
   sections whose sum is the second T=0 section.  The converse is asserted
   only for sections factoring through the original affine quartic chart.
+  An explicit nonzero k(x)[y] point proves that x-integral descent and the
+  origin address are load-bearing.  Within the integral Weierstrass-coordinate
+  shell, polynomiality forces deg_y(u)<=1; every higher u-degree is empty.
   Effective two-section S-integral enumeration, x-integral descent, a Keller
   atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3885 elliptic reframe, 2026-08-23
@@ -19,12 +22,14 @@ audit: >
   four marked sections and their chord law, the T-divisor factorization, the
   generic squarefree y-discriminant, short-Weierstrass discriminant, infinity
   minimalization, IV component addresses, the normalized cubic-factor chart,
-  and the 3-division polynomial in 36 active gates.  Normal and optimized runs
+  the explicit descent-hostile point, and the 3-division polynomial in 40
+  active gates.  Normal and optimized runs
   must byte-match the frozen
   output.  Independent audit must recheck extension to smooth projective
   models, the exact one-way integrality scope at bad fibres, rationality and
   Shioda--Tate inputs, torsion injection at IV, and the local intersection of
-  the two boundary sections.
+  the two boundary sections.  The final integral-shell degree argument and
+  explicit descent-hostile point await a focused delta audit.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
   - THM-3885-cusp-residual-f-zero-arm-dichotomy-and-quadratic-closure
@@ -34,9 +39,9 @@ related:
   - THM-3886-cusp-residual-equality-seam-second-layer-trichotomy
 script: 04-computation/jc2_f_zero_equianharmonic_jacobian_integrality_thm3888.py
 output: 05-knowledge/results/jc2_f_zero_equianharmonic_jacobian_integrality_thm3888.out
-script_sha256: 26a78269c1c9a86ddffad83638dc6cb67bc0beb089d7420d6b416afb8db21635
-output_sha256: a1615bddc33bef6e8008a76d94145ab459a4fc4c48344b5087888cf163ab9f77
-semantic_sha256: 35b441d1646b753f470ac4bfd61a7dccadc58f3625d2d5c1ad101fdaf96f65c3
+script_sha256: c8557575896e1c2581b568e008b52b62ad737bd12641f98cd06d28b835f60090
+output_sha256: b8922e452e8151bfa8ddb82be758407dec6f561549679d1f01f229d49fa5948b
+semantic_sha256: c3bf6ca98856c178eb47e085321378b5e22e6c5797dc9573cd3aadfc6af11475
 hash_basis: raw LF bytes
 ---
 
@@ -167,6 +172,43 @@ denominators and `(9d)` must be replaced by its valuation form.  This is why
 the first integral height shell is the cheapest exact computation, but not
 the whole problem.
 
+### 2.2. The entire integral Weierstrass shell has `deg_y(u)<=1`
+
+The first height-shell computation admits an all-degree proof.  Suppose
+
+```text
+u,v in k(x)[y],              T=(v-K)/(u^2+au+a^2) in k(x)[y].   (9e)
+```
+
+Put `m=deg_y(u)`.  If `m>=2`, equation `(9b)` has leading degree `3m`, since
+`deg(K^2)=4`.  Therefore an odd `m` is impossible, while for even `m`
+
+```text
+deg_y(v)=3m/2 < 2m=deg_y(u^2+au+a^2).                    (9f)
+```
+
+The same strict inequality holds at `m=2`.  Hence the divisibility in `(9e)`
+forces `v-K=0`.  Equation `(9b)` then gives `u^3=a^3`, contradicting `m>=2`.
+Thus
+
+```text
+u,v,T polynomial in y  ==>  deg_y(u)<=1.                 (9g)
+```
+
+The two remaining degrees are finite grammars.  If `m=1`, then
+`deg_y(v)=2`, so `(9e)` forces `T` to be constant in `y`.  If `m=0`, the
+factorization `(9c)` has constant right-hand side apart from the two factors
+`v-K,v+K`; their difference is the nonconstant polynomial `2K`.  Their
+product can be constant only when it is zero.  Hence
+
+```text
+u^3=a^3,                         v=+K or -K.               (9h)
+```
+
+This closes every `m>=2` integral-coordinate section at once.  It does not
+touch Mordell--Weil sections whose `u,v` have denominators; those are the
+genuinely remaining height shells.
+
 ## 3. The four marked sections and the divisor of `T`
 
 Choose `s in k` with `s^2=-3`.  Besides the origin, the second point over
@@ -263,6 +305,30 @@ T(0,0)=0                                                   (18)
 
 and THM-3885's `a=0` arm dichotomy.  These descent and integrality conditions
 are invisible to the geometric Mordell--Weil rank computed below.
+
+They are also genuinely necessary.  The normalized integral section
+
+```text
+u=a,                         v=-K                           (18a)
+```
+
+gives the nonzero exact solution over `k(x)[y]`
+
+```text
+T_*=-2K/(3a^2),
+G_*=4K^2/(3a^3)-L^2.                                     (18b)
+```
+
+Direct substitution gives `G_*^2=q(T_*)`.  But
+
+```text
+T_*(0,0)=8/3,                    ord_(a=0)(T_*)=-2,        (18c)
+```
+
+and `G_*` has an `a=0` pole of order three.  Thus the generic two-section
+integral problem is **not empty**.  This point is excluded precisely by the
+global `k[x,y]` descent and origin address, so neither condition may be
+dropped from a future closure argument.
 
 ## 5. Generic fibre packet over the `y`-line
 
@@ -386,9 +452,8 @@ quartic coefficient Groebner basis.  It is:
 
 1. compute an explicit Mordell--Weil basis for the `II^4+IV` rational
    elliptic surface and express `Q_+,Q_-,P_0` in that basis;
-2. enumerate the first (polynomial `u,v`) height shell using the cubic
-   factor--cofactor identity `(9c)` and the exact divisibility `(9d)`, then
-   continue through rational-coordinate height shells subject to no finite
+2. use `(9g)` as the completed integral-coordinate base case and enumerate
+   the first rational-coordinate denominator shell, subject to no finite
    intersection with `Q_+ union Q_-` and the `IV` address `(31)-(32)`;
 3. apply the inverse denominator test
 
