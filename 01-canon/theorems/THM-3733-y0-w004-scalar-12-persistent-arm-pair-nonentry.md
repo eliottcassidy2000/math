@@ -2,22 +2,24 @@
 id: THM-3733
 title: "W004 scalar-12 persistent-arm pair nonentry"
 status: >
-  PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.  Both named
-  W004 all-scale placements with scalar fibre 12+20 and a persistent arm at
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Both named W004
+  all-scale placements with scalar fibre 12+20 and a persistent arm at
   address 12 are Darboux-empty in the y=0 collision ring.  In the (-2,1)
   orientation, endpoint transport forces second-order arm vanishing; in the
   (1,-2) orientation it forces an uncancellable negative bivariate charge.
-  This is not proved canon until audit promotion, and it does not close the
-  distinct anchor-20 family, all of W004, the full 3x4 cell, general quartic
-  C3 data, or JC(2).
+  This does not close the distinct anchor-20 family, all of W004, the full
+  3x4 cell, general quartic C3 data, or JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The exact companion checks both absolute
+  INDEPENDENTLY HOSTILE-AUDITED.  The exact companion checks both absolute
   placements, all endpoint gcd residues modulo 5, 4, and 3, both primitive
   and lowest-row signs across complete residue windows, the strengthened
   delta=5 regularity order, the arm-death and negative-Laurent alternatives,
-  and both n=1 deletions.  Normal and optimized runs byte-match the frozen
-  transcript.  Independent hostile audit remains open.
+  and both n=1 deletions.  An independent derivation reconstructed both
+  primitives and lowest operators, the delta=1/5 valuation split, the exact
+  arm-law use, the rational-function normalization and reduced numerator,
+  and both 2x4 boundaries.  Normal and optimized runs byte-match the frozen
+  transcript.
 depends_on:
   - THM-3583-universal-exponent-two-two-by-four-weight-darboux-nonentry
   - THM-3603-three-by-four-support-collision-cone-and-fibre-cut-atlas
@@ -35,8 +37,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3733 -- both persistent-arm W004 scalar-12 families are empty
 
-**PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.**  Work over
-`C` in the THM-3696 collision ring.  Put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over `C`
+in the THM-3696 collision ring.  Put
 
 ```text
 h=1-b^2,
@@ -253,5 +255,4 @@ python3 -B 04-computation/jacobian_y0_w004_scalar12_persistent_arm_pair_thm3733.
 python3 -B -O 04-computation/jacobian_y0_w004_scalar12_persistent_arm_pair_thm3733.py
 ```
 
-Both commands must agree byte for byte with the frozen transcript.  Audit
-promotion is required before this proof candidate enters proved canon.
+Both commands must agree byte for byte with the frozen transcript.  **QED.**
