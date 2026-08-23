@@ -1,0 +1,11 @@
+theorem=THM-3757-Pell-Chebyshev-three-charge-hyperelliptic-obstruction-tower
+scope=algebraically_closed_characteristic_zero;all_integer_depths_n>=1
+component=Q_n=X+chi_n(XT)+T*(XT-1)*S_n(XT)^2
+smoothness=critical_resultant_equals_negative_profile_with_absorbed_roots
+jacobian_mate=no_rational_mate_at_every_depth
+mechanism=n1_logarithmic_infinity_residue;n>=2_nonzero_holomorphic_time_form
+depth_controls=8;n1:delta2:genus0,n2:delta3:genus1,n3:delta4:genus1,n4:delta5:genus2,n5:delta6:genus2,n6:delta7:genus3,n7:delta8:genus3,n8:delta9:genus4
+groebner_controls=4;mate_obstructions=23;n1_split_fibre=1
+semantic_sha256=551870d0b77f4ba55104af7d7b6a3112748a4d2646c3634239f5b89cca2e6234
+CHECKS=167
+RESULT=PASS
