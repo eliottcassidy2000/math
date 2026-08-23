@@ -571,6 +571,13 @@ is already testable: when an actual filtration is proposed, compare
 THM-3412 deficit as the hostile template.  The reservation itself proves no
 filtration, lift, or residual obstruction.
 
+THM-3885 is likewise only a **RESERVED / UNPROVED EMPTY STUB**, now for the
+complementary `f=0` boundary.  The cheapest generated probe is nevertheless
+precise: substitute `f=0` into THM-3881's two proved sidecars
+`L^2 f` and `P f^2-T^2`, split off the already closed `T=0` corner, and apply
+the proposed Mason/degree gate to `T!=0`.  This is a task specification, not
+the reserved theorem.
+
 ## 11. Root companion reproduction
 
 Run
