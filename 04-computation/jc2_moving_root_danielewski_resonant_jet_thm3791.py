@@ -45,16 +45,20 @@ def coefficient(poly: sp.Expr, exponent: int) -> sp.Expr:
     return sp.Poly(sp.expand(poly), c).coeff_monomial(c**exponent)
 
 
-# Smooth Poisson packets, exact arm charts, and transition residues for five
-# pole orders.  The controls contain lower, resonant, and higher root jets.
+# Smooth Poisson packets, Hensel-division arm charts, and transition residues
+# for five pole orders.  A c^n deformation destroys the displayed product
+# factorization without changing the canonical jets modulo c^n.
 for n in range(1, 6):
-    beta = [
-        c ** (n - 1) + c ** (n + 1),
-        5 + 2 * c ** (n - 1) + 2 * c ** (n + 2),
-        11 - c ** (n - 1) + 3 * c ** (n + 2),
+    lower = c if n >= 3 else sp.Integer(0)
+    jets = [
+        lower + c ** (n - 1),
+        5 - 2 * lower + 2 * c ** (n - 1),
+        11 + 3 * lower - c ** (n - 1),
     ]
     gamma = sp.Integer(2)
-    Sigma = sp.expand(gamma * sp.prod(b - root for root in beta))
+    base = sp.expand(gamma * sp.prod(b - root for root in jets))
+    deformation = b**2 + (c + 1) * b + c**2 + 1
+    Sigma = sp.expand(base + c**n * deformation)
     D = sp.expand(c**n * e - Sigma)
 
     same(jacobian_poisson(D, c, b), c**n, f"n={n} bracket c,b")
@@ -72,16 +76,22 @@ for n in range(1, 6):
     same(jacobian_poisson(D, D, b), 0, f"n={n} D central b")
     same(jacobian_poisson(D, D, e), 0, f"n={n} D central e")
 
-    constants = [sp.expand(root.subs(c, 0)) for root in beta]
+    constants = [sp.expand(root.subs(c, 0)) for root in jets]
     check(len(set(constants)) == 3, f"n={n} distinct constant roots")
-    for i, root in enumerate(beta):
-        other_product = sp.expand(gamma * sp.prod(b - beta[j] for j in range(3) if j != i))
+    for i, root in enumerate(jets):
+        quotient, remainder = sp.div(Sigma, b - root, b)
+        quotient = sp.expand(quotient)
+        remainder = sp.expand(remainder)
+        same(remainder, Sigma.subs(b, root), f"n={n} division remainder i={i}")
+        R_i = sp.cancel(remainder / c**n)
+        check(sp.denom(R_i) == 1, f"n={n} Hensel divisibility i={i}")
+        check(remainder != 0, f"n={n} genuinely nonfactorized i={i}")
         b_chart = sp.expand(root + c**n * aa)
-        e_chart = sp.expand(aa * other_product.subs(b, b_chart))
+        e_chart = sp.expand(aa * quotient.subs(b, b_chart) + R_i)
         same(D.subs({b: b_chart, e: e_chart}), 0, f"n={n} chart relation i={i}")
         same(sp.diff(b_chart, aa) / c**n, 1, f"n={n} local symplectic i={i}")
         check(
-            other_product.subs({c: 0, b: constants[i]}) != 0,
+            quotient.subs({c: 0, b: constants[i]}) != 0,
             f"n={n} retained arm coefficient i={i}",
         )
         check(
@@ -89,18 +99,18 @@ for n in range(1, 6):
             f"n={n} smooth arm i={i}",
         )
 
-    resonant = [coefficient(root, n - 1) for root in beta]
+    resonant = [coefficient(root, n - 1) for root in jets]
     for i in range(3):
         for j in range(i + 1, 3):
-            transition = sp.cancel((beta[i] - beta[j]) / c**n)
+            transition = sp.cancel((jets[i] - jets[j]) / c**n)
             same(
-                (b - beta[j]) / c**n - (b - beta[i]) / c**n,
+                (b - jets[j]) / c**n - (b - jets[i]) / c**n,
                 transition,
                 f"n={n} transition {i},{j}",
             )
-            primitive_difference = sp.expand((beta[j] - beta[i]) / c**n)
+            primitive_difference = sp.expand((jets[j] - jets[i]) / c**n)
             same(
-                coefficient(sp.expand((beta[j] - beta[i])), n - 1),
+                coefficient(sp.expand((jets[j] - jets[i])), n - 1),
                 resonant[j] - resonant[i],
                 f"n={n} residue coefficient {i},{j}",
             )
@@ -110,7 +120,7 @@ for n in range(1, 6):
             )
 
             # Every nonresonant monomial has an explicit rational primitive.
-            difference_poly = sp.Poly(sp.expand(beta[j] - beta[i]), c)
+            difference_poly = sp.Poly(sp.expand(jets[j] - jets[i]), c)
             for (degree,), coeff_value in difference_poly.terms():
                 if degree == n - 1:
                     continue
@@ -174,20 +184,20 @@ check(
 
 
 semantic = {
-    "atlas": "Ui=A2_(c,ai); all multi-overlaps=D(c)=Gm_x_A1; ai=(b-beta_i(c))/c^n",
-    "class": "[omega]=[([c^(n-1)]beta_i(c))_i] in k^h/k*1",
+    "atlas": "Ui=A2_(c,ai); all multi-overlaps=D(c)=Gm_x_A1; ai=(b-HenselJet_i(c))/c^n",
+    "class": "[omega]=[([c^(n-1)]HenselJet_i(c))_i] in k^h/k*1",
     "controls": "n1_fixed_nonexact;n>=2_fixed_exact;common_resonant_translation_exact;THM3789=(1,0,...,0)",
     "darboux": "nonconstant_resonant_vector_implies_no_polynomial_Darboux_pair",
     "hypercover": "q1_row_starts_at_edges;ker(edge_to_triangle)=vertex_differences=k^h/constants",
-    "surface": "c^n e=gamma*product_i(b-beta_i(c)); beta_i(0)_pairwise_distinct",
+    "surface": "c^n e=Sigma(c,b); Sigma(0,b)_squarefree; no_global_factorization_needed",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
 print("theorem=THM-3791-moving-root-danielewski-resonant-jet-de-rham-law")
-print("surface=c^n*e=gamma*product_i(b-beta_i(c));beta_i(0)_distinct")
-print("atlas=Ui=A2_(c,ai);ai=(b-beta_i(c))/c^n;multi_overlap=D(c)")
-print("transition=aj-ai=(beta_i-beta_j)c^(-n)")
-print("resonance=r_i=coefficient_[c^(n-1)]beta_i(c)")
+print("surface=c^n*e=Sigma(c,b);Sigma(0,b)_squarefree;no_factorization_needed")
+print("atlas=Ui=A2_(c,ai);ai=(b-HenselJet_i(c))/c^n;multi_overlap=D(c)")
+print("transition=aj-ai=(HenselJet_i-HenselJet_j)c^(-n)")
+print("resonance=r_i=coefficient_[c^(n-1)]HenselJet_i(c)")
 print("derham=H2=k^h/k*1;[omega]=[r];exact_iff_r_constant")
 print("darboux=nonconstant_r_implies_no_pair")
 print("controls=n1_fixed_obstructed;n_ge_2_fixed_exact;THM3789_r=(1,0,...,0)")
