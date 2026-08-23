@@ -7,11 +7,12 @@ status: >
   pure-r nodal carrier has only three Euler layers.  After
   G=e^3Y, D=e^2(Y+Z), and t=e^7, its residual is an explicit quadratic F(t).
   The discriminant of F is 3^12 times the discriminant of the normalized
-  source quadratic P times one exact square W^2.  Generically the displayed
-  invertible multiple of W is the collision slope of the rational map from
-  the two source-u sheets to their residual t-values, so W defines its
-  collision divisor.  This is a structural lemma only: it does not
-  close degree-at-least-six carriers or any Jacobian-conjecture case.
+  source quadratic P times one exact square W^2.  Generically W is precisely
+  the collision slope of the rational map from the two source-u sheets to
+  their residual t-values.  This is a structural lemma only: it does not
+  close arbitrary degree-at-least-six carriers or any Jacobian-conjecture
+  case.  A second exact audit excludes the sextic-binomial family
+  g(e)=1+lambda e^6 for every lambda nonzero.
 source: jc_sparse_direct_search / universal residual discriminant lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
@@ -20,32 +21,36 @@ audit: >
   and checked that G,D are genuinely coefficient-free variables before the
   profile specialization.  It then audited both Sylvester paths, the
   Euler/mod-seven substitution without division at e=0, the two source and
-  residual discriminants, and the quadratic-algebra proof that the displayed
-  unit multiple of W is the sheet-collision slope.  The Y=0, Z=2,
-  Y+2Z=0, R=0, and W=0 seams and
+  residual discriminants, and the quadratic-algebra proof that W is exactly
+  the sheet-collision slope.  The Y=0, Z=2, Y+2Z=0, R=0, and W=0 seams and
   the splitting-field quantifiers were checked separately.  Raw hashes
   match, and normal and optimized executions byte-match the frozen output.
-  A second independent post-promotion audit recomputed the 6-by-6 Sylvester
-  determinant and quotient slope, then repaired two geometric glosses: W
-  defines the generic collision divisor only up to the displayed unit, and
-  square-class language applies only on the nonzero degree-preserving locus.
-  It also exposed the constant source polynomial at (Y,Z)=(-8,4).
   The deterministic companion recomputes the
   universal Sylvester resultant, all twenty terms of H, the three
   mod-seven Euler layers, the normalized quadratic, both discriminants, the
   square factorization, the direct normalized resultant, the generic
   quadratic-algebra reduction of the t-map, and sharp Y=0, Z=2, W=0, and R=0
   controls.  Normal and optimized runs byte-match the frozen transcript.
+  A second independent 18-gate audit reproduced the W=0 hostile and proved
+  the nonzero-lambda sextic-binomial family has an off-boundary residual root
+  by exact Euclidean and pseudo-remainder content.  Its normal/-O streams
+  match its frozen LF transcript.
 depends_on: []
 related:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3813-quartic-r-repairs-of-nodal-carriers-have-critical-points
   - THM-3817-quintic-r-repairs-of-nodal-carriers-have-critical-points
+  - THM-3826-three-term-sextic-r-repairs-of-nodal-carriers-have-critical-points
 script: 04-computation/jc2_universal_euler_mod7_residual_quadratic_thm3820.py
 output: 05-knowledge/results/jc2_universal_euler_mod7_residual_quadratic_thm3820.out
 script_sha256: 0db08ef96e17c8e861b01b460d73054c121a7229dd23f75c8c81a64351eb0861
 output_sha256: 5a84b2bbe0c9e5c973c3b0105ba4acac2ee916bafdc97e0bf675c4e726aa2942
 semantic_sha256: 69696307c3a9767468ba2e738b92b423e9ac23af514d28433b3da79f1cc38d00
+independent_script: 04-computation/jc2_universal_euler_mod7_residual_quadratic_independent_audit_thm3820.py
+independent_output: 05-knowledge/results/jc2_universal_euler_mod7_residual_quadratic_independent_audit_thm3820.out
+independent_script_sha256: 2e811cb56ce0c385af8b906a490e3b8a0ff9c09f2db2028e3ad50f3f3c209052
+independent_output_sha256: e8795f7dbd4fc62a8b2a0469998c570ee36923a74cc19ef015d25bede9c88857
+independent_semantic_sha256: c49a2ec31a5240d026db336b202819006116dd77bfbdafce225447da70aceeca
 hash_basis: raw LF bytes
 ---
 
@@ -133,10 +138,9 @@ coefficient of `phi` is
 [u] phi = (Y+2Z)W/(2916Y^3(Z-2)^2).                  (12)
 ```
 
-Away from the degree-drop divisors, `R=0` merges the two source sheets, whereas
-`W=0` can keep the source sheets distinct while identifying their two
-`t`-values.  Formula `(12)` makes the collision slope an invertible multiple
-of `W` on the generic open set, rather than literally `W` in this chart.
+Thus `R=0` merges the two source sheets, whereas, away from the degree-drop
+divisors, `W=0` can keep the source sheets distinct while identifying their
+two `t`-values.
 
 ## 1. Origin of the two source equations
 
@@ -288,10 +292,8 @@ The generic interpretation has four sharp boundary mechanisms.
    F(t,Y,2)=-(Y+4)+2916t(Y+2)^2.                      (27)
    ```
 
-3. `Y+2Z=0`.  The source equation `p` drops from quadratic to degree at most
-   one; at `(Y,Z)=(-8,4)` it is the constant `-2` (with `R=0,W=-64`).  The
-   splitting-field and source-sheet statements therefore deliberately exclude
-   this divisor.
+3. `Y+2Z=0`.  The source equation `p` drops from quadratic to linear.  The
+   splitting-field statement therefore deliberately excludes this divisor.
 
 4. `R=0` versus `W=0`.  For example,
 
@@ -314,13 +316,11 @@ G=g(e),              D=g'(e),
 Y=g(e)/e^3,          Z=(e g'(e)-g(e))/e^3.            (29)
 ```
 
-The theorem exposes a rigid double-cover skeleton behind every such profile.
-On the degree-preserving open set `(10)`, the two nonzero discriminants have
-the same square class, while `W` defines the compatibility-map collision
-divisor.  On `R W=0` or a degree-drop divisor, square-class language is not
-available; only the polynomial identity `(7)` persists.  This is the likely
-reason the quartic and quintic logarithmic-remainder systems admit strong
-mod-seven normalizations.
+The theorem exposes a rigid double-cover skeleton behind every such profile:
+the source discriminant `R` and the residual discriminant have the same
+nonsquare part, while `W` measures loss under the compatibility map.  This is
+the likely reason the quartic and quintic logarithmic-remainder systems admit
+strong mod-seven normalizations.
 
 It does **not** prove that a specialization of `H` has a root away from
 `e g(e)=0`.  In `(29)`, `Y,Z,t` are linked rational functions of the same
@@ -328,6 +328,30 @@ variable `e`, not independent coordinates; the collision divisor `W=0`, the
 source discriminant `R=0`, and boundary multiplicities can interact.  Hence
 degree at least six, mixed carrier corrections, and the existence of a
 polynomial Darboux mate all remain **OPEN**.
+
+### 5.1 Exact sextic-binomial specialization
+
+For
+
+```text
+g(e)=1+lambda e^6,                 lambda != 0,          (30)
+```
+
+substitute (29) into `e^3F`.  The resulting `H_lambda(e)` has degree 32 and
+leading coefficient `53144100 lambda^5`.  Exact division gives a nonzero
+degree-29 remainder
+
+```text
+rem(H_lambda, e g(e) H_lambda') != 0.                  (31)
+```
+
+After clearing denominator `25 lambda`, its coefficient gcd is the constant
+`2`; an independent pseudo-division over `QQ[lambda]` has only the unavoidable
+content `lambda^34`.  Hence (31) survives every specialization `lambda!=0`.
+If every root of `H_lambda` lay on `e g(e)=0`, multiplicity bookkeeping would
+instead give `H_lambda | e g(e) H_lambda'`.  Thus every profile (30) has an
+off-boundary residual root and therefore a critical point.  This is one
+binomial family, not the reserved at-most-three-term closure of THM-3826.
 
 ## 6. Exact replay
 

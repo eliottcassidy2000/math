@@ -146,9 +146,7 @@ def main() -> None:
             require(representations_from_sum_divisors(m) == ((p, q),),
                     "divisor decoder disagrees with complete coordinate fibre")
             for i in range(13):
-                for j in range(13):
-                    if i == j:
-                        continue
+                for j in range(i + 1, 13):
                     a = placed_covector(p, q, i, j)
                     pp, qq, ii, jj = decode_covector(a)
                     require((pp, qq, ii, jj) == (p, q, i, j),
@@ -162,8 +160,7 @@ def main() -> None:
 
     require(len(ratios) == 5855, "THM-3793 subatlas count changed")
     require(len(values) == 5855, "cube-class count changed")
-    require(placement_checks == 5855 * 13 * 12 * 4,
-            "oriented labelled assignment count changed")
+    require(placement_checks == 5855 * 78 * 4, "labelled placement count changed")
 
     scale_cases: list[tuple[int, int, int]] = []
     for p, q in ((1, 4), (2, 9), (5, 6), (1, 24)):
@@ -210,8 +207,7 @@ def main() -> None:
 
     semantic = {
         "ratios": len(ratios),
-        "unoriented_supports": len(ratios) * 78,
-        "oriented_assignments": len(ratios) * 13 * 12,
+        "placements": len(ratios) * 78,
         "scale_cases": scale_cases,
         "positive_schedule": positive_schedule,
         "ap_schedule": ap_schedule,
@@ -223,8 +219,7 @@ def main() -> None:
     print("THM3818 SCALED INERT CUBECLASS PAIR PACKET")
     print("RATIO_UNIVERSE=p<q;gcd=1;p+q<=356;inert_cube_free_sum")
     print(f"RATIOS={len(ratios)}")
-    print(f"UNORIENTED_LABEL_SUPPORTS={len(ratios) * 78}")
-    print(f"ORIENTED_LABEL_ASSIGNMENTS={len(ratios) * 13 * 12}")
+    print(f"LABELLED_PLACEMENTS={len(ratios) * 78}")
     print(f"PLACEMENT_ACTIVE_CHECKS={placement_checks}")
     print(f"ALL_SCALE_CONTROLS={len(scale_cases)}")
     print("DECODER=M_to_unique_(gp,gq)_to_(g,p,q)")

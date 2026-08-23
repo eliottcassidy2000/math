@@ -16,18 +16,20 @@ audit: >
   valuation invoice with arbitrary nonprimitive scale, checked that the
   exponent cap belongs on the primitive sum, verified the divisibility and
   short-multiple step, reconstructed the unordered-prime mass correction,
-  and retained split-prime and exponent-three hostiles.  The assertion-free
-  companion passes normally and under optimization against its frozen
-  transcript.
+  and retained split-prime and exponent-three hostiles.  MISTAKE-450's
+  downstream terminology repair now reports 456,690 unoriented supports and
+  913,380 oriented assignments separately.  The assertion-free companion
+  passes normally and under optimization against its frozen transcript.
 depends_on:
   - THM-463-two-cube-representations-are-a-divisor-property-on-the-split-axis
   - THM-3730-positive-distinct-two-cube-support-abscissa
 related:
   - THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction
+  - THM-3818-scaled-inert-cubeclass-support-two-pair-packet
 script: 04-computation/two_cube_inert_cubefree_singleton_thm3793.py
 output: 05-knowledge/results/two_cube_inert_cubefree_singleton_thm3793.out
-script_sha256: 4b5e7052d0698a86e43aab4f6c99619aa6014abe2315456122ce02ba6db1adea
-output_sha256: 3c4d8cd4d375ea823bc6649ce79730ff4e78b04179884034a1c82d13cd37459a
+script_sha256: fecde0faf77e919a4d643d2ebede6822fb5b2749b481d2691e43a913a0a84fe9
+output_sha256: e40beb9a11f934846dbb44938f443462b14d40fb1fd09af3b89ceeb97e15230c
 hash_basis: raw LF bytes
 ---
 
@@ -324,7 +326,8 @@ census is
 ```text
 94 admissible sums,
 5,855 unordered coprime ratios,
-456,690 labelled rows after C(13,2)=78 placements.
+456,690 unoriented supports after C(13,2)=78 choices,
+913,380 oriented assignments after 13*12 choices.
 ```
 
 On this subset, `(a,b)->a^3+b^3` is injective and the singleton divisor fibre

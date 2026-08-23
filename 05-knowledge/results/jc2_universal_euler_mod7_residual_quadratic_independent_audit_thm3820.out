@@ -1,0 +1,14 @@
+target=RESERVED-THM-3820-cheapest-exact-test
+source_discriminant=Y**2 + 2*Y*Z + Z**2 - 8*Z + 16
+residual=2125764*Y**3*Z**2*t**2 - 8503056*Y**3*Z*t**2 + 8503056*Y**3*t**2 - 729*Y**2*Z**2*t + 2916*Y**2*Z*t - 1458*Y*Z**3*t + 8748*Y*Z**2*t - 17496*Y*Z*t + 23328*Y*t - Y - 729*Z**4*t + 8748*Z**3*t - 34992*Z**2*t + 46656*Z*t - 2*Z
+residual_discriminant=531441*(Y**2 + 2*Y*Z + Z**2 - 8*Z + 16)*(Y*Z**2 - 4*Y*Z + 8*Y + Z**3 - 8*Z**2 + 16*Z)**2
+quotient_scalar=531441
+quotient_square_root=Y*Z**2 - 4*Y*Z + 8*Y + Z**3 - 8*Z**2 + 16*Z
+hostile_jet=Y:-9/5,Z:1;source_disc=216/25;residual_disc=0
+hostile_double_t_root=5/39366
+sextic_binomial_H=53144100*E**32*lam**5 - 42515280*E**29*lam**4 + 138174660*E**26*lam**4 + 8503056*E**26*lam**3 - 119042784*E**23*lam**3 - 656100*E**22*lam**4 + 97785144*E**20*lam**3 + 25509168*E**20*lam**2 + 1326780*E**19*lam**3 - 102036672*E**17*lam**2 + 262440*E**16*lam**3 - 962280*E**16*lam**2 - 4251528*E**14*lam**2 + 25509168*E**14*lam - 498636*E**13*lam**2 + 256608*E**13*lam - 17006112*E**11*lam - 26244*E**10*lam**2 + 279936*E**10*lam - 14880348*E**8*lam + 8503056*E**8 + 61236*E**7*lam - 23328*E**7 - 11*E**6*lam + 8503056*E**5 - 17496*E**4 + 2125764*E**2 - 2916*E + 1
+sextic_boundary_remainder_degree=29
+sextic_boundary_denominator=25*lam
+sextic_boundary_coefficient_gcd=2
+CHECKS=18
+semantic_sha256=c49a2ec31a5240d026db336b202819006116dd77bfbdafce225447da70aceeca

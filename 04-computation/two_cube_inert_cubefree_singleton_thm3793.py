@@ -156,8 +156,10 @@ def main() -> None:
     require(singleton_ratio_atlas == 5855, "singleton ratio subatlas count changed")
     require(singleton_all_pairs == 7991, "all-pair singleton row count changed")
     require(len(lrc_rows) == 94, "admissible LRC sum count changed")
-    labelled_ratio_subatlas = 78 * singleton_ratio_atlas
-    require(labelled_ratio_subatlas == 456690, "labelled ratio count changed")
+    unoriented_supports = 78 * singleton_ratio_atlas
+    oriented_assignments = 156 * singleton_ratio_atlas
+    require(unoriented_supports == 456690, "unoriented support count changed")
+    require(oriented_assignments == 913380, "oriented assignment count changed")
 
     # Exact combinatorial controls for the two-prime critical-mass amplification.
     inert_primes = [p for p in range(5, sum_cap + 1)
@@ -214,7 +216,8 @@ def main() -> None:
     print("GENERALIZED_ACTIVE_CHECKS", generalized_checks)
     print("LRC_TOTAL_UNORDERED_RATIOS", total_ratio_atlas)
     print("LRC_SINGLETON_CODED_RATIOS", singleton_ratio_atlas)
-    print("LRC_SINGLETON_CODED_LABELLED_ROWS", labelled_ratio_subatlas)
+    print("LRC_SINGLETON_CODED_UNORIENTED_SUPPORTS", unoriented_supports)
+    print("LRC_SINGLETON_CODED_ORIENTED_ASSIGNMENTS", oriented_assignments)
     print("LRC_ADMISSIBLE_PAIR_SUMS", len(lrc_rows))
     print("LRC_ALL_SINGLETON_PAIR_VALUES", singleton_all_pairs)
     print("LRC_ROW_SHA256", semantic_digest)
