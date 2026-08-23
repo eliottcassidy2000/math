@@ -3,19 +3,20 @@
 **Session status (2026-08-23).**  The five-vertex skew-gain identities and the
 equality-seam three-case law below are **PROVED algebraically,
 VERIFIED-EXACT, and INDEPENDENTLY AUDITED** as necessary statements.  The
-two-arm `f=0` closure through total degree six is now canonized as
-[THM-3893](../01-canon/theorems/THM-3893-cusp-residual-f-zero-two-arm-degree-six-closure.md),
-with status **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**.  The
-companion scripts have normal/optimized byte matching as their reproducibility
-gate.  During the session,
-[THM-3886](../01-canon/theorems/THM-3886-cusp-residual-equality-seam-second-layer-trichotomy.md)
-was independently promoted on `origin/main` as a proof candidate.  This
-session then completed the requested hostile audit: the tie-depth theorem
-independently verifies its leading filtration envelope and stable range, while
-separate full homogeneous replays verify both exceptional `n=1,2` closures.
-THM-3886 is now `PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED`.
-None of these results proves `JC(2)`; the planar Jacobian conjecture remains
-**OPEN**.
+session promoted the iterated parity passport
+[THM-3894](../01-canon/theorems/THM-3894-cusp-residual-all-degree-gauge-kummer-parity-filtration.md),
+closed the first open even terminal at `n=4` in
+[THM-3896](../01-canon/theorems/THM-3896-cusp-residual-degree-four-equality-seam-emptiness.md),
+and converted the finite `f=0` work into the all-degree closure
+[THM-3897](../01-canon/theorems/THM-3897-f-zero-residual-all-degree-global-emptiness.md)
+through the high-`y` cutoff
+[THM-3895](../01-canon/theorems/THM-3895-f-zero-quartic-covariant-and-high-y-degree-emptiness.md).
+All four have status **PROVED + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED**.  The first surviving nonzero-sidecar tariff is now
+[THM-3899](../01-canon/theorems/THM-3899-nonzero-sidecar-y-degree-tariff-and-equianharmonic-equality-colors.md),
+with the same proved status.  The response laws reserved under THM-3900--3902
+are not active canon until their focused audits finish.  None of these results
+proves `JC(2)`; the planar Jacobian conjecture remains **OPEN**.
 
 Companion:
 
@@ -274,11 +275,9 @@ the promoted THM-3886 status.
 
 ### Half-depth gauge staircase: the incoming signal iterates
 
-The same argument does not stop at two jets.  This is an independently proved
-and hostile-audited algebraic packet for the currently
-`RESERVED / UNPROVED EMPTY STUB`
-[THM-3894](../01-canon/theorems/THM-3894-cusp-residual-all-degree-gauge-kummer-parity-filtration.md);
-the reserved file is not promoted here.
+The same argument does not stop at two jets.  It is the independently proved
+and hostile-audited
+[THM-3894](../01-canon/theorems/THM-3894-cusp-residual-all-degree-gauge-kummer-parity-filtration.md).
 
 Let `q_i` be homogeneous of degree `n-1-i` and put
 
@@ -490,7 +489,172 @@ polynomial point through degree six.  An effective elliptic height argument
 should carry these evaluation maps as sidecars rather than expecting generic
 two-section integrality alone to enforce `k[x,y]` descent.
 
-## 5. Wildcard: confluence, not a tournament, at the sextic cusp
+## 5. Breakthrough: the first open even Kummer terminal is empty
+
+THM-3894 turns the tied Plucker edge into an integer depth and forces the
+even `n=4` terminal data
+
+```text
+q_0=xs^2,                    r_4=rho*x^3s,
+deg s=1,                     rho^2=-216.                 (24)
+```
+
+The forgotten THM-3377 lesson is to keep the first response after this tie.
+After the two gauge jets, put `W=q_0+q_1+q_2` and
+
+```text
+bar f=f-aW,                  bar T=T+KW,
+D=Delta W^2,                Q=8Delta W+3r^2.             (25)
+```
+
+The Kummer equation is exactly `Q_8=0`.  Every residual term of degree at
+least seventeen then collapses to the single marked product `DQ`:
+
+```text
+S_18=D_11Q_7,
+S_17=D_11Q_6+D_10Q_7.                                  (26)
+```
+
+Write `s=alpha*x+beta*y`.  If `beta!=0`, `S_18=g_9^2` forces
+`v_x(g_9)=4`, but
+
+```text
+[x^3y^14]S_17=8beta^6,
+```
+
+so `v_x(S_17)=3`, impossible for `2g_9g_8`.  If `beta=0`, write
+`s=sigma*x`.  The degree-eighteen square forces
+
+```text
+Q_7=x^3h_2^2,            g_9=9sigma^2x^7h_2.
+```
+
+The next equation forces `h_2|Q_6` and determines `g_8`; the following shell
+then has the universal coefficient
+
+```text
+[x^4y^12](S_16-g_8^2)=2sigma^6/81.                       (27)
+```
+
+Its left side has `x`-valuation four, while `2g_9g_7` is divisible by
+`x^7`.  Both branches are empty.  The positive control
+
+```text
+Q_7=-8x^3K_2^2,
+Q_6=6(40+rho*z)x^4K_2
+```
+
+genuinely lifts the degree-eighteen and degree-seventeen equations before
+`(27)` fails.  Thus [THM-3896](../01-canon/theorems/THM-3896-cusp-residual-degree-four-equality-seam-emptiness.md)
+is a response obstruction, not a disguised leading-term contradiction.
+
+## 6. Breakthrough: the whole polynomial `f=0` lane closes
+
+The degree-six arm result was only the finite shadow.  THM-3895 first proves
+
+```text
+G^2=S(T,0)  ==>  deg_y T<=2.                              (28)
+```
+
+Its quartic covariant gives a complete generic proof.  An independent
+forgotten-arm audit gives a shorter global mechanism: with `s^2=-3`,
+
+```text
+C=8K^2-9a^3L^2,
+G_0=s(aT^2+4KT/(3a)-C/(9a^3)),
+(G-G_0)(G+G_0)
+ =(C^2+27a^6L^4-24a^2KCT)/(27a^6).                      (29)
+```
+
+For `d=deg_yT>2`, this forces `deg_y(G-G_0)=6-d`.  The `a=0` arm says every
+positive-`y` coefficient `t_i(x)` of `T` is divisible by `a`.  But then
+
+```text
+[y^4]G_0/s
+ =a sum_(i+j=4)t_i t_j+4(t_2-Ft_4)/(3a)-8/(9a^3),       (30)
+```
+
+whose last term is an uncancellable `a^(-3)` pole.  This independently
+proves `(28)` and identifies global descent as the load-bearing coordinate.
+
+THM-3897 closes the three remaining channels.  If
+`T=u(x)y^2+v(x)y+w(x)`, its leading coefficient in the quadratic case is
+
+```text
+-u^3(8+3a^2u).
+```
+
+The two factors are coprime.  Square parity gives `u=r^2` and
+`s^2=8+3a^2r^2`; factoring the latter over `sqrt(3)` makes both factors
+units of `k[x]`, hence forces `r=0`.  The linear channel has unique odd
+degree five, and the constant channel's missing linear coefficient conflicts
+with the address value `S(0,0)=256`.  Therefore
+
+```text
+f=0, S(T,f)=G^2, T(0,0)=0  ==>  T=0, G=+/-L^2.          (31)
+```
+
+Every remaining residual survivor must pay a genuinely nonzero sidecar.
+
+## 7. The live nonzero-sidecar response
+
+THM-3899 gives the first all-degree tariff.  If
+`m=deg_yT`, `n=deg_yf`, and `f!=0`, then
+
+```text
+m>=n.                                                     (32)
+```
+
+For `m=n>=1`, with leading coefficients `u,v,g`, write `g=vh`.  Then
+
+```text
+h^2=3(aL^2v^2-u^2),
+(h-du)(h+du)=3aL^2v^2,        d^2=-3.                    (33)
+```
+
+The two color valuations at `a=x+1` sum to `1+2ord_a(v)`.  This is a lawful
+binary observable, but the canonical payment `(h-du,h+du)=(a,3L^2)` proves
+that color parity alone is not a no-go.
+
+The exact working packet reserved under THM-3902 restores the deleted
+response.  With `epsilon=y^(-1)`, `T=y^nU`, `f=y^nV`,
+`G=y^(2n+2)VH`, and `C_+/-=H+/-dU`, it gives
+
+```text
+C_-C_+=3aL^2V^2+2L^2epsilon^nV
+ +6epsilon^2(kappa+aU/V)(aL^2V^2-U^2)  mod epsilon^3.    (34)
+```
+
+Thus the forgotten `K^2f^3` term enters at response depth `n`: first jet at
+`n=1`, second at `n=2`, and later for `n>=3`.  At `n=1` the first response
+has `a`-valuation exactly one less than the leading color product; the marked
+color loses its simple `a`-factor.  Explicit address-compatible data can
+still lift two jets, so `(34)` is a sharp necessary response law rather than
+a closure.
+
+For `m>n`, write `delta=m-n`.  The leading fan has only three cells:
+
+```text
+delta=1:   -3u^2v^2,
+delta=2:   -3u^2(au+v)^2,
+delta>=3:  -3a^2u^4.                                    (35)
+```
+
+All are already squares over `k`; the only cancellation wall is
+`delta=2, au+v=0`.  The THM-3901 working packet uses the sign-matched root
+`sTr` and the exact defect
+
+```text
+S-(sTr)^2=S+3T^2r^2                                     (36)
+```
+
+to expose the first response fan and its divisibility passports.  In the
+formerly automatic high-gap cell it subtracts the second osculating root
+`s(Tr-a^2L^2f^2/2)` and obtains another exact three-cell fan.  These packets
+are still provisional until independently audited; their value is the exact
+location of the next information, not a claim that `JC(2)` has closed.
+
+## 8. Wildcard: confluence, not a tournament, at the sextic cusp
 
 For the principal `(6,4)` finite-exact face, the local algebra is
 
@@ -503,7 +667,7 @@ no collection of geometric branches to orient.  In `m/m^2`,
 
 ```text
 (alpha u+beta v)^2
-  = alpha^2u^2+2alpha beta uv                 mod m^3.    (24)
+  = alpha^2u^2+2alpha beta uv                 mod m^3.    (37)
 ```
 
 Thus `kv` is the unique square-null tangent line.  But the named complementary
@@ -511,7 +675,7 @@ coordinate `ku` is not intrinsic: for `t!=1/2`,
 
 ```text
 u -> u+tv,
-v -> (1-2t)v-(t/4)u^2                                    (25)
+v -> (1-2t)v-(t/4)u^2                                    (38)
 ```
 
 preserves all three defining relations and has invertible tangent determinant
@@ -539,7 +703,7 @@ coefficient level:
 
 ```text
 [x^w]Jac(P,Q)
-  = sum_(u+v=w+(1,1)) det(u,v) p_u q_v.                   (26)
+  = sum_(u+v=w+(1,1)) det(u,v) p_u q_v.                   (39)
 ```
 
 An edge list alone misses the four-exponent, three-perfect-matching Plucker
@@ -547,23 +711,23 @@ circuit.  Any decoupled channel quotient must restore actual minor values,
 zeros, output fibres, and coefficient Segre constraints before it can feed a
 proof.
 
-## 6. Generated next tasks
+## 9. Generated next tasks
 
-1. **Even terminal Kummer lift.**  After the forced half-depth staircase,
-   parameterize the terminal `q_0=xs^2`, `r_top=rho x^3s` for `n=4,6`.
-   Test whether THM-3886's consecutive-valuation contradiction at `n=2`
-   scales or whether a genuine higher Kummer carrier first appears.
+1. **Next even Kummer terminal.**  THM-3896 closes `n=4`; repeat its `DQ`
+   response construction at `n=6`, retaining enough shells to distinguish
+   the line factors of the quadratic terminal `s`.
 2. **Odd terminal square lift.**  Substitute `q_0=s^2` after all forced jets,
    retain `r` rather than gauge-peeling it away, and locate the first degree at
    which the `A` transport debt becomes a transverse obstruction.
-3. **Degree-seven elliptic/descent cell.**  Put `H_1` quartic in `(18)`.  The `x=0`
-   specialization now has degree four, while mixed `y^3`/`y^4` channels can
-   tie rather than die by a unique odd degree.  Express the same shell in
-   THM-3888's elliptic coordinates and retain the full bivariate `(a,L)`-adic
-   response instead of growing a fixed arm-jet bank.
-4. **Off-equality degree region.**  Rebuild the seven-macro-term degree ledger
-   for `deg T>=deg f+2`, using the weighted gain star to identify the first
-   genuine tie rather than applying another coarse total-degree maximum.
+3. **Generic `f=0` root-response classification.**  Global polynomial
+   descent is closed, but the normalized `k(x)[y]` chart still exposes the
+   exact hostile `T_*`.  Audit the reserved THM-3900 root-color and
+   second-derivative classification independently of the elliptic height
+   claims.
+4. **Nonzero-sidecar response completion.**  Audit THM-3901/3902, then extend
+   the exact response one jet beyond their payable controls.  The primary
+   targets are the wall `delta=2, au+v=0` and the equal-degree `n>=3` source
+   which enters only after response depth two.
 5. **Confluent sextic response.**  Build the Macaulay dual on the displayed
    six-element basis, then compute tangent space, cokernel, first nonzero
    obstruction order, and the fixed descent character.  A scalar resultant is
@@ -580,7 +744,7 @@ number is `deg`-depth of `r`; it produces exact algebra immediately, whereas
 choosing an orientation at the tie destroys the very cancellation that makes
 the theorem work.
 
-## 7. Reproduction
+## 10. Reproduction
 
 ```bash
 python3 04-computation/jc2_cusp_residual_plucker_tie_depth_and_two_arm_scout_20260823.py
