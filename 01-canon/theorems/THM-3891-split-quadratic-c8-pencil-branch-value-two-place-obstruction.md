@@ -1,42 +1,43 @@
 ---
 id: THM-3891
-title: "Split quadratic C8 carriers pay two pencil branch values"
+title: "Quadratic C8 carriers split automatically and pay two pencil branch values"
 status: >
   RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  Every split quadratic binary-cubic leading row
-  of factor-degree type (0,1,1) whose discriminant is one eighth power has
-  exactly two coordinate classes.  The moving class has the THM-3889 Newton
-  boundary, reproduced here self-containedly.  The apparently new constant
-  carrier C^2 F0 is governed by the branch-value divisor of a binary-cubic
-  pencil; Riemann--Hurwitz forces at least two weighted tangent addresses
-  unless the total discriminant is visibly reducible.  Hence an irreducible
-  discriminant in this entire split grammar has at least two normalization
-  places at its unique projective infinity point.
+  independent hostile audit.  Every quadratic binary-cubic leading row whose
+  discriminant is one eighth power splits automatically: its dehomogenized
+  root divisor is a finite etale degree-three cover of A1, and a one-branch
+  Riemann--Hurwitz bound trivializes that cover.  Factor degrees then reduce
+  to the moving THM-3889 normal form or the constant carrier C^2 F0.  The
+  latter is governed by the branch-value divisor of a binary-cubic pencil,
+  which has at least two weighted tangent addresses unless the total
+  discriminant is visibly reducible.  Hence an irreducible discriminant in
+  the entire quadratic C8 grammar has at least two normalization places at
+  its unique projective infinity point.
 source: jc_sparse_direct_search / post-THM-3889 split-leading classification, 2026-08-23
 audit: >
-  SELF-AUDITED proof candidate.  The exact companion verifies the product
-  discriminant and both coordinate normal forms, replays every moving-class
-  Newton edge and coefficient seam, proves both weighted-initial-form
-  identities in the constant-carrier class, and checks the proportional
-  reducible exits.  It also contains explicit gcd-degree 0, 1, and 2 pencil
-  controls and a separately typed 6,561-row FINITE-EXACT hostile census.
-  Normal and -O replays are byte-identical to the frozen 13157-check
-  transcript.  Independent audit must recheck the pencil branch-value lemma,
-  weighted blow-up-to-normalization implication, and coordinate
-  classification.
+  SELF-AUDITED strengthening candidate.  The exact companion verifies the
+  finite-etale ramification inequality, factor-degree exhaustion, the
+  quadratic-factor collapse, product discriminant and both coordinate normal
+  forms, every moving-class Newton edge and coefficient seam, both weighted
+  initial identities, and the proportional reducible exits.  It also contains
+  explicit gcd-degree 0, 1, and 2 pencil controls and a separately typed
+  6,561-row FINITE-EXACT hostile census.  Normal and -O replays are
+  byte-identical to the frozen 13173-check transcript.  Independent audit
+  must recheck automatic splitting, the pencil branch-value lemma, and the
+  weighted blow-up-to-normalization implication.
 related:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
   - THM-3889-maximally-confluent-quadratic-binary-cubic-two-place-obstruction
 script: 04-computation/jc2_split_quadratic_c8_pencil_branch_values_thm3891.py
 output: 05-knowledge/results/jc2_split_quadratic_c8_pencil_branch_values_thm3891.out
-script_sha256: 08c228b39ac0e3156a519a2ffdd0c0209d43c432b65b101b00828c7a595fed98
-output_sha256: e6e4671e4b691b00ebf5589bb037e8b26f2a35323eb6e317a9fd0fec6c0f3466
-semantic_sha256: dc60618edd264533fae608c7ab43c0db86a47939b99f473de53534c69a576305
+script_sha256: 622d74adc7c3242269970875a5166e7972c2aa2fae124ca6cbb4298a1dbad3d1
+output_sha256: 0c35feb2ac9f18b8265b5c8962b594112ac5e5000fff7edf76f2639cc450a564
+semantic_sha256: 7482b33725681925e24fc3fa40a5f35f0d39d7c97db107a098fca45f49bd76a2
 hash_basis: raw LF bytes
 ---
 
-# THM-3891 -- a split eighth power cannot hide one infinity place
+# THM-3891 -- a quadratic eighth power cannot hide one infinity place
 
 **RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
 independent hostile audit.**  Work over an algebraically closed field `k` of
@@ -47,14 +48,8 @@ coordinates.  Consider a binary cubic
 Phi=Phi_2+A Phi_A+C Phi_C,                                  (1)
 ```
 
-where `Phi_A,Phi_C in k[U,V]_3` and the quadratic coefficient row factors as
-
-```text
-Phi_2=ell_0(U,V) ell_1(A,C;U,V) ell_2(A,C;U,V).             (2)
-```
-
-Here `ell_0` is a nonzero constant binary linear form, while `ell_1,ell_2`
-have base degree one and binary degree one.  Suppose
+where `Phi_A,Phi_C in k[U,V]_3` and
+`Phi_2 in k[A,C]_2 tensor k[U,V]_3` is arbitrary.  Suppose
 
 ```text
 Disc(Phi_2)=kappa C^8,                         kappa!=0.    (3)
@@ -73,12 +68,75 @@ Put `Delta(A,C)=Disc(Phi)`.  Then:
 
 The third assertion is the new content.  It distinguishes a single
 projective support point from a single normalization place and closes the
-whole split factor-degree `(0,1,1)` eighth-power grammar.  It does not cover
-nonsplit quadratic rows or a factor-degree pattern not equivalent to `(2)`.
+whole quadratic eighth-power grammar, including rows not presented in split
+form.
 
-## 1. Exact coordinate classification
+## 1. The quadratic row splits automatically
 
-After a constant `GL_2(k)` change in `U,V`, take `ell_0=U` and write
+Dehomogenize by `C=1` and put
+
+```text
+phi(t;U,V)=Phi_2(t,1;U,V).                                (A1)
+```
+
+Its discriminant is the nonzero constant `kappa`.  Therefore the zero divisor
+of `phi` in `P^1_[U:V] times A^1_t` is finite etale of degree three over
+`A^1_t`: every fibre consists of three distinct points, and projectivity of
+`P^1` makes the quasi-finite divisor finite.
+
+Every finite etale cover of `A^1` over `k` is trivial in this degree range,
+and the proof needs no fundamental-group import.  If a connected component
+has degree `r`, normalize its projective completion over `P^1_t`.  All
+ramification lies over `t=infinity`.  Riemann--Hurwitz requires total
+ramification at least `2r-2`, whereas one fibre can contribute at most
+`r-1`.  Hence `r=1`.  The degree-three divisor is consequently a disjoint
+union of three sections.
+
+Since `Pic(A^1)=0`, write those sections by primitive polynomial pairs.  Up
+to a nonzero scalar,
+
+```text
+phi=product_{i=0}^2 (p_i(t)U+q_i(t)V),
+gcd(p_i,q_i)=1.                                            (A2)
+```
+
+Let `d_i=max(deg p_i,deg q_i)`.  The product of the three nonzero leading
+binary linear forms is nonzero, so
+
+```text
+d_0+d_1+d_2=deg_t phi<=2.                                 (A3)
+```
+
+Homogenize each factor and distribute the remaining power
+`C^(2-d_0-d_1-d_2)`.  Up to permutation, every quadratic row therefore has
+factor degrees
+
+```text
+(0,1,1)                         or                         (0,0,2). (A4)
+```
+
+Thus the splitting hypothesis used in the first candidate was automatic;
+there is no nonsplit quadratic boundary hidden behind it.
+
+## 2. Exact coordinate classification
+
+First consider `(0,0,2)`.  Let `ell_0,ell_1` be the two constant factors and
+`ell_2` the quadratic factor.  Nonzero discriminant makes
+`ell_0,ell_1` a basis of the binary linear forms.  The two determinants with
+`ell_2` are homogeneous quadratics, and their squared product is a nonzero
+multiple of `C^8`.  Unique factorization forces each determinant to be a
+multiple of `C^2`.  These determinants are the two coordinates of `ell_2`
+in the constant basis, so
+
+```text
+ell_2=C^2 ell_2,0,
+Phi_2=C^2 F_0(U,V),                                        (A5)
+```
+
+with `F_0` squarefree and constant.  This is the constant-carrier class.
+
+It remains to classify `(0,1,1)`.  After a constant `GL_2(k)` change in
+`U,V`, take the degree-zero factor `ell_0=U` and write
 
 ```text
 ell_i=L_i U+M_i V,                    L_i,M_i in k[A,C]_1. (4)
@@ -121,10 +179,10 @@ There are exactly two cases.
 
   where `F_0` is a squarefree split constant binary cubic.
 
-Both alternatives occur.  Thus `(9)` is the only split coordinate class not
-already visible in the moving normal form `(8)`.
+Both alternatives occur.  Together with `(A5)`, these are all quadratic
+coordinate classes satisfying `(3)`.
 
-## 2. The moving class has two exact Newton addresses
+## 3. The moving class has two exact Newton addresses
 
 For completeness, the moving calculation is included rather than imported
 from a provisional theorem.  Expanding `(8)` and adding arbitrary linear
@@ -192,7 +250,7 @@ Finally, `delta=gamma=0` makes `C` divide `Delta`, so an irreducible
 discriminant never reaches that seam.  This proves assertion 3 in the moving
 class without any bounded parameter restriction.
 
-## 3. A pencil cannot have only one branch value
+## 4. A pencil cannot have only one branch value
 
 The constant-carrier proof uses the following intrinsic lemma.
 
@@ -224,7 +282,7 @@ the two collision values are distinct.  The remaining case `r=0` is exactly
 the proportional case.  This proves the lemma, including common-factor and
 root-at-infinity boundaries.
 
-## 4. Weighted blow-up of the constant carrier
+## 5. Weighted blow-up of the constant carrier
 
 Write the arbitrary linear perturbation of `(9)` as
 
@@ -296,9 +354,9 @@ It remains to treat `F_1=lambda F_0`.
 
 Every irreducible constant-carrier discriminant therefore lies in one of the
 two weighted-pencil cases and has at least two infinity places.  Together
-with Section 2, this proves assertion 3.
+with Section 3, this proves assertion 3.
 
-## 5. Index gate, exact boundary, and finite hostile evidence
+## 6. Index gate, exact boundary, and finite hostile evidence
 
 All four coefficients of `(1)` lie in `(A,C)`.  For
 `T=X omega+Y theta` in the Delone--Faddeev order, the determinant of
@@ -311,9 +369,9 @@ carrier `F_0=UV(U-V)` by choosing each of the eight coefficients of
 `F_1,F_2` from `{-1,0,1}`.  Among all `3^8=6,561` labelled rows there are no
 coordinate-factor-free rows whose unique infinity point has a raw single
 lattice-primitive Newton edge.  This is **FINITE-EXACT hostile evidence**,
-not the universe of the theorem; Sections 3--4 are the all-parameter proof.
+not the universe of the theorem; Sections 1--5 are the all-parameter proof.
 
-The theorem closes only split quadratic rows with factor degrees `(0,1,1)`
-and a pure eighth-power leading discriminant.  Nonsplit quadratic rows,
-higher-degree coefficient profiles, non-binary cubic orders, the later
+The theorem closes every quadratic leading row with a pure eighth-power
+discriminant.  Higher-degree coefficient profiles, a leading discriminant
+with several projective support points, non-binary cubic orders, the later
 affine-atlas conditions, and JC(2) remain **OPEN**.

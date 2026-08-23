@@ -116,6 +116,44 @@ equal(
     C**8 * F0_discriminant,
 )
 
+# Automatic splitting: a connected degree-r component of a finite etale
+# cover of A1 would acquire all ramification over one infinity fibre.  The
+# one-fibre maximum contradicts Riemann--Hurwitz for r=2,3.
+for cover_degree in (2, 3):
+    check(
+        2 * cover_degree - 2 > cover_degree - 1,
+        f"degree-{cover_degree} one-branch-value ramification contradiction",
+    )
+
+# Every triple of section degrees with sum at most two homogenizes, after
+# distributing the spare C-powers, to 011 or 002.
+allowed_factor_types = {(0, 1, 1), (0, 0, 2)}
+degree_triples = set()
+for degrees in itertools.product(range(3), repeat=3):
+    if sum(degrees) <= 2:
+        degree_triples.add(tuple(sorted(degrees)))
+        spare = 2 - sum(degrees)
+        reachable = set()
+        for additions in itertools.product(range(spare + 1), repeat=3):
+            if sum(additions) == spare:
+                reachable.add(tuple(sorted(d + e for d, e in zip(degrees, additions))))
+        check(bool(reachable & allowed_factor_types), f"factor-degree exhaustion {degrees}")
+check(degree_triples == {(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 1)}, "factor-degree source triples")
+
+# In type 002, the two determinant coordinates of the quadratic factor are
+# C^2-multiples, so the factor itself is C^2 times a constant linear form.
+p0, q0, p1, q1, det0, det1 = sp.symbols("p0 q0 p1 q1 det0 det1")
+basis_det = p0 * q1 - q0 * p1
+quadratic_U = C**2 * (p1 * det0 - p0 * det1) / basis_det
+quadratic_V = C**2 * (q1 * det0 - q0 * det1) / basis_det
+equal("002 first determinant coordinate", p0 * quadratic_V - q0 * quadratic_U, C**2 * det0)
+equal("002 second determinant coordinate", p1 * quadratic_V - q1 * quadratic_U, C**2 * det1)
+check(
+    sp.cancel(quadratic_U / C**2).has(C) is False
+    and sp.cancel(quadratic_V / C**2).has(C) is False,
+    "002 quadratic factor is C2-constant",
+)
+
 
 # ---------------------------------------------------------------------------
 # 2. Self-contained replay of the moving-class Newton seams.
@@ -347,7 +385,9 @@ check(primitive_eligible == 0, "finite constant-carrier primitive survivor count
 
 semantic_packet = "\n".join(
     (
-        "split factor degree zero one one classification",
+        "finite etale A1 root divisor splits automatically",
+        "factor degrees zero one one or zero zero two",
+        "quadratic factor collapses to C squared constant",
         "moving versus constant C squared carrier",
         "self contained moving Newton seams",
         "binary cubic pencil branch value lemma",
@@ -359,12 +399,13 @@ semantic_packet = "\n".join(
 ) + "\n"
 semantic_sha256 = hashlib.sha256(semantic_packet.encode("utf-8")).hexdigest()
 
+print("THM3891_SPLIT finite_etale_A1_trivial;factor_degrees=011_or_002;002_collapses_to_C2")
 print("THM3891_CLASS moving_normal_form_or_constant_C2_carrier")
 print("THM3891_MOVING delta_orders=3,5;gamma_orders=2,4_or_2,3;last_seam_reducible")
 print("THM3891_PENCIL nonproportional_squarefree_cubic_pencil_has_at_least_two_branch_values")
 print("THM3891_WEIGHTED first_weights=1,2;proportional_seam_weights=1,3")
 print("THM3891_EXIT zero_first_profile_or_fully_proportional_profile_is_reducible")
 print(f"THM3891_CENSUS rows={census_rows} primitive_irreducible_eligible={primitive_eligible}")
-print("THM3891_SCOPE split_factor_degree_0_1_1_C8_only;nonsplit_quadratic_rows_open")
+print("THM3891_SCOPE all_quadratic_C8_leading_rows;higher_degree_profiles_open")
 print(f"SEMANTIC_SHA256 {semantic_sha256}")
 print(f"CHECKS {CHECKS}")
