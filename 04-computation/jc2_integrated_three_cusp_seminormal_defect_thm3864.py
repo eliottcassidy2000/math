@@ -363,6 +363,211 @@ zero(
     "even-odd h1 endpoint residual",
 )
 
+# The third canonical coordinate line, spanned by h_odd and h_third.
+M, K = sp.symbols("M K")
+P_odd_third = (
+    3078 * x**4
+    + 3420 * x**3
+    + 81 * x**2 * y**2
+    + 950 * x**2
+    + 555 * x * y**2
+    + 322 * y**2
+)
+Q_odd_odd_third = (
+    -20088 * x**4 * y
+    - 46944 * x**3 * y
+    + 1539 * x**2 * y**3
+    - 33560 * x**2 * y
+    + 3693 * x * y**3
+    - 7600 * x * y
+    + 81 * y**5
+    + 1606 * y**3
+)
+Q_odd_third_third = (
+    116964 * x**4 * y
+    + 5265 * x**3 * y**3
+    + 129960 * x**3 * y
+    - 12051 * x**2 * y**3
+    + 36100 * x**2 * y
+    + 81 * x * y**5
+    - 3052 * x * y**3
+    + 1500 * y**5
+    + 2812 * y**3
+)
+P_odd_third_line = sp.expand(
+    M**2 * P_odd + 2 * M * K * P_odd_third + K**2 * P_third
+)
+Q_odd_third_line = sp.expand(
+    M**3 * Q_odd
+    + 3 * M**2 * K * Q_odd_odd_third
+    + 3 * M * K**2 * Q_odd_third_third
+    + K**3 * Q_third
+)
+h_odd_third_line = M * h_odd + K * h_third
+zero(P_odd_third_line.subs({x: x_t, y: y_t}) - h_odd_third_line**2,
+     "odd-third line square descent")
+zero(Q_odd_third_line.subs({x: x_t, y: y_t}) - h_odd_third_line**3,
+     "odd-third line cube descent")
+odd_third_residual, odd_third_remainder = sp.div(
+    sp.expand(P_odd_third_line**3 - Q_odd_third_line**2), delta, x, y
+)
+zero(odd_third_remainder, "odd-third line residual divisibility")
+zero(
+    odd_third_residual.subs(y, 0)
+    - 64 * M**3 * (-2 * M + 19 * K * x) ** 3 * (9 * x + 5) ** 4,
+    "odd-third y-zero factorization",
+)
+zero(
+    odd_third_residual.subs(K, 0)
+    + M**6 * (9 * x + 5) ** 2 * odd_residual_core,
+    "odd-third h2 endpoint residual",
+)
+zero(
+    odd_third_residual.subs(M, 0) - K**6 * y**6 * residual_core,
+    "odd-third h3 endpoint residual",
+)
+
+# The full canonical projective plane.  The only additional cubic cross
+# descent is h_even*h_odd*h_third.
+C1, C2, C3 = sp.symbols("C1 C2 C3")
+Q_even_odd_third = (
+    6561 * x**6
+    + 11826 * x**5
+    + 7065 * x**4
+    + 1400 * x**3
+    + 4617 * x**3 * y**2
+    + 11211 * x**2 * y**2
+    + 9270 * x * y**2
+    + 2576 * y**2
+)
+zero(
+    Q_even_odd_third.subs({x: x_t, y: y_t}) - h_even * h_odd * h_third,
+    "three-direction cubic cross descent",
+)
+P_full = sp.expand(
+    C1**2 * P_even
+    + C2**2 * P_odd
+    + C3**2 * P_third
+    + 2 * C1 * C2 * P_even_odd
+    + 2 * C1 * C3 * P_even_third
+    + 2 * C2 * C3 * P_odd_third
+)
+Q_full = sp.expand(
+    C1**3 * Q_even
+    + C2**3 * Q_odd
+    + C3**3 * Q_third
+    + 3 * C1**2 * C2 * Q_even_even_odd
+    + 3 * C1 * C2**2 * Q_even_odd_odd
+    + 3 * C1**2 * C3 * Q_even_even_third
+    + 3 * C1 * C3**2 * Q_even_third_third
+    + 3 * C2**2 * C3 * Q_odd_odd_third
+    + 3 * C2 * C3**2 * Q_odd_third_third
+    + 6 * C1 * C2 * C3 * Q_even_odd_third
+)
+h_full = C1 * h_even + C2 * h_odd + C3 * h_third
+zero(P_full.subs({x: x_t, y: y_t}) - h_full**2,
+     "full canonical plane square descent")
+zero(Q_full.subs({x: x_t, y: y_t}) - h_full**3,
+     "full canonical plane cube descent")
+full_residual, full_remainder = sp.div(
+    sp.expand(P_full**3 - Q_full**2), delta, x, y
+)
+zero(full_remainder, "full canonical plane residual divisibility")
+full_y_zero = sp.Poly(full_residual.subs(y, 0), x)
+gate(full_y_zero.degree() == 7, "full canonical plane y-zero degree")
+zero(
+    full_y_zero.coeff_monomial(x**7)
+    + 26244 * C2**2 * C3**2 * (729 * C1**2 - 109744 * C2 * C3),
+    "full canonical plane odd leading coefficient",
+)
+
+# The only interior seam on which the odd leading term disappears is
+# 729*C1^2=109744*C2*C3.  Scale C2=1, put z=C1^2, and compare the remaining
+# sextic with a general cubic square.  The exact coefficient ideal forces
+# z=0, which would also force C3=0 and hence leave the interior.
+seam_z = sp.symbols("seam_z")
+full_seam_y_zero = sp.expand(
+    full_residual.subs(
+        {y: 0, C2: 1, C3: sp.Rational(729, 109744) * seam_z}
+    )
+)
+full_seam_y_zero = sp.expand(
+    full_seam_y_zero.subs(C1**6, seam_z**3)
+    .subs(C1**4, seam_z**2)
+    .subs(C1**2, seam_z)
+)
+gate(not full_seam_y_zero.has(C1), "full-plane seam uses C1 squared")
+gate(sp.Poly(full_seam_y_zero, x).degree() == 6,
+     "full-plane seam specialized degree six")
+cube_a, cube_b, cube_c, cube_d = sp.symbols(
+    "cube_a cube_b cube_c cube_d"
+)
+full_seam_difference = sp.Poly(
+    full_seam_y_zero
+    - (cube_a * x**3 + cube_b * x**2 + cube_c * x + cube_d) ** 2,
+    x,
+)
+full_seam_equations = [
+    full_seam_difference.coeff_monomial(x**degree) for degree in range(7)
+]
+full_seam_groebner = sp.groebner(
+    full_seam_equations,
+    cube_a,
+    cube_b,
+    cube_c,
+    cube_d,
+    seam_z,
+    order="lex",
+)
+expected_full_seam_groebner = sp.groebner(
+    [
+        cube_a + sp.Rational(177147, 577600) * cube_d * seam_z,
+        cube_b
+        + sp.Rational(273861, 288800) * cube_d * seam_z
+        - sp.Rational(935712, 288800) * cube_d,
+        cube_c
+        - sp.Rational(369861, 577600) * cube_d * seam_z
+        - sp.Rational(2079360, 577600) * cube_d,
+        cube_d**2 + 320000,
+        seam_z**2,
+    ],
+    cube_a,
+    cube_b,
+    cube_c,
+    cube_d,
+    seam_z,
+    order="lex",
+)
+gate(full_seam_groebner == expected_full_seam_groebner,
+     "full-plane exceptional-conic square ideal")
+zero(full_residual.subs(C3, 0) - even_odd_residual.subs({U: C1, V: C2}),
+     "full plane h1-h2 boundary")
+zero(full_residual.subs(C2, 0) - line_residual.subs({L: C1, N: C3}),
+     "full plane h1-h3 boundary")
+
+# Sharp hostile boundary: the canonical defect representative is not an
+# intrinsic obstruction.  A congruent h1 representative has square residual.
+h_boundary = (t**2 - 1) * (9 * t**4 - 18 * t**2 + 4)
+P_boundary = (x + 1) * (9 * x + 4) ** 2
+Q_boundary = (
+    y**2 - sp.Rational(1, 2) * (30 * x**2 + 30 * x + 8)
+) * (9 * x + 4) ** 2
+zero(h_boundary - h_even + 4 * (x_t + 1),
+     "noncanonical representative differs from h1 by branch-ring element")
+gate(
+    [sp.diff(h_boundary, t).subs(t, address) for address in (0, 1, -1)]
+    == [0, -10, 10],
+    "noncanonical representative has h1 defect coordinates",
+)
+zero(P_boundary.subs({x: x_t, y: y_t}) - h_boundary**2,
+     "noncanonical representative square descent")
+zero(Q_boundary.subs({x: x_t, y: y_t}) - h_boundary**3,
+     "noncanonical representative cube descent")
+zero(
+    P_boundary**3 - Q_boundary**2 - delta * (9 * x + 4) ** 4,
+    "noncanonical representative square residual",
+)
+
 semantic = {
     "conductor": "t2(t2-1)2(3t2-5)(9t4-18t2+4);exact",
     "seminormalization": "three node equalities;branch adds three cusp derivatives",
@@ -371,7 +576,10 @@ semantic = {
     "bounded_no_go": "minimum-degree parity-preserving delta lifts have no square residual",
     "projective_line": "all canonical L*h1+N*h3 residuals nonsquare",
     "second_line": "all canonical U*h1+V*h2 residuals nonsquare",
-    "scope": "general mixed/higher lifts and h2-h3/full-plane combinations open",
+    "third_line": "all canonical M*h2+K*h3 residuals nonsquare",
+    "projective_plane": "all canonical C1*h1+C2*h2+C3*h3 residuals nonsquare",
+    "hostile_boundary": "h1-4(x+1) has square residual Delta*(9x+4)^4",
+    "scope": "general noncanonical mixed/higher representatives open",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -389,7 +597,10 @@ print("third_square_cube_descent=YES;canonical_residual_square=NO")
 print("minimum_degree_parity_preserving_mixed_lift_square=NONE")
 print("canonical_projective_line_h1_h3_square_residual=NONE")
 print("canonical_projective_line_h1_h2_square_residual=NONE")
-print("general_mixed_higher_and_h2_h3_full_plane_lifts=OPEN")
+print("canonical_projective_line_h2_h3_square_residual=NONE")
+print("canonical_projective_plane_square_residual=NONE")
+print("same_defect_noncanonical_square_residual=YES")
+print("general_noncanonical_mixed_and_higher_representatives=OPEN")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")
 print("RESULT=PASS")

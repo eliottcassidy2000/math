@@ -3,7 +3,7 @@ id: THM-3864
 title: "The integrated three-cusp front has a three-dimensional seminormal defect"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED CORE; PROVISIONAL
-  VERIFIED-EXACT SECOND-LINE STRENGTHENING AWAITING INDEPENDENT AUDIT.  The
+  VERIFIED-EXACT CANONICAL-PLANE STRENGTHENING AWAITING INDEPENDENT AUDIT.  The
   conductor of the THM-3854 integrated
   quintic has double zeros at its three cusp addresses and simple zeros at
   all six node addresses.  Its seminormalization retains exactly the three
@@ -12,9 +12,13 @@ status: >
   missing third square/cube-descent direction is explicit.  Its canonical
   depressed-cubic residual and every minimum-degree parity-preserving lift
   remain nonsquare.  The audited core closes the canonical `<h_1,h_3>` line;
-  the provisional strengthening closes `<h_1,h_2>` by an exact specialized
-  quartic square ideal.  General mixed/higher lifts, `<h_2,h_3>`, and the
-  projective-plane interior remain OPEN.
+  the provisional strengthenings close `<h_1,h_2>` by an exact specialized
+  quartic square ideal, `<h_2,h_3>` by an exact odd-valuation factorization,
+  and the full canonical projective plane by an odd-degree/exceptional-conic
+  stratification.  This is a statement about the fixed canonical
+  representatives only: an explicit representative of the same defect class
+  as `h_1` has square residual.  General noncanonical mixed/higher lifts remain
+  OPEN.
 source: jc_zero_debt_lift / integrated-cusp alternative cubic-order lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit checked that
@@ -35,9 +39,13 @@ audit: >
   spanned by the first and third directions.  The new provisional section
   additionally verifies every cross descent on `<h_1,h_2>`, its specialized
   quartic, the complete square-coefficient Groebner basis, and both
-  endpoints.  Normal and optimized runs must byte-match the frozen
-  transcript.  Independent hostile audit is required only for this new
-  second-line strengthening.
+  endpoints.  The provisional extension also verifies the `<h_2,h_3>` cross
+  descents, its boundary factorization including the coincident-root seam,
+  the missing three-way cubic descent, the full-plane odd leading term, and
+  the exceptional-conic square-coefficient Groebner basis.  Finally it
+  verifies the noncanonical same-defect square-residual hostile control.
+  Normal and optimized runs must byte-match the frozen transcript.
+  Independent hostile audit is required only for Sections 7-9.
 depends_on:
   - THM-3854-integrated-three-cusp-quintic-s5-natural-completion-obstruction
 related:
@@ -45,16 +53,16 @@ related:
   - THM-3855-formal-inverse-discriminant-lift-and-algebraization-gate
 script: 04-computation/jc2_integrated_three_cusp_seminormal_defect_thm3864.py
 output: 05-knowledge/results/jc2_integrated_three_cusp_seminormal_defect_thm3864.out
-script_sha256: b0a3d3fb6804db5445e2414bfd1ee0d0b53a6da86b8fe468d8d7fd0d45581cb2
-output_sha256: 71a35831d408b123e6dbbec7a1c899056c8d584bbc217a0f3cea178c938323bd
-semantic_sha256: 03a59be34df363c1a050bcc5a0ff65a72c67651d9d9e76d36726ce6b10b828fc
+script_sha256: 88cf9b66df34572b79a7f27010f8b9e2d771b6de4a3b819cabc61b4e907dba75
+output_sha256: 4447c96c3ea0597611a573961436f7ae4fdf0114709cfcabbf07733955948ab8
+semantic_sha256: e6e8faee6a34e1058ea82e06434b5d1e3753e78ec21a2e184315aefaefb6cdd2
 hash_basis: raw LF bytes
 ---
 
 # THM-3864 -- all three seminormal cusp directions
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED CORE, WITH A
-PROVISIONAL SECOND-LINE STRENGTHENING.**  Work over an algebraically closed
+PROVISIONAL CANONICAL-PLANE STRENGTHENING.**  Work over an algebraically closed
 field `k` of characteristic zero.  Retain the
 normalization of THM-3854,
 
@@ -98,9 +106,13 @@ minimum-total-degree parity-preserving change of its two polynomial lifts
 makes the residual a square, and no canonical element on the entire
 projective line spanned by `h_1,h_3` has square residual.
 
-The last statements are deliberately bounded.  They do not exclude
-higher-degree changes, parity-breaking changes, or combinations involving
-`h_2`.
+The audited statements above are deliberately bounded.  Sections 7-9 give a
+provisional exact strengthening: for the displayed representatives and their
+displayed square/cube descents, the entire canonical projective plane
+`P(span(h_1,h_2,h_3))` has nonsquare residual.  This is **not** intrinsic to a
+class in `S/R`: Section 9 exhibits a noncanonical representative of `[h_1]`
+whose residual is a square.  Higher-degree and parity-breaking changes of
+representative therefore remain essential live directions.
 
 ## 1. Exact global coordinate conditions
 
@@ -433,18 +445,156 @@ nonsquare by the same argument.  Therefore every point of the canonical
 `<h_1,h_2>` projective line has nonsquare residual, subject only to the
 pending independent audit of this section.
 
-## 8. Scope and next exact search
+## 8. Provisional strengthening: the canonical `h_2,h_3` line
 
-The result converts the seminormal boundary problem from an incomplete
-two-direction scout to a complete three-dimensional defect space.  It does
-**not** classify binary cubic orders with discriminant `Delta`.  The first
-live searches are:
+**PROVISIONAL + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**  The
+third coordinate line has the cross descents
 
-1. the remaining `<h_2,h_3>` coordinate line and the interior of the full
-   projective plane;
-2. parity-breaking representatives of the same boundary elements;
-3. representatives above total degrees five and seven; and
-4. the all-orders algebraization mechanism of THM-3855 applied to this
+```text
+P_23=3078x^4+3420x^3+81x^2y^2+950x^2+555xy^2+322y^2,       (45)
+
+Q_223=-20088x^4y-46944x^3y+1539x^2y^3-33560x^2y
+      +3693xy^3-7600xy+81y^5+1606y^3,
+
+Q_233=116964x^4y+5265x^3y^3+129960x^3y-12051x^2y^3
+      +36100x^2y+81xy^5-3052xy^3+1500y^5+2812y^3.          (46)
+```
+
+They pull back to `h_2h_3`, `h_2^2h_3`, and `h_2h_3^2`.  For
+`[M:N] in P1(k)`, form the canonical descents
+
+```text
+P_(M,N)=M^2P_2+2MNP_23+N^2P_3,
+Q_(M,N)=M^3Q_2+3M^2NQ_223+3MN^2Q_233+N^3Q_3.               (47)
+```
+
+Writing `R_(M,N)=(P_(M,N)^3-Q_(M,N)^2)/Delta`, exact division gives
+
+```text
+R_(M,N)(x,0)=64M^3(-2M+19Nx)^3(9x+5)^4.                    (48)
+```
+
+Suppose first that `MN!=0`.  The root `2M/(19N)` of the first linear
+factor is nonzero, as is the root `-5/9` of the second.  If the roots are
+distinct, the first has odd valuation three.  If they coincide, equivalently
+
+```text
+18M+95N=0,
+```
+
+their combined valuation is `3+4=7`, still odd.  Neither factor is `x`, so
+there is no unexamined root at `x=0`.  Thus `(48)` cannot be a polynomial
+square.  The UFD reduction from Section 6 then excludes a square in
+`k(x,y)`.
+
+At `N=0`, the residual is `-M^6(9x+5)^2` times the nonsquare core in `(43)`.
+At `M=0`, it is `N^6y^6C_3`, nonsquare by Section 4.  These endpoint checks
+complete the canonical `<h_2,h_3>` line.
+
+## 9. Provisional strengthening: the full canonical defect plane
+
+**PROVISIONAL + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**  The
+one remaining cubic cross descent is
+
+```text
+Q_123=6561x^6+11826x^5+7065x^4+1400x^3
+     +4617x^3y^2+11211x^2y^2+9270xy^2+2576y^2,              (49)
+```
+
+which pulls back to `h_1h_2h_3`.  For
+`C=(C_1,C_2,C_3)`, let
+
+```text
+P_C=sum_i C_i^2P_i+2 sum_(i<j) C_iC_jP_ij,
+
+Q_C=sum_i C_i^3Q_i+3 sum_(i!=j) C_i^2C_jQ_iij
+    +6C_1C_2C_3Q_123.                                      (50)
+```
+
+The displayed descents give pullbacks `(sum C_ih_i)^2` and
+`(sum C_ih_i)^3`.  Put `R_C=(P_C^3-Q_C^2)/Delta`.  Direct exact division
+shows that `R_C(x,0)` has degree at most seven and
+
+```text
+[x^7]R_C(x,0)
+ =-26244C_2^2C_3^2(729C_1^2-109744C_2C_3).                 (51)
+```
+
+If `C_2C_3!=0` and the last factor is nonzero, the specialization has odd
+degree seven and is not a square.  It remains to treat the cancellation
+conic
+
+```text
+729C_1^2=109744C_2C_3.                                     (52)
+```
+
+Scale `C_2=1`, put `zeta=C_1^2`, and hence
+`C_3=729zeta/109744`.  The specialized residual is then a nonzero sextic.
+Comparing it with `(A_3x^3+A_2x^2+A_1x+A_0)^2` gives the following
+cleared-denominator form of its reduced lexicographic Groebner basis:
+
+```text
+177147A_0zeta+577600A_3,
+273861A_0zeta-935712A_0+288800A_2,
+-369861A_0zeta-2079360A_0+577600A_1,
+A_0^2+320000,
+zeta^2.                                                      (53)
+```
+
+Thus `zeta=0`, which by `(52)` forces `C_3=0`, contrary to the interior
+assumption.  If `C_2=0`, Section 6 applies; if `C_3=0`, Section 7 applies.
+Consequently every nonzero point of the **canonical** projective defect plane
+has nonsquare residual.
+
+### 9.1 Sharp hostile boundary: the conclusion is not intrinsic to `S/R`
+
+The word *canonical* is indispensable.  Set
+
+```text
+h_*=(t^2-1)(9t^4-18t^2+4)=h_1-4(x(t)+1).                    (54)
+```
+
+Thus `h_*-h_1` belongs to `R`, and both have cusp-derivative vector
+`(0,-10,10)`.  Nevertheless the noncanonical descents
+
+```text
+P_*=(x+1)(9x+4)^2,
+Q_*=(y^2-(30x^2+30x+8)/2)(9x+4)^2                           (55)
+```
+
+satisfy the exact positive identity
+
+```text
+P_*^3-Q_*^2=Delta(9x+4)^4.                                  (56)
+```
+
+Hence the residual is the square `(9x+4)^4`.  This does not contradict the
+canonical-plane theorem: replacing `h_1` by `h_1+r`, `r in R`, changes both
+descents and their residual.  It instead refutes any attempted intrinsic
+``no square residual'' statement on the defect class itself.
+
+The identity is not yet an unramified cyclic cubic class or a Keller atlas.
+In the natural cubic-field normalization, the visible order-index square
+only lowers the discriminant profile to `Delta(9x+4)^2`; the line `9x+4=0`
+remains a triple-ramification address.  Thus `(56)` is a decisive positive
+hostile control and a precise remaining payment problem, not a Jacobian
+counterexample.
+
+## 10. Scope and next exact search
+
+The audited core converts the seminormal boundary problem from an incomplete
+two-direction scout to a complete three-dimensional defect space.  The
+provisional Sections 7-9 close every **canonical** combination, but `(54)-(56)`
+show that representative changes are mathematically essential.  This theorem
+does **not** classify binary cubic orders with discriminant `Delta`.
+
+The first live searches are:
+
+1. noncanonical representatives `sum C_ih_i+r`, `r in R`, that preserve the
+   square residual while removing the `9x+4` ramification payment;
+2. parity-breaking and higher-degree representatives of the same boundary
+   elements, especially mixed `h_2` directions; and
+3. the all-orders algebraization mechanism of THM-3855 applied to this
    one-place quintic rather than its four-ray front.
 
 Any positive result must still pass the constant-unit and Keller-atlas gates
