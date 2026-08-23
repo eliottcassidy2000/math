@@ -1,0 +1,12 @@
+theorem=THM-3810-affine-r-profile-constant-z2-nodal-carriers-have-critical-points
+surface=r^2e-z^3+r;c=1;field=algebraically_closed_characteristic_zero
+carrier=A=e^2-z/3+r*(a*e+b)+h*z^2;all_a_b_h
+compression=u=r/z;L=1-6hz;M=L*u^2-9auz;e=M/18
+equations=p1=18z^2-u^2zM-18u;p2=162bz^2+9aMz^2-18L-2LuzM
+resultant=-2916z^3(6hz-1)^3T
+boundary=T0=36;z1=-864h=>d4;z2_excess=648b;z5_excess=324a^2;terminal=32L^5z^7
+h0=z2=648b;b0_z7=32
+recovery=r=uz;e=M/18;F=-zp1/18;Cr=0;Ce=p2/18;Cz=u^2p2/54
+semantic_sha256=8914826aa78e2fa2ce140322d68d4fe752ebcbc3a66c0184aa34e4271bcdd03e
+CHECKS=26
+RESULT=PASS
