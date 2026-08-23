@@ -2,8 +2,8 @@
 id: THM-3864
 title: "The integrated three-cusp front has a three-dimensional seminormal defect"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  The conductor of the THM-3854 integrated
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The conductor of
+  the THM-3854 integrated
   quintic has double zeros at its three cusp addresses and simple zeros at
   all six node addresses.  Its seminormalization retains exactly the three
   node-pair gluing conditions, and the quotient by the branch ring is
@@ -14,7 +14,15 @@ status: >
   three directions remain OPEN.
 source: jc_zero_debt_lift / integrated-cusp alternative cubic-order lane, 2026-08-23
 audit: >
-  SELF-AUDITED exact proof candidate.  The companion verifies the conductor
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit checked that
+  the node-value and cusp-derivative functionals are independent and exhaust
+  k[t]/R, then rederived the conductor multiplicities from arbitrary Hermite
+  data and the local-to-global seminormal condition.  It verified the
+  derivative-coordinate isomorphism, square/cube membership of all three
+  directions, the UFD nonsquare tests, and completeness of the bounded
+  parity-preserving representatives, including the a=84 boundary.  It also
+  checked the canonical projective-line factorization and both endpoint
+  arguments.  The companion verifies the conductor
   generator and address multiplicities, the ranks of all node/cusp
   conditions modulo the conductor, the three node-equality packets, the
   derivative-coordinate determinant, the explicit third square/cube
@@ -22,8 +30,7 @@ audit: >
   lift coefficients.  It also verifies the symbolic factorization and both
   boundary specializations for the complete canonical projective line
   spanned by the first and third directions.  Normal and optimized runs must
-  byte-match the frozen transcript.  Independent hostile audit is still
-  required.
+  byte-match the frozen 43-gate transcript and both recorded hashes.
 depends_on:
   - THM-3854-integrated-three-cusp-quintic-s5-natural-completion-obstruction
 related:
@@ -39,9 +46,9 @@ hash_basis: raw LF bytes
 
 # THM-3864 -- all three seminormal cusp directions
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
-characteristic zero.  Retain the normalization of THM-3854,
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  Retain the
+normalization of THM-3854,
 
 ```text
 x=t^4-2t^2,                         y=3t^5-5t^3,               (1)
