@@ -1,0 +1,17 @@
+THM-3756 exact audit
+triangular_checks=72009
+ordinal_pairs_r_le_600=145861
+branch_round_trips=437583
+maximum_descent_length=598
+forest_branch_round_trips=539100
+forest_maximum_descent_length=598
+forest_component_roots_r_le_600=200
+tree_level_10_nodes=59049
+depth_rank_equality_two_boundary_rays_through=10
+first_coarse_rank_collision=3: [(5, 12, 13), (15, 8, 17)]
+rank_three_child_signatures={(3, 1): (4, 6, 5), (3, 2): (6, 7, 4)}
+first_ambient_primitivity_hole=8
+compressed_addresses=1..145861
+prime_shells_through_50=[2, 3, 4, 6, 7, 9, 10, 12, 15, 16, 19, 21, 22, 24, 27, 30, 31, 34, 36, 37, 40, 42, 45, 49]
+semantic_sha256=c2d9fed8f05283f87d358a3aa8913ae3c730767baa6a436bc2cab4eb2fc65656
+PASS
