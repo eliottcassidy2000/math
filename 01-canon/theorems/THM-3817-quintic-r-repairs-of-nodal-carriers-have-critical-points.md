@@ -2,26 +2,33 @@
 id: THM-3817
 title: "Quintic R-repairs of nodal carriers have critical points"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  On the c=1 cubic pseudo-plane, every canonical
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the c=1
+  cubic pseudo-plane, every canonical
   nodal carrier A=e^2-z/3+r sum_(i=0)^5 b_i e^i has a critical point.  In the
   genuine quintic case, a finite weight cover turns the top logarithmic-
   remainder equations into a triangular one-parameter resonance.  One later
   row splits into C_4=0 or a cubic S(C_4^2)=0; the first branch dies directly
   and the second dies by an exact T-resultant coprimality certificate.  This
   closes pure-r profiles through degree five, but not degree at least six or
-  mixed corrections.  The candidate is not a proved dependency until audit.
+  mixed corrections.
 source: jc_sparse_direct_search / quintic logarithmic-divisibility lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The deterministic companion derives the
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit independently
+  checked the multiplicity-safe boundary implication, the b_5-localized
+  quotient, the surjective square-root cover, every Laurent weight and
+  primitive back-substitution, the invariant universe and sole T!=0
+  saturation, the four triangular pivots, the retained C_4=0 branch, and the
+  T-resultant/coprimality contradiction on S(C_4^2)=0.  It also rechecked the
+  finite-root reconstruction and all dangerous u-values.  The deterministic
+  companion derives the
   universal Hamiltonian reduction and resultant, degree and leading
   coefficient, exact quotient denominator, surjective b_5=s^2 weight cover,
   twelve invariant remainder rows, a 149-element exact Groebner basis, four
   triangular normal forms, the row-sixteen branch factor, the C_4=0 exit,
   the T-resultant factorization, three exact coprimality certificates, hostile
   sparse/repeated-root controls, and finite source reconstruction.  Normal and
-  optimized runs byte-match the frozen transcript.  Independent hostile audit
-  is pending.
+  optimized runs byte-match the frozen transcript, all artifact hashes match,
+  and the 1,448 active gates replay without assertions disabled.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3813-quartic-r-repairs-of-nodal-carriers-have-critical-points
@@ -38,9 +45,9 @@ hash_basis: raw LF bytes
 
 # THM-3817 -- every quintic r-repair remains critical
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
-characteristic zero.  On the `c=1` cubic pseudo-plane put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  On the `c=1` cubic
+pseudo-plane put
 
 ```text
 Y=Spec k[r,z,e]/(r^2e-z^3+r),
@@ -333,9 +340,8 @@ surface Casimir identity
 
 then kills `{A,r}` because `1+2u_0!=0`.  This is a genuine critical point.
 
-Together with THM-3813, this candidate closes every pure `r g(e)` carrier
+Together with THM-3813, this theorem closes every pure `r g(e)` carrier
 with `deg g<=5`.  It does **not** address degree at least six, mixed
 `z^2h(e)+r g(e)` corrections, another pseudo-plane arm profile, or arbitrary
 planar Keller maps.  The exact companion has 1448 active gates; normal and
-optimized runs byte-match the frozen transcript.  **QED, subject to independent
-hostile audit.**
+optimized runs byte-match the frozen transcript.  **QED.**
