@@ -1,0 +1,15 @@
+theorem=THM-3806-binomial-cubic-r-repairs-of-nodal-carriers-have-critical-points
+surface=r^2e-z^3+r;c=1;field=algebraically_closed_characteristic_zero
+carrier=A=e^2-z/3+r*(mu*e^j+lambda*e^3);j=0,1,2;mu*lambda!=0
+boundary_criterion=all_H_roots_in_V(e*g)_implies_H_divides_e*g*Hprime
+generic=lambda!=1;deg_H=17;LC_H=8503056lambda^3(lambda-1)^2
+generic_witness=j0,j1:e6=70lambda^2;j2:e16=-1062882mu^4lambda^3(lambda-2)/(lambda-1)^2
+lambda1=j0:deg11:e2=361/(81mu);j1:deg10:e6=35;j2:deg15:e4=30mu^2
+lambda2=j2:deg17:e4=30mu^2
+recovery=r=u/e;z=9g*u*(u+1)/(e*(1+2u))
+open=three_or_more_cubic_monomials;degree_ge_4;mixed_corrections;different_arm
+generic_sha256=a451baf1d71eeaba7e3a2f82f0ea7d67d80e35fa581b642fc74d159214fcf62f
+exception_sha256=02c6cafd5e4a42daab6baaee65eef1cc71e68fe9a544577181d8ff6c38972ea8
+semantic_sha256=1127c20eb15e977d79c605186a7d17b848578963dba9ee6252219496cb4f77c7
+CHECKS=46
+RESULT=PASS
