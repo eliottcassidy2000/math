@@ -1,15 +1,282 @@
 ---
 id: THM-3849
 title: "Russell-arm conductor polynomial and residual contact graph"
-status: RESERVED / UNPROVED EMPTY STUB
+status: >
+  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
+  AUDIT.  For every hypothetical Darboux pair on the THM-3785 Russell
+  pseudo-plane, the implicit arm equation has a unique pulled-back Jacobian
+  factor kappa.  Its zero divisor is exactly the finite singular-address
+  divisor on the immersed normalization.  The target curve pulls back as a
+  reduced divisor L+D with [D]=2[L], and D meets L scheme-theoretically in
+  V(kappa).  A canonical weighted collision graph has vertex degrees
+  ord(kappa), so deg(kappa) is twice its total edge weight and is even and at
+  least two.  Existence of an arbitrary Darboux pair remains open.
 source: jc_quartic_c3_construct / immersed-normalization conductor lane, 2026-08-23
+audit: >
+  PROVISIONAL EXACT CANDIDATE.  The proof derives the gradient syzygy from
+  the unimodular arm derivative row, computes the residual normal coefficient
+  from the Darboux Bezout law, uses etale reduced pullback and Pic(Y)=Z/3,
+  and reconstructs the branch-intersection weights in completed local rings.
+  The exact companion independently verifies nodal, tacnodal, and ordinary
+  triple-point packets with conductor degrees two, four, and six.  Normal and
+  optimized replay agree with the frozen transcript; independent hostile
+  audit remains.
+depends_on:
+  - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
+  - THM-3843-russell-arm-birational-immersion-and-forced-self-identification
+related:
+  - THM-3790-cubic-pseudoplane-arm-nodal-immersion-gate
+  - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
+  - THM-3846-formal-arm-darboux-lift-and-algebraization-gate
+script: 04-computation/jc2_russell_arm_conductor_residual_contact_graph_thm3849.py
+output: 05-knowledge/results/jc2_russell_arm_conductor_residual_contact_graph_thm3849.out
+script_sha256: 7ea843269a46f0e13c2da70831e9bcd5aadbecb4a02be43673c920e09d15909c
+output_sha256: d31d374980f8d290b8259ad7e95790f0c0dc1d2863123901163975e3e34e2441
+semantic_sha256: d8cc0ca4f7fffcc44ff48b5fac2a6570b77977877d66649657fef1f019254b07
+hash_basis: raw LF bytes
 ---
 
-# THM-3849 -- reserved
+# THM-3849 -- every arm collision is a residual-divisor contact
 
-**RESERVED / UNPROVED EMPTY STUB.**  This namespace is reserved for the
-proposed all-degree theorem identifying the pulled-back Jacobian/conductor
-polynomial of a Russell-arm image, the reduced residual divisor of class
-`2[L]`, and the weighted collision/contact graph on normalization points.
-No mathematical claim is made by this file, and it has no proved
-dependencies until the proof candidate is written and independently audited.
+**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
+AUDIT.**  Work over an algebraically closed field `K` of characteristic zero,
+fix `c in K*`, and retain the smooth symplectic surface
+
+```text
+Y=Spec B,
+B=K[r,z,e]/(r^2e-z^3+c^3r),                 L=V(r,z)=A1_e.     (1)
+```
+
+Let `P,Q in B` satisfy
+
+```text
+{P,Q}=lambda in K*,                                           (2)
+```
+
+and put
+
+```text
+p(e)=P|_L,                       q(e)=Q|_L.                    (3)
+```
+
+By THM-3843, `gamma=(p,q):A1 -> A2` is a finite birational
+normalization with nowhere-zero differential, but it is noninjective.  Let
+
+```text
+Delta(U,V) in K[U,V]                                          (4)
+```
+
+be an irreducible generator of the implicit ideal of its image `Gamma`,
+unique up to a nonzero scalar.  Then there is a unique nonzero polynomial
+
+```text
+kappa(e) in K[e]                                               (5)
+```
+
+with
+
+```text
+Delta_U(p,q)= kappa q',
+Delta_V(p,q)=-kappa p'.                                       (6)
+```
+
+Its scalar ambiguity is exactly that of `Delta`.  The polynomial `kappa`
+has three equivalent meanings:
+
+1. `(kappa)` is the pullback of the Jacobian ideal
+   `(Delta_U,Delta_V)` to the normalization;
+2. its zeros are exactly the normalization points above the affine singular
+   points of `Gamma`; and
+3. if
+
+   ```text
+   div_Y(Delta(P,Q))=L+D,                                     (7)
+   ```
+
+   then the pullback is reduced, `D` is a nonempty reduced effective divisor,
+   and
+
+   ```text
+   [D]=-[L]=2[L] in Pic(Y)=Z/3,
+   D cap L=V_L(kappa) scheme-theoretically.                    (8)
+   ```
+
+There is also an exact finite combinatorial sidecar.  Above each singular
+point `y in Gamma`, make one vertex for each normalization point
+`e_i in gamma^(-1)(y)` and join distinct vertices `i,j` by an undirected
+edge of weight equal to the local intersection multiplicity of their smooth
+branches.  Then
+
+```text
+ord_(e_i)(kappa)=weighted degree of e_i,                       (9)
+deg(kappa)=2(total edge weight)=2 sum_y delta_y.               (10)
+```
+
+The sum is over affine singular points.  In particular `deg(kappa)` is even
+and, because THM-3843 forces a collision, at least two.  This graph is
+intrinsically undirected: no tournament orientation is present without an
+additional sidecar.
+
+## 1. The unique gradient/conductor polynomial
+
+The map `K[U,V] -> K[e]`, `(U,V) |-> (p,q)`, has a height-one prime
+kernel because its image has transcendence degree one.  The polynomial ring
+is a UFD, so the kernel is generated by the irreducible `Delta` in `(4)`.
+Differentiation gives
+
+```text
+Delta_U(p,q)p'+Delta_V(p,q)q'=0.                              (11)
+```
+
+THM-3843's arm Bezout identity is
+
+```text
+3c^3(alpha q'-p'beta)=lambda,                                 (12)
+```
+
+where `alpha=P_z|_L` and `beta=Q_z|_L`.  In particular
+
+```text
+(p',q')=K[e].                                                  (13)
+```
+
+Euclid's lemma applied to `(11),(13)` first makes `q'` divide
+`Delta_U(p,q)` and `p'` divide `Delta_V(p,q)`, with the signs and common
+quotient displayed in `(6)`.  Uniqueness follows from `(13)`, and `kappa` is
+nonzero because the irreducible characteristic-zero curve `Gamma` is
+generically smooth.  Equation `(13)` also gives the ideal identity
+
+```text
+(Delta_U(p,q),Delta_V(p,q))=(kappa).                           (14)
+```
+
+At a normalization point, the gradient of `Delta` vanishes exactly when
+`kappa` vanishes.  A finite birational normalization point with nonzero
+differential lying over a nonsingular point is the unique point over that
+target germ.  Conversely, a singular affine point cannot be unibranch here:
+one nonzero coordinate derivative would itself be a local parameter and
+make the image germ smooth.  Thus the zeros of `kappa` are precisely the
+collision addresses forced by THM-3843.
+
+## 2. The residual class-two divisor meets the arm in `kappa`
+
+The Darboux morphism
+
+```text
+Psi=(P,Q):Y -> A2_(U,V)                                       (15)
+```
+
+is etale.  Since `Gamma=V(Delta)` is reduced, its etale pullback
+`V(Delta(P,Q))` is reduced.  It contains `L`.  At the generic point of `L`,
+the target curve is smooth and the completed local etale map is an
+isomorphism, so `L` occurs with multiplicity one.  This proves the reduced
+decomposition `(7)` with no component of `D` equal to `L`.
+
+The class computation is immediate from principality and THM-3785:
+
+```text
+0=[div Delta(P,Q)]=[L]+[D],             Pic(Y)=Z/3[L].          (16)
+```
+
+In particular `D` cannot be empty.  The coefficient calculation identifies
+where it meets the arm.  Along `L`, the surface relation solves `r` to order
+three in the transverse parameter `z`, so `z` is a local equation for `L`.
+The chain rule, `(6)`, and `(12)` give
+
+```text
+partial_z Delta(P,Q)|_L
+ =Delta_U(p,q)alpha+Delta_V(p,q)beta
+ =kappa(alpha q'-p'beta)
+ =lambda kappa/(3c^3).                                        (17)
+```
+
+In the completed ring `K[e][[z]]`, factor
+
+```text
+Delta(P,Q)=z G(e,z).                                          (18)
+```
+
+The residual divisor has equation `G=0`, and `(17)` says
+
+```text
+G(e,0)=lambda kappa(e)/(3c^3).                                (19)
+```
+
+This proves the scheme-theoretic intersection statement in `(8)`, including
+all contact multiplicities.  Components of `D` disjoint from `L` are not
+excluded; `(19)` is the complete arm-contact packet.
+
+## 3. Completed branches give the weighted contact graph
+
+Fix an affine singular point `y` and let
+
+```text
+gamma^(-1)(y)={e_1,...,e_m}.                                  (20)
+```
+
+Every branch is smooth because the normalization differential is nonzero.
+In the completed target local ring,
+
+```text
+Delta=unit product_(j=1)^m F_j,                               (21)
+```
+
+where each `F_j=0` is a smooth branch.  Complete `(15)` at the arm point
+`e_i`.  Etaleness identifies the completed source and target local rings;
+under this identification `L` is the branch `F_i=0`, up to a unit.  Dividing
+`(21)` by that local equation and restricting to `L` gives
+
+```text
+ord_(e_i)(G|_L)
+ =sum_(j!=i) I_y(F_i,F_j).                                    (22)
+```
+
+Equations `(19),(22)` prove `(9)`.  Summing weighted degrees counts every
+undirected edge twice.  Since all individual branches are smooth, the local
+delta invariant is exactly the sum of their pairwise intersection
+multiplicities.  This proves `(10)` and also identifies `(kappa)` with the
+normalization conductor divisor in this immersed multi-branch setting.
+
+Thus the residual class `2[L]` is not merely a Picard bookkeeping debt.  It
+carries an exact contact realization of every finite self-identification of
+the arm, while `kappa` is the scalar polynomial that compresses the entire
+collision graph without losing its weighted degrees.
+
+## 4. Three exact controls
+
+The companion freezes three increasingly singular packets.
+
+For the THM-3790 node,
+
+```text
+p=t^2,                    q=t^3-t,
+Delta=V^2-U(U-1)^2,       kappa=-(t^2-1).                      (23)
+```
+
+The two vertices `t=+/-1` have one transverse edge, and
+`deg(kappa)=2`.
+
+For an immersed tacnode,
+
+```text
+p=t^2-1,                  q=t(t^2-1)^2,
+Delta=V^2-(U+1)U^4,       kappa=-(t^2-1)^2.                    (24)
+```
+
+The same two vertices have one edge of weight two, and
+`deg(kappa)=4`.
+
+For an ordinary triple point,
+
+```text
+p=t^3-t,                  q=t(t^3-t),
+Delta=V^3-U^2V-U^4,       kappa=-(t^3-t)^2.                    (25)
+```
+
+The preimages `-1,0,1` have three distinct tangent slopes, hence form a
+three-vertex complete graph with unit edge weights.  Each vertex has
+`kappa`-order two and `deg(kappa)=6`.  These controls distinguish ordinary
+collision count from contact multiplicity and show why the weighted graph,
+not a cosmetic tournament, is the natural discrete object.  No Darboux pair
+on `Y` is constructed, and `JC(2)` remains open.  **QED, pending independent
+hostile audit.**

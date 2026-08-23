@@ -1,0 +1,8 @@
+theorem=THM-3849-russell-arm-conductor-polynomial-and-residual-contact-graph
+gradient=Delta_U(p,q)=kappa*qprime;Delta_V(p,q)=-kappa*pprime
+residual=div(Delta(P,Q))=L+D;class(D)=2[L];D_cap_L=V(kappa)
+graph=ord_vertex(kappa)=weighted_degree;deg(kappa)=2*total_edge_weight
+controls=node:2;tacnode:4;ordinary_triple:6
+scope=all_degree_fixed_Russell_surface;Darboux_pair_existence_OPEN
+CHECKS=31
+semantic_sha256=d8cc0ca4f7fffcc44ff48b5fac2a6570b77977877d66649657fef1f019254b07
