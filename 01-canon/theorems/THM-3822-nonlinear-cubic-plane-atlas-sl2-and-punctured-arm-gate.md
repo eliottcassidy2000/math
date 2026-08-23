@@ -2,8 +2,8 @@
 id: THM-3822
 title: "Nonlinear cubic plane atlases have an SL2 and punctured-arm gate"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT
-  HOSTILE AUDIT.  Every dominant etale plane atlas of the THM-3811
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every dominant
+  etale plane atlas of the THM-3811
   nonlinear cubic surface determines a polynomial SL2 matrix whose first
   row satisfies an explicit genus-three square-discriminant condition.
   The divisor h=0 is intrinsically G_m, so every component of its etale
@@ -15,15 +15,24 @@ status: >
   Jacobian counterexample.
 source: root / nonlinear-cubic source-atlas and Cohn-word lane, 2026-08-23
 audit: >
-  SELF-AUDITED proof candidate.  The 37-gate exact companion verifies the
+  INDEPENDENT HOSTILE AUDIT PASS (jc_quartic_c3_construct, 2026-08-23).
+  The audit independently reconstructed all cubic laws and the different
+  from the intrinsic equations without saturation, checked the
+  D-quadratic-to-polynomial-square implication including k_0!=0 and the UFD
+  scalar step, reconstructed B/(h)=K[k_0,k_0^-1], and verified that etale
+  base change gives a genuinely nonconstant unit on every plane-arm
+  component.  It then rederived the squarefree genus-three fibre,
+  properness/Riemann--Hurwitz obstruction, the Laurent proof of
+  K[x,y] intersect K(xy)=K[xy], and every edge of the Pell R=0 reduced-ratio
+  argument.  No proof or scope repair was found.  The 37-gate exact
+  companion verifies the
   cubic-order reductions, SL2 determinant, two intrinsic lift laws,
   reconstruction of all three cubic relations and the different, the
   intrinsic D-quadratic, both discriminant identities, the Pell completion
   and its square-zero binary cubic, the G_m arm quotient, standard-cell and
   hyperbolic specializations, squarefreeness, the genus-three boundary, and
   the first Cohn row.  Normal and optimized replay agree with the frozen
-  output.  Independent mathematical and computational audit is still
-  required before promotion to PROVED.
+  output and raw hashes.
 depends_on:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
 related:
@@ -40,9 +49,9 @@ hash_basis: raw LF bytes
 
 # THM-3822 -- the source-plane problem is an SL2 completion problem
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT
-HOSTILE AUDIT.**  Work over an algebraically closed field `K` of
-characteristic zero.  Let `U=Spec B` be the affine etale surface of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `K` of characteristic zero.  Let `U=Spec B` be
+the affine etale surface of
 THM-3811, with
 
 ```text
@@ -330,5 +339,4 @@ map to the genus-three fibration `(28)`, followed by the second-row and
 Jacobian lifts.  Interacting non-elementary Cohn words are a concrete source
 of such arms, but the standard and single-hyperbola grammars are closed.
 
-No planar Jacobian counterexample is claimed.  **QED, subject to independent
-hostile audit.**
+No planar Jacobian counterexample is claimed.  **QED.**
