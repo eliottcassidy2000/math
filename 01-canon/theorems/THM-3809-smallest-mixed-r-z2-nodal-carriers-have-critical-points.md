@@ -2,7 +2,7 @@
 id: THM-3809
 title: "Smallest mixed R/Z2 nodal carriers have critical points"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the
   c=1 cubic pseudo-plane, every carrier A=e^2-z/3+b r+h z^2, for arbitrary
   b,h, has a critical point.  In the genuinely mixed cell b*h!=0, the slope
   u=r/z compresses criticality to two equations whose residual resultant is
@@ -12,12 +12,13 @@ status: >
   Hence the smallest simultaneous r/z^2 repair cannot admit a Darboux mate.
 source: jc-cohn-boundary / mixed-cell slope-resultant lane, 2026-08-23
 audit: >
-  PROOF CANDIDATE.  The exact companion has 34 active gates checking all
-  Hamiltonian signs, the Casimir syzygy, the compact slope resultant,
-  generic and parameter-axis residual degrees and boundary values, fixed
-  projective u-degrees, and denominator-free source/critical reconstruction.
-  Normal and optimized runs byte-match the frozen transcript.  Independent
-  hostile audit remains required.
+  INDEPENDENT HOSTILE AUDIT PASS (jc_zero_debt_lift, 2026-08-23).  The
+  Hamiltonian packet, Casimir syzygy, slope compression, compact five-term
+  resultant, all four parameter strata, forbidden-boundary values, fixed
+  projective u-degrees, and denominator-free source/critical reconstruction
+  were independently rederived.  The 34 active gates pass normally and
+  under Python -O, both runs byte-match the frozen transcript, raw script
+  and output hashes match, and the agent-facing documentation check passes.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
 related:
@@ -33,7 +34,7 @@ hash_basis: raw LF bytes
 
 # THM-3809 -- every smallest mixed r/z2 carrier remains critical
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.**  Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over
 an algebraically closed field `k` of characteristic zero.  On the `c=1`
 member of the THM-3785 cubic pseudo-plane put
 
