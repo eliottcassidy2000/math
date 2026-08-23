@@ -6,21 +6,79 @@
   have primitive generic-fibre genus at least three.  At equality the induced
   row coordinates have respectively two/one pole places through the degree-
   eight/seven sidecars; this is not a total affine-boundary count.  Both
-  intrinsic zero arms are `G_m`; either `h` splits or one of five fixed-slope
-  fibres is reducible and carries both square-root signs.
-  This dual bichromatic passport narrows every surviving atlas but constructs
-  none.  `CHECKS=36`.  Script/output/semantic SHA-256:
-  `dd6025305fd479c6118d57409e390ffa9751e15da533f465b50a998c59d45722` /
-  `a59b2c098e2cd115adb6da15dd711a4e6e2752c1d15b8ed5378bcc589012e86d` /
-  `d46b81bd79d27d7b4396f8f934dd773e694c0eb1a6384ffe03381e6934db7a29`.
+  intrinsic zero arms are `G_m`; either `h` splits or one fixed-slope fibre
+  has a nontrivial unordered CRT decomposition into both square-root signs.
+  This dual disconnected-fibre passport constructs no atlas.  `CHECKS=39`.
+  Script/output/semantic SHA-256:
+  `68f72c16eb15534f8e7a2599644599fcc09152cf50e0fbcbb714498522c3183e` /
+  `cd94624fe1171b3f4db4c6cbe4ddbef1d40aa8851ac1455f8f225e5723a3476c` /
+  `80f9319cff0304a799f66aefa5a960a5023325bfedc8914bdab6214537a92b1f`.
+
+- `jc2_intrinsic_spectral_pencil_fibre_atlas_thm3831.py` -> matching `.out`
+  [THM-3831 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, with
+  MISTAKE-455 saturation repair].  In the actual THM-3811 root chart, the two
+  quadratic spectral slopes each give one minus-sign `G_m`; the three cubic
+  slopes each give two comaximal `G_m` components `C=0` and `C=-1/a^2` with
+  opposite signs.  The repaired chart proof and strengthened companion retain
+  the `D=0` points.  An irreducible-`h` plane atlas must hit both arms of one
+  cubic fibre.  `CHECKS=47`.  Script/output/semantic SHA-256:
+  `9d307f8e9089962aca7cb3af1d1db35cf671c2b64afc7ded67785f74bf67631d` /
+  `92fd33bb830f81293206762b4965e33a66f3084e36ec60f244bfe0bb1f9b7722` /
+  `990a421380ed0135caf5d8b99630c2fedc2610dc4f0f34bb073eafe9c800f9ae`.
+
+- `jc2_nonlinear_cubic_root_ratio_chart_thm3832.py` -> matching `.out`
+  [THM-3832 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  rational coordinates `z=h/k,C` make the target map triangular:
+  `A=zC(1+z^2C)/(3z^3+7z^2+1)`, with
+  `A_z=1/(k(3z^3+7z^2+1))`; hence the Keller equation becomes the weighted
+  area law `Jac(z,C)=lambda k(3z^3+7z^2+1)`.  This is triangular-map
+  terminology, not a classical triangular-number invariant, and denominator
+  polynomialization remains essential.  `CHECKS=25`.  Script/output/semantic
+  SHA-256:
+  `3e21279f5d1deac6960d6d3a7b17d9b8d7accfb9428120b518627192737c5460` /
+  `c3aafc9a27ae4daea7c82ec9811a8dcfdeee6bec56093857d225092be7846c52` /
+  `a5445ccd279daadc45016d001be9b28233c0c8c306e11b2e10a752e9a1179853`.
+
+- `jc2_polynomial_marked_root_ratio_nonentry_thm3835.py` -> matching `.out`
+  [THM-3835 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  determinant-one row makes `h/k` reduced with exact denominator `k`; a
+  polynomial ratio would make `k` a scalar and contradict dominance.  Neither
+  the ratio nor any constant `PGL2` transform is polynomial or integral over
+  `K[x,y]`.  The surviving rational branch has the denominator-free passport
+  `CS=R` and `k Jac(h,C)-h Jac(k,C)=lambda R`, retaining `k=0`.  `CHECKS=18`.
+  Script/output/semantic SHA-256:
+  `a98cf391f4bca82e89f9a10d4b404325ebcd9c7d355a3ab96cac15384cd7cf0b` /
+  `3aa5626786e0498db37b2a7625c6cf4e5a4b37d0ea365c1e9a5a1f3e8e39286c` /
+  `436eb2336cafb2ead5cc67ffc4ae28050315804a2651bf8133be532d63884c2b`.
+
+- `jc2_coordinate_cross_bichromatic_split_thm3830.py` -> matching `.out`
+  [THM-3830 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  A
+  normalized transverse coordinate cross cannot allocate its two intersecting
+  axes to opposite square-root signs; every compatible factor `d` contains
+  `x` iff it contains `y`.  Only this intersecting model is closed; comaximal
+  components remain live.  `CHECKS=22`.  Script/output/semantic SHA-256:
+  `84bce55eb0344aad1dea319adc5fd39c60fbbff175c88cf9f574bd569ae36913` /
+  `6d062ed9bfcd13005fd55d790fa5bf8d64005337b29572b5a502f94e3b50b529` /
+  `3ce7d10d25f49bbebe1ce8e6d7530783fe7a1a5e9045ef9b37a3678d3213d2c5`.
+
+- `jc2_cubic_pseudoplane_misaligned_second_row_thm3829.py` -> matching `.out`
+  [THM-3829 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, with
+  MISTAKE-454 origin-unit repair].  The `10/7` tower integrates `S`, types
+  `M=ev^2R`, and dies at the first local term of the terminal `r^3` bucket in
+  all four `N/H` branches.  Together with THM-3828 this closes every `X!=0`
+  pair in the fixed second-row ansatz; `X=0,Y!=0` and higher slots remain open.
+  `CHECKS=58`.  Script/output/semantic SHA-256:
+  `27b15411a51ad8e6facf1dfa39c724c278a5a9811d7898c88a529935881fed67` /
+  `d728949c7f9f331a80f64b446e4b6c3f84bb5f5899cac1c68a46a4edb88549be` /
+  `d045d251b2f0016d9909c329a37a8d30c8e4b7c50d0fef84e9000f53012fe8c6`.
 
 - `jc2_cubic_pseudoplane_proportional_second_row_thm3828.py` -> matching
   `.out` [THM-3828 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   In the first second-row extension, `X!=0` forces `Y=lambda X`; if also
   `T=lambda S`, no Darboux pair exists.  The `N!=0` branch enters a
   `10,5,4,3` ladder and fails at a half-integral root address/first integral;
-  `N=0` fails arm division.  The misaligned `L=T-lambda S!=0` branch begins
-  with a new `10/7` tower and remains open, as do `X=0,Y!=0` and higher slots.
+  `N=0` fails arm division.  Its misaligned `L!=0` boundary begins with a
+  `10/7` tower and is closed by THM-3829; `X=0,Y!=0` and higher slots remain.
   `CHECKS=43`.  Script/output/semantic SHA-256:
   `4987fa7ba479b256dca27eb8d2cb051f4c54c62af54612783243da879b88f03e` /
   `316bea85e4e71be29c25ab847f91d127e05a49b45404d0bc1edfb232283dd538` /

@@ -9,6 +9,49 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-455 (2026-08-23, THM-3831 spectral-fibre audit) -- lift laws were used as a saturated affine-modification presentation at `D=0`
+
+- **What failed:** the first promoted proof solved the determinant and two
+  cubic lift laws, reconstructed the original multiplication identities, and
+  declared the resulting Laurent rings to be the exact spectral-fibre
+  quotients.  THM-3822 explicitly guarantees that converse only on the dense
+  `D!=0` graph; the identities alone do not exclude parasitic components in
+  the unsaturated closure over `D=0`.
+- **First failed implication:** satisfying the cleared graph/lift equations
+  does not by itself prove factorization through the affine modification
+  `U=Spec B` at the exceptional divisor.
+- **Repair / survivor:** every nonzero spectral fibre avoids the companion
+  divisor missed by THM-3811's first root chart.  In the actual localized
+  chart `T[J^-1]`, `h=1/J`, `k=u/J`, and `h=ak` is `u=1/a`; its exact equation
+  yields one Laurent component at a quadratic slope and two comaximal Laurent
+  components at a cubic slope.  This chart contains the relevant `D=0`
+  points, so the five-fibre classification and forced cubic two-arm hit
+  survive unchanged.
+- **Reusable rule:** cleared equations reconstruct a dense graph, not
+  automatically its affine modification or saturation.  At an exceptional
+  divisor, prove coverage by an actual chart (or compute the saturation)
+  before claiming a scheme-theoretic quotient.
+
+## MISTAKE-454 (2026-08-23, THM-3829 origin audit) -- coprimality with a constant carrier did not record an origin unit
+
+- **What failed:** the proof correctly obtained
+  `ord_0(M)=2 ord_0(v)+1` and `M=e v^2R`, but displayed only
+  `gcd(R,v)=1`.  It later cited that display for `R(0)!=0` after proving that
+  `v` has no nonzero root.  When `v` is constant, coprimality with `v` is
+  vacuous and does not itself imply the cited origin unit.
+- **First failed implication:** `gcd(R,v)=1 => R(0)!=0` fails when
+  `v in k*`; for example, `R=e` is coprime to every nonzero constant.
+- **Repair / survivor:** the already-proved origin equality gives
+  `ord_0(R)=ord_0(M)-(2 ord_0(v)+1)=0`, so `R(0)!=0` in every branch.  Equation
+  (21) now records this invariant explicitly, and the tied-payment statement
+  distinguishes nonzero roots of `v` from the origin, where it applies even
+  when `v(0)!=0`.  The terminal obstruction and theorem conclusion are
+  unchanged.
+- **Reusable rule:** after globalizing local valuations, record exceptional
+  distinguished-prime units separately.  A gcd sidecar controls primes that
+  divide the carrier; it says nothing at a prime absent from a constant
+  carrier.
+
 ## MISTAKE-453 (2026-08-23, THM-3827 dual-fibre audit) -- a target row-coordinate parity was mistaken for a source-boundary count
 
 - **What failed:** the promoted conclusion correctly proved two primitive

@@ -3,198 +3,169 @@ id: THM-3835
 title: "A polynomial marked-root ratio cannot support the nonlinear cubic plane atlas"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
-  dominant plane atlas of the THM-3811 surface, the marked
-  cubic-root ratio z=h/k is genuinely rational and nonpolynomial.  If z were
-  polynomial, the SL2 determinant would make k scalar; the genus-three
-  square sidecar then makes h scalar, contradicting dominance.  The result
-  is all-degree and does not exclude a nonconstant denominator k.
+  dominant morphism from the polynomial plane to the THM-3811 surface, the
+  marked-root ratio z=h/k is genuinely rational and its reduced denominator
+  is k up to a scalar.  If z were polynomial, the intrinsic Bezout law would
+  make k a scalar unit, and the THM-3832 chart equation would make z,C
+  algebraically dependent, contradicting dominance.  In fact neither z nor
+  any PGL2(K) transform of z is polynomial or integral over K[x,y].
+  Etaleness and the Keller equation are not needed.  A denominator-free homogeneous
+  polynomialization/Keller passport survives for the rational branch.  No
+  plane atlas or Jacobian counterexample is constructed.
 source: jc_quartic_c3_construct / triangular root-ratio polynomialization lane, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
-  The audit checked the uniform Groebner specialization over every
-  characteristic-zero algebraically closed extension, the odd-root parity
-  implication including a constant h endpoint, the pairwise-comaximal UFD
-  step, the constant-difference square argument, and both Q=0 and Q!=0 lift
-  endpoints.  Normal and optimized runs byte-match the frozen transcript and
-  both raw hashes agree.  The companion verifies the degree-seven
-  sidecar, the determinant factorization, the constant-row lift, and an exact
-  Groebner certificate [1] excluding H(T,c)=(T-a)S(T)^2 for every c!=0.
-  It retains c=0 as a hostile positive control.
+  INDEPENDENT HOSTILE AUDIT PASS (root / audit_incoming_3830, 2026-08-23).
+  The audit reduced the proof to the polynomial-unit implication from the
+  intrinsic Bezout row, checked dominance/injectivity and nonconstancy using
+  the exact Laurent arm, and derived the symmetric, normality, and PGL2
+  strengthenings.  It separated the non-dominant constant-denominator
+  hostile and confirmed that neither etaleness nor characteristic-zero
+  valuation arithmetic is load-bearing.  The deterministic companion checks the
+  determinant factorization, polynomial-unit boundary, non-dominant
+  polynomial-ratio hostile, genuinely rational unimodular-row control,
+  nonzero chart dependence relation, exact homogenizations of r and s, and
+  the denominator-free Jacobian chain.  Normal and optimized replay agree.
 depends_on:
-  - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
-  - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
-related:
   - THM-3832-nonlinear-cubic-root-ratio-triangular-birational-chart
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
+related:
+  - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
+  - THM-3831-intrinsic-spectral-pencil-fibre-atlas-and-forced-cubic-two-arm-hit
 script: 04-computation/jc2_polynomial_marked_root_ratio_nonentry_thm3835.py
 output: 05-knowledge/results/jc2_polynomial_marked_root_ratio_nonentry_thm3835.out
-script_sha256: 130e542df0a86ea57008d0c0fca909852449d2872e0d14cae2441f1778be94d9
-output_sha256: d3aaf8d4e8f87af6dccb3bc69d92acc7ae499ad48cf9a9b9fc7792f64f106a90
-semantic_sha256: 02fdbd5deb402cfb98842cf84318b6088f0a7d100d66cbf10004d8a8362f3b3b
+script_sha256: a98cf391f4bca82e89f9a10d4b404325ebcd9c7d355a3ab96cac15384cd7cf0b
+output_sha256: 3aa5626786e0498db37b2a7625c6cf4e5a4b37d0ea365c1e9a5a1f3e8e39286c
+semantic_sha256: 436eb2336cafb2ead5cc67ffc4ae28050315804a2651bf8133be532d63884c2b
 hash_basis: raw LF bytes
 ---
 
-# THM-3835 -- the marked-root ratio must keep its denominator
+# THM-3835 -- the marked-root ratio must retain its denominator
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
-algebraically closed field `K` of characteristic zero.
-Let
+algebraically closed field `K` of characteristic zero.  Let
 
 ```text
-psi:A2_(x,y) -> U                                                (1)
+psi:A2_(x,y) -> U
 ```
 
-be a dominant morphism to the THM-3811 nonlinear cubic surface.  Write
-`R=K[x,y]` and denote the pulled-back intrinsic generators by
+be a dominant morphism to the THM-3811 nonlinear cubic surface.  Write again
+`h,k,m,C in K[x,y]` for the pullbacks of the intrinsic functions.  Then
 
 ```text
-h,k,m,C,D in R,                 Ck-mh=1.                         (2)
+z:=h/k in K(x,y)                                                (1)
 ```
 
-Every dominant plane atlas, and hence every prospective planar Keller
-factorization through `U`, satisfies these hypotheses.  In the function
-field put
+does not belong to `K[x,y]`.  More precisely, `(1)` is already reduced in the
+UFD `K[x,y]`, so its denominator is `k` up to a nonzero scalar.  It is not
+integral over `K[x,y]`, and no constant projective change of the row makes it
+polynomial.
+
+This theorem is stronger in hypotheses than an etale obstruction: it uses
+dominance but neither etaleness nor a constant Jacobian.  It does not exclude
+the genuinely rational root-ratio chart or construct a plane atlas.
+
+## 1. The determinant fixes the reduced denominator
+
+The intrinsic row law pulls back to
 
 ```text
-z=h/k.                                                            (3)
+Ck-mh=1.                                                       (2)
 ```
 
-Then
+Thus `(h,k)=K[x,y]`; in particular `gcd(h,k)=1`.  Since polynomial rings over
+fields are UFDs, `h/k` is in lowest terms.  Any other reduced presentation of
+the same rational function differs by a scalar unit, proving the denominator
+claim.
+
+Suppose now that `z=h/k` were polynomial.  Then `h=zk`, and `(2)` would give
 
 ```text
-z is not in R.                                                    (4)
+k(C-mz)=1.                                                     (3)
 ```
 
-Equivalently, the denominator `k` in the THM-3832 triangular root-ratio
-chart is structural: it cannot be removed by a polynomial source
-parametrization.  No bounded-degree or support assumption is present.
+Hence `k=kappa in K*`.
 
-## 1. A polynomial ratio collapses the unimodular row
-
-Suppose, toward a contradiction, that `z` belongs to `R`.  Then `h=zk`, so
-the determinant law `(2)` becomes
+The non-dominant hostile shows why the last hypothesis matters: the row
 
 ```text
-1=Ck-mh=k(C-mz).                                                  (5)
+h=x,                    k=1,                    m=0, C=1
 ```
 
-Thus `k` is a unit of `R`, hence
+satisfies `(2)` and has polynomial ratio `z=x`.  What fails is not the row
+law but dominance over the nonlinear cubic surface.
+
+## 2. The triangular chart makes the dominance contradiction explicit
+
+Use the THM-3832 polynomials
 
 ```text
-k=c in K*.                                                        (6)
+r=3z^3+7z^2+1,
+q=7z^2+3,
+b=6z^3+7z^2-1,
+s=z^2qC-b.                                                     (4)
 ```
 
-This is stronger than merely saying that `h/k` was written in lowest terms:
-the actual `SL_2` completion makes a polynomial quotient impossible unless
-its denominator is scalar.
-
-## 2. The constant-row sidecar has at least two odd roots
-
-THM-3822 proves that every actual pullback `(1)` has a polynomial `w` with
+Its exact formula `k=r/(Cs)` and `(3)` give
 
 ```text
-w^2=H(h,k),                                                       (7)
+kappa C(z^2(7z^2+3)C-(6z^3+7z^2-1))
+ -(3z^3+7z^2+1)=0.                                            (5)
 ```
 
-where
+The left side is a nonzero polynomial in two formal variables `z,C`: its
+`C^2` coefficient is `kappa z^2(7z^2+3)`.  But THM-3832 proves
 
 ```text
-H(T,c)=
- 84T^7 +(36c^2+196c)T^6 +(84c^3+36c^2)T^5
-       +(49c^4+112c^3)T^4 -12c^5T^3
-       +(-14c^6+12c^5)T^2 +c^8.                                 (8)
+K(U)=K(z,C).                                                   (6)
 ```
 
-The following exact one-variable lemma is the key new gate:
+Dominance makes `K(U)->K(x,y)` injective, so the images of the transcendence
+basis `z,C` cannot satisfy `(5)`.  This contradiction proves `(1)`.
+
+Equivalently, once `(3)` makes `k` constant, dominance already fails because
+the nonconstant intrinsic function `k` has constant pullback.  Argument `(5)`
+records that failure entirely inside the new root-ratio chart.
+
+## 3. Every projective row direction retains a denominator
+
+Since `K[x,y]` is normal, a fraction in its field that is integral over it is
+already polynomial.  The result above therefore also says that `z` is not
+integral over the source ring.  Interchanging `h,k` in the unit-ideal argument
+shows similarly that `k/h` is not polynomial.
+
+More generally, let
 
 ```text
-For every c in K*, H(T,c) is not (T-a)S(T)^2
-for any a in K and S in K[T].                                    (9)
+zeta=(a h+b k)/(c h+d k),              ad-bc!=0.                (7)
 ```
 
-To prove it uniformly, write
+The two linear forms still generate the unit ideal because their constant
+coefficient matrix is invertible.  If `zeta` were polynomial, its denominator
+`c h+d k` would therefore be a scalar unit.  But THM-3827 proves that `h,k`
+are algebraically independent in every dominant plane pullback, so no nonzero
+constant linear combination of them is scalar.  Hence every `PGL_2(K)`
+transform `(7)` retains a genuine denominator.  This is a projective row
+statement, not invariance under a nonlinear target change.
+
+## 4. The denominator-free surviving system
+
+The rational branch should not be studied by cancelling `k`.  Homogenize `(4)`
+with `z=h/k`:
 
 ```text
-S=lT^3+uT^2+vT+w_0.                                              (10)
+R(h,k)=3h^3+7h^2k+k^3,
+S(h,k,C)=C h^2(7h^2+3k^2)-k(6h^3+7h^2k-k^3).                 (8)
 ```
 
-Equate all eight coefficients in
+The chart polynomialization law and the THM-3832 weighted-area equation become
 
 ```text
-(T-a)S^2-H(T,c)=0                                                (11)
+CS=R,                                                         (9)
+k Jac(h,C)-h Jac(k,C)=lambda R,             lambda in K*.    (10)
 ```
 
-and adjoin `c c_inv-1=0`.  Over `Q`, the exact grevlex Groebner basis of
-these coefficient equations in
-
-```text
-(l,u,v,w_0,a,c_inv,c)                                            (12)
-```
-
-is `[1]`.  This proves `(9)` after every characteristic-zero scalar
-extension.  The invertibility condition is load-bearing: at `c=0`,
-
-```text
-H(T,0)=84T^7=T(sqrt(84)T^3)^2.                                  (13)
-```
-
-The companion freezes both the universal certificate and this hostile
-boundary.
-
-Because `(8)` has odd degree seven, it has at least one root of odd
-multiplicity.  If it had only one *distinct* such root `a`, all remaining
-multiplicities would be even and algebraic closedness would give exactly the
-forbidden form `(9)`.  Consequently, for every `c!=0`, there are two distinct
-roots
-
-```text
-a_1!=a_2                                                         (14)
-```
-
-whose multiplicities in `H(T,c)` are odd.
-
-## 3. UFD parity makes h constant
-
-Factor `H(T,c)` over `K` and substitute `T=h`.  For distinct roots `a_i`,
-the polynomials `h-a_i` are pairwise comaximal in the UFD `R`, since their
-difference is a nonzero scalar.  Equation `(7)` therefore says that every
-irreducible valuation occurring in `h-a_i`, for an odd-multiplicity root
-`a_i`, has even order.  Hence
-
-```text
-h-a_i=gamma_i u_i^2,          gamma_i in K*, u_i in R.           (15)
-```
-
-Absorb `gamma_i` into `u_i^2`, using algebraic closedness.  Applying `(15)`
-to the two roots in `(14)` gives
-
-```text
-u_1^2-u_2^2=a_2-a_1 in K*.                                      (16)
-```
-
-Thus `(u_1-u_2)(u_1+u_2)` is a unit of `R`.  Both factors are units, hence
-scalars; characteristic zero then makes `u_1,u_2`, and finally `h`, scalar.
-Together with `(6)`, the whole first row `(h,k)` is constant.
-
-## 4. Constant first row contradicts dominance
-
-The first intrinsic lift law is
-
-```text
-D(7h^2+3k^2)=1+2Ck,                    A=hD.                     (17)
-```
-
-If `7h^2+3k^2=0`, equation `(17)` forces `C=-1/(2k)` to be scalar.  If the
-coefficient is nonzero, `(17)` expresses `D`, and hence `A`, as an affine
-polynomial in `C`.  In either case `A,C` are algebraically dependent.  This
-contradicts dominance of `(1)`, because the structural map
-`U -> A2_(A,C)` is dominant and `psi` was assumed dominant.
-
-Therefore `(4)` holds.  The theorem closes the polynomial-ratio boundary but
-deliberately leaves the genuine construction lane
-
-```text
-z=h/k in K(x,y) but not in R,      k nonconstant.                 (18)
-```
-
-No plane atlas and no Jacobian counterexample is constructed.  **QED.**
+Together with `(2)`, equations `(8)--(10)` retain the `k=0` divisor erased by
+the affine coordinate `z`.  They are necessary conditions only.  Solving
+them, extending the remaining intrinsic generators polynomially, and meeting
+the cubic two-arm and nonproperness passports all remain open.  No planar
+Jacobian counterexample is claimed.  **QED.**

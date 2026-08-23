@@ -47,6 +47,25 @@ check(sp.discriminant(P, a) != 0 and sp.discriminant(Q, a) != 0,
 check(sp.rem(b + Q, P, a) == 0,
       "on a cubic slope the B3 coefficient is minus Q")
 
+# Use the actual THM-3811 root chart, not merely the cleared lift laws.  Its
+# J-localization is the saturated affine-modification chart and contains every
+# nonzero spectral fibre, including its D=0 points.
+AA, CC, u = sp.symbols("AA CC u")
+G_root = u**3 + 7 * u + 3
+F_root = AA * G_root - CC * (CC + u**2)
+J_root = AA * (3 * u**2 + 7) - 2 * CC * u
+same(a**3 * G_root.subs(u, 1 / a), P,
+     "marked-root chart specializes to the cubic slope polynomial")
+same(a**3 * F_root.subs(u, 1 / a),
+     AA * P - a * CC * (a**2 * CC + 1),
+     "exact specialized root-chart equation")
+same(a**2 * J_root.subs(u, 1 / a), AA * Q - 2 * a * CC,
+     "exact specialized root-chart Jacobian")
+check(sp.gcd(sp.Poly(a, a), sp.Poly(P * Q, a)).degree() == 0,
+      "all spectral slopes avoid zero, so the missing P1 divisor is disjoint")
+same((1 + a**2 * CC) - a**2 * CC, 1,
+     "cubic root-chart component ideals are comaximal")
+
 
 def reconstruction_relations(
     A: sp.Expr,
@@ -90,6 +109,7 @@ D_c = (1 + 2 * z) / (Q * k**2)
 A_c = h_c * D_c
 omega_c = k * D_c
 theta_c = (m_c - 14 * A_c) / 3
+J_c = 1 / (a * k)
 
 G_cubic = sp.groebner(
     [P, z * (k + a**2 * z)], z, k, a, order="grevlex", domain=sp.QQ
@@ -99,6 +119,16 @@ for index, relation in enumerate(
 ):
     check(G_cubic.reduce(numerator(relation))[1] == 0,
           f"cubic universal reconstruction relation {index}")
+
+for expression, label in (
+    (F_root.subs({u: 1 / a, AA: A_c, CC: C_c}),
+     "cubic family lies in the actual root chart"),
+    (J_root.subs({u: 1 / a, AA: A_c, CC: C_c}) - J_c,
+     "cubic family has the correct localized root-chart J"),
+    (D_c - A_c * J_c,
+     "cubic family reconstructs D=AJ on the saturated chart"),
+):
+    check(G_cubic.reduce(numerator(expression))[1] == 0, label)
 
 same((k + a**2 * z) - a**2 * z, k,
      "cubic component ideals are comaximal after k inversion")
@@ -130,6 +160,7 @@ D_q = (14 * k + 3) / (4 * (9 * a + 14) * k**3)
 A_q = h_q * D_q
 omega_q = k * D_q
 theta_q = (m_q - 14 * A_q) / 3
+J_q = 1 / (a * k)
 G_quadratic = sp.groebner([Q], a, order="grevlex", domain=sp.QQ)
 
 
@@ -143,6 +174,21 @@ for index, relation in enumerate(
     reconstruction_relations(A_q, C_q, omega_q, theta_q, D_q, h_q, k, m_q)
 ):
     zero_mod_quadratic(relation, f"quadratic reconstruction relation {index}")
+
+zero_mod_quadratic(
+    F_root.subs({u: 1 / a, AA: A_q, CC: C_q}),
+    "quadratic family lies in the actual root chart",
+)
+zero_mod_quadratic(
+    J_root.subs({u: 1 / a, AA: A_q, CC: C_q}) - J_q,
+    "quadratic family has the correct localized root-chart J",
+)
+zero_mod_quadratic(D_q - A_q * J_q,
+                   "quadratic family reconstructs D=AJ")
+zero_mod_quadratic(A_q.subs(k, a**2 / 2),
+                   "quadratic Laurent chart retains its D-zero point")
+zero_mod_quadratic(D_q.subs(k, a**2 / 2),
+                   "quadratic exceptional point really has D zero")
 
 q_actual_q = 7 * h_q**2 + 3 * k**2
 B0_q = (
@@ -162,7 +208,7 @@ semantic = {
     "quadratic_slopes": "Q(a)=7a^2+3=0: one Gm, Ck=-1/2, W=-kB3",
     "cubic_slopes": "P(a)=3a^3+7a^2+1=0: Gm_minus disjoint_union Gm_plus",
     "cubic_equation": "z=Ck; z(k+a^2z)=0",
-    "components": "minus C=0; plus C=-1/a^2; exact original-law reconstruction",
+    "components": "minus C=0; plus C=-1/a^2; exact saturated THM-3811 root-chart quotients including D=0",
     "atlas": "irreducible h forces one cubic slope and nonempty pullback of both components",
     "scope": "necessary atlas passport only; no atlas and no Keller pair constructed",
 }
@@ -173,7 +219,7 @@ print("slopes=two_quadratic_plus_three_cubic")
 print("quadratic=one_Gm;Ck=-1/2;sign=minus")
 print("cubic=Gm_minus_disjoint_union_Gm_plus;equation=z*(k+a^2*z)")
 print("labels=minus:C=0;plus:C=-1/a^2")
-print("reconstruction=all_original_cubic_laws_and_different")
+print("reconstruction=actual_root_chart_saturation_plus_all_original_laws;D_zero_retained")
 print("atlas=irreducible_h_forces_cubic_slope_and_hits_both_components")
 print("scope=no_atlas_or_Keller_pair_constructed")
 print(f"CHECKS={CHECKS}")

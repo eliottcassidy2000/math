@@ -3,8 +3,8 @@ slopes=two_quadratic_plus_three_cubic
 quadratic=one_Gm;Ck=-1/2;sign=minus
 cubic=Gm_minus_disjoint_union_Gm_plus;equation=z*(k+a^2*z)
 labels=minus:C=0;plus:C=-1/a^2
-reconstruction=all_original_cubic_laws_and_different
+reconstruction=actual_root_chart_saturation_plus_all_original_laws;D_zero_retained
 atlas=irreducible_h_forces_cubic_slope_and_hits_both_components
 scope=no_atlas_or_Keller_pair_constructed
-CHECKS=34
-semantic_sha256=292840fe6e1ee62b404f211b32ad51cb69a1f74078981d3f53346370ab0e0f9f
+CHECKS=47
+semantic_sha256=990a421380ed0135caf5d8b99630c2fedc2610dc4f0f34bb073eafe9c800f9ae

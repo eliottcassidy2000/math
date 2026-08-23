@@ -186,7 +186,7 @@ semantic = {
     "intersection": "K[x,y] intersect K(g)=K[g] by a denominator-root valuation",
     "arm": "both h=0 and k=0 are Gm; opposite row entry is nonconstant on every pullback component",
     "pencil": "either h=0 is reducible or a fixed-slope fibre has a nontrivial canonical plus/minus CRT product",
-    "dual": "both generative row fibrations have genus at least three; equality has two versus one infinity places",
+    "dual": "both generative row fibrations have genus at least three; at equality the sidecar row coordinates have two versus one pole places, not total source-boundary counts",
     "scope": "generative closed factor existence is CITED, not computational; no JC counterexample",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
@@ -200,7 +200,7 @@ print("intersection=K[x,y]_intersect_K(g)=K[g]")
 print("boundary=p(g)_squarefree;each_arm_component_requires_nonconstant_k")
 print("arms=h_zero_and_k_zero_are_both_Gm")
 print("pencil=h_reducible_or_fixed_slope_canonically_disconnected_by_sign")
-print("dual=both_row_fibrations_genus_at_least3;infinity_parity=2_vs_1")
+print("dual=both_row_fibrations_genus_at_least3;equality_sidecar_row_coordinate_poles=2_vs_1;not_total_source_boundary")
 print("stein_factor=existence_CITED_not_computational")
 print("scope=no_JC_counterexample")
 print(f"CHECKS={CHECKS}")

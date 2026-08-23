@@ -50,6 +50,21 @@ closed the aligned proportional second row and exposed a genuinely new
 misaligned `10/7` tower.  These extensions changed the next questions without
 changing the status of either conjecture.
 
+A still later concurrent wave was extended rather than merely merged.
+[THM-3829](../01-canon/theorems/THM-3829-misaligned-second-row-r2z2-10-7-profile-nonentry.md)
+closes that `10/7` tower, leaving the one-sided orientation;
+[THM-3830](../01-canon/theorems/THM-3830-coordinate-cross-bichromatic-split-nonentry.md)
+shows why an intersecting coordinate cross cannot pay the sign passport;
+[THM-3831](../01-canon/theorems/THM-3831-intrinsic-spectral-pencil-fibre-atlas-and-forced-cubic-two-arm-hit.md)
+classifies the actual five spectral fibres after a root-chart saturation
+repair; and
+[THM-3832](../01-canon/theorems/THM-3832-nonlinear-cubic-root-ratio-triangular-birational-chart.md)
+turns the same cubic geometry into an exact weighted-area equation.  Its
+reserved successor then became proved
+[THM-3835](../01-canon/theorems/THM-3835-polynomial-marked-root-ratio-nonentry.md):
+every projective row direction must retain a denominator.  Their incoming
+formulas were independently rederived before integration.
+
 The two conjectures remain open.  The gain is an exact operation ledger and one
 especially dense merged row, not a proof by analogy.
 
@@ -114,16 +129,20 @@ The board changed in seven important ways.
   reason: injectivity on a chosen section is not injectivity on the ambient
   object.  Evaluation forgets polynomial geometry; a selected pair forgets the
   other eleven runners and does not prove its own minimality.
-- The first `rz^2` row and all degree-six pure-`r` carriers with at most three
-  monomials are now closed; so is the aligned proportional second row.  The
-  next local JC objects are its misaligned `10/7`/one-sided branches and
-  four-term sextic cells, not more tests of the eliminated profiles.
+- The first `rz^2` row, the full fixed `X!=0` second row, and all degree-six
+  pure-`r` carriers with at most three monomials are now closed.  The next
+  local JC objects are the one-sided `X=0,Y!=0` branch and four-term sextic
+  cells, not more tests of the eliminated profiles.
 - A surviving nonlinear-cubic plane atlas must now be nonproper, have
   two primitive generic-fibre genera at least three, map to the two opposite-
   parity row sidecars (with two/one row-coordinate pole places at equality),
-  and either split `h` or spend both square-root signs on one of five
-  fixed fibres, in addition to its signed Euler debt and the two-prime boundary
-  requirement on every finite envelope.
+  and either split `h` or hit both disjoint `G_m` arms of one of three cubic
+  spectral fibres, in addition to its signed Euler debt and the two-prime
+  boundary requirement on every finite envelope.
+- The root ratio `z=h/k` gives a triangular **rational-map** chart and a
+  weighted Jacobian density.  Its name has no demonstrated connection to
+  polygonal triangular numbers; the authentic figurate-number lane remains
+  the Pell/3-adic tag atlas above.
 
 ## 3. THM-3818: the support-two address regains scale
 
@@ -489,63 +508,111 @@ found the same five survivors after rows 31--29,
 cell `{0,1,4,6}` survives all four and only its next row is known to kill it,
 so the new boundary is four-term sextics rather than “degree six” wholesale.
 
-THM-3827 now makes the generic-fibre reframe genuinely two-sided.  Both
-intrinsic zero arms `V_U(h)` and `V_U(k)` are `G_m`.  For the cited generative
-factorizations
+THM-3827 makes the generic-fibre reframe genuinely two-sided.  Both intrinsic
+zero arms are `G_m`; for the cited factorizations
 
 ```text
 h=p(g),                       k=q(ell),
 ```
 
-the primitive generic fibres of both closed coordinates have genus at least
-three.  At equality they are isomorphic after base change to the degree-eight
-and degree-seven hyperelliptic sidecars of the same square identity; the
-induced row coordinates therefore have respectively two and one pole places.
-That is not the number of all boundary points of either affine source fibre.
-The pencil invoice also
-strengthens: either `h` itself is reducible, or one of five fixed-slope members
-is reducible and **bichromatic**, with prime components carrying both signs of
-the square root.  Together with THM-3823, any surviving atlas is nonproper,
-has signed Euler-integral debt `8d-1`, has at least two boundary primes in
-every finite envelope, maps to opposite-parity row sidecars (with the row-pole
-counts transferring at equality), and pays the split/bichromatic invoice.  This is an obstruction
-passport, not a construction or a proof of JC(2).
+both primitive generic fibres have genus at least three.  At equality the
+induced row coordinates have respectively two and one pole places through the
+degree-eight/seven sidecars.  MISTAKE-453 is load-bearing here: this is not a
+count of the whole affine source boundary, and in higher genus only maps to
+the opposite-parity sidecars are proved.  The other strengthening is a global
+unordered CRT sign map: unless `h` splits, one fixed spectral fibre is
+canonically disconnected into nonempty plus and minus pieces.
 
-THM-3828 then enters the first genuine second row above THM-3821 by adding
-`r^2z^2` profiles `X,Y`.  For `X!=0`, the top Wronskian intrinsically forces
-`Y=lambda X`.  If the preceding row aligns as `T=lambda S`, the `N!=0`
-branch enters the exact `10,5,4,3` ladder and dies at a half-integral root
-address plus a confluent first integral; the separately recomputed `N=0`
-branch fails arm division.  The equality boundary is constructive: with
+THM-3831 identifies those pieces inside the actual cubic surface.  Write
 
 ```text
-L=T-lambda S !=0,
-X=alpha e^6w^10,             L=beta e^4w^7,
+Q(a)=7a^2+3,                    P(a)=3a^3+7a^2+1.
 ```
 
-the new `10/7` tower remains **OPEN**.  So do `X=0,Y!=0` and further
-second-row slots.  Alignment is the killed operation; merely saying “the
-second row” would overstate the theorem.
-
-The independent audit isolates the first two exact successor buckets.  With
-`L!=0`, the next `r^5` condition is
+Each of the two `Q`-roots has one Laurent `G_m` component carrying only the
+minus sign.  Each of the three `P`-roots has exactly
 
 ```text
-[r^5]/3 = -7e^2 L S' - 4e^2 M X' + 7e^2 S L' + 10e^2 X M'
-          -12e L X' + 4e M X + 18e X L' + 2L X = 0,
+B/(h-ak) = K[k,k^-1] x K[k,k^-1],
+C=0 (minus),                  C=-1/a^2 (plus).
 ```
 
-and the following `r^4z^2` bucket is `15e(2XN'-NX')=0`.  Thus the open
-`10/7` tower splits cleanly into `N=0` or `N=delta e^3w^5`; this is a
-concrete THM-3829 work item, not a result supplied by its reservation.
+The first promoted proof had a real presentation seam: reconstructing the
+cleared lift laws does not saturate the affine modification at `D=0`.
+MISTAKE-455 repairs it with THM-3811's actual root chart `T[J^-1]`; every
+nonzero spectral fibre avoids the chart's missing companion divisor, and the
+chart retains the `D=0` points.  Thus an irreducible-`h` atlas must hit both
+disjoint arms of a **cubic**, not quadratic, spectral fibre.
 
-The live JC lanes are consequently more precise: four-or-more-term sextics
-and degree at least seven in the pure-`r` lane; the misaligned `10/7`,
-one-sided, and higher second-row branches; nonconstant `z^2` profiles outside
-the closed packets; and nonproper multi-ended `SL_2` arms capable of paying
-the dual passport.  THM-3829 and THM-3830 are only reserved route signals.
-Another quadratic, quintic, first-`rz^2`, or aligned-second-row elimination
-would duplicate closed terrain.
+THM-3830 supplies the matching hostile.  Opposite signs cannot live on the
+two axes of `xy=0`, because those components meet.  The nearest positive
+model is therefore comaximal, for example `u=x`, `v=xy-1`, not another
+intersecting cross.  With `f=uv`, `k=1`, `h=a+f`, the CRT seed
+`d_0=-b(a)xy/a^2` has the required two residues; the remaining sidecar
+equation is one explicit quadratic equation for a lift `d=d_0+fe`.  This is
+an exact next probe, not a constructed atlas.
+
+THM-3832 exposes the same geometry in the rational root ratio `z=h/k`.  Put
+
+```text
+r=3z^3+7z^2+1,
+s=z^2(7z^2+3)C-(6z^3+7z^2-1).
+```
+
+Then `K(U)=K(z,C)` and
+
+```text
+A=zC(1+z^2C)/r,             k=r/(Cs),
+partial A/partial z=1/(kr),
+Jac(z,C)=lambda k r          for a Keller value lambda.
+```
+
+This is triangular only because `(z,C)->(A(z,C),C)` fixes its second
+coordinate.  It has no discrete index, `n(n+1)/2`, or known figurate-number
+content.  The authentic square/triangular connection in this session is the
+Pell-tag calculation, not the occurrence of `z^2` in a rational chart.
+
+The next incoming reservation collapses under a short exact argument.  If
+`z=h/k` were polynomial, then the intrinsic row law would read
+
+```text
+1=Ck-mh=k(C-mz),
+```
+
+so `k` would be a scalar unit, contradicting dominance.  THM-3835 strengthens
+this to every `PGL_2` transform of `h/k` and to integrality over `K[x,y]`.
+The genuinely rational branch survives in the denominator-free variables
+
+```text
+R=3h^3+7h^2k+k^3,
+S=C h^2(7h^2+3k^2)-k(6h^3+7h^2k-k^3),
+CS=R,
+k Jac(h,C)-h Jac(k,C)=lambda R.
+```
+
+This is the correct next system because it retains the `k=0` divisor that
+the triangular chart cancels.
+
+On the local nodal side, THM-3828 closes `L=T-lambda S=0`.  THM-3829 follows
+the incoming `L!=0` signal all the way through
+
+```text
+X=alpha e^6v^10,            L=beta e^4v^7,
+M=e v^2R,
+```
+
+and kills every `N/H` branch by the first local term of the terminal `r^3`
+bucket.  MISTAKE-454 records the only audit repair: `R(0)!=0` comes from the
+separate origin valuation, not from `gcd(R,v)=1` when `v` is constant.  Hence
+THM-3828/3829 close the entire fixed ansatz with `X!=0`; the first live
+orientation is `X=0,Y!=0`, reserved but unproved as THM-3834.
+
+The live JC lanes are consequently: four-or-more-term sextics and degree at
+least seven in the pure-`r` lane; the one-sided/higher second row; rational
+root-ratio polynomialization and its denominator-free form; and a nonproper
+atlas capable of paying the dual-genus, Euler, boundary, and cubic two-arm
+passport.  Another `X!=0` second-row elimination or intersecting cross would
+duplicate closed terrain.
 
 ## 7. Khinchin content after the extension
 
@@ -586,12 +653,14 @@ pair; only the ambient residue sidecar tests a target LRC phase.
 | inert merged row `(5,29)` | pair-sum lattice | 29-class safe set | off-lattice witness and global arrival | cover by eleven labelled danger sets |
 | nodal coefficient ansatz | root valuations/resultants | nonexistence in stated profile | larger coefficient support | change coefficient type before enlarging elimination |
 | first `rz^2` profile | odd Kummer ladder then full `r^2z` bucket | complete no-go for its eight profiles | second `rz^j` layer and arbitrary mates | retain endpoint bucket, integral multiplicity, and origin jets |
-| proportional second row | `Y=lambda X`, target difference `L=T-lambda S` | aligned `L=0` no-go | misaligned `10/7`, `X=0,Y!=0`, higher slots | retain `L` before any target shear; test the next canonical bucket |
+| proportional second row | `Y=lambda X`, target difference `L=T-lambda S` | all fixed `X!=0` profiles are impossible | `X=0,Y!=0`, higher slots | retain orientation; derive the one-sided top bucket before swapping targets |
 | sparse sextic support | cubic/seventh-power cover and four remainder rows | all 22 support-`<=3` cells | four-term and denser cells | top-five census on every four-term torus cell |
 | source quadratic sheets | mod-seven residual values | discriminant factor `R W^2` | source label on `W=0` | retain collision slope `W`; audit degree-drop divisors |
 | nonlinear cubic atlas | intrinsic polynomial `SL_2` row | determinant and cubic lift laws | coverage/properness at punctured arms | genus-three square sidecar plus every arm component |
 | nonlinear cubic surface | compact Euler integration | finite/proper atlas obstruction and signed debt `8d-1` | location and positivity of escaping sheets | finite-envelope boundary primes plus an explicit nonproperness passport |
-| dual factors `h=p(g),k=q(ell)` | two primitive generic fibres | both genera `>=3`; target row-pole parity `2/1` transfers at equality; split/bichromatic fibre | an atlas construction and cross-fibration compatibility | combine both sidecars with the nonproper Euler/boundary passport |
+| dual factors `h=p(g),k=q(ell)` | two primitive generic fibres | both genera `>=3`; target row-pole parity `2/1` transfers at equality | total source boundary and cross-fibration compatibility | combine both sidecars with the nonproper Euler/boundary passport |
+| spectral slope `h=ak` | actual root chart `T[J^-1]` | two quadratic minus arms versus three cubic `G_m` pairs | source coverage of both target arms | retain the unordered sign idempotent and test both cubic addresses |
+| root ratio `z=h/k` | triangular rational map `(z,C)->(A,C)` | `A_z=1/(kr)`; every projective row direction retains a denominator | divisors `k=0,r=0,Cs=0` | use `CS=R` and the homogeneous area law; “triangular” is not figurate arithmetic |
 
 ## 9. Hostiles that set the exact boundary
 
@@ -616,12 +685,16 @@ pair; only the ambient residue sidecar tests a target LRC phase.
   valuations cannot be inherited from a positive-order stratum.
 - The exact four-term sextic cell `{0,1,4,6}` survives all four rows that kill
   every support-`<=3` cell.  Sparse saturation does not extrapolate by density.
-- In THM-3828, `Y=lambda X` is forced but `T=lambda S` is not.  Setting the
-  target difference `L` to zero closes the branch; keeping `L!=0` creates the
-  new `10/7` tower.  A convenient target alignment is load-bearing data.
+- In THM-3828, `Y=lambda X` is forced but `T=lambda S` is not.  Keeping
+  `L!=0` creates a `10/7` tower, and THM-3829 needs its full `r^4` and `r^3`
+  sources to close it.  The aligned proof alone cannot be extrapolated, even
+  though the combined `X!=0` ansatz is now empty.
 - For THM-3827, knowing that one spectral fibre is reducible is weaker than the
-  actual passport: unless `h` splits, one fixed fibre needs components of both
-  square-root signs.  Component colour cannot be discarded after factor count.
+  actual passport: unless `h` splits, one cubic fibre must hit both disjoint
+  square-root arms.  The intersecting cross in THM-3830 is the sharp hostile.
+- THM-3832 is “triangular” in the differential-matrix sense only.  Treating
+  its powers `z^2` as square-number data or its name as a triangular-number
+  bridge would erase the chart denominators without adding an arithmetic map.
 
 ## 10. New research moves and next pulls
 
@@ -642,8 +715,8 @@ Six reusable ideas survived.
 4. **Treat an incoming theorem as a boundary map.**  Extract its native
    operation, sharp hostile, and first unproved adjacent cell.  The productive
    extensions here were label multiplication after THM-3825, four-term support
-   after THM-3826, the opposite arm after THM-3827, and the misaligned `10/7`
-   branch after THM-3828—not new proofs of their already closed cores.
+   after THM-3826, the cubic fibre atlas after THM-3827, the misaligned closure
+   after THM-3828, and the denominator/area law after THM-3832.
 5. **Type arithmetic digits by gauge.**  The same exponent can mean an
    unordered label or a label-plus-orientation pair.  A numerical predicate
    surviving the encoding does not imply that its decoded combinatorial state
@@ -654,6 +727,10 @@ Six reusable ideas survived.
    arm.  The
    dual can carry genuinely new row-coordinate pole geometry even when the
    genus floor agrees; it does not by itself count the whole affine boundary.
+7. **At an affine-modification boundary, replace cleared equations by an
+   actual chart.**  THM-3831's formulas were right, but only `T[J^-1]` proved
+   that no parasitic `D=0` component survived.  Saturation is a mathematical
+   predicate, not an implementation detail.
 
 The cheapest high-value next tests are:
 
@@ -662,18 +739,19 @@ The cheapest high-value next tests are:
 - if that cover succeeds, search continuously between adjacent `1/34` phases
   before claiming a bad row;
 - on the local JC side, run a top-five invariant census over all genuine
-  four-term sextic cells, or compute the next bucket on THM-3829's OPEN
-  misaligned `10/7` tower without using its empty reservation as a result;
-  retain the full polynomial tower—evaluation at `z=2` is only a hostile
-  control;
+  four-term sextic cells, or derive the one-sided `X=0,Y!=0` top buckets behind
+  reserved THM-3834; retain the full polynomial tower—evaluation at `z=2` is
+  only a hostile control;
 - separately test the one-sided `X=0,Y!=0` second row; target swapping does
   not preserve the fixed base terms automatically;
 - on the global JC side, combine both genus-three sidecars, their opposite
-  row-coordinate pole parity, the bichromatic component signs, the `SL_2` lift laws, and
-  Euler/boundary debt into one explicit nonproper-atlas feasibility system;
-- audit THM-3830's reserved coordinate-cross candidate by restricting the
-  two square-root signs separately to `x=0` and `y=0`; the stub itself proves
-  nothing;
+  row-coordinate pole parity, the cubic two-arm incidence, the `SL_2` lift
+  laws, and Euler/boundary debt into one explicit nonproper-atlas system;
+- test THM-3830's live comaximal replacement `x(xy-1)` by reducing its lift
+  equation for `d=d_0+x(xy-1)e`; intersecting crosses are already closed;
+- attack the proved THM-3835 homogeneous system `CS=R` plus
+  `k Jac(h,C)-h Jac(k,C)=lambda R`, retaining the `k=0` divisor and both
+  cubic cancellation addresses rather than returning to polynomial `z`;
 - follow the negative-Pell chain `T_M=3T_N` and test when `T_N=a^3+b^3` has
   inert/cube-free primitive sum; `(9,13;76,132)` is unique only in the
   `a+b<=356` atlas, so an extended cap is the cheapest probe before seeking an
@@ -688,5 +766,6 @@ No current result excludes an LRC(14) row or constructs a planar Keller
 counterexample.  The precise advance is a better cube/facet packet, a lawful
 Pell return operation, an exact square/triangular label subatlas, a repaired
 complete first-`rz^2` no-go, a sparse-sextic boundary, an aligned-second-row
-closure with an OPEN `10/7` successor, a dual-genus/bichromatic/Euler atlas
-passport, and one concrete 29-residue next target.
+closure of the full fixed `X!=0` second row, a saturated cubic two-arm/root-
+ratio atlas passport with a proved denominator gate, and one concrete
+29-residue next target.

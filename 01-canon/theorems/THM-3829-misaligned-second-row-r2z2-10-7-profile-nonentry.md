@@ -23,7 +23,9 @@ audit: >
   non-p and non-g order floors in every zero/nonzero branch; the p/g
   resonance bounds; polynomiality of all terminal remainders; and both
   final local coefficients.  Normal and optimized runs byte-match the
-  frozen transcript and the raw hashes agree.  The deterministic companion
+  frozen transcript and the raw hashes agree.  A second root audit repaired
+  the recorded survivor at the origin: (20) also gives R(0)!=0 when v is a
+  constant, a fact not supplied by gcd(R,v)=1 alone.  The deterministic companion
   has 58
   active gates checking the Poisson Casimir, monic canonical reduction,
   arm and top Wronskian buckets, exact 10/7 tower and r5 integration, the
@@ -243,11 +245,12 @@ Equations (17) and (20), at every irreducible factor of `v`, give the global
 factorization
 
 ```text
-M=e v^2 R,              R in k[e],       gcd(R,v)=1.     (21)
+M=e v^2 R,     R in k[e],     gcd(R,v)=1,     R(0)!=0.    (21)
 ```
 
-At the tied order, the leading coefficient of `P_4=0` also gives, uniformly
-at every zero `xi` of `v` (including the origin),
+At the tied order, the leading coefficient of `P_4=0` also gives, at every
+nonzero zero `xi` of `v` and separately at the origin (whether or not
+`v(0)=0`),
 
 ```text
 15alpha R(xi)^2=49beta^2 f(xi).                          (22)
@@ -384,7 +387,7 @@ order `d`; together they have coefficient
 -28beta R(0)f(0)c(2d+1).                                (38)
 ```
 
-Here `R(0)!=0` by (21), `f(0)=1/12` by (19), and `2d+1` cannot vanish in
+Here `R(0)!=0` by `(20)--(21)`, `f(0)=1/12` by (19), and `2d+1` cannot vanish in
 characteristic zero.  Thus (38) is nonzero, another contradiction.
 
 This proves (4).

@@ -62,7 +62,8 @@ audit: >
   coordinates.  At genus-three equality their pole places transfer through
   the projective isomorphisms, but this is not the total affine-boundary count
   of either source fibre; the dual genus floors and bichromatic packet are
-  unchanged.
+  unchanged.  The frozen semantic transcript was refreshed to encode that
+  same row-coordinate scope rather than the ambiguous old infinity phrase.
 depends_on:
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
 related:
@@ -72,9 +73,9 @@ citation:
   - "Arzhantsev--Petravchuk, Closed and Irreducible Polynomials in Several Variables, arXiv:math/0608157v2, Proposition 1, Lemma 3, and Corollary 1."
 script: 04-computation/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.py
 output: 05-knowledge/results/jc2_nonlinear_cubic_atlas_generic_fibre_genus_floor_thm3827.out
-script_sha256: cc22fe6e3c026820ded9b0aa171c13e3ba6205c23c7ba8104f7760eba633b8e9
-output_sha256: 1d994fcd8eb65f7716c43ba65a2f3222cfb6b8c0e726a1d3dc26417e2514078f
-semantic_sha256: a9388b3182d2e4a45d065287ccdbaced48cec56a102dcd13c9392283d0592c48
+script_sha256: 68f72c16eb15534f8e7a2599644599fcc09152cf50e0fbcbb714498522c3183e
+output_sha256: cd94624fe1171b3f4db4c6cbe4ddbef1d40aa8851ac1455f8f225e5723a3476c
+semantic_sha256: 80f9319cff0304a799f66aefa5a960a5023325bfedc8914bdab6214537a92b1f
 hash_basis: raw LF bytes
 ---
 

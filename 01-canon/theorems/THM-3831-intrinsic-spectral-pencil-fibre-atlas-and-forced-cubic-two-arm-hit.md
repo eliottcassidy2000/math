@@ -15,9 +15,12 @@ source: jc_quartic_c3_construct / THM-3827 disconnected spectral-fibre lane, 202
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
   The audit rederived the quotient presentations, checked that k is a unit,
-  verified the quadratic and cubic reconstruction formulas including D=0
-  points, checked comaximality and both W signs, and audited the global sign
-  transfer under plane base change.  The 34-gate exact companion checks the five
+  and found that lift-law reconstruction alone did not certify saturation at
+  D=0.  The repaired proof uses THM-3811's actual q-root chart, proves that
+  every nonzero spectral fibre avoids its missing companion divisor, and
+  classifies the full localized chart including D=0 points.  It also checked
+  comaximality, both W signs, and the global sign transfer under plane base
+  change.  The strengthened exact companion checks the five
   slopes and every required unit denominator; derives the cubic factor
   z(k+a^2 z); reconstructs all three original Delone--Faddeev multiplication
   laws, both lift laws, the SL2 law, and the different in the universal cubic
@@ -34,9 +37,9 @@ related:
   - THM-3830-coordinate-cross-bichromatic-split-nonentry
 script: 04-computation/jc2_intrinsic_spectral_pencil_fibre_atlas_thm3831.py
 output: 05-knowledge/results/jc2_intrinsic_spectral_pencil_fibre_atlas_thm3831.out
-script_sha256: 4dc7892f2e36d467c68e8268bbce48125e41fa968f913781a7ddc61c0dfd7ae9
-output_sha256: 79217dcd7e35d491266ff3a0d2d22b6502e068dbf4b98d4f1bd37854961633d9
-semantic_sha256: 292840fe6e1ee62b404f211b32ad51cb69a1f74078981d3f53346370ab0e0f9f
+script_sha256: 9d307f8e9089962aca7cb3af1d1db35cf671c2b64afc7ded67785f74bf67631d
+output_sha256: 92fd33bb830f81293206762b4965e33a66f3084e36ec60f244bfe0bb1f9b7722
+semantic_sha256: 990a421380ed0135caf5d8b99630c2fedc2610dc4f0f34bb073eafe9c800f9ae
 hash_basis: raw LF bytes
 ---
 
@@ -120,6 +123,34 @@ The coefficient `b(a)` is nonzero at all five slopes, so `kB_3=b(a)k^4` is
 a unit on `B_a`.  The signs `W=+kB_3` and `W=-kB_3` are therefore intrinsic
 component labels.
 
+The lift laws by themselves must not be treated as a presentation at `D=0`.
+To classify the actual quotient, use the first THM-3811 root chart
+
+```text
+T=K[A,C,u]/(A G(u)-C(C+u^2)),       G(u)=u^3+7u+3,
+J=A(3u^2+7)-2Cu.                                             (11a)
+```
+
+Its open `Spec T[J^-1]` lies in `U` and has
+
+```text
+D=AJ,                 h=1/J,                 k=u/J.           (11b)
+```
+
+The only companion divisor missed by this chart is `P_1`.  On `P_1` one has
+`h=0` and `k=C^-1`, so `h-ak=-a/C` is a unit because every spectral slope is
+nonzero.  Thus the **entire** fibre `B_a` lies in `(11a)--(11b)`.  There
+`h=ak` is exactly `u=1/a`, and specialization gives
+
+```text
+A P(a)/a^3=C(C+1/a^2),
+J=A Q(a)/a^2-2C/a.                                          (11c)
+```
+
+These equations, with `J` inverted, are the saturated scheme-theoretic fibre
+presentation used below.  In particular, they retain rather than guess the
+points where `D=AJ` vanishes.
+
 ## 2. The two quadratic slopes have one minus component
 
 Assume
@@ -136,20 +167,17 @@ C=-1/(2k),                    m=-3/(2ak),
 D=(14k+3)/(4(9a+14)k^3).                                     (13)
 ```
 
-Here `a(9a+14)` is nonzero at both roots of `Q`.  Formulas `(4)` express
-`A,omega,theta` in `K[k,k^-1]`, so there is a surjection
+Here `a(9a+14)` is nonzero at both roots of `Q`.  More decisively, `(11c)`
+has `J=-2C/a`, so localizing at `J` makes `C` a unit, while `P(a)!=0`
+determines `A` uniquely.  Hence the actual root chart gives
 
 ```text
-K[k,k^-1] -> B_a.                                               (14)
+B_a=K[C,C^-1]=K[k,k^-1]            if Q(a)=0.                    (15)
 ```
 
-Conversely, substitute `(13)` and `(4)` into all three original cubic laws
-and the definition of `D`.  They vanish modulo `Q(a)`, so the assignments
-define an inverse to `(14)`.  Therefore
-
-```text
-B_a = K[k,k^-1]                    if Q(a)=0.                    (15)
-```
+The displayed formulas `(13)` and `(4)` recover every generator and include
+the point `C=-1/a^2`, where `A=D=0` and `k=a^2/2`.  Thus `(15)` has not lost
+an exceptional graph point.
 
 Direct substitution in `(9)` gives
 
@@ -194,8 +222,25 @@ Using `(17),(18)`, equation `(20)` becomes
 z(k+a^2z)=0.                                                    (21)
 ```
 
-As in the quadratic case, `(8),(19),(4)` express every generator of `B_a`
-in the ring on the right below.  Conversely, the universal assignments
+This compatibility calculation is a useful check, but exactness comes from
+the saturated chart `(11c)`: since `P(a)=0`, it gives
+
+```text
+C(C+1/a^2)=0.                                                 (21a)
+```
+
+The ideals are comaximal because `(1+a^2C)-a^2C=1`.  On `C=0`, inverting
+`J=AQ(a)/a^2` leaves `K[J,J^-1]`; on `C=-1/a^2`, inverting
+`J=AQ(a)/a^2+2/a^3` leaves the same Laurent ring.  Since `k=1/(aJ)`, these
+are both `K[k,k^-1]`.  Equivalently, with `z=Ck`, `(21a)` is `(21)`, and
+there is an exact isomorphism
+
+```text
+B_a=K[k,k^-1,z]/(z(k+a^2z))
+   =K[k,k^-1] x K[k,k^-1].                                  (23)
+```
+
+The universal assignments
 
 ```text
 h=ak,       C=z/k,       m=(z-1)/(ak),
@@ -203,19 +248,8 @@ D=(1+2z)/(Q(a)k^2)                                           (22)
 ```
 
 satisfy all original cubic laws and reconstruct the different modulo
-`P(a)` and `(21)`.  Hence there is an exact isomorphism
-
-```text
-B_a = K[k,k^-1,z]/(z(k+a^2z)).                                 (23)
-```
-
-The ideals `(z)` and `(k+a^2z)` are comaximal because their difference after
-multiplying `(z)` by `a^2` is the unit `k`.  The Chinese remainder theorem
-therefore gives
-
-```text
-B_a = K[k,k^-1] x K[k,k^-1].                                  (24)
-```
+`P(a)` and `(21)`.  The root-chart proof above is what makes this converse
+exhaustive at `D=0`; the lift-law calculation alone would not.
 
 The two intrinsic components are
 
@@ -228,8 +262,9 @@ U_a^+: z=-k/a^2,             C=-1/a^2,
 ```
 
 Each is exactly `G_m`; formulas `(22)` and `(4)` give the remaining
-coordinates and show that `(25),(26)` exhaust the full fibre, including any
-points with `D=0`.  Finally `(9)` gives the exact labels
+coordinates.  The second chart component contains `A=D=0`, `k=a^2/2`, so the
+root-chart argument explicitly shows that `(25),(26)` exhaust the full fibre
+including its exceptional point.  Finally `(9)` gives the exact labels
 
 ```text
 W=-kB_3 on U_a^-,                  W=+kB_3 on U_a^+.            (27)
