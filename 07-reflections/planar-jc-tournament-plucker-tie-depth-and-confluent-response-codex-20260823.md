@@ -14,9 +14,11 @@ through the high-`y` cutoff
 All four have status **PROVED + VERIFIED-EXACT + INDEPENDENTLY
 HOSTILE-AUDITED**.  The first surviving nonzero-sidecar tariff is now
 [THM-3899](../01-canon/theorems/THM-3899-nonzero-sidecar-y-degree-tariff-and-equianharmonic-equality-colors.md),
-with the same proved status.  The response laws reserved under THM-3900--3902
-are not active canon until their focused audits finish.  None of these results
-proves `JC(2)`; the planar Jacobian conjecture remains **OPEN**.
+with the same proved status.  THM-3900--3902 have now also been promoted as
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**: THM-3900
+classifies the generic `f=0` chart, while THM-3901/3902 give necessary
+osculating response laws in the two live `f!=0` degree regions.  None of
+these results proves `JC(2)`; the planar Jacobian conjecture remains **OPEN**.
 
 Companion:
 
@@ -596,6 +598,22 @@ f=0, S(T,f)=G^2, T(0,0)=0  ==>  T=0, G=+/-L^2.          (31)
 
 Every remaining residual survivor must pay a genuinely nonzero sidecar.
 
+[THM-3900](../01-canon/theorems/THM-3900-f-zero-generic-y-polynomial-root-color-response-classification.md)
+also classifies the generic `k(x)[y]` chart without importing the provisional
+elliptic-height claims.  At each root of the normalized quadratic `u`, the
+square root has intrinsic color `+1` or `-1`.  Same-color roots force exactly
+the rational hostile `T_*=-2K/(3a^2)`.  Opposite colors require their first
+derivatives to vanish; the second-derivative response then forces
+
+```text
+A=-8/3, B=0, C^2=1/8, f^2=169/512.
+```
+
+This split-color family exists as a sharp constant-parameter hostile, but the
+actual `f^2=F^2/(a^3L^2)` is nonconstant.  Thus the only generic coordinates
+are `T=0,T_*`, and global `a`-integrality deletes the latter.  Root color plus
+marked second response is therefore sufficient here; root color alone is not.
+
 ## 7. The live nonzero-sidecar response
 
 THM-3899 gives the first all-degree tariff.  If
@@ -616,8 +634,8 @@ The two color valuations at `a=x+1` sum to `1+2ord_a(v)`.  This is a lawful
 binary observable, but the canonical payment `(h-du,h+du)=(a,3L^2)` proves
 that color parity alone is not a no-go.
 
-The exact working packet reserved under THM-3902 restores the deleted
-response.  With `epsilon=y^(-1)`, `T=y^nU`, `f=y^nV`,
+The exact [THM-3902](../01-canon/theorems/THM-3902-nonzero-sidecar-equality-color-two-jet-response.md)
+restores the deleted response.  With `epsilon=y^(-1)`, `T=y^nU`, `f=y^nV`,
 `G=y^(2n+2)VH`, and `C_+/-=H+/-dU`, it gives
 
 ```text
@@ -641,8 +659,9 @@ delta>=3:  -3a^2u^4.                                    (35)
 ```
 
 All are already squares over `k`; the only cancellation wall is
-`delta=2, au+v=0`.  The THM-3901 working packet uses the sign-matched root
-`sTr` and the exact defect
+`delta=2, au+v=0`.
+[THM-3901](../01-canon/theorems/THM-3901-nonzero-sidecar-osculating-response-fan.md)
+uses the sign-matched root `sTr` and the exact defect
 
 ```text
 S-(sTr)^2=S+3T^2r^2                                     (36)
@@ -650,8 +669,8 @@ S-(sTr)^2=S+3T^2r^2                                     (36)
 
 to expose the first response fan and its divisibility passports.  In the
 formerly automatic high-gap cell it subtracts the second osculating root
-`s(Tr-a^2L^2f^2/2)` and obtains another exact three-cell fan.  These packets
-are still provisional until independently audited; their value is the exact
+`s(Tr-a^2L^2f^2/2)` and obtains another exact three-cell fan.  These are
+proved necessary laws after independent audits; their value is the exact
 location of the next information, not a claim that `JC(2)` has closed.
 
 ## 8. Wildcard: confluence, not a tournament, at the sextic cusp
@@ -719,13 +738,11 @@ proof.
 2. **Odd terminal square lift.**  Substitute `q_0=s^2` after all forced jets,
    retain `r` rather than gauge-peeling it away, and locate the first degree at
    which the `A` transport debt becomes a transverse obstruction.
-3. **Generic `f=0` root-response classification.**  Global polynomial
-   descent is closed, but the normalized `k(x)[y]` chart still exposes the
-   exact hostile `T_*`.  Audit the reserved THM-3900 root-color and
-   second-derivative classification independently of the elliptic height
-   claims.
-4. **Nonzero-sidecar response completion.**  Audit THM-3901/3902, then extend
-   the exact response one jet beyond their payable controls.  The primary
+3. **Transplant the generic root response.**  THM-3900 proves that the
+   `k(x)[y]` `f=0` chart has only `T=0,T_*`.  Test whether its same/split
+   color and second-derivative dichotomy survives the first nonzero sidecar.
+4. **Nonzero-sidecar response completion.**  Extend THM-3901/3902 one jet
+   beyond their payable controls.  The primary
    targets are the wall `delta=2, au+v=0` and the equal-degree `n>=3` source
    which enters only after response depth two.
 5. **Confluent sextic response.**  Build the Macaulay dual on the displayed
