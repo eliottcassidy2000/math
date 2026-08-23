@@ -2,7 +2,7 @@
 id: THM-3791
 title: "Moving-root Danielewski resonant-jet de Rham law"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
   smooth deformation c^n e=Sigma(c,b) with squarefree special fibre, the
   algebraic de Rham class of the physical symplectic form is exactly the
   resonant coefficient of the universal Hensel root in the finite etale
@@ -13,15 +13,13 @@ status: >
   moving-axis obstruction that closes THM-3789.
 source: jc_quartic_c3_construct / THM-3789 moving-arm abstraction, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The proof reconstructs the canonical Hensel
-  jets, polynomial-division arm charts, every overlap and transition, the
-  Cech--de Rham hypercover rows, the truncated-simplex incidence quotient,
-  finite-etale descent, and the local-primitive residue sign.  The exact
-  companion verifies nonfactorized smooth Poisson packets and plane charts
-  for n=1..5, an irreducible quadratic finite-etale control, incidence ranks
-  through seven arms, all resonance controls, and the THM-3789 specialization.
-  Normal and optimized executions byte-match the frozen transcript.
-  Independent hostile audit remains due.
+  INDEPENDENT HOSTILE AUDIT PASS (jc_sparse_direct_search, 2026-08-23).
+  The audit independently checked the n=1 indexing boundary, universal
+  finite-etale Hensel recursion, split chart inverses, primitive-transition
+  signs, truncated Cech row, K tensor_k K descent datum, flat de Rham base
+  change, exactness iff rho is scalar (including mixed E), and the nonsplit
+  quadratic control.  Normal and optimized executions byte-match the frozen
+  transcript at the recorded hashes.
 depends_on:
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
 related:
@@ -36,7 +34,7 @@ hash_basis: raw LF bytes
 
 # THM-3791 -- only the resonant moving-root jet survives in de Rham cohomology
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  This is an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This is an
 unconditional structure theorem for smooth moving-root Danielewski surfaces.
 It turns three previously separate phenomena into one coefficient law:
 
@@ -178,7 +176,7 @@ a_i=[b-beta_i^[n](c)]/c^n.                                    (12)
 ```
 
 Divide `Sigma` by the monic linear polynomial in `(12)`.  The Hensel
-congruence `(5)` makes the remainder divisible by `c^n`, so uniquely
+congruence `(5a)` makes the remainder divisible by `c^n`, so uniquely
 
 ```text
 Sigma(c,b)=[b-beta_i^[n](c)]S_i(c,b)+c^n R_i(c).               (13)
@@ -391,5 +389,4 @@ The exact companion verifies `(3),(9)--(17)` for nonfactorized deformations
 at `n=1,...,5`, the residue extraction `(20)--(23)`, the truncated-simplex
 ranks in `(25)`, the nonsplit recursion `(31),(32)`, and every split control
 `(28)--(30)`.  Normal and optimized
-executions byte-match the frozen transcript.  **QED, conditional only on
-independent hostile audit.**
+executions byte-match the frozen transcript.  **QED.**
