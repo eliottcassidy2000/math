@@ -1,0 +1,14 @@
+THM3850_UNIVERSAL_BRANCH -27*A**2*b**2 + 8*A*C**3 - 54*A*C*b + 9*C**2 - 54*b
+THM3850_QUADRATIC_DISCRIMINANT -8*(-2*C**2 + 9*b)**3
+THM3850_IRREDUCIBLE_PUNCTURE_FORMULA deg(rad(b))+nu_infinity
+THM3850_INFINITY_RULE nu_infinity=1 for odd deg(ell), 2 for even deg(ell)
+THM3850_CONSTANT_CONTROL 0+2=2
+THM3850_SIMPLE_CONTROL 1+2=3
+THM3850_REPEATED_CONTROL 1+2=3
+THM3850_ODD_CONTROL 3+1=4
+THM3850_MINIMAL_REDUCIBLE -C*(27*A**2*C*kappa**2 - 8*A*C**2 + 54*A*C*kappa - 9*C + 54*kappa)
+THM3850_MINIMAL_RESIDUAL -27*A**2*C*kappa**2 + 8*A*C**2 - 54*A*C*kappa + 9*C - 54*kappa
+THM3850_MINIMAL_NORMALIZATION V^2=C*(9*kappa-2*C); three punctures
+THM3850_SCOPE complete irreducible-branch formula plus b=kappa*C boundary; arbitrary reducible profiles open
+SEMANTIC_SHA256 6642655c1b115fb099da9d9e02d89e7c7ba19311428813b2c40f60e1ae082498
+CHECKS 33
