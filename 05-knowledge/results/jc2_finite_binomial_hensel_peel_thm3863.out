@@ -1,0 +1,11 @@
+THM3863_FORMAL_LIFT b_*=[(1+2AC/3)^(3/2)-1-AC]/A^2
+THM3863_GRAPH F=C-6sigma(1+A sigma), b0=2sigma^2(3+4A sigma)
+THM3863_QUOTIENT Q_*=(b_*-b0)/F=sum q_j(C)A^j
+THM3863_Q_DEGREE deg q_j=j+1, lc q_j=binom(3/2,j+2)(2/3)^(j+2)
+THM3863_TRUNCATION Delta_N=A^N F R_N
+THM3863_DEGREE_DROP deg_C R_N=2N+1, deg_C R_N(0,C)=N+1
+THM3863_CONTACT projective special fibre has exact Z^N contact at C=infinity
+THM3863_REPLAY_RANGE N=1..6
+THM3863_SCOPE canonical finite truncations only; arbitrary C-dependent quotient open
+SEMANTIC_SHA256 3128c19fcb8a5843975d52dc7202abc68a247d38af2d8ad1f143589371e2437f
+CHECKS 96
