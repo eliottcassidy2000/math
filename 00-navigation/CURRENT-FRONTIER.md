@@ -358,13 +358,14 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   give field degree divisible by three and at least nine.  THM-3843 forces a
   self-identifying immersed arm; THM-3846 gives all formal first-jet lifts;
   THM-3849's conductor records visible contact, not deleted sheets.
-  THM-3856/3861 close polynomial normal strips through transverse degree three,
-  leaving degree four first.  THM-3860 crosses the canonical square gate
-  rationally but proves every vertical seed change polar; the first live mixed
-  term is `Z_s!=0` at order `z^3`.  THM-3862 proves any hypothetical finite
-  completion flat and globally nonmonogenic, with `A1` branch normalizations
-  at one common infinity; at degree three the arm cannot itself branch.
-  THM-3839 excludes only one constant tower.
+  THM-3856/3861/3867 close polynomial normal strips through transverse degree
+  four, leaving degree five first.  THM-3860 crosses the canonical square gate
+  rationally; THM-3868 then excludes every rational precomposition of that
+  fixed nodal seed by its monic-recovery/different-unit trap, including mixed
+  `Z_s!=0`.  A different seed or nonrational control remains live.  THM-3862
+  proves any hypothetical finite completion flat and globally nonmonogenic,
+  with `A1` branches at one common infinity; at degree three the arm cannot
+  itself branch.  THM-3839 excludes only one constant tower.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692

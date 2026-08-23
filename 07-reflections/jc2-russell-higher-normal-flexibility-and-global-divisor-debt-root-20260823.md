@@ -1,8 +1,8 @@
 # Russell higher-normal flexibility and global divisor debt
 
-**Status (2026-08-23): THM-3856, THM-3860, and THM-3861 are PROVED +
-VERIFIED-EXACT + independently hostile-audited; THM-3862 is PROVED + CITED +
-independently proof-audited.  JC(2) remains OPEN.**
+**Status (2026-08-23): THM-3856, THM-3860, THM-3861, THM-3867, and THM-3868
+are PROVED + VERIFIED-EXACT + independently hostile-audited; THM-3862 is
+PROVED + CITED + independently proof-audited.  JC(2) remains OPEN.**
 
 This session began from the apparent algebraization wall in THM-3846: every
 unimodular arm jet lifts formally, but the canonical common-normal
@@ -43,8 +43,9 @@ The session board was:
 | cubic factor packet | tower divisor `v` and factor-cofactor law | exact support equations | intrinsic identification with `kappa` |
 
 Every useful pull in the session changed at least two board entries.  The
-cubic normal classification closed the first two nontrivial representation
-cells; the rational lift exposed the missing divisor coordinate; the
+quartic normal classification closed the first three nontrivial
+representation cells; the rational lift exposed the missing divisor
+coordinate; the
 completion contract showed why `kappa` alone cannot pay that divisor.
 
 ## 2. The formal lift space is an affine tangent torsor
@@ -91,7 +92,7 @@ analogy, not a map between the two moduli problems: the Russell recursion is
 symplectic and normal-adic, while the other is a discriminant inverse problem
 in the target maximal ideal.
 
-## 3. Polynomial normal depth through three closes completely
+## 3. Polynomial normal depth through four closes completely
 
 THM-3856 classifies every pair `A,C in k[s,z]` with
 
@@ -145,16 +146,33 @@ remaining `(3,1)` branch is explicitly triangular, and every degree drop is
 THM-3856.  Consequently no polynomial normal strip through transverse degree
 three can realize the self-identifying Russell arm.
 
+THM-3867 closes the next depth.  Its `(4,1)` and `(4,2)` rows reduce by the
+target shears `A-rho C^4` and `A-rho C^2` to THM-3861.  In the new `(4,3)`
+row the top coefficients have Kummer scale `(r,q)=(Rh^4,Qh^3)`.  After a
+moving scale and cubic depression, all lower buckets integrate to one rational
+coordinate `W` with autonomous final equation
+
+```text
+lambda/h=-(3Q/(16R^2))
+          (W^2-2EW+4RS^2/W^3)W'.                           (C3)
+```
+
+At a prime of nonconstant `h`, `W` can have a pole, a zero, or vanish
+identically.  Canceling the corresponding pole of the cubic arm in those
+three channels leaves respectively the nonzero quartic-arm residues
+`-RB^2/(9Q^2)` or `-Rg^4/3`.  Constant `h` makes the final polynomial product
+a unit and is also impossible.  Thus the genuine `(4,3)` row is empty.
+
 The boundary is exact.  These theorems do not treat:
 
 ```text
-one coordinate of z-degree >3;
-both coordinates of z-degree 4;
+one coordinate of z-degree >4;
+both coordinates of z-degree 5;
 rational functions in (s,z);
 infinite z-adic expansions of global elements of B.                           (8)
 ```
 
-Thus normal degree four is the first remaining polynomial cell.
+Thus normal degree five is the first remaining polynomial cell.
 
 A second hostile audit reaches the same closure by a genuinely different
 route: after a determinant-one target shear, irreducible-prime valuations in
@@ -164,7 +182,7 @@ that local-DVR proof and the global `X=beta/h` pole proof is strong evidence
 that the degree-three boundary is structural rather than an artifact of one
 normal form.
 
-## 4. The square gate is not higher-normal invariant
+## 4. The square gate moves, but the fixed nodal seed is globally rigid
 
 For a constant nonzero Wronskian `W=w`, take a rational function `phi(z)`
 with
@@ -215,15 +233,34 @@ pole.  Since `s=1/(3r)-c^3/(3z_0^3)` is nonconstant on that Laurent divisor,
 no scalar `f(z)` cancels the leading coefficient.  The quadratic nodal
 coordinate then has twice the pole order.
 
-This locates the next live operation precisely:
+Allowing `Z_s!=0` really does move the pole, but THM-3868 proves that it cannot
+remove it for this fixed nodal seed.  Eliminating `Z` from
 
 ```text
-leave Z=phi(z); allow Z_s!=0.                                  (14)
+A_0=9c^6S^2-Z/(3c^3),
+C_0=27c^9S^3-3c^3S-(3/2)SZ
 ```
 
-Tangency to the prescribed first jet forces the `z^2` coefficient of `Z` to
-remain the constant `-w/2`, so the first `s`-dependent term can appear at
-order `z^3`.
+gives the monic recovery cubic
+
+```text
+S^3+[(2-3A)/(9c^6)]S+2C/(27c^9)=0,                         (R1)
+f'(S)=[2/(9c^6)](1+Z/(2c^3)).                              (R2)
+```
+
+If a rational composite `A,C` were regular in the normal Russell ring `B`,
+`(R1)` would force `S in B` and then `Z in B`.  The density identity would
+make `1+Z/(2c^3)` a unit; since `B*=k*`, `Z` would be constant, contradicting
+the bracket.  This excludes every rational precomposition of the fixed seed,
+not just the vertical subclass.
+
+The formal freedom remains genuine.  An exact rational family with
+`D=1-eta s z^2` has `Z_s` first at order `z^3`, satisfies the density exactly,
+and moves the old divisor `z+4c^3` to a mixed `(r,z)` divisor; its nodal output
+still has a pole there.  The next live operation is therefore a **different
+seed whose hidden-control recovery is not monic**, or a nonrational control
+with a separate normalization audit.  Merely adding mixed tangent gauge to
+the same seed is now closed.
 
 ## 5. Proved finite-completion contract
 
@@ -304,34 +341,31 @@ asked to be effective simultaneously at every global divisor.
 
 ## 7. Generated task portfolio
 
-### Anchor -- nonlinear normal coordinate at order three
+### Anchor -- break fixed-seed monic recovery
 
-Start with
-
-```text
-Z=z-(w/2)z^2+u(s)z^3+...,
-S=s+h(s)z^2+... .                                             (17)
-```
-
-The density equation `(1+wZ)J(Z,S)=1` begins with
+THM-3868 shows that arbitrary mixed tangent gauge does not escape the fixed
+nodal seed: regular outputs recover the controls integrally, and the
+power-basis derivative is the forbidden density unit.  Parameterize the
+smallest alternative seeds with the same arm and first-normal packet, eliminate
+one hidden control, and classify the first point at which either
 
 ```text
-3u+h'-3w^2/2=0.                                               (18)
+recovery ceases to be monic, or seed Jacobian != power-basis derivative.   (17)
 ```
 
-The cheap positive test is to solve several further orders with polynomial
-`u,h`, substitute the nodal packet, and compute the complete pole divisor in
-`B`.  The hostile is not failure of `(18)`--it always integrates--but a pole
-whose leading residue depends nontrivially on the Laurent coordinate `r`.
+The cheap hostile is a seed differing only by a target automorphism, which
+preserves the trap.  A positive signal must exhibit a genuine loss of
+integrality while retaining an exact density control; a changed formula alone
+is not enough.
 
-### Niche -- classify quartic polynomial normal depth
+### Niche -- classify quintic polynomial normal depth
 
-THM-3861 closes `deg_z<=3`, so `deg_z=4` is the first polynomial cell.  Derive
-the eight Jacobian buckets without bounding the `s`-degrees and test whether
-the top two rows again admit a Kummer parametrization.  The first hostile must
-retain all quartic/quadratic and quartic/cubic strata: the cubic proof used a
-unique highest pole, and at degree four two pole channels may cancel.  Small
-Groebner caps are scouts, not an all-degree result.
+THM-3867 closes `deg_z<=4`, so `deg_z=5` is the first polynomial cell.  Derive
+all ten Jacobian buckets without bounding the `s`-degrees, remove every
+target-shear row, and isolate the genuine `(5,4)` Kummer packet.  The quartic
+proof needed simultaneous regularity of two arm coefficients; at depth five
+three leading pole channels can tie, so the decisive object is their complete
+initial-form ideal rather than another one-coordinate valuation.
 
 ### Geometry -- build a nonmonogenic all-`A1` branch completion
 
@@ -395,9 +429,10 @@ sidecar.
 
 The session did not construct a global Darboux pair and did not prove or
 disprove JC(2).  It did prove the complete polynomial classification through
-transverse degree three, a rational higher-normal lift with a global pole
-theorem, and the nonmonogenic finite-completion branch contract.  The old
-square obstruction survived only in its exact declared canonical class.  The
-next honest frontier is the interaction of an `s`-dependent normal coordinate,
-beginning at order three, with the global divisor contract; the orthogonal
-polynomial frontier begins at transverse degree four.
+transverse degree four, a rational higher-normal lift, the all-rational
+precomposition barrier for its fixed nodal seed, and the nonmonogenic
+finite-completion branch contract.  The old square obstruction survived only
+in its exact canonical class; the stronger invariant is the fixed seed's
+monic recovery/different-unit trap.  The next honest frontiers are an
+alternative seed or nonrational control, while the orthogonal bounded
+polynomial frontier begins at transverse degree five.

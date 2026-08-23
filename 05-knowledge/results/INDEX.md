@@ -1,5 +1,31 @@
 # Script Results Index
 
+- `jc2_russell_fixed_nodal_seed_rational_precomposition_barrier_thm3868.py`
+  -> matching `.out` [THM-3868 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  For the fixed nodal seed, regularity of a rational
+  composite recovers its hidden control from a monic cubic; the power-basis
+  derivative is exactly the density factor.  Normality and `B*=k*` therefore
+  exclude every rational precomposition, including `Z_s!=0`.  A different
+  seed and nonrational controls remain open.  Primary/independent checks:
+  `50/101`.  Script/output/semantic SHA-256:
+  `be15ae2ac76a118bb009dadf2ce898b9d780ec5572e2b94156c9ecb736f337b1` /
+  `caa9ef246b0e4be6a88ee07b56eee1a76330f12c0bb60dbf0da7b665986137d2` /
+  `53ae645f196938bccdb3400f6f54082e8802e53a9e2e32e1f73040eb5b2feb37`;
+  independent hashes are recorded in THM-3868.
+
+- `jc2_quartic_normal_strip_keller_thm3867.py` -> matching `.out`
+  [THM-3867 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Every
+  characteristic-zero polynomial Keller pair in `k[s,z]` with both transverse
+  degrees at most four is a polynomial automorphism.  The `(4,1)` and `(4,2)`
+  cells shear to THM-3861; every pole/zero/identically-zero channel of the
+  depressed `(4,3)` Kummer packet leaves a nonzero quartic-arm residue.  Thus
+  transverse degree five is the first remaining polynomial strip.
+  Primary/independent checks: `78/4872`.  Script/output/semantic SHA-256:
+  `37b6fa92c3063f281eef2d2cb3075d1dfd3400c700365d21dffedf71bf2d06d1` /
+  `966a1da1b5d20847b3d2aac2be087814d29c12efa9cca4cf305966b0f7402b91` /
+  `3b14427454f046f289065ff37da208ff731cf7b8e699af0a550568ceceea4380`;
+  independent hashes are recorded in THM-3867.
+
 - `jc2_cubic_normal_strip_keller_thm3861.py` -> matching `.out`
   [THM-3861 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Every
   characteristic-zero polynomial Keller pair in `k[s,z]` with both transverse
