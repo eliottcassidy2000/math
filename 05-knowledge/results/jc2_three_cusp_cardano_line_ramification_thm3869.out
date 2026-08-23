@@ -1,0 +1,11 @@
+THM3869_IDENTITY Delta=(x+1)^3*ell^2-q^2;P^3-Q^2=Delta*ell^4
+THM3869_DIRECTION h=h1-4(x+1);same seminormal class,not fourth
+THM3869_COMPLEMENT F^2-a^3*ell^2=(1-a)^3*(9a-4)^2;nonsquare 1-a blocks peel
+THM3869_CUBIC irreducible S3;Newton slope -2/3 at ell
+THM3869_DISCRIMINANTS power=108*Delta*ell^4;maximal=field=108*Delta*ell^2
+THM3869_RAMIFICATION Delta:(2,1);ell:e=3;Kummer valuations=(4,2)
+THM3869_INDEX_FORM ell*u^3-3*(x+1)*ell*u*v^2+2*q*v^3;ideal=(ell,q)
+THM3869_SHIFT_SCOUT trace and scalar (c,d) shifts do not remove ell
+THM3869_SCOPE explicit nonmonogenic near-miss; nonlinear shifts/atlas/JC2 open
+SEMANTIC_SHA256 3ba97aae53c83071a76d456a738b5eee13a93b2ea14de112aa4e959db8f8af25
+CHECKS 128
