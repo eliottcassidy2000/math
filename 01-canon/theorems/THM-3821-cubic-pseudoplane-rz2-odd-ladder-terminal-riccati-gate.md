@@ -8,19 +8,20 @@ status: >
   branch has the odd exponent ladder 7,5,3,1 and ends in a Riccati square
   payment; the P=0 branch has the skip ladder 7,3,1 and ends in a linear
   payment.  All one-sided and zero-terminal top branches are empty, and the
-  common Kummer parameter must be nonconstant.  This is a necessary
+  common Kummer parameter has degree at least two.  This is a necessary
   top-branch classification, not an existence theorem, a complete rz^2
   no-go, or a planar-JC counterexample claim.
 source: jc_zero_debt_lift / cubic-pseudoplane rz2 odd-ladder lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The deterministic companion has 46 active
+  PROVISIONAL EXACT CANDIDATE.  The deterministic companion has 58 active
   gates checking the Poisson Casimir and signs, unique monic reduction, six
   descending source buckets, the asymmetric 7/4 contradiction, all 7/4,
   7/5, and 7/3 valuation families, the integrated polynomial relation, the
   generic and degenerate local valuation transfers, both terminal laws, and
   their square/linear nonzero-root payments, and the independent generic
-  and degenerate constant-tower contradictions.  Normal/-O/frozen/hash/docs
-  replay and independent proof rederivation are required before promotion.
+  and degenerate constant- and linear-tower contradictions, including the
+  confluent root recomputations.  Normal/-O/frozen/hash/docs replay and
+  independent proof rederivation are required before promotion.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3814-nodal-rz-kummer-profile-degree-gate
@@ -30,9 +31,9 @@ related:
   - THM-3813-quartic-r-repairs-of-nodal-carriers-have-critical-points
 script: 04-computation/jc2_cubic_pseudoplane_rz2_odd_ladder_thm3821.py
 output: 05-knowledge/results/jc2_cubic_pseudoplane_rz2_odd_ladder_thm3821.out
-script_sha256: a43c03b0aeacbc9422cbd9f5248f87c3cccadd52ad5aea473ef7234b99373d1e
-output_sha256: 7d2d1ce8e91e76df9bc7ed90df3b09e69e5d9054d5e3f7d2848b9f41fd07cf69
-semantic_sha256: e32d280719d0be2daf6d0d5315ffb3cc8633894a3a26578bb85d0c9a83fd1783
+script_sha256: 1c645632860e000f59ad801103c9c410a5a1a3e17cdb7bc763c50d4474590e2f
+output_sha256: 0efa5c61331e744660d0e157db539ba24e8e4b1f74160650a10fc88eaaa0b679
+semantic_sha256: 547bea40c3cce8bc03a8d82f5bd96ffcd93313adcc654509317467ecfb2cb5f2
 hash_basis: raw LF bytes
 ---
 
@@ -60,8 +61,8 @@ Suppose
 {A,C}=1.                                               (3)
 ```
 
-Then there are `mu in k`, nonzero `alpha,beta in k`, and a nonconstant
-`v in k[e]` such that, on writing
+Then there are `mu in k`, nonzero `alpha,beta in k`, and a polynomial
+`v in k[e]` of degree at least two such that, on writing
 
 ```text
 K=kappa-mu f,
@@ -400,7 +401,83 @@ The first identity forces `U_0=0`, since `(41)` makes `mu!=0`; the second
 then leaves `-mu/2!=0`.  Thus constant `v` is impossible in both branches,
 as asserted in the theorem statement.
 
-## 7. Scope and exact controls
+## 7. The linear tower is also empty
+
+Suppose `deg v=1`.  Absorb its leading coefficient into the tower constants
+and write
+
+```text
+v=e-t.                                                  (44)
+```
+
+First let `t!=0`.  In the generic branch, `(28)` and the square payment
+`(7)` make both `f(t)` and `U(t)` nonzero.  But direct evaluation of the
+next normal coefficient gives
+
+```text
+[r^2z]({A,C}-1)|e=t
+ =60delta t^2U(t)f(t)/(7alpha),                         (45)
+```
+
+which cannot vanish.
+
+In the degenerate branch, the linear payment `(9)` again makes `U(t)!=0`.
+The same coefficient is now
+
+```text
+[r^2z]|e=t=t^2(-2mu+3t)U(t).                           (46)
+```
+
+Thus `t=2mu/3`.  Yet division of the arm numerator
+`2beta e^3(e-t)^4-1/12` by `D` has linear remainder coefficient
+`2beta/27` at precisely this address, contradicting `beta!=0`.
+
+It remains to recompute the confluent root `t=0`; none of the preceding
+steps divides by `t` here.  In the generic branch, the arm linear remainder
+requires
+
+```text
+64mu^6+240mu^4+216mu^2+27=0.                          (47)
+```
+
+The arm constant remainder already excludes `mu=0`.  The origin `r^2`
+bucket first gives `mu g(0)=0`, hence `g(0)=0`.  The origin `z^2` bucket
+then requires, after cancelling the nonzero `2beta mu`,
+
+```text
+16mu^4+44mu^2+21=0.                                   (48)
+```
+
+As polynomials in `x=mu^2`, the resultant of the left sides of
+`(47),(48)` is
+
+```text
+-4534272 !=0.                                          (49)
+```
+
+So the generic confluent branch is empty.
+
+Finally take the degenerate branch at `t=0` and put `U_0=U(0)`.  The first
+two relevant leading coefficients are
+
+```text
+[e^2]([r^2z])=-3mu U_0,
+
+[e^7]([r^3])
+ =2beta(256beta mu^5+768beta mu^3+432beta mu)/81
+   +54theta U_0.                                      (50)
+```
+
+The first forces `U_0=0`.  The arm constant remainder is
+
+```text
+256beta mu^5+768beta mu^3+432beta mu-243=0,           (51)
+```
+
+so the second coefficient in `(50)` becomes `6beta!=0`.  This closes the
+last linear case.  Together with Section 6 it proves `deg v>=2`.
+
+## 8. Scope and exact controls
 
 The theorem identifies the smallest new information that the `rz^2` layer
 can carry.  THM-3814 failed because a fourth-power forcing arrived one
@@ -408,7 +485,7 @@ valuation step before every fifth-power correction.  Here the successive
 top buckets force the debt-paying ladder
 
 ```text
-v^7 -> v^5 -> v^3 -> v                               (44)
+v^7 -> v^5 -> v^3 -> v                               (52)
 ```
 
 in the generic branch, with a precisely typed `e^4,e^3,e^2,e` companion.
@@ -425,4 +502,5 @@ bracket, freezes all six source buckets, checks every Kummer valuation
 family, verifies the integrated relation `(24)`, reconstructs both terminal
 laws from the actual `r^3` coefficient, checks the local payment
 coefficients `(33),(39)`, and replays both constant-tower contradictions
-`(42)--(43)`.  It uses no finite-field or bounded-degree inference.  **QED.**
+`(42)--(43)` and every separated linear-root gate `(45)--(51)`.  It uses no
+finite-field or bounded-degree inference.  **QED.**

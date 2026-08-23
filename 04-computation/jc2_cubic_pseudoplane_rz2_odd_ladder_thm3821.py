@@ -90,6 +90,9 @@ bucket_r3z2 = normal_poly.coeff_monomial(r**3 * z**2)
 bucket_r3z = normal_poly.coeff_monomial(r**3 * z)
 bucket_r3 = normal_poly.coeff_monomial(r**3)
 bucket_r2z2 = normal_poly.coeff_monomial(r**2 * z**2)
+bucket_r2z = normal_poly.coeff_monomial(r**2 * z)
+bucket_r2 = normal_poly.coeff_monomial(r**2)
+bucket_z2 = normal_poly.coeff_monomial(z**2)
 
 expected_z = (36 * e**2 * f - 24 * e * kap - 12 * f + 1) / 2
 expected_r5 = -21 * e**2 * (-S * sp.diff(T, e) + T * sp.diff(S, e))
@@ -602,6 +605,172 @@ gate(
 )
 
 
+# Linear-v closure.  Nonzero roots are killed directly by the local payment
+# plus the next bucket; the confluent root tau=0 is recomputed separately.
+tau = sp.symbols("tau")
+v_linear = e - tau
+K_linear = beta * e**2 * v_linear**4
+D_linear = 3 * e**2 - 2 * mu * e - 1
+numerator_f_linear = 2 * e * K_linear - sp.Rational(1, 12)
+quotient_f_linear, remainder_f_linear = sp.div(
+    sp.Poly(numerator_f_linear, e), sp.Poly(D_linear, e)
+)
+f_linear = quotient_f_linear.as_expr()
+U_linear = sp.Function("U_linear")(e)
+g_linear = sp.Function("g_linear")(e)
+S_linear = alpha * e**4 * v_linear**7
+
+p_generic_linear = e**2 * v_linear**3 * U_linear
+P_generic_linear = delta * e**3 * v_linear**5
+Q_generic_linear = (
+    sp.Rational(5, 7) * delta / alpha * e * v_linear * U_linear
+    + eta * alpha / beta * e**2 * v_linear**3
+)
+generic_linear_r2z = bucket_r2z.subs(
+    {
+        f: f_linear,
+        kap: mu * f_linear + K_linear,
+        S: S_linear,
+        T: mu * S_linear,
+        p: p_generic_linear,
+        q: mu * p_generic_linear + P_generic_linear,
+        g: g_linear,
+        h: mu * g_linear + Q_generic_linear,
+    }
+).doit()
+zero(
+    generic_linear_r2z.subs(e, tau).doit()
+    - 60
+    * delta
+    * tau**2
+    * U_linear.subs(e, tau)
+    * f_linear.subs(e, tau)
+    / (7 * alpha),
+    "generic linear-v nonzero-root r2z obstruction",
+)
+
+p_skip_linear = e * v_linear * U_linear
+Q_skip_linear = theta * e**2 * v_linear**3
+skip_linear_r2z = bucket_r2z.subs(
+    {
+        f: f_linear,
+        kap: mu * f_linear + K_linear,
+        S: S_linear,
+        T: mu * S_linear,
+        p: p_skip_linear,
+        q: mu * p_skip_linear,
+        g: g_linear,
+        h: mu * g_linear + Q_skip_linear,
+    }
+).doit()
+zero(
+    skip_linear_r2z.subs(e, tau).doit()
+    - tau**2
+    * (-2 * mu + 3 * tau)
+    * U_linear.subs(e, tau),
+    "degenerate linear-v nonzero-root r2z address",
+)
+zero(
+    remainder_f_linear.as_expr().coeff(e, 1).subs(tau, 2 * mu / 3)
+    - 2 * beta / 27,
+    "degenerate linear-v addressed arm obstruction",
+)
+
+# Generic confluent root tau=0.  The arm linear remainder and the z2
+# origin bucket demand two coprime polynomials in x=mu^2.
+g0 = sp.symbols("g0")
+generic_zero_profiles = {
+    f: f_linear.subs(tau, 0),
+    kap: mu * f_linear.subs(tau, 0) + K_linear.subs(tau, 0),
+    S: S_linear.subs(tau, 0),
+    T: mu * S_linear.subs(tau, 0),
+    p: p_generic_linear.subs(tau, 0),
+    q: (mu * p_generic_linear + P_generic_linear).subs(tau, 0),
+    g: g0,
+    h: (mu * g_linear + Q_generic_linear).subs(
+        {tau: 0, g_linear: g0}
+    ),
+}
+generic_zero_r2_origin = bucket_r2.subs(generic_zero_profiles).doit().subs(e, 0)
+generic_zero_z2_origin = bucket_z2.subs(generic_zero_profiles).doit().subs(e, 0)
+zero(generic_zero_r2_origin - mu * g0,
+     "generic v=e r2 origin forces g0=0")
+zero(
+    generic_zero_z2_origin
+    + (32 * beta * mu**5 + 88 * beta * mu**3 + 42 * beta * mu + 729 * g0)
+    / 81,
+    "generic v=e z2 origin equation",
+)
+arm_sextic = 64 * mu**6 + 240 * mu**4 + 216 * mu**2 + 27
+zero(
+    remainder_f_linear.as_expr().coeff(e, 1).subs(tau, 0)
+    - 2 * beta * arm_sextic / 729,
+    "generic v=e arm sextic",
+)
+x_square = sp.symbols("x_square")
+arm_sextic_x = 64 * x_square**3 + 240 * x_square**2 + 216 * x_square + 27
+z2_quadratic_x = 16 * x_square**2 + 44 * x_square + 21
+zero(
+    sp.resultant(arm_sextic_x, z2_quadratic_x, x_square) + 4534272,
+    "generic v=e arm/z2 resultant",
+)
+
+# Degenerate confluent root tau=0.  r2z first gives U(0)=0; the arm
+# constant remainder then turns the r3 leading coefficient into 6*beta.
+U0_linear = sp.symbols("U0_linear")
+g_zero = sp.Function("g_zero")(e)
+U_zero = U0_linear + sp.Function("U_tail")(e) * e
+p_skip_zero = e**2 * U_zero
+Q_skip_zero = theta * e**5
+skip_zero_profiles = {
+    f: f_linear.subs(tau, 0),
+    kap: mu * f_linear.subs(tau, 0) + K_linear.subs(tau, 0),
+    S: S_linear.subs(tau, 0),
+    T: mu * S_linear.subs(tau, 0),
+    p: p_skip_zero,
+    q: mu * p_skip_zero,
+    g: g_zero,
+    h: mu * g_zero + Q_skip_zero,
+}
+skip_zero_r2z_lead = sp.cancel(
+    bucket_r2z.subs(skip_zero_profiles).doit() / e**2
+).subs(e, 0)
+skip_zero_r3_lead = sp.cancel(
+    bucket_r3.subs(skip_zero_profiles).doit() / e**7
+).subs(e, 0)
+zero(skip_zero_r2z_lead + 3 * mu * U0_linear,
+     "degenerate v=e r2z leading coefficient")
+arm_constant_zero = remainder_f_linear.as_expr().coeff(e, 0).subs(tau, 0)
+arm_constant_numerator = sp.factor(2916 * arm_constant_zero)
+zero(
+    arm_constant_numerator
+    - (
+        256 * beta * mu**5
+        + 768 * beta * mu**3
+        + 432 * beta * mu
+        - 243
+    ),
+    "degenerate v=e arm constant equation",
+)
+zero(
+    skip_zero_r3_lead.subs(U0_linear, 0)
+    - 2
+    * (
+        beta
+        * (256 * beta * mu**5 + 768 * beta * mu**3 + 432 * beta * mu)
+    )
+    / 81,
+    "degenerate v=e raw r3 lead after U0=0",
+)
+zero(
+    skip_zero_r3_lead.subs(U0_linear, 0)
+    - 6 * beta
+    - 2 * beta * arm_constant_numerator / 81,
+    "degenerate v=e arm-reduced r3 obstruction",
+)
+gate(beta != 0, "degenerate v=e obstruction is nonzero")
+
+
 semantic = {
     "ansatz": "THM3814 plus rz2*S(e),rz2*T(e)",
     "top": "S!=0;T=mu*S;K=kappa-mu*f=beta*e^2*v^4;S=alpha*e^4*v^7",
@@ -610,6 +779,7 @@ semantic = {
     "degenerate": "P=0;Q=theta*e^2*v^3;p=e*v*U",
     "degenerate_terminal": "linear law;nonzero roots pay 4beta f+3theta U=0",
     "constant_v": "empty in both generic and degenerate terminal branches",
+    "linear_v": "empty in both generic and degenerate terminal branches",
     "scope": "necessary anatomy only;existence and full rz2 closure open",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
@@ -627,6 +797,7 @@ print("generic_payment=28alpha_beta_f=5delta_U2_at_nonzero_v_roots")
 print("degenerate=P0;Q=theta_e2_v3;p=e_v_U")
 print("degenerate_payment=4beta_f+3theta_U=0_at_nonzero_v_roots")
 print("constant_v=empty_in_generic_and_degenerate_branches")
+print("linear_v=empty_in_generic_and_degenerate_branches")
 print("scope=necessary_anatomy_only;existence_and_full_rz2_closure_open")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")
