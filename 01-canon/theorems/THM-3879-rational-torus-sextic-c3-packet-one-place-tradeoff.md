@@ -2,7 +2,7 @@
 id: THM-3879
 title: "Rational torus sextic C3 packet and one-place tradeoff"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.  An
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  An
   explicit rational sextic, obtained as the dual of a trinodal quartic, has
   exactly six A2 cusps and four A1 nodes and admits a torus equation
   4Q2^3-27Q3^2=0.  Its irreducible Cardano cubic supplies a connected
@@ -12,14 +12,17 @@ status: >
   counterexample laboratory, not a planar Jacobian counterexample.
 source: root / post-THM-3874 global-cusp-gluing reframe, 2026-08-23
 audit: >
-  PROVISIONAL EXACT PROOF CANDIDATE.  The assertion-free companion
+  INDEPENDENT HOSTILE AUDIT PASS (jc_quartic_c3_construct, 2026-08-23).  The
+  audit independently rechecked geometric irreducibility, primal/dual
+  birationality, the complete 6A2+4A1 projective singular packet, global
+  normality of the cubic surface, Cardano irreducibility and connectedness,
+  the global height-one Kummer divisor including primes at infinity, and the
+  saturated sixth-power line exhaustion.  The assertion-free companion
   reconstructs the trinodal quartic and dual map, torus pullbacks, bidual
   inverse, complete singular Groebner packet, inner transversality, outer
   Hessian gates, Cardano discriminant and irreducibility gate, Kummer norm,
   and the saturated sixth-power line systems.  Normal and optimized runs
-  must byte-match the frozen transcript.  Independent audit must recheck
-  geometric irreducibility, the complete projective singular locus, the
-  height-one Kummer divisor, and the exact projective-line scope.
+  byte-match the frozen transcript.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
 related:
@@ -35,7 +38,7 @@ hash_basis: raw LF bytes
 
 # THM-3879 -- the missing C3 packet exists, but it costs the one-place chart
 
-**PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Put
 
 ```text
@@ -264,8 +267,20 @@ factor is a unit, so `(25)` gives
 div(gamma)=3D                                                (26)
 ```
 
-at every affine height-one valuation.  Cardano identifies `E(cuberoot
-gamma)/E` with the `C3` subextension of the `S3` normal closure of `(5)`.
+at every affine height-one valuation.  This divisibility is global, not an
+artifact of the chosen affine chart.  For any line `ell`, homogenize the
+function as
+
+```text
+gamma_ell=(rho Q_3+w)/ell^3.
+```
+
+At the generic point of every prime over `ell`, the smooth conic `Q_2=0`
+has no line component, so `(25)` makes both numerator factors units and
+`v(gamma_ell)=-3`.  Affinely the only zero lies on one of the two primes over
+`Q_2` and has order three.  Hence the full projective divisor of `gamma_ell`
+is three-divisible at every height-one valuation.  Cardano identifies
+`E(cuberoot gamma)/E` with the `C3` subextension of the `S3` normal closure of `(5)`.
 Irreducibility makes it connected.  Thus `(26)` is a genuine nontrivial
 codimension-one-unramified cyclic layer, not merely a square/norm identity.
 
@@ -279,7 +294,12 @@ y^4+272y^2+64=0,                                           (27)
 ```
 
 so its singular locus consists of four closed points.  A hypersurface is
-`S2`, and regularity in codimension one therefore proves normality.
+`S2`.  This is also the complete projective singular locus: in the infinity
+chart `C=0,B=1` the full homogeneous cubic singular ideal is the unit ideal;
+at the remaining base point `[A:B:C]=[1:0:0]`, the derivative with respect to
+`C` is `-4`, so no point of the cubic above it is singular.  The singular
+locus therefore has codimension two globally, and `S2` plus regularity in
+codimension one proves normality.
 THM-3801 prevents this particular completion from containing a constant-unit
 degree-three etale plane atlas.  The point of the example is different:
 unlike THM-3874, its
@@ -314,11 +334,18 @@ By `(6)`, the line `C=0` has support exactly `{S=0,T=0}`.  The minimum number
 of normalization places at infinity is therefore two.  This proves the
 claimed sharp projective-line tradeoff.
 
+Nor can a nonlinear polynomial change of affine target coordinates repair a
+chosen chart.  Such a change is an isomorphism of affine curves, hence lifts
+to an isomorphism of their normalizations and preserves the number of points
+missing from the smooth projective normalization.  Since every initial line
+chart misses at least two points, every polynomially equivalent affine-plane
+embedding obtained from it still has at least two places at infinity.
+
 ## 6. Scope and reproduction
 
 This theorem constructs no Keller atlas and no Jacobian counterexample.  It
-does not exclude nonlinear target-coordinate changes, different rational
-torus sextics, higher-degree branch curves, or nonmonogenic cubic orders.
+does not exclude genuinely different birational plane models, different
+rational torus sextics, higher-degree branch curves, or nonmonogenic cubic orders.
 It identifies a precise next design target: preserve a nontrivial splitting-
 conic/C3 packet while collapsing the normalization boundary from two places
 to one without making the finite completion monogenic.
