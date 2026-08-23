@@ -2,24 +2,31 @@
 id: THM-3832
 title: "The nonlinear cubic surface has a triangular root-ratio chart"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  On the dense k!=0 chart of the THM-3811 etale surface, z=h/k=A/omega
-  and C are birational coordinates.  In them the target map is triangular,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the dense k!=0
+  chart of the THM-3811 etale surface, z=h/k and C are birational coordinates;
+  z=A/omega holds in the function field.  In them the target map is triangular,
   A=zC(1+z^2C)/(3z^3+7z^2+1), and its Jacobian density is exactly 1/(kr).
   All intrinsic generators and the precise polynomialization/Keller passport
   are explicit.  This constructs a rational chart, not a polynomial plane
   atlas or a Jacobian counterexample.
 source: root / nonlinear-cubic plane-atlas constructive reframe, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The deterministic companion reconstructs the
+  INDEPENDENT HOSTILE AUDIT PASS (jc_quartic_c3_construct and
+  jc_sparse_direct_search, 2026-08-23).  Both audits rederived the marked-root
+  chart, reconstruction identities, factored different, target derivative,
+  and chain-rule Keller equation; normal and optimized runs byte-match the
+  frozen transcript and the raw hashes agree.  The final audit also repaired
+  three scope boundaries: z=A/omega is only a function-field identity, the
+  chart alone supplies possible cancellation addresses while THM-3831 proves
+  they are actual components, and the forced two-address hit requires
+  irreducible h.  The deterministic companion reconstructs the
   three Delone--Faddeev multiplication laws, characteristic cubic, different,
   SL2 determinant and both lift laws from the chart; verifies both birational
   directions, the factored target derivative, the source-chain Jacobian law,
-  and the two cancellation branches over every cubic spectral root.  Normal
-  and optimized runs byte-match the frozen transcript; independent hostile
-  audit remains pending.
+  and the two cancellation addresses over every cubic spectral root.
 depends_on:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
+  - THM-3831-intrinsic-spectral-pencil-fibre-atlas-and-forced-cubic-two-arm-hit
 related:
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -33,8 +40,8 @@ hash_basis: raw LF bytes
 
 # THM-3832 -- the marked cubic root makes the target map triangular
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**  Work over an algebraically closed field `K` of characteristic zero.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `K` of characteristic zero.
 Let `U=Spec B` be the THM-3811 surface, with intrinsic functions
 
 ```text
@@ -45,8 +52,11 @@ m=3theta+14A.                                               (1)
 On the dense chart `k!=0`, put
 
 ```text
-z=h/k=A/omega.                                               (2)
+z=h/k.                                                       (2)
 ```
+
+In the function field this also equals `A/omega`; the latter expression is
+not asserted regular where `omega=0`.
 
 Define the four one-variable polynomials
 
@@ -167,10 +177,11 @@ Thus the pole `r=0` has exactly the two cancellation addresses
 C=0,                         C=-1/alpha^2.                  (16)
 ```
 
-These are the two target-line values that appear as the two intrinsic
-components of the cubic spectral fibre.  The two quadratic roots `q=0` do
-not create this two-address cancellation.  This chart therefore explains,
-rather than merely records, the three-versus-two split behind THM-3827's
+These are the only possible cancellation addresses visible in this rational
+chart.  THM-3831 independently proves that they are the two actual intrinsic
+`G_m` components of the cubic spectral fibre.  The two quadratic roots `q=0`
+do not create this two-address cancellation.  Together the chart and the
+intrinsic fibre atlas explain the three-versus-two split behind THM-3827's
 disconnected-fibre passport.
 
 Statement `(16)` is a boundary reading of the birational chart; regularity
@@ -186,7 +197,8 @@ A polynomial plane atlas through this chart must simultaneously arrange:
 (ii)  k=r/(Cs) and h=zk are polynomial;
 (iii) theta,D,m in (4) are polynomial;
 (iv)  Jac(z,C)=lambda k r with lambda!=0;
-(v)   one cubic spectral value reaches both cancellation branches (16);
+(v)   if h is irreducible, one cubic spectral value reaches both cancellation
+      branches (16); otherwise the reducible-h alternative remains;
 (vi)  the required codimension-one coverage survives the chart boundary. (17)
 ```
 
@@ -196,4 +208,4 @@ destroys: regularity at `C=0`, `s=0`, and `r=0` is not visible until the
 corresponding numerator cancellation and intrinsic sidecar are restored.
 
 No polynomial atlas and no planar Jacobian counterexample is constructed.
-**QED, pending independent hostile audit.**
+**QED.**

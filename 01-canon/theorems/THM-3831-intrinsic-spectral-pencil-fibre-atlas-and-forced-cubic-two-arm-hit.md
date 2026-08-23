@@ -2,8 +2,8 @@
 id: THM-3831
 title: "Intrinsic spectral-pencil fibre atlas and forced cubic two-arm hit"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-  AUDIT.  The five THM-3827 spectral fibres are classified inside the actual
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The five THM-3827
+  spectral fibres are classified inside the actual
   nonlinear cubic surface.  Each of the two roots of 7a^2+3 has one Laurent
   G_m component and only the minus square-root sign.  Each of the three roots
   of 3a^3+7a^2+1 has exactly two comaximal Laurent G_m components, C=0 and
@@ -13,16 +13,19 @@ status: >
   plane atlas or Keller pair is constructed.
 source: jc_quartic_c3_construct / THM-3827 disconnected spectral-fibre lane, 2026-08-23
 audit: >
-  SELF-AUDITED proof candidate.  The 34-gate exact companion checks the five
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
+  The audit rederived the quotient presentations, checked that k is a unit,
+  verified the quadratic and cubic reconstruction formulas including D=0
+  points, checked comaximality and both W signs, and audited the global sign
+  transfer under plane base change.  The 34-gate exact companion checks the five
   slopes and every required unit denominator; derives the cubic factor
   z(k+a^2 z); reconstructs all three original Delone--Faddeev multiplication
   laws, both lift laws, the SL2 law, and the different in the universal cubic
   product and the quadratic Laurent chart; verifies comaximality; and labels
   both cubic components and the quadratic component by the normalized
   discriminant root.  Normal and optimized replay agree with the frozen
-  output.  Independent audit of quotient exhaustion, the sign transfer under
-  plane base change, and the exceptional Q=0 boundary is required before
-  promotion.
+  output.  Normal and optimized runs byte-match the frozen transcript and the
+  raw hashes agree.
 depends_on:
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
@@ -39,8 +42,8 @@ hash_basis: raw LF bytes
 
 # THM-3831 -- the mandatory sign split is one of three cubic two-arm fibres
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-AUDIT.**  Work over an algebraically closed field `K` of characteristic zero.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `K` of characteristic zero.
 Let `U=Spec B` and use the intrinsic functions of THM-3822, writing `k` for
 its `k_0`.  Thus
 
@@ -263,4 +266,4 @@ on both the `C=0` and `C=-1/a^2` Laurent arms of one cubic spectral fibre.
 
 This is a necessary image/incidence passport, not a construction.  The
 existence of `(28)`, its Keller equation, and the reducible-`h` branch remain
-open.  **QED, subject to independent hostile audit.**
+open.  **QED.**
