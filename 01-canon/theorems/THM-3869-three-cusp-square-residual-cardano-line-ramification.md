@@ -2,7 +2,7 @@
 id: THM-3869
 title: "Three-cusp square-residual Cardano peel and residual line ramification"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.  The
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The
   THM-3854 three-cusp quintic has an exact Cardano square residual.  Its
   irreducible S3 cubic admits an explicit finite-free normal maximal order
   which is globally nonmonogenic, but its field discriminant still contains
@@ -13,15 +13,17 @@ status: >
   Nonconstant coefficient changes, a Keller atlas, and JC(2) remain OPEN.
 source: jc_quartic_c3_construct / three-cusp inverse-discriminant lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT PROOF CANDIDATE.  The companion verifies the Cardano and
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit reconstructed
+  the primitive Newton segment and its factor-degree consequence; checked
+  the order at every height-one prime and the finite-free S2 bridge; derived
+  the corrected index determinant directly; typed both split-line Kummer
+  valuations; and separately checked that the scalar-shift specialization
+  and coefficient cases exhaust all scalar pairs.  The companion verifies the Cardano and
   normalization identities, all 81 basis associators, the trace matrix and
   corrected binary index form, the local Eisenstein equation, the split
   quadratic-resolvent carrier, the complementary bicubic identity, trace
   invariance, and the complete scalar-shift square obstruction.  Normal and
-  optimized runs must byte-match the frozen transcript.  Independent hostile
-  audit is still required for the Newton-polygon irreducibility, the global
-  R1+S2 maximal-order argument, the Kummer valuation typing, and the scalar
-  square-exhaustion proof.
+  optimized runs must byte-match the frozen transcript.
 depends_on:
   - THM-3854-integrated-three-cusp-quintic-s5-natural-completion-obstruction
   - THM-3864-integrated-three-cusp-conductor-seminormal-three-direction-gate
@@ -39,7 +41,7 @@ hash_basis: raw LF bytes
 
 # THM-3869 -- an exact nonmonogenic cubic, with one line still unpaid
 
-**PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Put
 
 ```text
