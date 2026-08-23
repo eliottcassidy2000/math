@@ -1,0 +1,17 @@
+THM-3697 exact companion -- two-pure-x-Q normalized 2x3 closure
+systems=11155
+linear_exits=[('P1_low', 24), ('P2_low', 24), ('Q1_low', 34), ('active_cross_zero', 8), ('equal_P', 1233), ('equal_Q', 294), ('inconsistent', 9504)]
+linear_exit_total=11121
+residual=34
+saturation_attempts=68
+saturation_skips=0
+unit_ideals=68
+unique_groebner_systems=68
+groebner_cache_hits=0
+nonunit=0
+nonunit_profiles=[]
+bounded_degree6=monomials:25,universe:38000,survivors:0
+controls=near_survivor_terminal:PASS,one_by_three_tame:PASS,two_pure_x_drop:PASS
+semantic_sha256=5c6b4e2cb727dc0621c30faa2f8e5f6595d3b92f56247712b161ac75a29aecf2
+CHECKS=16
+RESULT=PASS
