@@ -2,7 +2,7 @@
 id: THM-3781
 title: "Scalar-centred common-step-three Danielewski Darboux nonentry"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  On every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On every
   exponent-two squarefree Danielewski surface with at least two arms, no
   Darboux pair can have three nonconstant homogeneous weight pieces in each
   output, common step three, and scalar-centred support.  Up to exchanging
@@ -13,11 +13,15 @@ status: >
   cells, not planar JC(2).
 source: root / planar-Jacobian Danielewski Darboux session, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The support convolution, endpoint power
-  laws, both adjacent-weight integrations, arm-valuation thresholds, and
-  terminal degree contradictions were derived by hand and checked by an
-  exact companion.  Normal, optimized, and frozen transcript comparison
-  remains required together with an independent hostile audit.
+  INDEPENDENT HOSTILE AUDIT PASSED (jc_zero_debt_lift, 2026-08-23).  The
+  audit independently checked the homogeneous-piece formula, endpoint sign
+  census, UFD power laws (including constant and zero-weight edge cases),
+  both adjacent-weight integrations, the Cell-I polynomial-Mobius degree
+  inference, and the Cell-II coprimality/divisibility/degree step.  In Cell
+  I the only possible polynomial quotient is constant, hence is removed by
+  scalar centering; in Cell II the cubic denominator is congruent to one
+  modulo every factor of k.  Normal and optimized executions byte-match the
+  frozen transcript; recorded raw hashes and the 80 exact gates match.
 depends_on:
   - THM-3572-squarefree-danielewski-affine-modification-and-two-bracket-collapse
 related:
@@ -33,7 +37,7 @@ hash_basis: raw LF bytes
 
 # THM-3781 -- two complete three-by-three Darboux cells are empty
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  The
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The
 exponent-two Danielewski route first survives the known support census at
 three weight pieces in each output.  This theorem closes the next complete
 common-step family, rather than one symmetric representative.
@@ -100,8 +104,9 @@ the two upper endpoints both positive.  With `(5)`, this leaves
 p in {-2,-1,0,1}.                                      (8)
 ```
 
-Exchanging `P,Q` identifies `p` with `q=-p-1`.  Hence only the following two
-cells remain:
+Exchanging `P,Q` and, if necessary, negating one output to restore bracket
+`+1` identifies `p` with `q=-p-1`.  Hence only the following two cells
+remain:
 
 ```text
 I:   supp(P)=(-4,-1,2),       supp(Q)=(-3,0,3),
@@ -228,4 +233,4 @@ cubic-over-linear divisibility in Cell II.
 This is not a classification of all three-by-three supports.  Unequal step
 sizes, non-centred scalar placements, gapped supports, and common steps at
 least four remain open.  It constructs no Darboux pair and no planar
-Jacobian counterexample.  **QED, conditional on independent hostile audit.**
+Jacobian counterexample.  **QED.**
