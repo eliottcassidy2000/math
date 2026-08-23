@@ -1,0 +1,9 @@
+theorem=THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
+valuation=vE(A):0;vE(D):1;vE(h):-1;extensions_source_infinite
+branch=Delta_irreducible;Delta_subset_Jelonek_component
+normalization=P1_minus_infinity_and_two_roots_of_3q2_plus7
+punctures=3;polynomial_A1_dominance=impossible
+conclusion=no_dominant_generically_finite_A2_to_U;no_Keller_atlas
+scope=all_degree;arbitrary_algebraically_closed_characteristic_zero
+CHECKS=32
+semantic_sha256=9964f46981085706bb9dd2508c6a6c473ee09d2b9410eaf0c50a4c76e6440b29
