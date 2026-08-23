@@ -317,12 +317,12 @@ gives no support asymptotic/residue; only the indexed coefficient is known.
   profiles, marked sidecars, Mealy closure, bounded gaps, center/density/
   balance, and every prize remain OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT;
-  Nagata/GGHV and THM-3543--3642 give the stated degree/height floors and
+  Nagata/GGHV and THM-3543--3642 give degree/height floors and
   low-sector closures. Audited THM-3687/3688 reach `J_0,J_1,J_2`;
   `J_3+` and THM-3737's audit remain. THM-3685--3739 close W002/3/7/8 and
   stabilized W004, not exceptional W004/W005/6 or interacting Cohn factors.
   THM-3741/3754--3759/3765/3771/3772 close the named radial/Pell/cubic lanes;
-  THM-3770--3780 type and close the stated rational target/filling operations.
+  THM-3770--3780 close rational target/filling operations.
   THM-3782 closes covered simple-pole target words; THM-3781 closes every
   scalar-centred `3x3` AP cell. THM-3783 gives the `m=1` surface
   `r^3g=z^2-r/4` and degree floor `>=4`; THM-3786 closes its irregular

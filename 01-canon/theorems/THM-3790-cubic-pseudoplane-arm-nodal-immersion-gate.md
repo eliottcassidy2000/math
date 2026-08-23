@@ -253,8 +253,9 @@ two transverse branches.  Globally write
 div(Delta(A,C))=L+D.                                                       (23)
 ```
 
-The residual effective divisor `D` is nonempty, meets `L` at both nodal
-preimages (possibly through different global components), and satisfies
+The residual effective divisor `D` is nonempty, meets `L` simply and
+transversely at both nodal preimages (possibly through different global
+components), and satisfies
 
 ```text
 [D]=-[L]=2[L] in Pic(Y)=Z/3.                                              (24)
