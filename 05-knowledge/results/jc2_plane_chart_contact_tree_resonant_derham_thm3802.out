@@ -1,0 +1,10 @@
+theorem=THM-3802-plane-chart-contact-tree-resonant-de-rham-law
+hypotheses=actual_smooth_affine_A2_cover;multi_overlaps=D(f);w=beta_i+f^n*a_i
+cohomology=H1=0;H2=k^h/k*1;other_positive_degrees_zero
+class=[omega]=([f^(n-1)]beta_i)_i_mod_constants
+exactness=omega_exact_iff_resonant_leaf_vector_constant
+darboux=nonconstant_resonance_implies_no_pair
+controls=THM3791_split;THM3789_axis;THM3797_confluent_contact_tree
+guard=atlas_is_hypothesis_not_conclusion_from_leaf_labels
+CHECKS=235
+semantic_sha256=4a77818e9aea370b9661778aa9478919b40df16d976b75f5aa247e5b459911a7
