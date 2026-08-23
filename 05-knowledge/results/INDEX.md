@@ -1,5 +1,51 @@
 # Script Results Index
 
+- `jc2_cubic_normal_strip_keller_thm3861.py` -> matching `.out`
+  [THM-3861 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Every
+  characteristic-zero polynomial Keller pair in `k[s,z]` with both transverse
+  degrees at most three is a polynomial automorphism.  After a constant target
+  change, the `(3,1)` branch is explicitly triangular; the apparent `(3,2)`
+  Kummer branch is empty because its forced rational profile either produces
+  a unique cubic arm pole or, at constant Kummer parameter, forces a
+  nonconstant polynomial product to be a unit.  Thus transverse degree four
+  is the first remaining polynomial strip.  Primary/independent checks:
+  `43/622`.  Script/output/semantic SHA-256:
+  `056f177d0586362fb0a1fa3daa3e57e77be0af6ac105a58fe856cb1a3ba4182e` /
+  `51b5c1e05e67c6043228ae3656486afb6e5a7be417ab78ec4a4f0b9269fb16a0` /
+  `372e956d295f82c3e21540e368d5b9ad932fdb3e954a36a97f0c86e346de4b7f`;
+  independent hashes are recorded in THM-3861.
+
+- `jc2_russell_higher_normal_rational_lifts_thm3860.py` -> matching `.out`
+  [THM-3860 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  completed-arm Darboux recursion is an affine torsor in the arm-tangent
+  direction.  For constant nonzero normal Wronskian, every vertical rational
+  normal coordinate forces an exact affine slope modulo a free `k(z)`
+  translation.  The minimal nodal packet thereby gains a rational exact lift,
+  proving that THM-3846's canonical square gate is not higher-normal
+  invariant; every lift in this complete vertical subclass nevertheless has
+  a pole on a constant-`z` Laurent divisor.  General `Z_s!=0` and arbitrary
+  global pairs remain open.  Primary/independent checks: `38/350`.
+  Script/output/semantic SHA-256:
+  `c8b13abed6a8a421f7a1bb1b079b02d6852fba88a254f7e944d1b8f8594a64cd` /
+  `b11751a10ca63b1666a6b289bd864b4a1e5037672344244e98a96d452b1715f3` /
+  `971c46a940d02c8240765f6ac7d622615b24f4e4cc273ee28038317ec3b2816f`;
+  independent hashes are recorded in THM-3860.
+
+- `jc2_quadratic_normal_strip_keller_thm3856.py` -> matching `.out`
+  [THM-3856 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Every
+  characteristic-zero polynomial Keller pair in `k[s,z]` with both
+  transverse degrees at most two is a polynomial automorphism.  After a
+  constant target change, the genuinely quadratic case is exactly
+  `C=b(s)+beta*z`,
+  `A=rho*C^2+d*C-(lambda/beta)s+a0`, with an explicit polynomial inverse.
+  Hence this normal cell cannot realize the self-identifying Russell arm;
+  degree at least three or a nonpolynomial strip expansion is necessary.
+  Primary/independent checks: `43/56`.  Script/output/semantic SHA-256:
+  `c7fc82175a2daa9a2bc81df24c31c1cddb0f67cd2263ee26ea6257c02d6fb144` /
+  `ce2cd8f92df66caeb6e58dbdaddb6edf8c4e90084552e0c707768d2c35626d9b` /
+  `02fce0fd2eea8d8ec75ee05bb8264d4bd82278d3f01db5c79ebf54e37ae3f82a`;
+  independent hashes are recorded in THM-3856.
+
 - `jc2_deleted_ramification_three_puncture_jelonek_nonentry_thm3841.py` ->
   matching `.out` [THM-3841 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  A deleted completion divisor forces its irreducible

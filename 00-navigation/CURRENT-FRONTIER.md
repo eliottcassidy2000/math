@@ -336,33 +336,28 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
   and the all-shell stabilizer as the response kernel (zero at odd core).
   Adaptive/projective chronology and every prize remain OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  THM-3543--3782 close
-  the named Nagata/GGHV, Cohn, radial, Pell, simple-pole and low-support cells,
-  not arbitrary pairs.  THM-3827/3831 impose primitive row genus `>=3`;
-  THM-3836 is the alternate all-degree core
-  `P=3h^3+7h^2k+k^3=CS`, `(C,S)=1`,
-  `kJ(h,C)-hJ(k,C)=lambda P`, with a required comaximal pencil split;
-  THM-3838 gives `deg h,deg k>=5`.
-  The former sharp `S3` anchor THM-3811 is closed twice: THM-3841 proves no
-  dominant plane map by its three-puncture Jelonek component, and THM-3845
-  gives an independent total-degree contradiction.  THM-3842 identifies it
-  as an eightfold base change of the rational cubic tower.  THM-3847's `G_m`
-  deformation has source `A2`, is monogenic with a different unit, and has an
-  injective non-uniruled branch rather than a Russell arm.  THM-3844's
-  one-place two-cusp quartic is also monogenic and has only one `Z/3` class.
-  THM-3850 closes nonconstant one-variable profiles; THM-3852 closes affine
-  profiles containing a line: a companion has at least two places.  THM-3851
-  attains `(Z/3)^2`, but every chart has two places; its `S3` closure is the
-  unit-rich torus `(G_m)^2`, not a plane.  A replacement must be one-place,
-  constant-unit and nonmonogenic outside both grammars.
-  THM-3856 eliminates every transverse-degree-at-most-two polynomial Keller
-  pair: all are automorphisms.  The positive anchor is THM-3785's one-place
-  Russell pseudo-plane, whose arm THM-3843 forces to be a noninjective
-  immersion.  THM-3846 gives formal Darboux lifts; THM-3853 excludes the first
-  one-place inverse discriminants at quadratic coefficient depth, whereas
-  THM-3855 lifts every order-five perturbation to a connected normal
-  nonmonogenic formal `S3` order; its stronger right-equivalence is under
-  audit.  Polynomial termination from degree three, THM-3849's conductor
-  sidecar, and a plane atlas remain live; THM-3839 excludes one constant tower.
+  named cells, not arbitrary pairs.  THM-3827/3831 impose primitive-row genus
+  `>=3`; THM-3836 retains the all-degree core `P=3h^3+7h^2k+k^3=CS` with a
+  comaximal pencil split, and THM-3838 gives `deg h,deg k>=5`.
+  THM-3811's `S3` anchor is closed independently by THM-3841's three-puncture
+  Jelonek gate and THM-3845's degree contradiction; THM-3842 identifies its
+  eightfold tower base change.  THM-3847's `G_m` deformation is monogenic and
+  non-uniruled; THM-3844 is one-place but monogenic.  THM-3850/3852 close the
+  one-variable and affine-line profiles, while THM-3851's `(Z/3)^2` charts are
+  multi-place with torus rather than plane closure.  A replacement must be
+  one-place, constant-unit and nonmonogenic.  THM-3853/3855 retain a formal
+  inverse-discriminant laboratory, not polynomial termination.
+  The positive anchor is THM-3785's Russell pseudo-plane: a Darboux pair would
+  give field degree divisible by three and at least nine.  THM-3843 forces a
+  self-identifying immersed arm; THM-3846 gives all formal first-jet lifts;
+  THM-3849's conductor records visible contact, not deleted sheets.
+  THM-3856/3861 close polynomial normal strips through transverse degree three,
+  leaving degree four first.  THM-3860 crosses the canonical square gate
+  rationally but proves every vertical seed change polar; the first live mixed
+  term is `Z_s!=0` at order `z^3`.  THM-3862 proves any hypothetical finite
+  completion flat and globally nonmonogenic, with `A1` branch normalizations
+  at one common infinity; at degree three the arm cannot itself branch.
+  THM-3839 excludes only one constant tower.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692
