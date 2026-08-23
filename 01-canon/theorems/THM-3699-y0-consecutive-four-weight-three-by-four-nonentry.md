@@ -3,10 +3,11 @@ id: THM-3699
 title: "Consecutive four-weight three-by-four nonentry and a two-weight adjunction gate"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the y=0
-  collision ring, no Darboux pair can
-  have reduced grading supports of sizes 3 and 4 when both supports lie in
-  the consecutive window {-2,-1,0,1}.  Three missing-weight cases collapse
-  on a singleton bucket.  In the fourth, same-sign endpoint commutation
+  collision ring, no Darboux pair can have reduced grading supports of sizes
+  3 and 4 when both supports lie in any common four-consecutive-weight window.
+  The synchronized arm law forces that window to be {-2,-1,0,1}.  Three
+  missing-weight cases there collapse on a singleton bucket.  In the fourth,
+  same-sign endpoint commutation
   upgrades the weight -2 coefficient to carry two arm factors, so every
   scalar address vanishes on the arm divisor.  Consequently the seven-space
   of THM-3698 remains Darboux-empty after adjoining one homogeneous weight
@@ -17,9 +18,10 @@ audit: >
   PASS.  The independent hostile audit checked all four bucket tables, both
   zero/nonzero singleton derivative gates, the strict-opposite product
   derivative, the endpoint logarithmic derivative and common-square upgrade,
-  the common arm factor in all three scalar addresses, and the exact scope of
-  the one-dimensional Darboux shear.  Normal and optimized companion runs
-  byte-match the stored transcript.
+  the common arm factor in all three scalar addresses, the arm-law reduction
+  from every translated consecutive window to the unique window containing
+  both -2 and 1, and the exact scope of the one-dimensional Darboux shear.
+  Normal and optimized companion runs byte-match the stored transcript.
 depends_on:
   - THM-3695-y0-collision-ring-danielewski-embedding-and-seven-piece-floor
   - THM-3696-y0-collision-ring-three-branch-conductor-and-graded-modules
@@ -29,8 +31,8 @@ related:
   - THM-3693-y0-collision-ring-two-by-three-weight-darboux-no-go
 script: 04-computation/jacobian_y0_consecutive_four_weight_three_by_four_thm3699.py
 output: 05-knowledge/results/jacobian_y0_consecutive_four_weight_three_by_four_thm3699.out
-script_sha256: 5c45b2c6217ea47771716c0fd670fefe36255344a9b3d15aa8b0f1f5ff216751
-output_sha256: f9f5c83fda687a9d38e329da35bbc57b03b863c7ef03b6d581c175953c442976
+script_sha256: 645799c066f84ec768a53ee5bd912ed16715ee15e5df76d58f0f6e05edec9e21
+output_sha256: b6a2ad08cd285ab929c27b93223ef98c7f5f7ff8a9e4de93f20756d66497219a
 hash_basis: LF-normalized bytes
 ---
 
@@ -73,7 +75,28 @@ M_-2 subset hC[b].                                      (3)
 Here a retained weight-zero piece is nonconstant.  Scalar weight-zero pieces
 are removed before support is counted, since they are bracket-invisible.
 
-## 1. Statement and bucket grammar
+## 1. Every translated consecutive window reduces to one case
+
+For `t in Z`, put
+
+```text
+W_t={t,t+1,t+2,t+3}.                                   (4a)
+```
+
+Suppose that the reduced supports have sizes three and four and are both
+contained in `W_t`.  At either arm `b=+-1`, THM-3696 says every scalar
+address vanishes except one with weights `(-2,1)` or `(1,-2)`.  Since the
+full bracket is the unit, such an address must occur.  Thus `W_t` contains
+both `-2` and `1`.  They are distance three apart, so the only
+four-consecutive integer window containing both is
+
+```text
+t=-2,                         W_t={-2,-1,0,1}.          (4b)
+```
+
+It remains to close this forced window.
+
+## 2. Forced-window bucket grammar
 
 Let `P,Q in R` satisfy `{P,Q}=1`, and suppose that, after possibly exchanging
 the outputs,
@@ -87,9 +110,9 @@ A pair of weights `(r,s)` contributes to output weight `r+s+1`.  Every
 nonzero output-weight bucket must therefore vanish, while the weight-zero
 bucket must equal one.  There are exactly four possibilities for `S`.
 
-## 2. Three singleton collapses
+## 3. Three singleton collapses
 
-### 2.1 `S={-2,-1,0}`
+### 3.1 `S={-2,-1,0}`
 
 Output weight `2` is the singleton `(0,1)`, so
 
@@ -100,7 +123,7 @@ Output weight `2` is the singleton `(0,1)`, so
 The active coefficient `q_1` is nonzero.  Hence `p_0'=0`, making `P_0`
 scalar and therefore not retained.  This contradicts `(4)`.
 
-### 2.2 `S={-2,-1,1}`
+### 3.2 `S={-2,-1,1}`
 
 Output weight `2` is now the singleton `(1,0)`, and
 
@@ -110,7 +133,7 @@ Output weight `2` is now the singleton `(1,0)`, and
 
 Thus the retained `Q_0` is scalar, again a contradiction.
 
-### 2.3 `S={-2,0,1}`
+### 3.3 `S={-2,0,1}`
 
 The output-weight-one bucket is
 
@@ -128,7 +151,7 @@ The first bracket vanishes identically because both entries are functions of
 Thus `pq` is constant.  But `(3)` gives `b|p` and `h|q`; the nonzero product
 is divisible by the nonconstant polynomial `bh`.  This is impossible.
 
-## 3. Endpoint commutation erases the last scalar address
+## 4. Endpoint commutation erases the last scalar address
 
 It remains to take
 
@@ -171,7 +194,7 @@ scalar bucket is divisible by `h`.  Their sum cannot be the unit `1`.
 Sections 2--3 prove
 
 ```text
-supp(P),supp(Q) subset {-2,-1,0,1},
+supp(P),supp(Q) subset W_t for some t in Z,
 {|supp(P)|,|supp(Q)|}={3,4}
                  ==> {P,Q} notin C*.                  (14)
 ```
@@ -179,7 +202,7 @@ supp(P),supp(Q) subset {-2,-1,0,1},
 The same proof applies after exchanging the outputs; reversing the bracket
 only changes its sign.
 
-## 4. The first two-new-weight enlargement of the seven-space
+## 5. The first two-new-weight enlargement of the seven-space
 
 Let `E` be the seven-dimensional space of THM-3698.  Its weight profile is
 
@@ -224,10 +247,11 @@ the symmetric weight-zero shear is a second check.  This corollary is about
 the particular common span `(17)`.  It does **not** exclude a general `4 x 4`
 pair whose components at weights `-1` and `0` may be linearly independent.
 
-## 5. Exact frontier
+## 6. Exact frontier
 
-The result closes the conductor-natural consecutive word `W`, including the
-first nine-dimensional enlargement suggested by THM-3698.  It does not close
+The result closes every common four-consecutive-weight word, with the
+conductor-natural window `W_{-2}` supplying the only nontrivial case.  It also
+closes the first nine-dimensional enlargement suggested by THM-3698.  It does not close
 arbitrary `3 x 4` placements with other weights.  By the repaired
 every-line/source-jet argument in THM-3695, `2 x 5` is not a live collision-
 ring cell: the unique first cell is `3 x 4` up to exchanging outputs.  The

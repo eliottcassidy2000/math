@@ -38,6 +38,11 @@ expected = {
 }
 
 print("THM-3699 exact support audit")
+contains_minus_two = set(range(-5, -1))
+contains_plus_one = set(range(-2, 2))
+forced_starts = contains_minus_two & contains_plus_one
+require(forced_starts == {-2}, "wrong translated-window intersection")
+print("four-consecutive windows containing both -2 and 1 =", tuple(sorted(forced_starts)))
 print("window =", W)
 print("three-support cases =", len(supports))
 

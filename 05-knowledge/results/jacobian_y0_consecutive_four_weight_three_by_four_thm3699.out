@@ -1,4 +1,5 @@
 THM-3699 exact support audit
+four-consecutive windows containing both -2 and 1 = (-2,)
 window = (-2, -1, 0, 1)
 three-support cases = 4
 support (-2, -1, 0): decisive bucket 2 = ((0, 1),); scalar = ((-2, 1), (-1, 0), (0, -1))
