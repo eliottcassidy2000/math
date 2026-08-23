@@ -2,7 +2,7 @@
 id: THM-3795
 title: "R-independent quadratic-normal nodal carriers have critical points"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the
   THM-3785 cubic pseudo-plane, every carrier with nodal arm value e^2,
   nonzero first-normal constant, and r-independent canonical normal form
   A=e^2+z f(e)+z^2 h(e) has a critical point.  On the torus curve
@@ -12,13 +12,15 @@ status: >
   This is a carrier obstruction, not a Darboux nonexistence theorem.
 source: jc_zero_debt_lift / nodal quadratic-normal Laurent obstruction, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The proof checks the monic z-normal form,
-  torus parametrization, all Hamiltonian components, exact proportionality
-  between the remaining component and the Laurent derivative, noncollision
-  of the 2, 0, and 1 residue classes, actual critical-point recovery, and a
-  sharp z^3 e^3 / r-coupled cancellation control.  The deterministic
-  companion uses active gates only and normal and optimized runs byte-match
-  the frozen transcript.  Independent hostile audit remains due.
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The monic z-normal
+  form, exact torus parametrization and converse, all Hamiltonian signs,
+  chain-rule proportionality, residue-class noncollision, Laurent-root
+  reconstruction, algebraic-closure step, sharp z^3e^3 boundary, and the
+  constant-r resultant (including finite-root and nonzero-coordinate seams)
+  were rederived.  The surface is smooth and its Poisson packet is
+  symplectic.  The deterministic companion uses active gates only; normal
+  and optimized runs byte-match the frozen transcript and all recorded
+  hashes match.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3790-cubic-pseudoplane-arm-nodal-immersion-gate
@@ -35,7 +37,7 @@ hash_basis: raw LF bytes
 
 # THM-3795 -- an r-independent quadratic-normal carrier is critical
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over
 an algebraically closed field `k` of characteristic zero, fix `c in k*`, and
 retain the smooth symplectic cubic pseudo-plane
 
@@ -225,4 +227,4 @@ The deterministic companion named in the metadata checks `(7)--(20)`,
 the THM-3792 `h=0` boundary, and the sharp cubic collision.  Normal and
 optimized executions byte-match the frozen transcript, and the source has
 no inactive Python assertions.
-**QED, conditional only on independent hostile audit.**
+**QED.**
