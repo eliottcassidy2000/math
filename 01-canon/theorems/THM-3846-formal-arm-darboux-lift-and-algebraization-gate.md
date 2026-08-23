@@ -7,11 +7,13 @@ status: >
   canonical coordinate s=e/[3(c^3+er)] with {z,s}=1.  Every polynomial arm
   immersion together with a unimodular normal Bezout row extends by a closed
   Catalan normal-coordinate series to an exact formal Darboux pair.  The
-  lift lies in the global function field exactly when a displayed quadratic
-  discriminant is a square.  For the minimal nodal arm packet that
-  discriminant is 1+z/c^3, which has odd valuation on a Laurent divisor;
-  hence the canonical formal lift is not even rational.  Arbitrary formal
-  lifts and global polynomial Darboux pairs remain OPEN.
+  completion is also the rational chart Frac(B)=k(s,z), so every nonzero
+  normal Wronskian makes the displayed quadratic discriminant a simple
+  linear prime and the lift is not even rational.  Vanishing Wronskian
+  forces the arm map to be injective.  Hence every self-identifying arm
+  required by THM-3843 has a formal lift but its canonical linear-normal
+  resummation cannot algebraize.  Arbitrary higher-normal formal lifts and
+  global polynomial Darboux pairs remain OPEN.
 source: root / completed Russell pseudo-plane arm and algebraization lane, 2026-08-23
 audit: >
   SELF-HOSTILE EXACT CANDIDATE.  The proof uses the relative formal implicit
@@ -30,11 +32,12 @@ related:
   - THM-3792-pure-first-normal-nodal-carriers-have-critical-points
   - THM-3812-nodal-arm-coefficient-second-normal-profile-nonentry
   - THM-3839-constant-tower-bichromatic-r2z-profile-nonentry
+  - THM-3843-russell-arm-birational-immersion-and-forced-self-identification
 script: 04-computation/jc2_russell_formal_arm_darboux_algebraization_thm3846.py
 output: 05-knowledge/results/jc2_russell_formal_arm_darboux_algebraization_thm3846.out
-script_sha256: 59174bdd03e6c0b18d9c3ab2032c8b213eba4ef2857b1cf3b132a29f9e7de6d0
-output_sha256: 8697c1a4d0ca0f6556e1b5b3a3debebd7262c0353ab0444f4a9397b965f7b1c4
-semantic_sha256: e250b6b5a3a468507c365396cfcb20cb2dccb7df2279ac605e01a5b1ea6e23f5
+script_sha256: b0d2a0c52461b413bb6763563306c53ea3569ced7dc6c20a2dc1fb6fa3aa3300
+output_sha256: 5445e1a7a54f097cb03d06736910d0240bb48c3329b3db9ce21558fb1b1afca9
+semantic_sha256: cb744130f854c584aa536d307aeba139b5cb2df9be96ea0e206781210b758e83
 hash_basis: raw LF bytes
 ---
 
@@ -122,6 +125,18 @@ in the formal completion, and therefore
 ```text
 Z in Frac(B)  iff  1+2Wz is a square in Frac(B).                (13)
 ```
+
+In fact `(5)` gives `Frac(B)=k(s,z)`.  A nonzero `W in k[s]` makes the
+right side of `(13)` a degree-one polynomial in the transcendental `z`, so
+it has a simple prime valuation and cannot be a square.  Therefore
+
+```text
+(Ahat,Chat) in Frac(B)^2  iff  Z in Frac(B)  iff  W=0.          (13a)
+```
+
+But `W=0` forces the arm map `(a,b)` to be injective.  Consequently every
+self-identifying arm packet forced by THM-3843 has an exact formal lift of
+the form `(10)`, but that lift is necessarily nonrational.
 
 This is only a gate for the displayed lift: failure of `(13)` does not
 exclude a different higher-normal formal lift or a global Darboux pair.
@@ -219,7 +234,9 @@ formal implicit-function theorem at `(Z,z)=(0,0)`.  Lagrange inversion gives
 the Catalan expansion `(9)`, which has coefficients in `k[s]` and uses only
 characteristic zero.  Consequently every such arm packet has compatible
 Darboux jets to arbitrary order: truncating sufficiently far gives elements
-of `B` whose bracket is `1` to any prescribed `I`-adic order.  The sparse
+of `B` whose bracket is `1` to any prescribed `I`-adic order.  Precisely,
+the canonical formula shows `{I^m,B} subset I^(m-1)`; approximate the formal
+pair one order beyond the desired bracket precision.  The sparse
 no-go theorems THM-3792, THM-3812, and THM-3839 are therefore
 **algebraization/support obstructions**, not finite formal-neighborhood
 obstructions.
@@ -232,7 +249,38 @@ chooses the root congruent to one modulo `z` and recovers `(12)`.  Moreover
 `(6)` makes at least one of `alpha,beta` nonzero, so `(10)` shows that the
 displayed pair lies in `Frac(B)` if and only if `Z` does.  When `W=0`,
 equation `(8)` simply gives `Z=z`; the separate pole of `s` in `(19)` may
-still prevent algebraization.
+still prevent algebraization.  Equations `(3),(5)` also give both inclusions
+in the global field identity
+
+```text
+Frac(B)=k(s,z).                                                 (22a)
+```
+
+For `W!=0`, the prime `z+1/(2W)` of `k(s)[z]` occurs to order one in
+`1+2Wz`; this proves the nonsquare assertion and `(13a)`.
+
+It remains to justify the injectivity claim when `W=0`.  If `alpha=0`,
+`(6)` makes `a'` a nonzero constant, so `a` itself recovers `s`.  Otherwise
+
+```text
+0=W=alpha^2(beta/alpha)'                                      (22b)
+```
+
+in `k(s)`, hence `beta=lambda alpha` for some `lambda in k`.  Equation
+`(6)` becomes
+
+```text
+alpha(b'-lambda a')=1.                                        (22c)
+```
+
+Both factors are polynomial units.  Thus
+
+```text
+b-lambda a=mu s+nu,                    mu in k*,                (22d)
+```
+
+which again recovers `s` from the target coordinates.  Therefore `W=0`
+is incompatible with the noninjective arm demanded by THM-3843.
 
 ## 3. The minimal nodal packet crosses the square gate
 
@@ -282,11 +330,13 @@ Ahat=9c^6s^2-Z/(3c^3),                                        (28)
 while `s in Frac(B)`, even the first coordinate of this canonical formal
 nodal lift lies outside `Frac(B)`.
 
-This identifies the missing operation precisely.  The nodal boundary and
-its Bezout normal row are formally unobstructed, but their cheapest exact
-symplectic resummation introduces both an opposite-arm pole (`s`) and a
-quadratic Hensel sheet (`Z`).  A genuine counterexample on `Y` must change
-the higher-normal seed so that these debts cancel inside `B`; repeating
-finite sparse rows without tracking the resummed normal coordinate cannot
-decide that problem.  No such algebraization is constructed here, and
-`JC(2)` remains open.  **QED, pending independent hostile audit.**
+This identifies the missing operation precisely.  Every allowable
+self-identifying boundary and Bezout normal row is formally unobstructed, but
+its canonical linear-normal symplectic resummation introduces a nonrational
+quadratic Hensel sheet; the minimal node additionally displays the
+opposite-arm pole `s` concretely.  A genuine counterexample on `Y` must use a
+genuinely higher-normal seed whose resummation cancels these debts inside
+`B`; repeating finite sparse rows without tracking the resummed normal
+coordinate cannot decide that problem.  No such algebraization is
+constructed here, and `JC(2)` remains open.  **QED, pending independent
+hostile audit.**

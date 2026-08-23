@@ -67,6 +67,56 @@ jac_Zs = sp.diff(A0, Z) * sp.diff(C0, s) - sp.diff(A0, s) * sp.diff(C0, Z)
 zero(jac_Zs - bezout - W * Z, "generic linear-normal Jacobian")
 zero((jac_Zs - bezout - W * Z), "generic packet replay")
 
+# W=0 is the injective boundary: this family displays the forced affine
+# target combination b-lambda*a=mu*s+nu and its constant normal row.
+lam0, mu0, nu0 = sp.symbols("lambda0 mu0 nu0", nonzero=True)
+a_zero = s**2
+b_zero = lam0 * a_zero + mu0 * s + nu0
+alpha_zero = 1 / mu0
+beta_zero = lam0 / mu0
+zero(
+    alpha_zero * sp.diff(b_zero, s) - sp.diff(a_zero, s) * beta_zero - 1,
+    "zero-W packet has Bezout determinant one",
+)
+zero(
+    alpha_zero * sp.diff(beta_zero, s) - sp.diff(alpha_zero, s) * beta_zero,
+    "zero-W packet has vanishing normal Wronskian",
+)
+zero(b_zero - lam0 * a_zero - (mu0 * s + nu0),
+     "zero-W target combination recovers the arm parameter")
+
+# A nonconstant-W hostile packet checks the full chain rule, including Z_s,
+# through seven normal orders rather than only the abstract determinant.
+a_host = s
+b_host = s**2
+alpha_host = s
+beta_host = 2 * s**2 - 1
+w_host = sp.factor(
+    alpha_host * sp.diff(beta_host, s) - sp.diff(alpha_host, s) * beta_host
+)
+zero(alpha_host * sp.diff(b_host, s) - sp.diff(a_host, s) * beta_host - 1,
+     "nonconstant-W hostile Bezout packet")
+zero(w_host - (2 * s**2 + 1), "nonconstant-W hostile Wronskian")
+Z_host = sum(
+    sp.catalan(n - 1) * (-w_host / 2) ** (n - 1) * z**n
+    for n in range(1, 10)
+)
+A_host = a_host + alpha_host * Z_host
+C_host = b_host + beta_host * Z_host
+jac_host = sp.expand(
+    sp.diff(A_host, z) * sp.diff(C_host, s)
+    - sp.diff(A_host, s) * sp.diff(C_host, z)
+    - 1
+)
+jac_host_poly = sp.Poly(jac_host, z)
+gate(
+    all(jac_host_poly.coeff_monomial(z**degree) == 0 for degree in range(8)),
+    "nonconstant-W hostile formal Jacobian through order seven",
+)
+
+gate(sp.degree(1 + 2 * w_host * z, z) == 1,
+     "every nonzero W gives a simple linear square-gate prime")
+
 # Catalan truncations solve Z+(W/2)Z^2=z to the advertised order.
 w = sp.symbols("w")
 for order in range(1, 11):
@@ -111,9 +161,10 @@ semantic = {
     "completion": "Bhat=k[s][[z]];s=e/(3(c3+er));{z,s}=1",
     "universal_lift": "Z+(W/2)Z2=z;A=a+alpha*Z;C=b+beta*Z",
     "series": "Catalan formal normal coordinate",
-    "rationality_gate": "Z in Frac(B) iff 1+2Wz is a square when W!=0",
+    "rationality_gate": "Frac(B)=k(s,z);displayed lift is rational iff W=0",
+    "injective_boundary": "W=0 plus Bezout makes an affine target combination recover s",
     "nodal": "W=1/(2c3);1+z/c3 has odd Laurent-prime valuation",
-    "scope": "formal existence and displayed-lift nonalgebraization;global Darboux pair open",
+    "scope": "self-identifying arm lifts are formally exact but canonically nonrational;global Darboux pair open",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -125,8 +176,9 @@ print("theorem=THM-3846-formal-arm-darboux-lift-and-algebraization-gate")
 print("completion=Bhat_equals_k[s][[z]];bracket_z_s_equals_1")
 print("coordinate=s=e/(3(c^3+er));e=3c^3s+9s^2z^3;r=z^3/(c^3+3sz^3)")
 print("formal_lift=Z+(W/2)Z^2=z;A=a+alpha*Z;C=b+beta*Z")
+print("universal_gate=Frac(B)=k(s,z);W_nonzero_is_nonsquare;W_zero_forces_injective_arm")
 print("nodal_gate=W=1/(2c^3);1+z/c^3_nonsquare_by_odd_Laurent_valuation")
-print("scope=formal_all_orders;displayed_nodal_lift_not_rational;global_pair_open")
+print("scope=formal_all_orders;self_identifying_displayed_lifts_not_rational;global_pair_open")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")
 print("RESULT=PASS")

@@ -2,8 +2,9 @@ theorem=THM-3846-formal-arm-darboux-lift-and-algebraization-gate
 completion=Bhat_equals_k[s][[z]];bracket_z_s_equals_1
 coordinate=s=e/(3(c^3+er));e=3c^3s+9s^2z^3;r=z^3/(c^3+3sz^3)
 formal_lift=Z+(W/2)Z^2=z;A=a+alpha*Z;C=b+beta*Z
+universal_gate=Frac(B)=k(s,z);W_nonzero_is_nonsquare;W_zero_forces_injective_arm
 nodal_gate=W=1/(2c^3);1+z/c^3_nonsquare_by_odd_Laurent_valuation
-scope=formal_all_orders;displayed_nodal_lift_not_rational;global_pair_open
-semantic_sha256=e250b6b5a3a468507c365396cfcb20cb2dccb7df2279ac605e01a5b1ea6e23f5
-CHECKS=23
+scope=formal_all_orders;self_identifying_displayed_lifts_not_rational;global_pair_open
+semantic_sha256=cb744130f854c584aa536d307aeba139b5cb2df9be96ea0e206781210b758e83
+CHECKS=30
 RESULT=PASS
