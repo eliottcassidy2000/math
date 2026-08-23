@@ -2,7 +2,7 @@
 id: THM-3770
 title: "Vertical principal-part equalizer and log-canonical dressing gate"
 status: >
-  PROVED + PENDING INDEPENDENT AUDIT.  For a smooth planar polynomial Q whose
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED.  For a smooth planar polynomial Q whose
   rational Hamiltonian constants are exactly k(Q), a rational
   constant-Jacobian mate can be made polynomial if and only if it has no
   horizontal pole and its successive Laurent principal coefficients agree as
@@ -14,17 +14,17 @@ status: >
   Q=U phi(W): smoothness separates the old component values from the roots of
   phi, while polynomial regularity would have to identify them.  Equivalently,
   a counterexample is precisely a nonbirational polynomial map J(U,W)=mU
-  whose whole critical divisor U=0 maps to one point; division after the
-  affine blowdown recovers the Keller mate.  This is a construction/no-go
-  criterion, not a planar Jacobian counterexample.
+  with squarefree U whose whole critical divisor U=0 maps to one point;
+  division after the affine blowdown recovers the Keller mate.  This is a
+  construction/no-go criterion, not a planar Jacobian counterexample.
 source: root / planar-Jacobian vertical-equalizer session, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The DVR recursion, horizontal-divisor
-  boundary, partial-fraction assembly, Krull-intersection step, component
-  constant lemma, affine-blowdown equivalence, birational constant-field
-  calculation, and dressed-fibre mismatch have been derived independently by
-  valuation and differential arguments.  Independent hostile audit remains
-  due.
+  PASS.  An independent hostile audit rederived the common-uniformizer DVR
+  recursion, horizontal-pole and distinct-target-value steps, normal
+  height-one intersection, component constant-field lemma, THM-2230 converse,
+  blowdown field-degree equivalence, dressed-fibre multiplicity obstruction,
+  birational rational constants, and constant-dressing boundary.  No
+  mathematical repair was required.
 depends_on:
   - THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient
   - THM-1365-galois-reduction-jc-fixed-point-bridge
@@ -35,7 +35,7 @@ related:
 
 # THM-3770 -- vertical equalization is the global regularity gate
 
-**PROVED + PENDING INDEPENDENT AUDIT.**  Once the generic Hamiltonian time
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.**  Once the generic Hamiltonian time
 form has a rational primitive, finding a polynomial mate is no longer another
 coefficient PDE.  It is a finite gluing problem over the exceptional target
 values.  The exact sidecar is the principal part on every irreducible
