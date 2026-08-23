@@ -26,7 +26,6 @@ audit: >
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
 related:
-  - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3788-dubouloz-palka-standard-chart-containment-obstruction
   - THM-3794-constant-unit-surfaces-have-no-quadratic-etale-plane-map
 external:
