@@ -197,13 +197,66 @@ zero(
     "mixed q-zero boundary",
 )
 
+# The complete canonical projective line spanned by h_even and h_third.
+# Its residual has a visible square factor, but the quotient never squares.
+L, N = sp.symbols("L N")
+P_even = 81 * x**3 + 49 * x**2 + 8 * y**2
+P_even_third = 81 * x**3 * y - 369 * x**2 * y - 266 * x * y + 46 * y**3
+Q_even = -243 * x**4 - 143 * x**3 + 81 * x**2 * y**2 + 120 * x * y**2 + 64 * y**2
+Q_even_even_third = (
+    2835 * x**4 * y
+    + 4797 * x**3 * y
+    + 81 * x**2 * y**3
+    + 1862 * x**2 * y
+    + 424 * x * y**3
+    + 368 * y**3
+)
+Q_even_third_third = (
+    5913 * x**4 * y**2
+    - 6147 * x**3 * y**2
+    + 81 * x**2 * y**4
+    - 22268 * x**2 * y**2
+    + 2172 * x * y**4
+    - 10108 * x * y**2
+    + 2116 * y**4
+)
+P_line = sp.expand(L**2 * P_even + 2 * L * N * P_even_third + N**2 * P_third)
+Q_line = sp.expand(
+    L**3 * Q_even
+    + 3 * L**2 * N * Q_even_even_third
+    + 3 * L * N**2 * Q_even_third_third
+    + N**3 * Q_third
+)
+h_line = L * h_even + N * h_third
+zero(P_line.subs({x: x_t, y: y_t}) - h_line**2,
+     "projective-line square descent")
+zero(Q_line.subs({x: x_t, y: y_t}) - h_line**3,
+     "projective-line cube descent")
+line_residual, line_remainder = sp.div(sp.expand(P_line**3 - Q_line**2), delta, x, y)
+zero(line_remainder, "projective-line residual divisibility")
+line_core = sp.cancel(line_residual / (L + N * y) ** 2)
+gate(sp.denom(line_core) == 1, "projective-line exact square-factor division")
+zero(
+    line_residual - (L + N * y) ** 2 * line_core,
+    "projective-line symbolic residual factorization",
+)
+zero(
+    line_core.subs(y, 0) - 243 * L**4 * x**3 * (27 * x + 16),
+    "projective-line nonzero-L nonsquare specialization",
+)
+zero(
+    line_core.subs(L, 0) - N**4 * y**4 * residual_core,
+    "projective-line zero-L third-direction boundary",
+)
+
 semantic = {
     "conductor": "t2(t2-1)2(3t2-5)(9t4-18t2+4);exact",
     "seminormalization": "three node equalities;branch adds three cusp derivatives",
     "defect": "dimension 3;derivative determinant -8000",
     "third_direction": "t3(t2-1)(3t2-5)(9t4+24t2-38);square/cube descent",
     "bounded_no_go": "minimum-degree parity-preserving delta lifts have no square residual",
-    "scope": "general mixed/higher lifts and all three-direction combinations open",
+    "projective_line": "all canonical L*h1+N*h3 residuals nonsquare",
+    "scope": "general mixed/higher lifts and h2-containing combinations open",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -219,7 +272,8 @@ print("node_conditions=3;cusp_derivative_conditions=3;seminormal_defect_dimensio
 print("derivative_coordinate_determinant=-8000;third_direction=EXPLICIT")
 print("third_square_cube_descent=YES;canonical_residual_square=NO")
 print("minimum_degree_parity_preserving_mixed_lift_square=NONE")
-print("general_mixed_and_higher_lifts=OPEN")
+print("canonical_projective_line_h1_h3_square_residual=NONE")
+print("general_mixed_higher_and_h2_containing_lifts=OPEN")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
 print(f"CHECKS={CHECKS}")
 print("RESULT=PASS")

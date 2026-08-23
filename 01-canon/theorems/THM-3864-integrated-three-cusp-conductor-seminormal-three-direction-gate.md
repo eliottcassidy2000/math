@@ -19,8 +19,11 @@ audit: >
   conditions modulo the conductor, the three node-equality packets, the
   derivative-coordinate determinant, the explicit third square/cube
   descent, its residual factor, and the complete bounded parity-preserving
-  lift coefficients.  Normal and optimized runs must byte-match the frozen
-  transcript.  Independent hostile audit is still required.
+  lift coefficients.  It also verifies the symbolic factorization and both
+  boundary specializations for the complete canonical projective line
+  spanned by the first and third directions.  Normal and optimized runs must
+  byte-match the frozen transcript.  Independent hostile audit is still
+  required.
 depends_on:
   - THM-3854-integrated-three-cusp-quintic-s5-natural-completion-obstruction
 related:
@@ -28,9 +31,9 @@ related:
   - THM-3855-formal-inverse-discriminant-lift-and-algebraization-gate
 script: 04-computation/jc2_integrated_three_cusp_seminormal_defect_thm3864.py
 output: 05-knowledge/results/jc2_integrated_three_cusp_seminormal_defect_thm3864.out
-script_sha256: fc59293ff7367cf86a65a7ad5083f49ec210ac119e1c7a4bb2ea063c344cdbae
-output_sha256: b0763bc0f708d8d8910f195435b45ad13a2b911f72c11bc04153d326e45d7477
-semantic_sha256: 9e3a477c32e500d32a82d6e20e2e81f61bac30282efd8d417f619103f89d998f
+script_sha256: 54eb6c52cc20ececfa2276652302ead0915e229827a7fa9202f6e3ce6767d53a
+output_sha256: cf82e8730d0bf2b92d37848a8b85904640ecd6798aaa09f1c5596ea0bdfe3233
+semantic_sha256: 95b1e2f252fb6639bf80132696cddf95a4bb88d7137f85690b1248ee0d28806c
 hash_basis: raw LF bytes
 ---
 
@@ -77,11 +80,12 @@ Every `h_i` has square and cube in `R`.  The previously missing third
 direction has the explicit descents `(23)-(24)` below.  Its simplest
 depressed-cubic residual is not a square.  More strongly, no
 minimum-total-degree parity-preserving change of its two polynomial lifts
-makes the residual a square.
+makes the residual a square, and no canonical element on the entire
+projective line spanned by `h_1,h_3` has square residual.
 
-The last statement is deliberately bounded.  It does not exclude
-higher-degree changes, parity-breaking changes, or a linear combination of
-the three directions in `(6)`.
+The last statements are deliberately bounded.  They do not exclude
+higher-degree changes, parity-breaking changes, or combinations involving
+`h_2`.
 
 ## 1. Exact global coordinate conditions
 
@@ -293,14 +297,65 @@ vanishes at `q=0`, whereas the last line of `(28)` is then nonzero.  This
 excludes the final case.  Hence no member of `(25)-(26)` has square
 residual.
 
-## 6. Scope and next exact search
+## 6. The complete canonical line spanned by `h_1,h_3`
+
+The third direction also closes one full projective family without changing
+representatives.  In addition to `P_1,Q_1` from THM-3854 and `P_3,Q_3`
+above, put
+
+```text
+P_13=81x^3y-369x^2y-266xy+46y^3,                              (30)
+
+Q_113=2835x^4y+4797x^3y+81x^2y^3+1862x^2y
+      +424xy^3+368y^3,
+
+Q_133=5913x^4y^2-6147x^3y^2+81x^2y^4-22268x^2y^2
+      +2172xy^4-10108xy^2+2116y^4.                            (31)
+```
+
+These pull back to `h_1h_3`, `h_1^2h_3`, and `h_1h_3^2`, respectively.
+For `[L:N] in P1(k)`, define the canonical descents
+
+```text
+P_(L,N)=L^2P_1+2LNP_13+N^2P_3,
+Q_(L,N)=L^3Q_1+3L^2NQ_113+3LN^2Q_133+N^3Q_3.                 (32)
+```
+
+Thus they pull back to `(Lh_1+Nh_3)^2` and `(Lh_1+Nh_3)^3`.  Direct exact
+division and factorization give
+
+```text
+(P_(L,N)^3-Q_(L,N)^2)/Delta=(L+Ny)^2 K_(L,N),                (33)
+K_(L,N)(x,0)=243L^4x^3(27x+16),                              (34)
+K_(0,N)=N^4y^4 C_3.                                          (35)
+```
+
+No member of this projective line has square residual.  If `L!=0` and the
+right side of `(33)` were a square in `k(x,y)`, then `K_(L,N)` would be a
+square there.  The UFD property reduces this to a polynomial square up to a
+constant, and every constant is already a square in the algebraically
+closed field `k`.  Specializing at `y=0` would make `(34)` a square in
+`k[x]`, impossible because the distinct factors `x` and `27x+16` have odd
+valuations three and one.
+
+If `L=0`, then `N!=0`, and `(33),(35)` reduce to
+
+```text
+N^6y^6 C_3.                                                   (36)
+```
+
+The scalar and `y^6` are squares, whereas `C_3` is nonsquare by Section 4.
+This handles the projective endpoint and completes the line uniformly.
+
+## 7. Scope and next exact search
 
 The result converts the seminormal boundary problem from an incomplete
 two-direction scout to a complete three-dimensional defect space.  It does
 **not** classify binary cubic orders with discriminant `Delta`.  The first
 live searches are:
 
-1. linear combinations `lambda_1h_1+lambda_2h_2+lambda_3h_3`;
+1. linear combinations involving `h_2`, including the two remaining
+   coordinate lines and the interior of the full projective plane;
 2. parity-breaking representatives of the same boundary elements;
 3. representatives above total degrees five and seven; and
 4. the all-orders algebraization mechanism of THM-3855 applied to this
