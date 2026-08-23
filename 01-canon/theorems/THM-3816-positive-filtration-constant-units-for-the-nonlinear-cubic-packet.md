@@ -8,8 +8,9 @@ status: >
   after localization its cubic generator has polynomial
   T^3+7A^2T+3A^3-A^2C^2, whose reciprocal is Eisenstein at A.  Degree
   additivity and F_0=k then force S*=k*.  This closes the ambient-unit clause
-  of THM-3811, but the ramification-class order and affineness of its etale
-  complement remain OPEN.
+  of THM-3811 by a mechanism independent of its later divisor computation.
+  THM-3811 now also proves that the ramification class is primitive and its
+  complement is affine; only the polynomial plane-atlas gate remains OPEN.
 source: root / THM-3811 filtration-extension lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (thm3798-hostile-audit, 2026-08-23).
@@ -165,17 +166,20 @@ Gamma(Xbar minus E,O)^*=k*
 iff [E] has infinite order in Cl(S).                               (13)
 ```
 
-Thus the ambient-unit clause previously left open there is closed.  The two
-remaining gates are still exact and separate:
+Thus this gives an independent closure of the ambient-unit clause.  The
+subsequent strengthened form of THM-3811 proves
 
 ```text
-OPEN-3816-A: determine the order of [E] in Cl(S);
-OPEN-3816-B: determine whether Xbar minus E is affine.              (14)
+[E] primitive in Cl(S)=Z^3,
+U=Xbar minus E affine,             U*=k*,             Pic(U)=Z^2.  (14)
 ```
 
-Neither `(3)` nor `(13)` settles `(14)`, constructs an etale affine factor,
-or gives a planar Jacobian counterexample.  The exact companions check the
-filtered table, all basis associativity triples, the characteristic cubic,
-the field-uniform Eisenstein certificate, freeness/localization, and the unit
-lemma.  Normal and optimized executions LF-normalize to the frozen outputs.
-**QED.**
+The remaining problem is not another unit or affineness calculation.  It is
+the source-realization gate `OPEN-3811`: construct a dominant polynomial
+etale morphism `A2 -> U` with the required codimension-one coverage, or prove
+that none exists.  The filtration argument here neither constructs nor
+obstructs that atlas and gives no planar Jacobian counterexample by itself.
+The exact companions check the filtered table, all basis associativity
+triples, the characteristic cubic, the field-uniform Eisenstein certificate,
+freeness/localization, and the unit lemma.  Normal and optimized executions
+LF-normalize to the frozen outputs.  **QED.**
