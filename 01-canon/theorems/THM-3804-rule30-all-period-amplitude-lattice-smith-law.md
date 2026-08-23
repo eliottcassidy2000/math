@@ -1,12 +1,12 @@
 ---
-id: THM-3803
+id: THM-3804
 title: "Rule 30 all-period amplitude-lattice Smith law"
 status: RESERVED / UNPROVED EMPTY STUB
 source: root + rule30_lattice_audit / all-frontier session, 2026-08-23
 depends_on: []
 ---
 
-# THM-3803 -- reserved all-period amplitude-lattice namespace
+# THM-3804 -- reserved all-period amplitude-lattice namespace
 
 **RESERVED / UNPROVED EMPTY STUB.**  This file only reserves the identifier
 for the candidate image, kernel, cokernel, and Smith classification of the
