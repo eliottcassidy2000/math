@@ -300,8 +300,12 @@ O_Q direct_sum O_Q(-tau) direct_sum O_Q(-2tau)                (27)
 
 with a chosen trivialization of `3tau` defines, after normalization, a
 cyclic cubic cover of `Q` which is etale in codimension one.  Equation `(26)`
-extends the quadratic involution by inversion, so the composite function-
-field extension over `k(X,Y)` has group `C3 semidirect C2=S3`.
+is the necessary class-level compatibility for extending the quadratic
+involution by inversion.  Anti-invariance alone can leave an equivariant
+descent cocycle, so this sentence does not infer an `S3` lift merely from the
+lattice.  Equations `(34)-(36)` below construct the lift in this example and
+show directly that the composite function-field extension over `k(X,Y)` has
+group `C3 semidirect C2=S3`.
 
 This answers the globalization question positively.  The next section shows
 why it is nevertheless the wrong globalization for a Keller surface.
@@ -383,10 +387,23 @@ T=u-p/(3u)                                                     (36)
 satisfies `(5)`.  Irreducibility makes this a nontrivial cyclic cubic over
 `k(Q)`.  It is unramified at every codimension-one point of `Q`: the only
 codimension-one inertia over the coefficient plane is a transposition, and
-the quadratic resolvent absorbs it.  Since `Q*=k*`, there is no unit Kummer
-class, while `(4)` has only the two nonzero inverse three-classes.  Therefore
-the cover `(34)` is exactly the cover of `(27)`, up to replacing `tau` by
-`-tau`.
+the quadratic resolvent absorbs it.  More precisely, for
+`Q_reg=Q minus Sing(Q)`, normality gives
+
+```text
+Gamma(Q_reg,O)*=Q*=k*,                    Pic(Q_reg)=Cl(Q),     (36a)
+```
+
+and the Kummer sequence gives
+
+```text
+0 -> k*/(k*)^3 -> H^1(Q_reg,mu_3) -> Cl(Q)[3] -> 0.           (36b)
+```
+
+The left term vanishes because `k` is algebraically closed.  The Cardano
+extension is nontrivial because `(5)` has Galois group `S3`, so its class is
+one of the two nonzero elements of the unique `Z/3` in `(4)`.  Therefore the
+cover `(34)` is exactly the cover of `(27)`, up to replacing `tau` by `-tau`.
 
 ## 5. The different becomes a forbidden unit
 
@@ -444,7 +461,11 @@ pattern, the explicit Smith relation and deck action, the depressed-cusp
 pullback, Cardano norm, irreducibility hostile, and different/companion
 identity.  It reports 1,859 active exact gates.
 
-The use of the standard weak degree-two del Pezzo resolution model in
-Section 2 is the human geometric input; the finite lattice consequences are
-exactly enumerated.  Independent hostile audit is still required before
-promotion to proved canon.  **QED candidate.**
+The use of the standard weak degree-two del Pezzo resolution model and the
+resolution/class-group quotient `(18)` are the human geometric inputs in
+Section 2.  The 360-marking lattice consequences are finite exact evidence,
+not a replacement for those geometric bridges.  The normality/index argument
+for `(33)` and the Kummer exact-sequence argument `(36a)-(36b)` are
+theorem-level symbolic proofs and are not delegated to the companion.
+Independent hostile audit is still required before promotion to proved
+canon.  **QED candidate.**
