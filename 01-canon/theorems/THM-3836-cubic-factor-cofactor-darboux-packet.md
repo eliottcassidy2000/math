@@ -2,8 +2,8 @@
 id: THM-3836
 title: "The nonlinear cubic chart is a factor-cofactor Darboux packet"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Every polynomial Keller atlas of the THM-3811 nonlinear cubic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every polynomial
+  Keller atlas of the THM-3811 nonlinear cubic
   surface satisfies an exact cubic factorization P=C*S and cofactor equation
   delta(C)=lambda*P.  The two factors are comaximal and allocate all
   components of the three cubic pencil members.  A differentiated-determinant
@@ -12,11 +12,17 @@ status: >
   G_m arms.  This removes THM-3831's irreducible-h hypothesis in all degree.
 source: root + jc_quartic_c3_construct / homogeneous root-ratio and component-selection lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The companion verifies P=C*S from the
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
+  The audit rederived chart clearing and the Keller cofactor, checked both
+  comaximality arguments scheme-theoretically, retained whole irreducible
+  multiplicities, verified every j=1,2,3 monochromatic endpoint, grounded
+  the final nonunit contradiction in THM-3822's actual h-arm, and checked
+  the two intrinsic arm labels under etale base change.  Normal and optimized
+  runs byte-match the frozen transcript and both raw hashes agree.  The
+  companion verifies P=C*S from the
   triangular chart, the cleared Keller cofactor, all spectral resultants and
   arm values, the three Euler/cofactor identities, boundary monomials, and
-  characteristic-zero multipliers.  Normal and optimized runs byte-match
-  the frozen transcript; independent hostile audit remains pending.
+  characteristic-zero multipliers.
 depends_on:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3831-intrinsic-spectral-pencil-fibre-atlas-and-forced-cubic-two-arm-hit
@@ -35,8 +41,8 @@ hash_basis: raw LF bytes
 
 # THM-3836 -- the cubic factor/cofactor packet forces a two-arm fibre
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**  Work over an algebraically closed field `K` of characteristic zero.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `K` of characteristic zero.
 Let
 
 ```text
@@ -222,9 +228,10 @@ S mod h = k^4.                                                   (25)
 ```
 
 Thus `gcd(h,S)=1`, and `(24)` would make `h` a unit.  This is impossible:
-dominance of `(1)` makes `B -> R` injective, so the nonconstant intrinsic
-function `h` cannot pull back to a scalar.  The contradiction proves that
-some `p_i` is not monochromatic.
+THM-3822 gives the proper intrinsic arm `B/(h)=K[k,k^-1]`, so `h` is a
+nonunit and nonconstant in `B`; dominance of `(1)` makes `B -> R` injective,
+so its pullback cannot be a scalar unit.  The contradiction proves that some
+`p_i` is not monochromatic.
 
 ## 4. Exact arm labels and scope
 
@@ -253,4 +260,4 @@ corresponding intrinsic Laurent arm.
 This closes the monochromatic and reducible-`h` escape routes, but it does
 not construct or exclude the required comaximal factorization, second-row
 solution, or polynomial plane atlas.  No Jacobian counterexample is claimed.
-**QED, pending independent hostile audit.**
+**QED.**
