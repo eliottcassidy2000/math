@@ -313,7 +313,8 @@ is sharp: equal counts allow two densities or none.
   THM-3321/3323 give the Hesse recurrence and exact degree-21 Hilbert slice.
   The [multi-edge audit](../07-reflections/multi-edge-visible-kernel-and-bordered-resolvent-independent-audit-codex-20260803.md) compiles all `55` pairs locally; no dynamics/bit-complexity claim.
   Q4 radius/non-P stay OPEN.
-- **EXACT typed identities:** corrected HYP-8820 proves `bagel(n)-cake(n)=T_n-1`; THM-3333 gives triangular Lorentz polarization and typed ranks; THM-3335/3341 compile the square-triangular and norm-17 orbits; THM-3357 compiles ternary-level Walsh/moment sequences. MISTAKE-222 still requires a common valuation for transfer.
+- **EXACT typed identities:** corrected HYP-8820 proves `bagel(n)-cake(n)=T_n-1`; THM-3333/3335/3341 give the typed triangular/Pythagorean identities; THM-3357 compiles ternary-level Walsh/moment sequences.
+  [THM-3756](../01-canon/theorems/THM-3756-odd-square-ordinal-berggren-affine-descent.md) proves the coprime odd-root pair, `phi(2r-1)/2` fibres, affine Berggren descent, and odd-content forest.  Its scalar rank has unbounded fibres; the [ordinal audit](../07-reflections/odd-square-ordinals-and-operation-compatible-natural-addresses-opus-20260823.md) records the failed THM-2349/3713 LRC transfer.  MISTAKE-222 still blocks LRC/JC transfer.
 - **EXACT arrangement shadow / blocked topology transfer:** corrected HYP-8825
   connects Vandermonde, braid chambers/transitive tournaments, and a companion
   determinant. MISTAKE-223 blocks NC2, hyper-Bessel, or Euler-characteristic

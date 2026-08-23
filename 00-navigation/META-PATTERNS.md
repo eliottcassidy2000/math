@@ -107,10 +107,7 @@ useful as explicit proof-by-proof verification. **Evidence:** MISTAKE-158/183/
 
 ## Find the hidden second coordinate in a nearly true theorem
 
-**Trigger / action:** when a minimal counterexample preserves the elegant property said to explain a theorem, identify the extra coordinate actually excluding it--parity, selected side, height, owner, support, or positivity--and restate the result as a conjunction.
-**Mechanism:** many structural theorems are two-key locks; naming only the visually dominant key creates false transfers.
-**Counterindication:** every added coordinate must perform a proof step or eliminate a concrete witness.
-**Evidence:** MISTAKE-225 (skew symmetry plus the mod-two tournament block) and MISTAKE-224 (walls plus selected-side/height labels).
+**Trigger/action:** if a minimal counterexample keeps the advertised property, find the missing parity, side, height, owner, support, or positivity coordinate and restate the claim as a conjunction. **Boundary:** each added key must perform a proof step or exclude a witness. **Evidence:** MISTAKE-225 and MISTAKE-224.
 
 ## Restore a collapsed grading before transporting moments
 
@@ -130,53 +127,23 @@ current fills every cell and every admissible parabolic sector.
 
 ## Controlled forgetting and unlabeled quotients require a sidecar
 
-**Trigger/action:** for `q:X->Y`, inspect `X times_Y X`: a path lifts iff its
-seams are diagonal.  Separate off-diagonal seams; the finite minimum is their
-conflict chromatic number.  For an action
-`rho`, retain `ker(q)/(ker(q) intersect ker(rho))`. **Caution:** “minimal”
-depends on the law/path/category; kernels are gauge only when every consumer
-kills them. **Evidence:** exact-six, THM-3450/3452/3454, MISTAKE-310/401.
+**Trigger/action:** for `q:X->Y`, inspect `X times_Y X`: paths lift exactly when seams are diagonal; retain off-diagonal conflicts and, for an action `rho`, `ker(q)/(ker(q) intersect ker(rho))`. **Boundary:** minimality depends on the law/path/category, and a kernel is gauge only if every consumer kills it. **Evidence:** exact-six, THM-3450/3452/3454, MISTAKE-310/401.
 
 ## Test whether a central extension changes the base signature
 
-**Trigger / action:** before treating a missing central/anti-invariant
-coordinate as fibre decoration, restore it and recompute the base map.
-**Mechanism:** an order-two sidecar can change the cocycle or rationally split
-the ramified cover. **Counterindication:** that creates a newly typed object;
-transfer only through a semantic action, intertwiner, or trajectory map.
-**Evidence:** THM-2698 changes `y -> {13y}` to `y -> {13y+1/2}` but leaves the
-semantic `C_2` bibundle open; the split-lambda prime-23 scout makes its restored
-anti-invariant coordinate rational, trivializing rather than strengthening the
-Kummer gate.
+**Trigger/action:** restore a missing central or anti-invariant coordinate and recompute the base map before calling it fibre decoration. **Boundary:** an order-two sidecar can alter the cocycle or split a cover, producing a newly typed object; transfer still needs an action, intertwiner, or trajectory map. **Evidence:** THM-2698's half-shift leaves the `C_2` bibundle open, while the prime-23 scout rationally splits and trivializes its Kummer gate.
 
 ## Test a clutch on isotypic blocks, not by holonomy alone
 
-**Trigger / action:** when a nontrivial chart gain or Cech cocycle is proposed
-to repair a vanished character, write the invariant projector `Pi`, charged
-projector `Q`, and compute `Q C Pi`.  Central or arm-blind holonomy may twist a
-line local system while leaving this off-diagonal block zero.  Seek an unequal
-marked-arm gain or add a fixed reference with a lawful swap.
-**Counterindication:** a scalar clutch may orient or negate a charged class that
-already exists; the no-go concerns creating charge from the invariant sector.
-**Evidence:** THM-2750 proves the abstract `C3` centralizer/normalizer gate and
-its minimal repairs; THM-2743/2746 supply the distinct marked `S4`/`A4`
-off-diagonal models; THM-2749's full `C13` target unit remains auxiliary and
-does not itself provide the external arm selector.
+**Trigger/action:** for a proposed gain/Cech repair, write invariant `Pi`, charged `Q`, and compute `Q C Pi`; central or arm-blind holonomy can twist a line while this block stays zero, so seek unequal marked-arm gain or a lawful reference swap. **Boundary:** scalar clutching may orient existing charge, not create it. **Evidence:** THM-2750's `C3` gate and repairs, THM-2743/2746's marked `S4`/`A4` models, and THM-2749's auxiliary `C13` unit.
 
 ## The same representation is not the same carrier
 
-**Trigger / action:** when two frontiers share a group module or become isomorphic after isotypic projection, identify the sector, commutant/multiplicity space, and realization functor; test neutral blocks and the target predicate.
-**Mechanism:** characters forget positivity, occurrences, base geometry, endpoint phase, and stabilizers. A charged isomorphism can coexist with a neutral rank defect; one observer removes multiplicity ambiguity only through an exact cyclic determinant.
-**Counterindication:** transfer only through an explicit predicate-preserving functor. A nonzero determinant gives a linear frame, not a positive, set-level, or larger-symmetry clutch.
-**Evidence:** THM-2648/2655, THM-2455/2598/3105/3108, THM-3243/3250/3255/3260/3273.
+**Trigger/action:** for shared modules or isotypic projections, name the sector, multiplicity/commutant, realization, neutral blocks, and target. **Boundary:** characters forget positivity, occurrences, geometry, phase, and stabilizers; transfer needs a predicate-preserving functor, and a nonzero determinant supplies only a linear frame. **Evidence:** THM-2648/2655, THM-2455/2598/3105/3108, THM-3243/3250/3255/3260/3273.
 
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 
-**Trigger:** a scalar average or subset statistic is exact, but the target asks whether its local pieces coexist.
-**Action:** identify the distinguished fibre first. Either retain the alignment/divisibility needed to lift it, or prove a transitive action gives every translate the same value and sum by uniform incidence; then seek an incompatible full-object invariant.
-**Mechanism:** scalarization loses compatibility, while a genuinely uniform orbit can restore it.
-**Counterindication:** an action alone is insufficient: the identity must be equivariant, its right side invariant, and the full sum independently controlled.
-**Evidence:** THM-2126 (lost guard fibre), THM-2102 (missing divisibility), and THM-2101 (successful Galois incidence).
+**Trigger/action:** when an exact scalar statistic hides coexistence, identify its distinguished fibre; retain the alignment/divisibility needed to lift it, or prove uniform orbit incidence and test a full-object invariant. **Boundary:** an action helps only when the identity is equivariant, its target invariant, and the total independently controlled. **Evidence:** THM-2126, THM-2102, and THM-2101.
 
 ## Compose witness fibres before taking their scalar shadow
 
@@ -312,12 +279,18 @@ stagnation with health, but remain useful after semantic inspection.
 
 ## Fill operation columns, not only invariant columns
 
-**Trigger / action:** when objects and invariants abound but reusable laws do
-not, test complement, deletion, sum, duality, lift, product, and degeneration
-on the object and its dual. **Mechanism:** one operation law fills a research-grid
-row that scalar hunting leaves siloed. **Counterindication:** first invent an
-invariant if none sees the target. **Evidence:** the S79 procedural grammar and
-the corpus atlas's gap cross-product.
+**Trigger/action:** when invariants abound but laws do not, test native
+generators on the object and its dual.  Before ranking `e(n)` as `n`, pull each
+generator through the rank and label it affine, polynomial, finite-state,
+decoding-dependent, or not closed. **Mechanism:** a pulled-back law makes the
+rank structural; otherwise the ordinal is only a scheduler.
+**Counterindication/evidence:** if the operation exits the carrier or the
+target needs gaps, weights, ancestry, cancellation, or fibre components, keep
+the native value and a sidecar.  THM-3756,
+`odd-square-ordinal-berggren-affine-descent`, THM-3382,
+`fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses`,
+and THM-3758, `quadratic-radial-carrier-rational-exact-split-fibre-nonentry`,
+supply distinct positive and hostile evidence.
 
 ## Tournament Analysis must preserve content
 

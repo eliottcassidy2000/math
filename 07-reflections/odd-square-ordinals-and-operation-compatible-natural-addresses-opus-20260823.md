@@ -17,7 +17,11 @@ quadratic graph heights, and Poisson exponent lattices
 > audit were repaired.  The exact cross-frontier probe is
 > `04-computation/ordinal_encoding_operation_probe_opus_20260823.py` with
 > semantic digest
-> `7a9920d83f94b98cd962d8418fb390ca37a4c001604f2887153b65f3fe20b60e`.
+> `7a9920d83f94b98cd962d8418fb390ca37a4c001604f2887153b65f3fe20b60e`,
+> raw-LF script SHA256
+> `7b6eda61e0352eebbcd392f7d02a21c10c55f24d4039f2e5efde75fd11f13909`,
+> and raw-LF output SHA256
+> `80eb36e9e58683576438b94cfa5acc16b29b1d0f59de26b2be6ecbc635f63051`.
 
 ## Outcome first
 
@@ -418,6 +422,25 @@ Examples separate the boundary cleanly:
 - ranking a generic support destroys precisely the analytic information in
   THM-2000/THM-2438/THM-3382.
 
+## Incoming-signal integration: depth and target value are also quotients
+
+Two proved, independently audited JC near-misses arrived on `origin/main`
+during this session.  They do not identify JC objects with Pythagorean ones;
+they test the same quotient discipline on different native operations.
+
+| incoming proof | proposed natural coordinate | preserved predicate / operation | destroyed information | required sidecar / cheapest hostile |
+|---|---|---|---|---|
+| THM-3757, `pell-chebyshev-three-charge-hyperelliptic-obstruction-tower` | Chebyshev construction depth `n` | order in the tower and the recurrence-driven Pell/transport construction | the actual profile divisor, generic-fibre degree/genus, and the class of `dz/Y` | retain `(psi_n,Delta_n,div(dz/Y))`; compare the two nonzero residues at `n=1` with the nonzero holomorphic class at `n>=2` |
+| THM-3758, `quadratic-radial-carrier-rational-exact-split-fibre-nonentry` | target value `L=Q`, or an ordinal assigned to target fibres | the fixed-`L` Hamiltonian derivative and complete rational primitive torsor | the two components of `Q=0` and the sign of the primitive's principal part on each | retain the component-labelled principal-part vector; the exact hostile is `(-c a0/(2a1),+c a0/(2a1))`, while a target-only correction adds the same entry to both |
+
+The first row says that `n` is a lawful construction scheduler, but not an
+obstruction invariant: the obstruction changes type between depth one and
+the positive-genus tail.  The second is a sharper quotient failure.  Generic
+fibre integration survives scalarization by `L`, yet global polynomial
+regularity lives in a signed fibre over one value.  Merely ranking those two
+components `1,2` still loses the sign; the component ordinal must carry a
+divisor coefficient.
+
 ## Procedural task generator
 
 For any discrete family `X`, selected value set `S={e(n)}`, and candidate
@@ -496,6 +519,19 @@ board and generates the next sidecar task.
     ranking words; every closure theorem deletes a task, and the least
     surviving decoded word becomes the next concrete JC obligation.  Retain
     polynomial parameters and seam holonomy.
+13. **Signed special-fibre component atlas.**  For every smooth JC candidate
+    with a rational primitive, rank the irreducible components of each
+    exceptional fibre only after recording multiplicity, intersections, and
+    the full principal-part vector.  Test whether available correction
+    channels span that vector modulo the diagonal target-only subspace.
+    THM-3758 is the two-component hostile and makes this a value-5/cost-2
+    exact linear-algebra task.
+14. **Pell-depth obstruction-state queue.**  Rank Pell/Chebyshev construction
+    words by depth, but immediately compute the supported resultant,
+    squarefree generic degree, genus, and divisor class of the forced time
+    form.  Delete a task as soon as residues or a holomorphic class survive.
+    THM-3757 supplies positive smoothness controls and both obstruction types;
+    the live question is whether a non-Chebyshev word pays both debts.
 
 ## Meta-pattern use and candidate promotion
 

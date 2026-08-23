@@ -22,6 +22,10 @@ related:
   - THM-3510-binary-shortlex-equal-level-count-log-density-boundary
 script: 04-computation/odd_square_ordinal_berggren_affine_descent_thm3756.py
 output: 05-knowledge/results/odd_square_ordinal_berggren_affine_descent_thm3756.out
+script_sha256: 9fed96e425c77fbc4f263a7980cb8dcb2de25cce00375ecb532c94b3b0d261b0
+output_sha256: 690f4020ba06f9d2ce8633bb48f2075d411177f76ba305ebd0f45a272f675e70
+semantic_sha256: 5f631c9e700911ce515a7393bb8bc6c5a1551355441834c74544606e0922fc6f
+hash_basis: raw LF bytes
 ---
 
 # THM-3756 -- odd-square ordinals on the Berggren tree
