@@ -2,7 +2,7 @@
 id: THM-3830
 title: "A transverse coordinate cross cannot realize the cubic-pseudoplane bichromatic split"
 status: >
-  PROOF CANDIDATE + VERIFIED-EXACT, PENDING INDEPENDENT HOSTILE AUDIT.  For
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For
   every root alpha of the five-slope polynomial in THM-3827, every nonzero
   scalar c, and arbitrary-degree q,d, the normalized unimodular-row ansatz
   k=c+xyq, h=alpha k+xy cannot satisfy the sidecar factor equation while d
@@ -12,13 +12,17 @@ status: >
   second row, and the Keller equation remain open.
 source: jc_sparse_direct_search / THM-3827 bichromatic-passport constructive lane, 2026-08-23
 audit: >
-  Self-audited against both coordinate restrictions.  The exact companion
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
+  The audit checked the unit classification in K[x,y]/(xy), the explicit
+  determinant completion, scalar-extension and slope arithmetic, both
+  domain restrictions, the divisibility/nonzero-scalar contradiction, and
+  the exact disjointness boundary.  Normal and optimized runs byte-match the
+  frozen transcript and the raw hashes agree.  The exact companion
   checks the completed-square factors, squarefreeness of the five slopes,
   gcd(a,z b)=1 by its nonzero characteristic-zero resultant, the generalized
   determinant-one completion, the simple xy factor, both forced boundary
   constants, a three-root finite-field hostile control, and the OPEN scope.
-  Normal and optimized replay agree with the frozen transcript.  Independent
-  hostile audit is pending.
+  Normal and optimized replay agree with the frozen transcript.
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
 related:
@@ -33,8 +37,8 @@ hash_basis: raw LF bytes
 
 # THM-3830 -- a coordinate cross cannot carry opposite sidecar signs
 
-**PROOF CANDIDATE + VERIFIED-EXACT, PENDING INDEPENDENT HOSTILE AUDIT.**
-Work over a field `K` of characteristic zero.  After a finite scalar
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over a
+field `K` of characteristic zero.  After a finite scalar
 extension, fix a root `alpha` of
 
 ```text
@@ -182,5 +186,4 @@ spectral member is the transverse coordinate cross.  It does **not** exclude
 
 The nearest counterexample-positive replacement is therefore a disconnected
 fixed fibre, for example a product of comaximal factors, rather than another
-intersecting cross.  No Jacobian counterexample is claimed.  **QED, pending
-independent hostile audit.**
+intersecting cross.  No Jacobian counterexample is claimed.  **QED.**
