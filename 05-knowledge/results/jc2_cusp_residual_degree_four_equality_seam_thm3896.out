@@ -1,0 +1,17 @@
+theorem=THM-3896-cusp-residual-degree-four-equality-seam-emptiness
+status=RESERVED_PROVISIONAL_PROOF_CANDIDATE_VERIFIED_EXACT_AWAITING_INDEPENDENT_HOSTILE_AUDIT
+n4_kummer_entry_rederived=YES
+complete_n4_parameterization=YES
+high_shell_degrees_at_least_17=DQ
+generic_decisive_coefficient=[x^3*y^14]S17=8*beta^6
+generic_terminal_line=EMPTY_PROVISIONAL
+exceptional_divisibility_gate=h2_divides_Q6
+exceptional_decisive_coefficient=[x^4*y^12](S16-g8^2)=2*sigma^6/81
+exceptional_terminal_line=EMPTY_PROVISIONAL
+positive_control_Q7=-8*x^3*K2^2
+positive_control_Q6=6*(40+rho*z)*x^4*K2
+degree_four_equality_seam=EMPTY_PROVISIONAL
+JC2_status=OPEN
+semantic_sha256=d18d8a8674ea353b7a387746b31af8414fe14b6fa6f927be9a7a23cfccba6b67
+CHECKS=88
+RESULT=PASS
