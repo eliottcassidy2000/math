@@ -56,22 +56,23 @@ reattached.  No present sidecar restores semantic owner/root/arrival.
 
 ## 1. Truth-status audit of the requested files
 
-At `origin/main@84bca3ba8` all four incoming namespaces are still explicitly
-outside the proof graph:
+The hash `origin/main@84bca3ba8` is the historical audit boundary: all four
+incoming namespaces were then explicitly reserved and outside the proof graph.
+After that boundary THM-3743 was promoted and independently audited; the
+other three remain reserved.  Current status is therefore:
 
 - `THM-3742-square-triangular-pell-mod13-central-sign-projective-cycle` is
   `RESERVED / UNPROVED EMPTY STUB`;
 - `THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction` is
-  now `CITED + PROVED ALGEBRA + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED`;
+  `CITED + PROVED ALGEBRA + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED`;
 - `THM-3744-pell-prefix-loneliness-constant-carry-exact-formula` is
   `RESERVED / UNPROVED EMPTY STUB`; and
 - `THM-3745-monomial-plane-branch-conductor-triangular-pell-selector` is
   `RESERVED / UNPROVED EMPTY STUB`.
 
-Therefore none is used as a proved dependency here.  The adjacent tracked
-flatness script/reflection prove an audited candidate reduction but explicitly
-leave THM-3743 reserved.  Its normal and optimized replays agree byte-for-byte
-with the frozen output.  The inherited proved canon used here is:
+Thus only THM-3743 among these four may be used as proved canon here.  Its
+normal and optimized replays agree and line-normalize exactly to the frozen
+output.  The other inherited proved canon used here is:
 
 - THM-3335, `square-triangular-pell-markov-pythagorean-selector`, for the
   integral Pell/half-Hadamard identities;

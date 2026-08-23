@@ -94,7 +94,7 @@ collide, links—not bare IDs—are canonical.
   theorem unconditionally in every dimension; the paper's shifted statement
   retains its stated Lonely Vector Problem dependency.
 ### 2026-08-23 primary pins: lonely-runner polyhedra and Khinchin flatness
-- Beck--Hoşten--Schymura [arXiv:1606.01783](https://arxiv.org/abs/1606.01783) pins the line-plus-box formulation; Codenotti--Freyer [arXiv:2307.09429](https://arxiv.org/abs/2307.09429) pins integral-dual width; Averkov--Hofscheier--Nill [arXiv:1911.03511](https://arxiv.org/abs/1911.03511) records the explicit bound used by [THM-3743](../../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md). None proves LRC(14), sharpness/sparsity, or recursive slicing.
+- Beck--Hoşten--Schymura [arXiv:1606.01783](https://arxiv.org/abs/1606.01783) pins the line-plus-box formulation; Codenotti--Freyer [arXiv:2307.09429](https://arxiv.org/abs/2307.09429) pins integral-dual width; Averkov--Hofscheier--Nill [arXiv:1911.03511](https://arxiv.org/abs/1911.03511) records Barvinok's explicit bound used by [THM-3743](../../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md). None proves LRC(14), sharpness/sparsity, or recursive slicing.
 
 ### Giri--Kravitz — *The structure of Lonely Runner spectra*
 

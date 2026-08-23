@@ -9,10 +9,11 @@ status: >
   scalars on every component over each target value.  This gives a finite,
   necessary-and-sufficient vertical equalizer algorithm.  For a squarefree
   log-canonical pair J(U,W)=mU, equality of the component values of W is
-  equivalent to an actual Keller mate (W-c)/U.  Multiplication by any
-  nonconstant squarefree phi(W) cannot repair a smooth dressed target
-  Q=U phi(W): smoothness separates the old component values from the roots of
-  phi, while polynomial regularity would have to identify them.  Equivalently,
+  equivalent to an actual Keller mate (W-c)/U.  For every nonconstant
+  phi in k[T], the dressed target Q=U phi(W) has no polynomial
+  constant-Jacobian mate: a hypothetical mate forces squarefreeness, which
+  separates the old component values from the roots of phi, while polynomial
+  regularity would have to identify them.  Equivalently,
   a counterexample is precisely a nonbirational polynomial map J(U,W)=mU
   with squarefree U whose whole critical divisor U=0 maps to one point;
   division after the affine blowdown recovers the Keller mate.  This is a
@@ -23,8 +24,10 @@ audit: >
   recursion, horizontal-pole and distinct-target-value steps, normal
   height-one intersection, component constant-field lemma, THM-2230 converse,
   blowdown field-degree equivalence, dressed-fibre multiplicity obstruction,
-  birational rational constants, and constant-dressing boundary.  No
-  mathematical repair was required.
+  birational rational constants, and constant-dressing boundary.  It added
+  the omitted squarefree quotient in the component reduction, separated the
+  unconditional primitive from the birational complete-torsor claim, and
+  made characteristic-zero descent explicit.  No conclusion changed.
 depends_on:
   - THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient
   - THM-1365-galois-reduction-jc-fixed-point-bridge
@@ -157,10 +160,19 @@ Factor `U=prod_i U_i` into distinct irreducibles.  There are unique constants
 W=c_i mod U_i.                                         (11)
 ```
 
-Indeed, reducing `(10)` modulo `U_i` gives
+Indeed, if `G_i=U/U_i`, then reducing `(10)` modulo `U_i` gives
+
+```text
+0=G_i J(U_i,W) mod U_i.
+```
+
+Squarefreeness makes `G_i` nonzero in the domain `A/(U_i)`, so
 `J(U_i,W)=0 mod U_i`.  The induced tangent derivation on the function field
 of the irreducible curve `U_i=0` is nonzero.  Its constant field is algebraic
-over `k`, hence equals `k`; this proves `(11)`.  Call the indexed collection
+over `k`: a transcendental constant would make this transcendence-degree-one
+field finite separable over a field killed by the derivation, forcing the
+derivation itself to vanish.  Since `k` is algebraically closed, the constant
+field is `k`; this proves `(11)`.  Call the indexed collection
 
 ```text
 Spec_0(U,W)=(c_i)_i                                   (12)
@@ -176,6 +188,9 @@ Keller mate.  More precisely, the following are equivalent:
 (b) W-c=UV_0 for some V_0 in A;
 (c) J(U,V)=m for some V in A.                         (13)
 ```
+
+Fixing the response to `m` loses nothing: a mate with any response
+`kappa in k*` rescales by `m/kappa`.
 
 The first equivalence uses squarefreeness: every `U_i` divides `W-c`, so
 their product does.  Substitution into `(10)` gives
@@ -260,24 +275,27 @@ The lift through `(17)` then supplies the Keller pair automatically.
 ## 3. Nonconstant spectral dressing cannot synchronize
 
 There is also a general trap which does **not** require the chart `(U,W)` to
-be birational.  Let `phi in k[T]` be nonconstant and squarefree, and put
+be birational.  Let `phi in k[T]` be any nonconstant polynomial and put
 
 ```text
 Q=U phi(W).                                            (21)
 ```
 
-If `Q` has no critical point, then it has no polynomial
-constant-Jacobian mate.  Indeed
+Then `Q` has no polynomial constant-Jacobian mate.  Suppose otherwise.  A
+nonzero constant Jacobian forces `Q` to have no critical point and hence to
+be squarefree.  If `phi` had a repeated root `r`, then `W-r` would be a
+repeated factor of `Q`, so `phi` is necessarily squarefree on this
+hypothetical branch.  Moreover
 
 ```text
 J(Q,W)=phi(W)J(U,W)=mQ.                               (22)
 ```
 
-Smoothness makes `Q` squarefree, so Section 2 applies to the log-canonical
-pair `(Q,W)`.  Its zero-component spectrum contains every old value `c_i`
+Section 2 now applies to the log-canonical pair `(Q,W)`.  Its zero-component
+spectrum contains every old value `c_i`
 from `U_i=0` and, for every root `r` of `phi`, the value `r` on every
 component of `W-r=0`.  Such a new component exists because `W` is
-nonconstant.  Smoothness also forces
+nonconstant.  Squarefreeness also forces
 
 ```text
 phi(c_i)!=0,                         hence c_i!=r,      (23)
@@ -287,34 +305,36 @@ since otherwise `U_i` divides both factors in `(21)` and `Q` is not
 squarefree.  The spectrum of `(Q,W)` therefore has at least two values.
 The equivalence `(13)` now forbids a polynomial mate.
 
-For the complete rational torsor and its principal coefficients, add the
-birational hypothesis
+On the smooth branch just analyzed, the explicit rational primitive and its
+principal coefficients need no birationality.  Put
 
 ```text
-K=k(U,W),                                              (24)
-```
-
-and put
-
-```text
-P0=-W/(mQ).                                           (25)
+P0=-W/(mQ).                                           (24)
 ```
 
 Then
 
 ```text
-J(P0,Q)=1.                                             (26)
+J(P0,Q)=1.                                             (25)
 ```
 
-Indeed `(24)` and `U=Q/phi(W)` give `K=k(Q,W)`, and `(22)` says that the
+For the assertion that this primitive generates the **complete** rational
+torsor, add the birational hypothesis
+
+```text
+K=k(U,W).                                              (26)
+```
+
+Indeed `(25)` follows directly from `(22)`.  Under `(26)`, the identity
+`U=Q/phi(W)` gives `K=k(Q,W)`, and `(22)` says that the
 Hamiltonian derivation is a nonzero `k(Q)`-multiple of `d/dW`.  Therefore
 
 ```text
 ker_K J(-,Q)=k(Q),                                    (27)
 ```
 
-so `(3)` is the complete rational-mate torsor, and `(26)` follows directly
-from `(22)`.  Since `Q` is a uniformizer, the simple `1/Q`
+so `(3)` is the complete rational-mate torsor.  Since `Q` is a uniformizer,
+the simple `1/Q`
 principal coefficients of `P0` are
 
 ```text
@@ -326,12 +346,23 @@ They differ by `(23)`.  Thus the first step of the vertical equalizer gives
 the same obstruction as the unconditional component-spectrum proof above.
 **QED.**
 
+The cheapest exact control is
+
+```text
+U=x,       W=xy,       phi(T)=T-1,       Q=x(xy-1).
+```
+
+Here `J(U,W)=U`, `J(Q,W)=Q`, and `Q=0` has component values `0,1`.
+Moreover `P0=-y/(xy-1)` satisfies `J(P0,Q)=1` and has unequal principal
+coefficients `0,-1`.  It exhibits the obstruction without a high-degree
+ansatz.
+
 The contradiction is structural: smoothness requires the newly appended
 root spectrum of `phi` to avoid the old component spectrum, while regularity
 requires all of those values to agree.  Dressing creates extra zero-fibre
 components but cannot pay their gluing debt.
 
-Under the birational hypothesis `(24)`, there is a sharp completion at the
+Under the birational hypothesis `(26)`, there is a sharp completion at the
 constant-dressing boundary.  If
 `phi=a in k*`, then `Q=aU`.  The same birational calculation and Section 1
 show that `Q` has a polynomial mate exactly when the spectrum `(12)` is
@@ -342,10 +373,14 @@ k(U,V)=k(U,W)=K.                                      (29)
 ```
 
 Thus the Keller pair is birational and hence an automorphism by the classical
-birational case of the Jacobian conjecture recorded in THM-1365.  Consequently
+birational case of the Jacobian conjecture.  THM-1365 records the complex
+case; the stated characteristic-zero form follows by embedding the finitely
+generated coefficient field in `C` and faithfully-flat descent of the inverse
+identities.  Consequently
 a smooth **birational** log-canonical construction is completely classified:
 an equalized constant dressing is tame, a nonequalized constant dressing
-fails the vertical gate, and every nonconstant dressing fails by `(26)--(27)`.
+fails the vertical gate, and every nonconstant dressing fails already by
+`(13),(22),(23)`.
 
 ## 4. Construction consequences and boundaries
 
@@ -365,13 +400,16 @@ would mean: synchronized component constants would expose a polynomial mate,
 not merely a deeper finite jet.
 
 The hypotheses in Section 3 are deliberately typed.  Birationality is not
-needed for the nonconstant-dressing no-go; it supplies the explicit primitive,
-the complete rational torsor, and the automorphism conclusion on the constant
-boundary.  Without it one must separately prove the constant field in `(2)`
+needed for the nonconstant-dressing no-go, the explicit primitive, or its
+component residues; it supplies the complete rational torsor and the
+automorphism conclusion on the constant boundary.  Without it one must
+separately prove the constant field in `(2)`
 before claiming a torsor.  Squarefreeness of `phi` and smoothness of `Q` are
-the Jacobian-relevant boundary.  If `phi` is constant, the appended root
+not hidden assumptions: every hypothetical constant-Jacobian mate forces
+them, and a repeated root of `phi` fails at the repeated-factor boundary.
+If `phi` is constant, the appended root
 spectrum disappears and the problem reduces exactly to `(13)`, namely the
-original Keller question for `U`; under `(24)` it can produce only an
+original Keller question for `U`; under `(26)` it can produce only an
 automorphism.  Thus the no-go does not assume away the desired object.  It
 locates any counterexample beyond the birational chart, at the simultaneous
 boundary

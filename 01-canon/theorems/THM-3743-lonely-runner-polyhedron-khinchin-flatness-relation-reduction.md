@@ -7,9 +7,9 @@ status: >
   relation a with ||a||_1<=356.  An l1-minimal such relation is a Graver
   element.  Its support-two branch lies in an exact 19,314-ratio atlas; its
   support-at-least-three branch is a genuinely multiway bounded partition
-  identity.  Joined conditionally to THM-2052's rank-eleven relation code,
-  the new row either forces rank twelve and an explicit 135-digit speed cap,
-  or is already a short vector inside the unresolved rank-eleven space.
+  identity.  THM-2052's rank-twelve case is already terminal; in its
+  rank-eleven case the new row either raises the rank and gives an explicit
+  135-digit speed cap, or is already short inside the unresolved space.
   The reduction is necessary, never sufficient, and does not prove LRC(14).
 source: root + overnight-jc-lrc-khinchin + lrc14-cover-defect-bridge / 2026-08-23
 audit: >
@@ -19,8 +19,9 @@ audit: >
   rank-eleven Hadamard terminal, and AP hostile in 18,076 gates.  A separately
   implemented referee rechecks every integer constant, all 19,314 reduced
   pair ratios, the labelled count, the triple hostile, the AP boundary time,
-  and the 135-digit terminal.  Both scripts pass normal, optimized, and
-  frozen-output replay.  Literature use is limited to the cited
+  and the 135-digit terminal.  Normal and optimized replays agree and
+  line-normalize exactly to the frozen outputs.  Literature use is limited to
+  the cited
   lonely-runner zonotope equivalence and the explicit general flatness bound.
 depends_on:
   - THM-2052-finite-height-forces-high-rank-bounded-relation-code
@@ -31,8 +32,8 @@ related:
   - THM-3335-square-triangular-pell-markov-pythagorean-selector
 script: 04-computation/lrc14_khinchin_flatness_relation_audit_20260823.py
 output: 05-knowledge/results/lrc14_khinchin_flatness_relation_audit_20260823.out
-script_sha256: e348f4a13c4c71abe65db36ffa119aba27039b95207d8964475b7c1662e3ef5e
-output_sha256: 956f362ced75f79c58f0d1f29924f32329cc5a7f49bf9913b7deabc56fed29f1
+script_sha256: 16358a45d3ee6fc6c4ad6a6fb5780e1cf37a245e17ea78a051794abea1a68397
+output_sha256: 7e657f35b943704a14b3557120482f8637fcac0b4e6d192db337bde9c33ba8bb
 independent_script: 04-computation/lrc14_khinchin_flatness_relation_independent_audit_thm3743.py
 independent_output: 05-knowledge/results/lrc14_khinchin_flatness_relation_independent_audit_thm3743.out
 independent_script_sha256: aa766e031f2b608fdd91605372dfed99ab35da83e313b88e6156736e451463e8
@@ -46,7 +47,7 @@ hash_basis: raw working-tree bytes
 HOSTILE-AUDITED.**  The external inputs are the lonely-runner projected
 zonotope equivalence of
 [Beck--Hosten--Schymura](https://arxiv.org/abs/1606.01783) and the explicit
-general flatness bound recorded by
+general bound of Barvinok, as recorded by
 [Averkov--Hofscheier--Nill](https://arxiv.org/abs/1911.03511).  Everything
 after those two inputs is proved below.  No optimality or literature-priority
 claim is made.
@@ -106,8 +107,8 @@ supplies a nonzero direction in (3) with
 (6/7)||a||_1 <= Flt(12).                               (5)
 ```
 
-The explicit dimension-`d` estimate recorded by
-Averkov--Hofscheier--Nill is
+The explicit dimension-`d` estimate of Barvinok, as recorded by
+Averkov--Hofscheier--Nill, is
 
 ```text
 Flt(d) <= sqrt((d+1)(2d+1)/6) d^(3/2).                 (6)
