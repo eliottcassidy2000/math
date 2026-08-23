@@ -359,9 +359,9 @@ is sharp: equal counts allow two densities or none.
   but THM-3681 closes every continuation at universal order six. Pending-
   audit THM-3683 leaves only four quartic roots after the retained six-jet
   screen; THM-3687 lifts all four through actual-ring `J_0=1`; `J_1,J_2` stay
-  open. THM-3684 blocks one-coordinate mates. THM-3685--95 embed the `y=0`
-  ring in exponent-two Danielewski and give `>=3` weights/output, first `3x4`,
-  target-filtration cap `>=22`; one W003 placement family is closed.
+  open. THM-3684 blocks one-coordinate mates. THM-3685--3712 give the `y=0`
+  Danielewski `>=3` weights/output, first `3x4`, and cap `>=22`: complete
+  W002/W007/W008 are empty; one W003 family is closed; W003--W006 remain live.
   Higher-degree zero-debt polynomials, continuation of the four THM-3683 folds,
   THM-3641's excluded nonordinary tangent collisions, nonquadratic folds, and
   THM-3629's genuinely two-output-mixed `H'(0)!=0` pairs remain OPEN. A

@@ -67,7 +67,8 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     THM-3543--3557 give the collision/repair atlas: quotient repair begins at
     `(4,5)`, displayed graphs are closed, and cubic/packet/mixed-width lanes
     remain sharply typed but open.
-    THM-3695: `y=0` ring has `>=3`/output, first `3x4`, cap `>=22`; one W003 placement closes.
+    THM-3695--3712: `y=0` first `3x4`; W002/W007/W008 empty, one W003
+    family closed, W003--W006 otherwise live.
     THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
     THM-3212--3419 give the later infinity, deck, boundary, and linear-`z`
     atlases; THM-3418 closes sparse `f(x)+g(x)z^d`, not general fibres.
