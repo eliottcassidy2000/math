@@ -1,0 +1,11 @@
+theorem=THM-3765-normalized-three-consecutive-charge-radial-classification
+scope=algebraically_closed_characteristic_zero;arbitrary_chi,psi_in_k[z]
+smoothness=axis_condition_plus_resultant_roots_absorbed_by_multiple_psi_roots
+rational_mate=iff_chi=h+gz_and_psi=p+g^2*z/4_with_g=0_or_p_nonzero
+polynomial_mate=iff_g=0_equivalently_Q_is_linear
+mechanisms=torus_resultant;hyperelliptic_time_form;residue;top_X_descent
+degree_two_grid=729;smooth=21
+pure_controls=7;pell_controls=6;power_absorbed_controls=5;mate_obstructions=10
+semantic_sha256=a0400b6d12f55afc0019a2b30f1c4771f9d9b20cd805d713d495abfe7fa1c567
+CHECKS=798
+RESULT=PASS
