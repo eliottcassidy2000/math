@@ -2,7 +2,7 @@
 id: THM-3765
 title: "Normalized three-consecutive-charge radial Keller classification"
 status: >
-  PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.  Over an
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over an
   algebraically closed characteristic-zero field, every smooth polynomial
   Q=X+chi(XT)+T psi(XT) has a rational constant-Jacobian mate exactly on one
   explicit degree-one generic-fibre boundary.  That boundary is
@@ -10,18 +10,21 @@ status: >
   A polynomial mate exists exactly when g=0, equivalently when Q is linear.
   All other smooth profiles have either a positive-genus holomorphic time
   form, a conic logarithmic residue, or the pure-profile residue obstruction.
-  This is not proved canon until independent audit promotion and does not
-  prove JC(2).
+  This does not prove JC(2).
 source: root + jc_quartic_c3_construct / 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The exact companion verifies the universal
+  PASS.  The exact companion verifies the universal
   derivatives, torus resultant and absorbed-root criterion, axis boundary,
   generic quadratic model and Jacobian sign, pure-profile residue, complete
   degree-at-most-one coefficient classification, rational primitive, sharp
   smoothness boundary, and polynomial top-degree descent.  A direct
   coefficient-cube Groebner census and hostile Pell/absorbed profiles guard
-  the formulas.  Normal and optimized runs byte-match the frozen transcript;
-  independent hostile audit remains open.
+  the formulas.  Independent hostile audit rederived the complete axis and
+  torus criterion (including the pure and zero-resultant boundaries),
+  automatic generic squarefreeness, the holomorphic and conic residue gates,
+  the degree-at-most-one classification, the rational primitive and its
+  sign, and the all-degree polynomial descent.  Normal and optimized runs
+  byte-match the frozen transcript and both hashes match.
 depends_on:
   - THM-3551-one-ray-planar-jacobian-mate-no-go
   - THM-3754-affine-variable-euclidean-descent-classification
@@ -39,7 +42,7 @@ hash_basis: raw LF bytes
 
 # THM-3765 -- the full normalized three-consecutive-charge radial ansatz
 
-**PROVISIONAL PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT.**  Give `X,T`
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Give `X,T`
 Euler weights `+1,-1`.  THM-3741 closes arbitrary profiles on the two
 opposite charges.  Adding the intervening charge zero produces the first
 genuine three-charge radial ansatz.  The new sector can absorb every affine
@@ -302,7 +305,7 @@ For `g!=0`, the nonconstant `A` cannot divide a nonzero scalar.  Thus no
 nonlinear member of `(5)` has a polynomial mate.  This is the typed dual of
 THM-3754's Euclidean descent.  When `g=0`, `(4)` is linear and the displayed
 positive mates prove existence.  Equations `(20)--(30)` establish both
-classifications.  **QED conditional on audit promotion.**
+classifications.  **QED.**
 
 ## 6. Exact controls and residual frontier
 
