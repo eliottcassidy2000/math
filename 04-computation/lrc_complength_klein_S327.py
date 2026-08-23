@@ -3,8 +3,11 @@
 lrc_complength_klein_S327.py -- klein-2026-07-18-S327
 Owner: work the component-length distribution of the good set (the missing input named in S326).
 
-THM-1042. Components of G_B(1/14) have endpoints (14k +- 1)/(14v), v in B, so every component length is a
-rational with denominator dividing 14*v*v' (e.g. 1/588, 588 = 14*6*7). Exact table for B = {1..k}:
+THM-1042. Positive-length components of G_B(1/14) have endpoints
+(14k +- 1)/(14v), v in B, so every positive component length is a rational
+with denominator dividing 14*v*v' (e.g. 1/588, 588 = 14*6*7).  The count
+below is the number of positive-length arcs; closed safe sets can additionally
+have isolated equality-wall components.  Exact table for B = {1..k}:
 
    B        mu        #comps  L_max    1/L_max   next speed k+1
    {1..3}   0.69048     4     5/21       4.2        4
@@ -15,7 +18,7 @@ rational with denominator dividing 14*v*v' (e.g. 1/588, 588 = 14*6*7). Exact tab
    {1..8}   0.26582    20     5/112     22.4        9
    {1..9}   0.18107    20     2/63      31.5       10
    {1..10}  0.13798    20     3/140     46.7       11
-   {1..11}  0.05633    20     1/77      77.0       12
+   {1..11}  0.05633    14     1/77      77.0       12
 
 An additive step charges a PROPORTIONAL loss, valid only when components exceed the incoming arc period
 1/w; otherwise one period spans a whole component. So base B admits w only if w > 1/L_max(B). But

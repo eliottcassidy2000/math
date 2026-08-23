@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-464 (2026-08-23, THM-1042 safe-set topology) -- an AP11 component count matched neither endpoint convention
+
+- **What failed:** THM-1042's table and its companion-script docstring said
+  `#comps=20` for `G_{1..11}(1/14)` without declaring whether zero-length
+  equality-wall components were counted.
+- **Minimal witness / first failed implication:** the canonical executable
+  returns `14` because it counts positive-length safe arcs.  Independently,
+  `t=3/14` is closed-safe but speed `5` enters danger immediately to its left
+  and speed `9` immediately to its right, so it is an isolated component.
+  The failed implication was that every closed-safe component contains a
+  positive safe wall cell.
+- **Repair / strongest survivor:** rename the column `r_+` and set the AP11
+  cell to `14`.  The closed `>=1/14` safe set has `18` components: those 14
+  arcs plus isolated points `3/14,5/14,9/14,11/14`.  The strict safe set has
+  14 open components.  Exact measure `10931/194040`, `L_max=1/77`, threshold
+  `77`, and every additive-certificate consequence survive unchanged; no
+  proved downstream result used the false `20`.
+- **Reusable rule:** every interval-component count must declare strict versus
+  closed endpoints and whether isolated wall points are included.  A
+  midpoint-cell sweep computes positive-length arcs, not automatically the
+  topology of the closed set.
+
 ## MISTAKE-463 (2026-08-23, concurrent proved-theorem namespace) -- two unrelated results acquired THM-3892
 
 - **What failed:** the strict Arithmetic--Kakeya `[2,2]` optimum and the

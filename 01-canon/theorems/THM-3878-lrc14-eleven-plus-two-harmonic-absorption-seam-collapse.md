@@ -9,8 +9,10 @@ status: >
   even pair coordinate.  Exact two-lift geometry closes (1,3,2).  The
   unconditional necessary ledger falls from 52,692 to 7,505.  In the extra
   relative-scale slice t>=U, cyclic slack and one auxiliary LRC(13) witness
-  leave only 58 certificate survivors.  The t<U slice is untouched beyond
-  explicit ratio inequalities, and LRC(14) remains open.
+  leave only 58 certificate survivors.  An independent safe-mass/component
+  audit closes none of those 58 and identifies the missing pack-conditioned
+  two-danger moments.  The t<U slice is untouched beyond explicit ratio
+  inequalities, and LRC(14) remains open.
 source: root / THM-3818 cyclic seam and THM-668 dispatch join, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS.  A separate 93,524-gate checker rebuilds
@@ -26,6 +28,11 @@ audit: >
   by periodic real-line open unions.  They agree on all 5,855 pairs, the
   5,445+1,649 base closures, 353 auxiliary closures, the final ordered list of
   58 certificate survivors, and the (1,9,2) multiplier hostile.
+  A fourth independent audit tests the 58 rows against scalar safe measure,
+  inversion symmetry, and component multiplicity in 294 active checks.  It
+  finds zero further closures, retains the corrected THM-1042 endpoint
+  convention, and isolates the missing mixed moments M1,M2.  Normal,
+  optimized and frozen streams byte-match.
 depends_on:
   - THM-3818-scaled-inert-cubeclass-support-two-pair-packet
   - THM-668-detuned-harmonic-dispatch
@@ -66,6 +73,16 @@ scale2_auxiliary_hostile_script: 04-computation/lrc14_eleven_plus_two_scale2_aux
 scale2_auxiliary_hostile_output: 05-knowledge/results/lrc14_eleven_plus_two_scale2_auxiliary_hostile_thm3878.out
 scale2_auxiliary_hostile_script_sha256: 27dc43dd5400de8e042f591f2972e53974791299b053eab43077536e9260a6d2
 scale2_auxiliary_hostile_output_sha256: 4cecdda5661618801d2f82a6cdec6264331b094296dd6b8fb73446bd8f11e21b
+safe_mass_component_audit_script: 04-computation/lrc14_eleven_plus_two_safe_mass_component_audit_thm3878.py
+safe_mass_component_audit_output: 05-knowledge/results/lrc14_eleven_plus_two_safe_mass_component_audit_thm3878.out
+safe_mass_component_audit_script_sha256: 2021e793e0ee734a432a9a95071a5c537d4d235250a1f57eaa91544cdf262893
+safe_mass_component_audit_output_sha256: 9ce9c9fd4a0ba2179ac0aa1cef86f93c6e0e06b50d3443013729e6ae6a491b2d
+safe_mass_component_audit_semantic_sha256: 843aa403298c0c884f0e2a60b552448a31bd1158185be276e2ef60a1b73478a0
+isolated_endpoint_audit_script: 04-computation/lrc14_eleven_plus_two_isolated_endpoint_audit_thm3878.py
+isolated_endpoint_audit_output: 05-knowledge/results/lrc14_eleven_plus_two_isolated_endpoint_audit_thm3878.out
+isolated_endpoint_audit_script_sha256: f1d665ef39dc327a59d3ea3a6a911b99e4460d6325d115be30f35ecbcb51bb1d
+isolated_endpoint_audit_output_sha256: 2608e180974577cfed10960da28e324bad30d9d51777d3a9914bdadb06ecf2a9
+isolated_endpoint_audit_semantic_sha256: 3a4a86aac08912db3e97f8e2625d25ffd55cc7e2a1f9f8cffce38e27d1a5a66c
 hash_basis: raw LF bytes
 ---
 
@@ -347,6 +364,86 @@ one short internal relation  -/->  a crossing relation or a scale bound.
 A separately forced crossing relation could still rank-raise, but the bare
 THM-3743 sidecar deletes zero seams from this atlas.
 
+### Safe-mass saturation and the missing mixed moments
+
+An independent route tests the final 58 conditional rows against the exact
+safe mass of the eleven-pack, inversion symmetry, and component counts.  It
+closes no row.  The scale-one pair-obstruction measures are all at least
+`5/21`, while the exact AP11 safe mass is only `10931/194040`; the scale-two
+exception has obstruction measure `4/63`.  Thus even the best possible
+universal scalar safe-mass floor cannot force noncontainment by a Frechet
+comparison.  Both sides are inversion-symmetric, and raw component counts
+carry no relative phase.
+
+The exact missing quantities are visible without approximation.  If `G_u`
+is the eleven-pack safe set and `D_p,D_q` are the two labelled danger combs,
+then
+
+```text
+mu(G_u \ (D_p union D_q)) = M_0-M_1+M_2,
+M_0=mu(G_u),
+M_1=mu(G_u intersect D_p)+mu(G_u intersect D_q),
+M_2=mu(G_u intersect D_p intersect D_q).                (10)
+```
+
+Current pair geometry supplies unconditional danger moments, not the
+`G_u`-conditioned incidences `M_1,M_2`.  The needed sidecar is therefore an
+owner/phase-labelled mixed-incidence theorem, equivalently suitable Fourier
+correlations with both pullback combs.
+
+The failed closure route nevertheless gives a rigorous packet corollary.
+For every eleven distinct positive speeds `u=(u_1,...,u_11)`, cited
+`LRCUpTo13` supplies a `1/12`-deep time `t_0`.  Partition their joint phases
+into `84^11` cells, take a preimage `A` of measure at least `84^-11`, and put
+`D=A-A`.  Then
+
+```text
+D=-D,  0 in D,  mu(D)>=2*84^(-11),
+||u_i d||<1/84 for every i and d in D,
+t_0+D subset {t:min_i ||u_i t||>1/14}.                  (11)
+```
+
+Same-cell subtraction proves the return bound.  Since `A` lies inside one
+coordinate-cell preimage of measure `1/84<1/2`, the circle
+Kneser--Macbeath inequality gives the doubled mass.  The strict safe set has
+at most `sum_i u_i` positive arcs, so one has length at least
+
+```text
+2*84^(-11)/(sum_i u_i) >= 2*84^(-11)/(11 max_i u_i).    (12)
+```
+
+This strengthens the scalar floor but does not locate the translate relative
+to `D_p,D_q`, so it closes none of the 58 rows and makes no LRC(14) claim.
+
+Isolated closed-safe walls form a separate endpoint channel.  Being finite,
+they change none of `M_0,M_1,M_2`, their Fourier coefficients, Frechet bounds,
+or positive widths; they cannot be charged as positive component slots.  For
+the AP11 control the four walls are `3/14,5/14,9/14,11/14`.  Across all 57
+scale-one rows they are simultaneously pair-safe exactly when
+
+```text
+14 does not divide tp and 14 does not divide tq.          (13)
+```
+
+The exact helpful-residue-count histogram is
+`0:2, 6:7, 7:4, 12:33, 13:11`; `(3,14)` and `(5,42)` never benefit.
+Moreover the legal hostile `U=11,t=14` maps all four walls to pair phase zero
+for every row, so there is no universal scale-one endpoint closure.
+
+The failure is not repaired by adding pair sum or positive multiplicity.  At
+the same legal scale `t=15`, pairs `(3,14)` and `(7,10)` both have sum `17`,
+danger measure `13/49`, inversion symmetry, 14 positive base components and
+210 positive pullback components.  Yet the first kills all four AP11 isolated
+walls and the second preserves all four.  Atomic endpoint incidence is not a
+function of those scalar statistics.
+
+For the scale-two exception `(2,1,9)`, every allowed odd `t` gives a safe
+coherent lift at each of the four AP11 walls (56 residue/wall cases: 32 with
+one safe lift and 24 with both).  This is a special-body positive control, not
+an arbitrary-pack theorem.  A general isolated wall has address
+`(14k+epsilon)/(14u_j)`; its owner `u_j`, sign, numerator, and the residue of
+`t` modulo its denominator are the missing atomic sidecar.
+
 ## Minimal hostile and controls
 
 The first atlas pair for which the universal two-branch selector fails is
@@ -445,6 +542,10 @@ python3 -B 04-computation/lrc14_eleven_plus_two_cyclic_slack_full_independent_au
 python3 -B -O 04-computation/lrc14_eleven_plus_two_cyclic_slack_full_independent_audit_thm3878.py
 python3 -B 04-computation/lrc14_eleven_plus_two_scale2_auxiliary_hostile_thm3878.py
 python3 -B -O 04-computation/lrc14_eleven_plus_two_scale2_auxiliary_hostile_thm3878.py
+python3 -B 04-computation/lrc14_eleven_plus_two_safe_mass_component_audit_thm3878.py
+python3 -B -O 04-computation/lrc14_eleven_plus_two_safe_mass_component_audit_thm3878.py
+python3 -B 04-computation/lrc14_eleven_plus_two_isolated_endpoint_audit_thm3878.py
+python3 -B -O 04-computation/lrc14_eleven_plus_two_isolated_endpoint_audit_thm3878.py
 ```
 
 The 96,102-gate primary companion independently builds the atlas and seam
@@ -456,4 +557,6 @@ and odd-pair arguments above prove their stated symbolic scopes.  The two
 cyclic-slack implementations and their two deletion ledgers are
 structurally independent in interval representation; all normal, optimized,
 and frozen streams also byte-match.  Their finite counts support only the
-explicit conditional implications above.  **QED.**
+explicit conditional implications above.  The safe-mass audit is a stopping
+boundary plus the proved packet corollary `(11)`--`(12)`, not a closure of a
+certificate survivor.  **QED.**

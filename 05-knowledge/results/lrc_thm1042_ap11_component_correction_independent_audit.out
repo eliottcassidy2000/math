@@ -1,0 +1,14 @@
+THM1042_AP11_INDEPENDENT_WALL_GRAPH_20260823
+universe=B={1,...,11};circle=R/Z;delta=1/14
+danger=open:{t:||vt||<1/14};safe=closed:{t:all ||vt||>=1/14}
+equality_walls=128;closed_safe_walls=32
+strict_safe_open_cells=14
+closed_topological_components=18
+closed_nondegenerate_arcs=14;closed_isolated_points=4
+isolated_points=3/14,5/14,9/14,11/14
+positive_component_lengths=1/588,1/588,1/560,1/560,1/504,1/504,1/420,1/420,1/308,1/308,1/245,1/245,1/77,1/77
+measure=10931/194040;max_positive_component=1/77;threshold=77
+positive_length_convention_components=14;closed_topological_convention_components=18
+semantic_sha256=c82d19fc42d241f1abd00e475ac58462816a0c23f1a35d60f29e3a4177c87b22
+checks=165
+RESULT=PASS

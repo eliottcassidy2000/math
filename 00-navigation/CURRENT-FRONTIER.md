@@ -68,7 +68,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505` unconditionally; only in `t>=U`, cyclic slack plus one auxiliary
   leaves 58 certificate survivors: 57 at `s=1` and `(s,p,q)=(2,1,9)`.
-  The `t<U` slice and owner/arrival remain open.
+  Scalar mass, symmetry, arc count and AP11 points close none; danger-comb
+  incidences, `t<U` and owner/arrival are open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
   FINITE-EXACT,
@@ -267,10 +268,11 @@ THM-3359 gives periodic modular supports; THM-2352 gives the q-adic plateau.
 [THM-3510](../01-canon/theorems/THM-3510-binary-shortlex-equal-level-count-log-density-boundary.md) is sharp: equal counts allow two densities or none.
 [THM-3730](../01-canon/theorems/THM-3730-positive-distinct-two-cube-support-abscissa.md)
 gives indexed abscissa `2/3`.  THM-3793/3825 give an inert-scale singleton
-family and decoder. Fixed orders beat every power of `log log X`; Williams'
-fixed-modulus Mertens theorem plus the exact Bernoulli layer normalization gives
-`liminf H(X)sqrt(log log X)/sqrt(log X)>=0.25659588...`.  This is still no
-support asymptotic or residue.
+family and decoder.  Fixed inert-prime products prove
+`liminf H(X)/(log log X)^j>=2/(5*2^j*j!)`; varying order gives
+`liminf log H(X)/log log X>=1/2`.  Williams' fixed-modulus Mertens theorem gives
+`liminf H(X)sqrt(log log X)/sqrt(log X)>=0.25659588...`.  None is a support
+asymptotic or residue.
 
 ### Established landmarks
 
@@ -331,35 +333,33 @@ support asymptotic or residue.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** THM-3502/3511/3512/3516 retain compiler/owner/carry; THM-3778
   excludes finite-spatial cycles. THM-3804 gives all Smith forms; THM-3824
-  gives fixed/one-shell tariffs and the all-shell response kernel.  A
-  `D=B=4` audit recovers `(0,1,2)`.  THM-3511 maps every even ray onto the odd
-  half; the least literal bank has `2^(D+B-1)+B+2` points (`134/256` there).
+  gives fixed/one-shell tariffs and the all-shell response kernel. A
+  FINITE-EXACT `D=B=4` routed audit recovers `(0,1,2)`. THM-3511 maps even rays onto the odd half;
+  the least literal static bank has `2^(D+B-1)+B+2` points (`134/256` there).
   Physical recursion, adaptive/projective chronology and every prize are OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  THM-3543--3782 close
-  named cells, not arbitrary pairs.  THM-3827/3831 impose primitive-row genus
-  `>=3`; THM-3836 retains the all-degree core `P=3h^3+7h^2k+k^3=CS` with a
-  comaximal pencil split, and THM-3838 gives `deg h,deg k>=5`.
-  THM-3811's `S3` anchor is closed independently by THM-3841's three-puncture
-  Jelonek gate and THM-3845's degree contradiction; THM-3842 identifies its
-  eightfold tower base change.  THM-3847's `G_m` deformation is monogenic and
-  non-uniruled; THM-3844 is one-place but monogenic.  THM-3850/3852 close the
-  one-variable and affine-line profiles; THM-3859 classifies polynomial
-  marked roots, and THM-3866 extends the punctured-companion gate to arbitrary
-  polynomial transverse quotients; THM-3870 closes vertical/reverse graphs,
-  and THM-3873/3876 classify the first parabola and every two-exponent
-  monomial descent (`M<=2`).  THM-3880 closes node/A2 marked-root descent;
-  THM-3883's arbitrary reduced-curve iff retains `A=0` sign, common nonzero
-  residues and zero-root `z^3`.  Root existence and other components are open.
+  named cells only.  THM-3827/3831 force primitive-row genus `>=3`; THM-3836
+  retains `3h^3+7h^2k+k^3=CS`, and THM-3838 gives `deg h,deg k>=5`.
+  THM-3841/3845 close the `S3` anchor; THM-3844/3847 are monogenic controls.
+  THM-3850/3852/3859/3866/3870/3873/3876 close named line, marked-root,
+  transverse, graph and monomial cells.  THM-3880/3883 isolate sign, residue
+  and zero-root-cube invoices; poles, worse jets and root existence remain.
   THM-3851 is a unit-rich torus.  For THM-3854's one-place three-cusp front,
   THM-3864/3872 close constants; THM-3881 contracts all coefficients/gauges
   to a rank-two norm and closes `T=0` plus `T=hf`, `deg h<=1`.  THM-3884
-  forces `deg T>=deg f+1` with leading gauge at equality.  THM-3885 closes
-  the `f=0`, `deg T<=3` cell and two arms.  Audited THM-3886 closes the
-  address-free equality seam for `deg f=1,2`; `deg f>=3` gets a second gauge
-  jet, but iteration is open.
-  THM-3874/3877 exclude low-degree sole-simple-branch fields.  THM-3879
-  recovers `C3` at two places; THM-3882 forces the smooth-conic boundary for
-  every immersed one-place dual and forbids one-place `6A2+4A1` charts.
+  forces `deg T>=deg f+1` with leading gauge at equality.  THM-3885 classifies
+  both `f=0` arms and closes total degree four; THM-3895 forces `deg_y T<=2`,
+  and independently audited THM-3897 closes the entire addressed polynomial
+  `f=0` lane.  For nonconstant `f`, THM-3886 closes equality degrees one and
+  two, THM-3894 gives the all-degree associated-graded gauge--Kummer parity
+  passport, and THM-3896 closes its degree-four equality cell.  Gauge peeling,
+  the remaining `f!=0` lanes, a Keller atlas, and JC(2) remain OPEN.
+  THM-3890 excludes irreducible one-point quintic normal cubic covers via
+  `Cl=Z/Z5`; degree-six, reducible and nonnormal routes remain.  THM-3891
+  closes quadratic `C^8` carriers and squarefree pencils for `n>=3`; THM-3892
+  classifies pure-power polynomial `GL_2` carriers for `n>=2`.
+  THM-3874/3877 exclude low-degree sole-simple-branch fields; THM-3879 reaches
+  two places and THM-3882 forces the immersed one-place smooth-conic boundary.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a

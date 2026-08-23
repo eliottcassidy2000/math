@@ -1,0 +1,16 @@
+THM3878_AP11_ISOLATED_ENDPOINT_WITNESS_AUDIT_20260823
+scope=conditional_t>=U_hostile_control;AP11_only;LRC14=OPEN
+closed_isolated_safe_walls=3/14,5/14,9/14,11/14;haar_mass=0
+scale1_endpoint_rule=all_four_safe_iff_14_not_divide_tp_and_14_not_divide_tq
+scale1_good_residue_count_histogram=0:2,6:7,7:4,12:33,13:11
+scale1_never_help_pairs=(3,14),(5,42)
+scale1_common_hostile=t_congruent_0_mod_14;all_57_rows;take_AP11_U=11,t=14
+scale1_universal_endpoint_closures=0
+endpoint_liar=t15,sum17:(3,14)_killed_vs_(7,10)_all4safe;measure=13/49;pullback_components=210;both_inversion_symmetric
+scale2_pair=(1,9);allowed_t=odd;endpoint_residue_cases_mod28=56
+scale2_safe_lift_histogram=one_lift:32,two_lifts:24;failures:0
+scale2_AP11_endpoint_closure=all_odd_t;special_body_only
+finite_points_change_Haar_moments=0;endpoint_witness_value=pointwise_only
+semantic_sha256=3a4a86aac08912db3e97f8e2625d25ffd55cc7e2a1f9f8cffce38e27d1a5a66c
+checks=881
+RESULT=PASS

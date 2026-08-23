@@ -113,6 +113,41 @@ The method leaves 58 certificate survivors, not 58 counterexamples.  The
 unrestricted `t<U` ledger remains unchanged, and `(2,1,9)` survives every
 scalar auxiliary multiplier.
 
+A separate safe-mass/component audit closes none of those 58.  The AP11 safe
+mass `10931/194040` is already smaller than every pair-obstruction mass, and
+both objects are inversion-symmetric, so scalar mass and symmetry cannot
+choose a relative phase.  The exact surviving invoice is
+
+```text
+mu(G_u \ (D_p union D_q)) = M_0-M_1+M_2,
+```
+
+where current canon supplies `M_0` but not the pack-conditioned one- and
+two-danger incidences `M_1,M_2`.  The earned positive result is a symmetric
+return packet of mass at least `2*84^(-11)` inside every eleven-speed strict
+`1/14`-safe set.  Its translate remains unlocated relative to the labelled
+danger combs, which is precisely why it supplies thickness but no closure.
+
+This audit also repaired an old endpoint ambiguity in THM-1042.  For
+`G_{1..11}(1/14)`, the executable counts 14 positive arcs, while the closed
+safe set has 18 components after the isolated points
+`3/14,5/14,9/14,11/14` are retained; the stale value 20 matched neither
+convention.  Measure and `L_max=1/77` survive.  Isolated equality walls are a
+topological sidecar, not positive mass.
+
+They also fail as a universal pointwise rescue.  On the 57 scale-one rows,
+the AP11 walls are pair-safe precisely when neither `tp` nor `tq` is divisible
+by 14, and the legal hostile `U=11,t=14` kills all four walls in every row.
+The scale-two `(2,1,9)` row does have a safe lift at all four walls for every
+odd `t`, but only for this special AP body.  Generalizing it requires the
+wall owner, sign, numerator, and a denominator-residue address—the atomic
+version of the same missing mixed-incidence sidecar.
+
+An exact liar prevents compressing that address back to familiar scalars:
+at `t=15`, `(3,14)` and `(7,10)` have the same pair sum `17`, obstruction
+measure `13/49`, inversion symmetry, and 210 positive pullback components,
+but their incidence with all four AP11 isolated walls is opposite.
+
 The cycle lesson is thus typed:
 
 ```text
@@ -237,6 +272,25 @@ discriminant controls the entire root cover, whereas pencil support measures
 branch values of a separate one-parameter perturbation.  The former survives
 at degree two precisely where the latter fails.
 
+Incoming
+[THM-3890](../01-canon/theorems/THM-3890-universal-quintic-common-zero-resolvent-class-group-dichotomy.md)
+closes a different quotient of the same carrier problem.  Every irreducible
+one-point quintic quadratic resolvent has class group `Z` or `Z/5` and
+constant units, so it has no three-torsion from which a connected normal
+cubic cover could be built.  This does not follow from the polynomial
+`GL_2` orbit: source-binary equivalence forgets target normality, the index
+form, and the class-group torsion actually consumed by the cubic algebra.
+The precise bridge is therefore a negative one:
+
+```text
+binary carrier orbit -> discriminant divisor, but not cubic-order existence;
+normalization + units + Cl[3] -> the missing target-side invoice.
+```
+
+The tangent hostile in THM-3890 is especially informative: after
+normalization it can expose `Z/3`, but it lies in the reducible/nonnormal raw
+route.  Thus the invoice changes exactly when the quotient loses normality.
+
 Finally,
 [THM-3879](../01-canon/theorems/THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff.md)
 and
@@ -321,6 +375,17 @@ liminf H(X)sqrt(log log X)/sqrt(log X)
 The factor `2/3` is the exact `p=2` invoice.  This is a lower bound for the
 deduplicated weighted mass, and trivially for the support count because
 `C(X)>=H(X)`; it is not a support asymptotic, residue, or collision law.
+The separately audited fixed-order and varying-order layers also prove
+
+```text
+liminf H(X)/(log log X)^j >= 2/(5*2^j*j!)       (fixed j),
+liminf log H(X)/log log X >= 1/2.               (varying j)
+```
+
+The second statement is obtained by a pointwise finite choice of `j`, not by
+passing a varying parameter through the fixed-`j` limit.  This quantifier
+repair is the arithmetic version of retaining chronology in the Rule 30
+lane: saturation is useful only with the operation order still visible.
 
 Rule 30 and two cubes therefore share a research move:
 

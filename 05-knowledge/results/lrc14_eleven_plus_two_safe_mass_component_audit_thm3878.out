@@ -1,0 +1,16 @@
+THM3878_SAFE_MASS_MOMENT_COMPONENT_AUDIT_20260823
+scope=t>=U;scale1=57;scale2=(2,1,9);LRC14=OPEN
+thm780_phase_cell_floor=1/1469170321634239709184
+symmetric_return_packet_floor=1/734585160817119854592
+ap11_safe_measure=10931/194040;closed_components=18;positive_arcs=14;max_component=1/77
+thm1042_count_correction=table_20_false;canonical_script_positive_arcs_14;closed_topological_components_18
+scale1_min_obstruction_measure=5/21;pairs=((1, 3), (2, 3))
+scale1_min_beta=19/784;pairs=((8, 21),)
+scale1_component_count_range=3..60
+scale2_obstruction=measure:4/63,components:2,beta:2/63
+measure_frechet_closures=0;symmetry_closures=0;component_count_closures=0
+moment_identity=mu_safe_after_pair=M0-M1+M2;mixed_M1_M2_not_supplied
+row_census_sha256=066e238d41f2c52ffe65fd31fc3182af19a997460aee0e8828b7746dcb376a33
+semantic_sha256=843aa403298c0c884f0e2a60b552448a31bd1158185be276e2ef60a1b73478a0
+checks=294
+RESULT=PASS
