@@ -1,0 +1,12 @@
+theorem=THM-3836-cubic-factor-cofactor-darboux-packet
+factor=P=C*S;P=3h^3+7h^2k+k^3
+cofactor=delta(C)=k*J(h,C)-h*J(k,C)=lambda*P
+coprime=(C,S)=1;pencil_members_pairwise_comaximal
+allocation=irreducible_components_select_C_or_S
+monochromatic=all_three_whole_member_allocations_impossible
+forced=one_cubic_fibre_has_nonempty_comaximal_minus_plus_factors
+arms=minus:C=0;plus:C=-1/alpha^2
+scope=all_degree;reducible_h_alternative_closed;atlas_OPEN
+semantic_sha256=44ce5b96085a18506392a28066bb939767cadfac817e806ec424a69c7626ef19
+CHECKS=28
+RESULT=PASS
