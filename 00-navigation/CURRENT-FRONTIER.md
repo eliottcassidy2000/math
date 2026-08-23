@@ -396,14 +396,10 @@ for every `epsilon>0`.  This is still no support asymptotic or residue.
 
 ### Arithmetic-Kakeya forcing certificates
 
-**OPEN external benchmark; workbench live.** Record `1.67513`; target
-`<=1.675`. Rule-(1) is UNSOUND. THM-3875 proves score `>=2` for normalized
-`k=1` forest/path and adjacent-merge quotients; a five-row triangle makes
-cycles the first possible `5/3` mechanism. FINITE-EXACT:
-`13/7`, merge-free `7/4`, identified `12/7`, and `0/31,656` in the same-H
-`(5,3)` cell; none is a bound. Axis reversal preserves pure merge-free
-forcing/cost; mixed compilation is open. Workbench:
-`ak_forcing_engine.py`; next: sound cyclic `k>=2` search.
+**OPEN:** record/target `1.67513/1.675`. THM-3875: normalized `k=1`
+forests score `>=2`; a five-row triangle makes cycles necessary for `5/3`.
+Rule-(1) is unsound; finite records prove no bound. Next: cyclic `k>=2`
+search (`ak_forcing_engine.py`).
 
 ## Cross-domain connection discipline
 
