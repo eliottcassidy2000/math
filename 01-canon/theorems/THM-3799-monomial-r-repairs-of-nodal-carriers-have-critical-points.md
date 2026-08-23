@@ -2,7 +2,7 @@
 id: THM-3799
 title: "Monomial R-repairs of nodal carriers have critical points"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  On the c=1
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the c=1
   cubic pseudo-plane, every canonical nodal carrier
   A=e^2-z/3+lambda r e^m has a critical point for every integer m>=0 and
   lambda!=0.  Criticality reduces to two polynomials in e and u=re; their
@@ -13,13 +13,14 @@ status: >
   r g(e) and mixed corrections remain open.
 source: jc_zero_debt_lift / nodal monomial-r resultant lane, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The proof rederives all Hamiltonian
-  components, the P/Q compression, universal resultant, closed J_m formula,
-  fixed leading coefficients, excluded u=0,-1,-1/2 strata, rational point
-  reconstruction, and the remaining Hamiltonian via the surface Casimir.
-  The m=3, lambda=1 collision is isolated explicitly.  The deterministic
-  companion has 2,336 active gates; normal and optimized runs byte-match
-  the frozen transcript.  Independent hostile audit remains due.
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  All Hamiltonian signs,
+  the P/Q compression, the 20-term universal resultant, uniform monomial
+  specialization (including m=0's formally absent term), fixed u-degrees,
+  nonzero residual root, the m=3/lambda=1 collision, every denominator
+  stratum, explicit source reconstruction, and the Casimir implication were
+  independently rederived.  The deterministic companion has 2,336 active
+  gates; normal and optimized runs byte-match the frozen transcript and all
+  recorded hashes match.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3790-cubic-pseudoplane-arm-nodal-immersion-gate
@@ -37,7 +38,7 @@ hash_basis: raw LF bytes
 
 # THM-3799 -- every monomial r-repair remains critical
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over
 an algebraically closed field `k` of characteristic zero.  On the `c=1`
 member of the THM-3785 cubic pseudo-plane put
 
@@ -228,4 +229,4 @@ the live repair coordinates, together with changing the arm profile.  The
 deterministic companion named in the metadata verifies `(5)--(22)` and the
 closed formula through `m=256` with 2,336 active assertion-free gates.
 Normal and optimized executions byte-match the frozen transcript.
-**QED, conditional only on independent hostile audit.**
+**QED.**
