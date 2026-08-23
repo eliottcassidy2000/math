@@ -2,8 +2,8 @@
 id: THM-3894
 title: "Cusp residual all-degree gauge--Kummer parity filtration"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  Iterating the THM-3886 leading symbol gives
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Iterating the
+  THM-3886 leading symbol gives
   an all-degree parity passport on the THM-3884 equality seam.  Every
   even-degree survivor aligns through the middle gauge depth and then must
   enter one Kummer symbol q_0=xu^2.  Every odd-degree survivor aligns one
@@ -13,14 +13,17 @@ status: >
   with all remaining data in k[x].
 source: jc_quartic_c3_construct / post-THM-3886 iterated leading-symbol filtration, 2026-08-23
 audit: >
-  SELF-AUDITED proof candidate.  The exact companion verifies the universal
+  INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23.  The audit rechecked the
+  induction indices, exhaustion of competing residual terms, UFD square
+  implications, and the vertical discriminant argument.  It identified and
+  repaired one omitted parity branch: an even square has an even or odd
+  root, but here the root has exact degree four and hence cannot be odd.
+  The exact companion verifies the universal
   component cancellation, all degree comparisons and parity crossings, the
   Kummer and square normal forms, and the vertical-gauge quartic
   discriminant factorization.  It freezes the L-adic reduction and Bezout
   coprimality used in the vertical no-go.  Normal and optimized runs must
-  byte-match the frozen transcript.  Independent audit must recheck the
-  induction indices, exhaustion of competing residual terms, the UFD
-  square implications, and the even-in-y reduction in the vertical slice.
+  byte-match the frozen transcript.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
   - THM-3884-cusp-residual-total-degree-leading-gauge-filtration
@@ -37,9 +40,9 @@ hash_basis: raw LF bytes
 
 # THM-3894 -- the equality seam has one parity passport
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**  Work over an algebraically closed field `k` of
-characteristic zero.  Use the THM-3881 notation
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  Use the THM-3881
+notation
 
 ```text
 a=x+1,                 L=9x+4,
@@ -205,10 +208,17 @@ Disc_K(S)=128L^2q^8(3a^2q+2)^2
   *(-4L^2a^2q-2L^2+a^3qw^2)^3.                           (17)
 ```
 
-As a polynomial in `y`, `S` has degree eight.  If it were a square, its
-square root would have degree four and, because `S(x,-y)=S(x,y)`, would be
-even in `y`.  It would therefore be a square already in `k[x,K]`, so its
-quartic discriminant would vanish.
+As a polynomial in `y`, `S` has exact degree eight: its leading coefficient
+is `8q^3`, which is nonzero.  If `S=H^2`, then
+
+```text
+(H(x,-y)-H(x,y))(H(x,-y)+H(x,y))=0.
+```
+
+The domain property makes `H` either even or odd in `y`.  But `deg_y H=4`,
+whereas every nonzero odd polynomial has odd degree, so `H` is even.  Thus
+`H in k[x,y^2]=k[x,K]`; the quartic in `K` is itself a square and its
+discriminant must vanish.
 
 None of the three nonconstant factors in `(17)` can vanish identically.
 The first and third specialize at `a=0` to `2` and `-2L^2`, respectively.
