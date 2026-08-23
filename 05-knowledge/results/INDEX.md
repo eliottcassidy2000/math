@@ -38,6 +38,17 @@
   `657aaf0a573a81588797e0c2d5984644901d81980ecc7a9f861e8f13e05c9860` /
   `38cfd474d7b2c1c46c0b557969d710b2c53cfb423d11d307d83d736a9dd3934c`.
 
+- `monomial_plane_conductor_triangular_pell_thm3745.py` -> matching `.out`
+  [THM-3745 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Proves the
+  normalization module `B/A=direct_sum_(i=1)^(m-1)k[X]/(X^i)`, triangular
+  defect `T_(m-1)`, conductor `F^(m-1)B`, separable ordinary-fold scope, and
+  Pell classification of square defects.  Independent finite-field conductor
+  quotients cover `m=2..10` plus repeated-root hostiles; the degree-`(72,108)`
+  shadow is killed by the Jacobian-zero pair `(F^8,F^12)`.  `CHECKS=10186`;
+  script/output LF SHA-256:
+  `7bc16ec6ae49e5fc5050d0559e21ab1668512208f3b216ce76c86f140f87fe14` /
+  `fccbe03773359e89002167953e8b4043e3650db63f83156161b56eef54fad581`.
+
 - `jc_lrc_khinchin_continuant_sidecar_probe_20260823.py` -> matching `.out`
   [VERIFIED-EXACT HOSTILE SYNTHESIS].  Separates Khinchin's almost-everywhere
   digit-product scalar from ordered continuants and target sidecars: an

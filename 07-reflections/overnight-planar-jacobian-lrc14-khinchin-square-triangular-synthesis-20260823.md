@@ -4,11 +4,10 @@
 files; **CITED** for the literature statements routed through
 [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md);
 **FINITE-EXACT** for the named companions; **SYNTHESIS** for the connection
-contracts; **OPEN** for LRC(14), JC(2), every claimed bridge between them, and
-the conductor wildcard in Section 9.
+contracts; **OPEN** for LRC(14), JC(2), and every claimed bridge between them.
 
 The two main problems remain open.  The overnight sift nevertheless produced
-three exact results and one useful negative architecture:
+four exact results and one useful negative architecture:
 
 1. [THM-3742](../01-canon/theorems/THM-3742-square-triangular-pell-mod13-central-sign-projective-cycle.md)
    proves a complete signed Pell clock on the twelve nonzero norm fibres over
@@ -20,7 +19,10 @@ three exact results and one useful negative architecture:
 3. [THM-3744](../01-canon/theorems/THM-3744-pell-prefix-loneliness-constant-carry-exact-formula.md)
    solves the lonely-runner maximum of **every** initial Pell prefix, with a
    unique phase, exact carries, and square-triangular factorizations.
-4. The Khinchin/continuant audit proves that digit means, denominators, and
+4. [THM-3745](../01-canon/theorems/THM-3745-monomial-plane-branch-conductor-triangular-pell-selector.md)
+   proves that `k[F(b),bF(b)]` has triangular normalization defect and
+   conductor `F^(m-1)`, with square defects selected by a Pell equation.
+5. The Khinchin/continuant audit proves that digit means, denominators, and
    even equal digit products do not carry either an LRC owner/tie packet or a
    polynomial Cohn word.  The shared survivor is an **ordered Euclidean word
    plus a target-specific cocycle**.
@@ -346,8 +348,10 @@ saturated by THM-3736.
 | ordered constant word | planar JC candidate | Cohn product | determinant-one matrix | polynomial exposure and curl | two variable factors + integrability audit |
 | Pell prefix | LRC phase packet | `t=A_N/(P_N+1)` | all runners, order, carries | generality/extremality | perturb one speed; `169->170` fails |
 | square-triangular Pell row | phase factors | `(a,s,x,b)` | exact numerator/denominator | arbitrary LRC geometry | demand a factorization of the target statistic |
+| monomial-plane normalization | Pell conic | `delta=T_(m-1)=q^2` | scalar defect | `F`, branches, conductor | retain the full module/conductor packet |
+| degree-nine conductor | hypothetical JC degree cell | `36 -> (72,108)` | degree/common-power shadow | Keller pair, lower terms, Jacobian one | hostile `(F^8,F^12)` has Jacobian zero |
 
-## 9. Conductor/triangular-number wildcard
+## 9. Conductor theorem and the triangular/Pell selector
 
 A separate JC arithmetic probe suggested the subring
 
@@ -355,21 +359,44 @@ A separate JC arithmetic probe suggested the subring
 k[F(b), bF(b)] subset k[b]
 ```
 
-for a squarefree monic polynomial `F` of degree `m`.  Finite exact experiments
-over a large prime field for `2<=m<=10` suggested conductor `F^(m-1)` and
-colength
+for a monic polynomial `F` of degree `m`.  THM-3745 now proves, in every
+characteristic,
 
 ```text
-delta=m(m-1)/2=T_(m-1).                               (32)
+B/A=direct_sum_(i=1)^(m-1) k[X]/(X^i),
+delta=m(m-1)/2=T_(m-1),
+conductor=F^(m-1)k[b].                                (32)
 ```
 
-This remains **OPEN / FINITE-EXACT**, pending a proof that identifies the
-semigroup or normalization quotient uniformly in `F`.  The numerical row
-`m=9` has `delta=36=6^2=T_8`, but that is presently only a square-triangular
-coincidence.  No map sends this colength to an LRC phase, Pell norm, Keller
-collision, or Cohn holonomy.  Its value is as a targeted question: can a
-collision-ring conductor turn the triangular colength into an actual
-degree/infinity obstruction?
+If `F` is separable, the origin is geometrically an ordinary `m`-fold point;
+the algebraic formulas do not require separability.  The nonsquarefree hostile
+`F=b^2` is the cusp `k[b^2,b^3]`: it keeps `(32)` but loses the ordinary-node
+label.
+
+The square rows are now a lawful connection, not numerology:
+
+```text
+delta=q^2 <=> (2m-1)^2-8q^2=1,
+m=1,2,9,50,289,... .                                  (33)
+```
+
+This map preserves only the scalar normalization defect.  It forgets `F`,
+branch labels and incidence, the conductor ideal, and multiplication.
+
+At `m=9`, `delta=36` and `length(B/conductor)=72`.  The cited sub-`125` JC
+classification leaves only the hypothetical degree pair `(72,108)`, and
+`F^8,F^12` have those degrees.  But `F^12` is appended rather than selected by
+the conductor, and
+
+```text
+(F^12)^2=(F^8)^3,
+```
+
+so the apparent pair is algebraically dependent with Jacobian zero.  The
+`36,72,108` resonance is an exact leading-form shadow, not a Keller map.
+Likewise THM-3734's nine cyclotomic components are an axis plus eight disjoint
+hyperbolas, whereas the separable degree-nine conductor curve glues all nine
+branches at one point.  Component count survives; incidence does not.
 
 ## 10. Stopping reasons for attractive failed bridges
 
@@ -384,7 +411,7 @@ degree/infinity obstruction?
   packet.
 - **Square/triangular residues -> either conjecture.** Stops because residue
   membership is an unordered scalar image.  Strongest survivor: exact
-  factorization of a target statistic, as in THM-3744.
+  factorization of a target statistic, as in THM-3744/3745.
 - **Constant Pell matrix -> JC.** Stops at the complete THM-3736
   classification.  Strongest survivor: test interacting variable factors.
 - **Pell prefix -> hard LRC frontier.** Stops because `M(S_13)=99/338`, far
@@ -404,9 +431,9 @@ degree/infinity obstruction?
 4. In JC, enumerate only the first unsaturated Cohn cells with two interacting
    polynomial factors.  Gate in the order: exposure, both curls, determinant,
    holonomy, then collision/infinity.
-5. Prove or refute the conductor formula `(32)` abstractly.  If true, identify
-   the first map from triangular colength to a proved JC obstruction; if no
-   such map exists, record the coincidence as an address-only stopping point.
+5. Starting from proved `(32)`, ask whether its conductor filtration can enter
+   an actual bivariate Keller collision ring.  Reject any degree-only shadow
+   before lower terms, both curls, and Jacobian one are supplied.
 6. For the mod-13 clock, test every candidate physical owner map against the
    central sign and THM-3713's two detectors before doing any larger modular
    census.

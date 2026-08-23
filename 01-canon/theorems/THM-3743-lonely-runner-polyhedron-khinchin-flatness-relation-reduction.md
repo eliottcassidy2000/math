@@ -195,7 +195,7 @@ That alternate normalization would make `(11)` false.
 
 The cited width convention, flatness theorem, and explicit estimate are pinned
 under
-[`CORE-PAPERS.md`](../../05-knowledge/reference/CORE-PAPERS.md#khinchin-flatness-and-an-explicit-general-bound);
+[`CORE-PAPERS.md`](../../05-knowledge/reference/CORE-PAPERS.md#2026-08-23-primary-pins-lonely-runner-polyhedra-and-khinchin-flatness);
 the quotient and coefficient algebra below are proved in-repo.
 
 Define `Flt(d)` as the supremal lattice width of a full-dimensional hollow

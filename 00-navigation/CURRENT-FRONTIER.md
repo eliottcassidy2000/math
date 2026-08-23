@@ -344,7 +344,10 @@ is sharp: equal counts allow two densities or none.
   open. THM-3685--3720 close W002/W003/W007/W008 and alternating two-left/
   two-right Cohn cells; W004--W006 remain live. THM-3736/3740 close constant
   `SL_2` exposure and the one-variable right-shear tower. Live Cohn words need
-  interacting polynomial factors with curls and holonomy. Higher-degree debt,
+  interacting polynomial factors with curls and holonomy.
+  [THM-3745](../01-canon/theorems/THM-3745-monomial-plane-branch-conductor-triangular-pell-selector.md)
+  proves the triangular conductor/Pell selector, but its `(72,108)` shadow has
+  Jacobian zero. Higher-degree debt,
   nonordinary/nonquadratic folds, two-output mixing, quartic `C3`, and
   unrestricted `C[A,d]^2` remain OPEN (MISTAKE-416).
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
