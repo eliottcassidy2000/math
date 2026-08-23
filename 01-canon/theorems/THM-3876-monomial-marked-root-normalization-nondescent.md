@@ -2,8 +2,8 @@
 id: THM-3876
 title: "Higher monomial marked-root profiles fail branch-ring descent"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  For the entire monomial normalization tower
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the entire
+  monomial normalization tower
   (A,C)=(t^m,6t(1+t^(m+1))), the cubic cusp identity uniquely forces the
   marked value B=2t^2(3+4t^(m+1)).  This value descends to the plane branch
   ring for m=1 and m=2, but for every m>=3 an explicit primitive-root pair
@@ -11,13 +11,19 @@ status: >
   Hence no polynomial carrier profile b(A,C) can contain that marked branch.
 source: jc_sparse_direct_search / post-THM-3873 monomial normalization tower, 2026-08-23
 audit: >
-  SELF-AUDITED proof candidate.  The assertion-free exact companion checks
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23).  The audit rederived the
+  finiteness and birationality of every normalization map, the global sign
+  choice in the cusp identity, the exact forced marked value, and the
+  primitive-root collision for arbitrary m>=3.  It checked that address
+  separation is only used as a necessary branch-ring condition and that the
+  m=1,2 boundaries and all scope statements are exact.  The assertion-free
+  companion checks
   the universal cusp square and forced marked value, the primitive-root
   collision and unequal-value formula, the m=1 forward-graph and m=2
   triangular-parabola boundaries, and exact cyclotomic hostile controls for
   m=3,...,20.  Normal and optimized runs byte-match the frozen 82-gate
   transcript.  The all-m argument itself is symbolic and does not depend on
-  the finite replay range.  Independent hostile audit remains required.
+  the finite replay range.
 related:
   - THM-3866-all-polynomial-graph-branches-force-projective-companion
   - THM-3873-first-nongraph-triangular-parabola-companion
@@ -31,8 +37,8 @@ hash_basis: raw LF bytes
 
 # THM-3876 -- the monomial marked-root tower stops at the first non-graph branch
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of
 characteristic zero.  Put
 
 ```text
