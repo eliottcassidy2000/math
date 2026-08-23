@@ -1,0 +1,17 @@
+field=THM3683_exceptional_quartic
+restriction_module=THM3703_direct_sum_KZ_rank18;degZ=18
+image_generators_KZ=54;filtered_cutoff=150;filtered_columns=165;selected_K_square=150
+good_reduction=p137:alpha44;full_rank=150;selected_det_mod_p=73;omitted_row=150
+selected_columns_hash=0b2c0367a9867c5feb374972b8cb9f76f5eb4775e17833caf7d30f44e112f117;selected_rows_hash=0b2c0367a9867c5feb374972b8cb9f76f5eb4775e17833caf7d30f44e112f117;exact_square_hash=49756c9bd390c102cd181c9dc3c573eaf33602ab14033d1801e0419b6cee5c06
+hostile_cutoff=100;hostile_columns=69;hostile_rank=69;hostile_codimension=32
+image_apery_mod18=0,19,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+image_codimension=1;filtered_kernel_dimension=150
+retained_points=-1,0,1;Cprime_values=3,3,3;Eprime_values=-9,4,9
+Lambda=5*ev(-1)/18-ev(0)+13*ev(1)/18;Lambda(1)=0;Lambda(X)=4/9
+explicit_kernel_basis=1,XZ,X^r-X(r_odd_3_to_17),X^r-9X/4(r_even_2_to_16)
+initial_generator_hash=58c50792d9fcb08aac4cfb15becf806f0c6dd303961949103586a84de7f96579
+explicit_kernel_basis_hash=f392c46ec6e030a07382670cb3fe4b67afea49664fac8ef128f7b20ccafdc30b
+image_L0=kernel_Lambda;all_four_embeddings=uniform;exact_characteristic_zero=1
+stagewise_gate=J_n_debt_in_image_iff_Lambda(debt)=0;degree_cutoff=none
+NO_CLAIM=all_order_solution_or_algebraization_or_global_pair_or_Keller_counterexample
+RESULT=PASS
