@@ -1,17 +1,16 @@
 ---
 id: THM-3850
-title: "Nonconstant cubic profiles force punctures on every irreducible branch"
+title: "Every nonconstant cubic profile has a nonpolynomial branch component"
 status: >
   RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  For every nonconstant polynomial profile b(C)
-  whose depressed-cubic branch Delta_b is irreducible, the affine branch
-  normalization is its smooth projective hyperelliptic model with exactly
-  deg(rad b)+nu_infinity points deleted.  Here nu_infinity is one or two
-  according as the squarefree part of 9b-2C^2 has odd or even degree.  The
-  total is at least two, so no such branch is a polynomial curve.  The
-  minimal reducible profile b=kappa C splits off an affine line but leaves a
-  residual rational component with three punctures.  Arbitrary reducible
-  profiles remain open.
+  INDEPENDENT HOSTILE AUDIT.  For every nonconstant polynomial profile b(C),
+  at least one irreducible component of the depressed-cubic branch has
+  affine normalization missing at least two projective points.  In the
+  irreducible case the exact count is deg(rad b)+nu_infinity.  Primitive
+  reducible branches split into two explicit rational denominator graphs;
+  origin-vanishing profiles force a residual component through the finite-C,
+  A-infinity corner.  Individual affine-line components can occur, but the
+  whole branch packet never consists only of polynomial curves.
 source: jc_sparse_direct_search / nonlinear cubic profile and branch-normalization lane, 2026-08-23
 related:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
@@ -20,13 +19,13 @@ related:
   - THM-3847-two-place-cubic-deformation-monogenic-unit-debt
 script: 04-computation/jc2_nonconstant_cubic_profile_branch_punctures_thm3850.py
 output: 05-knowledge/results/jc2_nonconstant_cubic_profile_branch_punctures_thm3850.out
-script_sha256: 0d7212f699c1d81457bf3167c454d3d85cf1a6b9ccfe35045643498b81e2a726
-output_sha256: 29da8c7562e9a49c2a691e986176183c18fc1e4145f3b18f703685d5df50cb38
-semantic_sha256: 6642655c1b115fb099da9d9e02d89e7c7ba19311428813b2c40f60e1ae082498
+script_sha256: b5b673c26ba0fc7c32faa0ad6e4936feaec2a1680e04a8531953ba5f1eb21cde
+output_sha256: 767e4102e8b45d3a9f952ad3beddb28074d1f781e78cca0217d5a2572b932be3
+semantic_sha256: 951ceb8509eff3102902aa0e9a077a7a95b415fb55c08018c0936ddfed1aa4aa
 hash_basis: raw LF bytes
 ---
 
-# THM-3850 -- every irreducible nonconstant profile pays at least two places
+# THM-3850 -- every nonconstant profile has a bad branch component
 
 **RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
 INDEPENDENT HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
@@ -44,6 +43,13 @@ Then
 8p^3-27u^2=A^2 Delta_b,
 disc_A(Delta_b)=-8L^3,                    L=9b-2C^2.              (3)
 ```
+
+For every nonconstant `b`, the reduced plane curve `V(Delta_b)_red` has at
+least one irreducible component whose affine normalization is obtained from
+its smooth projective normalization by deleting at least two distinct
+points.  Consequently the full branch packet never consists solely of
+polynomial curves.  This remains true even when other components are affine
+lines.
 
 Assume that the affine branch curve
 
@@ -106,7 +112,8 @@ C=0 ~= A1_A                                                     (12)
 and an irreducible residual rational curve whose affine normalization is
 `P1` minus three points.  Thus the vertical line is a genuine one-place
 component, but it is accompanied by a three-place component.  This boundary
-is a hostile control, not a classification of every reducible profile.
+is the smallest positive control showing that an individual one-place
+component may occur without repairing the full packet.
 
 The theorem distinguishes three different objects that must not be merged:
 the singular affine branch `(4)`, its smooth affine normalization `(8)`, and
@@ -247,7 +254,129 @@ component `(12)` is `A1`.
 This is the smallest-degree demonstration that producing one acceptable
 branch component does not repair the whole branch packet.
 
-## 5. Hostile controls and scope
+## 5. Primitive reducible profiles are two denominator graphs
+
+Suppose now that `b(0)!=0` but `Delta_b` is reducible.  The primitivity
+argument in Section 1 still applies, so `(3)` forces
+
+```text
+L=h^2.                                                           (26)
+```
+
+Choose `sigma in k` with `sigma^2=-2` and put
+
+```text
+u=h-sigma C,                 v=h+sigma C,
+uv=h^2+2C^2=9b.                                                  (27)
+```
+
+The two quadratic numerators factor without a remainder, giving
+
+```text
+Delta_b=-(1/3) E_u E_v,                                          (28)
+
+E_v=v^2A-3(C-sigma h),
+E_u=u^2A-3(C+sigma h).                                           (29)
+```
+
+These are distinct irreducible rational components.  Indeed `u(0)v(0)` is
+nonzero.  The coefficient and constant term of each linear polynomial in
+`A` are coprime by `(30)`, so each is irreducible.  If the two factors were
+associates, `u/v` would be constant; then `(27)` would make `h` proportional
+to `C`, contradicting `h(0)^2=9b(0)!=0`.  At a root `c` of `v`, one has
+`h(c)=-sigma c` and
+
+```text
+C-sigma h=-c!=0;                                                 (30)
+```
+
+dually, at a root of `u`, `C+sigma h=-c!=0`.  Thus the two affine
+normalizations are exactly
+
+```text
+(E_v)^nu = P1 minus ({roots of v} union {infinity}),
+(E_u)^nu = P1 minus ({roots of u} union {infinity}),             (31)
+
+number of punctures = 1+deg rad(v),  1+deg rad(u), respectively. (32)
+```
+
+Since `uv=9b` is nonconstant, at least one of `u,v` is nonconstant.  The
+corresponding component has at least two punctures.  If one factor is a
+scalar, its corresponding component is genuinely an affine line; for example
+
+```text
+h=sigma C+a,       a in k*,       u=a,       v=2sigma C+a,       (33)
+```
+
+and `E_u=0` is the polynomial graph
+
+```text
+a^2A+3C-3sigma a=0,                                               (34)
+```
+
+while `E_v=0` has one finite denominator puncture and the point at infinity.
+This is the primitive counterpart of the vertical-line control `(21)`.
+
+## 6. Origin-vanishing profiles force a projective corner
+
+It remains to allow `b(0)=0`.  Write
+
+```text
+b=C^m a(C),                    m>=1,        a(0)!=0.              (35)
+```
+
+Let `nu=ord_C(Delta_b)`.  Reading the three `A`-coefficients in `(2)` gives
+the complete valuation table
+
+```text
+nu=1,                              m=1;
+nu=2,                              m=2 and a(0)!=1/6;
+nu=3,                              m=2 and a(0)=1/6;
+nu=2,                              m>=3.                          (36)
+```
+
+The exceptional value in the third row is harmless: after the constant term
+cancels to order at least three, the coefficient of `A` has leading term
+`-AC^3`, so the order is exactly three.
+
+Put `H=Delta_b/C^nu` and homogenize only the `A`-coordinate:
+
+```text
+Hbar(A,Z;C)=d_2(C)A^2+d_1(C)AZ+d_0(C)Z^2.                       (37)
+```
+
+In every row of `(36)`,
+
+```text
+ord_C(d_2)=2m-nu>0.                                              (38)
+```
+
+Therefore the residual projective closure contains
+
+```text
+P_0=(C=0,[A:Z]=[1:0]).                                          (39)
+```
+
+The order `nu` is exact, so `C` does not divide `H`.  Hence the vertical
+fibre `C=0` is not a component of the residual divisor.  A hypersurface in
+the smooth surface `P1_A x A1_C` has no isolated component, so choose any
+reduced irreducible curve component through `P_0`; it is nonvertical and
+therefore dominates the `C`-line.
+
+Complete that component in `P1_A x P1_C` and normalize it.  It has a point
+above `P_0`, missing from the original affine branch because `A=infinity`.
+The nonconstant projective map to `P1_C` is surjective, so it also has at
+least one point above `C=infinity`.  These normalization points are distinct:
+their `C`-values are `0` and `infinity`.  This remains true if several
+projective branches collide at either corner, because normalization separates
+the branches while preserving their two different `C`-values.  Thus this
+residual component has at least two punctures.
+
+Sections 1--3, 5, and 6 exhaust respectively the irreducible,
+primitive-reducible, and origin-vanishing cases.  They prove the complete
+all-profile assertion at the start of the theorem.
+
+## 7. Hostile controls and scope
 
 The constant profile of THM-3847 has `s=0` and squarefree `L` of even degree
 two, giving `0+2=2` punctures.  It lies just outside the nonconstant theorem
@@ -258,7 +387,7 @@ For nonconstant controls:
 ```text
 b=C+1:          s=1, deg ell=2,       |D_b|=1+2=3;
 b=(C-1)^2:      s=1, deg ell=2,       |D_b|=1+2=3;
-b=C^3+1:        s=3, deg ell=3,       |D_b|=3+1=4.                 (26)
+b=C^3+1:        s=3, deg ell=3,       |D_b|=3+1=4.                 (40)
 ```
 
 The middle row checks that multiplicity of a profile root does not inflate
@@ -266,16 +395,18 @@ the puncture count; only `rad(b)` appears.
 
 The assertion-free exact companion verifies the universal discriminants,
 the two local numerator values `(18)`, the smooth finite point `(19)`--`(20)`,
-all three controls `(26)`, and the full minimal factorization and conic
-normalization `(21)`--`(25)`.  It has 33 active gates; normal and optimized
-replay must byte-match the frozen transcript.
+all three controls `(40)`, and the full minimal factorization and conic
+normalization `(21)`--`(25)`, the factorization `(28)`, the affine-line
+positive control `(33)`--`(34)`, and every valuation row in `(36)`--`(38)`.
+It has 47 active gates; normal and optimized replay must byte-match the
+frozen transcript.
 
-Arbitrary **reducible** profiles beyond `(21)` remain open.  In particular
-this theorem does not classify how several branch components can share or
-trade punctures, and it does not prove `JC(2)`.  Its exact consequence is
-that a successful nonconstant-profile cubic completion cannot keep an
-irreducible branch and hope to turn it into a polynomial nonproperness curve;
-it must exploit a reducible branch packet and solve every component.
+This theorem does not assert that every branch component is nonpolynomial:
+`(12)` and `(34)` show the contrary.  It proves that at least one component
+is nonpolynomial for every nonconstant profile, so the **whole** branch
+packet can never be a union solely of polynomially parametrized curves.  It
+does not classify arbitrary target deformations beyond `(1)`, and it does
+not prove `JC(2)`.
 
 Reproduction:
 

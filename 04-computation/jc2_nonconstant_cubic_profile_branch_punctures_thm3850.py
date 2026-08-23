@@ -153,6 +153,82 @@ equal("minimal_residual_infinity_points", sp.degree(V**2 + 2 * C**2, V), 2)
 equal("minimal_residual_finite_punctures", 1, 1)
 equal("minimal_residual_total_punctures", 1 + 2, 3)
 
+# Primitive reducible profiles have L=h^2.  With s^2=-2, the exact factors
+# u=h-sC and v=h+sC split the branch into two rational denominator graphs.
+hh = sp.symbols("h")
+u_factor = hh - s * C
+v_factor = hh + s * C
+b_square = (hh**2 + 2 * C**2) / 9
+Delta_square = sp.together(Delta.subs(b, b_square))
+E_v = v_factor**2 * A - 3 * (C - s * hh)
+E_u = u_factor**2 * A - 3 * (C + s * hh)
+factor_numerator = sp.together(Delta_square + sp.Rational(1, 3) * E_v * E_u).as_numer_denom()[0]
+factor_reduced = sp.rem(sp.expand(factor_numerator), s**2 + 2, s)
+equal("primitive_reducible_exact_factorization", factor_reduced, 0)
+equal(
+    "primitive_reducible_profile_product",
+    sp.rem(sp.expand(u_factor * v_factor - 9 * b_square), s**2 + 2, s),
+    0,
+)
+
+# If one factor is constant, one A1 component really occurs, but its mate has
+# a finite denominator root and hence at least two punctures.
+a = sp.symbols("a", nonzero=True)
+h_linear = s * C + a
+u_linear = sp.rem(sp.expand(u_factor.subs(hh, h_linear)), s**2 + 2, s)
+v_linear = sp.rem(sp.expand(v_factor.subs(hh, h_linear)), s**2 + 2, s)
+equal("positive_A1_constant_factor", u_linear, a)
+equal("positive_A1_nonconstant_factor", v_linear, 2 * s * C + a)
+E_u_linear = sp.rem(sp.expand(E_u.subs(hh, h_linear)), s**2 + 2, s)
+equal("positive_A1_component", E_u_linear, a**2 * A + 3 * C - 3 * s * a)
+bad_numerator = sp.rem(sp.expand((C - s * h_linear)), s**2 + 2, s)
+bad_root = -a / (2 * s)
+bad_value = sp.rem(
+    sp.together(bad_numerator.subs(C, bad_root)).as_numer_denom()[0],
+    s**2 + 2,
+    s,
+)
+nonzero("positive_A1_mate_has_finite_pole", bad_value)
+
+# Profiles vanishing at C=0.  The exact maximal vertical orders are frozen in
+# the three valuation regimes.  After removing that order, the A^2
+# coefficient still vanishes at C=0, so the residual closure contains the
+# finite-C/A-infinity corner, while some other coefficient remains nonzero.
+a0 = sp.symbols("a0", nonzero=True)
+a1 = sp.symbols("a1")
+
+b_m1 = C * (a0 + a1 * C)
+Delta_m1 = sp.factor(Delta.subs(b, b_m1))
+H_m1 = sp.factor(Delta_m1 / C)
+equal("vertical_m1_exact_order", H_m1.subs({C: 0, A: 0}), -54 * a0)
+equal("vertical_m1_A2_corner", sp.Poly(H_m1, A).coeff_monomial(A**2).subs(C, 0), 0)
+
+b_m2 = C**2 * a0
+Delta_m2 = sp.factor(Delta.subs(b, b_m2))
+H_m2 = sp.factor(Delta_m2 / C**2)
+equal("vertical_m2_generic_constant", H_m2.subs({C: 0, A: 0}), 9 - 54 * a0)
+equal("vertical_m2_A2_corner", sp.Poly(H_m2, A).coeff_monomial(A**2).subs(C, 0), 0)
+
+b_m2_exceptional = C**2 * (sp.Rational(1, 6) + a1 * C)
+Delta_m2_exceptional = sp.factor(Delta.subs(b, b_m2_exceptional))
+H_m2_exceptional = sp.factor(Delta_m2_exceptional / C**3)
+equal(
+    "vertical_m2_exceptional_exact_order",
+    H_m2_exceptional.subs(C, 0),
+    -A - 54 * a1,
+)
+equal(
+    "vertical_m2_exceptional_A2_corner",
+    sp.Poly(H_m2_exceptional, A).coeff_monomial(A**2).subs(C, 0),
+    0,
+)
+
+b_m3 = a0 * C**3
+Delta_m3 = sp.factor(Delta.subs(b, b_m3))
+H_m3 = sp.factor(Delta_m3 / C**2)
+equal("vertical_mge3_exact_order", H_m3.subs({C: 0, A: 0}), 9)
+equal("vertical_mge3_A2_corner", sp.Poly(H_m3, A).coeff_monomial(A**2).subs(C, 0), 0)
+
 print("THM3850_UNIVERSAL_BRANCH", Delta)
 print("THM3850_QUADRATIC_DISCRIMINANT", sp.factor(sp.discriminant(Delta, A)))
 print("THM3850_IRREDUCIBLE_PUNCTURE_FORMULA", "deg(rad(b))+nu_infinity")
@@ -164,9 +240,12 @@ print("THM3850_ODD_CONTROL", "3+1=4")
 print("THM3850_MINIMAL_REDUCIBLE", sp.factor(Delta_min))
 print("THM3850_MINIMAL_RESIDUAL", H)
 print("THM3850_MINIMAL_NORMALIZATION", "V^2=C*(9*kappa-2*C); three punctures")
+print("THM3850_PRIMITIVE_REDUCIBLE", "Delta=-(E_u*E_v)/3; punctures=1+deg(rad(u/v))")
+print("THM3850_POSITIVE_A1_CONTROL", "h=s*C+a: u=a, v=2*s*C+a; A1 plus two-place mate")
+print("THM3850_VERTICAL_ORDERS", "m=1:nu=1; m=2:nu=2 except a0=1/6 gives3; m>=3:nu=2")
 print(
     "THM3850_SCOPE",
-    "complete irreducible-branch formula plus b=kappa*C boundary; arbitrary reducible profiles open",
+    "all nonconstant profiles have a branch component with at least two punctures",
 )
 semantic_packet = (
     "nonconstant polynomial profile b(C)",
@@ -175,7 +254,9 @@ semantic_packet = (
     "affine punctures deg radical(b) plus one/two infinity points",
     "every irreducible nonconstant branch has at least two punctures",
     "minimal b=kappa C boundary is A1 plus a three-puncture residual conic",
-    "arbitrary reducible profiles remain open",
+    "primitive reducible branches split into denominator graphs",
+    "origin-vanishing profiles force a finite-C/A-infinity residual corner",
+    "every nonconstant profile has at least one non-polynomial branch component",
 )
 print("SEMANTIC_SHA256", hashlib.sha256(repr(semantic_packet).encode()).hexdigest())
 print("CHECKS", CHECKS)
