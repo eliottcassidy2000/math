@@ -1,0 +1,13 @@
+theorem=THM-3839-constant-tower-bichromatic-r2z-profile-nonentry
+surface=r^2e-z^3+r;c=1;field=algebraically_closed_characteristic_zero
+ansatz=THM3821_plus_r2z_UV
+branch=U_S_nonzero;lambda_not_mu;constant_v
+tower=8_7;optional_N_8_5
+cofactor=7beta_M_plus_8alpha_v_H_equals_eta_e2v4
+constant_scaling=b_retained_nonzero
+jets=two_target_colors
+terminal=all_polynomial_f_degrees_closed
+scope=nonconstant_v_and_other_higher_slots_open
+semantic_sha256=9150cf81c49c17d3d44dc7973b9c41183f1cc7fd7ef5a77b11ea287ce270ba09
+CHECKS=67
+RESULT=PASS
