@@ -2,7 +2,8 @@
 id: THM-3888
 title: "F-zero equianharmonic Jacobian and two-section integrality"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.  The
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED BASE; FINAL EXACT-SHELL
+  STRENGTHENING AWAITING FOCUSED AUDIT.  The
   THM-3881 f=0 square residual is a binary quartic with I=0 and an explicit
   equianharmonic Jacobian.  Over the generic x-line its y-fibration is a
   rational elliptic surface with fibres II,II,II,II,IV and geometric
@@ -12,24 +13,29 @@ status: >
   only for sections factoring through the original affine quartic chart.
   An explicit nonzero k(x)[y] point proves that x-integral descent and the
   origin address are load-bearing.  Within the integral Weierstrass-coordinate
-  shell, polynomiality forces deg_y(u)<=1; every higher u-degree is empty.
+  shell, the only finite sections are the second T=0 section and one explicit
+  x-polar hostile section.  Every other section has a genuine Weierstrass
+  denominator.
   Effective two-section S-integral enumeration, x-integral descent, a Keller
   atlas, and JC(2) remain OPEN.
 source: jc_zero_debt_lift / post-THM-3885 elliptic reframe, 2026-08-23
 audit: >
-  PROVISIONAL EXACT PROOF CANDIDATE.  The companion verifies the binary
+  PROVED BASE WITH PROVISIONAL EXACT STRENGTHENING.  Independent hostile
+  audits passed the elliptic-surface packet at ce633e56c5 and the first
+  integral-height delta at 58b095278c.  The companion verifies the binary
   quartic invariants and discriminant, the birational map and inverse, all
   four marked sections and their chord law, the T-divisor factorization, the
   generic squarefree y-discriminant, short-Weierstrass discriminant, infinity
   minimalization, IV component addresses, the normalized cubic-factor chart,
-  the explicit descent-hostile point, and the 3-division polynomial in 40
-  active gates.  Normal and optimized runs
+  the explicit descent-hostile point, the 3-division polynomial, and the
+  fifteen-case constant-T rational-root exhaustion in 63 active gates.
+  Normal and optimized runs
   must byte-match the frozen
   output.  Independent audit must recheck extension to smooth projective
   models, the exact one-way integrality scope at bad fibres, rationality and
   Shioda--Tate inputs, torsion injection at IV, and the local intersection of
-  the two boundary sections.  The final integral-shell degree argument and
-  explicit descent-hostile point await a focused delta audit.
+  the two boundary sections.  The final low-height rational-root exhaustion
+  awaits a focused delta audit.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
   - THM-3885-cusp-residual-f-zero-arm-dichotomy-and-quadratic-closure
@@ -39,15 +45,16 @@ related:
   - THM-3886-cusp-residual-equality-seam-second-layer-trichotomy
 script: 04-computation/jc2_f_zero_equianharmonic_jacobian_integrality_thm3888.py
 output: 05-knowledge/results/jc2_f_zero_equianharmonic_jacobian_integrality_thm3888.out
-script_sha256: c8557575896e1c2581b568e008b52b62ad737bd12641f98cd06d28b835f60090
-output_sha256: b8922e452e8151bfa8ddb82be758407dec6f561549679d1f01f229d49fa5948b
-semantic_sha256: c3bf6ca98856c178eb47e085321378b5e22e6c5797dc9573cd3aadfc6af11475
+script_sha256: 1c68340175ec4d7e4693e537b7f953fe7aeff1b1bb189da98e33dea6ec4e2dfc
+output_sha256: 4f8f156d58081f0009ba9e19a7bff4e9c6b42b45f7b77889fcfc11043b481a8c
+semantic_sha256: 7235619178abfbcff737fc2ce44fce3d97396ef3004febd706fdbc4763ed7e60
 hash_basis: raw LF bytes
 ---
 
 # THM-3888 -- the f-zero lane is a two-boundary-section problem
 
-**PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED BASE; FINAL EXACT-SHELL
+STRENGTHENING AWAITING FOCUSED AUDIT.**
 Work over an algebraically closed field `k` of characteristic zero.  Retain
 the THM-3881 notation
 
@@ -172,7 +179,7 @@ denominators and `(9d)` must be replaced by its valuation form.  This is why
 the first integral height shell is the cheapest exact computation, but not
 the whole problem.
 
-### 2.2. The entire integral Weierstrass shell has `deg_y(u)<=1`
+### 2.2. The entire integral Weierstrass shell consists of two points
 
 The first height-shell computation admits an all-degree proof.  Suppose
 
@@ -195,19 +202,59 @@ Thus
 u,v,T polynomial in y  ==>  deg_y(u)<=1.                 (9g)
 ```
 
-The two remaining degrees are finite grammars.  If `m=1`, then
-`deg_y(v)=2`, so `(9e)` forces `T` to be constant in `y`.  If `m=0`, the
-factorization `(9c)` has constant right-hand side apart from the two factors
-`v-K,v+K`; their difference is the nonconstant polynomial `2K`.  Their
-product can be constant only when it is zero.  Hence
+The two remaining degrees are finite grammars, and both can be completed
+exactly.  If `m=1`, then `deg_y(v)=2`, so `(9e)` forces `T=t in k(x)`.
+Writing `(2)` as a polynomial in `y` gives
 
 ```text
-u^3=a^3,                         v=+K or -K.               (9h)
+q(t)=-8t^3y^2+C(t),
+C(t)=L^4-6aL^2t^2+8Ft^3-3a^2t^4.                        (9h)
 ```
 
-This closes every `m>=2` integral-coordinate section at once.  It does not
-touch Mordell--Weil sections whose `u,v` have denominators; those are the
-genuinely remaining height shells.
+There is no `y` term.  If `q(t)` is a square and `t!=0`, its square root is
+linear in `y`; comparison of the missing linear term forces its constant
+term to vanish, and therefore `C(t)=0`.  The polynomial `C` is primitive in
+`k[x][t]`.  Its constant and leading coefficients are `L^4` and `-3a^2`,
+respectively.  The UFD rational-root theorem therefore leaves only
+
+```text
+t=c L^i/a^j,       c in k^*,       0<=i<=4, 0<=j<=2.     (9i)
+```
+
+For each of these fifteen pairs, clear the power of `a` in `C(t)`, collect
+coefficients in `x`, and take their gcd in `Q[c]`.  The exact companion
+obtains the unit ideal for every pair.  Since these identities persist after
+extension to the algebraically closed constant field, none of `(9i)` is a
+root.  The case `t=0` would force `v=K` and then `u^3=a^3`, contradicting
+`m=1`.  Thus the `m=1` shell is empty.
+
+If `m=0`, the right side of `(9c)` is constant in `y`.  If the product
+`(v-K)(v+K)` were a nonzero constant, both factors would be units in
+`k(x)[y]`, contradicting their nonconstant difference `2K`.  Hence the
+product is zero and
+
+```text
+u^3=a^3,                         v=+K or -K.               (9j)
+```
+
+Write `u=zeta*a`, where `zeta^3=1`.  For either nontrivial cube root the
+inverse denominator is
+
+```text
+u^2+au+a^2=a^2(zeta^2+zeta+1)=0,                         (9k)
+```
+
+so the point belongs to a boundary/alternate inverse chart.  The finite
+inverse chart has only `u=a`.  Its two signs give exactly
+
+```text
+(u,v)=(a,K):       (T,G)=(0,-L^2),
+(u,v)=(a,-K):      (T,G)=(T_*,G_*).                      (9l)
+```
+
+Consequently `(9l)` is the **complete integral-Weierstrass shell**.  Every
+other section has a denominator in `u` or `v`; cancellation through `(9b)`
+is now the genuinely remaining height problem.
 
 ## 3. The four marked sections and the divisor of `T`
 
@@ -452,7 +499,7 @@ quartic coefficient Groebner basis.  It is:
 
 1. compute an explicit Mordell--Weil basis for the `II^4+IV` rational
    elliptic surface and express `Q_+,Q_-,P_0` in that basis;
-2. use `(9g)` as the completed integral-coordinate base case and enumerate
+2. use `(9l)` as the completed integral-coordinate base case and enumerate
    the first rational-coordinate denominator shell, subject to no finite
    intersection with `Q_+ union Q_-` and the `IV` address `(31)-(32)`;
 3. apply the inverse denominator test

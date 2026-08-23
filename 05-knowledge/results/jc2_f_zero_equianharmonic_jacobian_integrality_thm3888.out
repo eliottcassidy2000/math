@@ -3,10 +3,12 @@ binary_quartic_invariant=I_zero
 jacobian=Y^2=X^3-64L^4Delta
 normalized_factor=(v-K)(v+K)=L^2(u-a)(u^2+au+a^2)
 hostile_kxy=T=-2K/(3a^2),origin=8/3,a_zero_pole=yes
-integral_Weierstrass_shell=deg_y(u)_at_most_1
+constant_T_rational_root_candidates=15_all_empty
+constant_T_candidate_gcds=(0,0):1,(0,1):1,(0,2):1,(1,0):1,(1,1):1,(1,2):1,(2,0):1,(2,1):1,(2,2):1,(3,0):1,(3,1):1,(3,2):1,(4,0):1,(4,1):1,(4,2):1
+integral_Weierstrass_shell=exactly_base_and_x_pole_hostile
 generic_fibres=II,II,II,II,IV
 geometric_MW=rank_6_torsion_0
 polynomial_lane=two_section_S_integrality_plus_x_descent_OPEN
-semantic_sha256=c3bf6ca98856c178eb47e085321378b5e22e6c5797dc9573cd3aadfc6af11475
-CHECKS=40
+semantic_sha256=7235619178abfbcff737fc2ce44fce3d97396ef3004febd706fdbc4763ed7e60
+CHECKS=63
 RESULT=PASS

@@ -181,6 +181,73 @@ gate(
     "hostile has an a-zero pole",
 )
 
+# Complete the two low integral-Weierstrass heights left by the all-degree
+# argument in the theorem.  At deg_y(u)=1 the inverse divisibility forces T
+# to lie in k(x).  The quartic is then -8*T^3*y^2+C(T), with no y term, so a
+# square with T != 0 forces C(T)=0.  The UFD rational-root theorem leaves only
+# c*L^i/a^j (0<=i<=4, 0<=j<=2).  A coefficient gcd of one over Q[c]
+# certifies that none of the fifteen candidates works, uniformly after
+# extension to the algebraically closed constant field.
+tconst, croot = sp.symbols("tconst croot")
+quartic_tconst = sp.Poly(sp.expand(quartic.subs(T, tconst)), y)
+zero(
+    quartic_tconst.coeff_monomial(y**2) + 8 * tconst**3,
+    "constant-T y-square coefficient",
+)
+zero(quartic_tconst.coeff_monomial(y), "constant-T missing y coefficient")
+C_tconst = sp.expand(
+    L**4 - 6 * a * L**2 * tconst**2 + 8 * F * tconst**3 - 3 * a**2 * tconst**4
+)
+zero(
+    quartic_tconst.coeff_monomial(1) - C_tconst,
+    "constant-T residual polynomial",
+)
+
+C_coefficients = [sp.Poly(q, x, domain=sp.QQ) for q in sp.Poly(C_tconst, tconst).all_coeffs()]
+C_content = C_coefficients[0]
+for coefficient in C_coefficients[1:]:
+    C_content = C_content.gcd(coefficient)
+gate(C_content.degree() == 0, "constant-T polynomial is primitive over k[x]")
+
+rational_root_candidates = []
+for numerator_power in range(5):
+    for denominator_power in range(3):
+        candidate = croot * L**numerator_power / a**denominator_power
+        candidate_numerator = sp.expand(
+            sp.together(C_tconst.subs(tconst, candidate)).as_numer_denom()[0]
+        )
+        coefficient_expressions = [
+            q for q in sp.Poly(candidate_numerator, x).all_coeffs() if q != 0
+        ]
+        coefficient_gcd = sp.Poly(coefficient_expressions[0], croot, domain=sp.QQ)
+        for coefficient in coefficient_expressions[1:]:
+            coefficient_gcd = coefficient_gcd.gcd(
+                sp.Poly(coefficient, croot, domain=sp.QQ)
+            )
+        gate(
+            coefficient_gcd.degree() == 0,
+            f"constant-T rational-root candidate ({numerator_power},{denominator_power})",
+        )
+        rational_root_candidates.append(
+            (numerator_power, denominator_power, sp.monic(coefficient_gcd.as_expr(), croot))
+        )
+gate(len(rational_root_candidates) == 15, "all constant-T candidates exhausted")
+
+# At deg_y(u)=0 the finite inverse chart forces u^3=a^3 and v=+/-K.
+# Only u=a has nonzero inverse denominator; the two signs are exactly the
+# finite T=0 point and the descent-hostile point already checked above.
+zero(
+    normalized_denominator.subs(uvar, a) - 3 * a**2,
+    "finite cube-root address denominator",
+)
+zero(T_normalized.subs({uvar: a, vvar: K}), "finite base section T")
+zero(
+    (a + 2 * uvar).subs(uvar, a) * T_normalized.subs({uvar: a, vvar: K}) ** 2
+    - L**2
+    + L**2,
+    "finite base section G",
+)
+
 # Exact factor polarization of the two T=0 branches.
 H = 3 * a**2 * T**2 + 8 * K * T + 6 * a * L**2
 zero((G - L**2) * (G + L**2) + T**2 * H - (G**2 - quartic), "T divisor factorization")
@@ -246,7 +313,7 @@ semantic = {
     "boundary": "div(T)=O+P0-Qplus-Qminus;Qplus+Qminus=P0",
     "factor": "v2=K2+L2(u3-a3);T=(v-K)/(u2+au+a2)",
     "hostile": "T=-2K/(3a2) is polynomial in y but fails x-integrality/address",
-    "integral_shell": "polynomial u,v,T forces deg_y(u) at most one",
+    "integral_shell": "polynomial u,v,T gives only (u,v)=(a,+/-K)",
     "surface": "generic y-fibres II^4+IV;rational;geometric MW rank6 torsion0",
     "scope": "two-section S-integrality and x-integral descent remain open",
 }
@@ -263,7 +330,12 @@ print("binary_quartic_invariant=I_zero")
 print("jacobian=Y^2=X^3-64L^4Delta")
 print("normalized_factor=(v-K)(v+K)=L^2(u-a)(u^2+au+a^2)")
 print("hostile_kxy=T=-2K/(3a^2),origin=8/3,a_zero_pole=yes")
-print("integral_Weierstrass_shell=deg_y(u)_at_most_1")
+print("constant_T_rational_root_candidates=15_all_empty")
+print(
+    "constant_T_candidate_gcds="
+    + ",".join(f"({i},{j}):{gcd_value}" for i, j, gcd_value in rational_root_candidates)
+)
+print("integral_Weierstrass_shell=exactly_base_and_x_pole_hostile")
 print("generic_fibres=II,II,II,II,IV")
 print("geometric_MW=rank_6_torsion_0")
 print("polynomial_lane=two_section_S_integrality_plus_x_descent_OPEN")
