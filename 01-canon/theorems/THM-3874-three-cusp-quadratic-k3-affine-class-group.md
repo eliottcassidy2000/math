@@ -2,7 +2,7 @@
 id: THM-3874
 title: "Three-cusp quadratic K3 and its affine class group"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.  The
+  PROVED + VERIFIED-EXACT CANDIDATE AWAITING AUDIT OF STRENGTHENING.  The
   THM-3854 three-cusp quadratic resolvent has an elliptic K3 model with
   fibres I6, I3, I4, I2, and III*.  Its Mordell--Weil group is C2 and its
   Neron--Severi discriminant has absolute value 72.  An explicit
@@ -13,13 +13,15 @@ status: >
   branch divisor.  This closes that alternative cubic-order lane, not JC(2).
 source: jc_quartic_c3_construct / post-THM-3869 elliptic-K3 lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT PROOF CANDIDATE.  The companion verifies the quartic-to-
-  Weierstrass map, all invariant factorizations and fibre valuations, the
-  root-lattice determinants and two fundamental-weight packets, the Smith
-  quotient relation, the finite singularity addresses, and the odd-degree
-  unit gate.  Independent hostile audit is still required for the precise
-  finite-exceptional labels, the boundary exact sequence, the torsion-section
-  gluing relation, and the passage from Cl[3]=0 to the cubic-field exclusion.
+  INDEPENDENT HOSTILE AUDIT PASS (jc_sparse_direct_search, 2026-08-23).  The
+  audit independently rederived all five Kodaira fibres, the K3/Mordell--Weil
+  packet, each local UV model and finite-exceptional label, the complete
+  boundary exact sequence, the primitive 3d+2e torsion-section relation, the
+  unit norm argument, and the Kummer/S3 sole-branch implication.  Normal and
+  optimized runs byte-match the frozen output.  A subsequent provisional
+  strengthening freezes the full 20-by-21 boundary presentation: its Smith
+  form has twenty unit invariant factors and one free column.  That addendum
+  awaits the parent hostile audit before status promotion.
 depends_on:
   - THM-3854-integrated-three-cusp-quintic-s5-natural-completion-obstruction
   - THM-3869-three-cusp-square-residual-cardano-line-ramification
@@ -30,15 +32,15 @@ related:
   - THM-3865-one-place-inverse-discriminant-resolvent-class-group
 script: 04-computation/jc2_three_cusp_elliptic_k3_class_group_thm3874.py
 output: 05-knowledge/results/jc2_three_cusp_elliptic_k3_class_group_thm3874.out
-script_sha256: 4848f61206cf7c1e23a6e792ff63db186a86c6bc24fa662821520adb248d0db3
-output_sha256: b967f7d334c09293482432b19d5b54f58f482bef34f739b2d7b3755090997a7a
+script_sha256: dd90fbbba3d86aee3a58df5de1d41ee9fd31ffe5527ce35ea70b9e2cee7e6da1
+output_sha256: 0bfe2125e864b668bf965e9605cc27990cafbd7394315698781eca2cba234672
 semantic_sha256: b135b50909a3ddb57590882e77ce5f7e94e4c034adc5b8b660be01d2b691d09c
 hash_basis: raw LF bytes
 ---
 
 # THM-3874 -- the affine boundary kills the K3 three-primary packet
 
-**PROVED + VERIFIED-EXACT CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT CANDIDATE AWAITING AUDIT OF STRENGTHENING.**
 Work over an algebraically closed field `k` of characteristic zero.  Retain
 the irreducible three-cusp quintic
 

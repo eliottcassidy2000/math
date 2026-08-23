@@ -7,4 +7,4 @@ THM3874_C3 connected codimension-one-unramified C3 layer=NONE
 THM3874_CUBIC normal finite-flat cubic with sole simple branch Delta=NONE
 THM3874_SCOPE three-cusp quadratic resolvent only;JC2 remains open
 SEMANTIC_SHA256 b135b50909a3ddb57590882e77ce5f7e94e4c034adc5b8b660be01d2b691d09c
-CHECKS 34
+CHECKS 37

@@ -148,6 +148,47 @@ snf = smith_normal_form(relation, domain=sp.ZZ)
 equal("class_group_relation_gcd", sp.gcd(3, 2), 1)
 equal("class_group_relation_snf", tuple(snf), (1, 0))
 
+# Full presentation control: 20 trivial-lattice generators plus T.  The
+# first row is twice the torsion-section gluing law; the other rows kill the
+# boundary and affine ADE curves.  Its Smith form has twenty unit entries
+# and one free column.
+omega_E7 = E7.inv()[:, 6]
+equal("twice_omega_E7", tuple(2 * omega_E7), (6, 3, 4, 2, 5, 4, 3))
+generator_count = 21
+gluing = [0] * generator_count
+gluing[0], gluing[1], gluing[20] = -2, -4, 2  # O,F,T
+for index, coefficient in enumerate((1, 2, 3, 2, 1)):
+    gluing[2 + index] = coefficient
+for index, coefficient in enumerate((1, 2, 1)):
+    gluing[9 + index] = coefficient
+for index, coefficient in enumerate((6, 3, 4, 2, 5, 4, 3)):
+    gluing[13 + index] = coefficient
+
+presentation_rows = [gluing]
+killed_generators = [
+    0,
+    1,
+    20,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    *range(13, 20),
+]
+for index in killed_generators:
+    row = [0] * generator_count
+    row[index] = 1
+    presentation_rows.append(row)
+full_presentation = sp.Matrix(presentation_rows)
+full_snf = smith_normal_form(full_presentation, domain=sp.ZZ)
+equal("full_boundary_presentation_rank", full_presentation.rank(), 20)
+equal("full_boundary_presentation_snf", tuple(full_snf[i, i] for i in range(20)), (1,) * 20)
+
 # Finite singularity/fibre addresses inherited from the normalization.
 equal("cusp_a_addresses", (0 + 1, -1 + 1, -1 + 1), (1, 0, 0))
 equal("node_M_address", -sp.Rational(5, 9) + 1, sp.Rational(4, 9))
