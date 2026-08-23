@@ -1,0 +1,49 @@
+=== Integral signed Pell interlacing ===
+S=[[1,2],[1,1]] reverses x^2-2s^2; A=S^2=[[3,4],[2,3]] preserves it.
+A^k(1,0) gives T_n=q^2; A^k(1,1)=S A^k(1,0) gives T_n=2T_m.
+square-triangular first q: [0, 1, 6, 35, 204, 1189]
+triangular-tower first odd companions: [1, 5, 29, 169, 985, 5741]
+Integral bounded replay: depths 0..12 on both norm cosets.
+
+=== Complete mod-13 norm-fibre audit ===
+M^7=-I, M^14=I; all 12 nonzero norm fibres have 14 points and one M-orbit.
+Direct [x:q] quotient (reported as q/x) has two seven-cycles:
+  square norm: ['0', '4', '5', '6', '7', '8', '9']
+  nonsquare norm: ['1', '2', '3', '10', '11', '12', 'inf']
+Norm +1 and norm -1 share the square-character cycle because -1 is square mod 13.
+THM-3713's {1,2,-3,-2,-1} equals the nonsquare cycle minus {inf,3}.
+That exact near-match lies on the wrong norm-character torsor.
+
+=== Stereographic half-angle P1 clock ===
+theta(x,q)=q/(x+1), theta(-1,0)=inf, bijects x^2-8q^2=1 with P1(F13).
+theta M theta^-1 is N=[[4,1],[8,4]], det(N)=8 nonsquare.
+single 14-cycle: ['0', '10', '9', '1', '8', '11', '6', 'inf', '7', '2', '5', '12', '4', '3']
+N^7 is t -> 1/(8t), the antipodal state; theta is not ordinary vector projectivization.
+
+=== Existing mod-13 clock conjugacies ===
+M is SL2-conjugate to THM-2619 g_6 by P=[[11,5],[5,0]].
+N=11 P0 Singer^5 P0^-1 for Singer=[[1,4],[2,1]], P0=[[0,1],[2,0]].
+Thus both clocks refine existing P1 mechanisms; the integral Pell typing is the new sidecar.
+R=M^-1 diag(1,-1)=[[3,8],[12,10]] obeys R^2=I and RMR=M^-1.
+On the norm-one orbit it sends phase r to -1-r mod 14 (and mod 7 after sign quotient).
+
+=== Complete scalar linear-observer classification ===
+For every e!=0 and L=a*x+b*q!=0 on x^2-8q^2=e:
+  #L^-1(y)=1-chi(y^2-e(a^2-5b^2));
+  |L(C_e)|=8 iff chi(e(a^2-5b^2))=+1; otherwise |L(C_e)|=7.
+Each fibre has 84 observers of each size (12*168 observer/fibre pairs exhausted).
+
+=== Square/triangular scalar residue hostile ===
+squares: [0, 1, 3, 4, 9, 10, 12]
+triangular numbers: [0, 1, 2, 3, 6, 8, 10]
+their union misses: [5, 7, 11]
+
+=== Constant-Cohn nonentry gate ===
+R=M has (a,b,c,d)=(3,8,1,3), epsilon=3, epsilon^2-1=8.
+THM-3726 constant equations have no solution; b,c!=0 triggers THM-3736 nonconstant nonentry.
+
+=== Scope ===
+The Pell update supplies an exact typed C14 conic clock and a half-angle P1 address.
+It loses owner, root chart, temporal word, target positivity, and every JC polynomial target packet.
+No LRC(14), planar Jacobian, or constant-Cohn closure follows.
+CHECKS=30503

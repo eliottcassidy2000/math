@@ -94,6 +94,37 @@ collide, links—not bare IDs—are canonical.
   theorem unconditionally in every dimension; the paper's shifted statement
   retains its stated Lonely Vector Problem dependency.
 
+### Beck--Hoşten--Schymura — *Lonely Runner Polyhedra*
+
+- **Primary / freshness:** [arXiv:1606.01783](https://arxiv.org/abs/1606.01783),
+  published in *Integers* **19** (2019), A29.  PDF and bibliographic record
+  checked 2026-08-23.
+- **Imported role:** Proposition 1 identifies the lonely-runner witness for an
+  integer speed vector with an integer point in its line-plus-box polyhedron.
+  THM-3743 rederives that equivalence after quotienting by the speed line, then
+  computes the exact dual lattice and width of the projected box.
+- **Repo consumer:**
+  [THM-3743, quotient-zonotope flatness reduction](../../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md).
+- **Does not prove:** the THM-3743 width formula, its coefficient bound, a
+  restricted-zonotope flatness constant, or LRC(14).
+
+### Khinchin flatness and an explicit classical bound
+
+- **Primary / freshness:** Codenotti--Freyer,
+  [*Lattice Reduced and Complete Convex Bodies*, arXiv:2307.09429](https://arxiv.org/abs/2307.09429),
+  gives the modern dual-lattice width convention and flatness context.  Basu--
+  Sankaranarayanan, [*Can Cut-Generating Functions Be Good and Efficient?*,
+  arXiv:1803.00667](https://arxiv.org/abs/1803.00667), Theorem 2.5, records the
+  explicit `Flt(d)<=d^(5/2)` form; published in *SIAM J. Optim.* **29**
+  (2019), 1190--1210, [DOI 10.1137/18M117354X](https://doi.org/10.1137/18M117354X).
+  Checked 2026-08-23.
+- **Imported role:** flatness converts a full-dimensional lattice-free convex
+  body into a bounded integral-dual width direction.  The explicit estimate
+  turns THM-3743's symbolic relation bound into `||a||_1<=581`.
+- **Does not prove:** that `581` is sharp or competitive, that the minimizing
+  direction has sparse support, or any recursive LRC slice theorem.  THM-2144
+  already gives the stronger numerical total cap `367` by another mechanism.
+
 ### Giri--Kravitz — *The structure of Lonely Runner spectra*
 
 - **Primary / freshness:** [arXiv:2304.01462v4](https://arxiv.org/abs/2304.01462),
@@ -212,6 +243,24 @@ collide, links—not bare IDs—are canonical.
 ### Lee — *Lonely runners in real life: Sharp bounds for time-dependent velocities*
 
 - **RADAR / PREPRINT v1:** [arXiv:2607.16082v1](https://arxiv.org/abs/2607.16082) proves the sharp `2^(-n+1)` extreme-runner guarantee for ordered time-dependent velocities with divergent relative displacement.  No theorem depends on it, and it proves nothing about constant-velocity LRC(14), `1/14`, integer spectra, or finite checking.
+
+## Continued fractions and Khinchin content
+
+### Cellarosi--Hensley--Miller--Wellens — continued-fraction digit averages
+
+- **Primary / freshness:** [arXiv:1402.0208v3](https://arxiv.org/abs/1402.0208),
+  checked 2026-08-23.
+- **Imported role:** records the classical theorem that for almost every real
+  number the geometric mean of the first `n` continued-fraction digits tends
+  to Khinchin's constant `2.685452...`, and studies refinements of digit means.
+- **Repo consumer:** the exact hostile probe
+  [`jc_lrc_khinchin_continuant_sidecar_probe_20260823.py`](../../04-computation/jc_lrc_khinchin_continuant_sidecar_probe_20260823.py)
+  uses the citation only to type the asymptotic scalar; all rational examples
+  and collisions are derived exactly in-repo.
+- **Does not prove:** a canonical finite mean for rational continued
+  fractions, recovery of an ordered continuant, an LRC owner/tie/phase, or a
+  JC polynomial word.  It is unrelated to Khinchin flatness except for the
+  historical name.
 
 ## Jacobian, Dixmier, and Poisson
 

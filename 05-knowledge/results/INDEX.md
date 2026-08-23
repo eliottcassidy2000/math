@@ -1,5 +1,36 @@
 # Script Results Index
 
+- `square_triangular_pell_mod13_projective_cycle_thm3742.py` -> matching
+  `.out` [THM-3742 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Interlaces the norm `+/-1` Pell families integrally; exhausts all twelve
+  nonzero mod-13 norm fibres; distinguishes the direct `C14 -> C7` sign
+  quotient from the stereographic Singer `C14`; proves the exact `7/8`
+  scalar-observer law; records the wrong-torsor THM-3713 offset match and
+  complete constant-Cohn nonentry.  Normal/`-O` outputs agree, `CHECKS=30503`.
+  Script/output LF SHA-256:
+  `3232e2185a8b05af3caddb0a9ecc43d61030b76acd2969d599ccaa4642570299` /
+  `c4623ddab191b2a1e1106adf2197332721b165729a9e61e6792158f455a6b19f`.
+
+- `lrc14_khinchin_flatness_relation_thm3743.py` -> matching `.out`
+  [THM-3743 PROVED FROM CITED INPUTS + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Verifies the quotient-zonotope width
+  `(6/7)||a||_1`, the explicit flatness corollary `||a||_1<=581`, the
+  THM-2144 cap-367 comparison, hostile AP/far-AP controls, and the
+  thirteen-generator two-torsion-centred sidecar.  Normal/`-O` outputs agree,
+  `CHECKS=15`.  Script/output LF SHA-256:
+  `13aec7024ae297783f3cfc43d4d290a6ff515550dad6f03fc8bb3401661cbdaa` /
+  `5d13bc9940ed8050a1f68e2e37c9dc271cbd422b094de27548b5b0786491712b`.
+
+- `jc_lrc_khinchin_continuant_sidecar_probe_20260823.py` -> matching `.out`
+  [VERIFIED-EXACT HOSTILE SYNTHESIS].  Separates Khinchin's almost-everywhere
+  digit-product scalar from ordered continuants and target sidecars: an
+  infinite LRC tie/no-tie collision, `1,222` bounded mixed-tie signature
+  groups, the current `43/182` versus `55/182` word collision, distinct
+  constant `SL_2` words with equal digit product, and JC multiplier-holonomy
+  controls.  `CHECKS=34310`.  Script/output LF SHA-256:
+  `19490ccbfadf418784c878815eaffe7fb5cfeee14403845014908889de452a04` /
+  `e86b508a626cba737cb2fa4f830f0f6fda6ae4b2455a97851cc723aa3e99974d`.
+
 - `jacobian_y0_danielewski_transfer_support_floor_thm3695.py` -> matching
   `.out` [THM-3695 PROVED FROM CITED INPUTS + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  The collision ring is exactly the graded subalgebra

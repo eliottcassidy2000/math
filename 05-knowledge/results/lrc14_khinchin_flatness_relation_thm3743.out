@@ -1,0 +1,33 @@
+=== Quotient-lattice normalization ===
+B=[1/14,13/14]^13 has side length 6/7; Q=R^13/Rn has dimension 12.
+For primitive n, Lambda=pi(Z^13) and Lambda*={a in Z^13:a.n=0}.
+
+=== Exhaustive corner checks for the width formula ===
+a_l1=  2  width=12/7
+a_l1=  3  width=18/7
+a_l1=  6  width=36/7
+a_l1= 91  width=78
+a_l1=367  width=2202/7
+The identity follows coordinatewise for every real box point; corners are hostile replays.
+
+=== Flatness consequence and explicit classical bound ===
+A hypothetical counterexample makes pi(B) a full-dimensional Lambda-free zonotope.
+Khinchin flatness therefore selects primitive 0!=a in Lambda* with
+  (6/7)||a||_1 <= Flt(12), hence ||a||_1 <= (7/6)Flt(12).
+Using the explicit Flt(d)<=d^(5/2) input: floor(336*sqrt(3))=581.
+
+=== Existing relation-canon comparison ===
+AP {1,...,13} and {1,...,12,5460} already have (2,-1,0,...), l1=3.
+THM-2144 forces a relation with l1<=3*29+10*28=367 on every zero-safe row.
+Thus the simple explicit flatness cap 581 is numerically weaker; its geometric direction is different.
+THM-2051 instead forces support 3..5 with coefficient height <=2^20: sparse but much taller.
+
+=== Restricted-zonotope sidecar ===
+pi(B) has 13 segment generators in dimension 12, is centrally symmetric,
+and its center class has order dividing two because 2*(1/2,...,1/2) is integral.
+The useful open constant is flatness for this restricted 13-generator, two-torsion-centered class.
+
+=== Semantic boundary ===
+The relation direction alone carries no active facets, slice intercept, root, owner, or temporal word.
+A recursive LRC gain needs those sidecars; neither relation existence nor small l1 proves loneliness.
+CHECKS=15
