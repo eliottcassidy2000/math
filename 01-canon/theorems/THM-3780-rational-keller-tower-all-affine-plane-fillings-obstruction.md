@@ -2,7 +2,7 @@
 id: THM-3780
 title: "Rational Keller tower opposite-boundary unit and all-affine-plane-fillings obstruction"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  The
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The
   THM-3774 tower factors through its normalization plane as the product of
   two reciprocal nonconstant Jacobians x and g=1/x.  Its common etale locus
   is the cylinder G_m x A^1.  For any normal affine model R of the same
@@ -13,13 +13,11 @@ status: >
   same-pair source-filling obstruction, not JC(2).
 source: jc_zero_debt_lift / all-source-fillings audit, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The all-m birational inverse, reciprocal
-  Jacobian factorization, monic normalization, ramification divisor,
-  branch parametrization, shared-cylinder equality, and differential
-  coefficient are checked symbolically.  Direct source and alternative-
-  completion controls are checked for m=1,...,8.  Normal and optimized runs
-  byte-match the frozen output.  Independent hostile audit remains due,
-  especially for the normal integral-closure and cotangent-unit steps.
+  INDEPENDENT HOSTILE AUDIT by root.  The birational inverse and reciprocal
+  Jacobian factors, finite normalization equality, branch parametrization,
+  shared-cylinder equality, normality/integrality step, etale cotangent-basis
+  argument, and nonconstant-unit obstruction were rederived independently.
+  Normal, optimized, and frozen exact transcripts agree byte for byte.
 depends_on:
   - THM-3774-three-component-rational-keller-cover-tower
 related:
@@ -36,7 +34,7 @@ hash_basis: raw LF bytes
 
 # THM-3780 -- the reciprocal boundary unit forbids every affine-plane filling
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  The
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The
 all-degree rational Keller tower has a simpler structural description than
 its expanded formulas suggest.  It is the composition of a birational chart
 with Jacobian `x` and a polynomial fold with Jacobian `g=1/x`.  Their product
