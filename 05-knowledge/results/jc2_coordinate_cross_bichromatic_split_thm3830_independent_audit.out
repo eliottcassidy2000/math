@@ -1,0 +1,10 @@
+audit=THM-3830-independent-hostile
+verdict=PASS
+arithmetic=disc:353831803500;res_ab:-31298700;res_azb:93896100
+boundary_f11=candidates:39930;solutions:60
+completion_samples=3
+unit_normalization=fibre_product_units_are_equal_nonzero_scalars
+crt_relation=coordinate_cross_has_only_trivial_idempotents
+finite_extension_and_nilpotent_seams=typed_and_clear
+GATES=123
+semantic_sha256=7144dd1572ee7003d17d1faff15cc675a5116febfc9c6387d5b54167633c90b5

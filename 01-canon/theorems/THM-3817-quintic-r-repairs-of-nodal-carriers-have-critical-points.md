@@ -27,8 +27,12 @@ audit: >
   triangular normal forms, the row-sixteen branch factor, the C_4=0 exit,
   the T-resultant factorization, three exact coprimality certificates, hostile
   sparse/repeated-root controls, and finite source reconstruction.  Normal and
-  optimized runs byte-match the frozen transcript, all artifact hashes match,
-  and the 1,448 active gates replay without assertions disabled.
+  optimized runs match the frozen transcript exactly after LF normalization,
+  all raw-LF artifact hashes match, and the 1,448 active gates replay without
+  assertions disabled.  A second hostile pass manually reconstructed the
+  Sylvester division, weight rows, and post-basis exits; its stronger alternate
+  F5B basis computation was boundedly stopped inside reduction and is recorded
+  as INCOMPLETE, not used as proof evidence.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3813-quartic-r-repairs-of-nodal-carriers-have-critical-points
@@ -344,4 +348,5 @@ Together with THM-3813, this theorem closes every pure `r g(e)` carrier
 with `deg g<=5`.  It does **not** address degree at least six, mixed
 `z^2h(e)+r g(e)` corrections, another pseudo-plane arm profile, or arbitrary
 planar Keller maps.  The exact companion has 1448 active gates; normal and
-optimized runs byte-match the frozen transcript.  **QED.**
+optimized runs match the frozen transcript exactly after LF normalization.
+**QED.**

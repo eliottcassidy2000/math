@@ -12,17 +12,17 @@ status: >
   second row, and the Keller equation remain open.
 source: jc_sparse_direct_search / THM-3827 bichromatic-passport constructive lane, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
-  The audit checked the unit classification in K[x,y]/(xy), the explicit
-  determinant completion, scalar-extension and slope arithmetic, both
-  domain restrictions, the divisibility/nonzero-scalar contradiction, and
-  the exact disjointness boundary.  Normal and optimized runs byte-match the
-  frozen transcript and the raw hashes agree.  The exact companion
-  checks the completed-square factors, squarefreeness of the five slopes,
-  gcd(a,z b)=1 by its nonzero characteristic-zero resultant, the generalized
-  determinant-one completion, the simple xy factor, both forced boundary
-  constants, a three-root finite-field hostile control, and the OPEN scope.
-  Normal and optimized replay agree with the frozen transcript.
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary and
+  thm3830_hostile_audit, 2026-08-23).  The audits check the equal-origin
+  fibre-product unit argument, determinant-one
+  completion, both axis restrictions, reflection of x/y divisibility under
+  finite scalar extension, and the exact reduced-cross scope.  Its custom
+  Sylvester/Bareiss arithmetic reproduces all three characteristic-zero
+  invariants; an exhaustive F_11 boundary universe has 39,930 candidates and
+  exactly 60 solutions, all zero or the forced nonzero scalar.  Line-unit,
+  trivial-idempotent, and CRT-connectedness controls agree with THM-3827.
+  Primary and independent companions contain no effective assertion gap;
+  normal and optimized raw LF streams match both frozen transcripts.
 depends_on:
   - THM-3827-generic-fibre-genus-floor-for-nonlinear-cubic-plane-atlases
 related:
@@ -32,6 +32,11 @@ output: 05-knowledge/results/jc2_coordinate_cross_bichromatic_split_thm3830.out
 script_sha256: 84bce55eb0344aad1dea319adc5fd39c60fbbff175c88cf9f574bd569ae36913
 output_sha256: 6d062ed9bfcd13005fd55d790fa5bf8d64005337b29572b5a502f94e3b50b529
 semantic_sha256: 3ce7d10d25f49bbebe1ce8e6d7530783fe7a1a5e9045ef9b37a3678d3213d2c5
+independent_script: 04-computation/jc2_coordinate_cross_bichromatic_split_thm3830_independent_audit.py
+independent_output: 05-knowledge/results/jc2_coordinate_cross_bichromatic_split_thm3830_independent_audit.out
+independent_script_sha256: 3a5abd63b8b60a2c7814bbe185f494fccc9cfcb829fab6f0b94dfa0305eafe4b
+independent_output_sha256: e56f9c8d45d3f41289ba56de1de7ce67e9651c590360456d50a19ea5072a696a
+independent_semantic_sha256: 7144dd1572ee7003d17d1faff15cc675a5116febfc9c6387d5b54167633c90b5
 hash_basis: raw LF bytes
 ---
 
@@ -114,9 +119,10 @@ that the class of `k` is a unit in
 K[x,y]/(xy).                                            (11)
 ```
 
-The normalization of `(11)` is `K[x] times K[y]`, with the two values at
-the origins identified.  A unit therefore restricts to a unit on both
-affine lines, hence to the same nonzero scalar `c`.  Consequently
+The normalization of `(11)` is `K[x] times K[y]`, and the image of `(11)`
+in this normalization consists exactly of pairs whose values at the two
+origins agree.  A unit therefore restricts to a unit on both affine lines,
+hence to the same nonzero scalar `c`.  Consequently
 
 ```text
 k=c+xyq                                                  (12)
@@ -186,4 +192,7 @@ spectral member is the transverse coordinate cross.  It does **not** exclude
 
 The nearest counterexample-positive replacement is therefore a disconnected
 fixed fibre, for example a product of comaximal factors, rather than another
-intersecting cross.  No Jacobian counterexample is claimed.  **QED.**
+intersecting cross.  Equivalently, `(11)` has only trivial idempotents, so its
+connected coordinate cross cannot realize THM-3827's canonical nontrivial CRT
+split.  Thickened and merely set-theoretic crosses remain outside the literal
+reduced-fibre scope.  No Jacobian counterexample is claimed.  **QED.**

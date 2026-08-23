@@ -7,20 +7,26 @@ status: >
   on which A->2^(-e)T_n A is integral and remains equal modulo T_n^r Z^n is
   explicit.  Its quotient separates coordinatewise integrality from one
   odd-core carry, with all e=0, r=0, n=1, pre-core, and post-core boundaries.
+  Inside one ambient exact-gap shell, the unique maximal part of that fixed
+  branch lattice is cut out by one further response-parity layer, and its
+  elementary two-group quotient is explicit.  Across all finite exact-gap
+  shells, the full translation stabilizer is exactly the response kernel.
   On the true nonnegative Rule 30 phase ray, the exact two-slot free defect
   is strictly increasing at every fixed scale, so no same-scale exact Smith
   collision realizes a nonzero tariff class.  The fixed branch is not a
   congruence for the nonlinear exact-gap stratum; every Rule 30 prize remains
   open.
-source: root + rule30_next_operation + rule30_tariff_audit / incoming-signal extension session, 2026-08-23
+source: root + rule30_next_operation + rule30_tariff_audit + rule30_tariff_extension / incoming-signal extension session, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (rule30_tariff_audit, 2026-08-23).  A second
   companion constructs the actual image lattices by column HNF, the induced
   integral action, and K/J by unimodular Smith kernels.  It checks 1,134 full
   tariff filtrations and 213,052 exhaustive residue definitions, and finds
-  the n=2 exact-gap hostile that repairs the scope.  The primary, physical,
-  and independent companions contain no Python assert gate; normal and
-  optimized raw LF streams match all frozen transcripts.
+  the n=2 exact-gap hostile that repairs the scope.  A third companion proves
+  the response-parity repair, constructs 96 actual image lattices, checks 343
+  exponent cases and 41,648 K_e residues, and supplies 39,260 self-hostiles.
+  The primary, physical, independent, and branch companions contain no Python
+  assert gate; normal and optimized raw LF streams match all frozen transcripts.
 depends_on:
   - THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary
   - THM-3804-rule30-all-period-amplitude-lattice-smith-law
@@ -42,6 +48,11 @@ independent_output: 05-knowledge/results/rule30_fixed_division_tariff_independen
 independent_script_sha256: de1a2013c942ab5b0a5bc4dc5f294d0adc6a057b3e604f4461655d56a6ebec6b
 independent_output_sha256: 9bff73508609556be5f41ea32b232c23587935410ab4c637d9d1c2d9b0bcb95b
 independent_semantic_sha256: 5e28eecc3d2178fa35d9993e209b1a12ae76d7b00355b6f58e6d61c0ed655827
+branch_script: 04-computation/rule30_exact_gap_branch_tariff_extension_thm3824.py
+branch_output: 05-knowledge/results/rule30_exact_gap_branch_tariff_extension_thm3824.out
+branch_script_sha256: 3094e078105944381f56ea18b0a86ec3e79ae9de14a3b3aed169a8a32a2426f8
+branch_output_sha256: 745627646448bba7e155666e84dfc8ab15274c19a5a17a5727aa859dac656118
+branch_semantic_sha256: b3ac7f6f115c6da9223b8598add25a46df4c6429592f78f2a4eea4345ac40080
 hash_basis: raw LF bytes
 ---
 
@@ -227,6 +238,101 @@ n=2, r=3, e=2,       delta=(4,4) in L,
 N_e(delta)=(2,2) notin L,       L/K ~= Z/2.            (21)
 ```
 
+## 3A. The exact-gap branch tariff is one response-parity layer
+
+For every `f>=0`, retain `L=T_n^r Z^n` and write
+
+```text
+J_f=L intersect T_n^(-1)(2^f Z^n),
+K_f=L intersect T_n^(-1)(2^f L),
+X_f=J_f minus J_(f+1).                               (21a)
+```
+
+Thus `X_e` is the ambient exact-gap shell at the fixed exponent `e`.  Put
+
+```text
+B_e=K_e intersect J_(e+1).                           (21b)
+```
+
+Then `B_e` is the unique largest translation sublattice `H<=K_e` such that
+
+```text
+X_e+H subset X_e.                                    (21c)
+```
+
+Indeed, if `h in B_e`, then `2^(-e)T_nh` lies in `L` and is
+coordinatewise even.  Addition by `h` therefore leaves the normalized raw
+response unchanged modulo two, so it preserves the exact shell.  Conversely,
+if `h in K_e minus B_e`, then `h` itself lies in `X_e`, whereas
+
+```text
+T_n(2h)=2T_nh lies in 2^(e+1) Z^n.                   (21d)
+```
+
+Thus `h+h=2h` leaves `X_e`.  Every omitted class is its own minimal hostile,
+which proves both maximality and uniqueness.
+
+With `a,b,d,s` as in `(6)`, the remaining tariff is elementary:
+
+```text
+K_e/B_e ~= (Z/2)^beta,
+
+beta = d/2                         if d is even,
+       d-1                         if d is odd, s=0, e=0,
+       d                           if d is odd, s=0, e>=1,
+       d-1                         if d is odd, s>=1. (21e)
+```
+
+To prove `(21e)`, use the injective coordinates from `(11)--(12)`,
+`phi_s(z)=E_(n,d)T_d^s z`.  Membership in `K_e` is equivalent to
+`T_dz in 2^e Z^d`; put `y=2^(-e)T_dz`.  Modulo two, `K_e/B_e` is exactly
+the image of
+
+```text
+y |--> T_d^s y mod 2.                               (21f)
+```
+
+For even `d`, one has `s=0` and `image(T_d)` is the primitive repeated-pair
+lattice, whose mod-two dimension is `d/2`.  For odd `d`,
+
+```text
+image(T_d)={u in Z^d:sum(u)=0 mod 2}.
+```
+
+Hence the reachable `y mod 2` form the sum-zero hyperplane when `e=0`, and
+all of `F_2^d` when `e>=1`.  Over `F_2`, `T_d` has constant-vector kernel
+and sum-zero image.  Since `d` is odd, the constant vector is not sum-zero,
+so `T_d` restricts to an automorphism of the sum-zero hyperplane.  Applying
+`T_d^s` gives all four cases in `(21e)`.
+
+## 3B. Global adaptive boundary
+
+Let `g(x)` be the finite common two-adic valuation of `T_nx` on
+`L minus ker(T_n)`.  The largest translation subgroup preserving every
+finite exact-gap shell is
+
+```text
+Stab_L(g)=ker(T_n restricted to L).                  (21g)
+```
+
+The kernel plainly preserves every response.  If `T_ndelta` is nonzero and
+has gap `e`, however, then `x=delta` has gap `e`, while `x+delta=2delta`
+has gap `e+1`.  Therefore no other translation survives.  In the effective
+coordinates of `(11)`,
+
+```text
+rank Stab_L(g) = d/2     before the odd core (d even),
+                   0     at and after the odd core (d odd).              (21h)
+```
+
+This is an amplitude-lattice result, not a recovery of projective chronology.
+The connection to THM-3825 is only typed: both divide by a valuation and keep
+a remainder, but THM-3825 decodes arithmetic tags while `(21f)` retains one
+branch label.  Here full odd normalized type, phase ownership, signed gauge,
+ordinary carry, projective scale history, and the center consumer are lost.
+THM-3516's depth-six carry hostile prevents response parity from serving as a
+center carrier.
+
 ## 4. The physical exact free defect separates phase
 
 Retain THM-3512's packed Rule 30 orbit
@@ -309,6 +415,11 @@ inequalities through `m=8,t=4096` as a control of `(24)`.
 The independent companion instead constructs the actual lattices.  It
 checks `162` image HNFs, `1,134` full `K/J` filtrations, `213,052`
 exhaustive residue definitions, all boundary types, and hostile `(20)`.
+The branch companion constructs `96` actual image lattices and checks `343`
+exponent cases, `41,648` `K_e` residues, `2,388` preserving translations,
+`39,260` self-hostiles, and `96` adaptive-kernel ranks in the explicit
+universe `1<=n<=12`, `0<=r<=7`, `0<=e<=4`,
+`2^((e+1)rank(L))<=131072`.
 
 Run
 
@@ -319,6 +430,8 @@ python3 -B 04-computation/rule30_physical_sibling_defect_thm3824.py
 python3 -B -O 04-computation/rule30_physical_sibling_defect_thm3824.py
 python3 -B 04-computation/rule30_fixed_division_tariff_independent_audit_thm3824.py
 python3 -B -O 04-computation/rule30_fixed_division_tariff_independent_audit_thm3824.py
+python3 -B 04-computation/rule30_exact_gap_branch_tariff_extension_thm3824.py
+python3 -B -O 04-computation/rule30_exact_gap_branch_tariff_extension_thm3824.py
 ```
 
 Each normal and optimized raw LF stream equals its named frozen output.

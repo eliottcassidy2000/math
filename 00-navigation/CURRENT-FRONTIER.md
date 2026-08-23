@@ -322,8 +322,9 @@ family, decoder and `liminf H(X)/(log log X)^2>=1/20`, not a full asymptotic.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** THM-3502/3511/3512/3516 retain compiler/owner/carry; THM-3778
   excludes finite-spatial cycles. THM-3804 gives all Smith forms; THM-3824
-  gives fixed-division tariffs and phase separation. Adaptive/projective
-  chronology and every prize remain OPEN.
+  gives fixed-division and one-shell parity tariffs, same-scale separation,
+  and the all-shell stabilizer as the response kernel (zero at odd core).
+  Adaptive/projective chronology and every prize remain OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  The older audited
   chain THM-3543--3782 supplies degree/height floors and closes the named
   Nagata/GGHV, Cohn, radial, Pell, simple-pole, low-support and target-word
