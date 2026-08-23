@@ -341,11 +341,9 @@ is sharp: equal counts allow two densities or none.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT
   (MISTAKE-205); THM-3544/50 force composite degree `>=6`, height `>=8`, and
   Nagata/GGHV give reduced height `>=108` (only `(72,108)<125`).
-  THM-3543--60 close collision/ray/cyclic/low-width/shear sectors; THM-3561/
-  69/83/84 and 3581/89--92 close `2x3` and exponent-two `2x4/3x3`
-  (THM-3592 repaired); wider cells stay OPEN. THM-3595--3604 close separated/
-  toric/graph/rational/multiarm channels; THM-3605/07/08/11/14/17 close
-  Russell families. THM-3618/22 classify fibre separators and their graph
+  THM-3543--3617 close the recorded collision, ray, cyclic, low-width, shear,
+  toric, graph, rational, multiarm and Russell sectors (THM-3592 repaired);
+  wider cells stay OPEN. THM-3618/22 classify fibre separators and their graph
   closure; THM-3619/23 close all even folds. Non-even THM-3627 closes one
   polynomial, THM-3630 denies a uniform jet bound, THM-3632 blocks its
   algebraization, and THM-3634/35 give the rank gates, retained jet plane,
@@ -360,9 +358,11 @@ is sharp: equal counts allow two densities or none.
   but THM-3681 closes every continuation at universal order six. Pending-
   audit THM-3683 leaves only four quartic roots after the retained six-jet
   screen; THM-3687 lifts all four through actual-ring `J_0=1`; `J_1,J_2` stay
-  open. THM-3684 blocks one-coordinate mates. THM-3685--3712 give the `y=0`
-  Danielewski `>=3` weights/output, first `3x4`, and cap `>=22`: complete
-  W002/W007/W008 are empty; one W003 family is closed; W003--W006 remain live.
+  open. THM-3684 blocks one-coordinate mates. THM-3685--3717 give the `y=0`
+  Danielewski weights/output, first `3x4`, and cap `>=22`: W002/W007/W008
+  are empty; only W003-D remains, with W004--W006 live. THM-3709/3719 close
+  every alternating two-left/two-right Cohn cell; THM-3716 proves the monomial
+  Broughton cokernel family. Longer Cohn words remain live.
   Higher-degree zero-debt polynomials, continuation of the four THM-3683 folds,
   THM-3641's excluded nonordinary tangent collisions, nonquadratic folds, and
   THM-3629's genuinely two-output-mixed `H'(0)!=0` pairs remain OPEN. A

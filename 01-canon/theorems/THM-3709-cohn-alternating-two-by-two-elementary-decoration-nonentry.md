@@ -11,8 +11,9 @@ status: >
   directional leading-curl obstruction.  The remaining constant resonance
   is a linear form of the Broughton polynomial X+X^2 T, whose Hamiltonian
   cokernel kills the second correction.  This closes the complete
-  nonidentity alternating two-by-two Cohn repair cell, not an identity
-  shortening, longer reduced words, general non-elementary classes, or JC(2).
+  nonidentity alternating two-by-two Cohn repair cell.  THM-3719 separately
+  closes every identity shortening; longer reduced words, general
+  non-elementary classes, and JC(2) remain open.
 source: root / 2026-08-22
 audit: >
   PASS.  An independent audit rederived both right products, both exposed
@@ -27,6 +28,7 @@ depends_on:
   - THM-3653-cohn-factorial-repair-and-weighted-rectangle-holonomy
 related:
   - THM-3655-cohn-alternating-two-source-factor-row-obstruction
+  - THM-3719-cohn-aligned-identity-shortening-laurent-nonentry
 script: 04-computation/jc2_cohn_alternating_two_by_two_decoration_thm3709.py
 output: 05-knowledge/results/jc2_cohn_alternating_two_by_two_decoration_thm3709.out
 script_sha256: 4ddf624d34b0503f33f0e29e30a60ce694f658ed6bccbcbb76deb68642fee14f
@@ -368,10 +370,11 @@ the precise failed implication: two alternating right corrections cannot
 cancel the coordinate factor in the top curl, no matter how high either
 side's degree is.
 
-The theorem does **not** treat a zero right parameter (an identity shortening),
-more than two elementary factors on either side, another non-elementary
-`SL_2/E_2` core, or `JC(2)`.  Its positive successor is therefore sharply
-typed: settle the shortened boundary, or make the reduced word longer.
+This theorem does **not itself** treat a zero right parameter, but THM-3719
+now closes every such identity shortening.  More than two elementary factors
+on either side, another non-elementary `SL_2/E_2` core, and `JC(2)` remain
+open.  The first positive Cohn successor must therefore make a reduced word
+longer or change the non-elementary core.
 
 Reproduce the exact leading-form audit with
 

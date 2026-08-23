@@ -1,0 +1,9 @@
+theorem=THM-3719-Cohn-complete-identity-shortening-Laurent-nonentry
+closed_cells=all_alternating_two-left_words_with_right_length_at_most_one
+scalar_gates=aligned_hyperbolic_Euler,cross_Broughton_Laurent;duals=quarter_turn
+obstruction=forbidden_lowest_Laurent_layer_in_both_orientation_classes
+hostile_grid=parameter_degree:0..6;Q_degree:1..6;Laurent_r:-12..1;row_probes:98=PASS
+remaining_shortening=NONE;complete_two-by-two_cell_with_T3709=YES
+semantic_sha256=f971dee92c30b91f204c21b57171c8357d1fae9c545a54ec200cdeb3a2a05e94
+CHECKS=1209
+RESULT=PASS
