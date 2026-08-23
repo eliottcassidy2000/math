@@ -2,7 +2,7 @@
 id: THM-3803
 title: "Affine-linear R-repairs of nodal carriers have critical points"
 status: >
-  PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.  On the c=1
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the c=1
   cubic pseudo-plane, every canonical nodal carrier
   A=e^2-z/3+r(b_0+b_1e), with (b_0,b_1) nonzero as a pair, has a critical
   point.  In the genuinely binomial case the degree-eleven residual
@@ -12,12 +12,15 @@ status: >
   open.  This is a carrier obstruction, not a global JC(2) theorem.
 source: root / affine-linear universal-resultant boundary lane, 2026-08-23
 audit: >
-  SELF-AUDITED PROOF CANDIDATE.  The Hamiltonian reduction, full residual
-  coefficient table, degree and boundary-support argument, homogeneous
-  finite-root seam, excluded denominator values, explicit point recovery,
-  and Casimir implication were rederived symbolically.  The deterministic
-  companion has 279 active gates; normal and optimized runs byte-match the
-  frozen transcript.  Independent hostile audit remains due.
+  INDEPENDENT HOSTILE AUDIT PASS.  The Hamiltonian reduction and reconstruction
+  identities were rederived directly.  An independently assembled 6-by-6
+  Sylvester determinant reproduces the resultant and every coefficient of H.
+  The audit checked the boundary-only UFD factorization, the top-ratio/order
+  contradiction, the h_0=h_1=0 seam, and the fixed-degree projective
+  specialization when P drops degree: Q remains quartic and is nonzero at the
+  unique point at infinity.  The deterministic companion has 279 active gates;
+  normal and optimized runs byte-match the frozen transcript, whose raw hashes
+  match the metadata.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3790-cubic-pseudoplane-arm-nodal-immersion-gate
@@ -34,7 +37,7 @@ hash_basis: raw LF bytes
 
 # THM-3803 -- every affine-linear r-repair remains critical
 
-**PROVED + VERIFIED-EXACT + PENDING INDEPENDENT HOSTILE AUDIT.**  Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over
 an algebraically closed field `k` of characteristic zero.  On the `c=1`
 member of the THM-3785 cubic pseudo-plane put
 
@@ -132,7 +135,8 @@ eta(b_0+b_1eta)!=0.                                    (11)
 ## 3. The off-boundary root is an actual critical point
 
 At `e=eta`, equation `(5)` says that `P,Q` have a common projective
-`u`-root.  It is finite: the homogenized value of `Q` at infinity is
+`u`-root, using their fixed generic degrees two and four.  The projective
+line has a unique point at infinity, and the homogenized value of `Q` there is
 
 ```text
 LC_u(Q)=-729g(eta)^3 !=0,                               (12)
@@ -180,4 +184,4 @@ nonmonomial repairs, mixed `r`/`z^2` corrections, or a different nodal arm
 profile.  The deterministic companion verifies `(3)--(16)`, the entire
 coefficient table, and 81 exact specialized controls with 279 active gates.
 Normal and optimized executions byte-match the frozen transcript.
-**QED, conditional only on independent hostile audit.**
+**QED.**
