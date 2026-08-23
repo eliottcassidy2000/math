@@ -183,11 +183,48 @@ check(
 )
 
 
+# Root-free finite-etale control over Q.  The special fibre b^2+1 is
+# irreducible over Q, so the resonant coefficient lives intrinsically in
+# E=Q[B]/(B^2+1), not in a chosen splitting field.
+B = sp.symbols("B")
+modulus_E = sp.Poly(B**2 + 1, B, domain=sp.QQ)
+
+
+def reduce_E(expression: sp.Expr) -> sp.Expr:
+    """Canonical representative in Q[B]/(B^2+1)."""
+
+    polynomial = sp.Poly(sp.expand(expression), B, domain=sp.QQ)
+    return sp.expand(sp.rem(polynomial, modulus_E).as_expr())
+
+
+check(reduce_E((2 * B) * (-B / 2)) == 1, "nonsplit derivative is a unit")
+nonsplit_sigma = b**2 + 1 + c * b + c**2
+nonsplit_jet = B - c / 2 + 3 * B * c**2 / 8
+nonsplit_residual = sp.Poly(sp.expand(nonsplit_sigma.subs(b, nonsplit_jet)), c)
+for exponent in range(3):
+    check(
+        reduce_E(nonsplit_residual.coeff_monomial(c**exponent)) == 0,
+        f"nonsplit Hensel recursion mod c^3 exponent={exponent}",
+    )
+nonsplit_rho = reduce_E(3 * B / 8)
+check(sp.Poly(nonsplit_rho, B).degree() == 1, "nonsplit rho is not a Q-scalar")
+i_unit = sp.I
+check(
+    sp.simplify(nonsplit_rho.subs(B, i_unit) - 3 * i_unit / 8) == 0,
+    "nonsplit rho first geometric arm",
+)
+check(
+    sp.simplify(nonsplit_rho.subs(B, -i_unit) + 3 * i_unit / 8) == 0,
+    "nonsplit rho second geometric arm",
+)
+
+
 semantic = {
-    "atlas": "Ui=A2_(c,ai); all multi-overlaps=D(c)=Gm_x_A1; ai=(b-HenselJet_i(c))/c^n",
-    "class": "[omega]=[([c^(n-1)]HenselJet_i(c))_i] in k^h/k*1",
-    "controls": "n1_fixed_nonexact;n>=2_fixed_exact;common_resonant_translation_exact;THM3789=(1,0,...,0)",
-    "darboux": "nonconstant_resonant_vector_implies_no_polynomial_Darboux_pair",
+    "atlas": "after finite-etale splitting: Ui=A2_(c,ai); all multi-overlaps=D(c)=Gm_x_A1; ai=(b-HenselJet_i(c))/c^n",
+    "class": "E=k[bbar]/Sigma0; universal Hensel jet bhat; rho=[c^(n-1)]bhat; H2=E/k; [omega]=rho mod k",
+    "controls": "n1_fixed_nonexact;n>=2_fixed_exact;common_resonant_translation_exact;THM3789=(1,0,...,0);Q_nonsplit_rho=3B/8",
+    "darboux": "nonscalar_resonant_element_implies_no_polynomial_Darboux_pair",
+    "descent": "split arm residue map is Galois-equivariant; finite-etale and de-Rham base change descend K^h/K to E/k",
     "hypercover": "q1_row_starts_at_edges;ker(edge_to_triangle)=vertex_differences=k^h/constants",
     "surface": "c^n e=Sigma(c,b); Sigma(0,b)_squarefree; no_global_factorization_needed",
 }
@@ -197,9 +234,10 @@ print("theorem=THM-3791-moving-root-danielewski-resonant-jet-de-rham-law")
 print("surface=c^n*e=Sigma(c,b);Sigma(0,b)_squarefree;no_factorization_needed")
 print("atlas=Ui=A2_(c,ai);ai=(b-HenselJet_i(c))/c^n;multi_overlap=D(c)")
 print("transition=aj-ai=(HenselJet_i-HenselJet_j)c^(-n)")
-print("resonance=r_i=coefficient_[c^(n-1)]HenselJet_i(c)")
-print("derham=H2=k^h/k*1;[omega]=[r];exact_iff_r_constant")
-print("darboux=nonconstant_r_implies_no_pair")
+print("resonance=rho=coefficient_[c^(n-1)]universal_Hensel_jet_in_E")
+print("derham=H2=E/k;[omega]=rho_mod_k;exact_iff_rho_scalar")
+print("darboux=nonscalar_rho_implies_no_pair")
+print("nonsplit_Q=Sigma=b^2+1+cb+c^2;n=3;rho=3B/8_in_Q[B]/(B^2+1)")
 print("controls=n1_fixed_obstructed;n_ge_2_fixed_exact;THM3789_r=(1,0,...,0)")
 print(f"CHECKS={CHECKS}")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
