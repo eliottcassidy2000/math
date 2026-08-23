@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — 2026-08-21.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
+**Rolling state — 2026-08-22.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -35,18 +35,19 @@ mode/cochain laws. THM-3414--3416 give ZMC rank-4/5/6 bases; THM-3425 gives
 primitive cap-six support; [THM-3453](../01-canon/theorems/THM-3453-global-literal-half-twist-cap-seven-support-classification.md)
 allows 15-atom cap-seven support only at zero current.
 
-The newest exact interface is THM-3665--3672. The optimal three-site detector
-has a one-centre/two-shift realization, sharp level-13 frame and rank-plus-one
-law. All 120 typed packet currents are nonzero and all THM-2365 successor-mass
-defects are negative. A genuine-cover sufficient test reduces to thirteen
-rational masses: simultaneous vanishing forces six equal `A` masses, six equal
-`B` masses and `S0+A=2B`. The fixed-source blind space is the pure-source line,
-with one extra nonsource diagonal only on the scalar-sum-zero branch. The live
-analytic obligation is to exclude that thirteen-mass recirculation on a
-genuine cover, or prove grouped all-unit current nonzero in a strict common
-phase cone; termwise address banks do not do this. Older CSP/ray/phase/current
-work (THM-3135--3524) supplies sidecars, not the typed bridge or LRC conclusion.
-THM-2363/THM-2368 are sidecars; THM-2417--2894 recover valuations, not the `28,393` semantic roots or their gluing (MISTAKE-281/300/310/313).
+The newest exact interface is THM-3665--3674 and THM-3701/3705/3706/3710/3713.
+THM-3701 gives a rank-12 successor gate with equal scalar **mass** null-line and
+six minimal charts. THM-3705 gives the bulk/endpoint tariff; THM-3706 rules out
+fixed 13-adic depth. THM-3710 finds the `(14j+/-1)/182` endpoint skeleton, but
+its two support parts nearly cancel, so support splitting loses the leak.
+THM-3713 retains `u=r-t` with complete detectors. A lawful hostile has constant
+successor marginal but `D_H=E_dt=4/169`; any rational local defect reaches all
+twelve deep colors. Its typed non-cover control has offsets
+`{1,2,10,11,12}`, signs `++---`. The cover obligation is an owner-typed defect
+or circulant closure retaining word, owner and phase. The mass line is not
+THM-3679's address diagonal. THM-3135--3524 supply sidecars, not this bridge;
+THM-2363/THM-2368 and THM-2417--2894 do not recover the `28,393` semantic roots
+or their gluing (MISTAKE-281/300/310/313). No cited result proves LRC(14).
 
 ### Independent routes that remain live
 

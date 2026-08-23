@@ -2,7 +2,7 @@
 
 > **DETAILED MACHINERY MAP:** read [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) first. This panel is current; dated sections preserve searchable history and may be superseded.
 
-## 2026-08-14 current control panel
+## 2026-08-22 current control panel
 
 **Status: OPEN.** Projected `k=2,3` caps are `1,579/216`; at `z1=216`, THM-3361 closes `gcd72/L720720` and leaves ledger/rows/families `372,914/110/12`. THM-3349 closes all-nine-low two-star dilations; THM-3350/3352 close every one of the `220,254,480` labelled connected-low primitive rays; THM-3355 closes every disconnected-low assignment. Their composition closes the `561` reflected bodies in the declared six-distinct-level `k=1` lane. Arbitrary `k<=1`, projected `k=2,3`, the rung, and LRC(14) remain open; `q<=25` is false.
 **Disconnected-low closure.**  Its `36,520` realizable component profiles have complete-multipartite cross graphs. THM-3355's centered primitive-grid lemma proves the edge floor `1/294` except on four analytic horns. Deleting those four edges leaves a five-edge regular tree in 150 partitions, a four-edge forest in 51, and the unique `K_(1,5)` exception; exact level-sensitive debt bounds close the latter two. Independently, MISTAKE-377's repaired admissibility condition `9|c|<=p` and THM-3360's exact `22,890`-ray limit/tail certificate prove the uniform physical edge floor even on those four lanes. The weighted proof is the primary branch closure; the affine proof is the reusable pairwise strengthening. See the [affine note](../07-reflections/LRC14-disconnected-low-affine-limit-and-tail-certificate-kps-S171.md).

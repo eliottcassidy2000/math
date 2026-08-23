@@ -1,6 +1,6 @@
 # Active Guardrails
 
-**Short hazard sheet — refreshed 2026-07-28.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
+**Short hazard sheet — refreshed 2026-08-22.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
 
 ## Universal
 
@@ -83,8 +83,8 @@
     Carry-forgetting still turns thirteen disjoint `Delta^11`s into a false
     `boundary Delta^12`; do not infer endpoint emptiness or export the cap.
 27g. **Copies are not common atoms.** THM-2806 has bare-only `D3`/empty `M`; THM-2818's positive copies fail native/source/endpoint sidecars. Neither pays THM-2772.
-27h. **A generator-valued endpoint germ is not a physical allocation action.** THM-2825's `+h/+2h`, `M_3 tensor I_587`, and punctured `V_4` cross absent/present source carrier; the missing corner cannot permute a `573/14` bank.
-    THM-2859 finds one decorated `Z^8` endpoint arrow, but the complete 685-path forest realizes only labels `{0,4,8,9}` and its 98 rootless paths supply none. No `C13` action/intertwiner, q/E3 descent, rank-587 base object, row exclusion, or LRC(14) follows.
+27h. **A generator-valued endpoint germ is not a physical allocation action.** THM-2825/2859 lack the source carrier and `C13` action needed to turn their missing-corner or decorated-arrow data into a row exclusion; neither implies LRC(14).
+27i. **Successor quotients lose inequivalent coordinates.** Mass is not address; offset sums can hide `D_H>0`; denominator splits lose cancellation; fixed 13-adic depth fails. THM-3672/3713 controls are non-cover: retain offset, word, owner, phase, and cover semantics.
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211/THM-2631;
