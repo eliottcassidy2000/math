@@ -2,8 +2,8 @@
 id: THM-3823
 title: "Nonlinear cubic etale surface has compact Euler characteristic eight"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT
-  HOSTILE AUDIT.  Over C, the THM-3811 affine etale surface U has compactly
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over C, the
+  THM-3811 affine etale surface U has compactly
   supported Euler characteristic 8.  Hence no finite etale morphism
   A2_C -> U exists.  Every dominant etale plane atlas is necessarily
   nonfinite; if its generic degree is d, its exact signed Euler sheet debt is
@@ -12,13 +12,22 @@ status: >
   a planar Jacobian counterexample.
 source: root / nonlinear-cubic Euler-atlas obstruction lane, 2026-08-23
 audit: >
-  SELF-AUDITED proof candidate.  The 16-gate exact companion checks the
+  INDEPENDENT HOSTILE AUDIT PASS (jc_sparse_direct_search, 2026-08-23).
+  The audit independently reconstructed the normalization as P1 minus two
+  denominator roots and infinity, checked pole orders and absence of
+  cancellations, and used uniqueness of the double/triple root to verify
+  that only q=-2,-1,0,3 are identified.  It checked the two singleton
+  nonzero triple fibres and the exact three-sheet/simple-companion
+  stratification, obtaining chi_c(U)=8.  The finite-cover contradiction and
+  both THM-3578 consequences were rederived with their proper/nonproper and
+  signed-Euler qualifications intact.  No repair was found.  The 16-gate
+  exact companion checks the
   rational branch normalization, all three normalization punctures, the
   four distinct origin preimages, the two affine nonorigin triple-root
   parameters, and the complete compact-Euler ledger.  The proof separately
   checks the projection strata against THM-3811 and the boundary-rank and
   Euler-debt consequences against THM-3578.  Normal and optimized replay
-  byte-match the frozen output.  Independent hostile audit is pending.
+  byte-match the frozen output and raw hashes.
 depends_on:
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3578-zariski-main-boundary-rank-and-sheet-debt
@@ -35,8 +44,8 @@ hash_basis: raw LF bytes
 
 # THM-3823 -- the nonlinear cubic surface has Euler mass eight
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT
-HOSTILE AUDIT.**  Work over `C`.  Let
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over `C`.
+Let
 
 ```text
 pi:U -> A2_(A,C)                                                   (1)
@@ -219,5 +228,4 @@ Both executions must byte-match
 The companion reports `CHECKS=16` and `RESULT=PASS`.  It contains no inactive
 Python `assert`.  The theorem rules out finite or proper plane atlases only;
 the nonfinite dominant etale case, and hence the planar Jacobian
-counterexample lane, remains **OPEN**.  **QED, subject to independent hostile
-audit.**
+counterexample lane, remains **OPEN**.  **QED.**

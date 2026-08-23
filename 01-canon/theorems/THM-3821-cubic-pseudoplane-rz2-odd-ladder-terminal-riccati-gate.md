@@ -2,8 +2,8 @@
 id: THM-3821
 title: "The first RZ2 extension on the cubic pseudo-plane has no Darboux pair"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  The complete first rz^2 extension of the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The complete
+  first rz^2 extension of the
   THM-3814 canonical nodal profile admits no Darboux pair.  A hypothetical
   pair must enter one of two exact Kummer anatomies: the generic odd ladder
   7,5,3,1 with a Riccati square payment, or the P=0 skip ladder 7,3,1 with a
@@ -13,7 +13,18 @@ status: >
   not for arbitrary profiles on the surface and not a planar-JC theorem.
 source: jc_zero_debt_lift / cubic-pseudoplane rz2 odd-ladder lane, 2026-08-23
 audit: >
-  PROVISIONAL EXACT CANDIDATE.  The deterministic companion has 71 active
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
+  The audit rederived the Poisson signs and monic normal form, every Kummer
+  valuation family, the generic integration/divisibility step, and the
+  local valuation transfers that produce the 7-5-3-1 and 7-3-1 ladders.
+  It independently expanded the full r^2z differential polynomial at the
+  degenerate address: its v coefficient is exactly
+  -15 rho^2 U/2 and its v' coefficient has derivative 3 rho^2, giving the
+  impossible resonance m=5/2 with no hidden order-m term.  The generic
+  root payment, both monomial origin jets, the odd opposite-root seam, and
+  the algebraic root-of-unity contradiction q+q^-1=-4 were checked
+  separately.  No proof or scope repair was found.  The deterministic
+  companion has 71 active
   gates checking the Poisson Casimir and signs, unique monic reduction, six
   descending source buckets, the asymmetric 7/4 contradiction, all 7/4,
   7/5, and 7/3 valuation families, the integrated polynomial relation, the
@@ -22,8 +33,8 @@ audit: >
   and degenerate constant- and linear-tower contradictions.  The final gates
   independently check the all-degree r^2z root coordinates, the half-integral
   degenerate resonance, the generic origin jets and D-root ratio, and the
-  degenerate monomial terminal/origin conflict.  Normal/-O/frozen/hash/docs
-  replay and independent proof rederivation are required before promotion.
+  degenerate monomial terminal/origin conflict.  Normal and optimized runs
+  byte-match the frozen output and raw hashes.
 depends_on:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
   - THM-3814-nodal-rz-kummer-profile-degree-gate
@@ -41,9 +52,8 @@ hash_basis: raw LF bytes
 
 # THM-3821 -- the first RZ2 layer is empty
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Let `k` be an algebraically closed field of
-characteristic zero and put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Let `k` be an
+algebraically closed field of characteristic zero and put
 
 ```text
 B=k[r,z,e]/(r^2e-z^3+r),

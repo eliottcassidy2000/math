@@ -2,8 +2,8 @@
 id: THM-3827
 title: "Generic-fibre genus floor for nonlinear cubic plane atlases"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE
-  AUDIT.  For the generative closed-polynomial factor h=p(g) of the
+  PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the
+  generative closed-polynomial factor h=p(g) of the
   pulled-back THM-3811 arm function, the smooth projective geometric generic
   fibre of g has genus at least three.  In genus three it must be isomorphic
   to the explicit THM-3822 hyperelliptic sidecar after base change.  Existence
@@ -14,16 +14,26 @@ status: >
   No Jacobian counterexample is constructed.
 source: jc_quartic_c3_construct / generic-fibre genus reframe, 2026-08-23
 audit: >
-  SELF-AUDITED proof candidate.  The 22-gate exact companion verifies the
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn-boundary, 2026-08-23).
+  The audit checked the cited source directly: Arzhantsev--Petravchuk
+  Proposition 1 and Corollary 1 give existence and affine uniqueness of a
+  generative closed polynomial, while Lemma 3 is exactly the required
+  relative-algebraic-closure equivalence.  Independently, it reconstructed
+  the regular generic curve, the function-field injection from a
+  nonconstant sidecar coordinate, proper extension and Riemann--Hurwitz,
+  the denominator-valuation proof of R intersect K(g)=K[g], and the reduced
+  special-fibre contradiction component by component.  For the five-slope
+  strengthening it separately checked algebraic independence of h,k from
+  the intrinsic D-quadratic, the second-order h-adic lift, pairwise
+  coprimality of the five pencil members, and both surviving subset degrees.
+  No quantifier or scope repair was needed.  The 22-gate exact companion
+  verifies the
   monic degree-eight sidecar, a squarefree hostile fibre, the full generic
   discriminant, stability under a nonconstant Stein composition, the
   genus-three count, every excluded Riemann--Hurwitz genus, and reduced-arm
   controls, the second completed square, the five distinct pencil slopes,
   and both terminal subset obstructions.  Normal and optimized replay agree
-  with the frozen output.
-  Independent audit of the cited generative-factor import, the
-  relative-constant-field step, and the special-fibre quantifiers is still
-  required before promotion to PROVED.
+  with the frozen output and raw hashes.
 depends_on:
   - THM-3822-nonlinear-cubic-plane-atlas-sl2-and-punctured-arm-gate
 related:
@@ -41,9 +51,8 @@ hash_basis: raw LF bytes
 
 # THM-3827 -- a plane atlas needs generic-fibre genus at least three
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; PENDING INDEPENDENT
-HOSTILE AUDIT.**  Work over an algebraically closed field `K` of
-characteristic zero.  Put
+**PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work
+over an algebraically closed field `K` of characteristic zero.  Put
 
 ```text
 R=K[x,y],                 L=K(x,y).                              (1)
@@ -318,5 +327,4 @@ The generative-polynomial existence and uniqueness used here are **CITED**,
 not reproved by the exact companion.  They make `(19)` unconditional for
 every dominant etale plane atlas over the stated field, while the function-
 field argument of Sections 1--4 is self-contained once `h=p(g)` and `(3)`
-are supplied.  No planar Jacobian counterexample is claimed.  **QED, subject
-to independent hostile audit.**
+are supplied.  No planar Jacobian counterexample is claimed.  **QED.**
