@@ -91,7 +91,7 @@ interesting improvement.  This is a structural boundary, not the
 Arithmetic--Kakeya target: a finite forcing record is not automatically a
 universal lower bound, and the previously used rule-(1) is unsound.
 
-[THM-3892](../01-canon/theorems/THM-3892-arithmetic-kakeya-strict-two-by-two-cyclic-score-seven-four.md)
+[THM-3896](../01-canon/theorems/THM-3896-arithmetic-kakeya-strict-two-by-two-cyclic-score-seven-four.md)
 now classifies the first constructible strict cycle completely.  The exact
 `[2,2]` optimum is `7/4`: three seeds attain it, while a symbolic audit of all
 `10*6=60` two-seed/firing-pair families finds no required rank pair `(6,4)`.

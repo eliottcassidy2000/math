@@ -2,8 +2,8 @@
 id: THM-3891
 title: "Quadratic C8 carriers split automatically and pay two pencil branch values"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  Every quadratic binary-cubic leading row whose
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every quadratic
+  binary-cubic leading row whose
   discriminant is one eighth power splits automatically: its dehomogenized
   root divisor is a finite etale degree-three cover of A1, and a one-branch
   Riemann--Hurwitz bound trivializes that cover.  Factor degrees then reduce
@@ -15,16 +15,18 @@ status: >
   its unique projective infinity point.
 source: jc_sparse_direct_search / post-THM-3889 split-leading classification, 2026-08-23
 audit: >
-  SELF-AUDITED strengthening candidate.  The exact companion verifies the
+  INDEPENDENT HOSTILE AUDIT PASS.  The canonical companion verifies the
   finite-etale ramification inequality, factor-degree exhaustion, the
   quadratic-factor collapse, product discriminant and both coordinate normal
   forms, every moving-class Newton edge and coefficient seam, both weighted
   initial identities, and the proportional reducible exits.  It also contains
   explicit gcd-degree 0, 1, and 2 pencil controls and a separately typed
-  6,561-row FINITE-EXACT hostile census.  Normal and -O replays are
-  byte-identical to the frozen 13173-check transcript.  Independent audit
-  must recheck automatic splitting, the pencil branch-value lemma, and the
-  weighted blow-up-to-normalization implication.
+  6,561-row FINITE-EXACT hostile census.  A structurally independent
+  1,677-gate implementation rederives automatic splitting, both coordinate
+  classes, all gcd boundaries, the moving Newton cases, and the weighted
+  blow-up-to-normalization implication.  It also proves the pencil lemma for
+  every squarefree binary degree n>=3 and exhibits the sharp n=2 hostile.
+  Normal, optimized, and frozen streams byte-match in both implementations.
 related:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
@@ -34,15 +36,19 @@ output: 05-knowledge/results/jc2_split_quadratic_c8_pencil_branch_values_thm3891
 script_sha256: 622d74adc7c3242269970875a5166e7972c2aa2fae124ca6cbb4298a1dbad3d1
 output_sha256: 0c35feb2ac9f18b8265b5c8962b594112ac5e5000fff7edf76f2639cc450a564
 semantic_sha256: 7482b33725681925e24fc3fa40a5f35f0d39d7c97db107a098fca45f49bd76a2
+independent_audit_script: 04-computation/jc2_split_quadratic_c8_pencil_branch_values_independent_audit_thm3891.py
+independent_audit_output: 05-knowledge/results/jc2_split_quadratic_c8_pencil_branch_values_independent_audit_thm3891.out
+independent_audit_script_sha256: e06d6da5e9b3e77da5f84d053b2257e51a8ae51c34985ffcdd71082707b97d90
+independent_audit_output_sha256: 55ecc29ffed72157a1f580ae639ffefb809b268e56ded91c047604d9c8c7755f
+independent_audit_semantic_sha256: abdb68ce5b97ed7d1b2333010634c591b0fdc3998a57bea78dcfb167717de625
 hash_basis: raw LF bytes
 ---
 
 # THM-3891 -- a quadratic eighth power cannot hide one infinity place
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**  Work over an algebraically closed field `k` of
-characteristic zero.  Let `A,C` be target coordinates and `U,V` binary-form
-coordinates.  Consider a binary cubic
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  Let `A,C` be target
+coordinates and `U,V` binary-form coordinates.  Consider a binary cubic
 
 ```text
 Phi=Phi_2+A Phi_A+C Phi_C,                                  (1)
@@ -282,6 +288,22 @@ the two collision values are distinct.  The remaining case `r=0` is exactly
 the proportional case.  This proves the lemma, including common-factor and
 root-at-infinity boundaries.
 
+The same proof has a sharp all-degree extension.  If `F,G` are binary forms
+of degree `n>=3`, `F` is squarefree, and `G` is not proportional to `F`, then
+`Disc(sF+tG)` has at least two projective support values.  With
+`E=gcd(F,G)` and `r=n-deg E`, the case `r>=2` is the same degree-`r`
+Riemann--Hurwitz argument.  If `r=1`, the squarefree factor `E` has at least
+two roots, and injectivity of the residual degree-one map makes their
+collision values distinct.  The threshold is sharp: for `n=2`,
+
+```text
+F=UV,              G=U(U+V),
+Disc(sF+tG)=(s+t)^2.                                     (19a)
+```
+
+Thus a squarefree nonproportional quadratic pencil may have only one support
+value.
+
 ## 5. Weighted blow-up of the constant carrier
 
 Write the arbitrary linear perturbation of `(9)` as
@@ -375,3 +397,14 @@ The theorem closes every quadratic leading row with a pure eighth-power
 discriminant.  Higher-degree coefficient profiles, a leading discriminant
 with several projective support points, non-binary cubic orders, the later
 affine-atlas conditions, and JC(2) remain **OPEN**.
+
+Reproduce both exact paths from the repository root with
+
+```bash
+python3 04-computation/jc2_split_quadratic_c8_pencil_branch_values_thm3891.py
+python3 -O 04-computation/jc2_split_quadratic_c8_pencil_branch_values_thm3891.py
+python3 04-computation/jc2_split_quadratic_c8_pencil_branch_values_independent_audit_thm3891.py
+python3 -O 04-computation/jc2_split_quadratic_c8_pencil_branch_values_independent_audit_thm3891.py
+```
+
+Each normal/optimized pair must byte-match its corresponding frozen output.

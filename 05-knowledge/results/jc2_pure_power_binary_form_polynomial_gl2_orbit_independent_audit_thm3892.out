@@ -1,0 +1,11 @@
+THM3892_ALL_BINARY_DEGREE_INDEPENDENT_AUDIT_20260823
+status=PASS;PROMOTION_READY;JC2_OPEN
+extension=binary_form_degree_n>=2
+covariance=det_exponent_n(n-1);scalar_exponent_2n-2
+finite_section_atlas=rows:80;tests:29440;unit_cases:1152
+positive_controls=degrees_2_through_6_det_one_orbit
+hostile_controls=nonunit_determinant_and_nonunit_scalar
+sharp_boundary=degree_two_pencil_one_support_but_orbit_classification_survives
+semantic_sha256=1a4da7a3d259b10c8baab724c454ab5731ff5945578ffd900da9a3a4a57ac6d9
+gates=4423
+ALL CHECKS PASSED

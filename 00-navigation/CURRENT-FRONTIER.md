@@ -399,7 +399,7 @@ support asymptotic or residue.
 ### Arithmetic-Kakeya forcing certificates
 
 **OPEN:** record/target `1.67513/1.675`. THM-3875 gives the `k=1` forest floor
-`2`; THM-3892 proves the strict `[2,2]` optimum `7/4` by 60-family audit.
+`2`; THM-3896 proves the strict `[2,2]` optimum `7/4` by 60-family audit.
 This cell, the `5/3` graph hostile and loose rule-(1) prove no AK bound.
 Next: larger strict `k=2` cells.
 

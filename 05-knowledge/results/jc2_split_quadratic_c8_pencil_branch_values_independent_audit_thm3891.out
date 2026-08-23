@@ -1,0 +1,9 @@
+THM3891_INDEPENDENT_HOSTILE_AUDIT_20260823
+status=PASS;PROMOTION_READY;JC2_OPEN
+coordinate_atlas=011:6561,pure:72,moving:48,constant:24;002:729,pure:4
+pencil_census=625;nonproportional=620;support_min=((0, 2), (1, 2), (2, 2));gcd_counts=((0, 348), (1, 224), (2, 48), (3, 5))
+strict_extension=squarefree_binary_degree_n>=3_pencil_has_two_support_values_unless_proportional
+weighted_normalization_implication=PASS
+semantic_sha256=abdb68ce5b97ed7d1b2333010634c591b0fdc3998a57bea78dcfb167717de625
+gates=1677
+ALL CHECKS PASSED

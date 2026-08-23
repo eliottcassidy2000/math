@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-463 (2026-08-23, concurrent proved-theorem namespace) -- two unrelated results acquired THM-3892
+
+- **What failed:** the strict Arithmetic--Kakeya `[2,2]` optimum and the
+  pure-power binary-cubic `GL_2` orbit classification were proved in
+  concurrent worktrees and both entered their local canon as `THM-3892`.
+  Each result and its exact artifacts were valid, but the theorem namespace
+  ceased to be injective after integration.
+- **Minimal witness / first failed implication:** the two distinct files
+  `THM-3892-arithmetic-kakeya-strict-two-by-two-cyclic-score-seven-four.md`
+  and
+  `THM-3892-pure-power-binary-cubic-polynomial-gl2-orbit-classification.md`
+  both declared `id: THM-3892`.  A clean local check before the concurrent
+  upstream reservation landed did not reserve the identifier globally.
+- **Repair / strongest survivor:** upstream's earlier pure-power cubic result
+  retains `THM-3892`; the complete strict-cell theorem, both exact companions,
+  both frozen transcripts, and all navigation links move together to
+  `THM-3896`.  No mathematical statement, hash-bearing file content, or
+  dependency edge changes.
+- **Reusable rule:** recheck theorem filenames and YAML identifiers against
+  freshly fetched remote history immediately before every proof commit, not
+  only before empty reservations; rename the whole artifact family together.
+
 ## MISTAKE-462 (2026-08-23, THM-3888 integral shell) -- simultaneous inverse integrality was mislabeled complete Weierstrass integrality
 
 - **What failed:** Section 2.2 assumed `u,v,T in overline{k(x)}[y]` but
