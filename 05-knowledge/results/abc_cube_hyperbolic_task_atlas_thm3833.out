@@ -1,0 +1,47 @@
+THM-3833 ABC-CUBE/HYPERBOLIC TASK ATLAS
+truth_gate=ABC is never assumed; every executable gate is unconditional finite-exact
+cube_universe=coprime 1<=a<b, a+b<=356
+cube_pairs=19314 decoder_eligible=5855
+quality_threshold_counts=>1/1:85,>6/5:8,>4/3:1,>3/2:0
+top_abc_quality_rows=
+  (1,80) m=512001 rad(abm)=9030 quality=1.443306744511 decoder=0
+  (1,8) m=513 rad(abm)=114 quality=1.317570602914 decoder=0
+  (2,169) m=4826817 rad(abm)=143754 quality=1.295880835367 decoder=0
+  (25,236) m=13159881 rad(abm)=359310 quality=1.281485248537 decoder=0
+  (1,23) m=12168 rad(abm)=1794 quality=1.255513869610 decoder=0
+  (2,125) m=1953133 rad(abm)=115570 quality=1.242528988571 decoder=0
+  (1,19) m=6860 rad(abm)=1330 quality=1.228075003754 decoder=1
+  (1,2) m=9 rad(abm)=6 quality=1.226294385531 decoder=0
+  (97,128) m=3009825 rad(abm)=264810 quality=1.194656027466 decoder=0
+  (32,49) m=150417 rad(abm)=25998 quality=1.172676637431 decoder=0
+  (1,242) m=14172489 rad(abm)=1283106 quality=1.170782376602 decoder=0
+  (17,225) m=11395538 rad(abm)=1217370 quality=1.159612947728 decoder=1
+scale_hostile=(1,3;28)->(2,6;224), same rad(value)=14 and rad(x*y*value)=42
+scale_family=(2^k)^3+(3*2^k)^3=28*8^k has radical(value)=14 for every k>=0
+scale_repair=divide common cube 2^3 before invoking ABC; decoder scale is an external sidecar
+radical_fibre_hostile=1+2=3 and 1+8=9 share rad(abc)=6 but not height or quality
+hyperbolic_task_order=weight p+q+r, then lexicographic; ordinal is an address, not curvature
+  task=1 exponents=(3,3,4) sigma=11/12 kappa=1/12
+  task=2 exponents=(2,4,5) sigma=19/20 kappa=1/20
+  task=3 exponents=(3,3,5) sigma=13/15 kappa=2/15
+  task=4 exponents=(3,4,4) sigma=5/6 kappa=1/6
+  task=5 exponents=(2,3,7) sigma=41/42 kappa=1/42
+  task=6 exponents=(2,4,6) sigma=11/12 kappa=1/12
+  task=7 exponents=(2,5,5) sigma=9/10 kappa=1/10
+  task=8 exponents=(3,3,6) sigma=5/6 kappa=1/6
+  task=9 exponents=(3,4,5) sigma=47/60 kappa=13/60
+  task=10 exponents=(4,4,4) sigma=3/4 kappa=1/4
+  task=11 exponents=(2,3,8) sigma=23/24 kappa=1/24
+  task=12 exponents=(2,4,7) sigma=25/28 kappa=3/28
+  task=13 exponents=(2,5,6) sigma=13/15 kappa=2/15
+  task=14 exponents=(3,3,7) sigma=17/21 kappa=4/21
+  task=15 exponents=(3,4,6) sigma=3/4 kappa=1/4
+bounded_hyperbolic_census_2<=p<=q<=r<=40=10615
+least_curvature_signature=(2,3,7), kappa=1/42; first shortlex task=(3,3,4)
+euclidean_controls=(2,3,6),(2,4,4),(3,3,3)
+pythagorean_hostile=(2,2,2), sigma=3/2: ABC gives no tree finiteness
+pythagorean_shell_hostile=(5,12,13),(15,8,17): B+C=25 but rad(ABC)=390,510
+hyperbolic_scale_hostile=(9t^4)^3+(18t^4)^3=(9t^3)^4: primitivity is indispensable
+six_term_hostile=3^6+19^6+22^6=10^6+15^6+23^6=160426514; not a three-term ABC input
+active_checks=154651
+RESULT PASS

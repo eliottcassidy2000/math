@@ -99,7 +99,6 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
     commuting stable envelope, and abstract additive dual, and closes `9_10`.
     THM-2177 refutes Goemans' cost conjecture through a conflict graph.
     MISTAKE-230--235 forbid syntax-only bridges.
-
 ## Where to go by topic
 
 | Topic | Read first | Then use |
@@ -112,6 +111,7 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3288/3359/3499/3510; distinguish index, level count, value, and address |
 | Pythagorean/Pell/power sums | [THM-3357](../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md) | THM-3333--3336/3339/3341/3345--3347/3353/3356/3358/3370/3375/3376; retain content/unit, branch order, ancestry, positivity chamber, and consumer labels |
+| ABC / IUT | [`CURRENT-FRONTIER.md#abc-iut`](CURRENT-FRONTIER.md#abc-iut) | [`CORE-PAPERS-ABC-IUT.md`](../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md), THM-3833 |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177/2191; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
 | Formalization | relevant theorem's `formalization` field | `00-navigation/*FORMALIZATION*`, then a clean build/axiom audit |
 | Research method | [`RESEARCH-PROTOCOL.md`](RESEARCH-PROTOCOL.md) | [`META-PATTERNS.md`](META-PATTERNS.md), relevant reflections |

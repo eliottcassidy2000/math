@@ -90,6 +90,13 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
+## ABC-IUT
+
+**ABC OPEN; IUT-to-ABC CITED, not proved.**  See the [typed ledger](../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md).
+[THM-3833](../01-canon/theorems/THM-3833-abc-conditional-cube-radical-and-hyperbolic-power-finiteness.md)
+is conditional; its exact atlas is `19,314/5,855`.  It loses common scale and
+gives no LRC/JC transfer.
+
 ## NC2 and Gaussian moments
 
 ### Headline
