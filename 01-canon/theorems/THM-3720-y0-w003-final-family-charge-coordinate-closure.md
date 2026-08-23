@@ -12,12 +12,13 @@ status: >
   quartic C3 data, or JC(2).
 source: jc-quartic-c3-construction / 2026-08-22
 audit: >
-  SELF-AUDITED.  The exact companion checks the final placement census,
-  triple primitive, charge polynomial, both differential rows, nonzero
-  determinant, C(U) solution, scalar factor, and both gcd(n+2,7) outcomes in
-  all seven residue classes.  The polynomial-pullback lemma and final degree
-  argument are proved in the text.  Normal and optimized runs byte-match the
-  frozen transcript.  Independent hostile audit remains open.
+  INDEPENDENTLY HOSTILE-AUDITED.  The exact companion checks the final
+  placement census, triple primitive, charge polynomial, both differential
+  rows, determinant, C(U) solution, scalar factor, and both gcd(n+2,7)
+  outcomes in all seven residue classes.  An independent derivation checked
+  every sign, the crucial delta*U*V coefficient, constant removal, determinant
+  boundary, polynomial-pullback lemma, and final divisibility/degree split.
+  Normal and optimized runs byte-match the frozen transcript.
 depends_on:
   - THM-3695-y0-collision-ring-danielewski-embedding-and-seven-piece-floor
   - THM-3696-y0-collision-ring-three-branch-conductor-and-graded-modules
