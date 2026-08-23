@@ -1,0 +1,9 @@
+theorem=THM-3716-monomial-Broughton-Hamiltonian-obstruction-family
+family=Q=x+x^m*y^n;m>=2;n>=1;characteristic=0
+gradient=unimodular;zero_fibre=reducible;coordinate=NO
+obstruction=tau=m(m+n)/n*x^(m-2)*y^n;hamiltonian_image=NO
+mechanism=isolated_two_edge_lattice_chain_with_nonterminating_coefficients
+hostile_grid=m:2..9;n:1..8;monomials:0..6x0..6;tail_depth:12=PASS
+semantic_sha256=15230359a117c8d77dbcbbc6b4a251a600e85b742f7331b6c86ec18baa3da688
+CHECKS=5825
+RESULT=PASS

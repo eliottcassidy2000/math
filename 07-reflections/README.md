@@ -3,7 +3,7 @@
 Reflections record the “why behind the what”: reframings, cross-domain maps,
 failure anatomy, perspective generation, and
 compulsions that outgrow one theorem. They are a first-class source of ideas
-and a deliberately **non-canonical** source of truth.
+and a **non-canonical** truth source.
 
 Before reusing a factual claim from a reflection, check current canon,
 `ACTIVE-GUARDRAILS.md`, and recent matching mistakes. A reflection may preserve
