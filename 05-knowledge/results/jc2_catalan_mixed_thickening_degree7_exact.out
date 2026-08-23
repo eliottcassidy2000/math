@@ -1,0 +1,18 @@
+JC2 Catalan mixed-thickening degree-seven exact audit
+python=3.13.14 sympy=1.14.0
+d6_script_sha256_lf=a3f94ab9eb4157bec7effc15ac1f1a8ab0842814c3a4f4ae4f6705a97fe4346f
+d6_output_sha256_lf=02d23d80e4c50edc1323105a9d6fcc2cf5c77d729731a4be354c415251c31616
+d6_replay=ordinary==optimized==stored;gates=64;verdict=AFFINE_EMPTY_EXACT
+D7_allowed_common_power_pairs=[(0, 0), (2, 3), (4, 6)]
+D7_new_both_E2=(2,3;7,1),(4,6;2,7),(4,6;7,3)
+D7_new_both_E3_obstructions=-18*v^9,6*v^10,-15*v^12
+D7_new_e0_E1=(2,3;4,7),(4,6;4,7)
+D7_new_e0_E2_obstruction=(2*A-D)*a0*d0*v^10=a0*d0*v^10
+D7_terminal_cells=[('e=0', 2, 3, 2, 3), ('e=0', 4, 6, 3, 5)]
+D7_terminal_transfer=all_terminal_cells_are_D6_exact_empty
+verdict=N3_D7_AFFINE_EMPTY_EXACT
+remaining_frontier=N3_D_ge_8;N_ge_4_OPEN
+projective_closure=NOT_COMPUTED_NOT_NEEDED_FOR_AFFINE_COEFFICIENT_EMPTINESS
+gates=38
+semantic_sha256=8cab44bfd360cf0f80094eb76c130613110e9471bcd4b3ba82c8038713963b93
+failures=none

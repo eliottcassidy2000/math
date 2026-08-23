@@ -1,20 +1,30 @@
 ---
 id: THM-3557
-title: "Low-width mixed Catalan thickening no-go and degree-seven frontier"
+title: "Low-width mixed Catalan thickening no-go and degree-eight frontier"
 status: >
   PROVED + VERIFIED-EXACT + FINITE-EXACT.  For polynomial mixed
   thickenings of the self-intersection (v^2,v^3-v), transverse widths one
   and two admit no constant-Jacobian solution in any coefficient degree.
   At width three, the affine coefficient variety is exactly empty when all
-  coefficient degrees are at most six.  The new degree-six square/cube branch
-  is forced to C=t^2,F=t^3 and then ends in two exact lower-row
-  contradictions.  Thus the first unclosed width-three cell has coefficient
-  degree seven; width at least four is also open.  Every map in the ansatz
+  coefficient degrees are at most seven.  The degree-six square/cube branch
+  is forced to C=t^2,F=t^3 and ends in two exact lower-row contradictions;
+  the five cells newly admitted at cap seven each have a unique nonzero top
+  coefficient.  Thus the first unclosed width-three cell has coefficient
+  degree eight; width at least four is also open.  Every map in the ansatz
   retains the selected collision, so any solution would be a planar
   counterexample.  Separately, the CITED 2022 sub-125 degree classification
-  forces D+N>=108, so the internal degree-seven frontier remains globally
+  forces D+N>=108, so the internal degree-eight frontier remains globally
   excluded through D=104 at width three.  No solution is claimed.
-source: kps-s187/kps-s188
+source: kps-s187/kps-s188 + mixed_catalan_d7 / incoming-frontier extension, 2026-08-23
+audit: >
+  DEGREE-SEVEN EXTENSION HOSTILE AUDIT PASS (root + mixed_catalan_d7,
+  2026-08-23).  The extension replays the complete 64-gate degree-six
+  companion and its 86 inherited THM-3557 gates, enumerates the cap-six and
+  cap-seven ledgers independently, isolates exactly five new cells, and
+  extracts their unique first failed coefficients.  The only two terminal
+  cells are literally the inherited exact-empty degree-six cells.  The
+  38-gate companion has no Python assert; normal and optimized LF-normalized
+  streams match the frozen transcript exactly.
 depends_on:
   - THM-3545-catalan-self-intersection-keller-thickening-boundary
 related:
@@ -32,6 +42,11 @@ script_sha256: 0444ad61a0bb2cd165243db1a97f0cb0b299eb19263378c97d1dee9ff39a7e1e
 output_sha256: cd23937963962bc4f43b83fc2f3ab6b477970c76f3151b7247c0025145380832
 degree_six_script_sha256: a3f94ab9eb4157bec7effc15ac1f1a8ab0842814c3a4f4ae4f6705a97fe4346f
 degree_six_output_sha256: 02d23d80e4c50edc1323105a9d6fcc2cf5c77d729731a4be354c415251c31616
+degree_seven_companion: 04-computation/jc2_catalan_mixed_thickening_degree7_exact.py
+degree_seven_output: 05-knowledge/results/jc2_catalan_mixed_thickening_degree7_exact.out
+degree_seven_script_sha256: 6201e6b1cd5e199d5e65fff6118cdba586e638342f8a134a10c8d66fbb7de959
+degree_seven_output_sha256: 2765d1d693129c282e26973b3c6ff5768a96ad2119639f23baf1041aa0d834b5
+degree_seven_semantic_sha256: 8cab44bfd360cf0f80094eb76c130613110e9471bcd4b3ba82c8038713963b93
 hash_basis: LF-normalized bytes
 ---
 
@@ -40,7 +55,7 @@ hash_basis: LF-normalized bytes
 **PROVED + VERIFIED-EXACT + FINITE-EXACT.**  Mixed dependence on the boundary
 parameter does not repair THM-3545 at shallow transverse width.  Width two
 fails by a cap-free Wronskian/degree argument; width three is now empty
-through coefficient degree six and first remains open at degree seven.
+through coefficient degree seven and first remains open at degree eight.
 
 The field has characteristic zero.
 
@@ -269,9 +284,48 @@ X=81,                         2X=135,                  (22)
 
 which is impossible in characteristic zero.  Independently, both branch
 ideals saturated by `t!=0` have Groebner basis `[1]` over `Q`.  Thus the
-entire affine width-three coefficient space is empty through `D=6`; the first
-open width-three target is coefficient degree seven.  Width four is
+entire affine width-three coefficient space is empty through `D=6`.  The
+next cap is closed below.  Width four is
 independently open.
+
+## 5A. Degree-seven closure and the first open cell
+
+Cap seven introduces no new common-power type: the full list is still
+
+```text
+(0,0),                  (2,3),                  (4,6). (22a)
+```
+
+Relative to cap six, the branch `e,f!=0` admits exactly three new states,
+written `(deg(s),deg(e);deg(t),deg(c))`:
+
+```text
+(2,3;7,1),             (4,6;2,7),             (4,6;7,3). (22b)
+```
+
+In the transformed row
+
+```text
+E3=2(c's-cs')+e't-3et',                                (22c)
+```
+
+their uniquely highest coefficients are respectively
+`-18e_0t_0`, `6c_0s_0`, and `-15e_0t_0`, at degrees `9,10,12`.
+Every displayed leading coefficient is nonzero by the degree cell, so none
+survives.
+
+In the branch `e=0,f!=0`, the only new states are
+
+```text
+(deg(c),deg(f);deg(a),deg(d))=(2,3;4,7),(4,6;4,7).     (22d)
+```
+
+In `E2`, the `a,d` Wronskian has unique degree ten and coefficient
+`(2deg(a)-deg(d))a_0d_0=a_0d_0`; the other blocks have degrees at most eight.
+All remaining cap-seven ledgers equal their cap-six counterparts.  The
+terminal list is exactly the inherited exact-empty cells `(2,3;2,3)` and
+`(4,6;3,5)` from Sections 4--5.  Hence the affine width-three coefficient
+space is empty through `D=7`; the first internal open cap is `D=8`.
 
 ## 6. Cubic-cover reframe
 
@@ -316,7 +370,7 @@ D+N>=108.                                              (26)
 
 If `D+N<125`, a linear target reduction would furthermore have to expose
 the pencil degree values `72` and `108`; the displayed components themselves
-may both have degree `108`.  Thus the first internally open cell `(N,D)=(3,7)`
+may both have degree `108`.  Thus the first internally open cell `(N,D)=(3,8)`
 is far below the global degree floor: at width three one needs `D>=105`, and
 at width four one needs `D>=104`.  This does not solve those high-degree
 cells; it prevents a low-width search from confusing an internally new
@@ -325,7 +379,7 @@ recurrence branch with a globally admissible counterexample.
 ## 8. Scope
 
 This theorem excludes only ansatz `(1)` at widths `N<=2`, and at `N=3` only
-through coefficient degree six.  It does not exclude degree seven or higher,
+through coefficient degree seven.  It does not exclude degree eight or higher,
 width four, other boundary curves, or planar counterexamples.  It proves no
 projective-closure statement; affine coefficient-space emptiness is the
 relevant quantified claim.
