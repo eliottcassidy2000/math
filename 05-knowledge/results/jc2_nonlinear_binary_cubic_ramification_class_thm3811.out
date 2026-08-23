@@ -4,6 +4,8 @@ packet=(A,C,7A,C^2-3A);normal_nonmonogenic_squarefree_S3
 branch=one_irreducible_rational_E;four_vertex_preimages=-2,-1,0,3
 companion=one_explicit_simple_root_C-2Aq
 norm_gate=affine_exponent1_Groebner_[1];higher_order_degree_floor=2n-1
-open=class_E_infinite_order+S_units_constant+etale_complement_affine
-CHECKS=72
-semantic_sha256=583470aeadabb6be8a80609612756c969f44de29722a5115f746a3e2b098c963
+class=Cl(S)=Z^3;E=P1_primitive;Cl(U)=Pic(U)=Z^2;S*=U*=k*
+affine=U=Spec(S[A/D,omega/D]);q_chart_misses_P1;companion_chart_retains_P1
+open=polynomial_A2_to_U_etale_atlas_or_obstruction;U_not_THM3785
+CHECKS=94
+semantic_sha256=68cc58bc48ee278772d8021bdd7af3c1b62d045e20dda0f14eb4862c7d2a25b0

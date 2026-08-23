@@ -2,16 +2,19 @@
 id: THM-3811
 title: "Ramification class unit criterion and nonlinear cubic packet"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, with one
-  explicitly OPEN decisive class gate.  Units on the maximal etale open of
+  PROVED + VERIFIED-EXACT, with the original packet INDEPENDENTLY
+  HOSTILE-AUDITED and the strengthened class/affineness closure PENDING
+  independent audit.  Units on the maximal etale open of
   a normal finite completion are controlled exactly by integer relations
   among the deleted ramification classes.  The nonlinear Delone--Faddeev
   packet (a,b,c,d)=(A,C,7A,C^2-3A) is a normal nonmonogenic S3 cubic with a
   squarefree irreducible rational branch: the four Veronese rays glue into
-  one ramification curve, with an explicit simple companion.  Whether that
-  ramification class has infinite order, and whether its complement is
-  affine with only constant units, remain OPEN.  No Jacobian counterexample
-  is claimed.
+  one ramification curve, with an explicit simple companion.  Its completion
+  has S*=k*, Cl(S)=Z^3, the ramification class is primitive, and its etale
+  complement is the explicit affine surface
+  Spec S[A/D,omega/D], with units k* and Picard group Z^2.  This surface is
+  not the THM-3785 pseudo-plane.  Constructing or obstructing a polynomial
+  plane atlas remains OPEN; no Jacobian counterexample is claimed.
 source: jc_quartic_c3_construct / nonlinear binary-index design lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc-cohn-boundary, 2026-08-23).  The
@@ -26,8 +29,9 @@ audit: >
   the A=1 irreducibility specialization valid, audited the codimension-one
   maximal-order argument and rational branch coverage, and replayed all 72
   exact gates in normal and optimized mode against the frozen output and raw
-  hashes.  The infinite-order class, completion-unit, and affineness gates
-  remain deliberately OPEN.
+  hashes.  This audit predates and does not cover the strengthened exact
+  class-group computation, two-root chart, or affine-complement proof below;
+  those clauses are PENDING independent hostile audit.
 depends_on: []
 related:
   - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
@@ -35,16 +39,16 @@ related:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
 script: 04-computation/jc2_nonlinear_binary_cubic_ramification_class_thm3811.py
 output: 05-knowledge/results/jc2_nonlinear_binary_cubic_ramification_class_thm3811.out
-script_sha256: 58a7f24e757ec8f5cbe9d39fbcc508662989585eb056e06f87a29e7528ac740b
-output_sha256: 766083ef1042888ee4d86dfe5f15dff351037e1084f85e5760c9e980c91c700f
-semantic_sha256: 583470aeadabb6be8a80609612756c969f44de29722a5115f746a3e2b098c963
+script_sha256: 1b5f6ecf9a928222683ebd71e8d2c1221b5d6496a1b3a18ec8af53c4aafe5c11
+output_sha256: 097b40607df719d548131baa584ca8ac9f8057c0a4ca58cc86a1226ca95ac239
+semantic_sha256: 68cc58bc48ee278772d8021bdd7af3c1b62d045e20dda0f14eb4862c7d2a25b0
 hash_basis: raw LF bytes
 ---
 
 # THM-3811 -- constant units are a ramification-class problem
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; OPEN class
-gate.**  Let `k` be algebraically closed of characteristic zero.
+**PROVED + VERIFIED-EXACT; strengthened closure PENDING independent hostile
+audit.**  Let `k` be algebraically closed of characteristic zero.
 
 ## 1. The exact deleted-divisor unit criterion
 
@@ -302,18 +306,251 @@ D>=2n-1;                                                           (29)
 
 for `n>=2`, while `(27)` strengthens the `n=1` floor to `D>=2`.
 
-The OPEN endpoint is now exact:
+## 5. The class gate closes exactly
+
+Put `Xbar=Spec S` and set
+
+```text
+D=f'(omega)=C omega-3A theta-14A^2.                              (30)
+```
+
+The apparent four-ray unit problem can be computed without guessing a
+principalizer.  Introduce the root chart
+
+```text
+T=k[A,C,q]/(A G(q)-C(C+q^2)),       G(q)=q^3+7q+3,                (31)
+omega=Aq,                 theta=Cq-A(q^2+7).                     (32)
+```
+
+The map `S -> T` is injective and becomes an isomorphism after inverting
+`A`.  Indeed `q=omega/A` there, and `(31)` is exactly the characteristic
+cubic `(15)`.  The surface `T` is smooth.  For its equation `F`,
+
+```text
+F_A=G,                  F_C=-2C-q^2,
+F_q=A(3q^2+7)-2Cq.                                           (33)
+```
+
+If the first two derivatives and `F` vanished, then `C=-q^2/2` and
+`F=q^4/4`; hence `q=0`, contradicting `G(0)=3`.
+
+Let `alpha_1,alpha_2,alpha_3` be the three distinct roots of `G`.
+After inverting `A` and `G`, `(31)` becomes the UFD
+
+```text
+k[C,q,G^-1,C^-1,(C+q^2)^-1].                                  (34)
+```
+
+The six height-one primes deleted by inverting `G` are
+
+```text
+P_j=(q-alpha_j,C),             Q_j=(q-alpha_j,C+q^2).           (35)
+```
+
+Their complete Nagata relations are
+
+```text
+P_j+Q_j=div(q-alpha_j),        sum_j P_j=div(C),
+sum_j Q_j=div(C+q^2).                                           (36)
+```
+
+The last relation follows from the first four.  A `4 x 4` minor of the
+relation matrix is a unit, so there is no hidden torsion and
+
+```text
+Cl(S_A)=Z^2.                                                     (37)
+```
+
+The same six valuations compute the units.  A unit of `(34)` has the form
+
+```text
+c product_j(q-alpha_j)^{n_j} C^u(C+q^2)^v.
+```
+
+Zero valuation at all `P_j,Q_j` forces
+
+```text
+n_1=n_2=n_3=-u=-v,
+```
+
+so it is a scalar times a power of
+`C(C+q^2)/G=A`.  Consequently
+
+```text
+S_A^*=k^* A^Z.                                                   (38)
+```
+
+There are exactly two height-one primes over `A=0`:
+
+```text
+P_0=(A,omega),
+P_1=(A,omega-C,theta).                                          (39)
+```
+
+Their residue fields have degrees two and one over `k(C)`, respectively.
+Because `Delta(0,C)=-4C^5`, the cover is etale at both generic points, and
+
+```text
+div_Xbar(A)=P_0+P_1.                                             (40)
+```
+
+The localization sequence for `S -> S_A`, together with `(37),(38)`, now
+has boundary map `A |-> (1,1)`.  It follows first that `S^*=k^*`, and then
+that
+
+```text
+0 -> Z[P_1] -> Cl(S) -> Cl(S_A) -> 0,
+Cl(S)=Z^3,                    [P_0]=-[P_1],                       (41)
+```
+
+where `[P_1]` is a primitive infinite-order class.  The displayed splitting
+of the free abelian groups is noncanonical; the primitivity assertion is
+canonical.
+
+The ramification class is exactly this missing companion class.  On `(31)`,
+
+```text
+D=A J,                    J=A(3q^2+7)-2Cq.                       (42)
+```
+
+At the generic point of `P_0`, write `C=-q^2`; then `J=2q^3` is a unit.
+At `P_1`, `(30)` restricts to `C^2`, also a unit.  Along the simple
+ramification curve, `D` has order one.  The norm identity
+
+```text
+Norm(D)=-A^2 Delta                                                (43)
+```
+
+shows that there is no further codimension-one support.  Therefore
+
+```text
+div_Xbar(D)=E+P_0,
+div_Xbar(D/A)=E-P_1,
+[E]=[P_1].                                                       (44)
+```
+
+Thus the class in `(4)` is primitive, not merely nontorsion.  In particular
+the norm/companion equation `(7)` has no solution in any degree; the bounded
+Groebner gate `(27)` was the first finite shadow of this all-degree fact.
+
+## 6. The etale complement is affine
+
+Let
+
+```text
+U=Xbar minus E,             h=A/D,             k_0=omega/D.       (45)
+```
+
+Equation `(44)` shows that `h` is regular on `U`.  The same root chart gives
+`v_{P_0}(omega)=v_{P_0}(D)=1`; at `P_1` both `omega` and `D` are units.
+Hence `k_0` is also regular on `U`.  Put
+
+```text
+B=S[h,k_0] subset Frac(S).                                       (46)
+```
+
+Besides `hD=A` and `k_0D=omega`, these two functions satisfy the crucial
+Bezout identity
+
+```text
+C k_0-(3theta+14A)h=1.                                          (47)
+```
+
+Let `Z=Spec B -> Xbar` be induced by `S subset B`.  It has no point over
+`E`: if `D=0`, the first two graph relations force `A=omega=0`.  On `E`,
+`Delta(0,C)=-4C^5` then forces `C=0`; the square-zero fibre `(12)` has
+`theta=0` at its only geometric point, contradicting `(47)`.  Thus the image
+of `Z` lies in `U`.
+
+Conversely, `(45)` defines a morphism `U -> Z`.  Its composite with
+`Z -> U` is the identity on the `S`-coordinates.  The reverse composite
+fixes `S,h,k_0` on the dense open `D!=0`, hence fixes the domain `B`
+identically.  Therefore
+
+```text
+U = Spec S[A/D,omega/D]                                         (48)
+```
+
+is affine.  Combining `(2),(41),(44)` gives the exact invariants
+
+```text
+U^*=k^*,                       Pic(U)=Cl(U)=Z^2.                  (49)
+```
+
+Here `U` is regular: the two root charts below cover it by loci on which the
+projection to `A2` has a unit Jacobian.
+
+## 7. Why the one-root chart lied, and the remaining source gate
+
+On `T`, let `L=(A,C)`.  Directly from `(33)` and `(20)`,
+
+```text
+div_T(J)=L+E_tilde.                                               (50)
+```
+
+This does **not** identify `U` with `D_T(J)`.  The chart `(31)` contracts
+`L` to the square-zero vertex and entirely misses the companion divisor
+`P_1`.  Downstairs, `(44)` says that the same rational function has a pole
+on `P_1`; this is the missing valuation that resolves the apparent
+nonconstant-unit paradox.
+
+The second root chart is obtained from `r=(omega-C)/A`:
+
+```text
+T_1=k[A,C,r]/(
+ C^2r+A(2Cr^2-C^2+7C)+A^2(r^3+7r+3)),                           (51)
+omega=C+Ar,                 theta=-Cr-A(r^2+7).                  (52)
+```
+
+Its projection Jacobian is
+
+```text
+C^2+4ACr+A^2(3r^2+7)=D,                                        (53)
+```
+
+which restricts to `C^2` on `P_1`.  Thus
+
+```text
+Spec T[J^-1]       and       Spec T_1[D^-1]                      (54)
+```
+
+are the ramified-root and companion-root affine charts covering `U`; their
+intersection is the `A!=0` root chart.  This is the required companion
+sidecar that the single `q`-coordinate destroyed.
+
+The map `U -> A2_(A,C)` is etale of generic degree three.  Its image omits
+the square-zero origin and the two nonzero triple-root values.  On the branch
+normalization the latter are exactly
+
+```text
+q^2=7/3,                   C=3Aq;                                (55)
+```
+
+the four values `q=-2,-1,0,3` all map to the origin.  Every other branch
+point retains the simple companion `(24)`.
+
+Equation `(49)` rules out both `U~=A2` and
+`U~=Y_(THM-3785)`, since the latter has Picard group `Z/3`.  It does not rule
+out a nontrivial dominant etale morphism
+
+```text
+psi:A2_(x,y) -> U.                                                (56)
+```
+
+Indeed `psi^*:Pic(U)->Pic(A2)=0` may kill the whole free lattice.  If a
+polynomial map `(56)` with the needed codimension-one coverage is found,
+then `(A o psi,C o psi)` is a planar Keller map whose finite completion is
+the cubic algebra `(8)`.  Conversely, an obstruction to every such atlas
+would close this construction lane without changing the positive affine
+surface theorem.
 
 ```text
 OPEN-3811:
-  prove [E] has infinite order in Cl(S), prove S*=k*, and prove
-  U=Xbar minus E is affine; or exhibit the first norm/companion witness
-  (7) and explain the resulting nonconstant unit.                  (30)
+  construct a polynomial dominant etale plane atlas (56), with the
+  codimension-one coverage needed by the completion, or prove that none
+  exists.                                                         (57)
 ```
 
-Until all three positive clauses in `(30)` are proved, this is not an
-etale constant-unit factor surface and not a planar Jacobian counterexample.
-The proved gain is the first nonlinear normal `S3` completion that glues the
-four fatal Veronese rays while preserving the exact companion grammar, plus
-the decisive class/norm test that remains.  **QED for `(2)--(29)`;
-`OPEN-3811` remains open.**
+Thus the class, constant-unit, and affineness gates are closed.  The only
+remaining counterexample gate is the source-plane realization.  **QED for
+`(2)--(55)`; `(56),(57)` remain OPEN.**

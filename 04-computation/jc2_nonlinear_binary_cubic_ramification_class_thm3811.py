@@ -236,6 +236,132 @@ for n in range(2, 21):
           f"torsion norm degree floor n={n}")
 
 
+# The two root charts and the exact class-group closure.
+# The q-chart is the affine modification which retains the quadratic
+# A=0 sheet and misses the linear companion sheet.
+Gq = q**3 + 7 * q + 3
+Fq = A * Gq - C * (C + q**2)
+theta_q_chart = C * q - A * (q**2 + 7)
+omega_q_chart = A * q
+A_on_q_chart = C * (C + q**2) / Gq
+for expression, label in (
+    (omega_q_chart**2 + 7 * A**2 - C * omega_q_chart
+     + A * theta_q_chart, "q-chart omega-square"),
+    (omega_q_chart * theta_q_chart - 3 * A**2 + A * C**2,
+     "q-chart mixed law"),
+    (theta_q_chart**2 - 3 * A * C + C**3
+     - (C**2 - 3 * A) * omega_q_chart + 7 * A * theta_q_chart,
+     "q-chart theta-square"),
+):
+    same(expression.subs(A, A_on_q_chart), 0, label)
+
+same(sp.discriminant(Gq, q), -1615, "q-chart G is squarefree")
+check(sp.gcd(Gq, q * Rq) == 1,
+      "q-chart leading ramification numerator is coprime to G")
+# If F=F_A=F_C=0, then C=-q^2/2 and F-A*G=q^4/4; hence q=0,
+# contradicting G(0)=3.  This freezes the smoothness argument without a
+# solver-dependent radical computation.
+same(Fq.subs(C, -q**2 / 2) - A * Gq, q**4 / 4,
+     "q-chart smoothness residual")
+same(Gq.subs(q, 0), 3, "q-chart smoothness endpoint")
+
+# On the q-chart the power-basis different D is A times the projection
+# Jacobian J.  The divisor of J has the strict ramification curve plus the
+# exceptional line L=(A,C).
+W, Theta = sp.symbols("W Theta")
+Domega_scalar = C * W - 3 * A * Theta - 14 * A**2
+Jq = A * (3 * q**2 + 7) - 2 * C * q
+same(Domega_scalar.subs({W: omega_q_chart, Theta: theta_q_chart}),
+     A * Jq, "different equals A times q-chart Jacobian")
+same(Jq.subs({A: 0, C: -q**2}), 2 * q**3,
+     "q-chart is unramified on the quadratic A=0 sheet")
+same(Jq.subs({A: Aq, C: Cq}), 0,
+     "q-chart Jacobian vanishes on strict ramification")
+
+# The companion chart uses r=(omega-C)/A and retains the linear A=0 sheet.
+r = sp.symbols("r")
+omega_r_chart = C + A * r
+theta_r_chart = -C * r - A * (r**2 + 7)
+Hr = (
+    C**2 * r + A * (2 * C * r**2 - C**2 + 7 * C)
+    + A**2 * (r**3 + 7 * r + 3)
+)
+same(sp.expand(f.subs(T, omega_r_chart)), A * Hr,
+     "companion-chart cubic transform")
+Dr = C**2 + 4 * A * C * r + A**2 * (3 * r**2 + 7)
+same(sp.diff(Hr, r), Dr, "companion-chart projection Jacobian")
+same(Domega_scalar.subs({W: omega_r_chart, Theta: theta_r_chart}),
+     Dr, "different equals companion-chart Jacobian")
+same(Dr.subs({A: 0, r: 0}), C**2,
+     "companion chart is unramified on the linear A=0 sheet")
+
+# The six-prime Nagata lattice on S_A=T_A.  Columns are
+# P_1,P_2,P_3,Q_1,Q_2,Q_3.  The three q-alpha divisors and div(C) give a
+# primitive rank-four relation lattice; div(C+q^2) is dependent.  Hence
+# Cl(S_A)=Z^2 without torsion.
+class_relations = sp.Matrix([
+    [1, 0, 0, 1, 0, 0],
+    [0, 1, 0, 0, 1, 0],
+    [0, 0, 1, 0, 0, 1],
+    [1, 1, 1, 0, 0, 0],
+])
+check(class_relations.rank() == 4, "localized class relation rank")
+minor_gcd = 0
+for columns in __import__("itertools").combinations(range(6), 4):
+    minor_gcd = sp.gcd(minor_gcd,
+                       abs(int(class_relations[:, list(columns)].det())))
+check(minor_gcd == 1, "localized class quotient is torsionfree")
+
+# Units of the UFD after also inverting G have exponents
+# (n_1,n_2,n_3,u,v) on (q-alpha_j,C,C+q^2).  Vanishing at all six boundary
+# primes leaves the single vector for A=C(C+q^2)/G.
+unit_valuation = sp.Matrix([
+    [1, 0, 0, 1, 0],
+    [0, 1, 0, 1, 0],
+    [0, 0, 1, 1, 0],
+    [1, 0, 0, 0, 1],
+    [0, 1, 0, 0, 1],
+    [0, 0, 1, 0, 1],
+])
+unit_kernel = unit_valuation.nullspace()
+check(len(unit_kernel) == 1, "localized unit kernel is rank one")
+same(unit_kernel[0], sp.Matrix([-1, -1, -1, 1, 1]),
+     "localized units are powers of A")
+
+# The two A=0 primes are P0=(A,omega) and
+# P1=(A,omega-C,theta), both with multiplicity one.  Their diagonal
+# principal relation is primitive, so Nagata adds one free class to the
+# free rank-two localized class group: Cl(S)=Z^3.
+boundary_relation = sp.Matrix([[1, 1]])
+check(boundary_relation.rank() == 1
+      and sp.gcd_list(list(boundary_relation)) == 1,
+      "A-boundary relation is primitive")
+same(Domega_scalar.subs({A: 0, W: C, Theta: 0}), C**2,
+     "different is a unit generically on companion P1")
+
+# The rational function J=D/A has divisor E-P1.  Its reciprocal and the
+# companion numerator give two global functions on U=Xbar\E.
+hh, kk = sp.symbols("h k")
+same(
+    (C * kk - (3 * Theta + 14 * A) * hh - 1).subs({
+        hh: A / Domega_scalar,
+        kk: W / Domega_scalar,
+    }),
+    0,
+    "affine-complement Bezout identity",
+)
+
+# The nonzero triple-root fibres are the two q^2=7/3 points; the four roots
+# of R all map to the square-zero origin.  These are exactly the finite
+# fibres omitted after deleting E.
+triple_difference = sp.factor(Cq - 3 * Aq * q)
+same(
+    triple_difference,
+    q * Rq * (3 * q**2 - 7) / Dq**2,
+    "triple-root locus on branch normalization",
+)
+
+
 source = Path(__file__).read_text(encoding="utf-8")
 check(not any(isinstance(node, ast.Assert) for node in ast.walk(ast.parse(source))),
       "no inactive Python assert")
@@ -246,7 +372,9 @@ semantic = {
     "packet": "(a,b,c,d)=(A,C,7A,C^2-3A), normal nonmonogenic squarefree S3 cubic",
     "ramification": "one irreducible rational E; q=-2,-1,0,3 are four normalization points over the square-zero vertex; one simple companion",
     "finite_gate": "affine coefficient profiles cannot solve the exponent-one norm equation; Groebner basis [1]",
-    "open": "infinite order of E, S*=k*, and affineness of the etale complement remain open",
+    "class_closure": "S_A*=k*A^Z, Cl(S_A)=Z^2, S*=k*, Cl(S)=Z^3, div(D/A)=E-P1, so E is primitive infinite",
+    "affine_complement": "U=Xbar\\E=Spec S[A/D,omega/D], with U*=k* and Pic(U)=Z^2; q and companion charts explain the missing P1 divisor",
+    "open": "construct or obstruct a polynomial A2-to-U etale atlas; U is not A2 or the Pic=Z/3 THM3785 pseudo-plane",
 }
 semantic_blob = json.dumps(semantic, sort_keys=True, separators=(",", ":")).encode()
 
@@ -256,6 +384,8 @@ print("packet=(A,C,7A,C^2-3A);normal_nonmonogenic_squarefree_S3")
 print("branch=one_irreducible_rational_E;four_vertex_preimages=-2,-1,0,3")
 print("companion=one_explicit_simple_root_C-2Aq")
 print("norm_gate=affine_exponent1_Groebner_[1];higher_order_degree_floor=2n-1")
-print("open=class_E_infinite_order+S_units_constant+etale_complement_affine")
+print("class=Cl(S)=Z^3;E=P1_primitive;Cl(U)=Pic(U)=Z^2;S*=U*=k*")
+print("affine=U=Spec(S[A/D,omega/D]);q_chart_misses_P1;companion_chart_retains_P1")
+print("open=polynomial_A2_to_U_etale_atlas_or_obstruction;U_not_THM3785")
 print(f"CHECKS={CHECKS}")
 print(f"semantic_sha256={hashlib.sha256(semantic_blob).hexdigest()}")
