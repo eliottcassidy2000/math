@@ -254,6 +254,72 @@ recovers the gap and depth-`D` successor when the gap is at most `B`, and
 otherwise returns the honest overflow `gap>B`.  Thus chronology is required
 by this first-return observer, not a cosmetic chart label.
 
+## Jacobian simple-pole completion is an operation ladder
+
+The incoming Jacobian results separate four operations that earlier searches
+often blended.  Start with a reduced polynomial `U`, a rational mate
+`J(U,P)=1`, and a paid simple-pole blowdown `V=UP` in `k[x,y]`.  THM-3782
+shows that the component values are automatic.  If `U=product_i D_i`, then
+
+```text
+J(U,V)=U,
+(U/D_i)J(D_i,V)=0 mod D_i,
+V=lambda_i mod D_i.                                  (A)
+```
+
+Let `Phi(z)=product_lambda(z-lambda)` over the distinct values.  Reducedness
+turns the local payments in `(A)` into the canonical global completion
+
+```text
+E=Phi(V)/U in k[x,y],               UE=Phi(V).        (B)
+```
+
+One value makes `(U,E)` a polynomial Keller pair.  Over `C`, two or more
+values make `(U,V,E)` an exponent-one Danielewski surface with nonexact
+logarithmic symplectic form, hence no Darboux pair in that ring.  Transferring
+this obstruction to **every** polynomial in `k(U,P)` requires the separate
+codimension-one image-coverage sidecar.  THM-3779 supplies it for the
+THM-3774 tower when `m>=2`; its `m=1` boundary misses a divisor and gains the
+extra observable `x^2`.  Thus missing a divisor is a mechanism, not a minor
+surjectivity blemish.
+
+Changing the source chart is a different operation.  THM-3780 proves that
+every normal etale model carrying the same pair `(U,P)` must contain the
+integral cover root `t` and the nonconstant unit
+
+```text
+g=P-((m+1)/m)t^m=1/x.                                (C)
+```
+
+It therefore cannot be an affine plane.  This closes same-pair source
+filling, not replacement of either target function.  THM-3784 identifies
+`g=-f_m'(t)/m` as the different and `x=1/g` as the codifferent generator.
+Its polynomial rungs satisfy the repaired, basis-relative trace law
+
+```text
+Tr(t^r x)=0 (0<=r<m),       Tr(xq(t))=-m[T^m]q(T).    (D)
+```
+
+The original word “leading” was false for `deg q<m`; `q=1` is the minimal
+hostile and MISTAKE-445 records the repair.  These rungs genuinely leave the
+base target field and cancel across sheets, but trace forgets the individual
+sheet, component valuation, and Poisson bracket.  They are therefore a new
+sidecar, not a Keller pair.
+
+| operation | exact obstruction | information destroyed | remaining lane |
+|---|---|---|---|
+| target-only shear | THM-3770 principal coefficients must equalize | component address after scalar collapse | synchronized nonbirational spectrum |
+| rational target-field word | THM-3782/3779 logarithmic class with divisor coverage | source functions outside `k(U,P)` | codimension-one noncoverage/extra observables |
+| birational source filling of the same pair | THM-3780 nonconstant global unit | freedom to alter the pair | replace a target or leave its field |
+| higher-pole/higher-exponent completion | THM-3781 closes two common-step-three cells only | unequal/gapped support geometry | other exponent-two supports and higher multiplicity |
+| codifferent trace cancellation | THM-3784 gives `(D)`, not a bracket | sheet and component labels | bracket the trace-zero rungs with nonbase observables |
+
+This ladder changes the cheapest counterexample probe.  A new simple-pole
+seed should first report its spectrum and target-divisor coverage; a proposed
+source rechart must report its units; a trace cancellation must report exact
+pairwise brackets and axis valuations.  THM-3783 remains a reserved quadratic
+boundary namespace and contributes no proved step.
+
 ## Rooted Pfaffians: an exact sidecar and deletion law
 
 By THM-3729, for a real skew matrix `K` and root `u`, the odd rooted Pfaffian energy is
@@ -335,12 +401,11 @@ unlike the retired tournament/1729 numerical resemblance.
 3. **FC:** retain the full relation-valued reset nerve and chronology.  Seek a
    lawful subrelation with constant fibre and composable named transitions,
    rather than imposing an arbitrary torsor.
-4. **JC:** move beyond the now-closed stabilized W004 tail without exporting
-   its row gauges to exceptional W004 or W005/6.  In the Cohn lane test two
-   interacting right factors.  The variable-flank radial and nonradial
-   three-component rational-cover towers are now typed; seek a nonbirational
-   log-canonical pair whose component spectrum actually synchronizes, or a
-   longer operation that escapes the proved horizontal/short-word gates.
+4. **JC:** simple-pole target-field words and same-pair source fillings now
+   have separate terminal gates.  Test codimension-one noncoverage with its
+   extra observables, higher-multiplicity supports beyond THM-3781, or exact
+   brackets between THM-3784's trace-zero rungs and nonbase observables.  Also
+   retain exceptional W004/W005/6 and interacting-right-factor Cohn lanes.
 5. **Two cubes:** the inert-prime family now proves logarithmic lower growth
    with coefficient `kappa`; determine whether the rest of the support changes
    that order, or obtain a genuine asymptotic for `C(X)`.  Neither a full

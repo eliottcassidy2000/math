@@ -8,12 +8,12 @@ status: >
   V=UP, and admits a canonical polynomial completion
   E=Phi(V)/U.  Its complete relation and Poisson laws are those of a smooth
   exponent-one Danielewski surface.  One spectral value gives an actual
-  polynomial mate.  Two or more values give the nonexact logarithmic
+  polynomial mate.  Over C, two or more values give the nonexact logarithmic
   symplectic obstruction.  If the induced etale map meets every target
   divisor, the Danielewski ring is the complete polynomial intersection
-  with the rational target field and all target-field Keller pairs are
-  excluded.  Codimension-one coverage is an explicit hypothesis, not an
-  automatic conclusion.
+  with the rational target field; over C all target-field Keller pairs are
+  then excluded.  Codimension-one coverage is an explicit hypothesis, not
+  an automatic conclusion.
 source: root + jc_quartic_c3_construct / THM-3779 abstraction, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASSED (jc_zero_debt_lift, 2026-08-23).  The
@@ -24,8 +24,9 @@ audit: >
   conditional height-one descent.  In the last step, codimension-one image
   coverage supplies a source DVR above every target DVR and etaleness gives
   ramification index one, so valuations agree on the target field.  Every
-  hostile boundary remains load-bearing.  Normal and optimized runs
-  byte-match the frozen 64-gate transcript and both raw hashes match.
+  hostile boundary remains load-bearing.  Normal, optimized, and fixed-hash
+  outputs LF-normalize exactly to the frozen raw-LF 64-gate transcript; the
+  recorded raw file hashes match.
 depends_on:
   - THM-3600-danielewski-arm-plane-atlas-singular-shear-and-no-filling
 related:
@@ -290,7 +291,9 @@ The left side is nonnegative because `H in R`; therefore `ord_q(H)>=0` for
 every height-one `q`.  Normality and the Krull intersection of height-one
 DVRs prove `(26)`.
 
-Combining `(23),(26)` gives the all-target-field obstruction:
+The intersection equality `(26)` holds over the algebraically closed
+characteristic-zero field fixed at the start.  Continue over `C` when
+combining it with `(23)` to get the all-target-field obstruction:
 
 ```text
 h>=2, (24), F,G in k(U,P) intersection R
@@ -391,7 +394,8 @@ exponent one.
 
 The companion checks the universal algebra and unit-minor Bezout identities
 for `h=1,...,6`, plus every hostile and positive control in Section 5.
-Normal and optimized executions byte-match the frozen transcript.  The
+Normal, optimized, and fixed-hash executions LF-normalize exactly to the
+frozen transcript.  The
 theorem proves `(5)` but does not assert that the
 codimension-one coverage condition `(24)` is automatic, and it proves no
 positive-characteristic analogue or planar Jacobian counterexample.  **QED.**

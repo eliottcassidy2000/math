@@ -55,9 +55,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 - **PROVED + CITED:** [THM-3743](../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md)
   turns any hypothetical counterexample into an integer speed relation of
   `l1` norm at most `356`.  A minimal row is Graver; support two has `19,314`
-  reduced ratios, while higher support is a bounded multiway partition.  With
-  THM-2052, the row either makes rank twelve with an explicit finite terminal
-  or already lies short inside the rank-eleven star space.  It preserves no
+  reduced ratios, while higher support is a bounded multiway partition.
+  THM-2052's rank-twelve branch is already terminal; in rank eleven the row
+  either raises rank with an explicit cap or lies short inside the star. It preserves no
   owner, phase, sign partition, or arrival and is not sufficient for LRC(14).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -318,22 +318,22 @@ gives no support asymptotic/residue; only the indexed coefficient is known.
   balance, and every prize remain OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` OPEN. THM-1300 is VERIFIED-EXACT
   (MISTAKE-205); THM-3544/50 and cited Nagata/GGHV force composite degree
-  `>=6`, height `>=8`, and reduced height `>=108`. THM-3543--3642 close the
-  recorded low-width/ray/shear/toric/graph and fibre/fold/jet sectors.
-  THM-3687/3688 reach actual-ring `J_0,J_1,J_2`; the latter audit and
-  `J_3+`/globalization remain open. THM-3737's one-functional gate awaits audit.
-  THM-3685--3739 close W002/3/7/8 and stabilized W004; exceptional W004 and
-  W005/6 remain. THM-3736/3740 close constant- and one-polynomial-right Cohn
-  exposures, not interacting factors. THM-3741/3754--3759/3765/3771/3772
-  close the named radial/flank/Pell/split-fibre/cubic-carrier ansatzes.
-  THM-3770 gives the principal-part/component-spectrum equalizer. THM-3773
-  blocks all birational target words on the quadratic cover over `C`; THM-3774
-  gives degree-`m+1` three-component covers (an `S3` cusp at `m=2`) and no
-  birational escape for its quadratic row. THM-3775--3777 type the stated
-  sheet/short-shear gates. A counterexample still needs a synchronized
-  nonbirational spectrum or a different construction. Arbitrary quartics,
-  nonordinary folds, interacting Cohn factors, longer non-Galois operations,
-  unrestricted `C[A,d]^2`, `JC(2)`, and `DC(2)` remain OPEN.
+  `>=6`, height `>=8`, reduced height `>=108`; THM-3543--3642 close the named
+  low sectors. THM-3687/3688 reach `J_0,J_1,J_2` (audit live); `J_3+` stays
+  open, and THM-3737 awaits audit. THM-3685--3739 close W002/3/7/8 and
+  stabilized W004, not exceptional W004/W005/6; THM-3736/3740 do not reach
+  interacting Cohn factors. THM-3741/3754--3759/3765/3771/3772 close the named
+  radial/flank/Pell/split/cubic ansatzes. THM-3770 gives the equalizer and
+  dressing no-go; THM-3773--3777 type the rational covers and short gates.
+  THM-3779 identifies the full `m>=2` target-field intersection/no-Darboux
+  gate, and THM-3780 forbids same-pair affine-plane filling. THM-3782 makes
+  simple-pole spectra automatic: one value repairs; multiple values, plus
+  divisor coverage over `C`, exclude all target-field words. THM-3781 closes
+  only scalar-centred step-three exponent-two cells. THM-3784 gives audited
+  trace-zero codifferent rungs outside the target field; their brackets are
+  open. Codimension-one noncoverage, higher poles/supports, altered pairs,
+  arbitrary quartics, unrestricted `C[A,d]^2`, `JC(2)`, and `DC(2)` remain
+  OPEN; THM-3783 is RESERVED.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2247 close the affine-through-
   quartic and terminal-through-fourteen strata; THM-2262/2297--2480, including
@@ -357,20 +357,16 @@ gives no support asymptotic/residue; only the indexed coefficient is known.
   constant family `(Vz^2+bz+c)^2+A_src z+kx`; generic counts are `52`/`28`.
   THM-3225 excludes every affine `B` in `(Vz^2+Bz)^2+A_src z+x`: no `T`
   escape, at most two at `S`, and at least `50` intersection units remain.
-  THM-3237--3289 close stated `B` and affine `C,E` lanes. THM-3306 proves on
-  `C=c+x,E'=1` a degree-36 square discriminant, transverse base ideal, exact
-  quadratic fibre and double root, disjoint from known walls. Its **FINITE-EXACT**
-  [blow-up](../07-reflections/jc-affine-c-exceptional-quadratic-c2-blowup-codex-20260803.md)
-  keeps the degree-36/32 pivots distinct: `F_0` is irreducible over each `A_i`,
-  of relative/total degree `2/72`, with fibrewise conjugate nonstationary directions. A **FINITE-EXACT**
-  [subresultant sidecar](../07-reflections/jc-critical-inverse-cover-cofactor-jacobian-probe-agent-20260803.md)
-  gives a two-pivot inverse graph and mate-integrability class on two controls.
-  THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
-  THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response (collisions persist; `gr` overcounts); THM-3354 blocks direct D5 transport.
-  THM-3431 gives zero-map deck/local `H^1`; THM-3496 adds only marked
-  normal-Kummer degree and finite-`13^r` extinction--no current, derived,
-  Keller, or JC/LRC transfer.
-  THM-3418/19 close sparse Keller/rank; THM-3422/24/27 give integral character laws; THM-3430/33 classify wrap/all-sector Prüfer arms; THM-3436/37 give repeated-root Artin jets and their derived Euler channel.  THM-3437's inverse Tor tower recovers the Tate-module/presence bit, while its inclusion direct limit recovers the Prüfer arm; neither is LRC `H^1`. No multiroot nonwrap split or `JC(2)`/`DC(2)` follows.
+  THM-3237--3289 close stated `B,C,E` lanes. THM-3306 gives a degree-36 square
+  discriminant and quadratic double root; its blow-up/subresultant sidecars
+  are only **FINITE-EXACT** (relative/total degree `2/72`, two controls).
+  THM-3309/3312/3319 give zero derivatives, trace/norm passport, and an etale
+  clutch germ, not a section. THM-3318--3412 close the stated linear-`z`/
+  transport lanes. THM-3431/3496 give only a zero-map deck, local `H^1`,
+  marked Kummer degree, and finite `13^r` extinction--no Keller/JC/LRC transfer.
+  THM-3418--3437 close the named sparse/character/Prüfer/Artin-jet rows; inverse
+  Tor and inclusion limits recover different sidecars. Multiroot nonwrap,
+  `JC(2)`, and `DC(2)` remain open.
 - **Factorial:** THM-3483 closes exact-support quadratics through `r=9998`:
   all `2665` residuals in `7395` rows (`2384` divisor, `281` rho).
   `d=6518` needs `p=29`, refuting `p<=23`; `d=10001` is untested.
