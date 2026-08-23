@@ -1,0 +1,25 @@
+theorem=THM-3774-three-component-rational-keller-cover-tower
+field=algebraically_closed_characteristic_zero;m_integer_at_least_1
+family=A=1+x*y;B=1+x^(2m+1)*A^m;U=x*A*B;P=((m+1)*B-1)/(m*x);W=U*P
+uniform_response=J(U,P)=1;log_canonical=J(U,W)=U
+exponent_gate=J(U_q,P_q)-1=-(m+1)*(q-2m-1)*x^q*A^m*B_q/m
+zero_fibre=three_smooth_pairwise_disjoint_irreducibles_(x,A,B)
+component_spectrum_W=(1,0,0);principal_coefficients_P_in_1/U=(1,0,0)
+complete_rational_torsor=P+k(U);vertical_equalizer=FAIL_at_axis_simple_row
+generic_fibre=k(U)(t);s=x*A;t=x^2*A;U=s+t^(m+1);P=U/t+t^m/m
+minimal_polynomial=t^(m+1)-m*P*t+m*U;function_field_degree=m+1
+discriminant=(-1)^(m*(m+1)/2)*m^m*((m+1)^(m+1)*U^m-m^(m+1)*P^(m+1))
+monodromy=m>=2_non_Galois_by_generic_transposition_inertia
+m2=t^3-2*P*t+2*U;disc=-4*(27*U^2-8*P^3);closure_group=S3;cusp=A2
+blowdown=W=U*P_clears_axis_pole_but_retains_spectrum_(1,0,0)
+hostiles=q!=2m+1_nonconstant_response;A=xy_critical_origin;B=1_two_components
+direct_controls_m=1,2,3,4,5,6,7
+irreducibility_controls_m=1,2,3,4,5,6,7
+resultant_controls=m1:2*x**9,m2:9*x**22,m3:64*x**41,m4:625*x**66,m5:7776*x**97
+discriminant_controls=m1:-4*L + P**2,m2:-4*(27*L**2 - 8*P**3),m3:27*(256*L**3 - 81*P**4),m4:256*(3125*L**4 - 1024*P**5),m5:-3125*(46656*L**5 - 15625*P**6),m6:-46656*(823543*L**6 - 279936*P**7),m7:823543*(16777216*L**7 - 5764801*P**8)
+hostile_exponent_controls=m1q2,m1q4,m2q4,m2q6,m3q6,m3q8,m4q8,m4q10,m5q10,m5q12,m6q12,m6q14,m7q14,m7q16
+packet_sha256=a87ef20e1f00fdc1098318cd1e2572cc32e41ed12ef1f5197a1c6ccde8cf0895
+semantic_sha256=7afa16470c6cb9f0cdc68c83c258dae8dd6223f80b42f5f6717cef38ab489b96
+CHECKS=153
+NO_CLAIM=polynomial_Keller_pair_or_planar_Jacobian_counterexample
+RESULT=PASS
