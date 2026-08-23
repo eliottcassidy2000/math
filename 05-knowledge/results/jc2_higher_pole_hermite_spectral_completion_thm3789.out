@@ -1,0 +1,13 @@
+theorem=THM-3789-higher-pole-hermite-spectral-completion
+seed=t=x^2(1+xy);Q'=q^2;F=xq(t);P=Q(t)/F^3;J(F,P)=1
+completion=H=W*Psi(W)/F^2;Y=(H-Psi(W))/F
+surface=F^3Y-(W-F^2)Psi(W)=0
+image=surface_minus_d_points_(0,lambda_i,0)
+atlas=quasi_finite_etale_codimension_one_surjective
+intersection=k[x,y]_cap_k(F,P)=k[F,W,Y]/relation
+degree=2d+1
+units=k*;Pic=Z^d;no_birational_Darboux;survivor_source_degree>=2(2d+1)
+quadratic=F^3Y-(W-F^2)(W^2+64c^5/225)=0
+hostile=d1_misses_divisor_and_retains_x^3
+CHECKS=100
+semantic_sha256=02d47bc15c1604416a489fdf00495ebd3e76db58505395490c7916790bd179f3
