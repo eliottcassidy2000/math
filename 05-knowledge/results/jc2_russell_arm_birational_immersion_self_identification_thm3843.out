@@ -1,0 +1,9 @@
+theorem=THM-3843-russell-arm-birational-immersion-and-forced-self-identification
+arm=L=(r,z)=0=A1_e;source_line=x=0;map=e=3c^2y
+darboux_restriction=3c^3(alpha*qprime-pprime*beta)=lambda
+normalization=finite_birational;differential_nonvanishing;derivative_gcd=1
+injective_boundary=Gwozdziewicz_forces_automorphism_but_degree>=9
+conclusion=distinct_arm_points_share_a_singular_image
+scope=all_degree_fixed_Russell_surface;Darboux_pair_existence_OPEN
+CHECKS=21
+semantic_sha256=a24dc6e0b848766ce63799ad0c879a463f1e93e8c2162d28694f6dbebad95c7a
