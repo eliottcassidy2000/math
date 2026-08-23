@@ -1,0 +1,16 @@
+JC_CUBIC_RADIAL_CARRIER_DISCRIMINANT_SIDECAR
+status=FINITE-EXACT_INDEPENDENT_SIDECAR;THM-3771_PROVED_AUDITED;JC2_OPEN
+jacobian_convention=J(P,Q)=P_X*Q_T-P_T*Q_X
+chart=z=XT;U=X*u(z);W=U+3*z+r;J(U,W)=3*U
+inverse=z=(W-U-r)/3;X=U/u(z);T=z*u(z)/U
+target=Q=U*phi(W);deg(phi)=2
+rational_mate=P0=-c*W/(3*Q);J(P0,Q)=c
+rational_torsor=P0+k(Q)
+vertical_polynomial=V(S)=(S-r)*u((S-r)/3)*phi(S)
+smoothness=Q_smooth_iff_V_squarefree
+discV=3^(-d*(d+3))*disc(u)*disc(phi)*u(0)^2*phi(r)^2*Res(u,phi(3z+r))^2_for_d>=1
+principal_equalizer=V(S)_divides_(h-c*S/3);impossible_degV=deg(u)+3>=3
+smooth_controls=constant;linear;quadratic
+hostile_boundaries=u_at_zero;phi_at_r;u_repeated_root;u_phi_collision;phi_repeated_root
+semantic_sha256=a2707a3de22a7503b1824b363d7ed33a25cb9f50ba2d7d870dd051ac4428e370
+RESULT: PASS

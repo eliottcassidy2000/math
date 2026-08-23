@@ -15,6 +15,9 @@ audit: >
   the birational inverse, the exact Hamiltonian constant field k(Q),
   occurrence and reducedness of every zero-fibre address, the DVR principal
   coefficients, address distinctness, and both constant-profile boundaries.
+  A second independently written discriminant sidecar packages those
+  addresses into one polynomial, verifies its discriminant factorization,
+  and checks three positive and five hostile boundary controls.
   Normal and optimized runs byte-match the frozen transcript; script,
   output, and semantic hashes and CHECKS=86 match; documentation passes.
 depends_on: []
@@ -29,6 +32,10 @@ output: 05-knowledge/results/jc2_arbitrary_profile_cubic_radial_carrier_thm3771.
 script_sha256: 80ca106c48dac4dbc25d0fa881c8afaee6c846f9f4cf7856208bd8902f29093f
 output_sha256: 16ed5478381242cd7ce76edaf735f7eed5b57de75a0e0d16665f17a71df17aa6
 semantic_sha256: fa1f0e9b4ffef79f16e86a6aff42eb5bf7a779e211b9d820ee212a9aa82fc6ac
+independent_script: 04-computation/jc2_cubic_radial_carrier_discriminant_sidecar_20260823.py
+independent_output: 05-knowledge/results/jc2_cubic_radial_carrier_discriminant_sidecar_20260823.out
+independent_script_sha256: 562031efef94d978b45009af161fb8e54cad8bb77b33d22fb598bd698fbd32a0
+independent_output_sha256: d045ae385b507edf6f1fe12fda189b671393c92cf142eb477db9b46572c1b59d
 hash_basis: raw LF bytes
 ---
 
@@ -224,6 +231,28 @@ each profile; `u(0)!=0` separates `r` from the `u`-addresses;
 ```text
 |S|=1+deg(u)+deg(phi).                                  (18)
 ```
+
+In the genuine quadratic sector, the same address packet has a useful
+one-polynomial encoding.  Put `d=deg(u)` and
+
+```text
+V(S)=(S-r)u((S-r)/3)phi(S).                           (18a)
+```
+
+Its roots are exactly the addresses in `(17)`, so `(3)` is equivalent to
+`V` being squarefree.  For `d>=1`, the product-discriminant and affine-change
+identities give
+
+```text
+Disc(V)=3^(-d(d+3)) Disc(u) Disc(phi) u(0)^2 phi(r)^2
+        Res_z(u(z),phi(3z+r))^2.                     (18b)
+```
+
+For constant `u=u0`, this becomes
+`Disc(V)=u0^4 Disc(phi)phi(r)^2`.  Thus the smooth zero fibre has exactly
+`d+3` irreducible components in this sector.  The independent companion in
+the metadata verifies `(18b)` on profile degrees zero, one, and two without
+reusing the address-set test.
 
 At the generic point of a component with address `w_D in S`, `(4)` has
 potential simple `1/Q` principal coefficient

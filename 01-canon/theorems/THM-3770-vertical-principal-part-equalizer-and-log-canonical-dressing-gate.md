@@ -259,73 +259,86 @@ The lift through `(17)` then supplies the Keller pair automatically.
 
 ## 3. Nonconstant spectral dressing cannot synchronize
 
-There is also a general trap.  In addition to `(10)`, assume
+There is also a general trap which does **not** require the chart `(U,W)` to
+be birational.  Let `phi in k[T]` be nonconstant and squarefree, and put
 
 ```text
-K=k(U,W),                                              (21)
+Q=U phi(W).                                            (21)
 ```
 
-so `(U,W)` is a birational rational coordinate system.  Let `phi in k[T]`
-be nonconstant and squarefree, and put
+If `Q` has no critical point, then it has no polynomial
+constant-Jacobian mate.  Indeed
 
 ```text
-Q=U phi(W),                 P0=-W/(mQ).               (22)
+J(Q,W)=phi(W)J(U,W)=mQ.                               (22)
+```
+
+Smoothness makes `Q` squarefree, so Section 2 applies to the log-canonical
+pair `(Q,W)`.  Its zero-component spectrum contains every old value `c_i`
+from `U_i=0` and, for every root `r` of `phi`, the value `r` on every
+component of `W-r=0`.  Such a new component exists because `W` is
+nonconstant.  Smoothness also forces
+
+```text
+phi(c_i)!=0,                         hence c_i!=r,      (23)
+```
+
+since otherwise `U_i` divides both factors in `(21)` and `Q` is not
+squarefree.  The spectrum of `(Q,W)` therefore has at least two values.
+The equivalence `(13)` now forbids a polynomial mate.
+
+For the complete rational torsor and its principal coefficients, add the
+birational hypothesis
+
+```text
+K=k(U,W),                                              (24)
+```
+
+and put
+
+```text
+P0=-W/(mQ).                                           (25)
 ```
 
 Then
 
 ```text
-J(P0,Q)=1.                                             (23)
+J(P0,Q)=1.                                             (26)
 ```
 
-If `Q` has no critical point, it has no polynomial constant-Jacobian mate.
-
-To prove `(23)`, observe that
-
-```text
-J(Q,W)=phi(W)J(U,W)=mQ.                               (24)
-```
-
-Moreover `(21)` and `U=Q/phi(W)` give `K=k(Q,W)`, and `(24)` says that the
+Indeed `(24)` and `U=Q/phi(W)` give `K=k(Q,W)`, and `(22)` says that the
 Hamiltonian derivation is a nonzero `k(Q)`-multiple of `d/dW`.  Therefore
 
 ```text
-ker_K J(-,Q)=k(Q),                                    (25)
+ker_K J(-,Q)=k(Q),                                    (27)
 ```
 
-so `(3)` is the complete rational-mate torsor.
-
-Let `r` be any root of `phi`.  The zero fibre of `Q` contains the old
-components `U_i=0` and components of `W-r=0`.  Smoothness forces
-
-```text
-phi(c_i)!=0,                         hence c_i!=r:      (26)
-```
-
-otherwise `U_i` divides both factors in `(22)`, making the zero fibre
-nonreduced and `Q` critical.  Since `Q` is a uniformizer, the simple `1/Q`
+so `(3)` is the complete rational-mate torsor, and `(26)` follows directly
+from `(22)`.  Since `Q` is a uniformizer, the simple `1/Q`
 principal coefficients of `P0` are
 
 ```text
 U_i=0:       -c_i/m,
-W-r=0:       -r/m.                                    (27)
+W-r=0:       -r/m.                                    (28)
 ```
 
-They differ by `(26)`.  The first step of the vertical equalizer therefore
-fails, and no member of `P0+k(Q)` is polynomial.  **QED.**
+They differ by `(23)`.  Thus the first step of the vertical equalizer gives
+the same obstruction as the unconditional component-spectrum proof above.
+**QED.**
 
 The contradiction is structural: smoothness requires the newly appended
 root spectrum of `phi` to avoid the old component spectrum, while regularity
 requires all of those values to agree.  Dressing creates extra zero-fibre
 components but cannot pay their gluing debt.
 
-There is a sharp completion at the constant-dressing boundary.  If
+Under the birational hypothesis `(24)`, there is a sharp completion at the
+constant-dressing boundary.  If
 `phi=a in k*`, then `Q=aU`.  The same birational calculation and Section 1
 show that `Q` has a polynomial mate exactly when the spectrum `(12)` is
 equalized.  In that case `(13)` supplies `V` with `J(U,V)=m`, and
 
 ```text
-k(U,V)=k(U,W)=K.                                      (28)
+k(U,V)=k(U,W)=K.                                      (29)
 ```
 
 Thus the Keller pair is birational and hence an automorphism by the classical
@@ -342,7 +355,7 @@ usually blends together:
 ```text
 generic exactness   rational primitive P0 exists;
 horizontal debt     P0 has no pole dominating the target line;
-vertical gluing     every componentwise principal coefficient equalizes. (29)
+vertical gluing     every componentwise principal coefficient equalizes. (30)
 ```
 
 THM-3598 reaches the first line and fails on arm/residual divisors.
@@ -351,18 +364,20 @@ components of `Q=0`.  Equation `(13)` shows exactly what a positive signal
 would mean: synchronized component constants would expose a polynomial mate,
 not merely a deeper finite jet.
 
-The hypotheses in Section 3 are deliberately typed.  Birationality supplies
-the complete rational torsor; without it one must separately prove the
-constant field in `(2)`.  Squarefreeness of `phi` and smoothness of `Q` are
+The hypotheses in Section 3 are deliberately typed.  Birationality is not
+needed for the nonconstant-dressing no-go; it supplies the explicit primitive,
+the complete rational torsor, and the automorphism conclusion on the constant
+boundary.  Without it one must separately prove the constant field in `(2)`
+before claiming a torsor.  Squarefreeness of `phi` and smoothness of `Q` are
 the Jacobian-relevant boundary.  If `phi` is constant, the appended root
 spectrum disappears and the problem reduces exactly to `(13)`, namely the
-original Keller question for `U`; under `(21)` it can produce only an
+original Keller question for `U`; under `(24)` it can produce only an
 automorphism.  Thus the no-go does not assume away the desired object.  It
 locates any counterexample beyond the birational chart, at the simultaneous
 boundary
 
 ```text
-synchronized component spectrum + function-field degree greater than one. (30)
+synchronized component spectrum + function-field degree greater than one. (31)
 ```
 
 **QED.**
