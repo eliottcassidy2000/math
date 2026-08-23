@@ -1,0 +1,10 @@
+theorem=THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
+completion=finite_flat_rank3;trace_zero_module_rank2;binary_index_cubic
+monogenic=no_global_generator_on_constant_unit_etale_open
+depressed=delta=(3t^2+p)^2*(-3t^2-4p);trace=(3,0,-2p,-3q,2p^2)
+branch=every_component_partition_2plus1;one_visible_principal_companion
+resolvent=delta_squarefree_nonsquare;Galois_closure=S3
+nodal=N_not_discriminant;visible_pullback=L+D;Pic_classes=1+2=0_mod3
+hostile=third_Veronese_nonmonogenic_cyclic_total_ramification
+CHECKS=87
+semantic_sha256=f7d75dea921701b02b6e3ac5f8e33723822c95f2c2581abdd910b5df6ab813e7
