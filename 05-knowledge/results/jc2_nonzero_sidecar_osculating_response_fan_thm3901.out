@@ -1,0 +1,13 @@
+theorem=THM-3901-nonzero-sidecar-osculating-response-fan
+identity_q0=S-(sTr)^2=R_mod_s2_plus_3
+identity_q1=second_defect_exact_mod_s2_plus_3
+generic_top_cells=192
+first_response_cells=192
+second_response_cells=160
+constant_boundary_cells=12
+delta2_wall=corrected_v_eq_minus_au_tariffs
+sharp_controls=leading_tariffs_are_payable
+scope=necessary_fan_not_square_existence_or_emptiness
+semantic_sha256=56809d2f535895f39f071eb474b40bc0e1a5e54ebb996a24c38c2304b561c0ee
+CHECKS=1152
+RESULT=PASS
