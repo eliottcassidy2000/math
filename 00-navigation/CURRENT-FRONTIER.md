@@ -62,10 +62,15 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   If the full height-`91^6` code stays rank eleven, every crossing row is
   forbidden, every internal pair is bounded, and packets recover both scales
   unless one component is a singleton, where an exact congruence fibre remains.
+  THM-3818's audited cyclic-gluing sidecar now turns that quotient into a
+  partial LRC implication: `s lambda(v)>=1` gives a common safe time.  The
+  `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
+  candidates; the powers-of-four fibre has none.  The `11+2` branch leaves
+  46,837 necessary seams for `2<=s<=355`, or 52,692 residual triples after
+  adding scale one.  Those seams, owner and arrival remain open.
   FINITE-EXACT,
   `(9,13;76,132)` remains the unique tripling edge through pair sum `10^6`
-  (independent control `5000`).  This is arithmetic only: no owner, off-grid
-  arrival, row exclusion or loneliness follows.
+  (independent control `5000`).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves

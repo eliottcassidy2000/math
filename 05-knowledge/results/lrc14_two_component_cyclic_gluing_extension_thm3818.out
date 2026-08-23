@@ -1,0 +1,18 @@
+THM-3818 NEXT CYCLIC-GLUING / SINGLETON-FIBRE PROBE
+status=PROVED_ANALYTIC_IMPLICATIONS+FINITE_EXACT_CONTROLS;LRC14_OPEN
+Q=567869252041
+B=322475487413604782665681
+cyclic_gluing=if_component_good_arc_length_lambda_and_pack_scale_s_satisfy_s*lambda>=1_then_row_is_lonely
+universal_scale_gate=for_small_component_size_b_and_maximum_V,_s<7*(b+1)*V/(13-b)_in_any_counterexample
+singleton_consequence=12+1_counterexample_forces_nonsingleton_scale_s=1
+singleton_killer_gate=singleton_speed_t<=13*U
+singleton_crossing_gate=U>Q/13=43682250157
+singleton_packet_gate=L>U_and_t_mod_L_known_imply_at_most_13_candidates
+two_detuned_consequence=s=1_or_(s>=2_seam);s>=3_forces_s_divides_p_or_s_divides_q;s>=2_seams=46837;including_s1=52692;positive_scale_max=355
+branch_controls={"minimum_certified_safe_branches":1,"nonprimitive_hostile_phases":["1/100","1/100"],"primitive_detuned_values_checked":[1,512],"primitive_singleton_scales_checked":[2,512],"scale_one_method_hostile":"AP12@1/13 leaves speed13 at zero; AP13@1/14 is safe"}
+two_detuned_atlas={"maximum_exact_grid_conductor":415,"ratio_count":5855,"seam_incidence_counts_nonexclusive":{"divides_p":19320,"divides_q":25866,"scale_two":5855},"tariff_residual_triples_including_s_1":52692,"tariff_survivor_exact_form_s_ge_2":"scale=2 or scale|p or scale|q","tariff_survivor_scale_max_s_ge_2":355,"tariff_survivor_triples_s_ge_2":46837,"unique_grid_conductor_extremizer":{"longest_safe_arc":"6/2485","ratio":[1,355]}}
+singleton={"abstract_bound_sharp_control":{"L":101,"U":100,"candidates":13,"residue":1},"component_maximum":4194304,"component_shape":"(1,4,...,4^11)","counterexample_candidates_in_same_packet":0,"counterexample_cutoff":54525952,"crossing_row_shape_floor":43682250158,"general_candidate_bound":13,"packet_lcm":22906142720,"raw_dominance_packet_fibre":14077914720208,"singleton_residue":9906946049}
+requirements=3914679
+semantic_sha256=c0f740ba30038da038d1c290a2bb7ce93b7d47835ee18d9c6cbb2745b35752b5
+scope=rank11_two_component_quotient_only;no_owner_or_global_LRC14_closure
+PASS

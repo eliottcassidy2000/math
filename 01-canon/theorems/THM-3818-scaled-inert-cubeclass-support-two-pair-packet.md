@@ -19,9 +19,14 @@ status: >
   the orthogonal integer lattice has two scale coordinates; if the full
   height-91^6 support-three code still has rank eleven, every bounded crossing
   row is forbidden and every internal pair has height at most 91^6.  Full
-  packets recover both scales unless one component is a singleton.  This is
-  an all-scale address theorem, not an LRC exclusion: the grid can be empty
-  while an off-grid loneliness time exists.
+  packets recover both scales unless one component is a singleton.  On that
+  exact two-component branch, cyclic gluing gives a genuine LRC sidecar:
+  `s lambda(v)>=1` forces a common lonely time.  A `12+1` counterexample has
+  nonsingleton scale one, component maximum above `91^6/13`, and at most
+  thirteen singleton candidates in its exact packet fibre.  The `11+2`
+  branch reduces to 46,837 necessary seams with scale at least two, or 52,692
+  residual triples after including scale one.  This still does not prove
+  LRC(14), recover owner/arrival, or decide those seams.
 source: root + lrc_reversible_address / incoming-signal extension, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (thm3791-hostile-audit, 2026-08-23).  The
@@ -47,10 +52,21 @@ audit: >
   it checks the quotient slope atlas, a safe 2+11 row with both scales
   recovered, and a 12+1 singleton packet fibre of size 14,077,914,720,208.
   Normal, optimized, and frozen streams agree.
+  The cyclic-gluing extension is independently audited by a sieve atlas,
+  exact wall cells, direct shift cells, a divisor union, and an independent
+  congruence counter.  Its primary 3,914,679 requirements and independent
+  1,497,987 gates reproduce the conductor 415, the 46,837/52,692 seam split,
+  the thirteen-candidate cap, and the sharp crossing-height boundary under
+  normal, optimized, and frozen replay.
 depends_on:
   - THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction
   - THM-3793-inert-prime-sum-all-scale-two-cube-singleton
   - THM-2052-finite-height-forces-high-rank-bounded-relation-code
+  - THM-668-detuned-harmonic-dispatch
+  - THM-737-pack-clock-sampling-measure-dispatch
+  - THM-1007-weak-target-single-killer-closure
+  - LRCUpTo13
+  - "T. Sungkawichai and T. Trakulthongchai, Eleven, twelve, and thirteen lonely runners, arXiv:2604.23906v1 (preprint)"
 related:
   - THM-778-centered-christoffel-endpoint-skew-product
 script: 04-computation/lrc14_scaled_inert_cubeclass_pair_packet_thm3818.py
@@ -87,6 +103,16 @@ two_component_output: 05-knowledge/results/lrc14_two_component_decoder_quotient_
 two_component_script_sha256: 2ce52b1a45c3c4416e367f8177b288f7f9dc7ac651bf58ee036137e17f2208b2
 two_component_output_sha256: df4b1c86df9f9871997c41bc9d236429d0ca61fae4125bfe0ce51bfff78004e6
 two_component_semantic_sha256: 3c937069964a6e2134e7da6c6009d1b3b71eecdbc2d5260807ea34bffe69ab3b
+cyclic_gluing_script: 04-computation/lrc14_two_component_cyclic_gluing_extension_thm3818.py
+cyclic_gluing_output: 05-knowledge/results/lrc14_two_component_cyclic_gluing_extension_thm3818.out
+cyclic_gluing_script_sha256: 57f4ba57204a8e987f48dce46f846247fb06a0d5c5d3eb2c9c2cd7664e78d0a9
+cyclic_gluing_output_sha256: 576995ac92b8677dea53faf811c96a7614a9f06f1257c2f7d1f4a21f2fc72586
+cyclic_gluing_semantic_sha256: c0f740ba30038da038d1c290a2bb7ce93b7d47835ee18d9c6cbb2745b35752b5
+cyclic_gluing_independent_script: 04-computation/lrc14_two_component_cyclic_gluing_independent_audit_thm3818.py
+cyclic_gluing_independent_output: 05-knowledge/results/lrc14_two_component_cyclic_gluing_independent_audit_thm3818.out
+cyclic_gluing_independent_script_sha256: 10e18e41708713a41f3373d4d01f94e00a4b7e656ac68b3bd6f408f254c6eaa3
+cyclic_gluing_independent_output_sha256: 7813771d7cb40bb1256dc6cdcabb07c706340235e0b149e638a01ef8ccde36c6
+cyclic_gluing_independent_semantic_sha256: f21efb5549226a99f0e9f762975ae93c3039da9d8224d8ea5e1b59f61dec5d48
 hash_basis: raw LF bytes
 ---
 
@@ -507,6 +533,122 @@ positive candidates.  The component quotient is therefore arithmetically
 rigid precisely when neither component is a singleton; even then it is not
 an LRC certificate.
 
+### 6.5 Cyclic component gluing and the residual seams
+
+Keep the exact rank-eleven equality branch of Section 6.4, so
+
+```text
+n=s u direct-sum t v,             s,t>0, gcd(s,t)=1.  (15w)
+```
+
+For a positive speed tuple `w`, put
+
+```text
+G(w)={x in R/Z:min_i ||w_i x||>=1/14},
+lambda(w)=maximum length of a connected component of G(w).     (15x)
+```
+
+Choose `y in G(u)`, which exists when `|I|<=12` by the standing cited LRC
+through twelve nonzero speeds.  The `s` lifts
+
+```text
+x_k=(y+k)/s,                       0<=k<s,             (15y)
+```
+
+preserve every `u`-clearance.  In the other component's clock they give
+
+```text
+t x_k=t y/s+tk/s  (mod 1).                               (15z)
+```
+
+Primitivity in (15w) makes this a complete shifted `s`-grid.  Every closed
+arc of length at least `1/s` meets that grid, and therefore
+
+```text
+s lambda(v)>=1  ==>  n is 1/14-lonely.                    (15aa)
+```
+
+The statement is symmetric in the two components.  It is a coherent-lift
+existence theorem, not a marginal measure estimate.  If the smaller
+component has `b<=6` vertices and maximum primitive speed `V`, lower-
+dimensional LRC supplies clearance `1/(b+1)`.  Since its minimum-clearance
+function is `V`-Lipschitz, one component of `G(v)` has length at least
+
+```text
+(13-b)/(7(b+1)V).
+```
+
+Thus any counterexample in this branch must satisfy
+
+```text
+s<7(b+1)V/(13-b).                                      (15ab)
+```
+
+For every one of the 5,855 two-vertex shapes, exact rational wall arithmetic
+computes `lambda`.  The maximum conductor `ceil(1/lambda)` is 415, uniquely
+at `(p,q)=(1,355)`, where `lambda=6/2485`.
+
+There is a sharper `11+2` tariff.  For a detuned speed `w`, let
+
+```text
+g=gcd(s,w),                    m=s/g.
+```
+
+Its danger arc meets at most `g(m/7)` branches when `7|m`, and at most
+`g ceil(m/7)` otherwise.  If `s>2` divides neither coprime coordinate `p,q`,
+both normalized bounds are at most `1/2`.  Equality for both forces both
+orders to be two, hence `s/2` divides `gcd(p,q)=1`, a contradiction.  So a
+hypothetical counterexample must obey
+
+```text
+s=1, or s=2, or s|p, or s|q.                           (15ac)
+```
+
+The exact all-atlas divisor union in (15ac) contains 46,837 necessary triples
+with `s>=2` and has maximum scale 355.  The separate `s=1` alternative adds
+5,855 triples, for 52,692 total.  These are unresolved seams, not
+counterexamples.
+
+If the smaller component is a singleton, `v=(1)` and `lambda(v)=6/7`, so
+(15aa) forces `s=1` in every hypothetical counterexample.  Let
+`U=max_i u_i`.  THM-1007 gives `t<=13U`.  The complete packets determine `t`
+modulo
+
+```text
+L=lcm{u_i+u_j:{i,j} is an internal decoder edge}.
+```
+
+The nonsingleton decoder component is connected, so an edge incident to its
+maximum gives `L>U`.  A fixed residue class modulo `L` therefore has at most
+`ceil(13U/L)<=13` positive representatives below `13U`.  This cap is sharp
+from these inequalities alone: `(U,L,r)=(100,101,1)` has thirteen.
+
+Finally, if `U<=Q/13`, then `t<=13U<=Q` and every `u_i<=Q`.  The primitive
+support-two relation between `t` and any `u_i` is a forbidden height-`Q`
+crossing row from Section 6.4.  Hence
+
+```text
+U>Q/13=43,682,250,157.                                  (15ad)
+```
+
+For the powers-of-four hostile (15u), the old packet fibre has
+14,077,914,720,208 rows.  Its component maximum is only 4,194,304, and its
+known singleton residue has no representative below `13U=54,525,952`; both
+(15ad) and the exact congruence count eliminate that fibre as a counterexample
+fibre.  It remains a valid packet-information hostile.
+
+The typed connection is
+
+```text
+source:      exact two-component quotient and one component good set
+target:      a common 1/14-safe time
+map:         y -> {(y+k)/s}_k -> complete grid in the other clock
+preserved:   all first-component clearances and all labels of the second
+destroyed:   selected lift, owner, first arrival and wall chronology
+sidecar:     one closed component of G(v), or only its length lambda(v)
+next test:   decide the 46,837 positive-scale seams and the scale-one rows.
+```
+
 ## 7. Exact verification and scope
 
 Replay the new quotient extension with
@@ -534,6 +676,11 @@ The two-component companion checks the integral quotient, crossing-slope
 atlas, bounded pair-clique consequence, a safe `2+11` row with both scales
 recovered, and the exact `12+1` singleton fibre in `1,742` active
 requirements.  Its normal, optimized, and frozen streams agree as well.
+The cyclic-gluing primary and independent companions then check the exact
+good-arc conductor, direct branch counts, the divisor-seam union, the
+singleton congruence cap and the crossing-height boundary in 3,914,679 and
+1,497,987 gates respectively.  Both agree under normal, optimized and frozen
+replay.
 
 The rational-class extension independently factors and scans every primitive
 cube sum, then exhausts all `17,137,585` unordered ratio pairs and scaled
@@ -545,13 +692,12 @@ The precise connection ledger is
 
 ```text
 source:      support-two Graver branch of THM-3743
-target:      cube fibre, pair-sum grid, weighted graph and oriented faces
-map:         pair packet -> (M,a,D,residues) -> a diag(n)
-preserved:   scale, ratio, placement, grid, row matroid, circuits, facets
-destroyed:   ambient quotients, cross-component scale, off-grid loneliness
-sidecar:     full speed row and owner/phase chronology for any LRC use
-next test:   classify the finite forbidden crossing-slope atlas together
-             with facet/owner/phase arrival; packets alone are exhausted. (16)
+target:      cube fibre, pair grid, graph, oriented faces and cyclic lifts
+map:         packet -> (M,a,D,residues) -> a diag(n) -> shifted scale grid
+preserved:   scale, ratio, placement, row matroid, facets and good clearance
+destroyed:   ambient quotients, selected lift, owner and phase chronology
+sidecar:     component good-set arc for an LRC implication
+next test:   decide the divisor/scale-one seams with owner/arrival data.  (16)
 ```
 
 In particular, (3) supplies no exclusion of a hypothetical LRC(14)
@@ -566,5 +712,5 @@ has at least two components, exactly two when its rows span eleven.  In that
 two-component branch, bounded crossing rows are exactly a finite forbidden
 slope atlas, all internal pairs are already bounded, and the full packet
 either recovers both scales or retains the exact singleton congruence fibre.
-The live problem is the crossing-slope complement together with owner/phase
-arrival—not another support-two count.  **QED.**
+The live problem is the 46,837 positive-scale divisor seam, the scale-one
+rows, and owner/phase arrival—not another support-two count.  **QED.**

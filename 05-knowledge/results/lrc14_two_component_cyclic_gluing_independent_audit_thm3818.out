@@ -1,0 +1,10 @@
+THM-3818 CYCLIC-GLUING INDEPENDENT HOSTILE AUDIT
+verdict=PASS;analytic_implications_sound;finite_constants_independently_rederived;LRC14_OPEN
+method=sieve_ratio_atlas+wall_cell_good_arcs+direct_shift_cells+divisor_union+independent_congruence_count
+shifted={"brute_shift_count_pairs":784,"hostiles":["gcd(2,2)>1 collapses both lifts","scale-one AP12 witness has speed13 at zero"],"unit_shifted_grids":1259,"worst_unit_grid_best_clearance":"1/4"}
+two_detuned={"divisor_union_survivors_s_ge_2":46837,"extremal_longest_arc":"6/2485","grid_conductor_extremizer":[1,355],"grid_conductor_max":415,"incidence_nonexclusive":{"divides_p":19320,"divides_q":25866,"scale_two":5855},"ratio_count":5855,"residual_including_s_1":52692,"survivor_scale_max_s_ge_2":355}
+singleton={"Q_over_13":43682250157,"abstract_candidate_cases":282360,"abstract_candidate_max":13,"canonical":{"L":22906142720,"U":4194304,"cutoff":54525952,"raw_fibre":14077914720208,"remaining_candidates":0,"residue":9906946049},"first_above_size_only_hostile_height":567869252054,"first_allowed_shape_maximum":43682250158}
+gates=1497987
+semantic_sha256=f21efb5549226a99f0e9f762975ae93c3039da9d8224d8ea5e1b59f61dec5d48
+scope=corollary_inside_THM3818_dimW11_two_component_branch;no_owner_arrival_or_global_closure
+PASS
