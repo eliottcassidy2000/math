@@ -1,0 +1,11 @@
+theorem=THM-3911-sharp-one-place-sextic-resolvent-three-torsion-obstruction
+branch=sextic;normalization=A1;infinity_places=1
+finite_singularities=ordinary_quadruple_plus_2A2_plus_2A1
+boundary_gram=[[-2,3],[3,-2]];boundary_determinant=-5
+removed_gram_determinant=360;mod3_kernel=9;nonzero_integral_squares=0
+quadratic_resolvent_units=kstar;class_group_3_torsion=zero
+normal_irreducible_S3_cubic_lift=obstructed
+scope=sharp_control_only_no_JC_counterexample
+semantic_sha256=637b640a6ea58c4b80abacde95d3135fc4ac069d5a72ea31bff6fa53125d4291
+CHECKS=39
+RESULT=PASS
