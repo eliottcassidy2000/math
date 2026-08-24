@@ -26,7 +26,13 @@ audit: >
   exponent-one maximal-order parity step; and the rank-three source
   non-unibranch bridge. The assertion-free 96-gate companion byte-matches in
   normal and optimized mode; frozen output, hashes, and documentation checks
-  pass.
+  pass. Three further hostile audits (jc3913_lattice_referee,
+  jc_decic_lattice, and jc_tournament_response, 2026-08-24) independently
+  recovered the five color survivors, the exact two-address rather than
+  three-address count in rows G--I, and the two scalar seams. They added the
+  codimension-one maximality plus R1+S2 normality check in (25a)--(25b), so
+  THM-3801 is applied to the actual maximal order rather than an auxiliary
+  binary-cubic order.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
@@ -367,6 +373,27 @@ E:p=0 gives d=1/2,       F:q=-1/4 gives d=4              (25)
 
 are not merely failed division cases: they are actual scalar values of the
 binary index form and are excluded by THM-3801's nonmonogenicity gate.
+
+There is a necessary maximal-order check before invoking that gate. At the
+row-E endpoint `p=0`, exact specialization gives
+
+```text
+J_E=(27A^8+8C^3)/8,                 Disc(O_E)=-2J_E.       (25a)
+```
+
+At the row-F endpoint `q=-1/4`, one has `L_F=-4` and
+
+```text
+Disc(O_F)=-16J_F.                                        (25b)
+```
+
+The pole-valuation generation argument of Section 4 remains valid on both
+seams, so each `J` is irreducible. Its exponent is one; hence the displayed
+finite-free cubic order is maximal at the sole height-one discriminant
+prime and etale, therefore normal, at every other height-one prime. Finite
+freeness gives `S2`, so `R1+S2` makes the whole order normal. Consequently
+the scalar values in `(25)` belong to the actual maximal normalization, not
+merely an auxiliary nonmaximal order. THM-3801 now applies exactly.
 
 ## 4. Every non-scalar implicit component is genuine ramification
 

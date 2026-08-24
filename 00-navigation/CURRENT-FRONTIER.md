@@ -1,6 +1,6 @@
 # Current Frontier
 
-**Rolling state — 2026-08-23.** Links are proof sources; composition and residuals live here. Statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**, **REFUTED**, **SUPERSEDED**.
+**Rolling state — 2026-08-24.** Links are proof sources; composition and residuals live here. Statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -343,11 +343,9 @@ asymptotic or residue.
   named cells only.  THM-3827/3831 force primitive-row genus `>=3`; THM-3836
   retains `3h^3+7h^2k+k^3=CS`, and THM-3838 gives `deg h,deg k>=5`.
   THM-3841/3845 close the `S3` anchor; THM-3844/3847 are monogenic controls.
-  THM-3850/3852/3859/3866/3870/3873/3876 close named line, marked-root,
-  transverse, graph and monomial cells.  THM-3880/3883 give the complete
+  THM-3850/3852/3859/3866/3870/3873/3876 close named cells. THM-3880/3883 give the complete
   local sign/residue/cube gate; global root existence remains.
-  THM-3851 is a unit-rich torus.  For THM-3854's one-place three-cusp front,
-  THM-3864/3872 close the constant cusp-ideal span; THM-3881 closes `T=0`.
+  THM-3851 is unit-rich; THM-3864/3872/3881 close THM-3854's constant-cusp/`T=0` cells.
   THM-3874/3877 exclude degree-three/four sole-simple-branch fields;
   THM-3879 reaches two places and THM-3882 forbids one-place rational duals.
   THM-3884/3886/3894 give jets; THM-3896 closes `n=4`.
@@ -358,19 +356,16 @@ asymptotic or residue.
   THM-3904 closes the x-only lane. THM-3901 gives the strict fan; THM-3902/3905 give equality through three jets.
   These are necessary passports with positive lifts, not closure.
   THM-3890 closes quintics; THM-3906/3907 have one/two and two/six places.
-  THM-3913/3919 give an elliptic no-atlas decic with mixed three-class;
-  THM-3915--3917 close two models. THM-3918 is rational with
-  `delta=34+1+1`; its plane/Keller status and `JC(2)` are OPEN.
-  THM-3935/3937/3940 leave one cubic character in linear-conic and `I7` resolvents;
-  THM-3939 is the exact two-boundary rank gate, while THM-3936/3938/3941 close
-  all centered pole carriers. THM-3942 gives two/three ends for two
-  affine-linear torus rows. THM-3943/3945 close every rational simple and
-  non-simple weight-eight four-torus sextic against one-place lines.
-  THM-3944 attains an `A1` parabola only in a nonnormal order: one boundary
-  class `(2,1)` survives on `Gm^2`, but none extends to normalized `A2`.
-  Seek unequal/multi-factor splits with a reduced one-place branch, a normal
-  quadratic surface, and two independently extendable Cardano classes;
-  factor splits remain under audit.
+  THM-3920 closes THM-3913--3918/radial chart, not `JC(2)`.
+  THM-3929/3933/3936/3938 close centered degrees 3--4;
+  [THM-3941](../01-canon/theorems/THM-3941-all-degree-centered-cubic-pole-carrier-routing.md)
+  routes all `N`. At `N=5`, seven carriers remain for color/order/address tests.
+  THM-3935/3937/3939/3940 leave one cubic character in the tested
+  two-boundary resolvents. THM-3942 gets two characters but two/three ends.
+  THM-3943/3945/3948 exclude `A1` normalization for the classified
+  weight-eight/nine sextics. THM-3944/3946/3947/3949 close repeated-square,
+  affine, and coprime one-variable splits on the standard line; bivariate,
+  gcd-overlap, and arbitrary-line mechanisms remain open.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a

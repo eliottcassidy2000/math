@@ -146,11 +146,61 @@ M = 1 + (x + x**2)/(1 - x**3)       # allowed infinity orders
 R3 = (x + x**2)/(1 - x**3)          # one pole at the C3 point
 R2 = x/(1 - x**2)                    # one pole at a C2 point
 P2 = x**2/((1 - x**2)*(1 - x**4))   # unordered pair of odd C2 orders
-nonregular_series = sp.series(M*(R3 + R2 + P2), x, 0, 31).removeO().expand()
+nonregular_rational = M * (R3 + R2 + P2)
+nonregular_series = sp.series(nonregular_rational, x, 0, 31).removeO().expand()
 for n in range(1, 31):
     enumerated = sum(row[0] != "root_regular" for row in carrier_rows(n))
     gate(nonregular_series.coeff(x, n) == enumerated,
          f"degree {n} generating-function row count")
+
+
+# The rational generating function has an exact period-twelve quadratic
+# coefficient law.  This is an ordinal invoice, not an asymptotic fit.
+# For N=12*j+r, the triple below is (coefficient of j^2,j,constant).
+quasipolynomial_coefficients = [
+    (6, 16, 0),
+    (6, 10, 2),
+    (6, 14, 4),
+    (6, 16, 5),
+    (6, 16, 5),
+    (6, 14, 7),
+    (6, 22, 10),
+    (6, 16, 9),
+    (6, 20, 12),
+    (6, 22, 14),
+    (6, 22, 15),
+    (6, 20, 16),
+]
+y = x**12
+quasipolynomial_numerator = sp.expand(sum(
+    x**residue * (
+        aa * y * (1 + y)
+        + bb * y * (1 - y)
+        + cc * (1 - y)**2
+    )
+    for residue, (aa, bb, cc) in enumerate(quasipolynomial_coefficients)
+))
+nonregular_numerator, nonregular_denominator = sp.together(
+    nonregular_rational
+).as_numer_denom()
+gate(
+    sp.expand(
+        nonregular_numerator * (1 - y)**3
+        - nonregular_denominator * quasipolynomial_numerator
+    ) == 0,
+    "period-twelve quadratic carrier-count identity",
+)
+
+# Within a fixed degree, the existing deterministic row order gives a
+# zero-based natural-number address for every generated color-division task.
+for n in range(1, 31):
+    nonregular_rows = [row for row in carrier_rows(n) if row[0] != "root_regular"]
+    ordinal = {row: index for index, row in enumerate(nonregular_rows)}
+    gate(
+        len(ordinal) == len(nonregular_rows)
+        and all(nonregular_rows[ordinal[row]] == row for row in nonregular_rows),
+        f"degree {n} carrier-to-natural ordinal bijection",
+    )
 
 
 # Hostile controls: forbidden residues never leak into generated rows.
@@ -183,6 +233,8 @@ summary = {
     "degree4": "5 nonregular rows",
     "degree5": "7 nonregular rows",
     "generating_function": "M*(R3+R2+P2);M=1+R3;P2=x2/((1-x2)(1-x4))",
+    "quasipolynomial": "period12;(a,b,c)=6:16:0,6:10:2,6:14:4,6:16:5,6:16:5,6:14:7,6:22:10,6:16:9,6:20:12,6:22:14,6:22:15,6:20:16",
+    "ordinal": "zero-based deterministic carrier-row rank at fixed N",
     "boundary": "no all-degree color-divisibility claim",
 }
 semantic = hashlib.sha256(json.dumps(summary, sort_keys=True).encode()).hexdigest()
@@ -197,5 +249,7 @@ print("DEGREE3=5 nonregular rows")
 print("DEGREE4=5 nonregular rows")
 print("DEGREE5=7 nonregular rows")
 print("GF=M*(R3+R2+P2), M=1+R3, P2=x^2/((1-x^2)(1-x^4))")
+print("QUASIPOLY_PERIOD12=(6,16,0);(6,10,2);(6,14,4);(6,16,5);(6,16,5);(6,14,7);(6,22,10);(6,16,9);(6,20,12);(6,22,14);(6,22,15);(6,20,16)")
+print("ORDINAL=zero-based deterministic carrier-row rank at fixed N")
 print("BOUNDARY=no all-degree color-divisibility claim")
 print(f"SEMANTIC_SHA256={semantic}")
