@@ -2,7 +2,7 @@
 id: THM-3926
 title: "Unit-ideal cubic has primitive ramification class but genus-two boundary"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. The normal
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. The normal
   THM-3907 unit-ideal cubic surface is smooth, has scalar units and class
   group Z^3, and its unique ramification divisor represents a primitive
   basis vector. Two explicit unramified vertical primes complete it to a
@@ -16,14 +16,16 @@ status: >
   necessary but not sufficient, and it closes THM-3907 as a Keller target.
 source: jc_zero_debt_lift / post-THM-3922 THM-3907 class-group lane, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The exact
-  Nagata chart, unit lattice, six boundary primes, derivative valuations,
-  primitive ramification class, Kummer and hyperelliptic genus-two models,
-  smoothness ideals, and Euler ledger are separated explicitly. The
-  assertion-free 50-gate companion obtains unit Groebner bases for the
-  surface and ramification singular ideals and verifies normal/optimized
-  replay against a frozen output. Raw hashes and documentation checks are
-  required before promotion.
+  INDEPENDENT HOSTILE AUDIT PASS (jc_degree6_one_place, 2026-08-23). The
+  audit independently reconstructed the factorial chart and its complete
+  unit group, the six height-one boundary primes and their valuations, the
+  Nagata quotient and primitive ramification class, and the different
+  divisor. It checked both the cyclic Kummer and hyperelliptic genus-two
+  models, the smoothness saturations, the six infinity punctures, purity of
+  the natural etale open, and the compactly supported Euler ledger. Normal
+  and optimized executions byte-match the frozen 50-gate output; all raw
+  hashes and documentation checks pass. No mathematical repair was needed;
+  one stale related-theorem slug was corrected during promotion.
 depends_on:
   - THM-3907-unit-ideal-nonmonogenic-cubic-six-place-boundary
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
@@ -31,7 +33,7 @@ depends_on:
 related:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
-  - THM-3924-index-five-ramification-class-obstruction
+  - THM-3924-decic-cubic-index-five-ramification-class-obstruction
 script: 04-computation/jc2_unit_ideal_cubic_class_genus_boundary_thm3926.py
 output: 05-knowledge/results/jc2_unit_ideal_cubic_class_genus_boundary_thm3926.out
 script_sha256: 5ff37ae063072265f413cd0039c1e4e4d0d2c84ffc1cb937a47a29c42e27500b
@@ -42,7 +44,7 @@ hash_basis: raw LF bytes
 
 # THM-3926 -- the class invoice passes, but the boundary has genus two
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero. Euler characteristics
 are asserted after specialization to `k=C`.
 
