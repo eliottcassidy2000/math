@@ -429,9 +429,10 @@ its four coefficients are
              /(64(4b+1)).                                 (39)
 ```
 
-They generate the unit ideal, but all four vanish at `(A,C)=(0,0)`. Hence
-`I(U,V)` can never be a unit for polynomial `U,V`; no element generates
-`B`. This proves global nonmonogenicity.
+They have gcd one (equivalently, no common irreducible factor), but their
+coefficient ideal is a proper ideal contained in `(A,C)`: all four vanish at
+`(A,C)=(0,0)`. Hence `I(U,V)` can never be a unit for polynomial `U,V`; no
+element generates `B`. This proves global nonmonogenicity.
 
 ## 6. The conic bundle and persistent three-class
 
@@ -474,6 +475,21 @@ V^2-r(s)-4Ah(s)+4A^2
 ```
 
 with respect to `A` is `-4h !=0`.
+
+There is also a useful exact genus gap. In both the generic THM-3915 packet
+and the present degeneration, let `R_odd` be the number of distinct finite
+roots of `r` having odd multiplicity. Infinity is unramified in both the
+quadratic curve `D` and the normalized cubic curve `F=0`; the odd roots give
+the simple normalized ramification. Riemann--Hurwitz therefore gives
+
+```text
+g(D^nu)=(R_odd-2)/2,             g(F^nu)=(R_odd-4)/2,
+g(D^nu)=g(F^nu)+1.                                      (43a)
+```
+
+Thus THM-3915 has genera `(3,2)`, while `K=0` has genera `(1,0)`. The two
+double roots remove two branch pairs simultaneously; the arithmetic genus
+of `D` stays three because the loss is absorbed by its two nodes.
 
 Blowing up the two boundary nodes replaces the old origin block `[-2]` by
 
@@ -520,6 +536,17 @@ Cl(Q_2)=Z^4/<(3,3,6,6)>=Z^3 direct-sum Z/3.               (48)
 
 Nondegeneracy of `(45)` makes the boundary-divisor kernel zero, so every
 unit is scalar. This proves `(5)`.
+
+The surviving three-class is the actual cyclic-layer class, not merely an
+available abstract slot. Indeed, `(30)` and irreducibility of `Delta` show
+that the cubic discriminant is nonsquare, while `(31)` makes the cubic
+connected. Its Galois closure therefore has group `S_3`, and over `Q_2` the
+alternating layer is a connected `C_3` extension unramified at every
+divisorial valuation. Kummer theory writes it as adjoining a cube root of
+some `g` with `div(g)=3E`. If `[E]` were zero, then `g` would be a cube times
+a unit; scalar units over the algebraically closed field are cubes, contrary
+to connectedness. Hence `[E]` is the nonzero element of `Cl(Q_2)[3]`, and so
+generates the unique `Z/3` summand in `(48)`.
 
 The comparison is now exact. The `K=0` deformation does all of the things a
 counterexample design asked of it locally: it makes the collapsed divisor
