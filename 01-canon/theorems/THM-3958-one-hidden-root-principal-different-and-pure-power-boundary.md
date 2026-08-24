@@ -2,7 +2,7 @@
 id: THM-3958
 title: "One hidden root forces a principal different and closes the natural cubic"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / NOT CANON. If the hidden cubic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. If the hidden cubic
   E+C h^2-2h^3 has exactly one root over k(t), that root is polynomial and
   the irreducible quadratic cofactor has the unique normal form
   h^2+a h+a r. The associated natural cubic surface is an integral normal
@@ -15,9 +15,21 @@ status: >
   genus |m-n|-1 and exactly two infinity places; equal exponents split.
   Common positive exponents also make the residual prime non-unibranch.
   The two remaining genus-zero hostiles have class groups Z and 0 and fail
-  only at the principal-different gate. This candidate is not usable until
-  independent hostile audit and status promotion.
+  only at the principal-different gate.
 source: jc-degree6-one-place / post-THM-3956 one-root residual audit, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc_zero_debt_lift, 2026-08-24). The audit
+  independently reconstructed the monic integrality and unique-root normal
+  form, the irreducibility criterion and finite singular locus proving
+  normality, the reduced scheme quotient A/(J) and multiplicity-one graph
+  and residual divisor packet, and the normalization-form Zariski Main
+  forbidden-unit contradiction. It also checked the squarefree pure-power
+  residual normalization, both infinity places, the common-positive
+  two-address non-unibranch fibre, the exact localization
+  A[L^-1]=k[t,L,L^-1], every Nagata valuation and class-group row, and the
+  sharp genus-zero endpoints. Normal and optimized runs byte-match the
+  frozen 161-gate output; raw and semantic hashes and documentation checks
+  pass.
 depends_on:
   - THM-3956-split-hidden-cubic-integrality-and-repeated-root-trichotomy
   - THM-3951-affine-plane-boundary-incidence-forest-and-equianharmonic-survivor-nonentry
@@ -35,7 +47,7 @@ hash_basis: raw LF bytes
 
 # THM-3958 -- one hidden root makes the different a forbidden unit
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / NOT CANON.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero. Let
 
 ```text
@@ -387,5 +399,4 @@ having at least one root over `k(t)`. A remaining natural cubic must have
 irreducible hidden cubic ramification, and a viable nontrivial Keller
 completion must in any event cease to be globally monogenic, in agreement
 with THM-3862. The theorem does not transfer its principal different to a
-different nonmonogenic overorder and does not prove JC(2). **QED (candidate
-pending independent audit).**
+different nonmonogenic overorder and does not prove JC(2). **QED.**
