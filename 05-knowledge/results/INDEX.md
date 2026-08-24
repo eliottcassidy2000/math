@@ -702,9 +702,11 @@
   THM-3961 leaves two general nonnormal conductor-debt loci for normalization.
   THM-3962/63/64/67/69 subsequently close the constant-`q`, moving scalar-
   `P^2`, scalar-coefficient graph, all depth-at-most-two, and collision-free
-  affine-graph packets;
-  collision fibres, nongraph repetition, and higher depth remain. Reducible
-  cubics and `JC(2)` are outside scope. Checks: `51`.
+  affine-graph packets. THM-3970 classifies repeated `M!=h` by its oriented
+  target gcd/osculation data. THM-3972 normalizes every nonconstant squarefree-
+  `Xi` row and closes `a=t`, constant-`(c,r)`. General canonical-compatible
+  simple rows, multiple `Xi` roots/reducible poles, nongraph/higher-depth
+  packets, reducible cubics, and `JC(2)` remain. Checks: `51`.
   Script/output/semantic SHA-256:
   `e23bc41290cc397df5de5caa7bfc2cf24d911fd21862d455f6b6343b03b34064` /
   `965d720d954670a8c4662adfe6c3940c1202199aa011dfbdc66fe3ce40c23764` /
@@ -771,7 +773,9 @@
   [THM-3969 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. For the
   first affine-`P` graph debt, `Xi in k^*` makes the relative-projective-line
   graph a finite smooth normalization with finite cyclic class group, which
-  THM-3922 excludes. Zeros of `Xi` add exceptional curves and remain open.
+  THM-3922 excludes. Subsequent THM-3972 normalizes every nonconstant
+  squarefree-`Xi` row by blowup and closes `a=t`, constant-`(c,r)`; general
+  compatible rows, multiple roots, and reducible poles remain open.
   Checks: `32`. Script/output/semantic SHA-256:
   `947b7e94bb83accbfed9b7612dcfb16b4f2be112b58e386e94a1d6bc27457fb1` /
   `e1d137c24e6330b888cda5fbfaf968a6da404f0db2e1c664049d742338008a26` /
@@ -788,6 +792,32 @@
   `1d41c8b8527d1a4d7ab836cee90c0e4913ad6e0645b02cb247fa2b18c16049a6` /
   `a569e79dd0b955883b2306d99ed79388d8c761b75a1326481fb003b6a51b4239` /
   `733c428a5d7556294a3eb065f89e3e71e1a79c2c8efec5916537691909898262`.
+
+- `jc2_canonical_debt_determinantal_completion_thm3971.py` -> matching `.out`
+  [THM-3971 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. For
+  every `m>=1`, the smooth normal determinantal-type completion `X_m` has one
+  `A1` boundary, scalar units, `Cl(X_m)=Z[D]`, and
+  `div(dx wedge dt)=(m-1)D`. Nevertheless its canonical volume is the nonzero
+  generator of `H^2_dR(X_m)`, detected by the residue-one primitive
+  `-t dx=(1-z)dx/x`; hence no global pair has Jacobian one. This is an
+  all-degree no-Darboux near miss, not a counterexample. Checks: `115`.
+  Script/output/semantic SHA-256:
+  `8d956b4b3753ca82a177caf957b8cfb59d871ed0e035528501467294a46245d2` /
+  `10a52f241fdfecb1bd76f942040e428f750262fd46fe53dd4d920ccca46d5afa` /
+  `3ef5c52adacd658670473c447c7e5dcad9f435bdb3942269af4631b86074f40d`.
+
+- `jc2_simple_collision_graph_blowup_thm3972.py` -> matching `.out`
+  [THM-3972 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. For
+  nonconstant squarefree `Xi`, blowing up its transverse basepoints and
+  deleting the strict cubic pole gives the exact smooth finite normalization.
+  With irreducible pole and `n` collisions, `Cl=Z^n` and `K=Ram=H`; Euler
+  forces the one-support Kummer pole. Every simple `a=t`, constant-`(c,r)`
+  row is excluded. General canonical-compatible simple rows, multiple `Xi`
+  roots, and reducible poles remain open. The hardened exceptional-chart and
+  infinity gates give `51` checks. Script/output/semantic SHA-256:
+  `88961bea53a000a39378aed8683ffbe6571119bd354286235954d293d5c879b4` /
+  `f238e984b667f3973f29a09524db7c86220ffce248184d4e937d7a9860605a97` /
+  `947829aee929640e6e59e5c050819d81de73f1f972a75330ede8dcb16bef22ea`.
 
 - `hopf_s6_triangle_monodromy_snf_audit_20260824.py` -> matching `.out`
   [VERIFIED-EXACT DISPLAYED MATRICES + FINITE-EXACT CONDITIONAL ORIENTED

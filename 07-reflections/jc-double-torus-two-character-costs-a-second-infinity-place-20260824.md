@@ -383,20 +383,23 @@ normalization of every `q=c(t)P^2` and kills it with the principal prime
 THM-3965 rules out one-place discriminants in its exact constant-`(g,h)`
 unit-ideal family; THM-3966/3968 package class/Euler and canonical/different
 invoices. THM-3967 closes all irreducible `deg_P(q)<=2` rows, and THM-3969
-closes collision-free `Xi in k^*` affine-`P` graph rows. Collision fibres,
-nongraph repeated factors, and higher `P`-depth remain. Proved THM-3970
+closes collision-free `Xi in k^*` affine-`P` graph rows. Proved THM-3970
 recodes hidden repetition as an oriented factor of `gcd(J,R)` but does not
-normalize it; THM-3971/3972 await audit/integration. The orthogonal
-THM-3955/57 node and
+normalize it. THM-3971 excludes the all-`m` determinantal completions by the
+residue-one volume class. THM-3972 normalizes every nonconstant squarefree-
+`Xi` row and closes `a=t`, constant-`(c,r)`; general canonical-compatible
+rows, multiple `Xi` roots, reducible poles, and other nongraph/higher-depth
+debts remain. THM-3973 is RESERVED empty. The orthogonal THM-3955/57 node and
 coordinate-crossing cotangent sequences are proved local sidecars, not global
 Jacobian or Hopf results.
 
 The next search should not maximize Mordell--Weil rank blindly.  The cheapest
 decisive experiments are:
 
-1. normalize the remaining affine-graph collision fibres, nongraph repeated-
-   factor, and higher-`P`-depth debts and compute their units, classes,
-   incidence, canonical vectors, and infinity places;
+1. use THM-3972's blowup model to test the general canonical-compatible
+   squarefree rows; normalize multiple-`Xi`/reducible-pole and nongraph/
+   higher-`P`-depth debts and compute their units, classes, incidence,
+   canonical vectors, and infinity places;
 2. start from a genuinely nonmonogenic `S3` field/order outside the normal
    monogenic grammar, or prove that the normalization parameter descends to
    an original polynomial target coordinate;

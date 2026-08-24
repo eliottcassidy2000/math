@@ -220,8 +220,12 @@ it is deliberately outside the conclusion.
 
 Thus the remaining affine-`P` graph problem is not an untyped bivariate
 normalization. It is the explicit exceptional-curve packet over `V(Xi)`.
-This theorem does not close that packet, higher `P`-depth, nongraph repeated
-factors, or `JC(2)`. **QED.**
+Subsequent THM-3972 constructs its blowup normalization whenever `Xi` is
+nonconstant and squarefree, computes the irreducible-pole class/canonical/
+ramification ledger, and closes every `a=t`, constant-`(c,r)` simple row.
+General canonical-compatible squarefree rows, multiple `Xi` roots, reducible
+pole multisections, higher `P`-depth, nongraph repeated factors, and `JC(2)`
+remain open. **QED.**
 
 ## Reproduction
 

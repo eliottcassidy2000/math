@@ -266,18 +266,21 @@ scalar-coefficient graph-root family. THM-3965 rules out a one-place
 discriminant in its exact constant-`(g,h)` unit-ideal family; THM-3966/3968
 give class/Euler and canonical/different invoices. THM-3967 closes all
 irreducible `deg_P(q)<=2` rows, while THM-3969 closes collision-free
-`Xi in k^*` affine-`P` graph rows. Collision fibres, nongraph repetition, and
-higher `P`-depth remain open. Proved THM-3970 gives an exact target-gcd/
-osculation reframe but no normalization closure; THM-3971/3972 await
-audit/integration.
+`Xi in k^*` affine-`P` graph rows. Proved THM-3970 gives an exact target-gcd/
+osculation reframe but no normalization closure. THM-3971 excludes the
+all-`m` determinantal completion family by its residue-one volume class.
+THM-3972 normalizes every nonconstant squarefree-`Xi` row and closes `a=t`,
+constant-`(c,r)`. General canonical-compatible simple rows, multiple `Xi`
+roots/reducible poles, and other nongraph/higher-depth debts remain open;
+THM-3973 is RESERVED empty.
 
 The session therefore ends at a sharp boundary.  **PROVED:** degree-four
 centered nonentry, all-degree trace-carrier routing, the arbitrary-common-debt
 natural-cubic boundary obstruction, the four-color Mobius classification, and
 the centered degree-five and arbitrary-`q` normal monogenic closures.
 **VERIFIED-EXACT:** the 2,884-gate carrier companion and the
-`51/62/44/75/92/62/161/105/42/51/46/45/110/29/23/32` gates in
-THM-3950/51/52/53/54/56/58/59/60/61/62/63/64/65/67/69. **OPEN:** degree at least six,
+`51/62/44/75/92/62/161/105/42/51/46/45/110/29/23/32/17/115/51` gates in
+THM-3950/51/52/53/54/56/58/59/60/61/62/63/64/65/67/69/70/71/72. **OPEN:** degree at least six,
 arbitrary root gauges and coefficient planes, the remaining moving conductor
 debts, nonmonogenic orders, normalization-parameter descent, higher-degree
 non-centered strata, and the planar Jacobian conjecture itself.

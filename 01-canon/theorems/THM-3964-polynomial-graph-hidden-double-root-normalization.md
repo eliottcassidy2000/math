@@ -420,10 +420,13 @@ THM-3961. Even with a graph factor `h=r(t)`, the coefficient of
 `(P-r^2)^2` can be a genuinely `P`-dependent polynomial `a(P,t)` rather than
 the scalar `c(t)` treated here; an irreducible repeated hidden factor also
 need not be a polynomial graph at all. THM-3969 subsequently closes the
-collision-free `Xi in k^*` affine-`P` graph packet. Its collision fibres,
-more general translated graph rows, nongraph repetition, arbitrary higher-
-depth `P^2q_2(P,t)`, nonmonogenic fields outside this grammar, and JC(2)
-remain open.
+collision-free `Xi in k^*` affine-`P` graph packet. THM-3972 subsequently
+constructs the blowup normalization for every nonconstant squarefree `Xi`
+and closes the `a=t`, constant-`(c,r)` simple rows. General canonical-
+compatible squarefree rows, multiple `Xi` roots, reducible pole
+multisections, more general translated/nongraph rows, arbitrary higher-depth
+`P^2q_2(P,t)`, nonmonogenic fields outside this grammar, and JC(2) remain
+open.
 
 ## Reproduction
 

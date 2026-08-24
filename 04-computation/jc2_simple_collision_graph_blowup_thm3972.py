@@ -88,18 +88,34 @@ other_product = sp.rem(sp.Poly(other_product, omega),
 zero(other_product - 3 * v**2 * (c**2 * v**2 + 3 * c * v + 9),
      "companion factor detects a second basepoint")
 
+# In the finite-basepoint blowup chart D=e,N=e*zeta, the target Jacobian
+# along the exceptional line is v*(N_v-D_v*zeta)/J_base.  Its only zero is
+# the strict ramification intersection zeta=v+2r.
+zeta = sp.symbols("zeta")
+jac_exc_finite = sp.cancel(v * (Nv - Dv * zeta) / J_base)
+zero(J_base * jac_exc_finite - v * (Nv - Dv * zeta),
+     "finite exceptional target Jacobian")
+zero((Nv / Dv - (v + 2 * r)).subs(base_sub),
+     "finite exceptional zero is strict ramification point")
+
 # At the projective-infinity basepoint a=c=W=0, Xi'=27a' and the local
 # Jacobian of (W^3-a, 3rW^2+3W+c) is -3a'.
 w = sp.symbols("w")
 D_inf = w**3 - a
 N_inf = 3 * r * w**2 + 3 * w + c
-J_inf = sp.expand(sp.diff(D_inf, t) if D_inf.has(t) else 0)
+Dt_inf = -ap
+Dw_inf = 3 * w**2
+Nt_inf = 3 * rp * w**2 + cp
+Nw_inf = 6 * r * w + 3
+J_inf = sp.expand(Dt_inf * Nw_inf - Dw_inf * Nt_inf)
 gate(D_inf.subs({w: 0, a: 0}) == 0, "infinity pole basepoint")
 gate(N_inf.subs({w: 0, c: 0}) == 0, "infinity numerator basepoint")
 gate(Xi_t.subs({a: 0, c: 0}) == 27 * ap,
      "infinity resultant derivative")
-gate((-ap) * 3 - 0 * cp == -3 * ap,
+gate(J_inf.subs(w, 0) == -3 * ap,
      "infinity transverse Jacobian")
+zero(J_inf.subs(w, 0) * zeta * (-3 / (J_inf.subs(w, 0) * zeta)) + 3,
+     "infinity exceptional target Jacobian")
 
 # Relative ramification.  On G=0 the saturated affine equation is R4=0;
 # the identity keeps the collision exceptional from becoming a component.
@@ -113,6 +129,8 @@ gate(sp.Poly(R_h, V, W).total_degree() == 4,
      "ramification multisection degree four")
 zero(R_h - (W**2 * N_h - (V + 2 * r * W) * D_h),
      "homogeneous ramification-pole identity")
+gate((w**2 - (1 + 2 * r * w) * zeta).subs(w, 0) == -zeta,
+     "infinity strict ramification meets only removed point")
 
 # Divisor lattice for n transverse points on one irreducible cubic pole.
 # Generators are H,E_1,...,E_n and the removed strict pole is
@@ -236,6 +254,7 @@ summary = {
     "simple_gate": "Xi squarefree gives transverse basepoints",
     "normalization": "blowup A1xP1 at basepoints minus strict cubic pole",
     "class_irreducible_pole": "Cl=Z^n; K=Ram=H",
+    "exceptional_ramification": "finite strict point; infinity removed point",
     "euler": "possible pole has chi1 and one-support Kummer form",
     "constant_height1": "all a=t constant c,r simple rows close",
     "named": "a=t,c=1,r=0 has R0 class H and R1 class 0",
@@ -249,6 +268,7 @@ print(f"CHECKS={CHECKS}")
 print("NORMALIZATION=BLOWUP_RELATIVE_P1_AT_TRANSVERSE_BASEPOINTS_MINUS_POLE")
 print("FINITE=BINARY_CUBIC_COEFFICIENT_MINUS_3_PREVENTS_FIBRE_COMPONENT")
 print("IRREDUCIBLE_POLE_CLASS=CL_ZN;K_H;RAM_H")
+print("EXCEPTIONAL=FINITE_STRICT_POINT;INFINITY_REMOVED_POINT")
 print("EULER=POLE_CHI1;ONE_SUPPORT_KUMMER_NECESSARY")
 print("HEIGHT1_CONSTANT_CR=ALL_SIMPLE_ROWS_CLOSED")
 print("NAMED=A_T;C_1;R_0;XI_1_PLUS_27T;ONE_COLLISION")

@@ -287,9 +287,15 @@ closes every `t`-constant `q(P)` cylinder, THM-3963 closes moving scalar
 `q=c(t)P^2`, THM-3964 closes the displayed scalar-coefficient graph-root
 family, and THM-3967 closes every irreducible row with `deg_P(q)<=2`.
 THM-3969 also closes the collision-free `Xi in k^*` affine-`P` graph packet.
-Collision fibres, genuinely `P`-dependent graph multipliers outside that
-packet, nongraph repetition, and arbitrary higher-`P`-depth `P^2q2(P,t)`
-remain open normalization problems.
+THM-3970 recodes every repeated `M!=h` as a uniquely oriented non-`P` factor
+of `gcd(J,R)` with its exact osculation invoice, but does not classify the
+resulting normalizations. THM-3972 constructs the normalization for every
+nonconstant squarefree-`Xi` affine-graph row and excludes all simple
+`a=t`, constant-`(c,r)` rows. General canonical-compatible squarefree rows,
+multiple roots of `Xi`, reducible pole multisections, other nongraph/higher-
+depth packets, and arbitrary `P^2q2(P,t)` remain open. THM-3971 is an
+orthogonal determinantal completion/no-Darboux obstruction, not a debt
+closure.
 
 This theorem does **not** prove JC(2). It proves that any counterexample in
 the arbitrary polynomial-`q` depressed-cubic lane must exploit one of the

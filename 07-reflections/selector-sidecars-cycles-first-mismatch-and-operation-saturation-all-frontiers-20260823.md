@@ -848,7 +848,11 @@ scalar graph-root family. THM-3965 rules out a one-place discriminant in its
 exact constant-`(g,h)` unit-ideal family; THM-3966/3968 give class/Euler and
 canonical/different invoices. THM-3967 closes all irreducible
 `deg_P(q)<=2` rows, and THM-3969 closes collision-free `Xi in k^*` affine-`P`
-graph rows. Collision fibres, nongraph repetition, and higher depth remain.
+graph rows. THM-3970 gives the exact osculation/gcd reframe. THM-3971 is the
+all-`m` determinantal exact-volume/no-Darboux near miss. THM-3972 normalizes
+all nonconstant squarefree-`Xi` rows and closes `a=t`, constant-`(c,r)`;
+general compatible simple rows, multiple `Xi` roots/reducible poles, and
+other nongraph/higher-depth debts remain.
 
 The orthogonal conductor lane is also now proved locally. THM-3955 computes
 the node kernel/torsion sequence, and THM-3957 extends it to triple and
@@ -963,7 +967,10 @@ THM-3967 close the constant, moving scalar, scalar-graph, and all depth-two
 rows. THM-3965 rules out one-place discriminants only in its exact family;
 THM-3966/68 give boundary invoices, and THM-3969 closes the collision-free
 affine-graph packet. THM-3970 proves the exact osculation/gcd reframe, not
-normalization closure; THM-3971/72 await audit/integration.
+normalization closure. THM-3971 proves the determinantal residue-one volume
+obstruction; THM-3972 proves the squarefree-collision blowup ledger and
+first-height constant-`(c,r)` closure. General compatible rows remain open;
+THM-3973 is RESERVED empty.
 THM-3955/57 are proved local conductor theorems with no global Hopf consequence.
 The proved LRC endpoint theorem moved to collision-free THM-3974; the namespace
 move changes no mathematical scope.
@@ -1135,7 +1142,7 @@ They do not share states, probability, chronology, or a reduction.
 | Double-torus identity | one-place branch design | compare the two Cardano radicands | intrinsic rational `E[3]` and componentwise one-place geometry | full-discriminant irreducibility, residual genus and cubic/source attachment | bivariate/multifactor allocation plus normalization/conductor ledger | THM-3946/3949 close standard one-variable splits; THM-3950 attains `A1`+normal+two classes but forces a `j=0` residual |
 | Internal-split factor ratio | equianharmonic shadow | take the `S3` closure of the degree-three ratio map | scalar collision packet `{0,1,-omega,infinity}` and a fixed `j=0` cover | higher ratios and polynomial color | residual-component and source-boundary incidence ledger | THM-3951 excludes every natural same-field ratio; THM-3952 exhausts unit-debt Mobius colors; THM-3954 resolves local common debt |
 | Residual plus graph ramification primes | affine-plane boundary | pass to normalization and lift incidences to a common resolution | normalization genus, prime labels and distinct smooth meetings | target embedding, tangency order and local contact multiplicity | normal same-field completion plus deletion of ramified primes | THM-3951 forbids positive genus for every `c`; two clean meetings also cycle in the boundary tree |
-| Hidden-cubic factorization | natural monogenic cubic | split into three, one, or zero rational roots | integral normal surface and global different | collision fibres, nongraph/higher-depth debt, other fields/orders and parameter descent | actual finite order plus derivative/canonical divisor | THM-3961 classifies normality; THM-3962--3964/3967 close through depth two; THM-3969 closes `Xi`-unit affine graphs |
+| Hidden-cubic factorization | natural monogenic cubic | split into three, one, or zero rational roots | integral normal surface and global different | general compatible simple collisions, multiple `Xi` roots/reducible poles, nongraph/higher-depth debt, other fields/orders and descent | actual finite order plus derivative/canonical/volume divisor | THM-3961 classifies normality; THM-3970 gives gcd/osculation data; THM-3972 normalizes squarefree collisions and closes first height |
 | Node or coordinate crossing | normalized torsion-free cotangent | pass through normalization and conductor | local torsion kernel and branch restrictions | global twist, section, and analytic realization | conductor ideal plus sheaf-level gluing | THM-3955/57 prove the local sequences; no Hopf/S6 globalization follows |
 | Primitive actual boundary basis | candidate affine-plane deletion | localize at the three basis primes | scalar units and `Cl=0` | boundary genus and Euler type | rationality plus `chi_c` invoice | THM-3926 genus `2`, `chi_c=13` hostile |
 | Degree-two linear-color packet | affine-plane open | delete the intrinsic ramification primes | aligned one-place branch and affine address cap | source unibranchness and invertible defining functions | actual class/different packet | THM-3931 `[E]=0`, `[P_0]=2q`, nonunibranch collision |
@@ -1169,8 +1176,11 @@ objects cannot be transported merely because the same word is used.
    the natural globally monogenic order. THM-3961 classifies normality for
    irreducible arbitrary `q(P,t)`. THM-3962--3964 and THM-3967 close the
    constant, scalar, scalar-graph, and all depth-two rows; THM-3969 closes the
-   `Xi`-unit affine-graph packet. Normalize its collision fibres and the
-   nongraph/higher-depth debts, then
+   `Xi`-unit affine-graph packet. THM-3970 recodes arbitrary repeated factors;
+   THM-3972 constructs every nonconstant squarefree-`Xi` blowup normalization
+   and closes first height. Test its remaining canonical-compatible rows and
+   normalize multiple-resultant/reducible-pole and nongraph/higher-depth debts,
+   then
    classify degree-at-least-six ratios, normalization-parameter descent,
    other nonmonogenic fields/orders, and
    whether the fixed genus-one residual can be altered outside the natural

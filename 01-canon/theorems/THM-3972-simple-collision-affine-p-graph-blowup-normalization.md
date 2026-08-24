@@ -22,12 +22,17 @@ audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc-cohn3709, 2026-08-24). The audit checked
   the resultant and infinity root count, transversality, identification of
   the graph closure with the blowup, quasi-finiteness and proper finiteness,
-  the preimage of target infinity and normal-field bridge, the Picard,
+  the preimage of target infinity, exceptional ramification charts, and
+  normal-field bridge, the Picard,
   canonical, and ramification classes, the homogeneous incidence identity,
   Euler/Kummer rigidity, every constant-c,r puncture computation and double
   collision seam, and the exact-volume scope. The characteristic-zero Euler
   base-change sentence and maximal-base-ideal graph argument were made
-  explicit before promotion.
+  explicit before promotion. A second all-frontiers hostile pass extended
+  the squarefree/irreducible-pole assumption ranges through the Euler gate,
+  supplied both local exceptional-ramification Jacobians, and replaced the
+  tautological infinity gate by the actual four derivatives. Normal and
+  optimized 51-gate replays match the refreshed frozen output and hashes.
 depends_on:
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
   - THM-3968-canonical-vector-different-affine-plane-boundary-obstruction
@@ -38,9 +43,9 @@ related:
   - THM-3967-quadratic-p-depth-natural-cubic-conductor-debt-closure
 script: 04-computation/jc2_simple_collision_graph_blowup_thm3972.py
 output: 05-knowledge/results/jc2_simple_collision_graph_blowup_thm3972.out
-script_sha256: 07173dbb52840bd79184c7891213274b1f6c58773aefdc383006357cc0c89351
-output_sha256: 0960b31352c690614a0a57c006a840ea33ea3bbe02815c37c75d3fa3dac79670
-semantic_sha256: 9c79d3a81da89f18e4ec748314a4e8c047ee2c33b263b79e97fec900f8b963f8
+script_sha256: 88961bea53a000a39378aed8683ffbe6571119bd354286235954d293d5c879b4
+output_sha256: f238e984b667f3973f29a09524db7c86220ffce248184d4e937d7a9860605a97
+semantic_sha256: 947829aee929640e6e59e5c050819d81de73f1f972a75330ede8dcb16bef22ea
 hash_basis: raw LF bytes
 ---
 
@@ -62,12 +67,12 @@ Use the THM-3969 collision polynomial
 Xi=c^3+27a^2r^3-27acr+27a.                              (2)
 ```
 
-Assume throughout Sections 1--5 that `Xi` has positive degree and is
+Assume throughout Sections 1--6 that `Xi` has positive degree and is
 squarefree. The theorem computes the exact finite normalization at all of
 its simple collision fibres. When the cubic pole multisection is
 irreducible it also computes the complete class and canonical ledger. This
-does not exclude every row in that ledger; Section 6 closes the first sharp
-control and Section 8 states the residual honestly.
+does not exclude every row in that ledger; Section 7 closes the first sharp
+control and Section 9 states the residual honestly.
 
 ## 1. The graph on the relative projective line
 
@@ -147,10 +152,16 @@ At the infinity point use `w=W/V`. The two rows are
 w^3-a,                    3rw^2+3w+c.                   (12)
 ```
 
-At `a=c=w=0`, equation `(2)` has derivative `Xi'=27a'`, while the Jacobian
-of `(12)` is `-3a'`. A simple infinity collision is therefore transverse as
-well. Hence if `n=deg Xi`, the base scheme of `(7)` consists of exactly `n`
-distinct reduced points.
+At `a=c=w=0`, equation `(2)` has derivative `Xi'=27a'`.  For the two rows
+in `(12)`, the four derivatives are
+
+```text
+D_t=-a',  D_w=3w^2,  N_t=3r'w^2+c',  N_w=6rw+3,
+```
+
+so their Jacobian at the basepoint is `-3a'`. A simple infinity collision
+is therefore transverse as well. Hence if `n=deg Xi`, the base scheme of
+`(7)` consists of exactly `n` distinct reduced points.
 
 ## 3. Blow up the basepoints and retain the exceptional affine lines
 
@@ -223,7 +234,7 @@ birational model `X` is its full finite normalization.
 
 ## 4. An irreducible pole gives the exact free class lattice
 
-Assume from now through Section 5 that `D_h` is irreducible in
+Assume from now through Section 6 that `D_h` is irreducible in
 `k[t,V,W]`. Let `H` be the class of a section of `S -> A1_t`, and denote
 the exceptional curves by `E_1,...,E_n`. Then
 
@@ -279,9 +290,39 @@ The exact identity
 D rho-[av^4+2arv^3+cv^2+2v+r]=av^2G                  (25)
 ```
 
-is the required saturation check. At a collision, `(24)` passes simply
-through the basepoint, while the exceptional curve maps with degree one and
-is not a ramification component. Therefore the relative ramification
+is the required saturation check.  The assertion that an exceptional curve
+is not a ramification component needs more than its degree-one restriction,
+so fix a finite basepoint `(t0,v0)` and write
+`J_b=det partial(D,N)/partial(t,v) != 0`. In the blowup chart
+`D=e, N=ez`, the exceptional divisor is `e=0` and
+`P=r(t)^2+vz`. Inverting the Jacobian of `(D,N)` gives on `e=0`
+
+```text
+partial t/partial e=(N_v-D_vz)/J_b,
+partial t/partial z=0,             partial P/partial z=v0,
+det partial(t,P)/partial(e,z)=v0(N_v-D_vz)/J_b.         (25a)
+```
+
+This determinant is not identically zero because `v0!=0`. Its unique zero is
+
+```text
+z=N_v/D_v=v0+2r0,                                      (25b)
+```
+
+using `av0^3=1` and `r0=-v0-cv0^2/3`. Identity `(26a)` below pulls back as
+`R_h=e(z-v-2r)`, so `(25b)` is exactly the point where the strict
+ramification transform meets the exceptional line.
+
+At an infinity basepoint use the chart `N=e, D=ez`. There
+`J_inf=-3a'!=0`, `P=r^2+1/z`, and on the finite-target part `z!=0`,
+
+```text
+det partial(t,P)/partial(e,z)=-3/(J_inf z) !=0.          (25c)
+```
+
+Moreover `R_h/e=w^2-(1+2rw)z`, whose exceptional intersection is `z=0`,
+precisely the target-infinity point removed with the strict pole. Thus no
+exceptional divisor is a ramification component. The relative ramification
 Cartier divisor on `X` is the strict transform of `(24)`, with multiplicities
 retained, and
 
@@ -309,8 +350,9 @@ disjointness is inferred from the finite-`v` identity.
 
 ## 6. Euler rigidity forces a one-support Kummer pole
 
-The geometry above supplies a stronger necessary gate.  Compactly supported
-Euler characteristic gives
+The geometry above supplies a stronger necessary gate. After base change
+and descent to `C` (equivalently, using compact-support etale cohomology),
+compactly supported Euler characteristic gives
 
 ```text
 chi(X)=chi(S)+n-chi(E)=2+n-chi(E).                       (27)

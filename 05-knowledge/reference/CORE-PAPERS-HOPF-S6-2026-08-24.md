@@ -364,8 +364,11 @@ proved THM-3965 rules out a one-place discriminant in its exact constant-
 different boundary invoices. Proved THM-3967 closes every irreducible
 `deg_P(q)<=2` row, and proved THM-3969 closes the collision-free `Xi in k^*`
 affine-`P` graph packet. THM-3970 proves the exact osculation/gcd reframe,
-not a normalization closure; THM-3971/3972 await audit/integration. None
-supplies a Hopf dependency here.
+not a normalization closure. THM-3971 proves the all-`m` determinantal
+exact-volume/no-Darboux near miss. THM-3972 gives the nonconstant squarefree-
+`Xi` blowup normalization and closes `a=t`, constant-`(c,r)`; general
+canonical-compatible rows remain open. THM-3973 is RESERVED empty. None of
+these supplies a Hopf dependency here.
 
 ### Explicitly rejected vocabulary bridges
 
