@@ -2,7 +2,7 @@
 id: THM-3976
 title: "Rational compression quadratic-pseudoplane intersection"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  For the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the
   height-two exact-volume completion B=k[x,z,p,y], the rational Darboux pair
   obtained from (2z-1)^2-4z(z-1)=1 has quadratic fixed field.  Its complete
   intersection with B is the smooth pseudoplane
@@ -13,6 +13,14 @@ status: >
   needs at least seven nonconstant weights.  No arbitrary Darboux pair on B
   and no counterexample to JC(2) is claimed.
 source: jc-cohn3709 / exact-volume height-two compression quotient, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc-degree6-one-place, 2026-08-24).  The
+  audit independently reconstructed the quadratic fixed field and its
+  nonsquare valuation, every positive and negative parity module in the
+  exact intersection, the smooth quadratic atlas including its collapsed
+  reduced arm fibre, the Nagata unit/Picard calculation, and both the
+  surface- and planar-degree deductions.  Ordinary and optimized companions
+  agree byte for byte with the frozen output; hashes and documentation pass.
 depends_on:
   - THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule
   - THM-3569-danielewski-two-by-three-weight-darboux-nonentry
@@ -32,7 +40,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3976 -- the rational compression forgets the new boundary address
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.**  Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over
 an algebraically closed field `k` of characteristic zero.  Put
 
 ```text
@@ -82,9 +90,18 @@ R=x^2=w^6/b^2,
 Z=xw=w^4/b.                                                     (6)
 ```
 
+Conversely,
+
+```text
+a=(Z^2-R)/(4Z^2),                 b=Z^3/R^2,                    (6a)
+```
+
+so `Frac(C)=k(a,b)` once the polynomial intersection is proved below.
+
 Hence `L` is generated over `k(a,b)` by `w`, with the two conjugates
-`w,-w`; the divisor `1-4a=0` shows that `w^2=1/(1-4a)` is not a square in
-`k(a,b)`.  Therefore
+`w,-w`.  Since `J(a,b)=1`, the elements `a,b` are algebraically independent;
+the odd valuation along the divisor `1-4a=0` then shows that
+`w^2=1/(1-4a)` is not a square in `k(a,b)`.  Therefore
 
 ```text
 [L:k(a,b)]=2,                    k(a,b)=L^sigma.                 (7)
@@ -252,7 +269,11 @@ d=[Frac(C):k(A_0,A_1)].                                      (23)
 ```
 
 The source degree is `2d`.  If `d=1`, it is a quadratic Galois Keller
-extension, contradicting THM-1330.  If `d=2`, THM-3794 applies to the
+extension, contradicting THM-1330.  Over a general algebraically closed
+`k` of characteristic zero, this use descends the finitely many
+coefficients to a finitely generated characteristic-zero subfield and
+embeds that field in `C`; generic degree and constant Jacobian are preserved
+by base change.  If `d=2`, THM-3794 applies to the
 constant-unit surface `(21)` and gives a contradiction.  Consequently
 
 ```text
