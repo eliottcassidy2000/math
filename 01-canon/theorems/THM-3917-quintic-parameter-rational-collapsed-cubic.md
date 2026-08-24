@@ -13,7 +13,9 @@ status: >
   normalization. Its image is therefore at least six-branched there. Since
   every irreducible boundary curve of an affine-plane open in a normal
   surface is unibranch, the associated cubic normalization admits no
-  same-field affine-plane Keller atlas. This closes the candidate, not
+  same-field affine-plane Keller atlas. THM-3921 subsequently identifies the
+  six addresses with four smooth plus two cuspidal origin branches while
+  preserving every order/class-group invoice. This closes the candidate, not
   JC(2).
 source: jc_degree6_one_place / post-THM-3915 genus-zero design lane, 2026-08-23
 audit: >
@@ -30,6 +32,7 @@ audit: >
 related:
   - THM-3916-positive-genus-collapsed-valuation-keller-obstruction
   - THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
+  - THM-3921-quintic-genus-collapse-decic-degeneration-packet
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
 script: 04-computation/jc2_quintic_parameter_rational_collapsed_cubic_thm3917.py
 output: 05-knowledge/results/jc2_quintic_parameter_rational_collapsed_cubic_thm3917.out

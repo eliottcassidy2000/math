@@ -13,10 +13,12 @@ status: >
   curve y^2=w(w^2-1), however, so the affine branch is not polynomially
   uniruled and the cubic etale surface admits no plane atlas.  This pays the
   order, confluence, and three-class invoices at the first moving-triple-root
-  depth but is not a Jacobian counterexample.  THM-3915 subsequently pays the
-  rationality invoice, but THM-3916 closes its same-field Keller model;
-  THM-3917 attains genus zero and then fails the boundary-unibranch invoice.
-  Other carriers, Keller entry, and JC(2) remain open.
+  depth but is not a Jacobian counterexample.  THM-3919 computes its actual
+  three-class as maximally mixed across boundary, origin, and all four A2
+  blocks.  THM-3915 subsequently pays rationality, but THM-3916 closes its
+  same-field Keller model; THM-3917 attains genus zero and then fails the
+  boundary-unibranch invoice.  THM-3918 supplies a different rational decic,
+  not yet a rational cubic field or atlas.  Keller entry and JC(2) remain open.
 source: root / first post-THM-3908 coefficient-depth-three construction, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS after two proof-completeness clarifications.
@@ -41,6 +43,8 @@ related:
   - THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
   - THM-3916-positive-genus-collapsed-valuation-keller-obstruction
   - THM-3917-quintic-parameter-rational-collapsed-cubic
+  - THM-3918-rational-moving-triple-root-one-place-decic-and-anchored-color-transition
+  - THM-3919-thm3913-maximally-mixed-boundary-origin-cusp-kummer-class
 script: 04-computation/jc2_moving_triple_root_one_place_elliptic_decic_thm3913.py
 output: 05-knowledge/results/jc2_moving_triple_root_one_place_elliptic_decic_thm3913.out
 script_sha256: 7b1f6ef2a2cd2381a3b44b2dd88c683deab23c16a5c37971ffd487a2334f8806

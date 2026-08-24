@@ -449,12 +449,30 @@ THM-3917 is **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**; its
 six-branch mechanism, rather than an unqualified no-atlas slogan, is the
 transportable obstruction.
 
-Incoming THM-3920 and THM-3921 are **RESERVED / UNPROVED EMPTY STUBS**.  They
-name the two immediate successor probes--a general boundary-address cap and
-the exact decic degeneration packet transporting the six addresses--but
-neither is a proved dependency.  Concurrent reservation of THM-3918 through
-THM-3921 moved the proved LRC endpoint theorem to collision-free THM-3922;
-the namespace move changes no script, output, or mathematical scope.
+Incoming THM-3918 and THM-3919 are now **PROVED + VERIFIED-EXACT +
+INDEPENDENTLY HOSTILE-AUDITED**.  THM-3918 rationalizes the moving-root decic
+branch at `rho^2=-6`, retaining a normal nonmonogenic `S3` order and nonzero
+resolvent `Cl[3]`; it does **not** yet rationalize the cubic field.  Its
+unanchored conjugate-color gain stays constant, while the affine-infinity
+anchor detects the transition as a simple tie.  This is the same typed
+sidecar warning seen elsewhere: pairwise internal data miss a boundary event.
+
+THM-3919 pays the actual-lattice invoice for THM-3913.  The three-primary
+discriminant group is `Z/9+(Z/3)^5`, and the Kummer class uses the boundary,
+the origin block, and all four external `A2` blocks.  THM-3914's conditional
+pure-boundary passport survives because its prime-to-three remainder
+hypothesis fails maximally here.
+
+THM-3921 is now **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**:
+its four smooth plus two cuspidal origin branches are exactly THM-3917's six
+collapsed addresses, while the normal order, index `A^5`, scalar units and
+`Z^3+Z/3` class group all persist.
+Thus algebraic completion is not the failure coordinate; fibrewise boundary
+incidence is.  THM-3917 still closes that model.  THM-3920 remains a
+**RESERVED / UNPROVED EMPTY STUB** for a general address-cap theorem.
+
+Concurrent reservation moved the proved LRC endpoint theorem to
+collision-free THM-3922; the namespace move changes no mathematical scope.
 
 ## 5. Filtered kernels and principal parts are the same warning, not the same theorem
 
@@ -588,6 +606,7 @@ They do not share states, probability, chronology, or a reduction.
 | AK forcing graph | score certificate | add a sound forcing row | declared rule consequences | future-round cycle debt | cycle-rank profile | saturated `[2,3]` trace varieties |
 | JC residual | associated graded seam | take top homogeneous forms | leading cancellation | common color gcd and lower debt | primitive colors plus full evolving response | continuing `U,V` jets in THM-3898 |
 | Rational normal cubic order | plane atlas | choose a birational chart | function field and branch divisor | polynomial/etale open data | common-zero valuation genus | THM-3916 closes THM-3915's Keller model |
+| Rational decic normalization | cubic field chart | normalize the discriminant branch | one-place genus-zero branch and order data | rationality of the degree-three source field | explicit birational field coordinates | THM-3918 first field-rationality test |
 | Genus-zero collapsed cubic | plane boundary | finite normalization and contraction | rationality and cover degree | normalization branches over the contracted point | fibrewise ramification attachment | audited THM-3917 six-branch hostile |
 | Removed divisor lattice | resolvent three-class | saturate boundary sublattice | conditional three-divisibility | actual class and ADE mixing | full exceptional lattice | THM-3915 mixed boundary--ADE hostile |
 | Rational dual | reduced dual curve | cancel common tangent factor | reduced tangent map | nonimmersion multiplicity | `E_nu` tangent-base divisor | `[ST^(d-1):T^d:S^d]` |
@@ -608,10 +627,10 @@ objects cannot be transported merely because the same word is used.
 2. **Jacobian anchor:** leave `f=0`, x-only and THM-3898's canonical
    constant-sidecar family closed.  Attack arbitrary lower sidecars using the
    continuing-`U,V` hostile; a first-arrival schedule is insufficient.
-3. **Nonmonogenic niche:** leave THM-3915 closed by THM-3916.  Search a
-   repeated-residual rational cubic for which every common-zero valuation has
-   genus zero and every ramification boundary component is unibranch.  Use
-   audited THM-3917 as the branch-incidence hostile.
+3. **Nonmonogenic niche:** determine whether the THM-3918 cubic field is
+   rational and, if so, construct a chart and run THM-3916's collapsed-genus
+   and THM-3917's branch-incidence audits.  Then compute its full removed
+   lattice and Euler tariff.  Leave THM-3921 closed by THM-3917.
 4. **AK niche:** leave the saturated empty-wildcard `[2,3]` slice closed.
    Classify inactive-slot and initial-wildcard strata, then search the next
    rectangle for a genuine score below `7/4` under the same sound/loose

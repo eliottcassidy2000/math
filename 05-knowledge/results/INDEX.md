@@ -95,8 +95,10 @@
   The depth-three moving-triple-root cubic is normal, globally nonmonogenic,
   and generic `S3`; its one-place irreducible decic has scalar resolvent units
   and nonzero `Cl[3]`.  Its normalization is elliptic and has no polynomial
-  plane atlas.  THM-3915 subsequently pays rationality in a different family;
-  this theorem remains the sharp depth-three elliptic hostile.
+  plane atlas.  THM-3919 computes the actual Kummer support as boundary,
+  origin, and all four external `A2` blocks.  THM-3918 subsequently produces
+  a rational decic in the same moving-root family, but not yet a rational
+  cubic field; this theorem remains the sharp elliptic hostile.
   Script/output/semantic SHA-256:
   `7b1f6ef2a2cd2381a3b44b2dd88c683deab23c16a5c37971ffd487a2334f8806` /
   `252ca72e9da90d45d0daff856a2a285adce554e18e77ad78b1036619b905ea6d` /
@@ -107,8 +109,9 @@
   its actual-lattice and Picard hypotheses, nonzero resolvent `Cl[3]` is
   equivalent to three-divisibility of the split-boundary difference; the
   saturation enlarges `K_10` to a hyperbolic plane.  The resulting isotropic
-  classes need not be effective, nef, semiample, or fibrations, and the
-  THM-3913 Kummer class is not yet identified as boundary-only.
+  classes need not be effective, nef, semiample, or fibrations.  THM-3919
+  proves that THM-3913's nonboundary determinant is divisible by three and
+  its class is maximally mixed, so the hypothesis here fails sharply.
   Script/output/semantic SHA-256:
   `9280385f4639a92a5ba646195a025e303777cec485a9dd2d6d5d2d69654f845e` /
   `5e8bdf3fc13bdfc08e8317c481c5e185a978d29b463a06530170b5d00db24775` /
@@ -149,11 +152,52 @@
   unramified infinity places.  Its rational ramification divisor nevertheless
   has at least six normalization branches over the contracted point, so the
   boundary-unibranch lemma excludes a same-field Keller plane atlas.  This
-  closes the displayed quintic-parameter family, not `JC(2)`.  Checks: `55`.
+  closes the displayed quintic-parameter family, not `JC(2)`.  THM-3921
+  identifies those six addresses with four smooth plus two cuspidal origin
+  branches while retaining every order/class-group invoice.  Checks: `55`.
   Script/output/semantic SHA-256:
   `66e54dfe3cf1365a18f0df784e1dad9987c0ea74077da219edb5f817a16a583f` /
   `e8c8b9802d48d0d1a4ba70afba78bfda1e0081a9d1d0bd79a0ba4da9c29567a7` /
   `593e5af9e8099c8a5f3397a2247ba166235dd3710e69296eac3aa63628629926`.
+
+- `jc2_rational_moving_triple_root_decic_thm3918.py` -> matching `.out`
+  [THM-3918 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  At
+  `rho^2=-6`, the normal globally nonmonogenic `S3` order has a rational
+  one-place decic discriminant with packet `origin delta 34 + 2A2`, scalar
+  resolvent units, and nonzero `Cl[3]`.  The unanchored color separation is
+  constant; the affine-infinity anchor detects rationalization by a simple
+  tie.  Only the branch normalization is proved rational: cubic-field
+  rationality, a plane chart, Keller entry, and `JC(2)` remain open.  Checks:
+  `45`.  Script/output/semantic SHA-256:
+  `c8fa01f5c50f7dff6ffd31c844c418cc94fbdec7ed5c3c009e5fbb992493ae73` /
+  `426819660702d48c2a11b65268604c3a7198b6456193b996f5d0317c867537a9` /
+  `89d595a4a896120d32ad58b0db0a0357e673e8df466d59e85503b35183ef6d1b`.
+
+- `jc2_thm3913_mixed_kummer_lattice_thm3919.py` -> matching `.out`
+  [THM-3919 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  actual removed lattice for THM-3913 is
+  `K_10 orthogonal-sum L_origin orthogonal-sum A2(-)^4`, with
+  `det(L_origin)=12` and three-primary group `Z/9+(Z/3)^5`.  The cyclic-cover
+  class has nonzero boundary, origin, and all four external `A2` residues.
+  It is maximally mixed; no plane-atlas conclusion follows.  Checks: `48`.
+  Script/output/semantic SHA-256:
+  `1a0b302b0521b6c956e918b79e12f67f55a95c252664fa0ccffd902a14657c21` /
+  `8e600a5af207caa25d0ccbbd6a3ce072f880dea4a9b1f42fbd04b5c532e21e50` /
+  `94c771ae4e4b9062f489d3db570a00aaf3bb6834b5dce5728da5fdaa932543e8`.
+
+- `jc2_quintic_decic_degeneration_order_thm3921.py` -> matching `.out`
+  [THM-3921 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  On
+  the THM-3917 quintic locus, the one-place decic has four smooth plus two
+  cuspidal origin branches (`delta=28`), two external `A2`, and two `A5`.
+  These six origin branches are exactly the six collapsed addresses.  The
+  rational finite-free normal nonmonogenic order, index `(A^5)`, scalar units,
+  and `Cl=Z^3+Z/3` all persist; THM-3917's boundary obstruction alone closes
+  the model.  The audit repaired coefficient-gcd one versus unit-ideal
+  generation (MISTAKE-466); nonmonogenicity is unchanged.  Checks: `69`.
+  Script/output/semantic SHA-256:
+  `5f0db36702cfdd09296000f39dc5210bd6d8a2e6d385d0c1e07a4873198cf245` /
+  `63e0fd607c0db03aa73f579c9b6d53cdb149e37e48997569847a459bf53cf076` /
+  `d273b4c2ebba004daf98098437a91b8c7c358aa728bab8cad90d1353411adf00`.
 
 - `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
   `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil

@@ -11,7 +11,9 @@ status: >
   boundary lattice at index three to a hyperbolic plane U and is equivalent
   to conjugate integral classes D_+,D_- with D_++D_-=T, D_+D_-=1, and
   D_+^2=D_-^2=0.  These are Picard classes, not automatically effective,
-  nef, semiample, or fibration classes.
+  nef, semiample, or fibration classes.  THM-3919 proves that the actual
+  THM-3913 finite remainder has three-primary debt in every block, so the
+  prime-to-three hypothesis here fails sharply and its Kummer class is mixed.
 source: jc_degree6_one_place / post-THM-3912 decic globalization invoice, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS.  The audit rederived the actual Pic/R
@@ -31,6 +33,7 @@ related:
   - THM-3911-sharp-one-place-sextic-resolvent-three-torsion-obstruction
   - THM-3913-moving-triple-root-one-place-decic-normal-nonmonogenic-cubic
   - THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
+  - THM-3919-thm3913-maximally-mixed-boundary-origin-cusp-kummer-class
 script: 04-computation/jc2_decic_boundary_hyperbolic_saturation_thm3914.py
 output: 05-knowledge/results/jc2_decic_boundary_hyperbolic_saturation_thm3914.out
 script_sha256: 9280385f4639a92a5ba646195a025e303777cec485a9dd2d6d5d2d69654f845e

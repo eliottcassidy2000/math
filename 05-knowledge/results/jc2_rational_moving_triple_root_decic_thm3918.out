@@ -1,0 +1,12 @@
+theorem=THM-3918-rational-moving-triple-root-decic
+critical_parameter=rho^2+6=0
+order=normal_nonmonogenic_S3
+branch=irreducible_decic_one_smooth_infinity;normalization=A1
+finite_packet=origin_8_addresses_delta34_plus_2A2
+radial_response=anchored_infinity_color_simple_tie
+unanchored_color_discriminant=-24
+split_boundary_snf=1,9;resolvent_Cl3=NONZERO
+plane_atlas=NOT_CONSTRUCTED;JC2=OPEN
+semantic_sha256=89d595a4a896120d32ad58b0db0a0357e673e8df466d59e85503b35183ef6d1b
+CHECKS=45
+RESULT=PASS

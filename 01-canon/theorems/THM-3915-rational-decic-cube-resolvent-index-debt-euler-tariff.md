@@ -45,6 +45,7 @@ related:
   - THM-3914-decic-boundary-three-class-degree-one-isotropic-divisor
   - THM-3916-positive-genus-collapsed-valuation-keller-obstruction
   - THM-3917-quintic-parameter-rational-collapsed-cubic
+  - THM-3921-quintic-genus-collapse-decic-degeneration-packet
 script: 04-computation/jc2_rational_decic_cube_resolvent_index_debt_thm3915.py
 output: 05-knowledge/results/jc2_rational_decic_cube_resolvent_index_debt_thm3915.out
 script_sha256: 8408e35292a674be3731fd7c95ecfdc7d07d5324c81d8803d1e23922e8884341

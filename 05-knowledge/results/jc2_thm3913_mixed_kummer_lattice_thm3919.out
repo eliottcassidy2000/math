@@ -1,0 +1,14 @@
+audit=THM-3913-complete-removed-divisor-lattice
+origin_branch_packet=cusp+contact4_pair+4_transverse
+origin_raw_rank=8;origin_det=12;origin_snf=1,1,1,1,1,1,2,6
+origin_3_residue_square=2/3
+external_blocks=4*A2;each_3_residue_square=1/3
+boundary=K10;boundary_3_residue_square=0
+full_3_primary=Z/9+(Z/3)^5
+actual_kummer_support=boundary+origin+all_4_external_cusps
+actual_kummer_pure_boundary=NO
+pic0_3_torsion=0;q=0
+NS_3_torsion=OPEN_INVOICE
+semantic_sha256=94c771ae4e4b9062f489d3db570a00aaf3bb6834b5dce5728da5fdaa932543e8
+CHECKS=48
+RESULT=PASS

@@ -354,14 +354,13 @@ asymptotic or residue.
   THM-3885/3895/3897 close polynomial `f=0`; THM-3900 its generic roots.
   THM-3888/3909 give `II^4+IV/E6*`: `R.O=0` is `6+48+72`; nine avoid
   boundaries; eight have denominator debt.
-  For `f!=0`: THM-3899 tariff/colors; THM-3904 closes x-only;
-  THM-3902/3905 three jets; THM-3898 closes the canonical response,
-  arbitrary sidecars open.  THM-3890 closes quintics; THM-3906/3907 places
-  are `1/2`,`2/6`; THM-3908 excludes depth<=2 one-point sextics; THM-3911 the
-  sharp sextic; THM-3912/3914 conditional three-class passports only.
-  THM-3913 elliptic; THM-3915 rational nonmonogenic S3, `Cl(Q_2)[3]!=0`;
-  THM-3916's genus-two valuation kills the model.  THM-3917
-  is genus-zero but six-branched; unibranch designs and `JC(2)` stay OPEN.
+  For `f!=0`: THM-3899 tariff/colors; THM-3904 x-only; THM-3901/3902/3905
+  fan/three jets; THM-3898 canonical response, arbitrary sidecars open.
+  THM-3890 quintics; THM-3906/3907 places `1/2`,`2/6`; THM-3908/3911 sextics;
+  THM-3912/3914 conditional.  THM-3913/3919 give elliptic no-atlas/mixed
+  class.  THM-3915--3917 close two rational models.  THM-3918 has a rational
+  decic (`delta=34+1+1`), but its cubic field/atlas is open.  THM-3921 keeps
+  the algebra and maps six origin branches; THM-3917 kills it.  `JC(2)` OPEN.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a

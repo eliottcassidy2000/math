@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-466 (2026-08-23, THM-3921 binary index form) -- coefficient gcd one was promoted to a unit ideal
+
+- **What failed:** THM-3921 said that the four coefficients of its binary
+  index form generate the unit ideal in `k[A,C]`, immediately before noting
+  that all four vanish at `(A,C)=(0,0)`.  Those two statements are
+  incompatible.
+- **Minimal witness / first failed implication:** evaluation at the origin
+  sends every coefficient to zero, so their ideal is contained in the proper
+  maximal ideal `(A,C)`.  The exact companion proves only that their
+  polynomial gcd/content is one; gcd one does not imply a Bezout unit ideal in
+  a two-variable polynomial ring.
+- **Repair / strongest survivor:** the theorem now says that the coefficients
+  have no nonconstant common factor.  Global nonmonogenicity is unchanged:
+  for every polynomial pair `U,V`, the represented index form still vanishes
+  at the origin and therefore cannot be a nonzero scalar unit.
+- **Reusable rule:** keep UFD primitivity/content separate from unimodularity.
+  In more than one variable, `gcd(f_1,...,f_r)=1` need not imply
+  `(f_1,...,f_r)=(1)`.
+
 ## MISTAKE-465 (2026-08-23, THM-3878 auxiliary cutoff) -- a safe search bound was called the attained maximum
 
 - **What failed:** THM-3878's prose called `78` the largest necessary finite
