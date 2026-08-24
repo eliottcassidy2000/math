@@ -361,10 +361,12 @@ asymptotic or residue.
   all degrees, with degree at least six open. THM-3935/3937/3939/3940/3942
   retain character/end debt; THM-3943--3952 close the classified sextic,
   split, equianharmonic, forest, and Mobius cells. THM-3960 closes natural
-  `E(t)+C(t)P`; [THM-3961](../01-canon/theorems/THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt.md)
+  `E(t)+C(t)P`; THM-3961
   reduces arbitrary monogenic `q(P,t)` to two nonnormal debts; THM-3962 closes
-  constant `q(P)` and THM-3963 moving `c(t)P^2`. Live: repeated nonzero hidden
-  factors, nonscalar `P^2q_2`, nonmonogenic orders, and noncentered gauges.
+  constant `q(P)` and THM-3963 `c(t)P^2`; THM-3964--3972 close cells.
+  THM-3973--3976: exact-volume tower, seven-piece floor, `p` no-mate, lost `y`.
+  THM-3977--3979: critical seed, two-color debt, unobstructed formal jets.
+  Live: algebraize with `y`.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
