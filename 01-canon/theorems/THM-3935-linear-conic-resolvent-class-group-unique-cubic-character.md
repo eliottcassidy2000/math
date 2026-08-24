@@ -18,9 +18,9 @@ related:
   - THM-3931-degree-two-pole-cubic-principal-ramification-no-atlas
 script: 04-computation/jc2_linear_conic_resolvent_class_unique_character_thm3935.py
 output: 05-knowledge/results/jc2_linear_conic_resolvent_class_unique_character_thm3935.out
-script_sha256: 540eaf16f84fb591a71ce9b4b90bded327c3f3859fe25af8c959e3d1d3ff92fc
-output_sha256: 64c1d5cf4ba5db29d2feb8637ef949d95e12bfb76a9dc2f41c033669a8a6928d
-semantic_sha256: 78637dc5f57a2d03587228ec7dbd89f47ce2144e234f7ab25ee74b750fb53d6d
+script_sha256: 1764699f43ea4b1e8f118ace81def7e3775c990d7ee4d75de7b9cb0de850df13
+output_sha256: c2a0e80471efab2cfc863a39ca06c6331b5188a33c1700677d1d038662a15187
+semantic_sha256: 1d7590dda2e3a4f1bc9c9ece7845b458b0c4dd076d09303cb0bd149f3c89ded3
 hash_basis: raw LF bytes
 ---
 
@@ -96,8 +96,10 @@ The equation in `(1)` is irreducible.  Its partial derivatives are
 
 Together with the surface equation they vanish only at the origin.  Indeed,
 the `X=0` row forces `t=0`; in the `t=0`, `X!=0` row equation `(8)` forces
-`X=3`, which does not lie on `H=0`.  Thus this irreducible hypersurface is
-regular in codimension one and Cohen--Macaulay, hence normal by `R1+S2`.
+`X=3`, which does not lie on `H=0`.  In the remaining `t!=0`, `q=0` row,
+the `X` derivative becomes `12X^2`, so `X=0` and then `q=t^3=0`, again a
+contradiction.  Thus this irreducible hypersurface is regular in codimension
+one and Cohen--Macaulay, hence normal by `R1+S2`.
 
 Let `K=k(t)` and let `C=S_K`.  Every closed fibre of `S -> A1_t` is
 irreducible.  With `T=lambda^3`, its quartic is
@@ -325,12 +327,20 @@ roots gives exactly `(6)-(7)`.
 Now take a normal generically `S3` cubic completion having exactly this
 squarefree discriminant and quadratic resolvent.  Over `U`, quadratic base
 change kills the tame transpositions along the branch and leaves a connected
-finite etale `C3` cover.  By `(30)` its character is the Cardano character or
-its inverse.  Those two choices define the same cyclic extension, so the
-Galois closure and its cubic subfield are forced.  THM-3932 proves that the
-normal integral closure in this field is the monogenic order `(7)`.  A
-different nonprincipal resolvent ideal therefore cannot create a second
-normal nonmonogenic cubic order with this exact branch.
+codimension-one-unramified `C3` cover.  Since `U` is regular, purity makes its
+normalization finite etale.  By `(30)` its character is the Cardano character
+or its inverse, and those two choices define the same cyclic extension.
+
+For completeness, let `sigma` generate its `C3` group and let `g` lift the
+quadratic deck involution.  The `S3` descent relation is
+`g sigma g^-1=sigma^-1`.  Since `g^2` lies in `C3` and is fixed by conjugation
+with `g`, inversion forces `g^2=1`.  The three lifts `sigma^b g` are conjugate:
+conjugation by `sigma^c` replaces `g` by `sigma^(2c)g`, and two is invertible
+modulo three.  Their fixed cubic fields are therefore `K`-isomorphic.  Thus
+the Galois closure and cubic field are forced.  THM-3932 proves that the normal
+integral closure in this field is the monogenic order `(7)`.  A different
+nonprincipal resolvent ideal cannot create a second normal nonmonogenic cubic
+order with this exact branch.
 
 ## 6. Local abundance versus global scarcity
 
@@ -356,7 +366,7 @@ python3 04-computation/jc2_linear_conic_resolvent_class_unique_character_thm3935
 python3 -O 04-computation/jc2_linear_conic_resolvent_class_unique_character_thm3935.py
 ```
 
-checks 51 identities: irreducibility and singular support; the uniform fibre
+checks 52 identities: irreducibility and singular support; the uniform fibre
 square obstruction; the quartic-to-Weierstrass change; the finite and infinity
 fibre invariants; the two infinity addresses; the multiples of `Q`; the three
 blowups and `D7` inverse-Cartan correction; absence of two-torsion; and the

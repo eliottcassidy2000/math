@@ -64,6 +64,8 @@ zero(F.subs({X: 0, W: 0}) + t**6, "X=0 singular case forces t=0")
 zero((t**3 - X**2 + 3 * X).subs(t, 0) - X * (3 - X),
      "nonzero-X singular case equation")
 gate(H.subs({t: 0, X: 3}) == -27, "nonzero-X singular case misses surface")
+gate(FX.subs(t**3, X**2) == 12 * X**2,
+     "q=0 singular row forces X=0 and then t=0")
 
 
 # ---------------------------------------------------------------------------
