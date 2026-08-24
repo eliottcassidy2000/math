@@ -193,9 +193,9 @@ gate(gcd(2, 4) == 2,
 # Boundary rank/Euler closure and exact hostile characters.
 # ---------------------------------------------------------------------------
 
-# chi(B)=1+n and THM-3922 gives exactly n boundary curves. If each rational
-# unibranch affine boundary has chi<=1, equality chi(boundary)=n forces all
-# component chis to be one and every intersection penalty to vanish.
+# chi(B)=1+n and THM-3966 gives exactly n boundary curves. Its normalization
+# and incidence ledger forces all normalized component chis to be one and
+# every intersection penalty to vanish.
 for n in range(1, 6):
     chi_B = 1 + n
     chi_A2 = 1
@@ -311,9 +311,9 @@ summary = {
     "conductor": "B/A=k[t], conductor=(x,y), addresses u^2+3u+3cr",
     "ramification": "saturated horizontal character z^2=1-cr",
     "class": "Cl(B)=Z^n, units scalar, [R]=-(m_i)",
-    "boundary": "pure boundary; exactly n pairwise-disjoint A1 components",
+    "boundary": "pure boundary; exactly n pairwise-disjoint primes with A1 normalizations",
     "nonsquare": "n coefficient punctures plus infinity exclude R",
-    "square": "opposite-sign punctures prevent both components being A1",
+    "square": "opposite-sign punctures prevent both normalizations being A1",
     "conclusion": "all polynomial-graph repeated-root debts excluded",
     "scope": "nongraph repetition and JC2 remain open",
 }
@@ -326,9 +326,9 @@ print("NORMALIZATION=U_CV;TWO_SMOOTH_CHARTS;FULL_FINITE_NORMALIZATION")
 print("CONDUCTOR=B_OVER_A_KT;IDEAL_X_Y;ADDRESS_DISC_9_MINUS_12CR")
 print("RAMIFICATION=SATURATED_Z2_EQUALS_1_MINUS_CR;ONE_ESCAPED_C_ROOT_ADDRESS")
 print("CLASS=UNITS_SCALAR;CL_Z_TO_N;R_VECTOR_MINUS_MULTIPLICITIES")
-print("BOUNDARY=PURE;EXACTLY_N_PRIMES;EULER_FORCES_DISJOINT_A1_COMPONENTS")
+print("BOUNDARY=PURE;EXACTLY_N_PRIMES;DISJOINT_WITH_A1_NORMALIZATIONS")
 print("NONSQUARE_KILL=N_C_ROOT_PUNCTURES_PLUS_INFINITY;NEVER_A1")
-print("SQUARE_KILL=OPPOSITE_SIGN_PUNCTURES;BOTH_COMPONENTS_CANNOT_BE_A1")
+print("SQUARE_KILL=OPPOSITE_SIGN_PUNCTURES;BOTH_NORMALIZATIONS_CANNOT_BE_A1")
 print("CONCLUSION=FULL_POLYNOMIAL_GRAPH_DOUBLE_ROOT_FAMILY_CLOSED")
 print("CONTROL_SPLIT=C_1_MINUS_T4;R_1;G_T2;STILL_KILLED")
 print("SCOPE=NONGRAPH_REPETITION;ARBITRARY_P2Q2;NONMONOGENIC;JC2_OPEN")
