@@ -8,7 +8,9 @@ status: >
   integral over the normal ring k[t]. Three distinct roots are exactly
   THM-3953. If a nonzero root is repeated, the missing h-row forces the
   third root to be minus one half of it and the natural depressed cubic is
-  reducible. The only irreducible repeated-root exception has hidden roots
+  reducible; its linear component is degree one and its quadratic
+  affine-plane component is excluded by a ramification-line forbidden-unit
+  gate. The only irreducible repeated-root exception has hidden roots
   0,0,r. Its normal cubic surface is polynomially isomorphic to
   u v=(u-2r)^3; the divisor P=0 is three times its unique reduced prime and
   is total ramification. Any Keller affine-plane open must delete that
@@ -26,9 +28,9 @@ related:
   - THM-3954-extra-common-debt-creates-A-singularities-and-nonunibranch-residual-boundary
 script: 04-computation/jc2_split_hidden_cubic_integrality_repeated_trichotomy_thm3956.py
 output: 05-knowledge/results/jc2_split_hidden_cubic_integrality_repeated_trichotomy_thm3956.out
-script_sha256: 1665a199083d668a0036089d3a80a9e82fef16a810c5b37608f5ac0b86c6a03e
-output_sha256: a7afeba9c3af5c78d26423688cdc3ed276123f63e77c3bea3b4dfa02addfd1a2
-semantic_sha256: d91f3715e9c4e6044650c878342402ae9d1a2ebf7ce244f8b3e4be4e61ccf0a7
+script_sha256: 3c3c60c2da22f8d7e8ac892296fc48e4d6ed67097e251db7ec2c80ffa0223a56
+output_sha256: 8734b08ed1f1c3eadd83026ee5ad68a827e9fef1fc7cce490d6101df8eb6799b
+semantic_sha256: c17d2525f85fcf4f2b0df186794143ce81b116ab58bd8e72b594810e473fd6b0
 hash_basis: raw LF bytes
 ---
 
@@ -92,8 +94,10 @@ F=(T+x)(T^2-xT+x^2-3P).                                 (7)
 ```
 
 Thus `(2)` is reducible and cannot be the integral finite normalization of a
-connected cubic function field. More precisely, the normalization of the
-reduced surface is the disjoint union of two affine planes:
+connected cubic function field. One must nevertheless check that selecting
+an integral component does not leave a lower-degree counterexample. The
+normalization of the reduced surface is the disjoint union of two affine
+planes:
 
 ```text
 T=-x(t)                                      gives k[P,t],
@@ -105,6 +109,18 @@ On the quadratic component, the coordinate `w=2T-x` gives
 ```text
 P=x^2/4+w^2/12.                                           (9)
 ```
+
+The linear component maps isomorphically to `A2_(P,t)` and is the trivial
+degree-one sheet. On the quadratic component, `(9)` gives
+
+```text
+3(4P-x^2)=w^2,                    dP/dw=w/6.              (9a)
+```
+
+Thus `w=0` is its genuine ramification prime. Any same-function-field
+Keller affine-plane open in this component must omit `w=0`, after which
+`w` is a nonconstant unit. This is impossible on `A2`. Hence neither
+integral component supplies a nontrivial Keller chart.
 
 The two components are glued along `T=-x,P=x^2`; that squared conductor
 factor is not a third cubic sheet. The specialization `x=0` in `(7)` is the

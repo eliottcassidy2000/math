@@ -57,6 +57,10 @@ zero(quadratic.subs({T: T_quadratic, P: P_quadratic}),
      "quadratic component affine-plane parametrization")
 zero(P_quadratic.subs(w, -3 * x) - x**2,
      "component gluing in quadratic coordinate")
+zero(3 * (4 * P_quadratic - x**2) - w**2,
+     "quadratic component square-ramification identity")
+zero(sp.diff(P_quadratic, w) - w / 6,
+     "quadratic component ramifies exactly on w=0")
 
 F_triple_zero = sp.expand(F_nonzero.subs(x, 0))
 zero(F_triple_zero - T * (T**2 - 3 * P),
