@@ -1,0 +1,10 @@
+theorem=THM-3898-equianharmonic-equality-color-all-depth-response
+identity=seven_normalized_macros_exact_at_all_depths
+arrival_schedule=0,n,n+2,2n+2,2n+4,3n+4,4n+4
+canonical_first_marked_response=J_n=L2/h
+n4_zero_sidecar_control=NONPOLYNOMIAL_FOURTH_RESPONSE
+rational_x_hostile=J_n=L2/h_exists
+arbitrary_sidecars_and_JC2=OPEN
+semantic_sha256=0fcd414b8ab768168444169f1d318aab15889d5199178711ebfc3491ab83c122
+CHECKS=46
+RESULT=PASS
