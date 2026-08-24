@@ -1,0 +1,14 @@
+theorem=THM-3921-quintic-genus-collapse-decic-degeneration-packet
+normalization=scaled_A=2*t*G_b;scaled_C=(t^2+1)*G_b;degree=10
+infinity=one_smooth_place;contact=10
+origin=4_smooth_plus_2_cuspidal_branches;delta=28
+finite_packet=origin_plus_2A2_plus_2A5;delta_total=36
+address_bridge=r(u(t))=-G_b(t)*G_b_star(t)/(2^16*t^8)
+six_addresses=4_simple_G_roots_plus_2_double_G_roots
+normal_cubic_order=finite_free_rational_nonmonogenic;power_index=A^5
+normal_discriminant=(27/16)*(4b+1)^2*Delta
+quadratic_class_group=Z^3_plus_Z/3;units=scalar
+scope=all_algebraic_invoices_persist;six_branch_boundary_obstruction_remains;JC2_open
+semantic_sha256=d273b4c2ebba004daf98098437a91b8c7c358aa728bab8cad90d1353411adf00
+CHECKS=69
+RESULT=PASS
