@@ -2,8 +2,8 @@
 id: THM-3987
 title: "Gwozdziewicz every-line gate and the height-two three-weight floor"
 status: >
-  PROVED FROM CITED INPUTS + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-  AUDIT. Any polynomial Darboux pair in the height-two completion B_2 would
+  PROVED FROM CITED INPUTS + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  Any polynomial Darboux pair in the height-two completion B_2 would
   give a nonautomorphic planar Keller map, hence is immersed and noninjective
   on every affine source line. The two coordinate lines force, in each
   output, a surviving positive weight at least 2, a surviving even negative
@@ -17,6 +17,14 @@ status: >
   the first live total-support cells are only 3x4 and 4x3. No Darboux pair or
   JC(2) counterexample is constructed or excluded in unrestricted support.
 source: jc-zero-debt-lift / post-THM-3985 every-line support lane, 2026-08-24
+audit: >
+  PASS (root / jc-cohn3709, 2026-08-24). The audit independently checked
+  the nonautomorphism-to-every-line contrapositive, the boundary valuation
+  ord_D(t)=-2, the immersed-curve degree lemma, both axis-survival ledgers,
+  odd-negative disappearance, the complete origin jet, the exact-three
+  opposite-jet seam, and the projective directional-tail reformulation.
+  Normal, optimized, and frozen outputs byte-match at CHECKS=511; hashes and
+  documentation agree.
 depends_on:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
   - THM-3974-height-tower-few-weight-darboux-support-obstruction
@@ -36,8 +44,9 @@ hash_basis: raw LF bytes
 
 # THM-3987 -- every source line invoices both tails and a transverse jet
 
-**PROVED FROM CITED INPUTS + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-AUDIT.** Work over an algebraically closed field `k` of characteristic zero.
+**PROVED FROM CITED INPUTS + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.** Work over an algebraically closed field `k` of
+characteristic zero.
 Inside `k[x,t]`, put
 
 ```text
