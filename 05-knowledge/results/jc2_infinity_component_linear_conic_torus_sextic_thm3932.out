@@ -1,0 +1,13 @@
+theorem=THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
+folds=d_in_{1,2,3};d1=triangular_coordinate_fold;d2=empty;d3=nonempty
+family=Q2=3XZ;Q3=Y^3+rXYZ-X^2Z;h=s^3+rs-2;X=h^2;Y=sh
+explicit_r0=F/27=4X^3Z^3-(Y^3-X^2Z)^2
+normalization=[H^2:S^2*T*H:S^6],H=T^3-2S^3;basepoint_free;one_infinity_address
+singularities=origin_three_smooth_contact2_branches_delta6;infinity_Puiseux_2_9_delta4
+coefficient_map=Jac(3x,y^3-x^2)=9y^2_nonconstant
+cubic=u^3-3xu-(y^3-x^2);normal_and_globally_monogenic
+resolvent=Dplus=(x,q+w);div(x)=Dplus+Dminus;div(q+w)=3Dplus;order_exactly_3
+class_scope=genuine_Z3_subgroup_only;full_Cl_not_claimed_due_simple_elliptic_local_sidecar
+semantic_sha256=f21747d66cce559781355bb75789500399f7d8eb8281254e33668ffb0697a849
+CHECKS=55
+RESULT=PASS
