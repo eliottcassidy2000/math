@@ -335,9 +335,11 @@ Format per entry:
   `THM-3953--3955`, so the LRC family moved atomically to `THM-3956`; the next
   incoming wave occupied `THM-3956--3960`, so it moved once more to
   `THM-3961`; the subsequent arbitrary-`q` normality reservation occupied
-  that identifier, so the LRC family moved atomically again to freshly
-  checked `THM-3962`. The hash-bearing LRC companions and mathematical scope
-  did not change.
+  that identifier, so the LRC family moved atomically again to `THM-3962`.
+  The arbitrary-`q` theorem was then promoted while constant-`q` and moving-
+  `P^2` programs occupied `THM-3962--3963`, forcing one final atomic move to
+  freshly checked `THM-3964`. The hash-bearing LRC companions and
+  mathematical scope did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
   only before empty reservations; rename the whole artifact family together.
