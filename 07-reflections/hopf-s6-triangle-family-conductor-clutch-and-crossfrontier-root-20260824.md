@@ -434,8 +434,8 @@ All five are **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED** in
 their stated scopes.  Together they refute the coarse heuristic that normality
 itself is the decisive coordinate.  The decisive coordinate is the labelled
 incidence pattern and ramification predicate consumed by the ambient
-recognition theorem.  THM-3959 and THM-3960 remain **RESERVED / UNPROVED EMPTY
-STUBS** and supply no result or dependency here.
+recognition theorem.  No claim from the live THM-3959 or THM-3960 namespaces
+is used here; their frontmatter, not this reflection, is the status source.
 
 ## 9. Connection contract B: affine local systems over the LRC carrier
 

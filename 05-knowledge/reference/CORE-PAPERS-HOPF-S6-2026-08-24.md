@@ -349,8 +349,8 @@ reinforces the boundary/predicate discipline but supplies no Hopf theorem.
 [THM-3958](../../01-canon/theorems/THM-3958-one-hidden-root-principal-different-and-pure-power-boundary.md)
 is also **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**: its
 one-hidden-root lane closes through a principal-different/forbidden-unit gate.
-THM-3959 and THM-3960 remain **RESERVED / UNPROVED EMPTY STUBS** and supply no
-dependency here.
+No claim from the live THM-3959 or THM-3960 namespaces is used here; consult
+their frontmatter rather than caching their rapidly changing status.
 
 ### Explicitly rejected vocabulary bridges
 
