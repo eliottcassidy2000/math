@@ -2,8 +2,8 @@
 id: THM-3962
 title: "Constant-q product curves have a universal ramification-unit obstruction"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-  HOSTILE AUDIT REQUIRED. If q=q(P) is independent of t and
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. If q=q(P) is
+  independent of t and
   T^3-3PT-q(P) is irreducible, the maximal normalization is the cylinder
   over the normalized coefficient curve. A planar Keller open would force
   that curve to be rational. Riemann--Hurwitz then gives at least two
@@ -12,6 +12,16 @@ status: >
   including every nonnormal conductor-debt order. Explicit normalizations
   type the repeated-factor P^2+P and double-P cP^2 controls.
 source: jc-degree6-one-place / post-THM-3961 conductor-debt closure, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc-zero-debt-lift, 2026-08-24). The audit
+  independently reconstructed normalization of the cylinder as the
+  cylinder over the normalized coefficient curve; checked the dense-plane
+  projection and positive-genus exclusion; rederived the degree-three
+  Riemann--Hurwitz support bound and its punctured-rational-curve unit
+  contradiction; and verified both explicit normalizations, singular
+  conductor addresses, ramification packets, unit ranks, and class ledgers.
+  Normal and optimized runs byte-match the frozen 46-gate output; raw and
+  semantic hashes and documentation checks pass. No repair was required.
 depends_on: []
 related:
   - THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt
@@ -26,10 +36,10 @@ hash_basis: raw LF bytes
 
 # THM-3962 -- every coefficient-constant cubic cylinder is closed
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-HOSTILE AUDIT REQUIRED.** Work over an algebraically closed field `k` of
-characteristic zero. Here “constant `q`” means constant in the cylinder
-coordinate `t`, not necessarily constant in `P`. Let
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of characteristic zero. Here “constant `q`”
+means constant in the cylinder coordinate `t`, not necessarily constant in
+`P`. Let
 
 ```text
 f(P,T)=T^3-3PT-q(P),                    q in k[P],        (1)
