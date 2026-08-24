@@ -2,7 +2,7 @@
 id: THM-3985
 title: "Cusp-plane rational-time residue gate and height-two mixed submersion"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. On the
   height-two completion, every nonconstant first coordinate F(p,y) is
   excluded from a polynomial Keller pair. If its restriction to the cusp
   (p,y)=(s^2,s^3) is nonconstant, a transverse cusp-address residue proves
@@ -15,6 +15,15 @@ status: >
   form has 3m nonzero simple residues. Adding a nonconstant h(x^2t), taking
   m=1, or raising the height creates an explicit affine critical point.
 source: jc-zero-debt-lift + root / post-THM-3983 cusp-plane lane, 2026-08-24
+audit: >
+  PASS (jc-extra-debt-local, 2026-08-24). The independent audit rederived
+  the cusp affine modification and volume sign, the typed constant versus
+  nonconstant cusp split, the normalization residue 1/phi', the rational
+  generic-fibre parameterization, p/D coprimality and squarefreeness, the
+  exact 4m+1 source and 3m+1 completion place ledgers, every height/exponent
+  endpoint, and both parity branches of the common-power reconstruction.
+  Normal, optimized, and frozen outputs byte-match at CHECKS=215; raw hashes
+  and the documentation diff agree.
 depends_on:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
 related:
@@ -30,8 +39,8 @@ hash_basis: raw LF bytes
 
 # THM-3985 -- the cusp plane has no Keller first coordinate
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.** Work over
-an algebraically closed field `k` of characteristic zero. On the height-two
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of characteristic zero. On the height-two
 surface of THM-3973 put
 
 ```text
