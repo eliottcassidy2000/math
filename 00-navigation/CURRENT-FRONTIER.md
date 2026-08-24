@@ -67,7 +67,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505`, and only 58 in `t>=U`: 57 scale-one plus `(2,1,9)`.  THM-3910
-  closes 41, leaving 17.  THM-3972 closes AP11 and 1,365 fixed scale-two
+  closes 41, leaving 17.  THM-3973 closes AP11 and 1,365 fixed scale-two
   bodies, no type; `t<U` and owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
@@ -330,44 +330,38 @@ asymptotic or residue.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
-- **Rule 30:** THM-3502--3824 give compiler/owner/carry, no finite-spatial
-  cycles, Smith forms, and the all-shell response kernel. A FINITE-EXACT
-  `D=B=4`, word-length-at-most-nine census has `13,853` portraits: current
-  bank plus zero chain selects at most one off-ray, but neither fixed ray is
-  universal. THM-3511's static tariff is `2^(D+B-1)+B+2`; physical/adaptive
-  chronology, all-depth selection, and every prize are OPEN.
+- **Rule 30:** THM-3502--3824 give compiler/carry, no finite-spatial cycles,
+  Smith forms and shell kernels. A FINITE-EXACT `D=B=4`, length-9 census has
+  `13,853` portraits: bank plus zero chain selects at most one off-ray, but no
+  fixed ray. Static tariff: `2^(D+B-1)+B+2`; all-depth/physical prizes OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3782 close
   named cells only. THM-3827/31 give genus `>=3`; THM-3836 retains
   `3h^3+7h^2k+k^3=CS`; THM-3838 gives `deg h,deg k>=5`; THM-3841/45 close
-  the `S3` anchor. THM-3850--3905 close named line/root/cusp/dual/jet,
-  polynomial-`f=0`, x-only and fan packets; global roots and arbitrary
-  `f!=0` sidecars remain.
-  THM-3890--3921 close named quintic/sextic/rational/radial packets; THM-3920
-  closes THM-3918's same-field atlas, not separate cubic-field questions.
+  the `S3` anchor. THM-3850--3921 close named line/root/cusp/dual/jet,
+  `f=0`, fan, quintic/sextic and radial packets; global roots and arbitrary
+  `f!=0` remain. THM-3920 closes only THM-3918's same-field atlas.
   THM-3922--40 give class/conic/boundary/fold/Cardano closures. Corrected
   THM-3941 gives period-12 carrier counts/ordinals; THM-3959 closes all seven
   `N=5` rows: L/M/O empty; J1/J2/K/N/P scalar or folded non-unibranch arms.
-  THM-3942/44/47 and audited THM-3946/49 close named factor splits;
-  THM-3943/45/48 close classified weight-eight/nine `A1` sextics. THM-3950
-  leaves fixed `j=0`; THM-3951 excludes natural ratio cubics by genus/forest;
-  THM-3952 closes four Mobius colors. THM-3953 closes distinct polynomial
-  roots, constants included; THM-3954 gives the shared-debt
-  `A_(3m-1)`/non-unibranch mechanism. THM-3956/58/60 close the natural
+  THM-3942--49 close named factor/split/sextic cells. THM-3950 leaves fixed
+  `j=0`; THM-3951/52 close natural ratio/Mobius cubics; THM-3953/54 close
+  distinct roots and shared debt; THM-3956/58/60 close the natural
   one-parameter family. THM-3961 proves, for irreducible arbitrary `q(P,t)`,
   normality iff adjusted hidden squarefreeness and excludes normal rows by the
   different. THM-3962 closes all `q=q(P)` cylinders; THM-3963 closes
-  `q=c(t)P^2`. THM-3964 closes the displayed scalar-coefficient graph-root
-  family; THM-3965 closes the constant unit-ideal deformation, and THM-3966
-  proves the class/Euler boundary invoice. Open: genuinely `P`-dependent graph
-  coefficients, nongraph repetition, general `P^2q2`, bivariate coefficient
-  deformations, degree `>=6`, other gauges/fields/orders, source attachment and
-  `JC(2)`. THM-3955/57 are local.
+  `q=c(t)P^2`. THM-3964 closes the displayed scalar graph-root family;
+  THM-3965 rules out one-place discriminants in its exact constant-`(g,h)`
+  unit-ideal family; THM-3966/68 give Euler and canonical/different boundary
+  invoices. THM-3967 closes every irreducible `deg_P(q)<=2` row, and THM-3969
+  closes affine-`P` graph rows with `Xi in k^*`. Open: collision fibres,
+  higher-depth or nongraph repetition, bivariate coefficient deformations,
+  degree `>=6`, other gauges/fields/orders, source attachment and `JC(2)`;
+  THM-3970/71 are RESERVED only. THM-3955/57 are local.
   THM-3853/3855 remain formal laboratories.
-  Russell THM-3785 forces `3|d,d>=9`; THM-3843/46/49 give an immersed arm,
-  jets and visible conductor contact. THM-3856/61/67/71 close normal `z`-depth
-  through five; exact shears leave only nonreduced `(6,4)`. Rational quotient
-  corrections, other cells and global entry remain open; THM-3860/62/68 and
-  THM-3839 close only their named square/precomposition/completion towers.
+  Russell THM-3785 forces `3|d,d>=9`; THM-3843/46/49 give arm/jets/contact.
+  THM-3856/61/67/71 close normal `z`-depth through five; exact shears leave
+  nonreduced `(6,4)`. Rational corrections and global entry remain open;
+  THM-3839/3860/62/68 close only named towers.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692

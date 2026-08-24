@@ -9,9 +9,10 @@ status: >
   normal. If P^2 divides q, the zero section is generically singular and
   the hypersurface is nonnormal. Thus every normal member is excluded from
   a same-function-field planar Keller chart by its global monogenic
-  different. The only unresolved members of this arbitrary-q monogenic
-  grammar are the two explicitly typed nonnormal conductor-debt loci; this
-  does not close JC(2).
+  different. Every still-unresolved member of this arbitrary-q monogenic
+  grammar must lie in one of the two explicitly typed nonnormal conductor-
+  debt loci; subsequent theorems close substantial subfamilies. This does
+  not close JC(2).
 source: jc-degree6-one-place / post-THM-3960 arbitrary-q extension, 2026-08-24
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc_zero_debt_lift, 2026-08-24). The audit
@@ -282,9 +283,13 @@ Only two conductor-debt loci escape that argument:
 Their normalizations are proper overorders of `A`; they need not remain
 monogenic, and the global element `F_T` need not generate the normalized
 different. No Keller chart is asserted to exist there. Subsequent THM-3962
-closes every `t`-constant `q(P)` cylinder, including both debt types, and
-THM-3963 closes the moving scalar family `q=c(t)P^2`. General moving repeated
-factors and arbitrary `P^2q2(P,t)` remain open normalization problems.
+closes every `t`-constant `q(P)` cylinder, THM-3963 closes moving scalar
+`q=c(t)P^2`, THM-3964 closes the displayed scalar-coefficient graph-root
+family, and THM-3967 closes every irreducible row with `deg_P(q)<=2`.
+THM-3969 also closes the collision-free `Xi in k^*` affine-`P` graph packet.
+Collision fibres, genuinely `P`-dependent graph multipliers outside that
+packet, nongraph repetition, and arbitrary higher-`P`-depth `P^2q2(P,t)`
+remain open normalization problems.
 
 This theorem does **not** prove JC(2). It proves that any counterexample in
 the arbitrary polynomial-`q` depressed-cubic lane must exploit one of the

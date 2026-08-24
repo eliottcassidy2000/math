@@ -14,18 +14,19 @@ status: >
   ramification addresses make that impossible in both nonsquare and
   split-square cases; constant c is killed by a principal ramification
   unit. Thus the displayed scalar-coefficient graph family is excluded, but
-  genuinely P-dependent graph coefficients, nongraph repeated factors, and
-  JC(2) remain open.
+  affine-graph collision fibres, more general P-dependent graph coefficients,
+  nongraph repeated factors, and JC(2) remain open.
 source: jc-degree6-one-place / post-THM-3961 repeated-nonzero graph debt, 2026-08-24
 audit: >
   INDEPENDENT MATHEMATICAL AND HOSTILE AUDIT PASS. The audit rechecked the
-  chart domains and injections, regular finite normalization, exact conductor,
-  ramification saturation including c=0 fibres, Nagata unit/class ledgers,
-  puncture signs, and the THM-3966 boundary-normalization argument. It exposed
-  and repaired the former overclaim from the displayed scalar-coefficient
-  family to all graph double roots, and made the characteristic-zero descent
-  explicit. Normal and optimized 110-gate runs match the revised frozen
-  output after canonical LF normalization on Windows; all hashes pass.
+  primitive-linear chart domains and injections, regular finite normalization,
+  exact `B/A=k[t]` conductor, cancellation-free ramification saturation and
+  `c=0` fibres, Nagata unit/class ledgers, puncture signs, and the THM-3966
+  boundary-normalization argument. It exposed and repaired the former
+  overclaim from the displayed scalar-coefficient family to all graph double
+  roots, and made characteristic-zero descent explicit. Normal and optimized
+  110-gate runs match the revised frozen output after canonical LF
+  normalization on Windows; all hashes pass.
 depends_on:
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
   - THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt
@@ -418,9 +419,11 @@ It is still a strict subfamily of the arbitrary repeated-factor locus in
 THM-3961. Even with a graph factor `h=r(t)`, the coefficient of
 `(P-r^2)^2` can be a genuinely `P`-dependent polynomial `a(P,t)` rather than
 the scalar `c(t)` treated here; an irreducible repeated hidden factor also
-need not be a polynomial graph at all. These translated moving graph rows,
-nongraph repetition, arbitrary `P^2q_2(P,t)`, nonmonogenic fields outside
-this grammar, and JC(2) remain open.
+need not be a polynomial graph at all. THM-3969 subsequently closes the
+collision-free `Xi in k^*` affine-`P` graph packet. Its collision fibres,
+more general translated graph rows, nongraph repetition, arbitrary higher-
+depth `P^2q_2(P,t)`, nonmonogenic fields outside this grammar, and JC(2)
+remain open.
 
 ## Reproduction
 

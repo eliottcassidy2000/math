@@ -439,9 +439,12 @@ one-parameter monogenic lanes; proved THM-3959 closes the centered degree-five
 color rows; and proved THM-3961 classifies normality for irreducible
 arbitrary-`q` monogenic cubics. Proved THM-3962 closes coefficient-constant
 cylinders and proved THM-3963 closes the moving scalar `P^2` debt. Proved
-THM-3964 closes the displayed scalar-coefficient graph-root family, proved
-THM-3965 closes the constant unit-ideal deformation, and proved THM-3966 gives
-the class/Euler boundary invoice. None supplies a Hopf dependency here.
+THM-3964 closes the displayed scalar-coefficient graph-root family; THM-3965
+rules out a one-place discriminant in its exact constant-`(g,h)` unit-ideal
+family; THM-3966/3968 give class/Euler and canonical/different boundary
+invoices. THM-3967 closes every irreducible `deg_P(q)<=2` row, and THM-3969
+closes the collision-free `Xi in k^*` affine-`P` graph packet. THM-3970/3971
+remain RESERVED only. None supplies a Hopf dependency here.
 
 ## 9. Connection contract B: affine local systems over the LRC carrier
 

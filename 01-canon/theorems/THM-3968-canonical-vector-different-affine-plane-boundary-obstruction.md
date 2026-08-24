@@ -1,0 +1,264 @@
+---
+id: THM-3968
+title: "Canonical-vector and different obstruction for affine-plane finite completions"
+status: >
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED. Let X be a normal integral affine
+  surface finite and
+  generically separable over A2 in characteristic zero. If X contains a
+  dense affine-plane open on which the finite map is etale, then its prime
+  boundary classes form a basis of Cl(X), and the canonical class has in
+  that basis exactly the height-one different exponents. Thus the canonical
+  vector is effective, is positive precisely on ramification boundary
+  primes, and in degree three has entries 0, 1, or 2. If K_X is torsion --
+  equivalently zero in Cl(X) tensor Q -- there is no ramification; purity
+  makes the cover finite etale and hence degree one. In particular no
+  degree-greater-than-one completion with globally trivial canonical module,
+  including a normal affine hypersurface, global complete intersection, or
+  normal monogenic order, can contain a Keller affine-plane open. Gorenstein
+  alone is deliberately not claimed to imply trivial canonical module.
+source: jc-zero-debt-lift / post-THM-3922 finite-duality synthesis, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc_extra_debt_local, 2026-08-24). The
+  audit independently checked normal-surface Cohen--Macaulayness and local
+  miracle flatness, finite duality, the trace/codifferent identification and
+  positive divisor sign, support in the THM-3922 boundary basis, the tame
+  cubic different palette, torsion and Q-trivial collapse, purity and the
+  discriminant-unit alternative, and the finite-etale degree-one endpoint.
+  It also verified every hypersurface, complete-intersection, monogenic, and
+  Frobenius corollary and the deliberate distinction between Gorenstein and
+  globally trivial canonical module. No repair was required.
+depends_on:
+  - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
+related:
+  - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
+  - THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt
+  - THM-3964-polynomial-graph-hidden-double-root-normalization
+  - THM-3966-euler-rigid-split-a1-fibre-affine-plane-boundary
+---
+
+# THM-3968 -- the canonical class must pay the exact different vector
+
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.** Work over an algebraically closed
+field `k` of characteristic zero. This theorem is a necessary invoice for a
+finite normal completion; it constructs no Keller map and proves no case of
+`JC(2)`.
+
+## 1. Statement
+
+Let
+
+```text
+pi:X=Spec(S) -> Y=A2=Spec(R),                 R=k[A,C],       (1)
+```
+
+be finite and dominant, with `S` a normal domain. Let `L/Frac(R)` be its
+function-field extension and assume it is generically separable. Suppose
+there is a dense open immersion
+
+```text
+j:U isomorphic to A2 -> X                                  (2)
+```
+
+such that `pi|U` is etale. Write
+
+```text
+D_1,...,D_s                                                (3)
+```
+
+for the prime divisorial components of `X minus U`. For each `D_i`, let
+`delta_i` be the different exponent of the height-one DVR extension at its
+generic point, with `delta_i=0` when that extension is unramified.
+
+Then the boundary classes are a basis and the canonical Weil class has the
+exact coordinate vector
+
+```text
+Cl(X)=direct_sum_i Z[D_i],
+[K_X]=sum_i delta_i[D_i].                                  (4)
+```
+
+In particular:
+
+1. every coordinate in `(4)` is nonnegative;
+2. `delta_i>0` exactly when `D_i` is a height-one ramification prime;
+3. if `[K_X]` is torsion, or equivalently maps to zero in
+   `Cl(X) tensor Q`, then `pi` has degree one; and
+4. if the degree is three, tame ramification gives the palette
+
+```text
+delta_i=0  for an unramified boundary prime,
+delta_i=1  for inertia type (2,1),
+delta_i=2  for total inertia type (3).                    (5)
+```
+
+Thus a proposed cubic completion does not merely need free boundary classes.
+Its canonical class must be the boundary color vector `(5)`.
+
+## 2. Finite flatness and the canonical module
+
+A normal surface is Cohen--Macaulay: Serre `S2` gives depth two at every
+closed point, and the lower-dimensional localizations have the required
+depth automatically. Since `Y` is regular of dimension two and `pi` is
+finite dominant, miracle flatness applied locally shows that `S` is finite
+locally free over `R`. Denote its constant rank by `d`.
+
+Finite duality over the smooth surface `Y`, whose canonical module is `R`,
+identifies the canonical module of `S` as
+
+```text
+omega_S = Hom_R(S,R).                                      (6)
+```
+
+The trace pairing of the separable extension identifies `(6)` inside `L`
+with the codifferent
+
+```text
+C_(S/R)={x in L : Tr_(L/Frac(R))(xS) subset R}.            (7)
+```
+
+Let `E` be a height-one prime of `S`, and let `delta_E` be the exponent of
+the corresponding DVR different. Localizing `(7)` gives
+
+```text
+C_(S/R),E = m_E^(-delta_E).                                (8)
+```
+
+With the convention
+
+```text
+O_X(sum n_E E)_E=m_E^(-n_E),                               (9)
+```
+
+equations `(6)--(8)` say that the effective different divisor
+
+```text
+R_pi=sum_(height(E)=1) delta_E E                            (10)
+```
+
+is a canonical Weil divisor; the following isomorphism is one of rank-one
+reflexive modules:
+
+```text
+omega_X isomorphic to O_X(R_pi),          [K_X]=[R_pi].    (11)
+```
+
+This also fixes the sign. In the local tame model `s=t^e`, the codifferent
+is generated by `t^(1-e)` and therefore represents the positive divisor
+`(e-1)V(t)`.
+
+## 3. The affine-plane boundary turns `(11)` into coordinates
+
+Because `pi|U` is etale, a height-one prime with positive different exponent
+cannot meet `U` at its generic point. Every prime occurring in `(10)` is
+therefore one of the boundary primes `(3)`. Boundary primes with unramified
+generic point simply occur with coefficient zero.
+
+THM-3922 applies to `(2)` and gives the integral basis
+
+```text
+direct_sum_i Z[D_i] -> Cl(X).                              (12)
+```
+
+Substituting `(10)` into `(11)` and using uniqueness in `(12)` proves the
+coordinate identity `(4)`. In characteristic zero every height-one
+ramification is tame, so `delta_E=e_E-1`; the degree-three list `(5)` follows.
+
+The conclusion is about the actual finite normal completion and the actual
+boundary of the proposed affine-plane chart. A canonical vector computed on
+a resolvent, a nonmaximal order, or a merely birational model cannot be
+substituted into `(4)`.
+
+## 4. Torsion canonical class forces degree one
+
+Suppose `[K_X]` is torsion. Since `(12)` is a free abelian basis, `(4)`
+forces
+
+```text
+delta_1=...=delta_s=0.                                    (13)
+```
+
+There are no other height-one ramification primes, so `pi` is etale in
+codimension one. Purity of the branch locus over the regular surface `Y`
+upgrades this to an everywhere finite-etale morphism. Equivalently, after
+finite flatness one may use the discriminant: `(13)` leaves its divisor
+empty in the UFD `R`, hence its determinant is a unit and the trace pairing
+is perfect.
+
+The domain `S` makes `X` connected. Affine space over an algebraically
+closed characteristic-zero field has no nontrivial connected finite-etale
+cover. Therefore
+
+```text
+d=1.                                                       (14)
+```
+
+The same proof applies whenever `[K_X]=0` in `Cl(X) tensor Q`, because the
+free group `(12)` has no torsion.
+
+## 5. Trivial-canonical and monogenic corollaries
+
+If the canonical module is globally free,
+
+```text
+omega_S isomorphic to S,                                  (15)
+```
+
+then `[K_X]=0`, so Section 4 excludes every degree `d>1` Keller affine-plane
+open. This immediately covers the following exact classes of normal affine
+finite completions:
+
+- a global affine hypersurface;
+- more generally, a global complete intersection in affine space, by the
+  complete-intersection adjunction formula;
+- a normal monogenic order
+
+```text
+S=R[T]/(f(T)),                  f monic,                  (16)
+```
+
+  which is a hypersurface over `R`; and
+- any finite Frobenius `R`-algebra for which
+  `Hom_R(S,R)` is actually free of rank one as an `S`-module.
+
+This compresses the normal half of the monogenic searches: a normal cubic
+hypersurface cannot be the finite completion of a nontrivial planar Keller
+map. The nonnormal case is not covered, because its maximal normalization
+may cease to be monogenic or globally complete-intersection; that is exactly
+the conductor escape retained by THM-3961.
+
+There is one essential scope distinction:
+
+```text
+Gorenstein  means omega_S is invertible;
+trivial canonical means omega_S is free.                  (17)
+```
+
+An invertible module on an affine surface can represent a nonzero Picard
+class. Hence **Gorenstein alone is not an obstruction**. A Gorenstein
+completion is killed here only when its canonical line bundle is torsion
+(in particular trivial), or when an independent calculation makes its
+boundary coordinates incompatible with `(4)`.
+
+## 6. Hostile controls and design consequence
+
+The hypotheses cannot be weakened casually.
+
+- The finite map `(t,w) |-> (t^2,w)` from `A2` to `A2` has trivial canonical
+  source and genuine ramification. Its maximal etale locus is
+  `G_m times A1`, not an affine plane; the coordinate `t` becomes a
+  nonconstant unit. Thus it does not contradict the theorem.
+- The identity map has empty different and realizes the degree-one equality
+  case.
+- A nonmonogenic normal cubic with a primitive ramification class, such as
+  the packet of THM-3811, can pass the present canonical-vector invoice;
+  later topology or degree arguments may still exclude its affine-plane
+  atlas. Thus `(4)` is necessary, not sufficient.
+- Regularity or Gorensteinness does not replace `(15)`: a regular affine
+  surface may have a nontrivial canonical line bundle.
+
+The positive design lesson is sharp. A counterexample completion must carry
+nontrivial canonical debt, and its canonical coordinates in the proposed
+boundary basis must exactly reproduce the inertia/different colors. This is
+why a genuinely nonmonogenic or non-complete-intersection finite completion
+is not an aesthetic complication but a structural requirement. `JC(2)`
+remains **OPEN**. **QED.**

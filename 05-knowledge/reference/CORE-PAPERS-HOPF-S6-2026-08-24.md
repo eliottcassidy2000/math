@@ -359,9 +359,12 @@ classifies normality in the irreducible arbitrary-`q` monogenic grammar.
 Proved THM-3962 closes all coefficient-constant cylinders, including their
 conductor debts, and proved THM-3963 closes the moving scalar `P^2` debt.
 Proved THM-3964 closes the displayed scalar-coefficient graph-root family;
-proved THM-3965 closes the constant unit-ideal deformation, and proved
-THM-3966 supplies the class/Euler boundary invoice. None supplies a Hopf
-dependency here.
+proved THM-3965 rules out a one-place discriminant in its exact constant-
+`(g,h)` unit-ideal family; THM-3966/3968 supply the class/Euler and canonical-
+different boundary invoices. Proved THM-3967 closes every irreducible
+`deg_P(q)<=2` row, and proved THM-3969 closes the collision-free `Xi in k^*`
+affine-`P` graph packet. THM-3970/3971 remain RESERVED only. None supplies a
+Hopf dependency here.
 
 ### Explicitly rejected vocabulary bridges
 

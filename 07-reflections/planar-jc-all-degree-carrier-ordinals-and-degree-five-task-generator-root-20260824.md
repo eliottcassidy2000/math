@@ -259,21 +259,23 @@ closes the natural globally monogenic one-parameter family, and THM-3959
 closes all seven centered degree-five carrier rows. THM-3961 then extends the
 monogenic normality gate to irreducible arbitrary `q(P,t)`: adjusted hidden
 squarefreeness is equivalent to normality, and every normal row is excluded
-by the global different. Its repeated-factor and `P^2` nonnormal debts remain;
+by the global different. Its two general nonnormal debt loci remain;
 THM-3962 closes all coefficient-constant cylinders, including both debts,
-while THM-3963 closes the moving scalar family `q=c(t)P^2`. General moving
-repeated factors and `P^2q2(P,t)` remain. THM-3964 closes the displayed scalar-
-coefficient graph-root family, THM-3965 closes the constant unit-ideal
-deformation, and THM-3966 packages their class/Euler boundary invoice;
-`P`-dependent graph coefficients and nongraph repetitions remain open.
+THM-3963 closes moving scalar `q=c(t)P^2`, and THM-3964 closes the displayed
+scalar-coefficient graph-root family. THM-3965 rules out a one-place
+discriminant in its exact constant-`(g,h)` unit-ideal family; THM-3966/3968
+give class/Euler and canonical/different invoices. THM-3967 closes all
+irreducible `deg_P(q)<=2` rows, while THM-3969 closes collision-free
+`Xi in k^*` affine-`P` graph rows. Collision fibres, nongraph repetition, and
+higher `P`-depth remain open.
 
 The session therefore ends at a sharp boundary.  **PROVED:** degree-four
 centered nonentry, all-degree trace-carrier routing, the arbitrary-common-debt
 natural-cubic boundary obstruction, the four-color Mobius classification, and
 the centered degree-five and arbitrary-`q` normal monogenic closures.
 **VERIFIED-EXACT:** the 2,884-gate carrier companion and the
-`51/62/44/75/92/62/161/105/42/51/46/45/110/29` gates in
-THM-3950/51/52/53/54/56/58/59/60/61/62/63/64/65. **OPEN:** degree at least six,
+`51/62/44/75/92/62/161/105/42/51/46/45/110/29/23/32` gates in
+THM-3950/51/52/53/54/56/58/59/60/61/62/63/64/65/67/69. **OPEN:** degree at least six,
 arbitrary root gauges and coefficient planes, the remaining moving conductor
 debts, nonmonogenic orders, normalization-parameter descent, higher-degree
 non-centered strata, and the planar Jacobian conjecture itself.

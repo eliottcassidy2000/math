@@ -348,8 +348,10 @@ Format per entry:
   canonical fixed-point osculation reservation then occupied that identifier,
   forcing the LRC theorem to freshly checked `THM-3971`. A determinantal
   affine-plane completion reservation immediately occupied that identifier,
-  forcing one more move to freshly checked `THM-3972`. The hash-bearing LRC
-  companions and mathematical scope did not change.
+  forcing one more move to freshly checked `THM-3972`. A simple-collision
+  affine-graph blowup reservation then occupied that identifier, forcing the
+  theorem to freshly checked `THM-3973`. The hash-bearing LRC companions and
+  mathematical scope did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
   only before empty reservations; rename the whole artifact family together.

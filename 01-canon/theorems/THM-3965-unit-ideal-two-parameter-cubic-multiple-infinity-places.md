@@ -16,12 +16,13 @@ status: >
 source: jc-zero-debt-lift / post-THM-3907 positive-deformation lane, 2026-08-24
 audit: >
   INDEPENDENT MATHEMATICAL AND HOSTILE AUDIT PASS. The audit rederived the
-  domain and scalar-unit gates, repeated-root incidence, unique reducible
-  seam, height-one maximality and S3 packet, and exact two/four infinity-place
-  ledgers on the seam. The weak symbolic-factor presence test was hardened to
-  an exact divisibility identity. Normal and optimized runs match the frozen
-  29-gate output after canonical LF normalization on Windows; raw and semantic
-  hashes and documentation checks pass.
+  domain and scalar-unit gates, squarefree-discriminant height-one maximality,
+  repeated-root incidence and birational target recovery, unique reducible
+  seam, S3 packet, and exact two/four infinity-place ledgers. The weak
+  symbolic-factor presence test was hardened to an exact divisibility
+  identity. Normal and optimized runs match the frozen 29-gate output after
+  canonical LF normalization on Windows; raw and semantic hashes and
+  documentation checks pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3907-unit-ideal-nonmonogenic-cubic-six-place-boundary

@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3972 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3973 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -699,10 +699,13 @@
   `q(h^2,t)-2h^3` when `P` divides `q` exactly once. The surface is normal iff
   the adjusted hidden polynomial is squarefree; `P^2|q` makes the height-one
   zero section singular. The global different excludes every normal row.
-  THM-3961 leaves two general nonnormal conductor-debt loci for normalization;
-  THM-3962/3963 subsequently close only the constant-`q(P)` and moving scalar-
-  `P^2` subfamilies. Reducible cubics and `JC(2)` are outside scope. Checks:
-  `51`. Script/output/semantic SHA-256:
+  THM-3961 leaves two general nonnormal conductor-debt loci for normalization.
+  THM-3962/63/64/67/69 subsequently close the constant-`q`, moving scalar-
+  `P^2`, scalar-coefficient graph, all depth-at-most-two, and collision-free
+  affine-graph packets;
+  collision fibres, nongraph repetition, and higher depth remain. Reducible
+  cubics and `JC(2)` are outside scope. Checks: `51`.
+  Script/output/semantic SHA-256:
   `e23bc41290cc397df5de5caa7bfc2cf24d911fd21862d455f6b6343b03b34064` /
   `965d720d954670a8c4662adfe6c3940c1202199aa011dfbdc66fe3ce40c23764` /
   `1993c77cd4dc081abb018ace8f177bc80ada708f19622a7a4c15c29fb385564b`.
@@ -752,6 +755,27 @@
   `942b28312b093f84efcf8acb3864953089c104303404536d740e8917c7cffb5c` /
   `3421b597d3eb40e702e4687d92da952d2c0555c5d87acdb64bcc574037f5b55e` /
   `3ec72321d50110d452b2b0c88a0097ca9cf0397f7591241525b6385a637c6a7a`.
+
+- `jc2_quadratic_p_depth_conductor_closure_thm3967.py` -> matching `.out`
+  [THM-3967 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. Every
+  irreducible natural cubic with `deg_P(q)<=2` is normal, a moving scalar-
+  `P^2` row, or a repeated polynomial-graph row already closed by THM-3964.
+  Thus coefficient depth two has no conductor escape. A reducible hostile
+  shows nongraph repetition begins at depth three. Checks: `23`.
+  Script/output/semantic SHA-256:
+  `f27b181754b6425bf8c62e31465102910bcb85a30cd7b2d738aa0146028b934c` /
+  `5ce0d901cf18f717263230fbdb4680fd5638d89c7b865531ea4ebf158fee0778` /
+  `50b543e97c0f3da42d4396d687bce3f55fa61524e99ad274f845102a8137cbd5`.
+
+- `jc2_affine_p_graph_relative_p1_collision_thm3969.py` -> matching `.out`
+  [THM-3969 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. For the
+  first affine-`P` graph debt, `Xi in k^*` makes the relative-projective-line
+  graph a finite smooth normalization with finite cyclic class group, which
+  THM-3922 excludes. Zeros of `Xi` add exceptional curves and remain open.
+  Checks: `32`. Script/output/semantic SHA-256:
+  `947b7e94bb83accbfed9b7612dcfb16b4f2be112b58e386e94a1d6bc27457fb1` /
+  `e1d137c24e6330b888cda5fbfaf968a6da404f0db2e1c664049d742338008a26` /
+  `fa36713e47425b67ca0a12a38e82e3ab2c66c82911206acf322e750cac6c6e73`.
 
 - `hopf_s6_triangle_monodromy_snf_audit_20260824.py` -> matching `.out`
   [VERIFIED-EXACT DISPLAYED MATRICES + FINITE-EXACT CONDITIONAL ORIENTED

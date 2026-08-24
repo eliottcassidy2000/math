@@ -379,10 +379,12 @@ hidden squarefreeness is equivalent to normality; all normal cases fail by the
 global different. THM-3962 closes both debt types whenever `q=q(P)` by a
 product-curve puncture/unit argument. THM-3963 gives the exact regular
 normalization of every `q=c(t)P^2` and kills it with the principal prime
-`w+2=0`. THM-3964 closes the displayed scalar-coefficient graph-root family,
-THM-3965 closes the constant unit-ideal deformation, and THM-3966 packages
-the class/Euler boundary invoice. Genuinely `P`-dependent graph coefficients,
-nongraph repeated factors, and general `P^2q2(P,t)` remain. The orthogonal
+`w+2=0`. THM-3964 closes the displayed scalar-coefficient graph-root family;
+THM-3965 rules out one-place discriminants in its exact constant-`(g,h)`
+unit-ideal family; THM-3966/3968 package class/Euler and canonical/different
+invoices. THM-3967 closes all irreducible `deg_P(q)<=2` rows, and THM-3969
+closes collision-free `Xi in k^*` affine-`P` graph rows. Collision fibres,
+nongraph repeated factors, and higher `P`-depth remain. The orthogonal
 THM-3955/57 node and
 coordinate-crossing cotangent sequences are proved local sidecars, not global
 Jacobian or Hopf results.
@@ -390,9 +392,9 @@ Jacobian or Hopf results.
 The next search should not maximize Mordell--Weil rank blindly.  The cheapest
 decisive experiments are:
 
-1. normalize the remaining `P`-dependent graph, nongraph repeated-factor, and
-   general `P^2q2(P,t)` debts and compute their units, classes, incidence and
-   infinity places;
+1. normalize the remaining affine-graph collision fibres, nongraph repeated-
+   factor, and higher-`P`-depth debts and compute their units, classes,
+   incidence, canonical vectors, and infinity places;
 2. start from a genuinely nonmonogenic `S3` field/order outside the normal
    monogenic grammar, or prove that the normalization parameter descends to
    an original polynomial target coordinate;
