@@ -2,8 +2,8 @@
 id: THM-3912
 title: "Even one-place split-boundary and A2 three-torsion design sieve"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  For a degree d=2m plane branch smooth at its
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a degree
+  d=2m plane branch smooth at its
   unique infinity point, the two components above the infinity line have
   Gram matrix [[1-m,m],[m,1-m]], Smith form diag(1,d-1), and determinant
   1-d.  In an actual removed-divisor lattice with Pic[3]=0, r at most two
@@ -16,15 +16,17 @@ status: >
   blocks carry an intrinsic index-three hostile overlattice.
 source: jc_degree6_one_place / post-THM-3911 boundary-lattice synthesis, 2026-08-23
 audit: >
-  SELF-AUDITED proof candidate.  The proof derives the boundary intersection
-  length in the completed local double plane, audits boundary and log-
-  resolution blowups by an integral congruence, and phrases the class-group
-  conclusion through the actual removed-divisor lattice and Pic[3]=0.  The
-  exact companion freezes the symbolic Gram determinant, Smith forms through
-  degree 40, both blowup congruences, the A2 discriminant generator, all even
-  mod-18 order-three values, r=0..3 permission rows, and the degree-six
-  specialization in 99 active gates.  Normal and optimized modes byte-match
-  the frozen transcript.  Independent hostile audit remains required.
+  INDEPENDENT HOSTILE AUDIT PASS.  The audit rederived the completed-local
+  intersection length, self-intersections, Smith form, and arbitrary-center
+  total-transform congruence; checked the Pic[3]/quotient hypotheses in the
+  saturation implication; independently evaluated the A2 and boundary
+  discriminant forms, every mod-18 seam, and the higher-three-power reduction;
+  and confirmed that permission is never promoted to actual globalization.
+  The exact companion freezes the symbolic Gram determinant, Smith forms
+  through degree 40, both blowup congruences, the A2 discriminant generator,
+  all even mod-18 order-three values, r=0..3 permission rows, and the
+  degree-six specialization in 99 active gates.  Normal and optimized modes
+  byte-match the frozen transcript; raw hashes and documentation pass.
 related:
   - THM-3844-two-cusp-polynomial-branch-quadratic-resolvent-design-gate
   - THM-3890-universal-quintic-common-zero-resolvent-class-group-dichotomy
@@ -40,8 +42,7 @@ hash_basis: raw LF bytes
 
 # THM-3912 -- the split boundary prices cusp three-torsion
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Work over an algebraically closed field `k` of characteristic zero.  Let
 `Gamma` be a reduced irreducible plane curve of even degree
