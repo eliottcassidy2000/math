@@ -357,9 +357,10 @@ asymptotic or residue.
   For `f!=0`, THM-3899 proves `deg_y T>=deg_y f` and leading colors, while
   THM-3904 closes the x-only lane. THM-3901 gives the strict fan; THM-3902/3905 give equality through three jets.
   These are necessary passports with positive lifts, not closure.
-  THM-3890 closes quintics. THM-3906's common-zero sextic has one infinity
-  point/two places; THM-3907's unit-ideal order has two/six. Other carriers,
-  sextics, one-place forms, Keller and `JC(2)` are OPEN.
+  THM-3890 closes quintics; THM-3906/3907 have one/two and two/six places.
+  THM-3913/3919 give an elliptic no-atlas decic with mixed three-class;
+  THM-3915--3917 close two models. THM-3918 is rational with
+  `delta=34+1+1`; its plane/Keller status and `JC(2)` are OPEN.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
