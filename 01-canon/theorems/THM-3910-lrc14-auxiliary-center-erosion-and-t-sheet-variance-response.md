@@ -36,7 +36,7 @@ related:
   - THM-3377-path-colour-deletion-compiler-and-skew-current
   - THM-3380-hamiltonian-deletion-layer-monoid-semiring-and-small-order-boundaries
   - THM-3729-rooted-pfaffian-response-and-sign-root-deletion-average
-  - THM-3950-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family
+  - THM-3952-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family
 script: 04-computation/lrc14_auxiliary_center_erosion_response_thm3910.py
 output: 05-knowledge/results/lrc14_auxiliary_center_erosion_response_thm3910.out
 script_sha256: d4c6e9598cc30ca1155d8e407e3065aa2034556a8ac04349890d1baa6796f261
