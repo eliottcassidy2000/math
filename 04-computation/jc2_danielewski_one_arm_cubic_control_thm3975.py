@@ -78,6 +78,41 @@ for n in range(2, 8):
         gate(beta == sp.ceiling(sp.Rational(m, n)),
              f"height {n}, weight {m}: one-color exponent")
 
+    # All-height finite controls C_ell=y+x^ell.  The theorem proves the
+    # exact field degree from the pole divisor on the generic p-fibre;
+    # these gates freeze monicity, elimination, and the pole arithmetic.
+    for ell in range(n // 2, n // 2 + 4):
+        cell = sp.expand(yn + x**ell)
+        fall = sp.expand(
+            X * (C - X**ell)**2 + p * (C - X**ell)
+            - p**3 * X ** (n - 1)
+        )
+        poly = sp.Poly(fall, X)
+        gate(poly.degree() == 2 * ell + 1,
+             f"height {n}, exponent {ell}: finite-control degree")
+        gate(poly.LC() == 1,
+             f"height {n}, exponent {ell}: finite-control monicity")
+        zero(fall.subs({X: x, C: cell, p: pn}),
+             f"height {n}, exponent {ell}: finite-control elimination")
+        zero(2 * x * yn - pn * ((2 * zn - 1) - 1),
+             f"height {n}, exponent {ell}: generic-fibre y coordinate")
+
+        if n % 2 == 0:
+            gate(ell > n // 2 - 1,
+                 f"height {n}, exponent {ell}: even-infinity dominance")
+        else:
+            gate(2 * ell > n - 2,
+                 f"height {n}, exponent {ell}: odd-infinity dominance")
+        gate(1 + 2 * ell == poly.degree(),
+             f"height {n}, exponent {ell}: exact pole degree")
+
+        jac_cell = sp.expand(
+            sp.diff(pn, x) * sp.diff(cell, t)
+            - sp.diff(pn, t) * sp.diff(cell, x)
+        )
+        gate(sp.Poly(jac_cell, x, t).total_degree() > 0,
+             f"height {n}, exponent {ell}: finite control is not Keller")
+
 # The finite controls at heights two and three.
 deltas: dict[int, sp.Expr] = {}
 for n in (2, 3):
@@ -188,6 +223,7 @@ summary = {
     "canonical": "Cl=Z[D], K=[D], source volume exact",
     "lnd": "x*d/dt, kernel k[x], marked plinth x^(n+1)",
     "cubic": "n=2,3 finite free rank3 over k[p,x+y]",
+    "finite_tower": "C_ell=y+x^ell, ell>=floor(n/2), exact degree 2ell+1",
     "index": "monogenic x-order has index p and discriminant p^2 Delta_n",
     "addresses": "three distinct normal addresses over generic p=0",
     "no_mate": "p has no rational constant-Jacobian mate for every n>=2",
@@ -201,6 +237,7 @@ print("BOUNDARY=A1;CL=Z;K=D;SOURCE_VOLUME=EXACT")
 print("DPD=DPLUS_0;DMINUS_MINUS_0_OVER_NPLUS1_MINUS_1_OVER_N")
 print("LND=X_DT;KERNEL_KX;MARKED_PLINTH_X_NPLUS1")
 print("CUBIC=N2_N3;FINITE_FREE_BASIS_1_X_W")
+print("ALL_HEIGHT_FINITE=C_ELL_Y_PLUS_XELL;DEGREE_2ELL_PLUS1;NEVER_KELLER")
 print("INDEX=MONOGENIC_X_ORDER_P;DISC_ORDER=P2_DISC_NORMAL")
 print("P0_ADDRESSES=THREE_DISTINCT;INDEX_NOT_RAMIFICATION")
 print("NO_MATE=P_GENERIC_FIBRE_LOG_OR_HOLOMORPHIC_DIFFERENTIAL")
