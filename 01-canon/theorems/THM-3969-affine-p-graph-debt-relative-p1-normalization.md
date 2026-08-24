@@ -2,8 +2,8 @@
 id: THM-3969
 title: "Collision-free affine-P graph debt has a finite-class relative-P1 normalization"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-  HOSTILE AUDIT REQUIRED. For the first graph debt beyond quadratic P-depth,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For the first
+  graph debt beyond quadratic P-depth,
   q=3rP-r^3+(P-r^2)^2(c+a(P-r^2)), the generic normalization is the graph
   of x=(3r+3v+cv^2)/(1-av^3) on a relative projective line. Its only
   basepoint polynomial is Xi=c^3+27a^2r^3-27acr+27a. If Xi is a nonzero
@@ -13,6 +13,16 @@ status: >
   the collision-free family only; every zero of Xi creates an exceptional
   normalization curve and remains to be typed.
 source: jc-cohn3709 / post-THM-3967 first cubic-P conductor seam, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc_degree6_one_place, 2026-08-24). The
+  audit independently checked relative-Proj affineness, smoothness, the
+  fixed-degree resultant and separate W=0 basepoint row, degree three on
+  every projective-line fibre, proper plus quasi-finite finiteness, the
+  function-field recovery v=y/x and full-normalization bridge, and the
+  Weil-localization computation Cl(Y)=Z/gcd(d_j). It also checked the
+  nonreduced a=0 support and both moving controls. Normal and optimized
+  32-gate runs byte-match the frozen output; hashes and documentation checks
+  pass.
 depends_on:
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
   - THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt
@@ -29,8 +39,8 @@ hash_basis: raw LF bytes
 
 # THM-3969 -- three Kummer-conjugate punctures are a finite-class trap
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-HOSTILE AUDIT REQUIRED.** Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of
 characteristic zero. Let `a,c,r in k[t]` and put
 
 ```text
@@ -211,7 +221,7 @@ it is deliberately outside the conclusion.
 Thus the remaining affine-`P` graph problem is not an untyped bivariate
 normalization. It is the explicit exceptional-curve packet over `V(Xi)`.
 This theorem does not close that packet, higher `P`-depth, nongraph repeated
-factors, or `JC(2)`. **QED, pending independent hostile audit.**
+factors, or `JC(2)`. **QED.**
 
 ## Reproduction
 
