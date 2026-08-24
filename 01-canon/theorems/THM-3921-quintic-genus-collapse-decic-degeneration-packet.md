@@ -2,7 +2,7 @@
 id: THM-3921
 title: "Quintic genus-collapse decic degeneration, normal order, and persistent class group"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. The quintic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. The quintic
   genus-zero locus of THM-3917 is the exact degeneration on which the
   rational one-place decic's origin fibre changes from eight smooth branches
   to four smooth plus two cuspidal branches, still with delta 28. The six
@@ -12,24 +12,29 @@ status: >
   THM-3915 persists: an explicit normal finite-free rational cubic order is
   globally nonmonogenic with power-basis index A^5, and the quadratic
   resolvent still has scalar units and class group Z^3 direct-sum Z/3. The
-  candidate fails only at THM-3917's six-branch boundary obstruction; JC(2)
-  remains open.
+  candidate is excluded by THM-3917's six-branch boundary obstruction.
+  The reserved THM-3924 candidate supplies a prospective independent
+  primitive-class obstruction, but is not used here until its own audit;
+  JC(2) remains open.
 source: jc_degree6_one_place / post-THM-3917 decic degeneration lane, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The exact
-  companion verifies the K-quotient double-root packet, normalization,
-  birationality sidecars, reciprocal collisions, complete singularity and
-  infinity ledgers, address identity, global cubic basis and multiplication
-  closure, local A-adic residual, binary index form, conic bundle, nodal
-  boundary congruence, Smith form, and class quotient in 69 active gates.
-  Normal and optimized runs byte-match the frozen output. Geometric
-  completeness, normality, and the divisor-quotient argument are written in
-  the proof rather than inferred from a numerical scan.
+  INDEPENDENT HOSTILE AUDIT PASS (audit_thm3921/root, 2026-08-23), after
+  repairs 893fab9554 and 642ee9738e. Normal, optimized, and frozen runs
+  byte-match in 69 active gates and both raw hashes agree. The decic
+  normalization, singularity/genus ledger, six-address correspondence,
+  integral basis and A^5 index, normality, nonmonogenicity, node-blowup
+  boundary span, class group, units, and actual Kummer generator were all
+  independently reconstructed. The audit corrected “generate the unit
+  ideal” to the exact gcd-one/proper-ideal statement and scoped Kummer
+  unramifiedness to codimension-one valuations centred on the affine
+  quadratic resolvent. No mathematical gap remains.
 depends_on:
   - THM-3917-quintic-parameter-rational-collapsed-cubic
 related:
   - THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
   - THM-3914-decic-boundary-three-class-degree-one-isotropic-divisor
+  - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
+  - THM-3924-decic-cubic-index-five-ramification-class-obstruction
 script: 04-computation/jc2_quintic_decic_degeneration_order_thm3921.py
 output: 05-knowledge/results/jc2_quintic_decic_degeneration_order_thm3921.out
 script_sha256: 5f0db36702cfdd09296000f39dc5210bd6d8a2e6d385d0c1e07a4873198cf245
@@ -40,7 +45,7 @@ hash_basis: raw LF bytes
 
 # THM-3921 -- genus collapses while every algebraic invoice persists
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero. Retain the notation
 of THM-3917:
 
@@ -88,9 +93,11 @@ Q_2^*=k^*,                       Cl(Q_2)=Z^3 direct-sum Z/3. (5)
 ```
 
 Thus the quintic condition clears the positive-genus obstruction without
-losing normality, nonmonogenicity, or the global three-class. What remains
-is exactly the six-branch boundary obstruction proved in THM-3917, so this
-candidate is not a Keller map and `JC(2)` remains **OPEN**.
+losing normality, nonmonogenicity, or the global three-class. The six-branch
+boundary obstruction proved in THM-3917 already shows that this candidate
+is not a Keller map. The reserved THM-3924 candidate prospectively gives a
+second, primitive-class obstruction, but no claim from that pending audit is
+used in the present theorem. The conjecture `JC(2)` remains **OPEN**.
 
 ## 1. The decic normalization and the hidden THM-3915 family
 
@@ -549,11 +556,12 @@ be a cube times a unit; scalar units over the algebraically closed field are
 cubes, contrary to connectedness. Hence `[E]` is the nonzero element of
 `Cl(Q_2)[3]`, and so generates the unique `Z/3` summand in `(48)`.
 
-The comparison is now exact. The `K=0` deformation does all of the things a
-counterexample design asked of it locally: it makes the collapsed divisor
-rational while retaining a normal rational nonmonogenic cubic order and the
-needed global three-class. It fails for a single new reason: the same
+The comparison is now exact. The `K=0` deformation makes the collapsed
+divisor rational while retaining a normal rational nonmonogenic cubic order
+and the needed global three-class. It nevertheless fails: the same
 double-root mechanism turns two smooth origin branches into cuspidal ones
 and sends all six ramification addresses through one point. THM-3917 proves
 that this six-branched ramification curve cannot lie in the boundary of an
-affine-plane Keller atlas. No planar Jacobian counterexample is obtained.
+affine-plane Keller atlas. The reserved THM-3924 candidate identifies an
+additional class-divisibility mechanism, explicitly pending its own audit.
+No planar Jacobian counterexample is obtained.
