@@ -1,0 +1,13 @@
+THM4004_TLTU_DIVISOR_COMB_PROFILE_EXACT
+scope=THM3818_rank11_11+2_branch;t<U;LRC14=OPEN
+atlas_pairs=5855;max_p=177;max_p_pairs=((177, 178), (177, 179))
+crossing_floor=U>91^6/177;integer_U_min=3208300859
+deletion_gcd=every_prime_dividing_t_misses_at_least_two_body_coordinates
+prime_profile=ell>=5_at_most_7;ell=3_at_most_8;ell=2_at_most_9
+ell=2_equality_requires=s=1_and_reduced_odd_exception_sum>7
+direct_comb_orders=64
+two_order_checks=998001
+prime_checks=667
+swap_no_go=t<U_implies_t*lambda(u)<6/7
+checks=998023
+RESULT=PASS

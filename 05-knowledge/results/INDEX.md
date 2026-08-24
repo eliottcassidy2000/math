@@ -16,6 +16,42 @@
   `b122225779dc95260c3e6681b932b4ce6a2a48da0304910ad0f23386f8d9bcc1` /
   `42e6daa3eab5a9a6126aa5f7897a311794e2887a0c0f9b062bd5c0bf0a988236` /
   `23c5b3fbbaeb75be24ffb5d2221abaff12697bade93a5b0d199c9f11c8d97af4`.
+- `lrc14_scale_two_component_erosion_boundary_strip_thm4003.py` and
+  independent direct-grid audit -> matching `.out`s [THM-4003 PROVED
+  RELATIVE TO CITED LRCUpTo13 + VERIFIED-EXACT + INDEPENDENTLY AUDITED;
+  LRC(14) OPEN]. Eleven distinct body speeds and THM-3818's pair-height cap
+  give `U lambda_+>=1/42+1/(84(min(U,91^6)-1))`. Together with THM-3995's
+  two retained cores this forces
+  `3t(2H-1)<=8(H-1)(U-1)`, `H=min(U,91^6)`; the distinctness-only odd
+  rounding is `U>=floor(3t/4)+2+1_(t=1 mod 4)`. A separate top-balance
+  selector closes every conditional certificate type for `U/V>=11` and
+  scale two for `U/V>=1001/189`. Direct wall grids prove the four residue
+  formulas and their two reflection identities. On 62,989 old-strip cells
+  through `t<=1001`, 742 close symbolically, 77 more by exact residues, and
+  62,170 remain; 19 closures require both gains simultaneously. Primary
+  script/output SHA-256:
+  `f5ed4db4484be206cc17808592654ca2bcb1944e2e0b8c673dc2eaac91123f35` /
+  `7e4d2a4fb2ac9d0b841ea8ed6cf396d7da16b49d6224dfb9e95455c40bc5a190`;
+  independent:
+  `46825ac964d4154d0519a1acf700595a7f88c9e1b3b42caa87d65d6d4f377b8e` /
+  `8ca1c3e33ee3125cd5648c74db516ad56fbccff775cd7360631dcf8f65f27c1e`.
+
+- `lrc14_tltu_divisor_comb_profile_thm4004.py` and independent audit ->
+  matching `.out`s [THM-4004 PROVED RELATIVE TO CITED LRCUpTo13 +
+  VERIFIED-EXACT + INDEPENDENTLY AUDITED; LRC(14) OPEN]. The exact labelled
+  branch count for three detuned owners gives the survivor profile
+  `ell>=5: <=7`, `ell=3: <=8`, `ell=2: <=9` body coordinates divisible by
+  each prime `ell|t`; equality at 2 requires scale one and reduced odd
+  exception sum `>7`. Every `t<U` survivor in the exact crossing-forbidden
+  branch has `U>=3,208,300,859`, while literal component swapping cannot fire
+  because `t lambda(u)<6/7`. The `ell=3` equality is a selector hostile, not
+  an LRC hostile; the displayed row is lonely at `4/33`. Primary
+  script/output SHA-256:
+  `3563112bb3a9f8022635faf38109eb773d425d7fccf7cd9d4ddd490ac58961e8` /
+  `1ae46b86df5965f14a63d7dd860c2a23c61a58188cf10560b13f62f04e8adb4e`;
+  independent:
+  `f3b25ed7184113383c79488cf778d89fee157c06751919b8629ad88202287dd6` /
+  `6bf2461d4a784ef4ca85491d6e231161d1c8d814ea67a1580e36469d353c5366`.
 
 - `ak_strict_saturated_2x3_thm3903/*` -> matching `.out`s [THM-3903
   EXTENSION: PROVED + VERIFIED-EXACT IN THE SATURATED EMPTY-WILDCARD
