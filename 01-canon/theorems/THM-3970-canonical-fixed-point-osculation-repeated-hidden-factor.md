@@ -2,18 +2,26 @@
 id: THM-3970
 title: "Repeated hidden factors are canonical fixed-point osculation curves"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-  HOSTILE AUDIT REQUIRED. For arbitrary q(P,t), put s=q_P/3,
-  J=P-s^2, and R=q-3sP+s^3. Every nonzero repeated irreducible factor M of
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For arbitrary
+  q(P,t), put s=q_P/3, J=P-s^2, and R=q-3sP+s^3. Every repeated irreducible
+  factor M not associated to h of
   q(h^2,t)-2h^3 is oriented by M|(h-s(h^2,t)). Its contraction C(P,t) is
   an isomorphic image curve, C(h^2,t) is the product of M and its distinct
   reflection, and the exact second-order invoice is C|J and C^2|R. In fact
-  C^2|R is forced already by C|J and C|R: nonzero hidden repetition is
-  equivalent to a non-P irreducible factor of gcd(J,R), with its unique
-  fixed-point orientation. If J=CD and R=C^2c, differentiation forces
-  2cC_P+c_PC=-3s_PD. This is a structural reframe, not a closure of the
+  C^2|R is forced already by C|J and C|R: repetition by a factor not
+  associated to h is equivalent to a non-P irreducible factor of gcd(J,R),
+  with its unique fixed-point orientation. If J=CD and R=C^2c, differentiation forces
+  2cC_P+c_P C=-3s_PD. This is a structural reframe, not a closure of the
   resulting normalization or JC(2).
 source: jc-cohn3709 + jc-degree6-one-place / post-THM-3969 nongraph reframe, 2026-08-24
+audit: >
+  INDEPENDENT MATHEMATICAL AND HOSTILE AUDIT PASS. The audit rederived the
+  unique derivative orientation, distinct reflection, contraction isomorphism,
+  forward and converse second-order invoices, the nonvertical gcd collapse,
+  kernel-based bijection, differential identity, and both sigma controls. For
+  sigma nonzero it made the monic integrality step in the displayed A2
+  normalization explicit. Normal and optimized 17-gate runs match the frozen
+  output after canonical LF normalization on Windows; all hashes pass.
 depends_on: []
 related:
   - THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt
@@ -29,9 +37,8 @@ hash_basis: raw LF bytes
 
 # THM-3970 -- hidden repetition is oriented second-order fixed-point contact
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-HOSTILE AUDIT REQUIRED.** Work over an algebraically closed field `k` of
-characteristic zero. Put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of characteristic zero. Put
 
 ```text
 A=k[P,t],                      B=k[h,t],
@@ -191,7 +198,7 @@ Substitution of `(15)` and cancellation of `C` freezes the exact osculation
 sidecar
 
 ```text
-2cC_P+c_PC=-3s_PD.                                      (19)
+2cC_P+c_P C=-3s_PD.                                    (19)
 ```
 
 This row is a cheap necessary test for proposed packets. It is not by itself
@@ -221,7 +228,7 @@ so `C|u` and hence `C^2|R`.
 There is consequently an exact target-plane criterion:
 
 ```text
-nonzero repeated irreducible factors M of K
+repeated irreducible factors M of K not associated to h
   <----> non-P irreducible factors C of gcd(J,R).       (21)
 ```
 
@@ -309,9 +316,17 @@ T=sigma v^2+3v+2a0.                                    (28)
 ```
 
 The first row has degree three in `v`, proving the cubic field degree. Its
-parameter is recovered generically as
+third row gives the monic equation
+
+```text
+v^2+(3/sigma)v+(2a0-T)/sigma=0,
+```
+
+so `v` is integral over the target order. Its parameter is recovered
+generically as
 `v=(P-a0^2)/(T+a0)`, so this degree is the actual function-field degree,
-not merely the degree of a nonbirational parametrization. Its
+not merely the degree of a nonbirational parametrization. Since `k[a0,v]` is
+normal, these facts prove that it is the full normalization. Its
 source-to-target Jacobian is, up to sign,
 
 ```text
@@ -335,7 +350,7 @@ The theorem replaces an arbitrary hidden-factor search by the target data
 plus an orientation choice in the quadratic reflection cover. It does not
 classify which such packets have affine-plane normalizations, solve the
 collision fibres left by THM-3969, treat nonmonogenic cubic orders, or prove
-`JC(2)`.
+`JC(2)`. **QED.**
 
 ## Reproduction
 

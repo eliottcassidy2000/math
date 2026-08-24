@@ -443,8 +443,9 @@ THM-3964 closes the displayed scalar-coefficient graph-root family; THM-3965
 rules out a one-place discriminant in its exact constant-`(g,h)` unit-ideal
 family; THM-3966/3968 give class/Euler and canonical/different boundary
 invoices. THM-3967 closes every irreducible `deg_P(q)<=2` row, and THM-3969
-closes the collision-free `Xi in k^*` affine-`P` graph packet. THM-3970/3971
-remain RESERVED only. None supplies a Hopf dependency here.
+closes the collision-free `Xi in k^*` affine-`P` graph packet. THM-3970 proves
+the exact osculation/gcd reframe, not normalization closure; THM-3971/3972
+await audit/integration. None supplies a Hopf dependency here.
 
 ## 9. Connection contract B: affine local systems over the LRC carrier
 

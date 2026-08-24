@@ -363,8 +363,9 @@ proved THM-3965 rules out a one-place discriminant in its exact constant-
 `(g,h)` unit-ideal family; THM-3966/3968 supply the class/Euler and canonical-
 different boundary invoices. Proved THM-3967 closes every irreducible
 `deg_P(q)<=2` row, and proved THM-3969 closes the collision-free `Xi in k^*`
-affine-`P` graph packet. THM-3970/3971 remain RESERVED only. None supplies a
-Hopf dependency here.
+affine-`P` graph packet. THM-3970 proves the exact osculation/gcd reframe,
+not a normalization closure; THM-3971/3972 await audit/integration. None
+supplies a Hopf dependency here.
 
 ### Explicitly rejected vocabulary bridges
 

@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3973 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3974 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -776,6 +776,18 @@
   `947b7e94bb83accbfed9b7612dcfb16b4f2be112b58e386e94a1d6bc27457fb1` /
   `e1d137c24e6330b888cda5fbfaf968a6da404f0db2e1c664049d742338008a26` /
   `fa36713e47425b67ca0a12a38e82e3ab2c66c82911206acf322e750cac6c6e73`.
+
+- `jc2_canonical_fixed_point_osculation_thm3970.py` -> matching `.out`
+  [THM-3970 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. Repeated
+  hidden factors not associated to `h` are
+  recoded as oriented target-plane factors of `gcd(J,R)`, equivalently
+  `J=CD`, `R=C^2c`, with exact differential invoice
+  `2cC_P+c_P C=-3s_PD`. This is a structural osculation reframe, not a
+  normalization closure or JC(2) result. Checks: `17`.
+  Script/output/semantic SHA-256:
+  `1d41c8b8527d1a4d7ab836cee90c0e4913ad6e0645b02cb247fa2b18c16049a6` /
+  `a569e79dd0b955883b2306d99ed79388d8c761b75a1326481fb003b6a51b4239` /
+  `733c428a5d7556294a3eb065f89e3e71e1a79c2c8efec5916537691909898262`.
 
 - `hopf_s6_triangle_monodromy_snf_audit_20260824.py` -> matching `.out`
   [VERIFIED-EXACT DISPLAYED MATRICES + FINITE-EXACT CONDITIONAL ORIENTED

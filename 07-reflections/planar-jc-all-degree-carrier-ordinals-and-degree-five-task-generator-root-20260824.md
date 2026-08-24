@@ -267,7 +267,9 @@ discriminant in its exact constant-`(g,h)` unit-ideal family; THM-3966/3968
 give class/Euler and canonical/different invoices. THM-3967 closes all
 irreducible `deg_P(q)<=2` rows, while THM-3969 closes collision-free
 `Xi in k^*` affine-`P` graph rows. Collision fibres, nongraph repetition, and
-higher `P`-depth remain open.
+higher `P`-depth remain open. Proved THM-3970 gives an exact target-gcd/
+osculation reframe but no normalization closure; THM-3971/3972 await
+audit/integration.
 
 The session therefore ends at a sharp boundary.  **PROVED:** degree-four
 centered nonentry, all-degree trace-carrier routing, the arbitrary-common-debt

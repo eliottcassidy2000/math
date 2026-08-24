@@ -384,7 +384,9 @@ THM-3965 rules out one-place discriminants in its exact constant-`(g,h)`
 unit-ideal family; THM-3966/3968 package class/Euler and canonical/different
 invoices. THM-3967 closes all irreducible `deg_P(q)<=2` rows, and THM-3969
 closes collision-free `Xi in k^*` affine-`P` graph rows. Collision fibres,
-nongraph repeated factors, and higher `P`-depth remain. The orthogonal
+nongraph repeated factors, and higher `P`-depth remain. Proved THM-3970
+recodes hidden repetition as an oriented factor of `gcd(J,R)` but does not
+normalize it; THM-3971/3972 await audit/integration. The orthogonal
 THM-3955/57 node and
 coordinate-crossing cotangent sequences are proved local sidecars, not global
 Jacobian or Hopf results.
