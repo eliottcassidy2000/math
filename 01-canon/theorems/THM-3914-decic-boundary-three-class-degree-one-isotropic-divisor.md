@@ -2,8 +2,8 @@
 id: THM-3914
 title: "Decic split-boundary three-class and degree-one isotropic divisor"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  For an actual removed-divisor lattice whose
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For an actual
+  removed-divisor lattice whose
   degree-ten split boundary has Gram matrix [[-4,5],[5,-4]], whose remaining
   block has determinant prime to three, and whose ambient Picard group has
   no three-torsion, affine class-group three-torsion exists exactly when
@@ -14,14 +14,17 @@ status: >
   nef, semiample, or fibration classes.
 source: jc_degree6_one_place / post-THM-3912 decic globalization invoice, 2026-08-23
 audit: >
-  SELF-AUDITED proof candidate.  The proof uses the actual divisor quotient,
-  isolates the unique order-three subgroup of the cyclic boundary
-  discriminant group, and constructs the integral half-classes without a
-  parity or unimodularity assumption.  The exact companion freezes the
-  discriminant generator, the index-three embedding into U, both cubic-root
-  identities, and the complete mod-three residue enumeration.  Normal and
-  optimized runs byte-match the frozen transcript.  Independent hostile
-  audit remains required.
+  INDEPENDENT HOSTILE AUDIT PASS.  The audit rederived the actual Pic/R
+  quotient and Pic[3] bridge y-w=3r, the unique order-three subgroup of the
+  cyclic boundary discriminant group, both directions of 3v=w and
+  3D_-=T+B_-, and the index-three saturation to the hyperbolic plane U.  It
+  also checked that unimodularity makes U primitive and orthogonally split in
+  Pic/tors without assuming the ambient lattice unimodular, and preserved all
+  effectivity, nefness, and fibration caveats.  The exact companion freezes
+  the discriminant generator, the index-three embedding into U, both cubic-
+  root identities, and the complete mod-three residue enumeration.  Normal
+  and optimized runs byte-match the frozen transcript; raw hashes and
+  documentation pass.
 depends_on:
   - THM-3912-even-one-place-split-boundary-a2-three-torsion-design-sieve
 related:
@@ -37,8 +40,7 @@ hash_basis: raw LF bytes
 
 # THM-3914 -- the decic boundary class is a hidden hyperbolic plane
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Work over an algebraically closed field `k` of characteristic zero.  Let `Q`
 be a normal integral affine surface and let `Y` be a smooth projective
