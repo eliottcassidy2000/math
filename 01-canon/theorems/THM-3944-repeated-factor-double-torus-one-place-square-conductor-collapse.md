@@ -2,7 +2,7 @@
 id: THM-3944
 title: "Repeated-factor double-torus one-place escape pays square-conductor and character collapse"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The cheapest internal factor split left open by THM-3942 sets
   p1-p0=G^2 and assigns one copy of G to each complementary cube factor.
   It produces a smooth one-place parabola, but the common discriminant is
@@ -15,6 +15,15 @@ status: >
   construction buys one infinity place precisely by destroying both usable
   Cardano directions.
 source: jc-degree6-place / nonlinear internal-split successor to THM-3942, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc_zero_debt_lift, 2026-08-24). The audit
+  independently checked the Gauss/UFD domain argument; the finite same-field
+  polynomial normalization; the exact module quotient and conductor; the
+  reduced one-place parabola versus full nonreduced branch scope; both cube
+  factorizations and the split cubic; and the two regular-prime ramification
+  residues of the noncube radicand. Normal and optimized runs byte-match the
+  frozen output, all hashes agree, CHECKS=33, and documentation passes. The
+  theorem remains deliberately scoped to the displayed balanced split.
 depends_on: []
 related:
   - THM-3942-affine-linear-double-torus-factor-split-one-place-obstruction
@@ -28,7 +37,7 @@ hash_basis: raw LF bytes
 
 # THM-3944 -- the first internal split trades ends for conductor debt
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Choose
 `omega^2+omega+1=0`, put
 
@@ -287,4 +296,3 @@ distributed across more than one `L_i`, subject simultaneously to three gates:
 2. the normalized quadratic cover must retain a nontrivial unramified
    three-class rather than becoming factorial; and
 3. the two Cardano radicands must remain independent after conductor removal.
-
