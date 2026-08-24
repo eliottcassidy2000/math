@@ -18,7 +18,8 @@ audit: >
   connected unweighted labelled graphs through five vertices, 28 nonuniform
   weighted controls through eight vertices, 799 Foster identities, 12,187
   cuts, dual-Gram resistance, and the sharp orthogonal-star family through
-  dimension twelve. Normal and optimized runs byte-match the frozen output.
+  dimension twelve. Normal and optimized runs match the frozen LF output
+  after platform-newline normalization.
   A separate deterministic exact search found no violation of the stronger
   first-kind constant in D4, A4, D5 or 5,728 certified random
   characteristic instances in ranks four and five; this is finite evidence,
@@ -319,4 +320,5 @@ python3 -B 04-computation/character_sensitive_transference_random_exact_search_2
 python3 -B -O 04-computation/character_sensitive_transference_random_exact_search_20260824.py
 ```
 
-Both streams byte-match the frozen output. **QED.**
+Both normal/optimized pairs match their frozen LF outputs after
+platform-newline normalization. **QED.**
