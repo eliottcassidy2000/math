@@ -339,9 +339,9 @@ asymptotic or residue.
   an all-depth or physical-path selector.  THM-3511 maps even rays onto the odd half;
   the least literal static bank has `2^(D+B-1)+B+2` points (`134/256` there).
   Physical recursion, adaptive/projective chronology and every prize are OPEN.
-- **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
-  preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. THM-3990 proves a
-  repair quotient and THM-3991 the fan law `chi(W)=d*n!`; neither headline.
+- **Two Hopf problems:** the distinct curvature/complex preprints remain
+  **PREPRINT CLAIM / UNDER AUDIT**. THM-3990/3991 prove only the repair quotient
+  and fan law `chi(W)=d*n!`.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  THM-3543--3782 close
   named cells only. THM-3827--3920 force genus/degree/branch passports, close
   the `S3`, `f=0`, radial, and common-zero degree-at-most-five lanes, and leave
@@ -356,8 +356,8 @@ asymptotic or residue.
   constant `q(P)` and THM-3963 `c(t)P^2`; THM-3964--3972 close cells.
   THM-3973--3976: exact-volume tower, seven-piece floor, `p` no-mate, lost `y`.
   THM-3977--3979: critical seed, two-color debt, unobstructed formal jets.
-  THM-3989 adds the cusp-log conductor and `2:3` depth reduction. Live:
-  algebraize with `y`.
+  THM-3989/3992 force a nodal `2:3` residual; THM-3994 splits double seams.
+  Live: companion incidence and `y`-algebraization.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a

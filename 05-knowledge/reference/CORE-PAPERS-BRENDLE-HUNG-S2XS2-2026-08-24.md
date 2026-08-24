@@ -22,6 +22,8 @@ headline existence theorem                 PREPRINT CLAIM / UNDER AUDIT
 abstract minimization framework, Section 2 READ / NO IMMEDIATE CONTRADICTION
 displayed perturbation mechanism            READ / NO IMMEDIATE CONTRADICTION
 V_bc^(2)=0                                  OPEN REFEREE OBLIGATION
+V_bc^(2) at one generic exact point         FINITE-EXACT positive control
+z(h_a^(1))=0 on both Sigma components       FINITE-EXACT independent repair
 other notebook identities                   PARTIALLY AUDITED, not imported
 Poisson repair principle                    PROVED independently in THM-3990
 ```
@@ -152,28 +154,58 @@ This error is also localized.  The later `A1`--`A4` cells defining the
 coefficient of `lambda_c lambda_d^2` independently rebuild their `c,d`
 objects and do not consume the corrupted `ra` or `za`.  Moreover the
 `lambda_c lambda_d^2` monomial only needs the checked `c,d` pieces.  Therefore
-the saved-state error invalidates Lemma 5.4 as certified but does not by itself
-refute the later displayed cubic coefficient.  That coefficient still awaits
-an independent clean-kernel audit.
+the saved-state error invalidates the notebook cell as a certificate but does
+not by itself refute the later displayed cubic coefficient.
+
+The missing `h_a` branch has now been rebuilt independently from the paper's
+moving-frame metric, connection, curvature, and linearized-curvature operator.
+The exact companion
+[reconstructs `P1(L(h_a))`](../../04-computation/brendle_hung_lemma54_independent_audit_20260824.py)
+and proves all four entries vanish identically on both parametrized components
+of `Sigma`; its [frozen transcript](../results/brendle_hung_lemma54_independent_audit_20260824.out)
+also includes a tensor with a nonzero hostile response.  This is
+**FINITE-EXACT** closure of the omitted branch, not a replay of Lemma 5.4 or
+of the paper as a whole.
+
+### 3.3 A sensitive exact point control for `V_bc^(2)`
+
+The independent
+[`V_bc` point audit](../../04-computation/brendle_hung_vbc_exact_point_audit_20260824.py)
+rebuilds the three defining summands at `theta=pi/6` and at the rational
+oriented frame coming from the quaternion `(1,2,3,4)`.  It finds
+
+```text
+P0 L(h_bc)       =  581/20250,
+P0 Q(h_b,h_c)    = -1064/50625,
+(1/2) r_b.z_c    = -259/33750,
+sum              = 0.
+```
+
+All three summands are nonzero, so this detects a dropped, duplicated, or
+sign-flipped term.  The [frozen transcript](../results/brendle_hung_vbc_exact_point_audit_20260824.out)
+is **FINITE-EXACT** evidence at one genuinely generic point.  It is not a
+proof that `V_bc^(2)` vanishes identically.  A global symbolic reduction or a
+fully checked equivariance argument is still the decisive obligation.
 
 ## 4. Exact remaining referee obligations
 
 The shortest path to a trustworthy v1 certificate is:
 
-1. **Fresh-kernel quadratic audit.** Recompute the intended `Vbc` expression
-   without assignment reuse and prove it vanishes on `0<theta<Pi/2`.
-2. **Fresh-kernel Lemma 5.4 audit.** Recompute `z(ha)`, `z(hb)`, and `z(hc)`
-   from their definitions and restrict to the completed `Sigma`.
-3. **Rebuild all ten `V^(2)` summands.** Use the corrected `h_cd`, corrected
+1. **Global quadratic identity.** Recompute the intended `Vbc` expression
+   without assignment reuse and prove it vanishes on `0<theta<Pi/2`, or give
+   a complete symmetry derivation from an independently checked identity.
+   The exact generic-point cancellation is a positive control, not closure.
+2. **Rebuild all ten `V^(2)` summands.** Use the independently repaired
+   `h_a` branch, the corrected `h_cd`, corrected
    cross term, and a valid smallness constant
    `lambda_0<=sqrt(delta/C)`.
-4. **Rebuild the cubic witness.** Evaluate the four `A1`--`A4` contributions
+3. **Rebuild the cubic witness.** Evaluate the four `A1`--`A4` contributions
    in a clean state and independently recover the stated integral
    `pi^2/(18 sqrt(3))`.
-5. **Global smoothness audit.** Check that every infinite-series coefficient
+4. **Global smoothness audit.** Check that every infinite-series coefficient
    used in `h^(2)` extends smoothly across `Delta_+ union Delta_-`, with the
    convergence and differentiation needed by the curvature calculation.
-6. **Abstract-to-geometric interface.** Verify all hypotheses of the compact
+5. **Abstract-to-geometric interface.** Verify all hypotheses of the compact
    minimization theorem for the corrected global tensors, including the
    uniform remainder and density statements.
 

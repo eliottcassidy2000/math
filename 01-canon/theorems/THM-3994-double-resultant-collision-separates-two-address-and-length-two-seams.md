@@ -2,7 +2,8 @@
 id: THM-3994
 title: "Double resultant collisions separate two-address and length-two seams"
 status: >
-  PROVED + VERIFIED-EXACT. In the first-height constant-(c,r) affine-P graph
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the first-height
+  constant-(c,r) affine-P graph
   of THM-3972, the two discriminant seams have the same scalar symptom but
   different completed base geometry. At cr=3 the double resultant root is
   supported at two distinct transverse basepoints in one fibre. At 4cr=3 it
@@ -13,11 +14,12 @@ status: >
   completed graph.
 source: root + frontier_transfer_scout / completed-zero-locus seam, 2026-08-24
 audit: >
-  PASS (root, 2026-08-24). The companion script independently recomputes the
-  general resultant and its discriminant, both square factorizations, the
-  two-address discriminant and transverse Jacobians, the curvilinear local
-  ideal, the A1 Hessian, and the resolution Smith determinant. Normal and
-  optimized executions are byte-identical.
+  INDEPENDENT HOSTILE AUDIT PASS (thm3994_hostile_audit, 2026-08-24). Every
+  resultant, discriminant, factorization, Jacobian, scheme-length, Rees-chart,
+  normality, local-class-group, scope, hash, and dependency claim was rebuilt.
+  The displayed inverse from (D,V) to (t,v) was added so the Z/2 claim concerns
+  the algebraic local ring itself, not merely its completion. Normal and
+  optimized companion executions are byte-identical.
 depends_on:
   - THM-3969-affine-p-graph-debt-relative-p1-normalization
   - THM-3972-simple-collision-affine-p-graph-blowup-normalization
@@ -33,9 +35,9 @@ hash_basis: raw LF bytes
 
 # THM-3994 -- a double resultant does not determine the collision geometry
 
-**PROVED + VERIFIED-EXACT.** Work over an algebraically closed field `k` of
-characteristic zero. In the first-height constant-`(c,r)` row of THM-3972,
-assume `r!=0` and put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of characteristic zero. In the first-height
+constant-`(c,r)` row of THM-3972, assume `r!=0` and put
 
 ```text
 D=1-tv^3,                    N=3r+3v+cv^2.              (1)
@@ -134,33 +136,47 @@ Since
 det partial(D,V)/partial(T,V)=8r^3!=0,                 (12)
 ```
 
-`L=D,V` are etale local coordinates. Equations `(5)` and `(11)` identify
-the completed base ideal and quotient as
+`L=D,V` are actual algebraic local coordinates. Indeed `V=v+2r`, so at the
+point `V-2r=v` is a unit, and the inverse change is
+
+```text
+v=V-2r,                    t=(1-L)/(V-2r)^3.            (13)
+```
+
+Equations `(5)` and `(11)` therefore identify the local base ideal and its
+completed quotient as
 
 ```text
 I=(L,V^2),
-k[[L,V]]/I = k[[V]]/(V^2).                             (13)
+k[[L,V]]/I = k[[V]]/(V^2).                             (14)
 ```
 
-Thus the double root in `(9)` is one curvilinear scheme of length two, not
-two reduced addresses.
+Thus the double root in `(9)` is one curvilinear scheme of length two, not two
+reduced addresses.
 
 The local graph closure is `Proj Rees(I)`. On the chart where the homogeneous
 coordinate of `L` is nonzero it has equation
 
 ```text
-V^2=LZ.                                                (14)
+V^2=LZ.                                                (15)
 ```
 
 This chart has one ordinary `A1` singularity at `L=V=Z=0`; its other Rees
-chart is smooth. The ring in `(14)` is normal, and the usual quadratic-cone
-or toric divisor computation gives
+chart is smooth. The explicit inverse `(13)` identifies the algebraic graph
+local ring itself with
 
 ```text
-Cl(O_(graph,0)) = Z/2.                                 (15)
+k[L,V,Z]_(L,V,Z)/(V^2-LZ).
 ```
 
-Equivalently, `(14)` is the invariant ring
+This ring is normal, and the usual quadratic-cone or toric divisor computation
+gives
+
+```text
+Cl(O_(graph,0)) = Z/2.                                 (16)
+```
+
+Equivalently, `(15)` is the invariant ring
 `k[s^2,st,t^2]=k[s,t]^(mu_2)`, and its minimal resolution has one exceptional
 curve with intersection matrix `[-2]`, whose Smith cokernel is `Z/2`.
 
@@ -171,7 +187,7 @@ length two. They differ in every sidecar relevant to normalization:
 
 ```text
 cr=3:   two supports, lengths 1+1, smooth graph charts;
-4cr=3:  one support, length 2, one normal A1 graph singularity.            (16)
+4cr=3:  one support, length 2, one normal A1 graph singularity.            (17)
 ```
 
 Therefore neither resultant order nor the number of collision fibres is a
@@ -179,7 +195,7 @@ normalization-place count. A global analysis of either seam must retain the
 labelled exceptional, pole, and ramification incidences before taking a class
 group or Smith quotient.
 
-The local `Z/2` in `(15)` is not a global class-group computation and gives
+The local `Z/2` in `(16)` is not a global class-group computation and gives
 no `3`-torsion obstruction by itself. This theorem does not resolve the
 global seam, construct a Keller map, or prove `JC(2)`. It closes only the
 scheme-theoretic local geometry hidden by the double resultant. **QED
