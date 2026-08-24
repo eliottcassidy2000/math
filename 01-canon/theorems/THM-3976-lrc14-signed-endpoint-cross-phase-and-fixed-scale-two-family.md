@@ -1,5 +1,5 @@
 ---
-id: THM-3975
+id: THM-3976
 title: "LRC(14) signed-endpoint cross-phase and fixed scale-two family"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For any
@@ -45,7 +45,7 @@ graver_phase_hostile_semantic_sha256: 9124631b862e70b6f2aeb2c150ee363d3bbdfc527b
 hash_basis: raw LF bytes
 ---
 
-# THM-3975 -- exact cross-phase and fixed scale-two family
+# THM-3976 -- exact cross-phase and fixed scale-two family
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  All sets below
 are periodic subsets of `R/Z`, equalities are modulo null sets, and `t` is a
