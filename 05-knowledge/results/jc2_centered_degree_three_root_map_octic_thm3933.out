@@ -1,11 +1,16 @@
 THM-3933 centered degree-three root-map exact companion
-CHECKS=34
+CHECKS=44
 POLE_PARTITION=shared A-address or one triple pole at e=2
 NORMAL_FORM=A=u^3+u^2;t=(3*lambda*u^2+3*u-2)/u^3
 POLYNOMIAL_COLOR=lambda=3 only
 SURVIVOR=a=-A^3;c=-(6A-1)(27A-4);d=-(27A-4)^2/2
 DISCRIMINANT=-(27A-4)^2*H/4;DEG_H=8
-MAXIMAL_ORDER=27A-4 index-only;H genuine e=2 branch
+MAXIMAL_OVERORDER=e=theta/(27*A-4);omega=C+2*(6*A-1)*e-2*e^2
+OVERORDER_POLYNOMIAL=e^3-(6*A-1)*e^2-C*e/2-A^3*(27*A-4)/4
+OVERORDER_INDEX=det(1,omega,theta)/(1,e,e^2)=2*(27*A-4);ideal=(27*A-4)
+OVERORDER_DISCRIMINANT=-H/16
+OVERORDER_NORMAL=R1(discriminant H exponent one)+S2(hypersurface)
+OVERORDER_CONCLUSION=maximal cubic completion is globally monogenic
 COLLISIONS=3*s^2+6*s+2=0 gives two two-address fibres
-CONCLUSION=ramification curve non-unibranch;no A2 Keller open
-SEMANTIC_SHA256=8122307b43fd3ca36ba18a761ee3f3aaad1bb27c4448c732127518c2fec1e5cf
+CONCLUSION=monogenic and ramification curve non-unibranch;no A2 Keller open
+SEMANTIC_SHA256=36243cbd77bd4af5f04e8bee225e6bba3a108a8e455951615721e908f69bf885

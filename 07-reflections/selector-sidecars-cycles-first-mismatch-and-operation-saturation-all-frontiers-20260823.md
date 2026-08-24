@@ -621,11 +621,36 @@ an aligned line plus rational quintic, both one-place and within the affine
 address cap. THM-3931 closes the packet on its actual completion:
 `S*=k*`, `Cl(S)=Zq`, `[P_0]=2q`, and `[E]=0`; the two visible addresses make
 `E` non-unibranch, while `div(F)=E` makes deleting it create a nonconstant
-unit. Higher pole maps and other coefficient grammars remain the honest lane.
+unit.
 
-Concurrent JC promotions and reservations now occupy THM-3920--3934, so the
+THM-3933 closes the next centered layer. For a degree-three repeated-root map
+with `t(infinity)=0`, local trace plus the finite Riemann--Hurwitz budget says
+that every pole partition either shares an `A`-address or is one triple pole
+over a simple critical point. Shared addresses coalesce on the ramification
+curve and violate unibranchness. The sole collision-free normal form
+
+```text
+A=u^3+u^2,       t=(3 lambda u^2+3u-2)/u^3
+```
+
+has polynomial color only for `lambda=3`. Its order discriminant is
+`-(27A-4)^2H/4`; the line is exactly index debt, while `H` is an irreducible
+rational one-place octic with two exact two-address fibres. More strongly,
+`e=theta/(27A-4)` generates the normal maximal order with discriminant
+`-H/16`. Thus the survivor fails twice: its maximal completion is globally
+monogenic, and its genuine ramification curve is non-unibranch.
+
+This exposes a three-step saturation pattern without identifying the three
+constructions: THM-3927's one-place compression, THM-3932's explicit
+infinity-fold-three cubic, and THM-3933's index-cleared octic all turn an
+apparently rich one-place branch packet into a globally monogenic maximal
+order. The branch geometry survives; the generator debt does not. Other
+degree-three gauges, degree-at-least-four root maps, and other coefficient
+grammars remain the honest lane.
+
+Concurrent JC promotions and reservations now occupy THM-3920--3935, so the
 proved LRC endpoint theorem moved to collision-free THM-3936; the namespace
-move changes no mathematical scope. THM-3933 and THM-3934 are reserved,
+move changes no mathematical scope. THM-3934 and THM-3935 are reserved,
 unproved successor targets and supply no evidence.
 
 ## 5. Filtered kernels and principal parts are the same warning, not the same theorem
@@ -793,6 +818,7 @@ They do not share states, probability, chronology, or a reduction.
 | Infinity-component conic | one-place torus sextic | pull back the linear affine coefficient through the Cardano cusp | fold trichotomy and exact `C3` class | nonmonogenic completion and full resolvent class group | compatible twist/involution descent | THM-3932 fold-three family is monogenic |
 | Primitive actual boundary basis | candidate affine-plane deletion | localize at the three basis primes | scalar units and `Cl=0` | boundary genus and Euler type | rationality plus `chi_c` invoice | THM-3926 genus `2`, `chi_c=13` hostile |
 | Degree-two linear-color packet | affine-plane open | delete the intrinsic ramification primes | aligned one-place branch and affine address cap | source unibranchness and invertible defining functions | actual class/different packet | THM-3931 `[E]=0`, `[P_0]=2q`, nonunibranch collision |
+| Centered degree-three root map | pole-support/ramification packet | apply local trace and the finite RH budget, then clear the order index | shared-address/triple-pole dichotomy and genuine octic branch | arbitrary root gauge and other color directions | maximal-order generator plus branch normalization | THM-3933 monogenic overorder and two collision fibres |
 | Removed divisor lattice | resolvent three-class | saturate boundary sublattice | conditional three-divisibility | actual class and ADE mixing | full exceptional lattice | THM-3915 mixed boundary--ADE hostile |
 | Rational dual | reduced dual curve | cancel common tangent factor | reduced tangent map | nonimmersion multiplicity | `E_nu` tangent-base divisor | `[ST^(d-1):T^d:S^d]` |
 | Rule 30 words | selected ray image | positive affine-word action | complete static orbit | physical chronology and owner | zero-fibre routed query | fibres requiring opposite rays |
@@ -813,16 +839,17 @@ objects cannot be transported merely because the same word is used.
    every radial chart, THM-3853/3855's fixed four-ray packet, THM-3925's marked
    `5P+Q` torus slice, all full-sextic affine singular conics, and the actual
    THM-3907/3930 completions closed. Attack the `3+1`, `2+2`, `2+1+1`,
-   quartic-vanishing, unmarked smooth-conic, higher-pole linear-color,
+   quartic-vanishing, unmarked smooth-conic, other-gauge degree-three or
+   degree-at-least-four linear-color,
    nonmonogenic infinity-fold-three twist, or arbitrary-`q` component
    grammars; a first-arrival schedule is insufficient.
 3. **Nonmonogenic niche:** build a genuinely nonradial unit-ideal order with
    rational ramification normalization.  Its actual completion must retain a
    primitive boundary basis, meet the affine address cap, and pass the Euler
-   and etale/open invoices. Resolvent torsion is not a substitute; THM-3927
-   THM-3930 and THM-3932 show that rationality, the cap, one-place alignment,
-   and even a genuine `C3` class can still leave Jelonek, unibranch, class,
-   unit, Euler, or monogenic debt.
+   and etale/open invoices. Resolvent torsion is not a substitute; THM-3927,
+   THM-3930, THM-3932 and THM-3933 show that rationality, the cap, one-place
+   alignment, and even a genuine `C3` class can still leave Jelonek,
+   unibranch, class, unit, Euler, or monogenic debt.
 4. **AK niche:** leave the saturated empty-wildcard `[2,3]` slice closed.
    Classify inactive-slot and initial-wildcard strata, then search the next
    rectangle for a genuine score below `7/4` under the same sound/loose

@@ -15,7 +15,9 @@ status: >
   root-regular and centered-Mobius one-place linear-color grammars, not
   homogeneous root maps of degree at least two. THM-3930 subsequently
   realizes one centered degree-two packet and THM-3931 closes that packet;
-  other higher-degree root maps and coefficient grammars remain open.
+  THM-3933 closes the centered t(infinity)=0 degree-three stratum. Other
+  degree-three gauges, degree-at-least-four root maps, and coefficient
+  grammars remain open.
 source: jc_zero_debt_lift / post-THM-3927 one-place compression boundary, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc-cohn3709, 2026-08-23). The audit
@@ -36,6 +38,7 @@ related:
   - THM-3930-two-pole-linear-color-aligned-one-place-branch-packet
   - THM-3931-degree-two-pole-cubic-principal-ramification-no-atlas
   - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
+  - THM-3933-centered-degree-three-root-map-pole-partition-octic-nonentry
 script: 04-computation/jc2_root_regular_one_place_linear_color_cubic_thm3929.py
 output: 05-knowledge/results/jc2_root_regular_one_place_linear_color_cubic_thm3929.out
 script_sha256: 863c809aad0dc905a5143ab34444fab08dc5445a48a05f9431545f2f936a86d1
@@ -365,7 +368,10 @@ Therefore this theorem does **not** close arbitrary `b=C` cubics, homogeneous
 repeated-root maps of degree at least two, or JC(2). THM-3930 realizes the
 first centered degree-two finite-pole packet, and THM-3931 closes that exact
 packet by non-unibranchness and principal/nonprimitive boundary classes.
-Other higher-degree root maps and coefficient grammars remain live.
+THM-3933 closes the centered `t(infinity)=0` degree-three stratum by a pole-
+partition dichotomy, an explicit monogenic maximal order, and a
+non-unibranch octic. Other degree-three gauges, degree-at-least-four root maps,
+and coefficient grammars remain live.
 
 ## Reproduction
 

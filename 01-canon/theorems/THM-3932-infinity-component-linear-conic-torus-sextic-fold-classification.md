@@ -34,6 +34,7 @@ related:
   - THM-3925-fivefold-conic-contact-torus-sextic-one-place-fold
   - THM-3928-split-affine-conic-one-place-fold-degree-barrier
   - THM-3929-root-regular-one-place-linear-color-cubic-is-monogenic
+  - THM-3933-centered-degree-three-root-map-pole-partition-octic-nonentry
 script: 04-computation/jc2_infinity_component_linear_conic_torus_sextic_thm3932.py
 output: 05-knowledge/results/jc2_infinity_component_linear_conic_torus_sextic_thm3932.out
 script_sha256: 39f362c41cdbf6fd481af85dc91b96ed5f1151810949895ef248b32913a39374

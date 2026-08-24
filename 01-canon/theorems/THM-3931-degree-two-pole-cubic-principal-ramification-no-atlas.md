@@ -16,8 +16,9 @@ status: >
   basis. More directly, deleting E makes the nonconstant polynomial F a
   nowhere-zero function on the putative A2, contradicting scalar units.
   Thus the first degree-two finite-root-pole survivor is not a JC(2)
-  counterexample. Higher pole maps and other coefficient grammars remain
-  open.
+  counterexample. THM-3933 closes the centered t(infinity)=0 degree-three
+  stratum; other degree-three gauges, degree-at-least-four root maps, and
+  other coefficient grammars remain open.
 source: jc_zero_debt_lift / THM-3930 class-and-different audit, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23). The audit reconstructed
@@ -39,6 +40,7 @@ depends_on:
 related:
   - THM-3929-root-regular-one-place-linear-color-cubic-is-monogenic
   - THM-3927-unit-ideal-rational-sextic-affine-address-cap-two-place-boundary
+  - THM-3933-centered-degree-three-root-map-pole-partition-octic-nonentry
 script: 04-computation/jc2_degree_two_pole_cubic_class_different_thm3931.py
 output: 05-knowledge/results/jc2_degree_two_pole_cubic_class_different_thm3931.out
 script_sha256: cefec4c2a18fc3ac3302f34abcb17c54d1ce5f4521e9b99e85a9448f43c03a83
@@ -355,8 +357,9 @@ and the boundary relation already supplies the nonconstant unit `F`.
 
 Therefore the THM-3930 degree-two pole packet is **not** a planar Jacobian
 counterexample. The result does not close degree-two root-pole packets with
-different coefficient dependence, higher-degree homogeneous root maps, or
-JC(2).
+different coefficient dependence or JC(2). THM-3933 separately closes the
+centered `t(infinity)=0` degree-three stratum; other degree-three gauges and
+degree-at-least-four homogeneous root maps remain open.
 
 ## Reproduction
 

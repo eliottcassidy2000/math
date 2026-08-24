@@ -363,6 +363,21 @@
   `5fd6493bfc51a36626f2f45be5ba0bfcd209fd415941988ee1b8812d23e27322` /
   `f21747d66cce559781355bb75789500399f7d8eb8281254e33668ffb0697a849`.
 
+- `jc2_centered_degree_three_root_map_octic_thm3933.py` -> matching `.out`
+  [THM-3933 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. In the
+  centered `t(infinity)=0` degree-three linear-color grammar, trace and the
+  finite Riemann--Hurwitz budget force a shared pole address or one triple
+  pole. Shared addresses are non-unibranch. The unique collision-free row has
+  `A=u^3+u^2`, polynomial color only at `lambda=3`, and discriminant
+  `-(27A-4)^2H/4` with irreducible rational one-place octic `H`. The explicit
+  overorder `e=theta/(27A-4)` has index ideal `(27A-4)`, discriminant `-H/16`,
+  and is the normal globally monogenic maximal completion; independently,
+  `H` has two exact two-address fibres and its ramification curve is
+  non-unibranch. Checks: `44`. Script/output/semantic SHA-256:
+  `81b047cc95a94cd75b29a1e90cc94712f0e50e22b2cb749cc9ce8f526f2ce508` /
+  `8b95133a9806ca976cc6c1ea904d95f4f17ae9a0a38f08e1bfd5c6373c3cb594` /
+  `36243cbd77bd4af5f04e8bee225e6bba3a108a8e455951615721e908f69bf885`.
+
 - `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
   `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil
   height lattice is `E6*`; its 126 sections disjoint from `O` split

@@ -37,6 +37,7 @@ related:
   - THM-3927-unit-ideal-rational-sextic-affine-address-cap-two-place-boundary
   - THM-3929-root-regular-one-place-linear-color-cubic-is-monogenic
   - THM-3931-degree-two-pole-cubic-principal-ramification-no-atlas
+  - THM-3933-centered-degree-three-root-map-pole-partition-octic-nonentry
 script: 04-computation/jc2_two_pole_linear_color_aligned_branch_thm3930.py
 output: 05-knowledge/results/jc2_two_pole_linear_color_aligned_branch_thm3930.out
 script_sha256: bb71b72a362663bf4694355b3ab7a6ef40911e5f61712578083b6213aac871fe

@@ -2,7 +2,7 @@
 id: THM-3933
 title: "Centered degree-three root maps collapse to a non-unibranch octic"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. In the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the
   centered t(infinity)=0, degree-three repeated-root stratum of the
   one-place linear-color binary-cubic grammar, local trace and the finite
   Riemann--Hurwitz budget force either a shared pole address or one triple
@@ -11,37 +11,42 @@ status: >
   collision-free case has the normal form A=u^3+u^2 and
   t=(3 lambda u^2+3u-2)/u^3. Polynomiality of the color forces lambda=3.
   Its discriminant is a squared index line times an irreducible rational
-  octic; the line disappears in the maximal order, but the octic is genuine
-  ramification and has two exact two-address fibres. Hence its ramification
-  curve is non-unibranch and no affine-plane Keller atlas exists. This
-  closes the stated centered degree-three stratum, not arbitrary root gauges,
-  higher root degree, or JC(2).
+  octic. Dividing the Delone--Faddeev basis element theta by the line gives
+  the normal maximal order explicitly; it is globally monogenic, while the
+  octic remains genuine ramification and has two exact two-address fibres.
+  Hence the survivor fails both the monogenic completion gate and the
+  unibranch boundary gate. This closes the stated centered degree-three
+  stratum, not arbitrary root gauges, higher root degree, or JC(2).
 source: jc_zero_debt_lift / post-THM-3931 degree-three finite-root-pole stratum, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The
-  conceptual proof separates local trace cancellation, pole-support
-  collisions, the normalized triple-pole calculation, order versus maximal
-  discriminant, and the ramification-boundary branch identification. The
-  assertion-free exact companion verifies the symbolic identities and
-  hostile parameter seams in normal and optimized mode.
+  INDEPENDENT HOSTILE AUDIT PASS (two independent reads, 2026-08-23). The
+  auditors reconstructed the local trace/Riemann--Hurwitz partition, the
+  unique lambda=3 color row, the line-versus-octic discriminant split, the
+  octic normalization and both collision fibres. A separate hostile audit
+  checked every Delone--Faddeev multiplication identity, the index ideal
+  (27A-4), discriminant -H/16, and the R1+S2 maximal-order argument. The
+  44-gate assertion-free companion LF-normalizes exactly to the frozen
+  raw-LF output in normal and optimized mode.
 depends_on:
+  - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
 related:
-  - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
+  - THM-3927-unit-ideal-rational-sextic-affine-address-cap-two-place-boundary
   - THM-3929-root-regular-one-place-linear-color-cubic-is-monogenic
   - THM-3930-two-pole-linear-color-aligned-one-place-branch-packet
   - THM-3931-degree-two-pole-cubic-principal-ramification-no-atlas
+  - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
 script: 04-computation/jc2_centered_degree_three_root_map_octic_thm3933.py
 output: 05-knowledge/results/jc2_centered_degree_three_root_map_octic_thm3933.out
-script_sha256: a1c11c82eaff1810a2a91d19be74adbf6ab4124e28e51a424dc19766c19abd63
-output_sha256: c744334182307e51aabb90b010098367911599be110efa71af02e86a65bfc445
-semantic_sha256: 8122307b43fd3ca36ba18a761ee3f3aaad1bb27c4448c732127518c2fec1e5cf
+script_sha256: 81b047cc95a94cd75b29a1e90cc94712f0e50e22b2cb749cc9ce8f526f2ce508
+output_sha256: 8b95133a9806ca976cc6c1ea904d95f4f17ae9a0a38f08e1bfd5c6373c3cb594
+semantic_sha256: 36243cbd77bd4af5f04e8bee225e6bba3a108a8e455951615721e908f69bf885
 hash_basis: raw LF bytes
 ---
 
 # THM-3933 -- the centered degree-three pole divisor has nowhere left to go
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.** Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over
 an algebraically closed field `k` of characteristic zero. Consider the
 linear-color binary cubic
 
@@ -319,7 +324,77 @@ No nonzero even index correction is possible. Hence the order is already
 maximal there and `H` is genuine tame `(2,1)` ramification with a unique
 residue-degree-one ramification prime `E`.
 
-## 6. The octic normalization and its two collision fibres
+## 6. The maximal completion is explicitly monogenic
+
+The line debt can be removed globally, not just valuation by valuation. Let
+`(1,omega,theta)` be the standard Delone--Faddeev basis of the cubic order
+defined by `(21)`. Its multiplication laws are
+
+```text
+omega^2=-ac+C omega-a theta,
+omega theta=-ad,
+theta^2=-Cd+d omega-c theta.
+```
+
+Put
+
+```text
+e=theta/L,                         L=27A-4.
+```
+
+Substitution of `(21)` into the last two multiplication laws gives
+
+```text
+e^2=C/2-omega/2+(6A-1)e,          omega e=-A^3L/2.
+```
+
+In particular
+
+```text
+omega=C+2(6A-1)e-2e^2,            theta=Le,
+```
+
+so the original order `S=k[A,C,omega,theta]` lies in `T=k[A,C,e]`. The
+standard theta equation, divided by `L^3`, is the monic equation
+
+```text
+P(e)=e^3-(6A-1)e^2-(C/2)e-A^3L/4=0.                     (25a)
+```
+
+Relative to the basis `(1,e,e^2)`, the columns of `(1,omega,theta)` form
+
+```text
+       [1       C       0]
+M =    [0  2(6A-1)     L],             det(M)=2L.
+       [0      -2       0]
+```
+
+Since `2` is a unit, the index ideal is exactly `(L)`. Direct discriminant
+calculation gives
+
+```text
+Disc(P)=-H/16,
+(2L)^2 Disc(P)=-L^2H/4=Disc(S).                           (25b)
+```
+
+The nonzero rank-three transition determinant also shows that `T` is a
+domain with the same fraction field as `S`. This overorder is already the
+full integral closure. Indeed `T` is a monic hypersurface, finite free of
+rank three over the regular ring `R=k[A,C]`; hence it is Cohen--Macaulay and
+satisfies `S2`. At every
+height-one base prime away from `(H)`, `(25b)` is a unit and `T` is finite
+etale. At `(H)`, its discriminant has valuation one. A proper further
+normalization index of valuation `j>=1` would change that valuation to
+`1-2j<0`, impossible for an integral order. Thus `T` is normal in
+codimension one. By `R1+S2`, it is normal everywhere, and being a normal
+finite `R`-order in the same cubic field, it is the maximal completion.
+
+Therefore the maximal cubic completion is globally monogenic. THM-3801
+excludes it from a polynomial Keller map independently of the boundary
+argument below. The squared line was exactly order debt; removing it does
+not remove the genuine octic branch.
+
+## 7. The octic normalization and its two collision fibres
 
 Substitution of `(12),(20)` gives `H=0`, and exact elimination gives
 
@@ -330,7 +405,14 @@ Res_u(A-u^3-u^2, C-C(u))=-H/8.                             (26)
 The parametrization is birational. We have `[k(u):k(A)]=3`. The repeated
 root `(14)` at `lambda=3` cannot belong to `k(A)`, since its pole order three
 at `u=0` is not divisible by the ramification index two of `A` there.
-The unique generic double root belongs to `k(A,C)`, so
+The derivative equation also gives
+
+```text
+C=-(3at^2+c)/(2t),
+```
+
+so the unique generic double root belongs to `k(A,C)` and conversely `C`
+belongs to `k(A,t)`. Therefore
 
 ```text
 k(A,C)=k(A,t)=k(u).                                        (27)
@@ -378,7 +460,8 @@ distinct points over each of two affine target points. As in Section 2, a
 rank-three fibre contains at most one non-etale point, so each pair
 coalesces on `E`. The curve `E` is not unibranch. THM-3920 excludes it as a
 boundary curve of an affine-plane open, and the unique polynomial-color
-survivor is not a planar Jacobian counterexample.
+survivor is not a planar Jacobian counterexample. This obstruction is
+independent of Section 6's monogenic-maximal-order obstruction.
 
 The conclusion is exactly the centered `t(infinity)=0`, degree-three
 linear-color stratum `(1)-(5)`. Arbitrary root gauges, degree at least four,
@@ -391,5 +474,6 @@ python3 04-computation/jc2_centered_degree_three_root_map_octic_thm3933.py
 python3 -O 04-computation/jc2_centered_degree_three_root_map_octic_thm3933.py
 ```
 
-Both runs must byte-match
+After platform newlines are normalized to LF, both runs must byte-match the
+frozen raw-LF output
 `05-knowledge/results/jc2_centered_degree_three_root_map_octic_thm3933.out`.
