@@ -1,0 +1,7 @@
+THM-3923 exact tangent-address companion
+CHECKS=28
+DELTA0=-A*(5*A + C)*(17*A - 3*C)*(19*A + 4*C)
+TARGET=C;ADDR=-t*(5*t + 1)*(17*t - 3)*(19*t + 4);DISC=2304000000
+TARGET=A+C;ADDR=-t*(4*t + 1)*(15*t + 4)*(20*t - 3);DISC=2304000000
+BOUNDARY=three rays are not excluded by the rank-three address cap
+SEMANTIC_SHA256=264aef4f00430ba6db9215f5d26e9322f8d06813a7b643e692570eb92359c9e8
