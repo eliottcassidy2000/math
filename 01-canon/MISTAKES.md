@@ -230,7 +230,9 @@ Format per entry:
   `THM-3941`; incoming `THM-3941` and `THM-3942` reservations then moved it
   atomically to `THM-3943`; the next incoming wave occupied
   `THM-3943--THM-3947`, so the LRC theorem moved atomically again to
-  `THM-3948`; the hash-bearing LRC companions and mathematical scope did not
+  `THM-3948`; a later incoming high-weight sextic synthesis occupied that ID,
+  so the LRC theorem and all live references moved atomically once more to
+  `THM-3950`.  The hash-bearing LRC companions and mathematical scope did not
   change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not

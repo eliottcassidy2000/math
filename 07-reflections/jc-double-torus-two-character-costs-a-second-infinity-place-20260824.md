@@ -1,14 +1,16 @@
 # Two cubic characters are cheap; keeping one infinity place is the expensive part
 
-**Status (2026-08-24): VERIFIED-EXACT NEAR MISS + SHARP ANSATZ
-OBSTRUCTION, NOT CANON.**  The identities and finite algebra below are replayed
-by
+**Status (2026-08-24): CURRENT SCOUT SYNTHESIS WITH PROVED CANONICAL
+SUCCESSORS.**  Sections 2--4 retain the original noncanonical exact near miss,
+replayed by
 `04-computation/jc2_double_torus_two_character_two_infinity_scout.py`.
 The Mordell--Weil and localization deductions use standard elliptic-surface
-arguments spelled out here.  This note deliberately reserves no theorem ID:
-it records the first post-THM-3937 design that actually attains two independent
-smooth-locus cubic characters, and the exact reason it still misses the
-one-place branch requirement.
+arguments spelled out here.  The subsequent canon now sharpens its boundary:
+THM-3942 proves the complete affine-linear whole-factor obstruction;
+THM-3944 proves the repeated-factor conductor collision; and THM-3947 proves
+the full scalar-weighted repeated-square trichotomy.  THM-3946 remains a
+**RESERVED / UNPROVED EMPTY STUB**.  This reflection reserves no theorem ID
+and does not promote its partial affine deformation scout.
 
 ## 1. The rank-two gate before searching
 
@@ -288,29 +290,57 @@ translated cube factors     -> conic normalization    -> two infinity ends;
 one affine branch place     -> h has one pole          -> blocks this ansatz.
 ```
 
+THM-3942 makes the translated example part of an exact affine-linear
+classification.  For independent affine-linear `p_0,p_1`, whole-factor UFD
+allocation has only a `1|2` conic with two ends and a `0|3` Fermat cubic with
+three.  Both retain two independent characters.  Thus the failure is the
+place divisor, not character scarcity, and any nonlinear `A1` escape must
+split a factor internally or exploit gcd/multiplicity overlap.
+
+THM-3944 and THM-3947 then audit the cheapest internal split.  For
+`p_1-p_0=alpha G^2`, the generic scalar weighting produces three distinct
+smooth one-place parabolas: componentwise geometry improves, but the full
+branch is reducible.  The only two scalar collisions double `p_0` or `p_1`
+and recover the nonnormal square-conductor geometry.  On that conductor seam
+one Cardano row is an exact cube, while the other survives only as the class
+`(2,1)` on the original order's `G_m^2` regular locus and ramifies across the
+normalization.  A complementary exact affine slice in
+`jc2_double_torus_nonlinear_balanced_partial_split_scout.py` separates the
+factor as `t(t-c)`: `c!=0` gives an irreducible two-ended conic, whereas
+`c=0` is precisely the doubled-conductor collision.  This is evidence for the
+reserved THM-3946 direction, not a proof of its full classification.
+
 The next search should not maximize Mordell--Weil rank blindly.  The cheapest
 decisive experiments are:
 
-1. search non-translated pairs `p_0,p_1` for a double-torus identity whose
-   normalization makes both square roots polynomial with one common pole;
-2. keep one torus structure but move to a genus-two generic fibre and search
-   for a second Jacobian three-line not arising from a translated cube factor;
-3. create at least three deleted boundary sections so two independent boundary
-   relations can have Smith factors divisible by three; or
-4. permit a controlled split vertical fibre and compute the full localization
-   lattice, rather than assuming it only adds free class rank.
+1. search unequal coprime splits `p_1-p_0=FG` and simultaneous internal
+   splits in two or three cube factors for an irreducible reduced full branch;
+2. compute the generic three-parabola quadratic normalization and its complete
+   class/Cardano lattice before deciding whether recombination is possible;
+3. replace the line boundary in the multiple-torus sextic families by an
+   explicitly normalized non-line or birational boundary;
+4. keep one torus structure but move to a higher-genus generic fibre and
+   search for a second Jacobian three-line not arising from a translated cube
+   factor; or
+5. create at least three deleted boundary sections, or a controlled split
+   vertical fibre, and compute the full localization relation matrix.
 
 For each lane the cheapest hostile gate is the normalization pole divisor.
-The present calculation shows why this must be checked before any expensive
-class-group computation: the desired second character appeared immediately,
-but so did the forbidden second end.
+The present sequence shows why this must be checked before any expensive
+class-group computation: the desired second character appeared immediately;
+whole factors forced extra ends; separated internal factors retained two
+ends; and the first one-place collision paid nonreduced conductor debt.  A
+survivor must simultaneously pass irreducibility, reducedness, one-place,
+normality, and character-extension gates before source or Keller attachment.
 
 ## Reproduction
 
 ```bash
 python3 04-computation/jc2_double_torus_two_character_two_infinity_scout.py
 python3 -O 04-computation/jc2_double_torus_two_character_two_infinity_scout.py
+python3 04-computation/jc2_double_torus_nonlinear_balanced_partial_split_scout.py
+python3 -O 04-computation/jc2_double_torus_nonlinear_balanced_partial_split_scout.py
 ```
 
-Both modes must byte-match
-`05-knowledge/results/jc2_double_torus_two_character_two_infinity_scout.out`.
+Each normal/optimized pair must byte-match its corresponding frozen output in
+`05-knowledge/results/` after LF normalization.

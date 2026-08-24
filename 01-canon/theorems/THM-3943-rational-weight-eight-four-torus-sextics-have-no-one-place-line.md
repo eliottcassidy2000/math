@@ -3,8 +3,8 @@ id: THM-3943
 title: "Rational simple weight-eight four-torus sextics have no one-place line"
 status: >
   PROVED + CITED CLASSIFICATION + VERIFIED-EXACT + INDEPENDENTLY
-  HOSTILE-AUDITED. Degtyarev's classification says that
-  simple irreducible weight-eight sextics have seven singularity
+  HOSTILE-AUDITED. Over C, Degtyarev's classification says that simple
+  irreducible weight-eight sextics have seven singularity
   configurations and four torus structures. Exactly three configurations are
   rational: E6+A5+4A2, 2A5+4A2, and A5+6A2+A1. In Degtyarev's complete
   trigonal-section models, no projective line pulls back to a divisor
@@ -12,7 +12,8 @@ status: >
   S5T coefficient in its binary-sextic line system; the two moving rows are
   killed by exact quadratic-normalization norm equations, including all
   finite and infinity seams. Thus multiple torus structures do not supply a
-  one-place affine Cardano branch in any rational simple weight-eight family.
+  one-place affine Cardano branch in any complex rational simple weight-eight
+  family.
   The non-simple J2,3+3A2 and J2,0+4A2 families are not classified here.
 source: jc_zero_debt_lift / Degtyarev--Oka weight-eight sextic reframe, 2026-08-24
 audit: >
@@ -44,8 +45,12 @@ hash_basis: raw LF bytes
 # THM-3943 -- four torus structures still cannot buy one affine place
 
 **PROVED + CITED CLASSIFICATION + VERIFIED-EXACT + INDEPENDENTLY
-HOSTILE-AUDITED.** Work over an algebraically closed field `k` of
-characteristic zero.
+HOSTILE-AUDITED.** The exhaustive classification statement is over
+`k=C`, the field of Degtyarev's cited complex-plane classification.  The
+displayed parametrizations, factorizations, and line-support contradictions
+below are algebraic and remain valid after base change to any algebraically
+closed characteristic-zero field, but no such base-change argument for the
+exhaustiveness of the classified families is asserted here.
 
 The imported input is [Degtyarev, *Irreducible plane sextics with large
 fundamental groups*, §§1.1 and 3.2--3.6](https://arxiv.org/abs/0712.2290).
@@ -73,8 +78,8 @@ the rational configurations in `(1)` are exactly
 E6+A5+4A2,        2A5+4A2,        A5+6A2+A1.             (3)
 ```
 
-The theorem proves that for every curve in each family `(3)`, and every
-projective line `ell`, the pullback to the normalization has at least two
+The theorem proves that for every complex curve in each family `(3)`, and
+every projective line `ell`, the pullback to the normalization has at least two
 support points. Equivalently, no affine chart cut out by a line makes the
 normalization an affine line. Since a line section has degree six, the exact
 test is

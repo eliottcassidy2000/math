@@ -26,6 +26,7 @@ depends_on:
 related:
   - THM-3935-linear-conic-resolvent-class-group-unique-cubic-character
   - THM-3937-linear-conic-fold-three-family-uniform-resolvent-rigidity
+  - THM-3942-affine-linear-double-torus-factor-split-one-place-obstruction
 script: 04-computation/jc2_i7_rank_two_resolvent_unique_character_thm3940.py
 output: 05-knowledge/results/jc2_i7_rank_two_resolvent_unique_character_thm3940.out
 script_sha256: 8738427b2d35791c5b4b27a802676f275a07c7bb1638936b2acc6cfa70f05998

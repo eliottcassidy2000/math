@@ -1,6 +1,6 @@
 # Selector sidecars, cycles, first mismatch, and operation saturation
 
-**Status: CURRENT RESEARCH SYNTHESIS, 2026-08-23.**  This note compares proved
+**Status: CURRENT RESEARCH SYNTHESIS, updated 2026-08-24.**  This note compares proved
 canon, cited imports, reproducible finite computations, provisional candidates,
 and hostile controls.  It creates no object-level reduction.  LRC(14), JC(2),
 DC(2), FC(3), HFC(3), the Arithmetic--Kakeya target, the strong tournament
@@ -137,7 +137,7 @@ closes 41 of the 57 scale-one types; compact-to-open component containment and
 the integer sheet carrier supply further exact filters.  Thus the general
 conditional ledger is now 16 scale-one types plus `(2,1,9)`: 17, not 58.
 
-[THM-3948](../01-canon/theorems/THM-3948-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family.md)
+[THM-3950](../01-canon/theorems/THM-3950-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family.md)
 resolves the phase of that same sheet carrier.  If `E(G)` and `E(A)` are the
 signed endpoint words of the body safe set and pair danger set, then
 
@@ -161,7 +161,7 @@ Var(N_t)=t^2 disc_t(G),
 
 Variance retains magnitude; signed endpoint cross-phase locates the integer
 occupancy against the labelled obstruction.  THM-3910's native cubic-response
-collision and THM-3948's Graver/half-translate hostiles are complementary
+collision and THM-3950's Graver/half-translate hostiles are complementary
 proofs that pairwise or power data cannot recover that location.
 The symmetric return packet of mass `2*84^(-11)` remains useful thickness;
 without the endpoint word its translate is still unlocated relative to the
@@ -193,7 +193,7 @@ The missing object is therefore relative cross-phase, not more power data.
 Incoming THM-3743 makes this a sharp division of labour.  Khinchin flatness
 forces a nonzero speed relation with `l1<=356` in every hypothetical LRC(14)
 counterexample, and an `l1`-minimal row is Graver; this bounds the carrier but
-does not recover its sign partition, owner, or endpoint phase.  THM-3948's
+does not recover its sign partition, owner, or endpoint phase.  THM-3950's
 equal-Graver hostile proves that no refinement by the complete minimum-`l1`
 fibre alone can do so.  The continuant audit gives the analogous one-
 dimensional warning: for every odd `m>=3`, `[0;1,2m]` and `[0;2,m]` have the
@@ -696,6 +696,54 @@ conic parameter with two poles. This is the sharp new tradeoff. A second
 character is algebraically cheap once rational `E[3]` is present; making it
 coexist with one branch infinity place is the expensive coordinate.
 
+[THM-3942](../01-canon/theorems/THM-3942-affine-linear-double-torus-factor-split-one-place-obstruction.md)
+turns that example into a complete affine-linear theorem.  In independent
+coordinates, UFD allocation of the three lines in `p_1^3-p_0^3` has only two
+orbits: the `1|2` conic with two ends and the `0|3` Fermat cubic with three.
+Both really carry two independent Cardano characters, so character scarcity
+is not the failure.  Parallel coefficients give only line components or
+duplicate data.  More strongly, a nonconstant `A1` coefficient carrier cannot
+retain each whole cube factor on one side: any escape must split an
+irreducible factor internally or use gcd/multiplicity overlap.
+
+The first such escape makes the missing sidecar literal.
+[THM-3944](../01-canon/theorems/THM-3944-repeated-factor-double-torus-one-place-square-conductor-collapse.md)
+splits the two copies in `p_1-p_0=G^2` between the complementary factors.  It
+does buy a smooth one-place parabola, but
+
+```text
+H=-P^2(4P+3G^2).
+```
+
+The doubled line makes the quadratic order nonnormal.  Its normalization is
+`A2`; one Cardano row becomes an exact cube, while the other is the boundary
+class `(2,1)` on the original regular locus `Gm^2` and ramifies when extended
+across the conductor.  MISTAKE-471 records why the original smooth locus and
+the normalization's smooth locus cannot be interchanged.
+
+[THM-3947](../01-canon/theorems/THM-3947-scalar-weighted-repeated-square-split-trichotomy.md)
+then exhausts every scalar weight in that repeated-square allocation.  The
+generic discriminant is the reduced union of three distinct smooth one-place
+parabolas.  The only collisions are the doubled `p_0` seam `r^2=alpha` and
+the doubled `p_1` seam `r^2=-omega alpha`; no triple component exists.  The
+generic full divisor is therefore reduced but reducible, and its normal-order
+and two-character lattice are now the precise next invoices.  Independently,
+the nonlinear balanced scout proves that the separated affine factors
+`t(t-c)` give an irreducible two-ended conic for `c!=0`, while `c=0` is exactly
+the doubled-conductor collision.  Separation retains the second end; collision
+removes it only by creating conductor debt.
+
+Multiple torus structures do not evade the same boundary tariff through the
+classical weight-eight sextics over the complex field of Degtyarev's cited
+classifications.  (The displayed obstruction identities themselves are
+algebraic under characteristic-zero base change.)
+[THM-3943](../01-canon/theorems/THM-3943-rational-weight-eight-four-torus-sextics-have-no-one-place-line.md)
+closes every rational simple configuration, and
+[THM-3945](../01-canon/theorems/THM-3945-nonsimple-weight-eight-j-sextics-have-no-one-place-line.md)
+closes both non-simple `J` families.  Their exact binary-sextic pullback
+systems admit no line supported at one normalization point.  Four torus
+presentations change the character supply, not the line linear system.
+
 THM-3929 then classifies the root-regular linear-color lane and its first
 centered Mobius seam: degree three over the `A`-line forces the leading
 coefficient to divide the other endpoint coefficients, so a unit coefficient
@@ -747,21 +795,38 @@ one source ramification arm, making it non-unibranch. Thus the fixed centered,
 linear-color grammar is closed through root degree four. The next root-degree
 threshold is five, not four.
 
-This exposes a six-step saturation pattern without identifying the
-constructions: THM-3927's one-place compression, THM-3932's explicit
-infinity-fold-three cubic, and THM-3933's index-cleared octic all turn an
-apparently rich one-place branch packet into a globally monogenic maximal
-order; THM-3935 further proves uniqueness of the normal cubic field for the
-exact THM-3932 branch/resolvent, and THM-3937 makes that uniqueness uniform in
-the fold parameter; THM-3938 then closes the next root-degree stratum by
-scalar endpoints or source folding. The branch geometry survives; the
-generator debt does not. Arbitrary root changes, root degree at least five,
-other color directions, rational-`E[3]` one-place resolvents, and altered
-branch/resolvent families remain the honest lane.
+[THM-3941](../01-canon/theorems/THM-3941-all-degree-centered-cubic-pole-carrier-routing.md)
+separates what really persists at arbitrary repeated-root degree from what was
+special to degrees three and four.  Completed-local trace leaves exactly
+three outcomes: no finite pole, a shared `A`-address, or a collision-free
+carrier of type `C3`, `C2`, or `C2 x C2`.  The shared-address row forces only
+`a(A_0)=C=0` in the bare centered grammar.  It becomes a source
+non-unibranch obstruction only after adding genuine exact-double, reduced
+tame `(2,1)`, maximal-normal Keller hypotheses.  MISTAKE-470 records the
+infinite counterfamily that forced this quantifier repair.  At root degree
+five the theorem leaves exactly seven coarse non-root-regular signatures,
+plus the root-regular exit; polynomial color division and the surface invoice
+remain open on those seven rows.
 
-Concurrent JC promotions and reservations now occupy THM-3920--3947, so the
-proved LRC endpoint theorem moved to collision-free THM-3948; the namespace
-move changes no mathematical scope.
+This exposes a saturation pattern without identifying the constructions:
+THM-3927's one-place compression, THM-3932's explicit infinity-fold-three
+cubic, and THM-3933's index-cleared octic all turn an apparently rich
+one-place branch packet into a globally monogenic maximal order; THM-3935
+proves uniqueness of the normal cubic field for the exact THM-3932
+branch/resolvent, THM-3937 makes that uniqueness uniform in the fold
+parameter, and THM-3938 closes degree four by scalar endpoints or source
+folding.  THM-3941 saturates the **carrier** grammar at all degrees, but does
+not saturate color existence or maximal-order geometry.  The honest centered
+next unit is therefore the seven `N=5` carrier signatures awaiting color
+division, not a replay of pole
+partitions.  Arbitrary root gauges, other color directions,
+rational-`E[3]` one-place resolvents, and altered branch/resolvent families
+also remain open.
+
+Concurrent JC promotions now put proved canon in THM-3920--3945 and THM-3947;
+THM-3946 is a **RESERVED / UNPROVED EMPTY STUB**.  The proved LRC endpoint
+theorem moved to collision-free THM-3950; the namespace move changes no
+mathematical scope.
 
 ## 5. Filtered kernels and principal parts are the same warning, not the same theorem
 
@@ -913,7 +978,7 @@ They do not share states, probability, chronology, or a reduction.
 |---|---|---|---|---|---|---|
 | Factorial coefficient row | divisor/rho barcode | evaluate selected primes/residues | named necessary vanishing tests | response at the next prime | surviving polynomial row | first ordered adaptive killer at `d=9996` |
 | LRC support-two packet | lower-rank row | choose multiplier and absorb/add one runner | exact divisibility or LRC(13) safe interval | other runners, relative scale, arrival | owner plus component interval | 17 `t>=U` types after THM-3910 |
-| LRC projected polyhedron | short Graver row | take a minimum-width flatness covector | necessary relation with `l1<=356` | sign partition, owner and physical phase | labelled endpoint word plus cross-phase | THM-3948 equal-Graver opposite-covariance hostile |
+| LRC projected polyhedron | short Graver row | take a minimum-width flatness covector | necessary relation with `l1<=356` | sign partition, owner and physical phase | labelled endpoint word plus cross-phase | THM-3950 equal-Graver opposite-covariance hostile |
 | AK forcing graph | score certificate | add a sound forcing row | declared rule consequences | future-round cycle debt | cycle-rank profile | saturated `[2,3]` trace varieties |
 | JC residual | associated graded seam | take top homogeneous forms | leading cancellation | common color gcd and lower debt | primitive colors plus full evolving response | continuing `U,V` jets in THM-3898 |
 | Rational normal cubic order | plane atlas | choose a birational chart | function field and branch divisor | polynomial/etale open data | common-zero valuation genus | THM-3916 closes THM-3915's Keller model |
@@ -926,11 +991,11 @@ They do not share states, probability, chronology, or a reduction.
 | Marked conic-contact coefficient map | normalized torus-sextic branch | pull back the cusp parameter through `(p,q)` | Jacobian zeros equal normalization poles | affine versus projective carrier of those addresses | deleted-ramification/Jelonek sidecar | THM-3925 `ell!=0` three-puncture hostile |
 | Split affine coefficient conic | Cardano cusp normalization | pull back `h=3q/(2p)` and compare line degrees | `e_1+e_2=2deg(h)`, one-place polynomiality | critical divisor, actual completion class group | fold ramification plus global divisor relation | THM-3928 sextic `d=4,5,6`, only one intrinsic `C3` |
 | Infinity-component conic | one-place torus sextic | pull back the linear affine coefficient through the Cardano cusp | fold trichotomy and exact `C3` class | which local `E~8[3]` lines globalize | generic elliptic surface plus complete vertical/infinity ledger | THM-3937 gives uniform `MW=ZQ`, `Cl=Z/3`, unique Cardano character |
-| Two-boundary elliptic resolvent | smooth-locus cubic characters | quotient `E(k(t))` by the boundary difference | at most one new three-line | free rank versus rational three-torsion | `E[3]` plus full boundary/vertical relation matrix | THM-3940 rank two still gives one line; double torus gives two only via `E[3]` |
-| Double-torus identity | one-place branch design | compare the two Cardano radicands | intrinsic rational `E[3]` and two cubic characters | normalization pole count | exact projective normalization map | translated factors force `G_m`, two infinity places |
+| Two-boundary elliptic resolvent | smooth-locus cubic characters | quotient `E(k(t))` by the boundary difference | at most one new three-line | free rank versus rational three-torsion | `E[3]` plus full boundary/vertical relation matrix | THM-3940 rank two still gives one line; THM-3942 buys two only with two or three ends |
+| Double-torus identity | one-place branch design | compare the two Cardano radicands | intrinsic rational `E[3]` and componentwise one-place geometry | irreducibility, normality and extension across conductor | internal factor allocation plus normalization/conductor ledger | THM-3947: generic three parabolas; collision seams recover THM-3944 debt |
 | Primitive actual boundary basis | candidate affine-plane deletion | localize at the three basis primes | scalar units and `Cl=0` | boundary genus and Euler type | rationality plus `chi_c` invoice | THM-3926 genus `2`, `chi_c=13` hostile |
 | Degree-two linear-color packet | affine-plane open | delete the intrinsic ramification primes | aligned one-place branch and affine address cap | source unibranchness and invertible defining functions | actual class/different packet | THM-3931 `[E]=0`, `[P_0]=2q`, nonunibranch collision |
-| Centered degree-three/four root map | pole-support/ramification packet | apply local trace and the finite RH budget, then divide exact colors | finite pole grammar and exponent-one branch | arbitrary root gauge, root degree at least five, other colors | maximal-order generator plus branch normalization | THM-3933 monogenic overorder; THM-3938 five folded rows |
+| All-degree centered root map | pole-support carrier | apply local trace and the finite RH budget before exact color division | root-regular/shared/`C3,C2,C2xC2` carrier trichotomy | color existence, maximal ramification and arbitrary root gauge | exact color row plus maximal-order/source sidecar | THM-3941 leaves seven `N=5` carrier signatures awaiting color division after MISTAKE-470 repair |
 | Removed divisor lattice | resolvent three-class | saturate boundary sublattice | conditional three-divisibility | actual class and ADE mixing | full exceptional lattice | THM-3915 mixed boundary--ADE hostile |
 | Rational dual | reduced dual curve | cancel common tangent factor | reduced tangent map | nonimmersion multiplicity | `E_nu` tangent-base divisor | `[ST^(d-1):T^d:S^d]` |
 | Rule 30 words | selected ray image | positive affine-word action | complete static orbit | physical chronology and owner | zero-fibre routed query | fibres requiring opposite rays |
@@ -944,18 +1009,20 @@ objects cannot be transported merely because the same word is used.
 
 1. **LRC anchor:** combine auxiliary-center and endpoint cross-phase uniformly
    on THM-3910's 17 arbitrary-body types, or add owner/arrival data, while
-   keeping `t<U` separate.  THM-3948 closes only the 1,365 fixed bodies
+   keeping `t<U` separate.  THM-3950 closes only the 1,365 fixed bodies
    `E subset {1,...,15}`, `|E|=11`, with odd `t>=max E`; the general `(2,1,9)`
    type remains open.
-2. **Jacobian anchor:** leave `f=0`, x-only, THM-3898's canonical sidecar,
-   every radial chart, THM-3853/3855's fixed four-ray packet, THM-3925's marked
-   `5P+Q` torus slice, all full-sextic affine singular conics, and the actual
-   THM-3907/3930 completions closed. Attack the `3+1`, `2+2`, `2+1+1`,
-   quartic-vanishing, unmarked smooth-conic, arbitrary root changes,
-   root-degree-at-least-five linear color, a one-place resolvent with rational
-   `E[3]`, at least three boundary sections, a controlled split vertical
-   lattice, a higher-genus Jacobian three-line, or arbitrary-`q` component
-   grammars; audit the normalization pole divisor first.
+2. **Jacobian anchor:** leave `f=0`, x-only, every radial chart, the named
+   four-ray and marked/full-sextic conic packets, centered degrees three and
+   four, affine-linear whole-factor double-torus splits, scalar repeated-square
+   splits, and the complex weight-eight line-boundary families closed.  Run
+   exact color division and the maximal-source audit on THM-3941's seven
+   `N=5` signatures.  In parallel test unequal `FG` and multifactor internal
+   splits, the generic three-parabola normalization/class/Cardano lattice,
+   non-line torus boundaries, arbitrary root gauges, at least three boundary
+   sections, controlled split vertical lattices, and altered or higher-genus
+   resolvents.  Audit irreducibility and the normalization pole divisor before
+   any expensive class-group computation.
 3. **Nonmonogenic niche:** build a genuinely nonradial unit-ideal order with
    rational ramification normalization.  Its actual completion must retain a
    primitive boundary basis, meet the affine address cap, and pass the Euler
@@ -963,9 +1030,12 @@ objects cannot be transported merely because the same word is used.
    THM-3930, THM-3932/33/35/37/38 and THM-3940 show that rationality, the cap,
    one-place alignment, higher free rank, and even a genuine `C3` class can
    still leave Jelonek, unibranch, class, unit, Euler, monogenic, or uniqueness
-   debt. The double-torus near miss reaches two characters but pays a second
-   branch end. Seek rational `E[3]` with one pole, then test descent and the
-   actual normal nonmonogenic order.
+   debt.  THM-3942 reaches two characters but pays two or three ends;
+   THM-3944 removes one end only through a nonnormal conductor collision; and
+   THM-3947's generic scalar split has three one-place components rather than
+   one irreducible full branch.  Seek an irreducible reduced one-place branch,
+   a normal quadratic order, and two characters that extend across its
+   normalization, then test descent and the actual nonmonogenic cubic order.
 4. **AK niche:** leave the saturated empty-wildcard `[2,3]` slice closed.
    Classify inactive-slot and initial-wildcard strata, then search the next
    rectangle for a genuine score below `7/4` under the same sound/loose

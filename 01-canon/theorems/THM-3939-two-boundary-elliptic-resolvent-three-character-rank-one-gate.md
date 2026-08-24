@@ -20,11 +20,12 @@ audit: >
   Torsion boundary, rational E(K)[3], extra boundary points, and split vertical
   fibres were checked as genuine out-of-scope hostiles; no repair was needed.
 related:
-  - THM-3912-even-degree-split-boundary-cusp-three-torsion-sieve
-  - THM-3922-affine-plane-completion-free-boundary-class-group-obstruction
+  - THM-3912-even-one-place-split-boundary-a2-three-torsion-design-sieve
+  - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
   - THM-3935-linear-conic-resolvent-class-group-unique-cubic-character
   - THM-3937-linear-conic-fold-three-family-uniform-resolvent-rigidity
   - THM-3940-i7-rank-two-linear-cross-term-resolvent-unique-character
+  - THM-3942-affine-linear-double-torus-factor-split-one-place-obstruction
 ---
 
 # THM-3939 -- free Mordell--Weil rank cannot supply the second character

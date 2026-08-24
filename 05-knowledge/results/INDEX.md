@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3948 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3950 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -465,6 +465,93 @@
   `8738427b2d35791c5b4b27a802676f275a07c7bb1638936b2acc6cfa70f05998` /
   `7d8a92fab0549a3690134b0ead2300bdad54975237b156152c1d1c6e6997e7f1` /
   `b679bee12062d06ac88b036dc222c9bf8f2414a45d8cdf653f7b67ccb1ff3747`.
+
+- `jc2_all_degree_centered_pole_carrier_routing_thm3941.py` -> matching
+  `.out` [THM-3941 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
+  AFTER MISTAKE-470].  Every centered trace-zero repeated-root map has exactly
+  one pole-support branch: root-regular, shared `A`-address, or a nonempty
+  collision-free `C3`, `C2`, or `C2xC2` carrier.  Shared address forces only
+  the target collision unless the genuine maximal/Keller ramification
+  hypotheses are added.  The collision-free generating function gives seven
+  coarse `N=5` carrier signatures awaiting color division, plus the
+  root-regular exit. Checks: `2,853`.
+  Script/output/semantic SHA-256:
+  `d3fc62f474fa9d0d615ca8202a4796de15b6dd50f1dbf5e3ca8909e426685243` /
+  `771726627e9f674d265e457e9c138aa1707802f549d481d8c4ede98f813d354e` /
+  `35b3b0eaffde82ab38c59a9b5d743a574a644b4e0ff938181f5dacaaef7ba9ef`.
+
+- `jc2_affine_linear_double_torus_factor_split_thm3942.py` -> matching `.out`
+  [THM-3942 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  eight squarefree UFD allocations for two independent affine-linear torus
+  coefficients reduce to a singleton conic with two ends or an extreme
+  Fermat cubic with three.  Both have two independent Cardano characters;
+  dependent coefficients give only lines or duplicate data.  More generally
+  a nonconstant `A1` carrier cannot keep every factor whole, so any nonlinear
+  escape must split a factor internally or use gcd/multiplicity overlap.
+  Checks: `48`. Script/output/semantic SHA-256:
+  `39a4019234caa6784652170056eea89a85c7442e41e409f7d29ae4adb78fb0f9` /
+  `6ad9a99de5fe37e956d02793665ed99846fe8754362abad3c54ef38ef5cd34cb` /
+  `c0efbc25737af9d980219b0188e81cf60605c528ca2bded77e82ac0bb8609c41`.
+
+- `jc2_rational_weight8_four_torus_sextic_line_thm3943.py` -> matching `.out`
+  [THM-3943 PROVED + CITED CLASSIFICATION + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Over `C`, Degtyarev's cited simple weight-eight
+  classification has three rational configurations.  Exact binary-sextic and conic-norm systems
+  show that no line pulls back to one normalization support in any of them,
+  despite four torus structures.  The exact identities base-change, but the
+  exhaustive classification claim remains complex.  Checks: `35`. Script/output/semantic
+  SHA-256:
+  `b7ffa43f5f0ef30f2e4af5280e1a892a1164b7b54ecb3d676fd0c66bfca772d5` /
+  `70047c45202139904d65b95f516165502a7181a82260c89748a82729dd6fd673` /
+  `6df55931aa9ef0f9dde3eb4d6aaf92028f618a8acf0014f10f835b81f63837fd`.
+
+- `jc2_repeated_factor_double_torus_square_conductor_thm3944.py` -> matching
+  `.out` [THM-3944 PROVED + VERIFIED-EXACT + CORRECTED AFTER INDEPENDENT
+  HOSTILE RE-AUDIT].  Splitting the two copies in `p1-p0=G^2` reaches a smooth
+  one-place parabola, but `H=-P^2(4P+3G^2)` makes the quadratic order
+  nonnormal.  Its normalization is `A2`; one Cardano row is an exact cube,
+  while the other is the boundary class `(2,1)` on the original regular locus
+  `Gm^2` and does not extend across the conductor.  MISTAKE-471 records the
+  site correction. Checks: `39`. Script/output/semantic SHA-256:
+  `3698b325ff185a5d98e4edcafcadcad86977b1b4a41edcc6dc18c85146246585` /
+  `23d9f389f96dd5f2839c61b49bda5e2b6666f30329ab664b3d85c67ab3a62fdf` /
+  `a93d0aa73a1c95e5e3a04ec1833ff337f3b52294bcebe5145ae62f184edb8d92`.
+
+- `jc2_nonsimple_weight_eight_j_sextic_one_place_thm3945.py` -> matching
+  `.out` [THM-3945 PROVED + CITED CLASSIFICATION + VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED].  Both stereographic center charts of the
+  four-cuspidal trigonal model have no nonzero line pullback that is a sixth
+  power.  The cited classification therefore closes the non-simple
+  `J_{2,0}+4A2` and `J_{2,3}+3A2` weight-eight families. Checks: `28`.
+  Script/output/semantic SHA-256:
+  `aa5ea56edb44bd39824c86971e43ef742be9c1965b5ffd4cce94cd78de8ecb82` /
+  `c608814d5138cd51a156d8308474fc765100cf771e28c20bee0c42a43bf54973` /
+  `007afb1b1c05b62ceec26f1fe2b4023a6bb31713ae2b0482b25bb98f848569bb`.
+
+- `jc2_scalar_weighted_repeated_square_split_thm3947.py` -> matching `.out`
+  [THM-3947 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  complete scalar weighting of the repeated-square internal split is generic
+  three distinct smooth one-place parabolas.  Its only collisions are a
+  doubled `p0` line at `r^2=alpha` and a doubled `p1` parabola at
+  `r^2=-omega alpha`; both are index-swapped THM-3944 conductor geometries,
+  and no triple component occurs. Checks: `22`. Script/output/semantic
+  SHA-256:
+  `d6f96faa5c62acc961a43f7154eeac1bcabf065986acf67e2c3ddd04b4212449` /
+  `fc19766822e0dda8f28c05793aa2ddc38fbdaa00624e44ca57bd6088c6a2f8cf` /
+  `7b1ec493d249a8cf6bf757089e97bc96288431378e0fd7192b2eeed73bc8e106`.
+
+- `jc2_double_torus_nonlinear_balanced_partial_split_scout.py` -> matching
+  `.out` [VERIFIED-EXACT + INDEPENDENTLY FORMULA-AUDITED SCOUT; NOT CANON].
+  Besides independently recovering THM-3942's affine allocation, the balanced
+  nonlinear `t(t-1)` split at `a^2=1` is an absolutely irreducible quartic
+  whose normalization is the smooth two-ended conic
+  `v^2=-(h+1)(3h-1)`.  Away from that seam its unique infinity support has at
+  least two Newton branches.  The parallel-affine deformation has two ends
+  for `c!=0` and collides at `c=0` into THM-3944's doubled conductor. Checks:
+  `81`. Script/output/semantic SHA-256:
+  `83a1f3e32a6867e059f60e186e5117a95f1c9fe80c563d76b0c8611ea8b0bc3c` /
+  `89c20aaca39ca6ebad061b72986d9274ae531ab70a195b8db598fcc011ac0d16` /
+  `68253aeb73de475b092eacf193c8e9dbb89aa97ce40c3a8a3ce485d03d14b464`.
 
 - `jc2_double_torus_two_character_two_infinity_scout.py` -> matching `.out`
   [VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED NEAR MISS; NOT CANON;

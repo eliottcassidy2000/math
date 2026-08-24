@@ -21,7 +21,7 @@ audit: >
   cited construction and are not silently specialized here.
 depends_on: []
 related:
-  - THM-3879-rational-torus-sextic-c3-one-place-tradeoff
+  - THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff
   - THM-3882-rational-dual-one-place-wronskian-projection-criterion
   - THM-3942-affine-linear-double-torus-factor-split-one-place-obstruction
   - THM-3943-rational-weight-eight-four-torus-sextics-have-no-one-place-line

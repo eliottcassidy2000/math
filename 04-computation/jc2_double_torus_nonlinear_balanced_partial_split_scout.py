@@ -291,6 +291,33 @@ gate(sp.factor(a*C_edge-(1-a**2)) == 0,
      "C=0 is exactly the separately handled a^2=1 support degeneration")
 
 
+# Parallel-affine deformation toward reserved THM-3946.  Separating the two
+# affine factors by c!=0 is just the proved two-ended c=1 quartic after
+# scaling; their collision at c=0 is exactly THM-3944's doubled conductor.
+Y, cpar, uu = sp.symbols("Y cpar uu")
+fc = t*(t-cpar)
+p0c = Y
+p1c = Y+fc
+F1c = fc+(1-omega)*Y
+F2c = fc+(1-omega**2)*Y
+Dc = sp.expand(t*F1c)
+Sc = sp.expand((t-cpar)*F2c)
+q0c = sp.expand(Sc-Dc)
+q1c = sp.expand(Sc+Dc)
+Hc = sp.expand(q0c**2-4*p0c**3)
+gate(sp.simplify(Dc*Sc-(p1c**3-p0c**3)) == 0,
+     "parallel-affine internal-split identity")
+gate(sp.simplify(Hc-(q1c**2-4*p1c**3)) == 0,
+     "parallel-affine family has a common discriminant")
+scaled_Hc = sp.simplify(
+    Hc.subs({Y: cpar**2*X, t: cpar*uu})/cpar**6
+)
+gate(sp.simplify(scaled_Hc-Hn.subs({a: 1, t: uu})) == 0,
+     "every c!=0 member scales to the irreducible two-ended c=1 quartic")
+gate(sp.expand(Hc.subs(cpar, 0)+Y**2*(4*Y+3*t**2)) == 0,
+     "c=0 collision is the doubled-conductor THM3944 branch")
+
+
 summary = {
     "checks": CHECKS,
     "scope": "independent THM3942 rederivation;one nonlinear balanced hostile only",
@@ -299,6 +326,7 @@ summary = {
     "dependent_type": "line-degenerate when p1^3!=p0^3",
     "conclusion": "affine whole-factor split closed;nonlinear balanced prototype pays branches",
     "nonlinear_hostile": "a^2=1 irreducible conic has two ends;generic edge has >=2 branches",
+    "affine_internal_deformation": "c!=0 two ends;c=0 doubled conductor collision",
 }
 semantic = hashlib.sha256(json.dumps(summary, sort_keys=True).encode()).hexdigest()
 
@@ -310,4 +338,5 @@ print("EXTREME=NORMALIZATION_FERMAT_CUBIC;INFINITY_PLACES=3")
 print("DEPENDENT_GRADIENTS=LINE_DEGENERATE_UNDER_GENUINE_SPLIT")
 print("AFFINE_LINEAR_ONE_PLACE=NONE_NONLINEAR")
 print("NONLINEAR_PROTOTYPE=t(t-1)_balanced_split;A2=1_IRREDUCIBLE_CONIC_TWO_ENDS;GENERIC_BRANCHES>=2")
+print("AFFINE_INTERNAL_DEFORMATION=c!=0_TWO_ENDS;c=0_DOUBLED_CONDUCTOR")
 print(f"SEMANTIC_SHA256={semantic}")

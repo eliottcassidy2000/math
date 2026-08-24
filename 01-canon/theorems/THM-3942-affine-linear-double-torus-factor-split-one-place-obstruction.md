@@ -31,6 +31,8 @@ related:
   - THM-3937-linear-conic-fold-three-family-uniform-resolvent-rigidity
   - THM-3939-two-boundary-elliptic-resolvent-three-character-rank-one-gate
   - THM-3940-i7-rank-two-linear-cross-term-resolvent-unique-character
+  - THM-3944-repeated-factor-double-torus-one-place-square-conductor-collapse
+  - THM-3947-scalar-weighted-repeated-square-split-trichotomy
 script: 04-computation/jc2_affine_linear_double_torus_factor_split_thm3942.py
 output: 05-knowledge/results/jc2_affine_linear_double_torus_factor_split_thm3942.out
 script_sha256: 39a4019234caa6784652170056eea89a85c7442e41e409f7d29ae4adb78fb0f9

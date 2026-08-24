@@ -220,6 +220,29 @@ collide, links—not bare IDs—are canonical.
 
 ## Jacobian, Dixmier, and Poisson
 
+### Degtyarev — weight-eight torus sextics and the stereographic trigonal model
+
+- **Primary / freshness:** A. Degtyarev,
+  [*Irreducible plane sextics with large fundamental groups*](https://arxiv.org/abs/0712.2290),
+  especially Sections 1.1 and 3.2--3.6, and
+  [*Oka's conjecture on irreducible plane sextics. II*](https://arxiv.org/abs/math/0702546).
+  **PUBLISHED-era stable sources; exact cited sections pinned 2026-08-24.**
+- **Imported role:** over the complex plane, the first source classifies the
+  seven simple weight-eight singularity configurations and their four torus structures;
+  the stereographic construction supplies the two non-simple
+  `J_{2,0}+4A_2` and `J_{2,3}+3A_2` families from the four-cuspidal trigonal
+  curve on `Sigma_2`.
+- **Repo consumers:**
+  [THM-3943](../../01-canon/theorems/THM-3943-rational-weight-eight-four-torus-sextics-have-no-one-place-line.md)
+  and
+  [THM-3945](../../01-canon/theorems/THM-3945-nonsimple-weight-eight-j-sextics-have-no-one-place-line.md).
+- **Does not prove:** a characteristic-zero base-change theorem making that
+  complex classification exhaustive, the repo's binary-sextic line-norm contradictions, the
+  uniform no-one-place-line statements, a classification of non-line affine
+  boundaries, a Keller obstruction for every torus sextic, or `JC(2)`.  Those
+  exact deductions are separated from the cited classification in
+  THM-3943/3945 and their companions.
+
 ### Miyanishi -- affine pseudo-planes and the canonical-trivial exception
 
 - **Primary/imported:** Miyanishi [arXiv:1504.07179](https://arxiv.org/abs/1504.07179), Lemma 2.5.2, constructs the affine-plane Galois pseudo-cover; Theorem 2.5.10 excludes type `(d,n,r)` with `r!=2` from mapping etale to `A2` via `Pic(X)=Z/d`, `K_X~(r-2)F_0`.

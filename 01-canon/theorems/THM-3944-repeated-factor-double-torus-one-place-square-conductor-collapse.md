@@ -18,7 +18,7 @@ status: >
 source: jc-degree6-place / nonlinear internal-split successor to THM-3942, 2026-08-24
 audit: >
   CORRECTED INDEPENDENT HOSTILE RE-AUDIT (jc-cohn3709 and
-  jc_zero_debt_lift, 2026-08-24). The initial promotion correctly checked
+  jc_zero_debt_lift, 2026-08-24). The initial promotion and re-audit
   independently checked the Gauss/UFD domain argument; the finite same-field
   polynomial normalization; the exact module quotient and conductor; the
   reduced one-place parabola versus full nonreduced branch scope; both cube
@@ -32,6 +32,8 @@ audit: >
 depends_on: []
 related:
   - THM-3942-affine-linear-double-torus-factor-split-one-place-obstruction
+  - THM-3946-affine-internal-factor-split-two-end-conductor-collision-dichotomy
+  - THM-3947-scalar-weighted-repeated-square-split-trichotomy
 script: 04-computation/jc2_repeated_factor_double_torus_square_conductor_thm3944.py
 output: 05-knowledge/results/jc2_repeated_factor_double_torus_square_conductor_thm3944.out
 script_sha256: 3698b325ff185a5d98e4edcafcadcad86977b1b4a41edcc6dc18c85146246585
@@ -132,8 +134,10 @@ q_1+W=-(V+G)^3/4,
 q_1-W= +(V-G)^3/4.                                     (10)
 ```
 
-Because constants are cubes in `k`, `(10)` is the trivial Kummer class.  The
-other radicand is not a cube.  On `U_0`, it is the unit
+Because constants are cubes in `k`, `(10)` gives the zero function-field,
+normalized Cardano character after cancelling the exact cube.  This does not
+claim that the raw cube-root equation is an etale torsor across the cube's
+zero line.  The other radicand is not a cube.  On `U_0`, it is the unit
 
 ```text
 q_0+W=-l_+^2 l_-/4,                                    (10a)

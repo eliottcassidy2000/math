@@ -34,6 +34,7 @@ related:
   - THM-3933-centered-degree-three-root-map-pole-partition-octic-nonentry
   - THM-3930-two-pole-linear-color-aligned-one-place-branch-packet
   - THM-3931-degree-two-pole-cubic-principal-ramification-no-atlas
+  - THM-3941-all-degree-centered-cubic-pole-carrier-routing
 script: 04-computation/jc2_centered_degree_four_root_map_thm3938.py
 output: 05-knowledge/results/jc2_centered_degree_four_root_map_thm3938.out
 script_sha256: d938b8af519e04d4c8d7957dce492fe28feec6ab63eb2f433d20bf2844bf65a3

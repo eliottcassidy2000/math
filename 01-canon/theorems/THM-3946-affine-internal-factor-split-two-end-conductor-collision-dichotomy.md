@@ -13,4 +13,3 @@ related:
 
 **RESERVED / UNPROVED EMPTY STUB.** This file reserves the identifier and
 filename only. It contains no theorem, proof, or usable dependency.
-

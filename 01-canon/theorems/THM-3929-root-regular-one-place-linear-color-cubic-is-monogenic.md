@@ -42,6 +42,7 @@ related:
   - THM-3933-centered-degree-three-root-map-pole-partition-octic-nonentry
   - THM-3936-centered-degree-three-infinite-root-value-nonentry
   - THM-3938-centered-degree-four-root-map-nonentry
+  - THM-3941-all-degree-centered-cubic-pole-carrier-routing
 script: 04-computation/jc2_root_regular_one_place_linear_color_cubic_thm3929.py
 output: 05-knowledge/results/jc2_root_regular_one_place_linear_color_cubic_thm3929.out
 script_sha256: 863c809aad0dc905a5143ab34444fab08dc5445a48a05f9431545f2f936a86d1
