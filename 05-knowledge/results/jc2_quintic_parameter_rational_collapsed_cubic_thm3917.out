@@ -1,0 +1,15 @@
+theorem=THM-3917-quintic-parameter-rational-collapsed-cubic
+parameter_quintic=2304*b^5+10176*b^4+4064*b^3+996*b^2+84*b+5
+quintic=irreducible_mod_11;squarefree
+residual=one_double_x_root_plus_two_simple_x_roots
+finite_discriminant=two_double_u_roots_plus_four_simple_u_roots
+finite_ramification=4;double_roots=two_unramified_nodes
+infinity_places=3;infinity_ramification=0
+collapsed_cubic=irreducible;normalization_genus=0;K_rational_infinity_point=1
+ramification_curve=rational;collapsed_intersection_support=6
+chart_jacobian=-F*F_z/16
+normalization_ramification_image=at_least_6_branches_at_one_point
+scope=genus_obstruction_escaped_but_boundary_unibranch_kills_same_field_Keller_atlas;JC2_open
+semantic_sha256=593e5af9e8099c8a5f3397a2247ba166235dd3710e69296eac3aa63628629926
+CHECKS=55
+RESULT=PASS
