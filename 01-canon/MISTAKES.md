@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-467 (2026-08-23, THM-3925 projective three-address seam) -- equality in the address count was treated as a no-atlas conclusion
+
+- **What failed:** the first promotion of THM-3925 did not supply the
+  plane-nonentry implication for the `ell!=0` seam.  Its three normalization
+  addresses lie over projective infinity, not over one affine target point.
+- **Minimal witness / first failed implication:** THM-3920's affine cubic cap
+  does not apply to those punctures, and the numerical equality `3=3` would
+  not contradict it in any case.  THM-3907's projective `3+3` packet and
+  THM-3920's stated scope boundary are the hostile controls.
+- **Repair / strongest survivor:** the affine normalization is `P1` minus
+  the three points computed in THM-3925.  THM-3841's deleted-divisor/Jelonek
+  lemma therefore excludes it as the image of a ramification divisor in any
+  normal finite completion admitting a dominant plane open.  The `ell=0`
+  seam is separately closed by THM-3801's monogenic different-unit gate.
+- **Reusable rule:** distinguish affine target addresses from punctures over
+  projective infinity.  Equality in a numerical count is not an obstruction
+  without the correct geometric carrier and implication direction.
+
 ## MISTAKE-466 (2026-08-23, THM-3921 binary index form) -- coefficient gcd one was promoted to a unit ideal
 
 - **What failed:** THM-3921 said that the four coefficients of its binary
@@ -98,6 +116,11 @@ Format per entry:
   promoted an independent response chain as `THM-3900--3902`.  The strict-cell
   family therefore moved a fourth time, atomically, to freshly checked
   `THM-3903`; its mathematics and hash-bearing companion bytes are unchanged.
+- **Later recurrence:** the independently proved LRC signed-endpoint theorem
+  was successively displaced from `THM-3922`, `THM-3924`, `THM-3927`, and
+  `THM-3928` by concurrent JC promotions or honest reservations.  Its theorem
+  file and every dependency/navigation edge moved atomically to `THM-3930`;
+  the hash-bearing LRC companions and mathematical scope did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
   only before empty reservations; rename the whole artifact family together.

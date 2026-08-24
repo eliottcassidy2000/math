@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3927 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3930 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -229,10 +229,11 @@
   reduced irreducible branch with `r` distinct tangent-cone factors has at
   least `r` normalization addresses, while a cubic Keller completion permits
   at most three.  The fixed THM-3808 packet has four distinct rays, so both
-  THM-3853 targets and every reduced irreducible THM-3855 polynomial
-  algebraization retaining that linear packet are excluded.  Reducible
-  branches, at-most-three-ray collisions, higher-degree covers, unit-ideal
-  THM-3907 packets, and `JC(2)` remain open.  Checks: `28`.
+  THM-3853 targets and every THM-3855 normal polynomial algebraization with
+  reduced irreducible discriminant retaining that linear packet are excluded.
+  Reducible branches, at-most-three-ray collisions, higher-degree
+  covers, other unit-ideal packets, and `JC(2)` remain open; THM-3926 later
+  closes the specific THM-3907 completion by genus two.  Checks: `28`.
   Script/output/semantic SHA-256:
   `3232643254947a0970ec60355d95056b023be4943dff09ca0f04c01e1624c878` /
   `9856a88626944ab9821a889554b85f29d38ccc0d153995f179beb016880e5fbb` /
@@ -251,6 +252,33 @@
   `3c0af6ff50dffb74336732367f98451aa108fb1d501a5c8daa4f268bf48e15cd` /
   `cf93d07d262c30ca5d19a203e95a33a7f75e1534af53eef947193f129bfa785b` /
   `a0c6d59e67172193dfe81763d33589dd46ed1eca185e0e60ba32f01c6202e18b`.
+
+- `jc2_fivefold_conic_contact_torus_sextic_thm3925.py` -> matching `.out`
+  [THM-3925 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  In the
+  complete marked smooth-conic `5P+Q` torus-sextic slice, the normalization
+  denominator equals the pulled-back coefficient Jacobian.  For `ell!=0`
+  its two zeros create three projective punctures; these meet rather than
+  violate THM-3920's cap, and THM-3841's deleted-divisor/Jelonek gate excludes
+  the plane atlas.  For `ell=0` the coefficient map is a polynomial
+  automorphism and THM-3801's monogenic different-unit gate applies.  This
+  MISTAKE-467 repair closes the marked slice, not all torus sextics or JC(2).
+  Checks: `36`.  Script/output/semantic SHA-256:
+  `422fd040f49fd3002c714bca4c29f24898c42ed661f243a5c19b3e769af399fb` /
+  `26e96492098674290a36ea956fab4b82b035d0b883aaf1b3bdbb706c0ed330bc` /
+  `ba2e5cf7ec97eef34af09b2977a58f0b7fd1c51d309505100599c4f0a3365263`.
+
+- `jc2_unit_ideal_cubic_class_genus_boundary_thm3926.py` -> matching `.out`
+  [THM-3926 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  actual THM-3907 completion is smooth with scalar units and `Cl=Z^3`; its
+  primitive ramification class plus two vertical primes form a basis, and
+  deleting them gives scalar units and trivial class group.  Thus the full
+  THM-3922 invoice passes.  The ramification normalization nevertheless has
+  genus two, contradicting THM-3920, while the natural deletion has
+  `chi_c=13`, not `1`.  The boundary-basis gate is necessary, not sufficient.
+  Checks: `50`.  Script/output/semantic SHA-256:
+  `5ff37ae063072265f413cd0039c1e4e4d0d2c84ffc1cb937a47a29c42e27500b` /
+  `cdb53643de8207a9e338c8a8f752a7603164e3a905e48180a89d700eede64540` /
+  `8deb06257def95cc087c0d2b0819cde103f9742fe1bc541f1e0258bd5e462e95`.
 
 - `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
   `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil
@@ -290,7 +318,9 @@
   [THM-3907 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Its
   binary cubic has coefficient ideal one but represents no scalar unit; the
   associated normal nonmonogenic `S3` order has an absolutely irreducible
-  degree-seven discriminant with two infinity points and six places.  Checks:
+  degree-seven discriminant with two infinity points and six places.
+  THM-3926 later proves that its actual boundary-class basis passes but its
+  genus-two ramification curve closes this specific Keller target.  Checks:
   `26`.  Script/output/semantic SHA-256:
   `a25cddf1d6abf44f97186bf9d5c947a6e4b7c2cc55a4c61a01e11256b4e8282d` /
   `acafe47d68ed7037d55991bf2a787b4c3854ae3b5e31196eaa5a2fac82f97ff5` /

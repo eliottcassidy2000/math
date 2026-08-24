@@ -1,0 +1,8 @@
+THM-3926 exact unit-ideal cubic class/genus companion
+CHECKS=50
+CLASS_GROUP=Z^3;BASIS=(E,Q1,Q2);E_CLASS=(1,0,0)
+CHART=k[A,A^-1,theta,theta^-1,(theta+1)^-1]
+GENUS=2;INFINITY_PLACES=6
+CHI_X=5;CHI_E=-8;CHI_NATURAL_OPEN=13
+BOUNDARY=class/unit sieve passes, rational-boundary and Euler sieves fail
+SEMANTIC_SHA256=8deb06257def95cc087c0d2b0819cde103f9742fe1bc541f1e0258bd5e462e95

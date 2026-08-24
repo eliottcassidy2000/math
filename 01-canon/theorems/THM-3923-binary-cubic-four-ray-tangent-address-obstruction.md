@@ -9,25 +9,27 @@ status: >
   irreducible binary-cubic discriminant with four distinct tangent rays at
   one affine point cannot occur in a planar cubic Keller completion. The
   THM-3808 fixed linear packet always has the four rays
-  A(C+5A)(4C+19A)(3C-17A), so every irreducible polynomial algebraization of
-  the THM-3855 formal coefficient germ is excluded. In particular the two
+  A(C+5A)(4C+19A)(3C-17A), so every normal irreducible polynomial
+  algebraization of the THM-3855 formal coefficient germ is excluded as a
+  cubic Keller completion. In particular the two
   THM-3853 one-place inverse-discriminant targets and every tangent-identity
   formal deformation retain the fatal four-address packet. Formal
   inverse-discriminant surjectivity remains true; it is now proved to point
   into the wrong local branch grammar for a cubic Keller atlas.
 source: jc_zero_debt_lift / post-THM-3920 tangent-cone address lane, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (incoming_thm3923_3924_audit/root,
-  2026-08-23).  The audit independently reconstructed the completed-germ
-  Hensel/normalization bridge, checked the reduced/irreducible and
-  per-component scope, derived the degree-three address contradiction, and
-  verified its application to both THM-3853 targets and all THM-3855 fixed-
-  linear-packet algebraizations.  The assertion-free companion verifies the
-  binary-cubic discriminant, all six pairwise ray determinants, invariance
-  under arbitrary quadratic coefficient jets and tangent-identity base jets,
-  and both four-address parametrizations.  LF-normalized normal and optimized
-  streams match the frozen LF output in all 28 gates; script, output, and
-  semantic hashes agree.  No repair was required.
+  TWO INDEPENDENT HOSTILE AUDITS PASS (incoming_thm3923_3924_audit/root and
+  jc-cohn3709, 2026-08-23).  They reconstructed the completed-local Hensel
+  factorization, normalization-branch correspondence for reduced excellent
+  curves, per-component and normal-completion scope, and residue-degree-one
+  transfer into THM-3920's cubic address cap.  They rederived both THM-3853
+  parametrizations, tangent-identity invariance, and the fixed-packet
+  application.  The jc-cohn3709 audit repaired one status-line overstatement
+  by requiring a normal polynomial algebraization.  The assertion-free
+  companion verifies the discriminant, all six pairwise ray determinants,
+  coefficient/base-jet invariance, and both parametrizations.  LF-normalized
+  normal and optimized streams match the frozen LF output in all 28 gates;
+  raw script/output and semantic hashes and documentation checks pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3853-quadratic-depth-inverse-discriminant-one-place-gluing-obstruction
@@ -239,10 +241,11 @@ theorem is now also its obstruction: all its lifts remain in the ordinary
 four-branch completed orbit.
 
 The formal result itself is not retracted. It proves that there is no local
-coefficient-equation obstruction. What `(5)` proves is that **every
-polynomial algebraization with this completed linear packet lies outside the
-cubic Keller geometry**. Higher coefficient depth cannot pay a debt already
-visible in the degree-four tangent cone.
+coefficient-equation obstruction. What `(5)` proves is that **every normal
+polynomial algebraization with reduced irreducible discriminant and this
+completed linear packet lies outside the cubic Keller geometry**. Higher
+coefficient depth cannot pay a debt already visible in the degree-four
+tangent cone.
 
 ## 6. Exact boundary and the next positive grammar
 
@@ -268,8 +271,8 @@ The theorem does not exclude:
   components;
 - the equality case of three addresses;
 - a degree at least four field extension;
-- a unit-ideal nonmonogenic packet such as THM-3907, whose coefficients have
-  no common zero; or
+- the unit-ideal mechanism outside this four-ray grammar (although THM-3926
+  later closes the specific THM-3907 completion by its genus-two boundary); or
 - the general planar Jacobian conjecture.
 
 Reproduce the exact packet with

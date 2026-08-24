@@ -9,8 +9,10 @@ status: >
   discriminant.  The projective branch has two infinity support points and
   exactly six normalization places, three above each.  Thus common coefficient
   zero is not necessary for nonmonogenicity, but this first unit-ideal escape
-  does not solve the one-place boundary.  Unit-ideal one-place forms, Keller
-  realization, and JC(2) remain open.
+  does not solve the one-place boundary.  Subsequent THM-3926 proves that its
+  actual completion passes the primitive boundary-class basis invoice but its
+  ramification normalization has genus two, closing this specific Keller
+  target.  Other unit-ideal rational-boundary forms and JC(2) remain open.
 source: root / unit-ideal escape audit, 2026-08-23
 audit: >
   INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23.  The audit independently
@@ -26,6 +28,7 @@ related:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
   - THM-3890-universal-quintic-common-zero-resolvent-class-group-dichotomy
   - THM-3906-degree-six-common-zero-normal-cubic-two-place-boundary
+  - THM-3926-unit-ideal-cubic-primitive-class-genus-two-boundary
 script: 04-computation/jc2_unit_ideal_nonmonogenic_cubic_six_place_thm3907.py
 output: 05-knowledge/results/jc2_unit_ideal_nonmonogenic_cubic_six_place_thm3907.out
 script_sha256: a25cddf1d6abf44f97186bf9d5c947a6e4b7c2cc55a4c61a01e11256b4e8282d
@@ -183,9 +186,12 @@ infinity support points=2,              infinity places=3+3=6. (13)
 
 The example removes common coefficient zero from the list of necessary
 conditions for a normal nonmonogenic cubic order.  It does not solve the
-infinity problem: it has two support points and six places.  A unit-ideal
-index form with an irreducible one-place discriminant, an associated Keller
-atlas, and `JC(2)` all remain **OPEN**.
+infinity problem: it has two support points and six places.  Subsequent
+THM-3926 computes the actual completion's class group: the mandatory
+ramification class is primitive and extends to a boundary basis, but its
+normalization has genus two and so violates THM-3920.  Thus this particular
+Keller target is closed.  A different unit-ideal order with rational boundary
+and a compatible affine-plane atlas, and `JC(2)`, remain **OPEN**.
 
 Reproduce the exact packet with
 

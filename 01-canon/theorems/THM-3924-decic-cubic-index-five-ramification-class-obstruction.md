@@ -14,17 +14,18 @@ status: >
   power-basis index exponent; JC(2) remains open.
 source: jc_degree6_one_place / post-THM-3922 primitive-boundary lane, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (incoming_thm3923_3924_audit/root,
-  2026-08-23).  The audit independently reconstructed the UFD localization,
-  scalar-unit argument, simple-plus-double A=0 prime packet, diagonal Nagata
-  quotient Cl(B)=Z, irreducible ramification prime, valuation vector (-6,-1),
-  divisor relation, and THM-3922 primitive-boundary contradiction.  It also
-  checked that the conclusion is confined to the actual THM-3921 completion
-  and does not transfer to THM-3915.  The exact companion verifies the basis
+  TWO INDEPENDENT HOSTILE AUDITS PASS (incoming_thm3923_3924_audit/root and
+  jc_zero_debt_lift, 2026-08-23).  They reconstructed the radial UFD chart and
+  full unit group, inclusion B subset k[u,z], simple-plus-double A=0 prime
+  packet and residue degrees, diagonal Nagata quotient Cl(B)=Z, irreducible
+  ramification prime, complete divisor relation with valuations (-6,-1), and
+  THM-3922 primitive-basis contradiction.  They checked that no extra divisor
+  repairs rank one and that the conclusion is confined to the actual
+  THM-3921 completion, not THM-3915.  The companion verifies the basis
   determinant, residual irreducibility, valuation gap, class divisibility,
   and power-index exponent in 20 gates.  LF-normalized normal and optimized
-  streams match the frozen LF output; script, output, and semantic hashes
-  agree.  No repair was required.
+  streams match the frozen LF output; raw script/output and semantic hashes
+  and documentation checks pass.  No repair was required.
 depends_on:
   - THM-3921-quintic-genus-collapse-decic-degeneration-packet
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction

@@ -1,0 +1,11 @@
+theorem=THM-3925-fivefold-conic-contact-torus-sextic-one-place-fold
+contact=Q2|conic=0;Q3|conic=c*S^5*(S-T)
+infinity=unique_support_requires_m=0
+irreducible_seam=resultant=c^2*(4c-27ell(ell+n)^2)
+nonfold_places=ell_nonzero_gives_two_finite_Jacobian_poles_plus_infinity
+one_place=ell_zero;coefficient_map_polynomial_automorphism_Jacobian_c
+completion=universal_monogenic_cubic_A2;different_unit_obstruction
+scope=fivefold_conic_contact_torus_sextic_family_closed;JC2_open
+semantic_sha256=ba2e5cf7ec97eef34af09b2977a58f0b7fd1c51d309505100599c4f0a3365263
+CHECKS=36
+RESULT=PASS
