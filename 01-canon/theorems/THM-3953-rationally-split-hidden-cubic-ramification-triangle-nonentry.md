@@ -2,7 +2,7 @@
 id: THM-3953
 title: "Rationally split hidden cubic ramification forms a forbidden boundary triangle"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Let the hidden ramification cubic of a normal depressed-cubic surface split
   into three distinct polynomial graph roots. The missing linear h-row
   forces the exact parametrization r0=c a(a+b), r1=c b(a+b), r2=-cab.
@@ -19,14 +19,15 @@ status: >
   atlas; only duplicate roots and rational denominators remain outside.
 source: jc-degree6-one-place / post-THM-3951 split-residual audit, 2026-08-24
 audit: >
-  SELF-HOSTILE EXACT CANDIDATE. The companion verifies the root
-  parametrization and converse, all pair differences and their pairwise
-  Bezout-resultant controls, the six-row smooth/singular collision table,
-  the monic-cubic domain obstruction, the invertible scalar-ratio reduction
-  to xy=c(t)^3, Smith controls for its Nagata quotient, and explicit
-  positive/hostile examples. The finite-singular-locus normality,
-  common-resolution boundary triangle, and class-localization bridges are
-  proved in text and await independent hostile audit.
+  INDEPENDENT HOSTILE AUDIT PASS (jc-zero-debt-lift and jc-cohn3709,
+  2026-08-24). Both audits reconstructed the UFD root parametrization,
+  pair-carrier coprimality, monic-cubic domain and finite-singular-locus
+  normality proofs, every collision row, and the arbitrary-point boundary
+  triangle. They also checked the strengthened constant-ratio coordinate
+  isomorphism to xy=c(t)^3, its unit case, all Nagata valuations and units,
+  the exact class-group Smith quotient, and the THM-3922 contradiction.
+  Normal and optimized runs byte-match the frozen 75-gate output, all hashes
+  agree, documentation checks pass, and no repair was required.
 depends_on:
   - THM-3951-affine-plane-boundary-incidence-forest-and-equianharmonic-survivor-nonentry
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
@@ -42,7 +43,7 @@ hash_basis: raw LF bytes
 
 # THM-3953 -- three polynomial ramification roots form a forbidden triangle
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero. This is
 the rationally split complement to THM-3950--3951's irreducible
 equianharmonic residual.
