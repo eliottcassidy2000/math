@@ -6,7 +6,7 @@ source: jc-zero-debt-lift + root / post-THM-3983 cusp-plane lane, 2026-08-24
 depends_on: []
 related:
   - THM-3983-coordinate-boundary-constancy-and-rational-place-budget
-  - THM-3984-boundary-generator-coupling-obstruction
+  - THM-3984-boundary-generator-coupling-criticality-and-holomorphic-time-form
 ---
 
 # THM-3985 -- reserved cusp-plane rational-time theorem

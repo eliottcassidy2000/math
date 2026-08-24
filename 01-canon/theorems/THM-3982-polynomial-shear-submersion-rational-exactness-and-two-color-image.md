@@ -27,6 +27,7 @@ depends_on:
 related:
   - THM-3974-height-tower-few-weight-darboux-support-obstruction
   - THM-3979-two-color-formal-cusp-darboux-lifting
+  - THM-3984-boundary-generator-coupling-criticality-and-holomorphic-time-form
 script: 04-computation/jc2_polynomial_shear_submersion_rational_exactness_thm3982.py
 output: 05-knowledge/results/jc2_polynomial_shear_submersion_rational_exactness_thm3982.out
 script_sha256: 6685e693249d23d49dfd65b8b5abb5f39444ce338057f29e6184f6508b864983

@@ -1013,6 +1013,20 @@
   `d0e0fc46ad0be6433f74d09237d80863189b4f5a3f74c5b218c47ad8a95e3483` /
   `8f813d0377f5f996625582858894293ba8857f91c45a93471753b64fae48b7c8`.
 
+- `jc2_boundary_generator_coupling_criticality_thm3984.py` -> matching
+  `.out` [THM-3984 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED]. Every mixed linear coupling
+  `x+h(x^nt)+alpha*p+beta*y` is submersive exactly when
+  `alpha=beta=0`; every nonzero single monomial coupling
+  `c*p^a*y^b` is critical. At height two the linear-`y` generic-fibre time
+  form is holomorphic and remains nonexact after finite covers, with genus
+  `2` for constant `h` and `(4d+1-gcd(3,d))/2` for positive degree `d`.
+  This closes only the displayed cells. Checks: `1,091`.
+  Script/output/semantic SHA-256:
+  `f7c8d8acd0e2c7821716eee48671cb3a6f6f22122c7ab968f3be7ffec88bf6b1` /
+  `62ebe106accb79f579b85d81dc53bbaa4830c3c368bb8d5beb5614884cb0dc7c` /
+  `d9598c0dedda6f5637e168c97050a9ca0a5eebeec0245ede653d7283972849d9`.
+
 - `cyclotomic_factorial_two_power_decoder_20260824.py` -> matching `.out`
   [ELEMENTARY PROVED IDENTITY + FINITE-EXACT CROSS-FRONTIER ATLAS; NO
   FC/HFC/JC/LRC CONSEQUENCE]. For every `d>=2`, the projected factorial

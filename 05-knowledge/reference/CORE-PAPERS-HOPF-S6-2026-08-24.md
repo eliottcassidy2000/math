@@ -385,9 +385,11 @@ lifting. THM-3980 proves its canonical split all-height atlas generates the
 reducible envelope `K x K`, not a compatible domain. THM-3981 proves every
 centered slope generically nonintegrable at height two, the fixed-slope
 exceptional scalar fibres logarithmically nonexact, and the fixed-slope
-generic quadrature transcendental at every height. THM-3982 classifies all polynomial
-shears; THM-3983 gives coordinate boundary constancy and the rational-fibre
-budget `d<=r-1`. Alternative gauges, finite Keller entry, and unrestricted
+generic quadrature transcendental at every height. THM-3982 classifies all
+polynomial shears; THM-3983 gives coordinate boundary constancy and the
+rational-fibre budget `d<=r-1`. THM-3984 makes every nonzero single
+boundary-monomial coupling critical and gives a height-two holomorphic
+time-form obstruction. Alternative gauges, finite Keller entry, and unrestricted
 Darboux entry remain open.
 None of these supplies a Hopf dependency here.
 

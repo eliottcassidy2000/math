@@ -350,14 +350,13 @@ asymptotic or residue.
   THM-3977 closes the lowest cusp/arm seam and both tested corrections;
   THM-3978 computes the plane/completion response ideals and incompatible
   formal constants. THM-3979 lifts the cusp jets to every formal order.
-  THM-3980 proves the canonical all-height split atlas lives in `K x K`, not
-  any compatible domain. THM-3981 proves every centered slope generically
-  nonintegrable at height two, its slope-one scalar slices nonalgebraic, and
-  the slope-one generic gauge transcendental at every height. THM-3982
-  classifies every polynomial shear: nonlinear rows lack even rational
-  invariant values; affine rows pay the exact two colors. THM-3983 forces
-  coordinates constant on `D` and gives boundary degree `d<=r-1` for
-  rational fibres. THM-3984 is RESERVED. Open:
+  THM-3980 puts the split all-height atlas in `K x K`, not a domain.
+  THM-3981 makes every height-two slope generically nonintegrable and the
+  slope-one generic gauge transcendental at every height. THM-3982 classifies
+  shears; nonlinear rows have zero rational invariant image. THM-3983 gives
+  boundary constancy and `d<=r-1`. THM-3984 makes every nonzero single
+  boundary-monomial coupling to `x+h(x^nt)` critical; its height-two
+  linear-`y` time form is holomorphic. THM-3985 is RESERVED. Open:
   algebraization with `y`, compatible/multiple/reducible/nongraph debts,
   degree `>=6`, polynomial compression, finite Keller entry, unrestricted
   Darboux entry, and `JC(2)`. THM-3853/3855 remain formal laboratories.

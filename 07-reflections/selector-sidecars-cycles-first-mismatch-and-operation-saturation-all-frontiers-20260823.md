@@ -992,6 +992,11 @@ odd height gives literal residues, while even height needs a holomorphic
 test differential and a nonzero residue pairing. The selected obstruction
 changes representation, but trace descent preserves nonexactness.
 Rational or formal solvability is not algebraization.
+THM-3984 adds a different selector boundary: `x+h(x^nt)` is submersive,
+but selecting any one nonzero boundary monomial makes it critical. In the
+height-two linear-`y` row, a holomorphic generic-fibre time form also blocks
+rational integration. The affine critical point and the Abelian integral are
+independent consequences and must not be collapsed into one statistic.
 THM-3955/57 are proved local conductor theorems with no global Hopf consequence.
 The proved LRC endpoint theorem moved to collision-free THM-4000; the namespace
 move changes no mathematical scope.

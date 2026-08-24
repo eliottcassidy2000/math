@@ -29,6 +29,7 @@ audit: >
 depends_on:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
 related:
+  - THM-3981-centered-cusp-quadrature-genus-two-transcendence
   - THM-3982-polynomial-shear-submersion-rational-exactness-and-two-color-image
   - THM-3983-coordinate-boundary-constancy-and-rational-place-budget
 script: 04-computation/jc2_boundary_generator_coupling_criticality_thm3984.py

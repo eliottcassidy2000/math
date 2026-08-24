@@ -410,7 +410,11 @@ Odd heights expose seam residues while even heights expose a global
 holomorphic residue pairing. THM-3982
 closes every polynomial shear by a rational-exactness trichotomy, while
 THM-3983 forces source coordinates constant on the boundary and charges a
-rational fibre one more infinity place than its boundary degree.
+rational fibre one more infinity place than its boundary degree. THM-3984
+then proves that attaching any one nonzero boundary monomial to a polynomial
+shear creates an affine critical point. In the height-two linear-`y` row the
+generic time form is independently holomorphic, with an explicit genus
+ladder, so criticality and rational nonexactness are two distinct consumers.
 The orthogonal THM-3955/57 node and
 coordinate-crossing cotangent sequences are proved local sidecars, not global
 Jacobian or Hopf results.

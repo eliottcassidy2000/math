@@ -462,8 +462,10 @@ split formal-local mates. THM-3979 proves all-order formal cusp lifting;
 THM-3980 proves its canonical split atlas generates `K x K`, not a domain.
 THM-3981 proves every height-two centered slope generically nonintegrable,
 with logarithmic scalar degenerations, and proves the slope-one generic
-quadrature nonintegrable at every height. THM-3982 classifies all polynomial shears;
-THM-3983 gives coordinate boundary constancy and the place budget `d<=r-1`.
+quadrature nonintegrable at every height. THM-3982 classifies all polynomial
+shears; THM-3983 gives coordinate boundary constancy and the place budget
+`d<=r-1`. THM-3984 makes every single boundary-monomial coupling critical
+and separately gives a holomorphic time form in the height-two linear-`y` row.
 Neither these gauge-specific obstructions nor any other JC result supplies a
 Hopf dependency here.
 
