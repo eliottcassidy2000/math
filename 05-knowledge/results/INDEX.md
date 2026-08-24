@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3922 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3924 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -139,8 +139,9 @@
   polynomial pair forbids scalar-unit Jacobian.  In THM-3915, the contracted
   divisor `F=0` is irreducible of genus two, with eight finite simple
   ramifications and three unramified infinity places; hence its same-field
-  Keller plane model is empty.  Repeated-residual genus-zero designs and
-  `JC(2)` remain open.  Checks: `26`.  Script/output/semantic SHA-256:
+  Keller plane model is empty.  THM-3917 and THM-3920 subsequently close the
+  genus-zero radial escape; nonradial designs and `JC(2)` remain open.
+  Checks: `26`.  Script/output/semantic SHA-256:
   `1e658a4c13cb8cfe45d3a50b9f4e546abf283c62f40ccc654fc65686bded7078` /
   `2b359fec32987cf934ba644ea458dee82220d11c877e1e832047604da2a07632` /
   `75bbbaebe57df35e61244b7e5c28ee1b5d5a1f9660746c1308bc26b464b7868f`.
@@ -154,7 +155,8 @@
   boundary-unibranch lemma excludes a same-field Keller plane atlas.  This
   closes the displayed quintic-parameter family, not `JC(2)`.  THM-3921
   identifies those six addresses with four smooth plus two cuspidal origin
-  branches while retaining every order/class-group invoice.  Checks: `55`.
+  branches while retaining every order/class-group invoice; THM-3920 gives
+  the general cubic address cap and radial-chart closure.  Checks: `55`.
   Script/output/semantic SHA-256:
   `66e54dfe3cf1365a18f0df784e1dad9987c0ea74077da219edb5f817a16a583f` /
   `e8c8b9802d48d0d1a4ba70afba78bfda1e0081a9d1d0bd79a0ba4da9c29567a7` /
@@ -166,9 +168,11 @@
   one-place decic discriminant with packet `origin delta 34 + 2A2`, scalar
   resolvent units, and nonzero `Cl[3]`.  The unanchored color separation is
   constant; the affine-infinity anchor detects rationalization by a simple
-  tie.  Only the branch normalization is proved rational: cubic-field
-  rationality, a plane chart, Keller entry, and `JC(2)` remain open.  Checks:
-  `45`.  Script/output/semantic SHA-256:
+  tie.  Only the branch normalization is proved rational.  Cubic-field
+  rationality and the full rational-fibre lattice remain independent open
+  questions, but THM-3920 excludes a same-field Keller atlas by the cubic
+  address cap and the general radial-chart theorem.  `JC(2)` remains open.
+  Checks: `45`.  Script/output/semantic SHA-256:
   `c8fa01f5c50f7dff6ffd31c844c418cc94fbdec7ed5c3c009e5fbb992493ae73` /
   `426819660702d48c2a11b65268604c3a7198b6456193b996f5d0317c867537a9` /
   `89d595a4a896120d32ad58b0db0a0357e673e8df466d59e85503b35183ef6d1b`.
@@ -185,15 +189,34 @@
   `8e600a5af207caa25d0ccbbd6a3ce072f880dea4a9b1f42fbd04b5c532e21e50` /
   `94c771ae4e4b9062f489d3db570a00aaf3bb6834b5dce5728da5fdaa932543e8`.
 
+- `jc2_affine_plane_boundary_unibranch_depressed_cubic_chart_thm3920.py`
+  -> matching `.out` [THM-3920 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Every irreducible boundary curve in a normal completion
+  of `A2` is rational and unibranch, so a finite-flat degree-`d` completion
+  has at most `d` normalization addresses over a target point.  The cubic cap
+  excludes the affine packets of THM-3906, THM-3913, THM-3915, THM-3918, and
+  audited THM-3921; THM-3907's projective-infinity packet is outside its
+  scope.  More strongly, every irreducible radial chart
+  `A=F/4,C=sF/4`, `F=z^3-3p(s)z+2h(s)`, has no same-field affine-plane Keller
+  atlas: nonsquare `p`, nonconstant-square `p`, constant-square `p`, and
+  `p=0` close respectively by the cyclic-character, Mason, third-Veronese
+  forbidden-unit, and THM-3801 Kummer gates.  The radial grammar, not `JC(2)`,
+  is closed.  Checks: `97`.  Script/output/semantic SHA-256:
+  `aeab7d44be76d9ee50b11ab352701251ad8adc0aee7a85b10efa88b8c281b286` /
+  `11e01119ba16805131c3912bd89a96b733cf962d9f511198271d7d561dadd00b` /
+  `d7669931acc942440998ad33d9a378ab5a658e63a34ff603c96fddc5dd653495`.
+
 - `jc2_quintic_decic_degeneration_order_thm3921.py` -> matching `.out`
   [THM-3921 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  On
   the THM-3917 quintic locus, the one-place decic has four smooth plus two
   cuspidal origin branches (`delta=28`), two external `A2`, and two `A5`.
   These six origin branches are exactly the six collapsed addresses.  The
   rational finite-free normal nonmonogenic order, index `(A^5)`, scalar units,
-  and `Cl=Z^3+Z/3` all persist; THM-3917's boundary obstruction alone closes
-  the model.  The audit repaired coefficient-gcd one versus unit-ideal
-  generation (MISTAKE-466); nonmonogenicity is unchanged.  Checks: `69`.
+  and `Cl=Z^3+Z/3` all persist.  The genus relation is always
+  `g(D^nu)=g(F^nu)+1`, and the unique torsion element is the actual affine-
+  unramified cyclic-layer class.  THM-3917/3920 close the model.  The audit
+  repaired coefficient-gcd one versus unit-ideal generation (MISTAKE-466);
+  nonmonogenicity is unchanged.  Checks: `69`.
   Script/output/semantic SHA-256:
   `5f0db36702cfdd09296000f39dc5210bd6d8a2e6d385d0c1e07a4873198cf245` /
   `63e0fd607c0db03aa73f579c9b6d53cdb149e37e48997569847a459bf53cf076` /
@@ -227,7 +250,8 @@
   places of orders two and four.  The exact packet is ordinary-four plus two
   `A2` cusps; the companion also closes the minimal triple-root grammar and
   proves the sharp two-cusp cap for rational smooth-one-place sextics.
-  Checks: `91`.  Script/output/semantic SHA-256:
+  THM-3920 subsequently excludes this four-address packet by the cubic affine
+  address cap.  Checks: `91`.  Script/output/semantic SHA-256:
   `3558670eb81467e10f924c68f2222d0ba82b036fb98a68fcb30a76bd2f92036a` /
   `a559118dfc582684f0319411cee54f963f5c2139d267e53c325936ce4959d47a` /
   `6c584836bf42fa095c6a8b14da1aca1b70d30712bfb3ac152dbd97b3694a9757`.

@@ -11,8 +11,11 @@ status: >
   three-torsion.  The rationalization is exactly a simple tie between one
   conjugate radial color and the affine-infinity anchor; the unanchored
   two-color gain is constant and misses the transition.  This removes the
-  elliptic/Jelonek obstruction of THM-3913 but does not construct a plane
-  atlas or Keller map; JC(2) remains open.
+  elliptic/Jelonek obstruction of THM-3913.  Subsequent THM-3920 uses its
+  eight affine normalization addresses, and more generally the radial-chart
+  theorem, to exclude a same-field affine-plane Keller atlas.  Cubic-field
+  rationality and the full rational-fibre lattice remain independent open
+  questions; JC(2) remains open.
 source: root + jc_rational_deformation + jc_tournament_response, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS.  One route eliminated the repeated-root incidence to
@@ -35,6 +38,7 @@ related:
   - THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
   - THM-3916-positive-genus-collapsed-valuation-keller-obstruction
   - THM-3917-quintic-parameter-rational-collapsed-cubic
+  - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
 script: 04-computation/jc2_rational_moving_triple_root_decic_thm3918.py
 output: 05-knowledge/results/jc2_rational_moving_triple_root_decic_thm3918.out
 script_sha256: c8fa01f5c50f7dff6ffd31c844c418cc94fbdec7ed5c3c009e5fbb992493ae73
@@ -77,7 +81,9 @@ Let `T_rho/R` be the Delone--Faddeev cubic algebra of `(2)`.  Then:
    one has `Q_rho^*=k^*` and `Cl(Q_rho)[3]!=0`.
 
 This is a rational degeneration of the elliptic THM-3913 construction, not
-a Jacobian counterexample.  No plane atlas or Keller map is constructed.
+a Jacobian counterexample.  No plane atlas or Keller map is constructed here;
+THM-3920 subsequently proves that no same-field affine-plane Keller atlas
+exists for this radial chart.
 
 ## 1. The order and its one-place discriminant
 
@@ -303,10 +309,12 @@ elliptic quartic becomes a rational conic.
 
 THM-3913 excluded a plane atlas because its affine normalization was an
 elliptic curve minus one point.  Here the affine normalization is `A1`, so
-that obstruction disappears.  Its disappearance is not an atlas theorem:
-one must still construct or exclude a plane open in the cubic normalization,
-compute the actual rational-fibre removed lattice and boundary tariff, and
-meet the Keller condition.  Those tasks and `JC(2)` remain **OPEN**.
+that obstruction disappears.  Its disappearance is not an atlas theorem.
+Subsequent THM-3920 supplies the missing exclusion: the eight affine
+normalization addresses violate the cubic degree cap, and its stronger
+radial-chart argument closes the entire same-field Keller grammar.  Cubic-
+field rationality, the full rational-fibre removed lattice, and the boundary
+tariff remain independent mathematical questions; `JC(2)` remains **OPEN**.
 
 ## 7. Exact replay
 

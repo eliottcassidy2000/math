@@ -33,6 +33,7 @@ related:
   - THM-3916-positive-genus-collapsed-valuation-keller-obstruction
   - THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
   - THM-3921-quintic-genus-collapse-decic-degeneration-packet
+  - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
 script: 04-computation/jc2_quintic_parameter_rational_collapsed_cubic_thm3917.py
 output: 05-knowledge/results/jc2_quintic_parameter_rational_collapsed_cubic_thm3917.out

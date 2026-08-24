@@ -18,7 +18,9 @@ status: >
   blocks.  THM-3915 subsequently pays rationality, but THM-3916 closes its
   same-field Keller model; THM-3917 attains genus zero and then fails the
   boundary-unibranch invoice.  THM-3918 supplies a different rational decic,
-  not yet a rational cubic field or atlas.  Keller entry and JC(2) remain open.
+  not yet a proved rational cubic field; THM-3920 nevertheless excludes its
+  radial atlas and this theorem's seven-address packet.  Nonradial Keller
+  entry and JC(2) remain open.
 source: root / first post-THM-3908 coefficient-depth-three construction, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS after two proof-completeness clarifications.
@@ -45,6 +47,7 @@ related:
   - THM-3917-quintic-parameter-rational-collapsed-cubic
   - THM-3918-rational-moving-triple-root-one-place-decic-and-anchored-color-transition
   - THM-3919-thm3913-maximally-mixed-boundary-origin-cusp-kummer-class
+  - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
 script: 04-computation/jc2_moving_triple_root_one_place_elliptic_decic_thm3913.py
 output: 05-knowledge/results/jc2_moving_triple_root_one_place_elliptic_decic_thm3913.out
 script_sha256: 7b1f6ef2a2cd2381a3b44b2dd88c683deab23c16a5c37971ffd487a2334f8806
@@ -356,8 +359,10 @@ cubic-depth example
 confluences them, remains nonmonogenic and normal, and globalizes the
 resolvent three-class; it pays for those gains with genus one.  THM-3915 now
 supplies a different rational one-place decic and normal nonmonogenic `S3`
-order; the decic's quadratic double plane has `Cl[3]!=0`.  Its remaining
-invoice is a plane atlas, not rationality.  `JC(2)` remains **OPEN**.
+order; the decic's quadratic double plane has `Cl[3]!=0`.  THM-3920 now
+closes that radial plane-atlas route, independently of cubic-field
+rationality, and also gives an alternate seven-address obstruction here.
+Nonradial designs and `JC(2)` remain **OPEN**.
 
 ## 6. Exact replay
 

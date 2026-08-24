@@ -67,7 +67,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505`, and only 58 in `t>=U`: 57 scale-one plus `(2,1,9)`.  THM-3910
-  closes 41, leaving 17.  THM-3922 closes AP11 and 1,365 fixed scale-two
+  closes 41, leaving 17.  THM-3924 closes AP11 and 1,365 fixed scale-two
   bodies, no type; `t<U` and owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
@@ -358,9 +358,10 @@ asymptotic or residue.
   fan/three jets; THM-3898 canonical response, arbitrary sidecars open.
   THM-3890 quintics; THM-3906/3907 places `1/2`,`2/6`; THM-3908/3911 sextics;
   THM-3912/3914 conditional.  THM-3913/3919 give elliptic no-atlas/mixed
-  class.  THM-3915--3917 close two rational models.  THM-3918 has a rational
-  decic (`delta=34+1+1`), but its cubic field/atlas is open.  THM-3921 keeps
-  the algebra and maps six origin branches; THM-3917 kills it.  `JC(2)` OPEN.
+  class.  THM-3915/3916 and THM-3917/3921 close two rational models.
+  THM-3918 has a rational decic, but THM-3920's cubic address cap closes it
+  and every irreducible radial depressed-cubic chart.  Nonradial orders and
+  `JC(2)` stay OPEN.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
