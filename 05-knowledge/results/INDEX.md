@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `rule30_depth15_history_adaptive_route_thm4013.py` and its no-import audit ->
+  matching `.out`s [THM-4013 FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; all-scale Rule 30 OPEN]. On all `1<=n<=65535`, history
+  depths `3,4,5,6` leave `1522,197,33,10` transition-mismatch fibres; the first
+  cross-scale depth-three survivor is `1597/32967`. The physical base chain
+  leaves 111 mismatches. Conditional on its fibre, one selected full off-ray
+  chain suffices, but each fixed direction has a hostile. The audit rebuilds
+  65,535 records, 5,385,856 conjugacy entries and 196,605 routes independently.
+  Primary script/output/semantic SHA-256:
+  `9d124486612ea62cd8c031dee4aad76975a1d630af41c998d1680cf8314306c7` /
+  `a7fa61e33da8e9a3594ec3255e1b39597cfb7181c715390ce47fff68c0cbe16f` /
+  `6abf84f89c2d988a9c9eedf0b7d0e0a7f5a369e0faed6d467990d917b5369af6`;
+  independent script/output/semantic/stream:
+  `565e2d5e7cb1b1069dc65375d7dc2f4dad22fe8b08c596fb1257ea3ca999799c` /
+  `6630bc7e10c365c0b2a105526e8d46387d3e90ccf3211010c172c91335824a82` /
+  `836398e7aabefadaa1981d97bf2d0cba6c62c2c7b7a4c7c94e0badf22bbe0882` /
+  `5d203c998766dce0a06625767bc2e371138a4d2045e89403538e39736f31c17b`.
+
 - `confluent_consecutive_hasse_observer_thm4010.py` and its no-import audit ->
   matching `.out`s [THM-4010 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED]. Equality of `k` Hasse jets at consecutive nodes has exact

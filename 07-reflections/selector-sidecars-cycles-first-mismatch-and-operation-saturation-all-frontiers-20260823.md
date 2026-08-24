@@ -1129,6 +1129,16 @@ universe. This is the native-operation version of a basepoint debt: the owner
 portrait may agree while its action must still be evaluated on the cylinder
 actually occupied by the phase.
 
+[THM-4013](../01-canon/theorems/THM-4013-rule30-depth-fifteen-history-failure-and-adaptive-routed-repair.md)
+now gives the hostile continuation through `n=65535`. Three projective levels
+leave 1,522 transition fibres, including the first cross-scale survivor
+`1597/32967`; even six levels leave ten same-scale collisions. More static
+history is therefore not the observed repair. The physical base chain plus
+one base-fibre-selected full off-ray chain resolves the declared universe,
+while `8556/10974` and `9922/12670` force opposite directions. The selector is
+conditional on the base fibre: it is a finite routed lookup, not one fixed ray
+and not an all-scale finite-state theorem.
+
 The freshly integrated THM-4000 integral sampler is a useful typed contrast.
 Exact integer sample lifts satisfy a factorial Smith lattice, and that lattice
 makes evaluation at a new base well-defined modulo the optimal falling-
@@ -1218,7 +1228,7 @@ They do not share states, probability, chronology, or a reduction.
 | All-degree centered root map | pole-support carrier | apply local trace and the finite RH budget before exact color division | root-regular/shared/`C3,C2,C2xC2` carrier trichotomy | color existence, maximal ramification and arbitrary root gauge | exact color row plus maximal-order/source sidecar | THM-3959 closes all seven `N=5` signatures; degree at least six and other gauges remain |
 | Removed divisor lattice | resolvent three-class | saturate boundary sublattice | conditional three-divisibility | actual class and ADE mixing | full exceptional lattice | THM-3915 mixed boundary--ADE hostile |
 | Rational dual | reduced dual curve | cancel common tangent factor | reduced tangent map | nonimmersion multiplicity | `E_nu` tangent-base divisor | `[ST^(d-1):T^d:S^d]` |
-| Rule 30 words | selected ray image | positive affine-word action | complete static orbit | physical chronology and owner | phase-owned base plus routed off-ray query | THM-4006 `943/951` transition hostile |
+| Rule 30 words | selected ray image | positive affine-word action | complete static orbit | physical chronology and owner | phase-owned base plus fibre-selected off-ray query | THM-4013 `1597/32967`, opposite-direction hostiles |
 | Two-cube prime subsets | critical mass | singleton row plus Euler normalization | weight and disjointness inside the family | collisions outside the family | representation fibre | split-prime and exponent-three hostiles |
 
 Sidecars are consumer-specific.  A “root” may mean a polynomial coordinate, a

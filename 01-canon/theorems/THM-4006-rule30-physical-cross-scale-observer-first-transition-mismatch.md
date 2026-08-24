@@ -32,6 +32,7 @@ depends_on:
 related:
   - THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary
   - THM-3804-rule30-all-period-amplitude-lattice-smith-law
+  - THM-4013-rule30-depth-fifteen-history-failure-and-adaptive-routed-repair
 script: 04-computation/rule30_physical_cross_scale_observer_thm4006.py
 output: 05-knowledge/results/rule30_physical_cross_scale_observer_thm4006.out
 script_sha256: dd2557860f92421121e808d879353429aee0dcb1029744e1dd8f215bff834cdd

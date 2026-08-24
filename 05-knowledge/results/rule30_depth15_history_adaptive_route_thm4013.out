@@ -1,0 +1,21 @@
+RULE30_DEPTH15_HISTORY_ADAPTIVE_ROUTE_THM4013
+status=FINITE-EXACT_CANONICAL;no_all-scale_claim;no_rule30_prize
+dependency_sha256=2ce110f0b8e9c71c3d298aaf07e8e6c02b70d33e5671bc763f3f3b490caa5445
+universe=n=1..65535;scales=0..15;records=65535;phase_rule=0<=t<2^m;n=2^m+t
+owner_depth=4;odd_block=4;arithmetic_precision=4;maximum_projective_history=6
+v=(1, 3, 4, 6, 7, 9, 15, 16, 24, 25, 27, 29, 34, 36, 37, 39, 41);gaps=(2, 1, 2, 1, 2, 6, 1, 8, 1, 2, 2, 5, 2, 1, 2, 2)
+owner_conjugacy_route_transition_controls=(131070, 5385856, 196605, 32767)
+same_scale_top_bit_checks=98304
+same_scale_margin_controls=((0,1,5,16),(1,2,10,820),(2,4,18,62212),(3,8,34,4),(4,16,66,4),(5,32,130,4),(6,64,258,4),(7,128,514,4),(8,256,1026,4),(9,512,2050,4),(10,1024,4098,4),(11,2048,8194,4),(12,4096,16386,4),(13,8192,32770,4),(14,16384,65538,4),(15,32768,131074,4))
+censuses=(('history0',10097,7854,7638,7578,1204),('history1',24302,15055,14231,14052,1467),('history2',54025,9551,8422,8132,420),('history3',63589,1873,1522,1458,65),('history4',65214,309,197,197,0),('history5',65442,86,33,33,0),('history6',65491,41,10,10,0),('extension',63747,1726,1387,1327,60),('base_first',65088,444,373,362,11),('base_second',64676,829,478,464,14),('base_chain',65351,183,111,111,0),('base_plus_c1_first',65467,67,32,32,0),('base_plus_c2_first',65469,65,30,30,0),('base_plus_both_first',65502,32,8,8,0),('base_plus_c1',65490,44,9,9,0),('base_plus_c2',65485,49,14,14,0),('base_plus_both',65510,24,0,0,0))
+first_phase_owned_no_mismatch_refinement=base_plus_both
+conditional_first_address_census=(('base_enough',65240,65313),('either_one',57,114),('c1_only',22,44),('c2_only',24,48),('both_needed',0,0),('pair_unresolved',8,16))
+conditional_full_chain_census=(('base_enough',65240,65313),('either_one',88,176),('c1_only',14,28),('c2_only',9,18),('both_needed',0,0),('pair_unresolved',0,0))
+first_address_pair_unresolved_control=(8556,10974)
+conditional_full_direction_controls=((8556,10974),(9922,12670))
+history3_first_mismatch=((2,(15,6,1),(15,6,1,8,3,10,13,4,7,14,9,0,11,2,5,12),(5,7,5,15),('visible',1,0),((8,1,5),(1,3,15),(2,5,11))),(943,9,431,2,1,(15,6,1),(5,7,5,15),('visible',1,0),((8,1,5),(1,3,15),(2,5,11)),((1,54,29),(5,26,41),(9,14,53)),(1,(7,10,13))),(951,9,439,2,1,(15,6,1),(5,7,5,15),('visible',1,0),((8,1,5),(1,3,15),(2,5,11)),((1,22,45),(5,10,57),(9,46,5)),(1,(11,14,1))))
+history3_first_cross_scale_mismatch=((2,(9,12,11),(9,12,11,14,13,8,15,10,1,4,3,6,5,0,7,2),(9,11,9,3),('visible',0,0),((1,7,5),(2,13,1),(2,13,9))),(1597,10,573,2,2,(9,12,11),(9,11,9,3),('visible',0,0),((1,7,5),(2,13,1),(2,13,9)),((2,59,6),(6,15,34),(10,35,14)),(0,(1,8,3))),(32967,15,199,2,2,(9,12,11),(9,11,9,3),('visible',0,0),((1,7,5),(2,13,1),(2,13,9)),((2,11,38),(6,31,18),(10,3,62)),(0,(9,4,15))))
+repair_first_mismatch=NONE_IN_DECLARED_UNIVERSE
+semantic_sha256=6abf84f89c2d988a9c9eedf0b7d0e0a7f5a369e0faed6d467990d917b5369af6
+interpretation=three-level_projective_history_is_tested_after_carry;phase-owned refinements are compared componentwise;first no-mismatch refinement is finite-universe only
+ALL CHECKS PASSED

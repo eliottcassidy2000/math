@@ -1,0 +1,19 @@
+RULE30_DEPTH15_HISTORY_ADAPTIVE_ROUTE_THM4013_INDEPENDENT_AUDIT
+status=FINITE-EXACT_CANONICAL;scope=n=1..65535;no_all-scale_claim;no_prize_claim
+implementation_firewall=no_import_no_exec_no_read_of_primary_or_thm3511_module
+universe=1..65535;records=65535;scales=0..15
+valuations=(1, 3, 4, 6, 7, 9, 15, 16, 24, 25, 27, 29, 34, 36, 37, 39, 41)
+gaps=(2, 1, 2, 1, 2, 6, 1, 8, 1, 2, 2, 5, 2, 1, 2, 2)
+record_stream_sha256=5d203c998766dce0a06625767bc2e371138a4d2045e89403538e39736f31c17b
+physical_tail_conjugacy_route_controls=(131070, 5385856, 196605)
+direct_next_bank_controls=32767
+same_scale_top_bit_checks=98304
+same_scale_margins=((0,1,5,16),(1,2,10,820),(2,4,18,62212),(3,8,34,4),(4,16,66,4),(5,32,130,4),(6,64,258,4),(7,128,514,4),(8,256,1026,4),(9,512,2050,4),(10,1024,4098,4),(11,2048,8194,4),(12,4096,16386,4),(13,8192,32770,4),(14,16384,65538,4),(15,32768,131074,4))
+censuses=(('history0',10097,7854,7638,7578,1204),('history1',24302,15055,14231,14052,1467),('history2',54025,9551,8422,8132,420),('history3',63589,1873,1522,1458,65),('history4',65214,309,197,197,0),('history5',65442,86,33,33,0),('history6',65491,41,10,10,0),('c0',65351,183,111,111,0),('c0_c1_first',65467,67,32,32,0),('c0_c2_first',65469,65,30,30,0),('c0_both_first',65502,32,8,8,0),('c0_c1',65490,44,9,9,0),('c0_c2',65485,49,14,14,0),('c0_both',65510,24,0,0,0))
+adaptive_first_address=((('base_enough',65240,65313),('either_one',57,114),('c1_only',22,44),('c2_only',24,48),('both_needed',0,0),('pair_unresolved',8,16)),(('base_enough',None),('either_one',(8202,8660)),('c1_only',(8752,13012)),('c2_only',(1144,1930)),('both_needed',None),('pair_unresolved',(8556,10974))))
+adaptive_full_chain=((('base_enough',65240,65313),('either_one',88,176),('c1_only',14,28),('c2_only',9,18),('both_needed',0,0),('pair_unresolved',0,0)),(('base_enough',None),('either_one',(1144,1930)),('c1_only',(8556,10974)),('c2_only',(9922,12670)),('both_needed',None),('pair_unresolved',None)))
+history3_first_mismatch=((2,(15,6,1),(15,6,1,8,3,10,13,4,7,14,9,0,11,2,5,12),(5,7,5,15),('visible',1,0),((8,1,5),(1,3,15),(2,5,11))),(943,9,431,2,1,(15,6,1),(5,7,5,15),('visible',1,0),((8,1,5),(1,3,15),(2,5,11)),((1,54,29),(5,26,41),(9,14,53)),(1,(7,10,13))),(951,9,439,2,1,(15,6,1),(5,7,5,15),('visible',1,0),((8,1,5),(1,3,15),(2,5,11)),((1,22,45),(5,10,57),(9,46,5)),(1,(11,14,1))))
+history3_first_cross_scale=((2,(9,12,11),(9,12,11,14,13,8,15,10,1,4,3,6,5,0,7,2),(9,11,9,3),('visible',0,0),((1,7,5),(2,13,1),(2,13,9))),(1597,10,573,2,2,(9,12,11),(9,11,9,3),('visible',0,0),((1,7,5),(2,13,1),(2,13,9)),((2,59,6),(6,15,34),(10,35,14)),(0,(1,8,3))),(32967,15,199,2,2,(9,12,11),(9,11,9,3),('visible',0,0),((1,7,5),(2,13,1),(2,13,9)),((2,11,38),(6,31,18),(10,3,62)),(0,(9,4,15))))
+n6_zero_ray_vs_physical=(11, 12, 9),(15, 8, 5)
+semantic_sha256=836398e7aabefadaa1981d97bf2d0cba6c62c2c7b7a4c7c94e0badf22bbe0882
+ALL INDEPENDENT CHECKS PASSED

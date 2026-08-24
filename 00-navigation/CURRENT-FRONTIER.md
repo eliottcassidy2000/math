@@ -340,13 +340,12 @@ asymptotic or residue.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
-- **Rule 30:** THM-3502--3824 give compiler/carry, no finite-spatial cycles,
-  Smith forms, and shell kernels. A FINITE-EXACT `D=B=4`, length-nine census
-  has `13,853` portraits and an adaptive at-most-one-off-ray selector, but no
-  fixed ray. FINITE-EXACT THM-4006 reaches `n=1023`: its sole target mismatch
-  `943/951` needs the phase base, `20/574` needs projective history, and a
-  universal zero base already fails at `n=6`. Static tariff:
-  `2^(D+B-1)+B+2`; all-scale and physical prizes remain **OPEN**.
+- **Rule 30:** THM-3502--3824 give compiler/carry, cycle and shell kernels.
+  FINITE-EXACT THM-4006 reaches `n=1023`; the physical base repairs `943/951`.
+  [THM-4013](../01-canon/theorems/THM-4013-rule30-depth-fifteen-history-failure-and-adaptive-routed-repair.md)
+  reaches `n=65535`: history depths `3/4/5/6` leave `1522/197/33/10`
+  mismatches. A base-fibre-selected full off-ray repairs this finite universe;
+  either fixed direction fails. All-scale and Rule 30 prizes remain **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
   preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. Relative to one
   reconstructed Brendle--Hung implementation, the mixed identities and
