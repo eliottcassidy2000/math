@@ -349,7 +349,13 @@ asymptotic or residue.
   open. Conditional on the displayed `S6` analytic pieces and logarithm-sheaf
   compatibility, the marked centralizer-generated completed orbit is `2Z`;
   the infinite-fan quotient, attaching maps, nearby cycles, global recognition,
-  and headline remain open. Neither ledger verifies a global manifold.
+  and headline remain open. Independently, the standard octonionic tensor is
+  one of exactly two `G2`-invariant almost-complex structures on `S6`, and the
+  exact witness `N_J(e1,e2)=4e4` makes both nonintegrable; this excludes only
+  the invariant lane, not an arbitrary complex structure. The order-seven
+  Lyapunov preprint's displayed separator is exact, while a proved normal-
+  matrix theorem excludes every normal candidate and leaves `n=6` open.
+  Neither ledger verifies a global manifold.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3782 close
   named cells only. THM-3827--3972 route genus/degree, root/cusp/jet, `f=0`,
   cylinder and residue packets; global roots and arbitrary `f!=0` stay open.
@@ -377,6 +383,11 @@ asymptotic or residue.
   THM-3998 gives an independent conic/ODE proof of a fixed-node `3`-by-at-most-
   `3` raw weight cell already excluded by THM-3974/3987; it does not enlarge
   the closed region, whose first live retained-support sizes remain `3x4/4x3`.
+  THM-3999 proves the total companion boundary ledger:
+  `ord_D(Q)=2`, endpoint scheme `Spec k[y]/(gamma-R(0,y))`, and total strict
+  class `-2[D]`. It does not prove `Q` irreducible or complete the address
+  census; the two-cycle critical `Z/2` has no canonical map to THM-3994's
+  local `A1` class group.
   Multi-term cancellation, finite Keller/Darboux entry, and `JC(2)` stay open.
   Russell THM-3785/3843--3871 close named depth-through-five packets; the
   nonreduced `(6,4)`, rational corrections, and global entry remain open.
