@@ -40,6 +40,7 @@ def smith_diagonal(matrix: sp.Matrix) -> tuple[int, ...]:
 
 
 t, h, x, y, ell, q_symbol, sigma = sp.symbols("t h x y ell q sigma")
+monomials = tuple((i, j) for i in range(4) for j in range(4 - i))
 
 
 # ---------------------------------------------------------------------------
@@ -104,12 +105,83 @@ gate(
 
 
 # ---------------------------------------------------------------------------
+# The three high-fold sextic rows all fail.
+# ---------------------------------------------------------------------------
+
+weighted_degree_four = {
+    exponent: 6 * exponent[0] + 2 * exponent[1] for exponent in monomials
+}
+gate(
+    {exponent for exponent, weight in weighted_degree_four.items() if weight > 12}
+    == {(3, 0), (2, 1)},
+    "fold-four row uniquely forbids x-cubed and x-squared-y",
+)
+alpha, beta = sp.symbols("alpha beta")
+q3_fold_four = y**2 * (alpha * x + beta * y)
+delta6_fold_four = sp.factor(4 * x**3 * y**3 - 27 * q3_fold_four**2)
+zero(
+    delta6_fold_four
+    - y**3 * (4 * x**3 - 27 * y * (alpha * x + beta * y) ** 2),
+    "fold-four infinity form has a separate y-cubed support",
+)
+gate(
+    sp.expand(delta6_fold_four / y**3).subs(y, 0) == 4 * x**3,
+    "fold-four residual cubic does not vanish at the y-zero point",
+)
+
+weighted_degree_five = {
+    exponent: 6 * exponent[0] + 4 * exponent[1] for exponent in monomials
+}
+gate(15 not in weighted_degree_five.values(), "fold-five row has no degree-fifteen monomial")
+gate(
+    {exponent for exponent, weight in weighted_degree_five.items() if weight > 15}
+    == {(3, 0), (2, 1)},
+    "fold-five unique high monomials must vanish",
+)
+gate(
+    max(
+        weight
+        for exponent, weight in weighted_degree_five.items()
+        if exponent not in {(3, 0), (2, 1)}
+    )
+    == 14,
+    "fold-five residual weighted degree is at most fourteen",
+)
+
+aa, bb, cc, dd, K = sp.symbols("aa bb cc dd K")
+q3_fold_six = aa * x**3 + bb * x**2 * y + cc * x * y**2 + dd * y**3
+
+
+def pure_sixth_equations(linear_form: sp.Expr) -> list[sp.Expr]:
+    difference = sp.Poly(
+        sp.expand(K * x**3 * y**3 - 27 * q3_fold_six**2 - linear_form**6),
+        x,
+        y,
+    )
+    return [difference.coeff_monomial(x ** (6 - index) * y**index) for index in range(7)]
+
+
+axis_groebner = sp.groebner(
+    pure_sixth_equations(x), aa, bb, cc, dd, K, order="lex"
+)
+gate(axis_groebner.reduce(K**2)[1] == 0, "axis-supported sixth power forces K zero")
+
+mixed_groebner = sp.groebner(
+    pure_sixth_equations(x + y), aa, bb, cc, dd, K, order="lex"
+)
+gate(mixed_groebner.reduce(K)[1] == 0, "mixed sixth power forces K zero")
+
+
+# ---------------------------------------------------------------------------
 # A distinct-line quadratic coefficient is never an etale coefficient map.
 # ---------------------------------------------------------------------------
 
 coefficients = sp.symbols("c00 c10 c01 c20 c11 c02 c30 c21 c12 c03")
-monomials = (1, x, y, x**2, x * y, y**2, x**3, x**2 * y, x * y**2, y**3)
-q_generic = sum(coefficient * monomial for coefficient, monomial in zip(coefficients, monomials))
+monomial_expressions = tuple(x**i * y**j for i, j in monomials)
+q_generic = sum(
+    coefficient * monomial
+    for coefficient, monomial in zip(coefficients, monomial_expressions)
+)
 
 p_crossing = x * y
 jac_crossing = sp.diff(p_crossing, x) * sp.diff(q_generic, y) - sp.diff(
@@ -207,9 +279,9 @@ semantic_payload = {
     "normalization": "one_place_makes_h_polynomial_but_not_linear",
     "parallel": "distinct_parallel_line_factors_force_h_constant_by_coprime_square_UFD",
     "degree": "nonparallel_degree_N_branch_forces_deg_h_at_least_ceil_Nplus1_over2",
-    "sextic": "fold_degrees_4_5_6_with_line_packets_6_2__6_4__6_6",
+    "sextic": "fold_rows_4_5_6_killed_by_infinity_degree_and_binary_form",
     "kummer": "two_split_components_formal_relations_Z_plus_Z3_diagonal_only",
-    "boundaries": "classical_full_sextic_double_line_factors;arbitrary_q_component_hostile;high_folds_and_infinity_component_remain",
+    "boundaries": "classical_full_sextic_affine_singular_conics_closed;arbitrary_q_distinct_line_high_folds_and_double_line_components_open;infinity_component_open",
 }
 semantic_sha256 = hashlib.sha256(
     json.dumps(semantic_payload, sort_keys=True, separators=(",", ":")).encode()
@@ -220,9 +292,10 @@ print("normalization=h=3q/(2p) lies in k[t];p=3h^2;q=2h^3")
 print("parallel=distinct parallel affine factors impossible for nonconstant h")
 print("degree_N=deg(h)>=ceil((N+1)/2)")
 print("sextic=(d;e1,e2;infinity_contact)=(4;6,2;4),(5;6,4;2),(6;6,6;0)")
+print("sextic_rows=under_full_discriminant:d4_multiple_infinity;d5_degree15_gap;d6_pure_sixth_impossible")
 print("split_lattice=SNF(1,1,3,0);formal quotient Z plus Z/3")
 print("double_line=classical full sextic factors;arbitrary-q sextic component hostile;resolvent SNF(1,6)")
-print("scope=birational distinct-line and classical full-sextic double-line closed;high folds, arbitrary-q components, infinity component open")
+print("scope=classical full-sextic affine singular conics closed;arbitrary-q distinct-line folds, double-line components, infinity component open")
 print(f"semantic_sha256={semantic_sha256}")
 print(f"CHECKS={CHECKS}")
 print("RESULT=PASS")

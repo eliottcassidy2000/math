@@ -1,0 +1,10 @@
+THM-3929 exact root-regular and centered-Mobius companion
+CHECKS=39
+ROOT_REGULAR=a divides c,d; unit coefficient ideal forces scalar a
+MOBIUS_REMAINDER=p*q*u + q**2
+MOBIUS_RESULTANT=-27*q**3*(p**2 - 3*q)
+MOBIUS_SURVIVOR=q=0;primitive=x*t^3-p*t-1;scalar_endpoint=d
+HIGHER_POLE_DENOMINATOR=(u - 1)*(u + 1)
+COMPRESSED_DEGREES=A:3,B:8
+OPEN=homogeneous repeated-root maps of degree at least two
+SEMANTIC_SHA256=38b0bfb97e7063f80f78b2bd14fa84092c4aeaf1fca55dd447a2b49966bfe0f6

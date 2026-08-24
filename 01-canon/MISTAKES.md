@@ -154,8 +154,10 @@ Format per entry:
 - **Later recurrence:** the independently proved LRC signed-endpoint theorem
   was successively displaced from `THM-3922`, `THM-3924`, `THM-3927`, and
   `THM-3928`, and `THM-3930` by concurrent JC promotions or honest
-  reservations. Its theorem file and every dependency/navigation edge moved
-  atomically to `THM-3932`;
+  reservations. Its theorem file and every dependency/navigation edge first
+  moved atomically to `THM-3932`; a further incoming reservation of that ID
+  for the linear-conic fold classification displaced it once more to
+  `THM-3933`;
   the hash-bearing LRC companions and mathematical scope did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
