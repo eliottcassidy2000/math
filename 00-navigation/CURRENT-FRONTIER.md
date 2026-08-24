@@ -335,10 +335,10 @@ asymptotic or residue.
   Smith forms, and shell kernels. A FINITE-EXACT `D=B=4`, length-nine census
   has `13,853` portraits and selects at most one off-ray, but no fixed ray.
   Static tariff: `2^(D+B-1)+B+2`; all-depth/physical prizes remain OPEN.
-- **Hopf/S6:** both 2026 global claims remain **UNDER AUDIT**. THM-3990 proves
-  the component-average repair quotient; connected `Sigma` validates only that
-  final step. THM-3991 gives `chi=d*n!`, `d` components, and `(2,1)` only in
-  the irreducible one-Euler-fibre grammar. Neither verifies a global manifold.
+- **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
+  preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. THM-3990 validates
+  only the final connected-component repair; THM-3991 gives `chi=d*n!` only
+  for the stated periodic fan grammar. Neither verifies a global manifold.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3782 close
   named cells only. THM-3827--3972 route genus/degree, root/cusp/jet, `f=0`,
   cylinder and residue packets; global roots and arbitrary `f!=0` stay open.
@@ -346,10 +346,12 @@ asymptotic or residue.
   boundary ledgers, formal lifting, slope and monomial-coupling closures.
   THM-3985 closes `k[p,y]`; THM-3986 closes each one-positive-`x` adjacency;
   THM-3987 forces three weights per output (`3x4/4x3` first). THM-3989 leaves
-  nondividing depths, first `2:3`; its seam class
-  `theta(h)=[s^3]h*[s]` blocks automatic square-root lifting, while the
-  simple-base slice forces `F_p(0,0)=lambda^2/12`. That cell, multi-term
-  cancellation, finite Keller/Darboux entry, and `JC(2)` remain open.
+  nondividing depths, first `2:3`; its seam class blocks automatic root lifting.
+  THM-3992 forces `h=gamma*s`, a nodal deleted-line image, and residual
+  `R in (p^2,y)`, but leaves its two clutch addresses globally unjoined.
+  THM-3994 separates a double resultant into either two transverse addresses
+  or one length-two `A1` centre; multiplicity alone is not a closure test.
+  Multi-term cancellation, finite Keller/Darboux entry, and `JC(2)` stay open.
   Russell THM-3785/3843--3871 close named depth-through-five packets; the
   nonreduced `(6,4)`, rational corrections, and global entry remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.

@@ -81,6 +81,15 @@ useful as explicit proof-by-proof verification. **Evidence:** MISTAKE-158/183/
 **Counterindication:** retain valid local estimates as components after the reframe.
 **Evidence:** the `L -> M` and observer-lens reframes in §1 of [`lrc14-history-synthesis-patterns-and-reframings-opus-S399.md`](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md), and the support-profile correction in MISTAKE-209.
 
+## Compute the repair quotient before testing the residual defect
+
+**Trigger/action:** when corrections or gauges can change
+a defect, test it only after taking the actual `coker(A)`; retain the ring.
+Laplacians leave means, integral graphs can retain Smith torsion, and target
+shears erase Laurent constants.
+**Caution/evidence:** nonlinear/singular repairs need `ker(A^*)` and interface
+data; THM-3990/3989/3955/3957 and MISTAKE-480.
+
 ## Type every analogy and every implication
 
 **Trigger:** formulas look identical, an analogy suggests an iff, or a scalar equation is read coefficientwise.

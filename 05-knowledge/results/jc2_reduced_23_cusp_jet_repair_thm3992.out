@@ -1,0 +1,51 @@
+ASSUMPTIONS: char(k)=0; h in k[s] is nonzero; THM-3989 adds s|h.
+All divisions below occur in k(s); no hypothesis h|b is used.
+PASS  leading A normalization
+PASS  leading C normalization under kappa^5=alpha*beta
+PASS  tau^-4 direct Laurent extraction
+PASS  tau^-4 factorization
+PASS  tau^-4 after constant shear
+PASS  tau^-3 direct Laurent extraction
+PASS  tau^-3 factorization
+PASS  tau^-3 after constant translation
+PASS  tau^-2 direct Laurent extraction
+PASS  tau^-2 repair row
+PASS  tau^-1 direct Laurent extraction
+PASS  tau^-1 invariant row
+PASS  simplified harmonic invariant I
+PASS  simplified C2 approximate-root coefficient
+PASS  tau^0 direct Laurent extraction
+PASS  tau^0 bracket repair row
+PASS  scalar moment identity
+PASS  target cusp polynomial tau^-6
+PASS  target cusp polynomial tau^-5
+PASS  target cusp polynomial tau^-4
+PASS  target cusp polynomial tau^-3
+PASS  target cusp polynomial tau^-2
+PASS  target cusp polynomial tau^-1 repair class
+PASS  moment -s implies the tau^0 row equals 1
+PASS  repair numerator factors as 4s+hK
+DEDUCTION: k[s] normality plus constant I forces q0 in k[s], hence h|b.
+DEDUCTION: polynomial C2 and repair then force h|s; THM-3989 has s|h.
+           Therefore h=gamma*s with gamma in k*.
+PASS  forced deleted-line A normal form
+PASS  forced deleted-line C normal form
+PASS  forced boundary nodal eliminant
+PASS  cusp boundary has both x-derivatives zero at X=0
+PASS  centered node addresses match the transverse quadratic
+PASS  boundary Bezout value A_t(0,0)
+DEDUCTION: on t=0 every normalized pair has
+           A=X^2+a0, C=X^3+(3*a0/2)X, I=3*a0^2/4.
+DEDUCTION: a0=0 makes A_x=C_x=0 at X=0, contradicting J=1.
+           Hence a Keller pair forces a0!=0, I!=0, and a nodal boundary.
+DEDUCTION: the two node addresses force q0(0)=0 and F_p(0,0)=3*a0/(2*gamma).
+           Thus b is divisible by s^2 and A1(0)=-2/(3*gamma*a0).
+PASS  control parametrization lies on eliminant
+PASS  control Weierstrass expansion
+PASS  control Jacobian is zero
+CONTROL cusp: a=0 gives I=0 and C^2=A^3 (one normalization address).
+CONTROL node: a!=0 gives I=3*a^2/4!=0 and
+              C^2=A^3-(3*a^2/4)A-a^3/4 (two addresses at the node).
+NOTE: both controls have bracket zero and fail 2*h^2*W-I*q0=s;
+      they test geometry, not existence of a Darboux pair.
+ALL EXACT CHECKS PASSED

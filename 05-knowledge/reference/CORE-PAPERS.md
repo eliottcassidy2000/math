@@ -3,8 +3,7 @@
 > **Freshness:** sources were checked **2026-07-21** unless dated later.
 > Recheck **PREPRINT**, **RADAR**, and **SEMINAR ONLY** before priority claims.
 
-This maps imported claims, consumers, and exclusions.  Because IDs can
-collide, links—not bare IDs—are canonical.
+This maps imported claims, consumers, and exclusions; links—not bare IDs—are canonical.
 
 ## Fast frontier snapshot
 
@@ -14,8 +13,9 @@ collide, links—not bare IDs—are canonical.
 - **Flows:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes the exact-cost conjecture; cost-free `d_max` and planar `2d_max` survive.
 - **Reciprocals:** support differs from indexed multiplicity; figurate formulas omit repo extensions.
 - **JC/DC:** THM-1300 refutes `JC(n>=3)`; `JC(2),DC(1),DC(2)` are open. THM-2071 is local; THM-2044 refutes the two-pair Poisson claim.
-- **Hopf/S6:** the 2026-08-24 manuscript is **PREPRINT CLAIM / UNDER AUDIT**;
-  its [ledger](CORE-PAPERS-HOPF-S6-2026-08-24.md) keeps it unsolved; THM-3990 proves only repair, THM-3991 only the factorial Euler obstruction.
+- **Two Hopf problems:** the [Brendle--Hung `S2 x S2` claim](CORE-PAPERS-BRENDLE-HUNG-S2XS2-2026-08-24.md)
+  and [Hopf/S6 claim](CORE-PAPERS-HOPF-S6-2026-08-24.md) are distinct **PREPRINT CLAIM / UNDER AUDIT** results, not solved claims.
+  THM-3990 proves only the final repair quotient; THM-3991 only the factorial Euler obstruction.
 
 ## Rule 30
 

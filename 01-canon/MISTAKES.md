@@ -9,6 +9,35 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-480 (2026-08-24, Hopf/S6 clutch synthesis) -- a kernel of raw twist coordinates was mistaken for lost analytic moduli
+
+- **What failed:** the first Hopf/S6 synthesis observed that
+  `p=ab ell0-b ell1-a ell2` has the kernel vector `(1,a,0)` and concluded
+  that `p` was not a lossless address for the analytic threefold.  It proposed
+  a shortlex rank of a kernel representative as a sidecar.
+- **Minimal witness / first failed implication:** for coprime `a,b`, the full
+  kernel is
+  `Z(1,a,0) direct_sum Z(1,0,b)`.  Under the manuscript's Seifert notation
+  `e0=ell0`, `beta1=-ell1`, `beta2=-ell2`, these are exactly the standard
+  presentation changes `(e0,beta1,beta2)->(e0+1,beta1-a,beta2)` and its
+  `b`-analogue.  Thus “different raw coordinate” did not imply “different
+  gluing object,” much less “different analytic threefold.”
+- **Repair / strongest survivor:** `p` is noninjective on raw labelled triples
+  but complete for the displayed Seifert data modulo standard gauge.  Whether
+  the corresponding holomorphic fillings are gauge-equivalent remains
+  **OPEN**.  First quotient the twist lattice by global section and
+  fibre-translation gauge; only a surviving quotient class can be a moduli
+  sidecar.  The scalar response formula, Smith presentation, and native
+  increments all survive unchanged.
+- **Reusable rule:** before turning the kernel of a coordinate evaluator into
+  extra moduli, quotient by changes of presentation and geometric gauge.  A
+  raw-coordinate collision is evidence of information loss only after it
+  survives that quotient.
+
+The incoming branch also carried the already-recorded THM-3954 reservation
+race under stale ID `MISTAKE-467`; current MISTAKE-473 is the canonical,
+stronger entry for that incident.
+
 ## MISTAKE-479 (2026-08-24, THM-3978 linear seam) -- a Hamiltonian response image was treated as a ring endomorphism
 
 - **What failed:** the first promotion draft wrote the completion response as

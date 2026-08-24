@@ -178,9 +178,29 @@ The native response increments are
 Delta_ell0 p=ab,   Delta_ell1 p=-b,   Delta_ell2 p=-a. (8)
 ```
 
-For `(a,b)=(3,4)`, the move `(1,3,0)` lies in the kernel of the evaluator.
-Consequently `|p|` is a lawful ordinal for one selected response, but is not
-a lossless address for the gluing triple or the analytic threefold.
+For coprime `(a,b)`, the exact kernel is
+
+```text
+ker(phi)=Z(1,a,0) direct_sum Z(1,0,b).
+```
+
+Indeed, reducing `ab d0=b d1+a d2` modulo `a` and `b` gives
+`d1=a r`, `d2=b s`, and then `d0=r+s`.  Thus `p` is noninjective on raw
+labelled triples.  This does **not** show that it loses an analytic gluing
+parameter.  Under the manuscript's Seifert coordinates
+`e0=ell0`, `beta1=-ell1`, `beta2=-ell2`, the two kernel generators are exactly
+the standard presentation changes
+
+```text
+(e0,beta1,beta2) -> (e0+1,beta1-a,beta2),
+(e0,beta1,beta2) -> (e0+1,beta1,beta2-b).
+```
+
+Consequently `p` is complete for the displayed Seifert data modulo these
+standard gauge moves.  Whether the corresponding holomorphic fillings are
+also gauge-equivalent is **OPEN**.  The analytic gluing lattice must first be
+quotiented by global section/fibre-translation gauge; no kernel representative
+may be promoted to a moduli sidecar before that calculation.
 
 Assuming only the manuscript's stated orientation-preserving identification
 of opposite boundary curves, the conductor pushout itself can be audited
@@ -447,3 +467,63 @@ output  a7e8e94071a58825fde77dcaa4298614c8499e18d1f5aeabd884976efae443bd
 Before any promotion of the manuscript's main conclusion, rerun the exact
 audit, close the six nonfinite gates in Section 5, and obtain independent
 specialist verification of the analytic construction and topology.
+
+## 9. Exact extensions found by the 2026-08-24 audit
+
+### The periodic-fan grammar is Euler-isolated in torus dimension two
+
+[THM-3991](../../01-canon/theorems/THM-3991-periodic-unimodular-toric-cusp-factorial-euler-obstruction.md)
+proves independently of the manuscript that a rank-`n`, lattice-periodic,
+unimodular toric central fibre divided by an index-`d` translation sublattice
+has
+
+```text
+chi(W)=d*n!,                 number of components=d.       (15)
+```
+
+Only top-simplex orbits contribute Euler characteristic, and their number is
+forced by normalized volume.  If this is the only nonzero-Euler fibre of a
+compact torus fibration with homology `S^(2n+2)`, then `d*n!=2`; irreducibility
+forces `(n,d)=(2,1)`.  Thus the manuscript's immediate higher-rank grammar
+cannot produce higher even-dimensional homology spheres.  Extra singular
+fibres, fixed-point quotients, singular cones, or a different degeneration
+grammar are the exact escape routes.
+
+### The correct discrete moduli problem is a gauge quotient
+
+Equation `(8)` must be interpreted after quotienting the twist lattice by
+global fibre translations and changes of local section.  The immediate
+calculation is a Cech `H^1` problem for the sheaf of torus sections, not the
+selection of a preferred representative in `ker(phi)`.  Until that quotient
+is computed, “same `p` gives distinct complex threefolds” is unsupported.
+
+### Narrow the representation search through a rational-elliptic spine
+
+Remark 3.12 of the manuscript identifies the `tau`-spine with a rational
+elliptic surface whose three Kodaira fibres are
+
+```text
+IV*, III, I1,                 8+3+1=12.                   (16)
+```
+
+This suggests a sharper search than enumerating arbitrary coprime `(a,b)`
+pairs and rank-four matrices.  First classify three-fibre rational elliptic
+surfaces with the desired elliptic orders and cusp width; then derive the
+rank-four extension and Abel--Jacobi coordinate from Gauss--Manin data.  For
+orders `3,4` with a multiplicative cusp, the elementary Euler filter also
+permits `IV+III+I5`; the primitive width-one cusp singles out the displayed
+`IV*+III+I1` spine.
+
+### Continuous parameters must first be divided by the integral centralizer
+
+Exact linear algebra gives the simultaneous integral centralizer
+
+```text
+C_GL4(Z)(T1,T2)={+/- (I+b E14): b in Z}.                 (17)
+```
+
+The element `I+b E14` shifts the manuscript's `beta` coordinate, and hence
+the punctured-family constant `c0`, by an integer.  Thus `c0 mod Z` is at most
+the first continuous address.  Whether these isomorphisms extend through all
+three fillings is **OPEN** and should be decided before searching for finer
+continuous moduli.
