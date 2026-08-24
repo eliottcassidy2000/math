@@ -2,25 +2,34 @@
 id: THM-3996
 title: "Etale node-address balance forces cycles or nonproperness"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For a dominant etale polynomial plane map and an
-  integral target curve with a node outside the nonproperness locus, normalize
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For a dominant
+  etale polynomial plane map and an integral target curve with a node outside
+  the nonproperness locus, normalize
   the finite pullback and direct each source-node address from its plus-branch
   component to its minus-branch component. Every vertex has indegree equal to
   outdegree, both equal to its finite-etale covering degree. Hence every edge
   lies on a directed cycle; a complete forest forces the target node into the
-  nonproperness/Jelonek locus. Applied to THM-3992, distinct owners of the two
+  nonproperness/Jelonek locus. Zariski Main plus finite flatness also identifies
+  that locus exactly with fibre-cardinality defect. Applied to THM-3992,
+  distinct owners of the two
   known companion germs require an additional node address unless the node is
-  nonproper. If the two known addresses are the full connected packet, the
-  companion germs have one owner and form a two-edge cycle with t=0.
+  nonproper. In fact the Keller degree gap excludes generic degree two, so the
+  complete finite fibre always has at least one additional address. If the two
+  known addresses are their full connected packet, the companion germs have
+  one owner and form a two-edge cycle, possibly beside a disjoint packet.
 source: root + nodal_companion_completion / THM-3992 completion audit, 2026-08-24
 audit: >
-  PASS (root + thm3996_hostile_audit, 2026-08-24). The graph proof was
-  independently checked through finite-etale base change to normalization and
-  a condensation-DAG balance argument. The companion verifies the THM-3992
+  PASS (root + thm3996_hostile_audit + node_fibre_census_attack, 2026-08-24).
+  The graph proof was independently checked through finite-etale base change
+  to normalization and a condensation-DAG balance argument.  The global
+  third-address corollary was separately checked against finite-fibre rank and
+  THM-1330's degree-two gate. The companion verifies the THM-3992
   normalization, node addresses, cycles of lengths 2..12, the deleted-address
   path hostile, Riemann-Hurwitz degree-one control, and an embedded two-cycle
   model. Normal and optimized runs match.
 depends_on:
+  - THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule
+  - THM-3968-canonical-vector-different-affine-plane-boundary-obstruction
   - THM-3992-reduced-two-three-cusp-jet-repair-and-first-node-residual
 related:
   - THM-3955-node-cotangent-normalization-kernel-and-conductor-torsion
@@ -126,6 +135,30 @@ Gamma_o(F,N) nonempty, complete, and cycle-free
                                       ==>  o in S_F.      (7)
 ```
 
+There is also an exact fibre-defect description of `S_F`.  Let `Xbar` be the
+normalization of `Y` in `k(X)`.  Zariski Main Theorem identifies `X` with an
+open subscheme of the finite surface `Xbar`.  A normal surface is
+Cohen--Macaulay, so miracle flatness over the regular surface `Y` makes
+`Xbar->Y` finite flat of rank
+
+```text
+d=[k(X):k(Y)].
+```
+
+Every point of an affine fibre in `X` has length one because `F` is etale,
+whereas every scheme fibre of `Xbar` has length `d`.  If
+`B=Xbar minus X`, finiteness makes its image closed and gives
+
+```text
+S_F=image(B),
+#F^(-1)(y)<=d,                 y notin S_F iff #F^(-1)(y)=d.       (7a)
+```
+
+Indeed, off `image(B)` the finite completion equals `X`; conversely, equality
+of the `d` reduced affine points uses the whole finite-flat fibre and leaves
+no boundary point above `y`.  Thus missing fibre cardinality is exactly the
+nonproperness defect, not merely a one-way test.
+
 ## 3. Application to the forced THM-3992 node
 
 In THM-3992 put
@@ -166,6 +199,52 @@ distinct companion owners
   ==>  an additional node address or o in S_F.          (11)
 ```
 
+For a Keller map, the ownership hypothesis can be removed from the existence
+of an extra address.  Put
+
+```text
+d=[k(x,t):k(A,C)].
+```
+
+If `o notin S_F`, `(7a)` says that its fibre over `o` consists of exactly `d`
+distinct points.  The two
+squarefree roots in `(9)` are distinct source points with the same image;
+hence `F` is not an automorphism and `d!=1`.  THM-1330's classical
+Galois-Keller gate excludes `d=2`, so `d>=3`.  Therefore
+
+```text
+o notin S_F  ==>  #F^(-1)(o)=d>=3;
+the two known addresses are the complete fibre  ==>  o in S_F.          (11a)
+```
+
+THM-1330 is stated over `C`.  The same implication over an arbitrary
+algebraically closed characteristic-zero field follows by descending the
+finitely many coefficients to a finitely generated characteristic-zero
+subfield, embedding that field in `C`, and using faithful base change for
+field degree and polynomial invertibility.
+
+The minimal generic degree `d=3` is completely rigid at the graph level.
+Write the known edges as
+
+```text
+W_L -> P,                    M -> W_L.
+```
+
+If `P!=M`, the third edge is forced to be `P->M`, giving the exact directed
+triangle.  If `P=M=C`, either `r_C=2` and the third edge is a loop at `C`, or
+`r_C=1` and a disjoint degree-one vertex supplies the third edge as a loop.
+These are all balanced three-edge graphs.  Properness over the whole nodal
+cubic forces every `r_i=1`, removing the first common-owner pattern; if the
+whole pullback is also connected, only the triangle remains.  No inherited
+result forces this special-curve pullback to be connected.
+
+Without assuming properness, `(7a)` still makes the degree-three fibre census
+exact: the forced node has either two or three affine preimages, and
+
+```text
+#F^(-1)(o)=2 iff o in S_F,           #F^(-1)(o)=3 iff o notin S_F.       (11b)
+```
+
 If the two known addresses are the entire connected packet containing `L`
 and `o notin S_F`, balance forces their other endpoints to be the same vertex
 `W_C`. The packet is
@@ -174,9 +253,11 @@ and `o notin S_F`, balance forces their other endpoints to be the same vertex
 W_L -> W_C -> W_L,                                     (12)
 ```
 
-a two-edge multicycle. Thus a full two-address audit forces one companion
-owner; a two-owner audit without further addresses forces the node itself
-into the nonproperness locus.
+a two-edge multicycle. Thus a full two-address **connected-packet** audit
+forces one companion owner; a two-owner packet without further addresses
+forces the node itself into the nonproperness locus.  By `(11a)`, this
+two-cycle cannot be the entire finite fibre, but it may coexist with a
+disjoint address packet.
 
 This is the correction in MISTAKE-469. The roots of `Q(x,0)` enumerate only
 clutches lying on `L`; they are not a census of `F^(-1)(o)`. Moreover these
@@ -202,9 +283,9 @@ Since `g>=0`, `d>=1`, and `r>=1`, equation `(13)` forces `d=r=1` and `g=0`.
 Thus every vertex of the connected packet has indegree and outdegree one, so
 the packet is one directed cycle.
 
-If its total degree is `d`, it has `d` vertices and `d` node addresses. In
-the THM-3992 packet, `d=2` forces the common companion owner in `(12)`.
-Distinct companion owners require `d>=3` and exactly `d-2` further node
+If its total degree is `e`, it has `e` vertices and `e` node addresses. In
+the THM-3992 packet, `e=2` forces the common companion owner in `(12)`.
+Distinct companion owners require `e>=3` and exactly `e-2` further node
 addresses beyond the two on `L`.
 
 ## 5. Sharp models and failure boundary
@@ -250,10 +331,10 @@ it is not an ambient Keller map.
 
 ## 6. Exact residual and scope
 
-THM-3996 does not determine which alternative in `(11)` occurs for THM-3992.
-It does not prove that the two known addresses exhaust the node fibre, that
-the node belongs to `S_F`, that a companion divisor is irreducible, or that a
-cycle carries a nonzero class. It proves that these are the exhaustive next
+THM-3996 does not determine which alternative in `(11a)` occurs for THM-3992.
+It does not exhibit the additional address, prove that the node belongs to
+`S_F`, prove that a companion divisor is irreducible, or show that a cycle
+carries a nonzero class. It proves that these are the exhaustive next
 sidecars:
 
 ```text
@@ -265,8 +346,8 @@ cycle class only after the graph is complete.           (17)
 
 A cycle is not a Keller obstruction by itself, and a Jelonek value is expected
 for a hypothetical nonproper Keller map. The gain is that the former
-forest-versus-cycle guess has become the exact dichotomy `(11)`, with one
-additional-address minimum and a sharp hostile. **QED.**
+forest-versus-cycle guess has become the exact dichotomies `(11)` and `(11a)`,
+with one additional-address minimum and a sharp hostile. **QED.**
 
 ## Reproduction
 

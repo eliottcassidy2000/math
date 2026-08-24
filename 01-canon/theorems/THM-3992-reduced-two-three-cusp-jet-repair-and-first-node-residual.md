@@ -428,8 +428,10 @@ completion-boundary primes, whereas these pullback curves lie inside the
 source.  One must first determine whether further node addresses occur and
 whether the target node lies in the nonproper-value locus.  See MISTAKE-469.
 THM-3996 proves the resulting exact alternative: distinct companion owners
-force an additional address or a nonproper target value, while a complete
-two-address finite packet forces a common owner and a two-edge cycle.
+force an additional address or a nonproper target value.  More strongly, the
+Keller degree-two exclusion says that the complete fibre has an additional
+address whenever the node is proper; a two-edge cycle can only be one
+connected subpacket.
 
 Reproduce from the repository root:
 

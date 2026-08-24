@@ -47,8 +47,9 @@ Six unconditional results came out of that grammar.
    proves the complete node-address conservation law.  Away from the
    nonproperness locus, each normalized component has equal incoming and
    outgoing address degree, every address lies on a directed cycle, and the
-   two THM-3992 clutches force either a common companion owner, an additional
-   address, or a Jelonek value.
+   two THM-3992 clutches force either an additional address or a Jelonek
+   value.  Distinct companion owners put the extra address in their packet;
+   a two-edge common-owner cycle can only be a proper subpacket.
 
 The source ledgers remain deliberately stricter:
 
@@ -266,6 +267,9 @@ distinct companion owners must therefore pay at least one extra node address.
 A complete forest instead detects nonproperness at the node.  This exact
 dichotomy is
 [THM-3996](../01-canon/theorems/THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy.md).
+The generic-degree gap strengthens it: outside the Jelonek locus the complete
+fibre has `d>=3` points, so some third address exists even when the two known
+clutches already form a common-owner cycle.
 On any completed graph, a forest has no clutch holonomy and a cycle is the
 only place a new three-primary class can live; existence of that class would
 still not make it a Keller boundary basis.  This repairs the overreach
@@ -436,10 +440,24 @@ against the fact that affine line has no nontrivial connected finite etale
 cover in characteristic zero.  By
 [THM-3996](../01-canon/theorems/THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy.md),
 the complete address graph is balanced away from the nonproper locus:
-distinct companion owners force extra addresses, whereas the full two-address
-packet forces a common owner and a two-edge cycle.  A complete forest forces
-the node into the nonproper locus.  This is the precise replacement for the
-retracted boundary-forest shortcut.
+distinct companion owners force extra addresses, whereas a complete
+two-address connected packet forces a common owner and a two-edge cycle.  A
+complete forest forces the node into the nonproper locus.  Since a
+noninvertible Keller map has
+generic degree at least three, the two-edge cycle can only be a connected
+subpacket: a finite full node fibre has at least one further address.  This is
+the precise replacement for the retracted boundary-forest shortcut.
+
+There is a sharper **CONDITIONAL** completion test using
+[THM-3968](../01-canon/theorems/THM-3968-canonical-vector-different-affine-plane-boundary-obstruction.md).
+If this lane supplies an actual finite flat cubic normal completion whose
+unique boundary prime has
+tame inertia two, then a boundary point over the node consumes fibre length
+at least two.  Together with the two known reduced affine addresses this
+would exceed rank three.  In that completed cubic model the node is therefore
+not Jelonek and has exactly one additional affine address.  The missing
+hypothesis is precisely that the cusp chart under study is the actual finite
+normal completion, not merely a rational/local model.
 
 ### D. Oriented conductor Smith compiler
 
@@ -503,7 +521,7 @@ sidecars that killed the quintic mirage.
 | Brendle residual torus | general repair problem | conformal tensor to Laplacian response | quotient class and sign | curvature formula | completed components, uniform remainder | exact `ker A*` / Farkas test |
 | `S6` conductor quotient | JC boundary | normalization and branch gluing to incidence matrix | integral cokernel | complex integrability, Keller equation | branch labels, orientations, units | Smith plus hostile reversed edge |
 | THM-3991 fan | higher-rank cusp | simplex orbit count | Euler budget | attaching maps, analytic compactness | stabilizers, cone indices, extra fibres | Burnside Euler census |
-| THM-3992 node | cubic-cover boundary | two source addresses to dual edges | local clutch type | global component ownership | normalized companion factors | factor plus `H1(dual,mu3)` |
+| THM-3992 node | cubic-cover boundary | source addresses to dual edges | local clutch type | full fibre and ownership | normalized factors, Jelonek flag | census fibre or prove node nonproper |
 | THM-3994 resultant | any eliminant collision | scalar root to base scheme | total length | support distribution and graph singularity | completed ideal/Rees algebra | primary decomposition plus Jacobian |
 | LRC tariff equality | repair matrix | lawful owner event to response column | signed left-kernel obstruction | chronology if owners are dropped | exposure, masking, period | exact event matrix on 17 types |
 | `3,4,infinity` monodromy | rational elliptic model | local exponents to Kodaira fibres | integral monodromy conjugacy | global toric quotient | lattice marking, cusp width | Weierstrass/Picard--Fuchs rebuild |
