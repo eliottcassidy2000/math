@@ -395,11 +395,15 @@ affine-plane open and blocks Keller. THM-3974 closes two-by-three and
 transpose at every height and
 gives the height-two seven-piece floor. THM-3976 computes the rational-
 compression pseudoplane and its internal degree/support floors. THM-3975
-adds a height-three finite cubic and proves that no rational repair can retain
-any nonconstant element of `k(p)` as first coordinate. Arbitrary completion pairs
-remain open. THM-3977 closes the lowest cusp/arm seam family; THM-3978 proves
-that the submersive linear seam has a rational mate but owes the two exact
-response factors `A^(n-1)` and `(A+c)^(n-1)` before it enters the completion.
+adds an exact odd-rank all-height finite-free tower and proves that no rational
+repair can retain any nonconstant element of `k(p)` as first coordinate.
+Arbitrary completion pairs remain open. THM-3977 closes the lowest cusp/arm
+seam family and both tested formal corrections. THM-3978 proves that the
+submersive linear seam has a rational mate but owes the two exact response
+factors `A^(n-1)` and `(A+c)^(n-1)` globally, even though each completed color
+chooses a successful but incompatible invariant constant. THM-3979 proves
+the cusp invoices lift to every formal order; THM-3981 proves its canonical
+quadrature cannot algebraize because it is a genus-two Abelian integral.
 The orthogonal THM-3955/57 node and
 coordinate-crossing cotangent sequences are proved local sidecars, not global
 Jacobian or Hopf results.

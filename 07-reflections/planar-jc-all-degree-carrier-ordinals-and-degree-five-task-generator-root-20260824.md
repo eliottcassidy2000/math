@@ -276,12 +276,15 @@ THM-3973 gives the exact-volume completion passport and a globally
 nonmonogenic finite cubic, but its ramification curve meets the affine-plane
 open and prevents Keller.
 THM-3974 closes two-by-three and transpose at every height and gives the
-height-two seven-piece floor. THM-3975 adds a height-three finite cubic,
-two-color/plinth data, and all-height rational no-mates for every nonconstant
-`f in k(p)`. THM-3976 identifies the compression pseudoplane and its
-internal floors. THM-3977 closes the lowest simultaneous cusp/arm seam;
-THM-3978 computes the linear-seam plane/completion response ideals and rules
-out its constant mate. Unrestricted support remains open.
+height-two seven-piece floor. THM-3975 adds an exact odd-rank all-height
+finite-free tower, two-color/plinth data, and rational no-mates for every
+nonconstant `f in k(p)`. THM-3976 identifies the compression pseudoplane and
+its internal floors. THM-3977 closes the lowest simultaneous cusp/arm seam
+and both tested formal corrections. THM-3978 computes the linear-seam
+plane/completion response ideals and separates its incompatible completed
+integration constants. THM-3979 proves all-order formal cusp lifting, while
+THM-3981 proves the canonical lift is a transcendental genus-two quadrature.
+Alternative gauges and unrestricted support remain open.
 
 The session therefore ends at a sharp boundary.  **PROVED:** degree-four
 centered nonentry, all-degree trace-carrier routing, the arbitrary-common-debt

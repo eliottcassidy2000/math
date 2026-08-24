@@ -3,17 +3,14 @@ id: THM-3975
 title: "Danielewski one-arm gradings, cubic controls, and hyperelliptic no-mates"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For every n>=2
-  the one-arm determinantal
-  completion B_n has an elementary two-color DPD grading and the marked
-  homogeneous LND x partial_t has kernel k[x] and plinth x^(n+1)k[x]. At
-  n=2,3 the pair (p,x+y) is a finite free degree-three map with basis
-  (1,x,z-1); the monogenic x-order has exact index p, and its apparent p^2
-  discriminant factor separates three unramified normal addresses. The
-  finite maps have ramification divisors meeting the affine-plane open.
-  Uniformly in n, no nonconstant rational reparametrization f(p) has a
-  rational mate whose bracket lies in k(p)^*: the generic p-fibre forces
-  dx/W to be exact on W^2=1+4p x^n, contradicting logarithmic residues at
-  n=2 and holomorphicity at n>=3. No planar Jacobian counterexample is
+  the one-arm determinantal completion
+  B_n has an elementary two-color DPD grading and the marked homogeneous LND
+  x partial_t has kernel k[x] and plinth x^(n+1)k[x]. At n=2,3 the pair
+  (p,x+y) is finite free of degree three with normal basis (1,x,z-1) and
+  exact monogenic index p. For every ell>=floor(n/2), (p,y+x^ell) is finite
+  free of exact rank 2ell+1. Uniformly in n, no nonconstant rational
+  reparametrization f(p) has a rational Jacobian value in k(p)^*, so none of
+  these finite controls is Keller. No planar Jacobian counterexample is
   claimed.
 source: jc-extra-debt-local / post-THM-3973 one-arm structural supplement, 2026-08-24
 audit: >
@@ -24,22 +21,24 @@ audit: >
   discriminants, the three generic P=0 addresses, and the cancellation
   div(dP wedge dC)=E with no boundary ramification term. It also rederived
   the conic residues at n=2 and the holomorphic hyperelliptic differential
-  obstruction at every n>=3. Normal and optimized runs byte-match the frozen
-  CHECKS=246 output after LF normalization; both raw hashes and the semantic
-  hash agree. A follow-up hostile audit verified the chain-rule extension
-  from p to every nonconstant f in k(p).
+  obstruction at every n>=3. A second independent delta audit checked the
+  all-height elimination, exact polar degree in both parities, primitive
+  field generator, sharp threshold hostile (n,ell)=(4,1), and chain-rule
+  extension to every nonconstant f in k(p). Miracle flatness and
+  Quillen--Suslin upgrade the finite maps to finite free maps of rank
+  2ell+1. Normal and optimized runs, after LF normalization, byte-match the
+  frozen CHECKS=414 output; both raw hashes and the semantic hash agree.
 depends_on:
   - THM-3757-pell-chebyshev-three-charge-hyperelliptic-obstruction-tower
 related:
   - THM-3572-squarefree-danielewski-affine-modification-and-two-bracket-collapse
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
   - THM-3974-height-tower-few-weight-darboux-support-obstruction
-  - THM-3976-rational-compression-quadratic-pseudoplane-intersection
 script: 04-computation/jc2_danielewski_one_arm_cubic_control_thm3975.py
 output: 05-knowledge/results/jc2_danielewski_one_arm_cubic_control_thm3975.out
-script_sha256: 51ab6147f91df28ae7be11c803db4046d8fb44f913661d09bbf6be1d97c2e0b3
-output_sha256: 0aeff427a471b2506e6827103efa067023c4170b60d61230c51a934e7e79c69a
-semantic_sha256: 9d5b23bb495e6d817a5c468d61d1377253a4567a07d4f29bd75471ef18c38d10
+script_sha256: 5665e61af655ebc155299664cec93991093ab3628a9e8daea4cba915b41b4a5e
+output_sha256: 7a13cb10150bc81cc1318b69f94fabc01914ceb9de1f1d6476ebda67102f2f33
+semantic_sha256: 4e4fe11bc501e7df347738c31ea9a69703df476a5bb09defe07f15a595fc4f30
 hash_basis: raw LF bytes
 ---
 
@@ -56,7 +55,7 @@ X_n=Spec(B_n).                                             (1)
 ```
 
 THM-3973 develops the completion and its support obstructions. This
-supplement isolates three additional mechanisms and proves them
+supplement isolates four additional mechanisms and proves them
 self-containedly.
 
 1. The grading is an elementary two-color DPD presentation. If the base
@@ -90,6 +89,16 @@ self-containedly.
    Over generic `P=0`, three distinct normal addresses survive; the
    double root seen by `x` alone is an index collision, not ramification.
 
+   More generally, for every `n>=2` and every
+   `ell>=floor(n/2)`, the pair
+
+   ```text
+   P=p,                    C_ell=y+x^ell                 (4a)
+   ```
+
+   is finite free of exact rank `2ell+1`. These maps are never Keller by
+   item 3.
+
 3. For every `n>=2`, every nonconstant `f in k(p)`, and every
    `Q in k(x,t)`, one has
 
@@ -98,17 +107,19 @@ self-containedly.
    ```
 
    In particular no rational reparametrization of `p` has a rational
-   constant-Jacobian mate. This is the generic-fibre differential mechanism
-   of THM-3757, now in the binomial family
+   constant-Jacobian mate. This is the generic-fibre differential
+   mechanism of THM-3757, now in the binomial family
 
    ```text
    W^2=1+4p x^n.                                         (6)
    ```
 
-The finite controls in item 2 are not Keller maps. Their relative
-ramification is a nonempty divisor meeting the affine-plane open. Thus the
-result supplies a sharp positive finiteness control and a uniform negative
-mate theorem, not a counterexample to the planar Jacobian conjecture.
+The two cubic controls have an explicit nonempty relative ramification
+divisor meeting the affine-plane open. The all-height controls are ruled out
+more uniformly by the no-mate theorem for their first coordinate `p`. Thus
+the result supplies sharp positive finiteness controls and a uniform
+negative mate theorem, not a counterexample to the planar Jacobian
+conjecture.
 
 ## 1. Determinantal geometry and the one-arm boundary
 
@@ -449,10 +460,99 @@ The map `(P,C):X_n -> A2` is finite flat of degree three. Since `B_n` is
 normal, it is the full integral closure of `R` in its cubic function
 field.
 
-For `n=4`, the leading coefficient in `(35)` becomes `1-P^3`; for
-`n>=5`, its degree is `n-1` and its leading coefficient is divisible by
-`P^3`. Hence this argument proves finiteness only at `n=2,3`; no
-higher-height finiteness claim is hidden in the displayed elimination.
+For `ell=1`, the same target stops being monic after height three: at
+`n=4` the leading coefficient in `(35)` is `1-P^3`, and for `n>=5` the
+term `-P^3X^(n-1)` dominates. The correct all-height repair is to move the
+positive-weight summand rather than abandon `P`.
+
+### 4.1. An all-height finite tower of exact odd degree
+
+Fix an integer
+
+```text
+ell>=floor(n/2),                    C_ell=y+x^ell.       (44a)
+```
+
+Substitution of `y=C_ell-x^ell` in `(34)` gives
+
+```text
+F_(n,ell)(X)
+ =X(C_ell-X^ell)^2+P(C_ell-X^ell)-P^3X^(n-1).           (44b)
+```
+
+Because
+
+```text
+2ell+1>n-1,                                               (44c)
+```
+
+this is monic of degree `2ell+1` in `X`. Hence `x` is integral over
+`k[P,C_ell]`, then `y=C_ell-x^ell` is integral, and finally `z` is
+integral by
+
+```text
+z^2-z-x^nP=0.                                             (44d)
+```
+
+Thus `B_n` is finite over the image of `k[P,C_ell]`. The same dimension
+argument used above shows that `P,C_ell` are algebraically independent.
+
+The degree is not merely bounded by `2ell+1`; it is exact. Work over
+`K=k(P)` and put `W=2z-1`. On the smooth generic fibre,
+
+```text
+W^2=1+4Px^n,
+y=P(W-1)/(2x).                                            (44e)
+```
+
+Conversely,
+
+```text
+W=1+2x(C_ell-x^ell)/P,                                   (44e')
+```
+
+so `x` generates the generic function field over `K(C_ell)`.
+
+After extending scalars algebraically, the two points over `x=0` have
+`W=+1` and `W=-1`. At the plus point, `y` is regular; at the minus point,
+`y` has one simple pole. If `n` is even, there are two infinity points,
+`x` has pole order one at each, and `y` has pole order `n/2-1`. The
+inequality `ell>=n/2` makes `x^ell` dominate, so `C_ell` has pole order
+`ell` at each infinity point. If `n` is odd, there is one infinity point,
+where
+
+```text
+ord_infinity(x)=-2,             ord_infinity(y)=-(n-2). (44f)
+```
+
+Now `2ell>=n-1`, so `x^ell` again dominates and contributes pole order
+`2ell`. In both parities,
+
+```text
+deg div_poles(C_ell)=1+2ell.                             (44g)
+```
+
+The degree of a nonconstant function on a smooth projective curve is the
+degree of its polar divisor. Therefore
+
+```text
+[k(P)(x,W):k(P)(C_ell)]=2ell+1.                          (44h)
+```
+
+This proves that `(44b)` is the generic minimal polynomial, that
+
+```text
+(P,C_ell):X_n -> A2
+```
+
+is finite of exact degree `2ell+1`, and that the threshold in `(44a)` is
+the clean monicity-dominance boundary for this construction. Since `X_n` is
+smooth, `B_n` is Cohen--Macaulay; the target ring `k[P,C_ell]` is regular of
+the same dimension. Miracle flatness therefore makes the finite module
+flat, hence finite projective. Quillen--Suslin makes it free, and `(44h)`
+fixes its rank as `2ell+1`. At `n=2,3` and `ell=1`, this recovers the two
+finite cubics above. Section 7 proves more: because the first coordinate is
+`P=p`, no member of the all-height finite-free tower can be Keller.
 
 ## 5. Index debt, normal discriminants, and the three addresses
 
@@ -635,38 +735,23 @@ nonnegative: for odd `n=2g+1` the order is `2g-2`, and for even
 holomorphic has no poles in characteristic zero, hence is constant; its
 differential is zero. This again contradicts `(64)`.
 
-This proves `(5)` for the distinguished coordinate `f(p)=p`. If
-`f in k[s]` is nonconstant
-and a rational `Q` satisfied
+This proves `(5)` for `f(p)=p`. Now let `f in k(s)` be nonconstant. In
+characteristic zero, `f'(p)` is a nonzero element of `k(p)`. If a rational
+`Q` satisfied
 
-```text
-J_(x,t)(f(p),Q)=c in k^*,                                (66)
-```
+   ```text
+J_(x,t)(f(p),Q)=h(p) in k(p)^*,                          (66)
+   ```
 
 then
 
-```text
-J_(x,t)(p,Q)=c/f'(p) in k(p)^*,                          (67)
-```
+   ```text
+J_(x,t)(p,Q)=h(p)/f'(p) in k(p)^*,                       (67)
+   ```
 
-contradicting `(5)`. Hence every nonconstant polynomial reparametrization
-of the distinguished coordinate `p` has the same no-mate obstruction.
-
-The closure is in fact rational, not merely polynomial. For every
-nonconstant `f in k(p)`, characteristic zero gives `f'(p)!=0`, and the
-function-field chain rule gives
-
-```text
-J_(x,t)(f(p),Q)=f'(p) J_(x,t)(p,Q).                     (67a)
-```
-
-If the left side lay in `k(p)^*`, division by `f'(p)` would contradict the
-already proved `p` case. Zeros and poles of `f'` cause no exception to this
-identity in `k(x,t)`. Thus the bracket cannot lie in the smaller field
-`k(f(p))^*` either, and in particular cannot be a nonzero constant. Any
-repair of the finite cubics in Sections 4--6 must therefore change the first
-coordinate away from `k(p)`; rational correction of the mate alone cannot
-succeed.
+contradicting the generic-fibre argument. Hence every nonconstant rational
+reparametrization of the distinguished coordinate `p` has the same
+no-mate obstruction.
 
 There is nevertheless a cheap near-slice:
 
@@ -681,7 +766,7 @@ height two and holomorphic of positive genus thereafter.
 
 ## 8. Preservation, loss, and scope
 
-The three mechanisms record different information about the same object.
+The four mechanisms record different information about the same object.
 
 ```text
 two-color grading:
@@ -692,8 +777,12 @@ finite cubic control:
   preserves  the full normal order and its three generic addresses;
   loses      etaleness along E_n;
 
+all-height finite-free tower:
+  preserves  the distinguished first coordinate p and exact map rank;
+  loses      Keller etaleness by the generic p-fibre differential;
+
 generic p-fibre:
-  preserves  every rational candidate mate of p;
+  preserves  every rational candidate mate of every nonconstant f(p);
   loses      possible Darboux pairs whose first coordinate is unrelated
              to p.                                       (69)
 ```
@@ -703,12 +792,13 @@ The theorem therefore does **not** assert that no Darboux pair exists on
 that the surfaces `X_n` are pairwise nonisomorphic. The broader support
 and bounded-search hostiles belong to THM-3973 and THM-3974. The new sharp
 content here is the marked plinth, the second finite-free cubic height,
-the normal-versus-monogenic address separation at both heights, and the
-all-height rational no-mate theorem for `p`.
+the normal-versus-monogenic address separation at both heights, the exact
+odd-degree finite-free tower `(44a)--(44h)`, and the all-height rational
+no-mate theorem for every nonconstant `f in k(p)`.
 
 ## 9. Exact verification contract
 
-The companion script checks `246` exact identities and hostile gates. It
+The companion script checks `414` exact identities and hostile gates. It
 verifies:
 
 1. all three minors, both chart equations, the primitive, LND formulas,
@@ -717,10 +807,13 @@ verifies:
 3. both full multiplication tables, commutation, all three determinantal
    relations, and cubic annihilation;
 4. the trace discriminants `(47)--(49)`, the three addresses `(51)`, and
-   the Jacobian numerator `(53)`.
+   the Jacobian numerator `(53)`;
+5. for sampled `2<=n<=7` and four consecutive exponents beginning at
+   `floor(n/2)`, the all-height elimination `(44b)`, monic degree
+   `2ell+1`, generic-fibre coordinate `(44e)`, parity pole arithmetic, and
+   nonconstant Jacobian.
 
-After LF normalization, the normal and optimized runs agree byte for byte
-with the frozen output. The semantic hash
+The normal and optimized runs agree byte for byte. The semantic hash
 commits to the uniform proofs beyond the sampled height range; the samples
 are regression controls, not finite evidence for the all-height claims.
 

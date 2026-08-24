@@ -372,14 +372,18 @@ completion passport and a globally nonmonogenic finite cubic whose
 ramification curve meets the affine-plane open, preventing Keller. THM-3974
 closes the two-by-three cell and its
 transpose at every height, plus the wider height-two seven-piece floor.
-THM-3975 adds the two-color/plinth ledger, a height-three finite cubic control,
-and the all-height rational no-mate theorem for every nonconstant
-`f in k(p)`.
+THM-3975 adds the two-color/plinth ledger, a finite-free tower of exact rank
+`2ell+1` for every `ell>=floor(n/2)`, and the all-height rational no-mate
+theorem for every nonconstant `f in k(p)`.
 THM-3976 computes the rational-compression pseudoplane intersection and only
 its internal degree/support floors. THM-3977 closes the lowest simultaneous
-cusp/arm seam by critical points and generic-fibre residues. THM-3978 gives
-the exact linear-seam response ideals and excludes a constant mate despite
-submersivity and a rational mate. Finite Keller and unrestricted Darboux
+cusp/arm seam by critical points and generic-fibre residues, including both
+tested formal corrections. THM-3978 gives the exact linear-seam response
+ideals: incompatible invariant constants block global algebraization even
+though each completed color has a mate. THM-3979 proves all-order formal cusp
+lifting; THM-3981 then proves its canonical quadrature genus-two and
+transcendental, including logarithmic nonentry on every exceptional scalar
+slice. Alternative gauges, finite Keller entry, and unrestricted Darboux
 entry remain open.
 None of these supplies a Hopf dependency here.
 

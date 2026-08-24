@@ -452,13 +452,16 @@ exact-volume completion passport and a globally nonmonogenic finite cubic,
 but its ramification curve meets the affine-plane open and blocks Keller.
 THM-3974 closes two-by-three and
 transpose at every height and gives the wider height-two seven-piece floor.
-THM-3975 adds the marked plinth, a height-three finite cubic control, and the
-all-height rational no-mate theorem for every nonconstant `f in k(p)`.
+THM-3975 adds the marked plinth, an exact odd-rank all-height finite-free
+tower, and the rational no-mate theorem for every nonconstant `f in k(p)`.
 THM-3976 computes a rational-compression pseudoplane intersection with
 internal degree/support floors, not arbitrary Darboux nonentry. THM-3977
-closes the lowest simultaneous cusp/arm seam, and THM-3978 computes the exact
-linear-seam response ideals; neither is unrestricted. None supplies a Hopf
-dependency here.
+closes the lowest simultaneous cusp/arm seam and both tested formal
+corrections. THM-3978 computes the exact linear-seam response ideals and its
+split formal-local mates. THM-3979 proves all-order formal cusp lifting;
+THM-3981 proves that its canonical quadrature is a nonalgebraic genus-two
+integral, with logarithmic exceptional fibres. Neither the gauge-specific
+obstruction nor any of these JC results supplies a Hopf dependency here.
 
 ## 9. Connection contract B: affine local systems over the LRC carrier
 

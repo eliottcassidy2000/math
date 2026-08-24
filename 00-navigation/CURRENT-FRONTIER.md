@@ -331,43 +331,34 @@ asymptotic or residue.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** THM-3502--3824 give compiler/carry, no finite-spatial cycles,
-  Smith forms and shell kernels. A FINITE-EXACT `D=B=4`, length-9 census has
-  `13,853` portraits: bank plus zero chain selects at most one off-ray, but no
-  fixed ray. Static tariff: `2^(D+B-1)+B+2`; all-depth/physical prizes OPEN.
+  Smith forms, and shell kernels. A FINITE-EXACT `D=B=4`, length-nine census
+  has `13,853` portraits and selects at most one off-ray, but no fixed ray.
+  Static tariff: `2^(D+B-1)+B+2`; all-depth/physical prizes remain OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3782 close
-  named cells only. THM-3827/31 give genus `>=3`; THM-3836 retains
-  `3h^3+7h^2k+k^3=CS`; THM-3838 gives `deg h,deg k>=5`; THM-3841/45 close
-  the `S3` anchor. THM-3850--3921 close named line/root/cusp/dual/jet,
-  `f=0`, fan, quintic/sextic and radial packets; global roots and arbitrary
-  `f!=0` remain. THM-3920 closes only THM-3918's same-field atlas.
-  THM-3922--40 give class/conic/boundary/fold/Cardano closures. Corrected
-  THM-3941 gives period-12 carrier counts/ordinals; THM-3959 closes all seven
-  `N=5` rows: L/M/O empty; J1/J2/K/N/P scalar or folded non-unibranch arms.
-  THM-3942--49 close named factor/split/sextic cells. THM-3950 leaves fixed
-  `j=0`; THM-3951/52 close natural ratio/Mobius cubics; THM-3953/54 close
-  distinct roots and shared debt; THM-3956/58/60 close the natural
-  one-parameter family. THM-3961 proves, for irreducible arbitrary `q(P,t)`,
-  normality iff adjusted hidden squarefreeness and excludes normal rows by the
-  different. THM-3962 closes all `q=q(P)` cylinders; THM-3963 closes
-  `q=c(t)P^2`. THM-3964 closes the displayed scalar graph-root family;
-  THM-3965 rules out one-place discriminants in its exact constant-`(g,h)`
-  unit-ideal family; THM-3966/68 give Euler and canonical/different boundary
-  invoices. THM-3967 closes every irreducible `deg_P(q)<=2` row; THM-3969
-  closes `Xi`-unit affine-`P` graphs; THM-3970 proves the exact osculation/gcd
-  reframe. THM-3971 is the residue-one no-Darboux gate. THM-3972
-  normalizes squarefree `Xi` and closes `a=t`, constant `(c,r)`. THM-3973
-  supplies a boundary/class/canonical/exact-volume passport and a globally
-  nonmonogenic finite cubic, but the cubic ramifies. THM-3974 closes through
-  `2 x 3`/transpose at every height and gives the height-two floor seven.
-  THM-3975 adds the two-color/plinth ledger, a height-three finite cubic, and
-  all-height rational no-mates for every nonconstant `f in k(p)`.
-  THM-3976 identifies the rational-compression pseudoplane and its `C`-only
-  degree/support floors. THM-3977 closes the lowest simultaneous cusp/arm
-  seam; THM-3978 computes the linear-seam plane/completion response ideals
-  and excludes its constant mate. Open: compatible/multiple/reducible/nongraph debts;
-  degree `>=6`; polynomial compression, finite Keller and unrestricted
-  Darboux entry; `JC(2)`. THM-3955/57 local.
-  THM-3853/3855 remain formal laboratories.
+  named cells only. THM-3827--3972 route genus/degree floors, the `S3`
+  anchor, named root/cusp/jet and `f=0` packets, carrier ordinals, adjusted
+  squarefreeness, and displayed cylinder/graph/residue cells. Global roots,
+  arbitrary `f!=0`, and general compatible rows remain open.
+  THM-3973 supplies a boundary/class/canonical/exact-volume passport and a
+  globally nonmonogenic finite cubic, but the cubic ramifies. THM-3974 closes
+  homogeneous, `1 x *`, `2 x 2`, and `2 x 3`/transpose support at every
+  height and gives the height-two floor seven. THM-3975 proves its two-color
+  and plinth ledger, two cubic heights, an exact odd-rank all-height
+  finite-free tower, and rational no-mates for every nonconstant
+  `f in k(p)`. THM-3976 identifies the
+  rational-compression pseudoplane and its `C`-only degree/support floors.
+  THM-3977 proves criticality of the simultaneous cusp/arm seed and both
+  tested formal corrections; its generalized lowest seam is critical for
+  `r!=0`, while `r=0` is submersive but has six-residue rational
+  exactness debt. THM-3978 computes the exact plane/completion response
+  ideals and exhibits incompatible formal-local integration constants.
+  THM-3979 lifts the cusp Darboux jets to every formal order. THM-3981 proves
+  that its canonical cusp quadrature is genus-two and transcendental, on
+  every scalar slice, but does not exclude alternative gauges. THM-3980 is
+  RESERVED for all-height/gauge-invariant nonalgebraization. Open:
+  algebraization with `y`, compatible/multiple/reducible/nongraph debts,
+  degree `>=6`, polynomial compression, finite Keller entry, unrestricted
+  Darboux entry, and `JC(2)`. THM-3853/3855 remain formal laboratories.
   Russell THM-3785 forces `3|d,d>=9`; THM-3843/46/49 give arm/jets/contact.
   THM-3856/61/67/71 close normal `z`-depth through five; exact shears leave
   nonreduced `(6,4)`. Rational corrections and global entry remain open;

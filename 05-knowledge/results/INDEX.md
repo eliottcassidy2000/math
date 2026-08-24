@@ -849,14 +849,16 @@
   every `n>=2`, the one-arm completion has the exact two-color DPD grading,
   and the marked LND `x partial_t` has kernel `k[x]` and plinth
   `x^(n+1)k[x]`. At `n=2,3`, `(p,x+y)` is finite free of degree three; its
-  ramification divisor meets the affine-plane open. Uniformly in `n`, the
-  hyperelliptic generic fibre and chain rule prove that every nonconstant
-  `f in k(p)` and rational `Q` satisfy `J(f(p),Q) notin k(p)^*`. Other first coordinates, unrestricted Darboux
-  pairs, and `JC(2)` remain open. Checks: `246`. Script/output/semantic
+  ramification divisor meets the affine-plane open. For every
+  `ell>=floor(n/2)`, `(p,y+x^ell)` is finite free of exact rank `2ell+1`.
+  Uniformly in `n`, the hyperelliptic generic fibre and chain rule prove that
+  every nonconstant `f in k(p)` and rational `Q` satisfy
+  `J(f(p),Q) notin k(p)^*`. Other first coordinates, unrestricted Darboux
+  pairs, and `JC(2)` remain open. Checks: `414`. Script/output/semantic
   SHA-256:
-  `51ab6147f91df28ae7be11c803db4046d8fb44f913661d09bbf6be1d97c2e0b3` /
-  `0aeff427a471b2506e6827103efa067023c4170b60d61230c51a934e7e79c69a` /
-  `9d5b23bb495e6d817a5c468d61d1377253a4567a07d4f29bd75471ef18c38d10`.
+  `5665e61af655ebc155299664cec93991093ab3628a9e8daea4cba915b41b4a5e` /
+  `7a13cb10150bc81cc1318b69f94fabc01914ceb9de1f1d6476ebda67102f2f33` /
+  `4e4fe11bc501e7df347738c31ea9a69703df476a5bb09defe07f15a595fc4f30`.
 
 - `jc2_rational_compression_pseudoplane_intersection_thm3976.py` -> matching
   `.out` [THM-3976 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
@@ -874,28 +876,81 @@
 
 - `jc2_simultaneous_cusp_arm_critical_resultant_thm3977.py` -> matching
   `.out` [THM-3977 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
-  For `A_(c,r)=c p+y^2+r x` on `B_2`, every `r!=0` row has an affine
-  critical point detected by `Res_t(A_x,A_t)=96x^24H_(c,r)`. The `r=0`
-  endpoint is submersive, but its rational generic fibre has six simple
+  For `6L^2=1` and `A_a=y^2+2Lx+ap`, the exact derivative resultant has a
+  degree-twelve residual with nonzero endpoints and reconstructs an affine
+  critical point for every `a!=0`; the `a=0` endpoint is critical too. The
+  same obstruction survives both the delayed and actual two-term formal
+  corrections, whose reduced residuals have degree `43`. This closes only
+  the displayed global first coordinates, not the formal completion or
+  arbitrary Darboux pairs. Checks: `44`. Script/output/semantic SHA-256:
+  `0ba04625c793c316e5ef60969efd64ce32ec4c4fdc281f9da60feac80f95f29b` /
+  `533f1aa2576842f4b4254931176c479dd4bacf21a493c54e70596a1d0106535c` /
+  `5aee4e0e5b0ed5c710ff3f2dcc204f9afeade620bc350ceeafee8f3613c0ce63`.
+
+- `jc2_generalized_cusp_arm_seam_thm3977_independent.py` -> matching `.out`
+  [THM-3977 INDEPENDENT GENERALIZED SUPPLEMENT]. For
+  `A_(c,r)=c p+y^2+r x` on `B_2`, every `r!=0` row has an affine critical
+  point detected by `Res_t(A_x,A_t)=96x^24H_(c,r)`. The `r=0` endpoint is a
+  source-plane submersion, but its rational generic fibre has six simple
   logarithmic poles with nonzero residues, excluding every rational mate
-  whose bracket lies in `k(A)^*`. This closes only the lowest simultaneous
-  cusp/arm seam family. Checks: `25`. Script/output/semantic SHA-256:
+  whose bracket lies in `k(A)^*`. This closes the entire lowest seam and
+  independently contains the primary first coordinate at `(c,r)=(a,2L)`.
+  Checks: `25`. Script/output/semantic SHA-256:
   `8fc3507c40e31a54117ba96c7f56261f49386a0a61c5769800d3ae5ef56b9451` /
   `1534633377e5722a13a933db89da66a22cb480e22f0f042acd753642c0b78c72` /
   `8aadeddb4635f490ea0acde0694b539d41f6145ac66e93df36af5543c8e6ae47`.
 
-- `jc2_linear_seam_response_ideal_thm3978.py` -> matching `.out`
+- `jc2_linear_seam_submersion_mate_ideal_thm3978.py` -> matching `.out`
   [THM-3978 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. For
   `A=x+c(z-1)` at every `n>=2`, all rational equations `J(A,Q)=R(A)` are
   solved explicitly. The plane response ideal is `(A^(n-1))`, while the
   typed completion image intersection is `([A(A+c)]^(n-1))`; the second
   factor is the added boundary color. Thus `A` is globally submersive and
-  has a rational constant mate, but no polynomial one. The companion also
-  freezes that `J(A,-)` is not an endomorphism of `B_n`. Checks: `53`.
+  has a rational constant mate, but no polynomial one. Its x-adic completion
+  has an exact mate because the two colors choose different invariant
+  integration constants; `J(A,-)` remains meromorphic, not an endomorphism
+  of the completed ring. Checks: `117`.
   Script/output/semantic SHA-256:
+  `a6b4c4371e48f109bde6330fcda67ef672395e9f93dab6c133218da47b7f2b59` /
+  `6105aaefc6be0dd8cec4db0862533eed3990b72dfebe7aa642206cd8e238edbc` /
+  `40a3ca9b2578f5178ab97ed5fcdc124c7d1f4d320283836253bd8d14d148666c`.
+
+- `jc2_linear_seam_response_ideal_thm3978.py` -> matching `.out`
+  [THM-3978 INDEPENDENT TYPED RESPONSE-IDEAL AUDIT]. The 53-gate companion
+  independently rederives both response ideals, the complete rational
+  solution, the explicit minimal completion primitive, the boundary values,
+  and the fact that `J(A,-)` does not preserve `B_n`. Script/output/semantic
+  SHA-256:
   `0600aa8bd898fc3f579cac377e3f3ad8b7aada4f315b95f539d652a02eefce73` /
   `1c1623136f1c6b68e07225d76b8d609d8bd98b5e95df8f0e737f9d591806b253` /
   `42ca0b98af0e696a99d7386caabc23cfec5eb26aad434075cd8d24535b693bf3`.
+
+- `jc2_two_color_formal_cusp_lifting_thm3979.py` -> matching `.out`
+  [THM-3979 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The
+  x-adic completion of `B_2` splits into cusp and retained-arm colors by
+  explicit Hensel idempotents. The cusp admits an exact formal Darboux pair
+  after one centered quadrature and square root, the arm is ordinary, and
+  the two pairs glue. Every finite order lifts in `B_2`; the cusp jet
+  cokernel is paid one order later by the exact scalar `3(r+1)L`. This is
+  formal solvability, not polynomial termination. Checks: `96`.
+  Script/output/semantic SHA-256:
+  `9b6513f06a55c44fc1d5d677c4d48c3caa316ed7bcfd8e75a398ce47bab70a79` /
+  `09dbf58e85137a73aba69837c8fe1e55b54afbcf8a7a703be5b522a811000dd4` /
+  `a325289714ede662300ee6fff5369641bff8c92dc9e8508775200089dce7b6a4`.
+
+- `jc2_centered_cusp_quadrature_genus_two_thm3981.py` -> matching `.out`
+  [THM-3981 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The
+  centered cusp quadrature is birational to
+  `v^2=(u^3-Y)^2+2u^2`, generically genus two, and its differential is
+  exactly `du/v`. Holomorphic nonexactness plus trace descent proves the
+  canonical transverse `X` and `A_D=Y^2+2LX` transcendental over the generic
+  boundary field. Both exceptional scalar slices normalize to genus one
+  with opposite nonzero residues, so the canonical obstruction survives
+  every scalar specialization. Alternative gauges remain open. Checks: `25`.
+  Script/output/semantic SHA-256:
+  `9ba76e156c092410e755d2680e5c7413721d729957802bd03da1dc7ef20ff3b8` /
+  `3f29a9da90581085fae01be3fe8887bdf294f5a1100f247b0278c179ac765b32` /
+  `f88ec164728e05717827b54c573afed10668a4c4c448aae3f27f0bd8bcbb15b7`.
 
 - `hopf_s6_triangle_monodromy_snf_audit_20260824.py` -> matching `.out`
   [VERIFIED-EXACT DISPLAYED MATRICES + FINITE-EXACT CONDITIONAL ORIENTED

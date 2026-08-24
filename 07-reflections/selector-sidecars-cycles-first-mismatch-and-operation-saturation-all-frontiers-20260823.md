@@ -974,15 +974,20 @@ THM-3973 supplies an exact-volume completion passport and a genuinely
 nonmonogenic finite cubic, whose ramification curve meets the affine-plane open;
 this replaces “find a nonmonogenic order” by “remove that divisor without
 losing exact volume or finiteness.” THM-3974 closes two-by-three and transpose
-at every height and gives the height-two seven-piece floor. THM-3975 adds the
-height-three finite control and proves that no rational repair with first
-coordinate in `k(p) minus k` can work; the next deformation must leave that
-field. THM-3976 identifies
+at every height and gives the height-two seven-piece floor. THM-3975 adds an
+exact odd-rank all-height finite-free tower and proves that no rational repair
+with first coordinate in `k(p) minus k` can work; the next deformation must
+leave that field. THM-3976 identifies
 the rational-compression pseudoplane and only its internal floors. Arbitrary
 Darboux entry remains open. THM-3977 closes the lowest cusp/arm seam by a
 critical-versus-residue dichotomy. THM-3978 proves that the submersive linear
 seam has a rational mate but acquires the second-color response factor
-`(A+c)^(n-1)` on the completion; rational solvability is not algebraization.
+`(A+c)^(n-1)` on the completion; its two completed colors solve the equation
+with incompatible invariant constants. THM-3979 then proves all-order formal
+cusp lifting, and THM-3981 turns the canonical lift into a precise
+nonalgebraization theorem: selector failure is the nonexact holomorphic form
+`du/v` on a genus-two curve, with residue hostiles on the singular slices.
+Rational or formal solvability is not algebraization.
 THM-3955/57 are proved local conductor theorems with no global Hopf consequence.
 The proved LRC endpoint theorem moved to collision-free THM-4000; the namespace
 move changes no mathematical scope.
