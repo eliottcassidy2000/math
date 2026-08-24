@@ -201,7 +201,8 @@ h = 14220224 = 2^6 * 83 * 2677,
 ```
 
 and there is **no `11`-torsion**.  This negative statement is
-**FINITE-EXACT**, not merely GRH-assisted.
+**FINITE-EXACT**, not merely GRH-assisted.  The command and output are frozen
+in the [unconditional hostile ledger](../05-knowledge/results/bagshaw_11rank_typo_bnfcertify_20260824.out).
 
 For the Appendix value, exact form arithmetic verifies the positive lower
 bound

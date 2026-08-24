@@ -454,7 +454,8 @@ whereas its appendix gives
 The former has no `11`-torsion; the latter has an exact independent
 order-`11` triple.  This is a minimal demonstration of why copied class-group
 invariants are not certificates and why the actual forms must remain attached
-to `D`.
+to `D`.  PARI's unconditional `bnfcertify=1` transcript is frozen in the
+[typo hostile ledger](../05-knowledge/results/bagshaw_11rank_typo_bnfcertify_20260824.out).
 
 The Epoch page also mixes “square-free `D`” prose with the actual submission
 rule that `-D` be a fundamental discriminant.  Its own `D=4447704` example is
