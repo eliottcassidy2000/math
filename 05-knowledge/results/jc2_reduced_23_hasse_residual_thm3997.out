@@ -1,0 +1,77 @@
+STATUS=THM-3997 VERIFIED-EXACT CERTIFICATE
+PASS  A boundary diagonal
+PASS  A first diagonal
+PASS  A second diagonal
+PASS  A first/second degree caps are 2/3
+PASS  C first diagonal
+PASS  C second diagonal
+PASS  C first/second degree caps are 3/4
+PASS  general diagonal formula r=0
+PASS  general diagonal formula r=1
+PASS  general diagonal formula r=2
+PASS  general diagonal formula r=3
+PASS  general diagonal formula r=4
+PASS  first-jet Bezout row
+PASS  rotated gradient A
+PASS  rotated gradient C
+PASS  first diagonal before affine specialization
+PASS  first diagonal affine coefficients
+PASS  first residual comparison
+PASS  alpha common denominator
+PASS  q0 slope from b2
+PASS  A0 first derivative
+PASS  second-jet coefficient m0
+PASS  second-jet coefficient l0
+PASS  second-jet coefficient l1
+PASS  second-jet coefficient l2
+PASS  second-jet coefficient l3
+PASS  second-jet coefficient l4
+PASS  complete second-jet Jacobian row
+PASS  third diagonal coefficient x^3
+PASS  third diagonal coefficient x^2
+PASS  third diagonal coefficient x^1
+PASS  third diagonal coefficient x^0
+PASS  third diagonal has degree at most three
+PASS  third residual comparison
+PASS  epsilon beta form
+PASS  translated A2 constant
+PASS  translated A1 slope
+PASS  translated b cubic
+PASS  translated q0 quadratic
+PASS  complete Hasse monomial census through total degree five
+PASS  complete reverse-basis census through layer six
+PASS  degree hostile is detected
+PASS  ideal iff H0
+PASS  ideal iff H1
+PASS  ideal iff degree cap m=2
+PASS  ideal iff degree cap m=3
+PASS  alpha vanishes on the unique resonance
+PASS  R=0 forced epsilon value
+PASS  R=0 forced epsilon is nonzero
+PASS  source_control_1: direct third-jet row
+PASS  source_control_1: direct J t^0
+PASS  source_control_1: direct J t^1
+PASS  source_control_1: direct J t^2
+PASS  source_control_1: direct P t^0
+PASS  source_control_1: direct P t^1
+PASS  source_control_1: direct P t^2
+PASS  source_control_1: direct P t^3
+PASS  source_control_1: direct mixed residual through t^0
+PASS  source_control_1: direct mixed residual through t^1
+PASS  source_control_1: direct mixed residual through t^2
+PASS  source_control_1: direct mixed residual through t^3
+PASS  source_control_2: direct third-jet row
+PASS  source_control_2: direct J t^0
+PASS  source_control_2: direct J t^1
+PASS  source_control_2: direct J t^2
+PASS  source_control_2: direct P t^0
+PASS  source_control_2: direct P t^1
+PASS  source_control_2: direct P t^2
+PASS  source_control_2: direct P t^3
+PASS  source_control_2: direct mixed residual through t^0
+PASS  source_control_2: direct mixed residual through t^1
+PASS  source_control_2: direct mixed residual through t^2
+PASS  source_control_2: direct mixed residual through t^3
+THEOREM_ID=THM-3997
+NOTE=source degree caps are necessary only; direct third jets are controls only
+ALL THM-3997 EXACT CHECKS PASSED
