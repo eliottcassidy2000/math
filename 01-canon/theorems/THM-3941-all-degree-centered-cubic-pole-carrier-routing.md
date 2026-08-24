@@ -2,8 +2,7 @@
 id: THM-3941
 title: "All-degree centered cubic pole carriers have three inertia grammars"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT
-  HOSTILE AUDIT. Let A(u) be a cubic polynomial and let t(u) be a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Let A(u) be a
   nonconstant trace-zero rational function of arbitrary degree N. In the
   centered linear-color repeated-root grammar, any two finite poles in one
   A-fibre land at the same target address. Under the genuine reduced tame
@@ -18,14 +17,15 @@ status: >
   non-root-regular rows plus the root-regular exit.
 source: jc_zero_debt_lift / recursive synthesis of THM-3933, THM-3936, and THM-3938, 2026-08-24
 audit: >
-  Candidate self-audit only. The proof separates the completed-local trace
-  lemma, shared-address source obstruction, affine classification of cubic
-  polynomial projections, and all-degree pole-divisor enumeration. The
-  assertion-free 2827-gate companion checks both a direct enumeration and an
-  independent rational generating function, the N=3 and N=4 inherited row
-  lists, the new N=5 list, local character exclusions, canonical critical
-  loci, and hostile degrees through 30. Independent hostile audit is required
-  before this theorem enters the proved graph.
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-24). The audit independently
+  reconstructed the completed-local trace sieve, the two cubic critical
+  packets and their affine gauges, the conditional shared-fibre rank-three
+  source obstruction, and the pole-divisor generating function. It checked
+  the inherited N=3 and N=4 rows and the seven new N=5 rows by hand, and
+  repaired the frontmatter so that common target address is unconditional
+  while source non-unibranchness retains its genuine maximal-ramification
+  hypothesis. The assertion-free 2827-gate companion byte-matches in normal
+  and optimized mode; frozen output and raw and semantic hashes pass.
 depends_on:
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
   - THM-3929-root-regular-one-place-linear-color-cubic-is-monogenic
@@ -44,8 +44,8 @@ hash_basis: raw LF bytes
 
 # THM-3941 -- every depth uses the same two local characters
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT
-HOSTILE AUDIT.** Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of
 characteristic zero. Let an irreducible one-place component in the
 linear-color binary-cubic grammar have normalization `A1_u`, with
 
