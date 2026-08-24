@@ -346,9 +346,11 @@ sidecar"; there is no direct Jacobian theorem transfer.
 is now **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED** and closes
 the split hidden-cubic lane by integrality and a repeated-root trichotomy.  It
 reinforces the boundary/predicate discipline but supplies no Hopf theorem.
-THM-3958 remains a **RESERVED / PROVISIONAL PROOF CANDIDATE / NOT CANON**;
-THM-3959 and THM-3960 are **RESERVED / UNPROVED EMPTY STUBS**.  None of those
-three supplies a dependency here.
+[THM-3958](../../01-canon/theorems/THM-3958-one-hidden-root-principal-different-and-pure-power-boundary.md)
+is also **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**: its
+one-hidden-root lane closes through a principal-different/forbidden-unit gate.
+THM-3959 and THM-3960 remain **RESERVED / UNPROVED EMPTY STUBS** and supply no
+dependency here.
 
 ### Explicitly rejected vocabulary bridges
 
