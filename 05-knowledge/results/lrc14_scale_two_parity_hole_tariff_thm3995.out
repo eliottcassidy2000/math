@@ -1,13 +1,28 @@
 PASS  two obstruction components each have length 2/63
 PASS  obstruction measure is 4/63
+PASS  all four oriented wall differences reconstruct the stated numerators
 PASS  all four cleared event numerators are odd (64 residue checks)
-PASS  four hole coefficients total 4/63
-PASS  support cap simplifies
-PASS  real variance coefficient simplifies
+PASS  even-t hostile hits the first and fourth target boundaries
+PASS  U-aware clockwise wall sweep (575664 oriented events)
+PASS  all four wall constants are individually attained
+PASS  oppositely oriented owner walls can mask at one point
+PASS  same-maximum four-wall equality congruence is impossible
+PASS  asymptotically sharp U/U-1 event family (20 exact controls)
+PASS  body-maximum support cap simplifies
+PASS  each closed trimmed core has length 2(U-1)/(63U)
+PASS  old-minus-new support cap is 4(t-U)/(63tU)
+PASS  body-maximum variance coefficient simplifies
 PASS  integer support-envelope dynamic controls (700 cases)
+PASS  k=0 support-cap plateau (147 controls)
+PASS  support shrink is strict immediately beyond the smaller-cap plateau
 PASS  integer correction hostile is positive
+PASS  variance tariff divides to the discrepancy tariff
+PASS  BV gate coefficient simplifies
 RESULT obstruction_measure=4/63
-RESULT parity_hole_measure=4/(63t)
-RESULT support_cap=4(t-1)/(63t)
-RESULT sufficient_gate=t*mu(G)/r>sqrt(4(t-1)/(3(59t+4)))
+RESULT parity_hole_measure=4/(63U)
+RESULT support_cap=4(U-1)/(63U)
+RESULT event_spacing_sharpness=asymptotic_not_global_failure_equality
+RESULT k0_plateau=exact_envelope_unchanged_for_m<=s_U
+RESULT sufficient_disc_gate=disc_t(G)<mu(G)^2*(59U+4)/(4(U-1))+(s_U/t^2)*theta*(1-theta)
+RESULT sufficient_BV_gate=t*mu(G)/r>sqrt(4(U-1)/(3(59U+4)))
 ALL EXACT CHECKS PASSED

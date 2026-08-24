@@ -68,7 +68,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505` unconditionally; only in `t>=U`, cyclic slack plus one auxiliary
   leaves 58 certificate survivors: 57 at `s=1` and `(s,p,q)=(2,1,9)`.
-  THM-3910 closes 41; THM-3995 adds a sharp conditional parity tariff but
+  THM-3910 closes 41; THM-3995 adds the owner-maximum conditional parity cap
+  `4(U-1)/(63U)` and its exact integer tariff, including the `k=0` plateau, but
   closes no type. THM-4000 closes AP11 and 167,960 fixed `[1,20]` scale-two
   bodies; its three-versus-one clock deficit blocks that cover method.
   Seventeen certificate types, `t<U`, and owner/arrival remain open.

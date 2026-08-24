@@ -1172,11 +1172,15 @@
 - `lrc14_scale_two_parity_hole_tariff_thm3995.py` -> matching `.out`
   [THM-3995 PROVED IN A CONDITIONAL SLICE + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED; LRC(14) OPEN]. Odd parity cuts four inward holes from the
-  sole scale-two `(2,1,9)` certificate survivor, giving support cap
-  `4(t-1)/(63t)`, a sharp integer variance correction, and a sufficient BV
-  gate. It closes no type. Script/output SHA-256:
-  `342ca76c34bb09d2f19f0237d973edb8872d2cf43c8c637a6efbfc99804ff8c6` /
-  `2973b970aa75a6234f5aca3af02293476a35d9d64cee7b7dda9a83f3d6cf6a9c`.
+  sole scale-two `(2,1,9)` certificate survivor. Retaining the body maximum
+  `U=max u_i` gives the stronger support cap `s_U=4(U-1)/(63U)`, its exact
+  integer variance/discrepancy tariff, the `k=0` plateau, and the sufficient
+  gate `t*mu(G)/r_G>sqrt(4(U-1)/(3(59U+4)))`. The wall constants are
+  individually sharp and jointly asymptotically sharp at the event layer,
+  not a globally realized failure equality. Exact pass rows: `20`; it closes
+  no type. Script/output SHA-256:
+  `4249cc9cc0597482d7634969d5e1c6a5f453a9c1f34ad8ad971517a986055b99` /
+  `3d7e6bd375231d3d6d179276d9e715c808c2ed7fee9016ecfdf50fdaf90b3e33`.
 
 - `jc2_etale_node_address_balance_thm3996.py` -> matching `.out`
   [THM-3996 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
@@ -1197,10 +1201,12 @@
   the all-row Hasse transform characterizes membership in `k[p,y]`. The first
   diagonal selects THM-3992's nonliftable branch; its continued seam gives
   `gamma=-a^3/2` and `[p^2]R=8/(3a^7)!=0`. A second diagonal and an independent
-  elliptic potential-reduction argument separately exclude `R=0`. Exact pass
-  rows: `73`. Script/output SHA-256:
-  `9a00d3d80c94591a8677b6c16f1306a747c00721a4e517147afd65ae38737d7e` /
-  `870b058333301f4d518faa41ecc4e05e02e50b432ff0e9244c51278c4c4407dd`.
+  elliptic potential-reduction argument separately exclude `R=0`. On the live
+  seam, `A5=a^5`, `G/gamma`, `R/gamma`, `beta/gamma`, and `delta/gamma`
+  quotient the residual fifth-root action and remove a five-orbit enumeration
+  from the next companion atlas. Exact pass rows: `81`. Script/output SHA-256:
+  `5cc591ec161a320e9d215c98e35d762bfacd1d2d16634aa93e8e4bdbe2ed70b4` /
+  `2e15c1ed6a8156ab6ed9208ecabcab33d9565a156222d0cde824cfbc3afd1ff1`.
 
 - `jc2_three_by_three_weight_support_thm3998.py` and
   `jc2_three_by_three_weight_support_groebner_thm3998.py` -> matching `.out`s
@@ -1218,19 +1224,33 @@
   `bf561c4ae7712b413deae2c3315a36806103230692625d139cfc33e6f0aed822` /
   `a7d633a98ad0dfc588d5c59b039518dcb19add320f1a480e0c4623dd35639c46`.
 
-- `brendle_hung_lemma54_independent_audit_20260824.py` and
-  `brendle_hung_vbc_exact_point_audit_20260824.py` -> matching `.out`s
-  [FINITE-EXACT SOURCE CONTROLS; GLOBAL `S2 x S2` CLAIM UNDER AUDIT]. The
-  omitted `P1(L(h_a))=0` identity is exact symbolically on both generic
-  components relative to the reconstructed formulas, with a nonzero hostile
-  tensor. The overwritten `V_bc^(2)` identity cancels at one generic exact
-  point; its global repair remains conditional on the saved `V_ac=0` block.
+- `brendle_hung_lemma54_independent_audit_20260824.py`,
+  `brendle_hung_vbc_exact_point_audit_20260824.py`,
+  `brendle_hung_vac_vbc_global_identity_audit_20260824.py`, and
+  `brendle_hung_normal_hessian_sylvester_independent_audit_20260824.py` ->
+  matching `.out`s [VERIFIED-EXACT RECONSTRUCTED SOURCE FORMULAS; GLOBAL
+  `S2 x S2` CLAIM UNDER AUDIT]. The omitted `P1(L(h_a))=0` identity is exact
+  symbolically on both generic components. Relative to one reconstructed
+  moving-frame implementation, `V_ac=V_bc=0` globally on the generic locus;
+  this is independent of saved Mathematica state, but not a second geometry
+  implementation. A separate direct `x=tan(theta)` reconstruction gives four
+  positive leading principal minors, hence a positive-definite generic normal
+  Hessian. Its determinant tends to zero at both ends, so neither endpoint
+  extension nor uniform coercivity follows. The remaining quadratic
+  identities, cubic integral, smooth extension, and headline theorem remain
+  open.
   Lemma script/output SHA-256:
   `126247d6ac7f91cd9b922c3f5ff1d3d38c1f1d0e7ee3c20f4adc18421c96741f` /
   `287c34961239b16339b193723d4d6dda3e71d2ade5136ad0adcc97d54d3f1a7b`.
   Point-control script/output SHA-256:
-  `45f7c0b617898149d3d368070e87c84bbf37470244ece5ca332a2e9724281102` /
+  `608d330233603edbf0b49722ca956052181451a0e0673e3abf14198a780121bb` /
   `3c6dcf700c4d8cd44aae9390fb0aaadfc7937180a9af9a6880ace9218f7212dc`.
+  Global script/output SHA-256:
+  `9939f4fdb2ca7a7a6c639747de753d3bfe0b7827c7a1579bc66dd862ae13e772` /
+  `9dc962b4a2de1f8b64706a83826e6bf9030d23f2e9b3353c26513d68ee036b2b`.
+  Sylvester script/output SHA-256:
+  `69bfb466ffd26ad88465e4fc9f6adb71adfc0bf621e3a9fcd649d45f7035677d` /
+  `82cae029b85efddcbd6404585cb8d52483944c2f9a3e2de87fd990f937f6d999`.
 
 - `cyclotomic_factorial_two_power_decoder_20260824.py` -> matching `.out`
   [ELEMENTARY PROVED IDENTITY + FINITE-EXACT CROSS-FRONTIER ATLAS; NO
@@ -1254,6 +1274,19 @@
   normal run matches the frozen output after LF normalization. Script/output SHA-256:
   `3748afedf8af898b05cd9514970c453637d58ab9a69629a76d94ef14775df6b8` /
   `a7e8e94071a58825fde77dcaa4298614c8499e18d1f5aeabd884976efae443bd`.
+
+- `hopf_s6_b2_completed_centralizer_cech_audit_20260824.py` -> matching
+  `.out` [VERIFIED-EXACT CONDITIONAL MARKED AFFINE-CLASS ORBIT; GLOBAL
+  HOPF/S6 CLAIMS OPEN]. Conditional on the manuscript's analytic construction,
+  exponential/log compatibility, and Proposition 9.23 vertical-field bundle,
+  the centralizer is `+/- (I+bE14)`, the order-four residue forces `b=2k`,
+  and the prescribed marked centralizer-generated completed orbit is exactly
+  `2Z`. The integral lattice cocycle is generally nonzero (already for `k=1`
+  over `Q`); a global torus section, not a lattice coboundary, absorbs it.
+  The displayed bundle extension splits as `O direct_sum O(-1)`. No global
+  manifold, topology, or S6 conclusion follows. Script/output SHA-256:
+  `375b4220e71c25c84d285108c367761b8eae4233ddd84044d87d9568a4023e6c` /
+  `574bd8677623da01193e6f223891e24047f585027b13385ea04084b3d098611e`.
 
 - `jc2_double_torus_nonlinear_balanced_partial_split_scout.py` -> matching
   `.out` [VERIFIED-EXACT + INDEPENDENTLY FORMULA-AUDITED SCOUT; NOT CANON].

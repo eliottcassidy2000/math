@@ -244,6 +244,32 @@ resonant_epsilon = simp(epsilon.subs({theta0: 0, gamma: resonant_gamma}))
 zero("R=0 forced epsilon value", resonant_epsilon - sp.Rational(4000, 6561)/a**12)
 gate("R=0 forced epsilon is nonzero", resonant_epsilon != 0)
 
+# On the live THM-3992 seam gamma=-a^3/2, quotient the residual fifth-root
+# action by A5=a^5 and by dividing every weight-one quantity by gamma.
+gamma_live = -a**3 / 2
+A5 = a**5
+zeta, beta_formal, delta_formal, G_formal, R_formal = sp.symbols(
+    "zeta beta_formal delta_formal G_formal R_formal", nonzero=True
+)
+gate(
+    "A5 is invariant modulo zeta^5=1",
+    sp.rem(sp.expand((zeta**2*a)**5 - A5), zeta**5 - 1, zeta) == 0,
+)
+zero("G/gamma is fifth-root invariant", zeta*G_formal/(zeta*gamma) - G_formal/gamma)
+zero("R/gamma is fifth-root invariant", zeta*R_formal/(zeta*gamma) - R_formal/gamma)
+zero("beta/gamma is fifth-root invariant", zeta*beta_formal/(zeta*gamma) - beta_formal/gamma)
+zero("delta/gamma is fifth-root invariant", zeta*delta_formal/(zeta*gamma) - delta_formal/gamma)
+zero("live normalized p coefficient", (lam/gamma).subs(gamma, gamma_live) - 6/A5)
+zero("live normalized p^2 residual", (alpha/gamma).subs(gamma, gamma_live) + sp.Rational(16, 3)/A5**2)
+b_invariant = sp.symbols("b_invariant")
+epsilon_beta = beta_formal**2/(4*gamma) + sp.Rational(21, 20)*a**3/gamma**5 + sp.Rational(4, 3)/gamma**4 - sp.Rational(7, 27)/(a**3*gamma**3)
+epsilon_tilde_live = (epsilon_beta/gamma).subs({gamma: gamma_live, beta_formal: b_invariant*gamma_live})
+zero(
+    "live normalized p^3 residual",
+    epsilon_tilde_live - (b_invariant**2/4 + sp.Rational(2752, 135)/A5**3),
+)
+print("RESULT live_mu5_quotient=(A5=a^5,G/gamma,R/gamma,beta/gamma,delta/gamma)")
+
 
 def direct_source_case(av, gv, theta0v, m1v, label: str) -> None:
     """Construct a bounded third jet and expand directly in x,t."""

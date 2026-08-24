@@ -1,0 +1,19 @@
+status=VERIFIED-EXACT
+source=arXiv:2608.19068v1 background metric and P2 normal Hessian
+universe=0<theta<pi/2; x=tan(theta)>0
+method=independent x-coordinate moving-frame reconstruction; no repository geometry imports
+basis=(z1,z2,z3,z4) in the source P2 order
+hessian=Matrix([[2*(x**2 + 1)**2*(3*x**2 + 7)/(3*x**2 + 1)**3, 2*(x**2 + 1)**2*(3*x**2 + 13)/(3*(x**2 + 3)*(3*x**2 + 1)**2), 0, 0], [2*(x**2 + 1)**2*(3*x**2 + 13)/(3*(x**2 + 3)*(3*x**2 + 1)**2), 2*(x**2 + 1)*(3*x**4 + 34*x**2 + 27)/(9*(x**2 + 3)**2*(3*x**2 + 1)), 0, 0], [0, 0, 2*(x**2 + 1)**2*(7*x**2 + 3)/(x**2 + 3)**3, 2*(x**2 + 1)**2*(13*x**2 + 3)/(3*(x**2 + 3)**2*(3*x**2 + 1))], [0, 0, 2*(x**2 + 1)**2*(13*x**2 + 3)/(3*(x**2 + 3)**2*(3*x**2 + 1)), 2*(x**2 + 1)*(27*x**4 + 34*x**2 + 3)/(9*(x**2 + 3)*(3*x**2 + 1)**2)]])
+hessian_symmetric=True
+hessian_block_structure=(z1,z2)|(z3,z4)
+leading_principal_minors=(2*(x**2 + 1)**2*(3*x**2 + 7)/(3*x**2 + 1)**3, 16*(x**2 + 1)**3*(3*x**2 + 5)/(9*(x**2 + 3)**2*(3*x**2 + 1)**3), 32*(x**2 + 1)**5*(3*x**2 + 5)*(7*x**2 + 3)/(9*(x**2 + 3)**5*(3*x**2 + 1)**3), 256*x**2*(x**2 + 1)**6*(3*x**2 + 5)*(5*x**2 + 3)/(81*(x**2 + 3)**5*(3*x**2 + 1)**5))
+sylvester_conclusion=H is positive definite for every x>0
+x_equals_1_minors=(5/4, 1/9, 5/36, 1/81)
+endpoint_det_limits_x0_xinf=(0, 0)
+det_positive_indefinite_hostile=(det=1,delta2=-1)
+diagonal_sign_mutation_delta1=-2*(x**2 + 1)**2*(3*x**2 + 7)/(3*x**2 + 1)**3
+diagonal_sign_mutation_matches_expected=False
+conclusion=the reconstructed generic normal Hessian is positive definite, hence invertible
+nonconsequence=no endpoint extension, uniform coercivity, remaining curvature identity, cubic integral, or headline theorem
+script_sha256=69bfb466ffd26ad88465e4fc9f6adb71adfc0bf621e3a9fcd649d45f7035677d
+transcript_sha256=6a66695081ef7f3e2f62d39daa328e1e51231d146891dc7b48babcf9b88e04a8

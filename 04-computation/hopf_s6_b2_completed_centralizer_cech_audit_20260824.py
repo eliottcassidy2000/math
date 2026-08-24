@@ -109,6 +109,18 @@ require(
     kappa1 + A1 * kappa2 + A1 * A2 * kappa0 == Matrix.zeros(4, 1),
 )
 
+# This period tuple is not already a lattice coboundary. For k=1, a common
+# rational zero-cochain v would have to solve both
+# (I-A1)v=-u_hat and (I-A2)v=w_hat. The augmented rank jump rules this out.
+coboundary_matrix = (I4 - A1).col_join(I4 - A2)
+coboundary_rhs = (-u_hat).col_join(w_hat)
+require(
+    "k=1 lattice cocycle is nontrivial even over Q",
+    coboundary_matrix.rank() == 3
+    and coboundary_matrix.row_join(coboundary_rhs).rank() == 4,
+)
+print("RESULT passage through the torus exponential, not a lattice coboundary, is essential")
+
 # In quotient coordinates (gamma_bar,u_bar) and torus coordinates
 # (w_hat,delta_hat), B0 sends -k*u_bar to -k*w_hat.  Since s o g0=s-1,
 # Phi_(-k*u_bar) has boundary lift -k*s*w_hat and cocycle +k*w_hat.
@@ -119,7 +131,7 @@ require(
     B0 * Matrix([0, -k]) == Matrix([-k, 0]),
 )
 print("RESULT Phi_(-k*u_bar) absorbs the forced cusp cocycle k*w_hat")
-print("RESULT the discrete completed-overlap Cech obstruction vanishes for every b=2k")
+print("RESULT a global torus section absorbs the generally nonzero lattice cocycle for every b=2k; residual winding is zero")
 
 # The local order-four invariant covector has psi2(delta)=2.  With ell2 odd,
 # its residue is 2*b*ell2 mod 4: zero exactly for even b.
@@ -134,7 +146,9 @@ def h1_line(d):
 
 require("H^1(P1,O)=0", h1_line(0) == 0)
 require("H^1(P1,O(-1))=0", h1_line(-1) == 0)
+require("Ext^1(O(-1),O)=H^1(P1,O(1))=0", h1_line(1) == 0)
 print("CONDITIONAL INPUT manuscript exact sequence 0 -> O -> V -> O(-1) -> 0")
+print("CONDITIONAL RESULT the displayed extension splits as V=O direct_sum O(-1)")
 print("CONDITIONAL RESULT H^1(P1,V)=0 kills the connected additive overlap class")
 print("CONDITIONAL RESULT the centralizer-generated completed orbit is exactly 2Z")
 print("NONCONSEQUENCE no compactness, topology, homology, diffeomorphism, or S6 claim is verified")

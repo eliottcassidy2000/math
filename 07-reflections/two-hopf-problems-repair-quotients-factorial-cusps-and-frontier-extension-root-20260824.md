@@ -410,26 +410,33 @@ correctly oriented wall at this coarse level.  Hence endpoint arithmetic
 alone cannot close a scale-one type.  The missing data are exposure and
 masking in the actual sets `G_u`.
 
-The scale-two survivor `(2,1,9)` behaves differently.  Odd `t` leaves four
-interior parity holes of total length `4/(63t)`, so a failure can have support
-at most
+The scale-two survivor `(2,1,9)` behaves differently.  Put `U=max_i u_i`.
+Odd `t` leaves four interior parity holes of total length `4/(63U)`, so a
+failure can have essential support at most
 
 ```text
-s_t=4(t-1)/(63t).                                       (15)
+s_U=4(U-1)/(63U).                                       (15)
 ```
 
-Writing `m=t*mu(G)` and `theta_t={m/s_t}`, the exact integer tariff strengthens
-to
+Writing `m=t*mu(G)` and `theta_(t,U)={m/s_U}`, the exact integer tariff is
 
 ```text
-Var(N_t)>=m^2(1-s_t)/s_t+s_t theta_t(1-theta_t).         (16)
+Var(N_t)>=m^2(59U+4)/(4(U-1))
+          +s_U theta_(t,U)(1-theta_(t,U)).               (16)
 ```
 
 Together with the variance upper bound this yields the sufficient gate
 
 ```text
-t*mu(G)/r > sqrt(4(t-1)/(3(59t+4))).                    (17)
+t*mu(G)/r > sqrt(4(U-1)/(3(59U+4))).                    (17)
 ```
+
+This strictly shrinks the old `t`-cap when `t>U`, but the full integer
+envelope has a `k=0` plateau: it improves strictly over the old envelope only
+for `m>s_U`.  The four spacing constants are eventwise sharp and their sum is
+asymptotically sharp using owners `U,U-1`; no global failure realizes all four
+equalities simultaneously.  Wall singleton values are handled only modulo
+null sets, or by the closed trimmed cores of THM-3995.
 
 The individual oriented endpoint equations `(12)--(14)` remain a
 **FINITE-EXACT SCOUT RESULT** pending separate canon promotion.  The parity

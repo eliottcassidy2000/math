@@ -602,15 +602,15 @@ the manuscript's displayed `c2=0` gives `c0 mod 2Z`.  A one-`delta` change in
 the order-four vector is an exact hostile: it preserves `ell2` and `p` but
 changes the invariant-covector residue by `2 mod 4`.
 
-### The even generator has zero completed Cech class
+### The even generator's lattice cocycle is absorbed and leaves zero winding
 
 **Status: VERIFIED-EXACT FROM DISPLAYED DATA + PROVED CONDITIONAL
 IMPLICATION.**  Assume the manuscript's analytic pieces and transition maps
 exist as displayed; assume their compatibility with the punctured torus
 exponential sequence `0 -> Lambda -> E -> T -> 0`; and assume that
-zero-winding differences of the three filled local isomorphisms are exactly
-the Cech cocycles of the complete logarithm sheaf identified in Proposition
-9.23 as the completed vertical-translation bundle
+ zero-winding differences of the three filled local isomorphisms are exactly
+the Cech cocycles of the completed vertical-field bundle
+`V=f_*T_(X/B)` identified in Proposition 9.23, with exact sequence
 
 ```text
 0 -> O -> V -> O(-1) -> 0.                              (21)
@@ -676,15 +676,28 @@ cusp map explicitly: `B0(-k u_bar)=-k w_hat`, so, because
 `s o g0=s-1`, `Phi_(-k u_bar)` has boundary lift `-k s w_hat` and cocycle
 `k w_hat`.  It commutes with the `Psi_lambda` action and descends across
 `N0`.  The three `kappa_j` define a class of the period local system on
-`B^circ=P1 minus {p0,p1,p2}`.  The universal-cover vector bundle `E` of the
+`B^circ=P1 minus {p0,p1,p2}`. This lattice cocycle is genuinely nontrivial:
+for `k=1`, the simultaneous rational coboundary equations for the first two
+edges have coefficient rank three and augmented rank four. Thus passing
+through the torus exponential is essential. The universal-cover vector bundle `E` of the
 torus family is coherent on this Stein curve, so Cartan B gives
 `H^1(B^circ,E)=0`; the exponential sequence therefore realizes that period
-class by a global translation of the punctured family.  Subtracting it from
-the three displayed local maps leaves zero winding at every overlap.  Thus
-the full **discrete** overlap obstruction is zero.
+  class by a global torus translation of the punctured family. The lattice
+  class itself is generally nonzero and is not asserted to be a lattice
+  coboundary. Subtracting the absorbing torus section from the three displayed
+  local maps leaves zero winding at every overlap. Thus the residual
+  **discrete winding obstruction after absorption** is zero.
 
 After these winding classes are removed, the overlap translations admit
-holomorphic logarithms in `V`.  Equation `(21)` and
+holomorphic logarithms in `V`. In fact the displayed sequence `(21)` splits,
+because
+
+```text
+Ext^1(O(-1),O)=H^1(P1,O(1))=0.
+```
+
+Hence `V=O direct_sum O(-1)` conditionally on the manuscript's bundle
+identification. Equivalently, `(21)` and
 
 ```text
 H^1(P1,O)=H^1(P1,O(-1))=0
@@ -714,6 +727,6 @@ output  d594fe56f10b815c5d6799bb7f1c444dfb114d90a1c16e779b683e79a1c733c1
 The completed-overlap companion/frozen-output hashes are
 
 ```text
-script  4e8c731cfb1d1eeeb535eac45782dad574ebbe92b22507a30061cdabf095c7b8
-output  4542332b4d21e3ee9b2a57dbfa14d557d7179d7352c154fa151b8ef67cfd8c5a
+script  375b4220e71c25c84d285108c367761b8eae4233ddd84044d87d9568a4023e6c
+output  574bd8677623da01193e6f223891e24047f585027b13385ea04084b3d098611e
 ```

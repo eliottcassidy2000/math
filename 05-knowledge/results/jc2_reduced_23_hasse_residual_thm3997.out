@@ -48,6 +48,15 @@ PASS  ideal iff degree cap m=3
 PASS  alpha vanishes on the unique resonance
 PASS  R=0 forced epsilon value
 PASS  R=0 forced epsilon is nonzero
+PASS  A5 is invariant modulo zeta^5=1
+PASS  G/gamma is fifth-root invariant
+PASS  R/gamma is fifth-root invariant
+PASS  beta/gamma is fifth-root invariant
+PASS  delta/gamma is fifth-root invariant
+PASS  live normalized p coefficient
+PASS  live normalized p^2 residual
+PASS  live normalized p^3 residual
+RESULT live_mu5_quotient=(A5=a^5,G/gamma,R/gamma,beta/gamma,delta/gamma)
 PASS  source_control_1: direct third-jet row
 PASS  source_control_1: direct J t^0
 PASS  source_control_1: direct J t^1

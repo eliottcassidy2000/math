@@ -14,16 +14,20 @@ PASS  first elliptic overlap cocycle is -k u_hat
 PASS  second elliptic overlap cocycle is k w_hat
 PASS  triangle relation forces cusp cocycle k w_hat
 PASS  three boundary cocycles satisfy the exact triangle relation
+PASS  k=1 lattice cocycle is nontrivial even over Q
+RESULT passage through the torus exponential, not a lattice coboundary, is essential
 PASS  A0 fixes the cusp vanishing cycle w_hat
 PASS  toric shear Phi_(-k u_bar) has exponent -k w_hat
 RESULT Phi_(-k*u_bar) absorbs the forced cusp cocycle k*w_hat
-RESULT the discrete completed-overlap Cech obstruction vanishes for every b=2k
+RESULT a global torus section absorbs the generally nonzero lattice cocycle for every b=2k; residual winding is zero
 PASS  even shifts pass the order-four residue
 PASS  odd shifts fail the order-four residue by 2
 RESULT odd centralizer shifts fail the marked order-four filling residue by 2 mod 4
 PASS  H^1(P1,O)=0
 PASS  H^1(P1,O(-1))=0
+PASS  Ext^1(O(-1),O)=H^1(P1,O(1))=0
 CONDITIONAL INPUT manuscript exact sequence 0 -> O -> V -> O(-1) -> 0
+CONDITIONAL RESULT the displayed extension splits as V=O direct_sum O(-1)
 CONDITIONAL RESULT H^1(P1,V)=0 kills the connected additive overlap class
 CONDITIONAL RESULT the centralizer-generated completed orbit is exactly 2Z
 NONCONSEQUENCE no compactness, topology, homology, diffeomorphism, or S6 claim is verified

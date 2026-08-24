@@ -9,7 +9,9 @@ status: >
   a,gamma and the first free scalar beta=[y]R; [py]R is next. In particular
   [s]q0=a/gamma selects THM-3992's nonliftable branch. Its next seam forces
   gamma=-a^3/2 and hence [p^2]R=8/(3a^7), so R=0 is impossible already on
-  the combined live cell. The second diagonal and an independent generic-
+  the combined live cell. On that seam, A5=a^5 together with G/gamma,
+  R/gamma, beta/gamma, and delta/gamma quotients the residual fifth-root
+  action and gives an invariant three-scalar residual atlas. The second diagonal and an independent generic-
   fibre proof, using incompatible potential-good reduction under the
   Keller-induced isogeny, separately exclude R=0. The full reduced 2:3 cell
   and JC(2) remain open.
@@ -39,8 +41,8 @@ external: >
   Neron--Ogg--Shafarevich criterion and potential-good reduction under isogeny.
 script: 04-computation/jc2_reduced_23_hasse_residual_thm3997.py
 output: 05-knowledge/results/jc2_reduced_23_hasse_residual_thm3997.out
-script_sha256: 9a00d3d80c94591a8677b6c16f1306a747c00721a4e517147afd65ae38737d7e
-output_sha256: 870b058333301f4d518faa41ecc4e05e02e50b432ff0e9244c51278c4c4407dd
+script_sha256: 5cc591ec161a320e9d215c98e35d762bfacd1d2d16634aa93e8e4bdbe2ed70b4
+output_sha256: 2e15c1ed6a8156ab6ed9208ecabcab33d9565a156222d0cde824cfbc3afd1ff1
 hash_basis: raw LF bytes
 ---
 
@@ -395,7 +397,35 @@ epsilon=gamma theta_0^2
 Thus `[p^3]R` is also forced once `beta` is chosen, while `delta=[py]R` is
 the next surviving scalar.
 
-### 4.1 The zero-residual cell is empty
+### 4.1 The live seam has a scalar fifth-root quotient
+
+The residual action `(2)` has no remaining orbit-enumeration cost. On the
+live seam `(21b)`, put
+
+```text
+A5=a^5,           Gtilde=G/gamma,       Rtilde=R/gamma,
+b=beta/gamma,     d=delta/gamma.                            (29k)
+```
+
+All five quantities are invariant under `(2)`: `a^5` acquires `zeta^10=1`,
+and each numerator in the other four ratios has the same weight one as
+`gamma`. Exact substitution in `(1)`, `(18)`, and `(29)` gives
+
+```text
+Gtilde=u+(6/A5)p+Rtilde,
+
+[p^2]Rtilde=-16/(3A5^2),          [y]Rtilde=b,
+[py]Rtilde=d,
+[p^3]Rtilde=b^2/4+2752/(135A5^3).                         (29l)
+```
+
+Thus `(A5,b,d)` is the first invariant residual atlas for the live continued
+cell; the two pure coefficients displayed in `(29l)` are functions on it.
+This quotients only the stated residual `mu_5` action. It does not quotient
+arbitrary later target automorphisms or prove that any atlas point extends
+through the higher rows.
+
+### 4.2 The zero-residual cell is empty
 
 There is now an immediate exact contradiction if `R=0`.  That assumption
 first gives
@@ -445,7 +475,7 @@ A_2(0)=beta^2/4+1/(3gamma^3)-2/(9a^3gamma^2),
 A_1'(0)=gamma*delta+5a beta/(4gamma).                    (31)
 ```
 
-### 4.2 Independent generic-fibre reduction proof
+### 4.3 Independent generic-fibre reduction proof
 
 There is a second proof of `(29d)` which does not use either normal-diagonal
 calculation. It is retained because it tests the local algebra against a
@@ -660,7 +690,8 @@ normalization and end with `ALL THM-3997 EXACT CHECKS PASSED`.
 
 **Necessary and exact in the THM-3992 gauge:** `(18)`, `(21)`, the combined
 seam consequence `(21b)--(21c)`, `(29)`, `(31)`, and the all-row iff
-transform `(39)--(40)`.
+transform `(39)--(40)`. The residual fifth-root quotient `(29k)--(29l)` is
+also exact on the live seam.
 
 **Not proved:**
 
@@ -678,4 +709,5 @@ ledger: the pure coefficients `[p^2]R` and `[p^3]R` are forced, `[y]R` is
 the first surviving scalar in the fixed gauge, `[py]R` is the next, and the
 entire zero-residual subcell is impossible. Combined with THM-3992, every
 live continued pair lies on `gamma=-a^3/2` and has
-`[p^2]R=8/(3a^7)!=0`.
+`[p^2]R=8/(3a^7)!=0`; the remaining first residual ledger descends to the
+invariant coordinates `(A5,b,d)`.

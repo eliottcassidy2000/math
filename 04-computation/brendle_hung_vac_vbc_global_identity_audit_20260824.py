@@ -323,7 +323,7 @@ def audit() -> list[str]:
         f"V_ac_sum={v_ac}",
         f"V_bc_terms={(linear_bc, quadratic_bc, minimizer_bc)}",
         f"V_bc_sum={v_bc}",
-        "SO3_relations_used=none",
+        "SO3_algebraic_q_component_constraints_used_in_final_reduction=none",
         "symmetry_pullback=F^*(h_a,h_c,h_ac)=(h_b,h_c,h_bc)",
         "symmetry_pushforward=F_*(h_a,h_c,h_ac)=(-h_b,h_c,-h_bc)",
         "plane_coordinate_transport=(z1,z2,z3,z4)->(z3,z4,z1,z2)",
