@@ -1,5 +1,5 @@
 ---
-id: THM-3908
+id: THM-3910
 title: "LRC(14) auxiliary-center erosion and t-sheet variance response"
 status: >
   RESERVED / UNPROVED EMPTY STUB.  Namespace reservation only; this file is
@@ -10,7 +10,7 @@ source: root / THM-3878 response audit, 2026-08-23
 depends_on: []
 ---
 
-# THM-3908 -- RESERVED / UNPROVED EMPTY STUB
+# THM-3910 -- RESERVED / UNPROVED EMPTY STUB
 
 This file reserves the theorem ID and final slug for the audited
 auxiliary-center erosion and integer lift-count response.  It contains no
