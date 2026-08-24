@@ -1,0 +1,26 @@
+STATUS=THM-4007 INDEPENDENT SYMPY-FREE HOSTILE AUDIT
+PASS  A naive third cap is five before deleting the exact extreme term
+PASS  A exact depth-minus-two row deletes x^5 and leaves degree four
+PASS  C naive third cap is six before deleting the exact extreme term
+PASS  C exact depth-minus-three row deletes x^6 and leaves degree five
+PASS  axis lower row is -544/15 times A5^-3
+PASS  axis equation forces 2176/135 times A5^-3
+PASS  forced axis coefficient is nonzero in characteristic zero
+PASS  weight minus six is new
+PASS  J[t^2]=0 for c02=0,c21=0
+PASS  P[t^4] residual row for c02=0,c21=0
+PASS  residual row degree is exactly four for c02=0,c21=0
+PASS  J[t^2]=0 for c02=7,c21=16/3
+PASS  P[t^4] residual row for c02=7,c21=16/3
+PASS  residual row degree is exactly four for c02=7,c21=16/3
+PASS  J[t^2]=0 for c02=-14/3,c21=-5/2
+PASS  P[t^4] residual row for c02=-14/3,c21=-5/2
+PASS  residual row degree is exactly four for c02=-14/3,c21=-5/2
+PASS  distinct-row determinant hostile detects the factor swap
+PASS  same-row determinant is blind control
+PASS  all live strata have A-support at least five
+PASS  fixed-gauge C floor is five but is not claimed shear-invariant
+CHECKS=21
+SEMANTIC_SHA256=148a234ce88f33ca899a1b0e6b234d19a9e866837cb1e3eb6968c69647bbfe27
+THEOREM_ID=THM-4007
+ALL THM-4007 INDEPENDENT HOSTILE CHECKS PASSED
