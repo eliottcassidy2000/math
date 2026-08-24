@@ -1,0 +1,63 @@
+LRC14 GRAVER-BOUQUET / FEJER / OWNER AUDIT
+status=FINITE-EXACT bounded laboratory; LRC(14) remains OPEN
+universe=V_w={1,...,11,13,w}, 12<=w<=200, w!=13 (188 rows)
+
+THM-4009 sharpened-cap audit
+counterexample_row_bound=square_norm<=195; l1<=50; height<=13
+support_two_ratios=47; unoriented_ratio_support_packets=3666; oriented_labelled_assignments=7332; pair_l1_max=19
+cap_respecting_l1_three_harmonics=1..16; largest_l1=48
+V_38 shortest_relation_norm_square=3
+V_38 shortest_relations=30 additive triples x+y=z
+single_order_bouquets=60; positive_definite=60
+single_order_all_LDL_pivots_gt=2/5; minimum=[0.40432753673988893463248710358310819521611119894648572285835733235329797 +/- 7.53e-72]
+two_order_bouquets=30; positive_definite=28; exact_negative=2
+two_order_positive_all_LDL_pivots_gt=1/3; minimum=[0.3370748131872530585747944888140723238326601858761305103875268446364745 +/- 6.87e-71]
+two_order_negative=(2, 4, 6); coefficient_norm_square=250007; quadratic=[-4.258701501884981720581725598487777584185007620982043415479961277200846 +/- 6.39e-70]; normalized=[-1.7034329046326629736694274954252391269784476518585653263628463511825051e-5 +/- 6.56e-76]
+two_order_negative=(2, 6, 8); coefficient_norm_square=394; quadratic=[-5.911372570568152902527518960020855069243256540051254357981257178734013754 +/- 6.02e-73]; normalized=[-0.01500348368164505812824243390868237327219100644683059481721131263638074557 +/- 1.28e-75]
+V_38 short_Fejer_orders_1_through_17_positive=yes; order_17=[0.435236300295201098917724080240308880211754807092653076018810236692813296633 +/- 7.61e-76]
+AP all_30_two_order_bouquets_positive_definite=yes; all_LDL_pivots_gt=2/5; minimum=[0.401604532251523869510873124072457094344571784494512266802929585633394039 +/- 3.16e-73]
+GW all_30_two_order_bouquets_positive_definite=yes; all_LDL_pivots_gt=2/5; minimum=[0.4296777090723684199729032015159672647655690543038716814578622577799718666 +/- 7.29e-74]
+verdict=shortness alone fails; cross-order phase creates the strict certificate
+endpoint_owner_still_absent=yes
+
+legacy THM-3743 cap-respecting harmonic laboratory
+base_relation=2*(speed 1)-1*(speed 2)=0; primitive_l1=3; Graver=yes
+flatness_cap=356; harmonic_range=1..118; largest_l1=354
+bouquet_size=178; max_frequency=236
+bouquet=union_{1<=k<=118}{0,k,2k}
+
+strict spectral census
+complex_bouquet_negative=185
+reflection_breaking_oriented_only=1 (w=36)
+boundary_controls=2 (w=12 AP, w=24 GW)
+uncertified=0
+closest_certified_complex=w=47 q=[-0.06194133704039522606019594914354633095920554344488472862944505940299230256 +/- 6.19e-75]
+
+w=12 candidate_height=1/14 center=1/14 complex_q=[0.04985396666780645449299846921134067422611975483147844034207931146321302929 +/- 9.89e-75] oriented_q=not_needed
+w=24 candidate_height=1/14 center=1/14 complex_q=[0.0379045076949288133063396642687128129710223615404611120759247873804142773 +/- 5.09e-74] oriented_q=not_needed
+w=36 candidate_height=3/41 center=17/41 complex_q=[0.0005809396442092707588426115182893209650333263543108118536905561316255437 +/- 6.40e-74] oriented_q=[-0.001733580377430563608507664022413856219415033194753639470367547859707054 +/- 4.77e-73]
+w=38 candidate_height=1/12 center=1/12 complex_q=[-0.2847533644617062495643789241779659493590081544793937635923401806298740177 +/- 5.23e-74] oriented_q=not_needed
+
+boundary owner channel
+AP danger_union_measure=1; weak_time=1/14; owners=((1,+),(13,-))
+GW danger_union_measure=1; weak_time=1/14; owners=((1,+),(13,-))
+therefore every absolutely-continuous Toeplitz quadratic is nonnegative
+and the weak equality witness requires the atomic endpoint-owner sidecar
+
+sharp centered Fejer control on V_38
+orders_1_through_118_positive=yes; order_118=[0.00300878289977410876646859540697567705255821768476893110884734914759780019 +/- 7.28e-75]
+order_119=[-0.00093361100755144716573665092805414633919718060922136259686280232987662111 +/- 6.28e-75] (negative)
+algebraic_sum=-495701252910013*cos(3*pi/14)/297378624843300 - 782638127454913439*cos(pi/14)/682821994185322992 - 5165152368558959053*sin(pi/7)/3660149384600829120 - 9510954103527122*sqrt(3)*cos(3*pi/14)/63581070443933315 - 4810735134350327144*sqrt(3)*cos(pi/14)/74644223026333512475 + 242527972857483308*sqrt(3)*sin(pi/7)/280989396945792535
+algebraic_degree=12
+isolating_interval=[-1108313/411137,-7421767/2753160]
+pi_upper=355/113
+exact_upper_margin_for_S_plus_6pi_over_7=-6386897/2177749560<0
+
+connection_contract
+source=THM-4009 short Graver row plus cap-respecting scalar relations
+map=closed-walk prefixes -> frequency bouquet -> Hermitian danger matrix
+preserved=sign partition, harmonic scale, prefix ordering, cross-order phase
+destroyed=measure-zero equality, endpoint owner, physical component incidence
+sidecar=exact signed endpoint owners / cross-phase word
+cheapest_next_test=exact SDP on 47 pair types x 17 THM-3910 hostiles
+PASS
