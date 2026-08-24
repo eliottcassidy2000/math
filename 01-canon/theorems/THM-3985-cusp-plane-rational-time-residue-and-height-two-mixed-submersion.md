@@ -16,16 +16,16 @@ status: >
   m=1, or raising the height creates an explicit affine critical point.
 source: jc-zero-debt-lift + root / post-THM-3983 cusp-plane lane, 2026-08-24
 audit: >
-  PASS (root independent cusp-plane probe, 2026-08-24). The audit rederived
-  the birational affine-modification chart and Jacobian density, confirmed
-  the positive cusp-address residue sign without assuming a geometrically
-  integral generic fibre, and checked the typed constant-versus-nonconstant
-  cusp split. It independently exhausted the 4m+1 source punctures and m
-  restored boundary points, verified the m=1, n>=3, and nonconstant-h
-  critical endpoints, and checked sufficiency of both parity branches in
-  the common-power reconstruction. The canonical 215-gate and independent
-  297-gate companions match their frozen LF transcripts in normal and
-  optimized modes. JC(2) remains open.
+  PASS (jc-extra-debt-local plus independent root probe, 2026-08-24). Two
+  audits rederived
+  the cusp affine modification and volume sign, the typed constant versus
+  nonconstant cusp split, the normalization residue 1/phi', the rational
+  generic-fibre parameterization, p/D coprimality and squarefreeness, the
+  exact 4m+1 source and 3m+1 completion place ledgers, every height/exponent
+  endpoint, both parity branches of the common-power reconstruction, and
+  the residue argument without a geometric-integrality assumption. The
+  canonical 215-gate and independent 297-gate companions match their frozen
+  LF transcripts in normal and optimized modes. JC(2) remains open.
 depends_on:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
 related:
@@ -46,8 +46,8 @@ hash_basis: raw LF bytes
 
 # THM-3985 -- the cusp plane has no Keller first coordinate
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over
-an algebraically closed field `k` of characteristic zero. On the height-two
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of characteristic zero. On the height-two
 surface of THM-3973 put
 
 ```text

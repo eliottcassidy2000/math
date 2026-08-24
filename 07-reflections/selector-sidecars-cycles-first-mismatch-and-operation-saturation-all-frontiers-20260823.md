@@ -1002,6 +1002,10 @@ THM-3985 supplies the hostile reversal. Removing the leading `x` makes
 cusp-address selector then exposes `3m` residues on a rational fibre. The
 preserved target is still nonintegrability; the detecting representation
 moves from affine gradient to deleted normalization addresses.
+THM-3987 changes the selector again: noninjectivity on every affine line
+forces both directional tails and a linear jet in each output. That
+every-line sidecar closes every `2xm/mx2` support cell but still loses enough
+coefficient data to leave `3x4/4x3` live.
 THM-3955/57 are proved local conductor theorems with no global Hopf consequence.
 The proved LRC endpoint theorem moved to collision-free THM-4000; the namespace
 move changes no mathematical scope.

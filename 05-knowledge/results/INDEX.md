@@ -1045,6 +1045,24 @@
   `6e8c4e5a7e2a590178cfaab6996cab84faabb7ad06902691ff064c7fbaf3aca2` /
   `035b98857b1106241843e016d65c2c31428729c7f797ef973d70046f0fef21f5`.
 
+- `jc2_gwozdziewicz_every_line_weight_floor_thm3987.py` and independent
+  audit -> matching `.out`s [THM-3987 PROVED FROM CITED INPUTS +
+  VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. A hypothetical `B_2`
+  Darboux pair is a nonautomorphic planar Keller map and hence, by the cited
+  every-line theorem, immersed and noninjective on every affine source line.
+  Each output therefore needs a positive tail, an even negative tail, and a
+  distinct linear jet; exact three-weight rows have opposite jets. Combined
+  with THM-3974, every `2xm/mx2` and `3x3` cell is closed and the first live
+  cells are `3x4/4x3`. Primary/independent checks: `511/3,267`.
+  Primary script/output/semantic SHA-256:
+  `14d43bcd6ded0a750ba2e471bc00656572ab714593d0793a0f8b765f82c1061c` /
+  `292c5de53e4ae164542b20edc8c65fb97bb190877ffbad82f0a6e4809e5dcb3f` /
+  `a7d7d96e3874e1c811cc3d34a612900130d501bf11638a15f0969c6e1fe5726b`.
+  Independent script/output/semantic SHA-256:
+  `75524eca13aec75ae4c7e8dc93c98d09dacfb3232df65db34cbf82db9bc8ead3` /
+  `68d95eadbab2bb11a60c8e96e410b9e96a87976415c1c441db4adf39bc18ceda` /
+  `abebacdcf88dafed2e564ed4c588f191c8ab90e9f295feb42cf30f469e91c0b6`.
+
 - `cyclotomic_factorial_two_power_decoder_20260824.py` -> matching `.out`
   [ELEMENTARY PROVED IDENTITY + FINITE-EXACT CROSS-FRONTIER ATLAS; NO
   FC/HFC/JC/LRC CONSEQUENCE]. For every `d>=2`, the projected factorial

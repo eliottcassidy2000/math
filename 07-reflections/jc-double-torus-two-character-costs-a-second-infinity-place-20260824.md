@@ -420,6 +420,10 @@ THM-3985 shows why the leading-`x` qualifier matters: without it,
 Nevertheless its rational generic fibre removes `4m+1` source places and
 its time form has `3m` nonzero residues. Thus deleting affine criticality
 does not delete the generic-fibre integration invoice.
+THM-3987 then supplies a transverse invoice from affine lines: every output
+of a hypothetical height-two Darboux pair needs positive and even-negative
+tails plus a linear jet. Together with THM-3974 this leaves `3x4/4x3` as the
+first support cells not already closed.
 The orthogonal THM-3955/57 node and
 coordinate-crossing cotangent sequences are proved local sidecars, not global
 Jacobian or Hopf results.

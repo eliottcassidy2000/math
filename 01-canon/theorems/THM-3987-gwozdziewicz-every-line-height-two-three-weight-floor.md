@@ -2,8 +2,8 @@
 id: THM-3987
 title: "Gwozdziewicz every-line gate and the height-two three-weight floor"
 status: >
-  PROVED FROM CITED INPUTS + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-  AUDIT. Any polynomial Darboux pair in the height-two completion B_2 would
+  PROVED FROM CITED INPUTS + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  Any polynomial Darboux pair in the height-two completion B_2 would
   give a nonautomorphic planar Keller map, hence is immersed and noninjective
   on every affine source line. The two coordinate lines force, in each
   output, a surviving positive weight at least 2, a surviving even negative
@@ -17,6 +17,17 @@ status: >
   the first live total-support cells are only 3x4 and 4x3. No Darboux pair or
   JC(2) counterexample is constructed or excluded in unrestricted support.
 source: jc-zero-debt-lift / post-THM-3985 every-line support lane, 2026-08-24
+audit: >
+  PASS (root / jc-cohn3709 plus independent every-line audit, 2026-08-24).
+  The audits independently checked the cited theorem over algebraically
+  closed characteristic-zero fields,
+  the nonautomorphism-to-every-line contrapositive, the boundary valuation
+  ord_D(t)=-2, the immersed-curve degree lemma, both axis-survival ledgers,
+  odd-negative disappearance, the complete origin jet, the exact-three
+  opposite-jet seam, and the projective directional-tail reformulation.
+  They also caught and repaired the undefined `H` in the log-chart notation.
+  The canonical 511-gate and independent 3,267-gate companions match their
+  frozen LF transcripts in normal and optimized modes.
 depends_on:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
   - THM-3974-height-tower-few-weight-darboux-support-obstruction
@@ -31,13 +42,19 @@ output: 05-knowledge/results/jc2_gwozdziewicz_every_line_weight_floor_thm3987.ou
 script_sha256: 14d43bcd6ded0a750ba2e471bc00656572ab714593d0793a0f8b765f82c1061c
 output_sha256: 292c5de53e4ae164542b20edc8c65fb97bb190877ffbad82f0a6e4809e5dcb3f
 semantic_sha256: a7d7d96e3874e1c811cc3d34a612900130d501bf11638a15f0969c6e1fe5726b
+independent_audit_script: 04-computation/jc2_gwozdziewicz_every_line_weight_floor_thm3987_independent_audit.py
+independent_audit_output: 05-knowledge/results/jc2_gwozdziewicz_every_line_weight_floor_thm3987_independent_audit.out
+independent_audit_script_sha256: 75524eca13aec75ae4c7e8dc93c98d09dacfb3232df65db34cbf82db9bc8ead3
+independent_audit_output_sha256: 68d95eadbab2bb11a60c8e96e410b9e96a87976415c1c441db4adf39bc18ceda
+independent_audit_semantic_sha256: abebacdcf88dafed2e564ed4c588f191c8ab90e9f295feb42cf30f469e91c0b6
 hash_basis: raw LF bytes
 ---
 
 # THM-3987 -- every source line invoices both tails and a transverse jet
 
-**PROVED FROM CITED INPUTS + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-AUDIT.** Work over an algebraically closed field `k` of characteristic zero.
+**PROVED FROM CITED INPUTS + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.** Work over an algebraically closed field `k` of
+characteristic zero.
 Inside `k[x,t]`, put
 
 ```text
@@ -302,11 +319,13 @@ Reproduce with
 ```bash
 python3 04-computation/jc2_gwozdziewicz_every_line_weight_floor_thm3987.py
 python3 -O 04-computation/jc2_gwozdziewicz_every_line_weight_floor_thm3987.py
+python3 04-computation/jc2_gwozdziewicz_every_line_weight_floor_thm3987_independent_audit.py
+python3 -O 04-computation/jc2_gwozdziewicz_every_line_weight_floor_thm3987_independent_audit.py
 sha256sum 04-computation/jc2_gwozdziewicz_every_line_weight_floor_thm3987.py \
   05-knowledge/results/jc2_gwozdziewicz_every_line_weight_floor_thm3987.out
 python3 agents/check_docs.py
 ```
 
-Independent hostile audit is requested especially for the contrapositive use
-of Gwozdziewicz, the `t notin B_2` step, odd-negative disappearance on
-`x=0`, and the exact-three opposite-jet conclusion.
+The independent audit covers the Gwozdziewicz contrapositive,
+`t notin B_2`, odd-negative disappearance on `x=0`, the directional-tail
+reformulation, and the exact-three opposite-jet conclusion.

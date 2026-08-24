@@ -468,8 +468,10 @@ shears; THM-3983 gives coordinate boundary constancy and the place budget
 and separately gives a holomorphic time form in the height-two linear-`y`
 row. THM-3985 closes every nonconstant height-two cusp-plane polynomial;
 its positive submersion family still has `3m` nonzero time-form residues.
-Neither these gauge-specific obstructions nor any other JC result supplies a
-Hopf dependency here.
+THM-3987 additionally forces three weights in each output of any hypothetical
+height-two Darboux pair, leaving `3x4/4x3` as the first live support cells.
+Neither these JC obstructions nor any other JC result supplies a Hopf
+dependency here.
 
 ## 9. Connection contract B: affine local systems over the LRC carrier
 

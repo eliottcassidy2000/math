@@ -359,7 +359,8 @@ asymptotic or residue.
   linear-`y` time form is holomorphic. THM-3985 closes nonconstant
   `k[p,y]` and isolates submersive `alpha*p+gamma*y^m` (`n=2,m>=2`) with
   `3m` residues.
-  THM-3986 is RESERVED. Open:
+  THM-3986 is RESERVED. THM-3987 forces at least three weights per output;
+  with THM-3974, the first live cells are `3x4/4x3`. Open:
   algebraization with `y`, compatible/multiple/reducible/nongraph debts,
   degree `>=6`, polynomial compression, finite Keller entry, unrestricted
   Darboux entry, and `JC(2)`. THM-3853/3855 remain formal laboratories.

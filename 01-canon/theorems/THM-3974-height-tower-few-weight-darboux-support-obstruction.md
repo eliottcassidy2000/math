@@ -11,7 +11,9 @@ status: >
   by its terminal Euler factors. At height n=2, THM-3583 and repaired
   THM-3592 additionally close the 2x4, 4x2, and 3x3 cells. Hence every
   height-two Darboux pair would need at least seven retained nonconstant
-  weight pieces; the first live cells are exactly 2x5, 3x4, 4x3, and 5x2.
+  weight pieces; relative to this theorem the first live cells are 2x5,
+  3x4, 4x3, and 5x2. THM-3987 later closes every 2xm/mx2 cell, leaving
+  only 3x4 and 4x3 at the seven-piece floor.
   No Darboux pair or JC(2) counterexample is constructed or excluded in
   unrestricted support.
 source: jc-degree6-one-place / post-THM-3973 exact-volume completion support analysis, 2026-08-24
@@ -36,6 +38,7 @@ related:
   - THM-3572-squarefree-danielewski-affine-modification-and-two-bracket-collapse
   - THM-3971-canonical-debt-determinantal-affine-plane-completion
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
+  - THM-3987-gwozdziewicz-every-line-height-two-three-weight-floor
 script: 04-computation/jc2_height_tower_weight_support_thm3974.py
 output: 05-knowledge/results/jc2_height_tower_weight_support_thm3974.out
 script_sha256: 1eeac50f607ce909e670fe839b2a20220d9e7fe9c89e74d0f21baf5f7780a87a
