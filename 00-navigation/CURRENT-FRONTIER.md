@@ -335,9 +335,9 @@ asymptotic or residue.
   FINITE-EXACT `D=B=4` census has `13,853` branches but only an adaptive
   one-off-ray selector; physical/all-depth recursion and every prize are
   **OPEN**.
-- **Hopf:** `S2 x S2` **PREPRINT CLAIM**, `S6` **MANUSCRIPT CLAIM**; both
-  under audit. Mixed identities are reconstruction-relative; marked even orbit
-  conditional. `LRC(14)` open.
+- **Hopf:** `S2 x S2` **PREPRINT**, `S6` **MANUSCRIPT**; invariant `+-J` is
+  nonintegrable; unrestricted `S6` and `LRC(14)` are **OPEN**.
+- **Class rank:** **OPEN**; lower ranks `8,5,4,3,3`.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  THM-3543--3782 close
   named cells only. THM-3827--3920 force genus/degree/branch passports, close
   the `S3`, `f=0`, radial, and common-zero degree-at-most-five lanes, and leave

@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-472 (2026-08-24, imaginary-quadratic class-rank source audit) -- the latest public data file was mistaken for the world `5`-rank frontier
+
+- **What failed:** the first source audit treated the rank-four maximum in
+  Bagshaw--Jacobson--Scheidler--Rollick's public norm-equation data file and
+  2024 comparison table as the strongest published `5`-rank example.  It
+  therefore reported the near-frontier tuple as `(8,4,4,3,3)` for primes
+  `(3,5,7,11,13)`.
+- **Minimal witness / first failed implication:** Christian Bagshaw's 2021
+  honours thesis reports five fields of `5`-rank five from a different
+  Schoof--Mestre family.  At
+  `D=23454009318604054148884180799`, five extracted order-five binary forms
+  pass exact discriminant, order, and meet-in-the-middle independence checks.
+  Thus “absent from the later public demonstration file” did not imply
+  “absent from the author's earlier computations or the literature.”
+- **Repair / strongest survivor:** the exact frontier tuple is at least
+  `(8,5,4,3,3)`.  Every requested challenge still begins strictly above it:
+  `(3,9)`, `(5,6)`, `(7,5)`, `(11,4)`, and `(13,4)` remain **OPEN**.  The
+  public `131199`-field census remains correct for its explicitly named data
+  file; it is no longer described as a census of the Schoof--Mestre family or
+  of all known fields.
+- **Reusable rule:** when a computational paper exposes only a demonstration
+  subset, search the authors' theses, predecessor constructions, table
+  footnotes, and distinct raw populations before naming a record.  Keep
+  “maximum in this file,” “maximum in this algorithm,” and “published world
+  frontier” as separate claims.
+
 ## MISTAKE-471 (2026-08-24, historical theta-lattice script audit) -- the cubic-lattice theta series was identified with the E8 theta series
 
 - **What failed:** `04-computation/theta_lattice_tournament.py` printed

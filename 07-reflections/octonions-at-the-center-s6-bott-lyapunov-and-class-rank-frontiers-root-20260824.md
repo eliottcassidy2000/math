@@ -105,6 +105,35 @@ R,C,H are possible associative commutants;
 O helps generate the period-eight Clifford/KO geometry in which they repeat.
 ```
 
+The carrier/commutant distinction can be written in one equation.  For
+`u in Im(O)`, let `c(u)q=u q` on the real eight-space `O`.  Alternativity makes
+the two associators cancel, so
+
+```text
+c(u)c(v)+c(v)c(u)=-2<u,v>I.
+```
+
+Hence `O` is an eight-dimensional `Cl_(0,7)` module and carries the spin
+representation behind `Spin(7)/G2=S7`.  Its Clifford-equivariant commutant is
+associative (in this irreducible real case it is `R`); arbitrary right
+octonion multiplication does not commute with the left Clifford action
+because the associator intervenes.  Thus `O` is literally inside the Bott
+machine as a module without being an allowed fourth scalar commutant.
+
+An incoming hostile makes the typing rule sharp.  The corrected identity is
+
+```text
+theta_3^8=Theta_(Z^8),             Theta_(E8)=E_4,
+```
+
+not `theta_3^8=Theta_(E8)`: their first nonconstant coefficients are `16` and
+`240`, and the next ratio already changes.  Orthogonal stabilization
+`L -> L direct_sum E8` is a genuine rank-plus-eight lattice operation, while
+Clifford periodicity and the octonionic module above are different genuine
+rank-eight operations.  Equal dimension does not identify their carriers,
+theta series, discriminant forms, or preserved predicates.  The correction is
+recorded in MISTAKE-471 and `04-computation/theta_lattice_tournament.py`.
+
 That is a genuine source--target map.  Merely observing that `dim_R O=8` would
 not be one.
 
@@ -221,6 +250,53 @@ No author attribution is inferred from the hosting domain.
 The octonionic test above is useful but cannot refute such a proposal: a
 genuine solution must break `G2`, and the manuscript is not proposing the
 standard homogeneous `J`.
+
+### 6.1 The stronger symmetry-leakage and algebraic-dimension gates
+
+There are two published gates beyond `G2`-invariance.  Campana--Demailly--
+Peternell's 2020 corrigendum,
+[*The algebraic dimension of compact complex threefolds with vanishing second
+Betti number*](https://arxiv.org/abs/1904.11179), states in Corollary 2.3 that
+every complex threefold homeomorphic to `S6` has algebraic dimension zero.
+Huckleberry--Kebekus--Peternell,
+[*Group Actions on `S6` and complex structures on `P3`*](https://arxiv.org/abs/math/9812076),
+proves that a complex `S6` cannot be almost homogeneous and in particular has
+
+```text
+h^0(X,T_X) <= 2.
+```
+
+Thus a hypothetical complex sphere must break more than the transitive
+octonionic action: its holomorphic automorphism group cannot even have an open
+orbit.  This turns the manuscript's torus-family language into two concrete
+referee tests:
+
+1. its claimed map `X -> P1` and algebraic dimension one must be checked as a
+   genuinely global holomorphic/meromorphic object, not inferred from local
+   period coordinates; and
+2. the torus translations on the generic and special fibres must be followed
+   through every clutch.  Any alleged global open-orbit action is a no-go;
+   failure to globalize is required symmetry-breaking data, not a defect that
+   may be silently discarded.
+
+There is an essential dependency warning.  The 1998 almost-homogeneity proof
+uses the earlier Campana--Demailly--Peternell conclusion that all meromorphic
+functions are constant.  The new manuscript explicitly claims algebraic
+dimension one and proposes a conductor-supported failure in the published
+fibrewise vanishing argument.  The repository's THM-3955/3957 audits prove
+that the indicated *local implication* can fail at nonnormal double and triple
+crossings.  They do not globalize the section, verify the claimed threefold,
+or overturn either published conclusion.  Hence the current frontier is a
+direct source conflict under audit, not an accepted counterexample and not two
+independent contradictions.
+
+This also explains why normalization is load-bearing in three otherwise
+different lanes.  Huckleberry--Kebekus--Peternell compare a nonnormal boundary
+surface with the preimage of its nonnormal locus; the manuscript glues a
+nonnormal cusp fibre with two triple points; and the one-place cubic-cover
+problem distinguishes one projective point from its several normalization
+places.  In each case the coarse support loses the branch-incidence datum on
+which the global conclusion depends.
 
 ## 7. Two Hopf problems, not one
 
@@ -368,13 +444,17 @@ The published comparison frontier found in this session is
 | prime | published exact lower-bound frontier | first requested rank |
 |---:|---:|---:|
 | `3` | `8` | `9` |
-| `5` | `4` | `6` |
+| `5` | `5` | `6` |
 | `7` | `4` | `5` |
 | `11` | `3` | `4` |
 | `13` | `3` | `4` |
 
-The `3`-rank-eight field is due to Elkies.  The higher-prime controls and
-search method are from Bagshaw--Jacobson--Scheidler--Rollick,
+The `3`-rank-eight field is due to Elkies.  The repaired `5`-rank-five
+frontier is reported in Christian Bagshaw's 2021 honours thesis,
+[*Geometric Constructions of Quadratic Number Fields with High
+`p`-Rank*](https://web.maths.unsw.edu.au/~cbagshaw/Honours_Thesis.pdf),
+printed pp. 26--27.  The other higher-prime controls and norm-equation search
+method are from Bagshaw--Jacobson--Scheidler--Rollick,
 [*Improved Methods for Finding Imaginary Quadratic Fields with High
 `n`-Rank*](https://doi.org/10.1090/conm/796/15995), with
 [public code](https://github.com/ChristianBagshaw/quadratic-fields-high-n-rank).
@@ -404,7 +484,7 @@ controls and 95-product agreement with PARI.  The full commands, hostiles,
 and extracted rank-eight line are in the
 [result ledger](../05-knowledge/results/imaginary_quadratic_class_rank_certificate_tool_20260824.out).
 Five [exact below-threshold control lines](../05-knowledge/results/imaginary_quadratic_class_rank_below_threshold_controls_20260824.txt)
-give ranks `8,4,4,3,3` for `ell=3,5,7,11,13`; all pass the pure verifier and
+give ranks `8,5,4,3,3` for `ell=3,5,7,11,13`; all pass the pure verifier and
 are deliberately labelled as zero-credit controls rather than submissions.
 
 The structured `(3,9)` scout reached Elkies's exact rank-eight field,
@@ -421,21 +501,24 @@ exact, while the negative/maximal-rank statements were not separately
 certified field by field.  They are not evidence that rank nine does not
 exist.
 
-A second
+A second, separate
 [GRH-assisted discovery census](../05-knowledge/results/bagshaw_public_5rank_census_20260824.out)
 computed PARI invariant factors for all `131199` discriminants in Bagshaw et
-al.'s public `ell=5` candidate file.  PARI reported
+al.'s public norm-equation `ell=5` candidate file.  PARI reported
 
 ```text
 5-rank 2: 129889,       5-rank 3: 1309,
 5-rank 4:      1,       5-rank >=6: 0.
 ```
 
-The reported unique rank-four maximum is `D=1264381632596`; four explicit
-forms pass both the pure verifier and PARI and therefore give an unconditional
-rank-at-least-four certificate.  `bnfcertify` was not run on every row, so the
-histogram and absence of a higher row are discovery data, not an unconditional
-census theorem.
+The reported unique rank-four maximum *inside that public file* is
+`D=1264381632596`.  It does not contain the thesis's Schoof--Mestre
+population.  The latter evaluated `8,382,903` fields and reported five
+rank-five rows but no rank-six row.  For the smallest of those rows,
+`D=23454009318604054148884180799`, five explicit forms now pass the pure
+verifier and PARI; the exact transcript is
+[`classrank_ell5_7_rank5_control_20260824.out`](../05-knowledge/results/classrank_ell5_7_rank5_control_20260824.out).
+Neither finite negative search is an impossibility result.
 
 ### 9.3 A one-digit hostile that matters
 
