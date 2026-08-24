@@ -2,7 +2,7 @@
 id: THM-3973
 title: "Exact-volume simple-cubic determinantal affine-plane completions"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For every
   n>=2, the determinantal ring generated inside k[x,t] by
   z=1+x^n t, p=zt, and y=x^(n-1)zt^2 is a smooth normal affine surface X_n
   containing A2_(x,t) with one A1 boundary D, scalar units, Cl(X_n)=Z[D],
@@ -19,6 +19,17 @@ status: >
   but it has a genuine ramification curve inside the affine-plane open. A
   finite Keller map remains OPEN; no Jacobian counterexample is claimed.
 source: jc-zero-debt-lift + jc-degree6-one-place + jc-extra-debt-local + root / post-THM-3971 residue-cancellation design, 2026-08-24
+audit: >
+  PASS (root / jc-cohn3709, 2026-08-24), independently supplementing the
+  jc-extra-debt-local structure audit. The audit reconstructed the two-chart
+  determinantal saturation, affine-plane open, boundary class and local
+  canonical coordinate, regular exact primitive, top-generator Bezout
+  collapse, two-color grading, homogeneous and two-by-two gates, rational
+  compression, finite-free cubic basis and index discriminant, and residual
+  ramification divisor. It specifically checked the corrected statement
+  that E meets U, not the false stronger claim that E is wholly contained in
+  U. Normal, optimized, and frozen outputs byte-match at CHECKS=7492 and
+  both stored hashes agree.
 depends_on:
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
 related:
@@ -36,7 +47,7 @@ hash_basis: raw LF bytes
 
 # THM-3973 -- a simple-cubic completion passes the exact-volume gate
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.** Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over
 an algebraically closed field `k` of characteristic zero. Fix `n>=2` and,
 inside `k[x,t]`, put
 

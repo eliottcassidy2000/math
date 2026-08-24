@@ -2,7 +2,7 @@
 id: THM-3974
 title: "Height-tower few-weight Darboux support obstruction"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For every
   height n>=2, the exact-volume completion algebra B_n has no homogeneous,
   one-by-arbitrary, two-by-two, two-by-three, or three-by-two polynomial
   Darboux pair in its natural weight grading. The all-height two-by-three
@@ -15,6 +15,17 @@ status: >
   No Darboux pair or JC(2) counterexample is constructed or excluded in
   unrestricted support.
 source: jc-degree6-one-place / post-THM-3973 exact-volume completion support analysis, 2026-08-24
+audit: >
+  PASS (root / jc-cohn3709, 2026-08-24). The audit rederived the exact
+  two-color modules, homogeneous and one-by-arbitrary gates, and the uniform
+  two-by-two cross rectangle including its R=n/T=n endpoint. It then checked
+  the complete THM-3576 all-exponent two-by-three proof line by line against
+  the stated transfer interface: every arm-order use can be made at u=0,
+  while the compulsory u=-1 zero supplies positive degree to each terminal
+  common base. A separate dependency read of THM-3583 and repaired THM-3592
+  found that the n=2 wider transfers use only the listed distinguished-color
+  order, UFD, and global degree inputs. Normal, optimized, and frozen outputs
+  byte-match at CHECKS=1272 and both stored hashes agree.
 depends_on:
   - THM-3576-higher-exponent-belyi-keller-collision-tower
   - THM-3569-danielewski-two-by-three-weight-darboux-nonentry
@@ -34,7 +45,7 @@ hash_basis: raw LF bytes
 
 # THM-3974 -- exact volume reaches two brackets, but not a few-weight pair
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.** Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over
 an algebraically closed field `k` of characteristic zero. For `n>=2`, put
 
 ```text
@@ -341,7 +352,7 @@ For `n>2`, the wider exponent-two transfer is not asserted: the
 distinguished order becomes `ceil(q/n)`, changing the four-vertex and
 three-by-three ladder arithmetic. For `n=2`, cells of total support at least
 seven remain open. No unrestricted Darboux pair, finite cubic map, or
-counterexample to `JC(2)` is proved or refuted here. **QED candidate.**
+counterexample to `JC(2)` is proved or refuted here. **QED.**
 
 ## Reproduction
 
