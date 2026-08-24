@@ -67,8 +67,8 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505`, and only 58 in `t>=U`: 57 scale-one plus `(2,1,9)`.  THM-3910
-  closes 41, leaving 17.  THM-3918 closes AP11 and 1,365 fixed scale-two
-  bodies, not a type; `t<U` and uniform owner/arrival remain open.
+  closes 41, leaving 17.  THM-3920 closes AP11 and 1,365 fixed scale-two
+  bodies, no type; `t<U` and owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
   FINITE-EXACT,
@@ -354,14 +354,14 @@ asymptotic or residue.
   THM-3885/3895/3897 close polynomial `f=0`; THM-3900 its generic roots.
   THM-3888/3909 give `II^4+IV/E6*`: `R.O=0` is `6+48+72`; nine avoid
   boundaries; eight have denominator debt.
-  For `f!=0`: THM-3899 gives tariff/colors; THM-3904 closes x-only;
-  THM-3902/3905 give three jets; THM-3898 closes the canonical response, not
-  arbitrary sidecars.  THM-3890 closes quintics; THM-3906/3907 place counts
+  For `f!=0`: THM-3899 tariff/colors; THM-3904 closes x-only;
+  THM-3902/3905 three jets; THM-3898 closes the canonical response,
+  arbitrary sidecars open.  THM-3890 closes quintics; THM-3906/3907 places
   are `1/2`,`2/6`; THM-3908 excludes depth<=2 one-point sextics; THM-3911 the
-  sharp sextic.  THM-3912/3914 are conditional three-class passports, not
-  globalization/effectivity.  THM-3913 realizes one-place normal nonmonogenic
-  S3 with `Cl[3]!=0`, but is elliptic/no atlas.  Rational atlas, Keller and
-  `JC(2)` remain OPEN.
+  sharp sextic; THM-3912/3914 conditional three-class passports only.
+  THM-3913 elliptic; THM-3915 has rational one-place decic and normal
+  nonmonogenic S3 order; its `Q_2` has `Cl[3]!=0`.  `e_c(U_et)=14` excludes only
+  `U_et=A2`; proper atlas, Keller and `JC(2)` remain OPEN.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a

@@ -30,6 +30,7 @@ depends_on:
 related:
   - THM-3911-sharp-one-place-sextic-resolvent-three-torsion-obstruction
   - THM-3913-moving-triple-root-one-place-decic-normal-nonmonogenic-cubic
+  - THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
 script: 04-computation/jc2_decic_boundary_hyperbolic_saturation_thm3914.py
 output: 05-knowledge/results/jc2_decic_boundary_hyperbolic_saturation_thm3914.out
 script_sha256: 9280385f4639a92a5ba646195a025e303777cec485a9dd2d6d5d2d69654f845e
@@ -277,6 +278,12 @@ form required above.  Therefore the present theorem does **not** silently
 identify the THM-3913 Kummer class with the pure boundary residue.  It gives
 the exact diagnostic: after those two missing checks, boundary-only
 globalization would force the hyperbolic packet `(8)--(11)`.
+
+THM-3915 supplies the decisive complementary control in a different rational
+decic family: its unique three-torsion class mixes the split boundary with all
+four finite ADE radical directions, while the pure split-boundary residue is
+primitive.  Thus a genuine three-class need not enter through this theorem's
+boundary-only permission row.
 
 ## 5. Scope and replay
 

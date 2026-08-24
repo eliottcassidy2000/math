@@ -137,7 +137,7 @@ closes 41 of the 57 scale-one types; compact-to-open component containment and
 the integer sheet carrier supply further exact filters.  Thus the general
 conditional ledger is now 16 scale-one types plus `(2,1,9)`: 17, not 58.
 
-[THM-3918](../01-canon/theorems/THM-3918-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family.md)
+[THM-3920](../01-canon/theorems/THM-3920-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family.md)
 resolves the phase of that same sheet carrier.  If `E(G)` and `E(A)` are the
 signed endpoint words of the body safe set and pair danger set, then
 
@@ -161,7 +161,7 @@ Var(N_t)=t^2 disc_t(G),
 
 Variance retains magnitude; signed endpoint cross-phase locates the integer
 occupancy against the labelled obstruction.  THM-3910's native cubic-response
-collision and THM-3918's Graver/half-translate hostiles are complementary
+collision and THM-3920's Graver/half-translate hostiles are complementary
 proofs that pairwise or power data cannot recover that location.
 The symmetric return packet of mass `2*84^(-11)` remains useful thickness;
 without the endpoint word its translate is still unlocated relative to the
@@ -385,18 +385,33 @@ no plane atlas.  This sharpens the depth threshold: the twisted-cubic pullback
 forces moving-triple-root degree divisible by three, so depth at most two
 freezes the root, while depth three first permits motion and pays genus one.
 
-THM-3912 and THM-3914 explain why the three-class is still not a portable
-boundary barcode.  They give exact conditional `A2`-sieve and hyperbolic
-saturation passports, but require the actual removed lattice, its orthogonal
-complement and ambient `Pic[3]`.  Even after saturation, isotropic classes need
-not be effective or fibrations, and THM-3913's Kummer class is not yet known to
-be boundary-only.  The cheapest decisive computation is the complete finite
-exceptional lattice and ambient Picard three-torsion for THM-3913.
+THM-3915 now pays rationality in a different decic family.  Its one-place
+branch is rational; the quadratic double plane has scalar units and
+`Cl=Z^3 direct-sum Z/3`; the rational normal finite-free maximal cubic order
+is globally nonmonogenic and generic `S3`.
+The power order has discriminant `432 A^10 Delta`, while an index-`A^5`
+integral basis removes the invented divisor and leaves `6912 Delta`.  Thus
 
-The surviving target is therefore a rational depth-three deformation that
-retains one-place confluence, normal nonmonogenic `S3`, scalar units and the
-three-class—or a genuinely different/nonnormal category.  It is neither the
-sharp THM-3906 curve nor the elliptic THM-3913 carrier as currently realized.
+```text
+generic S3 power order -> maximal order
+preserves the field but invents/removes divisorial index debt;
+the integral basis and index ideal are the indispensable sidecar.
+```
+
+THM-3912 and THM-3914 explain why the three-class is not a portable boundary
+barcode.  Their exact `A2`-sieve and hyperbolic-saturation passports require
+the actual removed lattice, orthogonal complement, and ambient `Pic[3]`.
+THM-3915 is the sharp hostile: its unique torsion class mixes the split
+boundary with all four finite ADE radical directions, while the pure boundary
+residue is primitive.  Abstract permission is not globalization.
+
+The surviving target is now plane-atlas entry.  Although `Frac(B)=k(s,z)`,
+the natural rational chart has nonconstant Jacobian, so rationality loses the
+polynomial/etale coordinate.  Moreover `e_c(U_et)=14` excludes only
+`U_et=A2`; a proper plane open with Euler-13 complement remains possible.
+The missing sidecars are the contracted valuation, open complement,
+units/Picard compatibility and nonproperness divisor.  THM-3916 and THM-3917
+are only reserved empty stubs for the two successor lanes.
 
 Finally,
 [THM-3879](../01-canon/theorems/THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff.md)
@@ -408,9 +423,9 @@ one, and the smooth-conic boundary.  Without immersion the exact reduced
 identity subtracts the common tangent-base divisor; the family
 `[ST^(d-1):T^d:S^d]` shows that correction is sharp in every degree.
 
-The open target is therefore an intersection, not a single feature: rational
-one-place normalization and an actual etale plane atlas while retaining
-THM-3913's genuine `C3` layer, global nonmonogenicity, units and `Cl[3]`.
+The open target is therefore an actual plane open inside THM-3915's maximal
+etale locus, or a proof that none exists.  One must retain its rational
+one-place branch, normal nonmonogenic cubic order and mixed three-class.
 
 ## 5. Filtered kernels and principal parts are the same warning, not the same theorem
 
@@ -543,8 +558,8 @@ They do not share states, probability, chronology, or a reduction.
 | LRC support-two packet | lower-rank row | choose multiplier and absorb/add one runner | exact divisibility or LRC(13) safe interval | other runners, relative scale, arrival | owner plus component interval | 17 `t>=U` types after THM-3910 |
 | AK forcing graph | score certificate | add a sound forcing row | declared rule consequences | future-round cycle debt | cycle-rank profile | saturated `[2,3]` trace varieties |
 | JC residual | associated graded seam | take top homogeneous forms | leading cancellation | common color gcd and lower debt | primitive colors plus full evolving response | continuing `U,V` jets in THM-3898 |
-| Binary cubic / plane branch | discriminant carrier | forget the cubic algebra | branch/place geometry and three-class | normalization genus and plane-atlas entry | rationality plus atlas sidecar | THM-3913 elliptic/no-atlas hostile |
-| Removed divisor lattice | resolvent three-class | saturate boundary sublattice | conditional three-divisibility | ambient `Pic[3]` and effectivity | full exceptional lattice | THM-3912/3914 permission hostiles |
+| Rational normal cubic order | plane atlas | choose a birational chart | function field and branch divisor | polynomial/etale open data | contracted valuation, complement, units/Picard, nonproperness | THM-3915 Jacobian/Euler-13 invoice |
+| Removed divisor lattice | resolvent three-class | saturate boundary sublattice | conditional three-divisibility | actual class and ADE mixing | full exceptional lattice | THM-3915 mixed boundary--ADE hostile |
 | Rational dual | reduced dual curve | cancel common tangent factor | reduced tangent map | nonimmersion multiplicity | `E_nu` tangent-base divisor | `[ST^(d-1):T^d:S^d]` |
 | Rule 30 words | selected ray image | positive affine-word action | complete static orbit | physical chronology and owner | zero-fibre routed query | fibres requiring opposite rays |
 | Two-cube prime subsets | critical mass | singleton row plus Euler normalization | weight and disjointness inside the family | collisions outside the family | representation fibre | split-prime and exponent-three hostiles |
@@ -557,16 +572,17 @@ objects cannot be transported merely because the same word is used.
 
 1. **LRC anchor:** combine auxiliary-center and endpoint cross-phase uniformly
    on THM-3910's 17 arbitrary-body types, or add owner/arrival data, while
-   keeping `t<U` separate.  THM-3918 closes only the 1,365 fixed bodies
+   keeping `t<U` separate.  THM-3920 closes only the 1,365 fixed bodies
    `E subset {1,...,15}`, `|E|=11`, with odd `t>=max E`; the general `(2,1,9)`
    type remains open.
 2. **Jacobian anchor:** leave `f=0`, x-only and THM-3898's canonical
    constant-sidecar family closed.  Attack arbitrary lower sidecars using the
    continuing-`U,V` hostile; a first-arrival schedule is insufficient.
-3. **Nonmonogenic niche:** deform THM-3913 toward rational normalization while
-   preserving one-place confluence, normal nonmonogenic `S3`, scalar units and
-   `Cl[3]`.  First compute its complete exceptional lattice and ambient
-   Picard three-torsion; boundary permission is not effectivity.
+3. **Nonmonogenic niche:** classify or obstruct a proper `A2` open in
+   THM-3915's maximal etale locus.  Develop the proposed contracted
+   positive-genus valuation alongside units/Picard data, the nonproperness
+   divisor, and the exact Euler-13 complement invoice.  THM-3916/3917 are
+   reserved, not dependencies.
 4. **AK niche:** leave the saturated empty-wildcard `[2,3]` slice closed.
    Classify inactive-slot and initial-wildcard strata, then search the next
    rectangle for a genuine score below `7/4` under the same sound/loose

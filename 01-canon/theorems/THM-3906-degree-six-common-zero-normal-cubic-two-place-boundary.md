@@ -15,8 +15,8 @@ status: >
   generic-irreducible-S3 realization of that sharp control with generic
   discriminant exponent one; THM-3908 excludes the
   coefficient-depth-at-most-two pure-sixth top-form lane.  THM-3913 first
-  escapes at degree ten and
-  depth three, but its normalization is elliptic.  Other sextic grammars,
+  escapes at degree ten/depth three but is elliptic; THM-3915 gives a
+  different rational decic carrier.  Other sextic grammars,
   nonnormal orders, Keller realization, and JC(2) remain open.
 source: root / post-THM-3890 degree-six escape and cusp-cap session, 2026-08-23
 audit: >
@@ -46,6 +46,7 @@ related:
   - THM-3908-quadratic-depth-common-zero-one-point-sextic-two-place-obstruction
   - THM-3911-sharp-one-place-sextic-resolvent-three-torsion-obstruction
   - THM-3913-moving-triple-root-one-place-decic-normal-nonmonogenic-cubic
+  - THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
 script: 04-computation/jc2_degree_six_common_zero_normal_cubic_two_place_thm3906.py
 output: 05-knowledge/results/jc2_degree_six_common_zero_normal_cubic_two_place_thm3906.out
 script_sha256: 3558670eb81467e10f924c68f2222d0ba82b036fb98a68fcb30a76bd2f92036a
@@ -345,12 +346,13 @@ index form may still work.  THM-3911 proves that the sharp control `(23)` has
 scalar units and no class-group three-torsion, so it cannot support a normal
 finite-flat cubic algebra with generic irreducible `S3` fibre and this branch
 as generic-exponent-one discriminant divisor.  Nonnormal orders and different
-  sextics remain outside that obstruction.  THM-3908 independently excludes
-  the stated coefficient-depth-at-most-two one-point sextic lane.  THM-3913
-  pays the unit and three-class invoice at degree ten/depth three, but its
-  elliptic normalization has no polynomial plane atlas.  A future one-place
-  sextic still requires its own resolvent unit/class-group audit before
-  inverse Delone--Faddeev or Keller realization.  `JC(2)` remains **OPEN**.
+sextics remain outside that obstruction.  THM-3908 independently excludes the
+stated coefficient-depth-at-most-two one-point sextic lane.  THM-3913 pays the
+unit and three-class invoice at degree ten/depth three but is elliptic.
+THM-3915 pays those carrier invoices rationally in a different decic family;
+its plane atlas remains open.  A future one-place sextic still requires its
+own resolvent audit before inverse Delone--Faddeev or Keller realization.
+`JC(2)` remains **OPEN**.
 
 Reproduce the exact packet with
 

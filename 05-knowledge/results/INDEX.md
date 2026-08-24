@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3918 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3920 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -95,7 +95,8 @@
   The depth-three moving-triple-root cubic is normal, globally nonmonogenic,
   and generic `S3`; its one-place irreducible decic has scalar resolvent units
   and nonzero `Cl[3]`.  Its normalization is elliptic and has no polynomial
-  plane atlas, so rationality/polynomial uniruledness is the surviving invoice.
+  plane atlas.  THM-3915 subsequently pays rationality in a different family;
+  this theorem remains the sharp depth-three elliptic hostile.
   Script/output/semantic SHA-256:
   `7b1f6ef2a2cd2381a3b44b2dd88c683deab23c16a5c37971ffd487a2334f8806` /
   `252ca72e9da90d45d0daff856a2a285adce554e18e77ad78b1036619b905ea6d` /
@@ -112,6 +113,21 @@
   `9280385f4639a92a5ba646195a025e303777cec485a9dd2d6d5d2d69654f845e` /
   `5e8bdf3fc13bdfc08e8317c481c5e185a978d29b463a06530170b5d00db24775` /
   `f136fa62255843be034cb7d9bfa0ddc90e057bb422db59ff4ec78741b80d0779`.
+
+- `jc2_rational_decic_cube_resolvent_index_debt_thm3915.py` -> matching
+  `.out` [THM-3915 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  The rational one-place decic has packet `ordinary 8-fold + 2A2 + 2A5`.
+  Its quadratic double plane has scalar units and class group
+  `Z^3 direct-sum Z/3`; the unique torsion class mixes split-boundary and all
+  finite ADE directions.  An explicit index-`A^5` integral basis gives the
+  rational normal finite-free, globally nonmonogenic `S3` maximal order with
+  sole reduced discriminant the decic.  Its maximal
+  etale locus has `e_c=14`, excluding only equality with `A2`; a proper plane
+  open with Euler-13 complement remains possible.  Proper plane-atlas entry,
+  Keller realization, and `JC(2)` remain open.  Script/output/semantic SHA-256:
+  `8408e35292a674be3731fd7c95ecfdc7d07d5324c81d8803d1e23922e8884341` /
+  `5e1d4cd168597e8975580c00cb1e6cfd06c6d1d8a9657f5b57a056983866ecf1` /
+  `238246047160a73f2de01d4ff62109d7cac03434ad31fdc58ae0378054030c6b`.
 
 - `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
   `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil

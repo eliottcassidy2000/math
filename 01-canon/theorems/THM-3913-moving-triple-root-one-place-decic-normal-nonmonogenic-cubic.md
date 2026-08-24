@@ -13,8 +13,8 @@ status: >
   curve y^2=w(w^2-1), however, so the affine branch is not polynomially
   uniruled and the cubic etale surface admits no plane atlas.  This pays the
   order, confluence, and three-class invoices at the first moving-triple-root
-  depth but is not a Jacobian counterexample; rational depth-three
-  deformations and JC(2) remain open.
+  depth but is not a Jacobian counterexample.  THM-3915 subsequently pays the
+  rationality invoice; plane-atlas/Keller entry and JC(2) remain open.
 source: root / first post-THM-3908 coefficient-depth-three construction, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS after two proof-completeness clarifications.
@@ -36,6 +36,7 @@ depends_on:
 related:
   - THM-3844-two-cusp-polynomial-branch-quadratic-resolvent-design-gate
   - THM-3912-even-one-place-split-boundary-a2-three-torsion-design-sieve
+  - THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
 script: 04-computation/jc2_moving_triple_root_one_place_elliptic_decic_thm3913.py
 output: 05-knowledge/results/jc2_moving_triple_root_one_place_elliptic_decic_thm3913.out
 script_sha256: 7b1f6ef2a2cd2381a3b44b2dd88c683deab23c16a5c37971ffd487a2334f8806
@@ -341,13 +342,14 @@ Properness extends `(20)` to `P1 -> E`, but a nonconstant map from `P1` to
 an elliptic curve is impossible by Riemann--Hurwitz.  Hence no plane atlas
 exists.
 
-The failure coordinate is now unusually sharp.  Quadratic coefficient depth
-could not confluence the infinity places at all.  This cubic-depth example
+The failure coordinate of this family is unusually sharp.  Quadratic
+coefficient depth could not confluence the infinity places at all.  This
+cubic-depth example
 confluences them, remains nonmonogenic and normal, and globalizes the
-resolvent three-class; it pays for those gains with genus one.  The next
-counterexample search should deform `(1)` so that the elliptic normalization
-degenerates rationally while preserving the smooth one-place infinity and
-the nonmonogenic `S3` order.  `JC(2)` remains **OPEN**.
+resolvent three-class; it pays for those gains with genus one.  THM-3915 now
+supplies a different rational one-place decic and normal nonmonogenic `S3`
+order; the decic's quadratic double plane has `Cl[3]!=0`.  Its remaining
+invoice is a plane atlas, not rationality.  `JC(2)` remains **OPEN**.
 
 ## 6. Exact replay
 
