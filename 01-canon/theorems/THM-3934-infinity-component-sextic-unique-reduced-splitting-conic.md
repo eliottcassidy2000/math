@@ -10,8 +10,9 @@ status: >
   lines. Consequently the genuine order-three resolvent class found in
   THM-3932 has no second representative supported over a plane curve of
   the splitting-curve construction in degree at most two. This does not
-  compute the full resolvent class group:
-  higher-degree splitting curves and abstract divisor classes remain open.
+  by itself compute the full resolvent class group. THM-3935 subsequently
+  computes that group as Z/3 and shows that the Cardano class is the unique
+  nontrivial smooth-locus cubic character up to inversion.
 source: root / post-THM-3932 low-degree global three-class lane, 2026-08-23
 depends_on:
   - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
@@ -286,10 +287,13 @@ y^6((1-lambda^2 y)^2-4),                                 (28)
 ```
 
 whose residual quadratic has two distinct roots and is not a square. This
-does not prove that the other elliptic directions never globalize. It says
-exactly where they must hide: in splitting curves of degree at least three,
-in non-plane-supported divisor classes, or not at all. The full class group
-and involution-compatible nonmonogenic twist remain open.
+calculation alone does not prove that the other elliptic directions never
+globalize; it confines any escape to higher-degree splitting curves or
+non-plane-supported divisor classes. THM-3935 subsequently closes those
+possibilities globally for this exact surface: `Cl=Z/3`, and the Cardano class
+is the unique nontrivial cubic character up to inversion. Altering the family
+parameter, branch multiplicity, or quadratic resolvent remains outside both
+theorems.
 
 ## Reproduction
 

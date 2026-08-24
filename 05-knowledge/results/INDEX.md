@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3937 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3939 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -357,8 +357,10 @@
   nonempty trace/norm grammar. The explicit
   `4X^3Z^3-(Y^3-X^2Z)^2` has one infinity address, nonconstant coefficient
   Jacobian and an exact order-three resolvent class. Its natural normal cubic
-  is nevertheless globally monogenic; the full resolvent class group and a
-  nonmonogenic twist remain open. Checks: `55`. Script/output/semantic SHA-256:
+  is nevertheless globally monogenic. Subsequent THM-3934/3935 prove that
+  `XZ` is the unique reduced splitting conic of degree at most two and that
+  the full resolvent class group is `Z/3`, with Cardano the unique normal
+  cubic character up to inversion. Checks: `55`. Script/output/semantic SHA-256:
   `39f362c41cdbf6fd481af85dc91b96ed5f1151810949895ef248b32913a39374` /
   `5fd6493bfc51a36626f2f45be5ba0bfcd209fd415941988ee1b8812d23e27322` /
   `f21747d66cce559781355bb75789500399f7d8eb8281254e33668ffb0697a849`.
@@ -378,6 +380,34 @@
   `2a02f99465a8badcd32330f8e81ef46e7590793d85ce55957e17252f58e73604` /
   `8753cb79c9214b4df581dcc1c79734be0b48bd1231e155b00c6b7ffe38f9d89b` /
   `9c182abe7a8ac734b172dc6b64bcb4b4558cebf131d3be75a9e9a5ef750cd43a`.
+
+- `jc2_infinity_component_unique_splitting_conic_thm3934.py` -> matching
+  `.out` [THM-3934 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  For the explicit THM-3932 sextic, a conic restricts to a square on the
+  normalization exactly when it is a double line or a scalar multiple of
+  `XZ`. Thus `XZ` is the unique reduced splitting conic and returns the
+  already known Cardano divisor rather than a second low-degree three-class.
+  The finite parity bridge includes the three-branch origin, and the other
+  local elliptic three-torsion directions fail the naive graph lift. Checks:
+  `26`. Script/output/semantic SHA-256:
+  `b658f2314f27ff391051d0886598b67c807b3af505cb0dc2bfde6f61c71aca18` /
+  `c8660794b4b9d51cc1ba08da35109d218a7e79c417bb365b182797507135f6ee` /
+  `3325fe5ff3ae2e63a5bd1ed65076301e2eb706fd36864f219ff295ec5dedf989`.
+
+- `jc2_linear_conic_resolvent_class_unique_character_thm3935.py` -> matching
+  `.out` [THM-3935 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Every vertical fibre of the normal quadratic resolvent is irreducible and
+  principal. Its generic elliptic curve is
+  `y^2=x^3+t*x^2+1/4`, with three `I1` fibres, `I3*` at infinity, and
+  `MW=ZQ`, `height(Q)=1/4`; the removed infinity sections differ by `3Q`.
+  Hence `B*=k*` and `Cl(B)=Z/3`. The Cardano prime is Weil but non-Cartier:
+  `Pic(S)=H1(S,mu3)=0`, while `Pic(Sreg)=H1(Sreg,mu3)=Z/3`. Its two nonzero
+  characters are inverse and yield one quasi-etale Cardano field, so the exact
+  branch/resolvent has one normal cubic completion, already monogenic.
+  Checks: `53`. Script/output/semantic SHA-256:
+  `61c59e636d9122bf6118ec59df962169b5bee80e171d975ac73ed29cd6361096` /
+  `4a68ab996bd24301194c351572a7b8cd846ca9f51318fb0e1c086d0ebee36c0a` /
+  `df63f1e9b60d0385c3f736b11c51493520a4115efb27206586208398bb481798`.
 
 - `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
   `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil

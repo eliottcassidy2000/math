@@ -381,7 +381,7 @@ quadratic deck involution.  The `S3` descent relation is
 `g sigma g^-1=sigma^-1`.  Since `g^2` lies in `C3` and is fixed by conjugation
 with `g`, inversion forces `g^2=1`.  The three lifts `sigma^b g` are conjugate:
 conjugation by `sigma^c` replaces `g` by `sigma^(2c)g`, and two is invertible
-modulo three.  Their fixed cubic fields are therefore `K`-isomorphic.  Thus
+modulo three. Their fixed cubic fields are therefore `k(t,X)`-isomorphic. Thus
 the Galois closure and cubic field are forced.  THM-3932 proves that the normal
 integral closure in this field is the monogenic order `(7)`.  A different
 nonprincipal resolvent ideal cannot create a second normal nonmonogenic cubic

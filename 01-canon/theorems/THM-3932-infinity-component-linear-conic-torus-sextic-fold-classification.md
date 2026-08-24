@@ -12,7 +12,10 @@ status: >
   infinity address, a nonconstant coefficient Jacobian, and a genuine
   order-three divisor class on its normal quadratic resolvent. Its associated
   normal cubic order is nevertheless globally monogenic, so it is a sharp
-  branch target rather than a planar Keller completion.
+  branch target rather than a planar Keller completion. THM-3934 subsequently
+  proves that XZ is its unique reduced splitting conic of degree at most two;
+  THM-3935 computes the full resolvent class group as Z/3 and proves that the
+  Cardano character is the unique normal cubic character up to inversion.
 source: jc_degree6_one_place/infinity_component_conic / post-THM-3928 remaining singular-conic lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23). The audit independently
@@ -470,10 +473,20 @@ the initial equation at the resolvent singularity is
 w^2+4x^3-y^6,                                            (47)
 ```
 
-the simple-elliptic weighted sidecar. Therefore the two principal-divisor
-rows in `(44)` are sufficient to prove a genuine order-three subgroup but
-not to present the full global class group. A nonmonogenic twist would need
-additional global class data and compatible involution descent.
+the simple-elliptic weighted sidecar. The two principal-divisor rows in `(44)`
+therefore prove a genuine order-three subgroup but do not by themselves
+present the full global class group. THM-3934 subsequently proves that `XZ`
+is the unique reduced splitting conic of degree at most two. THM-3935 then
+adds the missing vertical/infinity ledger, proving
+
+```text
+Cl(B)=Z/3
+```
+
+and that the Cardano class is the sole nontrivial smooth-locus cubic character
+up to inversion. Hence this exact branch and quadratic resolvent admit no
+second normal cubic completion; their unique normal completion is the already
+monogenic one above.
 
 ## 8. Reproduction and scope
 
@@ -493,6 +506,7 @@ normality, Smith relation, non-Cartier local test, and weighted elliptic
 sidecar.
 
 This theorem closes the fold-degree classification for the singular conic
-with an infinity component. It does not classify every torus sextic, compute
-the full class group of `(41)`, produce a nonmonogenic cubic twist, or prove
-`JC(2)`.
+with an infinity component. Together with the subsequent THM-3934/3935
+audits, its explicit `r=0` branch/resolvent has no second normal cubic twist.
+It does not classify every torus sextic, the full fold-three parameter family,
+altered branch multiplicities or resolvents, or `JC(2)`.
