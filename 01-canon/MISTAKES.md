@@ -9,6 +9,20 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-468 (2026-08-23, THM-3929 reserved successor) -- a reserved stub was cited as if it exhibited a hostile mechanism
+
+- **What failed:** the THM-3929 reservation said that finite
+  root-at-infinity points were the hostile mechanism exhibited by THM-3927.
+- **Minimal witness / first failed implication:** THM-3927 is itself marked
+  `RESERVED / UNPROVED EMPTY STUB` and explicitly says that it may not be
+  cited as a result.  A planned theorem supplies neither a witness nor an
+  implication.
+- **Repair / strongest survivor:** finite root-at-infinity points remain an
+  honest open boundary outside THM-3929's intended scope, but no mechanism is
+  attributed to THM-3927 before an audited promotion.
+- **Reusable rule:** a reservation may allocate a namespace and describe a
+  target; it is never evidence, a hostile control, or a proved dependency.
+
 ## MISTAKE-467 (2026-08-23, THM-3925 projective three-address seam) -- equality in the address count was treated as a no-atlas conclusion
 
 - **What failed:** the first promotion of THM-3925 did not supply the

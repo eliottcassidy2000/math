@@ -12,5 +12,5 @@ filename for the root-regular one-place obstruction in the binary-cubic
 linear-color grammar `b=C`, `a,c,d in k[A]`.  It has no proved dependencies
 and may not be cited as a result until an independent audit promotes it.
 
-Finite root-at-infinity points are explicitly outside the reserved scope;
-they are the hostile mechanism exhibited by THM-3927.
+Finite root-at-infinity points are explicitly outside the reserved scope and
+remain an open hostile direction.  No theorem about them is asserted here.
