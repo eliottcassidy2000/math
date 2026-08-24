@@ -11,27 +11,32 @@ status: >
   joining the three ramification primes in a triangle. Half of the primitive
   collisions are smooth and half singular, but the natural cubic is a domain
   with only finitely many singular points, hence already normal; normalization
-  cannot separate the singular incidences. A same-function-field Keller open
-  would delete all three ramification primes, contradicting THM-3951's
-  boundary tree. Constant-ratio and globally repeated-root packets are routed
-  separately and are not overclaimed.
+  cannot separate the singular incidences. If a/b is constant, an invertible
+  polynomial change identifies the surface with xy=c(t)^3. A unit c gives a
+  nonconstant unit, while a nonunit c gives an exact Nagata class group with
+  nonzero 3-torsion, contradicting THM-3922. Thus every
+  three-distinct-polynomial-root split packet fails a same-field Keller
+  atlas; only duplicate roots and rational denominators remain outside.
 source: jc-degree6-one-place / post-THM-3951 split-residual audit, 2026-08-24
 audit: >
   SELF-HOSTILE EXACT CANDIDATE. The companion verifies the root
   parametrization and converse, all pair differences and their pairwise
   Bezout-resultant controls, the six-row smooth/singular collision table,
-  the monic-cubic domain obstruction, and explicit positive/hostile controls.
-  The finite-singular-locus normality and common-resolution boundary-triangle
-  bridges are proved in text and await independent hostile audit.
+  the monic-cubic domain obstruction, the invertible scalar-ratio reduction
+  to xy=c(t)^3, Smith controls for its Nagata quotient, and explicit
+  positive/hostile examples. The finite-singular-locus normality,
+  common-resolution boundary triangle, and class-localization bridges are
+  proved in text and await independent hostile audit.
 depends_on:
   - THM-3951-affine-plane-boundary-incidence-forest-and-equianharmonic-survivor-nonentry
+  - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
 related:
   - THM-3950-a1-internal-split-denominator-debt-and-equianharmonic-shadow
 script: 04-computation/jc2_rationally_split_hidden_cubic_boundary_triangle_thm3953.py
 output: 05-knowledge/results/jc2_rationally_split_hidden_cubic_boundary_triangle_thm3953.out
-script_sha256: f90897ea150c75ade3480e499eb686bdce6bccc31c07bb4cd4325f0b8245848a
-output_sha256: 7bbd1fd9c2f4c6efeb68dca40c973caa523b1dc39262c96c003710b64a83b624
-semantic_sha256: 507b6809acb59a52a8255221897706e8adfd7fa5359e98e96acfcf45c9975c05
+script_sha256: 07c8fd4243f6696e04357849e4aebd09f7b45fe26f6c2e6b9d7c8cc392345ab3
+output_sha256: 234cf1fb24482025a245b7737468a9de95db7edd75478e864478100d0915adf5
+semantic_sha256: 593a316f92f4c3148a732de8d4c71c97eb09572c395905143db3334f42504559
 hash_basis: raw LF bytes
 ---
 
@@ -50,7 +55,7 @@ Let `r0,r1,r2 in k[t]` be pairwise distinct polynomial functions satisfying
 r0 r1+r0 r2+r1 r2=0.                                      (1)
 ```
 
-Assume that at least one root ratio is nonconstant. Define
+Define
 
 ```text
 C=2(r0+r1+r2),                  E=2r0r1r2,
@@ -87,10 +92,10 @@ r0-r2=c D02,        D02=a(a+2b),
 r1-r2=c D12,        D12=b(2a+b).                         (6)
 ```
 
-Pairwise distinctness says none of these polynomials is zero. Because
-`a/b` is nonconstant, every `Dij` is nonconstant: if one of the displayed
-products were a nonzero scalar, both of its factors, hence `a` and `b`,
-would be scalar. Also
+Pairwise distinctness says none of these polynomials is zero. If `a/b` is
+nonconstant, every `Dij` is nonconstant: if one of the displayed products
+were a nonzero scalar, both of its factors, hence `a` and `b`, would be
+scalar. Also
 
 ```text
 gcd(D01,D02)=gcd(D01,D12)=gcd(D02,D12)=1.                (7)
@@ -100,7 +105,7 @@ Indeed a common irreducible factor in any pair, combined with the relevant
 linear forms in `(6)`, would divide both `a` and `b`; the only coefficients
 introduced are `2` and `3`, which are units in characteristic zero.
 
-Thus one may choose roots
+In this nonconstant-ratio case one may therefore choose roots
 
 ```text
 t01 in V(D01),             t02 in V(D02),
@@ -210,7 +215,7 @@ are zero and the collision is singular; this is the common-gcd override to
 the table. All such singularities are among the finite set already covered
 by `(14)-(15)`.
 
-## 4. The three boundary primes make a cycle
+## 4. Nonconstant ratios make a boundary triangle
 
 Suppose the same function field admitted source coordinates `x,z` with
 
@@ -247,39 +252,123 @@ are internally disjoint and form a subdivision of a triangle in the
 boundary dual multigraph. This contradicts the tree property. Therefore no
 same-function-field planar Keller chart `(18)` exists.
 
-## 5. Equality and failure boundaries
+## 5. Constant ratios reduce exactly to `xy=c(t)^3`
 
-The hypotheses above have three exact boundaries.
+It remains to treat the case in which every root ratio is constant. Since
+`gcd(a,b)=1`, this is exactly
 
-1. **Constant root ratios.** In `(5)`, `a,b in k*` gives
-   `ri=lambda_i c(t)`. If `c` has at least two distinct zeros, any pair of
-   graph primes already meets twice and the same connected-fibre forest
-   argument applies; `(11)` and the finite-collision proof still make `X0`
-   a normal domain. If `c` is a unit or has only one distinct zero, the
-   present triangle construction is absent and these scalar packets require
-   a separate atlas analysis.
-2. **Duplicate roots.** If, say, `r0=r1=x`, then `(1)` gives
+```text
+a,b in k*,
+r0=lambda0 c(t),       r1=lambda1 c(t),       r2=lambda2 c(t).        (21)
+```
+
+The three constants are distinct. Put
+
+```text
+sigma1=a^2+ab+b^2,                 sigma3=-a^2b^2(a+b)^2,
+K=8sigma1^3+54sigma3
+ =2(a-b)^2(a+2b)^2(2a+b)^2 !=0.                         (22)
+```
+
+The following change of coordinates is polynomial and invertible:
+
+```text
+x=3T+2sigma1 c,
+Y=27P-x^2+6sigma1 x c-12sigma1^2 c^2,
+y=-Y/K.                                                   (23)
+```
+
+Its inverse is
+
+```text
+T=(x-2sigma1 c)/3,
+P=(-K y+x^2-6sigma1 x c+12sigma1^2 c^2)/27.              (24)
+```
+
+Direct substitution gives
+
+```text
+F=(K/27)(xy-c(t)^3).                                     (25)
+```
+
+Thus `X0` is exactly the normal Danielewski surface
+
+```text
+Sc:       xy=c(t)^3.                                     (26)
+```
+
+If `c` is a nonzero constant, `(26)` is `Gm times A1` and `x` is a
+nonconstant unit. No dense open `A2` can lie in `Sc`, because restriction
+would send that unit to a unit of `k[A2]`, hence to a scalar.
+
+Now suppose `c` is nonconstant and factor it as
+
+```text
+c(t)=kappa product_j (t-alpha_j)^(m_j),
+r>=1,                         m_j>=1.                    (27)
+```
+
+The surface `(26)` is a hypersurface domain whose singular locus is the
+finite set `(x,y,t-alpha_j)=0`, so it is normal. Localizing at `x` gives
+
+```text
+Sc[x^(-1)]=k[x^(+-1),t],                                 (28)
+```
+
+a UFD with units `k* x^Z`. The height-one primes removed by this localization
+are exactly
+
+```text
+Q_j=(x,t-alpha_j).                                       (29)
+```
+
+At the generic point of `Q_j`, `y` and all other factors are units, hence
+
+```text
+v_Qj(t-alpha_j)=1,              v_Qj(x)=3m_j,
+div(x)=sum_j 3m_j Q_j.                                  (30)
+```
+
+A unit of `Sc` restricts in `(28)` to `lambda x^n`; `(30)` forces `n=0`,
+so `Sc*=k*`. The Nagata localization sequence is therefore exact as
+
+```text
+0 -> Z --(1 |-> (3m_j))--> Z^r -> Cl(Sc) -> 0,
+Cl(Sc)=Z^(r-1) direct_sum Z/(3 gcd_j m_j).                (31)
+```
+
+In particular `Cl(Sc)` has nonzero `3`-torsion. If a same-function-field
+Keller source existed, Zariski Main would make it a dense `A2` open in this
+normal finite degree-three completion. THM-3922 says the class group of every
+proper such completion is freely generated by its prime divisorial boundary.
+Equation `(31)` is impossible. This closes every constant-ratio packet.
+
+## 6. Equality and failure boundaries
+
+The hypotheses above leave two exact boundaries.
+
+1. **Duplicate roots.** If, say, `r0=r1=x`, then `(1)` gives
    `x(x+2r2)=0`. Thus either the repeated graph is identically zero or the
    third root is `-x/2`. This is a globally repeated ramification component,
    not three distinct boundary primes, and is outside the theorem. If all
    three roots coincide, `(1)` forces all of them to vanish and `(9)` is
    reducible.
-3. **Rational rather than polynomial roots.** Clearing denominators can add
+2. **Rational rather than polynomial roots.** Clearing denominators can add
    vertical/infinity primes and can destroy the affine collision count.
    Nothing here treats that case.
 
-Accordingly the theorem closes precisely the three-distinct-polynomial-root,
-nonconstant-ratio split residual. Together with THM-3950--3951, it explains
-both sides of the first hidden-cubic dichotomy:
+Accordingly the theorem closes every three-distinct-polynomial-root split
+residual. Together with THM-3950--3951, it explains both sides of the first
+hidden-cubic dichotomy:
 
 ```text
 irreducible residual  -> fixed positive-genus shadow + two-prime cycle;
-polynomially split    -> three graph primes + boundary triangle.       (21)
+polynomially split    -> boundary triangle or torsion-class obstruction. (32)
 ```
 
 It does not construct or exclude arbitrary cubic fields, extra factor
-distributions, rational-root denominators, or the scalar equality packets.
-`JC(2)` remains open.
+distributions, rational-root denominators, or globally repeated
+ramification. `JC(2)` remains open.
 
 Run
 
