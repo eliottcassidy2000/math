@@ -2,22 +2,25 @@
 id: THM-3922
 title: "Affine-plane open boundary basis and class-group obstruction"
 status: >
-  PROVED; INDEPENDENT HOSTILE AUDIT PENDING. If a normal integral affine
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED. If a normal integral affine
   surface X contains a dense open U isomorphic to A2, then the prime
   divisorial components of X minus U form a Z-basis of Cl(X). In particular
   Cl(X) is torsion-free; if U is proper then the divisorial boundary is
   nonempty and Cl(X) has positive rank. Consequently the finite normal
-  completion of a nontrivial planar Keller map cannot have finite class
-  group or any class-group torsion. This is a necessary completion gate,
-  not a proof of JC(2).
+  completion of a planar Keller map of generic degree greater than one
+  cannot have finite class group or any class-group torsion. This is a
+  necessary completion gate, not a proof of JC(2).
 source: jc_degree6_one_place / post-THM-3920 boundary-localization lane, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The proof
-  is the Weil-divisor localization sequence with both unit groups and the
-  affine-plane class group identified exactly, followed by normal Hartogs
-  in the no-divisor case and normalization-form Zariski Main for the Keller
-  corollary. The punctured-plane and third-Veronese hostiles record the two
-  load-bearing hypotheses and the sharp torsion failure mechanism.
+  INDEPENDENT HOSTILE AUDIT PASS (jc_zero_debt_lift, 2026-08-23). The full
+  Weil-localization sequence was rederived: restriction identifies both
+  unit groups with k*, so the boundary map is injective, while Cl(A2)=0
+  makes it surjective. Normal Hartogs plus affineness really forces U=X
+  when there is no divisorial boundary. Finite normalization, Zariski Main,
+  and triviality of connected finite etale covers of A2 verify the
+  generic-degree-greater-than-one Keller corollary. The punctured-plane and
+  third-Veronese hostiles correctly isolate the unit, normality, and
+  actual-completion scope. No repair was required.
 related:
   - THM-3578-zariski-main-boundary-rank-and-sheet-debt
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
@@ -27,7 +30,7 @@ related:
 
 # THM-3922 -- an affine-plane boundary is a class-group basis
 
-**PROVED; INDEPENDENT HOSTILE AUDIT PENDING.** Let `k` be an algebraically
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.** Let `k` be an algebraically
 closed field of characteristic zero. Let `X` be a normal integral affine
 surface of finite type over `k`, and suppose that it contains a dense open
 subscheme
@@ -153,8 +156,8 @@ A2_(x,y) --open--> X --finite--> A2_(A,C).                (13)
 If the first arrow were an isomorphism, `(13)` would be a connected finite
 etale cover of `A2`. In characteristic zero such a cover is trivial, so the
 generic degree would be one. Hence the finite completion attached to any
-hypothetical nontrivial Keller map has a proper affine-plane open. Applying
-Sections 1--2 yields the necessary invoice
+hypothetical Keller map of generic degree greater than one has a proper
+affine-plane open. Applying Sections 1--2 yields the necessary invoice
 
 ```text
 Cl(X)=Z^s,                s=# prime divisorial boundary >=1. (14)
