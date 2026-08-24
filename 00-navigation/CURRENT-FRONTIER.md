@@ -355,12 +355,21 @@ asymptotic or residue.
   seam is exactly square-liftable or has `[s^2]b=2a`. In the first branch the
   square lift is necessarily nodal and cannot be a simultaneous pure cube;
   the second reaches `ell=3` only on `a^3+2gamma=0` and has a finite jet
-  through `ell=6`, not a `B_2` lift.
+  through `ell=6`, not a `B_2` lift. THM-3997's first positive diagonal forces
+  `[s]q0=a/gamma`, so an actual pair selects the second branch; combined with
+  its next seam this gives `gamma=-a^3/2` and `[p^2]R=8/(3a^7)!=0`. Its Hasse
+  transform is an all-row polynomiality iff, while a second diagonal and an
+  independent elliptic-reduction argument separately exclude `R=0`.
   THM-3994 separates a double resultant into either two transverse addresses
   or one length-two `A1` centre; multiplicity alone is not a closure test.
   THM-3996 proves that a complete finite-locus node-address graph is balanced:
-  its edges lie on cycles, while a complete forest forces nonproperness. It
-  does not decide the ownership census or nonproperness of THM-3992's node.
+  its edges lie on cycles, while a complete forest forces nonproperness. Its
+  finite-flat completion also gives the exact fibre-defect test
+  `y notin S_F iff #F^-1(y)=d`; hence THM-3992's node has a third address or
+  is Jelonek. It does not decide which alternative or the ownership census.
+  THM-3998 gives an independent conic/ODE proof of a fixed-node `3`-by-at-most-
+  `3` raw weight cell already excluded by THM-3974/3987; it does not enlarge
+  the closed region, whose first live retained-support sizes remain `3x4/4x3`.
   Multi-term cancellation, finite Keller/Darboux entry, and `JC(2)` stay open.
   Russell THM-3785/3843--3871 close named depth-through-five packets; the
   nonreduced `(6,4)`, rational corrections, and global entry remain open.

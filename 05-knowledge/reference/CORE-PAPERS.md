@@ -338,6 +338,16 @@ This maps imported claims, consumers, and exclusions; links—not bare IDs—are
 - **Imported role:** `Jac(P,B) in k*` and `Jac(P,w)=0` imply `w in k[P]`; [THM-2230](../../01-canon/theorems/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md) derives that every response fiber is exactly one target-shear orbit.
 - **Does not prove:** planar JC or that `P` is a coordinate. The unit-mate and characteristic-zero hypotheses are essential.
 
+### Serre--Tate — *Good reduction of abelian varieties*
+
+- **Primary / freshness:** [Annals of Mathematics **88** (1968), 492--517](https://annals.math.princeton.edu/1968/88-3/p05), Section 1. **PUBLISHED / stable; checked 2026-08-24.**
+- **Imported role:** Neron--Ogg--Shafarevich and the resulting invariance of
+  potential good reduction under isogeny, used only in THM-3997's independent
+  generic-fibre exclusion of the zero-residual reduced `2:3` cell.
+- **Does not prove:** the two elliptic models or their `j`-invariants, the
+  Keller-induced function-field map, any nonzero-residual exclusion, `JC(2)`,
+  or the full Jacobian Conjecture; those remain in-repo arguments or open.
+
 ### Han--Pan--Chen — *Normal forms of elements in the Weyl algebra and Dixmier Conjecture*
 
 - **Primary / freshness:** [arXiv:2407.11291v1](https://arxiv.org/abs/2407.11291),

@@ -1,0 +1,44 @@
+STATUS=FINITE-SUPPORT EXACT NO-GO; NOT A JC(2) PROOF
+FIELD=algebraically closed characteristic zero
+RING=B2=k[x,u,p,y], u=x^2*t, p=t*(1+u), y=x*t*p
+SUPPORT_A={2,0,-2}; SUPPORT_C={3,1} plus <=1 arbitrary integer weight
+COEFFICIENT_DEGREE_IN_u=UNBOUNDED
+PASS  canonical p relation (parent-task typo excluded)
+PASS  canonical y relation
+PASS  positive control J(x,t)=1
+PASS  positive control rational J(P,Q)=1
+PASS  hostile node eliminant
+PASS  hostile node has zero Jacobian
+PASS  support-cell control A boundary
+PASS  support-cell control C boundary
+PASS  support-cell control forced A_t value
+PASS  support-cell control is hostile rather than Keller
+PASS  bare t fails the exact weight-minus-two coefficient ideal
+PASS  p numerator passes the exact weight-minus-two coefficient ideal
+PASS  p supplies the forced simple A_t jet
+PASS  homogeneous bracket law (2,3)
+PASS  homogeneous bracket law (2,1)
+PASS  homogeneous bracket law (0,3)
+PASS  homogeneous bracket law (0,1)
+PASS  homogeneous bracket law (-2,3)
+PASS  homogeneous bracket law (-2,1)
+PASS  weight 4 collapses to k=(3/2)qF
+PASS  weight 2 is the conic derivative
+PASS  scalar row after differentiated conic
+PASS  scalar row gives 3*F'*(2F^2-a^2)=4q
+PASS  all-degree gap is 4*d-2
+PASS  all-degree gap is positive from d=1 onward
+DEDUCTION core: no polynomial coefficient solution in any degree.
+  nonconstant F: deg(q)=3deg(F)-1 but q^2 divides a^2-F^2
+  constant F: scalar ODE has zero left side and nonzero q right side
+PASS  complete one-row collision set
+GENERIC_EXTRA: outside collision set, the contradictory core rows are unchanged
+PASS  r=-3: lowest row requires nonintegral valuation
+PASS  r=-1: lowest row requires nonintegral valuation
+PASS  r=5: highest-row leading coefficient is nonzero
+PASS  r=7: highest-row leading coefficient is nonzero
+DEDUCTION extra: an arbitrary single additional C-weight is zero or absorbed.
+CERTIFICATE_SCOPE=>=2 extra C weights, or any extra A weight, not treated here; canonically first live sizes are 3x4 and 4x3
+MIXED_RESIDUAL_SCOPE=R in (p^2,y) was not specialized; obstruction uses only its forced node jet
+THEOREM_ID=THM-3998
+ALL THM-3998 EXACT CHECKS PASSED

@@ -74,7 +74,10 @@ Format per entry:
   the two known companion germs force an additional node address; if those
   are the full connected packet, they have one common owner and form a
   two-edge cycle.  A genuinely complete forest instead forces the target node
-  into the Jelonek locus. This repaired statement is THM-3996.
+  into the Jelonek locus. The Keller degree-two exclusion further forces a
+  third address when the node lies outside that locus and its fibre has full
+  generic cardinality; there the two-edge cycle is a strict connected
+  subpacket. This repaired statement is THM-3996.
 - **Reusable rule:** type components as interior pullback, conductor, or
   completion-boundary primes before importing a forest theorem.  A local
   intersection polynomial on one component is not a census of the full target

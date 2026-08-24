@@ -1182,11 +1182,41 @@
   [THM-3996 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
   JC(2) OPEN]. A complete finite-etale node-address graph has equal indegree
   and outdegree at every normalization owner, hence every edge lies on a
-  directed cycle. A complete nonempty forest forces nonproperness; this is
-  one-way and does not enumerate THM-3992's fibre. Exact pass rows: `10`.
+  directed cycle. A complete nonempty forest forces nonproperness; this graph
+  certificate is one-way. Separately, the finite-flat normalization completion
+  gives `y notin S_F iff #F^-1(y)=d`. The degree-two Keller gate therefore
+  forces a third THM-3992 node address outside `S_F`, without deciding the
+  address ownership or which side of the dichotomy holds. Exact pass rows: `10`.
   Script/output SHA-256:
   `f3a7560606de94cfe0ee705459f491b27a6b25f7c2d51ac4e35e6cb9734f16c0` /
   `998952528ef0dae5c370f216846328323d12de483235eb8147669a713f3ede05`.
+
+- `jc2_reduced_23_hasse_residual_thm3997.py` -> matching `.out`
+  [THM-3997 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  JC(2) OPEN]. The source-normal diagonals force `[p^2]R` and `[p^3]R`, and
+  the all-row Hasse transform characterizes membership in `k[p,y]`. The first
+  diagonal selects THM-3992's nonliftable branch; its continued seam gives
+  `gamma=-a^3/2` and `[p^2]R=8/(3a^7)!=0`. A second diagonal and an independent
+  elliptic potential-reduction argument separately exclude `R=0`. Exact pass
+  rows: `73`. Script/output SHA-256:
+  `9a00d3d80c94591a8677b6c16f1306a747c00721a4e517147afd65ae38737d7e` /
+  `870b058333301f4d518faa41ecc4e05e02e50b432ff0e9244c51278c4c4407dd`.
+
+- `jc2_three_by_three_weight_support_thm3998.py` and
+  `jc2_three_by_three_weight_support_groebner_thm3998.py` -> matching `.out`s
+  [THM-3998 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  NO NEW CLOSED SUPPORT CELL]. In the fixed THM-3992 node gauge, the core
+  bracket rows force a polynomial conic and the incompatible ODE
+  `3F'(2F^2-a^2)=4q`; one arbitrary extra `C` weight is absorbed or killed by
+  an endpoint valuation. This independently reproves a cell already excluded
+  by THM-3974/3987; the first live retained-support sizes remain `3x4/4x3`.
+  Exact pass rows: `30` plus `21` finite Groebner controls. Main script/output
+  SHA-256:
+  `cf0b8c1227ddd5db4a0cc3f26df6993c3365b7d8d1d7307b9b5491ff35fb7e2e` /
+  `8343196741f99780a34b87642252820bfb7eff04e277066e6a4dda6f43527d26`.
+  Groebner script/output SHA-256:
+  `bf561c4ae7712b413deae2c3315a36806103230692625d139cfc33e6f0aed822` /
+  `a7d633a98ad0dfc588d5c59b039518dcb19add320f1a480e0c4623dd35639c46`.
 
 - `brendle_hung_lemma54_independent_audit_20260824.py` and
   `brendle_hung_vbc_exact_point_audit_20260824.py` -> matching `.out`s

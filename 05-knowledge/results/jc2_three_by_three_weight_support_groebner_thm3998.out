@@ -1,0 +1,31 @@
+STATUS=THM-3998 INDEPENDENT FINITE DIRECT-SOURCE REPLAY
+UNIVERSE=A weights {2,0,-2}; C weights {3,1}; coefficient caps shown per slice
+METHOD=expand J(A,C)-1 in x,t over QQ; exact Groebner basis
+PASS  ambient orientation control J(x,t)=1
+PASS  a1_g1_D4: A lies in k[x,t]
+PASS  a1_g1_D4: node A boundary
+PASS  a1_g1_D4: node C boundary
+PASS  a1_g1_D4: forced A_t jet
+PASS  a1_g1_D4: direct Groebner ideal is [1]
+REPLAY a1_g1_D4: variables=20 equations=35 survivors=0
+PASS  a2_g1_D3: A lies in k[x,t]
+PASS  a2_g1_D3: node A boundary
+PASS  a2_g1_D3: node C boundary
+PASS  a2_g1_D3: forced A_t jet
+PASS  a2_g1_D3: direct Groebner ideal is [1]
+REPLAY a2_g1_D3: variables=15 equations=27 survivors=0
+PASS  a1_g2_D3: A lies in k[x,t]
+PASS  a1_g2_D3: node A boundary
+PASS  a1_g2_D3: node C boundary
+PASS  a1_g2_D3: forced A_t jet
+PASS  a1_g2_D3: direct Groebner ideal is [1]
+REPLAY a1_g2_D3: variables=15 equations=27 survivors=0
+PASS  a-1_g1_D3: A lies in k[x,t]
+PASS  a-1_g1_D3: node A boundary
+PASS  a-1_g1_D3: node C boundary
+PASS  a-1_g1_D3: forced A_t jet
+PASS  a-1_g1_D3: direct Groebner ideal is [1]
+REPLAY a-1_g1_D3: variables=15 equations=27 survivors=0
+LIMITATION=finite coefficient caps and four (a,gamma) slices only
+THEOREM_ID=THM-3998
+ALL THM-3998 DIRECT GROEBNER REPLAYS PASSED

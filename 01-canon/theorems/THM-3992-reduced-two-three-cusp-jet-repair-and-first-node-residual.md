@@ -29,7 +29,8 @@ audit: >
   Laurent convolution law. The companion script separately expands the
   Laurent Jacobian, verifies every row and factorization, and passes the cusp,
   node, first-seam, oriented scalar-seam, finite-jet, cube-lift-torsor, and
-  moving-node controls. Normal and optimized executions are byte-identical.
+  moving-node controls. Normal and optimized executions agree with the frozen
+  output after LF normalization.
 depends_on:
   - THM-3989-cusp-log-laurent-conductor-and-nondividing-depth-reduction
 related:
@@ -37,6 +38,7 @@ related:
   - THM-3957-triple-normal-crossing-cotangent-conductor-kernel-and-normalization-cokernel
   - THM-3990-componentwise-harmonic-obstruction-and-repair-quotient
   - THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy
+  - THM-3997-reduced-two-three-hasse-repair-and-zero-residual-no-go
 script: 04-computation/jc2_reduced_23_cusp_jet_repair_thm3992.py
 output: 05-knowledge/results/jc2_reduced_23_cusp_jet_repair_thm3992.out
 script_sha256: 4c7fb202237c263b061b106d6d5503d198e6e97c815d98b14c29a33190ecfa2b
@@ -690,8 +692,8 @@ The theorem does **not** prove:
 3. that the source term `gamma*x` can be removed by an allowed target repair;
 4. that `R in (p^2,y)` vanishes or is forced into a previously closed cell;
 5. that the two companion branches in `(39)` lie on one global component;
-6. that the nodal corrected form `(39n)` eliminates the `eta=0` branch or
-   continues through the positive Keller rows;
+6. within this theorem alone, that the nodal corrected form `(39n)` eliminates
+   the `eta=0` branch or continues through the positive Keller rows;
 7. that the finite family `(39aa)` extends to `B_2` or satisfies the omitted
    positive bracket rows;
 8. that the reduced `(2,3)` cell is empty, or that `JC(2)` holds.
@@ -701,20 +703,29 @@ The residual fifth-root normalization acts by
 has weight four. The robust invariant is not its chosen value but the forced
 node type and its two labelled normalization addresses.
 
-The next exact objects are the coordinated residual `R in (p^2,y)`, the
-liftable/nonliftable split `(39e)`, and the **complete** oriented node-address
-graph. The roots of `(39)` enumerate only intersections with the known line
+THM-3997 supplies the missing positive-row update: it forces
+`eta=a/gamma`, eliminates the `eta=0` branch for every actual pair, and then
+combines with `(39y)` to give `gamma=-a^3/2` and
+`[p^2]R=8/(3a^7)!=0`. Thus the lower-seam square lift and its cube obstruction
+remain exact hostiles, but are no longer a live Keller branch.
+
+The next exact objects are the remaining coordinated nonzero residual and the
+**complete** oriented node-address graph. The roots of `(39)` enumerate only intersections with the known line
 `t=0`, not every source address over the target node. A two-owner split is not
 itself a boundary forest obstruction: THM-3951 concerns completion-boundary
 primes, whereas these pullback curves lie inside the source. Pure cube lifting
-is now excluded in the first branch by `(39t)`; the live tests are its nodal
-corrected positive rows, full algebraization of the finite jet `(39aa)`, further
+is excluded in the first branch by `(39t)`; the live tests are higher positive
+rows beyond THM-3997, full algebraization of the finite jet `(39aa)`, further
 node addresses, and membership of the target node in the nonproper-value
 locus. A scalar resultant cannot replace those labels, as THM-3994
 demonstrates. THM-3996 proves the exact finite-locus alternative: distinct
 companion owners require another address, while a complete two-address packet
-has one companion owner and forms a directed two-cycle. It does not decide
-which alternative occurs here. See MISTAKE-481.
+has one companion owner and forms a directed two-cycle. More strongly, the
+Keller degree-two exclusion says that outside the nonproperness locus the
+full generic-cardinality fibre has at least three addresses, so any two-edge
+cycle there is a strict connected subpacket. The theorem does not decide
+whether the next object is another address or a nonproper target value. See
+MISTAKE-481.
 
 Reproduce from the repository root:
 
@@ -723,6 +734,6 @@ python3 04-computation/jc2_reduced_23_cusp_jet_repair_thm3992.py
 python3 -O 04-computation/jc2_reduced_23_cusp_jet_repair_thm3992.py
 ```
 
-Both executions must byte-match
+Both executions must match after LF normalization
 [the frozen output](../../05-knowledge/results/jc2_reduced_23_cusp_jet_repair_thm3992.out)
 and end with `ALL EXACT CHECKS PASSED`.
