@@ -7,10 +7,12 @@ REMAINS OPEN.**  The proof sources are
 [THM-3933](../01-canon/theorems/THM-3933-centered-degree-three-root-map-pole-partition-octic-nonentry.md),
 [THM-3936](../01-canon/theorems/THM-3936-centered-degree-three-infinite-root-value-nonentry.md),
 [THM-3938](../01-canon/theorems/THM-3938-centered-degree-four-root-map-nonentry.md),
+[THM-3941](../01-canon/theorems/THM-3941-all-degree-centered-cubic-pole-carrier-routing.md),
+[THM-3959](../01-canon/theorems/THM-3959-centered-degree-five-root-map-color-closure.md),
 and
-[THM-3941](../01-canon/theorems/THM-3941-all-degree-centered-cubic-pole-carrier-routing.md).
-This reflection records the research move and the next generated obligations;
-it is not an additional theorem.
+[THM-3961](../01-canon/theorems/THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt.md).
+This reflection records the research move and its degree-five resolution; it
+is not an additional theorem.
 
 ## 1. Inheritance pass and concept board
 
@@ -140,7 +142,7 @@ The companion proves the rational-function identity itself, not merely a
 finite fit, and checks the deterministic ordinal bijection through degree
 thirty.  An independent implementation agreed through degree 360.
 
-## 5. The seven degree-five tasks
+## 5. The seven degree-five tasks are now closed
 
 Degree five has the following zero-based work queue:
 
@@ -152,7 +154,7 @@ Degree five has the following zero-based work queue:
 ```
 
 The separate `m=5` polynomial row is the root-regular THM-3929 exit.  For
-each of tasks `0,...,6`, the generated obligation is now uniform:
+each task `0,...,6`, the generated obligation was uniform:
 
 1. solve the lower-principal-part trace equations;
 2. divide the exact color and retain only polynomial families;
@@ -160,11 +162,14 @@ each of tasks `0,...,6`, the generated obligation is now uniform:
 4. distinguish maximal-order ramification from square index factors; and
 5. compute the normalization-address fibres of every genuine component.
 
-This is a finite seven-row next frontier, but it is not yet seven solved
-rows.  The cheapest decisive experiment is exact symbolic color division in
-each row, with the inherited degree-three and degree-four survivors as
-positive controls and a forbidden shared-fibre pole packet as hostile
-control.
+[THM-3959](../01-canon/theorems/THM-3959-centered-degree-five-root-map-color-closure.md)
+now executes this queue completely. Exact color division makes L/M/O empty.
+The five surviving families are J1/J2/K/N/P. J1 has one scalar endpoint in an
+actual normal maximal order; every nonscalar survivor has a genuine reduced
+ramification arm with two or three normalization addresses over one target
+point. Rank-three finite flatness coalesces them at one source point, so the
+arm is non-unibranch and THM-3920 excludes it. The 105-gate companion audits
+all resultants, seams, saturations, address fibres and the scalar endpoint.
 
 ## 6. What the tournament inheritance does and does not say
 
@@ -249,17 +254,21 @@ give polynomial `A1` carriers, and every one retains the forbidden repeated
 incidence. Corrected/audited THM-3953 closes all three-distinct polynomial
 roots, including constant ratios; THM-3954 proves the local common-debt
 `A_(3m-1)`/non-unibranch refinement. THM-3956 closes every split hidden cubic,
-THM-3958 closes the exactly-one-root case, and independently audited THM-3960
-closes the full natural globally monogenic one-parameter family. THM-3959 is
-only a reserved degree-five task and closes none of the seven carrier rows.
+THM-3958 closes the exactly-one-root case, independently audited THM-3960
+closes the natural globally monogenic one-parameter family, and THM-3959
+closes all seven centered degree-five carrier rows. THM-3961 then extends the
+monogenic normality gate to irreducible arbitrary `q(P,t)`: adjusted hidden
+squarefreeness is equivalent to normality, and every normal row is excluded
+by the global different. Its repeated-factor and `P^2` nonnormal debts remain;
+THM-3962/3963 reserve, but do not prove, their normalization programs.
 
 The session therefore ends at a sharp boundary.  **PROVED:** degree-four
 centered nonentry, all-degree trace-carrier routing, the arbitrary-common-debt
 natural-cubic boundary obstruction, the four-color Mobius classification, and
-the full natural monogenic closure. **VERIFIED-EXACT:** the 2,884-gate carrier
-companion and the `51/62/44/75/92/62/161/42` gates in
-THM-3950/51/52/53/54/56/58/3960. **OPEN:** color survival for all seven
-degree-five tasks; higher ratios that change the finite order, nonmonogenic
-overorders and normalization-parameter descent; arbitrary root gauges and
-coefficient planes; higher-degree non-centered strata; and the planar
-Jacobian conjecture itself.
+the centered degree-five and arbitrary-`q` normal monogenic closures.
+**VERIFIED-EXACT:** the 2,884-gate carrier companion and the
+`51/62/44/75/92/62/161/105/42/51` gates in
+THM-3950/51/52/53/54/56/58/59/60/61. **OPEN:** degree at least six, arbitrary
+root gauges and coefficient planes, the two nonnormal conductor debts,
+nonmonogenic orders, normalization-parameter descent, higher-degree
+non-centered strata, and the planar Jacobian conjecture itself.

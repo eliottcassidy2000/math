@@ -16,8 +16,10 @@ equianharmonic residual. THM-3951 proves that affine-plane boundary primes are
 rational, so the positive-genus residual excludes every natural same-field
 cubic even with arbitrary common debt; clean rows also violate its boundary
 forest. THM-3952 exhausts the unit-debt degree-one-ratio polynomial carriers;
-THM-3953/54/56/58 resolve the hidden-root and local-debt strata; and audited
-THM-3960 closes the full natural globally monogenic one-parameter family.
+THM-3953/54/56/58 resolve the hidden-root and local-debt strata; THM-3959
+closes all seven centered degree-five color rows; audited THM-3960 closes the
+natural one-parameter family; and THM-3961 classifies normality for
+irreducible arbitrary `q(P,t)` and excludes every normal monogenic row.
 This reflection reserves no theorem ID; its affine deformation is now an
 independent precursor to the `m=1` slice of THM-3946.
 
@@ -367,28 +369,36 @@ arbitrary `C,E in k[t]`, every integral natural `T^3-3PT-(E+CP)` surface is
 normal, and its monogenic derivative would become a forbidden nonconstant
 unit on a Keller open; the reducible linear/quadratic boundary fails as well.
 Thus no further factorization of this natural one-parameter order can help.
-Higher-ratio carrier classification remains useful only if it changes the
-finite order, target-parameter descent, or branch assignment. The orthogonal
-THM-3955/57 node and coordinate-crossing cotangent sequences are proved local
-normalization sidecars, not global Jacobian or Hopf results.
+THM-3959 independently closes the centered degree-five carrier queue: L/M/O
+are empty, while J1/J2/K/N/P end at a scalar maximal-order seam or a folded
+non-unibranch ramification arm. THM-3961 then gives the arbitrary-`q`
+monogenic normality criterion. After removing the forced `h^2`, adjusted
+hidden squarefreeness is equivalent to normality; all normal cases fail by the
+global different. Only a repeated adjusted factor and `P^2|q` remain as
+nonnormal conductor debts. THM-3962/3963 reserve normalization programs for
+those directions and are not yet usable. The orthogonal THM-3955/57 node and
+coordinate-crossing cotangent sequences are proved local sidecars, not global
+Jacobian or Hopf results.
 
 The next search should not maximize Mordell--Weil rank blindly.  The cheapest
 decisive experiments are:
 
-1. start from a genuinely nonmonogenic `S3` field/order outside THM-3960's
-   function-field grammar, or prove that the normalization parameter descends
-   to an original polynomial target coordinate; do not spend another pass on
-   hidden-root factorization inside THM-3960's order;
-2. search genuinely bivariate factors and simultaneous internal splits in two
+1. normalize THM-3961's two typed conductor debts and compute their units,
+   class groups, boundary incidence and infinity places; THM-3962/3963 are
+   reserved targets, not dependencies;
+2. start from a genuinely nonmonogenic `S3` field/order outside the normal
+   monogenic grammar, or prove that the normalization parameter descends to
+   an original polynomial target coordinate;
+3. search genuinely bivariate factors and simultaneous internal splits in two
    or three cube factors for an irreducible reduced full branch;
-3. compute the generic three-parabola quadratic normalization and its complete
+4. compute the generic three-parabola quadratic normalization and its complete
    class/Cardano lattice before deciding whether recombination is possible;
-4. replace the line boundary in the multiple-torus sextic families by an
+5. replace the line boundary in the multiple-torus sextic families by an
    explicitly normalized non-line or birational boundary;
-5. keep one torus structure but move to a higher-genus generic fibre and
+6. keep one torus structure but move to a higher-genus generic fibre and
    search for a second Jacobian three-line not arising from a translated cube
    factor; or
-6. create at least three deleted boundary sections, or a controlled split
+7. create at least three deleted boundary sections, or a controlled split
    vertical fibre, and compute the full localization relation matrix.
 
 For each lane the cheapest hostile gate is the normalization pole divisor.
@@ -398,12 +408,13 @@ whole factors forced extra ends; separated internal factors retained two
 ends; the first one-place collision paid nonreduced conductor debt; and the
 first reduced `A1`/normal/two-character survivor paid a genus-one companion.
 The positive-genus boundary gate killed every natural factor-ratio row, with
-the forest independently killing the clean minimal/Mobius atlases; the global
-different now kills the entire natural monogenic grammar at once. A survivor
-must leave those scopes through a different nonmonogenic field/order,
-parameter descent, different assignments, or genuinely new factor geometry, and
-control the full discriminant and source attachment rather than merely pass
-componentwise gates.
+the forest independently killing the clean minimal/Mobius atlases. THM-3961
+now kills every normal arbitrary-`q` monogenic row by the same global
+different. A survivor must normalize one of its two conductor debts or leave
+through a different nonmonogenic field/order, parameter descent, different
+assignments, or genuinely new factor geometry, while controlling the full
+discriminant and source attachment rather than merely passing componentwise
+gates.
 
 ## Reproduction
 
@@ -419,7 +430,9 @@ python3 04-computation/jc2_rationally_split_hidden_cubic_boundary_triangle_thm39
 python3 04-computation/jc2_extra_debt_flank_normalization_20260824.py
 python3 04-computation/jc2_split_hidden_cubic_integrality_repeated_trichotomy_thm3956.py
 python3 04-computation/jc2_one_hidden_root_principal_different_pure_power_thm3958.py
+python3 04-computation/jc2_centered_degree_five_root_map_thm3959.py
 python3 04-computation/jc2_natural_one_parameter_cubic_normal_monogenic_thm3960.py
+python3 04-computation/jc2_arbitrary_q_hidden_repetition_normality_thm3961.py
 ```
 
 Each normal/optimized pair must byte-match its corresponding frozen output in

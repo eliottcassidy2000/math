@@ -67,7 +67,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505`, and only 58 in `t>=U`: 57 scale-one plus `(2,1,9)`.  THM-3910
-  closes 41, leaving 17.  THM-3964 closes AP11 and 1,365 fixed scale-two
+  closes 41, leaving 17.  THM-3966 closes AP11 and 1,365 fixed scale-two
   bodies, no type; `t<U` and owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
@@ -344,21 +344,20 @@ asymptotic or residue.
   THM-3890--3921 close named quintic/sextic/rational/radial packets; THM-3920
   closes THM-3918's same-field atlas, not separate cubic-field questions.
   THM-3922--40 give class/conic/boundary/fold/Cardano closures. Corrected
-  THM-3941 has a period-12 collision-free carrier count and task ordinals;
-  seven `N=5` rows still await color division. THM-3942/44/47 close
-  whole-factor/repeated-square rows by extra ends, components or conductor;
-  audited THM-3946 and THM-3949 close standard one-variable factor splits.
+  THM-3941 gives period-12 carrier counts/ordinals; THM-3959 closes all seven
+  `N=5` rows: L/M/O empty; J1/J2/K/N/P scalar or folded non-unibranch arms.
+  THM-3942/44/47 and audited THM-3946/49 close named factor splits;
   THM-3943/45/48 close classified weight-eight/nine `A1` sextics. THM-3950
-  leaves fixed `j=0`; THM-3951 excludes natural nonconstant-ratio same-field
-  cubics by genus (clean rows also fail the forest). THM-3952 closes four
-  unit-debt Mobius colors. THM-3953 closes distinct polynomial-root ratios,
-  constants included; THM-3954 gives the shared-debt
-  `A_(3m-1)`/non-unibranch mechanism. THM-3956/58 and audited THM-3960 close
-  the split, one-root and full natural globally monogenic families.
-  THM-3959 is RESERVED and closes none of the seven `N=5` rows. THM-3955/57
-  are local conductor results, not global Hopf/S6 results.
-  Open: higher ratios, parameter descent, nonmonogenic starting orders, other
-  fields/gauges/splits/boundaries/resolvents/source attachments and `JC(2)`.
+  leaves fixed `j=0`; THM-3951 excludes natural ratio cubics by genus/forest;
+  THM-3952 closes four Mobius colors. THM-3953 closes distinct polynomial
+  roots, constants included; THM-3954 gives the shared-debt
+  `A_(3m-1)`/non-unibranch mechanism. THM-3956/58/60 close the natural
+  one-parameter family. THM-3961 proves, for irreducible arbitrary `q(P,t)`,
+  normality iff adjusted hidden squarefreeness and excludes normal rows by the
+  different. Its repeated-factor/`P^2` debts remain; THM-3962/63 are RESERVED.
+  THM-3955/57 are local conductor results, not global Hopf results. Open:
+  degree `>=6`, other gauges/colors/fields, both debts, parameter descent,
+  nonmonogenic orders, source attachment and `JC(2)`.
   THM-3853/3855 remain formal laboratories.
   Russell THM-3785 forces `3|d,d>=9`; THM-3843/46/49 give an immersed arm,
   jets and visible conductor contact. THM-3856/61/67/71 close normal `z`-depth

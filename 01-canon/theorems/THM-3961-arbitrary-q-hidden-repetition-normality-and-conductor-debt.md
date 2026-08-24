@@ -20,8 +20,9 @@ audit: >
   the P^2 zero-section failure, the vertical/common-factor boundary cases,
   and the R1+S2 normality converse. It also checked the irreducible-domain
   scope and the normalization-form Zariski Main/global-different unit
-  obstruction. Normal and optimized 51-gate runs byte-match the frozen
-  transcript; hashes and documentation checks pass.
+  obstruction. Normal and optimized 51-gate runs match the frozen transcript
+  after canonical LF normalization on Windows; hashes and documentation
+  checks pass.
 depends_on: []
 related:
   - THM-3960-natural-one-parameter-cubic-normal-monogenic-closure

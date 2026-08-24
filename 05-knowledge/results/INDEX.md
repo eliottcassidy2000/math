@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3964 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3966 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -473,9 +473,9 @@
   collision-free `C3`, `C2`, or `C2xC2` carrier. Shared address forces only
   the target collision unless the genuine maximal/Keller ramification
   hypotheses are added. The trace-block realization gives an exact period-12
-  quadratic carrier count and deterministic natural task ordinals. There are
-  seven coarse collision-free `N=5` signatures awaiting color division, plus
-  the root-regular exit. Checks: `2,884`.
+  quadratic carrier count and deterministic natural task ordinals. Its seven
+  coarse collision-free `N=5` signatures are subsequently closed by THM-3959;
+  the root-regular exit routes to THM-3929. Checks: `2,884`.
   Script/output/semantic SHA-256:
   `6bfec47a5127f3443c9392c10b37d61f8059d168cdb0e3d1c080e5abc3558ebd` /
   `401d7ca141d6ebe6d31640099dbb96ac7c0f031930b9b73f1fd024c094e77e44` /
@@ -667,6 +667,19 @@
   `2e01d69d6e95a5c1744711d8ccea6bad6c9cf90a395b52206b41e0ab35efeb82` /
   `74d85a5e93df9df20672bebdea8f6e8c4818accbdf72c5fee1905628e0a5c335`.
 
+- `jc2_centered_degree_five_root_map_thm3959.py` -> matching `.out`
+  [THM-3959 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. Exact
+  color division exhausts THM-3941's seven centered `N=5` rows: L/M/O are
+  empty and J1/J2/K/N/P survive. The sole scalar endpoint is excluded in an
+  actual normal maximal order; every nonscalar family has a reduced
+  ramification arm whose two or three normalization addresses coalesce in a
+  rank-three fibre, violating unibranchness. This closes the centered
+  linear-color degree-five grammar, not other gauges or `JC(2)`. Checks:
+  `105`. Script/output/semantic SHA-256:
+  `6cb3e9f43114124d416a80de2e5f7de628b2944b699b586c637069fdb521b8ac` /
+  `69c474ed97dcfd1a080ed9ed9b0820f864e20a2795c9290561c83dfa1ddeedc3` /
+  `2a8a5aab0520c4edeab61b1717d2a6b9a4bf7261ef64dc9a4fb0a6ac253b8808`.
+
 - `jc2_natural_one_parameter_cubic_normal_monogenic_thm3960.py` -> matching
   `.out` [THM-3960 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   For arbitrary `C,E in k[t]`, `T^3-3PT-(E+CP)` is integral exactly when
@@ -680,13 +693,25 @@
   `853caab7ac647851bae242170257d6400c730a1e466554b2f84fbe019e37a784` /
   `e351375ce01977071e544aa926685b89d0d36d955a790a4ab8d1e2f6c23f5db1`.
 
+- `jc2_arbitrary_q_hidden_repetition_normality_thm3961.py` -> matching `.out`
+  [THM-3961 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. For an
+  irreducible `T^3-3PT-q(P,t)`, delete only the forced `h^2` from
+  `q(h^2,t)-2h^3` when `P` divides `q` exactly once. The surface is normal iff
+  the adjusted hidden polynomial is squarefree; `P^2|q` makes the height-one
+  zero section singular. The global different excludes every normal row.
+  Two nonnormal conductor debts remain for normalization; reducible cubics
+  and `JC(2)` are outside scope. Checks: `51`. Script/output/semantic SHA-256:
+  `e23bc41290cc397df5de5caa7bfc2cf24d911fd21862d455f6b6343b03b34064` /
+  `965d720d954670a8c4662adfe6c3940c1202199aa011dfbdc66fe3ce40c23764` /
+  `1993c77cd4dc081abb018ace8f177bc80ada708f19622a7a4c15c29fb385564b`.
+
 - `hopf_s6_triangle_monodromy_snf_audit_20260824.py` -> matching `.out`
   [VERIFIED-EXACT DISPLAYED MATRICES + FINITE-EXACT CONDITIONAL ORIENTED
   CONDUCTOR PUSHOUT; GLOBAL HOPF/S6 CLAIMS OPEN]. The displayed monodromy,
   exterior-power, Smith, twist, and 54,320 coprime clutch rows pass. Reversing
   one conductor branch creates the exact `Z/2` orientation hostile. The script
   uses assertion gates and now rejects optimized mode after MISTAKE-476; its
-  normal run byte-matches the frozen LF output. Script/output SHA-256:
+  normal run matches the frozen output after LF normalization. Script/output SHA-256:
   `3748afedf8af898b05cd9514970c453637d58ab9a69629a76d94ef14775df6b8` /
   `a7e8e94071a58825fde77dcaa4298614c8499e18d1f5aeabd884976efae443bd`.
 

@@ -30,8 +30,8 @@ audit: >
   a genuine saturation certificate. A final completeness audit restored the
   independent triple-pole modulus k in row M; the full pk!=0 packet has
   saturated color ideal <1>, so the row remains empty. All repairs preceded
-  promotion. Normal and optimized 105-gate runs byte-match the frozen output;
-  hashes and documentation checks pass.
+  promotion. Normal and optimized 105-gate runs match the frozen output after
+  canonical LF normalization on Windows; hashes and documentation checks pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction

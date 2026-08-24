@@ -351,8 +351,13 @@ is also **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**: its
 one-hidden-root lane closes through a principal-different/forbidden-unit gate.
 [THM-3960](../../01-canon/theorems/THM-3960-natural-one-parameter-cubic-normal-monogenic-closure.md)
 is now independently audited and closes the full natural globally monogenic
-one-parameter cubic family. THM-3959 alone remains a **RESERVED / UNPROVED
-EMPTY STUB**. None supplies a Hopf dependency here.
+one-parameter cubic family. Independently audited
+[THM-3959](../../01-canon/theorems/THM-3959-centered-degree-five-root-map-color-closure.md)
+closes the centered degree-five color rows, while
+[THM-3961](../../01-canon/theorems/THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt.md)
+classifies normality in the irreducible arbitrary-`q` monogenic grammar.
+THM-3962/3963 remain **RESERVED / UNPROVED EMPTY STUBS**. None supplies a
+Hopf dependency here.
 
 ### Explicitly rejected vocabulary bridges
 
