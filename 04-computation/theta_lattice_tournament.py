@@ -5,12 +5,13 @@ theta_lattice_tournament.py — opus-2026-03-14-S80
 CORRECTION (2026-08-24; MISTAKE-484): an older version printed
 ``theta_3^8 = Theta_E8``.  In fact ``theta_3^8`` is the theta series of the
 cubic lattice ``Z^8``.  ``Theta_E8=E_4`` is different already in its first
-coefficient (240 rather than 16).  Numerical coincidences retained below are
+common norm shells.  In the squared-norm convention, the two series are
+``theta_3(q)^8`` and ``E_4(q^2)``.  Numerical coincidences retained below are
 exploratory only and do not supply tournament or lattice identifications.
 
-The E8 lattice theta function: Theta_{E8}(q) = 1 + 240q + 2160q^2 + ...
-Coefficients count lattice vectors by norm. These coefficients encode
-tournament-theoretic information through the (2,3,5) structure.
+In the half-squared-norm convention for even lattices,
+Theta_{E8}(q) = 1 + 240q + 2160q^2 + ... . The historical script compares
+these coefficients with tournament data; it proves no encoding map.
 
 We explore:
 1. E8 theta function coefficients and their (2,3) factorizations
@@ -227,8 +228,9 @@ print("  theta_2(q) = 2*sum q^{(n+1/2)^2}")
 print("  theta_3(q) = sum q^{n^2}")
 print("  theta_4(q) = sum (-1)^n q^{n^2}")
 print()
-print("Corrected identity: theta_3^8 = Theta_{Z^8}, NOT Theta_{E8}")
-print("Theta_{E8} = E_4; their first q-coefficients are 240 and 16")
+print("Squared-norm convention: Theta_{Z^8}=theta_3(q)^8")
+print("Squared-norm convention: Theta_{E8}=E_4(q^2), not theta_3(q)^8")
+print("Common shells: norm 2 gives 112 versus 240; norm 4 gives 1136 versus 2160")
 print()
 print("Also: theta_2^4 + theta_4^4 = theta_3^4 (Jacobi!)")
 print("This is a CUBIC relation in the 4th powers — analogous to the")
@@ -240,7 +242,7 @@ print("theta_3(q)^k counts representations as sum of k squares:")
 print(f"  theta_3^1: r_1(n) = #{'{n = a^2}'}")
 print(f"  theta_3^2: r_2(n) = #{'{n = a^2+b^2}'} (Gauss circle)")
 print(f"  theta_3^4: r_4(n) = 8*sigma_1(n) for odd n (Jacobi)")
-print(f"  theta_3^8: r_8(n) = 16*sigma_3(n) = a(n)/15")
+print(f"  theta_3^8: r_8(n) = 16*sigma_3(n) when n is odd")
 print()
 
 print("r_8(n) — representations as sum of 8 squares:")
@@ -258,9 +260,10 @@ for n in range(1, 11):
 
 print()
 print("For E8 lattice vectors (which are DIFFERENT from r_8 for Z^8):")
-print("  E8 norm-n count = 240*sigma_3(n) for n >= 1")
-print(f"  On ODD n only, r_8(n)=16*sigma_3(n), so the coefficient ratio is 15")
-print("  At n=2 the counts are 2160 and 112, ratio 135/7: no theta identity")
+print("  E8 squared-norm 2n count = 240*sigma_3(n) for n >= 1")
+print("  Z^8 squared-norm n count is r_8(n); these are different gradings")
+print("  Common norm 2: Z^8 has 112 vectors and E8 has 240")
+print("  Common norm 4: Z^8 has 1136 vectors and E8 has 2160")
 
 # ============================================================
 section("EISENSTEIN PRIMES AND THE TOURNAMENT POLYNOMIAL", 7)

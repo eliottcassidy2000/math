@@ -1,0 +1,37 @@
+THM-4000 exact companion: six-to-eleven number machinery
+
+consecutive_sampler_cases=65610
+evaluation_snf_six_nodes=[1, 1, 2, 6, 24, 120]
+optimality_control=P=product(X-a-j) attains the full modulus
+six_observer_nodes=[-1, 0, 1, 2, 3, 4]
+six_observer_moduli=[11, 10, 9, 8, 7, 6]
+six_observer_weights=[-252, 1386, -3080, 3465, -1980, 462]
+six_observer_modulus=332640; residue_only_lcm=27720; lift_factor=12
+decimal_digit_controls=10000
+split_cubic_eval_snf=[1,1,2]; image_condition=P(-1)=P(1) mod 2
+base7_compiler=P(7)=28P(1)-48P(0)+21P(-1) mod 336
+base7_residue_only_modulus=lcm(6,7,8)=168; missing_sidecar_factor=2
+base10_compiler=P(10)=55P(1)-99P(0)+45P(-1) mod 990
+base10_crt=P(10)=550P(1)-99P(0)+540P(-1) mod 990
+tripotent_roots_6_to_11={6: [0, 1, 2, 3, 4, 5], 7: [0, 1, 6], 8: [0, 1, 3, 5, 7], 9: [0, 1, 8], 10: [0, 1, 4, 5, 6, 9], 11: [0, 1, 10]}
+fixed_divisor(X^3-X)=6; universal_residue_moduli_are_exactly_divisors_of_6
+centered_roots_exhaust_for_n_ge_3_iff=odd_prime_power_or_4
+farey_edges: 6/7<7/8 and 9/10<10/11 lie on one cusp-1 parabolic orbit
+farey_base_checks=29; pell_depth_checks=435
+base7_odd_pell_centers=[7, 1351, 262087]
+base10_odd_pell_centers=[10, 3970, 1580050]
+base10_identity=X-1=9*A^2 and X+1=11*B^2 at every odd depth
+power_two_cyclotomic_checks=145
+phi8_data={7: (2402, {2: 1, 1201: 1}, {1201: 8}), 10: (10001, {73: 1, 137: 1}, {73: 8, 137: 8})}
+phi8_fold=P(b) mod (b^4+1) is the alternating sum of four-digit blocks
+E8_stabilization_rows=(rank,rank+8,disc,roots_before,roots_after)
+[(1, 9, 2, 2, 242), (2, 10, 3, 6, 246), (3, 11, 4, 12, 252)]
+theta_hostile_common_shells: norm2 Z8/E8=112/240; norm4=1136/2160
+ocf_packing_rows_6_to_11={6: ([(3, 3)], [2], []), 7: ([(7,)], [1], []), 8: ([(3, 5)], [2], []), 9: ([(3, 3, 3), (9,)], [1, 3], [{1: 4, 3: -1}]), 10: ([(3, 7), (5, 5)], [2], []), 11: ([(3, 3, 5), (11,)], [1, 3], [{1: 4, 3: -1}])}
+ocf_kernel_at_9_and_11=4*e_length1-e_length3; no length kernel at 10
+moon_busch_minplus_floors_6_to_11={6: 15, 7: 25, 8: 45, 9: 75, 10: 125, 11: 225}
+moon_busch_optimizers_(a,b)={6: (1, 1), 7: (0, 2), 8: (2, 1), 9: (1, 2), 10: (0, 3), 11: (2, 2)}
+
+checks=148241
+source_sha256=4777f23c31f3dbe65f420b6a1b77f303677e94015c009ffd113bcbb0ce88cd73
+status=PASS (integer exact; theorem proofs and scope are in THM-4000)
