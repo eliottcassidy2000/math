@@ -2,7 +2,7 @@
 id: THM-3916
 title: "Positive-genus collapsed valuation obstruction to a planar Keller model"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.  If a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  If a
   divisorial valuation of k(x,y) has positive-genus residue field and is
   positive on both entries of a polynomial pair, that pair cannot have
   scalar-unit Jacobian.  Applied to the rational chart of THM-3915, the
@@ -14,13 +14,17 @@ status: >
   genus-zero designs and JC(2) remain open.
 source: jc_zero_debt_lift / post-THM-3915 contracted-divisor lane, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT.  The exact
-  companion verifies the rational chart, both degree-three root descents,
-  squarefree degree-eight discriminant, all three infinity Hensel branches,
-  Riemann--Hurwitz ledger, and the rational F_z hostile.  Normal and optimized
-  runs byte-match the frozen output and documentation passes.  The centre-
-  trichotomy proof is written intrinsically on a common smooth model; no
-  computation is being used to replace that birational-surface argument.
+  INDEPENDENT HOSTILE AUDIT PASS (root / jc-cohn3709, 2026-08-23).  The audit
+  rederived the centre trichotomy on a smooth model of the plane, including
+  the load-bearing fact that a nonexceptional divisorial valuation is the
+  order along its height-one plane centre.  It separately checked the monic
+  cubic root descent, the two leading-coefficient branches, squarefreeness of
+  the degree-eight discriminant, simple transposition inertia, the three
+  infinity Hensel branches, and the Riemann--Hurwitz genus ledger.  It also
+  checked that the Zariski-Main application uses the intrinsic common-zero
+  valuation rather than the non-Keller rational chart.  Normal and optimized
+  replays byte-match the frozen output, all 26 active gates pass, and no
+  mathematical repair was required.
 depends_on:
   - THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
 related:
@@ -36,7 +40,7 @@ hash_basis: raw LF bytes
 
 # THM-3916 -- a contracted genus-two divisor closes the rational decic candidate
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**  Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
 algebraically closed field `k` of characteristic zero.
 
 ## 1. Positive-genus common-zero valuations are not Keller
