@@ -2,7 +2,7 @@
 id: THM-3948
 title: "No classified irreducible weight-eight or weight-nine sextic has affine-line normalization"
 status: >
-  PROVED CANDIDATE + CITED CLASSIFICATION; INDEPENDENT AUDIT PENDING.
+  PROVED + CITED CLASSIFICATION + INDEPENDENTLY HOSTILE-AUDITED.
   In Degtyarev's weight-eight/nine lists, the five rational simple or
   non-simple families have no one-place line by THM-3943 and THM-3945. Every
   other family has positive normalization genus by the exact delta ledger.
@@ -10,6 +10,12 @@ status: >
   not claim that a positive-genus row cannot meet some line at one
   normalization point; its one-point puncture would still not be A1.
 source: jc-cohn3709 / THM-3943--3945 plus Degtyarev genus ledger, 2026-08-24
+audit: >
+  Independent hostile audit checked the complete seven-row simple
+  weight-eight list, both non-simple J rows, the unique 9A2 weight-nine row,
+  the four/twelve torus counts, every delta and genus, and the exact scopes of
+  THM-3943/3945. It specifically confirmed that positive genus is used only
+  to rule out affine-line normalization, not a one-support high-contact line.
 depends_on:
   - THM-3943-rational-weight-eight-four-torus-sextics-have-no-one-place-line
   - THM-3945-nonsimple-weight-eight-j-sextics-have-no-one-place-line
@@ -20,7 +26,7 @@ related:
 
 # THM-3948 -- the classified high-character sextic route has no polynomial boundary
 
-**PROVED CANDIDATE + CITED CLASSIFICATION; INDEPENDENT AUDIT PENDING.**
+**PROVED + CITED CLASSIFICATION + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over `C`.  Let `C` be an irreducible plane sextic in one of the
 weight-eight or weight-nine families classified by Degtyarev, including the
 two non-simple weight-eight `J`-families.  Then there is no projective line
@@ -106,4 +112,3 @@ polynomial one-place nonproperness component.  It does not classify all torus
 sextics of lower weight, arbitrary degree-six curves, non-line affine
 boundaries, birational target modifications, or the realization of any curve
 as the actual nonproperness set of a Keller map.  It does not prove `JC(2)`.
-
