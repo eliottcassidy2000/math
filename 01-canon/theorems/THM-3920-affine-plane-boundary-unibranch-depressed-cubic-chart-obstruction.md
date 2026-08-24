@@ -2,7 +2,7 @@
 id: THM-3920
 title: "Affine-plane boundary unibranchness closes every irreducible depressed-cubic radial chart"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. Every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Every
   irreducible boundary curve in a normal surface completion of A2 is rational
   and unibranch. Consequently a boundary divisor in a finite-flat degree-d
   completion has at most d normalization addresses over any target point.
@@ -21,16 +21,17 @@ status: >
   THM-3801. Thus this whole chart grammar is closed, not JC(2).
 source: jc_zero_debt_lift / post-THM-3917 boundary-address and cyclic-character lane, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The proof is
-  self-contained at the boundary-tree, address, cyclic-character, Mason, and
-  Chebyshev-normalization layers, and invokes the independently audited
-  cubic companion-sheet theorem THM-3801 only for the nonreduced p=0 Kummer
-  seam. The assertion-free exact companion verifies the universal
-  discriminant/resultant/Jacobian identities, the Chebyshev third-Veronese
-  cover and its three ramification rays, low-exponent Kummer controls, and a
-  complete 97-gate stratification of the symmetric polynomial-part family.
+  TWO INDEPENDENT HOSTILE AUDITS PASS (root and jc_degree6_one_place,
+  2026-08-23). The audits independently reconstructed the boundary-tree
+  multigraph argument and finite-flat address injection; the nonsquare
+  one-address/C3-character contradiction; the square-profile Mason split;
+  the exact Chebyshev third-Veronese normalization, ramification rays, and
+  forbidden-unit conclusion; and the THM-3801 pure-Kummer seam. The
+  assertion-free exact companion verifies the universal
+  discriminant/resultant/Jacobian identities, the Chebyshev cover, low-degree
+  Kummer controls, and the complete 97-gate symmetric-family stratification.
   Normal and optimized runs byte-match the frozen output; raw hashes and
-  documentation checks pass. Independent mathematical audit remains pending.
+  documentation checks pass. No repair was required.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3917-quintic-parameter-rational-collapsed-cubic
@@ -53,7 +54,7 @@ hash_basis: raw LF bytes
 
 # THM-3920 -- the radial depressed-cubic chart is empty
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero.
 
 This theorem separates three layers that were previously conflated:
