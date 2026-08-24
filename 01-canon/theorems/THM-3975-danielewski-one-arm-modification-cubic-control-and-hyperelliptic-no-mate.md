@@ -409,8 +409,13 @@ w^2=-P^2C+(PC^2+P^2+CP^4)x
 ```
 
 These identities follow directly from `(7)` and `y=C-x`; conversely they
-verify all three relations `(7)`. Thus the `R`-span of `{1,x,w}` is a
-subalgebra containing `x,z=1+w,P,y=C-x`, hence it is all of `B_n`.
+verify all three relations `(7)`. Initially let `R_0` denote the image of
+the abstract polynomial ring `k[P,C]` in `B_n`. The `R_0`-span of
+`{1,x,w}` is a subalgebra containing `x,z=1+w,P,y=C-x`, hence it is all of
+`B_n`. In particular `B_n` is integral over `R_0`. Since `B_n` is a
+two-dimensional domain, `dim(R_0)=2`; the prime kernel of
+`k[P,C] -> R_0` therefore has height zero and is zero. Thus `P,C` are
+algebraically independent and `R_0=R=k[P,C]` as asserted.
 
 Over `k(P,C)`, one has
 
