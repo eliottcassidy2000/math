@@ -364,29 +364,11 @@ asymptotic or residue.
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3782 close
-  named cells; THM-3827--3972 route genus/degree, root/cusp/jet, `f=0`, and
-  residue passports, not global roots or arbitrary `f!=0`. THM-3973--3989 give
-  the finite-cubic, support, boundary, formal-lift, and first nondividing-depth
-  ledgers; retained-support floor starts at `3x4/4x3`. THM-3992 reduces the
-  first `2:3` cell to a nodal boundary and `R in (p^2,y)`; the live branch has
-  `gamma=-a^3/2`, finite jet through `ell=6`, and no proved `B_2` lift.
-  THM-3997 gives an all-row Hasse iff, forces `[p^2]R=8/(3a^7)!=0`, and
-  separately excludes `R=0` by elliptic reduction. THM-3994/3996 separate
-  length-two from two-address seams and force a third node address or Jelonek
-  value, without ownership. THM-3998 only reproves an already closed `3x<=3`
-  cell. THM-3999 gives `ord_D(Q)=2`, endpoint
-  `Spec k[y]/(gamma-R(0,y))`, and total class `-2[D]`; boundary disjointness
-  kills pure-`y` residuals but not the mandatory `p^2` coefficient. It proves
-  neither irreducibility nor address completeness. THM-4005 excludes the
-  oriented `3x4/4x3` cells; the fixed-gauge first invoice is `4x5` with row
-  `t^3(c40+c21*x+c02*x^2)`. THM-4007 forces its new weight and a `5x5` floor.
-  THM-4008 excludes every pure-`p` residual but shows `y^2` restores an
-  elliptic component. THM-4016 proves the sharp six attachments non-torsion,
-  excluding that exact face only **CONDITIONALLY** on the unproved stable-
-  specialization gate. Other cells, entry, and `JC(2)` stay open.
-  Russell THM-3785/3843--3871 close named depth-through-five packets; the
-  nonreduced `(6,4)`, rational corrections, and global entry remain open.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3991 close named cells, not global entry. THM-3992/3997 reduce the first live `2:3` cell to `R in (p^2,y)`, give the all-row Hasse criterion, force `[p^2]R!=0`, and exclude `R=0`.
+  THM-3994/3996 type multiplicity versus address ownership; THM-3999 fixes the boundary/class ledger. THM-4005 excludes live `3x4/4x3`; THM-4007 gives fixed-gauge `5x5` on `b=d=0`, forces `p^3!=0`, and couples `p^4,y^2`.
+  THM-4008 excludes every entire pure-`p` residual. THM-4016 proves nontorsion of the distinct sharp-`5x5` attachment `(X^3,Y^2)=(43/84,127/84)`, but its application remains conditional. THM-4011 finds a class-zero companion-factor kernel invisible to finite observers and applies log Riemann--Hurwitz to actual factors.
+  THM-4012 proves the conditional good-elliptic-factor/Bolza observer and, for the max-six attachment `(43/224,267/224)`, proves the missing stable model and unconditional exclusion. Thus `b=d=0` has `M>=7`; `M>=9` needs face-stability at weights seven/eight.
+  Other reduced cells, higher faces, cancellation, Keller/Darboux entry, the nonreduced Russell `(6,4)` lane, and `JC(2)` stay open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692
