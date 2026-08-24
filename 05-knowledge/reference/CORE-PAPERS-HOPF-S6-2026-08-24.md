@@ -367,8 +367,10 @@ affine-`P` graph packet. THM-3970 proves the exact osculation/gcd reframe,
 not a normalization closure. THM-3971 proves the all-`m` determinantal
 exact-volume/no-Darboux near miss. THM-3972 gives the nonconstant squarefree-
 `Xi` blowup normalization and closes `a=t`, constant-`(c,r)`; general
-canonical-compatible rows remain open. THM-3973 is RESERVED empty. None of
-these supplies a Hopf dependency here.
+canonical-compatible rows remain open. THM-3974 proves all-height homogeneous,
+one-by-arbitrary, and two-by-two support gates plus the height-two seven-piece
+floor; unrestricted Darboux support remains open. THM-3973/75/76 are RESERVED.
+None of these supplies a Hopf dependency here.
 
 ### Explicitly rejected vocabulary bridges
 

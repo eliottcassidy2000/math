@@ -970,7 +970,8 @@ affine-graph packet. THM-3970 proves the exact osculation/gcd reframe, not
 normalization closure. THM-3971 proves the determinantal residue-one volume
 obstruction; THM-3972 proves the squarefree-collision blowup ledger and
 first-height constant-`(c,r)` closure. General compatible rows remain open;
-THM-3973 is RESERVED empty.
+THM-3974 proves all-height few-weight gates and the height-two seven-piece
+floor, not unrestricted Darboux nonentry. THM-3973/75/76 are RESERVED.
 THM-3955/57 are proved local conductor theorems with no global Hopf consequence.
 The proved LRC endpoint theorem moved to collision-free THM-4000; the namespace
 move changes no mathematical scope.

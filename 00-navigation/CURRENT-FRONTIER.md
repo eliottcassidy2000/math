@@ -354,13 +354,13 @@ asymptotic or residue.
   unit-ideal family; THM-3966/68 give Euler and canonical/different boundary
   invoices. THM-3967 closes every irreducible `deg_P(q)<=2` row; THM-3969
   closes `Xi`-unit affine-`P` graphs; THM-3970 proves the exact osculation/gcd
-  reframe. THM-3971 gives the all-`m` residue-one no-Darboux obstruction.
-  THM-3972 normalizes nonconstant squarefree-`Xi` rows and closes `a=t`,
-  constant `(c,r)`. Open:
-  canonical-compatible simple rows, multiple `Xi` roots/reducible poles,
-  higher/nongraph debts, degree `>=6`, other gauges/fields/orders, source
-  attachment, `JC(2)`. THM-3973 RESERVED empty;
-  THM-3955/57 are local.
+  reframe. THM-3971 is the residue-one no-Darboux gate. THM-3972
+  normalizes squarefree `Xi` and closes `a=t`, constant `(c,r)`. THM-3974
+  gives all-height few-weight gates and height-two floor seven; unrestricted
+  support is open. Open: compatible simple rows; multiple `Xi`/reducible
+  poles; higher/nongraph; degree `>=6`; other gauges/fields/orders; source
+  entry; `JC(2)`. THM-3973/75/76 RESERVED;
+  THM-3955/57 local.
   THM-3853/3855 remain formal laboratories.
   Russell THM-3785 forces `3|d,d>=9`; THM-3843/46/49 give arm/jets/contact.
   THM-3856/61/67/71 close normal `z`-depth through five; exact shears leave

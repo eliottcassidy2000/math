@@ -389,7 +389,9 @@ normalize it. THM-3971 excludes the all-`m` determinantal completions by the
 residue-one volume class. THM-3972 normalizes every nonconstant squarefree-
 `Xi` row and closes `a=t`, constant-`(c,r)`; general canonical-compatible
 rows, multiple `Xi` roots, reducible poles, and other nongraph/higher-depth
-debts remain. THM-3973 is RESERVED empty. The orthogonal THM-3955/57 node and
+debts remain. THM-3974 adds all-height few-weight Darboux gates and the
+height-two seven-piece floor; unrestricted support remains open. THM-3973/
+75/76 are RESERVED. The orthogonal THM-3955/57 node and
 coordinate-crossing cotangent sequences are proved local sidecars, not global
 Jacobian or Hopf results.
 
