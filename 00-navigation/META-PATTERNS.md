@@ -129,8 +129,9 @@ current fills every cell and every admissible parabolic sector.
 
 **Trigger/action:** for `q:X->Y`, inspect `X times_Y X`; separate off-diagonal seams and retain `ker(q)/(ker(q) intersect ker(rho))` for an action `rho`.
 For a `G`-equivariant choice field `A`, test `A(x)^(Stab_G(x))!=empty`; otherwise retain a marked/set-valued fibre. Before Cech/torsor language require a nonempty invertible composable predicate-preserving seam.
+For normalization, retain original/conductor-complement/full sites, conductor kernel, and labelled branch incidence.
 If an observer feeds another operation, use the native-operation card below: frozen-bank injectivity is not congruence. **Caution:** “minimal” is consumer-relative; set-valued/relation-valued targets need no section/torsor.
-**Evidence:** exact-six, THM-3450/3452/3454/3731/3732, MISTAKE-310/401.
+**Evidence:** exact-six, THM-3450/3452/3454/3731/3732/3944/3951/3955, MISTAKE-310/401/466.
 
 ## Test whether a central extension changes the base signature
 

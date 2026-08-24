@@ -14,6 +14,8 @@ collide, links—not bare IDs—are canonical.
 - **Flows:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes the exact-cost conjecture; cost-free `d_max` and planar `2d_max` survive.
 - **Reciprocals:** support differs from indexed multiplicity; figurate formulas omit repo extensions.
 - **JC/DC:** THM-1300 refutes `JC(n>=3)`; `JC(2),DC(1),DC(2)` are open. THM-2071 is local; THM-2044 refutes the two-pair Poisson claim.
+- **Hopf/S6:** the 2026-08-24 manuscript is **PREPRINT CLAIM / UNDER AUDIT**;
+  use its [source/referee ledger](CORE-PAPERS-HOPF-S6-2026-08-24.md), not a solved claim.
 
 ## Rule 30
 
