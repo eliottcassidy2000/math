@@ -8,9 +8,11 @@ The Mordell--Weil and localization deductions use standard elliptic-surface
 arguments spelled out here.  The subsequent canon now sharpens its boundary:
 THM-3942 proves the complete affine-linear whole-factor obstruction;
 THM-3944 proves the repeated-factor conductor collision; and THM-3947 proves
-the full scalar-weighted repeated-square trichotomy.  THM-3946 remains a
-**RESERVED / UNPROVED EMPTY STUB**.  This reflection reserves no theorem ID
-and does not promote its partial affine deformation scout.
+the full scalar-weighted repeated-square trichotomy.  THM-3946 now proves the
+complete affine one-factor split (with independent hostile audit pending),
+and THM-3949 proves the all-degree coprime one-variable Newton obstruction.
+This reflection reserves no theorem ID; its affine deformation is now an
+independent precursor to the `m=1` slice of THM-3946.
 
 ## 1. The rank-two gate before searching
 
@@ -307,14 +309,24 @@ one Cardano row is an exact cube, while the other survives only as the class
 normalization.  A complementary exact affine slice in
 `jc2_double_torus_nonlinear_balanced_partial_split_scout.py` separates the
 factor as `t(t-c)`: `c!=0` gives an irreducible two-ended conic, whereas
-`c=0` is precisely the doubled-conductor collision.  This is evidence for the
-reserved THM-3946 direction, not a proof of its full classification.
+`c=0` is precisely the doubled-conductor collision.
+
+THM-3946 identifies that scout as its equality-slope `m=1` slice and closes
+every affine slope: the other exceptional slope `m=-omega^2` also has two
+ends, while all remaining coprime affine rows have three.  Coincident zeros
+are reducible by THM-3947, exactly one constant factor returns to THM-3942,
+and the MISTAKE-472-repaired two-constant boundary is a reducible cubic in
+`P`.  THM-3949 removes the affine-degree restriction for every coprime
+nonassociate one-variable pair.  Its last Newton row is blocked by a residual
+cubic with zero quadratic coefficient and nonzero constant, so it cannot have
+one triple direction.  Thus the one-variable one-factor lane is closed in the
+standard chart, though arbitrary target lines are not.
 
 The next search should not maximize Mordell--Weil rank blindly.  The cheapest
 decisive experiments are:
 
-1. search unequal coprime splits `p_1-p_0=FG` and simultaneous internal
-   splits in two or three cube factors for an irreducible reduced full branch;
+1. search genuinely bivariate factors and simultaneous internal splits in two
+   or three cube factors for an irreducible reduced full branch;
 2. compute the generic three-parabola quadratic normalization and its complete
    class/Cardano lattice before deciding whether recombination is possible;
 3. replace the line boundary in the multiple-torus sextic families by an

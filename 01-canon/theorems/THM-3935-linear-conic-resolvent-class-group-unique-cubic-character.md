@@ -25,8 +25,8 @@ audit: >
 depends_on:
   - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
 related:
-  - THM-3912-even-degree-split-boundary-cusp-three-torsion-sieve
-  - THM-3922-affine-plane-completion-free-boundary-class-group-obstruction
+  - THM-3912-even-one-place-split-boundary-a2-three-torsion-design-sieve
+  - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
   - THM-3931-degree-two-pole-cubic-principal-ramification-no-atlas
   - THM-3934-infinity-component-sextic-unique-reduced-splitting-conic
   - THM-3937-linear-conic-fold-three-family-uniform-resolvent-rigidity

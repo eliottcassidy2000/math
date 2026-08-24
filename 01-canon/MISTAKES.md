@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-472 (2026-08-24, THM-3946 initial promotion) -- the affine factor case split omitted the constant--constant boundary
+
+- **What failed:** the first promoted statement called its affine
+  one-factor split exhaustive, but listed exactly one constant factor and the
+  two nonconstant-factor rows while omitting the possibility that both
+  assigned factors are nonzero constants.
+- **Minimal witness / first failed implication:** take constant
+  `A,B in k^*` in the displayed split.  Formula (7) makes `q_0` affine-linear
+  in `P`, so `H=q_0^2-4P^3` is a nonconstant cubic in `k[P]` with leading
+  coefficient `-4`.  The parameter normalization `A=Y`, `B=mY+c` is not
+  available in this row, so the three advertised cases were not exhaustive.
+- **Repair / strongest survivor:** over algebraically closed `k`, the cubic
+  factors in `k[P]` and is therefore reducible in `k[P,Y]`.  Thus it cannot
+  be an irreducible one-place full discriminant, and the theorem's conclusion
+  survives.  THM-3946 now includes this fourth boundary explicitly; its
+  66-gate companion and hashes are unchanged because they certify the complete
+  nonconstant-factor affine gauge.
+- **Reusable rule:** an affine-polynomial classification must audit degrees
+  `(0,0)`, `(0,1)`, `(1,0)`, and `(1,1)` separately before normalizing one
+  factor to the coordinate.
+
 ## MISTAKE-471 (2026-08-24, THM-3944 initial promotion) -- regularity on the normalization was confused with the smooth locus of the nonnormal order
 
 - **What failed:** the first promoted version of THM-3944 correctly proved

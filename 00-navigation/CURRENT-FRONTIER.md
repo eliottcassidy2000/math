@@ -335,54 +335,39 @@ asymptotic or residue.
   `13,853` portraits: current bank plus zero chain selects at most one off-ray,
   but neither fixed ray is universal. THM-3511's static tariff is
   `2^(D+B-1)+B+2`; physical/adaptive chronology and every prize are OPEN.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  THM-3543--3782 close
-  named cells only.  THM-3827/3831 force primitive-row genus `>=3`; THM-3836
-  retains `3h^3+7h^2k+k^3=CS`, and THM-3838 gives `deg h,deg k>=5`.
-  THM-3841/3845 close the `S3` anchor; THM-3844/3847 are monogenic controls.
-  THM-3850/3852/3859/3866/3870/3873/3876 close named line, marked-root,
-  transverse, graph and monomial cells.  THM-3880/3883 give the complete
-  local sign/residue/cube gate; global root existence remains.
-  THM-3851 is a unit-rich torus.  For THM-3854's one-place three-cusp front,
-  THM-3864/3872 close the constant cusp-ideal span; THM-3881 closes `T=0`.
-  THM-3874/3877 exclude degree-three/four sole-simple-branch fields;
-  THM-3879 reaches two places and THM-3882 forbids one-place rational duals.
-  THM-3884/3886/3894 give jets; THM-3896 closes `n=4`.
-  THM-3885/3895/3897 close polynomial `f=0`; THM-3900 its generic roots.
-  THM-3888/3909 give `II^4+IV/E6*`: `R.O=0` is `6+48+72`; nine avoid
-  boundaries; eight have denominator debt.
-  For `f!=0`: THM-3899 tariff/colors; THM-3904 x-only; THM-3901/3902/3905
-  fan/three jets; THM-3898 canonical response, arbitrary sidecars open.
-  THM-3890 quintics; THM-3906/3907 places `1/2`,`2/6`; THM-3908/3911 sextics;
-  THM-3912/14 conditional; THM-3913/19 mixed; THM-3915/16/17/21 close
-  rational models; THM-3920 closes THM-3918/radial.
-  THM-3922--3945 and THM-3947 close named packets: 3924 class, 3925 marked conic, 3926/27
-  boundary, 3928 singular conics, 3929 regular color, 3931 the 3930 packet,
-  3932 infinity folds, 3933/36 centered root degree three, 3934 splitting
-  conics, 3935/37 uniform Cardano rigidity, 3938 centered root degree four,
-  3939 two-boundary character rank, 3940 the rank-two `I7` test, and 3941 the
-  all-degree root-regular/shared/`C3,C2,C2xC2` carrier trichotomy; its seven
-  `N=5` carrier signatures still await color division.  THM-3942 closes affine-linear whole-factor double
-  torus splits; 3943/3945 close all rational weight-eight four-torus line
-  boundaries; 3944 reaches one place only through doubled conductor and one
-  surviving boundary character; 3947 makes generic scalar square-splits three
-  reduced one-place parabolas and identifies both conductor seams.
-  THM-3946 remains a **RESERVED / UNPROVED EMPTY STUB**; one exact affine
-  deformation slice is only a scout, not that reserved theorem.
-  Arbitrary root changes, unbounded color division, unequal/multifactor
-  internal splits, the generic three-parabola order/class lattice,
-  non-line torus boundaries, altered resolvents, nonradial grammars and
-  `JC(2)` remain OPEN.
-  Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
-  self-identifying immersed arm, THM-3846 its formal first jets, and THM-3849
-  only visible conductor contact.  THM-3856/3861/3867/3871 close normal
-  `z`-depth through five.  FINITE-EXACT audits shear `(6,1)--(6,3)`, kill
-  principal `(6,5)`, and leave nonreduced `(6,4)`; all else is open.  A cubic
-  quotient audit needs a determinant cocycle
-  and empties its affine cell; rational corrections remain open.
-  THM-3860/3868 bound rational square escape and fixed-seed precomposition.
-  THM-3862 makes any finite completion
-  flat and nonmonogenic, with `A1` branches at common infinity; at `d=3` the
-  arm is not a branch.  THM-3839 excludes only one constant tower.
+- **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3782 close
+  named cells only. THM-3827/3831 force primitive-row genus `>=3`; THM-3836
+  retains `3h^3+7h^2k+k^3=CS`; THM-3838 gives `deg h,deg k>=5`.
+  THM-3841/3845 close the `S3` anchor. THM-3850/52/59/66/70/73/76 close named
+  line, root, transverse, graph and monomial cells; THM-3880/3883 give the
+  local sign/residue/cube gate, while global root existence remains.
+  THM-3854's three-cusp front loses its constant cusp span and `T=0` in
+  THM-3864/3872/3881. THM-3874/3877 close degree three/four sole-simple
+  fields; THM-3879 has two places and THM-3882 forbids rational one-place
+  duals. THM-3884/3886/3894 give jets; THM-3896 closes `n=4`.
+  THM-3885/3895/3897 close polynomial `f=0`; THM-3900 closes its generic
+  roots. For `f!=0`, THM-3899/3904/3901/3902/3905 give tariff, x-only, fan
+  and three-jet passports; THM-3898's arbitrary sidecars remain open.
+  THM-3890--3921 close named quintic/sextic/rational/radial packets;
+  THM-3920 closes THM-3918's same-field atlas, not its separate cubic-field
+  questions. THM-3922--3941 add class, conic, boundary, fold, Cardano and
+  centered-root closures. THM-3941 leaves seven `N=5` carrier signatures
+  awaiting color division after its MISTAKE-470 quantifier repair.
+  THM-3942/3944/3947 close whole-factor and repeated-square double-torus rows:
+  extra ends, three components, or a conductor seam. Corrected THM-3946
+  closes affine one-factor splits by reducibility or two/three ends, pending
+  independent audit; THM-3949 closes all coprime one-variable factors in the
+  standard chart. THM-3943/3945/3948 close `A1` line normalization for every
+  classified complex weight-eight/nine sextic.
+  Open: arbitrary root/color gauges, genuinely bivariate or simultaneous
+  multifactor splits, the three-parabola order/class lattice, non-line torus
+  boundaries, altered resolvents, nonradial grammars, source/Keller attachment
+  and `JC(2)`. THM-3853/3855 remain a formal, not polynomial, laboratory.
+  Russell THM-3785 forces `3|d,d>=9`; THM-3843/46/49 give an immersed arm,
+  jets and visible conductor contact. THM-3856/61/67/71 close normal `z`-depth
+  through five; exact shears leave only nonreduced `(6,4)`. Rational quotient
+  corrections, other cells and global entry remain open; THM-3860/62/68 and
+  THM-3839 close only their named square/precomposition/completion towers.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692

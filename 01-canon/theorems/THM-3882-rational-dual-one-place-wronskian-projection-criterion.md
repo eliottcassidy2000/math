@@ -34,7 +34,7 @@ audit: >
 depends_on:
   - THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff
 related:
-  - THM-3841-cuspidal-jelonek-three-puncture-obstruction
+  - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
   - THM-3851-tricuspidal-quartic-rank-two-two-place-tradeoff
 script: 04-computation/jc2_rational_dual_one_place_wronskian_projection_criterion_thm3882.py
 output: 05-knowledge/results/jc2_rational_dual_one_place_wronskian_projection_criterion_thm3882.out

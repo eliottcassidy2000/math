@@ -528,17 +528,52 @@
   `c608814d5138cd51a156d8308474fc765100cf771e28c20bee0c42a43bf54973` /
   `007afb1b1c05b62ceec26f1fe2b4023a6bb31713ae2b0482b25bb98f848569bb`.
 
+- `jc2_affine_internal_split_two_end_collision_thm3946.py` -> matching `.out`
+  [THM-3946 PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT;
+  CORRECTED AFTER MISTAKE-472].  For nonconstant affine factors, the coprime
+  rows are irreducible rational curves with two ends at slopes
+  `m=1,-omega^2` and three otherwise; the coincident-zero row is reducible by
+  THM-3947.  Exactly one constant factor reduces to THM-3942, while the
+  initially omitted two-constant boundary is directly a reducible cubic in
+  `P`.  The latter proof repair does not change the nonconstant-gauge
+  certificate. Checks: `66`. Script/output/semantic SHA-256:
+  `37fe5a90e08c31ff71ba868e431542ab6a6dc2edd911eb9d8faaa8e76c5a5b21` /
+  `05289ab2b6520b7ef2ddf4d9caf69919ed80097141c9c8f9a7f75fa9498aac5d` /
+  `04eaeed97e485f1561d7e83a6462ae2147f6ec20bc96d96e621bb4fe5208924c`.
+
 - `jc2_scalar_weighted_repeated_square_split_thm3947.py` -> matching `.out`
   [THM-3947 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
-  complete scalar weighting of the repeated-square internal split is generic
-  three distinct smooth one-place parabolas.  Its only collisions are a
-  doubled `p0` line at `r^2=alpha` and a doubled `p1` parabola at
-  `r^2=-omega alpha`; both are index-swapped THM-3944 conductor geometries,
-  and no triple component occurs. Checks: `22`. Script/output/semantic
-  SHA-256:
-  `d6f96faa5c62acc961a43f7154eeac1bcabf065986acf67e2c3ddd04b4212449` /
-  `fc19766822e0dda8f28c05793aa2ddc38fbdaa00624e44ca57bd6088c6a2f8cf` /
-  `7b1ec493d249a8cf6bf757089e97bc96288431378e0fd7192b2eeed73bc8e106`.
+  complete reciprocal scalar weighting of the repeated-square internal split
+  is generically three distinct smooth one-place parabolas.  Its only
+  collisions are a doubled `p0` line at `t=1` and a doubled `p1` parabola at
+  `t=-omega`; a complete row swap identifies the two THM-3944 conductor
+  geometries, `t=0` is unavailable, and no triple component occurs.  The
+  equivalent gauge `t=r^2/alpha` recovers seams `r^2=alpha,-omega alpha`.
+  Checks: `42`. Script/output/semantic SHA-256:
+  `a5a095054a92b8552d0f00194663e8f022b4e171efb4610f597d54cc1b553137` /
+  `f030902fb4a3180c9c5169d7612e937ea923746e9527fcccb83fa253da5e2514` /
+  `cd590de731560e5b91c4f81f1ee840247d500f459774880c801398b00b2125b6`.
+
+- THM-3948 is a **PROVED + CITED CLASSIFICATION + INDEPENDENTLY
+  HOSTILE-AUDITED synthesis with no new companion**.  Over `C`, THM-3943 and
+  THM-3945 close the five rational simple/non-simple weight-eight line rows;
+  the other weight-eight rows and the `9A2` weight-nine row have positive
+  normalization genus.  Hence none of the classified weight-eight/nine
+  sextics has an affine chart with normalization `A1`.  Positive genus is not
+  promoted to a no-one-support claim.
+
+- `jc2_coprime_one_variable_internal_split_newton_thm3949.py` -> matching
+  `.out` [THM-3949 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  For nonconstant coprime nonassociate `A(Y),B(Y)`, the hidden monic cubic and
+  exact norm/localization identify the discriminant curve.  Degree imbalance
+  or equal leaders give two Newton slopes; in the sole-edge unequal-leader
+  row, the residual cubic has zero quadratic coefficient and nonzero constant,
+  so it cannot collapse to a triple direction.  Thus the full discriminant is
+  reducible or has at least two standard infinity places.  No arbitrary-line
+  claim is made. Checks: `49`. Script/output/semantic SHA-256:
+  `41f35a90d19dad6af6dad807bc4ef8c6928d52e35677c46520336d00250c1c83` /
+  `6490b55d1a4b97b93421260fda896cd930201ebc31a433875414b36b7235a2ab` /
+  `4c7a0c10ed7397aacb60ddda5d0d63811bdf744688329777934a2e703e92e49b`.
 
 - `jc2_double_torus_nonlinear_balanced_partial_split_scout.py` -> matching
   `.out` [VERIFIED-EXACT + INDEPENDENTLY FORMULA-AUDITED SCOUT; NOT CANON].
@@ -547,8 +582,9 @@
   whose normalization is the smooth two-ended conic
   `v^2=-(h+1)(3h-1)`.  Away from that seam its unique infinity support has at
   least two Newton branches.  The parallel-affine deformation has two ends
-  for `c!=0` and collides at `c=0` into THM-3944's doubled conductor. Checks:
-  `81`. Script/output/semantic SHA-256:
+  for `c!=0` and collides at `c=0` into THM-3944's doubled conductor.  It is
+  now an independent precursor to THM-3946's proved `m=1` subfamily, not a
+  separate live affine frontier. Checks: `81`. Script/output/semantic SHA-256:
   `83a1f3e32a6867e059f60e186e5117a95f1c9fe80c563d76b0c8611ea8b0bc3c` /
   `89c20aaca39ca6ebad061b72986d9274ae531ab70a195b8db598fcc011ac0d16` /
   `68253aeb73de475b092eacf193c8e9dbb89aa97ce40c3a8a3ce485d03d14b464`.

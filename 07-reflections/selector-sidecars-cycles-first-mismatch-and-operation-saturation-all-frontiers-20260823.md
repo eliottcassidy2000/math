@@ -727,11 +727,29 @@ generic discriminant is the reduced union of three distinct smooth one-place
 parabolas.  The only collisions are the doubled `p_0` seam `r^2=alpha` and
 the doubled `p_1` seam `r^2=-omega alpha`; no triple component exists.  The
 generic full divisor is therefore reduced but reducible, and its normal-order
-and two-character lattice are now the precise next invoices.  Independently,
-the nonlinear balanced scout proves that the separated affine factors
-`t(t-c)` give an irreducible two-ended conic for `c!=0`, while `c=0` is exactly
-the doubled-conductor collision.  Separation retains the second end; collision
-removes it only by creating conductor debt.
+and two-character lattice are now the precise next invoices.
+
+[THM-3946](../01-canon/theorems/THM-3946-affine-internal-factor-split-two-end-conductor-collision-dichotomy.md)
+promotes the nonlinear scout's `t(t-c)` row into the complete affine
+one-factor classification.  For coprime affine factors the full branch is
+irreducible rational with two ends at slopes `m=1,-omega^2` and three
+otherwise; coincident zeros return to THM-3947's reducible parabolas.  The
+scout is exactly the independently derived `m=1` slice, not a separate open
+frontier.  MISTAKE-472 adds the initially omitted constant--constant row: its
+discriminant is a reducible vertical cubic, so the conclusion survives.  The
+theorem is proved and exact but still awaits an independent hostile audit.
+
+[THM-3949](../01-canon/theorems/THM-3949-coprime-one-variable-internal-factor-splits-are-reducible-or-multi-ended.md)
+removes the affine degree bound.  For coprime nonassociate `A(Y),B(Y)`, an
+exact hidden cubic and norm/localization identify the full discriminant.
+Newton slopes give at least two ends except in one equal-degree residual row;
+there the residual cubic has zero quadratic coefficient and nonzero constant,
+so it cannot collapse to one triple direction.  This is the same structural
+obstruction seen in THM-3941's centered trace carrier: removal of the
+quadratic coefficient preserves a missing direction, although the two
+theorems act on different curves.  The surviving split lane must be genuinely
+bivariate, simultaneous across several `L_i`, use gcd/nonmaximal overlap, or
+change the target line.
 
 Multiple torus structures do not evade the same boundary tariff through the
 classical weight-eight sextics over the complex field of Degtyarev's cited
@@ -743,6 +761,11 @@ closes every rational simple configuration, and
 closes both non-simple `J` families.  Their exact binary-sextic pullback
 systems admit no line supported at one normalization point.  Four torus
 presentations change the character supply, not the line linear system.
+[THM-3948](../01-canon/theorems/THM-3948-classified-weight-eight-nine-sextics-have-no-polynomial-normalization.md)
+adds the remaining simple weight-eight rows and the twelve-torus `9A2`
+weight-nine row: their positive normalization genus rules out `A1` after any
+line deletion.  It deliberately does not promote genus to a no-one-support
+claim; only the five rational families have that stronger exact line result.
 
 THM-3929 then classifies the root-regular linear-color lane and its first
 centered Mobius seam: degree three over the `A`-line forces the leading
@@ -823,10 +846,10 @@ partitions.  Arbitrary root gauges, other color directions,
 rational-`E[3]` one-place resolvents, and altered branch/resolvent families
 also remain open.
 
-Concurrent JC promotions now put proved canon in THM-3920--3945 and THM-3947;
-THM-3946 is a **RESERVED / UNPROVED EMPTY STUB**.  The proved LRC endpoint
-theorem moved to collision-free THM-3950; the namespace move changes no
-mathematical scope.
+Concurrent JC promotions now put proved canon through THM-3949, with
+THM-3946 still explicitly pending independent hostile audit.  The proved LRC
+endpoint theorem moved to collision-free THM-3950; the namespace move changes
+no mathematical scope.
 
 ## 5. Filtered kernels and principal parts are the same warning, not the same theorem
 
@@ -992,7 +1015,7 @@ They do not share states, probability, chronology, or a reduction.
 | Split affine coefficient conic | Cardano cusp normalization | pull back `h=3q/(2p)` and compare line degrees | `e_1+e_2=2deg(h)`, one-place polynomiality | critical divisor, actual completion class group | fold ramification plus global divisor relation | THM-3928 sextic `d=4,5,6`, only one intrinsic `C3` |
 | Infinity-component conic | one-place torus sextic | pull back the linear affine coefficient through the Cardano cusp | fold trichotomy and exact `C3` class | which local `E~8[3]` lines globalize | generic elliptic surface plus complete vertical/infinity ledger | THM-3937 gives uniform `MW=ZQ`, `Cl=Z/3`, unique Cardano character |
 | Two-boundary elliptic resolvent | smooth-locus cubic characters | quotient `E(k(t))` by the boundary difference | at most one new three-line | free rank versus rational three-torsion | `E[3]` plus full boundary/vertical relation matrix | THM-3940 rank two still gives one line; THM-3942 buys two only with two or three ends |
-| Double-torus identity | one-place branch design | compare the two Cardano radicands | intrinsic rational `E[3]` and componentwise one-place geometry | irreducibility, normality and extension across conductor | internal factor allocation plus normalization/conductor ledger | THM-3947: generic three parabolas; collision seams recover THM-3944 debt |
+| Double-torus identity | one-place branch design | compare the two Cardano radicands | intrinsic rational `E[3]` and componentwise one-place geometry | irreducibility, normality and extension across conductor | bivariate/multifactor allocation plus normalization/conductor ledger | THM-3946/3949 close all one-variable one-factor splits; THM-3947 seams recover THM-3944 debt |
 | Primitive actual boundary basis | candidate affine-plane deletion | localize at the three basis primes | scalar units and `Cl=0` | boundary genus and Euler type | rationality plus `chi_c` invoice | THM-3926 genus `2`, `chi_c=13` hostile |
 | Degree-two linear-color packet | affine-plane open | delete the intrinsic ramification primes | aligned one-place branch and affine address cap | source unibranchness and invertible defining functions | actual class/different packet | THM-3931 `[E]=0`, `[P_0]=2q`, nonunibranch collision |
 | All-degree centered root map | pole-support carrier | apply local trace and the finite RH budget before exact color division | root-regular/shared/`C3,C2,C2xC2` carrier trichotomy | color existence, maximal ramification and arbitrary root gauge | exact color row plus maximal-order/source sidecar | THM-3941 leaves seven `N=5` carrier signatures awaiting color division after MISTAKE-470 repair |
@@ -1015,12 +1038,14 @@ objects cannot be transported merely because the same word is used.
 2. **Jacobian anchor:** leave `f=0`, x-only, every radial chart, the named
    four-ray and marked/full-sextic conic packets, centered degrees three and
    four, affine-linear whole-factor double-torus splits, scalar repeated-square
-   splits, and the complex weight-eight line-boundary families closed.  Run
+   splits, every one-variable one-factor internal split, and all classified
+   complex weight-eight/nine `A1` line-boundary families closed.  Run
    exact color division and the maximal-source audit on THM-3941's seven
-   `N=5` signatures.  In parallel test unequal `FG` and multifactor internal
-   splits, the generic three-parabola normalization/class/Cardano lattice,
-   non-line torus boundaries, arbitrary root gauges, at least three boundary
-   sections, controlled split vertical lattices, and altered or higher-genus
+   `N=5` carrier signatures.  In parallel test genuinely bivariate factors,
+   simultaneous splitting across several `L_i`, gcd/nonmaximal overlap, the
+   generic three-parabola normalization/class/Cardano lattice, non-line torus
+   boundaries, arbitrary root gauges, at least three boundary sections,
+   controlled split vertical lattices, and altered or higher-genus
    resolvents.  Audit irreducibility and the normalization pole divisor before
    any expensive class-group computation.
 3. **Nonmonogenic niche:** build a genuinely nonradial unit-ideal order with
@@ -1033,7 +1058,8 @@ objects cannot be transported merely because the same word is used.
    debt.  THM-3942 reaches two characters but pays two or three ends;
    THM-3944 removes one end only through a nonnormal conductor collision; and
    THM-3947's generic scalar split has three one-place components rather than
-   one irreducible full branch.  Seek an irreducible reduced one-place branch,
+   one irreducible full branch.  THM-3946/3949 show that separating a single
+   one-variable factor still pays two or more ends.  Seek an irreducible reduced one-place branch,
    a normal quadratic order, and two characters that extend across its
    normalization, then test descent and the actual nonmonogenic cubic order.
 4. **AK niche:** leave the saturated empty-wildcard `[2,3]` slice closed.
