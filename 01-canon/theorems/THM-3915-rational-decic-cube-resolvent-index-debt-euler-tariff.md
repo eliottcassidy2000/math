@@ -2,7 +2,7 @@
 id: THM-3915
 title: "Rational decic cube resolvent, normal nonmonogenic cubic, and etale Euler tariff"
 status: >
-  PROVED + VERIFIED-EXACT + MULTI-PATH CROSS-CHECKED.  An explicit rational
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  An explicit rational
   one-place decic has finite packet one ordinary eightfold point, two A2
   cusps, and two A5 contacts.  Its quadratic double plane has class group
   Z^3 direct-sum Z/3: the three-class is a mixed boundary--ADE class, while
@@ -16,7 +16,16 @@ status: >
   atlas question and JC(2) remain open.
 source: decic_resolvent_scout / rational cube-discriminant lane, 2026-08-23
 audit: >
-  MULTI-PATH CROSS-CHECK PASS.  The branch/collision and local DVR packets
+  INDEPENDENT HOSTILE AUDIT PASS.  The audit rederived the complete
+  branch/collision packet, conic-bundle Picard quotient, global integral
+  basis and multiplication table, index form, normality bridge, rational
+  chart, singular-fibre census, and Euler ledger.  In particular, it checked
+  that discriminant exponent one gives maximality only after the displayed
+  finite-free/S2 and irreducibility gates, and that the Euler calculation
+  excludes only the maximal etale locus itself, not a proper plane open.
+  Normal and optimized replays byte-match the frozen output, raw hashes and
+  documentation pass, and no repair was required.  The earlier multi-path
+  cross-check also derived the branch/collision and local DVR packets
   were derived independently from the parametrization and from the conic
   cube identity.  A separate conic-bundle lattice audit recovered Picard
   rank 20, the removed-lattice determinant/Smith packet, the exact endpoint
@@ -41,7 +50,7 @@ hash_basis: raw LF bytes
 
 # THM-3915 -- a rational decic pays the three-class and normal-order invoices
 
-**PROVED + VERIFIED-EXACT + MULTI-PATH CROSS-CHECKED.**  Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
 algebraically closed field `k` of characteristic zero.  Put
 
 ```text
