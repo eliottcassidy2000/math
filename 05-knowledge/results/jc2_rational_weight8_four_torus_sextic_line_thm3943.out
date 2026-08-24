@@ -1,0 +1,9 @@
+THM-3943 rational weight-eight four-torus line obstruction
+CHECKS=35
+CITED_SCOPE=simple weight8;four torus structures;seven configurations
+RATIONAL_SIMPLE=E6+A5+4A2;2A5+4A2;A5+6A2+A1
+RIGID=missing S5T reduces sixth powers to two impossible endpoints
+TWO_A5=finite norm leaves constant 2;gamma0 has two addresses
+A5_A1=finite norms empty;constant norm only tau=1,-2
+BOUNDARY=non-simple J2,3+3A2 and J2,0+4A2 not classified
+SEMANTIC_SHA256=6df55931aa9ef0f9dde3eb4d6aaf92028f618a8acf0014f10f835b81f63837fd
