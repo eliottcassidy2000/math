@@ -379,18 +379,20 @@ hidden squarefreeness is equivalent to normality; all normal cases fail by the
 global different. THM-3962 closes both debt types whenever `q=q(P)` by a
 product-curve puncture/unit argument. THM-3963 gives the exact regular
 normalization of every `q=c(t)P^2` and kills it with the principal prime
-`w+2=0`. General moving repeated factors and `P^2q2(P,t)` remain; THM-3964
-reserves a graph-double-root subfamily, while THM-3965 reserves a separate
-unit-ideal deformation. The orthogonal THM-3955/57 node and
+`w+2=0`. THM-3964 closes the displayed scalar-coefficient graph-root family,
+THM-3965 closes the constant unit-ideal deformation, and THM-3966 packages
+the class/Euler boundary invoice. Genuinely `P`-dependent graph coefficients,
+nongraph repeated factors, and general `P^2q2(P,t)` remain. The orthogonal
+THM-3955/57 node and
 coordinate-crossing cotangent sequences are proved local sidecars, not global
 Jacobian or Hopf results.
 
 The next search should not maximize Mordell--Weil rank blindly.  The cheapest
 decisive experiments are:
 
-1. normalize the remaining genuinely moving repeated-factor and general
-   `P^2q2(P,t)` debts and compute their units, classes, incidence and infinity
-   places; THM-3964 is a reserved subfamily target, not a dependency;
+1. normalize the remaining `P`-dependent graph, nongraph repeated-factor, and
+   general `P^2q2(P,t)` debts and compute their units, classes, incidence and
+   infinity places;
 2. start from a genuinely nonmonogenic `S3` field/order outside the normal
    monogenic grammar, or prove that the normalization parameter descends to
    an original polynomial target coordinate;

@@ -342,8 +342,14 @@ Format per entry:
   infinity-place reservations occupied `THM-3964--3965`, so the LRC family
   moved atomically to freshly checked `THM-3966`. An incoming Euler-rigidity
   boundary lemma then occupied that identifier, forcing one more atomic move
-  to freshly checked `THM-3967`. The hash-bearing LRC companions and
-  mathematical scope did not change.
+  to freshly checked `THM-3967`. The next live wave occupied
+  `THM-3967--3969` with quadratic-depth, canonical-vector, and affine-graph
+  programs, forcing another atomic move to freshly checked `THM-3970`. A
+  canonical fixed-point osculation reservation then occupied that identifier,
+  forcing the LRC theorem to freshly checked `THM-3971`. A determinantal
+  affine-plane completion reservation immediately occupied that identifier,
+  forcing one more move to freshly checked `THM-3972`. The hash-bearing LRC
+  companions and mathematical scope did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
   only before empty reservations; rename the whole artifact family together.

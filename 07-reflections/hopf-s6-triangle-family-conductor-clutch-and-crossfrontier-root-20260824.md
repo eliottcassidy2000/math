@@ -438,9 +438,10 @@ recognition theorem. THM-3958/3960 close the one-root and natural
 one-parameter monogenic lanes; proved THM-3959 closes the centered degree-five
 color rows; and proved THM-3961 classifies normality for irreducible
 arbitrary-`q` monogenic cubics. Proved THM-3962 closes coefficient-constant
-cylinders and proved THM-3963 closes the moving scalar `P^2` debt. THM-3964/
-3965 remain **RESERVED / UNPROVED EMPTY STUBS**. None supplies a Hopf
-dependency here.
+cylinders and proved THM-3963 closes the moving scalar `P^2` debt. Proved
+THM-3964 closes the displayed scalar-coefficient graph-root family, proved
+THM-3965 closes the constant unit-ideal deformation, and proved THM-3966 gives
+the class/Euler boundary invoice. None supplies a Hopf dependency here.
 
 ## 9. Connection contract B: affine local systems over the LRC carrier
 

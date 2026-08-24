@@ -358,8 +358,10 @@ closes the centered degree-five color rows, while
 classifies normality in the irreducible arbitrary-`q` monogenic grammar.
 Proved THM-3962 closes all coefficient-constant cylinders, including their
 conductor debts, and proved THM-3963 closes the moving scalar `P^2` debt.
-THM-3964/3965 remain **RESERVED / UNPROVED EMPTY STUBS**. None supplies a
-Hopf dependency here.
+Proved THM-3964 closes the displayed scalar-coefficient graph-root family;
+proved THM-3965 closes the constant unit-ideal deformation, and proved
+THM-3966 supplies the class/Euler boundary invoice. None supplies a Hopf
+dependency here.
 
 ### Explicitly rejected vocabulary bridges
 
