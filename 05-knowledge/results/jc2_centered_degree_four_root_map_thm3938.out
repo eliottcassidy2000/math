@@ -1,0 +1,12 @@
+THM-3938 centered degree-four root-map exact companion
+CHECKS=96
+SCOPE=centered trace-zero linear-color;degA=3;deg_t=4
+POLE_ROWS=E:4e3;F:3e2+1e2;G:m2+2e3;H:m2+1e2+1e2;I:m1+3e2
+ROW_E=q=0;p=0 scalar,else three addresses
+ROW_F=p=-3q-1/2;q=-1/4 scalar,else three addresses
+ROW_G=q=p^3,k=p^4;two addresses
+ROW_H=q=(p-2)(p+1)^3/2;k=-(p-1)^3(p+2)/2;two addresses
+ROW_I=p=-2/3;k=40/81;two addresses
+BRANCH=each nonscalar implicit component has discriminant exponent one
+CONCLUSION=scalar-unit or source ramification non-unibranch;no A2 Keller open
+SEMANTIC_SHA256=8df0539a4608fb0a83929d851cae25cefdd0150bf0f3f6d828ba77e8a982ceac
