@@ -26,6 +26,13 @@ W conductor/pushout map: rank=4, SNF=(1,1,1,1,0,0)
 alpha2: rank=3, SNF=(1,1,1,0)
 primitive left annihilator of alpha2=(4,2,3,2)
 
+ORIENTED CONDUCTOR PUSHOUT: FINITE-EXACT
+oriented A: rank=4, SNF=(1,1,1,1,0,0), kernel rank=2
+chi(dP6)+chi(D)-chi(hexagon)=6+2-6=2
+with zero H1 incidence map: H_0..H_4 ranks=(1,2,4,2,1), all free
+one reversed branch: rank=5, SNF=(1,1,1,1,2,0)
+orientation hostile: same cell counts and Euler, but Z/2 appears
+
 TWIST VECTORS: EXACT
 A1*v1=v1, A2*v2=v2, (ell1,ell2)=(1,-1)
 
@@ -41,4 +48,5 @@ for (a,b)=(3,4), kernel move (ell0,ell1,ell2)+=(1,3,0) preserves p
 
 SCOPE
 VERIFIED: displayed integer matrices, exterior-power Smith data, twist determinant.
+FINITE-EXACT GIVEN ORIENTED QUOTIENT: conductor homology and orientation hostile.
 NOT VERIFIED: period-map analysis, fillings, global gluing, homology identifications, S6.

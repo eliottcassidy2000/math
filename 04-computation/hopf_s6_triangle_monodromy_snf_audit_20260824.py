@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Exact finite audit of the integer linear algebra in Alpoge's S6 preprint.
 
-This script checks only the displayed matrices, their exterior powers, and the
-two-generator clutch presentation.  It does not check the analytic family,
-the toric/logarithmic fillings, the Mayer--Vietoris identifications, or the
-claim that the resulting manifold is S^6.
+This script checks the displayed matrices, their exterior powers, the
+two-generator clutch presentation, and the finite conductor pushout conditional
+on the manuscript's stated oriented opposite-side quotient.  It does not check
+the analytic family, the toric/logarithmic fillings, realization of that
+quotient, the global homology identifications, or the claim that the resulting
+manifold is S^6.
 """
 
 from __future__ import annotations
@@ -181,6 +183,58 @@ def main() -> None:
     assert smith_diagonal(W2) == (1, 1, 1, 1, 0, 0)
     assert W2.rank() == 4
 
+    # Independent oriented-conductor presentation.  The first four rows are
+    # H,E1,E2,E3 in H_2(dP6); the last three are the quotient double curves.
+    # Columns are the six boundary curves around the anticanonical hexagon.
+    conductor_pushout = Matrix(
+        [
+            [0, 1, 0, 1, 0, 1],
+            [1, -1, 0, 0, 0, -1],
+            [0, -1, 1, -1, 0, 0],
+            [0, 0, 0, -1, 1, -1],
+            [-1, 0, 0, -1, 0, 0],
+            [0, -1, 0, 0, -1, 0],
+            [0, 0, -1, 0, 0, -1],
+        ]
+    )
+    kernel_1 = Matrix([-1, -1, 0, 1, 1, 0])
+    kernel_2 = Matrix([1, 0, -1, -1, 0, 1])
+    assert conductor_pushout * kernel_1 == Matrix.zeros(7, 1)
+    assert conductor_pushout * kernel_2 == Matrix.zeros(7, 1)
+    assert conductor_pushout.rank() == 4
+    assert smith_diagonal(conductor_pushout) == (1, 1, 1, 1, 0, 0)
+
+    # Hostile control: reverse the relative degree on only the second branch
+    # of the first opposite-side pair.  Counts and Euler characteristic stay
+    # fixed, but the integral response acquires 2-torsion.
+    reversed_branch = conductor_pushout.copy()
+    reversed_branch[4, 3] = 1
+    assert reversed_branch.rank() == 5
+    assert smith_diagonal(reversed_branch) == (1, 1, 1, 1, 2, 0)
+
+    e_dp6 = 6
+    e_hexagon = 6
+    e_double_locus = 2
+    e_W = e_dp6 + e_double_locus - e_hexagon
+    assert e_W == 2
+
+    # For the oriented quotient, the hexagon incidence loop maps trivially on
+    # H_1(D).  The pushout LES and the saturated degree-two map then give the
+    # free homology ranks in degrees 0,...,4.
+    h1_boundary_rank = 1
+    h1_double_locus_rank = 2
+    h1_incidence_map_rank = 0
+    h_W_ranks = (
+        1,
+        h1_double_locus_rank - h1_incidence_map_rank,
+        (7 - conductor_pushout.rank())
+        + (h1_boundary_rank - h1_incidence_map_rank),
+        6 - conductor_pushout.rank(),
+        1,
+    )
+    assert h_W_ranks == (1, 2, 4, 2, 1)
+    assert sum((-1) ** q * rank for q, rank in enumerate(h_W_ranks)) == e_W
+
     alpha2 = Matrix(
         [
             [2, 1, 3, 0, 0, 0],
@@ -197,6 +251,13 @@ def main() -> None:
     print("W conductor/pushout map: rank=4, SNF=(1,1,1,1,0,0)")
     print("alpha2: rank=3, SNF=(1,1,1,0)")
     print("primitive left annihilator of alpha2=(4,2,3,2)")
+
+    print("\nORIENTED CONDUCTOR PUSHOUT: FINITE-EXACT")
+    print("oriented A: rank=4, SNF=(1,1,1,1,0,0), kernel rank=2")
+    print("chi(dP6)+chi(D)-chi(hexagon)=6+2-6=2")
+    print("with zero H1 incidence map: H_0..H_4 ranks=(1,2,4,2,1), all free")
+    print("one reversed branch: rank=5, SNF=(1,1,1,1,2,0)")
+    print("orientation hostile: same cell counts and Euler, but Z/2 appears")
 
     v1 = Matrix([1, 2, -4, 0])
     v2 = Matrix([-1, -3, 3, 0])
@@ -252,6 +313,7 @@ def main() -> None:
 
     print("\nSCOPE")
     print("VERIFIED: displayed integer matrices, exterior-power Smith data, twist determinant.")
+    print("FINITE-EXACT GIVEN ORIENTED QUOTIENT: conductor homology and orientation hostile.")
     print("NOT VERIFIED: period-map analysis, fillings, global gluing, homology identifications, S6.")
 
 

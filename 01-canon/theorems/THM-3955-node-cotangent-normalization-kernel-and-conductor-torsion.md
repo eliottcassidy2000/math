@@ -13,6 +13,7 @@ source: hopf-crossfrontier-20260824
 depends_on: []
 related:
   - THM-3944-repeated-factor-double-torus-one-place-square-conductor-collapse
+  - THM-3957-triple-normal-crossing-cotangent-conductor-kernel-and-normalization-cokernel
   - MISTAKE-466
 ---
 
@@ -140,6 +141,12 @@ Notice the type boundary: `Omega_(B/k)/T -> Omega_(Btilde/k)` itself is an
 isomorphism.  The extra conductor kernel occurs one stage earlier in
 `E -> Omega_(B/k)/T`; it is not a kernel between torsion-free and normalized
 differentials.
+
+This isomorphism is special to the two-branch curve node.  THM-3957 proves
+that for the triple surface crossing `xyz=0`, torsion-free differentials inject
+but do not surject onto normalized differentials; the cokernel is supported on
+the three double axes.  Thus (1) must not be extrapolated across a
+positive-dimensional conductor without a branch-mismatch sidecar.
 
 Nothing here proves that the manuscript's local models glue, that its global
 section is nonzero, that its topology is `S6`, or that the Hopf problem is

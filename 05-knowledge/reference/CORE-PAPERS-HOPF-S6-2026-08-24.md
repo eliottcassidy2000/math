@@ -45,10 +45,12 @@ global consequence below stays conditional until specialist verification.
    with [frozen output](../results/hopf_s6_triangle_monodromy_snf_audit_20260824.out).
 5. **Unconditional local theorem:**
    [THM-3955, node cotangent normalization kernel and conductor
-   torsion](../../01-canon/theorems/THM-3955-node-cotangent-normalization-kernel-and-conductor-torsion.md).
+   torsion](../../01-canon/theorems/THM-3955-node-cotangent-normalization-kernel-and-conductor-torsion.md),
+   extended at triple crossings by
+   [THM-3957](../../01-canon/theorems/THM-3957-triple-normal-crossing-cotangent-conductor-kernel-and-normalization-cokernel.md).
 
 The S6 manuscript is a source under examination, not a proved dependency of
-THM-3955 or of any established repo theorem.
+THM-3955, THM-3957, or of any established repo theorem.
 
 ## 2. The manuscript's claimed construction
 
@@ -148,6 +150,8 @@ verified universe and conclusions are:
 | lattice coinvariants | **FINITE-EXACT** | `SNF([A1-I | A2-I])=(1,1,1,0)`, hence one free displayed coinvariant |
 | degree-two coinvariants | **FINITE-EXACT** | Smith diagonal `(1,1,1,1,1,0)`; primitive covector `(0,0,1,6,0,0)` |
 | cusp pushout matrix | **FINITE-EXACT** | rank 4, Smith diagonal `(1,1,1,1,0,0)` |
+| oriented conductor quotient | **FINITE-EXACT GIVEN THE STATED QUOTIENT** | `H_0..H_4(W)` ranks `(1,2,4,2,1)`, all free; `chi(W)=2` |
+| one reversed branch | **FINITE-EXACT HOSTILE** | rank rises to 5 and Smith diagonal becomes `(1,1,1,1,2,0)` |
 | special-surface map `alpha2` | **FINITE-EXACT** | rank 3, Smith diagonal `(1,1,1,0)`, primitive left annihilator `(4,2,3,2)` |
 | displayed twists | **FINITE-EXACT** | `A1*v1=v1`, `A2*v2=v2`, `(ell1,ell2)=(1,-1)` |
 | chosen clutch presentation | **FINITE-EXACT** | Smith diagonal `(1,1)` for `p=-1` |
@@ -177,6 +181,26 @@ Delta_ell0 p=ab,   Delta_ell1 p=-b,   Delta_ell2 p=-a. (8)
 For `(a,b)=(3,4)`, the move `(1,3,0)` lies in the kernel of the evaluator.
 Consequently `|p|` is a lawful ordinal for one selected response, but is not
 a lossless address for the gluing triple or the analytic threefold.
+
+Assuming only the manuscript's stated orientation-preserving identification
+of opposite boundary curves, the conductor pushout itself can be audited
+without degeneration theory.  The normalization `dP6`, its six-curve hexagon,
+and the quotient double locus have Euler characteristics `6,6,2`, so
+`chi(W)=2`.  The degree-two pushout map has rank four and saturated Smith
+factors.  Its long exact sequence gives
+
+```text
+H_k(W;Z)=(Z,Z^2,Z^4,Z^2,Z),       k=0,...,4,            (8a)
+pi1(W)=Z^2.                                                (8b)
+```
+
+The fundamental-group statement uses the actual hexagon attaching word, a
+commutator in the free group on two double-locus loops, not merely its zero
+abelianization.  Reversing the relative orientation of one paired branch
+changes the Smith response by a `Z/2` factor while leaving cell counts and
+Euler characteristic unchanged.  Thus branch degrees are a load-bearing
+sidecar; this computation still does not verify that the analytic fan quotient
+realizes the stated oriented topological quotient.
 
 ## 5. Complex-geometric audit ledger
 
@@ -247,6 +271,22 @@ The typing is important: the map
 in the preceding ambient map `E -> Omega_B/T`, not between torsion-free and
 normalized differentials.
 
+The manuscript's fibre also has two claimed triple points, so the node model
+is not the end of the local audit.  [THM-3957](../../01-canon/theorems/THM-3957-triple-normal-crossing-cotangent-conductor-kernel-and-normalization-cokernel.md)
+proves for `B=k[x,y,z]/(xyz)` that
+
+```text
+T ~= Btilde/B,                  Ann(T)=(xy,xz,yz),
+0 -> T -> Omega_B -> Omega_Btilde
+  -> k[x]dx direct_sum k[y]dy direct_sum k[z]dz -> 0.   (9a)
+```
+
+Here torsion has generic rank one on each double axis and fibre dimension two
+at the triple point.  Unlike the node, `Omega_B/T -> Omega_Btilde` is not
+surjective; its cokernel is a full differential module on each conductor axis.
+This stronger local correction is characteristic-free and still makes no
+globalization claim.
+
 The manuscript also challenges a first-homology count inherited from the 1996
 paper by inserting nontrivial monodromy coinvariants.  The displayed lattice
 coinvariant calculation is exact, but its global use remains coupled to the
@@ -269,8 +309,9 @@ original nonnormal regular locus
 
 Each arrow can erase data.  The needed sidecar is the conductor ideal, branch
 labels, restriction/extension maps, and the actual consumer.  THM-3944 carries
-a `mu_3` Kummer class; THM-3955 carries a Kahler differential.  Their payloads
-are not interchangeable.
+a `mu_3` Kummer class; THM-3955 carries point-supported node torsion; THM-3957
+adds axis-supported torsion and a normalization cokernel.  Their payloads are
+not interchangeable.
 
 ### LRC affine local systems -- precise program, not a proof
 
@@ -300,8 +341,14 @@ a forbidden boundary triangle, and a normal `A`-singularity whose residual
 prime has two normalization addresses.  These obstructions are specific to an
 `A2` open surface.  The S6 cusp fibre instead has a cyclic/self-identified
 conductor incidence pattern.  The shared rule is "normalization plus incidence
-sidecar"; there is no direct Jacobian theorem transfer.  THM-3956 is currently
-a **RESERVED / UNPROVED EMPTY STUB** and is not used.
+sidecar"; there is no direct Jacobian theorem transfer.
+[THM-3956](../../01-canon/theorems/THM-3956-split-hidden-cubic-integrality-and-repeated-root-trichotomy.md)
+is now **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED** and closes
+the split hidden-cubic lane by integrality and a repeated-root trichotomy.  It
+reinforces the boundary/predicate discipline but supplies no Hopf theorem.
+THM-3958 remains a **RESERVED / PROVISIONAL PROOF CANDIDATE / NOT CANON**;
+THM-3959 and THM-3960 are **RESERVED / UNPROVED EMPTY STUBS**.  None of those
+three supplies a dependency here.
 
 ### Explicitly rejected vocabulary bridges
 
@@ -329,8 +376,8 @@ The output should match
 The LF-byte SHA-256 values at promotion are
 
 ```text
-script  2df43dc8f26599424438901df1bf4c40d25ec901a215279ef46fcfd818eda6ab
-output  a90593676cc2dd3ffd56e7aa61c26adb70fc4484b8f90dce493ab593181ec008
+script  588cc30430474b088b27b3a124a2d4257786a1a38ed656b831839e5753cf203d
+output  a7e8e94071a58825fde77dcaa4298614c8499e18d1f5aeabd884976efae443bd
 ```
 
 Before any promotion of the manuscript's main conclusion, rerun the exact
