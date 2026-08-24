@@ -4,26 +4,29 @@ title: "Height-tower few-weight Darboux support obstruction"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For every
   height n>=2, the exact-volume completion algebra B_n has no homogeneous,
-  one-by-arbitrary, or two-by-two polynomial Darboux pair in its natural
-  weight grading. At height n=2, the exact exponent-two color at u=0 and the
-  second compulsory color u=-1 transfer the complete THM-3569, THM-3579,
-  THM-3583, and repaired THM-3592 support obstructions: the 2x3, 3x2, 2x4,
-  4x2, and 3x3 cells are empty. Hence every height-two Darboux pair would
-  need at least seven retained nonconstant weight pieces; the first live cells are
-  exactly 2x5, 3x4, 4x3, and 5x2. No Darboux pair or JC(2) counterexample is
-  constructed or excluded in unrestricted support.
+  one-by-arbitrary, two-by-two, two-by-three, or three-by-two polynomial
+  Darboux pair in its natural weight grading. The all-height two-by-three
+  result transfers the exact THM-3576 proof through the distinguished
+  height-n color u=0, while u=-1 supplies the second compulsory zero needed
+  by its terminal Euler factors. At height n=2, THM-3583 and repaired
+  THM-3592 additionally close the 2x4, 4x2, and 3x3 cells. Hence every
+  height-two Darboux pair would need at least seven retained nonconstant
+  weight pieces; the first live cells are exactly 2x5, 3x4, 4x3, and 5x2.
+  No Darboux pair or JC(2) counterexample is constructed or excluded in
+  unrestricted support.
 source: jc-degree6-one-place / post-THM-3973 exact-volume completion support analysis, 2026-08-24
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (all-frontiers, 2026-08-24). The audit
   rederived the two-ceiling weight pieces, Wronskian bracket, homogeneous,
-  one-by-arbitrary, and uniform two-by-two gates. It traced every imported
-  height-two ladder and verified that only the distinguished exponent-two
-  arm is used for support selection; the second compulsory color supplies
-  exactly the terminal degree-two divisor. The missing direct THM-3579
+  one-by-arbitrary, and uniform two-by-two gates. It traced the all-height
+  THM-3576 two-by-three transfer and every height-two ladder: only the
+  distinguished exponent-`n` arm selects support, while the second compulsory
+  color supplies the terminal degree-two divisor. The missing direct THM-3579
   equal-step dependency and transfer-ledger row were restored before
-  promotion. Normal and optimized 1,040-gate runs byte-match the frozen
+  promotion. Normal and optimized 1,272-gate runs byte-match the frozen
   output, and all hashes pass.
 depends_on:
+  - THM-3576-higher-exponent-belyi-keller-collision-tower
   - THM-3569-danielewski-two-by-three-weight-darboux-nonentry
   - THM-3579-equal-step-three-by-three-danielewski-darboux-nonentry
   - THM-3583-universal-exponent-two-two-by-four-weight-darboux-nonentry
@@ -34,9 +37,9 @@ related:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
 script: 04-computation/jc2_height_tower_weight_support_thm3974.py
 output: 05-knowledge/results/jc2_height_tower_weight_support_thm3974.out
-script_sha256: 1d3786ac96570159659264ec84229147119b85d53c014cd0e286194294ef0084
-output_sha256: 283ff98b6ab888c6d2efac073601ebdbbda053059f87b870673474256625dbf4
-semantic_sha256: 954a2edb1f0aac4079d9a7bb2c94671121bb58198b120965ed77d4655a151c68
+script_sha256: 1eeac50f607ce909e670fe839b2a20220d9e7fe9c89e74d0f21baf5f7780a87a
+output_sha256: b40889aea301a1a300487b7ad7a86b7acacbad0273d22df48e1c98faa16c1727
+semantic_sha256: 41abf76f2ad75f2f927e566fb43f56e0835e286715da40b2b5df6a1ec78bfe30
 hash_basis: raw LF bytes
 ---
 
@@ -62,7 +65,7 @@ wt(p)=-n,      wt(y)=-(n+1).                            (2)
 The source Jacobian bracket has degree `n-1`. The theorem proves
 
 ```text
-all n>=2:  no 1 x arbitrary pair and no 2 x 2 pair;
+all n>=2:  no 1 x arbitrary, 2 x 2, 2 x 3, or 3 x 2 pair;
 
 n=2:       no 2 x 3, 3 x 2, 2 x 4, 4 x 2, or 3 x 3 pair;
             every possible pair has at least seven retained pieces.      (3)
@@ -233,17 +236,54 @@ The first factor has leading coefficient
 and positive degree by `(17)`. It cannot divide the unit `1`. This proves
 the uniform `2 x 2` nonentry.
 
-## 4. Height two inherits the complete exponent-two few-support gates
+## 4. Every height inherits the all-exponent two-by-three gate
+
+The proof of THM-3576, Section 4.2, has a smaller interface than its
+squarefree-Danielewski statement suggests.  At exponent `n` it uses only
+
+```text
+(I)   the coefficient ring is a characteristic-zero UFD;
+(II)  the bracket is x^(r+s+n-1)W_(r,s);
+(III) at one distinguished simple color, a weight -q coefficient has
+      order at least ceil(q/n);
+(IV)  every common base extracted from a negative endpoint has positive
+      degree, and has a simple distinguished-color zero whenever the scalar
+      row requires one.                                      (22)
+```
+
+Here `(I)--(III)` are exactly `k[u]`, `(8)`, and the `u=0` half of `(7)`.
+For `(IV)`, every negative coefficient also vanishes at `u=-1`; hence every
+UFD common base occurring in the proof contains both `u` and `u+1`, except
+in the branches where the scalar row already makes its `u=0` zero simple.
+In particular its terminal Euler factors have positive degree.  The
+power-obstruction branches use only that this `u=0` zero is simple, not a
+second arm with exponent `n`.
+
+Consequently the complete support-component classification, the lower and
+upper arithmetic extensions, every small-weight boundary, and the UFD/Euler
+closures `(21f)--(21p)` of THM-3576 transfer without changing an integer.
+Thus, for every `n>=2`,
+
+```text
+#supp(P)=2  implies  #supp(Q)>=4,
+#supp(Q)=2  implies  #supp(P)>=4.                       (23)
+```
+
+This is a proof-mechanism transfer, not a ring inclusion: the second color
+has exponent `n+1`, so `B_n` is not the squarefree two-arm Danielewski ring
+of exponent `n`.  The ledger above states exactly why that weaker second
+color is sufficient and prevents a silent all-arm hypothesis.
+
+## 5. Height two inherits the wider exponent-two few-support gates
 
 Now specialize to `n=2`. Four exact properties are the complete interface
-used in the symbolic proofs of THM-3569, THM-3579, THM-3583, and the repaired
-THM-3592:
+used in the symbolic proofs of THM-3579, THM-3583, and the repaired THM-3592:
 
 ```text
 (I)   the coefficient ring k[u] is a characteristic-zero UFD;
 (II)  the bracket is x^(r+s+1)W_(r,s);
 (III) at u=0, a weight -q coefficient has order >=ceil(q/2);
-(IV)  every retained negative coefficient also vanishes at u=-1.         (22)
+(IV)  every retained negative coefficient also vanishes at u=-1.         (24)
 ```
 
 Properties `(I)--(III)` reproduce verbatim the singleton rows, support-sum
@@ -254,13 +294,13 @@ terminal Euler factors require: whenever a negative endpoint has the UFD
 form `A h^m`, both irreducibles `u` and `u+1` divide `h`, so
 
 ```text
-deg(h)>=2.                                               (23)
+deg(h)>=2.                                               (25)
 ```
 
 No multi-arm alternation is being imported silently. A ladder is selected
 at the single distinguished exponent-two color `u=0`; after its absolute
 weights are fixed, the displayed polynomial identities in the cited theorem
-contradict the scalar row globally. The second color is used only in `(23)`.
+contradict the scalar row globally. The second color is used only in `(25)`.
 In the repaired THM-3592 `d=3` hooked overlap, the low singleton already ties
 the two candidate negative coefficients to one common base at `u=0`, so its
 no-alternation seam remains valid.
@@ -269,7 +309,6 @@ For auditability, the transfer ledger is:
 
 | dependency | imported exact mechanism | conclusion on `B_2` |
 |---|---|---|
-| THM-3569 | two support complements; lower/upper ladders; UFD bridges; Euler factors | no `2 x 3` or `3 x 2` |
 | THM-3579 | equal-step three-by-three ladder | no equal-AP `3 x 3` |
 | THM-3583 | four-vertex component path; six `R=2/T=2` ladders; square/gcd-five/gcd-four modes | no `2 x 4` or `4 x 2` |
 | repaired THM-3592 | remaining three-point catalogue; component deletion; hooked/reflected/Euclidean ladders | no remaining `3 x 3` |
@@ -283,22 +322,22 @@ It follows that a height-two Darboux pair has at least seven retained
 nonconstant pieces. At total support seven, the only cells not excluded are
 
 ```text
-(2,5),              (3,4),              (4,3),              (5,2). (24)
+(2,5),              (3,4),              (4,3),              (5,2). (26)
 ```
 
-## 5. Positive control and exact residual
+## 6. Positive control and exact residual
 
 The support theorem is not a bracket-span obstruction. Put
 
 ```text
-w=2u+1=2z-1.                                           (25)
+w=2u+1=2z-1.                                           (27)
 ```
 
 For every `n>=2`, direct use of `(8)` and `w^2=1+4u(u+1)` gives the exact
 two-bracket identity
 
 ```text
-1=J(-(2z-1)p,x)+J((6/(n-1))xp,z).                      (26)
+1=J(-(2z-1)p,x)+J((6/(n-1))xp,z).                      (28)
 ```
 
 The first bracket is `1+6u(u+1)` and the second is `-6u(u+1)`. Thus the
@@ -306,15 +345,15 @@ constant already has bracket length at most two. The theorem proves that
 compressing it to one bracket requires substantially mixed weight support:
 
 ```text
-all n>=2: first unclosed cell is 2 x 3 (or 3 x 2);
-n=2:     first unclosed cells are exactly those in (24).                  (27)
+all n>=2: first unclosed cells are 2 x 4, 3 x 3, and transposes;
+n=2:     first unclosed cells are exactly those in (26).                  (29)
 ```
 
-For `n>2`, the exponent-two transfer is not asserted: the distinguished
-order becomes `ceil(q/n)`, changing the scalar and ladder arithmetic. For
-`n=2`, cells of total support at least seven remain open. No unrestricted
-Darboux pair, finite cubic map, or counterexample to `JC(2)` is proved or
-refuted here. **QED.**
+For `n>2`, the wider exponent-two transfer is not asserted: the
+distinguished order becomes `ceil(q/n)`, changing the four-vertex and
+three-by-three ladder arithmetic. For `n=2`, cells of total support at least
+seven remain open. No unrestricted Darboux pair, finite cubic map, or
+counterexample to `JC(2)` is proved or refuted here. **QED.**
 
 ## Reproduction
 

@@ -969,9 +969,14 @@ THM-3966/68 give boundary invoices, and THM-3969 closes the collision-free
 affine-graph packet. THM-3970 proves the exact osculation/gcd reframe, not
 normalization closure. THM-3971 proves the determinantal residue-one volume
 obstruction; THM-3972 proves the squarefree-collision blowup ledger and
-first-height constant-`(c,r)` closure. General compatible rows remain open;
-THM-3974 proves all-height few-weight gates and the height-two seven-piece
-floor, not unrestricted Darboux nonentry. THM-3973/75/76 are RESERVED.
+first-height constant-`(c,r)` closure. General compatible rows remain open.
+THM-3973 supplies an exact-volume completion passport and a genuinely
+nonmonogenic finite cubic, whose ramification curve meets the affine-plane open;
+this replaces “find a nonmonogenic order” by “remove that divisor without
+losing exact volume or finiteness.” THM-3974 closes two-by-three and transpose
+at every height and gives the height-two seven-piece floor. THM-3976 identifies
+the rational-compression pseudoplane and only its internal floors. Arbitrary
+Darboux entry remains open; THM-3975 is RESERVED.
 THM-3955/57 are proved local conductor theorems with no global Hopf consequence.
 The proved LRC endpoint theorem moved to collision-free THM-4000; the namespace
 move changes no mathematical scope.

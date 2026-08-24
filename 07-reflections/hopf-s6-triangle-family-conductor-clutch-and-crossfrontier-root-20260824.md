@@ -447,10 +447,13 @@ closes the collision-free `Xi in k^*` affine-`P` graph packet. THM-3970 proves
 the exact osculation/gcd reframe, not normalization closure. THM-3971 proves
 the all-`m` determinantal exact-volume/no-Darboux near miss. THM-3972 gives
 the nonconstant squarefree-`Xi` blowup normalization and closes `a=t`,
-constant-`(c,r)`; general compatible rows remain open. THM-3974 proves the
-all-height few-weight gates and height-two seven-piece floor, not unrestricted
-Darboux nonentry. THM-3973/75/76 are RESERVED. None supplies a Hopf dependency
-here.
+constant-`(c,r)`; general compatible rows remain open. THM-3973 supplies an
+exact-volume completion passport and a globally nonmonogenic finite cubic,
+but its ramification curve meets the affine-plane open and blocks Keller. THM-3974 closes two-by-three and
+transpose at every height and gives the wider height-two seven-piece floor.
+THM-3976 computes a rational-compression pseudoplane intersection with
+internal degree/support floors, not arbitrary Darboux nonentry. THM-3975 is
+RESERVED. None supplies a Hopf dependency here.
 
 ## 9. Connection contract B: affine local systems over the LRC carrier
 

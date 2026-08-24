@@ -819,6 +819,45 @@
   `f238e984b667f3973f29a09524db7c86220ffce248184d4e937d7a9860605a97` /
   `947829aee929640e6e59e5c050819d81de73f1f972a75330ede8dcb16bef22ea`.
 
+- `jc2_exact_volume_simple_cubic_completion_thm3973.py` -> matching `.out`
+  [THM-3973 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. For
+  every `n>=2`, the smooth determinantal surface `B_n=k[x,z,p,y]` contains
+  the affine `(x,t)`-plane with one `A1` boundary `D`, has scalar units and
+  `Cl=Z[D]`, and satisfies `div(dx wedge dt)=D` while
+  `dx wedge dt=d(-dz/((n-1)x^(n-1)))`. Thus it is a positive exact-volume
+  completion passport. On `B_2`, `(p,x+y)` is finite free of degree three
+  and globally nonmonogenic, but its ramification curve meets the affine-plane
+  open and makes it non-Keller. Polynomial compression, a finite Keller pair, and `JC(2)`
+  remain open. Checks: `7494`. Script/output/semantic SHA-256:
+  `38cee174ab543d7565c0a14155179accb82446e6fde6b3273a96718787acebc1` /
+  `68fe1b77494757aa754a344c1c6b731797379338c1de21dd822eb6da17bad9b3` /
+  `a975db791a77fa913af642a33dcc3ef36dd13da846af3342b9335a5b60659d53`.
+
+- `jc2_height_tower_weight_support_thm3974.py` -> matching `.out`
+  [THM-3974 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. For
+  every `n>=2`, the natural weight grading on `B_n` excludes homogeneous,
+  one-by-arbitrary, two-by-two, two-by-three, and three-by-two Darboux pairs.
+  At `n=2`, the `2x4`, `4x2`, and `3x3` cells are also empty, so a surviving
+  pair needs at least seven nonconstant weight pieces; unrestricted support
+  and `JC(2)` remain open. Checks: `1272`. Script/output/semantic SHA-256:
+  `1eeac50f607ce909e670fe839b2a20220d9e7fe9c89e74d0f21baf5f7780a87a` /
+  `b40889aea301a1a300487b7ad7a86b7acacbad0273d22df48e1c98faa16c1727` /
+  `41abf76f2ad75f2f927e566fb43f56e0835e286715da40b2b5df6a1ec78bfe30`.
+
+- `jc2_rational_compression_pseudoplane_intersection_thm3976.py` -> matching
+  `.out` [THM-3976 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Over `C`, the height-two rational compression has exact polynomial
+  intersection `B_2 intersection k(a,b)=k[R,Z,p]/(Z^2-R-4R^2p)`, a smooth
+  quadratic pseudoplane with scalar units, `Pic=Z/2`, and a surjective
+  nonfinite etale degree-two affine-plane atlas. A Darboux pair confined to
+  this intersection must have surface degree at least three, planar degree at
+  least six, and at least seven retained weights. Its existence there, all
+  pairs elsewhere in `B_2`, and `JC(2)` remain open. Checks: `416`.
+  Script/output/semantic SHA-256:
+  `a9f267b3632c7aa1f442be0fbbfc038f47496e3fe565299bc14ec50d47a5cd7a` /
+  `9722a02f90f5b15cbe2efeaab3c591d9d79ef776767ba109bb35a5726584faa6` /
+  `b3474cf2658475c41e0735a96352088df8d2749ba659c72a6a09e73f5377ff12`.
+
 - `hopf_s6_triangle_monodromy_snf_audit_20260824.py` -> matching `.out`
   [VERIFIED-EXACT DISPLAYED MATRICES + FINITE-EXACT CONDITIONAL ORIENTED
   CONDUCTOR PUSHOUT; GLOBAL HOPF/S6 CLAIMS OPEN]. The displayed monodromy,

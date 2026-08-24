@@ -272,16 +272,22 @@ all-`m` determinantal completion family by its residue-one volume class.
 THM-3972 normalizes every nonconstant squarefree-`Xi` row and closes `a=t`,
 constant-`(c,r)`. General canonical-compatible simple rows, multiple `Xi`
 roots/reducible poles, and other nongraph/higher-depth debts remain open;
-THM-3974 proves all-height few-weight gates and the height-two seven-piece
-floor, while unrestricted support remains open. THM-3973/75/76 are RESERVED.
+THM-3973 gives the exact-volume completion passport and a globally
+nonmonogenic finite cubic, but its ramification curve meets the affine-plane
+open and prevents Keller.
+THM-3974 closes two-by-three and transpose at every height and gives the
+height-two seven-piece floor. THM-3976 identifies the compression pseudoplane
+and its internal floors. Unrestricted support remains open; THM-3975 is
+RESERVED.
 
 The session therefore ends at a sharp boundary.  **PROVED:** degree-four
 centered nonentry, all-degree trace-carrier routing, the arbitrary-common-debt
 natural-cubic boundary obstruction, the four-color Mobius classification, and
 the centered degree-five and arbitrary-`q` normal monogenic closures.
 **VERIFIED-EXACT:** the 2,884-gate carrier companion and the
-`51/62/44/75/92/62/161/105/42/51/46/45/110/29/23/32/17/115/51/1040` gates in
-THM-3950/51/52/53/54/56/58/59/60/61/62/63/64/65/67/69/70/71/72/74. **OPEN:** degree at least six,
+`51/62/44/75/92/62/161/105/42/51/46/45/110/29/23/32/17/115/51/7494/1272/416` gates in
+THM-3950/51/52/53/54/56/58/59/60/61/62/63/64/65/67/69/70/71/72/73/74/76. **OPEN:** degree at least six,
 arbitrary root gauges and coefficient planes, the remaining moving conductor
-debts, nonmonogenic orders, normalization-parameter descent, higher-degree
-non-centered strata, and the planar Jacobian conjecture itself.
+debts, deformation of the new nonmonogenic order past its ramification curve,
+normalization-parameter descent, higher-degree non-centered strata, and the
+planar Jacobian conjecture itself.

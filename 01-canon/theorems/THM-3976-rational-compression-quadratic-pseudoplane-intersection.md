@@ -1,27 +1,325 @@
 ---
 id: THM-3976
 title: "Rational compression quadratic-pseudoplane intersection"
-status: RESERVED / UNPROVED EMPTY STUB
+status: >
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over k=C, for
+  the height-two exact-volume completion B=k[x,z,p,y], the rational Darboux pair
+  obtained from (2z-1)^2-4z(z-1)=1 has quadratic fixed field.  Its complete
+  intersection with B is the smooth pseudoplane
+  C=k[R,Z,p]/(Z^2-R-4R^2p).  Thus every correction confined to the rational
+  Darboux field forgets the boundary-address generator y and returns to an
+  exponent-two Danielewski quotient.  A Darboux pair in this intersection
+  has surface degree at least three and planar degree at least six, and it
+  needs at least seven nonconstant weights.  No arbitrary Darboux pair on B
+  and no counterexample to JC(2) is claimed.
 source: jc-cohn3709 / exact-volume height-two compression quotient, 2026-08-24
-depends_on: []
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (audit-pseudoplane-3976, 2026-08-24), after
+  three scope repairs.  The audit rederived the fixed field, the exact
+  intersection module, the pseudoplane presentation and smooth atlas, the
+  unit/class-group calculation, and the degree/support consequences.  It
+  corrected d((w^2-1)/(4w^2))/dw to 1/(2w^3), restricted the imported
+  C-scoped obstruction theorems to k=C, and removed the false inference that
+  a surviving pair must leave C or involve y.  Normal and optimized 416-gate
+  runs byte-match the frozen output, and all hashes pass.
+depends_on:
+  - THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule
+  - THM-3569-danielewski-two-by-three-weight-darboux-nonentry
+  - THM-3583-universal-exponent-two-two-by-four-weight-darboux-nonentry
+  - THM-3592-universal-exponent-two-three-by-three-weight-darboux-nonentry
+  - THM-3794-constant-unit-surfaces-have-no-quadratic-etale-plane-map
 related:
   - THM-3572-squarefree-danielewski-affine-modification-and-two-bracket-collapse
-  - THM-3794-constant-unit-surfaces-have-no-quadratic-etale-plane-map
+  - THM-3783-quadratic-tower-etale-surface-maximal-polynomial-observable
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
+script: 04-computation/jc2_rational_compression_pseudoplane_intersection_thm3976.py
+output: 05-knowledge/results/jc2_rational_compression_pseudoplane_intersection_thm3976.out
+script_sha256: a9f267b3632c7aa1f442be0fbbfc038f47496e3fe565299bc14ec50d47a5cd7a
+output_sha256: 9722a02f90f5b15cbe2efeaab3c591d9d79ef776767ba109bb35a5726584faa6
+semantic_sha256: b3474cf2658475c41e0735a96352088df8d2749ba659c72a6a09e73f5377ff12
+hash_basis: LF-normalized bytes
 ---
 
-# THM-3976 -- reserved rational-compression intersection
+# THM-3976 -- the rational compression forgets the new boundary address
 
-**RESERVED / UNPROVED EMPTY STUB.** This reserves the namespace for the
-height-two rational Darboux compression and its fixed-field intersection
-with the exact-volume completion.  The intended statement identifies the
-intersection as the smooth quadratic pseudoplane
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over
+`k=C`.  Put
 
 ```text
-k[R,Z,p]/(Z^2-R-4R^2p),
+w=1+2x^2t,             z=(w+1)/2,
+p=(w^2-1)/(4x^2),      y=(w-1)^2(w+1)/(8x^3),                 (1)
+
+B=k[x,z,p,y] subset k[x,t].                                   (2)
 ```
 
-and records precisely why symplectic corrections made only inside the
-rational Darboux field cannot see the new boundary-address generator.  No
-claim is active until the intersection, smooth atlas, and degree gate are
-written and audited.
+This is the height-two member of THM-3973.  Its rational two-bracket
+collapse compresses further to the Darboux pair
+
+```text
+a=(w^2-1)/(4w^2),             b=w^3/x,
+J(a,b)=1.                                                       (3)
+```
+
+Neither entry is in `B`.  The theorem computes exactly what remains visible
+if one tries to repair `(3)` without leaving its rational target field:
+
+```text
+B intersection k(a,b)
+ =C
+ =k[R,Z,p]/(Z^2-R-4R^2p),
+
+R=x^2,                    Z=xw.                                (4)
+```
+
+The strict loss is structural: `y` is not in `k(a,b)`.  Thus the rational
+compression sees a smooth quadratic pseudoplane inside `B`, but it does not
+see the generator that created the new simple canonical boundary.  This is
+an intersection theorem, not a bounded generator search.
+
+## 1. The Darboux field is a quadratic fixed field
+
+Inside `L=k(x,w)=k(x,t)`, define
+
+```text
+sigma(x,w)=(-x,-w).                                             (5)
+```
+
+Both functions in `(3)` are fixed.  Conversely,
+
+```text
+w^2=1/(1-4a),
+R=x^2=w^6/b^2,
+Z=xw=w^4/b.                                                     (6)
+```
+
+Hence `L` is generated over `k(a,b)` by `w`, with the two conjugates
+`w,-w`; the divisor `1-4a=0` shows that `w^2=1/(1-4a)` is not a square in
+`k(a,b)`.  Therefore
+
+```text
+[L:k(a,b)]=2,                    k(a,b)=L^sigma.                 (7)
+```
+
+Direct differentiation gives the promised positive control.  If
+`g=(w^2-1)/4`, then
+
+```text
+d(g/w^2)/dw=1/(2w^3),
+```
+
+while the homogeneous Jacobian rule for `w=1+2x^2t` contributes the
+compensating factor `2`, giving `J(a,b)=1`.
+
+## 2. Exact homogeneous modules of the completion
+
+Give `x` weight one and `w` weight zero.  For `r in Z`, every weight-`r`
+piece of `B` is uniquely `x^r f(w)`.  The coefficient module is
+
+```text
+B_r=x^r k[w]                                      if r>=0,
+
+B_(-q)=x^(-q)(w-1)^ceil(q/2)(w+1)^ceil(q/3) k[w]  if q>0.       (8)
+```
+
+Here is a self-contained proof of the negative formula.  A generator
+monomial `x^A p^I y^J` has weight
+
+```text
+A-2I-3J=-q
+```
+
+and its coefficient has orders
+
+```text
+ord_(w-1)=I+2J,                    ord_(w+1)=I+J.       (9)
+```
+
+Under `2I+3J>=q`, the two separate minima are `ceil(q/2)` and
+`ceil(q/3)`.  Conversely the coefficient ideal generated by all such
+monomials is an ideal of the PID `k[w]`; its gcd has exactly those two
+orders and no other root.  Multiplication by `k[w]=k[z]` realizes the full
+gcd ideal.  This proves `(8)` without assuming the forthcoming status of
+THM-3973.
+
+The involution preserves weights.  A homogeneous piece is fixed precisely
+when
+
+```text
+f(-w)=(-1)^r f(w).                                             (10)
+```
+
+For `r=2m>=0`, `(10)` gives `x^r f=R^mF(w^2)`; for `r=2m+1>=0`, it gives
+`x^r f=R^m ZF(w^2)`.  Since
+
+```text
+w^2=1+4Rp,                                                     (11)
+```
+
+both lie in `C`.
+
+Now put `r=-q<0`.  Formula `(8)` and its image under `w |-> -w` show that a
+fixed coefficient is divisible by
+
+```text
+(w^2-1)^ceil(q/2).                                            (12)
+```
+
+The quotient still has parity `q`.  Thus, for `q=2m` and `q=2m+1`
+respectively, the fixed piece has one of the forms
+
+```text
+x^(-2m)(w^2-1)^m F(w^2)             =4^m p^m F(w^2),
+
+x^(-2m-1)(w^2-1)^(m+1)w F(w^2)     =4^(m+1) Zp^(m+1)F(w^2).   (13)
+```
+
+It again belongs to `C`.  Since every element is the finite sum of its
+weights, `(10)--(13)` prove
+
+```text
+B^sigma:=B intersection L^sigma=C.                            (14)
+```
+
+Equations `(7)` and `(14)` are exactly the intersection claim `(4)`.
+They also prove `y notin k(a,b)`: its profile in `(1)` is not fixed by
+`sigma`.
+
+## 3. The quadratic pseudoplane and its source atlas
+
+The three invariant generators obey
+
+```text
+Z^2=R+4R^2p.                                                   (15)
+```
+
+This is their complete relation because `R,Z` are algebraically independent.
+The gradient of `Z^2-R-4R^2p` is
+
+```text
+(-1-8Rp, 2Z, -4R^2),                                         (16)
+```
+
+which has no common zero.  Hence `Y=Spec C` is smooth and normal.
+
+The source formulas
+
+```text
+R=x^2,                Z=x(1+2x^2t),
+p=t(1+x^2t)                                                   (17)
+```
+
+give a surjective quasi-finite map `phi:A2_(x,t)->Y`.  Off `R=0`, choose a
+square root `x` of `R`, put `w=Z/x`, and recover
+`t=(w-1)/(2R)`.  On `R=0`, equation `(15)` forces `Z=0`, and the unique
+source lift is `(x,t)=(0,p)`.  Its Jacobian-minor packet is
+
+```text
+J(R,Z)=4R^2,            J(R,p)=2Z,
+J(Z,p)=1+8Rp.                                                  (18)
+```
+
+The packet is the signed gradient `(16)` up to units and generates the unit
+ideal.  Miracle flatness, or the local Jacobian criterion on the smooth
+surfaces, makes `phi` etale.  It has generic degree two by `x^2=R` and is
+not finite because the general two-point fibre collapses to one reduced
+point over the arm
+
+```text
+L_0=V(R,Z)=A1_p.                                              (19)
+```
+
+Localizing at `R` gives `C_R=k[R,R^(-1),Z]`.  The arm is the unique prime
+over `R=0`, and `(15)` gives
+
+```text
+div(R)=2L_0.                                                   (20)
+```
+
+Nagata localization therefore makes `Cl(C)` cyclic, generated by `[L_0]`,
+of order two.  It is nonzero: a hypothetical equation for `L_0` becomes a
+unit `cR^j` after localization, whose divisor has even coefficient.  The
+same argument proves
+
+```text
+C^*=k*,                         Cl(C)=Pic(Y)=Z/2.              (21)
+```
+
+Thus `C` is not `A2`; it is the exact quadratic missing-sheet surface of
+the compression.
+
+## 4. What the quotient route can and cannot produce
+
+Let `A_0,A_1 in B intersection k(a,b)=C` satisfy
+
+```text
+J(A_0,A_1)=1.                                                (22)
+```
+
+Then `(A_0,A_1):Y->A2` is a Darboux map and its pullback along `(17)` is a
+planar Keller map.  Write
+
+```text
+d=[Frac(C):k(A_0,A_1)].                                      (23)
+```
+
+The source degree is `2d`.  If `d=1`, it is a quadratic Galois Keller
+extension, contradicting THM-1330.  If `d=2`, THM-3794 applies to the
+constant-unit surface `(21)` and gives a contradiction.  Consequently
+
+```text
+d>=3,                  [k(x,t):k(A_0,A_1)]>=6.                (24)
+```
+
+There is also no new few-weight escape hidden here.  With
+
+```text
+b_0=-w/2,              c=x,              e=p,
+```
+
+the larger ring `k[x,w,p]` is the standard squarefree Danielewski surface
+
+```text
+c^2e=b_0^2-1/4,             {b_0,c}=c^2.                      (25)
+```
+
+The ring `C` is its parity-fixed subring.  Hence every Darboux pair in `C`
+is in the scope of THM-3569, THM-3583, and the repaired THM-3592.  After
+scalar removal, it has at least seven nonconstant `x`-weight pieces; the
+first support cells not excluded by those theorems are
+
+```text
+(2,5), (3,4), (4,3), (5,2).                                 (26)
+```
+
+The exact preservation/loss ledger is therefore:
+
+```text
+source       the exact-volume completion B and rational Darboux pair (a,b);
+target       the fixed-field polynomial intersection C;
+preserved    the rational bracket, quadratic source atlas, exact grading;
+destroyed    the asymmetric (2,3)-color and boundary-address generator y;
+sidecar      the involution sigma and both color valuations in (8);
+consequence  rational-field-only corrections return to the already rigid
+             exponent-two Danielewski sector.                         (27)
+```
+
+This constrains only the rational-compression intersection `C`.  A Darboux
+pair confined to `C`, if one exists, must satisfy the degree/support floors
+`(24)--(26)`.  Pairs outside `C` are also open; the theorem neither forces a
+pair to leave `C` nor forces `y` itself to occur.  In particular `(24)--(27)`
+do not prove `JC(2)`.  **QED.**
+
+## 5. Exact companion
+
+Reproduce with
+
+```bash
+python3 04-computation/jc2_rational_compression_pseudoplane_intersection_thm3976.py
+python3 -O 04-computation/jc2_rational_compression_pseudoplane_intersection_thm3976.py
+```
+
+The companion verifies `(1)--(18)` symbolically, checks the coefficient-ideal
+minima and every fixed-module normal form through weight 80, exercises both
+parities and strict nonfixed `y`, and freezes the class, degree, and support
+boundaries.  The unbounded intersection proof is the grading, PID-gcd, and
+parity argument in Section 2, not extrapolation from the finite controls.

@@ -389,9 +389,12 @@ normalize it. THM-3971 excludes the all-`m` determinantal completions by the
 residue-one volume class. THM-3972 normalizes every nonconstant squarefree-
 `Xi` row and closes `a=t`, constant-`(c,r)`; general canonical-compatible
 rows, multiple `Xi` roots, reducible poles, and other nongraph/higher-depth
-debts remain. THM-3974 adds all-height few-weight Darboux gates and the
-height-two seven-piece floor; unrestricted support remains open. THM-3973/
-75/76 are RESERVED. The orthogonal THM-3955/57 node and
+debts remain. THM-3973 supplies the missing exact-volume completion passport
+and a globally nonmonogenic finite cubic, but its ramification curve meets the
+affine-plane open and blocks Keller. THM-3974 closes two-by-three and transpose at every height and
+gives the height-two seven-piece floor. THM-3976 computes the rational-
+compression pseudoplane and its internal degree/support floors. Arbitrary
+completion pairs remain open; THM-3975 is RESERVED. The orthogonal THM-3955/57 node and
 coordinate-crossing cotangent sequences are proved local sidecars, not global
 Jacobian or Hopf results.
 
@@ -402,9 +405,10 @@ decisive experiments are:
    squarefree rows; normalize multiple-`Xi`/reducible-pole and nongraph/
    higher-`P`-depth debts and compute their units, classes, incidence,
    canonical vectors, and infinity places;
-2. start from a genuinely nonmonogenic `S3` field/order outside the normal
-   monogenic grammar, or prove that the normalization parameter descends to
-   an original polynomial target coordinate;
+2. deform THM-3973's genuinely nonmonogenic cubic order so its interior
+   ramification divisor disappears while exact volume and finiteness survive;
+   use THM-3976's fixed-field pseudoplane as the hostile quotient, and still
+   test whether a normalization parameter descends to a polynomial target;
 3. search genuinely bivariate factors and simultaneous internal splits in two
    or three cube factors for an irreducible reduced full branch;
 4. compute the generic three-parabola quadratic normalization and its complete
