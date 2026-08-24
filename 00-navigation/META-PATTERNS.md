@@ -5,27 +5,15 @@ new cards require distinct-thread evidence or a severe repaired failure.
 
 ## Separate observer type, recurrence class, and finite head
 
-**Action/caution:** separate observer role, evaluator, C/P class, zeros, and bulk/residue/head; no column determines another.
-THM-3288's degree-14 tail with prefix/Hankel order 15 is a sharp head tax.
-**Evidence:** THM-3172/3186/3210, THM-3200/3211, THM-3202/3213/3288.
+**Action:** separate observer, evaluator, C/P class, zeros, and bulk/residue/head; no column determines another. THM-3288's degree-14 tail with prefix/Hankel order 15 is a sharp head tax. **Evidence:** THM-3172/3186/3210, THM-3200/3211, THM-3202/3213/3288.
 
 ## Peel the distinguished prime, then force a small torsion collision
 
-**Trigger/action:** for density-`1/p` combs on `D=pq`, split transverse
-sections from vertical spikes and Möbius-count only base loads/status bits.
-If a wall forces an unbounded primitive-unit denominator `d`, keep the clean
-residues `S`: when `r|d`, `2<=r<=7`, and `|S|>d/r`, two share an order-`r`
-coset and every unit phase separates them by at least `1/7`. **Caution:** first
-prove the high wall and finite low-pair reduction; zero-high relaxations and
-multiple movers can survive. **Evidence:** THM-2928/2941 and THM-2072.
+**Action:** for density-`1/p` combs on `D=pq`, split transverse sections from vertical spikes and Möbius-count only base loads/status bits. If a wall forces unbounded primitive-unit denominator `d`, retain clean residues `S`: for `r|d`, `2<=r<=7`, `|S|>d/r`, two share an order-`r` coset and every unit phase separates them by at least `1/7`. First prove the high wall and finite low-pair reduction; zero-high relaxations and multiple movers survive. **Evidence:** THM-2928/2941, THM-2072.
 
 ## Inventory retained power classes before classifying base-curve genus
 
-**Trigger/action:** before attacking a high-genus eliminant, inventory typed
-base-field power classes and valuations on one smooth fibre, then take the
-cheapest connected Kummer lift. **Mechanism:** odd valuations force genus.
-**Caution/evidence:** verify field, units, irreducibility, and realization;
-see THM-2617/2636 and the latter's `q`/`T` typing repair.
+**Action:** before a high-genus eliminant, inventory typed base-field power classes and valuations on one smooth fibre, then take the cheapest connected Kummer lift; odd valuations force genus. Verify field, units, irreducibility, and realization. **Evidence:** THM-2617/2636 and the latter's `q`/`T` typing repair.
 
 ## Globalize a moving-factor orbit before localizing positivity
 
@@ -43,43 +31,24 @@ see THM-2617/2636 and the latter's `q`/`T` typing repair.
 
 ## Localize a metric by common contexts before hunting catalysts
 
-**Trigger / action:** form `d_ctx(x,y)=inf_z d(x+z,y+z)` when common
-nonexpansive factors contract distance; retain left/right/two-sided contexts
-when noncommutative. It is the greatest translation-invariant pseudometric
-below `d` in a commutative metric monoid. **Caution:** without properness,
-integrality, or cancellation it may collapse; homogenization gaps alone do not
-exhibit catalysts. **Evidence:** THM-2191/2183/840/853.
+**Action:** when common nonexpansive factors contract distance, form `d_ctx(x,y)=inf_z d(x+z,y+z)`; retain left/right/two-sided contexts when noncommutative. In a commutative metric monoid it is the greatest translation-invariant pseudometric below `d`. Without properness, integrality, or cancellation it may collapse; homogenization gaps alone do not exhibit catalysts. **Evidence:** THM-2191/2183/840/853.
 
 ## Expose the obstruction first, choose the scale second
 
-**Trigger / action:** if fixed scales lose cancellation, retain the face; at a
-zero, evaluate a target-bearing transverse layer to expose valuation, carry,
-or Gram defect. **Caution:** require a seed and labels: THM-3058 has no bounded
-jet on an arbitrary zero face, while THM-3066 erases the pointed Keller ratio.
-**Evidence:** THM-2022/2159/2165/2193/2298/3058/3060/3062.
+**Action:** if fixed scales lose cancellation, retain the face; at a zero evaluate a target-bearing transverse layer for valuation, carry, or Gram defect. Require a seed and labels: THM-3058 has no bounded jet on an arbitrary zero face, while THM-3066 erases the pointed Keller ratio. **Evidence:** THM-2022/2159/2165/2193/2298/3058/3060/3062.
 
 ## Discretize phase on boundary atlas
 
-**Trigger / action:** if phases have algebraic endpoints, rewrite coefficients as currents over the lower-phase field.
-**Mechanism:** finite cyclotomic/monomial coordinates make cancellation coordinatewise.
-**Counterindication:** not a nonvanishing proof; arbitrary cuts and uniform-comb cancellation require color/amplitude/owner. A factor can be nonconstant yet phase-invisible: under a target-neutral dilation, all same-axis word harmonics remain in one residue class, so only cross-axis mixing can change the target character.
-**Evidence:** THM-2022 preserves the lowest face; THM-2303/2304 extract endpoint currents; THM-2299/2344 give the hostile cut and aligned-axis boundary, including the nonconstant twelve-tooth control.
+**Action:** at algebraic phase endpoints, rewrite coefficients as currents over the lower-phase field; finite cyclotomic/monomial coordinates make cancellation coordinatewise. **Caution:** this is not nonvanishing: arbitrary cuts and uniform combs need color/amplitude/owner. A nonconstant factor can be phase-invisible: target-neutral dilation leaves same-axis harmonics in one residue class, so only cross-axis mixing changes target character.
+**Evidence:** THM-2022, THM-2303/2304, and hostile THM-2299/2344 (including the nonconstant twelve-tooth control).
 
 ## Search the statement before the method
 
-**Trigger/action:** before naming a lemma, search its constants, quantifiers,
-shape, IDs and synonym families; dereference citations. Different methods hide
-the same theorem under disjoint vocabularies. Independent rederivation is still
-useful as explicit proof-by-proof verification. **Evidence:** MISTAKE-158/183/
-187/189/200 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
+**Action:** before naming a lemma, search constants, quantifiers, shape, IDs, synonyms, and citations; different methods hide the same theorem. Independent rederivation remains useful as explicit verification. **Evidence:** MISTAKE-158/183/187/189/200 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
 
 ## Correct the object before sharpening the technique
 
-**Trigger:** many increasingly elaborate methods stall at the same residual.
-**Action:** ask whether the optimized quantity is the actual object; replace a mean by a maximum, an intrinsic shadow by a marked/observer object, or a scalar by its profile.
-**Mechanism:** no stronger bound repairs an information-losing object.
-**Counterindication:** retain valid local estimates as components after the reframe.
-**Evidence:** the `L -> M` and observer-lens reframes in §1 of [`lrc14-history-synthesis-patterns-and-reframings-opus-S399.md`](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md), and the support-profile correction in MISTAKE-209.
+**Action:** when elaborate methods stall at one residual, test whether the optimized object is wrong: mean versus maximum, intrinsic shadow versus marked observer, scalar versus profile. Stronger bounds cannot restore lost information, though valid local estimates survive the reframe. **Evidence:** the `L -> M` and observer reframes in [S399 §1](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md), and MISTAKE-209.
 
 ## Compute the repair quotient before testing the residual defect
 
@@ -100,27 +69,18 @@ THM-3955/3957 and MISTAKE-471 are conductor hostiles.
 
 ## Type every analogy and every implication
 
-**Trigger:** formulas look identical, an analogy suggests an iff, or a scalar equation is read coefficientwise.
-**Action:** write type and implication ledgers: distinguish nodes/exponents, supports/multiplicities, labels/classes, scalar/polynomial identities, graph/tournament spectra, and notions of dimension/rank; rank coincidences need ambient modules and explicit maps, while spectra need normalization and exceptional-prime scope.
-**Mechanism:** shared notation hides type-error bridges.
-**Counterindication:** analogies remain productive conjecture generators when the missing map is explicit.
-**Evidence:** MISTAKE-209, 211, 212, 214–216, 222–225, and 227–229 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
+**Action:** when formulas look identical or an analogy suggests an iff, ledger types and directions: nodes/exponents, support/multiplicity, labels/classes, scalar/polynomial identities, graph/tournament spectra, and rank/dimension. Rank matches require ambient modules and maps; spectra require normalization and exceptional-prime scope. Analogies may generate conjectures only with the missing map explicit.
+**Evidence:** MISTAKE-209, 211, 212, 214–216, 222–225, 227–229 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
 
 ## Audit saturation and basis covariance before naming a lattice bridge
 
-**Trigger:** objects have equal rank, a generator Gram looks canonical, or a coordinate inequality gets a discriminant/class group.
-**Action:** name ambient modules and construct the map; compute kernel, cokernel or saturation index, discriminant, and minimal vectors. For coordinate quadratic claims, prove `GL_n(Z)` covariance and build the invariant form before arithmetic classes.
-**Mechanism:** full-rank frames can have huge finite index, and a max of linear forms against a chosen norm need not be one quadratic representation problem; equal rank hides torsion and basis dependence controlling short vectors.
-**Counterindication:** rank/Gram comparisons are useful when explicitly labeled as frames; class-group tools need a basis-invariant form and target-preserving map.
-**Evidence:** MISTAKE-227's index-`11!` AP chain frame and MISTAKE-229's repair of the nonexistent Heegner discriminant on THM-2053's tangent-disk union.
+**Action:** for equal ranks, canonical-looking Grams, or proposed discriminants, name ambient modules/maps and compute kernel, cokernel/saturation, discriminant, and minimal vectors. Quadratic claims need `GL_n(Z)` covariance and an invariant form before class groups.
+**Boundary:** full-rank frames can have huge index; a max of linear forms need not be one quadratic representation problem. Label frame comparisons; arithmetic transfer needs an invariant form and target-preserving map.
+**Evidence:** MISTAKE-227 (`11!` index) and MISTAKE-229 (false Heegner form on THM-2053).
 
 ## Preserve the selected side, not only the walls
 
-**Trigger:** a problem is recast as avoiding hyperplanes, hypertori, resonance walls, or forbidden bands.
-**Action:** distinguish the bare arrangement, ordinary/thickened complements, and selected inequality cells; record wall owner, sign, selected side, height, and deletion unit.
-**Mechanism:** intersection posets and complement cohomology forget the feasible side and extremal top cell.
-**Counterindication:** ordinary arrangement invariants suffice when the target is invariant under all forgotten labels and sides.
-**Evidence:** MISTAKE-224's repair of the Fourier-lattice/toric-complement conflation and the exact phase-height recovery of [THM-1002's pair-sum ruler](../01-canon/theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md).
+**Action:** for hyperplane, hypertorus, resonance, or forbidden-band models, distinguish bare arrangement, ordinary/thickened complements, and selected inequality cells; retain owner, sign, side, height, and deletion unit. Posets/cohomology forget the feasible side and extremal cell, and suffice only if the target ignores every lost label and side. **Evidence:** MISTAKE-224 and [THM-1002](../01-canon/theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md).
 
 ## Find the hidden second coordinate in a nearly true theorem
 
@@ -128,26 +88,18 @@ THM-3955/3957 and MISTAKE-471 are conductor hostiles.
 
 ## Restore a collapsed grading before transporting moments
 
-**Trigger / action:** when a diagonal moment or total count is said to encode a multigraded target, expose the omitted grading or add an observer; test translates preserving the diagonal but changing the target.
-**Mechanism:** diagonalization fixes a hidden conservation law: `CT[P^m Pbar^m]` sees augmentation zero, while mixed `CT[P^r Pbar^s]` restores grade `r-s`.
-**Counterindication:** the diagonal suffices only when the target is proved invariant under the discarded grade.
-**Evidence:** MISTAKE-226/209, THM-2352, and audited THM-2615/2620/2625:
-target difference loses endpoint origin/determinant, while the restored joint
-current fills every cell and every admissible parabolic sector.
+**Action:** when a diagonal moment or total count is claimed to encode a multigraded target, expose the lost grading/observer and test translates preserving the diagonal but changing the target. `CT[P^m Pbar^m]` fixes augmentation zero; mixed `CT[P^r Pbar^s]` restores grade `r-s`. The diagonal suffices only after target invariance under that loss is proved.
+**Evidence:** MISTAKE-226/209, THM-2352, THM-2615/2620/2625: target difference loses endpoint origin/determinant; joint current restores cells and admissible parabolic sectors.
 
 ## Refine and saturate before transporting a factor or shadow
 
-**Trigger / action:** before taking or transferring a Fourier, resultant, image, factor, or curvature shadow, refine to complete atoms or the full coefficient ideal, construct there, and saturate chart/wall artifacts.
-**Mechanism:** early smoothing or elimination creates off-diagonal leakage and false components; completion recovers the supported object.
-**Counterindication:** division is not functorial--Lorentzian factors and copied masks need a typed strict transform, lawful action, saturated ideal, or other multiplicative functor.
-**Evidence:** THM-2452/2345/2576, MISTAKE-287/215/223, THM-2348/2033, and THM-2942/2969's open coloured wall lift.
+**Action:** before transporting a Fourier, resultant, image, factor, or curvature shadow, refine to complete atoms/full coefficient ideal, construct there, and saturate chart/wall artifacts. Early smoothing/elimination creates leakage and false components. Division is not functorial: Lorentzian factors and copied masks need a typed strict transform, lawful action, saturated ideal, or multiplicative functor.
+**Evidence:** THM-2452/2345/2576, MISTAKE-287/215/223, THM-2348/2033, and open THM-2942/2969.
 
 ## Controlled forgetting and unlabeled quotients require a sidecar
 
-**Trigger/action:** for `q:X->Y`, inspect `X times_Y X`; separate off-diagonal seams and retain `ker(q)/(ker(q) intersect ker(rho))` for an action `rho`.
-For a `G`-equivariant choice field `A`, test `A(x)^(Stab_G(x))!=empty`; otherwise retain a marked/set-valued fibre. Before Cech/torsor language require a nonempty invertible composable predicate-preserving seam.
-For normalization, retain original/conductor-complement/full sites, conductor kernel, and labelled branch incidence.
-If an observer feeds another operation, use the native-operation card below: frozen-bank injectivity is not congruence. **Caution:** “minimal” is consumer-relative; set-valued/relation-valued targets need no section/torsor.
+**Action:** for `q:X->Y`, inspect `X times_Y X`, split off-diagonal seams, and retain `ker(q)/(ker(q) intersect ker(rho))` for action `rho`. A `G`-equivariant choice field needs `A(x)^(Stab_G(x))!=empty`; else keep a marked/set-valued fibre. Čech/torsor language needs a nonempty invertible composable predicate-preserving seam.
+**Boundary:** normalization retains original/conductor-complement/full sites, conductor kernel, and labelled branches. Frozen-bank injectivity is not congruence; “minimal” is consumer-relative, and relational targets need no section.
 **Evidence:** exact-six, THM-3450/3452/3454/3731/3732/3944/3951/3955/3957, MISTAKE-310/401/466.
 
 ## Quotient by the actual repair, then test the native survivor
@@ -176,15 +128,8 @@ THM-3990/3989/3991; THM-4000 is the nonlinear counterindication.
 
 ## Compose witness fibres before taking their scalar shadow
 
-**Trigger / action:** when distinct finite-to-one maps freeze different masks,
-retain base/root labels, form their cospan, disintegrate one set-valued fibre,
-cross the transverse fibre, and only then scalarize; record order, units,
-endpoints, and landing map. **Mechanism:** successive constancy converts
-correlation to incidence. **Counterindication:** shared divisors, missing high
-factors, nonunits, untransported targets, or endpoint atoms can break the count;
-a cospan is not a tournament equivalence. **Evidence:** THM-2426/2427 and
-THM-2413. Then compute the Čech nerve: THM-2680's Fibonacci one-skeleton has no
-THM-2682 two-simplex; THM-2658 requires a common gain section.
+**Action:** when finite-to-one maps freeze different masks, retain base/root labels, form the cospan, disintegrate one set-valued fibre, cross the transverse fibre, then scalarize; record order, units, endpoints, and landing. Successive constancy turns correlation into incidence. Shared divisors, missing high factors, nonunits, untransported targets, or endpoint atoms can break it; a cospan is not a tournament equivalence. Compute its Čech nerve.
+**Evidence:** THM-2426/2427/2413; THM-2680 has no THM-2682 two-simplex, and THM-2658 needs a common gain section.
 
 ## Existence is a maximum or tail question, not automatically a mean question
 
@@ -236,29 +181,11 @@ THM-2682 two-simplex; THM-2658 requires a common gain section.
 
 ## Formal verification needs a semantic witness
 
-**Trigger:** a Lean file builds, a finite decision returns true, or a theorem is
-called kernel-pure.
-**Action:** exhibit satisfiable hypotheses, test boundary branches, confirm the
-module is imported by the intended root, and audit axioms/build artifacts.
-**Mechanism:** the kernel validates the encoded implication, including vacuous
-ones; it does not certify that the formal statement matches the paper theorem.
-**Counterindication:** once semantic correspondence and non-vacuity are proved,
-kernel checking is the repository’s strongest durable evidence.
-**Evidence:** MISTAKE-186, MISTAKE-138, and MISTAKE-094 in
-[`MISTAKES.md`](../01-canon/MISTAKES.md).
+**Action:** when Lean builds or a finite decision succeeds, exhibit satisfiable hypotheses, test boundary branches, confirm root import, and audit axioms/build artifacts. The kernel validates the encoded implication, including vacuous ones, not its match to the paper theorem; after semantic correspondence and non-vacuity, kernel checking is the strongest durable evidence. **Evidence:** MISTAKE-186/138/094 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
 
 ## Treat pulls and collisions as synthesis opportunities
 
-**Trigger:** concurrent work lands on the same prompt, invariant, ID, or proof
-route.
-**Action:** pull before filing, compare distinct contributions, consolidate with
-credit, and keep independent verification only when labeled as such.
-**Mechanism:** early synthesis converts duplicated effort into cross-checks and
-often exposes a stronger common object.
-**Counterindication:** genuinely orthogonal routes should remain separate until
-an explicit reduction connects them.
-**Evidence:** MISTAKE-199 and the rebase-as-signal protocol in
-[`CONCURRENT-SESSIONS.md`](CONCURRENT-SESSIONS.md).
+**Action:** when concurrent work collides on a prompt, invariant, ID, or route, pull before filing, compare and consolidate with credit; label independent verification. Keep orthogonal routes separate until an explicit reduction connects them. **Evidence:** MISTAKE-199 and the rebase-as-signal protocol in [`CONCURRENT-SESSIONS.md`](CONCURRENT-SESSIONS.md).
 
 ## Turn certificate failure into an address, then change sidecars
 **Trigger/action:** when a sufficient gate leaves a structured residual, keep
@@ -278,57 +205,24 @@ only after factorization or target-annihilation is proved.
 **Evidence:** THM-2059/2538/3492.
 
 ## Rank local extrema, then pass closure and effectivity
-**Trigger/action:** when sharp local caps share labels, rank the spectrum, force a finite bank, retain common fibres, and then test cycle/Čech closure plus membership in the target positive, integral, polynomial, or completed category.
-**Mechanism/counterindication:** compatible marginals may still have bad triangle products or glue only in an ambient field/signed space; skip the extra gates only after proving independence or target factorization.
-**Evidence:** THM-2258/2263/2270 restore simultaneous arithmetic; THM-3388/3389 separate gaps, triangle closure, and coverage; THM-3080/3081 glue Laurent keys while THM-3383 exposes polynomial debt; THM-3396 restores cubic/quartic positivity after the Gram shadow.
+**Action:** when sharp local caps share labels, rank the spectrum, force a finite bank, retain common fibres, then test cycle/Čech closure and membership in the target positive, integral, polynomial, or completed category. Compatible marginals may have bad triangles or glue only in a field/signed space; omit gates only after independence or target factorization. **Evidence:** THM-2258/2263/2270, THM-3388/3389, THM-3080/3081/3383, THM-3396.
 
 ## “One item left” requires a typed residual
 
-**Trigger:** a synthesis declares a problem one lemma, one inequality, or one
-finite check from completion.
-**Action:** type the residual independently of the current method: its domain,
-quantifiers, symmetry, uniformity, and known equivalent names. Attack that
-typed statement before announcing proximity.
-**Mechanism:** phase-boundary summaries compress the residual into the current
-vocabulary and hide escape clauses or renamed walls.
-**Counterindication:** a genuinely finite residual with a verified exhaustive
-certificate may be called finite, with its exact checker named.
-**Evidence:** the fourteen near-completion episodes and phase-boundary analysis
-in §1 of
-[`lrc14-history-synthesis-patterns-and-reframings-opus-S399.md`](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md).
+**Action:** before saying “one lemma/inequality/check remains,” type the residual independently: domain, quantifiers, symmetry, uniformity, and equivalent names; attack it first. Current vocabulary can hide escape clauses or renamed walls. Call a residual finite only with a verified exhaustive certificate and named checker. **Evidence:** fourteen near-completions and phase-boundary analysis in [S399 §1](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md).
 
 ## Recover niches by more than citation counts
 
-**Trigger / action:** when mining neglected work, separate dormant frames,
-under-titled results, orphan computations, near-refutations, and cited stalls;
-rank by orthogonality, artifact readiness, transfer value, and probe cost.
-**Mechanism / boundary:** citation counts confuse live code with abandonment and
-stagnation with health, but remain useful after semantic inspection.
-**Evidence:** the S124 blind-spot atlas, S79 recovery ledger, and S128c136 atlas.
+**Action:** when mining neglected work, separate dormant frames, under-titled results, orphan computations, near-refutations, and cited stalls; rank by orthogonality, artifact readiness, transfer value, and probe cost. Citation counts confuse live code with abandonment and stagnation with health; use them only after semantic inspection. **Evidence:** S124, S79, and S128c136 atlases.
 
 ## Fill operation columns, not only invariant columns
 
-**Trigger/action:** when invariants abound but laws do not, test native
-generators on the object and its dual.  Before ranking `e(n)` as `n`, pull each
-generator through the rank and label it affine, polynomial, finite-state,
-decoding-dependent, or not closed. **Mechanism:** a pulled-back law makes the
-rank structural; otherwise the ordinal is only a scheduler.
-**Counterindication/evidence:** if the operation exits the carrier or the rank
-makes needed gaps, weights, ancestry, cancellation, or fibre components
-nonlocal or unrecoverable, retain a decoder and those coordinates as sidecars.  THM-3756,
-`odd-square-ordinal-berggren-affine-descent`, THM-3382,
-`fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses`,
-and THM-3758/3819 supply distinct positive and hostile evidence.
+**Action:** when invariants abound but laws do not, test native generators on the object and dual. Before treating rank `e(n)` as `n`, pull each generator through it and label the law affine, polynomial, finite-state, decoding-dependent, or unclosed. A pulled-back law makes rank structural; otherwise it only schedules. If the operation exits the carrier or rank loses gaps, weights, ancestry, cancellation, or fibre components, retain a decoder and those coordinates.
+**Evidence:** THM-3756 (`odd-square-ordinal-berggren-affine-descent`), THM-3382 (`fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses`), THM-3758/3819.
 
 ## Tournament Analysis must preserve content
 
-**Trigger / action:** pairwise data suggests a tournament: require an intrinsic
-binary relation, preserve ties, name the target, test alternate vertices, and
-compute endpoint-swap parity. **Mechanism:** antisymmetric signs may orient;
-symmetric signs are colors/gains, while Pfaffian orientation is an extra gauge.
-**Counterindication:** a gauge may resolve ties only when its support and
-preserved contraction are part of the theorem. **Evidence:** MISTAKE-212/214;
-THM-2290/2292/2294 and the S79 support-Dirichlet reflection.
+**Action:** when pairwise data suggests a tournament, require an intrinsic binary relation, preserve ties, name the target, test alternate vertices, and compute endpoint-swap parity. Antisymmetric signs may orient; symmetric signs are colors/gains, and Pfaffian orientation is an extra gauge. A gauge resolves ties only when its support and preserved contraction enter the theorem. **Evidence:** MISTAKE-212/214; THM-2290/2292/2294 and S79.
 
 ## Type a shared sum as a weighted fiber before transferring it
 
@@ -340,29 +234,16 @@ THM-2290/2292/2294 and the S79 support-Dirichlet reflection.
 
 ## Classify response-state growth before naming the closed form
 
-**Trigger/action:** for repeated joins, lifts or substitutions, derive the
-operation response first; classify its sufficient state as fixed jet, moving
-endpoint jet, time-varying transfer, or gauged arithmetic section. Test
-uniform annihilation length over the family before claiming finite detection.
-**Mechanism/limit:** one object can have finite response while family length is
-unbounded; a moving boundary jet eventually blinds every fixed derivative
-bank. These states expose tail type or decimation, not a converse or low bit
-complexity. **Evidence:** THM-3181/3202/3186/3235/3268; THM-3466 contrasts a
-uniform length-two block with its moving-jet hostile; THM-3383/3397 have debt
-strings of every length, and THM-3465 exits a depth-two kernel one power later.
+**Action:** for repeated joins, lifts, or substitutions, derive the operation response and classify sufficient state as fixed jet, moving endpoint jet, time-varying transfer, or gauged arithmetic section. Test uniform family annihilation before claiming finite detection: one object may be finite while family length is unbounded, and moving boundary jets blind every fixed derivative bank. These states expose tail/decimation, not converses or low bit complexity.
+**Evidence:** THM-3181/3202/3186/3235/3268; THM-3466's block/moving-jet contrast; unbounded THM-3383/3397 debt; THM-3465.
 
 ## Divide exceptional multiplicity before judging a wall
 
-**Trigger / action:** when a leading row or degree vanishes on a wall, retain the transverse parameter, divide the proved exceptional multiplicity, then recompute support and the first normal coefficient (reciprocally at infinity).
-**Mechanism / limit:** strict transforms activate inert terms, but need units
-and lose root labels/Keller data; a lower term may reopen the prior layer and
-force retuning. Resultant-cycle parity is not cover inertia. **Evidence:**
-THM-3231/3233/3237/3257/3263/3265.
+**Action:** when a leading row/degree vanishes on a wall, retain the transverse parameter, divide the proved exceptional multiplicity, and recompute support plus the first normal coefficient (reciprocally at infinity). Strict transforms activate inert terms but need units and lose root labels/Keller data; lower terms may reopen the prior layer and force retuning. Resultant-cycle parity is not cover inertia. **Evidence:** THM-3231/3233/3237/3257/3263/3265.
 
 ## Refine vertices and lifetimes before quotienting
 
-**Trigger/action:** if labels disconnect or faces use different lifts, components, phases, or times, split components and retain transitions, lifetimes, and a baseline before quotienting. Facewise witnesses need not recenter or cross baseline.
-Quotient only after good-cover, section, monotonicity, or factorization control. **Evidence:** THM-2658/2672, THM-2983/2985, THM-2984/MISTAKE-334, repaired THM-2991/MISTAKE-335; THM-3381 retains `Delta=hj-mL`, slope and tree degree, refuting `|h|`-only transfer.
+**Action:** if labels disconnect or faces use different lifts, components, phases, or times, split components and retain transitions, lifetimes, and baseline before quotienting; facewise witnesses need not recenter or cross baseline. Quotient only after good-cover, section, monotonicity, or factorization control. **Evidence:** THM-2658/2672, THM-2983/2985, THM-2984/MISTAKE-334, repaired THM-2991/MISTAKE-335; THM-3381 retains `Delta=hj-mL`, slope, and tree degree, refuting `|h|`-only transfer.
 
 ## Pay algebraic rank, then audit the physical action
 
@@ -374,21 +255,15 @@ Quotient only after good-cover, section, monotonicity, or factorization control.
 
 ## Audit the positive kernel before lifting through a flat square
 
-**Trigger / action:** before using deletion, transfer, or a commuting square to induct positivity, compute its kernel on the positive carrier; test a negative preimage of zero and whether known positive ghosts span the failure. Commutation transports invisibility, not order reflection.
-A positive left inverse, order-reflecting quotient, or target factorization discharges the audit; otherwise name a transverse selector. **Evidence:** THM-3122's positive derangement ghost, THM-2551's preserved all-unit kernel, and THM-3127's upset separators.
+**Action:** before deletion, transfer, or a commuting square inducts positivity, compute its positive-carrier kernel; test a negative preimage of zero and whether known positive ghosts span failure. Commutation transports invisibility, not order reflection. A positive left inverse, order-reflecting quotient, or target factorization discharges the audit; otherwise name a transverse selector. **Evidence:** THM-3122, THM-2551, THM-3127.
 
 ## Audit and close sections under their next native operation
 
-**Trigger/action:** apply the next target operation before scalarizing; retain moving labels/cocycles, test observer equality for congruence, and give every sidecar a typed update. Adaptive overflow is honest when no uniform finite observer is proved.
-Pre-scalar co-support/transition/circuit defects can stop or update the route. **Caution:** require lawful composition/basepoint; walks are not chronology. **Evidence:** THM-2292/3144/2658/3156/3285--3324/3511/3732.
+**Action:** apply the next target operation before scalarizing; retain moving labels/cocycles, test observer equality for congruence, and type every sidecar update. Adaptive overflow is honest without a uniform finite observer. Pre-scalar co-support/transition/circuit defects may stop or update the route. Require lawful composition/basepoint; walks are not chronology. **Evidence:** THM-2292/3144/2658/3156/3285--3324/3511/3732.
 
 ## Exteriorize a commutative response against the lost relation
 
-**Trigger/action:** when multiplicative `F_T` forgets join order and marked deletions factor, contract `r(z)(A-A^T)r(w)^T`; close `q=sum r_v`. Rank-one `+J/-J` cross blocks exteriorize first responses.
-**Counterindication/evidence:** stop for nonconstant cross blocks, bad deletion laws, target-bearing ties or contraction kernels; currents need not be injective or chronological. THM-3369/3372 derive `q`, THM-3377 carries it, and THM-3380's self-converse `ABBA/BAAB` kills both first currents, prompting iteration.
+**Action:** when multiplicative `F_T` forgets join order and marked deletions factor, contract `r(z)(A-A^T)r(w)^T`; close `q=sum r_v`. Rank-one `+J/-J` cross blocks exteriorize first responses. Stop for nonconstant cross blocks, bad deletion laws, target-bearing ties, or contraction kernels; currents need not be injective or chronological. **Evidence:** THM-3369/3372 derive `q`, THM-3377 carries it, and THM-3380's self-converse `ABBA/BAAB` kills both first currents, prompting iteration.
 
 ## Test filtration--observer commutation before scalarizing
-**Trigger/action:** when a tower or filtration meets a kernel, average, or quotient, compare `gr(ker)` with `ker(gr)` and retain transition maps plus eigenvalue fibres before collapsing.
-**Mechanism:** marginal observers delete extension equations and scale; persistent classes can split even when one annihilator merges them, while a discarded scalar fibre can carry growing cost.
-**Counterindication:** scalarization is safe after a proved split/semisimple square, distinct observable eigenvalues, or a target-preserving section makes both orders commute.
-**Evidence:** THM-3412's sharp `(q-1)m` kernel deficit and separated Prüfer arms; THM-3413's grouped moment-eigenvalue collisions; THM-3410's Boolean-rank/projective-tariff split.
+**Action:** when a filtration meets a kernel, average, or quotient, compare `gr(ker)` with `ker(gr)` and retain transitions plus eigenvalue fibres. Marginal observers delete extensions and scale; persistent classes may split while one annihilator merges them, and a discarded scalar fibre may carry growing cost. Scalarize only after a split/semisimple square, distinct observable eigenvalues, or target-preserving section makes both orders commute. **Evidence:** THM-3412/3413/3410.

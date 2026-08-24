@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Exact controls for the S^6 octonion structure and arXiv:2608.20875.
 
-The script has three independent jobs, all over integers or rationals:
+The script has four independent jobs, all over integers or rationals:
 
 * exhibit nonzero Nijenhuis tensor for the standard octonionic almost-complex
   structure on S^6;
 * replay the exact order-seven Lyapunov separator from Kressner--Vandereycken;
+* certify that zero padding preserves that separator in every order n >= 7;
 * test whether its skew witness is in either summand of
   Lambda^2(R^7) = Lambda^2_7 + Lambda^2_14 under the standard G2 form.
 
@@ -241,6 +242,104 @@ def audit_lyapunov_certificate():
     )
 
 
+def audit_zero_padding():
+    """Certify the direct-sum extension of the order-seven separator.
+
+    For A_m=diag(A,0_m), both parity spaces split orthogonally into the old
+    7-by-7 block, the zero m-by-m block, and cross blocks
+
+        [[0,B],[+/- B^T,0]]  ->  [[0,AB],[+/- B^T A^T,0]].
+
+    Thus every cross block is a copy of B -> AB.  The one-column controls
+    below check both signs exactly; additional columns are an orthogonal
+    direct sum of the same calculation.  Sylvester positivity of
+    1196 I-A^T A then proves that padding adds no symmetric norm at the
+    separator, while the old skew witness remains embedded unchanged.
+    """
+    separator = 1196
+    size = len(A)
+    at_a = multiply(transpose(A), A)
+    cross_separator = [
+        [
+            (separator if i == j else 0) - at_a[i][j]
+            for j in range(size)
+        ]
+        for i in range(size)
+    ]
+    lower, pivots = ldlt(cross_separator)
+    diagonal = [
+        [pivots[i] if i == j else Fraction(0) for j in range(size)]
+        for i in range(size)
+    ]
+    require(
+        multiply(multiply(lower, diagonal), transpose(lower))
+        == cross_separator,
+        "cross-block LDL reconstruction failed",
+    )
+    leading_minors = []
+    running_minor = Fraction(1)
+    for pivot in pivots:
+        running_minor *= pivot
+        require(
+            running_minor.denominator == 1,
+            "cross-block leading minor is unexpectedly nonintegral",
+        )
+        leading_minors.append(running_minor.numerator)
+    expected_minors = [
+        820,
+        570376,
+        511594136,
+        575031808864,
+        495460503327104,
+        492312750556110848,
+        588806049665108574208,
+    ]
+    require(
+        leading_minors == expected_minors and min(leading_minors) > 0,
+        "1196 I-A^T A failed the exact Sylvester certificate",
+    )
+
+    # One padded coordinate checks the cross-block formula column by column.
+    # For m>1 the identical calculation repeats independently for every
+    # column of B, so the operator is the orthogonal sum of m copies of A.
+    padded = [row + [0] for row in A] + [[0] * (size + 1)]
+
+    def cross_matrix(vector, symmetric):
+        matrix = [[0] * (size + 1) for _ in range(size + 1)]
+        sign = 1 if symmetric else -1
+        for i, entry in enumerate(vector):
+            matrix[i][size] = entry
+            matrix[size][i] = sign * entry
+        return matrix
+
+    for symmetric in (True, False):
+        for column in range(size):
+            vector = [int(i == column) for i in range(size)]
+            source = cross_matrix(vector, symmetric)
+            target = add(
+                multiply(padded, source),
+                multiply(source, transpose(padded)),
+            )
+            image = [A[row][column] for row in range(size)]
+            require(
+                target == cross_matrix(image, symmetric),
+                "padded cross block is not the claimed B -> AB operator",
+            )
+
+    frobenius_squared = sum(entry * entry for row in A for entry in row)
+    require(
+        frobenius_squared == 1751 and frobenius_squared > separator,
+        "Frobenius-bound hostile changed",
+    )
+    print(
+        "ZERO_PADDING=PASS"
+        "|cross_sym=B->AB|cross_skew=B->AB"
+        "|sylvester=" + ",".join(map(str, leading_minors))
+        + f"|frobenius_hostile={frobenius_squared}>{separator}"
+        "|all_n_ge_7=YES|n6=OPEN"
+    )
+
+
 # phi=e123+e145+e167+e246-e257-e347-e356.
 PHI_SORTED = {
     (0, 1, 2): 1,
@@ -414,6 +513,7 @@ def audit_g2_decomposition():
 def main():
     audit_s6_nijenhuis()
     audit_lyapunov_certificate()
+    audit_zero_padding()
     audit_g2_decomposition()
 
 

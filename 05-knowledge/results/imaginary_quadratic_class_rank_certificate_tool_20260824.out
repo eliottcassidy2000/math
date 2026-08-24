@@ -82,8 +82,9 @@ Output:
   REDUCED_FORMS=390,-96,2857|921,-786,1375|346,-68,3217
   PARI_AUDIT=PASS|h=864|cyc=[24, 6, 6]|ell_rank=3|halves=3,9
 
-Thus the field class group is Z/24 + Z/6 + Z/6.  Each displayed form cubes
-to the principal form, and the only relation in {0,1,2}^3 is (0,0,0).
+PARI reports the full class group as Z/24 + Z/6 + Z/6.  Unconditionally, the
+displayed forms certify an independent (Z/3)^3 subgroup: each cubes to the
+principal form, and the only relation in {0,1,2}^3 is (0,0,0).
 
 INTERNAL AND INDEPENDENT ARITHMETIC TESTS
 -----------------------------------------

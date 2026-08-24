@@ -1230,12 +1230,15 @@
   with `ord_D(Q)=2` and strict endpoint scheme
   `Spec k[y]/(gamma-R(0,y))`. The total principal-divisor ledger gives
   `[L]=2[D]` and `[sum C_i]=-2[D]`; it does not prove `Q` irreducible or assign
-  classes componentwise. The conditional two-clutch critical group `Z/2` has
+  classes componentwise. On the live seam the invariant endpoint is
+  `1-(R/gamma)(0,y)`, with derivative `-b`; boundary disjointness kills every
+  pure-`y` residual but not the forced nonzero `p^2` coefficient. The
+  conditional two-clutch critical group `Z/2` has
   no canonical map to THM-3994's local `A1` class group, and THM-3996 still
-  forces another address packet or a Jelonek value. Exact pass rows: `68`.
+  forces another address packet or a Jelonek value. Exact pass rows: `76`.
   Script/output SHA-256:
-  `633756be99402a4d193087bdfcd2c7f62d1daf13b5f2306ed9081abefe38263e` /
-  `a1fda65f8ac134d4389577184ab30e6459660204f8005239c4de46604513199f`.
+  `835d0b663e8d8cc3251b30b109d039039d681651dac034174180f4d024c63214` /
+  `fefdf2f5f29f7eddb01c96ae8dd3357e15f969174c5421d20b162db78fd6cdf3`.
 
 - `brendle_hung_lemma54_independent_audit_20260824.py`,
   `brendle_hung_vbc_exact_point_audit_20260824.py`,
@@ -1311,9 +1314,38 @@
   `2Z`. The integral lattice cocycle is generally nonzero (already for `k=1`
   over `Q`); a global torus section, not a lattice coboundary, absorbs it.
   The displayed bundle extension splits as `O direct_sum O(-1)`. No global
-  manifold, topology, or S6 conclusion follows. Script/output SHA-256:
-  `375b4220e71c25c84d285108c367761b8eae4233ddd84044d87d9568a4023e6c` /
-  `574bd8677623da01193e6f223891e24047f585027b13385ea04084b3d098611e`.
+  manifold, topology, or S6 conclusion follows. Every nonzero even primal
+  shear is nonnormal with defect rank two; this is only a typed analogy to the
+  Lyapunov normal-matrix boundary. Exact pass rows: `27`. Script/output SHA-256:
+  `2885934315acd31883c29a096df6e8264d5d3b0a2a6e69017dafddb6a989f0b8` /
+  `cdfac74f5360ac6f742f1e19963aa2143b5335dca730bdc75256b2cf07eb8ad9`.
+
+- `octonion_s6_lyapunov_exact_audit_20260824.py` -> matching `.out`
+  [VERIFIED-EXACT INVARIANT-S6 AND LYAPUNOV BOUNDARIES; BOTH HEADLINES OPEN].
+  The standard octonionic tensor is, up to sign, the only `G2`-invariant
+  almost-complex structure on `S6`, and `N_J(e1,e2)=4e4` excludes integrability
+  in that invariant lane only. For the displayed order-seven Lyapunov matrix,
+  an exact separator passes; seven positive Sylvester minors of
+  `1196I-A^T A` certify the cross block, so zero padding preserves the
+  counterexample for every `n>=7`. Every normal matrix lies on the positive
+  side and `n=6` remains open. Script/output SHA-256:
+  `2bfbc7231b7ef3c33616532b2750dfe5d6454cdbc37df7e3a92cd090584aa0f1` /
+  `e5adf0b9179f3a47f190506eeb64bf2301123e17cfb518326c1d9908209983f0`.
+
+- `imaginary_quadratic_class_rank_certificate_tool_20260824.py` and source
+  controls [VERIFIED-EXACT LOWER-BOUND CERTIFICATES + FINITE-COMPUTED BANK;
+  EVERY CHALLENGE PAIR OPEN]. Pure Gauss composition verifies independent
+  subgroups of ranks `8,4,4,3,3` for primes `3,5,7,11,13`, all below the
+  requested thresholds. The public 131,199-field 5-rank bank has one exact rank-at-least-
+  four witness but supplies no `(5,6)` line. An unconditional `bnfcertify`
+  transcript proves that the Table 5.2 one-digit 11-rank discriminant misprint
+  has no 11-torsion; the Appendix value is the valid rank-three control.
+  Tool/output SHA-256:
+  `2331ccea983aca7ab6e0ef6dbcc353ed892f7284c1c0cd32dd3012de1af4cd3a` /
+  `19a2e03dcaee9fa419721e15dc35c184faf6b9279bcfbfa929f2a1bb9dbaf116`.
+  Public-bank/typo outputs:
+  `b00ecc0a9abb156d2518cfa6e1f0deb6dc7b9808374782225265385e6369e70d` /
+  `646d79c07e9ec8bec975d6fb431ed5128fff34ed8d075d732d3acd18c940e477`.
 
 - `jc2_double_torus_nonlinear_balanced_partial_split_scout.py` -> matching
   `.out` [VERIFIED-EXACT + INDEPENDENTLY FORMULA-AUDITED SCOUT; NOT CANON].

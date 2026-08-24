@@ -3,8 +3,9 @@
 
 The proof of divisor multiplicities and class identities is geometric and is
 written in the theorem.  This certificate independently checks the canonical
-extension Q=G/t, the boundary chart and endpoint polynomial, the monomial
-ideal iff, the R=0 G_m control, and the correctly oriented two-cycle matrix.
+extension Q=G/t, the boundary chart and endpoint polynomial, the THM-3997
+live-seam endpoint corollary, the monomial ideal iff, the R=0 G_m control,
+and the correctly oriented two-cycle matrix.
 """
 
 from __future__ import annotations
@@ -69,6 +70,52 @@ boundary_restriction = sp.expand(Q_over_x2_chart.subs({x: 0, z: 0, p: 0}))
 zero("boundary restriction Q/x^2=gamma-R(0,y)", boundary_restriction - (gamma - R0))
 zero("endpoint polynomial is nonzero at y=0", boundary_restriction.subs(y, 0) - gamma)
 
+# On the THM-3997 live seam, normalize the endpoint equation by gamma.  The
+# residual mu_5 action scales R and gamma together and fixes p,y, so this
+# normalized polynomial descends to the residual quotient.  The coefficient
+# b=[y](R/gamma) is its negative first derivative at the origin.
+A5 = a**5
+R_tilde = sp.expand(R/gamma)
+b = k00/gamma
+endpoint_normalized = sp.expand(1 - R_tilde.subs(p, 0))
+zero("live normalized endpoint E(0)=1", endpoint_normalized.subs(y, 0) - 1)
+zero(
+    "live normalized endpoint E'(0)=-b",
+    sp.diff(endpoint_normalized, y).subs(y, 0) + b,
+)
+print("RESULT over algebraically closed k, b!=0 makes E nonconstant and forces a boundary endpoint")
+zeta = sp.symbols("zeta", nonzero=True)
+zero(
+    "normalized endpoint is invariant under common mu5 scaling",
+    (1 - (zeta*R0)/(zeta*gamma)) - endpoint_normalized,
+)
+gate(
+    "A5 is invariant under the residual fifth-root action",
+    sp.rem(zeta**10 - 1, zeta**5 - 1, zeta) == 0,
+)
+
+# THM-3997 fixes the first interior coefficient on the live seam.  The
+# boundary projection p=0 kills it.  Imposing the boundary-disjoint ideal in
+# this representative polynomial therefore leaves a nonzero residual with
+# exactly the forced p^2 coefficient; the theorem's monomial argument below
+# proves the same ideal statement without a degree bound.
+forced_p2_tilde = -sp.Rational(16, 3)/A5**2
+R_live_tilde = sp.expand(R_tilde.subs(h00, gamma*forced_p2_tilde))
+zero(
+    "live seam forces [p^2](R/gamma)=-16/(3*A5^2)",
+    R_live_tilde.subs(y, 0).coeff(p, 2) - forced_p2_tilde,
+)
+R_disjoint_tilde = sp.expand(R_live_tilde.subs({k00: 0, k01: 0}))
+zero(
+    "boundary-disjoint representative has no p-free residual",
+    R_disjoint_tilde.subs(p, 0),
+)
+zero("boundary-disjoint representative forces b=0", b.subs(k00, 0))
+gate(
+    "boundary-disjoint live seam retains mandatory interior p^2 residual",
+    simp(R_disjoint_tilde.subs(y, 0).coeff(p, 2)) != 0,
+)
+
 # The ideal statement is monomial.  Exhaustion through total degree eight is
 # a hostile control; the theorem proves it from the two monomial generators.
 checks = 0
@@ -124,6 +171,7 @@ gate("div(Q)=C_total+2D class balance", class_companion_total + 2*class_D == 0)
 gate("div(G)=L+C_total class balance", class_L + class_companion_total == 0)
 
 print("LIMITATION=total strict divisor only; factor ownership and node-address completeness are not inferred")
+print("FIREWALL=endpoint projection p=0 erases the mandatory live p^2 coefficient and determines no owner/address")
 print("FIREWALL=graph critical Z/2 is not THM-3994 local A1 class group Z/2")
 print("THEOREM_ID=THM-3999")
 print("ALL THM-3999 EXACT CHECKS PASSED")

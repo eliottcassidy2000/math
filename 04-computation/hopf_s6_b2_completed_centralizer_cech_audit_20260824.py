@@ -33,6 +33,32 @@ A2 = T2.inv().T
 A0 = (A1 * A2).inv()
 I4 = eye(4)
 
+# The primal simultaneous-centralizer family is C_b=I+bE14; its dual action
+# is Q_b=I+bE41.  The exact normality defect gives a typed comparison with the
+# Lyapunov normal-matrix no-go, but no Lyapunov or S6 conclusion.
+E14 = Matrix.zeros(4)
+E14[0, 3] = 1
+centralizer_b = symbols("centralizer_b", integer=True)
+C_b = I4 + centralizer_b * E14
+normality_defect = C_b * C_b.T - C_b.T * C_b
+normality_expected = centralizer_b**2 * Matrix.diag(1, 0, 0, -1)
+require(
+    "C_b=I+bE14 centralizes both primal monodromies",
+    C_b * T1 == T1 * C_b and C_b * T2 == T2 * C_b,
+)
+require(
+    "C_b normality defect is b^2(E11-E44)",
+    normality_defect == normality_expected,
+)
+require(
+    "nonzero even generator b=2 has normality-defect rank two",
+    normality_defect.subs(centralizer_b, 2).rank() == 2,
+)
+require(
+    "identity shift b=0 is normal",
+    normality_defect.subs(centralizer_b, 0) == Matrix.zeros(4),
+)
+
 gamma_hat = Matrix([1, 0, 0, 0])
 u_hat = Matrix([0, 1, 0, 0])
 w_hat = Matrix([0, 0, 1, 0])
@@ -42,6 +68,14 @@ E41 = Matrix.zeros(4)
 E41[3, 0] = 1
 k = symbols("k", integer=True)
 Q_even = I4 + 2 * k * E41
+
+require(
+    "dual Q_(2k) has the opposite normality-defect formula",
+    Q_even * Q_even.T - Q_even.T * Q_even
+    == -4 * k**2 * Matrix.diag(1, 0, 0, -1),
+)
+print("RESULT C_b is normal iff b=0; every nonzero even b=2k shift is nonnormal of defect rank two")
+print("FIREWALL centralizer nonnormality is only a typed analogy to the Lyapunov normal-matrix no-go")
 
 require("A1*A2*A0=I", A1 * A2 * A0 == I4)
 require(

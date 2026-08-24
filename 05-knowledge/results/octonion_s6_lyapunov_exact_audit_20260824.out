@@ -10,6 +10,7 @@ Output:
   OCTONIONIC_S6=PASS|J_squared=-I|N_J(e1,e2)=4e4
   LYAPUNOV_SEPARATOR=PASS|symmetric_pivot_min=226234934963062878898224413165484484/2751212391790164249257198715111255|skew_fraction=64387950/53836|surplus_over_1196=94
   A_IS_NORMAL=NO|commutator_rank=7|commutator_frobenius_squared=819518
+  ZERO_PADDING=PASS|cross_sym=B->AB|cross_skew=B->AB|sylvester=820,570376,511594136,575031808864,495460503327104,492312750556110848,588806049665108574208|frobenius_hostile=1751>1196|all_n_ge_7=YES|n6=OPEN
   G2_TWO_FORM_SPLIT=PASS|upper_norm_squared=26918|projection_7=13296|projection_14=13622|witness_is_pure_7=NO|witness_is_pure_14=NO
   A_G2_CHANNELS=PASS|one=729/7|twenty_seven=6677/7|seven=237|fourteen=456|all_nonzero=YES
 
@@ -37,7 +38,18 @@ Interpretation and scope:
   certificate relative to its displayed matrix, not peer review of the
   preprint.
 
-* The third line proves that this A is strongly nonnormal: AA^T-A^TA has full
+* The zero-padding line closes the direct-sum implication exactly.  For
+  diag(A,0_m), each symmetric and skew cross block has the form
+
+      [[0,B],[+/-B^T,0]] -> [[0,AB],[+/-B^T A^T,0]],
+
+  so its norm is the norm of B -> AB.  The seven displayed leading minors of
+  1196 I-A^T A are positive, while the old skew witness remains embedded.
+  Hence the same strict separator works in every order n>=7.  The value
+  ||A||_F^2=1751>1196 is a hostile showing that a crude Frobenius bound cannot
+  replace the spectral/Sylvester check.  The order-six case remains open.
+
+* The nonnormality line proves that this A is strongly nonnormal: AA^T-A^TA has full
   rank seven.  A separate elementary argument in the companion synthesis
   proves that every real normal A lies on the conjecture-positive locus.
 

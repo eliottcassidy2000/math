@@ -3,6 +3,15 @@ RING=B2=k[x,z,p,y] with z=1+x^2*t, p=z*t, y=x*t*p
 PASS  canonical extension G=t*Q
 PASS  boundary restriction Q/x^2=gamma-R(0,y)
 PASS  endpoint polynomial is nonzero at y=0
+PASS  live normalized endpoint E(0)=1
+PASS  live normalized endpoint E'(0)=-b
+RESULT over algebraically closed k, b!=0 makes E nonconstant and forces a boundary endpoint
+PASS  normalized endpoint is invariant under common mu5 scaling
+PASS  A5 is invariant under the residual fifth-root action
+PASS  live seam forces [p^2](R/gamma)=-16/(3*A5^2)
+PASS  boundary-disjoint representative has no p-free residual
+PASS  boundary-disjoint representative forces b=0
+PASS  boundary-disjoint live seam retains mandatory interior p^2 residual
 PASS  monomial ideal iff p^0 y^0
 PASS  monomial ideal iff p^0 y^1
 PASS  monomial ideal iff p^0 y^2
@@ -69,6 +78,7 @@ PASS  div(t)=L-2D class balance
 PASS  div(Q)=C_total+2D class balance
 PASS  div(G)=L+C_total class balance
 LIMITATION=total strict divisor only; factor ownership and node-address completeness are not inferred
+FIREWALL=endpoint projection p=0 erases the mandatory live p^2 coefficient and determines no owner/address
 FIREWALL=graph critical Z/2 is not THM-3994 local A1 class group Z/2
 THEOREM_ID=THM-3999
 ALL THM-3999 EXACT CHECKS PASSED

@@ -561,6 +561,24 @@ and [output](../05-knowledge/results/hopf_s6_b2_completed_centralizer_cech_audit
 with the status boundary recorded in the
 [S6 source ledger](../05-knowledge/reference/CORE-PAPERS-HOPF-S6-2026-08-24.md).
 
+There is one precise matrix-level connection to the incoming Lyapunov audit,
+and it stops at a shared predicate. For the primal centralizer
+
+```text
+C_b=I+bE14,
+
+C_b C_b^T-C_b^T C_b=b^2(E11-E44).                         (19a)
+```
+
+Thus `C_b` is normal exactly for `b=0`; for every nonzero even `b=2k` in the
+conditionally extendable marked orbit, the normality defect has rank two. The
+dual family `Q_b=I+bE41` has the opposite defect. The Lyapunov result says a
+normal matrix cannot violate its symmetric-maximizer inequality, so both
+frontiers select nonnormality as necessary freedom. This is only a typed
+analogy: the matrices have different sizes and consumers, nonnormality is not
+sufficient for either construction, and `(19a)` transfers neither a Lyapunov
+counterexample nor compactness, integrability, topology, or an `S6` result.
+
 This does not classify arbitrary biholomorphisms and does not validate the
 manuscript's analytic construction.  The live work is now to reconstruct the
 infinite-fan quotient, the oriented attaching maps, and nearby-cycle

@@ -13,10 +13,7 @@ This maps imported claims, consumers, and exclusions; links—not bare IDs—are
 - **Flows:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes the exact-cost conjecture; cost-free `d_max` and planar `2d_max` survive.
 - **Reciprocals:** support differs from indexed multiplicity; figurate formulas omit repo extensions.
 - **JC/DC:** THM-1300 refutes `JC(n>=3)`; `JC(2),DC(1),DC(2)` are open. THM-2071 is local; THM-2044 refutes the two-pair Poisson claim.
-- **Two Hopf problems:** the [Brendle--Hung `S2 x S2` claim](CORE-PAPERS-BRENDLE-HUNG-S2XS2-2026-08-24.md)
-  and [Hopf/S6 claim](CORE-PAPERS-HOPF-S6-2026-08-24.md) are distinct **PREPRINT CLAIM / UNDER AUDIT** results, not solved claims.
-  THM-3990 proves only the final repair quotient; THM-3991 only the factorial
-  Euler obstruction; THM-3993 only a local labelled wall-response theorem.
+- **Two Hopf problems:** the [Brendle--Hung `S2 x S2` claim](CORE-PAPERS-BRENDLE-HUNG-S2XS2-2026-08-24.md) and [Hopf/S6 claim](CORE-PAPERS-HOPF-S6-2026-08-24.md) are distinct **PREPRINT CLAIM / UNDER AUDIT** results, not solved claims. THM-3990 proves only the final repair quotient; THM-3991 only the factorial Euler obstruction; THM-3993 only a local labelled wall-response theorem.
 
 ## Rule 30
 
@@ -28,22 +25,10 @@ This maps imported claims, consumers, and exclusions; links—not bare IDs—are
 
 ### Sungkawichai--Trakulthongchai — *Eleven, twelve, and thirteen lonely runners*
 
-- **Primary / freshness:** [arXiv:2604.23906v1](https://arxiv.org/abs/2604.23906),
-  submitted 2026-04-26. **PREPRINT v1; not peer reviewed as of this check.**
-- **Imported role:** a computer-assisted divisibility sieve proves LRC for
-  `k=10,11,12` nonzero speeds.  The paper also gives a finite-field polynomial
-  shortcut when `k+1` and a sufficiently large auxiliary modulus are odd
-  primes, and identifies the initial improper-tuple computation as the
-  extension bottleneck.
-- **Repo consumers:**
-  [LRC14 frontier](../../00-navigation/LRC14-FRONTIER-2026-07-15.md),
-  [finite-check feasibility ledger](../../00-navigation/LRC14-FINITE-CHECK-FEASIBILITY-LEDGER-2026-07-19.md),
-  [THM-1288, literal Conjecture 7.1 refutation](../../01-canon/theorems/THM-1288-c71-refuted-divisor-aligned-clusters.md),
-  [THM-523](../../01-canon/theorems/THM-523-lrc14-singular-series-proof-skeleton.md).
-- **Does not prove:** `k=13`, i.e. the standard fourteen-runner case.  Its
-  Conjecture 7.1 is false as literally written by the exact family in THM-1288;
-  do not use it as an inverse theorem.  The prime shortcut also does not cross
-  the composite `k+1=14` lift wall.
+- **Primary / freshness:** [arXiv:2604.23906v1](https://arxiv.org/abs/2604.23906), submitted 2026-04-26. **PREPRINT v1; not peer reviewed as of this check.**
+- **Imported role:** a computer-assisted divisibility sieve proves LRC for `k=10,11,12` nonzero speeds; it also gives a finite-field polynomial shortcut when `k+1` and a sufficiently large auxiliary modulus are odd primes, and identifies the initial improper-tuple computation as the extension bottleneck.
+- **Repo consumers:** [LRC14 frontier](../../00-navigation/LRC14-FRONTIER-2026-07-15.md), [finite-check feasibility ledger](../../00-navigation/LRC14-FINITE-CHECK-FEASIBILITY-LEDGER-2026-07-19.md), [THM-1288, literal Conjecture 7.1 refutation](../../01-canon/theorems/THM-1288-c71-refuted-divisor-aligned-clusters.md), and [THM-523](../../01-canon/theorems/THM-523-lrc14-singular-series-proof-skeleton.md).
+- **Does not prove:** `k=13`, the standard fourteen-runner case. Conjecture 7.1 is false as literally written by THM-1288's exact family; do not use it as an inverse theorem. The prime shortcut also does not cross the composite `k+1=14` lift wall.
 
 ### Vaaler — *Some extremal functions in Fourier analysis*
 

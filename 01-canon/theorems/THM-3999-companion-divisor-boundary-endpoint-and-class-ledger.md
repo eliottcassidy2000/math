@@ -10,7 +10,12 @@ status: >
   div(t)=L-2D, div(Q)=sum C_i+2D, and div(G)=L+sum C_i, hence
   [L]=2[D] and [sum C_i]=-2[D]. These are total-divisor statements: they do
   not prove Q irreducible, complete the node-address census, or turn the
-  two-clutch graph critical group into a local class-group obstruction.
+  two-clutch graph critical group into a local class-group obstruction. On
+  the THM-3997 live seam the normalized endpoint is the residual-mu5
+  invariant E(y)=1-(R/gamma)(0,y), with E'(0)=-b. Thus b!=0 forces an
+  endpoint, while boundary disjointness forces b=0 and R in (p^2,py) but
+  retains the mandatory interior coefficient
+  [p^2](R/gamma)=-16/(3A5^2)!=0.
 source: root + conductor_incidence / planar Jacobian continuation, 2026-08-24
 audit: >
   PASS (conductor_incidence + laurent_rows, 2026-08-24). Q membership,
@@ -19,19 +24,21 @@ audit: >
   and the THM-3994/3996 firewall were independently reconstructed. A repeated
   endpoint gives the expected length-two local algebra. The provisional
   same-direction incidence matrix was corrected to the oppositely oriented
-  two-cycle. Normal, optimized, and stored certificate outputs match.
+  two-cycle. The live-seam normalization, residual-mu5 invariance, endpoint
+  derivative, and boundary-blind mandatory p^2 coefficient were replayed
+  against THM-3997. Normal, optimized, and stored certificate outputs match.
 depends_on:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
   - THM-3992-reduced-two-three-cusp-jet-repair-and-first-node-residual
+  - THM-3997-reduced-two-three-hasse-repair-and-zero-residual-no-go
 related:
   - THM-3955-node-cotangent-normalization-kernel-and-conductor-torsion
   - THM-3994-double-resultant-collision-separates-two-address-and-length-two-seams
   - THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy
-  - THM-3997-reduced-two-three-hasse-repair-and-zero-residual-no-go
 script: 04-computation/jc2_companion_divisor_endpoint_thm3999.py
 output: 05-knowledge/results/jc2_companion_divisor_endpoint_thm3999.out
-script_sha256: 633756be99402a4d193087bdfcd2c7f62d1daf13b5f2306ed9081abefe38263e
-output_sha256: a1fda65f8ac134d4389577184ab30e6459660204f8005239c4de46604513199f
+script_sha256: 835d0b663e8d8cc3251b30b109d039039d681651dac034174180f4d024c63214
+output_sha256: fefdf2f5f29f7eddb01c96ae8dd3357e15f969174c5421d20b162db78fd6cdf3
 hash_basis: raw LF bytes
 ---
 
@@ -148,6 +155,61 @@ of `gamma-R_0` is a transverse endpoint. A repeated root records only
 intersection multiplicity; it does not prove that a component is smooth or
 that `Q` is irreducible.
 
+### 2.1 The live seam has an invariant endpoint gate and a blind interior coefficient
+
+Now impose the live continued seam of THM-3997. Put
+
+```text
+A5=a^5,               Rtilde=R/gamma,
+b=[y]Rtilde=beta/gamma.                                  (12a)
+```
+
+The residual fifth-root action scales `R` and `gamma` by the same character,
+fixes `p,y`, and fixes `A5`. Since `gamma` is a unit, multiplying the endpoint
+equation by `gamma^-1` does not change its closed subscheme. Thus `(10)` has
+the invariant normalized form
+
+```text
+C_str intersect D=Spec k[y]/(E(y)),
+E(y)=1-Rtilde(0,y),          E(0)=1,       E'(0)=-b.      (12b)
+```
+
+In particular,
+
+```text
+b!=0  implies  C_str intersect D is nonempty.             (12c)
+```
+
+Indeed, `b!=0` makes `Rtilde(0,y)` nonconstant, and a nonconstant polynomial
+over the algebraically closed field `k` takes the value one. The converse is
+false: if `b=0`, higher pure-`y` terms may still produce endpoints.
+
+The disjoint lane is sharper. Equations `(11)--(12)` force
+
+```text
+C_str intersect D empty
+ implies R in (p^2,py),              b=0.                 (12d)
+```
+
+But THM-3997 simultaneously fixes
+
+```text
+[p^2]Rtilde=-16/(3A5^2)!=0.                              (12e)
+```
+
+Hence on this lane one can write
+
+```text
+Rtilde=p^2 Htilde+py Ktilde,
+Htilde(0,0)=-16/(3A5^2).                                 (12f)
+```
+
+The strict companion can therefore be boundary-disjoint while its residual
+is provably nonzero. The endpoint map sees `b` and the remaining pure-`y`
+coefficients but kills the first mandatory live coefficient `(12e)`. This is
+an exact information-loss statement, not a factorization, owner, node-address,
+properness, or Jelonek conclusion.
+
 ## 3. Principal divisors and class signs
 
 Let `L` be the strict closure of `V(t)` and let `C_i` be the prime
@@ -263,6 +325,10 @@ class. It destroys factor ownership, normalized-address orientation,
 completeness of the node fibre, and properness/Jelonek information.
 THM-3996 restores the address and properness coordinates only after a
 complete packet is specified.
+
+On the THM-3997 live seam, division by `gamma` refines the endpoint coordinate
+to the invariant polynomial `E(y)` in `(12b)`. Its first derivative records
+`-b`, but the projection `p=0` erases the forced nonzero coefficient `(12e)`.
 
 The cheapest next tests are therefore precise:
 

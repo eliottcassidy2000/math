@@ -340,55 +340,33 @@ asymptotic or residue.
   fixed ray. Static tariff: `2^(D+B-1)+B+2`; all-depth/physical prizes remain
   **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
-  preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. THM-3990 validates
-  only the final connected-component repair; THM-3991 gives `chi=d*n!` only
-  for the stated periodic fan grammar; THM-3993 gives only a local labelled
-  wall-response quotient. The Brendle--Hung mixed identities are now exact
-  relative to one reconstructed moving-frame implementation; the other
-  quadratic summands, cubic integral, smooth extension, and headline remain
-  open. Conditional on the displayed `S6` analytic pieces and logarithm-sheaf
-  compatibility, the marked centralizer-generated completed orbit is `2Z`;
-  the infinite-fan quotient, attaching maps, nearby cycles, global recognition,
-  and headline remain open. Independently, the standard octonionic tensor is
-  one of exactly two `G2`-invariant almost-complex structures on `S6`, and the
-  exact witness `N_J(e1,e2)=4e4` makes both nonintegrable; this excludes only
-  the invariant lane, not an arbitrary complex structure. The order-seven
-  Lyapunov preprint's displayed separator is exact, while a proved normal-
-  matrix theorem excludes every normal candidate and leaves `n=6` open.
-  Neither ledger verifies a global manifold.
+  preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. Relative to one
+  reconstructed Brendle--Hung implementation, the mixed identities and
+  generic positive-definite normal Hessian are exact; the other summands,
+  cubic integral, extension, and headline remain open. Conditional on the
+  stated `S6` analytic pieces, the marked completed orbit is `2Z`; quotient,
+  attaching, nearby-cycle, recognition, and headline gates remain. The only
+  `G2`-invariant almost-complex tensors are the standard octonionic `+/-J`,
+  and `N_J(e1,e2)=4e4` excludes only that invariant lane. The order-seven
+  Lyapunov separator and its zero-padding to every `n>=7` are exact; normal
+  matrices cannot be counterexamples and `n=6` is open. No global manifold
+  follows from these ledgers.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3782 close
-  named cells only. THM-3827--3972 route genus/degree, root/cusp/jet, `f=0`,
-  cylinder and residue packets; global roots and arbitrary `f!=0` stay open.
-  THM-3973--3984 give the finite-cubic passport, support floors, plinth and
-  boundary ledgers, formal lifting, slope and monomial-coupling closures.
-  THM-3985 closes `k[p,y]`; THM-3986 closes each one-positive-`x` adjacency;
-  THM-3987 forces three weights per output (`3x4/4x3` first). THM-3989 leaves
-  nondividing depths, first `2:3`; its seam class blocks automatic root lifting.
-  THM-3992 forces `h=gamma*s`, a nodal boundary and `R in (p^2,y)`; its first
-  seam is exactly square-liftable or has `[s^2]b=2a`. In the first branch the
-  square lift is necessarily nodal and cannot be a simultaneous pure cube;
-  the second reaches `ell=3` only on `a^3+2gamma=0` and has a finite jet
-  through `ell=6`, not a `B_2` lift. THM-3997's first positive diagonal forces
-  `[s]q0=a/gamma`, so an actual pair selects the second branch; combined with
-  its next seam this gives `gamma=-a^3/2` and `[p^2]R=8/(3a^7)!=0`. Its Hasse
-  transform is an all-row polynomiality iff, while a second diagonal and an
-  independent elliptic-reduction argument separately exclude `R=0`.
-  THM-3994 separates a double resultant into either two transverse addresses
-  or one length-two `A1` centre; multiplicity alone is not a closure test.
-  THM-3996 proves that a complete finite-locus node-address graph is balanced:
-  its edges lie on cycles, while a complete forest forces nonproperness. Its
-  finite-flat completion also gives the exact fibre-defect test
-  `y notin S_F iff #F^-1(y)=d`; hence THM-3992's node has a third address or
-  is Jelonek. It does not decide which alternative or the ownership census.
-  THM-3998 gives an independent conic/ODE proof of a fixed-node `3`-by-at-most-
-  `3` raw weight cell already excluded by THM-3974/3987; it does not enlarge
-  the closed region, whose first live retained-support sizes remain `3x4/4x3`.
-  THM-3999 proves the total companion boundary ledger:
-  `ord_D(Q)=2`, endpoint scheme `Spec k[y]/(gamma-R(0,y))`, and total strict
-  class `-2[D]`. It does not prove `Q` irreducible or complete the address
-  census; the two-cycle critical `Z/2` has no canonical map to THM-3994's
-  local `A1` class group.
-  Multi-term cancellation, finite Keller/Darboux entry, and `JC(2)` stay open.
+  named cells; THM-3827--3972 route genus/degree, root/cusp/jet, `f=0`, and
+  residue passports, not global roots or arbitrary `f!=0`. THM-3973--3989 give
+  the finite-cubic, support, boundary, formal-lift, and first nondividing-depth
+  ledgers; retained-support floor starts at `3x4/4x3`. THM-3992 reduces the
+  first `2:3` cell to a nodal boundary and `R in (p^2,y)`; the live branch has
+  `gamma=-a^3/2`, finite jet through `ell=6`, and no proved `B_2` lift.
+  THM-3997 gives an all-row Hasse iff, forces `[p^2]R=8/(3a^7)!=0`, and
+  separately excludes `R=0` by elliptic reduction. THM-3994/3996 separate
+  length-two from two-address seams and force a third node address or Jelonek
+  value, without ownership. THM-3998 only reproves an already closed `3x<=3`
+  cell. THM-3999 gives `ord_D(Q)=2`, endpoint
+  `Spec k[y]/(gamma-R(0,y))`, and total class `-2[D]`; boundary disjointness
+  kills pure-`y` residuals but not the mandatory `p^2` coefficient. It proves
+  neither irreducibility nor address completeness. Multi-term cancellation,
+  finite Keller/Darboux entry, and `JC(2)` stay open.
   Russell THM-3785/3843--3871 close named depth-through-five packets; the
   nonreduced `(6,4)`, rational corrections, and global entry remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
@@ -405,15 +383,13 @@ asymptotic or residue.
 - **Factorial:** THM-3483 closes exact-support quadratics through `r=10028`.
   In `9980<=d<=10030`, `9/36/6` rows close by exit/divisor/rho; at `d=9996`
   the divisor barcodes leave `3998` and `p=19` is the first ordered killer.
-  This refutes only barcode completeness; `d=6518` needs `p=29`.
-  THM-3182--3314 give reset/thickness/Clifford and sheet/cone data but
-  leave endpoint ancestry/positivity. THM-3465/3470 close named character/shear
-  cells; support `5` and mixed cells remain OPEN. THM-3466 need not separate;
-  THM-3732's `F12/F13` seam fails on two edges. THM-4001 proves that the first
-  `k` coordinatewise cyclotomic factorial responses recover every known-
-  arity multiset `{a_i^d}`; diagonal averaging, unknown zero arity, root
-  branches, and nonmultiplicativity block any FC/HFC transfer. HFC-null still needs an
-  orientation/basepoint; HFC(3), FC(3), `JC(2)` and arbitrary faces remain OPEN.
+  This refutes only barcode completeness. THM-3182--3470 close named carrier,
+  character, and shear cells; support `5`, ancestry, positivity, and mixed
+  cells remain open. THM-4001 recovers every known-arity multiset `{a_i^d}`
+  from its first `k` coordinatewise cyclotomic factorial responses; diagonal
+  averaging, unknown zero arity, root branches, and nonmultiplicativity block
+  FC/HFC transfer. HFC-null still needs orientation/basepoint; HFC(3), FC(3),
+  `JC(2)` and arbitrary faces remain **OPEN**.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

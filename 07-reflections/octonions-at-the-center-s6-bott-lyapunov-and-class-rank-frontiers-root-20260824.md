@@ -271,11 +271,65 @@ the order-seven certificate is **VERIFIED EXACT**:
 64387950-1196*53836=94.
 ```
 
-Padding by zero blocks gives the same failure for every `n>=7`; `n=6`
-remains **OPEN**.  This verifies an exact certificate, not peer review of the
-v1 preprint or its unreproduced numerical discovery narrative.
+This verifies an exact certificate, not peer review of the v1 preprint or its
+unreproduced numerical discovery narrative.
 
-### 8.1 A new exact boundary: normal matrices cannot be counterexamples
+### 8.1 Zero padding preserves the separator exactly
+
+**PROVED HERE + VERIFIED EXACT.**  For `m>=0`, put
+
+```text
+A_m=diag(A,0_m).
+```
+
+Both parity spaces have orthogonal block decompositions into the old
+`7 by 7` parity block, the lower `m by m` parity block, and matrices
+
+```text
+X_+(B)=[[0,B],[ B^T,0]] in Sym_(7+m),
+X_-(B)=[[0,B],[-B^T,0]] in Skew_(7+m),       B in R^(7 by m).
+```
+
+The lower block is killed, while direct multiplication gives
+
+```text
+L_(A_m)(X_+(B))=X_+(AB),
+L_(A_m)(X_-(B))=X_-(AB),
+
+||X_+(B)||_F^2=||X_-(B)||_F^2=2||B||_F^2.                (17a)
+```
+
+Thus the new cross restriction is exactly `B -> AB` in both parities, not an
+uncontrolled consequence of padding.  The committed exact audit gives the
+leading principal minors of `1196 I-A^T A` as
+
+```text
+820,
+570376,
+511594136,
+575031808864,
+495460503327104,
+492312750556110848,
+588806049665108574208.                                  (17b)
+```
+
+Every entry is positive, so Sylvester's criterion proves
+`||A||_2^2<1196`.  Consequently
+
+```text
+||L_(A_m)|Sym||^2
+ =max(||L_A|Sym_7||^2,||A||_2^2,0)<1196,
+
+||L_(A_m)|Skew||^2 >= ||L_A|Skew_7||^2>1196.             (17c)
+```
+
+The original skew witness simply occupies the old block.  Hence zero padding
+proves counterexamples in every order `n>=7`.  The hostile
+`||A||_F^2=1751>1196` shows why a Frobenius bound would not close the cross
+block; the exact spectral/Sylvester sidecar is load-bearing.  Padding cannot
+descend in order, so `n=6` remains **OPEN**.
+
+### 8.2 A new exact boundary: normal matrices cannot be counterexamples
 
 **PROVED HERE.**  Let `A` be any real normal `n x n` matrix.  Complexification
 preserves the norm of a real operator.  Choose a complex unitary `U` with
@@ -310,7 +364,7 @@ rank(AA^T-A^TA)=7,
 This shifts the order-six frontier from a dimension hunt to a structured
 nonnormal-interference hunt.
 
-### 8.2 What survives the `G2` type check
+### 8.3 What survives the `G2` type check
 
 After choosing `phi`, the representation decompositions
 
@@ -335,7 +389,7 @@ The real connection is therefore a hostile representation-theoretic lens:
 the counterexample needs symmetry-breaking nonnormal mixing across channels.
 The equality `dim Sym^2(R7)=28=dim so(8)` is not by itself an equivariant map.
 
-### 8.3 Cheapest next experiment
+### 8.4 Cheapest next experiment
 
 Project `A` into its `1,27,7,14` channels, compute certified interval bounds
 for the symmetric--skew norm gap for every ablation, and then vary the
@@ -404,8 +458,9 @@ controls and 95-product agreement with PARI.  The full commands, hostiles,
 and extracted rank-eight line are in the
 [result ledger](../05-knowledge/results/imaginary_quadratic_class_rank_certificate_tool_20260824.out).
 Five [exact below-threshold control lines](../05-knowledge/results/imaginary_quadratic_class_rank_below_threshold_controls_20260824.txt)
-give ranks `8,4,4,3,3` for `ell=3,5,7,11,13`; all pass the pure verifier and
-are deliberately labelled as zero-credit controls rather than submissions.
+certify rank lower bounds `8,4,4,3,3` for `ell=3,5,7,11,13`; all pass the pure
+verifier and are deliberately labelled as zero-credit controls rather than
+submissions.
 
 The structured `(3,9)` scout reached Elkies's exact rank-eight field,
 
