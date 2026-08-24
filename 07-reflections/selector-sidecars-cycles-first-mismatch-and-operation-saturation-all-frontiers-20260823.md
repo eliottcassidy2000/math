@@ -737,7 +737,8 @@ otherwise; coincident zeros return to THM-3947's reducible parabolas.  The
 scout is exactly the independently derived `m=1` slice, not a separate open
 frontier.  MISTAKE-472 adds the initially omitted constant--constant row: its
 discriminant is a reducible vertical cubic, so the conclusion survives.  The
-theorem is proved and exact but still awaits an independent hostile audit.
+corrected theorem has now passed an independent hostile audit, including both
+normalization charts and every possible pole cancellation.
 
 [THM-3949](../01-canon/theorems/THM-3949-coprime-one-variable-internal-factor-splits-are-reducible-or-multi-ended.md)
 removes the affine degree bound.  For coprime nonassociate `A(Y),B(Y)`, an
@@ -750,6 +751,32 @@ quadratic coefficient preserves a missing direction, although the two
 theorems act on different curves.  The surviving split lane must be genuinely
 bivariate, simultaneous across several `L_i`, use gcd/nonmaximal overlap, or
 change the target line.
+
+[THM-3950](../01-canon/theorems/THM-3950-a1-internal-split-denominator-debt-and-equianharmonic-shadow.md)
+then pulls the internal split back to an arbitrary nondegenerate `A1`
+normalization. Writing the two cusp rows as `(r^2,2r^3)` and `(s^2,2s^3)`
+shows that every nonconstant reduced ratio pays two exact denominator factors.
+The assigned-factor ratio is the degree-three map
+
+```text
+phi(x)=((1-x)(1-omega x)^2)/((1+x)(1+omega^2 x)^2),
+```
+
+with branch packet `{0,1,-omega,infinity}`--exactly the scalar collision wall
+of THM-3947. Its `S3` closure is the fixed `j=0` elliptic cover. This is a
+genuine connection, but not an identification with THM-3941: the source is a
+rational factor-ratio map and the target is its Galois closure, whereas
+THM-3941 starts from a polynomial cubic carrier and preserves only local
+inertia/order data. The shared residue-character pattern survives; polynomial
+color, the cubic atlas and source attachment are destroyed.
+
+The degree-one-ratio realization crosses three formerly separate gates: it
+has a reduced one-place `A1` graph component, a normal quadratic surface, and
+two independent Cardano classes extending on that surface. Its full
+discriminant also contains an irreducible genus-one residual, however, and the
+example is not Keller. Thus the next invoice is no longer merely "find `A1`
+plus normality plus two characters." It is to control the companion component,
+construct the same-field cubic atlas, and audit the full boundary/source map.
 
 Multiple torus structures do not evade the same boundary tariff through the
 classical weight-eight sextics over the complex field of Degtyarev's cited
@@ -829,7 +856,11 @@ tame `(2,1)`, maximal-normal Keller hypotheses.  MISTAKE-470 records the
 infinite counterfamily that forced this quantifier repair.  At root degree
 five the theorem leaves exactly seven coarse non-root-regular signatures,
 plus the root-regular exit; polynomial color division and the surface invoice
-remain open on those seven rows.
+remain open on those seven rows. The all-order triangular trace-block lemma
+realizes every listed carrier, while the generating function has an exact
+period-12 quadratic count and gives each fixed-degree carrier a deterministic
+zero-based natural ordinal. These ordinals route tasks; they do not identify
+affine orbits or solve the missing color equations.
 
 This exposes a saturation pattern without identifying the constructions:
 THM-3927's one-place compression, THM-3932's explicit infinity-fold-three
@@ -846,10 +877,10 @@ partitions.  Arbitrary root gauges, other color directions,
 rational-`E[3]` one-place resolvents, and altered branch/resolvent families
 also remain open.
 
-Concurrent JC promotions now put proved canon through THM-3949, with
-THM-3946 still explicitly pending independent hostile audit.  The proved LRC
-endpoint theorem moved to collision-free THM-3952; the namespace move changes
-no mathematical scope.
+Concurrent JC promotions now put proved canon through THM-3950; THM-3946 has
+passed its independent hostile audit, and THM-3951 remains only a RESERVED
+empty namespace stub. The proved LRC endpoint theorem moved to collision-free
+THM-3952; the namespace move changes no mathematical scope.
 
 ## 5. Filtered kernels and principal parts are the same warning, not the same theorem
 
@@ -1015,7 +1046,8 @@ They do not share states, probability, chronology, or a reduction.
 | Split affine coefficient conic | Cardano cusp normalization | pull back `h=3q/(2p)` and compare line degrees | `e_1+e_2=2deg(h)`, one-place polynomiality | critical divisor, actual completion class group | fold ramification plus global divisor relation | THM-3928 sextic `d=4,5,6`, only one intrinsic `C3` |
 | Infinity-component conic | one-place torus sextic | pull back the linear affine coefficient through the Cardano cusp | fold trichotomy and exact `C3` class | which local `E~8[3]` lines globalize | generic elliptic surface plus complete vertical/infinity ledger | THM-3937 gives uniform `MW=ZQ`, `Cl=Z/3`, unique Cardano character |
 | Two-boundary elliptic resolvent | smooth-locus cubic characters | quotient `E(k(t))` by the boundary difference | at most one new three-line | free rank versus rational three-torsion | `E[3]` plus full boundary/vertical relation matrix | THM-3940 rank two still gives one line; THM-3942 buys two only with two or three ends |
-| Double-torus identity | one-place branch design | compare the two Cardano radicands | intrinsic rational `E[3]` and componentwise one-place geometry | irreducibility, normality and extension across conductor | bivariate/multifactor allocation plus normalization/conductor ledger | THM-3946/3949 close all one-variable one-factor splits; THM-3947 seams recover THM-3944 debt |
+| Double-torus identity | one-place branch design | compare the two Cardano radicands | intrinsic rational `E[3]` and componentwise one-place geometry | full-discriminant irreducibility, residual genus and cubic/source attachment | bivariate/multifactor allocation plus normalization/conductor ledger | THM-3946/3949 close standard one-variable splits; THM-3950 attains `A1`+normal+two classes but forces a `j=0` residual |
+| Internal-split factor ratio | equianharmonic shadow | take the `S3` closure of the degree-three ratio map | scalar collision packet `{0,1,-omega,infinity}` and a fixed `j=0` cover | polynomial color and same-field cubic atlas | residual-component and source-boundary incidence ledger | THM-3947 scalar seams become THM-3950 branch values, not a Keller completion |
 | Primitive actual boundary basis | candidate affine-plane deletion | localize at the three basis primes | scalar units and `Cl=0` | boundary genus and Euler type | rationality plus `chi_c` invoice | THM-3926 genus `2`, `chi_c=13` hostile |
 | Degree-two linear-color packet | affine-plane open | delete the intrinsic ramification primes | aligned one-place branch and affine address cap | source unibranchness and invertible defining functions | actual class/different packet | THM-3931 `[E]=0`, `[P_0]=2q`, nonunibranch collision |
 | All-degree centered root map | pole-support carrier | apply local trace and the finite RH budget before exact color division | root-regular/shared/`C3,C2,C2xC2` carrier trichotomy | color existence, maximal ramification and arbitrary root gauge | exact color row plus maximal-order/source sidecar | THM-3941 leaves seven `N=5` carrier signatures awaiting color division after MISTAKE-470 repair |
@@ -1041,8 +1073,11 @@ objects cannot be transported merely because the same word is used.
    splits, every one-variable one-factor internal split, and all classified
    complex weight-eight/nine `A1` line-boundary families closed.  Run
    exact color division and the maximal-source audit on THM-3941's seven
-   `N=5` carrier signatures.  In parallel test genuinely bivariate factors,
-   simultaneous splitting across several `L_i`, gcd/nonmaximal overlap, the
+   `N=5` carrier signatures. For THM-3950, build or obstruct the same-field
+   cubic atlas and full boundary incidence, and determine whether its fixed
+   genus-one residual can be removed or must force source/Keller nonentry.
+   In parallel test genuinely bivariate factors, simultaneous splitting
+   across several `L_i`, gcd/nonmaximal overlap, the
    generic three-parabola normalization/class/Cardano lattice, non-line torus
    boundaries, arbitrary root gauges, at least three boundary sections,
    controlled split vertical lattices, and altered or higher-genus
@@ -1058,10 +1093,12 @@ objects cannot be transported merely because the same word is used.
    debt.  THM-3942 reaches two characters but pays two or three ends;
    THM-3944 removes one end only through a nonnormal conductor collision; and
    THM-3947's generic scalar split has three one-place components rather than
-   one irreducible full branch.  THM-3946/3949 show that separating a single
-   one-variable factor still pays two or more ends.  Seek an irreducible reduced one-place branch,
-   a normal quadratic order, and two characters that extend across its
-   normalization, then test descent and the actual nonmonogenic cubic order.
+   one irreducible full branch. THM-3946/3949 show that separating a single
+   one-variable factor in the standard chart pays two or more ends. THM-3950
+   attains a reduced `A1` component, a normal quadratic surface and two
+   extendable characters simultaneously, but pays an irreducible genus-one
+   companion. Seek full-discriminant control, then test same-field cubic
+   descent and the actual nonmonogenic order/source attachment.
 4. **AK niche:** leave the saturated empty-wildcard `[2,3]` slice closed.
    Classify inactive-slot and initial-wildcard strata, then search the next
    rectangle for a genuine score below `7/4` under the same sound/loose

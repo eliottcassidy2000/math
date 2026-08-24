@@ -2,8 +2,8 @@
 id: THM-3946
 title: "Affine one-factor internal splits are reducible or have at least two infinity places"
 status: >
-  PROVED + VERIFIED-EXACT + CORRECTED AFTER MISTAKE-472; PENDING INDEPENDENT
-  HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED AFTER
+  MISTAKE-472 CORRECTION.
   In the complete one-variable affine grammar, absorb the UFD split scalar
   into the actual opposite-side factors A and B.  If both are nonconstant,
   affine gauge gives A=Y and B=mY+c with a genuine slope ratio m.  For c=0,
@@ -19,7 +19,9 @@ status: >
   discriminant in this entire affine internal-split grammar is one-place.
 source: jc-degree6-place / full slope-ratio repair of the THM-3942--3947 internal-split lane, 2026-08-24
 audit: >
-  SELF-HOSTILE EXACT CANDIDATE.  The first equal-slope draft was rejected
+  TWO INDEPENDENT HOSTILE AUDITS PASS (jc-cohn3709 and
+  audit_late_3950_wave, 2026-08-24). The first
+  equal-slope draft was correctly rejected
   before promotion because the actual quotient-factor slope ratio is not a
   removable scalar.  The repaired companion retains m, verifies the complete
   affine gauge, the hidden cubic and its birational inverse, its unique cusp
@@ -27,10 +29,15 @@ audit: >
   m=-omega^2, the exact infinity polynomial and end count, the balanced
   quartic's basepoint-free normalization, and the corrected THM-3944
   order-regular character ledger.  Normal and optimized runs byte-match the
-  frozen output at CHECKS=66.  The companion covers the complete
-  nonconstant-factor affine gauge; MISTAKE-472 records the omitted
-  constant--constant boundary, now closed directly in Section 5 without a
-  changed exact certificate.  Independent audit remains required.
+  frozen output at CHECKS=66. The independent audit reconstructed the
+  localization irreducibility equivalence, checked the unique-cusp line
+  argument, verified the corrected m=-omega^2 tangent and parametrization,
+  and audited every possible pole and cancellation in both normalization
+  charts. MISTAKE-472 records the omitted constant--constant boundary, now
+  closed directly in Section 5 without changing the exact certificate. The
+  second audit separately reconstructed that constant boundary, the
+  localization irreducibility bridge, cusp tangents, both exceptional charts,
+  and the pole counts. The end counts, frozen output, and all hashes agree.
 depends_on:
   - THM-3942-affine-linear-double-torus-factor-split-one-place-obstruction
   - THM-3944-repeated-factor-double-torus-one-place-square-conductor-collapse
@@ -47,9 +54,9 @@ hash_basis: raw LF bytes
 
 # THM-3946 -- affine internal splits never produce an irreducible one-place branch
 
-**PROVED + VERIFIED-EXACT + CORRECTED AFTER MISTAKE-472; PENDING INDEPENDENT
-HOSTILE AUDIT.**  Work over an algebraically closed field `k` of
-characteristic zero.  Fix
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED AFTER MISTAKE-472
+CORRECTION.**  Work over an algebraically closed field `k` of characteristic
+zero.  Fix
 
 ```text
 omega^2+omega+1=0,          delta=omega-omega^2,          delta^2=-3. (1)

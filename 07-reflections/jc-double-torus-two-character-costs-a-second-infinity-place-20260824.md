@@ -9,8 +9,10 @@ arguments spelled out here.  The subsequent canon now sharpens its boundary:
 THM-3942 proves the complete affine-linear whole-factor obstruction;
 THM-3944 proves the repeated-factor conductor collision; and THM-3947 proves
 the full scalar-weighted repeated-square trichotomy.  THM-3946 now proves the
-complete affine one-factor split (with independent hostile audit pending),
-and THM-3949 proves the all-degree coprime one-variable Newton obstruction.
+complete affine one-factor split and has passed independent hostile audit;
+THM-3949 proves the all-degree coprime one-variable Newton obstruction; and
+THM-3950 classifies every nonconstant `A1` pullback and exposes its fixed
+equianharmonic residual.
 This reflection reserves no theorem ID; its affine deformation is now an
 independent precursor to the `m=1` slice of THM-3946.
 
@@ -322,28 +324,42 @@ cubic with zero quadratic coefficient and nonzero constant, so it cannot have
 one triple direction.  Thus the one-variable one-factor lane is closed in the
 standard chart, though arbitrary target lines are not.
 
+THM-3950 changes the board again. On any nondegenerate `A1` pullback, the two
+cusp parameters `r,s` have a reduced ratio whose denominator debt factors
+exactly through `S+omega^2R` and `S-omega R`. The assigned-factor ratio is a
+degree-three rational map with branch values `{0,1,-omega,infinity}`--the two
+scalar collision seams of THM-3947 together with the zero/infinity endpoints.
+Its `S3` closure is a fixed `j=0` elliptic cover. The explicit degree-one-ratio
+row simultaneously has a reduced one-place graph component, a normal
+quadratic surface, and two independent extendable Cardano characters. What it
+does not have is a one-place full discriminant: an irreducible genus-one
+residual remains, and no Keller map or same-field cubic atlas is supplied.
+
 The next search should not maximize Mordell--Weil rank blindly.  The cheapest
 decisive experiments are:
 
-1. search genuinely bivariate factors and simultaneous internal splits in two
+1. construct or obstruct the same-field cubic atlas and full source-boundary
+   incidence of the THM-3950 survivor, including its genus-one residual;
+2. search genuinely bivariate factors and simultaneous internal splits in two
    or three cube factors for an irreducible reduced full branch;
-2. compute the generic three-parabola quadratic normalization and its complete
+3. compute the generic three-parabola quadratic normalization and its complete
    class/Cardano lattice before deciding whether recombination is possible;
-3. replace the line boundary in the multiple-torus sextic families by an
+4. replace the line boundary in the multiple-torus sextic families by an
    explicitly normalized non-line or birational boundary;
-4. keep one torus structure but move to a higher-genus generic fibre and
+5. keep one torus structure but move to a higher-genus generic fibre and
    search for a second Jacobian three-line not arising from a translated cube
    factor; or
-5. create at least three deleted boundary sections, or a controlled split
+6. create at least three deleted boundary sections, or a controlled split
    vertical fibre, and compute the full localization relation matrix.
 
 For each lane the cheapest hostile gate is the normalization pole divisor.
 The present sequence shows why this must be checked before any expensive
 class-group computation: the desired second character appeared immediately;
 whole factors forced extra ends; separated internal factors retained two
-ends; and the first one-place collision paid nonreduced conductor debt.  A
-survivor must simultaneously pass irreducibility, reducedness, one-place,
-normality, and character-extension gates before source or Keller attachment.
+ends; the first one-place collision paid nonreduced conductor debt; and the
+first reduced `A1`/normal/two-character survivor paid a genus-one companion.
+A survivor must control the full discriminant and same-field cubic/source
+attachment, not merely pass those componentwise gates.
 
 ## Reproduction
 

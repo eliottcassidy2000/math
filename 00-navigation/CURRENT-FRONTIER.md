@@ -1,6 +1,6 @@
 # Current Frontier
 
-**Rolling state — 2026-08-23.** Links are proof sources; composition and residuals live here. Statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**, **REFUTED**, **SUPERSEDED**.
+**Rolling state — 2026-08-24.** Links are proof sources; composition and residuals live here. Statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -348,21 +348,21 @@ asymptotic or residue.
   THM-3885/3895/3897 close polynomial `f=0`; THM-3900 closes its generic
   roots. For `f!=0`, THM-3899/3904/3901/3902/3905 give tariff, x-only, fan
   and three-jet passports; THM-3898's arbitrary sidecars remain open.
-  THM-3890--3921 close named quintic/sextic/rational/radial packets;
-  THM-3920 closes THM-3918's same-field atlas, not its separate cubic-field
-  questions. THM-3922--3941 add class, conic, boundary, fold, Cardano and
-  centered-root closures. THM-3941 leaves seven `N=5` carrier signatures
-  awaiting color division after its MISTAKE-470 quantifier repair.
-  THM-3942/3944/3947 close whole-factor and repeated-square double-torus rows:
-  extra ends, three components, or a conductor seam. Corrected THM-3946
-  closes affine one-factor splits by reducibility or two/three ends, pending
-  independent audit; THM-3949 closes all coprime one-variable factors in the
-  standard chart. THM-3943/3945/3948 close `A1` line normalization for every
-  classified complex weight-eight/nine sextic.
-  Open: arbitrary root/color gauges, genuinely bivariate or simultaneous
-  multifactor splits, the three-parabola order/class lattice, non-line torus
-  boundaries, altered resolvents, nonradial grammars, source/Keller attachment
-  and `JC(2)`. THM-3853/3855 remain a formal, not polynomial, laboratory.
+  THM-3890--3921 close named quintic/sextic/rational/radial packets; THM-3920
+  closes THM-3918's same-field atlas, not separate cubic-field questions.
+  THM-3922--40 give class/conic/boundary/fold/Cardano closures. Corrected
+  THM-3941 has a period-12 collision-free carrier count and task ordinals;
+  seven `N=5` rows still await color division. THM-3942/44/47 close
+  whole-factor/repeated-square rows by extra ends, components or conductor;
+  audited THM-3946 and THM-3949 close standard one-variable factor splits.
+  THM-3943/45/48 close `A1` line normalization for the classified complex
+  weight-eight/nine sextics. THM-3950 attains a reduced `A1` graph, normal
+  quadratic surface and two Cardano classes, but retains a fixed `j=0`
+  genus-one residual and is not Keller; THM-3951 is RESERVED.
+  Open: THM-3950's cubic atlas/boundary incidence; arbitrary root/color gauges;
+  bivariate, gcd-overlap or simultaneous splits; non-line torus boundaries;
+  altered resolvents, nonradial grammars, source/Keller attachment and `JC(2)`.
+  THM-3853/3855 remain a formal, not polynomial, laboratory.
   Russell THM-3785 forces `3|d,d>=9`; THM-3843/46/49 give an immersed arm,
   jets and visible conductor contact. THM-3856/61/67/71 close normal `z`-depth
   through five; exact shears leave only nonreduced `(6,4)`. Rational quotient

@@ -470,15 +470,16 @@
   `.out` [THM-3941 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
   AFTER MISTAKE-470].  Every centered trace-zero repeated-root map has exactly
   one pole-support branch: root-regular, shared `A`-address, or a nonempty
-  collision-free `C3`, `C2`, or `C2xC2` carrier.  Shared address forces only
+  collision-free `C3`, `C2`, or `C2xC2` carrier. Shared address forces only
   the target collision unless the genuine maximal/Keller ramification
-  hypotheses are added.  The collision-free generating function gives seven
-  coarse `N=5` carrier signatures awaiting color division, plus the
-  root-regular exit. Checks: `2,853`.
+  hypotheses are added. The trace-block realization gives an exact period-12
+  quadratic carrier count and deterministic natural task ordinals. There are
+  seven coarse collision-free `N=5` signatures awaiting color division, plus
+  the root-regular exit. Checks: `2,884`.
   Script/output/semantic SHA-256:
-  `d3fc62f474fa9d0d615ca8202a4796de15b6dd50f1dbf5e3ca8909e426685243` /
-  `771726627e9f674d265e457e9c138aa1707802f549d481d8c4ede98f813d354e` /
-  `35b3b0eaffde82ab38c59a9b5d743a574a644b4e0ff938181f5dacaaef7ba9ef`.
+  `6bfec47a5127f3443c9392c10b37d61f8059d168cdb0e3d1c080e5abc3558ebd` /
+  `401d7ca141d6ebe6d31640099dbb96ac7c0f031930b9b73f1fd024c094e77e44` /
+  `6b7971e84a47d2379642a6d4463b6720305d023643c1c945a38ad88c11a00b5e`.
 
 - `jc2_affine_linear_double_torus_factor_split_thm3942.py` -> matching `.out`
   [THM-3942 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
@@ -529,8 +530,8 @@
   `007afb1b1c05b62ceec26f1fe2b4023a6bb31713ae2b0482b25bb98f848569bb`.
 
 - `jc2_affine_internal_split_two_end_collision_thm3946.py` -> matching `.out`
-  [THM-3946 PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT;
-  CORRECTED AFTER MISTAKE-472].  For nonconstant affine factors, the coprime
+  [THM-3946 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED AFTER
+  MISTAKE-472 CORRECTION]. For nonconstant affine factors, the coprime
   rows are irreducible rational curves with two ends at slopes
   `m=1,-omega^2` and three otherwise; the coincident-zero row is reducible by
   THM-3947.  Exactly one constant factor reduces to THM-3942, while the
@@ -574,6 +575,19 @@
   `41f35a90d19dad6af6dad807bc4ef8c6928d52e35677c46520336d00250c1c83` /
   `6490b55d1a4b97b93421260fda896cd930201ebc31a433875414b36b7235a2ab` /
   `4c7a0c10ed7397aacb60ddda5d0d63811bdf744688329777934a2e703e92e49b`.
+
+- `jc2_a1_internal_split_equianharmonic_shadow_thm3950.py` -> matching
+  `.out` [THM-3950 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  A nonconstant internal-split ratio on an `A1` normalization forces exact
+  denominator debt and a universal degree-three ratio map. Its four branch
+  values are the THM-3947 scalar collision packet, and its `S3` closure is a
+  fixed `j=0` elliptic cover. The explicit degree-one-ratio realization has a
+  reduced `A1` graph, irreducible genus-one residual, normal quadratic
+  surface, and two independent extendable Cardano classes, but is not Keller.
+  Checks: `51`. Script/output/semantic SHA-256:
+  `dd40f6a2fa3e978990811aaab0ff9d690688a01940e7230150ad979874644732` /
+  `e3936926cba7ddb0dc3e5fa9748d5de9074f467a599eb23ff4d62c19449d3966` /
+  `7b027947c393486b42e7b8fb30c0cfdbf9edb2af03c26ebd2121816e5f542402`.
 
 - `jc2_double_torus_nonlinear_balanced_partial_split_scout.py` -> matching
   `.out` [VERIFIED-EXACT + INDEPENDENTLY FORMULA-AUDITED SCOUT; NOT CANON].
