@@ -93,6 +93,23 @@ gate(sp.expand(first + second) == 1, "uniform two-bracket identity")
 
 
 # Height-two interface: exact distinguished-arm order and the second color.
+# First freeze the all-height scalar-color gate used by THM-3576: among the
+# complementary channels (-R,R+1-n), only R=n can contribute a unit at u=0.
+for n in range(2, 13):
+    for R in range(1, 3 * n + 1):
+        m = ceil_div(R, n)
+        complement = R + 1 - n
+        survives = (m == 1 and complement >= 0 and complement != 0)
+        gate(survives == (R == n),
+             f"height {n}, negative weight {-R}: scalar-color gate")
+
+all_height_transfer = {
+    "THM-3576": ("2x3", "3x2"),
+}
+gate(sum(len(v) for v in all_height_transfer.values()) == 2,
+     "two all-height imported cells")
+
+# Height-two interface: wider exponent-two cells.
 for q in range(1, 65):
     gate(ceil_div(q, 2) >= 1, f"weight {-q}: exponent-two color")
     gate(ceil_div(q, 3) >= 1, f"weight {-q}: second compulsory color")
@@ -100,12 +117,11 @@ for q in range(1, 65):
 # Frozen transfer inventory. These are theorem-mechanism assertions, not a
 # finite enumeration standing in for the symbolic proofs.
 transfer = {
-    "THM-3569": ("2x3", "3x2"),
     "THM-3583": ("2x4", "4x2"),
     "THM-3592-repaired": ("3x3",),
 }
-gate(sum(len(v) for v in transfer.values()) == 5,
-     "five imported few-support cells")
+gate(sum(len(v) for v in transfer.values()) == 3,
+     "three wider height-two imported cells")
 live_total_seven = [(2, 5), (3, 4), (4, 3), (5, 2)]
 gate(all(a + b == 7 for a, b in live_total_seven),
      "first live cells have seven pieces")
@@ -118,7 +134,8 @@ summary = {
     "tower": "B_n=k[x,u,x^-n*u(u+1),x^(-n-1)*u^2(u+1)]",
     "pieces": "B_r=x^r*k[u] for r>=0; two-ceiling formula for r<0",
     "bracket": "degree n-1 Wronskian",
-    "uniform": "homogeneous, 1xany, and 2x2 cells empty for every n>=2",
+    "uniform": "homogeneous, 1xany, 2x2, and 2x3 cells empty for every n>=2",
+    "all_height_transfer": all_height_transfer,
     "height2_transfer": transfer,
     "height2_floor": 7,
     "height2_first_live": live_total_seven,
@@ -131,8 +148,9 @@ print("THM-3974 height-tower weight-support companion")
 print(f"CHECKS={CHECKS}")
 print("PIECES=TWO_CEILING_U_AND_U_PLUS_ONE_FORMULA")
 print("BRACKET=WEIGHT_SHIFT_N_MINUS_1_WRONSKIAN")
-print("UNIFORM=HOMOGENEOUS;ONE_BY_ANY;TWO_BY_TWO_EMPTY")
-print("HEIGHT2_TRANSFER=NO_2X3;2X4;3X3_AND_TRANSPOSES")
+print("UNIFORM=HOMOGENEOUS;ONE_BY_ANY;TWO_BY_TWO;TWO_BY_THREE_EMPTY")
+print("ALL_HEIGHT_TRANSFER=THM3576_TWO_BY_THREE_AND_TRANSPOSE")
+print("HEIGHT2_WIDER_TRANSFER=NO_2X4;3X3_AND_TRANSPOSES")
 print("HEIGHT2_FLOOR=SEVEN_NONCONSTANT_PIECES")
 print("FIRST_LIVE=2X5;3X4;4X3;5X2")
 print("POSITIVE_CONTROL=CONSTANT_HAS_BRACKET_LENGTH_AT_MOST_TWO")
