@@ -21,6 +21,7 @@ audit: >
 related:
   - THM-3578-zariski-main-boundary-rank-and-sheet-debt
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
+  - THM-3811-ramification-class-unit-criterion-and-nonlinear-cubic-packet
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
 ---
 
@@ -170,6 +171,9 @@ This complements THM-3578. That theorem lower-bounds the number of boundary
 components by class-group rank for a general quasi-finite plane chart;
 here the special source `A2`, including its scalar units and factoriality,
 upgrades the inequality to the exact integral basis `(3)`.
+Equivalently, THM-3811's deleted-divisor unit criterion supplies the
+injective half of `(3)`, while `Cl(A2)=0` supplies the surjective half and
+normal Hartogs supplies the properness conclusion.
 
 ## 4. Hostile boundaries and exact scope
 
