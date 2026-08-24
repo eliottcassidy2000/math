@@ -68,7 +68,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505` unconditionally; only in `t>=U`, cyclic slack plus one auxiliary
   leaves 58 certificate survivors: 57 at `s=1` and `(s,p,q)=(2,1,9)`.
-  THM-3910 closes 41; the remaining 17 and `t<U` are open.
+  THM-3910 closes 41; THM-3995 sharpens scale two; 17 plus `t<U` remain.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
   FINITE-EXACT,

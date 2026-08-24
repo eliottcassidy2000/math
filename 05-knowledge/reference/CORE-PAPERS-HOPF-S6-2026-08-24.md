@@ -43,7 +43,10 @@ global consequence below stays conditional until specialist verification.
 4. **Exact repo companion:**
    [integer monodromy and Smith audit](../../04-computation/hopf_s6_triangle_monodromy_snf_audit_20260824.py)
    with [frozen output](../results/hopf_s6_triangle_monodromy_snf_audit_20260824.out).
-5. **Unconditional local theorem:**
+5. **Exact gauge/filling companion:**
+   [centralizer and elliptic-action audit](../../04-computation/hopf_s6_gauge_centralizer_filling_audit_20260824.py)
+   with [frozen output](../results/hopf_s6_gauge_centralizer_filling_audit_20260824.out).
+6. **Unconditional local theorem:**
    [THM-3955, node cotangent normalization kernel and conductor
    torsion](../../01-canon/theorems/THM-3955-node-cotangent-normalization-kernel-and-conductor-torsion.md),
    extended at triple crossings by
@@ -156,6 +159,9 @@ verified universe and conclusions are:
 | displayed twists | **FINITE-EXACT** | `A1*v1=v1`, `A2*v2=v2`, `(ell1,ell2)=(1,-1)` |
 | chosen clutch presentation | **FINITE-EXACT** | Smith diagonal `(1,1)` for `p=-1` |
 | hostile clutch control | **FINITE-EXACT** | Smith diagonal `(1,7)` for `(0,1,1)` and `p=-7` |
+| twist gauge quotient | **FINITE-EXACT** | `Z^3/ker(p)=Z` via signed `p`; admissible image is the units modulo 12 |
+| simultaneous centralizer | **FINITE-EXACT** | `C_GL4(Z)(T1,T2)={+/- (I+bE14)}` |
+| marked elliptic fillings | **FINITE-EXACT GIVEN THE DISPLAYED AFFINE ACTIONS** | order 3 permits every integral centralizer shift; order 4 permits exactly even shifts |
 
 For coprime integers `a,b`, the same two-generator presentation is
 
@@ -201,6 +207,26 @@ standard gauge moves.  Whether the corresponding holomorphic fillings are
 also gauge-equivalent is **OPEN**.  The analytic gluing lattice must first be
 quotiented by global section/fibre-translation gauge; no kernel representative
 may be promoted to a moduli sidecar before that calculation.
+
+For `(a,b)=(3,4)` this quotient is exact without a finite scan.  If
+
+```text
+k1=(1,3,0),        k2=(1,0,4),        q=(0,-1,1),
+```
+
+then `det[k1 k2 q]=1`, `p(k1)=p(k2)=0`, and `p(q)=1`.  Hence
+`Z^3/<k1,k2>~=Z` via signed `p`.  Under the admissibility conditions
+`3 does not divide ell1` and `ell2` odd, `p` runs exactly through the units
+modulo `12`, with decoder
+
+```text
+(ell1 mod 3,ell2 mod 4) : (1,1)->5, (1,3)->11,
+                          (2,1)->1, (2,3)->7.           (8c)
+```
+
+This is completeness for oriented labelled Seifert presentation data.  The
+displayed fundamental group and homology see only `|p|`; no theorem here says
+that `|p|` classifies six-manifolds or analytic threefolds.
 
 Assuming only the manuscript's stated orientation-preserving identification
 of opposite boundary curves, the conductor pushout itself can be audited
@@ -461,7 +487,59 @@ C_GL4(Z)(T1,T2)={+/- (I+b E14): b in Z}.                 (17)
 ```
 
 The element `I+b E14` shifts the manuscript's `beta` coordinate, and hence
-the punctured-family constant `c0`, by an integer.  Thus `c0 mod Z` is at most
-the first continuous address.  Whether these isomorphisms extend through all
-three fillings is **OPEN** and should be decided before searching for finer
-continuous moduli.
+the punctured-family constant `c0`, by an integer.  On the dual lattice put
+`Q_b=I+bE41`.  The displayed period identity is
+
+```text
+Pi_(c0+b)=Pi_(c0) Q_b,          Q_b A_j=A_j Q_b.         (18)
+```
+
+Thus `c0 mod Z` is the exact unipotent-centralizer orbit for the marked
+punctured group family.  It is **not** the completed-filling answer.
+
+The elliptic affine actions supply a new exact local filter.  With primitive
+invariant vectors `epsilon_j,delta` and invariant covectors `psi_j`, the
+displayed lattices satisfy
+
+```text
+Q_b(ell_j epsilon_j+c_j delta)-(ell_j epsilon_j+c_j delta)
+  =b ell_j delta,
+psi_1(delta)=3=m_1,             psi_2(delta)=2, m_2=4.  (19)
+```
+
+Translation conjugacy at order three is therefore automatic for every
+integer `b`; at order four it holds exactly when `b` is even because `ell2`
+is odd.  The negative centralizer sign cannot extend: the invariant covector
+`gamma` sees `-2ell_j`, which is not divisible by `m_j`.  Consequently every
+base- and fibre-preserving isomorphism arising from this marked centralizer
+must satisfy
+
+```text
+c0'-c0 in 2Z.
+```
+
+For a general order-four translation coefficient `c2`, the first filled
+marked address is
+
+```text
+kappa=[c0-c2] in C/(2Z);                               (20)
+```
+
+the manuscript's displayed `c2=0` gives `c0 mod 2Z`.  A one-`delta` change in
+the order-four vector is an exact hostile: it preserves `ell2` and `p` but
+changes the invariant-covector residue by `2 mod 4`.
+
+This remains a local marked obstruction, not a classification.  The cheapest
+missing test is the generator `b=2`, for which both elliptic actions are
+locally conjugate.  Compute its overlap-translation class, including the
+cusp, in the Cech cokernel of global punctured-family translations plus the
+three local filling translations.  If that class vanishes, the orbit subgroup
+is `2Z`; if not, its order determines a smaller subgroup.  No global analytic
+equivalence follows from `(18)--(20)` alone.
+
+The exact companion/frozen-output hashes are
+
+```text
+script  c093b38c979bfae763a8b76531315c9e44b4d542a163e8c0af5fafd927dd0f10
+output  d594fe56f10b815c5d6799bb7f1c444dfb114d90a1c16e779b683e79a1c733c1
+```

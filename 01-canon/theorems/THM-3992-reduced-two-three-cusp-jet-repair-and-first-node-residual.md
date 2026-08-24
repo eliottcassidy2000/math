@@ -419,10 +419,13 @@ node type and its two labelled normalization addresses.
 
 The next exact object is now the coordinated residual `R in (p^2,y)` together
 with the two transverse node clutches `(39)`, not an amorphous `(2,3)` cell.
-The cheapest decisive test is its oriented conductor-incidence graph and
-integral class group: a forest/two-component split can close by existing
-normalization tools, while a cycle is the only place a new clutch class can
-survive.
+The cheapest decisive test is its **complete** oriented node-address graph and
+integral class group.  The roots of `(39)` enumerate only intersections with
+the known line `t=0`, not every source address over the target node.  A
+two-owner split is not itself a boundary forest obstruction: THM-3951 concerns
+completion-boundary primes, whereas these pullback curves lie inside the
+source.  One must first determine whether further node addresses occur and
+whether the target node lies in the nonproper-value locus.  See MISTAKE-469.
 
 Reproduce from the repository root:
 
