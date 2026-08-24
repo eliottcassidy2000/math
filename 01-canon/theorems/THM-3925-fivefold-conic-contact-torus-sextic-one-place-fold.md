@@ -2,7 +2,7 @@
 id: THM-3925
 title: "Fivefold conic-contact torus sextics: one place forces the monogenic coordinate fold"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. In the complete
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the complete
   marked torus-sextic slice whose smooth conic and cubic meet in the divisor
   5P+Q and whose infinity line is tangent at P, unique projective infinity
   support leaves a three-parameter normal form. On its irreducible sextic
@@ -15,13 +15,16 @@ status: >
   contact family, not all torus sextics or JC(2).
 source: root / post-THM-3879 conic-contact and normalization-pole lane, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The
-  assertion-free exact companion verifies the complete linear ambiguity,
-  conic contact divisor, infinity restriction, affine Cardano
-  parametrization and inverse, Jacobian-denominator identity, reducibility
-  resultant, degree-six projective normalization, all infinity addresses,
-  the one-place polynomial inverse, and the different/companion identity in
-  36 active gates. Normal and optimized runs byte-match the frozen output.
+  INDEPENDENT HOSTILE AUDIT PASS (jc_degree6_one_place, 2026-08-23). The
+  conic-ideal quotient proves completeness of the linear ambiguity. The
+  unique-infinity iff, cusp-normalization fibre product, resultant/reducible
+  equivalence, absence of collapsed extra components, basepoint-free
+  projective normalization, birational inverse, exact three-versus-one
+  infinity-address count, polynomial fold, and monogenic different-unit
+  obstruction were all independently rederived. The ordinary cusp supplies
+  the reducedness sidecar in the resultant argument. Normal, optimized, and
+  frozen companion runs byte-match in 36 active gates; raw hashes and
+  documentation checks pass. No repair was required.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
 related:
@@ -39,7 +42,7 @@ hash_basis: raw LF bytes
 
 # THM-3925 -- Jacobian zeros are normalization poles
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero. This theorem studies
 one complete marked slice of torus sextics. It does not classify every torus
 sextic.
