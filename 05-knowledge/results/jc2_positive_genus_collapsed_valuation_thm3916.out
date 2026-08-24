@@ -1,0 +1,13 @@
+theorem=THM-3916-positive-genus-collapsed-valuation-keller-obstruction
+general_gate=positive_genus_common_zero_divisorial_valuation_forbids_plane_Keller_model
+rational_chart=A=F/4,C=uF/4;jacobian=-F*F_z/16
+F=irreducible_monic_cubic_over_k(u)
+disc_z_F=432*H8;H8=squarefree;finite_ramification=8
+infinity=three_unramified_places;ramification=0
+normalization_F=genus2_by_Riemann_Hurwitz
+normalization_F_z=genus0_conic
+THM3915_plane_atlas=EMPTY
+repeated_residual_genus0_designs=OPEN;JC2=OPEN
+semantic_sha256=75bbbaebe57df35e61244b7e5c28ee1b5d5a1f9660746c1308bc26b464b7868f
+CHECKS=26
+RESULT=PASS
