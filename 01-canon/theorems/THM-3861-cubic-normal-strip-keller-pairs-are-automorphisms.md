@@ -31,6 +31,12 @@ audit: >
   the constant edge reduces to `J=(KB+d)B'`.  It checks 14,064 valuation
   profiles, both target charts, every zero edge, the explicit inverse and the
   sharp rational hostile.  Normal and optimized replay again byte-match.
+  A third, incoming-signal referee isolates the logical dependence of the
+  `(3,2)` squeeze: its 5,073 gates verify the complete integration, show by a
+  polynomial hostile that the five positive-`z` buckets alone do not force
+  `h` to be a unit, and recheck that arm polynomiality plus the constant
+  bucket do force the contradiction.  Its normal and optimized LF outputs
+  also byte-match.
 depends_on:
   - THM-3856-quadratic-normal-strip-keller-pairs-are-automorphisms
 related:
@@ -53,6 +59,11 @@ second_independent_output: 05-knowledge/results/jc2_cubic_normal_strip_keller_se
 second_independent_script_sha256: d5adf63924d63f326c2e25767e01f70bb732b977783375f391d41812fd4e75d6
 second_independent_output_sha256: e9f4acf4f82118729ba2ebdc4067cbc199d732b7d8c38153706a08cbb56f1e82
 second_independent_semantic_sha256: e286e5276ec64f1e06a4f8aa187edd2cbef8fdfefb14acf47da602d95d0eb44c
+top_bucket_independent_script: 04-computation/jc2_cubic_normal_strip_top_bucket_independent_referee_thm3861.py
+top_bucket_independent_output: 05-knowledge/results/jc2_cubic_normal_strip_top_bucket_independent_referee_thm3861.out
+top_bucket_independent_script_sha256: 882a3c0a890913590b52542b2d7519cd0cb315bdb62a35d1f9431de11c918b42
+top_bucket_independent_output_sha256: 067249dfd5bb9333a97a1b7657ad3a600022d64bcd3e02ed4931134451febd24
+top_bucket_independent_semantic_sha256: 1e5e88fa746846db7d55be67770b8411bb24069d73a4694f42ef637d02affd85
 hash_basis: raw LF bytes
 ---
 
@@ -313,6 +324,37 @@ nonconstant.  This contradiction closes the constant-`h` edge.
 Hence the normalized `(3,2)` branch is empty.  Together with Section 2 and
 THM-3856 for `(p,q)=(0,0)`, this exhausts every degree and zero-component
 case in `(1)`.
+
+### 4.1 The positive-`z` buckets alone do not force `h` to be a unit
+
+The local contradiction uses two logically separate inputs: polynomiality of
+the integrated arm `(29)` forces `X` to be local at every prime of `h`, while
+the constant bucket `(31)` forces it to be nonlocal.  Neither conclusion may
+be silently attributed to the top buckets.
+
+Indeed, take
+
+```text
+h=s,  P=V=1,  X=1,  b=s,  d=e=a_0=0.                       (35a)
+```
+
+Then the integrated packet is polynomial:
+
+```text
+p=s^3,  v=s^2,  beta=s,  u=(3/2)s^2,
+alpha=(3/8)s+(3/2)s^2,  a=-1/16+(3/4)s.                    (35b)
+```
+
+All five coefficients of `z^1,...,z^5` in the Jacobian vanish, but
+
+```text
+J_(z,s)(A,C)=3s(4s-1)/8.                                   (35c)
+```
+
+Thus a nonunit `h` survives every positive-`z` bucket and fails exactly at
+the nonconstant `z^0` bucket.  This is a hostile to the top-bucket-only
+argument suggested by the incoming cubic-strip reduction; the repaired proof
+is precisely the two-sided local squeeze in `(34)--(35)` and `(31)`.
 
 ## 5. A sharp rational hostile
 

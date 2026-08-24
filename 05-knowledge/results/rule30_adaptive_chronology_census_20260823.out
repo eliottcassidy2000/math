@@ -1,0 +1,11 @@
+RULE30_ADAPTIVE_CHRONOLOGY_CENSUS_20260823
+status=FINITE-EXACT;active_words_length_at_most_9;no_uniform_claim
+source_sha256=ba00dbf59505ccb1373de0fde4a456e7d839ace78def29ffb27642a1f6b8b849
+active_words=14762;distinct_permutations=14762;exact=13853;zero_observation_classes=11927
+query_census=(('zero_queries',10502,10705),('either_one_query',1318,2889),('ray_one_query',85,211),('ray_two_query',22,48),('both_queries',0,0))
+maximum_class_size=7;maximum_output_count=7;hard_two_query_classes=0
+ray_one_needed_control=(((9,8,3),4,(0,137,80)),2,2,('BBBBAC','BBCBAB',(32,41,112),(5,10,7),(5,0,7)))
+ray_two_needed_control=(((11,2,9),3,(0,11,8)),2,2,('ABAABBCB','ACAABBCC',(8,19,144),(1,2,15),(1,2,11)))
+semantic_sha256=41dfbb528276dbb10077c3d30c2a88fb668585a6c248b1d3f6908347d0d377e0
+interpretation=the_zero_observation_selects_at_most_one_off_ray_chain;neither_fixed_off_ray_chain_is_universal;two_chains_are_never_needed_in_this_finite_ambient
+ALL CHECKS PASSED

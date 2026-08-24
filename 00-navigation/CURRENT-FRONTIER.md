@@ -334,7 +334,10 @@ asymptotic or residue.
 - **Rule 30:** THM-3502/3511/3512/3516 retain compiler/owner/carry; THM-3778
   excludes finite-spatial cycles. THM-3804 gives all Smith forms; THM-3824
   gives fixed/one-shell tariffs and the all-shell response kernel. A
-  FINITE-EXACT `D=B=4` routed audit recovers `(0,1,2)`. THM-3511 maps even rays onto the odd half;
+  A FINITE-EXACT `D=B=4`, word-length-at-most-nine census has `13,853` exact
+  branches and proves that the current bank plus zero chain adaptively selects
+  at most one off-ray chain; neither fixed off-ray is universal.  This is not
+  an all-depth or physical-path selector.  THM-3511 maps even rays onto the odd half;
   the least literal static bank has `2^(D+B-1)+B+2` points (`134/256` there).
   Physical recursion, adaptive/projective chronology and every prize are OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  THM-3543--3782 close

@@ -1,5 +1,34 @@
 # Script Results Index
 
+- `rule30_adaptive_chronology_census_20260823.py` and independent audit ->
+  matching `.out`s [FINITE-EXACT BOUNDED AMBIENT; NO RULE-30 PRIZE].  Among
+  all 14,762 distinct depth-eight portraits of active words of length at most
+  nine, 13,853 have gap at most four.  Their current-bank/zero-chain quotient
+  has 11,927 fibres: 10,502 need no off-ray query, 1,318 accept either one,
+  85 specifically need ray one, 22 specifically need ray two, and none need
+  both.  Thus the observed zero chain selects at most one routed off-ray
+  chain, while two explicit fibre hostiles prove that neither fixed ray is
+  universal.  This is not an all-depth selector or a physical-signalizer-path
+  result.  Primary script/output/semantic SHA-256:
+  `697cef83a3d8dcb18d7e8d479ee3ff2401811b82c9a3e535fd15262d38512c78` /
+  `f9276be9eca5d717f339d85c3e63b6140cc7dcaf00790b3f8889a92cf91a1833` /
+  `41dfbb528276dbb10077c3d30c2a88fb668585a6c248b1d3f6908347d0d377e0`;
+  independent hashes:
+  `bf934e82fac295755418f04a72b810e558e578d3911ae9b879cc8c20430fa52d` /
+  `47530b3414e247459a239474beaf871da57073916f9abe17ca2bd71c75f5367d` /
+  `dfaa16be3db0361f192588a50eebc53fded33e3c8df5c9c708198fd0a8cd191e`.
+
+- `jc2_cubic_normal_strip_top_bucket_independent_referee_thm3861.py` ->
+  matching `.out` [INDEPENDENT THM-3861 AUDIT; NO NEW THEOREM].  A 5,073-gate
+  reconstruction confirms the `(3,2)` local squeeze and supplies the sharp
+  missing-boundary control: a polynomial packet with nonunit `h=s` kills all
+  five positive-`z` buckets but has `J=3s(4s-1)/8`.  Hence top buckets alone
+  do not force `h` to be a unit; arm polynomiality and the constant bucket are
+  both load-bearing.  Script/output/semantic SHA-256:
+  `882a3c0a890913590b52542b2d7519cd0cb315bdb62a35d1f9431de11c918b42` /
+  `067249dfd5bb9333a97a1b7657ad3a600022d64bcd3e02ed4931134451febd24` /
+  `1e5e88fa746846db7d55be67770b8411bb24069d73a4694f42ef637d02affd85`.
+
 - `jc2_quintic_normal_strip_keller_thm3871.py` -> matching `.out`
   [THM-3871 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Every
   characteristic-zero polynomial Keller pair in `k[s,z]` with both transverse

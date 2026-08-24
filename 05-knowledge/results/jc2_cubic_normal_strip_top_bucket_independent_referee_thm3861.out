@@ -1,0 +1,9 @@
+THM3861_MSG3070_TOP_BUCKET_INDEPENDENT_REFEREE_20260823
+status=PASS;already_canonical_THM3861;no_new_theorem
+kummer_profiles=3721
+local_profiles=1275
+polynomial_hostile_J=3*s*(4*s - 1)/8
+rational_hostile_J=-3/16
+active_gates=5073
+semantic_sha256=1e5e88fa746846db7d55be67770b8411bb24069d73a4694f42ef637d02affd85
+ALL CHECKS PASSED

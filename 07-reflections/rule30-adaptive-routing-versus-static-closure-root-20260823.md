@@ -50,6 +50,36 @@ corresponding next output even after retaining the current bank, gap, zero
 chain, and other off-ray chain.  This is minimality only in that declared
 whole-chain deletion family, not among arbitrary symbolic compressions.
 
+The two deletion hostiles live in different zero-observation fibres, however.
+This makes a second, genuinely adaptive compression possible.  Partition the
+`13,853` exact branches by
+
+```text
+(current bank, d, C_0).                                      (2a)
+```
+
+There are `11,927` such fibres.  Exact quotienting gives
+
+```text
+needed after (2a)       fibres    branches
+no off-ray chain        10,502     10,705
+either C_1 or C_2        1,318      2,889
+C_1 specifically            85        211
+C_2 specifically            22         48
+both                           0          0.                  (2b)
+```
+
+Thus, in this declared finite ambient, `(2a)` selects at most one off-ray
+chain and the selected observation determines the entire next three-ray bank.
+After the current bank is known, the routed cost drops from three chains to
+the zero chain plus at most one off-ray chain, hence from at most six to at
+most four additional literal point evaluations.  Neither fixed choice is
+universal: `BBBBAC/BBCBAB` forces `C_1`, while `ABAABBCB/ACAABBCC` forces
+`C_2`.  An import-free Mealy enumeration reproduces all `14,762` portraits,
+the complete census `(2b)`, both hostiles, and the absence of a two-chain
+fibre.  This is FINITE-EXACT lookup closure, not an all-depth selector theorem
+or a statement about the physical signalizer path.
+
 ## Why static compilation explodes
 
 Before the gap is known, the possible first-stage inputs are
@@ -109,6 +139,26 @@ semantic SHA256 0608bc5298aa7855dabb4784dd56df3c2df6cba06a7bfe0e2a60b754f1a3ca63
 ```
 
 Normal and optimized runs byte-match the frozen LF output.
+
+The conditional chronology census and its clean-room audit are canonical at
+
+```text
+04-computation/rule30_adaptive_chronology_census_20260823.py
+05-knowledge/results/rule30_adaptive_chronology_census_20260823.out
+script/output/semantic SHA256
+697cef83a3d8dcb18d7e8d479ee3ff2401811b82c9a3e535fd15262d38512c78
+f9276be9eca5d717f339d85c3e63b6140cc7dcaf00790b3f8889a92cf91a1833
+41dfbb528276dbb10077c3d30c2a88fb668585a6c248b1d3f6908347d0d377e0
+
+04-computation/rule30_adaptive_chronology_census_independent_audit_20260823.py
+05-knowledge/results/rule30_adaptive_chronology_census_independent_audit_20260823.out
+script/output/semantic SHA256
+bf934e82fac295755418f04a72b810e558e578d3911ae9b879cc8c20430fa52d
+47530b3414e247459a239474beaf871da57073916f9abe17ca2bd71c75f5367d
+dfaa16be3db0361f192588a50eebc53fded33e3c8df5c9c708198fd0a8cd191e
+```
+
+Both ordinary/optimized pairs and both stored LF transcripts byte-match.
 
 The universal addendum and its import-free hostile audit are canonical at
 

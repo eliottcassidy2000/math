@@ -1,0 +1,9 @@
+RULE30_ADAPTIVE_CHRONOLOGY_INDEPENDENT_AUDIT_20260823
+status=FINITE-EXACT;clean_room_mealy_enumeration;no_uniform_claim
+active_words=14762;distinct_permutations=14762;exact=13853;overflow=909;classes=11927
+query_census=(('zero_queries',10502,10705),('either_one_query',1318,2889),('ray_one_query',85,211),('ray_two_query',22,48),('both_queries',0,0))
+maximum_class_size=7;maximum_output_count=7;pair_ambiguities=0
+ray_one_needed_control=(((9,8,3),4,(0,137,80)),2,2,('BBBBAC','BBCBAB',(32,41,112),(5,10,7),(5,0,7)))
+ray_two_needed_control=(((11,2,9),3,(0,11,8)),2,2,('ABAABBCB','ACAABBCC',(8,19,144),(1,2,15),(1,2,11)))
+semantic_sha256=dfaa16be3db0361f192588a50eebc53fded33e3c8df5c9c708198fd0a8cd191e
+ALL CHECKS PASSED
