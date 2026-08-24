@@ -2,7 +2,7 @@
 id: THM-3979
 title: "Two-color formal cusp Darboux lifting"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. On the
   minimal height-two completion of THM-3973, the x-adic completion splits
   into the disjoint boundary-cusp and interior-arm colors. The cusp color
   admits an exact formal Darboux pair with boundary value (y^2,y^3): after
@@ -17,6 +17,17 @@ status: >
   result: termination in B_2, global critical-point avoidance, finiteness,
   and a Keller pair remain OPEN.
 source: jc-zero-debt-lift / post-THM-3973 simultaneous boundary-jet lane, 2026-08-24
+audit: >
+  PASS (root / jc-cohn3709, 2026-08-24). The audit independently checked the
+  product decomposition and explicit lifted idempotents, the D-chart
+  implicit coordinate and source-volume sign, the centered quadrature and
+  formal square root, the standard cusp determinant, and the ordinary L1
+  chart. It rederived the cusp jet image, cokernel, kernel, and delayed
+  scalar, and checked that reduction modulo x^(N+2), one derivative-order
+  loss, and the simple D zero really imply the relative modulo-x^N finite
+  algebraic jets. The order-five control and all hashes replay under normal,
+  optimized, and frozen runs at CHECKS=96. No termination, submersion,
+  finiteness, or global Keller inference is made.
 depends_on:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
 related:
@@ -32,7 +43,7 @@ hash_basis: raw LF bytes
 
 # THM-3979 -- the simultaneous cusp/arm invoices are formally unobstructed
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.** Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over
 an algebraically closed field `k` of characteristic zero and choose
 
 ```text
