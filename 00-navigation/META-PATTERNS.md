@@ -259,7 +259,7 @@ only after factorization or target-annihilation is proved.
 
 ## Audit and close sections under their next native operation
 
-**Action:** apply the next target operation before scalarizing; retain moving labels/cocycles, test observer equality for congruence, and type every sidecar update. Adaptive overflow is honest without a uniform finite observer. Pre-scalar co-support/transition/circuit defects may stop or update the route. Require lawful composition/basepoint; walks are not chronology. **Evidence:** THM-2292/3144/2658/3156/3285--3324/3511/3732.
+**Action:** apply the next target operation before scalarizing; retain moving labels/cocycles, test observer equality for congruence, and type every sidecar update. Adaptive overflow is honest without a uniform finite observer. Pre-scalar co-support/transition/circuit defects may stop or update the route. Require lawful composition/basepoint; walks are not chronology. **Evidence:** THM-2292/3144/2658/3156/3285--3324/3511/3732/4006.
 
 ## Exteriorize a commutative response against the lost relation
 

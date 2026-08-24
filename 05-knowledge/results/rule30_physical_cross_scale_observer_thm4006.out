@@ -1,0 +1,16 @@
+RULE30_CROSS_SCALE_FIRST_MISMATCH_20260824
+status=THM-4006_FINITE-EXACT;physical_highest-shell_chronology;no_all-scale_claim;no_rule30_prize
+dependency_sha256=2ce110f0b8e9c71c3d298aaf07e8e6c02b70d33e5671bc763f3f3b490caa5445
+universe=n=1..1023;scales=0..9;records=1023;phase_rule=0<=t<2^m;n=2^m+t
+owner_depth=4;selected_rays=(0, 1, 2);odd_block_length=4;odd_precision=4;projective_history=3;projective_precision=4
+v=(1, 3, 4, 6, 7, 9, 15, 16, 24, 25, 27);gaps=(2, 1, 2, 1, 2, 6, 1, 8, 1, 2)
+same_scale_defect_ranges=((0,1,3,3,6,6),(1,2,6,8,44,196),(2,4,13,19,6378,58722),(3,8,27,41,12416,54368),(4,16,58,88,34118,61694),(5,32,120,182,22038,23446),(6,64,242,368,42356,51636),(7,128,497,751,58834,15834),(8,256,1001,1511,26148,38836),(9,512,2024,3046,25710,54918))
+same_scale_strict_checks=2036
+quotient_census=(('branch',4,4,4,4,2),('bank',246,185,185,176,58),('portrait',395,229,226,224,15),('odd',753,190,183,181,2),('carry',870,128,109,107,2),('projective',1019,4,1,1,0),('base',1022,1,0,0,0),('one',1023,0,0,0,0),('two',1023,0,0,0,0),('exact',1023,0,0,0,0))
+finite_first_mismatch_after_projective=((2,(15,6,1),(15,6,1,8,3,10,13,4,7,14,9,0,11,2,5,12),(5,7,5,15),('visible',1,0),((8,1,5),(1,3,15),(2,5,11))),(943,9,431,2,(15,6,1),(5,7,5,15),('visible',1,0),((8,1,5),(1,3,15),(2,5,11)),((1,54,29),(5,26,41),(9,14,53)),(1,(7,10,13)),'b24382b993989b66d734fd33b3f12a99b828d08b17ac7ea0e85a8668e1814cbe'),(951,9,439,2,(15,6,1),(5,7,5,15),('visible',1,0),((8,1,5),(1,3,15),(2,5,11)),((1,22,45),(5,10,57),(9,46,5)),(1,(11,14,1)),'d15b0260d278f63de042cfa2e81fba7dab768413dab6df302b526aab4fe79a18'))
+finite_first_cross_scale_mismatch_after_carry=((2,(1,12,11),(1,12,11,6,13,0,7,10,9,4,3,14,5,8,15,2),(3,1,3,9),('visible',0,0)),(20,4,4,2,(1,12,11),(3,1,3,9),('visible',0,0),((2,5,15),(1,3,15),(2,5,7)),((3,54,23),(7,58,51),(11,30,31)),(0,(5,12,7)),'a97572708645866024fed759475cb5abf19df8ad5f3a1fe3ca1a69023c661f70'),(574,9,62,2,(1,12,11),(3,1,3,9),('visible',0,0),((8,1,1),(1,7,13),(2,5,3)),((3,38,23),(7,10,35),(11,46,47)),(0,(5,8,11)),'c2bfe03422ae449c1c3f7225a36fe691221a22e78bed2f65fa0a4f9cab804350'))
+phase_owned_base_hostile=((6,2,2),(11,12,9),(15,8,5),((1,16,61),(5,4,33),(9,24,21)))
+projective_mismatch_phase_base_repair=((1,54,29),(1,22,45),(7,10,13),(11,14,1))
+semantic_sha256=6cd1995718b50ab1225e0b6d4725af00357e08eb6ca4304fcaeacc6640dff09c
+interpretation=finite physical cross-scale quotient;branch+owner+odd-block+carry+projective-history+phase-base-chain are tested before routed off-ray chains;two-chain candidate has no target mismatch only in declared universe
+ALL CHECKS PASSED

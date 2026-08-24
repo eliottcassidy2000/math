@@ -1,0 +1,23 @@
+RULE30_CROSS_SCALE_FIRST_MISMATCH_INDEPENDENT_AUDIT_20260824
+status=THM-4006_INDEPENDENT_AUDIT_PASS;NO_ALL_SCALE_CLAIM;NO_RULE30_PRIZE
+universe=n_1_through_1023_exactly_once;highest_shell_n=2^m+t;0<=m<=9;0<=t<2^m
+valuations=(1, 3, 4, 6, 7, 9, 15, 16, 24, 25, 27);gaps=(2, 1, 2, 1, 2, 6, 1, 8, 1, 2)
+same_scale_defect_ranges=((0,1,3,3,6,6),(1,2,6,8,44,196),(2,4,13,19,6378,58722),(3,8,27,41,12416,54368),(4,16,58,88,34118,61694),(5,32,120,182,22038,23446),(6,64,242,368,42356,51636),(7,128,497,751,58834,15834),(8,256,1001,1511,26148,38836),(9,512,2024,3046,25710,54918))
+same_scale_strict_checks=2036
+quotient_census=(('branch',4,4,4,4,2),('bank',246,185,185,176,58),('portrait',395,229,226,224,15),('odd',753,190,183,181,2),('carry',870,128,109,107,2),('projective',1019,4,1,1,0),('base',1022,1,0,0,0),('one',1023,0,0,0,0),('two',1023,0,0,0,0),('exact',1023,0,0,0,0))
+projective_collision_fibres=((128, 132), (256, 260), (515, 519), (943, 951))
+projective_collision_details=(((128,7,0,(1,(9,14,7))),(132,7,4,(1,(9,14,7)))),((256,8,0,(1,(11,6,1))),(260,8,4,(1,(11,6,1)))),((515,9,3,(0,(7,10,13))),(519,9,7,(0,(7,10,13)))),((943,9,431,(1,(7,10,13))),(951,9,439,(1,(11,14,1)))))
+projective_first_state_repeat=(128, 132)
+projective_first_target_mismatch=(943,951);same_scale=(9,431)/(9,439)
+projective_mismatch_target=((1,(7,10,13)),(1,(11,14,1)))
+carry_first_cross_scale_target_mismatch=(20,574);projective_repairs_it=True
+zero_base_counts=(nonzero_extensions=684,naive_bank_mismatches=676)
+zero_base_accidental_selected_bank_equal=(307, 319, 371, 387, 433, 593, 756, 955)
+zero_base_first_failure=(n=6,m=2,t=2,extension=1);naive=(11,12,9);physical=(15,8,5)
+zero_base_scope=routed_chain_coordinates_and_recovered_next_bank_only;projective_shadow_carry_and_center_unchanged
+n6_coincidence=also_first_ordinary_carry_one_but_not_the_same_correction
+n6_physical_chains=((1,16,61),(5,4,33),(9,24,21))
+record_stream_sha256=d5046b3c1a7bfc8b921b7bcd6ece5368a24a3feb13de43d4811883769203f084
+semantic_sha256=47c79b0e6ab72cc6519b32602608b77ddb9da7b9043c4579b97d2e159cc2231b
+gates=54313
+RESULT=PASS;FIRST_TARGET_MISMATCH=943/951;FINITE_BOUNDARY=1023

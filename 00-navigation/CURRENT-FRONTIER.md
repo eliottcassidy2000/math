@@ -345,8 +345,10 @@ asymptotic or residue.
 - **Rule 30:** THM-3502--3824 give compiler/carry, no finite-spatial cycles,
   Smith forms, and shell kernels. A FINITE-EXACT `D=B=4`, length-nine census
   has `13,853` portraits and an adaptive at-most-one-off-ray selector, but no
-  fixed ray. Static tariff: `2^(D+B-1)+B+2`; all-depth/physical prizes remain
-  **OPEN**.
+  fixed ray. FINITE-EXACT THM-4006 reaches `n=1023`: its sole target mismatch
+  `943/951` needs the phase base, `20/574` needs projective history, and a
+  universal zero base already fails at `n=6`. Static tariff:
+  `2^(D+B-1)+B+2`; all-scale and physical prizes remain **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
   preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. Relative to one
   reconstructed Brendle--Hung implementation, the mixed identities and

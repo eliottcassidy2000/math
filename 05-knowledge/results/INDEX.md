@@ -1431,6 +1431,26 @@
   `4777f23c31f3dbe65f420b6a1b77f303677e94015c009ffd113bcbb0ce88cd73` /
   `1c482f100f60496ab1d678f75687d52b3e33b6eaa6e4e9096948479c87d27072`.
 
+- `rule30_physical_cross_scale_observer_thm4006.py` and its no-import audit
+  -> matching `.out`s [THM-4006 FINITE-EXACT + VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED; NO RULE 30 PRIZE]. The physical highest-shell
+  universe is exactly `1<=n<=1023`. The finite owner/odd/carry/projective
+  observer has four repeated states: `128/132` is the first harmless repeat,
+  while `943/951` is the unique and first target mismatch. A phase-owned base
+  chain removes every target mismatch in the declared universe. The first
+  cross-scale carry-level mismatch `20/574` is separated by projective
+  history. General-phase routing must use `a+r*2^d`; the zero-base substitute
+  first fails at `n=6` and is wrong on `676/684` nonzero extensions. Audit
+  gates: `54,313`. Primary script/output/semantic SHA-256:
+  `dd2557860f92421121e808d879353429aee0dcb1029744e1dd8f215bff834cdd` /
+  `7e8d71b6b6dab9c4ec1a1aa9578da5478f1212ea1ad912db83e8aa61434238f2` /
+  `6cd1995718b50ab1225e0b6d4725af00357e08eb6ca4304fcaeacc6640dff09c`.
+  Independent script/output/semantic/record-stream SHA-256:
+  `5e71d754306ea51ec64f14b88f2808eaf5ffcc43d37e30aebdbdb6bced406288` /
+  `51d1936b605c457e5be296535a926c6eb9758e07139323c94527cb088b8b8eec` /
+  `47c79b0e6ab72cc6519b32602608b77ddb9da7b9043c4579b97d2e159cc2231b` /
+  `d5046b3c1a7bfc8b921b7bcd6ece5368a24a3feb13de43d4811883769203f084`.
+
 - `jc2_degree_six_common_zero_normal_cubic_two_place_thm3906.py` -> matching
   `.out` [THM-3906 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   A normal nonmonogenic common-zero `S3` cubic first exists at discriminant

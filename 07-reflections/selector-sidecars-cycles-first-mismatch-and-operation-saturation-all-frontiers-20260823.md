@@ -1112,6 +1112,31 @@ every declared scale, while the `n=2` hostile blocks promotion to an adaptive
 exact-gap congruence.  Thus the missing coordinate is the routed chronology,
 not another static shell sum.
 
+[THM-4006](../01-canon/theorems/THM-4006-rule30-physical-cross-scale-observer-first-transition-mismatch.md)
+now locates that chronology on the actual physical ray through `n=1023`.
+After owner portrait, a four-unit shadow, ordinary carry, and three projective
+levels are retained, the finite observer has only four repeated states. The
+first is the harmless pair `128/132`; the sole target mismatch is `943/951`.
+Its phase-owned base chains `(1,54,29)` and `(1,22,45)` separate the next
+banks. Before projective history, the first cross-scale mismatch is `20/574`;
+the projective sidecar separates it.
+
+The first failed implication is more reusable than either bounded success.
+For a general phase with `d`-bit tail prefix `a`, the routed input is
+`a+r*2^d`, not `r*2^d`. The zero-base substitution already predicts the wrong
+bank at `n=6`, and fails on `676` of `684` nonzero extensions in the bounded
+universe. This is the native-operation version of a basepoint debt: the owner
+portrait may agree while its action must still be evaluated on the cylinder
+actually occupied by the phase.
+
+The freshly integrated THM-4000 integral sampler is a useful typed contrast.
+Exact integer sample lifts satisfy a factorial Smith lattice, and that lattice
+makes evaluation at a new base well-defined modulo the optimal falling-
+factorial modulus. Rule 30's modular odd/projective shadows also retain carry,
+but they do not define an operation congruence until the moving phase-tail
+basepoint is restored. The shared move is “retain compatibility before the
+next evaluation”; the carriers, moduli, and conclusions do not transfer.
+
 The arithmetic analogue is
 [THM-3793](../01-canon/theorems/THM-3793-inert-prime-sum-all-scale-two-cube-singleton.md).
 Its exact finite inequality sums every elementary inert-prime layer.  The
@@ -1193,7 +1218,7 @@ They do not share states, probability, chronology, or a reduction.
 | All-degree centered root map | pole-support carrier | apply local trace and the finite RH budget before exact color division | root-regular/shared/`C3,C2,C2xC2` carrier trichotomy | color existence, maximal ramification and arbitrary root gauge | exact color row plus maximal-order/source sidecar | THM-3959 closes all seven `N=5` signatures; degree at least six and other gauges remain |
 | Removed divisor lattice | resolvent three-class | saturate boundary sublattice | conditional three-divisibility | actual class and ADE mixing | full exceptional lattice | THM-3915 mixed boundary--ADE hostile |
 | Rational dual | reduced dual curve | cancel common tangent factor | reduced tangent map | nonimmersion multiplicity | `E_nu` tangent-base divisor | `[ST^(d-1):T^d:S^d]` |
-| Rule 30 words | selected ray image | positive affine-word action | complete static orbit | physical chronology and owner | zero-fibre routed query | fibres requiring opposite rays |
+| Rule 30 words | selected ray image | positive affine-word action | complete static orbit | physical chronology and owner | phase-owned base plus routed off-ray query | THM-4006 `943/951` transition hostile |
 | Two-cube prime subsets | critical mass | singleton row plus Euler normalization | weight and disjointness inside the family | collisions outside the family | representation fibre | split-prime and exponent-three hostiles |
 
 Sidecars are consumer-specific.  A “root” may mean a polynomial coordinate, a
