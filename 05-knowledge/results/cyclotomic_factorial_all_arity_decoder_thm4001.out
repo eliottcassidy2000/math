@@ -1,0 +1,20 @@
+FACTORIAL ALL-ARITY CYCLOTOMIC DECODER -- INDEPENDENT EXACT AUDIT
+identity M_m=L(Pi_d(F^(d*m)))/(d*m)!=h_m(a_1^d,...,a_k^d): PASS
+symbolic selector cases=64 retained=484 rejected=11053: PASS
+small exhaustive coefficient vectors=1018 response_rows=24704: PASS
+Newton/recurrence rows=4072: PASS
+nonnegative unordered finite cases=3136 unique_signatures=3136: PASS
+selector_scope k=3,d=2,a=(1,1,1): diagonal_mu2=6, one_coordinate_mu2=4, coordinatewise_(mu2)^3=3; coordinatewise is required
+repeated_zero d=3 a=(0,-1,2,2) powers=(0, -1, 8, 8) h1..h4=(15, 177, 1871, 18609) char=(1, -15, 48, 64, 0)
+positive_branch d=3 a=(1,2,3,4) h1..h4=(100, 7445, 505280, 33120201) recovered_powers=(1, 8, 27, 64)
+branch_hostile d=2 {1,2} and {-1,2} have identical M0..M8
+complex_branch all responses invariant under independent a_i -> zeta_i*a_i, zeta_i^d=1
+arity_hostile powers {1,8} and {0,1,8} have identical all positive moments; k must be known
+taxicab 1729: (1,12)->(M1,M2)=(1729,2987713), (9,10)->(1729,2260441)
+nonmultiplicative [x_i^d x_j^d]: Pi(F^d)^2 has 2, Pi(F^(2d)) has binom(2d,d)
+scope recoverable_without_branch=unordered multiset {a_i^d}, with multiplicity and known k
+scope original_a_i=only after a fixed injective dth-root branch (e.g. nonnegative reals)
+scope no_FC_HFC_JC_LRC_consequence=projector is not multiplicative and the functional is modified
+semantic_sha256=6d53d78ad129ae4bb403ac01e1dfcd65a121782815f98d899e49bd661d350f57
+active_gates=108399
+FINAL PASS

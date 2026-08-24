@@ -409,7 +409,10 @@ asymptotic or residue.
   THM-3182--3314 give reset/thickness/Clifford and sheet/cone data but
   leave endpoint ancestry/positivity. THM-3465/3470 close named character/shear
   cells; support `5` and mixed cells remain OPEN. THM-3466 need not separate;
-  THM-3732's `F12/F13` seam fails on two edges. HFC-null still needs an
+  THM-3732's `F12/F13` seam fails on two edges. THM-4001 proves that the first
+  `k` coordinatewise cyclotomic factorial responses recover every known-
+  arity multiset `{a_i^d}`; diagonal averaging, unknown zero arity, root
+  branches, and nonmultiplicativity block any FC/HFC transfer. HFC-null still needs an
   orientation/basepoint; HFC(3), FC(3), `JC(2)` and arbitrary faces remain OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”

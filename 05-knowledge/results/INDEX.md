@@ -1224,6 +1224,19 @@
   `bf561c4ae7712b413deae2c3315a36806103230692625d139cfc33e6f0aed822` /
   `a7d633a98ad0dfc588d5c59b039518dcb19add320f1a480e0c4623dd35639c46`.
 
+- `jc2_companion_divisor_endpoint_thm3999.py` -> matching `.out`
+  [THM-3999 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  JC(2) OPEN]. On THM-3973's completion the mixed residual factors as `G=tQ`,
+  with `ord_D(Q)=2` and strict endpoint scheme
+  `Spec k[y]/(gamma-R(0,y))`. The total principal-divisor ledger gives
+  `[L]=2[D]` and `[sum C_i]=-2[D]`; it does not prove `Q` irreducible or assign
+  classes componentwise. The conditional two-clutch critical group `Z/2` has
+  no canonical map to THM-3994's local `A1` class group, and THM-3996 still
+  forces another address packet or a Jelonek value. Exact pass rows: `68`.
+  Script/output SHA-256:
+  `633756be99402a4d193087bdfcd2c7f62d1daf13b5f2306ed9081abefe38263e` /
+  `a1fda65f8ac134d4389577184ab30e6459660204f8005239c4de46604513199f`.
+
 - `brendle_hung_lemma54_independent_audit_20260824.py`,
   `brendle_hung_vbc_exact_point_audit_20260824.py`,
   `brendle_hung_vac_vbc_global_identity_audit_20260824.py`, and
@@ -1264,6 +1277,20 @@
   `6da9af70c8979bcec1096b4e8ec05232bf3a2c9ac128406f0ad2ae4d6d9ca83e` /
   `7df97b3983308eb262b421a3455e5d6f465612c5efed19ddf88f7e5f64e3a885` /
   `81ff1f74df3fdd513c5374c3cae7b09f39f57e3bac4ef3a2ce1016ed09a77bc9`.
+
+- `cyclotomic_factorial_all_arity_decoder_thm4001.py` -> matching `.out`
+  [THM-4001 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; NO
+  FC/HFC/JC/LRC CONSEQUENCE]. For fixed known arity `k`, the coordinatewise
+  `(mu_d)^k` Reynolds projector gives
+  `M_m=L(Pi_d(F^(dm)))/(dm)!=h_m(a_1^d,...,a_k^d)`. Newton inversion of the
+  first `k` moments recovers the unordered multiset of `d`th powers, including
+  repetitions and zeros. Recovering the coefficients needs an injective root
+  branch; unknown arity loses zero roots. Diagonal and one-coordinate averages
+  fail already at `(k,d)=(3,2)`, and the projector is not multiplicative.
+  Active gates: `108,399`. Script/output/semantic SHA-256:
+  `45088e0169befc91ccb8097534e4108fe152718c7471283ea29ea6afd18425bb` /
+  `810ee433370f82988f92acdb185279c3cf49c40551889345d0117e99c5ad4a61` /
+  `6d53d78ad129ae4bb403ac01e1dfcd65a121782815f98d899e49bd661d350f57`.
 
 - `hopf_s6_triangle_monodromy_snf_audit_20260824.py` -> matching `.out`
   [VERIFIED-EXACT DISPLAYED MATRICES + FINITE-EXACT CONDITIONAL ORIENTED

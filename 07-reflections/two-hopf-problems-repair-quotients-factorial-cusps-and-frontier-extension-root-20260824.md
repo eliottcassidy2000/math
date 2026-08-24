@@ -18,7 +18,7 @@ symmetric degenerate scaffold
   -> retain branch/address/orientation data before taking a quotient.       (1)
 ```
 
-Nine unconditional results came out of that grammar.
+Eleven unconditional results came out of that grammar.
 
 1. [THM-3990](../01-canon/theorems/THM-3990-componentwise-harmonic-obstruction-and-repair-quotient.md)
    proves the exact componentwise Laplacian repair criterion and its finite
@@ -46,8 +46,9 @@ Nine unconditional results came out of that grammar.
    an `A1` singularity and local class group `Z/2`.
 6. [THM-3995](../01-canon/theorems/THM-3995-scale-two-parity-hole-support-and-integer-variance-tariff.md)
    turns the four oriented endpoint holes in the scale-two LRC row into an
-   exact support cap, its sharp integer variance tariff, and a new sufficient
-   gate.  It is a real narrowing of the row, not a proof of `LRC(14)`.
+   owner-maximum cap `4(U-1)/(63U)`, its exact integer variance tariff, and a
+   new sufficient gate.  The `k=0` plateau and null-wall convention are
+   load-bearing. It is a real narrowing of the row, not a proof of `LRC(14)`.
 7. [THM-3996](../01-canon/theorems/THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy.md)
    proves the complete node-address conservation law.  Away from the
    nonproperness locus, each normalized component has equal incoming and
@@ -66,6 +67,17 @@ Nine unconditional results came out of that grammar.
    gives a reusable conic/ODE obstruction in the fixed node gauge. It is an
    independent proof of a raw `3`-by-at-most-`3` weight cell already excluded
    by THM-3974/3987, not a new support-floor advance.
+10. [THM-3999](../01-canon/theorems/THM-3999-companion-divisor-boundary-endpoint-and-class-ledger.md)
+    separates three companion coordinates that earlier sketches conflated:
+    fixed boundary order two, the endpoint scheme
+    `Spec k[y]/(gamma-R(0,y))`, and total strict class `-2[D]`. Factor ownership
+    and the complete node-address census are still lost.
+11. [THM-4001](../01-canon/theorems/THM-4001-cyclotomic-factorial-all-arity-decoder.md)
+    proves that coordinatewise cyclotomic projection turns normalized
+    factorial responses into `h_m(a_1^d,...,a_k^d)`, so the first `k` moments
+    recover every known-arity `d`th-power multiset. The diagonal projector,
+    unknown zero arity, root torsor, and multiplicativity hostiles mark the
+    exact information boundary.
 
 The source ledgers remain deliberately stricter:
 
@@ -86,13 +98,20 @@ The source ledgers remain deliberately stricter:
   analytic quotient,
   attaching maps, nearby cycles, and global recognition remain open.
 
-Two incoming canon promotions sharpen the same grammar on the Jacobian side.
+Four incoming canon promotions sharpen the same grammar across the Jacobian
+and factorial lanes.
 [THM-3997](../01-canon/theorems/THM-3997-reduced-two-three-hasse-repair-and-zero-residual-no-go.md)
 turns polynomial membership into an exact Hasse-diagonal repair test, forces
 the first residual coefficients from one free scalar, and proves `R=0`
 impossible.  Independently, [THM-3998](../01-canon/theorems/THM-3998-reduced-two-three-three-by-at-most-three-source-weight-support-obstruction.md)
 excludes the all-degree cell with the three forced `A` weights and at most
-three `C` weights.  The full reduced `2:3` cell remains open.
+three `C` weights. [THM-3999](../01-canon/theorems/THM-3999-companion-divisor-boundary-endpoint-and-class-ledger.md)
+then retains the companion endpoint and total class without inventing factor
+ownership. Orthogonally, [THM-4001](../01-canon/theorems/THM-4001-cyclotomic-factorial-all-arity-decoder.md)
+shows the same design principle in a benign finite decoder: a quotient is
+faithful only after its coordinatewise selector, arity, and root-branch
+sidecars are named. The full reduced `2:3` cell and every FC/HFC transfer
+remain open.
 
 ## 1. Inheritance pass and portfolio
 
