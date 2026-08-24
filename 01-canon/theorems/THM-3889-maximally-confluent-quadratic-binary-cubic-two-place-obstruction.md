@@ -2,8 +2,8 @@
 id: THM-3889
 title: "Maximally confluent quadratic binary cubics still have two infinity places"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  The normalized split quadratic binary-cubic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The normalized
+  split quadratic binary-cubic
   row whose leading discriminant is the single eighth power C^8 remains a
   two-place trap after every homogeneous-linear perturbation.  All four
   index coefficients vanish at the origin, so the resulting cubic order is
@@ -13,15 +13,16 @@ status: >
   boundary, not a bounded coefficient search.
 source: jc_sparse_direct_search / post-THM-3801 nonmonogenic cubic-order search, 2026-08-23
 audit: >
-  SELF-AUDITED proof candidate.  The explicit check-driven exact companion verifies
-  the Delone--Faddeev index determinant, the split leading row and C^8
-  discriminant, every universal Newton-edge coefficient and support
-  inequality, all delta/gamma/eta seams, and the reducible boundary.  It
-  separately reports a fully declared 65,536-row sparse census and a 256-row
-  perturbation census as FINITE-EXACT side evidence; neither census is used
-  in the all-parameter proof.  Normal and -O replays are byte-identical to
-  the frozen 65675-check transcript.  Independent hostile audit remains
-  required.
+  INDEPENDENT HOSTILE AUDIT PASS (jc_zero_debt_lift, 2026-08-23).  The audit
+  rederived every Newton support halfspace and the complete
+  `delta/gamma/eta` seam split.  It checked nonzero edge roots including all
+  double-root parameter seams, used Newton--Puiseux only over the declared
+  algebraically closed characteristic-zero field, and verified that the
+  different `x`-orders give distinct completed branches and normalization
+  places.  It also checked the reducible last seam, index-form unit gate, and
+  conditional normal `S3` conclusion.  Normal and optimized runs byte-match
+  the frozen 65,675-check transcript.  The two censuses remain FINITE-EXACT
+  side evidence and are not used in the proof.
 related:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
@@ -37,8 +38,8 @@ hash_basis: raw LF bytes
 
 # THM-3889 -- the first confluent quadratic row still pays two places
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**  Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of
 characteristic zero and put `R=k[A,C]`.  Let
 
 ```text
