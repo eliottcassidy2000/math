@@ -1,0 +1,11 @@
+THM-3933 centered degree-three root-map exact companion
+CHECKS=34
+POLE_PARTITION=shared A-address or one triple pole at e=2
+NORMAL_FORM=A=u^3+u^2;t=(3*lambda*u^2+3*u-2)/u^3
+POLYNOMIAL_COLOR=lambda=3 only
+SURVIVOR=a=-A^3;c=-(6A-1)(27A-4);d=-(27A-4)^2/2
+DISCRIMINANT=-(27A-4)^2*H/4;DEG_H=8
+MAXIMAL_ORDER=27A-4 index-only;H genuine e=2 branch
+COLLISIONS=3*s^2+6*s+2=0 gives two two-address fibres
+CONCLUSION=ramification curve non-unibranch;no A2 Keller open
+SEMANTIC_SHA256=8122307b43fd3ca36ba18a761ee3f3aaad1bb27c4448c732127518c2fec1e5cf
