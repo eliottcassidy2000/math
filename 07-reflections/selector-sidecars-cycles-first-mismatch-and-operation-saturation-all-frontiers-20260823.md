@@ -449,6 +449,13 @@ THM-3917 is **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**; its
 six-branch mechanism, rather than an unqualified no-atlas slogan, is the
 transportable obstruction.
 
+Incoming THM-3920 and THM-3921 are **RESERVED / UNPROVED EMPTY STUBS**.  They
+name the two immediate successor probes--a general boundary-address cap and
+the exact decic degeneration packet transporting the six addresses--but
+neither is a proved dependency.  Concurrent reservation of THM-3918 through
+THM-3921 moved the proved LRC endpoint theorem to collision-free THM-3922;
+the namespace move changes no script, output, or mathematical scope.
+
 ## 5. Filtered kernels and principal parts are the same warning, not the same theorem
 
 The strongest incoming connection is between the THM-3884/3886 residual
