@@ -58,6 +58,11 @@ Format per entry:
   lemma therefore excludes it as the image of a ramification divisor in any
   normal finite completion admitting a dominant plane open.  The `ell=0`
   seam is separately closed by THM-3801's monogenic different-unit gate.
+- **Repeated incident (THM-3927):** its two normalization places also lie over
+  projective infinity, outside THM-3920's affine cap, and `2<=3` in any event.
+  THM-3841 correctly excludes the resulting `G_m` target branch; separately,
+  the intrinsic ramification curve identifies both affine collision pairs and
+  is non-unibranch, so THM-3920 applies on that different carrier.
 - **Reusable rule:** distinguish affine target addresses from punctures over
   projective infinity.  Equality in a numerical count is not an obstruction
   without the correct geometric carrier and implication direction.
@@ -157,7 +162,8 @@ Format per entry:
   reservations. Its theorem file and every dependency/navigation edge first
   moved atomically to `THM-3932`; a further incoming reservation of that ID
   for the linear-conic fold classification displaced it once more to
-  `THM-3933`;
+  `THM-3933`; incoming reservations of `THM-3933` and `THM-3934` then moved
+  the LRC theorem atomically to `THM-3935`;
   the hash-bearing LRC companions and mathematical scope did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not

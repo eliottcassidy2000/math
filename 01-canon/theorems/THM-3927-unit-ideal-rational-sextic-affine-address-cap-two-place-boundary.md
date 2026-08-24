@@ -29,9 +29,9 @@ audit: >
   overorder. It repaired a substantive mechanism/scope error: two
   projective infinity places invoke THM-3841, whereas THM-3920 applies
   independently because the ramification curve identifies the two affine
-  branch pairs and is non-unibranch. The assertion-free companion
-  byte-matches in normal and optimized mode; frozen output, raw hashes, and
-  documentation checks pass.
+  branch pairs and is non-unibranch. In normal and optimized mode the
+  assertion-free companion LF-normalizes exactly to the frozen raw-LF
+  output; the raw hashes and documentation checks pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry

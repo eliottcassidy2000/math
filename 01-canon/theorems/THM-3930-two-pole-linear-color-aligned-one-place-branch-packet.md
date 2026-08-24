@@ -10,10 +10,11 @@ status: >
   point. The quintic normalization has at most three addresses over every
   affine target point, with a sharp two-address finite root-at-infinity
   fibre. Thus the packet passes the nonmonogenic, one-place alignment, and
-  cubic affine-address gates that killed the preceding constructions. No
-  affine-plane atlas or Jacobian counterexample is claimed: units, class
-  group, ramification-boundary basis, Euler characteristic, and an actual
-  plane chart remain to be determined.
+  cubic affine-address gates that killed the preceding constructions.
+  Subsequent audited THM-3931 proves scalar units, class group Z, principal
+  quintic ramification and a nonprimitive vertical class, and excludes every
+  affine-plane/Keller open. Thus the packet is a sharp near miss, not a
+  Jacobian counterexample.
 source: root / post-THM-3927 finite repeated-root pole-divisor lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc_degree6_one_place, 2026-08-23). The
@@ -24,10 +25,10 @@ audit: >
   explicit that Section 2 is complete only in the centered t(infinity)=0
   gauge and that m=e+1 is forced by cancellation against a zero at infinity,
   not by an assumed generic leading term. The visible two-address collision
-  also exposes a stricter source-unibranchness question, reserved separately
-  as THM-3931 and not used here. The assertion-free 35-gate companion
-  byte-matches in normal and optimized mode; raw and semantic hashes and
-  documentation checks pass.
+  also exposes the stricter source-unibranchness question subsequently closed
+  by THM-3931 and not used in the proof here. The assertion-free 35-gate
+  companion LF-normalizes exactly to the frozen raw-LF output in normal and
+  optimized mode; raw and semantic hashes and documentation checks pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
@@ -35,6 +36,7 @@ depends_on:
 related:
   - THM-3927-unit-ideal-rational-sextic-affine-address-cap-two-place-boundary
   - THM-3929-root-regular-one-place-linear-color-cubic-is-monogenic
+  - THM-3931-degree-two-pole-cubic-principal-ramification-no-atlas
 script: 04-computation/jc2_two_pole_linear_color_aligned_branch_thm3930.py
 output: 05-knowledge/results/jc2_two_pole_linear_color_aligned_branch_thm3930.out
 script_sha256: bb71b72a362663bf4694355b3ab7a6ef40911e5f61712578083b6213aac871fe
@@ -329,14 +331,13 @@ one common infinity point;           affine address count at most three.
                                                                     (31)
 ```
 
-The next decisive calculation is intrinsic to `X=Spec S`: determine
-`S*`, `Cl(S)`, the two ramification classes and possible boundary-class
-bases, then compute the Euler characteristic of every viable deletion. A
-positive class packet would still not construct an `A2` chart; a negative
-one would identify the next exact debt. The separate reserved successor
-THM-3931 addresses this intrinsic calculation and the source lift of `(20)`;
-it is not a dependency of this theorem. No claim about `JC(2)` beyond this
-finite completion is made.
+Subsequent independently audited THM-3931 completes that intrinsic
+calculation: `S*=k*`, `Cl(S)=Zq`, the vertical ramification class is `2q`,
+and the quintic ramification divisor `E` is principal. The two visible
+addresses coalesce at one point of `E`, making `E` non-unibranch;
+equivalently, deleting `E` makes its nonconstant defining function a unit.
+Hence this packet admits no `A2`/Keller open. Euler characteristic is not
+needed for its exclusion, and no broader claim about `JC(2)` is made.
 
 Reproduce the exact packet with
 

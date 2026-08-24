@@ -13,8 +13,9 @@ status: >
   finite-pole seam: a degree-one raw root w=1/u forces q=0 and then the
   opposite endpoint coefficient is a scalar unit. This closes the
   root-regular and centered-Mobius one-place linear-color grammars, not
-  homogeneous root maps of degree at least two. The latter are exactly the
-  live THM-3927 escape mechanism.
+  homogeneous root maps of degree at least two. THM-3930 subsequently
+  realizes one centered degree-two packet and THM-3931 closes that packet;
+  other higher-degree root maps and coefficient grammars remain open.
 source: jc_zero_debt_lift / post-THM-3927 one-place compression boundary, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc-cohn3709, 2026-08-23). The audit
@@ -25,13 +26,15 @@ audit: >
   both Euclidean/resultant cancellations, the p^2=3q partial-cancellation
   hostile, and the q=0 scalar endpoint. The theorem remains explicitly
   scoped away from degree-at-least-two homogeneous root maps. The 39-gate
-  companion byte-matches in normal and optimized mode, its frozen output and
-  raw hashes pass, and documentation checks pass.
+  companion LF-normalizes exactly to the frozen raw-LF output in normal and
+  optimized mode; its raw hashes and documentation checks pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
 related:
   - THM-3927-unit-ideal-rational-sextic-affine-address-cap-two-place-boundary
   - THM-3925-fivefold-conic-contact-torus-sextic-one-place-fold
+  - THM-3930-two-pole-linear-color-aligned-one-place-branch-packet
+  - THM-3931-degree-two-pole-cubic-principal-ramification-no-atlas
 script: 04-computation/jc2_root_regular_one_place_linear_color_cubic_thm3929.py
 output: 05-knowledge/results/jc2_root_regular_one_place_linear_color_cubic_thm3929.out
 script_sha256: 863c809aad0dc905a5143ab34444fab08dc5445a48a05f9431545f2f936a86d1
@@ -242,8 +245,10 @@ One finite-pole family can be handled without root regularity. Suppose the
 normalization coordinate is `u`, and after affine normalization
 
 ```text
-A=u^3+p u^2+q u+r,                 x=A-r.                  (21)
+A=u^3+p u^2+q u+r,                 x=A-r,                  (21)
 ```
+
+where `p,q,r in k`.
 
 Put `w=1/u`. Its equation over `k(A)` is
 
@@ -356,10 +361,10 @@ the scaled coefficient ideal instead acquires the common factor address
 `(A,B)=(0,0)`. The companion checks these identities directly.
 
 Therefore this theorem does **not** close arbitrary `b=C` cubics, homogeneous
-repeated-root maps of degree at least two, or JC(2). The next live object is
-the finite pole divisor of `(5)`: one must either eliminate it without losing
-the unit coefficient ideal or prove that its divisor payments force
-monogenicity by a different argument.
+repeated-root maps of degree at least two, or JC(2). THM-3930 realizes the
+first centered degree-two finite-pole packet, and THM-3931 closes that exact
+packet by non-unibranchness and principal/nonprimitive boundary classes.
+Other higher-degree root maps and coefficient grammars remain live.
 
 ## Reproduction
 

@@ -29,9 +29,9 @@ audit: >
   through its unique ramified fibre point. This verifies the THM-3920
   obstruction without relying on the class calculation; the principal E and
   nonprimitive P_0 classes then give a second THM-3922 obstruction. The
-  assertion-free 53-gate companion byte-matches in normal and optimized mode;
-  raw and semantic hashes and documentation checks pass. No repair was
-  required.
+  assertion-free 53-gate companion LF-normalizes exactly to the frozen raw-LF
+  output in normal and optimized mode; raw and semantic hashes and
+  documentation checks pass. No repair was required.
 depends_on:
   - THM-3930-two-pole-linear-color-aligned-one-place-branch-packet
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction

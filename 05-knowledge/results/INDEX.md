@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3932 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3935 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -280,20 +280,74 @@
   `cdb53643de8207a9e338c8a8f752a7603164e3a905e48180a89d700eede64540` /
   `8deb06257def95cc087c0d2b0819cde103f9742fe1bc541f1e0258bd5e462e95`.
 
+- `jc2_unit_ideal_rational_sextic_address_cap_thm3927.py` -> matching `.out`
+  [THM-3927 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The
+  smooth normal nonmonogenic `S3` cubic has unit coefficient ideal, scalar
+  units and `Cl=Z^2`. Its rational sextic has exactly two affine collision
+  fibres, two addresses in each and two `A5` contacts, so the affine cubic cap
+  passes. The target normalization is `G_m` and fails THM-3841; independently
+  the ramification curve identifies both affine pairs and fails THM-3920.
+  Ramification plus one vertical prime form a basis, but the deletion has
+  `chi_c=5`; one-place compression makes the maximal order monogenic. Checks:
+  `112`. Script/output/semantic SHA-256:
+  `90cc89a19a7593bded7d07216accbe12fc21cbedf5eda6ef9f12491abc73a533` /
+  `b35a13f3b8ff83e226a9d6c205fafcc0feb77d183399ce90bac6cb91989811d6` /
+  `67524a2bbcb3b40b473373aaffba08ca57c23978935ef9937e070e34f11bb034`.
+
 - `jc2_split_affine_conic_one_place_fold_degree_thm3928.py` -> matching
   `.out` [THM-3928 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   For a nonlinear degree-`N` one-place torus branch with quadratic coefficient
   equal to two distinct affine lines, parallel lines are impossible and a
   nonparallel coefficient fold has degree at least `ceil((N+1)/2)`.  A sextic
-  has exactly the packets `(d;e_1,e_2)=(4;6,2),(5;6,4),(6;6,6)`, so the
-  birational seam is empty.  The universal split-line resolvent presentation
-  is `Z direct_sum Z/3`, not `(Z/3)^2`.  In the classical `deg q<=3` grammar a
-  double line cannot give a full irreducible sextic; arbitrary-`q` components
-  survive, as frozen by MISTAKE-469's `y=x^6` hostile.  Checks: `812`.
+  has packets `(d;e_1,e_2)=(4;6,2),(5;6,4),(6;6,6)`. Under the full
+  discriminant hypothesis all three fail by multiple infinity support, the
+  weighted-degree-15 gap, and an impossible pure-sixth form. The universal
+  split-line resolvent is `Z direct sum Z/3`, not `(Z/3)^2`. A classical full
+  sextic also excludes double lines. Arbitrary-`q` chosen high-fold and
+  double-line components survive, as frozen by MISTAKE-469's `y=x^6` hostile;
+  the infinity-component conic is outside scope. Checks: `820`.
   Script/output/semantic SHA-256:
-  `c846567c49ef914685b093dcab39cc40b530f9928a965fcdd21b2396a01c49d9` /
-  `6f9a2df3bd7d635b40890a32f6518b952835ce554ba438577807f04a04d47f7a` /
-  `8752329bf706a7e865eb4990feebceca106242fcd60bbce1d6505eade459e6f8`.
+  `b26b18721aa67ecd5212c1edc0bf39f28505db6f631b3dc50de998e12c07a2b6` /
+  `fbed1442286d6b3ffa1756d9efa1e606a1774f984e740d1b34afc8164ec2c978` /
+  `b8f9d6a7fe151c72db445042197047033803066df0adfb566445b0fb27e65690`.
+
+- `jc2_root_regular_one_place_linear_color_cubic_thm3929.py` -> matching
+  `.out` [THM-3929 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  In the root-regular linear-color grammar, a one-place repeated root of
+  projection degree three is integral over `k[A]`; its monic cubic forces
+  `a|c,d`, so a unit coefficient ideal makes `a` scalar and the order
+  monogenic. A centered degree-one finite-pole seam collapses likewise.
+  THM-3930 realizes one degree-two packet and THM-3931 closes that packet;
+  other higher-degree maps and coefficient grammars remain open. Checks: `39`.
+  Script/output/semantic SHA-256:
+  `863c809aad0dc905a5143ab34444fab08dc5445a48a05f9431545f2f936a86d1` /
+  `983f42b62fb761c48d070479a7c8f6c4041ebc4a0cbbb82a6b1d5bbaa10c0f62` /
+  `38b0bfb97e7063f80f78b2bd14fa84092c4aeaf1fca55dd447a2b49966bfe0f6`.
+
+- `jc2_two_pole_linear_color_aligned_branch_thm3930.py` -> matching `.out`
+  [THM-3930 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The
+  explicit unit-ideal normal nonmonogenic `S3` order has squarefree branch a
+  line plus irreducible rational quintic. Both affine normalizations are `A1`
+  with one common infinity point; the quintic has at most three affine
+  addresses, sharply two at its finite root-at-infinity fibre. Subsequent
+  THM-3931 excludes an affine-plane/Keller open. Checks: `35`.
+  Script/output/semantic SHA-256:
+  `bb71b72a362663bf4694355b3ab7a6ef40911e5f61712578083b6213aac871fe` /
+  `487bed58c0db0a73bbfecf31f249f6ce27e705e96b00403c419a97e496e09c2f` /
+  `bc4fefd7ee1f28b2af68456da3c5d9129c7453ac128a5706b304ecb81ee2a7fa`.
+
+- `jc2_degree_two_pole_cubic_class_different_thm3931.py` -> matching `.out`
+  [THM-3931 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. For the
+  THM-3930 completion, `S*=k*`, `Cl(S)=Zq`, `[P_0]=2q`, `[P_C]=-4q`, `[Q]=q`
+  and `[E]=0`; the different factors as `dF` with `div(F)=E`. The two quintic
+  addresses land on one length-two ramified point with independent tangents,
+  so `E` is non-unibranch. Independently, mandatory boundary classes `(0,2)`
+  are not a basis, and deleting principal `E` makes nonconstant `F` a unit.
+  Thus the degree-two packet has no `A2`/Keller open. Checks: `53`.
+  Script/output/semantic SHA-256:
+  `cefec4c2a18fc3ac3302f34abcb17c54d1ce5f4521e9b99e85a9448f43c03a83` /
+  `1f70e1672ac2a11ecfd6718beb26b4586f911491b7945a9d7364c4d5c0672e81` /
+  `6ceb9cb4e9116d97fc68971a886206a7c3232280648cedf4a63160180fe8b298`.
 
 - `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
   `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil

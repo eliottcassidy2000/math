@@ -314,11 +314,11 @@ The theorem closes the complete marked family `(1)`, including every linear
 change of the cubic which is invisible on the fixed conic. It does not
 classify other conic contact partitions, non-torus discriminants,
 nonmonogenic cubic orders with the same abstract branch, or arbitrary
-rational torus sextics. Subsequent THM-3928 closes the birational one-place
-seam for a product of two distinct affine lines and the classical
-full-sextic double-line grammar; its high folds, arbitrary-`q` double-line
-components, and infinity-component conics remain open. In particular this
-theorem does not settle `JC(2)`.
+rational torus sextics. Subsequent THM-3928 closes every affine singular
+conic in the full classical sextic grammar: all three distinct-line fold rows
+fail, and a double line factors the discriminant. For arbitrary `q`, chosen
+high-fold or double-line sextic components and infinity-component conics
+remain open. In particular this theorem does not settle `JC(2)`.
 
 Run
 

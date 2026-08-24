@@ -67,7 +67,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505`, and only 58 in `t>=U`: 57 scale-one plus `(2,1,9)`.  THM-3910
-  closes 41, leaving 17.  THM-3933 closes AP11 and 1,365 fixed scale-two
+  closes 41, leaving 17.  THM-3935 closes AP11 and 1,365 fixed scale-two
   bodies, no type; `t<U` and owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
@@ -330,15 +330,11 @@ asymptotic or residue.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
-- **Rule 30:** THM-3502/3511/3512/3516 retain compiler/owner/carry; THM-3778
-  excludes finite-spatial cycles. THM-3804 gives all Smith forms; THM-3824
-  gives fixed/one-shell tariffs and the all-shell response kernel. A
-  FINITE-EXACT `D=B=4`, word-length-at-most-nine census has `13,853` exact
-  portraits and proves that the current bank plus zero chain adaptively selects
-  at most one off-ray chain; neither fixed off-ray is universal.  This is not
-  an all-depth or physical-path selector.  THM-3511 maps even rays onto the odd half;
-  the least literal static bank has `2^(D+B-1)+B+2` points (`134/256` there).
-  Physical recursion, adaptive/projective chronology and every prize are OPEN.
+- **Rule 30:** THM-3502--3824 give compiler/owner/carry, no finite-spatial
+  cycles, Smith forms and shell tariffs. A FINITE-EXACT `D=B=4` census has
+  `13,853` portraits: current bank plus zero chain selects at most one off-ray,
+  but neither fixed ray is universal. THM-3511's static tariff is
+  `2^(D+B-1)+B+2`; physical/adaptive chronology and every prize are OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  THM-3543--3782 close
   named cells only.  THM-3827/3831 force primitive-row genus `>=3`; THM-3836
   retains `3h^3+7h^2k+k^3=CS`, and THM-3838 gives `deg h,deg k>=5`.
@@ -359,11 +355,10 @@ asymptotic or residue.
   THM-3890 quintics; THM-3906/3907 places `1/2`,`2/6`; THM-3908/3911 sextics;
   THM-3912/14 conditional; THM-3913/19 mixed; THM-3915/16/17/21 close
   rational models; THM-3920 closes THM-3918/radial.
-  THM-3922+3924 basis/`[E]=5g` close THM-3921; THM-3923 kills THM-3853/55
-  four-ray.  THM-3925 kills marked `5P+Q`; THM-3926 kills unit-ideal 3907
-  despite basis (`g=2,chi_c=13`).  THM-3928 kills
-  birational split-line (`d=4..6`, one `C3`) and classical full double-line.
-  Folds/arbitrary-`q`/nonradial/`JC(2)` OPEN.
+  THM-3922--3931 close named packets: 3924 class, 3925 marked conic, 3926/27
+  boundary, 3928 full-sextic singular conics, 3929 regular/degree-one color,
+  and 3931 the 3930 degree-two packet. Arbitrary components, higher poles,
+  other grammars, nonradial and `JC(2)` remain OPEN; 3932 is RESERVED.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
   self-identifying immersed arm, THM-3846 its formal first jets, and THM-3849
   only visible conductor contact.  THM-3856/3861/3867/3871 close normal
