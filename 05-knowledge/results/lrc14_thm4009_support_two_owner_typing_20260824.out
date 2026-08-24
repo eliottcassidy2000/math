@@ -1,0 +1,16 @@
+LRC14 THM-4009 SUPPORT-TWO OWNER TYPING
+status=PROVED arithmetic typing + FINITE-EXACT hostile replay; LRC(14) OPEN
+cap=squared_l2<=195; coefficient_height<=13
+support_two_owners=body/body|body/extra|extra/extra
+support_two_ratio_atlas=47
+THM3910_types=17
+extra_extra_cap_compatible=15
+extra_extra_cap_incompatible=scale1:(8,21),scale1:(9,11)
+AP11_fixed_body_relation=2*(speed 1)-1*(speed 2)=0
+AP11_fixed_body_relation_norm_square=5
+AP11_owner_free_hostile_rows=2261
+body_extra_necessary_cutoff=t*p<=13*U
+cutoff_finite_control_gates=68007600
+consequence=47x17 is an owner-labelled discovery product, not a type intersection
+needed_sidecar=support labels plus body/extra incidence and endpoint owner
+PASS
