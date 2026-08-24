@@ -28,10 +28,10 @@ audit: >
   normalization.
 depends_on:
   - THM-4007-live-two-three-third-normal-row-five-weight-floor
+  - THM-4016-sharp-five-by-five-elliptic-attachment-nontorsion
 related:
   - THM-4008-pure-p-residual-totally-degenerate-generic-fibre-no-go
   - THM-4012-weighted-leading-face-good-elliptic-factor-observer
-  - THM-4016-sharp-five-by-five-elliptic-attachment-nontorsion
 script: 04-computation/jc2_sharp_weight8_specialization_obstruction_thm4017.py
 output: 05-knowledge/results/jc2_sharp_weight8_specialization_obstruction_thm4017.out
 script_sha256: a39600e0258c37d33cee45b1e6047ce0d488aab4482578d38596584f7c4c6fe1
@@ -100,14 +100,18 @@ If a residual monomial is `p^i y^j`, its contribution to
 ```
 
 Thus `p^3` and `y^2` have exponent zero, but the forced `p^4` term has
-exponent `-2`. The proposed family is not integral. Clearing its denominator
-makes the first special equation
+exponent `-2`. The proposed family is not integral. If one additionally
+truncates through `p^4+y^2`, setting `p*y^2` and every still higher term to
+zero, then clearing this truncation's denominator makes the first special
+equation
 
 ```text
 -delta*(S^2-P)P^4=0,                                    (7)
 ```
 
-not THM-4008's two-component weight-six equation. Therefore:
+not THM-4008's two-component weight-six equation. A nonzero `p*y^2` changes
+`(7)` at the same order, and still higher support can dominate it; none
+restores the claimed automatic weight-six limit. Therefore:
 
 ```text
 the exact sharp 5x5 residual does not realize the

@@ -21,9 +21,11 @@ Format per entry:
   `[p^4]R=256/(9a^17)!=0`. Under
   `q=rho^-6,s=rho^-1S,p=rho^-2P,y=rho^-3SP`, this term has
   rho-exponent `6-8=-2`. The proposed family is therefore nonintegral;
-  clearing the denominator gives
-  `-[p^4]R(S^2-P)P^4=0` rather than the six-node `j=0` face.
-  Thus the first failed implication precedes stable-map extension.
+  in the explicit truncation through `p^4+y^2`, clearing the denominator
+  gives `-[p^4]R(S^2-P)P^4=0` rather than the six-node `j=0` face.
+  An uncontrolled `p*y^2` term changes that same-order equation, and higher
+  support can dominate it. Thus the first failed implication precedes
+  stable-map extension without asserting a complete sharp special fibre.
 - **Repair / strongest survivor:** THM-4016 still proves that all six points
   with `(X^3,Y^2)=(43/84,127/84)` are non-torsion, but only as points of the
   formal weight-six truncation. THM-4017 marks the direct sharp-face
