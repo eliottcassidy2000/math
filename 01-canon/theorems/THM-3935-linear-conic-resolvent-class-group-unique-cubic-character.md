@@ -2,7 +2,7 @@
 id: THM-3935
 title: "Linear-conic resolvent has class group Z/3 and a unique cubic character"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The normal quadratic resolvent of the THM-3932 fold-three sextic has scalar
   units and class group Z/3.  Its natural Cardano divisor is the generator,
   not one of several local three-torsion directions.  Consequently the
@@ -10,6 +10,18 @@ status: >
   codimension-one unramified) C3 character up to inversion, and it recovers
   the already monogenic THM-3932 cubic.
 source: jc_degree6_one_place / post-THM-3932 global resolvent audit, 2026-08-23
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (root and infinity_component_conic,
+  2026-08-23). The audit independently reconstructed the uniform closed-fibre
+  square obstruction and Weil localization sequence, an explicit inverse to
+  the quartic-to-Weierstrass map, both infinity sections and their difference
+  3Q, the I3* spin-tip correction and Mordell--Weil determinant, and the
+  scalar-unit calculation. It repaired the omitted q=0 singular row and made
+  purity and S3 descent explicit. It also separated Pic(S)=H1_et(S,mu3)=0
+  from Pic(Sreg)=H1_et(Sreg,mu3)=Z/3 by checking the Cardano prime is reflexive
+  but two-generated at the isolated singularity. The 53-gate companion
+  byte-matches in normal and optimized mode; raw and semantic hashes and
+  documentation checks pass.
 depends_on:
   - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
 related:
@@ -26,7 +38,7 @@ hash_basis: raw LF bytes
 
 # THM-3935 -- the local four-line choice collapses to one global character
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Put
 
 ```text
