@@ -2,7 +2,7 @@
 id: THM-3980
 title: "All-height canonical split formal cusp section and nonalgebraization"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For every
   height n>=2 in the THM-3973 tower, the boundary completion has the rational
   coordinate q_D=z/x^(n+1)=y/(z-1)^2 and source volume
   eta=x dx wedge dq_D. It therefore carries an exact standard cusp Darboux
@@ -17,6 +17,16 @@ status: >
   algebraization/finite termination of this canonical split section only;
   other formal lifts, polynomial Darboux pairs, and JC(2) remain OPEN.
 source: jc-zero-debt-lift / post-THM-3979 mixed-sign formal-gluing lane, 2026-08-24
+audit: >
+  PASS (root / jc-cohn3709, 2026-08-24). The audit independently checked the
+  all-height D coordinate and volume identity, both exact chart pairs, every
+  generic-component pole order, the opposite Hensel signs, and injectivity of
+  the global field into both completed DVR fields. It rederived the diagonal
+  contradiction, recovery of the idempotent from either entry, the exact
+  K-times-K generated algebra, and the domain obstruction for every compatible
+  integral extension. The deliberately weaker “split algebraic, not global
+  rational” scope is necessary and correct. Normal, optimized, and frozen
+  outputs byte-match at CHECKS=154; all hashes agree.
 depends_on:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
 related:
@@ -32,7 +42,7 @@ hash_basis: raw LF bytes
 
 # THM-3980 -- the canonical split cusp atlas cannot algebraize on a domain
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.** Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over
 an algebraically closed field `k` of characteristic zero and fix
 
 ```text
