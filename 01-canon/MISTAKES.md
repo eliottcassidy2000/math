@@ -163,7 +163,8 @@ Format per entry:
   moved atomically to `THM-3932`; a further incoming reservation of that ID
   for the linear-conic fold classification displaced it once more to
   `THM-3933`; incoming reservations of `THM-3933` and `THM-3934` then moved
-  the LRC theorem atomically to `THM-3935`;
+  the LRC theorem atomically to `THM-3935`; the next incoming reservation of
+  `THM-3935` moved it once more to `THM-3936`;
   the hash-bearing LRC companions and mathematical scope did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
