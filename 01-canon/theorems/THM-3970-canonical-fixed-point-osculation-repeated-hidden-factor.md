@@ -15,13 +15,15 @@ status: >
   resulting normalization or JC(2).
 source: jc-cohn3709 + jc-degree6-one-place / post-THM-3969 nongraph reframe, 2026-08-24
 audit: >
-  INDEPENDENT MATHEMATICAL AND HOSTILE AUDIT PASS. The audit rederived the
-  unique derivative orientation, distinct reflection, contraction isomorphism,
-  forward and converse second-order invoices, the nonvertical gcd collapse,
-  kernel-based bijection, differential identity, and both sigma controls. For
-  sigma nonzero it made the monic integrality step in the displayed A2
-  normalization explicit. Normal and optimized 17-gate runs match the frozen
-  output after canonical LF normalization on Windows; all hashes pass.
+  INDEPENDENT MATHEMATICAL AND HOSTILE AUDIT PASSES (jc-zero-debt-lift,
+  jc-degree6-one-place, and all-frontiers, 2026-08-24). The audits rederived
+  the unique derivative orientation, distinct reflection, contraction
+  isomorphism and multiplicities, invariant descent, forward and converse
+  second-order invoices, nonvertical gcd upgrade, kernel-based bijection,
+  differential identity, and both sigma controls. The sigma-nonzero
+  irreducibility, monic finiteness bridge, normalization, and principal
+  different were checked explicitly. Normal and optimized 17-gate runs match
+  the frozen output after canonical LF normalization; all hashes pass.
 depends_on: []
 related:
   - THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt
@@ -315,19 +317,23 @@ t=-sigma v^3-3v^2-3a0v-a0^2+a0,
 T=sigma v^2+3v+2a0.                                    (28)
 ```
 
-The first row has degree three in `v`, proving the cubic field degree. Its
-third row gives the monic equation
+The irreducible target cubic gives field degree three. The recovery formula
+
+```text
+v=(P-a0^2)/(T+a0)
+```
+
+shows that `T` generates that field. After division by `sigma in k^*`, the
+first row of `(28)` is a monic cubic equation for `v` over the target order;
+the third row also gives the monic equation
 
 ```text
 v^2+(3/sigma)v+(2a0-T)/sigma=0,
 ```
 
-so `v` is integral over the target order. Its parameter is recovered
-generically as
-`v=(P-a0^2)/(T+a0)`, so this degree is the actual function-field degree,
-not merely the degree of a nonbirational parametrization. Since `k[a0,v]` is
-normal, these facts prove that it is the full normalization. Its
-source-to-target Jacobian is, up to sign,
+because `a0=P+t` belongs to that order. Hence `k[a0,v]` is finite and
+birational over the cubic coordinate ring; since the former is normal, it is
+the full normalization. Its source-to-target Jacobian is, up to sign,
 
 ```text
 3(sigma v^2+2v+a0).                                    (29)
