@@ -2,8 +2,8 @@
 id: THM-3975
 title: "Danielewski one-arm gradings, cubic controls, and hyperelliptic no-mates"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  HOSTILE AUDIT REQUIRED. For every n>=2 the one-arm determinantal
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For every n>=2
+  the one-arm determinantal
   completion B_n has an elementary two-color DPD grading and the marked
   homogeneous LND x partial_t has kernel k[x] and plinth x^(n+1)k[x]. At
   n=2,3 the pair (p,x+y) is a finite free degree-three map with basis
@@ -15,12 +15,22 @@ status: >
   n=2 and holomorphicity at n>=3. No planar Jacobian counterexample is
   claimed.
 source: jc-extra-debt-local / post-THM-3973 one-arm structural supplement, 2026-08-24
+audit: >
+  PASS (jc-zero-debt-lift, 2026-08-24). The audit independently reconstructed
+  the two-chart normalization and affine modification, both DPD denominator
+  colors, marked LND kernel and exact plinth valuation, the n=2 and n=3
+  multiplication tables, finite-free normal bases, monogenic index and trace
+  discriminants, the three generic P=0 addresses, and the cancellation
+  div(dP wedge dC)=E with no boundary ramification term. It also rederived
+  the conic residues at n=2 and the holomorphic hyperelliptic differential
+  obstruction at every n>=3. Normal and optimized runs byte-match the frozen
+  CHECKS=246 output; both raw hashes and the semantic hash agree.
 depends_on:
   - THM-3757-pell-chebyshev-three-charge-hyperelliptic-obstruction-tower
 related:
   - THM-3572-squarefree-danielewski-affine-modification-and-two-bracket-collapse
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
-  - THM-3974-height-tower-few-weight-support-obstruction
+  - THM-3974-height-tower-few-weight-darboux-support-obstruction
 script: 04-computation/jc2_danielewski_one_arm_cubic_control_thm3975.py
 output: 05-knowledge/results/jc2_danielewski_one_arm_cubic_control_thm3975.out
 script_sha256: 51ab6147f91df28ae7be11c803db4046d8fb44f913661d09bbf6be1d97c2e0b3
@@ -31,9 +41,9 @@ hash_basis: raw LF bytes
 
 # THM-3975 -- two colors, two cubic heights, and one hyperelliptic debt
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-HOSTILE AUDIT REQUIRED.** Work over an algebraically closed field `k` of
-characteristic zero. For an integer `n>=2`, put inside `k[x,t]`
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of characteristic zero. For an integer
+`n>=2`, put inside `k[x,t]`
 
 ```text
 z=1+x^n t,                 p=zt,
