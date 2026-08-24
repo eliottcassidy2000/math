@@ -51,7 +51,10 @@ global consequence below stays conditional until specialist verification.
 5. **Exact gauge/filling companion:**
    [centralizer and elliptic-action audit](../../04-computation/hopf_s6_gauge_centralizer_filling_audit_20260824.py)
    with [frozen output](../results/hopf_s6_gauge_centralizer_filling_audit_20260824.out).
-6. **Unconditional local theorem:**
+6. **Exact completed-overlap companion:**
+   [`b=2` centralizer/cusp Cech audit](../../04-computation/hopf_s6_b2_completed_centralizer_cech_audit_20260824.py)
+   with [frozen output](../results/hopf_s6_b2_completed_centralizer_cech_audit_20260824.out).
+7. **Unconditional local theorem:**
    [THM-3955, node cotangent normalization kernel and conductor
    torsion](../../01-canon/theorems/THM-3955-node-cotangent-normalization-kernel-and-conductor-torsion.md),
    extended at triple crossings by
@@ -537,17 +540,118 @@ the manuscript's displayed `c2=0` gives `c0 mod 2Z`.  A one-`delta` change in
 the order-four vector is an exact hostile: it preserves `ell2` and `p` but
 changes the invariant-covector residue by `2 mod 4`.
 
-This remains a local marked obstruction, not a classification.  The cheapest
-missing test is the generator `b=2`, for which both elliptic actions are
-locally conjugate.  Compute its overlap-translation class, including the
-cusp, in the Cech cokernel of global punctured-family translations plus the
-three local filling translations.  If that class vanishes, the orbit subgroup
-is `2Z`; if not, its order determines a smaller subgroup.  No global analytic
-equivalence follows from `(18)--(20)` alone.
+### The even generator has zero completed Cech class
+
+**Status: VERIFIED-EXACT FROM DISPLAYED DATA + PROVED CONDITIONAL
+IMPLICATION.**  Assume the manuscript's analytic pieces and transition maps
+exist as displayed; assume their compatibility with the punctured torus
+exponential sequence `0 -> Lambda -> E -> T -> 0`; and assume that
+zero-winding differences of the three filled local isomorphisms are exactly
+the Cech cocycles of the complete logarithm sheaf identified in Proposition
+9.23 as the completed vertical-translation bundle
+
+```text
+0 -> O -> V -> O(-1) -> 0.                              (21)
+```
+
+Under those hypotheses the marked centralizer shift `b=2` extends across all
+three fillings.  More generally every `b=2k` extends, and the
+centralizer-generated completed orbit subgroup is exactly `2Z` within the
+prescribed marked affine class.  This is a conditional classification of that
+marked centralizer action, not of the threefolds under arbitrary
+biholomorphisms.
+
+First, the cusp contributes no hidden analytic modulus.  Replacing `c0` by
+`c0+b` for an integer `b` gives
+
+```text
+Pi_(c0+b)=Pi_(c0) Q_b,
+C_(c0+b)(t)=C_(c0)(t)+b E21.                            (22)
+```
+
+The integral automorphism `Q_b` fixes `Lambda_tor` pointwise and acts as the
+identity on `Lambda/Lambda_tor`.  For
+`lambda_bar=(a,d) in Z^2`, the second change in `(22)` sends it to the integral
+vector `(0,ba)`, so its componentwise exponential is one.  Consequently every
+`c_lambda(t)`, every `Psi_lambda`, the cusp quotient `N0`, the exponential
+overlap map `E0`, and `G0` are literally unchanged for integral `b`.
+
+For `b=2k`, rewrite both elliptic fillings through this common punctured
+family.  With basis `(gamma_hat,u_hat,w_hat,delta_hat)`, the two affine
+numerators change by
+
+```text
+d1= 2k delta_hat,                d2=-2k delta_hat.
+```
+
+Translations by
+
+```text
+r1=k(1/12,-1/2,0,0),            r2=k(1/6,0,0,0)
+```
+
+give exact conjugacies because
+
+```text
+d1/3=(I-A1)r1+k u_hat,
+d2/4=(I-A2)r2-k w_hat.                              (23)
+```
+
+Their translations on the punctured overlaps have lattice cocycles
+
+```text
+kappa1=-k u_hat,                 kappa2=k w_hat.
+```
+
+Since `A1 A2 A0=I`, the triangle relation
+
+```text
+kappa1+A1 kappa2+A1 A2 kappa0=0
+```
+
+forces `kappa0=k w_hat`.  The manuscript's toric shear supplies the missing
+cusp map explicitly: `B0(-k u_bar)=-k w_hat`, so, because
+`s o g0=s-1`, `Phi_(-k u_bar)` has boundary lift `-k s w_hat` and cocycle
+`k w_hat`.  It commutes with the `Psi_lambda` action and descends across
+`N0`.  The three `kappa_j` define a class of the period local system on
+`B^circ=P1 minus {p0,p1,p2}`.  The universal-cover vector bundle `E` of the
+torus family is coherent on this Stein curve, so Cartan B gives
+`H^1(B^circ,E)=0`; the exponential sequence therefore realizes that period
+class by a global translation of the punctured family.  Subtracting it from
+the three displayed local maps leaves zero winding at every overlap.  Thus
+the full **discrete** overlap obstruction is zero.
+
+After these winding classes are removed, the overlap translations admit
+holomorphic logarithms in `V`.  Equation `(21)` and
+
+```text
+H^1(P1,O)=H^1(P1,O(-1))=0
+```
+
+give `H^1(P1,V)=0`.  The additive Cech cocycle is therefore a coboundary;
+exponentiating the commuting vertical fields patches the three local maps to
+a base- and fibre-preserving isomorphism `X_c0 -> X_(c0+2k)`.  Conversely the
+order-four invariant covector gives residue `2b ell2 mod 4`, which is zero for
+even `b` and is `2 mod 4` for odd `b` because `ell2` is odd.  Hence no odd
+marked centralizer shift in this prescribed affine class extends.  This
+completes the promised generator
+test and makes `(20)` the exact orbit address for the marked completed
+centralizer action.
+
+The conclusion above remains conditional on the displayed analytic
+construction and `(21)`.  It verifies no compactness, topology, homology,
+diffeomorphism, or complex structure on `S6`.
 
 The exact companion/frozen-output hashes are
 
 ```text
 script  c093b38c979bfae763a8b76531315c9e44b4d542a163e8c0af5fafd927dd0f10
 output  d594fe56f10b815c5d6799bb7f1c444dfb114d90a1c16e779b683e79a1c733c1
+```
+
+The completed-overlap companion/frozen-output hashes are
+
+```text
+script  4e8c731cfb1d1eeeb535eac45782dad574ebbe92b22507a30061cdabf095c7b8
+output  4542332b4d21e3ee9b2a57dbfa14d557d7179d7352c154fa151b8ef67cfd8c5a
 ```

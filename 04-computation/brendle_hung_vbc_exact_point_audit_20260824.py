@@ -9,10 +9,13 @@ terms of ``V_bc`` at a genuinely generic exact point.  All three terms are
 nonzero and cancel exactly, so the check is sensitive to dropping or
 duplicating a summand.
 
-Status: FINITE-EXACT point control, not a proof of the global identity.  The
-global identity also has a short symmetry repair recorded in the source
-ledger: a quarter-turn about ``e_z`` combined with the antipodal map on the
-second sphere sends the correctly checked ``V_ac`` identity to ``-V_bc``.
+Status: FINITE-EXACT point control.  The separate global symbolic audit now
+proves ``V_ac=V_bc=0`` relative to the reconstructed formulas.  It also
+reconciles the two symmetry conventions: pullback by the quarter-turn plus
+second-factor antipodal map sends ``(h_a,h_c,h_ac)`` to
+``(h_b,h_c,h_bc)``, while pushforward sends it to
+``(-h_b,h_c,-h_bc)``.  This script remains the sensitive generic-point
+hostile for a dropped, duplicated, or sign-flipped summand.
 
 Reproduce from the repository root with
 

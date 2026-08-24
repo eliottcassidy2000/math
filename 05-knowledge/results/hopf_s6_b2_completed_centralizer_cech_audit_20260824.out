@@ -1,0 +1,30 @@
+PASS  A1*A2*A0=I
+PASS  Q_(2k) centralizes both elliptic monodromies
+PASS  Q_(2k) is unimodular
+PASS  Q_(2k) fixes Lambda_tor pointwise
+PASS  Q_(2k) is identity on Lambda/Lambda_tor
+PASS  cusp C-shift is the integral vector (0,2ka)
+RESULT integer c0 shifts leave every exp(2*pi*i*C(t)*lambda_bar) unchanged
+RESULT the marked cusp quotient N0 and overlap G0 are literally unchanged
+PASS  order-three affine numerator shifts by 2k delta
+PASS  order-four affine numerator shifts by -2k delta
+PASS  explicit order-three translation conjugator
+PASS  explicit order-four translation conjugator
+PASS  first elliptic overlap cocycle is -k u_hat
+PASS  second elliptic overlap cocycle is k w_hat
+PASS  triangle relation forces cusp cocycle k w_hat
+PASS  three boundary cocycles satisfy the exact triangle relation
+PASS  A0 fixes the cusp vanishing cycle w_hat
+PASS  toric shear Phi_(-k u_bar) has exponent -k w_hat
+RESULT Phi_(-k*u_bar) absorbs the forced cusp cocycle k*w_hat
+RESULT the discrete completed-overlap Cech obstruction vanishes for every b=2k
+PASS  even shifts pass the order-four residue
+PASS  odd shifts fail the order-four residue by 2
+RESULT odd centralizer shifts fail the marked order-four filling residue by 2 mod 4
+PASS  H^1(P1,O)=0
+PASS  H^1(P1,O(-1))=0
+CONDITIONAL INPUT manuscript exact sequence 0 -> O -> V -> O(-1) -> 0
+CONDITIONAL RESULT H^1(P1,V)=0 kills the connected additive overlap class
+CONDITIONAL RESULT the centralizer-generated completed orbit is exactly 2Z
+NONCONSEQUENCE no compactness, topology, homology, diffeomorphism, or S6 claim is verified
+ALL EXACT CHECKS PASSED

@@ -18,7 +18,7 @@ symmetric degenerate scaffold
   -> retain branch/address/orientation data before taking a quotient.       (1)
 ```
 
-Six unconditional results came out of that grammar.
+Seven unconditional results came out of that grammar.
 
 1. [THM-3990](../01-canon/theorems/THM-3990-componentwise-harmonic-obstruction-and-repair-quotient.md)
    proves the exact componentwise Laplacian repair criterion and its finite
@@ -34,16 +34,21 @@ Six unconditional results came out of that grammar.
    residual.  Polynomiality forces `h=gamma*s`, and the deleted source line
    maps to a centered node, not a cusp.  The two normalization addresses are
    now an oriented conductor-incidence problem.
-4. [THM-3994](../01-canon/theorems/THM-3994-double-resultant-collision-separates-two-address-and-length-two-seams.md)
+4. [THM-3993](../01-canon/theorems/THM-3993-labelled-two-wall-polyhedral-elimination-and-local-top-response.md)
+   proves the exact labelled two-wall elimination law
+   `h_*=(B-A)/(p+q)` and local response `(qA+pB)/(p+q)`.  The AP13
+   response weights are `13:1`; THM-2050 proves that even complete local top
+   germs do not determine the global maximum, so this is not an LRC proof.
+5. [THM-3994](../01-canon/theorems/THM-3994-double-resultant-collision-separates-two-address-and-length-two-seams.md)
    proves that the two double-resultant seams excluded by THM-3972 have
    different completed geometry: `cr=3` is two reduced transverse addresses,
    whereas `4cr=3` is one curvilinear length-two centre whose Rees graph has
    an `A1` singularity and local class group `Z/2`.
-5. [THM-3995](../01-canon/theorems/THM-3995-scale-two-parity-hole-support-and-integer-variance-tariff.md)
+6. [THM-3995](../01-canon/theorems/THM-3995-scale-two-parity-hole-support-and-integer-variance-tariff.md)
    turns the four oriented endpoint holes in the scale-two LRC row into an
    exact support cap, its sharp integer variance tariff, and a new sufficient
    gate.  It is a real narrowing of the row, not a proof of `LRC(14)`.
-6. [THM-3996](../01-canon/theorems/THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy.md)
+7. [THM-3996](../01-canon/theorems/THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy.md)
    proves the complete node-address conservation law.  Away from the
    nonproperness locus, each normalized component has equal incoming and
    outgoing address degree, every address lies on a directed cycle, and the
@@ -54,13 +59,27 @@ Six unconditional results came out of that grammar.
 The source ledgers remain deliberately stricter:
 
 - [Brendle--Hung `S2 x S2` ledger](../05-knowledge/reference/CORE-PAPERS-BRENDLE-HUNG-S2XS2-2026-08-24.md):
-  the omitted `z(h_a)=0` branch is now independently **FINITE-EXACT**, and a
-  sensitive generic point gives exact cancellation in `V_bc`; the global
-  `V_bc` identity and the full curvature argument remain open referee gates.
+  the omitted `P1(L(h_a))=0` branch, generic Hessian invertibility, and hence
+  `z(h_a)=0` are now **VERIFIED EXACT SYMBOLIC** relative to the reconstructed
+  formulas.  The independently rebuilt global identities `V_ac=V_bc=0` are
+  also verified exactly, with a sensitive generic-point hostile.  The other
+  eight quadratic summands, cubic integral, smooth extension, and full
+  curvature argument remain referee gates.
 - [Hopf/`S6` ledger](../05-knowledge/reference/CORE-PAPERS-HOPF-S6-2026-08-24.md):
   the displayed matrices, Smith forms, conductor pushout, and twist
-  presentation have exact audits.  The infinite-fan analytic quotient,
+  presentation have exact audits.  Conditional on the displayed analytic
+  pieces and their exponential/logarithm-sheaf compatibility, the marked
+  centralizer-generated completed orbit is exactly `2Z`.  The infinite-fan
+  analytic quotient,
   attaching maps, nearby cycles, and global recognition remain open.
+
+Two incoming canon promotions sharpen the same grammar on the Jacobian side.
+[THM-3997](../01-canon/theorems/THM-3997-reduced-two-three-hasse-repair-and-zero-residual-no-go.md)
+turns polynomial membership into an exact Hasse-diagonal repair test, forces
+the first residual coefficients from one free scalar, and proves `R=0`
+impossible.  Independently, [THM-3998](../01-canon/theorems/THM-3998-reduced-two-three-three-by-at-most-three-source-weight-support-obstruction.md)
+excludes the all-degree cell with the three forced `A` weights and at most
+three `C` weights.  The full reduced `2:3` cell remains open.
 
 ## 1. Inheritance pass and portfolio
 
@@ -404,13 +423,20 @@ diffeomorphic to `S6`.
 
 ## 10. Ranked next frontiers
 
-### A. Global `V_bc` certificate
+### A. Fresh-kernel quadratic packet and cubic witness
 
-Rebuild `V_bc` in an immutable exact state, reduce it under the orthonormal
-frame relations, and archive a nonzero hostile.  A symmetry proof is cheaper
-only if the action on every tensor, plane coordinate, Hessian, and sign is
-written explicitly.  This is the shortest remaining load-bearing audit of
-the Brendle--Hung quadratic positivity step.
+The global `V_ac=V_bc=0` gate is now closed by an immutable exact audit.  With
+`x=tan(theta)>0`, all three nonzero `V_bc` summands reduce to rational
+functions with common factor `q_2z q_3y q_3z`; their numerator cancels as a
+literal polynomial before any `SO(3)` relation is imposed.  The same audit
+proves the generic Hessian determinant positive and reconciles pullback-plus
+with pushforward-minus symmetry conventions.
+
+The next load-bearing source task is therefore to rebuild the remaining eight
+quadratic summands in a fresh kernel, assemble the corrected ten-term lower
+bound, and then independently recover the four-part cubic integral
+`pi^2/(18 sqrt(3))`.  The global mixed identities and the exact generic point
+are now positive/hostile controls, not remaining assumptions.
 
 ### B. `S6` analytic gauge quotient and attaching maps
 
@@ -426,11 +452,37 @@ presentation moves; adjoining `(0,-1,1)` gives a unimodular basis on which
 raw coordinate noninjectivity does not exhibit analytic moduli.  The exact
 centralizer acts by integer shifts on the punctured period family, but the
 order-four affine filling permits only even shifts.  The first filled marked
-address is `[c0-c2] in C/(2Z)`.  Compute the Cech overlap/cusp class of the
-remaining generator `b=2`; only its vanishing can promote the local
-conjugacies to a completed analytic equivalence.  Independently reconstruct
-the oriented attaching maps and nearby-cycle extensions; Smith forms of
-displayed matrices cannot certify their geometric provenance.
+address is `[c0-c2] in C/(2Z)`.
+
+That remaining generator test is now **VERIFIED-EXACT FROM DISPLAYED DATA +
+PROVED AS A CONDITIONAL IMPLICATION**.  Integer shifts change the cusp matrix
+by an integral `E21`, so all exponentiated cusp cocycles, `N0`, `E0`, and `G0`
+are literally unchanged.  For `b=2k`, explicit elliptic conjugators give
+boundary cocycles `(-k u_hat,k w_hat)`; the triangle relation forces
+`k w_hat` at the cusp, exactly absorbed by the toric shear
+`Phi_(-k u_bar)`.  Conditional on compatibility with the punctured-torus
+exponential sequence, on zero-winding overlap differences being exactly the
+Cech cocycles of the complete logarithm sheaf, and on the manuscript's
+displayed vertical bundle
+
+```text
+0 -> O -> V -> O(-1) -> 0,
+```
+
+`H^1(P1,V)=0` kills the remaining additive class.  Thus, within the prescribed
+marked affine class, the centralizer-generated completed orbit is exactly
+`2Z`: even shifts patch and odd shifts fail the order-four residue.  The exact
+calculation is frozen in
+[the completed-overlap companion](../04-computation/hopf_s6_b2_completed_centralizer_cech_audit_20260824.py)
+and [output](../05-knowledge/results/hopf_s6_b2_completed_centralizer_cech_audit_20260824.out),
+with the status boundary recorded in the
+[S6 source ledger](../05-knowledge/reference/CORE-PAPERS-HOPF-S6-2026-08-24.md).
+
+This does not classify arbitrary biholomorphisms and does not validate the
+manuscript's analytic construction.  The live work is now to reconstruct the
+infinite-fan quotient, the oriented attaching maps, and nearby-cycle
+extensions independently; Smith forms and a conditional Cech closure cannot
+certify their geometric provenance.
 
 ### C. Nodal companion completion
 
@@ -492,10 +544,30 @@ claim.
 
 ### G. Signed LRC response complex
 
-On the remaining seventeen types, build the exact matrix of *exposed* events
-of every `G_u`, with owner, orientation, period, and masking.  Test its strict
-Farkas dual first; only surviving rows merit the cubic response `(18)`.  AP13,
-Goddyn--Wong, and a `k=0` row are mandatory hostile controls.
+For each exposed top `e`, retain its two active walls, with rising/falling
+slopes `p_e,q_e` and offsets `A_e,B_e`.  On lawful deformation coordinates
+the exact THM-3993 response row is
+
+```text
+R_e=(q_e dA_e+p_e dB_e)/(p_e+q_e).                     (21)
+```
+
+Build the matrix `R` on the remaining seventeen types with owner,
+orientation, period, and masking retained.  If a real linear parameter space
+`D` of realizable lawful first-order deformations is first proved, Gordan's
+strict alternative applied to `R|D` says that one direction makes all
+displayed local responses positive exactly when there is no nonzero
+nonnegative multiplier `lambda` with `lambda^T(R|D)=0`.  If the realizable
+moves form only a cone, integer lattice, or one-sided semigroup, replace this
+with the corresponding cone-dual/Farkas test and a separate realizability
+theorem.
+
+Even the linear test is not a global LRC certificate.  The proposed augmented
+system must also encode remote-wall slack and lawful first exits.  THM-2050's
+AP13/loose-lift pair proves that the equality-germ matrix alone cannot know the
+global maximum.  Only rows surviving that augmented test merit the cubic
+response `(18)`.  AP13, Goddyn--Wong, and a `k=0` row are mandatory hostile
+controls.
 
 ### H. Degree-six and unit-ideal positive search
 
@@ -508,11 +580,38 @@ equisingular deformation space
   -> linearized Keller equations
   -> completed address scheme
   -> resolvent units/class group
-  -> oriented conductor and canonical vector.                           (21)
+  -> oriented conductor and canonical vector.                           (22)
 ```
 
 This is narrower than another raw coefficient census and retains exactly the
 sidecars that killed the quintic mirage.
+
+### I. Hasse residual orbit and minimal-support atlas
+
+THM-3997 and THM-3998 change the positive target inside the reduced `2:3`
+lane.  The zero-residual model is impossible, and a hypothetical survivor
+cannot keep exactly the forced `A` weights `2,0,-2` while adding at most one
+row to the forced `C` weights `3,1`.  Thus the next search should not enlarge
+coefficient degrees inside that dead support.
+
+Instead, build a minimal-support atlas with two first escape families: add one
+new `A` weight, or add two new `C` weights.  For each family:
+
+1. use the Hasse transform to quotient source reparametrizations and express
+   `[p^2]R,[p^3]R,...` in terms of the first free scalar `beta=[y]R`;
+2. compute the residual fifth-root action and retain invariant combinations,
+   rather than treating `beta` as a raw modulus;
+3. attach the source/target elliptic stable-reduction valuations to the same
+   cell, rejecting any face on which potential-good reduction is incompatible
+   with the induced isogeny;
+4. run the graded bracket equations all-degree before any bounded Groebner
+   census.
+
+This is a direct fusion of the Hopf repair theme with the new JC obstruction:
+Hasse diagonals play the role of the repair quotient, while the number of
+source weights is a discrete support tariff.  A surviving minimal cell would
+be a concrete new positive frontier; an empty atlas would close the reduced
+`2:3` lane for a structural reason.
 
 ## 11. Connection contracts
 
@@ -523,7 +622,8 @@ sidecars that killed the quintic mirage.
 | THM-3991 fan | higher-rank cusp | simplex orbit count | Euler budget | attaching maps, analytic compactness | stabilizers, cone indices, extra fibres | Burnside Euler census |
 | THM-3992 node | cubic-cover boundary | source addresses to dual edges | local clutch type | full fibre and ownership | normalized factors, Jelonek flag | census fibre or prove node nonproper |
 | THM-3994 resultant | any eliminant collision | scalar root to base scheme | total length | support distribution and graph singularity | completed ideal/Rees algebra | primary decomposition plus Jacobian |
-| LRC tariff equality | repair matrix | lawful owner event to response column | signed left-kernel obstruction | chronology if owners are dropped | exposure, masking, period | exact event matrix on 17 types |
+| THM-3997/3998 Hasse cell | minimal JC support | source-normal Hasse quotient plus stable reduction | first residual orbit and weight invoice | unrestricted support and global algebraization | residual gauge, Newton face, isogeny valuation | one-new-`A`/two-new-`C` all-degree atlas |
+| LRC tariff equality | response-plus-exit system | THM-3993 weighted top row plus lawful first exit | dual obstruction on a proved deformation cone | global chronology in the germ quotient | exposure, masking, remote slack, period | derive `K`, then test `v in K` with `Rv>0` |
 | `3,4,infinity` monodromy | rational elliptic model | local exponents to Kodaira fibres | integral monodromy conjugacy | global toric quotient | lattice marking, cusp width | Weierstrass/Picard--Fuchs rebuild |
 
 ## 12. Rejected bridges and stopping reasons
@@ -550,6 +650,7 @@ The session's strongest change is therefore not a headline claim.  It is a
 reduction in the dimension of the unknowns.  The quintic common-zero route is
 closed in its normal scope; the `2:3` cusp-log cell is forced to a centered
 node; the double-collision seams are scheme-theoretically separated; and the
-remaining work is now concentrated in three typed objects: a global
-quadratic identity, an analytic gluing quotient, and an oriented conductor or
-owner-event incidence matrix.
+remaining work is now concentrated in four typed objects: a global
+fresh-kernel quadratic/cubic packet, an independent fan/attaching-map
+realization, a Hasse residual/minimal-support atlas, and an oriented conductor
+or owner-event incidence matrix.

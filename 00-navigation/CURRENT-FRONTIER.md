@@ -335,9 +335,9 @@ asymptotic or residue.
   FINITE-EXACT `D=B=4` census has `13,853` branches but only an adaptive
   one-off-ray selector; physical/all-depth recursion and every prize are
   **OPEN**.
-- **Two Hopf problems:** the `S2 x S2` **PREPRINT CLAIM** and unsigned `S6`
-  **MANUSCRIPT CLAIM** are distinct/under audit. THM-3990/3991/3993 prove
-  scoped mechanisms; headlines/LRC(14) remain open.
+- **Hopf:** `S2 x S2` **PREPRINT CLAIM**, `S6` **MANUSCRIPT CLAIM**; both
+  under audit. Mixed identities are reconstruction-relative; marked even orbit
+  conditional. `LRC(14)` open.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  THM-3543--3782 close
   named cells only. THM-3827--3920 force genus/degree/branch passports, close
   the `S3`, `f=0`, radial, and common-zero degree-at-most-five lanes, and leave
@@ -352,8 +352,8 @@ asymptotic or residue.
   constant `q(P)` and THM-3963 `c(t)P^2`; THM-3964--3972 close cells.
   THM-3973--3976: exact-volume tower, seven-piece floor, `p` no-mate, lost `y`.
   THM-3977--3979: critical seed, two-color debt, unobstructed formal jets.
-  THM-3989/3992 force nodal `2:3`; THM-3994/3996 split seam/address cases.
-  Live: node-fibre census and `y`-algebraization.
+  THM-3992/3997/3998: nodal `2:3`, nonzero residual, sparse no-go;
+  THM-3994/3996 split seams/addresses. Live: residual atlas/Jelonek/`y`.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
