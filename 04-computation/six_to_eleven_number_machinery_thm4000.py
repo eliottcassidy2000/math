@@ -13,7 +13,7 @@ Universe and controls
 All checks use Python integers.  Positive controls are the base-7 and base-10
 packets.  Hostiles are the factor-two loss from residues at base 7, the extra
 tripotents modulo 8 and 10, the first OCF scalarization kernel at covered size
-9, and the false Z^8=E8 theta identification corrected in MISTAKE-471.
+9, and the false Z^8=E8 theta identification corrected in MISTAKE-484.
 """
 
 from __future__ import annotations
@@ -484,7 +484,7 @@ z8_norm2 = 16 * sum((-1) ** (2 + d) * d**3 for d in (1, 2))
 z8_norm4 = 16 * sum((-1) ** (4 + d) * d**3 for d in (1, 2, 4))
 gate((z8_norm2, e8_theta[1], z8_norm4, e8_theta[2]) ==
      (112, 240, 1136, 2160),
-     "MISTAKE-471 theta hostile")
+     "MISTAKE-484 theta hostile")
 print("E8_stabilization_rows=(rank,rank+8,disc,roots_before,roots_after)")
 print(stable_rows)
 print("theta_hostile_common_shells: norm2 Z8/E8=112/240; norm4=1136/2160")

@@ -33,8 +33,8 @@ related:
   - THM-872-milgram-discriminant-residue
 script: 04-computation/six_to_eleven_number_machinery_thm4000.py
 output: 05-knowledge/results/six_to_eleven_number_machinery_thm4000.out
-script_sha256: a4c011a1224f6dfe05b2aa90d5f9f72d28c46dfce0d7f93639c3424b848f3dd6
-output_sha256: 3819a7f6d09a00f4c0a0657cd43fc55c53d103f6f3588a62587535cb9a8cc529
+script_sha256: 4777f23c31f3dbe65f420b6a1b77f303677e94015c009ffd113bcbb0ce88cd73
+output_sha256: 1c482f100f60496ab1d678f75687d52b3e33b6eaa6e4e9096948479c87d27072
 hash_basis: raw LF bytes
 ---
 
@@ -563,7 +563,7 @@ their discriminant forms preserved.  They are not all copies of rank one,
 and they are not the affine/hyperbolic objects informally called
 `E9,E10,E11`.
 
-[MISTAKE-471](../MISTAKES.md) records the decisive hostile: the historical
+[MISTAKE-484](../MISTAKES.md) records the decisive hostile: the historical
 identity `theta_3^8=Theta_E8` was false.  In the common squared-norm
 convention, `Theta_(Z^8)=theta_3(q)^8` but `Theta_E8=E_4(q^2)`.  Their norm-two
 shells have sizes `112` and `240`, and their norm-four shells have sizes

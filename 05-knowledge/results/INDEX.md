@@ -1403,8 +1403,8 @@
   a Farey--Pell tower.  Separate typed applications verify the arithmetic
   order-eight clock, `E8` stabilization, the OCF evaluation kernel, and the
   Moon--Busch min-plus floor.  Checks: `148241`.  Script/output SHA-256:
-  `a4c011a1224f6dfe05b2aa90d5f9f72d28c46dfce0d7f93639c3424b848f3dd6` /
-  `3819a7f6d09a00f4c0a0657cd43fc55c53d103f6f3588a62587535cb9a8cc529`.
+  `4777f23c31f3dbe65f420b6a1b77f303677e94015c009ffd113bcbb0ce88cd73` /
+  `1c482f100f60496ab1d678f75687d52b3e33b6eaa6e4e9096948479c87d27072`.
 
 - `jc2_degree_six_common_zero_normal_cubic_two_place_thm3906.py` -> matching
   `.out` [THM-3906 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].

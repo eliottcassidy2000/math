@@ -302,7 +302,7 @@ Only nine is congruent to one modulo eight.  Ten and eleven return to two and
 three.  Moreover stable discriminant form does not preserve rank, root count,
 or theta series.
 
-[MISTAKE-471](../01-canon/MISTAKES.md) records the hostile which forced this
+[MISTAKE-484](../01-canon/MISTAKES.md) records the hostile which forced this
 typing: in common norm shells, `Z^8` has `112` and `1136` vectors of norms two
 and four, while `E8` has `240` and `2160`.  Equal rank is not lattice equality.
 

@@ -33,5 +33,5 @@ moon_busch_minplus_floors_6_to_11={6: 15, 7: 25, 8: 45, 9: 75, 10: 125, 11: 225}
 moon_busch_optimizers_(a,b)={6: (1, 1), 7: (0, 2), 8: (2, 1), 9: (1, 2), 10: (0, 3), 11: (2, 2)}
 
 checks=148241
-source_sha256=a4c011a1224f6dfe05b2aa90d5f9f72d28c46dfce0d7f93639c3424b848f3dd6
+source_sha256=4777f23c31f3dbe65f420b6a1b77f303677e94015c009ffd113bcbb0ce88cd73
 status=PASS (integer exact; theorem proofs and scope are in THM-4000)
