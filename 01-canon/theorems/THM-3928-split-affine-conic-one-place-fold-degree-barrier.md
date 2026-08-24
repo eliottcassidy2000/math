@@ -2,16 +2,17 @@
 id: THM-3928
 title: "Split affine conic cannot support an irreducible one-place torus sextic"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. Let an
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Let an
   irreducible nonlinear degree-N torus branch have affine normalization A1,
   and suppose its quadratic coefficient is the product of two distinct
   affine lines. Parallel lines are impossible. For nonparallel lines, the
   induced map from the branch normalization to the Cardano cusp has degree
   at least ceil((N+1)/2). In degree six its degree is 4, 5, or 6, with exact
-  line-degree packets (6,2), (6,4), or (6,6). The first has multiple infinity
-  support, the second fails its weighted degree equation, and the third would
-  require an impossible binary-form identity. Hence no distinct-affine-line
-  conic supports an irreducible one-place torus sextic. On the quadratic
+  line-degree packets (6,2), (6,4), or (6,6). When the branch is the full
+  irreducible sextic (so deg(q)<=3), the first has multiple infinity support,
+  the second fails its weighted degree equation, and the third would require
+  an impossible binary-form identity. Hence no distinct-affine-line conic
+  supports an irreducible one-place torus sextic. On the quadratic
   resolvent, splitting the conic supplies only one intrinsic three-torsion
   direction: the universal divisor-relation lattice is Z plus Z/3, not two
   copies of Z/3. A double-line conic makes the discriminant a product of two
@@ -19,15 +20,15 @@ status: >
   at infinity as one component remains outside this theorem.
 source: jc_degree6_one_place / post-THM-3925 singular splitting-conic lane, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The proof
-  separates the normalization-integrality step, parallel-line UFD
-  obstruction, projective degree ledger, fold-degree interpretation, and
-  quadratic-resolvent divisor presentation. The assertion-free exact
-  companion verifies the Cardano identities, all degree tables, the split
-  and double-line Smith forms, all three sextic row obstructions, the
-  double-line discriminant factorization, the arbitrary-component extension,
-  and sharp excluded controls. Normal and optimized replay must byte-match
-  the frozen output before promotion.
+  INDEPENDENT HOSTILE AUDIT PASS (jc-cohn3709, 2026-08-23). The audit
+  reconstructed the normalization-integrality and parallel-line UFD steps,
+  the projective degree/contact ledger, all three sextic row contradictions,
+  the double-line factorization, and the resolvent Smith presentation. It
+  repaired the statement's scope by distinguishing the general componentwise
+  fold bound from the sextic closure, which requires the full discriminant to
+  be the irreducible sextic (and hence deg(q)<=3). The assertion-free
+  814-gate companion byte-matches in normal and optimized mode, its frozen
+  output and raw hashes pass, and documentation checks pass.
 related:
   - THM-3844-two-cusp-polynomial-branch-quadratic-resolvent-design-gate
   - THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff
@@ -43,7 +44,7 @@ hash_basis: raw LF bytes
 
 # THM-3928 -- splitting the conic multiplies fold degree, not C3 directions
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero. Let
 
 ```text
@@ -85,8 +86,12 @@ d=4: (6,2),             d=5: (6,4),             d=6: (6,6). (5)
 ```
 
 This first gives a fold-degree barrier. Section 4 then eliminates all three
-rows in `(5)`, proving that a distinct-affine-line conic cannot support any
-irreducible nonlinear one-place torus sextic.
+rows in `(5)` under the additional assumption that `Gamma=V(Delta)` is the
+full irreducible sextic, proving that a distinct-affine-line conic cannot
+support any irreducible nonlinear one-place torus sextic. Equivalently in
+this quadratic-`p` setting, the closure assumes `deg q<=3` and that `Delta`
+has no additional component. The componentwise fold bound `(3)` does not
+need this extra hypothesis.
 
 The quadratic-resolvent ledger is equally rigid. Under the normality and
 generic-splitting hypotheses stated in Section 5, the divisor relations
@@ -240,7 +245,9 @@ forced by `(16)`.
 
 ## 4. Every sextic fold row fails
 
-Set `N=6` and exchange the lines so that `e_1=6`. Equation `(17)` becomes
+Assume now that `Gamma=V(Delta)` is the full irreducible degree-six curve;
+in particular `deg q<=3`. Set `N=6` and exchange the lines so that `e_1=6`.
+Equation `(17)` becomes
 
 ```text
 e_2=2d-6.                                                    (18)
