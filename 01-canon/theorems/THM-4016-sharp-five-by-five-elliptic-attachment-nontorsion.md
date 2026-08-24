@@ -1,16 +1,18 @@
 ---
 id: THM-4016
-title: "Sharp five-by-five elliptic attachment non-torsion"
+title: "Sharp five-by-five formal weight-six point non-torsion"
 status: >
-  PROVED + VERIFIED-EXACT + TWICE INDEPENDENTLY AUDITED; CONDITIONAL
-  APPLICATION. The exact THM-4007 sharp 5x5 mixed leading face has six
-  normalized attachment points on E:Y^2=X^3+1, represented by
+  PROVED ARITHMETIC + VERIFIED-EXACT + TWICE INDEPENDENTLY AUDITED; FORMAL
+  TRUNCATION POINT; DIRECT SHARP-FACE APPLICATION REFUTED. The weight-six
+  formal truncation of the exact THM-4007 sharp 5x5 coefficients gives six
+  normalized points on E:Y^2=X^3+1, represented by
   alpha^3=43/84 and beta^2=127/84. The representative reduces to points of
   exact orders 12 and 6 at good places above 11 and 17, so it is non-torsion;
-  all six automorphic images are non-torsion. This closes THM-4008's
-  arithmetic torsion invoice for this exact modeled face. Exclusion of the
-  face remains CONDITIONAL on THM-4008's unproved stable-specialization gate;
-  the full reduced 2:3 cell and JC(2) remain OPEN.
+  all six automorphic images are non-torsion. THM-4017 proves that the same
+  sharp data force a nonzero p^4 term with rho-exponent -2 on the proposed
+  weight-six scale. Hence these formal points are not proved attachment
+  points of the sharp stable reduction, and the old conditional face
+  exclusion is REFUTED. The full reduced 2:3 cell and JC(2) remain OPEN.
 source: root + two no-import audits / reduced 2:3 cell continuation, 2026-08-24
 audit: >
   PASS. The primary verifier reconstructs the sharp residual, normalized
@@ -19,14 +21,18 @@ audit: >
   good reductions below 500 and selects 11/17 as the first incompatible pair
   with unique cube roots. A second no-import referee checks every constant,
   the cyclic-kernel quotient, ramification/residue-extension boundary,
-  six-point orbit, Eisenstein unit, and conditional scope. All six
-  normal/optimized streams match their frozen outputs.
+  six-point orbit, Eisenstein unit, and arithmetic scope boundary. All six
+  normal/optimized streams match their frozen outputs. Two later independent
+  Newton audits preserve every arithmetic gate but refute the geometric
+  identification at the forced p^4 coefficient.
 depends_on:
   - THM-4007-live-two-three-third-normal-row-five-weight-floor
   - THM-4008-pure-p-residual-totally-degenerate-generic-fibre-no-go
 related:
   - THM-3992-reduced-two-three-cusp-jet-repair-and-first-node-residual
   - THM-3997-reduced-two-three-hasse-repair-and-zero-residual-no-go
+  - THM-4012-weighted-leading-face-good-elliptic-factor-observer
+  - THM-4017-sharp-weight-eight-specialization-obstruction-and-newton-ledger
 script: 04-computation/jc2_sharp_attachment_nontorsion_thm4016.py
 output: 05-knowledge/results/jc2_sharp_attachment_nontorsion_thm4016.out
 script_sha256: 25540456322fa01541efd6fa5657927f01f14c9b3a21b26e00b4a96f32898240
@@ -44,13 +50,14 @@ independent_audit_semantic_sha256: 6d788e109e52f7a3c191ea755892dc19becd5c89d3ba6
 hash_basis: raw LF bytes
 ---
 
-# THM-4016 -- the sharp attachment is non-torsion
+# THM-4016 -- the sharp formal weight-six point is non-torsion
 
-**PROVED + VERIFIED-EXACT + TWICE INDEPENDENTLY AUDITED; CONDITIONAL
-APPLICATION.** Work over characteristic zero in THM-4007's sharp formal
-`5x5` hostile and THM-4008's mixed weight-six stable model. The theorem
-proves an unconditional arithmetic fact about the resulting point. Its
-application to a hypothetical Keller lift is separately conditional.
+**PROVED ARITHMETIC + VERIFIED-EXACT + TWICE INDEPENDENTLY AUDITED; FORMAL
+TRUNCATION POINT; DIRECT SHARP-FACE APPLICATION REFUTED.** Work over
+characteristic zero in THM-4007's sharp formal `5x5` hostile. The theorem
+proves an unconditional arithmetic fact about the point obtained by retaining
+the weight-six coefficients. THM-4017 shows that this truncation is not the
+leading stable model of the exact sharp residual.
 
 ## 1. Exact sharp coefficients
 
@@ -75,7 +82,7 @@ Therefore
 c40=-512/(9 A5^4),             c02=-8128/(135 A5^3). (2)
 ```
 
-Since `gamma=-a^3/2`, the raw mixed leading coefficients in THM-4008 are
+Since `gamma=-a^3/2`, the raw weight-six coefficients are
 
 ```text
 epsilon=[p^3]R=-1376/(135 a^12),
@@ -83,9 +90,9 @@ kappa=[y^2]R=4064/(135 a^12),
 epsilon+kappa=2688/(135 a^12)!=0.                     (3)
 ```
 
-At an attachment put `P_source=S^2`, `T=S^3`, and
-`(epsilon+kappa)S^6=1`. After normalizing the elliptic component to
-`E:Y^2=X^3+1`, the six attachments satisfy
+In the formal truncation that discards the simultaneously forced `p^4` term,
+put `P_source=S^2`, `T=S^3`, and `(epsilon+kappa)S^6=1`. After normalizing
+its elliptic component to `E:Y^2=X^3+1`, the six formal points satisfy
 
 ```text
 X^3=-epsilon/(epsilon+kappa)=43/84,
@@ -183,7 +190,7 @@ P is non-torsion in E(Qbar).                           (14)
 This is an all-order argument; no bounded torsion classification or finite
 division-polynomial ceiling is used.
 
-## 5. All six attachments
+## 5. All six formal points
 
 Let `zeta_3` be a primitive cube root of unity. The curve automorphism
 
@@ -199,35 +206,34 @@ Equivalently, the corresponding Eisenstein unit is a primitive sixth root
 `u`; `u-1` is again an Eisenstein unit. This is the exact unit used in
 the conditional invoice below.
 
-## 6. Conditional join to THM-4008
+## 6. The former sharp-face join is refuted
 
-THM-4008 Section 6.1 proves the following implication only under a stable
-specialization of the actual finite generic-fibre morphism through this mixed
-leading model:
+The abstract geometric implication remains sound with the owners stated in
+THM-4017: if an elliptic component owns positive degree and all six branches
+meet one connected contracted rational clutch, their images coincide. After
+translation the elliptic restriction is an isogeny `psi`, so equality of
+adjacent orbit points gives
 
 ```text
-rational components map constantly,
-elliptic component maps nonconstantly,
-all six node branches have common images
-          ==> the attachment point is torsion.         (16)
+psi((sigma-1)P)=0.                                      (16)
 ```
 
-After translation the elliptic restriction is an isogeny `psi`; equality
-of adjacent node images gives `psi((sigma-1)P)=0`. Since `sigma-1` is an
-Eisenstein unit, `(16)` makes `P` torsion, contradicting `(14)`.
+Since `sigma-1` is an Eisenstein unit, `(16)` would make `P` torsion.
 
-Thus the exact sharp THM-4007 `5x5` face cannot occur in any actual lift for
-which THM-4008's stated stable-specialization/admissible-map gate is valid.
-The conclusion is **CONDITIONAL** because that geometric gate is not proved.
+But the exact sharp residual does not have the assumed weight-six model.
+Equation `(2)` forces `[p^4]R=256/(9a^17)!=0`. Under the weight-six scaling
+this term has rho-exponent `-2`, so the family is nonintegral and clearing
+the denominator changes the special fibre. Consequently, the points in
+`(4)` are not proved attachment points of the actual sharp stable reduction.
+The old direct sharp-face application is **REFUTED**, not merely conditional.
 
 ## 7. Scope firewall and reproduction
 
 This theorem does **not** prove:
 
 1. that the formal THM-4007 hostile is an atlas point or a `B_2` pair;
-2. extension of a hypothetical finite morphism to the modeled stable face,
-   nonconstant elliptic restriction, or compatible node images;
-3. unconditional exclusion of the formal `5x5` survivor;
+2. that its formal weight-six points are actual stable attachments;
+3. any exclusion of the formal `5x5` survivor;
 4. exclusion of other values of `[y^2]R`, resonant or higher weighted faces,
    or faces with additional leading monomials;
 5. emptiness of the reduced `(2,3)` cell or `JC(2)`.
@@ -244,5 +250,5 @@ python3 -B -O 04-computation/jc2_sharp_attachment_nontorsion_thm4016_independent
 ```
 
 All streams match their frozen outputs. The remaining honest target is the
-stable-specialization gate itself, followed separately by other mixed and
-higher weighted faces. **QED.**
+complete residual and its actual highest-face/stable reduction, including the
+forced weight-eight support recorded in THM-4017. **QED.**

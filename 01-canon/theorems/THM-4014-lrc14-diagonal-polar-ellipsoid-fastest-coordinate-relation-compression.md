@@ -20,7 +20,8 @@ audit: >
   n=(1,2), H=diag(2,1). The corrected operator is A=P_V H|_V. A standard-
   library exact companion checks 156 polar vertices, all 78 pair facets,
   the hostile rank-one correction, integer optimizations, and 28 reduced
-  top-pair ratios. Normal and optimized runs byte-match the frozen output.
+  top-pair ratios. Normal and optimized runs match the frozen LF output
+  after platform-newline normalization.
 depends_on:
   - THM-4009-euclidean-covering-transference-short-relation-compression
 related:
@@ -352,4 +353,5 @@ python3 -B 04-computation/lrc14_diagonal_ellipsoid_refinement_independent_audit_
 python3 -B -O 04-computation/lrc14_diagonal_ellipsoid_refinement_independent_audit_20260824.py
 ```
 
-Both streams byte-match the recorded output. **QED.**
+Both streams match the recorded LF output after platform-newline
+normalization. **QED.**

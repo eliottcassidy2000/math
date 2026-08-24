@@ -9,6 +9,34 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-487 (2026-08-24, THM-4008/4016 sharp specialization) -- a lower weighted face was used after a forced higher-weight coefficient was already nonzero
+
+- **What failed:** THM-4008's formal weight-six `p^3+y^2` model was applied
+  to THM-4007's exact sharp `5x5` cancellation, and THM-4016's non-torsion
+  point on that formal model was presented as a conditional exclusion of the
+  sharp face. The application treated the displayed weight-six row as if it
+  were the highest entire weighted face.
+- **Minimal witness / first failed implication:** the same sharp calculation
+  forces `[p^4](R/gamma)=-512/(9A5^4)`, hence
+  `[p^4]R=256/(9a^17)!=0`. Under
+  `q=rho^-6,s=rho^-1S,p=rho^-2P,y=rho^-3SP`, this term has
+  rho-exponent `6-8=-2`. The proposed family is therefore nonintegral;
+  clearing the denominator gives
+  `-[p^4]R(S^2-P)P^4=0` rather than the six-node `j=0` face.
+  Thus the first failed implication precedes stable-map extension.
+- **Repair / strongest survivor:** THM-4016 still proves that all six points
+  with `(X^3,Y^2)=(43/84,127/84)` are non-torsion, but only as points of the
+  formal weight-six truncation. THM-4017 marks the direct sharp-face
+  realization **REFUTED**, proves the stable-map implication only with
+  explicit degree/clutch owners, and records the truncated weight-eight
+  `j=1728` Newton component as **FINITE-EXACT / CONDITIONAL**. A `p*y^2`
+  hostile destroys that component, so complete support remains load-bearing.
+- **Reusable rule:** a degeneration may retain only the highest weighted
+  face of the entire polynomial (or coefficients with compensating positive
+  valuation). Before attaching arithmetic to a displayed face, audit every
+  already forced higher-weight coefficient and distinguish raw coefficients
+  from normalized ones.
+
 ## MISTAKE-486 (2026-08-24, THM-3818 two-component replay) -- one companion retained the table-free common-scale filter after the all-scale repair
 
 - **What failed:** MISTAKE-460 repaired THM-3818's graphic matroid to use the

@@ -15,10 +15,12 @@ status: >
   smooth elliptic curve, hence a constant special map, contradicting
   conservation of the positive generic pullback degree. Equivalently, the
   source Jacobian is purely toric of rank m and cannot have the good elliptic
-  target as a quotient. Thus every pure-p residual is excluded. The first
-  mixed y^2 leading face is a sharp hostile: it restores a j=0 elliptic
-  component matching the target good fibre. The full reduced 2:3 cell and
-  JC(2) remain open.
+  target as a quotient. Thus every pure-p residual is excluded. An exact
+  maximum-weight-six p^3+y^2 face is a sharp hostile: it restores a j=0
+  elliptic component matching the target good fibre. It is not the leading
+  model when a higher-weight coefficient is nonzero. THM-4017 refutes the
+  former application of this face to the sharp 5x5 data because p^4 is
+  forced there. The full reduced 2:3 cell and JC(2) remain open.
 source: root + generic_fibre_residual / planar Jacobian continuation, 2026-08-24
 audit: >
   PASS (primary + independent SymPy-free geometric audit, 2026-08-24). The
@@ -29,15 +31,19 @@ audit: >
   branch/genus, resolution-graph, source/target scaling, degree-conservation,
   mixed elliptic, and Eisenstein-unit ledgers through degree 24. Normal and
   optimized streams match both frozen outputs. The pure-p no-go in Sections
-  1--4 is unconditional; Section 6.1's torsion invoice is explicitly
-  conditional on a stable specialization through that mixed leading face.
+  1--4 is unconditional. Section 6 is an exact maximum-weight-six boundary
+  model; Section 6.1's torsion invoice requires explicit degree and clutch
+  owners. Its former join to THM-4016's fixed sharp residual is refuted by
+  THM-4017 before the stable-map gate.
 depends_on:
   - THM-3992-reduced-two-three-cusp-jet-repair-and-first-node-residual
 related:
   - THM-3997-reduced-two-three-hasse-repair-and-zero-residual-no-go
   - THM-3999-companion-divisor-boundary-endpoint-and-class-ledger
   - THM-4007-live-two-three-third-normal-row-five-weight-floor
+  - THM-4012-weighted-leading-face-good-elliptic-factor-observer
   - THM-4016-sharp-five-by-five-elliptic-attachment-nontorsion
+  - THM-4017-sharp-weight-eight-specialization-obstruction-and-newton-ledger
 script: 04-computation/jc2_pure_p_residual_reduction_thm4008.py
 output: 05-knowledge/results/jc2_pure_p_residual_reduction_thm4008.out
 script_sha256: 42dfd32bb5f0ae027d96fe738f5db4734878bdc46c739c028104077e4a5ece0e
@@ -374,10 +380,11 @@ Thus the exact pure cubic truncation is excluded by the theorem. But
 `y^2`, `p^2y`, and higher rows remain available. No use of `(31)--(35)` may
 erase them.
 
-## 6. Sharp mixed hostile: `y^2` restores the missing good factor
+## 6. Exact max-weight-six hostile: `y^2` restores the missing good factor
 
 The first failure boundary is structural. Give `s,p,y` weights `1,2,3` and
-suppose the first mixed leading face has weight six:
+suppose the **entire polynomial** `H` has maximum weighted degree six, with
+top face
 
 ```text
 H_6(p,y)=epsilon*p^3+kappa*y^2,
@@ -385,7 +392,8 @@ epsilon*kappa*(epsilon+kappa)!=0.                         (36)
 ```
 
 The live coefficient in `(31)` makes `epsilon!=0`; `kappa=[y^2]R` is not
-fixed by THM-3997. Under
+fixed by THM-3997. The absence of all terms of weight greater than six is
+load-bearing. Under
 
 ```text
 q=rho^-6,                 s=rho^-1 S,
@@ -425,6 +433,13 @@ and abelian part `(39)` of dimension one. The corresponding Newton polygon
 has six interior lattice points, matching total genus `1+5=6` in the
 nondegenerate face.
 
+A displayed lower row is not enough for this scaling. A monomial `p^i y^j`
+of weight `2i+3j` enters the rescaled equation with rho-exponent
+`6-(2i+3j)`. Any fixed nonzero higher-weight coefficient makes the proposed
+family nonintegral unless a separate coefficient family gives it
+compensating positive valuation. This is precisely the failure exposed by
+THM-4017 at the sharp `5x5` point.
+
 Therefore the proof of Sections 2--4 stops sharply at `kappa!=0`: the first
 mixed term restores precisely the potential-good elliptic factor needed to
 carry a map to the target. Reduction type alone cannot exclude this face.
@@ -459,11 +474,16 @@ The kernel is finite and `sigma-1` is invertible, so
 P_0 is a torsion point of E_kappa.                        (43)
 ```
 
-THM-4016 now performs the all-order arithmetic test for THM-4007's exact
-sharp `5x5` value of `kappa`: its six normalized attachments are non-torsion.
-Thus `(43)` is contradictory for that exact modeled face **conditional on**
-the stable-specialization gate stated above.  THM-4016 does not prove that
-gate, so it does not unconditionally exclude the formal survivor.
+THM-4016 performs the all-order arithmetic test for the formal weight-six
+truncation of THM-4007's sharp `5x5` coefficients: its six normalized points
+are non-torsion. THM-4017 proves that the same sharp calculation forces a
+nonzero `p^4` coefficient, which has rho-exponent `-2` here. Therefore those
+points are not attachment points of this weight-six model for the fixed sharp
+residual. The former direct join is **REFUTED**.
+
+For comparison, THM-4012's actual exact maximum-weight-six branch sets
+`[p^4]R=0` and has different attachment ratios
+`(43/224,267/224)`. Its face-stability and exclusion are proved separately.
 
 The resonance `epsilon+kappa=0`, higher weighted faces, and multiple leading
 monomials require separate models.
@@ -503,7 +523,8 @@ in `k[p]` is impossible. The independent streams match their frozen
 1. that a finite truncation with only displayed pure-`p` coefficients has no
    later mixed terms;
 2. that `[y^2]R` vanishes, is nonzero, or is forced to a particular value;
-3. that the mixed torsion invoice `(43)` has bounded order or is impossible;
+3. that the mixed torsion invoice `(43)` applies to a residual with any
+   fixed nonzero higher-weight coefficient;
 4. exclusion of multiple-term higher weighted faces or the full reduced
    `(2,3)` cell;
 5. `JC(2)`.

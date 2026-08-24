@@ -1,0 +1,39 @@
+PASS raw epsilon
+PASS raw delta=gamma*c40 is nonzero
+PASS raw kappa=gamma*c02
+PASS old weight-six attachment X ratio
+PASS old weight-six attachment Y ratio
+PASS p3 is integral on old scale
+PASS y2 is integral on old scale
+PASS forced p4 has pole rho^-2 on old scale
+PASS shared s2*p3 coefficient is kappa-epsilon
+PASS truncated support has exactly two lower facets
+PASS primary lower plane
+PASS side lower plane
+PASS primary initial form coefficients
+PASS side initial form coefficients
+PASS full truncated Newton polygon genus
+PASS primary cell interior count
+PASS side cell interior count
+PASS subdivision genus ledger 8=4+1+(4-1)
+PASS primary rational-component graph rank
+PASS truncated toric plus abelian genus ledger
+PASS side quartic is smooth
+PASS side quartic invariants force j=1728
+PASS side and target j differ
+PASS p*y2 endpoint lies strictly below old side facet
+PASS generic p*y2 deletes old side plane
+PASS generic p*y2 retains/enlarges primary plane
+PASS generic p*y2 creates replacement rational side plane
+PASS p*y2 full Newton polygon genus
+PASS p*y2 enlarged primary cell genus
+PASS p*y2 replacement side cell is rational
+PASS p*y2 primary component ledger genus2+graph7=9
+PASS p*y2 subdivision genus ledger
+PASS raw and normalized coefficient pairs differ by common gamma
+GATES=33
+RESULT old_weight6_sharp_realization=REFUTED_BY_FORCED_P4
+RESULT truncated_lower_facets=PRIMARY_WEIGHT8_PLUS_SIDE_QUARTIC
+RESULT side_quartic=j1728; target=j0; old_six_point_invoice_not_applicable
+RESULT p_y2_hostile=DESTROYS_SIDE_FACET
+ALL INDEPENDENT THM-4017 CHECKS PASSED

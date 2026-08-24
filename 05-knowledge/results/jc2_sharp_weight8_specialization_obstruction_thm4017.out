@@ -1,0 +1,10 @@
+PASS sharp coefficients and six-point ratios
+PASS weight-six scaling: p^3,y^2 integral; forced p^4 has rho exponent -2
+PASS Newton polygons: weight-six interior=6; truncated p^4+y^2 interior=8
+PASS exact lower Newton subdivision has two facets
+  FACET ('base_s2', 'base_p', 'c4_s2p4', 'c4_p5') PLANE (Fraction(1, 8), Fraction(1, 4), Fraction(-1, 4))
+  FACET ('base_s2', 'kappa_s4p2', 'c4_s2p4') PLANE (Fraction(1, 4), Fraction(1, 4), Fraction(-1, 2))
+PASS truncated honest side-face elliptic component has j=1728 (I!=0,J=0)
+PASS truncated dual graph: face-A toric rank=4; total toric rank=7 plus elliptic genus=1
+PASS hostile: a p*y^2 term destroys the j=1728 side facet; gap=-1/4
+ALL THM-4017 PRIMARY CHECKS PASSED

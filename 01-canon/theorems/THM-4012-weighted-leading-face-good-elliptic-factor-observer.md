@@ -47,6 +47,7 @@ related:
   - THM-3997-reduced-two-three-hasse-repair-and-zero-residual-no-go
   - THM-3999-companion-divisor-boundary-endpoint-and-class-ledger
   - THM-4016-sharp-five-by-five-elliptic-attachment-nontorsion
+  - THM-4017-sharp-weight-eight-specialization-obstruction-and-newton-ledger
 script: 04-computation/jc2_weighted_face_good_factor_thm4012.py
 output: 05-knowledge/results/jc2_weighted_face_good_factor_thm4012.out
 script_sha256: 2728ce7f8319e8e2584ff3db75e21403c5c5aeae968c9febd6a5f6b763331de8
@@ -781,12 +782,14 @@ The already proved rows give
     =-11392/(105A5^4).                                  (50)
 ```
 
-THM-4016 studies a different specialization of this affine line: the sharp
-fixed-support cancellation has nonzero `p^4`, attachment ratios
-`(X^3,Y^2)=(43/84,127/84)`, and only a conditional stable-model application.
-The exact `M=6` branch below instead sets `p^4=0` and has ratios
-`(43/224,267/224)`. Neither arithmetic certificate may be substituted for
-the other.
+THM-4016 studies the formal weight-six truncation at a different point of
+this affine line: the sharp fixed-support cancellation has nonzero `p^4` and
+the truncation ratios `(X^3,Y^2)=(43/84,127/84)`. THM-4017 proves that this
+forced `p^4` term has a pole on the proposed weight-six scale, so the direct
+sharp stable-face application is **REFUTED**; only THM-4016's arithmetic
+non-torsion statement survives. The exact `M=6` branch below instead sets
+`p^4=0` and has ratios `(43/224,267/224)`. Neither arithmetic certificate
+may be substituted for the other.
 
 In particular, the **total** polynomial weighted degree of `H` is at least
 six. Assume, as an exact additional hypothesis, that it is at most eight.
