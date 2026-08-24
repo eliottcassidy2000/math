@@ -9,6 +9,34 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-470 (2026-08-24, THM-3941 shared pole carrier) -- a target collision was unconditionally promoted to maximal source ramification
+
+- **What failed:** the first THM-3941 candidate said that two finite poles in
+  one `A`-fibre always route to a non-unibranch source ramification arm. Its
+  opening hypotheses describe a repeated-root/order component, but Section 2's
+  rank-three fibre argument separately assumes a generically exact-double,
+  genuine reduced tame `(2,1)` prime in the maximal normalization of a Keller
+  candidate.
+- **Minimal witness / first failed implication:** for any `q>=1`, put
+  `A=u^3`, `t=u/(A-1)^q`, `a=(A-1)^(3q)`, `c=0`, `d=A/2`, and
+  `C=-(3/2)u(A-1)^(2q)`. These satisfy the opening trace-zero, generation,
+  primitive-incidence and one-place hypotheses, with minimal polynomial
+  `(A-1)^(3q)T^3-A`, but have three distinct unramified poles over `A=1`.
+  Their target component is `C^3=-(27/8)A(A-1)^(6q)`. The equations force the
+  shared target address `(1,0)`; they do not show that an order-discriminant
+  factor survives as maximal source ramification.
+- **Repair / strongest survivor:** THM-3941 now states the trichotomy: the
+  no-finite-pole root-regular exit, a shared-`A` carrier, or a nonempty
+  collision-free carrier. The shared case is excluded by source
+  non-unibranchness only under the explicit maximal/Keller hypotheses. In the
+  collision-free case, the completed-local trace sieve, the `C3`, `C2`, and
+  `C2 x C2` exhaustion, the generating function, and the seven coarse
+  degree-five signatures all survive unchanged.
+- **Reusable rule:** a repeated-root target component or order-discriminant
+  factor is not automatically a genuine ramification prime of the maximal
+  source. State the maximality, residue-degree, and exact-double hypotheses
+  before using fibre length to infer source non-unibranchness.
+
 ## MISTAKE-469 (2026-08-23, THM-3928 double-line boundary) -- a classical degree bound was used under arbitrary-component hypotheses
 
 - **What failed:** the double-line addendum said that
@@ -170,8 +198,10 @@ Format per entry:
   the incoming `THM-3938` reservation then moved it atomically to `THM-3939`;
   incoming `THM-3939` and `THM-3940` reservations then moved it atomically to
   `THM-3941`; incoming `THM-3941` and `THM-3942` reservations then moved it
-  atomically to `THM-3943`; the hash-bearing LRC companions and mathematical
-  scope did not change.
+  atomically to `THM-3943`; the next incoming wave occupied
+  `THM-3943--THM-3947`, so the LRC theorem moved atomically again to
+  `THM-3948`; the hash-bearing LRC companions and mathematical scope did not
+  change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
   only before empty reservations; rename the whole artifact family together.

@@ -2,28 +2,31 @@
 id: THM-3941
 title: "All-degree centered cubic pole carriers have three inertia grammars"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT
-  HOSTILE AUDIT. Let A(u) be a cubic polynomial and let t(u) be a
-  nonconstant trace-zero rational function of arbitrary degree N. In the
-  centered linear-color repeated-root grammar, any two finite poles in one
-  A-fibre already route to the non-unibranch source-ramification obstruction.
-  After deleting that routed case, every finite pole lies at a critical point
-  of A. Up to the stated affine gauges, there are exactly three carriers: one
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED AFTER MISTAKE-470
+  QUANTIFIER REPAIR. Let A(u) be cubic and t(u) a nonconstant trace-zero
+  rational function of arbitrary degree N in the centered linear-color
+  repeated-root grammar. Its pole support obeys a trichotomy: no finite poles
+  gives the root-regular exit; at least two finite poles share one A-value; or
+  the nonempty collision-free support has exactly one of three carriers -- one
   pole of order nonzero mod 3 over a C3 point, one odd pole over a selected C2
-  point, or odd poles over both C2 points. The infinity order is zero or
-  nonzero mod 3, and the pole orders sum to N. This is carrier exhaustion,
-  not all-degree polynomial-color closure. At N=5 it gives exactly seven
-  non-root-regular rows plus the root-regular exit.
+  point, or odd poles over both C2 points. Only under
+  the added genuine exact-double, reduced tame (2,1), maximal-normal Keller
+  hypotheses does the shared case force a non-unibranch source arm. The
+  infinity order is zero or nonzero mod 3, and all pole orders sum to N. This
+  is carrier exhaustion, not all-degree polynomial-color closure. At N=5 it
+  gives seven coarse non-root-regular signatures plus the root-regular exit.
 source: jc_zero_debt_lift / recursive synthesis of THM-3933, THM-3936, and THM-3938, 2026-08-24
 audit: >
-  Candidate self-audit only. The proof separates the completed-local trace
-  lemma, shared-address source obstruction, affine classification of cubic
-  polynomial projections, and all-degree pole-divisor enumeration. The
-  assertion-free 2827-gate companion checks both a direct enumeration and an
-  independent rational generating function, the N=3 and N=4 inherited row
-  lists, the new N=5 list, local character exclusions, canonical critical
-  loci, and hostile degrees through 30. Independent hostile audit is required
-  before this theorem enters the proved graph.
+  INDEPENDENT HOSTILE AUDIT PASS AFTER REPAIR (root audit and independent
+  quantifier probe, 2026-08-24). The audit reconstructed the completed-local
+  trace sieve, cubic critical packets, all-degree ledger and generating
+  function, but found that the original opening silently imported the extra
+  maximal-ramification hypotheses from Section 2. MISTAKE-470 records an
+  infinite shared-pole counterfamily. The repaired theorem keeps that case as
+  one branch of the pole-support trichotomy and invokes source non-unibranchness only with the
+  stated Keller/maximal hypotheses. The assertion-free 2853-gate companion
+  includes the hostile family; normal and optimized runs byte-match the frozen
+  LF transcript, and raw and semantic hashes pass.
 depends_on:
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
   - THM-3929-root-regular-one-place-linear-color-cubic-is-monogenic
@@ -34,16 +37,16 @@ related:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
 script: 04-computation/jc2_all_degree_centered_pole_carrier_routing_thm3941.py
 output: 05-knowledge/results/jc2_all_degree_centered_pole_carrier_routing_thm3941.out
-script_sha256: 03575ef0753da0f6ca474b020a6becc4c836ebfea4e291ec5bbdda2088a3c6d2
-output_sha256: 73a6b1c985581c2407ac7ae620b5f06d474230120b021739e906ec9a1e3b25f7
-semantic_sha256: 8601f1b32ce801bfaef8c3c0a747afc1a479546e994b1c13b887ea1ba324a3d9
+script_sha256: d3fc62f474fa9d0d615ca8202a4796de15b6dd50f1dbf5e3ca8909e426685243
+output_sha256: 771726627e9f674d265e457e9c138aa1707802f549d481d8c4ede98f813d354e
+semantic_sha256: 35b3b0eaffde82ab38c59a9b5d743a574a644b4e0ff938181f5dacaaef7ba9ef
 hash_basis: raw LF bytes
 ---
 
 # THM-3941 -- every depth uses the same two local characters
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT
-HOSTILE AUDIT.** Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED AFTER MISTAKE-470
+QUANTIFIER REPAIR.** Work over an algebraically closed field `k` of
 characteristic zero. Let an irreducible one-place component in the
 linear-color binary-cubic grammar have normalization `A1_u`, with
 
@@ -74,6 +77,22 @@ missing quadratic coefficient gives
 ```text
 Tr_(k(u)/k(A))(t)=0.                                     (6)
 ```
+
+Under `(1)--(6)`, the pole support satisfies exactly one of the following
+alternatives:
+
+```text
+(R) there are no finite poles (the root-regular exit);
+(S) two finite poles share one A-value;
+(C) the nonempty finite support is collision-free, and its carrier is one
+    of C3, C2, or C2 x C2 from Section 3.                (6a)
+```
+
+In `(S)`, the repeated-root equations alone force a shared target address
+`a(A0)=C=0`. They do **not** by themselves prove that the corresponding order
+component remains genuine ramification in the maximal normalization. The
+source non-unibranch exclusion needs the additional hypotheses stated in
+Section 2. This is the MISTAKE-470 repair.
 
 An arbitrary root translation need not preserve the linear `C U^2V` slot,
 so `(1)` and `(5)` are hypotheses rather than a gauge available for every
@@ -118,14 +137,15 @@ e=3: an isolated pole has r not congruent to 0 mod 3.     (10)
 
 If a pole is unramified, `(10)` says that trace zero requires at least one
 other pole in the same `A`-fibre. More generally, every pole not obeying the
-isolated rule must share its `A`-value with another pole. Section 2 routes all
-such shared-value cases before any affine normalization.
+isolated rule must share its `A`-value with another pole. These are precisely
+the shared-address alternative `(S)`; Section 2 explains when the Keller
+application can route them to a source obstruction.
 
 The polynomial map `A:P1_u -> P1_A` is totally ramified of index three at
 infinity. Write
 
 ```text
-m=ord_infinity(t)_infinity >= 0.                          (11)
+m=max(0,-ord_infinity(t)) >= 0.                           (11)
 ```
 
 If `m>0`, the same trace calculation gives `3 does not divide m`. If `m=0`,
@@ -138,7 +158,7 @@ t(infinity)=0.                                            (12)
 This last address is often useful in color division, but it is not an extra
 carrier.
 
-## 2. A shared pole value is a source, not merely target, obstruction
+## 2. A shared pole value becomes a source obstruction only in the maximal Keller application
 
 Suppose distinct finite pole supports `p,q` satisfy `A(p)=A(q)=A0`. At both
 supports the limiting homogeneous repeated root is `[U:V]=[1:0]`. In the
@@ -173,13 +193,37 @@ curve of a normal affine surface containing an `A2` open is unibranch.
 Deleting this ramification component can therefore never produce a Keller
 `A2` open.
 
-The qualifiers in the preceding paragraph are essential. A squared order
-discriminant factor which disappears in the maximal order is not silently
-promoted to a source ramification component here.
+The qualifiers in the preceding paragraph are essential. Under `(1)--(6)`
+alone, for every `q>=1` there is a shared-pole family
+
+```text
+A=u^3,                 t=u/(A-1)^q,
+a=(A-1)^(3q),          c=0,                    d=A/2,
+C=-(3/2)u(A-1)^(2q).                                  (14a)
+```
+
+It has trace zero, primitive minimal incidence
+
+```text
+(A-1)^(3q)T^3-A=0,
+```
+
+and `k(A,C)=k(u)`, but its three distinct unramified poles all lie over
+`A=1`. Its one-place target component is
+
+```text
+C^3=-(27/8)A(A-1)^(6q).                                (14b)
+```
+
+Thus the opening grammar gives only the shared target address. A squared
+order-discriminant factor which disappears in the maximal order cannot be
+silently promoted to source ramification. MISTAKE-470 records the failed
+implication and the repaired trichotomy.
 
 ## 3. Three collision-free carrier gauges
 
-After Section 2, every finite pole is isolated in its `A`-fibre. By `(10)` it
+Restrict now to the complementary collision-free case `(C)`. Every finite
+pole is isolated in its `A`-fibre. By `(10)` it
 must lie at a finite ramification point of `A`. Riemann--Hurwitz gives total
 ramification four for the cubic map. Infinity already contributes two, so
 the finite ramification packet is exactly one of
@@ -288,9 +332,10 @@ meet: they are the nontrivial local characters of the `C2` and `C3` inertia
 groups. It is not an analogy imposed after the calculation; equations
 `(9)`, `(17)`, `(19)`, and `(23)` are the character projections themselves.
 
-## 5. The inherited rows and the new degree-five frontier
+## 5. The inherited signatures and the new degree-five frontier
 
-At `N=3`, `(22)` gives the five nonregular rows used by THM-3933/3936:
+At `N=3`, `(22)` gives the five coarse nonregular carrier signatures used by
+THM-3933/3936:
 
 ```text
 m=0: C2(3);
@@ -298,8 +343,8 @@ m=1: C3(2), C2xC2(1,1);
 m=2: C3(1), C2(1).                                      (26)
 ```
 
-At `N=4`, it gives the five nonregular rows of THM-3938 and one root-regular
-exit:
+At `N=4`, it gives the five coarse nonregular signatures of THM-3938 and one
+root-regular exit:
 
 ```text
 m=0: C3(4), C2xC2(1,3);
@@ -308,7 +353,8 @@ m=2: C3(2), C2xC2(1,1);
 m=4: root-regular.                                       (27)
 ```
 
-At `N=5`, there are exactly seven nonregular rows plus the root-regular exit:
+At `N=5`, there are exactly seven coarse allowed nonregular signatures plus
+the root-regular exit:
 
 ```text
 m=0: C3(5), C2(5);
@@ -318,9 +364,10 @@ m=4: C3(1), C2(1);
 m=5: root-regular.                                       (28)
 ```
 
-There is no `m=3` row. The next finite mathematical problem is now sharply
-typed: impose the centered incidence and polynomial color `(7)` on the seven
-rows in `(28)`. THM-3941 neither performs nor prejudges that color closure.
+There is no `m=3` signature. These are carrier possibilities, not existence
+claims. The next finite mathematical problem is now sharply typed: impose the
+centered incidence and polynomial color `(7)` on the seven signatures in
+`(28)`. THM-3941 neither performs nor prejudges that color closure.
 
 ## 6. Exact reproducibility and scope boundary
 
@@ -333,8 +380,9 @@ python3 -O 04-computation/jc2_all_degree_centered_pole_carrier_routing_thm3941.p
 
 The assertion-free companion verifies the three canonical critical packets,
 the local `C2/C3` residue rules, the homogeneous shared-root equations
-`a=C=0`, direct row enumeration, the independent generating function `(25)`,
-and hostile degrees through 30. It prints the exact `N=3,4,5` row counts.
+`a=C=0`, the MISTAKE-470 family `(14a)--(14b)`, direct row enumeration, the
+independent generating function `(25)`, and hostile degrees through 30. It
+prints the exact `N=3,4,5` signature counts.
 
 The theorem closes only the carrier layer under `(1)--(6)`. Arbitrary root
 gauges, nonlinear color slots, polynomial-color division for unbounded `N`,

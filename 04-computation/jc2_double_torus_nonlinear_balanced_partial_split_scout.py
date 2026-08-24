@@ -1,0 +1,265 @@
+#!/usr/bin/env python3
+"""Independent affine-linear rederivation plus nonlinear split scout.
+
+Reproduction:
+  python3 04-computation/jc2_double_torus_nonlinear_balanced_partial_split_scout.py
+  python3 -O 04-computation/jc2_double_torus_nonlinear_balanced_partial_split_scout.py
+"""
+
+from __future__ import annotations
+
+import hashlib
+import json
+
+import sympy as sp
+
+
+CHECKS = 0
+
+
+def gate(condition: bool, message: str) -> None:
+    global CHECKS
+    CHECKS += 1
+    if condition is not True and condition != sp.S.true:
+        raise RuntimeError(message)
+
+
+P, Q, a = sp.symbols("P Q a", nonzero=True)
+h, v, g = sp.symbols("h v g")
+omega = (-1 + sp.sqrt(-3))/2
+roots = (sp.Integer(1), omega, sp.expand(omega**2))
+lines = tuple(Q - root*P for root in roots)
+
+
+# The independent affine-coordinate case has a squarefree three-line product.
+gate(sp.simplify(1 + omega + omega**2) == 0,
+     "primitive cube root relation")
+gate(sp.expand(sp.prod(lines) - (Q**3 - P**3)) == 0,
+     "difference of cubes is the three-line product")
+for i in range(3):
+    for j in range(i + 1, 3):
+        gate(sp.simplify(roots[i] - roots[j]) != 0,
+             f"cube-root lines {i},{j} are distinct")
+
+
+# UFD gives exactly eight allocations of the three prime factors.
+branches = {}
+for mask in range(8):
+    left = sp.Integer(1)
+    right = sp.Integer(1)
+    for index, line in enumerate(lines):
+        if mask & (1 << index):
+            left *= line
+        else:
+            right *= line
+    D = sp.expand(a*left)
+    S = sp.expand(right/a)
+    q0 = sp.expand(S - D)
+    q1 = sp.expand(S + D)
+    H0 = sp.expand(q0**2 - 4*P**3)
+    H1 = sp.expand(q1**2 - 4*Q**3)
+    gate(sp.simplify(D*S - (Q**3 - P**3)) == 0,
+         f"UFD allocation product mask={mask}")
+    gate(sp.simplify(H0 - H1) == 0,
+         f"common branch identity mask={mask}")
+    branches[mask] = H0
+
+gate(sorted(min(mask.bit_count(), 3-mask.bit_count()) for mask in range(8))
+     == [0, 0, 1, 1, 1, 1, 1, 1],
+     "complement symmetry leaves extreme and singleton types")
+for mask in range(8):
+    gate(sp.simplify(branches[mask] - branches[7-mask].subs(a, 1/a)) == 0,
+         f"complement plus a->1/a changes q0 sign only mask={mask}")
+
+
+# Singleton 1+2 split.  Cube-root rescaling makes Q-P representative.
+D1 = a*(Q-P)
+S1 = (Q**2 + P*Q + P**2)/a
+q01 = sp.expand(S1-D1)
+q11 = sp.expand(S1+D1)
+H_singleton = sp.expand(q01**2 - 4*P**3)
+gate(sp.expand(D1*S1 - (Q**3-P**3)) == 0,
+     "singleton representative split")
+gate(sp.expand(H_singleton - (q11**2-4*Q**3)) == 0,
+     "singleton common branch")
+
+quadratic_Q = sp.expand(
+    Q**2 + (h**2-a**2)*Q + h**2*(h-a)**2
+)
+disc_Q = sp.factor(sp.discriminant(quadratic_Q, Q))
+gate(sp.expand(disc_Q + (h-a)**3*(3*h+a)) == 0,
+     "singleton quadratic discriminant")
+
+conic = sp.expand(v**2 + (h-a)*(3*h+a))
+Q_map = sp.expand(((h-a)*v-h**2+a**2)/2)
+q01_map = sp.expand(q01.subs({P: h**2, Q: Q_map}))
+q01_reduced = sp.rem(sp.Poly(q01_map-2*h**3, v), sp.Poly(conic, v)).as_expr()
+H_singleton_map = sp.expand(H_singleton.subs({P: h**2, Q: Q_map}))
+H_singleton_reduced = sp.rem(
+    sp.Poly(H_singleton_map, v), sp.Poly(conic, v)
+).as_expr()
+gate(sp.simplify(q01_reduced) == 0,
+     "conic map gives q0=2h^3")
+gate(sp.simplify(H_singleton_reduced) == 0,
+     "conic maps to the singleton branch")
+gate(sp.cancel((2*h**3)/(2*h**2) - h) == 0,
+     "singleton branch recovers h generically")
+gate(sp.factor((h-a)-( -a/3-a)) != 0,
+     "conic finite branch roots are distinct")
+z = sp.symbols("z")
+gate(sp.discriminant(z**2+3, z) != 0,
+     "conic has two distinct infinity directions")
+
+
+# Extreme 0+3 split.  Its normalization is a smooth Fermat cubic.
+D0 = a
+S0 = (Q**3-P**3)/a
+q00 = sp.expand(S0-D0)
+q10 = sp.expand(S0+D0)
+H_extreme = sp.expand(q00**2-4*P**3)
+gate(sp.expand(D0*S0-(Q**3-P**3)) == 0,
+     "extreme representative split")
+gate(sp.expand(H_extreme-(q10**2-4*Q**3)) == 0,
+     "extreme common branch")
+fermat = g**3-h**3-a
+q00_map = sp.expand(q00.subs({P: h**2, Q: g**2}))
+q00_reduced = sp.rem(sp.Poly(q00_map-2*h**3, g), sp.Poly(fermat, g)).as_expr()
+H_extreme_map = sp.expand(H_extreme.subs({P: h**2, Q: g**2}))
+H_extreme_reduced = sp.rem(
+    sp.Poly(H_extreme_map, g), sp.Poly(fermat, g)
+).as_expr()
+gate(sp.simplify(q00_reduced) == 0,
+     "Fermat map gives q0=2h^3")
+gate(sp.simplify(H_extreme_reduced) == 0,
+     "Fermat cubic maps to the extreme branch")
+intermediate_extreme = sp.expand(((h**3+a)**2-Q**3).subs(Q, g**2))
+gate(sp.rem(sp.Poly(intermediate_extreme, g), sp.Poly(fermat, g)).as_expr() == 0,
+     "extreme intermediate equation Q^3=(h^3+a)^2")
+gate(sp.gcd(z**3-1, sp.diff(z**3-1, z)) == 1,
+     "Fermat cubic has three distinct infinity directions")
+gate(sp.solve(
+    [sp.diff(g**3-h**3-a*z**3, variable) for variable in (g, h, z)],
+    (g, h, z), dict=True
+) == [{g: 0, h: 0, z: 0}],
+     "projective Fermat cubic gradient vanishes only at the forbidden origin")
+
+
+# First nonlinear balanced partial split: exact hostile, not a universal
+# nonlinear classification.  It already fails by support or branch count.
+X, t = sp.symbols("X t")
+f = t*(t-1)
+p0 = X
+p1 = X+f
+F0 = f
+F1 = f+(1-omega)*X
+F2 = f+(1-omega**2)*X
+Dn = sp.expand(a*t*F1)
+Sn = sp.expand((t-1)*F2/a)
+q0n = sp.expand(Sn-Dn)
+q1n = sp.expand(Sn+Dn)
+Hn = sp.expand(q0n**2-4*p0**3)
+gate(sp.simplify(F0*F1*F2-(p1**3-p0**3)) == 0,
+     "nonlinear prototype cube-factor identity")
+gate(sp.simplify(Dn*Sn-(p1**3-p0**3)) == 0,
+     "nonlinear prototype balanced partial split")
+gate(sp.simplify(Hn-(q1n**2-4*p1**3)) == 0,
+     "nonlinear prototype common branch")
+
+
+def homogeneous_part(poly, degree):
+    expanded = sp.Poly(sp.expand(poly), X, t)
+    return sp.expand(sum(
+        coefficient*X**monomial[0]*t**monomial[1]
+        for monomial, coefficient in expanded.terms()
+        if sum(monomial) == degree
+    ))
+
+
+for sign in (1, -1):
+    H_sign = sp.expand(Hn.subs(a, sign))
+    degree = sp.Poly(H_sign, X, t).total_degree()
+    lead = sp.factor(homogeneous_part(H_sign, degree))
+    gate(degree == 4, f"nonlinear prototype a={sign} has degree four")
+    gate(sp.expand(lead-t**2*(t-sp.sqrt(-3)*X)**2) == 0,
+         f"nonlinear prototype a={sign} has two distinct infinity directions")
+    gate(sp.factor(lead/t**2).as_poly(X, t).total_degree() == 2,
+         f"nonlinear prototype a={sign} has two-line infinity form")
+    gate(len(sp.factor_list(lead)[1]) >= 2,
+         f"nonlinear prototype a={sign} has at least two infinity supports")
+    exact_factors = sp.Poly(
+        H_sign, X, t, extension=sp.sqrt(-3)
+    ).factor_list()[1]
+    gate(len(exact_factors) == 1 and exact_factors[0][1] == 1,
+         f"nonlinear prototype a={sign} is irreducible")
+
+gate(sp.expand(Hn.subs(a, 1)-Hn.subs(a, -1)) == 0,
+     "the two support-degenerate parameter signs give the same branch")
+
+C_edge = sp.simplify(1/a-a)
+D_edge = sp.simplify((1-omega**2)/a-a*(1-omega))
+R = sp.symbols("R")
+edge = sp.expand(R*(C_edge*R+D_edge)**2-4)
+
+# At the unique generic projective infinity direction [X:t:z]=[1:0:0],
+# put eta=t/X and zz=1/X.  The lower Newton edge has weight
+# wt(eta)=1, wt(zz)=2.  Dividing its monomials by zz^3 and setting
+# R=eta^2/zz gives exactly the displayed cubic.
+eta, zz = sp.symbols("eta zz")
+local_curve = sp.Poly(
+    sp.cancel(zz**6*Hn.subs({X: 1/zz, t: eta/zz})), eta, zz
+)
+newton_terms = [
+    (monomial, coefficient)
+    for monomial, coefficient in local_curve.terms()
+    if monomial[0]+2*monomial[1] == 6
+]
+gate(len(newton_terms) == 4,
+     "nonlinear prototype has the expected four-term lower Newton edge")
+gate(all(monomial[0] % 2 == 0 for monomial, _ in newton_terms),
+     "Newton edge descends to R=eta^2/zz")
+edge_from_curve = sp.expand(sum(
+    coefficient*R**(monomial[0]//2)
+    for monomial, coefficient in newton_terms
+))
+gate(sp.factor(edge_from_curve-edge) == 0,
+     "nonlinear prototype Newton edge is R(CR+D)^2-4")
+gate(sp.factor(homogeneous_part(Hn, 6)
+               - t**6*(a**2-1)**2/a**2) == 0,
+     "away from a^2=1 the prototype has one projective infinity direction")
+gate(sp.expand(sp.diff(edge, R)
+     -(C_edge*R+D_edge)*(3*C_edge*R+D_edge)) == 0,
+     "nonlinear Newton-edge derivative factorization")
+gate(edge.subs(R, 0) == -4,
+     "nonlinear Newton edge has no zero root")
+critical_second = sp.simplify(
+    sp.diff(edge, R, 2).subs(R, -D_edge/(3*C_edge))
+)
+gate(sp.simplify(critical_second-2*C_edge*D_edge) == 0,
+     "only possible repeated edge root has explicit second derivative")
+gate(sp.factor(sp.discriminant(sp.diff(edge, R), R)
+               - 4*C_edge**2*D_edge**2) == 0,
+     "a triple edge root would force D=0 when C is nonzero")
+gate(sp.factor(a*C_edge-(1-a**2)) == 0,
+     "C=0 is exactly the separately handled a^2=1 support degeneration")
+
+
+summary = {
+    "checks": CHECKS,
+    "scope": "independent THM3942 rederivation;one nonlinear balanced hostile only",
+    "ufd_allocations": 8,
+    "independent_types": "singleton conic two-place;extreme Fermat three-place",
+    "dependent_type": "line-degenerate when p1^3!=p0^3",
+    "conclusion": "affine whole-factor split closed;nonlinear balanced prototype pays branches",
+    "nonlinear_hostile": "t(t-1) balanced split has >=2 infinity branches",
+}
+semantic = hashlib.sha256(json.dumps(summary, sort_keys=True).encode()).hexdigest()
+
+print("Double-torus nonlinear balanced partial-split exact scout")
+print(f"CHECKS={CHECKS}")
+print("UFD_ALLOCATIONS=8;TYPES=singleton_or_extreme_up_to_complement")
+print("SINGLETON=NORMALIZATION_CONIC;INFINITY_PLACES=2")
+print("EXTREME=NORMALIZATION_FERMAT_CUBIC;INFINITY_PLACES=3")
+print("DEPENDENT_GRADIENTS=LINE_DEGENERATE_UNDER_GENUINE_SPLIT")
+print("AFFINE_LINEAR_ONE_PLACE=NONE_NONLINEAR")
+print("NONLINEAR_PROTOTYPE=t(t-1)_balanced_split;INFINITY_BRANCHES>=2")
+print(f"SEMANTIC_SHA256={semantic}")

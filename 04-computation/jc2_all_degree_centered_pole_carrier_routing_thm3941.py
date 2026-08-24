@@ -101,6 +101,31 @@ gate(sp.diff(phi_infinity_chart, w).subs(w, 0) == color,
      "homogeneous infinity-root derivative is C")
 
 
+# Quantifier hostile for MISTAKE-470: shared A-values are an algebraic
+# carrier under the opening hypotheses, not automatically maximal source
+# ramification.  This family has three unramified poles over A=1.
+omega = (-1 + sp.sqrt(-3))/2
+gate(sp.simplify(1 + omega + omega**2) == 0,
+     "cubic trace character sums to zero")
+gate(sp.gcd(u**3 - 1, sp.diff(u**3 - 1, u)) == 1,
+     "the three shared poles over A=1 are unramified and distinct")
+for q_shared in range(1, 7):
+    A_shared = u**3
+    t_shared = u/(A_shared - 1)**q_shared
+    a_shared = (A_shared - 1)**(3*q_shared)
+    d_shared = A_shared/2
+    C_shared = -sp.Rational(3, 2)*u*(A_shared - 1)**(2*q_shared)
+    gate(sp.cancel(a_shared*t_shared**3 - 2*d_shared) == 0,
+         f"shared-pole incidence witness q={q_shared}")
+    gate(sp.cancel(C_shared + 3*a_shared*t_shared/2) == 0,
+         f"shared-pole repeated-root color q={q_shared}")
+    gate(sp.expand(C_shared**3
+         + sp.Rational(27, 8)*A_shared*(A_shared - 1)**(6*q_shared)) == 0,
+         f"shared-pole one-place implicit component q={q_shared}")
+    gate(sp.cancel(-2*C_shared/(3*(A_shared - 1)**(2*q_shared)) - u) == 0,
+         f"shared-pole normalization recovers u q={q_shared}")
+
+
 rows3 = carrier_rows(3)
 rows4 = carrier_rows(4)
 rows5 = carrier_rows(5)
@@ -178,7 +203,7 @@ summary = {
     "scope": "all N;centered trace-zero;degA=3;carrier routing only",
     "carriers": "C3 one pole;C2 one pole;C2xC2 two unordered poles",
     "characters": "C2 odd orders;C3 nonzero mod3 orders;infinity nonzero mod3",
-    "exits": "shared A-address non-unibranch;no finite pole root-regular",
+    "exits": "shared A-address;Keller non-unibranch only under genuine maximal hypotheses;no finite pole root-regular",
     "degree3": "5 nonregular rows",
     "degree4": "5 nonregular rows",
     "degree5": "7 nonregular rows",
@@ -192,7 +217,7 @@ print(f"CHECKS={CHECKS}")
 print("SCOPE=all N;centered trace-zero;degA=3;carrier routing only")
 print("CARRIERS=C3 one pole;C2 one pole;C2xC2 two unordered poles")
 print("CHARACTERS=C2 odd orders;C3 nonzero-mod3;infinity nonzero-mod3")
-print("EXITS=shared A-address non-unibranch;no finite pole root-regular")
+print("EXITS=shared A-address;Keller non-unibranch only under genuine maximal hypotheses;no finite pole root-regular")
 print("DEGREE3=5 nonregular rows")
 print("DEGREE4=5 nonregular rows")
 print("DEGREE5=7 nonregular rows")
