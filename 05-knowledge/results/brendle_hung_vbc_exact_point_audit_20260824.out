@@ -1,0 +1,14 @@
+status=FINITE-EXACT
+source=arXiv:2608.19068v1 Proposition 5.2 V_bc identity
+universe=theta=pi/6; q-frame=SO(3) quaternion (1,2,3,4)
+hessian_determinant=28672/2278125
+r_b=(0, 0, 37*sqrt(3)/150, 7*sqrt(3)/27)
+r_c=(32/1215, 56/6075, 896*sqrt(3)/84375, 1232*sqrt(3)/151875)
+P0_L_hbc=581/20250
+P0_Q_hb_hc=-1064/50625
+half_r_b_dot_z_c=-259/33750
+V_bc_sum=0
+hostile_control=all three displayed summands are nonzero
+conclusion=the overwritten identity passes one independent exact generic point
+nonconsequence=this point control alone does not prove V_bc identically zero
+transcript_sha256=404d1eb3c11981b5d3e1388ad9b5ff9b08f32a498bf4281b1154affc1ad09c20
