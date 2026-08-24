@@ -357,15 +357,14 @@ asymptotic or residue.
   These are necessary passports with positive lifts, not closure.
   THM-3890 closes quintics; THM-3906/3907 have one/two and two/six places.
   THM-3920 closes THM-3913--3918/radial chart, not `JC(2)`.
-  THM-3929/3933/3936/3938 close centered degrees 3--4;
-  [THM-3941](../01-canon/theorems/THM-3941-all-degree-centered-cubic-pole-carrier-routing.md)
-  routes all `N`. At `N=5`, seven carriers remain for color/order/address tests.
-  THM-3935/3937/3939/3940 leave one cubic character in the tested
-  two-boundary resolvents. THM-3942 gets two characters but two/three ends.
-  THM-3943/3945/3948 exclude `A1` normalization for the classified
-  weight-eight/nine sextics. THM-3944/3946/3947/3949 close repeated-square,
-  affine, and coprime one-variable splits on the standard line; bivariate,
-  gcd-overlap, and arbitrary-line mechanisms remain open.
+  THM-3929/3933/3936/3938/3959 close centered degrees 3--5; THM-3941 routes
+  all degrees, with degree at least six open. THM-3935/3937/3939/3940/3942
+  retain character/end debt; THM-3943--3952 close the classified sextic,
+  split, equianharmonic, forest, and Mobius cells. THM-3960 closes natural
+  `E(t)+C(t)P`; [THM-3961](../01-canon/theorems/THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt.md)
+  reduces arbitrary monogenic `q(P,t)` to two nonnormal debts; THM-3962 closes
+  constant `q(P)` and THM-3963 moving `c(t)P^2`. Live: repeated nonzero hidden
+  factors, nonscalar `P^2q_2`, nonmonogenic orders, and noncentered gauges.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
