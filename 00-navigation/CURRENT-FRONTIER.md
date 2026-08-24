@@ -352,8 +352,8 @@ asymptotic or residue.
   constant `q(P)` and THM-3963 `c(t)P^2`; THM-3964--3972 close cells.
   THM-3973--3976: exact-volume tower, seven-piece floor, `p` no-mate, lost `y`.
   THM-3977--3979: critical seed, two-color debt, unobstructed formal jets.
-  THM-3992/3997/3998: nodal `2:3`, nonzero residual, sparse no-go;
-  THM-3994/3996 split seams/addresses. Live: residual atlas/Jelonek/`y`.
+  THM-3992/3997--3999: nodal `2:3`, no `R=0`, grading/end ledgers;
+  THM-3994/3996 split seams/addresses. Live: residual/Jelonek/owner census.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
