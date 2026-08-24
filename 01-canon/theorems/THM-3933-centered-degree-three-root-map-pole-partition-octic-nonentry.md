@@ -1,9 +1,9 @@
 ---
 id: THM-3933
-title: "Centered degree-three root maps collapse to a non-unibranch octic"
+title: "Centered finite-at-infinity degree-three root maps collapse to a non-unibranch octic"
 status: >
   PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. In the
-  centered t(infinity)=0, degree-three repeated-root stratum of the
+  centered trace-zero, finite-at-infinity degree-three repeated-root stratum of the
   one-place linear-color binary-cubic grammar, local trace and the finite
   Riemann--Hurwitz budget force either a shared pole address or one triple
   pole above a simple critical point. The shared-address branch is
@@ -14,8 +14,9 @@ status: >
   octic; the line disappears in the maximal order, but the octic is genuine
   ramification and has two exact two-address fibres. Hence its ramification
   curve is non-unibranch and no affine-plane Keller atlas exists. This
-  closes the stated centered degree-three stratum, not arbitrary root gauges,
-  higher root degree, or JC(2).
+  closes the stated centered finite-at-infinity degree-three stratum, not
+  the t(infinity)=infinity gauge, arbitrary root changes, higher root degree,
+  or JC(2).
 source: jc_zero_debt_lift / post-THM-3931 degree-three finite-root-pole stratum, 2026-08-23
 audit: >
   PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The
@@ -33,13 +34,13 @@ related:
   - THM-3931-degree-two-pole-cubic-principal-ramification-no-atlas
 script: 04-computation/jc2_centered_degree_three_root_map_octic_thm3933.py
 output: 05-knowledge/results/jc2_centered_degree_three_root_map_octic_thm3933.out
-script_sha256: a1c11c82eaff1810a2a91d19be74adbf6ab4124e28e51a424dc19766c19abd63
-output_sha256: c744334182307e51aabb90b010098367911599be110efa71af02e86a65bfc445
-semantic_sha256: 8122307b43fd3ca36ba18a761ee3f3aaad1bb27c4448c732127518c2fec1e5cf
+script_sha256: 67fb1042c64d89c92976a4d4b8d66185848ca0c30b9af8080e83e3680a4256d5
+output_sha256: 72495d9ffd8561d8cb51d241de5ab0db8a26ec9c29dc18b83df42ec2b667b849
+semantic_sha256: db7f697f423e91ea68c651785775f5b7f69c649b5b408a81c61d9df3abd8a51a
 hash_basis: raw LF bytes
 ---
 
-# THM-3933 -- the centered degree-three pole divisor has nowhere left to go
+# THM-3933 -- a centered finite-at-infinity degree-three pole divisor has nowhere left to go
 
 **PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.** Work over
 an algebraically closed field `k` of characteristic zero. Consider the
@@ -59,7 +60,7 @@ A=A(u), C=C(u) are polynomials,       deg A=3,              (2)
 and that its repeated root `t=U/V in k(u)` satisfies
 
 ```text
-deg(t:P1_u -> P1_t)=3,          t(infinity)=0.              (3)
+deg(t:P1_u -> P1_t)=3,          t(infinity) in k.           (3)
 ```
 
 We work in the centered root gauge: the primitive incidence equation is
@@ -78,9 +79,11 @@ The normalization hypothesis means `k(A,C)=k(u)`. Thus the generic repeated
 root generates the cubic extension over `k(A)` and `(4)` really is its
 minimal polynomial after division by coefficient content.
 
-The theorem closes precisely this centered stratum. It does not assert that
-every degree-three homogeneous root map can be moved into `(1)-(4)` while
-preserving the linear-color direction.
+The theorem closes precisely this centered, finite-at-infinity stratum. The
+centering is the intrinsic missing-square term in `(4)`, not a root
+translation. It does not assert that every degree-three homogeneous root map
+can be moved into `(1)-(4)` while preserving the linear-color direction;
+in particular, `t(infinity)=infinity` remains outside the theorem.
 
 ## 1. Local trace and the pole-partition trichotomy
 
@@ -202,16 +205,28 @@ Scaling `u` and `A` gives the unique normal form
 A=u^3+u^2.                                                 (12)
 ```
 
-A rational function tending to zero at infinity and having only a triple
-pole at zero is `(b_2u^2+b_1u+b_0)/u^3`. Exact trace in the extension
-`u^3+u^2=A` is
+A rational function finite at infinity and having only a triple pole at zero
+is
 
 ```text
-Tr(t)=(3b_0+2b_1)/A.                                      (13)
+t=h+(b_2u^2+b_1u+b_0)/u^3,                 h in k.
 ```
 
-Triple-pole nondegeneracy gives `b_0!=0`, so a root scaling puts every
-trace-zero possibility in the one-parameter form
+Exact trace in the extension `u^3+u^2=A` is
+
+```text
+Tr(t)=3h+(3b_0+2b_1)/A.                                   (13)
+```
+
+Since `A` is nonconstant, trace zero separately forces
+
+```text
+h=0,                         3b_0+2b_1=0.
+```
+
+Thus the centered equation forces its own zero value at normalization
+infinity; no root translation has been made. Triple-pole nondegeneracy gives
+`b_0!=0`, so a root scaling puts every possibility in the one-parameter form
 
 ```text
 t=(3lambda u^2+3u-2)/u^3.                                 (14)
@@ -380,8 +395,9 @@ coalesces on `E`. The curve `E` is not unibranch. THM-3920 excludes it as a
 boundary curve of an affine-plane open, and the unique polynomial-color
 survivor is not a planar Jacobian counterexample.
 
-The conclusion is exactly the centered `t(infinity)=0`, degree-three
-linear-color stratum `(1)-(5)`. Arbitrary root gauges, degree at least four,
+The conclusion is exactly the centered trace-zero, finite-at-infinity,
+degree-three linear-color stratum `(1)-(5)`. The
+`t(infinity)=infinity` gauge, arbitrary root changes, degree at least four,
 other color directions, and JC(2) remain **OPEN**.
 
 ## Reproduction
