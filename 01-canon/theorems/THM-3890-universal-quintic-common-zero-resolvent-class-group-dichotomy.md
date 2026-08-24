@@ -42,6 +42,8 @@ related:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
   - THM-3844-two-cusp-polynomial-branch-quadratic-resolvent-design-gate
   - THM-3889-maximally-confluent-quadratic-binary-cubic-two-place-obstruction
+  - THM-3906-degree-six-common-zero-normal-cubic-two-place-boundary
+  - THM-3907-unit-ideal-nonmonogenic-cubic-six-place-boundary
 script: 04-computation/jc2_universal_quintic_common_zero_resolvent_class_group_thm3890.py
 output: 05-knowledge/results/jc2_universal_quintic_common_zero_resolvent_class_group_thm3890.out
 script_sha256: 53a93831008db8ff6c144fca2994bac05f8b483de8758e1df269e38a2730756d
@@ -416,6 +418,13 @@ This theorem does not exclude:
 - a different discriminant geometry without the one-point degree-five
   normal form; or
 - a planar Keller map or `JC(2)` counterexample.
+
+THM-3906 now supplies a sharp positive degree-six control: a normal
+nonmonogenic common-zero `S3` cubic with one projective infinity point, but
+two normalization places.  THM-3907 supplies the orthogonal unit-ideal
+control, but with two infinity points and six places.  Thus cubic-order
+realizability and common-zero necessity are no longer the immediate unknowns;
+the one-place carrier remains.
 
 The distinction between one projective point and one normalization place is
 load-bearing in general.  It is harmless only here: the explicit
