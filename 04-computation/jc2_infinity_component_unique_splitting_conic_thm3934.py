@@ -183,13 +183,22 @@ gate(gcd_symbolic.degree() == 0, "nonzero order-two row cannot cancel on two bra
 # explicit normalization, so no parity can be hidden there either.
 parity_patterns = {
     "linear_y": (1, 1, 1),
-    "one_quadratic_cancellation_odd_next": (2, 2, 3),
     "cubic_xy": (3, 3, 3),
     "quartic_x2": (4, 4, 4),
 }
 gate(sum(parity_patterns["linear_y"]) % 2 == 1, "three linear contacts have odd total")
-gate(sum(parity_patterns["one_quadratic_cancellation_odd_next"]) % 2 == 1,
-     "one hidden odd branch has odd total")
+# If the quadratic row cancels at the unique exceptional branch, its order m
+# can be three or can increase after further cancellation.  The exact point is
+# parity, not the representative pattern (2,2,3): the other two branches have
+# order two, so total parity equals the exceptional branch parity for every
+# possible local intersection order.  Bezout bounds the total by twelve.
+gate(
+    all(
+        (2 + 2 + exceptional_order) % 2 == exceptional_order % 2
+        for exceptional_order in range(1, 13)
+    ),
+    "total parity detects the unique exceptional branch at the quadratic row",
+)
 gate(sum(parity_patterns["cubic_xy"]) % 2 == 1, "three cubic contacts have odd total")
 gate(all(value % 2 == 0 for value in parity_patterns["quartic_x2"]),
      "the surviving quartic contacts are branchwise even")

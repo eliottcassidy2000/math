@@ -2,7 +2,7 @@
 id: THM-3934
 title: "Infinity-component sextic has a unique reduced splitting conic"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. For
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For
   the THM-3932 rational one-place sextic
   4X^3Z^3-(Y^3-X^2Z)^2=0, the only reduced projective conic that splits in
   the quadratic double plane is XZ=0, up to scalar. All other conics whose
@@ -20,7 +20,7 @@ related:
   - THM-2387-degree-eighteen-h4-elliptic-three-isogeny-atlas
 script: 04-computation/jc2_infinity_component_unique_splitting_conic_thm3934.py
 output: 05-knowledge/results/jc2_infinity_component_unique_splitting_conic_thm3934.out
-script_sha256: 871df1efbdef7003c4ea8c93294bf1ceb1141d1712d14afe39fbd5283c119eab
+script_sha256: b658f2314f27ff391051d0886598b67c807b3af505cb0dc2bfde6f61c71aca18
 output_sha256: c8660794b4b9d51cc1ba08da35109d218a7e79c417bb365b182797507135f6ee
 semantic_sha256: 3325fe5ff3ae2e63a5bd1ed65076301e2eb706fd36864f219ff295ec5dedf989
 hash_basis: raw LF bytes
@@ -28,7 +28,7 @@ hash_basis: raw LF bytes
 
 # THM-3934 -- the first low-degree twist search is rigid
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero. Let
 
 ```text
@@ -84,10 +84,12 @@ nu([S:T])=[H^2:S^2 T H:S^6],          H=T^3-2S^3.         (6)
 The branch has only two singular supports: a three-branch point
 `O=[0:0:1]` and a unibranch point `I=[1:0:0]`. Away from these points, a
 splitting conic has even intersection multiplicity with the unique smooth
-branch of `Gamma`. The same is automatic at `I`, because there is only one
-normalization branch. The only possible loss of information is therefore at
-`O`: even *total* contact on the conic might conceivably hide odd contact on
-two of the three branch addresses. It does not.
+branch of `Gamma`. At `I`, splitness forces even total contact, and there is
+only one normalization branch on which that contact can lie. For a reducible
+conic, apply splitness on each normalized line component and then add their
+local intersection numbers. The only possible loss of information is
+therefore at `O`: even *total* contact on the conic might conceivably hide odd
+contact on two of the three branch addresses. It does not.
 
 In the affine chart `Z=1`, use `t=H` as a local parameter at one of the three
 addresses `alpha^3=2`. Equations `(6)` give
@@ -299,5 +301,4 @@ Both runs must byte-match the frozen output. The assertion-free companion
 checks the rank-six restriction map, all seven coefficient equations, every
 highest-degree Groebner chart, the line and `h` components, splitting of
 `XZ`, the finite parity bridge, and the exceptional-elliptic hostile lift.
-It reports 26 exact gates. **QED
-candidate.**
+It reports 26 exact gates. **QED.**
