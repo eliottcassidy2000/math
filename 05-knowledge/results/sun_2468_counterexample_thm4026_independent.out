@@ -1,0 +1,74 @@
+THM4026_SUN_2468_COUNTEREXAMPLE_INDEPENDENT_EXACT_AUDIT
+date=2026-08-24
+source=04-computation/sun_2468_counterexample_thm4026_independent.cpp
+source_sha256=9fc8ea3d78d1f933e57ba366aec430a3fd161ba6157c9f0331d179cc625cf1c2
+
+REPRODUCTION
+g++ -std=c++20 -O3 -fopenmp -Wall -Wextra -Wconversion 04-computation/sun_2468_counterexample_thm4026_independent.cpp -o /tmp/sun_2468_counterexample_thm4026_independent
+OMP_NUM_THREADS=4 /tmp/sun_2468_counterexample_thm4026_independent 896315812331399 1
+OMP_NUM_THREADS=4 /tmp/sun_2468_counterexample_thm4026_independent 896315812331399 2
+OMP_NUM_THREADS=4 /tmp/sun_2468_counterexample_thm4026_independent 896315812331399 0 11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,103,107,109,113,127,131,137
+
+DOMAIN_AND_MECHANISM
+Sun_domain=w,x,y,z_in_{2,3,...}
+canonical_zero_representatives=x=3,y=5,z=7
+residual=R=N-C(x,4)-C(y,6)-C(z,8)
+w_exists_iff=R>=1_and_8R+1_is_an_odd_square_at_least_9
+square_identities=8*C(w,2)+1=(2w-1)^2;24*C(x,4)+1=(x^2-3x+1)^2
+norm_form=A^2+3B^2=24*(N-C(y,6)-C(z,8))+4;A=x^2-3x+1;B=2w-1
+
+TARGET_BANK_A_DISJOINT_EXACT_SQUARE_CHECK
+target=896315812331399
+canonical_ranges=w=2..42339481 x=3..12112 y=5..932 z=7..281
+boundary_next=C(42339482,2)=896315846844421 C(12113,4)=896562324551740 C(933,6)=901490966993008 C(282,8)=897353333100675
+primes=3,5,7,11,13,17,19,23,29,31,37,41,43,47,53
+yz_pairs=248160 raw_xyz_triples=2755643831 sieve_survivors=73266 nonnegative_survivors=67181 representations=0
+
+TARGET_BANK_B_DISJOINT_EXACT_SQUARE_CHECK
+target=896315812331399
+canonical_ranges=w=2..42339481 x=3..12112 y=5..932 z=7..281
+boundary_next=C(42339482,2)=896315846844421 C(12113,4)=896562324551740 C(933,6)=901490966993008 C(282,8)=897353333100675
+primes=59,61,67,71,73,79,83,89,97,101,103,107,109,113,127
+yz_pairs=248160 raw_xyz_triples=2755643831 sieve_survivors=108532 nonnegative_survivors=99556 representations=0
+
+TARGET_ZERO_SURVIVOR_BOUNDED_MODULAR_COVER
+target=896315812331399
+canonical_ranges=w=2..42339481 x=3..12112 y=5..932 z=7..281
+boundary_next=C(42339482,2)=896315846844421 C(12113,4)=896562324551740 C(933,6)=901490966993008 C(282,8)=897353333100675
+primes=11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,103,107,109,113,127,131,137
+prime_product=343084845858142859455609219994859200320874774004811
+yz_pairs=248160 raw_xyz_triples=2755643831 sieve_survivors=0 nonnegative_survivors=0 representations=0
+cover_logic=an_integer_square_is_a_quadratic_residue_modulo_every_listed_prime
+
+PUBLISHED_POSITIVE_CONTROL_4655
+target=4655
+canonical_ranges=w=2..96 x=3..19 y=5..14 z=7..14
+boundary_next=C(97,2)=4656 C(20,4)=4845 C(15,6)=5005 C(15,8)=6435
+primes=3,5,7,11,13,17,19,23,29,31,37,41,43,47,53
+yz_pairs=78 raw_xyz_triples=1225 sieve_survivors=2 nonnegative_survivors=2 representations=2
+witness=85,14,9,7 sum=4655
+witness=94,7,9,11 sum=4655
+
+HIGH_SCALE_POSITIVE_CONTROL_BELOW_TARGET
+target=896315812315580
+canonical_ranges=w=2..42339481 x=3..12112 y=5..932 z=7..281
+primes=3,5,7,11,13,17,19,23,29,31,37,41,43,47,53
+yz_pairs=248160 raw_xyz_triples=2755643831 sieve_survivors=195581 nonnegative_survivors=178944 representations=67
+witness=21239,1315,512,281 sum=896315812315580
+
+HIGH_SCALE_POSITIVE_CONTROL_ABOVE_TARGET
+target=896315812336819
+canonical_ranges=w=2..42339481 x=3..12112 y=5..932 z=7..281
+primes=3,5,7,11,13,17,19,23,29,31,37,41,43,47,53
+yz_pairs=248160 raw_xyz_triples=2755643831 sieve_survivors=376173 nonnegative_survivors=345370 representations=143
+witness=21240,1315,512,281 sum=896315812336819
+
+UBSAN_SERIAL_REPLAY
+compile=g++ -std=c++20 -O1 -g -fopenmp -fsanitize=undefined -fno-sanitize-recover=all -D_GLIBCXX_ASSERTIONS -Wall -Wextra -Wconversion
+target=896315812331399
+primes=3,5,7,11,13,17,19,23,29,31,37,41,43,47,53
+yz_pairs=248160 raw_xyz_triples=2755643831 sieve_survivors=73266 nonnegative_survivors=67181 representations=0
+ubsan_diagnostics=none
+
+CONCLUSION=896315812331399_HAS_NO_SUN_2_4_6_8_REPRESENTATION
+RESULT=PASS
