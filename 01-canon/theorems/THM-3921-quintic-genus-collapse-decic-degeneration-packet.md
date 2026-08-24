@@ -542,11 +542,12 @@ available abstract slot. Indeed, `(30)` and irreducibility of `Delta` show
 that the cubic discriminant is nonsquare, while `(31)` makes the cubic
 connected. Its Galois closure therefore has group `S_3`, and over `Q_2` the
 alternating layer is a connected `C_3` extension unramified at every
-divisorial valuation. Kummer theory writes it as adjoining a cube root of
-some `g` with `div(g)=3E`. If `[E]` were zero, then `g` would be a cube times
-a unit; scalar units over the algebraically closed field are cubes, contrary
-to connectedness. Hence `[E]` is the nonzero element of `Cl(Q_2)[3]`, and so
-generates the unique `Z/3` summand in `(48)`.
+codimension-one point of the affine surface `Q_2` (equivalently, every
+divisorial valuation centred on `Q_2`). Kummer theory writes it as adjoining
+a cube root of some `g` with `div(g)=3E`. If `[E]` were zero, then `g` would
+be a cube times a unit; scalar units over the algebraically closed field are
+cubes, contrary to connectedness. Hence `[E]` is the nonzero element of
+`Cl(Q_2)[3]`, and so generates the unique `Z/3` summand in `(48)`.
 
 The comparison is now exact. The `K=0` deformation does all of the things a
 counterexample design asked of it locally: it makes the collapsed divisor
