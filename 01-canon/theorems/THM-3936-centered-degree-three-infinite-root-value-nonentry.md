@@ -41,6 +41,7 @@ related:
   - THM-3929-root-regular-one-place-linear-color-cubic-is-monogenic
   - THM-3930-two-pole-linear-color-aligned-one-place-branch-packet
   - THM-3931-degree-two-pole-cubic-principal-ramification-no-atlas
+  - THM-3938-centered-degree-four-root-map-nonentry
 script: 04-computation/jc2_centered_degree_three_infinite_root_value_thm3936.py
 output: 05-knowledge/results/jc2_centered_degree_three_infinite_root_value_thm3936.out
 script_sha256: c77b4a28a9b3a87cc57b364801c8d48dff88cf8bc25d2dd800306a1f1ed5c37d

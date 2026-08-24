@@ -2,7 +2,7 @@
 id: THM-3939
 title: "Two-boundary elliptic resolvents have at most one new three-character"
 status: >
-  PROVED CANDIDATE; INDEPENDENT HOSTILE AUDIT PENDING. Let a normal affine
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED. Let a normal affine
   surface over A1 have integral closed fibres and generic fibre an elliptic
   curve with exactly two rational points deleted. If the difference of those
   boundary points has infinite order, then the surface has scalar units and
@@ -12,17 +12,25 @@ status: >
   at most one smooth-locus C3 character, independent of the free Mordell--Weil
   rank. A nonzero Cardano class is then the unique character up to inversion.
 source: root / post-THM-3937 global character-rank reframe, 2026-08-23
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (root independent audit, 2026-08-24). The
+  audit reconstructed the principal vertical localization, elliptic divisor
+  quotient and unit calculation, the one-relation three-torsion exact
+  sequence without a finite-generation assumption, and the Hartogs/Kummer
+  step. Torsion boundary, rational E(K)[3], extra boundary points, and split
+  vertical fibres were checked as genuine out-of-scope hostiles.
 related:
   - THM-3912-even-degree-split-boundary-cusp-three-torsion-sieve
   - THM-3922-affine-plane-completion-free-boundary-class-group-obstruction
   - THM-3935-linear-conic-resolvent-class-group-unique-cubic-character
   - THM-3937-linear-conic-fold-three-family-uniform-resolvent-rigidity
+  - THM-3940-i7-rank-two-linear-cross-term-resolvent-unique-character
 ---
 
 # THM-3939 -- free Mordell--Weil rank cannot supply the second character
 
-**PROVED CANDIDATE; INDEPENDENT HOSTILE AUDIT PENDING.** Work over an
-algebraically closed field `k` of characteristic zero and put `K=k(t)`. Let
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.** Work over an algebraically closed
+field `k` of characteristic zero and put `K=k(t)`. Let
 `B` be a normal affine `k[t]`-domain of dimension two. Assume:
 
 1. every closed fibre `B/(t-lambda)` is integral;

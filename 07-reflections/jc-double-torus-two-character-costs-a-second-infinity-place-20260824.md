@@ -272,9 +272,10 @@ principal vertical ledger in `(10)-(11)` reduces this to
 B^*=k^*.                                                 (26)
 ```
 
-So the near miss satisfies the two hardest algebraic design invoices at once:
-scalar units and two independent cubic characters.  It fails only the branch
-normalization requirement, and fails it minimally: `G_m` instead of `A1`.
+So the near miss satisfies scalar units and two independent cubic characters
+at once. Among those and the one-place invoice, it fails exactly the last,
+and minimally: `G_m` instead of `A1`. It has not discharged the separate
+descent, nonmonogenic-order, source, or Keller/Jelonek gates.
 
 ## 5. What the experiment changes
 

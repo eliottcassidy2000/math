@@ -169,8 +169,9 @@ Format per entry:
   the incoming `THM-3937` reservation then moved it atomically to `THM-3938`;
   the incoming `THM-3938` reservation then moved it atomically to `THM-3939`;
   incoming `THM-3939` and `THM-3940` reservations then moved it atomically to
-  `THM-3941`; the hash-bearing LRC companions and mathematical scope did not
-  change.
+  `THM-3941`; incoming `THM-3941` and `THM-3942` reservations then moved it
+  atomically to `THM-3943`; the hash-bearing LRC companions and mathematical
+  scope did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
   only before empty reservations; rename the whole artifact family together.

@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3941 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3943 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -438,6 +438,47 @@
   `7790ccc05f694dc768d2113d4f416e0e464aab98ae56c1f5aa976a105885b9de` /
   `97a95267dc3d35302c453e23de0343761e3a60760801ba7166f57b46e5c6fe9f` /
   `4da562dcdb1565874eced8068c5a127556604b3dc277485414568fb2bfc16b1c`.
+
+- `jc2_centered_degree_four_root_map_thm3938.py` -> matching `.out`
+  [THM-3938 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. In the
+  centered degree-four linear-color grammar, trace and the finite
+  Riemann--Hurwitz budget leave exactly five non-root-regular pole rows.
+  Exact color division gives two scalar/monogenic endpoints; every nonscalar
+  row has an irreducible one-place implicit component of discriminant
+  exponent one and a forced two- or three-address fibre. Rank-three flatness
+  therefore makes its source ramification arm non-unibranch. Together with
+  THM-3929 this closes centered root degree four. Checks: `96`.
+  Script/output/semantic SHA-256:
+  `d938b8af519e04d4c8d7957dce492fe28feec6ab63eb2f433d20bf2844bf65a3` /
+  `deefbdc002977b2992d0138ae443856a7d0f16e4497fa4e191661eafbb0cc1dc` /
+  `8df0539a4608fb0a83929d851cae25cefdd0150bf0f3f6d828ba77e8a982ceac`.
+
+- `jc2_i7_rank_two_resolvent_unique_character_thm3940.py` -> matching `.out`
+  [THM-3940 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. For all
+  `q=t^3+t(r+beta*t)X-X^2`, `beta!=0`, vertical fibres are integral and the
+  normal resolvent has scalar units. Its elliptic completion has an `I7`
+  fibre and, on a nonempty open, `5I1` and Mordell--Weil rank two; nevertheless
+  the three-division polynomial has no rational root. THM-3939 then caps the
+  class-group three-torsion at the non-Cartier Cardano line, so the unique
+  normal cubic completion is the natural monogenic one. Checks: `45`.
+  Script/output/semantic SHA-256:
+  `8738427b2d35791c5b4b27a802676f275a07c7bb1638936b2acc6cfa70f05998` /
+  `7d8a92fab0549a3690134b0ead2300bdad54975237b156152c1d1c6e6997e7f1` /
+  `b679bee12062d06ac88b036dc222c9bf8f2414a45d8cdf653f7b67ccb1ff3747`.
+
+- `jc2_double_torus_two_character_two_infinity_scout.py` -> matching `.out`
+  [VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED NEAR MISS; NOT CANON;
+  JC(2) OPEN]. The exact identity
+  `q0^2-4X^3=q1^2-4(X+t)^3` gives a normal scalar-unit resolvent with
+  `Cl(B)[3]=(Z/3)^2`: boundary divisibility supplies one line and the
+  difference of the two torus decompositions supplies rational elliptic
+  three-torsion. Its rational quartic branch normalizes to `G_m`, however,
+  with exactly two infinity places; the translated-factor ansatz therefore
+  fails the one-place gate before descent or nonmonogenicity. Checks: `32`.
+  Script/output/semantic SHA-256:
+  `cc4fcfcfe6ed9d7a5673938f9ee0aa108bc2a44e6f7742cccceae53b869998a2` /
+  `f5b678ed9e582bbf65d98c3703c56fe384f7025bbb3a73011ecfba81658f2ec7` /
+  `55d5174608c5aa0209646b10b33905c47d685f66e93cb4a3f1e9f0c8c64ed7cc`.
 
 - `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
   `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil

@@ -27,6 +27,8 @@ depends_on:
 related:
   - THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff
   - THM-3934-infinity-component-sextic-unique-reduced-splitting-conic
+  - THM-3939-two-boundary-elliptic-resolvent-three-character-rank-one-gate
+  - THM-3940-i7-rank-two-linear-cross-term-resolvent-unique-character
 script: 04-computation/jc2_linear_conic_fold_three_uniform_resolvent_thm3937.py
 output: 05-knowledge/results/jc2_linear_conic_fold_three_uniform_resolvent_thm3937.out
 script_sha256: 7790ccc05f694dc768d2113d4f416e0e464aab98ae56c1f5aa976a105885b9de

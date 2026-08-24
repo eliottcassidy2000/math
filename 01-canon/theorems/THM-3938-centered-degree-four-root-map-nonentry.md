@@ -2,8 +2,8 @@
 id: THM-3938
 title: "Centered degree-four repeated-root maps are scalar or fold a ramification arm"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT
-  HOSTILE AUDIT. In the centered trace-zero linear-color binary-cubic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the centered
+  trace-zero linear-color binary-cubic
   grammar with deg A=3 and repeated-root degree four, local trace and the
   finite Riemann--Hurwitz budget leave five collision-free non-root-regular
   pole rows. Exact color division leaves one family in each row. Two
@@ -18,11 +18,12 @@ status: >
   other coefficient planes, or JC(2).
 source: jc_zero_debt_lift / post-THM-3936 next root-degree stratum, 2026-08-23
 audit: >
-  Candidate self-audit only. The assertion-free 96-gate exact companion
-  checks the complete pole ledger, all five trace normal forms, every color
-  resultant and exceptional division seam, scalar/unit boundaries, five
-  implicit/discriminant identities, and every address packet. Independent
-  hostile audit is required before this theorem enters the proved graph.
+  INDEPENDENT HOSTILE AUDIT PASS (root independent audit, 2026-08-24). The
+  audit reconstructed the complete pole/Riemann--Hurwitz ledger, all five
+  trace normal forms, every color-division seam and pole boundary, the two
+  scalar endpoints, irreducibility and exponent-one ramification, and every
+  two-/three-address source packet. Normal and optimized 96-gate runs
+  byte-match the frozen LF transcript; raw and semantic hashes match.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
@@ -42,8 +43,8 @@ hash_basis: raw LF bytes
 
 # THM-3938 -- degree four has five doors, and every door returns to the same folded arm
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT
-HOSTILE AUDIT.** Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of
 characteristic zero. Consider
 
 ```text
@@ -200,8 +201,9 @@ C=-3u^8(pA+1)/2,
 a=A^4, c=0, d=(pA+1)^3/2.                                (11)
 ```
 
-At `p=0`, `d=1/2` is a literal scalar value of the binary cubic. THM-3801
-therefore makes the cubic order monogenic. From now on row E has `p!=0`.
+At `p=0`, `d=1/2` is a literal scalar value of the binary index form. The
+index criterion in THM-3801 therefore makes the cubic order monogenic, while
+its Keller gate requires nonmonogenicity. From now on row E has `p!=0`.
 
 ### 2.2 Row F
 
@@ -234,8 +236,8 @@ C=3(u-1)^3(u+1)(u^4+6u^3-22u-21)L_F(A(u))/4.             (14)
 ```
 
 The pole requires `q!=0`. At `q=-1/4`, `L_F=-4` and `d=4` is a literal
-scalar endpoint, again monogenic by THM-3801. The non-scalar row therefore
-has `q!=0,-1/4`.
+scalar index-form endpoint, hence monogenic and excluded by THM-3801's Keller
+gate. The non-scalar row therefore has `q!=0,-1/4`.
 
 ### 2.3 Row G
 

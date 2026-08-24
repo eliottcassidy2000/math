@@ -42,6 +42,7 @@ related:
   - THM-3931-degree-two-pole-cubic-principal-ramification-no-atlas
   - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
   - THM-3936-centered-degree-three-infinite-root-value-nonentry
+  - THM-3938-centered-degree-four-root-map-nonentry
 script: 04-computation/jc2_centered_degree_three_root_map_octic_thm3933.py
 output: 05-knowledge/results/jc2_centered_degree_three_root_map_octic_thm3933.out
 script_sha256: 2a02f99465a8badcd32330f8e81ef46e7590793d85ce55957e17252f58e73604

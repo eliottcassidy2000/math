@@ -2,7 +2,7 @@
 id: THM-3940
 title: "I7 rank-two linear-cross-term resolvents still have a unique cubic character"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For q=t^3+t(r+beta t)X-X^2 with beta nonzero, the quadratic resolvent is
   normal, all vertical fibres are integral, and its generic elliptic curve
   has boundary sections Q,-2Q. It has no rational three-torsion for any
@@ -13,6 +13,13 @@ status: >
   free rank alone does not create the missing twist. The natural cubic is
   normal and monogenic for every parameter.
 source: root / post-THM-3939 rational-three-torsion escape test, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (root independent audit, 2026-08-24). The
+  audit reconstructed integral vertical fibres and normality, the birational
+  elliptic model and `I7+5I1` rank-two open, the uniform no-three-torsion
+  argument, Cardano non-Cartier class, two-boundary quotient, scalar units,
+  Kummer/descent, and normal monogenic cubic. Normal and optimized 45-gate
+  runs byte-match the frozen LF transcript; raw and semantic hashes match.
 depends_on:
   - THM-3939-two-boundary-elliptic-resolvent-three-character-rank-one-gate
 related:
@@ -28,7 +35,7 @@ hash_basis: raw LF bytes
 
 # THM-3940 -- rank two without rational three-torsion is still one line
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero. Fix
 arbitrary `r,beta in k` with `beta!=0`, and put
 

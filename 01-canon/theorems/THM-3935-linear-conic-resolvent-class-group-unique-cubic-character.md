@@ -30,6 +30,8 @@ related:
   - THM-3931-degree-two-pole-cubic-principal-ramification-no-atlas
   - THM-3934-infinity-component-sextic-unique-reduced-splitting-conic
   - THM-3937-linear-conic-fold-three-family-uniform-resolvent-rigidity
+  - THM-3939-two-boundary-elliptic-resolvent-three-character-rank-one-gate
+  - THM-3940-i7-rank-two-linear-cross-term-resolvent-unique-character
 script: 04-computation/jc2_linear_conic_resolvent_class_unique_character_thm3935.py
 output: 05-knowledge/results/jc2_linear_conic_resolvent_class_unique_character_thm3935.out
 script_sha256: 61c59e636d9122bf6118ec59df962169b5bee80e171d975ac73ed29cd6361096
