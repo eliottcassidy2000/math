@@ -245,49 +245,25 @@ collide, links—not bare IDs—are canonical.
 - **CITED:** [Jelonek--Lasoń](https://arxiv.org/abs/1411.5011), *Manuscripta Math.* **156** (2018), prove that a generically finite degree-`d` map's nonproperness set is covered by polynomial curves of degree `<=d-1`.  [Nguyen Van Chau](https://arxiv.org/abs/math/0305088), *Ann. Polon. Math.* **84** (2004), [DOI](https://doi.org/10.4064/ap84-3-2), sharpens a nonempty planar Keller nonproperness set to a curve with one point at infinity.
 - **Boundary:** first prove that the generic image of an escaping divisor lies in the nonproperness set.  A finite collision, conductor, or branch curve alone does not qualify; withdrawn arXiv:2011.03472 is not imported.
 
+### Degtyarev — four-torus weight-eight sextics and non-simple J-sextics
+
+- **Primary/imported:** [§§1.1, 3.2--3.6](https://arxiv.org/abs/0712.2290) gives the weight-eight rows, four torus structures, trigonal atlas, and stereographic `J_{2,0}/J_{2,3}` rows; [Oka II](https://arxiv.org/abs/math/0702546) gives the `Sigma_2` fiber dictionary. **PUBLISHED.**
+- **Guardrail:** [THM-3943](../../01-canon/theorems/THM-3943-rational-weight-eight-four-torus-sextics-have-no-one-place-line.md)/[3945](../../01-canon/theorems/THM-3945-nonsimple-weight-eight-j-sextics-have-no-one-place-line.md) prove the line no-gos. The sources do not prove Keller realization or `JC(2)`.
+
 ### Belov--Kanel--Kontsevich — *The Jacobian Conjecture is stably equivalent to the Dixmier Conjecture*
 
-- **Primary / freshness:** [arXiv:math/0512171](https://arxiv.org/abs/math/0512171),
-  submitted 2005-12-08.
-- **Imported role:** proves the finite-direction implication `JC(2n) -> DC(n)`
-  in characteristic zero and, with the known implication in the other stable
-  direction, identifies the stable Jacobian and Dixmier conjectures. Reduction
-  to finite characteristic is the central mechanism.
-- **Repo consumers:**
-  [THM-2044 rank-two Poisson suspension](../../01-canon/theorems/THM-2044-explicit-rank-two-poisson-counterexample-by-symplectic-suspension.md),
-  [DC2/JC2 boundary reflection](../../07-reflections/rank-two-poisson-suspension-leaves-two-rigidity-gates-dc2-and-planar-jc-codex-20260721.md).
-- **Does not prove:** `PC(2) -> DC(2)`, a direct quantization of a given
-  symplectic polynomial map, or a fixed-dimension equivalence that turns
-  THM-2044 into a planar Jacobian or `A_2` Dixmier counterexample.
+- **Primary/imported:** [arXiv:math/0512171](https://arxiv.org/abs/math/0512171) proves `JC(2n) -> DC(n)` and the stable JC/DC equivalence via finite-characteristic reduction.
+- **Consumer/guardrail:** [THM-2044](../../01-canon/theorems/THM-2044-explicit-rank-two-poisson-counterexample-by-symplectic-suspension.md). It gives neither `PC(2)->DC(2)`, direct quantization, nor a fixed-rank route from that four-variable Poisson map to `JC(2)` or `DC(2)`.
 
 ### Adjamagbo--van den Essen — *On the equivalence of the Jacobian, Dixmier and Poisson Conjectures in any characteristic*
 
-- **Primary / freshness:** [arXiv:math/0608009](https://arxiv.org/abs/math/0608009),
-  submitted 2006-08-01.
-- **Imported role:** supplies the characteristic-sensitive stable equivalence
-  framework among canonical polynomial, Weyl, and Poisson endomorphism
-  conjectures, using Azumaya and reduction techniques. It is the correct
-  background for interpreting a Poisson counterexample's stable consequences.
-- **Repo consumers:** THM-2044 and the
-  [rank/scope separation reflection](../../07-reflections/rank-two-poisson-suspension-leaves-two-rigidity-gates-dc2-and-planar-jc-codex-20260721.md).
-- **Does not prove:** that replacing classical brackets by Weyl commutators in
-  the same displayed formulas preserves the relations, that stable transport
-  preserves the same rank, or that THM-2044 settles DC(2) or JC(2).
+- **Primary/imported:** [arXiv:math/0608009](https://arxiv.org/abs/math/0608009) supplies the characteristic-sensitive stable JC/DC/Poisson framework via Azumaya and reduction methods.
+- **Consumer/guardrail:** THM-2044 and its rank-scope reflection. Symbol replacement need not preserve Weyl relations or rank; no implication here settles `DC(2)` or `JC(2)`.
 
 ### de Bondt — *Symmetric Jacobians*
 
-- **Primary / freshness:** [arXiv:1206.2865v3](https://arxiv.org/abs/1206.2865),
-  revised 2013-10-24; published in *Open Mathematics*.
-- **Imported role:** proves reductions of the Jacobian Conjecture to polynomial
-  maps with specified Jacobian symmetries. In particular, it is enough in the
-  stated stable reduction to handle homogeneous maps whose Jacobian has all
-  square symmetries. Dimension and the precise symmetry class are
-  load-bearing; a planar input need not remain a binary symmetric problem.
-- **Repo consumers:** [HYP-8905 corrected map](../hypotheses/HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md)
-  and [MISTAKE-237](../../01-canon/MISTAKES.md).
-- **Does not prove:** the binary symmetric case is equivalent to full JC(2),
-  that a reduction into four variables can be solved in two variables, or any
-  NC2/GMC-to-JC implication.
+- **Primary/imported:** [arXiv:1206.2865v3](https://arxiv.org/abs/1206.2865) gives stable reductions to specified Jacobian symmetries; dimension and the full symmetry class are load-bearing.
+- **Consumer/guardrail:** [HYP-8905](../hypotheses/HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md) and MISTAKE-237. It does not reduce full `JC(2)` to a binary symmetric problem or give an NC2/GMC implication.
 
 ### Zhao — Hessian-nilpotent polynomials and the Vanishing Conjecture
 

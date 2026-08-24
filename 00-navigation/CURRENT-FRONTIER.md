@@ -361,6 +361,16 @@ asymptotic or residue.
   THM-3913/3919 give an elliptic no-atlas decic with mixed three-class;
   THM-3915--3917 close two models. THM-3918 is rational with
   `delta=34+1+1`; its plane/Keller status and `JC(2)` are OPEN.
+  THM-3935/3937/3940 leave one cubic character in linear-conic and `I7` resolvents;
+  THM-3939 is the exact two-boundary rank gate, while THM-3936/3938/3941 close
+  all centered pole carriers. THM-3942 gives two/three ends for two
+  affine-linear torus rows. THM-3943/3945 close every rational simple and
+  non-simple weight-eight four-torus sextic against one-place lines.
+  THM-3944 attains an `A1` parabola only in a nonnormal order: one boundary
+  class `(2,1)` survives on `Gm^2`, but none extends to normalized `A2`.
+  Seek unequal/multi-factor splits with a reduced one-place branch, a normal
+  quadratic surface, and two independently extendable Cardano classes;
+  factor splits remain under audit.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
