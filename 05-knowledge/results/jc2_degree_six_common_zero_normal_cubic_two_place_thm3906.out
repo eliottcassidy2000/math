@@ -1,0 +1,15 @@
+theorem=THM-3906-degree-six-common-zero-normal-cubic-two-place-boundary
+normal_common_zero_S3_degree_six=YES
+discriminant_geometrically_irreducible=YES
+branch_normalization=P1
+finite_packet=ordinary4_plus_two_A2
+projective_infinity_support_points=1
+normalization_places_at_infinity=2
+infinity_orders=[2,4]
+minimal_triple_root_sextic_grammar=REDUCIBLE_OR_TWO_PLACE
+ordinary4_smooth_one_place_sextic_finite_cusps_at_most=2
+two_cusp_bound=SHARP_AS_PLANE_GEOMETRY
+all_degree_six_common_zero_one_place=OPEN
+semantic_sha256=6c584836bf42fa095c6a8b14da1aca1b70d30712bfb3ac152dbd97b3694a9757
+CHECKS=91
+RESULT=PASS
