@@ -1,5 +1,49 @@
 # Script Results Index
 
+- `lrc14_euclidean_covering_transference_audit_thm4009.py` and its independent
+  referee -> matching `.out`s [THM-4009 PROVED ALGEBRA + VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN]. A hypothetical counterexample
+  has a Graver relation of square norm at most 195 and `l1<=50`; exact
+  enumeration gives 47 support-two ratios, 55,459 primitive histograms, 3,666
+  unoriented packets and 7,332 oriented labelled assignments. Script/output
+  SHA-256: `4aedcfaebde66295d07b600f063e880a6fb4a81f11f5d6a597f9f35835394df5` /
+  `0924afeded809ac23b65cb4f6a635e39e4b24804041970e83ab8fcd826348952`;
+  independent `3830131aaed502bde29e933d49c9c740c53718900ab55ae8bf736cac7c743511` /
+  `0967cff265a8de3c8bafd3745eac946c6ce0fdfca42bcef9de890db907c7da77`.
+
+- `lrc14_diagonal_ellipsoid_refinement_independent_audit_20260824.py` ->
+  matching `.out` [THM-4014 PROVED ALGEBRA + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; LRC(14) OPEN]. The exact projected-cube polar has 156
+  signed pair vertices. Correct compressed-operator polarity gives a
+  speed-weighted Graver row with `l1<=49`, fastest coefficient at most seven,
+  and 28 top-pair support-two ratios. Ambient `H^-1` is refuted by an exact
+  rank-two hostile. Script/output SHA-256:
+  `dc71fc2ef24515e5eb5e6562b8e6d21f04d75b31c2f59c06d40e3545730d65c3` /
+  `bd3793f54f1ecb0a61671d01a12d2089b9dc995f4e98ad83cda5732024bf3224`.
+
+- `lrc14_thm4009_support_two_owner_typing_20260824.py` -> matching `.out`
+  [PROVED arithmetic typing + FINITE-EXACT; LRC(14) OPEN]. Support-two rows
+  split as body/body, body/extra, or extra/extra; only `(8,21),(9,11)` fail
+  the old cap in the last class, body/extra requires `tp<=13U`, and AP11 is
+  the owner-free hostile. The `47 x 17` table is discovery, not intersection.
+  Script/output SHA-256:
+  `d00b3b6206818e8c8a7d8bbba5b153473783a98e341e611dd5d3e90e381e060f` /
+  `e1b3cf909d1f10bc7adca26ae5044dc492a29b33a01551badf9aa390f361ffa1`.
+
+- `character_sensitive_transference_first_kind_foster_audit_20260824.py` and
+  `character_sensitive_transference_random_exact_search_20260824.py` ->
+  matching `.out`s [THM-4015 PROVED ALGEBRA + VERIFIED-EXACT on first-kind
+  lattices; arbitrary-lattice extension OPEN]. Cut capacity, integral
+  crossing characters, effective resistance and Foster trace prove the sharp
+  `delta*lambda_odd<=sqrt(d)/2` first-kind theorem. The audit checks 799
+  graphs and 12,187 cuts; a separate exact rank-four/five search checks 5,728
+  characteristics without exceeding the conjectural same constant. The
+  latter is finite evidence only. Proof-audit script/output SHA-256:
+  `69f8b927590f4fd13152e36bc0989c86d3c9a266884385f4d253af9be83e07db` /
+  `81f7494dd66a9b5ce789901487671c71764d82371b5ed807646f0c4ef247f81d`;
+  search `15d686582a859f59cacaf5d0550ad9a4472b530a0c97eac50aa1da6c3abde7b1` /
+  `4f2f10fadabb032530ad1a1da539df5fd77b0df6c3192324ad45cc1d4ffab856`.
+
 - `rule30_depth15_history_adaptive_route_thm4013.py` and its no-import audit ->
   matching `.out`s [THM-4013 FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED; all-scale Rule 30 OPEN]. On all `1<=n<=65535`, history

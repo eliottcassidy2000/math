@@ -42,8 +42,9 @@ THM-2363/THM-2368 do not recover the `28,393` semantic roots.
 THM-3731 gives 165 valuation orbits: repeats obstruct a valuation-only owner;
 pairwise-distinct positive coefficients repair only that narrow defect.
 [THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md)
-supersedes THM-3743's numerical cap by a square-norm-`<=195` Graver row;
-owner/phase/arrival remain lost. [THM-3742](../01-canon/theorems/THM-3742-square-triangular-pell-mod13-central-sign-projective-cycle.md)
+gives a Graver row with square sum `<=195`, beating THM-3743; THM-4014/4015
+refine metric/character, not owner/phase.
+[THM-3742](../01-canon/theorems/THM-3742-square-triangular-pell-mod13-central-sign-projective-cycle.md)
 is a wrong-torsor Pell `C14`; [THM-3744](../01-canon/theorems/THM-3744-pell-prefix-loneliness-constant-carry-exact-formula.md)
 is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 
