@@ -1,0 +1,21 @@
+PASS  general resultant
+PASS  resultant discriminant
+PASS  cr=3 resultant square
+PASS  cr=3 N factor
+PASS  cr=3 D factor on collision fibre
+PASS  cr=3 two-point discriminant
+PASS  cr=3 transverse Jacobians
+PASS  4cr=3 resultant square
+PASS  4cr=3 length-two N
+PASS  4cr=3 linear D
+PASS  4cr=3 etale (D,V) coordinate determinant
+PASS  4cr=3 resultant has order two
+PASS  A1 gradient component 0
+PASS  A1 gradient component 1
+PASS  A1 gradient component 2
+PASS  A1 Hessian determinant nonzero
+PASS  A1 resolution Smith determinant
+SMITH  minimal-resolution intersection matrix [-2] -> cokernel Z/2
+RESULT cr=3: two reduced transverse basepoints in one fibre
+RESULT 4cr=3: one curvilinear (L,V^2) point and an A1 graph singularity
+ALL EXACT CHECKS PASSED
