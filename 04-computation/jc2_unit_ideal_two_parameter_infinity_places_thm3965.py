@@ -37,8 +37,9 @@ psi_t = sp.diff(psi, t)
 zero(A * C - (A * C - 1) - 1, "coefficient ideal is one")
 zero(Phi.subs(A, 0) - U * V * (C * U - V),
      "A=0 specialization is the three-factor scalar-unit hostile")
-gate(sp.factor(Phi.subs(h, 0)).has(U),
-     "h=0 binary cubic has the root U=0")
+zero(Phi.subs(h, 0)
+     - U * (A * U**2 + (C + g * A) * U * V + (A * C - 1) * V**2),
+     "h=0 binary cubic factors exactly through U")
 
 # Over k(A), linearity in C reduces irreducibility to a gcd.  The two roots
 # of the C coefficient t(t+A) give the exact nonzero constant rows.

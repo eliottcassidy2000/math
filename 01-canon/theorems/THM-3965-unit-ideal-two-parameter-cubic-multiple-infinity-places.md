@@ -2,8 +2,8 @@
 id: THM-3965
 title: "Unit-ideal two-parameter cubic deformations retain multiple infinity places"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-  HOSTILE AUDIT REQUIRED. Every constant two-parameter deformation
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Every constant
+  two-parameter deformation
   A U^3+(C+gA)U^2V+(AC-1)UV^2+hAV^3 of the THM-3907 unit-ideal binary
   cubic is either generically reducible or has no one-place discriminant.
   For h!=0, the repeated-root incidence is a quadratic in A whose leading
@@ -14,6 +14,16 @@ status: >
   not repair THM-3907's infinity debt. Bivariate coefficient deformations,
   other binary-cubic grammars, Keller realization, and JC(2) remain open.
 source: jc-zero-debt-lift / post-THM-3907 positive-deformation lane, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc_extra_debt_local, 2026-08-24). The
+  audit independently rederived squarefree-discriminant height-one
+  maximality and normality, the repeated-root incidence and its birational
+  recovery of the target discriminant, the distinct-alpha-root to distinct
+  normalization-place bridge, the repeated-alpha seam, and the exact two-
+  and four-place ledgers on the reducible boundary. Normal and optimized
+  29-gate runs byte-match the frozen output; raw hashes and documentation
+  checks pass. The promotion also replaces the former weak h=0 factor
+  membership control by the full exact factor identity.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3907-unit-ideal-nonmonogenic-cubic-six-place-boundary
@@ -22,7 +32,7 @@ related:
   - THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt
 script: 04-computation/jc2_unit_ideal_two_parameter_infinity_places_thm3965.py
 output: 05-knowledge/results/jc2_unit_ideal_two_parameter_infinity_places_thm3965.out
-script_sha256: ed050e681d48ff079096d28d2ebe25da9aef98f572ca93e1dc62718b65287099
+script_sha256: 942b28312b093f84efcf8acb3864953089c104303404536d740e8917c7cffb5c
 output_sha256: 3421b597d3eb40e702e4687d92da952d2c0555c5d87acdb64bcc574037f5b55e
 semantic_sha256: 3ec72321d50110d452b2b0c88a0097ca9cf0397f7591241525b6385a637c6a7a
 hash_basis: raw LF bytes
@@ -30,8 +40,8 @@ hash_basis: raw LF bytes
 
 # THM-3965 -- the first unit-ideal deformation cannot merge its infinity roots
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-HOSTILE AUDIT REQUIRED.** Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of
 characteristic zero. For constants `g,h in k`, consider the binary cubic
 
 ```text
@@ -286,7 +296,7 @@ The constant two-parameter deformation `(1)` is therefore exhausted. A
 viable continuation must let a coefficient vary genuinely in both target
 coordinates, change the linear-color plane, or use another nonmonogenic
 cubic grammar. No Keller atlas or counterexample is claimed here, and JC(2)
-remains **OPEN**. **QED candidate.**
+remains **OPEN**. **QED.**
 
 ## Reproduction
 
