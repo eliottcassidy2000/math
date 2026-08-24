@@ -2,8 +2,8 @@
 id: THM-3943
 title: "Rational simple weight-eight four-torus sextics have no one-place line"
 status: >
-  PROVISIONAL PROOF CANDIDATE + CITED CLASSIFICATION + VERIFIED-EXACT /
-  AWAITING INDEPENDENT HOSTILE AUDIT. Degtyarev's classification says that
+  PROVED + CITED CLASSIFICATION + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED. Degtyarev's classification says that
   simple irreducible weight-eight sextics have seven singularity
   configurations and four torus structures. Exactly three configurations are
   rational: E6+A5+4A2, 2A5+4A2, and A5+6A2+A1. In Degtyarev's complete
@@ -16,19 +16,23 @@ status: >
   The non-simple J2,3+3A2 and J2,0+4A2 families are not classified here.
 source: jc_zero_debt_lift / Degtyarev--Oka weight-eight sextic reframe, 2026-08-24
 audit: >
-  Candidate self-audit only. The 35-gate assertion-free companion verifies
+  The 35-gate assertion-free companion verifies
   Degtyarev's trigonal parametrization, the rationality ledger, all three
   double-cover factorizations, the rigid basepoint-free binary sextics and
   pure-power rank tests, both moving-family line norms, their coefficient
   contradictions, conic degenerations, and finite/infinity address packets.
   The cited configuration and four-torus classification is kept separate from
-  the repo-derived exact obstruction. Independent hostile audit is required
-  before entry into the proved graph.
+  the repo-derived exact obstruction. An independent hostile audit
+  reconstructed the line norms, checked multiplicities both off and on the
+  conic branch locus, audited both points over infinity and the gamma=0
+  seams, verified every excluded endpoint against the primary section atlas,
+  and reproduced the normal/-O/frozen output and all hashes.
 related:
   - THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff
   - THM-3925-fivefold-conic-contact-torus-sextic-one-place-fold
   - THM-3928-split-affine-conic-one-place-fold-degree-barrier
-  - THM-3932-infinity-component-conic-torus-sextic-fold-classification
+  - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
+  - THM-3945-nonsimple-weight-eight-j-sextics-have-no-one-place-line
 script: 04-computation/jc2_rational_weight8_four_torus_sextic_line_thm3943.py
 output: 05-knowledge/results/jc2_rational_weight8_four_torus_sextic_line_thm3943.out
 script_sha256: b7ffa43f5f0ef30f2e4af5280e1a892a1164b7b54ecb3d676fd0c66bfca772d5
@@ -39,9 +43,9 @@ hash_basis: raw LF bytes
 
 # THM-3943 -- four torus structures still cannot buy one affine place
 
-**PROVISIONAL PROOF CANDIDATE + CITED CLASSIFICATION + VERIFIED-EXACT /
-AWAITING INDEPENDENT HOSTILE AUDIT.** Work over an algebraically closed field
-`k` of characteristic zero.
+**PROVED + CITED CLASSIFICATION + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.** Work over an algebraically closed field `k` of
+characteristic zero.
 
 The imported input is [Degtyarev, *Irreducible plane sextics with large
 fundamental groups*, §§1.1 and 3.2--3.6](https://arxiv.org/abs/0712.2290).
@@ -188,9 +192,10 @@ disc(Q_a)=4(a^2-2a+4);
 Q_a(1)=3a;                   lc(Q_a)=a-2.                 (17)
 ```
 
-The square-discriminant seam splits the quadratic pullback. The values
-`a=0,2` turn one of the two selected `A5` points into the rigid `E6` endpoint;
-the no-go below includes `a=0`, while `a=2` is `(9)`.
+The square-discriminant seam splits the quadratic pullback.  The endpoint
+`a=2` is literally the rigid row `(9)`; the uniform norm proof below also
+includes `a=0`, so no appeal to its cusp-swapped rigid interpretation is
+needed.
 
 Let `ell=alpha X+beta Y+gamma Z`. First suppose `gamma!=0` and normalize it
 to one. The norm down to `k(u)` of its numerator is
@@ -336,9 +341,11 @@ The two non-simple weight-eight configurations
 J2,3+3A2,             J2,0+4A2                           (31)
 ```
 
-are outside the cited simple list and remain **OPEN** in this theorem. No
-claim is made about non-line boundaries, birational target changes, a Keller
-atlas, or JC(2).
+are outside the cited simple list and are not dependencies of this theorem.
+They are closed separately by
+[THM-3945](THM-3945-nonsimple-weight-eight-j-sextics-have-no-one-place-line.md).
+No claim is made about non-line boundaries, birational target changes, a
+Keller atlas, or JC(2).
 
 Run
 
