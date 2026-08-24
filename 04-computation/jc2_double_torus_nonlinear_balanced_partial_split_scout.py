@@ -104,7 +104,7 @@ gate(sp.simplify(H_singleton_reduced) == 0,
      "conic maps to the singleton branch")
 gate(sp.cancel((2*h**3)/(2*h**2) - h) == 0,
      "singleton branch recovers h generically")
-gate(sp.factor((h-a)-( -a/3-a)) != 0,
+gate(sp.simplify(a-(-a/3)) != 0,
      "conic finite branch roots are distinct")
 z = sp.symbols("z")
 gate(sp.discriminant(z**2+3, z) != 0,
@@ -186,14 +186,62 @@ for sign in (1, -1):
          f"nonlinear prototype a={sign} has two-line infinity form")
     gate(len(sp.factor_list(lead)[1]) >= 2,
          f"nonlinear prototype a={sign} has at least two infinity supports")
-    exact_factors = sp.Poly(
-        H_sign, X, t, extension=sp.sqrt(-3)
-    ).factor_list()[1]
-    gate(len(exact_factors) == 1 and exact_factors[0][1] == 1,
-         f"nonlinear prototype a={sign} is irreducible")
 
 gate(sp.expand(Hn.subs(a, 1)-Hn.subs(a, -1)) == 0,
      "the two support-degenerate parameter signs give the same branch")
+
+# Absolute, rather than merely ground-field, irreducibility at a^2=1.
+# On the positive sheet put X=h^2 and h=q0/(2X).  The resulting quadratic
+# is nonsquare over k(h), and its squarefree normalization is a smooth conic.
+delta = sp.expand(omega-omega**2)
+b_special = sp.expand(1-omega**2)
+G_special = sp.expand(
+    t**2-(1+delta*h**2)*t+b_special*h**2+2*h**3
+)
+q0_special = sp.expand(q0n.subs({a: 1, X: h**2}))
+H_special = sp.expand(Hn.subs(a, 1))
+gate(sp.expand(q0_special-2*h**3+G_special) == 0,
+     "a=1 branch equation in the recovered square root h")
+gate(sp.expand(H_special.subs(X, h**2)
+               - G_special*G_special.subs(h, -h)) == 0,
+     "quartic pullback splits into the two square-root signs")
+disc_special = sp.factor(sp.discriminant(G_special, t))
+gate(sp.expand(disc_special+(h+1)**3*(3*h-1)) == 0,
+     "a=1 quadratic discriminant")
+disc_factors = sp.Poly(disc_special, h, extension=sp.sqrt(-3)).factor_list()[1]
+gate(sorted(exponent for _, exponent in disc_factors) == [1, 3],
+     "odd valuations prove the discriminant nonsquare over k(h)")
+gate(sp.resultant(h+1, 3*h-1, h) != 0,
+     "the odd discriminant supports are distinct")
+gate(H_special.subs(X, 0) != 0,
+     "localizing at X loses no polynomial component")
+
+vn = sp.symbols("vn")
+conic_special = sp.expand(vn**2+(h+1)*(3*h-1))
+t_special_map = sp.expand(((h+1)*vn+1+delta*h**2)/2)
+G_special_reduced = sp.rem(
+    sp.Poly(sp.expand(G_special.subs(t, t_special_map)), vn),
+    sp.Poly(conic_special, vn),
+).as_expr()
+q0_special_map = sp.expand(q0n.subs({a: 1, X: h**2, t: t_special_map}))
+q0_special_reduced = sp.rem(
+    sp.Poly(q0_special_map-2*h**3, vn), sp.Poly(conic_special, vn)
+).as_expr()
+H_special_map = sp.expand(H_special.subs({X: h**2, t: t_special_map}))
+H_special_reduced = sp.rem(
+    sp.Poly(H_special_map, vn), sp.Poly(conic_special, vn)
+).as_expr()
+gate(sp.simplify(G_special_reduced) == 0,
+     "special conic maps to the recovered quadratic branch")
+gate(sp.simplify(q0_special_reduced) == 0,
+     "special conic recovers h=q0/(2X) generically")
+gate(sp.simplify(H_special_reduced) == 0,
+     "special conic maps to the original irreducible quartic")
+special_conic_matrix = sp.Matrix(((3, 0, 1), (0, 1, 0), (1, 0, -1)))
+gate(special_conic_matrix.det() == -4,
+     "special projective conic is smooth")
+gate(sp.discriminant(vn**2+3, vn) != 0,
+     "special conic has two distinct infinity points")
 
 C_edge = sp.simplify(1/a-a)
 D_edge = sp.simplify((1-omega**2)/a-a*(1-omega))
@@ -250,7 +298,7 @@ summary = {
     "independent_types": "singleton conic two-place;extreme Fermat three-place",
     "dependent_type": "line-degenerate when p1^3!=p0^3",
     "conclusion": "affine whole-factor split closed;nonlinear balanced prototype pays branches",
-    "nonlinear_hostile": "t(t-1) balanced split has >=2 infinity branches",
+    "nonlinear_hostile": "a^2=1 irreducible conic has two ends;generic edge has >=2 branches",
 }
 semantic = hashlib.sha256(json.dumps(summary, sort_keys=True).encode()).hexdigest()
 
@@ -261,5 +309,5 @@ print("SINGLETON=NORMALIZATION_CONIC;INFINITY_PLACES=2")
 print("EXTREME=NORMALIZATION_FERMAT_CUBIC;INFINITY_PLACES=3")
 print("DEPENDENT_GRADIENTS=LINE_DEGENERATE_UNDER_GENUINE_SPLIT")
 print("AFFINE_LINEAR_ONE_PLACE=NONE_NONLINEAR")
-print("NONLINEAR_PROTOTYPE=t(t-1)_balanced_split;INFINITY_BRANCHES>=2")
+print("NONLINEAR_PROTOTYPE=t(t-1)_balanced_split;A2=1_IRREDUCIBLE_CONIC_TWO_ENDS;GENERIC_BRANCHES>=2")
 print(f"SEMANTIC_SHA256={semantic}")

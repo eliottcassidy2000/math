@@ -9,6 +9,37 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-471 (2026-08-24, THM-3944 initial promotion) -- regularity on the normalization was confused with the smooth locus of the nonnormal order
+
+- **What failed:** the first promoted version of THM-3944 correctly proved
+  that the normalized quadratic surface is `A2`, that
+  `H^1_et(A2,mu_3)=0`, and that `q_0+W` has valuation residues `(2,1)` on
+  the two conductor-preimage lines.  It then incorrectly concluded that the
+  radicand gives no smooth-locus cubic character and that both displayed
+  Cardano directions are destroyed.
+- **Minimal witness / first failed implication:** for
+  `B_0=k[P,G,W]/(W^2+P^2(4P+3G^2))`, the singular locus is exactly
+  `V(P,W)`.  With `V=W/P`, `l_+=V+delta G`, and `l_-=V-delta G`, one has
+  `P=-l_+l_-/4` and
+  `Spec(B_0)_reg=Spec(B[P^-1])=Spec k[l_+^{+/-1},l_-^{+/-1}]=Gm^2`.
+  The two lines carrying residues `(2,1)` are removed there, so
+  `q_0+W=-l_+^2l_-/4` is a unit and a genuine nonzero etale `mu_3` class.
+  The failed implication was `no class on the full normalization => no class
+  on the original order's smooth locus`.
+- **Repair / strongest survivor:** the repaired theorem distinguishes the two
+  sites.  The first radicand has boundary class `(2,1)` on
+  `Spec(B_0)_reg~=Gm^2` but cannot extend across the conductor to `A2`; the
+  second radicand is an exact cube.  Thus the displayed Cardano rank drops
+  from two to one on the nonnormal smooth locus and to zero only after
+  extension to the normalization.  The common discriminant, one-place
+  parabola, full integral closure, conductor, quotient module, split second
+  cubic, and valuation calculations all survive.
+- **Reusable rule:** when normalizing a nonnormal cover, distinguish
+  `normalization_reg`, `original_reg`, and the conductor complement.  A
+  valuation supported over the conductor obstructs extension to the
+  normalization but can define an etale boundary torsor on the original
+  smooth locus.
+
 ## MISTAKE-470 (2026-08-24, THM-3941 shared pole carrier) -- a target collision was unconditionally promoted to maximal source ramification
 
 - **What failed:** the first THM-3941 candidate said that two finite poles in
@@ -113,7 +144,6 @@ Format per entry:
 - **Reusable rule:** keep UFD primitivity/content separate from unimodularity.
   In more than one variable, `gcd(f_1,...,f_r)=1` need not imply
   `(f_1,...,f_r)=(1)`.
-
 ## MISTAKE-465 (2026-08-23, THM-3878 auxiliary cutoff) -- a safe search bound was called the attained maximum
 
 - **What failed:** THM-3878's prose called `78` the largest necessary finite

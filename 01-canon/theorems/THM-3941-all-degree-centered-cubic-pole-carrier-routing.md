@@ -23,8 +23,9 @@ audit: >
   function, but found that the original opening silently imported the extra
   maximal-ramification hypotheses from Section 2. MISTAKE-470 records an
   infinite shared-pole counterfamily. The repaired theorem keeps that case as
-  one branch of the pole-support trichotomy and invokes source non-unibranchness only with the
-  stated Keller/maximal hypotheses. The assertion-free 2853-gate companion
+  one branch of the pole-support trichotomy and invokes source
+  non-unibranchness only with the stated Keller/maximal hypotheses. The
+  assertion-free 2853-gate companion
   includes the hostile family; normal and optimized runs byte-match the frozen
   LF transcript, and raw and semantic hashes pass.
 depends_on:
@@ -137,9 +138,10 @@ e=3: an isolated pole has r not congruent to 0 mod 3.     (10)
 
 If a pole is unramified, `(10)` says that trace zero requires at least one
 other pole in the same `A`-fibre. More generally, every pole not obeying the
-isolated rule must share its `A`-value with another pole. These are precisely
-the shared-address alternative `(S)`; Section 2 explains when the Keller
-application can route them to a source obstruction.
+isolated rule must share its `A`-value with another pole. Section 2 identifies
+their common target address unconditionally. These are precisely the
+shared-address alternative `(S)`; only the explicit maximal-ramification
+hypotheses route them to a source obstruction.
 
 The polynomial map `A:P1_u -> P1_A` is totally ramified of index three at
 infinity. Write
