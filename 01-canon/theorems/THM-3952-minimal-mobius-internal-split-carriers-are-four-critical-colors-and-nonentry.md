@@ -2,7 +2,7 @@
 id: THM-3952
 title: "Minimal Mobius internal-split carriers are four critical colors and do not enter A2"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the unit-debt degree-one-ratio specialization of THM-3950, the two
   assigned factors generate the normalization ring k[t] exactly when the
   source point at infinity is one of the four simple critical points of the
@@ -16,12 +16,14 @@ status: >
   creates the C3 infinity packet and genus-zero ledger routed by THM-3941.
 source: jc-zero-debt-lift / post-THM-3951 minimal-carrier classification, 2026-08-24
 audit: >
-  SELF-HOSTILE EXACT CANDIDATE. The companion verifies the critical
-  polynomial and all four double-fibre factorizations, the four normalized
-  representatives and their linear carrier coordinates, the noncritical
-  (3,2) hostile cusp, the finite clean-incidence table, and all three
-  Riemann--Hurwitz ledgers. The Abhyankar--Moh implication and the use of
-  THM-3951 are proved in text and await independent hostile audit.
+  INDEPENDENT HOSTILE AUDIT PASS (jc-degree6-one-place and jc-cohn3709,
+  2026-08-24). Both audits reconstructed the four critical source colors and
+  values; the exact degree 3-e cancellation at infinity; the Abhyankar--Moh
+  (3,2) obstruction; all four affine gauges, linear pencil members, and clean
+  incidence counts; the cusp/birational mechanism; and the three distinct
+  Riemann--Hurwitz ledgers, including the cyclic-degree-three caveat. Normal
+  and optimized runs byte-match the frozen 44-gate output, all hashes agree,
+  documentation checks pass, and no repair was required.
 depends_on:
   - THM-3950-a1-internal-split-denominator-debt-and-equianharmonic-shadow
   - THM-3951-affine-plane-boundary-incidence-forest-and-equianharmonic-survivor-nonentry
@@ -40,7 +42,7 @@ hash_basis: raw LF bytes
 
 # THM-3952 -- the minimal Mobius carrier has exactly four affine colors
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero. Fix
 
 ```text
