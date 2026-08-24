@@ -1,0 +1,13 @@
+THM3905_EQUALITY_COLOR_THIRD_RESPONSE_INDEPENDENT_AUDIT
+status=PASS;candidate_exact_mod_epsilon4;necessity_only
+support=KTf2;tuple=(1,2,1);deficits_n1_to_n4=(3, 4, 5, 6)
+support=KTf3;tuple=(1,3,1);deficits_n1_to_n4=(2, 2, 2, 2)
+support=KT3;tuple=(3,0,1);deficits_n1_to_n4=(3, 4, 5, 6)
+support=KT3f;tuple=(3,1,1);deficits_n1_to_n4=(2, 2, 2, 2)
+support=K2f3;tuple=(0,3,2);deficits_n1_to_n4=(1, 2, 3, 4)
+support=K2f4;tuple=(0,4,2);deficits_n1_to_n4=(0, 0, 0, 0)
+support=K2T2f2;tuple=(2,2,2);deficits_n1_to_n4=(0, 0, 0, 0)
+coefficient_checks=28
+epsilon3_cleared=2*v0*(3*L**2*a**2*u0*v0**2*v1 + 3*L**2*a**2*u1*v0**3 + 6*L**2*a*delta1*u0*v0**2 + 6*L**2*a*kappa*v0**3*v1 + 3*L**2*a*v0**3*v3 + 3*L**2*a*v0**2*v1*v2 + 2*L**2*delta1*kappa*v0**3 + L**2*delta1*v0**2*v2 + L**2*delta2*v0**2*v1 + L**2*delta3*v0**3 + 3*a*u0**3*v1 - 9*a*u0**2*u1*v0 - 4*delta1*u0**3 - 6*kappa*u0*u1*v0**2)
+semantic_sha256=15b2c85974162cd4ae967b3a74be5031a6f931f85159784a57b474a942c100da
+ALL CHECKS PASSED

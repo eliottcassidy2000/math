@@ -352,8 +352,8 @@ asymptotic or residue.
   THM-3896 closes `n=4`. THM-3885/3895/3897 close the entire polynomial
   `f=0` lane; THM-3900 independently classifies its generic `k(x)[y]` roots.
   For `f!=0`, THM-3899 proves `deg_y T>=deg_y f` and leading colors, while
-  THM-3904 closes the x-only lane. THM-3901 gives the strict response fan and THM-3902 the equality
-  two-jet law. These are necessary passports with positive lifts, not closure.
+  THM-3904 closes the x-only lane. THM-3901 gives the strict fan; THM-3902/3905 give equality through three jets.
+  These are necessary passports with positive lifts, not closure.
   THM-3890 gives a quintic `Cl=Z/Z5` obstruction; THM-3891/3892 classify
   quadratic and pure-power polynomial `GL_2` carriers. Remaining responses,
   a Keller atlas and `JC(2)` are OPEN.

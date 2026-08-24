@@ -1,0 +1,7 @@
+THM3905_N1_NAMED_CONTROL_THIRD_RESPONSE_HOSTILE
+status=PASS;named_two_jet_control_dies_at_third_polynomial_response
+g3_denominator=249143169618*(243*x**2 + 217*x + 49)
+numerator_remainder_one=-46118408*(x + 1)/3
+numerator_remainder_d=184473632*(x + 1)/3
+semantic_sha256=4cd89863a111096eeda3fa5304939c87e1edefa3b4f113bb3a5bbadd4b2ca0b3
+ALL CHECKS PASSED

@@ -9,7 +9,8 @@ status: >
   response depth n.  For n=1 its first response has exactly one less total
   a=x+1 valuation than the leading color product.  This is a necessary
   response filtration only: explicit controls lift both displayed jets,
-  and neither the equality seam nor JC(2) is closed.
+  and neither the equality seam nor JC(2) is closed.  THM-3905 later extends
+  the law through the third response and kills the named n=1 control there.
 source: tournament-jc-breakthrough / post-THM-3899 marked-response scout, 2026-08-23
 audit: >
   INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23.  A clean-room audit re-expanded
@@ -29,6 +30,7 @@ depends_on:
 related:
   - THM-3899-nonzero-sidecar-y-degree-tariff-and-equianharmonic-equality-colors
   - THM-3904-nonzero-sidecar-constant-y-seam-emptiness-and-primitive-equality-colors
+  - THM-3905-nonzero-sidecar-equality-color-third-response
   - THM-3377-path-colour-deletion-compiler-and-skew-current
   - THM-3380-hamiltonian-deletion-layer-monoid-semiring-and-small-order-boundaries
 script: 04-computation/jc2_nonzero_sidecar_equality_color_two_jet_response_thm3902.py
@@ -385,19 +387,21 @@ S_2=g_1^2+2h_*g_2.                                       (43)
 
 Thus even the exceptional `n=1` source is a response requirement, not an
 automatic contradiction.  Nothing here asserts that coefficients below
-`g_2` can be chosen.
+`g_2` can be chosen; THM-3905 subsequently proves that this named control's
+forced `g_3` is not polynomial.
 
 ## 7. Scope
 
 The result is a necessary two-jet law on `m=n>=1`.  It does not prove that
 any positive control extends to `S(T,f)=G^2`, close the equality seam, treat
-`m>n` or `m=n=0`, produce a Keller atlas, or settle JC(2).  The theorem also
+`m>n`, produce a Keller atlas, or settle JC(2); THM-3904 later closes the
+x-only boundary.  The theorem also
 does not identify colors through their product alone: the two valuations,
 their gcd, and the marked responses in `(26)` are load-bearing coordinates.
 
-The next exact task is the response at depth `n`, where the source
-`2L^2epsilon^nV` first appears for every common degree and where additional
-residual monomials must be reintroduced according to `(12)`.
+THM-3905 carries `(11)` through `epsilon^3`, exposing the marked source for
+`n<=3` and one extra `n=1` support pair.  The next task is the first response
+below that window, or response depth `n` when `n>=4`.
 
 ## 8. Reproduction
 

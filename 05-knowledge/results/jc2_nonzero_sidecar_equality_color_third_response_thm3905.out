@@ -1,0 +1,14 @@
+theorem=THM-3905-nonzero-sidecar-equality-color-third-response
+status=PASS;THIRD_RESPONSE_LAW_VERIFIED;JC2_OPEN
+support_counts=n1:7,n2:5,n3:5,n4:4,n5:4,n6:4,n7:4,n8:4
+n1_sources=marked@1,curvature@2,marked-kappa@3,KTf2-KT3@3
+n2_sources=curvature+marked@2;third_sees_v1
+n3_sources=curvature@2;marked@3
+nge4_sources=leading+curvature_only_through_epsilon3
+control=n3_zero_sidecar_j3=L2/h_nonpolynomial;nge4_j3=0_positive_third_jet
+named_n1_THM3902_control=FAILS_THIRD_RESPONSE_NONPOLYNOMIAL_G3
+named_n1_denominator=249143169618*(243*x^2+217*x+49)
+compact_law=3aL2V2+2L2e^n(1+2kappa*e2)V+6e2(kappa+aU/V)(aL2V2-U2)+delta_n1*e3(12aL2U-8U3/V2)
+semantic_sha256=e47f4c9dedd0d95c39a119b9f85630b71965df4d915a2b96747e3311081a18ff
+gates=37
+ALL CHECKS PASSED
