@@ -2,8 +2,8 @@
 id: THM-3967
 title: "Quadratic-P-depth natural cubics have no remaining conductor-debt escape"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-  HOSTILE AUDIT REQUIRED. For every irreducible natural cubic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For every
+  irreducible natural cubic
   T^3-3PT-q(P,t) with deg_P(q)<=2, the adjusted hidden polynomial is either
   squarefree, the P^2 zero-section case, or has a repeated polynomial graph
   root. The first case is normal and excluded by the global monogenic
@@ -13,6 +13,15 @@ status: >
   already admits a nongraph repeated factor, although the minimal example
   is reducible; arbitrary higher depth and JC(2) remain open.
 source: jc-degree6-one-place / post-THM-3964 coefficient-depth synthesis, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc_extra_debt_local, 2026-08-24). The
+  audit independently checked the absence of vertical factors, the
+  quadratic square-fill and h^3/h-row contradiction, the repeated-root
+  coefficient identities, the coprime-denominator congruences, the a=0
+  domain failure, the d=0 equality row, and every dependency scope. It also
+  rederived the depth-three nongraph repeated-factor hostile and its exact
+  reducible cubic factorization. Normal and optimized 23-gate runs
+  byte-match the frozen output; hashes and documentation checks pass.
 depends_on:
   - THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt
   - THM-3963-moving-p2-cubic-normalization-principal-ramification
@@ -29,8 +38,8 @@ hash_basis: raw LF bytes
 
 # THM-3967 -- coefficient depth two has no conductor escape
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-HOSTILE AUDIT REQUIRED.** Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of
 characteristic zero. Let
 
 ```text
