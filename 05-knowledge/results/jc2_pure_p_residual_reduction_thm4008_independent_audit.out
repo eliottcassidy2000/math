@@ -1,0 +1,41 @@
+STATUS=THM-4008 INDEPENDENT SYMPY-FREE GEOMETRIC AUDIT
+PASS  control 1 avoids the reconstruction denominator
+PASS  control 1 hyperelliptic identity
+PASS  control 1 recovers s=xt
+PASS  control 1 recovers p=t+x^2t^2
+PASS  control 2 avoids the reconstruction denominator
+PASS  control 2 hyperelliptic identity
+PASS  control 2 recovers s=xt
+PASS  control 2 recovers p=t+x^2t^2
+PASS  control 3 avoids the reconstruction denominator
+PASS  control 3 hyperelliptic identity
+PASS  control 3 recovers s=xt
+PASS  control 3 recovers p=t+x^2t^2
+PASS  odd hyperelliptic degree census m=1..24
+PASS  source genus census g=m for m=1..24
+PASS  scaled H integrality census m=1..24
+PASS  unique leading H face census m=1..24
+PASS  source square scaling census m=1..24
+PASS  resolved dual graph loop census b1=m for m=1..24
+PASS  resolved special components are rational census m=1..24
+PASS  target square/cubic weight census m=1..24
+PASS  target lower-term vanishing census m=1..24
+PASS  target j-zero cubic is smooth
+PASS  rational special components carry zero elliptic degree
+PASS  degree conservation contradicts a nonconstant generic map
+PASS  live forced pure-p truncation has degree three
+PASS  live pure-p truncation source genus is three
+PASS  live special fibre has three simple nodes
+PASS  mixed leading coefficients are nonzero
+PASS  mixed elliptic cubic discriminant is nonzero
+PASS  mixed rational and elliptic components meet in six points
+PASS  mixed face has toric rank five
+PASS  mixed face restores one good elliptic factor
+PASS  mixed arithmetic genus is six
+PASS  order-six attachment rotation minus one is an Eisenstein unit
+PASS  six equal attachment images force a finite-kernel difference
+PASS  kappa=0 mixed face has only rational components
+CHECKS=36
+SEMANTIC_SHA256=60e835b4dcf778e3734508cc1488812cc04c90a214236150c3a874818d78bb08
+THEOREM_ID=THM-4008
+ALL THM-4008 INDEPENDENT GEOMETRIC CHECKS PASSED

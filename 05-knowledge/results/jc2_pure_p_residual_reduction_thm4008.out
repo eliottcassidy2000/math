@@ -1,0 +1,113 @@
+STATUS=THM-4008 VERIFIED-EXACT CERTIFICATE
+PASS  generic-fibre hyperelliptic identity
+PASS  H(0)=0 in the normalized pure-p lane
+PASS  generic squarefree control m=1
+PASS  generic hyperelliptic degree/genus m=1
+PASS  generic squarefree control m=2
+PASS  generic hyperelliptic degree/genus m=2
+PASS  generic squarefree control m=3
+PASS  generic hyperelliptic degree/genus m=3
+PASS  generic squarefree control m=4
+PASS  generic hyperelliptic degree/genus m=4
+PASS  generic squarefree control m=5
+PASS  generic hyperelliptic degree/genus m=5
+PASS  generic squarefree control m=6
+PASS  generic hyperelliptic degree/genus m=6
+PASS  generic squarefree control m=7
+PASS  generic hyperelliptic degree/genus m=7
+PASS  generic squarefree control m=8
+PASS  generic hyperelliptic degree/genus m=8
+RESULT generic_source=V^2=p(q-H)(q+gamma-H), genus=deg(H)
+PASS  scaled H is integral m=1
+PASS  leading infinity face m=1
+PASS  central nodal equation m=1
+PASS  exactly m simple node locations m=1
+PASS  rational normalization parametrization m=1
+PASS  local UV thickness 12m=12
+RESULT m=1 special_normalization=P1 nodes=1 local_thickness=12
+PASS  scaled H is integral m=2
+PASS  leading infinity face m=2
+PASS  central nodal equation m=2
+PASS  exactly m simple node locations m=2
+PASS  rational normalization parametrization m=2
+PASS  local UV thickness 12m=24
+RESULT m=2 special_normalization=P1 nodes=2 local_thickness=24
+PASS  scaled H is integral m=3
+PASS  leading infinity face m=3
+PASS  central nodal equation m=3
+PASS  exactly m simple node locations m=3
+PASS  rational normalization parametrization m=3
+PASS  local UV thickness 12m=36
+RESULT m=3 special_normalization=P1 nodes=3 local_thickness=36
+PASS  scaled H is integral m=4
+PASS  leading infinity face m=4
+PASS  central nodal equation m=4
+PASS  exactly m simple node locations m=4
+PASS  rational normalization parametrization m=4
+PASS  local UV thickness 12m=48
+RESULT m=4 special_normalization=P1 nodes=4 local_thickness=48
+PASS  scaled H is integral m=5
+PASS  leading infinity face m=5
+PASS  central nodal equation m=5
+PASS  exactly m simple node locations m=5
+PASS  rational normalization parametrization m=5
+PASS  local UV thickness 12m=60
+RESULT m=5 special_normalization=P1 nodes=5 local_thickness=60
+PASS  scaled H is integral m=6
+PASS  leading infinity face m=6
+PASS  central nodal equation m=6
+PASS  exactly m simple node locations m=6
+PASS  rational normalization parametrization m=6
+PASS  local UV thickness 12m=72
+RESULT m=6 special_normalization=P1 nodes=6 local_thickness=72
+PASS  scaled H is integral m=7
+PASS  leading infinity face m=7
+PASS  central nodal equation m=7
+PASS  exactly m simple node locations m=7
+PASS  rational normalization parametrization m=7
+PASS  local UV thickness 12m=84
+RESULT m=7 special_normalization=P1 nodes=7 local_thickness=84
+PASS  scaled H is integral m=8
+PASS  leading infinity face m=8
+PASS  central nodal equation m=8
+PASS  exactly m simple node locations m=8
+PASS  rational normalization parametrization m=8
+PASS  local UV thickness 12m=96
+RESULT m=8 special_normalization=P1 nodes=8 local_thickness=96
+PASS  target good scaling m=1
+PASS  target special fibre m=1
+PASS  target good scaling m=2
+PASS  target special fibre m=2
+PASS  target good scaling m=3
+PASS  target special fibre m=3
+PASS  target good scaling m=4
+PASS  target special fibre m=4
+PASS  target good scaling m=5
+PASS  target special fibre m=5
+PASS  target good scaling m=6
+PASS  target special fibre m=6
+PASS  target good scaling m=7
+PASS  target special fibre m=7
+PASS  target good scaling m=8
+PASS  target special fibre m=8
+PASS  target special cubic is smooth in characteristic zero
+RESULT target_special=Y^2-X^3-1 (smooth, j=0)
+PASS  m=1 source j-invariant
+PASS  m=1 source j has infinity valuation -2
+PASS  target j has infinity valuation +2
+PASS  live normalized cubic h
+PASS  live cubic source genus is three
+PASS  live cubic discriminant support is exact up to a unit
+PASS  live cubic three-node special fibre
+RESULT live_h=6z-(16/3)z^2+(2752/135)z^3
+RESULT live_discriminant_support=Q^2(Q+1)^2(7396Q^2-7340Q+10935)(7396Q^2+7452Q+10991)
+PASS  mixed weight-six factorization
+PASS  mixed component elliptic equation under T=SP
+PASS  mixed elliptic component becomes Y^2=X^3+1
+PASS  mixed six-node transversality determinant
+PASS  mixed Newton polygon has six interior points
+RESULT mixed_hostile=kappa*T^2=1-epsilon*P^3, j=0, six transverse nodes if epsilon+kappa!=0
+RESULT mixed_reduction=toric_rank_5_plus_elliptic_rank_1 (generic nonresonant face)
+THEOREM_ID=THM-4008
+NOTE=the theorem assumes the entire residual lies in k[p]; forced finite truncations alone do not suffice
+ALL THM-4008 EXACT CHECKS PASSED

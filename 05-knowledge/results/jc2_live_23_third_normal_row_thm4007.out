@@ -1,0 +1,69 @@
+STATUS=THM-4007;PROVED_NECESSARY_ROW;VERIFIED-EXACT;JC(2)_OPEN
+SCOPE=oriented_reduced_2:3_live_seam;fixed_THM3992_gauge
+PASS  complete A third diagonal from Laurent rows
+PASS  A third diagonal cap is sharp: deg<=4
+PASS  complete C third diagonal from Laurent rows
+PASS  C third diagonal cap is sharp: deg<=5
+MECHANISM=extreme rows gamma^2*s^2 and gamma^3*s^3 have no higher powers
+PASS  inherited t^0 Jacobian row
+PASS  inherited t^1 Jacobian row
+PASS  rotated-gradient A coordinate
+PASS  rotated-gradient C coordinate
+PASS  third row has exactly four displayed free scalars
+PASS  third-row coefficient u0
+PASS  third-row coefficient u1
+PASS  third-row coefficient u2
+PASS  third-row coefficient u3
+PASS  third-row coefficient u4
+PASS  third-row coefficient v0
+PASS  third-row coefficient v1
+PASS  complete solved t^2 Jacobian row
+PASS  A0'(0)
+PASS  C0'(0)
+PASS  N(0)
+PASS  N'(0)
+PASS  K(0)
+PASS  K'(0)
+PASS  M(0)
+PASS  M'(0)
+PASS  L(0)
+PASS  L'(0)
+PASS  lower-row constant in J[t^2]
+PASS  forced raw U(0)
+PASS  forced invariant A3 constant
+PASS  new A weight -6 coefficient is nonzero
+PASS  new A weight -6 is distinct from old minimal invoice
+PASS  b=d=0 forces at least five A weights
+RESULT [x^0*t^3](A/a)=2176/(135*A5^3)!=0
+RESULT b=d=0 adds source weight -6 and excludes the fixed-gauge 4x5 invoice
+PASS  correct elimination cancels every t^4 power above x^4
+PASS  complete eliminated P[t^4] row
+PASS  full t^4 residual comparison
+PASS  forced [p4]/[y2] residual coupling
+PASS  complete invariant third A row
+PASS  complete invariant third C row
+RESULT [p^4]Rtilde+(6/(7*A5))*[y^2]Rtilde=-11392/(105*A5^4)
+RESULT [p^2*y]Rtilde remains the independent source-odd scalar in this row
+PASS  distinct-row determinant hostile detects swapped second factor
+PASS  same-row determinant is a deliberately blind control
+PASS  direct full-series fourth Jacobian row
+PASS  direct full-series J row 0
+PASS  direct full-series J row 1
+PASS  direct full-series J row 2
+PASS  direct full-series J row 3
+PASS  direct full-series P[t^4]
+PASS  direct hostile has no spurious x^8/x^7/x^6 terms
+PASS  wrong elimination sign creates a spurious degree-eight row
+PASS  wrong-sign x^8 hostile is active
+PASS  all live strata force at least five A weights
+PASS  all live strata force at least five C weights in fixed gauge
+SUPPORT_STRATA={'b_nonzero': (5, 6), 'b_zero_d_nonzero': (5, 6), 'b_zero_d_zero': (5, 5)}
+FIXED_GAUGE_FIRST_UNREJECTED_SUPPORT=5x5
+PASS  recorded diagonal scaling preserves all five A weights
+PASS  recorded scaling cannot cancel an A component
+TRANSFER=recorded_scalings_translations_and_C_by_A_shear_preserve_the_A>=5_floor
+FIREWALL=C>=5_need_not_transfer_across_C_by_A_shear
+FIREWALL=no_reversed_orientation;no_other_reduced_cell;no_arbitrary_target_automorphism
+FIREWALL=no_all_row_lift;no_B2_pair_construction;no_JC2_conclusion
+CHECKS=54
+ALL THM-4007 THIRD NORMAL ROW EXACT CHECKS PASSED
