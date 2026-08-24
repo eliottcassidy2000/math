@@ -430,9 +430,11 @@ All four are **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED** in
 their stated scopes.  Together they refute the coarse heuristic that normality
 itself is the decisive coordinate.  The decisive coordinate is the labelled
 incidence pattern and ramification predicate consumed by the ambient
-recognition theorem.  THM-3958 remains a **RESERVED / PROVISIONAL PROOF
-CANDIDATE / NOT CANON**, while THM-3959 and THM-3960 are **RESERVED / UNPROVED
-EMPTY STUBS**.  They supply no result or dependency here.
+recognition theorem. THM-3958 is now **PROVED + VERIFIED-EXACT +
+INDEPENDENTLY HOSTILE-AUDITED**, and the subsequently audited THM-3960 closes
+the full natural globally monogenic one-parameter cubic family. THM-3959
+alone remains a **RESERVED / UNPROVED EMPTY STUB**. None supplies a Hopf
+dependency here.
 
 ## 9. Connection contract B: affine local systems over the LRC carrier
 
@@ -623,8 +625,8 @@ assuming the manuscript's main theorem.
 - THM-3955's node and THM-3957's triple-crossing cotangent sequences;
 - the general two-by-two Smith conclusion (11) under its stated coprimality
   and admissibility assumptions;
-- the repo theorems cited with proved status, including incoming planar-
-  Jacobian THM-3950--3954 and THM-3956.
+- the repo theorems cited with proved status, including planar-Jacobian
+  THM-3950--3954, THM-3956, THM-3958, and THM-3960.
 
 ### FINITE-EXACT
 

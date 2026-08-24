@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-476 (2026-08-24, Hopf/S6 finite audit) -- optimized replay silently removed every assertion
+
+- **What failed:** the Hopf/S6 matrix companion was advertised with both
+  normal and `python -O` reproduction commands even though all 45 gates used
+  Python's `assert` statement. Optimized mode erased the entire verification
+  while still printing the same fixed summary.
+- **Minimal witness / first failed implication:** before repair,
+  `python -O 04-computation/hopf_s6_triangle_monodromy_snf_audit_20260824.py`
+  exited successfully and byte-matched the normal output after compiling away
+  every line matched by `^\s*assert`.
+- **Repair / strongest survivor:** the script now rejects optimized mode
+  explicitly, the `-O` reproduction command is removed, and the normal exact
+  run still byte-matches the frozen output. The displayed matrix, Smith,
+  exterior-power, and finite conductor computations remain verified; this
+  repair changes no global Hopf/S6 status.
+- **Reusable rule:** optimized agreement is evidence only when verification
+  gates survive optimization. Use explicit raising gates, or reject `-O`;
+  never count a matching print-only optimized run as an independent replay.
+
 ## MISTAKE-475 (2026-08-24, THM-3952 genus comparison) -- a rational-source inertia dichotomy was stated for all degree-three covers
 
 - **What failed:** THM-3952's design comparison said that among all connected
@@ -314,9 +333,11 @@ Format per entry:
   so the LRC family moved atomically again to `THM-3952`; a final incoming
   wave promoted a minimal Mobius-carrier theorem at that ID and occupied
   `THM-3953--3955`, so the LRC family moved atomically to `THM-3956`; the next
-  incoming wave occupied `THM-3956--3960`, so it moved once more to the
-  freshly checked free identifier `THM-3961`. The hash-bearing LRC companions
-  and mathematical scope did not change.
+  incoming wave occupied `THM-3956--3960`, so it moved once more to
+  `THM-3961`; the subsequent arbitrary-`q` normality reservation occupied
+  that identifier, so the LRC family moved atomically again to freshly
+  checked `THM-3962`. The hash-bearing LRC companions and mathematical scope
+  did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
   only before empty reservations; rename the whole artifact family together.

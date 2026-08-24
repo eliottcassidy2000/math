@@ -19,6 +19,12 @@ from sympy.matrices.normalforms import smith_normal_form
 from sympy.polys.domains import ZZ
 
 
+if not __debug__:
+    raise RuntimeError(
+        "optimized mode disables this assertion-based audit; run without -O"
+    )
+
+
 def exterior_power(matrix: Matrix, degree: int) -> Matrix:
     """Matrix of the induced action on the indicated exterior power."""
     n = matrix.rows

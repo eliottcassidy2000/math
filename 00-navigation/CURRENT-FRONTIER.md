@@ -67,7 +67,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505`, and only 58 in `t>=U`: 57 scale-one plus `(2,1,9)`.  THM-3910
-  closes 41, leaving 17.  THM-3961 closes AP11 and 1,365 fixed scale-two
+  closes 41, leaving 17.  THM-3962 closes AP11 and 1,365 fixed scale-two
   bodies, no type; `t<U` and owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
@@ -348,19 +348,17 @@ asymptotic or residue.
   seven `N=5` rows still await color division. THM-3942/44/47 close
   whole-factor/repeated-square rows by extra ends, components or conductor;
   audited THM-3946 and THM-3949 close standard one-variable factor splits.
-  THM-3943/45/48 close `A1` line normalization for the classified complex
-  weight-eight/nine sextics. THM-3950 attains a reduced `A1` graph, normal
-  quadratic surface and two Cardano classes, but retains a fixed `j=0`
-  residual. THM-3951 excludes every natural nonconstant-ratio same-field
-  cubic: its residual boundary prime has positive genus; clean rows also
-  violate the incidence forest.
-  THM-3952 says unit-debt degree-one ratios embed only at four critical colors,
-  all excluded. Corrected/audited THM-3953 closes the polynomial split-root
-  triangle; THM-3954/55 are RESERVED.
-  Open: common-debt local/carrier structure, higher-ratio carrier
-  classification, normalization-parameter descent, other fields/assignments,
-  arbitrary root/color gauges, bivariate or simultaneous splits, non-line
-  boundaries, altered resolvents, cubic/source attachment and `JC(2)`.
+  THM-3943/45/48 close classified weight-eight/nine `A1` sextics. THM-3950
+  leaves fixed `j=0`; THM-3951 excludes natural nonconstant-ratio same-field
+  cubics by genus (clean rows also fail the forest). THM-3952 closes four
+  unit-debt Mobius colors. THM-3953 closes distinct polynomial-root ratios,
+  constants included; THM-3954 gives the shared-debt
+  `A_(3m-1)`/non-unibranch mechanism. THM-3956/58 and audited THM-3960 close
+  the split, one-root and full natural globally monogenic families.
+  THM-3959 is RESERVED and closes none of the seven `N=5` rows. THM-3955/57
+  are local conductor results, not global Hopf/S6 results.
+  Open: higher ratios, parameter descent, nonmonogenic overorders, other
+  fields/gauges/splits/boundaries/resolvents/source attachments and `JC(2)`.
   THM-3853/3855 remain formal laboratories.
   Russell THM-3785 forces `3|d,d>=9`; THM-3843/46/49 give an immersed arm,
   jets and visible conductor contact. THM-3856/61/67/71 close normal `z`-depth

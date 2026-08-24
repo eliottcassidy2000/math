@@ -15,7 +15,9 @@ THM-3950 classifies every nonconstant `A1` pullback and exposes its fixed
 equianharmonic residual. THM-3951 proves that affine-plane boundary primes are
 rational, so the positive-genus residual excludes every natural same-field
 cubic even with arbitrary common debt; clean rows also violate its boundary
-forest. THM-3952 exhausts the unit-debt degree-one-ratio polynomial carriers.
+forest. THM-3952 exhausts the unit-debt degree-one-ratio polynomial carriers;
+THM-3953/54/56/58 resolve the hidden-root and local-debt strata; and audited
+THM-3960 closes the full natural globally monogenic one-parameter family.
 This reflection reserves no theorem ID; its affine deformation is now an
 independent precursor to the `m=1` slice of THM-3946.
 
@@ -353,25 +355,29 @@ carrier lane is now closed, not merely missing an atlas.
 The rationally split complement is corrected/audited THM-3953. Its three
 polynomial ramification roots generate three pairwise-coprime collision
 carriers and a forbidden boundary triangle on the normal cubic. MISTAKE-474
-separates the six formal factor types from the points actually realized.
-Common-debt local/carrier structure, higher-ratio carriers, rational
-denominators, and normalization-parameter descent remain outside these
-closures; extra common debt alone no longer reopens the natural same-field
-model.
+separates the six formal factor types from the points actually realized; its
+constant-ratio addendum is exactly `xy=c(t)^3`. THM-3954 now proves the local
+common-debt refinement: order `m` at a color creates a normal `A_(3m-1)`
+surface and one non-unibranch residual prime. THM-3956 removes rational-root
+denominators and closes every repeated split-root packet; THM-3958 closes the
+exactly-one-root case by the principal different.
 
-THM-3954 and THM-3955 are honest reserved stubs, not consequences. The first
-targets the local singularity and carrier structure when extra debt absorbs a
-clean color flank; it is no longer required for same-field nonentry. The
-second targets the node cotangent/conductor module that the boundary dual
-graph forgets. Their cheapest common probe is a completed-local normalization
-and branch-address ledger before any global class computation.
+The decisive incoming simplification is independently audited THM-3960. For
+arbitrary `C,E in k[t]`, every integral natural `T^3-3PT-(E+CP)` surface is
+normal, and its monogenic derivative would become a forbidden nonconstant
+unit on a Keller open; the reducible linear/quadratic boundary fails as well.
+Thus no further factorization of this natural one-parameter order can help.
+Higher-ratio carrier classification remains useful only if it changes the
+finite order, target-parameter descent, or branch assignment. The orthogonal
+THM-3955/57 node and coordinate-crossing cotangent sequences are proved local
+normalization sidecars, not global Jacobian or Hopf results.
 
 The next search should not maximize Mordell--Weil rank blindly.  The cheapest
 decisive experiments are:
 
-1. classify common-debt local carriers, higher ratios and rational
-   denominators, and test whether the normalization parameter descends to an
-   original polynomial target coordinate beyond the THM-3951--3953 closures;
+1. construct a genuine nonmonogenic overorder or prove that the normalization
+   parameter descends to an original polynomial target coordinate; do not
+   spend another pass on hidden-root factorization inside THM-3960's order;
 2. search genuinely bivariate factors and simultaneous internal splits in two
    or three cube factors for an irreducible reduced full branch;
 3. compute the generic three-parabola quadratic normalization and its complete
@@ -390,12 +396,13 @@ class-group computation: the desired second character appeared immediately;
 whole factors forced extra ends; separated internal factors retained two
 ends; the first one-place collision paid nonreduced conductor debt; and the
 first reduced `A1`/normal/two-character survivor paid a genus-one companion.
-The positive-genus boundary gate then killed every natural same-field row,
-with the forest independently killing the clean minimal/Mobius atlases. A
-survivor must leave those scopes through parameter descent, different fields
-or assignments, or genuinely new factor geometry, and control the full
-discriminant and source attachment rather than merely pass componentwise
-gates.
+The positive-genus boundary gate killed every natural factor-ratio row, with
+the forest independently killing the clean minimal/Mobius atlases; the global
+different now kills the entire natural monogenic grammar at once. A survivor
+must leave those scopes through a nonmonogenic overorder, parameter descent,
+different fields or assignments, or genuinely new factor geometry, and
+control the full discriminant and source attachment rather than merely pass
+componentwise gates.
 
 ## Reproduction
 
@@ -408,6 +415,10 @@ python3 04-computation/jc2_a1_internal_split_equianharmonic_shadow_thm3950.py
 python3 04-computation/jc2_affine_plane_boundary_incidence_forest_thm3951.py
 python3 04-computation/jc2_minimal_mobius_internal_split_carriers_thm3952.py
 python3 04-computation/jc2_rationally_split_hidden_cubic_boundary_triangle_thm3953.py
+python3 04-computation/jc2_extra_debt_flank_normalization_20260824.py
+python3 04-computation/jc2_split_hidden_cubic_integrality_repeated_trichotomy_thm3956.py
+python3 04-computation/jc2_one_hidden_root_principal_different_pure_power_thm3958.py
+python3 04-computation/jc2_natural_one_parameter_cubic_normal_monogenic_thm3960.py
 ```
 
 Each normal/optimized pair must byte-match its corresponding frozen output in

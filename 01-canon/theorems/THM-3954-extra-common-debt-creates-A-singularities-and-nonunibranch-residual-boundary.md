@@ -11,8 +11,10 @@ status: >
   k[[x,y,t]]/(xy-t^(3m)), hence is already normal there, while its one
   irreducible residual ramification prime has two normalization addresses
   collapsing to that point. It is therefore non-unibranch and cannot be an
-  affine-plane boundary. This provisionally closes every c in this A1
-  packet, not other internal-split grammars or JC(2).
+  affine-plane boundary. This gives an independent local-mechanism proof for
+  every c in this A1 packet. THM-3951's stronger positive-genus argument
+  already gives the same-field nonentry without the gcd split. Other
+  internal-split grammars and JC(2) remain open.
 source: jc-extra-debt-local / post-THM-3951 universal shared-color audit, 2026-08-24
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc-zero-debt-lift and jc-cohn3709,
@@ -21,8 +23,9 @@ audit: >
   prime and birational-image calculation, exact A_(3m-1) completed local
   ring at every shared color, two smooth normalization addresses of that one
   residual prime, and the exhaustive THM-3951/THM-3920 gcd dichotomy. Normal
-  and optimized runs byte-match the frozen 92-gate output, all hashes agree,
-  documentation checks pass, and no repair was required.
+  and optimized runs match the frozen 92-gate output after canonical LF
+  normalization on Windows, all hashes agree, documentation checks pass,
+  and no repair was required.
 depends_on:
   - THM-3950-a1-internal-split-denominator-debt-and-equianharmonic-shadow
   - THM-3951-affine-plane-boundary-incidence-forest-and-equianharmonic-survivor-nonentry
@@ -45,11 +48,13 @@ Fix
 omega^2+omega+1=0,       delta=omega-omega^2,       delta^2=-3.       (1)
 ```
 
-The candidate closes the common-multiplier boundary left open by THM-3951.
-Its scope is the natural cubic over `A2_(P,t)` attached to the universal
-nonconstant-ratio `A1_t` packet of THM-3950. It does not classify a different
-root gauge, splitting across several cube-difference rows, a non-`A1`
-primary branch, or an arbitrary cubic field.
+The theorem refines the local common-multiplier boundary of THM-3951. Its
+scope is the natural cubic over `A2_(P,t)` attached to the universal
+nonconstant-ratio `A1_t` packet of THM-3950. THM-3951's later strengthened
+genus-boundary corollary already excludes arbitrary `c`; the new content here
+is the exact `A_(3m-1)` and non-unibranch mechanism when common debt absorbs a
+color. It does not classify a different root gauge, splitting across several
+cube-difference rows, a non-`A1` primary branch, or an arbitrary cubic field.
 
 ## 1. Universal packet and statement
 
@@ -91,7 +96,7 @@ F=Z^3-3PZ+q.                                                  (6)
 ```
 
 The sign change `T=-Z` identifies `(6)` with THM-3951's natural cubic. The
-provisional conclusion is:
+conclusion is:
 
 > For every data set `(2)-(6)`, `X_c` is a normal integral finite-flat cubic
 > surface. Its graph and residual ramification loci are two distinct prime

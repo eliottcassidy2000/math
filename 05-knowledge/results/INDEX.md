@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3961 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3962 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -619,15 +619,76 @@
 
 - `jc2_rationally_split_hidden_cubic_boundary_triangle_thm3953.py` ->
   matching `.out` [THM-3953 PROVED + VERIFIED-EXACT + INDEPENDENTLY
-  HOSTILE-AUDITED AFTER MISTAKE-474]. Three distinct polynomial hidden-cubic roots with
-  no linear `h`-row have the exact `c,a,b` parametrization and three pairwise
-  coprime collision carriers. Their normal cubic
-  ramification primes form a forbidden boundary triangle; constant ratios,
-  repeated roots and rational denominators remain outside scope. Checks:
-  `59`. Script/output/semantic SHA-256:
-  `f90897ea150c75ade3480e499eb686bdce6bccc31c07bb4cd4325f0b8245848a` /
-  `7bbd1fd9c2f4c6efeb68dca40c973caa523b1dc39262c96c003710b64a83b624` /
-  `507b6809acb59a52a8255221897706e8adfd7fa5359e98e96acfcf45c9975c05`.
+  HOSTILE-AUDITED AFTER MISTAKE-474]. Three distinct polynomial hidden-cubic
+  roots with no linear `h`-row have the exact `c,a,b` parametrization and
+  three pairwise-coprime collision carriers. Nonconstant ratios form a
+  forbidden ramification-boundary triangle; constant ratios are polynomially
+  `xy=c(t)^3` and fail by a nonconstant unit or exact Nagata 3-torsion.
+  Formal collision types, not realized points, split 3/3. Duplicate roots and
+  rational denominators route to THM-3956. Checks: `75`.
+  Script/output/semantic SHA-256:
+  `07c8fd4243f6696e04357849e4aebd09f7b45fe26f6c2e6b9d7c8cc392345ab3` /
+  `234cf1fb24482025a245b7737468a9de95db7edd75478e864478100d0915adf5` /
+  `593a316f92f4c3148a732de8d4c71c97eb09572c395905143db3334f42504559`.
+
+- `jc2_extra_debt_flank_normalization_20260824.py` -> matching `.out`
+  [THM-3954 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. In the
+  universal nonconstant-ratio `A1` packet, common debt of order `m` at a
+  finite color gives the exact normal local surface `xy=t^(3m)` and one
+  irreducible residual prime with two normalization addresses. This supplies
+  a local non-unibranch obstruction independent of THM-3951's stronger
+  all-`c` positive-genus boundary proof. Checks: `92`.
+  Script/output/semantic SHA-256:
+  `8a6c3ce8b6478abfc8d373ed60e45ce3328578a73ad9176a6d105b942e0f6dae` /
+  `80f68ffe8a3021a8d1c28407f80f2ee7b3893bf5f12c8f34b847b55bc975bce6` /
+  `01393277071248a2c4b22382d343627adef25b29ca676db9d99455f107d01bf3`.
+
+- `jc2_split_hidden_cubic_integrality_repeated_trichotomy_thm3956.py` ->
+  matching `.out` [THM-3956 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED]. Monicity over normal `k[t]` removes rational-root
+  denominators. Three distinct roots route to THM-3953; repeated nonzero roots
+  give a reducible linear/quadratic packet, while repeated zero gives the
+  normal surface `uv=(u-2r)^3` with `div(P)=3D`. Ramification-line or
+  forbidden-unit gates exclude every split natural hidden cubic. Checks: `62`.
+  Script/output/semantic SHA-256:
+  `3c3c60c2da22f8d7e8ac892296fc48e4d6ed67097e251db7ec2c80ffa0223a56` /
+  `8734b08ed1f1c3eadd83026ee5ad68a827e9fef1fc7cce490d6101df8eb6799b` /
+  `c17d2525f85fcf4f2b0df186794143ce81b116ab58bd8e72b594810e473fd6b0`.
+
+- `jc2_one_hidden_root_principal_different_pure_power_thm3958.py` -> matching
+  `.out` [THM-3958 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Exactly one hidden root is polynomial, its residual quadratic has the
+  unique normal form `h^2+ah+ar`, and the natural surface is integral and
+  normal. The reduced principal different is graph plus residual; a Keller
+  open would delete both and make the nonconstant derivative a forbidden
+  unit. The pure-power genus, infinity, non-unibranch, and class-group edges
+  are exact. Checks: `161`. Script/output/semantic SHA-256:
+  `f8f2d5415b966d03072438fadc6dc90f3b12d94ab4474e0ff8040041d6234f6e` /
+  `2e01d69d6e95a5c1744711d8ccea6bad6c9cf90a395b52206b41e0ab35efeb82` /
+  `74d85a5e93df9df20672bebdea8f6e8c4818accbdf72c5fee1905628e0a5c335`.
+
+- `jc2_natural_one_parameter_cubic_normal_monogenic_thm3960.py` -> matching
+  `.out` [THM-3960 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  For arbitrary `C,E in k[t]`, `T^3-3PT-(E+CP)` is integral exactly when
+  `C^3+27E` is nonzero; then its finite-singular-locus hypersurface is normal
+  and its global monogenic different is a forbidden unit on a Keller open.
+  The reducible linear/quadratic boundary also fails by a ramification-line
+  unit. Thus the full natural globally monogenic one-parameter family closes;
+  nonmonogenic overorders and `JC(2)` remain open. Checks: `42`.
+  Script/output/semantic SHA-256:
+  `86155a2c9427ff2ae4266a11d99b1c41d05b4c0fdbf88d5dc2d8a0bf18356e11` /
+  `853caab7ac647851bae242170257d6400c730a1e466554b2f84fbe019e37a784` /
+  `e351375ce01977071e544aa926685b89d0d36d955a790a4ab8d1e2f6c23f5db1`.
+
+- `hopf_s6_triangle_monodromy_snf_audit_20260824.py` -> matching `.out`
+  [VERIFIED-EXACT DISPLAYED MATRICES + FINITE-EXACT CONDITIONAL ORIENTED
+  CONDUCTOR PUSHOUT; GLOBAL HOPF/S6 CLAIMS OPEN]. The displayed monodromy,
+  exterior-power, Smith, twist, and 54,320 coprime clutch rows pass. Reversing
+  one conductor branch creates the exact `Z/2` orientation hostile. The script
+  uses assertion gates and now rejects optimized mode after MISTAKE-476; its
+  normal run byte-matches the frozen LF output. Script/output SHA-256:
+  `3748afedf8af898b05cd9514970c453637d58ab9a69629a76d94ef14775df6b8` /
+  `a7e8e94071a58825fde77dcaa4298614c8499e18d1f5aeabd884976efae443bd`.
 
 - `jc2_double_torus_nonlinear_balanced_partial_split_scout.py` -> matching
   `.out` [VERIFIED-EXACT + INDEPENDENTLY FORMULA-AUDITED SCOUT; NOT CANON].

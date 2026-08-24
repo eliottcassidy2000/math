@@ -346,9 +346,10 @@ sidecar"; there is no direct Jacobian theorem transfer.
 is now **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED** and closes
 the split hidden-cubic lane by integrality and a repeated-root trichotomy.  It
 reinforces the boundary/predicate discipline but supplies no Hopf theorem.
-THM-3958 remains a **RESERVED / PROVISIONAL PROOF CANDIDATE / NOT CANON**;
-THM-3959 and THM-3960 are **RESERVED / UNPROVED EMPTY STUBS**.  None of those
-three supplies a dependency here.
+THM-3958 is now **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**,
+and the subsequently audited THM-3960 closes the full natural globally
+monogenic one-parameter cubic family. THM-3959 alone remains a
+**RESERVED / UNPROVED EMPTY STUB**. None supplies a Hopf dependency here.
 
 ### Explicitly rejected vocabulary bridges
 
@@ -368,15 +369,16 @@ From the repository root:
 
 ```text
 python 04-computation/hopf_s6_triangle_monodromy_snf_audit_20260824.py
-python -O 04-computation/hopf_s6_triangle_monodromy_snf_audit_20260824.py
 ```
 
 The output should match
 [the frozen result](../results/hopf_s6_triangle_monodromy_snf_audit_20260824.out).
+The companion deliberately rejects `python -O`: its gates are Python
+assertions, so optimized execution would erase the audit (MISTAKE-476).
 The LF-byte SHA-256 values at promotion are
 
 ```text
-script  588cc30430474b088b27b3a124a2d4257786a1a38ed656b831839e5753cf203d
+script  3748afedf8af898b05cd9514970c453637d58ab9a69629a76d94ef14775df6b8
 output  a7e8e94071a58825fde77dcaa4298614c8499e18d1f5aeabd884976efae443bd
 ```
 

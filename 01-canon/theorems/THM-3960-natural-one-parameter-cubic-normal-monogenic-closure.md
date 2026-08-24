@@ -2,7 +2,7 @@
 id: THM-3960
 title: "Natural one-parameter cubic normal-monogenic closure"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / NOT CANON. For arbitrary
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For arbitrary
   C,E in k[t], the natural cubic F=T^3-3PT-(E+CP) is integral exactly when
   C^3+27E is nonzero. In that case its hypersurface has only finitely many
   singular points and is therefore normal. Its global monogenic different
@@ -14,9 +14,18 @@ status: >
   (E+CP)^2-4P^3 is additionally primitive and squarefree, giving an
   independent codimension-one maximal-order proof of normality. Together
   with THM-3956 and THM-3958 this closes the entire natural one-parameter
-  globally monogenic family, not JC(2). This candidate is not usable until
-  independent hostile audit and status promotion.
+  globally monogenic family, not JC(2).
 source: jc-degree6-one-place / post-THM-3956--3958 culmination, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (final_merge_referee and
+  audit_boundary_forest_3951, 2026-08-24). Both audits reconstructed the
+  irreducible/reducible dichotomy, finite-singular-locus normality, global
+  monogenic-different forbidden-unit argument, reducible quadratic-sheet
+  ramification obstruction, primitive squarefree hidden branch, and
+  discriminant-index maximality. They independently checked exhaustion by
+  THM-3956/3958 and retained nonmonogenic overorders and JC(2) as open.
+  Normal and optimized runs LF-normalize to the frozen 42-gate output; all
+  hashes agree, and no repair was required.
 depends_on:
   - THM-3956-split-hidden-cubic-integrality-and-repeated-root-trichotomy
   - THM-3958-one-hidden-root-principal-different-and-pure-power-boundary
@@ -33,7 +42,7 @@ hash_basis: raw LF bytes
 
 # THM-3960 -- the full natural one-parameter cubic is closed
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / NOT CANON.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero. Put
 
 ```text
@@ -182,7 +191,7 @@ ord_p disc(A_p)=ord_p disc(Abar_p)
 
 The rightmost term is a nonnegative even integer, while the maximal-order
 discriminant exponent is nonnegative. Equation `(17)` forces the index
-length to be zero. Hence `A_p=Abar_p`; every height-one localization of `A`
+length to be zero. Hence `A_p=Abar_p`; every height-one local ring `A_q`
 over `p` is a DVR. This proves `R1`, while the hypersurface gives `S2`.
 Thus the squarefree-discriminant route independently proves normality in the
 irreducible-hidden-cubic case, including the edge `C=0` and arbitrary common
@@ -265,4 +274,4 @@ have finite normalization equal to the natural globally monogenic order
 notably by a genuine nonmonogenic overorder—or leave this one-parameter
 linear-in-`P` depressed-cubic grammar. Those escapes are precisely why the
 nonmonogenic S3 constructions elsewhere in the repo remain relevant.
-**QED (candidate pending independent audit).**
+**QED.**

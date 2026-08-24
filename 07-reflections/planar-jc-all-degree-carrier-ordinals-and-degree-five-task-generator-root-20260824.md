@@ -246,15 +246,20 @@ the common-resolution boundary tree. Then
 [THM-3952](../01-canon/theorems/THM-3952-minimal-mobius-internal-split-carriers-are-four-critical-colors-and-nonentry.md)
 classifies unit-debt degree-one ratios. Only four critical infinity colors
 give polynomial `A1` carriers, and every one retains the forbidden repeated
-incidence. Corrected/audited THM-3953 closes the rationally split polynomial
-boundary triangle; THM-3954 and THM-3955 are reserved local refinements, not
-needed for the strengthened same-field nonentry.
+incidence. Corrected/audited THM-3953 closes all three-distinct polynomial
+roots, including constant ratios; THM-3954 proves the local common-debt
+`A_(3m-1)`/non-unibranch refinement. THM-3956 closes every split hidden cubic,
+THM-3958 closes the exactly-one-root case, and independently audited THM-3960
+closes the full natural globally monogenic one-parameter family. THM-3959 is
+only a reserved degree-five task and closes none of the seven carrier rows.
 
 The session therefore ends at a sharp boundary.  **PROVED:** degree-four
 centered nonentry, all-degree trace-carrier routing, the arbitrary-common-debt
-natural-cubic boundary obstruction and the four-color Mobius classification.
-**VERIFIED-EXACT:** the 2,884-gate carrier companion and the 51/62/44/59-gate
-THM-3950--3953 chain. **OPEN:** color survival for the seven degree-five tasks;
-common-debt local/carrier structure, higher ratios, rational denominators and
-normalization-parameter descent; arbitrary root gauges/coefficient planes;
-higher-degree non-centered strata; and the planar Jacobian conjecture itself.
+natural-cubic boundary obstruction, the four-color Mobius classification, and
+the full natural monogenic closure. **VERIFIED-EXACT:** the 2,884-gate carrier
+companion and the `51/62/44/75/92/62/161/42` gates in
+THM-3950/51/52/53/54/56/58/3960. **OPEN:** color survival for all seven
+degree-five tasks; higher ratios that change the finite order, nonmonogenic
+overorders and normalization-parameter descent; arbitrary root gauges and
+coefficient planes; higher-degree non-centered strata; and the planar
+Jacobian conjecture itself.
