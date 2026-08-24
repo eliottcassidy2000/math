@@ -838,8 +838,9 @@ works before factorization: every integral natural `T^3-3PT-(E+CP)` surface
 is normal and its derivative would become a forbidden unit on a Keller open;
 the reducible linear/quadratic boundary fails separately. The whole natural
 globally monogenic one-parameter family is therefore closed. The preserved
-escape is a genuinely nonmonogenic overorder, parameter nondescent, or a
-different grammar—not another hidden-root factorization.
+escape is a different nonmonogenic field/order, parameter nondescent, or a
+different grammar—not another hidden-root factorization. THM-3961 is only a
+reservation for the arbitrary-`q` hidden-repetition extension.
 
 The orthogonal conductor lane is also now proved locally. THM-3955 computes
 the node kernel/torsion sequence, and THM-3957 extends it to triple and
@@ -1121,7 +1122,7 @@ They do not share states, probability, chronology, or a reduction.
 | Double-torus identity | one-place branch design | compare the two Cardano radicands | intrinsic rational `E[3]` and componentwise one-place geometry | full-discriminant irreducibility, residual genus and cubic/source attachment | bivariate/multifactor allocation plus normalization/conductor ledger | THM-3946/3949 close standard one-variable splits; THM-3950 attains `A1`+normal+two classes but forces a `j=0` residual |
 | Internal-split factor ratio | equianharmonic shadow | take the `S3` closure of the degree-three ratio map | scalar collision packet `{0,1,-omega,infinity}` and a fixed `j=0` cover | higher ratios and polynomial color | residual-component and source-boundary incidence ledger | THM-3951 excludes every natural same-field ratio; THM-3952 exhausts unit-debt Mobius colors; THM-3954 resolves local common debt |
 | Residual plus graph ramification primes | affine-plane boundary | pass to normalization and lift incidences to a common resolution | normalization genus, prime labels and distinct smooth meetings | target embedding, tangency order and local contact multiplicity | normal same-field completion plus deletion of ramified primes | THM-3951 forbids positive genus for every `c`; two clean meetings also cycle in the boundary tree |
-| Hidden-cubic factorization | natural monogenic cubic | split into three, one, or zero rational roots | integral normal surface and global different | nonmonogenic overorders and parameter descent | actual finite order plus derivative divisor | THM-3953/56/58 classify the factors; THM-3960 closes every `C,E in k[t]` in the natural order |
+| Hidden-cubic factorization | natural monogenic cubic | split into three, one, or zero rational roots | integral normal surface and global different | other nonmonogenic fields/orders and parameter descent | actual finite order plus derivative divisor | THM-3953/56/58 classify the factors; THM-3960 closes every `C,E in k[t]` in the natural order |
 | Node or coordinate crossing | normalized torsion-free cotangent | pass through normalization and conductor | local torsion kernel and branch restrictions | global twist, section, and analytic realization | conductor ideal plus sheaf-level gluing | THM-3955/57 prove the local sequences; no Hopf/S6 globalization follows |
 | Primitive actual boundary basis | candidate affine-plane deletion | localize at the three basis primes | scalar units and `Cl=0` | boundary genus and Euler type | rationality plus `chi_c` invoice | THM-3926 genus `2`, `chi_c=13` hostile |
 | Degree-two linear-color packet | affine-plane open | delete the intrinsic ramification primes | aligned one-place branch and affine address cap | source unibranchness and invertible defining functions | actual class/different packet | THM-3931 `[E]=0`, `[P_0]=2q`, nonunibranch collision |
@@ -1154,7 +1155,7 @@ objects cannot be transported merely because the same word is used.
    one-root factorization lanes; and THM-3960 closes every `C,E in k[t]` in
    the natural globally monogenic order. THM-3959 is only a reservation and
    closes none of the seven color rows. Classify higher-degree ratios,
-   normalization-parameter descent, genuine nonmonogenic overorders, and
+   normalization-parameter descent, other nonmonogenic fields/orders, and
    whether the fixed genus-one residual can be altered outside the natural
    order. In parallel test genuinely bivariate factors, simultaneous splitting
    across several `L_i`, gcd/nonmaximal overlap, the
@@ -1180,8 +1181,8 @@ objects cannot be transported merely because the same word is used.
    companion; THM-3951 then excludes every natural same-field chart and its
    forest proof separately closes clean minimal/Mobius rows, while THM-3952
    classifies their carriers. THM-3960 now proves that global monogenicity
-   itself is fatal for the full natural one-parameter grammar. Build the
-   nonmonogenic overorder rather than another root-factorization case, then
+   itself is fatal for the full natural one-parameter grammar. Start from a
+   different nonmonogenic field/order rather than another root-factorization case, then
    test normalization-parameter descent, other cubic fields or assignments,
    and the actual order/source attachment.
 4. **AK niche:** leave the saturated empty-wildcard `[2,3]` slice closed.

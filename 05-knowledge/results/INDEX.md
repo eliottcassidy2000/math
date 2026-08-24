@@ -674,7 +674,7 @@
   and its global monogenic different is a forbidden unit on a Keller open.
   The reducible linear/quadratic boundary also fails by a ramification-line
   unit. Thus the full natural globally monogenic one-parameter family closes;
-  nonmonogenic overorders and `JC(2)` remain open. Checks: `42`.
+  other nonmonogenic fields/orders and `JC(2)` remain open. Checks: `42`.
   Script/output/semantic SHA-256:
   `86155a2c9427ff2ae4266a11d99b1c41d05b4c0fdbf88d5dc2d8a0bf18356e11` /
   `853caab7ac647851bae242170257d6400c730a1e466554b2f84fbe019e37a784` /

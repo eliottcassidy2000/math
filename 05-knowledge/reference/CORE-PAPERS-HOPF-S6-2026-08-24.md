@@ -346,10 +346,13 @@ sidecar"; there is no direct Jacobian theorem transfer.
 is now **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED** and closes
 the split hidden-cubic lane by integrality and a repeated-root trichotomy.  It
 reinforces the boundary/predicate discipline but supplies no Hopf theorem.
-THM-3958 is now **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**,
-and the subsequently audited THM-3960 closes the full natural globally
-monogenic one-parameter cubic family. THM-3959 alone remains a
-**RESERVED / UNPROVED EMPTY STUB**. None supplies a Hopf dependency here.
+[THM-3958](../../01-canon/theorems/THM-3958-one-hidden-root-principal-different-and-pure-power-boundary.md)
+is also **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**: its
+one-hidden-root lane closes through a principal-different/forbidden-unit gate.
+[THM-3960](../../01-canon/theorems/THM-3960-natural-one-parameter-cubic-normal-monogenic-closure.md)
+is now independently audited and closes the full natural globally monogenic
+one-parameter cubic family. THM-3959 alone remains a **RESERVED / UNPROVED
+EMPTY STUB**. None supplies a Hopf dependency here.
 
 ### Explicitly rejected vocabulary bridges
 

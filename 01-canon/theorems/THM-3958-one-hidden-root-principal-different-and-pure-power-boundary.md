@@ -60,8 +60,8 @@ X=Spec A,       A=k[P,t,T]/(F),       pi:X -> A2_(P,t).    (2)
 Assume that `G` has **exactly one** root over `k(t)`: it has one linear
 factor and one irreducible quadratic factor. THM-3956 treats the complementary
 case in which the quadratic also splits. The conclusion here concerns the
-natural monogenic model `(2)` and same-function-field Keller charts, not an
-arbitrary nonmonogenic overorder or JC(2).
+natural monogenic model `(2)` and same-function-field Keller charts, not a
+different nonmonogenic field/order or JC(2).
 
 ## 1. The unique marked-root normal form
 
@@ -395,8 +395,8 @@ This is the exact structural lesson of the pure-power hostile.
 ## 6. Scope
 
 Combining THM-3956 and the present theorem closes every natural hidden cubic
-having at least one root over `k(t)`. A remaining natural cubic must have
-irreducible hidden cubic ramification, and a viable nontrivial Keller
-completion must in any event cease to be globally monogenic, in agreement
-with THM-3862. The theorem does not transfer its principal different to a
-different nonmonogenic overorder and does not prove JC(2). **QED.**
+having at least one root over `k(t)`. THM-3960 subsequently closes the
+irreducible case and proves that the natural order is already maximal in its
+function field, so no proper overorder escape survives there. A viable route
+must start from a different nonmonogenic field/order or leave this grammar,
+in agreement with THM-3862. This theorem does not prove JC(2). **QED.**

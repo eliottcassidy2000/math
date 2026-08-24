@@ -357,7 +357,7 @@ asymptotic or residue.
   the split, one-root and full natural globally monogenic families.
   THM-3959 is RESERVED and closes none of the seven `N=5` rows. THM-3955/57
   are local conductor results, not global Hopf/S6 results.
-  Open: higher ratios, parameter descent, nonmonogenic overorders, other
+  Open: higher ratios, parameter descent, nonmonogenic starting orders, other
   fields/gauges/splits/boundaries/resolvents/source attachments and `JC(2)`.
   THM-3853/3855 remain formal laboratories.
   Russell THM-3785 forces `3|d,d>=9`; THM-3843/46/49 give an immersed arm,

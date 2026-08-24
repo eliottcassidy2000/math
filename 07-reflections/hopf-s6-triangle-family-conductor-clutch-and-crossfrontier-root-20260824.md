@@ -380,7 +380,7 @@ valuation/torsion vector, and the target consumer.
 is excluded only when the actual predicate fails on the actual site consumed
 by a Keller chart.
 
-## 8. Incoming signal: THM-3950--3956 changes the sidecar
+## 8. Incoming signal: THM-3950--3958 changes the sidecar
 
 During this session, incoming work promoted THM-3950 and THM-3951 to
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED**.  THM-3950 shows
@@ -424,17 +424,20 @@ The next incoming promotions sharpen the same rule in three orthogonal ways:
 - [THM-3956](../01-canon/theorems/THM-3956-split-hidden-cubic-integrality-and-repeated-root-trichotomy.md)
   closes the `k(t)`-split hidden-cubic lane: monicity removes rational
   denominators, and the repeated-root branches are eliminated by reducibility,
-  ramification-unit, or class-group gates.
+  ramification-unit, or class-group gates;
+- [THM-3958](../01-canon/theorems/THM-3958-one-hidden-root-principal-different-and-pure-power-boundary.md)
+  closes the exactly-one-hidden-root lane by showing that the reduced relative
+  different is the sum of two required boundary primes, hence becomes a
+  forbidden nonconstant unit on any same-field affine-plane open.
 
-All four are **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED** in
+All five are **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED** in
 their stated scopes.  Together they refute the coarse heuristic that normality
 itself is the decisive coordinate.  The decisive coordinate is the labelled
 incidence pattern and ramification predicate consumed by the ambient
-recognition theorem. THM-3958 is now **PROVED + VERIFIED-EXACT +
-INDEPENDENTLY HOSTILE-AUDITED**, and the subsequently audited THM-3960 closes
-the full natural globally monogenic one-parameter cubic family. THM-3959
-alone remains a **RESERVED / UNPROVED EMPTY STUB**. None supplies a Hopf
-dependency here.
+recognition theorem. THM-3958 is **PROVED + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED**, and independently audited THM-3960 closes the full natural
+globally monogenic one-parameter cubic family. THM-3959 alone remains a
+**RESERVED / UNPROVED EMPTY STUB**. None supplies a Hopf dependency here.
 
 ## 9. Connection contract B: affine local systems over the LRC carrier
 
@@ -608,7 +611,7 @@ The session leaves eight precise tasks, ordered by expected information gain.
 6. **Two-path Smith comparison.**  Compile that LRC prototype both cellularly
    and by coinvariants, then compare labelled Smith presentations.
 7. **JC three-site census.**  For each surviving boundary grammar after
-   THM-3942, 3946, 3949, incoming 3950--3954, and 3956, record original regular locus,
+   THM-3942, 3946, 3949, incoming 3950--3954, 3956, and 3958, record original regular locus,
    conductor complement, normalization, incidence graph, and every surviving
    Kummer/Cardano character.
 8. **Coprime triangle scout.**  Enumerate small `(a,b)` matrix pairs satisfying

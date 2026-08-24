@@ -375,9 +375,10 @@ normalization sidecars, not global Jacobian or Hopf results.
 The next search should not maximize Mordell--Weil rank blindly.  The cheapest
 decisive experiments are:
 
-1. construct a genuine nonmonogenic overorder or prove that the normalization
-   parameter descends to an original polynomial target coordinate; do not
-   spend another pass on hidden-root factorization inside THM-3960's order;
+1. start from a genuinely nonmonogenic `S3` field/order outside THM-3960's
+   function-field grammar, or prove that the normalization parameter descends
+   to an original polynomial target coordinate; do not spend another pass on
+   hidden-root factorization inside THM-3960's order;
 2. search genuinely bivariate factors and simultaneous internal splits in two
    or three cube factors for an irreducible reduced full branch;
 3. compute the generic three-parabola quadratic normalization and its complete
@@ -399,8 +400,8 @@ first reduced `A1`/normal/two-character survivor paid a genus-one companion.
 The positive-genus boundary gate killed every natural factor-ratio row, with
 the forest independently killing the clean minimal/Mobius atlases; the global
 different now kills the entire natural monogenic grammar at once. A survivor
-must leave those scopes through a nonmonogenic overorder, parameter descent,
-different fields or assignments, or genuinely new factor geometry, and
+must leave those scopes through a different nonmonogenic field/order,
+parameter descent, different assignments, or genuinely new factor geometry, and
 control the full discriminant and source attachment rather than merely pass
 componentwise gates.
 

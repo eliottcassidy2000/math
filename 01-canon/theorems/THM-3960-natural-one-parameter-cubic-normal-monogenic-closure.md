@@ -17,15 +17,17 @@ status: >
   globally monogenic family, not JC(2).
 source: jc-degree6-one-place / post-THM-3956--3958 culmination, 2026-08-24
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (final_merge_referee and
-  audit_boundary_forest_3951, 2026-08-24). Both audits reconstructed the
-  irreducible/reducible dichotomy, finite-singular-locus normality, global
-  monogenic-different forbidden-unit argument, reducible quadratic-sheet
-  ramification obstruction, primitive squarefree hidden branch, and
-  discriminant-index maximality. They independently checked exhaustion by
-  THM-3956/3958 and retained nonmonogenic overorders and JC(2) as open.
-  Normal and optimized runs LF-normalize to the frozen 42-gate output; all
-  hashes agree, and no repair was required.
+  INDEPENDENT HOSTILE AUDIT PASS (jc-extra-debt-local, final_merge_referee,
+  and audit_boundary_forest_3951, 2026-08-24). The three audits independently
+  reconstructed the rational-root/integrality dichotomy and P-degree
+  argument; finite-singular-locus R1+S2 normality, including the E=0
+  doubled-branch hostile; the hidden-irreducible branch's primitivity,
+  squarefreeness, and discriminant-index maximality; the normalization-form
+  Zariski Main and global-different forbidden-unit contradictions; and both
+  reduced components when B=0. They checked exhaustion by THM-3956/3958 and
+  the exact function-field scope. Normal and optimized runs LF-normalize to
+  the frozen 42-gate output; raw and semantic hashes and documentation checks
+  pass, with no repair required.
 depends_on:
   - THM-3956-split-hidden-cubic-integrality-and-repeated-root-trichotomy
   - THM-3958-one-hidden-root-principal-different-and-pure-power-boundary
@@ -270,8 +272,11 @@ normal-monogenic mechanism closes all factorization types at once.
 
 The result does **not** prove JC(2). It proves that a counterexample cannot
 have finite normalization equal to the natural globally monogenic order
-`R[T]/(F)` in `(1)`. A viable construction must change the finite order—most
-notably by a genuine nonmonogenic overorder—or leave this one-parameter
-linear-in-`P` depressed-cubic grammar. Those escapes are precisely why the
-nonmonogenic S3 constructions elsewhere in the repo remain relevant.
+`R[T]/(F)` in `(1)`. In fact, when `B!=0`, `(10)` says this order is already
+the maximal finite order in its function field, so there is no proper
+overorder escape with the same base and field. A viable construction must
+leave this one-parameter linear-in-`P` depressed-cubic **function-field
+grammar**, for example by starting with one of the genuinely nonmonogenic
+S3 fields/orders studied elsewhere in the repo. Those constructions are not
+overorders of `(1)` and remain relevant.
 **QED.**
