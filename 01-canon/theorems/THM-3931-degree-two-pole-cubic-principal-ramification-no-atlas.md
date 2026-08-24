@@ -2,7 +2,7 @@
 id: THM-3931
 title: "Degree-two pole cubic has principal quintic ramification and no plane atlas"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. The
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. The
   THM-3930 degree-two finite-pole cubic has scalar units and class group Z.
   Its two visible quintic addresses u=+/-1 over (A,C)=(3kappa,0) land on
   the same unique length-two ramified point of the cubic fibre. Thus the
@@ -19,6 +19,19 @@ status: >
   counterexample. Higher pole maps and other coefficient grammars remain
   open.
 source: jc_zero_debt_lift / THM-3930 class-and-different audit, 2026-08-23
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23). The audit reconstructed
+  the factorial chart and its complete three-prime complement, the saturated
+  Nagata relation lattice and scalar-unit kernel, the derivative/norm
+  factorization div(F)=E, and the collision fibre. Independently,
+  the two normalization tangent vectors at u=+/-1 have determinant
+  256*kappa !=0, so the two addresses are genuinely distinct branches of E
+  through its unique ramified fibre point. This verifies the THM-3920
+  obstruction without relying on the class calculation; the principal E and
+  nonprimitive P_0 classes then give a second THM-3922 obstruction. The
+  assertion-free 53-gate companion byte-matches in normal and optimized mode;
+  raw and semantic hashes and documentation checks pass. No repair was
+  required.
 depends_on:
   - THM-3930-two-pole-linear-color-aligned-one-place-branch-packet
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
@@ -36,7 +49,7 @@ hash_basis: raw LF bytes
 
 # THM-3931 -- the first degree-two pole escape has a principal ramification debt
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.** Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over
 an algebraically closed field `k` of characteristic zero. Fix `kappa in k`
 with
 
