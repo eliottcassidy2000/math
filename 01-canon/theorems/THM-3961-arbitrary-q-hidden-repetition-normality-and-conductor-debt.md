@@ -2,8 +2,7 @@
 id: THM-3961
 title: "Arbitrary-q hidden repetition exactly detects monogenic conductor debt"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-  HOSTILE AUDIT REQUIRED. For an irreducible cubic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For an irreducible cubic
   T^3-3PT-q(P,t), remove only the forced h^2 factor from
   q(h^2,t)-2h^3 when q is exactly once divisible by P. The resulting
   hidden polynomial is squarefree if and only if the cubic hypersurface is
@@ -14,6 +13,15 @@ status: >
   grammar are the two explicitly typed nonnormal conductor-debt loci; this
   does not close JC(2).
 source: jc-degree6-one-place / post-THM-3960 arbitrary-q extension, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc_zero_debt_lift, 2026-08-24). The audit
+  reconstructed the ramification/Jacobian dictionary, the height-one prime
+  attached to every repeated adjusted factor, the h=0 forced-square seam,
+  the P^2 zero-section failure, the vertical/common-factor boundary cases,
+  and the R1+S2 normality converse. It also checked the irreducible-domain
+  scope and the normalization-form Zariski Main/global-different unit
+  obstruction. Normal and optimized 51-gate runs byte-match the frozen
+  transcript; hashes and documentation checks pass.
 depends_on: []
 related:
   - THM-3960-natural-one-parameter-cubic-normal-monogenic-closure
@@ -28,8 +36,8 @@ hash_basis: raw LF bytes
 
 # THM-3961 -- adjusted hidden squarefreeness is the exact normality gate
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-HOSTILE AUDIT REQUIRED.** Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of
 characteristic zero. Let
 
 ```text
