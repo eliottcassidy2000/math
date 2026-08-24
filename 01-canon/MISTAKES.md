@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-470 (2026-08-24, Brendle--Hung v1 source audit) -- cached `True` cells were mistaken for the identities named by their labels
+
+- **What failed:** the companion notebook to arXiv:2608.19068v1 presents
+  cached `True` outputs for `Vbc==0` and the three clauses of Lemma 5.4, but
+  mutable assignments no longer contain the expressions named by those
+  labels.  Treating the saved booleans as certificates would import two
+  unverified identities into the positive-curvature proof.
+- **Minimal witness / first failed implication:** notebook lines 8240--8244
+  form the raw `Vbc` and then assign `Vbc=FullSimplify[Vac,...]`; the later
+  assertion checks `Vac` twice.  Lines 10384--10389 assign both `ra` and `rc`
+  from `hc`, so the later torus assertions check `h_c,h_b,h_c`, not
+  `h_a,h_b,h_c`.  A displayed label and cached truth value therefore did not
+  determine the expression actually evaluated.
+- **Repair / strongest survivor:** an independent exact moving-frame audit
+  verifies the omitted `P1(L(h_a))=0` identity on both generic components of
+  `Sigma`.
+  The `V_bc` identity throughout `M_generic` follows by a typed background
+  isometry from the correctly saved `V_ac=0` calculation, and a separate exact
+  generic point has three nonzero summands cancelling to zero.  These repairs
+  are local: the cubic mean coefficient and the headline metric remain
+  **UNDER AUDIT**.
+- **Reusable rule:** every load-bearing symbolic assertion needs immutable
+  expression names or a cleared namespace, explicit dependencies, and a
+  hostile nonzero control.  A cached boolean certifies the current value of a
+  mutable symbol, not the mathematical prose attached to the cell.
+
 ## MISTAKE-469 (2026-08-24, THM-3992 nodal residual synthesis) -- an interior two-owner path was treated as a boundary forest obstruction
 
 - **What failed:** the first closing paragraph of THM-3992 said that if the

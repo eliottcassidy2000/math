@@ -331,17 +331,13 @@ asymptotic or residue.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** THM-3502/3511/3512/3516 retain compiler/owner/carry; THM-3778
-  excludes finite-spatial cycles. THM-3804 gives all Smith forms; THM-3824
-  gives fixed/one-shell tariffs and the all-shell response kernel. A
-  A FINITE-EXACT `D=B=4`, word-length-at-most-nine census has `13,853` exact
-  branches and proves that the current bank plus zero chain adaptively selects
-  at most one off-ray chain; neither fixed off-ray is universal.  This is not
-  an all-depth or physical-path selector.  THM-3511 maps even rays onto the odd half;
-  the least literal static bank has `2^(D+B-1)+B+2` points (`134/256` there).
-  Physical recursion, adaptive/projective chronology and every prize are OPEN.
-- **Two Hopf problems:** the distinct curvature/complex preprints remain
-  **PREPRINT CLAIM / UNDER AUDIT**. THM-3990/3991 prove only the repair quotient
-  and fan law `chi(W)=d*n!`.
+  excludes finite-spatial cycles; THM-3804/3824 give Smith/tariff kernels. A
+  FINITE-EXACT `D=B=4` census has `13,853` branches but only an adaptive
+  one-off-ray selector; physical/all-depth recursion and every prize are
+  **OPEN**.
+- **Two Hopf problems:** the `S2 x S2` **PREPRINT CLAIM** and unsigned `S6`
+  **MANUSCRIPT CLAIM** are distinct/under audit. THM-3990/3991/3993 prove
+  scoped mechanisms; headlines/LRC(14) remain open.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  THM-3543--3782 close
   named cells only. THM-3827--3920 force genus/degree/branch passports, close
   the `S3`, `f=0`, radial, and common-zero degree-at-most-five lanes, and leave

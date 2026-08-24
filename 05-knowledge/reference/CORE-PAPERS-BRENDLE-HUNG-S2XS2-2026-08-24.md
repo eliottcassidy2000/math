@@ -13,17 +13,19 @@ whether `S6` admits an integrable complex structure.
 
 This repository does **not** promote the headline theorem.  The paper and its
 companion notebook contain several concrete transcription/state errors.  Most
-are locally repairable, but one identity used in the load-bearing quadratic
-positivity calculation is not certified by the attached notebook as saved.
-The correct status is therefore:
+are locally repairable.  Two identities are not certified by the attached
+notebook as saved; the targeted independent and symmetry repairs below narrow
+those gaps without replaying the headline calculation.  The correct status is
+therefore:
 
 ```text
 headline existence theorem                 PREPRINT CLAIM / UNDER AUDIT
 abstract minimization framework, Section 2 READ / NO IMMEDIATE CONTRADICTION
 displayed perturbation mechanism            READ / NO IMMEDIATE CONTRADICTION
-V_bc^(2)=0                                  OPEN REFEREE OBLIGATION
+V_bc^(2)=0                                  SYMMETRY-REPAIRED RELATIVE TO V_ac
 V_bc^(2) at one generic exact point         FINITE-EXACT positive control
-z(h_a^(1))=0 on both Sigma components       FINITE-EXACT independent repair
+P1(L(h_a^(1)))=0 on Sigma intersect M_generic VERIFIED EXACT SYMBOLIC IDENTITY
+z(h_a^(1))=0 there                          RELATIVE TO GENERIC HESSIAN INVERTIBILITY
 other notebook identities                   PARTIALLY AUDITED, not imported
 Poisson repair principle                    PROVED independently in THM-3990
 ```
@@ -34,6 +36,7 @@ The source PDFs and archive used for this intake had hashes
 PDF SHA-256     46bb66824fa239b95dbfa6a661de675a2d15d0a1e38332433827bf9f31f4e4f7
 source SHA-256  81cf36b7fa6f05fcb7f1dbf825cd391b2b95fae71fa016d73f21e871c848d2b1
 notebook SHA-256 c607493b837ff3a1a73b74dfdc2337e1a45bb7290e5ac3fc59d98a3f12c82c58
+TeX SHA-256     9d123f843555ed49b38c17d651867fd7bd94d0e1da851025c673f97bde62c800
 ```
 
 The source archive contains `counterexample.tex` and
@@ -95,6 +98,8 @@ The following are visible in arXiv v1's TeX source.
 
 | source location | printed text | required repair | role |
 |---|---|---|---|
+| TeX 320, 324 | the set `S` is used but never defined | replace `S` by the defined subset `Lambda` | notation repair |
+| TeX 476--477 | the intermediate `g_std,t` display has `+d theta tensor d theta` | use `+2 d theta tensor d theta`; the final scaled metric at 482--484 is already consistent | non-load-bearing intermediate inconsistency |
 | TeX 658 | an unmatched `\rangle` in `h_a^(1)` | delete the stray bracket | display transcription |
 | TeX 881 | `V_cd^(2)` uses `L h_bd^(2)` | use `L h_cd^(2)` | unique index repair |
 | TeX 885--886 | the expansion ends in `2 lambda_d V_dd^(2)` | use `2 lambda_c lambda_d V_cd^(2)` | load-bearing displayed expansion |
@@ -130,10 +135,92 @@ computed `Vac`.  The later cell at notebook lines 8269--8274 reports
 `Vbc==0` as `True`, but it is therefore a second check of `Vac==0`, not a
 check of the intended `Vbc` expression.
 
-This is load-bearing.  The paper's quadratic coefficient contains
+As saved, this is load-bearing.  The paper's quadratic coefficient contains
 `2 lambda_c V_bc^(2)`, and the claimed lower bound in Proposition 5.2 uses
 `V_bc^(2)=0`.  No later cell consumes the corrupted variable, so the error is
-localized, but localization does not supply the missing identity.
+localized.  One conditional global symmetry reduction and one exact point
+control now narrow the gap.
+
+First, there is a global symmetry argument.  Let `R` be the oriented
+quarter-turn
+
+```text
+R e_x=e_y,       R e_y=-e_x,       R e_z=e_z,
+```
+
+and put
+
+```text
+F(p_1,p_2)=(R p_1,-R p_2).                               (1a)
+```
+
+The map is an isometry of the background Cheeger metric.  If `alpha_A` is the
+diagonal `SO(3)` action, then
+
+```text
+F o alpha_A=alpha_(R A R^(-1)) o F,
+F_*K_omega=K_(R omega),       F_*J_omega=J_(R omega),
+<F(p_1),F(p_2)>=-<p_1,p_2>.                               (1b)
+```
+
+Writing the target point with primes, one also has
+
+```text
+R(p_1+p_2)=-(p'_2-p'_1),
+R(p_2-p_1)=-(p'_1+p'_2).                                  (1c)
+```
+
+Substitution in the displayed tensor definitions gives
+
+```text
+F_*h_a^(1)=-h_b^(1),
+F_*h_c^(1)= h_c^(1),
+F_*h_ac^(2)=-h_bc^(2).                                    (1d)
+```
+
+In the paper's zero-plane charts this also gives
+
+```text
+F_*m_1=-m'_2,   F_*m_2=-m'_1,   F_*m_3=-m'_3,   F_*m_4=-m'_4,
+z'=(z_3,z_4,z_1,z_2).                                    (1e)
+```
+
+The bi-invariant `SO(3)` metric used in the Cheeger construction is
+`Ad`-invariant, while the curvature operators `L` and `Q(h,k)` are natural
+under isometries.  Together with transport of the zero-plane bundle, its
+normal Hessian, and its minimizing normal vector, this makes the curvature
+expansion and normal minimization natural under `F`.  Therefore
+
+```text
+V_ac o F^(-1)=-V_bc.                                      (1f)
+```
+
+The notebook's preceding `V_ac=0` block is not overwritten.  Conditional on
+that saved exact calculation, (1f) proves `V_bc=0` throughout `M_generic`.
+This is a conceptual repair of the assignment error, not an independent
+replay of the `V_ac` block.
+
+Second, the
+[exact point audit](../../04-computation/brendle_hung_vbc_exact_point_audit_20260824.py)
+is independent of the saved Mathematica state.  It rebuilds the paper's
+metric, connection, Riemann tensor, `L`, `Q`, Hessian, and normal minimizer at
+`theta=pi/6` and the rational `SO(3)` frame obtained from quaternion
+`(1,2,3,4)`.  It shares the same reconstructed background-geometry
+implementation as the `h_a` audit below, so it is not a second independent
+implementation of that geometry.  It finds the nontrivial cancellation
+
+```text
+P0 L(h_bc)             =  581/20250,
+P0 Q(h_b,h_c)          = -1064/50625,
+(1/2) r(h_b).z(h_c)    = -259/33750,
+V_bc                   = 0.                               (1g)
+```
+
+All three summands are nonzero, so the control detects a missing or duplicated
+term.  Its [frozen output](../results/brendle_hung_vbc_exact_point_audit_20260824.out)
+byte-matches normal and optimized Python.  This is **FINITE-EXACT at one
+generic point**, not by itself an identity on `M_generic`; the conditional
+generic-locus repair is (1f).
 
 ### 3.2 The missing `z(h_a^(1))=0` verification
 
@@ -157,55 +244,71 @@ objects and do not consume the corrupted `ra` or `za`.  Moreover the
 the saved-state error invalidates the notebook cell as a certificate but does
 not by itself refute the later displayed cubic coefficient.
 
-The missing `h_a` branch has now been rebuilt independently from the paper's
-moving-frame metric, connection, curvature, and linearized-curvature operator.
-The exact companion
-[reconstructs `P1(L(h_a))`](../../04-computation/brendle_hung_lemma54_independent_audit_20260824.py)
-and proves all four entries vanish identically on both parametrized components
-of `Sigma`; its [frozen transcript](../results/brendle_hung_lemma54_independent_audit_20260824.out)
-also includes a tensor with a nonzero hostile response.  This is
-**FINITE-EXACT** closure of the omitted branch, not a replay of Lemma 5.4 or
-of the paper as a whole.
-
-### 3.3 A sensitive exact point control for `V_bc^(2)`
-
-The independent
-[`V_bc` point audit](../../04-computation/brendle_hung_vbc_exact_point_audit_20260824.py)
-rebuilds the three defining summands at `theta=pi/6` and at the rational
-oriented frame coming from the quaternion `(1,2,3,4)`.  It finds
+The omitted `P1(L(h_a))=0` identity has now been independently repaired.  The
+[symbolic audit](../../04-computation/brendle_hung_lemma54_independent_audit_20260824.py)
+reconstructs the moving-frame geometry from the paper and proves on both
+parametrized components of `Sigma intersect M_generic` that
 
 ```text
-P0 L(h_bc)       =  581/20250,
-P0 Q(h_b,h_c)    = -1064/50625,
-(1/2) r_b.z_c    = -259/33750,
-sum              = 0.
+P1(L(h_a))=(0,0,0,0).                                    (2a)
 ```
 
-All three summands are nonzero, so this detects a dropped, duplicated, or
-sign-flipped term.  The [frozen transcript](../results/brendle_hung_vbc_exact_point_audit_20260824.out)
-is **FINITE-EXACT** evidence at one genuinely generic point.  It is not a
-proof that `V_bc^(2)` vanishes identically.  A global symbolic reduction or a
-fully checked equivariance argument is still the decisive obligation.
+This is a **VERIFIED EXACT SYMBOLIC IDENTITY relative to the reconstructed
+formulas**, not a finite census.  The script parametrically simplifies all
+four components on both generic pieces.  The further implication
+`z(h_a)=0` uses the source's assertion that the normal Hessian is invertible
+on the generic locus; that Hessian assertion is not audited by this script.
+Four exact point controls agree.  A deliberately non-special constant
+symmetric tensor instead gives
 
-## 4. Exact remaining referee obligations
+```text
+P1(L(h_hostile))=(0,0,-1/3,2/9)                           (2b)
+```
+
+at the recorded torus point, ruling out a vacuous all-zero implementation.
+The [frozen output](../results/brendle_hung_lemma54_independent_audit_20260824.out)
+byte-matches normal and optimized Python.  This promotes only the omitted
+`P1(L(h_a))=0` clause to **VERIFIED / EXACT SYMBOLIC relative to the
+reconstructed formulas**; it does not reach the nongeneric endpoints, replay
+the other Lemma 5.4 clauses, audit the generic Hessian invertibility, or
+recompute the cubic coefficient.
+
+## 4. Audit matrix after the targeted repairs
+
+| dependency | status | evidence / remaining boundary |
+|---|---|---|
+| headline metric with `sec>0` | **PREPRINT CLAIM / UNDER AUDIT** | consumes every row below |
+| Section 2 minimization framework | **READ / NO IMMEDIATE CONTRADICTION** | no full formal replay |
+| arXiv v1 TeX defects | **VERIFIED DEFECTS / locally repairable** | notation, metric, index, cross-term, label, and cutoff corrections above |
+| `V_bc=0` | **REPAIRED RELATIVE TO saved `V_ac=0`** | symmetry (1a)--(1f), plus FINITE-EXACT point hostile (1g) |
+| Lemma 5.4 `P1(L(h_a))=0` clause | **VERIFIED EXACT SYMBOLIC IDENTITY** | relative to reconstructed formulas; hostile (2b) |
+| Lemma 5.4 `z(h_a)=0` consequence | **CONDITIONAL / relative consequence** | also inherits the source's generic Hessian invertibility |
+| remaining quadratic identities | **NOTEBOOK CLAIM / PARTIALLY AUDITED** | clean immutable replay still required |
+| cubic coefficient `pi^2/(18sqrt(3))` | **LOAD-BEARING NOTEBOOK CLAIM / OPEN** | highest-value independent computation |
+| Poisson repair from a nonzero mean | **PROVED ABSTRACTLY** | THM-3990; paper-specific mean remains claimed |
+
+## 5. Exact remaining referee obligations
 
 The shortest path to a trustworthy v1 certificate is:
 
-1. **Global quadratic identity.** Recompute the intended `Vbc` expression
-   without assignment reuse and prove it vanishes on `0<theta<Pi/2`, or give
-   a complete symmetry derivation from an independently checked identity.
-   The exact generic-point cancellation is a positive control, not closure.
-2. **Rebuild all ten `V^(2)` summands.** Use the independently repaired
-   `h_a` branch, the corrected `h_cd`, corrected
+1. **Fresh-kernel quadratic audit.** Rebuild all ten `V^(2)` summands with
+   immutable names.  Use the corrected `h_cd`, the symmetry-repaired `V_bc`,
+   and the exact generic-point cancellation as a positive control, not as
+   global closure.
+2. **Complete Lemma 5.4 replay.** Retain the independently verified
+   `P1(L(h_a))=0` identity and recompute `z(h_b),z(h_c)` from a cleared
+   namespace on both components of `Sigma intersect M_generic`, followed by a
+   separate boundary/extension audit on the connected completed `Sigma`.
+3. **Rebuild the full lower bound.** Use the corrected `h_cd`, corrected
    cross term, and a valid smallness constant
    `lambda_0<=sqrt(delta/C)`.
-3. **Rebuild the cubic witness.** Evaluate the four `A1`--`A4` contributions
+4. **Rebuild the cubic witness.** Evaluate the four `A1`--`A4` contributions
    in a clean state and independently recover the stated integral
    `pi^2/(18 sqrt(3))`.
-4. **Global smoothness audit.** Check that every infinite-series coefficient
+5. **Global smoothness audit.** Check that every infinite-series coefficient
    used in `h^(2)` extends smoothly across `Delta_+ union Delta_-`, with the
    convergence and differentiation needed by the curvature calculation.
-5. **Abstract-to-geometric interface.** Verify all hypotheses of the compact
+6. **Abstract-to-geometric interface.** Verify all hypotheses of the compact
    minimization theorem for the corrected global tensors, including the
    uniform remainder and density statements.
 
@@ -213,7 +316,22 @@ Running the notebook top-to-bottom without fixing the two assignment errors
 is not an independent path.  A repaired notebook should clear its namespace
 or use immutable names for every asserted identity.
 
-## 5. Transferable themes and new frontiers
+## 6. Reproduction of the targeted exact repairs
+
+From the repository root:
+
+```bash
+python3 04-computation/brendle_hung_lemma54_independent_audit_20260824.py
+python3 -O 04-computation/brendle_hung_lemma54_independent_audit_20260824.py
+python3 04-computation/brendle_hung_vbc_exact_point_audit_20260824.py
+python3 -O 04-computation/brendle_hung_vbc_exact_point_audit_20260824.py
+```
+
+The scripts use exact SymPy arithmetic.  They declare their universes,
+positive controls, hostile controls, conclusions, and nonconsequences.  They
+do not call or translate cached Mathematica output.
+
+## 7. Transferable themes and new frontiers
 
 The useful mathematical object is not “third order” by itself.  It is the
 pair

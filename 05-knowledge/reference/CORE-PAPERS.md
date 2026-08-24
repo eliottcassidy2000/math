@@ -14,9 +14,9 @@ collide, links—not bare IDs—are canonical.
 - **Flows:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes the exact-cost conjecture; cost-free `d_max` and planar `2d_max` survive.
 - **Reciprocals:** support differs from indexed multiplicity; figurate formulas omit repo extensions.
 - **JC/DC:** THM-1300 refutes `JC(n>=3)`; `JC(2),DC(1),DC(2)` are open. THM-2071 is local; THM-2044 refutes the two-pair Poisson claim.
-- **Two Hopf problems:** Brendle--Hung's claimed positive-curvature metric on
-  `S2 x S2` and the claimed integrable complex structure on `S6` are both
-  **PREPRINT CLAIM / UNDER AUDIT**, and are mathematically distinct.  Use the
+- **Two Hopf problems:** Brendle--Hung's `S2 x S2` **PREPRINT CLAIM** and the
+  unsigned, undated `S6` **MANUSCRIPT CLAIM** are distinct and **UNDER AUDIT**.
+  Use the
   [Brendle--Hung source/referee ledger](CORE-PAPERS-BRENDLE-HUNG-S2XS2-2026-08-24.md)
   and the [Hopf/S6 source/referee ledger](CORE-PAPERS-HOPF-S6-2026-08-24.md),
   not solved claims.

@@ -1,23 +1,28 @@
 # Hopf/S6 manuscript intake and audit ledger -- 2026-08-24
 
-**Status gate.**  The direct PDF
+**Status gate.**  The unsigned, undated direct PDF
 [*The (3,4,infinity) modular family of 2-tori, completed at its three special
 points, is a complex structure on S6*](https://alpo.ge/s6.pdf) is treated here
-as a **PREPRINT CLAIM / UNDER AUDIT**.  It was downloaded on 2026-08-24 as a
-108-page PDF with SHA-256
+as a **MANUSCRIPT CLAIM / UNDER AUDIT**.  It was downloaded on 2026-08-24 as a
+108-page PDF whose author/title metadata fields are blank.  Its creation and
+modification dates are the non-informative `1980-01-01` epoch; the body gives
+no author, date, or version.  Its SHA-256 is
 
 ```text
 283bba102dd1d5dc346af81b28145bdaaea6654398d5032e76e97bafb9a858f2.
 ```
 
-The title is transcribed from page 1.  No peer-review or publication status is
-inferred.  This file separates four levels which must not be collapsed:
+The title is transcribed from page 1.  The host is Levent Alpöge's personal
+domain, but the homepage neither lists nor links this file.  Attribution to
+Alpöge is therefore a plausible inference, not explicit bibliographic data in
+the artifact.  No peer-review or publication status is inferred.  This file
+separates four levels which must not be collapsed:
 
 ```text
 PROVED IN REPO
 FINITE-EXACT FROM DISPLAYED DATA
 READ / NO IMMEDIATE CONTRADICTION
-PREPRINT CLAIM / OPEN REFEREE OBLIGATION.                    (1)
+MANUSCRIPT CLAIM / OPEN REFEREE OBLIGATION.                  (1)
 ```
 
 In particular, this repository does **not** currently record the Hopf problem
@@ -260,7 +265,8 @@ CONTRADICTION**, which is not proof:
    transforms;
 4. the collar gluing description and the dependence of the displayed
    topological presentation on the three twist coordinates;
-5. the local conductor-supported differential mechanism in Section 10.
+5. the local ambient differential whose fibre-differential image becomes
+   conductor-supported torsion in Section 10.
 
 The priority **OPEN REFEREE OBLIGATIONS** are:
 
@@ -276,7 +282,7 @@ The priority **OPEN REFEREE OBLIGATIONS** are:
 6. run a specialist topology audit of the collapse and recognition maps.
 
 Until these gates close, statements about compactness, smoothness, homology,
-or a complex structure on `S6` remain **PREPRINT CLAIM / UNDER AUDIT**.
+or a complex structure on `S6` remain **MANUSCRIPT CLAIM / UNDER AUDIT**.
 
 ## 6. The CDP20 conflict: what is and is not established
 
@@ -284,8 +290,9 @@ Campana--Demailly--Peternell 2020 propagates a twisted-differential vanishing
 through singular fibres.  In the published argument, Proposition 2.4 reduces
 the global vanishing problem to all fibres, and the conormal discussion treats
 vanishing of torsion-free fibre differentials as sufficient for the ambient
-restriction.  The S6 manuscript says this passage loses a class supported on
-the conductor of its nonnormal cusp fibre.
+restriction.  The S6 manuscript says an ambient cotangent section can remain
+nonzero while its image in fibre differentials is torsion supported on the
+conductor and hence dies after the torsion-free quotient.
 
 [THM-3955](../../01-canon/theorems/THM-3955-node-cotangent-normalization-kernel-and-conductor-torsion.md)
 proves the exact local algebra independently.  For
@@ -434,7 +441,7 @@ specialist verification of the analytic construction and topology.
 
 ## 9. Exact extensions found by the 2026-08-24 audit
 
-### The periodic-fan grammar is Euler-isolated in torus dimension two
+### The irreducible one-Euler-fibre grammar isolates torus dimension two
 
 [THM-3991](../../01-canon/theorems/THM-3991-periodic-unimodular-toric-cusp-factorial-euler-obstruction.md)
 proves independently of the manuscript that a rank-`n`, lattice-periodic,
@@ -447,9 +454,10 @@ chi(W)=d*n!,                 number of components=d.       (15)
 
 Only top-simplex orbits contribute Euler characteristic, and their number is
 forced by normalized volume.  If this is the only nonzero-Euler fibre of a
-compact torus fibration with homology `S^(2n+2)`, then `d*n!=2`; irreducibility
-forces `(n,d)=(2,1)`.  Thus the manuscript's immediate higher-rank grammar
-cannot produce higher even-dimensional homology spheres.  Extra singular
+compact torus fibration with homology `S^(2n+2)`, then `d*n!=2`; the solutions
+are `(n,d)=(1,2),(2,1)`, and irreducibility `d=1` forces `(n,d)=(2,1)`.
+Thus no same-form example with `n>=3` satisfies the sphere Euler condition.
+Extra singular
 fibres, fixed-point quotients, singular cones, or a different degeneration
 grammar are the exact escape routes.
 
@@ -478,9 +486,9 @@ orders `3,4` with a multiplicative cusp, the elementary Euler filter also
 permits `IV+III+I5`; the primitive width-one cusp singles out the displayed
 `IV*+III+I1` spine.
 
-### Continuous parameters must first be divided by the integral centralizer
+### The integral centralizer gives a marked local filling filter
 
-Exact linear algebra gives the simultaneous integral centralizer
+The frozen exact companion computes the simultaneous integral centralizer
 
 ```text
 C_GL4(Z)(T1,T2)={+/- (I+b E14): b in Z}.                 (17)
