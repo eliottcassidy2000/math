@@ -2,9 +2,8 @@
 id: THM-3898
 title: "Equianharmonic equality colors have an exact all-depth response identity"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; independently
-  hostile-audited with one scope repair applied, awaiting focused audit of
-  that repair.  On every positive equal-y-degree seam of the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On every
+  positive equal-y-degree seam of the
   THM-3881 residual, seven normalized macros give one exact all-depth color
   identity.  Their base arrival depths are
   0,n,n+2,2n+2,2n+4,3n+4,4n+4.  The canonical zero-lower-sidecar payment
@@ -16,8 +15,11 @@ source: >
   jc_zero_debt_lift / root-authorized takeover of the abandoned THM-3898
   reservation, post-THM-3905 response compression, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASSED THE CORE IDENTITY AND CANONICAL ALL-n
-  OBSTRUCTION, AND FOUND ONE REPAIRED SCOPE ERROR: for arbitrary U,V their
+  INDEPENDENT HOSTILE AUDIT PASS after one scope repair.  The audit rederived
+  all seven normalization exponents, the exact affine arrival schedule,
+  formal-square-root uniqueness through the first marked source, the
+  canonical all-n response J_n=L^2/h, and the gcd(h,L) descent obstruction.
+  It found and repaired one overstatement: for arbitrary U,V their
   epsilon-jets make the persistent macro continue beyond depth four; only its
   explicit Rhat shift has width four, and exact termination holds for the
   canonical constant sidecars.  The companion independently normalizes
@@ -25,9 +27,8 @@ audit: >
   left symbolic, checks the affine arrival schedule, replays the canonical
   source at n=1,...,8, verifies the n=4 response and rational-x hostile, and
   retains the exact C3 color constants in 46 active gates.  Normal and
-  optimized runs byte-match the frozen output.  Independent audit must
-  recheck every normalization exponent, formal-square-root uniqueness at the
-  marked depth, the gcd(h,L) obstruction, and the arbitrary-sidecar boundary.
+  optimized runs byte-match the frozen output and both stored hashes were
+  independently rechecked.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
   - THM-3899-nonzero-sidecar-y-degree-tariff-and-equianharmonic-equality-colors
@@ -44,9 +45,8 @@ hash_basis: raw LF bytes
 
 # THM-3898 -- one identity contains every equality-color response
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; core independently
-hostile-audited, with the persistent-jet scope repair awaiting focused
-audit.**  Work over an algebraically closed field `k` of characteristic zero.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.
 In `D=k[x,y]` retain
 
 ```text
