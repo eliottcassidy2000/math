@@ -348,7 +348,11 @@ What it cannot pay is boundary rationality. The next positive cubic design
 must preserve `(33)` while replacing the genus-two ramification curve by a
 rational curve whose affine singular fibres satisfy THM-3920's address cap.
 This is stronger and more precise than asking only for a one-place
-discriminant or nonmonogenicity.
+discriminant or nonmonogenicity. THM-3928 adds an orthogonal warning:
+degenerating a torus coefficient conic to two affine lines forces a high
+Cardano fold and gives only one intrinsic resolvent three-direction. Neither
+statement substitutes for this theorem's actual-completion class and boundary
+audit.
 
 Reproduce the exact packet with
 

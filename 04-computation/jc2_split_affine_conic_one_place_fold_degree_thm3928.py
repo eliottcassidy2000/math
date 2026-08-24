@@ -148,7 +148,37 @@ double_factorization = (2 * ell**3 - 3 * sigma * q_symbol) * (
 )
 zero(
     sp.expand(double_delta - double_factorization).subs(sigma**2, 3),
-    "double-line discriminant factors into two cubics",
+    "double-line discriminant factors identically",
+)
+
+# The factors are cubics only in the classical deg(q)<=3 grammar.  Under the
+# arbitrary-q component scope, a sextic one-place component can survive.
+x_host, y_host, t_host = sp.symbols("x_host y_host t_host")
+f_host = y_host - x_host**6
+host_delta = 4 * x_host**6 - (2 * x_host**3 - f_host) ** 2
+zero(
+    sp.expand(host_delta - f_host * (4 * x_host**3 - f_host)),
+    "arbitrary-q double-line hostile factorization",
+)
+gate(
+    sp.Poly(f_host, x_host, y_host).total_degree() == 6,
+    "double-line hostile component has degree six",
+)
+zero(
+    sp.expand(f_host.subs({x_host: t_host, y_host: t_host**6})),
+    "double-line hostile has polynomial A1 normalization",
+)
+gate(
+    sp.degree(t_host, t_host) == 1 and sp.degree(t_host**6, t_host) == 6,
+    "double-line hostile parametrization is birational with one infinity address",
+)
+gate(
+    sp.degree(t_host**2, t_host) == 2,
+    "double-line hostile keeps p nonzero in the branch function field",
+)
+gate(
+    sp.degree(2 * t_host**3, t_host) == 3,
+    "double-line hostile coefficient map is nonconstant",
 )
 
 for components in range(1, 9):
@@ -179,7 +209,7 @@ semantic_payload = {
     "degree": "nonparallel_degree_N_branch_forces_deg_h_at_least_ceil_Nplus1_over2",
     "sextic": "fold_degrees_4_5_6_with_line_packets_6_2__6_4__6_6",
     "kummer": "two_split_components_formal_relations_Z_plus_Z3_diagonal_only",
-    "boundaries": "double_line_factors;high_folds_and_infinity_component_remain",
+    "boundaries": "classical_full_sextic_double_line_factors;arbitrary_q_component_hostile;high_folds_and_infinity_component_remain",
 }
 semantic_sha256 = hashlib.sha256(
     json.dumps(semantic_payload, sort_keys=True, separators=(",", ":")).encode()
@@ -191,8 +221,8 @@ print("parallel=distinct parallel affine factors impossible for nonconstant h")
 print("degree_N=deg(h)>=ceil((N+1)/2)")
 print("sextic=(d;e1,e2;infinity_contact)=(4;6,2;4),(5;6,4;2),(6;6,6;0)")
 print("split_lattice=SNF(1,1,3,0);formal quotient Z plus Z/3")
-print("double_line=Delta factors as two cubics;resolvent SNF(1,6)")
-print("scope=birational_split_and_double_line_closed;high_folds_and_infinity_component_open")
+print("double_line=classical full sextic factors;arbitrary-q sextic component hostile;resolvent SNF(1,6)")
+print("scope=birational distinct-line and classical full-sextic double-line closed;high folds, arbitrary-q components, infinity component open")
 print(f"semantic_sha256={semantic_sha256}")
 print(f"CHECKS={CHECKS}")
 print("RESULT=PASS")

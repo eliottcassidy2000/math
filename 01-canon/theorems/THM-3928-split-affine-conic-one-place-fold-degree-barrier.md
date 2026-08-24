@@ -2,7 +2,7 @@
 id: THM-3928
 title: "Split affine conic forces a high-degree Cardano fold on a one-place branch"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. Let an
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Let an
   irreducible nonlinear degree-N torus branch have affine normalization A1,
   and suppose its quadratic coefficient is the product of two distinct
   affine lines. Parallel lines are impossible. For nonparallel lines, the
@@ -13,36 +13,41 @@ status: >
   sextic. On the quadratic resolvent, splitting the conic supplies only one
   intrinsic three-torsion direction: the universal divisor-relation lattice
   is Z plus Z/3, not two copies of Z/3. Extra independent three-classes need
-  an additional global relation. A double-line conic makes the torus
-  discriminant a product of two cubics, so cannot underlie an irreducible
-  sextic. This closes the double-line and birational distinct-line lanes,
-  but degree-4/5/6 folds and conics with an infinity component remain open.
+  an additional global relation. In the classical `deg q<=3` torus-sextic
+  grammar, a double-line conic makes the full discriminant a product of two
+  factors of degree at most three, so it cannot be an irreducible sextic.
+  This closes the classical full-discriminant double-line and birational
+  distinct-line lanes. Degree-4/5/6 folds, arbitrary-`q` double-line
+  components, and conics with an infinity component remain open.
 source: jc_degree6_one_place / post-THM-3925 singular splitting-conic lane, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The proof
-  separates the normalization-integrality step, parallel-line UFD
-  obstruction, projective degree ledger, fold-degree interpretation, and
-  quadratic-resolvent divisor presentation. The assertion-free exact
-  companion verifies the Cardano identities, all degree tables, the split
-  and double-line Smith forms, the double-line discriminant factorization,
-  the arbitrary-component extension, and sharp excluded controls. Normal and
-  optimized replay must byte-match the frozen output before promotion.
+  INDEPENDENT HOSTILE AUDIT PASS (incoming_thm3928_audit/root, 2026-08-23).
+  The audit independently rederived Cardano-parameter integrality, the
+  parallel-line UFD contradiction, projective degree ledger and sextic table,
+  and every divisor/Smith-form implication. It found and repaired one genuine
+  scope error in the incoming double-line sharpening: degree-at-most-three
+  requires the classical `deg q<=3` full-discriminant grammar, while an
+  arbitrary-`q` sextic component survives. MISTAKE-469 and the explicit
+  `y=x^6` hostile now freeze that boundary. LF-normalized normal and optimized
+  streams match the frozen LF output in all 812 active gates; raw script,
+  output, and semantic hashes agree. No further repair was needed.
 related:
   - THM-3844-two-cusp-polynomial-branch-quadratic-resolvent-design-gate
   - THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
   - THM-3925-fivefold-conic-contact-torus-sextic-one-place-fold
+  - THM-3926-unit-ideal-cubic-primitive-class-genus-two-boundary
 script: 04-computation/jc2_split_affine_conic_one_place_fold_degree_thm3928.py
 output: 05-knowledge/results/jc2_split_affine_conic_one_place_fold_degree_thm3928.out
-script_sha256: ab66d5f711b4291861b8354c0d533223ba27fc3456ecc79999ddcd4d92c46aa7
-output_sha256: 2b1d8bec1d41f132c39bb01e76f34c140f8c6845ed64f60bdab7f5b15d1f48db
-semantic_sha256: 5d4acb8186b838b177e2a6951f9a96e1fb580a903f8c4fe99ca394fce2c608cd
+script_sha256: c846567c49ef914685b093dcab39cc40b530f9928a965fcdd21b2396a01c49d9
+output_sha256: 6f9a2df3bd7d635b40890a32f6518b952835ce554ba438577807f04a04d47f7a
+semantic_sha256: 8752329bf706a7e865eb4990feebceca106242fcd60bbce1d6505eade459e6f8
 hash_basis: raw LF bytes
 ---
 
 # THM-3928 -- splitting the conic multiplies fold degree, not C3 directions
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero. Let
 
 ```text
@@ -338,7 +343,7 @@ Z^(2r) / <D_i^++D_i^- (1<=i<=r), 3 sum_i D_i^+>
 
 There is still only one intrinsic three-torsion direction.
 
-## 6. Double lines factor; high folds and the infinity component remain
+## 6. Double lines: the classical full sextic factors, but components survive
 
 The other affine singular conic is even more rigid. Choose `sigma in k` with
 `sigma^2=3`. If `p=ell^2`, then identically
@@ -347,9 +352,37 @@ The other affine singular conic is even more rigid. Choose `sigma in k` with
 4p^3-27q^2=(2ell^3-3sigma q)(2ell^3+3sigma q).              (26)
 ```
 
-Both factors have degree at most three. Even if one is scalar, zero, or
-repeated, the result is reducible or nonreduced; it is never an irreducible
-sextic. Thus double lines are empty for the branch geometry sought here.
+The identity alone gives no degree bound because the standing component
+hypotheses allow arbitrary `q`. Under the additional classical torus-sextic
+assumptions
+
+```text
+deg q<=3,                 Delta itself irreducible of degree six,           (27)
+```
+
+both factors in `(26)` have degree at most three. Even if one is scalar,
+zero, or repeated, the full discriminant is reducible or nonreduced; it is
+never an irreducible sextic. Thus double lines are empty in the classical
+full-discriminant grammar `(27)`.
+
+They are not empty for the broader component grammar. Put
+
+```text
+ell=x,        f=y-x^6,        q=(2x^3-f)/(3sigma).                         (28)
+```
+
+Then
+
+```text
+4x^6-27q^2=f(4x^3-f).                                                       (29)
+```
+
+The component `Gamma=V(f)` is an irreducible degree-six curve with
+normalization `t |-> (t,t^6)` and one place at infinity. On it, `p=t^2` is
+nonzero in the function field and `q=2t^3/(3sigma)` is nonconstant. This is
+the hostile witness separating full-discriminant reducibility from exclusion
+of a chosen component. Arbitrary-`q` double-line components therefore remain
+open; see MISTAKE-469.
 
 Their resolvent lattice remains a useful reducible hostile. If
 `q mod ell` is nonzero, then
@@ -361,18 +394,19 @@ div(ell)=D^++D^-,                         div(gamma)=6D^+.
 The corresponding presentation has Smith form
 
 ```text
-Z^2/<(1,1),(6,0)> = Z/6.                                  (27)
+Z^2/<(1,1),(6,0)> = Z/6.                                  (30)
 ```
 
 Its three-primary Kummer class is `2[D^+]`; again there is only one
-three-direction. This is a class-lattice control, not a surviving sextic.
+three-direction. This is a class-lattice control, not an exclusion of the
+surviving arbitrary-`q` component `(28)`.
 
 Likewise, if one projective component of the conic is the chosen line at
 infinity, the affine polynomial `p` is linear rather than a product of two
 affine line equations. Its missing projective divisor must be retained in
 the boundary ledger, and `(3)` is not asserted. Together with the
-degree-`4,5,6` distinct-line folds, this is the honest remaining
-singular-conic design space.
+degree-`4,5,6` distinct-line folds and arbitrary-`q` double-line components,
+this is the honest remaining singular-conic design space.
 
 Reproduce the exact arithmetic packet with
 
@@ -381,5 +415,6 @@ python3 04-computation/jc2_split_affine_conic_one_place_fold_degree_thm3928.py
 python3 -O 04-computation/jc2_split_affine_conic_one_place_fold_degree_thm3928.py
 ```
 
-Both streams must byte-match the frozen output named in the metadata.
+After platform newlines are normalized to LF, both streams must byte-match
+the frozen LF output named in the metadata.
 **QED.**

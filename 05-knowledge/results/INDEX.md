@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3930 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3932 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -279,6 +279,21 @@
   `5ff37ae063072265f413cd0039c1e4e4d0d2c84ffc1cb937a47a29c42e27500b` /
   `cdb53643de8207a9e338c8a8f752a7603164e3a905e48180a89d700eede64540` /
   `8deb06257def95cc087c0d2b0819cde103f9742fe1bc541f1e0258bd5e462e95`.
+
+- `jc2_split_affine_conic_one_place_fold_degree_thm3928.py` -> matching
+  `.out` [THM-3928 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  For a nonlinear degree-`N` one-place torus branch with quadratic coefficient
+  equal to two distinct affine lines, parallel lines are impossible and a
+  nonparallel coefficient fold has degree at least `ceil((N+1)/2)`.  A sextic
+  has exactly the packets `(d;e_1,e_2)=(4;6,2),(5;6,4),(6;6,6)`, so the
+  birational seam is empty.  The universal split-line resolvent presentation
+  is `Z direct_sum Z/3`, not `(Z/3)^2`.  In the classical `deg q<=3` grammar a
+  double line cannot give a full irreducible sextic; arbitrary-`q` components
+  survive, as frozen by MISTAKE-469's `y=x^6` hostile.  Checks: `812`.
+  Script/output/semantic SHA-256:
+  `c846567c49ef914685b093dcab39cc40b530f9928a965fcdd21b2396a01c49d9` /
+  `6f9a2df3bd7d635b40890a32f6518b952835ce554ba438577807f04a04d47f7a` /
+  `8752329bf706a7e865eb4990feebceca106242fcd60bbce1d6505eade459e6f8`.
 
 - `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
   `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil

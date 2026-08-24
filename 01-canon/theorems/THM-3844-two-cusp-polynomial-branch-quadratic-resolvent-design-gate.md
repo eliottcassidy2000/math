@@ -32,6 +32,7 @@ related:
   - THM-3840-forced-cubic-two-arm-jelonek-passport
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
   - THM-3842-nonlinear-cubic-tower-trace-shift-eightfold-base-change
+  - THM-3928-split-affine-conic-one-place-fold-degree-barrier
 script: 04-computation/jc2_two_cusp_polynomial_branch_resolvent_thm3844.py
 output: 05-knowledge/results/jc2_two_cusp_polynomial_branch_resolvent_thm3844.out
 script_sha256: 23121e393bfcfc88ee1c0370636451291210ccf4cec5e8f4b4fbf916a5edff72
@@ -452,7 +453,11 @@ two cusps can still be only one depressed-cusp direction in disguise**.
 The next positive design should therefore seek a polynomially normalized
 branch which defeats every polynomial factorization `(p,q)` through
 `-4p^3-27q^2`, plausibly with torsion rank at least two so that local cusp
-classes cannot all lie on one global line.
+classes cannot all lie on one global line. Subsequent THM-3928 shows that
+merely splitting `p` into two affine-line components does not pay that rank:
+its universal resolvent presentation is `Z direct_sum Z/3`, with the
+anti-diagonal still free. A second three-class needs additional global
+divisor data and an actual class-group audit.
 
 ## 6. Exact companion and audit boundary
 

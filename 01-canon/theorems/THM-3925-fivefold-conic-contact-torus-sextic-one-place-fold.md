@@ -38,6 +38,7 @@ related:
   - THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff
   - THM-3882-rational-dual-one-place-wronskian-projection-criterion
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
+  - THM-3928-split-affine-conic-one-place-fold-degree-barrier
 script: 04-computation/jc2_fivefold_conic_contact_torus_sextic_thm3925.py
 output: 05-knowledge/results/jc2_fivefold_conic_contact_torus_sextic_thm3925.out
 script_sha256: 422fd040f49fd3002c714bca4c29f24898c42ed661f243a5c19b3e769af399fb
@@ -311,10 +312,13 @@ one place -> polynomial automorphism fold
 
 The theorem closes the complete marked family `(1)`, including every linear
 change of the cubic which is invisible on the fixed conic. It does not
-classify other conic contact partitions, singular splitting conics,
-non-torus discriminants, nonmonogenic cubic orders with the same abstract
-branch, or arbitrary rational torus sextics. In particular it does not
-settle `JC(2)`.
+classify other conic contact partitions, non-torus discriminants,
+nonmonogenic cubic orders with the same abstract branch, or arbitrary
+rational torus sextics. Subsequent THM-3928 closes the birational one-place
+seam for a product of two distinct affine lines and the classical
+full-sextic double-line grammar; its high folds, arbitrary-`q` double-line
+components, and infinity-component conics remain open. In particular this
+theorem does not settle `JC(2)`.
 
 Run
 

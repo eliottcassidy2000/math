@@ -2,7 +2,7 @@
 id: THM-3929
 title: "Root-regular one-place linear-color cubics are monogenic"
 status: RESERVED / UNPROVED EMPTY STUB
-source: jc_zero_debt_lift / post-THM-3927 one-place compression boundary, 2026-08-23
+source: jc_zero_debt_lift / post-THM-3927-reservation one-place compression boundary, 2026-08-23
 ---
 
 # THM-3929 -- reserved namespace

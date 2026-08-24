@@ -4,8 +4,8 @@ parallel=distinct parallel affine factors impossible for nonconstant h
 degree_N=deg(h)>=ceil((N+1)/2)
 sextic=(d;e1,e2;infinity_contact)=(4;6,2;4),(5;6,4;2),(6;6,6;0)
 split_lattice=SNF(1,1,3,0);formal quotient Z plus Z/3
-double_line=Delta factors as two cubics;resolvent SNF(1,6)
-scope=birational_split_and_double_line_closed;high_folds_and_infinity_component_open
-semantic_sha256=5d4acb8186b838b177e2a6951f9a96e1fb580a903f8c4fe99ca394fce2c608cd
-CHECKS=806
+double_line=classical full sextic factors;arbitrary-q sextic component hostile;resolvent SNF(1,6)
+scope=birational distinct-line and classical full-sextic double-line closed;high folds, arbitrary-q components, infinity component open
+semantic_sha256=8752329bf706a7e865eb4990feebceca106242fcd60bbce1d6505eade459e6f8
+CHECKS=812
 RESULT=PASS

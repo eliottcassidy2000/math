@@ -33,6 +33,7 @@ depends_on:
 related:
   - THM-3851-tricuspidal-quartic-rank-two-two-place-tradeoff
   - THM-3874-three-cusp-quadratic-k3-affine-class-group
+  - THM-3928-split-affine-conic-one-place-fold-degree-barrier
 script: 04-computation/jc2_rational_torus_sextic_c3_one_place_tradeoff_thm3879.py
 output: 05-knowledge/results/jc2_rational_torus_sextic_c3_one_place_tradeoff_thm3879.out
 script_sha256: 432d7efa8279d4bb7fcde612aa5d28f98446c1f5e24ac4f448c9ed83f31d7912
@@ -414,7 +415,11 @@ does not exclude genuinely different birational plane models, different
 rational torus sextics, higher-degree branch curves, or nonmonogenic cubic orders.
 It identifies a precise next design target: preserve a nontrivial splitting-
 conic/C3 packet while collapsing the normalization boundary from two places
-to one without making the finite completion monogenic.
+to one without making the finite completion monogenic. Here “splitting
+conic” means splitting of the quadratic cover along the smooth contact conic;
+it is not the reducible coefficient `p=ell_1 ell_2`. Subsequent THM-3928
+shows that the latter degeneration forces a degree-`4,5,6` coefficient fold
+on a one-place sextic and intrinsically supplies only one three-direction.
 
 Run
 

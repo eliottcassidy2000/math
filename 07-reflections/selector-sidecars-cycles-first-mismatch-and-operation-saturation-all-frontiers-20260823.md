@@ -137,7 +137,7 @@ closes 41 of the 57 scale-one types; compact-to-open component containment and
 the integer sheet carrier supply further exact filters.  Thus the general
 conditional ledger is now 16 scale-one types plus `(2,1,9)`: 17, not 58.
 
-[THM-3930](../01-canon/theorems/THM-3930-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family.md)
+[THM-3932](../01-canon/theorems/THM-3932-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family.md)
 resolves the phase of that same sheet carrier.  If `E(G)` and `E(A)` are the
 signed endpoint words of the body safe set and pair danger set, then
 
@@ -161,7 +161,7 @@ Var(N_t)=t^2 disc_t(G),
 
 Variance retains magnitude; signed endpoint cross-phase locates the integer
 occupancy against the labelled obstruction.  THM-3910's native cubic-response
-collision and THM-3930's Graver/half-translate hostiles are complementary
+collision and THM-3932's Graver/half-translate hostiles are complementary
 proofs that pairwise or power data cannot recover that location.
 The symmetric return packet of mass `2*84^(-11)` remains useful thickness;
 without the endpoint word its translate is still unlocated relative to the
@@ -193,7 +193,7 @@ The missing object is therefore relative cross-phase, not more power data.
 Incoming THM-3743 makes this a sharp division of labour.  Khinchin flatness
 forces a nonzero speed relation with `l1<=356` in every hypothetical LRC(14)
 counterexample, and an `l1`-minimal row is Graver; this bounds the carrier but
-does not recover its sign partition, owner, or endpoint phase.  THM-3930's
+does not recover its sign partition, owner, or endpoint phase.  THM-3932's
 equal-Graver hostile proves that no refinement by the complete minimum-`l1`
 fibre alone can do so.  The continuant audit gives the analogous one-
 dimensional warning: for every odd `m>=3`, `[0;1,2m]` and `[0;2,m]` have the
@@ -558,8 +558,28 @@ necessary filter, not a sufficiency theorem.  A successor must make the
 boundary rational while retaining the primitive basis, address cap, and
 etale/open invoices; THM-3927 merely reserves that target and proves nothing.
 
-Concurrent JC promotions and reservations now occupy THM-3920--3929, so the
-proved LRC endpoint theorem moved to collision-free THM-3930; the namespace
+THM-3928 closes the most obvious singular-conic escape with a different
+currency.  On a one-place branch the Cardano parameter `h=3q/(2p)` is
+polynomial.  If `p` is a product of two distinct affine lines, parallel lines
+are impossible; nonparallel line degrees satisfy
+
+```text
+max(e_1,e_2)=N,             e_1+e_2=2 deg(h).
+```
+
+Hence a sextic pays fold degree `4`, `5`, or `6`, with packets `(6,2)`,
+`(6,4)`, or `(6,6)`—never a birational coefficient map.  Its universal
+resolvent divisor lattice is only `Z direct_sum Z/3`: splitting a component
+does not manufacture a second three-class, just a free anti-diagonal needing
+new global data.  This and THM-3925 form a pole-versus-fold trade: the smooth
+marked seam pays two Jacobian-zero punctures, while the one-place split seam
+pays a high coefficient fold.  MISTAKE-469 repairs the double-line boundary:
+only the classical `deg q<=3` **full** irreducible sextic is excluded;
+arbitrary-`q` sextic components survive.  High folds, those components, and
+the infinity-component conic are the honest remaining lanes.
+
+Concurrent JC promotions and reservations now occupy THM-3920--3931, so the
+proved LRC endpoint theorem moved to collision-free THM-3932; the namespace
 move changes no mathematical scope.
 
 ## 5. Filtered kernels and principal parts are the same warning, not the same theorem
@@ -712,7 +732,7 @@ They do not share states, probability, chronology, or a reduction.
 |---|---|---|---|---|---|---|
 | Factorial coefficient row | divisor/rho barcode | evaluate selected primes/residues | named necessary vanishing tests | response at the next prime | surviving polynomial row | first ordered adaptive killer at `d=9996` |
 | LRC support-two packet | lower-rank row | choose multiplier and absorb/add one runner | exact divisibility or LRC(13) safe interval | other runners, relative scale, arrival | owner plus component interval | 17 `t>=U` types after THM-3910 |
-| LRC projected polyhedron | short Graver row | take a minimum-width flatness covector | necessary relation with `l1<=356` | sign partition, owner and physical phase | labelled endpoint word plus cross-phase | THM-3930 equal-Graver opposite-covariance hostile |
+| LRC projected polyhedron | short Graver row | take a minimum-width flatness covector | necessary relation with `l1<=356` | sign partition, owner and physical phase | labelled endpoint word plus cross-phase | THM-3932 equal-Graver opposite-covariance hostile |
 | AK forcing graph | score certificate | add a sound forcing row | declared rule consequences | future-round cycle debt | cycle-rank profile | saturated `[2,3]` trace varieties |
 | JC residual | associated graded seam | take top homogeneous forms | leading cancellation | common color gcd and lower debt | primitive colors plus full evolving response | continuing `U,V` jets in THM-3898 |
 | Rational normal cubic order | plane atlas | choose a birational chart | function field and branch divisor | polynomial/etale open data | common-zero valuation genus | THM-3916 closes THM-3915's Keller model |
@@ -723,6 +743,7 @@ They do not share states, probability, chronology, or a reduction.
 | Actual normal completion | affine-plane open | Weil localization at omitted primes | boundary classes form a free primitive basis | effectivity, contractibility and etaleness | actual `Cl(X)`, not a resolvent class group | THM-3922 torsion/nonprimitive-class gate |
 | Power order index | ramification class | pass to the integral closure and compare pole valuations | the integer five in the THM-3921 packet | any general index-to-class law | simple-plus-double infinity prime packet | THM-3924 `A^5 = (6-1) = [E]/g` |
 | Marked conic-contact coefficient map | normalized torus-sextic branch | pull back the cusp parameter through `(p,q)` | Jacobian zeros equal normalization poles | affine versus projective carrier of those addresses | deleted-ramification/Jelonek sidecar | THM-3925 `ell!=0` three-puncture hostile |
+| Split affine coefficient conic | Cardano cusp normalization | pull back `h=3q/(2p)` and compare line degrees | `e_1+e_2=2deg(h)`, one-place polynomiality | critical divisor, actual completion class group | fold ramification plus global divisor relation | THM-3928 sextic `d=4,5,6`, only one intrinsic `C3` |
 | Primitive actual boundary basis | candidate affine-plane deletion | localize at the three basis primes | scalar units and `Cl=0` | boundary genus and Euler type | rationality plus `chi_c` invoice | THM-3926 genus `2`, `chi_c=13` hostile |
 | Removed divisor lattice | resolvent three-class | saturate boundary sublattice | conditional three-divisibility | actual class and ADE mixing | full exceptional lattice | THM-3915 mixed boundary--ADE hostile |
 | Rational dual | reduced dual curve | cancel common tangent factor | reduced tangent map | nonimmersion multiplicity | `E_nu` tangent-base divisor | `[ST^(d-1):T^d:S^d]` |
@@ -737,19 +758,22 @@ objects cannot be transported merely because the same word is used.
 
 1. **LRC anchor:** combine auxiliary-center and endpoint cross-phase uniformly
    on THM-3910's 17 arbitrary-body types, or add owner/arrival data, while
-   keeping `t<U` separate.  THM-3930 closes only the 1,365 fixed bodies
+   keeping `t<U` separate.  THM-3932 closes only the 1,365 fixed bodies
    `E subset {1,...,15}`, `|E|=11`, with odd `t>=max E`; the general `(2,1,9)`
    type remains open.
 2. **Jacobian anchor:** leave `f=0`, x-only, THM-3898's canonical sidecar,
    every radial chart, THM-3853/3855's fixed four-ray packet, THM-3925's marked
-   `5P+Q` torus slice, and the actual THM-3907 completion closed.  Attack the
-   `3+1`, `2+2`, `2+1+1`, quartic-vanishing, or unmarked/splitting-conic
-   grammars; a first-arrival schedule is insufficient.
+   `5P+Q` torus slice, THM-3928's birational distinct-line seam, and the actual
+   THM-3907 completion closed.  Attack the `3+1`, `2+2`, `2+1+1`,
+   quartic-vanishing, unmarked smooth-conic, high-fold split-conic,
+   infinity-component, or arbitrary-`q` double-line grammars; a first-arrival
+   schedule is insufficient.
 3. **Nonmonogenic niche:** build a genuinely nonradial unit-ideal order with
    rational ramification normalization.  Its actual completion must retain a
    primitive boundary basis, meet the affine address cap, and pass the Euler
    and etale/open invoices.  Resolvent torsion is not a substitute; THM-3927
-   is only a reserved target, not evidence.
+   and the linear-color/root-at-infinity THM-3929 are reserved targets, not
+   evidence.
 4. **AK niche:** leave the saturated empty-wildcard `[2,3]` slice closed.
    Classify inactive-slot and initial-wildcard strata, then search the next
    rectangle for a genuine score below `7/4` under the same sound/loose

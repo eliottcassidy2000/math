@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-469 (2026-08-23, THM-3928 double-line boundary) -- a classical degree bound was used under arbitrary-component hypotheses
+
+- **What failed:** the double-line addendum said that
+  `4 ell^6-27q^2` is a product of two cubics and therefore that double lines
+  are empty, although the theorem allows arbitrary `q in k[x,y]` and studies
+  one irreducible component of the discriminant.
+- **Minimal witness / first failed implication:** choose `sigma^2=3`,
+  `ell=x`, `f=y-x^6`, and `q=(2x^3-f)/(3 sigma)`.  Then
+  `4x^6-27q^2=f(4x^3-f)`, while `Gamma=V(f)` is a nonlinear irreducible
+  sextic with normalization `t |-> (t,t^6)`, one place at infinity,
+  nonzero `p=x^2` in its function field, and nonconstant coefficient map.
+- **Repair / strongest survivor:** if the classical torus-sextic grammar
+  explicitly assumes `deg q<=3` and asks the **full** discriminant to be an
+  irreducible sextic, the two factors have degree at most three and the
+  double-line lane is indeed empty.  Arbitrary-`q` double-line components
+  remain open.  The distinct-line fold bound and every resolvent Smith-form
+  calculation are unchanged.
+- **Reusable rule:** a degree conclusion about factors must inherit the
+  ambient degree hypothesis, and reducibility of a full equation does not
+  exclude a specified irreducible component.
+
 ## MISTAKE-468 (2026-08-23, THM-3929 reserved successor) -- a reserved stub was cited as if it exhibited a hostile mechanism
 
 - **What failed:** the THM-3929 reservation said that finite
@@ -132,8 +153,9 @@ Format per entry:
   `THM-3903`; its mathematics and hash-bearing companion bytes are unchanged.
 - **Later recurrence:** the independently proved LRC signed-endpoint theorem
   was successively displaced from `THM-3922`, `THM-3924`, `THM-3927`, and
-  `THM-3928` by concurrent JC promotions or honest reservations.  Its theorem
-  file and every dependency/navigation edge moved atomically to `THM-3930`;
+  `THM-3928`, and `THM-3930` by concurrent JC promotions or honest
+  reservations. Its theorem file and every dependency/navigation edge moved
+  atomically to `THM-3932`;
   the hash-bearing LRC companions and mathematical scope did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not

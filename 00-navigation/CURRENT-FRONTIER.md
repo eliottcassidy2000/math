@@ -67,7 +67,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505`, and only 58 in `t>=U`: 57 scale-one plus `(2,1,9)`.  THM-3910
-  closes 41, leaving 17.  THM-3930 closes AP11 and 1,365 fixed scale-two
+  closes 41, leaving 17.  THM-3932 closes AP11 and 1,365 fixed scale-two
   bodies, no type; `t<U` and owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
@@ -357,12 +357,13 @@ asymptotic or residue.
   For `f!=0`: THM-3899 tariff/colors; THM-3904 x-only; THM-3901/3902/3905
   fan/three jets; THM-3898 canonical response, arbitrary sidecars open.
   THM-3890 quintics; THM-3906/3907 places `1/2`,`2/6`; THM-3908/3911 sextics;
-  THM-3912/14 conditional; THM-3913/19 elliptic/mixed.  THM-3915/16,
-  THM-3917/21 close rational models; THM-3920 closes THM-3918/all radial.
-  THM-3922 basis plus THM-3924 `[E]=5g` close THM-3921; THM-3923 kills the
-  THM-3853/55 four-ray grammar.  THM-3925 closes the marked `5P+Q` torus
-  slice; THM-3926 closes unit-ideal THM-3907 despite its basis pass (genus 2,
-  `chi_c=13`).  Nonradial orders and `JC(2)` stay OPEN.
+  THM-3912/14 conditional; THM-3913/19 mixed; THM-3915/16/17/21 close
+  rational models; THM-3920 closes THM-3918/radial.
+  THM-3922+3924 basis/`[E]=5g` close THM-3921; THM-3923 kills THM-3853/55
+  four-ray.  THM-3925 kills marked `5P+Q`; THM-3926 kills unit-ideal 3907
+  despite basis (`g=2,chi_c=13`).  THM-3928 kills
+  birational split-line (`d=4..6`, one `C3`) and classical full double-line.
+  Folds/arbitrary-`q`/nonradial/`JC(2)` OPEN.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
   self-identifying immersed arm, THM-3846 its formal first jets, and THM-3849
   only visible conductor contact.  THM-3856/3861/3867/3871 close normal
