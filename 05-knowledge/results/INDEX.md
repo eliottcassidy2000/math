@@ -1150,11 +1150,13 @@
   clutch addresses, and residual `R in (p^2,y)`. Combining this with
   THM-3989's exact `p=0` seam gives
   `eta*(gamma*eta-a)=0`, `eta=[s]q0`: the zero branch has an actual
-  `P_1/P_0` square-root lift, while the unique nonliftable branch has
-  `[s^2]b=2a`. A hostile packet survives through row `-2` and fails row `-1`;
-  neither branch closes the cell. Exact pass rows: `42`. Script/output SHA-256:
-  `e3f066043fce6881bfb21b1964a57e324706d6b2b94c113b8f850df512545ef2` /
-  `104c26b1285745972ad4f4ff43bc4792a0960f304dd6dc01ee7d145072743f24`.
+  `P_1/P_0` square-root lift but no simultaneous pure cube lift. The unique
+  nonliftable branch has `[s^2]b=2a` and continues only on the oriented seam
+  `a^3+2gamma=0`; an exact one-parameter formal jet survives through
+  `ell=6`, but no `B_2` or Keller extension follows. Exact pass rows: `119`.
+  Script/output SHA-256:
+  `4c7fb202237c263b061b106d6d5503d198e6e97c815d98b14c29a33190ecfa2b` /
+  `1e44afacca5c75e0c4b6befa316d6e728565c44e179864f2bdbe5865b76dc5c8`.
 
 - `jc2_affine_p_double_collision_thm3994.py` -> matching `.out`
   [THM-3994 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
@@ -1167,16 +1169,35 @@
   `d77ef7469f6c705b9fece263dd9f6a07892d2960625d0ddb4b94c18a8c0cbed0` /
   `240b2cdc0c6b7c5e209fbf9c17c2e7fb8d4e40fdd54f1c51a97e8b84f194d213`.
 
+- `lrc14_scale_two_parity_hole_tariff_thm3995.py` -> matching `.out`
+  [THM-3995 PROVED IN A CONDITIONAL SLICE + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; LRC(14) OPEN]. Odd parity cuts four inward holes from the
+  sole scale-two `(2,1,9)` certificate survivor, giving support cap
+  `4(t-1)/(63t)`, a sharp integer variance correction, and a sufficient BV
+  gate. It closes no type. Script/output SHA-256:
+  `342ca76c34bb09d2f19f0237d973edb8872d2cf43c8c637a6efbfc99804ff8c6` /
+  `2973b970aa75a6234f5aca3af02293476a35d9d64cee7b7dda9a83f3d6cf6a9c`.
+
+- `jc2_etale_node_address_balance_thm3996.py` -> matching `.out`
+  [THM-3996 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  JC(2) OPEN]. A complete finite-etale node-address graph has equal indegree
+  and outdegree at every normalization owner, hence every edge lies on a
+  directed cycle. A complete nonempty forest forces nonproperness; this is
+  one-way and does not enumerate THM-3992's fibre. Exact pass rows: `10`.
+  Script/output SHA-256:
+  `f3a7560606de94cfe0ee705459f491b27a6b25f7c2d51ac4e35e6cb9734f16c0` /
+  `998952528ef0dae5c370f216846328323d12de483235eb8147669a713f3ede05`.
+
 - `brendle_hung_lemma54_independent_audit_20260824.py` and
   `brendle_hung_vbc_exact_point_audit_20260824.py` -> matching `.out`s
   [FINITE-EXACT SOURCE CONTROLS; GLOBAL `S2 x S2` CLAIM UNDER AUDIT]. The
-  omitted `h_a` branch of Lemma 5.4 is independently zero on both displayed
-  parametrized components of `Sigma`, with a nonzero hostile tensor. The
-  overwritten `V_bc^(2)` identity cancels at one generic exact point with all
-  three summands nonzero; this point is not a proof of the global identity.
+  omitted `P1(L(h_a))=0` identity is exact symbolically on both generic
+  components relative to the reconstructed formulas, with a nonzero hostile
+  tensor. The overwritten `V_bc^(2)` identity cancels at one generic exact
+  point; its global repair remains conditional on the saved `V_ac=0` block.
   Lemma script/output SHA-256:
-  `2b8295e83470733a20d8a14ddc29599d53494b54bf2818c7bfd950d69469ef4d` /
-  `c504027f7b78b24080b0e7b6d1cd923b3848f4846ba4e8c946caff841e0ed655`.
+  `126247d6ac7f91cd9b922c3f5ff1d3d38c1f1d0e7ee3c20f4adc18421c96741f` /
+  `287c34961239b16339b193723d4d6dda3e71d2ade5136ad0adcc97d54d3f1a7b`.
   Point-control script/output SHA-256:
   `45f7c0b617898149d3d368070e87c84bbf37470244ece5ca332a2e9724281102` /
   `3c6dcf700c4d8cd44aae9390fb0aaadfc7937180a9af9a6880ace9218f7212dc`.

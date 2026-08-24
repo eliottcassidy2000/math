@@ -253,7 +253,10 @@ are not the completion-boundary primes of THM-3951, so a two-owner path is not
 itself an obstruction.  Outside the nonproper-value locus, finite-etale
 address balance forces every edge of the complete graph onto a cycle;
 distinct companion owners must therefore pay at least one extra node address.
-A complete forest instead detects nonproperness at the node.  On any completed
+A complete forest instead detects nonproperness at the node. This exact
+dichotomy is
+[THM-3996](../01-canon/theorems/THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy.md).
+On any completed
 graph, a forest has no clutch holonomy and a cycle is the only place a new
 three-primary class can live; existence of that class would still not make it
 a Keller boundary basis.  This repairs the overreach recorded in MISTAKE-481.

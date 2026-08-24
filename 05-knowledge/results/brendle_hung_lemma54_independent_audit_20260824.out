@@ -1,6 +1,7 @@
-status=FINITE-EXACT
+status=VERIFIED
+method=exact symbolic identity relative to reconstructed formulas
 source=arXiv:2608.19068v1 Lemma 5.4
-target=P1(L(h_a)) on both components of Sigma
+target=P1(L(h_a)) on both components of Sigma intersect M_generic
 plus_component_zero=(True, True, True, True)
 minus_component_zero=(True, True, True, True)
 control_plus_theta_pi6_phi0=(0, 0, 0, 0)
@@ -8,6 +9,7 @@ control_plus_theta_pi5_phi_pi4=(0, 0, 0, 0)
 control_minus_theta_pi6_phi0=(0, 0, 0, 0)
 control_minus_theta_pi5_phi_pi4=(0, 0, 0, 0)
 hostile_constant_h14=(0, 0, -1/3, 2/9)
-conclusion=the omitted h_a branch is independently verified
+conclusion=the omitted P1(L(h_a)) zero identity is independently verified
+relative_consequence=z(h_a)=0 uses the source's generic Hessian invertibility
 nonconsequence=the rest of the notebook and Theorem 1.1 remain unaudited
-transcript_sha256=abf3f4a106d5d6d9379e56de186a3f3333db0a7fa3e82dd8e1dc2c1c33836619
+transcript_sha256=e4adcb73f514fe7faad130c5e728f4b7a9089b53ee721f40432ebcd9a6695086

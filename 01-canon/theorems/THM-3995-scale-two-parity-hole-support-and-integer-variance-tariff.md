@@ -18,7 +18,8 @@ audit: >
   independent clockwise wall sweep checked every orientation for odd t<=51
   and u<=t; the proof audit checked masking, null walls, disjoint hole widths,
   the support cap, the integer envelope including k=0, the BV algebra, hashes,
-  dependencies, and scope. Normal, optimized, and frozen outputs byte-match.
+  dependencies, and scope. Normal and optimized outputs LF-normalized
+  byte-match the frozen transcript.
 depends_on:
   - THM-3878-lrc14-eleven-plus-two-harmonic-absorption-seam-collapse
   - THM-3910-lrc14-auxiliary-center-erosion-and-t-sheet-variance-response
@@ -129,9 +130,10 @@ finite allowed `t`.
 
 ## 3. A sharp integer support-envelope lemma
 
-More generally, let `N` be any nonnegative integer-valued function on a
-probability space, with mean `m` and positive support of measure at most
-`s in (0,1]`. Put
+More generally, let `N` be any nonnegative integer-valued `L^2` function on a
+probability space, with finite mean `m` and positive support of measure at
+most `s in (0,1]`. Equivalently, one may read the inequalities below in the
+extended-real sense. Put
 
 ```text
 k=floor(m/s),                 theta=m/s-k.              (8)

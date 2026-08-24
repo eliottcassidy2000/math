@@ -306,6 +306,198 @@ assert_zero(
 )
 print("CONTROL: the eta=a0/gamma branch survives through row -2 but can fail row -1.")
 
+# Continuing the nonliftable branch by the first previously unused rows gives
+# one oriented scalar seam.  This is not a contradiction: an exact formal
+# family survives all bracket rows -5,...,0 and both membership seams through
+# ell=6.  The variables below are independent finite Taylor coefficients.
+gs, aa, et = sp.symbols("gs aa et", nonzero=True)
+q2s, q3s, q4s, q5s = sp.symbols("q2s q3s q4s q5s")
+r1s, r2s, r3s, r4s = sp.symbols("r1s r2s r3s r4s")
+A10s, A11s, A12s, A20s = sp.symbols("A10s A11s A12s A20s")
+Is = sp.Rational(3, 4) * aa**2
+C10s = 3 * aa * r1s / (4 * gs)
+C11s = (
+    3 * gs**2 * A20s
+    + sp.Rational(3, 4) * (r1s**2 + 2 * aa * r2s)
+    + 3 * gs * et * A10s
+) / (2 * gs)
+
+Aell1s = r1s - 2 * gs * q2s
+Aell2s = et**2 + r2s - 2 * gs * q3s - A10s
+Aell3s = 2 * et * q2s + r3s - 2 * gs * q4s - A11s
+Aell4s = 2 * et * q3s + q2s**2 + r4s - 2 * gs * q5s - A12s + A20s
+Cell2s = (
+    3 * gs**2 * q4s
+    - sp.Rational(3, 2) * gs * (4 * et * q2s + r3s)
+    + sp.Rational(3, 2) * (et * r1s + aa * q2s)
+    + sp.Rational(3, 2) * gs * A11s
+    - C10s
+)
+Cell3s = (
+    3 * gs**2 * q5s
+    - sp.Rational(3, 2) * gs * (4 * et * q3s + 2 * q2s**2 + r4s)
+    + et**3
+    + sp.Rational(3, 2) * (et * r2s + q2s * r1s + aa * q3s)
+    + sp.Rational(3, 2) * gs * A12s
+    - C11s
+)
+aseam_subs = {
+    r1s: 2 * gs * q2s,
+    r2s: 2 * gs * q3s + A10s - et**2,
+    A11s: 2 * et * q2s + r3s - 2 * gs * q4s,
+    A20s: 2 * gs * q5s - 2 * et * q3s - q2s**2 - r4s + A12s,
+}
+assert_zero("nonlift continuation C ell=2 automatic", Cell2s.subs(aseam_subs))
+Cell3reduced = simp(Cell3s.subs(aseam_subs))
+assert_zero(
+    "nonlift continuation C ell=3 reduction",
+    Cell3reduced
+    + (3 * A10s * aa - 3 * aa * et**2 + 2 * gs * et**3) / (4 * gs),
+)
+nonlift_subs = {et: aa / gs, A10s: -sp.Rational(2, 3) / (gs * aa)}
+assert_zero(
+    "nonlift oriented scalar seam",
+    Cell3reduced.subs(nonlift_subs) - (aa**3 + 2 * gs) / (4 * gs**3),
+)
+assert_zero(
+    "residual-mu5 invariant scalar shadow",
+    (16 * Is**3 - 27 * gs**2).subs(gs, -aa**3 / 2),
+)
+print("DEDUCTION: the nonliftable branch continues only if aa^3+2*gs=0;")
+print("           16*I^3=27*gs^2 is its unoriented scalar shadow.")
+
+
+def poly_coeff(poly, degree):
+    if degree < 0:
+        return sp.Integer(0)
+    return sp.expand(poly).coeff(s, degree)
+
+
+def membership_seam(rows, ell):
+    return simp(
+        sum(sp.Integer(-1) ** index * poly_coeff(value, ell - 2 * index)
+            for index, value in rows.items())
+    )
+
+
+def finite_bracket(rows_a, rows_c, weight):
+    return simp(
+        sum(
+            j * sp.diff(ai, s) * cj - i * ai * sp.diff(cj, s)
+            for i, ai in rows_a.items()
+            for j, cj in rows_c.items()
+            if i + j == weight
+        )
+    )
+
+
+def finite_rows(gv, av, qv, rv, A1v, A2v, A3v, C3v=sp.Integer(0)):
+    hv = gv * s
+    Iv = sp.Rational(3, 4) * av**2
+    bv = 2 * hv * qv
+    A0v = sp.expand(qv**2 + rv)
+    dv = 3 * hv**2 * qv
+    ev = sp.Rational(3, 2) * hv * (2 * qv**2 + rv)
+    C0v = sp.expand(qv**3 + sp.Rational(3, 2) * qv * rv + sp.Rational(3, 2) * hv * A1v)
+    C1v = simp(
+        (3 * hv**2 * A2v + sp.Rational(3, 4) * rv**2 + 3 * hv * qv * A1v - Iv)
+        / (2 * hv)
+    )
+    C2v = simp(
+        (s - bv * C1v + A1v * ev + 2 * A2v * dv + 3 * A3v * hv**3)
+        / (2 * hv**2)
+    )
+    Arowsv = {-2: hv**2, -1: bv, 0: A0v, 1: A1v, 2: A2v, 3: A3v}
+    Crowsv = {-3: hv**3, -2: dv, -1: ev, 0: C0v, 1: C1v, 2: C2v, 3: C3v}
+    momentv = simp(sum(i * ai * Crowsv.get(-i, 0) for i, ai in Arowsv.items()))
+    return Arowsv, Crowsv, momentv
+
+
+# The next generic seams: ell=4 is automatic, ell=5 fixes A2(0), and the
+# coefficient C3(0) enters ell=6 with unit coefficient and absorbs that seam.
+q6s, q7s = sp.symbols("q6s q7s")
+r5s, r6s = sp.symbols("r5s r6s")
+A13s, A14s, A21s, A22s, A30s, C30s = sp.symbols(
+    "A13s A14s A21s A22s A30s C30s"
+)
+q_generic = et * s + q2s * s**2 + q3s * s**3 + q4s * s**4 + q5s * s**5 + q6s * s**6 + q7s * s**7
+r_generic = aa + r1s * s + r2s * s**2 + r3s * s**3 + r4s * s**4 + r5s * s**5 + r6s * s**6
+A1_generic = A10s + A11s * s + A12s * s**2 + A13s * s**3 + A14s * s**4
+A2_generic = A20s + A21s * s + A22s * s**2
+A3_generic = A30s
+Ag, Cg, _ = finite_rows(gs, aa, q_generic, r_generic, A1_generic, A2_generic, A3_generic, C30s)
+all_aseams = {
+    r1s: 2 * gs * q2s,
+    r2s: 2 * gs * q3s + A10s - et**2,
+    r3s: A11s - 2 * et * q2s + 2 * gs * q4s,
+    r4s: A12s - A20s - 2 * et * q3s + 2 * gs * q5s - q2s**2,
+    r5s: A13s - A21s - 2 * et * q4s + 2 * gs * q6s - 2 * q2s * q3s,
+    r6s: A14s - A22s + A30s - 2 * et * q5s + 2 * gs * q7s - 2 * q2s * q4s - q3s**2,
+}
+for ell in range(1, 7):
+    assert_zero(f"nonlift generic A seam ell={ell}", membership_seam(Ag, ell).subs(all_aseams))
+assert_zero(
+    "nonlift C ell=4 automatic",
+    membership_seam(Cg, 4).subs(all_aseams).subs(nonlift_subs),
+)
+Cell5scalar = simp(
+    membership_seam(Cg, 5)
+    .subs(all_aseams)
+    .subs(nonlift_subs)
+    .subs(gs, -aa**3 / 2)
+)
+assert_zero(
+    "nonlift C ell=5 fixes A2(0)",
+    Cell5scalar - (9 * aa**9 * (q2s**2 - A20s) - 32) / (6 * aa**11),
+)
+assert_zero(
+    "nonlift C ell=6 has unit C3(0) coefficient",
+    sp.diff(membership_seam(Cg, 6), C30s) + 1,
+)
+print("DEDUCTION: on the scalar seam A2(0)=q2s^2-32/(9*aa^9);")
+print("           C3(0) absorbs ell=6, so q2s remains free at this depth.")
+
+# Sharp hostile: gamma=a=eta=1 passes rows -5,...,0, the moment, and the
+# first two C seams, but the decisive third seam has residual 3/4.
+Ah, Ch, Mh = finite_rows(
+    sp.Integer(1), sp.Integer(1), s, 1 - sp.Rational(5, 3) * s**2,
+    -sp.Rational(2, 3), sp.Integer(0), sp.Integer(0),
+)
+for weight in range(-5, 0):
+    assert_zero(f"scalar-seam hostile bracket row {weight}", finite_bracket(Ah, Ch, weight))
+assert_zero("scalar-seam hostile moment", Mh + s)
+assert_zero("scalar-seam hostile constant row", finite_bracket(Ah, Ch, 0) - 1)
+for ell in (1, 2):
+    assert_zero(f"scalar-seam hostile C seam ell={ell}", membership_seam(Ch, ell))
+assert_zero("scalar-seam hostile first failure 3/4", membership_seam(Ch, 3) - sp.Rational(3, 4))
+
+# Positive finite formal family on a=1, gamma=-1/2.  It is deliberately not
+# asserted to extend to all positive rows or to an element of B2.
+zfree = sp.symbols("zfree")
+q_positive = -2 * s + zfree * s**2
+r_positive = 1 - zfree * s - sp.Rational(8, 3) * s**2
+A1_positive = sp.Rational(4, 3) - 4 * zfree * s + (2 * zfree**2 - sp.Rational(32, 9)) * s**2
+A2_positive = zfree**2 - sp.Rational(32, 9)
+C3_positive = zfree * (zfree**2 + sp.Rational(8, 3))
+Ap, Cp, Mp = finite_rows(
+    -sp.Rational(1, 2), sp.Integer(1), q_positive, r_positive,
+    A1_positive, A2_positive, sp.Integer(0), C3_positive,
+)
+for index in (1, 2):
+    assert_zero(f"positive finite C{index} is polynomial", sp.denom(sp.cancel(Cp[index])) - 1)
+for weight in range(-5, 0):
+    assert_zero(f"positive finite bracket row {weight}", finite_bracket(Ap, Cp, weight))
+assert_zero("positive finite moment", Mp + s)
+assert_zero("positive finite constant row", finite_bracket(Ap, Cp, 0) - 1)
+for ell in range(1, 7):
+    assert_zero(f"positive finite A seam ell={ell}", membership_seam(Ap, ell))
+    assert_zero(f"positive finite C seam ell={ell}", membership_seam(Cp, ell))
+if not (zfree in q_positive.free_symbols and zfree in A2_positive.free_symbols and zfree in C3_positive.free_symbols):
+    raise RuntimeError("positive finite family lost its free parameter")
+print("PASS  positive finite family retains zfree=[s^2]q0")
+print("CONTROL: the nonliftable branch has an exact one-parameter jet through ell=6.")
+print("SCOPE: finite Laurent/seam consistency only; no B2 or Keller extension.")
+
 # In the eta=0 branch the square lift exists, but the nodal constant blocks
 # every simultaneous pure cube lift.  A common leading square/cube root cannot
 # use the alternative sign: gcd(eps^2-1,eps^3-1)=eps-1.

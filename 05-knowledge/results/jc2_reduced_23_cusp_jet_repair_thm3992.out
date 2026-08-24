@@ -53,6 +53,57 @@ PASS  nonliftable partial control row tau^-3
 PASS  nonliftable partial control row tau^-2
 PASS  nonliftable partial control first failure
 CONTROL: the eta=a0/gamma branch survives through row -2 but can fail row -1.
+PASS  nonlift continuation C ell=2 automatic
+PASS  nonlift continuation C ell=3 reduction
+PASS  nonlift oriented scalar seam
+PASS  residual-mu5 invariant scalar shadow
+DEDUCTION: the nonliftable branch continues only if aa^3+2*gs=0;
+           16*I^3=27*gs^2 is its unoriented scalar shadow.
+PASS  nonlift generic A seam ell=1
+PASS  nonlift generic A seam ell=2
+PASS  nonlift generic A seam ell=3
+PASS  nonlift generic A seam ell=4
+PASS  nonlift generic A seam ell=5
+PASS  nonlift generic A seam ell=6
+PASS  nonlift C ell=4 automatic
+PASS  nonlift C ell=5 fixes A2(0)
+PASS  nonlift C ell=6 has unit C3(0) coefficient
+DEDUCTION: on the scalar seam A2(0)=q2s^2-32/(9*aa^9);
+           C3(0) absorbs ell=6, so q2s remains free at this depth.
+PASS  scalar-seam hostile bracket row -5
+PASS  scalar-seam hostile bracket row -4
+PASS  scalar-seam hostile bracket row -3
+PASS  scalar-seam hostile bracket row -2
+PASS  scalar-seam hostile bracket row -1
+PASS  scalar-seam hostile moment
+PASS  scalar-seam hostile constant row
+PASS  scalar-seam hostile C seam ell=1
+PASS  scalar-seam hostile C seam ell=2
+PASS  scalar-seam hostile first failure 3/4
+PASS  positive finite C1 is polynomial
+PASS  positive finite C2 is polynomial
+PASS  positive finite bracket row -5
+PASS  positive finite bracket row -4
+PASS  positive finite bracket row -3
+PASS  positive finite bracket row -2
+PASS  positive finite bracket row -1
+PASS  positive finite moment
+PASS  positive finite constant row
+PASS  positive finite A seam ell=1
+PASS  positive finite C seam ell=1
+PASS  positive finite A seam ell=2
+PASS  positive finite C seam ell=2
+PASS  positive finite A seam ell=3
+PASS  positive finite C seam ell=3
+PASS  positive finite A seam ell=4
+PASS  positive finite C seam ell=4
+PASS  positive finite A seam ell=5
+PASS  positive finite C seam ell=5
+PASS  positive finite A seam ell=6
+PASS  positive finite C seam ell=6
+PASS  positive finite family retains zfree=[s^2]q0
+CONTROL: the nonliftable branch has an exact one-parameter jet through ell=6.
+SCOPE: finite Laurent/seam consistency only; no B2 or Keller extension.
 PASS  common square/cube leading sign is positive
 PASS  fixed square lift first cube mismatch
 PASS  generic nodal correction row tau^-3

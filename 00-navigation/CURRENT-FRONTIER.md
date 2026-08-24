@@ -340,8 +340,9 @@ asymptotic or residue.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
   preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. THM-3990 validates
   only the final connected-component repair; THM-3991 gives `chi=d*n!` only
-  for the stated periodic fan grammar. The S6 filled-gauge audit leaves a
-  global Cech overlap open. None verifies a global manifold.
+  for the stated periodic fan grammar; THM-3993 gives only a local labelled
+  wall-response quotient. The S6 filled-gauge audit leaves a global Cech
+  overlap open. None verifies a global manifold.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3782 close
   named cells only. THM-3827--3972 route genus/degree, root/cusp/jet, `f=0`,
   cylinder and residue packets; global roots and arbitrary `f!=0` stay open.
@@ -351,10 +352,15 @@ asymptotic or residue.
   THM-3987 forces three weights per output (`3x4/4x3` first). THM-3989 leaves
   nondividing depths, first `2:3`; its seam class blocks automatic root lifting.
   THM-3992 forces `h=gamma*s`, a nodal boundary and `R in (p^2,y)`; its first
-  seam is exactly square-liftable or has `[s^2]b=2a`, with clutches unjoined.
+  seam is exactly square-liftable or has `[s^2]b=2a`. In the first branch the
+  square lift is necessarily nodal and cannot be a simultaneous pure cube;
+  the second reaches `ell=3` only on `a^3+2gamma=0` and has a finite jet
+  through `ell=6`, not a `B_2` lift.
   THM-3994 separates a double resultant into either two transverse addresses
   or one length-two `A1` centre; multiplicity alone is not a closure test.
-  The known node roots are not a full fibre census; THM-3996 is RESERVED.
+  THM-3996 proves that a complete finite-locus node-address graph is balanced:
+  its edges lie on cycles, while a complete forest forces nonproperness. It
+  does not decide the ownership census or nonproperness of THM-3992's node.
   Multi-term cancellation, finite Keller/Darboux entry, and `JC(2)` stay open.
   Russell THM-3785/3843--3871 close named depth-through-five packets; the
   nonreduced `(6,4)`, rational corrections, and global entry remain open.

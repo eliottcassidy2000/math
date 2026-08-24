@@ -15,7 +15,8 @@ This maps imported claims, consumers, and exclusions; links—not bare IDs—are
 - **JC/DC:** THM-1300 refutes `JC(n>=3)`; `JC(2),DC(1),DC(2)` are open. THM-2071 is local; THM-2044 refutes the two-pair Poisson claim.
 - **Two Hopf problems:** the [Brendle--Hung `S2 x S2` claim](CORE-PAPERS-BRENDLE-HUNG-S2XS2-2026-08-24.md)
   and [Hopf/S6 claim](CORE-PAPERS-HOPF-S6-2026-08-24.md) are distinct **PREPRINT CLAIM / UNDER AUDIT** results, not solved claims.
-  THM-3990 proves only the final repair quotient; THM-3991 only the factorial Euler obstruction.
+  THM-3990 proves only the final repair quotient; THM-3991 only the factorial
+  Euler obstruction; THM-3993 only a local labelled wall-response theorem.
 
 ## Rule 30
 

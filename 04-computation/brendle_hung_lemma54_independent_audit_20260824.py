@@ -14,16 +14,19 @@ The attached Mathematica notebook's cell advertised as checking
 ``ra=P1[L[hc]]``.  Thus that cell checks the ``h_c`` branch twice.  This
 script independently reconstructs the moving-frame metric, connection,
 curvature, linearized-curvature operator ``L``, and ``h_a`` from the paper.
-Since the normal Hessian ``H`` is invertible on the generic locus,
-``z(h_a)=0`` is equivalent to ``P1(L(h_a))=0``.
+It directly checks ``P1(L(h_a))=0``.  The further consequence ``z(h_a)=0``
+uses the paper's assertion that the normal Hessian ``H`` is invertible on the
+generic locus; this script does not independently audit that assertion.
 
 Status and scope
 ----------------
-FINITE-EXACT.  SymPy performs exact symbolic differentiation and arithmetic.
-The script checks both parametrized components of the residual torus Sigma
-and exact point controls.  It verifies only the omitted Lemma 5.4 branch; it
-does not independently replay the whole Mathematica notebook or prove the
-paper's positive-curvature theorem.
+VERIFIED -- EXACT SYMBOLIC IDENTITY, relative to the reconstructed formulas.
+SymPy performs exact symbolic differentiation and arithmetic over the two
+parametric pieces, rather than a finite census.  The script checks both
+generic parametrized pieces of ``Sigma intersect M_generic`` and exact point
+controls.  It verifies only the omitted ``P1(L(h_a))=0`` identity; it does
+not independently replay the rest of Lemma 5.4, the whole Mathematica
+notebook, or the paper's positive-curvature theorem.
 
 Reproduce from the repository root with
 
@@ -381,14 +384,16 @@ def audit() -> list[str]:
         )
 
     return [
-        "status=FINITE-EXACT",
+        "status=VERIFIED",
+        "method=exact symbolic identity relative to reconstructed formulas",
         "source=arXiv:2608.19068v1 Lemma 5.4",
-        "target=P1(L(h_a)) on both components of Sigma",
+        "target=P1(L(h_a)) on both components of Sigma intersect M_generic",
         f"plus_component_zero={tuple(plus_zero)}",
         f"minus_component_zero={tuple(minus_zero)}",
         *point_rows,
         f"hostile_constant_h14={hostile_values}",
-        "conclusion=the omitted h_a branch is independently verified",
+        "conclusion=the omitted P1(L(h_a)) zero identity is independently verified",
+        "relative_consequence=z(h_a)=0 uses the source's generic Hessian invertibility",
         "nonconsequence=the rest of the notebook and Theorem 1.1 remain unaudited",
     ]
 

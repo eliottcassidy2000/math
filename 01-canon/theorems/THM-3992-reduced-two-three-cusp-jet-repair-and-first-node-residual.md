@@ -19,24 +19,28 @@ status: >
   narrows but does not close the 2:3 cell. In the liftable branch, the nodal
   constant a blocks every simultaneous pure cube lift; instead there are
   K,L in k[p,y], L in (p,y), with
-  (C-L)^2-A^3+(3/4)K^2*A+K^3/4=0.
+  (C-L)^2-A^3+(3/4)K^2*A+K^3/4=0. The nonliftable branch
+  reaches the next seam exactly when a^3+2*gamma=0; a one-parameter formal
+  jet then survives every bracket row through zero and both membership seams
+  through ell=6. This is finite consistency, not a B2 or Keller lift.
 source: root + frontier_transfer_scout / Hopf repair-quotient transfer, 2026-08-24
 audit: >
   PASS (root, 2026-08-24). The proof was independently checked from the full
   Laurent convolution law. The companion script separately expands the
   Laurent Jacobian, verifies every row and factorization, and passes the cusp,
-  node, first-seam, nonliftable partial-row, cube-lift-torsor, and moving-node
-  controls. Normal and optimized executions are byte-identical.
+  node, first-seam, oriented scalar-seam, finite-jet, cube-lift-torsor, and
+  moving-node controls. Normal and optimized executions are byte-identical.
 depends_on:
   - THM-3989-cusp-log-laurent-conductor-and-nondividing-depth-reduction
 related:
   - THM-3955-node-cotangent-normalization-kernel-and-conductor-torsion
   - THM-3957-triple-normal-crossing-cotangent-conductor-kernel-and-normalization-cokernel
   - THM-3990-componentwise-harmonic-obstruction-and-repair-quotient
+  - THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy
 script: 04-computation/jc2_reduced_23_cusp_jet_repair_thm3992.py
 output: 05-knowledge/results/jc2_reduced_23_cusp_jet_repair_thm3992.out
-script_sha256: dcb70a477f5bda8d9ef249f5fb45b5be9f13e38d4a3bb3759579d9f4ca25d96c
-output_sha256: 1c102f8fa6c2be95acbc190f0216ca1424cce5e4577eea08ede2c424631fc74c
+script_sha256: 4c7fb202237c263b061b106d6d5503d198e6e97c815d98b14c29a33190ecfa2b
+output_sha256: 1e44afacca5c75e0c4b6befa316d6e728565c44e179864f2bdbe5865b76dc5c8
 hash_basis: raw LF bytes
 ---
 
@@ -550,6 +554,100 @@ sign `-h` is impossible as a common lift because its cube has leading
 coefficient `-h^3`, while `C` has `+h^3`. This proves the assertion for every
 possible common leading root.
 
+### 5.3 The nonliftable branch has one oriented scalar seam
+
+Retain the other branch `eta=a/gamma` from `(39e)` and continue the Taylor
+rows by writing
+
+```text
+q0=eta*s+q2*s^2+q3*s^3+q4*s^4+q5*s^5+...,
+r=a+r1*s+r2*s^2+r3*s^3+r4*s^4+...,
+A1=A10+A11*s+A12*s^2+...,
+A2=A20+... .                                             (39u)
+```
+
+Here `(38)` says `A10=-2/(3gamma*a)`. The row-`-1` formula `(19)` and
+`I=3a^2/4` give the first two coefficients of `C1`:
+
+```text
+C1(0)=3a*r1/(4gamma),
+[s]C1={3gamma^2*A20+(3/4)(r1^2+2a*r2)
+                         +3gamma*eta*A10}/(2gamma).       (39v)
+```
+
+The `A` membership seams at `ell=1,...,4` eliminate
+
+```text
+r1 =2gamma*q2,
+r2 =2gamma*q3+A10-eta^2,
+A11=2eta*q2+r3-2gamma*q4,
+A20=2gamma*q5-2eta*q3-q2^2-r4+A12.                      (39w)
+```
+
+After these substitutions the `C` seam at `ell=2` is automatic. The next
+one is
+
+```text
+[C seam ell=3]
+ =-(3a*A10-3a*eta^2+2gamma*eta^3)/(4gamma).
+```
+
+On `eta=a/gamma` and `(38)`, this becomes
+
+```text
+[C seam ell=3]=(a^3+2gamma)/(4gamma^3).                 (39x)
+```
+
+Therefore the nonliftable branch can continue only on the oriented scalar
+seam
+
+```text
+a^3+2gamma=0.                                            (39y)
+```
+
+Since `I=3a^2/4`, equation `(39y)` implies
+`16I^3=27gamma^2`. The converse is not valid without retaining the oriented
+choice of `a`: squaring has forgotten its sign/branch.
+
+The next three seams do not close the branch. Eliminating the `A` seams
+through `ell=6` makes the `C` seam at `ell=4` automatic. On `(39y)`, the
+`ell=5` seam is
+
+```text
+{9a^9(q2^2-A20)-32}/(6a^11),
+```
+
+so it forces
+
+```text
+A20=q2^2-32/(9a^9).                                      (39z)
+```
+
+At `ell=6`, the new coefficient `C3(0)` occurs with coefficient `-1` and
+absorbs the seam. Thus `q2=[s^2]q0` remains free at this depth unless further
+positive bracket rows intervene.
+
+Both failure and survival are exact. The normalization
+`a=gamma=eta=1`, with `q0=s`, `r=1-(5/3)s^2`, `A1=-2/3`, and
+`A2=A3=0`, satisfies bracket rows `-5,...,0`, the scalar moment, and the first
+two `C` seams, but its `ell=3` residual is `3/4`, exactly as `(39x)` predicts.
+Conversely, for arbitrary `z in k`, set
+
+```text
+a=1,                 gamma=-1/2,               eta=-2,
+q0=-2s+z*s^2,        r=1-z*s-(8/3)s^2,
+A1=4/3-4z*s+(2z^2-32/9)s^2,
+A2=z^2-32/9,         A3=0,
+C3=z(z^2+8/3),                                         (39aa)
+```
+
+and use the forced formulas `(19)`, `(39c)`, and `(17)` for `C0,C1,C2`.
+Those rows are polynomial and satisfy every bracket row `-5,...,0`, the
+moment `M=-s`, and both `A,C` membership seams through `ell=6`. This proves
+an exact one-parameter **finite formal jet** only. It does not supply all
+positive bracket rows, all membership seams, an element of `B_2`, or a Keller
+pair.
+
 ## 6. The one-place cusp cotangent sidecar
 
 For the cusp ring and its normalization
@@ -594,7 +692,9 @@ The theorem does **not** prove:
 5. that the two companion branches in `(39)` lie on one global component;
 6. that the nodal corrected form `(39n)` eliminates the `eta=0` branch or
    continues through the positive Keller rows;
-7. that the reduced `(2,3)` cell is empty, or that `JC(2)` holds.
+7. that the finite family `(39aa)` extends to `B_2` or satisfies the omitted
+   positive bracket rows;
+8. that the reduced `(2,3)` cell is empty, or that `JC(2)` holds.
 
 The residual fifth-root normalization acts by
 `h->zeta*h`, `A->zeta^2A`, `C->zeta^3C`, with `zeta^5=1`; the scalar `I`
@@ -608,10 +708,13 @@ graph. The roots of `(39)` enumerate only intersections with the known line
 itself a boundary forest obstruction: THM-3951 concerns completion-boundary
 primes, whereas these pullback curves lie inside the source. Pure cube lifting
 is now excluded in the first branch by `(39t)`; the live tests are its nodal
-corrected positive rows, row-`-1` continuation in the second branch, further
+corrected positive rows, full algebraization of the finite jet `(39aa)`, further
 node addresses, and membership of the target node in the nonproper-value
 locus. A scalar resultant cannot replace those labels, as THM-3994
-demonstrates. See MISTAKE-481.
+demonstrates. THM-3996 proves the exact finite-locus alternative: distinct
+companion owners require another address, while a complete two-address packet
+has one companion owner and forms a directed two-cycle. It does not decide
+which alternative occurs here. See MISTAKE-481.
 
 Reproduce from the repository root:
 

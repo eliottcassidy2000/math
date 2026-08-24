@@ -90,6 +90,14 @@ shears erase Laurent constants.
 **Caution/evidence:** nonlinear/singular repairs need `ker(A^*)` and interface
 data; THM-3990/3989/3955/3957 and MISTAKE-480.
 
+## Classify the target over the exceptional stratum before closing by density
+
+**Trigger/action:** before closing a dense-generic result, name the target map
+(restriction, quotient, or specialization) and audit its kernel. Fixed-bundle
+continuous scalars close; fibre quotients can gain conductor kernels, so
+retain specialization. **Evidence:** Brendle--Hung is the scalar control;
+THM-3955/3957 and MISTAKE-471 are conductor hostiles.
+
 ## Type every analogy and every implication
 
 **Trigger:** formulas look identical, an analogy suggests an iff, or a scalar equation is read coefficientwise.

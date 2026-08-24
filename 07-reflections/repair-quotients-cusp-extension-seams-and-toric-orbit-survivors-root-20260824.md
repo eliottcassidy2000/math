@@ -1,11 +1,15 @@
 # Repair quotients, cusp extension seams, and toric orbit survivors
 
-**Session synthesis, 2026-08-24.** The three proved advances here are
+**Session synthesis, 2026-08-24.** The proved advances integrated here are
 [THM-3989](../01-canon/theorems/THM-3989-cusp-log-laurent-conductor-and-nondividing-depth-reduction.md)'s
 filtered depth-`2:3` supplement,
 [THM-3990](../01-canon/theorems/THM-3990-componentwise-harmonic-obstruction-and-repair-quotient.md),
+[THM-3991](../01-canon/theorems/THM-3991-periodic-unimodular-toric-cusp-factorial-euler-obstruction.md),
+[THM-3992](../01-canon/theorems/THM-3992-reduced-two-three-cusp-jet-repair-and-first-node-residual.md),
+[THM-3994](../01-canon/theorems/THM-3994-affine-p-double-collision-separates-two-addresses-from-one-a1-centre.md),
+[THM-3995](../01-canon/theorems/THM-3995-scale-two-parity-hole-support-and-integer-variance-tariff.md),
 and
-[THM-3991](../01-canon/theorems/THM-3991-periodic-unimodular-toric-cusp-factorial-euler-obstruction.md).
+[THM-3996](../01-canon/theorems/THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy.md).
 They do not prove `JC(2)`, LRC(14), positive curvature on `S^2 times S^2`, or
 a complex structure on `S^6`. The two global 2026 preprint claims remain under
 their source audits.
@@ -33,7 +37,8 @@ The board stabilized at six concepts:
 3. component averages and integral Smith torsion;
 4. cusp normalization seams invisible in the depth symbol;
 5. translation-orbit strata and compactly supported Euler characteristic;
-6. LRC's nonlinear auxiliary-cover residue after the two-comb failure.
+6. LRC's nonlinear auxiliary-cover residue after the two-comb failure;
+7. complete oriented node-address graphs versus one-line clutch samples.
 
 ## Typed comparison
 
@@ -124,10 +129,13 @@ For the curvature source, the proved consequence is narrowly favorable: its
 displayed `Sigma` is connected, so nonzero integral really is the full
 Poisson obstruction. The load-bearing symbolic notebook identities and the
 global positivity argument remain separate audit obligations. Incoming exact
-controls now independently verify the omitted `h_a` branch of Lemma 5.4 on
-both parametrized components and make the three nonzero terms of `V_bc^(2)`
-cancel at one generic exact point. The latter is a sensitive positive control,
-not a proof of the global identity.
+controls now verify the omitted `P1(L(h_a))=0` identity symbolically on both
+generic parametrized components, relative to the reconstructed formulas, and
+make the three nonzero terms of `V_bc^(2)` cancel at one generic exact point.
+A typed background symmetry reduces global `V_bc=0` to the source's saved
+`V_ac=0` block; because that antecedent has not been independently rebuilt,
+the global identity remains conditional and the headline theorem remains
+under audit.
 
 The incoming reduced-cusp calculation THM-3992 makes the seam extension
 strictly sharper. Once its bracket/moment argument has forced `h=gamma*s` and
@@ -142,9 +150,21 @@ Thus `eta=0` is not merely formally plausible: the exact `P_1/P_0` sequence
 constructs a square-root lift of `A` modulo `k[p,y]`. The other branch is the
 unique first-seam nonliftable one and pays `[s^2]b=2a`. A hostile `B_2` packet
 survives the negative rows through `-2` and fails at `-1`, so this is a typed
-branching theorem rather than a Keller construction. The next tests genuinely
-differ: simultaneous cube lifting for the first branch, row-`-1` continuation
-for the second.
+branching theorem rather than a Keller construction. Further exact work now
+separates both lanes. Every square lift in the first branch has constant nodal
+remainder `a!=0`, so no simultaneous pure cube lift exists; the correct
+replacement is the moving-node identity
+
+```text
+(C-L)^2=(A-K)(A+K/2)^2.
+```
+
+The second branch reaches its next unused seam exactly when
+`a^3+2gamma=0`. Its scalar shadow `16I^3=27gamma^2` is weaker because it
+forgets orientation. On that seam, `A2(0)=q2^2-32/(9a^9)` and `C3(0)` absorbs
+the following seam; an arbitrary one-parameter exact jet survives through
+`ell=6`. This is finite consistency only, so algebraization and positive rows
+replace the obsolete row-`-1` test.
 
 THM-3994 supplies the correct warning for both node addresses. Its two
 double-resultant seams have the same total multiplicity but respectively
@@ -153,6 +173,15 @@ carry two reduced supports and one curvilinear length-two support with an
 addresses are not identified with THM-3992's normalization clutches. What
 transfers is the requirement to retain labelled incidence before taking a
 class or Smith quotient.
+
+THM-3996 supplies the missing ownership law without importing THM-3951's
+completion-boundary forest. For an integral nodal target outside the
+nonproperness locus, finite-etale degree makes every normalization owner
+balanced, hence every complete address edge lies on a directed cycle. Thus
+distinct companions in THM-3992 require an additional address or a nonproper
+node; a complete two-address packet is a directed two-cycle. This implication
+is one-way. Disconnected normalization, an incomplete census, deleted
+properness, and ramified endpoint maps are exact hostile boundaries.
 
 THM-3991 was independently checked through dimensions `1..6` with diagonal
 index controls `d in {1,2,4}`. The proof must use compactly supported Euler characteristic on the
@@ -168,7 +197,25 @@ For LRC(14), THM-4000's exact three-versus-one obstruction says the current
 unweighted auxiliary-cover operation has saturated. A lawful next probe must
 change the operation—weighted cover, a coupled clock, or a carrier retaining
 arrival—not reinterpret the cover number as a linear cokernel. LRC(14)
-remains open.
+remains open. THM-3995 nevertheless gives the scale-two survivor the sharper
+fixed trimmed carrier
+
+```text
+(2/21+1/(42t),8/63-1/(126t)) union
+(55/63+1/(126t),19/21-1/(42t)),
+```
+
+support at most `4(t-1)/(63t)`, and an integer variance correction. This can
+strengthen body-specific endpoint certificates. In THM-4000's notation it
+gives the exact hybrid sufficient certificate
+
+```text
+disc_t(G)<meas(G)^2*(59t+4)/(4(t-1))
+          +(s_t/t^2)*theta_t*(1-theta_t).
+```
+
+THM-4000 already closes its bounded `[1,20]` family; the hybrid closes no
+arbitrary type and does not replace the missing cross-phase control.
 
 ## Reproduction anchors
 
@@ -178,6 +225,11 @@ remains open.
   `538fcf10...a9db`, `0e18bcf4...f5ea`, `2aa53145...5adc`.
 - THM-3991 independent audit: `1,801` gates; hashes
   `2fcf3788...d385`, `21a65442...04fa`, `ea1b877b...4208`.
+- THM-3992 combined cusp/seam audit: `119` exact pass rows; hashes
+  `4c7fb202...cfa2b`, `1e44afac...dc5c8`.
+- THM-3996 node-balance audit: `10` canonical pass rows plus an independent
+  exhaustive binary-digraph hostile suite through four vertices.
 
 The full paths and full hashes are pinned in the theorem frontmatter and the
-results index. All three companions pass under normal and optimized Python.
+results index. All hash-bearing companions pass under normal and optimized
+Python after LF normalization where the host emits CRLF.

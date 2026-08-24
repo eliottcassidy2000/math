@@ -1,0 +1,17 @@
+PASS  THM3992 normalization lies on target node
+PASS  both node parameters map to A=-a/2
+PASS  both node parameters map to C=0 modulo node equation
+PASS  node-address polynomial is squarefree
+PASS  balanced directed cycle controls (11 packets)
+HOSTILE deleted d=3 address gives path indegree=[0, 1, 1], outdegree=[1, 1, 0]
+PASS  Riemann-Hurwitz finite-etale A1 control has only degree one
+PASS  plane two-cycle target equation on L
+PASS  plane two-cycle target equation on companion
+PASS  plane map Jacobian at both clutch points
+PASS  two components meet at exactly x^2=1
+RESULT finite-locus node graph has indegree=outdegree at every vertex
+RESULT every complete finite-locus address edge lies on a directed cycle
+RESULT distinct THM3992 companion owners require an extra address or a Jelonek node
+RESULT a full two-address packet is the two-edge cycle
+NONCONSEQUENCE no ownership census, Jelonek membership, Keller inverse, or JC2 closure is proved
+ALL EXACT CHECKS PASSED
