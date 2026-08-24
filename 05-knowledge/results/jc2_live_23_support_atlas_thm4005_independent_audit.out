@@ -1,0 +1,17 @@
+JC2_LIVE_34_INVARIANT_ATLAS_INDEPENDENT_AUDIT_20260824
+status=THM-4005_INDEPENDENT_AUDIT_PASS;VERIFIED_EXACT;JC2_OPEN
+scope=oriented_reduced_2:3_live_seam_in_fixed_THM3992_gauge;A5_nonzero;b,d_arbitrary
+weight_rule=x^j*t^n_has_weight_j-2n;target_scalars_deleted
+A_table=(((0, 2), 2, A5/4), ((1, 0), -2, 4/(3*A5)), ((1, 1), -1, A5*b/4), ((1, 2), 0, 2), ((2, 0), -4, (9*A5**3*b**2 - 512)/(144*A5**2)), ((2, 1), -3, (A5*d + 5*b)/4), ((2, 2), -2, -4/(5*A5)), ((2, 3), -1, 3*A5*b/8))
+C_table=(((0, 1), 1, -3/4), ((0, 3), 3, -A5/8), ((1, 0), -2, -3*b/8), ((1, 1), -1, -4/A5), ((1, 2), 0, -3*A5*b/16), ((1, 3), 1, -3/2), ((2, 0), -4, -(3*A5*d + 7*b)/(8*A5)), ((2, 1), -3, -(45*A5**3*b**2 - 2816)/(480*A5**2)), ((2, 2), -2, -3*(A5*d + 12*b)/16), ((2, 3), -1, -12/(5*A5)), ((2, 4), 0, -9*A5*b/32))
+strata={'b_nonzero': (5, 6), 'b_zero_d_nonzero': (5, 6), 'b_zero_d_zero': (4, 5)}
+fixed_gauge_first_unrejected_support=4x5_only_on_b=d=0
+transfer=recorded_diagonal_scalings_translations_and_C_by_A_linear_shear_exclude_3x4_and_4x3
+transfer_firewall=4x5_floor_does_not_transfer;expanded_C_copy_of_A_can_cancel_to_pre_gauge_4x4
+hostiles=special_t2_cancellations;tail_collision;closed_support_monomial_overcount;nonlinear_target_change;R0;boundary_blind_p2
+companion=Q_rows_and_derived_Weierstrass_packet_and_two_normalization_germs_pass
+first_missing_row=t^3*(c40+c21*x+c02*x^2)
+quantifier_firewall=no_atlas_point_existence;no_higher_row_lift;no_global_factor_or_owner_census;no_arbitrary_target_invariance
+semantic_sha256=432395a4b9ae2e17325e93294f04fcb156fd756d1e86bd63c6fe533860be7fb7
+checks=111
+RESULT=PASS;FIRST_FIXED_GAUGE_BOUNDARY=4x5;JC2=OPEN

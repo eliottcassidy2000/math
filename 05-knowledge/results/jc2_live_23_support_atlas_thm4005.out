@@ -1,0 +1,125 @@
+STATUS=THM-4005;PROVED_NECESSARY_ATLAS;VERIFIED-EXACT;JC(2)_OPEN
+LIVE_SEAM=gamma=-a^3/2
+INVARIANTS=A5=a^5,b=beta/gamma,d=delta/gamma
+PASS  A5=a^5 is invariant modulo zeta^5=1
+PASS  invariant first A diagonal
+PASS  invariant first C diagonal
+PASS  invariant second A diagonal
+PASS  invariant second C diagonal
+RESULT invariant_normal_jet_A/a = A0n+t*A1n+t^2*A2n+O(t^3)
+A0n=A5*x**2/4 + 1
+A1n=A5*b*x/4 + 2*x**2 + 4/(3*A5)
+A2n=3*A5*b*x**3/8 + x*(A5*d + 5*b)/4 - 4*x**2/(5*A5) + (9*A5**3*b**2 - 512)/(144*A5**2)
+RESULT invariant_normal_jet_C/a^4 = C0n+t*C1n+t^2*C2n+O(t^3)
+C0n=-A5*x**3/8 - 3*x/4
+C1n=-3*A5*b*x**2/16 - 3*b/8 - 3*x**3/2 - 4*x/A5
+C2n=-9*A5*b*x**4/32 - x**2*(3*A5*d/16 + 9*b/4) - 12*x**3/(5*A5) + (-3*A5*d - 7*b)/(8*A5) + x*(-45*A5**3*b**2 + 2816)/(480*A5**2)
+PASS  weight tag (n=0,j=0)
+PASS  weight tag (n=0,j=1)
+PASS  weight tag (n=0,j=2)
+PASS  weight tag (n=1,j=0)
+PASS  weight tag (n=1,j=1)
+PASS  weight tag (n=1,j=2)
+PASS  weight tag (n=1,j=3)
+PASS  weight tag (n=1,j=4)
+PASS  weight tag (n=2,j=0)
+PASS  weight tag (n=2,j=1)
+PASS  weight tag (n=2,j=2)
+PASS  weight tag (n=2,j=3)
+PASS  weight tag (n=2,j=4)
+PASS  weight tag (n=2,j=5)
+PASS  weight tag (n=2,j=6)
+PASS  A weight +2 boundary coefficient
+PASS  A weight -2 first coefficient
+PASS  A weight 0 first coefficient
+PASS  C weight +3 boundary coefficient
+PASS  C weight +1 boundary coefficient
+PASS  C weight -1 first coefficient
+PASS  A base weights are distinct
+PASS  C base weights are distinct
+IMPORTED THM-3987: each output also has an even weight <= -4
+DEDUCTION support(A)>=4 and support(C)>=4 before the second diagonal
+DEDUCTION neither side can have retained support three
+PASS  A weight -1 coefficient is A5*b/4
+PASS  C weight -2 coefficient is -3*b/8
+PASS  C weight 0 coefficient is -3*A5*b/16
+STRATUM b!=0: support(A)>=5, support(C)>=6
+PASS  b=0 forces A weight -4 coefficient
+PASS  b=0 A weight -3 coefficient
+PASS  b=0 forces C weight -3 coefficient
+PASS  b=0 C weight -4 coefficient
+PASS  b=0 C weight -2 coefficient
+PASS  b=d=0 A has four distinct forced weights
+PASS  b=d=0 C has four distinct forced weights before its even tail
+PASS  the required C even tail cannot collide with {3,1,-1,-3}
+STRATUM b=0,d!=0: support(A)>=5, support(C)>=6
+STRATUM b=d=0: support(A)>=4, support(C)>=5
+POST-GAUGE REDUCTION: the oriented live reduced 2:3 cell has no 3x4 or 4x3 support
+FIRST POST-GAUGE RETAINED-SUPPORT CANDIDATE AFTER THESE JETS=4x5 on b=d=0
+CAUTION=4x5 is a necessary candidate floor, not an existence result
+PASS  specific THM3992 shear cannot cancel four forced C weights
+GAUGE LEDGER: THM3992 diagonal scalings/translations preserve A support
+GAUGE LEDGER: its C-by-A shear cannot erase C weights {3,1,-1,-3} when A has four weights
+TRANSFER: the same oriented live seam excludes pre-normalization 3x4 and 4x3
+FIREWALL: no support claim is made for arbitrary nonlinear target automorphisms
+PASS  THM3998 conic/ODE degree gap
+PASS  THM3998 hostile gap is positive from D=1
+HOSTILE already-closed 3x<=3 cell remains excluded independently by THM-3998
+PASS  complete known residual satisfies Gtilde=t*Qtilde
+PASS  companion t^0 row
+PASS  companion t^1 row
+PASS  companion t^2 row
+RESULT Qtilde mod t^3 = (x**2 + 6/A5) + t*(b*x + 6*x**2/A5 - 16/(3*A5**2)) + t^2*(b**2/4 + b*x**3 + d*x - 32*x**2/(3*A5**2) + 2752/(135*A5**3))
+PASS  Weierstrass factorization modulo t^3 row 0
+PASS  Weierstrass factorization modulo t^3 row 1
+PASS  Weierstrass factorization modulo t^3 row 2
+PASS  Weierstrass unit has constant term one
+RESULT finite packet: Qtilde=U*W mod t^3 with U a t-adic unit
+U=t**2*(b*x - 32/(3*A5**2)) + 1 + 6*t/A5
+W=t**2*(b**2/4 + x*(d - 12*b/A5) + 44872/(135*A5**3)) + t*(b*x - 124/(3*A5**2)) + x**2 + 6/A5
+PASS  finite-packet discriminant row 0
+PASS  finite-packet discriminant row 1
+PASS  finite-packet discriminant row 2
+PASS  node-address quadratic is squarefree
+RESULT finite-packet discriminant is independent of b,d through t^2
+PASS  normalized plus/minus branch row 0
+PASS  normalized plus/minus branch row 1
+PASS  normalized plus/minus branch row 2
+PASS  branch-center order t
+PASS  branch-center order t^2
+RESULT for e_+/-^2=-6/A5:
+  x_+/-=e_+/-+(-b/2-31*e_+/-/(9*A5))*t
+       +(-d/2+6*b/A5+653*e_+/-/(30*A5^2))*t^2+O(t^3)
+  x_++x_-=-b*t+(-d+12*b/A5)*t^2+O(t^3)
+PASS  known boundary endpoint jet
+PASS  b!=0 endpoint root control
+THM3999 ENDPOINT: E(y)=1-b*y+O(y^2); b!=0 forces an endpoint
+THM3999 FIREWALL: b=0 does not imply boundary disjointness
+PASS  boundary-disjoint representative has R(0,y)=0
+PASS  boundary-disjoint representative ideal decomposition
+PASS  boundary-disjoint representative retains mandatory p^2
+HOSTILE R in (p^2,py): E=1 but [p^2]Rtilde=-16/(3*A5^2)!=0
+PASS  R=0 contradicts mandatory live p^2 coefficient
+PASS  ambient R=0 companion is G_m
+HOSTILE R=0: excluded for Keller live seam; ambient Q=0 is G_m
+PASS  next residual layer divides by t
+PASS  next Q layer begins at t^3
+PASS  next Q layer has no row 0
+PASS  next Q layer has no row 1
+PASS  next Q layer has no row 2
+FIRST MISSING RESIDUAL LAYER=([p^4],[p^2*y],[y^2]) of R/gamma
+FIRST MISSING COMPANION ROW=t^3*(c40+c21*x+c02*x^2)
+SIDECAR c02 is the first unknown endpoint coefficient after b
+PASS  known odd companion part
+PASS  first missing source-odd term
+ON b=d=0: known clutch packet is x->-x symmetric through t^2
+FIRST MISSING SYMMETRY SIDECAR includes c21=[p^2*y](R/gamma)
+PASS  target shear changes defect by cross terms
+PASS  determinant-one target shear preserves source Jacobian
+WARNING A5,b,d descend only under residual mu5 in the fixed THM3992 gauge
+WARNING arbitrary target automorphisms require renormalization and can change the atlas
+OWNERSHIP=the two roots e_+/- are two normalization addresses, not a component census
+THM3996=distinct owners imply another node address or a Jelonek node
+THM3999=endpoint data do not determine factor ownership or irreducibility
+GLOBAL FACTORIZATION=OPEN; U*W is only the lawful t-adic finite-packet factor mod t^3
+ALL THM-4005 JC2 LIVE 3x4/4x3 INVARIANT ATLAS CHECKS PASSED

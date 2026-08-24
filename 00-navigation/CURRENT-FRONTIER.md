@@ -377,7 +377,12 @@ asymptotic or residue.
   cell. THM-3999 gives `ord_D(Q)=2`, endpoint
   `Spec k[y]/(gamma-R(0,y))`, and total class `-2[D]`; boundary disjointness
   kills pure-`y` residuals but not the mandatory `p^2` coefficient. It proves
-  neither irreducibility nor address completeness. Multi-term cancellation,
+  neither irreducibility nor address completeness. THM-4005 now excludes the
+  `3x4` and `4x3` retained-support cells inside this oriented live `2:3` seam,
+  including transfer across the specific THM-3992 linear normalization. In
+  the fixed gauge its first unrejected invoice is `4x5`, only on `b=d=0`, but
+  that stronger floor does not transfer; the first missing residual row is
+  `t^3(c40+c21*x+c02*x^2)`. Other reduced cells, multi-term cancellation,
   finite Keller/Darboux entry, and `JC(2)` stay open.
   Russell THM-3785/3843--3871 close named depth-through-five packets; the
   nonreduced `(6,4)`, rational corrections, and global entry remain open.

@@ -274,3 +274,50 @@ featureless ideal `R in (p^2,y)` now has three independent coordinate systems:
 Hasse layers, source-grading support, and the boundary endpoint polynomial.
 The next breakthrough should make at least two of those systems constrain the
 same nonzero residual, rather than pushing any one representation in isolation.
+
+## Addendum: the first two invariant rows close the live seven-piece seam
+
+[THM-4005](../01-canon/theorems/THM-4005-reduced-two-three-live-seam-invariant-support-atlas.md)
+performs the promised comparison between Hasse layers and source grading. On
+the continued seam `gamma=-a^3/2`, divide by the residual characters and use
+the quotient coordinates
+
+```text
+A5=a^5,               b=[y](R/gamma),
+d=[py](R/gamma).
+```
+
+The first two source-normal rows then force both outputs to carry at least
+four retained weights. This closes `3x4/4x3` inside the oriented live `2:3`
+seam, and a no-import `111`-gate audit shows that the exclusion survives the
+specific THM-3992 linear shear. The stronger fixed-gauge `4x5` invoice does
+not survive that transfer: an expanded normalized `C` may contain a complete
+copy of `A`, which the inverse shear can cancel. That hostile is the reason
+the theorem records the seven-piece exclusion but not a pre-gauge `4x5`
+floor.
+
+The concept board changes as follows.
+
+- **Hasse layers x grading support:** `b` and `d` are no longer merely free
+  coefficients; their vanishing pattern is exactly the support-stratum
+  selector `5x6,5x6,4x5`.
+- **Endpoint x support:** `b` is simultaneously the first endpoint derivative
+  and the first coefficient whose nonvanishing widens both support invoices.
+- **Clutch symmetry x next row:** on `b=d=0`, the known two-clutch packet is
+  exchanged by `x->-x` through `t^2`; the missing
+  `c21=[p^2y](R/gamma)` is the first source-odd sidecar that can break it.
+- **Gauge x ownership:** a support claim can transfer through the recorded
+  linear shear without making the finite Weierstrass factors global owners.
+  The support and owner ledgers remain distinct.
+
+The cheapest continuation is now sharply localized. Compute the next
+source-normal/Hasse row and its residual triple
+
+```text
+(c40,c21,c02)=([p^4],[p^2y],[y^2])(R/gamma).
+```
+
+Here `c02` moves the endpoint after `b`, while `c21` breaks the odd symmetry
+on the only fixed-gauge minimal-support stratum. A contradiction must use one
+of those native effects or a later row; merely refining the already complete
+`t^0,t^1,t^2` companion packet cannot close the cell.

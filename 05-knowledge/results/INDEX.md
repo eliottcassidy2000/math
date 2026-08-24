@@ -1247,6 +1247,24 @@
   `835d0b663e8d8cc3251b30b109d039039d681651dac034174180f4d024c63214` /
   `fefdf2f5f29f7eddb01c96ae8dd3357e15f969174c5421d20b162db78fd6cdf3`.
 
+- `jc2_live_23_support_atlas_thm4005.py` and its no-import independent audit
+  -> matching `.out`s [THM-4005 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; JC(2) OPEN]. On the oriented THM-3997 live seam, the first
+  two invariant source-normal diagonals force both outputs to retain at least
+  four nonconstant weights, excluding `3x4/4x3` in the fixed gauge and across
+  the exact linear operations recorded by THM-3992. The sharper fixed-gauge
+  strata are `5x6` for `b!=0` or `d!=0` and `4x5` for `b=d=0`; the latter
+  floor does not transfer across the shear. The companion Weierstrass packet
+  is exact modulo `t^3`, and the first missing row is
+  `t^3(c40+c21*x+c02*x^2)`. Primary script/output SHA-256:
+  `6e83e7aa534c88cd6c50860cdda0dec862485b325e9c62d3fd03abad2afd63d4` /
+  `e4378e7c3e2b2d55b561a0f09d9114464030f15bfed8ef46e1eb2b5b94c6e6c5`.
+  Independent script/output/semantic SHA-256:
+  `94783fe667e66f8865c6296de133ef4b6f4a5ff597a5ec351a75d65cba4f48c9` /
+  `15c2bc6b34a1a2cc255313799a6f97fe429df79ca9483d7c4d5b92dea4681c6a` /
+  `432395a4b9ae2e17325e93294f04fcb156fd756d1e86bd63c6fe533860be7fb7`;
+  independent exact gates: `111`.
+
 - `brendle_hung_lemma54_independent_audit_20260824.py`,
   `brendle_hung_vbc_exact_point_audit_20260824.py`,
   `brendle_hung_vac_vbc_global_identity_audit_20260824.py`, and
