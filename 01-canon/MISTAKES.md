@@ -9,6 +9,76 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-479 (2026-08-24, THM-3978 linear seam) -- a Hamiltonian response image was treated as a ring endomorphism
+
+- **What failed:** the first promotion draft wrote the completion response as
+  a quotient `B_n/D_A(B_n)`, silently assuming `D_A=J(A,-)` preserves `B_n`.
+  Its scratch checker also used Python `assert`, so optimized mode erased all
+  40 advertised gates while still incrementing the printed count.
+- **Minimal witness / first failed implication:** for
+  `A=x+c(z-1)`, direct calculation gives
+  `D_A(y)=(z-1)^2/x+2x^(n-1)p+c(n+1)x^(n-1)y`. The first term has order `-1`
+  on the added boundary `D`, so `D_A(y) notin B_n` and the quotient is
+  ill-typed. Running the old checker with `python -O` removed every assertion.
+- **Repair / strongest survivor:** the response is now the typed ideal
+  `D_A(B_n) intersection k[A]` inside `k(x,t)`. The rational-right-hand-side
+  reduction uses `Q in B_n subset k[x,t]` and
+  `k[x,t] intersection k(A)=k[A]`, not false bracket closure in `B_n`.
+  An explicit raising gate replaced every assertion, and the 53-gate companion
+  freezes the non-endomorphism pole and both hostile endpoints. The exact
+  plane/completion response ideals themselves survive.
+- **Reusable rule:** before forming a derivation quotient, check every ring
+  generator maps back to the ring, including boundary valuations. If only a
+  target-field slice of the image is needed, type it as an image intersection.
+  As in MISTAKE-476, optimized agreement counts only when gates survive `-O`.
+
+## MISTAKE-478 (2026-08-24, THM-3976 rational compression) -- an intersection theorem neither expels survivors nor selects a lost generator
+
+- **What failed:** the pre-audit theorem combined three unjustified steps. It
+  wrote `d((w^2-1)/(4w^2))/dw=1/w^3`; inferred that a viable Darboux pair on
+  `B` must leave `C=B intersection k(a,b)` and involve `y`; and imported
+  degree/support theorems stated over `C` while claiming every algebraically
+  closed characteristic-zero field.
+- **Minimal witnesses / first failed implications:** direct differentiation
+  gives `1/(2w^3)` (the source derivative `w_t=2x^2` supplies the compensating
+  factor, so the final Jacobian is still one). The cells `(2,5),(3,4),(4,3),
+  (5,2)` remain open inside `C`, so no survivor is forced to leave it; even
+  outside `C`, nonfixed directions already occur in `k[x,z,p]`, so leaving the
+  fixed intersection does not force `y`. Finally, the cited THM-1330 and
+  THM-3569/3583/3592 statements are canonically `C`-scoped.
+- **Repair / strongest survivor:** THM-3976 now works over `k=C`, corrects the
+  derivative, and claims only degree/support floors for pairs confined to
+  `C`. The quadratic fixed field, exact polynomial intersection, smooth
+  pseudoplane atlas, scalar units, `Pic=Z/2`, and those internal floors all
+  survive independent audit. Existence inside `C`, pairs elsewhere in `B`,
+  and `JC(2)` remain open.
+- **Reusable rule:** an exact intersection controls objects that remain in the
+  intersection; it does not prove that a survivor exits it, and information
+  lost by a quotient does not identify which omitted generator a lift uses.
+  Audit the base field of every imported obstruction separately.
+
+## MISTAKE-477 (2026-08-24, THM-3973 finite cubic) -- one nonmaximal power order did not prove global nonmonogenicity
+
+- **What failed:** the pre-audit proof computed that the change from the
+  normal basis `{1,x,w}` to `{1,x,x^2}` has determinant `-p`, then called the
+  whole finite cubic algebra nonmonogenic. This excludes only the chosen
+  generator `x`; monogenicity is existential over all `theta`.
+- **Minimal witness / first failed implication:** index debt for `R[x]` does
+  not imply index debt for `R[theta]`. For
+  `theta=c+ax+bw`, the missing general determinant is
+  `-a^3p+a^2bC+ab^2(1+p^2)-b^3pC`. If it were a unit, reduction modulo `p`
+  would make `a_0 b_0(a_0C+b_0)` a unit of `k[C]`, forcing three factors to
+  be units although nonzero constant `a_0,b_0` make `a_0C+b_0` nonconstant.
+- **Repair / strongest survivor:** the general determinant proof and two exact
+  gates were added, so global nonmonogenicity is now proved. The separate
+  7,033-row statement was also narrowed from “no polynomial mate” to the
+  computed “no `F_4` mate.” The repaired companion has 7,494 checks and
+  independent normal/optimized/frozen agreement after LF normalization.
+- **Reusable rule:** to prove a finite free algebra nonmonogenic, quantify over
+  a general generator (modulo harmless translation) and force its basis
+  determinant to be a nonunit. The index of one natural power basis is only a
+  statement about that order.
+
 ## MISTAKE-476 (2026-08-24, Hopf/S6 finite audit) -- optimized replay silently removed every assertion
 
 - **What failed:** the Hopf/S6 matrix companion was advertised with both

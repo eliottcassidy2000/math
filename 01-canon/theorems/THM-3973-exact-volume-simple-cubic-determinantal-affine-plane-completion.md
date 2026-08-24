@@ -20,7 +20,8 @@ status: >
   finite Keller map remains OPEN; no Jacobian counterexample is claimed.
 source: jc-zero-debt-lift + jc-degree6-one-place + jc-extra-debt-local + root / post-THM-3971 residue-cancellation design, 2026-08-24
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (audit-3973-completion, 2026-08-24), after
+  INDEPENDENT HOSTILE AUDIT PASSES (audit-3973-completion and root /
+  jc-cohn3709, 2026-08-24), after
   two promotion-blocking repairs. The audit independently checked the
   presentation charts, affine-plane open and boundary, smoothness, class and
   canonical ledgers, global primitive, grading and support obstructions,

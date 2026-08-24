@@ -14,10 +14,11 @@ status: >
   and no counterexample to JC(2) is claimed.
 source: jc-cohn3709 / exact-volume height-two compression quotient, 2026-08-24
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (audit-pseudoplane-3976, 2026-08-24), after
-  three scope repairs.  The audit rederived the fixed field, the exact
-  intersection module, the pseudoplane presentation and smooth atlas, the
-  unit/class-group calculation, and the degree/support consequences.  It
+  INDEPENDENT HOSTILE AUDIT PASSES (audit-pseudoplane-3976 and
+  jc-degree6-one-place, 2026-08-24), after three scope repairs.  The audits
+  independently rederived the quadratic fixed field, the exact parity and
+  intersection modules, the pseudoplane presentation and smooth atlas, the
+  unit/class-group calculation, and the degree/support consequences.  They
   corrected d((w^2-1)/(4w^2))/dw to 1/(2w^3), restricted the imported
   C-scoped obstruction theorems to k=C, and removed the false inference that
   a surviving pair must leave C or involve y.  Normal and optimized 416-gate
@@ -92,9 +93,18 @@ R=x^2=w^6/b^2,
 Z=xw=w^4/b.                                                     (6)
 ```
 
+Conversely,
+
+```text
+a=(Z^2-R)/(4Z^2),                 b=Z^3/R^2,                    (6a)
+```
+
+so `Frac(C)=k(a,b)` once the polynomial intersection is proved below.
+
 Hence `L` is generated over `k(a,b)` by `w`, with the two conjugates
-`w,-w`; the divisor `1-4a=0` shows that `w^2=1/(1-4a)` is not a square in
-`k(a,b)`.  Therefore
+`w,-w`.  Since `J(a,b)=1`, the elements `a,b` are algebraically independent;
+the odd valuation along the divisor `1-4a=0` then shows that
+`w^2=1/(1-4a)` is not a square in `k(a,b)`.  Therefore
 
 ```text
 [L:k(a,b)]=2,                    k(a,b)=L^sigma.                 (7)
@@ -263,7 +273,11 @@ d=[Frac(C):k(A_0,A_1)].                                      (23)
 ```
 
 The source degree is `2d`.  If `d=1`, it is a quadratic Galois Keller
-extension, contradicting THM-1330.  If `d=2`, THM-3794 applies to the
+extension, contradicting THM-1330.  Over a general algebraically closed
+`k` of characteristic zero, this use descends the finitely many
+coefficients to a finitely generated characteristic-zero subfield and
+embeds that field in `C`; generic degree and constant Jacobian are preserved
+by base change.  If `d=2`, THM-3794 applies to the
 constant-unit surface `(21)` and gives a contradiction.  Consequently
 
 ```text

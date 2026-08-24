@@ -369,11 +369,18 @@ exact-volume/no-Darboux near miss. THM-3972 gives the nonconstant squarefree-
 `Xi` blowup normalization and closes `a=t`, constant-`(c,r)`; general
 canonical-compatible rows remain open. THM-3973 gives an exact-volume
 completion passport and a globally nonmonogenic finite cubic whose
-ramification curve meets the affine-plane open, preventing Keller. THM-3974 closes the two-by-three cell and its
+ramification curve meets the affine-plane open, preventing Keller. THM-3974
+closes the two-by-three cell and its
 transpose at every height, plus the wider height-two seven-piece floor.
+THM-3975 adds the two-color/plinth ledger, a height-three finite cubic control,
+and the all-height rational no-mate theorem for every nonconstant
+`f in k(p)`.
 THM-3976 computes the rational-compression pseudoplane intersection and only
-its internal degree/support floors. Finite Keller and unrestricted Darboux
-entry remain open; THM-3975 is RESERVED.
+its internal degree/support floors. THM-3977 closes the lowest simultaneous
+cusp/arm seam by critical points and generic-fibre residues. THM-3978 gives
+the exact linear-seam response ideals and excludes a constant mate despite
+submersivity and a rational mate. Finite Keller and unrestricted Darboux
+entry remain open.
 None of these supplies a Hopf dependency here.
 
 ### Explicitly rejected vocabulary bridges

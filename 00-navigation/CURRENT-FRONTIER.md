@@ -359,10 +359,14 @@ asymptotic or residue.
   supplies a boundary/class/canonical/exact-volume passport and a globally
   nonmonogenic finite cubic, but the cubic ramifies. THM-3974 closes through
   `2 x 3`/transpose at every height and gives the height-two floor seven.
+  THM-3975 adds the two-color/plinth ledger, a height-three finite cubic, and
+  all-height rational no-mates for every nonconstant `f in k(p)`.
   THM-3976 identifies the rational-compression pseudoplane and its `C`-only
-  degree/support floors. Open: compatible/multiple/reducible/nongraph debts;
+  degree/support floors. THM-3977 closes the lowest simultaneous cusp/arm
+  seam; THM-3978 computes the linear-seam plane/completion response ideals
+  and excludes its constant mate. Open: compatible/multiple/reducible/nongraph debts;
   degree `>=6`; polynomial compression, finite Keller and unrestricted
-  Darboux entry; `JC(2)`. THM-3975 RESERVED; THM-3955/57 local.
+  Darboux entry; `JC(2)`. THM-3955/57 local.
   THM-3853/3855 remain formal laboratories.
   Russell THM-3785 forces `3|d,d>=9`; THM-3843/46/49 give arm/jets/contact.
   THM-3856/61/67/71 close normal `z`-depth through five; exact shears leave

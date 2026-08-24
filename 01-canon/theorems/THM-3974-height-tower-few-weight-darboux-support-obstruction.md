@@ -16,9 +16,10 @@ status: >
   unrestricted support.
 source: jc-degree6-one-place / post-THM-3973 exact-volume completion support analysis, 2026-08-24
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (all-frontiers, 2026-08-24). The audit
+  INDEPENDENT HOSTILE AUDIT PASSES (all-frontiers and root / jc-cohn3709,
+  2026-08-24). The audits
   rederived the two-ceiling weight pieces, Wronskian bracket, homogeneous,
-  one-by-arbitrary, and uniform two-by-two gates. It traced the all-height
+  one-by-arbitrary, and uniform two-by-two gates. They traced the all-height
   THM-3576 two-by-three transfer and every height-two ladder: only the
   distinguished exponent-`n` arm selects support, while the second compulsory
   color supplies the terminal degree-two divisor. The missing direct THM-3579
