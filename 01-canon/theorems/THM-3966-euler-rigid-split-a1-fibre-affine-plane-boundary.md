@@ -14,14 +14,16 @@ status: >
   boundary invoice, not a sufficient construction of an affine-plane open.
 source: jc-cohn3709 / post-THM-3964 class-Euler synthesis, 2026-08-24
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (jc_extra_debt_local, 2026-08-24). The audit
-  rederived purity by the affine-intersection plus S2 Hartogs argument,
-  checked the exact boundary-component count from THM-3922, verified the
+  TWO INDEPENDENT HOSTILE AUDITS PASS (jc_extra_debt_local and
+  jc_zero_debt_lift, 2026-08-24). The audits independently rederived purity
+  by the affine-intersection plus S2 Hartogs argument, checked the exact
+  boundary-component count and unit hypotheses from THM-3922, verified the
   normalization-incidence Euler formula including multi-component points,
   and confirmed that equality yields disjoint components with A1
   normalizations but does not falsely assert that a unibranch singular
-  component is itself A1. It also checked the reduced split-fibre
-  stratification and the characteristic-zero l-adic/descent scope.
+  component is itself A1. They also checked the n=0 edge, reduced split-fibre
+  stratification, finite-bijective complex topology, and the stated
+  characteristic-zero l-adic/descent scope.
 depends_on:
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
