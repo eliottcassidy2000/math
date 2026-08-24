@@ -2,33 +2,39 @@
 id: THM-3927
 title: "Unit-ideal rational sextic passes the affine address cap but has two infinity places"
 status: >
-  PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT. Over an
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Over an
   algebraically closed field of characteristic zero, an explicit binary
   cubic over k[A,C] has unit coefficient ideal, irreducible S3 generic
   fibre, smooth normal Delone--Faddeev surface, scalar units, class group
   Z^2, and no scalar-unit index-form value. Its irreducible rational sextic
   discriminant has exactly two affine collision fibres, two addresses in
-  each, both A5 contacts, so the affine address cap is two. Nevertheless its
-  sole projective infinity support has two normalization places, one smooth
-  and one a (2,5) cusp, so THM-3920 rejects it as a Keller boundary. The
-  ramification class and one vertical prime form a class-group basis, but
-  their natural etale deletion has compactly supported Euler characteristic
-  5. Compressing the target by B=AC produces a rational one-place octic;
+  each, both A5 contacts, so the target-branch affine address cap is two.
+  Nevertheless its affine normalization is P1 minus two points, so
+  THM-3841's Jelonek gate rejects it. Independently, the ramification curve
+  identifies both affine address pairs inside the completion and is not
+  unibranch, violating THM-3920. Its class and one vertical prime form a
+  class-group basis, but their natural etale deletion has compactly
+  supported Euler characteristic 5. Compressing the target by B=AC produces
+  a rational one-place octic;
   after the forced index-A saturation, its normal maximal cubic order is
   explicitly monogenic. This is a sharp address-cap-positive near miss, not
   a Keller atlas or a counterexample to JC(2).
 source: jc_zero_debt_lift / post-THM-3920 binary-cubic address-cap search, 2026-08-23
 audit: >
-  Candidate author audit: exact symbolic companion checks the binary-cubic
-  identities, generic irreducibility and S3 square class, projective
-  normalization and basepoint freedom, both infinity valuations, exhaustive
-  affine collisions and genus ledger, smooth surface Jacobian ideal,
-  Nagata/Smith class calculation, different valuations, ramification
-  identifications, Euler ledger, and the one-place compressed maximal
-  overorder. Normal and optimized executions byte-match the frozen output.
-  Independent hostile audit remains required before promotion.
+  INDEPENDENT HOSTILE AUDIT PASS (jc-cohn3709, 2026-08-23). The audit
+  reconstructed generic irreducibility and nonmonogenicity, the projective
+  normalization, both infinity valuations, the complete collision/genus
+  ledger, the Nagata class and unit calculation, different valuations,
+  ramification identifications, Euler ledger, and compressed maximal
+  overorder. It repaired a substantive mechanism/scope error: two
+  projective infinity places invoke THM-3841, whereas THM-3920 applies
+  independently because the ramification curve identifies the two affine
+  branch pairs and is non-unibranch. The assertion-free companion
+  byte-matches in normal and optimized mode; frozen output, raw hashes, and
+  documentation checks pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
+  - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
 related:
@@ -45,7 +51,7 @@ hash_basis: raw LF bytes
 
 # THM-3927 -- the affine cap passes, but infinity still splits
 
-**PROVED + VERIFIED-EXACT; PENDING INDEPENDENT HOSTILE AUDIT.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero. Compactly supported
 Euler characteristics are asserted after specialization to `k=C`.
 
@@ -58,8 +64,10 @@ Psi=A(1+27A)U^3+C U^2V-(1+24A)UV^2+8A V^3.                (1)
 Let `S` be its Delone--Faddeev cubic algebra and `X=Spec S`. This theorem
 shows that `(1)` clears three invoices that had previously failed in
 different examples: it is normal and genuinely nonmonogenic, its branch is
-rational, and no affine branch fibre has more than two normalization
-addresses. The remaining failure is concentrated at infinity.
+rational, and no affine target-branch fibre has more than two normalization
+addresses. It then fails three separate global invoices: polynomial
+uniruledness at infinity, boundary unibranchness inside the completion, and
+the Euler characteristic of the natural deletion.
 
 ## 1. Unit coefficient ideal, nonmonogenicity, and the S3 order
 
@@ -208,9 +216,11 @@ s=infinity: x=-(2/3)r^2+...,          z=72r^5+....          (18)
 
 Thus the first branch is smooth, the second is a `(2,5)` cusp, and their
 tangent lines are distinct. There is one projective infinity point but
-exactly two normalization places. This distinction is the obstruction:
-THM-3920's affine-plane boundary gate concerns normalization places, not
-set-theoretic support.
+exactly two normalization places. Equivalently, the affine normalization is
+`P1` minus two points rather than `A1`. THM-3841's deleted-divisor/Jelonek
+argument therefore forbids this curve as a planar nonproperness component.
+This is a projective-puncture obstruction, not an application of
+THM-3920's affine finite-fibre address cap.
 
 ## 3. Exhaustive affine collisions: the exact cap is two
 
@@ -416,6 +426,12 @@ normalization points. Its two singular points, indexed by the roots of
 ((u-2)/36, (5u-4)/12, (5u-4)/36, (2u-1)/9).               (43)
 ```
 
+Each identification gives two normalization branches through one point of
+the irreducible boundary curve `E`. Thus `E` is not unibranch, and
+THM-3920 independently forbids an affine-plane open in this completion.
+This source-boundary failure is stronger than merely observing that the
+target branch obeys the numerical address cap `(27)`.
+
 Also `Q meet E` is the single point `(-1/27,0,0,0)`, corresponding to
 `s=-1`.
 
@@ -544,7 +560,8 @@ geometry of the deleted ramification curve.
 
 The construction is not a Keller map. No pair of polynomial coordinates on
 an affine source, constant Jacobian identity, or affine-plane atlas is
-produced. THM-3920 rejects the two-place sextic, while the one-place
-compression has a monogenic maximal order and belongs to a different
-design class. Consequently this theorem neither supplies a counterexample
-to `JC(2)` nor proves `JC(2)`. **QED.**
+produced. THM-3841 rejects the two-puncture target branch; THM-3920
+independently rejects the non-unibranch ramification boundary; and the
+one-place compression has a monogenic maximal order in a different design
+class. Consequently this theorem neither supplies a counterexample to
+`JC(2)` nor proves `JC(2)`. **QED.**

@@ -1,0 +1,14 @@
+THM-3931 exact class-and-different companion
+CHECKS=53
+DISCRIMINANT=Delta=d*G/6
+DIV_D=2*P0+PC
+DIV_THETA=P0+PC+2*Q
+CLASS_GROUP=Z*q;P0=2q;PC=-4q;Q=q;E=0
+DIFFERENT=P'(theta)=d*(3*omega-12*kappa*theta-2*C)
+DIV_F=E;NORM_F=-G/6
+COLLISION=u=+1,-1 -> (A,C)=(3*kappa,0)
+FIBRE=one length-2 ramified point plus one simple point
+FIRST_OBSTRUCTION=E is non-unibranch
+MANDATORY_BOUNDARY_CLASSES=(0,2);NATURAL_QUOTIENT=Z/2
+CONCLUSION=nonconstant F becomes a unit after deleting E; no A2 Keller open
+SEMANTIC_SHA256=6ceb9cb4e9116d97fc68971a886206a7c3232280648cedf4a63160180fe8b298

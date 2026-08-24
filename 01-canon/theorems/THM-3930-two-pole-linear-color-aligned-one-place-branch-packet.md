@@ -2,7 +2,7 @@
 id: THM-3930
 title: "Two-pole linear-color cubic has an aligned one-place line-plus-quintic branch packet"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. Over an
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Over an
   algebraically closed characteristic-zero field, an explicit unit-ideal
   binary cubic defines a normal nonmonogenic S3 cubic order whose squarefree
   discriminant is a line times an irreducible rational quintic. Both branch
@@ -16,14 +16,18 @@ status: >
   plane chart remain to be determined.
 source: root / post-THM-3927 finite repeated-root pole-divisor lane, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The proof
-  separates generic irreducibility, the degree-two repeated-root incidence,
-  implicit line-plus-quintic factorization, normality, one-place/address
-  geometry, and a Laurent-unit proof of global nonmonogenicity. The
-  assertion-free exact companion verifies the identities and frozen output
-  in normal and optimized mode. Promotion requires an independent audit of
-  the normalization birationality, squarefree/maximal-order step, and both
-  valuation congruences in the unit equation.
+  INDEPENDENT HOSTILE AUDIT PASS (jc_degree6_one_place, 2026-08-23). The
+  audit independently reconstructed generic irreducibility, the exact
+  centered two-pole calculation, normalization birationality and finiteness,
+  the squarefree/maximal-order normality step, common infinity, and the two
+  incompatible divisor congruences in the Laurent-unit equation. It made
+  explicit that Section 2 is complete only in the centered t(infinity)=0
+  gauge and that m=e+1 is forced by cancellation against a zero at infinity,
+  not by an assumed generic leading term. The visible two-address collision
+  also exposes a stricter source-unibranchness question, reserved separately
+  as THM-3931 and not used here. The assertion-free 35-gate companion
+  byte-matches in normal and optimized mode; raw and semantic hashes and
+  documentation checks pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
@@ -41,7 +45,7 @@ hash_basis: raw LF bytes
 
 # THM-3930 -- finite root poles unlock the branch geometry
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero. Choose `rho in k` with
 
 ```text
@@ -117,15 +121,17 @@ The finite poles are load-bearing: they are precisely what escapes
 THM-3929's root-regular integrality argument.
 
 The construction comes from the centered trace-zero two-simple-pole
-calculation. In the root gauge where the value at normalization infinity is
-zero, normalize the two finite root poles to `u=+/-1` and put
+calculation. This calculation is complete only in the root gauge where the
+value at normalization infinity is zero. After normalizing the two finite
+simple root poles to `u=+/-1`, put
 
 ```text
 A=u^3+p u^2+q u+r,                 t=(u+kappa)/(u^2-1).     (10)
 ```
 
-Within this gauge, vanishing of the quadratic coefficient in the minimal polynomial of `t`
-forces, away from the degree-one cancellations `kappa=+/-1`, either
+Within this centered `t(infinity)=0` gauge, vanishing of the quadratic
+coefficient in the minimal polynomial of `t` forces, away from the degree-one
+cancellations `kappa=+/-1`, either
 
 ```text
 p=0, q=-3,                         or
@@ -141,6 +147,8 @@ polynomiality is equivalent to
 ```
 
 Taking `kappa=rho/3` and translating `r` to zero gives `(3),(6),(7)`.
+No classification of arbitrary degree-two root maps in a fixed linear-color
+presentation is asserted outside this centered gauge.
 
 ## 3. Exact discriminant and normalization
 
@@ -223,7 +231,10 @@ u=1,-1  |-> (A,C)=(rho,0).                                    (20)
 These are two distinct quintic addresses, and the double root moves to
 `[1:0]` in the binary-root line. The line component is smooth and has one
 address over every point. Hence neither branch violates THM-3920's cubic
-affine-address cap.
+affine-address cap. This numerical cap does not by itself certify that the
+corresponding ramification boundary is unibranch in the source: distinct
+normalization addresses may still coalesce there. That stricter successor
+audit is deliberately not part of the present packet.
 
 ## 5. The index form represents no scalar unit
 
@@ -274,8 +285,12 @@ m=deg_C x,                         e=deg_C y.                  (26)
 
 At `z=0`, the two terms in `x-yz` have valuations `-2m` and
 `1-2e`. They have opposite parity and cannot cancel. At `z=infinity`, their
-valuations are `-m` and `-e-1`. Comparing with the opposite valuations of
-the monomial in `(25)` forces
+valuations are `-m` and `-e-1`. If `m<=e` or `m>=e+2`, direct comparison at
+the two places is incompatible with the opposite valuations of a monomial.
+Therefore `m=e+1`; at `z=0` the `x` term dominates and fixes `n=-2m`. At
+infinity the two terms then have the same pole order `m`, whereas the right
+side of `(25)` has a zero of order `2m`. Thus equality itself forces their
+leading Laurent tails to cancel. In particular the degree relation is
 
 ```text
 m=e+1,                         n=-2m.                           (27)
@@ -318,7 +333,9 @@ The next decisive calculation is intrinsic to `X=Spec S`: determine
 `S*`, `Cl(S)`, the two ramification classes and possible boundary-class
 bases, then compute the Euler characteristic of every viable deletion. A
 positive class packet would still not construct an `A2` chart; a negative
-one would identify the next exact debt. No claim about `JC(2)` beyond this
+one would identify the next exact debt. The separate reserved successor
+THM-3931 addresses this intrinsic calculation and the source lift of `(20)`;
+it is not a dependency of this theorem. No claim about `JC(2)` beyond this
 finite completion is made.
 
 Reproduce the exact packet with
