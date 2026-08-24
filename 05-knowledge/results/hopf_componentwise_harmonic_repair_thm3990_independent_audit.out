@@ -1,0 +1,20 @@
+THM-3990 componentwise Laplacian exact audit: PASS
+arithmetic=fractions.Fraction (exact Q)
+simple_universe=labeled loopless unweighted graphs, 1<=n<=5
+simple_graphs=1099
+connected=772
+disconnected=327
+laplacian_signs=+L,-L
+integral_simple_universe=all labeled simple graphs, 1<=n<=3
+triangle_snf=(1, 3, 0)
+triangle_hostile=(1,-1,0): rationally solvable, integral order=3
+rational_weighted_controls=4
+rational_weighted_scope=positive-edge extension; not an integral claim
+weighted_component_counts=(2, 3, 3, 2)
+positive_control=mu*1+Lz has equal normalized component averages
+hostile_control=1_C1 has nonzero total sum but unequal component averages
+hostile_result=single scalar rejected; componentwise constants repair
+mixed_sign_hostile=+1 on C1, -(n+1) elsewhere; nonzero total sum
+mixed_sign_result=single scalar rejected; componentwise constants repair
+gates=33517
+semantic_sha256=2aa53145df93f83b0d87e942155c030a6c23e5dd104ed4a1e56b26d565195adc

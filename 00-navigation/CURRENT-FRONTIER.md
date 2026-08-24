@@ -335,32 +335,23 @@ asymptotic or residue.
   Smith forms, and shell kernels. A FINITE-EXACT `D=B=4`, length-nine census
   has `13,853` portraits and selects at most one off-ray, but no fixed ray.
   Static tariff: `2^(D+B-1)+B+2`; all-depth/physical prizes remain OPEN.
+- **Hopf/S6:** both 2026 global claims remain **UNDER AUDIT**. THM-3990 proves
+  the component-average repair quotient; connected `Sigma` validates only that
+  final step. THM-3991 gives `chi=d*n!`, `d` components, and `(2,1)` only in
+  the irreducible one-Euler-fibre grammar. Neither verifies a global manifold.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3782 close
-  named cells only. THM-3827--3972 route genus/degree floors, the `S3`
-  anchor, named root/cusp/jet and `f=0` packets, carrier ordinals, adjusted
-  squarefreeness, and displayed cylinder/graph/residue cells. Global roots,
-  arbitrary `f!=0`, and general compatible rows remain open.
-  THM-3973 gives an exact-volume passport and a ramified globally
-  nonmonogenic finite cubic. THM-3974 closes homogeneous, `1x*`, `2x2`, and
-  `2x3`/transpose support at every height; the height-two floor is seven.
-  THM-3975 gives the color/plinth ledger, odd-rank tower, and rational
-  no-mates for nonconstant `f in k(p)`; THM-3976 gives the compression
-  pseudoplane and `C`-only floors. THM-3977 closes the lowest cusp/arm seam;
-  THM-3978 gives response ideals and incompatible formal constants;
-  THM-3979 lifts all formal cusp orders; THM-3980's split atlas is `KxK`.
-  THM-3981 obstructs height-two slopes and slope one at all heights.
-  THM-3982 classifies shears; THM-3983 gives boundary constancy and
-  `d<=r-1`; THM-3984 closes every single boundary-monomial coupling and its
-  height-two linear-`y` time form is holomorphic. THM-3985 closes `k[p,y]`,
-  with submersions `alpha*p+gamma*y^m` and `3m` residues. THM-3986 makes each
-  one-positive-`x`-monomial adjacency critical. THM-3987 forces three weights
-  per output (`3x4/4x3` first). THM-3989's cusp-log conductor, moment, and
-  shears leave nondividing depths, first `2:3`. Multi-term cancellation,
-  that cell, finite Keller entry, unrestricted Darboux entry, and `JC(2)` are open.
-  Russell THM-3785 forces `3|d,d>=9`; THM-3843/46/49 give arm/jets/contact.
-  THM-3856/61/67/71 close normal `z`-depth through five; exact shears leave
-  nonreduced `(6,4)`. Rational corrections and global entry remain open;
-  THM-3839/3860/62/68 close only named towers.
+  named cells only. THM-3827--3972 route genus/degree, root/cusp/jet, `f=0`,
+  cylinder and residue packets; global roots and arbitrary `f!=0` stay open.
+  THM-3973--3984 give the finite-cubic passport, support floors, plinth and
+  boundary ledgers, formal lifting, slope and monomial-coupling closures.
+  THM-3985 closes `k[p,y]`; THM-3986 closes each one-positive-`x` adjacency;
+  THM-3987 forces three weights per output (`3x4/4x3` first). THM-3989 leaves
+  nondividing depths, first `2:3`; its seam class
+  `theta(h)=[s^3]h*[s]` blocks automatic square-root lifting, while the
+  simple-base slice forces `F_p(0,0)=lambda^2/12`. That cell, multi-term
+  cancellation, finite Keller/Darboux entry, and `JC(2)` remain open.
+  Russell THM-3785/3843--3871 close named depth-through-five packets; the
+  nonreduced `(6,4)`, rational corrections, and global entry remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibres:** THM-2063/THM-2084--2480 (including THM-2371/
   THM-2376) close the named degree-at-most-eighteen strata; THM-2671/2683/2692

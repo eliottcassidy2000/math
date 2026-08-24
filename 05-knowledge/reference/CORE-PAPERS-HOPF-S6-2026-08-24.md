@@ -397,8 +397,21 @@ makes every single positive-`x` monomial adjacent to those submersions
 critical. THM-3987 adds an orthogonal every-line three-weight floor. THM-3989
 identifies the cusp plane with Laurent depth zero, proves the sharp conductor
 and scalar moment, and reduces hypothetical pairs by target shears to mutually
-nondividing positive depths, first `2:3`.
+nondividing positive depths, first `2:3`. Its exact `p=0` normalization seam
+now computes the missing depth-one extension class and forces
+`F_p(0,0)=lambda^2/12` in the first nonliftable simple-base slice; the cell
+remains open.
 None of these supplies a Hopf dependency here.
+
+Independently, THM-3990 proves the componentwise Poisson repair quotient and
+compact third-jet mechanism abstractly. The Brendle--Hung source's residual
+set is the connected torus `Sigma=S^1 times S^1`, so a single nonzero average
+is the complete obstruction for that final linear correction. This validates
+only the stated Poisson/compactness step, not its notebook identities or global
+positive-curvature claim. THM-3991 proves `chi=d*n!` and `d` components for
+the periodic unimodular toric cusp grammar, isolating the manuscript's
+`(n,d)=(2,1)` among irreducible one-Euler-fibre sphere-homology candidates.
+It neither constructs the quotient nor verifies the global Hopf/S6 claim.
 
 ### Explicitly rejected vocabulary bridges
 

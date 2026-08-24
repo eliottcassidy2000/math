@@ -2,7 +2,8 @@
 id: THM-3990
 title: "Componentwise harmonic obstruction and repair quotient"
 status: >
-  PROVED. A Laplacian correction can turn a smooth defect into a strictly
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. A Laplacian
+  correction can turn a smooth defect into a strictly
   positive third-order coefficient on a compact residual zero locus exactly
   when the defect has positive average on every connected component (after
   one common choice of sign). It can in fact flatten the defect to those
@@ -15,21 +16,34 @@ status: >
   not an integral gluing audit.
 source: root / Hopf-product--Hopf-S6 cross-frontier session, 2026-08-24
 audit: >
-  PASS (root, 2026-08-24). The proof checks both directions of the Poisson
+  PASS (root plus independent hostile audit, 2026-08-24). The proof checks
+  both directions of the Poisson
   criterion, the two-region compactness estimate, the disconnected mixed-sign
-  hostile, and the integral triangle hostile 3(1,-1,0)=L(1,-1,0). The theorem
-  is independent of the two 2026 preprints which motivated it; their global
-  claims remain under their separate source audits.
+  hostile, and the integral triangle hostile 3(1,-1,0)=L(1,-1,0). An exact
+  33,517-gate path exhausts all 1,099 labeled simple graphs through five
+  vertices under both Laplacian signs, audits Smith forms through three
+  vertices, and tests four positive rational-weight extensions. It repaired
+  two cokernel identifications, the simple-graph minimality scope, and empty
+  compactness regions. The theorem is independent of the two 2026 preprints
+  which motivated it; their global claims remain under separate source audits.
 depends_on: []
 related:
   - THM-3955-node-cotangent-normalization-kernel-and-conductor-torsion
   - THM-3957-triple-normal-crossing-cotangent-conductor-kernel-and-normalization-cokernel
   - THM-3989-cusp-log-laurent-conductor-and-nondividing-depth-reduction
+  - THM-3991-periodic-unimodular-toric-cusp-factorial-euler-obstruction
+independent_audit_script: 04-computation/hopf_componentwise_harmonic_repair_thm3990_independent_audit.py
+independent_audit_output: 05-knowledge/results/hopf_componentwise_harmonic_repair_thm3990_independent_audit.out
+independent_audit_script_sha256: 538fcf1054bf20da9c73f7c064cc8095900f40fd0f6fb8c1eef6bbdf2e37a9db
+independent_audit_output_sha256: 0e18bcf486c8c0f339c43e829653ad47e099b20211cbc71543a9ec906c6df5ea
+independent_audit_semantic_sha256: 2aa53145df93f83b0d87e942155c030a6c23e5dd104ed4a1e56b26d565195adc
+hash_basis: raw LF bytes
 ---
 
 # THM-3990 -- componentwise harmonic obstruction and repair quotient
 
-**PROVED.** There are three exact layers: the smooth Poisson quotient, its
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** There are three
+exact layers: the smooth Poisson quotient, its
 compact third-jet consequence, and the finite/integral analogue. The point is
 not that every repair problem is linear. The point is that once the allowed
 correction has been identified with the image of an operator, the surviving
@@ -43,8 +57,8 @@ Let
 S=S_1 disjoint_union ... disjoint_union S_c                 (1)
 ```
 
-be a compact smooth Riemannian manifold without boundary, written as its
-connected components, and let `w in C^infinity(S)`. Put
+be a nonempty compact smooth Riemannian manifold without boundary, written as
+its connected components, and let `w in C^infinity(S)`. Put
 
 ```text
 mu_alpha=vol(S_alpha)^(-1) integral_(S_alpha) w.            (2)
@@ -95,12 +109,13 @@ and `(ii)` imply `(i)`.
 The mechanism is exactly the Fredholm alternative:
 
 ```text
-coker(Delta:C^infinity(S)->C^infinity(S))
-     = span{1_(S_1),...,1_(S_c)}.                           (7)
+C^infinity(S)/im(Delta)
+     isomorphic to span{1_(S_1),...,1_(S_c)}.               (7)
 ```
 
-Thus the averages are not estimates. They are the complete smooth repair
-quotient.
+Here the isomorphism sends a class to its componentwise harmonic
+representative, equivalently to its component averages. Thus the averages are
+not estimates. They are the complete smooth repair quotient.
 
 ## 2. Compact third-jet positivity
 
@@ -110,8 +125,8 @@ Let `X` be compact, let `rho:X->R_(>=0)` be continuous, and put
 S={rho=0}.                                                  (8)
 ```
 
-Assume that `S` is a closed smooth submanifold as in Section 1. Let `q` be a
-continuous function satisfying
+Assume that `S` is either empty or a closed smooth submanifold whose nonempty
+components satisfy Section 1. Let `q` be a continuous function satisfying
 
 ```text
 q|S=0,                    q>=kappa*rho                      (9)
@@ -143,6 +158,10 @@ F_chi(x,epsilon*t)>0       for every x in X and 0<t<=t_0. (12)
 
 ### Proof
 
+If `S` is empty, compactness gives `min_X rho>0`, so `(9)--(11)` make the
+quadratic term positive for either sign and all sufficiently small `t`; no
+Poisson correction is needed. Hence assume below that `S` is nonempty.
+
 Choose `chi` by `(4)`. Since the finitely many numbers `mu_alpha` have sign
 `epsilon`, compactness and continuity give a neighborhood `U` of `S` and a
 constant `m>0` such that
@@ -157,15 +176,17 @@ On `U`, equations `(9)--(11)` give
 F_chi(x,epsilon*t)>=m t^3-C_chi t^4>0                    (14)
 ```
 
-for small `t>0`. On the compact set `X\U`, the function `rho` has a positive
-minimum `rho_0`, while `r_chi` is bounded by some `B`. Hence
+for small `t>0`. If `X\U` is nonempty, then on this compact set the function
+`rho` has a positive minimum `rho_0`, while `r_chi` is bounded by some `B`.
+Hence
 
 ```text
 F_chi(x,epsilon*t)
  >=kappa*rho_0 t^2-Bt^3-C_chi t^4>0.                     (15)
 ```
 
-Shrinking `t_0` proves `(12)`.
+If `X\U` is empty, `(14)` already covers all of `X`; otherwise, shrinking
+`t_0` in both `(14)` and `(15)` proves `(12)`.
 
 This statement is deliberately an order-three certificate. If one component
 average is zero, a fourth-order term may still repair that component. The
@@ -200,11 +221,12 @@ have that sign. This is the finite version of `(3)--(4)`.
 Over the integers, however,
 
 ```text
-coker_Z(L)=Z^c direct_sum T                              (19)
+coker_Z(L) isomorphic to Z^c direct_sum T                (19)
 ```
 
-for a finite torsion group `T` which real linear algebra erases. The triangle
-is the smallest hostile. Its Laplacian is
+for a finite torsion group `T` which real linear algebra erases; the splitting
+need not be canonical. Among connected simple graphs, the triangle is the
+smallest torsion hostile. Its Laplacian is
 
 ```text
 L_C3=[[ 2,-1,-1],
@@ -273,8 +295,30 @@ integrality, conductor incidence, or the full Laurent coefficient system.
 2. **Zero-average hostile.** A positive fourth coefficient can repair a zero
    cubic average; failure of `(3)` is not a no-positivity theorem.
 3. **Integral hostile.** Equation `(21)` is invisible over `R` but survives in
-   Smith form. A continuous Poisson solve is not an integral gluing solve.
+   Smith form. A continuous Poisson solve is not an integral gluing solve. If
+   multigraphs are allowed, two vertices joined by two parallel edges already
+   have Smith form `(2,0)`; the triangle minimality is explicitly for simple
+   graphs.
 4. **Nonlinear boundary.** If admissible corrections do not form the image of
    the stated operator, its cokernel is the wrong quotient. The operator must
    be derived from the native perturbation or gluing before this theorem is
    invoked.
+
+## 6. Reproduction
+
+The independent companion uses exact rational arithmetic. It exhausts every
+labeled loopless simple graph on at most five vertices for the real quotient,
+both signs of the Laplacian, every simple graph on at most three vertices for
+the integral Smith controls, and four separately labeled positive rational
+weighted extensions. Those finite gates audit the displayed linear algebra;
+the smooth theorem is proved analytically above.
+
+```bash
+python3 04-computation/hopf_componentwise_harmonic_repair_thm3990_independent_audit.py
+python3 -O 04-computation/hopf_componentwise_harmonic_repair_thm3990_independent_audit.py
+sha256sum 04-computation/hopf_componentwise_harmonic_repair_thm3990_independent_audit.py \
+  05-knowledge/results/hopf_componentwise_harmonic_repair_thm3990_independent_audit.out
+```
+
+Neither this audit nor the repair theorem verifies the global conclusion of
+either motivating 2026 preprint.

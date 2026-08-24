@@ -1,0 +1,12 @@
+THM3991_PERIODIC_UNIMODULAR_TORIC_CUSP_INDEPENDENT_AUDIT_20260824
+kuhn_controls=17;dimensions=1..6;all_cone_determinants=1
+A2_orbits=vertices_1;edges_3;triangles_2;Euler=2
+integer_solutions_d_times_n_factorial_eq_2=((1,2),(2,1))
+Euler_additivity=use_compact_support_on_strata_then_compact_W_gives_ordinary
+ordinary_hostile=[0,1]=(0,1)_disjoint_union_two_points;1_ne_1+2;compact_support=-1+2=1
+nonunimodular_hostile=periodic_five_tet_cube;top_count_10;normalized_volume_12
+first_numerical_free_quotient_escape=(n,d,|H|)=(3,1,3);existence_not_claimed
+scope=THM3991_PASS_with_wording_repairs;Hopf_S6_global_claims_OPEN
+semantic_sha256=ea1b877bb921a870651d13e32b12a51e0fd29c0546f2f4642f098803faf34208
+checks=1801
+RESULT=PASS

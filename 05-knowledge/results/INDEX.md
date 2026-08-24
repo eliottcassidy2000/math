@@ -1097,8 +1097,11 @@
   symbol module is `s^d*k[s]`, and every first-depth cancellation descends
   to the cusp plane. A hypothetical Darboux pair obeys the exact scalar
   moment `sum i*a_i*c_-i=-s`; elementary target shears reduce it to mutually
-  nondividing positive depths, first `2:3`. That cell and JC(2) remain open.
-  Primary/independent checks: `2,439/13,876`.
+  nondividing positive depths, first `2:3`. The exact `p=0` seam gives the
+  depth-one extension class `theta(h)=[s^3]h*[s]` and a square-root-lift iff;
+  in `A=x^2+lambda*u+F(p,y)`, `lambda!=0`, any depth-three negative-row mate
+  forces `F_p(0,0)=lambda^2/12`. That cell and JC(2) remain open.
+  Primary/independent/supplement checks: `2,439/13,876/13,007`.
   Primary script/output/semantic SHA-256:
   `63215ca6652c620f795af49e2112344df1cfe714044ca753b2a2bed4c22a93ed` /
   `e9b27753864beee2934b29a44c061029db740dfad5ceae595d92bf49013fba25` /
@@ -1107,6 +1110,38 @@
   `8183206aa526cb2b95fd689a0242ba1be150542677fce56245344bae84013b74` /
   `1f5883e70aca0d9efb81095447cb3e4633d8b4b6cf366ca4b871f2c9121e144` /
   `ef8e587b10aaa8398d69769411ee828985b50311c382cc7e13fe3235beccd612`.
+  Depth-`2:3` supplement script/output/semantic SHA-256:
+  `ba52ebbb910cbe39a3542f052b317d92c5c22edeb84ffcffec99921cd64d1b67` /
+  `2a413b04fb083a5efd667877307ebd7602739e46a1eb6b87c44199d5ffecc312` /
+  `2e57c7d6d59027ebb0cb1d48dd1464a2f182fe6066c5225574db7b775eaaa815`.
+
+- `hopf_componentwise_harmonic_repair_thm3990_independent_audit.py` ->
+  matching `.out` [THM-3990 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; GLOBAL PREPRINT CLAIMS OPEN]. A scalar Laplacian repair
+  makes a third-order defect strictly signed exactly when every connected
+  component average has that common sign, and it flattens to those averages.
+  The compact two-region jet argument is exact. Real graph Laplacians have the
+  same quotient, while integral cokernels retain torsion; `C_3` has Smith form
+  `(1,3,0)`. All `1,099` labeled simple graphs through five vertices, both
+  Laplacian signs, simple Smith controls through three vertices, and four
+  rational-weight extensions pass `33,517` gates. Script/output/semantic
+  SHA-256:
+  `538fcf1054bf20da9c73f7c064cc8095900f40fd0f6fb8c1eef6bbdf2e37a9db` /
+  `0e18bcf486c8c0f339c43e829653ad47e099b20211cbc71543a9ec906c6df5ea` /
+  `2aa53145df93f83b0d87e942155c030a6c23e5dd104ed4a1e56b26d565195adc`.
+
+- `hopf_toric_cusp_factorial_euler_thm3991_independent_audit.py` ->
+  matching `.out` [THM-3991 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; GLOBAL HOPF/S6 CLAIM OPEN]. A rank-`n` periodic unimodular
+  toric cusp modulo an index-`d` translation lattice has `chi=d*n!` and `d`
+  components. In the one-nonzero-Euler-fibre grammar, sphere homology forces
+  `(n,d)=(1,2)` or `(2,1)`; irreducibility selects `(2,1)`. The
+  five-tetrahedron nonunimodular cube gives top-cell count `10` versus volume
+  sum `12`, showing the sharp hypothesis boundary. Exact gates: `1,801`.
+  Script/output/semantic SHA-256:
+  `2fcf3788c902dbc3a1a33917ffa7d946af4500fdb3a8afc1ab290d39489dd385` /
+  `21a65442a25925e7df74d26a87170483c797c1d35133f3268d84c809ecc004fa` /
+  `ea1b877bb921a870651d13e32b12a51e0fd29c0546f2f4642f098803faf34208`.
 
 - `cyclotomic_factorial_two_power_decoder_20260824.py` -> matching `.out`
   [ELEMENTARY PROVED IDENTITY + FINITE-EXACT CROSS-FRONTIER ATLAS; NO

@@ -133,6 +133,14 @@ For normalization, retain original/conductor-complement/full sites, conductor ke
 If an observer feeds another operation, use the native-operation card below: frozen-bank injectivity is not congruence. **Caution:** “minimal” is consumer-relative; set-valued/relation-valued targets need no section/torsor.
 **Evidence:** exact-six, THM-3450/3452/3454/3731/3732/3944/3951/3955/3957, MISTAKE-310/401/466.
 
+## Quotient by the actual repair, then test the native survivor
+
+**Trigger/action:** derive the actual repair image/orbits, quotient in the
+consumer's category, and retain component, integral, seam, or attaching data.
+**Mechanism/boundary:** rank, gradeds, and orbit counts erase torsion,
+liftability, and clutch data; nonlinear covers are not cokernels. **Evidence:**
+THM-3990/3989/3991; THM-4000 is the nonlinear counterindication.
+
 ## Test whether a central extension changes the base signature
 
 **Trigger/action:** restore a missing central or anti-invariant coordinate and recompute the base map before calling it fibre decoration. **Boundary:** an order-two sidecar can alter the cocycle or split a cover, producing a newly typed object; transfer still needs an action, intertwiner, or trajectory map. **Evidence:** THM-2698's half-shift leaves the `C_2` bibundle open, while the prime-23 scout rationally splits and trivializes its Kummer gate.
