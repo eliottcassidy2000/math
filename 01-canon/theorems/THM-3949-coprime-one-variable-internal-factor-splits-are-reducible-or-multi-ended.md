@@ -2,7 +2,7 @@
 id: THM-3949
 title: "Coprime one-variable internal factor splits are reducible or multi-ended"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Let p0=P and p1=P+A(Y)B(Y), with nonconstant coprime nonassociate
   one-variable factors assigned to the two complementary cube-difference
   rows.  On P=h^2 the common discriminant has the hidden monic cubic
@@ -15,6 +15,16 @@ status: >
   places on the standard line at infinity.  No arbitrary-line obstruction is
   claimed.
 source: jc-zero-debt / all-degree one-factor Newton boundary analysis, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc-cohn3709, 2026-08-24). The audit
+  reconstructed the hidden norm and both localization inverses, including
+  the load-bearing residual C(q0/(2P))=-E H/(4P^3); checked that monicity
+  rules out h-poles over finite Y and that P=h^2 preserves the standard
+  infinity ledger; independently exhausted the four degree/leader cases;
+  and verified that distinct slopes or distinct residual roots give distinct
+  completed local factors even when the width-two edge ramifies. Normal and
+  optimized runs byte-match the frozen output, all hashes agree, and the
+  quadratic double-root hostile retains its separate simple direction.
 depends_on: []
 related:
   - THM-3942-affine-linear-double-torus-factor-split-one-place-obstruction
@@ -31,7 +41,7 @@ hash_basis: raw LF bytes
 
 # THM-3949 -- one-variable internal factors always leave at least two ends
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Fix
 
 ```text
