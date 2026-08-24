@@ -1,0 +1,18 @@
+LRC14_FIRST_X7_LIFT_FIBRE_CLAUSE_CODE
+status=FINITE-EXACT_REDUCTION_PLUS_TWO_ENGINE_PARENT_CONTROLS
+raw_child_states=7^13=96889010407
+digit_literals=13*7=91
+exhaustive_clause_vs_direct_slice=q22_free4=2401
+q=86 raw_new_clocks=516 distinct_clock_words=242 raw_length_hist=((6, 6), (13, 510)) distinct_length_hist=((6, 1), (13, 241))
+q=86 scalar_capacity=486 scalar_excess=244 augmented_cnf_clauses=541 semantic_sha256=eb781c39cd4746ba8b1767ed6e437561a0bf1a55a967d346255763a59d42506a
+q=86 pysat_cadical195=SAT ortools_cpsat=SAT
+q=382 raw_new_clocks=2292 distinct_clock_words=968 raw_length_hist=((6, 6), (13, 2286)) distinct_length_hist=((6, 1), (13, 967))
+q=382 scalar_capacity=1824 scalar_excess=856 augmented_cnf_clauses=1267 semantic_sha256=a6c790930e489a19a49c4846f61c3fc37570e8570d61a338bdc66a4d9f4e9c96
+q=382 pysat_cadical195=UNSAT ortools_cpsat=UNSAT
+q=86_exact_improper_child_digits=(3, 6, 2, 0, 1, 4, 0, 3, 6, 3, 5, 4, 4)
+q=86_exact_improper_child=(259, 518, 175, 4, 91, 350, 7, 266, 525, 268, 441, 356, 357)
+q=382_clock_only_divisibility_ghost=(5, 3, 1, 6, 4, 2, 0, 5, 3, 1, 6, 4, 2) all_13_children_divisible_by_7=1 gcd_proper=1
+boundary_hostile=q86_and_q382_each_have_one_distinct_length6_clause
+source_scope=ST_section7_names_I13p1;_x7_cost_is_a_repo_inference
+lrc14_status=OPEN
+PASS

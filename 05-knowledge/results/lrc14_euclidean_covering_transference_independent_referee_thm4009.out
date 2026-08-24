@@ -1,0 +1,34 @@
+=== Independent geometric normalization audit ===
+External input normalized as 2*mu(L)*lambda1(L*) <= d.
+With d=12 and closed-ball disjointness dist(c,L)>3/7, lambda1(L*)<14.
+Boundary hostile: an open disjoint ball can have equality; the closed zonotope cannot.
+Exact cross-polytope extreme-pair controls: 792.
+They give rho(n)=(m+M)/sqrt(m^2+M^2)>1, with the universal limit 1.
+
+=== Independent integer-cap audit ===
+||a||_2<14 gives square norm <=195, coefficient height <=13, and l1<=50.
+Balanced squares: cost(50)=194 from (3,3,4x11), while cost(51)=201.
+Bounded-spread (R, square cap, l1 cap): [(2, 108, 37), (3, 122, 39), (5, 141, 42), (13, 169, 46), (21, 178, 47), (50, 188, 49)]
+
+=== Independent support and histogram atlas ===
+Reduced ratios: 47; ordered-list SHA-256=78af8034cb48996c028cdc0fb5259542a3f042220d80e9022819a48deadbcda4
+47*C(13,2)=3,666 unoriented ratio/support packets.
+Without a declared speed ordering, there are 7,332 oriented coefficient assignments modulo sign.
+Primitive absolute histograms: 2:47, 3:209, 4:566, 5:1177, 6:2057, 7:3180, 8:4490, 9:5911, 10:7374, 11:8805, 12:10188, 13:11455
+Totals: 55,459 histograms; 5,030,161 nonconstant sign-multiset orbits; 28,315 odd-l1 histograms.
+
+=== Independent labelled-ball and rank-fork audit ===
+Labelled nonzero ball=711202814025242; primitive ball=711119925281794.
+Rank-11 outside-span Hadamard cap has 134 digits and exact floor 11639011567946276516330452125265832396450210671398535269626998205847761612881723251682730932524351641613494572161619231675129410858204.
+
+=== Independent Graver/parity/hostile audit ===
+A shortest Euclidean kernel vector is Graver: every nonzero conformal summand has strictly smaller square norm.
+Parity-character controls: 8191 primitive mod-2 speed patterns plus 4 integer pairs.
+The odd-sum relation exists for a counterexample, but transference does not make it the short row.
+AP13 hostile remains lonely at t=1/14 despite its square-norm-6 Graver relation.
+
+=== Referee verdict ===
+Core implication PASS: counterexample => a Graver relation with ||a||_2<14, square<=195, l1<=50, height<=13.
+Parity and rank-11 sidecars PASS with their stated non-simultaneity caveat.
+REPAIR NEEDED: call 3,666 the unoriented ratio/support count; the oriented labelled count is 7,332.
+CHECKS=9018

@@ -83,6 +83,7 @@ This maps imported claims, consumers, and exclusions; links—not bare IDs—are
   retains its stated Lonely Vector Problem dependency.
 ### 2026-08-23 primary pins: lonely-runner polyhedra and Khinchin flatness
 - Beck--Hoşten--Schymura [arXiv:1606.01783](https://arxiv.org/abs/1606.01783) pins the line-plus-box formulation; Codenotti--Freyer [arXiv:2307.09429](https://arxiv.org/abs/2307.09429) pins integral-dual width; Averkov--Hofscheier--Nill [arXiv:1911.03511](https://arxiv.org/abs/1911.03511) records Barvinok's bound used by [THM-3743](../../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md). None proves LRC(14), sharpness/sparsity, or recursive slicing.
+- [Banaszczyk (1993)](https://doi.org/10.1007/BF01445125) supplies THM-4009's input `2 mu(L) lambda_1(L*)<=d`; the inball/sidecars are local and LRC(14) is open.
 
 ### Giri--Kravitz — *The structure of Lonely Runner spectra*
 

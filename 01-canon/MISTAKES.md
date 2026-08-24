@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-486 (2026-08-24, THM-3818 two-component replay) -- one companion retained the table-free common-scale filter after the all-scale repair
+
+- **What failed:** MISTAKE-460 repaired THM-3818's graphic matroid to use the
+  finite decoder with arbitrary positive common scale, but the separate
+  two-component quotient companion still factored `g(p+q)` and required every
+  common-scale prime to be `2 mod 3`.  It consequently called its stronger
+  table-free subgraph the full decoder graph and printed `25` edges on the
+  canonical `2+11` hostile.
+- **Minimal witness / first failed implication:** in the hostile's eleven-body
+  shape `(1,3,4,9,10,16,19,22,24,33,40)`, the pairs `(3,9)` and `(9,24)`
+  reduce to `(1,3)` and `(3,8)`.  Their primitive sums `4` and `11` satisfy
+  the finite all-scale atlas, while their common gcd contains the prime `3`.
+  The stale predicate omitted exactly these two internal edges.  Thus the
+  correct all-scale count is `27`, not `25`.
+- **Repair / strongest survivor:** the companion now filters only the
+  primitive sum, reports `27` edges and `1,574` exact requirements, and has
+  refreshed script/output/semantic hashes.  Both omitted edges remain inside
+  the eleven-vertex component.  The component sizes `2+11`, decoder rank
+  eleven, dominance exclusion of bounded crossing rows, recovered scales,
+  singleton fibre, and every implication of THM-3818 are unchanged.
+- **Reusable rule:** after widening a decoder from a table-free subcarrier to
+  a finite all-scale carrier, search every downstream companion for filters
+  on the common gcd as well as every headline census.  An unchanged rank does
+  not make a stale ground-set count harmless audit metadata.
+
 ## MISTAKE-485 (2026-08-24, imaginary-quadratic class-rank source audit) -- the latest public data file was mistaken for the world `5`-rank frontier
 
 - **What failed:** the first source audit treated the rank-four maximum in

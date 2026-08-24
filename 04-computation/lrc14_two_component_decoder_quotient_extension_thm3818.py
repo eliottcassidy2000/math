@@ -45,7 +45,12 @@ def factor_exponents(value):
 
 
 def decoder_edge(x, y):
-    """Literal THM-3818 full-decoder predicate for a positive speed pair."""
+    """Literal THM-3818 all-scale decoder predicate for a positive pair.
+
+    The primitive sum has the inert/cube-free restriction.  The common scale
+    is arbitrary; imposing inert prime support on it would silently revert to
+    the stronger table-free subbranch corrected in MISTAKE-460.
+    """
     require(x > 0 and y > 0 and x != y, "decoder inputs must be distinct positive speeds")
     g = gcd(x, y)
     p, q = sorted((x // g, y // g))
@@ -55,8 +60,7 @@ def decoder_edge(x, y):
     primitive_factors = factor_exponents(primitive_sum)
     if any(exponent > 2 for exponent in primitive_factors.values()):
         return False
-    full_sum_factors = factor_exponents(g * primitive_sum)
-    return all(prime % 3 == 2 for prime in full_sum_factors)
+    return all(prime % 3 == 2 for prime in primitive_factors)
 
 
 def decoder_edges(row):
@@ -140,7 +144,7 @@ def check_two_nontrivial_hostile():
     require(tuple(sorted(map(len, comps))) == (2, 11), "hostile must have component sizes 2 and 11")
     require(13 - len(comps) == 11, "two-component decoder rank must be eleven")
     require(all((i < 2) == (j < 2) for i, j in edges), "no decoder edge may cross the cut")
-    require(len(edges) == 25, "compact star components must have 25 full-decoder edges")
+    require(len(edges) == 27, "compact star components must have 27 all-scale decoder edges")
 
     height_a = max(reduced_pair_height(shape_a[i], shape_a[j]) for i in range(2) for j in range(i + 1, 2))
     height_b = max(reduced_pair_height(shape_b[i], shape_b[j]) for i in range(11) for j in range(i + 1, 11))
