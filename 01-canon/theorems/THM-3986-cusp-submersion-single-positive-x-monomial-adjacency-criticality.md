@@ -2,7 +2,7 @@
 id: THM-3986
 title: "Every single positive-x monomial adjacent to the cusp submersion is critical"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. At height
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. At height
   two, alpha*p+gamma*y^m is a source-plane submersion for every m>=2 and
   nonzero alpha,gamma, but adjoining any one nonzero monomial
   lambda*x*p^r*y^s makes it critical, uniformly for all r,s>=0. The
@@ -14,6 +14,14 @@ status: >
   regular and polynomial mates only; no rational-mate obstruction or
   Jacobian counterexample is claimed.
 source: jc-mixed-generator-submersion / post-THM-3984 cusp-adjacency lane, 2026-08-24
+audit: >
+  PASS (audit-thm3986-all-m + root / jc-cohn3709, 2026-08-24). Two
+  independent audits rederived the logarithmic kernel, all compatibility
+  exponents and merged-address orders, the three tuned u=0 repairs, the
+  all-m L=N kernel-root parametrization and its simple-root escape, and the
+  separate x, xp, and xy branches. They also checked the positive base wall
+  and the critical-versus-rational-mate scope. Normal, optimized, and frozen
+  outputs byte-match at CHECKS=42281; hashes agree.
 depends_on:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
 related:
@@ -29,8 +37,8 @@ hash_basis: raw LF bytes
 
 # THM-3986 -- every one-monomial positive-x adjacency is critical
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.** Work over
-an algebraically closed field `k` of characteristic zero. In the height-two
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of characteristic zero. In the height-two
 member of THM-3973 put
 
 ```text
