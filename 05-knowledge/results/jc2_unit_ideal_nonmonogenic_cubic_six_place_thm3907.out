@@ -1,0 +1,14 @@
+theorem=THM-3907-unit-ideal-nonmonogenic-cubic-six-place-boundary
+coefficient_ideal=UNIT
+represents_scalar_unit=NO
+normal_finite_flat_cubic=YES
+generic_galois_group=S3
+discriminant_degree=7
+discriminant_absolutely_irreducible=YES
+projective_infinity_support_points=2
+normalization_places_at_infinity=6
+common_zero_required_for_nonmonogenicity=NO
+unit_ideal_one_place=OPEN
+semantic_sha256=784084eee175020d1cd6f33768b3e535084924ce7cfee612eab3d687748852c9
+CHECKS=26
+RESULT=PASS

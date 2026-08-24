@@ -194,9 +194,12 @@ a multi-address configuration.
 The theorem uses only the common-zero sufficient gate.  It says nothing
 against an intrinsically nonmonogenic binary cubic whose coefficients generate
 the unit ideal but whose index form represents no scalar unit.  It also does
-not construct or exclude a multibranch quintic, a higher-degree one-place
-discriminant, a normal finite-flat cubic order, an etale plane atlas, or a
-Jacobian counterexample.  `JC(2)` remains **OPEN**.
+not by itself exclude a multibranch quintic or a normal finite-flat cubic
+order.  THM-3890 now closes that irreducible one-point degree-five normal
+route; THM-3906 realizes the normal common-zero cubic layer at degree six but
+with two infinity places, and THM-3907 gives a unit-ideal control with six.
+Higher-degree one-place discriminants, an etale plane atlas, and `JC(2)`
+remain **OPEN**.
 
 Reproduce the exact contact and Taylor packet with
 

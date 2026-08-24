@@ -346,21 +346,22 @@ asymptotic or residue.
   retains `3h^3+7h^2k+k^3=CS`, and THM-3838 gives `deg h,deg k>=5`.
   THM-3841/3845 close the `S3` anchor; THM-3844/3847 are monogenic controls.
   THM-3850/3852/3859/3866/3870/3873/3876 close named line, marked-root,
-  transverse, graph and monomial cells.  THM-3880/3883 isolate sign, residue
-  and zero-root-cube invoices; poles, worse jets and root existence remain.
+  transverse, graph and monomial cells.  THM-3880/3883 give the complete
+  local sign/residue/cube gate; global root existence remains.
   THM-3851 is a unit-rich torus.  For THM-3854's one-place three-cusp front,
   THM-3864/3872 close the constant cusp-ideal span; THM-3881 closes `T=0`.
   THM-3874/3877 exclude degree-three/four sole-simple-branch fields;
   THM-3879 reaches two places and THM-3882 forbids one-place rational duals.
-  THM-3884/3886/3894 force equality-seam gauge jets and a parity passport;
-  THM-3896 closes `n=4`. THM-3885/3895/3897 close the entire polynomial
-  `f=0` lane; THM-3900 independently classifies its generic `k(x)[y]` roots.
+  THM-3884/3886/3894 give jets; THM-3896 closes `n=4`.
+  THM-3885/3895/3897 close polynomial `f=0`; THM-3900 its generic roots.
+  THM-3888/3909 give `II^4+IV/E6*`: `R.O=0` is `6+48+72`; nine avoid
+  boundaries; eight have denominator debt.
   For `f!=0`, THM-3899 proves `deg_y T>=deg_y f` and leading colors, while
   THM-3904 closes the x-only lane. THM-3901 gives the strict fan; THM-3902/3905 give equality through three jets.
   These are necessary passports with positive lifts, not closure.
-  THM-3890 gives a quintic `Cl=Z/Z5` obstruction; THM-3891/3892 classify
-  quadratic and pure-power polynomial `GL_2` carriers. Remaining responses,
-  a Keller atlas and `JC(2)` are OPEN.
+  THM-3890 closes quintics. THM-3906's common-zero sextic has one infinity
+  point/two places; THM-3907's unit-ideal order has two/six. Other carriers,
+  sextics, one-place forms, Keller and `JC(2)` are OPEN.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a

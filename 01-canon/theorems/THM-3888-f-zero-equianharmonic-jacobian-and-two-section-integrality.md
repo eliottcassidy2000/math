@@ -10,8 +10,10 @@ status: >
   sections, but degree-one polynomial u,v sections already exist with
   nonpolynomial inverse T.  The simultaneous u,v,T polynomial shell has only
   the second T=0 section and one x-polar hostile.  Hence every other
-  polynomial quartic point has a genuine u/v denominator.  Effective
-  two-section integral enumeration, x-descent, a Keller atlas and JC(2)
+  polynomial quartic point has a genuine u/v denominator.  THM-3895,
+  THM-3897 and THM-3900 subsequently close the complete generic and global
+  polynomial f=0 lanes.  General two-section integral enumeration remains an
+  independent geometric problem; the f!=0 lane, a Keller atlas and JC(2)
   remain OPEN.
 source: jc_zero_debt_lift / post-THM-3885 elliptic reframe, 2026-08-23
 audit: >
@@ -25,7 +27,11 @@ audit: >
   polynomial u,v section whose inverse T has numerator degree one and
   denominator degree two.  Renaming the six points as the constant-u
   sub-shell preserves the simultaneous u,v,T theorem and its denominator
-  filter.  Normal, optimized and frozen streams byte-match.
+  filter.  THM-3909 supplies a second independent reconstruction: it confirms
+  the invariants, maps, four divisor orders, fibre packet, rank and torsion,
+  identifies the height lattice E6*, and finds eight exact zero-contact
+  hostiles to the missing converse.  Normal, optimized and frozen streams
+  byte-match.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
   - THM-3885-cusp-residual-f-zero-arm-dichotomy-and-quadratic-closure
@@ -33,6 +39,10 @@ related:
   - THM-3874-three-cusp-quadratic-k3-affine-class-group
   - THM-3884-cusp-residual-total-degree-leading-gauge-filtration
   - THM-3886-cusp-residual-equality-seam-second-layer-trichotomy
+  - THM-3895-f-zero-quartic-covariant-and-high-y-degree-emptiness
+  - THM-3897-f-zero-residual-all-degree-global-emptiness
+  - THM-3900-f-zero-generic-y-polynomial-root-color-response-classification
+  - THM-3909-equianharmonic-e6-star-marked-zero-contact-shell
 script: 04-computation/jc2_f_zero_equianharmonic_jacobian_integrality_thm3888.py
 output: 05-knowledge/results/jc2_f_zero_equianharmonic_jacobian_integrality_thm3888.out
 script_sha256: b8fa746d7b8182de507bb9c2ac55d4a64a6dfa7d5917da37ae9af9e1cc9e54dd
@@ -67,8 +77,10 @@ G^2=q(T):=L^4-6aL^2T^2-8KT^3-3a^2T^4.                    (2)
 
 The curve `(2)` is not an unstructured quartic.  It is an equianharmonic
 elliptic curve with two marked points removed.  This reframe proves the exact
-generic elliptic-surface anatomy and identifies the remaining problem as an
-effective two-section integrality problem plus descent in `x`.
+generic elliptic-surface anatomy and originally isolated an effective
+two-section integrality problem plus descent in `x`.  THM-3895, THM-3897 and
+THM-3900 now close that polynomial `f=0` lane; the unrestricted geometric
+integral-point problem remains independently meaningful.
 
 ## 1. The binary quartic has `I=0`
 
@@ -393,7 +405,7 @@ the unit `2L^2`.  Thus every root of `T` is polarized between the two `T=0`
 sections, while poles are polarized between `Q_+` and `Q_-`.  This is the
 global elliptic version of THM-3885's finite root-partition grammar.
 
-## 4. What polynomiality means -- and what is not yet proved
+## 4. What polynomiality means -- the exact one-way statement
 
 Regard `(8)` as an elliptic fibration over the `y`-line with coefficient
 field `k(x)`.  A polynomial solution
@@ -453,7 +465,7 @@ T_*(0,0)=8/3,                    ord_(a=0)(T_*)=-2,        (18c)
 and `G_*` has an `a=0` pole of order three.  Thus the generic two-section
 integral problem is **not empty**.  This point is excluded precisely by the
 global `k[x,y]` descent and origin address, so neither condition may be
-dropped from a future closure argument.
+dropped.  THM-3897 later uses both in its all-degree global closure.
 
 ## 5. Generic fibre packet over the `y`-line
 
@@ -559,40 +571,29 @@ Thus `Q_+` and `Q_-` meet once at infinity and separate to first order; they
 have no finite meeting forced by the model.  This is the precise local
 sidecar that an effective two-section integral-point enumeration must retain.
 
-## 7. Exact surviving problem and cheapest decisive computation
+## 7. Successor closure and the surviving geometric problem
 
-The rank-six result `(28)` explains why Shioda--Tate alone cannot close the
-lane: the relevant subset is not the full Mordell--Weil group.  The remaining
-problem is
+The rank-six result `(28)` explains why Shioda--Tate alone did not close the
+polynomial lane: the relevant subset was an intersection of Mordell--Weil,
+inverse-integrality, `k[x]` descent, and address conditions.  The successor
+chain resolves that intersection without an unrestricted height theorem:
 
-```text
-rank-six MW sections
- intersect two-section S-integrality
- intersect k[x]-integral descent
- intersect the origin and a=0 addresses.                  (33)
-```
+1. THM-3895 proves `deg_y(T)<=2` for every polynomial residual square;
+2. THM-3897 uses the `a=0` denominator obstruction and origin address to show
+   that the global polynomial lane has only `T=0`;
+3. THM-3900 independently classifies the generic `k(x)[y]` lane as `T=0` and
+   the two signs above `T_*`;
+4. THM-3909 identifies the height lattice as `E6*`, enumerates its complete
+   `R.O=0` shell, and proves that eight sections disjoint from the three
+   strict horizontal sections still have nonpolynomial inverse coordinates.
 
-The cheapest decisive next computation is therefore not another unrestricted
-quartic coefficient Groebner basis.  It is:
-
-1. compute an explicit Mordell--Weil basis for the `II^4+IV` rational
-   elliptic surface and express `Q_+,Q_-,P_0` in that basis;
-2. use `(9k)-(9n)` as the completed integral-coordinate base case and enumerate
-   the first rational-coordinate denominator shell, subject to no finite
-   intersection with `Q_+ union Q_-` and the `IV` address `(31)-(32)`;
-3. apply the inverse denominator test
-
-   ```text
-   D_E divides 2L^2(Y-8KL^2)                              (34)
-   ```
-
-   and then demand that the quotient and reconstructed `G` lie in `k[x,y]`
-   and satisfy `(18)`.
-
-A finite shell search is evidence, not a proof, until accompanied by an
-effective height bound or a classification of the two-section integral
-points.  That height bound, the full all-degree `f=0` closure, the `f!=0`
-lane, a Keller atlas, and JC(2) remain **OPEN**.
+Thus the old three-step computation proposal is **SUPERSEDED as a route to
+the polynomial f=0 closure**.  It remains a legitimate geometric problem to
+classify all two-section integral points or higher `R.O` shells, but strict
+boundary avoidance alone cannot do so: the total birational base locus and
+vertical exceptional data are load-bearing.  The object-level Jacobian
+frontier is now the `f!=0` residual lane.  A Keller atlas and JC(2) remain
+**OPEN**.
 
 Reproduce the exact algebraic packet with
 

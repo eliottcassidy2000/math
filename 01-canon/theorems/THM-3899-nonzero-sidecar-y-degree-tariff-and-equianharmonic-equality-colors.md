@@ -25,7 +25,7 @@ depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
 related:
   - THM-3897-f-zero-residual-all-degree-global-emptiness
-  - THM-3898-equianharmonic-cube-cubic-order-a1-branch-euler-tariff
+  - THM-3898-equianharmonic-equality-color-all-depth-response-identity
   - THM-3904-nonzero-sidecar-constant-y-seam-emptiness-and-primitive-equality-colors
 script: 04-computation/jc2_nonzero_sidecar_y_degree_tariff_thm3899.py
 output: 05-knowledge/results/jc2_nonzero_sidecar_y_degree_tariff_thm3899.out
@@ -198,25 +198,22 @@ Then `d^2=-3`, and the two shifted quartic colors from THM-3895 become
 (3+d)/2=1+lambda,              (3-d)/2=2-lambda.           (18)
 ```
 
-The finite-exact carrier packet currently being developed under the reserved
-THM-3898 namespace independently singles out the address `2-lambda`.  That
-packet is context, not a dependency or active theorem claim here.  The exact
-identities `(7)` and `(18)` nevertheless show that the proposed carrier uses
-the same two-color coordinate governing entry of the first nonzero sidecar.
-What is preserved is the odd `a`-valuation assigned between the colors.
-What is lost by the leading view is every even common factor and every lower
-y-coefficient.
+The empty THM-3898 reservation originally arose from a finite-exact cubic
+carrier packet using the same constants.  No carrier theorem was activated.
+The namespace was subsequently reassigned to the exact all-depth response
+identity, which proves that these two colors govern every lower response of
+the equality seam.  What the present leading view preserves is the odd
+`a`-valuation assigned between the colors; what it loses is every even common
+factor and every lower y-coefficient.
 
 ## 5. Scope and next exact test
 
 This theorem itself proves only a necessary leading filtration.  THM-3904
 subsequently closes all `T,f in k[x]`, `f!=0`; THM-3901 and THM-3902 compute
-the strict and positive-equality response laws.  Positive equality and the
-regimes `m>n` remain open, and the payment `(15)` need not extend to a square.
-The next decisive test is to substitute the primitive color allocations into
-the first coefficient below THM-3902's two-jet window and test whether their
-odd `a`-valuation can be continued without introducing an additional
-denominator divisor.
+the strict and positive-equality response laws; THM-3898 packages every
+equality response into one exact identity and closes the canonical payment
+`(15)`.  Positive equality with arbitrary sidecars and the regimes `m>n`
+remain open.
 
 ## 6. Reproduction
 

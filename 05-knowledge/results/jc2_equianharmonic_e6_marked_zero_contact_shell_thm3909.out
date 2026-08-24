@@ -1,0 +1,14 @@
+theorem=THM-3909-equianharmonic-e6-star-marked-zero-contact-shell
+thm3888_hostile_audit=PASS
+generic_surface=II4_plus_IV_rank6_torsion0
+mordell_weil_height_lattice=E6_star
+origin_disjoint_sections=126
+origin_disjoint_degree_split=constant6_linear48_quadratic72
+ordered_marked_boundary_pairs=540
+zero_contact_shell=9=P0_plus_8_same_component
+strict_boundary_avoidance_converse=FALSE_by_8_sections
+polynomial_quartic_implication=ONE_WAY
+JC2=OPEN
+semantic_sha256=af29393a69c844737e4f2ac293f6a117ca80b33b31c808ca02a02c4ef70d7947
+CHECKS=1123
+RESULT=PASS
