@@ -2,7 +2,7 @@
 id: THM-3983
 title: "Coordinate boundary constancy and rational-fibre place budget"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. On every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. On every
   height-tower completion X_n of THM-3973, a source polynomial coordinate
   lying in B_n restricts constantly to the boundary D. More generally, if
   f|D has separable degree d>0 and the geometric generic source fibre is a
@@ -13,6 +13,16 @@ status: >
   generic fibre G_m, but are not coordinates. No converse to boundary
   constancy and no classification of rational-fibre elements is claimed.
 source: jc-zero-debt-lift + root / post-THM-3981 coordinate-fibre lane, 2026-08-24
+audit: >
+  PASS (root / jc-cohn3709, 2026-08-24). The audit independently checked
+  geometric integrality and reducedness of the completed generic fibre,
+  using purity of the Cartier curve and exclusion of a component in D. It
+  rederived the d distinct transverse boundary branches, finiteness and
+  affineness of normalization, and the exact identity between those added
+  branches and removed points on the common P1 model. The final residual
+  infinity point, coordinate endpoint, cusp endpoint, and hostile Gm seam
+  all check. Normal, optimized, and frozen outputs byte-match at CHECKS=174;
+  all hashes agree.
 depends_on:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
 related:
@@ -29,7 +39,7 @@ hash_basis: raw LF bytes
 
 # THM-3983 -- a rational fibre must pay one more infinity place than its boundary degree
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.** Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over
 an algebraically closed field `k` of characteristic zero. For `n>=2`, use
 the smooth affine surface of THM-3973
 
@@ -251,6 +261,6 @@ sha256sum 04-computation/jc2_coordinate_boundary_place_budget_thm3983.py \
 python3 agents/check_docs.py
 ```
 
-The theorem is awaiting an independent hostile audit of the geometric
-generic-fibre passage, transverse normalization count, and intermediate-open
-argument. No promotion beyond the displayed status is asserted here.
+The geometric generic-fibre passage, transverse normalization count, and
+intermediate-open argument have all passed independent hostile audit.
+**QED.**
