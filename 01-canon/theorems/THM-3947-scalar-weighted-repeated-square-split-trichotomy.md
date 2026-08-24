@@ -2,7 +2,7 @@
 id: THM-3947
 title: "Scalar-weighted repeated-square splits have a three-parabola trichotomy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the repeated-factor row p1-p0=G^2, allow the two internal factors to
   carry arbitrary reciprocal scalars lambda and lambda^-1.  With t=lambda^2,
   the common discriminant is governed by one cubic h_t(P/G^2), whose exact
@@ -14,11 +14,18 @@ status: >
   discriminant irreducible: the tempting one-place objects are individual
   reduced components, never the whole branch divisor.
 source: jc-zero-debt / arbitrary-scalar completion of THM-3944, 2026-08-24
+audit: >
+  Independent hostile audit reconstructed the lambda-weighted reduction and
+  exact -4 scalar, checked the root-cubic discriminant and both 2+1 endpoint
+  factorizations, verified that t=0 is unavailable and no triple-root seam is
+  omitted, replayed the full q-row endpoint swap (not merely the branch
+  identity), and separated one-place components from the reducible full
+  divisor. Normal/-O/frozen runs and all hashes match.
 depends_on: []
 related:
   - THM-3942-affine-linear-double-torus-factor-split-one-place-obstruction
   - THM-3944-repeated-factor-double-torus-one-place-square-conductor-collapse
-  - THM-3946-affine-internal-split-dichotomy
+  - THM-3946-affine-internal-factor-split-two-end-conductor-collision-dichotomy
 script: 04-computation/jc2_scalar_weighted_repeated_square_split_thm3947.py
 output: 05-knowledge/results/jc2_scalar_weighted_repeated_square_split_thm3947.out
 script_sha256: a5a095054a92b8552d0f00194663e8f022b4e171efb4610f597d54cc1b553137
@@ -29,7 +36,7 @@ hash_basis: raw LF bytes
 
 # THM-3947 -- scalar imbalance never glues the repeated square
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero.  Fix
 
 ```text
