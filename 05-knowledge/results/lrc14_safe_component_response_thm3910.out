@@ -1,0 +1,10 @@
+LRC14_SAFE_COMPONENT_RESPONSE_THM3910
+scope=THM3878_t>=U_shape_filter;AP11_control;LRC14=OPEN
+AP11_closed_arc=[1/14,13/154];length=1/77;owners=1,11;Ulambda=1/7
+beta1_max=1/7;equality_pairs=((1, 3), (1, 4), (1, 9), (1, 10))
+response_staircase=(('1/35', 15), ('1/28', 34), ('1/21', 46), ('1/14', 52), ('1/7', 57))
+AP11_scale1_closed=57;scale2_beta=2/63;AP11_scale2_closed=1
+strict_boundary=closed_body_arc_cannot_embed_at_equal_length_in_open_obstruction
+semantic_sha256=01fcb7b28f890a56648314611dd79ee740f9f47e9426d6f616c126e4a352e914
+checks=13
+RESULT=PASS

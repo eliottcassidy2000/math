@@ -1,0 +1,12 @@
+LRC14_AUXILIARY_CENTER_EROSION_RESPONSE_THM3910
+scope=THM3878_11+2;t>=U;necessary_certificate;LRC14=OPEN
+scale1_input=57;closed=41;remaining=16
+closed_by_a=p=((2, 15), (2, 21), (2, 23), (3, 14), (3, 17), (3, 19), (3, 20), (3, 22), (3, 26), (3, 31), (3, 38), (4, 13), (4, 19), (4, 21), (4, 25), (4, 37), (4, 43), (4, 49), (4, 51), (5, 17), (5, 18), (5, 24), (5, 29), (5, 36), (5, 39), (5, 41), (5, 42), (5, 48), (5, 53), (5, 54), (5, 63), (6, 17), (6, 19), (6, 23), (6, 41), (6, 47), (6, 53), (6, 65), (7, 13), (7, 15), (7, 22))
+remaining=((1, 3), (1, 4), (1, 9), (1, 10), (2, 3), (2, 9), (3, 7), (3, 8), (4, 7), (5, 6), (5, 12), (6, 11), (7, 10), (8, 9), (8, 21), (9, 11))
+auxiliary_tests=398;max_limit=12
+scale2_limit=8;scale2_killers=()
+THM3878_legacy_auxiliary_cutoff_max=77;rows=((6, 19), (6, 47), (8, 21));at_most_78_remains_safe
+large_a_exhaustion=a*(beta-1/91)>2/13
+semantic_sha256=10ce5bf6777272db163be6954f9f6fc54119eb8ae38710b261113789c14a0e1e
+checks=179
+RESULT=PASS

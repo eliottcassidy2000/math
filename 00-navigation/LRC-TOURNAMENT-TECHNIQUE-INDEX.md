@@ -18,6 +18,28 @@ AP/GW equality atom, C27 petal/two-block discharge, K33/F7 state lift,
 covering/boundary-moment positivity, or a rigorous Fejer/Toeplitz certificate.
 Every technique below is a possible tooth in that zipper.
 
+### Current response carrier -- THM-3910
+
+- **Move:** use an auxiliary runner only to select a marked deep center, then
+  delete it before transporting the neighborhood.  Preserving the eleven-body
+  rather than the auxiliary enlarges the `t>=U` response radius from
+  `1/(182a)` to `1/182` and closes 41 of THM-3878's 57 scale-one survivors.
+- **LRC use:** the exact rooted carrier is the integer sheet count
+  `N_t(w)=#{a mod t:(w+a)/t in G_u}`.  Its integral over the pair-safe set is
+  the target safe mass; its `t Z` Fourier energy and integer variance tariff
+  give all-large-scale sufficient gates.
+- **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
+  compact/open endpoint status, and the cubic mixed danger response.
+- **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram
+  matrix, or cut semimetric loses the cubic moment.  AP11 at `(p,q)=(6,41)`,
+  `t=12` versus `36`, has identical full one/two incidence data but different
+  safe response by `17/61992`.  Endpoint equality also remains atomic data.
+- **Next pull:** on the 16 remaining scale-one pairs, retain the common body
+  sheet word while imposing several auxiliary-deep erosion obligations at
+  once; separately test the weighted two-lift carrier on scale-two `(1,9)`.
+- **Pointers:** THM-3910; THM-2221, THM-3377, THM-3380, THM-3729;
+  `lrc14-fixed-radius-auxiliary-center-t-sheet-response-and-tournament-cubic-sidecar-root-20260823.md`.
+
 ## Contribution Protocol
 
 When adding a technique card, keep these fields:

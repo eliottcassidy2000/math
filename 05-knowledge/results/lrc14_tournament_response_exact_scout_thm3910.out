@@ -1,0 +1,10 @@
+LRC14_TOURNAMENT_RESPONSE_EXACT_SCOUT_20260823
+scope=AP11;scale1_survivors=57;t=12..42;rows=1767
+ap11_safe_mass=10931/194040;positive_responses=1767;zero_responses=0
+minimum_response={"cpq":"1/70","mp":"111431/2522520","mpq":"131/10010","mq":"16/1001","p":1,"q":10,"residual":"59/6370","t":13}
+scale2_AP11_odd_t_rows=16;zero_responses=0;minimum={"residual":"31579/1009008","t":13}
+pairwise_fibres=1739;triple_split_fibres=16
+first_native_collision={"fibre_size":2,"first":{"cpq":"5/246","mp":"11/1176","mpq":"1/861","mq":"1/123","p":6,"q":41,"residual":"79579/1988910","t":12},"pairwise_key":["11/1176","1/123","5/246"],"second":{"cpq":"5/246","mp":"11/1176","mpq":"89/61992","mq":"1/123","p":6,"q":41,"residual":"961493/23866920","t":36},"triple_values":2}
+parity_hostile={"cut":[2,2,2],"one":[2,2,2],"target_even_quarters":0,"target_odd_quarters":1,"triple_even_quarters":0,"triple_odd_quarters":1,"two":[1,1,1]}
+semantic_sha256=0ea2b13f5bee6318ca5872189a867e19c760111c58c33d0d047a357fe5e004ac
+RESULT=PASS

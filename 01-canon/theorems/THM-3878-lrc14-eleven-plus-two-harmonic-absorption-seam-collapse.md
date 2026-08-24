@@ -308,7 +308,9 @@ For completeness, every positive `a` was tested on the final 57 pairs.  The
 search is finite symbolically: if a pair-danger component has length `beta`
 and `a>13/(7 beta)`, it contains a complete auxiliary-safe cell of length
 `6/(7a)>1/(91a)`, so that `a` cannot satisfy the strict component cut.  The
-largest necessary finite cutoff is `78`.  No arbitrary one-auxiliary choice
+largest necessary finite cutoff is `77`, attained at `(6,19)`, `(8,21)`, and
+`(6,47)`.  The frozen companion's weaker phrase `at most 78` is still valid.
+No arbitrary one-auxiliary choice
 closes any of the final 57 types.
 
 For the scale-two exception `(1,9)`, the quotient obstruction is exactly

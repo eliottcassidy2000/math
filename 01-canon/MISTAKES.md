@@ -9,6 +9,23 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-465 (2026-08-23, THM-3878 auxiliary cutoff) -- a safe search bound was called the attained maximum
+
+- **What failed:** THM-3878's prose called `78` the largest necessary finite
+  auxiliary cutoff on its final 57 scale-one rows.  The frozen companion said
+  only `at most 78`, which is safe, but the stronger prose was false by one.
+- **Minimal witness / first failed implication:** independent reconstruction
+  of all 57 obstruction widths gives
+  `max(floor(13/(7 beta))+1)=77`, attained exactly at `(6,19)`, `(8,21)`, and
+  `(6,47)`.  No row attains `78`.
+- **Repair / strongest survivor:** the theorem prose now says `77` and records
+  the equality rows.  The old executable's `at most 78`, every tested
+  multiplier, all 353 deletion closures, and the final 58-survivor ledger are
+  unchanged.
+- **Reusable rule:** distinguish a convenient inclusive loop bound from the
+  exact maximum of the symbolic cutoff statistic, even when the extra tested
+  cell cannot affect a closure.
+
 ## MISTAKE-464 (2026-08-23, THM-1042 safe-set topology) -- an AP11 component count matched neither endpoint convention
 
 - **What failed:** THM-1042's table and its companion-script docstring said
