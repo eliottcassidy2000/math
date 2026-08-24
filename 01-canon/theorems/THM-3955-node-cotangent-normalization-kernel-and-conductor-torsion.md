@@ -1,12 +1,12 @@
 ---
-id: THM-3954
+id: THM-3955
 title: "Node cotangent normalization kernel and conductor torsion"
 status: RESERVED / UNPROVED EMPTY STUB
 source: hopf-crossfrontier-20260824
 depends_on: []
 ---
 
-# THM-3954 -- node cotangent normalization kernel and conductor torsion
+# THM-3955 -- node cotangent normalization kernel and conductor torsion
 
 **RESERVED / UNPROVED EMPTY STUB.**
 

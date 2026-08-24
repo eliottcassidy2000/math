@@ -9,6 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-467 (2026-08-24, concurrent THM-3954 reservation) -- a stale namespace check raced a first-pushed reservation
+
+- **What failed:** the Hopf cross-frontier session checked `origin/main` and
+  reserved `THM-3954` for a node-cotangent lemma.  While that check was in
+  flight, the JC session first pushed `THM-3954` for the extra-common-debt
+  theorem.  The checkpoint helper correctly fetched and rebased after its
+  first rejected push, but it cannot infer semantic ID ownership, so it then
+  pushed the second file with the duplicate YAML ID.
+- **Minimal witness / first failed implication:** commit `f22d3da1d` is the
+  earlier reservation on `origin/main`; commit `1c5f672be` introduced the
+  second `THM-3954`.  A successful post-rebase push therefore did not imply
+  that a namespace check performed before the race remained current.
+- **Repair / strongest survivor:** first-pusher `f22d3da1d` keeps `THM-3954`.
+  The node-cotangent reservation and filename are renumbered to `THM-3955`;
+  no mathematical claim or dependency changed.
+- **Reusable rule:** after an automated fetch/rebase caused by a rejected
+  reservation push, rerun the exact filename and YAML-ID collision checks on
+  the rebased tree before retrying.  Push verification proves reachability,
+  not namespace uniqueness.
+
 ## MISTAKE-466 (2026-08-24, THM-3944 initial promotion) -- regularity on the normalization was confused with the smooth locus of the nonnormal order
 
 - **What failed:** the first promoted version of THM-3944 correctly proved
