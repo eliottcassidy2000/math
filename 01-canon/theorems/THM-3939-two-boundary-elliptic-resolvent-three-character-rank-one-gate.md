@@ -2,7 +2,7 @@
 id: THM-3939
 title: "Two-boundary elliptic resolvents have at most one new three-character"
 status: >
-  PROVED CANDIDATE; INDEPENDENT HOSTILE AUDIT PENDING. Let a normal affine
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED. Let a normal affine
   surface over A1 have integral closed fibres and generic fibre an elliptic
   curve with exactly two rational points deleted. If the difference of those
   boundary points has infinite order, then the surface has scalar units and
@@ -12,6 +12,14 @@ status: >
   at most one smooth-locus C3 character, independent of the free Mordell--Weil
   rank. A nonzero Cardano class is then the unique character up to inversion.
 source: root / post-THM-3937 global character-rank reframe, 2026-08-23
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc_degree6_one_place, 2026-08-24). The audit
+  independently verified that integral reduced closed fibres remove exactly
+  the vertical localization lattice; the infinite boundary difference kills
+  all generic-curve units; the quotient three-torsion map is well-defined,
+  additive, and exact without finite-generation assumptions; and normal
+  Hartogs plus Kummer gives the stated smooth-locus character group. No repair
+  was required.
 related:
   - THM-3912-even-degree-split-boundary-cusp-three-torsion-sieve
   - THM-3922-affine-plane-completion-free-boundary-class-group-obstruction
@@ -21,7 +29,7 @@ related:
 
 # THM-3939 -- free Mordell--Weil rank cannot supply the second character
 
-**PROVED CANDIDATE; INDEPENDENT HOSTILE AUDIT PENDING.** Work over an
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero and put `K=k(t)`. Let
 `B` be a normal affine `k[t]`-domain of dimension two. Assume:
 

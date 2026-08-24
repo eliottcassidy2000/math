@@ -2,8 +2,8 @@
 id: THM-3938
 title: "Centered degree-four repeated-root maps are scalar or fold a ramification arm"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT
-  HOSTILE AUDIT. In the centered trace-zero linear-color binary-cubic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the centered
+  trace-zero linear-color binary-cubic
   grammar with deg A=3 and repeated-root degree four, local trace and the
   finite Riemann--Hurwitz budget leave five collision-free non-root-regular
   pole rows. Exact color division leaves one family in each row. Two
@@ -18,11 +18,15 @@ status: >
   other coefficient planes, or JC(2).
 source: jc_zero_debt_lift / post-THM-3936 next root-degree stratum, 2026-08-23
 audit: >
-  Candidate self-audit only. The assertion-free 96-gate exact companion
-  checks the complete pole ledger, all five trace normal forms, every color
-  resultant and exceptional division seam, scalar/unit boundaries, five
-  implicit/discriminant identities, and every address packet. Independent
-  hostile audit is required before this theorem enters the proved graph.
+  INDEPENDENT HOSTILE AUDIT PASS (degree4_independent, 2026-08-24). The audit
+  independently reconstructed the pole/Riemann--Hurwitz exhaustion, including
+  the finite-infinity gauge and reversed row-F orientation; all color seams,
+  roots at infinity, and pole cancellations; the scalar normalizations and
+  coefficient ideals; every address factor and critical-value exclusion; the
+  exponent-one maximal-order parity step; and the rank-three source
+  non-unibranch bridge. The assertion-free 96-gate companion byte-matches in
+  normal and optimized mode; frozen output, hashes, and documentation checks
+  pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
@@ -42,8 +46,8 @@ hash_basis: raw LF bytes
 
 # THM-3938 -- degree four has five doors, and every door returns to the same folded arm
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT
-HOSTILE AUDIT.** Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of
 characteristic zero. Consider
 
 ```text
