@@ -67,9 +67,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505`, and only 58 in `t>=U`: 57 scale-one plus `(2,1,9)`.  THM-3910
-  closes 41, leaving 17.  THM-4000 closes AP11 and all 167,960 fixed
-  `[1,20]` scale-two bodies, no type; its exact auxiliary-cover audit exposes
-  a sharp three-versus-one clock deficit.  `t<U` and owner/arrival remain open.
+  closes 41, leaving 17. THM-4000 closes AP11 and 167,960 fixed `[1,20]`
+  scale-two bodies, no type; exact comb covering shows a three-versus-one
+  clock deficit. `t<U` and owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
   FINITE-EXACT,
@@ -340,31 +340,23 @@ asymptotic or residue.
   anchor, named root/cusp/jet and `f=0` packets, carrier ordinals, adjusted
   squarefreeness, and displayed cylinder/graph/residue cells. Global roots,
   arbitrary `f!=0`, and general compatible rows remain open.
-  THM-3973 supplies a boundary/class/canonical/exact-volume passport and a
-  globally nonmonogenic finite cubic, but the cubic ramifies. THM-3974 closes
-  homogeneous, `1 x *`, `2 x 2`, and `2 x 3`/transpose support at every
-  height and gives the height-two floor seven. THM-3975 proves its two-color
-  and plinth ledger, two cubic heights, an exact odd-rank all-height
-  finite-free tower, and rational no-mates for every nonconstant
-  `f in k(p)`. THM-3976 identifies the
-  rational-compression pseudoplane and its `C`-only degree/support floors.
-  THM-3977 closes the lowest cusp/arm seam and both tested corrections;
-  THM-3978 computes the plane/completion response ideals and incompatible
-  formal constants. THM-3979 lifts the cusp jets to every formal order.
-  THM-3980 puts the split all-height atlas in `K x K`, not a domain.
-  THM-3981 obstructs every height-two slope and slope one at all heights.
-  THM-3982 classifies
-  shears; nonlinear rows have zero rational invariant image. THM-3983 gives
-  boundary constancy and `d<=r-1`. THM-3984 makes every nonzero single
-  boundary-monomial coupling to `x+h(x^nt)` critical; its height-two
-  linear-`y` time form is holomorphic. THM-3985 closes nonconstant
-  `k[p,y]` and isolates submersive `alpha*p+gamma*y^m` (`n=2,m>=2`) with
-  `3m` residues.
-  THM-3986 is RESERVED. THM-3987 forces at least three weights per output;
-  with THM-3974, the first live cells are `3x4/4x3`. Open:
-  algebraization with `y`, compatible/multiple/reducible/nongraph debts,
-  degree `>=6`, polynomial compression, finite Keller entry, unrestricted
-  Darboux entry, and `JC(2)`. THM-3853/3855 remain formal laboratories.
+  THM-3973 gives an exact-volume passport and a ramified globally
+  nonmonogenic finite cubic. THM-3974 closes homogeneous, `1x*`, `2x2`, and
+  `2x3`/transpose support at every height; the height-two floor is seven.
+  THM-3975 gives the color/plinth ledger, odd-rank tower, and rational
+  no-mates for nonconstant `f in k(p)`; THM-3976 gives the compression
+  pseudoplane and `C`-only floors. THM-3977 closes the lowest cusp/arm seam;
+  THM-3978 gives response ideals and incompatible formal constants;
+  THM-3979 lifts all formal cusp orders; THM-3980's split atlas is `KxK`.
+  THM-3981 obstructs height-two slopes and slope one at all heights.
+  THM-3982 classifies shears; THM-3983 gives boundary constancy and
+  `d<=r-1`; THM-3984 closes every single boundary-monomial coupling and its
+  height-two linear-`y` time form is holomorphic. THM-3985 closes `k[p,y]`,
+  with submersions `alpha*p+gamma*y^m` and `3m` residues. THM-3986 makes each
+  one-positive-`x`-monomial adjacency critical. THM-3987 forces three weights
+  per output (`3x4/4x3` first). THM-3989's cusp-log conductor, moment, and
+  shears leave nondividing depths, first `2:3`. Multi-term cancellation,
+  that cell, finite Keller entry, unrestricted Darboux entry, and `JC(2)` are open.
   Russell THM-3785 forces `3|d,d>=9`; THM-3843/46/49 give arm/jets/contact.
   THM-3856/61/67/71 close normal `z`-depth through five; exact shears leave
   nonreduced `(6,4)`. Rational corrections and global entry remain open;

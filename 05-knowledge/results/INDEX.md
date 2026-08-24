@@ -1060,6 +1060,18 @@
   `6e8c4e5a7e2a590178cfaab6996cab84faabb7ad06902691ff064c7fbaf3aca2` /
   `035b98857b1106241843e016d65c2c31428729c7f797ef973d70046f0fef21f5`.
 
+- `jc2_cusp_submersion_positive_x_monomial_adjacency_thm3986.py` ->
+  matching `.out` [THM-3986 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED]. At height two every `alpha*p+gamma*y^m`, `m>=2`, is a
+  submersion, but adding any one nonzero `lambda*x*p^r*y^s`, `r,s>=0`,
+  creates an affine critical point. The common-power fibre and complete
+  invalid-address ledger include all three low rows. Coordinated sums,
+  rational mates, and JC(2) remain open. Checks: `42,281`.
+  Script/output/semantic SHA-256:
+  `237cf03e0a000d2cb8160cac8f4167260ad220ef025615b1e48b663972562cec` /
+  `ff65f73eeaebb1ad0193794d55ed1222630cb4afa2724831bc07fcdf4e67040f` /
+  `869bca81569a6fa2467e7d4d80d6a724be0c5d37ecc3982c99e55583019f493c`.
+
 - `jc2_gwozdziewicz_every_line_weight_floor_thm3987.py` and independent
   audit -> matching `.out`s [THM-3987 PROVED FROM CITED INPUTS +
   VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. A hypothetical `B_2`
@@ -1077,6 +1089,24 @@
   `75524eca13aec75ae4c7e8dc93c98d09dacfb3232df65db34cbf82db9bc8ead3` /
   `68d95eadbab2bb11a60c8e96e410b9e96a87976415c1c441db4adf39bc18ceda` /
   `abebacdcf88dafed2e564ed4c588f191c8ab90e9f295feb42cf30f469e91c0b6`.
+
+- `jc2_cusp_log_laurent_conductor_thm3989.py` and independent audit ->
+  matching `.out`s
+  [THM-3989 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. In
+  `s=y/p`, `tau=(p^3-y^2)/p^2`, depth zero is exactly `k[p,y]`, the depth-`d`
+  symbol module is `s^d*k[s]`, and every first-depth cancellation descends
+  to the cusp plane. A hypothetical Darboux pair obeys the exact scalar
+  moment `sum i*a_i*c_-i=-s`; elementary target shears reduce it to mutually
+  nondividing positive depths, first `2:3`. That cell and JC(2) remain open.
+  Primary/independent checks: `2,439/13,876`.
+  Primary script/output/semantic SHA-256:
+  `63215ca6652c620f795af49e2112344df1cfe714044ca753b2a2bed4c22a93ed` /
+  `e9b27753864beee2934b29a44c061029db740dfad5ceae595d92bf49013fba25` /
+  `f30679954e4f8f42fc9d8c53f17dcfe0f656eb211bd13311cd14b89cdc562984`.
+  Independent script/output/semantic SHA-256:
+  `8183206aa526cb2b95fd689a0242ba1be150542677fce56245344bae84013b74` /
+  `1f5883e70aca0d9efb81095447cb3e4633d8b4b6cf366ca4b871f2c9121e144` /
+  `ef8e587b10aaa8398d69769411ee828985b50311c382cc7e13fe3235beccd612`.
 
 - `cyclotomic_factorial_two_power_decoder_20260824.py` -> matching `.out`
   [ELEMENTARY PROVED IDENTITY + FINITE-EXACT CROSS-FRONTIER ATLAS; NO

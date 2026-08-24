@@ -468,8 +468,12 @@ shears; THM-3983 gives coordinate boundary constancy and the place budget
 and separately gives a holomorphic time form in the height-two linear-`y`
 row. THM-3985 closes every nonconstant height-two cusp-plane polynomial;
 its positive submersion family still has `3m` nonzero time-form residues.
-THM-3987 additionally forces three weights in each output of any hypothetical
-height-two Darboux pair, leaving `3x4/4x3` as the first live support cells.
+THM-3986 closes every one-positive-`x`-monomial adjacency, and THM-3987 forces
+three weights in each output. THM-3989's **Laurent conductor** is divisibility
+of cusp-log coefficients by `s^d`; it is not the S6 normalization conductor
+or its clutch map. The lawful common lesson is only to retain branch/address
+labels under localization. THM-3989 reduces the JC lane to nondividing pole
+depths, first `2:3`.
 Neither these JC obstructions nor any other JC result supplies a Hopf
 dependency here.
 

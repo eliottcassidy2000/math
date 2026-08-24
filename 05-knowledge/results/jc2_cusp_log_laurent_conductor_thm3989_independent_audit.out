@@ -1,0 +1,9 @@
+THM-3989 independent every-line hostile audit
+GATES=13876
+MONOMIAL_ROWS=1365;NEGATIVE_ROWS=3927;SYMBOL_ROWS=372
+INTERSECTION={1: {'b2_columns': 5, 'kernel': 3, 'intersection_rank': 3}, 2: {'b2_columns': 15, 'kernel': 7, 'intersection_rank': 6}, 3: {'b2_columns': 35, 'kernel': 17, 'intersection_rank': 10}, 4: {'b2_columns': 70, 'kernel': 38, 'intersection_rank': 15}, 5: {'b2_columns': 126, 'kernel': 76, 'intersection_rank': 21}}
+SYZYGY_KERNELS={0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+CONVOLUTION_SIGNS=PASS;SCALAR_MOMENT=-S;SHALLOW_JET=-1
+UFD_ROWS=27;SHEAR_ROWS=6
+VERDICT=PASS;NON-DIVIDING_CELLS_AND_JC2_REMAIN_OPEN
+SEMANTIC_SHA256=ef8e587b10aaa8398d69769411ee828985b50311c382cc7e13fe3235beccd612

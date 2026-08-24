@@ -392,10 +392,12 @@ boundary-monomial coupling critical and gives a height-two holomorphic
 time-form obstruction. THM-3985 closes the whole height-two cusp plane:
 nonconstant cusp restriction has nonzero residues, while the exact
 submersions `alpha*p+gamma*y^m` pay `3m` residues. Alternative gauges,
-finite Keller entry, and unrestricted Darboux entry remain open. THM-3987
-adds an orthogonal every-line support floor: each hypothetical height-two
-Darboux output has at least three weights, leaving `3x4/4x3` as the first
-live support cells.
+finite Keller entry, and unrestricted Darboux entry remain open. THM-3986
+makes every single positive-`x` monomial adjacent to those submersions
+critical. THM-3987 adds an orthogonal every-line three-weight floor. THM-3989
+identifies the cusp plane with Laurent depth zero, proves the sharp conductor
+and scalar moment, and reduces hypothetical pairs by target shears to mutually
+nondividing positive depths, first `2:3`.
 None of these supplies a Hopf dependency here.
 
 ### Explicitly rejected vocabulary bridges

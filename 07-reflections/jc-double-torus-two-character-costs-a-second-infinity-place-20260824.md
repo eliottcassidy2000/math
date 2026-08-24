@@ -420,6 +420,12 @@ THM-3985 shows why the leading-`x` qualifier matters: without it,
 Nevertheless its rational generic fibre removes `4m+1` source places and
 its time form has `3m` nonzero residues. Thus deleting affine criticality
 does not delete the generic-fibre integration invoice.
+THM-3986 shows that this positive endpoint is isolated in every one-monomial
+positive-`x` direction: the common-power compatibility fibre always escapes
+its invalid cusp addresses and yields a critical point. THM-3989 handles the
+first genuinely coordinated layer instead. Its exact Laurent conductor sends
+depth one back to the cusp plane, while target shears remove every divisible
+depth pair; the first unreduced arithmetic cell is `2:3` and still open.
 THM-3987 then supplies a transverse invoice from affine lines: every output
 of a hypothetical height-two Darboux pair needs positive and even-negative
 tails plus a linear jet. Together with THM-3974 this leaves `3x4/4x3` as the

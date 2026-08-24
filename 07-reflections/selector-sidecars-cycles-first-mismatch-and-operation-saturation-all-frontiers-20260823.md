@@ -1006,6 +1006,15 @@ THM-3987 changes the selector again: noninjectivity on every affine line
 forces both directional tails and a linear jet in each output. That
 every-line sidecar closes every `2xm/mx2` support cell but still loses enough
 coefficient data to leave `3x4/4x3` live.
+THM-3986 and THM-3989 expose the next selector transition. A single
+positive-`x` monomial is decided by a common-power compatibility fibre plus
+an invalid-address ledger; coordinated sums require the full Laurent
+filtration. There depth zero is exactly `k[p,y]`, every negative coefficient
+pays the conductor `s^d`, and the scalar moment couples opposite depths.
+Target shears destroy a divisible leading depth while preserving the bracket,
+leaving `2:3` as the first live arithmetic type. The power-compatibility gate
+resembles the cyclotomic two-power decoder, but both forget a root torsor and
+the latter projector is nonmultiplicative, so no cross-problem theorem follows.
 THM-3955/57 are proved local conductor theorems with no global Hopf consequence.
 The proved LRC endpoint theorem moved to collision-free THM-4000; the namespace
 move changes no mathematical scope.
