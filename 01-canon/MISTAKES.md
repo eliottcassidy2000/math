@@ -9,6 +9,34 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-471 (2026-08-24, historical theta-lattice script audit) -- the cubic-lattice theta series was identified with the E8 theta series
+
+- **What failed:** `04-computation/theta_lattice_tournament.py` printed
+  `theta_3^8 = Theta_E8` and then treated the coefficient ratio as the
+  constant `15`.  The left side is the theta series of the cubic lattice
+  `Z^8`, not of `E8`.
+- **Minimal witness / first failed implication:** in the convention where the
+  exponent is half the squared norm, the first nonconstant coefficients are
+  `16` for `Theta_(Z^8)` and `240` for `Theta_E8`.  At the next coefficient
+  they are `112` and `2160`, so even the ratio changes from `15` to `135/7`.
+  Equal rank and a common theta-function vocabulary did not identify the
+  lattices or their theta series.
+- **Repair / strongest survivor:** `Theta_(Z^8)=theta_3^8`, whereas
+  `Theta_E8=E_4=1+240 sum_(n>=1) sigma_3(n)q^n`.  The ratio `15` survives only
+  on odd exponents, where Jacobi's eight-square formula happens to give
+  `r_8(n)=16 sigma_3(n)`.  The genuine rank-eight arithmetic operation is
+  orthogonal stabilization: for every even lattice `L`, `L direct_sum E8`
+  has the same discriminant form as `L` and
+  `Theta_(L direct_sum E8)=E_4 Theta_L`.  This gives a typed rank
+  `r -> r+8` lift, not equality of theta series and not a tournament or Bott
+  theorem.  The historical script now prints this correction; THM-868's
+  independently checked score-vector membership and shell census are
+  unaffected.
+- **Reusable rule:** before identifying lattices from dimension or modular
+  weight, compare at least two nontrivial theta coefficients and retain the
+  discriminant form.  A coefficient coincidence on one parity subsequence is
+  not a lattice isomorphism.
+
 ## MISTAKE-470 (2026-08-24, Brendle--Hung v1 source audit) -- cached `True` cells were mistaken for the identities named by their labels
 
 - **What failed:** the companion notebook to arXiv:2608.19068v1 presents
