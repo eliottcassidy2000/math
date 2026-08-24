@@ -67,7 +67,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505`, and only 58 in `t>=U`: 57 scale-one plus `(2,1,9)`.  THM-3910
-  closes 41, leaving 17.  THM-3939 closes AP11 and 1,365 fixed scale-two
+  closes 41, leaving 17.  THM-3941 closes AP11 and 1,365 fixed scale-two
   bodies, no type; `t<U` and owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
@@ -355,14 +355,14 @@ asymptotic or residue.
   THM-3890 quintics; THM-3906/3907 places `1/2`,`2/6`; THM-3908/3911 sextics;
   THM-3912/14 conditional; THM-3913/19 mixed; THM-3915/16/17/21 close
   rational models; THM-3920 closes THM-3918/radial.
-  THM-3922--3935 close named packets: 3924 class, 3925 marked conic, 3926/27
-  boundary, 3928 affine singular conics, 3929 regular/degree-one color, 3931
-  the 3930 packet, 3932 infinity folds, 3933 centered finite-at-infinity
-  degree-three color, 3934 the unique reduced splitting conic, and 3935 the
-  exact `Cl=Z/3`/unique Cardano normal cubic. THM-3936 is a VERIFIED-EXACT
-  candidate for the complementary infinite-at-infinity row, pending audit;
-  3937 is RESERVED. Other gauges, degree `>=4`, altered fold families,
-  nonradial grammars and `JC(2)` remain OPEN.
+  THM-3922--3937 close named packets: 3924 class, 3925 marked conic, 3926/27
+  boundary, 3928 singular conics, 3929 regular/degree-one color, 3931 the 3930
+  packet, 3932 infinity folds, 3933 centered finite-at-infinity degree three,
+  3934 unique reduced splitting conic, 3935 `Cl=Z/3`/unique Cardano cubic, and
+  3936 the complementary infinite row. Thus 3933+3936 close centered degree
+  three; 3937 gives uniform fold-three resolvent rigidity. Arbitrary root
+  changes, degree `>=4`, altered branch/resolvent
+  families, nonradial grammars and `JC(2)` remain OPEN; 3938 is RESERVED.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
   self-identifying immersed arm, THM-3846 its formal first jets, and THM-3849
   only visible conductor contact.  THM-3856/3861/3867/3871 close normal

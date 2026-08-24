@@ -12,7 +12,8 @@ status: >
   the splitting-curve construction in degree at most two. This does not
   by itself compute the full resolvent class group. THM-3935 subsequently
   computes that group as Z/3 and shows that the Cardano class is the unique
-  nontrivial smooth-locus cubic character up to inversion.
+  nontrivial smooth-locus cubic character up to inversion; THM-3937 proves
+  the same rigidity uniformly over the linear-conic fold-three family.
 source: root / post-THM-3932 low-degree global three-class lane, 2026-08-23
 depends_on:
   - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
@@ -20,6 +21,7 @@ related:
   - THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff
   - THM-2387-degree-eighteen-h4-elliptic-three-isogeny-atlas
   - THM-3935-linear-conic-resolvent-class-group-unique-cubic-character
+  - THM-3937-linear-conic-fold-three-family-uniform-resolvent-rigidity
 script: 04-computation/jc2_infinity_component_unique_splitting_conic_thm3934.py
 output: 05-knowledge/results/jc2_infinity_component_unique_splitting_conic_thm3934.out
 script_sha256: b658f2314f27ff391051d0886598b67c807b3af505cb0dc2bfde6f61c71aca18
@@ -291,9 +293,9 @@ calculation alone does not prove that the other elliptic directions never
 globalize; it confines any escape to higher-degree splitting curves or
 non-plane-supported divisor classes. THM-3935 subsequently closes those
 possibilities globally for this exact surface: `Cl=Z/3`, and the Cardano class
-is the unique nontrivial cubic character up to inversion. Altering the family
-parameter, branch multiplicity, or quadratic resolvent remains outside both
-theorems.
+is the unique nontrivial cubic character up to inversion. THM-3937 extends
+that rigidity uniformly over the linear-conic family parameter. Altered branch
+multiplicity or quadratic resolvent remains outside these theorems.
 
 ## Reproduction
 

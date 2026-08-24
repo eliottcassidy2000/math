@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3939 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3941 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -360,7 +360,8 @@
   is nevertheless globally monogenic. Subsequent THM-3934/3935 prove that
   `XZ` is the unique reduced splitting conic of degree at most two and that
   the full resolvent class group is `Z/3`, with Cardano the unique normal
-  cubic character up to inversion. Checks: `55`. Script/output/semantic SHA-256:
+  cubic character up to inversion. THM-3937 extends that rigidity to every
+  linear-conic fold-three parameter. Checks: `55`. Script/output/semantic SHA-256:
   `39f362c41cdbf6fd481af85dc91b96ed5f1151810949895ef248b32913a39374` /
   `5fd6493bfc51a36626f2f45be5ba0bfcd209fd415941988ee1b8812d23e27322` /
   `f21747d66cce559781355bb75789500399f7d8eb8281254e33668ffb0697a849`.
@@ -408,6 +409,35 @@
   `61c59e636d9122bf6118ec59df962169b5bee80e171d975ac73ed29cd6361096` /
   `4a68ab996bd24301194c351572a7b8cd846ca9f51318fb0e1c086d0ebee36c0a` /
   `df63f1e9b60d0385c3f736b11c51493520a4115efb27206586208398bb481798`.
+
+- `jc2_centered_degree_three_infinite_root_value_thm3936.py` -> matching
+  `.out` [THM-3936 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  In the centered degree-three linear-color grammar with
+  `t(infinity)=infinity`, local trace and the finite Riemann--Hurwitz budget
+  leave exactly four collision-free pole rows. Exact color division leaves
+  one family per row; every implicit quintic/septic is irreducible,
+  birationally parametrized, and occurs to discriminant exponent one. Each
+  genuine ramification curve has at least two normalization addresses forced
+  onto one rank-three fibre point, so it is non-unibranch. Together with
+  THM-3933 this closes all infinity values in the fixed centered degree-three
+  grammar. Checks: `65`. Script/output/semantic SHA-256:
+  `c77b4a28a9b3a87cc57b364801c8d48dff88cf8bc25d2dd800306a1f1ed5c37d` /
+  `df140a5f3e275ce18dafcc11ef55bc7217bdb42b80f5c6640b7613ef41db3197` /
+  `12141212df57e3d3e67e9a206682b64e0c2cbf64198096c4c57c4196f5c37adb`.
+
+- `jc2_linear_conic_fold_three_uniform_resolvent_thm3937.py` -> matching
+  `.out` [THM-3937 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  For every parameter `r`, the resolvent has scalar units and class group
+  `Z/3`. Its generic elliptic surface has `3I1+I3*`; on
+  `2r^3+27=0` two finite fibres collide to `II+I1`, without adding a root
+  lattice. Uniformly `MW=ZQ`, `height(Q)=1/4`, and the infinity sections
+  differ by `3Q`. Thus Cardano is the sole nontrivial smooth-locus cubic
+  character up to inversion, and the only normal exact-branch/resolvent cubic
+  completion is the natural monogenic one. Checks: `66`.
+  Script/output/semantic SHA-256:
+  `7790ccc05f694dc768d2113d4f416e0e464aab98ae56c1f5aa976a105885b9de` /
+  `97a95267dc3d35302c453e23de0343761e3a60760801ba7166f57b46e5c6fe9f` /
+  `4da562dcdb1565874eced8068c5a127556604b3dc277485414568fb2bfc16b1c`.
 
 - `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
   `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil

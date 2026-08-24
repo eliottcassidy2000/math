@@ -16,8 +16,9 @@ status: >
   homogeneous root maps of degree at least two. THM-3930 subsequently
   realizes one centered degree-two packet and THM-3931 closes that packet;
   THM-3933 closes every centered finite-at-infinity degree-three stratum.
-  The infinite-at-infinity gauge, arbitrary root changes,
-  degree-at-least-four root maps, and other coefficient grammars remain open.
+  THM-3936 closes the complementary infinite-at-infinity stratum. Arbitrary
+  root changes, degree-at-least-four root maps, and other coefficient grammars
+  remain open.
 source: jc_zero_debt_lift / post-THM-3927 one-place compression boundary, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc-cohn3709, 2026-08-23). The audit
@@ -39,6 +40,7 @@ related:
   - THM-3931-degree-two-pole-cubic-principal-ramification-no-atlas
   - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
   - THM-3933-centered-degree-three-root-map-pole-partition-octic-nonentry
+  - THM-3936-centered-degree-three-infinite-root-value-nonentry
 script: 04-computation/jc2_root_regular_one_place_linear_color_cubic_thm3929.py
 output: 05-knowledge/results/jc2_root_regular_one_place_linear_color_cubic_thm3929.out
 script_sha256: 863c809aad0dc905a5143ab34444fab08dc5445a48a05f9431545f2f936a86d1
@@ -370,8 +372,9 @@ first centered degree-two finite-pole packet, and THM-3931 closes that exact
 packet by non-unibranchness and principal/nonprimitive boundary classes.
 THM-3933 closes every centered finite-at-infinity degree-three stratum by a
 pole-partition dichotomy, an explicit monogenic maximal order, and a
-non-unibranch octic. The infinite-at-infinity gauge, arbitrary root changes,
-degree-at-least-four root maps, and other coefficient grammars remain live.
+non-unibranch octic. THM-3936 closes the complementary infinite-at-infinity
+stratum. Arbitrary root changes, degree-at-least-four root maps, and other
+coefficient grammars remain live.
 
 ## Reproduction
 

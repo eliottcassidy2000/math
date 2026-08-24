@@ -15,7 +15,8 @@ status: >
   branch target rather than a planar Keller completion. THM-3934 subsequently
   proves that XZ is its unique reduced splitting conic of degree at most two;
   THM-3935 computes the full resolvent class group as Z/3 and proves that the
-  Cardano character is the unique normal cubic character up to inversion.
+  Cardano character is the unique normal cubic character up to inversion;
+  THM-3937 extends that rigidity uniformly over the fold-three parameter.
 source: jc_degree6_one_place/infinity_component_conic / post-THM-3928 remaining singular-conic lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23). The audit independently
@@ -40,6 +41,7 @@ related:
   - THM-3933-centered-degree-three-root-map-pole-partition-octic-nonentry
   - THM-3934-infinity-component-sextic-unique-reduced-splitting-conic
   - THM-3935-linear-conic-resolvent-class-group-unique-cubic-character
+  - THM-3937-linear-conic-fold-three-family-uniform-resolvent-rigidity
 script: 04-computation/jc2_infinity_component_linear_conic_torus_sextic_thm3932.py
 output: 05-knowledge/results/jc2_infinity_component_linear_conic_torus_sextic_thm3932.out
 script_sha256: 39f362c41cdbf6fd481af85dc91b96ed5f1151810949895ef248b32913a39374
@@ -507,6 +509,7 @@ sidecar.
 
 This theorem closes the fold-degree classification for the singular conic
 with an infinity component. Together with the subsequent THM-3934/3935
-audits, its explicit `r=0` branch/resolvent has no second normal cubic twist.
-It does not classify every torus sextic, the full fold-three parameter family,
-altered branch multiplicities or resolvents, or `JC(2)`.
+audits, its explicit `r=0` branch/resolvent has no second normal cubic twist;
+THM-3937 proves the same rigidity uniformly over the entire linear-conic
+fold-three parameter. It does not classify every torus sextic, altered branch
+multiplicities or resolvents, or `JC(2)`.
