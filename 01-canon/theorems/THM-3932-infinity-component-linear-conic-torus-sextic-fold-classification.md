@@ -2,7 +2,7 @@
 id: THM-3932
 title: "Infinity-component conic torus sextics: fold-one collapse, fold-two exclusion, and a fold-three family"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. If
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. If
   an irreducible torus sextic has affine normalization A1 and its projective
   quadratic coefficient is a reduced conic containing the line at infinity,
   then its Cardano fold degree is 1, 2, or 3. Fold one is necessarily a
@@ -15,14 +15,17 @@ status: >
   branch target rather than a planar Keller completion.
 source: jc_degree6_one_place/infinity_component_conic / post-THM-3928 remaining singular-conic lane, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The proof
-  separates irreducibility of the Cardano fibre product, the fold-one degree
-  ledger, fold-two trace parity, the complete fold-three trace/norm equations,
-  projective basepoint and address checks, singularity and delta accounting,
-  normality of both cubic and quadratic surfaces, and the local
-  non-Cartier test for the resolvent three-class. The assertion-free exact
-  companion has 55 active gates; normal and optimized runs must byte-match
-  the frozen output before promotion.
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23). The audit independently
+  reconstructed the Cardano fibre-product irreducibility argument, all three
+  fold rows, and the fold-three trace/norm coefficient equations, including
+  the total-degree bounds after the removable triangular shift. It also
+  checked the projective normalization, the contact-two finite branches and
+  (2,9) infinity cusp, both normality arguments, and the distinction between
+  a genuine order-three subgroup and an uncomputed full resolvent class
+  group. At the singular local ring, the reflexive prime (x,q+w) needs two
+  generators, so div(q+w)=3D+ has exact rather than merely formal order
+  three. The assertion-free 55-gate companion byte-matches in normal and
+  optimized mode; raw and semantic hashes and documentation checks pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
 related:
@@ -40,7 +43,7 @@ hash_basis: raw LF bytes
 
 # THM-3932 -- the infinity component leaves a genuine cubic fold
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero. Suppose
 the projective quadratic coefficient of a torus sextic is a reduced conic
 having the chosen infinity line as one component. After a projective change
@@ -443,7 +446,7 @@ It therefore represents a nonzero Weil class. Equation `(44)` proves
 ord([D^+])=3,                         [D^-]=-[D^+].         (46)
 ```
 
-This is the one intrinsic `C3` direction predicted when the affine part of
+This is an intrinsic `C3` direction predicted when the affine part of
 `Q2` has one component. It is exactly the Cardano class: adjoining a cube
 root of `(q+w)/2`, and putting the conjugate cube root so that their product
 is `x`, gives the splitting field of `(40)`. Thus this genuine class recovers
