@@ -1,5 +1,38 @@
 # Script Results Index
 
+- `jc2_degree_six_common_zero_normal_cubic_two_place_thm3906.py` -> matching
+  `.out` [THM-3906 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  A normal nonmonogenic common-zero `S3` cubic first exists at discriminant
+  degree six, but its single projective infinity point has two normalization
+  places of orders two and four.  The exact packet is ordinary-four plus two
+  `A2` cusps; the companion also closes the minimal triple-root grammar and
+  proves the sharp two-cusp cap for rational smooth-one-place sextics.
+  Checks: `91`.  Script/output/semantic SHA-256:
+  `3558670eb81467e10f924c68f2222d0ba82b036fb98a68fcb30a76bd2f92036a` /
+  `a559118dfc582684f0319411cee54f963f5c2139d267e53c325936ce4959d47a` /
+  `6c584836bf42fa095c6a8b14da1aca1b70d30712bfb3ac152dbd97b3694a9757`.
+
+- `jc2_unit_ideal_nonmonogenic_cubic_six_place_thm3907.py` -> matching `.out`
+  [THM-3907 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Its
+  binary cubic has coefficient ideal one but represents no scalar unit; the
+  associated normal nonmonogenic `S3` order has an absolutely irreducible
+  degree-seven discriminant with two infinity points and six places.  Checks:
+  `26`.  Script/output/semantic SHA-256:
+  `a25cddf1d6abf44f97186bf9d5c947a6e4b7c2cc55a4c61a01e11256b4e8282d` /
+  `acafe47d68ed7037d55991bf2a787b4c3854ae3b5e31196eaa5a2fac82f97ff5` /
+  `784084eee175020d1cd6f33768b3e535084924ce7cfee612eab3d687748852c9`.
+
+- `jc2_universal_quintic_common_zero_resolvent_class_group_thm3890.py` ->
+  matching `.out` [THM-3890 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Every irreducible one-point common-zero quintic has
+  non-tangent quadratic-resolvent class group `Z` or `Z/5`, constant units,
+  and no `3`-torsion; the tangent case factors.  Hence no connected normal
+  finite-flat cubic has such a discriminant.  Checks: `35`.
+  Script/output/semantic SHA-256:
+  `53a93831008db8ff6c144fca2994bac05f8b483de8758e1df269e38a2730756d` /
+  `2a685cadfa86c793337f9e63e872cb8095e61dcf452d9ac9d13805159db04ef1` /
+  `b07d58be28a8d1ab2a06b38310aed8e5228c5744cb64a47c8f9b4003cc30025d`.
+
 - `rule30_adaptive_chronology_census_20260823.py` and independent audit ->
   matching `.out`s [FINITE-EXACT BOUNDED AMBIENT; NO RULE-30 PRIZE].  Among
   all 14,762 distinct depth-eight portraits of active words of length at most
