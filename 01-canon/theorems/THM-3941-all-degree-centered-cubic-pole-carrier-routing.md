@@ -6,7 +6,9 @@ status: >
   HOSTILE AUDIT. Let A(u) be a cubic polynomial and let t(u) be a
   nonconstant trace-zero rational function of arbitrary degree N. In the
   centered linear-color repeated-root grammar, any two finite poles in one
-  A-fibre already route to the non-unibranch source-ramification obstruction.
+  A-fibre land at the same target address. Under the genuine reduced tame
+  (2,1) maximal-ramification hypothesis used for a cubic Keller completion,
+  they route to the non-unibranch source-ramification obstruction.
   After deleting that routed case, every finite pole lies at a critical point
   of A. Up to the stated affine gauges, there are exactly three carriers: one
   pole of order nonzero mod 3 over a C3 point, one odd pole over a selected C2
@@ -118,8 +120,9 @@ e=3: an isolated pole has r not congruent to 0 mod 3.     (10)
 
 If a pole is unramified, `(10)` says that trace zero requires at least one
 other pole in the same `A`-fibre. More generally, every pole not obeying the
-isolated rule must share its `A`-value with another pole. Section 2 routes all
-such shared-value cases before any affine normalization.
+isolated rule must share its `A`-value with another pole. Section 2 identifies
+their common target address unconditionally and routes them under the explicit
+maximal-ramification hypothesis before any affine normalization.
 
 The polynomial map `A:P1_u -> P1_A` is totally ramified of index three at
 infinity. Write
