@@ -115,6 +115,7 @@ summary = {
     "reflection": "C(h^2) is associate to M(h)M(-h)",
     "curve": "A/(C) isomorphic to B/(M)",
     "converse": "C|J; C^2|R plus orientation imply M^2|K",
+    "gcd": "for C!=P, C|J and C|R force C^2|R and uniquely recover M",
     "differential": "2cC_P+c_PC=-3s_PD",
     "controls": "sigma0 reducible depth3; sigma nonzero irreducible depth4 A2",
     "scope": "structural reframe; normalization and JC2 remain open",
@@ -127,6 +128,7 @@ print("CANONICAL=S_QP_OVER_3;J_P_MINUS_S2;R_Q_MINUS_3SP_PLUS_S3")
 print("FORWARD=M2_DIVIDES_K_IMPLIES_ORIENTED_C_DIVIDES_J_AND_C2_DIVIDES_R")
 print("REFLECTION=C_OF_H2_ASSOCIATE_M_TIMES_M_MINUS;CURVES_ISOMORPHIC")
 print("CONVERSE=ORIENTED_C_PACKET_IMPLIES_M2_DIVIDES_K")
+print("GCD=NON_P_FACTORS_OF_GCD_J_R_BIJECT_NONZERO_REPEATED_FACTORS")
 print("DIFFERENTIAL=2C_SMALL_CP_PLUS_SMALL_CP_C_EQUALS_MINUS_3SP_D")
 print("CONTROL_SIGMA0=NONGRAPH_DEPTH3_BUT_REDUCIBLE")
 print("CONTROL_SIGMANONZERO=NONGRAPH_DEPTH4_IRREDUCIBLE_NORMALIZATION_A2")
