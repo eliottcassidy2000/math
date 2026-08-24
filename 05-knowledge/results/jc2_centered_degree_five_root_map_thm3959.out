@@ -1,0 +1,11 @@
+THM-3959 centered degree-five root-map exact companion
+CHECKS=105
+SCOPE=centered trace-zero linear-color;degA=3;deg_t=5
+ROWS=J,K,L,M,N,O,P
+EMPTY=L,M,O
+SURVIVORS=J1,J2,K,N,P
+SCALAR=J1(q=0);d=1/2;normal maximal order
+ADDRESSES=J1:3;J2:2;K:2;N/P:3_GENERIC_OR_2_CRITICAL
+BRANCH=each nonscalar implicit component has discriminant exponent one
+CONCLUSION=scalar-unit or source ramification non-unibranch;no A2 Keller open
+SEMANTIC_SHA256=2a8a5aab0520c4edeab61b1717d2a6b9a4bf7261ef64dc9a4fb0a6ac253b8808
