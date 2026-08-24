@@ -335,14 +335,20 @@ asymptotic or residue.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** THM-3502--3824 give compiler/carry, no finite-spatial cycles,
   Smith forms, and shell kernels. A FINITE-EXACT `D=B=4`, length-nine census
-  has `13,853` portraits and selects at most one off-ray, but no fixed ray.
-  Static tariff: `2^(D+B-1)+B+2`; all-depth/physical prizes remain OPEN.
+  has `13,853` portraits and an adaptive at-most-one-off-ray selector, but no
+  fixed ray. Static tariff: `2^(D+B-1)+B+2`; all-depth/physical prizes remain
+  **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
   preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. THM-3990 validates
   only the final connected-component repair; THM-3991 gives `chi=d*n!` only
   for the stated periodic fan grammar; THM-3993 gives only a local labelled
-  wall-response quotient. The S6 filled-gauge audit leaves a global Cech
-  overlap open. None verifies a global manifold.
+  wall-response quotient. The Brendle--Hung mixed identities are now exact
+  relative to one reconstructed moving-frame implementation; the other
+  quadratic summands, cubic integral, smooth extension, and headline remain
+  open. Conditional on the displayed `S6` analytic pieces and logarithm-sheaf
+  compatibility, the marked centralizer-generated completed orbit is `2Z`;
+  the infinite-fan quotient, attaching maps, nearby cycles, global recognition,
+  and headline remain open. Neither ledger verifies a global manifold.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3782 close
   named cells only. THM-3827--3972 route genus/degree, root/cusp/jet, `f=0`,
   cylinder and residue packets; global roots and arbitrary `f!=0` stay open.
