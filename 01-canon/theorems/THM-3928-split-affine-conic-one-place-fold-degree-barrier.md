@@ -1,6 +1,6 @@
 ---
 id: THM-3928
-title: "Split affine conic forces a high-degree Cardano fold on a one-place branch"
+title: "Split affine conic cannot support an irreducible one-place torus sextic"
 status: >
   PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. Let an
   irreducible nonlinear degree-N torus branch have affine normalization A1,
@@ -8,15 +8,15 @@ status: >
   affine lines. Parallel lines are impossible. For nonparallel lines, the
   induced map from the branch normalization to the Cardano cusp has degree
   at least ceil((N+1)/2). In degree six its degree is 4, 5, or 6, with exact
-  line-degree packets (6,2), (6,4), or (6,6). Thus a split affine conic can
-  never give a birational/no-fold coefficient presentation of a one-place
-  sextic. On the quadratic resolvent, splitting the conic supplies only one
-  intrinsic three-torsion direction: the universal divisor-relation lattice
-  is Z plus Z/3, not two copies of Z/3. Extra independent three-classes need
-  an additional global relation. A double-line conic makes the torus
-  discriminant a product of two cubics, so cannot underlie an irreducible
-  sextic. This closes the double-line and birational distinct-line lanes,
-  but degree-4/5/6 folds and conics with an infinity component remain open.
+  line-degree packets (6,2), (6,4), or (6,6). The first has multiple infinity
+  support, the second fails its weighted degree equation, and the third would
+  require an impossible binary-form identity. Hence no distinct-affine-line
+  conic supports an irreducible one-place torus sextic. On the quadratic
+  resolvent, splitting the conic supplies only one intrinsic three-torsion
+  direction: the universal divisor-relation lattice is Z plus Z/3, not two
+  copies of Z/3. A double-line conic makes the discriminant a product of two
+  cubics. Thus among singular projective conics only a conic having the line
+  at infinity as one component remains outside this theorem.
 source: jc_degree6_one_place / post-THM-3925 singular splitting-conic lane, 2026-08-23
 audit: >
   PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The proof
@@ -24,9 +24,10 @@ audit: >
   obstruction, projective degree ledger, fold-degree interpretation, and
   quadratic-resolvent divisor presentation. The assertion-free exact
   companion verifies the Cardano identities, all degree tables, the split
-  and double-line Smith forms, the double-line discriminant factorization,
-  the arbitrary-component extension, and sharp excluded controls. Normal and
-  optimized replay must byte-match the frozen output before promotion.
+  and double-line Smith forms, all three sextic row obstructions, the
+  double-line discriminant factorization, the arbitrary-component extension,
+  and sharp excluded controls. Normal and optimized replay must byte-match
+  the frozen output before promotion.
 related:
   - THM-3844-two-cusp-polynomial-branch-quadratic-resolvent-design-gate
   - THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff
@@ -34,9 +35,9 @@ related:
   - THM-3925-fivefold-conic-contact-torus-sextic-one-place-fold
 script: 04-computation/jc2_split_affine_conic_one_place_fold_degree_thm3928.py
 output: 05-knowledge/results/jc2_split_affine_conic_one_place_fold_degree_thm3928.out
-script_sha256: ab66d5f711b4291861b8354c0d533223ba27fc3456ecc79999ddcd4d92c46aa7
-output_sha256: 2b1d8bec1d41f132c39bb01e76f34c140f8c6845ed64f60bdab7f5b15d1f48db
-semantic_sha256: 5d4acb8186b838b177e2a6951f9a96e1fb580a903f8c4fe99ca394fce2c608cd
+script_sha256: 17c21c675e8a33ee6bbe13cb47913101fbc28d5119d8403669db727488b6b10c
+output_sha256: 0b87951adcd60ef0484b049a7731ec7177da577355e684101b20d62c1faee77c
+semantic_sha256: be55a2f5eb5e7a68bf0155e0540f777feb7212cbaa9a42093703a44f91165416
 hash_basis: raw LF bytes
 ---
 
@@ -83,9 +84,9 @@ After exchanging the two lines, the degrees of their pullbacks are exactly
 d=4: (6,2),             d=5: (6,4),             d=6: (6,6). (5)
 ```
 
-Consequently a distinct-line splitting conic cannot produce a birational
-coefficient presentation of a nonlinear one-place torus sextic. The fold is
-not a small defect: it has degree at least four.
+This first gives a fold-degree barrier. Section 4 then eliminates all three
+rows in `(5)`, proving that a distinct-affine-line conic cannot support any
+irreducible nonlinear one-place torus sextic.
 
 The quadratic-resolvent ledger is equally rigid. Under the normality and
 generic-splitting hypotheses stated in Section 5, the divisor relations
@@ -237,7 +238,7 @@ Since two nonparallel lines have different projective infinity points, at
 most one `e_i` is below `N`; equivalently, one of them equals `N`, as already
 forced by `(16)`.
 
-## 4. Exact sextic table and the no-fold obstruction
+## 4. Every sextic fold row fails
 
 Set `N=6` and exchange the lines so that `e_1=6`. Equation `(17)` becomes
 
@@ -253,10 +254,85 @@ The inequalities `1<=e_2<=6` give precisely the three rows `(4)-(5)`:
 | 5 | `(6,4)` | `2` |
 | 6 | `(6,6)` | `0` |
 
-In particular `d=1` is not merely absent; `d=2,3` are absent as well. Any
-split-affine-conic sextic design must carry a fourfold-or-higher polynomial
-coefficient fold. If the intended construction requires the coefficient
-map to be birational along its branch, this lane is empty.
+In particular `d=1` is not merely absent; `d=2,3` are absent as well. It
+remains to test the three high-fold rows. Write `q_3` for the homogeneous
+cubic part of `q` in the affine coordinates `(ell_1,ell_2)=(x,y)`.
+
+### 4.1 Fold degree four has more than one infinity point
+
+For `(e_1,e_2,d)=(6,2,4)`, the weighted degrees of `x^3` and `x^2y` on the
+normalization are respectively `18` and `14`, whereas
+
+```text
+deg(2h^3)=12.                                                (18a)
+```
+
+No other cubic monomial has either forbidden degree, so their coefficients
+in `q` vanish. Consequently
+
+```text
+q_3=y^2(alpha x+beta y).
+```
+
+The degree-six part of the branch equation is
+
+```text
+Delta_6=y^3[4x^3-27y(alpha x+beta y)^2].                    (18b)
+```
+
+It vanishes at `[1:0]`, while the bracket is nonzero there and, being a
+nonconstant binary cubic, has a zero elsewhere. Thus `Delta_6` has at least
+two projective support points. An irreducible degree-six curve with only one
+normalization place at infinity has only one projective infinity point, so
+this row is impossible.
+
+### 4.2 Fold degree five misses degree fifteen
+
+For `(e_1,e_2,d)=(6,4,5)`, the evaluated degrees of the four cubic monomials
+are
+
+```text
+deg(x^3,x^2y,xy^2,y^3)=(18,16,14,12).                      (18c)
+```
+
+The degree-`18` and degree-`16` terms are unique, so their coefficients must
+vanish in an identity with `2h^3`, whose degree is `15`. Every remaining
+monomial of total degree at most three has evaluated degree at most `14`.
+It cannot produce degree `15`. This row is empty.
+
+### 4.3 Fold degree six has no one-support binary top form
+
+For `(e_1,e_2,d)=(6,6,6)`, one-place infinity would force
+
+```text
+Kx^3y^3-27q_3(x,y)^2=L(x,y)^6,                  K!=0,       (18d)
+```
+
+after allowing the nonzero rescaling induced by affine coordinate changes.
+There is no such binary-form identity. If `L` is one of the coordinate
+forms, say `L=x`, write
+
+```text
+q_3=ax^3+bx^2y+cxy^2+dy^3.
+```
+
+The `y^6` and `x^2y^4` coefficients successively give `d=c=0`; the
+`x^3y^3` coefficient then gives `K=0`, a contradiction.
+
+If both coefficients of `L` are nonzero, rescale the coordinates to
+`L=x+y`. The `x^6,x^5y,xy^5,y^6` coefficients give
+
+```text
+-27a^2=-27d^2=1,                  b=3a,       c=3d.         (18e)
+```
+
+The `x^4y^2` coefficient gives `ad=-1/27`, hence `d=a`. Therefore
+`q_3=a(x+y)^3` and `-27q_3^2=(x+y)^6`; equation `(18d)` again forces
+`K=0`. This exhausts all linear forms `L` and kills the last row.
+
+Hence no irreducible one-place sextic in the theorem's scope exists. The
+fold-degree table is not a list of survivors; it is the complete finite
+pre-obstruction list dispatched by `(18a)-(18e)`.
 
 The bound is genuinely about a nonlinear branch. For example,
 
@@ -338,7 +414,7 @@ Z^(2r) / <D_i^++D_i^- (1<=i<=r), 3 sum_i D_i^+>
 
 There is still only one intrinsic three-torsion direction.
 
-## 6. Double lines factor; high folds and the infinity component remain
+## 6. Double lines factor; only the infinity component remains
 
 The other affine singular conic is even more rigid. Choose `sigma in k` with
 `sigma^2=3`. If `p=ell^2`, then identically
@@ -371,8 +447,8 @@ Likewise, if one projective component of the conic is the chosen line at
 infinity, the affine polynomial `p` is linear rather than a product of two
 affine line equations. Its missing projective divisor must be retained in
 the boundary ledger, and `(3)` is not asserted. Together with the
-degree-`4,5,6` distinct-line folds, this is the honest remaining
-singular-conic design space.
+preceding closure of all distinct-affine-line folds, this infinity-component
+case is the sole remaining singular-conic design space.
 
 Reproduce the exact arithmetic packet with
 
