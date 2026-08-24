@@ -16,8 +16,9 @@ status: >
   remains open.
 source: jc_degree6_one_place / post-THM-3917 decic degeneration lane, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (root / late_origin_math_audit, 2026-08-23)
-  after one prose repair.  The audit proved the six-address bridge is
+  TWO INDEPENDENT HOSTILE AUDITS PASS (root / late_origin_math_audit and
+  incoming_truth_surface_referee, 2026-08-23) after one prose repair.  The
+  audits proved the six-address bridge is
   bijective on support, reconstructed every critical and reciprocal fibre,
   and checked the complete delta 28+2+6=36 ledger and smooth contact-ten
   infinity place.  It independently audited the finite-free basis, exact
