@@ -1,0 +1,15 @@
+theorem=THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
+branch=degree10;rational;infinity_places=1;infinity_contact=10
+finite_singularities=ordinary8_plus_2A2_plus_2A5;delta_ledger=28+2+6=36
+conic_discriminant=((s^2-4)(s^2+1)^2)^3
+power_order_discriminant=432*A^10*Delta;index=A^5
+normal_order=finite_flat_normal_nonmonogenic;discriminant=6912*Delta
+cubic_field=rational_k(s,z);natural_chart_jacobian=-F*F_z/16
+removed_lattice=rank17;det=5832;snf_nonunits=3,3,6,6,18
+quadratic_resolvent_class_group=Z^3_plus_Z/3;mixed_tau_square=-6;boundary_only=primitive
+branch_euler=-8;branch_smooth_euler=-13;base_complement_euler=9
+maximal_etale_locus_euler=14;maximal_etale_locus_is_not_A2
+scope=proper_plane_open_may_delete_euler13;plane_atlas_and_JC2_open
+semantic_sha256=238246047160a73f2de01d4ff62109d7cac03434ad31fdc58ae0378054030c6b
+CHECKS=91
+RESULT=PASS
