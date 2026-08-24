@@ -1,0 +1,10 @@
+THM4025_OWNER_RESIDUE_ODD_DILATION_INDEPENDENT_AUDIT
+engine=integer_records_and_one_cleared_gate_inequality
+minimal_ordinary_revival=ray_(5,4);(45,36)=S;(55,44)=C
+records_(45,36)=1/966,1/2772;records_(55,44)=1/1722,17/5166
+margins=-97/595056,63/28208
+scan_cells_through_501=15864;rays=12757;revivals=1
+owner_scaling_checks=102000
+divisibility_survival_checks=18030;semigroup_checks=6241
+checks=472093
+RESULT=PASS

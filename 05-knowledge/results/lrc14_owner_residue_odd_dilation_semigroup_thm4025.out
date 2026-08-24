@@ -1,0 +1,15 @@
+THM4025_OWNER_RESIDUE_ODD_DILATION_SEMIGROUP_EXACT
+scope=THM4003_owner_relaxed_arithmetic_all_U;LRC_gate_only_when_U<91^6;LRC14=OPEN
+owner_invariance=e_i(kt,ku)=e_i(t,u)_for_odd_k
+margin_law=(B-D)(kt,kU)>=(B-D)(t,U)+t(k-1)/(84(U-1)(kU-1))
+sequence_law=phi(n)=2n-1;n_star_m=2nm-n-m+1;closure(n_star_m)<=min(closure(n),closure(m))
+minimal_ordinary_revival=ray_(5,4);k9_(45,36)=S;k11_(55,44)=C
+minimal_revival_margins=-97/595056,63/28208
+ray_(5,4)_physical_word_k3_to31=CCCSCCSSSSSSSSS
+scaling_checks=4050;star_checks=1600
+physical_scan_cells_through_501=15864;rays=12757
+ordinary_revivals_through_501=1;first=(55, (5, 4), (45, 36, (5, 4), 9, False), (55, 44, (5, 4), 11, True))
+divisibility_survival_checks=18030
+hostiles=closure_not_upward;epsilon_not_strict;no_1/k_coordinate_bound
+checks=3227927
+RESULT=PASS
