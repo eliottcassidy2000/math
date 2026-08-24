@@ -1,0 +1,7 @@
+THM3878_SCALE2_SAFE_LIFT_VARIANCE_GATE_20260823
+quotient_pair=(1,9);h=59/63;b=4/63;threshold_h_over_b=59/4
+AP11_odd_t_11_99=rows:45,actual_positive:45,exact_cv_closed:45,integer_closed:45,first_bv_odd_t:39,first_bv_integer_odd_t:39,min_safe:31579/1009008,min_rows:((13, '31579/1009008'),)
+small_cores=78;first_two_legal_odd_t;rows:156,actual_positive:156,exact_cv_closed:156,integer_closed:156,bv_closed:47,min_safe:10655/504504,min_rows:(((1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13), 13, '10655/504504'),)
+semantic_sha256=749fc3c20341ce4c199d4e07f34f5c477b55194ebc049af1fc82f008e414f251
+checks=809
+STATUS=PASS

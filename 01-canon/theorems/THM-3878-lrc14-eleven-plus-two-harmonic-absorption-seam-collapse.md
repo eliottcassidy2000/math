@@ -10,10 +10,10 @@ status: >
   unconditional necessary ledger falls from 52,692 to 7,505.  In the extra
   relative-scale slice t>=U, cyclic slack and one auxiliary LRC(13) witness
   leave only 58 certificate survivors.  An independent safe-mass/component
-  audit closes none of those 58 types.  Subsequent THM-3910 gives the exact
-  signed-endpoint cross-phase, re-proves the known AP11 scope, and closes a
-  fixed 1,365-body scale-two family without deleting an arbitrary-body type.
-  This theorem's 58-type ledger, the t<U slice, and LRC(14) remain open.
+  audit closes none of them.  Subsequent THM-3910 closes 41 scale-one types,
+  leaving 16 plus the scale-two `(1,9)` type; THM-3918 independently closes a
+  fixed 1,365-body family inside that type.  The remaining 17, the t<U slice,
+  and LRC(14) are open.
 source: root / THM-3818 cyclic seam and THM-668 dispatch join, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS.  A separate 93,524-gate checker rebuilds
@@ -33,8 +33,8 @@ audit: >
   inversion symmetry, and component multiplicity in 294 active checks.  It
   finds zero further closures, retains the corrected THM-1042 endpoint
   convention, and isolates the missing mixed moments M1,M2.  Normal,
-  optimized and frozen streams byte-match.  THM-3910 is the separately audited
-  response to that invoice.
+  optimized and frozen streams byte-match.  THM-3910 and THM-3918 are the
+  separately audited responses to that invoice.
 depends_on:
   - THM-3818-scaled-inert-cubeclass-support-two-pair-packet
   - THM-668-detuned-harmonic-dispatch
@@ -42,6 +42,7 @@ depends_on:
 related:
   - THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction
   - THM-3910-lrc14-auxiliary-center-erosion-and-t-sheet-variance-response
+  - THM-3918-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family
 script: 04-computation/lrc14_eleven_plus_two_harmonic_absorption_seam_collapse_thm3878.py
 output: 05-knowledge/results/lrc14_eleven_plus_two_harmonic_absorption_seam_collapse_thm3878.out
 script_sha256: 246dcb77753616aa399300daad62adaedfa838a148ea1b63edf5f75e4f4eae69
@@ -311,7 +312,9 @@ For completeness, every positive `a` was tested on the final 57 pairs.  The
 search is finite symbolically: if a pair-danger component has length `beta`
 and `a>13/(7 beta)`, it contains a complete auxiliary-safe cell of length
 `6/(7a)>1/(91a)`, so that `a` cannot satisfy the strict component cut.  The
-largest necessary finite cutoff is `78`.  No arbitrary one-auxiliary choice
+largest necessary finite cutoff is `77`, attained at `(6,19)`, `(8,21)`, and
+`(6,47)`.  The frozen companion's weaker phrase `at most 78` is still valid.
+No arbitrary one-auxiliary choice
 closes any of the final 57 types.
 
 For the scale-two exception `(1,9)`, the quotient obstruction is exactly
@@ -394,15 +397,16 @@ Current pair geometry supplies unconditional danger moments, not the
 owner/phase-labelled mixed-incidence theorem, equivalently suitable Fourier
 correlations with both pullback combs.
 
-THM-3910 now supplies that missing sidecar in exact signed-endpoint form.  It
-derives the pullback covariance and t-sheet discrepancy, adds Cauchy and
-integer-occupancy certificates, re-proves the known 57-row AP11 scope, and
-closes the fixed 1,365-body scale-two family
+THM-3910 supplies fixed-radius auxiliary-center, body-component, and integer
+t-sheet responses.  Its first response closes 41 of the 57 scale-one types,
+leaving 16 plus the scale-two type.  THM-3918 gives the exact signed-endpoint
+cross-phase form, re-proves the known 57-row AP11 scope, and closes the fixed
+1,365-body scale-two family
 `2E union {t,9t}` for `E subset {1,...,15}`, `|E|=11`, odd `t>=max E`.
 Its Graver-fibre and half-translate hostiles prove that relation length and
 full autocorrelation still forget the needed relative phase.  Crucially,
-THM-3910 closes no arbitrary-body type and leaves this theorem's 58-row
-ledger unchanged.
+THM-3918 closes no arbitrary-body type; the general conditional ledger after
+THM-3910 has 17 types.
 
 The failed closure route nevertheless gives a rigorous packet corollary.
 For every eleven distinct positive speeds `u=(u_1,...,u_11)`, cited
@@ -526,12 +530,12 @@ Unconditionally, the bounded result leaves exactly:
 - all `5,855` scale-one triples, where no cyclic branch orbit exists; and
 - `1,650` odd-coordinate scale-two triples beginning with `(3,7,2)`.
 
-Inside `t>=U`, the cyclic-slack and one-auxiliary theorem leaves the 58
-certificate survivors above.  The exceptional `(2,1,9)` row survives every
-scalar auxiliary multiplier, while the 57 scale-one rows survive every such
-single-auxiliary component cut.  THM-3910 closes its fixed 1,365-body family
-inside the exceptional type, but neither that family nor the AP11 control
-deletes a type from the arbitrary-body ledger.
+Inside `t>=U`, this theorem leaves the 58 certificate survivors above.  The
+exceptional `(2,1,9)` row survives every scalar auxiliary multiplier, while
+the 57 scale-one rows survive every such single-auxiliary component cut.
+THM-3910 later closes 41 scale-one types.  THM-3918 closes its fixed
+1,365-body family inside the exceptional type, but neither that family nor
+the AP11 control deletes another arbitrary-body type.  Thus 17 remain.
 
 The hostile shows that the latter require information about which points of
 `G(u)` are available, or an owner/arrival sidecar; pair geometry alone cannot
@@ -573,6 +577,6 @@ cyclic-slack implementations and their two deletion ledgers are
 structurally independent in interval representation; all normal, optimized,
 and frozen streams also byte-match.  Their finite counts support only the
 explicit conditional implications above.  The safe-mass audit is a stopping
-boundary plus the proved packet corollary `(11)`--`(12)`.  THM-3910 is the
-separately proved response theorem and does not change the general
-certificate-survivor count.  **QED.**
+  boundary plus the proved packet corollary `(11)`--`(12)`.  THM-3910 and
+  THM-3918 are subsequent response theorems; only THM-3910 changes the general
+  certificate-survivor count, from 58 to 17.  **QED.**

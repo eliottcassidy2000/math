@@ -2,8 +2,8 @@
 id: THM-3908
 title: "Quadratic-depth binary cubics cannot realize a nonmonogenic one-place sextic"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  Let a binary cubic over k[A,C] have
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let a binary
+  cubic over k[A,C] have
   coefficient degree at most two, irreducible generic fibre, irreducible
   degree-six discriminant, and globally nonmonogenic Delone--Faddeev order.
   If the degree-six discriminant form is one linear sixth power, then the
@@ -17,7 +17,7 @@ status: >
   realization, and JC(2) remain open.
 source: jc_degree6_one_place / post-THM-3906 leading-stratum classification, 2026-08-23
 audit: >
-  SELF-AUDITED proof candidate.  The proof removes every coefficient base
+  INDEPENDENT HOSTILE AUDIT PASS.  The proof removes every coefficient base
   divisor before lifting the leading row to the normalization of the binary-
   cubic discriminant.  It distinguishes the intrinsically marked repeated
   root from the simple root, includes finite triple-root specializations,
@@ -25,8 +25,12 @@ audit: >
   the discriminant tangent, twisted-cubic and double-root degree ledgers,
   the common-zero two-edge packet, the constant-row gamma/beta/alpha Newton
   chain, and the moving-root A^2-times-quartic identity in 42 active gates.
-  Normal and optimized replays byte-match the frozen transcript.  An
-  independent hostile audit remains required before promotion.
+  A separately written 43-gate audit reconstructs the complete gcd/lift
+  ledger, fixed-root unit evaluation, both primitive common-zero edges, every
+  constant-row chord, the moving-root coefficient ideal and the R1/S2/S3
+  consequence.  It explicitly audits extension across triple collisions and
+  why degenerate edge polynomials cannot merge branches of distinct slopes.
+  Both normal/optimized pairs byte-match their frozen transcripts.
 related:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3889-maximally-confluent-quadratic-binary-cubic-two-place-obstruction
@@ -38,13 +42,17 @@ output: 05-knowledge/results/jc2_quadratic_depth_one_point_sextic_obstruction_th
 script_sha256: 8fd4fefd95bf729934f8e1fdd6b8203d3f17a3025ac310f165cb8d796aeb9231
 output_sha256: 175a7a753fac08ed4ab13f1e7aec8fdc8a936d3724aeec60acc9badd44ad6f28
 semantic_sha256: dbf51a2ab95c0c45304577625fe3d17609522eb74d0b4df26a9e1cf8dc5a18a7
+independent_audit_script: 04-computation/jc2_quadratic_depth_one_point_sextic_obstruction_independent_audit_thm3908.py
+independent_audit_output: 05-knowledge/results/jc2_quadratic_depth_one_point_sextic_obstruction_independent_audit_thm3908.out
+independent_audit_script_sha256: f750a6c6778d232add0b73e50dbeef93834ed3314528314d70e3a85fc5cd4789
+independent_audit_output_sha256: 71945db0fceb3a381241ef60abaa5f33aa94889617aac2d0bc66d85fde21cd15
+independent_audit_semantic_sha256: 6447893b6255c28a8f4902a83b9aa1b5cc30ae2b4d0cf73c60f716ebe83c2340
 hash_basis: raw LF bytes
 ---
 
 # THM-3908 -- quadratic coefficient depth cannot pay the one-place sextic invoice
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Work over an algebraically closed field `k` of characteristic zero.  Put
 `R=k[A,C]` and let
@@ -178,12 +186,17 @@ P1_ell x P1_m -> D,                (ell,m) |-> ell^2 m,    (13)
 
 and the hyperplane bundle pulls back to `O(2,1)`.  The double root `ell` is
 intrinsic on the smooth locus: ramification type `2+1` distinguishes it from
-the simple root `m`, so there is no root-swapping ambiguity.  The two generic
-root maps are rational maps from the nonsingular complete source curve to
-projective lines; properness extends them across the finitely many points
-where the row becomes triple-root.  Substitution then extends the lift to
-`(13)`.  These nonclosed leading strata therefore add no hidden monodromy
-case.
+the simple root `m`, so there is no root-swapping ambiguity.  More explicitly,
+over `k(P1_[A:C])` the gcd of the cubic and its binary derivative recovers the
+unique repeated linear factor; division then recovers the simple factor.
+This gives a rational lift from the smooth complete source curve to
+`P1_ell x P1_m`.  The target is proper, so the valuative criterion extends
+both root maps across every finite triple-root specialization.  Its composite
+with `(13)` agrees with the basepoint-free coefficient map on a dense open and
+hence everywhere.  Zeros removed into `H` cause no gap: after division the
+four residual coefficients have no common projective zero, so that map is
+defined at precisely those points.  These nonclosed leading strata therefore
+add no hidden monodromy or base-divisor case.
 
 If the two root maps have degrees `r,s`, then
 
@@ -335,6 +348,16 @@ Over the declared algebraically closed characteristic-zero field, each edge
 has a nonzero Newton--Puiseux root; distinct edge slopes give distinct
 normalization branches.
 
+Here edge degeneracy cannot invalidate the conclusion.  A compact edge has
+two nonzero endpoint coefficients, so after its monomial factor is removed
+its edge polynomial is nonconstant with nonzero constant and leading terms;
+over `k` it has a nonzero root.  A multiple edge root may split only at a
+later Newton step, but it still produces at least one branch with that edge's
+valuation ratio.  A single branch has only one ratio `ord(z)/ord(x)`, so the
+branches supplied by two distinct lower-edge slopes cannot be the same
+normalization place.  The strict-below point is therefore enough even when
+an edge polynomial is not squarefree.
+
 The only terminal seam is
 
 ```text
@@ -390,13 +413,22 @@ This closes the last constant-row loophole.
 ## 6. Normal `S3` consequence, design boundary, and replay
 
 Under the theorem's irreducibility hypotheses, the associated
-Delone--Faddeev algebra is finite free.  The irreducible discriminant has
-height-one valuation one, so the DVR index formula makes the order maximal
-in codimension one; finite freeness gives `S2`, hence normality.  The generic
-cubic is irreducible and its discriminant is nonsquare, so its Galois group
-is `S3`.  Thus the obstruction is genuinely upstream of the normality and
-connected `C3`-resolvent invoices: quadratic depth fails at place
-confluence, reducibility, or monogenicity.
+Delone--Faddeev algebra `B` is finite free over `R` and its generic fibre is a
+field, hence `B` is a domain.  Away from `(Delta)` its discriminant is a unit.
+At `(Delta)` its valuation is one, while the DVR index identity
+
+```text
+v(disc B)=v(disc integral_closure)+2 length(integral_closure/B)  (32)
+```
+
+forces the index length to vanish.  Thus `B` is maximal, hence regular, at
+every height-one localization.  Finite freeness over the regular surface
+`R` gives `S2`; Serre's criterion makes `B` normal.  Finally `Delta` has odd
+valuation at its irreducible prime, so it is nonsquare in `k(A,C)`.  The
+generic cubic is irreducible with nonsquare discriminant and therefore has
+Galois group `S3`.  Thus the obstruction is genuinely upstream of the
+normality and connected `C3`-resolvent invoices: quadratic depth fails at
+place confluence, reducibility, or monogenicity.
 
 The first coefficient depth at which a moving triple root is possible is
 three, because the twisted-cubic pullback degree can then equal three.
@@ -410,6 +442,9 @@ Reproduce the exact packet with
 ```bash
 python3 04-computation/jc2_quadratic_depth_one_point_sextic_obstruction_thm3908.py
 python3 -O 04-computation/jc2_quadratic_depth_one_point_sextic_obstruction_thm3908.py
+python3 04-computation/jc2_quadratic_depth_one_point_sextic_obstruction_independent_audit_thm3908.py
+python3 -O 04-computation/jc2_quadratic_depth_one_point_sextic_obstruction_independent_audit_thm3908.py
 ```
 
-Both streams must byte-match the frozen output named in the metadata.
+Each normal/optimized pair must byte-match its frozen output named in the
+metadata.

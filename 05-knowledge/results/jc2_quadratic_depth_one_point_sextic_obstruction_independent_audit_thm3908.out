@@ -1,0 +1,11 @@
+theorem=THM-3908-independent-hostile-audit
+lift_ledger=TRIPLE_FIXED_AND_DOUBLE_000_001_002_210
+fixed_repeated_root=UNIT_OR_REDUCIBLE
+common_zero_edges=PRIMITIVE_ORDERS_2_AND_4
+constant_triple_root=AT_LEAST_TWO_EDGES_OR_UNIVARIATE
+moving_repeated_root=PURE_POWER_FORCES_V_FACTOR
+normal_S3_consequence=PASS_BY_R1_S2_AND_NONSQUARE_DISCRIMINANT
+JC2=OPEN
+semantic_sha256=6447893b6255c28a8f4902a83b9aa1b5cc30ae2b4d0cf73c60f716ebe83c2340
+CHECKS=43
+RESULT=PASS

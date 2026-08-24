@@ -2,8 +2,8 @@
 id: THM-3898
 title: "Equianharmonic equality colors have an exact all-depth response identity"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-  independent hostile audit.  On every positive equal-y-degree seam of the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On every
+  positive equal-y-degree seam of the
   THM-3881 residual, seven normalized macros give one exact all-depth color
   identity.  Their base arrival depths are
   0,n,n+2,2n+2,2n+4,3n+4,4n+4.  The canonical zero-lower-sidecar payment
@@ -15,14 +15,20 @@ source: >
   jc_zero_debt_lift / root-authorized takeover of the abandoned THM-3898
   reservation, post-THM-3905 response compression, 2026-08-23
 audit: >
-  SELF-AUDITED EXACT PROOF CANDIDATE.  The companion independently normalizes
+  INDEPENDENT HOSTILE AUDIT PASS after one scope repair.  The audit rederived
+  all seven normalization exponents, the exact affine arrival schedule,
+  formal-square-root uniqueness through the first marked source, the
+  canonical all-n response J_n=L^2/h, and the gcd(h,L) descent obstruction.
+  It found and repaired one overstatement: for arbitrary U,V their
+  epsilon-jets make the persistent macro continue beyond depth four; only its
+  explicit Rhat shift has width four, and exact termination holds for the
+  canonical constant sidecars.  The companion independently normalizes
   all seven residual macros, proves the universal identity with epsilon^n
   left symbolic, checks the affine arrival schedule, replays the canonical
   source at n=1,...,8, verifies the n=4 response and rational-x hostile, and
   retains the exact C3 color constants in 46 active gates.  Normal and
-  optimized runs byte-match the frozen output.  Independent audit must
-  recheck every normalization exponent, formal-square-root uniqueness at the
-  marked depth, the gcd(h,L) obstruction, and the arbitrary-sidecar boundary.
+  optimized runs byte-match the frozen output and both stored hashes were
+  independently rechecked.
 depends_on:
   - THM-3881-cusp-ideal-residual-transport-rank-two-matrix-factorization
   - THM-3899-nonzero-sidecar-y-degree-tariff-and-equianharmonic-equality-colors
@@ -39,9 +45,9 @@ hash_basis: raw LF bytes
 
 # THM-3898 -- one identity contains every equality-color response
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; awaiting
-independent hostile audit.**  Work over an algebraically closed field `k` of
-characteristic zero.  In `D=k[x,y]` retain
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.
+In `D=k[x,y]` retain
 
 ```text
 a=x+1,                  L=9x+4,
@@ -147,9 +153,11 @@ the coefficients of `U,V` carry the ordinary lower-jet responses.  Thus
 that the macro subsequently produces.
 
 Expanding `(8)` modulo `epsilon^4` gives THM-3905's third-response law.  The
-new compression is that no later response can receive an unlisted macro.
+new compression is that every later response is still supplied by the seven
+listed macros, including their continuing `U,V` jets; there is no eighth
+residual source.
 
-## 3. The persistent response terminates at depth four
+## 3. The explicit persistent shift has width four
 
 The part of `(8)` arriving at depth zero is
 
@@ -157,16 +165,22 @@ The part of `(8)` arriving at depth zero is
 3U^2+3(1+Qepsilon^2)^2E.                                 (10)
 ```
 
-It has responses only at depths zero, two, and four.  In particular its
-depth-four coefficient is exactly
+If `U,V` are held fixed, then `E,Q` are fixed as well, and the **explicit
+shift contributed by `Rhat^2`** has support only at depths zero, two, and
+four.  In particular its explicit depth-four contribution is
 
 ```text
 3Q^2E.                                                     (11)
 ```
 
-This explains the cancellation seen below: after depth four, every genuinely
-new obligation comes from one of the six marked macros in `(9)`, rather than
-from an indefinitely continuing quartic background.
+For arbitrary polynomial sidecars, however, `U,V`, hence `E,Q`, have their
+own epsilon-jets, so `(10)` can contribute at arbitrarily large depths.  What
+terminates at depth four is only the displayed `Rhat` shift at fixed `U,V`.
+After depth four no **new residual macro first arrives** except at one of the
+six marked depths in `(9)`; already-arrived macros can continue through the
+ordinary `U,V` jets.  In the canonical constant-sidecar family of Section 4,
+`U=u,V=1`, so the persistent response itself really does terminate at depth
+four.  That is the exact boundary used below.
 
 ## 4. Canonical colors fail at their first marked source
 

@@ -1,0 +1,12 @@
+theorem=THM-3912-even-one-place-split-boundary-a2-three-torsion-design-sieve
+boundary_gram=[[1-m,m],[m,1-m]]
+boundary_snf=[1,d-1]
+boundary_determinant=1-d
+boundary_order3_q_by_d_mod18={4:1/3,10:0,16:2/3}
+a2_intrinsic_isotropic_support_min=3
+permission_rows_r0_to_r3=d0:[0,0,0,1];d4:[0,0,1,1];d10:[1,1,1,1];d16:[0,1,1,1]
+degree6_two_A2_three_torsion=EXCLUDED_BY_LATTICE
+permission_is_not_globalization=YES
+semantic_sha256=380211101dbf8307336ace0bc8907490bfcfc722a22fa2844ea222a97ff01cda
+CHECKS=99
+RESULT=PASS

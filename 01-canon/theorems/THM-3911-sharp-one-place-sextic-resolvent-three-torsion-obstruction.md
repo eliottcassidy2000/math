@@ -2,7 +2,7 @@
 id: THM-3911
 title: "Sharp one-place sextic quadratic-resolvent three-torsion obstruction"
 status: >
-  PROVED + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.  The sharp
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The sharp
   rational one-place sextic control from THM-3906 has finite singularity
   packet one ordinary quadruple point, two A2 cusps, and two A1 nodes.  On a
   resolution of its quadratic double plane, the split infinity boundary has
@@ -13,6 +13,16 @@ status: >
   a normal irreducible S3 cubic algebra.  Other one-place sextics, higher
   degree branches, nonnormal orders, and JC(2) remain open.
 source: root / post-THM-3906 sharp sextic resolvent audit, 2026-08-23
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS after one proof-completeness repair.  The
+  audit independently checked the hidden-node exhaustion, the double-cover
+  canonical and boundary formulas, the complete exceptional/boundary
+  quotient, the mod-three residue calculation, scalar units, and the
+  Kummer/purity passage.  The original candidate called Pic(S) an integral
+  lattice without excluding Picard torsion; the repaired proof computes
+  q(S)=0 and kappa(S)=-infinity, hence S is rational and Pic(S) is genuinely
+  torsion-free.  Normal and optimized companion runs byte-match the frozen
+  output, raw hashes agree, and agent documentation passes.
 depends_on:
   - THM-3906-degree-six-common-zero-normal-cubic-two-place-boundary
 related:
@@ -29,8 +39,8 @@ hash_basis: raw LF bytes
 
 # THM-3911 -- the sharp sextic has the wrong boundary arithmetic for a cubic lift
 
-**PROVED + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**  Work over
-an algebraically closed field `k` of characteristic zero.  Put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Work over an
+algebraically closed field `k` of characteristic zero.  Put
 
 ```text
 G=t^4+t^3-2t-5,
@@ -156,6 +166,36 @@ resolutions, gives
 K_S=pi^*(K_Bl_p(P2)+3H-2E)=-D.                              (16)
 ```
 
+There is one necessary torsion check before using intersection theory as a
+Picard-lattice argument.  Let `Y=Bl_p(P2)`, let `L_0=3H-2E`, and let `X` be
+the normal double cover of `Y` before resolving its ADE points.  The standard
+double-cover decomposition is
+
+```text
+pi_* O_X = O_Y direct-sum O_Y(-L_0).                       (16a)
+```
+
+Serre duality and `K_Y+L_0=-E` give
+
+```text
+H^1(Y,O_Y(-L_0)) dual=H^1(Y,O_Y(-E))=0.                   (16b)
+```
+
+The last equality follows from
+`0 -> O_Y(-E) -> O_Y -> O_E -> 0`, because the map on constants is an
+isomorphism.  Thus `q(X)=0`; the rational ADE resolutions preserve this, so
+`q(S)=0`.  On the other hand `(16)` and an ample divisor show that no
+positive multiple of `K_S=-D` is effective.  Hence `kappa(S)=-infinity`.
+The ruled-surface classification now makes `S` rational (the base genus is
+`q(S)=0`).  In particular
+
+```text
+Pic(S) is a torsion-free integral intersection lattice.                 (16c)
+```
+
+This is the bridge that prevents invisible Picard three-torsion from
+evading the square calculation in Section 3.
+
 The preimage of the line at infinity splits as two rational curves `B_+`
 and `B_-`, because the restriction of the branch equation is the square
 `-A^6`.  They are disjoint from `D` and the finite exceptional curves.
@@ -172,8 +212,11 @@ are:
 D;  B_+,B_-;  two A2 chains;  two A1 curves.                (18)
 ```
 
-Different blocks in `(18)` are disjoint.  Thus their relation lattice `R`
-has Gram blocks
+Different blocks in `(18)` are disjoint.  The affine double plane `Q` is
+normal: it is a hypersurface, and the singularity packet in Section 1 makes
+its singular locus finite, so `S2+R1` applies.  The standard
+resolution/class-group exact sequence therefore has relation lattice `R`
+with Gram blocks
 
 ```text
 [-2],  [-2  3],  two copies of [-2  1],  two copies of [-2],
@@ -181,8 +224,7 @@ has Gram blocks
                                                                   (19)
 ```
 
-and determinant `360`.  The standard resolution/class-group exact sequence
-is
+and determinant `360`, and gives
 
 ```text
 Cl(Q)=Pic(S)/R.                                               (20)
@@ -195,7 +237,7 @@ Suppose `x in Pic(S)` has `3x in R`.  Pairing `3x` against the generators in
 and both `A1` curves to vanish modulo three: all those Gram blocks are
 nonsingular modulo three.  In either `A2` block the only radical direction is
 the difference `v_i` of its two simple roots.  After subtracting an element
-of `3R`, one therefore has
+of `R` from `x`, one therefore has
 
 ```text
 3x=a v_1+b v_2,                  a,b in {0,+1,-1}.           (21)
@@ -208,8 +250,10 @@ lattice, `(21)` would require
 x^2=-2(a^2+b^2)/3                                                (22)
 ```
 
-to be an integer.  For a nonzero pair `(a,b)`, it is not.  Hence `a=b=0`
-and `x in R`.  The sublattice `R` is 3-saturated in `Pic(S)`, and `(20)`
+to be an integer.  For a nonzero pair `(a,b)`, it is not.  Hence `a=b=0`;
+the adjusted `x` is then killed by three, so torsion-freeness `(16c)` makes
+it zero.  Therefore the original `x` lies in `R`.  The sublattice `R` is
+3-saturated in `Pic(S)`, and `(20)`
 proves
 
 ```text
@@ -273,5 +317,5 @@ eliminant, rational inverse, projective normalization, address collisions,
 critical parameters, complete singular support, local types, smooth unique
 infinity, boundary contacts, the full Gram matrix, and every mod-three
 relation-lattice residue.  The double-cover resolution, divisor quotient
-`(20)`, and Kummer/purity bridge are the human geometric inputs awaiting an
-independent hostile audit.  **QED.**
+`(20)`, rationality/torsion bridge `(16a-c)`, and Kummer/purity passage have
+been independently hostile-audited.  **QED.**

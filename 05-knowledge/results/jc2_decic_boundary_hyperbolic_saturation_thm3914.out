@@ -1,0 +1,13 @@
+theorem=THM-3914-decic-boundary-three-class-degree-one-isotropic-divisor
+boundary_gram=[[-4,5],[5,-4]]
+boundary_snf=[1,9]
+order3_generator=(B_plus-B_minus)/3
+order3_generator_square=-2
+saturated_gram=[[0,1],[1,0]]
+boundary_index_in_U=3
+cubic_roots=3D_plus:T+B_plus;3D_minus:T+B_minus
+degree_one_isotropic=D_plus,D_minus
+effectivity_or_fibration=NOT_IMPLIED
+semantic_sha256=f136fa62255843be034cb7d9bfa0ddc90e057bb422db59ff4ec78741b80d0779
+CHECKS=26
+RESULT=PASS

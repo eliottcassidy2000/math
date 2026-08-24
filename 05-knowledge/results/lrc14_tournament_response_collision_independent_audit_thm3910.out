@@ -1,0 +1,6 @@
+LRC14_TOURNAMENT_RESPONSE_COLLISION_INDEPENDENT_AUDIT_20260823
+method=sorted_rational_wall_cells+direct_midpoint_bits;no_interval_union_or_intersection
+common_one_two=10931/194040,1/7,1/7,11/1176,1/123,5/246
+cubic=1/861,89/61992;difference=17/61992
+target=79579/1988910,961493/23866920;difference=17/61992
+RESULT=PASS

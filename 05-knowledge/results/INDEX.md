@@ -23,8 +23,19 @@
   The exact lower-bound, trace-coverage and finite-field artifact hashes are
   pinned in THM-3903.
 
+- `lrc14_auxiliary_center_erosion_response_thm3910.py` and its eight
+  component, sheet-count, tournament, and independent companions -> matching
+  `.out`s [THM-3910 PROVED RELATIVE TO CITED LRCUpTo13 + VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Radius-`1/182` auxiliary
+  erosion closes 41 of 57 scale-one types, leaving 16 plus scale-two `(1,9)`:
+  17 total.  The compact-to-open law, integer sheet carrier, Fourier/integer
+  tariffs, and AP11 controls are exact; a native cubic-response collision
+  proves pairwise tournament/Gram data insufficient.  `t<U` and the remaining
+  17 arbitrary-body types stay open.  All nine script/output/semantic hash
+  triples are pinned in THM-3910.
+
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3910 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3918 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -34,8 +45,8 @@
   `t>=max E` is lonely: 1,365 bodies, 5,470 finite cells, zero failures, and
   exact tails.  Two t=11 rows have identical complete minimum-l1 Graver fibres
   but opposite mixed phase, while a half-translate preserves all Fourier
-  magnitudes and reverses containment.  This does not reduce THM-3878's
-  arbitrary-body 58-type ledger.  Script/output/semantic SHA-256 triples:
+  magnitudes and reverses containment.  This makes no further decrement of
+  THM-3910's 17 arbitrary-body types.  Script/output/semantic SHA-256 triples:
   mixed `dba6ba50bc97285be837bb29d8aa1b234741c1d64bb88e39dd6c9d0961a92a5f` /
   `65339983eaf0eb643f45a02c3930b6fedd4fed1ad14a9614fd050af7addf07d3` /
   `9eafb7bb0fc15266386b2e5cfa2f155ef402a63bea8a5fa045de3124de390a88`;
@@ -45,6 +56,62 @@
   hostile `efc5cbc471ded68b22a201734f23625121e3233a259b51780d824456a2ffa312` /
   `b9213b5d03050edd25555d5b2e9fc8fded8d4013fb179c354e1749da5a186464` /
   `9124631b862e70b6f2aeb2c150ee363d3bbdfc527bd058653d397d39bc16f966`.
+
+- `jc2_equianharmonic_equality_color_all_depth_response_thm3898.py` ->
+  matching `.out` [THM-3898 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  The seven-macro identity gives the exact all-depth
+  canonical equality response and terminates the constant-sidecar family.
+  Arbitrary `U,V` jets can continue, and arbitrary lower sidecars remain open.
+  Script/output/semantic SHA-256:
+  `1e7f8050e63b1c2116c0e6988d8f13b4c21e3245de8fcc640c961ff5db956e91` /
+  `0e25c7134fa4b8be82c68929bec17cfab9928e77f0b525d2b5ca9c62af0e1ab5` /
+  `0fcd414b8ab768168444169f1d318aab15889d5199178711ebfc3491ab83c122`.
+
+- `jc2_quadratic_depth_one_point_sextic_obstruction_thm3908.py` and
+  independent audit -> matching `.out`s [THM-3908 PROVED + VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED].  Under the stated depth-at-most-two,
+  irreducibility, nonmonogenicity, and pure-sixth-top-form hypotheses, a
+  one-point sextic has at least two normalization places.  Depth three,
+  unit-ideal/lower-degree discriminants, and Keller realization remain open.
+  Primary script/output/semantic SHA-256:
+  `8fd4fefd95bf729934f8e1fdd6b8203d3f17a3025ac310f165cb8d796aeb9231` /
+  `175a7a753fac08ed4ab13f1e7aec8fdc8a936d3724aeec60acc9badd44ad6f28` /
+  `dbf51a2ab95c0c45304577625fe3d17609522eb74d0b4df26a9e1cf8dc5a18a7`;
+  independent hashes are pinned in THM-3908.
+
+- `jc2_even_one_place_split_boundary_a2_sieve_thm3912.py` -> matching `.out`
+  [THM-3912 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  For an
+  actual `K_d orthogonal-sum A2(-)^r orthogonal-sum R0` removed lattice under
+  its stated Picard/determinant hypotheses, the theorem gives the exact
+  three-torsion exclusion and permission rows.  Permission is not
+  globalization; three `A2` blocks admit the sharp index-three hostile.
+  Script/output/semantic SHA-256:
+  `c9183d3f1a4cba0cd086b598f03356dd39f734f224a225ad449c6fc7538b21ab` /
+  `6817fe9f0c2c42f4ad50cc9993744bf07059ddfab5e24a2700f71b1903e96518` /
+  `380211101dbf8307336ace0bc8907490bfcfc722a22fa2844ea222a97ff01cda`.
+
+- `jc2_moving_triple_root_one_place_elliptic_decic_thm3913.py` -> matching
+  `.out` [THM-3913 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  The depth-three moving-triple-root cubic is normal, globally nonmonogenic,
+  and generic `S3`; its one-place irreducible decic has scalar resolvent units
+  and nonzero `Cl[3]`.  Its normalization is elliptic and has no polynomial
+  plane atlas, so rationality/polynomial uniruledness is the surviving invoice.
+  Script/output/semantic SHA-256:
+  `7b1f6ef2a2cd2381a3b44b2dd88c683deab23c16a5c37971ffd487a2334f8806` /
+  `252ca72e9da90d45d0daff856a2a285adce554e18e77ad78b1036619b905ea6d` /
+  `6799e75b35627e5d8d33730b1e7ff4045b085f1775e51f2150f87e287897227e`.
+
+- `jc2_decic_boundary_hyperbolic_saturation_thm3914.py` -> matching `.out`
+  [THM-3914 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Under
+  its actual-lattice and Picard hypotheses, nonzero resolvent `Cl[3]` is
+  equivalent to three-divisibility of the split-boundary difference; the
+  saturation enlarges `K_10` to a hyperbolic plane.  The resulting isotropic
+  classes need not be effective, nef, semiample, or fibrations, and the
+  THM-3913 Kummer class is not yet identified as boundary-only.
+  Script/output/semantic SHA-256:
+  `9280385f4639a92a5ba646195a025e303777cec485a9dd2d6d5d2d69654f845e` /
+  `5e8bdf3fc13bdfc08e8317c481c5e185a978d29b463a06530170b5d00db24775` /
+  `f136fa62255843be034cb7d9bfa0ddc90e057bb422db59ff4ec78741b80d0779`.
 
 - `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
   `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil
@@ -57,8 +124,8 @@
   `af29393a69c844737e4f2ac293f6a117ca80b33b31c808ca02a02c4ef70d7947`.
 
 - `jc2_sharp_one_place_sextic_resolvent_three_torsion_thm3911.py` -> matching
-  `.out` [THM-3911 PROVED + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT].  The sharp one-place sextic has scalar resolvent units and a
+  `.out` [THM-3911 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  The sharp one-place sextic has scalar resolvent units and a
   3-saturated removed-divisor lattice, hence no class-group 3-torsion and no
   normal finite-flat cubic with generic irreducible `S3` fibre and this branch
   as generic-exponent-one discriminant divisor.  Nonnormal orders, different

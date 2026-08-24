@@ -132,11 +132,14 @@ symmetry cannot choose a relative phase.  The formerly missing invoice was
 mu(G_u \ (D_p union D_q)) = M_0-M_1+M_2,
 ```
 
-and
-[THM-3910](../01-canon/theorems/THM-3910-lrc14-auxiliary-center-erosion-and-t-sheet-variance-response.md)
-now computes that combination directly.  If
-`E(G)` and `E(A)` are the signed endpoint words of the body safe set and pair
-danger set, then
+and THM-3910 now attacks it three ways.  Fixed-radius auxiliary-center erosion
+closes 41 of the 57 scale-one types; compact-to-open component containment and
+the integer sheet carrier supply further exact filters.  Thus the general
+conditional ledger is now 16 scale-one types plus `(2,1,9)`: 17, not 58.
+
+[THM-3918](../01-canon/theorems/THM-3918-lrc14-signed-endpoint-cross-phase-and-fixed-scale-two-family.md)
+resolves the phase of that same sheet carrier.  If `E(G)` and `E(A)` are the
+signed endpoint words of the body safe set and pair danger set, then
 
 ```text
 C_t=(1/(2t)) sum_(e,f) sigma_e tau_f B_2({f-te}),
@@ -148,7 +151,18 @@ occupancy tax, and a uniform arc-count tail.  It re-proves all AP11 scale-one
 rows already covered by THM-734 and newly closes every fixed body
 `2E union {t,9t}` with `E` an eleven-subset of `{1,...,15}` and odd
 `t>=max E`: 1,365 bodies and 5,470 finite residual cells.  This is a real
-family theorem, but it does not decrement the 58 arbitrary-body type ledger.
+family theorem, but it deletes none of THM-3910's 17 arbitrary-body types.
+The two response packages meet exactly at
+
+```text
+Var(N_t)=t^2 disc_t(G),
+(1/t) integral_(A^c) N_t=mu(G)(1-mu(A))-C_t.
+```
+
+Variance retains magnitude; signed endpoint cross-phase locates the integer
+occupancy against the labelled obstruction.  THM-3910's native cubic-response
+collision and THM-3918's Graver/half-translate hostiles are complementary
+proofs that pairwise or power data cannot recover that location.
 The symmetric return packet of mass `2*84^(-11)` remains useful thickness;
 without the endpoint word its translate is still unlocated relative to the
 labelled danger combs.
@@ -303,11 +317,18 @@ but those jets can lift.  THM-3905 extends the color product through the third
 response: the marked source arrives at depth `n`, an extra `KTf^2-KT^3` pair
 appears only at `n=1`, and the named address-compatible two-jet control dies
 there.  Zero-sidecar `n>=4` still lifts the third jet, so the color gcd remains
-a real sidecar.  THM-3898 now packages the canonical zero-lower-sidecar
-responses into an all-depth identity, but it remains a **PROVISIONAL** exact
-candidate pending independent hostile audit.  Proven canon still stops at
-THM-3905; the next action is to audit THM-3898 before attacking arbitrary
-lower sidecars.
+a real sidecar.  THM-3898 now **proves** the seven-macro all-depth identity and
+termination of the canonical constant-sidecar family.  Its hostile audit also
+repairs the tempting overreach: arbitrary `U,V` jets may continue forever;
+only the explicit `Rhat^2` shift has width four.  The next target is therefore
+arbitrary lower sidecars, not another audit of the canonical identity.
+
+This creates a precise AK connection.  THM-3898's affine arrival schedule
+records when a new macro first appears but discards its continuing jets;
+THM-3903's saturated ladder likewise distinguishes a newly forced row from
+future-round cycle debt.  In both cases the arrival time is not a state.  The
+needed sidecar is the full evolving response/forcing state, and the cheapest
+hostile is a lane with no new arrival but nonzero continuation.
 
 The carrier lane has also changed scale.  Independently audited THM-3891
 closes every quadratic `C^8` binary-cubic row and proves a sharp pencil lemma
@@ -343,11 +364,11 @@ maximally confluent quadratic leading row.  THM-3906 constructs a normal,
 globally nonmonogenic `S3` cubic at discriminant degree six, but its one
 projective infinity point hides two normalization places.  THM-3907 removes
 the common coefficient-zero excuse—its coefficient ideal is one—yet pays six
-places.  THM-3908 is only a provisional exact candidate at quadratic
-coefficient depth.  Finally THM-3911 proves, pending independent hostile audit,
-that THM-3906's sharp one-place plane control has scalar units and no
-`Cl[3]`; perfect plane place geometry still does not buy a normal finite-flat
-lift with generic irreducible `S3` fibre and generic discriminant exponent one.
+places.  Audited THM-3908 excludes the stated coefficient-depth-at-most-two
+one-point sextic lane.  Audited THM-3911 proves that THM-3906's sharp one-place
+plane control has scalar units and no `Cl[3]`; perfect plane place geometry
+still does not buy a normal finite-flat lift with generic irreducible `S3`
+fibre and generic discriminant exponent one.
 
 This is a strict source/target map:
 
@@ -356,9 +377,26 @@ binary cubic or plane branch -> discriminant/place geometry
                              -/-> units + Cl[3] + normal cubic algebra.
 ```
 
-The surviving target is a different one-place carrier with the target-side
-unit and three-torsion invoice paid, or a genuinely different/nonnormal
-category; it is not the sharp THM-3906 curve in THM-3911's stated scope.
+THM-3913 now pays that invoice: its depth-three moving-triple-root cubic is
+normal, globally nonmonogenic and generic `S3`; the one-place decic has scalar
+resolvent units and nonzero `Cl[3]`.  What fails has moved again.  Its
+normalization is elliptic, not rational or polynomially uniruled, and it has
+no plane atlas.  This sharpens the depth threshold: the twisted-cubic pullback
+forces moving-triple-root degree divisible by three, so depth at most two
+freezes the root, while depth three first permits motion and pays genus one.
+
+THM-3912 and THM-3914 explain why the three-class is still not a portable
+boundary barcode.  They give exact conditional `A2`-sieve and hyperbolic
+saturation passports, but require the actual removed lattice, its orthogonal
+complement and ambient `Pic[3]`.  Even after saturation, isotropic classes need
+not be effective or fibrations, and THM-3913's Kummer class is not yet known to
+be boundary-only.  The cheapest decisive computation is the complete finite
+exceptional lattice and ambient Picard three-torsion for THM-3913.
+
+The surviving target is therefore a rational depth-three deformation that
+retains one-place confluence, normal nonmonogenic `S3`, scalar units and the
+three-class—or a genuinely different/nonnormal category.  It is neither the
+sharp THM-3906 curve nor the elliptic THM-3913 carrier as currently realized.
 
 Finally,
 [THM-3879](../01-canon/theorems/THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff.md)
@@ -370,9 +408,9 @@ one, and the smooth-conic boundary.  Without immersion the exact reduced
 identity subtracts the common tangent-base divisor; the family
 `[ST^(d-1):T^d:S^d]` shows that correction is sharp in every degree.
 
-The open target is therefore an intersection, not a single feature: a new
-one-place branch, a genuine `C3` layer, a globally nonmonogenic cubic order,
-the right unit/`Cl[3]` ledger, and an actual etale plane atlas.
+The open target is therefore an intersection, not a single feature: rational
+one-place normalization and an actual etale plane atlas while retaining
+THM-3913's genuine `C3` layer, global nonmonogenicity, units and `Cl[3]`.
 
 ## 5. Filtered kernels and principal parts are the same warning, not the same theorem
 
@@ -502,10 +540,11 @@ They do not share states, probability, chronology, or a reduction.
 | Source | Target | Map | Preserved predicate | Destroyed information | Needed sidecar | Cheapest decisive test |
 |---|---|---|---|---|---|---|
 | Factorial coefficient row | divisor/rho barcode | evaluate selected primes/residues | named necessary vanishing tests | response at the next prime | surviving polynomial row | first ordered adaptive killer at `d=9996` |
-| LRC support-two packet | lower-rank row | choose multiplier and absorb/add one runner | exact divisibility or LRC(13) safe interval | other runners, relative scale, arrival | owner plus component interval | 58 `t>=U` certificate survivors |
+| LRC support-two packet | lower-rank row | choose multiplier and absorb/add one runner | exact divisibility or LRC(13) safe interval | other runners, relative scale, arrival | owner plus component interval | 17 `t>=U` types after THM-3910 |
 | AK forcing graph | score certificate | add a sound forcing row | declared rule consequences | future-round cycle debt | cycle-rank profile | saturated `[2,3]` trace varieties |
-| JC residual | associated graded seam | take top homogeneous forms | leading cancellation | common color gcd and lower debt | primitive colors plus lower sidecar | hostile-audit provisional THM-3898 |
-| Binary cubic / plane branch | discriminant carrier | forget the cubic algebra | branch and place geometry | units, `Cl[3]`, normal order | target-side resolvent invoice | THM-3911 sharp-control hostile |
+| JC residual | associated graded seam | take top homogeneous forms | leading cancellation | common color gcd and lower debt | primitive colors plus full evolving response | continuing `U,V` jets in THM-3898 |
+| Binary cubic / plane branch | discriminant carrier | forget the cubic algebra | branch/place geometry and three-class | normalization genus and plane-atlas entry | rationality plus atlas sidecar | THM-3913 elliptic/no-atlas hostile |
+| Removed divisor lattice | resolvent three-class | saturate boundary sublattice | conditional three-divisibility | ambient `Pic[3]` and effectivity | full exceptional lattice | THM-3912/3914 permission hostiles |
 | Rational dual | reduced dual curve | cancel common tangent factor | reduced tangent map | nonimmersion multiplicity | `E_nu` tangent-base divisor | `[ST^(d-1):T^d:S^d]` |
 | Rule 30 words | selected ray image | positive affine-word action | complete static orbit | physical chronology and owner | zero-fibre routed query | fibres requiring opposite rays |
 | Two-cube prime subsets | critical mass | singleton row plus Euler normalization | weight and disjointness inside the family | collisions outside the family | representation fibre | split-prime and exponent-three hostiles |
@@ -516,17 +555,18 @@ objects cannot be transported merely because the same word is used.
 
 ## 8. Ranked next work
 
-1. **LRC anchor:** use the exact endpoint cross-phase uniformly on arbitrary
-   eleven-bodies, or add owner/arrival data, while keeping `t<U` separate.
-   Only the 1,365 bodies `E subset {1,...,15}`, `|E|=11`, with odd
-   `t>=max E` are closed; the general `(2,1,9)` type is not.
-2. **Jacobian anchor:** leave `f=0` and x-only closed.  Hostile-audit the
-   provisional THM-3898 all-depth canonical identity; only then attack
-   arbitrary lower sidecars beyond THM-3905.
-3. **Nonmonogenic niche:** audit provisional THM-3908, then seek a different
-   one-place carrier whose resolvent pays the unit and `Cl[3]` invoices.
-   Retain THM-3911's sharp curve as the hostile: branch geometry is not a
-   target cubic algebra or Keller transformation.
+1. **LRC anchor:** combine auxiliary-center and endpoint cross-phase uniformly
+   on THM-3910's 17 arbitrary-body types, or add owner/arrival data, while
+   keeping `t<U` separate.  THM-3918 closes only the 1,365 fixed bodies
+   `E subset {1,...,15}`, `|E|=11`, with odd `t>=max E`; the general `(2,1,9)`
+   type remains open.
+2. **Jacobian anchor:** leave `f=0`, x-only and THM-3898's canonical
+   constant-sidecar family closed.  Attack arbitrary lower sidecars using the
+   continuing-`U,V` hostile; a first-arrival schedule is insufficient.
+3. **Nonmonogenic niche:** deform THM-3913 toward rational normalization while
+   preserving one-place confluence, normal nonmonogenic `S3`, scalar units and
+   `Cl[3]`.  First compute its complete exceptional lattice and ambient
+   Picard three-torsion; boundary permission is not effectivity.
 4. **AK niche:** leave the saturated empty-wildcard `[2,3]` slice closed.
    Classify inactive-slot and initial-wildcard strata, then search the next
    rectangle for a genuine score below `7/4` under the same sound/loose
