@@ -254,8 +254,10 @@ Format per entry:
   `THM-3948`; a later incoming high-weight sextic synthesis occupied that ID,
   so the LRC theorem and all live references moved atomically once more to
   `THM-3950`; an incoming equianharmonic split theorem then occupied that ID,
-  so the LRC family moved atomically again to `THM-3952`.  The hash-bearing
-  LRC companions and mathematical scope did not change.
+  so the LRC family moved atomically again to `THM-3952`; a final incoming
+  wave promoted a minimal Mobius-carrier theorem at that ID and occupied
+  `THM-3953--3955`, so the LRC family moved atomically to `THM-3956`. The
+  hash-bearing LRC companions and mathematical scope did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
   only before empty reservations; rename the whole artifact family together.
