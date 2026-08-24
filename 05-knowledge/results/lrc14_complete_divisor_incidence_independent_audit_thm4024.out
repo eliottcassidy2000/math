@@ -1,0 +1,10 @@
+THM4024_COMPLETE_DIVISOR_INCIDENCE_INDEPENDENT_AUDIT
+abstract_unresolved_moduli_through_500=3,4
+d3_profile=(3,3,3);tariff=1
+d4_profile=(2,4,4);tariff=1;primitive_hostile=(2,9,11)
+d4_branch_sets=((0,2),(3),(1));safe_phase=21/22;clearance=1/11
+d6_naive_profile=(3,3,3);branch_sets=((0,3),(1,4),(2,5));body_gcd=2
+proved_profile=c2<=9;c3<=8;c4<=8;c_d<=7_for_every_d>=5_dividing_t
+prime_power_checks=34
+checks=48
+RESULT=PASS
