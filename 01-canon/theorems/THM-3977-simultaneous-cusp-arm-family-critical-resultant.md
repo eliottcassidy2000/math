@@ -2,7 +2,7 @@
 id: THM-3977
 title: "Simultaneous cusp-arm family critical resultant"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. On the
   height-two exact-volume completion, every member of the one-parameter
   simultaneous cusp/arm jet family has an affine critical point in its
   first coordinate. The exact derivative resultant is x^24 times a degree-12
@@ -16,6 +16,16 @@ status: >
   actual two-term formally lifted first coordinate: their reduced residual
   resultants have degree 43 with nonzero leading and constant terms.
 source: jc-degree6-one-place / post-THM-3973 simultaneous boundary-jet hostile, 2026-08-24
+audit: >
+  PASS (root / jc-cohn3709, 2026-08-24). The audit independently rederived
+  both completion-chart jet restrictions and the normalized D-chart volume
+  ratio, checked the full derivative resultant and the finite-root argument
+  using the stable t-leading rows, and reconstructed the intrinsic
+  degree-twelve u-cover including all excluded colors and the Bezout x
+  address. It separately checked the a=0 endpoint and both degree-43 lifted
+  resultants after quotient-ring reduction modulo 6L^2-1. Normal, optimized,
+  and frozen outputs byte-match at CHECKS=44; all hashes agree. No formal
+  completion obstruction or unrestricted first-coordinate claim was used.
 depends_on:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
 related:
@@ -31,7 +41,7 @@ hash_basis: raw LF bytes
 
 # THM-3977 -- simultaneous boundary jets force an interior critical point
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.** Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over
 an algebraically closed field `k` of characteristic zero. Fix
 
 ```text
