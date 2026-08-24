@@ -24,8 +24,9 @@ audit: >
   a genuine order-three subgroup and an uncomputed full resolvent class
   group. At the singular local ring, the reflexive prime (x,q+w) needs two
   generators, so div(q+w)=3D+ has exact rather than merely formal order
-  three. The assertion-free 55-gate companion byte-matches in normal and
-  optimized mode; raw and semantic hashes and documentation checks pass.
+  three. In normal and optimized mode the assertion-free 55-gate companion
+  LF-normalizes exactly to the frozen raw-LF output; raw and semantic hashes
+  and documentation checks pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
 related:
@@ -480,8 +481,9 @@ python3 04-computation/jc2_infinity_component_linear_conic_torus_sextic_thm3932.
 python3 -O 04-computation/jc2_infinity_component_linear_conic_torus_sextic_thm3932.py
 ```
 
-Both streams must byte-match the frozen output named in the metadata. The
-companion verifies the trace/norm grammar, explicit family, irreducibility,
+After platform newlines are normalized to LF, both streams must byte-match
+the frozen raw-LF output named in the metadata. The companion verifies the
+trace/norm grammar, explicit family, irreducibility,
 projective identity and basepoint freedom, rational inverse, full
 singularity/delta packet, coefficient Jacobian, cubic and resolvent
 normality, Smith relation, non-Cartier local test, and weighted elliptic

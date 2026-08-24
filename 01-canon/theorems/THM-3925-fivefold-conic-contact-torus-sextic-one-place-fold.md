@@ -39,6 +39,7 @@ related:
   - THM-3882-rational-dual-one-place-wronskian-projection-criterion
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
   - THM-3928-split-affine-conic-one-place-fold-degree-barrier
+  - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
 script: 04-computation/jc2_fivefold_conic_contact_torus_sextic_thm3925.py
 output: 05-knowledge/results/jc2_fivefold_conic_contact_torus_sextic_thm3925.out
 script_sha256: 422fd040f49fd3002c714bca4c29f24898c42ed661f243a5c19b3e769af399fb
@@ -316,9 +317,11 @@ classify other conic contact partitions, non-torus discriminants,
 nonmonogenic cubic orders with the same abstract branch, or arbitrary
 rational torus sextics. Subsequent THM-3928 closes every affine singular
 conic in the full classical sextic grammar: all three distinct-line fold rows
-fail, and a double line factors the discriminant. For arbitrary `q`, chosen
-high-fold or double-line sextic components and infinity-component conics
-remain open. In particular this theorem does not settle `JC(2)`.
+fail, and a double line factors the discriminant. THM-3932 classifies the
+infinity-component conic: its fold-three family exists, while the audited
+explicit member's natural cubic is monogenic. For arbitrary `q`, chosen
+high-fold or double-line components remain open. In particular this theorem
+does not settle `JC(2)`.
 
 Run
 

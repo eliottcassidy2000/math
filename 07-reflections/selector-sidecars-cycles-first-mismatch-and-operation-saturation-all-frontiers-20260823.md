@@ -588,8 +588,29 @@ marked seam pays two Jacobian-zero punctures, while a chosen one-place split
 component pays a high coefficient fold. MISTAKE-469 repairs the double-line
 boundary: only the classical `deg q<=3` **full** sextic factors; arbitrary-`q`
 sextic components survive. Thus every affine singular conic is closed for the
-full sextic, while arbitrary-`q` high folds, double-line components, and the
-infinity-component conic remain live.
+full sextic, while arbitrary-`q` high folds and double-line components remain
+live.
+
+THM-3932 closes the full-sextic infinity-component classification without
+closing its nonmonogenic design problem. With `Q_2=3XZ`, the Cardano fold has
+degree `1`, `2`, or `3`: degree one is a triangular coordinate collapse,
+degree two is empty, and degree three has a complete nonempty trace/norm
+grammar. The explicit sextic
+
+```text
+4X^3Z^3-(Y^3-X^2Z)^2=0
+```
+
+has one infinity address, a sharp three-address affine origin fibre,
+nonconstant coefficient Jacobian, and a genuine order-three resolvent class.
+Yet its natural normal cubic is globally monogenic. THM-3879 made connected
+`C3` geometry cost the one-place chart; moving one conic component to infinity
+recovers one place and an exact `C3` direction simultaneously, so the debt
+shifts to normal/maximal-order monogenicity. This is the sharp positive
+boundary promised by THM-3928: splitting
+the projective conic can create the right branch and `C3` geometry while still
+paying THM-3801's generator debt. The full resolvent class group and a
+compatible nonmonogenic twist remain open.
 
 THM-3929 then classifies the root-regular linear-color lane and its first
 centered Mobius seam: degree three over the `A`-line forces the leading
@@ -602,10 +623,10 @@ address cap. THM-3931 closes the packet on its actual completion:
 `E` non-unibranch, while `div(F)=E` makes deleting it create a nonconstant
 unit. Higher pole maps and other coefficient grammars remain the honest lane.
 
-Concurrent JC promotions and reservations now occupy THM-3920--3932, so the
+Concurrent JC promotions and reservations now occupy THM-3920--3934, so the
 proved LRC endpoint theorem moved to collision-free THM-3935; the namespace
-move changes no mathematical scope. THM-3932 remains a reserved, unproved
-linear-conic classification target.
+move changes no mathematical scope. THM-3933 and THM-3934 are reserved,
+unproved successor targets and supply no evidence.
 
 ## 5. Filtered kernels and principal parts are the same warning, not the same theorem
 
@@ -769,6 +790,7 @@ They do not share states, probability, chronology, or a reduction.
 | Power order index | ramification class | pass to the integral closure and compare pole valuations | the integer five in the THM-3921 packet | any general index-to-class law | simple-plus-double infinity prime packet | THM-3924 `A^5 = (6-1) = [E]/g` |
 | Marked conic-contact coefficient map | normalized torus-sextic branch | pull back the cusp parameter through `(p,q)` | Jacobian zeros equal normalization poles | affine versus projective carrier of those addresses | deleted-ramification/Jelonek sidecar | THM-3925 `ell!=0` three-puncture hostile |
 | Split affine coefficient conic | Cardano cusp normalization | pull back `h=3q/(2p)` and compare line degrees | `e_1+e_2=2deg(h)`, one-place polynomiality | critical divisor, actual completion class group | fold ramification plus global divisor relation | THM-3928 sextic `d=4,5,6`, only one intrinsic `C3` |
+| Infinity-component conic | one-place torus sextic | pull back the linear affine coefficient through the Cardano cusp | fold trichotomy and exact `C3` class | nonmonogenic completion and full resolvent class group | compatible twist/involution descent | THM-3932 fold-three family is monogenic |
 | Primitive actual boundary basis | candidate affine-plane deletion | localize at the three basis primes | scalar units and `Cl=0` | boundary genus and Euler type | rationality plus `chi_c` invoice | THM-3926 genus `2`, `chi_c=13` hostile |
 | Degree-two linear-color packet | affine-plane open | delete the intrinsic ramification primes | aligned one-place branch and affine address cap | source unibranchness and invertible defining functions | actual class/different packet | THM-3931 `[E]=0`, `[P_0]=2q`, nonunibranch collision |
 | Removed divisor lattice | resolvent three-class | saturate boundary sublattice | conditional three-divisibility | actual class and ADE mixing | full exceptional lattice | THM-3915 mixed boundary--ADE hostile |
@@ -792,14 +814,15 @@ objects cannot be transported merely because the same word is used.
    `5P+Q` torus slice, all full-sextic affine singular conics, and the actual
    THM-3907/3930 completions closed. Attack the `3+1`, `2+2`, `2+1+1`,
    quartic-vanishing, unmarked smooth-conic, higher-pole linear-color,
-   infinity-component, or arbitrary-`q` component grammars; a first-arrival
-   schedule is insufficient.
+   nonmonogenic infinity-fold-three twist, or arbitrary-`q` component
+   grammars; a first-arrival schedule is insufficient.
 3. **Nonmonogenic niche:** build a genuinely nonradial unit-ideal order with
    rational ramification normalization.  Its actual completion must retain a
    primitive boundary basis, meet the affine address cap, and pass the Euler
    and etale/open invoices. Resolvent torsion is not a substitute; THM-3927
-   and THM-3930 show that rationality, the cap, and one-place alignment still
-   leave target-Jelonek, source-unibranch, class, unit, and Euler debt.
+   THM-3930 and THM-3932 show that rationality, the cap, one-place alignment,
+   and even a genuine `C3` class can still leave Jelonek, unibranch, class,
+   unit, Euler, or monogenic debt.
 4. **AK niche:** leave the saturated empty-wildcard `[2,3]` slice closed.
    Classify inactive-slot and initial-wildcard strata, then search the next
    rectangle for a genuine score below `7/4` under the same sound/loose

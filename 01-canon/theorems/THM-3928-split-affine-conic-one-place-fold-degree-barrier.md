@@ -19,8 +19,10 @@ status: >
   copies of Z/3. In the same classical full-sextic grammar a double-line
   conic factors the discriminant into degree-at-most-three pieces. Thus all
   affine singular conics are closed for the full irreducible sextic, while
-  arbitrary-`q` high-fold and double-line components and a conic containing
-  the infinity line remain open.
+  arbitrary-`q` high-fold and double-line components remain open. Subsequent
+  THM-3932 classifies the infinity-line component: fold one is a coordinate
+  collapse, fold two is empty, and fold three exists; the audited explicit
+  member's natural cubic is monogenic.
 source: jc_degree6_one_place / post-THM-3925 singular splitting-conic lane, 2026-08-23
 audit: >
   TWO INDEPENDENT HOSTILE AUDITS PASS (jc-cohn3709 and
@@ -41,6 +43,7 @@ related:
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
   - THM-3925-fivefold-conic-contact-torus-sextic-one-place-fold
   - THM-3926-unit-ideal-cubic-primitive-class-genus-two-boundary
+  - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
 script: 04-computation/jc2_split_affine_conic_one_place_fold_degree_thm3928.py
 output: 05-knowledge/results/jc2_split_affine_conic_one_place_fold_degree_thm3928.out
 script_sha256: b26b18721aa67ecd5212c1edc0bf39f28505db6f631b3dc50de998e12c07a2b6
@@ -491,8 +494,11 @@ infinity, the affine polynomial `p` is linear rather than a product of two
 affine line equations. Its missing projective divisor must be retained in
 the boundary ledger, and `(3)` is not asserted. Thus the arbitrary-`q`
 distinct-line high folds and double-line components are the honest remaining
-affine-component design space, while for the full classical sextic only this
-infinity-component case remains.
+affine-component design space. Subsequent THM-3932 completely classifies the
+full-sextic infinity-component case: fold one is a triangular coordinate
+collapse, fold two is empty, and a fold-three family exists; its audited
+explicit member has a genuine resolvent three-class but a monogenic natural
+cubic.
 
 Reproduce the exact arithmetic packet with
 

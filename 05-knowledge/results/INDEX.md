@@ -349,6 +349,20 @@
   `1f70e1672ac2a11ecfd6718beb26b4586f911491b7945a9d7364c4d5c0672e81` /
   `6ceb9cb4e9116d97fc68971a886206a7c3232280648cedf4a63160180fe8b298`.
 
+- `jc2_infinity_component_linear_conic_torus_sextic_thm3932.py` -> matching
+  `.out` [THM-3932 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  For a full irreducible one-place sextic whose reduced quadratic conic
+  contains infinity, Cardano fold degree is `1,2,3`: fold one is a triangular
+  coordinate collapse, fold two is empty, and fold three has a complete
+  nonempty trace/norm grammar. The explicit
+  `4X^3Z^3-(Y^3-X^2Z)^2` has one infinity address, nonconstant coefficient
+  Jacobian and an exact order-three resolvent class. Its natural normal cubic
+  is nevertheless globally monogenic; the full resolvent class group and a
+  nonmonogenic twist remain open. Checks: `55`. Script/output/semantic SHA-256:
+  `39f362c41cdbf6fd481af85dc91b96ed5f1151810949895ef248b32913a39374` /
+  `5fd6493bfc51a36626f2f45be5ba0bfcd209fd415941988ee1b8812d23e27322` /
+  `f21747d66cce559781355bb75789500399f7d8eb8281254e33668ffb0697a849`.
+
 - `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
   `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil
   height lattice is `E6*`; its 126 sections disjoint from `O` split

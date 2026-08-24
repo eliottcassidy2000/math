@@ -35,6 +35,7 @@ related:
   - THM-3925-fivefold-conic-contact-torus-sextic-one-place-fold
   - THM-3930-two-pole-linear-color-aligned-one-place-branch-packet
   - THM-3931-degree-two-pole-cubic-principal-ramification-no-atlas
+  - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
 script: 04-computation/jc2_root_regular_one_place_linear_color_cubic_thm3929.py
 output: 05-knowledge/results/jc2_root_regular_one_place_linear_color_cubic_thm3929.out
 script_sha256: 863c809aad0dc905a5143ab34444fab08dc5445a48a05f9431545f2f936a86d1
