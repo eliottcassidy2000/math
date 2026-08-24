@@ -2,7 +2,7 @@
 id: THM-3954
 title: "Extra common debt creates A-singularities and non-unibranch residual boundary"
 status: >
-  RESERVED / UNPROVED PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the universal nonconstant-ratio A1 internal-split packet, arbitrary
   common multiplier c is now divided into two exact cases. If c is coprime
   to the three finite color forms R,(S+omega^2 R),(S-omega R), THM-3951's
@@ -14,8 +14,16 @@ status: >
   affine-plane boundary. This provisionally closes every c in this A1
   packet, not other internal-split grammars or JC(2).
 source: jc-extra-debt-local / post-THM-3951 universal shared-color audit, 2026-08-24
-depends_on: []
-related:
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc-zero-debt-lift and jc-cohn3709,
+  2026-08-24). Both audits reconstructed the primitive linear-in-P domain
+  proof, reduced-discriminant index argument for global normality, residual
+  prime and birational-image calculation, exact A_(3m-1) completed local
+  ring at every shared color, two smooth normalization addresses of that one
+  residual prime, and the exhaustive THM-3951/THM-3920 gcd dichotomy. Normal
+  and optimized runs byte-match the frozen 92-gate output, all hashes agree,
+  documentation checks pass, and no repair was required.
+depends_on:
   - THM-3950-a1-internal-split-denominator-debt-and-equianharmonic-shadow
   - THM-3951-affine-plane-boundary-incidence-forest-and-equianharmonic-survivor-nonentry
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
@@ -29,8 +37,8 @@ hash_basis: raw LF bytes
 
 # THM-3954 -- extra common debt does not separate the residual boundary
 
-**RESERVED / UNPROVED PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT
-AUDIT.** Work over an algebraically closed field `k` of characteristic zero.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of characteristic zero.
 Fix
 
 ```text
@@ -397,8 +405,7 @@ Both runs must byte-match
 natural-cubic coordinate change, three color specializations, residual-prime
 norm, explicit `c=UV` hostile, and both collapsed normalization addresses.
 
-This candidate closes only the one-factor, nonconstant-ratio `A1` packet in
+This theorem closes only the one-factor, nonconstant-ratio `A1` packet in
 the natural `A2_(P,t)` cubic realization. Simultaneous splitting across
 several cube-difference factors, genuinely bivariate factors, non-`A1`
-primary branches, and the planar Jacobian conjecture remain **OPEN**. The
-statement remains `RESERVED / UNPROVED` until independent hostile audit.
+primary branches, and the planar Jacobian conjecture remain **OPEN**.
