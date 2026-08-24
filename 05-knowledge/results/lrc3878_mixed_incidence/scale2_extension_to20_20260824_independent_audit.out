@@ -1,0 +1,11 @@
+LRC14_SCALE2_EXTENSION_INDEPENDENT_EXACT_AUDIT_20260824
+auxiliary=no_one_or_two_comb_cover;finite_candidates=20;triple=(8,9,10)
+triple_scope=unique_nondecreasing_cover_with_max_at_most_30
+height19=bodies_75582;finite_cells_287293;failures_0
+height20=bodies_167960;finite_cells_574963;failures_0
+finite_method=positive_exact_measure_of_G_minus_open_pullback_C_plus_explicit_physical_lift
+minimum_positive_escape=('1151/42042', (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13), 13, '139/1386', (0, 1))
+strata=((11, 1, 14, 38, (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)), (12, 11, 84, 41, (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12)), (13, 66, 212, 41, (1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13)), (14, 286, 1299, 64, (1, 2, 3, 4, 8, 9, 10, 11, 12, 13, 14)), (15, 1001, 3861, 61, (1, 2, 3, 8, 9, 10, 11, 12, 13, 14, 15)), (16, 3003, 11448, 70, (1, 2, 3, 4, 9, 10, 11, 12, 13, 14, 16)), (17, 8008, 33962, 64, (1, 3, 4, 9, 10, 11, 12, 13, 14, 16, 17)), (18, 19448, 64099, 64, (1, 3, 4, 7, 10, 11, 13, 14, 16, 17, 18)), (19, 43758, 172314, 81, (1, 2, 3, 7, 8, 10, 11, 13, 17, 18, 19)), (20, 92378, 287670, 69, (1, 2, 5, 6, 7, 8, 11, 13, 18, 19, 20)))
+semantic_sha256=d9c01990a9730a6b164c225a6788bc45f2f8acfd7286f206c4804ae580d61297
+checks=2635829
+RESULT=PASS;LRC14=OPEN

@@ -245,6 +245,53 @@ carrier.
 Each stopping reason records the missing coordinate instead of merely saying
 that a statistic failed.
 
+## Scale-two return: covering number is a physical runner budget
+
+The `(2,1,9)` obstruction has now been pulled in two opposite directions.
+First, THM-4000's fixed family extends exactly from eleven-subsets of `[1,15]`
+to every eleven-subset of `[1,20]`: 167,960 bodies and 574,963 exact finite
+`(E,t)` containment instances, followed by the strict variance tail.  An
+independent engine measures `G_E\t^{-1}C` directly, finds positive rational
+escape in every finite instance,
+and rechecks a physical lift.  This is substantial fixed-body scope, but it
+does not decrement the 17 arbitrary-body types.
+
+Second, the least-used sidecar—the covering number of the open obstruction
+by auxiliary danger combs—has become exact.  No one or two combs cover
+
+```text
+C=(2/21,8/63) union (55/63,19/21),
+```
+
+while `D_8 union D_9 union D_10` does.  The proof is genuinely all-
+multiplier: tooth mass forces the smaller multiplier to be at most 25, the
+largest surviving gap leaves 20 necessary pairs, and exact open-endpoint
+union rejects each.  `(8,9,10)` uniquely attains minimum possible maximum 10;
+triples of larger maximum are not classified.
+
+The connection contract is therefore unusually clean:
+
+```text
+source:       the two open quotient arcs C;
+target:       a common physical time for an eleven-speed body plus (t,9t);
+map:          auxiliary clock a -> danger comb D_a, then the two scale lifts;
+preserved:    complete quotient failure and strict endpoint incidence;
+destroyed:    physical runner count, body identity, owner and first arrival;
+needed sidecar: runner-slot budget and the THM-3818 crossing-row label;
+cheapest test: all two-comb covers, with (8,9,10) as hostile positive control.
+```
+
+This explains rather than merely reports the stop.  Cited `LRCUpTo13` makes
+one auxiliary clock available beyond an eleven-speed body; separate uses need
+not share a centre.  Two common clocks are already the general LRC(14)
+assertion.  The three-comb control would need fourteen nonzero speeds safe at
+`1/14`, stronger in radius than LRC(15).  In THM-3818's rank-eleven scale-two
+two-component `W=V_dec` equality branch, `u_i=at` makes actual speeds `2at,t`
+a forbidden crossing row of height `2a<=20`; no wider crossing claim is made.
+Low relation rank cannot pay a missing physical slot.  The next move must exploit
+body-dependent geometry or a simultaneous multi-clock inequality, not reuse
+the three-comb cover as if it were a proof.
+
 ## Generated next tasks
 
 1. **Remaining-16 erosion atlas.**  Compute the full arrangement of deep
@@ -261,9 +308,10 @@ that a statistic failed.
    floor with the radius-`1/182` intervals forced for every auxiliary
    multiplier.  The moment problem should remember prescribed local regions,
    not only the measure of the obstruction.
-5. **Weighted scale-two carrier.**  Use the exact lift weight
-   `ell(w) in {0,1,2}` rather than discarding it to `1_(ell>0)`.  A weighted
-   integer tariff may improve the current `59/4` gate on `(1,9)`.
+5. **Weighted scale-two carrier after the three-versus-one stop.**  Use the
+   exact lift weight `ell(w) in {0,1,2}` rather than discarding it to
+   `1_(ell>0)`.  Seek a body-dependent one-clock certificate or a simultaneous
+   inequality that does not spend three physical auxiliary runners.
 6. **Cubic response kernel.**  Group the exact Fourier expansion of `M_pq` by
    solutions of `i p+j q=r`; seek a sign-controlled low-mode packet before
    the tail can cancel it.

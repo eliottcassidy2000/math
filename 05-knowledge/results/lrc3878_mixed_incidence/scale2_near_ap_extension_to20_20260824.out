@@ -1,0 +1,21 @@
+LRC14_SCALE2_NEAR_AP_EXTENSION_TO_20_20260824
+scope=E_any_11_subset_of_1..20;odd_t>=max(E);row=2E_union_{t,9t}
+bodies=167960;finite_exact_cells=574963;containment_failures=0
+finite_engine=exact_closed_body_arcs_versus_open_t_pullback_of_C_(1,9);physical_lift_checked
+infinite_tail=THM4000_disc_t_le_r_squared_over_3t_squared_strict_noncontainment
+strata=(maxE,bodies,finite_cells,max_tail,max_tail_body)
+(11, 1, 14, 38, (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11))
+(12, 11, 84, 41, (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12))
+(13, 66, 212, 41, (1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13))
+(14, 286, 1299, 64, (1, 2, 3, 4, 8, 9, 10, 11, 12, 13, 14))
+(15, 1001, 3861, 61, (1, 2, 3, 8, 9, 10, 11, 12, 13, 14, 15))
+(16, 3003, 11448, 70, (1, 2, 3, 4, 9, 10, 11, 12, 13, 14, 16))
+(17, 8008, 33962, 64, (1, 3, 4, 9, 10, 11, 12, 13, 14, 16, 17))
+(18, 19448, 64099, 64, (1, 3, 4, 7, 10, 11, 13, 14, 16, 17, 18))
+(19, 43758, 172314, 81, (1, 2, 3, 7, 8, 10, 11, 13, 17, 18, 19))
+(20, 92378, 287670, 69, (1, 2, 5, 6, 7, 8, 11, 13, 18, 19, 20))
+conclusion=every_displayed_13_speed_row_has_clearance_at_least_1/14
+nonconsequence=arbitrary_eleven_speed_body_and_LRC14_remain_open
+semantic_sha256=f4d01f21eaafa28929136b506df5f1ac4b94d2c93f6beb7b9e4466a080a0a4da
+checks=2867534
+RESULT=PASS;LRC14=OPEN

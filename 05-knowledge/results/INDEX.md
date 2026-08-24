@@ -34,16 +34,22 @@
   17 arbitrary-body types stay open.  All nine script/output/semantic hash
   triples are pinned in THM-3910.
 
-- `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-4000 PROVED + VERIFIED-EXACT
-  + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
+- `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweeps,
+  auxiliary-cover obstruction, Graver/phase hostile, and independent audit
+  -> matching `.out`s [THM-4000 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
   integer occupancy tax.  For AP11, 4,385 finite cells split as
   `4,284+32+69`, with the tail closed from 88 (known THM-734 scope).  Newly,
-  every `2E union {t,9t}` with `E` an eleven-subset of `{1,...,15}` and odd
-  `t>=max E` is lonely: 1,365 bodies, 5,470 finite cells, zero failures, and
-  exact tails.  Two t=11 rows have identical complete minimum-l1 Graver fibres
+  every `2E union {t,9t}` with `E` an eleven-subset of `{1,...,20}` and odd
+  `t>=max E` is lonely: 167,960 bodies, 574,963 finite cells, zero failures,
+  and exact tails.  A no-import audit finds positive exact escape and a
+  physical lift in every cell.  No one or two auxiliary danger combs cover
+  the scale-two quotient obstruction, while `(8,9,10)` is the unique
+  minimum-maximum covering triple: a three-versus-one clock-budget stopping
+  obstruction, not a closure.  Two t=11 rows have identical complete
+  minimum-l1 Graver fibres
   but opposite mixed phase, while a half-translate preserves all Fourier
   magnitudes and reverses containment.  This makes no further decrement of
   THM-3910's 17 arbitrary-body types.  Script/output/semantic SHA-256 triples:
@@ -55,7 +61,16 @@
   `59ee93b99a53d20d7dd034a5d15d3d8f77199b328a3b6fd86dea15792fff317f`;
   hostile `efc5cbc471ded68b22a201734f23625121e3233a259b51780d824456a2ffa312` /
   `b9213b5d03050edd25555d5b2e9fc8fded8d4013fb179c354e1749da5a186464` /
-  `9124631b862e70b6f2aeb2c150ee363d3bbdfc527bd058653d397d39bc16f966`.
+  `9124631b862e70b6f2aeb2c150ee363d3bbdfc527bd058653d397d39bc16f966`;
+  auxiliary `daa9298674274960707b9b0a4eb1f3c9688c579980489fd5c35c45628ec47388` /
+  `d91fbc44f086eed976ccd9f709b2128dd1ae8b0776b32662e636cf1afd22330d` /
+  `cb06eca35b81813fe2cb54aa96d1d160e44d827cd00cd5c7049cece194fb1d6a`;
+  extension `f46f49b5ee8ddc48293f9390f15b61dfa191494e321e2413fc5410fd2a705334` /
+  `26d1074ecdb9dffec91ef017df7f5f9477237a48080fb5a6833f76870829b2ec` /
+  `f4d01f21eaafa28929136b506df5f1ac4b94d2c93f6beb7b9e4466a080a0a4da`;
+  independent `5df7bcad78c2847b5f1e2fd2d8398fdfa44b910b924307b30781c94d3ad0b911` /
+  `7b0c498489d093a2ea61ff4e2734d9ebd9f18ae0383458a1d847d2f62e3f5061` /
+  `d9c01990a9730a6b164c225a6788bc45f2f8acfd7286f206c4804ae580d61297`.
 
 - `jc2_equianharmonic_equality_color_all_depth_response_thm3898.py` ->
   matching `.out` [THM-3898 PROVED + VERIFIED-EXACT + INDEPENDENTLY

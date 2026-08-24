@@ -1,0 +1,12 @@
+LRC14_SCALE2_AUXILIARY_COVER_OBSTRUCTION_20260824
+scope=C_(1,9)=(2/21,8/63)U(55/63,19/21);D_a={||a*w||<1/14}
+two_comb_measure_reduction=a<=b_implies_a<=25
+finite_candidate_pairs=20;covering_pairs=0
+three_comb_cover=(8,9,10);unique_nondecreasing_cover_with_max<=30
+positive_arc_teeth=(13/140,3/28)U(13/126,5/42)U(13/112,15/112)
+LRC_meaning=settled_LRCUpTo13_allows_only_one_auxiliary_clock_beyond_an_11_speed_body
+stopping_obstruction=three_clocks_are_needed;using_two_is_already_LRC14_circular
+covector_join=reusing_8t_9t_or_10t_as_a_body_coordinate_creates_a_forbidden_small_crossing_relation_in_W=V_dec
+semantic_sha256=cb06eca35b81813fe2cb54aa96d1d160e44d827cd00cd5c7049cece194fb1d6a
+checks=57
+RESULT=PASS;LRC14=OPEN
