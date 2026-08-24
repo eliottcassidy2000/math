@@ -1,0 +1,7 @@
+UNIVERSE candidate_sum<=2500;competitor_sum<=3970;strict_rows=1087;strict_values=510009;relaxed_rows=1087;relaxed_values=547824
+FIRST_CAP3_TWO_HOSTILE m=4104;pair1=(2, 16);sum1=18;g1=2;s1=9;pair2=(9, 15);sum2=24;g2=3;s2=8
+RELAXED_HOSTILE_INCIDENCES 172
+RAMIFIED_EULER_BAND bank=(5, 11);values=139;surrogate=65/363;main=17/55;square_error=147/3025;coefficient_gain=5/3
+SEMANTIC_SHA256 b59f0e8e093c8a98f77c778dfcf11d87667c8d917673ed623308f5eb43763119
+GATES 815204
+RESULT PASS

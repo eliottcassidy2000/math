@@ -1,0 +1,22 @@
+SEED=67197457;status=FINITE-EXACT;node_limit=2000000;enumerator=rational_LDL_sphere
+invariance_control=PASS;product=16/3;base_nodes=122;scaled_nodes=122;sheared_nodes=122
+named=A6;d=6;characters=63;nodes=4041;best=36/7;ratio=0.857142857143;u=(1, 1, 0, 1, 0, 1);primal=6@(1, 1, 0, 1, 0, 1);dual=6/7@(1, 0, 0, 0, 0, 0)
+named=D6;d=6;characters=63;nodes=3108;best=6;ratio=1.000000000000;u=(1, 0, 1, 0, 1, 0);primal=6@(1, 0, 1, 0, 1, 0);dual=1@(1, 0, 0, 0, 0, 0)
+named=E6;d=6;characters=63;nodes=8532;best=16/3;ratio=0.888888888889;u=(1, 1, 1, 0, 1, 1);primal=4@(1, 1, 1, 0, 1, 1);dual=4/3@(1, 0, 0, 0, 0, 0)
+named=A7;d=7;characters=127;nodes=11193;best=7;ratio=1.000000000000;u=(1, 0, 1, 0, 1, 0, 1);primal=8@(1, 0, 1, 0, 1, 0, 1);dual=7/8@(1, 0, 0, 0, 0, 0, 0)
+named=D7;d=7;characters=127;nodes=8388;best=7;ratio=1.000000000000;u=(0, 0, 0, 0, 0, 1, 1);primal=4@(0, 0, 0, 0, 0, 1, 1);dual=7/4@(0, 0, 0, 0, 0, 1, 0)
+named=E7;d=7;characters=127;nodes=23194;best=9;ratio=1.285714285714;u=(0, 0, 0, 1, 0, 1, 1);primal=6@(0, 0, 0, 1, 0, 1, 1);dual=3/2@(0, 0, 1, -1, 0, 0, 0)
+HOSTILE_COUNTEREXAMPLE=YES
+G=[[2, -1, 0, 0, 0, 0, 0], [-1, 2, -1, 0, 0, 0, 0], [0, -1, 2, -1, 0, 0, -1], [0, 0, -1, 2, -1, 0, 0], [0, 0, 0, -1, 2, -1, 0], [0, 0, 0, 0, -1, 2, 0], [0, 0, -1, 0, 0, 0, 2]]
+named=A8;d=8;characters=255;nodes=30561;best=64/9;ratio=0.888888888889;u=(1, 1, 0, 1, 0, 1, 0, 1);primal=8@(1, 1, 0, 1, 0, 1, 0, 1);dual=8/9@(1, 0, 0, 0, 0, 0, 0, 0)
+named=D8;d=8;characters=255;nodes=23467;best=8;ratio=1.000000000000;u=(1, 0, 1, 0, 1, 0, 1, 0);primal=8@(1, 0, 1, 0, 1, 0, 1, 0);dual=1@(1, 0, 0, 0, 0, 0, 0, 0)
+named=E8;d=8;characters=255;nodes=151663;best=8;ratio=1.000000000000;u=(1, 1, 1, 1, 1, 0, 1, 1);primal=4@(1, 1, 1, 1, 1, 0, 1, 1);dual=2@(2, -1, 0, 0, 0, 0, 0, 0)
+named=A9;d=9;characters=511;nodes=81853;best=9;ratio=1.000000000000;u=(1, 0, 1, 0, 1, 0, 1, 0, 1);primal=10@(1, 0, 1, 0, 1, 0, 1, 0, 1);dual=9/10@(1, 0, 0, 0, 0, 0, 0, 0, 0)
+named=D9;d=9;characters=511;nodes=70296;best=9;ratio=1.000000000000;u=(0, 0, 0, 0, 0, 0, 0, 1, 1);primal=4@(0, 0, 0, 0, 0, 0, 0, 1, 1);dual=9/4@(0, 0, 0, 0, 0, 0, 0, 1, 0)
+random_d=6;checked=384;skipped=0;nodes=21929;best=6;ratio=1.000000000000;u=(1, 1, 1, 1, 1, 1);primal=6@(1, 1, 1, 1, 1, 1);dual=1@(1, 0, 0, 0, 0, 0)
+random_d=7;checked=320;skipped=0;nodes=25069;best=7;ratio=1.000000000000;u=(1, 1, 1, 1, 1, 1, 1);primal=7@(1, 1, 1, 1, 1, 1, 1);dual=1@(1, 0, 0, 0, 0, 0, 0)
+random_d=8;checked=256;skipped=0;nodes=27173;best=8;ratio=1.000000000000;u=(1, 1, 1, 1, 1, 1, 1, 1);primal=8@(1, 1, 1, 1, 1, 1, 1, 1);dual=1@(1, 0, 0, 0, 0, 0, 0, 0)
+random_d=9;checked=192;skipped=0;nodes=27467;best=9;ratio=1.000000000000;u=(1, 1, 1, 1, 1, 1, 1, 1, 1);primal=9@(1, 1, 1, 1, 1, 1, 1, 1, 1);dual=1@(1, 0, 0, 0, 0, 0, 0, 0, 0)
+random_total_checked=1152;random_total_skipped=0;best_ratio=1;best_dimension=6;best_product=6
+named_hostiles=[('E7', Fraction(9, 1))]
+RESULT=COUNTEREXAMPLE_FOUND_FINITE_EXACT

@@ -16,11 +16,11 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
 - **PROVED + FINITE-EXACT:** THM-741/2883/2888/2892/2893/885 close `2002` nine- and `3003` eight-body roots; audited THM-2923 closes `3432` seven-body roots.  Prior splits are intermediate.
 - **PROVED:** THM-965/2051--2092/2074 give the relation, pair floor, rank atlas
-  and ledger; THM-2148/2168 reach scalar `5+3`.  THM-2054 decorrelates
-  recorded margins at `H=2^19`, subject to MISTAKE-080/082's shape-specific
-  tori.  THM-1252--1274 saturate six-comb arguments, leaving endpoint/child
-  transport as the live move. Routes: THM-2081, THM-2082, THM-2083,
-  THM-2085, THM-2086, THM-2085/2087, THM-2088, THM-2089, THM-2090, THM-2092.
+  and ledger; THM-2148/2168 reach scalar `5+3`. THM-2054 decorrelates
+  margins at `H=2^19` subject to MISTAKE-080/082. THM-1252--1274 saturate
+  six-comb arguments; endpoint/child transport remains. Routes: THM-2081,
+  THM-2082, THM-2083, THM-2085, THM-2086, THM-2085/2087, THM-2088,
+  THM-2089, THM-2090, THM-2092.
 
 ### Exact live obligation
 
@@ -42,8 +42,9 @@ THM-2363/THM-2368 do not recover the `28,393` semantic roots.
 THM-3731 gives 165 valuation orbits: repeats obstruct a valuation-only owner;
 pairwise-distinct positive coefficients repair only that narrow defect.
 [THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md)
-gives a Graver row with square sum `<=195`, beating THM-3743; THM-4014/4015
-refine metric/character, not owner/phase.
+gives a Graver row with square sum `<=195`; THM-4019 refutes THM-4015's
+sharp arbitrary-lattice character bound for `d>=7`. The weaker `d/2` bound
+and owner/phase remain open.
 [THM-3742](../01-canon/theorems/THM-3742-square-triangular-pell-mod13-central-sign-projective-cycle.md)
 is a wrong-torsor Pell `C14`; [THM-3744](../01-canon/theorems/THM-3744-pell-prefix-loneliness-constant-carry-exact-formula.md)
 is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
@@ -51,34 +52,25 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
 ### Independent routes that remain live
 
 - **PROVED + CITED:** [THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md)
-  gives square norm `<=195`, `l1<=50`, height `13`, 47 pair ratios and 55,459
-  histograms. A separate odd row need not be short. THM-2052 is
-  terminal in rank twelve; rank eleven splits outside/inside the star.
+  gives square norm `<=195`, `l1<=50`, height `13`, 47 ratios and 55,459
+  histograms; a separate odd row may be long. THM-2052 is terminal at rank
+  twelve; rank eleven splits outside/inside the star.
   THM-3793/[3825](../01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md)
-  decode the `5,855` inert ratios/scales; THM-3818 adds `456,690` supports,
-  `913,380` orientations and the pair-sum grid.  Its tags have square parity
-  and 31 Pell points.  Its rows are graphic: connected incidence gives
-  `max n_i<=355^12`, while rank-eleven incidence has exactly two components.
-  If the full height-`91^6` code stays rank eleven, every crossing row is
-  forbidden, every internal pair is bounded, and packets recover both scales
-  unless one component is a singleton, where an exact congruence fibre remains.
-  THM-3818's audited cyclic-gluing sidecar now turns that quotient into a
-  partial LRC implication: `s lambda(v)>=1` gives a common safe time.  The
-  `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
-  candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
-  `7,505` unconditionally; only in `t>=U`, cyclic slack plus one auxiliary
-  leaves 58 certificate survivors: 57 at `s=1` and `(s,p,q)=(2,1,9)`.
-  THM-3910 closes 41; THM-3995 adds the owner-maximum conditional parity cap
-  `4(U-1)/(63U)` and its exact integer tariff, including the `k=0` plateau, but
-  closes no type. THM-4002 closes AP11 and 352,716 fixed `[1,21]` scale-two
-  bodies. THM-4003/4004 add component/ratio and prime/`t<U` gates (floor
-  `U>=3,208,300,859`); parallel classes block cycle augmentation and a divisor
-  anchor narrows `t<U`. All 17 arbitrary-body types plus owner/arrival remain
-  OPEN.
-  THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
-  `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
-  FINITE-EXACT,
-  `(9,13;76,132)` remains the unique tripling edge through pair sum `10^6`
+  decode `5,855` inert ratios/scales; THM-3818 adds `456,690` supports,
+  `913,380` orientations, square-parity tags and 31 Pell points. Connected
+  incidence gives `max n_i<=355^12`; rank eleven has two components. At full
+  height `91^6`, crossing rows are forbidden, internal pairs bounded, and
+  packets recover both scales except an exact singleton-component congruence
+  fibre. Its cyclic sidecar makes `s lambda(v)>=1` a safe-time certificate.
+  The `12+1` branch forces scale one, `U>91^6/13`, at most 13 packets, and
+  none in the powers-of-four fibre. For `11+2`, THM-3878 leaves `7,505`;
+  in `t>=U` one auxiliary leaves 58 survivors (57 at `s=1`, plus
+  `(s,p,q)=(2,1,9)`). THM-3910 closes 41; THM-3995's conditional parity cap
+  `4(U-1)/(63U)` closes no type. THM-4002 closes AP11 and 352,716 fixed
+  `[1,21]` scale-two bodies. THM-4003/4004 give ratio/prime/`t<U` gates
+  (`U>=3,208,300,859`); all 17 arbitrary-body types and owner/arrival remain
+  OPEN. THM-3858 exhausts only the target `Z_3` test. **FINITE-EXACT:**
+  `(9,13;76,132)` is the unique tripling edge through sum `10^6`
   (independent control `5000`).
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
@@ -272,12 +264,12 @@ THM-3359 gives periodic modular supports; THM-2352 gives the q-adic plateau.
 [THM-3499](../01-canon/theorems/THM-3499-regular-shortlex-languages-have-logarithmic-density.md) proves regular shortlex density;
 [THM-3510](../01-canon/theorems/THM-3510-binary-shortlex-equal-level-count-log-density-boundary.md) is sharp: equal counts allow two densities or none.
 [THM-3730](../01-canon/theorems/THM-3730-positive-distinct-two-cube-support-abscissa.md)
-gives indexed abscissa `2/3`.  THM-3793/3825 give an inert-scale singleton
-family and decoder.  Fixed inert-prime products prove
-`liminf H(X)/(log log X)^j>=2/(5*2^j*j!)`; varying order gives
-`liminf log H(X)/log log X>=1/2`.  Williams' fixed-modulus Mertens theorem gives
-`liminf H(X)sqrt(log log X)/sqrt(log X)>=0.25659588...`.  None is a support
-asymptotic or residue.
+gives indexed abscissa `2/3`. THM-3793/4018 give inert and ramified-three
+singleton criteria; THM-3825 decodes. Fixed inert products give
+`liminf H/(log log X)^j>=2/(5*2^j*j!)`, while varying order gives log exponent
+`1/2`. Williams plus paired `d,3d` rows gives
+`liminf H sqrt(log log X)/sqrt(log X)>=0.4276598...`. No support asymptotic
+or residue follows.
 
 ### Established landmarks
 

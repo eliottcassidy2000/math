@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-488 (2026-08-24, THM-4015 arbitrary-lattice sharp extension) -- a skipped-character scout and first-kind evidence hid the E7 Gram radical
+
+- **What failed:** a provisional bounded scout was treated as broad support
+  for extending THM-4015's sharp product bound `AB<=d` from first-kind to
+  arbitrary lattices. On E7 the scout had checked only 42 of 127 nonzero
+  characteristics, silently missing 85, including the unique hostile one.
+  The structural extrapolation also discarded the conorm-graph hypothesis
+  that makes Foster's trace produce an integral odd character.
+- **Minimal witness / first failed implication:** for the standard E7 Cartan
+  matrix, `u=(0,0,0,1,0,1,1)` is the unique nonzero radical of `G mod 2`.
+  Exact Cauchy-certified enumeration gives `A(G,u)=6` and
+  `B(G,u)=3/2`, hence `AB=9>7`. A shortest primitive parity vector, even
+  one whose half lies in the dual lattice, need not have an odd integral dual
+  functional short enough for the first-kind constant.
+- **Repair / strongest survivor:** THM-4019 records the exact E7 hostile and
+  the integral family `diag((3E7)^r,2I_k)`, which refutes the sharp extension
+  in every rank at least seven. THM-4015 remains PROVED for lattices of
+  Voronoi's first kind; the sharp bound remains OPEN in ranks four through
+  six, and the weaker arbitrary-lattice bound `AB<=d^2` remains OPEN.
+- **Reusable rule:** a characteristic search must enumerate the declared
+  parity universe or report every skip. Do not transfer a sharp constant
+  across a quotient that loses the graph/incidence owner; test mod-two Gram
+  radicals and discriminant two-torsion before generic random forms.
+
 ## MISTAKE-487 (2026-08-24, THM-4008/4016 sharp specialization) -- a lower weighted face was used after a forced higher-weight coefficient was already nonzero
 
 - **What failed:** THM-4008's formal weight-six `p^3+y^2` model was applied

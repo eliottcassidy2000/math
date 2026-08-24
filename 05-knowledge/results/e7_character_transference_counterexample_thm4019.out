@@ -1,0 +1,12 @@
+status=FINITE-EXACT_COUNTEREXAMPLE
+leading_principal_determinants=[2, 3, 4, 5, 6, 7, 2];det=2
+inverse_diagonal=[Fraction(2, 1), Fraction(6, 1), Fraction(12, 1), Fraction(15, 2), Fraction(4, 1), Fraction(3, 2), Fraction(7, 2)]
+mod_two_kernel=[(0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 1, 0, 1, 1)];half_covector=(Fraction(0, 1), Fraction(0, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(1, 1));half_pairing=3
+root_caps=(2, 3, 4, 3, 2, 1, 2);root_count=126;root_in_U_class=0
+dual_box=3^7;dual_below_3/2=0;dual_at_3/2=56
+U=(0, 0, 0, 1, 0, 1, 1);A=6;Z=(0, 0, 1, -1, 0, 0, 0);B=3/2;odd_pair=-1
+rank=7;A_times_B=9;candidate_bound=7;excess=2
+family=diag((3E7)^r,2I_k);d=7r+k;A=18r+2k;B=1/2;A_times_B=d+2r
+family_d7_to_d30=[(7, 1, 0, Fraction(9, 1)), (8, 1, 1, Fraction(10, 1)), (9, 1, 2, Fraction(11, 1)), (10, 1, 3, Fraction(12, 1)), (11, 1, 4, Fraction(13, 1)), (12, 1, 5, Fraction(14, 1)), (13, 1, 6, Fraction(15, 1)), (14, 2, 0, Fraction(18, 1)), (15, 2, 1, Fraction(19, 1)), (16, 2, 2, Fraction(20, 1)), (17, 2, 3, Fraction(21, 1)), (18, 2, 4, Fraction(22, 1)), (19, 2, 5, Fraction(23, 1)), (20, 2, 6, Fraction(24, 1)), (21, 3, 0, Fraction(27, 1)), (22, 3, 1, Fraction(28, 1)), (23, 3, 2, Fraction(29, 1)), (24, 3, 3, Fraction(30, 1)), (25, 3, 4, Fraction(31, 1)), (26, 3, 5, Fraction(32, 1)), (27, 3, 6, Fraction(33, 1)), (28, 4, 0, Fraction(36, 1)), (29, 4, 1, Fraction(37, 1)), (30, 4, 2, Fraction(38, 1))]
+GATES=2515
+RESULT=SHARP_ARBITRARY_LATTICE_CANDIDATE_REFUTED_IN_EVERY_RANK_AT_LEAST_7

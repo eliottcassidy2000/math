@@ -19,6 +19,8 @@ status: >
   theorem, gives liminf H(X)*sqrt(log log X)/sqrt(log X) at least
   (2/5)*sqrt(2/3)*E_32=0.25659588..., where
   E_32=(2/3)sqrt(2e^gamma Q_32/(3L(1,chi_-3))).  No support asymptotic follows.
+  THM-4018 later adds the ramified-three rows and sharpens this lower bound to
+  (2/3)*sqrt(2/3)*E_32=0.4276598..., without asserting an asymptotic.
   The finite LRC address sidecar is injective
   but has no loneliness consequence.
 source: root / cross_frontier_live_scout inert-prime all-scale lane, 2026-08-23
@@ -60,6 +62,7 @@ depends_on:
 related:
   - THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction
   - THM-3818-scaled-inert-cubeclass-support-two-pair-packet
+  - THM-4018-ramified-three-two-cube-singleton-extension
 references:
   - "K. S. Williams, Mertens' Theorem for Arithmetic Progressions, Journal of Number Theory 6 (1974), 353--359, DOI 10.1016/0022-314X(74)90032-8."
 script: 04-computation/two_cube_inert_cubefree_singleton_thm3793.py
@@ -304,7 +307,9 @@ This supersedes the explicit constant in `(6h)` but uses the cited Williams
 asymptotic.  Since the unweighted support count `C(X)` satisfies `C(X)>=H(X)`
 for `X>=1`, the same normalized liminf lower bound holds trivially for
 `C(X)`.  Neither statement is a support-count asymptotic, residue, or
-collision-tax law.
+collision-tax law. THM-4018 later supersedes this inert-only coefficient by
+pairing each squarefree inert row with its ramified-three row, giving
+`(2/3)sqrt(2/3)E_32`.
 
 ## 2. Proof of the singleton theorem
 

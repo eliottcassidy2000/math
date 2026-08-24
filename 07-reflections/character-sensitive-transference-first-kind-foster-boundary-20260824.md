@@ -13,9 +13,10 @@ lambda_odd=min{||y||: y in L*, <y,c> in 1/2+Z}
 question: delta*lambda_odd <= d/2 ?
 ```
 
-No exact counterexample was found, but ordinary Banaszczyk transference does
-not prove it: that theorem controls the shortest unphased vector of `L*`,
-which may lie in the even-character index-two sublattice.
+THM-4019 finds no counterexample to this weaker `d/2` bound.  Ordinary
+Banaszczyk transference does not prove it: that theorem controls the shortest
+unphased vector of `L*`, which may lie in the even-character index-two
+sublattice.
 
 There is, however, a decisive positive result on a large and structurally
 natural class.
@@ -88,13 +89,24 @@ Thus the proposed general bound is the quadratic-form inequality
 m_G(u)m_G^odd(u) <= d^2.                               (6)
 ```
 
-The first-kind theorem proves the much stronger right side `d`.  The exact
-orthogonal controls suggest the following honest, currently unproved target:
+The first-kind theorem proves the much stronger right side `d`.  A
+provisional extrapolation of that constant to arbitrary lattices is now
+**REFUTED** by THM-4019:
 
-> **CONJECTURE.** Equation `(6)` holds with `d` in place of `d^2` for every
-> positive-definite real `G` and every nonzero `u in F_2^d`.
+> **REFUTED SHARP EXTENSION.** For the standard E7 Cartan matrix and its
+> unique nonzero mod-two Gram radical `u`,
+>
+> ```text
+> m_G(u)=6,                 m_G^odd(u)=3/2,
+> m_G(u)m_G^odd(u)=9>7.
+> ```
 
-No use of this conjecture is licensed.
+The exact witness amplifies integrally to every rank `d>=7`: for
+`d=7r+k`, the Gram form `diag((3E7)^r,2I_k)` with the repeated radical
+characteristic has product `d+2r`.  This closes the arbitrary-lattice
+`sqrt(d)/2` route, but it does not approach the still-open `d^2` threshold
+in equation `(6)`.  Ranks four through six for the sharp extension also
+remain open.
 
 ## 2. Obtuse superbase as a conductance graph
 
@@ -291,7 +303,8 @@ that must be tested or proved separately.  A valid extension would need one
 of:
 
 1. a character-sensitive transference theorem for arbitrary index-two
-   lattice pairs;
+   lattice pairs at the surviving `d/2` scale (the first-kind
+   `sqrt(d)/2` scale is false by THM-4019);
 2. a weighted-circuit Foster theorem retaining the Smith-index/integrality
    sidecar in `(18)`; or
 3. a proof that the particular projected lattice admits some different

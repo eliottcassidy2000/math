@@ -7,8 +7,9 @@ status: >
   nonzero half-lattice point modulo the lattice, then the distance to the
   lattice times the shortest dual vector odd at c is at most sqrt(d)/2. The
   constant is sharp for Z^d with the all-half centre. Consequently the bound
-  holds for every Euclidean lattice in dimensions at most three. The
-  corresponding statement for arbitrary lattices remains OPEN.
+  holds for every Euclidean lattice in dimensions at most three. THM-4019
+  refutes the same sharp constant for arbitrary lattices in every dimension
+  at least seven; the weaker arbitrary-lattice d/2 bound remains OPEN.
 source: root + transference_independent_audit / LRC14 frontier session, 2026-08-24
 audit: >
   PASS. The proof identifies parity representatives with cuts of the conorm
@@ -23,11 +24,14 @@ audit: >
   A separate deterministic exact search found no violation of the stronger
   first-kind constant in D4, A4, D5 or 5,728 certified random
   characteristic instances in ranks four and five; this is finite evidence,
-  not a general theorem.
+  not a general theorem. THM-4019 subsequently gives the exact E7 hostile
+  A=6, B=3/2 and an integral counterexample family in every rank at least
+  seven; the Foster proof itself and its first-kind scope are unchanged.
 depends_on: []
 related:
   - THM-4009-euclidean-covering-transference-short-relation-compression
   - THM-4014-lrc14-diagonal-polar-ellipsoid-fastest-coordinate-relation-compression
+  - THM-4019-e7-character-transference-sharp-constant-counterexample
 audit_script: 04-computation/character_sensitive_transference_first_kind_foster_audit_20260824.py
 audit_output: 05-knowledge/results/character_sensitive_transference_first_kind_foster_audit_20260824.out
 audit_report: 07-reflections/character-sensitive-transference-first-kind-foster-boundary-20260824.md
@@ -35,7 +39,7 @@ search_script: 04-computation/character_sensitive_transference_random_exact_sear
 search_output: 05-knowledge/results/character_sensitive_transference_random_exact_search_20260824.out
 audit_script_sha256: 69f8b927590f4fd13152e36bc0989c86d3c9a266884385f4d253af9be83e07db
 audit_output_sha256: 81f7494dd66a9b5ce789901487671c71764d82371b5ed807646f0c4ef247f81d
-audit_report_sha256: 741b8ff8620a99739ae9145804093644e0a9e70572ac696bc21aaf7a9da6984a
+audit_report_sha256: 5b0c541bbb52793e68b4815bdbe850f009acb1cb1b31e5ec45f4ecaedc45f1f4
 search_script_sha256: 15d686582a859f59cacaf5d0550ad9a4472b530a0c97eac50aa1da6c3abde7b1
 search_output_sha256: 4f2f10fadabb032530ad1a1da539df5fd77b0df6c3192324ad45cc1d4ffab856
 hash_basis: raw LF bytes
@@ -59,7 +63,8 @@ delta lambda_odd<=sqrt(d)/2.                           (2)
 ```
 
 The constant is sharp for `L=Z^d` and
-`c=(1/2)(1,...,1)`. No claim for an arbitrary lattice is made.
+`c=(1/2)(1,...,1)`. No extension to arbitrary lattices is claimed;
+THM-4019 refutes that sharp extension in every rank at least seven.
 
 ## 1. Parity normalization
 
@@ -291,7 +296,7 @@ dist(c,L) lambda_odd<=d/2                              (26)
 remains **OPEN** here. Ordinary Banaszczyk transference may select the even
 index-two dual sublattice and does not prove (26).
 
-The sharper arbitrary-lattice candidate is the same constant as (2). In
+The sharper arbitrary-lattice candidate was the same constant as (2). In
 basis coordinates, for positive-definite `G` and nonzero `u in F_2^d`, it is
 
 ```text
@@ -299,14 +304,24 @@ min_(x=u mod 2) x^T G x
   * min_(u dot z=1 mod 2) z^T G^(-1)z <=d.             (27)
 ```
 
-A deterministic exact search found maxima `4` on `D_4`, `16/5` on `A_4`,
-and `5` on `D_5`, and no value above `d` in 2,497 certified rank-four and
-3,231 certified rank-five characteristic instances. Every reported minimum
-uses a Cauchy-certified finite enumeration box; 272 oversized boxes were
-skipped rather than approximated. This is **FINITE-EXACT evidence only**.
-The proof wall is that a shortest parity vector makes `p/2` weakly Voronoi-
-relevant and is primitive, but neither fact controls the norm of an integral
-dual functional pairing oddly with `p`.
+THM-4019 **REFUTES** (27). For the standard E7 Cartan form, the unique
+nonzero mod-two Gram radical has exact primal and odd-dual minima
+
+```text
+A=6,                    B=3/2,                    AB=9>7.   (28)
+```
+
+The integral family `diag((3E7)^r,2I_k)`, with the repeated radical
+characteristic and `d=7r+k`, has
+
+```text
+A=18r+2k,               B=1/2,                    AB=d+2r>d. (29)
+```
+
+Thus (27) is false in every rank at least seven. It remains OPEN in ranks
+four through six; the earlier rank-four/five searches and THM-4019's complete
+A6,D6,E6 atlas are **FINITE-EXACT** evidence only. The weaker inequality (26),
+equivalently the product bound `AB<=d^2`, remains OPEN.
 
 ## 6. Reproduction
 
