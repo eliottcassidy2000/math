@@ -2,7 +2,7 @@
 id: THM-3924
 title: "Decic cubic index-five ramification-class obstruction"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. The normal
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. The normal
   rational cubic completion B of THM-3921 has class group Z. Its two primes
   above A=0 have residue degrees one and two and generate Cl(B) modulo their
   diagonal principal relation. The unique ramification prime E has pole
@@ -14,15 +14,15 @@ status: >
   power-basis index exponent; JC(2) remains open.
 source: jc_degree6_one_place / post-THM-3922 primitive-boundary lane, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The exact
-  companion verifies the radial UFD localization, simple-plus-double
-  A=0 power packet, basis determinant, irreducible ramification equation,
-  both ramification valuations, nonzero quadratic residual, diagonal
-  Nagata relation, and equality of the valuation gap, class divisibility,
-  and power-index exponent in 20 active gates. Normal and optimized replay
-  must byte-match the frozen output. The unit, Nagata, ramification-closure,
-  and primitive-boundary arguments are proved geometrically below rather
-  than inferred from the symbolic gates.
+  INDEPENDENT HOSTILE AUDIT PASS (jc_zero_debt_lift, 2026-08-23). The audit
+  reconstructed the radial UFD chart and its complete unit group, the
+  inclusion B subset k[u,z] and scalar-unit consequence, both unramified
+  primes over A=0 and their residue degrees, the exact Nagata quotient, the
+  irreducible ramification equation, the -6/-1 valuations and divisor
+  completeness, and the primitive-basis contradiction. It also checked that
+  no additional boundary divisor can repair a rank-one class group. Normal
+  and optimized executions byte-match the frozen 20-gate output; all raw
+  hashes and documentation checks pass. No repair was required.
 depends_on:
   - THM-3921-quintic-genus-collapse-decic-degeneration-packet
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
@@ -40,7 +40,7 @@ hash_basis: raw LF bytes
 
 # THM-3924 -- the A5 index debt is a five-divisible boundary class
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero. Let `b` be any root
 of the irreducible quintic
 
