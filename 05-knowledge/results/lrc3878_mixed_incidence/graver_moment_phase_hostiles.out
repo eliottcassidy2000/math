@@ -1,0 +1,14 @@
+THM3878_GRAVER_AND_MOMENT_PHASE_HOSTILES_20260823
+scope=information_loss_controls;not_LRC_counterexamples;LRC14=OPEN
+t11_rows=((1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 33, 154), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 77, 110))
+minimum_l1=3;common_fibre_size=30;support_histogram={1: 0, 2: 5, 3: 25}
+minimum_fibre_uses_only_AP11_body=yes;tails_invisible_to_THM3743_minimizer=yes
+tail_pair_relations=((14,-3),(10,-7));both_l1=17;THM778_pair_words_distinguish_ratios
+isolated_wall_pair_safe=[(False, False, False, False), (True, True, True, True)]
+graver_result=same_complete_minimum_relation_fibre_but_opposite_mixed_endpoint_incidence
+autocorrelation_hostile_mass=5/21;components=(Fraction(1, 21), Fraction(1, 21), Fraction(1, 7))
+identity_overlap=5/21;half_shift_overlap=0
+autocorrelation_result=same_inversion_components_and_all_Fourier_magnitudes_but_different_containment
+semantic_sha256=9124631b862e70b6f2aeb2c150ee363d3bbdfc527bd058653d397d39bc16f966
+checks=79
+RESULT=PASS

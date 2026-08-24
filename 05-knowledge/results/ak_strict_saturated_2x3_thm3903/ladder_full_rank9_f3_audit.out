@@ -1,0 +1,5 @@
+LADDER_FULL_RANK9_F3_SYMBOLIC_AUDIT
+cases=1120;families=1078;rank_possible=0
+rank_pairs=(((6, 4), 18), ((7, 3), 264), ((7, 4), 36), ((8, 3), 530), ((8, 4), 6), ((9, 3), 224))
+possible=()
+status=RANK9_TWO_ROUND_IMPOSSIBLE

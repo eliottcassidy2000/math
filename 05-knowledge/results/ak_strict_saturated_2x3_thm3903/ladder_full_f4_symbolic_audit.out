@@ -1,0 +1,4 @@
+LADDER_FULL_F4_SYMBOLIC_AUDIT
+cases=840;families=840;rank_possible=0
+rank_pairs=(((6, 2), 2), ((6, 3), 2), ((7, 2), 36), ((7, 3), 12), ((8, 2), 196), ((8, 3), 16), ((9, 2), 446), ((10, 2), 130))
+possible=()

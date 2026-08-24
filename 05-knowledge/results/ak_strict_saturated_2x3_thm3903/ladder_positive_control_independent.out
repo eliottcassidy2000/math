@@ -1,0 +1,10 @@
+AK_STRICT_2x3_11_OVER_6_INDEPENDENT_AUDIT_20260823
+status=INDEPENDENT_FINITE_EXACT_PASS;POSITIVE_CONTROL_ONLY;NO_AK_CLAIM
+raw_trace=((D,),(A,B,C,E,F));raw_rank=11;terminal_rank=10
+first_raw_combination=(-6,-14,0,21,0,-6,0,-15,35,-2,0)->6*(1,-1)_D
+positive_control_C4=raw_rank_7_trace_1+3
+hostile=loose_raw_basis_13x12_rank12_fires_all_once
+physical_deletion_traces=((0, ()), (1, ()), (2, ((3,), (0, 1, 2, 4))), (3, ()), (4, ((3,), (0, 1, 4))), (5, ()), (6, ((3,), (0, 1, 2, 4))), (7, ()), (8, ()), (9, ()), (10, ((3,), (0, 1, 4))))
+semantic_sha256=fd12df1760197bb5a63c124e3bd3351bf4cc600cd214aa38b26be6c91fdbdd2a
+gates=19
+ALL CHECKS PASSED

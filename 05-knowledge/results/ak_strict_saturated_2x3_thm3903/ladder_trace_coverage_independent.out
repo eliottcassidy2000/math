@@ -1,0 +1,9 @@
+AK_STRICT_2x3_MULTIROUND_COVERAGE_INDEPENDENT_20260823
+status=INDEPENDENT_COMBINATORIAL_COVERAGE_PASS;NOT_GROEBNER_REPLICATION
+forest_compatible_ordered_traces={3: 148, 4: 56, 5: 0, 6: 0}
+canonical_first_families=(outer_rung_3,outer_corner_3,outer_corner_4)
+profiles_per_seed=(rung3:60,corner3:70,corner4:80)
+seed_multisets=56;exact_jobs=(3360,3920,4480)
+semantic_sha256=0657c9b3951350c3d8bae697d08c9b170a68be1be1b29ba62194c106d9732adc
+gates=63
+ALL CHECKS PASSED

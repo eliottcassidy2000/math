@@ -1,0 +1,5 @@
+LADDER_FULL_F3_EXACT_SATURATION_AUDIT
+cover_rest_sets=20;support_patterns=192;cover_sha256=0b9af4916585363760b1e0a2c839a57680d46b12a4d7023a4c1423ba28a54452
+branches=2576;generic_rank_fail=2296;unit_saturations=280;potential=0
+potentials=()
+status=F3_BRANCH_IMPOSSIBLE

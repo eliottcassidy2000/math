@@ -1,5 +1,51 @@
 # Script Results Index
 
+- `ak_strict_saturated_2x3_thm3903/*` -> matching `.out`s [THM-3903
+  EXTENSION: PROVED + VERIFIED-EXACT IN THE SATURATED EMPTY-WILDCARD
+  UNIVERSE; NO AK CLAIM].  With all seven strict ladder edges active, four
+  seeds give score `11/6` and trace `1+5`; exact two-round rank strata and
+  the complete outer-rung/outer-corner multiround varieties exclude every
+  `r<=3` certificate.  The multiround censuses are
+  `3360=742+2618`, `3920=782+3138`, and `4480=982+3498`, with zero
+  survivors.  An independent combinatorial path finds 148 three-round and
+  56 four-round traces, none longer, and reproduces those job universes.
+  Full `F_5` hostile exhaust covers 4,375,000 assignments but is evidence
+  only.  This does not cover inactive edges, nonempty initial wildcards,
+  arbitrary `[2,3]`, the private verifier, or Arithmetic Kakeya.  Positive
+  primary script/output/semantic hashes:
+  `9fe8b9f4b408e747d22ae4f669b4b95a56502853672764d9871c9be7981e9e17` /
+  `ed382cd9d43502d76ad1698d62c01bb667ae93f06deee04cb5c53c131be38a44` /
+  `4a285d760f3510cf222a1022d3bdcdfd109cda528b28408a1328171aa3f723d9`;
+  independent positive hashes:
+  `943847cb82a486071a6971707dcd9e93c02cc50e15ac95b1d50e0ba394893008` /
+  `8b9a0c95af6be3d62d8baf290ea9e6b56b1ccc25a78ae191dd7f0c48656faf37` /
+  `fd12df1760197bb5a63c124e3bd3351bf4cc600cd214aa38b26be6c91fdbdd2a`.
+  The exact lower-bound, trace-coverage and finite-field artifact hashes are
+  pinned in THM-3903.
+
+- `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
+  Graver/phase hostile -> matching `.out`s [PROVED MIXED-INCIDENCE IDENTITIES
+  + FINITE-EXACT FAMILIES; LRC(14) OPEN].  Signed periodic endpoints give
+  `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
+  `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
+  integer occupancy tax.  For AP11, 4,385 finite cells split as
+  `4,284+32+69`, with the tail closed from 88 (known THM-734 scope).  Newly,
+  every `2E union {t,9t}` with `E` an eleven-subset of `{1,...,15}` and odd
+  `t>=max E` is lonely: 1,365 bodies, 5,470 finite cells, zero failures, and
+  exact tails.  Two t=11 rows have identical complete minimum-l1 Graver fibres
+  but opposite mixed phase, while a half-translate preserves all Fourier
+  magnitudes and reverses containment.  This does not reduce THM-3878's
+  arbitrary-body 58-type ledger.  Script/output/semantic SHA-256 triples:
+  mixed `dba6ba50bc97285be837bb29d8aa1b234741c1d64bb88e39dd6c9d0961a92a5f` /
+  `65339983eaf0eb643f45a02c3930b6fedd4fed1ad14a9614fd050af7addf07d3` /
+  `9eafb7bb0fc15266386b2e5cfa2f155ef402a63bea8a5fa045de3124de390a88`;
+  scale two `95e4fe463ca4dec7a730e6f469a9abe7cc4f53b93ae8410d783458a418f8a886` /
+  `6e252056e6fe43f4694620b33455a1f4ecc77de2fef8a1bbeca284011013ff2b` /
+  `59ee93b99a53d20d7dd034a5d15d3d8f77199b328a3b6fd86dea15792fff317f`;
+  hostile `efc5cbc471ded68b22a201734f23625121e3233a259b51780d824456a2ffa312` /
+  `b9213b5d03050edd25555d5b2e9fc8fded8d4013fb179c354e1749da5a186464` /
+  `9124631b862e70b6f2aeb2c150ee363d3bbdfc527bd058653d397d39bc16f966`.
+
 - `rule30_adaptive_chronology_census_20260823.py` and independent audit ->
   matching `.out`s [FINITE-EXACT BOUNDED AMBIENT; NO RULE-30 PRIZE].  Among
   all 14,762 distinct depth-eight portraits of active words of length at most

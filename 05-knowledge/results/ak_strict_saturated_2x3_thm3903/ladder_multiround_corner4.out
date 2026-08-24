@@ -1,0 +1,4 @@
+LADDER_MULTIROUND_RANK_VARIETY
+kind=corner4;global_jobs=4480;slice=(0,4480);slice_jobs=4480
+counts={'generic_rank_fail': 982, 'unit': 3498, 'potential': 0}
+potentials=()

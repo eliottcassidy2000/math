@@ -1,0 +1,12 @@
+AK_STRICT_2x3_11_OVER_6_POSITIVE_CONTROL_20260823
+status=FINITE_EXACT_POSITIVE_CONTROL;NOT_OPTIMALITY;NO_AK_CLAIM
+dims=(2,3);m=7;r=4;n=6;t=0;score=11/6
+slopes=(cross:4;vertical:-1,-8,3,-8;seeds:A:-3,B:1,E:37/10,C:-7)
+strict_trace=((D,),(A,B,C,E,F));ranks=(11,10,0);p=(0,5)
+first_raw_coefficients=(-15, 35, -2, 0, -6, -14, 0, 21, 0, -6, 0);first_target=12*d_D
+positive_control_C4=score_7/4_trace_1+3
+hostile=loose_bank_has_13_rows_for_paid_cost_11_and_fires_all_once
+slot_deletion_failures=((0, (1,), ()), (1, (1, 1), ()), (1, (1, 2), (((2, 1),), ((1, 1), (1, 2), (2, 2)))), (1, (2, 1), ()), (1, (2, 2), (((2, 1),), ((1, 1), (1, 2), (1, 3), (2, 2)))), ('seed', 0, ()), ('seed', 1, ()), ('seed', 2, ()), ('seed', 3, (((2, 1),), ((1, 1), (1, 2), (2, 2)))))
+semantic_sha256=4a285d760f3510cf222a1022d3bdcdfd109cda528b28408a1328171aa3f723d9
+gates=19
+ALL CHECKS PASSED

@@ -99,6 +99,16 @@ The seven paid rows fire `D` and then `A,B,C`; the loose rule adds an eighth
 uncharged row and changes the trace.  This is a theorem about one public
 forcing cell, not an Arithmetic--Kakeya bound.
 
+The same theorem now closes the next saturated ladder slice.  With dimensions
+`[2,3]`, empty initial wildcard set and all seven edges active, four seeds are
+necessary and sufficient, so the restricted optimum is `11/6`.  The positive
+trace is `1+5`.  Three seeds are excluded by all two-round rank strata and by
+the only topology-compatible three- and four-round varieties; a separate
+enumerator proves that no longer trace survives the forest barrier.  This is
+the first instance here where “cycle debt” becomes a complete exact
+rank-variety invoice.  It covers neither inactive slots nor initial wildcards,
+and it does not improve the `[2,2]` score.
+
 The closest LRC analogy is not “runners are graph vertices.”  It is that
 connected obstruction intervals and their cyclic translates must glue after
 pairwise widths have been computed.  A pair can be locally hard while a third
@@ -113,20 +123,33 @@ The method leaves 58 certificate survivors, not 58 counterexamples.  The
 unrestricted `t<U` ledger remains unchanged, and `(2,1,9)` survives every
 scalar auxiliary multiplier.
 
-A separate safe-mass/component audit closes none of those 58.  The AP11 safe
-mass `10931/194040` is already smaller than every pair-obstruction mass, and
-both objects are inversion-symmetric, so scalar mass and symmetry cannot
-choose a relative phase.  The exact surviving invoice is
+A separate safe-mass/component audit closes none of those 58 by scalar data.
+The AP11 safe mass `10931/194040` is already smaller than every
+pair-obstruction mass, and both objects are inversion-symmetric, so mass and
+symmetry cannot choose a relative phase.  The formerly missing invoice was
 
 ```text
 mu(G_u \ (D_p union D_q)) = M_0-M_1+M_2,
 ```
 
-where current canon supplies `M_0` but not the pack-conditioned one- and
-two-danger incidences `M_1,M_2`.  The earned positive result is a symmetric
-return packet of mass at least `2*84^(-11)` inside every eleven-speed strict
-`1/14`-safe set.  Its translate remains unlocated relative to the labelled
-danger combs, which is precisely why it supplies thickness but no closure.
+and the mixed-incidence addendum now computes that combination directly.  If
+`E(G)` and `E(A)` are the signed endpoint words of the body safe set and pair
+danger set, then
+
+```text
+C_t=(1/(2t)) sum_(e,f) sigma_e tau_f B_2({f-te}),
+mu(G\A_t)=mu(G)(1-mu(A))-C_t.
+```
+
+The companion sampled-grid energy gives a Cauchy certificate, an integer
+occupancy tax, and a uniform arc-count tail.  It re-proves all AP11 scale-one
+rows already covered by THM-734 and newly closes every fixed body
+`2E union {t,9t}` with `E` an eleven-subset of `{1,...,15}` and odd
+`t>=max E`: 1,365 bodies and 5,470 finite residual cells.  This is a real
+family theorem, but it does not decrement the 58 arbitrary-body type ledger.
+The symmetric return packet of mass `2*84^(-11)` remains useful thickness;
+without the endpoint word its translate is still unlocated relative to the
+labelled danger combs.
 
 This audit also repaired an old endpoint ambiguity in THM-1042.  For
 `G_{1..11}(1/14)`, the executable counts 14 positive arcs, while the closed
@@ -143,10 +166,13 @@ odd `t`, but only for this special AP body.  Generalizing it requires the
 wall owner, sign, numerator, and a denominator-residue address—the atomic
 version of the same missing mixed-incidence sidecar.
 
-An exact liar prevents compressing that address back to familiar scalars:
-at `t=15`, `(3,14)` and `(7,10)` have the same pair sum `17`, obstruction
-measure `13/49`, inversion symmetry, and 210 positive pullback components,
-but their incidence with all four AP11 isolated walls is opposite.
+Exact liars prevent compressing that address back to familiar scalars.  The
+old `t=15` pair has the same sum, mass, symmetry and component count but
+opposite isolated-wall incidence.  More sharply, at `t=11` two full speed
+rows have the identical complete minimum-`l1` Graver fibre but opposite
+covariance sign.  A half-translate hostile preserves mass, components,
+inversion symmetry and every Fourier magnitude while reversing containment.
+The missing object is therefore relative cross-phase, not more power data.
 
 The cycle lesson is thus typed:
 
@@ -353,6 +379,15 @@ schedule a search, but the ordinal does not evaluate the native operation or
 retain its provenance.  It is an address unless an operation-compatible
 round-trip theorem is proved.
 
+THM-3861 supplies a coefficient-bucket version of the same warning.  The
+projection that discards the `z^0` Jacobian bucket preserves vanishing of all
+five positive-`z` buckets but forgets the constant Jacobian condition.  The
+hostile `h=s, P=V=X=1, b=s` kills those five buckets while
+`J=3s(4s-1)/8`.  The missing sidecar is not another top coefficient: it is
+polynomiality of the integrated arm together with the constant bucket.  Thus
+“top filtration closes” and “the polynomial Keller row closes” are distinct
+predicates in both the normal-strip and residual-principal-part lanes.
+
 ## 6. Saturating a complete static universe
 
 The all-depth addendum to
@@ -368,6 +403,16 @@ two-stage bank for depth `D` and gap budget `B` has
 coordinates, giving `134/256` at `D=B=4`.  This proves an exponential static
 tariff.  It does not prove bounded physical recursion, adaptive/projective
 chronology, a minimal adaptive bank, or a Rule 30 prize.
+
+A bounded adaptive census now refines exactly which part of chronology is
+missing.  In the depth-eight ambient over active words of length at most nine,
+13,853 distinct permutations have nonoverflow gap at most four.  Their
+current-bank/zero-chain quotient has 11,927 fibres: 10,502 need no off-ray
+query, 1,318 accept either ray, 85 need ray one, 22 need ray two, and none need
+both.  Thus the current bank together with the observed zero chain selects at
+most one routed off-ray chain in this finite universe, but explicit hostile
+fibres show neither fixed ray is universal.  This is a bounded selector
+theorem, not an all-depth or physical-signalizer chronology.
 
 The arithmetic analogue is
 [THM-3793](../01-canon/theorems/THM-3793-inert-prime-sum-all-scale-two-cube-singleton.md).
@@ -418,10 +463,10 @@ They do not share states, probability, chronology, or a reduction.
 |---|---|---|---|---|---|---|
 | Factorial coefficient row | divisor/rho barcode | evaluate selected primes/residues | named necessary vanishing tests | response at the next prime | surviving polynomial row | first ordered adaptive killer at `d=9996` |
 | LRC support-two packet | lower-rank row | choose multiplier and absorb/add one runner | exact divisibility or LRC(13) safe interval | other runners, relative scale, arrival | owner plus component interval | 58 `t>=U` certificate survivors |
-| AK forcing graph | score certificate | add a sound forcing row | declared rule consequences | second-round cycle debt | oriented cycle incidence | strict `[2,2]` optimum `7/4` |
+| AK forcing graph | score certificate | add a sound forcing row | declared rule consequences | future-round cycle debt | cycle-rank profile | saturated `[2,3]` trace varieties |
 | JC residual | associated graded seam | take top homogeneous forms | leading cancellation | common color gcd and lower debt | primitive colors plus next bucket | first coefficient below THM-3905 |
 | Rational dual | reduced dual curve | cancel common tangent factor | reduced tangent map | nonimmersion multiplicity | `E_nu` tangent-base divisor | `[ST^(d-1):T^d:S^d]` |
-| Rule 30 words | selected ray image | positive affine-word action | complete static orbit | physical chronology and owner | routed gap/depth state | same selected output, different successor |
+| Rule 30 words | selected ray image | positive affine-word action | complete static orbit | physical chronology and owner | zero-fibre routed query | fibres requiring opposite rays |
 | Two-cube prime subsets | critical mass | singleton row plus Euler normalization | weight and disjointness inside the family | collisions outside the family | representation fibre | split-prime and exponent-three hostiles |
 
 Sidecars are consumer-specific.  A “root” may mean a polynomial coordinate, a
@@ -430,9 +475,10 @@ objects cannot be transported merely because the same word is used.
 
 ## 8. Ranked next work
 
-1. **LRC anchor:** attack the 58 `t>=U` certificate survivors with two
-   auxiliaries or an owner/arrival sidecar, while keeping the unrestricted
-   `t<U` region separate.  The scale-two row `(2,1,9)` is the first hostile.
+1. **LRC anchor:** use the exact endpoint cross-phase uniformly on arbitrary
+   eleven-bodies, or add owner/arrival data, while keeping `t<U` separate.
+   Only the 1,365 bodies `E subset {1,...,15}`, `|E|=11`, with odd
+   `t>=max E` are closed; the general `(2,1,9)` type is not.
 2. **Jacobian anchor:** leave `f=0` and the x-only lane closed.  Reduce the
    first coefficient below THM-3905 modulo both primitive colors and their
    gcd; keep the killed `n=1` control and odd total-degree-three lift hostile.
@@ -441,9 +487,10 @@ objects cannot be transported merely because the same word is used.
    central homogenizing layer survive.  Retain the determinant cocycle and
    normalization-place divisor; source-binary equivalence is not a target
    Keller transformation.
-4. **AK niche:** move from the exact strict `[2,2]` optimum to the smallest
-   larger `k=2` cell; search for a genuine score below `7/4` with the same
-   seven-row/loose-row hostile controls.
+4. **AK niche:** leave the saturated empty-wildcard `[2,3]` slice closed.
+   Classify inactive-slot and initial-wildcard strata, then search the next
+   rectangle for a genuine score below `7/4` under the same sound/loose
+   hostile controls.
 5. **Factorial wildcard:** learn a local rule predicting the first adaptive
    prime from the residual polynomial, while keeping `d=9996` and `d=6518`
    as hostile controls.

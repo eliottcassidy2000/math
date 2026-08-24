@@ -1,0 +1,13 @@
+THM3878_SCALE2_NEAR_AP_PACKET_ENERGY_SWEEP_20260823
+scope=conditional_t>=U;scale2=(2,1,9);1365_bodies_E_subset_1..15;LRC14=OPEN
+obstruction=(2/21,8/63)U(55/63,19/21);alpha=4/63;components=2
+bodies=1365;finite_exact_cells=5470;exact_energy_failures=0
+tail_certificate=disc_t_le_r_squared_over_3t_squared;body_specific_strict_threshold
+max_tail_start=(64, (1, 2, 3, 4, 8, 9, 10, 11, 12, 13, 14), 24, '20411/360360')
+closest_finite_margin=((1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13), 15, '313/9702', 8, '167225711/30591861300', '6400279/647446800', 38)
+independent_energy_path=exact_orbit_occupancy_word_N_t;endpoint_B2_controls=1365
+conclusion=every_2E_union_t{1,9}_with_E_subset_1..15_size11_and_odd_t>=maxE_has_positive_safe_measure
+nonconsequence=unrestricted_t_below_U_and_general_eleven_speed_body_remain_open
+semantic_sha256=59ee93b99a53d20d7dd034a5d15d3d8f77199b328a3b6fd86dea15792fff317f
+checks=15263
+RESULT=PASS

@@ -1,0 +1,4 @@
+LADDER_FULL_F2_EXACT_SATURATION_AUDIT
+cases=840;generic_rank_fail=342;unit_saturations=498;potential=0
+potentials=()
+status=F2_BRANCH_IMPOSSIBLE

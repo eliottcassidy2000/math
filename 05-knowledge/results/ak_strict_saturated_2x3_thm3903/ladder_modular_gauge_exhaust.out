@@ -1,0 +1,9 @@
+p=2;gauge_alpha_zero=1;tests=7168;successes=0
+traces=
+first=
+p=3;gauge_alpha_zero=1;tests=122472;successes=0
+traces=
+first=
+p=5;gauge_alpha_zero=1;tests=4375000;successes=0
+traces=
+first=

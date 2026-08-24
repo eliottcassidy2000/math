@@ -68,8 +68,9 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505` unconditionally; only in `t>=U`, cyclic slack plus one auxiliary
   leaves 58 certificate survivors: 57 at `s=1` and `(s,p,q)=(2,1,9)`.
-  Scalar mass, symmetry, arc count and AP11 points close none; danger-comb
-  incidences, `t<U` and owner/arrival are open.
+  Exact cross-phase re-proves the 57 AP11 rows and closes 1,365 fixed
+  scale-two bodies, but no arbitrary-body type; uniform control, `t<U`, and
+  owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
   FINITE-EXACT,
@@ -334,8 +335,8 @@ asymptotic or residue.
 - **Rule 30:** THM-3502/3511/3512/3516 retain compiler/owner/carry; THM-3778
   excludes finite-spatial cycles. THM-3804 gives all Smith forms; THM-3824
   gives fixed/one-shell tariffs and the all-shell response kernel. A
-  A FINITE-EXACT `D=B=4`, word-length-at-most-nine census has `13,853` exact
-  branches and proves that the current bank plus zero chain adaptively selects
+  FINITE-EXACT `D=B=4`, word-length-at-most-nine census has `13,853` exact
+  portraits and proves that the current bank plus zero chain adaptively selects
   at most one off-ray chain; neither fixed off-ray is universal.  This is not
   an all-depth or physical-path selector.  THM-3511 maps even rays onto the odd half;
   the least literal static bank has `2^(D+B-1)+B+2` points (`134/256` there).
@@ -398,10 +399,9 @@ asymptotic or residue.
 
 ### Arithmetic-Kakeya forcing certificates
 
-**OPEN:** record/target `1.67513/1.675`. THM-3875 gives the `k=1` forest floor
-`2`; THM-3903 proves the strict `[2,2]` optimum `7/4` by 60-family audit.
-This cell, the `5/3` graph hostile and loose rule-(1) prove no AK bound.
-Next: larger strict `k=2` cells.
+**OPEN:** external record/target `1.67513/1.675`. THM-3875 gives the `k=1`
+floor `2`; THM-3903: `[2,2]` `7/4`, saturated empty-wildcard `[2,3]` `11/6`.
+Arbitrary/larger cells and certificate import remain open; none proves AK.
 
 ## Cross-domain connection discipline
 
