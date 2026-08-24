@@ -2,7 +2,7 @@
 id: THM-3966
 title: "Euler rigidity forces split-A1-fibre affine-plane boundaries to have disjoint line normalizations"
 status: >
-  PROVISIONAL PROOF CANDIDATE / AWAITING INDEPENDENT TEXT AUDIT. Let X be a
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED. Let X be a
   normal affine complex surface with Cl(X)=Z^n and compactly supported Euler
   characteristic 1+n. If X contains a dense open U isomorphic to A2, then
   X minus U is pure divisorial, has exactly n prime components, every
@@ -13,6 +13,15 @@ status: >
   normalization and ramification primes cannot meet. This is a necessary
   boundary invoice, not a sufficient construction of an affine-plane open.
 source: jc-cohn3709 / post-THM-3964 class-Euler synthesis, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc_extra_debt_local, 2026-08-24). The audit
+  rederived purity by the affine-intersection plus S2 Hartogs argument,
+  checked the exact boundary-component count from THM-3922, verified the
+  normalization-incidence Euler formula including multi-component points,
+  and confirmed that equality yields disjoint components with A1
+  normalizations but does not falsely assert that a unibranch singular
+  component is itself A1. It also checked the reduced split-fibre
+  stratification and the characteristic-zero l-adic/descent scope.
 depends_on:
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
@@ -23,7 +32,7 @@ related:
 
 # THM-3966 -- the class rank and Euler tariff rigidify the whole boundary
 
-**PROVISIONAL PROOF CANDIDATE / AWAITING INDEPENDENT TEXT AUDIT.** Work first
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.** Work first
 over `C`; Section 4 records the characteristic-zero scope. Write `chi` for
 compactly supported topological Euler characteristic.
 
@@ -212,5 +221,4 @@ Each input is load-bearing:
 
 Finally, the conclusion is necessary, not sufficient. A basis of disjoint
 boundary primes with affine-line normalizations does not construct an open
-`A2`, prove its affineness, or make a finite map etale. **QED, pending text
-audit.**
+`A2`, prove its affineness, or make a finite map etale. **QED.**
