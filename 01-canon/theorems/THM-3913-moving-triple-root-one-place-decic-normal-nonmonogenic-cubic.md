@@ -7,7 +7,9 @@ status: >
   (AU+CV)^3+C(AU+CV)U^2+A^2V^3 defines a normal, globally nonmonogenic S3
   cubic order.  Its discriminant is an absolutely irreducible decic with one
   smooth projective infinity place, and its quadratic-resolvent affine class
-  group has nonzero 3-torsion.  The projective normalization is the elliptic
+  group has nonzero 3-torsion.  Its finite singular packet is one seven-
+  address origin of delta invariant 31 and four external A2 cusps.  The
+  projective normalization is the elliptic
   curve y^2=w(w^2-1), however, so the affine branch is not polynomially
   uniruled and the cubic etale surface admits no plane atlas.  This pays the
   order, confluence, and three-class invoices at the first moving-triple-root
@@ -23,9 +25,10 @@ audit: >
   and purity plus irreducibility for the full-component conclusion.  The
   audit independently rechecked Delone--Faddeev normality, absolute
   irreducibility at the unique smooth infinity point, the elliptic inverse
-  and pole ledger, boundary units, the nontrivial Kummer class, and the
-  polynomial-uniruledness contradiction.  Normal and optimized runs
-  byte-match the frozen output; raw hashes and documentation pass.
+  and pole ledger, the complete seven-address/four-cusp singular packet,
+  boundary units, the nontrivial Kummer class, and the polynomial-
+  uniruledness contradiction.  Normal and optimized runs byte-match the
+  frozen output; raw hashes and documentation pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
@@ -35,9 +38,9 @@ related:
   - THM-3912-even-one-place-split-boundary-a2-three-torsion-design-sieve
 script: 04-computation/jc2_moving_triple_root_one_place_elliptic_decic_thm3913.py
 output: 05-knowledge/results/jc2_moving_triple_root_one_place_elliptic_decic_thm3913.out
-script_sha256: 49503a5400ad6ac08ea824e0a38548185d64ef7fe60b1ee5caddded735530efa
-output_sha256: e677adc21fddb894030a526d876fd097b58ea1ba880b74fe6455ea91b3a074d9
-semantic_sha256: 8a591b8a768f89173c9f426e28fc5467fb5e5d6ff87525fca3b10035c99d1805
+script_sha256: 7b1f6ef2a2cd2381a3b44b2dd88c683deab23c16a5c37971ffd487a2334f8806
+output_sha256: 252ca72e9da90d45d0daff856a2a285adce554e18e77ad78b1036619b905ea6d
+semantic_sha256: 6799e75b35627e5d8d33730b1e7ff4045b085f1775e51f2150f87e287897227e
 hash_basis: raw LF bytes
 ---
 
@@ -217,6 +220,66 @@ affine normalization is exactly
 E minus {O}.                                                 (16)
 ```
 
+### 3.1. Complete finite singular packet
+
+The inverse also exposes every place where the normalization map can fail to
+be immersive or injective.  On `E`, use the tangent derivation
+
+```text
+D=2y partial_w +(3w^2-1) partial_y.                         (16a)
+```
+
+It gives
+
+```text
+D(A_0)=3w(w^2+1)(3w^2-2),
+D(C_0)=2y(w^2+1)(5w^2-2).                                  (16b)
+```
+
+Together with `y^2=w(w^2-1)`, their critical ideal has Groebner basis
+
+```text
+y^2+2w,                 y(w^2+1),                 w(w^2+1). (16c)
+```
+
+Thus the critical support consists of the address `(w,y)=(0,0)` and the
+four addresses with `w^2=-1`, `y^2=-2w`.  The determinant of the second and
+third tangent-derivative vectors is `-48` at `(0,0)` and is `12288` modulo
+`w^2+1`.  Hence all five critical branches have ordinary `A2` cusp anatomy.
+The first is one branch of the multiple singularity at the target origin.
+
+The complete origin fibre is
+
+```text
+w=0;                 w=+1,-1;                 w^2=-2,     (16d)
+```
+
+with one `y` value in each of the first three cases and both signs of
+`y^2=-3w` in the last case.  It therefore has exactly seven normalization
+addresses.  The four external cusp targets are pairwise distinct: on
+`w^2=-1` one has
+
+```text
+C_0=-2w,                         A_0^2=2w.                 (16e)
+```
+
+Finally,
+
+```text
+R_0=w^2(w^2+2),                  R_0+1=(w^2+1)^2.          (16f)
+```
+
+The pullbacks of the denominators in `(13),(14)` vanish only on the origin
+fibre `(16d)` or the four critical addresses `w^2=-1`.  Away from these
+addresses the rational inverse recovers a unique immersive normalization
+point, so there are no further finite singularities.  Since a plane decic
+has arithmetic genus `36`, while `E` has genus one, the total delta budget is
+`35`.  Removing the four external cusp contributions gives
+
+```text
+delta_origin=36-1-4=31.                                    (16g)
+```
+
 ## 4. The quadratic resolvent really has a three-class
 
 On a smooth resolution of the projective double plane `W^2=Delta_h`, the
@@ -298,7 +361,8 @@ python3 -O 04-computation/jc2_moving_triple_root_one_place_elliptic_decic_thm391
 Both streams must byte-match the frozen output.  The companion checks the
 compact binary cubic, primitive/common-zero coefficient packet, exact
 discriminant, moving-root quintic, unique smooth infinity, Kummer
-irreducibility specialization, elliptic map and inverse, pole orders, and
-split-boundary Smith data in 24 active gates.  The Delone--Faddeev normality,
+irreducibility specialization, elliptic map and inverse, pole orders,
+complete singular-address packet, and split-boundary Smith data in 38 active
+gates.  The Delone--Faddeev normality,
 absolute-irreducibility, Kummer-class, and Jelonek bridges have been
 independently hostile-audited.  **QED.**

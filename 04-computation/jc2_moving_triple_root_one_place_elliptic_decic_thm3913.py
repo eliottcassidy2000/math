@@ -134,6 +134,86 @@ zero(sp.factor(w_inverse - w), "inverse recovers w")
 y_inverse = sp.cancel(A0 / (w_inverse * (w_inverse**2 + 2)))
 zero(sp.factor(y_inverse - y), "inverse recovers y")
 
+# Complete singular-address packet on the normalization.  The tangent
+# derivation D preserves y^2=w(w^2-1); it is a nonzero local derivation at
+# every affine point of E.
+elliptic_relation = y**2 - w * (w**2 - 1)
+
+
+def reduce_on_elliptic(expression: sp.Expr) -> sp.Expr:
+    return sp.rem(
+        sp.Poly(sp.expand(expression), y),
+        sp.Poly(elliptic_relation, y),
+    ).as_expr()
+
+
+def tangent_derivative(expression: sp.Expr) -> sp.Expr:
+    return sp.factor(
+        reduce_on_elliptic(
+            2 * y * sp.diff(expression, w)
+            + (3 * w**2 - 1) * sp.diff(expression, y)
+        )
+    )
+
+
+dA0 = tangent_derivative(A0)
+dC0 = tangent_derivative(C0)
+gate(dA0 == 3 * w * (w**2 + 1) * (3 * w**2 - 2), "elliptic A derivative")
+gate(dC0 == 2 * y * (w**2 + 1) * (5 * w**2 - 2), "elliptic C derivative")
+
+critical_groebner = sp.groebner(
+    [elliptic_relation, dA0, dC0], y, w, order="lex"
+)
+gate(
+    all(
+        sp.expand(actual.as_expr() - expected) == 0
+        for actual, expected in zip(
+            critical_groebner.polys,
+            [y**2 + 2 * w, y * (w**2 + 1), w * (w**2 + 1)],
+            strict=True,
+        )
+    ),
+    "complete critical-address support",
+)
+
+d2A0, d2C0 = tangent_derivative(dA0), tangent_derivative(dC0)
+d3A0, d3C0 = tangent_derivative(d2A0), tangent_derivative(d2C0)
+cusp_determinant = sp.factor(
+    reduce_on_elliptic(d2A0 * d3C0 - d2C0 * d3A0)
+)
+gate(cusp_determinant.subs(w, 0) == -48, "origin address is A2")
+gate(
+    sp.rem(cusp_determinant, w**2 + 1, domain=sp.QQ) == 12288,
+    "four external critical addresses are A2",
+)
+
+# The origin fibre has the three one-sign addresses w=0,+/-1 and the four
+# two-sign addresses w^2=-2.  The inverse formulas fail only on this fibre
+# and on the four external cusp addresses w^2=-1.
+origin_w_polynomial = w * (w**2 - 1) * (w**2 + 2)
+gate(sp.discriminant(origin_w_polynomial, w) != 0, "origin w-addresses are reduced")
+zero(C0 - origin_w_polynomial, "origin C fibre factor")
+zero(A0 - w * y * (w**2 + 2), "origin A fibre factor")
+gate(
+    sp.rem(w * (w**2 - 1) + 3 * w, w**2 + 2, domain=sp.QQ) == 0,
+    "w^2=-2 addresses have y^2=-3w",
+)
+gate(sp.factor(R_on_E + 1) == (w**2 + 1) ** 2, "inverse critical denominator")
+inverse_bad_support = sp.factor(
+    w * (w**2 - 1) * (w**2 + 1) * (w**2 + 2)
+)
+gate(sp.discriminant(inverse_bad_support, w) != 0, "inverse bad w-support is reduced")
+gate(
+    sp.rem(C0 + 2 * w, w**2 + 1, domain=sp.QQ) == 0,
+    "external cusp target recovers w",
+)
+external_A_square = reduce_on_elliptic(A0**2 - 2 * w)
+gate(
+    sp.rem(external_A_square, w**2 + 1, domain=sp.QQ) == 0,
+    "external cusp target separates the y signs",
+)
+gate(36 - 1 - 4 == 31, "decic genus ledger gives origin delta 31")
+
 # Pole orders at the elliptic origin O are ord_O(w)=-2, ord_O(y)=-3.
 # Hence C has pole ten and A pole nine: the unique infinity place is smooth.
 gate(2 * 5 == 10, "C pole order at elliptic infinity")
@@ -153,6 +233,7 @@ semantic = {
     "index": "common-zero therefore globally nonmonogenic",
     "discriminant": "irreducible one-smooth-place decic",
     "normalization": "elliptic y^2=w(w^2-1) minus O",
+    "singularities": "origin has seven addresses and delta 31; four external A2 cusps",
     "boundary_snf": [1, 9],
     "resolvent": "nonzero class-group three-torsion forced by S3 closure",
     "failure": "elliptic Jelonek component is not polynomially uniruled",
@@ -167,6 +248,7 @@ print("binary_cubic=(AU+CV)^3+C(AU+CV)U^2+A^2V^3")
 print("order=normal_nonmonogenic_S3;coefficient_depth=3")
 print("branch=irreducible_decic;infinity=one_smooth_place")
 print("normalization=elliptic_y2=w(w2-1)_minus_O")
+print("singularities=origin_7_addresses_delta31_plus_4A2")
 print("quadratic_resolvent_units=kstar;class_group_3_torsion=NONZERO")
 print("split_boundary_snf=1,9")
 print("plane_atlas=EMPTY_BY_POLYNOMIAL_UNIRULEDNESS")
