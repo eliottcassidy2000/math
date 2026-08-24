@@ -1,43 +1,48 @@
 ---
 id: THM-3944
-title: "Repeated-factor double-torus one-place escape pays square-conductor and character collapse"
+title: "Repeated-factor double-torus one-place escape pays square-conductor and a rank-one boundary character"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  PROVED + VERIFIED-EXACT + CORRECTED AFTER INDEPENDENT HOSTILE RE-AUDIT.
   The cheapest internal factor split left open by THM-3942 sets
   p1-p0=G^2 and assigns one copy of G to each complementary cube factor.
   It produces a smooth one-place parabola, but the common discriminant is
   -P^2(4P+3G^2): the extra line is even and the quadratic order is nonnormal.
   Its integral closure is A2, with conductor (P,W), scalar units, trivial
-  class group, and no smooth-locus cubic character.  More sharply, one
-  Cardano radicand becomes an exact cube and its depressed cubic splits,
-  while the other remains a noncube only by ramifying with residues 2 and 1
-  along two regular conductor-preimage lines.  Thus this repeated-factor
-  construction buys one infinity place precisely by destroying both usable
-  Cardano directions.
+  class group, and no cubic character extending across the conductor.  One
+  Cardano radicand becomes an exact cube and its depressed cubic splits.  The
+  other is a genuine nontrivial etale mu_3-torsor on the original order's
+  regular locus Gm^2, with boundary vector (2,1), but ramifies along the two
+  conductor-preimage lines on A2.  Thus the construction buys one infinity
+  place at the price of nonnormality and drops the displayed Cardano rank
+  from two to one, not to zero.
 source: jc-degree6-place / nonlinear internal-split successor to THM-3942, 2026-08-24
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (jc_zero_debt_lift, 2026-08-24). The audit
+  CORRECTED INDEPENDENT HOSTILE RE-AUDIT (jc-cohn3709 and
+  jc_zero_debt_lift, 2026-08-24). The initial promotion correctly checked
   independently checked the Gauss/UFD domain argument; the finite same-field
   polynomial normalization; the exact module quotient and conductor; the
   reduced one-place parabola versus full nonreduced branch scope; both cube
   factorizations and the split cubic; and the two regular-prime ramification
-  residues of the noncube radicand. Normal and optimized runs byte-match the
-  frozen output, all hashes agree, CHECKS=33, and documentation passes. The
-  theorem remains deliberately scoped to the displayed balanced split.
+  residues of the noncube radicand. It incorrectly identified regularity on
+  the normalization A2 with the smooth locus of the original nonnormal
+  order. Re-audit proves B0_reg=D(P)=Gm^2 and recovers the nontrivial boundary
+  class (2,1); see MISTAKE-466. Normal and optimized runs byte-match the
+  repaired frozen output, and the theorem remains scoped to the displayed
+  balanced split.
 depends_on: []
 related:
   - THM-3942-affine-linear-double-torus-factor-split-one-place-obstruction
 script: 04-computation/jc2_repeated_factor_double_torus_square_conductor_thm3944.py
 output: 05-knowledge/results/jc2_repeated_factor_double_torus_square_conductor_thm3944.out
-script_sha256: b8b8c5016a7d0253eb07339926cf6a417b465eebd3c31f5ecbec3272b79cdf94
-output_sha256: ca047b93aa1f336c3b922d03cd9dd79d7e7b0074a83684fc0fdae4bad25d06ed
-semantic_sha256: 1a77f893dad44f21bb3df00708d50a3ccf933f310481cbed507dd6ef1b557af0
+script_sha256: 3698b325ff185a5d98e4edcafcadcad86977b1b4a41edcc6dc18c85146246585
+output_sha256: 23d9f389f96dd5f2839c61b49bda5e2b6666f30329ab664b3d85c67ab3a62fdf
+semantic_sha256: a93d0aa73a1c95e5e3a04ec1833ff337f3b52294bcebe5145ae62f184edb8d92
 hash_basis: raw LF bytes
 ---
 
 # THM-3944 -- the first internal split trades ends for conductor debt
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + CORRECTED AFTER INDEPENDENT HOSTILE RE-AUDIT.**
 Work over an algebraically closed field `k` of characteristic zero.  Choose
 `omega^2+omega+1=0`, put
 
@@ -96,7 +101,27 @@ Thus `Spec(B)=A2`, so
 B^*=k^*,              Cl(B)=0,              H^1_et(Spec(B),mu_3)=0. (8)
 ```
 
-The two apparent Cardano directions collapse by different mechanisms.  After
+This statement concerns the **full normalization**.  The original order has
+
+```text
+Sing(Spec(B_0))=V(P,W),
+U_0=Spec(B_0)_reg=Spec(B_0[P^-1])
+   ~=Spec(B[P^-1])~=Gm^2.                              (8a)
+```
+
+Indeed, with
+
+```text
+l_+=V+delta G,             l_-=V-delta G,
+P=-l_+l_-/4,                                           (8b)
+```
+
+one has `B[P^-1]=k[l_+^{+-1},l_-^{+-1}]`.  Hence
+`H^1_et(U_0,mu_3)~=(Z/3)^2`; conductor-supported Kummer characters can exist
+on the nonnormal order's smooth locus even though none extends over `A2`.
+
+The two apparent Cardano directions drop from rank two to rank one on `U_0`
+and to rank zero after extension across the conductor.  After
 `W=PV` and the substitution in `(6)`,
 
 ```text
@@ -108,17 +133,24 @@ q_1-W= +(V-G)^3/4.                                     (10)
 ```
 
 Because constants are cubes in `k`, `(10)` is the trivial Kummer class.  The
-other radicand is not a cube, but its height-one valuations on the smooth
-surface `A2_{G,V}` are `2` and `1` along the two lines
+other radicand is not a cube.  On `U_0`, it is the unit
+
+```text
+q_0+W=-l_+^2 l_-/4,                                    (10a)
+```
+
+and therefore defines the nonzero etale Kummer class `(2,1)` in
+`H^1_et(U_0,mu_3)`.  On the full smooth surface `A2_{G,V}`, its height-one
+valuations are `2` and `1` along the two boundary lines
 
 ```text
 V+delta G=0,                         V-delta G=0.        (11)
 ```
 
-Consequently its cube-root cover is ramified on the regular locus.  It is not
-a quasi-etale or smooth-locus `C3` character.  This distinction is essential:
-the failure is stronger and more precise than merely observing that `(9)` is
-not a cube.
+Consequently its cube-root cover ramifies when extended across the conductor
+to `A2`.  It is not a class in `H^1_et(A2,mu_3)`, but it **is** a genuine
+smooth-locus character of `B_0`.  This conductor-extension distinction is
+essential and was missed in the theorem's first promoted version.
 
 The result is a sharp near miss, not a counterexample construction.  It
 classifies the balanced internal split of one repeated factor.  It does not
@@ -231,7 +263,7 @@ Its Jacobian is `-V/2`; the ramification line `V=0` maps isomorphically to
 the one-place parabola `(4)`.  The doubled conductor line `P=0` pulls back to
 the two distinct regular lines `(11)`.
 
-## 4. One character is trivial and the other is ramified
+## 4. One character is trivial; one survives only off the conductor
 
 Equations `(9)-(10)` are direct substitutions.  They also preserve the norm
 identities
@@ -252,7 +284,7 @@ F_1(T)=(T+G)
 So this apparent second torus presentation supplies no cyclic field extension
 at all after passage to the maximal quadratic order.
 
-For `i=0`, equation `(9)` gives the divisor
+For `i=0`, equation `(9)` gives on `A2` the divisor
 
 ```text
 div(q_0+W)=2[V+delta G]+[V-delta G].                    (24)
@@ -265,12 +297,21 @@ element of `H^1_et(Spec(B),mu_3)`.  Independently, `(8)` says this cohomology
 group is zero: the units are `k^*=(k^*)^3` and `Pic(A2)=0` in the Kummer
 sequence.
 
+However, both lines are precisely the preimage of the singular conductor
+removed in `(8a)`.  On `U_0~=Gm^2`, `(10a)` is a unit whose exponent vector
+is `(2,1)` modulo three.  Thus it gives a nontrivial finite-etale `mu_3`
+torsor there.  The two displayed Cardano directions have exact ranks
+
+```text
+rank on Spec(B_0)_reg = 1,       rank extending over Spec(B) = 0.  (24a)
+```
+
 This separates three notions that are easy to conflate:
 
 ```text
 not a cube                         -- true for q_0+W;
-unramified Kummer class            -- false by (24);
-smooth-locus cubic character       -- impossible by (8).                (25)
+class on the nonnormal smooth locus-- true, vector (2,1) by (10a);
+extension over the normalization  -- false by (24) and (8).             (25)
 ```
 
 ## 5. Reproduction and next escape coordinate
@@ -285,14 +326,15 @@ python3 -O 04-computation/jc2_repeated_factor_double_torus_square_conductor_thm3
 The companion verifies both internal factor rows, both common-discriminant
 and cubic-discriminant identities, the one-place projective branch ledger,
 the normalization and module-index formulas, the conductor preimage and
-ramification Jacobian, all four radicand factorizations and valuation residues,
-and the complete splitting of `F_1`.
+ramification Jacobian, the exact singular locus, the `Gm^2` conductor
+complement, all four radicand factorizations and valuation residues, the
+surviving `(2,1)` boundary class, and the complete splitting of `F_1`.
 
 The next live split is consequently not another balanced square.  It is an
 **unequal internal factorization** `p_1-p_0=FG` with `F,G` coprime, or a split
 distributed across more than one `L_i`, subject simultaneously to three gates:
 
 1. the squarefree part of `H` must remain an irreducible one-place curve;
-2. the normalized quadratic cover must retain a nontrivial unramified
-   three-class rather than becoming factorial; and
+2. a conductor-supported smooth-locus class must extend across the normalized
+   quadratic cover rather than ramify at its missing divisors; and
 3. the two Cardano radicands must remain independent after conductor removal.

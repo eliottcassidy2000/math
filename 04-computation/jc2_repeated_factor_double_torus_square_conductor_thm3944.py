@@ -104,6 +104,15 @@ gate(sp.expand(Pnorm + (V**2 + 3 * G**2) / 4) == 0,
 gate(sp.expand(sp.expand((P * V) ** 2 - expected_H).subs(V**2, -L)) == 0,
      "W=P*V recovers the nonnormal quadratic order")
 
+# The original order is singular exactly on its conductor line P=W=0.
+order_equation = W**2 + P**2 * L
+gate(sp.diff(order_equation, W) == 2 * W,
+     "quadratic-order W derivative")
+gate(sp.factor(sp.diff(order_equation, G)) == 6 * P**2 * G,
+     "quadratic-order G derivative")
+gate(sp.factor(sp.diff(order_equation, P)) == 6 * P * (2 * P + G**2),
+     "quadratic-order P derivative")
+
 # As R=k[P,G] modules, B=R+R*V and B0=R+R*(P*V); hence B/B0=(R/P)*V
 # and the conductor is P*B=(P,W).  These exact coefficient matrices freeze
 # the index rather than attempting to encode module theory in SymPy.
@@ -113,6 +122,15 @@ dzero(Pnorm.subs(V, d * G),
       "first normalization line lies over the conductor")
 dzero(Pnorm.subs(V, -d * G),
       "second normalization line lies over the conductor")
+
+# Removing the singular conductor from B0 removes both of its preimage lines
+# from B=A2.  In l_+=V+dG,l_-=V-dG coordinates the regular locus is Gm^2.
+lplus = V + d * G
+lminus = V - d * G
+dzero(Pnorm + lplus * lminus / 4,
+      "conductor product in the two line coordinates")
+gate(sp.det(sp.Matrix([[1, d], [1, -d]])) == -2 * d,
+     "conductor line coordinates are independent")
 
 # The normalized double-cover map is (G,V)->(Pnorm,G).  Its Jacobian is -V/2,
 # and V=0 maps exactly to the one-place parabola L=0.
@@ -149,6 +167,12 @@ gate(sp.expand(f1_minus - (V - G) ** 3 / 4) == 0,
 gate((2 % 3, 1 % 3) == (2, 1), "first radicand ramification residues")
 gate((3 % 3, 0) == (0, 0), "second radicand cube residues")
 
+# On B0_reg=D(P)=Spec k[l_+^{+-1},l_-^{+-1}], both l_+ and l_- are units.
+# Thus q0+W is a genuine nontrivial etale Kummer class with exponent (2,1).
+# It fails only to extend across the conductor to the full normalization A2.
+gate((2 % 3, 1 % 3) != (0, 0),
+     "first radicand survives on the nonnormal order regular locus")
+
 # The second depressed cubic actually splits over k[G,V].
 r0 = -G
 r1 = (G - d * V) / 2
@@ -169,11 +193,12 @@ summary = {
     "identity": "p1=p0+G^2 balanced internal split",
     "discriminant": "-P^2(4P+3G^2)",
     "reduced_nonlinear_branch": "smooth A1 parabola with one infinity place",
-    "quadratic_order": "nonnormal; conductor (P,W); quotient (R/P)V",
+    "quadratic_order": "nonnormal; reg=Gm2; conductor (P,W); quotient (R/P)V",
     "normalization": "k[G,V] = A2",
-    "first_cardano": "noncube but ramified with residues (2,1)",
+    "first_cardano": "etale on B0_reg with class (2,1); no extension to A2",
     "second_cardano": "exact cube; depressed cubic splits",
-    "smooth_locus_c3_characters": 0,
+    "displayed_smooth_locus_cardano_rank": 1,
+    "normalization_c3_characters": 0,
 }
 semantic = hashlib.sha256(json.dumps(summary, sort_keys=True).encode()).hexdigest()
 
@@ -181,9 +206,9 @@ print("THM-3944 repeated-factor double-torus square-conductor companion")
 print(f"CHECKS={CHECKS}")
 print("COMMON_H=-P^2(4P+3G^2)")
 print("NONLINEAR_REDUCED_BRANCH=A1;INFINITY_PLACES=1")
-print("QUADRATIC_ORDER=NONNORMAL;CONDUCTOR=(P,W);INDEX_SUPPORT=P=0")
+print("QUADRATIC_ORDER=NONNORMAL;REGULAR_LOCUS=Gm2;CONDUCTOR=(P,W)")
 print("NORMALIZATION=k[G,V]=A2;UNITS=k*;CL=0;H1_MU3=0")
-print("CARDANO_0=RAMIFIED_ON_V+/-delta*G;VALUATIONS=2,1")
+print("CARDANO_0=ETALE_ON_B0_REG;CLASS=(2,1);NO_EXTENSION_TO_A2")
 print("CARDANO_1=EXACT_CUBE;CUBIC=SPLIT")
-print("MECHANISM=ONE_PLACE_GAIN_IS_PAID_BY_SQUARE_CONDUCTOR_AND_CHARACTER_COLLAPSE")
+print("MECHANISM=ONE_PLACE_GAIN_PAYS_SQUARE_CONDUCTOR;CARDANO_RANK_DROPS_TO_ONE")
 print(f"SEMANTIC_SHA256={semantic}")
