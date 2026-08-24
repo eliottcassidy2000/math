@@ -356,8 +356,11 @@ Format per entry:
   reservation then occupied that identifier, forcing another atomic move to
   freshly checked `THM-3975`. A Danielewski one-arm modification reservation
   then occupied that identifier, forcing another atomic move to freshly
-  checked `THM-3976`. The hash-bearing LRC companions and mathematical scope
-  did not change.
+  checked `THM-3976`. A rational-compression quotient reservation then
+  occupied that identifier. To end the collision loop, the LRC theorem moved
+  atomically to freshly remote-checked `THM-4000`; the intervening IDs remain
+  available for the active JC sequence. The hash-bearing LRC companions and
+  mathematical scope did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
   only before empty reservations; rename the whole artifact family together.
