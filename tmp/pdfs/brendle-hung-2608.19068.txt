@@ -1,0 +1,1851 @@
+                                               A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL
+                                                                 CURVATURE
+
+                                                                 SIMON BRENDLE AND PEI-KEN HUNG
+
+
+                                                   Abstract. We construct a metric on S 2 × S 2 with positive sectional
+
+
+
+
+arXiv:2608.19068v1 [math.DG] 19 Aug 2026
+                                                   curvature. Starting from the standard metric on S 2 ×S 2 , we first perform
+                                                   a Cheeger deformation. The resulting metric has nonnegative sectional
+                                                   curvature. We refer to it as a Cheeger-Müter metric. We then consider
+                                                   a suitable third order perturbation of this Cheeger-Müter metric and
+                                                   show that the perturbed metrics have positive sectional curvature.
+                                                      The proof requires various calculations, some of which have been
+                                                   carried out with the help of MATHEMATICA. The MATHEMATICA
+                                                   code is attached to this submission.
+
+
+
+
+                                                                            1. Introduction
+                                              A central topic in differential geometry is to understand the interplay be-
+                                           tween curvature and topology of Riemannian manifolds. A natural question
+                                           is which manifolds admit metrics of positive sectional curvature. The three-
+                                           dimensional case is well understood by the famous work of Hamilton [4].
+                                           Hamilton showed that a three-manifold that admits a metric of positive sec-
+                                           tional curvature is diffeomorphic to a quotient of S 3 by standard isometries.
+                                           Hsiang and Kleiner [5] studied four-manifolds with positive sectional cur-
+                                           vature and continuous symmetries. They showed that a four-manifold with
+                                           positive sectional curvature that admits a non-trivial Killing vector field
+                                           must be homeomorphic to S 4 or CP2 . In particular, a metric on S 2 × S 2
+                                           that admits a non-trivial Killing vector field cannot have positive sectional
+                                           curvature.
+                                              The following is the main result of this paper.
+                                           Theorem 1.1. There exists a metric on S 2 × S 2 with positive sectional
+                                           curvature.
+                                              In a fundamental paper, Cheeger [3] introduced new tools for constructing
+                                           metrics with nonnegative sectional curvature via group actions. In particu-
+                                           lar, Cheeger’s construction gives non-trivial examples of metrics on S 2 × S 2
+                                           with nonnegative sectional curvature (see also [1]). The resulting metrics
+                                           were studied further by Müter [6]. We refer to them as Cheeger-Müter
+
+                                              The first author was supported by the National Science Foundation under grant DMS-
+                                           2403981 and by the Simons Foundation. He acknowledges the hospitality of Tübingen
+                                           University, where part of this work was carried out.
+                                                                                       1
+2                     SIMON BRENDLE AND PEI-KEN HUNG
+
+
+metrics. To fix notation, we put M = S 2 × S 2 . We denote by
+                     ∆+ = {(p1 , p2 ) ∈ S 2 × S 2 : p1 = p2 }
+the diagonal, and by
+                    ∆− = {(p1 , p2 ) ∈ S 2 × S 2 : p1 = −p2 }
+the anti-diagonal. Moreover, we define
+       Mgeneric = M \ (∆+ ∪ ∆− ) = {(p1 , p2 ) ∈ S 2 × S 2 : p1 ̸= ±p2 }.
+The Cheeger-Müter metrics have the important property that, at each point
+in Mgeneric , there is exactly one two-plane with zero sectional curvature, and
+all other two-planes have strictly positive sectional curvature.
+   In the next step, we fix a Cheeger-Müter metric, and consider a small
+perturbation of the metric. We construct a third order perturbation of the
+metric of the form
+                       g̃s = g + s h(1) + s2 h(2) + s3 h(3) .
+Here, g denotes a Cheeger-Müter metric, h(1) , h(2) , h(3) are symmetric (0, 2)-
+tensors on S 2 × S 2 , and s is a positive real number.
+   Let us fix a point in Mgeneric . For each s, we consider the minimum sec-
+tional curvature of the metric g̃s at the given point, where the minimum is
+taken over all two-planes at the given point. We show that the first varia-
+tion of the minimum sectional curvature is equal to 0. Moreover, we show
+that the second variation of the minimum sectional curvature is nonnegative
+everywhere and is strictly positive away from a special 2D torus. Finally,
+we show that, along this special torus, the third variation of the sectional
+curvature is equal to a non-zero constant µ.
+   We now distinguish two cases, depending on the sign of µ. If µ is positive,
+then the minimum sectional curvature of the metric g̃s at any given point
+in Mgeneric is strictly positive if s > 0 is sufficiently small. Similarly, if µ
+is negative, then the minimum sectional curvature of the metric g̃s at any
+given point in Mgeneric is strictly positive if −s > 0 is sufficiently small. In
+order to analyze the behavior near ∆+ and ∆− , we argue by continuity,
+exploiting the fact that Mgeneric is a dense subset of M . This step requires
+additional arguments (see Section 2).
+   Finally, we note that perturbations of product metrics were studied in the
+work of Bourguignon, Deschamps, and Sentenac [2].
+
+                        2. An abstract framework
+  Let m and n be positive integers. For each r > 0, we denote by Brm the
+open ball of radius r in Rm . Similarly, we denote by Brn the open ball of
+radius r in Rn .
+  Let r0 and s0 be positive real numbers, and let u : B̄rm0 ×B̄rn0 ×[−s0 , s0 ] → R
+be a smooth function. We assume that u(0) , u(1) , u(2) , u(3) : B̄rm0 × B̄rn0 → R
+         A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                            3
+
+
+are smooth functions such that
+ u(x, w, s) = u(0) (x, w) + s u(1) (x, w) + s2 u(2) (x, w) + s3 u(3) (x, w) + O(s4 )
+
+for x ∈ B̄rm0 , w ∈ B̄rn0 , and s ∈ [−s0 , s0 ]. We assume that the function u(0)
+satisfies u(0) (x, 0) = 0 and u(0) (x, w) ≥ σ ((w1 )2 +. . .+(wn )2 ) for all x ∈ B̄rm0
+and w ∈ B̄rn0 , where σ is a positive constant. In particular, for each point
+                        (0)                                            (0)
+x ∈ B̄rm0 , we have uwα (x, 0) = 0 and the matrix {uwα wβ (x, 0) : 1 ≤ α, β ≤
+n} is positive definite. Finally, we assume that the function u(1) satisfies
+u(1) (x, 0) = 0 for all x ∈ B̄rm0 .
+   For x ∈ B̄rm0 and s ∈ [−s0 , s0 ], we define
+                                U (x, s) = inf u(x, w, s).
+                                                w∈B̄rn0
+
+The function U is smooth if |s| is sufficiently small.
+  For each point x ∈ B̄rm0 , we define w̄(x) ∈ Rn by
+                        n
+                                (0)                             (1)
+                        X
+(1)                            uwα wβ (x, 0) w̄β (x) = −uwα (x, 0).
+                        β=1
+
+Moreover, for each point x ∈ B̄rm0 , we define
+                                                          n
+                      (2)             (2)            1 X (1)
+                  U         (x) = u         (x, 0) +    uwα (x, 0) w̄α (x)
+                                                     2
+                                                      α=1
+
+and
+                              n                                  n
+                              X       (2)                     1 X (1)
+U (3) (x) = u(3) (x, 0) +           uwα (x, 0) w̄α (x) +         uwα wβ (x, 0) w̄α (x) w̄β (x)
+                                                              2
+                              α=1                              α,β=1
+             n
+           1 X (0)
+         +     uwα wβ wγ (x, 0) w̄α (x) w̄β (x) w̄γ (x).
+           6
+              α,β,γ=1
+
+Lemma 2.1. The function U satisfies the asymptotic expansion
+
+                    U (x, s) = s2 U (2) (x) + s3 U (3) (x) + O(s4 )
+for |s| sufficiently small.
+  Proof. Throughout the proof, we assume that |s| is sufficiently small.
+By the implicit function theorem, we can find a smooth function w∗ (x, s)
+such that
+                                uwα (x, w, s) w=w∗ (x,s) = 0
+and
+                        w∗ (x, s) = s w̄(x) + s2 ŵ(x) + O(s3 ),
+4                            SIMON BRENDLE AND PEI-KEN HUNG
+
+
+where ŵ(x) ∈ Rn is defined by
+           n                                                         n
+                   (0)                      (2)                                (1)
+           X                                                         X
+                  uwα wβ (x, 0) ŵβ (x) = −uwα (x, 0) −                       uwα wβ (x, 0) w̄β (x)
+           β=1                                                       β=1
+                                                     n
+                                                 1   X        (0)
+                                            −                uwα wβ wγ (x, 0) w̄β (x) w̄γ (x).
+                                                 2
+                                                     β,γ=1
+
+With this understood,
+
+                      U (x, s) = inf u(x, w, s) = u(x, w∗ (x, s), s)
+                                       w∈B̄rn0
+
+
+if |s| is sufficiently small. Moreover,
+
+u(x, w∗ (x, s), s)
+                            n                                             n
+                            X         (1)                       1 2 X (0)
+= s2 u(2) (x, 0) + s2             uwα (x, 0) w̄α (x) +            s  uwα wβ (x, 0) w̄α (x) w̄β (x)
+                                                                2
+                            α=1                                       α,β=1
+                             n                                      n
+                                      (2)                                  (1)
+                            X                                       X
++ s3 u(3) (x, 0) + s3             uwα (x, 0) w̄α (x) + s3                 uwα (x, 0) ŵα (x)
+                            α=1                                     α=1
+           n                                                        n
+    1 3    X        (1)
+                                                                    X      (0)
++     s            uwα wβ (x, 0) w̄α (x) w̄β (x) + s3                     uwα wβ (x, 0) w̄α (x) ŵβ (x)
+    2
+          α,β=1                                                 α,β=1
+             n
+    1 3     X         (0)
++     s             uwα wβ wγ (x, 0) w̄α (x) w̄β (x) w̄γ (x) + O(s4 ).
+    6
+          α,β,γ=1
+
+
+Using (1), we obtain
+
+u(x, w∗ (x, s), s)
+                                  n
+    2     (2)           1 X (1)
+=s u            (x, 0) + s2 uwα (x, 0) w̄α (x)
+                        2
+                         α=1
+                       n                                 n
+                      X (2)                       1     X     (1)
++ s3 u(3) (x, 0) + s3      uwα (x, 0) w̄α (x) + s3           uwα wβ (x, 0) w̄α (x) w̄β (x)
+                                                  2
+                      α=1                              α,β=1
+           n
+  1      X (0)
++ s3            uwα wβ wγ (x, 0) w̄α (x) w̄β (x) w̄γ (x) + O(s4 ).
+  6
+       α,β,γ=1
+
+Putting these facts together, the assertion follows. This completes the proof
+of Lemma 2.1.
+        A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                                          5
+
+
+Lemma 2.2. We have
+
+                                                    n
+                     (2)           (2)                         (1)
+                                                    X
+                   Uxi (x) = uxi (x, 0) +                     uxi wα (x, 0) w̄α (x)
+                                                    α=1
+                                     n
+                               1     X       (0)
+                           +                uxi wα wβ (x, 0) w̄α (x) w̄β (x).
+                               2
+                                    α,β=1
+
+
+  Proof. Differentiating the identity (1) with respect to xi gives
+
+      n                                                                n
+             (0)                                   (1)                        (0)
+      X                                                                X
+(2)         uwα wβ (x, 0) ∂xi w̄β (x) = −uxi wα (x, 0) −                     uxi wα wβ (x, 0) w̄β (x).
+      β=1                                                              β=1
+
+
+
+Using (1) and (2), we obtain
+
+                                                          n
+                    (2)            (2)              1 X (1)
+                   Uxi (x) = uxi (x, 0) +              uxi wα (x, 0) w̄α (x)
+                                                    2
+                                                         α=1
+                                n
+                               1X          (1)
+                           +             uwα (x, 0) ∂xi w̄α (x)
+                               2
+                                   α=1
+                                                         n
+                              (2)         1              X       (1)
+                           = uxi (x, 0) +                      uxi wα (x, 0) w̄α (x)
+                                          2
+                                                         α=1
+                                 n
+                               1 X           (0)
+                           −               uwα wβ (x, 0) w̄β (x) ∂xi w̄α (x)
+                               2
+                                   α,β=1
+                                                    n
+                                   (2)                        (1)
+                                                    X
+                           = uxi (x, 0) +                 uxi wα (x, 0) w̄α (x)
+                                                    α=1
+                                 n
+                               1 X           (0)
+                           +               uxi wα wβ (x, 0) w̄α (x) w̄β (x).
+                               2
+                                   α,β=1
+
+
+
+This completes the proof of Lemma 2.2.
+
+   In the next step, we fix an open set Ω ⊂ Brm0 and a positive real number
+r1 ≤ r0 . Suppose that Υ : Ω × Brn1 → R is a positive smooth function.
+Suppose further that φ : Ω × Brn1 → Brm0 and ψ : Ω × Brn1 → Brn0 are smooth
+maps such that φ(y, 0) = y and ψ(y, 0) = 0 for each y ∈ Ω. Moreover, we
+assume that the matrix {ψzβα (y, 0) : 1 ≤ α, β ≤ n} is invertible for each
+point y ∈ Ω.
+6                              SIMON BRENDLE AND PEI-KEN HUNG
+
+
+    We define smooth functions v (0) , v (1) , v (2) , v (3) : Ω × Brn1 → R by
+                            v (0) (y, z) = Υ(y, z) u(0) (φ(y, z), ψ(y, z)),
+                            v (1) (y, z) = Υ(y, z) u(1) (φ(y, z), ψ(y, z)),
+                            v (2) (y, z) = Υ(y, z) u(2) (φ(y, z), ψ(y, z)),
+                            v (3) (y, z) = Υ(y, z) u(3) (φ(y, z), ψ(y, z))
+for y ∈ Ω and z ∈ Brn1 .
+                                                                              (0)
+Lemma 2.3. The function v (0) satisfies v (0) (y, 0) = 0, vz α (y, 0) = 0, and
+                                      n
+               (0)                                           (0)
+                                           Υ(y, 0) uwγ wδ (y, 0) ψzγα (y, 0) ψzδβ (y, 0)
+                                      X
+              vz α z β (y, 0) =
+                                   γ,δ=1
+
+for each point y ∈ Ω. Moreover, for each point y ∈ Ω, we have
+                              n
+      (0)                                             (0)
+                                      Υ(y, 0) uwδ wζ wη (y, 0) ψzδα (y, 0) ψzζβ (y, 0) ψzηγ (y, 0)
+                              X
+    vz α z β z γ (y, 0) =
+                            δ,ζ,η=1
+                       + Tαβγ + Tβγα + Tγαβ ,
+where
+                     n
+                                          (0)
+                            Υ(y, 0) uwδ wζ (y, 0) ψzδγ (y, 0) ψzζα z β (y, 0)
+                     X
+        Tαβγ =
+                    δ,ζ=1
+                     m X  n
+                                                (0)
+                                  Υ(y, 0) uxi wδ wζ (y, 0) φiz γ (y, 0) ψzδα (y, 0) ψzζβ (y, 0)
+                    X
+               +
+                     i=1 δ,ζ=1
+                       n
+                                            (0)
+                            Υz γ (y, 0) uwδ wζ (y, 0) ψzδα (y, 0) ψzζβ (y, 0).
+                      X
+               +
+                    δ,ζ=1
+
+   Proof. This follows from the chain rule, keeping in mind that u(0) (x, 0) =
+       (0)
+0 and uwα (x, 0) = 0 for all x.
+
+
+Lemma 2.4. The function v (1) satisfies v (1) (y, 0) = 0,
+                                            n
+                         (1)                                       (1)
+                                                  Υ(y, 0) uwβ (y, 0) ψzβα (y, 0)
+                                            X
+                        vz α (y, 0) =
+                                            β=1
+
+and
+                                   n
+              (1)                                           (1)
+                                          Υ(y, 0) uwγ wδ (y, 0) ψzγα (y, 0) ψzδβ (y, 0)
+                                   X
+            vz α z β (y, 0) =
+                                  γ,δ=1
+                                  n
+                                                       (1)
+                                        Υ(y, 0) uwγ (y, 0) ψzγα z β (y, 0) + Sαβ + Sβα
+                                  X
+                              +
+                                  γ=1
+         A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                                          7
+
+
+for each point y ∈ Ω, where
+                    m X n
+                                   (1)
+                          Υ(y, 0) uxi wγ (y, 0) φiz α (y, 0) ψzγβ (y, 0)
+                   X
+             Sαβ =
+                         i=1 γ=1
+                          n
+                                                (1)
+                               Υz α (y, 0) uwγ (y, 0) ψzγβ (y, 0).
+                         X
+                     +
+                         γ=1
+
+   Proof. This follows from the chain rule, keeping in mind that u(1) (x, 0) =
+0 for all x.
+
+
+Lemma 2.5. The function v (2) satisfies
+                                v (2) (y, 0) = Υ(y, 0) u(2) (y, 0)
+and
+                                         n
+                       (2)                                  (2)
+                                               Υ(y, 0) uwβ (y, 0) ψzβα (y, 0)
+                                         X
+                     vz α (y, 0) =
+                                         β=1
+                                         m
+                                                            (2)
+                                         X
+                                     +         Υ(y, 0) uxi (y, 0) φiz α (y, 0)
+                                         i=1
+                                     + Υz α (y, 0) u(2) (y, 0)
+for each point y ∈ Ω.
+  Proof. This follows from the chain rule.
+                                                                         (0)
+   It follows from Lemma 2.3 that the matrix {vz α z β (y, 0) : 1 ≤ α, β ≤ n}
+is positive definite for each point y ∈ Ω. For each point y ∈ Ω, we define
+z̄(y) ∈ Rn by
+                             n
+                                (0)                         (1)
+                             X
+(3)                            vz α z β (y, 0) z̄ β (y) = −vz α (y, 0)
+                             β=1
+
+Clearly, z̄ is a smooth function defined on Ω. For each point y ∈ Ω, we
+define
+                                         n
+                   (2)      (2)        1 X (1)
+                  V (y) = v (y, 0) +        vz α (y, 0) z̄ α (y)
+                                       2
+                                                           α=1
+and
+                                n                                      n
+                                X        (2)                      1 X (1)
+ V (3) (y) = v (3) (y, 0) +           vz α (y, 0) z̄ α (y) +          vz α z β (y, 0) z̄ α (y) z̄ β (y)
+                                                                  2
+                                α=1                                 α,β=1
+                   n
+              1    X         (0)
+          +                 vz α z β z γ (y, 0) z̄ α (y) z̄ β (y) z̄ γ (y).
+              6
+                  α,β,γ=1
+
+Note that V (2) and V (3) are smooth functions defined on Ω.
+8                      SIMON BRENDLE AND PEI-KEN HUNG
+
+
+Lemma 2.6. The function z̄ is related to the function w̄ by the formula
+                              n
+                              X
+                                    ψzαβ (y, 0) z̄ β (y) = w̄α (y)
+                              β=1
+
+for each point y ∈ Ω.
+    Proof. For each point y ∈ Ω, we compute
+               n
+                                     (0)
+                       Υ(y, 0) uwγ wδ (y, 0) ψzγα (y, 0) ψzδβ (y, 0) z̄ β (y)
+               X
+
+              β,γ,δ=1
+                    n
+                             (0)
+                   X
+              =             vz α z β (y, 0) z̄ β (y)
+                  β,γ,δ=1
+                     (1)
+              = −vz α (y, 0)
+                    n
+                                       (1)
+                           Υ(y, 0) uwγ (y, 0) ψzγα (y, 0)
+                    X
+              =−
+                  γ=1
+                  n
+                                      (0)
+                          Υ(y, 0) uwγ wδ (y, 0) ψzγα (y, 0) w̄δ (y).
+                  X
+              =
+                  γ,δ=1
+
+The first equality follows from Lemma 2.3. The second equality follows
+from (3). The third equality follows from Lemma 2.4. The fourth inequality
+follows from (1).
+   For each point y ∈ Ω, the matrix {ψzγα (y, 0) : 1 ≤ α, γ ≤ n} and the
+           (0)
+matrix {uwγ wδ (y, 0) : 1 ≤ γ, δ ≤ n} are invertible. Thus, we conclude that
+                              n
+                              X
+                                    ψzδβ (y, 0) z̄ β (y) = w̄δ (y)
+                              δ=1
+
+for each point y ∈ Ω. This completes the proof of Lemma 2.6.
+
+
+Lemma 2.7. We have V (2) (y) = Υ(y, 0) U (2) (y) for each point y ∈ Ω.
+    Proof. Using Lemma 2.4 and Lemma 2.6, we obtain
+              n                               n
+                     (1)                                        (1)
+              X                               X
+                    vz α (y, 0) z̄ α (y) =             Υ(y, 0) uwβ (y, 0) w̄β (y)
+              α=1                             β=1
+
+for each point y ∈ Ω. Using the definitions of U (2) and V (2) , we conclude
+that V (2) (y) = U (2) (y) for each point y ∈ Ω. This completes the proof of
+Lemma 2.7.
+          A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                                      9
+
+
+Lemma 2.8. We have
+                                                     m X
+                                                       n
+                                                                          (2)
+                                                     X
+         (3)                           (3)
+     V         (y) = Υ(y, 0) U               (y) +             Υ(y, 0) Uxi (y) φiz γ (y, 0) z̄ γ (y)
+                                                     i=1 γ=1
+                      n
+                      X
+                  +          Υz γ (y, 0) U (2) (y) z̄ γ (y)
+                      γ=1
+
+
+for each point y ∈ Ω.
+
+  Proof. Using Lemma 2.3 and Lemma 2.6, we obtain
+
+           n
+                      (0)
+           X
+                     vz α z β z γ (y, 0) z̄ α (y) z̄ β (y) z̄ γ (y)
+         α,β,γ=1
+               n
+                                       (0)
+              X
+         =              Υ(y, 0) uwδ wζ wη (y, 0) w̄δ (y) w̄ζ (y) w̄η (y)
+               δ,ζ,η=1
+                     n
+                                             (0)
+                             Υ(y, 0) uwδ wζ (y, 0) ψzζα z β (0) z̄ α (y) z̄ β (y) w̄δ (y)
+                    X
+         +3
+                α,β,δ,ζ=1
+                 m      n
+                                               (0)
+                X      X
+         +3                       Υ(y, 0) uxi wδ wζ (y, 0) φiz γ (y, 0) w̄δ (y) w̄ζ (y) z̄ γ (y)
+                i=1 γ,δ,ζ=1
+                  n
+                                             (0)
+                 X
+         +3               Υz γ (y, 0) uwδ wζ (y, 0) w̄δ (y) w̄ζ (y) z̄ γ (y)
+                γ,δ,ζ=1
+
+
+for each point y ∈ Ω. Moreover, Lemma 2.4 and Lemma 2.6 imply that
+
+                 n
+                            (1)
+                 X
+                         vz α z β (y, 0) z̄ α (y) z̄ β (y)
+                 α,β=1
+                     n
+                                             (1)
+                    X
+                 =           Υ(y, 0) uwγ wδ (y, 0) w̄γ (y) w̄δ (y)
+                     γ,δ=1
+                        n
+                                               (1)
+                                  Υ(y, 0) uwγ (y, 0) ψzγα z β (y, 0) z̄ α (y) z̄ β (y)
+                       X
+                 +
+                     α,β,γ=1
+                        m X  n
+                                                     (1)
+                       X
+                 +2                   Υ(y, 0) uxi wγ (y, 0) φiz α (y, 0) z̄ α (y) w̄γ (y)
+                       i=1 α,γ=1
+                         n
+                                                   (1)
+                        X
+                 +2               Υz α (y, 0) uwγ (y, 0) z̄ α (y) w̄γ (y)
+                       α,γ=1
+10                                  SIMON BRENDLE AND PEI-KEN HUNG
+
+
+for each point y ∈ Ω. Finally, using Lemma 2.5 and Lemma 2.6, we find
+                             n
+                                      (2)
+                             X
+                                     vz α (y, 0) z̄ α (y)
+                             α=1
+                                    n
+                                                      (2)
+                                    X
+                                =         Υ(y, 0) uwβ (y, 0) w̄β (y)
+                                    β=1
+                                    m X
+                                      n
+                                                            (2)
+                                    X
+                             +                Υ(y, 0) uxi (y, 0) φiz α (y, 0) z̄ α (y)
+                                    i=1 α=1
+                                    n
+                                    X
+                             +            Υz α (y, 0) u(2) (y, 0) z̄ α (y)
+                                    α=1
+
+for each point y ∈ Ω. Using the definitions of U (3) and V (3) together with
+the identity (1), we conclude that
+                                                    m X
+                                                      n
+                                                                           (2)
+                                                    X
+         (3)                          (3)
+     V         (y) = Υ(y, 0) U              (y) +               Υ(y, 0) uxi (y, 0) φiz γ (y, 0) z̄ γ (y)
+                                                    i=1 γ=1
+                      m      n
+                                                    (1)
+                      X      X
+                  +                  Υ(y, 0) uxi wα (y, 0) φiz γ (y, 0) w̄α (y) z̄ γ (y)
+                      i=1 α,γ=1
+                         m     n
+                      1 X     X                           (0)
+                  +                         Υ(y, 0) uxi wα wβ (y, 0) φiz γ (y, 0) w̄α (y) w̄β (y) z̄ γ (y)
+                      2
+                        i=1 α,β,γ=1
+                      n
+                      X
+                  +         Υz γ (y, 0) u(2) (y, 0) z̄ γ (y)
+                      γ=1
+                            n
+                      1 X              (1)
+                  +       Υz γ (y, 0) uwα (y, 0) w̄α (y) z̄ γ (y)
+                      2
+                          α,γ=1
+
+for each point y ∈ Ω. Using Lemma 2.2, it follows that
+                                                          m n
+                                                                                 (2)
+                                                          XX
+          V (3) (y) = Υ(y, 0) U (3) (y) +                           Υ(y, 0) Uxi (y) φiz γ (y, 0) z̄ γ (y)
+                                                          i=1 γ=1
+                           n
+                           X
+                      +          Υz γ (y, 0) U (2) (y) z̄ γ (y)
+                           γ=1
+
+for each point y ∈ Ω. This completes the proof of Lemma 2.8.
+
+
+Proposition 2.9. Let Λ be a subset of Ω with the property that V (2) = 0
+and dV (2) = 0 at each point in Λ. Then V (3) (y) = Υ(y, 0) U (3) (y) for each
+point y ∈ S. In particular, the function Υ(·, 0)−1 V (3) |Λ is the restriction of
+a smooth function on B̄rm0 .
+         A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE               11
+
+
+  Proof. It follows from Lemma 2.7 that U (2) = 0 and dU (2) = 0 at each
+point y ∈ S. The assertion follows now from Lemma 2.8.
+
+Corollary 2.10. Let ρ : B̄rm0 → R be a nonnegative continuous function.
+We assume that κ is a positive real number with the following properties:
+      • For each point y ∈ Ω, we have V (2) (y) ≥ κ Υ(y, 0) ρ(y).
+      • For each point y ∈ Ω ∩ {ρ = 0}, we have V (2) (y) = 0 and V (3) (y) ≥
+        κ Υ(y, 0).
+Let A ⊂ B̄rm0 be a compact set with the property that A is contained in the
+closure of Ω and A ∩ {ρ = 0} is contained in the closure of Ω ∩ {ρ = 0}.
+Then inf y∈A U (y, s) > 0 if s ∈ (0, s0 ] is sufficiently small.
+   Proof. Using Lemma 2.7, we obtain V (2) (y) = Υ(y, 0) U (2) (y) for each
+point y ∈ Ω. Since V (2) (y) ≥ κ Υ(y, 0) ρ(y) for each point y ∈ Ω, it follows
+that U (2) (y) ≥ κ ρ(y) for each point y ∈ Ω. Since U (2) and ρ are continuous
+functions on B̄rm0 and A is contained in the closure of Ω, we conclude that
+U (2) (y) ≥ κ ρ(y) for each point y ∈ A.
+   By assumption, V (2) is a nonnegative smooth function on Ω, and V (2) = 0
+at each point in Ω ∩ {ρ = 0}. Consequently, dV (2) = 0 at each point in
+Ω ∩ {ρ = 0}. Using Proposition 2.9, we obtain V (3) (y) = Υ(y, 0) U (3) (y)
+for each point y ∈ Ω ∩ {ρ = 0}. Since V (3) (y) ≥ κ Υ(y, 0) for each point
+y ∈ Ω ∩ {ρ = 0}, it follows that U (3) (y) ≥ κ for each point y ∈ Ω ∩ {ρ = 0}.
+Since U (3) is a continuous function on B̄rm0 and A ∩ {ρ = 0} is contained
+in the closure of Ω ∩ {ρ = 0}, we conclude that U (3) (y) ≥ κ for each point
+y ∈ A ∩ {ρ = 0}.
+   By continuity, we can find a positive real number ε such that U (3) (y) ≥ 21 κ
+for all y ∈ A ∩ {0 ≤ ρ ≤ ε}. Using Lemma 2.1, we obtain
+                   U (y, s) ≥ s2 U (2) (y) + s3 U (3) (y) − C s4
+                          ≥ s3 U (3) (y) − C s4
+                             1
+                          ≥ s3 κ − C s4
+                             2
+for all y ∈ A ∩ {0 ≤ ρ ≤ ε} and all s ∈ (0, s0 ]. Moreover, Lemma 2.1 gives
+                          U (y, s) ≥ s2 U (2) (y) − C s3
+                                  ≥ s2 κ ρ(y) − C s3
+                                  ≥ s2 κ ε − C s3
+for all y ∈ A \ {0 ≤ ρ ≤ ε} and all s ∈ (0, s0 ]. Thus,
+                                   n1                             o
+                inf U (y, s) ≥ min    s3 κ − C s4 , s2 κ ε − C s3
+               y∈A                  2
+for all s ∈ (0, s0 ]. This completes the proof of Corollary 2.10.
+12                     SIMON BRENDLE AND PEI-KEN HUNG
+
+
+  In the remainder of this section, we state two results that apply in the
+manifold setting.
+Theorem 2.11. Let N be a compact Riemannian manifold of dimension
+m + n, and let Z be a submanifold of N of dimension m. Let s0 be a positive
+real number, and let u : N ×[−s0 , s0 ] → R be a smooth function. We assume
+that
+                u(·, s) = u(0) + s u(1) + s2 u(2) + s3 u(3) + O(s4 ),
+where u(0) , u(1) , u(2) , u(3) : N → R are smooth functions. We assume that
+u(0) |Z = 0 and u(0) ≥ σ d(·, Z)2 at each point in N , where σ is a positive
+constant. Moreover, we assume that u(1) |Z = 0.
+   Let Ω be an open subset of Z and let r be a positive real number. Suppose
+that Υ : Ω × Brn → R is a positive smooth function. Moreover, suppose that
+Φ : Ω × Brn → N is a smooth map with the property that Φ(y, 0) = y for each
+point y ∈ Ω, and the differential DΦ(y,0) : Ty Z × Rn → Ty N is invertible for
+each point y ∈ Ω. We define smooth functions v (0) , v (1) , v (2) , v (3) : Ω × Brn →
+R by
+
+                                v (0) = Υ (u(0) ◦ Φ),
+                                v (1) = Υ (u(1) ◦ Φ),
+                                v (2) = Υ (u(2) ◦ Φ),
+                                v (3) = Υ (u(3) ◦ Φ).
+
+Let V (2) : Ω → R and V (3) : Ω → R be defined as above. Let Λ be a subset of
+Ω with the property that V (2) = 0 and dV (2) = 0 at each point in Λ. Then
+the function Υ(·, 0)−1 V (3) |Λ is the restriction of a smooth function on Z.
+     Proof. We cover Z by small balls and apply Proposition 2.9 on each ball.
+
+
+Theorem 2.12. Let N be a compact Riemannian manifold of dimension
+m + n, and let Z be a submanifold of N of dimension m. Let s0 be a positive
+real number, and let u : N ×[−s0 , s0 ] → R be a smooth function. We assume
+that
+                u(·, s) = u(0) + s u(1) + s2 u(2) + s3 u(3) + O(s4 ),
+where u(0) , u(1) , u(2) , u(3) : N → R are smooth functions. We assume that
+u(0) |Z = 0 and u(0) ≥ σ d(·, Z)2 at each point in N , where σ is a positive
+constant. Moreover, we assume that u(1) |Z = 0.
+   Let Ω be an open subset of Z and let r be a positive real number. Suppose
+that Υ : Ω × Brn → R is a positive smooth function. Moreover, suppose that
+Φ : Ω × Brn → N is a smooth map with the property that Φ(y, 0) = y for each
+point y ∈ Ω, and the differential DΦ(y,0) : Ty Z × Rn → Ty N is invertible for
+each point y ∈ Ω. We define smooth functions v (0) , v (1) , v (2) , v (3) : Ω × Brn →
+         A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                   13
+
+
+R by
+                                v (0) = Υ (u(0) ◦ Φ),
+                                v (1) = Υ (u(1) ◦ Φ),
+                                v (2) = Υ (u(2) ◦ Φ),
+                                v (3) = Υ (u(3) ◦ Φ).
+
+Let V (2) : Ω → R and V (3) : Ω → R be defined as above. Let ρ : Z → R
+be a nonnegative continuous function. We assume that κ is a positive real
+number with the following properties:
+       • For each point y ∈ Ω, we have V (2) (y) ≥ κ Υ(y, 0) ρ(y).
+       • For each point y ∈ Ω ∩ {ρ = 0}, we have V (2) (y) = 0 and V (3) (y) ≥
+         κ Υ(y, 0).
+Finally, we assume that Ω is dense in Z and Ω∩{ρ = 0} is dense in {ρ = 0}.
+Then inf N u(·, s) > 0 if s ∈ (0, s0 ] is sufficiently small.
+  Proof. We cover Z by small balls and apply Corollary 2.10 on each ball.
+
+
+
+                      3. The Cheeger-Müter metric
+   Let M = S 2 × S 2 . This section computes the Cheeger-Müter metric g on
+M , which serves as the background metric of our construction.
+   For a vector ω ∈ R3 , we denote by Ku and Ju the vector fields on M
+given at the point p = (p1 , p2 ) by
+                Kω = (ω ∧ p1 , ω ∧ p2 ), Jω = (ω ∧ p1 , −ω ∧ p2 ).
+More generally, if ω̃ is an R3 -valued function defined on an open subset U
+of M , let Kω̃ denote the vector field on U given at the point p = (p1 , p2 ) by
+                           Kω̃ = (ω̃(p) ∧ p1 , ω̃(p) ∧ p2 ).
+As above, we define Mgeneric = M \ (∆+ ∪ ∆− ). We next explain how
+Mgeneric can be identified with SO(3) × (0, π2 ). It is convenient first to fix
+some notation for SO(3). We view SO(3) as the group of orthogonal 3 × 3
+matrices with determinant 1. Each element q of SO(3) can be written as
+q = (q1 , q2 , q3 ), where q1 , q2 , q3 form an orthonormal basis of R3 that satisfies
+q1 ∧ q2 = q3 . For i = 1, 2, 3, let Ei be the left-invariant vector field on SO(3)
+characterized by
+                                              3
+                                              X
+                                      Ei qj =    εijk qk ,
+                                          k=1
+
+where εijk is the totally antisymmetric symbol with ε123 = 1. Let σ i , i =
+1, 2, 3 be the left-invariant one-forms dual to E1 , E2 , and E3 .
+14                     SIMON BRENDLE AND PEI-KEN HUNG
+
+
+   With this notation in place, the identification of Mgeneric with SO(3) ×
+(0, π2 ) is given by (p1 , p2 ) 7→ (q1 , q2 , q3 , θ), where
+            p1 + p2           p2 − p1           p1 ∧ p 2       1
+(4) q1 =              , q2 =            , q3 =            , θ = arccos(⟨p1 , p2 ⟩).
+           |p1 + p2 |        |p2 − p1 |        |p1 ∧ p2 |      2
+Under this identification, Ei and σ i can be viewed as vector fields and one-
+forms on Mgeneric . Explicitly,
+                    Ei = (qi ∧ p1 , qi ∧ p2 ) = Kqi , i = 1, 2, 3,
+and
+                        ∂θ = (−q3 ∧ p1 , q3 ∧ p2 ) = −Jq3 .
+Using p1 = cos θq1 − sin θq2 and p2 = cos θq1 + sin θq2 , these vector fields
+take the form
+                 E1 =(− sin θq3 , sin θq3 ),
+                 E2 =(− cos θq3 , − cos θq3 ),
+                 E3 =(sin θq1 + cos θq2 , − sin θq1 + cos θq2 ),
+                  ∂θ =(− sin θq1 − cos θq2 , − sin θq1 + cos θq2 ).
+Let gstd be the standard product metric on M , with each factor having
+Gauss curvature one. The above expressions give
+      gstd = 2(sin θ)2 σ 1 ⊗ σ 1 + 2(cos θ)2 σ 2 ⊗ σ 2 + 2σ 3 ⊗ σ 3 + 2dθ ⊗ dθ.
+   The Cheeger-Müter metric can now be computed in the coordinates given
+by (4). Consider the diagonal action of SO(3) on M = S 2 × S 2 . The
+Lie algebra so(3) is identified with R3 so that, for ω ∈ so(3) ∼  = R3 , the
+associated vector filed with the diagonal action is given by Kω . Let Q
+be the bi-invariant metric on SO(3) such that induces the standard inner
+product on so(3) ∼    = R3 . Fix t > 0 and equip M × SO(3) with the metric
+          1
+gstd + t Q. The Cheeger deformation of gstd with parameter t, denoted by
+gstd,t , is characterized by the requirement that the map from M × SO(3) to
+M given by (p, q) 7→ q−1 .p is a Riemannian submersion. For p ∈ M , let Vp
+be the vertical subspace of Tp M spanned by Kω , ω ∈ R3 , and let Hp denote
+the gstd -orthogonal complement of Vp . Let Pp : R3 → R3 be the map such
+that
+                        ⟨Pp (ω1 ), ω2 ⟩ = gstd (Kω1 , Kω2 ) at p.
+This map Pp can be viewed as an endomorphism on Vp through Pp (Kω ) =
+KPp (ω) . Define the endomorphism Ct of Tp M by
+
+                         Ct X = (I + tPp )−1 X V + X H ,
+where X = X V + X H is the vertical-horizontal decomposition. The formula
+for the Cheeger deformation [7] gives
+               gstd,t (X, Y ) = gstd (Ct X, Y ) for all X, Y ∈ Tp M.
+           A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                  15
+
+
+Since Ei = Kqi , the vectors q1 , q2 , q3 ∈ R3 , and equivalently E1 , E2 , E3 ∈
+Tp M under the induced endomorphism of Vp , are eigenvectors of Pp with
+eigenvalues 2(sin θ)2 , 2(cos θ)2 , 2, respectively. It follows that
+             2(sin θ)2      1    1     2(cos θ)2                 2
+gstd,t =                2
+                          σ   ⊗σ   +              2
+                                                    σ 2 ⊗σ 2 +        σ 3 ⊗σ 3 +dθ⊗dθ.
+           1 + 2t(sin θ)             1 + 2t(cos θ)             1 + 2t
+Throughout the rest of the paper, g = 12 gstd,1 is the background metric on
+M . Explicitly, on Mgeneric ,
+             (sin θ)2              (cos θ)2             1
+      g=               σ1 ⊗ σ1 +             σ 2 ⊗ σ 2 + σ 3 ⊗ σ 3 + dθ ⊗ dθ.
+           2 − cos(2θ)           2 + cos(2θ)            3
+  Let mi , 1 ≤ i ≤ 4, be the vector fields on Mgeneric given by
+                        1               1
+               m1 =         E1 , m2 =       E2 , m3 = E3 , m4 = ∂θ .
+                      sin θ           cos θ
+Writing ω = 3i=1 ⟨ω, qi ⟩qi and using p1 = cos θq1 −sin θq2 and p2 = cos θq1 +
+              P
+sin θq2 , we have
+ ω ∧ p1 =⟨ω, q1 ⟩(− sin θq3 ) + ⟨ω, q2 ⟩(− cos θq3 ) + ⟨ω, q3 ⟩(sin θq1 + cos θq2 ),
+ ω ∧ p2 =⟨ω, q1 ⟩(sin θq3 ) + ⟨ω, q2 ⟩(− cos θq3 ) + ⟨ω, q3 ⟩(− sin θq1 + cos θq2 ).
+It follows that
+(5)             Kω = ⟨ω, q1 ⟩ sin θm1 + ⟨ω, q2 ⟩ cos θm2 + ⟨ω, q3 ⟩m3 ,
+and
+(6)             Jω = ⟨ω, q2 ⟩ cos θm1 + ⟨ω, q1 ⟩ sin θm2 − ⟨ω, q3 ⟩m4 .
+   In the remainder of this section, we introduce some notation that we will
+need later. We denote by N the set of all two-dimensional tangent planes.
+Note that N is a compact smooth manifold of dimension 8. Given a point
+p = (p1 , p2 ) ∈ M , we denote by Zp the set of all two-planes π ⊂ Tp M
+with the property that there exists a unit vector b ∈ S 2 suchS that ⟨p1 , b⟩ =
+                                         ⊥
+⟨p2 , b⟩ = 0 and π = span{(b, 0), (0, b)} . If we define Z = p∈M Zp , then Z
+is a smooth submanifold of N of dimension 4. Note that Z is the set of all
+two-planes that have
+                  S zero sectional curvature with respect to the metric g.
+   Let Zgeneric = p∈Mgeneric Zp . It is easy to see that Zgeneric is an open and
+dense subset of Z.
+
+
+
+                  4. Formulae for metric perturbations
+  We consider a metric perturbation
+
+                              gs = g + s h(1) + s2 h(2) .
+16                        SIMON BRENDLE AND PEI-KEN HUNG
+
+
+  Let Rgs (X, Y, Z, W ) be the Riemannian curvature tensor for gs . We use
+R , R(1) , R(2) , R(3) to denote the coefficients in the Taylor expansion of Rgs :
+ (0)
+
+
+     Rgs (X, Y, Z, W ) =R(0) (X, Y, Z, W ) + sR(1) (X, Y, Z, W )
+                            + s2 R(2) (X, Y, Z, W ) + s3 R(3) (X, Y, Z, W ) + O(s4 ).
+For a symmetric (0, 2)-tensor h, define T h and Lh are (0, 3)-and (0, 4)-
+tensors defined by
+                                     1                             
+                        (T h)ijk = Di hjk + Dj hki − Dk hij ,
+                                     2
+and
+                      1           2            2            2             2
+                                                                                  
+        (Lh)ijkl = − (Di,k          h)jl + (Di,l h)j,k + (Dj,k h)il − (Dj,l h)ik
+                      2
+                          1                  1
+                       + g pq Rijkp hql − g pq Rijlp hkq .
+                          2                  2
+For two symmetric (0, 2)-tensors hI and hII , Q(hI , hII ) is a (0, 4)-tensor de-
+fined by
+                             1                           1
+       Q(hI , hII )ijkl = g pq (T hI )jkp (T hII )ilq − g pq (T hI )ikp (T hII )jlq
+                             2                           2
+                             1 pq                        1 pq
+                         + g (T hII )jkp (T hI )ilq − g (T hII )ikp (T hI )jlq .
+                             2                           2
+Note that Q(hI , hII ) = Q(hII , hI ). For three symmetric (0, 2)-tensors hI , hII
+and hIII , C(hI , hII , hIII ) is a (0, 4)-tensor defined by
+                                              ′    ′
+             C(hI , hII , hIII )ijkl = − g pp g qq (hI )p′ q′ (T hII )jkp (T hIII )ilq
+                                              ′    ′
+                                       + g pp g qq (hI )p′ q′ (T hII )ikp (T hIII )jlq .
+From Proposition A.1, we have the formulas for R(1) , R(2) , and R(3) below.
+Lemma 4.1. We have
+                       R(1) =Lh(1) ,
+                       R(2) =Lh(2) + Q(h(1) , h(1) ),
+                   R(3) =2Q(h(1) , h(2) ) + C(h(1) , h(1) , h(1) ).
+                   S
+   Let Zgeneric = p∈Mgeneric Zp . Recall that mi , 1 ≤ i ≤ 4, are the vector
+fields on Mgeneric defined in Section 3.
+   Given a point y ∈ Mgeneric and a vector z ∈ R4 , we consider the two-plane
+span{m3 (z), m4 (z)} ⊂ Ty M , where
+           m3 (z) = m3 + z 1 m1 + z 3 m2 , m4 (z) = m4 + z 4 m1 + z 2 m2 .
+In the following, we assume that |s| is sufficiently small so that gs is a
+Riemannian metric on M . We define a function v : Mgeneric × R4 through
+                v(y, z, s) = Rgs (m3 (z), m4 (z), m3 (z), m4 (z)) at y.
+         A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                   17
+
+
+Let v (k) (y, z), 0 ≤ k ≤ 3 be the coefficients in the s-Taylor expansions of
+v(y, z, s) as in Section 2. Let V (k) (y), 1 ≤ k ≤ 3 be defined as in Section 2.
+  For each fixed y ∈ Mgeneric ,
+              v (k) (y, s) = R(k) (m3 (z), m4 (z), m3 (z), m4 (z)) at y
+is a polynomial in z ∈ R4 . It is then straightforward to compute v (k) (y, 0),
+   (k)                     (k)
+(vz α (y, 0))1≤α≤4 , and (vz α z β (y, 0))1≤α,β≤4 . It is convenient to define projec-
+tion operators P0 , P1 , and P2 as follows. For a (0, 4)-tensor S on M , we
+define Sijkl = S(mi , mj , mk , ml ) at each point on Mgeneric . We define the
+projection operators
+                                       P0 S = S3434 ,
+                       P1 S = 2 (S1434 , S3234 , S2434 , S3134 ),
+and
+                                                                                
+                   S1414          S1234 + S1432         S1424          S1431
+             S1234 + S1432            S3232            S2432          S3132     
+   P2 S = 2                                                                     .
+                  S1424               S2432            S2424      S2134 + S2431 
+                   S1431               S3132       S2134 + S2431       S3131
+We view P0 S, P1 S, and P2 S as scalar-, vector-, and matrix-valued functions
+on Mgeneric . These projection operators are defined such that
+                                     v (k) (y, 0) = P0 R(k) ,
+                                (k)
+                              (vz α (y, 0))1≤α≤4 = P1 R(k) ,
+and
+                               (k)
+                        (vz α z β (y, 0))1≤α,β≤4 = P2 R(k)
+for each k. In particular, in view of Lemma 4.1, we have
+                                     v (1) (y, 0) = P0 Lh(1) ,
+                     v (2) (y, 0) = P0 Lh(2) + P0 Q(h(1) , h(1) ),
+              v (3) (y, 0) = 2P0 Q(h(1) , h(2) ) + P0 C(h(1) , h(1) , h(1) ),
+                                (1)
+                             (vz α (y, 0))1≤α≤4 = P1 Lh(1) ,
+                   (2)
+                 (vz α (y, 0))1≤α≤4 = P1 Lh(2) + P1 Q(h(1) , h(1) ),
+                              (0)
+                            (vz α z β (y, 0))1≤α,β≤4 = P2 R(0) ,
+                              (1)
+                           (vz α z β (y, 0))1≤α,β≤4 = P2 Lh(1) .
+For later convenience, we write H for P2 R(0) and r(h) for P1 Lh. Then
+                                    (1)
+                              (vz α (y, 0))1≤α≤4 = r(h(1) )
+and
+                    (2)
+               (vz α (y, 0))1≤α≤4 = r(h(2) ) + P1 Q(h(1) , h(1) ).
+We further define
+                          z(h) = (z 1 (h), z 2 (h), z 3 (h), z 4 (h))
+18                              SIMON BRENDLE AND PEI-KEN HUNG
+
+
+by
+                                          4
+                                          X
+                                                Hαβ z β (h) = −rα (h).
+                                          β=1
+Then
+                                          (z̄ α (y))1≤α≤4 = z(h(1) ).
+Lemma 4.2. We have
+                                                       1
+                V (2) = P0 Lh(2) + P0 Q(h(1) , h(1) ) + r(h(1) ) · z(h(1) )
+                                                       2
+and
+              V (3) =2P0 Q(h(1) , h(2) ) + r(h(2) ) · z(h(1) )
+                          + P0 C(h(1) , h(1) , h(1) ) + P1 Q(h(1) , h(1) ) · z(h(1) )
+                            1
+                          + z(h(1) )T · P2 Lh(1) · z(h(1) )
+                            2
+                            1 (0)
+                          + vz α z β z γ (y, 0)z α (h(1) )z β (h(1) )z γ (h(1) ).
+                            6
+     Proof. The quantity V (2) (y) is defined by
+                                                                n
+                                                           1 X (1)
+                      V   (2)
+                                (y) = v     (2)
+                                                  (y, 0) +    vz α (y, 0) z̄ α (y).
+                                                           2
+                                                              α=1
+
+From the above discussion,
+                           v (2) (y, 0) = P0 Lh(2) + P0 Q(h(1) , h(1) )
+and
+                                n
+                          1 X (1)                  1
+                             vz α (y, 0) z̄ α (y) = r(h(1) ) · z(h(1) ).
+                          2                        2
+                            α=1
+
+Putting these identities together gives the formula for V (2) .
+  The quantity V (3) (y) is defined by
+                                      n                                    n
+                                      X      (2)                     1 X (1)
+ V (3) (y) = v (3) (y, 0) +                 vz α (y, 0) z̄ α (y) +       vz α z β (y, 0) z̄ α (y) z̄ β (y)
+                                                                     2
+                                      α=1                               α,β=1
+                     n
+                1    X              (0)
+           +                    vz α z β z γ (y, 0) z̄ α (y) z̄ β (y) z̄ γ (y).
+                6
+                    α,β,γ=1
+
+From the above discussion,
+                 v (3) (y, 0) = 2P0 Q(h(1) , h(2) ) + P0 C(h(1) , h(1) , h(1) ),
+         n
+               (2)
+         X
+              vz α (y, 0) z̄ α (y) = r(h(2) ) · z(h(1) ) + P1 Q(h(1) , h(1) ) · z(h(1) ),
+        α=1
+        A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                    19
+
+
+and
+            n
+        1 X (1)                                1
+            vz α z β (y, 0) z̄ α (y) z̄ β (y) = z(h(1) )T · P2 Lh(1) · z(h(1) ).
+        2                                      2
+          α,β=1
+
+Putting these together yields the formula for V (3) . This completes the proof
+of Lemma 4.2.
+
+
+ 5. A second order deformation of the Cheeger-Müter metric
+  In this section, we define a specific second order deformation of the
+Cheeger-Müter metric. We work primarily in the coordinates given by (4)
+and must address whether the objects defined in these coordinates extend
+smoothly to all of M .
+  Note that ⟨p1 , p2 ⟩ = cos(2θ). Since cos(2nθ) can be expressed as a poly-
+nomial of degree n in cos(2θ) for every n ∈ N, any linear combination of
+cos(2nθ) extends uniquely to a globally smooth function on M . We abuse
+notation and denote this extension by the same expression.
+  Recall that Kω , Jω , and, more generally, Kω̃ are vector fields defined
+at the beginning of Section 3. Let Kω♭ , Jω♭ , and Kω̃♭ be their associated
+one-forms with respect to the metric g:
+       Kω♭ (X) = g(Kω , X), Jω♭ (X) = g(Jω , X), Kω̃♭ (X) = g(Kω̃ , X).
+Let ex , ey , ez be the standard basis of R3 . For two one-forms α, β, write
+α ⊙ β for the symmetric tensor product
+                                  1
+                           α ⊙ β = (α ⊗ β + β ⊗ α).
+                                  2
+With these preparation, we are ready to define h(1) and h(2) .
+   Set
+       6              ♭
+h(1)                           ♭                               ♭ ♭
+ a = (2−cos(2θ))Kp1 +p2 ⊙Kex −2(1−cos(2θ)⟩)(2+cos(2θ))Kp2 −p1 ⊙Jex ,
+       5
+ (1) 6
+hb = (2 + cos(2θ))Kp♭2 −p1 ⊙ Ke♭y − 2(1 + cos(2θ))(2 − cos(2θ))Kp♭1 +p2 ⊙ Je♭y ,
+     5
+                                 h(1)  ♭     ♭
+                                  c = Kez ⊙ Kez ,
+
+                                   (1)
+                                 hd = Ke♭x ⊙ Je♭z .
+                                  (1)    (1)   (1)    (1)
+From the above discussion, ha , hb , hc , hd are globally smooth sym-
+metric (0, 2)-tensors on M . The first-order perturbation h(1) is defined by
+                                         (1)                 (1)
+(7)                   h(1) = h(1)          (1)
+                              a + hb + λc hc + λd hd ,
+
+where λc and λd are constants to be determined later.
+20                       SIMON BRENDLE AND PEI-KEN HUNG
+
+
+  The second-order perturbation h(2) consists of ten components, which we
+define as follows. Set
+                 2203841 cos(2θ) 5579141 cos(4θ) 214597 cos(6θ)
+        faa = −                  +                 −
+                       1920            153600            103680
+                 48211 cos(8θ) 251 cos(10θ) 25 cos(12θ)
+               +              −             +
+                    307200          19200         165888
+                       r ∞           √ n
+                 42025 5    X  (−4 + 15) cos(2nθ)
+               −                                    .
+                   6      3             n2
+                              n=1
+We define
+                              h(2)        ♭     ♭
+                               aa = 9faa Kex ⊙ Kex .
+     Set
+                    2203841 cos(2θ) 5579141 cos(4θ) 214597 cos(6θ)
+            fbb =                  +               +
+                         1920           153600          103680
+                      48211 cos(8θ) 251 cos(10θ) 25 cos(12θ)
+                    +              +             +
+                         307200        19200        165888
+                            r ∞        √ n
+                      42025 5    X (4 − 15) cos(2nθ)
+                    −                                .
+                        6      3           n2
+                               n=1
+We define
+                                (2)
+                              hbb = 9fbb Ke♭y ⊙ Ke♭y .
+     Define
+                                       (2)
+                                      hab = 0,
+                           h(2)                ♭     ♭
+                            cc = g(Kez , Kez )Kez ⊙ Kez ,
+             1
+           h(2)
+            ac =⟨p1 + p2 , ez ⟩(−5 − 14 cos(2θ) + 3 cos(4θ))Ke♭x ⊙ Ke♭z ,
+             20
+       (2)    1
+      hbc = ⟨p2 − p1 , ez ⟩(−5 + 14 cos(2θ) + 3 cos(4θ))Ke♭y ⊙ Ke♭z ,
+             20
+                        (2)      1
+                      hdd = g(Jex , Jex )Je♭z ⊙ Je♭z ,
+                                12
+                                                          
+  (2)   9                   406 92                 2
+ had = ⟨p2 − p1 , ex ⟩ −         −      cos(2θ) + cos(4θ) Ke♭x ⊙ Ke♭z
+       80                    45      45            5
+                                                               
+           9                   823     77             1
+       + ⟨p2 − p1 , ez ⟩ −         +       cos(2θ) +     cos(4θ) Ke♭x ⊙ Ke♭x ,
+           2                   900 450               100
+                                                          
+  (2)   9                   406 92                 2
+ hbd = ⟨p1 + p2 , ex ⟩ −         +      cos(2θ) + cos(4θ) Ke♭y ⊙ Ke♭z
+       80                    45      45            5
+                                                               
+           9                   823     77             1
+       + ⟨p1 + p2 , ez ⟩ −          −      cos(2θ) +     cos(4θ) Ke♭x ⊙ Ke♭y .
+           2                   900 450               100
+  Set
+                                            ∞
+                             arctan(x) X               x2n
+                  G(x) =                 =     (−1)n
+                                  x                  2n + 1
+                                             n=0
+          A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                              21
+
+
+for x ∈ (−1, 1). Then the function
+                     ∞             2n      ∞
+                                                    (1 − cos2 (2θ))n
+                 X
+         sin(2θ)             −n sin (2θ)
+                                           X
+     G     √      =     (−3)             =   (−3)−n
+             3                    2n + 1                2n + 1
+                         n=0                             n=0
+extends to a smooth function on M . We define
+                                                                                    
+ (2)     1                                                                   sin(2θ)
+hcd = − (⟨p1 + p2 , ez ⟩⟨p2 − p1 , ex ⟩ + ⟨p1 + p2 , ex ⟩⟨p2 − p1 , ez ⟩)G     √       Ke♭z ⊙ Ke♭z
+         8                                                                       3
+         ⟨p1 + p2 , ez ⟩⟨p2 − p1 , ez ⟩ ♭
+      +                                Kex ⊙ Ke♭z .
+              2(4 − cos2 (2θ))
+                                     (2)   (2)    (2)         (2)   (2)    (2)   (2)   (2)   (2)
+From the above discussion, haa , hbb , hab , hcc , hac , hbc , hdd , had , hbd ,
+     (2)
+and hcd are globally smooth symmetric (0, 2)-tensors on M . Finally, we set
+(8)
+                  (2)                                   (2)          (2)         (2)         (2)    (2)
+h(2) = h(2)         2 (2)        (2)             2
+        aa + hbb + λc hcc + 2λc hac + 2λc hbc + λd hdd + 2λd had + 2λd hbd + 2λc λd hcd .
+   Define
+                          gs = g + s h(1) + s2 h(2) .
+Given a point y ∈ Mgeneric and a vector z ∈ R4 , we consider the two-plane
+span{m3 (z), m4 (z)} ⊂ Ty M , where
+          m3 (z) = m3 + z 1 m1 + z 3 m2 , m4 (z) = m4 + z 4 m1 + z 2 m2 .
+We define a function v : Mgeneric × R4 × [−s0 , s0 ] → R by
+                   v(y, z, s) = Rgs (m3 (z), m4 (z), m3 (z), m4 (z))
+for y ∈ Mgeneric , z ∈ R4 , and s ∈ [−s0 , s0 ]. We may write
+(9) v(y, z, s) = v (0) (y, z) + s v (1) (y, z) + s2 v (2) (y, z) + s3 v (3) (y, z) + O(s4 ),
+where v (0) , v (1) , v (2) , v (3) : Mgeneric × R4 → R are smooth functions. Clearly,
+v (0) (y, 0) = 0 for all y ∈ Mgeneric .
+Proposition 5.1. We have v (1) (y, 0) = 0 for all y ∈ Mgeneric .
+  Proof. From Lemma 4.2, we have v (1) (y, 0) = P0 Lh(1) , where L is the lin-
+earized curvature operator given in Section 4, and P0 Lh = (Lh)(m3 , m4 , m3 , m4 ).
+For each great circle Γ in S 2 , the torus Γ × Γ is totally geodesic and the
+vector fields m3 and m4 are tangential along Γ × Γ. Moreover, m3 and m4
+define parallel vector fields along Γ × Γ. This implies
+                                  1                    1
+     (Lh)(m3 , m4 , m3 , m4 ) = − m3 m3 h(m4 , m4 ) − m4 m4 h(m3 , m3 )
+                                  2                    2
+                                + m3 m4 h(m3 , m4 ).
+Here h(m3 , m3 ), h(m3 , m4 ), h(m4 , m4 ) are viewed as scalar functions, and
+mi mj denotes the corresponding iterated directional derivatives.
+  In view of (5) and (6), we have
+                1
+    Kω♭ (m3 ) = ⟨ω, q3 ⟩, Kω♭ (m4 ) = 0, Jω♭ (m3 ) = 0, Jω♭ (m4 ) = −⟨ω, q3 ⟩.
+                3
+22                       SIMON BRENDLE AND PEI-KEN HUNG
+
+
+In particular,
+     Kp♭1 +p2 (m3 ) = 0, Kp♭1 +p2 (m4 ) = 0, Kp♭2 −p1 (m3 ) = 0, Kp♭2 −p1 (m4 ) = 0.
+This implies
+                                               (1)
+                          h(1)
+                           a (m3 , m3 ) = hb (m3 , m3 ) = 0,
+                                               (1)
+                          h(1)
+                           a (m4 , m4 ) = hb (m4 , m4 ) = 0,
+and
+                                               (1)
+                          h(1)
+                           a (m3 , m4 ) = hb (m3 , m4 ) = 0.
+Consequently,
+                                                                          λc
+ h(1) (m3 , m3 ) = λc Ke♭z (m3 ) Ke♭z (m3 ) + λd Ke♭x (m3 ) Je♭z (m3 ) =      ⟨q3 , ez ⟩2 ,
+                                                                           9
+        h(1) (m4 , m4 ) = λc Ke♭z (m4 ) Ke♭z (m4 ) + λd Ke♭x (m4 ) Je♭z (m4 ) = 0,
+and
+         h(1) (m3 , m4 ) = λc Ke♭z (m3 ) Ke♭z (m4 )
+                             λd ♭                      λd ♭
+                         +      Kex (m3 ) Je♭z (m4 ) +   J (m3 ) Ke♭x (m4 )
+                             2                         2 ez
+                               λd
+                         = − ⟨q3 , ex ⟩ ⟨q3 , ez ⟩.
+                               6
+Finally, the directional derivative of q3 along m3 vanishes, and the directional
+derivative of q3 along m4 vanishes as well. Putting these facts together, we
+conclude that (Lh(1) (m3 , m4 , m3 , m4 ) = 0. This finally gives v (1) (y, 0) = 0.
+A verification of v (1) (y, 0) = 0 is also provided in the companion Mathemat-
+ica notebook. This completes the proof of Proposition 5.1.
+
+   In the following, we consider the functions V (2) and V (3) defined in Sec-
+tion 4. Recall that V (2) and V (3) are smooth functions on Mgeneric .
+   We consider the 2D torus Σ = {p ∈ M : ⟨p1 , ez ⟩ = ⟨p2 , ez ⟩ = 0}, where ez
+denotes the vertical unit vector in R3 .
+Proposition 5.2. There exist positive constants λ0 and δ such that
+                                     ⟨y1 ∧ y2 , ez ⟩2 
+                   V (2) (y) ≥ δ 1 −
+                                        |y1 ∧ y2 |2
+for each point y = (y1 , y2 ) ∈ Mgeneric provided |λd | ≤ λ0 .                  Moreover,
+V (2) (y) = 0 for each point y ∈ Σ ∩ Mgeneric .
+     Proof. From Lemma 4.2, we have
+                                                    1
+             V (2) = P0 Lh(2) + P0 Q(h(1) , h(1) ) + r(h(1) ) · z(h(1) ).
+                                                    2
+Here P0 , L, Q, r and z are operators defined in Section 4. All these operators
+are linear, except for Q, which is bilinear. Therefore, using (7) and (8), we
+can expand V (2) into a sum of terms. Set
+               (2)                                  1
+             Vaa   = P0 Lh(2)         (1) (1)           (1)
+                          aa + P0 Q(ha , ha ) + r(ha ) · z(ha ),
+                                                                   (1)
+                                                    2
+          A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                                  23
+
+            (2)         (2)        (1) (1)   1   (1)      (1)
+          Vbb = P0 Lhbb + P0 Q(hb , hb ) + r(hb ) · z(hb ),
+                                             2
+            (2)         (2)             (1)  1            (1)
+          Vab = P0 Lhab + P0 Q(h(1)              (1)
+                                   a , hb ) + r(ha ) · z(hb ),
+                                             2
+                                             1
+          Vcc(2) = P0 Lh(2)        (1) (1)       (1)      (1)
+                        cc + P0 Q(hc , hc ) + r(hc ) · z(hc ),
+                                             2
+            (2)                              1
+          Vac    = P0 Lh(2)        (1) (1)       (1)      (1)
+                        ac + P0 Q(ha , hc ) + r(ha ) · z(hc ),
+                                             2
+            (2)         (2)        (1)       1   (1)
+          Vbc = P0 Lhbc + P0 Q(hb , h(1)                  (1)
+                                        c ) + r(hb ) · z(hc ),
+                                             2
+            (2)         (2)        (1) (1)   1   (1)      (1)
+          Vdd = P0 Lhdd + P0 Q(hd , hd ) + r(hd ) · z(hd ),
+                                             2
+            (2)         (2)        (1) (1)   1            (1)
+          Vad = P0 Lhad + P0 Q(ha , hd ) + r(h(1)a ) · z(hd ),
+                                             2
+            (2)         (2)        (1) (1)   1   (1)      (1)
+          Vbd = P0 Lhbd + P0 Q(hb , hd ) + r(hb ) · z(hd ),
+                                             2
+            (2)         (2)             (1)  1   (1)      (1)
+          Vcd = P0 Lhbd + P0 Q(h(1)c , hd ) + r(hc ) · z(hd ).
+                                             2
+Then we have
+                                (2)         (2)                                      (2)
+           V (2) =Vaa
+                    (2)
+                        + Vbb + 2Vab + λ2c Vcc(2) + 2λc Vac
+                                                          (2)
+                                                              + 2λc Vbc
+                              (2)           (2)            (2)           (2)
+                     + λ2d Vdd + 2λd Vad + 2λd Vbd + 2λd Vdd .
+Verifications of the ten identities below, (10)-(19), are provided in the com-
+panion Mathematica code:
+                                               r !
+                   (2)       3472117 42025 5
+(10)             Vaa = −              +               ⟨q3 , ex ⟩2 ,
+                               384         6      3
+                                                           r !
+                      (2)          3472117 42025            5
+(11)                Vbb =        −        +                    ⟨q3 , ey ⟩2 ,
+                                     384     6              3
+
+                                              (2)
+(12)                                       Vab = 0,
+
+(13)                                       Vcc(2) = 0,
+                                             (2)
+(14)                                       Vac   = 0,
+                                              (2)
+(15)                                       Vbc = 0,
+(16)
+ (2)    3 + 4 cos(2θ) − cos(4θ)                             3 − 4 cos(2θ) − cos(4θ)
+Vdd =                      3
+                                ⟨q1 , ez ⟩2 ⟨q3 , ex ⟩2 +                                      ⟨q2 , ez ⟩2 ⟨q3 , ex ⟩2
+           24(2 + cos(2θ))                                      24(2 − cos(2θ))3
+           11 cos(2θ) + cos(6θ)                                                     
+        +                         −   ⟨q 1 , ex ⟩⟨q1 , ez ⟩ + ⟨q 2 , ex ⟩⟨q 2 , ez ⟩  ⟨q3 , ex ⟩⟨q3 , ez ⟩,
+             3(7 − cos(4θ))2
+                                              (2)
+(17)                                       Vad = 0,
+24                      SIMON BRENDLE AND PEI-KEN HUNG
+
+                                           (2)
+(18)                                    Vbb = 0,
+                                           (2)
+(19)                                    Vcd = 0.
+From the above identities, it isqclear that V (2) (y) = 0 for all y ∈ Σ∩Mgeneric .
+     Note that − 3472117
+                   384   + 42025
+                             6
+                                      5
+                                      3 ≈ 0.369 and is positive. Set
+                                                              r !
+                           1        3472117 42025              5
+                        δ=        −        +                      .
+                           2          384     6                3
+                (2)
+From
+p    (16), |Vdd | ≤ C(⟨q3 , ex ⟩2 + ⟨q3 , ey ⟩2 ) for some constant C. Take λ0 =
+  C/δ. Then the identities (10)-(19) imply
+                V (2) ≥ δ(⟨q3 , ex ⟩2 + ⟨q3 , ey ⟩2 ) = δ(1 − ⟨q3 , ez ⟩2 ).
+Since q3 = |yy11 ∧y 2
+                 ∧y2 | , the assertion follows. This completes the proof of Propo-
+sition 5.2.
+
+Proposition 5.3. The function V (3) |Σ∩Mgeneric extends to a smooth function
+on Σ.
+   Proof. We consider the function u : N × [−s0 , s0 ] → R which assigns to
+a two-plane π = span{ξ, η} ∈ N and a real number s the quantity
+                                     Rgs (ξ, η, ξ, η)
+(20)                                                      .
+                                   |ξ|2g |η|2g − ⟨ξ, η⟩2g
+Note that the numerator in (20) is computed with respect to the metric gs ,
+whereas the denominator in (20) is computed with respect to the Cheeger-
+Müter metric g. It is easy to see that the quantity (20) depends only on the
+two-plane π, but is independent of the choice of the basis {ξ, η}.
+  We may write
+(21)            u(·, s) = u(0) + s u(1) + s2 u(2) + s3 u(3) + O(s4 ),
+where u(0) , u(1) , u(2) , u(3) : N → R are smooth functions. Here, u(0) as-
+signs to a two-plane π ∈ N the sectional curvature of π with respect to
+the Cheeger-Müter metric. Clearly, u(0) |Z = 0. Moreover, it follows from
+Corollary B.2 that u(0) ≥ σ d(·, Z)2 at each point in N , where σ is a posi-
+tive constant. Proposition 5.1 implies that u(1) |Zgeneric = 0. Since Zgeneric is
+dense in Z, it follows that u(1) |Z = 0.
+   We next define a positive smooth function Υ : Mgeneric × R4 → R and a
+smooth map Φ : Mgeneric × R4 → N as follows. Given a point y ∈ Mgeneric
+and a vector z ∈ R4 , we define
+(22)             Υ(y, z) = |m3 (z)|2g |m4 (z)|2g − ⟨m3 (z), m4 (z)⟩2g
+and
+(23)                  Φ(y, z) = span{m3 (z), m4 (z)} ⊂ Ty M
+         A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                  25
+
+
+for y ∈ Mgeneric and z ∈ R4 , where
+
+         m3 (z) = m3 + z 1 m1 + z 3 m2 , m4 (z) = m4 + z 4 m1 + z 2 m2 .
+
+Using the identities |m3 |2g = 13 , |m4 |2g = 1, and ⟨m3 , m4 ⟩g = 0, we obtain
+
+                                                                 1
+                    Υ(y, 0) = |m3 |2g |m4 |2g − ⟨m3 , m4 ⟩2g =
+                                                                 3
+for each y ∈ Mgeneric . Moreover,
+
+                         Φ(y, 0) = span{m3 , m4 } ∈ Zy
+
+for each y ∈ Mgeneric . We next observe that
+
+                        v(y, z, s) = Υ(y, z) u(Φ(y, z), s)
+
+for y ∈ Mgeneric , z ∈ R4 , and s ∈ [−s0 , s0 ]. This implies
+
+                       v (0) (y, z) = Υ(y, z) u(0) (Φ(y, z)),
+                       v (1) (y, z) = Υ(y, z) u(1) (Φ(y, z)),
+                       v (2) (y, z) = Υ(y, z) u(2) (Φ(y, z)),
+                       v (3) (y, z) = Υ(y, z) u(3) (Φ(y, z))
+
+for y ∈ Mgeneric and z ∈ R4 .
+   After these preparations, we apply Theorem 2.11. After identifying Zgeneric
+with Mgeneric , we may view Υ as a positive smooth function on Zgeneric × R4 ,
+and we may view Φ as a smooth map from Zgeneric × R4 to N . Moreover,
+we may view V (2) and V (3) as smooth functions on Zgeneric . If we apply
+Theorem 2.11 with Ω = Zgeneric , the assertion follows. This completes the
+proof of Proposition 5.3.
+
+ The verification of the following lemma is provided in the companion
+Mathematica notebook.
+
+Lemma 5.4. Let z(·) be the differential operator defined in Section 4. Then
+   (1)      (1)      (1)
+z(ha ) = z(hb ) = z(hc ) = 0 along Σ.
+
+Proposition    5.5. There is an open dense subset of R2 with the property
+         (3)
+    R
+that Σ V     ̸= 0 whenever (λc , λd ) belongs to this subset.
+
+   Proof. From (7), (8), and Lemma 4.2, Σ V (3) is a polynomial of λc and
+                                              R
+λd , denoted by P(λc , λd ). Therefore, it sufficies to show that the coefficient
+of λc λ2d in P(λc , λd ) is nonzero.
+26                             SIMON BRENDLE AND PEI-KEN HUNG
+
+                                                     (1)
+  From Lemma 5.4, z(h(1) ) = λd z(hd ) along Σ. It follows from Lemma 4.2
+that the coefficient function of λc λ2d in V (3) |Σ is given by
+                            (2)
+           2P0 Q(h(1)
+                  c , hdd )
+                         (1)      (1)                (1)               (1)         (1)     (1)
+       +P0 C(h(1)                        (1)                        (1)
+              c , hd , hd ) + P0 C(hd , hc , hd ) + P0 C(hd , hd , hc )
+                  (1)       (2)          (2)               (1)
+     +4P0 Q(hd , hcd ) + 2r(hcd ) · z(hd )
+                  (1)      (1)     1    (1) T         (1)
+     +2P1 Q(h(1)                               (1)
+             c , hd ) · z(hd ) + z(hd ) · P2 Lhc · z(hd ).
+                                   2
+In the companion Mathematica notebook, we show that
+                                                     (2)
+                                        2P0 Q(hdd , h(1)
+                                                     c )=0
+and
+                   (1)      (1)                (1)               (1)         (1)     (1)
+      P0 C(h(1)                        (1)                        (1)
+            c , hd , hd ) + P0 C(hd , hc , hd ) + P0 C(hd , hd , hc ) = 0
+at each point on Σ. In the companion Mathematica notebook, we further
+show that      Z
+                          (2) (1)         (2)       (1) 
+                   4P0 Q(hcd , hd ) + 2r(hcd ) · z(hd ) = 0
+                        Σ
+and
+                                                                  π2
+  Z 
+                       (1)      (1)  1   (1) T             (1)
+                                                               
+           2P1 Q(h(1)                               (1)
+                  c , hd ) · z(hd ) + z(hd ) · P2 Lhc · z(hd ) =   √ .
+       Σ                             2                           18 3
+                                                                                           2
+Combining the above, the coefficient of λc λ2d in P(λc , λd ) is 18π√3 . This com-
+pletes the proof of Proposition 5.5.
+
+
+     6. A third order deformation of the Cheeger-Müter metric
+   From now on, we assume that λc and λd are chosen so that the conclusions
+of Proposition 5.2 and Proposition 5.5 hold. It follows from Proposition  5.3
+that V (3) |Σ∩Mgeneric extends to a smooth function on Σ. Moreover, Σ V (3) ̸=
+                                                                   R
+0 by Proposition 5.5. Consequently, we can find a real number µ ̸= 0 and a
+smooth function χ : Σ → R such that
+(24)                                     V (3) = µ + ∆Σ χ
+at each point on Σ. Here, Σ is equipped with the metric induced by the
+Cheeger-Müter metric on M and
+                               ∆Σ χ = 3 m3 (m3 (χ)) + m4 (m4 (χ))
+denotes the Laplacian of the function χ : Σ → R with respect to that metric.
+We extend χ to a smooth function χ : M → R. We define
+(25)                                           h(3) = 6χ g
+and
+                  g̃s = gs + s3 h(3) = g + s h(1) + s2 h(2) + s3 h(3) .
+          A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                               27
+
+
+Given a point y ∈ Mgeneric and a vector z ∈ R4 , we consider the two-plane
+span{m3 (z), m4 (z)} ⊂ Ty M , where
+          m3 (z) = m3 + z 1 m1 + z 3 m2 , m4 (z) = m4 + z 4 m1 + z 2 m2 .
+We define a function ṽ : Mgeneric × R4 × [−s0 , s0 ] → R by
+                     ṽ(y, z, s) = Rg̃s (m3 (z), m4 (z), m3 (z), m4 (z))
+for y ∈ Mgeneric , z ∈ R4 , and s ∈ [−s0 , s0 ]. We may write
+   ṽ(y, z, s) = v (0) (y, z) + s v (1) (y, z) + s2 v (2) (y, z) + s3 ṽ (3) (y, z) + O(s4 ),
+where v (0) , v (1) , v (2) : Mgeneric × R4 → R are defined as in (9) and ṽ (3) :
+Mgeneric × R4 → R is a smooth function. Using (25) together with the
+identities |m3 |2g = 13 , |m4 |2g = 1, and ⟨m3 , m4 ⟩g = 0, we compute
+(26)                                ṽ (3) (·, 0) = v (3) (·, 0) − ∆Σ χ
+at each point on Σ. As in Section 2, we define
+                               n                          n
+                               X  (2)                   1 X (1)
+  Ṽ (3) (y) = ṽ (3) (y, 0) +   vz α (y, 0) z̄ α (y) +     vz α z β (y, 0) z̄ α (y) z̄ β (y)
+                                                        2
+                                 α=1                                 α,β=1
+                    n
+               1    X         (0)
+           +                 vz α z β z γ (y, 0) z̄ α (y) z̄ β (y) z̄ γ (y)
+               6
+                   α,β,γ=1
+
+for y ∈ Mgeneric . Note that Ṽ (3) is a smooth function defined on Mgeneric .
+Using (26), we obtain
+(27)                                     Ṽ (3) = V (3) − ∆Σ χ
+at each point on Σ. Combining (24) and (27), we conclude that
+(28)                                             Ṽ (3) = µ
+at each point on Σ.
+
+7. Existence of a real number s with the property that g̃s has
+                  positive sectional curvature
+   In this section, we show that there exists a real number s with the property
+that the metric g̃s has positive sectional curvature. In the following, we
+assume that s0 > 0 is chosen sufficiently small.
+Proposition 7.1. If µ > 0, then g̃s has positive sectional curvature if s ∈
+(0, s0 ] is sufficiently small. If µ < 0, then g̃s has positive sectional curvature
+if −s ∈ (0, s0 ] is sufficiently small.
+   Proof. We only consider the case µ > 0. The case µ < 0 follows from
+analogous arguments. We consider the function ũ : N × [−s0 , s0 ] → R which
+assigns to a two-plane π = span{ξ, η} ∈ N and a real number s the quantity
+                                            Rg̃s (ξ, η, ξ, η)
+(29)                                                             .
+                                          |ξ|2g |η|2g − ⟨ξ, η⟩2g
+28                          SIMON BRENDLE AND PEI-KEN HUNG
+
+
+Note that the numerator in (29) is computed with respect to the metric g̃s ,
+whereas the denominator in (29) is computed with respect to the Cheeger-
+Müter metric g. It is easy to see that the quantity (29) depends only on the
+two-plane π, but is independent of the choice of the basis {ξ, η}.
+  We may write
+                   ũ(·, s) = u(0) + s u(1) + s2 u(2) + s3 ũ(3) + O(s4 ),
+where u(0) , u(1) , u(2) : N → R are defined as in (21) and ũ(3) : N → R is
+a smooth function. In particular, u(0) |Z = 0 and u(0) ≥ σ d(·, Z)2 at each
+point in N , where σ is a positive constant. Moreover, u(1) |Z = 0.
+   We define a positive smooth function Υ : Mgeneric × R4 → R by (22), and
+we define a smooth map Φ : Mgeneric × R4 → N by (23). Recall that
+                                                                 1
+                      Υ(y, 0) = |m3 |2g |m4 |2g − ⟨m3 , m4 ⟩2g =
+                                                                 3
+and
+                           Φ(y, 0) = span{m3 , m4 } ∈ Zy
+for each y ∈ Mgeneric . As in Section 6, we define a smooth function ṽ :
+Mgeneric × R4 × [−s0 , s0 ] → R by
+                      ṽ(y, z, s) = Rg̃s (m3 (z), m4 (z), m3 (z), m4 (z))
+for y ∈ Mgeneric , z ∈ R4 , and s ∈ [−s0 , s0 ]. Clearly,
+                              ṽ(y, z, s) = Υ(y, z) ũ(Φ(y, z), s)
+for y ∈ Mgeneric , z ∈ R4 , and s ∈ [−s0 , s0 ]. As in Section 6, we write
+     ṽ(y, z, s) = v (0) (y, z) + s v (1) (y, z) + s2 v (2) (y, z) + s3 ṽ (3) (y, z) + O(s4 ),
+where v (0) , v (1) , v (2) , ṽ (3) : Mgeneric × R4 → R are smooth functions. With
+this understood,
+                                 ṽ (3) (y, z) = Υ(y, z) ũ(3) (Φ(y, z))
+for y ∈ Mgeneric and z ∈ R4 .
+   Since µ > 0, it follows from Proposition 5.2 and (28) that we can find a
+small positive constant κ with the following properties:
+                                                             2
+       • V (2) (y) ≥ κ Υ(y, 0) 1 − ⟨y|y1 ∧y           2 ,ez ⟩
+                                                   1 ∧y2 |
+                                                           2    for each point y = (y1 , y2 ) ∈
+           Mgeneric .
+       • V (2) (y) = 0 and Ṽ (3) (y) ≥ κ Υ(y, 0) for each point y ∈ Σ ∩ Mgeneric .
+   In the next step, we define a function ρ : Z → R as follows. Suppose that
+π ⊂ T(p1 ,p2 ) M . For each two-plane π ∈ Z, we can find a unit vector b ∈ S 2
+such that ⟨p1 , b⟩ = ⟨p2 , b⟩ = 0 and π = span{(b, 0), (0, b)}⊥ . Moreover,
+for a given two-plane π ∈ Z, the vector b is uniquely determined up to
+sign. We define the value of the function ρ : Z → R at the point p ∈ Z
+to be 1 − ⟨b, ez ⟩2 . Clearly, ρ is a nonnegative continuous function on Z.
+The set {ρ = 0} ⊂ Z consists of all two-planes π ⊂ T(p1 ,p2 ) M such that
+⟨p1 , ez ⟩ = ⟨p2 , ez ⟩ = 0 and π = span{(ez , 0), (0, ez )}⊥ . In particular, the set
+Zgeneric ∩ {ρ = 0} is dense in {ρ = 0}.
+         A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                  29
+
+
+   After these preparations, we apply Theorem 2.12. After identifying Zgeneric
+with Mgeneric , we may view Υ as a positive smooth function on Zgeneric × R4 ,
+and we may view Φ as a smooth map from Zgeneric × R4 to N . Moreover, we
+may view V (2) and Ṽ (3) as smooth functions on Zgeneric . Applying Theorem
+2.12 with Ω = Zgeneric , we conclude that inf N ũ(·, s) > 0 if s ∈ (0, s0 ] is
+sufficiently small. Thus, g̃s has positive sectional curvature if s ∈ (0, s0 ] is
+sufficiently small. This completes the proof of Proposition 7.1.
+
+
+Appendix A. A formula for the Riemann curvature tensor of a
+                           perturbed metric
+  In this section, we derive a formula for the Riemann curvature tensor of
+a perturbed metric.
+Proposition A.1. Let M be a manifold, and let ḡ and g be two Riemannian
+metrics on M . Let D̄ denote the Levi-Civita connection associated with ḡ,
+and let R̄ denote the Riemann curvature tensor of ḡ. Then the Riemann
+curvature tensor of g is given by
+          1                  1
+ Rijkl = ḡ pq R̄ijkp gql + ḡ pq R̄ijpl gkq
+          2                  2
+          1       2            2             2             2
+                                                                     
+       +     − (D̄i,k g)jl + (D̄i,l g)jk + (D̄j,k g)il − (D̄j,l g)ik
+          2
+          1 pq
+       + g [(D̄j g)kp + (D̄k g)jp − (D̄p g)jk ] [(D̄i g)lq + (D̄l g)iq − (D̄q g)il ]
+          4
+          1 pq
+       − g [(D̄i g)kp + (D̄k g)ip − (D̄p g)ik ] [(D̄j g)lq + (D̄l g)jq − (D̄q g)jl ].
+          4
+  Proof. We compute
+                            DX Y = D̄X Y + A(X, Y ),
+where the tensor A is given by
+      2 g(A(X, Y ), Z) = (D̄X g)(Y, Z) + (D̄Y g)(X, Z) − (D̄Z g)(X, Y ).
+This gives
+   DX DY Z = D̄X D̄Y Z + A(X, D̄Y Z) + D̄X (A(Y, Z)) + A(X, A(Y, Z)).
+Consequently,
+        g(DX DY Z, W ) = g(D̄X D̄Y Z, W ) + g(A(X, D̄Y Z), W )
+                         + g(D̄X (A(Y, Z)), W ) + g(A(X, A(Y, Z)), W )
+                         = g(D̄X D̄Y Z, W ) + g(A(X, D̄Y Z), W )
+                         + X(g(A(Y, Z), W )) − (D̄X g)(A(Y, Z), W )
+                         − g(A(Y, Z), D̄X W ) + g(A(X, A(Y, Z)), W ).
+Using the identity (D̄X g)(U, V ) = g(A(X, U ), V ) + g(U, A(X, V )), we obtain
+    (D̄X g)(A(Y, Z), W ) = g(A(X, A(Y, Z)), W ) + g(A(Y, Z), A(X, W )),
+30                        SIMON BRENDLE AND PEI-KEN HUNG
+
+
+hence
+
+          g(DX DY Z, W ) = g(D̄X D̄Y Z, W ) + g(A(X, D̄Y Z), W )
+                              + X(g(A(Y, Z), W )) − g(A(Y, Z), A(X, W ))
+                              − g(A(Y, Z), D̄X W ).
+
+In the following, we fix a point p and work in geodesic normal coordinates
+with respect to the metric ḡ. Putting X = ∂i , Y = ∂j , Z = ∂k , W = ∂l
+gives
+
+                      g(D∂i D∂j ∂k , ∂l ) = g(D̄∂i D̄∂j ∂k , ∂l )
+                                           + ∂i (g(A(∂j , ∂k ), ∂l ))
+                                           − g(A(∂j , ∂k ), A(∂i , ∂l ))
+
+at p. In the next step, we switch i and j and take the difference. This gives
+
+                 − g(D∂i D∂j ∂k , ∂l ) + g(D∂j D∂i ∂k , ∂l )
+                 = −g(D̄∂i D̄∂j ∂k , ∂l ) + g(D̄∂j D̄∂i ∂k , ∂l )
+                 − ∂i (g(A(∂j , ∂k ), ∂l )) + ∂j (g(A(∂i , ∂k ), ∂l ))
+                 + g(A(∂j , ∂k ), A(∂i , ∂l )) − g(A(∂i , ∂k ), A(∂j , ∂l )).
+
+Note that
+                    −g(D∂i D∂j ∂k , ∂l ) + g(D∂j D∂i ∂k , ∂l ) = Rijkl
+and
+                −g(D̄∂i D̄∂j ∂k , ∂l ) + g(D̄∂j D̄∂i ∂k , ∂l ) = ḡ pq R̄ijkp gql
+at p. Moreover, using the definition of A, we obtain
+
+− ∂i (g(A(∂j , ∂k ), ∂l )) + ∂j (g(A(∂i , ∂k ), ∂l ))
+     1 2                  2            2
+                                                 1 2                   2             2
+                                                                                                
+= − (D̄i,j    g)kl + (D̄i,k   g)jl − (D̄i,l g)jk +      (D̄j,i g)kl + (D̄j,k g)il − (D̄j,l g)ik
+     2                                                2
+     1 pq                 1 pq
+= − ḡ R̄ijkp gql − ḡ R̄ijlp gkq
+     2                    2
+  1        2               2            2              2
+                                                                
++      − (D̄i,k g)jl + (D̄i,l g)jk + (D̄j,k  g)il − (D̄j,l g)ik
+  2
+
+
+at p. Finally,
+
+      g(A(∂j , ∂k ), A(∂i , ∂l )) − g(A(∂i , ∂k ), A(∂j , ∂l ))
+         1
+       = g pq [(D̄j g)kp + (D̄k g)jp − (D̄p g)jk ] [(D̄i g)lq + (D̄l g)iq − (D̄q g)il ]
+         4
+         1
+      − g pq [(D̄i g)kp + (D̄k g)ip − (D̄p g)ik ] [(D̄j g)lq + (D̄l g)jq − (D̄q g)jl ]
+         4
+          A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                          31
+
+
+at p. Putting these facts together, we obtain
+          1 pq                1
+  Rijkl =   ḡ R̄ijkp gql − ḡ pq R̄ijlp gkq
+          2                   2
+          1       2             2             2             2
+                                                                      
+        +     − (D̄i,k g)jl + (D̄i,l g)jk + (D̄j,k g)il − (D̄j,l g)ik
+          2
+          1
+        + g pq [(D̄j g)kp + (D̄k g)jp − (D̄p g)jk ] [(D̄i g)lq + (D̄l g)iq − (D̄q g)il ]
+          4
+          1 pq
+        − g [(D̄i g)kp + (D̄k g)ip − (D̄p g)ik ] [(D̄j g)lq + (D̄l g)jq − (D̄q g)jl ]
+          4
+at p. This completes the proof of Proposition A.1.
+
+
+
+Appendix B. A lower bound for the sectional curvature of the
+                        Cheeger-Müter metric
+   Throughout this section, we follow the setup in Ziller’s paper [7]. Let
+M = S 2 × S 2 , let gstd denote the standard metric on S 2 × S 2 . For each
+t > 0, we denote by gstd,t the Cheeger-Müter metric with parameter t. We
+denote by Rgstd,t the Riemann curvature tensor of gstd,t . As in [7], we write
+gstd,t (ξ, η) = gstd (Ct (ξ), η) for all vector fields ξ and η, where Ct is a (1, 1)-
+tensor. Proposition 1.3 in [7] gives
+                                  t3
+             Rgstd (ξ, η, ξ, η) +    Q([P (ξm ), P (ηm )], [P (ξm ), P (ηm )])
+                                  4
+              ≤ Rgstd,t (Ct−1 (ξ), Ct−1 (η), Ct−1 (ξ), Ct−1 (η))
+
+for all vector fields ξ and η.
+   In the following, we focus on the Cheeger-Müter metric with parameter
+t = 1.
+   Given a point p = (p1 , p2 ) ∈ M , we denote by Zp the set of all two-
+planes π ⊂ Tp M with the property that there exists a unit vector b ∈ S 2
+such Sthat ⟨p1 , b⟩ = ⟨p2 , b⟩ = 0 and π = span{(b, 0), (0, b)}⊥ . If we define
+Z = p∈M Zp , then Z is a smooth manifold of dimension 4. Note that Z is
+the set of all two-planes that have zero sectional curvature with respect to
+the Cheeger-Müter metric gstd,1 .
+
+Proposition B.1. Let p = (p1 , p2 ) be a point in M . Suppose that ξ, η ∈
+Tp M are gstd -orthonormal vectors satisfying
+
+                  Rgstd,1 (C1−1 (ξ), C1−1 (η), C1−1 (ξ), C1−1 (η)) < ε2 .
+
+Then there exists a unit vector b ∈ S 2 such that |⟨p1 , b⟩| ≤ Cε, |⟨p2 , b⟩| ≤ Cε,
+|⟨ξ, (b, 0)⟩gstd | ≤ Cε, |⟨η, (b, 0)⟩gstd | ≤ Cε, |⟨ξ, (0, b)⟩gstd | ≤ Cε, |⟨η, (0, b)⟩gstd | ≤
+Cε. In other words, the two-plane span{ξ, η} has distance at most Cε from
+the set Z.
+32                        SIMON BRENDLE AND PEI-KEN HUNG
+
+
+    Proof. It suffices to consider the case when p1 ̸= ±p2 . (The general case
+follows by approximation.) We write ξ = (ξ1 , ξ2 ) and η = (η1 , η2 ), where
+ξ1 , η1 ∈ Tp1 S 2 and ξ2 , η2 ∈ Tp2 S 2 . Note that
+        Rgstd (ξ, η, ξ, η) ≤ Rgstd,1 (C1−1 (ξ), C1−1 (η), C1−1 (ξ), C1−1 (η)) ≤ ε2 .
+This implies
+(30)                          |ξ1 ∧ η1 |2 + |ξ2 ∧ η2 |2 ≤ Cε2 .
+We next observe that
+             1
+               Q([P (ξm ), P (ηm )], [P (ξm ), P (ηm )])
+             4
+             ≤ Rgstd,1 (C1−1 (ξ), C1−1 (η), C1−1 (ξ), C1−1 (η)) ≤ ε2
+at the point (p1 , p2 ). This implies
+        Q(P (ξm ), P (ξm )) Q(P (ηm ), P (ηm )) − Q(P (ξm ), P (ηm ))2 ≤ Cε2 .
+Let {a1 , a2 , a3 } denote the standard basis of R3 . Let {α1 , α2 , α3 } denote the
+corresponding basis of so(3), so that αk∗ |(p1 ,p2 ) = (ak ∧p1 , ak ∧p2 ) ∈ T(p1 ,p2 ) M .
+Then
+                   X 3                  X3                    
+                        Q(P (ξm ), αk )2        Q(P (ηm ), αk )2
+                    k=1                        k=1
+                        3
+                        X                                    2
+                   −          Q(P (ξm ), αk ) Q(P (ηm ), αk ) ≤ Cε2 .
+                        k=1
+
+Using the definition of P in [7], obtain
+                                        ∗
+                    Q(P (ξm ), αk ) = ⟨ξm , αk∗ ⟩gstd
+                                     = ⟨ξ, αk∗ ⟩gstd
+                                     = ⟨ξ, (ak ∧ p1 , ak ∧ p2 )⟩gstd
+                                     = ⟨ξ1 , ak ∧ p1 ⟩ + ⟨ξ2 , ak ∧ p2 ⟩
+                                     = ⟨p1 ∧ ξ1 + p2 ∧ ξ2 , ak ⟩
+and
+                                       ∗
+                   Q(P (ηm ), αk ) = ⟨ηm , αk∗ ⟩gstd
+                                     = ⟨η, αk∗ ⟩gstd
+                                     = ⟨η, (ak ∧ p1 , ak ∧ p2 )⟩gstd
+                                     = ⟨η1 , ak ∧ p1 ⟩ + ⟨η2 , ak ∧ p2 ⟩
+                                     = ⟨p1 ∧ η1 + p2 ∧ η2 , ak ⟩.
+Thus,
+                 |p1 ∧ ξ1 + p2 ∧ ξ2 |2 |p1 ∧ η1 + p2 ∧ η2 |2
+                  − ⟨p1 ∧ ξ1 + p2 ∧ ξ2 , p1 ∧ η1 + p2 ∧ η2 ⟩2 ≤ Cε2 .
+         A METRIC ON S 2 × S 2 WITH POSITIVE SECTIONAL CURVATURE                    33
+
+
+This inequality can be rewritten as
+(31)            |(p1 ∧ ξ1 + p2 ∧ ξ2 ) ∧ (p1 ∧ η1 + p2 ∧ η2 )| ≤ Cε.
+Recall that ξ and η are gstd -orthonormal. Without loss of generality, we may
+assume that ⟨ξ2 , η2 ⟩ = 0. (Otherwise, we replace ξ by ξ˜ = cos τ ξ+sin τ η and
+η by η̃ = − sin τ ξ + cos τ η for a suitable real number τ .) Since ⟨ξ, η⟩gstd = 0,
+it follows that ⟨ξ1 , η1 ⟩ = 0. Moreover, we may assume that |ξ2 | ≤ |η2 |.
+(Otherwise, we switch the roles of ξ and η.)
+   Using (30), we obtain |ξ1 | |η1 | = |ξ1 ∧η1 | ≤ Cε and |ξ2 | |η2 | = |ξ2 ∧η2 | ≤ Cε.
+Since |ξ2 | ≤ |η2 |, it follows that |ξ2 |2 ≤ Cε. Since |ξ|gstd = 1, we conclude
+that |ξ1 | ≥ 21 , provided that ε is sufficiently small. This implies |η1 | ≤ Cε.
+Since |η|gstd = 1, we deduce that |η2 | ≥ 21 , provided that ε is sufficiently
+small. This finally implies |ξ2 | ≤ Cε.
+   Using (31) together with the estimates |ξ2 | ≤ Cε and |η1 | ≤ Cε, we obtain
+(32)                       |(p1 ∧ ξ1 ) ∧ (p2 ∧ η2 )| ≤ Cε.
+Since ⟨p1 , ξ1 ⟩ = ⟨p2 , ξ2 ⟩ = 0, we have
+                                                        1
+                               |p1 ∧ ξ1 |2 = |ξ1 |2 ≥
+                                                        4
+and
+                                                      1
+                              |p2 ∧ η2 |2 = |η2 |2 ≥ .
+                                                      4
+Using (32), we conclude that
+              n p ∧ξ
+                   1     1     p2 ∧ η 2      p1 ∧ ξ 1       p2 ∧ η 2 o
+         min               +              ,           −                ≤ Cε.
+                 |p1 ∧ ξ1 | |p2 ∧ η2 | |p1 ∧ ξ1 | |p2 ∧ η2 |
+Let
+                                          p1 ∧ ξ 1
+                                   b=               .
+                                         |p1 ∧ ξ1 |
+Then ⟨b, p1 ⟩ = ⟨b, ξ1 ⟩ = 0. Moreover, since
+                        n      p2 ∧ η 2           p2 ∧ η 2 o
+                  min b +                 , b−                 ≤ Cε,
+                              |p2 ∧ η2 |         |p2 ∧ η2 |
+we obtain |⟨b, p2 ⟩| ≤ Cε and |⟨b, η2 ⟩| ≤ Cε. Finally, |⟨b, ξ2 ⟩| ≤ |ξ2 | ≤ Cε and
+|⟨b, η1 ⟩| ≤ |η1 | ≤ Cε. This completes the proof of Proposition B.1.
+
+Corollary B.2. Let p = (p1 , p2 ) be a point in M . Suppose that ξ, η ∈ Tp M
+are two vectors with the property that C1 ξ, C1 η are gstd -orthonormal and
+                               Rgstd,1 (ξ, η, ξ, η) < ε2 .
+Then the two-plane span{ξ, η} has distance at most Cε from the set Z.
+   Proof. By Proposition B.1, the two-plane span{C1 ξ, C1 η} has distance
+at most Cε from the set Z. Moreover, C1 maps each two-plane π ∈ Z to
+itself. Putting these facts together, the assertion follows. This completes
+the proof of Corollary B.2.
+34                      SIMON BRENDLE AND PEI-KEN HUNG
+
+
+                                     References
+[1] J.P. Bourguignon, Some constructions related to H. Hopf ’s conjecture on product man-
+    ifolds, Proc. Sympos. Pure Math. 27, 33–37 (1975)
+[2] J.P. Bourguignon, A. Deschamps, P. Sentenac, Conjecture de H. Hopf sur les produits
+    de variétés, Ann. Sci. École Norm. Sup. 5, 277–302 (1972)
+[3] J. Cheeger, Some examples of manifolds with nonnegative curvature, J. Diff. Geom. 8,
+    623–628 (1973)
+[4] R. Hamilton, Three-manifolds with positive Ricci curvature, J. Diff. Geom. 17, 255–306
+    (1982)
+[5] W.-Y. Hsiang and B. Kleiner, On the topology of positively curved 4-manifolds with
+    symmetry, J. Diff. Geom. 29, 615–621 (1989)
+[6] M. Müter, Krümmungserhöhende Deformationen mittels Gruppenaktionen, Disserta-
+    tion, Universität Münster (1987)
+[7] W. Ziller, On M. Mueter’s Ph.D. Thesis on Cheeger deformations, arXiv:0909.0161
+
+     Columbia University, 2990 Broadway, New York NY 10027, USA
+
+     University of Illinois, 1409 W. Green Street, Urbana IL 61801, USA
+
