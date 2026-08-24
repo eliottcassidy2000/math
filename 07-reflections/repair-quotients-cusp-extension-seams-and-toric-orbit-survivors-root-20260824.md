@@ -123,10 +123,39 @@ multigraph already has Smith form `(2,0)`.
 For the curvature source, the proved consequence is narrowly favorable: its
 displayed `Sigma` is connected, so nonzero integral really is the full
 Poisson obstruction. The load-bearing symbolic notebook identities and the
-global positivity argument remain separate audit obligations.
+global positivity argument remain separate audit obligations. Incoming exact
+controls now independently verify the omitted `h_a` branch of Lemma 5.4 on
+both parametrized components and make the three nonzero terms of `V_bc^(2)`
+cancel at one generic exact point. The latter is a sensitive positive control,
+not a proof of the global identity.
 
-THM-3991 was independently checked through dimensions `1..5` and indices
-`d<=7`. The proof must use compactly supported Euler characteristic on the
+The incoming reduced-cusp calculation THM-3992 makes the seam extension
+strictly sharper. Once its bracket/moment argument has forced `h=gamma*s` and
+centered the nodal line, put `eta=[s]q0`. The `A,ell=2` and `C,ell=1` seams
+eliminate all unseen second-jet coefficients and give
+
+```text
+eta*(gamma*eta-a)=0.
+```
+
+Thus `eta=0` is not merely formally plausible: the exact `P_1/P_0` sequence
+constructs a square-root lift of `A` modulo `k[p,y]`. The other branch is the
+unique first-seam nonliftable one and pays `[s^2]b=2a`. A hostile `B_2` packet
+survives the negative rows through `-2` and fails at `-1`, so this is a typed
+branching theorem rather than a Keller construction. The next tests genuinely
+differ: simultaneous cube lifting for the first branch, row-`-1` continuation
+for the second.
+
+THM-3994 supplies the correct warning for both node addresses. Its two
+double-resultant seams have the same total multiplicity but respectively
+carry two reduced supports and one curvilinear length-two support with an
+`A1` Rees chart. This is a preservation-law connection only: its basepoint
+addresses are not identified with THM-3992's normalization clutches. What
+transfers is the requirement to retain labelled incidence before taking a
+class or Smith quotient.
+
+THM-3991 was independently checked through dimensions `1..6` with diagonal
+index controls `d in {1,2,4}`. The proof must use compactly supported Euler characteristic on the
 locally closed toric strata and then compactness to return to ordinary Euler
 characteristic. In the exact one-nonzero-Euler-fibre grammar, sphere homology
 forces `(n,d)=(1,2)` or `(2,1)`; irreducibility forces `(2,1)`. Higher-rank

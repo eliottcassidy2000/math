@@ -247,6 +247,65 @@ print("           Hence a Keller pair forces a0!=0, I!=0, and a nodal boundary."
 print("DEDUCTION: the two node addresses force q0(0)=0 and F_p(0,0)=3*a0/(2*gamma).")
 print("           Thus b is divisible by s^2 and A1(0)=-2/(3*gamma*a0).")
 
+# The exact p=0 seam of THM-3989 now separates the two remaining first-jet
+# branches.  Write eta=[s]q0, q3c=[s^3]q0, r2=[s^2](A0-q0^2), and
+# A10=A1(0).  The A seam at ell=2 and C seam at ell=1 are the following two
+# scalar equations; eliminating q3c leaves eta*(a0-gamma*eta)=0.
+eta, q3c, r2, A10 = sp.symbols("eta q3c r2 A10")
+A_seam = eta**2 + r2 - 2 * gamma * q3c - A10
+C_seam = (
+    sp.Rational(3, 2) * a0 * eta
+    + sp.Rational(3, 2) * gamma * A10
+    - sp.Rational(3, 2) * gamma * (2 * eta**2 + r2)
+    + 3 * gamma**2 * q3c
+)
+assert_zero(
+    "centered A ell=2 seam expansion",
+    A_seam - (eta**2 + r2 - 2 * gamma * q3c - A10),
+)
+assert_zero(
+    "centered C ell=1 seam elimination",
+    C_seam.subs(q3c, (eta**2 + r2 - A10) / (2 * gamma))
+    - sp.Rational(3, 2) * eta * (a0 - gamma * eta),
+)
+assert_zero(
+    "nonlift branch forces the s^2 coefficient of b",
+    (2 * gamma * eta).subs(eta, a0 / gamma) - 2 * a0,
+)
+print("DEDUCTION: eta=[s]q0 satisfies eta*(gamma*eta-a0)=0.")
+print("           eta=0 gives a genuine P1/P0 square-root lift;")
+print("           eta=a0/gamma is the unique first-seam nonliftable branch,")
+print("           and there [s^2]b=2*a0.")
+
+# Hostile partial-row control for the nonliftable branch gamma=a0=eta=1.
+# These are honest B2 elements built from x,u,p,y.  Their rows -5 through -2
+# vanish and both p=0 seams hold, but row -1 is nonzero, so the seam dichotomy
+# is not being mistaken for a Keller construction.
+x_log = s / tau
+u_log = s**2 / tau
+p_log = s**2 + tau
+y_log = s * p_log
+A_partial = sp.expand(x_log**2 + 2 * u_log + 1)
+C_partial = sp.expand(
+    x_log**3
+    + 3 * x_log * u_log
+    + sp.Rational(3, 2) * x_log
+    + sp.Rational(3, 2) * x_log * p_log
+    - sp.Rational(1, 2) * y_log
+)
+J_partial = sp.expand(
+    tau
+    * (D(A_partial) * sp.diff(C_partial, tau)
+       - sp.diff(A_partial, tau) * D(C_partial))
+)
+for kk in range(-5, -1):
+    assert_zero(f"nonliftable partial control row tau^{kk}", J_partial.coeff(tau, kk))
+assert_zero(
+    "nonliftable partial control first failure",
+    J_partial.coeff(tau, -1) + s**2 * (3 * s**2 - 1),
+)
+print("CONTROL: the eta=a0/gamma branch survives through row -2 but can fail row -1.")
+
 # Hostile controls: A=x^2+a, C=x^3+(3a/2)x, x=s/tau. They have bracket zero
 # and distinguish the one-address cusp from the two-address node.
 x, t, a_par, Avar, Cvar = sp.symbols("x t a A C")

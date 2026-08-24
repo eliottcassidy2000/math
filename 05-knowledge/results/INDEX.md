@@ -1143,6 +1143,44 @@
   `21a65442a25925e7df74d26a87170483c797c1d35133f3268d84c809ecc004fa` /
   `ea1b877bb921a870651d13e32b12a51e0fd29c0546f2f4642f098803faf34208`.
 
+- `jc2_reduced_23_cusp_jet_repair_thm3992.py` -> matching `.out`
+  [THM-3992 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  JC(2) OPEN]. In the first reduced `2:3` cell, target repairs and the scalar
+  moment force `h=gamma*s`, a centered nodal deleted-line image, two labelled
+  clutch addresses, and residual `R in (p^2,y)`. Combining this with
+  THM-3989's exact `p=0` seam gives
+  `eta*(gamma*eta-a)=0`, `eta=[s]q0`: the zero branch has an actual
+  `P_1/P_0` square-root lift, while the unique nonliftable branch has
+  `[s^2]b=2a`. A hostile packet survives through row `-2` and fails row `-1`;
+  neither branch closes the cell. Exact pass rows: `42`. Script/output SHA-256:
+  `e3f066043fce6881bfb21b1964a57e324706d6b2b94c113b8f850df512545ef2` /
+  `104c26b1285745972ad4f4ff43bc4792a0960f304dd6dc01ee7d145072743f24`.
+
+- `jc2_affine_p_double_collision_thm3994.py` -> matching `.out`
+  [THM-3994 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  JC(2) OPEN]. The two double-resultant seams split into two transverse
+  reduced addresses (`1+1`, smooth graphs) versus one curvilinear length-two
+  centre whose Rees graph has an `A1` chart and local class group `Z/2`.
+  Resultant multiplicity is therefore not a normalization-place count; the
+  addresses are not identified with THM-3992's clutches. Exact pass rows: `17`.
+  Script/output SHA-256:
+  `d77ef7469f6c705b9fece263dd9f6a07892d2960625d0ddb4b94c18a8c0cbed0` /
+  `240b2cdc0c6b7c5e209fbf9c17c2e7fb8d4e40fdd54f1c51a97e8b84f194d213`.
+
+- `brendle_hung_lemma54_independent_audit_20260824.py` and
+  `brendle_hung_vbc_exact_point_audit_20260824.py` -> matching `.out`s
+  [FINITE-EXACT SOURCE CONTROLS; GLOBAL `S2 x S2` CLAIM UNDER AUDIT]. The
+  omitted `h_a` branch of Lemma 5.4 is independently zero on both displayed
+  parametrized components of `Sigma`, with a nonzero hostile tensor. The
+  overwritten `V_bc^(2)` identity cancels at one generic exact point with all
+  three summands nonzero; this point is not a proof of the global identity.
+  Lemma script/output SHA-256:
+  `2b8295e83470733a20d8a14ddc29599d53494b54bf2818c7bfd950d69469ef4d` /
+  `c504027f7b78b24080b0e7b6d1cd923b3848f4846ba4e8c946caff841e0ed655`.
+  Point-control script/output SHA-256:
+  `45f7c0b617898149d3d368070e87c84bbf37470244ece5ca332a2e9724281102` /
+  `3c6dcf700c4d8cd44aae9390fb0aaadfc7937180a9af9a6880ace9218f7212dc`.
+
 - `cyclotomic_factorial_two_power_decoder_20260824.py` -> matching `.out`
   [ELEMENTARY PROVED IDENTITY + FINITE-EXACT CROSS-FRONTIER ATLAS; NO
   FC/HFC/JC/LRC CONSEQUENCE]. For every `d>=2`, the projected factorial

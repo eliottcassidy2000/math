@@ -40,6 +40,19 @@ DEDUCTION: a0=0 makes A_x=C_x=0 at X=0, contradicting J=1.
            Hence a Keller pair forces a0!=0, I!=0, and a nodal boundary.
 DEDUCTION: the two node addresses force q0(0)=0 and F_p(0,0)=3*a0/(2*gamma).
            Thus b is divisible by s^2 and A1(0)=-2/(3*gamma*a0).
+PASS  centered A ell=2 seam expansion
+PASS  centered C ell=1 seam elimination
+PASS  nonlift branch forces the s^2 coefficient of b
+DEDUCTION: eta=[s]q0 satisfies eta*(gamma*eta-a0)=0.
+           eta=0 gives a genuine P1/P0 square-root lift;
+           eta=a0/gamma is the unique first-seam nonliftable branch,
+           and there [s^2]b=2*a0.
+PASS  nonliftable partial control row tau^-5
+PASS  nonliftable partial control row tau^-4
+PASS  nonliftable partial control row tau^-3
+PASS  nonliftable partial control row tau^-2
+PASS  nonliftable partial control first failure
+CONTROL: the eta=a0/gamma branch survives through row -2 but can fail row -1.
 PASS  control parametrization lies on eliminant
 PASS  control Weierstrass expansion
 PASS  control Jacobian is zero

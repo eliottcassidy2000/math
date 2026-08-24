@@ -13,13 +13,17 @@ status: >
   two normalization addresses. Those addresses center X at gamma*x, force
   b in s^2*k[s], and yield the exact mixed-generator normal form
   C^2-A^3+(3a^2/4)A+a^3/4=gamma*u+(3a/(2gamma))*p+R(p,y)
-  with R in (p^2,y). This sharply narrows but does not close the 2:3 cell.
+  with R in (p^2,y). The exact p=0 seam then leaves precisely two first-jet
+  branches: [s]q0=0 gives a genuine depth-one square-root lift, while the
+  unique nonliftable branch has [s]q0=a/gamma and [s^2]b=2a. This sharply
+  narrows but does not close the 2:3 cell.
 source: root + frontier_transfer_scout / Hopf repair-quotient transfer, 2026-08-24
 audit: >
   PASS (root, 2026-08-24). The proof was independently checked from the full
   Laurent convolution law. The companion script separately expands the
-  Laurent Jacobian, verifies every row and factorization, and passes the cusp
-  and node controls. Normal and optimized executions are byte-identical.
+  Laurent Jacobian, verifies every row and factorization, and passes the cusp,
+  node, first-seam, and nonliftable partial-row controls. Normal and optimized
+  executions are byte-identical.
 depends_on:
   - THM-3989-cusp-log-laurent-conductor-and-nondividing-depth-reduction
 related:
@@ -28,8 +32,8 @@ related:
   - THM-3990-componentwise-harmonic-obstruction-and-repair-quotient
 script: 04-computation/jc2_reduced_23_cusp_jet_repair_thm3992.py
 output: 05-knowledge/results/jc2_reduced_23_cusp_jet_repair_thm3992.out
-script_sha256: 985b4833162ac0080b305fba5c2847a0736997940914033c3f2cda11cfd906dc
-output_sha256: 87c92173c5fb9893b2bb1ee68165938f24ae375705d4677271793a853c1c6cf5
+script_sha256: e3f066043fce6881bfb21b1964a57e324706d6b2b94c113b8f850df512545ef2
+output_sha256: 104c26b1285745972ad4f4ff43bc4792a0960f304dd6dc01ee7d145072743f24
 hash_basis: raw LF bytes
 ---
 
@@ -368,6 +372,85 @@ The family `A=x^2+a`, `C=x^3+(3a/2)x` remains a useful hostile control for
 zero and failure of `(17)`. Thus the boundary normal form alone is not a
 Keller construction.
 
+### 5.1 The exact first-seam dichotomy
+
+The centered node data can now be fed back into THM-3989's `p=0` seam. Write
+
+```text
+q0=eta*s+q2*s^2+q3*s^3+O(s^4),
+r=A0-q0^2=a+r1*s+r2*s^2+O(s^3),
+A1=A10+O(s).                                             (39a)
+```
+
+Apply THM-3989 equation `(36)` to `A` at `ell=2`. Since `h=gamma*s` and
+`b=2h q0`, the result is
+
+```text
+eta^2+r2-2gamma*q3-A10=0.                               (39b)
+```
+
+For `C` at `ell=1`, use
+
+```text
+d=3h^2q0,
+e=(3/2)h(q0^2+A0)=(3/2)gamma*s(2q0^2+r),
+C0=q0^3+(3/2)q0*r+(3/2)hA1.                            (39c)
+```
+
+The seam is therefore
+
+```text
+(3/2)a*eta+(3/2)gamma*A10
+ -(3/2)gamma*(2eta^2+r2)+3gamma^2*q3=0.                 (39d)
+```
+
+Eliminating `q3` with `(39b)` cancels both `r2` and `A10` and leaves the
+exact two-branch equation
+
+```text
+eta*(gamma*eta-a)=0.                                    (39e)
+```
+
+If `eta=0`, then `[s]q0=[s^3]h=0`. Since `b=2h q0`, THM-3989's exact
+depth-one extension criterion constructs an actual `H in P_1` with
+
+```text
+[tau^-1]H=h,             [tau^0]H=q0,
+A-H^2 in P_0=k[p,y].                                    (39f)
+```
+
+If `eta=a/gamma`, then `a!=0` makes this the unique first-seam nonliftable
+branch, and
+
+```text
+[s^2]b=2gamma*eta=2a.                                   (39g)
+```
+
+This dichotomy is sharp at the displayed depth. For `gamma=a=eta=1`, the
+honest `B_2` elements
+
+```text
+A=x^2+2u+1,
+C=x^3+3xu+(3/2)x+(3/2)xp-(1/2)y                        (39h)
+```
+
+satisfy every negative bracket row from `-5` through `-2`, but their full
+logarithmic bracket is
+
+```text
+tau*(A_s C_tau-A_tau C_s)=-s^2*(3s^2+3tau-1)/tau,       (39i)
+```
+
+so row `-1` fails. Thus `(39e)` neither constructs a Keller pair nor forces
+the nonliftable branch to continue. In the liftable branch, `(39f)` does not
+identify the positive coefficients of `H` with the rational approximate-root
+coefficients `q1,q2,...`, and it does not imply `C-H^3 in P_0`.
+
+The `F` in `(27)` is the mixed residual of `C^2-A^3+IA`; it is not the
+first-coordinate remainder called `F` in THM-3989's simple-base slice.
+Accordingly their two displayed `F_p(0,0)` formulas have different types and
+do not conflict.
+
 ## 6. The one-place cusp cotangent sidecar
 
 For the cusp ring and its normalization
@@ -410,19 +493,20 @@ The theorem does **not** prove:
 3. that the source term `gamma*x` can be removed by an allowed target repair;
 4. that `R in (p^2,y)` vanishes or is forced into a previously closed cell;
 5. that the two companion branches in `(39)` lie on one global component;
-6. that the reduced `(2,3)` cell is empty, or that `JC(2)` holds.
+6. that the lift in `(39f)` continues to a simultaneous square/cube root;
+7. that the reduced `(2,3)` cell is empty, or that `JC(2)` holds.
 
 The residual fifth-root normalization acts by
 `h->zeta*h`, `A->zeta^2A`, `C->zeta^3C`, with `zeta^5=1`; the scalar `I`
 has weight four. The robust invariant is not its chosen value but the forced
 node type and its two labelled normalization addresses.
 
-The next exact object is now the coordinated residual `R in (p^2,y)` together
-with the two transverse node clutches `(39)`, not an amorphous `(2,3)` cell.
-The cheapest decisive test is its oriented conductor-incidence graph and
-integral class group: a forest/two-component split can close by existing
-normalization tools, while a cycle is the only place a new clutch class can
-survive.
+The next exact object is the coordinated residual `R in (p^2,y)`, the two
+transverse node clutches `(39)`, and the liftable/nonliftable split `(39e)`.
+The cheapest decisive tests are simultaneous cube lifting in the first branch
+and continuation of row `-1` in the second, followed by the oriented
+conductor-incidence graph. A scalar resultant cannot replace those labelled
+addresses, as THM-3994's two double-collision seams demonstrate.
 
 Reproduce from the repository root:
 

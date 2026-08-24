@@ -2,7 +2,8 @@
 id: THM-3994
 title: "Double resultant collisions separate two-address and length-two seams"
 status: >
-  PROVED + VERIFIED-EXACT. In the first-height constant-(c,r) affine-P graph
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the first-height
+  constant-(c,r) affine-P graph
   of THM-3972, the two discriminant seams have the same scalar symptom but
   different completed base geometry. At cr=3 the double resultant root is
   supported at two distinct transverse basepoints in one fibre. At 4cr=3 it
@@ -13,7 +14,8 @@ status: >
   completed graph.
 source: root + frontier_transfer_scout / completed-zero-locus seam, 2026-08-24
 audit: >
-  PASS (root, 2026-08-24). The companion script independently recomputes the
+  PASS (root + independent hostile audit, 2026-08-24). The companion script
+  independently recomputes the
   general resultant and its discriminant, both square factorizations, the
   two-address discriminant and transverse Jacobians, the curvilinear local
   ideal, the A1 Hessian, and the resolution Smith determinant. Normal and
@@ -134,8 +136,15 @@ Since
 det partial(D,V)/partial(T,V)=8r^3!=0,                 (12)
 ```
 
-`L=D,V` are etale local coordinates. Equations `(5)` and `(11)` identify
-the completed base ideal and quotient as
+`L=D,V` have invertible Jacobian. More strongly, `v=-2r+V` is a unit near the
+support and the exact inverse is
+
+```text
+t=(1-L)/(-2r+V)^3.                                     (12a)
+```
+
+Thus `(L,V)` are Zariski-local coordinates, not merely formal or etale ones.
+Equations `(5)` and `(11)` identify the completed base ideal and quotient as
 
 ```text
 I=(L,V^2),
@@ -152,9 +161,11 @@ coordinate of `L` is nonzero it has equation
 V^2=LZ.                                                (14)
 ```
 
-This chart has one ordinary `A1` singularity at `L=V=Z=0`; its other Rees
-chart is smooth. The ring in `(14)` is normal, and the usual quadratic-cone
-or toric divisor computation gives
+This chart has one ordinary `A1` singularity at `L=V=Z=0`; the other Rees
+chart has equation `L=YV^2` and is smooth. The ring in `(14)` is normal.
+After inverting `L` it becomes the UFD `k[L,L^-1,V]`; the sole height-one
+prime above `L` is `P=(L,V)`, with `div(L)=2P`, and `P` is nonprincipal.
+The localization sequence therefore gives
 
 ```text
 Cl(O_(graph,0)) = Z/2.                                 (15)
@@ -182,8 +193,7 @@ group or Smith quotient.
 The local `Z/2` in `(15)` is not a global class-group computation and gives
 no `3`-torsion obstruction by itself. This theorem does not resolve the
 global seam, construct a Keller map, or prove `JC(2)`. It closes only the
-scheme-theoretic local geometry hidden by the double resultant. **QED
-candidate.**
+scheme-theoretic local geometry hidden by the double resultant. **QED.**
 
 ## Reproduction
 

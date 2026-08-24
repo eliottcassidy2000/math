@@ -21,8 +21,9 @@ audit: >
   compact-stratification additivity, normalized-volume count, component
   count, all integer solutions of d*n!=2, and the finite-quotient and
   nonunimodular failure boundaries. A separate 1,801-gate exact path verifies
-  dimensions `1..5`, all `d<=7`, the `A_2` cell count, the nonunimodular
-  five-tetrahedron hostile, and the factorial equation. It repaired ordinary
+  dimensions `1..6` and diagonal-index controls `d in {1,2,4}`, the `A_2`
+  cell count, the nonunimodular five-tetrahedron hostile, and the factorial
+  equation. It repaired ordinary
   versus compactly supported Euler wording, made `n>=1` and preservation of
   `Y_0` explicit, and separated compactness from finite orbit count. The
   theorem is independent of the claimed analytic existence of the S6

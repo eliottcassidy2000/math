@@ -21,7 +21,8 @@ The correct status is therefore:
 headline existence theorem                 PREPRINT CLAIM / UNDER AUDIT
 abstract minimization framework, Section 2 READ / NO IMMEDIATE CONTRADICTION
 displayed perturbation mechanism            READ / NO IMMEDIATE CONTRADICTION
-V_bc^(2)=0                                  OPEN REFEREE OBLIGATION
+V_bc^(2)=0                                  OPEN; exact point + conditional symmetry route
+z(h_a^(1))=0                                VERIFIED-EXACT on both displayed Sigma pieces
 other notebook identities                   PARTIALLY AUDITED, not imported
 Poisson repair principle                    PROVED independently in THM-3990
 ```
@@ -133,6 +134,25 @@ This is load-bearing.  The paper's quadratic coefficient contains
 `V_bc^(2)=0`.  No later cell consumes the corrupted variable, so the error is
 localized, but localization does not supply the missing identity.
 
+The independent exact companion
+[`brendle_hung_vbc_exact_point_audit_20260824.py`](../../04-computation/brendle_hung_vbc_exact_point_audit_20260824.py)
+rebuilds the three terms at one generic rational point. All three summands are
+nonzero and cancel exactly. This is a sensitive **FINITE-EXACT point control**,
+not a proof of the identity.
+
+There is also a conditional symmetry route. Let `R` be the quarter-turn about
+`e_z` and put `Phi(p1,p2)=(R p1,-R p2)`. Direct tensor transformation gives
+
+```text
+Phi^*h_b=-h_a,       Phi^*h_c=h_c,       Phi^*h_bc=-h_ac.
+```
+
+Naturality of the curvature/minimization operators then gives
+`Phi^*V_bc=-V_ac`. Thus a clean independent global verification of the
+source's `V_ac=0` would also prove `V_bc=0`. The saved notebook's `Vac` check
+is source evidence, not that independent verification, so the obligation
+remains open.
+
 ### 3.2 The missing `z(h_a^(1))=0` verification
 
 At notebook lines 10384--10389, the Lemma 5.4 block begins
@@ -152,18 +172,24 @@ This error is also localized.  The later `A1`--`A4` cells defining the
 coefficient of `lambda_c lambda_d^2` independently rebuild their `c,d`
 objects and do not consume the corrupted `ra` or `za`.  Moreover the
 `lambda_c lambda_d^2` monomial only needs the checked `c,d` pieces.  Therefore
-the saved-state error invalidates Lemma 5.4 as certified but does not by itself
-refute the later displayed cubic coefficient.  That coefficient still awaits
-an independent clean-kernel audit.
+the saved-state error does not by itself refute the later displayed cubic
+coefficient. The independent exact companion
+[`brendle_hung_lemma54_independent_audit_20260824.py`](../../04-computation/brendle_hung_lemma54_independent_audit_20260824.py)
+now verifies `P1(L(h_a))=0` symbolically on both displayed open pieces of
+`Sigma`, with four exact point controls and a nonzero hostile tensor. This
+closes the omitted `h_a` branch only; the cubic coefficient still awaits an
+independent clean-kernel audit.
 
 ## 4. Exact remaining referee obligations
 
 The shortest path to a trustworthy v1 certificate is:
 
-1. **Fresh-kernel quadratic audit.** Recompute the intended `Vbc` expression
-   without assignment reuse and prove it vanishes on `0<theta<Pi/2`.
-2. **Fresh-kernel Lemma 5.4 audit.** Recompute `z(ha)`, `z(hb)`, and `z(hc)`
-   from their definitions and restrict to the completed `Sigma`.
+1. **Fresh-kernel quadratic audit.** Recompute `Vbc` globally without
+   assignment reuse, or independently rebuild `Vac=0` and the displayed
+   symmetry. The one-point exact cancellation is only a positive control.
+2. **Complete Lemma 5.4 audit.** The omitted `z(ha)=0` branch is now
+   independently exact; retain or rebuild the source's `hb,hc` branches when
+   certifying the full lemma on completed `Sigma`.
 3. **Rebuild all ten `V^(2)` summands.** Use the corrected `h_cd`, corrected
    cross term, and a valid smallness constant
    `lambda_0<=sqrt(delta/C)`.
@@ -209,3 +235,16 @@ This suggests four bounded extensions.
 The third extension is the precise bridge to the `S6` clutch and the planar
 Jacobian conductor work.  It is a bridge of repair quotients, not evidence
 that either preprint's headline claim is true.
+
+Reproduce the two independent controls from the repository root:
+
+```text
+python3 04-computation/brendle_hung_lemma54_independent_audit_20260824.py
+python3 -O 04-computation/brendle_hung_lemma54_independent_audit_20260824.py
+python3 04-computation/brendle_hung_vbc_exact_point_audit_20260824.py
+python3 -O 04-computation/brendle_hung_vbc_exact_point_audit_20260824.py
+```
+
+Their script/output SHA-256 pairs are respectively
+`2b8295e8...ef4d / c504027f...d655` and
+`45f7c0b6...1102 / 3c6dcf70...12dc`.

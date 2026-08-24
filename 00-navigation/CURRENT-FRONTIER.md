@@ -347,8 +347,8 @@ asymptotic or residue.
   THM-3985 closes `k[p,y]`; THM-3986 closes each one-positive-`x` adjacency;
   THM-3987 forces three weights per output (`3x4/4x3` first). THM-3989 leaves
   nondividing depths, first `2:3`; its seam class blocks automatic root lifting.
-  THM-3992 forces `h=gamma*s`, a nodal deleted-line image, and residual
-  `R in (p^2,y)`, but leaves its two clutch addresses globally unjoined.
+  THM-3992 forces `h=gamma*s`, a nodal boundary and `R in (p^2,y)`; its first
+  seam is exactly square-liftable or has `[s^2]b=2a`, with clutches unjoined.
   THM-3994 separates a double resultant into either two transverse addresses
   or one length-two `A1` centre; multiplicity alone is not a closure test.
   Multi-term cancellation, finite Keller/Darboux entry, and `JC(2)` stay open.
