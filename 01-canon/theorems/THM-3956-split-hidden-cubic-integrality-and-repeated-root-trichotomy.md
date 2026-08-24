@@ -2,7 +2,7 @@
 id: THM-3956
 title: "Split hidden cubic integrality and repeated-root trichotomy"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / NOT CANON. If the one-parameter
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. If the one-parameter
   hidden cubic E+C h^2-2h^3 with C,E in k[t] splits over k(t), then every
   root is already polynomial: its monic normalization makes each root
   integral over the normal ring k[t]. Three distinct roots are exactly
@@ -18,9 +18,18 @@ status: >
   calculation gives scalar units and class group
   Z^(s-1) plus Z/(3 gcd(m_j)) when r is nonconstant. Thus the complete
   k(t)-split hidden-cubic lane has no same-field nontrivial planar Keller
-  chart. This candidate is not usable until independent hostile audit and
-  status promotion.
+  chart.
 source: jc-degree6-one-place + jc-extra-debt-local / post-THM-3953 split-field closure, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc-extra-debt-local and jc-cohn3709,
+  2026-08-24). Both audits reconstructed the monic-integrality step, repeated
+  root trichotomy, reducible linear/quadratic normalization and its principal
+  ramification-line unit obstruction, repeated-zero domain and normality at
+  multiple roots, total div(P)=3D ramification, forbidden-P-unit bridge, and
+  the independent Nagata valuation/class-group ledger. Normal and optimized
+  runs byte-match the repaired frozen 62-gate output, all hashes agree,
+  documentation checks pass, and the candidate's initial omitted quadratic-
+  component scope was repaired before promotion.
 depends_on:
   - THM-3953-rationally-split-hidden-cubic-ramification-triangle-nonentry
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
@@ -36,7 +45,7 @@ hash_basis: raw LF bytes
 
 # THM-3956 -- the split hidden-cubic lane is closed
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / NOT CANON.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero. Let
 
 ```text
@@ -330,4 +339,4 @@ this natural one-parameter model. The proof does **not** say that every
 hidden cubic must split, nor does it exclude changes of target or of finite
 model that leave the same-function-field natural-cubic scope. Irreducible
 hidden cubics, non-`A1` primary branches, and general planar Keller maps
-remain outside. **QED (candidate pending independent audit).**
+remain outside. **QED.**
