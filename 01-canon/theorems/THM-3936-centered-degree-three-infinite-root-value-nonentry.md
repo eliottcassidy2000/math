@@ -28,7 +28,9 @@ audit: >
   order-to-maximal discriminant bridge; and every multiple-address fibre. It
   also verified that rank-three finite flatness coalesces those addresses on
   the source ramification prime, so the conclusion is source non-unibranchness
-  rather than only a branch-image collision. The assertion-free 65-gate
+  rather than only a branch-image collision. An imprecise early
+  "equivalently" was repaired: trace zero and the prime degree, not target
+  normalization alone, force the repeated root to generate. The assertion-free 65-gate
   companion byte-matches in normal and optimized mode; raw and semantic hashes
   and documentation checks pass.
 depends_on:
@@ -83,9 +85,11 @@ so `Tr_(k(u)/k(A))(t)=0`. We impose the coefficient-ideal gate
 (a,C,c,d)=k[A,C].                                         (5)
 ```
 
-The normalization hypothesis includes `k(A,C)=k(u)`. Equivalently, the
-generic repeated root generates the cubic extension over `k(A)`, and `(4)`
-is its minimal polynomial after removal of coefficient content.
+The normalization hypothesis includes `k(A,C)=k(u)`. Separately, trace zero
+and nonconstancy give `t notin k(A)`: an element of the base field would have
+trace `3t`. Since `[k(u):k(A)]=3` is prime, it follows that
+`k(A,t)=k(u)`, and `(4)` is its minimal polynomial after removal of
+coefficient content.
 
 The conclusion is that none of these data can be the finite completion of a
 Keller `A2` open. Together with THM-3933, it closes both possible values of
