@@ -12,29 +12,34 @@ status: >
   THM-3915 persists: an explicit normal finite-free rational cubic order is
   globally nonmonogenic with power-basis index A^5, and the quadratic
   resolvent still has scalar units and class group Z^3 direct-sum Z/3. The
-  candidate fails only at THM-3917's six-branch boundary obstruction; JC(2)
-  remains open.
+  candidate is excluded by THM-3917's six-branch boundary obstruction.
+  Independently, THM-3924 computes the actual cubic completion's class group
+  as Z and its mandatory ramification class as five times a primitive
+  generator, contradicting THM-3922's boundary-basis gate. JC(2) remains open.
 source: jc_degree6_one_place / post-THM-3917 decic degeneration lane, 2026-08-23
 audit: >
-  TWO INDEPENDENT HOSTILE AUDITS PASS (root / late_origin_math_audit and
-  incoming_truth_surface_referee, 2026-08-23) after one prose repair.  The
-  audits proved the six-address bridge is
-  bijective on support, reconstructed every critical and reciprocal fibre,
-  and checked the complete delta 28+2+6=36 ledger and smooth contact-ten
-  infinity place.  They independently audited the finite-free basis, exact
-  A^5 power index, R1/S2 normality, local A-adic residual, node-blowup
-  congruence, removed-lattice Smith packet, scalar-unit kernel, and quotient
-  Cl(Q_2)=Z^3 direct-sum Z/3.  It caught the false phrase "generate the unit
-  ideal": the index-form coefficients have gcd one but lie in (A,C).  This
-  is repaired in MISTAKE-466; their common vanishing, hence global
-  nonmonogenicity, is unchanged.  Normal and optimized runs byte-match the
-  frozen output and all 69 gates pass.
+  THREE INDEPENDENT HOSTILE AUDITS PASS (late_origin_math_audit,
+  incoming_truth_surface_referee, and audit_thm3921/root, 2026-08-23) after
+  repairs 893fab9554 and 642ee9738e.  They independently reconstructed the
+  decic normalization, complete delta 28+2+6=36 ledger and smooth contact-ten
+  infinity place, six-address correspondence, finite-free integral basis and
+  exact A^5 index, R1/S2 normality, local A-adic residual, node-blowup
+  boundary span, class group, scalar-unit kernel, and actual Kummer generator.
+  They caught the false phrase "generate the unit ideal": the index-form
+  coefficients have gcd one but form a proper ideal contained in (A,C).
+  MISTAKE-466 records the repair; common vanishing and global
+  nonmonogenicity are unchanged.  Kummer unramifiedness is scoped to
+  codimension-one valuations centred on the affine quadratic resolvent.
+  LF-normalized normal, optimized, and frozen streams agree in all 69 gates,
+  both raw artifact hashes agree, and no mathematical gap remains.
 depends_on:
   - THM-3917-quintic-parameter-rational-collapsed-cubic
 related:
   - THM-3915-rational-decic-cube-resolvent-index-debt-euler-tariff
   - THM-3914-decic-boundary-three-class-degree-one-isotropic-divisor
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
+  - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
+  - THM-3924-decic-cubic-index-five-ramification-class-obstruction
 script: 04-computation/jc2_quintic_decic_degeneration_order_thm3921.py
 output: 05-knowledge/results/jc2_quintic_decic_degeneration_order_thm3921.out
 script_sha256: 5f0db36702cfdd09296000f39dc5210bd6d8a2e6d385d0c1e07a4873198cf245
@@ -93,9 +98,13 @@ Q_2^*=k^*,                       Cl(Q_2)=Z^3 direct-sum Z/3. (5)
 ```
 
 Thus the quintic condition clears the positive-genus obstruction without
-losing normality, nonmonogenicity, or the global three-class. What remains
-is exactly the six-branch boundary obstruction proved in THM-3917, so this
-candidate is not a Keller map and `JC(2)` remains **OPEN**.
+losing normality, nonmonogenicity, or the global three-class. The six-branch
+boundary obstruction proved in THM-3917 already shows that this candidate
+is not a Keller map. Independently, THM-3924 now proves
+`Cl(B)=Z<g>` and `[E]=5g` for the actual cubic completion and mandatory
+ramification prime.  THM-3922 requires that prime to be a primitive boundary
+basis element, so the class packet gives a second exclusion.  The conjecture
+`JC(2)` remains **OPEN**.
 
 ## 1. The decic normalization and the hidden THM-3915 family
 
@@ -554,11 +563,13 @@ be a cube times a unit; scalar units over the algebraically closed field are
 cubes, contrary to connectedness. Hence `[E]` is the nonzero element of
 `Cl(Q_2)[3]`, and so generates the unique `Z/3` summand in `(48)`.
 
-The comparison is now exact. The `K=0` deformation does all of the things a
-counterexample design asked of it locally: it makes the collapsed divisor
-rational while retaining a normal rational nonmonogenic cubic order and the
-needed global three-class. It fails for a single new reason: the same
+The comparison is now exact. The `K=0` deformation makes the collapsed
+divisor rational while retaining a normal rational nonmonogenic cubic order
+and the needed global three-class. It nevertheless fails: the same
 double-root mechanism turns two smooth origin branches into cuspidal ones
 and sends all six ramification addresses through one point. THM-3917 proves
 that this six-branched ramification curve cannot lie in the boundary of an
-affine-plane Keller atlas. No planar Jacobian counterexample is obtained.
+affine-plane Keller atlas. THM-3924 independently identifies the additional
+class-divisibility obstruction `[E]=5g` in `Cl(B)=Z`; the same five is the
+power-index exponent and the ramification valuation imbalance. No planar
+Jacobian counterexample is obtained.

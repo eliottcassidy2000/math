@@ -2,10 +2,11 @@
 
 **Session status (2026-08-23):** mathematical research synthesis.  This
 session promotes THM-3918 and THM-3919.  Subsequent incoming work promotes
-THM-3920 and THM-3921: the former proves the affine finite-degree address cap
-and closes every irreducible radial depressed-cubic Keller chart; the latter
-audits the six-address degeneration packet.  None settles the planar
-Jacobian conjecture.  `JC(2)` and `DC(2)` remain **OPEN**.
+THM-3920--3924: affine address and radial-chart closure; the audited six-
+address degeneration; the affine-plane boundary class-basis theorem; the
+fixed four-ray obstruction; and the index-five ramification-class
+obstruction.  None settles the planar Jacobian conjecture.  `JC(2)` and
+`DC(2)` remain **OPEN**.
 
 ## 1. Inheritance pass
 
@@ -123,6 +124,28 @@ Its character/Mason/third-Veronese/Kummer case split further closes the whole
 irreducible radial chart `A=F/4,C=sF/4`.  THM-3921 is also proved and audited:
 all algebraic invoices persist, but the same six addresses become four smooth
 plus two cuspidal origin branches.  THM-3917/3920 close that model.
+
+Two later arrivals expose the actual-completion invoice that the resolvent
+could not see.  THM-3922 proves that the prime boundary divisors of any normal
+affine completion containing `A2` form a primitive `Z`-basis of its actual
+class group.  THM-3924 computes for THM-3921's cubic completion
+
+```text
+Cl(B)=Z<g>,                    [E_ram]=5g.
+```
+
+The mandatory ramification prime is nonprimitive, independently closing the
+model.  The integer five also equals the `A^5` power-index exponent and the
+ramification pole-valuation gap `6-1`.  This is an exact bridge in this order,
+not a general index-to-class theorem and not a transfer from the quadratic
+resolvent.
+
+THM-3923 closes the fixed THM-3808/3853/3855 inverse-discriminant grammar:
+four distinct tangent rays give four normalization addresses, but a cubic
+Keller completion permits at most three.  Formal lifting remains correct as
+algebra; it lands in the wrong local branch packet.  The live local designs
+must collide the quartic rays to `3+1`, `2+2`, or `2+1+1`, make the quartic
+jet vanish, or leave the common-zero packet.
 
 ## 3. Anchor result: the elliptic incidence has a rational boundary fibre
 
@@ -356,7 +379,10 @@ or the coordinates needed to recover the predicate.
 | normalization map `(5)` | address/contact graph | complete delta ledger | individual branch equations after scalarization | conductor delta and intersection-length matrix | collision factorization plus genus budget |
 | removed lattice `(11)` | discriminant residue packet | possible and actual three-class support | effectivity and full ambient geometry | local inertia and ambient saturation | Smith form plus local `uv=s^3` charts |
 | affine branch normalization | finite-flat completion | address cap `r<=d` | contact orders and projective-infinity packets | affine target point and branch labels | THM-3920 fibre-length injection |
+| four-ray tangent cone | cubic branch normalization | per-component address count | reducible global grouping | reduced irreducible component label | THM-3923 `4>3` gate |
 | radial cubic field | same-field plane atlas via finite normalization | derivative divisors and common fibre | nonradial order structures | common radial factor and global `z` | THM-3920 character/Mason/Veronese/Kummer split |
+| actual normal completion | affine-plane open via Weil localization | primitive free boundary basis in `Cl(X)` | effectivity and etaleness | actual completion, not resolvent | THM-3922 class-basis gate |
+| `A^5` power index | ramification boundary class | integer five in this completion | a general index-to-class law | two A=0 primes and pole valuations | THM-3924 `[E]=5g` |
 | natural response data | ordinal scheduler | chronological order only | gaps, ties, labels, coefficients | update law and decoder | compare two states with same rank order |
 
 No row licenses a transfer beyond its preserved predicate.  In particular,
@@ -390,13 +416,12 @@ Jacobian proof.
 
 ## 10. Generated successor tasks
 
-After THM-3920, the strongest next tasks, in order of diagnostic value, are:
+After THM-3920--3924, the strongest next tasks, in order of diagnostic value, are:
 
-1. **Break the radial grammar.**  Construct or exclude a normal
-   nonmonogenic binary-cubic order without the common radial factor, the
-   one-variable depressed-cubic presentation, or a global root coordinate
-   `z`.  Inventory its intrinsic boundary components before optimizing local
-   singularities.
+1. **Break both closed grammars.**  Construct a normal nonmonogenic binary-
+   cubic order without the common radial factor/global `z` and without the
+   fixed four-ray tangent packet.  Start with `3+1`, `2+2`, `2+1+1`, a
+   vanishing quartic jet, or a unit-ideal packet.
 2. **THM-3918 independent arithmetic.**  Decide cubic-field rationality and
    compute the full removed lattice.  Resolve the eight-branch origin with
    its contact-seven pair and the two external `A2` cusps; compute the full
@@ -405,16 +430,18 @@ After THM-3920, the strongest next tasks, in order of diagnostic value, are:
 3. **Euler tariff as a comparison invariant.**  Compute the compact-support
    Euler characteristic of the THM-3918 maximal etale locus and, if it is not
    one, the exact tariff a hypothetical plane open would have had to delete.
-4. **Nonradial plane-atlas complement.**  For the next order, combine units,
-   Picard/class group, Euler tariff, address cap, and nonproperness valuations.
-   Do not infer a plane open from rational branch normalization.
+4. **Actual-completion class invoice.**  For the next order, compute
+   `Cl(X)` itself—not merely a resolvent group—and test whether every mandatory
+   ramification divisor extends to a primitive boundary basis.  Then combine
+   units, Euler tariff, address cap, and nonproperness valuations.
 5. **Compare the rational decics.**  Test whether THM-3915 and THM-3918 are
    related by `GL_2` source change, target automorphism, or a shared cubic
    resolvent family.  Use singular/contact packets as the first obstruction.
 6. **Compare the THM-3917 escape.**  THM-3921 identifies its six addresses
    with the complete origin packet, proves the genus gap stays one, and
-   retains the actual cyclic-layer class.  Search outside THM-3920's radial
-   grammar rather than for another radial genus-zero tuning.
+   retains the actual cyclic-layer class; THM-3924 also finds `[E]=5g` in the
+   actual cubic completion.  Search outside both obstructions rather than for
+   another radial genus-zero tuning.
 7. **Response automaton.**  For general sparse tangent deformations, store
    the infinity anchor, conjugate norm gains, tie order, and first surviving
    shell.  Classify which states preserve branch genus and which merely
@@ -443,9 +470,16 @@ python -B -O 04-computation/jc2_affine_plane_boundary_unibranch_depressed_cubic_
 
 python -B 04-computation/jc2_quintic_decic_degeneration_order_thm3921.py
 python -B -O 04-computation/jc2_quintic_decic_degeneration_order_thm3921.py
+
+python -B 04-computation/jc2_binary_cubic_four_ray_tangent_address_thm3923.py
+python -B -O 04-computation/jc2_binary_cubic_four_ray_tangent_address_thm3923.py
+
+python -B 04-computation/jc2_decic_cubic_index_five_ramification_class_thm3924.py
+python -B -O 04-computation/jc2_decic_cubic_index_five_ramification_class_thm3924.py
 ```
 
-The companions have respectively `45`, `48`, `97`, and `69` active gates.
+The companions have respectively `45`, `48`, `97`, `69`, `28`, and `20`
+active gates.
 All LF-normalized normal and optimized streams match their frozen LF outputs.  The lattice
 theorem also survived an independent reconstruction of the log resolution, local cusp
 inertia, infinity Eisenstein packet, and missing-divisor census.
@@ -453,7 +487,9 @@ inertia, infinity Eisenstein packet, and missing-divisor census.
 The durable frontier statement is narrow but real: the moving-root family
 now contains a rational one-place normal nonmonogenic `S3` decic with a
 nonzero resolvent three-class, and the original elliptic fibre's three-class
-is known to be maximally mixed.  THM-3920 closes the radial family by affine
-address topology and then by a complete derivative-profile split.  The live
-Keller-design gap is therefore a genuinely nonradial order/atlas, not another
-radial rationalization; `JC(2)` remains open.
+is known to be maximally mixed.  THM-3920 closes the radial family, THM-3923
+closes the fixed four-ray formal grammar, and THM-3922/3924 convert actual
+completion classes into a primitive-boundary obstruction.  The live Keller-
+design gap is a genuinely nonradial, at-most-three-ray or quartic-vanishing
+order whose mandatory boundary classes form a primitive basis; `JC(2)`
+remains open.

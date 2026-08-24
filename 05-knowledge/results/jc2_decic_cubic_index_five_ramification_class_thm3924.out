@@ -1,0 +1,12 @@
+theorem=THM-3924-decic-cubic-index-five-ramification-class-obstruction
+localized_order=UFD_k[u,z,F^-1];units=kstar_times_A^Z
+A_zero_primes=residue_degrees_1_2;div(A)=Pminus+P2
+class_group=Z2_mod_(1,1)=Z;generator=Pminus;P2=-Pminus
+ramification=E: z^2-p=0
+valuations_E_equation=Pminus:-6;P2:-1
+ramification_class=[E]=5[Pminus];nonprimitive
+index_bridge=power_index_A^5=valuation_gap_5=class_divisibility_5
+consequence=no_A2_Keller_atlas_by_THM3922
+semantic_sha256=a0c6d59e67172193dfe81763d33589dd46ed1eca185e0e60ba32f01c6202e18b
+CHECKS=20
+RESULT=PASS

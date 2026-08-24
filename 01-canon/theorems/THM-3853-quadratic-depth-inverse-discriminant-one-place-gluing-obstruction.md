@@ -9,7 +9,10 @@ status: >
   quadratic perturbation of all four binary-cubic coefficients with the
   linear packet fixed, for any nonzero target scalar.  This is a bounded
   inverse-discriminant obstruction, not a cubic-cover or planar-Jacobian
-  theorem.
+  theorem.  Subsequent THM-3923 proves that every reduced irreducible
+  polynomial algebraization retaining this four-ray linear packet violates
+  the cubic address cap, so higher-depth algebraization remains only an
+  independent inverse-discriminant question, not a Keller route.
 source: jc_quartic_c3_construct / inverse binary-cubic discriminant lane, 2026-08-23
 audit: >
   TWO INDEPENDENT HOSTILE AUDITS PASS (root / pell_mod9_hostile_audit,
@@ -34,6 +37,7 @@ related:
   - THM-3844-two-cusp-polynomial-branch-quadratic-resolvent-design-gate
   - THM-3847-two-place-cubic-deformation-monogenic-unit-debt
   - THM-3850-nonconstant-cubic-profile-irreducible-branch-puncture-formula
+  - THM-3923-binary-cubic-four-ray-tangent-address-obstruction
 script: 04-computation/jc2_inverse_discriminant_quadratic_depth_thm3853.py
 output: 05-knowledge/results/jc2_inverse_discriminant_quadratic_depth_thm3853.out
 script_sha256: 2e5b4a240a4f81c793adc5cda1a3edc5da24056d5e49324e4617a1745be84bed
@@ -273,8 +277,13 @@ secure nonmonogenicity.  What fails is finite termination: the first
 quadratic coefficient that creates the fifth-degree gluing also creates
 mixed fifth-degree and sixth-degree debt.  A separate formal deformation
 analysis may solve that debt recursively; `(20)` says only that the solution
-cannot stop after the pure quadratic layer.  The first open polynomial cell
-therefore allows interacting coefficient terms of degree at least three.
+cannot stop after the pure quadratic layer.  As an inverse-discriminant
+problem, the first open polynomial cell therefore allows interacting
+coefficient terms of degree at least three.  As a Keller design, however,
+THM-3923 closes every reduced irreducible algebraization with this fixed
+linear packet: its four tangent rays give four normalization addresses against
+the cubic cap of three.  A successor Keller grammar must use at most three
+rays, a vanishing quartic jet, or a different unit-ideal packet.
 
 The assertion-free companion freezes the two normalizations, the full
 12-parameter universe, both 29-equation ideals, the two saturated bases,

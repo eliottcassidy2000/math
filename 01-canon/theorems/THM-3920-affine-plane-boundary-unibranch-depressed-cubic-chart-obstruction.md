@@ -45,6 +45,8 @@ related:
   - THM-3916-positive-genus-collapsed-valuation-keller-obstruction
   - THM-3887-binary-cubic-common-zero-quintic-one-tangent-obstruction
   - THM-3921-quintic-genus-collapse-decic-degeneration-packet
+  - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
+  - THM-3923-binary-cubic-four-ray-tangent-address-obstruction
 script: 04-computation/jc2_affine_plane_boundary_unibranch_depressed_cubic_chart_thm3920.py
 output: 05-knowledge/results/jc2_affine_plane_boundary_unibranch_depressed_cubic_chart_thm3920.out
 script_sha256: aeab7d44be76d9ee50b11ab352701251ad8adc0aee7a85b10efa88b8c281b286

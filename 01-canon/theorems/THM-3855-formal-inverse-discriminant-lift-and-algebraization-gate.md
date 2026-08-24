@@ -13,8 +13,10 @@ status: >
   equivalent to the THM-3808 row under a tangent base automorphism and an
   `SL2` change of binary variables.  The one-place THM-3853 deformation
   therefore introduces no new completed cubic algebra: it is the base-changed
-  completion of THM-3808.  Polynomial gauge algebraization, constant units on
-  a global etale open, and a Keller atlas remain open.
+  completion of THM-3808.  Polynomial gauge algebraization remains an
+  independent algebraic question, but THM-3923 excludes every reduced
+  irreducible algebraization with this four-ray packet from a cubic Keller
+  atlas.  Other tangent packets and JC(2) remain open.
 source: root / inverse binary-cubic discriminant lane, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc_quartic_c3_construct, 2026-08-23).  The
@@ -63,6 +65,8 @@ audit: >
 depends_on:
   - THM-3808-homogeneous-linear-binary-cubic-veronese-unit-trap
   - THM-3853-quadratic-depth-inverse-discriminant-one-place-gluing-obstruction
+related:
+  - THM-3923-binary-cubic-four-ray-tangent-address-obstruction
 script: 04-computation/jc2_formal_inverse_discriminant_lift_thm3855.py
 output: 05-knowledge/results/jc2_formal_inverse_discriminant_lift_thm3855.out
 script_sha256: 215a1612be24062ef620feaa3dde8a1b37437e6a43176b88d27831ba1c824885
@@ -205,7 +209,10 @@ This does **not** produce a polynomial cubic over `k[A,C]`.  THM-3853's
 independently audited saturated computation excludes a lift consisting only
 of `(3)` plus homogeneous quadratic corrections.  Finite termination from
 degree three onward, the unit group of a global deleted-ramification open,
-and any planar Keller map remain open.
+and other tangent packets remain open.  Subsequent THM-3923 shows that any
+reduced irreducible finite algebraization retaining this fixed four-ray
+packet has four normalization addresses over the origin and therefore cannot
+be a degree-three Keller completion.
 
 ## 1. The base Jacobian is a cubic complete intersection
 
@@ -526,13 +533,16 @@ nonmonogenic index form,
 generic S3 monodromy.                                           (17)
 ```
 
-The missing implication is algebraization.  A finite polynomial row would
-have to realize `(6)` exactly while retaining `(15)`.  THM-3853 excludes
-maximum coefficient degree two; degree-three and interacting higher-degree
-rows are the first live search.  Even after such a row is found, its maximal
-etale open must still have only scalar units and admit the required plane
-atlas.  Thus `(5)` is a positive local existence theorem and a sharp
-algebraization gate, not a Jacobian counterexample.
+The remaining implication inside this theorem is algebraization.  A finite
+polynomial row would have to realize `(6)` exactly while retaining `(15)`.
+THM-3853 excludes maximum coefficient degree two; degree-three and interacting
+higher-degree rows remain an algebraic search.  They are no longer a Keller
+search: THM-3923 proves that the unchanged four-ray tangent packet violates
+the degree-three address cap for every reduced irreducible algebraization.
+The next Keller grammar must collide the rays to at most three, make the
+quartic jet vanish, or leave this fixed common-zero linear packet.  Thus `(5)`
+is a positive local existence theorem and a sharp algebraization gate, not a
+Jacobian counterexample.
 
 Reproduction:
 

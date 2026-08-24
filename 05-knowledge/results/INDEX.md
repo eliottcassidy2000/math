@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3924 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3927 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -214,13 +214,43 @@
   rational finite-free normal nonmonogenic order, index `(A^5)`, scalar units,
   and `Cl=Z^3+Z/3` all persist.  The genus relation is always
   `g(D^nu)=g(F^nu)+1`, and the unique torsion element is the actual affine-
-  unramified cyclic-layer class.  THM-3917/3920 close the model.  The audit
+  unramified cyclic-layer class.  THM-3917/3920 close the model; independently,
+  THM-3924 computes `Cl(B)=Z` and mandatory ramification class `[E]=5g`, so
+  THM-3922's primitive boundary-basis gate closes it again.  The audit
   repaired coefficient-gcd one versus unit-ideal generation (MISTAKE-466);
   nonmonogenicity is unchanged.  Checks: `69`.
   Script/output/semantic SHA-256:
   `5f0db36702cfdd09296000f39dc5210bd6d8a2e6d385d0c1e07a4873198cf245` /
   `63e0fd607c0db03aa73f579c9b6d53cdb149e37e48997569847a459bf53cf076` /
   `d273b4c2ebba004daf98098437a91b8c7c358aa728bab8cad90d1353411adf00`.
+
+- `jc2_binary_cubic_four_ray_tangent_address_thm3923.py` -> matching `.out`
+  [THM-3923 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  A
+  reduced irreducible branch with `r` distinct tangent-cone factors has at
+  least `r` normalization addresses, while a cubic Keller completion permits
+  at most three.  The fixed THM-3808 packet has four distinct rays, so both
+  THM-3853 targets and every reduced irreducible THM-3855 polynomial
+  algebraization retaining that linear packet are excluded.  Reducible
+  branches, at-most-three-ray collisions, higher-degree covers, unit-ideal
+  THM-3907 packets, and `JC(2)` remain open.  Checks: `28`.
+  Script/output/semantic SHA-256:
+  `3232643254947a0970ec60355d95056b023be4943dff09ca0f04c01e1624c878` /
+  `9856a88626944ab9821a889554b85f29d38ccc0d153995f179beb016880e5fbb` /
+  `264aef4f00430ba6db9215f5d26e9322f8d06813a7b643e692570eb92359c9e8`.
+
+- `jc2_decic_cubic_index_five_ramification_class_thm3924.py` -> matching
+  `.out` [THM-3924 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  For THM-3921's actual normal cubic completion, localization gives
+  `Cl(B)=Z<P_->`, the second infinity prime is `-P_-`, and the mandatory
+  ramification prime satisfies `[E]=5[P_-]`.  THM-3922 requires the omitted
+  prime boundary classes of any affine-plane open to be a primitive basis;
+  rank one and nonprimitive `[E]` independently exclude the atlas.  The same
+  five is the `A^5` power-index exponent and the ramification valuation gap
+  `6-1`.  This does not transfer to THM-3915 or settle `JC(2)`.  Checks: `20`.
+  Script/output/semantic SHA-256:
+  `3c0af6ff50dffb74336732367f98451aa108fb1d501a5c8daa4f268bf48e15cd` /
+  `cf93d07d262c30ca5d19a203e95a33a7f75e1534af53eef947193f129bfa785b` /
+  `a0c6d59e67172193dfe81763d33589dd46ed1eca185e0e60ba32f01c6202e18b`.
 
 - `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
   `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil
