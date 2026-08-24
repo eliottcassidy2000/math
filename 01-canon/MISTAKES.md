@@ -352,8 +352,10 @@ Format per entry:
   affine-graph blowup reservation then occupied that identifier, forcing the
   theorem to freshly checked `THM-3973`. An exact-volume determinantal
   completion reservation then occupied that identifier, forcing another
-  atomic move to freshly checked `THM-3974`. The hash-bearing LRC companions
-  and mathematical scope did not change.
+  atomic move to freshly checked `THM-3974`. A height-tower support-obstruction
+  reservation then occupied that identifier, forcing another atomic move to
+  freshly checked `THM-3975`. The hash-bearing LRC companions and mathematical
+  scope did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
   only before empty reservations; rename the whole artifact family together.
