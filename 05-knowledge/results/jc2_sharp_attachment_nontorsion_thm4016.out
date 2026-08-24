@@ -1,0 +1,24 @@
+PASS constant-relation: c40=-512/9, c02=-8128/135
+PASS sharp-hostile-c02: [y^2]Rtilde=-8128/(135*A5^3)
+PASS raw-epsilon: [p^3]R=(-1376/135)*a^-12
+PASS raw-kappa: [y^2]R=(4064/135)*a^-12
+PASS nonresonance: epsilon+kappa=(2688/135)*a^-12
+PASS normalized-X: X^3=43/84
+PASS normalized-Y: Y^2=127/84
+PASS curve-equation: Y^2=X^3+1
+PASS coordinate-field: [Q(alpha,beta):Q]=3*2=6 by the 43- and 127-valuations
+PASS place-11-alpha: alpha maps to 9
+PASS place-11-beta: beta maps to 2
+PASS place-11-curve: Pbar=(9, 2) lies on E/F_11
+PASS place-11-good: Delta(E)=-432 is a 11-adic unit
+PASS place-11-order: ord(Pbar)=12
+PASS place-17-alpha: alpha maps to 2
+PASS place-17-beta: beta maps to 3
+PASS place-17-curve: Pbar=(2, 3) lies on E/F_17
+PASS place-17-good: Delta(E)=-432 is a 17-adic unit
+PASS place-17-order: ord(Pbar)=6
+PASS p11-multiples: 2P=(2,8), 3P=(5,4), 4P=(0,10), 6P=(10,0)
+PASS p17-multiples: 2P=(0,1), 3P=(16,0)
+PASS all-order-contradiction: v2(N)=v2(12)=2 at 11 but v2(N)=v2(6)=1 at 17
+SEMANTIC_SHA256 1484315bd0c7f31e9f27e1a0cdbe88fba0541af06e53bcb20c22fe57cb042574
+ALL ATTACHMENT NON-TORSION CHECKS PASSED

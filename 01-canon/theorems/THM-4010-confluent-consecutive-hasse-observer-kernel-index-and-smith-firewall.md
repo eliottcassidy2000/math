@@ -9,10 +9,15 @@ status: >
   the optimal kth power of the falling-factorial value. On degree below
   N=(m+1)k, the jet-image lattice has index
   product_(j=1)^m (j!)^(k^2), is translation-invariant, and has mod-p rank
-  k*min(m+1,p). The tempting Smith list `(j!)^k` repeated k times is false:
+  k*min(m+1,p). Writing n=m+1, when n>p the first positive p-Smith
+  exponent is exactly 1+v_p(k); the exponent-one multiplicity is zero if
+  p divides k and otherwise min(p,n-p). The complete p-primary partition is
+  the residue-cluster multiset union, and for k=2, p<n<=2p it is explicitly
+  `0^(2p),1^(n-p),3^(n-p)` for odd p and `0^4,2^(2n-4)` for p=2.
+  The tempting Smith list `(j!)^k` repeated k times is false:
   its rank-minimal hostile is (m,k)=(3,2), where the actual final factors are
-  12,108 rather than 36,36. The positive higher-p-power Smith exponents remain
-  OPEN; no cross-frontier arithmetic or dynamical consequence is asserted.
+  12,108 rather than 36,36. Later positive p-power layers remain OPEN; no
+  cross-frontier arithmetic or dynamical consequence is asserted.
 source: root + independent no-import audit, 2026-08-24
 audit: >
   PASS (independent standard-library reconstruction, 2026-08-24). The audit
@@ -21,7 +26,12 @@ audit: >
   and mutation controls, polynomial division, endpoint and values-only
   hostiles, mod-p ranks, and the arbitrary-two-node k=2 formula. It computes
   28 Smith forms through rank 28 and 516,244 exact gates. Primary and audit
-  normal/optimized streams match their frozen outputs.
+  normal/optimized streams match their frozen outputs. A second independent
+  modular-DVR referee verifies the first positive layer, CRT cluster union,
+  complete k=2 pair band, and both minimal hostiles on 180 atlas cases through
+  rank 80 and 9,501,593 gates. It caught and repaired a cancellation-unsafe
+  attainment sentence; the canonical proof uses the literal residual entry
+  `pk` after clearing the representative-node identity block.
 depends_on:
   - THM-4000-centered-base-split-cubic-observer-and-tripotent-crt-atlas
 related:
@@ -36,6 +46,16 @@ independent_audit_output: 05-knowledge/results/confluent_consecutive_hasse_obser
 independent_audit_script_sha256: b122225779dc95260c3e6681b932b4ce6a2a48da0304910ad0f23386f8d9bcc1
 independent_audit_output_sha256: 42e6daa3eab5a9a6126aa5f7897a311794e2887a0c0f9b062bd5c0bf0a988236
 independent_audit_semantic_sha256: 23c5b3fbbaeb75be24ffb5d2221abaff12697bade93a5b0d199c9f11c8d97af4
+primewise_script: 04-computation/confluent_sampler_primewise_extension_thm4010.py
+primewise_output: 05-knowledge/results/confluent_sampler_primewise_extension_thm4010.out
+primewise_script_sha256: 79f2b53a945815e6729202661c2ae5b045363d99175bef380f0652d52a4c6f49
+primewise_output_sha256: 10cb170be545de5b5a946ee24786b9ca7982aac0c76c9cd2869f07c03148db5e
+primewise_semantic_sha256: a9e30379316861df868043a67f3306f8a343e474aec052d22889be3eb122a989
+primewise_independent_script: 04-computation/confluent_sampler_primewise_extension_thm4010_independent_audit.py
+primewise_independent_output: 05-knowledge/results/confluent_sampler_primewise_extension_thm4010_independent_audit.out
+primewise_independent_script_sha256: c7c2d6a6c865958d83d1bf49f9f1dd61050496d946d5017e6d2361d06bce996a
+primewise_independent_output_sha256: 0ee98c1861df3c9e0af95c5d2249e42f57d88f65be714f7054c09bb22fbb98c7
+primewise_independent_semantic_sha256: 0f8dc0d0d56792c2526b4395230393963e77df72c9b102d2b6086fae3ffd0f26
 hash_basis: raw LF bytes
 ---
 
@@ -171,7 +191,97 @@ Clearing the first node leaves the block
 
 whose entry gcd is `d*gcd(d,2)` and determinant is `d^4`.
 
-## 4. The repeated-factorial Smith guess is false
+## 4. First positive `p`-adic layer and residue clusters
+
+Put `n=m+1`.  If `n<=p`, equation `(11)` gives full rank modulo `p`, so
+every `p`-Smith exponent is zero.  Suppose `n>p` and order the exponents as
+
+```text
+alpha_(p,1)<=...<=alpha_(p,nk).                        (14a)
+```
+
+Then
+
+```text
+alpha_(p,1)=...=alpha_(p,kp)=0,
+alpha_(p,kp+1)=1+v_p(k).                               (14b)
+```
+
+The first line is `(11)`.  For the genuinely `p`-adic step, first group the
+nodes by residue modulo `p`.  The monic factors
+
+```text
+product_(j congruent c mod p)(X-j)^k                  (14c)
+```
+
+have pairwise unit resultants over `Z_(p)`.  Chinese remainder on both the
+polynomial quotient and its jet target therefore makes the global
+`p`-exponent partition the sorted multiset union of the residue-cluster
+partitions.
+
+In one cluster, translate the representative node to zero and clear its
+`k`-jet identity block.  Write the remaining nodes as `ph`, `h>=1`.  On the
+mod-`p` kernel, the residual entry from coefficient degree `k+s` to jet
+`r=k-t`, where `s>=0` and `1<=t<=k`, is
+
+```text
+binom(k+s,k-t)(ph)^(s+t).                              (14d)
+```
+
+With `L=s+t`, the `L` consecutive numerator factors in
+`binom(k+s,L)` contain `k`.  Hence
+
+```text
+v_p(p^L binom(k+s,L))
+ >=L+v_p(k)-v_p(L!)
+ >=1+v_p(k).                                          (14e)
+```
+
+This lower bound is attained without any summand-cancellation argument: the
+literal cleared-matrix entry `(h,r,q)=(1,k-1,k)` is exactly `pk`.  Since
+`n>p` supplies the duplicate node `p`, `(14b)` follows.
+
+The exponent-one multiplicity is also exact:
+
+```text
+#{i:alpha_(p,i)=1}=0                         if p divides k,
+                     min(p,n-p)              if p does not divide k. (14f)
+```
+
+When `p` is prime to `k`, divide the duplicate-node block by `p` and reduce
+modulo `p`.  Terms with `L>=2` vanish; at an active residue `c` the remaining
+map is, in jet `k-1`,
+
+```text
+Q -> k h G'(c)^k Q(c),
+G(X)=product_(d=0)^(p-1)(X-d).                         (14g)
+```
+
+Exactly `min(p,n-p)` residue clusters contain a duplicate.  Evaluation of
+`Q` at those distinct residues has full row rank, since its available
+dimension is `k(n-p)`.  This proves `(14f)`; if `p|k`, `(14b)` already
+places the first positive exponent above one.
+
+The cluster union closes one complete band.  For `k=2` and `p<n<=2p`, every
+cluster has size one or two, so `(14)` at gap `d=p` gives
+
+```text
+p odd:  0^(2p), 1^(n-p), 3^(n-p),
+p=2:    0^4,    2^(2n-4).                              (14h)
+```
+
+The factor `k` is load-bearing: `(p,m,k)=(2,2,2)` has partition
+`0^4,2^2`, not an exponent-one factor.  Nor is there one layer-one factor per
+extra node once a residue cluster has size three.  The first genuinely
+confluent hostile with `k>=2` and `p` prime to `k` is
+
+```text
+(p,m,k)=(3,6,2): 0^6,1^3,3^3,4^2,                    (14i)
+```
+
+where the four extra nodes produce only three exponent-one factors.
+
+## 5. The repeated-factorial Smith guess is false
 
 The triangular diagonal `(9)` determines the determinant, but it is not in
 general the Smith diagonal. The rank-minimal failure is `(m,k)=(3,2)`, `N=8`:
@@ -199,7 +309,7 @@ sole mixed corner `(m,k)=(2,2)`, whose actual Smith form is
              naive  (1,1,1,1,1,1,8,8,8).             (18)
 ```
 
-## 5. Exact finite audit and open boundary
+## 6. Exact finite audit and open boundary
 
 The primary companion computes the 24 pairs `0<=m<=5,1<=k<=4`. The no-import
 standard-library audit expands this to all 28 pairs
@@ -215,14 +325,23 @@ ranks for `p=2,3,5,7`, twelve instances of `(14)`, polynomial division,
 sampled and off-node endpoints, and the values-only hostile. Normal and
 optimized streams match the frozen outputs across `516,244` exact gates.
 
-What remains **OPEN** is a closed formula for the ordered positive exponents
+The primewise extension separately checks `226` complete prime partitions for
+`m<=30`, `k<=8`, and rank through `66`, totaling `16,614,629` gates.  Its
+independent `Z/p^E` reducer and subset-DP minor engine checks `180` atlas cases
+through rank `80`, the complete pair band through `p=17`, `164` boundaries
+with `n<=p`, and `9,501,593` gates.  Both normal/optimized pairs match their
+frozen outputs.
+
+What remains **OPEN** is a closed formula for the later positive exponents
 
 ```text
-alpha_(p,kp+1),...,alpha_(p,N)                         (20)
+alpha_(p,kp+2),...,alpha_(p,N)                         (20)
 ```
 
-when `p<=m`, equivalently the higher-`p^e` filtration of the consecutive
-Hasse-jet image. Equations `(10)`--`(12)` determine their number and total
-sum, not their distribution; `(16)` is the first obstruction. This theorem
+when `p<=m`, equivalently the higher Bockstein filtration internal to clusters
+of size at least three.  A finite atlas suggests, but does not prove, a stable
+`k=2` local pattern for cluster size below `p`.  Equations `(10)`--`(14f)`
+fix the zero layer, first positive layer, exponent-one count, and total mass,
+not the later distribution; `(16)` is the first global obstruction. This theorem
 does not transfer to Rule 30 phase dynamics, LRC(14), the planar Jacobian
 problem, factorial-coefficient conjectures, class ranks, or Hopf problems.

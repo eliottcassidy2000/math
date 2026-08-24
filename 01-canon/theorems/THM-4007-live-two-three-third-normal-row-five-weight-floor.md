@@ -37,6 +37,7 @@ related:
   - THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy
   - THM-3999-companion-divisor-boundary-endpoint-and-class-ledger
   - THM-4008-pure-p-residual-totally-degenerate-generic-fibre-no-go
+  - THM-4016-sharp-five-by-five-elliptic-attachment-nontorsion
 script: 04-computation/jc2_live_23_third_normal_row_thm4007.py
 output: 05-knowledge/results/jc2_live_23_third_normal_row_thm4007.out
 script_sha256: 15f7b4d45175ddc69e8550748a919cc512abe9536c9b16b917827a6580cf0f1b

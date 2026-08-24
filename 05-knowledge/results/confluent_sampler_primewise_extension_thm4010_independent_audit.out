@@ -1,0 +1,22 @@
+CONFLUENT_SAMPLER_PRIMEWISE_EXTENSION_INDEPENDENT_REFEREE_20260824
+status=PASS_WITH_PROOF_REPAIR;NO_IMPORT;EXACT_MODULAR_DVR
+producer_algorithm_not_used=Fraction_Z_(p)_elimination
+independent_algorithm=Z_mod_p_power_elimination_plus_subset_DP_all_minors
+theorem=n_gt_p:alpha_1_through_alpha_kp_zero;alpha_kp_plus_1=1+v_p(k)
+theorem=ones_zero_if_p_divides_k_else_min(p,n-p)
+theorem=p_local_partition_sorted_union_of_residue_clusters
+theorem=k2_pair_band_odd=(0^(2p),1^(n-p),3^(n-p));p2=(0^4,2^(2n-4))
+proof_audit=L_factorial_bound_valid_but_summand_attainment_not_cancellation_safe
+proof_repair=local_CRT_clear_identity_block;literal_residual_entry_(h=1,r=k-1,q=k)=p*k
+higher_L_same_valuation_risks=64;first=(2, 2, 0, 2, 2)
+inequality_primes=8;k_max=64;s_max=64
+attainment_controls=512;k_max=64
+atlas_cases=180;max_rank=80;p_max=11;k_max=16;n_max=15
+pair_band_cases=58;p_max=17
+hostile_(p,m,k)=(2,2,2):profile=(0^4,2^2);global_smith=(1,1,1,1,4,4)
+hostile_(p,m,k)=(3,6,2):profile=(0^6,1^3,3^3,4^2);false_ones=4
+dyadic_determinantal_divisors=(1, 1, 1, 1, 1, 4, 16)
+boundary_n_le_p_controls=164
+semantic_sha256=0f8dc0d0d56792c2526b4395230393963e77df72c9b102d2b6086fae3ffd0f26
+gates=9501593
+RESULT=PASS;WRITTEN_ATTAINMENT_STEP_NEEDS_REPAIR;THEOREM_SURVIVES

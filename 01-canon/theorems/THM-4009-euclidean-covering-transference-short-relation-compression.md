@@ -59,6 +59,7 @@ The only new external input is
 Banaszczyk's Euclidean transference theorem from
 [W. Banaszczyk, *New bounds in some transference theorems in the geometry of
 numbers*, Math. Ann. 296 (1993), 625--635](https://doi.org/10.1007/BF01445125):
+Theorem (2.2), journal page 632, states in the dualized notation used here
 for a `d`-dimensional Euclidean lattice `L`,
 
 ```text
@@ -245,6 +246,11 @@ carries `p` and which carries `q` gives `7,332` oriented assignments modulo
 global sign. Every ratio has `p+q<=19`. The
 old square-triangular/Pell selector packet `(1,5),(5,29),(29,169)` leaves only
 `(1,5)` under `(11)`.
+
+If one discards the Euclidean norm and keeps only the derived `l1<=50` cap,
+the corresponding support-two envelope has `386` coprime ratios with
+`p+q<=50`.  Exactly `339` are coarse false positives for `(11)`, leaving the
+native `47`.  The `386` count must not be quoted as the THM-4009 atlas.
 
 For higher support, the finite exact companion gives a practical orbit-level
 upper atlas before coordinate labelling:

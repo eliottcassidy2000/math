@@ -331,9 +331,9 @@ asymptotic or residue.
 - **Integral observers:** hostile-audited
   [THM-4000](../01-canon/theorems/THM-4000-centered-base-split-cubic-observer-and-tripotent-crt-atlas.md)
   compiles consecutive values; [THM-4010](../01-canon/theorems/THM-4010-confluent-consecutive-hasse-observer-kernel-index-and-smith-firewall.md)
-  gives Hasse kernel `(F^k)`, modulus `|F(B)|^k`, index
-  `product(j!)^(k^2)` and rank `k min(m+1,p)`. Naive Smith first fails at
-  `(m,k)=(3,2)`; higher-`p^e` structure and transfers remain **OPEN**.
+  gives kernel `(F^k)`, index `product(j!)^(k^2)`, rank `k min(m+1,p)`, and
+  first positive `p`-exponent `1+v_p(k)`. CRT closes the `k=2` pair band;
+  later layers and transfers remain **OPEN**.
 - **AMM:** THM-3588 forces `R=512` departures by `(35,38,39,42,44)`.
   At `R=32768`, FINITE-EXACT Rule-A gives `854:DIE@8246`,
   `855:CLOSED@20238`, `856:CLOSED@20233`; thus `854/855` is a one-step local
@@ -377,13 +377,13 @@ asymptotic or residue.
   cell. THM-3999 gives `ord_D(Q)=2`, endpoint
   `Spec k[y]/(gamma-R(0,y))`, and total class `-2[D]`; boundary disjointness
   kills pure-`y` residuals but not the mandatory `p^2` coefficient. It proves
-  neither irreducibility nor address completeness. THM-4005 now excludes the
-  `3x4` and `4x3` retained-support cells inside this oriented live `2:3` seam,
-  including transfer across the specific THM-3992 linear normalization. In
-  the fixed gauge its first unrejected invoice is `4x5`, only on `b=d=0`, but
-  that stronger floor does not transfer; the first missing residual row is
-  `t^3(c40+c21*x+c02*x^2)`. Other reduced cells, multi-term cancellation,
-  finite Keller/Darboux entry, and `JC(2)` stay open.
+  neither irreducibility nor address completeness. THM-4005 excludes the
+  oriented `3x4/4x3` cells; the fixed-gauge first invoice is `4x5` with row
+  `t^3(c40+c21*x+c02*x^2)`. THM-4007 forces its new weight and a `5x5` floor.
+  THM-4008 excludes every pure-`p` residual but shows `y^2` restores an
+  elliptic component. THM-4016 proves the sharp six attachments non-torsion,
+  excluding that exact face only **CONDITIONALLY** on the unproved stable-
+  specialization gate. Other cells, entry, and `JC(2)` stay open.
   Russell THM-3785/3843--3871 close named depth-through-five packets; the
   nonreduced `(6,4)`, rational corrections, and global entry remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.

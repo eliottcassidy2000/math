@@ -1,0 +1,17 @@
+PASS sharp-residual: c40=-512/9 and c02=-8128/135 after suppressing A5 powers
+PASS raw-face: epsilon,kappa,total carry the common nonzero a^-12 factor
+PASS normalized-point: alpha^3=43/84, beta^2=127/84 on y^2=x^3+1
+PASS degree-six-field: irreducible degrees 3 and 2 have trivial intersection
+PASS place-11: evaluation alpha->9, beta->2; good discriminant
+PASS place-11-root-shape: the cube root is unique and the two beta signs negate P
+PASS order-11: serial-addition order is exactly 12
+PASS place-17: evaluation alpha->2, beta->3; good discriminant
+PASS place-17-root-shape: the cube root is unique and the two beta signs negate P
+PASS order-17: serial-addition order is exactly 6
+PASS explicit-multiples-11: 2P,3P,4P,6P agree; 6P is nonzero 2-torsion
+PASS explicit-multiples-17: 2P,3P agree; 3P is nonzero 2-torsion
+PASS order-kernel-contradiction: N=12*11^r and N=6*17^s would force v2(N)=2 and 1
+PASS six-point-orbit: sigma^0,...,sigma^5 exhaust the 3x2 root choices
+PASS sigma-minus-one-unit: sigma=-zeta_3 and sigma-1=zeta_3^2 is an Eisenstein unit
+SEMANTIC_SHA256 6d788e109e52f7a3c191ea755892dc19becd5c89d3ba6fe28c9c6e677a4e4d5d
+INDEPENDENT ATTACHMENT AUDIT PASSED

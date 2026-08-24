@@ -37,6 +37,7 @@ related:
   - THM-3997-reduced-two-three-hasse-repair-and-zero-residual-no-go
   - THM-3999-companion-divisor-boundary-endpoint-and-class-ledger
   - THM-4007-live-two-three-third-normal-row-five-weight-floor
+  - THM-4016-sharp-five-by-five-elliptic-attachment-nontorsion
 script: 04-computation/jc2_pure_p_residual_reduction_thm4008.py
 output: 05-knowledge/results/jc2_pure_p_residual_reduction_thm4008.out
 script_sha256: 42dfd32bb5f0ae027d96fe738f5db4734878bdc46c739c028104077e4a5ece0e
@@ -458,9 +459,11 @@ The kernel is finite and `sigma-1` is invertible, so
 P_0 is a torsion point of E_kappa.                        (43)
 ```
 
-Thus a future row that determines `kappa` can be attacked by division
-polynomials on `(39)`. No bounded torsion order or contradiction is claimed
-here; the Keller degree has not been bounded in this cell.
+THM-4016 now performs the all-order arithmetic test for THM-4007's exact
+sharp `5x5` value of `kappa`: its six normalized attachments are non-torsion.
+Thus `(43)` is contradictory for that exact modeled face **conditional on**
+the stable-specialization gate stated above.  THM-4016 does not prove that
+gate, so it does not unconditionally exclude the formal survivor.
 
 The resonance `epsilon+kappa=0`, higher weighted faces, and multiple leading
 monomials require separate models.
