@@ -34,6 +34,7 @@ t, x, y = sp.symbols("t x y")
 T, S = sp.symbols("T S")
 a, b = sp.symbols("a b")
 A, B, C = sp.symbols("A B C")
+xq, yq = sp.symbols("xq yq")
 
 
 # ---------------------------------------------------------------------------
@@ -86,6 +87,14 @@ Vf = Z2 - a**2 * Z0
 Wf = Z3 - b * Z0
 Ff = sp.expand(A * Uf + B * Vf + C * Wf)
 
+# On the affine cone chart, projection from [1:a:a^2:b] is birational.
+uf = xq - a
+vf = xq**2 - a**2
+wf = yq - b
+zero(vf / uf - a - xq, "finite-center projection inverse recovers x")
+zero(b + (xq - a) * wf / uf - yq,
+     "finite-center projection inverse recovers y")
+
 finite_expected = {
     5: 0,
     4: 3 * A,
@@ -118,6 +127,14 @@ Ui = Z0
 Vi = Z1
 Wi = Z3 - b * Z2
 Fi = sp.expand(A * Ui + B * Vi + C * Wi)
+
+# Projection from [0:0:1:b] is birational on the same affine cone chart.
+ui = sp.S.One
+vi = xq
+wi = yq - b * xq**2
+zero(vi / ui - xq, "infinite-base-center projection inverse recovers x")
+zero(wi / ui + b * (vi / ui)**2 - yq,
+     "infinite-base-center projection inverse recovers y")
 
 infinity_expected = {
     6: A - sp.Rational(1, 2) * C,

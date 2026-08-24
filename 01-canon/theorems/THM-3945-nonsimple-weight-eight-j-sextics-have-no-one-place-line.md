@@ -2,7 +2,8 @@
 id: THM-3945
 title: "Non-simple weight-eight J-sextics have no one-place line"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + CITED CLASSIFICATION + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED.
   Every stereographic plane sextic obtained from the four-cuspidal trigonal
   curve in Sigma_2 has no line whose pullback to the normalization is
   supported at one point.  This holds uniformly for centers over a finite or
@@ -11,6 +12,13 @@ status: >
   J_{2,3}+3A_2.  It does not exclude other torus sextics or arbitrary
   rational discriminant branches.
 source: jc-cohn3709 / Degtyarev stereographic four-cuspidal trigonal model, 2026-08-24
+audit: >
+  Independent hostile audit checked the Sigma_2 intersection degree, both
+  exhaustive cone-center charts, explicit birational inverses to both
+  projections, absence of base factors for allowed centers, all binary-sextic
+  coefficients, and the primary-source generic/cusp-fibre classification.
+  Centers on Bbar or on the exceptional-section vertex are excluded by the
+  cited construction and are not silently specialized here.
 depends_on: []
 related:
   - THM-3879-rational-torus-sextic-c3-one-place-tradeoff
@@ -19,16 +27,16 @@ related:
   - THM-3943-rational-weight-eight-four-torus-sextics-have-no-one-place-line
 script: 04-computation/jc2_nonsimple_weight_eight_j_sextic_one_place_thm3945.py
 output: 05-knowledge/results/jc2_nonsimple_weight_eight_j_sextic_one_place_thm3945.out
-script_sha256: b0d94071071d912550601789151943bf566d8e608c00033f403621d62f9bf818
-output_sha256: d57a30e69516710812b3edf046481e4e54ccd99f8d103bbf0f4fa6f4dcb8841e
-semantic_sha256: 42244fe4548295ba73bab808a633d595b75bf4e18d8f9cc85ddca26f5b356c31
+script_sha256: aa5ea56edb44bd39824c86971e43ef742be9c1965b5ffd4cce94cd78de8ecb82
+output_sha256: c608814d5138cd51a156d8308474fc765100cf771e28c20bee0c42a43bf54973
+semantic_sha256: 007afb1b1c05b62ceec26f1fe2b4023a6bb31713ae2b0482b25bb98f848569bb
 hash_basis: raw LF bytes
 ---
 
 # THM-3945 -- non-simple weight-eight J-sextics have no one-place line
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
-Work over `C`.  Let `Bbar` be the four-cuspidal trigonal curve in the
+**PROVED + CITED CLASSIFICATION + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.** Work over `C`.  Let `Bbar` be the four-cuspidal trigonal curve in the
 Hirzebruch surface `Sigma_2` given, on the affine `O(2)` chart, by
 
 ```text
@@ -90,7 +98,16 @@ Z2=9 T^2 S^4,
 Z3=-(T^6-20T^3S^3-8S^6)/2.                           (6)
 ```
 
-These are basepoint-free binary sextics and satisfy `Z1^2=Z0 Z2`.
+These are basepoint-free binary sextics and satisfy `Z1^2=Z0 Z2`.  Indeed,
+if `D!=0` then `Z0!=0`, while if `D=0` then `Z2!=0`.  Moreover, with
+`H=S0+2F` and `Bbar~3S0+6F` on `Sigma_2`,
+
+```text
+H.Bbar=(S0+2F).(3S0+6F)=6.                              (7a)
+```
+
+Thus the degree-six parametrization has generic degree one and is the
+normalization map, independently of the rational inverse `(5)`.
 Dehomogenizing by `S=1`, their supports are
 
 ```text
@@ -119,6 +136,12 @@ the projection from `o`, is
 
 ```text
 U=Z1-aZ0,        V=Z2-a^2Z0,        W=Z3-bZ0.          (9)
+```
+
+This projection is explicitly birational on the affine cone chart:
+
+```text
+x=V/U-a,                 y=b+(x-a)W/U.                 (9a)
 ```
 
 The pullback of an arbitrary target line is
@@ -164,6 +187,12 @@ U=Z0,       V=Z1,       W=Z3-bZ2,
 F=A U+B V+C W.                                         (14)
 ```
 
+Here the inverse is equally explicit:
+
+```text
+x=V/U,                    y=W/U+b(V/U)^2.              (14a)
+```
+
 Again `F` has no `t^5` term.  If it is a sixth power at a finite point, that
 point is `t=0`.  Vanishing of the `t^4`, `t^3`, and constant coefficients
 gives
@@ -186,12 +215,13 @@ fiber-collision specialization used for `J_{2,3}+3A_2`.
 ## 4. Why this is exactly the one-place obstruction
 
 The center is not on `Bbar`, so the three projected coordinate sextics have
-no common zero on its normalization `P1`.  Stereographic projection is the
-birational elementary transformation in the cited construction, and its
-image has degree six.  Therefore a target line pulls back to an effective
-divisor of degree six.  If its set-theoretic support were one point `P`, the
-divisor would be `6P`, and its binary form would be a sixth power of the
-linear form cutting out `P`.  Sections 2 and 3 exclude all such forms.
+no common zero on its normalization `P1`: a common zero would map a point of
+`Bbar` to the center.  The inverses `(9a)` and `(14a)` prove birationality,
+and `(7a)` proves that the image has degree six.  Therefore a target line
+pulls back to an effective divisor of degree six.  If its set-theoretic
+support were one point `P`, the divisor would be `6P`, and its binary form
+would be a sixth power of the linear form cutting out `P`.  Sections 2 and 3
+exclude all such forms.
 
 This closes a precise many-character counterexample route.  The exceptional
 families in `(3)` have four torus structures, but the extra cubic characters
