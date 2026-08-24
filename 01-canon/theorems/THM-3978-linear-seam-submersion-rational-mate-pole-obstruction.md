@@ -2,17 +2,32 @@
 id: THM-3978
 title: "Linear-seam submersion and rational-mate pole obstruction"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  HOSTILE AUDIT REQUIRED. For every height n>=2 and c!=0, the two-weight
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For every height
+  n>=2 and c!=0, the two-weight
   element A_c=x+c(z-1) of the exact-volume completion B_n has no affine
   critical point. Nevertheless all of its rational constant-Jacobian mates
   have a compulsory pole, so none is polynomial. More sharply, its
   Hamiltonian image on the source polynomial ring meets k[A_c] in
   A_c^(n-1)k[A_c], while on B_n it meets k[A_c] in
   (A_c(A_c+c))^(n-1)k[A_c]. The second factor is the exact footprint of the
-  second DPD color. This closes one named two-by-arbitrary first-coordinate
-  family only; no unrestricted Darboux pair or JC(2) conclusion is claimed.
+  second DPD color. In contrast, the x-adic completion has an exact mate:
+  its two factors cancel the rational pole with two different invariant
+  integration constants. This closes one named two-by-arbitrary
+  first-coordinate family only; no unrestricted Darboux pair or JC(2)
+  conclusion is claimed.
 source: jc-cohn3709 / post-THM-3973 critical-free linear-seam lane, 2026-08-24
+audit: >
+  PASS (jc-extra-debt-local, 2026-08-24). The audit independently solved the
+  Hamiltonian PDE in k(A,x), rederived the complete rational mate affine
+  space, checked primality and generic orders on V=0, and proved both image
+  ideals. In particular the source pole forces A^(n-1), while the exact
+  negative modules x^-q u(u+1)k[u], 1<=q<=n-1, force the independent
+  (A+c)^(n-1) completion factor and are also sufficient. The explicit
+  sharp companions and height-two control check. The later formal-atlas
+  delta was independently checked branchwise, including the necessary
+  warning that the Hamiltonian operator is meromorphic rather than an
+  endomorphism of the completed ring. Normal, optimized, and frozen outputs
+  byte-match at CHECKS=117; both raw hashes and the semantic hash agree.
 depends_on:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
 related:
@@ -20,17 +35,17 @@ related:
   - THM-3975-danielewski-one-arm-modification-cubic-control-and-hyperelliptic-no-mate
 script: 04-computation/jc2_linear_seam_submersion_mate_ideal_thm3978.py
 output: 05-knowledge/results/jc2_linear_seam_submersion_mate_ideal_thm3978.out
-script_sha256: dcd7f328c96f410a1bbe8cf2f51dcb65df073a1cf564149c24ad8d265e095f9f
-output_sha256: fb9a74e639b464baa6490d0b09e664baa2fbe32ff47a30d4f1edae05822c22aa
-semantic_sha256: 402e6801c873e6e6abfb488f813ed82cc2b4250fd160558bd2b0e008970cf21b
+script_sha256: a6b4c4371e48f109bde6330fcda67ef672395e9f93dab6c133218da47b7f2b59
+output_sha256: 6105aaefc6be0dd8cec4db0862533eed3990b72dfebe7aa642206cd8e238edbc
+semantic_sha256: 40a3ca9b2578f5178ab97ed5fcdc124c7d1f4d320283836253bd8d14d148666c
 hash_basis: raw LF bytes
 ---
 
 # THM-3978 -- a submersion can still owe both completion colors
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-HOSTILE AUDIT REQUIRED.** Work over an algebraically closed field `k` of
-characteristic zero. For `n>=2`, use the height tower
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of characteristic zero. For `n>=2`, use the
+height tower
 
 ```text
 u=x^n t,                 z=1+u,
@@ -232,7 +247,69 @@ in `(16)`. The second is new completion data: the color `u=-1`, which is the
 boundary `z=0`, maps under `(2)` to the target value `A=-c`. The two DPD
 colors have become two target factors with the same multiplicity.
 
-## 5. Sharp positive controls
+## 5. Formal completion succeeds by splitting the integration constant
+
+The obstruction in `(4)` is global, not formal-local. Modulo `x`, the two
+colors are disjoint:
+
+```text
+B_n/xB_n = k[p] times k[y].                              (24)
+```
+
+Idempotents lift uniquely in an adically complete ring. Consequently the
+`x`-adic completion splits as the product of the retained-arm and boundary
+completions:
+
+```text
+Bhat_n = (Bhat_n)_L1 times (Bhat_n)_D.                   (25)
+```
+
+On the retained arm, `V=A/x` from `(7)` is a unit. The rational solution
+
+```text
+Q_L1=x^(1-n)/(c(n-1))-A^(1-n)/(c(n-1))
+    =t S(V)/((n-1)V^(n-1))                              (26)
+```
+
+is therefore regular in `(Bhat_n)_L1`. On the boundary arm, put
+
+```text
+W=(A+c)/x=1+cz/x.                                       (27)
+```
+
+The boundary chart relation
+
+```text
+z(z-1)^2=x^(n+1)y                                      (28)
+```
+
+makes `z/x` divisible by `x^n`, so `W` is a unit congruent to one. The
+second rational solution is regular there because
+
+```text
+Q_D=x^(1-n)/(c(n-1))-(A+c)^(1-n)/(c(n-1))
+   =[p/(z-1)] S(W)/((n-1)W^(n-1)).                      (29)
+```
+
+Both `(26)` and `(29)` differ from the primitive in `(5)` by a rational
+function of `A`. Hence
+
+```text
+J(A,Q_L1)=J(A,Q_D)=1.                                   (30)
+```
+
+These identities are computed in the two completed fraction fields, while
+the displayed `Q` entries themselves are regular in the indicated factors.
+Equivalently, the CRT pair satisfies `dA wedge dQ=eta` componentwise. We do
+**not** claim that `J(A,-)` preserves all of `Bhat_n`: it is a meromorphic
+Hamiltonian operator with a possible simple boundary pole. What cannot exist
+globally is one invariant correction `H(A)` that is simultaneously
+`-A^(1-n)/(c(n-1))` near `A=0` and
+`-(A+c)^(1-n)/(c(n-1))` near `A=-c`. Formal CRT is allowed to choose these
+independently; the global rational field is not. This is the local--global
+content of the two factors in `(4)`.
+
+## 6. Sharp positive controls
 
 For
 
@@ -243,7 +320,7 @@ r(A)=(A(A+c))^(n-1)h(A),
 an explicit companion realizing `(4)` is
 
 ```text
-Q=(A+c)^(n-1)h(A)(V^(n-1)-1)/(c(n-1)).                  (24)
+Q=(A+c)^(n-1)h(A)(V^(n-1)-1)/(c(n-1)).                  (31)
 ```
 
 Its apparent powers of `x` satisfy exactly the two-color module conditions
@@ -253,7 +330,7 @@ in `(21)`. At height two this becomes especially concrete:
 n=2,
 A=x+cu,
 Q=u+cxp,
-J(A,Q)=A(A+c).                                          (25)
+J(A,Q)=A(A+c).                                          (32)
 ```
 
 Thus the obstruction is sharp as an image-ideal calculation. It is not a
@@ -261,11 +338,12 @@ claim that the Hamiltonian derivation has no polynomial values, only that
 every invariant value pays the exact two-color product and therefore cannot
 be a nonzero constant.
 
-## 6. Exact companion and scope
+## 7. Exact companion and scope
 
-The assertion-free companion checks `(6)`, `(5)`, `(24)`, every negative
-homogeneous row of `(24)`, both one-color near misses, and `(25)` for heights
-`2<=n<=9`. Ordinary and optimized Python runs agree byte for byte:
+The assertion-free companion checks `(6)`, `(5)`, the two formal rewritings,
+the sharp image generator, every negative homogeneous row, both one-color
+near misses, and `(32)` for heights `2<=n<=9`. Ordinary and optimized Python
+runs agree byte for byte:
 
 ```bash
 python3 04-computation/jc2_linear_seam_submersion_mate_ideal_thm3978.py

@@ -57,6 +57,23 @@ for n in range(2, 10):
     gate(jac(A, rational_mate) == 1,
          f"height {n}: rational constant mate")
 
+    # The two branches over x=0 cancel the pole with different invariant
+    # constants.  These regular rewritings are the exact formal-CRT atlas.
+    arm_sum = sum(V**j for j in range(n - 1))
+    Q_arm = t * arm_sum / ((n - 1) * V**(n - 1))
+    gate(sp.cancel(Q_arm - rational_mate
+                   + A**(1 - n) / (c * (n - 1))) == 0,
+         f"height {n}: retained-arm formal mate")
+    zxt = 1 + uxt
+    W_boundary = (A + c) / x
+    boundary_sum = sum(W_boundary**j for j in range(n - 1))
+    Q_boundary = (zxt / x**n) * boundary_sum / (
+        (n - 1) * W_boundary**(n - 1)
+    )
+    gate(sp.cancel(Q_boundary - rational_mate
+                   + (A + c)**(1 - n) / (c * (n - 1))) == 0,
+         f"height {n}: boundary formal mate")
+
     r = (A * (A + c))**(n - 1)
     Q = sp.cancel((A + c)**(n - 1) * (V**(n - 1) - 1)
                   / (c * (n - 1)))
@@ -113,6 +130,7 @@ summary = {
         "J(A_c,B_n) intersect k[A_c]="
         "(A_c(A_c+c))^(n-1)k[A_c]"
     ),
+    "formal_atlas": "exact mates on both x-adic factors with distinct H(A)",
     "negative_support": inventory,
     "height2": "J(A,u+c*x*p)=A(A+c)",
     "scope": "named first-coordinate family only; JC2 open",
@@ -125,6 +143,7 @@ print("SUBMERSION=A_C_HAS_NO_AFFINE_CRITICAL_POINT")
 print("RATIONAL_MATES=X_POWER_1_MINUS_N_OVER_C_N_MINUS_1_PLUS_K_OF_A")
 print("SOURCE_IMAGE=A_POWER_N_MINUS_1")
 print("COMPLETION_IMAGE=PRODUCT_OF_TWO_COLORS_TO_POWER_N_MINUS_1")
+print("FORMAL_ATLAS=EXACT_ON_BOTH_X_ADIC_FACTORS;GLOBAL_H_MISMATCH")
 print("NO_CONSTANT_MATE=YES")
 print("HEIGHT2_VISIBLE=J(A,U_PLUS_CXP)=A(A_PLUS_C)")
 print("SCOPE=NAMED_LINEAR_SEAM_FAMILY;JC2_OPEN")
