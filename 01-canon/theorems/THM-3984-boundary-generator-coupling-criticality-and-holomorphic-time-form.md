@@ -32,6 +32,7 @@ related:
   - THM-3981-centered-cusp-quadrature-genus-two-transcendence
   - THM-3982-polynomial-shear-submersion-rational-exactness-and-two-color-image
   - THM-3983-coordinate-boundary-constancy-and-rational-place-budget
+  - THM-3985-cusp-plane-rational-time-residue-and-height-two-mixed-submersion
 script: 04-computation/jc2_boundary_generator_coupling_criticality_thm3984.py
 output: 05-knowledge/results/jc2_boundary_generator_coupling_criticality_thm3984.out
 script_sha256: f7c8d8acd0e2c7821716eee48671cb3a6f6f22122c7ab968f3be7ffec88bf6b1

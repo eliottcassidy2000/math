@@ -351,12 +351,15 @@ asymptotic or residue.
   THM-3978 computes the plane/completion response ideals and incompatible
   formal constants. THM-3979 lifts the cusp jets to every formal order.
   THM-3980 puts the split all-height atlas in `K x K`, not a domain.
-  THM-3981 makes every height-two slope generically nonintegrable and the
-  slope-one generic gauge transcendental at every height. THM-3982 classifies
+  THM-3981 obstructs every height-two slope and slope one at all heights.
+  THM-3982 classifies
   shears; nonlinear rows have zero rational invariant image. THM-3983 gives
   boundary constancy and `d<=r-1`. THM-3984 makes every nonzero single
   boundary-monomial coupling to `x+h(x^nt)` critical; its height-two
-  linear-`y` time form is holomorphic. THM-3985 is RESERVED. Open:
+  linear-`y` time form is holomorphic. THM-3985 closes nonconstant
+  `k[p,y]` and isolates submersive `alpha*p+gamma*y^m` (`n=2,m>=2`) with
+  `3m` residues.
+  THM-3986 is RESERVED. Open:
   algebraization with `y`, compatible/multiple/reducible/nongraph debts,
   degree `>=6`, polynomial compression, finite Keller entry, unrestricted
   Darboux entry, and `JC(2)`. THM-3853/3855 remain formal laboratories.

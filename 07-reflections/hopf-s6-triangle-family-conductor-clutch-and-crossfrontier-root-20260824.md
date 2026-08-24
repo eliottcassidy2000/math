@@ -465,7 +465,9 @@ with logarithmic scalar degenerations, and proves the slope-one generic
 quadrature nonintegrable at every height. THM-3982 classifies all polynomial
 shears; THM-3983 gives coordinate boundary constancy and the place budget
 `d<=r-1`. THM-3984 makes every single boundary-monomial coupling critical
-and separately gives a holomorphic time form in the height-two linear-`y` row.
+and separately gives a holomorphic time form in the height-two linear-`y`
+row. THM-3985 closes every nonconstant height-two cusp-plane polynomial;
+its positive submersion family still has `3m` nonzero time-form residues.
 Neither these gauge-specific obstructions nor any other JC result supplies a
 Hopf dependency here.
 

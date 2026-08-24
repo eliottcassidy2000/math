@@ -389,7 +389,10 @@ generic quadrature transcendental at every height. THM-3982 classifies all
 polynomial shears; THM-3983 gives coordinate boundary constancy and the
 rational-fibre budget `d<=r-1`. THM-3984 makes every nonzero single
 boundary-monomial coupling critical and gives a height-two holomorphic
-time-form obstruction. Alternative gauges, finite Keller entry, and unrestricted
+time-form obstruction. THM-3985 closes the whole height-two cusp plane:
+nonconstant cusp restriction has nonzero residues, while the exact
+submersions `alpha*p+gamma*y^m` pay `3m` residues. Alternative gauges,
+finite Keller entry, and unrestricted
 Darboux entry remain open.
 None of these supplies a Hopf dependency here.
 

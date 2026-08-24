@@ -997,6 +997,11 @@ but selecting any one nonzero boundary monomial makes it critical. In the
 height-two linear-`y` row, a holomorphic generic-fibre time form also blocks
 rational integration. The affine critical point and the Abelian integral are
 independent consequences and must not be collapsed into one statistic.
+THM-3985 supplies the hostile reversal. Removing the leading `x` makes
+`alpha*p+gamma*y^m` submersive exactly at height two for `m>=2`, but the
+cusp-address selector then exposes `3m` residues on a rational fibre. The
+preserved target is still nonintegrability; the detecting representation
+moves from affine gradient to deleted normalization addresses.
 THM-3955/57 are proved local conductor theorems with no global Hopf consequence.
 The proved LRC endpoint theorem moved to collision-free THM-4000; the namespace
 move changes no mathematical scope.

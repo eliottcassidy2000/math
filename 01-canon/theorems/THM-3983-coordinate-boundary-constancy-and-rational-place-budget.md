@@ -30,6 +30,7 @@ related:
   - THM-3978-linear-seam-submersion-rational-mate-pole-obstruction
   - THM-3981-centered-cusp-quadrature-genus-two-transcendence
   - THM-3984-boundary-generator-coupling-criticality-and-holomorphic-time-form
+  - THM-3985-cusp-plane-rational-time-residue-and-height-two-mixed-submersion
 script: 04-computation/jc2_coordinate_boundary_place_budget_thm3983.py
 output: 05-knowledge/results/jc2_coordinate_boundary_place_budget_thm3983.out
 script_sha256: a1b03588747575ed81ee8f23823edcf5e378448e88dfc753f48bda0fb7603687

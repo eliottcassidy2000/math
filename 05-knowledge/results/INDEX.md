@@ -1027,6 +1027,24 @@
   `62ebe106accb79f579b85d81dc53bbaa4830c3c368bb8d5beb5614884cb0dc7c` /
   `d9598c0dedda6f5637e168c97050a9ca0a5eebeec0245ede653d7283972849d9`.
 
+- `jc2_cusp_plane_rational_time_residue_thm3985.py` and independent audit
+  -> matching `.out`s [THM-3985 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED]. Every nonconstant `F(p,y)` is excluded as a polynomial
+  Keller first coordinate. Nonconstant cusp restriction gives the stronger
+  rational-image-zero residue theorem; constant restriction is deliberately
+  only a regular-mate obstruction. Exactly at height two,
+  `alpha*p+gamma*y^m`, `m>=2`, is a submersion with rational generic fibre,
+  `4m+1` source punctures, `3m+1` completion punctures, and `3m` nonzero
+  time-form residues. Primary/independent checks: `215/297`.
+  Primary script/output/semantic SHA-256:
+  `da7f6b39a0826861ee1ca94b7c1d151f58e84868d7b1ed9ff4ae257f2dfa146a` /
+  `13cbb7b951a7abcec3a91c7eb4cb8db30fab4e6c5e8fc4b17772e4d9f929b2ad` /
+  `1db4bab794803c2ca49fba6f94904b9083c8a91609fd729da44c9a915b369fed`.
+  Independent script/output/semantic SHA-256:
+  `7e9ad5e0ae8c95e8886f59b60d069ed5a8043299a64e02e10877a0d3c83d42df` /
+  `6e8c4e5a7e2a590178cfaab6996cab84faabb7ad06902691ff064c7fbaf3aca2` /
+  `035b98857b1106241843e016d65c2c31428729c7f797ef973d70046f0fef21f5`.
+
 - `cyclotomic_factorial_two_power_decoder_20260824.py` -> matching `.out`
   [ELEMENTARY PROVED IDENTITY + FINITE-EXACT CROSS-FRONTIER ATLAS; NO
   FC/HFC/JC/LRC CONSEQUENCE]. For every `d>=2`, the projected factorial

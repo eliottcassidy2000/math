@@ -415,6 +415,11 @@ then proves that attaching any one nonzero boundary monomial to a polynomial
 shear creates an affine critical point. In the height-two linear-`y` row the
 generic time form is independently holomorphic, with an explicit genus
 ladder, so criticality and rational nonexactness are two distinct consumers.
+THM-3985 shows why the leading-`x` qualifier matters: without it,
+`alpha*p+gamma*y^m` is submersive exactly at height two for `m>=2`.
+Nevertheless its rational generic fibre removes `4m+1` source places and
+its time form has `3m` nonzero residues. Thus deleting affine criticality
+does not delete the generic-fibre integration invoice.
 The orthogonal THM-3955/57 node and
 coordinate-crossing cotangent sequences are proved local sidecars, not global
 Jacobian or Hopf results.
