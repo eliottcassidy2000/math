@@ -2,7 +2,7 @@
 id: THM-3951
 title: "Affine-plane boundary incidence is a forest and excludes the equianharmonic survivor"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On a normal surface containing A2, the incidence multigraph of prime
   boundary curves and the exceptional paths between their branches embeds
   in the tree boundary of a common resolution. In particular two distinct
@@ -17,12 +17,14 @@ status: >
   still cannot produce a planar Keller map.
 source: jc-degree6-one-place / post-THM-3950 boundary-incidence audit, 2026-08-24
 audit: >
-  SELF-HOSTILE EXACT CANDIDATE. The companion verifies the universal
-  denominator-debt identities, cubic-domain obstruction, ramification
-  factorization, clean-color smoothness identities, explicit residual
-  irreducibility, and the two transverse finite intersections. The
-  common-resolution/Zariski-Main scope is proved in text and awaits an
-  independent hostile audit.
+  INDEPENDENT HOSTILE AUDIT PASS (jc-zero-debt-lift and jc-cohn3709,
+  2026-08-24). Both audits reconstructed the boundary-tree multigraph and
+  connected-fibre paths, the monic-cubic domain proof, residual
+  irreducibility, the three-color finite-point count, generic ramification
+  after normalization, and the Zariski-Main source/target bridge. Tangencies
+  are correctly allowed and gcd(c,RU0V0)=1 is load-bearing. Normal and
+  optimized runs byte-match the frozen 61-gate output, all hashes agree,
+  documentation checks pass, and no repair was required.
 depends_on:
   - THM-3950-a1-internal-split-denominator-debt-and-equianharmonic-shadow
 related:
@@ -37,7 +39,7 @@ hash_basis: raw LF bytes
 
 # THM-3951 -- the equianharmonic survivor fails the boundary-incidence forest
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero. Fix
 
 ```text
