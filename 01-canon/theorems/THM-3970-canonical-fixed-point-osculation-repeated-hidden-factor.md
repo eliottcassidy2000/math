@@ -2,8 +2,8 @@
 id: THM-3970
 title: "Repeated hidden factors are canonical fixed-point osculation curves"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-  HOSTILE AUDIT REQUIRED. For arbitrary q(P,t), put s=q_P/3,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For arbitrary
+  q(P,t), put s=q_P/3,
   J=P-s^2, and R=q-3sP+s^3. Every nonzero repeated irreducible factor M of
   q(h^2,t)-2h^3 is oriented by M|(h-s(h^2,t)). Its contraction C(P,t) is
   an isomorphic image curve, C(h^2,t) is the product of M and its distinct
@@ -14,6 +14,14 @@ status: >
   2cC_P+c_PC=-3s_PD. This is a structural reframe, not a closure of the
   resulting normalization or JC(2).
 source: jc-cohn3709 + jc-degree6-one-place / post-THM-3969 nongraph reframe, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc-zero-debt-lift, 2026-08-24), followed
+  by a second algebra and exact-computation replay (jc-degree6-one-place).
+  The audits checked the reflection/contraction multiplicities, literal
+  invariant descent of C^2|R, the curve-ring isomorphism, the nonvertical
+  gcd upgrade and oriented-kernel bijection, and the sigma-nonzero
+  irreducibility, finiteness, normalization, and principal-different
+  control. The finiteness bridge was made explicit before promotion.
 depends_on: []
 related:
   - THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt
@@ -29,9 +37,8 @@ hash_basis: raw LF bytes
 
 # THM-3970 -- hidden repetition is oriented second-order fixed-point contact
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-HOSTILE AUDIT REQUIRED.** Work over an algebraically closed field `k` of
-characteristic zero. Put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of characteristic zero. Put
 
 ```text
 A=k[P,t],                      B=k[h,t],
@@ -308,11 +315,15 @@ t=-sigma v^3-3v^2-3a0v-a0^2+a0,
 T=sigma v^2+3v+2a0.                                    (28)
 ```
 
-The first row has degree three in `v`, proving the cubic field degree. Its
-parameter is recovered generically as
-`v=(P-a0^2)/(T+a0)`, so this degree is the actual function-field degree,
-not merely the degree of a nonbirational parametrization. Its
-source-to-target Jacobian is, up to sign,
+The first row has degree three in `v`, proving the field degree over
+`k(P,a0)=k(P,t)`. Its parameter is recovered generically as
+`v=(P-a0^2)/(T+a0)`, so `T` generates that degree-three field. The displayed
+monic cubic `F` is therefore the minimal polynomial of `T` and is
+irreducible. Moreover, after division by `sigma in k^*`, the first row of
+`(28)` is a monic equation for `v` over the cubic coordinate ring, while
+`a0=P+t` already belongs to that ring. Hence `k[a0,v]` is finite and
+birational over it; since the former is normal, it is the full
+normalization. Its source-to-target Jacobian is, up to sign,
 
 ```text
 3(sigma v^2+2v+a0).                                    (29)

@@ -2,7 +2,7 @@
 id: THM-3971
 title: "Canonical-debt determinantal completions fail the exact-volume gate"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For every
   m>=1, the algebra generated inside k[x,t] by x, z=1+xt, and zt,...,zt^m
   is a smooth normal affine surface X_m containing A2_(x,t) with one smooth
   A1 boundary D, scalar units, Cl(X_m)=Z[D], and
@@ -14,6 +14,14 @@ status: >
   Darboux pair J(A,C)=1, in any degree. This is a sharp completion near miss,
   not a planar Jacobian counterexample.
 source: jc-zero-debt-lift / post-THM-3968 positive completion design, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc-degree6-one-place, 2026-08-24). The
+  audit rederived the two-chart affine-plane gluing, boundary presentation
+  and arc, smoothness, units and class group, canonical order, Gysin rows
+  and residue-one volume class, determinantal kernel, bracket table,
+  t-not-in-B endpoint, and bounded search. It also independently verified
+  the exponent-two THM-3572 exact-volume escape. Normal and optimized
+  115-gate runs byte-match the frozen output; hashes and docs pass.
 depends_on:
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
 related:
@@ -30,8 +38,8 @@ hash_basis: raw LF bytes
 
 # THM-3971 -- canonical debt is paid, but the volume is not exact
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.** Work over
-an algebraically closed field `k` of characteristic zero. For an integer
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of characteristic zero. For an integer
 `m>=1`, put
 
 ```text
