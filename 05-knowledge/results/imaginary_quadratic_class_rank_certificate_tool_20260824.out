@@ -1,0 +1,197 @@
+IMAGINARY QUADRATIC CLASS-RANK CERTIFICATE TOOL -- 2026-08-24
+================================================================
+
+STATUS
+------
+VERIFIED-EXACT:
+  * the Epoch positive-control certificate at (ell,r)=(3,3);
+  * pure-Python general Gauss composition/reduction and meet-in-the-middle
+    independence check on that line;
+  * agreement with PARI/GP on the sample and on 95 small-class products.
+
+FINITE-EXACT:
+  * complete fundamental-discriminant scan 3 <= D <= 200000;
+  * thirteen-row challenge control bank, including the published rank-eight
+    field, five square-free ramified twists, and six square-free additive
+    neighbors.
+
+CITED + REPRODUCED COMPUTATIONALLY:
+  * Elkies's published field of discriminant
+      -217541503961543485618350976479
+    has exact 3-rank eight in the cited paper.  PARI reproduces invariant
+    factors [65223608754,6,3,3,3,3,3,3], and the tool extracts eight
+    independent order-three forms which pass the pure verifier.
+
+OPEN:
+  * (ell,r)=(3,9).  No challenge certificate was found.  This bounded hunt
+    reaches the known rank-eight frontier and is not evidence of nonexistence.
+
+SOURCE PROBLEM
+--------------
+https://epoch.ai/frontiermath/open-problems/class-group-rank
+
+The grammar is
+
+  ell|r|D|a1,b1,c1|...|ar,br,cr
+
+where -D is fundamental and the primitive positive-definite forms of
+discriminant -D must be independent elements of exact order ell.
+
+SOFTWARE AUDIT
+--------------
+
+Installed initially:
+
+  python-flint 0.9.0       (no qfb / binary-form class exposed)
+  SymPy 1.9
+
+Not installed initially:
+
+  PARI/GP
+  cypari2
+  Sage
+
+The Ubuntu pari-gp package can be extracted without a system install:
+
+  classrank_pari_tmp=$(mktemp -d /tmp/pari-gp-local.XXXXXX)
+  cd "$classrank_pari_tmp"
+  apt-get download pari-gp
+  dpkg-deb -x pari-gp_*.deb root
+  classrank_gp="$classrank_pari_tmp/root/usr/bin/gp"
+
+The committed verifier does not need PARI for class arithmetic.  It uses
+python-flint only to factor the square-free core (with a SymPy fallback).
+Search and the optional independent audit require the gp executable.
+
+POSITIVE CONTROL
+----------------
+
+Command:
+
+  python3 04-computation/imaginary_quadratic_class_rank_certificate_tool_20260824.py \
+    verify --pari-gp "$classrank_gp" \
+    '3|3|4447704|390,-96,2857|921,-786,1375|346,-68,3217'
+
+Output:
+
+  PURE_PYTHON_VERIFY=PASS|ell=3|r=3|D=4447704|squarefree_core_factors=[(2, 1), (3, 1), (47, 1), (3943, 1)]|mitm_halves=3,9
+  REDUCED_FORMS=390,-96,2857|921,-786,1375|346,-68,3217
+  PARI_AUDIT=PASS|h=864|cyc=[24, 6, 6]|ell_rank=3|halves=3,9
+
+Thus the field class group is Z/24 + Z/6 + Z/6.  Each displayed form cubes
+to the principal form, and the only relation in {0,1,2}^3 is (0,0,0).
+
+INTERNAL AND INDEPENDENT ARITHMETIC TESTS
+-----------------------------------------
+
+Command:
+
+  python3 04-computation/imaginary_quadratic_class_rank_certificate_tool_20260824.py \
+    selftest --pari-gp "$classrank_gp"
+
+Output:
+
+  PURE_SELFTEST=PASS|discriminants=13|composition_gates=95|associativity_gates=343|duplicate_hostile=PASS|sample=PASS
+  PARI_COMPOSITION_AUDIT=PASS|pairs=95
+  PARI_AUDIT=PASS|h=864|cyc=[24, 6, 6]|ell_rank=3|halves=3,9
+
+The duplicate-generator hostile is rejected with a nonzero exponent relation.
+Normal and python -O positive-control streams agree byte for byte.
+
+SMALL COMPLETE SCAN
+-------------------
+
+Command:
+
+  python3 04-computation/imaginary_quadratic_class_rank_certificate_tool_20260824.py \
+    search --pari-gp "$classrank_gp" --ell 3 --target-rank 9 \
+    --start 3 --stop 200000
+
+Output (PARI stack-size warning omitted):
+
+  IMPROVE|D=3|h=1|cyc=[]|ell_rank=0
+  IMPROVE|D=23|h=3|cyc=[3]|ell_rank=1
+  IMPROVE|D=3299|h=27|cyc=[9, 3]|ell_rank=2
+  SEARCH_SUMMARY|checked=199998|fundamental=60800|best=2|hist=[37285, 23017, 498, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+CHALLENGE CONTROL BANK: (3,9)
+-----------------------------
+
+Command:
+
+  python3 04-computation/imaginary_quadratic_class_rank_certificate_tool_20260824.py \
+    search --pari-gp "$classrank_gp" --ell 3 --target-rank 9 \
+    --candidates-file \
+    04-computation/imaginary_quadratic_class_rank_controls_20260824.txt
+
+Output (PARI stack-size warnings omitted):
+
+  IMPROVE|D=4447704|h=864|cyc=[24, 6, 6]|ell_rank=3
+  IMPROVE|D=217541503961543485618350976479|h=285288064689996|cyc=[65223608754, 6, 3, 3, 3, 3, 3, 3]|ell_rank=8
+  SEARCH_SUMMARY|checked=13|fundamental=13|best=8|hist=[4, 7, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+The rank-eight point is violently isolated in this cheap hostile: all twelve
+other rows have rank 0, 1, or 3.  In particular, multiplying the record
+discriminant by five small ramified primes and taking six nearby fundamental
+discriminants does not preserve its large 3-primary subgroup.
+
+RANK-EIGHT NEAR-FRONTIER CERTIFICATE EXTRACTED BY THE SEARCH
+------------------------------------------------------------
+
+  3|8|217541503961543485618350976479|133663175160114,-83514707956161,419929068229900|85450831602870,36334851996309,640314790756777|10768953543577,-3271456475729,5050449087478240|2688172755838,2248218685611,20231824570830525|183294999722469,-120074312826153,316374348609388|215222692946620,-204653468437719,301344322191753|98225989117273,-57322363599763,562039026826594|59581187049667,-59327762944611,927563289538350
+
+The search immediately feeds an extracted line back through the pure verifier:
+
+  EXTRACTED_CERTIFICATE_PURE_VERIFY=PASS|D=217541503961543485618350976479|r=8
+
+WHY THE VERIFIER IS SUFFICIENT
+------------------------------
+
+For primitive positive-definite forms of a fixed fundamental discriminant,
+proper equivalence classes form the ideal class group under Gauss composition.
+The tool checks:
+
+  1. -D is fundamental, and every input form is primitive, positive definite,
+     and has discriminant -D;
+  2. each reduced class is nonprincipal and its ell-th power is principal;
+     since ell is prime, its order is exactly ell;
+  3. split the r generators in half, enumerate both elementary-ell spans,
+     reject collisions inside either half, and intersect the left span with
+     inverses of the right span.  Independence is equivalent to the
+     intersection containing only the principal class.
+
+For the challenge table, the largest stored half has only
+
+  max(3^8, 5^6, 7^5, 11^4, 13^4) = 28561
+
+classes.  This avoids an ell^r full relation enumeration.
+
+CAVEATS / AUDIT BOUNDARY
+------------------------
+
+* The internal composition is Buell's general formula with
+  n=gcd(a1,a2,(b1+b2)/2), not the simpler coprime-leading-coefficient formula.
+  This distinction is load-bearing: the sample squares have nontrivial n.
+* The pure checker is ordinary executable exact arithmetic, not a proof-kernel
+  certificate.  Its composition/reduction implementation has exhaustive small
+  group-law tests and 95-product agreement with PARI, but a future submission
+  should still be replayed with PARI/Sage (and ideally a second ideal-arithmetic
+  implementation).
+* Factoring the square-free core can dominate verification for adversarial huge
+  D.  python-flint is fast on the sample and record controls, but no uniform
+  runtime bound is claimed.
+* PARI's invariant-factor generators justify the forms emitted by search; the
+  pure checker then verifies the emitted subgroup without trusting those
+  coordinates.  Conversely, a pure verifier PASS proves rank at least r but
+  deliberately does not compute the full class group or prove rank exactly r.
+* The thirteen-row rank-nine hunt is a positive/hostile control bank, not a
+  serious exhaustive attack on a record-breaking open problem.  Random local
+  perturbation erases the known rank-eight structure; a credible next search
+  needs a structured source of many unramified cyclic cubic extensions, such
+  as the high-rank Mordell-curve/descent route used by Elkies.
+
+ARTIFACT HASHES AT THIS CHECKPOINT
+----------------------------------
+
+  script:   11dec6d802b5d4b54db88b7ff1022832f1cb6d1dfefb7358ccc2544cd6c4c685
+  controls: a66eabd1a017110906b97fec455dcee0871fb6759bac41d4f1d6b9b6fef0cd47
