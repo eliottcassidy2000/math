@@ -1,10 +1,11 @@
 ---
 id: THM-3933
-title: "Centered degree-three root maps collapse to a non-unibranch octic"
+title: "Centered finite-at-infinity degree-three root maps collapse to a non-unibranch octic"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the
-  centered t(infinity)=0, degree-three repeated-root stratum of the
-  one-place linear-color binary-cubic grammar, local trace and the finite
+  centered trace-zero, finite-at-infinity degree-three repeated-root
+  stratum of the one-place linear-color binary-cubic grammar, local trace and
+  the finite
   Riemann--Hurwitz budget force either a shared pole address or one triple
   pole above a simple critical point. The shared-address branch is
   non-unibranch whenever it is genuine transposition ramification. The
@@ -14,18 +15,22 @@ status: >
   octic. Dividing the Delone--Faddeev basis element theta by the line gives
   the normal maximal order explicitly; it is globally monogenic, while the
   octic remains genuine ramification and has two exact two-address fibres.
-  Hence the survivor fails both the monogenic completion gate and the
-  unibranch boundary gate. This closes the stated centered degree-three
-  stratum, not arbitrary root gauges, higher root degree, or JC(2).
+  Hence the survivor violates THM-3801's required nonmonogenic-completion
+  gate and the unibranch boundary gate. This closes the stated centered
+  finite-at-infinity degree-three stratum, not the t(infinity)=infinity
+  gauge, arbitrary root changes, higher root degree, or JC(2).
 source: jc_zero_debt_lift / post-THM-3931 degree-three finite-root-pole stratum, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (two independent reads, 2026-08-23). The
-  auditors reconstructed the local trace/Riemann--Hurwitz partition, the
+  auditors reconstructed the completed-local trace table, finite
+  Riemann--Hurwitz budget, finite-flat shared-address bridge, and the trace
+  argument forcing every finite value t(infinity) to zero. They checked the
+  primitive incidence row, the lambda=0 seam and
   unique lambda=3 color row, the line-versus-octic discriminant split, the
   octic normalization and both collision fibres. A separate hostile audit
   checked every Delone--Faddeev multiplication identity, the index ideal
   (27A-4), discriminant -H/16, and the R1+S2 maximal-order argument. The
-  44-gate assertion-free companion LF-normalizes exactly to the frozen
+  45-gate assertion-free companion LF-normalizes exactly to the frozen
   raw-LF output in normal and optimized mode.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
@@ -38,13 +43,13 @@ related:
   - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
 script: 04-computation/jc2_centered_degree_three_root_map_octic_thm3933.py
 output: 05-knowledge/results/jc2_centered_degree_three_root_map_octic_thm3933.out
-script_sha256: 81b047cc95a94cd75b29a1e90cc94712f0e50e22b2cb749cc9ce8f526f2ce508
-output_sha256: 8b95133a9806ca976cc6c1ea904d95f4f17ae9a0a38f08e1bfd5c6373c3cb594
-semantic_sha256: 36243cbd77bd4af5f04e8bee225e6bba3a108a8e455951615721e908f69bf885
+script_sha256: 2a02f99465a8badcd32330f8e81ef46e7590793d85ce55957e17252f58e73604
+output_sha256: 8753cb79c9214b4df581dcc1c79734be0b48bd1231e155b00c6b7ffe38f9d89b
+semantic_sha256: 9c182abe7a8ac734b172dc6b64bcb4b4558cebf131d3be75a9e9a5ef750cd43a
 hash_basis: raw LF bytes
 ---
 
-# THM-3933 -- the centered degree-three pole divisor has nowhere left to go
+# THM-3933 -- a centered finite-at-infinity degree-three pole divisor has nowhere left to go
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over
 an algebraically closed field `k` of characteristic zero. Consider the
@@ -64,7 +69,7 @@ A=A(u), C=C(u) are polynomials,       deg A=3,              (2)
 and that its repeated root `t=U/V in k(u)` satisfies
 
 ```text
-deg(t:P1_u -> P1_t)=3,          t(infinity)=0.              (3)
+deg(t:P1_u -> P1_t)=3,          t(infinity) in k.           (3)
 ```
 
 We work in the centered root gauge: the primitive incidence equation is
@@ -83,9 +88,11 @@ The normalization hypothesis means `k(A,C)=k(u)`. Thus the generic repeated
 root generates the cubic extension over `k(A)` and `(4)` really is its
 minimal polynomial after division by coefficient content.
 
-The theorem closes precisely this centered stratum. It does not assert that
-every degree-three homogeneous root map can be moved into `(1)-(4)` while
-preserving the linear-color direction.
+The theorem closes precisely this centered, finite-at-infinity stratum. The
+centering is the intrinsic missing-square term in `(4)`, not a root
+translation. It does not assert that every degree-three homogeneous root map
+can be moved into `(1)-(4)` while preserving the linear-color direction;
+in particular, `t(infinity)=infinity` remains outside the theorem.
 
 ## 1. Local trace and the pole-partition trichotomy
 
@@ -207,16 +214,28 @@ Scaling `u` and `A` gives the unique normal form
 A=u^3+u^2.                                                 (12)
 ```
 
-A rational function tending to zero at infinity and having only a triple
-pole at zero is `(b_2u^2+b_1u+b_0)/u^3`. Exact trace in the extension
-`u^3+u^2=A` is
+A rational function finite at infinity and having only a triple pole at zero
+is
 
 ```text
-Tr(t)=(3b_0+2b_1)/A.                                      (13)
+t=h+(b_2u^2+b_1u+b_0)/u^3,                 h in k.
 ```
 
-Triple-pole nondegeneracy gives `b_0!=0`, so a root scaling puts every
-trace-zero possibility in the one-parameter form
+Exact trace in the extension `u^3+u^2=A` is
+
+```text
+Tr(t)=3h+(3b_0+2b_1)/A.                                   (13)
+```
+
+Since `A` is nonconstant, trace zero separately forces
+
+```text
+h=0,                         3b_0+2b_1=0.
+```
+
+Thus the centered equation forces its own zero value at normalization
+infinity; no root translation has been made. Triple-pole nondegeneracy gives
+`b_0!=0`, so a root scaling puts every possibility in the one-parameter form
 
 ```text
 t=(3lambda u^2+3u-2)/u^3.                                 (14)
@@ -463,8 +482,9 @@ boundary curve of an affine-plane open, and the unique polynomial-color
 survivor is not a planar Jacobian counterexample. This obstruction is
 independent of Section 6's monogenic-maximal-order obstruction.
 
-The conclusion is exactly the centered `t(infinity)=0`, degree-three
-linear-color stratum `(1)-(5)`. Arbitrary root gauges, degree at least four,
+The conclusion is exactly the centered trace-zero, finite-at-infinity,
+degree-three linear-color stratum `(1)-(5)`. The
+`t(infinity)=infinity` gauge, arbitrary root changes, degree at least four,
 other color directions, and JC(2) remain **OPEN**.
 
 ## Reproduction

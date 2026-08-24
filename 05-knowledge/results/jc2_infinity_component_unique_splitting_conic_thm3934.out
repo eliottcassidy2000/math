@@ -1,0 +1,10 @@
+theorem=THM-3934-infinity-component-sextic-unique-reduced-splitting-conic
+conic_square_roots=line_pullbacks_union_span(h)
+conic_locus=double_lines_union_span(XZ)
+unique_reduced_splitting_conic=XZ
+resolvent_support=affine_component_X=0_recovers_THM3932_Dplus_Dminus
+new_low_degree_three_class=NONE
+scope=degree_at_most_two_splitting_support_only;full_resolvent_class_group_open
+semantic_sha256=3325fe5ff3ae2e63a5bd1ed65076301e2eb706fd36864f219ff295ec5dedf989
+CHECKS=26
+RESULT=PASS

@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3936 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3937 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -365,18 +365,19 @@
 
 - `jc2_centered_degree_three_root_map_octic_thm3933.py` -> matching `.out`
   [THM-3933 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. In the
-  centered `t(infinity)=0` degree-three linear-color grammar, trace and the
-  finite Riemann--Hurwitz budget force a shared pole address or one triple
-  pole. Shared addresses are non-unibranch. The unique collision-free row has
+  centered finite-at-infinity degree-three linear-color grammar, trace first
+  forces the finite infinity value to zero; the finite Riemann--Hurwitz budget
+  then forces a shared pole address or one triple pole. Shared addresses are
+  non-unibranch. The unique collision-free row has
   `A=u^3+u^2`, polynomial color only at `lambda=3`, and discriminant
   `-(27A-4)^2H/4` with irreducible rational one-place octic `H`. The explicit
   overorder `e=theta/(27A-4)` has index ideal `(27A-4)`, discriminant `-H/16`,
   and is the normal globally monogenic maximal completion; independently,
   `H` has two exact two-address fibres and its ramification curve is
-  non-unibranch. Checks: `44`. Script/output/semantic SHA-256:
-  `81b047cc95a94cd75b29a1e90cc94712f0e50e22b2cb749cc9ce8f526f2ce508` /
-  `8b95133a9806ca976cc6c1ea904d95f4f17ae9a0a38f08e1bfd5c6373c3cb594` /
-  `36243cbd77bd4af5f04e8bee225e6bba3a108a8e455951615721e908f69bf885`.
+  non-unibranch. Checks: `45`. Script/output/semantic SHA-256:
+  `2a02f99465a8badcd32330f8e81ef46e7590793d85ce55957e17252f58e73604` /
+  `8753cb79c9214b4df581dcc1c79734be0b48bd1231e155b00c6b7ffe38f9d89b` /
+  `9c182abe7a8ac734b172dc6b64bcb4b4558cebf131d3be75a9e9a5ef750cd43a`.
 
 - `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
   `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil

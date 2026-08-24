@@ -165,6 +165,7 @@ Format per entry:
   `THM-3933`; incoming reservations of `THM-3933` and `THM-3934` then moved
   the LRC theorem atomically to `THM-3935`; the next incoming reservation of
   `THM-3935` moved it once more to `THM-3936`;
+  the incoming `THM-3936` reservation then moved it atomically to `THM-3937`;
   the hash-bearing LRC companions and mathematical scope did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not

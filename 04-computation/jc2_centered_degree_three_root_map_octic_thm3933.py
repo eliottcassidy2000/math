@@ -71,13 +71,16 @@ gate(sp.gcd(sp.gcd(a, c), 2 * d) == 1, "incidence coefficient triple is primitiv
 gate(c.subs(A, 0) == -4, "unit coefficient-ideal control at A=0")
 
 # Direct trace formula for an arbitrary numerator b2*u^2+b1*u+b0.
-b0, b1, b2 = sp.symbols("b0 b1 b2")
-raw_N = b2 * u**2 + b1 * u + b0
+b0, b1, b2, h = sp.symbols("b0 b1 b2 h")
+raw_N = h * u**3 + b2 * u**2 + b1 * u + b0
 raw_resultant = sp.Poly(sp.resultant(A - A_u, D * T - raw_N, u), T)
 raw_lc = raw_resultant.coeff_monomial(T**3)
 raw_t2 = raw_resultant.coeff_monomial(T**2)
-gate(sp.factor(-raw_t2 / raw_lc) == (3 * b0 + 2 * b1) / A,
-     "arbitrary triple-pole trace is (3b0+2b1)/A")
+gate(sp.factor(-raw_t2 / raw_lc - 3 * h - (3 * b0 + 2 * b1) / A) == 0,
+     "finite-at-infinity triple-pole trace includes 3h")
+trace_numerator = sp.factor(A * (-raw_t2 / raw_lc))
+gate(trace_numerator == 3 * A * h + 3 * b0 + 2 * b1,
+     "trace zero separately forces h=0 and 3b0+2b1=0")
 
 
 # ---------------------------------------------------------------------------
@@ -253,6 +256,7 @@ summary = {
     "checks": CHECKS,
     "pole_partition": "shared A-address or one triple pole at e=2",
     "normal_form": "A=u^3+u^2; t=(3*lambda*u^2+3*u-2)/u^3",
+    "scope": "centered trace-zero; finite t(infinity) is forced to zero",
     "polynomial_color": "lambda=3 only",
     "discriminant": "-(27*A-4)^2*H/4; deg(H)=8",
     "maximal_order": "e=theta/(27*A-4) is normal monogenic; disc=-H/16",
@@ -263,6 +267,7 @@ semantic = hashlib.sha256(json.dumps(summary, sort_keys=True).encode()).hexdiges
 
 print("THM-3933 centered degree-three root-map exact companion")
 print(f"CHECKS={CHECKS}")
+print("SCOPE=centered trace-zero;finite t(infinity) is forced to zero")
 print("POLE_PARTITION=shared A-address or one triple pole at e=2")
 print("NORMAL_FORM=A=u^3+u^2;t=(3*lambda*u^2+3*u-2)/u^3")
 print("POLYNOMIAL_COLOR=lambda=3 only")

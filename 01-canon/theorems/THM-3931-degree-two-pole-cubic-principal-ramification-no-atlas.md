@@ -16,9 +16,10 @@ status: >
   basis. More directly, deleting E makes the nonconstant polynomial F a
   nowhere-zero function on the putative A2, contradicting scalar units.
   Thus the first degree-two finite-root-pole survivor is not a JC(2)
-  counterexample. THM-3933 closes the centered t(infinity)=0 degree-three
-  stratum; other degree-three gauges, degree-at-least-four root maps, and
-  other coefficient grammars remain open.
+  counterexample. THM-3933 closes every centered finite-at-infinity
+  degree-three stratum; the infinite-at-infinity gauge, arbitrary root
+  changes, degree-at-least-four root maps, and other coefficient grammars
+  remain open.
 source: jc_zero_debt_lift / THM-3930 class-and-different audit, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23). The audit reconstructed
@@ -357,9 +358,10 @@ and the boundary relation already supplies the nonconstant unit `F`.
 
 Therefore the THM-3930 degree-two pole packet is **not** a planar Jacobian
 counterexample. The result does not close degree-two root-pole packets with
-different coefficient dependence or JC(2). THM-3933 separately closes the
-centered `t(infinity)=0` degree-three stratum; other degree-three gauges and
-degree-at-least-four homogeneous root maps remain open.
+different coefficient dependence or JC(2). THM-3933 separately closes every
+centered finite-at-infinity degree-three stratum; the infinite-at-infinity
+gauge, arbitrary root changes, and degree-at-least-four homogeneous root maps
+remain open.
 
 ## Reproduction
 

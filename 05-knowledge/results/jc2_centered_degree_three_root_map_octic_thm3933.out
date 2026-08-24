@@ -1,5 +1,6 @@
 THM-3933 centered degree-three root-map exact companion
-CHECKS=44
+CHECKS=45
+SCOPE=centered trace-zero;finite t(infinity) is forced to zero
 POLE_PARTITION=shared A-address or one triple pole at e=2
 NORMAL_FORM=A=u^3+u^2;t=(3*lambda*u^2+3*u-2)/u^3
 POLYNOMIAL_COLOR=lambda=3 only
@@ -13,4 +14,4 @@ OVERORDER_NORMAL=R1(discriminant H exponent one)+S2(hypersurface)
 OVERORDER_CONCLUSION=maximal cubic completion is globally monogenic
 COLLISIONS=3*s^2+6*s+2=0 gives two two-address fibres
 CONCLUSION=monogenic and ramification curve non-unibranch;no A2 Keller open
-SEMANTIC_SHA256=36243cbd77bd4af5f04e8bee225e6bba3a108a8e455951615721e908f69bf885
+SEMANTIC_SHA256=9c182abe7a8ac734b172dc6b64bcb4b4558cebf131d3be75a9e9a5ef750cd43a

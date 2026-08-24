@@ -15,9 +15,9 @@ status: >
   root-regular and centered-Mobius one-place linear-color grammars, not
   homogeneous root maps of degree at least two. THM-3930 subsequently
   realizes one centered degree-two packet and THM-3931 closes that packet;
-  THM-3933 closes the centered t(infinity)=0 degree-three stratum. Other
-  degree-three gauges, degree-at-least-four root maps, and coefficient
-  grammars remain open.
+  THM-3933 closes every centered finite-at-infinity degree-three stratum.
+  The infinite-at-infinity gauge, arbitrary root changes,
+  degree-at-least-four root maps, and other coefficient grammars remain open.
 source: jc_zero_debt_lift / post-THM-3927 one-place compression boundary, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS (jc-cohn3709, 2026-08-23). The audit
@@ -368,10 +368,10 @@ Therefore this theorem does **not** close arbitrary `b=C` cubics, homogeneous
 repeated-root maps of degree at least two, or JC(2). THM-3930 realizes the
 first centered degree-two finite-pole packet, and THM-3931 closes that exact
 packet by non-unibranchness and principal/nonprimitive boundary classes.
-THM-3933 closes the centered `t(infinity)=0` degree-three stratum by a pole-
-partition dichotomy, an explicit monogenic maximal order, and a
-non-unibranch octic. Other degree-three gauges, degree-at-least-four root maps,
-and coefficient grammars remain live.
+THM-3933 closes every centered finite-at-infinity degree-three stratum by a
+pole-partition dichotomy, an explicit monogenic maximal order, and a
+non-unibranch octic. The infinite-at-infinity gauge, arbitrary root changes,
+degree-at-least-four root maps, and other coefficient grammars remain live.
 
 ## Reproduction
 
