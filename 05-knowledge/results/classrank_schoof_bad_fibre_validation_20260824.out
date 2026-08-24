@@ -1,0 +1,15 @@
+SCHOOF 47/103 BAD-FIBRE LOWER-TIER VALIDATION -- 2026-08-24
+STATUS=FINITE-COMPUTED_GRH_ASSISTED_DISCOVERY
+UNIVERSE=reduced_positive_rationals;1<=numerator,denominator<=200;bad_primes=(47, 103)
+COUNTS=specializations:24463;distinct_fields:23695;duplicate_specializations:768;squareful_specializations:7834;max_field_multiplicity:2
+SPECIALIZATION_BAD=n:4746;hist:1:911,2:2959,3:863,4:13;thresholds:ge2:3835,ge3:876,ge4:13,ge5:0,ge6:0
+SPECIALIZATION_GOOD=n:19717;hist:1:3722,2:12524,3:3437,4:34;thresholds:ge2:15995,ge3:3471,ge4:34,ge5:0,ge6:0
+FIELD_BAD_ONLY=n:4618;hist:1:884,2:2881,3:840,4:13;thresholds:ge2:3734,ge3:853,ge4:13,ge5:0,ge6:0
+FIELD_GOOD_ONLY=n:19077;hist:1:3602,2:12107,3:3335,4:33;thresholds:ge2:15475,ge3:3368,ge4:33,ge5:0,ge6:0
+FIELD_MIXED=n:0;hist:;thresholds:ge2:0,ge3:0,ge4:0,ge5:0,ge6:0
+FIELD_BAD_TO_GOOD_RATE_RATIO=ge3:16272681/15553424=1.046244286789;ge4:82667/50798=1.627367219182
+MAX_DISCOVERED_5_RANK=4
+DISTINCT_RANK4_FIELDS=46
+PARI_FIELDS_CHECKED=23695
+INTERPRETATION=lower_rank_out_of_sample_response_for_a_post_selected_residue_label;compare_rates_descriptively_and_retest_on_new_high_box
+BOUNDARY=quadclassunit_full_ranks_are_GRH_assisted;no_rank_six_claim;no_negative_theorem;no_unadjusted_p_value

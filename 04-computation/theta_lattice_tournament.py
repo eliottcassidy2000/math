@@ -2,6 +2,12 @@
 """
 theta_lattice_tournament.py — opus-2026-03-14-S80
 
+CORRECTION (2026-08-24; MISTAKE-484): an older version printed
+``theta_3^8 = Theta_E8``.  In fact ``theta_3^8`` is the theta series of the
+cubic lattice ``Z^8``.  ``Theta_E8=E_4`` is different already in its first
+coefficient (240 rather than 16).  Numerical coincidences retained below are
+exploratory only and do not supply tournament or lattice identifications.
+
 The E8 lattice theta function: Theta_{E8}(q) = 1 + 240q + 2160q^2 + ...
 Coefficients count lattice vectors by norm. These coefficients encode
 tournament-theoretic information through the (2,3,5) structure.
@@ -221,8 +227,8 @@ print("  theta_2(q) = 2*sum q^{(n+1/2)^2}")
 print("  theta_3(q) = sum q^{n^2}")
 print("  theta_4(q) = sum (-1)^n q^{n^2}")
 print()
-print("Key identity: theta_3^8 = Theta_{E8}")
-print("(because E8 is the lattice of 8-dimensional theta functions)")
+print("Corrected identity: theta_3^8 = Theta_{Z^8}, NOT Theta_{E8}")
+print("Theta_{E8} = E_4; their first q-coefficients are 240 and 16")
 print()
 print("Also: theta_2^4 + theta_4^4 = theta_3^4 (Jacobi!)")
 print("This is a CUBIC relation in the 4th powers — analogous to the")
@@ -239,8 +245,7 @@ print()
 
 print("r_8(n) — representations as sum of 8 squares:")
 for n in range(1, 11):
-    r8 = 16 * sigma_k(n, 3) if n % 2 == 1 else 16 * sigma_k(n, 3)  # simplified
-    # Actually: r_8(n) = 16 sum_{d|n} (-1)^{n+d} d^3 for all n
+    # r_8(n) = 16 sum_{d|n} (-1)^{n+d} d^3 for all n
     # For n odd: r_8(n) = 16 sigma_3(n)
     # More precisely the formula involves (-1)^{n-d}
     actual_r8 = 0
@@ -254,8 +259,8 @@ for n in range(1, 11):
 print()
 print("For E8 lattice vectors (which are DIFFERENT from r_8 for Z^8):")
 print("  E8 norm-n count = 240*sigma_3(n) for n >= 1")
-print(f"  Ratio: 240/16 = 15 = C(h(G2), KEY1) = C(6,2)")
-print(f"  The E8 lattice has 15 = C(6,2) times more vectors than Z^8!")
+print(f"  On ODD n only, r_8(n)=16*sigma_3(n), so the coefficient ratio is 15")
+print("  At n=2 the counts are 2160 and 112, ratio 135/7: no theta identity")
 
 # ============================================================
 section("EISENSTEIN PRIMES AND THE TOURNAMENT POLYNOMIAL", 7)

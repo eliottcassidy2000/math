@@ -48,7 +48,7 @@ The board stabilized at six concepts:
 | THM-3990 integral graph | `Z^V`, corrected by `L Z^V` | free component sums plus Smith torsion | real rank forgets lattice index | Smith form; `C_3` class `(1,-1,0)` of order `3` |
 | THM-3989 filtered cusp | depth-one symbol `h`, corrected by adding `P_0=k[p,y]` | `theta(h)=[s^3]h*[s]` in `k[s]/k[s^2,s^3]`; physical liftability | the associated graded forgets the constant seam and all higher seams | specialization `tau=-s^2`; `x^2+2u` |
 | THM-3991 toric cusp | cells modulo the translation sublattice | top-simplex orbit count `d*n!` and vertex-orbit component count `d` | attaching maps, clutch orientation, period functions, analytic existence | `chi_c`; nonunimodular cube count `10` versus volume `12` |
-| THM-4000 LRC method | danger combs covering the exact auxiliary set | fixed-radius containment certificate | a cover count has no physical time, arrival, or runner owner | exact set family; no one/two combs cover, `(8,9,10)` does |
+| THM-4002 LRC method | danger combs covering the exact auxiliary set | fixed-radius containment certificate | a cover count has no physical time, arrival, or runner owner | exact set family; no one/two combs cover, `(8,9,10)` does |
 
 The shared move is precise:
 
@@ -193,7 +193,7 @@ verified finite quotient, a nonunimodular/singular correction, or a different
 degeneration grammar. Merely changing period functions cannot change the
 factorial count.
 
-For LRC(14), THM-4000's exact three-versus-one obstruction says the current
+For LRC(14), THM-4002's exact three-versus-one obstruction says the current
 unweighted auxiliary-cover operation has saturated. A lawful next probe must
 change the operation—weighted cover, a coupled clock, or a carrier retaining
 arrival—not reinterpret the cover number as a linear cokernel. LRC(14)
@@ -206,7 +206,7 @@ fixed trimmed carrier
 ```
 
 support at most `4(t-1)/(63t)`, and an integer variance correction. This can
-strengthen body-specific endpoint certificates. In THM-4000's notation it
+strengthen body-specific endpoint certificates. In THM-4002's notation it
 gives the exact hybrid sufficient certificate
 
 ```text
@@ -214,7 +214,7 @@ disc_t(G)<meas(G)^2*(59t+4)/(4(t-1))
           +(s_t/t^2)*theta_t*(1-theta_t).
 ```
 
-THM-4000 already closes its bounded `[1,20]` family; the hybrid closes no
+THM-4002 already closes its bounded `[1,20]` family; the hybrid closes no
 arbitrary type and does not replace the missing cross-phase control.
 
 ## Reproduction anchors

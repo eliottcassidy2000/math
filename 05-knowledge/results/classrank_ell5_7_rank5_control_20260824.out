@@ -1,0 +1,80 @@
+IMAGINARY QUADRATIC 5-RANK-FIVE FRONTIER CONTROL -- 2026-08-24
+================================================================
+
+STATUS
+------
+FINITE-EXACT LOWER BOUND / BELOW CHALLENGE THRESHOLD.
+
+No ell=5 rank-at-least-6 or ell=7 rank-at-least-5 challenge line was found.
+The candidate-submission file classrank_ell5_7_candidates_20260824.txt is
+therefore intentionally empty.
+
+SOURCE CORRECTION
+-----------------
+Christian Bagshaw, "Geometric Constructions of Quadratic Number Fields with
+High p-Rank", University of Calgary Undergraduate Honours Thesis, April 2021,
+printed pp. 26-27 (PDF pp. 27-28), reports that the Schoof/Mestre family
+
+  M(t)=-(t^2+t+1)
+        (47t^6+21t^5+598t^4+1561t^3+1198t^2+261t+47)
+
+produced 8,382,903 fields for coprime 1 <= numerator,denominator <= 4000:
+
+  5-rank 1: 1,581,624
+  5-rank 2: 5,285,449
+  5-rank 3: 1,502,796
+  5-rank 4:    13,029
+  5-rank 5:         5
+
+The five reported rank-five discriminants are listed in printed Table 3.2.
+The first is
+
+  D=23454009318604054148884180799, t=477/1694,
+  reported 5-primary exponents=(2,1,1,1,1).
+
+Source PDF:
+  https://web.maths.unsw.edu.au/~cbagshaw/Honours_Thesis.pdf
+
+PARI DISCOVERY AUDIT
+--------------------
+PARI/GP 2.17.4 quadclassunit(-D) returned
+
+  h=176016081000000
+  cyc=[17601608100,10,10,10,10].
+
+The full invariant-factor statement is GRH-assisted discovery data here.
+It was used only to extract order-five forms; the lower-bound certificate
+below does not depend on the full class-group computation.
+
+EXACT CERTIFICATE
+-----------------
+5|5|23454009318604054148884180799|27826049458489,21837977929671,215004528709340|70169771851695,-50672979260911,92710006955624|15958731958954,-3149137285171,367571910547065|46600998434802,-12743828599751,126694788090350|44298817709402,28490822159909,136943475699135
+
+Pure verifier output:
+
+  PURE_PYTHON_VERIFY=PASS|ell=5|r=5|D=23454009318604054148884180799|squarefree_core_factors=[(19, 1), (47, 1), (103, 1), (149953, 1), (205537, 1), (8273385058621, 1)]|mitm_halves=25,125
+  REDUCED_FORMS=27826049458489,21837977929671,215004528709340|70169771851695,-50672979260911,92710006955624|15958731958954,-3149137285171,367571910547065|46600998434802,-12743828599751,126694788090350|44298817709402,28490822159909,136943475699135
+  PARI_AUDIT=PASS|h=176016081000000|cyc=[17601608100, 10, 10, 10, 10]|ell_rank=5|halves=25,125
+
+The pure verifier proves that -D is fundamental, every displayed primitive
+positive-definite form has discriminant -D and exact order five, and the
+five classes have no nonzero F_5 relation.  The meet-in-the-middle halves
+have 25 and 125 distinct reduced forms and meet only at the principal class.
+
+REPRODUCTION
+------------
+  python3 04-computation/imaginary_quadratic_class_rank_certificate_tool_20260824.py verify '<certificate above>'
+  python3 -O 04-computation/imaginary_quadratic_class_rank_certificate_tool_20260824.py verify '<certificate above>'
+  python3 04-computation/imaginary_quadratic_class_rank_certificate_tool_20260824.py verify --pari-gp /opt/homebrew/bin/gp '<certificate above>'
+
+Normal and optimized pure-verifier streams agree byte for byte.
+Verifier SHA-256:
+  2331ccea983aca7ab6e0ef6dbcc353ed892f7284c1c0cd32dd3012de1af4cd3a
+
+BOUNDARY
+--------
+This is the corrected published/exact 5-frontier, but it earns no challenge
+credit: the first requested 5-rank is six.  Bagshaw's same experiment found
+no rank-six row, and its p=7 family topped out at rank three.  The separate
+2024 norm-equation search supplies the exact 7-rank-four control already in
+the repository.  Neither negative finite search is an impossibility result.

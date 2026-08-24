@@ -1,5 +1,5 @@
 ---
-id: THM-4000
+id: THM-4002
 title: "LRC(14) signed-endpoint cross-phase and fixed scale-two family"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For any
@@ -66,7 +66,7 @@ scale2_extension_independent_audit_semantic_sha256: d9c01990a9730a6b164c225a6788
 hash_basis: raw LF bytes
 ---
 
-# THM-4000 -- exact cross-phase and fixed scale-two family
+# THM-4002 -- exact cross-phase and fixed scale-two family
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  All sets below
 are periodic subsets of `R/Z`, equalities are modulo null sets, and `t` is a
@@ -203,7 +203,7 @@ searches both physical lifts, and verifies at least one safe lift.  Its largest
 body-specific strict BV tail start is 81.  A no-import audit instead computes
 the positive rational measure of the escaped set, chooses an exact midpoint,
 and rechecks all clearances and both adjacent inequalities defining the coarse
-THM-4000 BV cutoff; this is cutoff minimality, not an optimal loneliness
+THM-4002 BV cutoff; this is cutoff minimality, not an optimal loneliness
 threshold.  Its smallest finite escape is
 `1151/42042>0`.  The older `[1,15]` orbit-word companion remains an independent
 control on its 1,365-body, 5,470-cell subuniverse.  Statement `(8)` does not

@@ -1,0 +1,13 @@
+SCHOOF 5-RANK-FIVE BAD-FIBRE SCOUT -- 2026-08-24
+status=FINITE-EXACT_SCOUT;no_rank_six_claim
+prime=47;quadratic_roots=();sextic_roots=('0', '5', '27', '39', '46', 'infinity');projective_hit_fraction=1/8
+prime=103;quadratic_roots=('46', '56');sextic_roots=('20', '35', '49', '62', '85', '97');projective_hit_fraction=1/13
+seed=477/1694;D=23454009318604054148884180799;square_factor=1;labels=((47, 'sextic'), (103, 'sextic'));bad_hit=True;factorization=[(19, 1), (47, 1), (103, 1), (149953, 1), (205537, 1), (8273385058621, 1)]
+seed=1464/2567;D=3363903161767512730048342385039;square_factor=1;labels=((47, 'good'), (103, 'good'));bad_hit=False;factorization=[(39191, 1), (47969, 1), (12490873, 1), (143252985688817, 1)]
+seed=846/1733;D=95047361962872405516772909439;square_factor=1;labels=((47, 'sextic'), (103, 'quadratic'));bad_hit=True;factorization=[(47, 1), (103, 1), (50341, 1), (1463047, 1), (266578345736077, 1)]
+seed=3206/5;D=525774905878035876898636843167;square_factor=1;labels=((47, 'good'), (103, 'sextic'));bad_hit=True;factorization=[(3, 1), (103, 1), (397, 1), (148091, 1), (2816707, 1), (2994311, 1), (3431497, 1)]
+seed=3419/994;D=3881041670601462517919585588159;square_factor=1;labels=((47, 'sextic'), (103, 'good'));bad_hit=True;factorization=[(47, 1), (109, 1), (29881, 1), (147487, 1), (171899684876088739, 1)]
+crt_uniform_union_density=5/26
+formal_binomial_tail_at_least_4_of_5=34375/5940688=0.005786366832
+interpretation=post_selected_signal_only;stratify_future_search_by_47_103_bad_fibres_and_retest_out_of_sample
+boundary=no_independence_gain_no_sixth_class_no_p_value;the_fifth_seed_is_a_good_fibre_hostile

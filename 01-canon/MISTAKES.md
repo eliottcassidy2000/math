@@ -9,6 +9,60 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-485 (2026-08-24, imaginary-quadratic class-rank source audit) -- the latest public data file was mistaken for the world `5`-rank frontier
+
+- **What failed:** the first source audit treated the rank-four maximum in
+  Bagshaw--Jacobson--Scheidler--Rollick's public norm-equation data file and
+  2024 comparison table as the strongest published `5`-rank example.  It
+  therefore reported the near-frontier tuple as `(8,4,4,3,3)` for primes
+  `(3,5,7,11,13)`.
+- **Minimal witness / first failed implication:** Christian Bagshaw's 2021
+  honours thesis reports five fields of `5`-rank five from a different
+  Schoof--Mestre family.  At
+  `D=23454009318604054148884180799`, five extracted order-five binary forms
+  pass exact discriminant, order, and meet-in-the-middle independence checks.
+  Thus “absent from the later public demonstration file” did not imply
+  “absent from the author's earlier computations or the literature.”
+- **Repair / strongest survivor:** the exact frontier tuple is at least
+  `(8,5,4,3,3)`.  Every requested challenge still begins strictly above it:
+  `(3,9)`, `(5,6)`, `(7,5)`, `(11,4)`, and `(13,4)` remain **OPEN**.  The
+  public `131199`-field census remains correct for its explicitly named data
+  file; it is no longer described as a census of the Schoof--Mestre family or
+  of all known fields.
+- **Reusable rule:** when a computational paper exposes only a demonstration
+  subset, search the authors' theses, predecessor constructions, table
+  footnotes, and distinct raw populations before naming a record.  Keep
+  “maximum in this file,” “maximum in this algorithm,” and “published world
+  frontier” as separate claims.
+
+## MISTAKE-484 (2026-08-24, historical theta-lattice script audit) -- the cubic-lattice theta series was identified with the E8 theta series
+
+- **What failed:** `04-computation/theta_lattice_tournament.py` printed
+  `theta_3^8 = Theta_E8` and then treated the coefficient ratio as the
+  constant `15`.  The left side is the theta series of the cubic lattice
+  `Z^8`, not of `E8`.
+- **Minimal witness / first failed implication:** in the convention where the
+  exponent is half the squared norm, the first nonconstant coefficients are
+  `16` for `Theta_(Z^8)` and `240` for `Theta_E8`.  At the next coefficient
+  they are `112` and `2160`, so even the ratio changes from `15` to `135/7`.
+  Equal rank and a common theta-function vocabulary did not identify the
+  lattices or their theta series.
+- **Repair / strongest survivor:** `Theta_(Z^8)=theta_3^8`, whereas
+  `Theta_E8=E_4=1+240 sum_(n>=1) sigma_3(n)q^n`.  The ratio `15` survives only
+  on odd exponents, where Jacobi's eight-square formula happens to give
+  `r_8(n)=16 sigma_3(n)`.  The genuine rank-eight arithmetic operation is
+  orthogonal stabilization: for every even lattice `L`, `L direct_sum E8`
+  has the same discriminant form as `L` and
+  `Theta_(L direct_sum E8)=E_4 Theta_L`.  This gives a typed rank
+  `r -> r+8` lift, not equality of theta series and not a tournament or Bott
+  theorem.  The historical script now prints this correction; THM-868's
+  independently checked score-vector membership and shell census are
+  unaffected.
+- **Reusable rule:** before identifying lattices from dimension or modular
+  weight, compare at least two nontrivial theta coefficients and retain the
+  discriminant form.  A coefficient coincidence on one parity subsequence is
+  not a lattice isomorphism.
+
 ## MISTAKE-483 (2026-08-24, THM-3991 audit metadata) -- a finite audit universe was described more broadly and more narrowly than the script actually ran
 
 - **What failed:** the first audit prose said that the independent toric-cusp
@@ -531,9 +585,13 @@ stronger entry for that incident.
   then occupied that identifier, forcing another atomic move to freshly
   checked `THM-3976`. A rational-compression quotient reservation then
   occupied that identifier. To end the collision loop, the LRC theorem moved
-  atomically to freshly remote-checked `THM-4000`; the intervening IDs remain
-  available for the active JC sequence. The hash-bearing LRC companions and
-  mathematical scope did not change.
+  atomically to freshly remote-checked `THM-4000`. Before that local branch
+  reached the shared surface, another session first pushed a valid empty
+  `THM-4000` reservation for the split-cubic atlas; `THM-4001` was already
+  occupied by the all-arity factorial decoder. After fetching that live state,
+  the LRC theorem and all live references moved atomically to freshly checked
+  `THM-4002`. The hash-bearing legacy companions and mathematical scope did
+  not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
   only before empty reservations; rename the whole artifact family together.

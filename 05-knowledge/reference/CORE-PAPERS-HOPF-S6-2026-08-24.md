@@ -59,6 +59,13 @@ global consequence below stays conditional until specialist verification.
    torsion](../../01-canon/theorems/THM-3955-node-cotangent-normalization-kernel-and-conductor-torsion.md),
    extended at triple crossings by
    [THM-3957](../../01-canon/theorems/THM-3957-triple-normal-crossing-cotangent-conductor-kernel-and-normalization-cokernel.md).
+8. **Published symmetry comparison:** Huckleberry--Kebekus--Peternell,
+   [*Group Actions on `S6` and complex structures on `P3`*](https://arxiv.org/abs/math/9812076),
+   proves that a complex `S6` is not almost homogeneous and has
+   `h^0(X,T_X)<=2`.  Its proof uses the 1996 Campana--Demailly--Peternell
+   constant-meromorphic-function conclusion, so it is a load-bearing
+   comparison gate rather than an independent resolution of the manuscript's
+   claimed algebraic-dimension-one conflict.
 
 The S6 manuscript is a source under examination, not a proved dependency of
 THM-3955, THM-3957, or of any established repo theorem.
@@ -277,12 +284,15 @@ The priority **OPEN REFEREE OBLIGATIONS** are:
    the claimed `O(-1)` torsor class;
 2. rebuild the infinite-fan analytification and proper-discontinuity estimates
    independently rather than only following the manuscript;
-3. verify the multiple-fibre invariant module and the no-carry step used in
-   the algebraic-dimension computation;
+3. verify that the claimed map `X -> P1` is a global holomorphic algebraic
+   reduction, then audit the multiple-fibre invariant module and the no-carry
+   step used to deduce algebraic dimension one;
 4. derive cusp specialization, cup products, and integral nearby cycles from
    a model which retains all branches of the nonnormal fibre;
 5. check relative duality and base change in the final cohomological argument;
-6. run a specialist topology audit of the collapse and recognition maps.
+6. trace the generic-fibre and filling torus translations through the three
+   clutches, recording exactly which symmetries fail to globalize; and
+7. run a specialist topology audit of the collapse and recognition maps.
 
 Until these gates close, statements about compactness, smoothness, homology,
 or a complex structure on `S6` remain **MANUSCRIPT CLAIM / UNDER AUDIT**.

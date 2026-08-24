@@ -29,7 +29,8 @@ The useful outcomes are instead:
 
 1. a tiny unconditional verification path that never computes the full class
    group;
-2. exact form bases at the known `3,5,7,11,13` near-frontiers;
+2. exact form bases at the known `3,5,7,11,13` near-frontiers, including a
+   repaired `5`-rank-five record missed in the first source pass;
 3. an unconditionally certified one-digit source error that would otherwise
    manufacture fictitious `11`-torsion;
 4. a complete census of the only public `131199`-field Bagshaw data file;
@@ -138,7 +139,51 @@ is narrower than the paper's raw computation:
 * the legacy search code documents raw lines of the form
   `Delta,[A,B,C]`, but the billions-scale raw files are not present.
 
-### 2.3 Appendix exponent tuples are not ranks
+### 2.3 The actual `5`-frontier is rank five, not rank four
+
+Christian Bagshaw's 2021 University of Calgary honours thesis,
+[*Geometric Constructions of Quadratic Number Fields with High
+`p`-Rank*](https://web.maths.unsw.edu.au/~cbagshaw/Honours_Thesis.pdf),
+applies the Schoof--Mestre family
+
+```text
+M(t)=-(t^2+t+1)
+      (47t^6+21t^5+598t^4+1561t^3+1198t^2+261t+47).
+```
+
+Printed page 26 reports the complete histogram for the `8,382,903` fields
+obtained from reduced positive rationals with numerator and denominator at
+most `4000`: ranks `1,2,3,4,5` occurred
+
+```text
+1,581,624; 5,285,449; 1,502,796; 13,029; 5
+```
+
+times, respectively.  Printed page 27, Table 3.2, gives all five rank-five
+rows.  (The preceding prose accidentally calls this table `3.4`; the caption
+and contents are unambiguous.)  The smallest listed row is
+
+```text
+D=23454009318604054148884180799,  t=477/1694,
+5-primary exponent tuple=(2,1,1,1,1).
+```
+
+PARI `quadclassunit` reproduced invariant factors
+`[17601608100,10,10,10,10]`.  More importantly, extracting one order-five
+element from each factor gives the following **FINITE-EXACT** lower bound,
+independent of that full GRH-assisted class-group computation:
+
+```text
+5|5|23454009318604054148884180799|27826049458489,21837977929671,215004528709340|70169771851695,-50672979260911,92710006955624|15958731958954,-3149137285171,367571910547065|46600998434802,-12743828599751,126694788090350|44298817709402,28490822159909,136943475699135
+```
+
+The pure form verifier checks fundamentality, exact order five, and all
+`5^5` relations by meet in the middle.  The transcript is frozen in
+[`classrank_ell5_7_rank5_control_20260824.out`](../05-knowledge/results/classrank_ell5_7_rank5_control_20260824.out).
+This repairs the comparison frontier from rank four to rank five but still
+earns no challenge credit, since the first requested `5`-rank is six.
+
+### 2.4 Appendix exponent tuples are not ranks
 
 In the paper's Appendix, a tuple `(e1,...,ek)` denotes
 
@@ -157,11 +202,11 @@ The following lines were derived from public discriminants using PARI only
 as a generator-discovery aid.  They then passed independent exact integer
 checks of fundamentality, primitivity, discriminant, exact prime order, and
 independence under Gauss composition.  Their spans have sizes
-`3^8,5^4,7^4,11^3,13^3`, respectively.
+`3^8,5^5,7^4,11^3,13^3`, respectively.
 
 ```text
 3|8|217541503961543485618350976479|133663175160114,-83514707956161,419929068229900|85450831602870,36334851996309,640314790756777|10768953543577,-3271456475729,5050449087478240|2688172755838,2248218685611,20231824570830525|183294999722469,-120074312826153,316374348609388|215222692946620,-204653468437719,301344322191753|98225989117273,-57322363599763,562039026826594|59581187049667,-59327762944611,927563289538350
-5|4|1264381632596|188505,25402,1677710|415025,-353402,836862|38025,-6952,8313149|318873,-67684,994881
+5|5|23454009318604054148884180799|27826049458489,21837977929671,215004528709340|70169771851695,-50672979260911,92710006955624|15958731958954,-3149137285171,367571910547065|46600998434802,-12743828599751,126694788090350|44298817709402,28490822159909,136943475699135
 7|4|469874684955252968120|1958128126,876510532,60088375911|6723992369,-3407420908,17901760434|2775584655,-2184045520,42751780146|1369,-1304,85806187902712686
 11|3|3035884424|81,-52,9370022|625,24,1214354|11025,3674,69147
 13|3|38630907167|89199,41411,113078|557,469,17338926|4466,-3359,2163132
@@ -254,7 +299,9 @@ The committed implementation is
 
 ## 6. What the public data actually contains
 
-The public Bagshaw `data/D.txt` was exhaustively rescanned.  PARI's
+The public Bagshaw--Jacobson--Scheidler--Rollick `data/D.txt` was exhaustively
+rescanned.  This is the later norm-equation demonstration file, not the
+Schoof--Mestre thesis population.  PARI's
 GRH-assisted invariant factors report
 
 ```text
@@ -289,8 +336,10 @@ incremental rank tests and avoid repeating thousands of CPU-days.
 ## 7. Why random PARI search is not competitive
 
 The Bagshaw populations are already biased to have at least two explicit
-`p`-classes.  Nevertheless, more than a billion fully computed `p=5` fields
-produced rank four as the top reported tier, hundreds of millions of
+`p`-classes.  Nevertheless, more than a billion fully computed `p=5`
+norm-equation fields produced rank four as their top reported tier, while
+the different `8,382,903`-field Schoof--Mestre population produced only five
+rank-five rows and no reported rank-six row.  Hundreds of millions of
 computed `p=7` fields produced only `67` rank-at-least-four fields, and the
 `p=11,13` runs stopped at rank three.  A random-discriminant scan discards
 this useful bias and is strictly less targeted.
@@ -305,7 +354,7 @@ exact certification of three supplied `11`-classes is tiny, whereas
 unconditionally certifying the entire erroneous class group took about
 `231` seconds.  Discovery and acceptance should be separate programs.
 
-## 8. Three live frontier routes
+## 8. Four live frontier routes
 
 ### Anchor: a rank-eighteen clean Mordell curve for `(3,9)`
 
@@ -321,7 +370,57 @@ Mestre--Nagao search for a rank-eighteen Mordell curve, followed by
 3-isogeny descent, GRH-assisted form extraction, and the unconditional
 certificate replay above.
 
-### Niche: retain projective form novelty in the Bagshaw buckets
+### `5`-lane: resolve the hidden rank of the Schoof--Mestre family
+
+The thesis histogram changes the computational priority.  Relative to the
+later norm-equation search, the one-parameter Schoof--Mestre family is much
+more strongly enriched in ranks three through five.  Merely extending the
+square box is still poor economics: the observed successive counts
+
+```text
+5,285,449 -> 1,502,796 -> 13,029 -> 5
+```
+
+show a sharp terminal collapse.  The useful object is instead the finite
+cover of the `t`-line on which each additional order-five class appears.
+Recover the two guaranteed classes with their labelled divisor data, attach
+the extra classes at every rank-four and rank-five specialization, and ask
+whether their Kummer images define repeated low-degree covers or isolated
+Hilbert-specialization accidents.  A rational point on a sixth independent
+cover would produce the first challenge row; another undirected grid scan
+does not expose that mechanism.
+
+There is one cheap, explicitly hostile stratification to test first.  The
+Schoof polynomial has bad projective fibres at the conductor primes `47` and
+`103`, occupying respectively `1/8` and `1/13` of their projective residue
+lines.  Four of the five rank-five specializations hit at least one such
+fibre, against CRT-uniform density `5/26`; the formal independent binomial
+tail is `34375/5940688`, about `0.00579`.  This is post-selected evidence,
+not a p-value or rank mechanism, and the fifth specialization is a decisive
+good-fibre hostile.  It nevertheless gives a cheap out-of-sample split for
+the next search.  The exact residue and factorization audit is
+[`classrank_schoof_rank5_bad_fibre_scout_20260824.out`](../05-knowledge/results/classrank_schoof_rank5_bad_fibre_scout_20260824.out).
+
+The split was then frozen and tested on the lower-tier box of every reduced
+positive `t=x/y` with `1<=x,y<=200`.  This gives `24,463` specializations and
+`23,695` distinct fundamental discriminants.  PARI's GRH-assisted discovery
+invariants found the expected `46` distinct rank-four fields and no rank-five
+field in this small box.  At field level,
+
+```text
+47/103 bad only:  rank >=3 in 853/4618,  rank >=4 in 13/4618;
+good only:        rank >=3 in 3368/19077, rank >=4 in 33/19077.
+```
+
+The descriptive bad/good rate ratios are about `1.046` at rank three and
+`1.627` at rank four.  Thus the label survives as a modest rank-four
+prioritizer but emphatically not as a necessary condition or sixth-class
+mechanism.  It should stratify a new high-box search, with both strata
+retained, and only a preregistered fresh box can turn it into inferential
+evidence.  The complete finite universe and truth boundary are frozen in
+[`classrank_schoof_bad_fibre_validation_20260824.out`](../05-knowledge/results/classrank_schoof_bad_fibre_validation_20260824.out).
+
+### Bucket lane: retain projective form novelty in the norm-equation search
 
 The public code should be conceptually extended from the predicate
 `rank>=2` to incremental meet-in-the-middle membership.  Every new reduced
@@ -335,6 +434,32 @@ miss true class-group directions.  Full `p`-Sylow computation should be
 reserved for the highest novelty/multiplicity buckets, while the
 `lambda`-pairs and ideal-norm supports are varied to expose missing
 directions.
+
+An exact bounded `p=11` reconstruction now supplies the hostile this scoring
+rule needed.  It exhausts all `63` coprime ordered lambda pairs in
+`[1,10]^2`, all `3<=m_1<=64`, all `2<=m_2<m_1`, and all `16,580,967` divisor
+pairs.  The `12,221` valid form occurrences occupy `11,355` discriminant
+buckets, whose discovered spans have ranks
+
+```text
+rank one: 10,888 buckets;       rank two: 467 buckets;
+rank three or four: 0 buckets.
+```
+
+The largest raw bucket contains five distinct reduced forms but spans only
+two order-eleven directions.  PARI reported full `11`-rank exactly two for
+all `467` selected rank-two fields; that last negative statement is
+**GRH-ASSISTED discovery data**, while every discovered-form span is exact.
+See the [bounded scout](../05-knowledge/results/classrank_ell11_bagshaw_bounded_bucket_scout_20260824.out).
+Raw multiplicity is therefore demonstrably not projective novelty.
+
+As an independent unconditional low-height boundary, Mosunov--Jacobson's
+[*Unconditional Class Group Tabulation of Imaginary Quadratic Fields to
+`|Delta|<2^40`*](https://arxiv.org/abs/1502.07953) contains `11`- and
+`13`-rank-three examples but no rank-four example for either prime.  This is
+a finite range theorem, not a global obstruction.  The best data operation is
+still to recover the millions of uncomputed high-prime Bagshaw buckets with
+their forms attached and rank them by incremental span rather than size.
 
 ### Wildcard: collide dihedral fields by quadratic resolvent
 
@@ -371,11 +496,12 @@ resolvent offers an orthogonal collision search, not a certificate by itself.
 
 * **CITED / PROVED:** Elkies's exact `3`-rank-eight class group and the
   Mordell/reflection mechanism.
-* **CITED:** Bagshaw et al. Proposition 2.3, Theorem 2.4, Algorithm 3.2,
-  computational tables, and the failure/bottleneck observations.
-* **FINITE-EXACT:** the five below-threshold form bases; the corrected
-  Appendix `11`-rank-three basis; and the absence of `11`-torsion at the
-  erroneous Table 5.2 discriminant.
+* **CITED:** Bagshaw's 2021 thesis Schoof--Mestre computation; Bagshaw et al.
+  Proposition 2.3, Theorem 2.4, Algorithm 3.2, computational tables, and the
+  failure/bottleneck observations.
+* **FINITE-EXACT:** the repaired `5`-rank-five form basis and the other four
+  below-threshold bases; the corrected Appendix `11`-rank-three basis; and
+  the absence of `11`-torsion at the erroneous Table 5.2 discriminant.
 * **FINITE-COMPUTED / GRH-ASSISTED:** the full invariant-factor census of the
   public `131199`-field data file and any uncertified negative rank statement
   from `quadclassunit`.

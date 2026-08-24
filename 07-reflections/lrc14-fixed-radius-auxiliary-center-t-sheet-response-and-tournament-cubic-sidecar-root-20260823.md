@@ -248,7 +248,7 @@ that a statistic failed.
 ## Scale-two return: covering number is a physical runner budget
 
 The `(2,1,9)` obstruction has now been pulled in two opposite directions.
-First, THM-4000's fixed family extends exactly from eleven-subsets of `[1,15]`
+First, THM-4002's fixed family extends exactly from eleven-subsets of `[1,15]`
 to every eleven-subset of `[1,20]`: 167,960 bodies and 574,963 exact finite
 `(E,t)` containment instances, followed by the strict variance tail.  An
 independent engine measures `G_E\t^{-1}C` directly, finds positive rational

@@ -261,7 +261,7 @@ Moreover
 (1-s_U)/s_U=(59U+4)/(4(U-1)).                          (16)
 ```
 
-In THM-4000's notation,
+In THM-4002's notation,
 
 ```text
 disc_t(G)=sum_(k not=0)|Ghat(kt)|^2=Var(N_t)/t^2.

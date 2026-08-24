@@ -70,7 +70,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   leaves 58 certificate survivors: 57 at `s=1` and `(s,p,q)=(2,1,9)`.
   THM-3910 closes 41; THM-3995 adds the owner-maximum conditional parity cap
   `4(U-1)/(63U)` and its exact integer tariff, including the `k=0` plateau, but
-  closes no type. THM-4000 closes AP11 and 167,960 fixed `[1,20]` scale-two
+  closes no type. THM-4002 closes AP11 and 167,960 fixed `[1,20]` scale-two
   bodies; its three-versus-one clock deficit blocks that cover method.
   Seventeen certificate types, `t<U`, and owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
@@ -351,6 +351,10 @@ asymptotic or residue.
   Lyapunov separator and its zero-padding to every `n>=7` are exact; normal
   matrices cannot be counterexamples and `n=6` is open. No global manifold
   follows from these ledgers.
+- **Imaginary-quadratic class rank:** the exact published/control lower-bound
+  tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
+  challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
+  `131199`-field file is a named finite population, not a world census.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3782 close
   named cells; THM-3827--3972 route genus/degree, root/cusp/jet, `f=0`, and
   residue passports, not global roots or arbitrary `f!=0`. THM-3973--3989 give

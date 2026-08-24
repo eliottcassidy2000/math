@@ -108,7 +108,7 @@ THM-3955/3957 and MISTAKE-471 are conductor hostiles.
 consumer's category, and retain component, integral, seam, or attaching data.
 **Mechanism/boundary:** rank, gradeds, and orbit counts erase torsion,
 liftability, and clutch data; nonlinear covers are not cokernels. **Evidence:**
-THM-3990/3989/3991; THM-4000 is the nonlinear counterindication.
+THM-3990/3989/3991; THM-4002 is the nonlinear counterindication.
 
 ## Test whether a central extension changes the base signature
 

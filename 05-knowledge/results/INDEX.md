@@ -36,7 +36,7 @@
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweeps,
   auxiliary-cover obstruction, Graver/phase hostile, and independent audit
-  -> matching `.out`s [THM-4000 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  -> matching `.out`s [THM-4002 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
