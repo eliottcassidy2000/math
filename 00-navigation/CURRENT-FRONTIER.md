@@ -339,24 +339,14 @@ asymptotic or residue.
   an all-depth or physical-path selector.  THM-3511 maps even rays onto the odd half;
   the least literal static bank has `2^(D+B-1)+B+2` points (`134/256` there).
   Physical recursion, adaptive/projective chronology and every prize are OPEN.
+- **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
+  preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. THM-3990 proves a
+  repair quotient and THM-3991 the fan law `chi(W)=d*n!`; neither headline.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**.  THM-3543--3782 close
-  named cells only.  THM-3827/3831 force primitive-row genus `>=3`; THM-3836
-  retains `3h^3+7h^2k+k^3=CS`, and THM-3838 gives `deg h,deg k>=5`.
-  THM-3841/3845 close the `S3` anchor; THM-3844/3847 are monogenic controls.
-  THM-3850/3852/3859/3866/3870/3873/3876 close named cells. THM-3880/3883 give the complete
-  local sign/residue/cube gate; global root existence remains.
-  THM-3851 is unit-rich; THM-3864/3872/3881 close THM-3854's constant-cusp/`T=0` cells.
-  THM-3874/3877 exclude degree-three/four sole-simple-branch fields;
-  THM-3879 reaches two places and THM-3882 forbids one-place rational duals.
-  THM-3884/3886/3894 give jets; THM-3896 closes `n=4`.
-  THM-3885/3895/3897 close polynomial `f=0`; THM-3900 its generic roots.
-  THM-3888/3909 give `II^4+IV/E6*`: `R.O=0` is `6+48+72`; nine avoid
-  boundaries; eight have denominator debt.
-  For `f!=0`, THM-3899 proves `deg_y T>=deg_y f` and leading colors, while
-  THM-3904 closes the x-only lane. THM-3901 gives the strict fan; THM-3902/3905 give equality through three jets.
-  These are necessary passports with positive lifts, not closure.
-  THM-3890 closes quintics; THM-3906/3907 have one/two and two/six places.
-  THM-3920 closes THM-3913--3918/radial chart, not `JC(2)`.
+  named cells only. THM-3827--3920 force genus/degree/branch passports, close
+  the `S3`, `f=0`, radial, and common-zero degree-at-most-five lanes, and leave
+  global root existence plus degree at least six open; these are passports,
+  not closure.
   THM-3929/3933/3936/3938/3959 close centered degrees 3--5; THM-3941 routes
   all degrees, with degree at least six open. THM-3935/3937/3939/3940/3942
   retain character/end debt; THM-3943--3952 close the classified sextic,
@@ -366,7 +356,8 @@ asymptotic or residue.
   constant `q(P)` and THM-3963 `c(t)P^2`; THM-3964--3972 close cells.
   THM-3973--3976: exact-volume tower, seven-piece floor, `p` no-mate, lost `y`.
   THM-3977--3979: critical seed, two-color debt, unobstructed formal jets.
-  Live: algebraize with `y`.
+  THM-3989 adds the cusp-log conductor and `2:3` depth reduction. Live:
+  algebraize with `y`.
   THM-3853/3855 retain a formally rigid inverse-discriminant laboratory, not
   polynomial termination.
   Russell anchor THM-3785 forces `3|d` and `d>=9`; THM-3843 gives a
