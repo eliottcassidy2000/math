@@ -26,6 +26,7 @@ related:
   - THM-3955-node-cotangent-normalization-kernel-and-conductor-torsion
   - THM-3957-triple-normal-crossing-cotangent-conductor-kernel-and-normalization-cokernel
   - THM-3990-componentwise-harmonic-obstruction-and-repair-quotient
+  - THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy
 script: 04-computation/jc2_reduced_23_cusp_jet_repair_thm3992.py
 output: 05-knowledge/results/jc2_reduced_23_cusp_jet_repair_thm3992.out
 script_sha256: 985b4833162ac0080b305fba5c2847a0736997940914033c3f2cda11cfd906dc
@@ -426,6 +427,9 @@ two-owner split is not itself a boundary forest obstruction: THM-3951 concerns
 completion-boundary primes, whereas these pullback curves lie inside the
 source.  One must first determine whether further node addresses occur and
 whether the target node lies in the nonproper-value locus.  See MISTAKE-469.
+THM-3996 proves the resulting exact alternative: distinct companion owners
+force an additional address or a nonproper target value, while a complete
+two-address finite packet forces a common owner and a two-edge cycle.
 
 Reproduce from the repository root:
 

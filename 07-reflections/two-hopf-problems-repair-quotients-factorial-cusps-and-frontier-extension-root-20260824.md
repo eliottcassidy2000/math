@@ -18,7 +18,7 @@ symmetric degenerate scaffold
   -> retain branch/address/orientation data before taking a quotient.       (1)
 ```
 
-Four unconditional results came out of that grammar.
+Six unconditional results came out of that grammar.
 
 1. [THM-3990](../01-canon/theorems/THM-3990-componentwise-harmonic-obstruction-and-repair-quotient.md)
    proves the exact componentwise Laplacian repair criterion and its finite
@@ -39,6 +39,16 @@ Four unconditional results came out of that grammar.
    different completed geometry: `cr=3` is two reduced transverse addresses,
    whereas `4cr=3` is one curvilinear length-two centre whose Rees graph has
    an `A1` singularity and local class group `Z/2`.
+5. [THM-3995](../01-canon/theorems/THM-3995-scale-two-parity-hole-support-and-integer-variance-tariff.md)
+   turns the four oriented endpoint holes in the scale-two LRC row into an
+   exact support cap, its sharp integer variance tariff, and a new sufficient
+   gate.  It is a real narrowing of the row, not a proof of `LRC(14)`.
+6. [THM-3996](../01-canon/theorems/THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy.md)
+   proves the complete node-address conservation law.  Away from the
+   nonproperness locus, each normalized component has equal incoming and
+   outgoing address degree, every address lies on a directed cycle, and the
+   two THM-3992 clutches force either a common companion owner, an additional
+   address, or a Jelonek value.
 
 The source ledgers remain deliberately stricter:
 
@@ -253,10 +263,13 @@ are not the completion-boundary primes of THM-3951, so a two-owner path is not
 itself an obstruction.  Outside the nonproper-value locus, finite-etale
 address balance forces every edge of the complete graph onto a cycle;
 distinct companion owners must therefore pay at least one extra node address.
-A complete forest instead detects nonproperness at the node.  On any completed
-graph, a forest has no clutch holonomy and a cycle is the only place a new
-three-primary class can live; existence of that class would still not make it
-a Keller boundary basis.  This repairs the overreach recorded in MISTAKE-469.
+A complete forest instead detects nonproperness at the node.  This exact
+dichotomy is
+[THM-3996](../01-canon/theorems/THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy.md).
+On any completed graph, a forest has no clutch holonomy and a cycle is the
+only place a new three-primary class can live; existence of that class would
+still not make it a Keller boundary basis.  This repairs the overreach
+recorded in MISTAKE-469.
 
 ## 7. Repeated resultants: a new exact warning theorem
 
@@ -420,11 +433,13 @@ displayed matrices cannot certify their geometric provenance.
 For `(8)`, normalize every companion component and record its map to the
 normalization of the target nodal cubic.  Proper components should be tested
 against the fact that affine line has no nontrivial connected finite etale
-cover in characteristic zero.  The complete address graph is balanced away
-from the nonproper locus: distinct companion owners force extra addresses,
-whereas the full two-address packet forces a common owner and a two-edge
-cycle.  A complete forest forces the node into the nonproper locus.  This is
-the precise replacement for the retracted boundary-forest shortcut.
+cover in characteristic zero.  By
+[THM-3996](../01-canon/theorems/THM-3996-etale-node-address-balance-cycle-and-nonproperness-dichotomy.md),
+the complete address graph is balanced away from the nonproper locus:
+distinct companion owners force extra addresses, whereas the full two-address
+packet forces a common owner and a two-edge cycle.  A complete forest forces
+the node into the nonproper locus.  This is the precise replacement for the
+retracted boundary-forest shortcut.
 
 ### D. Oriented conductor Smith compiler
 
