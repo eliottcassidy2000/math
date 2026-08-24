@@ -1,0 +1,63 @@
+STATUS=THM-4011_INDEPENDENT_SYMPY_FREE_HOSTILE_AUDIT
+FIREWALL=ambient_factor_insertion_is_not_a_Darboux_operation
+PASS  Delta=p^3-y^2=t*p^2
+PASS  u*Delta=y^2
+PASS  universal factor-insertion identity modulo u*Delta=y^2
+PASS  inserted residual remains in (p^2,y)
+PASS  inserted residual has identical p=0 endpoint polynomial
+PASS  factor monoid product law
+PASS  factor monoid coefficient remains divisible by p
+PASS  H_T restricts to one on boundary D
+PASS  H_T restricts to one on source line L
+PASS  observer boundary order is unchanged
+PASS  observer total strict class is unchanged
+PASS  observer clutch polynomial is unchanged
+PASS  normal-form G has exact source order one
+PASS  Q boundary-normal leading row
+PASS  H_M Q-change orders are exactly M+3 for M=1..12
+PASS  H_M G-change orders are exactly M+4 for M=1..12
+PASS  all tested Q-change leading rows are gamma*x^2+alpha
+PASS  all tested G-change leading rows are gamma*x^2+alpha
+PASS  repaired live base satisfies the THM-4007 normalized p4/y2 lock
+PASS  T=p insertion preserves all three current t4 residual coordinates
+PASS  inserted live hostile still satisfies the THM-4007 affine lock
+PASS  repaired M=1 live insertion first changes G at t^5
+PASS  p^(M+3)+1 has simple root valuations for M=1..60
+PASS  all parity-normalized hyperelliptic models have odd degree
+PASS  branch counts reproduce every genus for M=1..60
+PASS  2g-2+r=M+3 for every M=1..60
+PASS  H_M smoothness axis contradiction is active in characteristic zero
+PASS  all odd M RH capacities fail in the exact audit grid
+PASS  even M cannot have two punctures over target infinity
+PASS  even M cannot have three punctures over target infinity
+PASS  even one-infinity invoice is equivalent to e>=M+3
+PASS  even finite punctures cannot share a normalization value
+PASS  every tested even equality uses three total ramifications
+PASS  cyclic equality identity
+PASS  all even-M equality degrees M+3 are odd
+PASS  all equality models saturate Riemann--Hurwitz
+PASS  even equality model is a curve-map hostile, not a Keller construction
+PASS  endpoint dG/dX is unit*q_X
+PASS  endpoint dG/dY is unit*q_Y
+PASS  node plus unit forces singular q and repeated E
+PASS  repeated-endpoint converse hostile pullback
+PASS  converse hostile extension is etale
+PASS  converse hostile target gradient never vanishes
+PASS  converse hostile boundary scalar is a repeated root
+PASS  converse hostile strict pullback is smooth at origin
+PASS  valuative direction is boundary center -> finite nonproper value
+PASS  endpoint value lies on target nodal cubic because P(phi_D)=-E
+PASS  simple E root makes q smooth and transverse to D
+PASS  simple endpoint cannot map to the unique target node
+PASS  repeated endpoint alone does not identify node or owner
+RESULT=AMBIENT_OBSERVER_HAS_ARBITRARILY_DEEP_CLASS_ZERO_PRIME_KERNEL
+ACTUAL_FACTOR_ODD_M=IMPOSSIBLE
+ACTUAL_FACTOR_EVEN_M=EXACTLY_ONE_INFINITY;TWO_DISTINCT_FINITE_NORMALIZATION_EXITS;e>=M+3
+EVEN_EQUALITY=ALL_THREE_PUNCTURES_TOTALLY_RAMIFIED;NUMERICALLY_AND_GEOMETRICALLY_REALIZABLE
+ENDPOINT_GATE=Phi(D)_subset_S_F;endpoint_node_implies_repeated_E_and_singular_strict_companion
+CONVERSE_FIREWALL=repeated_endpoint_does_not_imply_node
+DARBOUX_FIREWALL=H_T_INSERTION_IS_AMBIENT_ONLY_UNLESS_H_M_ACTUALLY_DIVIDES_Q
+CHECKS=50
+SEMANTIC_SHA256=66cd205bdb868b546f6e187d8fbda46377b8f070860fc8d28d628f6a03a2be49
+THEOREM_ID=THM-4011
+ALL THM-4011 INDEPENDENT HOSTILE CHECKS PASSED

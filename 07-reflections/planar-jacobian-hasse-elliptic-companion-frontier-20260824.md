@@ -321,3 +321,184 @@ Here `c02` moves the endpoint after `b`, while `c21` breaks the odd symmetry
 on the only fixed-gauge minimal-support stratum. A contradiction must use one
 of those native effects or a later row; merely refining the already complete
 `t^0,t^1,t^2` companion packet cannot close the cell.
+
+## Addendum: the 6--11 weighted-face and companion campaign
+
+**Research synthesis, 2026-08-24; JC(2) remains OPEN.** The requested
+`6,7,8 -> 9,10,11` comparison became structural rather than numerological.
+Four independently typed advances now replace the earlier task list.
+
+1. [THM-4007](../01-canon/theorems/THM-4007-live-two-three-third-normal-row-five-weight-floor.md),
+   **PROVED + VERIFIED-EXACT**, computes the third source-normal row. On
+   `b=d=0`, it forces a nonzero `p^3` term and the affine lock
+
+   ```text
+   [p^4]Rtilde+(6/(7A5))[y^2]Rtilde=-11392/(105A5^4).
+   ```
+
+   The fixed-gauge support floor is now `5x5`; a determinant shortcut that
+   appeared to give a contradiction was refuted by a direct fourth-jet
+   hostile before promotion.
+2. [THM-4008](../01-canon/theorems/THM-4008-pure-p-residual-totally-degenerate-generic-fibre-no-go.md),
+   **PROVED + independently geometric-audited**, excludes the entire lane
+   `R=f(p)`. Its genus-`m` source fibre degenerates to a rational curve with
+   `m` nodes, while the target retains good `j=0` reduction; degree
+   conservation forbids the map. This is an all-coefficient statement, not a
+   truncation claim.
+3. [THM-4011](../01-canon/theorems/THM-4011-companion-observer-kernel-etale-log-rh-and-endpoint-gate.md),
+   **PROVED + independently audited**, identifies a large ambient kernel of
+   the endpoint/class/clutch/finite-row observer:
+
+   ```text
+   G -> G(1+T(p^3-y^2)),          T in p*k[p,y].
+   ```
+
+   The prime insertions `1+p^M(p^3-y^2)` have growing genus but class zero
+   and can start beyond any finite row packet. Actual etaleness recovers a
+   log-Riemann--Hurwitz gate: odd `M` is impossible, while even `M` costs
+   degree at least `M+3` and two distinct finite normalization-side exits.
+   The boundary map, not the scalar endpoint polynomial, restores the target
+   node label.
+4. [THM-4012](../01-canon/theorems/THM-4012-weighted-leading-face-good-elliptic-factor-observer.md),
+   **PROVED + independently geometric-audited**, supplies the weighted
+   stable-reduction observer. Under its explicit face-stable hypothesis, a
+   highest face must have a positive-genus Jacobian factor mapping to
+   `E_0:Y^2=X^3+1`. Singleton faces fail. The exact forced max-weight-six
+   model is proved face-stable without that hypothesis and is excluded by a
+   two-prime nontorsion certificate. Thus on `b=d=0` the actual total weight
+   satisfies the new unconditional floor `M>=7`; the stronger `M>=9` remains
+   conditional on face-stability at weights seven and eight.
+
+A parallel arithmetic control must not be conflated with item 4.
+[THM-4016](../01-canon/theorems/THM-4016-sharp-five-by-five-elliptic-attachment-nontorsion.md)
+proves nontorsion for the distinct sharp-support point
+`(X^3,Y^2)=(43/84,127/84)`, where `p^4!=0`; its stable-specialization
+application remains conditional. THM-4012's max-six point is
+`(43/224,267/224)`, where `p^4=0`, and its boundary model is proved.
+
+### Why six through eleven form one object
+
+Put `U=SP`. A top monomial `p^i y^j` becomes `P^iU^j`, with weights
+`wt(P)=2, wt(U)=3`. The cusp core has weight six:
+
+```text
+P^3+U^2.
+```
+
+The non-singleton supports from weights six through eleven are its smallest
+semigroup translates:
+
+| weight | normalized two-term face | genus | proved/candidate obstruction |
+|---:|---|---:|---|
+| 6 | `P^3+U^2=1` | 1 | `j=0` survives Hom, but the forced attachment is nontorsion |
+| 7 | only singleton `P^2U=1` | 0 | Hom obstruction under face-stability |
+| 8 | `P(P^3+U^2)=1` | 2 | Bolza; `Jac ~ E_8000^2`, no Hom to `E_0` |
+| 9 | `U(P^3+U^2)=1` | 3 | primitive `Q(zeta_9)` CM candidate |
+| 10 | `P^2(P^3+U^2)=1` | 2 | primitive `Q(zeta_5)` CM candidate |
+| 11 | `PU(P^3+U^2)=1` | 5 | primitive `Q(zeta_11)` CM candidate |
+
+Weight seven is the semigroup hole: weight one has no monomial translate of
+the weight-six core, so only the isolated `P^2U` face occurs. Weight twelve
+is the first support with three monomials,
+
+```text
+P^6,                    P^3U^2,                    U^4,
+```
+
+and is therefore the first face with a genuine coefficient modulus rather
+than one coefficient ratio removable by diagonal scaling. This is the new
+natural stopping boundary.
+
+### The exact max-six torsion separator
+
+The third-row lock forces, after residual normalization,
+
+```text
+epsilon=2752/(135A5^3),       kappa=-5696/(45A5^3).
+```
+
+An attachment on the normalized target `E_0` satisfies
+
+```text
+X^3=43/224,                    Y^2=267/224.
+```
+
+At primes above `11` and `17`, it reduces respectively to `(2,3)` of exact
+order six and `(7,2)` of exact order nine. If its characteristic-zero order
+were `N`, good reduction would force
+
+```text
+N=6*11^a=9*17^b,
+```
+
+which is impossible already 2-adically. The remaining geometric invoice is
+not assumed: the weighted boundary chart has a persistent `A_5` point whose
+normalization `r=z^3w` has unit quadratic discriminant, while the six finite
+attachments are exact `A_35` models `UV=unit*rho^36`. Consequently the
+special fibre has one elliptic component and otherwise only rational
+components. Equality of the six attachment images forces torsion, producing
+the contradiction.
+
+### Provisional cyclotomic sieve at 9, 10, and 11
+
+**VERIFIED-EXACT / PROVISIONAL, not yet a canon theorem.** The independent
+THM-4012 certificate checks the Newton interiors, diagonal automorphisms, and
+CM-type stabilizers. For a toric interior point `(i,j)`, the differential
+
+```text
+omega_ij=P^(i-1)U^(j-1)dP/F_U
+```
+
+has diagonal eigencharacter `lambda^i mu^j`. The three holomorphic spectra
+are
+
+```text
+M=9:  {1,2,5} mod 9,
+M=10: {1,2} mod 5,
+M=11: {4,5,8,9,10} mod 11.
+```
+
+Together with their conjugates they exhaust the roots of
+`Phi_9,Phi_5,Phi_11`. Each type has trivial multiplicative stabilizer, hence
+is primitive; the standard primitive-CM classification then makes the
+Jacobians simple of dimensions `3,2,5`. The imported theorem and its exact
+scope are pinned in
+[CORE-PAPERS](../05-knowledge/reference/CORE-PAPERS.md#florit--smith--milne--low-weight-jacobian-factors-and-primitive-cm-types).
+Therefore none can have an elliptic quotient, in particular not `E_0`.
+
+This would upgrade the conditional face-stable alternative from `M>=9` to
+`M>=12`. It is not yet unconditional: the weighted boundary inventory for
+weights `7,...,11` must be proved rather than inferred from the affine face.
+
+### Revised Anchor / Niche / Wildcard board
+
+- **Anchor — toroidal boundary inventory for weights 7--11.** For each
+  singleton or cyclotomic face, normalize every point of `Z=0`, prove the
+  closure flat, and list every component created by base change. The cheapest
+  hostile is a coefficient-sum resonance that moves all finite attachments
+  to the boundary. Success promotes the conditional `M>=12` floor.
+- **Niche — actual companion factors.** THM-4011 shows every finite observer
+  packet has an ambient class-zero kernel. The next useful invariant must see
+  Darboux realizability: restrict a proposed factor to the target nodal
+  normalization, compute its punctures, and apply log Riemann--Hurwitz before
+  attempting factorization in `B_2`.
+- **Wildcard — weight twelve as a moduli/Prym problem.** Classify
+  `c_0P^6+c_1P^3U^2+c_2U^4=1` by its cross-ratio or discriminant. Determine
+  exactly when its Jacobian contains `E_0`; then attach the node-orbit
+  compatibility, since a Hom survivor is only necessary and never a lift.
+
+The concept board now has a clear causal chain:
+
+```text
+Hasse row lock
+ -> exact top-face coefficients
+ -> proper weighted degeneration
+ -> good elliptic-factor invoice
+ -> attachment orbit
+ -> arithmetic torsion separator.
+```
+
+The destroyed information at each arrow is also explicit: later residual
+terms, boundary tails, the dual graph, attachment images, and the isogeny
+kernel. The next session should restore exactly one of those sidecars rather
+than compute another untyped row.

@@ -1,0 +1,63 @@
+STATUS=THM-4012 INDEPENDENT WEIGHTED-FACE/TORSION/CYCLOTOMIC AUDIT
+PASS  weight-equation census M=2..16
+PASS  top-face rho-exponent census M=2..16
+PASS  lower-face vanishing census M=2..16
+PASS  singleton rational-component census M=2..16
+PASS  singleton intersection-exponent census M=2..16
+PASS  weight six has exactly p^3 and y^2
+PASS  weight seven is the singleton p^2*y
+PASS  weight eight has exactly p^4 and p*y^2
+PASS  weight-six elliptic discriminant is nonzero
+PASS  weight-six attachment count is six off resonance
+PASS  forced weight-six normalized coefficient sum
+PASS  forced attachment X-cube is 43/224
+PASS  forced attachment Y-square is 267/224
+PASS  forced attachment lies on E0 symbolically
+PASS  11-adic attachment specialization alpha=2
+PASS  11-adic attachment specialization beta=3
+PASS  P11 lies on E0
+PASS  P11 has exact order six
+PASS  17-adic attachment specialization alpha=7
+PASS  17-adic attachment specialization beta=2
+PASS  P17 lies on E0
+PASS  P17 has exact order nine
+PASS  two-prime reduction orders are torsion-incompatible
+PASS  max-six first boundary point is smooth
+PASS  max-six second boundary point is smooth
+PASS  max-six curve avoids weighted orbifold point
+PASS  max-six normalized boundary discriminant is a unit
+PASS  max-six lower faces do not change the normalized boundary roots
+PASS  max-six attachment thickness is exactly 36
+PASS  Bolza quotient c4=160
+PASS  Bolza quotient discriminant=512
+PASS  Bolza quotient j=8000
+PASS  Bolza quotient differentials span genus two
+PASS  CM Hilbert roots are 8000 and 0
+PASS  CM fields Q(sqrt(-2)) and Q(sqrt(-3)) differ
+PASS  weight-eight CM-field Hom-obstruction inputs are distinct
+PASS  weight-eight attachment count is eight off resonance
+PASS  weight-9 trinomial exponent determinant
+PASS  weight-9 toric genus
+PASS  weight-9 holomorphic CM type
+PASS  weight-9 H1 spectrum is full cyclotomic
+PASS  weight-9 CM type is primitive
+PASS  weight-10 trinomial exponent determinant
+PASS  weight-10 toric genus
+PASS  weight-10 holomorphic CM type
+PASS  weight-10 H1 spectrum is full cyclotomic
+PASS  weight-10 CM type is primitive
+PASS  weight-11 trinomial exponent determinant
+PASS  weight-11 toric genus
+PASS  weight-11 holomorphic CM type
+PASS  weight-11 H1 spectrum is full cyclotomic
+PASS  weight-11 CM type is primitive
+PASS  weight-nine has only singleton or cyclotomic two-term face
+PASS  weight-ten has only singleton or cyclotomic two-term face
+PASS  weight-eleven has only singleton or cyclotomic two-term face
+PASS  weights nine through eleven have no good elliptic face factor
+PASS  toric graph rank alone is not a good elliptic factor
+PASS  weight-six matching j=0 is only a survivor, not a lift
+CHECKS=58
+SEMANTIC_SHA256=0d100f08e59226afa995266af65d35f74667bed5d698ea01cedbeec7c21d0bfc
+THEOREM_ID=THM-4012
+ALL THM-4012 INDEPENDENT WEIGHTED-FACE CHECKS PASSED

@@ -1,0 +1,204 @@
+STATUS=THM-4011 VERIFIED-EXACT CERTIFICATE
+SCOPE=ambient observer kernel plus necessary gates for an actual etale factor
+PASS  cusp defect Delta=t*p^2
+PASS  mixed repair identity u*Delta=y^2
+PASS  abstract factor insertion modulo u*Delta-y^2
+PASS  observer-kernel factors form a monoid
+PASS  factor insertion G_M=G*H_M M=1
+PASS  companion factorization Q_M=Q*H_M M=1
+PASS  exact first changed G-row M=1
+PASS  exact leading changed G coefficient M=1
+PASS  exact first changed Q-row M=1
+PASS  H_M is one on the source line M=1
+PASS  factor insertion G_M=G*H_M M=2
+PASS  companion factorization Q_M=Q*H_M M=2
+PASS  exact first changed G-row M=2
+PASS  exact leading changed G coefficient M=2
+PASS  exact first changed Q-row M=2
+PASS  H_M is one on the source line M=2
+PASS  factor insertion G_M=G*H_M M=3
+PASS  companion factorization Q_M=Q*H_M M=3
+PASS  exact first changed G-row M=3
+PASS  exact leading changed G coefficient M=3
+PASS  exact first changed Q-row M=3
+PASS  H_M is one on the source line M=3
+PASS  factor insertion G_M=G*H_M M=4
+PASS  companion factorization Q_M=Q*H_M M=4
+PASS  exact first changed G-row M=4
+PASS  exact leading changed G coefficient M=4
+PASS  exact first changed Q-row M=4
+PASS  H_M is one on the source line M=4
+PASS  factor insertion G_M=G*H_M M=5
+PASS  companion factorization Q_M=Q*H_M M=5
+PASS  exact first changed G-row M=5
+PASS  exact leading changed G coefficient M=5
+PASS  exact first changed Q-row M=5
+PASS  H_M is one on the source line M=5
+PASS  factor insertion G_M=G*H_M M=6
+PASS  companion factorization Q_M=Q*H_M M=6
+PASS  exact first changed G-row M=6
+PASS  exact leading changed G coefficient M=6
+PASS  exact first changed Q-row M=6
+PASS  H_M is one on the source line M=6
+PASS  factor insertion G_M=G*H_M M=7
+PASS  companion factorization Q_M=Q*H_M M=7
+PASS  exact first changed G-row M=7
+PASS  exact leading changed G coefficient M=7
+PASS  exact first changed Q-row M=7
+PASS  H_M is one on the source line M=7
+PASS  factor insertion G_M=G*H_M M=8
+PASS  companion factorization Q_M=Q*H_M M=8
+PASS  exact first changed G-row M=8
+PASS  exact leading changed G coefficient M=8
+PASS  exact first changed Q-row M=8
+PASS  H_M is one on the source line M=8
+PASS  factor insertion G_M=G*H_M M=9
+PASS  companion factorization Q_M=Q*H_M M=9
+PASS  exact first changed G-row M=9
+PASS  exact leading changed G coefficient M=9
+PASS  exact first changed Q-row M=9
+PASS  H_M is one on the source line M=9
+PASS  factor insertion G_M=G*H_M M=10
+PASS  companion factorization Q_M=Q*H_M M=10
+PASS  exact first changed G-row M=10
+PASS  exact leading changed G coefficient M=10
+PASS  exact first changed Q-row M=10
+PASS  H_M is one on the source line M=10
+PASS  factor insertion G_M=G*H_M M=11
+PASS  companion factorization Q_M=Q*H_M M=11
+PASS  exact first changed G-row M=11
+PASS  exact leading changed G coefficient M=11
+PASS  exact first changed Q-row M=11
+PASS  H_M is one on the source line M=11
+PASS  factor insertion G_M=G*H_M M=12
+PASS  companion factorization Q_M=Q*H_M M=12
+PASS  exact first changed G-row M=12
+PASS  exact leading changed G coefficient M=12
+PASS  exact first changed Q-row M=12
+PASS  H_M is one on the source line M=12
+PASS  H_M restricts to one on D M=1
+PASS  endpoint polynomial is unchanged M=1
+PASS  residual ideal (p^2,y) is preserved M=1
+PASS  H_M restricts to one on D M=2
+PASS  endpoint polynomial is unchanged M=2
+PASS  residual ideal (p^2,y) is preserved M=2
+PASS  H_M restricts to one on D M=3
+PASS  endpoint polynomial is unchanged M=3
+PASS  residual ideal (p^2,y) is preserved M=3
+PASS  H_M restricts to one on D M=4
+PASS  endpoint polynomial is unchanged M=4
+PASS  residual ideal (p^2,y) is preserved M=4
+PASS  H_M restricts to one on D M=5
+PASS  endpoint polynomial is unchanged M=5
+PASS  residual ideal (p^2,y) is preserved M=5
+PASS  H_M restricts to one on D M=6
+PASS  endpoint polynomial is unchanged M=6
+PASS  residual ideal (p^2,y) is preserved M=6
+RESULT observer=(ord_D, endpoint, total_class, clutch, finite_rows) is factor-blind
+FIREWALL factor insertion is an ambient normal-form operation, not a Darboux-pair operation
+PASS  M+3 finite branch roots are simple M=1
+PASS  branch count is even M=1
+PASS  genus parity formula M=1
+PASS  puncture parity formula M=1
+PASS  affine ghost curve smooth control M=1
+PASS  odd-M etale log-RH contradiction M=1
+PASS  M+3 finite branch roots are simple M=2
+PASS  branch count is even M=2
+PASS  genus parity formula M=2
+PASS  puncture parity formula M=2
+PASS  affine ghost curve smooth control M=2
+PASS  even-M minimum cover degree M=2
+PASS  even-M equality ramification ledger M=2
+PASS  M+3 finite branch roots are simple M=3
+PASS  branch count is even M=3
+PASS  genus parity formula M=3
+PASS  puncture parity formula M=3
+PASS  affine ghost curve smooth control M=3
+PASS  odd-M etale log-RH contradiction M=3
+PASS  M+3 finite branch roots are simple M=4
+PASS  branch count is even M=4
+PASS  genus parity formula M=4
+PASS  puncture parity formula M=4
+PASS  affine ghost curve smooth control M=4
+PASS  even-M minimum cover degree M=4
+PASS  even-M equality ramification ledger M=4
+PASS  M+3 finite branch roots are simple M=5
+PASS  branch count is even M=5
+PASS  genus parity formula M=5
+PASS  puncture parity formula M=5
+PASS  affine ghost curve smooth control M=5
+PASS  odd-M etale log-RH contradiction M=5
+PASS  M+3 finite branch roots are simple M=6
+PASS  branch count is even M=6
+PASS  genus parity formula M=6
+PASS  puncture parity formula M=6
+PASS  affine ghost curve smooth control M=6
+PASS  even-M minimum cover degree M=6
+PASS  even-M equality ramification ledger M=6
+PASS  M+3 finite branch roots are simple M=7
+PASS  branch count is even M=7
+PASS  genus parity formula M=7
+PASS  puncture parity formula M=7
+PASS  affine ghost curve smooth control M=7
+PASS  odd-M etale log-RH contradiction M=7
+PASS  M+3 finite branch roots are simple M=8
+PASS  branch count is even M=8
+PASS  genus parity formula M=8
+PASS  puncture parity formula M=8
+PASS  affine ghost curve smooth control M=8
+PASS  even-M minimum cover degree M=8
+PASS  even-M equality ramification ledger M=8
+PASS  M+3 finite branch roots are simple M=9
+PASS  branch count is even M=9
+PASS  genus parity formula M=9
+PASS  puncture parity formula M=9
+PASS  affine ghost curve smooth control M=9
+PASS  odd-M etale log-RH contradiction M=9
+PASS  M+3 finite branch roots are simple M=10
+PASS  branch count is even M=10
+PASS  genus parity formula M=10
+PASS  puncture parity formula M=10
+PASS  affine ghost curve smooth control M=10
+PASS  even-M minimum cover degree M=10
+PASS  even-M equality ramification ledger M=10
+PASS  M+3 finite branch roots are simple M=11
+PASS  branch count is even M=11
+PASS  genus parity formula M=11
+PASS  puncture parity formula M=11
+PASS  affine ghost curve smooth control M=11
+PASS  odd-M etale log-RH contradiction M=11
+PASS  M+3 finite branch roots are simple M=12
+PASS  branch count is even M=12
+PASS  genus parity formula M=12
+PASS  puncture parity formula M=12
+PASS  affine ghost curve smooth control M=12
+PASS  even-M minimum cover degree M=12
+PASS  even-M equality ramification ledger M=12
+RESULT H_M=0 is prime, genus=floor((M+3)/2), punctures=2(odd M)/3(even M)
+RESULT actual etale factor: odd M impossible; even M forces e>=M+3 and two finite normalization-side exits
+PASS  live hostile remains boundary-disjoint
+PASS  live hostile preserves forced p^2 coefficient
+PASS  live hostile preserves forced p^3 coefficient
+PASS  live hostile preserves forced raw p^4 coefficient
+PASS  live hostile leaves c21=[p^2 y] zero
+PASS  live hostile leaves c02=[y^2] zero
+PASS  live normalized third-row residual relation
+PASS  live hostile exact companion factor
+PASS  live hostile first changes G at t^5
+CONTROL live b=d=0 observer through THM-4007 admits Q_host=Q_live*(1+p*Delta)
+FIREWALL THM-4008 excludes the all-p base residual; no Keller pair is constructed
+PASS  target nodal equation vanishes at o
+PASS  target nodal A-gradient vanishes at o
+PASS  target nodal C-gradient vanishes at o
+PASS  etale tangency hostile has unit Jacobian
+PASS  etale tangency pullback is x-y^2
+PASS  etale tangency target is nonsingular
+PASS  etale tangency boundary scalar is -y^2
+PASS  etale tangency boundary scalar has repeated root
+PASS  etale tangency pullback gradient x is one
+PASS  etale tangency pullback gradient y vanishes at endpoint
+RESULT endpoint points map into N_a intersect S_F by the valuative criterion
+RESULT a D-visible target node forces a repeated endpoint and a singular strict companion germ
+FIREWALL repeated endpoint does not imply target node; etale smooth tangency keeps q smooth
+THEOREM_ID=THM-4011
+ALL THM-4011 EXACT CHECKS PASSED

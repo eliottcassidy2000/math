@@ -1,0 +1,268 @@
+STATUS=THM-4012;PROVED_CONDITIONAL_OBSERVER;EXACT_MAX6_NO_GO;VERIFIED-EXACT_PRIMARY
+SCOPE=general_face_stability_required;exact_max6_face_stability_proved;JC(2)_OPEN
+PASS  weight M=2 has a nonempty monomial face
+PASS  weighted H_rho is integral M=2
+PASS  weighted top face survives M=2
+PASS  source weighted scaling M=2
+PASS  source central factorization M=2
+PASS  weighted homogenization chart M=2
+PASS  all homogenized terms have weighted degree M=2
+PASS  proper weighted special divisor M=2
+PASS  weight M=3 has a nonempty monomial face
+PASS  weighted H_rho is integral M=3
+PASS  weighted top face survives M=3
+PASS  source weighted scaling M=3
+PASS  source central factorization M=3
+PASS  weighted homogenization chart M=3
+PASS  all homogenized terms have weighted degree M=3
+PASS  proper weighted special divisor M=3
+PASS  weight M=4 has a nonempty monomial face
+PASS  weighted H_rho is integral M=4
+PASS  weighted top face survives M=4
+PASS  source weighted scaling M=4
+PASS  source central factorization M=4
+PASS  weighted homogenization chart M=4
+PASS  all homogenized terms have weighted degree M=4
+PASS  proper weighted special divisor M=4
+PASS  weight M=5 has a nonempty monomial face
+PASS  weighted H_rho is integral M=5
+PASS  weighted top face survives M=5
+PASS  source weighted scaling M=5
+PASS  source central factorization M=5
+PASS  weighted homogenization chart M=5
+PASS  all homogenized terms have weighted degree M=5
+PASS  proper weighted special divisor M=5
+PASS  weight M=6 has a nonempty monomial face
+PASS  weighted H_rho is integral M=6
+PASS  weighted top face survives M=6
+PASS  source weighted scaling M=6
+PASS  source central factorization M=6
+PASS  weighted homogenization chart M=6
+PASS  all homogenized terms have weighted degree M=6
+PASS  proper weighted special divisor M=6
+PASS  weight M=7 has a nonempty monomial face
+PASS  weighted H_rho is integral M=7
+PASS  weighted top face survives M=7
+PASS  source weighted scaling M=7
+PASS  source central factorization M=7
+PASS  weighted homogenization chart M=7
+PASS  all homogenized terms have weighted degree M=7
+PASS  proper weighted special divisor M=7
+PASS  weight M=8 has a nonempty monomial face
+PASS  weighted H_rho is integral M=8
+PASS  weighted top face survives M=8
+PASS  source weighted scaling M=8
+PASS  source central factorization M=8
+PASS  weighted homogenization chart M=8
+PASS  all homogenized terms have weighted degree M=8
+PASS  proper weighted special divisor M=8
+PASS  weight M=9 has a nonempty monomial face
+PASS  weighted H_rho is integral M=9
+PASS  weighted top face survives M=9
+PASS  source weighted scaling M=9
+PASS  source central factorization M=9
+PASS  weighted homogenization chart M=9
+PASS  all homogenized terms have weighted degree M=9
+PASS  proper weighted special divisor M=9
+PASS  weight M=10 has a nonempty monomial face
+PASS  weighted H_rho is integral M=10
+PASS  weighted top face survives M=10
+PASS  source weighted scaling M=10
+PASS  source central factorization M=10
+PASS  weighted homogenization chart M=10
+PASS  all homogenized terms have weighted degree M=10
+PASS  proper weighted special divisor M=10
+PASS  weight M=11 has a nonempty monomial face
+PASS  weighted H_rho is integral M=11
+PASS  weighted top face survives M=11
+PASS  source weighted scaling M=11
+PASS  source central factorization M=11
+PASS  weighted homogenization chart M=11
+PASS  all homogenized terms have weighted degree M=11
+PASS  proper weighted special divisor M=11
+PASS  weight M=12 has a nonempty monomial face
+PASS  weighted H_rho is integral M=12
+PASS  weighted top face survives M=12
+PASS  source weighted scaling M=12
+PASS  source central factorization M=12
+PASS  weighted homogenization chart M=12
+PASS  all homogenized terms have weighted degree M=12
+PASS  proper weighted special divisor M=12
+PASS  target simultaneous good scaling M=2
+PASS  target j=0 special fibre M=2
+PASS  target simultaneous good scaling M=3
+PASS  target j=0 special fibre M=3
+PASS  target simultaneous good scaling M=4
+PASS  target j=0 special fibre M=4
+PASS  target simultaneous good scaling M=5
+PASS  target j=0 special fibre M=5
+PASS  target simultaneous good scaling M=6
+PASS  target j=0 special fibre M=6
+PASS  target simultaneous good scaling M=7
+PASS  target j=0 special fibre M=7
+PASS  target simultaneous good scaling M=8
+PASS  target j=0 special fibre M=8
+PASS  target simultaneous good scaling M=9
+PASS  target j=0 special fibre M=9
+PASS  target simultaneous good scaling M=10
+PASS  target j=0 special fibre M=10
+PASS  target simultaneous good scaling M=11
+PASS  target j=0 special fibre M=11
+PASS  target simultaneous good scaling M=12
+PASS  target j=0 special fibre M=12
+RESULT central_support=(S^2-P)*(Z^M-H_M(P,SP))
+RESULT target_special=Y^2-X^3-1 (smooth j=0)
+CONTROL stable_specialization_is_a_named_geometric_hypothesis_not_a_symbolic_conclusion
+PASS  singleton rational-component/attachment ledger (1,0)
+SINGLETON weight=2 monomial=p^1y^0 rational_components=1 attachments=2
+PASS  singleton rational-component/attachment ledger (0,1)
+SINGLETON weight=3 monomial=p^0y^1 rational_components=1 attachments=3
+PASS  singleton rational-component/attachment ledger (2,0)
+SINGLETON weight=4 monomial=p^2y^0 rational_components=2 attachments=4
+PASS  singleton rational-component/attachment ledger (1,1)
+SINGLETON weight=5 monomial=p^1y^1 rational_components=1 attachments=5
+PASS  singleton rational-component/attachment ledger (0,2)
+SINGLETON weight=6 monomial=p^0y^2 rational_components=2 attachments=6
+PASS  singleton rational-component/attachment ledger (3,0)
+SINGLETON weight=6 monomial=p^3y^0 rational_components=3 attachments=6
+PASS  singleton rational-component/attachment ledger (2,1)
+SINGLETON weight=7 monomial=p^2y^1 rational_components=1 attachments=7
+PASS  singleton rational-component/attachment ledger (1,2)
+SINGLETON weight=8 monomial=p^1y^2 rational_components=1 attachments=8
+PASS  singleton rational-component/attachment ledger (4,0)
+SINGLETON weight=8 monomial=p^4y^0 rational_components=4 attachments=8
+PASS  singleton rational-component/attachment ledger (0,3)
+SINGLETON weight=9 monomial=p^0y^3 rational_components=3 attachments=9
+PASS  singleton rational-component/attachment ledger (3,1)
+SINGLETON weight=9 monomial=p^3y^1 rational_components=1 attachments=9
+PASS  singleton rational-component/attachment ledger (2,2)
+SINGLETON weight=10 monomial=p^2y^2 rational_components=2 attachments=10
+PASS  singleton rational-component/attachment ledger (5,0)
+SINGLETON weight=10 monomial=p^5y^0 rational_components=5 attachments=10
+PASS  singleton rational-component/attachment ledger (1,3)
+SINGLETON weight=11 monomial=p^1y^3 rational_components=1 attachments=11
+PASS  singleton rational-component/attachment ledger (4,1)
+SINGLETON weight=11 monomial=p^4y^1 rational_components=1 attachments=11
+PASS  singleton rational-component/attachment ledger (0,4)
+SINGLETON weight=12 monomial=p^0y^4 rational_components=4 attachments=12
+PASS  singleton rational-component/attachment ledger (3,2)
+SINGLETON weight=12 monomial=p^3y^2 rational_components=1 attachments=12
+PASS  singleton rational-component/attachment ledger (6,0)
+SINGLETON weight=12 monomial=p^6y^0 rational_components=6 attachments=12
+PASS  singleton rational-component/attachment ledger (2,3)
+SINGLETON weight=13 monomial=p^2y^3 rational_components=1 attachments=13
+PASS  singleton rational-component/attachment ledger (5,1)
+SINGLETON weight=13 monomial=p^5y^1 rational_components=1 attachments=13
+PASS  singleton rational-component/attachment ledger (1,4)
+SINGLETON weight=14 monomial=p^1y^4 rational_components=1 attachments=14
+PASS  singleton rational-component/attachment ledger (4,2)
+SINGLETON weight=14 monomial=p^4y^2 rational_components=2 attachments=14
+PASS  singleton rational-component/attachment ledger (7,0)
+SINGLETON weight=14 monomial=p^7y^0 rational_components=7 attachments=14
+PASS  singleton rational-component/attachment ledger (0,5)
+SINGLETON weight=15 monomial=p^0y^5 rational_components=5 attachments=15
+PASS  singleton rational-component/attachment ledger (3,3)
+SINGLETON weight=15 monomial=p^3y^3 rational_components=3 attachments=15
+PASS  singleton rational-component/attachment ledger (6,1)
+SINGLETON weight=15 monomial=p^6y^1 rational_components=1 attachments=15
+PASS  singleton rational-component/attachment ledger (2,4)
+SINGLETON weight=16 monomial=p^2y^4 rational_components=2 attachments=16
+PASS  singleton rational-component/attachment ledger (5,2)
+SINGLETON weight=16 monomial=p^5y^2 rational_components=1 attachments=16
+PASS  singleton rational-component/attachment ledger (8,0)
+SINGLETON weight=16 monomial=p^8y^0 rational_components=8 attachments=16
+PASS  singleton rational-component/attachment ledger (1,5)
+SINGLETON weight=17 monomial=p^1y^5 rational_components=1 attachments=17
+PASS  singleton rational-component/attachment ledger (4,3)
+SINGLETON weight=17 monomial=p^4y^3 rational_components=1 attachments=17
+PASS  singleton rational-component/attachment ledger (7,1)
+SINGLETON weight=17 monomial=p^7y^1 rational_components=1 attachments=17
+PASS  singleton rational-component/attachment ledger (0,6)
+SINGLETON weight=18 monomial=p^0y^6 rational_components=6 attachments=18
+PASS  singleton rational-component/attachment ledger (3,4)
+SINGLETON weight=18 monomial=p^3y^4 rational_components=1 attachments=18
+PASS  singleton rational-component/attachment ledger (6,2)
+SINGLETON weight=18 monomial=p^6y^2 rational_components=2 attachments=18
+PASS  singleton rational-component/attachment ledger (9,0)
+SINGLETON weight=18 monomial=p^9y^0 rational_components=9 attachments=18
+PASS  complete singleton census through weight 18
+RESULT singleton_face_normalizations=all_P1;observer_Hom=0_under_stable_admissibility
+PASS  weight-six central factorization
+PASS  weight-six face becomes elliptic under T=SP
+PASS  weight-six elliptic face is the target j=0 curve
+PASS  weight-six six-attachment transversality
+PASS  live normalized/raw p^3 conversion
+PASS  live p4-zero branch raw y^2 coefficient
+PASS  live p4-zero branch is nonresonant
+PASS  live normalized p4-zero branch is nonresonant
+RESULT weight6=elliptic_j0_face;Hom_to_target_nonzero;observer_survives_not_suffices
+RESULT live_max6_Rtilde_face=(2752*p^3/135-5696*y^2/45)/A5^3;sum=-14336/(135*A5^3)
+RESULT live_max6_raw_face=gamma*Rtilde_face;raw_sum=7168/(135*a^12)
+PASS  max-weight-six S=1 boundary central equation
+PASS  max-weight-six closure value at [0:1:0] is epsilon
+PASS  max-weight-six closure avoids the [0:1:0] orbifold point
+PASS  r=1 boundary point is smooth off resonance
+PASS  r=-kappa/epsilon elliptic infinity is smooth off resonance
+PASS  persistent boundary A5 strict-transform equation
+PASS  persistent boundary quadratic at z=0
+PASS  persistent boundary Hensel discriminant
+PASS  boundary Hensel discriminant is a unit
+RESULT exact_nonresonant_max6_boundary=two_smooth_Hensel_branches;no_positive_genus_tail
+RESULT exact_nonresonant_max6_face_stability=unique_elliptic_plus_six_UV_rho36_chains
+PASS  weight-eight first birational coordinate T=SP
+PASS  weight-eight hyperelliptic equation dY^2=P(1-cP^4)
+PASS  weight-eight face scales to the Bolza curve
+PASS  weight-eight eight-attachment transversality
+PASS  Bolza quintic is squarefree
+PASS  Bolza smooth projective genus is two
+PASS  Bolza involution i1 preserves the curve
+PASS  i1 quotient equation v^2=(u+2)(u^2-2)
+PASS  quotient Weierstrass b-invariants
+PASS  quotient elliptic invariants c4=160 Delta=512 j=8000
+PASS  Bolza involution i2 preserves the curve
+PASS  conjugating Bolza scaling sends x-involution to -1/x
+PASS  conjugating Bolza scaling sends y-involution to i*y/x^3
+PASS  i1 fixes differential omega0-omega1
+PASS  i2 fixes differential omega0-i*omega1
+PASS  quotient differentials span H0(C,Omega)
+RESULT Bolza_Jacobian_isogenous_to=E8000^2 via two independent involution quotients
+PASS  shift quotient E to y^2=x^3-4x^2+2x
+PASS  explicit degree-two quotient E to Eprime
+PASS  Eprime isomorphism x=-X/2, y=tau*Y, tau^2=-1/8
+PASS  degree-two self-map alpha squared has x([2])
+PASS  degree-two self-map alpha^2=[-2]
+PASS  target order-three automorphism has CM polynomial zeta^2+zeta+1
+PASS  2/3 is not a rational square, so CM fields -2 and -3 differ
+RESULT End0(E8000)=Q(sqrt(-2)) from alpha^2=[-2]
+RESULT End0(E0)=Q(sqrt(-3)) from the order-three automorphism
+RESULT Hom(E8000,E0)=0 and therefore Hom(Jac(Bolza),E0)=0
+PASS  live attachment X^3=43/224
+PASS  live attachment Y^2=267/224
+PASS  live attachment lies on Y^2=X^3+1
+PASS  attachment cubic root reduces to x=2 mod 11
+PASS  attachment square root reduces to y=3 mod 11
+PASS  reduced point lies on E mod 11
+PASS  E has good reduction at residue characteristic 11
+PASS  reduced attachment killed by 6 mod 11
+PASS  order 6 mod 11 survives divisor 2
+PASS  order 6 mod 11 survives divisor 3
+REDUCTION p=11 point=(2, 3) exact_order=6 multiples=[(2, 3), (0, 1), (10, 0), (0, 10), (2, 8), None]
+PASS  attachment cubic root reduces to x=7 mod 17
+PASS  attachment square root reduces to y=2 mod 17
+PASS  reduced point lies on E mod 17
+PASS  E has good reduction at residue characteristic 17
+PASS  reduced attachment killed by 9 mod 17
+PASS  order 9 mod 17 survives divisor 3
+REDUCTION p=17 point=(7, 2) exact_order=9 multiples=[(7, 2), (1, 6), (0, 16), (14, 12), (14, 5), (0, 1), (1, 11), (7, 15), None]
+PASS  no N can satisfy N/6 an 11-power and N/9 a 17-power
+RESULT live_attachment_is_nontorsion_by_good_reduction_orders_6_and_9
+RESULT exact_max6_six_attachment_invoice_excludes_the_forced_survivor_unconditionally
+PASS  THM-4007 p4-zero branch satisfies the exact affine lock
+PASS  THM-4007 forbids simultaneous p4=y2=0
+RESULT b=d=0_exact_max6_candidate_is_nontorsion_excluded
+RESULT face_stable_b=d=0_conclusion=total_wtdeg(H)>=9
+CONTROL higher_weight_terms_change_the_top_face_and_are_not_erased
+CHECKS=206
+THEOREM_ID=THM-4012
+NOTE=Hom-factor obstruction is necessary only; face admissibility is explicit
+ALL THM-4012 EXACT CHECKS PASSED
