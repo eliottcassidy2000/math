@@ -446,11 +446,13 @@ carry a map to the target. Reduction type alone cannot exclude this face.
 
 ### 6.1 Conditional torsion invoice on the six attachments
 
-**CONDITIONAL.** There is nevertheless a precise next condition. In any stable specialization
-of `(13)` through the nonresonant mixed model `(36)--(40)`, all rational
-components map constantly. Hence the restriction to `E_kappa` must be
-nonconstant, and all six attachment points must have one common image. After
-translation this restriction is an isogeny.
+**CONDITIONAL.** There is nevertheless a precise next condition. Assume a
+proper flat resolved model through `(36)--(40)` in which `E_kappa` owns
+positive degree (for example, it is the unique positive-genus component) and
+all six branches meet one connected contracted rational clutch. Every
+rational component maps constantly; the degree owner makes the restriction
+to `E_kappa` nonconstant, while the clutch owner gives all six points one
+common image. After translation this restriction is an isogeny.
 
 Let `zeta_6` be a primitive sixth root and `zeta_3=zeta_6^2`. The six points
 in `(40)` form the orbit of

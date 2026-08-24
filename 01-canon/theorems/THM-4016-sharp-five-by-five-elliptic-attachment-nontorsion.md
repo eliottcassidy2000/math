@@ -15,8 +15,9 @@ status: >
   exclusion is REFUTED. The full reduced 2:3 cell and JC(2) remain OPEN.
 source: root + two no-import audits / reduced 2:3 cell continuation, 2026-08-24
 audit: >
-  PASS. The primary verifier reconstructs the sharp residual, normalized
-  point, degree-six coordinate field, two good places, exact group law, and
+  PASS. The primary verifier reconstructs the sharp displayed coefficients,
+  normalized formal point, degree-six coordinate field, two good places,
+  exact group law, and
   reduction-kernel contradiction. A separate search enumerates 38 degree-one
   good reductions below 500 and selects 11/17 as the first incompatible pair
   with unique cube roots. A second no-import referee checks every constant,
@@ -200,7 +201,7 @@ sigma(X,Y)=(zeta_3 X,-Y)                              (15)
 
 fixes the origin, and its six iterates on `P` exhaust the three cube-root
 and two square-root choices in `(4)`. As a group automorphism it preserves
-torsion, so all six attachments are non-torsion.
+torsion, so all six formal points are non-torsion.
 
 Equivalently, the corresponding Eisenstein unit is a primitive sixth root
 `u`; `u-1` is again an Eisenstein unit. This is the exact unit used in
