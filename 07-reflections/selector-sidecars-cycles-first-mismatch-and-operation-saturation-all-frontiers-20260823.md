@@ -132,7 +132,9 @@ symmetry cannot choose a relative phase.  The formerly missing invoice was
 mu(G_u \ (D_p union D_q)) = M_0-M_1+M_2,
 ```
 
-and the mixed-incidence addendum now computes that combination directly.  If
+and
+[THM-3910](../01-canon/theorems/THM-3910-lrc14-auxiliary-center-erosion-and-t-sheet-variance-response.md)
+now computes that combination directly.  If
 `E(G)` and `E(A)` are the signed endpoint words of the body safe set and pair
 danger set, then
 
@@ -301,7 +303,11 @@ but those jets can lift.  THM-3905 extends the color product through the third
 response: the marked source arrives at depth `n`, an extra `KTf^2-KT^3` pair
 appears only at `n=1`, and the named address-compatible two-jet control dies
 there.  Zero-sidecar `n>=4` still lifts the third jet, so the color gcd remains
-a real sidecar and the next filtered coefficient is still unpaid.
+a real sidecar.  THM-3898 now packages the canonical zero-lower-sidecar
+responses into an all-depth identity, but it remains a **PROVISIONAL** exact
+candidate pending independent hostile audit.  Proven canon still stops at
+THM-3905; the next action is to audit THM-3898 before attacking arbitrary
+lower sidecars.
 
 The carrier lane has also changed scale.  Independently audited THM-3891
 closes every quadratic `C^8` binary-cubic row and proves a sharp pencil lemma
@@ -332,6 +338,28 @@ The tangent hostile in THM-3890 is especially informative: after
 normalization it can expose `Z/3`, but it lies in the reducible/nonnormal raw
 route.  Thus the invoice changes exactly when the quotient loses normality.
 
+The incoming sextic layer makes that invoice concrete.  THM-3889 closes the
+maximally confluent quadratic leading row.  THM-3906 constructs a normal,
+globally nonmonogenic `S3` cubic at discriminant degree six, but its one
+projective infinity point hides two normalization places.  THM-3907 removes
+the common coefficient-zero excuse—its coefficient ideal is one—yet pays six
+places.  THM-3908 is only a provisional exact candidate at quadratic
+coefficient depth.  Finally THM-3911 proves, pending independent hostile audit,
+that THM-3906's sharp one-place plane control has scalar units and no
+`Cl[3]`; perfect plane place geometry still does not buy a normal finite-flat
+lift with generic irreducible `S3` fibre and generic discriminant exponent one.
+
+This is a strict source/target map:
+
+```text
+binary cubic or plane branch -> discriminant/place geometry
+                             -/-> units + Cl[3] + normal cubic algebra.
+```
+
+The surviving target is a different one-place carrier with the target-side
+unit and three-torsion invoice paid, or a genuinely different/nonnormal
+category; it is not the sharp THM-3906 curve in THM-3911's stated scope.
+
 Finally,
 [THM-3879](../01-canon/theorems/THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff.md)
 and
@@ -342,9 +370,9 @@ one, and the smooth-conic boundary.  Without immersion the exact reduced
 identity subtracts the common tangent-base divisor; the family
 `[ST^(d-1):T^d:S^d]` shows that correction is sharp in every degree.
 
-The open target is therefore an intersection, not a single feature: one
-place, a genuine `C3` layer, a globally nonmonogenic cubic order, the right
-companion/deleted-sheet unit ledger, and an actual etale plane atlas.
+The open target is therefore an intersection, not a single feature: a new
+one-place branch, a genuine `C3` layer, a globally nonmonogenic cubic order,
+the right unit/`Cl[3]` ledger, and an actual etale plane atlas.
 
 ## 5. Filtered kernels and principal parts are the same warning, not the same theorem
 
@@ -387,6 +415,18 @@ hostile `h=s, P=V=X=1, b=s` kills those five buckets while
 polynomiality of the integrated arm together with the constant bucket.  Thus
 “top filtration closes” and “the polynomial Keller row closes” are distinct
 predicates in both the normal-strip and residual-principal-part lanes.
+
+THM-3910 and THM-3909 expose a second shared failure shape without identifying
+their objects.  LRC autocorrelation preserves every translation-invariant
+power statistic but loses phase relative to the labelled danger comb; the
+elliptic map to intersections with `O,Q+,Q-` preserves strict horizontal
+disjointness but loses vertical exceptional/basepoint debt.  The needed
+sidecars are respectively the signed endpoint cross-phase and the total
+transform or denominator valuation.  The cheapest controls are the LRC
+half-translate with opposite containment and THM-3909's eight `E6*` sections
+that avoid all three horizontal sections yet have nonpolynomial inverses.
+This is a connection between quotient failures, not an LRC--elliptic
+reduction.
 
 ## 6. Saturating a complete static universe
 
@@ -464,7 +504,8 @@ They do not share states, probability, chronology, or a reduction.
 | Factorial coefficient row | divisor/rho barcode | evaluate selected primes/residues | named necessary vanishing tests | response at the next prime | surviving polynomial row | first ordered adaptive killer at `d=9996` |
 | LRC support-two packet | lower-rank row | choose multiplier and absorb/add one runner | exact divisibility or LRC(13) safe interval | other runners, relative scale, arrival | owner plus component interval | 58 `t>=U` certificate survivors |
 | AK forcing graph | score certificate | add a sound forcing row | declared rule consequences | future-round cycle debt | cycle-rank profile | saturated `[2,3]` trace varieties |
-| JC residual | associated graded seam | take top homogeneous forms | leading cancellation | common color gcd and lower debt | primitive colors plus next bucket | first coefficient below THM-3905 |
+| JC residual | associated graded seam | take top homogeneous forms | leading cancellation | common color gcd and lower debt | primitive colors plus lower sidecar | hostile-audit provisional THM-3898 |
+| Binary cubic / plane branch | discriminant carrier | forget the cubic algebra | branch and place geometry | units, `Cl[3]`, normal order | target-side resolvent invoice | THM-3911 sharp-control hostile |
 | Rational dual | reduced dual curve | cancel common tangent factor | reduced tangent map | nonimmersion multiplicity | `E_nu` tangent-base divisor | `[ST^(d-1):T^d:S^d]` |
 | Rule 30 words | selected ray image | positive affine-word action | complete static orbit | physical chronology and owner | zero-fibre routed query | fibres requiring opposite rays |
 | Two-cube prime subsets | critical mass | singleton row plus Euler normalization | weight and disjointness inside the family | collisions outside the family | representation fibre | split-prime and exponent-three hostiles |
@@ -479,14 +520,13 @@ objects cannot be transported merely because the same word is used.
    eleven-bodies, or add owner/arrival data, while keeping `t<U` separate.
    Only the 1,365 bodies `E subset {1,...,15}`, `|E|=11`, with odd
    `t>=max E` are closed; the general `(2,1,9)` type is not.
-2. **Jacobian anchor:** leave `f=0` and the x-only lane closed.  Reduce the
-   first coefficient below THM-3905 modulo both primitive colors and their
-   gcd; keep the killed `n=1` control and odd total-degree-three lift hostile.
-3. **Nonmonogenic niche:** quotient the all-degree pure-power carrier by its
-   explicit polynomial `GL_2` word, then measure which lower perturbation and
-   central homogenizing layer survive.  Retain the determinant cocycle and
-   normalization-place divisor; source-binary equivalence is not a target
-   Keller transformation.
+2. **Jacobian anchor:** leave `f=0` and x-only closed.  Hostile-audit the
+   provisional THM-3898 all-depth canonical identity; only then attack
+   arbitrary lower sidecars beyond THM-3905.
+3. **Nonmonogenic niche:** audit provisional THM-3908, then seek a different
+   one-place carrier whose resolvent pays the unit and `Cl[3]` invoices.
+   Retain THM-3911's sharp curve as the hostile: branch geometry is not a
+   target cubic algebra or Keller transformation.
 4. **AK niche:** leave the saturated empty-wildcard `[2,3]` slice closed.
    Classify inactive-slot and initial-wildcard strata, then search the next
    rectangle for a genuine score below `7/4` under the same sound/loose

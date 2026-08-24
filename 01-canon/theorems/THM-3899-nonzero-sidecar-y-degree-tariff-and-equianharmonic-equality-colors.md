@@ -200,9 +200,10 @@ Then `d^2=-3`, and the two shifted quartic colors from THM-3895 become
 
 The empty THM-3898 reservation originally arose from a finite-exact cubic
 carrier packet using the same constants.  No carrier theorem was activated.
-The namespace was subsequently reassigned to the exact all-depth response
-identity, which proves that these two colors govern every lower response of
-the equality seam.  What the present leading view preserves is the odd
+The namespace was subsequently reassigned to a provisional exact all-depth
+response candidate, awaiting independent hostile audit.  Conditional on its
+promotion, that identity makes these two colors govern every lower response
+of the canonical equality seam.  What the present leading view preserves is the odd
 `a`-valuation assigned between the colors; what it loses is every even common
 factor and every lower y-coefficient.
 
@@ -210,10 +211,10 @@ factor and every lower y-coefficient.
 
 This theorem itself proves only a necessary leading filtration.  THM-3904
 subsequently closes all `T,f in k[x]`, `f!=0`; THM-3901 and THM-3902 compute
-the strict and positive-equality response laws; THM-3898 packages every
-equality response into one exact identity and closes the canonical payment
-`(15)`.  Positive equality with arbitrary sidecars and the regimes `m>n`
-remain open.
+the strict and positive-equality response laws.  THM-3898 is a provisional
+candidate that would package every canonical equality response and close the
+payment `(15)` after hostile audit.  Positive equality with arbitrary sidecars
+and the regimes `m>n` remain open.
 
 ## 6. Reproduction
 

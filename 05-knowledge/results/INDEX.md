@@ -24,8 +24,8 @@
   pinned in THM-3903.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [PROVED MIXED-INCIDENCE IDENTITIES
-  + FINITE-EXACT FAMILIES; LRC(14) OPEN].  Signed periodic endpoints give
+  Graver/phase hostile -> matching `.out`s [THM-3910 PROVED + VERIFIED-EXACT
+  + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
   integer occupancy tax.  For AP11, 4,385 finite cells split as
@@ -45,6 +45,28 @@
   hostile `efc5cbc471ded68b22a201734f23625121e3233a259b51780d824456a2ffa312` /
   `b9213b5d03050edd25555d5b2e9fc8fded8d4013fb179c354e1749da5a186464` /
   `9124631b862e70b6f2aeb2c150ee363d3bbdfc527bd058653d397d39bc16f966`.
+
+- `jc2_equianharmonic_e6_marked_zero_contact_shell_thm3909.py` -> matching
+  `.out` [THM-3909 PROVED + VERIFIED-EXACT; JC(2) OPEN].  The Mordell--Weil
+  height lattice is `E6*`; its 126 sections disjoint from `O` split
+  `6+48+72`.  Exactly nine also avoid `Q+` and `Q-`, but eight have
+  nonpolynomial inverse coordinates, proving horizontal avoidance is not a
+  polynomiality converse.  Checks: `1,123`.  Script/output/semantic hashes:
+  `219f7e5fcef35f6c63254a524b63ab85a3f030fd06b2f7393978eb1dfa4229ef` /
+  `e0a418cf923011306760629b44b7cac6f87f4d1e5ed4f62022f3ae321706c263` /
+  `af29393a69c844737e4f2ac293f6a117ca80b33b31c808ca02a02c4ef70d7947`.
+
+- `jc2_sharp_one_place_sextic_resolvent_three_torsion_thm3911.py` -> matching
+  `.out` [THM-3911 PROVED + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
+  AUDIT].  The sharp one-place sextic has scalar resolvent units and a
+  3-saturated removed-divisor lattice, hence no class-group 3-torsion and no
+  normal finite-flat cubic with generic irreducible `S3` fibre and this branch
+  as generic-exponent-one discriminant divisor.  Nonnormal orders, different
+  carriers and JC(2) remain open.  Script/output/semantic hashes:
+  `117248d6eb4c56d0566f4c66930cbed4c9d583e248ad3b68b7a90af80053cf2c` /
+  `3974383d1d1c05bc9901fe3bb43dfb4a8d3c7c845c52c7e1b456ffa26612599e` /
+  `637b640a6ea58c4b80abacde95d3135fc4ac069d5a72ea31bff6fa53125d4291`.
+
 - `jc2_degree_six_common_zero_normal_cubic_two_place_thm3906.py` -> matching
   `.out` [THM-3906 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   A normal nonmonogenic common-zero `S3` cubic first exists at discriminant
@@ -84,10 +106,10 @@
   nine, 13,853 have gap at most four.  Their current-bank/zero-chain quotient
   has 11,927 fibres: 10,502 need no off-ray query, 1,318 accept either one,
   85 specifically need ray one, 22 specifically need ray two, and none need
-  both.  Thus the observed zero chain selects at most one routed off-ray
-  chain, while two explicit fibre hostiles prove that neither fixed ray is
-  universal.  This is not an all-depth selector or a physical-signalizer-path
-  result.  Primary script/output/semantic SHA-256:
+  both.  Thus the current bank together with its zero chain selects at most
+  one routed off-ray chain, while two explicit fibre hostiles prove that
+  neither fixed ray is universal.  This is not an all-depth selector or a
+  physical-signalizer-path result.  Primary script/output/semantic SHA-256:
   `697cef83a3d8dcb18d7e8d479ee3ff2401811b82c9a3e535fd15262d38512c78` /
   `f9276be9eca5d717f339d85c3e63b6140cc7dcaf00790b3f8889a92cf91a1833` /
   `41dfbb528276dbb10077c3d30c2a88fb668585a6c248b1d3f6908347d0d377e0`;

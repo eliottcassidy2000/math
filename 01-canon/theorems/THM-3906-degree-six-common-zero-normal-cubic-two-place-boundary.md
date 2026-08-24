@@ -11,8 +11,10 @@ status: >
   triple-root sextic grammar is always reducible or has the same two-place
   boundary.  Independently, a rational one-place sextic with an ordinary
   quadruple point has at most two finite cusps; the bound is sharp as plane
-  geometry.  Other degree-six grammars, inverse binary-cubic realization of
-  the sharp one-place control, Keller realization, and JC(2) remain open.
+  geometry.  THM-3911 subsequently obstructs a normal finite-flat,
+  generic-irreducible-S3 realization of that sharp control with generic
+  discriminant exponent one.  Other degree-six grammars, one-place controls,
+  nonnormal orders, Keller realization, and JC(2) remain open.
 source: root / post-THM-3890 degree-six escape and cusp-cap session, 2026-08-23
 audit: >
   INDEPENDENTLY HOSTILE-AUDITED on 2026-08-23 by three disjoint audits.  One
@@ -38,6 +40,7 @@ related:
   - THM-3887-binary-cubic-common-zero-quintic-one-tangent-obstruction
   - THM-3889-maximally-confluent-quadratic-binary-cubic-two-place-obstruction
   - THM-3890-universal-quintic-common-zero-resolvent-class-group-dichotomy
+  - THM-3911-sharp-one-place-sextic-resolvent-three-torsion-obstruction
 script: 04-computation/jc2_degree_six_common_zero_normal_cubic_two_place_thm3906.py
 output: 05-knowledge/results/jc2_degree_six_common_zero_normal_cubic_two_place_thm3906.out
 script_sha256: 3558670eb81467e10f924c68f2222d0ba82b036fb98a68fcb30a76bd2f92036a
@@ -333,8 +336,12 @@ The theorem proves that degree six already supports the normal nonmonogenic
 `S3` cubic layer.  It closes only the family `(14)` and the four-cusp
 rational one-place target.  A different degree-six coefficient grammar,
 different singularity packet, positive-genus branch, or non-common-zero
-index form may still work.  The affine quadratic-resolvent class group of a
-future one-place sextic must still be computed before inverse
+index form may still work.  THM-3911 proves that the sharp control `(23)` has
+scalar units and no class-group three-torsion, so it cannot support a normal
+finite-flat cubic algebra with generic irreducible `S3` fibre and this branch
+as generic-exponent-one discriminant divisor.  Nonnormal orders and different
+sextics remain outside that obstruction.  A future one-place sextic still
+requires its own resolvent unit/class-group audit before inverse
 Delone--Faddeev or Keller realization.  `JC(2)` remains **OPEN**.
 
 Reproduce the exact packet with

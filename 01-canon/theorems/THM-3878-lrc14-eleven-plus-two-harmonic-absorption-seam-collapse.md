@@ -10,12 +10,10 @@ status: >
   unconditional necessary ledger falls from 52,692 to 7,505.  In the extra
   relative-scale slice t>=U, cyclic slack and one auxiliary LRC(13) witness
   leave only 58 certificate survivors.  An independent safe-mass/component
-  audit closes none of those 58 types.  The mixed-incidence addendum now gives
-  the exact signed-endpoint cross-phase and a quantized occupancy certificate;
-  it re-proves the known AP11 scale-one family and closes the new 1,365-body
-  scale-two family `2E union {t,9t}` for `E subset {1,...,15}` and odd
-  `t>=max E`.  The 58-type general ledger, the t<U slice, and LRC(14) remain
-  open.
+  audit closes none of those 58 types.  Subsequent THM-3910 gives the exact
+  signed-endpoint cross-phase, re-proves the known AP11 scope, and closes a
+  fixed 1,365-body scale-two family without deleting an arbitrary-body type.
+  This theorem's 58-type ledger, the t<U slice, and LRC(14) remain open.
 source: root / THM-3818 cyclic seam and THM-668 dispatch join, 2026-08-23
 audit: >
   INDEPENDENT HOSTILE AUDIT PASS.  A separate 93,524-gate checker rebuilds
@@ -35,22 +33,15 @@ audit: >
   inversion symmetry, and component multiplicity in 294 active checks.  It
   finds zero further closures, retains the corrected THM-1042 endpoint
   convention, and isolates the missing mixed moments M1,M2.  Normal,
-  optimized and frozen streams byte-match.
-  Three further companions derive the exact Bernoulli-B2 cross-phase, audit
-  it against rational interval intersections, and isolate its energy and
-  integer-occupancy consequences.  They close `4,385` AP11 cells by
-  `4,284+32+69` certificates plus the analytic tail, and close `5,470`
-  finite scale-two cells over 1,365 body shapes plus body-specific tails.  A
-  separate 79-check hostile pairs equal minimum-l1 Graver fibres with opposite
-  covariance; its half-translate control pairs equal full autocorrelation with
-  opposite containment.  All three ordinary/optimized streams and stored LF
-  outputs byte-match.
+  optimized and frozen streams byte-match.  THM-3910 is the separately audited
+  response to that invoice.
 depends_on:
   - THM-3818-scaled-inert-cubeclass-support-two-pair-packet
   - THM-668-detuned-harmonic-dispatch
   - LRCUpTo13
 related:
   - THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction
+  - THM-3910-lrc14-auxiliary-center-erosion-and-t-sheet-variance-response
 script: 04-computation/lrc14_eleven_plus_two_harmonic_absorption_seam_collapse_thm3878.py
 output: 05-knowledge/results/lrc14_eleven_plus_two_harmonic_absorption_seam_collapse_thm3878.out
 script_sha256: 246dcb77753616aa399300daad62adaedfa838a148ea1b63edf5f75e4f4eae69
@@ -95,21 +86,6 @@ isolated_endpoint_audit_output: 05-knowledge/results/lrc14_eleven_plus_two_isola
 isolated_endpoint_audit_script_sha256: f1d665ef39dc327a59d3ea3a6a911b99e4460d6325d115be30f35ecbcb51bb1d
 isolated_endpoint_audit_output_sha256: 2608e180974577cfed10960da28e324bad30d9d51777d3a9914bdadb06ecf2a9
 isolated_endpoint_audit_semantic_sha256: 3a4a86aac08912db3e97f8e2625d25ffd55cc7e2a1f9f8cffce38e27d1a5a66c
-mixed_incidence_script: 04-computation/lrc3878_mixed_incidence/packet_covariance_probe.py
-mixed_incidence_output: 05-knowledge/results/lrc3878_mixed_incidence/packet_covariance_probe.out
-mixed_incidence_script_sha256: dba6ba50bc97285be837bb29d8aa1b234741c1d64bb88e39dd6c9d0961a92a5f
-mixed_incidence_output_sha256: 65339983eaf0eb643f45a02c3930b6fedd4fed1ad14a9614fd050af7addf07d3
-mixed_incidence_semantic_sha256: 9eafb7bb0fc15266386b2e5cfa2f155ef402a63bea8a5fa045de3124de390a88
-scale2_near_ap_script: 04-computation/lrc3878_mixed_incidence/scale2_near_ap_packet_energy_sweep.py
-scale2_near_ap_output: 05-knowledge/results/lrc3878_mixed_incidence/scale2_near_ap_packet_energy_sweep.out
-scale2_near_ap_script_sha256: 95e4fe463ca4dec7a730e6f469a9abe7cc4f53b93ae8410d783458a418f8a886
-scale2_near_ap_output_sha256: 6e252056e6fe43f4694620b33455a1f4ecc77de2fef8a1bbeca284011013ff2b
-scale2_near_ap_semantic_sha256: 59ee93b99a53d20d7dd034a5d15d3d8f77199b328a3b6fd86dea15792fff317f
-graver_phase_hostile_script: 04-computation/lrc3878_mixed_incidence/graver_moment_phase_hostiles.py
-graver_phase_hostile_output: 05-knowledge/results/lrc3878_mixed_incidence/graver_moment_phase_hostiles.out
-graver_phase_hostile_script_sha256: efc5cbc471ded68b22a201734f23625121e3233a259b51780d824456a2ffa312
-graver_phase_hostile_output_sha256: b9213b5d03050edd25555d5b2e9fc8fded8d4013fb179c354e1749da5a186464
-graver_phase_hostile_semantic_sha256: 9124631b862e70b6f2aeb2c150ee363d3bbdfc527bd058653d397d39bc16f966
 hash_basis: raw LF bytes
 ---
 
@@ -391,7 +367,7 @@ one short internal relation  -/->  a crossing relation or a scale bound.
 A separately forced crossing relation could still rank-raise, but the bare
 THM-3743 sidecar deletes zero seams from this atlas.
 
-### Safe-mass saturation and the exact mixed response
+### Safe-mass saturation and the routed mixed response
 
 An independent route tests the final 58 conditional rows against the exact
 safe mass of the eleven-pack, inversion symmetry, and component counts.  It
@@ -418,141 +394,15 @@ Current pair geometry supplies unconditional danger moments, not the
 owner/phase-labelled mixed-incidence theorem, equivalently suitable Fourier
 correlations with both pullback combs.
 
-That sidecar has an exact closed form.  Let `G` be the positive-length safe
-set of an eleven-pack, put `m=mu(G)`, let
-
-```text
-A=D_p union D_q,                 alpha=mu(A),
-A_t={x: tx mod 1 lies in A},     L=mu(G\A_t),
-```
-
-and cancel the identified `0=1` contributions in the signed periodic
-endpoint words
-
-```text
-E(G)={(e,sigma_e)},              E(A)={(f,tau_f)},
-```
-
-where left and right endpoints have signs `+1,-1`.  For
-`B_2(x)={x}^2-{x}+1/6`, exact Fourier summation gives
-
-```text
-C_t=Cov(1_G,1_(A_t))
-   =(1/(2t)) sum_(e,f) sigma_e tau_f B_2({f-te}),
-L=m(1-alpha)-C_t.                                      (10a)
-```
-
-Thus `(10a)` is exactly `M_0-M_1+M_2`, without separating the two conditioned
-moments.  The corresponding sampled-grid discrepancy is
-
-```text
-disc_t(G)=sum_(k!=0)|Ghat(kt)|^2
- =(1/(2t^2)) sum_(e,e') sigma_e sigma_e'
-                            B_2({t(e-e')}).             (10b)
-```
-
-Cauchy--Schwarz proves the sufficient certificate
-
-```text
-disc_t(G)<((1-alpha)/alpha)m^2.                         (10c)
-```
-
-If `G` has `r` positive-length circular arcs, its endpoint word gives the
-uniform tail `disc_t(G)<=r^2/(3t^2)`.  There is also a sometimes strictly
-sharper integer boundary.  Define
-
-```text
-N_t(y)=#{0<=j<t:(j+y)/t lies in G},       theta={tm/alpha}.
-```
-
-If `L=0`, then `N_t` is integer-valued and supported on `A`; convexity of its
-second moment forces
-
-```text
-disc_t(G)>=((1-alpha)/alpha)m^2
-             +alpha theta(1-theta)/t^2.                (10d)
-```
-
-Equations `(10a)--(10d)` are unrestricted finite-union identities and
-implications.  The full step word paired with the labelled obstruction is the
-sharp retained object, because
-
-```text
-L=(1/t) integral_(A^c) N_t(y)dy.                        (10e)
-```
-
-Power alone forgets on which side of the obstruction the occupancy lies.
-
-#### AP11 control and the new scale-two family
-
-For `u=(1,...,11)`, the corrected positive-length safe set has
-
-```text
-m=10931/194040,             r=14.
-```
-
-Across all 57 scale-one survivor types and all physical `t>=11`, `(10c)` plus
-the endpoint tail closes every `t>=88`.  Exact arithmetic on `11<=t<=87`
-gives `4,385` cells: `4,284` close by `(10c)`, `32` more by `(10d)`, and the
-remaining `69` by the signed cross-phase `(10a)`.  Their minimum safe mass is
-`59/6370` at `(p,q,t)=(1,10,13)`.  This is an independent response proof of
-the already covered THM-734 AP11 family, not new LRC scope.
-
-There is, however, a new scale-two family.  In the exceptional type
-`(s,p,q)=(2,1,9)`, the two-lift quotient obstruction is
-
-```text
-C=(2/21,8/63) union (55/63,19/21),       mu(C)=4/63.     (10f)
-```
-
-Let `E` be any eleven-element subset of `{1,...,15}`, let `U=max E`, and let
-`t>=U` be odd.  At a body-safe phase `y`, both actual lifts fail only if
-`ty in C`; hence a counterexample would force `G_E subset t^(-1)C` modulo a
-null set.  Certificate `(10c)`, its `r^2/(3t^2)` tail, and an exact orbit-word
-evaluation of every finite residual prove
-
-```text
-2E union {t,9t} is lonely
-for every E subset {1,...,15}, |E|=11, odd t>=max E.     (10g)
-```
-
-The exact universe contains `1,365` bodies and `5,470` finite odd-`t` cells,
-with zero failures; a Bernoulli-endpoint path independently agrees with one
-orbit-word energy for every body.  The largest body-specific strict tail
-start is `64`.  This proves `(10g)`, not the arbitrary-body `(2,1,9)` type,
-even `t`, `t<U`, or any decrement of the 58-type ledger.
-
-#### Why Graver length and full autocorrelation still do not suffice
-
-At `t=11`, the AP11 rows with pair types `(3,14)` and `(7,10)` have the same
-sum, mass, component data and body energy, but their covariances have opposite
-sign and their four isolated-wall incidences are respectively all false and
-all true.  More sharply, the full speed rows
-
-```text
-(1,...,11,33,154),              (1,...,11,77,110)
-```
-
-have the identical complete minimum-`l1` relation fibre: norm `3`, thirty
-relations, all supported on the AP11 body.  The primitive relation between
-their two tail coordinates has norm `17`.  Thus THM-3743's actual
-minimum-width/Graver sidecar is blind
-to the mixed phase; manually retaining the THM-778 pair word would still
-require cross-correlation with the body endpoint word.
-
-Even full autocorrelation is insufficient in general.  For
-`A=D_1 union D_3`, the sets `G_0=A` and `G_1=A+1/2` are both
-inversion-symmetric and have the same mass `5/21`, component lengths
-`(1/21,1/21,1/7)`, and all Fourier magnitudes, but
-
-```text
-mu(G_0 intersect A)=5/21,           mu(G_1 intersect A)=0.   (10h)
-```
-
-This is an abstract information-loss hostile, not a runner-safe-set
-realization.  It proves that the relative cross-phase in `(10a)` or the paired
-occupancy object in `(10e)` is logically necessary for a general containment
-argument.
+THM-3910 now supplies that missing sidecar in exact signed-endpoint form.  It
+derives the pullback covariance and t-sheet discrepancy, adds Cauchy and
+integer-occupancy certificates, re-proves the known 57-row AP11 scope, and
+closes the fixed 1,365-body scale-two family
+`2E union {t,9t}` for `E subset {1,...,15}`, `|E|=11`, odd `t>=max E`.
+Its Graver-fibre and half-translate hostiles prove that relation length and
+full autocorrelation still forget the needed relative phase.  Crucially,
+THM-3910 closes no arbitrary-body type and leaves this theorem's 58-row
+ledger unchanged.
 
 The failed closure route nevertheless gives a rigorous packet corollary.
 For every eleven distinct positive speeds `u=(u_1,...,u_11)`, cited
@@ -679,9 +529,9 @@ Unconditionally, the bounded result leaves exactly:
 Inside `t>=U`, the cyclic-slack and one-auxiliary theorem leaves the 58
 certificate survivors above.  The exceptional `(2,1,9)` row survives every
 scalar auxiliary multiplier, while the 57 scale-one rows survive every such
-single-auxiliary component cut.  The mixed-response theorem closes the boxed
-1,365-body family `(10g)` inside the exceptional type, but neither this nor the
-AP11 control deletes a type from the arbitrary-body ledger.
+single-auxiliary component cut.  THM-3910 closes its fixed 1,365-body family
+inside the exceptional type, but neither that family nor the AP11 control
+deletes a type from the arbitrary-body ledger.
 
 The hostile shows that the latter require information about which points of
 `G(u)` are available, or an owner/arrival sidecar; pair geometry alone cannot
@@ -711,12 +561,6 @@ python3 -B 04-computation/lrc14_eleven_plus_two_safe_mass_component_audit_thm387
 python3 -B -O 04-computation/lrc14_eleven_plus_two_safe_mass_component_audit_thm3878.py
 python3 -B 04-computation/lrc14_eleven_plus_two_isolated_endpoint_audit_thm3878.py
 python3 -B -O 04-computation/lrc14_eleven_plus_two_isolated_endpoint_audit_thm3878.py
-python3 -B 04-computation/lrc3878_mixed_incidence/packet_covariance_probe.py
-python3 -B -O 04-computation/lrc3878_mixed_incidence/packet_covariance_probe.py
-python3 -B 04-computation/lrc3878_mixed_incidence/scale2_near_ap_packet_energy_sweep.py
-python3 -B -O 04-computation/lrc3878_mixed_incidence/scale2_near_ap_packet_energy_sweep.py
-python3 -B 04-computation/lrc3878_mixed_incidence/graver_moment_phase_hostiles.py
-python3 -B -O 04-computation/lrc3878_mixed_incidence/graver_moment_phase_hostiles.py
 ```
 
 The 96,102-gate primary companion independently builds the atlas and seam
@@ -729,6 +573,6 @@ cyclic-slack implementations and their two deletion ledgers are
 structurally independent in interval representation; all normal, optimized,
 and frozen streams also byte-match.  Their finite counts support only the
 explicit conditional implications above.  The safe-mass audit is a stopping
-boundary plus the proved packet corollary `(11)`--`(12)`, while the
-mixed-incidence companions prove `(10a)`--`(10h)` in their stated scopes.
-Neither changes the general certificate-survivor count.  **QED.**
+boundary plus the proved packet corollary `(11)`--`(12)`.  THM-3910 is the
+separately proved response theorem and does not change the general
+certificate-survivor count.  **QED.**
