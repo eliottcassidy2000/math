@@ -13,8 +13,10 @@ status: >
   sextic. On the quadratic resolvent, splitting the conic supplies only one
   intrinsic three-torsion direction: the universal divisor-relation lattice
   is Z plus Z/3, not two copies of Z/3. Extra independent three-classes need
-  an additional global relation. This closes the distinct-affine-line
-  degeneration, not double lines or conics with an infinity component.
+  an additional global relation. A double-line conic makes the torus
+  discriminant a product of two cubics, so cannot underlie an irreducible
+  sextic. This closes the double-line and birational distinct-line lanes,
+  but degree-4/5/6 folds and conics with an infinity component remain open.
 source: jc_degree6_one_place / post-THM-3925 singular splitting-conic lane, 2026-08-23
 audit: >
   PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The proof
@@ -22,9 +24,9 @@ audit: >
   obstruction, projective degree ledger, fold-degree interpretation, and
   quadratic-resolvent divisor presentation. The assertion-free exact
   companion verifies the Cardano identities, all degree tables, the split
-  and double-line Smith forms, the arbitrary-component extension, and sharp
-  excluded controls. Normal and optimized replay must byte-match the frozen
-  output before promotion.
+  and double-line Smith forms, the double-line discriminant factorization,
+  the arbitrary-component extension, and sharp excluded controls. Normal and
+  optimized replay must byte-match the frozen output before promotion.
 related:
   - THM-3844-two-cusp-polynomial-branch-quadratic-resolvent-design-gate
   - THM-3879-rational-torus-sextic-c3-packet-one-place-tradeoff
@@ -32,9 +34,9 @@ related:
   - THM-3925-fivefold-conic-contact-torus-sextic-one-place-fold
 script: 04-computation/jc2_split_affine_conic_one_place_fold_degree_thm3928.py
 output: 05-knowledge/results/jc2_split_affine_conic_one_place_fold_degree_thm3928.out
-script_sha256: e35005418aa22ef5f23360ad6a0ea2d00c3e76619840ae542a707bc12bd687d7
-output_sha256: ccca39ef9b7a589b455365823480b458833843cb2569589f2475b0147fb8e784
-semantic_sha256: 10b17a47edca9b6d7ebf3a05ede3e18c650c9624451824c4d0d20bd3e2d23513
+script_sha256: ab66d5f711b4291861b8354c0d533223ba27fc3456ecc79999ddcd4d92c46aa7
+output_sha256: 2b1d8bec1d41f132c39bb01e76f34c140f8c6845ed64f60bdab7f5b15d1f48db
+semantic_sha256: 5d4acb8186b838b177e2a6951f9a96e1fb580a903f8c4fe99ca394fce2c608cd
 hash_basis: raw LF bytes
 ---
 
@@ -336,10 +338,21 @@ Z^(2r) / <D_i^++D_i^- (1<=i<=r), 3 sum_i D_i^+>
 
 There is still only one intrinsic three-torsion direction.
 
-## 6. Double-line and infinity-component boundaries
+## 6. Double lines factor; high folds and the infinity component remain
 
-The theorem deliberately separates the other singular conics. If
-`p=ell^2` and `q mod ell` is nonzero, then
+The other affine singular conic is even more rigid. Choose `sigma in k` with
+`sigma^2=3`. If `p=ell^2`, then identically
+
+```text
+4p^3-27q^2=(2ell^3-3sigma q)(2ell^3+3sigma q).              (26)
+```
+
+Both factors have degree at most three. Even if one is scalar, zero, or
+repeated, the result is reducible or nonreduced; it is never an irreducible
+sextic. Thus double lines are empty for the branch geometry sought here.
+
+Their resolvent lattice remains a useful reducible hostile. If
+`q mod ell` is nonzero, then
 
 ```text
 div(ell)=D^++D^-,                         div(gamma)=6D^+.
@@ -348,18 +361,18 @@ div(ell)=D^++D^-,                         div(gamma)=6D^+.
 The corresponding presentation has Smith form
 
 ```text
-Z^2/<(1,1),(6,0)> = Z/6.                                  (26)
+Z^2/<(1,1),(6,0)> = Z/6.                                  (27)
 ```
 
 Its three-primary Kummer class is `2[D^+]`; again there is only one
-three-direction. But the fold-degree proof above used two distinct affine
-linear coordinates and does not apply to a double line.
+three-direction. This is a class-lattice control, not a surviving sextic.
 
 Likewise, if one projective component of the conic is the chosen line at
 infinity, the affine polynomial `p` is linear rather than a product of two
 affine line equations. Its missing projective divisor must be retained in
-the boundary ledger, and `(3)` is not asserted. These two cases are the
-honest remaining singular-conic lanes.
+the boundary ledger, and `(3)` is not asserted. Together with the
+degree-`4,5,6` distinct-line folds, this is the honest remaining
+singular-conic design space.
 
 Reproduce the exact arithmetic packet with
 
