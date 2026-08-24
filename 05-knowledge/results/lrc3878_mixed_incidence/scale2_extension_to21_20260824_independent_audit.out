@@ -1,0 +1,18 @@
+LRC14_SCALE2_EXTENSION_TO21_NO_IMPORT_EXACT_AUDIT_20260824
+scope=new_stratum_E_size_11_subset_1..21_with_maxE_21;odd_t>=21
+new_bodies=184756;new_finite_cells=781184;failures=0
+combined_bodies=352716;combined_finite_cells=1356147
+combined_cell_basis=already_audited_height20_count_plus_independent_new_stratum
+max_tail=80;max_tail_body=(1, 3, 4, 11, 13, 15, 16, 17, 18, 19, 21)
+max_tail_wall=509841873326654668800/80752668206264459;control=(79^2<=wall<80^2)
+minimum_positive_escape=('5157429/147707560', (1, 6, 7, 8, 9, 10, 11, 13, 17, 19, 21), 31, '167/2002', (0, 1))
+finite_method=positive_rational_measure_of_closed_body_safe_arcs_minus_open_pullback
+physical_check=explicit_midpoint_and_one_selected_valid_lift_checked_at_all_13_speeds
+obstruction_rebuild=(('2/21', '8/63'), ('55/63', '19/21'))
+obstruction_partition_samples=39
+hostiles=closed_endpoints_rejected_4;even_parity_mutation_witnessed;reflected_component_omission_witnessed
+enumeration_transcript_sha256=5ac76a98e2fed411adaeb1b29fee9431964be822076b542762e4b7fec796fc84
+semantic_sha256=3735c3267d5100d7005ce58952c3a4896baa9f10cf9b31005e9a5e736eec112f
+checks=6619042
+limitations=fixed_scale_two_(1,9)_row_only;odd_t>=21;old_stratum_not_rerun;no_arbitrary_body_or_LRC14_claim
+RESULT=PASS;LRC14=OPEN

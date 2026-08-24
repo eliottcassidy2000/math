@@ -214,7 +214,7 @@ disc_t(G)<meas(G)^2*(59t+4)/(4(t-1))
           +(s_t/t^2)*theta_t*(1-theta_t).
 ```
 
-THM-4002 already closes its bounded `[1,20]` family; the hybrid closes no
+THM-4002 already closes its bounded `[1,21]` family; the hybrid closes no
 arbitrary type and does not replace the missing cross-phase control.
 
 ## Reproduction anchors

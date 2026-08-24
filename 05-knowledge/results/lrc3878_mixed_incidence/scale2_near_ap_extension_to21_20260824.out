@@ -1,0 +1,14 @@
+LRC14_SCALE2_NEAR_AP_EXTENSION_TO_21_20260824
+new_scope=max(E)=21;E_subset_1..21;size(E)=11;odd_t>=21
+new_bodies=184756;new_finite_exact_cells=781184;containment_failures=0
+combined_scope=E_any_11_subset_of_1..21;odd_t>=max(E)
+combined_bodies=352716;combined_finite_exact_cells=1356147
+max_tail=80;max_tail_body=(1, 3, 4, 11, 13, 15, 16, 17, 18, 19, 21)
+minimum_sampled_clearance_surplus=0
+finite_engine=exact_closed_body_arcs_vs_open_pullback_plus_both_physical_lifts
+infinite_tail=THM4002_strict_BV_noncontainment
+conclusion=every_displayed_13_speed_row_has_clearance_at_least_1/14
+nonconsequence=arbitrary_eleven_speed_body_and_LRC14_remain_open
+semantic_sha256=e7c6e8702fbedb9abf4a40029fc155ab109faf8d2cbaaf9b6ecdc4651e37ce94
+checks=5241382
+RESULT=PASS;LRC14=OPEN

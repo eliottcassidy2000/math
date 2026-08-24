@@ -1258,8 +1258,8 @@ there is therefore no LRC, JC, Rule-30, or other prize consequence.
 
 1. **LRC anchor:** combine auxiliary-center and endpoint cross-phase uniformly
    on THM-3910's 17 arbitrary-body types, or add owner/arrival data, while
-   keeping `t<U` separate.  THM-4002 closes only the 1,365 fixed bodies
-   `E subset {1,...,15}`, `|E|=11`, with odd `t>=max E`; the general `(2,1,9)`
+   keeping `t<U` separate.  THM-4002 closes only the 352,716 fixed bodies
+   `E subset {1,...,21}`, `|E|=11`, with odd `t>=max E`; the general `(2,1,9)`
    type remains open.
 2. **Jacobian anchor:** leave `f=0`, x-only, every radial chart, the named
    four-ray and marked/full-sextic conic packets, centered degrees three and

@@ -7,7 +7,7 @@ status: >
   endpoints give the exact pullback covariance, t-sheet discrepancy, a
   Cauchy containment obstruction, and an integer occupancy tax.  These
   certificates re-prove the known AP11 scale-one scope and prove every fixed
-  family `2E union {t,9t}` with `E subset {1,...,20}`, `|E|=11`, and odd
+  family `2E union {t,9t}` with `E subset {1,...,21}`, `|E|=11`, and odd
   `t>=max E` is lonely.  They do not close any of THM-3910's 17 arbitrary-body
   types or prove LRC(14).
 source: root / THM-3878 mixed-incidence response audit, 2026-08-23
@@ -16,14 +16,15 @@ audit: >
   signs, endpoint conventions, the occupancy identity and all quantifiers
   were independently rederived.  The primary companion checks the Bernoulli
   formula against rational interval intersections.  The original scale-two
-  companion checks 1,365 bodies; its extension checks all 167,960 eleven-
-  subsets of `[1,20]` over 574,963 finite containment instances and every
-  adjacent analytic tail boundary.  A no-import hostile audit instead
-  computes positive exact escape measure and explicit physical lifts in every
-  instance.  It also
+  companion checks 1,365 bodies.  The combined extension checks all 352,716
+  eleven-subsets of `[1,21]` over 1,356,147 finite containment instances and
+  every adjacent analytic tail boundary; the disjoint `max(E)=21` stratum
+  contributes 184,756 bodies and 781,184 cells.  A no-import hostile audit
+  independently rebuilds that new stratum, computes positive exact escape
+  measure, and checks explicit physical lifts in every instance.  It also
   rederives the all-multiplier auxiliary-comb cutoff.  All primary normal,
-  optimized and frozen raw-LF streams match; the independent audit passes at
-  2,635,829 gates.  LRC(14) remains open.
+  optimized and frozen raw-LF streams match; the old and new independent
+  audits pass at 2,635,829 and 6,619,042 exact gates.  LRC(14) remains open.
 depends_on:
   - THM-3878-lrc14-eleven-plus-two-harmonic-absorption-seam-collapse
 related:
@@ -63,6 +64,16 @@ scale2_extension_independent_audit_output: 05-knowledge/results/lrc3878_mixed_in
 scale2_extension_independent_audit_script_sha256: 5df7bcad78c2847b5f1e2fd2d8398fdfa44b910b924307b30781c94d3ad0b911
 scale2_extension_independent_audit_output_sha256: 7b0c498489d093a2ea61ff4e2734d9ebd9f18ae0383458a1d847d2f62e3f5061
 scale2_extension_independent_audit_semantic_sha256: d9c01990a9730a6b164c225a6788bc45f2f8acfd7286f206c4804ae580d61297
+scale2_extension_to21_script: 04-computation/lrc3878_mixed_incidence/scale2_near_ap_extension_to21_20260824.py
+scale2_extension_to21_output: 05-knowledge/results/lrc3878_mixed_incidence/scale2_near_ap_extension_to21_20260824.out
+scale2_extension_to21_script_sha256: d4fd096b71ca58fe82d4c97ff99bfca73a8b50a8bfd42703f7e786a03bf12aac
+scale2_extension_to21_output_sha256: f02a75570ac315e9093a416969966abd51b90a75a70946cbbb1abc76667b3b0d
+scale2_extension_to21_semantic_sha256: e7c6e8702fbedb9abf4a40029fc155ab109faf8d2cbaaf9b6ecdc4651e37ce94
+scale2_extension_to21_independent_audit_script: 04-computation/lrc3878_mixed_incidence/scale2_extension_to21_20260824_independent_audit.py
+scale2_extension_to21_independent_audit_output: 05-knowledge/results/lrc3878_mixed_incidence/scale2_extension_to21_20260824_independent_audit.out
+scale2_extension_to21_independent_audit_script_sha256: 6ae68af3b5738ae0135411099b2a96b46c1276602a5e004db8f9eeeff584c9ca
+scale2_extension_to21_independent_audit_output_sha256: 58996079c0969ff8250cda6062b1bd944358fb9f87b0aa285a673dc8b3cdf4a1
+scale2_extension_to21_independent_audit_semantic_sha256: 3735c3267d5100d7005ce58952c3a4896baa9f10cf9b31005e9a5e736eec112f
 hash_basis: raw LF bytes
 ---
 
@@ -182,7 +193,7 @@ obstruction is
 C=(2/21,8/63) union (55/63,19/21),       mu(C)=4/63.      (7)
 ```
 
-Let `E` be any eleven-element subset of `{1,...,20}`, let `U=max E`, and let
+Let `E` be any eleven-element subset of `{1,...,21}`, let `U=max E`, and let
 `t>=U` be odd.  The displayed row has exactly thirteen distinct speeds because
 `2E` is even while `t,9t` are odd.  At a body-safe phase `y`, both actual lifts
 fail only if `ty in C`; hence a counterexample would force
@@ -192,21 +203,28 @@ residual proves
 
 ```text
 2E union {t,9t} is lonely
-for every E subset {1,...,20}, |E|=11, odd t>=max E.      (8)
+for every E subset {1,...,21}, |E|=11, odd t>=max E.      (8)
 ```
 
-The universe contains exactly `C(20,11)=167,960` bodies and 574,963 exact
-finite `(E,t)` containment instances, with zero failures.  Isolated body-safe
+The universe contains exactly `C(21,11)=352,716` bodies and 1,356,147 exact
+finite `(E,t)` containment instances, with zero failures.  The new disjoint
+stratum `max(E)=21` contributes `C(20,10)=184,756` bodies and 781,184 cells.
+Isolated body-safe
 walls are discarded conservatively; the primary path compares every
 positive-length closed body-safe arc with the exact open pullback of `C`,
-searches both physical lifts, and verifies at least one safe lift.  Its largest
-body-specific strict BV tail start is 81.  A no-import audit instead computes
-the positive rational measure of the escaped set, chooses an exact midpoint,
-and rechecks all clearances and both adjacent inequalities defining the coarse
-THM-4002 BV cutoff; this is cutoff minimality, not an optimal loneliness
-threshold.  Its smallest finite escape is
-`1151/42042>0`.  The older `[1,15]` orbit-word companion remains an independent
-control on its 1,365-body, 5,470-cell subuniverse.  Statement `(8)` does not
+searches both physical lifts, and verifies at least one safe lift.  The combined
+largest body-specific strict BV tail start remains 81 in the `max(E)=19`
+stratum.  Within the new stratum the maximum is 80, at
+`(1,3,4,11,13,15,16,17,18,19,21)`, with its exact wall in `[79^2,80^2)`.
+A no-import audit instead computes the positive rational measure of the escaped
+set, chooses an exact midpoint, and rechecks all clearances and both adjacent
+inequalities defining the coarse THM-4002 BV cutoff; this is cutoff minimality,
+not an optimal loneliness threshold.  Its smallest positive escaped measure is
+`5157429/147707560`, attained in the audit at
+`E=(1,6,7,8,9,10,11,13,17,19,21)`, `t=31`.  The primary engine also records a
+zero minimum *clearance surplus* at a safe wall equality; literal open endpoints
+are therefore load-bearing, not failures.  The older `[1,20]` and `[1,15]`
+companions remain independent controls on nested subuniverses.  Statement `(8)` does not
 cover an arbitrary body in
 the `(2,1,9)` type, even `t`, `t<U`, or any of THM-3910's 17 arbitrary-body
 types.
@@ -309,13 +327,17 @@ python3 -B 04-computation/lrc3878_mixed_incidence/scale2_near_ap_extension_to20_
 python3 -B -O 04-computation/lrc3878_mixed_incidence/scale2_near_ap_extension_to20_20260824.py
 python3 -B 04-computation/lrc3878_mixed_incidence/scale2_extension_to20_20260824_independent_audit.py
 python3 -B -O 04-computation/lrc3878_mixed_incidence/scale2_extension_to20_20260824_independent_audit.py
+python3 -B 04-computation/lrc3878_mixed_incidence/scale2_near_ap_extension_to21_20260824.py
+python3 -B -O 04-computation/lrc3878_mixed_incidence/scale2_near_ap_extension_to21_20260824.py
+python3 -B 04-computation/lrc3878_mixed_incidence/scale2_extension_to21_20260824_independent_audit.py
+python3 -B -O 04-computation/lrc3878_mixed_incidence/scale2_extension_to21_20260824_independent_audit.py
 ```
 
-The five primary normal/optimized streams byte-match their frozen raw-LF
-outputs; the no-import audit provides the sixth exact path.  The preliminary
+The six primary normal/optimized streams byte-match their frozen raw-LF
+outputs; the two no-import audits provide seventh and eighth exact paths.  The preliminary
 bounded-to-300 and floating-point height-19 scouts were discovery-only and
 support no exact quantifier.  The load-bearing paths are the analytic `a<=25`
-cutoff plus 20 exact residual pairs, and the rational `[1,20]` enumeration plus
+cutoff plus 20 exact residual pairs, and the rational `[1,21]` enumeration plus
 strict BV tail.
 THM-3910's 17 arbitrary-body types, `t<U`, owner/arrival control, and LRC(14)
 remain **OPEN**.  **QED.**

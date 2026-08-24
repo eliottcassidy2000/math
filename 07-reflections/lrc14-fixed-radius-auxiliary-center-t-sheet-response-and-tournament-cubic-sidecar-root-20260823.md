@@ -249,10 +249,10 @@ that a statistic failed.
 
 The `(2,1,9)` obstruction has now been pulled in two opposite directions.
 First, THM-4002's fixed family extends exactly from eleven-subsets of `[1,15]`
-to every eleven-subset of `[1,20]`: 167,960 bodies and 574,963 exact finite
+to every eleven-subset of `[1,21]`: 352,716 bodies and 1,356,147 exact finite
 `(E,t)` containment instances, followed by the strict variance tail.  An
-independent engine measures `G_E\t^{-1}C` directly, finds positive rational
-escape in every finite instance,
+independent engine measures `G_E\t^{-1}C` directly on the disjoint max-21
+stratum, finds positive rational escape in all 781,184 new finite instances,
 and rechecks a physical lift.  This is substantial fixed-body scope, but it
 does not decrement the 17 arbitrary-body types.
 

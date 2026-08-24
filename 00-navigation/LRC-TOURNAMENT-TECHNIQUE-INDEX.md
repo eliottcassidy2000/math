@@ -28,7 +28,7 @@ Every technique below is a possible tooth in that zipper.
   `N_t(w)=#{a mod t:(w+a)/t in G_u}`.  Its integral over the pair-safe set is
   the target safe mass; its `t Z` Fourier energy and integer variance tariff
   give all-large-scale sufficient gates.  THM-4002 gives its phase-resolved
-  signed-endpoint form and closes 1,365 fixed scale-two bodies.
+  signed-endpoint form and closes 352,716 fixed `[1,21]` scale-two bodies.
 - **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
   compact/open endpoint status, and the cubic mixed danger response.
 - **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram

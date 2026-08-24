@@ -70,7 +70,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   leaves 58 certificate survivors: 57 at `s=1` and `(s,p,q)=(2,1,9)`.
   THM-3910 closes 41; THM-3995 adds the owner-maximum conditional parity cap
   `4(U-1)/(63U)` and its exact integer tariff, including the `k=0` plateau, but
-  closes no type. THM-4002 closes AP11 and 167,960 fixed `[1,20]` scale-two
+  closes no type. THM-4002 closes AP11 and 352,716 fixed `[1,21]` scale-two
   bodies; its three-versus-one clock deficit blocks that cover method.
   Seventeen certificate types, `t<U`, and owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding

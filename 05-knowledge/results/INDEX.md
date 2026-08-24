@@ -42,10 +42,11 @@
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
   integer occupancy tax.  For AP11, 4,385 finite cells split as
   `4,284+32+69`, with the tail closed from 88 (known THM-734 scope).  Newly,
-  every `2E union {t,9t}` with `E` an eleven-subset of `{1,...,20}` and odd
-  `t>=max E` is lonely: 167,960 bodies, 574,963 finite cells, zero failures,
-  and exact tails.  A no-import audit finds positive exact escape and a
-  physical lift in every cell.  No one or two auxiliary danger combs cover
+  every `2E union {t,9t}` with `E` an eleven-subset of `{1,...,21}` and odd
+  `t>=max E` is lonely: 352,716 bodies, 1,356,147 finite cells, zero failures,
+  and exact tails.  The max-21 stratum contributes 184,756 bodies and 781,184
+  cells; a no-import audit finds positive exact escape and a physical lift in
+  every new cell.  No one or two auxiliary danger combs cover
   the scale-two quotient obstruction, while `(8,9,10)` is the unique
   minimum-maximum covering triple: a three-versus-one clock-budget stopping
   obstruction, not a closure.  Two t=11 rows have identical complete
@@ -70,7 +71,13 @@
   `f4d01f21eaafa28929136b506df5f1ac4b94d2c93f6beb7b9e4466a080a0a4da`;
   independent `5df7bcad78c2847b5f1e2fd2d8398fdfa44b910b924307b30781c94d3ad0b911` /
   `7b0c498489d093a2ea61ff4e2734d9ebd9f18ae0383458a1d847d2f62e3f5061` /
-  `d9c01990a9730a6b164c225a6788bc45f2f8acfd7286f206c4804ae580d61297`.
+  `d9c01990a9730a6b164c225a6788bc45f2f8acfd7286f206c4804ae580d61297`;
+  max-21 extension `d4fd096b71ca58fe82d4c97ff99bfca73a8b50a8bfd42703f7e786a03bf12aac` /
+  `f02a75570ac315e9093a416969966abd51b90a75a70946cbbb1abc76667b3b0d` /
+  `e7c6e8702fbedb9abf4a40029fc155ab109faf8d2cbaaf9b6ecdc4651e37ce94`;
+  max-21 no-import audit `6ae68af3b5738ae0135411099b2a96b46c1276602a5e004db8f9eeeff584c9ca` /
+  `58996079c0969ff8250cda6062b1bd944358fb9f87b0aa285a673dc8b3cdf4a1` /
+  `3735c3267d5100d7005ce58952c3a4896baa9f10cf9b31005e9a5e736eec112f`.
 
 - `jc2_equianharmonic_equality_color_all_depth_response_thm3898.py` ->
   matching `.out` [THM-3898 PROVED + VERIFIED-EXACT + INDEPENDENTLY
