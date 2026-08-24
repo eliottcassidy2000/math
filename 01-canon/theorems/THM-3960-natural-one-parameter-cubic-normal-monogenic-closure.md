@@ -2,7 +2,7 @@
 id: THM-3960
 title: "Natural one-parameter cubic normal-monogenic closure"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / NOT CANON. For arbitrary
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For arbitrary
   C,E in k[t], the natural cubic F=T^3-3PT-(E+CP) is integral exactly when
   C^3+27E is nonzero. In that case its hypersurface has only finitely many
   singular points and is therefore normal. Its global monogenic different
@@ -14,9 +14,20 @@ status: >
   (E+CP)^2-4P^3 is additionally primitive and squarefree, giving an
   independent codimension-one maximal-order proof of normality. Together
   with THM-3956 and THM-3958 this closes the entire natural one-parameter
-  globally monogenic family, not JC(2). This candidate is not usable until
-  independent hostile audit and status promotion.
+  globally monogenic family, not JC(2).
 source: jc-degree6-one-place / post-THM-3956--3958 culmination, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc-extra-debt-local, 2026-08-24). The
+  audit independently reconstructed the rational-root/integrality
+  dichotomy, including the P-degree argument; checked the Jacobian singular
+  support and R1+S2 normality for every domain case, including the E=0
+  doubled-branch hostile; rederived hidden-irreducible branch primitivity,
+  squarefreeness, and the discriminant-index parity step; and verified the
+  normalization-form Zariski Main and global-different forbidden-unit
+  contradiction. It also audited both reduced components when B=0 and the
+  exact function-field scope. Normal and optimized runs byte-match the
+  frozen 42-gate output; raw and semantic hashes and documentation checks
+  pass.
 depends_on:
   - THM-3956-split-hidden-cubic-integrality-and-repeated-root-trichotomy
   - THM-3958-one-hidden-root-principal-different-and-pure-power-boundary
@@ -33,7 +44,7 @@ hash_basis: raw LF bytes
 
 # THM-3960 -- the full natural one-parameter cubic is closed
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / NOT CANON.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero. Put
 
 ```text
@@ -268,4 +279,4 @@ leave this one-parameter linear-in-`P` depressed-cubic **function-field
 grammar**, for example by starting with one of the genuinely nonmonogenic
 S3 fields/orders studied elsewhere in the repo. Those constructions are not
 overorders of `(1)` and remain relevant.
-**QED (candidate pending independent audit).**
+**QED.**
