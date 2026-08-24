@@ -9,6 +9,35 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-481 (2026-08-24, THM-3992 nodal residual synthesis) -- an interior two-owner path was treated as a boundary forest obstruction
+
+- **What failed:** the first closing paragraph of THM-3992 said that if the
+  two companion germs at its forced node belonged to two global components,
+  the resulting forest could close by existing normalization tools.  This
+  silently imported the boundary-prime forest mechanism of THM-3951 into the
+  pullback divisor inside the Keller source.
+- **Minimal witness / first failed implication:** the quadratic
+  `Q(x,0)` enumerates only companion intersections with the known component
+  `t=0`; it does not enumerate all source addresses over the target node.
+  THM-3951 types its vertices as primes in a completion boundary `X minus A2`,
+  whereas the components of the pulled-back nodal curve lie inside `A2`.
+  A cyclic finite-etale cover of a nodal cubic can have three component
+  addresses; deleting one node address leaves a two-owner path which is
+  quasi-finite and nonproper over the node, not an affine-plane contradiction.
+- **Repair / strongest survivor:** all coefficient, divisibility, node, and
+  two-transverse-clutch conclusions of THM-3992 survive.  The next object is
+  the **complete oriented node-address graph**.  Away from the nonfinite
+  locus, finite-etale balance gives equal indegree and outdegree at every
+  normalized component, so every edge lies on a cycle.  Distinct owners of
+  the two known companion germs force an additional node address; if those
+  are the full connected packet, they have one common owner and form a
+  two-edge cycle.  A genuinely complete forest instead forces the target node
+  into the Jelonek locus.
+- **Reusable rule:** type components as interior pullback, conductor, or
+  completion-boundary primes before importing a forest theorem.  A local
+  intersection polynomial on one component is not a census of the full target
+  fibre.
+
 ## MISTAKE-480 (2026-08-24, Hopf/S6 clutch synthesis) -- a kernel of raw twist coordinates was mistaken for lost analytic moduli
 
 - **What failed:** the first Hopf/S6 synthesis observed that

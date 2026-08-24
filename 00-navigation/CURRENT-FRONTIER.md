@@ -66,10 +66,12 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   partial LRC implication: `s lambda(v)>=1` gives a common safe time.  The
   `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
-  `7,505`, and only 58 in `t>=U`: 57 scale-one plus `(2,1,9)`.  THM-3910
-  closes 41, leaving 17. THM-4000 closes AP11 and 167,960 fixed `[1,20]`
-  scale-two bodies, no type; exact comb covering shows a three-versus-one
-  clock deficit. `t<U` and owner/arrival remain open.
+  `7,505` unconditionally; only in `t>=U`, cyclic slack plus one auxiliary
+  leaves 58 certificate survivors: 57 at `s=1` and `(s,p,q)=(2,1,9)`.
+  THM-3910 closes 41; THM-3995 adds a sharp conditional parity tariff but
+  closes no type. THM-4000 closes AP11 and 167,960 fixed `[1,20]` scale-two
+  bodies; its three-versus-one clock deficit blocks that cover method.
+  Seventeen certificate types, `t<U`, and owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
   FINITE-EXACT,
@@ -338,7 +340,8 @@ asymptotic or residue.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
   preprints are distinct **PREPRINT CLAIM / UNDER AUDIT**. THM-3990 validates
   only the final connected-component repair; THM-3991 gives `chi=d*n!` only
-  for the stated periodic fan grammar. Neither verifies a global manifold.
+  for the stated periodic fan grammar. The S6 filled-gauge audit leaves a
+  global Cech overlap open. None verifies a global manifold.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3782 close
   named cells only. THM-3827--3972 route genus/degree, root/cusp/jet, `f=0`,
   cylinder and residue packets; global roots and arbitrary `f!=0` stay open.
@@ -351,6 +354,7 @@ asymptotic or residue.
   seam is exactly square-liftable or has `[s^2]b=2a`, with clutches unjoined.
   THM-3994 separates a double resultant into either two transverse addresses
   or one length-two `A1` centre; multiplicity alone is not a closure test.
+  The known node roots are not a full fibre census; THM-3996 is RESERVED.
   Multi-term cancellation, finite Keller/Darboux entry, and `JC(2)` stay open.
   Russell THM-3785/3843--3871 close named depth-through-five packets; the
   nonreduced `(6,4)`, rational corrections, and global entry remain open.

@@ -501,12 +501,16 @@ The residual fifth-root normalization acts by
 has weight four. The robust invariant is not its chosen value but the forced
 node type and its two labelled normalization addresses.
 
-The next exact object is the coordinated residual `R in (p^2,y)`, the two
-transverse node clutches `(39)`, and the liftable/nonliftable split `(39e)`.
-The cheapest decisive tests are simultaneous cube lifting in the first branch
-and continuation of row `-1` in the second, followed by the oriented
-conductor-incidence graph. A scalar resultant cannot replace those labelled
-addresses, as THM-3994's two double-collision seams demonstrate.
+The next exact objects are the coordinated residual `R in (p^2,y)`, the
+liftable/nonliftable split `(39e)`, and the **complete** oriented node-address
+graph. The roots of `(39)` enumerate only intersections with the known line
+`t=0`, not every source address over the target node. A two-owner split is not
+itself a boundary forest obstruction: THM-3951 concerns completion-boundary
+primes, whereas these pullback curves lie inside the source. One must test
+simultaneous cube lifting in the first seam branch, row-`-1` continuation in
+the second, further node addresses, and membership of the target node in the
+nonproper-value locus. A scalar resultant cannot replace those labels, as
+THM-3994 demonstrates. See MISTAKE-481.
 
 Reproduce from the repository root:
 

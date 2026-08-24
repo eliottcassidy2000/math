@@ -1,0 +1,13 @@
+PASS  two obstruction components each have length 2/63
+PASS  obstruction measure is 4/63
+PASS  all four cleared event numerators are odd (64 residue checks)
+PASS  four hole coefficients total 4/63
+PASS  support cap simplifies
+PASS  real variance coefficient simplifies
+PASS  integer support-envelope dynamic controls (700 cases)
+PASS  integer correction hostile is positive
+RESULT obstruction_measure=4/63
+RESULT parity_hole_measure=4/(63t)
+RESULT support_cap=4(t-1)/(63t)
+RESULT sufficient_gate=t*mu(G)/r>sqrt(4(t-1)/(3(59t+4)))
+ALL EXACT CHECKS PASSED

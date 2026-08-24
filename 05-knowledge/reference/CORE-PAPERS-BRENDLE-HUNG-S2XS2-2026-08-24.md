@@ -22,7 +22,8 @@ headline existence theorem                 PREPRINT CLAIM / UNDER AUDIT
 abstract minimization framework, Section 2 READ / NO IMMEDIATE CONTRADICTION
 displayed perturbation mechanism            READ / NO IMMEDIATE CONTRADICTION
 V_bc^(2)=0                                  OPEN; exact point + conditional symmetry route
-z(h_a^(1))=0                                VERIFIED-EXACT on both displayed Sigma pieces
+V_bc^(2) at one generic exact point         FINITE-EXACT positive control
+z(h_a^(1))=0 on both Sigma components       FINITE-EXACT independent repair
 other notebook identities                   PARTIALLY AUDITED, not imported
 Poisson repair principle                    PROVED independently in THM-3990
 ```
@@ -172,25 +173,33 @@ This error is also localized.  The later `A1`--`A4` cells defining the
 coefficient of `lambda_c lambda_d^2` independently rebuild their `c,d`
 objects and do not consume the corrupted `ra` or `za`.  Moreover the
 `lambda_c lambda_d^2` monomial only needs the checked `c,d` pieces.  Therefore
-the saved-state error does not by itself refute the later displayed cubic
-coefficient. The independent exact companion
-[`brendle_hung_lemma54_independent_audit_20260824.py`](../../04-computation/brendle_hung_lemma54_independent_audit_20260824.py)
-now verifies `P1(L(h_a))=0` symbolically on both displayed open pieces of
-`Sigma`, with four exact point controls and a nonzero hostile tensor. This
-closes the omitted `h_a` branch only; the cubic coefficient still awaits an
-independent clean-kernel audit.
+the saved-state error invalidates the notebook cell as a certificate but does
+not by itself refute the later displayed cubic coefficient.
+
+The missing `h_a` branch has now been rebuilt independently from the paper's
+moving-frame metric, connection, curvature, and linearized-curvature operator.
+The exact companion
+[reconstructs `P1(L(h_a))`](../../04-computation/brendle_hung_lemma54_independent_audit_20260824.py)
+and proves all four entries vanish identically on both parametrized components
+of `Sigma`; its [frozen transcript](../results/brendle_hung_lemma54_independent_audit_20260824.out)
+also includes a tensor with a nonzero hostile response.  This is
+**FINITE-EXACT** closure of the omitted branch, not a replay of Lemma 5.4 or
+of the paper as a whole. The cubic coefficient still awaits an independent
+clean-kernel audit.
 
 ## 4. Exact remaining referee obligations
 
 The shortest path to a trustworthy v1 certificate is:
 
-1. **Fresh-kernel quadratic audit.** Recompute `Vbc` globally without
-   assignment reuse, or independently rebuild `Vac=0` and the displayed
-   symmetry. The one-point exact cancellation is only a positive control.
+1. **Global quadratic identity.** Recompute the intended `Vbc` expression
+   without assignment reuse and prove it vanishes on `0<theta<Pi/2`, or give
+   a complete symmetry derivation from an independently checked identity.
+   The exact generic-point cancellation is a positive control, not closure.
 2. **Complete Lemma 5.4 audit.** The omitted `z(ha)=0` branch is now
    independently exact; retain or rebuild the source's `hb,hc` branches when
    certifying the full lemma on completed `Sigma`.
-3. **Rebuild all ten `V^(2)` summands.** Use the corrected `h_cd`, corrected
+3. **Rebuild all ten `V^(2)` summands.** Use the independently repaired
+   `h_a` branch, the corrected `h_cd`, corrected
    cross term, and a valid smallness constant
    `lambda_0<=sqrt(delta/C)`.
 4. **Rebuild the cubic witness.** Evaluate the four `A1`--`A4` contributions
