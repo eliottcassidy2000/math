@@ -260,15 +260,18 @@ closes all seven centered degree-five carrier rows. THM-3961 then extends the
 monogenic normality gate to irreducible arbitrary `q(P,t)`: adjusted hidden
 squarefreeness is equivalent to normality, and every normal row is excluded
 by the global different. Its repeated-factor and `P^2` nonnormal debts remain;
-THM-3962/3963 reserve, but do not prove, their normalization programs.
+THM-3962 closes all coefficient-constant cylinders, including both debts,
+while THM-3963 closes the moving scalar family `q=c(t)P^2`. General moving
+repeated factors and `P^2q2(P,t)` remain. THM-3964 reserves a graph-double-root
+subfamily; THM-3965 reserves a separate unit-ideal deformation lane.
 
 The session therefore ends at a sharp boundary.  **PROVED:** degree-four
 centered nonentry, all-degree trace-carrier routing, the arbitrary-common-debt
 natural-cubic boundary obstruction, the four-color Mobius classification, and
 the centered degree-five and arbitrary-`q` normal monogenic closures.
 **VERIFIED-EXACT:** the 2,884-gate carrier companion and the
-`51/62/44/75/92/62/161/105/42/51` gates in
-THM-3950/51/52/53/54/56/58/59/60/61. **OPEN:** degree at least six, arbitrary
-root gauges and coefficient planes, the two nonnormal conductor debts,
-nonmonogenic orders, normalization-parameter descent, higher-degree
+`51/62/44/75/92/62/161/105/42/51/46/45` gates in
+THM-3950/51/52/53/54/56/58/59/60/61/62/63. **OPEN:** degree at least six,
+arbitrary root gauges and coefficient planes, the remaining moving conductor
+debts, nonmonogenic orders, normalization-parameter descent, higher-degree
 non-centered strata, and the planar Jacobian conjecture itself.

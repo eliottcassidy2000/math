@@ -356,7 +356,9 @@ one-parameter cubic family. Independently audited
 closes the centered degree-five color rows, while
 [THM-3961](../../01-canon/theorems/THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt.md)
 classifies normality in the irreducible arbitrary-`q` monogenic grammar.
-THM-3962/3963 remain **RESERVED / UNPROVED EMPTY STUBS**. None supplies a
+Proved THM-3962 closes all coefficient-constant cylinders, including their
+conductor debts, and proved THM-3963 closes the moving scalar `P^2` debt.
+THM-3964/3965 remain **RESERVED / UNPROVED EMPTY STUBS**. None supplies a
 Hopf dependency here.
 
 ### Explicitly rejected vocabulary bridges

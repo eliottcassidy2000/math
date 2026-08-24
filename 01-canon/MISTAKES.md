@@ -340,8 +340,10 @@ Format per entry:
   `P^2` programs occupied `THM-3962--3963`, forcing another atomic move to
   `THM-3964`. Those programs were then promoted while graph-double-root and
   infinity-place reservations occupied `THM-3964--3965`, so the LRC family
-  moved atomically to freshly checked `THM-3966`. The hash-bearing LRC
-  companions and mathematical scope did not change.
+  moved atomically to freshly checked `THM-3966`. An incoming Euler-rigidity
+  boundary lemma then occupied that identifier, forcing one more atomic move
+  to freshly checked `THM-3967`. The hash-bearing LRC companions and
+  mathematical scope did not change.
 - **Reusable rule:** recheck theorem filenames and YAML identifiers against
   freshly fetched remote history immediately before every proof commit, not
   only before empty reservations; rename the whole artifact family together.

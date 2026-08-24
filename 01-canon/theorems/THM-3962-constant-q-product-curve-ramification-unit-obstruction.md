@@ -20,12 +20,13 @@ audit: >
   Riemann--Hurwitz support bound and its punctured-rational-curve unit
   contradiction; and verified both explicit normalizations, singular
   conductor addresses, ramification packets, unit ranks, and class ledgers.
-  Normal and optimized runs byte-match the frozen 46-gate output; raw and
-  semantic hashes and documentation checks pass. No repair was required.
+  Normal and optimized runs match the frozen 46-gate output after canonical
+  LF normalization on Windows; raw and semantic hashes and documentation
+  checks pass. No repair was required.
 depends_on: []
 related:
   - THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt
-  - THM-3922-affine-plane-open-finite-normal-completion-class-group
+  - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
 script: 04-computation/jc2_constant_q_product_curve_ramification_unit_thm3962.py
 output: 05-knowledge/results/jc2_constant_q_product_curve_ramification_unit_thm3962.out
 script_sha256: 1babd10dbf3eea74afae74c10c63caa16b0b0865a883b4bc7b18297ed260c1cf
@@ -263,10 +264,9 @@ factorization, arbitrary conductor gluing, and both normal and nonnormal
 monogenic orders, provided the cubic function field is integral.
 
 It does **not** prove JC(2). The mechanism depends critically on the product
-decomposition `(3)`. A surviving conductor-debt design must make `q` vary
-genuinely with `t`; zeros and poles of its moving coefficients can then add
-vertical normalization components, classes, and boundary incidences. Those
-vertical seams are the next exact target.
+decomposition `(3)`. THM-3963 subsequently closes the moving scalar family
+`q=c(t)P^2`; general moving coefficients can still add vertical normalization
+components, classes, and boundary incidences.
 
 ## Reproduction
 

@@ -21,9 +21,10 @@ audit: >
   prime. A reproducibility audit replaced a chart determinant check that
   divided by c with the cancellation-free identity
   det+3T(w+2)=cP-wT, so the exact companion also covers c=0 fibres without
-  localization. Normal and optimized 45-gate runs byte-match the frozen
-  output; the third audit supplied and checked the exact index, conductor,
-  discriminant, divisor, units, and class-group ledger in Section 2.1.
+  localization. Normal and optimized 45-gate runs match the frozen output
+  after canonical LF normalization on Windows; the third audit supplied and
+  checked the exact index, conductor, discriminant, divisor, units, and
+  class-group ledger in Section 2.1.
   Hashes and documentation checks pass.
 depends_on:
   - THM-3961-arbitrary-q-hidden-repetition-normality-and-conductor-debt

@@ -281,9 +281,10 @@ Only two conductor-debt loci escape that argument:
 
 Their normalizations are proper overorders of `A`; they need not remain
 monogenic, and the global element `F_T` need not generate the normalized
-different. No Keller chart is asserted to exist there. The next exact
-problem is to normalize and type these conductor divisors, then test their
-units, class groups, boundary incidence, and infinity places.
+different. No Keller chart is asserted to exist there. Subsequent THM-3962
+closes every `t`-constant `q(P)` cylinder, including both debt types, and
+THM-3963 closes the moving scalar family `q=c(t)P^2`. General moving repeated
+factors and arbitrary `P^2q2(P,t)` remain open normalization problems.
 
 This theorem does **not** prove JC(2). It proves that any counterexample in
 the arbitrary polynomial-`q` depressed-cubic lane must exploit one of the

@@ -437,8 +437,9 @@ incidence pattern and ramification predicate consumed by the ambient
 recognition theorem. THM-3958/3960 close the one-root and natural
 one-parameter monogenic lanes; proved THM-3959 closes the centered degree-five
 color rows; and proved THM-3961 classifies normality for irreducible
-arbitrary-`q` monogenic cubics. THM-3962/3963 remain **RESERVED / UNPROVED
-EMPTY STUBS** for two conductor-debt normalizations. None supplies a Hopf
+arbitrary-`q` monogenic cubics. Proved THM-3962 closes coefficient-constant
+cylinders and proved THM-3963 closes the moving scalar `P^2` debt. THM-3964/
+3965 remain **RESERVED / UNPROVED EMPTY STUBS**. None supplies a Hopf
 dependency here.
 
 ## 9. Connection contract B: affine local systems over the LRC carrier
@@ -631,7 +632,7 @@ assuming the manuscript's main theorem.
 - the general two-by-two Smith conclusion (11) under its stated coprimality
   and admissibility assumptions;
 - the repo theorems cited with proved status, including planar-Jacobian
-  THM-3950--3954, THM-3956, and THM-3958--3961.
+  THM-3950--3954, THM-3956, and THM-3958--3963.
 
 ### FINITE-EXACT
 

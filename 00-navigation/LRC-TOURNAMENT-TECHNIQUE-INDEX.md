@@ -27,20 +27,20 @@ Every technique below is a possible tooth in that zipper.
 - **LRC use:** the exact rooted carrier is the integer sheet count
   `N_t(w)=#{a mod t:(w+a)/t in G_u}`.  Its integral over the pair-safe set is
   the target safe mass; its `t Z` Fourier energy and integer variance tariff
-  give all-large-scale sufficient gates.  THM-3966 gives its phase-resolved
+  give all-large-scale sufficient gates.  THM-3967 gives its phase-resolved
   signed-endpoint form and closes 1,365 fixed scale-two bodies.
 - **Preserves:** body safety, literal root `t`, integer fibre multiplicity,
   compact/open endpoint status, and the cubic mixed danger response.
 - **Forgets / guardrail:** an ordinary tournament, complete pairwise Gram
   matrix, or cut semimetric loses the cubic moment.  AP11 at `(p,q)=(6,41)`,
   `t=12` versus `36`, has identical full one/two incidence data but different
-  safe response by `17/61992`.  THM-3966's equal-Graver-fibre and
+  safe response by `17/61992`.  THM-3967's equal-Graver-fibre and
   half-translate hostiles independently show that relation length and full
   Fourier power lose relative phase.  Endpoint equality remains atomic data.
 - **Next pull:** on the 16 remaining scale-one pairs, retain the common body
   sheet word while imposing several auxiliary-deep erosion obligations at
   once; separately test the weighted two-lift carrier on scale-two `(1,9)`.
-- **Pointers:** THM-3910, THM-3966; THM-2221, THM-3377, THM-3380, THM-3729;
+- **Pointers:** THM-3910, THM-3967; THM-2221, THM-3377, THM-3380, THM-3729;
   `lrc14-fixed-radius-auxiliary-center-t-sheet-response-and-tournament-cubic-sidecar-root-20260823.md`.
 
 ## Contribution Protocol

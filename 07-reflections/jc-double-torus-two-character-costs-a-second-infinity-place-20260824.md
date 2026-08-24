@@ -20,6 +20,8 @@ THM-3953/54/56/58 resolve the hidden-root and local-debt strata; THM-3959
 closes all seven centered degree-five color rows; audited THM-3960 closes the
 natural one-parameter family; and THM-3961 classifies normality for
 irreducible arbitrary `q(P,t)` and excludes every normal monogenic row.
+THM-3962 closes all coefficient-constant cylinders and THM-3963 closes the
+moving scalar `P^2` conductor debt.
 This reflection reserves no theorem ID; its affine deformation is now an
 independent precursor to the `m=1` slice of THM-3946.
 
@@ -374,18 +376,21 @@ are empty, while J1/J2/K/N/P end at a scalar maximal-order seam or a folded
 non-unibranch ramification arm. THM-3961 then gives the arbitrary-`q`
 monogenic normality criterion. After removing the forced `h^2`, adjusted
 hidden squarefreeness is equivalent to normality; all normal cases fail by the
-global different. Only a repeated adjusted factor and `P^2|q` remain as
-nonnormal conductor debts. THM-3962/3963 reserve normalization programs for
-those directions and are not yet usable. The orthogonal THM-3955/57 node and
+global different. THM-3962 closes both debt types whenever `q=q(P)` by a
+product-curve puncture/unit argument. THM-3963 gives the exact regular
+normalization of every `q=c(t)P^2` and kills it with the principal prime
+`w+2=0`. General moving repeated factors and `P^2q2(P,t)` remain; THM-3964
+reserves a graph-double-root subfamily, while THM-3965 reserves a separate
+unit-ideal deformation. The orthogonal THM-3955/57 node and
 coordinate-crossing cotangent sequences are proved local sidecars, not global
 Jacobian or Hopf results.
 
 The next search should not maximize Mordell--Weil rank blindly.  The cheapest
 decisive experiments are:
 
-1. normalize THM-3961's two typed conductor debts and compute their units,
-   class groups, boundary incidence and infinity places; THM-3962/3963 are
-   reserved targets, not dependencies;
+1. normalize the remaining genuinely moving repeated-factor and general
+   `P^2q2(P,t)` debts and compute their units, classes, incidence and infinity
+   places; THM-3964 is a reserved subfamily target, not a dependency;
 2. start from a genuinely nonmonogenic `S3` field/order outside the normal
    monogenic grammar, or prove that the normalization parameter descends to
    an original polynomial target coordinate;
@@ -409,12 +414,11 @@ ends; the first one-place collision paid nonreduced conductor debt; and the
 first reduced `A1`/normal/two-character survivor paid a genus-one companion.
 The positive-genus boundary gate killed every natural factor-ratio row, with
 the forest independently killing the clean minimal/Mobius atlases. THM-3961
-now kills every normal arbitrary-`q` monogenic row by the same global
-different. A survivor must normalize one of its two conductor debts or leave
-through a different nonmonogenic field/order, parameter descent, different
-assignments, or genuinely new factor geometry, while controlling the full
-discriminant and source attachment rather than merely passing componentwise
-gates.
+kills every normal arbitrary-`q` monogenic row; THM-3962/3963 then kill all
+constant-coefficient debt cylinders and the moving scalar `P^2` debt. A
+survivor must use a genuinely moving remaining debt or leave through a
+different nonmonogenic field/order, parameter descent, assignment, or factor
+geometry, while controlling the full discriminant and source attachment.
 
 ## Reproduction
 
@@ -433,6 +437,8 @@ python3 04-computation/jc2_one_hidden_root_principal_different_pure_power_thm395
 python3 04-computation/jc2_centered_degree_five_root_map_thm3959.py
 python3 04-computation/jc2_natural_one_parameter_cubic_normal_monogenic_thm3960.py
 python3 04-computation/jc2_arbitrary_q_hidden_repetition_normality_thm3961.py
+python3 04-computation/jc2_constant_q_product_curve_ramification_unit_thm3962.py
+python3 04-computation/jc2_moving_p2_normalization_principal_ramification_thm3963.py
 ```
 
 Each normal/optimized pair must byte-match its corresponding frozen output in

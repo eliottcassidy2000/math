@@ -67,7 +67,7 @@ is the safe control `M(S_13)=99/338`. No cited result proves LRC(14).
   `12+1` branch forces scale one, `U>91^6/13`, and at most thirteen packet
   candidates; the powers-of-four fibre has none.  In `11+2`, THM-3878 leaves
   `7,505`, and only 58 in `t>=U`: 57 scale-one plus `(2,1,9)`.  THM-3910
-  closes 41, leaving 17.  THM-3966 closes AP11 and 1,365 fixed scale-two
+  closes 41, leaving 17.  THM-3967 closes AP11 and 1,365 fixed scale-two
   bodies, no type; `t<U` and owner/arrival remain open.
   THM-3858's normalized negative-Pell unit is `+/-j/3^v3(j) mod 9`; excluding
   `4,5` exactly exhausts the target-only `Z_3` test, not retained sidecars.
@@ -354,10 +354,10 @@ asymptotic or residue.
   `A_(3m-1)`/non-unibranch mechanism. THM-3956/58/60 close the natural
   one-parameter family. THM-3961 proves, for irreducible arbitrary `q(P,t)`,
   normality iff adjusted hidden squarefreeness and excludes normal rows by the
-  different. Its repeated-factor/`P^2` debts remain; THM-3962/63 are RESERVED.
-  THM-3955/57 are local conductor results, not global Hopf results. Open:
-  degree `>=6`, other gauges/colors/fields, both debts, parameter descent,
-  nonmonogenic orders, source attachment and `JC(2)`.
+  different. THM-3962 closes all `q=q(P)` cylinders; THM-3963 closes
+  `q=c(t)P^2`. Open: general `P^2q2`, moving repeated factors (THM-3964
+  RESERVED), the THM-3965 unit-ideal lane, degree `>=6`, other gauges/fields,
+  nonmonogenic orders, source attachment and `JC(2)`. THM-3955/57 are local.
   THM-3853/3855 remain formal laboratories.
   Russell THM-3785 forces `3|d,d>=9`; THM-3843/46/49 give an immersed arm,
   jets and visible conductor contact. THM-3856/61/67/71 close normal `z`-depth

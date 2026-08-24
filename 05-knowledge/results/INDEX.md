@@ -35,7 +35,7 @@
   triples are pinned in THM-3910.
 
 - `lrc3878_mixed_incidence/packet_covariance_probe.py`, scale-two sweep, and
-  Graver/phase hostile -> matching `.out`s [THM-3966 PROVED + VERIFIED-EXACT
+  Graver/phase hostile -> matching `.out`s [THM-3967 PROVED + VERIFIED-EXACT
   + INDEPENDENTLY HOSTILE-AUDITED; LRC(14) OPEN].  Signed endpoints give
   `C_t=(1/(2t)) sum sigma_e tau_f B2({f-te})` and
   `L=m(1-alpha)-C_t`; sampled-grid energy gives a Cauchy certificate and an
@@ -699,11 +699,36 @@
   `q(h^2,t)-2h^3` when `P` divides `q` exactly once. The surface is normal iff
   the adjusted hidden polynomial is squarefree; `P^2|q` makes the height-one
   zero section singular. The global different excludes every normal row.
-  Two nonnormal conductor debts remain for normalization; reducible cubics
-  and `JC(2)` are outside scope. Checks: `51`. Script/output/semantic SHA-256:
+  THM-3961 leaves two general nonnormal conductor-debt loci for normalization;
+  THM-3962/3963 subsequently close only the constant-`q(P)` and moving scalar-
+  `P^2` subfamilies. Reducible cubics and `JC(2)` are outside scope. Checks:
+  `51`. Script/output/semantic SHA-256:
   `e23bc41290cc397df5de5caa7bfc2cf24d911fd21862d455f6b6343b03b34064` /
   `965d720d954670a8c4662adfe6c3940c1202199aa011dfbdc66fe3ce40c23764` /
   `1993c77cd4dc081abb018ace8f177bc80ada708f19622a7a4c15c29fb385564b`.
+
+- `jc2_constant_q_product_curve_ramification_unit_thm3962.py` -> matching
+  `.out` [THM-3962 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  For every irreducible `q=q(P)`, normalization is a cylinder over the
+  normalized coefficient curve. Positive genus cannot contain a dense plane;
+  in genus zero Riemann--Hurwitz forces at least two deleted
+  infinity/ramification points and hence a forbidden nonconstant unit. This
+  closes normal and nonnormal constant-`q(P)` orders, with explicit
+  `P^2+P` and `cP^2` controls. Checks: `46`. Script/output/semantic SHA-256:
+  `1babd10dbf3eea74afae74c10c63caa16b0b0865a883b4bc7b18297ed260c1cf` /
+  `a3265d75a6178d4607a35692d18a7eb5db0fd5f3aa8491e61142bb289502402c` /
+  `4afd29f2c4a6c0e1c4e97467abce7839474e2785e589269816d6120604e451b6`.
+
+- `jc2_moving_p2_normalization_principal_ramification_thm3963.py` -> matching
+  `.out` [THM-3963 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  For every nonzero `c(t)`, adjoining `w=cv` gives the exact regular finite
+  normalization of `T^3-3PT-c(t)P^2`, including multiple zeros of `c`. The
+  reduced principal ramification prime `w+2=0` has ring `k[t,1/c]`; deleting
+  it makes `w+2` a forbidden nonconstant unit. General `P^2q2(P,t)` remains
+  open. Checks: `45`. Script/output/semantic SHA-256:
+  `ea6ca4d8be68e57f23da2c7aea29cd232749afa4ce1464b18ae3076d38cd39cd` /
+  `552f7a793e1a38311923693e280eed0316c1e98adf95bb9fcbb83b3f7a54706d` /
+  `f88af4193333a392179ee2215f216e80a6088146eba24dad9e24c49d02a55646`.
 
 - `hopf_s6_triangle_monodromy_snf_audit_20260824.py` -> matching `.out`
   [VERIFIED-EXACT DISPLAYED MATRICES + FINITE-EXACT CONDITIONAL ORIENTED
