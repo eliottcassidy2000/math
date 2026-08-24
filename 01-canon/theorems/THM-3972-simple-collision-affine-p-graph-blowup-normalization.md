@@ -2,8 +2,8 @@
 id: THM-3972
 title: "Simple-collision affine-P graph debt has an exact blowup normalization"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-  HOSTILE AUDIT REQUIRED. When the THM-3969 collision polynomial is
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. When the THM-3969
+  collision polynomial is
   nonconstant and squarefree, every collision is one transverse basepoint
   of the relative-P1 graph. Blowing up those points and deleting the strict
   cubic pole multisection gives the smooth finite normalization. If the pole
@@ -18,6 +18,16 @@ status: >
   canonical-compatible simple-collision rows remain open; the pulled-back
   target volume is exact, so de Rham exactness alone does not close them.
 source: jc-extra-debt-local / post-THM-3969 simple-resultant collision packet, 2026-08-24
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc-cohn3709, 2026-08-24). The audit checked
+  the resultant and infinity root count, transversality, identification of
+  the graph closure with the blowup, quasi-finiteness and proper finiteness,
+  the preimage of target infinity and normal-field bridge, the Picard,
+  canonical, and ramification classes, the homogeneous incidence identity,
+  Euler/Kummer rigidity, every constant-c,r puncture computation and double
+  collision seam, and the exact-volume scope. The characteristic-zero Euler
+  base-change sentence and maximal-base-ideal graph argument were made
+  explicit before promotion.
 depends_on:
   - THM-3922-affine-plane-open-boundary-basis-class-group-obstruction
   - THM-3968-canonical-vector-different-affine-plane-boundary-obstruction
@@ -36,9 +46,9 @@ hash_basis: raw LF bytes
 
 # THM-3972 -- a simple collision is one blowup, not an untyped conductor
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE / VERIFIED-EXACT / INDEPENDENT
-HOSTILE AUDIT REQUIRED.** Work over an algebraically closed field `k` of
-characteristic zero. Let `a,c,r in k[t]` and put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of characteristic zero. Let `a,c,r in k[t]`
+and put
 
 ```text
 y=P-r^2,
@@ -152,7 +162,10 @@ beta:S_tilde=Bl_Z(S) -> S                                (13)
 
 be the blowup of the reduced base scheme. Section 2 makes this the blowup
 of a smooth surface at `n` distinct points, so `S_tilde` is smooth. It is
-also the graph closure of `(7)`, and `(7)` resolves to a morphism
+also the graph closure of `(7)`: at every basepoint `D_h,N_h` are regular
+parameters, so the base ideal `(P_h,D_h)=(N_h,D_h)` is the maximal ideal
+and its Rees blowup is precisely the closure of the graph.  Thus `(7)`
+resolves to a morphism
 
 ```text
 Phi:S_tilde -> P1_P times A1_t.                         (14)
@@ -331,6 +344,14 @@ This has an exact Kummer translation.  On `V!=0`, the pole is
 ```text
 E: w^3=a(t).                                             (30)
 ```
+
+For the Euler argument one may first descend the finite coefficient set to
+a finitely generated characteristic-zero subfield and embed it in `C`;
+geometric irreducibility, normalization, puncture counts, and the displayed
+Euler identities are unchanged by algebraically closed base extension.
+Equivalently, the entire argument may be read with compactly supported
+`l`-adic Euler characteristic.  Thus no unstated assumption `k=C` enters
+`(27)--(30)`.
 
 For the projective normalization of its function field, let `B` be the
 number of places, including infinity, where the valuation of `a` is not
