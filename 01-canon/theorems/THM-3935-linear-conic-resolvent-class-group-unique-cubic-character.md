@@ -6,8 +6,9 @@ status: >
   The normal quadratic resolvent of the THM-3932 fold-three sextic has scalar
   units and class group Z/3.  Its natural Cardano divisor is the generator,
   not one of several local three-torsion directions.  Consequently the
-  natural cyclic cover is the only nontrivial affine unramified C3 character
-  up to inversion, and it recovers the already monogenic THM-3932 cubic.
+  natural cyclic cover is the only nontrivial smooth-locus (equivalently,
+  codimension-one unramified) C3 character up to inversion, and it recovers
+  the already monogenic THM-3932 cubic.
 source: jc_degree6_one_place / post-THM-3932 global resolvent audit, 2026-08-23
 depends_on:
   - THM-3932-infinity-component-linear-conic-torus-sextic-fold-classification
@@ -257,7 +258,8 @@ y_3^2=1/4,                                               (25)
 
 and `Q` meets the terminal spin component `y_3=-1/2`.  The corresponding
 diagonal entry of the inverse `D7` Cartan matrix is `7/4`, so Shioda's height
-formula gives
+formula applies with `(Q.O+)=0`: the sections are disjoint at finite fibres,
+and at infinity `Q` meets a nonidentity spin component.  Hence
 
 ```text
 <Q,Q>=2-7/4=1/4.                                         (26)
