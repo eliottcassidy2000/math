@@ -2,7 +2,7 @@
 id: THM-3929
 title: "Root-regular one-place linear-color cubics force a scalar-unit index value"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. In the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the
   binary-cubic grammar Phi=a(A)U^3+C U^2V+c(A)UV^2+d(A)V^3, suppose an
   irreducible repeated-root component normalizes to A1, its affine repeated
   root is regular on that A1, and its projection to the A-line has degree
@@ -16,6 +16,17 @@ status: >
   homogeneous root maps of degree at least two. The latter are exactly the
   live THM-3927 escape mechanism.
 source: jc_zero_debt_lift / post-THM-3927 one-place compression boundary, 2026-08-23
+audit: >
+  INDEPENDENT HOSTILE AUDIT PASS (jc-cohn3709, 2026-08-23). The audit
+  reconstructed the degree-three integrality/minimal-polynomial argument,
+  checked that root regularity is an explicit hypothesis rather than a
+  consequence of one-place geometry, and verified the coordinate corollary.
+  It independently derived the centered w=1/u seam, including primitivity,
+  both Euclidean/resultant cancellations, the p^2=3q partial-cancellation
+  hostile, and the q=0 scalar endpoint. The theorem remains explicitly
+  scoped away from degree-at-least-two homogeneous root maps. The 39-gate
+  companion byte-matches in normal and optimized mode, its frozen output and
+  raw hashes pass, and documentation checks pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
 related:
@@ -31,8 +42,8 @@ hash_basis: raw LF bytes
 
 # THM-3929 -- a regular repeated root makes one-place compression monogenic
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.** Work over
-an algebraically closed field `k` of characteristic zero. Put
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of characteristic zero. Put
 
 ```text
 R=k[A,C]
