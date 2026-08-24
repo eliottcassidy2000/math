@@ -2,8 +2,8 @@
 id: THM-3936
 title: "Centered degree-three infinite-root-value maps have a non-unibranch ramification component"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT
-  HOSTILE AUDIT. In the centered trace-zero linear-color binary-cubic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the centered
+  trace-zero linear-color binary-cubic
   grammar, assume a one-place discriminant component has polynomial
   normalization A1_u, deg A=3, and a degree-three repeated-root map with
   t(infinity)=infinity. Local trace and the finite Riemann--Hurwitz budget
@@ -19,11 +19,18 @@ status: >
   higher root degree, or JC(2).
 source: jc_zero_debt_lift / complementary t(infinity)=infinity stratum after THM-3933, 2026-08-23
 audit: >
-  Candidate self-audit only. The assertion-free exact companion has 65 gates
-  covering the pole ledger, four primitive incidence rows, every color
-  resultant and cancellation seam, coefficient-ideal boundaries, four
-  discriminant/implicit equations, and address multiplicities. Independent
-  hostile audit is required before this theorem enters the proved graph.
+  INDEPENDENT HOSTILE AUDIT PASS (root and zero_debt_lift child,
+  2026-08-23). The audit independently reconstructed the exhaustive pole
+  partition from completed-local trace and the finite Riemann--Hurwitz budget,
+  including all four diagonal normal-form gauges. It checked every primitive
+  incidence row, color resultant, cancellation seam, and coefficient-ideal
+  boundary; the degree-one-in-color irreducibility argument; the exponent-one
+  order-to-maximal discriminant bridge; and every multiple-address fibre. It
+  also verified that rank-three finite flatness coalesces those addresses on
+  the source ramification prime, so the conclusion is source non-unibranchness
+  rather than only a branch-image collision. The assertion-free 65-gate
+  companion byte-matches in normal and optimized mode; raw and semantic hashes
+  and documentation checks pass.
 depends_on:
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
   - THM-3933-centered-degree-three-root-map-pole-partition-octic-nonentry
@@ -42,8 +49,8 @@ hash_basis: raw LF bytes
 
 # THM-3936 -- infinity leaves four rows, and every row folds its ramification arm
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT
-HOSTILE AUDIT.** Work over an algebraically closed field `k` of
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of
 characteristic zero. Consider the linear-color binary cubic
 
 ```text
