@@ -2,7 +2,7 @@
 id: THM-3950
 title: "A1 internal splits pay denominator debt and an equianharmonic shadow"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT TEXT/SCOPE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On the normalization A1 of any nondegenerate one-factor internal-split
   branch, write the two cusp rows as (r^2,2r^3) and (s^2,2s^3). After
   removing gcd(r,s), a nonconstant ratio forces two exact denominator
@@ -16,13 +16,15 @@ status: >
   and two independent Cardano classes. It is not a Keller map.
 source: jc-cohn3709 / normalized-cusp pullback factorization, 2026-08-24
 audit: >
-  SELF-HOSTILE EXACT CANDIDATE with independent algebraic packet checks by
-  jc-zero-debt-lift and jc-degree6-one-place. The 51-gate companion verifies
-  the universal split identities, both denominator-debt equations, the
-  residual discriminant and binary-quartic invariants, the degree-three
-  ratio map and off-diagonal Galois-closure equation, the explicit reduced
-  factorization, and both exclusive local A2 witnesses. Full theorem-text,
-  normality, and scope promotion remain under independent audit.
+  INDEPENDENT HOSTILE AUDIT PASS (jc-zero-debt-lift, with an independent
+  square-class reconstruction by a1_pullback_squareclass, 2026-08-24). The
+  audit rederived the UFD cusp extraction and every exceptional linear-form
+  case; the residual factorization, nonsquare and genus argument; the
+  degree-three S3 closure and isogeny; the explicit irreducible residual and
+  squarefree normal surface; and both local A2 generators and their global
+  Kummer independence. Normal and optimized runs byte-match the frozen
+  51-gate output, all hashes agree, documentation checks pass, and no repair
+  was required.
 depends_on: []
 related:
   - THM-3942-affine-linear-double-torus-factor-split-one-place-obstruction
@@ -30,6 +32,7 @@ related:
   - THM-3946-affine-internal-factor-split-two-end-conductor-collision-dichotomy
   - THM-3947-scalar-weighted-repeated-square-split-trichotomy
   - THM-3949-coprime-one-variable-internal-factor-splits-are-reducible-or-multi-ended
+  - THM-3941-all-degree-centered-cubic-pole-carrier-routing
 script: 04-computation/jc2_a1_internal_split_equianharmonic_shadow_thm3950.py
 output: 05-knowledge/results/jc2_a1_internal_split_equianharmonic_shadow_thm3950.out
 script_sha256: dd40f6a2fa3e978990811aaab0ff9d690688a01940e7230150ad979874644732
@@ -40,7 +43,7 @@ hash_basis: raw LF bytes
 
 # THM-3950 -- every nonconstant A1 split carries the same j=0 shadow
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT TEXT/SCOPE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 Work over an algebraically closed field `k` of characteristic zero. Fix
 
 ```text
@@ -221,6 +224,11 @@ so this degree-three map has branch values
 ```
 
 They are exactly the compactified scalar collision values in THM-3947. The
+ramification signature is `C2^4`, with no index-three point. Thus `phi` is
+not Mobius-conjugate to the polynomial cubic projections routed by THM-3941:
+it is the complementary rational, split-infinity cubic carrier. Its `C3`
+appears in the `S3` Galois closure and three-isogeny, not in the inertia of
+`phi` itself. The
 off-diagonal equation `phi(y)=phi(x)`, after deleting `y=x`, is
 
 ```text
