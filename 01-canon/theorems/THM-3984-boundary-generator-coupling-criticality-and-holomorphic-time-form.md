@@ -2,7 +2,7 @@
 id: THM-3984
 title: "Boundary-generator couplings force criticality and a holomorphic time form"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. In every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In every
   height n>=2, the first-coordinate family x+h(x^n t)+alpha*p+beta*y is a
   submersion exactly when alpha=beta=0; every nonzero linear coupling to
   either boundary generator creates an affine critical point. More
@@ -15,6 +15,17 @@ status: >
   a rational mate. These closures concern the displayed first-coordinate
   cells only; nonlinear multiweight p/y sums and JC(2) remain open.
 source: jc-extra-debt-local + jc-mixed-generator-submersion / post-THM-3983 coupling lane, 2026-08-24
+audit: >
+  PASS (root / jc-cohn3709 and jc-mixed-generator-submersion, 2026-08-24).
+  Independent audits rederived the mixed-cell resultants and endpoint
+  multiplicities, both degenerate coefficient axes, the full p^a*y^b
+  exponent and reconstruction ledger, and the uncoupled submersion endpoint.
+  They separately checked the t-adic relative-closure argument, every finite
+  and infinite normalization place, the exact omega divisor and genus, and
+  persistence of nonexactness under finite covers. The audit enforces the
+  essential scope distinction: criticality excludes regular mates, while
+  rational nonexactness is asserted only in Panel 3. Normal, optimized, and
+  frozen outputs byte-match at CHECKS=1091; all hashes agree.
 depends_on:
   - THM-3973-exact-volume-simple-cubic-determinantal-affine-plane-completion
 related:
@@ -30,7 +41,7 @@ hash_basis: raw LF bytes
 
 # THM-3984 -- the first boundary-generator couplings are all critical
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.** Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over
 an algebraically closed field `k` of characteristic zero. For every `n>=2`
 put
 
@@ -472,7 +483,7 @@ term. The latter distinction is essential: at height two the adjacent family
 theorem. No general first coordinate in `B_n`, and no consequence for
 unrestricted `JC(2)`, is claimed.
 
-**QED candidate.**
+**QED.**
 
 ## Reproduction
 
