@@ -1,0 +1,22 @@
+PASS two-comb equality at order two
+PASS two-comb strictness for every audited order at least three
+PASS three-comb prime gate for all audited primes ell>=5
+PASS ell=3 exact equality
+PASS ell=2 exceeds branch budget
+PASS ell=3 pack H={1,...,10}
+PASS ell=3 pack witness
+PASS ell=3 labelled combs saturate selected branches
+PASS ell=3 control is lonely at another pack phase
+PASS ell=5 pack H={1,...,10}
+PASS ell=5 positive control
+PASS reduced pair (3,7) is a valid two-lift hostile
+PASS (3,7) is valid but not minimal
+PASS crossing height Q
+PASS integer crossing floor
+PASS strict rounding
+orbit_checks=400
+branch_checks=22648
+prime_checks=1227
+role_checks=1018
+integer_crossing_floor=3208300859
+STATUS=PASS; (3,7) IS VALID BUT NOT MINIMAL

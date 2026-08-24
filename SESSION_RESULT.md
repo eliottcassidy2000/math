@@ -2,64 +2,95 @@
 
 ## Task
 
-Continue the planar Jacobian-conjecture research frontier for a long session,
-integrating incoming agent work and earlier tournament/companion ideas.
+Continue the LRC(14) mathematical frontier for a long session, treating
+incoming work and older decoder/tournament ideas as signals to extend rather
+than merely summarize.
 
-## Canonical outcomes
+## Outcome
 
-The planar Jacobian conjecture remains **OPEN**. The session proved and
-independently audited three narrower results in the reduced `(2,3)` cell.
+LRC(14) remains **OPEN**. The session proved and independently audited two
+new reduction theorems in the exact rank-eleven `11+2` branch.
 
-1. **THM-3997 — Hasse repair and zero-residual no-go.**
-   The exact `p`-Taylor transform characterizes the image of `k[p,y]`
-   inside `k[s,p]`. Two source-normal diagonals force `[p^2]R` and
-   `[p^3]R`, with `[y]R` and then `[py]R` the first free scalars.
-   Therefore `R=0` is impossible. An independent generic-fibre proof gives
-   explicit source and target elliptic curves with incompatible
-   potential-good reduction under the isogeny a Keller pair would induce.
-2. **THM-3998 — three-by-at-most-three source-weight obstruction.**
-   After the THM-3992 gauge, no Darboux pair has `A` supported at weights
-   `{2,0,-2}` and `C` at `{3,1}` plus at most one arbitrary extra
-   integer weight. Coefficient degrees in `u` are unbounded; this is an
-   all-degree finite-support theorem, not a finite-box computation.
-3. **THM-3999 — companion endpoint and class ledger.**
-   The quotient `Q=G/t` lies in `B_2`, has `ord_D(Q)=2`, and its total
-   strict companion meets the boundary in
-   `Spec k[y]/(gamma-R(0,y))`. Its total class is `-2[D]`. The theorem
-   explicitly does not infer irreducibility, complete node ownership, or a
-   local class-group obstruction.
+1. **THM-4003 — two-boundary body gain and scale-two component erosion.**
+   If `U` is the body maximum, `Q=91^6`, and `H=min(U,Q)`, then
 
-## Corrections and incoming signal
+   ```text
+   U lambda_+(u)>=1/42+1/(84(H-1)).
+   ```
 
-- The two visible companion edges have opposite orientations. Their graph
-  critical group `Z/2` is not THM-3994's local `A_1` class group `Z/2`.
-- Incoming THM-3996 was integrated: a visible two-edge connected packet
-  cannot exhaust a proper Keller fibre; there is an additional address
-  packet or the forced node lies in the nonproperness locus.
-- Positive boundary order of `Q` does not force its strict component to
-  meet the boundary; the `R=0` ambient `G_m` control is the minimal
-  hostile.
+   This combines the two endpoint owners of a cited deep body component with
+   THM-3818's internal pair-height cap. In scale two, THM-3995's two separate
+   retained cores then force
+
+   ```text
+   3t(2H-1)<=8(H-1)(U-1).
+   ```
+
+   For `U<=Q` and odd `t`, this is exactly
+   `U>=floor(3t/4)+2+1_(t=1 mod 4)`. A separate top-balance selector, with
+   `V` the second-largest body speed, closes all 17 conditional certificate
+   types for `U/V>=11` and scale two already for `U/V>=1001/189`.
+
+   Direct wall grids prove the four oriented owner-residue formulas and the
+   reflection identities `e_1=e_4`, `e_2=e_3`. In 62,989 old-strip cells
+   through `t<=1001`, the symbolic gate closes 742, exact residues close 77
+   more, and 62,170 remain. Nineteen closures require both improvements in
+   the same inequality.
+
+2. **THM-4004 — three-detuned divisor combs and the `t<U` floor.**
+   The common labelled lift branches give the necessary multiplier-prime
+   profile
+
+   ```text
+   ell>=5: at most 7 body coordinates divisible by ell;
+   ell=3:  at most 8;
+   ell=2:  at most 9, with equality only at scale one and
+           reduced odd exception sum >7.
+   ```
+
+   Every exact `t<U` survivor satisfies `U>=3,208,300,859`. The literal
+   component-swapped width proof cannot fire there because
+   `t lambda(u)<6/7`. The prime-three displayed row is a sharp selector
+   hostile, not an LRC hostile: it is lonely at `4/33`.
+
+## Incoming signal and corrected boundaries
+
+- Incoming THM-4002 was compared before promotion. It retains full signed
+  cross-phase and closes fixed bodies in `[1,21]`; THM-4003 instead prunes
+  arbitrary-body parameter and ratio regions. Neither subsumes the other.
+- The discovery phrase calling `(3,7)` a minimal two-lift hostile was false.
+  `(3,5)` is already hostile at `3/16`; the theorem retains only the correct
+  reduced-sum boundary.
+- A uniform scale-one endpoint shrink is refuted by exact congruence
+  alignment. The positive survivor is the deletion-gcd filter: every prime
+  dividing `t` must miss at least two body coordinates.
+- Exact decoder controls show why graph density alone stops. Among all 31,434
+  primitive connected eleven-subsets of `[1,18]`, the unique minimizer of
+  `U lambda_+` is `(1,2,3,4,8,9,10,11,12,13,14)` with `7/110`; a connected
+  hostile has `r_+=432>U=355`. The missing sidecar is the circular owner-wall
+  word, not graph connectivity.
 
 ## Verification
 
-Exact certificates:
+Primary and independent certificates:
 
 ```text
-04-computation/jc2_reduced_23_hasse_residual_thm3997.py
-04-computation/jc2_three_by_three_weight_support_thm3998.py
-04-computation/jc2_three_by_three_weight_support_groebner_thm3998.py
-04-computation/jc2_companion_divisor_endpoint_thm3999.py
+04-computation/lrc14_scale_two_component_erosion_boundary_strip_thm4003.py
+04-computation/lrc14_scale_two_component_erosion_boundary_strip_independent_audit_thm4003.py
+04-computation/lrc14_tltu_divisor_comb_profile_thm4004.py
+04-computation/lrc14_tltu_divisor_comb_profile_independent_audit_thm4004.py
 ```
 
-Every certificate passed in normal and optimized Python with byte-identical
-LF-normalized output. The direct Groebner slices are hostile controls only;
-THM-3998's proof is the all-degree polynomial argument. Python compilation,
-stored hashes, and `agents/check_docs.py` passed.
+Normal and optimized executions agree; stored LF outputs and SHA-256 hashes
+are pinned in THM-4003/4004. The direct residue audit covers 7,764,075 exact
+conditions; the divisor-comb paths independently audit open walls, branch
+multiplicities, primes, controls and strict rounding.
 
-## Frontier
+## Next frontier
 
-The next anchor tasks are the all-diagonal recurrence, pure-`p` residual
-generic fibres, the nonzero `R in (p^2,py)` lane, one extra `A` weight,
-two extra `C` weights, companion factor ownership, and the complete
-node-fibre census. See
-`07-reflections/planar-jacobian-hasse-elliptic-companion-frontier-20260824.md`.
+The highest-value next tests are the joint four-endpoint owner assignment
+under the divisor profile, the exact phase-labelled multi-component
+projection in `t<U` at primes 2 and 3, cross-phase on the trimmed rather than
+untrimmed scale-two cores, and compatibility between the connected decoder
+edge word and the circular wall-owner word. See
+`07-reflections/lrc14-component-erosion-divisor-comb-frontier-root-20260824.md`.
