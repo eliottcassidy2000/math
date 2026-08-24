@@ -2,7 +2,7 @@
 id: THM-3933
 title: "Centered finite-at-infinity degree-three root maps collapse to a non-unibranch octic"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. In the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the
   centered trace-zero, finite-at-infinity degree-three repeated-root stratum of the
   one-place linear-color binary-cubic grammar, local trace and the finite
   Riemann--Hurwitz budget force either a shared pole address or one triple
@@ -19,12 +19,16 @@ status: >
   or JC(2).
 source: jc_zero_debt_lift / post-THM-3931 degree-three finite-root-pole stratum, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The
-  conceptual proof separates local trace cancellation, pole-support
-  collisions, the normalized triple-pole calculation, order versus maximal
-  discriminant, and the ramification-boundary branch identification. The
-  assertion-free exact companion verifies the symbolic identities and
-  hostile parameter seams in normal and optimized mode.
+  INDEPENDENT HOSTILE AUDIT PASS (root, 2026-08-23). The audit reconstructed
+  the completed-local trace table and finite Riemann--Hurwitz budget, the
+  finite-flat length-three/non-etale-point bridge for shared pole addresses,
+  and the trace argument forcing every finite value t(infinity) to zero. It
+  independently checked the primitive incidence row, the lambda=0 seam and
+  lambda=3 color divisibility, the tame discriminant-parity proof that the
+  squared line is index-only, and the birational octic normalization with
+  its two off-line collision fibres. The assertion-free 35-gate companion
+  byte-matches in normal and optimized mode; raw and semantic hashes and
+  documentation checks pass. No mathematical repair was required.
 depends_on:
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
 related:
@@ -42,7 +46,7 @@ hash_basis: raw LF bytes
 
 # THM-3933 -- a centered finite-at-infinity degree-three pole divisor has nowhere left to go
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.** Work over
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over
 an algebraically closed field `k` of characteristic zero. Consider the
 linear-color binary cubic
 
