@@ -14,12 +14,13 @@ status: >
   normal and monogenic for every parameter.
 source: root / post-THM-3939 rational-three-torsion escape test, 2026-08-24
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (root independent audit, 2026-08-24). The
-  audit reconstructed integral vertical fibres and normality, the birational
-  elliptic model and `I7+5I1` rank-two open, the uniform no-three-torsion
-  argument, Cardano non-Cartier class, two-boundary quotient, scalar units,
-  Kummer/descent, and normal monogenic cubic. Normal and optimized 45-gate
-  runs byte-match the frozen LF transcript; raw and semantic hashes match.
+  INDEPENDENT HOSTILE AUDIT PASSES (jc_degree6_one_place and root, 2026-08-24).
+  The audits reconstructed the vertical square charts and normality; elliptic
+  inverse, boundary sections, `I7+5I1` rank-two open; uniform no-three-torsion
+  ladder; Cardano non-Cartier class, two-boundary quotient and scalar units;
+  Kummer/descent; and cubic irreducibility, normality and monogenicity. Normal
+  and optimized 45-gate runs byte-match the frozen LF transcript; all hashes
+  and documentation checks pass.
 depends_on:
   - THM-3939-two-boundary-elliptic-resolvent-three-character-rank-one-gate
 related:

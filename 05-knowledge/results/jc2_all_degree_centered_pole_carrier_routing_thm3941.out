@@ -1,0 +1,12 @@
+THM-3941 all-degree centered pole-carrier exact companion
+CHECKS=2827
+SCOPE=all N;centered trace-zero;degA=3;carrier routing only
+CARRIERS=C3 one pole;C2 one pole;C2xC2 two unordered poles
+CHARACTERS=C2 odd orders;C3 nonzero-mod3;infinity nonzero-mod3
+EXITS=shared A-address non-unibranch;no finite pole root-regular
+DEGREE3=5 nonregular rows
+DEGREE4=5 nonregular rows
+DEGREE5=7 nonregular rows
+GF=M*(R3+R2+P2), M=1+R3, P2=x^2/((1-x^2)(1-x^4))
+BOUNDARY=no all-degree color-divisibility claim
+SEMANTIC_SHA256=8601f1b32ce801bfaef8c3c0a747afc1a479546e994b1c13b887ea1ba324a3d9

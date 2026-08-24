@@ -13,12 +13,12 @@ status: >
   rank. A nonzero Cardano class is then the unique character up to inversion.
 source: root / post-THM-3937 global character-rank reframe, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (root independent audit, 2026-08-24). The
-  audit reconstructed the principal vertical localization, elliptic divisor
-  quotient and unit calculation, the one-relation three-torsion exact
-  sequence without a finite-generation assumption, and the Hartogs/Kummer
-  step. Torsion boundary, rational E(K)[3], extra boundary points, and split
-  vertical fibres were checked as genuine out-of-scope hostiles.
+  INDEPENDENT HOSTILE AUDIT PASSES (jc_degree6_one_place and root, 2026-08-24).
+  The audits verified the principal vertical localization, elliptic divisor
+  quotient and unit calculation, the additive one-relation three-torsion
+  sequence without finite-generation assumptions, and normal Hartogs/Kummer.
+  Torsion boundary, rational E(K)[3], extra boundary points, and split vertical
+  fibres were checked as genuine out-of-scope hostiles; no repair was needed.
 related:
   - THM-3912-even-degree-split-boundary-cusp-three-torsion-sieve
   - THM-3922-affine-plane-completion-free-boundary-class-group-obstruction
@@ -29,8 +29,8 @@ related:
 
 # THM-3939 -- free Mordell--Weil rank cannot supply the second character
 
-**PROVED + INDEPENDENTLY HOSTILE-AUDITED.** Work over an algebraically closed
-field `k` of characteristic zero and put `K=k(t)`. Let
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
+algebraically closed field `k` of characteristic zero and put `K=k(t)`. Let
 `B` be a normal affine `k[t]`-domain of dimension two. Assume:
 
 1. every closed fibre `B/(t-lambda)` is integral;

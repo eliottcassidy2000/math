@@ -18,12 +18,13 @@ status: >
   other coefficient planes, or JC(2).
 source: jc_zero_debt_lift / post-THM-3936 next root-degree stratum, 2026-08-23
 audit: >
-  INDEPENDENT HOSTILE AUDIT PASS (root independent audit, 2026-08-24). The
-  audit reconstructed the complete pole/Riemann--Hurwitz ledger, all five
-  trace normal forms, every color-division seam and pole boundary, the two
-  scalar endpoints, irreducibility and exponent-one ramification, and every
-  two-/three-address source packet. Normal and optimized 96-gate runs
-  byte-match the frozen LF transcript; raw and semantic hashes match.
+  INDEPENDENT HOSTILE AUDIT PASSES (degree4_independent and root, 2026-08-24).
+  The audits reconstructed the pole/Riemann--Hurwitz exhaustion, finite-value
+  gauge and reversed row-F orientation; all five trace forms, color seams,
+  roots at infinity and pole cancellations; scalar normalizations and
+  coefficient ideals; address/critical-value packets; exponent-one maximal-
+  order parity; and the rank-three source non-unibranch bridge. Normal and
+  optimized 96-gate runs byte-match the frozen LF transcript; all hashes pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3920-affine-plane-boundary-unibranch-depressed-cubic-chart-obstruction
@@ -156,7 +157,9 @@ The nonzero exact-pole conditions are: the normalized top principal
 coefficient in E/F is already one; `q!=0` in F; `k!=0` in G and I; and
 `qk!=0` in H. The constants in `(8)` are forced by trace:
 
-* in E, `Tr(u^-3)=3/A` kills the missing `u^-3` term and the constant;
+* in E, `Tr(u^-3)=3/A` kills the missing `u^-3` term, while trace of a
+  finite value is three times that value; hence `t(infinity)=0`. The same
+  constant-term argument forces the finite value in F to zero;
 * in F, trace kills the constant and forces twice the order-two coefficient
   plus the order-three coefficient to vanish;
 * in G, every displayed nonconstant term has trace zero;
@@ -165,7 +168,9 @@ coefficient in E/F is already one; `q!=0` in F; `k!=0` in G and I; and
   and the ratio `-3k/2`.
 
 This proves completeness of the five rational normal forms, including their
-lower-order jets.
+lower-order jets. In row F the apparently reversed orientation (triple pole
+at `u=-1`, simple pole at `u=1`) is the same affine orbit under `u -> -u`,
+followed by the allowed diagonal root/color rescaling; it is not a sixth row.
 
 ## 2. Exact color division
 
