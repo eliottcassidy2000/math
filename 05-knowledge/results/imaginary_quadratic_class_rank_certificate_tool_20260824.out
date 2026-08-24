@@ -9,11 +9,15 @@ VERIFIED-EXACT:
     independence check on that line;
   * agreement with PARI/GP on the sample and on 95 small-class products.
 
-FINITE-EXACT:
-  * complete fundamental-discriminant scan 3 <= D <= 200000;
+FINITE-COMPUTED / GRH-ASSISTED DISCOVERY:
+  * PARI quadclassunit scan of all fundamental discriminants
+    3 <= D <= 200000;
   * thirteen-row challenge control bank, including the published rank-eight
     field, five square-free ramified twists, and six square-free additive
     neighbors.
+  Full invariant-factor ranks and negative statements from these scans were
+  not separately certified with bnfcertify field by field.  Any emitted form
+  subgroup that passes the pure verifier is VERIFIED-EXACT as a lower bound.
 
 CITED + REPRODUCED COMPUTATIONALLY:
   * Elkies's published field of discriminant
@@ -130,10 +134,12 @@ Output (PARI stack-size warnings omitted):
   IMPROVE|D=217541503961543485618350976479|h=285288064689996|cyc=[65223608754, 6, 3, 3, 3, 3, 3, 3]|ell_rank=8
   SEARCH_SUMMARY|checked=13|fundamental=13|best=8|hist=[4, 7, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-The rank-eight point is violently isolated in this cheap hostile: all twelve
-other rows have rank 0, 1, or 3.  In particular, multiplying the record
-discriminant by five small ramified primes and taking six nearby fundamental
-discriminants does not preserve its large 3-primary subgroup.
+PARI reports that the rank-eight point is violently isolated in this cheap
+hostile: all twelve other rows have rank 0, 1, or 3.  In particular, its
+discovery computation finds that multiplying the record discriminant by five
+small ramified primes and taking six nearby fundamental discriminants does not
+preserve its large 3-primary subgroup.  The negative rank statements were not
+individually certified and are not used as impossibility results.
 
 RANK-EIGHT NEAR-FRONTIER CERTIFICATE EXTRACTED BY THE SEARCH
 ------------------------------------------------------------
@@ -184,6 +190,16 @@ CAVEATS / AUDIT BOUNDARY
   pure checker then verifies the emitted subgroup without trusting those
   coordinates.  Conversely, a pure verifier PASS proves rank at least r but
   deliberately does not compute the full class group or prove rank exactly r.
+* PARI quadclassunit is used here as a GRH-assisted discovery routine.  Unless
+  bnfcertify (or an unconditional class-group computation) is also recorded,
+  its full invariant factors and the absence of additional ell-torsion are
+  not promoted to unconditional results.  This does not affect a lower-bound
+  certificate independently accepted by the pure form verifier.
+* PARI/GP may report an interactive error and still exit with status zero.
+  An initial rank-eight cross-audit hit a stack overflow and exposed that a
+  substring-only success check could match echoed source.  The repaired
+  wrapper allocates an explicit stack, rejects every non-warning `***` row,
+  and requires exactly one real line beginning with its success marker.
 * The thirteen-row rank-nine hunt is a positive/hostile control bank, not a
   serious exhaustive attack on a record-breaking open problem.  Random local
   perturbation erases the known rank-eight structure; a credible next search
@@ -193,5 +209,5 @@ CAVEATS / AUDIT BOUNDARY
 ARTIFACT HASHES AT THIS CHECKPOINT
 ----------------------------------
 
-  script:   11dec6d802b5d4b54db88b7ff1022832f1cb6d1dfefb7358ccc2544cd6c4c685
+  script:   2331ccea983aca7ab6e0ef6dbcc353ed892f7284c1c0cd32dd3012de1af4cd3a
   controls: a66eabd1a017110906b97fec455dcee0871fb6759bac41d4f1d6b9b6fef0cd47

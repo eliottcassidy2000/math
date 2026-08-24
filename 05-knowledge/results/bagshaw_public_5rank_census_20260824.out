@@ -1,0 +1,51 @@
+BAGSHAW PUBLIC 5-RANK CANDIDATE CENSUS -- 2026-08-24
+====================================================
+
+STATUS: FINITE-COMPUTED / GRH-ASSISTED DISCOVERY over the 131199 rows in the
+public D.txt at repository commit c4247d7.  PARI's quadclassunit supplied the
+full invariant-factor histogram, and bnfcertify was not run on every row.
+The explicit rank-four subgroup emitted at the maximum is independently
+VERIFIED EXACT by Gauss composition.  This is a census of one structured
+candidate bank, not a search over all fundamental discriminants and not a
+nonexistence result.
+
+Source:
+
+  https://github.com/ChristianBagshaw/quadratic-fields-high-n-rank
+
+Command (GP is a locally extracted PARI/GP 2.13.3 binary):
+
+  python3 04-computation/imaginary_quadratic_class_rank_certificate_tool_20260824.py \
+    search --pari-gp /tmp/oct-class-tools-20260824/root/usr/bin/gp \
+    --ell 5 --target-rank 6 \
+    --candidates-file <(sed 's/^-//' \
+      /tmp/oct-class-sources-20260824/quadratic-fields-high-n-rank/data/D.txt)
+
+Output (stack-size warnings omitted):
+
+  IMPROVE|D=11199|h=100|cyc=[20, 5]|ell_rank=2
+  IMPROVE|D=61040707|h=1000|cyc=[20, 10, 5]|ell_rank=3
+  IMPROVE|D=1264381632596|h=680000|cyc=[1360, 10, 10, 5]|ell_rank=4
+  SEARCH_SUMMARY|checked=131199|fundamental=131199|best=4|hist=[0, 0, 129889, 1309, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Thus PARI reports 129889 fields of 5-rank 2, 1309 of 5-rank 3, exactly one of
+5-rank 4, and none of 5-rank at least 6 in this bank.  The reported unique
+maximum has the unconditional exact below-threshold certificate
+
+  5|4|1264381632596|188505,25402,1677710|415025,-353402,836862|38025,-6952,8313149|318873,-67684,994881
+
+Independent verification command:
+
+  python3 04-computation/imaginary_quadratic_class_rank_certificate_tool_20260824.py \
+    verify --pari-gp /tmp/oct-class-tools-20260824/root/usr/bin/gp \
+    '5|4|1264381632596|188505,25402,1677710|415025,-353402,836862|38025,-6952,8313149|318873,-67684,994881'
+
+Verification output:
+
+  PURE_PYTHON_VERIFY=PASS|ell=5|r=4|D=1264381632596|squarefree_core_factors=[(233, 1), (1283, 1), (1057391, 1)]|mitm_halves=25,25
+  REDUCED_FORMS=188505,25402,1677710|415025,-353402,836862|38025,-6952,8313149|318873,-67684,994881
+  PARI_AUDIT=PASS|h=680000|cyc=[1360, 10, 10, 5]|ell_rank=4|halves=25,25
+
+The pure verifier proves the displayed subgroup lower bound without relying
+on PARI's class-group invariant factors.  It does not prove that no row has
+larger rank, and it does not claim the challenge pair (5,6).

@@ -348,11 +348,33 @@ def verify_certificate(line: str) -> Verification:
     )
 
 
+def require_gp_success(output: str, prefix: str, context: str) -> None:
+    """Reject GP's nonfatal error stream and require a real success row.
+
+    PARI/GP can exit with status zero after an interactive-style error and can
+    echo source containing the requested marker.  A substring check is thus
+    not a certificate.  Stack-size warnings are harmless; other ``***`` rows
+    are treated as errors.
+    """
+    errors = [
+        row for row in output.splitlines()
+        if row.lstrip().startswith("***") and "Warning:" not in row
+    ]
+    successes = [
+        row.strip() for row in output.splitlines()
+        if row.strip().startswith(prefix)
+    ]
+    require(not errors, f"PARI/GP {context} reported errors:\n{output}")
+    require(len(successes) == 1,
+            f"PARI/GP {context} needs exactly one {prefix!r} row:\n{output}")
+
+
 def pari_audit(line: str, gp_path: str) -> str:
     ell, rank, D, forms = parse_certificate(line)
     literal = ",".join(f"Qfb({f.a},{f.b},{f.c})" for f in forms)
     split = rank // 2
     program = f"""
+default(parisizemax,2000000000); allocatemem(128000000);
 ell={ell}; D={D}; F=[{literal}]; P=F[1]^0;
 span(V,l,P)={{my(S=Set([P]),T,pw);for(i=1,#V,T=List();for(j=1,#S,pw=P;for(e=0,l-1,listput(T,S[j]*pw);pw=pw*V[i]));S=Set(T));return(S)}};
 for(i=1,#F,if(F[i]^ell!=P,error("bad order"));if(F[i]==P,error("principal generator")));
@@ -377,8 +399,7 @@ quit
     )
     require(process.returncode == 0,
             f"PARI/GP exited {process.returncode}:\n{process.stdout}")
-    require("PARI_AUDIT=PASS" in process.stdout,
-            f"PARI/GP audit did not pass:\n{process.stdout}")
+    require_gp_success(process.stdout, "PARI_AUDIT=PASS|", "audit")
     return process.stdout.strip()
 
 
@@ -476,8 +497,7 @@ def run_search(args: argparse.Namespace) -> int:
     sys.stdout.write(process.stdout)
     require(process.returncode == 0,
             f"PARI/GP search exited with status {process.returncode}")
-    require("SEARCH_SUMMARY" in process.stdout,
-            "PARI/GP search did not reach its summary")
+    require_gp_success(process.stdout, "SEARCH_SUMMARY|", "search")
     certificates = [
         row.split("CERT|", 1)[1]
         for row in process.stdout.splitlines()
@@ -604,9 +624,10 @@ def run_selftest(args: argparse.Namespace) -> int:
             stderr=subprocess.STDOUT,
             check=False,
         )
-        require(
-            process.returncode == 0 and "PARI_COMPOSITION_AUDIT=PASS" in process.stdout,
-            f"PARI composition audit failed:\n{process.stdout}",
+        require(process.returncode == 0,
+                f"PARI composition audit exited {process.returncode}")
+        require_gp_success(
+            process.stdout, "PARI_COMPOSITION_AUDIT=PASS|", "composition audit"
         )
         print(process.stdout.strip())
         print(pari_audit(SAMPLE, args.pari_gp))
