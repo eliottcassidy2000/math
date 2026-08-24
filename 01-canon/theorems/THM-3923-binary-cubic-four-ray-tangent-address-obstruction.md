@@ -2,29 +2,32 @@
 id: THM-3923
 title: "Binary-cubic four-ray tangent packet cannot algebraize to a cubic Keller atlas"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. For a reduced
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For a reduced
   irreducible plane branch, r distinct tangent-cone factors give at least r
   normalization addresses over the marked point. A degree-three Keller
   completion permits at most three such addresses. Consequently an
   irreducible binary-cubic discriminant with four distinct tangent rays at
   one affine point cannot occur in a planar cubic Keller completion. The
   THM-3808 fixed linear packet always has the four rays
-  A(C+5A)(4C+19A)(3C-17A), so every irreducible polynomial algebraization of
-  the THM-3855 formal coefficient germ is excluded. In particular the two
+  A(C+5A)(4C+19A)(3C-17A), so every normal irreducible polynomial
+  algebraization of the THM-3855 formal coefficient germ is excluded as a
+  cubic Keller completion. In particular the two
   THM-3853 one-place inverse-discriminant targets and every tangent-identity
   formal deformation retain the fatal four-address packet. Formal
   inverse-discriminant surjectivity remains true; it is now proved to point
   into the wrong local branch grammar for a cubic Keller atlas.
 source: jc_zero_debt_lift / post-THM-3920 tangent-cone address lane, 2026-08-23
 audit: >
-  PROVISIONAL PROOF CANDIDATE AWAITING INDEPENDENT HOSTILE AUDIT. The local
-  Hensel/normalization bridge and its reduced/irreducible scope are separated
-  from the fixed THM-3853/THM-3855 application. The assertion-free exact
-  companion verifies the binary-cubic discriminant, all six pairwise ray
-  determinants, invariance under arbitrary quadratic coefficient jets and
-  tangent-identity quadratic base jets, and both four-address one-place
-  parametrizations. Normal and optimized replay must byte-match the frozen
-  output; raw hashes and documentation checks are required before promotion.
+  INDEPENDENT HOSTILE AUDIT PASS (jc-cohn3709, 2026-08-23). The audit
+  reconstructed the completed-local-ring factorization by coprime tangent
+  directions, the normalization-branch correspondence for reduced excellent
+  plane curves, and the residue-degree-one transfer into THM-3920's
+  finite-flat cubic address cap. It checked the normal-completion scope and
+  repaired one status-line overstatement that had mentioned arbitrary
+  polynomial algebraizations without saying normal. It also rederived both
+  THM-3853 parametrizations and the tangent-identity invariance. The
+  assertion-free 28-gate companion byte-matches in normal and optimized mode,
+  its frozen output and raw hashes pass, and documentation checks pass.
 depends_on:
   - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
   - THM-3853-quadratic-depth-inverse-discriminant-one-place-gluing-obstruction
@@ -45,7 +48,7 @@ hash_basis: raw LF bytes
 
 # THM-3923 -- four formal rays are one ray too many
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.** Work over an
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Work over an
 algebraically closed field `k` of characteristic zero.
 
 The theorem isolates the missing local invoice in the inverse-discriminant
