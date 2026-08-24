@@ -2,7 +2,7 @@
 id: THM-3981
 title: "Centered cusp quadrature has a genus-two transcendence obstruction"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For every
   centering slope lambda, the generic-Y curve underlying the centered cusp
   quadrature carries a differential that remains nonexact on every finite
   algebraic cover. For lambda!=0 it is an integral genus-two curve and the
@@ -13,6 +13,15 @@ status: >
   generic-slice function field and cannot terminate algebraically in that
   gauge. This is not an obstruction to other formal gauges or to JC(2).
 source: jc-extra-debt-local / post-THM-3979 generic-slice audit, 2026-08-24
+audit: >
+  PASS (root / jc-cohn3709 and jc-zero-debt-lift, 2026-08-24). Independent
+  audits checked geometric integrality, every finite and infinite branch of
+  the degree-three cover, the Riemann--Hurwitz genus-two count, the exact
+  divisor of omega, persistence of nonexactness under finite pullback, and
+  the formal-germ injection. They also rederived the lambda=0 parametrization
+  and its three nonzero residues. Normal, optimized, and frozen outputs
+  byte-match at CHECKS=56; all hashes agree. The result remains deliberately
+  scoped to the canonical centered gauge.
 depends_on:
   - THM-3979-two-color-formal-cusp-darboux-lifting
 related:
@@ -28,7 +37,7 @@ hash_basis: raw LF bytes
 
 # THM-3981 -- the centered cusp quadrature is algebraically nonintegrable
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.** Let `k` be
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.** Let `k` be
 an algebraically closed field of characteristic zero, fix `lambda in k`,
 and put `K=k(Y)`. Consider the affine `K`-curve
 
@@ -285,7 +294,7 @@ formal cusp Darboux gauge is conjugate to this one, does not exclude a
 different algebraic or polynomial gauge, and does not produce an
 unrestricted Jacobian-conjecture obstruction.
 
-**QED candidate.**
+**QED.**
 
 ## Reproduction
 
