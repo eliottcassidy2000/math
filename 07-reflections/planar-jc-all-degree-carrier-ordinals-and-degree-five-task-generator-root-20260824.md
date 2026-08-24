@@ -215,7 +215,7 @@ and classified high-weight sextics each lose a different coordinate. The next
 honest generator should kill the first lost coordinate cheaply before
 attempting a full atlas.
 
-A final incoming pair now proves a large part of that handoff.
+An incoming chain now proves a large part of that handoff.
 [THM-3946](../01-canon/theorems/THM-3946-affine-internal-factor-split-two-end-conductor-collision-dichotomy.md)
 closes the complete affine one-factor grammar: its irreducible rows have two
 or three infinity places, while the remaining rows are reducible.  Moreover,
@@ -235,14 +235,26 @@ extendable Cardano classes, but its full discriminant also has an irreducible
 genus-one companion. Universally, the factor-ratio map has degree three and
 branch values `{0,1,-omega,infinity}`; its `S3` closure is the fixed `j=0`
 elliptic cover. This connects the THM-3947 scalar wall to a residual-genus
-invoice. It does not provide a same-field cubic atlas or a Keller map.
-THM-3951, not THM-3950, is the RESERVED empty namespace stub.
+invoice.
+
+[THM-3951](../01-canon/theorems/THM-3951-affine-plane-boundary-incidence-forest-and-equianharmonic-survivor-nonentry.md)
+shows more generally that every affine-plane boundary prime is rational,
+whereas the residual prime has positive genus for arbitrary nonzero common
+debt. Thus every natural nonconstant-ratio same-field cubic is excluded. In a
+clean row, two distinct smooth graph/residual meetings also create a cycle in
+the common-resolution boundary tree. Then
+[THM-3952](../01-canon/theorems/THM-3952-minimal-mobius-internal-split-carriers-are-four-critical-colors-and-nonentry.md)
+classifies unit-debt degree-one ratios. Only four critical infinity colors
+give polynomial `A1` carriers, and every one retains the forbidden repeated
+incidence. Corrected/audited THM-3953 closes the rationally split polynomial
+boundary triangle; THM-3954 and THM-3955 are reserved local refinements, not
+needed for the strengthened same-field nonentry.
 
 The session therefore ends at a sharp boundary.  **PROVED:** degree-four
-centered nonentry and all-degree trace-carrier routing.  **VERIFIED-EXACT:**
-the 2,884-gate carrier companion, its period-twelve identity, and its ordinal
-map, plus THM-3950's 51-gate equianharmonic packet. **OPEN:** color survival
-for the seven degree-five tasks, the THM-3950 same-field cubic atlas and full
-boundary/source incidence, arbitrary
-root gauges and coefficient planes, higher-degree non-centered strata, and
-the planar Jacobian conjecture itself.
+centered nonentry, all-degree trace-carrier routing, the arbitrary-common-debt
+natural-cubic boundary obstruction and the four-color Mobius classification.
+**VERIFIED-EXACT:** the 2,884-gate carrier companion and the 51/62/44/59-gate
+THM-3950--3953 chain. **OPEN:** color survival for the seven degree-five tasks;
+common-debt local/carrier structure, higher ratios, rational denominators and
+normalization-parameter descent; arbitrary root gauges/coefficient planes;
+higher-degree non-centered strata; and the planar Jacobian conjecture itself.

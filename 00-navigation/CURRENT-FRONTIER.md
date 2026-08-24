@@ -336,18 +336,11 @@ asymptotic or residue.
   but neither fixed ray is universal. THM-3511's static tariff is
   `2^(D+B-1)+B+2`; physical/adaptive chronology and every prize are OPEN.
 - **Jacobian/Dixmier:** `JC(2),DC(2)` remain **OPEN**; THM-3543--3782 close
-  named cells only. THM-3827/3831 force primitive-row genus `>=3`; THM-3836
-  retains `3h^3+7h^2k+k^3=CS`; THM-3838 gives `deg h,deg k>=5`.
-  THM-3841/3845 close the `S3` anchor. THM-3850/52/59/66/70/73/76 close named
-  line, root, transverse, graph and monomial cells; THM-3880/3883 give the
-  local sign/residue/cube gate, while global root existence remains.
-  THM-3854's three-cusp front loses its constant cusp span and `T=0` in
-  THM-3864/3872/3881. THM-3874/3877 close degree three/four sole-simple
-  fields; THM-3879 has two places and THM-3882 forbids rational one-place
-  duals. THM-3884/3886/3894 give jets; THM-3896 closes `n=4`.
-  THM-3885/3895/3897 close polynomial `f=0`; THM-3900 closes its generic
-  roots. For `f!=0`, THM-3899/3904/3901/3902/3905 give tariff, x-only, fan
-  and three-jet passports; THM-3898's arbitrary sidecars remain open.
+  named cells only. THM-3827/31 give genus `>=3`; THM-3836 retains
+  `3h^3+7h^2k+k^3=CS`; THM-3838 gives `deg h,deg k>=5`; THM-3841/45 close
+  the `S3` anchor. THM-3850--3905 close named line/root/cusp/dual/jet,
+  polynomial-`f=0`, x-only and fan packets; global roots and arbitrary
+  `f!=0` sidecars remain.
   THM-3890--3921 close named quintic/sextic/rational/radial packets; THM-3920
   closes THM-3918's same-field atlas, not separate cubic-field questions.
   THM-3922--40 give class/conic/boundary/fold/Cardano closures. Corrected
@@ -358,11 +351,17 @@ asymptotic or residue.
   THM-3943/45/48 close `A1` line normalization for the classified complex
   weight-eight/nine sextics. THM-3950 attains a reduced `A1` graph, normal
   quadratic surface and two Cardano classes, but retains a fixed `j=0`
-  genus-one residual and is not Keller; THM-3951 is RESERVED.
-  Open: THM-3950's cubic atlas/boundary incidence; arbitrary root/color gauges;
-  bivariate, gcd-overlap or simultaneous splits; non-line torus boundaries;
-  altered resolvents, nonradial grammars, source/Keller attachment and `JC(2)`.
-  THM-3853/3855 remain a formal, not polynomial, laboratory.
+  residual. THM-3951 excludes every natural nonconstant-ratio same-field
+  cubic: its residual boundary prime has positive genus; clean rows also
+  violate the incidence forest.
+  THM-3952 says unit-debt degree-one ratios embed only at four critical colors,
+  all excluded. Corrected/audited THM-3953 closes the polynomial split-root
+  triangle; THM-3954/55 are RESERVED.
+  Open: common-debt local/carrier structure, higher-ratio carrier
+  classification, normalization-parameter descent, other fields/assignments,
+  arbitrary root/color gauges, bivariate or simultaneous splits, non-line
+  boundaries, altered resolvents, cubic/source attachment and `JC(2)`.
+  THM-3853/3855 remain formal laboratories.
   Russell THM-3785 forces `3|d,d>=9`; THM-3843/46/49 give an immersed arm,
   jets and visible conductor contact. THM-3856/61/67/71 close normal `z`-depth
   through five; exact shears leave only nonreduced `(6,4)`. Rational quotient

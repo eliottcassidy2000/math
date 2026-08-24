@@ -9,6 +9,63 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-475 (2026-08-24, THM-3952 genus comparison) -- a rational-source inertia dichotomy was stated for all degree-three covers
+
+- **What failed:** THM-3952's design comparison said that among all connected
+  tame degree-three covers, escaping the four-`C2` elliptic closure requires a
+  `C3` inertia point. That silently fixed the source genus to zero.
+- **Minimal witness / first failed implication:** an `S3` degree-three cover
+  with positive-genus source can have six or more simple `C2` branch points.
+  Its Galois closure leaves the `C2^4`, genus-one ledger without introducing
+  any `C3` inertia.
+- **Repair / strongest survivor:** for rational-source maps `P1 -> P1`, the
+  degree-three Riemann--Hurwitz budget is four. Four simple `C2` points give
+  the genus-one `S3` closure, while changing that inertia partition requires
+  a `C3` point; a cubic polynomial places it at infinity. THM-3941 routes only
+  the resulting carrier inside its centered trace-zero polynomial grammar.
+  THM-3952's four-color embedding classification and THM-3951 nonentry are
+  unchanged.
+- **Reusable rule:** state source genus and coefficient grammar before
+  transporting an inertia ledger between rational and polynomial covers.
+
+## MISTAKE-474 (2026-08-24, THM-3953 candidate) -- formal collision-factor types were counted as realized collision points
+
+- **What failed:** the candidate frontmatter said that half of the primitive
+  collisions are smooth and half singular. The six displayed formal factor
+  types split three smooth/three singular, but a factor may be a unit and
+  produce no collision point.
+- **Minimal witness / first failed implication:** take `a=t`, `b=1`, `c=1`.
+  The formal smooth factors are `a+b,a,b`, but `b` is a unit, so they yield
+  only two points; the singular factors `a-b,a+2b,2a+b` yield three. Thus a
+  3/3 type table does not imply a 3/3 population count.
+- **Repair / strongest survivor:** for each root pair, its two formal factors
+  yield respectively a zero/smooth and a nonzero `2:-1`/singular collision
+  whenever that factor vanishes. The triangle proof needs only one root of
+  each nonconstant pair-collision product `Dij`, and pairwise coprimality keeps
+  those three chosen points distinct, so the theorem survives unchanged.
+- **Reusable rule:** distinguish a factorization's formal branch types from
+  the nonempty zero sets realized by a particular parameter row.
+
+## MISTAKE-473 (2026-08-24, concurrent THM-3954 reservation) -- a stale namespace check raced a first-pushed reservation
+
+- **What failed:** a Hopf cross-frontier session checked `origin/main` and
+  reserved `THM-3954` for a node-cotangent lemma. While that check was in
+  flight, the JC session first pushed `THM-3954` for the extra-common-debt
+  theorem. The checkpoint helper fetched and rebased after its first rejected
+  push, but could not infer semantic ID ownership, so it then pushed a second
+  file with the duplicate YAML ID.
+- **Minimal witness / first failed implication:** commit `f22d3da1d` is the
+  earlier reservation on `origin/main`; commit `1c5f672be` introduced the
+  second `THM-3954`. A successful post-rebase push did not imply that a
+  namespace check performed before the race remained current.
+- **Repair / strongest survivor:** first-pusher `f22d3da1d` keeps `THM-3954`.
+  The node-cotangent reservation and filename moved to `THM-3955`; no
+  mathematical claim or dependency changed.
+- **Reusable rule:** after an automated fetch/rebase caused by a rejected
+  reservation push, rerun filename and YAML-ID collision checks on the rebased
+  tree before retrying. Push verification proves reachability, not namespace
+  uniqueness.
+
 ## MISTAKE-472 (2026-08-24, THM-3946 initial promotion) -- the affine factor case split omitted the constant--constant boundary
 
 - **What failed:** the first promoted statement called its affine

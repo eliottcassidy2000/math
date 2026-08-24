@@ -12,7 +12,10 @@ the full scalar-weighted repeated-square trichotomy.  THM-3946 now proves the
 complete affine one-factor split and has passed independent hostile audit;
 THM-3949 proves the all-degree coprime one-variable Newton obstruction; and
 THM-3950 classifies every nonconstant `A1` pullback and exposes its fixed
-equianharmonic residual.
+equianharmonic residual. THM-3951 proves that affine-plane boundary primes are
+rational, so the positive-genus residual excludes every natural same-field
+cubic even with arbitrary common debt; clean rows also violate its boundary
+forest. THM-3952 exhausts the unit-debt degree-one-ratio polynomial carriers.
 This reflection reserves no theorem ID; its affine deformation is now an
 independent precursor to the `m=1` slice of THM-3946.
 
@@ -335,11 +338,40 @@ quadratic surface, and two independent extendable Cardano characters. What it
 does not have is a one-place full discriminant: an irreducible genus-one
 residual remains, and no Keller map or same-field cubic atlas is supplied.
 
+THM-3951 supplies the missing full source-boundary invoice. Every prime
+boundary curve of a normal surface containing `A2` has rational
+normalization, while the equianharmonic residual has positive genus for every
+nonzero common debt `c`; therefore no natural nonconstant-ratio same-function-
+field Keller chart exists. In a clean row, the graph and residual primes also
+meet over at least two finite colors, and their two paths on a common
+resolution independently cycle in the boundary tree. THM-3952 then classifies
+every unit-debt Mobius ratio. Noncritical infinity colors have the forbidden
+degree pair `(3,2)`; the four critical colors do give polynomial `A1`
+carriers, but each retains enough clean incidences for THM-3951. The minimal
+carrier lane is now closed, not merely missing an atlas.
+
+The rationally split complement is corrected/audited THM-3953. Its three
+polynomial ramification roots generate three pairwise-coprime collision
+carriers and a forbidden boundary triangle on the normal cubic. MISTAKE-474
+separates the six formal factor types from the points actually realized.
+Common-debt local/carrier structure, higher-ratio carriers, rational
+denominators, and normalization-parameter descent remain outside these
+closures; extra common debt alone no longer reopens the natural same-field
+model.
+
+THM-3954 and THM-3955 are honest reserved stubs, not consequences. The first
+targets the local singularity and carrier structure when extra debt absorbs a
+clean color flank; it is no longer required for same-field nonentry. The
+second targets the node cotangent/conductor module that the boundary dual
+graph forgets. Their cheapest common probe is a completed-local normalization
+and branch-address ledger before any global class computation.
+
 The next search should not maximize Mordell--Weil rank blindly.  The cheapest
 decisive experiments are:
 
-1. construct or obstruct the same-field cubic atlas and full source-boundary
-   incidence of the THM-3950 survivor, including its genus-one residual;
+1. classify common-debt local carriers, higher ratios and rational
+   denominators, and test whether the normalization parameter descends to an
+   original polynomial target coordinate beyond the THM-3951--3953 closures;
 2. search genuinely bivariate factors and simultaneous internal splits in two
    or three cube factors for an irreducible reduced full branch;
 3. compute the generic three-parabola quadratic normalization and its complete
@@ -358,8 +390,12 @@ class-group computation: the desired second character appeared immediately;
 whole factors forced extra ends; separated internal factors retained two
 ends; the first one-place collision paid nonreduced conductor debt; and the
 first reduced `A1`/normal/two-character survivor paid a genus-one companion.
-A survivor must control the full discriminant and same-field cubic/source
-attachment, not merely pass those componentwise gates.
+The positive-genus boundary gate then killed every natural same-field row,
+with the forest independently killing the clean minimal/Mobius atlases. A
+survivor must leave those scopes through parameter descent, different fields
+or assignments, or genuinely new factor geometry, and control the full
+discriminant and source attachment rather than merely pass componentwise
+gates.
 
 ## Reproduction
 
@@ -368,6 +404,10 @@ python3 04-computation/jc2_double_torus_two_character_two_infinity_scout.py
 python3 -O 04-computation/jc2_double_torus_two_character_two_infinity_scout.py
 python3 04-computation/jc2_double_torus_nonlinear_balanced_partial_split_scout.py
 python3 -O 04-computation/jc2_double_torus_nonlinear_balanced_partial_split_scout.py
+python3 04-computation/jc2_a1_internal_split_equianharmonic_shadow_thm3950.py
+python3 04-computation/jc2_affine_plane_boundary_incidence_forest_thm3951.py
+python3 04-computation/jc2_minimal_mobius_internal_split_carriers_thm3952.py
+python3 04-computation/jc2_rationally_split_hidden_cubic_boundary_triangle_thm3953.py
 ```
 
 Each normal/optimized pair must byte-match its corresponding frozen output in

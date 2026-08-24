@@ -778,6 +778,61 @@ example is not Keller. Thus the next invoice is no longer merely "find `A1`
 plus normality plus two characters." It is to control the companion component,
 construct the same-field cubic atlas, and audit the full boundary/source map.
 
+[THM-3951](../01-canon/theorems/THM-3951-affine-plane-boundary-incidence-forest-and-equianharmonic-survivor-nonentry.md)
+now supplies that audit for every natural nonconstant-ratio same-field row.
+Every prime boundary curve of a normal surface containing `A2` has rational
+normalization, while the equianharmonic residual prime has positive genus;
+arbitrary common debt contributes only a square to its discriminant. Zariski
+Main would force that ramified prime into the boundary of a same-field Keller
+chart, an immediate contradiction. Under `gcd(c,RU0V0)=1`, there is also an
+independent forest certificate: the graph and residual meet over at least two
+finite colors, giving two disjoint paths and hence a cycle on a common
+resolution. This extends THM-3920 from two branches of one prime to repeated
+incidence of two primes. The genus gate preserves normalization type and the
+forest gate preserves prime labels and incidence; the latter forgets
+tangency/contact order. Both need the sidecar that the ramification prime is
+deleted in the same normal function-field completion. They do not prove that
+an arbitrary normalization parameter descends to a polynomial target
+coordinate.
+
+[THM-3952](../01-canon/theorems/THM-3952-minimal-mobius-internal-split-carriers-are-four-critical-colors-and-nonentry.md)
+classifies the smallest polynomial-carrier response. For unit extra debt and
+degree-one `R/S`, the two assigned factors generate `k[t]` exactly when source
+infinity is one of the four critical colors of `phi`. At every other color
+the optimal degree pair is `(3,2)`, forbidden for a polynomial `A1` embedding
+by degree divisibility. Each of the four critical gauges has a linear pencil
+member, but retains two or three clean graph/residual incidences and is
+excluded by THM-3951. The Riemann--Hurwitz comparison explains the bridge to
+THM-3941: `phi` has a `C2^4` genus-one closure, while replacing the rational
+map by a polynomial cubic moves one branch point to infinity and yields the
+genus-zero `C3,C2,C2` ledger. This preserves the inertia colors but changes
+the map and does not transport polynomial color solutions between the lanes.
+MISTAKE-475 restricts this dichotomy to rational-source covers and the
+THM-3941 handoff to its centered trace-zero grammar; positive-genus sources
+can leave `C2^4` without acquiring `C3` inertia.
+
+The complementary rationally split hidden cubic is now
+[THM-3953](../01-canon/theorems/THM-3953-rationally-split-hidden-cubic-ramification-triangle-nonentry.md).
+Its missing linear root row forces three pairwise collision carriers, which
+become a forbidden triangle of ramification primes on the already normal
+cubic. The independent audit passed after MISTAKE-474 repaired a 3/3
+formal-factor-type count that had been overread as a 3/3 realized-point count;
+the triangle needs only one zero of each nonconstant coprime carrier.
+
+The two new reserved stubs isolate local information deliberately destroyed by
+the forest quotient. THM-3954 asks what happens when extra debt `c` absorbs an
+equianharmonic flank: the clean smooth-incidence hypothesis fails, so one must
+recover completed-local normalization addresses and the proposed `A`-type
+singularity before reusing the cycle argument. The strengthened genus gate
+already proves same-field nonentry without that local classification. The
+unrelated THM-3955 node cotangent stub targets the complementary loss: a dual
+graph remembers that branches meet but not the kernel created when conormal
+data pass to the torsion-free cotangent module across normalization. The
+source-to-target map is local equations at `xy=0` to normalization/conductor
+modules; the cheapest decisive test is the exact kernel/cokernel and torsion
+order. Both remain RESERVED and specify optional local refinements, not proved
+dependencies of THM-3951.
+
 Multiple torus structures do not evade the same boundary tariff through the
 classical weight-eight sextics over the complex field of Degtyarev's cited
 classifications.  (The displayed obstruction identities themselves are
@@ -877,9 +932,9 @@ partitions.  Arbitrary root gauges, other color directions,
 rational-`E[3]` one-place resolvents, and altered branch/resolvent families
 also remain open.
 
-Concurrent JC promotions now put proved canon through THM-3950; THM-3946 has
-passed its independent hostile audit, and THM-3951 remains only a RESERVED
-empty namespace stub. The proved LRC endpoint theorem moved to collision-free
+Concurrent JC promotions now put proved canon through corrected/audited
+THM-3953, with THM-3954/3955 honest RESERVED stubs. The proved LRC endpoint
+theorem moved to collision-free
 THM-3956; the namespace move changes no mathematical scope.
 
 ## 5. Filtered kernels and principal parts are the same warning, not the same theorem
@@ -1047,7 +1102,8 @@ They do not share states, probability, chronology, or a reduction.
 | Infinity-component conic | one-place torus sextic | pull back the linear affine coefficient through the Cardano cusp | fold trichotomy and exact `C3` class | which local `E~8[3]` lines globalize | generic elliptic surface plus complete vertical/infinity ledger | THM-3937 gives uniform `MW=ZQ`, `Cl=Z/3`, unique Cardano character |
 | Two-boundary elliptic resolvent | smooth-locus cubic characters | quotient `E(k(t))` by the boundary difference | at most one new three-line | free rank versus rational three-torsion | `E[3]` plus full boundary/vertical relation matrix | THM-3940 rank two still gives one line; THM-3942 buys two only with two or three ends |
 | Double-torus identity | one-place branch design | compare the two Cardano radicands | intrinsic rational `E[3]` and componentwise one-place geometry | full-discriminant irreducibility, residual genus and cubic/source attachment | bivariate/multifactor allocation plus normalization/conductor ledger | THM-3946/3949 close standard one-variable splits; THM-3950 attains `A1`+normal+two classes but forces a `j=0` residual |
-| Internal-split factor ratio | equianharmonic shadow | take the `S3` closure of the degree-three ratio map | scalar collision packet `{0,1,-omega,infinity}` and a fixed `j=0` cover | polynomial color and same-field cubic atlas | residual-component and source-boundary incidence ledger | THM-3947 scalar seams become THM-3950 branch values, not a Keller completion |
+| Internal-split factor ratio | equianharmonic shadow | take the `S3` closure of the degree-three ratio map | scalar collision packet `{0,1,-omega,infinity}` and a fixed `j=0` cover | local common-debt carriers, higher ratios and polynomial color | residual-component and source-boundary incidence ledger | THM-3951 excludes every natural same-field ratio; THM-3952 exhausts unit-debt Mobius colors |
+| Residual plus graph ramification primes | affine-plane boundary | pass to normalization and lift incidences to a common resolution | normalization genus, prime labels and distinct smooth meetings | target embedding, tangency order and local contact multiplicity | normal same-field completion plus deletion of ramified primes | THM-3951 forbids positive genus for every `c`; two clean meetings also cycle in the boundary tree |
 | Primitive actual boundary basis | candidate affine-plane deletion | localize at the three basis primes | scalar units and `Cl=0` | boundary genus and Euler type | rationality plus `chi_c` invoice | THM-3926 genus `2`, `chi_c=13` hostile |
 | Degree-two linear-color packet | affine-plane open | delete the intrinsic ramification primes | aligned one-place branch and affine address cap | source unibranchness and invertible defining functions | actual class/different packet | THM-3931 `[E]=0`, `[P_0]=2q`, nonunibranch collision |
 | All-degree centered root map | pole-support carrier | apply local trace and the finite RH budget before exact color division | root-regular/shared/`C3,C2,C2xC2` carrier trichotomy | color existence, maximal ramification and arbitrary root gauge | exact color row plus maximal-order/source sidecar | THM-3941 leaves seven `N=5` carrier signatures awaiting color division after MISTAKE-470 repair |
@@ -1073,11 +1129,14 @@ objects cannot be transported merely because the same word is used.
    splits, every one-variable one-factor internal split, and all classified
    complex weight-eight/nine `A1` line-boundary families closed.  Run
    exact color division and the maximal-source audit on THM-3941's seven
-   `N=5` carrier signatures. For THM-3950, build or obstruct the same-field
-   cubic atlas and full boundary incidence, and determine whether its fixed
-   genus-one residual can be removed or must force source/Keller nonentry.
-   In parallel test genuinely bivariate factors, simultaneous splitting
-   across several `L_i`, gcd/nonmaximal overlap, the
+   `N=5` carrier signatures. THM-3951 closes every natural nonconstant-ratio
+   same-field cubic, with a second forest proof in clean rows; THM-3952
+   exhausts unit-debt degree-one ratios, and THM-3953 closes three distinct
+   polynomial split roots. Classify common-debt local carriers, higher-degree
+   ratios, rational denominators, normalization-parameter descent, and whether
+   the fixed genus-one residual can be altered. In parallel test genuinely bivariate
+   factors, simultaneous splitting across several `L_i`, gcd/nonmaximal
+   overlap, the
    generic three-parabola normalization/class/Cardano lattice, non-line torus
    boundaries, arbitrary root gauges, at least three boundary sections,
    controlled split vertical lattices, and altered or higher-genus
@@ -1097,8 +1156,11 @@ objects cannot be transported merely because the same word is used.
    one-variable factor in the standard chart pays two or more ends. THM-3950
    attains a reduced `A1` component, a normal quadratic surface and two
    extendable characters simultaneously, but pays an irreducible genus-one
-   companion. Seek full-discriminant control, then test same-field cubic
-   descent and the actual nonmonogenic order/source attachment.
+   companion; THM-3951 then excludes every natural same-field chart and its
+   forest proof separately closes clean minimal/Mobius rows, while THM-3952
+   classifies their carriers. Seek full-discriminant control beyond those
+   scopes, then test normalization-parameter descent, other cubic fields or
+   assignments, and the actual nonmonogenic order/source attachment.
 4. **AK niche:** leave the saturated empty-wildcard `[2,3]` slice closed.
    Classify inactive-slot and initial-wildcard strata, then search the next
    rectangle for a genuine score below `7/4` under the same sound/loose

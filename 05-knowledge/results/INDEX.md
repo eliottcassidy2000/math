@@ -589,6 +589,46 @@
   `e3936926cba7ddb0dc3e5fa9748d5de9074f467a599eb23ff4d62c19449d3966` /
   `7b027947c393486b42e7b8fb30c0cfdbf9edb2af03c26ebd2121816e5f542402`.
 
+- `jc2_affine_plane_boundary_incidence_forest_thm3951.py` -> matching `.out`
+  [THM-3951 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. Every
+  prime boundary curve of a normal surface containing `A2` has rational
+  normalization. For every nonconstant-ratio natural cubic in the theorem,
+  arbitrary common debt changes the irreducible residual discriminant only by
+  a square, so its positive-genus ramification prime forbids a same-function-
+  field Keller chart. Under the clean gcd condition, the graph and residual
+  primes also meet at least twice and independently cycle in the boundary
+  forest. Normal and optimized stdout LF-normalize to the frozen output.
+  Checks: `62`.
+  Script/output/semantic SHA-256:
+  `6b064ba481e4df402c8837c836e9afebe03b7f91cd164e82d5f33784488a8e95` /
+  `6e908f74a7b8c380ed079bff05049d6b024412c28cb97df617730bf2e59103ae` /
+  `bb910bb0b95aad8c6950e898e9f85d000148b425fadc8b152e8fa3fd111417da`.
+
+- `jc2_minimal_mobius_internal_split_carriers_thm3952.py` -> matching `.out`
+  [THM-3952 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED AFTER
+  MISTAKE-475 SCOPE REPAIR]. In the
+  unit-debt degree-one-ratio packet, `k[a,b]=k[t]` holds exactly when source
+  infinity is one of the four critical colors of the universal ratio map.
+  Every noncritical color has degree pair `(3,2)` and fails Abhyankar--Moh;
+  each critical gauge has a linear pencil member but at least two clean
+  graph/residual incidences, so THM-3951 excludes its Keller atlas. Checks:
+  `44`. Script/output/semantic SHA-256:
+  `4d61c821d69dfe6014c935d3a55750179299eb397806cc6176c406e7545b9be4` /
+  `fd7580214f925cc64340eb6813d959e3f55e5a041352fa4728b2c8d622513ffa` /
+  `f0cfdf815f49674ba40ed68740fe030abe5ae6fbf6782780cf23153a1b405e57`.
+
+- `jc2_rationally_split_hidden_cubic_boundary_triangle_thm3953.py` ->
+  matching `.out` [THM-3953 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED AFTER MISTAKE-474]. Three distinct polynomial hidden-cubic roots with
+  no linear `h`-row have the exact `c,a,b` parametrization and three pairwise
+  coprime collision carriers. Their normal cubic
+  ramification primes form a forbidden boundary triangle; constant ratios,
+  repeated roots and rational denominators remain outside scope. Checks:
+  `59`. Script/output/semantic SHA-256:
+  `f90897ea150c75ade3480e499eb686bdce6bccc31c07bb4cd4325f0b8245848a` /
+  `7bbd1fd9c2f4c6efeb68dca40c973caa523b1dc39262c96c003710b64a83b624` /
+  `507b6809acb59a52a8255221897706e8adfd7fa5359e98e96acfcf45c9975c05`.
+
 - `jc2_double_torus_nonlinear_balanced_partial_split_scout.py` -> matching
   `.out` [VERIFIED-EXACT + INDEPENDENTLY FORMULA-AUDITED SCOUT; NOT CANON].
   Besides independently recovering THM-3942's affine allocation, the balanced
