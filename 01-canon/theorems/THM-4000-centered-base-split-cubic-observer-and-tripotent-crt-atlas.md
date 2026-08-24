@@ -690,10 +690,11 @@ covered size 9: x=2 loses 4e_1-e_3;
 Z^8 versus E8: equal rank does not imply equal theta series. (64)
 ```
 
-The natural next theorem is the higher-jet sampler.  Reconstructing modulo
-`F_(a,m)(B)^k` requires Hasse derivatives through order `k-1` at every node;
-the integral Smith/carry lattice of that confluent evaluation, rather than a
-formal Taylor slogan, is the missing coordinate.  A second exact target is a
+The higher-jet sampler is now
+[THM-4010](THM-4010-confluent-consecutive-hasse-observer-kernel-index-and-smith-firewall.md):
+Hasse derivatives through order `k-1` reconstruct modulo `F_(a,m)(B)^k`, but
+the confluent Smith diagonal is not the naive repeated-factorial list. Its
+higher-prime-power distribution remains open. A second exact target is a
 realizable order-eleven witness for the `b_335` kernel in `(60)`.
 
 Nothing here upgrades the almost-complex structure on `S^6`, transfers class

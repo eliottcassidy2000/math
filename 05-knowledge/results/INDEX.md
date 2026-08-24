@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `confluent_consecutive_hasse_observer_thm4010.py` and its no-import audit ->
+  matching `.out`s [THM-4010 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED]. Equality of `k` Hasse jets at consecutive nodes has exact
+  kernel `(F^k)` and optimal off-node modulus `|F(B)|^k`; the degree-`(m+1)k`
+  image index is `product(j!)^(k^2)` and its mod-`p` rank is
+  `k min(m+1,p)`. The naive repeated-factorial Smith law first fails at
+  `(m,k)=(3,2)`: `...,12,108`, not `...,36,36`. The independent 28-case atlas
+  reaches rank 28 with 516,244 gates; higher-`p^e` Smith distribution is OPEN.
+  Primary script/output/semantic SHA-256:
+  `f28dfba947010cb1b82891b1c1b6981fbc2f0555865840eddb75693d29c10888` /
+  `2a97b20bea13267d3a1d324975f921e9399e59861f2206fd9c3a72ce1108cc7e` /
+  `ac4767298585cf7aaed247899cec0e675837b55d57d279d0295681484ee7c0fa`;
+  independent:
+  `b122225779dc95260c3e6681b932b4ce6a2a48da0304910ad0f23386f8d9bcc1` /
+  `42e6daa3eab5a9a6126aa5f7897a311794e2887a0c0f9b062bd5c0bf0a988236` /
+  `23c5b3fbbaeb75be24ffb5d2221abaff12697bade93a5b0d199c9f11c8d97af4`.
+
 - `ak_strict_saturated_2x3_thm3903/*` -> matching `.out`s [THM-3903
   EXTENSION: PROVED + VERIFIED-EXACT IN THE SATURATED EMPTY-WILDCARD
   UNIVERSE; NO AK CLAIM].  With all seven strict ladder edges active, four

@@ -457,12 +457,22 @@ optimization weight.
 
 ### 12.1 Confluent observers
 
-The next theorem after `(B)` is not another collection of digit tricks.  Give
-each node multiplicity `k` and retain Hasse derivatives through order `k-1`.
-The kernel becomes `product_j(X-a-j)^k`, so evaluation at `B` should reach its
-`k`-th power.  The open arithmetic content is the Smith form of the confluent
-evaluation lattice.  Cheap first probe: two nodes of multiplicity two, with
-hostiles at primes dividing the node difference.
+[THM-4010](../01-canon/theorems/THM-4010-confluent-consecutive-hasse-observer-kernel-index-and-smith-firewall.md)
+now closes the first three layers: `k` Hasse jets have exact kernel `(F^k)`,
+give the optimal modulus `|F(B)|^k`, and define a lattice of index
+`product(j!)^(k^2)`. The missing coordinate is finer than the determinant:
+the repeated-factorial Smith guess first breaks at `(m,k)=(3,2)`, changing
+`36,36` into `12,108`. What survives is the mod-`p` rank
+`k min(m+1,p)` and the total `p`-valuation; the higher-`p^e` distribution is
+still open.
+
+This also sharpens the comparison with the Rule 30 observer. Polynomial jets
+live in one fixed integral quotient, so the monic kernel law makes a new
+evaluation legal without a routing choice. A moving phase action does not:
+THM-4006's `943/951` hostile needs its physical basepoint even after a long
+static arithmetic shadow is retained. The shared move is “compute the kernel
+of observation”; the destroyed data differ—higher congruence layers here,
+chronological phase ownership there.
 
 ### 12.2 Tripotent functoriality beyond square-free intuition
 

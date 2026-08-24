@@ -327,14 +327,12 @@ asymptotic or residue.
 
 ## Other active portfolio
 
-- **Integral observers / six through eleven:** hostile-audited
+- **Integral observers:** hostile-audited
   [THM-4000](../01-canon/theorems/THM-4000-centered-base-split-cubic-observer-and-tripotent-crt-atlas.md)
-  gives the optimal consecutive-sample compiler and factorial Smith lattice;
-  its centered split cubic controls base-seven/base-ten CRT, all tripotents,
-  one Farey--Pell ray, and exact order-eight cyclotomy.  Separate typed
-  applications are `E8` stabilization, the OCF kernel `4e_1-e_3`, and the
-  Moon--Busch min-plus floor.  These do not transfer to Bott, complex `S6`,
-  class rank, or LRC without a new map.
+  compiles consecutive values; [THM-4010](../01-canon/theorems/THM-4010-confluent-consecutive-hasse-observer-kernel-index-and-smith-firewall.md)
+  gives Hasse kernel `(F^k)`, modulus `|F(B)|^k`, index
+  `product(j!)^(k^2)` and rank `k min(m+1,p)`. Naive Smith first fails at
+  `(m,k)=(3,2)`; higher-`p^e` structure and transfers remain **OPEN**.
 - **AMM:** THM-3588 forces `R=512` departures by `(35,38,39,42,44)`.
   At `R=32768`, FINITE-EXACT Rule-A gives `854:DIE@8246`,
   `855:CLOSED@20238`, `856:CLOSED@20233`; thus `854/855` is a one-step local

@@ -1,0 +1,48 @@
+CONFLUENT_CONSECUTIVE_HASSE_OBSERVER_THM4010_INDEPENDENT_AUDIT
+status=FINITE-EXACT_CANONICAL_PASS;KERNEL_AND_DETERMINANT_PROVED;GENERAL_SNF_OPEN
+kernel=equal_jets_iff_difference_in_F_a_m_power_k_ZX
+off_node_modulus=abs(F_a_m(B))^k_optimal;sample_node=value_exact_modulus_zero_not_used
+determinant=product_1_le_j_le_m(j!)^(k^2);translation_independent=True
+primewise=rank_mod_p:k*min(m+1,p);sum_smith_vp:k^2*sum_j_vp(j!)
+unit_invariant_factors=N_if_m_le_1_else_exactly_2k
+atlas_cases=28;max_rank=28
+exhaustive_all_minor_crosschecks=16;max_rank=9
+atlas(m=0,k=1,N=1)=det:1;snf:(1,);naive:True
+atlas(m=0,k=2,N=2)=det:1;snf:(1, 1);naive:True
+atlas(m=0,k=3,N=3)=det:1;snf:(1, 1, 1);naive:True
+atlas(m=0,k=4,N=4)=det:1;snf:(1, 1, 1, 1);naive:True
+atlas(m=1,k=1,N=2)=det:1;snf:(1, 1);naive:True
+atlas(m=1,k=2,N=4)=det:1;snf:(1, 1, 1, 1);naive:True
+atlas(m=1,k=3,N=6)=det:1;snf:(1, 1, 1, 1, 1, 1);naive:True
+atlas(m=1,k=4,N=8)=det:1;snf:(1, 1, 1, 1, 1, 1, 1, 1);naive:True
+atlas(m=2,k=1,N=3)=det:2;snf:(1, 1, 2);naive:True
+atlas(m=2,k=2,N=6)=det:16;snf:(1, 1, 1, 1, 4, 4);naive:True
+atlas(m=2,k=3,N=9)=det:512;snf:(1, 1, 1, 1, 1, 1, 2, 16, 16);naive:False
+atlas(m=2,k=4,N=12)=det:65536;snf:(1, 1, 1, 1, 1, 1, 1, 1, 8, 8, 32, 32);naive:False
+atlas(m=3,k=1,N=4)=det:12;snf:(1, 1, 2, 6);naive:True
+atlas(m=3,k=2,N=8)=det:20736;snf:(1, 1, 1, 1, 4, 4, 12, 108);naive:False
+atlas(m=3,k=3,N=12)=det:5159780352;snf:(1, 1, 1, 1, 1, 1, 2, 2, 16, 144, 432, 1296);naive:False
+atlas(m=3,k=4,N=16)=det:184884258895036416;snf:(1, 1, 1, 1, 1, 1, 1, 1, 8, 8, 8, 8, 96, 864, 7776, 69984);naive:False
+atlas(m=4,k=1,N=5)=det:288;snf:(1, 1, 2, 6, 24);naive:True
+atlas(m=4,k=2,N=10)=det:6879707136;snf:(1, 1, 1, 1, 4, 4, 12, 12, 864, 3456);naive:False
+atlas(m=4,k=3,N=15)=det:13631146639813244878848;snf:(1, 1, 1, 1, 1, 1, 2, 2, 16, 144, 144, 432, 864, 165888, 165888);naive:False
+atlas(m=4,k=4,N=20)=det:2240163950570166819970668427091971670016;snf:(1, 1, 1, 1, 1, 1, 1, 1, 8, 8, 8, 8, 96, 96, 864, 864, 62208, 248832, 35831808, 143327232);naive:False
+atlas(m=5,k=1,N=6)=det:34560;snf:(1, 1, 2, 6, 24, 120);naive:True
+atlas(m=5,k=2,N=12)=det:1426576071720960000;snf:(1, 1, 1, 1, 4, 4, 12, 12, 96, 864, 17280, 432000);naive:False
+atlas(m=5,k=3,N=18)=det:70333722607339201875244530794496000000000;snf:(1, 1, 1, 1, 1, 1, 2, 2, 16, 144, 144, 144, 864, 864, 55296, 829440, 20736000, 518400000);naive:False
+atlas(m=5,k=4,N=24)=det:4141710518045422830172198809755905740766846340326553026560000000000000000;snf:(1, 1, 1, 1, 1, 1, 1, 1, 8, 8, 8, 8, 96, 96, 96, 864, 6912, 6912, 248832, 248832, 19906560, 22394880000, 447897600000, 2239488000000);naive:False
+atlas(m=6,k=1,N=7)=det:24883200;snf:(1, 1, 2, 6, 24, 120, 720);naive:True
+atlas(m=6,k=2,N=14)=det:383375999244747512217600000000;snf:(1, 1, 1, 1, 4, 4, 12, 12, 96, 864, 8640, 17280, 2592000, 5184000);naive:False
+atlas(m=6,k=3,N=21)=det:3657261988008837196714082302655030834027437228032000000000000000000;snf:(1, 1, 1, 1, 1, 1, 2, 2, 16, 144, 144, 144, 864, 864, 1728, 829440, 829440, 20736000, 124416000, 37324800000, 223948800000);naive:False
+atlas(m=6,k=4,N=28)=det:21602284620103069120020979392479113032665690102378545033576268021951029160219653020057600000000000000000000000000000000;snf:(1, 1, 1, 1, 1, 1, 1, 1, 8, 8, 8, 8, 96, 96, 96, 288, 6912, 6912, 124416, 248832, 2488320, 4976640, 7464960000, 89579520000, 447897600000, 8062156800000, 483729408000000, 967458816000000);naive:False
+rank_minimal_naive_hostile=(N,m,k)=(8, 3, 2)
+hostile_actual_snf=(1, 1, 1, 1, 4, 4, 12, 108)
+hostile_naive_snf=(1, 1, 1, 1, 4, 4, 36, 36)
+hostile_determinantal_divisors=(1, 1, 1, 1, 1, 4, 16, 192, 20736)
+hostile_7minor=rows(0, 1, 2, 3, 4, 5, 7);cols(0, 1, 2, 3, 4, 5, 6);det=2112;not_divisible_by=576
+partial_smith=two_nodes_distance_d_k2:diag(1,1,d*gcd(d,2),d^3/gcd(d,2))
+two_node_controls=((1, (1, 1, 1, 1)), (2, (1, 1, 4, 4)), (3, (1, 1, 3, 27)), (4, (1, 1, 8, 32)), (5, (1, 1, 5, 125)), (6, (1, 1, 12, 108)), (7, (1, 1, 7, 343)), (8, (1, 1, 16, 256)), (9, (1, 1, 9, 729)), (10, (1, 1, 20, 500)), (11, (1, 1, 11, 1331)), (12, (1, 1, 24, 864)))
+hasse_vs_ordinary_first_ratio=8
+semantic_sha256=23c5b3fbbaeb75be24ffb5d2221abaff12697bade93a5b0d199c9f11c8d97af4
+gates=516244
+RESULT=PASS;GENERAL_CONSECUTIVE_SMITH_FORMULA=OPEN
